@@ -3313,10 +3313,9 @@
           r = (0, o._T)(e, ["onTextEntered"]),
           s = i.useRef(null),
           l = (0, d.qt)({ bSuppressAssert: !0 }),
-          m = !!i.useContext(f),
-          p = i.useRef({ onTextEntered: () => null });
+          m = i.useRef({ onTextEntered: () => null });
         Object.assign(
-          p.current,
+          m.current,
           Object.assign(Object.assign({}, r), {
             onTextEntered:
               n ||
@@ -3382,13 +3381,13 @@
               s.current && document.activeElement == s.current,
           }),
         );
-        const g = (function (e, t) {
+        const p = (function (e, t) {
             const n = i.useRef(),
               o = i.useContext(h);
             n.current || (n.current = o(e, t));
             return n.current;
-          })(p.current, () => s.current.ownerDocument.defaultView),
-          v = i.useCallback(
+          })(m.current, () => s.current.ownerDocument.defaultView),
+          g = i.useCallback(
             (e) => {
               var t, n;
               if (!document.hasFocus() && document.activeElement == s.current)
@@ -3408,11 +3407,11 @@
                       : t.params.bUseVRKeyboard) &&
                 void 0 !== n &&
                 n;
-              (g.BIsActive() || o) && g.DelayHideVirtualKeyboard();
+              (p.BIsActive() || o) && p.DelayHideVirtualKeyboard();
             },
-            [g],
+            [p],
           ),
-          _ = (0, u.xK)(
+          v = (0, u.xK)(
             (e) => {
               s.current = e;
               const t = [];
@@ -3420,25 +3419,24 @@
                 e &&
                   (e.addEventListener(
                     "focus",
-                    g.SetAsCurrentVirtualKeyboardTarget,
+                    p.SetAsCurrentVirtualKeyboardTarget,
                   ),
                   t.push(() =>
                     e.removeEventListener(
                       "focus",
-                      g.SetAsCurrentVirtualKeyboardTarget,
+                      p.SetAsCurrentVirtualKeyboardTarget,
                     ),
                   ),
-                  m &&
-                    (e.addEventListener("click", g.ShowVirtualKeyboard),
-                    t.push(() =>
-                      e.removeEventListener("click", g.ShowVirtualKeyboard),
-                    )),
-                  t.push((0, a.x)(e, g.ShowVirtualKeyboard)),
-                  t.push((0, a.BG)(e, v))),
+                  e.addEventListener("click", p.ShowVirtualKeyboard),
+                  t.push(() =>
+                    e.removeEventListener("click", p.ShowVirtualKeyboard),
+                  ),
+                  t.push((0, a.x)(e, p.ShowVirtualKeyboard)),
+                  t.push((0, a.BG)(e, g))),
                 () => t.forEach((e) => e())
               );
             },
-            [v, g, m],
+            [g, p],
           );
         return (
           i.useLayoutEffect(
@@ -3448,17 +3446,17 @@
                   const e = s.current;
                   e &&
                     (document.activeElement != e && e.focus(),
-                    g.ShowVirtualKeyboard());
+                    p.ShowVirtualKeyboard());
                 },
                 HideVirtualKeyboard: () => {
-                  g.HideVirtualKeyboard();
+                  p.HideVirtualKeyboard();
                 },
               }),
               () => (0, u.k$)(t, null)
             ),
-            [g, t],
+            [p, t],
           ),
-          _
+          v
         );
       }
       var p = n(47692),
@@ -17752,7 +17750,10 @@
           }
           const _ =
             v && v.height / t.innerHeight < 0.9 && v.width / t.innerWidth < 0.8;
-          if (u || (!c && _)) return d(e, t);
+          if (u || (!c && _))
+            return d(e, t, void 0, {
+              fnOnClose: null == n ? void 0 : n.fnOnClose,
+            });
           {
             const o = {
                 strTitle:

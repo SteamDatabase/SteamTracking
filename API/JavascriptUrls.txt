@@ -1203,6 +1203,7 @@ ${STORE_BASE_URL}account/preferences
 ${STORE_BASE_URL}account/preferences#CommunityContentPreferences
 ${STORE_BASE_URL}account/preferences/
 ${STORE_BASE_URL}account/preferences/#store_broadcast_settings
+${STORE_BASE_URL}account/subscriptions/
 ${STORE_BASE_URL}actions/
 ${STORE_BASE_URL}actions/addappformastersubscription
 ${STORE_BASE_URL}actions/ajaxgetbadgeinfo
@@ -1210,6 +1211,7 @@ ${STORE_BASE_URL}actions/ajaxgetdiscounts
 ${STORE_BASE_URL}actions/ajaxgetmyannouncementvote
 ${STORE_BASE_URL}actions/ajaxgetstorecategories
 ${STORE_BASE_URL}actions/ajaxgetstoretags
+${STORE_BASE_URL}actions/ajaxgetstoretags?origin=${origin}
 ${STORE_BASE_URL}actions/ajaxgetwatchvodtoken
 ${STORE_BASE_URL}actions/ajaxresolvebundles
 ${STORE_BASE_URL}actions/ajaxresolvepackages
@@ -2290,6 +2292,7 @@ https://en.wikipedia.org/wiki/Main_Page
 https://facebook.com/dota2/
 https://fonts.googleapis.com/css2?family=Noto+Serif&family=Noto+Serif+JP&family=Noto+Serif+KR&family=Noto+Serif+SC:wght@500&family=Noto+Serif+TC&family=Jomhuria&&family=Big+Shoulders+Display:wght@800&display=swap
 https://github.com/ngduc/react-tabulator
+https://grafana.valve.org/steam/d/RoUHA6bWk/tag-hubs?orgId=2&refresh=5m
 https://grafana.valve.org/steam/d/d03d8518-eccd-4a49-96bc-480f87e6faf5/marketing-message-prioritization
 https://grafana.valve.org/steam/d/d03d8518-eccd-4a49-96bc-480f87e6faf5/marketing-message-prioritization?orgId=2&refresh=1m&from=now-3h&to=now
 https://help.steampowered.com

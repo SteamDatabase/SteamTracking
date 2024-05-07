@@ -909,6 +909,24 @@ fieldset.editRow_textarea label {
 	height: 37px;
 }
 
+.comment_type_filter_item_container {
+	position: relative;
+}
+
+.comment_type_filter_item_image {
+	position: absolute;
+	height: 37px;
+	width: 270px;
+	cursor: pointer;
+}
+
+.comment_type_filter_item {
+	padding: 10px;
+	padding-left: 20px;
+	cursor: pointer;
+	color: white;
+}
+
 .forum_list_unread {
 	font-weight: bold;
 	color: #ffffff;

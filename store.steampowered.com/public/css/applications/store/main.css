@@ -444,14 +444,14 @@ html._2GpKTB_eizdXpH2xVGbMKi body {
   color: #b8bcbf;
   cursor: pointer;
   font-size: 14px;
-  text-shadow: 0px 0px 4px #000000cc;
+  text-shadow: 0px 0px 4px #0d4f7e;
 }
 ._3lwcRYJ_r7x01Cn15bcdYI._3Yc8UCsmMtheFi5YrgQO-p {
   cursor: default;
 }
 ._3lwcRYJ_r7x01Cn15bcdYI._3ZBFoxumQBb1JEVw_DZzaC,
 ._3lwcRYJ_r7x01Cn15bcdYI._3ZBFoxumQBb1JEVw_DZzaC:hover {
-  background-color: #1aa0ff7c;
+  background: radial-gradient(#1a9fffbb 0%, #1a9fff 100%);
   cursor: default;
   color: #fff;
 }
@@ -465,7 +465,11 @@ html._2GpKTB_eizdXpH2xVGbMKi body {
 ._3lwcRYJ_r7x01Cn15bcdYI:not(
     ._3Yc8UCsmMtheFi5YrgQO-p
   )._3ZBFoxumQBb1JEVw_DZzaC:hover {
-  background-color: #1aa0ff7c;
+  background-color: radial-gradient(
+    155.42% 100% at 0% 0%,
+    #1f2a39 0 0%,
+    #1aa0ff53 100%
+  );
 }
 ._1R-DVEa2yqX0no8BYLtn9N {
   padding: 10px 15px;
@@ -1513,6 +1517,19 @@ button._1kn7017HPxqS3NKx_wnI4e.DialogButton:enabled:active:hover:before {
   background: #3d4450;
   color: #fff;
 }
+.S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocus.DesktopUI,
+.DesktopUI .S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocus,
+.S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocuswithin.DesktopUI,
+.DesktopUI .S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocuswithin,
+.S-_LaQG5eEOM2HWZ-geJI._27UVYW_V-GslmLf0-gfVCM:not(
+    ._1pmyxI3wxLrWwGnc52yVns
+  ):hover.DesktopUI,
+.DesktopUI
+  .S-_LaQG5eEOM2HWZ-geJI._27UVYW_V-GslmLf0-gfVCM:not(
+    ._1pmyxI3wxLrWwGnc52yVns
+  ):hover {
+  background: none;
+}
 .S-_LaQG5eEOM2HWZ-geJI._1lUZxgL06M64Pd0dTKSTyk
   + .S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocus,
 ._23kNbTg9_TY8TV_uLN8MJy + .S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocus,
@@ -1553,6 +1570,19 @@ button._1kn7017HPxqS3NKx_wnI4e.DialogButton:enabled:active:hover:before {
   margin-top: -1.5px;
   border-top: solid 1.5px transparent;
 }
+.S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocus.DesktopUI::after,
+.DesktopUI .S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocus::after,
+.S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocuswithin.DesktopUI::after,
+.DesktopUI .S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocuswithin::after,
+.S-_LaQG5eEOM2HWZ-geJI._27UVYW_V-GslmLf0-gfVCM:not(
+    ._1pmyxI3wxLrWwGnc52yVns
+  ):hover.DesktopUI::after,
+.DesktopUI
+  .S-_LaQG5eEOM2HWZ-geJI._27UVYW_V-GslmLf0-gfVCM:not(
+    ._1pmyxI3wxLrWwGnc52yVns
+  ):hover::after {
+  display: inherit;
+}
 .S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocus::after,
 .S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocuswithin::after,
 .S-_LaQG5eEOM2HWZ-geJI._27UVYW_V-GslmLf0-gfVCM:not(
@@ -1572,6 +1602,13 @@ button._1kn7017HPxqS3NKx_wnI4e.DialogButton:enabled:active:hover:before {
 }
 .S-_LaQG5eEOM2HWZ-geJI._27UVYW_V-GslmLf0-gfVCM:not(._1pmyxI3wxLrWwGnc52yVns) {
   cursor: pointer;
+}
+.S-_LaQG5eEOM2HWZ-geJI.DesktopUI._27UVYW_V-GslmLf0-gfVCM:not(
+    ._1pmyxI3wxLrWwGnc52yVns
+  ),
+.DesktopUI
+  .S-_LaQG5eEOM2HWZ-geJI._27UVYW_V-GslmLf0-gfVCM:not(._1pmyxI3wxLrWwGnc52yVns) {
+  cursor: default;
 }
 .S-_LaQG5eEOM2HWZ-geJI .Focusable {
   scroll-margin: 20px 0 55px 0;

@@ -6188,7 +6188,7 @@
         constructor(e = null) {
           super(),
             u.prototype.steamid || a.aR(u.M()),
-            n.initialize(this, e, 0, -1, [4, 5, 17, 18], null);
+            n.initialize(this, e, 0, -1, [4, 5, 17, 18, 19], null);
         }
         static M() {
           return (
@@ -6262,6 +6262,14 @@
                   },
                   excluded_community_content_descriptors: {
                     n: 18,
+                    r: !0,
+                    q: !0,
+                    br: a.FE.readUint32,
+                    pbr: a.FE.readPackedUint32,
+                    bw: a.Xc.writeRepeatedUint32,
+                  },
+                  utility_appids: {
+                    n: 19,
                     r: !0,
                     q: !0,
                     br: a.FE.readUint32,

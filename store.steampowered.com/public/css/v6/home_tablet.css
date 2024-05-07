@@ -423,6 +423,7 @@
 
 	html.tablet .spotlight_img a {
 		display: flex;
+		flex-direction: column;
 	}
 
 

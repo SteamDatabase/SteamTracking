@@ -7204,15 +7204,14 @@
     },
     35643: (e, t, n) => {
       "use strict";
-      n.d(t, { CJ: () => m, LP: () => p, k$: () => h, o5: () => d });
+      n.d(t, { CJ: () => h, LP: () => m, k$: () => d, o5: () => u });
       var o = n(85556),
         i = n(47427),
         r = n(10095),
-        s = n(28781),
-        a = n(77262),
-        l = n(20417),
-        c = n(37563);
-      const u = i.createContext(function (e, t) {
+        s = n(77262),
+        a = n(20417),
+        l = n(37563);
+      const c = i.createContext(function (e, t) {
         return {
           ShowVirtualKeyboard: () => {},
           ShowModalKeyboard: () => {},
@@ -7223,33 +7222,32 @@
           BIsElementValidForInput: () => !1,
         };
       });
-      function d(e) {
+      function u(e) {
         const { factory: t, children: n } = e,
           o = i.useMemo(() => t.CreateVirtualKeyboardRef.bind(t), [t]);
-        return i.createElement(u.Provider, { value: o }, n);
+        return i.createElement(c.Provider, { value: o }, n);
       }
-      function h(e, t) {
+      function d(e, t) {
         const { onTextEntered: n } = e,
-          u = (0, o._T)(e, ["onTextEntered"]),
-          d = i.useRef(null),
-          h = (0, c.qt)({ bSuppressAssert: !0 }),
-          g = !!i.useContext(s.ET),
-          v = i.useRef({ onTextEntered: () => null });
+          c = (0, o._T)(e, ["onTextEntered"]),
+          u = i.useRef(null),
+          d = (0, l.qt)({ bSuppressAssert: !0 }),
+          p = i.useRef({ onTextEntered: () => null });
         Object.assign(
-          v.current,
-          Object.assign(Object.assign({}, u), {
-            onTextEntered: n || ((e) => p(e, h.IN_VR)),
+          p.current,
+          Object.assign(Object.assign({}, c), {
+            onTextEntered: n || ((e) => m(e, d.IN_VR)),
             BIsElementValidForInput: () =>
-              d.current && document.activeElement == d.current,
+              u.current && document.activeElement == u.current,
           }),
         );
-        const f = m(v.current, () => d.current.ownerDocument.defaultView),
-          _ = i.useCallback(
+        const g = h(p.current, () => u.current.ownerDocument.defaultView),
+          v = i.useCallback(
             (e) => {
               var t, n;
-              if (!document.hasFocus() && document.activeElement == d.current)
+              if (!document.hasFocus() && document.activeElement == u.current)
                 return;
-              if (e.currentTarget != d.current)
+              if (e.currentTarget != u.current)
                 return void console.warn(
                   "keyboard got blur event, but it's not the active element",
                 );
@@ -7258,71 +7256,70 @@
                   (n =
                     null ===
                       (t = r.AN.GetPopupForWindow(
-                        d.current.ownerDocument.defaultView,
+                        u.current.ownerDocument.defaultView,
                       )) || void 0 === t
                       ? void 0
                       : t.params.bUseVRKeyboard) &&
                 void 0 !== n &&
                 n;
-              (f.BIsActive() || o) && f.DelayHideVirtualKeyboard();
+              (g.BIsActive() || o) && g.DelayHideVirtualKeyboard();
             },
-            [f],
+            [g],
           ),
-          C = (0, l.xK)(
+          f = (0, a.xK)(
             (e) => {
-              d.current = e;
+              u.current = e;
               const t = [];
               return (
                 e &&
                   (e.addEventListener(
                     "focus",
-                    f.SetAsCurrentVirtualKeyboardTarget,
+                    g.SetAsCurrentVirtualKeyboardTarget,
                   ),
                   t.push(() =>
                     e.removeEventListener(
                       "focus",
-                      f.SetAsCurrentVirtualKeyboardTarget,
+                      g.SetAsCurrentVirtualKeyboardTarget,
                     ),
                   ),
-                  g &&
-                    (e.addEventListener("click", f.ShowVirtualKeyboard),
-                    t.push(() =>
-                      e.removeEventListener("click", f.ShowVirtualKeyboard),
-                    )),
-                  t.push((0, a.x)(e, f.ShowVirtualKeyboard)),
-                  t.push((0, a.BG)(e, _))),
+                  e.addEventListener("click", g.ShowVirtualKeyboard),
+                  t.push(() =>
+                    e.removeEventListener("click", g.ShowVirtualKeyboard),
+                  ),
+                  t.push((0, s.x)(e, g.ShowVirtualKeyboard)),
+                  t.push((0, s.BG)(e, v))),
                 () => t.forEach((e) => e())
               );
             },
-            [_, f, g],
+            [v, g],
           );
         return (
           i.useLayoutEffect(
             () => (
-              (0, l.k$)(t, {
+              (0, a.k$)(t, {
                 TakeFocusAndShowKeyboard: () => {
-                  const e = d.current;
+                  const e = u.current;
                   e &&
                     (document.activeElement != e && e.focus(),
-                    f.ShowVirtualKeyboard());
+                    g.ShowVirtualKeyboard());
                 },
                 HideVirtualKeyboard: () => {
-                  f.HideVirtualKeyboard();
+                  g.HideVirtualKeyboard();
                 },
               }),
-              () => (0, l.k$)(t, null)
+              () => (0, a.k$)(t, null)
             ),
-            [f, t],
+            [g, t],
           ),
-          C
+          f
         );
       }
-      function m(e, t) {
+      function h(e, t) {
         const n = i.useRef(),
-          o = i.useContext(u);
+          o = i.useContext(c);
         return n.current || (n.current = o(e, t)), n.current;
       }
-      function p(e, t) {
+      function m(e, t) {
         var n, o;
         if (t) {
           switch (e) {
@@ -18418,7 +18415,10 @@
           }
           const f =
             v && v.height / t.innerHeight < 0.9 && v.width / t.innerWidth < 0.8;
-          if (u || (!c && f)) return d(e, t);
+          if (u || (!c && f))
+            return d(e, t, void 0, {
+              fnOnClose: null == n ? void 0 : n.fnOnClose,
+            });
           {
             const o = {
                 strTitle:
@@ -25443,7 +25443,7 @@
         A = n(10162);
       const N = i.lazy(() =>
           Promise.all([
-            n.e(4514),
+            n.e(397),
             n.e(3801),
             n.e(6588),
             n.e(7948),
@@ -25454,8 +25454,8 @@
             n.e(6148),
             n.e(2822),
             n.e(4040),
+            n.e(6680),
             n.e(2530),
-            n.e(2188),
             n.e(1496),
             n.e(7901),
             n.e(8931),
@@ -25467,7 +25467,7 @@
         ),
         k = i.lazy(() =>
           Promise.all([
-            n.e(4514),
+            n.e(397),
             n.e(3801),
             n.e(6588),
             n.e(7948),
@@ -25481,10 +25481,11 @@
             n.e(1421),
             n.e(2822),
             n.e(4040),
+            n.e(6680),
             n.e(2530),
-            n.e(2188),
             n.e(1496),
             n.e(7901),
+            n.e(5824),
             n.e(8931),
             n.e(2558),
             n.e(9427),
@@ -25498,7 +25499,7 @@
         ),
         B = i.lazy(() =>
           Promise.all([
-            n.e(4514),
+            n.e(397),
             n.e(3801),
             n.e(6588),
             n.e(7948),
@@ -25512,10 +25513,11 @@
             n.e(1421),
             n.e(2822),
             n.e(4040),
+            n.e(6680),
             n.e(2530),
-            n.e(2188),
             n.e(1496),
             n.e(7901),
+            n.e(5824),
             n.e(8931),
             n.e(2558),
             n.e(9427),
@@ -25526,13 +25528,12 @@
             n.e(5119),
             n.e(400),
             n.e(367),
-            n.e(6142),
             n.e(9349),
           ]).then(n.bind(n, 79458)),
         ),
         F = i.lazy(() =>
           Promise.all([
-            n.e(4514),
+            n.e(397),
             n.e(3801),
             n.e(6588),
             n.e(7948),
@@ -25546,10 +25547,11 @@
             n.e(1421),
             n.e(2822),
             n.e(4040),
+            n.e(6680),
             n.e(2530),
-            n.e(2188),
             n.e(1496),
             n.e(7901),
+            n.e(5824),
             n.e(8931),
             n.e(2558),
             n.e(9427),
@@ -25572,7 +25574,7 @@
         ),
         V = i.lazy(() =>
           Promise.all([
-            n.e(4514),
+            n.e(397),
             n.e(3801),
             n.e(6588),
             n.e(7948),
@@ -25585,10 +25587,11 @@
             n.e(3070),
             n.e(2822),
             n.e(4040),
+            n.e(6680),
             n.e(2530),
-            n.e(2188),
             n.e(1496),
             n.e(7901),
+            n.e(5824),
             n.e(8931),
             n.e(2558),
             n.e(9427),
@@ -25603,19 +25606,17 @@
         ),
         H = i.lazy(() =>
           Promise.all([
-            n.e(4514),
+            n.e(397),
             n.e(6820),
             n.e(2822),
             n.e(2558),
             n.e(6838),
           ]).then(n.bind(n, 39214)),
         ),
-        G = i.lazy(() =>
-          Promise.all([n.e(6142), n.e(8647)]).then(n.bind(n, 16567)),
-        ),
+        G = i.lazy(() => n.e(8647).then(n.bind(n, 16567))),
         U = i.lazy(() =>
           Promise.all([
-            n.e(4514),
+            n.e(397),
             n.e(3801),
             n.e(6588),
             n.e(7948),
@@ -25630,10 +25631,11 @@
             n.e(543),
             n.e(2822),
             n.e(4040),
+            n.e(6680),
             n.e(2530),
-            n.e(2188),
             n.e(1496),
             n.e(7901),
+            n.e(5824),
             n.e(8931),
             n.e(2558),
             n.e(9427),
@@ -25648,7 +25650,7 @@
         ),
         W = i.lazy(() =>
           Promise.all([
-            n.e(4514),
+            n.e(397),
             n.e(3801),
             n.e(6588),
             n.e(7948),
@@ -25662,10 +25664,11 @@
             n.e(2837),
             n.e(2822),
             n.e(4040),
+            n.e(6680),
             n.e(2530),
-            n.e(2188),
             n.e(1496),
             n.e(7901),
+            n.e(5824),
             n.e(8931),
             n.e(2558),
             n.e(9427),
@@ -25682,13 +25685,14 @@
         ),
         j = i.lazy(() =>
           Promise.all([
-            n.e(4514),
+            n.e(397),
             n.e(6588),
             n.e(7948),
             n.e(4264),
             n.e(2822),
+            n.e(6680),
             n.e(2530),
-            n.e(2188),
+            n.e(5824),
             n.e(1649),
             n.e(908),
           ]).then(n.bind(n, 83313)),
@@ -25700,7 +25704,7 @@
         ),
         z = i.lazy(() =>
           Promise.all([
-            n.e(4514),
+            n.e(397),
             n.e(3801),
             n.e(6588),
             n.e(7948),
@@ -25721,13 +25725,14 @@
         ),
         X = i.lazy(() =>
           Promise.all([
-            n.e(4514),
+            n.e(397),
             n.e(3801),
             n.e(4359),
             n.e(9295),
             n.e(4040),
-            n.e(2188),
+            n.e(6680),
             n.e(1496),
+            n.e(5824),
             n.e(9173),
             n.e(3520),
             n.e(3068),
@@ -25735,22 +25740,28 @@
         ),
         Y = i.lazy(() =>
           Promise.all([
-            n.e(4514),
+            n.e(397),
             n.e(3801),
             n.e(4359),
             n.e(9295),
             n.e(4040),
-            n.e(2188),
+            n.e(6680),
             n.e(1496),
+            n.e(5824),
             n.e(9173),
             n.e(3520),
             n.e(1909),
           ]).then(n.bind(n, 66714)),
         ),
         $ = i.lazy(() =>
-          Promise.all([n.e(3863), n.e(2822), n.e(7901), n.e(5710)]).then(
-            n.bind(n, 79842),
-          ),
+          Promise.all([
+            n.e(397),
+            n.e(3863),
+            n.e(2822),
+            n.e(6680),
+            n.e(7901),
+            n.e(5710),
+          ]).then(n.bind(n, 79842)),
         ),
         q = () => (b.JA.IS_OGG ? "games" : "groups"),
         Q = {},

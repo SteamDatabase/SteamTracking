@@ -342,7 +342,7 @@
                       d.M2,
                       {
                         key: r.key,
-                        condition: Boolean(r.statusToolTip),
+                        condition: Boolean(r.statusToolTip || r.tooltip),
                         wrap: (e) =>
                           n.createElement(
                             u.HP,

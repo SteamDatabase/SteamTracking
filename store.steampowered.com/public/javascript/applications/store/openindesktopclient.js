@@ -9,7 +9,7 @@
         OpenInBannerContent: "_2gX86rIwUFoOU9D_YtfPsQ",
         ValveOnly: "_279gTwJyCp3f0wCT_04PZ1",
         BannerMessage: "_2_QgZ0KdLRqOboc7dL93zp",
-        BannerBody: "_1MvwzmZWZ0gKckaXdcu_Pz",
+        BannerTitle: "_30HH7x_RyDoPF55R4ezfS3",
         BannerButtonContainer: "U5d0i5qNqrLVUrEBeVc1I",
         BannerButton: "_2EVpuvZsHbK9GiVjknSF77",
       };
@@ -222,14 +222,15 @@
     },
     74479: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { OpenInDesktopClient: () => l, default: () => u });
+      n.r(t), n.d(t, { OpenInDesktopClient: () => u, default: () => m });
       var s = n(47427),
         i = n(65255),
         o = n(10162),
         c = n(43390),
         r = n(89484),
-        a = n(46009);
-      const l = (0, o.AP)(function (e) {
+        a = n(46009),
+        l = n(31846);
+      const u = (0, o.AP)(function (e) {
           const [t, n] = s.useState(22);
           s.useEffect(() => {
             i.De.IN_CLIENT ||
@@ -267,9 +268,8 @@
                 s.createElement(
                   "div",
                   { onClick: o, className: r.BannerButton },
-                  "Open in Desktop App",
+                  (0, l.Xx)("#OpenInDesktopAppBanner_OpenAppButton"),
                 ),
-                !1,
               ),
               s.createElement(
                 "div",
@@ -277,13 +277,19 @@
                 s.createElement(
                   "div",
                   { className: r.BannerTitle },
-                  "Open this page in the Steam App to wishlist, follow, purchase and see recommendations",
+                  s.createElement(
+                    "b",
+                    null,
+                    (0, l.Xx)("#OpenInDesktopAppBanner_NotSignedIn"),
+                  ),
+                  s.createElement("br", null),
+                  (0, l.Xx)("#OpenInDesktopAppBanner_Body"),
                 ),
               ),
             ),
           );
         }),
-        u = l;
+        m = u;
     },
   },
 ]);

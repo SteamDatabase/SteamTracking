@@ -391,6 +391,21 @@
                     w(t.releaserequest.release_date),
                   ),
                 ),
+              i &&
+                a.createElement(
+                  "div",
+                  { className: v.ReleaseInfoRow },
+                  a.createElement(
+                    "span",
+                    { className: v.ReleaseDateLabel },
+                    (0, s.Xx)("#App_Landing_CustomersSeeReleaseDate"),
+                  ),
+                  a.createElement(
+                    "span",
+                    { className: v.ReleaseDateText },
+                    n.GetFormattedSteamReleaseDate(),
+                  ),
+                ),
               t.earliestadvancedaccessdate > 0 &&
                 a.createElement(
                   "div",
@@ -413,21 +428,6 @@
                     "span",
                     { className: v.ReleaseDateText },
                     w(t.earliestadvancedaccessdate),
-                  ),
-                ),
-              i &&
-                a.createElement(
-                  "div",
-                  { className: v.ReleaseInfoRow },
-                  a.createElement(
-                    "span",
-                    { className: v.ReleaseDateLabel },
-                    (0, s.Xx)("#App_Landing_CustomersSeeReleaseDate"),
-                  ),
-                  a.createElement(
-                    "span",
-                    { className: v.ReleaseDateText },
-                    n.GetFormattedSteamReleaseDate(),
                   ),
                 ),
             ),
@@ -1104,6 +1104,7 @@
             var i;
             const s = (0, B.og)(
               null !== (i = t.map((e) => e.appid)) && void 0 !== i ? i : [],
+              !0,
               !0,
               e,
             );
@@ -1983,7 +1984,7 @@
                   : [];
               }, []),
               { rgAppIDs: n, rgBundleIDs: i } = (0, ve.lY)(t),
-              l = (0, B.og)(n, !1, e),
+              l = (0, B.og)(n, !1, !0, e),
               o = (0, B.o6)(i, !1, e);
             return a.useMemo(() => {
               const n = t.flatMap((t) =>

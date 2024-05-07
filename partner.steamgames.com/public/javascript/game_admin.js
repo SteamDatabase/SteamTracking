@@ -207,7 +207,7 @@ function InitImageTypes( type )
 		{ name: 'Library Hero', width: 1920, height: 620, path: 'library_hero|library_hero|assets|library_hero|image', localized: true, overrideable: false, supports2x: true },
 		{ name: 'Library Capsule', width: 600, height: 900, path: 'library_capsule|library_600x900|assets|library_capsule|image', localized: true, overrideable: false, supports2x: true },
 		{ name: 'Library Logo', width: 0, height: 0, path: 'library_logo|logo|assets|library_logo|image', localized: true, overrideable: false, supports2x: true },
-		{ name: 'Library Header', width: 920, height: 430, path: 'library_header|library_header|assets|library_header|image', localized: true, overrideable: false, supports2x: true },
+		{ name: 'Library Header', width: 460, height: 215, path: 'library_header|library_header|assets|library_header|image', localized: true, overrideable: false, supports2x: true },
 
 		{ name: 'Vertical Capsule', width: 374, height: 448, path: 'hero_capsule|hero_capsule|assets|hero_capsule|image', localized: true, overrideable: true, supports2x: true },
 	];
@@ -464,12 +464,20 @@ function OnImageSelectTypeChanged( target )
 	else
 		languageSelect.hide();
 
+	var sectionAllAgesAppropriate = $J( target ).parent().find( 'div[id=screenshot_appropriate_section]' );
+	if(target.value == "Screenshot" )
+		sectionAllAgesAppropriate.show();
+	else
+		sectionAllAgesAppropriate.hide();
+
 	return false;
 }
 
 // called when images have been loaded from disk
 function OnImagesLoadComplete( images )
 {
+	var previews = $J( '#game_image_drop_preview div.screenshot_upload_preview' );
+
 	for ( var i = 0; i < images.length; i++ )
 	{
 		if ( !images[i]['image'] )
@@ -488,15 +496,14 @@ function OnImagesLoadComplete( images )
 		var screenshotDiv = $J('<div class="actual_screenshot" style="background-image: url( ' + image.src + ')"></div>');
 		screenshotDiv.data( 'filename', filename );
 		screenshotDiv.data( 'image', image );
-		screenshotDiv.appendTo( targetDiv );
-
 		targetDiv.append( '<br>' );
+		screenshotDiv.appendTo( targetDiv );
 
 		// add type select
 		var bIsAssetOverride = $J( '#alternative_asset_override_name' ).length;
 		var localizedType = false;
 		var imageType = DetermineImageType( image );
-		var selectType = $J( '<select class="image_type_select" onchange="return OnImageSelectTypeChanged( this);"></select>');
+		var selectType = $J( '<select class="image_type_select" onchange="return OnImageSelectTypeChanged( this );"></select>');
 		for ( var iImageType = 0; iImageType < g_ImageTypes.length; iImageType++ )
 		{
 			if( IsImageTypeValid( image, g_ImageTypes[iImageType] ) && !g_ImageTypes[iImageType].hidden  &&
@@ -521,6 +528,22 @@ function OnImagesLoadComplete( images )
 		selectType.appendTo( targetDiv );
 
 		targetDiv.append( '<br>' );
+
+		// add all-ages appropriate radio buttons
+		var divAllAgesAppropriate = $J( '<div class="image_all_ages_appropriate" id="screenshot_appropriate_section"></div>' );
+		var labelAllAgesAppropriate = $J( '<div class="image_all_ages_appropriate_label">Is this screenshot suitable for all ages?</div>' );
+		var radioAllAgesAppropriateYes = $J( '<input class="image_all_ages_appropriate_radio" type="radio" name="screenshot_appropriate[' + ( i + previews.length ) + ']" id="screenshot_appropriate_yes[' + ( i + previews.length ) + ']" value="yes"><label for="yes">YES</label>' );
+		var radioAllAgesAppropriateNo = $J( '<input class="image_all_ages_appropriate_radio" type="radio" name="screenshot_appropriate[' + ( i + previews.length ) + ']" id="screenshot_appropriate_no[' + ( i + previews.length ) + ']" value="no"><label for="no">NO</label>' );
+		labelAllAgesAppropriate.appendTo( divAllAgesAppropriate );
+		radioAllAgesAppropriateYes.appendTo( divAllAgesAppropriate );
+		radioAllAgesAppropriateNo.appendTo( divAllAgesAppropriate );
+
+		divAllAgesAppropriate.appendTo( targetDiv );
+
+		if( imageType == "Screenshot" )
+			divAllAgesAppropriate.show();
+		else
+			divAllAgesAppropriate.hide();
 
 		// add language select
 		var selectLanguage = $J( '<select class="image_language_select"></select>');
@@ -648,7 +671,26 @@ function UploadImages( previews, itemID, type, altAssetIndex, replaceAssetKeyPos
 		    // build key and append. Need to special case screenshots path.
 		    strKey = imageType.path;
 		    if ( strSelectedType == 'Screenshot' )
-		        strKey = strKey + cScreenshots++ + '|english[]';
+			{
+				strKey = strKey + cScreenshots++ + '|english[]';
+				
+				// Screenshots must specify whether they are all-ages appropriate.
+				var strAllAgesAppropriate = $J( preview.find( 'input[name="screenshot_appropriate[' + i + ']"]:checked' ) ).val();
+				if( strAllAgesAppropriate == 'yes' || strAllAgesAppropriate == 'no' )
+				{
+					var bAllAges = strAllAgesAppropriate == 'yes' ? true:false;
+					fd.append( 'params[' + filename + '][all_ages]', bAllAges ? '1':'0' );
+					var extension = filename.match(/\.[0-9a-z]+$/i)[0];
+					var lastidx = filename.lastIndexOf(extension);
+					filename = [filename.slice(0,lastidx), bAllAges ? '.AA1':'', extension].join('');
+				}
+				else
+				{
+					alert( 'Please specify whether each screenshot is suitable for all ages.' );
+					return false;
+				}
+			}
+
 		    if ( strSelectedType == 'ScreenshotLocalized' )
 		        strKey = strKey + nParentID;
 
@@ -1573,14 +1615,14 @@ function ToggleRatingVisibility( rating )
 	var bHasSavedRating = container.data( "has_rating" );
 
 	elDisclaimer.hide();
-
+	
 	// must agree to disclaimer first before editing rating
 	if ( !bHasSavedRating && !bAgreedToDisclaimer && bHasCheckedRating )
 	{
 		elDisclaimer.animate( { opacity: 'show', height: 'show'}, 500 );
 		return;
 	}
-
+	
 	if ( bHasCheckedRating )
 	{
 		container.animate( { opacity: 'show', height: 'show'}, 500 );

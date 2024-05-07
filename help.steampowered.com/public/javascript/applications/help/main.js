@@ -5186,10 +5186,9 @@
           r = (0, i._T)(e, ["onTextEntered"]),
           s = o.useRef(null),
           l = (0, d.qt)({ bSuppressAssert: !0 }),
-          h = !!o.useContext(C),
-          p = o.useRef({ onTextEntered: () => null });
+          h = o.useRef({ onTextEntered: () => null });
         Object.assign(
-          p.current,
+          h.current,
           Object.assign(Object.assign({}, r), {
             onTextEntered:
               n ||
@@ -5255,13 +5254,13 @@
               s.current && document.activeElement == s.current,
           }),
         );
-        const _ = (function (e, t) {
+        const p = (function (e, t) {
             const n = o.useRef(),
               i = o.useContext(m);
             n.current || (n.current = i(e, t));
             return n.current;
-          })(p.current, () => s.current.ownerDocument.defaultView),
-          g = o.useCallback(
+          })(h.current, () => s.current.ownerDocument.defaultView),
+          _ = o.useCallback(
             (e) => {
               var t, n;
               if (!document.hasFocus() && document.activeElement == s.current)
@@ -5281,11 +5280,11 @@
                       : t.params.bUseVRKeyboard) &&
                 void 0 !== n &&
                 n;
-              (_.BIsActive() || i) && _.DelayHideVirtualKeyboard();
+              (p.BIsActive() || i) && p.DelayHideVirtualKeyboard();
             },
-            [_],
+            [p],
           ),
-          v = (0, u.xK)(
+          g = (0, u.xK)(
             (e) => {
               s.current = e;
               const t = [];
@@ -5293,25 +5292,24 @@
                 e &&
                   (e.addEventListener(
                     "focus",
-                    _.SetAsCurrentVirtualKeyboardTarget,
+                    p.SetAsCurrentVirtualKeyboardTarget,
                   ),
                   t.push(() =>
                     e.removeEventListener(
                       "focus",
-                      _.SetAsCurrentVirtualKeyboardTarget,
+                      p.SetAsCurrentVirtualKeyboardTarget,
                     ),
                   ),
-                  h &&
-                    (e.addEventListener("click", _.ShowVirtualKeyboard),
-                    t.push(() =>
-                      e.removeEventListener("click", _.ShowVirtualKeyboard),
-                    )),
-                  t.push((0, a.x)(e, _.ShowVirtualKeyboard)),
-                  t.push((0, a.BG)(e, g))),
+                  e.addEventListener("click", p.ShowVirtualKeyboard),
+                  t.push(() =>
+                    e.removeEventListener("click", p.ShowVirtualKeyboard),
+                  ),
+                  t.push((0, a.x)(e, p.ShowVirtualKeyboard)),
+                  t.push((0, a.BG)(e, _))),
                 () => t.forEach((e) => e())
               );
             },
-            [g, _, h],
+            [_, p],
           );
         return (
           o.useLayoutEffect(
@@ -5321,17 +5319,17 @@
                   const e = s.current;
                   e &&
                     (document.activeElement != e && e.focus(),
-                    _.ShowVirtualKeyboard());
+                    p.ShowVirtualKeyboard());
                 },
                 HideVirtualKeyboard: () => {
-                  _.HideVirtualKeyboard();
+                  p.HideVirtualKeyboard();
                 },
               }),
               () => (0, u.k$)(t, null)
             ),
-            [_, t],
+            [p, t],
           ),
-          v
+          g
         );
       }
       var p = n(7692),
@@ -21166,7 +21164,10 @@
           }
           const v =
             g && g.height / t.innerHeight < 0.9 && g.width / t.innerWidth < 0.8;
-          if (u || (!c && v)) return d(e, t);
+          if (u || (!c && v))
+            return d(e, t, void 0, {
+              fnOnClose: null == n ? void 0 : n.fnOnClose,
+            });
           {
             const i = {
                 strTitle:
@@ -26496,6 +26497,11 @@
             height: 160,
             rgAcceptableTypes: Ae,
           },
+          localized_title_image: {
+            width: 1920,
+            height: 622,
+            rgAcceptableTypes: Ae,
+          },
           background: { width: 1920, height: 622, rgAcceptableTypes: Ae },
           hero: { width: 0, height: 0, rgAcceptableTypes: Ae },
           email_full: { width: 800, height: 300, rgAcceptableTypes: Ae },
@@ -28797,7 +28803,8 @@
         GetImgArray(e) {
           let t = [];
           if (
-            ("background" === e && (t = this.jsondata.localized_title_image),
+            (("background" !== e && "localized_title_image" != e) ||
+              (t = this.jsondata.localized_title_image),
             "capsule" === e)
           )
             t = this.jsondata.localized_capsule_image;

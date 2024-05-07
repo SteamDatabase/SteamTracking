@@ -704,8 +704,8 @@
                   : t.cart_items) ||
               void 0 === n ||
               n.forEach((e) => {
-                var t, n, l, s, c, d, u, m, p;
-                const _ = (function (e) {
+                var t, n, l, s, c, d, u, m, p, _;
+                const g = (function (e) {
                   var t,
                     n,
                     a,
@@ -725,9 +725,10 @@
                     v,
                     h,
                     E,
-                    C;
-                  let I = [],
-                    y = !!(null === (t = e.gift_info) || void 0 === t
+                    C,
+                    I;
+                  let y = [],
+                    S = !!(null === (t = e.gift_info) || void 0 === t
                       ? void 0
                       : t.accountid_giftee);
                   if (
@@ -738,7 +739,7 @@
                           : n.duplicate_appids_in_cart) || void 0 === a
                       ? void 0
                       : a.length) &&
-                      I.push({
+                      y.push({
                         purchase_state: 1,
                         notice_text: (0, N.Xx)(
                           "#Cart_Error_DuplicateApps_LineItem",
@@ -752,82 +753,94 @@
                           : i.owned_appids) || void 0 === r
                       ? void 0
                       : r.length)
-                  ) {
-                    const t =
-                      (null !==
-                        (l =
-                          null === (o = e.store_item) || void 0 === o
-                            ? void 0
-                            : o.included_appids.length) && void 0 !== l
-                        ? l
-                        : 0) > 1;
-                    let n = (0, N.Xx)(
-                      y
-                        ? "#Cart_Error_AlreadyOwned_GiftLineItem_Game"
-                        : "#Cart_Error_AlreadyOwned_LineItem_Game",
-                    );
-                    t &&
-                      (n = (0, N.Xx)(
-                        y
-                          ? "#Cart_Error_AlreadyOwned_GiftLineItem"
-                          : "#Cart_Error_AlreadyOwned_LineItem",
-                      )),
-                      I.push({
-                        purchase_state: 2,
-                        notice_text: n,
-                        appids: t ? e.errors.owned_appids : null,
+                  )
+                    if (
+                      null === (o = e.errors) || void 0 === o
+                        ? void 0
+                        : o.has_existing_billing_agreement
+                    )
+                      y.push({
+                        purchase_state: 15,
+                        notice_text: (0, N.Xx)(
+                          "#Cart_Error_ExistingBillingAgreement",
+                        ),
                       });
-                  }
+                    else {
+                      const t =
+                        (null !==
+                          (s =
+                            null === (l = e.store_item) || void 0 === l
+                              ? void 0
+                              : l.included_appids.length) && void 0 !== s
+                          ? s
+                          : 0) > 1;
+                      let n = (0, N.Xx)(
+                        S
+                          ? "#Cart_Error_AlreadyOwned_GiftLineItem_Game"
+                          : "#Cart_Error_AlreadyOwned_LineItem_Game",
+                      );
+                      t &&
+                        (n = (0, N.Xx)(
+                          S
+                            ? "#Cart_Error_AlreadyOwned_GiftLineItem"
+                            : "#Cart_Error_AlreadyOwned_LineItem",
+                        )),
+                        y.push({
+                          purchase_state: 2,
+                          notice_text: n,
+                          appids: t ? e.errors.owned_appids : null,
+                        });
+                    }
                   return (
-                    (null === (s = e.errors) || void 0 === s
+                    (null === (c = e.errors) || void 0 === c
                       ? void 0
-                      : s.unavailable_in_country) &&
-                      I.push({
+                      : c.unavailable_in_country) &&
+                      y.push({
                         purchase_state: 8,
                         notice_text: (0, N.Xx)(
                           "#Cart_Error_UnavailableCountry_LineItem",
                         ),
                       }),
-                    (null === (c = e.errors) || void 0 === c
+                    (null === (d = e.errors) || void 0 === d
                       ? void 0
-                      : c.coupon_exclusive_promo) &&
-                      I.push({
+                      : d.coupon_exclusive_promo) &&
+                      y.push({
                         purchase_state: 13,
                         notice_text: (0, N.Xx)(
                           "#Cart_Error_CouponIsExclusivePromo",
                         ),
                       }),
-                    (null === (d = e.errors) || void 0 === d
+                    (null === (u = e.errors) || void 0 === u
                       ? void 0
-                      : d.invalid_coupon) &&
-                      I.push({
+                      : u.invalid_coupon) &&
+                      y.push({
                         purchase_state: 11,
                         notice_text: (0, N.Xx)("#Cart_Error_CouponIsInvalid"),
                       }),
-                    (null === (u = e.errors) || void 0 === u
+                    (null === (m = e.errors) || void 0 === m
                       ? void 0
-                      : u.invalid_coupon_for_item) &&
-                      I.push({
+                      : m.invalid_coupon_for_item) &&
+                      y.push({
                         purchase_state: 12,
                         notice_text: (0, N.Xx)(
                           "#Cart_Error_CouponIsInvalidForItem",
                         ),
                       }),
-                    (null === (m = e.errors) || void 0 === m
+                    (null === (p = e.errors) || void 0 === p
                       ? void 0
-                      : m.too_many_in_cart) &&
-                      I.push({
+                      : p.too_many_in_cart) &&
+                      y.push({
                         purchase_state: 14,
                         notice_text: (0, N.Xx)("#Cart_Error_TooManyInCart"),
                       }),
                     (null ===
-                      (_ =
-                        null === (p = e.warnings) || void 0 === p
+                      (g =
+                        null === (_ = e.warnings) || void 0 === _
                           ? void 0
-                          : p.appids_in_mastersub) || void 0 === _
+                          : _.appids_in_mastersub) || void 0 === g
                       ? void 0
-                      : _.length) &&
-                      I.push({
+                      : g.length) &&
+                      y.push({
                         purchase_state: 4,
                         notice_text: (0, N.Xx)(
                           "#Cart_Error_MasterSubscription_LineItem",
@@ -837,13 +850,13 @@
                         ),
                       }),
                     (null ===
-                      (f =
-                        null === (g = e.warnings) || void 0 === g
+                      (v =
+                        null === (f = e.warnings) || void 0 === f
                           ? void 0
-                          : g.owned_appids) || void 0 === f
+                          : f.owned_appids) || void 0 === v
                       ? void 0
-                      : f.length) &&
-                      I.push({
+                      : v.length) &&
+                      y.push({
                         purchase_state: 3,
                         notice_text: (0, N.Xx)(
                           "#Cart_Warning_AlreadyOwned_LineItem",
@@ -851,42 +864,42 @@
                         appids: e.warnings.owned_appids,
                       }),
                     (null ===
-                      (h =
-                        null === (v = e.warnings) || void 0 === v
+                      (E =
+                        null === (h = e.warnings) || void 0 === h
                           ? void 0
-                          : v.owned_appids_extra_copy) || void 0 === h
+                          : h.owned_appids_extra_copy) || void 0 === E
                       ? void 0
-                      : h.length) &&
-                      I.push({
+                      : E.length) &&
+                      y.push({
                         purchase_state: 9,
                         notice_text: (0, N.Xx)(
                           "#Cart_Warning_ExtraCopies_LineItem",
                         ),
                         appids: e.warnings.owned_appids_extra_copy,
                       }),
-                    (null === (E = e.warnings) || void 0 === E
+                    (null === (C = e.warnings) || void 0 === C
                       ? void 0
-                      : E.price_has_changed) &&
-                      I.push({
+                      : C.price_has_changed) &&
+                      y.push({
                         purchase_state: 10,
                         notice_text: (0, N.Xx)(
                           "#Cart_Warning_PriceChange_LineItem",
                         ),
                       }),
-                    (null === (C = e.warnings) || void 0 === C
+                    (null === (I = e.warnings) || void 0 === I
                       ? void 0
-                      : C.non_refundable) &&
-                      I.push({
+                      : I.non_refundable) &&
+                      y.push({
                         purchase_state: 5,
                         notice_text: (0, N.Xx)(
                           "#Cart_Warning_NoRefund_LineItem",
                         ),
                       }),
-                    I
+                    y
                   );
                 })(e);
-                r.set(e.line_item_id, _);
-                let g = !!(null === (t = e.gift_info) || void 0 === t
+                r.set(e.line_item_id, g);
+                let f = !!(null === (t = e.gift_info) || void 0 === t
                   ? void 0
                   : t.accountid_giftee);
                 (null ===
@@ -910,18 +923,30 @@
                         : s.owned_appids) || void 0 === c
                     ? void 0
                     : c.length) &&
-                    (i.has(2) ||
-                      i.set(2, {
-                        index: o++,
-                        footnote_text: (0, N.Xx)(
-                          g
-                            ? "#Cart_Error_AlreadyOwned_GiftFootNote"
-                            : "#Cart_Error_AlreadyOwned_FootNote",
-                        ),
-                      })),
-                  (null === (d = e.errors) || void 0 === d
+                    ((
+                      null === (d = e.errors) || void 0 === d
+                        ? void 0
+                        : d.has_existing_billing_agreement
+                    )
+                      ? i.has(15) ||
+                        i.set(15, {
+                          index: o++,
+                          footnote_text: (0, N.Xx)(
+                            "#Cart_Error_ExistingBillingAgreement_FootNote",
+                          ),
+                        })
+                      : i.has(2) ||
+                        i.set(2, {
+                          index: o++,
+                          footnote_text: (0, N.Xx)(
+                            f
+                              ? "#Cart_Error_AlreadyOwned_GiftFootNote"
+                              : "#Cart_Error_AlreadyOwned_FootNote",
+                          ),
+                        })),
+                  (null === (u = e.errors) || void 0 === u
                     ? void 0
-                    : d.unavailable_in_country) &&
+                    : u.unavailable_in_country) &&
                     (i.has(8) ||
                       i.set(8, {
                         index: o++,
@@ -930,12 +955,12 @@
                         ),
                       })),
                   (null ===
-                    (m =
-                      null === (u = e.warnings) || void 0 === u
+                    (p =
+                      null === (m = e.warnings) || void 0 === m
                         ? void 0
-                        : u.appids_in_mastersub) || void 0 === m
+                        : m.appids_in_mastersub) || void 0 === p
                     ? void 0
-                    : m.length) &&
+                    : p.length) &&
                     (i.has(4) ||
                       i.set(4, {
                         index: o++,
@@ -943,9 +968,9 @@
                           "#Cart_Error_MasterSubscription_FootNote",
                         ),
                       })),
-                  (null === (p = e.warnings) || void 0 === p
+                  (null === (_ = e.warnings) || void 0 === _
                     ? void 0
-                    : p.price_has_changed) &&
+                    : _.price_has_changed) &&
                     a.set(10, (0, N.Xx)("#Cart_Warning_PriceChange_FootNote"));
               }),
             {

@@ -533,10 +533,10 @@
         g = a(79545),
         S = a(45681),
         f = a(2041);
-      function E(e) {
+      function v(e) {
         return `handle_${e}`;
       }
-      function v(e) {
+      function E(e) {
         return `node_${e}`;
       }
       function x(e) {
@@ -555,10 +555,10 @@
         P = "SteamLearnTrainStatusVersions",
         X = "SteamLearnFetchStatus",
         k = "SteamLearnTrainStatus";
-      function I(e) {
+      function V(e) {
         return `SteamLearnWorkingProject_Universe${m.De.EUNIVERSE}_Project${e}`;
       }
-      function V() {
+      function I() {
         return (0, N.useQuery)(
           ["SteamLearnDataSourceList"],
           () =>
@@ -636,7 +636,7 @@
                 throw `Failed FetchProject ${e}`;
               });
             })(e),
-            a = I(e);
+            a = V(e);
           null === localStorage.getItem(a) &&
             localStorage.setItem(a, t.serializeBase64String());
           const n = S.mgi.deserializeBinary(
@@ -868,14 +868,14 @@
           return (
             n &&
               1 == n.GetEResult() &&
-              (localStorage.removeItem(I(e.project_id())),
+              (localStorage.removeItem(V(e.project_id())),
               f.U.invalidateQueries([D, e.project_id()])),
             n.Body().result()
           );
         });
       }
       function Y(e) {
-        localStorage.removeItem(I(e)),
+        localStorage.removeItem(V(e)),
           f.U.invalidateQueries([D, e]),
           f.U.removeQueries([T, e]),
           f.U.removeQueries([P, e]);
@@ -1326,7 +1326,7 @@
               e.add_project_nodes(i);
           }
         })(e.unpublished_config()),
-          localStorage.setItem(I(e.project_id()), e.serializeBase64String()),
+          localStorage.setItem(V(e.project_id()), e.serializeBase64String()),
           f.U.invalidateQueries([D, e.project_id()]);
       }
       function ce(e, t) {
@@ -1453,8 +1453,8 @@
             : o.createElement(Ne, { steamLearnContext: {} }, e.children);
         };
       var fe = a(86728),
-        Ee = a(20417);
-      const ve = (e) => {
+        ve = a(20417);
+      const Ee = (e) => {
           const t = Math.max(
             0,
             ...e.msgProject
@@ -1509,7 +1509,7 @@
                   placeholder: (0, c.Xx)("#SteamLearn_FilterProject"),
                 }),
                 n.map((t) =>
-                  o.createElement(ve, {
+                  o.createElement(Ee, {
                     key: `Project_${t.project_id()}`,
                     isHidden:
                       e.length > 0 &&
@@ -1526,7 +1526,7 @@
             n = t.data,
             r = a.data;
           if (
-            ((0, Ee.Yz)(() => {
+            ((0, ve.Yz)(() => {
               if (n)
                 switch (n.status()) {
                   case 0:
@@ -1887,7 +1887,7 @@
         Pe = a(1485),
         Xe = a(90069),
         ke = a(64560);
-      const Ie = () => {
+      const Ve = () => {
           const [e, t] = o.useState(""),
             [a, n] = o.useState(""),
             [r, i] = o.useState(!1);
@@ -1941,7 +1941,7 @@
                           za.SteamLearnBase() +
                           za.SteamLearnProjectDataSources(n, 0);
                         (0, Xe.AM)(
-                          o.createElement(Ve, {
+                          o.createElement(Ie, {
                             strResult: "Success!",
                             strRedirect: e,
                           }),
@@ -1951,13 +1951,13 @@
                       }
                       case 2:
                         (0, Xe.AM)(
-                          o.createElement(Ve, { strResult: "Bad Name!" }),
+                          o.createElement(Ie, { strResult: "Bad Name!" }),
                           window,
                         );
                         break;
                       case 3:
                         (0, Xe.AM)(
-                          o.createElement(Ve, { strResult: "Nope!" }),
+                          o.createElement(Ie, { strResult: "Nope!" }),
                           window,
                         );
                     }
@@ -1968,7 +1968,7 @@
             ),
           );
         },
-        Ve = (e) => {
+        Ie = (e) => {
           (0, r.k6)();
           const t = () => {
             e.strRedirect &&
@@ -2222,14 +2222,14 @@
             [_, u] = o.useState(!1),
             [p, N] = o.useState(!1),
             [g, S] = o.useState(""),
-            [f, E] = o.useState(!1),
-            [v, x] = o.useState(!1),
+            [f, v] = o.useState(!1),
+            [E, x] = o.useState(!1),
             [h, C] = o.useState(""),
             [L, b] = o.useState(!1),
             [D, T] = o.useState(!1),
             [P, X] = o.useState(""),
-            [k, I] = o.useState(!1),
-            [V, y] = o.useState(!1),
+            [k, V] = o.useState(!1),
+            [I, y] = o.useState(!1),
             O = 0 == n;
           o.useEffect(() => {
             var e;
@@ -2240,7 +2240,7 @@
                 m(l.min_range().toFixed(2 == r.data_type() ? 2 : 0)),
                 N(!0)),
               f ||
-                (E(!0),
+                (v(!0),
                 S(l.max_range().toFixed(2 == r.data_type() ? 2 : 0)),
                 x(!0)),
               L ||
@@ -2248,7 +2248,7 @@
                 C(l.std_dev().toFixed(2 == r.data_type() ? 2 : 0)),
                 T(!0)),
               k ||
-                (I(!0),
+                (V(!0),
                 X(
                   (null === (e = l.compact_table_count()) || void 0 === e
                     ? void 0
@@ -2552,7 +2552,7 @@
                   ),
                   o.createElement("input", {
                     type: "text",
-                    className: (0, s.Z)(ye.ValueInput, !v && ye.Invalid),
+                    className: (0, s.Z)(ye.ValueInput, !E && ye.Invalid),
                     disabled: !1,
                     value: g,
                     onChange: (e) =>
@@ -2619,7 +2619,7 @@
                   ),
                   o.createElement("input", {
                     type: "text",
-                    className: (0, s.Z)(ye.ValueInput, !V && ye.Invalid),
+                    className: (0, s.Z)(ye.ValueInput, !I && ye.Invalid),
                     disabled: !1,
                     value: P,
                     onChange: (e) =>
@@ -2633,7 +2633,7 @@
         },
         Fe = (e) => {
           const t = y(e.nDataSourceID),
-            a = V();
+            a = I();
           if (!t.isSuccess || !a.isSuccess) return null;
           const n = t.data;
           let r = !1;
@@ -2678,7 +2678,7 @@
           o.useEffect(() => {
             e.bShowPopup || a([]);
           }, [e.bShowPopup]);
-          const n = V();
+          const n = I();
           if (n.isError) return e.fnSetShowPopup(!1), null;
           if (!n.isSuccess) return null;
           const r = n.data;
@@ -2787,7 +2787,7 @@
           [d, m] = o.useState(o.createElement("div", null)),
           [_, u] = o.useState("10"),
           [N, f] = o.useState(0),
-          [E, v] = o.useState(""),
+          [v, E] = o.useState(""),
           [x, h] = o.useState(""),
           C = o.useMemo(
             () =>
@@ -2841,8 +2841,8 @@
                 o.createElement("input", {
                   type: "text",
                   className: Ge.ValueInput,
-                  value: E,
-                  onChange: (e) => v(e.target.value),
+                  value: v,
+                  onChange: (e) => E(e.target.value),
                 }),
                 o.createElement(
                   "div",
@@ -2939,9 +2939,9 @@
                           (n.Body().set_fetch_id(s),
                           n.Body().set_train_id(N),
                           x.length > 0 && n.Body().set_named_inference(x),
-                          E.length > 0)
+                          v.length > 0)
                         ) {
-                          const e = E.split(",");
+                          const e = v.split(",");
                           for (const t of e) n.Body().add_keys(t);
                         } else {
                           const e = C.sort(
@@ -3197,7 +3197,7 @@
             o.useEffect(() => {
               setTimeout(() => {
                 for (const e of a.project_nodes())
-                  15 == e.type() && d(v(e.node_id()));
+                  15 == e.type() && d(E(e.node_id()));
               }, 0.1);
             }, [a, d]),
             o.createElement(
@@ -3216,7 +3216,7 @@
               }),
               m.map((e, t) => {
                 const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
-                  n = E(e.connector_id());
+                  n = v(e.connector_id());
                 return o.createElement(
                   ze.HH,
                   {
@@ -3280,7 +3280,7 @@
               ),
               _.map((e, t) => {
                 const a = Math.floor(((t + 1) / (_.length + 1)) * 200),
-                  n = E(e.connector_id());
+                  n = v(e.connector_id());
                 return o.createElement(
                   ze.HH,
                   {
@@ -3447,7 +3447,7 @@
             o.useEffect(() => {
               setTimeout(() => {
                 for (const e of a.project_nodes())
-                  8 == e.type() && d(v(e.node_id()));
+                  8 == e.type() && d(E(e.node_id()));
               }, 0.1);
             }, [a, d]),
             o.createElement(
@@ -3460,7 +3460,7 @@
               }),
               m.map((e, t) => {
                 const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
-                  n = E(e.connector_id());
+                  n = v(e.connector_id());
                 return o.createElement(
                   ze.HH,
                   {
@@ -3524,7 +3524,7 @@
               ),
               _.map((e, t) => {
                 const a = Math.floor(((t + 1) / (_.length + 1)) * 200),
-                  n = E(e.connector_id());
+                  n = v(e.connector_id());
                 return o.createElement(
                   ze.HH,
                   {
@@ -3691,7 +3691,7 @@
           o.useEffect(() => {
             setTimeout(() => {
               for (const e of i.project_nodes())
-                7 == e.type() && u(v(e.node_id()));
+                7 == e.type() && u(E(e.node_id()));
             }, 0.1);
           }, [i, u]);
           const f = Math.max(78, 20 * p.length);
@@ -3736,7 +3736,7 @@
             }),
             p.map((e, t) => {
               const a = Math.floor(((t + 1) / (p.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -3934,7 +3934,7 @@
             ),
             g.map((e, t) => {
               const a = Math.floor(((t + 1) / (g.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -3953,7 +3953,7 @@
             }),
             S.map((e, t) => {
               const a = Math.floor(((t + 1) / (S.length + 1)) * (f - 24)),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -3986,7 +3986,7 @@
             [g, f] = o.useState(
               e.msgNode.conditional_extract().extract_weight_type(),
             ),
-            [E, v] = o.useState(
+            [v, E] = o.useState(
               (null ===
                 (t = e.msgNode
                   .conditional_extract()
@@ -4034,7 +4034,7 @@
               u(l.toString()),
               N(e.msgNode.conditional_extract().extract_filter_type()),
               f(e.msgNode.conditional_extract().extract_weight_type()),
-              v(
+              E(
                 (null ===
                   (t = e.msgNode
                     .conditional_extract()
@@ -4073,7 +4073,7 @@
               P(e.msgNode.conditional_extract().compact_table()),
               k(e.msgNode.conditional_extract().extracted_compact_table());
           }, [e.bVisible, e.msgNode, l]);
-          let I = [
+          let V = [
               {
                 label: (0, c.Xx)(
                   "#SteamLearn_Config_Node_ConditionalExtract_FilterType_All",
@@ -4105,10 +4105,10 @@
                 value: 7,
               },
             ],
-            V = [];
+            I = [];
           switch (p) {
             case 6:
-              V.push({
+              I.push({
                 label: (0, c.Xx)(
                   "#SteamLearn_Config_Node_ConditionalExtract_WeightType_Input",
                 ),
@@ -4117,13 +4117,13 @@
               break;
             case 2:
             case 4:
-              V.push({
+              I.push({
                 label: (0, c.Xx)(
                   "#SteamLearn_Config_Node_ConditionalExtract_WeightType_Input",
                 ),
                 value: 3,
               }),
-                V.push({
+                I.push({
                   label: (0, c.Xx)(
                     "#SteamLearn_Config_Node_ConditionalExtract_WeightType_AppIDRecency",
                   ),
@@ -4226,7 +4226,7 @@
                   dontUpdateProject: !0,
                   fnGetValue: () => p,
                   fnSetValue: (e) => N(parseInt(e)),
-                  options: I,
+                  options: V,
                 }),
                 y &&
                   o.createElement($e, {
@@ -4238,9 +4238,9 @@
                     ),
                     smallLabel: !0,
                     dontUpdateProject: !0,
-                    fnGetInitialValue: () => E,
+                    fnGetInitialValue: () => v,
                     fnValidateValue: (e) => de(e, 0, 360),
-                    fnSetValue: (e) => v(e),
+                    fnSetValue: (e) => E(e),
                   }),
               ),
               w && o.createElement("div", { className: Ze.Separator }),
@@ -4266,7 +4266,7 @@
                     dontUpdateProject: !0,
                     fnGetValue: () => g,
                     fnSetValue: (e) => f(parseInt(e)),
-                    options: V,
+                    options: I,
                   }),
                   O &&
                     o.createElement($e, {
@@ -4421,7 +4421,7 @@
                       e.msgNode
                         .conditional_extract()
                         .filter_info()
-                        .set_appid_release_recency_months(parseInt(E)),
+                        .set_appid_release_recency_months(parseInt(v)),
                       e.msgNode
                         .conditional_extract()
                         .weight_info()
@@ -4479,7 +4479,7 @@
             }),
             d.map((e, t) => {
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -4501,7 +4501,7 @@
               {
                 type: "target",
                 position: Re.P.Left,
-                id: E(_.connector_id()),
+                id: v(_.connector_id()),
                 style: { top: "50%" },
               },
               o.createElement(
@@ -4557,7 +4557,7 @@
             ),
             m.map((e, t) => {
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -4672,7 +4672,7 @@
             { className: (0, s.Z)(Ze.FlowNode, Ze.DenseNode, Ze.Keras) },
             i.map((e, t) => {
               const a = Math.floor(((t + 1) / (i.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -4768,7 +4768,7 @@
             ),
             l.map((e, t) => {
               const a = Math.floor(((t + 1) / (l.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -4969,7 +4969,7 @@
             }),
             d.map((e, t) => {
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -5090,7 +5090,7 @@
             ),
             m.map((e, t) => {
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -5343,7 +5343,7 @@
             }),
             d.map((e, t) => {
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -5421,7 +5421,7 @@
             ),
             m.map((e, t) => {
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -5560,7 +5560,7 @@
             }),
             m.map((e, t) => {
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -5687,7 +5687,7 @@
             ),
             _.map((e, t) => {
               const a = Math.floor(((t + 1) / (_.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -5994,7 +5994,7 @@
             s != i && se(t),
               setTimeout(() => {
                 for (const e of a.project_nodes())
-                  12 == e.type() && d(v(e.node_id()));
+                  12 == e.type() && d(E(e.node_id()));
               }, 0.1);
           }, [t, a, l, d]);
           const m = l.connectors().filter((e) => e.is_input_connector()),
@@ -6008,14 +6008,14 @@
                 Ze.Preprocessing,
               ),
             },
-            o.createElement(Et, {
+            o.createElement(vt, {
               bVisible: r,
               fnSetPopupVisible: i,
               msgNode: l,
             }),
             m.map((e, t) => {
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -6079,7 +6079,7 @@
             ),
             _.map((e, t) => {
               const a = Math.floor(((t + 1) / (_.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -6098,7 +6098,7 @@
             }),
           );
         },
-        Et = (e) => {
+        vt = (e) => {
           const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
             [n, r] = o.useState(e.msgNode.comment());
           o.useEffect(() => {
@@ -6168,7 +6168,7 @@
             ),
           );
         },
-        vt = (e) => {
+        Et = (e) => {
           const { msgWorkingProjectConfig: t } = pe(),
             [a, n] = o.useState(!1),
             r = e.data.msgNode,
@@ -6191,7 +6191,7 @@
             }),
             i.map((e, t) => {
               const a = Math.floor(((t + 1) / (i.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -6252,7 +6252,7 @@
             ),
             l.map((e, t) => {
               const a = Math.floor(((t + 1) / (l.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -6358,7 +6358,7 @@
             o.useEffect(() => {
               setTimeout(() => {
                 for (const e of a.project_nodes())
-                  14 == e.type() && d(v(e.node_id()));
+                  14 == e.type() && d(E(e.node_id()));
               }, 0.1);
             }, [a, d]),
             o.createElement(
@@ -6377,7 +6377,7 @@
               }),
               m.map((e, t) => {
                 const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
-                  n = E(e.connector_id());
+                  n = v(e.connector_id());
                 return o.createElement(
                   ze.HH,
                   {
@@ -6470,7 +6470,7 @@
               ),
               _.map((e, t) => {
                 const a = Math.floor(((t + 1) / (_.length + 1)) * 200),
-                  n = E(e.connector_id());
+                  n = v(e.connector_id());
                 return o.createElement(
                   ze.HH,
                   {
@@ -6691,7 +6691,7 @@
             }),
             m.map((e, t) => {
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -6785,7 +6785,7 @@
             ),
             _.map((e, t) => {
               const a = Math.floor(((t + 1) / (_.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -6975,7 +6975,7 @@
             }),
             d.map((e, t) => {
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -7055,7 +7055,7 @@
             ),
             m.map((e, t) => {
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -7189,7 +7189,7 @@
           o.useEffect(() => {
             setTimeout(() => {
               for (const e of a.project_nodes())
-                10 == e.type() && d(v(e.node_id()));
+                10 == e.type() && d(E(e.node_id()));
             }, 0.1);
           }, [a, d]);
           const m = l.connectors().filter((e) => e.is_input_connector()),
@@ -7210,7 +7210,7 @@
             }),
             m.map((e, t) => {
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -7290,7 +7290,7 @@
             ),
             _.map((e, t) => {
               const a = Math.floor(((t + 1) / (_.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -7505,7 +7505,7 @@
           o.useEffect(() => {
             setTimeout(() => {
               for (const e of t.project_nodes())
-                6 == e.type() && l(v(e.node_id()));
+                6 == e.type() && l(E(e.node_id()));
             }, 0.1);
           }, [t, l]);
           const d = Math.max(150, 40 + 22 * (i.length - 1));
@@ -7515,7 +7515,7 @@
               className: (0, s.Z)(Ze.FlowNode, Ze.TrainNode, Ze.Trainer),
               style: { height: d },
             },
-            o.createElement(It, {
+            o.createElement(Vt, {
               bVisible: a,
               fnSetPopupVisible: n,
               msgNode: r,
@@ -7523,7 +7523,7 @@
             i.map((e, t) => {
               const a = t > 0,
                 n = a ? Math.floor((t / i.length) * (d - 24)) : (d - 24) / 2,
-                r = E(e.connector_id());
+                r = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -7650,7 +7650,7 @@
             ),
           );
         },
-        It = (e) => {
+        Vt = (e) => {
           const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
             [n, r] = o.useState(e.msgNode.train().input_count().toString()),
             [i, s] = o.useState(e.msgNode.train().activation()),
@@ -7956,7 +7956,7 @@
             ),
           );
         },
-        Vt = (e) => {
+        It = (e) => {
           const {
               msgWorkingProject: t,
               msgWorkingProjectConfig: a,
@@ -7982,7 +7982,7 @@
             }),
             d.map((e, t) => {
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -8186,7 +8186,7 @@
             ),
             m.map((e, t) => {
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -8229,7 +8229,7 @@
               g(e.msgNode.text_vectorization().split()),
               f(e.msgNode.text_vectorization().ngrams().toString());
           }, [e.bVisible, e.msgNode]);
-          const E = [
+          const v = [
               {
                 label: (0, c.Xx)(
                   "#SteamLearn_Config_Node_TextVectorization_Standardize_0",
@@ -8255,7 +8255,7 @@
                 value: 3,
               },
             ],
-            v = [
+            E = [
               {
                 label: (0, c.Xx)(
                   "#SteamLearn_Config_Node_TextVectorization_Output_0",
@@ -8392,7 +8392,7 @@
                   dontUpdateProject: !0,
                   fnGetValue: () => l,
                   fnSetValue: (e) => d(parseInt(e)),
-                  options: E,
+                  options: v,
                 }),
                 0 == l &&
                   o.createElement(
@@ -8446,7 +8446,7 @@
                   dontUpdateProject: !0,
                   fnGetValue: () => m,
                   fnSetValue: (e) => _(parseInt(e)),
-                  options: v,
+                  options: E,
                 }),
                 0 == m &&
                   o.createElement(
@@ -8637,7 +8637,7 @@
             }),
             d.map((e, t) => {
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -8701,7 +8701,7 @@
             ),
             m.map((e, t) => {
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -8817,7 +8817,7 @@
             }),
             d.map((e, t) => {
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -8881,7 +8881,7 @@
             ),
             m.map((e, t) => {
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -8991,7 +8991,7 @@
             }),
             d.map((e, t) => {
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -9071,7 +9071,7 @@
             ),
             m.map((e, t) => {
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -9201,7 +9201,7 @@
             }),
             d.map((e, t) => {
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -9281,7 +9281,7 @@
             ),
             m.map((e, t) => {
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -9422,7 +9422,7 @@
           o.useEffect(() => {
             setTimeout(() => {
               for (const e of a.project_nodes())
-                21 == e.type() && d(v(e.node_id()));
+                21 == e.type() && d(E(e.node_id()));
             }, 0.1);
           }, [a, d]);
           const S = Math.max(78, 20 * _.length);
@@ -9442,7 +9442,7 @@
             }),
             _.map((e, t) => {
               const a = Math.floor(((t + 1) / (_.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 We.HP,
                 {
@@ -9672,7 +9672,7 @@
             ),
             p.map((e, t) => {
               const a = Math.floor(((t + 1) / (p.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 We.HP,
                 {
@@ -9702,7 +9702,7 @@
             }),
             g.map((e, t) => {
               const a = Math.floor(((t + 1) * S) / (g.length + 1)),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 We.HP,
                 {
@@ -9733,7 +9733,7 @@
             }),
             N.map((e, t) => {
               const a = Math.floor(((t + 1) * S) / (N.length + 1)),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 We.HP,
                 {
@@ -9775,7 +9775,7 @@
             [_, u] = o.useState(e.msgNode.extract().mode()),
             [p, N] = o.useState(e.msgNode.extract().exclusion()),
             [g, f] = o.useState(e.msgNode.extract().selection()),
-            [E, v] = o.useState(
+            [v, E] = o.useState(
               e.msgNode.extract().recency_months().toFixed(0),
             ),
             [x, h] = o.useState(e.msgNode.extract().bias_start().toFixed(2)),
@@ -9789,7 +9789,7 @@
             [X, k] = o.useState(
               e.msgNode.extract().positive_sample_percent().toFixed(0),
             ),
-            [I, V] = o.useState(e.msgNode.extract().compact_table()),
+            [V, I] = o.useState(e.msgNode.extract().compact_table()),
             [y, j] = o.useState(e.msgNode.extract().extracted_compact_table());
           o.useEffect(() => {
             i(e.msgNode.comment()),
@@ -9798,13 +9798,13 @@
               u(e.msgNode.extract().mode()),
               N(e.msgNode.extract().exclusion()),
               f(e.msgNode.extract().selection()),
-              v(e.msgNode.extract().recency_months().toFixed(0)),
+              E(e.msgNode.extract().recency_months().toFixed(0)),
               h(e.msgNode.extract().bias_start().toFixed(2)),
               L(e.msgNode.extract().bias_end().toFixed(2)),
               D(e.msgNode.extract().input_bias_input_number().toFixed(0)),
               P(e.msgNode.extract().input_bias_strength().toFixed(2)),
               k(e.msgNode.extract().positive_sample_percent().toFixed(0)),
-              V(e.msgNode.extract().compact_table()),
+              I(e.msgNode.extract().compact_table()),
               j(e.msgNode.extract().extracted_compact_table());
           }, [e.bVisible, e.msgNode, n]);
           let O = [
@@ -10040,9 +10040,9 @@
                     smallLabel: !0,
                     hidden: 1 != p,
                     dontUpdateProject: !0,
-                    fnGetInitialValue: () => E,
+                    fnGetInitialValue: () => v,
                     fnValidateValue: (e) => de(e, 0, 600),
-                    fnSetValue: (e) => v(e),
+                    fnSetValue: (e) => E(e),
                   }),
                   o.createElement("div", { className: Ze.Separator }),
                 ),
@@ -10151,9 +10151,9 @@
                     ),
                     smallLabel: !0,
                     dontUpdateProject: !0,
-                    fnGetInitialValue: () => I,
+                    fnGetInitialValue: () => V,
                     fnValidateValue: (e) => _e(a, e),
-                    fnSetValue: (e) => V(e),
+                    fnSetValue: (e) => I(e),
                   }),
                   o.createElement($e, {
                     label: (0, c.Xx)(
@@ -10222,7 +10222,7 @@
                       e.msgNode.extract().set_mode(_),
                       e.msgNode.extract().set_exclusion(p),
                       e.msgNode.extract().set_selection(g),
-                      e.msgNode.extract().set_recency_months(parseInt(E)),
+                      e.msgNode.extract().set_recency_months(parseInt(v)),
                       e.msgNode.extract().set_bias_start(parseFloat(x)),
                       e.msgNode.extract().set_bias_end(parseFloat(C)),
                       e.msgNode
@@ -10234,7 +10234,7 @@
                       e.msgNode
                         .extract()
                         .set_positive_sample_percent(parseInt(X)),
-                      e.msgNode.extract().set_compact_table(I),
+                      e.msgNode.extract().set_compact_table(V),
                       e.msgNode.extract().set_extracted_compact_table(y),
                       se(t),
                       e.fnSetPopupVisible(!1);
@@ -10266,7 +10266,7 @@
             }),
             l.map((e, t) => {
               const a = Math.floor(((t + 1) / (l.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -10386,7 +10386,7 @@
             ),
             d.map((e, t) => {
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -10624,7 +10624,7 @@
             }),
             l.map((e, t) => {
               const a = Math.floor(((t + 1) / (l.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -10716,7 +10716,7 @@
             ),
             d.map((e, t) => {
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -10882,7 +10882,7 @@
             }),
             d.map((e, t) => {
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -10946,7 +10946,7 @@
             ),
             m.map((e, t) => {
               const a = Math.floor(((t + 1) / (m.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -11057,7 +11057,7 @@
             }),
             l.map((e, t) => {
               const a = Math.floor(((t + 1) / (l.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -11121,7 +11121,7 @@
             ),
             d.map((e, t) => {
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -11228,7 +11228,7 @@
             }),
             l.map((e, t) => {
               const a = Math.floor(((t + 1) / (l.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -11308,19 +11308,35 @@
                   o.createElement(
                     "div",
                     { className: Ze.Label },
-                    (0, c.Xx)("#SteamLearn_Config_Node_Transformer_KeyDim"),
+                    (0, c.Xx)(
+                      "#SteamLearn_Config_Node_Transformer_FeedforwardSize",
+                    ),
                   ),
                   o.createElement(
                     "div",
                     { className: Ze.Value },
-                    i.transformer().key_dim(),
+                    i.transformer().feedforward_size(),
+                  ),
+                ),
+                o.createElement(
+                  "div",
+                  { className: Ze.LabelValue },
+                  o.createElement(
+                    "div",
+                    { className: Ze.Label },
+                    (0, c.Xx)("#SteamLearn_Config_Node_Transformer_DropoutPct"),
+                  ),
+                  o.createElement(
+                    "div",
+                    { className: Ze.Value },
+                    `${i.transformer().dropout_pct()}%`,
                   ),
                 ),
               ),
             ),
             d.map((e, t) => {
               const a = Math.floor(((t + 1) / (d.length + 1)) * 200),
-                n = E(e.connector_id());
+                n = v(e.connector_id());
               return o.createElement(
                 ze.HH,
                 {
@@ -11340,14 +11356,38 @@
           );
         },
         ea = (e) => {
-          const { msgWorkingProject: t, msgWorkingProjectConfig: a } = pe(),
-            [n, r] = o.useState(e.msgNode.comment()),
-            [i, s] = o.useState(e.msgNode.transformer().num_heads().toString()),
-            [l, d] = o.useState(e.msgNode.transformer().key_dim().toString());
+          var t, a;
+          const { msgWorkingProject: n, msgWorkingProjectConfig: r } = pe(),
+            [i, s] = o.useState(e.msgNode.comment()),
+            [l, d] = o.useState(e.msgNode.transformer().num_heads().toString()),
+            [m, _] = o.useState(
+              (null === (t = e.msgNode.transformer().feedforward_size()) ||
+              void 0 === t
+                ? void 0
+                : t.toString()) || "1024",
+            ),
+            [u, p] = o.useState(
+              (null === (a = e.msgNode.transformer().dropout_pct()) ||
+              void 0 === a
+                ? void 0
+                : a.toString()) || "30",
+            );
           o.useEffect(() => {
-            r(e.msgNode.comment()),
-              s(e.msgNode.transformer().num_heads().toString()),
-              d(e.msgNode.transformer().key_dim().toString());
+            var t, a;
+            s(e.msgNode.comment()),
+              d(e.msgNode.transformer().num_heads().toString()),
+              _(
+                (null === (t = e.msgNode.transformer().feedforward_size()) ||
+                void 0 === t
+                  ? void 0
+                  : t.toString()) || "1024",
+              ),
+              p(
+                (null === (a = e.msgNode.transformer().dropout_pct()) ||
+                void 0 === a
+                  ? void 0
+                  : a.toString()) || "30",
+              );
           }, [e]);
           return o.createElement(
             je.On,
@@ -11387,8 +11427,8 @@
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
-                  fnGetInitialValue: () => n,
-                  fnSetValue: (e) => r(e),
+                  fnGetInitialValue: () => i,
+                  fnSetValue: (e) => s(e),
                 }),
               ),
               o.createElement("div", { className: Ze.Separator }),
@@ -11407,9 +11447,9 @@
                 ),
                 o.createElement($e, {
                   dontUpdateProject: !0,
-                  fnGetInitialValue: () => i,
+                  fnGetInitialValue: () => l,
                   fnValidateValue: (e) => de(e, 1, 20),
-                  fnSetValue: (e) => s(e),
+                  fnSetValue: (e) => d(e),
                 }),
               ),
               o.createElement(
@@ -11418,18 +11458,44 @@
                 o.createElement(
                   "div",
                   { className: Ze.NodeOptionHeader },
-                  (0, c.Xx)("#SteamLearn_Config_Node_Transformer_KeyDim"),
+                  (0, c.Xx)(
+                    "#SteamLearn_Config_Node_Transformer_FeedforwardSize",
+                  ),
                 ),
                 o.createElement(
                   "div",
                   { className: Ze.NodeOptionDesc },
-                  (0, c.Xx)("#SteamLearn_Config_Node_Transformer_KeyDimDesc"),
+                  (0, c.Xx)(
+                    "#SteamLearn_Config_Node_Transformer_FeedforwardSizeDesc",
+                  ),
                 ),
                 o.createElement($e, {
                   dontUpdateProject: !0,
-                  fnGetInitialValue: () => l,
-                  fnValidateValue: (e) => de(e, 1, 2048),
-                  fnSetValue: (e) => d(e),
+                  fnGetInitialValue: () => m,
+                  fnValidateValue: (e) => de(e, 16, 10240),
+                  fnSetValue: (e) => _(e),
+                }),
+              ),
+              o.createElement(
+                "div",
+                { className: Ze.NodeOptionBlock },
+                o.createElement(
+                  "div",
+                  { className: Ze.NodeOptionHeader },
+                  (0, c.Xx)("#SteamLearn_Config_Node_Transformer_DropoutPct"),
+                ),
+                o.createElement(
+                  "div",
+                  { className: Ze.NodeOptionDesc },
+                  (0, c.Xx)(
+                    "#SteamLearn_Config_Node_Transformer_DropoutPctDesc",
+                  ),
+                ),
+                o.createElement($e, {
+                  dontUpdateProject: !0,
+                  fnGetInitialValue: () => u,
+                  fnValidateValue: (e) => de(e, 16, 10240),
+                  fnSetValue: (e) => p(e),
                 }),
               ),
               o.createElement("div", { className: Ze.Separator }),
@@ -11441,10 +11507,11 @@
                 Pe.KM,
                 {
                   onClick: () => {
-                    e.msgNode.transformer().set_num_heads(parseInt(i)),
-                      e.msgNode.transformer().set_key_dim(parseInt(l)),
-                      e.msgNode.set_comment(n),
-                      se(t),
+                    e.msgNode.transformer().set_num_heads(parseInt(l)),
+                      e.msgNode.transformer().set_feedforward_size(parseInt(m)),
+                      e.msgNode.transformer().set_dropout_pct(parseInt(u)),
+                      e.msgNode.set_comment(i),
+                      se(n),
                       e.fnSetPopupVisible(!1);
                   },
                 },
@@ -11499,11 +11566,11 @@
             [l, d] = ra(r),
             [m, _, p] = (0, ze.Rr)(l),
             [N, g, f] = (0, ze.ll)(d),
-            [E, v] = o.useState(null),
+            [v, E] = o.useState(null),
             [C, L] = o.useState(!1),
             b = o.useMemo(
               () => ({
-                nodeInput: vt,
+                nodeInput: Et,
                 nodeDenseStack: _t,
                 nodeDense: lt,
                 nodeDropout: pt,
@@ -11518,7 +11585,7 @@
                 nodeConditionalSwap: it,
                 nodeConditionalExtract: ot,
                 nodeKMeans: ht,
-                nodeTextVectorization: Vt,
+                nodeTextVectorization: It,
                 nodeBatchNormalization: Ot,
                 nodeNormalize: wt,
                 nodeNamedInference: Ft,
@@ -11695,7 +11762,8 @@
                       (i = 1),
                         (s = 1),
                         r.transformer().set_num_heads(2),
-                        r.transformer().set_key_dim(128);
+                        r.transformer().set_feedforward_size(1024),
+                        r.transformer().set_dropout_pct(30);
                       break;
                     case 21: {
                       r.extract().set_input_type(0),
@@ -11779,14 +11847,14 @@
               },
               [n, r],
             ),
-            I = o.useCallback(
+            V = o.useCallback(
               (e) => {
                 f(e);
               },
               [f],
             ),
-            V = o.useCallback(() => {
-              v(null);
+            I = o.useCallback(() => {
+              E(null);
             }, []),
             y = o.useCallback(
               (e, t) => {
@@ -12135,14 +12203,14 @@
                   nodes: m,
                   edges: N,
                   onNodesChange: X,
-                  onEdgesChange: I,
+                  onEdgesChange: V,
                   onNodeDragStop: k,
                   onConnect: O,
                   onInit: a,
                   onDrop: P,
                   onDragOver: T,
                   onEdgeUpdate: y,
-                  onEdgeUpdateStart: V,
+                  onEdgeUpdateStart: I,
                   onEdgeUpdateEnd: j,
                   snapToGrid: !0,
                   snapGrid: [5, 5],
@@ -12217,7 +12285,7 @@
           a = [];
         for (const n of e.project_nodes()) {
           t.push({
-            id: v(n.node_id()),
+            id: E(n.node_id()),
             type: oa(n.type()),
             position: { x: n.location_x(), y: n.location_y() },
             data: { msgNode: n },
@@ -12233,10 +12301,10 @@
               r
                 ? a.push({
                     id: C(t.connector_id(), o),
-                    source: v(n.node_id()),
-                    sourceHandle: E(t.connector_id()),
-                    target: v(r.node_id()),
-                    targetHandle: E(o),
+                    source: E(n.node_id()),
+                    sourceHandle: v(t.connector_id()),
+                    target: E(r.node_id()),
+                    targetHandle: v(o),
                   })
                 : console.error(
                     `Failed to find node ${n.node_id()} connector ${t.connector_id()} target ${o}`,
@@ -12433,18 +12501,18 @@
               : e.eState == ma.Create && (m(""), u(""), N(!1)),
               S("");
           }, [e.eState, a]);
-          let E = "",
-            v = "",
+          let v = "",
+            E = "",
             x = "";
           switch (e.eState) {
             case ma.Create:
-              (E = (0, c.Xx)("#SteamLearn_Project_Create_Header")),
+              (v = (0, c.Xx)("#SteamLearn_Project_Create_Header")),
                 (x = (0, c.Xx)("#SteamLearn_Project_Create_Guidance")),
-                (v = (0, c.Xx)("#SteamLearn_Project_CreateProject"));
+                (E = (0, c.Xx)("#SteamLearn_Project_CreateProject"));
               break;
             case ma.Edit:
-              (E = (0, c.Xx)("#SteamLearn_Project_Edit_Guidance")),
-                (v = (0, c.Xx)("#SteamLearn_Project_Edit_Accept"));
+              (v = (0, c.Xx)("#SteamLearn_Project_Edit_Guidance")),
+                (E = (0, c.Xx)("#SteamLearn_Project_Edit_Accept"));
           }
           return o.createElement(
             je.On,
@@ -12453,7 +12521,7 @@
               onDismiss: () => e.fnSetPopupState(ma.Hidden),
               modalClassName: "CreateOrEditProjectPopup",
             },
-            o.createElement(Pe.h4, null, E),
+            o.createElement(Pe.h4, null, v),
             x.length > 0 &&
               o.createElement("div", { className: ia.Guidance }, x),
             o.createElement(
@@ -12523,7 +12591,7 @@
                       N(!0);
                     }),
                 },
-                v,
+                E,
               ),
               o.createElement(
                 Pe.zx,
@@ -12543,8 +12611,8 @@
             } = pe(),
             d = (0, r.k6)(),
             m = (0, r.TH)(),
-            [_, u, N] = (0, Ee.X9)(),
-            [f, E, v] = (0, Ee.X9)(),
+            [_, u, N] = (0, ve.X9)(),
+            [f, v, E] = (0, ve.X9)(),
             [x, h] = o.useState(ma.Hidden);
           let C = [];
           for (const t of e.arrMsgProjects)
@@ -12686,11 +12754,11 @@
                   { disabled: b, onClick: (e) => D() },
                   (0, c.Xx)("#SteamLearn_Project_Publish"),
                 ),
-              o.createElement(da, { bVisible: f, fnClosePopup: v }),
+              o.createElement(da, { bVisible: f, fnClosePopup: E }),
               b &&
                 o.createElement(
                   Pe.h5,
-                  { className: ia.Warning, disabled: !b, onClick: E },
+                  { className: ia.Warning, disabled: !b, onClick: v },
                   (0, c.Xx)("#SteamLearn_Project_Discard"),
                 ),
               o.createElement(la, { bVisible: _, fnClosePopup: N }),
@@ -13530,8 +13598,8 @@
           ),
         );
       };
-      var Ea = a(53664),
-        va = a(90291),
+      var va = a(53664),
+        Ea = a(90291),
         xa = a(56886),
         ha = a(52942),
         Ca = a(90934);
@@ -13566,7 +13634,7 @@
             [i, d] = o.useState(""),
             m = A(e.nProjectID, e.nFetchID),
             _ = m.data;
-          (0, Ee.Yz)(() => {
+          (0, ve.Yz)(() => {
             _ && (_.status(), R(e.nProjectID, e.nFetchID));
           }, 3e3);
           if (0 == t)
@@ -13683,13 +13751,13 @@
             }
           const f =
               _ && (5 == _.status() || 2 == _.status() || 6 == _.status()),
-            E = _ && _.cancel_pending(),
-            v = _ && 8 == _.status();
+            v = _ && _.cancel_pending(),
+            E = _ && 8 == _.status();
           m.isLoading &&
             (u = (0, c.Xx)("#SteamLearn_Status_Fetch_Status_Loading"));
           let x = "";
           const h = _ && _.total_rows() > 0;
-          if (_ && !v) {
+          if (_ && !E) {
             const e = _.total_rows_processed() / _.total_rows(),
               t = Date.now() / 1e3 - _.start_time(),
               a = t / e;
@@ -13750,7 +13818,7 @@
                     (0, c.Xx)("#SteamLearn_Status_Fetch_Status", e.nFetchID),
                   ),
                   f &&
-                    !E &&
+                    !v &&
                     o.createElement(
                       Pe.KM,
                       {
@@ -13774,7 +13842,7 @@
                       },
                       (0, c.Xx)("#SteamLearn_Status_Fetch_Cancel"),
                     ),
-                  f && E && o.createElement("div", null, "Canceling..."),
+                  f && v && o.createElement("div", null, "Canceling..."),
                   o.createElement(
                     "div",
                     { className: (0, s.Z)(Ca.StatusString, N) },
@@ -13958,10 +14026,10 @@
                 ),
               ),
               o.createElement(
-                Ea.w,
+                va.w,
                 { width: 500, height: 300 },
                 e.lines.map((t, a) =>
-                  o.createElement(va.K, {
+                  o.createElement(Ea.K, {
                     key: `${e.strHeading}_${t.strDataLabel}_${a}`,
                     type: "number",
                     dataKey: "index",
@@ -14006,16 +14074,16 @@
             } = pe(),
             m = z(e.nProjectID, e.nTrainID),
             [_, u] = o.useState(-1),
-            [N, E] = o.useState(""),
-            v = m.data,
+            [N, v] = o.useState(""),
+            E = m.data,
             x = null === (t = m.data) || void 0 === t ? void 0 : t.status(),
             h =
               null === (a = m.data) || void 0 === a
                 ? void 0
                 : a.epochs().length;
-          (0, Ee.Yz)(() => {
-            if (v)
-              switch (v.status()) {
+          (0, ve.Yz)(() => {
+            if (E)
+              switch (E.status()) {
                 case 0:
                 case 2:
                 case 1:
@@ -14024,11 +14092,11 @@
                   K(e.nProjectID, e.nTrainID);
                   break;
                 case 3:
-                  v.active() && !v.live() && K(e.nProjectID, e.nTrainID);
+                  E.active() && !E.live() && K(e.nProjectID, e.nTrainID);
               }
           }, 3e3),
             o.useEffect(() => {
-              -1 == _ && m.data && h && u(3 == x ? 0 : h);
+              -1 == _ && h && u(3 == x ? 0 : h);
             }, [x, u, _, h]),
             o.useEffect(() => {
               h && _ > h && u(-1);
@@ -14073,8 +14141,8 @@
             D,
             T = (0, c.Xx)("#SteamLearn_Status_Train_Status_Unknown"),
             P = Ca.Unknown;
-          if (v)
-            switch (v.status()) {
+          if (E)
+            switch (E.status()) {
               case 0:
                 (T = (0, c.Xx)("#SteamLearn_Status_Train_Status_Unknown")),
                   (P = Ca.Unknown);
@@ -14106,30 +14174,30 @@
           m.isLoading &&
             (T = (0, c.Xx)("#SteamLearn_Status_Train_Status_Loading"));
           let X = 0,
-            I = 0,
             V = 0,
+            I = 0,
             y = 0;
           const j = 100;
-          if (v)
+          if (E)
             if (0 != _) {
-              const e = _ > v.epochs().length ? void 0 : v.epochs()[_ - 1];
+              const e = _ > E.epochs().length ? void 0 : E.epochs()[_ - 1];
               if (e) {
                 (X = e.train_batches().length),
-                  (V = e.validate_batches().length),
+                  (I = e.validate_batches().length),
                   e.train_batches().length > 0 &&
                   e.train_batches()[0].batch_id() > 0
-                    ? ((I = Math.floor(
-                        v.train_batch_count() / e.train_batches()[0].batch_id(),
+                    ? ((V = Math.floor(
+                        E.train_batch_count() / e.train_batches()[0].batch_id(),
                       )),
                       (y = Math.floor(
-                        v.validate_batch_count() /
+                        E.validate_batch_count() /
                           e.train_batches()[0].batch_id(),
                       )))
-                    : ((I = Math.floor(v.train_batch_count() / 100)),
-                      (y = Math.floor(v.validate_batch_count() / 100)));
-                const t = X / I,
-                  a = V / y,
-                  n = (X + V) / (I + y),
+                    : ((V = Math.floor(E.train_batch_count() / 100)),
+                      (y = Math.floor(E.validate_batch_count() / 100)));
+                const t = X / V,
+                  a = I / y,
+                  n = (X + I) / (V + y),
                   o = Date.now() / 1e3 - e.start_time(),
                   r = o / n;
                 if (e.end_time()) {
@@ -14137,7 +14205,7 @@
                     "#SteamLearn_Status_Train_BatchCurrent_EpochDuration",
                     La(e.end_time() - e.start_time()),
                   );
-                  t != N && E(t);
+                  t != N && v(t);
                 } else if (!m.isFetching) {
                   let e = r - o;
                   if (!isNaN(e)) {
@@ -14145,7 +14213,7 @@
                       "#SteamLearn_Status_Train_BatchCurrent_TimeEstimate",
                       La(e),
                     );
-                    t != N && E(t);
+                    t != N && v(t);
                   }
                 }
                 const i = ba(
@@ -14216,8 +14284,7 @@
                 ];
               }
             } else {
-              const e = v
-                  .epochs()
+              const e = E.epochs()
                   .map((e, t) => {
                     let a;
                     return (
@@ -14230,8 +14297,7 @@
                     );
                   })
                   .filter((e) => null != e.Value),
-                t = v
-                  .epochs()
+                t = E.epochs()
                   .map((e, t) => {
                     let a;
                     return (
@@ -14270,10 +14336,10 @@
                   },
                 ]));
             }
-          const O = v && 3 == v.status(),
-            B = v && v.live(),
-            w = v && v.active(),
-            H = v && 2 == v.status(),
+          const O = E && 3 == E.status(),
+            B = E && E.live(),
+            w = E && E.active(),
+            H = E && 2 == E.status(),
             F =
               r && d && d.serializeBase64String() != r.serializeBase64String();
           let M = [
@@ -14282,8 +14348,8 @@
               value: 0,
             },
           ];
-          if (v)
-            for (let e = 0; e < v.epochs().length; e++)
+          if (E)
+            for (let e = 0; e < E.epochs().length; e++)
               M.push({
                 label: (0, c.Xx)("#SteamLearn_Status_Train_EpochOption", e + 1),
                 value: e + 1,
@@ -14388,7 +14454,7 @@
                 ),
               ),
             ),
-            v &&
+            E &&
               o.createElement(
                 "div",
                 { className: Ca.EpochSelectorSection },
@@ -14408,7 +14474,7 @@
                   ),
                 ),
               ),
-            v &&
+            E &&
               0 != _ &&
               o.createElement(
                 "div",
@@ -14422,8 +14488,8 @@
                       { className: Ca.PhaseLabel },
                       (0, c.Xx)("#SteamLearn_Status_Train_BatchCurrent_Train"),
                     ),
-                    I > 0 &&
-                      X == I &&
+                    V > 0 &&
+                      X == V &&
                       o.createElement(
                         "div",
                         { className: Ca.PhaseValues },
@@ -14433,8 +14499,8 @@
                           (0, c.Xx)("#SteamLearn_Status_Train_Status_Complete"),
                         ),
                       ),
-                    I > 0 &&
-                      X != I &&
+                    V > 0 &&
+                      X != V &&
                       o.createElement(
                         "div",
                         { className: Ca.PhaseValues },
@@ -14443,11 +14509,11 @@
                         o.createElement(
                           "span",
                           { className: Ca.Total },
-                          (100 * I).toLocaleString(),
+                          (100 * V).toLocaleString(),
                         ),
                       ),
                   ),
-                V > 0 &&
+                I > 0 &&
                   o.createElement(
                     "div",
                     { className: Ca.BatchStatusRow },
@@ -14459,7 +14525,7 @@
                       ),
                     ),
                     y > 0 &&
-                      V == y &&
+                      I == y &&
                       o.createElement(
                         "div",
                         { className: Ca.PhaseValues },
@@ -14470,11 +14536,11 @@
                         ),
                       ),
                     y > 0 &&
-                      V != y &&
+                      I != y &&
                       o.createElement(
                         "div",
                         { className: Ca.PhaseValues },
-                        (100 * V).toLocaleString(),
+                        (100 * I).toLocaleString(),
                         " / ",
                         o.createElement(
                           "span",
@@ -14485,7 +14551,7 @@
                   ),
                 o.createElement("div", { className: Ca.BatchStatusRow }, N),
               ),
-            v &&
+            E &&
               b &&
               D &&
               o.createElement(
@@ -14522,16 +14588,16 @@
             ),
           );
         };
-      var Ia;
+      var Va;
       !(function (e) {
         (e[(e.NONE = 0)] = "NONE"),
           (e[(e.MAIN = 1)] = "MAIN"),
           (e[(e.FETCH_WORKERS = 2)] = "FETCH_WORKERS"),
           (e[(e.GPU = 3)] = "GPU");
-      })(Ia || (Ia = {}));
-      const Va = (e) => {
+      })(Va || (Va = {}));
+      const Ia = (e) => {
           const { nProjectID: t } = pe(),
-            [a, n] = o.useState(Ia.NONE);
+            [a, n] = o.useState(Va.NONE);
           return o.createElement(
             "div",
             { className: Ca.LogSection },
@@ -14540,9 +14606,9 @@
               { className: Ca.ButtonRow },
               o.createElement(
                 Pe.KM,
-                { onClick: () => n(a == Ia.MAIN ? Ia.NONE : Ia.MAIN) },
+                { onClick: () => n(a == Va.MAIN ? Va.NONE : Va.MAIN) },
                 (0, c.Xx)(
-                  a == Ia.MAIN
+                  a == Va.MAIN
                     ? "#SteamLearn_Status_LogMain_Hide"
                     : "#SteamLearn_Status_LogMain_Show",
                 ),
@@ -14551,35 +14617,35 @@
                 Pe.KM,
                 {
                   onClick: () =>
-                    n(a == Ia.FETCH_WORKERS ? Ia.NONE : Ia.FETCH_WORKERS),
+                    n(a == Va.FETCH_WORKERS ? Va.NONE : Va.FETCH_WORKERS),
                 },
                 (0, c.Xx)(
-                  a == Ia.FETCH_WORKERS
+                  a == Va.FETCH_WORKERS
                     ? "#SteamLearn_Status_LogFetchWorkers_Hide"
                     : "#SteamLearn_Status_LogFetchWorkers_Show",
                 ),
               ),
               o.createElement(
                 Pe.KM,
-                { onClick: () => n(a == Ia.GPU ? Ia.NONE : Ia.GPU) },
+                { onClick: () => n(a == Va.GPU ? Va.NONE : Va.GPU) },
                 (0, c.Xx)(
-                  a == Ia.GPU
+                  a == Va.GPU
                     ? "#SteamLearn_Status_LogTrain_Hide"
                     : "#SteamLearn_Status_LogTrain_Show",
                 ),
               ),
             ),
-            a == Ia.MAIN &&
+            a == Va.MAIN &&
               o.createElement(ya, {
                 nFetchID: e.nFetchID,
                 nTrainID: e.nTrainID,
               }),
-            a == Ia.FETCH_WORKERS &&
+            a == Va.FETCH_WORKERS &&
               o.createElement(ja, {
                 nFetchID: e.nFetchID,
                 nTrainID: e.nTrainID,
               }),
-            a == Ia.GPU &&
+            a == Va.GPU &&
               o.createElement(Oa, {
                 nFetchID: e.nFetchID,
                 nTrainID: e.nTrainID,
@@ -14718,7 +14784,7 @@
                       },
                     }),
                     o.createElement("div", { className: Ca.Separator }),
-                    o.createElement(Va, { nFetchID: a, nTrainID: r }),
+                    o.createElement(Ia, { nFetchID: a, nTrainID: r }),
                   )
                 : null
           );
@@ -14738,8 +14804,8 @@
           u = (0, r.k6)(),
           N = M(n, i),
           f = G(n, i),
-          E = N.data,
-          v = f.data,
+          v = N.data,
+          E = f.data,
           x = N.isLoading || f.isLoading,
           h = i > 0,
           C = e && t && t.serializeBase64String() == e.serializeBase64String(),
@@ -14842,13 +14908,15 @@
                     value: s,
                     onChange: (e) => d(parseInt(e.target.value)),
                   },
-                  E.versions().map((e) =>
-                    o.createElement(
-                      "option",
-                      { key: `Fetch_${e}`, value: e },
-                      (0, c.Xx)("#SteamLearn_ManualTrain_FetchVersion", e),
+                  v
+                    .versions()
+                    .map((e) =>
+                      o.createElement(
+                        "option",
+                        { key: `Fetch_${e}`, value: e },
+                        (0, c.Xx)("#SteamLearn_ManualTrain_FetchVersion", e),
+                      ),
                     ),
-                  ),
                   o.createElement(
                     "option",
                     { key: "Fetch_0", value: 0 },
@@ -14862,15 +14930,13 @@
                     value: m,
                     onChange: (e) => _(parseInt(e.target.value)),
                   },
-                  v
-                    .versions()
-                    .map((e) =>
-                      o.createElement(
-                        "option",
-                        { key: `Fetch_${e}`, value: e },
-                        (0, c.Xx)("#SteamLearn_ManualTrain_TrainVersion", e),
-                      ),
+                  E.versions().map((e) =>
+                    o.createElement(
+                      "option",
+                      { key: `Fetch_${e}`, value: e },
+                      (0, c.Xx)("#SteamLearn_ManualTrain_TrainVersion", e),
                     ),
+                  ),
                   o.createElement(
                     "option",
                     { key: "Fetch_0", value: 0 },
@@ -15111,7 +15177,7 @@
             [_, u] = o.useState(void 0),
             [p, N] = o.useState([]),
             [g, S] = o.useState([]),
-            [f, E] = o.useState(!1);
+            [f, v] = o.useState(!1);
           return (
             o.useEffect(() => {
               u(void 0), N([]), S([]);
@@ -15119,7 +15185,7 @@
             o.useEffect(() => {
               d &&
                 (0, l.mG)(void 0, void 0, void 0, function* () {
-                  E(!0);
+                  v(!0);
                   let e,
                     t = [],
                     n = [],
@@ -15190,7 +15256,7 @@
                     }
                     o.push(a);
                   }
-                  u(e), N(n), S(o), E(!1);
+                  u(e), N(n), S(o), v(!1);
                 });
             }, [d, a]),
             o.createElement(
@@ -15525,7 +15591,7 @@
                   }),
                   o.createElement(r.AW, {
                     path: za.SteamLearnProjectCreate(),
-                    component: Ie,
+                    component: Ve,
                   }),
                   o.createElement(r.AW, {
                     path: za.SteamLearnProjectOverview(void 0, void 0),

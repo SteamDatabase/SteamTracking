@@ -1310,11 +1310,10 @@ a.friendactivity_game_link.ds_flagged:not(.ds_wishlist) img {
 }
 
 .similar_grid_item .similar_grid_capsule {
+	display: block;
 	position: relative;
-	left: -1px;
 	width: 292px;
-	height: 136px;
-	border: 1px solid #262626;
+	border: 1px solid transparent;
 	margin-bottom: 5px;
 }
 

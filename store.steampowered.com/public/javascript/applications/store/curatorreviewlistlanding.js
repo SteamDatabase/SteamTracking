@@ -805,55 +805,55 @@
             bHideStatusBanners: l,
             strExtraParams: i,
             imageType: m,
-            bHasParentAppToDisplay: v,
-            bUseSubscriptionLayout: h,
-            elElementToAppendToHover: g,
-            bHidePrice: C,
-            bHidePlatforms: D,
-            creatorAccountID: w,
-            bIsHovered: L,
-            onlyOneDiscountPct: G,
+            bHasParentAppToDisplay: p,
+            bUseSubscriptionLayout: v,
+            elElementToAppendToHover: h,
+            bHidePrice: g,
+            bHidePlatforms: C,
+            creatorAccountID: D,
+            bIsHovered: w,
+            onlyOneDiscountPct: L,
           } = e,
-          [T] = (0, d.jk)(a.id, (0, u.TM)(a.type), { include_platforms: !0 }),
-          N = (0, S.bJ)(),
-          A =
+          [G] = (0, d.jk)(a.id, (0, u.TM)(a.type), { include_platforms: !0 }),
+          T = (0, S.bJ)(),
+          N =
             ((0, E.Dt)(a.type),
             (0, n.useMemo)(
-              () => (null == T ? void 0 : T.GetIncludedAppIDsOrSelf()),
-              [T],
+              () => (null == G ? void 0 : G.GetIncludedAppIDsOrSelf()),
+              [G],
             )),
-          R =
-            T &&
-            (null == T
+          A =
+            G &&
+            (null == G
               ? void 0
-              : T.GetIncludedAppIDsOrSelf().every((e) =>
+              : G.GetIncludedAppIDsOrSelf().every((e) =>
                   c.jg.Get().BOwnsApp(e),
                 ));
-        if (!T) return null;
-        const k = R && !l,
-          B = (0, P.bk)((0, s.Hf)(`${T.GetStorePageURL()}${i || ""}`, N));
-        let O,
-          F = null;
-        if (h && 0 == (null == T ? void 0 : T.GetStoreItemType()))
-          F = n.createElement(b.r, { appid: T.GetAppID(), bIsMuted: L });
-        else if (g);
+        if (!G) return null;
+        const R = A && !l,
+          k = (0, P.bk)((0, s.Hf)(`${G.GetStorePageURL()}${i || ""}`, T));
+        let B,
+          O = null;
+        if (v && 0 == (null == G ? void 0 : G.GetStoreItemType()))
+          O = n.createElement(b.r, { appid: G.GetAppID(), bIsMuted: w });
+        else if (h);
         else {
-          const t = R && r,
-            o = k;
-          F = n.createElement(_.Hl, {
+          const t = A && r,
+            o = R;
+          O = n.createElement(_.Hl, {
             info: a,
             bShowAsMuted: o,
-            bHidePrice: C,
+            bHidePrice: g,
             bShowInLibraryInsteadOfPrice: t,
-            bHidePlatforms: D,
-            creatorAccountID: w,
+            bHidePlatforms: C,
+            creatorAccountID: D,
             bShowName: e.bShowName,
-            onlyOneDiscountPct: G,
+            onlyOneDiscountPct: L,
           });
         }
         return (
           "overrideNavigation" in a &&
-            (O = (e) => (
+            (B = (e) => (
               a.overrideNavigation(e),
               e.preventDefault(),
               e.stopPropagation(),
@@ -862,22 +862,22 @@
           n.createElement(
             o.IS,
             {
-              href: O ? null : B,
+              href: B ? null : k,
               style: { display: "block", cursor: "pointer" },
-              preferredFocus: v,
-              onClick: O,
+              preferredFocus: p,
+              onClick: B,
             },
-            n.createElement(f.v, { appids: A, hide_status_banners: l }),
+            n.createElement(f.v, { appids: N, hide_status_banners: l }),
             n.createElement(_.a4, { imageType: m, info: a }),
             n.createElement(I.y, {
               eDeckCompatibilityCategory:
-                null === (t = null == T ? void 0 : T.GetPlatforms()) ||
+                null === (t = null == G ? void 0 : G.GetPlatforms()) ||
                 void 0 === t
                   ? void 0
                   : t.steam_deck_compat_category,
             }),
-            Boolean(L && !(0, p.Hu)()) && n.createElement(y.v, { appInfo: a }),
-            F,
+            Boolean(w) && n.createElement(y.v, { appInfo: a }),
+            O,
           )
         );
       }

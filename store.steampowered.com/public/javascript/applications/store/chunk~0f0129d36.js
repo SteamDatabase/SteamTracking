@@ -740,7 +740,7 @@
     },
     97076: (e, t, n) => {
       "use strict";
-      n.d(t, { Ax: () => _, jS: () => S, rW: () => E, sp: () => f });
+      n.d(t, { Ax: () => _, jS: () => f, rW: () => S, sp: () => E });
       var a = n(85556),
         i = n(79545),
         r = n(22791),
@@ -1038,13 +1038,13 @@
           Object.assign(Object.assign({}, e), { bLoading: n })
         );
       }
-      function S() {
+      function f() {
         return { fnClaimItem: g.Get().UserClaimItem };
       }
-      function E() {
+      function S() {
         return { fnSetClaimState: g.Get().TEST_OverrideClaimState };
       }
-      function f(e) {
+      function E(e) {
         return (0, a.mG)(this, void 0, void 0, function* () {
           return g.Get().ActivateProfileModifier(e);
         });
@@ -1054,7 +1054,7 @@
     },
     73168: (e, t, n) => {
       "use strict";
-      n.d(t, { l: () => E });
+      n.d(t, { l: () => S });
       var a = n(40029),
         i = n(47427),
         r = n(91618),
@@ -1162,18 +1162,18 @@
           );
         }
       }
-      const S = (0, a.Rq)(_, (e) => ({
+      const f = (0, a.Rq)(_, (e) => ({
         currentSlide: e.currentSlide,
         totalSlides: e.totalSlides,
         visibleSlides: e.visibleSlides,
       }));
-      function E(e) {
+      function S(e) {
         const t = (0, p.id)();
         return e.screenIsWide || t
-          ? i.createElement(f, Object.assign({}, e), e.children)
+          ? i.createElement(E, Object.assign({}, e), e.children)
           : i.createElement(h, Object.assign({}, e), e.children);
       }
-      function f(e) {
+      function E(e) {
         const t = (0, p.id)(),
           n = () => i.Children.count(e.children),
           o = n(),
@@ -1183,14 +1183,14 @@
           h = e.hideArrows || !u,
           g = !u || e.hidePips;
         let _ = 4 / 3,
-          E = !0;
-        e.slideAspectRatio && ((_ = e.slideAspectRatio), (E = !1));
-        const f = `items_in_row_${e.visibleElements}`;
+          S = !0;
+        e.slideAspectRatio && ((_ = e.slideAspectRatio), (S = !1));
+        const E = `items_in_row_${e.visibleElements}`;
         return i.createElement(
           r.s,
           {
             "flow-children": "row",
-            className: (0, l.Z)(c.carouselBody, e.className, f),
+            className: (0, l.Z)(c.carouselBody, e.className, E),
             navKey: e.navKey,
           },
           i.createElement(
@@ -1202,7 +1202,7 @@
               naturalSlideHeight: 100,
               step: e.visibleElements,
               infinite: !e.disableEdgeWrap,
-              isIntrinsicHeight: E,
+              isIntrinsicHeight: S,
               dragEnabled: !1,
               touchEnabled: !1,
               lockOnWindowScroll: !0,
@@ -1238,7 +1238,7 @@
             ),
             !g &&
               (e.useTestScrollbar
-                ? i.createElement(S, { showArrows: h, carouselStore: null })
+                ? i.createElement(f, { showArrows: h, carouselStore: null })
                 : i.createElement(
                     "div",
                     { className: c.breadcrumbContainer },
@@ -1264,14 +1264,14 @@
           m = i.useContext(a.ro),
           p = i.useRef(m.state.currentSlide),
           [u, h] = i.useState(null),
-          [_, S] = i.useState(!!n),
-          E = i.useRef(null),
-          f = i.useRef(null);
+          [_, f] = i.useState(!!n),
+          S = i.useRef(null),
+          E = i.useRef(null);
         i.useEffect(() => {
           const e = () => {
-            E.current = window.setTimeout(() => {
-              if (E.current) {
-                C(E);
+            S.current = window.setTimeout(() => {
+              if (S.current) {
+                C(S);
                 const e = (m.state.currentSlide + 1) % m.state.totalSlides;
                 m.setStoreState({ currentSlide: e });
               }
@@ -1281,17 +1281,17 @@
           const t = () => {
             const t = p.current,
               n = m.state.currentSlide;
-            s && s(n), h(n > t ? "Right" : n < t ? "Left" : null), C(f);
-            (f.current = window.setTimeout(() => {
-              f.current && (h(null), C(f));
+            s && s(n), h(n > t ? "Right" : n < t ? "Left" : null), C(E);
+            (E.current = window.setTimeout(() => {
+              E.current && (h(null), C(E));
             }, 1e3)),
               (p.current = n),
-              E.current ? (C(E), S(!1)) : _ && e();
+              S.current ? (C(S), f(!1)) : _ && e();
           };
           return (
             m.subscribe(t),
             () => {
-              m.unsubscribe(t), C(E), C(f);
+              m.unsubscribe(t), C(S), C(E);
             }
           );
         }, [m, _]);
@@ -1388,7 +1388,7 @@
             strSuccess: h,
             elSuccess: g,
             elError: _,
-            strThrobber: S,
+            strThrobber: f,
           } = n;
         return d || u || _
           ? a.createElement(
@@ -1417,7 +1417,7 @@
                 i.uH,
                 { strTitle: t, closeModal: () => {} },
                 a.createElement(l.V, {
-                  string: c || S || (0, o.Xx)("#Loading"),
+                  string: c || f || (0, o.Xx)("#Loading"),
                   size: "medium",
                   position: "center",
                 }),
@@ -1522,10 +1522,10 @@
       }
       var g = n(20417),
         _ = n(89e3),
-        S = n(35427),
-        E = n(64561),
-        f = n(14411),
-        C = n.n(f),
+        f = n(35427),
+        S = n(64561),
+        E = n(14411),
+        C = n.n(E),
         v = n(90286),
         y = n(29480),
         I = n(16649),
@@ -1626,8 +1626,8 @@
         A = n.n(B),
         k = n(27605),
         M = n(77936),
-        N = n(68985),
-        U = n(93243),
+        U = n(68985),
+        N = n(93243),
         R = n(82071),
         G = n(15690),
         F = n(46882),
@@ -1660,9 +1660,9 @@
             try {
               if (this.state.bLoading) {
                 if (void 0 !== t) {
-                  r = (yield U.sV.LoadOGGClanInfoForIdentifier(t)).clanSteamID;
+                  r = (yield N.sV.LoadOGGClanInfoForIdentifier(t)).clanSteamID;
                 } else if (void 0 !== i) {
-                  r = (yield U.sV.LoadOGGClanInfoForGroupVanity(i)).clanSteamID;
+                  r = (yield N.sV.LoadOGGClanInfoForGroupVanity(i)).clanSteamID;
                 }
                 const o = R.j1.LoadPartnerEventGeneric(r, e, a, n, 0);
                 let l = yield o;
@@ -1726,7 +1726,7 @@
             m = s.GetImageForSizeAsArrayWithFallback(
               "capsule",
               c,
-              N.FN.capsule_main,
+              U.FN.capsule_main,
             );
           o && (m = o(m));
           let p = s.GetNameWithFallback(c),
@@ -1937,7 +1937,7 @@
         if ((0, D.h4)()) return null;
         const n = (0, _.S6)(e);
         return void 0 !== (null == n ? void 0 : n.strVideoID)
-          ? i.createElement(E.O, {
+          ? i.createElement(S.O, {
               videoID: n.strVideoID,
               nStartSeconds: n.nStartSeconds,
               classNameAlign: "",
@@ -2002,7 +2002,7 @@
               t.includes("steamchina.com")))
         );
       }
-      function Se(e, t) {
+      function fe(e, t) {
         if (_e(e)) {
           let t = new RegExp(ee).exec(e);
           if (t && t.length > 2) {
@@ -2013,7 +2013,7 @@
         }
         return (0, d.hF)(e, null == t ? void 0 : t.event);
       }
-      function Ee(e, t) {
+      function Se(e, t) {
         if (_e(e)) {
           const t = new RegExp(me).exec(e);
           if (t && t.length > 1) {
@@ -2028,13 +2028,13 @@
         }
         return (0, d.hF)(e, null == t ? void 0 : t.event);
       }
-      function fe(e, t) {
+      function Ee(e, t) {
         if (_e(e)) {
           let t = new RegExp(te).exec(e);
           if (t && t.length > 2) {
             let n, a, r, o;
             "gid" == t[1]
-              ? (a = new S.K(t[2]))
+              ? (a = new f.K(t[2]))
               : "groups" == t[1]
                 ? (o = t[2])
                 : isNaN(+t[2])
@@ -2101,9 +2101,9 @@
           if (n && n.length > 2) {
             let e, a, r, o;
             "gid" == n[1]
-              ? (a = new S.K(n[2]))
+              ? (a = new f.K(n[2]))
               : "group" == n[1]
-                ? (a = S.K.InitFromClanID(Number.parseInt(n[2])))
+                ? (a = f.K.InitFromClanID(Number.parseInt(n[2])))
                 : "groups" == n[1]
                   ? (o = n[2])
                   : isNaN(+n[2])
@@ -2134,7 +2134,8 @@
         we = n(62210);
       class Be {
         constructor() {
-          (this.file = void 0),
+          (this.exportFn = void 0),
+            (this.file = void 0),
             (this.dataURL = void 0),
             (this.timestamp = 0),
             (this.imageWidth = 0),
@@ -2176,10 +2177,70 @@
             (this.m_fileUploadProps.strErrorDescription = t),
             (this.m_fileUploadProps.displayFileName = null);
         }
-        SetImageFileToUpload(e, t = ke) {
+        StartFileExportToUpload(e, t = {}) {
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            const { displayFilename: n, info: a } = t;
+            (this.m_fileUploadProps.eUploadState = 7),
+              (this.m_fileUploadProps.uploadProgress = 0),
+              (this.m_fileUploadProps.fileInfo = a),
+              this.SetFileToUpload(e),
+              (this.m_fileUploadProps.displayFileName = n);
+          });
+        }
+        SetImageFileToUpload(e, t = {}) {
+          var n, i, r;
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            const { processor: a = ke, info: o } = t;
+            if (!e) return void this.SetFileToUpload(null);
+            this.m_fileUploadProps.fileInfo = o;
+            const l =
+              null !==
+                (r =
+                  null === (i = (n = this.m_Callbacks).GetFileNameOverride) ||
+                  void 0 === i
+                    ? void 0
+                    : i.call(n)) && void 0 !== r
+                ? r
+                : e.name;
+            if (e.size > 1024 * this.m_Callbacks.GetMaxFileSizeMB() * 1024)
+              return void this.SetUploadFileError(
+                4,
+                (0, x.Xx)(
+                  "#Chat_Settings_Error_ChatFileTooLarge_dynamic",
+                  l,
+                  this.m_Callbacks.GetMaxFileSizeMB(),
+                ),
+              );
+            let s = e.name.split(".").pop().toLowerCase();
+            if (
+              -1 ==
+              [
+                "jpg",
+                "jpeg",
+                "png",
+                "gif",
+                "webm",
+                "mpg",
+                "mp4",
+                "mpeg",
+                "ogv",
+              ].indexOf(s)
+            )
+              return void this.SetUploadFileError(
+                5,
+                (0, x.Xx)("#Chat_Settings_Error_ChatFileTypeNotSupported", l),
+              );
+            const c = yield a(e);
+            this.SetFileToUpload(c.file),
+              (this.m_fileUploadProps.imageHeight = c.height),
+              (this.m_fileUploadProps.imageWidth = c.width);
+          });
+        }
+        SetOtherFileToUpload(e, t = {}) {
           var n, i, r;
           return (0, a.mG)(this, void 0, void 0, function* () {
             if (!e) return void this.SetFileToUpload(null);
+            this.m_fileUploadProps.fileInfo = t.info;
             const a =
               null !==
                 (r =
@@ -2199,54 +2260,7 @@
                 ),
               );
             let o = e.name.split(".").pop().toLowerCase();
-            if (
-              -1 ==
-              [
-                "jpg",
-                "jpeg",
-                "png",
-                "gif",
-                "webm",
-                "mpg",
-                "mp4",
-                "mpeg",
-                "ogv",
-              ].indexOf(o)
-            )
-              return void this.SetUploadFileError(
-                5,
-                (0, x.Xx)("#Chat_Settings_Error_ChatFileTypeNotSupported", a),
-              );
-            const l = yield t(e);
-            this.SetFileToUpload(l.file),
-              (this.m_fileUploadProps.imageHeight = l.height),
-              (this.m_fileUploadProps.imageWidth = l.width);
-          });
-        }
-        SetOtherFileToUpload(e) {
-          var t, n, i;
-          return (0, a.mG)(this, void 0, void 0, function* () {
-            if (!e) return void this.SetFileToUpload(null);
-            const a =
-              null !==
-                (i =
-                  null === (n = (t = this.m_Callbacks).GetFileNameOverride) ||
-                  void 0 === n
-                    ? void 0
-                    : n.call(t)) && void 0 !== i
-                ? i
-                : e.name;
-            if (e.size > 1024 * this.m_Callbacks.GetMaxFileSizeMB() * 1024)
-              return void this.SetUploadFileError(
-                4,
-                (0, x.Xx)(
-                  "#Chat_Settings_Error_ChatFileTooLarge_dynamic",
-                  a,
-                  this.m_Callbacks.GetMaxFileSizeMB(),
-                ),
-              );
-            let r = e.name.split(".").pop().toLowerCase();
-            -1 != ["zip"].indexOf(r)
+            -1 != ["zip"].indexOf(o)
               ? this.SetFileToUpload(e)
               : this.SetUploadFileError(
                   5,
@@ -2256,40 +2270,72 @@
         }
         SetFileToUpload(e) {
           if (
-            ((this.m_fileUploadProps.file = e),
+            ((this.m_fileUploadProps.file = null),
             (this.m_fileUploadProps.dataURL = null),
             (this.m_fileUploadProps.hmac = null),
             (this.m_fileUploadProps.sha1 = null),
             (this.m_fileUploadProps.imageWidth = 0),
             (this.m_fileUploadProps.imageHeight = 0),
+            (this.m_fileUploadProps.displayFileName = null),
             !e)
           )
             return void (this.m_fileUploadProps.eUploadState = 0);
-          this.m_fileUploadProps.eUploadState = 1;
           let t = "";
-          for (; t.length < 40; )
-            t += Math.floor(16 * Math.random()).toString(16);
-          let n = "";
-          try {
-            n = URL.createObjectURL(e);
-          } catch (e) {
-            console.error(`Failed to created object URL from file: ${e}`);
+          if ("function" == typeof e)
+            (this.m_fileUploadProps.file = null),
+              (this.m_fileUploadProps.exportFn = e);
+          else {
+            (this.m_fileUploadProps.file = e),
+              (this.m_fileUploadProps.exportFn = null);
+            try {
+              t = URL.createObjectURL(e);
+            } catch (e) {
+              console.error(`Failed to created object URL from file: ${e}`);
+            }
+            (this.m_fileUploadProps.displayFileName =
+              this.m_fileUploadProps.file.name),
+              (this.m_fileUploadProps.uploadFileName =
+                window.performance.now() +
+                "_" +
+                this.m_fileUploadProps.file.name);
           }
-          (this.m_fileUploadProps.dataURL = n),
-            (this.m_fileUploadProps.displayFileName = e.name),
-            (this.m_fileUploadProps.uploadFileName =
-              window.performance.now() + "_" + e.name),
-            (this.m_fileUploadProps.sha1 = t),
+          this.m_fileUploadProps.eUploadState = 1;
+          let n = "";
+          for (; n.length < 40; )
+            n += Math.floor(16 * Math.random()).toString(16);
+          (this.m_fileUploadProps.dataURL = t),
+            (this.m_fileUploadProps.sha1 = n),
             (this.m_fileUploadProps.hmac = ""),
             (this.m_fileUploadProps.timestamp = 0);
         }
         RetryFileUpload() {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            return this.BeginFileUpload(this.m_fileUploadProps.additionalProps);
+            return this.BeginFileUpload();
           });
         }
         BeginFileUpload(e) {
           return (0, a.mG)(this, void 0, void 0, function* () {
+            if (
+              ((this.m_fileUploadProps.uploadProgress = 0),
+              this.m_fileUploadProps.exportFn)
+            ) {
+              this.m_fileUploadProps.eUploadState = 7;
+              const { eResult: e, file: t } =
+                yield this.m_fileUploadProps.exportFn((e) => {
+                  (0, V.z)(() => {
+                    this.m_fileUploadProps.uploadProgress = 50 * e;
+                  });
+                });
+              if (1 != e || !t)
+                return (
+                  this.SetUploadFileError(
+                    3,
+                    (0, x.Xx)("#Chat_Settings_Error_ExportFailed"),
+                  ),
+                  new Response()
+                );
+              this.m_fileUploadProps.file = t;
+            }
             let t = this.m_fileUploadProps.file;
             if (!t)
               throw (
@@ -2300,8 +2346,7 @@
                 new Error("Invalid State"))
               );
             (this.m_fileUploadProps.eUploadState = 2),
-              (this.m_fileUploadProps.uploadProgress = 0),
-              (this.m_fileUploadProps.additionalProps = e);
+              (this.m_fileUploadProps.uploadInfo = e);
             let n = new FormData();
             n.append("sessionid", D.De.SESSIONID),
               n.append("l", D.De.LANGUAGE),
@@ -2320,7 +2365,8 @@
               this.m_Callbacks.PopulateBeginFileUploadFormData &&
                 this.m_Callbacks.PopulateBeginFileUploadFormData(
                   n,
-                  this.file_upload_props.additionalProps,
+                  this.file_upload_props.uploadInfo,
+                  this.file_upload_props.fileInfo,
                 );
             try {
               let e,
@@ -2379,10 +2425,12 @@
             n += e.url_host + e.url_path;
             let a = {
               onUploadProgress: (e) => {
-                let t = (e.loaded / e.total) * 100;
-                t > this.m_fileUploadProps.uploadProgress &&
+                const t = !!this.m_fileUploadProps.exportFn,
+                  n = t ? 50 : 100,
+                  a = (t ? 50 : 0) + (e.loaded / e.total) * n;
+                a > this.m_fileUploadProps.uploadProgress &&
                   (0, V.z)(() => {
-                    this.m_fileUploadProps.uploadProgress = t;
+                    this.m_fileUploadProps.uploadProgress = a;
                   });
               },
               headers: {},
@@ -2439,7 +2487,8 @@
               i.append("hmac", this.m_fileUploadProps.hmac),
               this.m_Callbacks.PopulateCommitFileUploadFormData(
                 i,
-                this.file_upload_props.additionalProps,
+                this.file_upload_props.uploadInfo,
+                this.file_upload_props.fileInfo,
               );
             try {
               let t = yield fetch(this.m_Callbacks.GetCommitFileUploadURL(), {
@@ -2550,6 +2599,7 @@
         });
       }
       (0, a.gn)([V.aD], Ae.prototype, "SetUploadFileError", null),
+        (0, a.gn)([V.aD], Ae.prototype, "StartFileExportToUpload", null),
         (0, a.gn)([V.aD], Ae.prototype, "SetImageFileToUpload", null),
         (0, a.gn)([V.aD], Ae.prototype, "SetOtherFileToUpload", null),
         (0, a.gn)([V.aD], Ae.prototype, "SetFileToUpload", null),
@@ -2560,8 +2610,8 @@
         (0, a.gn)([V.aD], Ae.prototype, "ClearFileUploadError", null),
         (0, a.gn)([V.aD], Ae.prototype, "Reset", null);
       var Me = n(72728),
-        Ne = n(80886),
-        Ue = n(1485),
+        Ue = n(80886),
+        Ne = n(1485),
         Re = n(63489),
         Ge = n(84478),
         Fe = n(45418),
@@ -2819,7 +2869,7 @@
             i.createElement(T.pVO, null),
           ),
           i.createElement(
-            Ue.KM,
+            Ne.KM,
             {
               className: nt.FileUploadBtn,
               onClick: () =>
@@ -2881,11 +2931,11 @@
             "div",
             { className: nt.FileUploadActions },
             i.createElement(
-              Ue.Uq,
+              Ne.Uq,
               { className: "DialogLayout_NoMinWidth" },
               Boolean(3 == o) &&
                 i.createElement(
-                  Ue.KM,
+                  Ne.KM,
                   {
                     onClick: () =>
                       (0, a.mG)(this, void 0, void 0, function* () {
@@ -2895,7 +2945,7 @@
                   (0, x.Xx)("#Chat_Upload_ErrorAction_Retry"),
                 ),
               i.createElement(
-                Ue.zx,
+                Ne.zx,
                 { onClick: () => t.ClearFileUploadError() },
                 (0, x.Xx)("#Chat_Upload_ErrorAction_Close"),
               ),
@@ -3004,26 +3054,26 @@
         );
       }
       function _t(e) {
-        const t = ft(
+        const t = Et(
             e.args,
             "appid",
             e.context.event.appid ? e.context.event.appid : 0,
           ),
-          n = ft(e.args, "trailerid", 0);
+          n = Et(e.args, "trailerid", 0);
         return i.createElement(Pe, {
           appid: t,
           trailerBaseID: n,
           bIsPreviewMode: e.context.showErrorInfo,
         });
       }
-      function St(e) {
-        const t = ft(e.args, "appid", 0);
+      function ft(e) {
+        const t = Et(e.args, "appid", 0);
         return i.createElement(Ye, {
           appid: t,
           bPreviewMode: e.context.showErrorInfo,
         });
       }
-      function Et(e) {
+      function St(e) {
         const t = (0, l.im)(e.args, "name"),
           n = (0, l.im)(e.args, "title"),
           a = (0, l.im)(e.args, "company"),
@@ -3044,7 +3094,7 @@
               bio: e.children,
             });
       }
-      function ft(e, t, n) {
+      function Et(e, t, n) {
         const a = (0, l.im)(e, t);
         return void 0 === a || null == a ? n : Number.parseInt(a);
       }
@@ -3066,7 +3116,7 @@
         const t = e.context.showErrorInfo;
         if (!D.L7.logged_in)
           return i.createElement(
-            Ue.zx,
+            Ne.zx,
             { onClick: ct.Xt, className: "CSSClaimItemLoginButton" },
             (0, x.Xx)("#Sale_ClaimableReward_Login"),
           );
@@ -3087,7 +3137,7 @@
           n =
             "true" === ((0, l.im)(e.args, "visible") || "false").toLowerCase(),
           a = e.context.showErrorInfo,
-          [r, o] = (0, Ne.ie)(t, {});
+          [r, o] = (0, Ue.ie)(t, {});
         if (!t || 1 == o)
           return !t && a
             ? i.createElement("div", null, "Error: PackageID Not Set")
@@ -3145,7 +3195,7 @@
         }
         return D.L7.logged_in || "test" == t || "nologinrequired" == t
           ? i.createElement(
-              Ue.zx,
+              Ne.zx,
               {
                 className: "CSSActionDialogButton",
                 onClick: (o) => {
@@ -3169,7 +3219,7 @@
               Boolean(o.bFailedState) && (0, x.Xx)(r),
             )
           : i.createElement(
-              Ue.zx,
+              Ne.zx,
               { className: "CSSActionDialogButton", onClick: ct.Xt },
               (0, x.Xx)("#Login_SignIn"),
             );
@@ -3198,17 +3248,17 @@
               className: "CSSActionDialogDialog",
             },
             i.createElement(
-              Ue.h4,
+              Ne.h4,
               null,
               Boolean(s.bInitialState) && (0, x.Xx)(r),
               Boolean(s.bSuccessState) && (0, x.Xx)(o),
               Boolean(s.bFailedState) && (0, x.Xx)(l),
             ),
             i.createElement(
-              Ue.uT,
+              Ne.uT,
               null,
               i.createElement(
-                Ue.Ac,
+                Ne.Ac,
                 null,
                 c
                   ? i.createElement(F.V, {
@@ -3280,10 +3330,10 @@
                 (null == de &&
                   (de = (0, D.h4)()
                     ? [
-                        { urlRegExp: new RegExp(ee), fnBBComponent: Se },
+                        { urlRegExp: new RegExp(ee), fnBBComponent: fe },
                         { urlRegExp: new RegExp(ne), fnBBComponent: ve },
                         { urlRegExp: new RegExp(ae), fnBBComponent: Ce },
-                        { urlRegExp: new RegExp(te), fnBBComponent: fe },
+                        { urlRegExp: new RegExp(te), fnBBComponent: Ee },
                         { urlRegExp: new RegExp(ce), fnBBComponent: De },
                       ]
                     : [
@@ -3297,17 +3347,17 @@
                           ),
                           fnBBComponent: ge,
                         },
-                        { urlRegExp: new RegExp(ee), fnBBComponent: Se },
+                        { urlRegExp: new RegExp(ee), fnBBComponent: fe },
                         { urlRegExp: new RegExp(ne), fnBBComponent: ve },
                         { urlRegExp: new RegExp(ae), fnBBComponent: Ce },
-                        { urlRegExp: new RegExp(te), fnBBComponent: fe },
+                        { urlRegExp: new RegExp(te), fnBBComponent: Ee },
                         { urlRegExp: new RegExp(ie), fnBBComponent: ue },
                         { urlRegExp: new RegExp(re), fnBBComponent: he },
                         { urlRegExp: new RegExp(oe), fnBBComponent: ye },
                         { urlRegExp: new RegExp(le), fnBBComponent: Ie },
                         { urlRegExp: new RegExp(se), fnBBComponent: xe },
                         { urlRegExp: new RegExp(ce), fnBBComponent: De },
-                        { urlRegExp: new RegExp(me), fnBBComponent: Ee },
+                        { urlRegExp: new RegExp(me), fnBBComponent: Se },
                       ]),
                 de),
                 {
@@ -3396,11 +3446,11 @@
               ["video", { Constructor: l.qy, autocloses: !1 }],
               ["youtubeorvideo", { Constructor: l.YC, autocloses: !1 }],
               ["trailer", { Constructor: _t, autocloses: !0 }],
-              ["vod", { Constructor: St, autocloses: !1 }],
+              ["vod", { Constructor: ft, autocloses: !1 }],
               [
                 "speaker",
                 {
-                  Constructor: Et,
+                  Constructor: St,
                   autocloses: !1,
                   skipInternalNewline: !0,
                   allowWrapTextForCopying: !0,
@@ -3637,7 +3687,7 @@
     },
     4367: (e, t, n) => {
       "use strict";
-      n.d(t, { w: () => f });
+      n.d(t, { w: () => E });
       var a = n(54842),
         i = n(47427),
         r = n(82493),
@@ -3652,9 +3702,9 @@
         h = n(50423),
         g = n(31846),
         _ = n(37563),
-        S = n(9921),
-        E = n(46186);
-      function f(e) {
+        f = n(9921),
+        S = n(46186);
+      function E(e) {
         const t = (0, l.Ax)(),
           { bLoading: n } = t,
           { className: r, bPreviewMode: o, rewardType: c } = e;
@@ -3692,7 +3742,7 @@
         if (t.bAlreadyClaimedCurrentItem)
           return i.createElement(
             "div",
-            { className: (0, u.Z)(S.CheckMark, "CSSClaimedState") },
+            { className: (0, u.Z)(f.CheckMark, "CSSClaimedState") },
             i.createElement(d.JrY, null),
             i.createElement(
               "span",
@@ -3749,7 +3799,7 @@
                     o.fnSetElSuccess(
                       i.createElement(
                         "div",
-                        { className: S.DialogCtn },
+                        { className: f.DialogCtn },
                         i.createElement("span", null, t),
                         i.createElement(y, {
                           appid: e.appid,
@@ -3787,7 +3837,7 @@
           ? i.createElement(
               i.Fragment,
               null,
-              i.createElement(E.x, { appid: t, community_item_type: n }),
+              i.createElement(S.x, { appid: t, community_item_type: n }),
               Boolean(8 == a) &&
                 i.createElement(I, { appid: t, community_item_type: n }),
             )
@@ -3802,7 +3852,7 @@
         return d
           ? i.createElement(
               "div",
-              { className: S.EquipCtn },
+              { className: f.EquipCtn },
               Boolean(c)
                 ? i.createElement(
                     "div",
@@ -3848,7 +3898,7 @@
     },
     46186: (e, t, n) => {
       "use strict";
-      n.d(t, { v: () => S, x: () => _ });
+      n.d(t, { v: () => f, x: () => _ });
       var a = n(30750),
         i = n(47427),
         r = n(85556),
@@ -4017,7 +4067,7 @@
           string: (0, g.Xx)("#Loading"),
         });
       }
-      function S(e) {
+      function f(e) {
         const { section: t, rewardDef: n, language: r } = e,
           o = u(n.appid, n.community_item_type),
           [l] = (0, a.SZ)(() => {
@@ -4063,7 +4113,7 @@
     },
     15858: (e, t, n) => {
       "use strict";
-      n.d(t, { D: () => Ne });
+      n.d(t, { D: () => Ue });
       var a = n(85556),
         i = n(80751),
         r = n.n(i),
@@ -4078,9 +4128,9 @@
         h = n(89e3),
         g = n(19399),
         _ = n(68985),
-        S = n(60646),
-        E = n(20417),
-        f = n(33682),
+        f = n(60646),
+        S = n(20417),
+        E = n(33682),
         C = n(42287),
         v = n(54842),
         y = n(6791),
@@ -4284,10 +4334,10 @@
           );
         }
       }
-      (0, a.gn)([E.ak], D.prototype, "OnKeyDown", null),
-        (0, a.gn)([E.ak], D.prototype, "OnClickSuggestion", null),
-        (0, a.gn)([E.ak], D.prototype, "OnMouseOverSuggestion", null),
-        (0, a.gn)([E.ak], D.prototype, "BindSelectedElement", null);
+      (0, a.gn)([S.ak], D.prototype, "OnKeyDown", null),
+        (0, a.gn)([S.ak], D.prototype, "OnClickSuggestion", null),
+        (0, a.gn)([S.ak], D.prototype, "OnMouseOverSuggestion", null),
+        (0, a.gn)([S.ak], D.prototype, "BindSelectedElement", null);
       class b extends l.PureComponent {
         OnMouseOver(e) {
           this.props.fnOnMouseOver(this.props.matchKey);
@@ -4311,8 +4361,8 @@
           );
         }
       }
-      (0, a.gn)([E.ak], b.prototype, "OnMouseOver", null),
-        (0, a.gn)([E.ak], b.prototype, "OnClick", null);
+      (0, a.gn)([S.ak], b.prototype, "OnMouseOver", null),
+        (0, a.gn)([S.ak], b.prototype, "OnClick", null);
       const L = D;
       var T = n(3216),
         w = n.n(T);
@@ -4338,11 +4388,11 @@
             l.createElement(
               "div",
               { className: w().Emoticon },
-              l.createElement(f.tk, {
+              l.createElement(E.tk, {
                 emoticon: e.name,
                 emoticonHoverStore: this.props.emoticonHoverStore,
               }),
-              e.new && l.createElement(f.D3, null),
+              e.new && l.createElement(E.D3, null),
             ),
             ":",
             e.name,
@@ -4365,7 +4415,7 @@
       var A = n(3593),
         k = n.n(A),
         M = n(31846);
-      class N extends L {
+      class U extends L {
         performSearch(e) {
           let t = Array();
           return (
@@ -4413,7 +4463,7 @@
           return Number.MAX_VALUE;
         }
       }
-      class U extends l.Component {
+      class N extends l.Component {
         constructor(e) {
           super(e),
             (this.descTextAreaRef = l.createRef()),
@@ -4545,7 +4595,7 @@
             case "Emoticon":
               e = l.createElement(B, {
                 emoticonStore: n,
-                emoticonHoverStore: S.$,
+                emoticonHoverStore: f.$,
                 strSearch: this.state.mentionSearch,
                 nMinimumSearchLengthBeforeAutoSelection: 2,
                 onSuggestionSelected: this.OnEmoticonSuggestionSelected,
@@ -4553,7 +4603,7 @@
               });
               break;
             case "BBCode":
-              e = l.createElement(N, {
+              e = l.createElement(U, {
                 supportBBCodes: i,
                 strSearch: this.state.mentionSearch,
                 nMinimumSearchLengthBeforeAutoSelection: 2,
@@ -4578,16 +4628,16 @@
           );
         }
       }
-      (0, a.gn)([E.ak], U.prototype, "BindMentionDialog", null),
-        (0, a.gn)([E.ak], U.prototype, "OnKeyDown", null),
-        (0, a.gn)([E.ak], U.prototype, "OnFocus", null),
-        (0, a.gn)([E.ak], U.prototype, "OnKeyPress", null),
-        (0, a.gn)([E.ak], U.prototype, "OnClick", null),
-        (0, a.gn)([E.ak], U.prototype, "OnEmoticonSuggestionSelected", null),
-        (0, a.gn)([E.ak], U.prototype, "OnBBCodeSuggestionSelected", null),
-        (0, a.gn)([E.ak], U.prototype, "FocusTextInput", null),
-        (0, a.gn)([E.ak], U.prototype, "GetTextAreaRef", null),
-        (0, a.gn)([E.ak], U.prototype, "GetTextAreaCurrent", null);
+      (0, a.gn)([S.ak], N.prototype, "BindMentionDialog", null),
+        (0, a.gn)([S.ak], N.prototype, "OnKeyDown", null),
+        (0, a.gn)([S.ak], N.prototype, "OnFocus", null),
+        (0, a.gn)([S.ak], N.prototype, "OnKeyPress", null),
+        (0, a.gn)([S.ak], N.prototype, "OnClick", null),
+        (0, a.gn)([S.ak], N.prototype, "OnEmoticonSuggestionSelected", null),
+        (0, a.gn)([S.ak], N.prototype, "OnBBCodeSuggestionSelected", null),
+        (0, a.gn)([S.ak], N.prototype, "FocusTextInput", null),
+        (0, a.gn)([S.ak], N.prototype, "GetTextAreaRef", null),
+        (0, a.gn)([S.ak], N.prototype, "GetTextAreaCurrent", null);
       var R = n(1485),
         G = n(63109),
         F = n(71741),
@@ -4761,8 +4811,8 @@
           );
         }
       }
-      (0, a.gn)([E.ak], re.prototype, "OnCrop", null),
-        (0, a.gn)([E.ak], re.prototype, "UpdateCrop", null);
+      (0, a.gn)([S.ak], re.prototype, "OnCrop", null),
+        (0, a.gn)([S.ak], re.prototype, "UpdateCrop", null);
       var oe = n(10162),
         le = n(28913);
       const se = (e) => {
@@ -4920,8 +4970,8 @@
           c = l.useMemo(() => ({ width: i, height: r }), [i, r]),
           [m, p] = l.useState(void 0),
           [u, h] = l.useState(Boolean(n)),
-          [S, E] = l.useState(void 0),
-          [f, C] = l.useState(!1),
+          [f, S] = l.useState(void 0),
+          [E, C] = l.useState(!1),
           [v] = (0, ee.SZ)(() => [pe.U.Get().GetCurEditLanguage()]),
           y = l.useCallback(
             (e, t) =>
@@ -4942,19 +4992,19 @@
             [n, o, s, c],
           );
         l.useEffect(() => {
-          (S &&
-            S.GetClanSteamID().ConvertTo64BitString() ==
+          (f &&
+            f.GetClanSteamID().ConvertTo64BitString() ==
               t.ConvertTo64BitString()) ||
-            E(new de.S(t));
-        }, [S, t]),
+            S(new de.S(t));
+        }, [f, t]),
           l.useEffect(() => {
-            y(S, n);
-          }, [y, S, n]);
+            y(f, n);
+          }, [y, f, n]);
         let I,
           x = "",
           D = !1;
-        if (S && S.GetFilesToUpload().length > 0) {
-          I = S.GetUploadImages()[0];
+        if (f && f.GetFilesToUpload().length > 0) {
+          I = f.GetUploadImages()[0];
           const e = I.IsValidAssetType(s, c);
           (x = e.error), (D = e.needsCrop);
         }
@@ -4982,7 +5032,7 @@
               {
                 onClick: (e) => {
                   const t = (0, z.RA)(e);
-                  let n = S.GetUploadImages()[0];
+                  let n = f.GetUploadImages()[0];
                   (0, H.AM)(
                     l.createElement(re, {
                       ownerWin: t,
@@ -5005,7 +5055,7 @@
                 null,
                 (0, M.Xx)("#ClanImagePickAndResize_UploadStatus", I.status),
               ),
-              f
+              E
                 ? l.createElement(K.V, {
                     string: (0, M.Xx)("#Uploading"),
                     size: "small",
@@ -5017,7 +5067,7 @@
                         (0, a.mG)(void 0, void 0, void 0, function* () {
                           C(!0);
                           try {
-                            const e = yield S.UploadAllImages(
+                            const e = yield f.UploadAllImages(
                                 [ue.IN.k_ESteamRealmGlobal],
                                 v,
                                 s,
@@ -5072,7 +5122,7 @@
                 (0, H.AM)(
                   l.createElement(se, {
                     clanSteamID: t,
-                    fnImageSelectCallBack: (e) => y(S, e),
+                    fnImageSelectCallBack: (e) => y(f, e),
                   }),
                   (0, z.RA)(e),
                 );
@@ -5084,7 +5134,7 @@
       });
       var ge,
         _e = n(16649);
-      let Se = (ge = class extends l.Component {
+      let fe = (ge = class extends l.Component {
         constructor(e) {
           super(e),
             (this.m_cancelSignal = r().CancelToken.source()),
@@ -5159,9 +5209,9 @@
                 );
         }
       });
-      (Se.s_formattingHelp = new Map()), (Se = ge = (0, a.gn)([o.Pi], Se));
-      var Ee,
-        fe = n(77115);
+      (fe.s_formattingHelp = new Map()), (fe = ge = (0, a.gn)([o.Pi], fe));
+      var Se,
+        Ee = n(77115);
       let Ce = class extends l.Component {
         constructor(e) {
           super(e),
@@ -5194,7 +5244,7 @@
             if (t && t.length > 0) {
               let e = (0, g.OL)();
               if (t.startsWith(e)) {
-                let n = "[img]" + fe.A + "/" + t.substr(e.length) + "[/img]";
+                let n = "[img]" + Ee.A + "/" + t.substr(e.length) + "[/img]";
                 ve.replaceSelection(this.GetTextAreaRef().current, n);
               }
             }
@@ -5231,7 +5281,7 @@
                   this.state.bShowDragTarget ? q().DragTarget : "",
                 ),
               },
-              l.createElement(U, {
+              l.createElement(N, {
                 cols: 90,
                 rows: this.props.nOverridesRows || 22,
                 maxLength: 32e3,
@@ -5256,10 +5306,10 @@
           );
         }
       };
-      (0, a.gn)([E.ak], Ce.prototype, "ClanImageDragListener", null),
-        (0, a.gn)([E.ak], Ce.prototype, "onFocus", null),
-        (0, a.gn)([E.ak], Ce.prototype, "OnTextAreaDropListener", null),
-        (0, a.gn)([E.ak], Ce.prototype, "GetTextAreaRef", null),
+      (0, a.gn)([S.ak], Ce.prototype, "ClanImageDragListener", null),
+        (0, a.gn)([S.ak], Ce.prototype, "onFocus", null),
+        (0, a.gn)([S.ak], Ce.prototype, "OnTextAreaDropListener", null),
+        (0, a.gn)([S.ak], Ce.prototype, "GetTextAreaRef", null),
         (Ce = (0, a.gn)([o.Pi], Ce));
       class ve {
         static BIsFireFox() {
@@ -5374,7 +5424,7 @@
         ShowHelpDialog(e) {
           this.props.showFormatHelp &&
             (0, H.BR)(
-              l.createElement(Se, { formatType: this.props.showFormatHelp }),
+              l.createElement(fe, { formatType: this.props.showFormatHelp }),
               (0, z.RA)(e),
             );
         }
@@ -5443,7 +5493,7 @@
                     l.createElement(
                       "a",
                       {
-                        href: Se.GetHelpURL(this.props.showFormatHelp, !1),
+                        href: fe.GetHelpURL(this.props.showFormatHelp, !1),
                         target: Y.De.IN_CLIENT ? void 0 : "_blank",
                       },
                       l.createElement("img", { src: a + "/action_help.png" }),
@@ -5614,7 +5664,7 @@
                     OnEmoticonSelected: this.OnEmoticonSelected,
                     rtLastAckedNewEmoticons: Number.MAX_VALUE,
                     emoticonStore: this.props.emoticonStore,
-                    emoticonHoverStore: S.$,
+                    emoticonHoverStore: f.$,
                     useImg: this.props.pathToImages + "/format_emote.png",
                     contextOptions: {
                       bOverlapHorizontal: !0,
@@ -5666,22 +5716,22 @@
         }
       };
       var Ie;
-      (0, a.gn)([E.ak], ye.prototype, "onBold", null),
-        (0, a.gn)([E.ak], ye.prototype, "onItalics", null),
-        (0, a.gn)([E.ak], ye.prototype, "onUnderline", null),
-        (0, a.gn)([E.ak], ye.prototype, "onStrikeThrough", null),
-        (0, a.gn)([E.ak], ye.prototype, "onHeader", null),
-        (0, a.gn)([E.ak], ye.prototype, "onHeader2", null),
-        (0, a.gn)([E.ak], ye.prototype, "onHeader3", null),
-        (0, a.gn)([E.ak], ye.prototype, "onUnorderedList", null),
-        (0, a.gn)([E.ak], ye.prototype, "onOrderedList", null),
-        (0, a.gn)([E.ak], ye.prototype, "OnAddLink", null),
-        (0, a.gn)([E.ak], ye.prototype, "ShowHelpDialog", null),
-        (0, a.gn)([E.ak], ye.prototype, "OnConvertHTMLToBBCodeDialog", null),
-        (0, a.gn)([E.ak], ye.prototype, "OnOpenYoutubeDialog", null),
-        (0, a.gn)([E.ak], ye.prototype, "OnOpenImageDialog", null),
-        (0, a.gn)([E.ak], ye.prototype, "OnOpenSpeakerDialog", null),
-        (0, a.gn)([E.ak], ye.prototype, "OnEmoticonSelected", null),
+      (0, a.gn)([S.ak], ye.prototype, "onBold", null),
+        (0, a.gn)([S.ak], ye.prototype, "onItalics", null),
+        (0, a.gn)([S.ak], ye.prototype, "onUnderline", null),
+        (0, a.gn)([S.ak], ye.prototype, "onStrikeThrough", null),
+        (0, a.gn)([S.ak], ye.prototype, "onHeader", null),
+        (0, a.gn)([S.ak], ye.prototype, "onHeader2", null),
+        (0, a.gn)([S.ak], ye.prototype, "onHeader3", null),
+        (0, a.gn)([S.ak], ye.prototype, "onUnorderedList", null),
+        (0, a.gn)([S.ak], ye.prototype, "onOrderedList", null),
+        (0, a.gn)([S.ak], ye.prototype, "OnAddLink", null),
+        (0, a.gn)([S.ak], ye.prototype, "ShowHelpDialog", null),
+        (0, a.gn)([S.ak], ye.prototype, "OnConvertHTMLToBBCodeDialog", null),
+        (0, a.gn)([S.ak], ye.prototype, "OnOpenYoutubeDialog", null),
+        (0, a.gn)([S.ak], ye.prototype, "OnOpenImageDialog", null),
+        (0, a.gn)([S.ak], ye.prototype, "OnOpenSpeakerDialog", null),
+        (0, a.gn)([S.ak], ye.prototype, "OnEmoticonSelected", null),
         (ye = (0, a.gn)([o.Pi], ye)),
         (function (e) {
           (e.left = "leftthumb"),
@@ -5888,15 +5938,15 @@
           );
         }
       };
-      (0, a.gn)([E.ak], xe.prototype, "OnYoutubeInsertLink", null),
-        (0, a.gn)([E.ak], xe.prototype, "OnUrlChange", null),
-        (0, a.gn)([E.ak], xe.prototype, "OnLeftSelected", null),
-        (0, a.gn)([E.ak], xe.prototype, "OnRightSelected", null),
-        (0, a.gn)([E.ak], xe.prototype, "OnFullSelected", null),
-        (0, a.gn)([E.ak], xe.prototype, "OnSummarySelected", null),
-        (0, a.gn)([E.ak], xe.prototype, "OnOuterDivClickPassDown", null),
+      (0, a.gn)([S.ak], xe.prototype, "OnYoutubeInsertLink", null),
+        (0, a.gn)([S.ak], xe.prototype, "OnUrlChange", null),
+        (0, a.gn)([S.ak], xe.prototype, "OnLeftSelected", null),
+        (0, a.gn)([S.ak], xe.prototype, "OnRightSelected", null),
+        (0, a.gn)([S.ak], xe.prototype, "OnFullSelected", null),
+        (0, a.gn)([S.ak], xe.prototype, "OnSummarySelected", null),
+        (0, a.gn)([S.ak], xe.prototype, "OnOuterDivClickPassDown", null),
         (xe = (0, a.gn)([o.Pi], xe));
-      let De = (Ee = class extends l.Component {
+      let De = (Se = class extends l.Component {
         constructor() {
           super(...arguments), (this.state = { textToDisplay: "", strURL: "" });
         }
@@ -5904,7 +5954,7 @@
           const { textareaRef: e } = this.props;
           if (e && e.current) {
             let t = ve.getSelectedString(e.current),
-              n = Ee.m_regExp.exec(t);
+              n = Se.m_regExp.exec(t);
             n
               ? this.setState({ strURL: n[1], textToDisplay: n[2] })
               : this.setState({ textToDisplay: t });
@@ -5990,10 +6040,10 @@
         }
       });
       (De.m_regExp = new RegExp(/\[url=([^\]]*)\]([^\[\]]+)\[\/url\]/i)),
-        (0, a.gn)([E.ak], De.prototype, "onLinkTitleUpdate", null),
-        (0, a.gn)([E.ak], De.prototype, "onLinkURLUpdate", null),
-        (0, a.gn)([E.ak], De.prototype, "onInsertLink", null),
-        (De = Ee = (0, a.gn)([o.Pi], De));
+        (0, a.gn)([S.ak], De.prototype, "onLinkTitleUpdate", null),
+        (0, a.gn)([S.ak], De.prototype, "onLinkURLUpdate", null),
+        (0, a.gn)([S.ak], De.prototype, "onInsertLink", null),
+        (De = Se = (0, a.gn)([o.Pi], De));
       let be = class extends l.Component {
         constructor() {
           super(...arguments), (this.state = { imgURL: "", anchorURL: "" });
@@ -6096,9 +6146,9 @@
           );
         }
       };
-      (0, a.gn)([E.ak], be.prototype, "OnImageInsert", null),
-        (0, a.gn)([E.ak], be.prototype, "OnImageURLChange", null),
-        (0, a.gn)([E.ak], be.prototype, "OnAnchorURLChange", null),
+      (0, a.gn)([S.ak], be.prototype, "OnImageInsert", null),
+        (0, a.gn)([S.ak], be.prototype, "OnImageURLChange", null),
+        (0, a.gn)([S.ak], be.prototype, "OnAnchorURLChange", null),
         (be = (0, a.gn)([o.Pi], be));
       const Le = (e) => {
         const [t, n] = l.useState(""),
@@ -6107,8 +6157,8 @@
           [s, c] = l.useState(""),
           [m, p] = l.useState(void 0),
           [h, g] = l.useState(void 0),
-          { data: S } = (0, Z.co)(),
-          { isLoading: E, data: f } = (0, V.IE)(
+          { data: f } = (0, Z.co)(),
+          { isLoading: S, data: E } = (0, V.IE)(
             null == h ? void 0 : h.GetAccountID(),
           ),
           C = 0 != t.trim().length && 0 != s.trim().length;
@@ -6127,7 +6177,7 @@
                 r.trim().length > 0 && (n += ` company="${r}"`),
                 m)
               ) {
-                n += ` photo="${fe.A + "/" + m.clanAccountID + "/" + _.aN.GetHashAndExt(m)}"`;
+                n += ` photo="${Ee.A + "/" + m.clanAccountID + "/" + _.aN.GetHashAndExt(m)}"`;
               }
               h && (n += ` steamid="${h.ConvertTo64BitString()}"`),
                 (n += `]${s}[/speaker]`),
@@ -6178,12 +6228,12 @@
             l.createElement(
               "div",
               null,
-              E &&
+              S &&
                 l.createElement(K.V, {
                   string: (0, M.Xx)("#Loading"),
                   size: "small",
                 }),
-              Boolean(f) &&
+              Boolean(E) &&
                 l.createElement(
                   "a",
                   {
@@ -6193,13 +6243,13 @@
                       h.ConvertTo64BitString(),
                     target: "_blank",
                   },
-                  f
+                  E
                     ? l.createElement("img", {
                         style: { marginRight: "8px" },
-                        src: f.avatar_url,
+                        src: E.avatar_url,
                       })
                     : null,
-                  f ? f.m_strPlayerName : null,
+                  E ? E.m_strPlayerName : null,
                 ),
               l.createElement(
                 "div",
@@ -6214,7 +6264,7 @@
                   {
                     onClick: (e) =>
                       (0, u.yV)(
-                        l.createElement(Te, { friends: S, setSteamID: g }),
+                        l.createElement(Te, { friends: f, setSteamID: g }),
                         e,
                       ),
                   },
@@ -6512,22 +6562,22 @@
                 );
         }
       };
-      (0, a.gn)([E.ak], Be.prototype, "OnConvertAndOverriteHTML", null),
-        (0, a.gn)([E.ak], Be.prototype, "OnConvertAndAppendHTML", null),
-        (0, a.gn)([E.ak], Be.prototype, "OnCheckboxChange", null),
-        (0, a.gn)([E.ak], Be.prototype, "OnTextAreaChange", null),
+      (0, a.gn)([S.ak], Be.prototype, "OnConvertAndOverriteHTML", null),
+        (0, a.gn)([S.ak], Be.prototype, "OnConvertAndAppendHTML", null),
+        (0, a.gn)([S.ak], Be.prototype, "OnCheckboxChange", null),
+        (0, a.gn)([S.ak], Be.prototype, "OnTextAreaChange", null),
         (Be = (0, a.gn)([o.Pi], Be));
       var Ae = n(25979),
         ke = n(5918),
         Me = n.n(ke);
-      const Ne = (0, o.Pi)((e) => {
+      const Ue = (0, o.Pi)((e) => {
         const { appid: t, eventLink: n } = e,
           i = l.useRef(null),
           { data: o } = (0, V.IE)(Y.L7.steamid),
           [u, h] = l.useState(""),
           [g, _] = l.useState(!1),
-          [S, E] = l.useState(""),
-          [f, C] = l.useState(!1);
+          [f, S] = l.useState(""),
+          [E, C] = l.useState(!1);
         l.useEffect(
           () => () =>
             i.current &&
@@ -6567,7 +6617,7 @@
                       n.GetEResult();
                     return (
                       console.error(e, !o.token.reason),
-                      void (o.token.reason || E(e))
+                      void (o.token.reason || S(e))
                     );
                   }
                 } else {
@@ -6591,18 +6641,18 @@
                       void 0 === a
                         ? void 0
                         : a.message);
-                    return console.error(e), void (o.token.reason || E(e));
+                    return console.error(e), void (o.token.reason || S(e));
                   }
                 }
                 o.token.reason ||
-                  (C(!0), E((0, M.Xx)("#EventDisplay_Share_Success")));
+                  (C(!0), S((0, M.Xx)("#EventDisplay_Share_Success")));
               } catch (e) {
                 const t = (0, _e.l)(e),
                   n =
                     (0, M.Xx)("#EventDisplay_Share_Failure") +
                     "\n\n" +
                     t.strErrorMsg;
-                o.token.reason || E(n), console.error(n);
+                o.token.reason || S(n), console.error(n);
               }
             });
         return g
@@ -6626,10 +6676,10 @@
                 l.createElement(
                   "div",
                   { className: Me().Container },
-                  0 == (null == S ? void 0 : S.length)
+                  0 == (null == f ? void 0 : f.length)
                     ? l.createElement(K.V, { position: "center" })
-                    : l.createElement("div", null, S),
-                  Boolean(f) &&
+                    : l.createElement("div", null, f),
+                  Boolean(E) &&
                     l.createElement(
                       "a",
                       {

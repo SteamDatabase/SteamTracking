@@ -1217,7 +1217,7 @@
             "div",
             { className: (0, p.Z)(D().AppBannerGroup, y) },
             f
-              ? Boolean((0, M.Hu)() && t)
+              ? Boolean(t)
                 ? o.createElement(
                     M.ll,
                     {

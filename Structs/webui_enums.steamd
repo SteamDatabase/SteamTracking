@@ -743,6 +743,12 @@ enum EOptInType
 	k_EOptInType_RecommendedAction = 1;
 }
 
+enum EOptInVisibility
+{
+	k_EOptInVisibility_Public = 0;
+	k_EOptInVisibility_InviteOnly = 1;
+}
+
 enum EOutputAxis
 {
 	k_EOutputAxisLeftTrigger = 0;

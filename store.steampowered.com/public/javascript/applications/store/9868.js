@@ -820,55 +820,55 @@
             bHideStatusBanners: o,
             strExtraParams: l,
             imageType: m,
-            bHasParentAppToDisplay: S,
-            bUseSubscriptionLayout: E,
-            elElementToAppendToHover: f,
-            bHidePrice: h,
-            bHidePlatforms: P,
-            creatorAccountID: N,
-            bIsHovered: I,
-            onlyOneDiscountPct: k,
+            bHasParentAppToDisplay: p,
+            bUseSubscriptionLayout: S,
+            elElementToAppendToHover: E,
+            bHidePrice: f,
+            bHidePlatforms: h,
+            creatorAccountID: P,
+            bIsHovered: N,
+            onlyOneDiscountPct: I,
           } = e,
-          [T] = (0, _.jk)(a.id, (0, d.TM)(a.type), { include_platforms: !0 }),
-          w = (0, C.bJ)(),
-          x =
+          [k] = (0, _.jk)(a.id, (0, d.TM)(a.type), { include_platforms: !0 }),
+          T = (0, C.bJ)(),
+          w =
             ((0, b.Dt)(a.type),
             (0, n.useMemo)(
-              () => (null == T ? void 0 : T.GetIncludedAppIDsOrSelf()),
-              [T],
+              () => (null == k ? void 0 : k.GetIncludedAppIDsOrSelf()),
+              [k],
             )),
-          O =
-            T &&
-            (null == T
+          x =
+            k &&
+            (null == k
               ? void 0
-              : T.GetIncludedAppIDsOrSelf().every((e) =>
-                  c.jg.Get().BOwnsApp(e),
-                ));
-        if (!T) return null;
-        const A = O && !o,
-          H = (0, B.bk)((0, s.Hf)(`${T.GetStorePageURL()}${l || ""}`, w));
-        let G,
-          R = null;
-        if (E && 0 == (null == T ? void 0 : T.GetStoreItemType()))
-          R = n.createElement(D.r, { appid: T.GetAppID(), bIsMuted: I });
-        else if (f);
+              : k
+                  .GetIncludedAppIDsOrSelf()
+                  .every((e) => c.jg.Get().BOwnsApp(e)));
+        if (!k) return null;
+        const O = x && !o,
+          A = (0, B.bk)((0, s.Hf)(`${k.GetStorePageURL()}${l || ""}`, T));
+        let H,
+          G = null;
+        if (S && 0 == (null == k ? void 0 : k.GetStoreItemType()))
+          G = n.createElement(D.r, { appid: k.GetAppID(), bIsMuted: N });
+        else if (E);
         else {
-          const t = O && i,
-            r = A;
-          R = n.createElement(u.Hl, {
+          const t = x && i,
+            r = O;
+          G = n.createElement(u.Hl, {
             info: a,
             bShowAsMuted: r,
-            bHidePrice: h,
+            bHidePrice: f,
             bShowInLibraryInsteadOfPrice: t,
-            bHidePlatforms: P,
-            creatorAccountID: N,
+            bHidePlatforms: h,
+            creatorAccountID: P,
             bShowName: e.bShowName,
-            onlyOneDiscountPct: k,
+            onlyOneDiscountPct: I,
           });
         }
         return (
           "overrideNavigation" in a &&
-            (G = (e) => (
+            (H = (e) => (
               a.overrideNavigation(e),
               e.preventDefault(),
               e.stopPropagation(),
@@ -877,22 +877,22 @@
           n.createElement(
             r.IS,
             {
-              href: G ? null : H,
+              href: H ? null : A,
               style: { display: "block", cursor: "pointer" },
-              preferredFocus: S,
-              onClick: G,
+              preferredFocus: p,
+              onClick: H,
             },
-            n.createElement(v.v, { appids: x, hide_status_banners: o }),
+            n.createElement(v.v, { appids: w, hide_status_banners: o }),
             n.createElement(u.a4, { imageType: m, info: a }),
             n.createElement(y.y, {
               eDeckCompatibilityCategory:
-                null === (t = null == T ? void 0 : T.GetPlatforms()) ||
+                null === (t = null == k ? void 0 : k.GetPlatforms()) ||
                 void 0 === t
                   ? void 0
                   : t.steam_deck_compat_category,
             }),
-            Boolean(I && !(0, p.Hu)()) && n.createElement(g.v, { appInfo: a }),
-            R,
+            Boolean(N) && n.createElement(g.v, { appInfo: a }),
+            G,
           )
         );
       }

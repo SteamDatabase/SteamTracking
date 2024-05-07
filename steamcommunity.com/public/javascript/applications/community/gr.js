@@ -262,11 +262,11 @@
       r.d(t, {
         Mv: () => a,
         Q2: () => w,
-        XT: () => h,
+        XT: () => L,
         cY: () => m,
         iv: () => s,
         jq: () => g,
-        vt: () => L,
+        vt: () => u,
       });
       var n = r(65255),
         C = r(77556),
@@ -318,7 +318,7 @@
           (e[(e.Gray = 8)] = "Gray");
       })(o || (o = {}));
       const d = c(o).map((e) => o[e]);
-      class u {
+      class h {
         constructor() {
           this.m_mapSteamTimelineMarkers = new Map();
         }
@@ -337,12 +337,12 @@
         }
         static Get() {
           return (
-            u.s_Singleton ||
-              ((u.s_Singleton = new u()),
-              u.s_Singleton.Init(),
+            h.s_Singleton ||
+              ((h.s_Singleton = new h()),
+              h.s_Singleton.Init(),
               "dev" == n.De.WEB_UNIVERSE &&
-                (window.g_SteamTimelineMarker = u.s_Singleton)),
-            u.s_Singleton
+                (window.g_SteamTimelineMarker = h.s_Singleton)),
+            h.s_Singleton
           );
         }
         AddMarker(e, t, r) {
@@ -400,10 +400,10 @@
             this.AddMarker("screenshot", C.w_, o.Gray);
         }
       }
-      function h(e) {
-        return u.Get().GetMarkerByID(e);
+      function L(e) {
+        return h.Get().GetMarkerByID(e);
       }
-      function L() {
+      function u() {
         return { func: C.Jx, color: o.Blue };
       }
       function m() {
@@ -430,8 +430,8 @@
           [i, l] = (0, n.useState)(!1),
           [o, a] = (0, n.useState)(null),
           [s, c] = (0, n.useState)(null),
-          [d, u] = (0, n.useState)(null),
-          [h, L] = (0, n.useState)(null),
+          [d, h] = (0, n.useState)(null),
+          [L, u] = (0, n.useState)(null),
           [m, w] = (0, n.useState)(null);
         return {
           bLoading: e,
@@ -439,7 +439,7 @@
           bSuccess: i,
           strError: o,
           strSuccess: s,
-          elSuccess: h,
+          elSuccess: L,
           elError: d,
           strThrobber: m,
           fnSetLoading: t,
@@ -447,8 +447,8 @@
           fnSetSuccess: l,
           fnSetStrError: a,
           fnSetStrSuccess: c,
-          fnSetElSuccess: L,
-          fnSetElError: u,
+          fnSetElSuccess: u,
+          fnSetElError: h,
           fnSetThrobber: w,
         };
       }
@@ -465,31 +465,31 @@
           {
             bLoading: c,
             bError: d,
-            bSuccess: u,
-            strError: h,
-            strSuccess: L,
+            bSuccess: h,
+            strError: L,
+            strSuccess: u,
             elSuccess: m,
             elError: w,
             strThrobber: g,
           } = r;
-        return d || h || w
+        return d || L || w
           ? n.createElement(
               C.uH,
               { strTitle: t, bAlertDialog: !0, closeModal: a },
-              Boolean(h) &&
+              Boolean(L) &&
                 n.createElement(
                   "div",
                   { className: i.ErrorStylesWithIcon },
-                  h || (0, l.Xx)("#Error_ErrorCommunicatingWithNetwork"),
+                  L || (0, l.Xx)("#Error_ErrorCommunicatingWithNetwork"),
                 ),
               Boolean(w) && w,
             )
-          : u || L || m
+          : h || u || m
             ? n.createElement(
                 C.uH,
                 {
                   strTitle: t,
-                  strDescription: L || (0, l.Xx)("#EventDisplay_Share_Success"),
+                  strDescription: u || (0, l.Xx)("#EventDisplay_Share_Success"),
                   bAlertDialog: !0,
                   closeModal: a,
                 },
@@ -512,7 +512,7 @@
         AP: () => v,
         B7: () => M,
         Be: () => F,
-        Bu: () => L,
+        Bu: () => u,
         CJ: () => S,
         Cd: () => B,
         Eq: () => J,
@@ -524,10 +524,10 @@
         Io: () => _,
         Jx: () => o,
         KT: () => Q,
-        MC: () => u,
+        MC: () => h,
         OQ: () => T,
         Q0: () => x,
-        Qm: () => h,
+        Qm: () => L,
         Ux: () => Z,
         Vy: () => m,
         W4: () => R,
@@ -701,7 +701,7 @@
           }),
         );
       }
-      function u(e) {
+      function h(e) {
         return C.createElement(
           "svg",
           {
@@ -717,7 +717,7 @@
           }),
         );
       }
-      function h(e) {
+      function L(e) {
         return C.createElement(
           "svg",
           {
@@ -749,7 +749,7 @@
           }),
         );
       }
-      function L(e) {
+      function u(e) {
         return C.createElement(
           "svg",
           {
@@ -1412,23 +1412,6 @@
         );
       }
     },
-    29480: (e, t, r) => {
-      "use strict";
-      r.d(t, { T: () => l });
-      var n = r(80751),
-        C = r.n(n),
-        i = r(47427);
-      function l(e) {
-        const t = i.useRef(C().CancelToken.source());
-        return (
-          i.useEffect(() => {
-            const r = t.current;
-            return () => r.cancel(e ? `${e}: unmounting` : "unmounting");
-          }, [e]),
-          t.current
-        );
-      }
-    },
     79842: (e, t, r) => {
       "use strict";
       r.r(t),
@@ -1446,9 +1429,9 @@
         s = r(91707),
         c = r(12015),
         d = r(86357),
-        u = r(14592),
-        h = r(16332),
-        L = r(48081);
+        h = r(14592),
+        L = r(16332),
+        u = r(48081);
       function m(e) {
         const [t, r] = C.useState(!1);
         return (
@@ -1539,13 +1522,13 @@
             { loader: r, fnGetManifest: n, mode: d.tP.CommunityClip },
             C.createElement(
               "div",
-              { className: L.ClipDetails },
+              { className: u.ClipDetails },
               C.createElement(
                 "div",
-                { className: L.VideoContainer },
-                C.createElement(u.i, { positionAbsolute: !1, autoPlay: !0 }),
+                { className: u.VideoContainer },
+                C.createElement(h.i, { positionAbsolute: !1, autoPlay: !0 }),
               ),
-              C.createElement(h.k9, { loader: r }),
+              C.createElement(L.k9, { loader: r }),
             ),
           ),
         );

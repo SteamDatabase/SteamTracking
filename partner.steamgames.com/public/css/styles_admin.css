@@ -8,6 +8,48 @@
 	min-height: calc( 100vh - 409px );
 }
 
+ .AdminPageContent.dashboard {
+	 display: grid;
+	 grid-template-columns: 980px auto;
+	 grid-template-rows: auto;
+	 grid-template-areas:
+			"topstuff topstuff"
+			"calendar calendar"
+			"widgets rightcol";
+ }
+
+.AdminPageContent.dashboard .introItems {
+	grid-area: topstuff;
+	display: flex;
+	flex-direction: column;
+}
+
+.AdminPageContent.dashboard .dashboard_calendar {
+	grid-area: calendar;
+	margin-top: 16px;
+}
+
+.AdminPageContent.dashboard .landingRightCol {
+	grid-area: rightcol;
+}
+
+.AdminPageContent.dashboard .landingLeftCol {
+	grid-area: widgets;
+}
+
+@media screen and (min-width: 1800px) {
+	body .AdminPageContent.dashboard {
+		max-width: 1580px;
+		display: grid;
+		grid-template-columns: 1280px auto;
+		grid-template-rows: auto 1fr 2fr;
+		grid-template-areas:
+			"topstuff topstuff"
+			"calendar rightcol"
+			"widgets rightcol";
+	}
+}
+
 .AdminPageContent.noMinHeight {
     min-height: unset;
 }
@@ -25,6 +67,14 @@
 
 .AdminPageContent strong {
 	color: #ddd;
+}
+
+.AdminPageContent .panel.highlight {
+	margin-top: 16px;
+	padding: 16px;
+	width: 100%;
+	box-sizing: border-box;
+
 }
 
 ol {
@@ -2608,11 +2658,18 @@ html, body { height:100%; }
 {
 	margin: 10px;
 	width: 248px;
-	height: 210px;
+	height: 248px;
 	padding: 4px;
 	background-color: #666666;
 	border: 1px solid white;
 	float: left;
+}
+
+div.image_all_ages_appropriate
+{
+	color: #ffffff;
+	padding-top: 4px;
+	font-size: 12px;
 }
 
 .screenshot_upload_preview .actual_screenshot

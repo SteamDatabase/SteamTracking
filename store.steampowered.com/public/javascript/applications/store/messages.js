@@ -559,55 +559,55 @@
             bHideStatusBanners: l,
             strExtraParams: i,
             imageType: d,
-            bHasParentAppToDisplay: _,
-            bUseSubscriptionLayout: v,
-            elElementToAppendToHover: h,
-            bHidePrice: b,
-            bHidePlatforms: G,
-            creatorAccountID: T,
-            bIsHovered: A,
-            onlyOneDiscountPct: P,
+            bHasParentAppToDisplay: p,
+            bUseSubscriptionLayout: _,
+            elElementToAppendToHover: v,
+            bHidePrice: h,
+            bHidePlatforms: b,
+            creatorAccountID: G,
+            bIsHovered: T,
+            onlyOneDiscountPct: A,
           } = e,
-          [I] = (0, u.jk)(a.id, (0, m.TM)(a.type), { include_platforms: !0 }),
-          D = (0, C.bJ)(),
-          L =
+          [P] = (0, u.jk)(a.id, (0, m.TM)(a.type), { include_platforms: !0 }),
+          I = (0, C.bJ)(),
+          D =
             ((0, y.Dt)(a.type),
             (0, s.useMemo)(
-              () => (null == I ? void 0 : I.GetIncludedAppIDsOrSelf()),
-              [I],
+              () => (null == P ? void 0 : P.GetIncludedAppIDsOrSelf()),
+              [P],
             )),
-          N =
-            I &&
-            (null == I
+          L =
+            P &&
+            (null == P
               ? void 0
-              : I.GetIncludedAppIDsOrSelf().every((e) =>
+              : P.GetIncludedAppIDsOrSelf().every((e) =>
                   c.jg.Get().BOwnsApp(e),
                 ));
-        if (!I) return null;
-        const B = N && !l,
-          w = (0, k.bk)((0, o.Hf)(`${I.GetStorePageURL()}${i || ""}`, D));
-        let x,
-          O = null;
-        if (v && 0 == (null == I ? void 0 : I.GetStoreItemType()))
-          O = s.createElement(M.r, { appid: I.GetAppID(), bIsMuted: A });
-        else if (h);
+        if (!P) return null;
+        const N = L && !l,
+          B = (0, k.bk)((0, o.Hf)(`${P.GetStorePageURL()}${i || ""}`, I));
+        let w,
+          x = null;
+        if (_ && 0 == (null == P ? void 0 : P.GetStoreItemType()))
+          x = s.createElement(M.r, { appid: P.GetAppID(), bIsMuted: T });
+        else if (v);
         else {
-          const t = N && n,
-            r = B;
-          O = s.createElement(g.Hl, {
+          const t = L && n,
+            r = N;
+          x = s.createElement(g.Hl, {
             info: a,
             bShowAsMuted: r,
-            bHidePrice: b,
+            bHidePrice: h,
             bShowInLibraryInsteadOfPrice: t,
-            bHidePlatforms: G,
-            creatorAccountID: T,
+            bHidePlatforms: b,
+            creatorAccountID: G,
             bShowName: e.bShowName,
-            onlyOneDiscountPct: P,
+            onlyOneDiscountPct: A,
           });
         }
         return (
           "overrideNavigation" in a &&
-            (x = (e) => (
+            (w = (e) => (
               a.overrideNavigation(e),
               e.preventDefault(),
               e.stopPropagation(),
@@ -616,22 +616,22 @@
           s.createElement(
             r.IS,
             {
-              href: x ? null : w,
+              href: w ? null : B,
               style: { display: "block", cursor: "pointer" },
-              preferredFocus: _,
-              onClick: x,
+              preferredFocus: p,
+              onClick: w,
             },
-            s.createElement(f.v, { appids: L, hide_status_banners: l }),
+            s.createElement(f.v, { appids: D, hide_status_banners: l }),
             s.createElement(g.a4, { imageType: d, info: a }),
             s.createElement(S.y, {
               eDeckCompatibilityCategory:
-                null === (t = null == I ? void 0 : I.GetPlatforms()) ||
+                null === (t = null == P ? void 0 : P.GetPlatforms()) ||
                 void 0 === t
                   ? void 0
                   : t.steam_deck_compat_category,
             }),
-            Boolean(A && !(0, p.Hu)()) && s.createElement(E.v, { appInfo: a }),
-            O,
+            Boolean(T) && s.createElement(E.v, { appInfo: a }),
+            x,
           )
         );
       }
@@ -865,7 +865,7 @@
         P = a(10162),
         I = a(92797);
       function D(e, t, a, s) {
-        if (!s) return null;
+        if (!s || !s.path) return null;
         const n = a ? "?t=" + a : "";
         return s.path.startsWith("images")
           ? `${v.De.MEDIA_CDN_URL}steam/marketing/${e}/${s.path}${n}`

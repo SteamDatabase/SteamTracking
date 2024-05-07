@@ -498,7 +498,7 @@
             "div",
             { className: (0, B.Z)(G().AppBannerGroup, u) },
             E
-              ? Boolean((0, j.Hu)() && t)
+              ? Boolean(t)
                 ? i.createElement(
                     j.ll,
                     {
@@ -3981,7 +3981,7 @@
             )
           : r.createElement(u.V, { string: "Loading User Info" });
       }
-      var g = n(34797);
+      var g = n(5262);
       const h = {
         SaleDashboardView: () => "/(dashboard)?/",
         SaleMigrationTool: () => "/migration/",

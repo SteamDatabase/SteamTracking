@@ -283,6 +283,7 @@
     "Chat_Actions_OpenChat": "Open chat window",
     "Chat_Upload": "Upload",
     "Chat_Uploading": "Uploading: %1$s",
+    "Chat_Exporting": "Exporting: %1$s",
     "Chat_Upload_ErrorStart": "Failed to start upload: %1$s",
     "Chat_Upload_ErrorCommit": "Failed to finish upload: %1$s",
     "Chat_Upload_ErrorAction_Retry": "Retry",

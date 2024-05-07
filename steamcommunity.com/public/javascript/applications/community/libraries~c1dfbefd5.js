@@ -4687,6 +4687,18 @@
                     bw: a.Xc.writeUint32,
                   },
                   randomize: { n: 3, br: a.FE.readBool, bw: a.Xc.writeBool },
+                  include_packages: {
+                    n: 4,
+                    d: !1,
+                    br: a.FE.readBool,
+                    bw: a.Xc.writeBool,
+                  },
+                  include_bundles: {
+                    n: 5,
+                    d: !1,
+                    br: a.FE.readBool,
+                    bw: a.Xc.writeBool,
+                  },
                 },
               }),
             p.sm_m

@@ -3530,14 +3530,21 @@
         return !i || 0 == (i & (1 << t));
       }
       function b(e, t, n, i) {
+        var r;
         if (!n || !i) return !0;
         if (!n.is_enabled || !t) return !1;
         if (0 == n.applist_base_id) return !1;
         if (0 == e) return !1;
         if (e >= s.RI && e <= s.pv) return !1;
         if (-1 !== [s.p6, s.Mq, s.xM, s.jA, s.us].indexOf(e)) return !1;
-        const r = i.get(e);
-        return void 0 === r || !r;
+        if (
+          null === (r = n.utility_appids) || void 0 === r
+            ? void 0
+            : r.includes(e)
+        )
+          return !1;
+        const o = i.get(e);
+        return void 0 === o || !o;
       }
       function w(e) {
         var t;
@@ -10823,15 +10830,14 @@
     },
     35643: (e, t, n) => {
       "use strict";
-      n.d(t, { k$: () => m, o5: () => d });
+      n.d(t, { k$: () => d, o5: () => u });
       var i = n(85556),
         r = n(47427),
         s = n(10095),
-        o = n(28781),
-        a = n(77262),
-        l = n(20417),
-        c = n(37563);
-      const u = r.createContext(function (e, t) {
+        o = n(77262),
+        a = n(20417),
+        l = n(37563);
+      const c = r.createContext(function (e, t) {
         return {
           ShowVirtualKeyboard: () => {},
           ShowModalKeyboard: () => {},
@@ -10842,21 +10848,20 @@
           BIsElementValidForInput: () => !1,
         };
       });
-      function d(e) {
+      function u(e) {
         const { factory: t, children: n } = e,
           i = r.useMemo(() => t.CreateVirtualKeyboardRef.bind(t), [t]);
-        return r.createElement(u.Provider, { value: i }, n);
+        return r.createElement(c.Provider, { value: i }, n);
       }
-      function m(e, t) {
+      function d(e, t) {
         const { onTextEntered: n } = e,
-          d = (0, i._T)(e, ["onTextEntered"]),
-          m = r.useRef(null),
-          h = (0, c.qt)({ bSuppressAssert: !0 }),
-          p = !!r.useContext(o.ET),
-          g = r.useRef({ onTextEntered: () => null });
+          u = (0, i._T)(e, ["onTextEntered"]),
+          d = r.useRef(null),
+          m = (0, l.qt)({ bSuppressAssert: !0 }),
+          h = r.useRef({ onTextEntered: () => null });
         Object.assign(
-          g.current,
-          Object.assign(Object.assign({}, d), {
+          h.current,
+          Object.assign(Object.assign({}, u), {
             onTextEntered:
               n ||
               ((e) =>
@@ -10916,23 +10921,23 @@
                       void 0 === i ||
                       i.ControllerKeyboardSendText(e);
                   }
-                })(e, h.IN_VR)),
+                })(e, m.IN_VR)),
             BIsElementValidForInput: () =>
-              m.current && document.activeElement == m.current,
+              d.current && document.activeElement == d.current,
           }),
         );
-        const _ = (function (e, t) {
+        const p = (function (e, t) {
             const n = r.useRef(),
-              i = r.useContext(u);
+              i = r.useContext(c);
             n.current || (n.current = i(e, t));
             return n.current;
-          })(g.current, () => m.current.ownerDocument.defaultView),
-          f = r.useCallback(
+          })(h.current, () => d.current.ownerDocument.defaultView),
+          g = r.useCallback(
             (e) => {
               var t, n;
-              if (!document.hasFocus() && document.activeElement == m.current)
+              if (!document.hasFocus() && document.activeElement == d.current)
                 return;
-              if (e.currentTarget != m.current)
+              if (e.currentTarget != d.current)
                 return void console.warn(
                   "keyboard got blur event, but it's not the active element",
                 );
@@ -10941,63 +10946,62 @@
                   (n =
                     null ===
                       (t = s.AN.GetPopupForWindow(
-                        m.current.ownerDocument.defaultView,
+                        d.current.ownerDocument.defaultView,
                       )) || void 0 === t
                       ? void 0
                       : t.params.bUseVRKeyboard) &&
                 void 0 !== n &&
                 n;
-              (_.BIsActive() || i) && _.DelayHideVirtualKeyboard();
+              (p.BIsActive() || i) && p.DelayHideVirtualKeyboard();
             },
-            [_],
+            [p],
           ),
-          v = (0, l.xK)(
+          _ = (0, a.xK)(
             (e) => {
-              m.current = e;
+              d.current = e;
               const t = [];
               return (
                 e &&
                   (e.addEventListener(
                     "focus",
-                    _.SetAsCurrentVirtualKeyboardTarget,
+                    p.SetAsCurrentVirtualKeyboardTarget,
                   ),
                   t.push(() =>
                     e.removeEventListener(
                       "focus",
-                      _.SetAsCurrentVirtualKeyboardTarget,
+                      p.SetAsCurrentVirtualKeyboardTarget,
                     ),
                   ),
-                  p &&
-                    (e.addEventListener("click", _.ShowVirtualKeyboard),
-                    t.push(() =>
-                      e.removeEventListener("click", _.ShowVirtualKeyboard),
-                    )),
-                  t.push((0, a.x)(e, _.ShowVirtualKeyboard)),
-                  t.push((0, a.BG)(e, f))),
+                  e.addEventListener("click", p.ShowVirtualKeyboard),
+                  t.push(() =>
+                    e.removeEventListener("click", p.ShowVirtualKeyboard),
+                  ),
+                  t.push((0, o.x)(e, p.ShowVirtualKeyboard)),
+                  t.push((0, o.BG)(e, g))),
                 () => t.forEach((e) => e())
               );
             },
-            [f, _, p],
+            [g, p],
           );
         return (
           r.useLayoutEffect(
             () => (
-              (0, l.k$)(t, {
+              (0, a.k$)(t, {
                 TakeFocusAndShowKeyboard: () => {
-                  const e = m.current;
+                  const e = d.current;
                   e &&
                     (document.activeElement != e && e.focus(),
-                    _.ShowVirtualKeyboard());
+                    p.ShowVirtualKeyboard());
                 },
                 HideVirtualKeyboard: () => {
-                  _.HideVirtualKeyboard();
+                  p.HideVirtualKeyboard();
                 },
               }),
-              () => (0, l.k$)(t, null)
+              () => (0, a.k$)(t, null)
             ),
-            [_, t],
+            [p, t],
           ),
-          v
+          _
         );
       }
     },
@@ -25063,7 +25067,10 @@
           }
           const f =
             _ && _.height / t.innerHeight < 0.9 && _.width / t.innerWidth < 0.8;
-          if (u || (!c && f)) return d(e, t);
+          if (u || (!c && f))
+            return d(e, t, void 0, {
+              fnOnClose: null == n ? void 0 : n.fnOnClose,
+            });
           {
             const i = {
                 strTitle:
@@ -34065,37 +34072,51 @@
       function ze(e) {
         const [t, n] = s.useState(null),
           [i, r] = s.useState(null),
-          [o, a] = s.useState(!1),
-          [l, c] = s.useState(),
-          u = (0, f.bY)(),
-          d = (0, Ae.useQueryClient)(),
-          m = (0, Ve.tv)(),
-          h = o || !!t || !!i;
+          [o, a] = s.useState(null),
+          [l, c] = s.useState(!1),
+          [u, d] = s.useState(),
+          m = (0, f.bY)(),
+          h = (0, Ae.useQueryClient)(),
+          p = (0, Ve.tv)(),
+          g = l || !!t || !!o;
         s.useEffect(() => {
-          !l && h && (0, Ge.v)().then(() => c(!0));
-        }, [l, h]);
-        const p = s.useCallback(
+          !u && g && (0, Ge.v)().then(() => d(!0));
+        }, [u, g]);
+        const _ = s.useCallback(
           (e, t, i) => {
             const s = "number" == typeof e ? [e] : e;
-            a(!0),
-              (0, Te.mI)(u, d, m, s, t, i).then(
-                ({ success: e, result: t, items: i }) => {
+            c(!0),
+              (0, Te.mI)(m, h, p, s, t, i).then(
+                ({
+                  success: e,
+                  result: t,
+                  items: i,
+                  replaced_packageids: s,
+                  existing_billing_agreementid: o,
+                  new_billing_agreement_recurring_packageid: l,
+                }) => {
                   e
                     ? i.length > 1
                       ? (window.location.href = `${ke.De.STORE_BASE_URL}cart`)
-                      : n(i)
-                    : r(t || 2);
+                      : (n(i), r(s))
+                    : 30 == t && o && o.length > 0
+                      ? (window.location.href =
+                          `${ke.De.STORE_BASE_URL}account/subscriptions/` +
+                          o +
+                          "/" +
+                          l)
+                      : a(t || 2);
                 },
               );
           },
-          [d, u, m],
+          [h, m, p],
         );
         return (
           s.useEffect(() => {
             const e = window;
             (e.ShowShoppingCart = () => n([])),
               (e.HideShoppingCart = () => n(null)),
-              (e.AddItemToCart = p);
+              (e.AddItemToCart = _);
             let t = window.rgOnAccountCartReadyCallbacks;
             return (
               t &&
@@ -34107,8 +34128,8 @@
                   delete e.AddItemToCart;
               }
             );
-          }, [u, d, p]),
-          l
+          }, [m, h, _]),
+          u
             ? s.createElement(
                 s.Suspense,
                 { fallback: null },
@@ -34116,13 +34137,16 @@
                   s.createElement(je, {
                     key: JSON.stringify(t),
                     lineItemIDs: t,
-                    closeCart: () => n(null),
+                    replacedPackageIDs: i,
+                    closeCart: () => {
+                      n(null), r(null);
+                    },
                   }),
-                !!i &&
+                !!o &&
                   s.createElement(We, {
-                    active: !!i,
-                    onDismiss: () => r(null),
-                    result: i,
+                    active: !!o,
+                    onDismiss: () => a(null),
+                    result: o,
                   }),
               )
             : null
@@ -35578,8 +35602,19 @@
                 f.jg.Get().InvalidateCache(),
                 1 == e
                   ? ((0, m.IS)(t, n, i.cart),
-                    { success: !0, items: i.line_item_ids })
-                  : { success: !1, result: e }
+                    {
+                      success: !0,
+                      items: i.line_item_ids,
+                      replaced_packageids: i.replaced_packages,
+                    })
+                  : {
+                      success: !1,
+                      result: e,
+                      existing_billing_agreementid:
+                        i.existing_billing_agreementid,
+                      new_billing_agreement_recurring_packageid:
+                        i.new_billing_agreement_recurring_packageid,
+                    }
               ),
             )
           );
@@ -35636,7 +35671,7 @@
       }
       function E(e, t, n, o, l) {
         return (0, i.mG)(this, void 0, void 0, function* () {
-          const i = r.gA.Init(s.ll);
+          const i = r.gA.Init(s.QJ);
           if (!t && !n)
             return (
               console.warn(
@@ -35644,18 +35679,24 @@
               ),
               [8, null]
             );
-          t && i.Body().set_packageid(t),
-            n && i.Body().set_bundleid(n),
-            i.Body().flags().set_is_gift(o),
+          const c = i.Body().add_items();
+          t
+            ? c.set_packageid(t)
+            : n
+              ? c.set_bundleid(n)
+              : console.error(
+                  "Neither a package nor bundle ID were provided with an item in AddItemsToAccountCart",
+                ),
+            c.flags().set_is_gift(o),
             l && i.Body().set_navdata(a.K.fromObject((0, _.bP)(l))),
             i.Body().set_user_country(C.L7.country_code);
-          const c = yield s.Wr.AddItemToCart(e, i);
+          const u = yield s.Wr.AddItemsToCart(e, i);
           return (
-            c.BSuccess() ||
+            u.BSuccess() ||
               console.warn(
-                `Failed to add item to account cart: ${c.GetEResult()}`,
+                `Failed to add item to account cart: ${u.GetEResult()}`,
               ),
-            [c.GetEResult(), c.Body().toObject()]
+            [u.GetEResult(), u.Body().toObject()]
           );
         });
       }
