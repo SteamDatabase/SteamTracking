@@ -27796,7 +27796,7 @@
                   (i.asset_request_discount_event_id_clone =
                     t.discount_event_id),
                 (r.input_jsondata = JSON.stringify(i))),
-              (r.partner_id = e),
+              (r.partner_id = null != e ? e : 0),
               a.Body().set_plan(o.Fc.fromObject(r)),
               a.Body().set_promotion_id(t.id);
             let s = null;
