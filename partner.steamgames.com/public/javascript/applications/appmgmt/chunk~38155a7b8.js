@@ -50559,6 +50559,7 @@
               nOriginalPartnerID: r,
               fnUpdatePartnerID: t.SetPartnerID,
               showPartnerInitialSetWarning: !0,
+              autoSelectPartnerFromStoreItem: !1,
             }),
             c.createElement(m.ji, {
               label:
@@ -58051,6 +58052,7 @@
                     nPartnerID: H,
                     storeItemKey: q,
                     fnUpdatePartnerID: V,
+                    autoSelectPartnerFromStoreItem: !0,
                   }),
                 ),
             ),
@@ -61510,6 +61512,7 @@
           showPartnerUnsetWarning: r,
           showPartnerSuggestions: s,
           showPartnerInitialSetWarning: c,
+          autoSelectPartnerFromStoreItem: m,
         } = e;
         return l.createElement(
           "div",
@@ -61544,6 +61547,7 @@
             showPartnerUnsetWarning: null == r || r,
             showPartnerSuggestions: null == s || s,
             showPartnerInitialSetWarning: c,
+            autoSelectPartnerFromStoreItem: m,
           }),
         );
       }
@@ -61556,15 +61560,20 @@
             showPartnerUnsetWarning: c,
             showPartnerSuggestions: m,
             showPartnerInitialSetWarning: u,
+            autoSelectPartnerFromStoreItem: p,
           } = e,
-          p = (0, i.Gk)(
+          h = (0, i.Gk)(
             null == t ? void 0 : t.id,
             (0, r.GV)(null == t ? void 0 : t.item_type),
-          );
+          ),
+          g =
+            (!n || n !== a) &&
+            (null == h ? void 0 : h.filter((e) => e.partner_id != n).length) >
+              0;
         return (
           (0, l.useEffect)(() => {
-            p && 1 == p.length && s && s(p.at(0).partner_id);
-          }, [p, s]),
+            p && h && 1 == h.length && s && s(h.at(0).partner_id);
+          }, [p, h, s]),
           l.createElement(
             l.Fragment,
             null,
@@ -61574,16 +61583,11 @@
               showPartnerUnsetWarning: c,
               showPartnerInitialSetWarning: u,
             }),
-            Boolean(
-              m &&
-                (null == p
-                  ? void 0
-                  : p.filter((e) => e.partner_id != n).length) > 0,
-            ) &&
+            Boolean(m && g) &&
               l.createElement(
                 "div",
                 { className: d().SetObviousPartner },
-                p.map((e) =>
+                h.map((e) =>
                   l.createElement(
                     o.zx,
                     { key: e.partner_id, onClick: () => s(e.partner_id) },
@@ -63947,6 +63951,7 @@
             nPartnerID: t,
             fnUpdatePartnerID: n,
             storeItemKey: a,
+            autoSelectPartnerFromStoreItem: !0,
           }),
           r.createElement($e.Z, { nPartnerID: t, storeItemFilter: a }),
         );
@@ -71956,6 +71961,7 @@
                   nPartnerID: o,
                   fnUpdatePartnerID: s,
                   storeItemKey: p,
+                  autoSelectPartnerFromStoreItem: !0,
                 }),
                 u.createElement(Ve.v, {
                   accountID: Fe.L7.accountid,
@@ -72458,6 +72464,7 @@
               nPartnerID: N,
               nOriginalPartnerID: L,
               fnUpdatePartnerID: t.SetPartnerID,
+              autoSelectPartnerFromStoreItem: !1,
             }),
           u.createElement(v.__, null, "Associated Editor Links:"),
           u.createElement(
