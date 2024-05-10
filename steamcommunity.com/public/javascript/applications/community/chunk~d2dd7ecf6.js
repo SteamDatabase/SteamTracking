@@ -32151,18 +32151,17 @@
             )
           : null;
       }
-      function wn(e, t, a, n) {
-        const i = (0, qt.SY)(),
-          l = (0, Ft._U)(
-            e,
-            a.GetEventModel(),
-            t,
-            a.GetClanSteamID().GetAccountID(),
-            i.eLocation,
-          );
+      function wn(e, t, a, n, i) {
+        const l = (0, Ft._U)(
+          t,
+          n.GetEventModel(),
+          a,
+          n.GetClanSteamID().GetAccountID(),
+          e,
+        );
         if (l) return l;
-        let o = (0, m.Xx)("#Sale_Section_Header", n + 1);
-        const s = "#Sale_Section_Type_" + e.section_type,
+        let o = (0, m.Xx)("#Sale_Section_Header", i + 1);
+        const s = "#Sale_Section_Type_" + t.section_type,
           r = (0, m.Xx)(s);
         return r !== s ? `${o} (${r})` : null;
       }
@@ -33601,11 +33600,11 @@
     92704: (e, t, a) => {
       "use strict";
       a.d(t, {
-        Yt: () => ie,
-        ZI: () => fe,
-        ij: () => le,
-        kr: () => te,
-        m6: () => oe,
+        Yt: () => le,
+        ZI: () => be,
+        ij: () => oe,
+        kr: () => ae,
+        m6: () => se,
       });
       var n = a(85556),
         i = a(80751),
@@ -33654,25 +33653,26 @@
         W = a(82434),
         q = a(7017),
         Q = a(30713),
-        Y = a(90835);
-      function J(e) {
+        Y = a(90835),
+        J = a(82093);
+      function K(e) {
         return (e = (e = (e = e.replace('"', " ")).replace("<", " ")).replace(
           ">",
           " ",
         )).trim();
       }
-      function K(e) {
+      function $(e) {
         const t = f.Z.Get().GetStoreItem(e.id, (0, b.TM)(e.type));
         let a = (null == t ? void 0 : t.GetStorePageURL()) || (0, Z.ah)(e);
         return { storeItem: t, linkURL: a, bInvalidID: !t };
       }
-      const $ = (e) =>
+      const ee = (e) =>
           p.createElement("img", {
             className: L().RemoveIcon,
             src: S.Z,
             onClick: e.onClick,
           }),
-        ee = (e) => {
+        te = (e) => {
           var t;
           const { clause: a } = e;
           if (!(null === (t = a.or_tags) || void 0 === t ? void 0 : t.length))
@@ -33691,7 +33691,7 @@
             n,
           );
         },
-        te = (e) => {
+        ae = (e) => {
           const { filter: t } = e;
           return (0, s.fG)(t)
             ? p.createElement(
@@ -33706,11 +33706,11 @@
                 "div",
                 { className: Y.FilterDisplayList },
                 t.clauses.map((e, t) =>
-                  p.createElement(ee, { clause: e, key: "clause" + t }),
+                  p.createElement(te, { clause: e, key: "clause" + t }),
                 ),
               );
         };
-      class ae {
+      class ne {
         constructor(e) {
           (this.m_Tags = []),
             (0, u.rC)(this),
@@ -33730,18 +33730,18 @@
           window.localStorage.setItem(this.m_storageKey, a);
         }
         static Get(e) {
-          let t = ae.m_mapStores.get(e.GetEventModel().GID);
+          let t = ne.m_mapStores.get(e.GetEventModel().GID);
           return (
             t ||
-              ((t = new ae(e.GetEventModel().GID)),
-              ae.m_mapStores.set(e.GetEventModel().GID, t)),
+              ((t = new ne(e.GetEventModel().GID)),
+              ne.m_mapStores.set(e.GetEventModel().GID, t)),
             t
           );
         }
       }
-      (ae.m_mapStores = new Map()),
-        (0, n.gn)([u.LO], ae.prototype, "m_Tags", void 0);
-      const ne = (0, m.Pi)((e) => {
+      (ne.m_mapStores = new Map()),
+        (0, n.gn)([u.LO], ne.prototype, "m_Tags", void 0);
+      const ie = (0, m.Pi)((e) => {
         const { id: t, type: a, name: n } = e;
         return p.createElement(
           "div",
@@ -33761,7 +33761,7 @@
           p.createElement("span", { className: Q.SmallText }, "(", a, ")"),
         );
       });
-      class ie extends p.Component {
+      class le extends p.Component {
         constructor() {
           super(...arguments),
             (this.m_currentRequest = 0),
@@ -33818,7 +33818,7 @@
                                 onSelected: () =>
                                   this.OnAddItem(Number(e.id), e.type),
                               },
-                              p.createElement(ne, {
+                              p.createElement(ie, {
                                 name: e.name,
                                 id: Number(e.id),
                                 type: e.type,
@@ -33862,9 +33862,9 @@
           );
         }
       }
-      (0, n.gn)([H.ak], ie.prototype, "OnAddItem", null),
-        (0, n.gn)([H.ak], ie.prototype, "UpdateAppSuggestions", null);
-      let le = class extends p.Component {
+      (0, n.gn)([H.ak], le.prototype, "OnAddItem", null),
+        (0, n.gn)([H.ak], le.prototype, "UpdateAppSuggestions", null);
+      let oe = class extends p.Component {
         OnApplyFilter(e) {
           const { editModel: t, capsuleContainer: a } = this.props,
             n = (0, s.VE)(t);
@@ -33873,7 +33873,7 @@
         OnEditFilter() {
           const { capsuleContainer: e } = this.props;
           (0, G.AM)(
-            p.createElement(fe, {
+            p.createElement(be, {
               editModel: this.props.editModel,
               filter: e.sale_tag_filter || { clauses: [] },
               title: (0, j.Xx)("#Sale_TagFilter_EditFilter"),
@@ -33899,7 +33899,7 @@
             p.createElement(
               "div",
               { className: Y.FilterActionsCtn },
-              p.createElement(te, { filter: e.sale_tag_filter }),
+              p.createElement(ae, { filter: e.sale_tag_filter }),
               p.createElement(
                 I.zx,
                 { onClick: this.OnEditFilter },
@@ -33909,7 +33909,7 @@
           );
         }
       };
-      function oe(e) {
+      function se(e) {
         const { editModel: t } = e,
           [a, n] = p.useState(!1),
           i = (0, _.SZ)(() => t.GetEventModel().GetTaggedItems()),
@@ -33956,7 +33956,7 @@
                 p.createElement(q.Gx, { editModel: t }),
               ),
             ),
-            !be(t, E.J7.k_EContentHub) &&
+            !ye(t, E.J7.k_EContentHub) &&
               p.createElement(
                 p.Fragment,
                 null,
@@ -33978,7 +33978,7 @@
                   : p.createElement(
                       p.Fragment,
                       null,
-                      p.createElement(ie, {
+                      p.createElement(le, {
                         onAddItem: (e, a) => (0, s.Hk)(c, t, a, e),
                       }),
                       o
@@ -33987,10 +33987,10 @@
                             string: (0, j.Xx)("#Loading"),
                             position: "center",
                           })
-                        : p.createElement(se, { editModel: t }),
+                        : p.createElement(re, { editModel: t }),
                     ),
               ),
-            !be(t, E.J7.k_ETaggedItems) &&
+            !ye(t, E.J7.k_ETaggedItems) &&
               p.createElement(
                 F.s,
                 { clanSteamID: t.GetClanSteamID() },
@@ -34002,7 +34002,7 @@
                     {
                       onClick: (e) =>
                         (0, G.AM)(
-                          p.createElement(Ie, { editModel: t }),
+                          p.createElement(Te, { editModel: t }),
                           (0, X.RA)(e),
                         ),
                     },
@@ -34016,9 +34016,9 @@
           )
         );
       }
-      function se(e) {
+      function re(e) {
         const { editModel: t } = e,
-          [a, n] = (0, p.useState)(re.ShowIncludedItems),
+          [a, n] = (0, p.useState)(ce.ShowIncludedItems),
           [i, l] = p.useState(""),
           c = (0, _.SZ)(() => (0, s.Jy)(t)),
           d = (0, s.VA)(),
@@ -34048,8 +34048,8 @@
               m.filter((n) => {
                 const l = (0, s.j6)(n.tags, c);
                 if ((l ? e++ : t++, l)) {
-                  if (a == re.ShowFilteredOutItems) return !1;
-                } else if (a == re.ShowIncludedItems) return !1;
+                  if (a == ce.ShowFilteredOutItems) return !1;
+                } else if (a == ce.ShowIncludedItems) return !1;
                 const o = f.Z.Get().GetStoreItem(
                     n.capsule.id,
                     (0, b.TM)(n.capsule.type),
@@ -34070,7 +34070,7 @@
             () =>
               (null == S ? void 0 : S.length) > 0
                 ? S.map((e, a) =>
-                    p.createElement(me, {
+                    p.createElement(_e, {
                       key: e.capsule.type + e.capsule.id,
                       item: e,
                       strSearchFilter: i,
@@ -34122,7 +34122,7 @@
                     onClick: () => {
                       const e = { clauses: new Array() };
                       (0, G.AM)(
-                        p.createElement(fe, {
+                        p.createElement(be, {
                           editModel: t,
                           filter: e,
                           title: (0, j.Xx)("#Sale_TagFilter_Explore"),
@@ -34141,7 +34141,7 @@
                   {
                     onClick: (e) =>
                       (0, G.AM)(
-                        p.createElement(ye, {
+                        p.createElement(Ce, {
                           editModel: t,
                           bRemoveMissingEntries: !0,
                           UpdateDefaultTagsForItems: d,
@@ -34159,7 +34159,7 @@
                   {
                     onClick: (e) =>
                       (0, G.AM)(
-                        p.createElement(Ce, {
+                        p.createElement(De, {
                           editModel: t,
                           UpdateDefaultTagsForItems: d,
                         }),
@@ -34178,14 +34178,14 @@
                 p.createElement(
                   "div",
                   { className: Y.ButtonRow },
-                  p.createElement(de, { editModel: t, nFilteredItems: E }),
-                  p.createElement(ue, { editModel: t }),
+                  p.createElement(ue, { editModel: t, nFilteredItems: E }),
+                  p.createElement(me, { editModel: t }),
                   p.createElement(
                     I.zx,
                     {
                       onClick: (e) =>
                         (0, G.AM)(
-                          p.createElement(ye, {
+                          p.createElement(Ce, {
                             editModel: t,
                             collection: s.st.Custom,
                             bRemoveMissingEntries: !1,
@@ -34204,7 +34204,7 @@
                     {
                       onClick: (e) =>
                         (0, G.AM)(
-                          p.createElement(ve, { editModel: t }),
+                          p.createElement(Ee, { editModel: t }),
                           (0, X.RA)(e),
                         ),
                     },
@@ -34218,7 +34218,7 @@
                     {
                       onClick: (e) =>
                         (0, G.AM)(
-                          p.createElement(Ie, { editModel: t }),
+                          p.createElement(Te, { editModel: t }),
                           (0, X.RA)(e),
                         ),
                     },
@@ -34245,7 +34245,7 @@
                     {
                       onClick: (e) =>
                         (0, G.AM)(
-                          p.createElement(xe, { editModel: t }),
+                          p.createElement(we, { editModel: t }),
                           (0, X.RA)(e),
                         ),
                     },
@@ -34264,7 +34264,7 @@
               "div",
               { className: Y.ItemList },
               Boolean(E > 0) &&
-                p.createElement(ce, { eChoice: a, fnUpdateChoice: n }),
+                p.createElement(de, { eChoice: a, fnUpdateChoice: n }),
               p.createElement(I.II, {
                 type: "text",
                 label: (0, j.Xx)("#Sale_TaggedItemsFilter"),
@@ -34276,21 +34276,21 @@
             ),
         );
       }
-      var re;
-      function ce(e) {
+      var ce;
+      function de(e) {
         const { eChoice: t, fnUpdateChoice: a } = e,
           n = [
             {
               label: (0, j.Xx)("#Sale_ShowFilteredTaggedItems_filtered"),
-              data: re.ShowIncludedItems,
+              data: ce.ShowIncludedItems,
             },
             {
               label: (0, j.Xx)("#Sale_ShowFilteredTaggedItems_all"),
-              data: re.ShowAllItems,
+              data: ce.ShowAllItems,
             },
             {
               label: (0, j.Xx)("#Sale_ShowFilteredTaggedItems_only_filtered"),
-              data: re.ShowFilteredOutItems,
+              data: ce.ShowFilteredOutItems,
             },
           ];
         return p.createElement(I.ry, {
@@ -34301,7 +34301,7 @@
           selectedOption: t,
         });
       }
-      function de(e) {
+      function ue(e) {
         var t, a;
         const { editModel: n, nFilteredItems: i } = e,
           [l] = (0, _.SZ)(() => [(0, s.Jy)(n)]);
@@ -34310,7 +34310,7 @@
           {
             onClick: (e) =>
               (0, G.AM)(
-                p.createElement(fe, {
+                p.createElement(be, {
                   editModel: n,
                   filter: l,
                   title: (0, j.Xx)("#Sale_TagFilter_EditFilter"),
@@ -34343,7 +34343,7 @@
           }),
         );
       }
-      function ue(e) {
+      function me(e) {
         const { editModel: t } = e,
           a = (0, _.SZ)(() => t.GetEventModel().GetTaggedItems()),
           i = (0, s.VA)();
@@ -34400,22 +34400,22 @@
           }),
         );
       }
-      (0, n.gn)([H.ak], le.prototype, "OnApplyFilter", null),
-        (0, n.gn)([H.ak], le.prototype, "OnEditFilter", null),
-        (le = (0, n.gn)([m.Pi], le)),
+      (0, n.gn)([H.ak], oe.prototype, "OnApplyFilter", null),
+        (0, n.gn)([H.ak], oe.prototype, "OnEditFilter", null),
+        (oe = (0, n.gn)([m.Pi], oe)),
         (function (e) {
           (e[(e.ShowIncludedItems = 0)] = "ShowIncludedItems"),
             (e[(e.ShowAllItems = 1)] = "ShowAllItems"),
             (e[(e.ShowFilteredOutItems = 2)] = "ShowFilteredOutItems");
-        })(re || (re = {}));
-      const me = (0, m.Pi)((e) =>
+        })(ce || (ce = {}));
+      const _e = (0, m.Pi)((e) =>
           p.createElement(
             k.Y,
             { className: Y.TagItemCtn },
-            p.createElement(_e, Object.assign({}, e)),
+            p.createElement(pe, Object.assign({}, e)),
           ),
         ),
-        _e = (0, m.Pi)((e) => {
+        pe = (0, m.Pi)((e) => {
           var t;
           const {
               item: a,
@@ -34430,7 +34430,7 @@
             m = (0, s.VA)(),
             _ = () => {
               (0, G.AM)(
-                p.createElement(Se, {
+                p.createElement(ve, {
                   editModel: r,
                   item: a,
                   onTagsModified: c,
@@ -34528,17 +34528,17 @@
                 p.createElement(
                   "div",
                   { onClick: _ },
-                  p.createElement(ge, {
+                  p.createElement(he, {
                     item: a,
                     lowerTagHighlight: C,
                     filter: o,
                   }),
                 ),
             ),
-            n && p.createElement($, { onClick: n }),
+            n && p.createElement(ee, { onClick: n }),
           );
         });
-      function pe(e, t, a) {
+      function ge(e, t, a) {
         var n;
         const i = e.toLocaleLowerCase();
         if (t && i === t) return Y.TagHighlight;
@@ -34552,7 +34552,7 @@
               return "Must have" === e.type ? Y.TagMustHave : Y.TagMustNotHave;
         return null;
       }
-      const ge = (0, m.Pi)((e) => {
+      const he = (0, m.Pi)((e) => {
           const { item: t } = e,
             a = Array.from(t.tags),
             n = (function (e, t) {
@@ -34589,15 +34589,15 @@
                 "div",
                 { className: Y.TagListCtn },
                 a.map((t) =>
-                  p.createElement(he, {
+                  p.createElement(Se, {
                     key: t,
                     tag: t,
-                    className: pe(t, e.lowerTagHighlight, e.filter),
+                    className: ge(t, e.lowerTagHighlight, e.filter),
                   }),
                 ),
                 n &&
                   n.map((e) =>
-                    p.createElement(he, {
+                    p.createElement(Se, {
                       key: e,
                       tag: e,
                       className: Y.TagMissingMustHave,
@@ -34610,7 +34610,7 @@
                 (0, j.Xx)("#Sale_TagFilter_AddTags"),
               );
         }),
-        he = (e) => {
+        Se = (e) => {
           const t = (0, s.xQ)(e.tag);
           return p.createElement(
             "div",
@@ -34624,7 +34624,7 @@
             e.tag,
           );
         };
-      let Se = class extends p.Component {
+      let ve = class extends p.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -34656,7 +34656,16 @@
                         (e) => e.type === i.type && e.id === i.id,
                       ),
                     )),
-                  o && n.push((0, q.Rj)(a, t.GetCurEditLanguage(), t, l));
+                  o &&
+                    n.push(
+                      (0, q.Rj)(
+                        this.context.eLocation,
+                        a,
+                        t.GetCurEditLanguage(),
+                        t,
+                        l,
+                      ),
+                    );
               }),
             n.sort((e, t) => e.localeCompare(t)),
             n
@@ -34694,9 +34703,9 @@
         }
         AddTag(e) {
           const { currentTags: t } = this.state,
-            a = (e = J(e)).toLocaleLowerCase();
+            a = (e = K(e)).toLocaleLowerCase();
           if (
-            (ae.Get(this.props.editModel).AddRecentTag(e),
+            (ne.Get(this.props.editModel).AddRecentTag(e),
             t.find((e) => e.toLocaleLowerCase() === a))
           )
             return;
@@ -34761,7 +34770,7 @@
             }
           });
           const d = [];
-          ae.Get(this.props.editModel)
+          ne.Get(this.props.editModel)
             .GetRecentTags()
             .forEach((e) => {
               if (!l.has(e.toLocaleLowerCase())) {
@@ -34905,11 +34914,12 @@
           );
         }
       };
-      (0, n.gn)([H.ak], Se.prototype, "RemoveTag", null),
-        (0, n.gn)([H.ak], Se.prototype, "AddTag", null),
-        (0, n.gn)([H.ak], Se.prototype, "OnOK", null),
-        (Se = (0, n.gn)([m.Pi], Se));
-      let ve = class extends p.Component {
+      (ve.contextType = J.DF),
+        (0, n.gn)([H.ak], ve.prototype, "RemoveTag", null),
+        (0, n.gn)([H.ak], ve.prototype, "AddTag", null),
+        (0, n.gn)([H.ak], ve.prototype, "OnOK", null),
+        (ve = (0, n.gn)([m.Pi], ve));
+      let Ee = class extends p.Component {
         constructor() {
           super(...arguments),
             (this.m_timerForChange = new R.Ar()),
@@ -34944,7 +34954,7 @@
         OnPopulateFromFilter() {
           new Array();
           (0, G.AM)(
-            p.createElement(fe, {
+            p.createElement(be, {
               editModel: this.props.editModel,
               filter: this.state.filter,
               onApplyFilter: this.OnApplyFilter,
@@ -34967,11 +34977,11 @@
           );
         }
         AddTag(e) {
-          const t = (e = J(e)).toLocaleLowerCase(),
+          const t = (e = K(e)).toLocaleLowerCase(),
             a = this.state.otherTags.get(t);
           a && (e = a.properCaseString);
           const n = this.CloneModifiedTags();
-          ae.Get(this.props.editModel).AddRecentTag(e);
+          ne.Get(this.props.editModel).AddRecentTag(e);
           for (const a of this.state.editItems) {
             const i = n.get(a) || a.tags || [];
             i.find((e) => e.toLocaleLowerCase() === t) || n.set(a, [...i, e]);
@@ -35049,7 +35059,7 @@
           }),
             o.sort((e, t) => e.localeCompare(t));
           const s = [];
-          ae.Get(this.props.editModel)
+          ne.Get(this.props.editModel)
             .GetRecentTags()
             .forEach((e) => {
               const t = (0, P.Z)(Y.EditTag, Y.OtherTag);
@@ -35229,7 +35239,7 @@
           );
         }
       };
-      function Ee(e) {
+      function fe(e) {
         const {
             onClauseChanged: t,
             value: a,
@@ -35297,20 +35307,20 @@
           menuPlacement: "bottom",
         });
       }
-      (0, n.gn)([H.ak], ve.prototype, "OnApplyFilter", null),
-        (0, n.gn)([H.ak], ve.prototype, "OnPopulateFromFilter", null),
-        (0, n.gn)([H.ak], ve.prototype, "RemoveTag", null),
-        (0, n.gn)([H.ak], ve.prototype, "AddTag", null),
-        (0, n.gn)([H.ak], ve.prototype, "OnOK", null),
-        (0, n.gn)([H.ak], ve.prototype, "OnUpdateItemListFromText", null),
-        (0, n.gn)([H.ak], ve.prototype, "OnTextChanged", null),
-        (ve = (0, n.gn)([m.Pi], ve));
-      class fe extends p.Component {
+      (0, n.gn)([H.ak], Ee.prototype, "OnApplyFilter", null),
+        (0, n.gn)([H.ak], Ee.prototype, "OnPopulateFromFilter", null),
+        (0, n.gn)([H.ak], Ee.prototype, "RemoveTag", null),
+        (0, n.gn)([H.ak], Ee.prototype, "AddTag", null),
+        (0, n.gn)([H.ak], Ee.prototype, "OnOK", null),
+        (0, n.gn)([H.ak], Ee.prototype, "OnUpdateItemListFromText", null),
+        (0, n.gn)([H.ak], Ee.prototype, "OnTextChanged", null),
+        (Ee = (0, n.gn)([m.Pi], Ee));
+      class be extends p.Component {
         constructor() {
           super(...arguments), (this.state = this.GenerateInitialState());
         }
         componentDidMount() {
-          be(this.props.editModel, E.J7.k_ETaggedItems) ||
+          ye(this.props.editModel, E.J7.k_ETaggedItems) ||
             this.LoadDropdownOptions().then((e) => {
               this.setState({
                 tagDropdownOptions: e,
@@ -35376,7 +35386,7 @@
           return Object.assign(
             {
               tagDropdownOptions: this.GenerateTagDropDownOptions(),
-              bDropdownOptionsLoaded: be(
+              bDropdownOptionsLoaded: ye(
                 this.props.editModel,
                 E.J7.k_ETaggedItems,
               ),
@@ -35477,7 +35487,7 @@
             ],
             n = this.GetFilteredItems();
           let i;
-          be(this.props.editModel, E.J7.k_ETaggedItems) ||
+          ye(this.props.editModel, E.J7.k_ETaggedItems) ||
             (i = this.state.tagDropdownOptions);
           const l = e.or_tags.map((e, a) =>
               p.createElement(
@@ -35492,7 +35502,7 @@
                 p.createElement(
                   "div",
                   { className: Y.TagDropDown },
-                  p.createElement(Ee, {
+                  p.createElement(fe, {
                     taggedItems: n,
                     value: e,
                     onClauseChanged: (e) => this.OnChangeClauseTag(t, a, e),
@@ -35503,7 +35513,7 @@
                   }),
                 ),
                 a > 0 &&
-                  p.createElement($, {
+                  p.createElement(ee, {
                     onClick: () => this.OnRemoveClauseTagSlot(t, a),
                   }),
               ),
@@ -35519,7 +35529,7 @@
               p.createElement(
                 p.Fragment,
                 null,
-                p.createElement($, { onClick: () => this.OnRemoveClause(t) }),
+                p.createElement(ee, { onClick: () => this.OnRemoveClause(t) }),
                 p.createElement(
                   "div",
                   { className: Y.AndLabel },
@@ -35713,7 +35723,7 @@
           const g = o ? this.state.tagHighlight : "",
             h = "active" === n ? c : "filtered" === n ? u : _,
             S = ("active" === n ? r : "filtered" === n ? d : m).map((e) => {
-              const { storeItem: t } = K(e.capsule);
+              const { storeItem: t } = $(e.capsule);
               return {
                 item: e,
                 name: null == t ? void 0 : t.GetName(),
@@ -35763,7 +35773,7 @@
               },
             ],
             E = S.map(({ item: t }) =>
-              p.createElement(me, {
+              p.createElement(_e, {
                 key: t.capsule.type + t.capsule.id,
                 editModel: e,
                 item: t,
@@ -35853,23 +35863,23 @@
           );
         }
       }
-      function be(e, t) {
+      function ye(e, t) {
         const a = e.GetEventModel().jsondata.item_source_type;
         return (t === E.J7.k_ETaggedItems && null == a) || a === t;
       }
-      (0, n.gn)([H.ak], fe.prototype, "OnChangeClauseType", null),
-        (0, n.gn)([H.ak], fe.prototype, "OnChangeClauseTag", null),
-        (0, n.gn)([H.ak], fe.prototype, "OnAddClause", null),
-        (0, n.gn)([H.ak], fe.prototype, "OnRemoveClause", null),
-        (0, n.gn)([H.ak], fe.prototype, "OnAddClauseTagSlot", null),
-        (0, n.gn)([H.ak], fe.prototype, "OnRemoveClauseTagSlot", null),
-        (0, n.gn)([H.ak], fe.prototype, "OnHighlightTag", null),
-        (0, n.gn)([H.ak], fe.prototype, "OnToggleTagBreakdown", null),
-        (0, n.gn)([H.ak], fe.prototype, "OnSetViewMode", null),
-        (0, n.gn)([H.ak], fe.prototype, "OnTagsModified", null),
-        (0, n.gn)([H.ak], fe.prototype, "UpdateSearchText", null),
-        (0, n.gn)([H.ak], fe.prototype, "OnOK", null);
-      let ye = class extends p.Component {
+      (0, n.gn)([H.ak], be.prototype, "OnChangeClauseType", null),
+        (0, n.gn)([H.ak], be.prototype, "OnChangeClauseTag", null),
+        (0, n.gn)([H.ak], be.prototype, "OnAddClause", null),
+        (0, n.gn)([H.ak], be.prototype, "OnRemoveClause", null),
+        (0, n.gn)([H.ak], be.prototype, "OnAddClauseTagSlot", null),
+        (0, n.gn)([H.ak], be.prototype, "OnRemoveClauseTagSlot", null),
+        (0, n.gn)([H.ak], be.prototype, "OnHighlightTag", null),
+        (0, n.gn)([H.ak], be.prototype, "OnToggleTagBreakdown", null),
+        (0, n.gn)([H.ak], be.prototype, "OnSetViewMode", null),
+        (0, n.gn)([H.ak], be.prototype, "OnTagsModified", null),
+        (0, n.gn)([H.ak], be.prototype, "UpdateSearchText", null),
+        (0, n.gn)([H.ak], be.prototype, "OnOK", null);
+      let Ce = class extends p.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -35883,7 +35893,7 @@
           let a = "";
           for (const n of e.GetEventModel().GetTaggedItems()) {
             const { capsule: e, tags: i } = n,
-              { storeItem: l } = K(e);
+              { storeItem: l } = $(e);
             let o = `${e.id}\t${e.type}`;
             o += `\t"${(t ? i.filter((e) => (0, s.p)(e, t)) : i).join(";")}"`;
             const r = (null == l ? void 0 : l.GetName()) || "";
@@ -35918,7 +35928,7 @@
           if (o) {
             const e = o[1].split(";");
             for (const t of e) {
-              const e = J(t);
+              const e = K(t);
               if (e) {
                 const t = e.toLocaleLowerCase();
                 s.has(t) || (s.add(t), r.push(e));
@@ -36064,11 +36074,11 @@
           );
         }
       };
-      (0, n.gn)([H.ak], ye.prototype, "OnCompleteEdit", null),
-        (0, n.gn)([H.ak], ye.prototype, "DoImport", null),
-        (0, n.gn)([H.ak], ye.prototype, "OnTextChange", null),
-        (ye = (0, n.gn)([m.Pi], ye));
-      let Ce = class extends p.Component {
+      (0, n.gn)([H.ak], Ce.prototype, "OnCompleteEdit", null),
+        (0, n.gn)([H.ak], Ce.prototype, "DoImport", null),
+        (0, n.gn)([H.ak], Ce.prototype, "OnTextChange", null),
+        (Ce = (0, n.gn)([m.Pi], Ce));
+      let De = class extends p.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -36310,7 +36320,7 @@
           );
         }
       };
-      function De(e) {
+      function Ie(e) {
         const t = new Set();
         for (const a of e) {
           const e = a.tag_name.trim().toLocaleLowerCase();
@@ -36321,25 +36331,25 @@
         }
         return !0;
       }
-      (0, n.gn)([H.ak], Ce.prototype, "ImportOptInPage", null),
-        (0, n.gn)([H.ak], Ce.prototype, "OnPerformSync", null),
-        (Ce = (0, n.gn)([m.Pi], Ce));
-      const Ie = (e) => {
+      (0, n.gn)([H.ak], De.prototype, "ImportOptInPage", null),
+        (0, n.gn)([H.ak], De.prototype, "OnPerformSync", null),
+        (De = (0, n.gn)([m.Pi], De));
+      const Te = (e) => {
           const { closeModal: t, editModel: a } = e,
             n = a.GetEventModel().jsondata,
             [i, l] = p.useState(!0),
             [r, c] = p.useState(!1),
             [d, m] = p.useState([...(n.auto_item_tags || [])]),
             _ = () => {
-              l(De(d)), c(!0);
+              l(Ie(d)), c(!0);
             },
             g = d.map((e, t) =>
-              p.createElement(Te, {
+              p.createElement(xe, {
                 key: "AutoTag" + t,
                 editModel: a,
                 fnOnEdited: _,
                 fnOnDeleted: () => {
-                  return (e = t), m(d.filter((t, a) => a != e)), void l(De(d));
+                  return (e = t), m(d.filter((t, a) => a != e)), void l(Ie(d));
                   var e;
                 },
                 autoTag: e,
@@ -36401,7 +36411,7 @@
             ),
           );
         },
-        Te = (e) => {
+        xe = (e) => {
           const [t, a] = p.useState(e.autoTag.tag_name),
             [n, i] = p.useState(e.autoTag.filter),
             l = (t) => {
@@ -36424,18 +36434,18 @@
                 tooltip: (0, j.Xx)("#Sale_EditAutoTags_Tooltip"),
                 value: t,
               }),
-              p.createElement($, { onClick: () => e.fnOnDeleted() }),
+              p.createElement(ee, { onClick: () => e.fnOnDeleted() }),
             ),
             p.createElement(
               "div",
               { className: Y.AutoTagRow },
-              p.createElement(te, { filter: n }),
+              p.createElement(ae, { filter: n }),
               p.createElement(
                 I.zx,
                 {
                   onClick: () => {
                     (0, G.AM)(
-                      p.createElement(fe, {
+                      p.createElement(be, {
                         editModel: e.editModel,
                         filter: n,
                         title: (0, j.Xx)("#Sale_TagFilter_EditFilter"),
@@ -36450,7 +36460,7 @@
             ),
           );
         },
-        xe = (e) => {
+        we = (e) => {
           const { editModel: t, closeModal: a } = e,
             [i, o] = (0, p.useState)(!0),
             [s, r] = (0, p.useState)();
@@ -36540,7 +36550,7 @@
                               "div",
                               { className: Y.AppTable },
                               s.rgAppIDsAdded.map((e) =>
-                                p.createElement(we, {
+                                p.createElement(ke, {
                                   key: "add" + e,
                                   appid: e,
                                 }),
@@ -36555,7 +36565,7 @@
                               "div",
                               { className: Y.AppTable },
                               s.rgAppIDsRemoved.map((e) =>
-                                p.createElement(we, {
+                                p.createElement(ke, {
                                   key: "remove" + e,
                                   appid: e,
                                 }),
@@ -36577,7 +36587,7 @@
             )
           );
         };
-      function we(e) {
+      function ke(e) {
         const { appid: t } = e,
           [a] = (0, y.vs)(t, {});
         return p.createElement(
