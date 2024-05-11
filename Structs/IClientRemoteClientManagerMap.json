@@ -178,6 +178,10 @@
             "argc": "1"
         },
         {
+            "name": "BIsStreamingDisabledBySystemPolicy",
+            "argc": "1"
+        },
+        {
             "name": "BIsStreamingEnabled",
             "argc": "1"
         },

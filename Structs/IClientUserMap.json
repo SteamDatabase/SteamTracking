@@ -1100,6 +1100,10 @@
         {
             "name": "BGetProcessIDsForGame",
             "argc": "3"
+        },
+        {
+            "name": "CancelLicenseForApp",
+            "argc": "2"
         }
     ]
 }

@@ -20,6 +20,10 @@
         {
             "name": "SetRefreshRateExternallyManaged",
             "argc": "2"
+        },
+        {
+            "name": "GetLegacySettings",
+            "argc": "2"
         }
     ]
 }

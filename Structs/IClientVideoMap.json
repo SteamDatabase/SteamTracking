@@ -212,30 +212,6 @@
         {
             "name": "WebRTCGetAnswer",
             "argc": "4"
-        },
-        {
-            "name": "SetTimelineStateDescription",
-            "argc": "3"
-        },
-        {
-            "name": "ClearTimelineStateDescription",
-            "argc": "2"
-        },
-        {
-            "name": "AddTimelineEvent",
-            "argc": "8"
-        },
-        {
-            "name": "SetTimelineGameMode",
-            "argc": "2"
-        },
-        {
-            "name": "AddUserMarkerForGame",
-            "argc": "2"
-        },
-        {
-            "name": "ToggleVideoRecordingForGame",
-            "argc": "2"
         }
     ]
 }

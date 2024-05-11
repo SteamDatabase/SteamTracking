@@ -15,7 +15,7 @@
         },
         {
             "name": "GetAvailableCompatToolsFiltered",
-            "argc": "3"
+            "argc": "4"
         },
         {
             "name": "GetAvailableCompatToolsForApp",
@@ -24,6 +24,10 @@
         {
             "name": "SpecifyCompatTool",
             "argc": "5"
+        },
+        {
+            "name": "SpecifyCompatExperiment",
+            "argc": "4"
         },
         {
             "name": "BIsCompatibilityToolEnabled",
@@ -39,6 +43,10 @@
         },
         {
             "name": "GetCompatToolDisplayName",
+            "argc": "2"
+        },
+        {
+            "name": "GetCompatExperiment",
             "argc": "2"
         },
         {

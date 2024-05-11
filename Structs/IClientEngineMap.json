@@ -266,6 +266,10 @@
             "argc": "3"
         },
         {
+            "name": "Unknown_66",
+            "argc": "0"
+        },
+        {
             "name": "GetIClientVideo",
             "argc": "3"
         },
@@ -274,15 +278,15 @@
             "argc": "2"
         },
         {
-            "name": "Unknown_68",
-            "argc": "0"
-        },
-        {
             "name": "Unknown_69",
             "argc": "0"
         },
         {
             "name": "Unknown_70",
+            "argc": "0"
+        },
+        {
+            "name": "Unknown_71",
             "argc": "0"
         },
         {
@@ -294,16 +298,12 @@
             "argc": "3"
         },
         {
-            "name": "Unknown_73",
+            "name": "Unknown_74",
             "argc": "0"
         },
         {
             "name": "GetIClientCompat",
             "argc": "3"
-        },
-        {
-            "name": "Unknown_75",
-            "argc": "0"
         },
         {
             "name": "Unknown_76",
@@ -319,6 +319,10 @@
         },
         {
             "name": "Unknown_79",
+            "argc": "0"
+        },
+        {
+            "name": "Unknown_80",
             "argc": "0"
         }
     ]

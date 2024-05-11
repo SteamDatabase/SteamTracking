@@ -226,6 +226,10 @@
             "argc": "4"
         },
         {
+            "name": "SwapControllerConfigurationSourceModes",
+            "argc": "4"
+        },
+        {
             "name": "SetControllerInputActivator",
             "argc": "4"
         },

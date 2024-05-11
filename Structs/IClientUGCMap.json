@@ -82,6 +82,14 @@
             "argc": "6"
         },
         {
+            "name": "GetNumSupportedGameVersions",
+            "argc": "4"
+        },
+        {
+            "name": "GetSupportedGameVersionData",
+            "argc": "8"
+        },
+        {
             "name": "GetQueryUGCIsDepotBuild",
             "argc": "5"
         },
@@ -260,6 +268,10 @@
         {
             "name": "RemoveContentDescriptor",
             "argc": "4"
+        },
+        {
+            "name": "SetRequiredGameVersions",
+            "argc": "5"
         },
         {
             "name": "SetExternalAssetID",

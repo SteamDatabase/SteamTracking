@@ -66,6 +66,10 @@
             "argc": "2"
         },
         {
+            "name": "CheckDepotManifestID",
+            "argc": "2"
+        },
+        {
             "name": "GetBucketManifest",
             "argc": "4"
         },
