@@ -3876,10 +3876,12 @@ button._1kn7017HPxqS3NKx_wnI4e.DialogButton:enabled:active:hover:before {
   0% {
     opacity: 0;
     transform: translateY(50px);
+    transform: scale(1);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
+    transform: scale(1);
   }
 }
 ._30VHlA4G1lPFjpUGGpt8iu._2y_Up4wWFyT8AULYBSi_eo > ._3joNkY6kRyL-6RK1rKIrV2 {
