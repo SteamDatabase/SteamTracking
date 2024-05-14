@@ -12217,7 +12217,7 @@
         };
       class m extends r.oH {
         constructor() {
-          var e, t, n;
+          var e, t, n, i;
           super(),
             (this.m_rgControllers = new Map()),
             "undefined" != typeof SteamClient &&
@@ -12227,12 +12227,16 @@
                   : e.RegisterForControllerInputMessages(
                       this.HandleControllerInputMessages,
                     )),
-              null === (t = SteamClient.System.UI) ||
-                void 0 === t ||
-                t.RegisterForSystemKeyEvents(this.HandleSystemKeyEvents),
-              null === (n = SteamClient.Input) ||
+              null ===
+                (n =
+                  null === (t = SteamClient.System) || void 0 === t
+                    ? void 0
+                    : t.UI) ||
                 void 0 === n ||
-                n.RegisterForControllerListChanges(
+                n.RegisterForSystemKeyEvents(this.HandleSystemKeyEvents),
+              null === (i = SteamClient.Input) ||
+                void 0 === i ||
+                i.RegisterForControllerListChanges(
                   this.OnControllerListChanged,
                 )),
             this.SetSourceType(r.Rr.GAMEPAD);
@@ -13187,7 +13191,7 @@
           }, 3e4));
       }
       const p = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
-        g = ["/localhost:1337/"];
+        g = ["/localhost:1337/", "chrome-extension://"];
       class _ {
         constructor(e = !0) {
           (this.m_transport = null),
