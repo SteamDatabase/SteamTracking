@@ -11332,6 +11332,22 @@
                     `${i.transformer().dropout_pct()}%`,
                   ),
                 ),
+                o.createElement(
+                  "div",
+                  { className: Ze.LabelValue },
+                  o.createElement(
+                    "div",
+                    { className: Ze.Label },
+                    (0, c.Xx)(
+                      "#SteamLearn_Config_Node_Transformer_InternalBlocks",
+                    ),
+                  ),
+                  o.createElement(
+                    "div",
+                    { className: Ze.Value },
+                    `${i.transformer().num_internal_blocks()}`,
+                  ),
+                ),
               ),
             ),
             d.map((e, t) => {
@@ -11356,37 +11372,49 @@
           );
         },
         ea = (e) => {
-          var t, a;
-          const { msgWorkingProject: n, msgWorkingProjectConfig: r } = pe(),
-            [i, s] = o.useState(e.msgNode.comment()),
-            [l, d] = o.useState(e.msgNode.transformer().num_heads().toString()),
-            [m, _] = o.useState(
+          var t, a, n;
+          const { msgWorkingProject: r, msgWorkingProjectConfig: i } = pe(),
+            [s, l] = o.useState(e.msgNode.comment()),
+            [d, m] = o.useState(e.msgNode.transformer().num_heads().toString()),
+            [_, u] = o.useState(
               (null === (t = e.msgNode.transformer().feedforward_size()) ||
               void 0 === t
                 ? void 0
                 : t.toString()) || "1024",
             ),
-            [u, p] = o.useState(
+            [p, N] = o.useState(
               (null === (a = e.msgNode.transformer().dropout_pct()) ||
               void 0 === a
                 ? void 0
                 : a.toString()) || "30",
+            ),
+            [g, S] = o.useState(
+              (null === (n = e.msgNode.transformer().num_internal_blocks()) ||
+              void 0 === n
+                ? void 0
+                : n.toString()) || "2",
             );
           o.useEffect(() => {
-            var t, a;
-            s(e.msgNode.comment()),
-              d(e.msgNode.transformer().num_heads().toString()),
-              _(
+            var t, a, n;
+            l(e.msgNode.comment()),
+              m(e.msgNode.transformer().num_heads().toString()),
+              u(
                 (null === (t = e.msgNode.transformer().feedforward_size()) ||
                 void 0 === t
                   ? void 0
                   : t.toString()) || "1024",
               ),
-              p(
+              N(
                 (null === (a = e.msgNode.transformer().dropout_pct()) ||
                 void 0 === a
                   ? void 0
                   : a.toString()) || "30",
+              ),
+              S(
+                (null === (n = e.msgNode.transformer().num_internal_blocks()) ||
+                void 0 === n
+                  ? void 0
+                  : n.toString()) || "2",
               );
           }, [e]);
           return o.createElement(
@@ -11427,8 +11455,8 @@
                   isText: !0,
                   dontUpdateProject: !0,
                   width: 200,
-                  fnGetInitialValue: () => i,
-                  fnSetValue: (e) => s(e),
+                  fnGetInitialValue: () => s,
+                  fnSetValue: (e) => l(e),
                 }),
               ),
               o.createElement("div", { className: Ze.Separator }),
@@ -11447,9 +11475,9 @@
                 ),
                 o.createElement($e, {
                   dontUpdateProject: !0,
-                  fnGetInitialValue: () => l,
+                  fnGetInitialValue: () => d,
                   fnValidateValue: (e) => de(e, 1, 20),
-                  fnSetValue: (e) => d(e),
+                  fnSetValue: (e) => m(e),
                 }),
               ),
               o.createElement(
@@ -11471,9 +11499,9 @@
                 ),
                 o.createElement($e, {
                   dontUpdateProject: !0,
-                  fnGetInitialValue: () => m,
+                  fnGetInitialValue: () => _,
                   fnValidateValue: (e) => de(e, 16, 10240),
-                  fnSetValue: (e) => _(e),
+                  fnSetValue: (e) => u(e),
                 }),
               ),
               o.createElement(
@@ -11493,9 +11521,33 @@
                 ),
                 o.createElement($e, {
                   dontUpdateProject: !0,
-                  fnGetInitialValue: () => u,
+                  fnGetInitialValue: () => p,
                   fnValidateValue: (e) => de(e, 16, 10240),
-                  fnSetValue: (e) => p(e),
+                  fnSetValue: (e) => N(e),
+                }),
+              ),
+              o.createElement(
+                "div",
+                { className: Ze.NodeOptionBlock },
+                o.createElement(
+                  "div",
+                  { className: Ze.NodeOptionHeader },
+                  (0, c.Xx)(
+                    "#SteamLearn_Config_Node_Transformer_InternalBlocks",
+                  ),
+                ),
+                o.createElement(
+                  "div",
+                  { className: Ze.NodeOptionDesc },
+                  (0, c.Xx)(
+                    "#SteamLearn_Config_Node_Transformer_InternalBlocksDesc",
+                  ),
+                ),
+                o.createElement($e, {
+                  dontUpdateProject: !0,
+                  fnGetInitialValue: () => g,
+                  fnValidateValue: (e) => de(e, 1, 16),
+                  fnSetValue: (e) => S(e),
                 }),
               ),
               o.createElement("div", { className: Ze.Separator }),
@@ -11507,11 +11559,14 @@
                 Pe.KM,
                 {
                   onClick: () => {
-                    e.msgNode.transformer().set_num_heads(parseInt(l)),
-                      e.msgNode.transformer().set_feedforward_size(parseInt(m)),
-                      e.msgNode.transformer().set_dropout_pct(parseInt(u)),
-                      e.msgNode.set_comment(i),
-                      se(n),
+                    e.msgNode.transformer().set_num_heads(parseInt(d)),
+                      e.msgNode.transformer().set_feedforward_size(parseInt(_)),
+                      e.msgNode.transformer().set_dropout_pct(parseInt(p)),
+                      e.msgNode
+                        .transformer()
+                        .set_num_internal_blocks(parseInt(g)),
+                      e.msgNode.set_comment(s),
+                      se(r),
                       e.fnSetPopupVisible(!1);
                   },
                 },

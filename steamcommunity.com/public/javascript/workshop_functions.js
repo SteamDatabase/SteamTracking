@@ -60,9 +60,9 @@ function ShowDateRangeSelectionDialog()
 	} );
 }
 
-function DownloadFile( publishFileID, revision )
+function DownloadFile( publishFileID, revision, manifestid )
 {
-    $J.post( "https://steamcommunity.com/sharedfiles/downloadfile/?id=" + publishFileID + "&revision=" + revision )
+    $J.post( "https://steamcommunity.com/sharedfiles/downloadfile/?id=" + publishFileID + "&revision=" + revision + "&manifestid=" + manifestid )
 
     .done( function(response) {
         if ( response.success == 1 )
@@ -551,7 +551,7 @@ function validateFields()
 		{
 			$('bankstate').value = $('bankstate_input').value;
 		}
-		
+
 		if ( !IsIBANCountry( $('bankcountry').value ) )
 		{
 			$('bankiban').value = '';
@@ -870,7 +870,7 @@ function ShowWorkshopItemHover( elem, divHover, targetContent )
 
 	hover.hide();
 	hover.style.visibility = '';
-	
+
 	hover.show();
 }
 

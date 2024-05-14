@@ -22725,7 +22725,7 @@
                             s.createElement(
                               "a",
                               {
-                                href: "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=s6y8eoaa68dd3qalx1x4itqsu&dl=0",
+                                href: "https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0",
                               },
                               (0, B.Xx)("#selectimage_tip_sale_header_3"),
                             ),

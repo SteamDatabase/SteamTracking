@@ -258,7 +258,6 @@
           return s.createElement(
             "div",
             { className: r.OpenInBannerContainer },
-            s.createElement("div", { className: r.ValveOnly }, "Valve Only"),
             s.createElement(
               "div",
               { className: r.OpenInBannerContent },

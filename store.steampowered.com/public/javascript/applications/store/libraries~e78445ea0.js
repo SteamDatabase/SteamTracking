@@ -1946,7 +1946,7 @@
         );
       }
       var D, H;
-      function j(e, t) {
+      function U(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var i = Object.getOwnPropertySymbols(e);
@@ -1958,7 +1958,7 @@
         }
         return r;
       }
-      var U =
+      var j =
         ((H = D =
           (function (e) {
             function t() {
@@ -2111,7 +2111,7 @@
                                 var r =
                                   null != arguments[t] ? arguments[t] : {};
                                 t % 2
-                                  ? j(r, !0).forEach(function (t) {
+                                  ? U(r, !0).forEach(function (t) {
                                       (0, c.Z)(e, t, r[t]);
                                     })
                                   : Object.getOwnPropertyDescriptors
@@ -2119,7 +2119,7 @@
                                         e,
                                         Object.getOwnPropertyDescriptors(r),
                                       )
-                                    : j(r).forEach(function (t) {
+                                    : U(r).forEach(function (t) {
                                         Object.defineProperty(
                                           e,
                                           t,
@@ -2146,14 +2146,14 @@
           })(d.PureComponent)),
         (0, c.Z)(D, "propTypes", null),
         H);
-      (0, c.Z)(U, "defaultProps", {
+      (0, c.Z)(j, "defaultProps", {
         disabled: !1,
         isControlled: !1,
         mode: "edges",
         scrollToColumn: 0,
         scrollToRow: 0,
       }),
-        (0, u.polyfill)(U);
+        (0, u.polyfill)(j);
       function N(e, t) {
         var i,
           o =
@@ -4933,7 +4933,7 @@
         }
         return e;
       }
-      var je = (function (e) {
+      var Ue = (function (e) {
         function t(e, r) {
           var o;
           (0, i.Z)(this, t),
@@ -5622,7 +5622,7 @@
           t
         );
       })(d.PureComponent);
-      (0, c.Z)(je, "defaultProps", {
+      (0, c.Z)(Ue, "defaultProps", {
         classNameBottomLeftGrid: "",
         classNameBottomRightGrid: "",
         classNameTopLeftGrid: "",
@@ -5641,8 +5641,8 @@
         hideTopRightGridScrollbar: !1,
         hideBottomLeftGridScrollbar: !1,
       }),
-        (je.propTypes = {}),
-        (0, u.polyfill)(je);
+        (Ue.propTypes = {}),
+        (0, u.polyfill)(Ue);
       (function (e) {
         function t(e, r) {
           var o;
@@ -5708,7 +5708,7 @@
           t
         );
       })(d.PureComponent).propTypes = {};
-      function Ue(e) {
+      function je(e) {
         var t = e.className,
           r = e.columns,
           i = e.style;
@@ -5718,7 +5718,7 @@
           r,
         );
       }
-      Ue.propTypes = null;
+      je.propTypes = null;
       const Ne = { ASC: "ASC", DESC: "DESC" };
       function Xe(e) {
         var t = e.sortDirection,
@@ -6361,7 +6361,7 @@
         overscanIndicesGetter: W,
         overscanRowCount: 10,
         rowRenderer: qe,
-        headerRowRenderer: Ue,
+        headerRowRenderer: je,
         rowStyle: {},
         scrollToAlignment: "auto",
         scrollToIndex: -1,
@@ -7116,6 +7116,31 @@
                     n: 43,
                     br: o.FE.readString,
                     bw: o.Xc.writeString,
+                  },
+                  category_ascii_pct: {
+                    n: 44,
+                    br: o.FE.readUint32,
+                    bw: o.Xc.writeUint32,
+                  },
+                  category_meme_pct: {
+                    n: 45,
+                    br: o.FE.readUint32,
+                    bw: o.Xc.writeUint32,
+                  },
+                  category_offtopic_pct: {
+                    n: 46,
+                    br: o.FE.readUint32,
+                    bw: o.Xc.writeUint32,
+                  },
+                  category_uninformative_pct: {
+                    n: 47,
+                    br: o.FE.readUint32,
+                    bw: o.Xc.writeUint32,
+                  },
+                  category_votefarming_pct: {
+                    n: 48,
+                    br: o.FE.readUint32,
+                    bw: o.Xc.writeUint32,
                   },
                 },
               }),

@@ -28,7 +28,6 @@
   line-height: 18px;
   font-weight: 300;
   color: #fff;
-  flex: 1;
 }
 ._1FrGxLLJNyWZswyE9TGS3N ._1CaApUvC8ichAOgldt6XZm {
   font-size: 13px;
@@ -55,8 +54,6 @@
 }
 ._3M8uv7MOpPLlcTKvrQA-YQ {
   display: inline-block;
-  color: #d0d0d0;
-  font-size: 0.9em;
 }
 ._3M8uv7MOpPLlcTKvrQA-YQ._31mu_yCc2H6TQWT3IQuIJx {
   position: sticky;
@@ -75,6 +72,8 @@
   user-select: none;
   width: 30px;
   text-align: center;
+  color: #d0d0d0;
+  font-size: 0.9em;
   background-color: #3d444b;
   margin: 2px;
 }
@@ -87,6 +86,8 @@
   user-select: none;
   width: 50px;
   text-align: center;
+  color: #d0d0d0;
+  font-size: 0.9em;
   background-color: #3d444b;
   margin: 2px;
 }
@@ -98,6 +99,7 @@
   flex: 1;
   flex-shrink: auto;
   text-align: center;
+  color: #d0d0d0;
   margin: 2px;
 }
 ._2g35MI6SaxueceaSk6XLW3 {
@@ -227,9 +229,30 @@
   margin-top: unset;
   margin-left: unset;
 }
-._8d4Ab7hW_DuAvpzaBwndV {
+._2RyNxJKxciWQh10nv4yPI9 {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  gap: 12;
+}
+._2KsBRVIM9YVuX85lpPiW2G {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  border-bottom: 1px solid #fff;
+  gap: 4px;
+  flex: 1;
+  margin: 0 24px 0 24px;
+}
+.LC92P2CoEQ1R_wdDs3XtN {
+  cursor: pointer;
+  padding: 0 8px 2px 8px;
+  font-size: 14px;
+  border-bottom: 3px solid transparent;
+}
+.LC92P2CoEQ1R_wdDs3XtN.xNA0kFRoJXVNY7ccgZ6Bb {
+  border-bottom: 3px solid #fff;
 }
 ._1ddIHj3KWI6Wpfn2kYMaHW {
   position: relative;
@@ -270,6 +293,7 @@
 }
 ._1VsjyvH_Qjf3r0bxpSfx3V {
   width: 100%;
+  min-height: 600px;
   max-height: 600px;
   position: relative;
 }
@@ -407,6 +431,18 @@
   background: #505962;
   padding-left: 12px;
   padding-right: 12px;
+}
+.wht6Ll659zz-0QG1UFCu4 {
+  display: flex;
+  width: 100%;
+  padding: 12px;
+  margin: 12px;
+  font-size: 14px;
+  background-color: #2a2d32;
+}
+.wht6Ll659zz-0QG1UFCu4 a {
+  cursor: pointer;
+  padding-left: 4px;
 }
 ._1sCXlT55_hE5R_DYWs2qzj {
   display: flex;
@@ -724,6 +760,11 @@
   font-size: 14px;
   padding: 12px;
   background-color: #2a2d32;
+}
+._3bhAuHTe2QDmn7qVPrbhTn {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
 }
 ._1DXsI6kGhs4saDdMEB5Zhp {
   padding: 5px 14px 5px 14px;

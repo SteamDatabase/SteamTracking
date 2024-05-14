@@ -5485,20 +5485,23 @@
         );
       }
       function Ea(e) {
-        const { userYearInReview: t } = e,
-          a = t.GetYear(),
-          r = t.GetPlayTimeStats().total_stats,
-          s = t.GetPlayTimeStats().demos_played || 0,
-          l = t.GetPlayTimeStats().playtests_played || 0,
-          i = t.GetFilteredGameSummary(),
-          o = i.filter((e) => e.played_during_early_access).length,
-          m = t.GetPlayTimeStats().summary_stats.total_achievements,
-          c = i.filter((e) => e.new_this_year).length || 0,
-          d = t.GetPlayTimeStats().playtime_streak,
-          u = t.GetTopGamesShown(),
-          _ = j(),
-          p = u
-            .slice(0, 5)
+        var t;
+        const { userYearInReview: a } = e,
+          r = a.GetYear(),
+          s = a.GetPlayTimeStats().total_stats,
+          l = a.GetPlayTimeStats().demos_played || 0,
+          i = a.GetPlayTimeStats().playtests_played || 0,
+          o = a.GetFilteredGameSummary(),
+          m = o.filter((e) => e.played_during_early_access).length,
+          c =
+            (null === (t = a.GetPlayTimeStats().summary_stats) || void 0 === t
+              ? void 0
+              : t.total_achievements) || 0,
+          d = o.filter((e) => e.new_this_year).length || 0,
+          u = a.GetPlayTimeStats().playtime_streak,
+          _ = a.GetTopGamesShown(),
+          p = j(),
+          v = _.slice(0, 5)
             .map((e, t) =>
               R.Z.Get().BHasStoreItem(e.appid, 0)
                 ? n.createElement(Ba, {
@@ -5509,15 +5512,15 @@
                 : null,
             )
             .filter((e) => null !== e),
-          v = [ya(m, t), Aa(a, r), Ia(a, d)].filter((e) => null !== e),
-          g = n.createElement(Na, {
+          g = [ya(c, a), Aa(r, s), Ia(r, u)].filter((e) => null !== e),
+          h = n.createElement(Na, {
             key: "overview",
-            rgGamesLength: i.length,
-            nNewGames: c,
-            nDemoPlayed: s,
-            nEarlyAccessPlayed: o,
-            nPlaytestPlayed: l,
-            nYear: t.GetYear(),
+            rgGamesLength: o.length,
+            nNewGames: d,
+            nDemoPlayed: l,
+            nEarlyAccessPlayed: m,
+            nPlaytestPlayed: i,
+            nYear: a.GetYear(),
           });
         return n.createElement(
           Te,
@@ -5526,13 +5529,13 @@
             "div",
             { className: (0, de.Z)(H().YearInReviewContent, H().SummaryArea) },
             n.createElement(fa, {
-              rgGamesLength: i.length,
-              nNewGames: c,
-              totalAchievementUnlocked: m,
-              nTotalPlaytimeSeconds: r.total_playtime_seconds || 0,
-              nTotalPercentagePlaytimex100: r.total_playtime_percentagex100,
+              rgGamesLength: o.length,
+              nNewGames: d,
+              totalAchievementUnlocked: c,
+              nTotalPlaytimeSeconds: s.total_playtime_seconds || 0,
+              nTotalPercentagePlaytimex100: s.total_playtime_percentagex100,
             }),
-            Boolean(1 !== i.length) &&
+            Boolean(1 !== o.length) &&
               n.createElement(
                 n.Fragment,
                 null,
@@ -5542,12 +5545,12 @@
                   n.createElement(
                     "div",
                     { className: H().SectionSubTitle },
-                    _("#YIR_YourSummary_SubTitle"),
+                    p("#YIR_YourSummary_SubTitle"),
                   ),
                   n.createElement(Sa, {
-                    overview: g,
-                    statFillers: v,
-                    gameFillers: p,
+                    overview: h,
+                    statFillers: g,
+                    gameFillers: v,
                   }),
                 ),
               ),

@@ -894,7 +894,6 @@ ${PARTNER_BASE_URL}${_ ? "optin/ajaxadmincloneinvites" : "optin/ajaxadmincloneop
 ${PARTNER_BASE_URL}${}
 ${PARTNER_BASE_URL}${}${}
 ${PARTNER_BASE_URL}/admin/store/pagecreate
-${PARTNER_BASE_URL}/packages/ajaxgetmultipackageprices
 ${PARTNER_BASE_URL}/packages/ajaxgetpackageforapp
 ${PARTNER_BASE_URL}/promotion${}
 ${PARTNER_BASE_URL}/promotion/${}
@@ -974,6 +973,7 @@ ${PARTNER_BASE_URL}doc/store/pricing#5
 ${PARTNER_BASE_URL}doc/store/pricing/csv
 ${PARTNER_BASE_URL}doc/store/promo
 ${PARTNER_BASE_URL}doc/store/release_dates
+${PARTNER_BASE_URL}financial/ajaxgetpartnersummary
 ${PARTNER_BASE_URL}gfxproxy/gfx/apps/${}/${}
 ${PARTNER_BASE_URL}gfxproxy/trailergfx?appid=${}&itype=apps
 ${PARTNER_BASE_URL}giveaways/control/${}
@@ -2395,7 +2395,6 @@ https://img.youtube.com/vi/${video}/${}.jpg
 https://img.youtube.com/vi/${}/0.jpg
 https://imgur.com
 https://instagram.com/dota2
-https://itunes.apple.com/app/steam-chat/id1434890245
 https://local.steam.dev:4443/wg?reqname=QuerySolr&request=${}
 https://medal.tv/clip/${}/?autoplay=0&donate=0${_ ? _ : ""}
 https://partner.steamgames.com//apps/landing/${appid}
@@ -2410,15 +2409,12 @@ https://partner.steamgames.com/admin/game/ajaxdeleteassetoverride/${nItemID}
 https://partner.steamgames.com/admin/game/ajaxgeneraterating/${itemid}
 https://partner.steamgames.com/admin/game/ajaxgetbroadcasterinfo/${nItemID}
 https://partner.steamgames.com/admin/game/ajaxlistfriends/${nItemID}
-https://partner.steamgames.com/admin/game/cleartrailererror/${itemid}
 https://partner.steamgames.com/admin/game/converttrailer/${itemid}
 https://partner.steamgames.com/admin/game/edit/${itemID}?activetab=tab_graphicalassets
 https://partner.steamgames.com/admin/game/edit/${nItemID}?activetab=tab_graphicalassets
 https://partner.steamgames.com/admin/game/gettrailerstate/${itemid}
 https://partner.steamgames.com/admin/game/moviesetdata/${itemid}
-https://partner.steamgames.com/admin/game/movieuploadbegin/${itemid}
 https://partner.steamgames.com/admin/game/movieuploadbegincloud/${itemid}
-https://partner.steamgames.com/admin/game/movieuploadchunk/${itemid}
 https://partner.steamgames.com/admin/game/movieuploadcompletecloud/${itemid}
 https://partner.steamgames.com/admin/game/quickupdateajax/${itemID}
 https://partner.steamgames.com/admin/game/save/${itemID}?activetab=tab_graphicalassets&json=1
@@ -2548,7 +2544,6 @@ https://partner.steamgames.com/store/updatereleaseoverridekv/${packageid}
 https://partner.steamgames.com/tagdata/forcetagranking
 https://partner.steamgames.com/tagdata/simpletagprofile
 https://partner.steamgames.com/tagdata/tagassociations
-https://play.google.com/store/apps/details?id=com.valvesoftware.android.steam.friendsui
 https://play.google.com/store/apps/details?id=com.valvesoftware.underlords
 https://player.vimeo.com/video/${videoid}?badge=0&autopause=0&autoplay=1&player_id=0
 https://policies.google.com/privacy
@@ -2748,7 +2743,7 @@ https://steamcommunity.com/sharedfiles/ajaxupdatecontentdescriptors/
 https://steamcommunity.com/sharedfiles/ban
 https://steamcommunity.com/sharedfiles/banupvoters
 https://steamcommunity.com/sharedfiles/contributorpicker/${publishedfileid}
-https://steamcommunity.com/sharedfiles/downloadfile/?id=${publishFileID}&revision=${revision}
+https://steamcommunity.com/sharedfiles/downloadfile/?id=${publishFileID}&revision=${revision}&manifestid=${manifestid}
 https://steamcommunity.com/sharedfiles/filedetails/?id=${publishedFileID}
 https://steamcommunity.com/sharedfiles/filedetails?id=${publishedfileid}
 https://steamcommunity.com/sharedfiles/finalizecontributors
@@ -3021,7 +3016,6 @@ https://www.dota2.com/risinggale
 https://www.dota2.com/theonetrueking
 https://www.dropbox.com/s/h9gjz...
 https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=9bk0ggiwuvs4o1jdnej4xsy0c&dl=0
-https://www.dropbox.com/scl/fo/mhf604o6bdbcfr1scq7bx/h?rlkey=s6y8eoaa68dd3qalx1x4itqsu&dl=0
 https://www.example.com
 https://www.facebook.com/Steam/videos
 https://www.facebook.com/dota2/

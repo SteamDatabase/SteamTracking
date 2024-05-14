@@ -2145,13 +2145,14 @@
           r = C();
         return (
           o.useEffect(() => {
-            if (e) i || a(!0);
-            else if (!i && r) {
-              const e = s().CancelToken.source();
-              r([t]).then(() => {
-                e.token.reason || a(!0);
-              });
-            }
+            if (!e && t) {
+              if (!i && r) {
+                const e = s().CancelToken.source();
+                r([t]).then(() => {
+                  e.token.reason || a(!0);
+                });
+              }
+            } else i || a(!0);
           }, [e, i, a, t, r]),
           e
         );

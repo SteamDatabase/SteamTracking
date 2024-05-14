@@ -2558,6 +2558,12 @@
                 }),
               ),
           ),
+          a.createElement("br", null),
+          a.createElement(
+            "div",
+            { className: W.DescText },
+            (0, s.Xx)("#App_Landing_ControllerSupport_WizardPrompt_Upcoming"),
+          ),
         );
       }
       function Ee(e) {
