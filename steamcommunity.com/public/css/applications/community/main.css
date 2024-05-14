@@ -378,7 +378,7 @@ html._2GpKTB_eizdXpH2xVGbMKi body {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: stretch;
-  background-color: #202226;
+  background-color: #2a2e36;
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 6px;
@@ -396,7 +396,7 @@ html._2GpKTB_eizdXpH2xVGbMKi body {
   padding: 6px;
   margin-right: 6px;
   transition: background-color 0.18s ease-in-out;
-  background-color: #202226;
+  background-color: #2a2e36;
   border-radius: 2px;
   color: #b8bcbf;
   cursor: pointer;
@@ -411,13 +411,14 @@ html._2GpKTB_eizdXpH2xVGbMKi body {
   background: radial-gradient(#1a9fffbb 0%, #1a9fff 100%);
   cursor: default;
   color: #fff;
+  border-right: none;
 }
 ._3lwcRYJ_r7x01Cn15bcdYI._3ZBFoxumQBb1JEVw_DZzaC._3Yc8UCsmMtheFi5YrgQO-p,
 ._3lwcRYJ_r7x01Cn15bcdYI._3ZBFoxumQBb1JEVw_DZzaC._3Yc8UCsmMtheFi5YrgQO-p:hover {
   background-color: #3d4450;
 }
 ._3lwcRYJ_r7x01Cn15bcdYI:not(._3Yc8UCsmMtheFi5YrgQO-p):hover {
-  background-color: #33363e;
+  background-color: #464d58;
 }
 ._3lwcRYJ_r7x01Cn15bcdYI:not(
     ._3Yc8UCsmMtheFi5YrgQO-p
@@ -677,7 +678,7 @@ html._2GpKTB_eizdXpH2xVGbMKi body {
 ._EebF_xe4DGRZ9a0XkyDj {
   line-height: 16px;
   white-space: nowrap;
-  overflow: scroll;
+  overflow: auto;
   flex-shrink: 1;
   flex-grow: 1;
   display: flex;
@@ -696,9 +697,9 @@ html._2GpKTB_eizdXpH2xVGbMKi body {
 .bkfjn0yka2uHNqEvWZaTJ {
   display: flex;
   align-items: center;
-  white-space: normal;
-  max-width: 180px;
+  max-width: 220px;
   text-overflow: ellipsis;
+  white-space: normal;
   padding: 10px 8px 10px 24px;
   font-size: 14px;
   font-weight: 400;
@@ -723,6 +724,7 @@ html._2GpKTB_eizdXpH2xVGbMKi body {
 .bkfjn0yka2uHNqEvWZaTJ ._2X9_IsQsEJDpAd2JGrHdJI {
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .bkfjn0yka2uHNqEvWZaTJ._1RDp9x1K3WsjXf7hYWmmiX,
 .bkfjn0yka2uHNqEvWZaTJ._1RDp9x1K3WsjXf7hYWmmiX:hover,
@@ -1776,10 +1778,12 @@ button._1kn7017HPxqS3NKx_wnI4e.DialogButton:enabled:active:hover:before {
   0% {
     opacity: 0;
     transform: translateY(50px);
+    transform: scale(1);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
+    transform: scale(1);
   }
 }
 ._30VHlA4G1lPFjpUGGpt8iu._2y_Up4wWFyT8AULYBSi_eo > ._3joNkY6kRyL-6RK1rKIrV2 {
@@ -3698,6 +3702,16 @@ div.ModalPosition_TopBar {
   color: #fff;
   text-transform: uppercase;
   flex-shrink: 0;
+  user-select: none;
+  margin-right: 26px;
+}
+.SettingsDialogSubHeader {
+  color: #8b929a;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 36px;
+  text-transform: uppercase;
   user-select: none;
   margin-right: 26px;
 }

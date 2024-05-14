@@ -448,7 +448,7 @@ span.motd {
 
 .dashboard .landingLeftCol {
 	margin-right: 0;
-	
+
 }
 
 .landingRightCol {
@@ -3646,6 +3646,13 @@ ul.pub_rights li {
 
 .toolBetaNotice a {
     color: white;
+}
+
+.storeAdminSection {
+	max-width: 800px;
+	padding: 16px;
+	background: #2e3138;
+	margin-bottom: 8px;
 }
 
 .statLinkCallOut {

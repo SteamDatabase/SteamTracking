@@ -393,7 +393,7 @@
           : i.createElement(C.V, null);
       }
       function O() {
-        const e = (0, D.kQ)("multiplayer_join", "application_config"),
+        const e = (0, D.kQ)("multiplayersession_join", "application_config"),
           t = new URLSearchParams((0, r.TH)().search).get("jws"),
           { header: n, body: s } = (0, l.Xl)(t) || { header: {}, body: {} };
         let { steamAppId: a } = s;

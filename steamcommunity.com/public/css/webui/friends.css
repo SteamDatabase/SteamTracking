@@ -1674,7 +1674,7 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: stretch;
-  background-color: #202226;
+  background-color: #2a2e36;
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 6px;
@@ -1692,7 +1692,7 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   padding: 6px;
   margin-right: 6px;
   transition: background-color 0.18s ease-in-out;
-  background-color: #202226;
+  background-color: #2a2e36;
   border-radius: 2px;
   color: #b8bcbf;
   cursor: pointer;
@@ -1707,13 +1707,14 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   background: radial-gradient(#1a9fffbb 0%, #1a9fff 100%);
   cursor: default;
   color: #fff;
+  border-right: none;
 }
 .radio_Button_Hijmc.radio_Active_3-_jM.radio_Disabled_3hmGW,
 .radio_Button_Hijmc.radio_Active_3-_jM.radio_Disabled_3hmGW:hover {
   background-color: #3d4450;
 }
 .radio_Button_Hijmc:not(.radio_Disabled_3hmGW):hover {
-  background-color: #33363e;
+  background-color: #464d58;
 }
 .radio_Button_Hijmc:not(.radio_Disabled_3hmGW).radio_Active_3-_jM:hover {
   background-color: radial-gradient(
@@ -1947,7 +1948,7 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 .pagedsettings_PagedSettingsDialog_PageList_18QCu {
   line-height: 16px;
   white-space: nowrap;
-  overflow: scroll;
+  overflow: auto;
   flex-shrink: 1;
   flex-grow: 1;
   display: flex;
@@ -1966,9 +1967,9 @@ html.contextmenu_ContextMenuPopup_14wqd body {
 .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr {
   display: flex;
   align-items: center;
-  white-space: normal;
-  max-width: 180px;
+  max-width: 220px;
   text-overflow: ellipsis;
+  white-space: normal;
   padding: 10px 8px 10px 24px;
   font-size: 14px;
   font-weight: 400;
@@ -1998,6 +1999,7 @@ html.contextmenu_ContextMenuPopup_14wqd body {
   .pagedsettings_PageListItem_Title_2PPbM {
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_DisabledItem_oUzYn,
 .pagedsettings_PagedSettingsDialog_PageListItem_1-vlr.pagedsettings_DisabledItem_oUzYn:hover,
@@ -2971,10 +2973,12 @@ button.gamepaddialog_Button_cXzBZ.DialogButton:enabled:active:hover:before {
   0% {
     opacity: 0;
     transform: translateY(50px);
+    transform: scale(1);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
+    transform: scale(1);
   }
 }
 .gamepaddialog_ModalPosition_3A5uj.gamepaddialog_ScrollWithin_ze1or
@@ -29244,7 +29248,6 @@ a.bbcode_ChatMessageTweet_Body_1RFo5 {
 .BBCodeResizableComponent {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 .BBCodeResizableComponent.Minimized {
   background-color: transparent;
@@ -29926,6 +29929,7 @@ div:hover > .BBCodeCollapseControl {
 }
 .bbcode_AssociatedAppContainer_3TbqB {
   z-index: 1;
+  margin: auto;
 }
 .bbcode_AssociatedAppContainer_3TbqB .bbcode_AssociatedApp_cjQYf {
   cursor: pointer;
@@ -38074,6 +38078,16 @@ div.ModalPosition_TopBar {
   color: #fff;
   text-transform: uppercase;
   flex-shrink: 0;
+  user-select: none;
+  margin-right: 26px;
+}
+.SettingsDialogSubHeader {
+  color: #8b929a;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 36px;
+  text-transform: uppercase;
   user-select: none;
   margin-right: 26px;
 }
@@ -47770,13 +47784,13 @@ html.web_chat_frame .perf_timing_area {
 .msg a {
   color: #6dcff6;
   text-decoration: none;
+}
+.msg .msgText > a {
   border-bottom: 1px dotted rgba(109, 207, 246, 0.6);
   padding-bottom: 0px;
 }
-.msg a.OpenGraphImgContainer:hover,
-.msg a.OpenGraphImgContainer {
-  border-bottom: none;
-  padding-bottom: 0;
+.msg .msgText > a:hover {
+  border-bottom: 1px dotted rgba(176, 233, 255, 0.5);
 }
 .msg a.OpenGraphImgContainer:hover {
   filter: brightness(1.2);
@@ -47784,7 +47798,6 @@ html.web_chat_frame .perf_timing_area {
 .msg a:hover {
   color: #b0e9ff;
   text-decoration: none;
-  border-bottom: 1px dotted rgba(176, 233, 255, 0.5);
 }
 .ChatRoomSpeaker .speaker {
   display: flex;

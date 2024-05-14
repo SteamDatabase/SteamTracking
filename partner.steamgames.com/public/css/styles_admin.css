@@ -10,7 +10,7 @@
 
  .AdminPageContent.dashboard {
 	 display: grid;
-	 grid-template-columns: 980px auto;
+	 grid-template-columns: 2fr auto;
 	 grid-template-rows: auto;
 	 grid-template-areas:
 			"topstuff topstuff"

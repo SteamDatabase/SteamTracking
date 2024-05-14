@@ -2704,6 +2704,7 @@ svg.suNJhcy_a-csxrWMKfGqB .Outline {
   top: 6px;
   cursor: pointer;
   display: none;
+  z-index: 1;
 }
 ._1E17b-O2tfp1L7vZCVgyn5 svg {
   width: 16px !important;

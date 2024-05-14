@@ -5389,7 +5389,8 @@
             !this.BIsPlayerBufferedBetween(
               this.m_elVideo.currentTime,
               this.m_elVideo.currentTime + 0.5,
-            )
+            ) &&
+            !this.m_seekingToTime
           ) {
             if (this.m_elVideo && this.m_elVideo.buffered.length > 1) {
               let e = this.m_elVideo.currentTime,

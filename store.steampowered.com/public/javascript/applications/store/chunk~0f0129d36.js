@@ -2323,7 +2323,7 @@
               const { eResult: e, file: t } =
                 yield this.m_fileUploadProps.exportFn((e) => {
                   (0, V.z)(() => {
-                    this.m_fileUploadProps.uploadProgress = 50 * e;
+                    this.m_fileUploadProps.uploadProgress = 0.5 * e;
                   });
                 });
               if (1 != e || !t)

@@ -33184,6 +33184,31 @@
                     br: n.FE.readString,
                     bw: n.Xc.writeString,
                   },
+                  category_ascii_pct: {
+                    n: 44,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
+                  category_meme_pct: {
+                    n: 45,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
+                  category_offtopic_pct: {
+                    n: 46,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
+                  category_uninformative_pct: {
+                    n: 47,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
+                  category_votefarming_pct: {
+                    n: 48,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
                 },
               }),
             u.sm_m

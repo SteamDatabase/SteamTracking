@@ -1731,12 +1731,14 @@ a:hover {
 .gDwBcqV9krVb3dtAUyPfF .OchtG0jyJQXcr2o0t34q7 {
   position: absolute;
   bottom: 2px;
-  right: 2px;
+  left: 2px;
+  font-size: 13px;
   width: 20px;
   height: 20px;
   text-align: center;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.3);
+  border: 1px solid;
   color: #fff;
 }
 ._2wXQTbH2iavMx1sFDH_Xpn ._29VTx5sjP43UH8k1twOUgE {

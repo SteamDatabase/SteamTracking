@@ -3951,24 +3951,29 @@
         switch (a) {
           case 5:
             (c = "#ContentDescriptor_GeneralMatureContent"),
-              (m = "#ContentDescriptor_GeneralMatureContent_Description");
+              (m = ["#ContentDescriptor_GeneralMatureContent_Description"]);
             break;
           case 2:
             (c = "#ContentDescriptor_FrequentViolenceOrGore"),
-              (m = "#ContentDescriptor_FrequentViolenceOrGore_Description");
+              (m = ["#ContentDescriptor_FrequentViolenceOrGore_Description"]);
             break;
           case 1:
             (c = "#ContentDescriptor_NudityOrSexualContent"),
-              (m = "#ContentDescriptor_NudityOrSexualContent_Description");
+              (m = ["#ContentDescriptor_NudityOrSexualContent_Description"]);
             break;
           case 4:
             (c = "#ContentDescriptor_GratuitousNudityOrSexualContent"),
-              (m =
-                "#ContentDescriptor_GratuitousNudityOrSexualContent_Description");
+              (m = [
+                "#ContentDescriptor_GratuitousNudityOrSexualContent_Description",
+                "#ContentDescriptor_Affirm18YearsOld",
+              ]);
             break;
           case 3:
             (c = "#ContentDescriptor_AdultOnlySexualContent"),
-              (m = "#ContentDescriptor_AdultOnlySexualContent_Description");
+              (m = [
+                "#ContentDescriptor_AdultOnlySexualContent_Description",
+                "#ContentDescriptor_Affirm18YearsOld",
+              ]);
         }
         const u = (e, t) => (n) => {
             const r = !n;
@@ -4020,7 +4025,7 @@
             n.createElement(
               "div",
               { className: ue.ContentDescriptorDescription },
-              (0, p.Xx)(m),
+              m.map((e) => (0, p.Xx)(e)).join(" "),
               n.createElement("br", null),
               n.createElement(
                 r.IS,

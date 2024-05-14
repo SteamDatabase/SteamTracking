@@ -5575,7 +5575,9 @@
             );
           }, [c]);
         l.onOKButton ||
-          ((r.onClick || ("button" == e && "submit" == r.type) || "a" == e) &&
+          ((("onClick" in r && r.onClick) ||
+            ("button" == e && "submit" == r.type) ||
+            "a" == e) &&
             (l.onOKButton = m)),
           a.focusable && (r.tabIndex = r.tabIndex || 0),
           (0, s.pD)(l, c);
@@ -10707,7 +10709,7 @@
           }, 3e4));
       }
       const p = { cCallsitesToIgnore: 0, bIncludeMessageInIdentifier: !1 },
-        _ = ["/localhost:1337/"];
+        _ = ["/localhost:1337/", "chrome-extension://"];
       class g {
         constructor(e = !0) {
           (this.m_transport = null),
@@ -11335,7 +11337,7 @@
           return this.m_bIsFree;
         }
         BIsFreeTemporary() {
-          return this.m_bIsFree;
+          return this.m_bIsFreeTemporary;
         }
         BIsFreeWeekend() {
           const e = Date.now() / 1e3;
@@ -14494,7 +14496,10 @@
         });
       }
       let E = (0, f.Sb)("DialogHeader"),
-        b = ((0, f.Sb)("DialogSubHeader"), (0, f.Sb)("DialogFooter")),
+        b =
+          ((0, f.Sb)("DialogSubHeader"),
+          (0, f.Sb)("SettingsDialogSubHeader"),
+          (0, f.Sb)("DialogFooter")),
         S =
           ((0, f.Sb)("DialogLabel _DialogLayout"), (0, f.Sb)("DialogBodyText")),
         y = ((0, f.Sb)("DialogBody"), C("DialogBody")),
@@ -19968,7 +19973,7 @@
         };
       class w extends f.oH {
         constructor() {
-          var e, t, n;
+          var e, t, n, i;
           super(),
             (this.m_rgControllers = new Map()),
             "undefined" != typeof SteamClient &&
@@ -19978,12 +19983,16 @@
                   : e.RegisterForControllerInputMessages(
                       this.HandleControllerInputMessages,
                     )),
-              null === (t = SteamClient.System.UI) ||
-                void 0 === t ||
-                t.RegisterForSystemKeyEvents(this.HandleSystemKeyEvents),
-              null === (n = SteamClient.Input) ||
+              null ===
+                (n =
+                  null === (t = SteamClient.System) || void 0 === t
+                    ? void 0
+                    : t.UI) ||
                 void 0 === n ||
-                n.RegisterForControllerListChanges(
+                n.RegisterForSystemKeyEvents(this.HandleSystemKeyEvents),
+              null === (i = SteamClient.Input) ||
+                void 0 === i ||
+                i.RegisterForControllerListChanges(
                   this.OnControllerListChanged,
                 )),
             this.SetSourceType(f.Rr.GAMEPAD);
@@ -25082,6 +25091,7 @@
         IN_LOGIN_REFRESH: !1,
         USE_LONGEST_LOC_STRING: !1,
         SILENT_STARTUP: !1,
+        CLIENT_SESSION: 0,
       };
       const r = {
           logged_in: !1,

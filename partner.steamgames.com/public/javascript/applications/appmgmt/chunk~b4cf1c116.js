@@ -644,7 +644,7 @@
           return this.m_bIsFree;
         }
         BIsFreeTemporary() {
-          return this.m_bIsFree;
+          return this.m_bIsFreeTemporary;
         }
         BIsFreeWeekend() {
           const e = Date.now() / 1e3;
