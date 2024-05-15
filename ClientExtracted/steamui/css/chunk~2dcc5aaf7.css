@@ -107564,10 +107564,11 @@ svg.GLHTi7VNf96Ei4yFfnKnM {
   left: calc(50% + var(--spread));
 }
 ._2NnqDW3H-o55EGadCYsZjZ {
-  filter: invert(0.5) sepia(1) saturate(5) hue-rotate(175deg);
+  filter: contrast(10) invert(0.44) sepia(1) saturate(5) hue-rotate(175deg)
+    drop-shadow(0px 0px 2px #1a9fff90);
 }
 ._2xQrTkPYII94gjdbQfGvB {
-  filter: invert(0.5);
+  filter: contrast(10) invert(0.44) saturate(5);
 }
 ._1cQQ03Y8CW0P942HiTknmm._2xQrTkPYII94gjdbQfGvB {
   margin-right: 5px;
