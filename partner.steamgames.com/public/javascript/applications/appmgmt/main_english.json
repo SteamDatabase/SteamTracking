@@ -997,7 +997,7 @@
     "AssetRequest_General_Upload_event_capsule": "Upload your Event Cover Image Mobile preview",
     "AssetRequest_General_Upload_productbanner": "Upload your Store Banner preview",
     "AssetRequest_General_Upload_productbanner_mobile": "Upload your Store Mobile Banner Mobile preview",
-    "AssetRequest_General_Upload_localized_title_image": "Upload your Store Mobile Banner Mobile preview",
+    "AssetRequest_General_Upload_localized_title_image": "Upload your Event Header Image",
     "AssetRequest_General_Upload_req": "(required)",
     "AssetRequest_General_Upload_opt": "(optional)",
     "AssetRequest_General_Upload_def": "Upload a JPEG or PNG below to preview",
