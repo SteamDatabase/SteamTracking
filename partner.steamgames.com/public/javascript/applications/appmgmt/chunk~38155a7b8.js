@@ -50116,102 +50116,106 @@
           i =
             (null === (t = n.event_title) || void 0 === t
               ? void 0
-              : t.english) || "No Name Assigned";
-        return o.createElement(
-          "div",
-          {
-            key: n.pageid,
-            className: (0, S.Z)(
-              x().OptInAdminRow,
-              b().TileContainer,
-              Boolean(a) ? x().OptinEnabled : "",
-            ),
-          },
-          o.createElement(
-            "div",
-            { className: b().EventNameCtn },
-            o.createElement(
+              : t.english) || "No Name Assigned",
+          l = (0, te.Xj)(n.appeals_text, (0, ne.jM)(f.De.LANGUAGE));
+        return (null == l ? void 0 : l.length) > 0
+          ? o.createElement(
               "div",
-              { className: b().EventName },
-              Boolean(i) && i,
-              " ",
-              o.createElement("span", null, "(", n.pageid, ")"),
-            ),
-            o.createElement(
-              "div",
-              { className: b().DatesCtn },
+              {
+                key: n.pageid,
+                className: (0, S.Z)(
+                  x().OptInAdminRow,
+                  b().TileContainer,
+                  Boolean(a) ? x().OptinEnabled : "",
+                ),
+              },
               o.createElement(
-                "span",
-                { className: b().DateAndTime },
-                o.createElement(h.H6, {
-                  dateAndTime: n.event_start_date,
-                  bSingleLine: !0,
-                  bOnlyDate: !0,
-                }),
-              ),
-              " ",
-              o.createElement(
-                "span",
-                { className: b().DateAndTime },
-                "To ",
-                o.createElement(h.H6, {
-                  dateAndTime: n.event_end_date,
-                  bSingleLine: !0,
-                  bOnlyDate: !0,
-                }),
-              ),
-            ),
-          ),
-          o.createElement(
-            "div",
-            { className: b().EventDetailsCtn },
-            o.createElement(
-              "div",
-              { className: x().StatsCtn },
-              a
-                ? o.createElement(Er, { def: n })
-                : o.createElement(
-                    "div",
-                    { className: b().FeaturedApps },
-                    o.createElement("div", { className: b().BigNumber }, "??"),
-                    o.createElement(
-                      "span",
-                      {
-                        "data-tooltip-text":
-                          "Number of apps requiring app review",
-                        className: _().HelperTooltip,
-                      },
-                      "Outstanding App Review (?)",
-                    ),
+                "div",
+                { className: b().EventNameCtn },
+                o.createElement(
+                  "div",
+                  { className: b().EventName },
+                  Boolean(i) && i,
+                  " ",
+                  o.createElement("span", null, "(", n.pageid, ")"),
+                ),
+                o.createElement(
+                  "div",
+                  { className: b().DatesCtn },
+                  o.createElement(
+                    "span",
+                    { className: b().DateAndTime },
+                    o.createElement(h.H6, {
+                      dateAndTime: n.event_start_date,
+                      bSingleLine: !0,
+                      bOnlyDate: !0,
+                    }),
                   ),
-            ),
-            o.createElement(
-              "div",
-              { className: (0, S.Z)(x().Button, x().ButtonCtn) },
-              o.createElement(
-                "a",
-                {
-                  href: `${f.De.PARTNER_BASE_URL}optin/appreview/${n.pageid}?tab=${a ? "review" : "appeal"}`,
-                },
-                "Open Review Tool",
+                  " ",
+                  o.createElement(
+                    "span",
+                    { className: b().DateAndTime },
+                    "To ",
+                    o.createElement(h.H6, {
+                      dateAndTime: n.event_end_date,
+                      bSingleLine: !0,
+                      bOnlyDate: !0,
+                    }),
+                  ),
+                ),
               ),
-            ),
-          ),
-        );
+              o.createElement(
+                "div",
+                { className: b().EventDetailsCtn },
+                o.createElement(
+                  "div",
+                  { className: x().StatsCtn },
+                  a
+                    ? o.createElement(Er, { def: n })
+                    : o.createElement(
+                        "div",
+                        { className: b().FeaturedApps },
+                        o.createElement(
+                          "div",
+                          { className: b().BigNumber },
+                          "??",
+                        ),
+                        o.createElement(
+                          "span",
+                          {
+                            "data-tooltip-text":
+                              "Number of apps requiring app review",
+                            className: _().HelperTooltip,
+                          },
+                          "Outstanding App Review (?)",
+                        ),
+                      ),
+                ),
+                o.createElement(
+                  "div",
+                  { className: (0, S.Z)(x().Button, x().ButtonCtn) },
+                  o.createElement(
+                    "a",
+                    {
+                      href: `${f.De.PARTNER_BASE_URL}optin/appreview/${n.pageid}?tab=${a ? "review" : "appeal"}`,
+                    },
+                    "Open Review Tool",
+                  ),
+                ),
+              ),
+            )
+          : null;
       }
       function Er(e) {
-        const { def: t } = e,
-          n = (function (e) {
+        var t;
+        const { def: n } = e,
+          a = (function (e) {
             const t = (0, dr.i)(),
               n = o.useContext(ur);
             return (0, F.useQuery)(pr(n, t, e));
-          })(t.pageid);
-        return !n || n.isLoading
-          ? o.createElement(T.V, {
-              size: "medium",
-              string: (0, G.Xx)("#Loading"),
-            })
-          : n.isError || n.isLoadingError
+          })(n.pageid);
+        return a && !a.isLoading && a.data
+          ? a.isError || a.isLoadingError
             ? o.createElement("div", null, "Failed to load appeals summary")
             : o.createElement(
                 o.Fragment,
@@ -50222,7 +50226,9 @@
                   o.createElement(
                     "div",
                     { className: b().BigNumber },
-                    n.data.open_appeals,
+                    null === (t = a.data) || void 0 === t
+                      ? void 0
+                      : t.open_appeals,
                   ),
                   o.createElement(
                     "span",
@@ -50240,7 +50246,7 @@
                   o.createElement(
                     "div",
                     { className: b().BigNumber },
-                    n.data.accepted_appeals,
+                    a.data.accepted_appeals,
                   ),
                   o.createElement(
                     "span",
@@ -50257,7 +50263,7 @@
                   o.createElement(
                     "div",
                     { className: b().BigNumber },
-                    n.data.reject_appeals,
+                    a.data.reject_appeals,
                   ),
                   o.createElement(
                     "span",
@@ -50268,7 +50274,11 @@
                     "Rejected Appeals (?)",
                   ),
                 ),
-              );
+              )
+          : o.createElement(T.V, {
+              size: "medium",
+              string: (0, G.Xx)("#Loading"),
+            });
       }
       var Sr = n(58166);
       const Dr = {
@@ -68579,90 +68589,95 @@
         );
       }
       function fi(e) {
-        var t, n, a, i, l;
-        const { appInfo: o, oFeaturingMaps: s } = e,
+        var t, n, a, i, l, o;
+        const { appInfo: s, oFeaturingMaps: c } = e,
           {
-            mapStoreItemToPlans: c,
-            mapStoreItemToDailyDeals: m,
-            mapStoreItemToMMs: d,
-            mapStoreItemToInvites: u,
-          } = s,
-          p = (0, S.qw)(o.appid, 0),
-          _ =
-            null === (t = c.get(p)) || void 0 === t
+            mapStoreItemToPlans: m,
+            mapStoreItemToDailyDeals: d,
+            mapStoreItemToMMs: u,
+            mapStoreItemToInvites: p,
+          } = c,
+          _ = (0, S.qw)(s.appid, 0),
+          h =
+            null === (t = m.get(_)) || void 0 === t
               ? void 0
               : t.sort((e, t) => t.start_date - e.start_date),
-          h =
-            null === (n = m.get(p)) || void 0 === n
+          g =
+            null === (n = d.get(_)) || void 0 === n
               ? void 0
               : n.sort((e, t) => t.rtime32_start_time - e.rtime32_start_time),
-          g = u.get(p),
           v =
-            null === (a = d.get(p)) || void 0 === a
+            null === (a = p.get(_)) || void 0 === a
               ? void 0
-              : a
-                  .filter((e) => !s.mapMMFeaturedInPlans.has(e.gid))
-                  .sort((e, t) => t.start_date - e.start_date),
+              : a.filter((e) => 1 == e.type),
           E =
+            null === (i = u.get(_)) || void 0 === i
+              ? void 0
+              : i
+                  .filter((e) => !c.mapMMFeaturedInPlans.has(e.gid))
+                  .sort((e, t) => t.start_date - e.start_date),
+          D =
             null ===
-              (l =
+              (o =
                 null ===
-                  (i = (function (e) {
+                  (l = (function (e) {
                     const t = (0, Fa.i)(),
                       n = r.useContext(Ua);
                     return (0, ea.useQuery)(Ha(n, t, e));
-                  })(o.appid)) || void 0 === i
+                  })(s.appid)) || void 0 === l
                   ? void 0
-                  : i.data) || void 0 === l
+                  : l.data) || void 0 === o
               ? void 0
-              : l
+              : o
                   .map(Ma.J2)
                   .filter(Boolean)
                   .sort((e, t) => t.start_date - e.start_date),
-          D = Date.now() / 1e3,
-          f = Date.now() / 1e3 - 1578e4,
-          y = (0, r.useMemo)(() => {
+          f = Date.now() / 1e3,
+          y = Date.now() / 1e3 - 1578e4,
+          b = (0, r.useMemo)(() => {
             const e = new Array();
             return (
-              null == E ||
-                E.forEach((t) =>
+              null == D ||
+                D.forEach((t) =>
                   e.push({ date: t.start_date, type: "sp", promo: t }),
-                ),
-              null == _ ||
-                _.forEach((t) =>
-                  e.push({ date: t.start_date, type: "pp", promo: t }),
                 ),
               null == h ||
                 h.forEach((t) =>
+                  e.push({ date: t.start_date, type: "pp", promo: t }),
+                ),
+              null == g ||
+                g.forEach((t) =>
                   e.push({ date: t.rtime32_start_time, type: "dd", promo: t }),
                 ),
-              null == v ||
-                v.forEach((t) =>
+              null == E ||
+                E.forEach((t) =>
                   e.push({ date: t.start_date, type: "mm", promo: t }),
                 ),
               e.sort((e, t) => t.date - e.date)
             );
-          }, [h, v, _, E]);
+          }, [g, E, h, D]);
         return r.createElement(
           r.Fragment,
           null,
-          Boolean(g || E || _ || h || v) &&
+          Boolean(v || D || h || g || E) &&
             r.createElement(
               "div",
               { className: ai().RecentPromos },
-              null == g
+              null == v
                 ? void 0
-                : g.map((e) =>
+                : v.map((e) =>
                     r.createElement(
                       "div",
                       {
                         key: "invite_" + e.inviteid,
                         className: (0, x.Z)(ai().Promo, ai().OpenInvite),
                       },
-                      "Open Daily Deal Invite",
+                      "Open Daily Deal Invite (expires ",
+                      (0, M.vX)(e.rtexpiretime),
+                      ")",
                     ),
                   ),
-              y.map((e) => {
+              b.map((e) => {
                 if ("sp" == e.type) {
                   const t = e.promo;
                   return r.createElement(
@@ -68671,8 +68686,8 @@
                       key: "saleplan_" + t.id,
                       className: (0, x.Z)(
                         ai().Promo,
-                        t.start_date > D ? ai().Upcoming : "",
-                        t.start_date > f ? ai().Recent : "",
+                        t.start_date > f ? ai().Upcoming : "",
+                        t.start_date > y ? ai().Recent : "",
                       ),
                     },
                     r.createElement(
@@ -68706,8 +68721,8 @@
                       key: "plan_" + t.id,
                       className: (0, x.Z)(
                         ai().Promo,
-                        t.start_date > D ? ai().Upcoming : "",
-                        t.start_date > f ? ai().Recent : "",
+                        t.start_date > f ? ai().Upcoming : "",
+                        t.start_date > y ? ai().Recent : "",
                       ),
                     },
                     r.createElement(
@@ -68736,8 +68751,8 @@
                       key: "dd_" + t.gid,
                       className: (0, x.Z)(
                         ai().Promo,
-                        t.rtime32_start_time > D ? ai().Upcoming : "",
-                        t.rtime32_start_time > f ? ai().Recent : "",
+                        t.rtime32_start_time > f ? ai().Upcoming : "",
+                        t.rtime32_start_time > y ? ai().Recent : "",
                       ),
                     },
                     r.createElement(
@@ -68764,8 +68779,8 @@
                       key: "mm_" + t.gid,
                       className: (0, x.Z)(
                         ai().Promo,
-                        t.start_date > D ? ai().Upcoming : "",
-                        t.start_date > f ? ai().Recent : "",
+                        t.start_date > f ? ai().Upcoming : "",
+                        t.start_date > y ? ai().Recent : "",
                       ),
                     },
                     r.createElement(

@@ -1685,17 +1685,16 @@
           s = (0, ue.Kd)(n.store_item_type),
           [l] = (0, E.jk)(n.store_item_id, s, { include_assets: !0 }),
           o = null == l ? void 0 : l.GetAssets().GetSmallCapsuleURL(),
-          c = `${r.De.PARTNER_BASE_URL}promotion/dailydeals/invite/${n.gid}`,
-          d = n.rtime32_start_time + 82800,
+          c = n.rtime32_start_time + 82800,
           {
-            nDiscountPercentHigh: m,
-            dtDiscountStart: p,
-            dtDiscountEnd: _,
+            nDiscountPercentHigh: d,
+            dtDiscountStart: m,
+            dtDiscountEnd: p,
           } = (0, De.Wp)(n),
-          v = a.useMemo(() => (0, De.sm)(n, m), [n, m]) >= De.O7.DealReady,
-          g = v,
-          D = `${r.De.PARTNER_BASE_URL}promotion/discounts${ge.G.DiscountDashboard(0 != t ? t.toString() : "")}?de=${n.discount_event_id}&dd=1`,
-          h = new Intl.DateTimeFormat(navigator.language, {
+          _ = a.useMemo(() => (0, De.sm)(n, d), [n, d]) >= De.O7.DealReady,
+          v = _,
+          g = `${r.De.PARTNER_BASE_URL}promotion/discounts${ge.G.DiscountDashboard(0 != t ? t.toString() : "")}?de=${n.discount_event_id}&dd=1`,
+          D = new Intl.DateTimeFormat(navigator.language, {
             month: "long",
             day: "numeric",
           }).format(new Date(1e3 * n.rtime32_start_time));
@@ -1710,11 +1709,7 @@
                 a.createElement(
                   "div",
                   { className: A.ItemImage },
-                  a.createElement(
-                    I,
-                    { href: c, target: "_blank" },
-                    a.createElement("img", { src: o }),
-                  ),
+                  a.createElement("img", { src: o }),
                 ),
             ),
           a.createElement(
@@ -1735,10 +1730,10 @@
               ),
               a.createElement(j, {
                 startTimestamp: n.rtime32_start_time,
-                endTimestamp: d,
+                endTimestamp: c,
               }),
             ),
-            v &&
+            _ &&
               a.createElement(
                 "div",
                 null,
@@ -1747,7 +1742,7 @@
                   { className: pe.DateDesc },
                   (0, i.Xx)("#Dashboard_UpcomingEvents_DailyDeal_Discounted"),
                 ),
-                a.createElement(j, { startTimestamp: p, endTimestamp: _ }),
+                a.createElement(j, { startTimestamp: m, endTimestamp: p }),
               ),
           ),
           a.createElement(
@@ -1761,7 +1756,7 @@
                 null,
                 (0, i.Xx)("#Dashboard_UpcomingEvents_DailyDeal_StatusLabel"),
               ),
-              g &&
+              v &&
                 a.createElement(
                   "div",
                   { className: (0, u.Z)(pe.StatusIndicator, pe.Complete) },
@@ -1769,7 +1764,7 @@
                     "#Dashboard_UpcomingEvents_DailyDeal_StatusComplete",
                   ),
                 ),
-              !g &&
+              !v &&
                 a.createElement(
                   "div",
                   { className: (0, u.Z)(pe.StatusIndicator) },
@@ -1778,7 +1773,7 @@
                   ),
                 ),
             ),
-            v &&
+            _ &&
               a.createElement(
                 fe,
                 {
@@ -1789,11 +1784,11 @@
                   buttonLabel: (0, i.Xx)(
                     "#Dashboard_UpcomingEvents_DailyDeal_EditDiscount",
                   ),
-                  sUrl: D,
+                  sUrl: g,
                 },
                 a.createElement(_e.SG, { oDailyDeal: n }),
               ),
-            !v &&
+            !_ &&
               a.createElement(
                 fe,
                 {
@@ -1804,12 +1799,12 @@
                   buttonLabel: (0, i.Xx)(
                     "#Dashboard_UpcomingEvents_DailyDeal_EnterDiscount",
                   ),
-                  sUrl: D,
+                  sUrl: g,
                 },
                 a.createElement(
                   "span",
                   { className: pe.StatusItemDueBy },
-                  (0, i.Xx)("#Dashboard_UpcomingEvents_DailyDeal_DueBy", h),
+                  (0, i.Xx)("#Dashboard_UpcomingEvents_DailyDeal_DueBy", D),
                 ),
               ),
           ),
