@@ -2796,6 +2796,7 @@
             r.append("assetfile", e, t),
               r.append("sessionid", m.De.SESSIONID),
               r.append("elangauge", "" + n),
+              r.append("originalname", t),
               i && r.append("arttype", i);
             const s = (function (e) {
               const t = e.toLowerCase();
@@ -55201,8 +55202,8 @@
             t.GetPromoModifyTime(),
           ]),
           s = a
-            .filter(Boolean)
-            .map((e, t) => t)
+            .map((e, t) => (e ? t : null))
+            .filter((e) => null !== e)
             .sort(),
           m = (0, o.useCallback)(
             (e) => {
