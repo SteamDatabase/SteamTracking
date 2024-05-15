@@ -22413,11 +22413,13 @@
     62210: (e, t, n) => {
       "use strict";
       function o(e, t, ...n) {
-        console.assert
-          ? 0 == n.length
-            ? console.assert(!!e, t)
-            : console.assert(!!e, t, ...n)
-          : e || console.warn(t, ...n);
+        try {
+          console.assert
+            ? 0 == n.length
+              ? console.assert(!!e, t)
+              : console.assert(!!e, t, ...n)
+            : e || console.warn(t, ...n);
+        } catch (e) {}
       }
       function i(e, t, ...n) {
         o(!1, t, ...n);
