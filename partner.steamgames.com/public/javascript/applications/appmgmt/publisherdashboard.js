@@ -2265,7 +2265,7 @@
           return (
             this.m_rgAdditionalEvents.set(e.id, e),
             this.m_eventsChanged.Dispatch(),
-            () => this.m_rgAdditionalEvents.delete(e.id)
+            () => this.RemoveAdditionalEvent(e.id)
           );
         }
         RemoveAdditionalEvent(e) {
