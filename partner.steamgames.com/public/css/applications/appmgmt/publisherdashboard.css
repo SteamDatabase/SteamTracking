@@ -253,6 +253,7 @@
 }
 .LC92P2CoEQ1R_wdDs3XtN.xNA0kFRoJXVNY7ccgZ6Bb {
   border-bottom: 3px solid #fff;
+  color: #fff;
 }
 ._1ddIHj3KWI6Wpfn2kYMaHW {
   position: relative;
@@ -393,6 +394,8 @@
   width: 29px;
   height: 28px;
   font-size: 14px;
+  text-shadow: 0 0 11px rgba(0, 0, 0, 0.7);
+  font-weight: 600;
 }
 ._3XINnjVCEbWVyB05BBYltE._1OK2i1Q0ALzwEnym_uD5VY {
   background-color: #cf980c;
@@ -416,7 +419,7 @@
   padding: 0px 6px;
   flex: 1;
   text-align: left;
-  background-color: #ffffff1a;
+  background-color: #bad1e721;
   backdrop-filter: blur(8px);
   font-size: 14px;
   font-weight: 400;
@@ -489,9 +492,21 @@
 ._15I1frVfoeLkSS-KNd_Xne {
   display: grid;
   grid-template-columns: max-content auto;
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
+  grid-auto-flow: row;
+  gap: 3px 0;
+  grid-template-areas: "title date";
 }
 ._15I1frVfoeLkSS-KNd_Xne ._3LQgQmiovxLjDjOcUrMzm2 {
   display: contents;
+}
+._15I1frVfoeLkSS-KNd_Xne
+  ._3LQgQmiovxLjDjOcUrMzm2._1yRUq_xJKMHeOhEcJ-BXJR
+  > span {
+  background: #e5cc8b;
+  color: #1b2838;
+  padding: 0 2px;
 }
 ._15I1frVfoeLkSS-KNd_Xne ._3LQgQmiovxLjDjOcUrMzm2 ._3I6UZDLKqv2wS3o6gw2YZ8 {
   display: inline-block;
@@ -568,6 +583,9 @@
   filter: blur(6px);
   transform: scale(1.07) translateY(-28px);
 }
+._1grQoVDvG8Nr4_coXHDlAv.EvG8rJmTM1CzkeuqkLFJp {
+  opacity: 0.15;
+}
 ._1n53rAYRtJXXRA-lRajbXF {
   grid-area: text;
   position: relative;
@@ -600,9 +618,17 @@
 ._2VZKTMQCK5Kt-lgquMVK81 a:hover {
   opacity: 0.8;
 }
+._2VZKTMQCK5Kt-lgquMVK81.h3XM6aXEdSIHNQJkYpJFX {
+  font-weight: 400;
+}
 .zjHNbIk0sNUO47ZDiM6M- {
   color: #cf980c;
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 14px;
+  filter: brightness(1.4) saturate(0.8);
+}
+.zjHNbIk0sNUO47ZDiM6M-._3efxp9Lg45sZ6BN771Ir53 {
+  color: #cf520c;
 }
 ._3OEQpFpCnwLcs6fDU_N1G7 {
   grid-area: warnings;
@@ -660,7 +686,7 @@
   justify-self: end;
 }
 ._3qIPl-2rtghu5e6FOR9lV_ {
-  background: #ffffff36;
+  background: #bad1e738;
   backdrop-filter: blur(18px);
   width: 164px;
   font-size: 12px;
@@ -680,6 +706,31 @@
 ._3G-O4ejlDgEhRIwpTIA9wq {
   color: #fff;
   margin-left: 4px;
+}
+._1kpWLFBdYvZfyPw1wyaebV {
+  display: flex;
+  flex-direction: column;
+  width: 187px;
+}
+.pVJq0fFCOHX1_B5kbeNPM {
+  font-size: 16px;
+  color: #a4d007;
+}
+.pVJq0fFCOHX1_B5kbeNPM._21ej1fGCE1FNIrxF2wlpKA {
+  color: #cf980c;
+}
+.pVJq0fFCOHX1_B5kbeNPM._1d1_uAgqTmGsz8nTENjM7Z {
+  color: #cf520c;
+}
+.oB3xsfo33DAd6ONoyRxGd {
+  display: flex;
+  flex-direction: row;
+  width: 274px;
+  margin-left: 20px;
+  align-items: center;
+}
+.oB3xsfo33DAd6ONoyRxGd span {
+  margin-right: 4px;
 }
 ._2GEfYJTcLo5vBafPciEQQt {
   font-size: 12px;
