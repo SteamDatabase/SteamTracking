@@ -4897,9 +4897,8 @@
               a = (0, p.Xx)(t);
             a && a != t && g.push(a);
           }
-        return 0 == g.length
-          ? null
-          : n.createElement(
+        return 0 != g.length || m
+          ? n.createElement(
               "div",
               {
                 className: (0, d.Z)(
@@ -4988,7 +4987,8 @@
                     s(() => _(!1)),
                   ),
               ),
-            );
+            )
+          : null;
       }
       function sa(e) {
         const { item: t } = e,
