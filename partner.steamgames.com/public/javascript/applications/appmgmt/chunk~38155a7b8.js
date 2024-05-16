@@ -38206,61 +38206,52 @@
         constructor() {}
       }
       function Kt(e) {
-        var t, n, a, i, l, r;
-        const s = (0, F.useQuery)(
+        const t = (0, F.useQuery)(
             ["useAllEligibleOptInApps", e],
             () =>
               (0, I.mG)(this, void 0, void 0, function* () {
-                return yield Zt.Get().FetchAllEligibleOptInApps(e);
+                return e ? yield Zt.Get().FetchAllEligibleOptInApps(e) : null;
               }),
             { staleTime: 60 * zt._H.PerMinute * 1e3 },
           ),
-          c = (0, o.useMemo)(() => {
-            var e, t, n, a, i, l;
-            return s.isLoading
+          n = (0, o.useMemo)(() => {
+            var e, n, a, i, l, r;
+            return t.isLoading || null == t.data
               ? null
               : {
                   eligible_appids: new Set(
-                    (null === (e = s.data) || void 0 === e
+                    (null === (e = t.data) || void 0 === e
                       ? void 0
                       : e.eligible_appids) || [],
                   ),
                   opted_in_appids: new Set(
-                    (null === (t = s.data) || void 0 === t
+                    (null === (n = t.data) || void 0 === n
                       ? void 0
-                      : t.opted_in_appids) || [],
+                      : n.opted_in_appids) || [],
                   ),
                   opted_out_appids: new Set(
-                    (null === (n = s.data) || void 0 === n
+                    (null === (a = t.data) || void 0 === a
                       ? void 0
-                      : n.opted_out_appids) || [],
+                      : a.opted_out_appids) || [],
                   ),
                   invited_appids: new Set(
-                    (null === (a = s.data) || void 0 === a
+                    (null === (i = t.data) || void 0 === i
                       ? void 0
-                      : a.invited_appids) || [],
+                      : i.invited_appids) || [],
                   ),
                   pruned_appids: new Set(
-                    (null === (i = s.data) || void 0 === i
+                    (null === (l = t.data) || void 0 === l
                       ? void 0
-                      : i.pruned_appids) || [],
+                      : l.pruned_appids) || [],
                   ),
                   featured_appids: new Set(
-                    (null === (l = s.data) || void 0 === l
+                    (null === (r = t.data) || void 0 === r
                       ? void 0
-                      : l.featured_appids) || [],
+                      : r.featured_appids) || [],
                   ),
                 };
-          }, [
-            null === (t = s.data) || void 0 === t ? void 0 : t.eligible_appids,
-            null === (n = s.data) || void 0 === n ? void 0 : n.featured_appids,
-            null === (a = s.data) || void 0 === a ? void 0 : a.invited_appids,
-            null === (i = s.data) || void 0 === i ? void 0 : i.opted_in_appids,
-            null === (l = s.data) || void 0 === l ? void 0 : l.opted_out_appids,
-            null === (r = s.data) || void 0 === r ? void 0 : r.pruned_appids,
-            s.isLoading,
-          ]);
-        return s.isLoading || !c ? null : c;
+          }, [t.data, t.isLoading]);
+        return t.isLoading || !n ? null : n;
       }
       var Qt = n(12251);
       const Yt = (e) => {

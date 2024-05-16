@@ -1401,8 +1401,9 @@
           s = (0, v.T)("useMultiLoadOptInAppReg");
         return (
           (0, r.useEffect)(() => {
-            const i = e.filter(Boolean);
-            i.length > 0
+            const i = null == e ? void 0 : e.filter(Boolean);
+            (null == i ? void 0 : i.length) > 0 &&
+            (null == t ? void 0 : t.length) > 0
               ? h
                   .Get()
                   .LoadMultiOptInRegistration(
