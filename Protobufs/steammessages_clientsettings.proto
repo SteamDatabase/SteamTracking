@@ -84,7 +84,7 @@ message CMsgClientSettings {
 	optional bool overlay_fps_counter_high_contrast = 4001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayShowFPSContrast"];
 	optional .CMsgHotkey overlay_key = 4002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayShortcutKey", (setting_default_string) = "Shift\tKEY_TAB"];
 	optional .CMsgHotkey screenshot_key = 4003 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayScreenshotHotKey", (setting_default_string) = "KEY_F12"];
-	optional bool enable_overlay = 4004 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\EnableGameOverlay"];
+	optional bool enable_overlay = 4004 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\EnableGameOverlay", (setting_default_bool) = true];
 	optional bool enable_screenshot_notification = 4006 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayScreenshotNotification", (setting_default_bool) = true];
 	optional bool enable_screenshot_sound = 4007 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayScreenshotPlaySound", (setting_default_bool) = true];
 	optional bool save_uncompressed_screenshots = 4008 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayScreenshotSaveUncompressed"];
