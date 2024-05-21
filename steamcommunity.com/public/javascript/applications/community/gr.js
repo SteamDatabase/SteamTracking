@@ -1436,7 +1436,7 @@
         const [t, r] = C.useState(!1);
         return (
           C.useEffect(() => {
-            (0, s.Vj)(void 0).then(() => {
+            (0, s.Vj)(void 0, void 0).then(() => {
               r(!0);
             });
           }, []),

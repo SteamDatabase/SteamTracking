@@ -15,12 +15,12 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2OusV",
       };
     },
-    510: (e, t, n) => {
+    597: (e, t, n) => {
       "use strict";
       n.d(t, { Pf: () => r, y5: () => a });
       var i = n(556),
-        o = n(626),
-        s = n(56);
+        o = n(254),
+        s = n(131);
       class r {
         constructor() {
           (this.m_fnCallback = void 0),
@@ -84,7 +84,7 @@
       }
       (0, i.gn)([o.a], a.prototype, "OnMessage", null);
     },
-    56: (e, t, n) => {
+    131: (e, t, n) => {
       "use strict";
       n.d(t, { i: () => o, l: () => i });
       const i = "GamepadInput";
@@ -97,14 +97,14 @@
           (e[(e.Full = 4)] = "Full");
       })(o || (o = {}));
     },
-    738: (e, t, n) => {
+    233: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { InitializeGamepadNavigation: () => vt });
       var i,
         o = n(556),
         s = n(311),
         r = n.n(s),
-        a = n(995);
+        a = n(559);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -164,10 +164,10 @@
           l
         );
       }
-      var v = n(626),
-        g = n(56),
-        _ = n(116),
-        p = n(510);
+      var v = n(254),
+        g = n(131),
+        _ = n(445),
+        p = n(597);
       class f {
         constructor(e) {
           (this.m_bIsGamepadInputExternallyControlled = !1),
@@ -599,7 +599,7 @@
             : e || console.warn(t, ...n);
         } catch (e) {}
       }
-      var L = n(979);
+      var L = n(923);
       class B {
         GetObject(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -1031,7 +1031,7 @@
           );
         }
       }
-      var z = n(305);
+      var z = n(253);
       const Q = new x("FocusNavigation").Debug,
         q = new x("GamepadEvents").Debug;
       class J {
@@ -2917,7 +2917,7 @@
               : y(this == this.m_Tree.Root, "Only root should have no parent");
         }
         RegisterDOMEvents() {
-          var e, t, n, i;
+          var e, t, n, i, o;
           !this.m_rgNavigationHandlers.length &&
             this.m_element &&
             (this.m_rgChildren.length >= 2 ||
@@ -2934,14 +2934,17 @@
             ((null === (t = this.m_Properties) || void 0 === t
               ? void 0
               : t.focusable) ||
+              (null === (n = this.m_Properties) || void 0 === n
+                ? void 0
+                : n.focusableIfNoChildren) ||
               0 == this.m_rgChildren.length) &&
               (this.m_rgFocusHandlers.length ||
-                (null === (n = this.m_element) ||
-                  void 0 === n ||
-                  n.addEventListener("focus", this.OnDOMFocus),
-                null === (i = this.m_element) ||
+                (null === (i = this.m_element) ||
                   void 0 === i ||
-                  i.addEventListener("blur", this.OnDOMBlur),
+                  i.addEventListener("focus", this.OnDOMFocus),
+                null === (o = this.m_element) ||
+                  void 0 === o ||
+                  o.addEventListener("blur", this.OnDOMBlur),
                 this.m_rgFocusHandlers.push(() => {
                   var e, t;
                   null === (e = this.m_element) ||
@@ -3019,7 +3022,21 @@
           return e ? e.GetLastFocusElement() : this.m_element;
         }
         OnDOMFocus(e) {
-          this.m_bFocused || this.m_Tree.TransferFocus(i.BROWSER, this);
+          if (!this.m_bFocused) {
+            if ("children" == this.GetFocusable()) {
+              const e = this.FindFocusableDescendant();
+              if (e && e !== this)
+                return (
+                  Ge(
+                    "Browser gave node focus but we are marked focusableIfNoChildren, transfering focus to descendant.",
+                    this.m_element,
+                    e.m_element,
+                  ),
+                  void this.m_Tree.TransferFocus(i.BROWSER, e)
+                );
+            }
+            this.m_Tree.TransferFocus(i.BROWSER, this);
+          }
         }
         OnDOMBlur(e) {
           var t;

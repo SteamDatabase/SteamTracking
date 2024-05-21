@@ -1794,6 +1794,7 @@
           "disable_steam_global",
           "skip_megaphone",
           "seasonal_sale_featuring",
+          "show_library_demo_detail",
         ],
         re = [
           "patchnotes",

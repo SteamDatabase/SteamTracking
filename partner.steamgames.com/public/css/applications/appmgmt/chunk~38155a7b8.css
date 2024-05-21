@@ -11985,6 +11985,7 @@ textarea._2V4yU656RPmLOdVgyglB17 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-grow: 1;
 }
 ._3b7O9NNMod3oErBnswOTID ._3GuhUTTDRwDbcLKO4Fnm6v,
 ._3b7O9NNMod3oErBnswOTID > div {
@@ -12047,8 +12048,9 @@ textarea._2V4yU656RPmLOdVgyglB17 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: 19px;
+  font-size: 14px;
   color: #b8bcbf;
+  max-width: unset;
 }
 ._1Q4PqR6_dSTkwZLC86uSPL {
   float: right;

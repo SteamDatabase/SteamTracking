@@ -7466,7 +7466,10 @@
         E != h.gj.NONE && (y.layout = E),
           u &&
             ((S.onClick = S.onClick || u), (w.onOKButton = w.onOKButton || u)),
-          w.onOKButton && void 0 === b.focusable && (b.focusable = !0),
+          w.onOKButton &&
+            void 0 === b.focusable &&
+            void 0 === b.focusableIfNoChildren &&
+            (b.focusable = !0),
           m && (w.onCancelButton = w.onCancelButton || m);
         const { ref: D, node: L } = (0, s.Pd)(
             Object.assign(Object.assign({}, y), b),
@@ -9743,7 +9746,7 @@
                 );
         }
         RegisterDOMEvents() {
-          var e, t, n, i;
+          var e, t, n, i, r;
           !this.m_rgNavigationHandlers.length &&
             this.m_element &&
             (this.m_rgChildren.length >= 2 ||
@@ -9760,14 +9763,17 @@
             ((null === (t = this.m_Properties) || void 0 === t
               ? void 0
               : t.focusable) ||
+              (null === (n = this.m_Properties) || void 0 === n
+                ? void 0
+                : n.focusableIfNoChildren) ||
               0 == this.m_rgChildren.length) &&
               (this.m_rgFocusHandlers.length ||
-                (null === (n = this.m_element) ||
-                  void 0 === n ||
-                  n.addEventListener("focus", this.OnDOMFocus),
-                null === (i = this.m_element) ||
+                (null === (i = this.m_element) ||
                   void 0 === i ||
-                  i.addEventListener("blur", this.OnDOMBlur),
+                  i.addEventListener("focus", this.OnDOMFocus),
+                null === (r = this.m_element) ||
+                  void 0 === r ||
+                  r.addEventListener("blur", this.OnDOMBlur),
                 this.m_rgFocusHandlers.push(() => {
                   var e, t;
                   null === (e = this.m_element) ||
@@ -9845,7 +9851,21 @@
           return e ? e.GetLastFocusElement() : this.m_element;
         }
         OnDOMFocus(e) {
-          this.m_bFocused || this.m_Tree.TransferFocus(u.uS.BROWSER, this);
+          if (!this.m_bFocused) {
+            if ("children" == this.GetFocusable()) {
+              const e = this.FindFocusableDescendant();
+              if (e && e !== this)
+                return (
+                  B(
+                    "Browser gave node focus but we are marked focusableIfNoChildren, transfering focus to descendant.",
+                    this.m_element,
+                    e.m_element,
+                  ),
+                  void this.m_Tree.TransferFocus(u.uS.BROWSER, e)
+                );
+            }
+            this.m_Tree.TransferFocus(u.uS.BROWSER, this);
+          }
         }
         OnDOMBlur(e) {
           var t;
@@ -17011,8 +17031,9 @@
               cancelText: u,
               refInstance: m,
               bForceDesktopPresentation: h,
+              footer: p,
             } = t,
-            p = (0, i._T)(t, [
+            g = (0, i._T)(t, [
               "children",
               "className",
               "label",
@@ -17020,20 +17041,21 @@
               "cancelText",
               "refInstance",
               "bForceDesktopPresentation",
+              "footer",
             ]);
-          const g =
+          const _ =
             null !== (e = this.context.styles) && void 0 !== e ? e : E();
-          let _ = null != u ? u : "#Button_Cancel";
+          let v = null != u ? u : "#Button_Cancel";
           if (1 != this.context.presentation || h)
             return s.createElement(
               "div",
-              Object.assign({}, p, {
+              Object.assign({}, g, {
                 ref: this.m_divRef,
                 className: (0, f.Z)(
                   {
-                    [g.contextMenuContents]: !0,
-                    [g.hasSubMenu]: this.instance.BIsSubMenuVisible(),
-                    [g.ForceDesktop]: h,
+                    [_.contextMenuContents]: !0,
+                    [_.hasSubMenu]: this.instance.BIsSubMenuVisible(),
+                    [_.ForceDesktop]: h,
                   },
                   r,
                 ),
@@ -17048,11 +17070,11 @@
               l.s,
               Object.assign(
                 {},
-                p,
+                g,
                 {
                   className: (0, f.Z)(
-                    g.contextMenuContents,
-                    { [g.hasSubMenu]: this.instance.BIsSubMenuVisible() },
+                    _.contextMenuContents,
+                    { [_.hasSubMenu]: this.instance.BIsSubMenuVisible() },
                     r,
                   ),
                   "flow-children": "column",
@@ -17077,13 +17099,14 @@
                   s.createElement(I, null),
                   s.createElement(
                     M,
-                    { className: g.Cancel, onSelected: e },
-                    (0, S.Xx)(_),
+                    { className: _.Cancel, onSelected: e },
+                    (0, S.Xx)(v),
                   ),
+                  p,
                 ),
               this.instance.BIsSubMenuVisible() &&
                 s.createElement("div", {
-                  className: g.contextMenuFade,
+                  className: _.contextMenuFade,
                   onClick: () => this.instance.HideSubMenu(),
                 }),
             );
@@ -21336,6 +21359,7 @@
             (this.m_vTouchStartPosition = (0, St.kN)()),
             (this.m_bInnerSliderHasFocus = !1),
             (this.m_nRepeatCount = 0),
+            (this.m_fInitalRepeatTime = void 0),
             (this.m_fStartValue = this.props.value),
             (this.m_fLatestUserValue = this.props.value),
             (this.m_fLatestOnChangeValue = this.props.value);
@@ -21425,26 +21449,21 @@
             i = 1;
           }
           e.detail.is_repeat
-            ? this.m_nRepeatCount++
-            : (this.m_nRepeatCount = 0);
-          const r = 1 / this.normalizedDpadStep,
-            s = Math.floor((0, Te.bU)(r, 8, 25, 10, 30)),
-            o = Math.max(1, s / 2),
-            a = (0, Te.Lh)((this.m_nRepeatCount - o) / (s - o), 0, 1),
-            l =
-              a * a * (0.05 - this.normalizedDpadStep) +
-              this.normalizedDpadStep,
-            c =
-              0 == this.normalizedStep
-                ? Math.round(l / this.normalizedDpadStep) *
-                  this.normalizedDpadStep
-                : Math.round(l / this.normalizedStep) * this.normalizedStep,
-            u = Math.max(c, this.normalizedDpadStep) * i,
-            d = Et(this.normalizedStep, this.normalizedClampedValue + u);
-          let m = Dt(this.props.min, this.props.max, d);
+            ? (0 == this.m_nRepeatCount &&
+                (this.m_fInitalRepeatTime = performance.now()),
+              this.m_nRepeatCount++)
+            : ((this.m_nRepeatCount = 0),
+              (this.m_fInitalRepeatTime = performance.now()));
+          const r = performance.now() - this.m_fInitalRepeatTime,
+            s = (0, Te.bU)(r, 0, 2e3, 500, 250),
+            o = Math.pow(2, Math.floor(r / s)),
+            a = this.normalizedDpadStep * o,
+            l = (0, Te.Lh)(a, this.normalizedDpadStep, 0.05) * i,
+            c = Et(this.normalizedStep, this.normalizedClampedValue + l);
+          let u = Dt(this.props.min, this.props.max, c);
           if (
-            ((m = (0, Te.Lh)(
-              m,
+            ((u = (0, Te.Lh)(
+              u,
               null !== (t = this.props.clampMin) && void 0 !== t
                 ? t
                 : this.props.min,
@@ -21452,12 +21471,12 @@
                 ? n
                 : this.props.max,
             )),
-            m != this.props.value)
+            u != this.props.value)
           ) {
-            const e = m > this.m_fLatestUserValue;
+            const e = u > this.m_fLatestUserValue;
             He.LT.PlayNavSound(e ? He.qr.SliderUp : He.qr.SliderDown),
-              (this.m_fLatestUserValue = m),
-              this.FireOnChange(m, 2);
+              (this.m_fLatestUserValue = u),
+              this.FireOnChange(u, 2);
           } else He.LT.PlayNavSound(He.qr.FailedNav);
           return !0;
         }
@@ -24549,20 +24568,21 @@
       }
       const L = r.createContext({}),
         M = r.memo(function (e) {
+          var t, n, c;
           const {
-              children: t,
-              bRenderOverlayAtRoot: n,
-              refModalManager: c,
-              DialogWrapper: u,
-              ContextMenuComponent: d,
-              refContextMenuManager: m,
-              browserInfo: h,
-              bUsePopups: p,
-              bOnlyPopups: g,
-              bCenterPopupsOnWindow: _,
-              bRegisterManagersWithWindow: v = !0,
+              children: u,
+              bRenderOverlayAtRoot: d,
+              refModalManager: m,
+              DialogWrapper: h,
+              ContextMenuComponent: p,
+              refContextMenuManager: g,
+              browserInfo: _,
+              bUsePopups: v,
+              bOnlyPopups: C,
+              bCenterPopupsOnWindow: S,
+              bRegisterManagersWithWindow: b = !0,
             } = e,
-            C = (0, i._T)(e, [
+            w = (0, i._T)(e, [
               "children",
               "bRenderOverlayAtRoot",
               "refModalManager",
@@ -24575,49 +24595,45 @@
               "bCenterPopupsOnWindow",
               "bRegisterManagersWithWindow",
             ]),
-            S = r.useRef();
-          S.current || (S.current = new l.pG());
-          let b = r.createElement(
+            y = r.useRef();
+          y.current || (y.current = new l.pG());
+          let E = r.createElement(
             a.t,
-            Object.assign({}, C, {
-              DialogWrapper: u,
-              ModalManager: S.current,
-              bRegisterModalManager: v,
+            Object.assign({}, w, {
+              DialogWrapper: h,
+              ModalManager: y.current,
+              bRegisterModalManager: b,
             }),
           );
           e.bRenderOverlayAtRoot &&
             "body" in document &&
-            (b = s.createPortal(b, document.body)),
-            (0, o.LY)(c, S.current),
-            r.useEffect(() => {
-              var e, t, n;
-              void 0 !== p &&
-                (null === (e = S.current) || void 0 === e || e.SetUsePopups(p)),
-                void 0 !== _ &&
-                  (null === (t = S.current) ||
-                    void 0 === t ||
-                    t.SetCenterPopupsOnWindow(_)),
-                void 0 !== g &&
-                  (null === (n = S.current) ||
-                    void 0 === n ||
-                    n.SetOnlyPopups(g));
-            }, [p, _, g]);
-          const w = r.useMemo(
-            () => ({ ModalManager: S.current, DialogWrapper: u }),
-            [u],
+            (E = s.createPortal(E, document.body)),
+            (0, o.LY)(m, y.current),
+            void 0 !== v &&
+              (null === (t = y.current) || void 0 === t || t.SetUsePopups(v)),
+            void 0 !== S &&
+              (null === (n = y.current) ||
+                void 0 === n ||
+                n.SetCenterPopupsOnWindow(S)),
+            void 0 !== C &&
+              (null === (c = y.current) || void 0 === c || c.SetOnlyPopups(C)),
+            y.current.SetBrowserInfo(_);
+          const M = r.useMemo(
+            () => ({ ModalManager: y.current, DialogWrapper: h }),
+            [h],
           );
           return r.createElement(
             L.Provider,
-            { value: w },
+            { value: M },
             r.createElement(
               D,
               {
-                ActiveMenuComponent: d,
-                refContextMenuManager: m,
-                browserInfo: h,
-                bRegisterMenuManager: v,
+                ActiveMenuComponent: p,
+                refContextMenuManager: g,
+                browserInfo: _,
+                bRegisterMenuManager: b,
               },
-              r.createElement(f.SV, null, b),
+              r.createElement(f.SV, null, E),
               e.children,
             ),
           );
@@ -24771,6 +24787,12 @@
         }
         BOnlyPopups() {
           return this.m_bOnlyPopups;
+        }
+        SetBrowserInfo(e) {
+          this.m_browserInfo = e;
+        }
+        GetBrowserInfo() {
+          return this.m_browserInfo;
         }
         SetCenterPopupsOnWindow(e) {
           this.m_bCenterPopupsOnWindow = e;
@@ -34854,6 +34876,18 @@
         );
       }
       function At() {
+        return (
+          (0, s.useEffect)(
+            () => (
+              console.log("Suspense boundary mounted."),
+              () => console.log("Suspense boundary unmounted.")
+            ),
+            [],
+          ),
+          null
+        );
+      }
+      function kt() {
         const [e, t] = s.useState(),
           [n, i] = s.useState(!1);
         return (
@@ -34889,12 +34923,12 @@
                   "div",
                   { className: h().App },
                   s.createElement(
-                    xt,
+                    Nt,
                     { storeUserConfig: e },
-                    s.createElement(Nt, null),
+                    s.createElement(Pt, null),
                     s.createElement(
                       s.Suspense,
-                      { fallback: null },
+                      { fallback: s.createElement(At, null) },
                       s.createElement(
                         p.rs,
                         null,
@@ -35079,7 +35113,7 @@
                             d.Z.SteamDeckDock(),
                             d.Z.SubscriptionPlanLandingPage(),
                           ],
-                          render: (e) => s.createElement(kt, null),
+                          render: (e) => s.createElement(Ot, null),
                         }),
                         s.createElement(Tt, {
                           exact: !0,
@@ -35344,7 +35378,7 @@
             : null
         );
       }
-      function kt(e) {
+      function Ot(e) {
         const t = (0, p.TH)().pathname.split("/").filter(Boolean).pop(),
           n = "sale_" + ((null == t ? void 0 : t.split("?")[0]) || "unknown");
         return s.createElement(re.d, {
@@ -35358,7 +35392,7 @@
           },
         });
       }
-      function Ot(e) {
+      function Bt(e) {
         const { storeUserConfig: t, children: n } = e,
           i = s.useCallback(
             () =>
@@ -35384,7 +35418,7 @@
           ),
         );
       }
-      function Bt(e) {
+      function xt(e) {
         const { storeUserConfig: t, children: n } = e,
           i = s.useRef();
         i.current || (i.current = new Ye());
@@ -35403,10 +35437,10 @@
           )
         );
       }
-      function xt(e) {
+      function Nt(e) {
         const { storeUserConfig: t, children: n } = e;
         return s.createElement(
-          Bt,
+          xt,
           { storeUserConfig: t },
           s.createElement(
             w.u.Provider,
@@ -35415,7 +35449,7 @@
               l.fI,
               null,
               s.createElement(
-                Ot,
+                Bt,
                 { storeUserConfig: t },
                 s.createElement(Ie.R, null, s.createElement(K, null, n)),
               ),
@@ -35423,7 +35457,7 @@
           ),
         );
       }
-      const Nt = s.memo(function (e) {
+      const Pt = s.memo(function (e) {
         return s.createElement(
           s.Fragment,
           null,
@@ -35480,19 +35514,19 @@
           }),
         );
       });
-      var Pt = n(92011),
-        Ft = n(50423);
+      var Ft = n(92011),
+        Gt = n(50423);
       n(33557);
       new Map();
       n(7765);
       (0, ae.jQ)({ enforceActions: "never" }),
-        Ft.Dj(function () {
+        Gt.Dj(function () {
           return (0, i.mG)(this, void 0, void 0, function* () {
             (0, l.Ek)("application_config").userConfig ||
               (yield (0, l.x)(a(), l.De.STORE_BASE_URL + "actions/", {
                 userConfig: !0,
               })),
-              (0, Pt.Uh)().Init(
+              (0, Ft.Uh)().Init(
                 "Store",
                 CLSTAMP,
                 new C.J(l.De.WEBAPI_BASE_URL).GetServiceTransport(),
@@ -35526,7 +35560,7 @@
               document.getElementById("application_root")
                 ? r
                     .createRoot(document.getElementById("application_root"))
-                    .render(s.createElement(At))
+                    .render(s.createElement(kt))
                 : console.error('No "application_root" was found to target');
           });
         });

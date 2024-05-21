@@ -1183,7 +1183,7 @@ function EditAchievement( appid, achievement )
 		ClearRow( row );
 
 		row.className = "selected";
-		
+
 		item = document.createElement( "input" );
 		item.id = id + "_apiname";
 		item.style.width = "100%";
@@ -3577,22 +3577,27 @@ function AddToDedicatedServerPackage( appid, bAdd )
 	});
 }
 
-function CreateDemo( parentId, demoName )
+function CreateDemo( parentId, demoName, bStandaloneDemoStorePage )
 {
-	CreateNewAppHelper( 0, parentId, demoName, 'Demo', false, 10, true );
+	CreateNewAppHelper( 0, parentId, demoName, 'Demo', false, 10, true, undefined, bStandaloneDemoStorePage );
 }
 
 function CreateTool( parentId, strName )
 {
-	CreateNewAppHelper( 0, parentId, strName, 'Tool', false, 10, true );
+	CreateNewAppHelper( 0, parentId, strName, 'Tool', false, 10, true, undefined, false );
+}
+
+function CreateBetaApp( pubId, parentId, appName )
+{
+	CreateNewAppHelper( pubId, parentId, appName, 'Beta', false, 10, true, undefined, false );
 }
 
 function CreateNewApp( pubId, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting, bF2PText )
 {
-	CreateNewAppHelper( pubId, 0, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting, bF2PText );
+	CreateNewAppHelper( pubId, 0, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting, bF2PText, false );
 }
 
-function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting, bF2PText )
+function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRange, bAddPartnerAppReporting, bF2PText, bStandaloneDemoStorePage )
 {
 	var progressDialog = ShowProgressDialog( 'Create New App', 'Creating New App' );
 	progressDialog.done( function() { top.location.reload(); } );
@@ -3611,7 +3616,8 @@ function CreateNewAppHelper( pubId, parentId, appName, appType, bF2P, reservedRa
 			'parentid' : parentId,
 			'f2p' : bF2P ? 1 : 0,
 			'f2ptext' : bF2PText,
-			'sessionid' : g_sessionID
+			'sessionid' : g_sessionID,
+			'standalonestore' : bStandaloneDemoStorePage ? true : undefined
 		}
 	).done(
 		function( response ) {

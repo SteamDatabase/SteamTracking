@@ -987,7 +987,7 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 }
 
 .newmodal_header .title_text {
-	padding: 32px 32px 0px 32px;
+	padding: 24px 24px 0px 24px;
 	display: block;
 }
 .newmodal_header .subtitle_text {
@@ -1071,12 +1071,19 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 	overflow: auto;
 	word-wrap: break-word;
 
-	padding: 32px;
+	padding: 24px;
 
-	font-size: 14px;
+	font-size: 16px;
+	line-height: 21px;
 	color: #acb2b8;
 
 	position: relative;
+}
+
+.newmodal_content p {
+	font-size: 16px;
+	line-height: 19px;
+	color: #acb2b8;
 }
 
 .newmodal_content_innerbg {
@@ -1084,6 +1091,21 @@ body.v6 .popup_block_new .popup_body.popup_menu {
 	padding: 8px;
 
 	color: #8f8f8f;
+}
+
+
+.detailed_option_toggle {
+	background: rgba(172, 178, 184, 0.1);
+	border-radius: 4px;
+}
+.detailed_option_toggle .toggle_group {
+	background: rgba(172, 178, 184, 0.1);
+	padding: 8px;
+	border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+.detailed_option_toggle .toggle_desc {
+	padding: 8px 8px 8px 32px;
+	font-size: 14px;
 }
 
 .newmodal_buttons {
