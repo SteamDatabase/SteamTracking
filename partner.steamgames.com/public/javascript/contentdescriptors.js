@@ -58,6 +58,10 @@ function SaveSurvey( appid )
 					ShowAlertDialog( 'Error Saving Survey', 'There was a problem trying to save the survey. Please try again.' );
 			}
 		}
+		else if ( response.success == 24 )
+		{
+			ShowAlertDialog( 'Error Saving Survey', 'You do not have permission to edit one of the selected categories after your game has been released.' );
+		}
 		else
 		{
 			ShowAlertDialog( 'Error Saving Survey', 'There was a problem trying to save the survey. Please try again.' );

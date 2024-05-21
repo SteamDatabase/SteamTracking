@@ -511,7 +511,7 @@
     "DailyDeals_Button_MustFirstPickDate": "Must first select a date",
     "DailyDeals_ActiveDeal": "This Daily Deal is LIVE!",
     "DailyDeals_DealCompleted": "This Daily Deal completed on %1$s",
-    "DailyDeals_DealFailed": "This Daily Deal was not displayed",
+    "DailyDeals_DealFailed": "This Daily Deal was not displayed because no discount was found for the game during the time.",
     "DailyDeals_DealCancelled": "This Daily Deal was cancelled",
     "DailyDeals_InviteCancelled": "This invitation was cancelled",
     "DailyDeals_Info_How": "How do invites work?",

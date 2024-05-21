@@ -915,7 +915,7 @@ fieldset.editRow_textarea label {
 
 .comment_type_filter_item_image {
 	position: absolute;
-	height: 37px;
+	height: 40px;
 	width: 270px;
 	cursor: pointer;
 }
@@ -923,8 +923,13 @@ fieldset.editRow_textarea label {
 .comment_type_filter_item {
 	padding: 10px;
 	padding-left: 20px;
+	padding-bottom: 20px;
 	cursor: pointer;
 	color: white;
+}
+
+.comment_type_filter_item_container .comment_type_filter_option {
+	padding-left: 23px;
 }
 
 .forum_list_unread {

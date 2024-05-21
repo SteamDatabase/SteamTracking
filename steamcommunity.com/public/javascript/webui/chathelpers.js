@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8896122";
+var CLSTAMP = "8913369";
 (() => {
   var e,
     t,
@@ -100,7 +100,7 @@ var CLSTAMP = "8896122";
         }
         (i.keys = () => Object.keys(s)), (i.id = 9014), (e.exports = i);
       },
-      17840: (e, t, n) => {
+      1629: (e, t, n) => {
         "use strict";
         function s(e, t, n, s) {
           var i,
@@ -155,7 +155,7 @@ var CLSTAMP = "8896122";
         Object.create;
         Object.create;
         "function" == typeof SuppressedError && SuppressedError;
-        n(15736);
+        n(30028);
         var r = n(27378),
           a = n(37634);
         function o(e) {
@@ -1694,7 +1694,7 @@ var CLSTAMP = "8896122";
             });
           });
       },
-      15736: (e, t, n) => {
+      30028: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -1732,7 +1732,7 @@ var CLSTAMP = "8896122";
           "./shared_schinese.json": [65933, 2537],
           "./shared_spanish.json": [2712, 6492],
           "./shared_swedish.json": [85835, 5625],
-          "./shared_tchinese.json": [85918, 7602],
+          "./shared_tchinese.json": [46618, 7602],
           "./shared_thai.json": [63269, 1162],
           "./shared_turkish.json": [27810, 5438],
           "./shared_ukrainian.json": [32110, 7781],
@@ -1778,7 +1778,7 @@ var CLSTAMP = "8896122";
           "./shared_schinese.json": [65933, 2537],
           "./shared_spanish.json": [2712, 6492],
           "./shared_swedish.json": [85835, 5625],
-          "./shared_tchinese.json": [85918, 7602],
+          "./shared_tchinese.json": [46618, 7602],
           "./shared_thai.json": [63269, 1162],
           "./shared_turkish.json": [27810, 5438],
           "./shared_ukrainian.json": [32110, 7781],
@@ -1926,65 +1926,65 @@ var CLSTAMP = "8896122";
       ".js?contenthash=" +
       {
         699: "d6c5041e9416e45e26ce",
-        1162: "3f5bcb34f6b63c01420f",
-        1313: "01734275e32c49366ca8",
+        1162: "a3034a799e9bd1c0fbc9",
+        1313: "e96a1737c2646896a73b",
         1471: "ad2f37f397762e784bf4",
         1635: "32af27827b729c8f8a6b",
         2029: "6f7f951d0f10150c976e",
         2431: "453484513ab5e66f8413",
-        2443: "70f7216e6e5d7e889ac1",
-        2537: "a8b03110481627e78aa0",
+        2443: "1720580ebed270b4a337",
+        2537: "f73fc00f49adfea5ce4f",
         2822: "88db85c368a63bb0e51f",
-        2844: "37349b988d35530a8cc1",
+        2844: "9c488fefb18cf28df0af",
         2862: "1abf9841df578c889a0d",
         2913: "bb54096d82297229f916",
-        3112: "1b59abfbb5b80d0b757b",
+        3112: "680d16c74ab2f1234b7b",
         3140: "4b057f32b7604ec3eaa0",
         3182: "904e34ebf7a4aaf48c55",
-        3252: "d98e972af0002e79a9ae",
+        3252: "e02acf41415ecc239ef9",
         3471: "8d4a9428ae3bc7dc2453",
         3500: "87fd10e8f7874df57e72",
-        3557: "544fb42c599b58c295be",
-        4108: "154ba9878c18d663f9cd",
-        4189: "ed87ce5fc4ea800de029",
+        3557: "e4bd590c00947a1bd0dc",
+        4108: "ab9637b85c97d3829535",
+        4189: "0e6a7ffa961840cae50b",
         4264: "3504db3b4edf47193af5",
-        4297: "ba19ff0e0cd326064f6e",
+        4297: "e6ccc7555540cf72fefc",
         4448: "a0a65395441d9f00bb59",
         4596: "fded713aa995e4b1b58a",
         4716: "ff700b72d85f41503980",
-        4823: "d7e07274e8747c9fddbf",
-        4964: "796de5231aceb4d1e41e",
+        4823: "09dc1cd7fc387202ef7a",
+        4964: "01d7769ee871f8a48bef",
         4989: "632208e9c26bcbdfc7c0",
-        5438: "13d89a8047712d3d8aaf",
-        5625: "d07b7d18aacc87e42357",
+        5438: "4d591ada6a3983496165",
+        5625: "228c300fca1f83902fc7",
         5632: "43b27611fe8e6716b216",
         5802: "4d1c3c1acafaf4a50535",
-        5849: "cfa8954dd152d0403169",
-        5925: "7ab95ebfefd16e2b0535",
-        5933: "a97ea4c815255310695d",
-        5948: "98dd434fd3e7e96fcb01",
-        6007: "a0e3e4ab79cd48f9c4a7",
-        6492: "390d56640b0049aa47f2",
-        6542: "2549572c3e125a57e8a6",
+        5849: "4a50918c7f61f5a8273d",
+        5925: "1f07bb395cca9cc1d9c7",
+        5933: "76b4fcda3560d8fa60e0",
+        5948: "4e60e7c56b10ef28e8a6",
+        6007: "b2ebeab5c6e2b8d273fb",
+        6492: "753e3deb119149563b9e",
+        6542: "b94c0a355c0e3d37d735",
         6646: "2dee9bb4347ce824bdb2",
         6727: "0bed53794f7985735020",
         6986: "c94cb15208b910555986",
         6992: "5aca62e8d2baaf5ced56",
         7340: "313958b3b2f257162665",
         7575: "e4ef790fedb88048372d",
-        7602: "c7fe477d73f3472e59f0",
+        7602: "9684a822e1b461f6678b",
         7651: "3d5a9a68fa80e147172b",
         7706: "f4a8ba273c46c000eb77",
-        7781: "c5863acb8362d692b514",
-        7975: "89ecaf71ddd4d9831ab3",
+        7781: "3aa59415339402d7b648",
+        7975: "bd1930620415242b8f04",
         8247: "d0a8c1538fad33169e29",
-        8385: "7616fc984b8f94b28fbc",
-        8518: "7ef355d70b2e5f678f4e",
-        8754: "0f183fb7f5eaac7056f2",
+        8385: "3b31652f2e6d0326ac9f",
+        8518: "ddbd1aa41b53113f508b",
+        8754: "510bc0227bfc89ef9ca6",
         8815: "8d4f9e83a631e9a78a1d",
-        9062: "d18dfe926bc1108d1256",
+        9062: "6eaacf613148bff2f94c",
         9263: "b0ba909c130bd6c63c34",
-        9753: "1f3f830731fd536d309a",
+        9753: "91943750eed24e963b41",
         9775: "74b9dce7e9ea2d176f3d",
         9818: "f89ec1680064437e19e1",
       }[e]),
@@ -2121,6 +2121,6 @@ var CLSTAMP = "8896122";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [5968], () => o(17840));
+  var c = o.O(void 0, [5968], () => o(1629));
   c = o.O(c);
 })();

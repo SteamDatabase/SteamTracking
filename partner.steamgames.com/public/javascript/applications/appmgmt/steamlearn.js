@@ -10111,7 +10111,7 @@
                         .connectors()
                         .filter((e) => e.is_input_connector()).length,
                     ),
-                  fnSetValue: (e) => h(e),
+                  fnSetValue: (e) => D(e),
                 }),
                 o.createElement($e, {
                   label: (0, c.Xx)(

@@ -3849,7 +3849,10 @@
         M != m.gj.NONE && (S.layout = M),
           u &&
             ((b.onClick = b.onClick || u), (E.onOKButton = E.onOKButton || u)),
-          E.onOKButton && void 0 === w.focusable && (w.focusable = !0),
+          E.onOKButton &&
+            void 0 === w.focusable &&
+            void 0 === w.focusableIfNoChildren &&
+            (w.focusable = !0),
           h && (E.onCancelButton = E.onCancelButton || h);
         const { ref: D, node: L } = (0, r.Pd)(
             Object.assign(Object.assign({}, S), w),
@@ -6116,7 +6119,7 @@
                 );
         }
         RegisterDOMEvents() {
-          var e, t, n, o;
+          var e, t, n, o, i;
           !this.m_rgNavigationHandlers.length &&
             this.m_element &&
             (this.m_rgChildren.length >= 2 ||
@@ -6133,14 +6136,17 @@
             ((null === (t = this.m_Properties) || void 0 === t
               ? void 0
               : t.focusable) ||
+              (null === (n = this.m_Properties) || void 0 === n
+                ? void 0
+                : n.focusableIfNoChildren) ||
               0 == this.m_rgChildren.length) &&
               (this.m_rgFocusHandlers.length ||
-                (null === (n = this.m_element) ||
-                  void 0 === n ||
-                  n.addEventListener("focus", this.OnDOMFocus),
-                null === (o = this.m_element) ||
+                (null === (o = this.m_element) ||
                   void 0 === o ||
-                  o.addEventListener("blur", this.OnDOMBlur),
+                  o.addEventListener("focus", this.OnDOMFocus),
+                null === (i = this.m_element) ||
+                  void 0 === i ||
+                  i.addEventListener("blur", this.OnDOMBlur),
                 this.m_rgFocusHandlers.push(() => {
                   var e, t;
                   null === (e = this.m_element) ||
@@ -6218,7 +6224,21 @@
           return e ? e.GetLastFocusElement() : this.m_element;
         }
         OnDOMFocus(e) {
-          this.m_bFocused || this.m_Tree.TransferFocus(u.uS.BROWSER, this);
+          if (!this.m_bFocused) {
+            if ("children" == this.GetFocusable()) {
+              const e = this.FindFocusableDescendant();
+              if (e && e !== this)
+                return (
+                  N(
+                    "Browser gave node focus but we are marked focusableIfNoChildren, transfering focus to descendant.",
+                    this.m_element,
+                    e.m_element,
+                  ),
+                  void this.m_Tree.TransferFocus(u.uS.BROWSER, e)
+                );
+            }
+            this.m_Tree.TransferFocus(u.uS.BROWSER, this);
+          }
         }
         OnDOMBlur(e) {
           var t;
@@ -9769,8 +9789,9 @@
               cancelText: u,
               refInstance: h,
               bForceDesktopPresentation: m,
+              footer: p,
             } = t,
-            p = (0, o._T)(t, [
+            g = (0, o._T)(t, [
               "children",
               "className",
               "label",
@@ -9778,20 +9799,21 @@
               "cancelText",
               "refInstance",
               "bForceDesktopPresentation",
+              "footer",
             ]);
-          const g =
+          const v =
             null !== (e = this.context.styles) && void 0 !== e ? e : M();
-          let v = null != u ? u : "#Button_Cancel";
+          let C = null != u ? u : "#Button_Cancel";
           if (1 != this.context.presentation || m)
             return r.createElement(
               "div",
-              Object.assign({}, p, {
+              Object.assign({}, g, {
                 ref: this.m_divRef,
                 className: (0, f.Z)(
                   {
-                    [g.contextMenuContents]: !0,
-                    [g.hasSubMenu]: this.instance.BIsSubMenuVisible(),
-                    [g.ForceDesktop]: m,
+                    [v.contextMenuContents]: !0,
+                    [v.hasSubMenu]: this.instance.BIsSubMenuVisible(),
+                    [v.ForceDesktop]: m,
                   },
                   i,
                 ),
@@ -9806,11 +9828,11 @@
               l.s,
               Object.assign(
                 {},
-                p,
+                g,
                 {
                   className: (0, f.Z)(
-                    g.contextMenuContents,
-                    { [g.hasSubMenu]: this.instance.BIsSubMenuVisible() },
+                    v.contextMenuContents,
+                    { [v.hasSubMenu]: this.instance.BIsSubMenuVisible() },
                     i,
                   ),
                   "flow-children": "column",
@@ -9835,13 +9857,14 @@
                   r.createElement(O, null),
                   r.createElement(
                     y,
-                    { className: g.Cancel, onSelected: e },
-                    (0, b.Xx)(v),
+                    { className: v.Cancel, onSelected: e },
+                    (0, b.Xx)(C),
                   ),
+                  p,
                 ),
               this.instance.BIsSubMenuVisible() &&
                 r.createElement("div", {
-                  className: g.contextMenuFade,
+                  className: v.contextMenuFade,
                   onClick: () => this.instance.HideSubMenu(),
                 }),
             );
@@ -14127,6 +14150,7 @@
             (this.m_vTouchStartPosition = (0, Mt.kN)()),
             (this.m_bInnerSliderHasFocus = !1),
             (this.m_nRepeatCount = 0),
+            (this.m_fInitalRepeatTime = void 0),
             (this.m_fStartValue = this.props.value),
             (this.m_fLatestUserValue = this.props.value),
             (this.m_fLatestOnChangeValue = this.props.value);
@@ -14216,26 +14240,21 @@
             o = 1;
           }
           e.detail.is_repeat
-            ? this.m_nRepeatCount++
-            : (this.m_nRepeatCount = 0);
-          const i = 1 / this.normalizedDpadStep,
-            r = Math.floor((0, Oe.bU)(i, 8, 25, 10, 30)),
-            s = Math.max(1, r / 2),
-            a = (0, Oe.Lh)((this.m_nRepeatCount - s) / (r - s), 0, 1),
-            l =
-              a * a * (0.05 - this.normalizedDpadStep) +
-              this.normalizedDpadStep,
-            c =
-              0 == this.normalizedStep
-                ? Math.round(l / this.normalizedDpadStep) *
-                  this.normalizedDpadStep
-                : Math.round(l / this.normalizedStep) * this.normalizedStep,
-            u = Math.max(c, this.normalizedDpadStep) * o,
-            d = Ot(this.normalizedStep, this.normalizedClampedValue + u);
-          let h = It(this.props.min, this.props.max, d);
+            ? (0 == this.m_nRepeatCount &&
+                (this.m_fInitalRepeatTime = performance.now()),
+              this.m_nRepeatCount++)
+            : ((this.m_nRepeatCount = 0),
+              (this.m_fInitalRepeatTime = performance.now()));
+          const i = performance.now() - this.m_fInitalRepeatTime,
+            r = (0, Oe.bU)(i, 0, 2e3, 500, 250),
+            s = Math.pow(2, Math.floor(i / r)),
+            a = this.normalizedDpadStep * s,
+            l = (0, Oe.Lh)(a, this.normalizedDpadStep, 0.05) * o,
+            c = Ot(this.normalizedStep, this.normalizedClampedValue + l);
+          let u = It(this.props.min, this.props.max, c);
           if (
-            ((h = (0, Oe.Lh)(
-              h,
+            ((u = (0, Oe.Lh)(
+              u,
               null !== (t = this.props.clampMin) && void 0 !== t
                 ? t
                 : this.props.min,
@@ -14243,12 +14262,12 @@
                 ? n
                 : this.props.max,
             )),
-            h != this.props.value)
+            u != this.props.value)
           ) {
-            const e = h > this.m_fLatestUserValue;
+            const e = u > this.m_fLatestUserValue;
             He.LT.PlayNavSound(e ? He.qr.SliderUp : He.qr.SliderDown),
-              (this.m_fLatestUserValue = h),
-              this.FireOnChange(h, 2);
+              (this.m_fLatestUserValue = u),
+              this.FireOnChange(u, 2);
           } else He.LT.PlayNavSound(He.qr.FailedNav);
           return !0;
         }
@@ -17968,20 +17987,21 @@
       }
       const L = i.createContext({}),
         y = i.memo(function (e) {
+          var t, n, c;
           const {
-              children: t,
-              bRenderOverlayAtRoot: n,
-              refModalManager: c,
-              DialogWrapper: u,
-              ContextMenuComponent: d,
-              refContextMenuManager: h,
-              browserInfo: m,
-              bUsePopups: p,
-              bOnlyPopups: g,
-              bCenterPopupsOnWindow: v,
-              bRegisterManagersWithWindow: C = !0,
+              children: u,
+              bRenderOverlayAtRoot: d,
+              refModalManager: h,
+              DialogWrapper: m,
+              ContextMenuComponent: p,
+              refContextMenuManager: g,
+              browserInfo: v,
+              bUsePopups: C,
+              bOnlyPopups: _,
+              bCenterPopupsOnWindow: b,
+              bRegisterManagersWithWindow: w = !0,
             } = e,
-            _ = (0, o._T)(e, [
+            E = (0, o._T)(e, [
               "children",
               "bRenderOverlayAtRoot",
               "refModalManager",
@@ -17994,49 +18014,45 @@
               "bCenterPopupsOnWindow",
               "bRegisterManagersWithWindow",
             ]),
-            b = i.useRef();
-          b.current || (b.current = new l.pG());
-          let w = i.createElement(
+            S = i.useRef();
+          S.current || (S.current = new l.pG());
+          let M = i.createElement(
             a.t,
-            Object.assign({}, _, {
-              DialogWrapper: u,
-              ModalManager: b.current,
-              bRegisterModalManager: C,
+            Object.assign({}, E, {
+              DialogWrapper: m,
+              ModalManager: S.current,
+              bRegisterModalManager: w,
             }),
           );
           e.bRenderOverlayAtRoot &&
             "body" in document &&
-            (w = r.createPortal(w, document.body)),
-            (0, s.LY)(c, b.current),
-            i.useEffect(() => {
-              var e, t, n;
-              void 0 !== p &&
-                (null === (e = b.current) || void 0 === e || e.SetUsePopups(p)),
-                void 0 !== v &&
-                  (null === (t = b.current) ||
-                    void 0 === t ||
-                    t.SetCenterPopupsOnWindow(v)),
-                void 0 !== g &&
-                  (null === (n = b.current) ||
-                    void 0 === n ||
-                    n.SetOnlyPopups(g));
-            }, [p, v, g]);
-          const E = i.useMemo(
-            () => ({ ModalManager: b.current, DialogWrapper: u }),
-            [u],
+            (M = r.createPortal(M, document.body)),
+            (0, s.LY)(h, S.current),
+            void 0 !== C &&
+              (null === (t = S.current) || void 0 === t || t.SetUsePopups(C)),
+            void 0 !== b &&
+              (null === (n = S.current) ||
+                void 0 === n ||
+                n.SetCenterPopupsOnWindow(b)),
+            void 0 !== _ &&
+              (null === (c = S.current) || void 0 === c || c.SetOnlyPopups(_)),
+            S.current.SetBrowserInfo(v);
+          const y = i.useMemo(
+            () => ({ ModalManager: S.current, DialogWrapper: m }),
+            [m],
           );
           return i.createElement(
             L.Provider,
-            { value: E },
+            { value: y },
             i.createElement(
               D,
               {
-                ActiveMenuComponent: d,
-                refContextMenuManager: h,
-                browserInfo: m,
-                bRegisterMenuManager: C,
+                ActiveMenuComponent: p,
+                refContextMenuManager: g,
+                browserInfo: v,
+                bRegisterMenuManager: w,
               },
-              i.createElement(f.SV, null, w),
+              i.createElement(f.SV, null, M),
               e.children,
             ),
           );
@@ -18190,6 +18206,12 @@
         }
         BOnlyPopups() {
           return this.m_bOnlyPopups;
+        }
+        SetBrowserInfo(e) {
+          this.m_browserInfo = e;
+        }
+        GetBrowserInfo() {
+          return this.m_browserInfo;
         }
         SetCenterPopupsOnWindow(e) {
           this.m_bCenterPopupsOnWindow = e;
@@ -25556,7 +25578,7 @@
             n.e(400),
             n.e(367),
             n.e(9349),
-          ]).then(n.bind(n, 79458)),
+          ]).then(n.bind(n, 22716)),
         ),
         F = i.lazy(() =>
           Promise.all([

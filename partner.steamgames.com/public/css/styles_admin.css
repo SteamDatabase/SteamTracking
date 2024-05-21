@@ -371,12 +371,40 @@ textarea.gray {
 	margin-right: 40px;
 }
 
+.formdata.settingsBlock {
+	display: flex;
+	flex-direction: row;
+	flex-grow: 1;
+	color: #C5CCD4;
+}
+.formdata.settingsBlock p {
+	font-size: 14px;
+	color: #C5CCD4;
+}
+
+.formdata.settingsBlock .left {
+	width: 70%;
+	background: #2C2E35;
+	padding: 16px;
+	box-sizing: border-box;
+	font-size: 14px;
+}
+
+.formdata.settingsBlock .right {
+	width: 30%;
+	background: #101113;
+	padding: 16px;
+	box-sizing: border-box;
+}
+
 .formcolumn {
     display: flex;
     flex-direction: column;
 }
 
 .formrow {
+	display: flex;
+	flex-direction: row;
 	clear: left;
 	padding-bottom: 5px;
 	margin-bottom: 5px;
@@ -2649,6 +2677,7 @@ html, body { height:100%; }
 }
 .instructions .formrow.text {
     line-height: 20px;
+	display: block;
 }
 #page_background {
     max-width: 100%;

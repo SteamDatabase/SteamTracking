@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8897203";
+var CLSTAMP = "8913299";
 (() => {
   "use strict";
   var e,
@@ -10,21 +10,21 @@ var CLSTAMP = "8897203";
     d,
     c = {},
     f = {};
-  function b(e) {
+  function o(e) {
     var a = f[e];
     if (void 0 !== a) return a.exports;
     var n = (f[e] = { id: e, loaded: !1, exports: {} });
-    return c[e].call(n.exports, n, n.exports, b), (n.loaded = !0), n.exports;
+    return c[e].call(n.exports, n, n.exports, o), (n.loaded = !0), n.exports;
   }
-  (b.m = c),
+  (o.m = c),
     (e = []),
-    (b.O = (a, n, s, d) => {
+    (o.O = (a, n, s, d) => {
       if (!n) {
         var c = 1 / 0;
         for (i = 0; i < e.length; i++) {
-          for (var [n, s, d] = e[i], f = !0, o = 0; o < n.length; o++)
-            (!1 & d || c >= d) && Object.keys(b.O).every((e) => b.O[e](n[o]))
-              ? n.splice(o--, 1)
+          for (var [n, s, d] = e[i], f = !0, b = 0; b < n.length; b++)
+            (!1 & d || c >= d) && Object.keys(o.O).every((e) => o.O[e](n[b]))
+              ? n.splice(b--, 1)
               : ((f = !1), d < c && (c = d));
           if (f) {
             e.splice(i--, 1);
@@ -38,37 +38,37 @@ var CLSTAMP = "8897203";
       for (var i = e.length; i > 0 && e[i - 1][2] > d; i--) e[i] = e[i - 1];
       e[i] = [n, s, d];
     }),
-    (b.n = (e) => {
+    (o.n = (e) => {
       var a = e && e.__esModule ? () => e.default : () => e;
-      return b.d(a, { a }), a;
+      return o.d(a, { a }), a;
     }),
     (n = Object.getPrototypeOf
       ? (e) => Object.getPrototypeOf(e)
       : (e) => e.__proto__),
-    (b.t = function (e, s) {
+    (o.t = function (e, s) {
       if ((1 & s && (e = this(e)), 8 & s)) return e;
       if ("object" == typeof e && e) {
         if (4 & s && e.__esModule) return e;
         if (16 & s && "function" == typeof e.then) return e;
       }
       var d = Object.create(null);
-      b.r(d);
+      o.r(d);
       var c = {};
       a = a || [null, n({}), n([]), n(n)];
       for (var f = 2 & s && e; "object" == typeof f && !~a.indexOf(f); f = n(f))
         Object.getOwnPropertyNames(f).forEach((a) => (c[a] = () => e[a]));
-      return (c.default = () => e), b.d(d, c), d;
+      return (c.default = () => e), o.d(d, c), d;
     }),
-    (b.d = (e, a) => {
+    (o.d = (e, a) => {
       for (var n in a)
-        b.o(a, n) &&
-          !b.o(e, n) &&
+        o.o(a, n) &&
+          !o.o(e, n) &&
           Object.defineProperty(e, n, { enumerable: !0, get: a[n] });
     }),
-    (b.f = {}),
-    (b.e = (e) =>
-      Promise.all(Object.keys(b.f).reduce((a, n) => (b.f[n](e, a), a), []))),
-    (b.u = (e) =>
+    (o.f = {}),
+    (o.e = (e) =>
+      Promise.all(Object.keys(o.f).reduce((a, n) => (o.f[n](e, a), a), []))),
+    (o.u = (e) =>
       "javascript/applications/store/" +
       ({
         40: "steamawardsvote",
@@ -321,7 +321,7 @@ var CLSTAMP = "8897203";
         291: "5d6c3ed79d04f457e023",
         298: "49ff6dd34f2615fc80d8",
         319: "a8cf13351fa0a774d63c",
-        344: "95b7550a32c811920611",
+        344: "1100975a2f4b5f8e25b9",
         388: "645bedb9c8468b9718f9",
         460: "82571d7875dea9c593c3",
         484: "c6f012d077297f20f800",
@@ -331,13 +331,13 @@ var CLSTAMP = "8897203";
         591: "70643159713404b1f0d4",
         627: "97773ec662a1765285fa",
         639: "2192100acdc52c74da0c",
-        647: "a155157bcf87b08054bf",
-        680: "3667800e43f5f013164d",
+        647: "81efd6945ca550ca2364",
+        680: "63d218c03fbf0e36e1ce",
         686: "712c74fea4d5a097bba4",
-        691: "431ca3c45c36feb43c17",
-        698: "a04cc13930deb8534bbb",
-        727: "ccb6ccc0b35f6bd38c37",
-        799: "d8bf754a1c735e72b026",
+        691: "d5de3f2308d2c1319763",
+        698: "5df710d3756c30f14ee6",
+        727: "9c9b3dd39293bcdcd67e",
+        799: "72951a561cbcd3d639d1",
         819: "1ca3cf2e6b44f54c81d7",
         874: "85d13a9fc16a70c2e3d9",
         886: "7a1a53ca0dac712736bd",
@@ -345,14 +345,14 @@ var CLSTAMP = "8897203";
         938: "d117e3edfcb523a3156d",
         988: "50d727f4882b13847598",
         1012: "07988dd985032b4d589f",
-        1021: "03069e0609d4e415db0a",
+        1021: "733da9473f382d684407",
         1043: "56659231420cca86300f",
-        1117: "80da5da926c94633ceba",
-        1162: "63a490124ec7814fbc43",
+        1117: "f88e7ea3d0c964adb635",
+        1162: "53a3e1dbd4018f56febb",
         1164: "074e4f118c8bf0d088b1",
         1213: "b7ce0b893b90735b91aa",
         1236: "b017b98d3bca5131fba9",
-        1313: "b4540097bafa3416cb48",
+        1313: "3b6e6b8e7d6d3304c68e",
         1503: "4aa97b9e5c075e8c431c",
         1712: "ad058e4fce0ae57ec9a0",
         1722: "fad30277644854aa9604",
@@ -361,43 +361,43 @@ var CLSTAMP = "8897203";
         1918: "e85db107548b1db1859a",
         2029: "ed8374477ac487741861",
         2136: "6da8c695dd691627ead4",
-        2276: "729544501b9c6e0461cf",
+        2276: "9a8cd3eb3a4ae762f138",
         2301: "4f2aaf88f7ddd4a3ba28",
         2306: "70cf206bb43caf3f0e25",
         2318: "36f6566b524fb93e57a7",
         2431: "e0ddd7268d4abe190256",
-        2443: "4067b4156166f5756532",
+        2443: "4c1fa5d27b884caa978f",
         2448: "98d2484ee0563f242804",
-        2537: "c1ff0992fb0619c3e2d3",
+        2537: "d70a5b94715d387549c7",
         2581: "074310775b4554ba3be5",
         2601: "ef3da0485d9c2de5499e",
         2681: "46cc1e31e9076307f34b",
         2706: "1bd8a6a887f233511739",
         2730: "9bacf5f280a5359fe694",
-        2767: "0caf7251141638033854",
+        2767: "a1ce670ce43daa83d16d",
         2776: "c1b1a32dcc866dab9df7",
         2814: "f4e64c4f5c3a1c33721c",
         2824: "604eead12adb1df0e017",
-        2844: "60af53d62a4646c3797b",
-        2848: "a79ee3222b59d7a3b50e",
+        2844: "2769b5226931b5d0ec79",
+        2848: "bf39b237aceef22f06dc",
         2849: "3140622edc63af15d92e",
         2908: "cc474b3b992c417f458f",
-        2942: "cf5ebaa18d8318f45c21",
+        2942: "327176ba3bb677f4870f",
         3035: "a9c402defb1322f48941",
         3068: "b7acdf40e37f0ba6d0d4",
-        3112: "e899ac3d57e606907b42",
+        3112: "566e546e622067c749e9",
         3143: "4925b250da264491d35e",
         3174: "41bec3b51f5fab007057",
-        3185: "0d1538930d95e5ec1fb2",
+        3185: "9a6f2cf90b599c805067",
         3207: "81bc78ff27590c7dbac2",
         3238: "8f9d21b64c4f8ad667d0",
         3243: "fc19ee2e98228834b1f2",
         3245: "b2541292e1bdc82d6ca1",
-        3252: "0e173071e94e25adeb2e",
-        3277: "a751e7ce852c80afc604",
+        3252: "e4e152d0277bd3b156a8",
+        3277: "15f1733ca10d2ea62a9d",
         3313: "d5c330b3b097614ea35f",
         3321: "efd148350cbcf496ec0d",
-        3323: "db076d8b776cdba4876f",
+        3323: "ba5583b418aeca3c10e9",
         3344: "95dd96dfc3a781c939ef",
         3359: "76136ab522ed5cdb4c8a",
         3363: "c0657c747fa8063a4565",
@@ -409,30 +409,30 @@ var CLSTAMP = "8897203";
         3425: "1c17d4cea6dd2f53a1c2",
         3453: "8d2e83423ab431f48e41",
         3540: "4ba1bc126862763a22fa",
-        3557: "772edbdef5e1b7d0f9e0",
+        3557: "551186ba7699ba018e29",
         3634: "a98d36593e9f1d43de25",
         3661: "51247272a7e6f22b072d",
         3685: "7896098ade5695d101df",
         3711: "60e8bbfc1e433f9a9031",
         3759: "f16b144790ba94a71c37",
         3766: "26885e48dbbf2b4acbc2",
-        3768: "27fab0307bcff2a223ce",
+        3768: "32651ae2cb6b073db196",
         3805: "adaf4ebd4a31338ab272",
         3807: "e151a4654de3652229c8",
         3934: "7024149ba49da9d486da",
         3935: "ac1d8f14dd1bf812271d",
         4033: "8f40b856bcd4b4d7f650",
         4103: "a4eb1ee72718a7bf1c88",
-        4108: "b63ec0ec9797990e3c05",
+        4108: "4ed2927ef04791a96cfb",
         4118: "da4addb2f9c6db0b0ffb",
         4158: "64ee4b40e7cf5afda7b6",
         4166: "2196da9e1218f80fd72f",
         4171: "fc511a4fa0eebb4e8739",
-        4189: "32a1be92e25eb38d3c33",
+        4189: "b1065c2015366e3d18f7",
         4199: "4f92c8a0cdf60482c18c",
         4238: "873262d53951cc5665bd",
         4248: "24d4d76499a4dd26a929",
-        4297: "2f626729d1d212a345f8",
+        4297: "033e9674bc2542cbcde1",
         4385: "d370eaa8c3ca22554c90",
         4447: "5d3ace3304722dd186c8",
         4457: "b456bb0013acda3752c8",
@@ -442,45 +442,45 @@ var CLSTAMP = "8897203";
         4566: "0e4af289506346794988",
         4601: "2e4419518cfff7c2ea80",
         4682: "cb7c7c0e0cf3d9499b31",
-        4722: "4e1841236c193f604c3a",
+        4722: "dfcce1ac9f5abd7dd585",
         4801: "20cb3c7b30413242fd4d",
         4812: "d4df11a7aff07060ace9",
-        4823: "b4495f2de986614811de",
-        4860: "44265784e5fbd8b39888",
+        4823: "4555abd6c32c8ef37481",
+        4860: "91bacc56843c5c87e518",
         4929: "deef5c040fa6e28f22c9",
         4961: "4bba87ffdd1d61c7e7d3",
-        4964: "c6bfe2790b7d1fbe682e",
+        4964: "dbf5994a641fba1d4784",
         4965: "e137de29cfd60822137a",
-        4970: "9d4fe862eedf8b5ad7d2",
+        4970: "eb0ed76f458491f02b8b",
         5024: "173d60ebaa0408c01026",
         5257: "bacb32e0668815e9cdae",
         5331: "834792dd0aeba7ad1086",
         5414: "95b7e118c5b336b67326",
-        5438: "98c6601fa20e151f4195",
+        5438: "b1a34b6487b8b99e08a5",
         5567: "2db7004f895d81b20c58",
         5575: "71baf24a0ff898fbceda",
-        5625: "e9f22c330ef77113a085",
+        5625: "f7fcf1695bfb01832e46",
         5800: "e8f68087020be3475099",
         5817: "7a120b0a2ab0137c870b",
         5821: "984bb1040c19635c4e98",
         5831: "633223b2c0769ce1a679",
-        5849: "bb1cc34a1a0099955342",
+        5849: "0717c400e4a4c0e75ee9",
         5855: "420f2219c6fcff783eaa",
-        5925: "14a435ec4a774e42b6e1",
-        5933: "9d816ff3f09e555d6450",
+        5925: "d8a2b4fc9ba2742fa8ca",
+        5933: "6e18d582f7b440aaaf0c",
         5944: "b26f0ec0e199f27f02df",
-        5948: "02a6d986d5e0392d62ef",
+        5948: "d2e8a1338ed2ffb510da",
         6002: "371287ccc5e460037b82",
-        6007: "4a354adcb4dd4b7a6809",
+        6007: "a56385c46e1b8e89a6cc",
         6019: "febcb927ca907ed77ae9",
         6035: "4dad63b8f2767795376b",
-        6087: "74d40a396bb295d975ef",
+        6087: "4d86a17a11fe63a3f937",
         6099: "b0609819d693ff5e6b1f",
         6169: "4d54ef068feef0ab6497",
         6470: "4b5c03c8c1710ee35209",
         6481: "f60cbdb34282e805d5a8",
-        6492: "9255af703692811d0e7c",
-        6542: "6aa4f9c4e70f49a24afd",
+        6492: "2dc7cec614e5dcbe778c",
+        6542: "d7888f318334296d051a",
         6571: "17287d25be7cdf695f68",
         6693: "63ad91d58170230dc84d",
         6762: "7651c5171f7a64459d7a",
@@ -500,7 +500,7 @@ var CLSTAMP = "8897203";
         7161: "f5e0736200511a4cb8eb",
         7181: "2a9e80c468a3a26957b4",
         7200: "de55e3720e4bee45a995",
-        7236: "e79f4c33295f315af720",
+        7236: "b72fe6b1cf27bec36361",
         7247: "4ed17150d6dd88abb853",
         7254: "5b7e2867a3a4fec5726e",
         7280: "e53c01d03dff3c63dbff",
@@ -510,35 +510,35 @@ var CLSTAMP = "8897203";
         7533: "921eec24e54a4a4372e8",
         7548: "64c0af85afdd27382412",
         7586: "b3be29dbe9d0cb55d48b",
-        7602: "2a5169ad2f41aad8580a",
+        7602: "37503162517a80c9847a",
         7606: "30a3003775bb7163b02f",
         7608: "b3aa16e398f84185ce2e",
         7695: "3eebddbb6c214077bfe1",
         7724: "62ded6370eda523dd75a",
         7734: "674a7c502dce75bd2fdc",
-        7781: "fc7801cfdd068a0ccf5a",
+        7781: "4c370255e6cc50af3671",
         7814: "869a65ebc0909a9733af",
         7871: "f8001293b6a9b88fe5e0",
-        7890: "316d48f5b6618ee089a5",
+        7890: "9bebe902eff5c2071e3f",
         7934: "a7189a0594d0e25e1e23",
         7942: "49c6fde8b0084ce41b40",
-        7951: "29d103d1f28c4bf7f46e",
+        7951: "7da5010b2faea6865de5",
         7952: "2427041da1c36f76f959",
-        7975: "99f4a06d3498b0736099",
+        7975: "638527edc959a2c11248",
         8001: "8fb7df1113425bc050d0",
         8015: "6d4dbc06e1ed4a215116",
         8038: "220448c3d15e0135c528",
         8051: "17d7111b657a449161b5",
         8087: "e416a4a97621b0a81fc7",
         8155: "4fc3d75ea911a78538a7",
-        8168: "5fa83bec19cdcb3452fd",
+        8168: "17a5c20e6019e1dd56b8",
         8359: "40701b803819d5a00d28",
-        8385: "601c44c8b156e4ac5cd5",
-        8399: "83fc0e68256cf514483a",
+        8385: "6788aa3cf1a83f095ab5",
+        8399: "ea078338ff4a199f4383",
         8436: "4b5ea1ef3c8e8658e064",
         8443: "4815fe5c8367b1755034",
         8589: "2bc29cbf0bf56bbf53aa",
-        8754: "ff58c9a3ef53e035c8d4",
+        8754: "15d7d4cc167e1707645f",
         8767: "be7d03764f2a6b932f52",
         8774: "180f990527cb0aaa93ac",
         8820: "1b0bf7f28457f26ab2d6",
@@ -549,18 +549,18 @@ var CLSTAMP = "8897203";
         8993: "3e366ba95d755a78a8ec",
         8994: "bdc8b20479f09fecdb23",
         9046: "a2bf9beb73b025b5a012",
-        9062: "1bfeecee6bdc1da3e511",
+        9062: "fb2565f4c3cd3fd02a99",
         9177: "fc36cd4cbcb4c87d1986",
         9197: "86f6bcc5d096d0bf0d3b",
         9202: "4756dcf6548ec373b77b",
         9424: "b2fd7a2d61c6e49d9951",
         9429: "ed8945fea7c8820014f6",
-        9431: "407aae2a977e7897656c",
-        9568: "72d28f7952c579d7108b",
-        9663: "c1a66b9902013862e6fd",
+        9431: "a848baf2390bf0e8cbcb",
+        9568: "5f6128f8224d3930cf8d",
+        9663: "cbf53f29b406b2fc56df",
         9682: "a8a90cfb916c1132ccb5",
         9702: "032353180a759e198a0a",
-        9753: "27e7106e4111f574e010",
+        9753: "7a7963c34df7873e5561",
         9766: "15948c5efdc437742490",
         9788: "3ef8afe78afe71def169",
         9803: "a7e3b475905c5bbb387f",
@@ -569,10 +569,10 @@ var CLSTAMP = "8897203";
         9899: "7ed8cb862fc309e14cc7",
         9903: "3f33786bf1e501553fb0",
         9919: "9e9efb89c425708e56fd",
-        9980: "c8d553c90afd192013d1",
+        9980: "c01b754042134cbb1998",
         9994: "09a4c67edf7a9be2fc16",
       }[e]),
-    (b.miniCssF = (e) =>
+    (o.miniCssF = (e) =>
       "css/applications/store/" +
       ({
         40: "steamawardsvote",
@@ -644,7 +644,7 @@ var CLSTAMP = "8897203";
         9702: "3f63c9da7911b0c5c7b0",
         9788: "62ab65874cf8e4e802cb",
       }[e]),
-    (b.g = (function () {
+    (o.g = (function () {
       if ("object" == typeof globalThis) return globalThis;
       try {
         return this || new Function("return this")();
@@ -652,13 +652,13 @@ var CLSTAMP = "8897203";
         if ("object" == typeof window) return window;
       }
     })()),
-    (b.o = (e, a) => Object.prototype.hasOwnProperty.call(e, a)),
+    (o.o = (e, a) => Object.prototype.hasOwnProperty.call(e, a)),
     (s = {}),
     (d = "store:"),
-    (b.l = (e, a, n, c) => {
+    (o.l = (e, a, n, c) => {
       if (s[e]) s[e].push(a);
       else {
-        var f, o;
+        var f, b;
         if (void 0 !== n)
           for (
             var r = document.getElementsByTagName("script"), i = 0;
@@ -675,10 +675,10 @@ var CLSTAMP = "8897203";
             }
           }
         f ||
-          ((o = !0),
+          ((b = !0),
           ((f = document.createElement("script")).charset = "utf-8"),
           (f.timeout = 120),
-          b.nc && f.setAttribute("nonce", b.nc),
+          o.nc && f.setAttribute("nonce", o.nc),
           f.setAttribute("data-webpack", d + n),
           (f.src = e)),
           (s[e] = [a]);
@@ -699,23 +699,23 @@ var CLSTAMP = "8897203";
           );
         (f.onerror = l.bind(null, f.onerror)),
           (f.onload = l.bind(null, f.onload)),
-          o && document.head.appendChild(f);
+          b && document.head.appendChild(f);
       }
     }),
-    (b.r = (e) => {
+    (o.r = (e) => {
       "undefined" != typeof Symbol &&
         Symbol.toStringTag &&
         Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
-    (b.nmd = (e) => ((e.paths = []), e.children || (e.children = []), e)),
-    (b.p = ""),
+    (o.nmd = (e) => ((e.paths = []), e.children || (e.children = []), e)),
+    (o.p = ""),
     (() => {
       if ("undefined" != typeof document) {
         var e = (e) =>
             new Promise((a, n) => {
-              var s = b.miniCssF(e),
-                d = b.p + s;
+              var s = o.miniCssF(e),
+                d = o.p + s;
               if (
                 ((e, a) => {
                   for (
@@ -751,22 +751,22 @@ var CLSTAMP = "8897203";
                         s();
                       else {
                         var f = n && n.type,
-                          b = (n && n.target && n.target.href) || a,
-                          o = new Error(
+                          o = (n && n.target && n.target.href) || a,
+                          b = new Error(
                             "Loading CSS chunk " +
                               e +
                               " failed.\n(" +
                               f +
                               ": " +
-                              b +
+                              o +
                               ")",
                           );
-                        (o.name = "ChunkLoadError"),
-                          (o.code = "CSS_CHUNK_LOAD_FAILED"),
-                          (o.type = f),
-                          (o.request = b),
+                        (b.name = "ChunkLoadError"),
+                          (b.code = "CSS_CHUNK_LOAD_FAILED"),
+                          (b.type = f),
+                          (b.request = o),
                           c.parentNode && c.parentNode.removeChild(c),
-                          d(o);
+                          d(b);
                       }
                     }),
                   (c.href = a),
@@ -776,7 +776,7 @@ var CLSTAMP = "8897203";
               })(e, d, null, a, n);
             }),
           a = { 6700: 0 };
-        b.f.miniCss = (n, s) => {
+        o.f.miniCss = (n, s) => {
           a[n]
             ? s.push(a[n])
             : 0 !== a[n] &&
@@ -832,20 +832,20 @@ var CLSTAMP = "8897203";
     })(),
     (() => {
       var e = { 6700: 0 };
-      (b.f.j = (a, n) => {
-        var s = b.o(e, a) ? e[a] : void 0;
+      (o.f.j = (a, n) => {
+        var s = o.o(e, a) ? e[a] : void 0;
         if (0 !== s)
           if (s) n.push(s[2]);
           else if (/^(3375|6700)$/.test(a)) e[a] = 0;
           else {
             var d = new Promise((n, d) => (s = e[a] = [n, d]));
             n.push((s[2] = d));
-            var c = b.p + b.u(a),
+            var c = o.p + o.u(a),
               f = new Error();
-            b.l(
+            o.l(
               c,
               (n) => {
-                if (b.o(e, a) && (0 !== (s = e[a]) && (e[a] = void 0), s)) {
+                if (o.o(e, a) && (0 !== (s = e[a]) && (e[a] = void 0), s)) {
                   var d = n && ("load" === n.type ? "missing" : n.type),
                     c = n && n.target && n.target.src;
                   (f.message =
@@ -861,19 +861,19 @@ var CLSTAMP = "8897203";
             );
           }
       }),
-        (b.O.j = (a) => 0 === e[a]);
+        (o.O.j = (a) => 0 === e[a]);
       var a = (a, n) => {
           var s,
             d,
-            [c, f, o] = n,
+            [c, f, b] = n,
             r = 0;
           if (c.some((a) => 0 !== e[a])) {
-            for (s in f) b.o(f, s) && (b.m[s] = f[s]);
-            if (o) var i = o(b);
+            for (s in f) o.o(f, s) && (o.m[s] = f[s]);
+            if (b) var i = b(o);
           }
           for (a && a(n); r < c.length; r++)
-            (d = c[r]), b.o(e, d) && e[d] && e[d][0](), (e[d] = 0);
-          return b.O(i);
+            (d = c[r]), o.o(e, d) && e[d] && e[d][0](), (e[d] = 0);
+          return o.O(i);
         },
         n = (self.webpackChunkstore = self.webpackChunkstore || []);
       n.forEach(a.bind(null, 0)), (n.push = a.bind(null, n.push.bind(n)));

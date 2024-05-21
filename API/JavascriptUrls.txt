@@ -167,6 +167,7 @@ ${COMMUNITY_BASE_URL}chat
 ${COMMUNITY_BASE_URL}chat/
 ${COMMUNITY_BASE_URL}chat/invite/${}
 ${COMMUNITY_BASE_URL}comment/${}/formattinghelp${_ ? "?ajax=1" : ""}
+${COMMUNITY_BASE_URL}demos/ajaxgetappdemoinfo
 ${COMMUNITY_BASE_URL}discussions
 ${COMMUNITY_BASE_URL}economy/image/${}/512x512
 ${COMMUNITY_BASE_URL}economy/profilebackground/items/${appid}/${item_image_large}?size=320x200
@@ -971,7 +972,7 @@ ${PARTNER_BASE_URL}doc/store/discounting/csv
 ${PARTNER_BASE_URL}doc/store/pricing
 ${PARTNER_BASE_URL}doc/store/pricing#5
 ${PARTNER_BASE_URL}doc/store/pricing/csv
-${PARTNER_BASE_URL}doc/store/promo
+${PARTNER_BASE_URL}doc/store/promo/${}_page
 ${PARTNER_BASE_URL}doc/store/release_dates
 ${PARTNER_BASE_URL}financial/ajaxgetpartnersummary
 ${PARTNER_BASE_URL}gfxproxy/gfx/apps/${}/${}
@@ -2345,6 +2346,7 @@ https://help.steampowered.com/ticketmaster/AjaxGetQuickText/
 https://help.steampowered.com/ticketmaster/AjaxGetQuickTextRevisionHistory/
 https://help.steampowered.com/ticketmaster/AjaxGetTicketSubmissionForm/
 https://help.steampowered.com/ticketmaster/AjaxMarkHelpRequestAsViewed/
+https://help.steampowered.com/ticketmaster/AjaxPreloadTicket/${strTicketRef}
 https://help.steampowered.com/ticketmaster/AjaxSearchFAQs
 https://help.steampowered.com/ticketmaster/AjaxSearchForAgentByName
 https://help.steampowered.com/ticketmaster/AjaxSearchForAppByName
@@ -2354,6 +2356,7 @@ https://help.steampowered.com/ticketmaster/AjaxSetTicketLanguageDialog/
 https://help.steampowered.com/ticketmaster/AjaxTranslateHelpRequest
 https://help.steampowered.com/ticketmaster/AjaxWatchHelpRequest/
 https://help.steampowered.com/ticketmaster/ticket/${strNextTicket}
+https://help.steampowered.com/ticketmaster/ticket/${strTicketRef}
 https://help.steampowered.com/wizard/${method}
 https://help.steampowered.com/wizard/${strSearchBaseURL}
 https://help.steampowered.com/wizard/${wizard_url}

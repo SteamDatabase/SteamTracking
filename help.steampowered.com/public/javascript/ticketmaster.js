@@ -1916,6 +1916,7 @@ function InitTicketNavigators( strCurrentTicket, strTicketAction )
 {
 	var strNextTicket = NextPrev.GetNextRequest( strCurrentTicket );
 	var strPrevTicket = NextPrev.GetPrevRequest( strCurrentTicket );
+	NextPrev.sCurrentTicket = strCurrentTicket;
 
 	if ( !strNextTicket && !strPrevTicket )
 	{
@@ -1958,9 +1959,79 @@ function SetNextTicket( strCurrentTicket )
 	}
 }
 
+function FillTicketQueueLinks( strCurrentTicket )
+{
+	var elQueue = $J( '#ticket_queue' );
+	var vecRequests = NextPrev.GetHelpRequests();
+	for ( var i = 0; i < vecRequests.length; i++ )
+	{
+		PreloadTicket( vecRequests[i] );
+		if ( vecRequests[i] != strCurrentTicket )
+		{
+			var strStyleDisabled = !NextPrev.HasPagePreloaded( vecRequests[i] ) ? 'disabled' : '';
+			var $elTicket = elQueue.append( '<a class="' + strStyleDisabled + ' ticket_queue_link" data-ticket="' + vecRequests[i] + '" href="javascript:LoadPreloadedTicket( \'' + vecRequests[i] + '\')">' + vecRequests[i] + '</a>' );
+		}
+		else
+		{
+			var $elTicket = elQueue.append( '<span data-ticket="' + strCurrentTicket + '" class="ticket_queue_link current_queue_pos">' + vecRequests[i] + '</span>' );
+		}
+	}
+
+	if ( vecRequests.length > 0 )
+	{
+		$J( '#ticket_queue_cont' ).show();
+		NextPrev.EnableKeyboardNav( true );
+	}
+}
+
+function PreloadTicket( strTicketRef )
+{
+	if ( !NextPrev.HasPagePreloaded( strTicketRef ) )
+	{
+		$J.ajax({
+			type: "GET",
+			url: "https://help.steampowered.com/ticketmaster/AjaxPreloadTicket/" + strTicketRef,
+		})
+			.fail( function( xhr )
+			{
+				console.log( xhr );
+				ShowAlertDialog( 'Ticketmaster', 'There was an error pre-loading ticket reference:' + strTicketRef ).done( function() { location.reload(); } );
+			})
+			.done( function( data )
+			{
+				NextPrev.SetPagePreload( strTicketRef, data.html );
+				console.log( 'Preloaded: ' + strTicketRef );
+				$J("#ticket_queue").find("[data-ticket='" + strTicketRef + "']").removeClass( 'disabled' );
+			});
+	}
+}
+
+function LoadNextPreloadedTicket( strTicketRef )
+{
+	LoadPreloadedTicket( NextPrev.GetNextRequest( strTicketRef ) );
+}
+
+function LoadPreviousPreloadedTicket( strTicketRef )
+{
+	LoadPreloadedTicket( NextPrev.GetPrevRequest( strTicketRef ) );
+}
+
+function LoadPreloadedTicket( strTicketRef )
+{
+	if ( strTicketRef && NextPrev.HasPagePreloaded( strTicketRef ) )
+	{
+		$J("#ticket_details_container").html( NextPrev.GetPagePreload( strTicketRef ) );
+		history.replaceState( {}, '', 'https://help.steampowered.com/ticketmaster/ticket/' + strTicketRef );
+	}
+}
+
 // next/previous related functions
 var NextPrev = {
 	s_strKey: 'nextprev_requests',
+	sCurrentTicket: null,
+	mapTickets: new Map(),
+
+	bEnableKeyNav: false,
 
 	GetHelpRequests: function()
 	{
@@ -1978,6 +2049,53 @@ var NextPrev = {
 	ClearHelpRequests: function()
 	{
 		sessionStorage.removeItem( NextPrev.s_strKey );
+	},
+
+	EnableKeyboardNav: function( bEnable )
+	{
+		NextPrev.bEnableKeyNav = bEnable;
+		$J( window ).off( "keyup", NextPrev.HandleKeyboardNav );
+		if ( bEnable )
+			$J( window ).on( "keyup", NextPrev.HandleKeyboardNav );
+	},
+
+	HandleKeyboardNav: function( event )
+	{
+		if ($J(event.target).closest("input")[0]) {
+			return;
+		}
+
+		if ($J(event.target).closest("textarea")[0]) {
+			return;
+		}
+
+		var key = event.which;
+		if ( key == 78 )
+		{
+			LoadNextPreloadedTicket( NextPrev.sCurrentTicket );
+		}
+		else if ( key == 66 )
+		{
+			LoadPreviousPreloadedTicket( NextPrev.sCurrentTicket );
+		}
+	},
+
+	HasPagePreloaded: function( strTicketRef )
+	{
+		return NextPrev.mapTickets.has( strTicketRef )
+	},
+
+	SetPagePreload: function( strTicketRef, strHTML )
+	{
+		if ( !NextPrev.mapTickets.has( strTicketRef ) )
+		{
+			NextPrev.mapTickets.set( strTicketRef, strHTML );
+		}
+	},
+
+	GetPagePreload: function( strTicketRef )
+	{
+		return NextPrev.mapTickets.get( strTicketRef );
 	},
 
 	GetNextRequest : function( strTicket )
