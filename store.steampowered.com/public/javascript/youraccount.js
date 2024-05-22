@@ -1,13 +1,13 @@
 
 function ReportYourAccountJSError( message, e )
 {
-	try 
+	try
 	{
 		if (typeof e == 'string')
     		e = new Error(e);
-    		
+
 		ReportError( '/public/javascript/youraccount.js?l=english', message, message+":\n\n  Exception: "+e.name+" - "+e.message+"\n" );
-	} catch( e ) 
+	} catch( e )
 	{
 			}
 }
@@ -17,8 +17,8 @@ function ShowUpdateSubscriptionDialog(agreementid)
 {
 	$('link_subscription_'+agreementid).style.visibility = 'hidden';
 	$('update_subscription_'+agreementid).style.display = 'block';
-	
-	new Effect.Highlight( 'update_subscription_'+agreementid, { endcolor : '#000000', startcolor : '#ff9900' } );	
+
+	new Effect.Highlight( 'update_subscription_'+agreementid, { endcolor : '#000000', startcolor : '#ff9900' } );
 }
 
 function AbortUpdateSubscription(agreementid)
@@ -32,7 +32,7 @@ var g_bUpdateSubscriptionRunning = false;
 function UpdateSubscription(agreementid, cancelTerms, bBillingAgreement)
 {
 	var selection = $$('input:checked[type="radio"][name="update_subscription_'+agreementid+'_option"]');
-	
+
 	var packageid = '';
 	if ( selection )
 	{
@@ -41,21 +41,20 @@ function UpdateSubscription(agreementid, cancelTerms, bBillingAgreement)
 
 	if ( packageid == '' )
 		return;
-		
+
 		if( g_bUpdateSubscriptionRunning )
 		return;
 
-	try 
+	try
 	{
 				g_bUpdateSubscriptionRunning = true;
 
-		new Ajax.Request('https://store.steampowered.com/account/updatesubscription/',
+		new Ajax.Request('https://checkout.steampowered.com/recurringsubscription/updatesubscription/',
 		{
 		    method:'post',
-		    parameters: { 
+		    parameters: {
 				'agreementid' : agreementid,
-				'packageid' : packageid,
-			    'sessionid' : g_sessionID
+				'packageid' : packageid
 			},
 		    onSuccess: function(transport){
 		    	g_bUpdateSubscriptionRunning = false;
@@ -87,7 +86,7 @@ function UpdateSubscription(agreementid, cancelTerms, bBillingAgreement)
 		      	   		return;
 		      	   	}
 			  	}
-			  	
+
 								OnUpdateSubscriptionFailure( agreementid, packageid == -1 );
 		    },
 		    onFailure: function(){
@@ -95,8 +94,8 @@ function UpdateSubscription(agreementid, cancelTerms, bBillingAgreement)
 				OnUpdateSubscriptionFailure( agreementid, packageid == -1 );
 			}
 		});
-	} 
-	catch(e) 
+	}
+	catch(e)
 	{
 		ReportYourAccountJSError( 'Failed making AJAX call to UpdateSubscription', e );
 	}
@@ -105,7 +104,7 @@ function UpdateSubscription(agreementid, cancelTerms, bBillingAgreement)
 
 function OnUpdateSubscriptionSuccess( agreementid, cancelTerms, bBillingAgreement, results )
 {
-	try 
+	try
 	{
 		if ( $('transaction_price_'+agreementid) )
 			$('transaction_price_'+agreementid).innerHTML = results.price;
@@ -131,9 +130,9 @@ function OnUpdateSubscriptionSuccess( agreementid, cancelTerms, bBillingAgreemen
 			$('update_subscription_'+agreementid).style.display = 'none';
 			$('transaction_due_date_'+agreementid).innerHTML = results.next_bill_date;
 		}
-		new Effect.Highlight( 'update_subscription_'+agreementid, { endcolor : '#000000', startcolor : '#ff9900' } );	
-	} 
-	catch( e ) 
+		new Effect.Highlight( 'update_subscription_'+agreementid, { endcolor : '#000000', startcolor : '#ff9900' } );
+	}
+	catch( e )
 	{
 		ReportYourAccountJSError( 'Failed in OnUpdateSubscriptionSuccess()', e );
 	}
@@ -141,7 +140,7 @@ function OnUpdateSubscriptionSuccess( agreementid, cancelTerms, bBillingAgreemen
 
 function OnUpdateSubscriptionFailure( agreementid, cancel )
 {
-	try 
+	try
 	{
 		if ( cancel )
 		{
@@ -151,9 +150,9 @@ function OnUpdateSubscriptionFailure( agreementid, cancel )
 		{
 			$('update_subscription_'+agreementid).innerHTML = 'There was a problem updating this subscription.<br/>Please contact <a href="%s">Steam Support</a>';
 		}
-		new Effect.Highlight( 'update_subscription_'+agreementid, { endcolor : '#000000', startcolor : '#ff9900' } );	
-	} 
-	catch (e) 
+		new Effect.Highlight( 'update_subscription_'+agreementid, { endcolor : '#000000', startcolor : '#ff9900' } );
+	}
+	catch (e)
 	{
 		ReportYourAccountJSError( 'Failed in agreementid()', e );
 	}
@@ -168,8 +167,8 @@ function ShowRenewSubscriptionDialog(agreementid)
 {
 	$('link_subscription_'+agreementid).style.visibility = 'hidden';
 	$('renew_subscription_'+agreementid).style.display = 'block';
-	
-	new Effect.Highlight( 'renew_subscription_'+agreementid, { endcolor : '#000000', startcolor : '#ff9900' } );	
+
+	new Effect.Highlight( 'renew_subscription_'+agreementid, { endcolor : '#000000', startcolor : '#ff9900' } );
 }
 
 
@@ -186,16 +185,15 @@ function RenewSubscription(agreementid, duedate, terms, total, bBillingAgreement
 		if( g_bRenewSubscriptionRunning )
 		return;
 
-	try 
+	try
 	{
 				g_bRenewSubscriptionRunning = true;
 
-		new Ajax.Request('https://store.steampowered.com/account/renewsubscription/',
+		new Ajax.Request('https://checkout.steampowered.com/recurringsubscription/renewsubscription/',
 		{
 		    method:'post',
-		    parameters: { 
-				'agreementid' : agreementid,
-			    'sessionid' : g_sessionID
+		    parameters: {
+				'agreementid' : agreementid
 			},
 		    onSuccess: function(transport){
 		    	g_bRenewSubscriptionRunning = false;
@@ -218,7 +216,7 @@ function RenewSubscription(agreementid, duedate, terms, total, bBillingAgreement
 		      	   		return;
 		      	   	}
 			  	}
-			  	
+
 								OnRenewSubscriptionFailure( agreementid );
 		    },
 		    onFailure: function(){
@@ -226,8 +224,8 @@ function RenewSubscription(agreementid, duedate, terms, total, bBillingAgreement
 				OnRenewSubscriptionFailure( agreementid );
 			}
 		});
-	} 
-	catch(e) 
+	}
+	catch(e)
 	{
 		ReportYourAccountJSError( 'Failed making AJAX call to RenewSubscription', e );
 	}
@@ -236,7 +234,7 @@ function RenewSubscription(agreementid, duedate, terms, total, bBillingAgreement
 
 function OnRenewSubscriptionSuccess( agreementid, duedate, terms, total, bBillingAgreement )
 {
-	try 
+	try
 	{
 		$('transaction_due_date_'+agreementid).innerHTML = duedate;
 		if ( $('transaction_price_'+agreementid) )
@@ -250,9 +248,9 @@ function OnRenewSubscriptionSuccess( agreementid, duedate, terms, total, bBillin
 		{
 			$('renew_subscription_'+agreementid).innerHTML = 'This subscription has been renewed.';
 		}
-		new Effect.Highlight( 'renew_subscription_'+agreementid, { endcolor : '#000000', startcolor : '#ff9900' } );	
-	} 
-	catch( e ) 
+		new Effect.Highlight( 'renew_subscription_'+agreementid, { endcolor : '#000000', startcolor : '#ff9900' } );
+	}
+	catch( e )
 	{
 		ReportYourAccountJSError( 'Failed in OnRenewSubscriptionSuccess()', e );
 	}
@@ -260,12 +258,12 @@ function OnRenewSubscriptionSuccess( agreementid, duedate, terms, total, bBillin
 
 function OnRenewSubscriptionFailure( agreementid )
 {
-	try 
+	try
 	{
 		$('renew_subscription_'+agreementid).innerHTML = 'There was a problem renewing this subscription.<br/>Please contact <a href="http://support.steampowered.com/">Steam Support</a>';
-		new Effect.Highlight( 'renew_subscription_'+agreementid, { endcolor : '#000000', startcolor : '#ff9900' } );	
-	} 
-	catch (e) 
+		new Effect.Highlight( 'renew_subscription_'+agreementid, { endcolor : '#000000', startcolor : '#ff9900' } );
+	}
+	catch (e)
 	{
 		ReportYourAccountJSError( 'Failed in agreementid()', e );
 	}
@@ -274,8 +272,8 @@ function OnRenewSubscriptionFailure( agreementid )
 function ShowConfirmRemovePaymentMethodDialog()
 {
 	$('confirm_remove_card').style.display = 'block';
-	
-	new Effect.Highlight( 'confirm_remove_card', { endcolor : '#000000', startcolor : '#ff9900' } );	
+
+	new Effect.Highlight( 'confirm_remove_card', { endcolor : '#000000', startcolor : '#ff9900' } );
 }
 
 function UnIgnoreApp( element, unAppId, snr )
