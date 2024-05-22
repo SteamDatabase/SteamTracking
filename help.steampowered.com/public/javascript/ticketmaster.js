@@ -1986,8 +1986,10 @@ function FillTicketQueueLinks( strCurrentTicket )
 
 function PreloadTicket( strTicketRef )
 {
-	if ( !NextPrev.HasPagePreloaded( strTicketRef ) )
+	if ( !NextPrev.HasPagePreloaded( strTicketRef ) && !NextPrev.IsPagePreloading( strTicketRef ) )
 	{
+		// set empty so we dont try to load it multiple times if multiple requests
+		NextPrev.SetPagePreload( strTicketRef, 'loading' );
 		$J.ajax({
 			type: "GET",
 			url: "https://help.steampowered.com/ticketmaster/AjaxPreloadTicket/" + strTicketRef,
@@ -2069,12 +2071,12 @@ var NextPrev = {
 			return;
 		}
 
-		var key = event.which;
-		if ( key == 78 )
+		var key = event.key;
+		if ( key == 'n' )
 		{
 			LoadNextPreloadedTicket( NextPrev.sCurrentTicket );
 		}
-		else if ( key == 66 )
+		else if ( key == 'b' )
 		{
 			LoadPreviousPreloadedTicket( NextPrev.sCurrentTicket );
 		}
@@ -2082,12 +2084,17 @@ var NextPrev = {
 
 	HasPagePreloaded: function( strTicketRef )
 	{
-		return NextPrev.mapTickets.has( strTicketRef )
+		return NextPrev.mapTickets.has( strTicketRef ) && NextPrev.mapTickets.get( strTicketRef ) != 'loading';
+	},
+
+	IsPagePreloading: function( strTicketRef )
+	{
+		return 	NextPrev.mapTickets.get( strTicketRef ) == 'loading';
 	},
 
 	SetPagePreload: function( strTicketRef, strHTML )
 	{
-		if ( !NextPrev.mapTickets.has( strTicketRef ) )
+		if ( !NextPrev.mapTickets.has( strTicketRef ) || NextPrev.mapTickets.get( strTicketRef ) == 'loading' )
 		{
 			NextPrev.mapTickets.set( strTicketRef, strHTML );
 		}
@@ -2130,6 +2137,115 @@ var NextPrev = {
 		}
 
 		return null;
+	}
+};
+
+function InitPreapprovalQueue( txnID, accountID, strTicketRef )
+{
+	PreapprovalQueue.rgCurrentTicket.length = 0;
+	PreapprovalQueue.rgCurrentTicket.push( txnID );
+	PreapprovalQueue.rgCurrentTicket.push( accountID );
+	PreapprovalQueue.rgCurrentTicket.push( strTicketRef );
+
+	PreapprovalQueue.EnableKeyboardNav( true );
+	PreapprovalQueue.RenderQueue();
+}
+
+var PreapprovalQueue = {
+	mapApprovals: new Map(),
+	mapDenials: new Map(),
+	rgCurrentTicket: [],
+
+	bEnableKeyNav: false,
+
+	HandleTxn: function( bApprove, txnID, accountID, strTicketRef )
+	{
+		if ( bApprove )
+		{
+			PreapprovalQueue.mapDenials.delete( txnID );
+			PreapprovalQueue.mapApprovals.set( txnID, [ accountID, strTicketRef ] );
+		}
+		else
+		{
+			PreapprovalQueue.mapApprovals.delete( txnID );
+			PreapprovalQueue.mapDenials.set( txnID, [ accountID, strTicketRef ] );
+		}
+
+		PreapprovalQueue.RenderQueue();
+	},
+
+	EnableKeyboardNav: function( bEnable )
+	{
+		PreapprovalQueue.bEnableKeyNav = bEnable;
+		$J( window ).off( "keyup", PreapprovalQueue.HandleKeyboardNav );
+		if ( bEnable )
+			$J( window ).on( "keyup", PreapprovalQueue.HandleKeyboardNav );
+	},
+
+	HandleKeyboardNav: function( event )
+	{
+		if ($J(event.target).closest("input")[0]) {
+			return;
+		}
+
+		if ($J(event.target).closest("textarea")[0]) {
+			return;
+		}
+
+		var key = event.key;
+		if ( key == 'a' )
+		{
+			PreapprovalQueue.HandleTxn( true, PreapprovalQueue.rgCurrentTicket[0], PreapprovalQueue.rgCurrentTicket[1], PreapprovalQueue.rgCurrentTicket[2] );
+		}
+		else if ( key == 'f' )
+		{
+			PreapprovalQueue.HandleTxn( false, PreapprovalQueue.rgCurrentTicket[0], PreapprovalQueue.rgCurrentTicket[1], PreapprovalQueue.rgCurrentTicket[2] );
+		}
+	},
+
+	ResolveApprovals: function()
+	{
+		var approvals = Object.fromEntries(PreapprovalQueue.mapApprovals);
+		var denials = Object.fromEntries(PreapprovalQueue.mapDenials);
+
+		$J.ajax({
+			type: "POST",
+			url: "https://help.steampowered.com/ticketmaster/AjaxPreapproveTxns/",
+			data: {
+				approveTxns: JSON.stringify( approvals ),
+				denyTxns: JSON.stringify( denials )
+			}
+		})
+			.fail( function( xhr )
+			{
+				console.log( xhr );
+				console.log( 'fail' );
+			})
+			.done( function( data )
+			{
+				console.log( data );
+				console.log( 'done' )
+			});
+	},
+
+	RenderQueue: function()
+	{
+		var elApprovalQueue = $J( '.approved_queue' );
+		elApprovalQueue.empty();
+		var elDenialQueue = $J( '.denied_queue' );
+		elDenialQueue.empty();
+		var elHijackQueue = $J( '.hijacked_queue' );
+		elHijackQueue.empty();
+
+		PreapprovalQueue.mapApprovals.forEach(
+			function( value, key ) {
+				elApprovalQueue.append( '<div data-ticket="' + value[1] + '" class="">' + key + '</div>' );
+			} );
+
+		PreapprovalQueue.mapDenials.forEach(
+			function( value, key ) {
+				elDenialQueue.append( '<div data-ticket="' + value[1] + '" class="">' + key + '</div>' );
+			} );
 	}
 };
 
