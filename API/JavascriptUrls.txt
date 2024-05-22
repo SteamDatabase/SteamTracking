@@ -1091,6 +1091,7 @@ ${PARTNER_BASE_URL}promotion/planning/ajaxgetcategoryeditorapplist
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubapplist
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubstats
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubsummary
+${PARTNER_BASE_URL}promotion/planning/ajaxgetpromotionplanpackagesales
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetsalerankdashboard
 ${PARTNER_BASE_URL}promotion/planning/ajaxpostcontenthubstats
 ${PARTNER_BASE_URL}promotion/planning/ajaxuserwithreceivecommunications
