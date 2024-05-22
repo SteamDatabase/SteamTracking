@@ -62178,7 +62178,7 @@
           t.getMonth() - e.getMonth() + 12 * (t.getFullYear() - e.getFullYear())
         );
       }
-      var W = n(34819),
+      var W = n(2884),
         z = n(69176);
       function Z(e) {
         const t = (0, c.Qv)(e);
@@ -64292,7 +64292,7 @@
       }
       var rt = n(14609),
         ot = n(15690),
-        st = n(34819),
+        st = n(2884),
         ct = n(76330);
       const mt = 6;
       function dt(e) {
@@ -71316,7 +71316,7 @@
             (0, w.Xx)("#DailyDeals_UnsavedChanges"),
         });
       }
-      var pe = n(34819),
+      var pe = n(2884),
         _e = n(65311),
         he = n(14839),
         ge = n(13913),
@@ -72980,9 +72980,9 @@
         );
       }
     },
-    34819: (e, t, n) => {
+    2884: (e, t, n) => {
       "use strict";
-      n.d(t, { l4: () => J, S7: () => $, $t: () => te });
+      n.d(t, { l4: () => ie, S7: () => le, $t: () => oe });
       var a = n(76330),
         i = n(30750),
         l = n(47427),
@@ -73011,19 +73011,97 @@
         w = n(8062),
         P = n(46882);
       function T(e) {
+        const {
+          nNumDiscountDays: t,
+          strNumDaysString: n,
+          nTotalDiscountSalesUSD: a,
+          nPercentLift: i,
+          strPercentLift: r,
+          bPercentLiftIsDollar: o,
+        } = e;
+        return l.createElement(
+          "div",
+          { className: c().StatReportCtn },
+          l.createElement(
+            "div",
+            { className: c().Stat },
+            l.createElement("div", { className: c().BigStat }, t),
+            l.createElement(
+              "div",
+              { className: c().SmallText },
+              n || "Discount Days",
+            ),
+          ),
+          l.createElement(
+            "div",
+            { className: c().Stat },
+            l.createElement(
+              "div",
+              { className: c().BigStat },
+              "$",
+              a.toLocaleString(void 0, { maximumFractionDigits: 0 }),
+            ),
+            l.createElement("div", { className: c().SmallText }, "Total Sales"),
+          ),
+          o
+            ? l.createElement(
+                l.Fragment,
+                null,
+                void 0 !== i &&
+                  l.createElement(
+                    "div",
+                    { className: c().Stat },
+                    l.createElement(
+                      "div",
+                      { className: c().BigStat },
+                      "$",
+                      i.toLocaleString(void 0, { maximumFractionDigits: 0 }),
+                    ),
+                    l.createElement(
+                      "div",
+                      { className: c().SmallText },
+                      r || "Daily Avg.",
+                    ),
+                  ),
+              )
+            : l.createElement(
+                l.Fragment,
+                null,
+                void 0 !== i &&
+                  l.createElement(
+                    "div",
+                    { className: c().Stat },
+                    l.createElement(
+                      "div",
+                      { className: c().BigStat },
+                      (100 * i).toLocaleString(void 0, {
+                        maximumFractionDigits: 0,
+                      }),
+                      "%",
+                    ),
+                    l.createElement(
+                      "div",
+                      { className: c().SmallText },
+                      r || "Change in daily avg.",
+                    ),
+                  ),
+              ),
+        );
+      }
+      function N(e) {
         const { strDiscountEventID: t } = e,
           n = (0, A.K$)(t);
         return n && n.rgAppList && 0 != n.rgAppList.length
-          ? l.createElement(R, {
+          ? l.createElement(G, {
               oDiscountEvent: n.oDiscountEvent,
               rgAppList: n.rgAppList,
             })
           : null;
       }
-      const N = 365;
-      function R(e) {
+      const R = 365;
+      function G(e) {
         const { rgAppList: t, oDiscountEvent: n } = e,
-          a = (0, w.Aq)(N, t),
+          a = (0, w.Aq)(R, t),
           i = (0, w.dI)(n.start_date, n.end_date, t);
         if (!a || !i)
           return l.createElement(P.V, {
@@ -73032,57 +73110,19 @@
             position: "center",
           });
         const r = Math.max(1, Math.ceil((n.end_date - n.start_date) / 86400)),
-          o = a.GetTotalSummary().gross_sales_usd / N / 100,
+          o = a.GetTotalSummary().gross_sales_usd / R / 100,
           s = i.GetTotalSummary().gross_sales_usd / r / 100,
           m = i.GetTotalSummary().gross_sales_usd / 100,
           d = o > 0 ? s / o : 0;
         return l.createElement(
           "div",
           null,
-          l.createElement(
-            "div",
-            { className: c().StatReportCtn },
-            l.createElement(
-              "div",
-              { className: c().Stat },
-              l.createElement("div", { className: c().BigStat }, r),
-              l.createElement(
-                "div",
-                { className: c().SmallText },
-                "Discount Days",
-              ),
-            ),
-            l.createElement(
-              "div",
-              { className: c().Stat },
-              l.createElement(
-                "div",
-                { className: c().BigStat },
-                "$",
-                m.toLocaleString(void 0, { maximumFractionDigits: 0 }),
-              ),
-              l.createElement(
-                "div",
-                { className: c().SmallText },
-                "Total Discount Sales",
-              ),
-            ),
-            l.createElement(
-              "div",
-              { className: c().Stat },
-              l.createElement(
-                "div",
-                { className: c().BigStat },
-                (100 * d).toLocaleString(void 0, { maximumFractionDigits: 0 }),
-                "%",
-              ),
-              l.createElement(
-                "div",
-                { className: c().SmallText },
-                "Change in daily avg.",
-              ),
-            ),
-          ),
+          l.createElement("h3", null, "Discount Summary(with overcounting)"),
+          l.createElement(T, {
+            nNumDiscountDays: r,
+            nTotalDiscountSalesUSD: m,
+            nPercentLift: d,
+          }),
           l.createElement(
             "div",
             { className: c().IncreaseRateInfo },
@@ -73094,11 +73134,11 @@
           ),
         );
       }
-      var G = n(16783),
-        L = n(83190),
-        B = n(183),
-        x = n(60688);
-      function O(e) {
+      var L = n(16783),
+        B = n(83190),
+        x = n(183),
+        O = n(60688);
+      function M(e) {
         const { oEditablePlan: t } = e;
         return t.BHasArtworkOwner()
           ? t.BIsArtworkCompleted()
@@ -73107,11 +73147,11 @@
                 null,
                 l.createElement(
                   "div",
-                  { className: x.OwnerColCtn },
+                  { className: O.OwnerColCtn },
                   l.createElement(m.__, null, "Designer"),
                   l.createElement(
                     "div",
-                    { className: x.OwnerCtn },
+                    { className: O.OwnerCtn },
                     l.createElement(
                       "div",
                       null,
@@ -73120,7 +73160,7 @@
                   ),
                   l.createElement("br", null),
                   l.createElement(m.__, null, "Completed:"),
-                  l.createElement(J, { rtime: t.GetArtworkCompleteTime() }),
+                  l.createElement(ie, { rtime: t.GetArtworkCompleteTime() }),
                 ),
               )
             : l.createElement(
@@ -73128,7 +73168,7 @@
                 null,
                 l.createElement(
                   "div",
-                  { className: x.OwnerColCtn },
+                  { className: O.OwnerColCtn },
                   l.createElement(
                     m.__,
                     null,
@@ -73144,7 +73184,7 @@
                   ),
                   l.createElement(
                     "div",
-                    { className: x.OwnerCtn },
+                    { className: O.OwnerCtn },
                     l.createElement(
                       "div",
                       null,
@@ -73156,7 +73196,7 @@
                     {
                       onClick: (e) =>
                         (0, v.AM)(
-                          l.createElement(M, {
+                          l.createElement(F, {
                             oEditablePlan: t,
                             bTakeOwnership: !1,
                           }),
@@ -73170,7 +73210,7 @@
                     {
                       onClick: (e) =>
                         (0, v.AM)(
-                          l.createElement(U, { oEditablePlan: t }),
+                          l.createElement(H, { oEditablePlan: t }),
                           (0, D.RA)(e),
                         ),
                     },
@@ -73183,7 +73223,7 @@
               null,
               l.createElement(
                 "div",
-                { className: x.OwnerColCtn },
+                { className: O.OwnerColCtn },
                 l.createElement(
                   m.__,
                   null,
@@ -73202,7 +73242,7 @@
                   {
                     onClick: (e) =>
                       (0, v.AM)(
-                        l.createElement(M, {
+                        l.createElement(F, {
                           oEditablePlan: t,
                           bTakeOwnership: !0,
                         }),
@@ -73214,9 +73254,9 @@
               ),
             );
       }
-      function M(e) {
+      function F(e) {
         const { oEditablePlan: t, closeModal: n, bTakeOwnership: a } = e;
-        return l.createElement(L.P, {
+        return l.createElement(B.P, {
           strTitle: a
             ? "Claim Ownership of Production Design?"
             : "Remove ownership of production design",
@@ -73232,9 +73272,9 @@
           onCancel: n,
         });
       }
-      function F(e) {
+      function U(e) {
         const { oEditablePlan: t, closeModal: n, bTakeOwnership: a } = e;
-        return l.createElement(L.P, {
+        return l.createElement(B.P, {
           strTitle: a
             ? "Claim Operations Ownership?"
             : "Remove operator ownership",
@@ -73250,10 +73290,10 @@
           onCancel: n,
         });
       }
-      function U(e) {
+      function H(e) {
         const { oEditablePlan: t, closeModal: n } = e;
         return l.createElement(
-          L.P,
+          B.P,
           {
             strTitle: "Complete the production Design",
             strDescription:
@@ -73263,21 +73303,21 @@
               t.SetArtworkCompleted(Math.floor(new Date().getTime() / 1e3)),
           },
           l.createElement("br", null),
-          l.createElement(B.o6, { oEditablePlan: t }),
+          l.createElement(x.o6, { oEditablePlan: t }),
         );
       }
-      var H,
-        V = n(26475),
-        X = n(87380),
-        j = n(65255);
-      function q(e) {
+      var V,
+        X = n(26475),
+        j = n(87380),
+        q = n(65255);
+      function W(e) {
         const { oEditablePlan: t } = e;
         return l.createElement(
           l.Fragment,
           null,
           l.createElement(
             "div",
-            { className: x.OwnerColCtn },
+            { className: O.OwnerColCtn },
             l.createElement(
               m.__,
               null,
@@ -73297,7 +73337,7 @@
                   null,
                   l.createElement(
                     "div",
-                    { className: x.OwnerCtn },
+                    { className: O.OwnerCtn },
                     l.createElement(
                       "div",
                       null,
@@ -73311,7 +73351,7 @@
                     {
                       onClick: (e) =>
                         (0, v.AM)(
-                          l.createElement(F, {
+                          l.createElement(U, {
                             oEditablePlan: t,
                             bTakeOwnership: !1,
                           }),
@@ -73326,7 +73366,7 @@
                   {
                     onClick: (e) =>
                       (0, v.AM)(
-                        l.createElement(F, {
+                        l.createElement(U, {
                           oEditablePlan: t,
                           bTakeOwnership: !0,
                         }),
@@ -73338,9 +73378,9 @@
           ),
         );
       }
-      function W(e) {
+      function z(e) {
         const { oEditablePlan: t } = e,
-          n = (0, X.eQ)(t.GetID()),
+          n = (0, j.eQ)(t.GetID()),
           [a, r] = (0, i.SZ)(() => [
             t.GetDeliveryReviewNotes(),
             t.GetAssociatedAssetURL(),
@@ -73349,7 +73389,7 @@
           ? l.createElement(
               "div",
               null,
-              l.createElement(z, { oEditablePlan: t }),
+              l.createElement(Z, { oEditablePlan: t }),
               Boolean((null == a ? void 0 : a.trim().length) > 0) &&
                 l.createElement(
                   "div",
@@ -73358,7 +73398,7 @@
                   l.createElement("textarea", {
                     value: a,
                     disabled: !0,
-                    className: x.AssetNotes,
+                    className: O.AssetNotes,
                   }),
                 ),
               l.createElement(m.II, {
@@ -73374,7 +73414,7 @@
             )
           : null;
       }
-      function z(e) {
+      function Z(e) {
         const { oEditablePlan: t } = e,
           [n, a] = (0, i.SZ)(() => [
             t.BIsDeliveryReviewed(),
@@ -73386,25 +73426,25 @@
               l.Fragment,
               null,
               Boolean(n)
-                ? l.createElement(Q, { oEditablePlan: t })
-                : l.createElement(K, { oEditablePlan: t }),
+                ? l.createElement(Y, { oEditablePlan: t })
+                : l.createElement(Q, { oEditablePlan: t }),
             );
       }
-      function Z(e) {
+      function K(e) {
         const { oEditablePlan: t } = e,
-          n = (0, X.eQ)(t.GetID()),
+          n = (0, j.eQ)(t.GetID()),
           a = (0, l.useMemo)(
             () =>
               t.GetArtworkCompleteTime()
-                ? H.k_LocalizationDone
+                ? V.k_LocalizationDone
                 : t.GetArtworkLocalizationTaskID()
-                  ? H.k_DesignComplete
+                  ? V.k_DesignComplete
                   : t.GetDeliveryReviewTime()
-                    ? H.k_DeliveryReviewed
+                    ? V.k_DeliveryReviewed
                     : (null == n ? void 0 : n.submitting_rtime) ||
                         t.GetAssociatedAssetURL()
-                      ? H.k_AssetSubmitted
-                      : H.k_AwaitingPartner,
+                      ? V.k_AssetSubmitted
+                      : V.k_AwaitingPartner,
             [t, n],
           );
         return l.createElement(
@@ -73413,46 +73453,46 @@
           l.createElement("h2", null, "Asset Process"),
           l.createElement(
             "div",
-            { className: x.AssetTimelineCtn },
+            { className: O.AssetTimelineCtn },
             l.createElement(
               "div",
-              { className: (0, S.Z)(a == H.k_AssetSubmitted && x.ActiveState) },
+              { className: (0, S.Z)(a == V.k_AssetSubmitted && O.ActiveState) },
               "Partner Submitted",
             ),
             l.createElement(
               "div",
               {
-                className: (0, S.Z)(a == H.k_DeliveryReviewed && x.ActiveState),
+                className: (0, S.Z)(a == V.k_DeliveryReviewed && O.ActiveState),
               },
               "Delivery Approved",
             ),
             l.createElement(
               "div",
-              { className: (0, S.Z)(a == H.k_DesignComplete && x.ActiveState) },
+              { className: (0, S.Z)(a == V.k_DesignComplete && O.ActiveState) },
               "Design Complete",
             ),
             l.createElement(
               "div",
               {
-                className: (0, S.Z)(a == H.k_LocalizationDone && x.ActiveState),
+                className: (0, S.Z)(a == V.k_LocalizationDone && O.ActiveState),
               },
               "Localization Complete",
             ),
           ),
         );
       }
-      function K(e) {
+      function Q(e) {
         const { oEditablePlan: t } = e;
         return l.createElement(
           "div",
-          { className: (0, S.Z)(x.StatusCtn, x.Incomplete) },
+          { className: (0, S.Z)(O.StatusCtn, O.Incomplete) },
           l.createElement(
             m.zx,
             {
-              className: x.StatusBtn,
+              className: O.StatusBtn,
               onClick: (e) =>
                 (0, v.AM)(
-                  l.createElement(Y, { oEditablePlan: t, bReviewVerify: !0 }),
+                  l.createElement(J, { oEditablePlan: t, bReviewVerify: !0 }),
                   (0, D.RA)(e),
                 ),
             },
@@ -73460,7 +73500,7 @@
           ),
         );
       }
-      function Q(e) {
+      function Y(e) {
         const { oEditablePlan: t } = e,
           [n, a] = (0, i.SZ)(() => [
             t.GetDeliveryReviewTime(),
@@ -73468,13 +73508,13 @@
           ]);
         return l.createElement(
           "div",
-          { className: (0, S.Z)(x.StatusCtn, x.Complete) },
+          { className: (0, S.Z)(O.StatusCtn, O.Complete) },
           l.createElement(
             "div",
-            { className: x.ReviewedCtn },
+            { className: O.ReviewedCtn },
             l.createElement(
               "div",
-              { className: x.OwnerCtn },
+              { className: O.OwnerCtn },
               l.createElement(
                 "div",
                 null,
@@ -73483,10 +73523,10 @@
               l.createElement(
                 m.zx,
                 {
-                  className: x.StatusBtn,
+                  className: O.StatusBtn,
                   onClick: (e) =>
                     (0, v.AM)(
-                      l.createElement(Y, {
+                      l.createElement(J, {
                         oEditablePlan: t,
                         bReviewVerify: !1,
                       }),
@@ -73507,12 +73547,12 @@
           ),
         );
       }
-      function Y(e) {
+      function J(e) {
         const { oEditablePlan: t, closeModal: n, bReviewVerify: a } = e,
-          i = (0, X.eQ)(t.GetID()),
+          i = (0, j.eQ)(t.GetID()),
           [r, o] = (0, l.useState)(t.GetDeliveryReviewNotes());
         return l.createElement(
-          L.P,
+          B.P,
           {
             strTitle: a
               ? "Asset Delivery Review?"
@@ -73525,7 +73565,7 @@
             onOK: () => {
               a
                 ? t.SetDeliveryReviewedAccountAndTime(
-                    j.L7.accountid,
+                    q.L7.accountid,
                     Math.floor(new Date().getTime() / 1e3),
                     r,
                   )
@@ -73584,7 +73624,70 @@
             ),
         );
       }
-      function J(e) {
+      !(function (e) {
+        (e[(e.k_AwaitingPartner = 0)] = "k_AwaitingPartner"),
+          (e[(e.k_AssetSubmitted = 1)] = "k_AssetSubmitted"),
+          (e[(e.k_DeliveryReviewed = 2)] = "k_DeliveryReviewed"),
+          (e[(e.k_DesignComplete = 3)] = "k_DesignComplete"),
+          (e[(e.k_LocalizationDone = 4)] = "k_LocalizationDone");
+      })(V || (V = {}));
+      var $ = n(85556),
+        ee = n(80751),
+        te = n.n(ee),
+        ne = n(42718);
+      function ae(e) {
+        const { oEditablePlan: t } = e,
+          [n] = (0, i.SZ)(() => [t.GetID()]),
+          a = (function (e) {
+            const t = (0, ne.useQuery)({
+              queryKey: ["usePromotionPlanPackageSales", e],
+              queryFn: () =>
+                (0, $.mG)(this, void 0, void 0, function* () {
+                  const t = `${q.De.PARTNER_BASE_URL}promotion/planning/ajaxgetpromotionplanpackagesales`,
+                    n = { promotionplanid: e },
+                    a = yield te().get(t, { params: n });
+                  return 200 == (null == a ? void 0 : a.status)
+                    ? a.data.results
+                    : [];
+                }),
+              enabled: !!e,
+            });
+            return t.isLoading ? null : t.data;
+          })(n),
+          [r, o] = (0, l.useMemo)(() => {
+            if (!a) return [0, 0];
+            let e = 0;
+            const t = new Map();
+            return (
+              a.forEach((n) => {
+                (e += Number.parseInt(n.gross_sales_usdx100) / 1e4),
+                  t.set(n.date, n.date);
+              }),
+              [Array.from(t.keys()).length, e]
+            );
+          }, [a]);
+        if (!a)
+          return l.createElement(P.V, {
+            string: "Loading",
+            size: "medium",
+            position: "center",
+          });
+        const s = o / r;
+        return l.createElement(
+          "div",
+          null,
+          l.createElement("h3", null, "Featuring Summary"),
+          l.createElement(T, {
+            nNumDiscountDays: r,
+            strNumDaysString: "Promo Days",
+            nTotalDiscountSalesUSD: o,
+            nPercentLift: s,
+            strPercentLift: "Avg Daily Sales",
+            bPercentLiftIsDollar: !0,
+          }),
+        );
+      }
+      function ie(e) {
         return l.createElement(
           l.Fragment,
           null,
@@ -73593,7 +73696,7 @@
           (0, y.Sc)(e.rtime, { bForce24HourClock: !1 }),
         );
       }
-      function $(e) {
+      function le(e) {
         const { oEditablePlan: t } = e,
           [n, a] = (0, i.SZ)(() => [
             t.BOnWatchList(b.L7.accountid),
@@ -73605,20 +73708,20 @@
           l.createElement(
             "div",
             { className: c().SectionCtn },
-            l.createElement(ae, { oEditablePlan: t }),
-            l.createElement(ie, { oEditablePlan: t }),
+            l.createElement(ce, { oEditablePlan: t }),
+            l.createElement(me, { oEditablePlan: t }),
           ),
           l.createElement(
             "div",
             { className: c().SectionCtn },
             l.createElement(
               "div",
-              { className: x.OwnersRowCtn },
-              l.createElement(q, { oEditablePlan: t }),
-              l.createElement(O, { oEditablePlan: t }),
+              { className: O.OwnersRowCtn },
+              l.createElement(W, { oEditablePlan: t }),
+              l.createElement(M, { oEditablePlan: t }),
               l.createElement(
                 "div",
-                { className: x.OwnerColCtn },
+                { className: O.OwnerColCtn },
                 l.createElement(
                   m.__,
                   null,
@@ -73634,7 +73737,7 @@
                 ),
                 l.createElement(
                   "div",
-                  { className: x.OwnerCtn },
+                  { className: O.OwnerCtn },
                   l.createElement(
                     "div",
                     null,
@@ -73646,7 +73749,7 @@
                   {
                     onClick: (e) =>
                       (0, v.AM)(
-                        l.createElement(ee, { oEditablePlan: t }),
+                        l.createElement(re, { oEditablePlan: t }),
                         (0, D.RA)(e),
                       ),
                   },
@@ -73658,11 +73761,11 @@
           l.createElement(
             "div",
             { className: c().SectionCtn },
-            l.createElement(Z, { oEditablePlan: t }),
+            l.createElement(K, { oEditablePlan: t }),
             l.createElement(
               "div",
-              { className: (0, S.Z)(x.LinkCtn, x.AssetField) },
-              l.createElement(V.j_, {
+              { className: (0, S.Z)(O.LinkCtn, O.AssetField) },
+              l.createElement(X.j_, {
                 name: "Internal Asset Location",
                 placeHolder:
                   "Any path where you can find the assets associated with this promo, like on Valve file server; no validation done.",
@@ -73671,7 +73774,7 @@
                 fnGetURL: (e) => e,
               }),
             ),
-            l.createElement(W, { oEditablePlan: t }),
+            l.createElement(z, { oEditablePlan: t }),
           ),
           Boolean(t.GetPlan().create_time) &&
             l.createElement(
@@ -73680,10 +73783,10 @@
               l.createElement(m.__, null, "Plan initially created By:"),
               l.createElement(
                 "div",
-                { className: x.UserCtn },
+                { className: O.UserCtn },
                 l.createElement(
                   "div",
-                  { className: x.OwnerCtn },
+                  { className: O.OwnerCtn },
                   l.createElement(
                     "div",
                     null,
@@ -73694,7 +73797,7 @@
                 ),
               ),
               "Created at ",
-              l.createElement(J, { rtime: t.GetPlan().create_time }),
+              l.createElement(ie, { rtime: t.GetPlan().create_time }),
             ),
           Boolean(t.GetPlan().last_modified_account) &&
             l.createElement(
@@ -73703,10 +73806,10 @@
               l.createElement(m.__, null, "Last Updated By:"),
               l.createElement(
                 "div",
-                { className: x.UserCtn },
+                { className: O.UserCtn },
                 l.createElement(
                   "div",
-                  { className: x.OwnerCtn },
+                  { className: O.OwnerCtn },
                   l.createElement(
                     "div",
                     null,
@@ -73717,7 +73820,7 @@
                 ),
               ),
               "Updated at ",
-              l.createElement(J, { rtime: t.GetPlan().last_modified_time }),
+              l.createElement(ie, { rtime: t.GetPlan().last_modified_time }),
             ),
           l.createElement(
             "div",
@@ -73734,10 +73837,10 @@
               n ? "Remove from my watch list" : "Add to my watch list",
             ),
           ),
-          l.createElement(ce, { oEditablePlan: t }),
+          l.createElement(he, { oEditablePlan: t }),
         );
       }
-      function ee(e) {
+      function re(e) {
         const { oEditablePlan: t, closeModal: n } = e,
           [a, i] = (0, l.useState)(t.GetOwnerAccountID());
         return l.createElement(
@@ -73750,10 +73853,10 @@
             bOKDisabled: !a,
             onOK: () => t.SetPlanOwnerAccountID(a),
           },
-          l.createElement(te, { nAccountID: a, fnSetAccountFilter: i }),
+          l.createElement(oe, { nAccountID: a, fnSetAccountFilter: i }),
         );
       }
-      function te(e) {
+      function oe(e) {
         const {
             nAccountID: t,
             fnSetAccountFilter: n,
@@ -73762,7 +73865,7 @@
             className: o,
           } = e,
           s = a.J.map((e) => ({
-            label: l.createElement(ne, {
+            label: l.createElement(se, {
               key: e.id,
               accountID: e.id,
               displayName: e.displayName,
@@ -73779,9 +73882,9 @@
           i && i.forEach((e) => c.push(e)),
           l.createElement(
             "div",
-            { className: (0, S.Z)(G.AccountSelectCtn, o) },
+            { className: (0, S.Z)(L.AccountSelectCtn, o) },
             l.createElement(m.ry, {
-              strDropDownClassName: (0, S.Z)(p().DropDownScroll, G.AccountList),
+              strDropDownClassName: (0, S.Z)(p().DropDownScroll, L.AccountList),
               rgOptions: c,
               selectedOption: t ? Number.parseInt("" + t) : null,
               onChange: (e) => n(e.data),
@@ -73791,7 +73894,7 @@
           )
         );
       }
-      function ne(e) {
+      function se(e) {
         const { accountID: t, displayName: n } = e,
           { data: a } = (0, o.IE)(t);
         return l.createElement(
@@ -73803,7 +73906,7 @@
           ")",
         );
       }
-      function ae(e) {
+      function ce(e) {
         const t = new URLSearchParams(),
           { oEditablePlan: n } = e;
         return (
@@ -73817,13 +73920,13 @@
                 b.De.PARTNER_BASE_URL +
                 "public/downloadics.php?" +
                 t.toString(),
-              className: x.CalDownload,
+              className: O.CalDownload,
             },
             l.createElement(h.EWE, null),
           )
         );
       }
-      function ie(e) {
+      function me(e) {
         const { oEditablePlan: t } = e,
           [n, a] = (0, i.SZ)(() => [
             t.BIsReviewed(),
@@ -73832,28 +73935,28 @@
         return l.createElement(
           l.Fragment,
           null,
-          Boolean(a) && l.createElement(oe, { oEditablePlan: t }),
-          Boolean(!a && n) && l.createElement(re, { oEditablePlan: t }),
-          Boolean(!a && !n) && l.createElement(le, { oEditablePlan: t }),
+          Boolean(a) && l.createElement(pe, { oEditablePlan: t }),
+          Boolean(!a && n) && l.createElement(ue, { oEditablePlan: t }),
+          Boolean(!a && !n) && l.createElement(de, { oEditablePlan: t }),
         );
       }
-      function le(e) {
+      function de(e) {
         const { oEditablePlan: t } = e;
         return l.createElement(
           "div",
-          { className: (0, S.Z)(x.StatusCtn, x.Incomplete) },
+          { className: (0, S.Z)(O.StatusCtn, O.Incomplete) },
           l.createElement(
             "div",
-            { className: x.ReviewState },
+            { className: O.ReviewState },
             l.createElement("span", null, "Incomplete"),
           ),
           l.createElement(
             m.zx,
             {
-              className: x.StatusBtn,
+              className: O.StatusBtn,
               onClick: (e) =>
                 (0, v.AM)(
-                  l.createElement(se, { oEditablePlan: t, bReviewVerify: !0 }),
+                  l.createElement(_e, { oEditablePlan: t, bReviewVerify: !0 }),
                   (0, D.RA)(e),
                 ),
             },
@@ -73861,24 +73964,24 @@
           ),
         );
       }
-      function re(e) {
+      function ue(e) {
         const { oEditablePlan: t } = e,
           n = t.GetReviewedAccount();
         return l.createElement(
           "div",
-          { className: (0, S.Z)(x.StatusCtn, x.Complete) },
+          { className: (0, S.Z)(O.StatusCtn, O.Complete) },
           l.createElement(
             "div",
-            { className: x.ReviewedCtn },
+            { className: O.ReviewedCtn },
             l.createElement(
               "div",
-              { className: x.ReviewState },
+              { className: O.ReviewState },
               l.createElement(h.MCw, null),
               l.createElement("span", null, " Reviewed and ready to go! "),
             ),
             l.createElement(
               "div",
-              { className: x.OwnerCtn },
+              { className: O.OwnerCtn },
               l.createElement(
                 "div",
                 null,
@@ -73887,10 +73990,10 @@
               l.createElement(
                 m.zx,
                 {
-                  className: x.StatusBtn,
+                  className: O.StatusBtn,
                   onClick: (e) =>
                     (0, v.AM)(
-                      l.createElement(se, {
+                      l.createElement(_e, {
                         oEditablePlan: t,
                         bReviewVerify: !1,
                       }),
@@ -73911,7 +74014,7 @@
           ),
         );
       }
-      function oe(e) {
+      function pe(e) {
         const { oEditablePlan: t } = e,
           [n, a, r, o, s, c, m, u, p] = (0, i.SZ)(() => [
             t.GetSaleClanAccountID(),
@@ -73931,19 +74034,20 @@
           g = `?dateStart=${_.getFullYear()}-${(_.getMonth() + 1).toString().padStart(2, "0")}-${_.getDate().toString().padStart(2, "0")}&dateEnd=${h.getFullYear()}-${(h.getMonth() + 1).toString().padStart(2, "0")}-${h.getDate().toString().padStart(2, "0")}`;
         return l.createElement(
           "div",
-          { className: (0, S.Z)(x.StatusCtn, x.Past) },
+          { className: (0, S.Z)(O.StatusCtn, O.Past) },
           l.createElement(
             "div",
-            { className: x.ReviewedCtn },
+            { className: O.ReviewedCtn },
             l.createElement(
               "div",
-              { className: x.ReviewState },
+              { className: O.ReviewState },
               l.createElement("span", null, " This promo is over "),
             ),
             Boolean(n || r || u) &&
               l.createElement(
                 "div",
                 null,
+                l.createElement(ae, { oEditablePlan: t }),
                 Boolean(u) &&
                   l.createElement(
                     l.Fragment,
@@ -73977,7 +74081,7 @@
                   l.createElement(
                     d.SV,
                     null,
-                    l.createElement(T, { strDiscountEventID: m }),
+                    l.createElement(N, { strDiscountEventID: m }),
                     l.createElement("br", null),
                   ),
                 Boolean(n && a) &&
@@ -74036,10 +74140,10 @@
           ),
         );
       }
-      function se(e) {
+      function _e(e) {
         const { oEditablePlan: t, closeModal: n, bReviewVerify: a } = e;
         return l.createElement(
-          L.P,
+          B.P,
           {
             strTitle: a ? "Plan Review?" : "Clear Plan Review Status",
             strDescription: a
@@ -74064,11 +74168,11 @@
                 null,
                 "Have you verified the dates, settings, discounts, and assets are ready for all of the links below?",
               ),
-              l.createElement(B.o6, { oEditablePlan: t }),
+              l.createElement(x.o6, { oEditablePlan: t }),
             ),
         );
       }
-      function ce(e) {
+      function he(e) {
         const { oEditablePlan: t } = e,
           [n, a, r] = (0, i.SZ)(() => [
             t.BRequireBroadcastModeration(),
@@ -74095,7 +74199,7 @@
               { className: c().Indent },
               l.createElement(
                 "div",
-                { className: x.BroadcastNotes },
+                { className: O.BroadcastNotes },
                 l.createElement(m.__, null, "Broadcast Schedule Notes:"),
                 l.createElement("textarea", {
                   className: "DialogTextInputBase",
@@ -74126,13 +74230,6 @@
             ),
         );
       }
-      !(function (e) {
-        (e[(e.k_AwaitingPartner = 0)] = "k_AwaitingPartner"),
-          (e[(e.k_AssetSubmitted = 1)] = "k_AssetSubmitted"),
-          (e[(e.k_DeliveryReviewed = 2)] = "k_DeliveryReviewed"),
-          (e[(e.k_DesignComplete = 3)] = "k_DesignComplete"),
-          (e[(e.k_LocalizationDone = 4)] = "k_LocalizationDone");
-      })(H || (H = {}));
     },
     69176: (e, t, n) => {
       "use strict";
