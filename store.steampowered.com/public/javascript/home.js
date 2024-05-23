@@ -2461,9 +2461,9 @@ function GetAvatarURL( strAvatarHash, sizeStr )
 function GetScreenshotURL( appid, filename, sizeStr )
 {
 	if( sizeStr )
-		return 'https://cdn.cloudflare.steamstatic.com/steam/' + 'apps/' + appid + '/' + filename.replace('.jpg', sizeStr + '.jpg');
+		return 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/' + 'apps/' + appid + '/' + filename.replace('.jpg', sizeStr + '.jpg');
 
-	return 'https://cdn.cloudflare.steamstatic.com/steam/' + 'apps/' + appid + '/' + filename;
+	return 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/' + 'apps/' + appid + '/' + filename;
 }
 
 GSteamCurators = {
