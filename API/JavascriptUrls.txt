@@ -406,6 +406,8 @@ ${IMG_URL}${img_after}
 ${IMG_URL}${img_before}
 ${IMG_URL}${titleButtonImage}
 ${IMG_URL}${}
+${IMG_URL}${}.png
+${IMG_URL}${}.png 
 ${IMG_URL}${}/icons/scroll_arrow.png
 ${IMG_URL}${}/river_vials/river_vial_${}1.jpg
 ${IMG_URL}${}/river_vials/river_vial_icon_${}.png
@@ -548,10 +550,13 @@ ${IMG_URL}heroes/icons/${}.png
 ${IMG_URL}heroes/wide/${}.png
 ${IMG_URL}heroes/wide/unknown.png
 ${IMG_URL}icons/${}.svg
+${IMG_URL}icons/facets/${facet_icon}.png
+${IMG_URL}icons/facets/${icon}.png
 ${IMG_URL}icons/hero_${}.png
 ${IMG_URL}icons/hero_agility.png
 ${IMG_URL}icons/hero_intelligence.png
 ${IMG_URL}icons/hero_strength.png
+${IMG_URL}icons/innate_icon.png
 ${IMG_URL}icons/talents.svg
 ${IMG_URL}international2020/arrow_left.png
 ${IMG_URL}international2020/assistant/assistant_1.png
@@ -2224,6 +2229,8 @@ https://checkout.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transi
 https://checkout.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=${transID}&authurl=${paypal_url}${}&s=${g_sessionID}
 https://checkout.steampowered.com/paypal/launchauth/?webbasedpurchasing=1&transid=${txnid}&authurl=${auth_url}&s=${g_sessionID}
 https://checkout.steampowered.com/qiwi/launchauth
+https://checkout.steampowered.com/recurringsubscription/renewsubscription/
+https://checkout.steampowered.com/recurringsubscription/updatesubscription/
 https://community.cloudflare.steamstatic.com/${m_strURL}
 https://community.cloudflare.steamstatic.com/economy/boosterpack/${appid}?l=english&single=1&v=2
 https://community.cloudflare.steamstatic.com/economy/boosterpackribbon/?l=english
@@ -2347,6 +2354,7 @@ https://help.steampowered.com/ticketmaster/AjaxGetQuickText/
 https://help.steampowered.com/ticketmaster/AjaxGetQuickTextRevisionHistory/
 https://help.steampowered.com/ticketmaster/AjaxGetTicketSubmissionForm/
 https://help.steampowered.com/ticketmaster/AjaxMarkHelpRequestAsViewed/
+https://help.steampowered.com/ticketmaster/AjaxPreapproveTxns/
 https://help.steampowered.com/ticketmaster/AjaxPreloadTicket/${strTicketRef}
 https://help.steampowered.com/ticketmaster/AjaxSearchFAQs
 https://help.steampowered.com/ticketmaster/AjaxSearchForAgentByName
@@ -2843,12 +2851,10 @@ https://store.steampowered.com/account/edituserreviewscorepreference/
 https://store.steampowered.com/account/languagepreferences/
 https://store.steampowered.com/account/preferences
 https://store.steampowered.com/account/preferences/
-https://store.steampowered.com/account/renewsubscription/
 https://store.steampowered.com/account/savesearchpreferences
 https://store.steampowered.com/account/saveuserreviewscorepreference
 https://store.steampowered.com/account/setlanguage/
 https://store.steampowered.com/account/updateshippingaddress/
-https://store.steampowered.com/account/updatesubscription/
 https://store.steampowered.com/actions/ReportAbuse/
 https://store.steampowered.com/actions/clues
 https://store.steampowered.com/api/addtowishlist
@@ -3293,7 +3299,10 @@ url( ${IMG_URL}herogrid/filter-uni-active.png )
 url( ${IMG_URL}icons/${_ ? "star_gold" : "star_black"}.png )
 url( ${IMG_URL}icons/cooldown.png )
 url( ${IMG_URL}icons/external_arrow.png )
+url( ${IMG_URL}icons/facets/ripple_texture.png )
+url( ${IMG_URL}icons/innate_icon.png )
 url( ${IMG_URL}icons/search.svg )
+url( ${IMG_URL}icons/talents.svg )
 url( ${IMG_URL}international2020/antimage_arcana_bg.png )
 url( ${IMG_URL}international2020/backgrounds/background_1.jpg )
 url( ${IMG_URL}international2020/backgrounds/background_10.jpg )

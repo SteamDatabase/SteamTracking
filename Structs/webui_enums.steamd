@@ -2569,6 +2569,33 @@ enum UnnamedEnum5b8032725cc6864d
 	k_LocalizationDone = 4;
 }
 
+enum UnnamedEnum5b9e1e5238550b64
+{
+	None = 0;
+	Minimized = 1;
+	Hidden = 2;
+	TooltipHint = 4;
+	NoTaskbarIcon = 8;
+	Resizable = 16;
+	ScalePosition = 32;
+	ScaleSize = 64;
+	Maximized = 128;
+	BackgroundTransparent = 256;
+	NotFocusable = 512;
+	FullScreen = 1024;
+	Fullscreen_Exclusive = 2048;
+	ApplyBrowserScaleToDimensions = 4096;
+	AlwaysOnTop = 8192;
+	NoWindowShadow = 16384;
+	NoMinimize = 32768;
+	PopUpMenuHint = 65536;
+	IgnoreSavedSize = 131072;
+	NoRoundedCorners = 262144;
+	ForceRoundedCorners = 524288;
+	OverrideRedirect = 1048576;
+	IgnoreSteamDisplayScale = 2097152;
+}
+
 enum UnnamedEnum5e14c6d1b71a889d
 {
 	LeftTop = 0;
