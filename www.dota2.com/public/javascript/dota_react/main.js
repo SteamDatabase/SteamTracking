@@ -3388,11 +3388,12 @@
         FacetAbility: "_2Cjuzjm7lthYRwpLEJdpAN",
         AbilityIcon: "_2dkGQPtrNeyagsZp-qdfjd",
         AbilityNote: "_3W8ymeNM1TufRomg7R4XPH",
+        FacetTalentNotes: "_1o1MZImywzSvzh1fV2PE89",
+        TalentImage: "_3lVDzpEuh96hv_OLZNcLO1",
         AbilitiesTitle: "_3yrZMMc63yBUz22e59QbKE",
         Notes: "_16viLxUBhU2mCSgOCMsABo",
         TalentsTitle: "_2hNAuf_qMzwmThpNOgTEd8",
         TalentNotes: "_2307YYMnPjkJ2LP6g4HN89",
-        TalentImage: "_3lVDzpEuh96hv_OLZNcLO1",
         TalentNoteHeader: "_3KTWV2EPIaM-wi0ijZswPR",
         PatchNoteItem: "_32hr0bqoR1q_QIS3Fg_fsc",
         ItemHeader: "_3Luq5YVV2o4MRK_CC6y2o5",
@@ -41807,7 +41808,7 @@
                     "div",
                     { className: l().FacetsContainer },
                     C.map((t, a) => {
-                      var i, s, o;
+                      var i, s, o, m;
                       return n.createElement(
                         "div",
                         {
@@ -41943,6 +41944,49 @@
                                     ),
                                   );
                                 }),
+                          ),
+                        (null === (m = t.talent_notes) || void 0 === m
+                          ? void 0
+                          : m.length) > 0 &&
+                          n.createElement(
+                            "div",
+                            { className: l().FacetTalentNotes },
+                            n.createElement("div", {
+                              className: l().TalentImage,
+                              style: {
+                                backgroundImage: `url( ${r.Y.IMG_URL}icons/talents.svg )`,
+                              },
+                            }),
+                            n.createElement(
+                              "div",
+                              { className: l().Notes },
+                              t.talent_notes.map((e) =>
+                                n.createElement(
+                                  "div",
+                                  { key: e.note, className: l().NoteElement },
+                                  n.createElement("div", {
+                                    className: l().Indent,
+                                    style: {
+                                      width: y * (e.indent_level - 1),
+                                      minWidth: y * (e.indent_level - 1),
+                                    },
+                                  }),
+                                  n.createElement("div", {
+                                    className: (0, c.Z)(
+                                      l().Dot,
+                                      e.hide_dot && l().IsHidden,
+                                    ),
+                                  }),
+                                  n.createElement(
+                                    "div",
+                                    { className: l().Note },
+                                    (0, _.Jr)(e.note),
+                                  ),
+                                  e.info &&
+                                    n.createElement(T, { infoText: e.info }),
+                                ),
+                              ),
+                            ),
                           ),
                         n.createElement("div", {
                           className: l().FacetBodyFiller,
