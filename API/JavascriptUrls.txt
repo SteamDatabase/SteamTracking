@@ -1980,10 +1980,7 @@ https://cdn.akamai.steamstatic.com/store/promo/replay2023/yirDeckGamesExport.web
 https://cdn.akamai.steamstatic.com/store/promo/replay2023/yirDeckGamesPoster.jpg
 https://cdn.beta.steampowered.com/
 https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/
-https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/${filename}
-https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/${}
 https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/capsule_sm_120.jpg
-https://cdn.cloudflare.steamstatic.com/steam/apps/${appid}/header_292x136.jpg?t=1487329718
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets//saliengame/attacks.json
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets//saliengame/enemies.json
 https://cdn.cloudflare.steamstatic.com/steamcommunity/public/assets//saliengame/levels.json
@@ -2568,6 +2565,9 @@ https://s.team/deck/setup
 https://s.team/join
 https://s.team/remoteplay/connect/${}?appid=${appID}&${remoteplayString}
 https://s.team/remoteplay/connect/${}?appid=${}&${}
+https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/${appid}/${filename}
+https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/${appid}/${}
+https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/${appid}/header_292x136.jpg?t=1487329718
 https://sketchfab.com/models/${modelID}/embed?autostart=1
 https://sketchfab.com/models/${modelid}/embed?autostart=1
 https://sketchfab.com/oembed?url=https://sketchfab.com/models/${modelID}

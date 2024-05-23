@@ -2351,7 +2351,7 @@
     "SteamDeckVerified_TestResult_SteamOSDoesNotSupport_VR": "Steam Deck does not support VR games",
     "SteamDeckVerified_TestResult_SteamOSDoesNotSupport_Software": "This is a Software title and is not supported on Steam Deck",
     "SteamDeckVerified_TestResult_SteamOSDoesNotSupport_Retired": "This game has been retired or is no longer in a playable state and is not supported on Steam Deck",
-    "SteamDeckVerified_TestResult_UnsupportedAntiCheat_Other": "This game is unsupported on Steam Deck due to use of an unsupported anti-cheat",
+    "SteamDeckVerified_TestResult_UnsupportedAntiCheat_Other": "This game is unsupported on Steam Deck due to use of an unsupported anti-cheat or multiplayer service",
     "SteamDeckVerified_TestResult_UnsupportedAntiCheatConfiguration": "This game's anti-cheat is not configured to support Steam Deck",
     "SteamDeckVerified_TestResult_UnsupportedGraphicsPerformance": "This game's graphics settings cannot be configured to run well on Steam Deck",
     "SteamDeckVerified_TestResult_FirstTimeSetupRequiresActiveInternetConnection": "This game's first-time setup requires an active Internet connection",
