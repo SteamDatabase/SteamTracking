@@ -387,7 +387,7 @@ function ListEdit_AddAppElement( elTarget, appid, blurb, listid )
 
 	g_rgAppsInLists.push( appid );
 
-	var strHTML = "\r\n\t\r\n\t<div id=\"app_%4$s\">\r\n\t\t<div class=\"capsule\">\r\n\t\t\t<img  src=\"%1$s\" >\r\n\t\t<\/div>\r\n\t\t<div class=\"description\">\r\n\t\t\t<h2>%5$s<\/h2>\r\n\t\t<\/div>\r\n\t\t<div class=\"controls\">\r\n\t\t\t<a href=\"#\" onclick=\"ListEdit_RemoveApp(%3$s, %4$s); return false;\" class=\"remove_item_from_list\"><img src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/curator_delete_section.png\"><\/a>\r\n\t\t\t<input type=\"hidden\" name=\"appids\" value=\"%4$s\">\r\n\t\t<\/div>\r\n\t<\/div>\r\n\t".replace(/%1\$s/, 'https://cdn.cloudflare.steamstatic.com/steam/apps/'+appid+'/header_292x136.jpg?t=1487329718' )
+	var strHTML = "\r\n\t\r\n\t<div id=\"app_%4$s\">\r\n\t\t<div class=\"capsule\">\r\n\t\t\t<img  src=\"%1$s\" >\r\n\t\t<\/div>\r\n\t\t<div class=\"description\">\r\n\t\t\t<h2>%5$s<\/h2>\r\n\t\t<\/div>\r\n\t\t<div class=\"controls\">\r\n\t\t\t<a href=\"#\" onclick=\"ListEdit_RemoveApp(%3$s, %4$s); return false;\" class=\"remove_item_from_list\"><img src=\"https:\/\/store.cloudflare.steamstatic.com\/public\/images\/v6\/curator_delete_section.png\"><\/a>\r\n\t\t\t<input type=\"hidden\" name=\"appids\" value=\"%4$s\">\r\n\t\t<\/div>\r\n\t<\/div>\r\n\t".replace(/%1\$s/, 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/'+appid+'/header_292x136.jpg?t=1487329718' )
 		.replace(/%2\$s/, V_EscapeHTML(  blurb ) ).replace(/%3\$s/, listid).replace(/%4\$s/g, appid)
 		.replace(/%5\$s/g, V_EscapeHTML( appInfo.app_name ) );
 
@@ -1052,7 +1052,7 @@ function ReviewsCreate_Load()
 				for( var i=0; i<data.length; i++ )
 				{
 					rgFormattedResults.push({
-						html: '<img src="https://cdn.cloudflare.steamstatic.com/steam/apps/'+data[i].id+'/capsule_sm_120.jpg">' + data[i].name,
+						html: '<img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/'+data[i].id+'/capsule_sm_120.jpg">' + data[i].name,
 						key: data[i].id
 					});
 					rgNameToAppMap[data[i].name] = data[i].id
