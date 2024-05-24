@@ -1047,6 +1047,8 @@ ${PARTNER_BASE_URL}pricing/ajaxcancelproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxpublishproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxsubmitproposal/${}/${}
 ${PARTNER_BASE_URL}promotion${}
+${PARTNER_BASE_URL}promotion/analysis/ajaxgetpromotionplanpackagesales
+${PARTNER_BASE_URL}promotion/analysis/curated
 ${PARTNER_BASE_URL}promotion/assetportal/ajaxuploadpreviewasset/${}
 ${PARTNER_BASE_URL}promotion/assetportal/ajaxuploadpreviewassetexternal/${}?inputaccesskey=${}
 ${PARTNER_BASE_URL}promotion/assetportal/externalrequest/${}?inputaccesskey=${input_access_key}
@@ -1096,7 +1098,6 @@ ${PARTNER_BASE_URL}promotion/planning/ajaxgetcategoryeditorapplist
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubapplist
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubstats
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetcontenthubsummary
-${PARTNER_BASE_URL}promotion/planning/ajaxgetpromotionplanpackagesales
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetsalerankdashboard
 ${PARTNER_BASE_URL}promotion/planning/ajaxpostcontenthubstats
 ${PARTNER_BASE_URL}promotion/planning/ajaxuserwithreceivecommunications
