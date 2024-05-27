@@ -6,10 +6,10 @@ __stubs
 __TEXT
 __stub_helper
 __TEXT
+__cstring
+__TEXT
 __gcc_except_tab__TEXT
 __const
-__TEXT
-__cstring
 __TEXT
 __objc_methname
 __TEXT
@@ -135,7 +135,6 @@ h
 =
 @
 =
-@\
 (
 0
 8
@@ -18141,6 +18140,7 @@ a
 ?
 
 9IMemAlloc
+IVRSteamPrivate_023
 webuimessages_achievements.proto
 webuimessages_base.proto
 webuimessages_gamenotes.proto
@@ -18153,13 +18153,13 @@ webuimessages_transport.proto
 webuimessages_transportvalidation.proto
 m_mapHandlers
 m_mapConnectionInfo
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientcommon/webui_job_dispatcher.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/clientcommon/webui_job_dispatcher.cpp
 WebUI method '%s' has already been registered. Skipping duplicate registration
 dropping request without auth: %s
 no handler for message: %s
 failed to parse request message for target: %s
 failed to create job for target: %s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/job.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/job.h
 NULL == m_pvStartParam
 TransportAuth.Authenticate#1
 WebUIJob
@@ -18168,9 +18168,9 @@ m_memNodes
 m_bitsMigratedBuckets
 m_Tree
 m_Elements
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/bitstring.h
 bitNum >= 0 && bitNum < this->Size()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientcommon/webui_transport.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/clientcommon/webui_transport.cpp
 CWebUITransport multiple initialization
 ^.*$
 WebUI Transport Websocket Connection
@@ -18203,24 +18203,24 @@ Health Check: HTTP: OK
 ws://%s/transportsocket/
 Health Check: WS: connect failed
 Health Check: WS: OK
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/refcount.h
 m_iRefs > 0 && m_iRefs < 0x1000000
 g_pJobCur != NULL
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jobfuture.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/jobfuture.h
 m_eSignalState != k_EFutureState_Ready
 WebUITransport Health Check
 CHTTPRequestJob
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpserver.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/httpserver.h
 URL Regex matched different number of params than job is registered for, URL is: %s
 m_iRefs >= 0 && m_iRefs < 0x0ffffff
 m_pHTTPRequest
 Too many params expected for CHTTPRequestJob
 OK
 cache-control
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/smartptr.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/smartptr.h
 m_p == NULL
 m_p
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
@@ -18265,7 +18265,7 @@ root
 resource/layout/debugstats.layout
 CDebugStatsPanel
 vgui::Frame
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 Frame
 EditablePanel
@@ -18279,15 +18279,15 @@ rate
 count >= 0
 -friendsui
 -nofriendsui
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/friendsuihelpers.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/friendsuihelpers.cpp
 IsARM() || GetCPUInformation().m_bSSE2
 GetBootstrapperVersion
 SteamHIDPipeToRemote_%u
 SteamHIDPipeFromRemote_%u
 %s: Corrupt stream, resetting
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlbuffer.h
 nBytes
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/imageloadwrapper.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/imageloadwrapper.cpp
 !bSuccess || bufOutput.TellPut() == width*height*4
 SDL_ConvertSurfaceFormat
 SDL_DestroySurface
@@ -18296,11 +18296,11 @@ IMG_Load_RW
 libSDL3.dylib
 libSDL3_image.dylib
 pSurface->pitch == pSurface->w * 4
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/interface.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/interface.h
 m_pModule
 unknown
 bClientConvar601DEACE
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/interfacemap.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/interfacemap.cpp
 *
 %s
 "
@@ -18312,7 +18312,7 @@ IPC call to %s::%s returned failure code %d
 Steam
 %s::%s
 Process
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/ipcclient.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/ipcclient.cpp
 !"Invalid pipe handle specified"
 !"Invalid pipe specified"
 Illegal character (\) in IPC name.
@@ -18325,21 +18325,18 @@ m_VecPVecFuncCallReturnBuffer
 pVecUtlBuffer
 pVecUtlBuffer->Element( iFuncCallRetBuf )
 CUtlBuffer
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
-m_TotalElements != InvalidIndex()
-%s overflow!
-IsValidIndex(elem)
-Invalid index %u
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jpegloader.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utllinkedlist.h
+IsInList(before)
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/jpegloader.cpp
 libjpeg asking to skip more bytes than exist, and we can't further fill buffer - was a crash before 12/29/21
 row_stride_out >= row_stride
 row_stride == (int)( nImageWidth * jpegInfo.output_components )
 nImageHeight == nOutputHeight
 BResizeImageRGBA
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jpegloader_common.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/jpegloader_common.cpp
 pSrc == pDest || pSrc > pDest + (srcWidth * srcHeight * 4) || pDest > pSrc + (srcWidth * srcHeight * 3)
 log_files_always_flush
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/logfile.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/logfile.cpp
 m_lMaxSize <= INT_MAX
 ...
 [%s][%0.6f] %.*s
@@ -18351,7 +18348,6 @@ Client version:
 %lld
 no bootstrapper found
 [%s] %s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 config/proxyconfig.vdf
 proxyconfig
 proxy_mode
@@ -18360,7 +18356,7 @@ port
 exclude_local
 http://
 https://
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/osxhelpers.mm
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/osxhelpers.mm
 v16@?0q8
 STEAM_APP_BUNDLE_PATH
 steam.sh
@@ -18409,7 +18405,7 @@ BAudioDeviceHasBuffers(): Get buffers property failed: %d
 0123456789.
 app
 %s-%x
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/pipes.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/pipes.cpp
 m_QueueCallbackMsg
 m_pSingleProcessPipe
 m_pInternalPipe
@@ -18433,12 +18429,12 @@ fatal
 (pipe is disconnected)
 CClientPipe::BWriteAndReadResult: BReadResult failed
 m_bServerDebugTextPending
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
 1.6.37
 PNG load error %s
 PNG load warning %s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/processpipe_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/processpipe_posix.cpp
 bManualReset
 m_fds[1] != k_SOCKET_WRAPPER
 invalid name/address:port string provided to BSetIpPortFromName %s
@@ -18466,7 +18462,7 @@ Steam3Master
 127.0.0.1:57343
 SteamClientService
 127.0.0.1:57344
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/singleprocesspipe_any.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/singleprocesspipe_any.cpp
 0 == bufRet.TellPut()
 m_Peeked.second == false || m_nEventCount > 0
 pMsgBuf
@@ -18477,7 +18473,7 @@ m_pEventServerPipeReadable
 m_Peeked.first
 m_pTSQueueAPIPipe
 pBuffer
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/tslist.h
 m_Count == 0
 pNode && pNode->Next == QueueEnd()
 node
@@ -18486,7 +18482,7 @@ node
 [S_API FAIL] SteamAPI_Init() failed; ipcserver init failed .
 [S_API FAIL] SteamAPI_Init() failed; ipcserver GetSteamPath failed.
 CLIENTENGINE_INTERFACE_VERSION005
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steam/client_api.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/steam/client_api.cpp
 ClientAPI_InitGlobalInstance: InternalAPI_Init_Internal failed, most likely because you are missing a 32-bit dependency of steamclient.dylib (the Steam client is a 32-bit app).
 ClientAPI_Init(GlobalInstance): GetIClientProductBuilder returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientDepotBuilder returned NULL.
@@ -18635,7 +18631,7 @@ steammessages_vac.steamclient.proto
 steammessages_video.steamclient.proto
 steammessages_virtualcontroller.proto
 steammessages_workshop.steamclient.proto
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steamservice.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/steamservice.cpp
 m_hSteamPipe == 0
 m_hServiceLib == NULL
 %s/logs/service_log.txt
@@ -18655,7 +18651,7 @@ Failed to get Steam Service Start function
 SteamService_Shutdown
 CSteamService
 Library/Application Support/Steam
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/clientdirectories.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/clientdirectories.h
 Unable to get home directory
 SteamUniverse
 SteamRealm
@@ -18671,7 +18667,7 @@ trade
 ^
 %%p%d%%
 %store%
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steamui/urlmanager.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/steamui/urlmanager.cpp
 strURL != "%store%"
 m_dictURLs
 m_pkvVars
@@ -18685,7 +18681,7 @@ HelpFrontPage
 LauncherFrontPage
 Chat
 m_pkv
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utldict.h
 CUtlDict
 SDL_GetPowerInfo
 None
@@ -18712,7 +18708,7 @@ Use local dev websites
 -devsiteshost
 Pass the hostname, will generate dev site domains like store.{hostname}.steam.dev
 /
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/urlhelper.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/urlhelper.cpp
 eRet != k_ESteamRealmUnknown
 /usr/bin/open
 https://community-china.%s.steam.dev/
@@ -18767,14 +18763,14 @@ https://local.steam.dev:8283
 https://api-china.beta.valve.org
 https://api.beta.steampowered.com
 http://10.1.1.18:8282
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/urlhelper_webapihost.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/urlhelper_webapihost.cpp
 !bUsePartnerWebAPI
 https://api.steamchina.com
 https://partner.steam-api.com
 https://api.steampowered.com
 Default
 ChartPanel::SetXRange
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/vgui/chartpanel.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/vgui/chartpanel.cpp
 m_listSeriesInfo.IsInList( iSeries )
 ChartPanel::CalcMinMax
 ChartPanel::AddPt
@@ -18867,7 +18863,7 @@ Open Chrome devtools on launch for every HTML window
 Open Chrome devtools for shared JS context (offscreen window) on launch
 -openoverlaydevtools
 Open Chrome devtools on creation of any overlay browsers
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/htmlwindow/htmlwindow.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/htmlwindow/htmlwindow.cpp
 m_pHTMLController
 Browser.RegisterForOpenNewTab
 Browser.RegisterForGestureEvents
@@ -18906,7 +18902,7 @@ m_pObj == NULL
 clientui_overlay_fps
 60
 map
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/htmlwindow/htmlwindowcontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/htmlwindow/htmlwindowcontroller.cpp
 nPosX == INT_MIN && nPosY == INT_MIN
 SteamGameStream_%u_mem
 SteamGameStream_%u_mutex
@@ -18943,7 +18939,7 @@ Failed creating read event %s
 %s_mem
 Failed creating file mapping %s
 Failed creating view of file for %s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/common/shmemstream.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/overlay/common/shmemstream.cpp
 Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
 Warning: Memory was locked for put while destructing!
 CSharedMemStream::Clear()
@@ -18962,7 +18958,7 @@ m_pMutex->Wait() failed in ShMemStream::PutInternal
 SHMemStream header is corrupt in PutInternal()
 PutInternal: Not enough space for put when locked
 Asked to unlock memory for write.. but wasn't locked
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/common/videomemstream.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/overlay/common/videomemstream.cpp
 unFrameSize % 16 == 0
 Video memory stream writer destroyed with frame lock!
 Video memory stream frame commit without lock!
@@ -18978,7 +18974,7 @@ VGUI_Setup001
 Steam_BGetCallback
 Steam_FreeLastCallback
 Steam_GetAPICallResult
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/streaming/common/streamframe.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/streaming/common/streamframe.cpp
 !m_pPacket
 m_pPacket
 Invalid message size in %s
@@ -18991,11 +18987,11 @@ Received packet with expected sequence %llu, dropped, too short.
 Received packet with expected sequence %llu, dropped, actual sequence %llu
 EStreamFrameEvent_IsValid( nEvent )
 !m_bCalculated
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/streaming/common/streamnetwork.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/streaming/common/streamnetwork.h
 nRefCount >= 0
 nDataSize <= m_nCapacity
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/streaming/common/streamframe.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/streaming/common/streamnetwork.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/streaming/common/streamframe.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/streaming/common/streamnetwork.cpp
 Unexpected packet type needs fragmentation
 nCapacity > 0
 Received fragment with too large data size, truncating
@@ -19032,7 +19028,7 @@ m_listSamples
 Connected
 UNKNOWN
 StreamSocketManagerThread
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/streaming/common/streamsocket.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/streaming/common/streamsocket.cpp
 pPacket->GetPacketType() < k_EStreamPacketTypeMax
 !pPacket->GetCRCFlag()
 Bad CRC on message received from %s, dropping
@@ -19043,7 +19039,7 @@ GetPacketType() == k_EStreamPacketTypeUnconnected || GetPacketType() == k_EStrea
 Add penalty (ms) to ICE for streaming transport selection
 @StreamTransportSDRPenalty
 Add penalty (ms) to SDR for streaming transport selection
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/streaming/common/streamtransportsdr.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/streaming/common/streamtransportsdr.cpp
 m_hConnection == k_HSteamNetConnection_Invalid
 Last CStreamTransportSteamNetworkingSocketsBase destroyed, turning off manual poll mode
 Destroyed
@@ -19094,13 +19090,13 @@ self.m_pSignaling == nullptr
 AcceptConnection failed with status %d for connect request signal from %s?
 self.m_pSignaling == pSignaling
 Ignoring bad connect request.  (SendRejectionSignal)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/streaming/common/streamtransport.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/streaming/common/streamtransport.h
 Bind to %s failed: %s
 Couldn't create socket: %s
 Send to %s with size %d failed (%d): %s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/streaming/common/streamtransportudp.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/streaming/common/streamtransportudp.cpp
 pPacket->GetAddress().GetType() == k_EIPTypeV4
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/streaming/server/streamserver.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/streaming/server/streamserver.cpp
 m_vecSupportedAudioCodecs.Count() > 0
 m_vecSupportedVideoCodecs.Count() > 0
 Steam Relay Server
@@ -19154,12 +19150,12 @@ Frame: %d, %d bytes,
 , delta: %2.2fms
 total frame time: %2.2fms, result = %s
 , latency = %2.2fms (I%.1f/G%.1f/D%.1f)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/streaming/server/../common/streamnetwork.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/streaming/server/../common/streamnetwork.h
 m_Queue
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/streaming/server/../common/streamframe.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/streaming/server/../common/streamframe.h
 @bUseMediaFoundationAudioRecorder
 enable MF based audio capture path
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/audiorecorder.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gamestream/audiorecorder.cpp
 GameOverlay_AudioStream_%u
 Process audio recorder received invalid stream data: [format=%d][samplespersecond=%d][channels=%d]
 Couldn't create audio resampler
@@ -19193,9 +19189,9 @@ AmbrosiaAudioSupport-Legacy.pkg
 "%s"
 open
 v16@?0@"NSNotification"8
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/cudawrapper.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gamestream/cudawrapper.cpp
 m_hDLL
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/desktopcaptureosx.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gamestream/desktopcaptureosx.cpp
 !s_pDesktopCapture
 s_pDesktopCapture == this
 Can't do desktop capture on OSX 10.7 and lower
@@ -19212,7 +19208,7 @@ CDesktopCaptureOSX::s_pDesktopCapture
 Desktop capture frame available!
 m_pCaptureOSX
 CDesktopStreamThread
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/desktopstreamthread.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gamestream/desktopstreamthread.cpp
 !IsThreadAlive()
 >>> Starting desktop stream
 >>> Stopped desktop stream
@@ -19239,7 +19235,7 @@ dynamicbitrate: data loss, bw %0.02f -> %0.02f
 broadcast_adjust_bitrate
 200
 Desktop Placeholder
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamebroadcastsession.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gamestream/gamebroadcastsession.cpp
 Not supported by session recording
 nChannels == 2 && nSampleRate == 48000
 CGameBroadcastRecordSession::AudioAvailable
@@ -19250,19 +19246,22 @@ m_bufLastSPS
 m_bufLastPPS
 m_strCaptureMethod
 m_llQueuedAudio
-IVRSteamPrivate_023
 CGameBroadcastRecordSession::OnBroadcastUploadStatus
 CGameBroadcastRecordSession::OnBroadcastSettingsLoaded
 CGameBroadcastRecordSession::OnBroadcastUploadConfig
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlstring.h
 m_Memory
 m_data
 CUtlAllocation
 thumbnail
 video
-IsInList(before)
+m_TotalElements != InvalidIndex()
+%s overflow!
+IsValidIndex(elem)
+Invalid index %u
 - GAP
 CGameStreamAudioEncoder
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamaudioencoder.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gamestream/gamestreamaudioencoder.cpp
 !BInitializedAudio()
 Failed to start voice recorder
 m_mixer.GetSamplesPerSecond() == m_pVoiceRecorder->GetSamplesPerSecond()
@@ -19292,13 +19291,13 @@ m_bufCodecData
 m_vecCallbacks
 m_mixer
 m_mapProcessRecorders
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlhashmap.h
 idx < m_map.m_nMaxElement
 CUtlHashMap::RemoveAt - Invalid index
 CUtlHashMap::RemoveAt - couldn't find bucket for item
 Audio mix: start=%lld, returned=%lld
 Audio source [%s]: init=%lld, adjustment=%lld, through=%lld, last_start=%lld, mixed=%lld, drop_before=%lld, drop_after=%lld
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamaudiomixer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gamestream/gamestreamaudiomixer.cpp
 m_lRecordingStartTicks != 0
 Audio mix error: invalid buffer length
 cubRemove <= m_memMixedAudio.Count()
@@ -19317,7 +19316,7 @@ Steam Streaming Microphone
 gamestream_debug
 Turns verbose debug logging for game streaming on (1) / off (0)
 libav: %s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreammanager.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gamestream/gamestreammanager.cpp
 m_pSystem
 m_pStreamingAudio
 m_pDesktopThread
@@ -19449,7 +19448,7 @@ steamlink_debug
 Unexpected log file type %d
 %s/logs/%s.txt
 %s/logs/%s.previous.txt
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamsession.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gamestream/gamestreamsession.cpp
 nDataSize <= INT_MAX
 Client requested VirtualHere support, but isn't on the same network, ignoring
 Client requested VirtualHere support, redirecting to Steam Store
@@ -19588,7 +19587,7 @@ Changing record window: %p
 Changing record audio processes. Associated window: %p. pids:
 - %d
 Changing record audio process: stopped
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamsystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gamestream/gamestreamsystem.cpp
 pState
 pProcessState
 pWindowState
@@ -19601,7 +19600,7 @@ m_mapProcesses
 m_mapWindows
 m_vecProcesses
 m_pMemStream
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamsystemosx.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gamestream/gamestreamsystemosx.cpp
 Valve Software
 GLaDOSv3.11
 StreamingMouse
@@ -19610,7 +19609,7 @@ streaming_log
 gamestream_debug set to %d
 Detected %d logical processors, using %d threads
 ConvertFrameFromAnnexBtoAVCC
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamutils.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gamestream/gamestreamutils.cpp
 bufReader.GetBytesRemaining() == 0
 CH264FrameCombiner::BuildFrameFromSlicesH264
 ]
@@ -19621,7 +19620,7 @@ steamui/CGameStreamVideoEncoder/FrameDroppedFromGame
 steamui/CGameStreamVideoEncoder/FrameDroppedBeforeEncoder
 steamui/CGameStreamVideoEncoder/FrameDuplicated
 CGameStreamVideoEncoder
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideoencoder.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gamestream/gamestreamvideoencoder.cpp
 BSupportedCodec( m_eVideoCodec )
 !m_Thread.IsAlive()
 >>> Switching video stream from %s to %s
@@ -19660,13 +19659,13 @@ m_sStreamName
 CGameStreamVideoStageRaw
 raw
 streaming_log_spikes
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideostage.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gamestream/gamestreamvideostage.cpp
 !bAsync
 CGameStreamVideoStage
 CGameStreamVideoStageComposite::ProcessData
 + composite
 + scale
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideostagecomposite.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gamestream/gamestreamvideostagecomposite.cpp
 GetNextStage()->GetInputFormats() & k_EScreenshotImageFormat_NV12
 CGameStreamVideoStageComposite::Scale
 m_bufCursor
@@ -19682,7 +19681,7 @@ MFX
 AMF
 VAAPI
 CGameStreamVideoStageEncoderBase::ProcessData
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideostageh264base.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gamestream/gamestreamvideostageh264base.cpp
 (( int )pData->m_Header.m_unWidth == Output.m_Header.m_unWidth && ( int )pData->m_Header.m_unHeight == Output.m_Header.m_unHeight)
 %s: Hardware encoding is too slow, disabling
 GetEncoder()->BSupportsCaptureResolutionChange()
@@ -19696,7 +19695,7 @@ CGameStreamVideoStageQueueThread::ProcessAsync - sleep
 @sBroadcastTune
 film
 CGameStreamVideoStageX264
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideostagex264.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gamestream/gamestreamvideostagex264.cpp
 !m_bX264Loaded
 Configuring encoder: [threads=%d][width=%d][height=%d][preset=%s][tune=%s]
 superfast
@@ -19717,7 +19716,7 @@ FCVAR_NEVER_AS_STRING
 CGameStreamVideoStageYV12
 CGameStreamVideoStageYV12::ProcessData
 + libyuv
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/gamestreamvideostageyv12.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gamestream/gamestreamvideostageyv12.cpp
 Failed to convert image format to yuv: %d, %s
 m_sTitle
 m_bufIconData
@@ -19734,7 +19733,7 @@ vhuit64
 %s/%s
 Couldn't determine VirtualHere executable, can't send command
 IsText()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/vrstreamthread.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gamestream/vrstreamthread.cpp
 >>> Starting VR stream
 >>> Stopped VR stream
 VR_MovieStream
@@ -19754,7 +19753,7 @@ x264_param_apply_fastfirstpass
 x264_param_apply_profile
 x264_param_default_preset
 x264_picture_init
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gamestream/x264wrapper.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gamestream/x264wrapper.cpp
 broadcastid
 nViewers
 nRequests
@@ -19787,7 +19786,7 @@ Broadcast.InviteToWatch
 Broadcast.StopBroadcasting
 Cloud.RetryAppSync
 Cloud.ResolveAppSyncConflict
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/CloudManager.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/CloudManager.cpp
 Attempting cloud eval with invalid user type %s
 GetAppCloudStatusForUI
 Software\Valve\Steam\ShowScreenshotManager
@@ -19827,7 +19826,7 @@ CloudManager\HintAppsToPreload
 Num files for %d: %d
 File %d for App %d: '%s', size = %d, root = %d
 FileExists for %d, root %d, name '%s': %s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlassociativelist.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlassociativelist.h
 IsValidIndex( m_Tail )
 IsValidIndex(iElem)
 IsValidIndex( m_Head )
@@ -19892,7 +19891,7 @@ local://
 game://
 steamapps
 %s\%s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/controllerconfig.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/controllerconfig.cpp
 unknown controller config URL %s for appid %u
 controller_configuration.vdf
 %s/controller_base/%s
@@ -19907,10 +19906,10 @@ config
 steamdecktouchscreen
 CGetControllerConfigWorkerBase::OnReceivedDownloadItemResult
 #SettingsController_SteamController
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/controllerconfig.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/controllerconfig.h
 CPrepareConfigWorker failed for AppID %u
 CPrepareRemotePlayConfigWorker failed for AppID %u
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/controllerdevicesupport.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/controllerdevicesupport.cpp
 m_eCurrentTestState >= k_TestingFirstBinding && m_eCurrentTestState <= k_TestingLastBinding
 %.4x
 crc:
@@ -20008,7 +20007,7 @@ bDPadRight
 p
 _hero
 _logo
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/customimagemanager.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/customimagemanager.cpp
 Unknown asset type for custom image
 %s/%u%s.%s
 %s/%u%s.
@@ -20093,7 +20092,7 @@ Friends.InviteUserToLobby
 Friends.InviteUserToRemotePlayTogetherCurrentGame
 Friends.RegisterForVoiceChatStatus
 Friends.GetCoplayData
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gameactioncontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gameactioncontroller.cpp
 CGameActionController::ContinueGameAction: invalid handle
 GetGameActionID() != k_unGameActionInvalid
 GameAction [AppID %u, ActionID %u] : %s waiting for user response to %s "%s"
@@ -20129,10 +20128,10 @@ rtRemoteTime
 PendingOperations
 result
 CGameActionController::OnDRMFailureResponse
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/settingscontroller.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/settingscontroller.h
 m_eCurrentLanguage != k_Lang_None
 m_vecGameActions
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gameactioncontroller.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gameactioncontroller.h
 BaseGameAction
 Apps.RunGame
 Apps.VerifyApp
@@ -20154,7 +20153,7 @@ Apps.GetConflictingFileTimestamps
 Apps.GetCloudPendingRemoteOperations
 Apps.ClearProton
 Apps.RegisterForDRMFailureResponse
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gameactionlaunchapp.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gameactionlaunchapp.cpp
 ELaunchAppTask
 betaalwaysrebuild
 verifySignaturesBeforeLaunch
@@ -20315,7 +20314,7 @@ Streaming.StreamingSetLaunchOption
 Streaming.StreamingContinueStreamGame
 Streaming.CancelStreamGame
 Streaming.AcceptStreamingEULA
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/gameactionverifyapp.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/gameactionverifyapp.cpp
 EVerifyAppTask
 CGameActionVerifyApp::OnAppInfoUpdateComplete
 CGameActionVerifyApp::OnAppValidationComplete
@@ -20327,7 +20326,7 @@ audio
 type
 CGamescopeController: initalized stub implementation
 Gamescope.GetState#1
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientcommon/include/clientcommon/webui_job_dispatcher.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/clientcommon/include/clientcommon/webui_job_dispatcher.h
 No handler function for WebUI job
 Gamescope.SetBlurParams#1
 unAppID
@@ -20352,7 +20351,7 @@ GameSessions.RegisterForScreenshotNotification
 GameSessions.RegisterForAchievementNotification
 %s%c%s
 folderIndex
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/installfoldercontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/installfoldercontroller.cpp
 pvecInstallFoldersInfo
 NoDriveRoot
 %s/steamapps
@@ -20417,7 +20416,7 @@ installmanagertimeout
 Software\Valve\Steam\DesktopShortcutCheck
 Software\Valve\Steam\StartMenuShortcutCheck
 HKEY_CURRENT_USER\Software\Valve\Steam\SuppressAutoRun
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/InstallManager.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/InstallManager.cpp
 m_eInstallState == k_EInstallMgrStateNone
 %s : unexpected state %u
 ContinueInstall
@@ -20514,7 +20513,7 @@ If-Modified-Since
 %s/appcache/librarycache
 %s/assets.vdf
 %s.jpg
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/libraryassetcache.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/libraryassetcache.cpp
 %s/%u/portrait.png?v=1&cv=%u
 %s/gamedetailsheader/%d/header_t_%d.jpg?retint=0
 %s/images/apps/%u/%s
@@ -20627,7 +20626,7 @@ TimeCellIDSet
 Check360GuideButton
 Controller_CheckGuideButton
 RunSteamPlatform
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/Main.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/Main.cpp
 !"Chrome interface missing"
 htmlcache
 cefdata
@@ -20745,7 +20744,7 @@ MessageBox
 #Steam_MacOSX106_SupportURL
 enable_marketing_messages
 Messages\%llu
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/MarketingController.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/MarketingController.cpp
 m_bActiveMessageDialog
 extended/OnQuitDemoMsg
 extended/OnQuitDemoShellExecute
@@ -20755,9 +20754,9 @@ StoreMarketingMessages
 &low_bandwidth=1
 ?low_bandwidth=1
 %s: Invalid surveyid: %u
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/MarketingController.cpp:375
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/MarketingController.cpp:375
 %s: User is not logged on or is in offline mode
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/MarketingController.cpp:380
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/MarketingController.cpp:380
 Special survey needs to be implemented in React! Requested surveyid: %u
 m_vecMarketingMessages
 m_vecMarketingMessages[i].strURL
@@ -20786,7 +20785,7 @@ singleplayer_only
 %s\sourcemods\%s\%s
 commandargs
 -game "%%s" %s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/modmanager.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/modmanager.cpp
 NULL != pProvider
 %s%c*.*
 HKEY_CURRENT_USER\Software\Valve\Steam\ModInstallPath
@@ -21031,7 +21030,7 @@ bDefaultEncodeAMD
 bDefaultEncodeIntel
 nAutomaticResolutionX
 nAutomaticResolutionY
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/remoteplaycontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/remoteplaycontroller.cpp
 pCallback->m_gameID == m_ActiveGameID
 SteamInputInstaller.pkg
 m_vecActiveSessions
@@ -21145,7 +21144,7 @@ RemotePlay.RegisterForInputDriverRestartNotice
 RemotePlay.InstallInputDriver
 RemotePlay.InstallAudioDriver
 ClientName
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/remotesteamapp.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/remotesteamapp.cpp
 index != m_mapBestClientForApp.InvalidIndex()
 ready_to_play_includes_streaming
 This machine
@@ -21214,7 +21213,7 @@ bRefreshComplete
 playerName
 score
 timePlayed
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/serverbrowsercontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/serverbrowsercontroller.cpp
 m_server.m_NetAdr.GetIP()
 server.m_NetAdr.GetIP()
 Pinged %s but got reply from %s?
@@ -21276,7 +21275,7 @@ gameTags
 CServerBrowserController::OnFavoritesListChanged
 FillInFavoritesCallbackArgs
 GetFavoriteGame failed? %d/%d
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/netadr.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/netadr.h
 CIPAndPort::GetIPv4 called on IPv6 address
 %u.%u.%u.%u:%i
 %s
@@ -21316,7 +21315,7 @@ ServerBrowser.AddFavoriteServersByIP
 ServerBrowser.RemoveFavoriteServer
 ServerBrowser.RemoveHistoryServer
 ServerBrowser.RegisterForFavorites
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/settinghandler.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/settinghandler.cpp
 Failed to read value for setting: read failed: %s
 Failed to read value for setting: no value: %s
 CSettingHandlerImpl: failed to dispatch setting change for: %s
@@ -21337,7 +21336,7 @@ steam:
 dev:
 03000000de280000ff11000001000000
 Overlay_EnableSoftProcessKill
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/settingscontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/settingscontroller.cpp
 m_eCurrentLanguage == k_Lang_None
 HKEY_LOCAL_MACHINE\Software\Valve\Steam\Language
 korean
@@ -21745,7 +21744,7 @@ Pacific/Auckland
 #TimeZoneCities_Tonga
 Pacific/Tongatapu
 OverrideBrowserComposerMode
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/scheduledfunction.h
 m_Func
 Settings.RegisterForSettingsChanges
 Settings.RegisterForSettingsArrayChanges
@@ -21786,7 +21785,7 @@ Settings.ReinitMicSettings
 Settings.OpenWindowsMicSettings
 Settings.GetAppUsesP2PVoice
 Multiple registration for custom function %s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/settingsprofilemanager.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/settingsprofilemanager.cpp
 Unsupported profile mode: %d
 Settings profile change: game: %llu
 Settings profile change: battery: %d active: %d
@@ -21812,7 +21811,7 @@ SettingValidation: read test float: %f
 SettingValidation: set  test string: %s
 SettingValidation: read test string: %s
 Test Default Value
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/sharedconnectioncontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/sharedconnectioncontroller.cpp
 pConnection->m_mapWaitingCalls.IsValidIndex( iMap )
 Remote call failed
 eUniverse
@@ -21832,7 +21831,7 @@ CSharedConnectionController::OnMessageReady
 CSharedConnectionController::OnServersConnected
 CSharedConnectionController::OnServersDisconnected
 CSharedConnectionController::OnPostLogonState
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/sharedconnectioncontroller.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/sharedconnectioncontroller.h
 m_eConnectedUniverse > k_EUniverseInvalid && m_eConnectedUniverse < k_EUniverseMax
 SharedConnection.AllocateSharedConnection
 SharedConnection.RegisterOnLogonInfoChanged
@@ -21849,7 +21848,7 @@ CSharedLibraryNotifications::OnDeauthorizeDevice
 CSharedLibraryNotifications::OnStopPlaying
 CSharedLibraryNotifications::OnSharedLibraryChanged
 *.app
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/shutdowncontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/shutdowncontroller.cpp
 CShutdownController::OnInvalidateCredentials
 TransportAuth.NotifyStartShutdown#1
 m_vecCallbacksShutdownStart
@@ -21865,7 +21864,7 @@ User.RegisterForShutdownState
 User.RegisterForShutdownDone
 User.RegisterForShutdownFailed
 Steam logging initialized: directory: %s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/spewmanager.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/spewmanager.cpp
 Error: %s
 Error:
 Steam - Error
@@ -21897,7 +21896,7 @@ steambeta://open/bigpicture
 %s: ignoring gamepadui request via registry for Steam Deck
 Switching to gamepadui
 Switching to desktopui (from legacy vgui mode)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/startupmodemanager.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/startupmodemanager.cpp
 m_eCachedStartupMode != k_EUIMode_Unknown
 Attempted to force startup mode after it was already set
 Attempted to set an invalid startup mode
@@ -21917,7 +21916,7 @@ executable
 description
 description_loc
 compat_tool
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/SteamApp.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/SteamApp.cpp
 appID != k_uAppIdInvalid
 !(appID & k_unLocalAppIDFlag)
 NumVRLaunchOptions
@@ -22172,7 +22171,7 @@ MinClientVersion_%s
 Software\Valve\Steam\Apps\%u_%u
 Software\Valve\Steam\Apps\%u
 Software\Valve\Steam\Shortcuts\%u
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/appregkeystring.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/appregkeystring.h
 CAppRegKeyString invalid type
 \%s
 \%d
@@ -22193,7 +22192,7 @@ force display of SSA
 Initialize
 -singleapp
 launcher\appid
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/SteamDoc.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/SteamDoc.cpp
 This installation is missing the app ID in config/config.vdf. Please reinstall.
 steamchina
 m_eLauncherType != k_ELauncherTypeCmdLine
@@ -22380,7 +22379,7 @@ public/steamui_%language%.txt
 Failed to load SteamUI localization file.
 resource/overlay_%language%.txt
 resource/overlay_english.txt
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/SteamStartup.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/SteamStartup.cpp
 Failed to load overlay localization file (size:%d)
 Failed to load custom launcher localization file.
 steam/cached/steamui_postlogon_%language%.txt
@@ -22469,7 +22468,7 @@ CSteamStartup::OnSystemIM
 CSteamStartup::OnShutdownLauncher
 HKEY_CURRENT_USER\Software\Valve\Steam\AlreadyRetriedOfflineMode
 -master_ipc_name_override
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/SteamUI.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/SteamUI.cpp
 pchFaqName && pchFaqName[ 0 ]
 https://help.steamchina.com/zh/kb/%s
 https://support.steampowered.com/kb_article.php?ref=%s&l=%s
@@ -22533,7 +22532,7 @@ RegisterForAppOverview 1: %ums
 RegisterForAppOverview 2: %ums
 CSteamUIAppController::BuildCompleteAppOverviewChange - app
 BuildCompleteAppOverviewChange: %d apps
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuiappcontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/steamuiappcontroller.cpp
 Constructed empty appoverview message in BuildCompleteAppOverviewChange
 publisher
 franchise
@@ -22695,7 +22694,6 @@ discNumber
 trackNumber
 durationSeconds
 m
-s
 originalName
 internationalName
 trackDisplayName
@@ -22957,9 +22955,9 @@ m_pmapAppToLastPlayed == NULL
 m_pmapAppToTags == NULL
 m_pmapAppToAppState == NULL
 Key( i )
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsortvector.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlsortvector.h
 pToCopy != NULL
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuiappiconcontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/steamuiappiconcontroller.cpp
 CSteamDoc::InitializeUserConfigDir: failed to get config folder for %s
 %s%c%s%c%llu.%s
 CSteamDoc::BGetAppGridOverrideFilename
@@ -22970,7 +22968,7 @@ m_strUserConfigDir
 grid
 -showallbetas
 Disable client beta filtering
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuibetacontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/steamuibetacontroller.cpp
 CSteamBootstrapperController::ExecuteInitialCommandLine: not ready yet
 SteamBootstrapper_GetForwardedCommandLine
 -shutdown-restart-type
@@ -23020,7 +23018,7 @@ CSteamBootstrapperController::OnPostLogonState
 Local:
 package/beta_cache.vdf
 System.RegisterForOnSuspendRequest
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuicontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/steamuicontroller.cpp
 g_pSteamUIController == nullptr
 UI.RegisterForStartupFinished
 UI.RegisterForUIModeChanged
@@ -23120,7 +23118,7 @@ trade_offers
 async_game_updates
 moderator_messages
 help_request_replies
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuicurrentusercontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/steamuicurrentusercontroller.cpp
 CSteamUICurrentUserController::OnSystemIM: %u
 IM
 show_popup
@@ -23133,7 +23131,7 @@ User.RequestSupportSystemReport
 User.SetAsyncNotificationEnabled
 vdf
 zipped_content_base64
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuidownloadscontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/steamuidownloadscontroller.cpp
 No app found while requerying
 CGameID( pCallback->m_nAppID ).IsValid()
 update_appid
@@ -23268,7 +23266,7 @@ OutputY
 bSyncDone
 bSyncConflict
 bSyncError
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuiinputcontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/steamuiinputcontroller.cpp
 m_controllerDetailsCurrent.unActiveAccountID != CONTROLLER_ACTIVE_ACCOUNT_IS_GUEST
 eRumblePreference
 nTurnOnSound
@@ -23698,7 +23696,7 @@ System.Network.Device.Connect
 System.Network.Device.Disconnect
 System.Network.Device.WirelessNetwork.SetAutoconnect
 System.Network.Device.WirelessNetwork.Forget
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuiservicetransport.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/steamuiservicetransport.cpp
 Not supported yet
 NULL != g_pJobCur
 servicemethod
@@ -23715,7 +23713,7 @@ STEAM_FORCE_DESKTOPUI_SCALING
 Force scaling: Found env force scaling override: %s
 m_vecLastFocusableWindows
 m_cbFocusChange
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuisharedjscontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/steamuisharedjscontroller.cpp
 m_pChromeController
 resource/webkit.css
 Valve Steam Client
@@ -23858,7 +23856,7 @@ UI.EnsureMainWindowCreated
 UI.NotifyAppInitialized
 UI.GetOSEndOfLifeInfo
 WaitForBrowserFileDialogResultThread
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/cumulativetimer.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/cumulativetimer.h
 IsRunning()
 Error: %s: failed to retrieve file open dialog results
 operator()
@@ -23897,7 +23895,7 @@ MachineStorage.SetString
 MachineStorage.GetJSON
 MachineStorage.SetObject
 MachineStorage.DeleteKey
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuisurveycontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/steamuisurveycontroller.cpp
 pchArg1
 pchArg2
 pchArg3
@@ -24157,7 +24155,7 @@ sRawName
 %mystuff%
 id/%s
 profiles/%llu
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuiurlcontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/steamuiurlcontroller.cpp
 steamIDUser.IsValid()
 %steamID%
 StorefrontCDNURL
@@ -24210,7 +24208,7 @@ CSteamUIURLController::OnVanityURLChanged
 URL.GetSteamURLList
 URL.RegisterForSteamURLChanges
 URL.GetWebSessionID
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuivrcontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/steamuivrcontroller.cpp
 !m_pVR2GameOverlayManager
 SteamVRHMDVGUIWarning
 SteamVRHMDVGUILaunchTutorial
@@ -24313,7 +24311,7 @@ OpenExternalForPID
 JoinParty
 GameWebCallback
 openexternalforpid
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamurlcontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/steamurlcontroller.cpp
 CSteamURLController::ExecuteSteamURL %s : not allowed yet
 CSteamURLController::ExecuteSteamURL : Wrong universe
 ExecuteSteamURL: "%s"
@@ -24384,7 +24382,7 @@ DisplayedIntroDialog
 CStreamingClientGameController::OnRemoteClientStartStreamResult
 CStreamingClientGameController::OnRemoteClientStartStreamProgress
 CStreamingClientGameController::OnStreamClientResult
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/streamingservergameactions.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/streamingservergameactions.cpp
 unGameActionID == m_unGameActionID
 AppError_16
 AppError_18
@@ -24404,7 +24402,7 @@ AudioSinkAvailabilityChanged: %d
 SinkAdded: %d
 SinkRemoved: %d
 SinkVolumeChanged: %d,%d -> %f
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/systemaudiocontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/systemaudiocontroller.cpp
 m_bHandleVolumeKeys
 no interface
 activeOutputDeviceId
@@ -24494,7 +24492,7 @@ sOSBuildId
 System details: codename:%s variant:%s version:%s build:%s bios:%s cef_debugging:%d
 nSteamVersion
 sSteamBuildDate
-May 20 2024 14:27:27
+May 24 2024 13:48:01
 sSteamAPI
 SteamClient021
 sCPUVendor
@@ -24507,7 +24505,7 @@ sVideoCardName
 sVideoDriverVersion
 nVideoRAMSizeMB
 bIsUnsupportedPrototypeHardware
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/systemcontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/systemcontroller.cpp
 Plat_IsGamescope()
 flBrightness
 Request failed to execute
@@ -24586,7 +24584,7 @@ SetPairing
 on
 off
 exited pairing mode
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/systemdevkitcontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/systemdevkitcontroller.cpp
 %s invoked without a prompt callback registered
 RespondToPairingPrompt
 %s %d %s
@@ -24619,7 +24617,7 @@ Initialized CSystemReportController
 m_strSystemReportsDir
 JSGenerateSystemReport
 systemreport-%s.txt
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/systemreportcontroller.cpp:152
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/systemreportcontroller.cpp:152
 Error: %s: failed to create system report file path
 YldGenerateSystemReport
 Error: %s: failed to open system report file: %s
@@ -24643,7 +24641,7 @@ YldSaveToDesktop
 ThreadedSaveSysemReportToDesktop
 systemreport-*.txt
 CleanupSystemReports
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/processworkitem.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/processworkitem.h
 /tmp/jupiter-wifi-trace.dat
 System.Report.GenerateSystemReport
 System.Report.Submit
@@ -24661,7 +24659,7 @@ Enable test storage data
 m_pManager
 StorageDeviceManager.IsServiceAvailable#1
 m_vecPromiseResolutions
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/threadedpromiseresolver.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/threadedpromiseresolver.cpp
 !IsAlive()
 ThreadedCount
 NotifyText: %s
@@ -24681,7 +24679,7 @@ TransportValidation.NotifyCount#1
 Steam_Tooltip_Working
 Steam_Tooltip_Downloading
 %s (%d%%)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/UpdateManager.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/UpdateManager.cpp
 (int)m_vecMRUApps.Count() == (int)m_mapMRUApp.Count() && m_mapMRUApp.Count() == m_mapAppsInMRU.Count()
 RecentLocalPlayedGameIDs
 RecentLocalPlayed
@@ -24696,9 +24694,9 @@ CUpdateManager::OnSubscribedFileDownloadCompleted
 CUpdateManager::OnAppLifetimeNotice
 CUpdateManager::OnAppInstalled
 CUpdateManager::OnRemoteClientStreamLifetime
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlfixedmemory.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlfixedmemory.h
 (nGrowSize >= 0) && (nGrowSize != EXTERNAL_BUFFER_MARKER)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlfixedlinkedlist.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlfixedlinkedlist.h
 IsValidIndex(i)
 filename
 filesize
@@ -24730,7 +24728,7 @@ GameNotes.UploadImage
 GameNotes.DeleteImage
 notes
 images
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/steamuiapicallhelpers.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/steamuiapicallhelpers.h
 apicall
 m_pInternal.Get() != nullptr
 Automatically logs in user
@@ -24738,7 +24736,7 @@ Automatically logs in user
 If logging in user with credentials specified on the command line, proceed as if 'remember my password' had been enabled
 -userchooser
 Sends the user to the User Chooser even if they have 0 or 1 accounts
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/userlogincontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/userlogincontroller.cpp
 !m_SteamID.IsValid() || m_SteamID == steamid
 Unexpected reentrancy
 Set Credentials failed
@@ -24820,7 +24818,7 @@ Auto-Registering controller: %s, %s
 BPM Offline controller registration %s, %s, using account %u
 Controller %d connected, configuring it now...
 We thought %d was already a connected controller?
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/valvecontrollermanager.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/valvecontrollermanager.cpp
 GetControllerDetails failed for controller %u
 !! Controller %u attributes%s:  Type: %u  ProductID: %u  Serial: %s  Capabilities: %08x  Firmware Version: %u  Firmware Build Time: %u (%s)
 (wireless)
@@ -25006,7 +25004,7 @@ image_path
 valve.steam.desktopgame.%d
 -steam_game %d
 VRStreamingThread
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/vr/vr2dgameoverlay.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/vr/vr2dgameoverlay.cpp
 m_pWindow
 m_GLContext
 appcache/librarycache/%d_icon.jpg
@@ -25023,7 +25021,7 @@ CVR2DGameOverlay::OnVRSceneApplicationChanged
 valve.steam.desktop
 vrlink
 webui_transport_error_fatal
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/webuitransportcontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/webuitransportcontroller.cpp
 Failed to initialize WebUI transport
 WebUITransportController: Initialized
 portSteamUI
@@ -32864,14 +32862,14 @@ object
 message
 reply
 m_vecFuncs
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/html_jstypes.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/html_jstypes.cpp
 Duplicate property %s in object
 ulValue < ((uint64)1<<53)
 ulValue < ((uint64)1 << 53)
 CJSMethodArgs::AddProtobufAsBinary
 zh_XC
 zh-xc
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/language.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/language.cpp
 !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
 zh_CN
 English
@@ -33059,7 +33057,7 @@ indonesian
 id_ID
 htmlmessages.proto
 CUIProtoBufMsg::SerializeCrossProc
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/html/htmlprotobuf.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/html/htmlprotobuf.cpp
 unSize < 128 * 1024 * 1024
 eCmd > 0 && eCmd < eHTMLCommands_None
 pBuffer->TellPut() == 0
@@ -33111,7 +33109,7 @@ SetFont
 SetTexture
 SetString
 Couldn't parse script sequence '%s': expected <anim command>, found '%s'
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/AnimationController.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/AnimationController.cpp
 panel != NULL
 AnimationController
 m_Sequences
@@ -33126,7 +33124,7 @@ vgui::CPanelAnimationDictionary
 m_AnimationMaps
 m_AnimationMaps[ iAnimationMap ].map->entries
 m_PanelAnimationMapPool
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlsymbol.h
 pPool->m_SpaceUsed < 0xFFFF
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 CUtlSymbolTable
@@ -33260,10 +33258,10 @@ filtered
 , string image, string imagecolor, alignment imageAlignment, int preserveAspectRatio, int filtered
 BitmapImagePanel
 CBuildFactoryHelper:  Factory for '%s' already exists!!!!
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/BuildFactoryHelper.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/BuildFactoryHelper.cpp
 func
 className
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/BuildGroup.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/BuildGroup.cpp
 m_pkvSettings
 [%s] applying key '%s', has changed from '%s' to '%s'
 controlKeys
@@ -33297,7 +33295,7 @@ u
 ButtonClicked
 ComboBoxButton
 ActivateItem
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/controls.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/controls.cpp
 s_pFileSystemInterface
 en_US.UTF-8
 VGUI_ivgui007
@@ -33321,7 +33319,7 @@ SetText
 SetState
 GetState
 GetText
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/EditablePanel.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/EditablePanel.cpp
 m_nSuppressDialogVariablesMessages >= 1
 EditablePanel::PerformLayout()
 %s:hscroll
@@ -33386,7 +33384,7 @@ FileSelectionCancelled
 NewFolder
 filterinfo
 %s%d
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/FileOpenDialog.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/FileOpenDialog.cpp
 Couldn't format time value %llu
 curFilter[0] == '*' && curFilter[1] == '.'
 FileSelected
@@ -33437,7 +33435,7 @@ frame_close
 CloseFrameButtonPressed
 frame_menu
 BgColor
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/Frame.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/Frame.cpp
 Frame::SetTitle - vgui::localize not initialized
 BaseControls
 FrameTitleBar.SmallFont
@@ -33495,13 +33493,13 @@ FrameCloseButton
 FrameSystemButton
 FrameSystemButton.Icon
 FrameSystemButton.DisabledIcon
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/GraphPanel.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/GraphPanel.cpp
 lowRange < highRange
 m_RangeList
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/HotKeyEntry.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/HotKeyEntry.cpp
 resource/icon_clear_field
 ImagePanel
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/HTML.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/HTML.cpp
 Failed creating HTML browser %s: %s
 <unnamed>
 <no url>
@@ -33624,7 +33622,7 @@ Disables new faster overlay HTML path (or enables if on a branch it's not on by 
 -html-perf-monitor
 Draws html perf data
 CHTMLFindBar
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/html/htmlpaintbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/html/htmlpaintbuffer.h
 m_nLockedIdx >= 0
 m_nLockedIdx == -1
 iNewReadIndex != 3
@@ -33666,7 +33664,7 @@ WebReload
 PopupHTML
 vgui::HTML
 m_Images
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/ImagePanel.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/ImagePanel.cpp
 fillcolor
 gradientStart
 gradientEnd
@@ -33715,7 +33713,7 @@ m_vecNodes
 LabelDull
 LabelBright
 Label::Paint()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/Label.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/Label.cpp
 _imageDar.IsValidIndex( index )
 labelText
 textAlignment
@@ -33746,7 +33744,7 @@ VertScrollBar
 ListImage
 ListPanelInterior
 ColumnSelectButton
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/ListPanel.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/ListPanel.cpp
 minWidth <= width
 maxWidth >= width
 Check
@@ -33823,13 +33821,13 @@ ListPanelCheckBox::OnThink()
 different KV data types in a single list column
 ListPanelCollapserBase::OnAppearanceChanged()
 ListViewPanel
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/ListViewPanel.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/ListViewPanel.cpp
 font
 ListViewItemSelected
 ListPanel.BgColor
 ListViewItem
 ListPanel.TextBgColor
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/Menu.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/Menu.cpp
 m_SeparatorPanels.Count() == 0
 m_MenuItems.IsValidIndex(itemID)
 child
@@ -33853,7 +33851,7 @@ CloseMenu
 CursorEnteredMenuItem
 VPanel
 CursorExitedMenuItem
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vgui_controls/MenuItem.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/vgui_controls/MenuItem.h
 m_bCheckable
 (unsigned)elem <= (unsigned)m_Size
 checked
@@ -33866,7 +33864,7 @@ CursorEnteredMenuButton
 ShellCmd
 showDownArrow
 , int showDownArrow
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/MenuItem.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/MenuItem.cpp
 !(cascadeMenu && checkable)
 rightarrow
 Menu.TextInset
@@ -33879,7 +33877,7 @@ MessageBoxText
 #MessageBox_OK
 Close
 MessageBox.ButtonHeight
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/Panel.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/Panel.cpp
 OnScreenSizeChanged
 oldwide
 oldtall
@@ -34049,7 +34047,7 @@ CPanelKeyBindingMapDictionary
 m_MessageMaps[ iMessageMap ].map->defaultkeys
 m_MessageMaps[ iMessageMap ].map->boundkeys
 m_PanelKeyBindingMapPool
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlhandletable.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlhandletable.h
 nIndex < ( unsigned int )m_list.Count()
 progress
 continuous
@@ -34064,7 +34062,7 @@ PageHide
 PageTabActivated
 AddTabButton
 TabMenuButton
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/PropertySheet.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/PropertySheet.cpp
 tab
 TabMenuButtonFlash
 FindDefaultButton
@@ -34109,7 +34107,7 @@ ScrollBar
 RichText.InsetX
 RichText.InsetY
 RichText::DrawString
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/RichText.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/RichText.cpp
 startIndex < m_TextStream.Count()
 RichText::OnThink()
 RichText::RecalculateLineBreaks
@@ -34181,7 +34179,7 @@ _rightCaption
 TextEntry.IMEBGColor
 TextEntry.IMEFGColor
 TextKillFocus
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/TextEntry.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/TextEntry.cpp
 TextEntry field is much too large: %d characters, %f pixels wanted, %d pixels available
 #TextEntry_Cut
 #TextEntry_Paste
@@ -34224,7 +34222,7 @@ IMEConversionModes
 IMESentenceModes
 TextEntryClearButton
 TextImage::Paint()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/TextImage.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/TextImage.cpp
 echar >= schar
 wordStartIndex > m_LineBreaks[ m_LineBreaks.Count() - 1 ]
 wordStartIndex >= _utext
@@ -34243,7 +34241,7 @@ TooltipWindow
 OnFinishRequest
 tooltip_headline
 TooltipHTML
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/ToolWindow.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/ToolWindow.cpp
 page->m_pToolWindow == this
 PageChanged
 AddNewTab
@@ -34251,7 +34249,7 @@ PageCountChanged
 TreeNode
 TreeImage
 TreeNodeText
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/TreeView.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/TreeView.cpp
 m_pTreeView->IsLabelEditingAllowed()
 original
 changed
@@ -34276,7 +34274,7 @@ m_pExpandImage
 m_AllChildren
 m_pkvData
 m_pChildren
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/TreeViewListControl.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/TreeViewListControl.cpp
 m_vecJumpWChars
 URLLabel
 URLText
@@ -34299,12 +34297,12 @@ interiorspacing
 wheelpct
 WrapPanel::Repaint
 PanelClicked
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/wrappanel.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/wrappanel.cpp
 m_bSorted
 m_vecSortedContents
 m_Contents
 WrapPanel
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/bitstring.cpp
 resizeNumBits >= 0
 !m_pInt
 GetInts()
@@ -34312,7 +34310,7 @@ CVariableBitStringBase
 {}()'
 {}()':
 0123456789ABCDEF
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/convar.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/convar.cpp
 pName
 Convars
 m_fnCompletionCallback
@@ -34333,7 +34331,7 @@ m_strConvertedDefaultValue
 ConCommand '%s' not currently supported in config file
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock %s %s failed. errno = %d
@@ -34395,7 +34393,7 @@ pFile->m_hFileDest != INVALID_OSFILEHANDLE
 m_vecRegisteredWriters.HasElement( pFile )
 CPathString
 .dylib
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/interface.cpp
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 .cpl
 g_VecLoadedModules
@@ -34404,7 +34402,7 @@ g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
 %%%d
 ]:%u
 ReadToken overflow
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/KeyValues.cpp
 filesystem
 You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 "
@@ -34473,7 +34471,7 @@ KeyValues Error: %s in file %s [offset: %d]
 context.m_vecStack.Count() <= 1
 %.18g
 Memory leak: mempool blocks left in memory: %d
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/mempool.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/mempool.cpp
 CMemoryPool::AddNewBlob: mode == GROW_NONE
 blobSize <= nMaxBlobSize
 pBlob
@@ -34481,7 +34479,7 @@ CMemoryPool::Alloc: ran out of memory
 k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 k_nMemPoolMagic_InUse == *(( (int *) pMem) - 1)
 CMemoryPool
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/netadr.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/netadr.cpp
 loopback
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
@@ -34490,10 +34488,10 @@ pvecAddressesOut != nullptr || pSingleOutput != nullptr
 about to perform blocking dns call from the main thread.  consider refactoring.
 BResolveHostString - unexpected DNS lookup flag '%d'
 NSURLVolumeAvailableCapacityForImportantUsageKey
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/osxhelpers_tier1.mm
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/osxhelpers_tier1.mm
 GetFileSystemFreeSpaceForPath failure for %s
 /bin/ps -x -o pid=,ppid=
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 nSize != 0
 CUtlBuffer::GetStringFast: binary buffers only
@@ -34508,7 +34506,7 @@ offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
 b
 a
 '
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
 nSizeOfType > 0
 nGrowSize >= 0
 m_nAllocationCount >= 0
@@ -34519,12 +34517,12 @@ num > 0
 num >= 0
 numElements <= m_nAllocationCount
 m_pMemory
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlqueue.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlqueue.cpp
 IsPowerOfTwo( nNewCapacity )
 nPreSplit > 0 && nPreSplit + nPostSplit == nCount
 ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 CUtlString::VAppendFormat
 CUtlString::ReplaceInternal
@@ -34540,14 +34538,14 @@ nMinCapacity <= k_nMaxStringSize
 len > 0 || HasError()
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlsymbol.cpp
 s_bAllowStaticSymbolTable
 s_pSymbolTable
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto.cpp
 iGenerateRandomNumberRetry < 300
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_25519_donna.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_25519_donna.cpp
 Key not initialized, cannot verify signature
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_aescbc_openssl.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_aescbc_openssl.cpp
 pubEncryptedData
 pubPlaintextData
 pcubPlaintextData
@@ -34564,7 +34562,7 @@ pcubEncryptedData
 *pcubEncryptedData
 cubEncryptedData >= cubTotalOutput
 nDecrypted == cubEncryptedData - k_nSymmetricBlockSize
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_digest_openssl.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_digest_openssl.cpp
 CCrypto::GenerateSHA1Digest
 pOutDigest
 SHA1_Init( &c )
@@ -34575,13 +34573,13 @@ cubKey > 0
 pOutputDigest
 CCrypto::GenerateHMAC256
 CCrypto::GenerateHMACMD5
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_rsa_openssl.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_rsa_openssl.cpp
 CCrypto::RSAEncrypt
 cubPlaintextData > 0
 Invalid RSA modulus: %d bytes wide
 CCrypto::RSAEncrypt: insufficient output buffer for encryption, needed %d got %d
 RSA encryption failed
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_textencode.cpp
 CCrypto::Base64Encode: insufficient output buffer for encoding, needed %d got %d
 CCrypto::Base64Encode
 NULL output buffer with non-zero size passed to Base64Encode
@@ -34632,7 +34630,7 @@ IVRSteamPrivate_003
 %02d/%02d/%02d
 00:00:00
 01/01/00
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/rtime.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/rtime.cpp
 V_strlen( pchTime ) == 25
 Infinite time value
 Nil time value
@@ -34646,7 +34644,7 @@ NIL
 %04u%02u%02u%02u%02u%02u
 %04u-%02u-%02u %02u:%02u:%02u
 Bad flag in RTime32DateAdd
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/stat.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/stat.cpp
 CStatT<T>::Update: called on class that was not initialized.
 m_iSampleBucketCurrent < m_cSampleBuckets
 m_iSampleBucketLast < m_cSampleBuckets
@@ -34679,11 +34677,11 @@ $U
 kn
 Ft
 lei
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/amount.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/amount.cpp
 Unknown currency code %d
 C
 amount != INT64_MIN
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/amount.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/amount.h
 Unimplemented rounding method %d. Rounding half up!
 CAPIJobGetNewSession
 CAPIJobEndSession
@@ -35188,7 +35186,7 @@ UnbufferedSend
 PostRecv
 SocketFail
 SocketAlreadyClosed
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/completionportmanager.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/completionportmanager.cpp
 m_cStartCount > 0
 IOCP Thread %u
 IOCP Thread
@@ -35198,7 +35196,7 @@ ulResult != 0
 CCompletionPortManager::IOCPWorkerThread: got 100 consecutive errors, last error %d (%s), IOCP thread aborting and exiting
 BStarted()
 m_AssocHandles
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/completionportmanager_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/completionportmanager_posix.cpp
 g_CompletionPortManager.BStarted()
 Assoc.nFd == handle
 ( Assoc.nFlags & ( k_nAssocProcessing | k_nAssocFinalizing ) ) == 0 && Assoc.pPending == NULL
@@ -35217,6 +35215,8 @@ m_vecThreadPipeReadFds.Count() == 0 && m_vecThreadPipeWriteFds.Count() == 0
 CompletePendingIo
 Unhandled pending I/O type %d
 %s\%x%x
+Xbox One Elite Controller
+Xbox One Elite 2 Controller
 Xbox 360 Controller
 Xbox 360 Wireless Controller
 PDP Xbox 360 Afterglow
@@ -35233,8 +35233,6 @@ SteelSeries Stratus Duo
 Amazon Luna Controller
 Xbox One Controller
 Xbox One S Controller
-Xbox One Elite Controller
-Xbox One Elite 2 Controller
 Xbox Adaptive Controller
 Xbox Series X Controller
 PDP Xbox One Afterglow
@@ -35282,7 +35280,7 @@ PowerA Fusion Pro 2 Controller
 PowerA Spectra Infinity Controller
 PowerA Xbox One Controller
 Steam Virtual Gamepad
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/cookiecontainer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/cookiecontainer.cpp
 Unexpected result from V_SplitString()
 secure
 httponly
@@ -35303,7 +35301,7 @@ m_strPath
 enums.proto
 enums_clientserver.proto
 enums_productinfo.proto
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/enum_names.cpp
 EResult
 cs
 EUniverse
@@ -35824,11 +35822,11 @@ web:internalstats
 web:support
 unspecified
 cloud
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/filesystem_helpers.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/filesystem_helpers.cpp
 LoadFileIntoBuffer: NULL parameters
 @bEnableFrameFuncOverageWarnings
 This turns on the spew in SPEW_MISC at level 4, still need to adjust spew levels to see it.
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/framefunction.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/framefunction.cpp
 eFrameType < k_EFrameTypeMax
 pchName
 V_strlen( pchName ) < V_ARRAYSIZE( m_rgchName )
@@ -35843,7 +35841,7 @@ CFrameFunctionMgr::BRun - SingleFunc
 CFrameFunctionMgr::BRun - OverageWarning
 CFrameFunctionMgr::BRun - DeletePass
 m_VecPFrameFunction[iFrameType]
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/gid.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/gid.cpp
 GID Sys ID overflow
 Duplicate rack initialization of GID system
 SysID zero not supported for rack boxes
@@ -35892,7 +35890,7 @@ Alt
 Shift
 Win
 RequestHeaders
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/http.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/http.cpp
 Authorization
 CHTTPRequest::RetrieveURLEncodedData
 m_pkvRequestHeaders
@@ -35939,7 +35937,7 @@ user-agent
 Transfer-Encoding
 Range
 Set-Cookie
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpclient.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/httpclient.cpp
 Request host %s with relative URL %s appears invalid
 CHTTPUtil::BStatusCodeIsRedirect( eRedirectStatusCode )
 wss://
@@ -36087,13 +36085,13 @@ m_pListWaitingRequestsForAddress
 m_pTreeWaitingConnections
 m_pTreeInUseConnections
 <local>
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpclientmgr.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/httpclientmgr.cpp
 m_vecpHTTPClients.FindAndFastRemove( pHTTPClient )
 m_vecpHTTPClients
 m_strProxyOverride
 Aborting stale HTTP request on connection (%p, stream: %d) due to absolute timeout: %s - %X
 Aborting stale HTTP request on connection (%p, stream: %d) due to network activity timeout: %s - %X
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpclient_internal.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/httpclient_internal.cpp
 Hit destructor inside a HTTP2 callback from nghttp2 - not safe
 HTTP Connection (%p) (connection handle %X) destructing! - Dispatching pending request (%p)
 Closing HTTP 1.x connection hard (%p) due to timeout while request active: %s - %X
@@ -36358,7 +36356,7 @@ Failed writing http cache file to disk
 (uint32)m_pHTTPRequestCache->m_listCacheFileLRU.Count() == (uint32)m_pHTTPRequestCache->m_mapCacheFiles.Count()
 CWorkItemHTTPClientRequest
 CWorkItemHTTPClientRequest::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpclient_internal.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/httpclient_internal.h
 m_BodyDataBuffer
 m_bufLeftOverHTTP2BodyDataChunk
 m_strCacheDirectory
@@ -36379,7 +36377,7 @@ Log level to use for full details of any http server request returning 200.  Thi
 @nHTPPServerLogLevelDetailsNon200
 Log level to use for full details of any http server request returning != 200
 CHTTPServerSend100ContinueJob
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpserver.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/httpserver.cpp
 m_pClientConnection->GetCurrentRequestSequenceNumberRespondedTo() >= m_ulSequenceNumber
 pchQueryString[0] == '?'
 Unknown content encoding '%s' in CHTTPServerRequest::BDecodeRequestBody()
@@ -36504,7 +36502,7 @@ CHTTPServerParseRequestWorkItem::ThreadProcess
 m_strContentType
 m_strRequestHost
 m_strLastURI
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/iopollinghelpers_osx.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/iopollinghelpers_osx.cpp
 Unexpected thread race for CIOPollingHelper construction
 nStateFlags != 0
 m_watchTable.InvalidIndex() == m_watchTable.Find( socket )
@@ -36520,7 +36518,7 @@ m_vecIPFilterRangesV6
 @nJobInteryieldMillisecondsSpewThreshold
 @nJobNetSendsInsaneThreshold
 15000
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/job.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/job.cpp
 CJob instances should never live on the stack; yielding will break the job manager!
 GetMicrosecsUntilCallerDeadline() >= k_nMillion*3600*24*30
 ~CJOB: %s has an unexpected threaded work item.
@@ -36639,9 +36637,9 @@ iocp completion
 shared resource high pri
 shared resource
 generic context
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/workthreadpool.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/workthreadpool.h
 jobID != k_GIDNil
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jobfuture.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/jobfuture.cpp
 nMicroSecLimit should be smaller than overall job timeout, it will not extend the job timeout to allow a larger value.
 m_pNext
 g_pAllFutureSharedStates
@@ -36654,7 +36652,7 @@ CJobMgr::BFrameFuncRunNewJobsFromNetMessages
 CJobMgr::BFrameFuncDispatchCompletedWorkItems
 CJobMgr::m_WorkThreadPool
 CJobMgr::BFrameFuncRunSleepingJobs
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jobmgr.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/jobmgr.cpp
 m_stackDoNotYieldGuards.Count() == 0
 CJobMgr -- Process Wait Detail Updates
 CJobMgr::BResumeYieldingJobs
@@ -36718,10 +36716,10 @@ m_mapJobSharedStatesOutstanding
 CJobMgr class statics
 GMapJobTypesByMsg()
 GMapJobTypesByName()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlpriorityqueue.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlpriorityqueue.h
 m_heap.IsValidIndex(index)
 CJWT::EInitFromStringInternal
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jwt.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/jwt.cpp
 No public keys with which to verify token signature
 typ
 JWT
@@ -36751,7 +36749,7 @@ m_strSubject
 bitset set argument out of range
 @bEnableSpewThrottle
 @bEnableLogTearOff
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/logger.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/logger.cpp
 pLogInstance == sm_pLogInstance
 sm_cRef > 0
 sm_bShuttingDown
@@ -37249,7 +37247,7 @@ k_EMsgClientSiteLicenseGetAvailableSeatsResponse
 k_EMsgClientSiteLicenseGetContentCacheInfo
 k_EMsgClientSiteLicenseGetContentCacheInfoResponse
 m_vecMetrics
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/metrics/metrics.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/metrics/metrics.cpp
 CMetricsPayload::RecordMetric
 m_pMetricsPayload
 Not accumulating differing metrics types: %d and %d
@@ -37268,7 +37266,7 @@ null catalog
 null program
 null operation
 @bMsgErrorDump
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msg.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/msg.cpp
 EMsg %d registered multiple times.
 EMsg_IsValid( pOldMsgInfo->eMsg )
 *pOldMsgInfo->pchMsgName
@@ -37285,7 +37283,7 @@ m_mapServiceMethodResponseJobNameToMsgInfo
 m_mapMessageNameToMsgInfo
 Bad packet received: EMsg would be %u, next 12 bytes: %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X
 Bad packet received: EMsg would be %u
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netpacket_legacy_struct.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netpacket_legacy_struct.h
 CClientStructNetPacket->GetHdrIP() not valid.
 CClientStructNetPacket->GetRealm() not valid.
 CClientStructNetPacket->GetGCRouting() not valid.
@@ -37314,7 +37312,7 @@ Default initial allocation size for PB arena
 @nProtobufArenaMaxBlockSize
 524288
 Max block allocation size for PB arena
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msgprotobuf.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/msgprotobuf.cpp
 Unparseable protobuf message arrived, emsg=%u, size=%u
 CProtoBufNetPacket::RebuildPacketIfNeeded (needed)
 unOldBodySize >= 0
@@ -37345,7 +37343,7 @@ m_pNetPacket && m_pNetPacket->CubData() >= sizeof( ProtoBufMsgHeader_t )
 m_pNetPacket->CubData() >= cubSkip
 cubBuffer >= cbWritten + ( m_pNetPacket->CubData() - cubSkip )
 cubBuffer >= cbWritten + m_ReplacementBody.Count()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msgprotobuf.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/msgprotobuf.h
 msTimeout >= 0
 @nSpewThrottlePeriodMs
 1000
@@ -37354,7 +37352,7 @@ msTimeout >= 0
 @nSpewThrottleUnconditionalTriggerCount
 @nSpewThrottleUnconditionalResumeMs
 @nSpewThrottleNagFrequencyMs
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/net.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/net.cpp
 pFrameFunctionMgr
 CNet Encrypt
 CNet Resolver
@@ -37417,7 +37415,7 @@ CNetConnectionImmediateDisconnectWorkItem::ThreadProcess
 CNetConnectionDestroyWorkItem
 CNetConnectionDestroyWorkItem::ThreadProcess
 *pvRecord
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/thash.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/thash.h
 m_pBucket == NULL
 cRecordInit > 0
 m_cBucket > 0
@@ -37426,7 +37424,7 @@ PvRecordFind( unKey ) == NULL
 Performance warning: too many items (%d), not enough buckets (%d)
 not enough buckets in thash class %s (%d records, %d buckets)
 pvRemove
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netconnection.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netconnection.cpp
 m_hSocket == INVALID_SOCKET
 Must pass a INetSSLConnectionCallback if using SSL
 Cannot use netfilter based encryption with SSL, setup SSL based encryption in your INetSSLConnectionCallback
@@ -37455,7 +37453,7 @@ CNetConnectionAsyncDisconnectWorkItem
 CNetConnectionAsyncDisconnectWorkItem::ThreadProcess
 CNetConnectionOnDisconnectWorkItem
 CNetConnectionOnDisconnectWorkItem::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netconnection.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netconnection.h
 m_bufSSLRecv
 m_pListQueuedSSLRecvsPostHandshake
 @cNetEncryptionHandshakeWorkMax_LowPri
@@ -37464,7 +37462,7 @@ m_pListQueuedSSLRecvsPostHandshake
 4000
 @cNetEncryptionHandshakeWorkMax_HighPri
 8000
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netfilter.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netfilter.cpp
 m_pNetConnection
 m_pNetConnection->m_pConnectionCallback != this
 NULL == m_pConnectionCallbackOrig
@@ -37492,16 +37490,16 @@ CWorkItemNetFilterEncrypt
 CWorkItemNetFilterEncrypt::ThreadProcess
 CWorkItemNetFilterOnDisconnect
 CWorkItemNetFilterOnDisconnect::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netfilter.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netfilter.h
 Encryption
 CWorkItemNetEncryptionHandshakeEncrypt
 CWorkItemNetEncryptionHandshakeEncrypt::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/nethost.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/nethost.cpp
 INVALID_HSOCKETOWNER != m_hSocketOwner
 !( uNetFlags & k_uNetFlagNoIOCP )
 0 != netadrToBind.GetPort() || (uNetFlags & k_uNetFlagFindAvailPort)
 !( pSSLCallback && pKeyCallback )
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netpacket.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netpacket.cpp
 m_cRef == 0
 pubData
 cubData
@@ -37536,7 +37534,7 @@ g_vecIPv4ThisBox
 g_vecIPv6ThisBox
 m_usType == k_EIPTypeV6
 offline_ticket.proto
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/opensslconnection.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/opensslconnection.cpp
 nBytes2 == m_data.NumAllocated()
 commonName
 sha256
@@ -37664,9 +37662,9 @@ VALVE_CRYPTO_dbg_realloc
 VALVE_CRYPTO_dbg_free
 COpenSSLContext
 COpenSSLConnection
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/opensslwrapper.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/opensslwrapper.cpp
 OpenSSL random number system reports not enough entropy
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/platform_sockets_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/platform_sockets_posix.cpp
 nDataLen not supported in %s
 AsyncSocketAcceptEx
 pCompletion->type == IOTYPE_ACCEPT && pCompletion->pubBuffer == pBuffer
@@ -37679,7 +37677,7 @@ pCompletion->type == IOTYPE_RECV
 AsyncSocketWrite
 pCompletion->type == IOTYPE_SEND || pCompletion->type == IOTYPE_UNBUFFEREDSEND
 AsyncSocketReadFrom
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/processkill.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/processkill.cpp
 m_eCurStep >= k_EStepKillSoft && m_eCurStep <= k_EStepDone
 Error pipe( stdin ) for %s
 Error pipe( stdout ) for %s
@@ -37692,7 +37690,7 @@ CProcessWorkItem::ThreadProcess
 /Steam3PosixRegistryManager
 /registry.vdf
 Registry
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/registry.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/registry.cpp
 Failed loading registry KV.
 Could not read existing registry file.
 Overwriting on-disk registry with newly created registry.
@@ -37710,7 +37708,7 @@ HKLM32
 HKEY_LOCAL_MACHINE_WOW64_64
 HKLM64
 CBaseScheduledFunction
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/scheduledfunction.cpp
 Attempt to schedule '%s' %lldusec in the past
 CScheduledFunctionMgr::BFrameFuncRun
 pBaseScheduledFunction->m_iScheduledItem == scheduledItem.m_iScheduledFunction
@@ -37726,7 +37724,7 @@ m_ListScheduledItem
 (%u)
 %u:%u:%u
 %u:%u
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steamid.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/steamid.cpp
 Steam ID does not pass strict parsing: '%s'
 (eUniverse > k_EUniverseInvalid) && (eUniverse < k_EUniverseMax)
 [A:%u:%u:%u]
@@ -37746,7 +37744,7 @@ Unknown GameID type
 steammessages_base.proto
 steammessages_clientserver_friends.proto
 steammessages_client_objects.proto
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/string_misc.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/string_misc.cpp
 g_vecTempTextBuffer
 %02d:%02d:%02d
 @net_loopback
@@ -37758,7 +37756,7 @@ g_vecTempTextBuffer
 client/TCPConnection/SentBytes
 client/TCPConnection/RecvBytes
 IStreamParser::BIsValidMsgType() old packet header from out-of-date Steam build, discarding packet and closing connection
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/tcpconnection.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/tcpconnection.cpp
 cubData >= 8
 IStreamParser::BIsValidMsgType() invalid packet header (1st 8 bytes: 0x%02X%02X%02X%02X%02X%02X%02X%02X, %d bytes recv'd so far) discarding packet and closing connection
 IStreamParser::BIsValidMsgType() too-large cbMessageSize in message header (%u bytes, %d bytes recv'd so far) discarding packet and closing connection
@@ -37872,7 +37870,7 @@ DisconnectPlatformSocket
 ClosePlatformSocket
 m_queueSends
 TCP disconnect
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/tcphost.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/tcphost.cpp
 IOTYPE_ACCEPT == pCompletionData->type
 CTCPHost::BPostSocketAccept
 CTCPHost: AcceptEx failed with error %d
@@ -37889,7 +37887,7 @@ CTCPHost Globals
 50
 @nClientCMUDPPingTimeoutUseGoodEnoughMS
 250
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/udpconnection.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/udpconnection.cpp
 !sm_pMemPoolPendingMsg
 !sm_pMemPoolReceivedPkt
 CUDPConnection::BFrameFuncRunConnections
@@ -37971,8 +37969,8 @@ sm_THashPUDPConnection
 sm_SchedulerACK
 sm_SchedulerResend
 sm_StatMicroSecLatency
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/udpconnection.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msgbase.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/udpconnection.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/msgbase.h
 CMsgBase_t : packet too small (EMsg %u)
 CMsgBase_t : packet too small
 CUDPHost
@@ -37981,7 +37979,7 @@ client/UDPSocket/SentBytes
 client/UDPSocket/RecvBytes
 client/UDPSocket/SentPacket
 client/UDPSocket/RecvPacket
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/udpsocket.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/udpsocket.cpp
 bUseIOCP
 INVALID_SOCKET != hSocket
 CWSARecvFrom (UDP) --ioctl(FIONREAD
@@ -38007,7 +38005,7 @@ CProfileHierarchyPanel::ColumnPanels_t
 DefaultFixed
 CProfileHierarchyPanel::SetItemColors
 CProfileHierarchyPanel::SetItemColumnColors
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/vgui/vprofpanel.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/vgui/vprofpanel.cpp
 CProfileHierarchyPanel::PerformLayout
 ProfileTree
 Hierarchy
@@ -38054,12 +38052,12 @@ TextChanged
 CheckButtonChecked
 CVProfLabel
 Label
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/vprof.h
 m_pszName
 CTreeViewListControl
 m_qUpdates
 CWebSocketConnection::GlobalInit()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/websocket.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/websocket.cpp
 Must initialize with CWebSocketConnection::GlobalInit before accepting connections
 eConnectionMode == k_EConnectionModeClient
 pConnectionCallback == pWebSocketConnection
@@ -38095,9 +38093,9 @@ sm_mapWebSocketConnection
 258EAFA5-E914-47DA-95CA-C5AB0DC85B11
 CWebSocketConnectionDelayedCloseConnectionWorkItem
 CWebSocketConnectionDelayedCloseConnectionWorkItem::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/websocket.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/websocket.h
 CWorkThread -- Sleep
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/workthreadpool.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/workthreadpool.cpp
 pszThreadName != NULL
 CWorkThreadPool::~CWorkThreadPool(): Thread pool %s shutdown incorrectly.
 0 == m_WorkThreads.Count()
@@ -38134,14 +38132,14 @@ m_StatWaitTime
 GetAllWorkThreadPools()
 m_cCurrentDepth > 0
 out of memory
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/zip_helpers.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/zip_helpers.cpp
 m_pZip == NULL
 nCompressionLevel >= -1 && nCompressionLevel <= 9
 non-UTF8 entry path passed to CZipWriterBase
 CZipWriterFile was not finalized before destruction
 CZipWriterFile was not finalized before reuse
 m_pZip
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memstd.cpp
 ((size_t)(m_nLogicalBytesAllocated) % 8) == 0
 No tracked allocs currently in use. Total %d
 Tracked allocs currently in use. %d Total %d
@@ -38152,10 +38150,10 @@ DumpMemTrackingStats %d %d
 OUT OF MEMORY
 (iub & (m_nSizeWithStack-1)) == 0
 pAllocTracker->m_uSentinel == 0xaa110ced
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/memblockhdr.h
 pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
 %d.%d.%d.%d:%d
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/validator.cpp
 m_pValObjects != NULL
 m_iThreadMutexValidationLock == 0
 CValidator : too many memory nodes to store, try again with a higher threshold value
@@ -38172,6 +38170,7 @@ Size
 %%-%ds | %%9d | %%12s
 g_pMemAllocSteam
 %d validator nodes, %d nodes larger than %s
+s
 console
 steamservice.dylib
 %*s%s %s --> %d blocks = %s (new)
@@ -38185,7 +38184,7 @@ KiB
 KB
 %i%s
 %%.%if%s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/valobject.cpp
 NULL == pValObjectPrev->m_pValObjectNext
 
 
@@ -38193,13 +38192,11 @@ NULL == pValObjectPrev->m_pValObjectNext
 =
 @
 =
-@\
-sS
-iY
-9Z
+R
 0
 0
 0
+Q
 0
 (
 0
@@ -38207,65 +38204,67 @@ ARj
 u
 H=
 0
-eX
-Q
 @
 ?
 ?
 ?
 =
 
-P
 
 
-W
+FO
 @
+9V
 ?
-fN
+gN
 ?
 ?
+UN
 V
--T
-!L
-qM
+M
 @
 L
-K
-K
-xJ
+IL
+L
+S
 @
-XJ
-!R
+R
+xR
+%J
+,R
 J
-Q
-@
-@
-@
-G
-@
-)F
-F
-G
-=
-=
-=
-@
-D
-D
-D
-QB
-C
-C
-C
-C
-C
-C
-?
-?
-?
-=A
-B
+J
 I
+#Q
+LI
+@
+@
+@
+@
+=
+=
+=
+@
+L
+KL
+D
+D
+UC
+K
+K
+C
+C
+C
+C
+?
+KB
+?
+?
+B
+A
+A
+A
+H
 ?
 
 A
@@ -38273,71 +38272,77 @@ A
 ?
 ?
 I
-G
+u@
+D@
+J@
 
 @
-`?
 @
 
 
-G
+*?
+?
+MF
 ?
 ?
-W>
+?
++>
+AF
 7
-E<
+D
+C
 ~
 @
+D
+gD
+C
 @
+;
+;
+@
+C
+C
+B
+C
+@
+@
+B
+[A
+9
+9
+?
+?
+?
+A
+@
+,8
+B@
+?
+@
+?
+?
+@
+6
+6
+M
+>
+?
+?
+
+>
+6
+?
+?
+?
 <
-@
-@
-@
-:
-:
-:
-:
-:
-:
-:
-:
-:
-:
-:
-:
-?
-?
-?
-L?
-?
-8
-?
-@
-?
-?
-@
-6
-6
->
-?
-?
->
-6
->
-?
-?
-?
-t4
-<
-5
+D=
 
 @
-Y5
+Z5
 
 
-4
-4
->:
+n}
+}
 x
 @
 
@@ -38346,114 +38351,113 @@ x
 @
 
 
+3
+9
 @
 
 @
 2
+2
+2
+2
+:
+]z
 @
 @
-r1
-h1
-z
-K1
 1
 y
 y
-y
--6
+0
+0
+x
 @
-.
 @
 I9E
-%6
+w
+6
 =
 @
 =
 .
-.
-.
-.
-.
-&v
+25
 v
-5
 
 @
 @
 
 
-,
-Q-
++-
+Tu
 x
-k,
-4
 u
-3
-3
+4
 *
-*
-2
+S*
+(*
+,)
+Dr
 1
-)
+(
 @
-`p
-e&
-@'
-/
-@
+3p
+B'
 .
-.
-&
-&
--
 @
-$
-$
+Fo
+@
 ?
 ?
 ?
+fm
 @
 
+m+
 [
+$
 @
 l
 l
 l
-*
 ?
 ?
 ?
-h*
+m#
+x(
 @
-a(
+!
+"
+"
+"
+"
 j
 
 @
 
 
-3v
+Ci
+di
+$Y
+Vi
 Y
 Y
 Y
-Y
-Y
-v
-v
-Y
-Y
-v
 i
 i
 i
+i
+i
+i
+i
+_}
+^i
 0
+h
+wh
 
 0
-Xh
-
 h
-M
 h
-4H
+h
 ASSj
 
 
@@ -38462,58 +38466,65 @@ ASSj
 
 @
 
-r~
-t
-.g
+ig
+h
 
 @
 g
->~
 g
+~{
 33
 A
 
 0
-.V
+f
 f
 
 P
 0
-ve
+f
+ue
+se
+ee
 pA
-]e
+{
+U
+f
+f
 
 Hc
-
-'|
+e
+Zy
+|T
+yT
 p
 0
-|
-|
-od
+`d
 J
 Y
 J
-R~
+e
+T
+&d
+e
+e
 Y
 Y
 Y
 Y
 (#
 
-d
-d
 J
 J
 J
-0S
 Hc
 Hc
 
-jc
--c
+,c
+y
 0
 0
+S
 t2=
 t%=
 @
@@ -38521,7 +38532,6 @@ Hi
 0u
 @
 @
-_Q
 '=
 @
 t.=
@@ -38532,19 +38542,19 @@ p
 p
 0
 Ic]
-Lz
 p
 0
 p
 0
 p
 0
-Az
+dR
 p
 p
 p
 0
-z
+#R
+R
 p
 0
 R
@@ -38553,21 +38563,22 @@ R
 R
 
 
+@c
 
 
 p
 0
+b
 b
 @
 b
 h
+c
+c
 
 
 Ic]
-B
-B
-[Q
-ca
+wa
 p
 0
 p
@@ -38582,51 +38593,71 @@ p
 0
 Q
 Q
-nA
-_A
+Q
 a
+a
+a
+(n
 G
 d
-xx
+b
+b
 ~m=
 =
 =
+Pv
+4`
 `
 `
 `
+`
+9@
 d
 b
-w
 
+a
+a
+a
+a
+a
+a
+a
+@
 u%
-FO
-z_
+`
+`
 @
 Hc
 Hc
-sy
 _
 _
 _
-M
 _
+_
+_
+_
+_
+F`
 p
 0
++N
 p
 0
+`
+`
+`
 "
+`N
 "
+M
 M
 M
 M
 p
 0
 @
-^
-v
 j
 j
->>
 j
 j
 j
@@ -38650,6 +38681,8 @@ p
 0
 p
 0
+s
+(M
 p
 0
 p
@@ -38657,14 +38690,17 @@ p
 p
 0
 M
+M
+M
 ]
-]
-]
-]
-]
+S=
 =
 =
 @
+^
+^
+^
+^
 p
 0
 p
@@ -38674,51 +38710,53 @@ p
 p
 0
 L
-L
 p
 0
 \
 \
 \
 \
-s
-v
-t
-t
-t
-t
-RK
+\
+\
+u_
+r]
+j]
+]
+]
+]
+]
+]
+]
 p
 0
 p
 0
-?[
-9[
-ts
 S
-i;
-k;
-(s
-oP
+[
+[
+h
+\J
 I
-I
-J
-J
+[
+9\
+\
 Z
 Z
 Z
 Z
-n|
-ar
+W
 W
 
 @
-t
+I
+I
+I
 I
 =
 p
 0
-TY
+FI
+]
 =
 =
 =
@@ -38727,32 +38765,37 @@ TY
 0
 0
 Y
+Y
 p
 0
 j
 p
 0
-9
 j
-xX
 0
-q
-q
-q
-q
-q
-q
-q
-ZX
 0
 H
+H
+0Z
 I
+Z
+Z
+Z
+Z
+Z
+Z
+Z
 #=
 p
 0
 Hc
 Hc
+z
 0
+^Y
+G
+G
+G
 G
 =
 W
@@ -38763,8 +38806,10 @@ Hc
 Hc
 Hc
 Hc
-9V
-cV
+LV
+EV
+F
+F
 F
 F
 F
@@ -38774,155 +38819,141 @@ F
 F
 V
 V
-F6
-p
-p
+V
+V
+V
+V
 6
 @
 (
-E
-E
+7U
 
 
 U
 U
 U
+U
+AU
 Hi
+!
+W
 5
-5
-w
 Hc
-lm
-Gm
-Fm
+PT
+]V
 T
-T
+`~
 K
 Z
-4
-]C
-HC
 S
 S
 S
 S
-l
-$3
+W}
 3
 3
-3
-Yi
-QR
+NR
+B
 A
 A
 B
 B
-B
+S
 3
-Hk
+$R
 R
 R
 R
 @
 G
-k
-k
-k
-k
-k
-k
-k
-k
-k
-j
+G
 &
-.t
+'
 2
-2
-2
-BA
+t
+t
+St
+2Q
 A
-Xj
 Q
 Q
 Q
-bs
 @
-"j
 @
 p
 0
 9G
 p
 0
-_P
+XP
 p
 0
+S
 @
 @
 @
 @
 @
 @
+~P
 P
 x0
 [
 @
 @
+]
 0
 0
 0
 AVj
+`R
 p
 0
+r
 =
 A#u
-f
-O
-O
-f
+z
+z
 O
 O
 O
 O
-.O
-oh
-O
-f
-6q
-q
+`q
+gN
 0
-CN
-/N
+y
+y
+y
 N
 N
 N
 N
 N
-Gg
 .
 c<
-]
-]
 p
-hM
+p
+mM
 =
 =
-M
-M
-M
-d
-d
+/P
 M
 M
 M
 M
-)M
-x
+M
+M
+M
+M
+M
+P
+P
+P
+P
+P
 M
 M
 4-
-g
 4
 p
 0
@@ -38933,9 +38964,10 @@ p
 -
 *
 O<
+L
 o
-|L
-\
+}L
+sL
 L
 
 <
@@ -38944,16 +38976,19 @@ L
 <
 <
 <
+O
+6L
 
 
 
 D
 p
 0
+L
 `
-n
-n
 G;
+n
+n
 E
 =
 =
@@ -38962,20 +38997,23 @@ p
 p
 0
 I
-e
-e
-e
+O
+O
+O
 K
+N
+N
+0K
 &9
+NN
 ?
 0
+^x
+>J
 @
-a
-a
-a
-a
 J
 J
+al
 0
 0
 AT=
@@ -38986,71 +39024,80 @@ AT=
 D
 @
 @
-Lc
-DY
-c
-c
-Y
-c
-Pt
-@
-Hc
-Hc
-@
-@
-@
-Hc
-@
-@
-@
-@
-=
-@
-@
-@
-@
-@
-=
-@
-@
-@
-Hc
-@
-@
-@
-@
-@
-IcE
-IcE
-@
-@
-NH
-HH
-)H
-V
-=
-XG
 a
+a
+Rt
+$I
+@
+Hc
+Hc
+@
+@
+@
+Hc
+@
+@
+@
+@
 =
-IF
-`
+@
+@
+@
+@
+@
+=
+@
+@
+@
+Hc
+@
+@
+@
+@
+@
+IcE
+IcE
+@
+@
+L
+V
++j
+=
+5G
+=
 F
 !
 @
+D
 &
-S
--\
-Mm
+o
+^F
+]F
+FF
+wB
+gB
+F
+;E
 B
 B
 B
-@A
-A
+B
+E
+E
+E
+E
+B
+B
+_A
+DA
 @
 M9e
 @
 @
-J@
+D
+D
+d@
+D
 ?
 ?
 ?
@@ -39067,50 +39114,50 @@ J@
 ?
 ?
 -
-@
 H=
-b
+Eb
 
 
 
 
 
 `
-9?
+?
 ?
 ?
 ?
 ?
 ?
 @
-Y
 @
-j
 j
 d
 e
+B
 H
 
 (
 (
 
-N
-N
 @
 %
 `
 `
 @
+y
+y
 j
 j
 Pj
+A
+A
+A
 ARj
 j
 0
 0
 IcU
 E;e
-W
 M)u
 =
 =
@@ -39126,19 +39173,21 @@ M)u
 <
 <
 =
-V
-V
-V
+?
 ;
 =
 @
 
+O;
 @
 @
 @
 0
 k
 H=
+>
+>
+>
 Ic]
 j
 j
@@ -39146,15 +39195,15 @@ j
 j
 j
 j
+\9
 
-S
-S
+&<
 t$I;M
-RH
-ZP
+<
+<
+<
 H
 0
-P
 
 5
 
@@ -39162,16 +39211,15 @@ P
 
 
 
-W
 
 
 
 
 Hc
 4
-4
-p3
-U
+no
+0V
+L)5Ko
 @
 ,
 *
@@ -39179,25 +39227,28 @@ U
 
 @
 Poly1305 for x86_64, CRYPTOGAMS by <appro@openssl.org>
-#2
 0
 0
 N
 N
 N
-M
-M
-M
 j
 j
-T
+[1
 $
 $
-7C
+6
+6
+6
 0
 @
 @
+1
+95
+c0
 e0
+[0
+5
 E
 B
 A
@@ -39233,6 +39284,8 @@ $
 .
 .
 )
+3
+3
 )
 )
 .
@@ -39244,7 +39297,6 @@ $
 .
 /
 /
-=J
 ?
 @
 8
@@ -39268,10 +39320,14 @@ HcU
 
 
 ?
+G
 ?
+G
 ?
 
+G
 ?
+G
 ?
 ?
 
@@ -39280,6 +39336,9 @@ HcU
 ?
 0
 #
+G
+G
+G
 i[
 ~
 @
@@ -39396,7 +39455,6 @@ i[
 @
 B
 ?
-1
 @
 @
 @
@@ -39410,15 +39468,11 @@ B
 @
 @
 @
-8
 }
 }
-F=
+<A
 @
 @
-=
-=
-=
 d
 d
 @
@@ -39447,6 +39501,7 @@ x
 $
 $
 $
+L
 @
 
 =
@@ -39513,12 +39568,14 @@ B
 @
 /
 .
+B
 0
 >
 0
 0
 @
 p
+a
 >
 0
 >
@@ -39540,6 +39597,7 @@ H
 0
 =_
 0
+A
 >
 0
 G
@@ -39588,6 +39646,7 @@ P
 @
 ?
 @
+CA
 `
 `
 !
@@ -39605,7 +39664,6 @@ H=
 @
 "
 B
-YG
 @
 "
 B
@@ -39619,12 +39677,14 @@ B
 B
 "
 B
+*
+*
+*
 "
 B
 @
 @
 @
-Q@
 @
 @
 `
@@ -39653,13 +39713,11 @@ Q@
 |
 |
 @
-8
-8
-8
 @
 
 @
 @
+)
 
 %
 
@@ -39668,7 +39726,6 @@ Q@
 @
 |2=
 %
-O0
 @
 @
 @
@@ -39682,12 +39739,15 @@ IcU
 IcE
 IcE
 IcE
+(
 @
+;(
 `
 `
 `
 `
 @
+/(
 >
 =
 >
@@ -39699,10 +39759,13 @@ P
 @
 @
 G
+s"
 j
 j
 j
 j
+(
+(
 2
 P
 2
@@ -39715,13 +39778,15 @@ H=
 @
 @
 =
->
+`=
 @
+R'
 |r=
 %
 =
 =
 @
+-'
 =
 =
 |f=
@@ -39729,6 +39794,7 @@ H=
 0
 @
 @
+'
 |<=
 |0=
 |*=
@@ -39743,7 +39809,6 @@ H=LA
 | =
 =
 |q=
-6=
 | =
 |O=
 | =
@@ -39765,6 +39830,7 @@ H=LA
 =
 =
 @
+?&
 |`=
 =
 =
@@ -39778,6 +39844,8 @@ j
 j
 j
 0
+&
+&
 j
 j
 =
@@ -39797,40 +39865,20 @@ to=
 |"=
 =
 |3=
-Z<
-N
-N
-N
-N
-N
-N
-N
-N
-N
 |&=
 =
 |-=
-<
-<
-<
-<
-<
+;B
 @
-M
-L
-XJ
-/G
+J
+H
+uG
 d
 8
 7
-7
-7
-7
-7
 
 
 
-=
 =
 =
 j
@@ -39846,6 +39894,7 @@ j
 j
 j
 j
+"
 j
 j
 j
@@ -39855,10 +39904,10 @@ j
 j
 j
 j
+7<
 =
 j
 j
-8
 j
 j
 j
@@ -39870,7 +39919,6 @@ j
 j
 j
 j
-x3
 
 J
 j
@@ -39891,19 +39939,18 @@ j
 j
 j
 
-`5
+>J
+5
 d
 &
 d
-?J
 0
 A+]
-/
 =
 =
 @
-4
-4
+I
+I
 j
 j
 j
@@ -39922,16 +39969,15 @@ j
 j
 j
 j
-sQ
+j
+j
+j
+yQ
 j
 j
 j
 j
 j
-j
-j
-j
-;.
 j
 j
 j
@@ -39950,8 +39996,11 @@ j
 %
 
 
-73
+9
 
+9
+9
+_P
 j
 j
 j
@@ -39962,31 +40011,17 @@ j
 j
 j
 j
-KP
 $
 E
-[,
-j
-j
-j
-j
-j
-j
-j
-j
-j
-2
-j
-j
-j
-j
-j
-j
-j
-j
-j
-.2
-~1
+I8
+P
+P
+P
+P
+P
+P
+P
+P
 j
 j
 j
@@ -40004,21 +40039,34 @@ j
 j
 j
 j
+yO
 j
 j
-1
-j
-1
-j
-1
-j
-1
 j
 j
-1
 j
 j
-1
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
+j
 j
 j
 j
@@ -40047,6 +40095,8 @@ j
 j
 j
 @
+HH
+CN
 j
 j
 j
@@ -40069,9 +40119,6 @@ j
 @
 @
 @
-6
-6
-6
 @
 @
 j
@@ -40081,7 +40128,6 @@ j
 j
 j
 j
-7*
 
 =
 @
@@ -40104,7 +40150,6 @@ j
 @
 @
 @
-?L
 j
 j
 j
@@ -40126,22 +40171,26 @@ j
 j
 j
 .
-'
 d
-"N
-,
+6L
 =
-2.
-Lc%".M
+4
+4
+N
+N
+N
 
+H
 =
 @
+M
+M
+M
+M
 0
 =*.*
 =
 @
-(
-T3
 |
 @
 @
@@ -40154,13 +40203,6 @@ T3
 @
 @
 0
--
--
--
--
--
--
--
 0
 0
 0
@@ -40169,24 +40211,17 @@ T3
 0
 0
 0
+L
 &
-xF
-lL
-$
-$
 0
-,
-,
-,
-,
-,
 0
 "
 0
 Hi
-_+
 E
-+
+J
+_0
+0
 
 
 
@@ -40195,7 +40230,6 @@ E
 
 
 
-*
 0
 @
 @
@@ -40206,8 +40240,6 @@ E
 @
 Hc
 Hc
-)
-)
 U
 q
 
@@ -40217,33 +40249,36 @@ Hc
 Hc
 Hc
 x
-$
+8
+G
+G
+G
+G
 0
+
 @
 @
 @
-W'
+D9=p=F
 &
-F
+q+
 @
 @
 @
-+
-+
 =h2
 P
 P
 @
-Z&
 0
-&
 @
 `
 0
 p
 @
+?
 @
 @
+D
 ?
 ?
 ?
@@ -40254,33 +40289,34 @@ p
 >
 >
 >
-~1
-@
-@
-G=
-B
-B
-B
-=
-=
-=
-@
-@
-@
-@
-@
-@
+>
+>
+>
+>
+>
+>
+>
+>
+>
 >
 @
+@
+)1
+B
+@
+@
+@
+@
+@
+@
+@
+;
 =
 @
-g
-c
-_
+B:
+
+?
 =a
-$
-$
-m>
 0
 j
 j
@@ -40288,7 +40324,6 @@ j
 0
 Hi
 =
+#
 Q
 J
-k<
-h<
