@@ -15707,8 +15707,9 @@ License: MIT
             });
             return (null == t ? void 0 : t.isLoading) ? null : t.data;
           })(t.GetAppID()),
-          [n] = (0, Wt.SZ)(() => [
+          [n, l] = (0, Wt.SZ)(() => [
             t.GetEventModel().BHasTag("show_library_demo_detail"),
+            t.GetGID(),
           ]);
         if (null == a)
           return d.createElement(y.V, {
@@ -15716,17 +15717,36 @@ License: MIT
             position: "center",
             size: "small",
           });
-        const l = a.filter((e) => e.is_released_somewhere).length > 0;
-        return d.createElement(R.gE, {
-          onChange: (e) => t.SetTag("show_library_demo_detail", e),
-          tooltip: l
-            ? void 0
-            : (0, x.Xx)("#EventEditor_Options_VisibleDemoTooltip"),
-          label: (0, x.Xx)("#EventEditor_Options_Demo_Library_Detail"),
-          checked: n,
-          description: (0, x.Xx)("#EventEditor_Options_Demo_Library_Desc"),
-          disabled: !l,
-        });
+        const i = a.filter((e) => e.is_released_somewhere && e.appid > 0);
+        let r = !1,
+          c = null;
+        return (
+          i.length > 0
+            ? l ||
+              ((r = !0),
+              (c = (0, x.Xx)("#EventEditor_Options_SaveFirstToRepostDemo")))
+            : ((r = !0),
+              (c = (0, x.Xx)("#EventEditor_Options_VisibleDemoTooltip"))),
+          d.createElement(R.gE, {
+            onChange: (e) => {
+              t.SetDemoAppIDForRepost(i[0].appid),
+                t.SetTag("repost_source_possible", !0),
+                e
+                  ? (t.SetTag("show_library_demo_detail", !0),
+                    t.SetTag("clear_library_demo_detail", !1))
+                  : (t.SetTag("show_library_demo_detail", !1),
+                    t.BHasOriginalTag("show_library_demo_detail") &&
+                      t.SetTag("clear_library_demo_detail", !0));
+            },
+            tooltip: r
+              ? c
+              : (0, x.Xx)("#EventEditor_Options_DemoRepostTooltop"),
+            label: (0, x.Xx)("#EventEditor_Options_Demo_Library_Detail"),
+            checked: n,
+            description: (0, x.Xx)("#EventEditor_Options_Demo_Library_Desc"),
+            disabled: r,
+          })
+        );
       }
       const ji = (0, c.Pi)((e) => {
         const { editModel: t } = e,

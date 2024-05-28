@@ -1661,7 +1661,11 @@
                               t = document.location.href;
                             window.location.href = `${e}&redir=${encodeURIComponent(t)}`;
                           }
-                          return this.m_onCompleteCallback({ bSuccess: !1 }), t;
+                          return (
+                            this.m_onCompleteCallback({ bSuccess: !1 }),
+                            (this.m_eStatus = 0),
+                            t
+                          );
                         default:
                           return (
                             (0, p.F0)(
@@ -1863,7 +1867,11 @@
                         t = document.location.href;
                       window.location.href = `${e}&redir=${encodeURIComponent(t)}`;
                     }
-                    return this.m_onCompleteCallback({ bSuccess: !1 }), i;
+                    return (
+                      this.m_onCompleteCallback({ bSuccess: !1 }),
+                      (this.m_eStatus = 0),
+                      i
+                    );
                   default:
                     return (
                       (0, p.F0)(

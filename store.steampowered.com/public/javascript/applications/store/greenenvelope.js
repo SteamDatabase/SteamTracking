@@ -510,8 +510,8 @@
         L = n(25006),
         w = n(51915),
         k = n(91618),
-        M = n(12251),
-        D = n(46984),
+        D = n(12251),
+        M = n(46984),
         B = n(5333),
         U = n.n(B);
       const C = !0;
@@ -704,9 +704,9 @@
         if (void 0 === e.timestamp) return null;
         let t = new Date(),
           n = new Date(1e3 * e.timestamp),
-          i = (0, M.Sc)(e.timestamp);
+          i = (0, D.Sc)(e.timestamp);
         return (
-          (0, D.yK)(t, n) || (i = (0, M.m9)(e.timestamp, !1, !1, !1) + " " + i),
+          (0, M.yK)(t, n) || (i = (0, D.m9)(e.timestamp, !1, !1, !1) + " " + i),
           r.createElement("div", { className: U().Timestamp }, i)
         );
       }
@@ -714,9 +714,9 @@
         if (void 0 === e.timestamp) return null;
         let t = new Date(),
           n = new Date(1e3 * e.timestamp),
-          i = (0, D.yK)(t, n)
-            ? (0, M.Sc)(e.timestamp)
-            : (0, M.m9)(e.timestamp, !1, !1, !1);
+          i = (0, M.yK)(t, n)
+            ? (0, D.Sc)(e.timestamp)
+            : (0, D.m9)(e.timestamp, !1, !1, !1);
         return r.createElement("div", { className: U().Timestamp }, i);
       }
       !(function (e) {
@@ -1275,7 +1275,7 @@
         const I = V(g),
           [L, w] = r.useState(!1),
           k = () => w(!0),
-          [M, D] = (0, ee.KU)(
+          [D, M] = (0, ee.KU)(
             f.bclan_account
               ? null === (t = f.owner_steam_id) || void 0 === t
                 ? void 0
@@ -1358,10 +1358,10 @@
               r.createElement("img", { className: e, src: m, onError: k }),
             );
           } else
-            (null == D ? void 0 : D.avatar_medium_url) &&
+            (null == M ? void 0 : M.avatar_medium_url) &&
               (F = r.createElement("img", {
                 className: e,
-                src: D.avatar_medium_url,
+                src: M.avatar_medium_url,
                 onError: k,
               }));
         }
@@ -2144,10 +2144,9 @@
           { data: n } = (0, c.X1)(t),
           i = (0, c.T8)(),
           o = null == n ? void 0 : n.settings;
-        return e.notifications.filter((e) => {
-          const t = (0, d.nM)(e.type);
-          return !(0, c.Bu)(o, t.eFeature, i) && !(0, d.sA)(e.item);
-        });
+        return e.notifications.filter(
+          (e) => !(0, d.pH)(e.type, o, i) && !(0, d.sA)(e.item),
+        );
       }
       function ke(e) {
         const { nTotalUnviewed: t } = e,
@@ -2157,7 +2156,7 @@
         r.useEffect(() => {
           n.current ||
             ((n.current = (0, m.yV)(
-              r.createElement(Me, { popupRef: n }),
+              r.createElement(De, { popupRef: n }),
               document.getElementById("green_envelope_menu_root"),
               {
                 bPreferPopLeft: !0,
@@ -2208,7 +2207,7 @@
           ),
         );
       }
-      const Me = (e) => {
+      const De = (e) => {
           var t;
           const { popupRef: n } = e,
             i = r.useRef(null),
@@ -2241,7 +2240,7 @@
                   : e.Hide();
               },
             },
-            r.createElement(De, null),
+            r.createElement(Me, null),
             r.createElement(
               "div",
               {
@@ -2254,7 +2253,7 @@
             ),
           );
         },
-        De = () => {
+        Me = () => {
           const e = `${g.De.COMMUNITY_BASE_URL}profiles/${g.L7.steamid}/notifications`;
           return r.createElement(
             "div",

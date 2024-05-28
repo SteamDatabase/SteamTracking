@@ -1799,7 +1799,8 @@
           (e.optin_tagid = void 0),
           (e.sale_opt_in_page_name = void 0),
           (e.prune_list_optin_name = void 0),
-          (e.optin_only = void 0);
+          (e.optin_only = void 0),
+          (e.child_demo_appid_for_repost = void 0);
       }
       !(function (e) {
         (e[(e.k_ETaggedItems = 0)] = "k_ETaggedItems"),

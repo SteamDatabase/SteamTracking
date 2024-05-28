@@ -47,9 +47,9 @@
         c = i(77936),
         m = i(40057),
         d = i(1485),
-        f = i(31846),
-        p = i(28319),
-        u = i.n(p),
+        p = i(31846),
+        f = i(28319),
+        u = i.n(f),
         h = i(85556),
         y = i(54842),
         _ = i(30750),
@@ -72,66 +72,66 @@
             (this.k_rgFilterCheckboxes = [
               {
                 type: 3,
-                display: (0, f.Xx)("#NotificationsFilters_Comments"),
+                display: (0, p.Xx)("#NotificationsFilters_Comments"),
                 hash: "comments",
               },
               {
                 type: 8,
-                display: (0, f.Xx)("#NotificationsFilters_Wishlist"),
+                display: (0, p.Xx)("#NotificationsFilters_Wishlist"),
                 hash: "wishlist",
               },
               {
                 type: 5,
-                display: (0, f.Xx)("#NotificationsFilters_FriendRequest"),
+                display: (0, p.Xx)("#NotificationsFilters_FriendRequest"),
                 hash: "invites",
               },
               {
                 type: 2,
-                display: (0, f.Xx)("#NotificationsFilters_Gifts"),
+                display: (0, p.Xx)("#NotificationsFilters_Gifts"),
                 hash: "gifts",
               },
               {
                 type: 4,
-                display: (0, f.Xx)("#NotificationsFilters_Inventory"),
+                display: (0, p.Xx)("#NotificationsFilters_Inventory"),
                 hash: "inventory",
               },
               {
                 type: 12,
-                display: (0, f.Xx)("#NotificationsFilters_AsyncGame"),
+                display: (0, p.Xx)("#NotificationsFilters_AsyncGame"),
                 hash: "asyncgame",
               },
               {
                 type: 11,
-                display: (0, f.Xx)("#NotificationsFilters_HelpRequest"),
+                display: (0, p.Xx)("#NotificationsFilters_HelpRequest"),
                 hash: "help",
               },
               {
                 type: 9,
-                display: (0, f.Xx)("#NotificationsFilters_TradeOffer"),
+                display: (0, p.Xx)("#NotificationsFilters_TradeOffer"),
                 hash: "trade",
               },
               {
                 type: 10,
-                display: (0, f.Xx)("#NotificationsFilters_General"),
+                display: (0, p.Xx)("#NotificationsFilters_General"),
                 hash: "general",
               },
             ]),
             (this.k_rgCommentFilters = [
               {
                 type: n.k_All,
-                display: (0, f.Xx)("#NotificationsList_CommentFilters_All"),
+                display: (0, p.Xx)("#NotificationsList_CommentFilters_All"),
                 fnFilter: () => !0,
               },
               {
                 type: n.k_Owned,
-                display: (0, f.Xx)(
+                display: (0, p.Xx)(
                   "#NotificationsList_CommentFilters_YourItems",
                 ),
                 fnFilter: this.IsCommentOwned,
               },
               {
                 type: n.k_Subscribed,
-                display: (0, f.Xx)(
+                display: (0, p.Xx)(
                   "#NotificationsList_CommentFilters_Subscribed",
                 ),
                 fnFilter: this.IsCommentSubscribed,
@@ -240,8 +240,7 @@
           (0, _.SZ)(() => (0, a.RY)(v.m_summary)),
           v.m_rgNotificationRollups.filter((l) => {
             if (t && !e.get(l.type)) return !1;
-            const c = (0, a.nM)(l.type);
-            if ((0, g.Bu)(o, c.eFeature, r)) return !1;
+            if ((0, a.pH)(l.type, o, r)) return !1;
             if (
               t &&
               3 == l.type &&
@@ -294,7 +293,7 @@
                     s.createElement(
                       "span",
                       { className: u().NotificationsHeaderTitle },
-                      (0, f.Xx)("#NotificationsList_Header"),
+                      (0, p.Xx)("#NotificationsList_Header"),
                     ),
                     s.createElement(R, null),
                   ),
@@ -340,7 +339,7 @@
               (0, a.RY)(e)
             );
           })(),
-          e = (0, f.Xx)("#NotificationsList_Unread", t);
+          e = (0, p.Xx)("#NotificationsList_Unread", t);
         return s.createElement(
           "span",
           { className: u().NotificationsHeaderUnread },
@@ -362,12 +361,12 @@
           s.createElement(
             I.s,
             { className: u().EmptyNotificationsTitle },
-            (0, f.Xx)("#NotificationsList_EmptyTitle"),
+            (0, p.Xx)("#NotificationsList_EmptyTitle"),
           ),
           s.createElement(
             I.s,
             { className: u().EmptyNotificationsBody },
-            (0, f.Xx)("#NotificationsList_EmptyBody"),
+            (0, p.Xx)("#NotificationsList_EmptyBody"),
           ),
         );
       }
@@ -394,7 +393,7 @@
                   className: u().MarkAllReadButton,
                   onClick: () => v.MarkAllItemsRead(t),
                 },
-                (0, f.Xx)("#NotificationsList_MarkAllRead"),
+                (0, p.Xx)("#NotificationsList_MarkAllRead"),
               ),
             ),
             s.createElement(
@@ -407,13 +406,13 @@
                   ),
               },
               s.createElement(l.Zrf, { className: u().SettingsImg }),
-              (0, f.Xx)("#NotificationsList_Settings"),
+              (0, p.Xx)("#NotificationsList_Settings"),
             ),
           ),
           s.createElement(
             "div",
             { className: u().SettingsFiltersTitle },
-            (0, f.Xx)("#NotificationsList_FilterTo"),
+            (0, p.Xx)("#NotificationsList_FilterTo"),
           ),
           s.createElement(
             "div",
@@ -430,7 +429,7 @@
               className: u().ResetButton,
               onClick: () => b.SetFilter(null, !1, !0),
             },
-            (0, f.Xx)("#NotificationsList_Reset"),
+            (0, p.Xx)("#NotificationsList_Reset"),
           ),
         );
       }
@@ -452,7 +451,7 @@
           i = k();
         return s.createElement(d.ji, {
           className: u().AdvancedCommentFilterCheckbox,
-          label: (0, f.Xx)("#CommentThreadType_" + e),
+          label: (0, p.Xx)("#CommentThreadType_" + e),
           checked: i.setItemTypes.has(e),
           onChange: (t) => {
             t

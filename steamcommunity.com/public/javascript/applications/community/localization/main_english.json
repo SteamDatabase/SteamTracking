@@ -429,6 +429,8 @@
     "EventEditor_Tile_Repeat": "Repeat the background in all directions",
     "EventEditor_Options_LoadingDemoInfo": "Loading Demo Info",
     "EventEditor_Options_VisibleDemoTooltip": "There are no released demo to share this post with.",
+    "EventEditor_Options_SaveFirstToRepostDemo": "Saving the event is required to be able to shared this event with your Demo.",
+    "EventEditor_Options_DemoRepostTooltop": "Your event / announcement when published will appear in the demo's library page. Allows communicating with fan that only have your demo. ",
     "EventEditor_Options_Themed_title": "Theme Events: %1$s",
     "EventEditor_Options_Themed_Halloween2019_title": "Halloween 2022",
     "EventEditor_Options_Themed_desc_Halloween": "Is this event about updates to your game for Halloween 2022? If you are adding new maps, skins, artwork, or other content to this game for Halloween, or run limited-time events with special spooky content, challenges, or other similar activities, we’d like to know about it. We are considering ways to better surface themed events to a broader audience, but first we need a better idea of what kind of activities developers are hosting in your games (if any) to celebrate the holiday. Please click 'on' below if this event is about an update to your game for Halloween 2022.",

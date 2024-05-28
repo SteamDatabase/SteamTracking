@@ -4254,8 +4254,7 @@
           (e[(e.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
           (e[(e.OverrideRedirect = 1048576)] = "OverrideRedirect"),
           (e[(e.IgnoreSteamDisplayScale = 2097152)] =
-            "IgnoreSteamDisplayScale"),
-          (e[(e.NoDefaultURL = 4194304)] = "NoDefaultURL");
+            "IgnoreSteamDisplayScale");
       })(f || (f = {})),
         (function (e) {
           (e[(e.Overlay = 0)] = "Overlay"),
@@ -32714,7 +32713,11 @@
                               t = document.location.href;
                             window.location.href = `${e}&redir=${encodeURIComponent(t)}`;
                           }
-                          return this.m_onCompleteCallback({ bSuccess: !1 }), t;
+                          return (
+                            this.m_onCompleteCallback({ bSuccess: !1 }),
+                            (this.m_eStatus = 0),
+                            t
+                          );
                         default:
                           return (
                             Pn(
@@ -32912,7 +32915,11 @@
                         t = document.location.href;
                       window.location.href = `${e}&redir=${encodeURIComponent(t)}`;
                     }
-                    return this.m_onCompleteCallback({ bSuccess: !1 }), r;
+                    return (
+                      this.m_onCompleteCallback({ bSuccess: !1 }),
+                      (this.m_eStatus = 0),
+                      r
+                    );
                   default:
                     return (
                       Pn(

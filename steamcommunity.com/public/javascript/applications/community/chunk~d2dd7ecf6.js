@@ -15242,7 +15242,11 @@
             this.m_curModel.timestamp_loc_updated.clear();
           for (let e = this.m_curModel.vecTags.length - 1; e >= 0; --e) {
             let t = this.m_curModel.vecTags[e];
-            (t.startsWith("mod_") || t.startsWith("ModAct_")) &&
+            (t.startsWith("mod_") ||
+              t.startsWith("ModAct_") ||
+              "show_library_demo_detail" == t ||
+              "clear_library_demo_detail" == t ||
+              "repost_source_possible" == t) &&
               this.m_curModel.vecTags.splice(e, 1);
           }
           (this.m_originalEvent = new _.bH()),
@@ -15799,6 +15803,11 @@
             this.m_curModel.jsondata.email_setting
           );
         }
+        SetDemoAppIDForRepost(e) {
+          this.m_curModel.jsondata.child_demo_appid_for_repost != e &&
+            ((this.m_curModel.jsondata.child_demo_appid_for_repost = e),
+            this.SetDirty(l.visibility));
+        }
         ToggleTag(e) {
           const t = this.m_curModel.vecTags.indexOf(e);
           -1 == t
@@ -15812,6 +15821,12 @@
         AddTag(e) {
           -1 == this.m_curModel.vecTags.indexOf(e) &&
             (this.m_curModel.vecTags.push(e), this.SetDirty(l.visibility));
+        }
+        BHasOriginalTag(e) {
+          var t;
+          return null === (t = this.m_originalEvent) || void 0 === t
+            ? void 0
+            : t.BHasTag(e);
         }
         BHasTag(e) {
           return this.m_curModel.BHasTag(e);
@@ -16126,6 +16141,7 @@
         (0, r.gn)([C.ak], A.prototype, "LastTimeLanguageUpdate", null),
         (0, r.gn)([c.aD], A.prototype, "SetLibrarySpotlight", null),
         (0, r.gn)([c.aD], A.prototype, "SetLibrarySpotlightText", null),
+        (0, r.gn)([c.aD], A.prototype, "SetDemoAppIDForRepost", null),
         (0, r.gn)([c.aD], A.prototype, "ToggleTag", null),
         (0, r.gn)([c.aD], A.prototype, "SetTag", null),
         (0, r.gn)([c.aD], A.prototype, "AddTag", null),

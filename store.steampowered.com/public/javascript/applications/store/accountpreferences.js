@@ -3,6 +3,35 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [5821],
   {
+    81602: (e) => {
+      e.exports = {
+        DateAndTime: "_1miMhQTx-6BvBZ1LsOjdgc",
+        DateAndTimeInline: "_1jG_-tTU53X85RGx_FABL2",
+        At: "_3D4jIToP-g1jxP4iLT74dh",
+        ActiveEvent: "_2ZcVE43ISqOFTj9Zbw3msS",
+        ActiveEventCallOut: "_y2DQDJ5toIRanQZFjDCx",
+        RightSideTitles: "_3sPONDb9e2ctNJ23X97Rxx",
+        DateToolTip: "_3zhjahHCGX4slI7ziVhROt",
+        ShortDateAndTime: "_4K3Bl-RZYjH0IHfPO10FC",
+        ShortDateRange: "_3sqcQTW9oCh_HBrotB1Dkw",
+      };
+    },
+    70839: (e) => {
+      e.exports = {
+        AuthorizedDeviceHeader: "_2OcGChel9mKKDiT5UYgL8I",
+        SectionDescription: "_2INQL8oKYSG91_gqx2zvnV",
+        AuthorizedDeviceGroup: "_20iEFcT5JyJPhTjbaJ0ajE",
+        DeviceContainer: "_173r5KvavKBUk01FwZftvC",
+        DeviceHeaderRow: "_366kraIS4n5agiJpxnOSL2",
+        DeviceName: "e-cYNmgoRYobtL32PBDvh",
+        LastSeenRow: "_2Q1XRSo_YDuNplXJSPKtsq",
+        Separator: "_14d_WdubH0-HKHsOM_cyx7",
+        AuthorizedDevicesRecentHeader: "_35lIIoiD4gnKLmNL3H9zAo",
+        AuthorizedDeviceDetails: "Zq-YGng4xfhI7CCwSN6UF",
+        DetailsToggle: "_2-E69gxiszxb3lmuoV7yYi",
+        Selected: "JQwtQncjBu_1UajTl86pS",
+      };
+    },
     3934: (e) => {
       e.exports = {
         AllButton: "_24Y_0sMrz5EywcAsFUstI1",
@@ -31,54 +60,782 @@
         Selected: "_3yrEIJRje6XiWe9BiIGY7P",
       };
     },
+    95126: (e, t, n) => {
+      var s = {
+        "./af": 75436,
+        "./af.js": 75436,
+        "./ar": 27662,
+        "./ar-dz": 73578,
+        "./ar-dz.js": 73578,
+        "./ar-kw": 79535,
+        "./ar-kw.js": 79535,
+        "./ar-ly": 45801,
+        "./ar-ly.js": 45801,
+        "./ar-ma": 64784,
+        "./ar-ma.js": 64784,
+        "./ar-ps": 86701,
+        "./ar-ps.js": 86701,
+        "./ar-sa": 59050,
+        "./ar-sa.js": 59050,
+        "./ar-tn": 62042,
+        "./ar-tn.js": 62042,
+        "./ar.js": 27662,
+        "./az": 11071,
+        "./az.js": 11071,
+        "./be": 48369,
+        "./be.js": 48369,
+        "./bg": 37874,
+        "./bg.js": 37874,
+        "./bm": 88393,
+        "./bm.js": 88393,
+        "./bn": 92722,
+        "./bn-bd": 70643,
+        "./bn-bd.js": 70643,
+        "./bn.js": 92722,
+        "./bo": 85165,
+        "./bo.js": 85165,
+        "./br": 96645,
+        "./br.js": 96645,
+        "./bs": 15870,
+        "./bs.js": 15870,
+        "./ca": 3993,
+        "./ca.js": 3993,
+        "./cs": 3627,
+        "./cs.js": 3627,
+        "./cv": 58957,
+        "./cv.js": 58957,
+        "./cy": 55770,
+        "./cy.js": 55770,
+        "./da": 54649,
+        "./da.js": 54649,
+        "./de": 89084,
+        "./de-at": 28709,
+        "./de-at.js": 28709,
+        "./de-ch": 21320,
+        "./de-ch.js": 21320,
+        "./de.js": 89084,
+        "./dv": 63575,
+        "./dv.js": 63575,
+        "./el": 56395,
+        "./el.js": 56395,
+        "./en-au": 93826,
+        "./en-au.js": 93826,
+        "./en-ca": 13769,
+        "./en-ca.js": 13769,
+        "./en-gb": 24155,
+        "./en-gb.js": 24155,
+        "./en-ie": 1518,
+        "./en-ie.js": 1518,
+        "./en-il": 24043,
+        "./en-il.js": 24043,
+        "./en-in": 18404,
+        "./en-in.js": 18404,
+        "./en-nz": 79220,
+        "./en-nz.js": 79220,
+        "./en-sg": 29133,
+        "./en-sg.js": 29133,
+        "./eo": 48648,
+        "./eo.js": 48648,
+        "./es": 68465,
+        "./es-do": 16734,
+        "./es-do.js": 16734,
+        "./es-mx": 31910,
+        "./es-mx.js": 31910,
+        "./es-us": 67093,
+        "./es-us.js": 67093,
+        "./es.js": 68465,
+        "./et": 53742,
+        "./et.js": 53742,
+        "./eu": 41088,
+        "./eu.js": 41088,
+        "./fa": 13554,
+        "./fa.js": 13554,
+        "./fi": 3996,
+        "./fi.js": 3996,
+        "./fil": 20368,
+        "./fil.js": 20368,
+        "./fo": 36132,
+        "./fo.js": 36132,
+        "./fr": 71265,
+        "./fr-ca": 31467,
+        "./fr-ca.js": 31467,
+        "./fr-ch": 98279,
+        "./fr-ch.js": 98279,
+        "./fr.js": 71265,
+        "./fy": 88841,
+        "./fy.js": 88841,
+        "./ga": 65254,
+        "./ga.js": 65254,
+        "./gd": 72520,
+        "./gd.js": 72520,
+        "./gl": 94898,
+        "./gl.js": 94898,
+        "./gom-deva": 35171,
+        "./gom-deva.js": 35171,
+        "./gom-latn": 63681,
+        "./gom-latn.js": 63681,
+        "./gu": 32613,
+        "./gu.js": 32613,
+        "./he": 42716,
+        "./he.js": 42716,
+        "./hi": 71315,
+        "./hi.js": 71315,
+        "./hr": 14577,
+        "./hr.js": 14577,
+        "./hu": 26736,
+        "./hu.js": 26736,
+        "./hy-am": 3417,
+        "./hy-am.js": 3417,
+        "./id": 18890,
+        "./id.js": 18890,
+        "./is": 14468,
+        "./is.js": 14468,
+        "./it": 45652,
+        "./it-ch": 64064,
+        "./it-ch.js": 64064,
+        "./it.js": 45652,
+        "./ja": 44511,
+        "./ja.js": 44511,
+        "./jv": 63069,
+        "./jv.js": 63069,
+        "./ka": 75258,
+        "./ka.js": 75258,
+        "./kk": 77086,
+        "./kk.js": 77086,
+        "./km": 84125,
+        "./km.js": 84125,
+        "./kn": 37197,
+        "./kn.js": 37197,
+        "./ko": 65508,
+        "./ko.js": 65508,
+        "./ku": 18195,
+        "./ku-kmr": 53905,
+        "./ku-kmr.js": 53905,
+        "./ku.js": 18195,
+        "./ky": 83971,
+        "./ky.js": 83971,
+        "./lb": 79651,
+        "./lb.js": 79651,
+        "./lo": 58072,
+        "./lo.js": 58072,
+        "./lt": 62146,
+        "./lt.js": 62146,
+        "./lv": 84824,
+        "./lv.js": 84824,
+        "./me": 49674,
+        "./me.js": 49674,
+        "./mi": 56500,
+        "./mi.js": 56500,
+        "./mk": 85111,
+        "./mk.js": 85111,
+        "./ml": 55597,
+        "./ml.js": 55597,
+        "./mn": 83610,
+        "./mn.js": 83610,
+        "./mr": 47565,
+        "./mr.js": 47565,
+        "./ms": 7918,
+        "./ms-my": 64736,
+        "./ms-my.js": 64736,
+        "./ms.js": 7918,
+        "./mt": 5947,
+        "./mt.js": 5947,
+        "./my": 55624,
+        "./my.js": 55624,
+        "./nb": 98607,
+        "./nb.js": 98607,
+        "./ne": 85457,
+        "./ne.js": 85457,
+        "./nl": 54041,
+        "./nl-be": 3439,
+        "./nl-be.js": 3439,
+        "./nl.js": 54041,
+        "./nn": 82457,
+        "./nn.js": 82457,
+        "./oc-lnc": 26236,
+        "./oc-lnc.js": 26236,
+        "./pa-in": 38772,
+        "./pa-in.js": 38772,
+        "./pl": 43219,
+        "./pl.js": 43219,
+        "./pt": 31071,
+        "./pt-br": 10376,
+        "./pt-br.js": 10376,
+        "./pt.js": 31071,
+        "./ro": 43551,
+        "./ro.js": 43551,
+        "./ru": 878,
+        "./ru.js": 878,
+        "./sd": 93332,
+        "./sd.js": 93332,
+        "./se": 55268,
+        "./se.js": 55268,
+        "./si": 87050,
+        "./si.js": 87050,
+        "./sk": 46201,
+        "./sk.js": 46201,
+        "./sl": 96675,
+        "./sl.js": 96675,
+        "./sq": 27632,
+        "./sq.js": 27632,
+        "./sr": 83419,
+        "./sr-cyrl": 40617,
+        "./sr-cyrl.js": 40617,
+        "./sr.js": 83419,
+        "./ss": 65321,
+        "./ss.js": 65321,
+        "./sv": 52765,
+        "./sv.js": 52765,
+        "./sw": 32831,
+        "./sw.js": 32831,
+        "./ta": 77530,
+        "./ta.js": 77530,
+        "./te": 26726,
+        "./te.js": 26726,
+        "./tet": 35763,
+        "./tet.js": 35763,
+        "./tg": 48165,
+        "./tg.js": 48165,
+        "./th": 99496,
+        "./th.js": 99496,
+        "./tk": 58573,
+        "./tk.js": 58573,
+        "./tl-ph": 74742,
+        "./tl-ph.js": 74742,
+        "./tlh": 24780,
+        "./tlh.js": 24780,
+        "./tr": 80835,
+        "./tr.js": 80835,
+        "./tzl": 2840,
+        "./tzl.js": 2840,
+        "./tzm": 66757,
+        "./tzm-latn": 70442,
+        "./tzm-latn.js": 70442,
+        "./tzm.js": 66757,
+        "./ug-cn": 64413,
+        "./ug-cn.js": 64413,
+        "./uk": 64800,
+        "./uk.js": 64800,
+        "./ur": 99706,
+        "./ur.js": 99706,
+        "./uz": 37448,
+        "./uz-latn": 63337,
+        "./uz-latn.js": 63337,
+        "./uz.js": 37448,
+        "./vi": 83528,
+        "./vi.js": 83528,
+        "./x-pseudo": 581,
+        "./x-pseudo.js": 581,
+        "./yo": 7658,
+        "./yo.js": 7658,
+        "./zh-cn": 55526,
+        "./zh-cn.js": 55526,
+        "./zh-hk": 32809,
+        "./zh-hk.js": 32809,
+        "./zh-mo": 57892,
+        "./zh-mo.js": 57892,
+        "./zh-tw": 79204,
+        "./zh-tw.js": 79204,
+      };
+      function r(e) {
+        var t = i(e);
+        return n(t);
+      }
+      function i(e) {
+        if (!n.o(s, e)) {
+          var t = new Error("Cannot find module '" + e + "'");
+          throw ((t.code = "MODULE_NOT_FOUND"), t);
+        }
+        return s[e];
+      }
+      (r.keys = function () {
+        return Object.keys(s);
+      }),
+        (r.resolve = i),
+        (e.exports = r),
+        (r.id = 95126);
+    },
     13043: (e, t, n) => {
       "use strict";
-      n.d(t, { p: () => _ });
-      var r = n(85556),
-        i = n(47427),
-        s = n(82493),
+      n.d(t, { p: () => m });
+      var s = n(85556),
+        r = n(47427),
+        i = n(82493),
         a = n(4030),
         c = n(20417),
         o = n(37563),
         l = n(35643);
-      function _(e) {
+      function m(e) {
         const { children: t, navTreeRef: n } = e,
-          _ = (0, r._T)(e, ["children", "navTreeRef"]),
-          m = i.useRef(),
-          f = (0, c.BE)(m, n),
-          g = (0, o.id)(),
-          p = window.__virtual_keyboard_client;
-        if (g) {
+          m = (0, s._T)(e, ["children", "navTreeRef"]),
+          _ = r.useRef(),
+          d = (0, c.BE)(_, n),
+          u = (0, o.id)(),
+          f = window.__virtual_keyboard_client;
+        if (u) {
           const e = window.__nav_tree_root;
-          return i.createElement(
-            s.Fe,
-            Object.assign({}, _, {
-              navTreeRef: f,
+          return r.createElement(
+            i.Fe,
+            Object.assign({}, m, {
+              navTreeRef: d,
               secondary: !0,
               parentEmbeddedNavTree: e,
             }),
-            i.createElement(
+            r.createElement(
               l.o5,
-              { factory: p },
-              i.createElement(a.O, null, t),
+              { factory: f },
+              r.createElement(a.O, null, t),
             ),
           );
         }
-        return i.createElement(i.Fragment, null, t);
+        return r.createElement(r.Fragment, null, t);
       }
     },
-    58289: (e, t, n) => {
+    64936: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { AccountPreferencesRoutes: () => U, default: () => M });
-      var r = n(47427),
-        i = n(8285),
-        s = n(85556),
+      n.d(t, { JW: () => m, kl: () => u, rw: () => p, zD: () => f });
+      var s = n(85556),
+        r = n(54842),
+        i = n(37485),
+        a = n.n(i),
+        c = n(47427),
+        o = (n(29480), n(37563));
+      class l {
+        constructor() {
+          (this.bOpenEventLandingPage = !1),
+            (this.bIncludeFeaturedAsGameSource = !0),
+            (this.nOverrideDateNow = void 0),
+            (0, r.rC)(this);
+        }
+        get bRequireAllEventsLoadedInTimeBlock() {
+          return !1;
+        }
+        get bIsFollowingEnabled() {
+          return !(0, o.h4)();
+        }
+        get bIsCuratorsEnabled() {
+          return !(0, o.h4)();
+        }
+        get bIncludeCurators() {
+          return !0;
+        }
+        GetTimeNowWithOverride() {
+          return this.nOverrideDateNow
+            ? this.nOverrideDateNow
+            : Math.floor(Date.now() / 1e3);
+        }
+        GetTimeNowWithOverrideAsDate() {
+          return this.nOverrideDateNow
+            ? new Date(1e3 * this.nOverrideDateNow)
+            : new Date();
+        }
+        BHasTimeOverride() {
+          return Boolean(this.nOverrideDateNow);
+        }
+        ParseDevOverrides(e) {
+          if (!e || 0 == e.length) return;
+          const t = new URLSearchParams("?" == e[0] ? e.substring(1) : e);
+          if (
+            t.has("t") &&
+            ("dev" == o.De.WEB_UNIVERSE || "beta" == o.De.WEB_UNIVERSE)
+          ) {
+            const e = t.get("t");
+            let n = /^\d+$/.test(e) ? a().unix(Number.parseInt(e)) : a()(e);
+            (this.nOverrideDateNow = Math.floor(n.unix())),
+              console.log(
+                "CEventCalendarDevFeatures overriding partner event time: " +
+                  this.nOverrideDateNow +
+                  " " +
+                  n.format(),
+              );
+          }
+        }
+      }
+      (0, s.gn)([r.LO], l.prototype, "nOverrideDateNow", void 0);
+      const m = new l();
+      window.g_EventCalendarDevFeatures = m;
+      const _ = new Date(),
+        d = Math.floor(_.getTime() / 1e3);
+      function u() {
+        var e;
+        return null !== (e = m.nOverrideDateNow) && void 0 !== e ? e : d;
+      }
+      function f() {
+        return c.useMemo(() => u(), []);
+      }
+      function p() {
+        return c.useMemo(() => m.GetTimeNowWithOverrideAsDate(), []);
+      }
+    },
+    24827: (e, t, n) => {
+      "use strict";
+      n.d(t, {
+        Ai: () => g,
+        H6: () => h,
+        Kj: () => f,
+        Zg: () => v,
+        uv: () => E,
+        w$: () => p,
+      });
+      var s = n(85556),
+        r = n(47427),
+        i = n(59728),
+        a = n(31846),
+        c = n(27605),
+        o = n(13129),
+        l = n(46984),
+        m = n(81602),
+        _ = n.n(m),
+        d = n(64936);
+      const u = n(98973);
+      function f(e) {
+        const t = u.tz.guess(),
+          n = u.unix(e).tz(t),
+          s = (0, a.CE)();
+        return s && n.locale(s), n.format("LT");
+      }
+      function p(e, t) {
+        const n = u.tz.guess(),
+          s = u.unix(e).tz(n),
+          i = (0, a.CE)();
+        return (
+          i && s.locale(i),
+          r.createElement(
+            r.Fragment,
+            null,
+            s.format("LT"),
+            t
+              ? r.createElement(
+                  "span",
+                  { "data-tooltip-text": s.format("Z") + ", " + n },
+                  " ",
+                  s.zoneAbbr(),
+                )
+              : null,
+          )
+        );
+      }
+      const h = (0, c.Pi)((e) => {
+          const {
+              dateAndTime: t,
+              bSingleLine: n,
+              bOnlyTime: s,
+              bOnlyDate: i,
+            } = e,
+            c = !s && Boolean(t),
+            o = !i && Boolean(t),
+            l = c && (0, a.$1)(t),
+            m = e.stylesmodule
+              ? Object.assign(Object.assign({}, _()), e.stylesmodule)
+              : _();
+          return n
+            ? r.createElement(
+                "span",
+                { className: s || i ? m.DateAndTimeInline : m.DateAndTime },
+                c && l,
+                r.createElement("span", null, " "),
+                Boolean(t && o) && p(t, !0),
+              )
+            : r.createElement(
+                "div",
+                { className: m.DateAndTime },
+                c &&
+                  r.createElement(
+                    r.Fragment,
+                    null,
+                    r.createElement("div", { className: m.LocalizedDate }, l),
+                    " ",
+                    r.createElement("span", { className: m.At }, "@"),
+                  ),
+                r.createElement(
+                  "div",
+                  { className: m.LocalizedTime },
+                  Boolean(t && o) && p(t, !0),
+                ),
+              );
+        }),
+        v = (e) => {
+          const t = r.createElement(
+            "div",
+            { className: e.stylesmodule.DateToolTip },
+            r.createElement(h, {
+              dateAndTime: e.rtFullDate,
+              bSingleLine: !0,
+              stylesmodule: e.stylesmodule,
+            }),
+          );
+          return r.createElement(
+            i.HP,
+            {
+              toolTipContent: t,
+              direction: "top",
+              className: e.className,
+              bTopmost: !0,
+            },
+            e.children,
+          );
+        };
+      let g = class extends r.Component {
+        render() {
+          const { startDateAndTime: e, endDateAndTime: t } = this.props,
+            n = this.props.stylesmodule
+              ? Object.assign(Object.assign({}, _()), this.props.stylesmodule)
+              : _();
+          let s =
+            this.props.bHideEndTime ||
+            null == this.props.endDateAndTime ||
+            this.props.endDateAndTime < 1;
+          if (null == e || 0 == e)
+            return r.createElement(
+              "div",
+              { className: n.DateAndTime },
+              r.createElement(
+                "span",
+                { className: n.RightSideTitles },
+                (0, a.Xx)("#EventDisplay_TimeRange"),
+              ),
+              (0, a.Xx)("#EventDisplay_TimeDisplayNone"),
+            );
+          let i = d.JW.GetTimeNowWithOverride();
+          if (s)
+            return r.createElement(
+              "div",
+              { className: n.StartDate },
+              r.createElement(
+                "div",
+                { className: n.RightSideTitles },
+                (0, a.Xx)(
+                  e < i
+                    ? "#EventDisplay_TimeInPast"
+                    : "#EventDisplay_TimeUpcoming",
+                ),
+                " ",
+              ),
+              r.createElement(h, { stylesmodule: n, dateAndTime: e }),
+            );
+          let c = e <= i && i <= t;
+          const m = (0, l.yK)(new Date(1e3 * e), new Date(1e3 * t));
+          return r.createElement(
+            "div",
+            { className: n.MultiDateAndTime },
+            r.createElement(
+              "div",
+              { className: n.StartDate },
+              r.createElement(
+                "span",
+                { className: n.RightSideTitles },
+                (0, a.Xx)(
+                  e >= i
+                    ? "#EventDisplay_TimeBeginsOn"
+                    : t >= i
+                      ? "#EventDisplay_TimeBeginsOn_Past"
+                      : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
+                ),
+              ),
+              r.createElement(h, {
+                stylesmodule: n,
+                bSingleLine: !0,
+                dateAndTime: e,
+              }),
+            ),
+            r.createElement(
+              "div",
+              { className: n.EndDate },
+              r.createElement(
+                "span",
+                { className: n.RightSideTitles },
+                (0, a.Xx)(
+                  t < i
+                    ? "#EventDisplay_TimeEndsOn_Past"
+                    : "#EventDisplay_TimeEndsOn",
+                ),
+              ),
+              r.createElement(h, {
+                stylesmodule: n,
+                bSingleLine: !0,
+                bOnlyTime: m,
+                dateAndTime: t,
+              }),
+            ),
+            c &&
+              r.createElement(
+                "span",
+                { className: n.ActiveEvent },
+                r.createElement(
+                  "span",
+                  {
+                    className: (0, o.Z)(
+                      n.RightSideTitles,
+                      n.ActiveEventCallOut,
+                    ),
+                  },
+                  (0, a.Xx)("#Time_Now"),
+                ),
+              ),
+          );
+        }
+      };
+      g = (0, s.gn)([c.Pi], g);
+      let E = class extends r.Component {
+        render() {
+          const {
+              startDateAndTime: e,
+              endDateAndTime: t,
+              bHideEndTime: n,
+            } = this.props,
+            s = this.props.stylesmodule
+              ? Object.assign(Object.assign({}, _()), this.props.stylesmodule)
+              : _();
+          if (null == e || 0 == e)
+            return r.createElement(
+              "div",
+              { className: s.DateAndTime },
+              r.createElement(
+                "span",
+                { className: s.RightSideTitles },
+                (0, a.Xx)("#EventDisplay_TimeRange"),
+              ),
+              (0, a.Xx)("#EventDisplay_TimeDisplayNone"),
+            );
+          const i = d.JW.GetTimeNowWithOverrideAsDate(),
+            c = d.JW.GetTimeNowWithOverride(),
+            o = (0, l.U8)(new Date(1e3 * e), i),
+            m = r.createElement(
+              "div",
+              { className: s.ShortDateAndTime },
+              (0, a.$1)(e, o),
+            );
+          let u = r.createElement(
+            v,
+            { rtFullDate: e, stylesmodule: s },
+            r.createElement(
+              "div",
+              { className: s.RightSideTitles },
+              (0, a.Xx)(
+                e < c
+                  ? "#EventDisplay_TimeInPast"
+                  : "#EventDisplay_TimeUpcoming",
+              ),
+            ),
+            m,
+          );
+          if (
+            (c < e &&
+              e < c + l._H.PerWeek &&
+              (u = r.createElement(
+                v,
+                { rtFullDate: e, stylesmodule: s },
+                r.createElement(
+                  "div",
+                  { className: s.RightSideTitles },
+                  (0, a.kQ)(
+                    "#EventDisplay_EventUpcoming_WithDateAndTime",
+                    m,
+                    r.createElement(
+                      "div",
+                      { className: s.ShortDateAndTime },
+                      p(e),
+                      " ",
+                    ),
+                  ),
+                ),
+              )),
+            n || null == t || t < 1)
+          )
+            return u;
+          const f = e <= c && c <= t;
+          f &&
+            (u = r.createElement(
+              v,
+              { rtFullDate: e, className: s.ActiveEvent, stylesmodule: s },
+              r.createElement(
+                "span",
+                { className: s.ActiveEventCallOut },
+                (0, a.Xx)("#Time_Now"),
+              ),
+            ));
+          let h = null;
+          const g = f ? t - c : t - e;
+          if (g <= l._H.PerDay) {
+            const e = r.createElement(
+              "div",
+              { className: s.ShortDateAndTime },
+              (0, a.yW)(g, !0),
+            );
+            h =
+              t < c
+                ? r.createElement(
+                    "div",
+                    { className: s.RightSideTitles },
+                    (0, a.Xx)("#EventDisplay_TimeEndsOn_Ran"),
+                    e,
+                  )
+                : r.createElement(
+                    "div",
+                    { className: s.RightSideTitles },
+                    (0, a.kQ)(
+                      f
+                        ? "#EventDisplay_TimeLeft"
+                        : "#EventDisplay_RunsForDuration",
+                      e,
+                    ),
+                  );
+          } else {
+            const e = i.getFullYear() == new Date(1e3 * t).getFullYear();
+            h = r.createElement(
+              r.Fragment,
+              null,
+              r.createElement(
+                "div",
+                { className: s.RightSideTitles },
+                (0, a.Xx)(
+                  t < c
+                    ? "#EventDisplay_TimeEndsOn_Past"
+                    : "#EventDisplay_TimeEndsOn",
+                ),
+              ),
+              r.createElement(
+                "div",
+                { className: s.ShortDateAndTime },
+                (0, a.$1)(t, e),
+              ),
+            );
+          }
+          const E = r.createElement(v, { rtFullDate: t, stylesmodule: s }, h);
+          return r.createElement("div", { className: s.ShortDateRange }, u, E);
+        }
+      };
+      E = (0, s.gn)([c.Pi], E);
+    },
+    29480: (e, t, n) => {
+      "use strict";
+      n.d(t, { T: () => a });
+      var s = n(80751),
+        r = n.n(s),
+        i = n(47427);
+      function a(e) {
+        const t = i.useRef(r().CancelToken.source());
+        return (
+          i.useEffect(() => {
+            const n = t.current;
+            return () => n.cancel(e ? `${e}: unmounting` : "unmounting");
+          }, [e]),
+          t.current
+        );
+      }
+    },
+    479: (e, t, n) => {
+      "use strict";
+      n.r(t), n.d(t, { AccountPreferencesRoutes: () => V, default: () => K });
+      var s = n(47427),
+        r = n(8285),
+        i = n(85556),
         a = n(54842),
         c = (n(16649), n(37563)),
         o = n(80751),
         l = n.n(o),
-        _ = n(31846);
-      class m {
+        m = n(31846);
+      class _ {
         constructor(e) {
           (this.m_Preferences = void 0),
             (0, a.rC)(this),
@@ -194,39 +951,39 @@
         }
         PostCookieSettings() {
           var e, t;
-          return (0, s.mG)(this, void 0, void 0, function* () {
+          return (0, i.mG)(this, void 0, void 0, function* () {
             const n = c.De.STORE_BASE_URL + "account/ajaxsetcookiepreferences",
-              r = new FormData();
-            r.set("sessionid", c.De.SESSIONID),
-              r.append("cookiepreferences", JSON.stringify(this.m_Preferences));
+              s = new FormData();
+            s.set("sessionid", c.De.SESSIONID),
+              s.append("cookiepreferences", JSON.stringify(this.m_Preferences));
             try {
-              let i = yield l().post(n, r, { withCredentials: !0 });
+              let r = yield l().post(n, s, { withCredentials: !0 });
               if (
-                200 != i.status ||
+                200 != r.status ||
                 1 !=
-                  (null === (e = null == i ? void 0 : i.data) || void 0 === e
+                  (null === (e = null == r ? void 0 : r.data) || void 0 === e
                     ? void 0
                     : e.success)
               )
                 window.ShowAlertDialog(
-                  (0, _.Xx)("#CookiePref_Error"),
-                  (0, _.Xx)("#CookiePref_ErrorNotSaved"),
+                  (0, m.Xx)("#CookiePref_Error"),
+                  (0, m.Xx)("#CookiePref_ErrorNotSaved"),
                 );
               else if (
                 1 ==
-                (null === (t = null == i ? void 0 : i.data) || void 0 === t
+                (null === (t = null == r ? void 0 : r.data) || void 0 === t
                   ? void 0
                   : t.success)
               ) {
                 0;
-                const { transfer_urls: e, transfer_params: t } = i.data;
+                const { transfer_urls: e, transfer_params: t } = r.data;
                 e && t && this.TransferCookiePreferencesToSites(e, t);
               }
             } catch (e) {
               0,
                 window.ShowAlertDialog(
-                  (0, _.Xx)("#CookiePref_Error"),
-                  (0, _.Xx)("#CookiePref_ErrorNotSaved"),
+                  (0, m.Xx)("#CookiePref_Error"),
+                  (0, m.Xx)("#CookiePref_ErrorNotSaved"),
                 );
             }
           });
@@ -237,405 +994,405 @@
           for (const t of e) l().post(t, n);
         }
       }
-      (0, s.gn)([a.LO], m.prototype, "m_Preferences", void 0);
-      var f = n(27605),
-        g = n(1485),
-        p = n(3934),
-        d = n(13129),
+      (0, i.gn)([a.LO], _.prototype, "m_Preferences", void 0);
+      var d = n(27605),
+        u = n(1485),
+        f = n(3934),
+        p = n(13129),
         h = n(91618),
-        u = n(41130),
-        P = n(13043),
-        k = n(82493);
-      let N;
-      const E = (0, f.Pi)(() => {
+        v = n(41130),
+        g = n(13043),
+        E = n(82493);
+      let y;
+      const k = (0, d.Pi)(() => {
           let e = (function () {
-            if (!N) {
+            if (!y) {
               let e = (0, c.kQ)("cookiepreferences", "application_config");
-              N = new m(e);
+              y = new _(e);
             }
-            return N;
+            return y;
           })();
-          const t = (0, u.L)(),
-            n = (0, r.useCallback)(() => {
+          const t = (0, v.L)(),
+            n = (0, s.useCallback)(() => {
               e.SetPreferenceState(1);
             }, [e]),
-            i = (0, r.useCallback)(() => {
+            r = (0, s.useCallback)(() => {
               e.SetPreferenceState(2);
             }, [e]);
-          return r.createElement(
-            P.p,
+          return s.createElement(
+            g.p,
             { navID: "StoreCookiesSettings", NavigationManager: t },
-            r.createElement(
+            s.createElement(
               "div",
               {
-                className: (0, d.Z)(
-                  p.CookieSettingsHeader,
+                className: (0, p.Z)(
+                  f.CookieSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
-              r.createElement(
+              s.createElement(
                 "div",
                 null,
-                (0, _.Xx)("#CookiePref_OptionalCookies_Title"),
+                (0, m.Xx)("#CookiePref_OptionalCookies_Title"),
               ),
             ),
-            r.createElement(
+            s.createElement(
               "div",
               { className: "account_settings_container" },
-              r.createElement(
+              s.createElement(
                 h.s,
-                { "flow-children": "row", className: p.ButtonGroup },
-                r.createElement(
-                  k.Ks,
+                { "flow-children": "row", className: f.ButtonGroup },
+                s.createElement(
+                  E.Ks,
                   {
-                    className: (0, d.Z)(
-                      p.AllButton,
-                      e.BIsRejectAll() ? p.ButtonHighlight : "",
+                    className: (0, p.Z)(
+                      f.AllButton,
+                      e.BIsRejectAll() ? f.ButtonHighlight : "",
                     ),
-                    onClick: i,
+                    onClick: r,
                   },
-                  (0, _.Xx)("#CookiePref_RejectAll"),
+                  (0, m.Xx)("#CookiePref_RejectAll"),
                 ),
-                r.createElement(
-                  k.Ks,
+                s.createElement(
+                  E.Ks,
                   {
-                    className: (0, d.Z)(
-                      p.AllButton,
-                      e.BIsAllowAll() ? p.ButtonHighlight : "",
+                    className: (0, p.Z)(
+                      f.AllButton,
+                      e.BIsAllowAll() ? f.ButtonHighlight : "",
                     ),
                     onClick: n,
                   },
-                  (0, _.Xx)("#CookiePref_AcceptAll"),
+                  (0, m.Xx)("#CookiePref_AcceptAll"),
                 ),
               ),
-              r.createElement(y, { settings: e }),
-              r.createElement(v, { settings: e }),
-              r.createElement(C, { settings: e }),
+              s.createElement(T, { settings: e }),
+              s.createElement(P, { settings: e }),
+              s.createElement(N, { settings: e }),
             ),
-            r.createElement(
+            s.createElement(
               "div",
               {
-                className: (0, d.Z)(
-                  p.CookieSettingsHeader,
+                className: (0, p.Z)(
+                  f.CookieSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
-              r.createElement(
+              s.createElement(
                 "div",
                 null,
-                (0, _.Xx)("#CookiePref_TechnicallyNeccesary_Title"),
+                (0, m.Xx)("#CookiePref_TechnicallyNeccesary_Title"),
               ),
             ),
-            r.createElement(
+            s.createElement(
               "div",
               { className: "account_settings_container" },
-              r.createElement(
+              s.createElement(
                 "p",
                 null,
-                (0, _.Xx)("#CookiePref_TechnicallyNeccesary_Desc"),
+                (0, m.Xx)("#CookiePref_TechnicallyNeccesary_Desc"),
               ),
-              r.createElement(
+              s.createElement(
                 "div",
-                { className: p.CookieGroup },
-                r.createElement(
+                { className: f.CookieGroup },
+                s.createElement(
                   "div",
-                  { className: p.NecessaryGroup },
-                  r.createElement(
+                  { className: f.NecessaryGroup },
+                  s.createElement(
                     "span",
-                    { className: p.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_SessionID_Title"),
+                    { className: f.NecessaryTitle },
+                    (0, m.Xx)("#CookiePref_SessionID_Title"),
                   ),
-                  r.createElement(
+                  s.createElement(
                     "span",
-                    { className: p.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_SessionID_Desc"),
+                    { className: f.NecessaryDesc },
+                    (0, m.Xx)("#CookiePref_SessionID_Desc"),
                   ),
                 ),
-                r.createElement(
+                s.createElement(
                   "div",
-                  { className: p.NecessaryGroup },
-                  r.createElement(
+                  { className: f.NecessaryGroup },
+                  s.createElement(
                     "span",
-                    { className: p.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_ShoppingCart_Title"),
+                    { className: f.NecessaryTitle },
+                    (0, m.Xx)("#CookiePref_ShoppingCart_Title"),
                   ),
-                  r.createElement(
+                  s.createElement(
                     "span",
-                    { className: p.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_ShoppingCart_Desc"),
+                    { className: f.NecessaryDesc },
+                    (0, m.Xx)("#CookiePref_ShoppingCart_Desc"),
                   ),
                 ),
-                r.createElement(
+                s.createElement(
                   "div",
-                  { className: p.NecessaryGroup },
-                  r.createElement(
+                  { className: f.NecessaryGroup },
+                  s.createElement(
                     "span",
-                    { className: p.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_SteamCountry_Title"),
+                    { className: f.NecessaryTitle },
+                    (0, m.Xx)("#CookiePref_SteamCountry_Title"),
                   ),
-                  r.createElement(
+                  s.createElement(
                     "span",
-                    { className: p.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_SteamCountry_Desc"),
+                    { className: f.NecessaryDesc },
+                    (0, m.Xx)("#CookiePref_SteamCountry_Desc"),
                   ),
                 ),
-                r.createElement(
+                s.createElement(
                   "div",
-                  { className: p.NecessaryGroup },
-                  r.createElement(
+                  { className: f.NecessaryGroup },
+                  s.createElement(
                     "span",
-                    { className: p.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_Timezone_Title"),
+                    { className: f.NecessaryTitle },
+                    (0, m.Xx)("#CookiePref_Timezone_Title"),
                   ),
-                  r.createElement(
+                  s.createElement(
                     "span",
-                    { className: p.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_Timezone_Desc"),
+                    { className: f.NecessaryDesc },
+                    (0, m.Xx)("#CookiePref_Timezone_Desc"),
                   ),
                 ),
-                r.createElement(
+                s.createElement(
                   "div",
-                  { className: p.NecessaryGroup },
-                  r.createElement(
+                  { className: f.NecessaryGroup },
+                  s.createElement(
                     "span",
-                    { className: p.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_BirthTime_Title"),
+                    { className: f.NecessaryTitle },
+                    (0, m.Xx)("#CookiePref_BirthTime_Title"),
                   ),
-                  r.createElement(
+                  s.createElement(
                     "span",
-                    { className: p.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_BirthTime_Desc"),
+                    { className: f.NecessaryDesc },
+                    (0, m.Xx)("#CookiePref_BirthTime_Desc"),
                   ),
                 ),
-                r.createElement(
+                s.createElement(
                   "div",
-                  { className: p.NecessaryGroup },
-                  r.createElement(
+                  { className: f.NecessaryGroup },
+                  s.createElement(
                     "span",
-                    { className: p.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_Login_Title"),
+                    { className: f.NecessaryTitle },
+                    (0, m.Xx)("#CookiePref_Login_Title"),
                   ),
-                  r.createElement(
+                  s.createElement(
                     "span",
-                    { className: p.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_Login_Desc"),
+                    { className: f.NecessaryDesc },
+                    (0, m.Xx)("#CookiePref_Login_Desc"),
                   ),
                 ),
-                r.createElement(
+                s.createElement(
                   "div",
-                  { className: p.NecessaryGroup },
-                  r.createElement(
+                  { className: f.NecessaryGroup },
+                  s.createElement(
                     "span",
-                    { className: p.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_Language_Title"),
+                    { className: f.NecessaryTitle },
+                    (0, m.Xx)("#CookiePref_Language_Title"),
                   ),
-                  r.createElement(
+                  s.createElement(
                     "span",
-                    { className: p.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_Language_Desc"),
+                    { className: f.NecessaryDesc },
+                    (0, m.Xx)("#CookiePref_Language_Desc"),
                   ),
                 ),
-                r.createElement(
+                s.createElement(
                   "div",
-                  { className: p.NecessaryGroup },
-                  r.createElement(
+                  { className: f.NecessaryGroup },
+                  s.createElement(
                     "span",
-                    { className: p.NecessaryTitle },
-                    (0, _.Xx)("#CookiePref_CookieSettings_Title"),
+                    { className: f.NecessaryTitle },
+                    (0, m.Xx)("#CookiePref_CookieSettings_Title"),
                   ),
-                  r.createElement(
+                  s.createElement(
                     "span",
-                    { className: p.NecessaryDesc },
-                    (0, _.Xx)("#CookiePref_CookieSettings_Desc"),
+                    { className: f.NecessaryDesc },
+                    (0, m.Xx)("#CookiePref_CookieSettings_Desc"),
                   ),
                 ),
               ),
             ),
-            r.createElement(
+            s.createElement(
               "div",
               {
-                className: (0, d.Z)(
-                  p.CookieSettingsHeader,
+                className: (0, p.Z)(
+                  f.CookieSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
-              r.createElement(
+              s.createElement(
                 "div",
                 null,
-                (0, _.Xx)("#PrivacySettings_Marketing_Header"),
+                (0, m.Xx)("#PrivacySettings_Marketing_Header"),
               ),
             ),
-            r.createElement(
+            s.createElement(
               "div",
               { className: "account_settings_container" },
-              r.createElement(S, { settings: e }),
+              s.createElement(D, { settings: e }),
             ),
             null,
           );
         }),
-        y = (0, f.Pi)((e) => {
+        T = (0, d.Pi)((e) => {
           const { settings: t } = e,
-            n = (0, r.useCallback)(() => {
+            n = (0, s.useCallback)(() => {
               t.ToggleRecentApps();
             }, [t]);
-          return r.createElement(
+          return s.createElement(
             "div",
-            { className: p.CookieGroup },
-            r.createElement(
+            { className: f.CookieGroup },
+            s.createElement(
               "div",
-              { className: p.CookieSection },
-              r.createElement(
+              { className: f.CookieSection },
+              s.createElement(
                 "h2",
                 null,
-                (0, _.Xx)("#CookiePref_Content_Title"),
+                (0, m.Xx)("#CookiePref_Content_Title"),
               ),
-              r.createElement(
+              s.createElement(
                 "p",
-                { className: p.SectionDescription },
-                (0, _.Xx)("#CookiePref_Content_Desc"),
+                { className: f.SectionDescription },
+                (0, m.Xx)("#CookiePref_Content_Desc"),
               ),
-              r.createElement(g.gE, {
+              s.createElement(u.gE, {
                 onChange: n,
-                label: (0, _.Xx)("#CookiePref_Content_ToggleTitle"),
+                label: (0, m.Xx)("#CookiePref_Content_ToggleTitle"),
                 checked: t.GetRecentApps(),
-                description: (0, _.Xx)("#CookiePref_Content_ToggleDesc"),
+                description: (0, m.Xx)("#CookiePref_Content_ToggleDesc"),
               }),
             ),
           );
         }),
-        v = (0, f.Pi)((e) => {
+        P = (0, d.Pi)((e) => {
           const { settings: t } = e,
-            n = (0, r.useCallback)(() => {
+            n = (0, s.useCallback)(() => {
               t.ToggleImpressions();
             }, [t]);
-          return r.createElement(
+          return s.createElement(
             "div",
-            { className: p.CookieGroup },
-            r.createElement(
+            { className: f.CookieGroup },
+            s.createElement(
               "div",
-              { className: p.CookieSection },
-              r.createElement(
+              { className: f.CookieSection },
+              s.createElement(
                 "h2",
                 null,
-                (0, _.Xx)("#CookiePref_ValveAnalytics_Title"),
+                (0, m.Xx)("#CookiePref_ValveAnalytics_Title"),
               ),
-              r.createElement(
+              s.createElement(
                 "p",
-                { className: p.SectionDescription },
-                (0, _.Xx)("#CookiePref_ValveAnalytics_Desc"),
+                { className: f.SectionDescription },
+                (0, m.Xx)("#CookiePref_ValveAnalytics_Desc"),
               ),
-              r.createElement(g.gE, {
+              s.createElement(u.gE, {
                 onChange: n,
-                label: (0, _.Xx)("#CookiePref_ValveAnalytics_ToggleTitle"),
+                label: (0, m.Xx)("#CookiePref_ValveAnalytics_ToggleTitle"),
                 checked: t.GetImpressions(),
-                description: (0, _.Xx)("#CookiePref_ValveAnalytics_ToggleDesc"),
+                description: (0, m.Xx)("#CookiePref_ValveAnalytics_ToggleDesc"),
               }),
             ),
           );
         }),
-        C = (0, f.Pi)((e) => {
+        N = (0, d.Pi)((e) => {
           const { settings: t } = e,
-            n = (0, r.useCallback)(() => {
+            n = (0, s.useCallback)(() => {
               t.ToggleYouTube();
             }, [t]),
-            i = (0, r.useCallback)(() => {
+            r = (0, s.useCallback)(() => {
               t.ToggleVimeo();
             }, [t]),
-            s = (0, r.useCallback)(() => {
+            i = (0, s.useCallback)(() => {
               t.ToggleSketchfab();
             }, [t]);
-          return r.createElement(
+          return s.createElement(
             "div",
-            { className: p.CookieGroup },
-            r.createElement(
+            { className: f.CookieGroup },
+            s.createElement(
               "div",
-              { className: p.CookieSection },
-              r.createElement(
+              { className: f.CookieSection },
+              s.createElement(
                 "h2",
                 null,
-                (0, _.Xx)("#CookiePref_ThirdParty_Title"),
+                (0, m.Xx)("#CookiePref_ThirdParty_Title"),
               ),
-              r.createElement(
+              s.createElement(
                 "p",
-                { className: p.SectionDescription },
-                (0, _.Xx)("#CookiePref_ThirdParty_Desc"),
+                { className: f.SectionDescription },
+                (0, m.Xx)("#CookiePref_ThirdParty_Desc"),
               ),
-              r.createElement(g.gE, {
+              s.createElement(u.gE, {
                 onChange: n,
-                label: (0, _.Xx)("#CookiePref_YouTube_Title"),
+                label: (0, m.Xx)("#CookiePref_YouTube_Title"),
                 checked: t.GetYouTube(),
-                description: (0, _.kQ)(
+                description: (0, m.kQ)(
                   "#CookiePref_YouTube_Desc",
-                  r.createElement(
+                  s.createElement(
                     "a",
                     {
                       href: "https://policies.google.com/privacy",
                       target: "_blank",
                     },
-                    (0, _.Xx)("#CookiePref_YouTube_TogglePolicyName"),
+                    (0, m.Xx)("#CookiePref_YouTube_TogglePolicyName"),
                   ),
                 ),
               }),
-              r.createElement(g.gE, {
-                onChange: i,
-                label: (0, _.Xx)("#CookiePref_Vimeo_Title"),
+              s.createElement(u.gE, {
+                onChange: r,
+                label: (0, m.Xx)("#CookiePref_Vimeo_Title"),
                 checked: t.GetVimeo(),
-                description: (0, _.kQ)(
+                description: (0, m.kQ)(
                   "#CookiePref_Vimeo_Desc",
-                  r.createElement(
+                  s.createElement(
                     "a",
                     { href: "https://vimeo.com/privacy", target: "_blank" },
-                    (0, _.Xx)("#CookiePref_Vimeo_TogglePolicyName"),
+                    (0, m.Xx)("#CookiePref_Vimeo_TogglePolicyName"),
                   ),
                 ),
               }),
-              r.createElement(g.gE, {
-                onChange: s,
-                label: (0, _.Xx)("#CookiePref_Sketchfab_Title"),
+              s.createElement(u.gE, {
+                onChange: i,
+                label: (0, m.Xx)("#CookiePref_Sketchfab_Title"),
                 checked: t.GetSketchfab(),
-                description: (0, _.kQ)(
+                description: (0, m.kQ)(
                   "#CookiePref_Sketchfab_Desc",
-                  r.createElement(
+                  s.createElement(
                     "a",
                     { href: "https://sketchfab.com/privacy", target: "_blank" },
-                    (0, _.Xx)("#CookiePref_Sketchfab_TogglePolicyName"),
+                    (0, m.Xx)("#CookiePref_Sketchfab_TogglePolicyName"),
                   ),
                 ),
               }),
             ),
           );
         }),
-        S = (0, f.Pi)((e) => {
+        D = (0, d.Pi)((e) => {
           const { settings: t } = e,
-            n = (0, r.useCallback)(() => {
+            n = (0, s.useCallback)(() => {
               t.ToggleUTMEnabled();
             }, [t]);
-          return r.createElement(
+          return s.createElement(
             "div",
-            { className: p.CookieGroup },
-            r.createElement(
+            { className: f.CookieGroup },
+            s.createElement(
               "div",
-              { className: p.CookieSection },
-              r.createElement(
+              { className: f.CookieSection },
+              s.createElement(
                 "h2",
                 null,
-                (0, _.Xx)("#PrivacySettings_Marketing_Title"),
+                (0, m.Xx)("#PrivacySettings_Marketing_Title"),
               ),
-              r.createElement(
+              s.createElement(
                 "p",
-                { className: p.SectionDescription },
-                (0, _.Xx)("#PrivacySettings_Marketing_Desc"),
+                { className: f.SectionDescription },
+                (0, m.Xx)("#PrivacySettings_Marketing_Desc"),
               ),
-              r.createElement(g.gE, {
+              s.createElement(u.gE, {
                 onChange: n,
-                label: (0, _.Xx)("#PrivacySettings_UTM_ToggleLabel"),
+                label: (0, m.Xx)("#PrivacySettings_UTM_ToggleLabel"),
                 checked: t.GetUTMEnabled(),
-                description: (0, _.Xx)("#PrivacySettings_UTM_ToggleDesc"),
+                description: (0, m.Xx)("#PrivacySettings_UTM_ToggleDesc"),
               }),
             ),
           );
         });
-      class T {
+      class S {
         constructor(e) {
           (this.m_Preferences = void 0),
             (this.m_bUpdating = !1),
@@ -651,11 +1408,11 @@
         ToggleTargetPreference(e, t) {
           this.m_bUpdating = !0;
           let n = !1;
-          for (let r of this.m_Preferences)
-            if (t.notification_type == r.notification_type) {
-              (r.notification_targets ^= e),
-                1 != (1 & r.notification_targets) &&
-                  (r.notification_targets = 0),
+          for (let s of this.m_Preferences)
+            if (t.notification_type == s.notification_type) {
+              (s.notification_targets ^= e),
+                1 != (1 & s.notification_targets) &&
+                  (s.notification_targets = 0),
                 (n = !0);
               break;
             }
@@ -663,183 +1420,471 @@
         }
         PostNotificationSettings() {
           var e, t;
-          return (0, s.mG)(this, void 0, void 0, function* () {
+          return (0, i.mG)(this, void 0, void 0, function* () {
             const n =
                 c.De.STORE_BASE_URL + "account/ajaxsetnotificationsettings",
-              r = new FormData();
-            r.set("sessionid", c.De.SESSIONID),
-              r.append(
+              s = new FormData();
+            s.set("sessionid", c.De.SESSIONID),
+              s.append(
                 "notificationpreferences",
                 JSON.stringify(this.m_Preferences),
               );
             try {
-              let i = yield l().post(n, r, { withCredentials: !0 });
-              200 != i.status ||
+              let r = yield l().post(n, s, { withCredentials: !0 });
+              200 != r.status ||
               1 !=
-                (null === (e = null == i ? void 0 : i.data) || void 0 === e
+                (null === (e = null == r ? void 0 : r.data) || void 0 === e
                   ? void 0
                   : e.success)
                 ? window.ShowAlertDialog(
-                    (0, _.Xx)("#NotificationPref_Error"),
-                    (0, _.Xx)("#NotificationPref_ErrorNotSaved"),
+                    (0, m.Xx)("#NotificationPref_Error"),
+                    (0, m.Xx)("#NotificationPref_ErrorNotSaved"),
                   )
-                : null === (t = null == i ? void 0 : i.data) ||
+                : null === (t = null == r ? void 0 : r.data) ||
                   void 0 === t ||
                   t.success;
             } catch (e) {
               0,
                 window.ShowAlertDialog(
-                  (0, _.Xx)("#NotificationPref_Error"),
-                  (0, _.Xx)("#NotificationPref_ErrorNotSaved"),
+                  (0, m.Xx)("#NotificationPref_Error"),
+                  (0, m.Xx)("#NotificationPref_ErrorNotSaved"),
                 );
             }
           });
         }
       }
-      (0, s.gn)([a.LO], T.prototype, "m_Preferences", void 0),
-        (0, s.gn)([a.LO], T.prototype, "m_bUpdating", void 0);
-      var b = n(28890),
-        D = n(58538);
-      let x;
-      function X() {
-        if (!x) {
+      (0, i.gn)([a.LO], S.prototype, "m_Preferences", void 0),
+        (0, i.gn)([a.LO], S.prototype, "m_bUpdating", void 0);
+      var j = n(28890),
+        b = n(58538);
+      let C;
+      function x() {
+        if (!C) {
           let e = (0, c.kQ)("notificationpreferences", "application_config");
-          x = new T(e);
+          C = new S(e);
         }
-        return x;
+        return C;
       }
-      const A = (0, f.Pi)(() => {
-          let e = X();
-          const t = (0, u.L)();
+      const A = (0, d.Pi)(() => {
+          let e = x();
+          const t = (0, v.L)();
           let n = [];
           for (const t of e.GetPreferences())
-            n.push(r.createElement(G, { preferenceSetting: t }));
-          return r.createElement(
-            P.p,
+            n.push(s.createElement(w, { preferenceSetting: t }));
+          return s.createElement(
+            g.p,
             { navID: "StoreNotificationSettings", NavigationManager: t },
-            r.createElement(
+            s.createElement(
               "div",
               {
-                className: (0, d.Z)(
-                  b.NotificationSettingsHeader,
+                className: (0, p.Z)(
+                  j.NotificationSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
-              r.createElement(
+              s.createElement(
                 "div",
                 null,
-                (0, _.Xx)("#NotificationSettings_Title"),
+                (0, m.Xx)("#NotificationSettings_Title"),
               ),
             ),
-            r.createElement(
+            s.createElement(
               "div",
               { className: "account_settings_container" },
-              r.createElement(
+              s.createElement(
                 "p",
-                { className: b.SectionDescription },
-                (0, _.Xx)("#NotificationSettings_Desc1"),
+                { className: j.SectionDescription },
+                (0, m.Xx)("#NotificationSettings_Desc1"),
               ),
-              r.createElement(
+              s.createElement(
                 "p",
-                { className: b.SectionDescription },
-                (0, _.Xx)("#NotificationSettings_Desc2"),
+                { className: j.SectionDescription },
+                (0, m.Xx)("#NotificationSettings_Desc2"),
               ),
-              r.createElement(
+              s.createElement(
                 "div",
                 { className: "notification_settings_container" },
-                r.createElement(
+                s.createElement(
                   "div",
-                  { className: b.NotificationSendWhen },
-                  (0, _.Xx)("#NotificationSettings_SendMeWhen"),
+                  { className: j.NotificationSendWhen },
+                  (0, m.Xx)("#NotificationSettings_SendMeWhen"),
                 ),
                 n,
               ),
             ),
           );
         }),
-        G = (0, f.Pi)((e) => {
+        w = (0, d.Pi)((e) => {
           const { preferenceSetting: t } = e;
-          let n = X();
-          const i = (0, r.useCallback)(() => {
+          let n = x();
+          const r = (0, s.useCallback)(() => {
               n.ToggleTargetPreference(1, t);
             }, [t, n]),
-            s = (0, r.useCallback)(() => {
+            i = (0, s.useCallback)(() => {
               n.ToggleTargetPreference(8, t);
             }, [t, n]),
-            a = (0, r.useCallback)(() => {
+            a = (0, s.useCallback)(() => {
               n.ToggleTargetPreference(2, t);
             }, [t, n]),
-            [c, o] = (0, r.useState)(!1),
+            [c, o] = (0, s.useState)(!1),
             l = n.BUpdatingPreferences(),
-            m = 1 == (1 & t.notification_targets),
-            f = 2 == (2 & t.notification_targets),
-            p = 8 == (8 & t.notification_targets),
+            _ = 1 == (1 & t.notification_targets),
+            d = 2 == (2 & t.notification_targets),
+            f = 8 == (8 & t.notification_targets),
             h =
-              ((u = t.notification_type),
-              (0, _.Qw)("#SteamNotificationTypeDesc_" + u)
-                ? (0, _.Xx)("#SteamNotificationTypeDesc_" + u)
+              ((v = t.notification_type),
+              (0, m.Qw)("#SteamNotificationTypeDesc_" + v)
+                ? (0, m.Xx)("#SteamNotificationTypeDesc_" + v)
                 : null);
-          var u;
+          var v;
           return h
-            ? r.createElement(
+            ? s.createElement(
                 "div",
-                { className: b.NotificationGroup },
-                r.createElement(
+                { className: j.NotificationGroup },
+                s.createElement(
                   "div",
-                  { className: b.NotificationSection },
-                  r.createElement(g.fp, {
-                    className: b.NotificationFeedToggle,
+                  { className: j.NotificationSection },
+                  s.createElement(u.fp, {
+                    className: j.NotificationFeedToggle,
                     padding: "compact",
-                    onChange: i,
+                    onChange: r,
                     disabled: l,
                     bottomSeparator: "none",
-                    checked: m,
+                    checked: _,
                   }),
-                  r.createElement(
+                  s.createElement(
                     "p",
-                    { className: b.NotificationDescription },
+                    { className: j.NotificationDescription },
                     h,
                   ),
-                  r.createElement(
-                    g.Yz,
+                  s.createElement(
+                    u.Yz,
                     {
-                      className: (0, d.Z)({
-                        [b.PrefDetailsToggle]: !0,
-                        [b.Selected]: c,
+                      className: (0, p.Z)({
+                        [j.PrefDetailsToggle]: !0,
+                        [j.Selected]: c,
                       }),
                       onClick: () => o(!c),
                     },
-                    r.createElement(D.vVQ, { direction: "down" }),
+                    s.createElement(b.vVQ, { direction: "down" }),
                   ),
                 ),
                 c &&
-                  r.createElement(
+                  s.createElement(
                     "div",
-                    { className: b.NotificationPrefDetails },
-                    r.createElement(g.ji, {
-                      label: (0, _.Xx)("#NotificationSettings_SendToast"),
-                      disabled: l || !m,
-                      checked: p,
-                      onChange: s,
+                    { className: j.NotificationPrefDetails },
+                    s.createElement(u.ji, {
+                      label: (0, m.Xx)("#NotificationSettings_SendToast"),
+                      disabled: l || !_,
+                      checked: f,
+                      onChange: i,
                     }),
-                    r.createElement(g.ji, {
-                      label: (0, _.Xx)(
+                    s.createElement(u.ji, {
+                      label: (0, m.Xx)(
                         "#NotificationSettings_PushNotification",
                       ),
-                      disabled: l || !m,
-                      checked: f,
+                      disabled: l || !_,
+                      checked: d,
                       onChange: a,
                     }),
                   ),
               )
             : null;
         });
-      var w = n(56480);
-      const B = r.lazy(() =>
+      var X = n(56480),
+        z = n(70839);
+      class O {
+        constructor() {
+          (this.m_rgDevices = []),
+            (this.m_rgRecentDevices = []),
+            (0, a.rC)(this);
+        }
+        static Get() {
+          return (
+            O.s_AuthorizedDevicesStore ||
+              ((O.s_AuthorizedDevicesStore = new O()),
+              O.s_AuthorizedDevicesStore.Init()),
+            O.s_AuthorizedDevicesStore
+          );
+        }
+        Init() {
+          (this.m_rgDevices = (0, c.kQ)("devices", "application_config")),
+            (this.m_rgRecentDevices = (0, c.kQ)(
+              "recent_devices",
+              "application_config",
+            )),
+            (this.m_strKBArticleURL = (0, c.kQ)(
+              "kb_article",
+              "application_config",
+            ));
+        }
+        GetDevices() {
+          return this.m_rgDevices;
+        }
+        GetRecentDevices() {
+          return this.m_rgRecentDevices;
+        }
+        GetKBArticleURL() {
+          return this.m_strKBArticleURL;
+        }
+      }
+      (0, i.gn)([a.LO], O.prototype, "m_rgDevices", void 0),
+        (0, i.gn)([a.LO], O.prototype, "m_rgRecentDevices", void 0);
+      var G,
+        R = n(24827),
+        L = n(62613);
+      !(function (e) {
+        (e[(e.k_EPlatformTypeUnknown = 0)] = "k_EPlatformTypeUnknown"),
+          (e[(e.k_EPlatformTypeWin32 = 1)] = "k_EPlatformTypeWin32"),
+          (e[(e.k_EPlatformTypeWin64 = 2)] = "k_EPlatformTypeWin64"),
+          (e[(e.k_EPlatformTypeLinux64 = 3)] = "k_EPlatformTypeLinux64"),
+          (e[(e.k_EPlatformTypeOSX = 4)] = "k_EPlatformTypeOSX"),
+          (e[(e.k_EPlatformTypePS3 = 5)] = "k_EPlatformTypePS3"),
+          (e[(e.k_EPlatformTypeLinux32 = 6)] = "k_EPlatformTypeLinux32"),
+          (e[(e.k_EPlatformTypeAndroid32 = 7)] = "k_EPlatformTypeAndroid32"),
+          (e[(e.k_EPlatformTypeAndroid64 = 8)] = "k_EPlatformTypeAndroid64"),
+          (e[(e.k_EPlatformTypeIOS32 = 9)] = "k_EPlatformTypeIOS32"),
+          (e[(e.k_EPlatformTypeIOS64 = 10)] = "k_EPlatformTypeIOS64"),
+          (e[(e.k_EPlatformTypeTVOS = 11)] = "k_EPlatformTypeTVOS"),
+          (e[(e.k_EPlatformTypeEmbeddedClient = 12)] =
+            "k_EPlatformTypeEmbeddedClient"),
+          (e[(e.k_EPlatformTypeBrowser = 13)] = "k_EPlatformTypeBrowser"),
+          (e[(e.k_EPlatformTypeMax = 14)] = "k_EPlatformTypeMax");
+      })(G || (G = {}));
+      var I = n(12251);
+      const B = (0, d.Pi)(() => {
+        let e = O.Get();
+        const t = (0, v.L)();
+        let n = [];
+        for (const t of e.GetRecentDevices())
+          n.push(s.createElement(H, { device: t, key: t.token_id }));
+        let r = [];
+        for (const t of e.GetDevices())
+          r.push(s.createElement(H, { device: t, key: t.token_id }));
+        return s.createElement(
+          g.p,
+          { navID: "StoreAuthorizedDevices", NavigationManager: t },
+          s.createElement(
+            "div",
+            {
+              className: (0, p.Z)(
+                z.AuthorizedDeviceHeader,
+                "account_header_line noicon",
+              ),
+            },
+            s.createElement(
+              "div",
+              null,
+              (0, m.Xx)("#accountpreferences_authorized_devices_header"),
+            ),
+          ),
+          s.createElement(
+            "div",
+            { className: "account_settings_container" },
+            s.createElement(
+              "p",
+              { className: z.SectionDescription },
+              (0, m.kQ)(
+                "#accountpreferences_authorized_devices_description",
+                s.createElement(
+                  "a",
+                  { href: c.De.HELP_BASE_URL },
+                  (0, m.Xx)(
+                    "#accountpreferences_authorized_devices_steam_support",
+                  ),
+                ),
+                s.createElement(
+                  "a",
+                  { href: e.GetKBArticleURL() },
+                  (0, m.Xx)(
+                    "#accountpreferences_authorized_devices_recommendations",
+                  ),
+                ),
+              ),
+            ),
+            s.createElement(
+              "div",
+              { className: z.AuthorizedDeviceGroup },
+              s.createElement(
+                "div",
+                { className: z.AuthorizedDevicesRecentHeader },
+                (0, m.Xx)(
+                  "#accountpreferences_authorized_devices_recent_heading",
+                ),
+              ),
+              n,
+              s.createElement(
+                "div",
+                { className: z.AuthorizedDevicesRecentHeader },
+                (0, m.Xx)(
+                  "#accountpreferences_authorized_devices_other_heading",
+                ),
+              ),
+              r,
+            ),
+          ),
+        );
+      });
+      function H(e) {
+        const { device: t } = e,
+          [n, r] = (0, s.useState)(!1);
+        let i = (function (e) {
+          return 2 == e.platform_type ? "" : e.token_description;
+        })(t);
+        return (
+          i.length && (i = " - " + i),
+          s.createElement(
+            "div",
+            { className: z.DeviceContainer, key: "123_" + t.token_id },
+            s.createElement(
+              "div",
+              { className: z.DeviceHeaderRow },
+              s.createElement(
+                "div",
+                { className: z.DeviceName },
+                s.createElement(M, { device: t }),
+                s.createElement(W, { device: t }),
+                i,
+              ),
+              s.createElement(
+                "div",
+                { className: z.DetailToggle },
+                s.createElement(
+                  u.Yz,
+                  {
+                    className: (0, p.Z)({
+                      [z.DetailsToggle]: !0,
+                      [z.Selected]: n,
+                    }),
+                    onClick: () => r(!n),
+                  },
+                  s.createElement(b.vVQ, { direction: "down" }),
+                ),
+              ),
+            ),
+            s.createElement(U, { device: t }),
+            n && s.createElement(F, { device: t }),
+          )
+        );
+      }
+      function U(e) {
+        var t, n;
+        const { device: r } = e;
+        let i = (function (e) {
+          var t;
+          const n =
+            null !== (t = e.last_seen) && void 0 !== t ? t : e.first_seen;
+          return n && n.city && n.country
+            ? n.city + ", " + n.country
+            : (0, m.Xx)("#accountpreferences_authorized_devices_loc_unknown");
+        })(r);
+        return s.createElement(
+          "div",
+          { className: z.LastSeenRow },
+          !!i && s.createElement("div", null, i, " "),
+          !!i &&
+            !!(null === (t = r.last_seen) || void 0 === t ? void 0 : t.time) &&
+            s.createElement(Y, null),
+          !!(null === (n = r.last_seen) || void 0 === n ? void 0 : n.time) &&
+            s.createElement(
+              "div",
+              null,
+              (0, m.Xx)(
+                "#accountpreferences_authorized_devices_last_seen_title",
+              ),
+              s.createElement(R.H6, { dateAndTime: r.last_seen.time }),
+            ),
+        );
+      }
+      function F(e) {
+        const { device: t } = e;
+        return s.createElement(
+          "div",
+          { className: z.AuthorizedDeviceDetails },
+          (0, m.Xx)(
+            (function (e, t) {
+              if (2 == e) return "#authorized_devices_default_qr";
+              switch (t) {
+                case 2:
+                  return "#authorized_devices_emailcode_password";
+                case 3:
+                  return "#authorized_devices_devicecode_password";
+                case 4:
+                case 5:
+                  return "#authorized_devices_mobileconf_password";
+                case 6:
+                  return "#authorized_devices_machinetoken_password";
+                default:
+                  return "#authorized_devices_default_password";
+              }
+            })(t.authentication_type, t.auth_type),
+            (0, m.$1)(t.first_seen.time) + " @ " + (0, I.Sc)(t.first_seen.time),
+          ),
+        );
+      }
+      function M(e) {
+        const { device: t } = e;
+        switch (t.os_platform) {
+          case G.k_EPlatformTypeWin32:
+          case G.k_EPlatformTypeWin64:
+            return s.createElement(
+              "div",
+              { style: { height: "16px", width: "16px" } },
+              s.createElement(L.Bh5, null),
+            );
+          case G.k_EPlatformTypeAndroid32:
+          case G.k_EPlatformTypeAndroid64:
+          case G.k_EPlatformTypeLinux32:
+          case G.k_EPlatformTypeLinux64:
+            return s.createElement(
+              "div",
+              { style: { height: "16px", width: "16px" } },
+              s.createElement(L.hUE, null),
+            );
+          case G.k_EPlatformTypeIOS32:
+          case G.k_EPlatformTypeIOS64:
+          case G.k_EPlatformTypeOSX:
+            return s.createElement(
+              "div",
+              { style: { height: "16px", width: "16px" } },
+              s.createElement(L.uZu, null),
+            );
+          default:
+            return null;
+        }
+      }
+      function W(e) {
+        const { device: t } = e;
+        switch (t.platform_type) {
+          case 3:
+            return (0, m.Xx)(
+              "#accountpreferences_authorized_devices_type_mobile",
+            );
+          case 1:
+            return 544 === t.gaming_device_type
+              ? (0, m.Xx)(
+                  "#accountpreferences_authorized_devices_type_steamdeck",
+                )
+              : (0, m.Xx)(
+                  "#accountpreferences_authorized_devices_type_desktop",
+                );
+          case 2:
+            return (0, m.Xx)(
+              "#accountpreferences_authorized_devices_type_browser",
+            );
+          default:
+            return (0, m.Xx)(
+              "#accountpreferences_authorized_devices_type_unknown",
+            );
+        }
+      }
+      function Y() {
+        return s.createElement("div", { className: z.Separator }, "|");
+      }
+      const Z = s.lazy(() =>
           Promise.all([
             n.e(460),
             n.e(8015),
-            n.e(9766),
             n.e(1021),
             n.e(3540),
             n.e(3344),
@@ -850,51 +1895,63 @@
             n.e(886),
             n.e(7695),
             n.e(3243),
-            n.e(344),
+            n.e(2365),
             n.e(5944),
             n.e(1915),
             n.e(6470),
             n.e(5800),
           ]).then(n.bind(n, 94896)),
         ),
-        I = { FamilyManagement: () => "/familymanagement" },
-        U = Object.assign(
-          {
-            CookieSettings: () => "/cookiepreferences",
-            NotificationSettings: () => "/notificationsettings",
-          },
-          I,
+        Q = { FamilyManagement: () => "/familymanagement" },
+        V = Object.assign(
+          Object.assign(
+            {
+              CookieSettings: () => "/cookiepreferences",
+              NotificationSettings: () => "/notificationsettings",
+            },
+            Q,
+          ),
+          { AuthorizedDevices: () => "/authorizeddevices" },
         ),
-        M = (e) => {
+        K = (e) => {
           const t = e.match.url,
-            n = U;
-          return r.createElement(
-            i.rs,
+            n = V;
+          return s.createElement(
+            r.rs,
             null,
-            r.createElement(i.AW, {
+            s.createElement(r.AW, {
               path: `${t}${n.CookieSettings()}`,
               render: () =>
-                r.createElement(w.d, {
+                s.createElement(X.d, {
                   config: {
-                    "cookie-preferences": () => r.createElement(E, null),
+                    "cookie-preferences": () => s.createElement(k, null),
                   },
                 }),
             }),
-            r.createElement(i.AW, {
+            s.createElement(r.AW, {
               path: `${t}${n.NotificationSettings()}`,
               render: () =>
-                r.createElement(w.d, {
+                s.createElement(X.d, {
                   config: {
-                    "notification-settings": () => r.createElement(A, null),
+                    "notification-settings": () => s.createElement(A, null),
                   },
                 }),
             }),
-            r.createElement(i.AW, {
+            s.createElement(r.AW, {
               path: `${t}${n.FamilyManagement()}`,
               render: () =>
-                r.createElement(w.d, {
+                s.createElement(X.d, {
                   config: {
-                    "family-management": () => r.createElement(B, null),
+                    "family-management": () => s.createElement(Z, null),
+                  },
+                }),
+            }),
+            s.createElement(r.AW, {
+              path: `${t}${n.AuthorizedDevices()}`,
+              render: () =>
+                s.createElement(X.d, {
+                  config: {
+                    "authorized-devices": () => s.createElement(B, null),
                   },
                 }),
             }),

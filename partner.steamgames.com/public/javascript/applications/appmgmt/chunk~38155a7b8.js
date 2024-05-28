@@ -62255,7 +62255,7 @@
           t.getMonth() - e.getMonth() + 12 * (t.getFullYear() - e.getFullYear())
         );
       }
-      var W = n(63927),
+      var W = n(10816),
         z = n(69176);
       function Z(e) {
         const t = (0, c.Qv)(e);
@@ -64374,7 +64374,7 @@
       }
       var rt = n(14609),
         ot = n(15690),
-        st = n(63927),
+        st = n(10816),
         ct = n(76330);
       const mt = 6;
       function dt(e) {
@@ -71998,7 +71998,7 @@
             (0, w.Xx)("#DailyDeals_UnsavedChanges"),
         });
       }
-      var pe = n(63927),
+      var pe = n(10816),
         _e = n(65311),
         he = n(14839),
         ge = n(13913),
@@ -73662,9 +73662,9 @@
         );
       }
     },
-    63927: (e, t, n) => {
+    10816: (e, t, n) => {
       "use strict";
-      n.d(t, { l4: () => te, S7: () => ne, $t: () => ie });
+      n.d(t, { l4: () => pe, S7: () => _e, $t: () => ge });
       var a = n(76330),
         i = n(30750),
         l = n(47427),
@@ -73842,7 +73842,7 @@
                   ),
                   l.createElement("br", null),
                   l.createElement(m.__, null, "Completed:"),
-                  l.createElement(te, { rtime: t.GetArtworkCompleteTime() }),
+                  l.createElement(pe, { rtime: t.GetArtworkCompleteTime() }),
                 ),
               )
             : l.createElement(
@@ -74313,8 +74313,184 @@
           (e[(e.k_DesignComplete = 3)] = "k_DesignComplete"),
           (e[(e.k_LocalizationDone = 4)] = "k_LocalizationDone");
       })(V || (V = {}));
-      var $ = n(13550);
-      function ee(e) {
+      var $ = n(13550),
+        ee = n(8114),
+        te = n(22559),
+        ne = n(48359),
+        ae = n(56886),
+        ie = n(72236),
+        le = n(28531),
+        re = n(84965),
+        oe = n(24549),
+        se = n(35398);
+      function ce(e) {
+        const { promotionID: t, displayType: n } = e,
+          a = (0, $.HI)(t),
+          [i, r, o] = (0, l.useMemo)(() => {
+            if (!a) return [0, 0, []];
+            const e = (function (e, t) {
+              const n = new Map();
+              return (
+                e.forEach((e) => {
+                  const a =
+                    "sales" == t
+                      ? Number.parseInt(e.gross_sales_usdx100) / 1e4
+                      : e.gross_units_sold;
+                  n.has(e.date)
+                    ? n.set(e.date, n.get(e.date) + a)
+                    : n.set(e.date, a);
+                }),
+                Array.from(n).map((e) => ({
+                  date: e[0],
+                  value: Math.floor(e[1]),
+                }))
+              );
+            })(a, n);
+            let t = 0,
+              i = 0;
+            return (
+              e.forEach((e) => {
+                e.value > t && (t = e.value), (i += e.value);
+              }),
+              [
+                t,
+                i,
+                e.sort(
+                  (e, t) =>
+                    new Date(e.date).getTime() - new Date(t.date).getTime(),
+                ),
+              ]
+            );
+          }, [a, n]);
+        return a && 0 != a.length
+          ? l.createElement(
+              "div",
+              { className: se.DashStatsContainer },
+              l.createElement(
+                "div",
+                { className: se.Chart },
+                l.createElement(
+                  d.SV,
+                  null,
+                  l.createElement(me, { Data: o, nPeak: i }),
+                ),
+              ),
+              l.createElement(
+                "div",
+                { className: se.Stats },
+                l.createElement(
+                  "div",
+                  { className: se.CurrentStats },
+                  l.createElement(
+                    "div",
+                    { className: se.StatsTitle },
+                    (0, oe.AV)(r),
+                  ),
+                  l.createElement(
+                    "div",
+                    { className: se.StatSubtitle },
+                    l.createElement(
+                      "span",
+                      { className: se.Now },
+                      "sales" == n ? "Gross Sale USD" : "Gross Units",
+                    ),
+                  ),
+                ),
+                l.createElement(
+                  "div",
+                  { className: se.PeakStats },
+                  l.createElement(
+                    "div",
+                    { className: se.StatsTitle },
+                    (0, oe.AV)(i),
+                  ),
+                  l.createElement(
+                    "div",
+                    { className: se.StatSubtitle },
+                    l.createElement(
+                      "span",
+                      { className: se.Concurrent },
+                      "sales" == n ? "Peak Gross Sales" : "Peak Gross Units",
+                    ),
+                  ),
+                ),
+              ),
+            )
+          : l.createElement(P.V, {
+              string: "Loading Stats",
+              size: "medium",
+              position: "center",
+            });
+      }
+      const me = l.memo((e) => {
+        const { Data: t, nPeak: n } = e;
+        return l.createElement(
+          ee.h,
+          { width: "100%", height: "100%" },
+          l.createElement(
+            te.c,
+            {
+              data: t,
+              margin: { top: 25, left: 0, right: 0, bottom: 0 },
+              barGap: 10,
+            },
+            l.createElement(
+              "defs",
+              null,
+              l.createElement(
+                "linearGradient",
+                { id: "bar_linear", x1: "0", x2: "0", y1: "0", y2: "1" },
+                l.createElement("stop", { stopColor: "#1A9FFF" }),
+                l.createElement("stop", {
+                  offset: "0.01",
+                  stopColor: "#1A9FFF",
+                }),
+                l.createElement("stop", {
+                  offset: "0.0101",
+                  stopColor: "#1A9FFF",
+                  stopOpacity: "0.5",
+                }),
+                l.createElement("stop", {
+                  offset: "1",
+                  stopColor: "#30363D",
+                  stopOpacity: "0.5",
+                }),
+              ),
+            ),
+            l.createElement(ne.q, { vertical: !1, stroke: "#a0aab6" }),
+            l.createElement(ae.B, {
+              tickFormatter: oe.X_,
+              tick: { fill: "white" },
+              axisLine: !1,
+            }),
+            l.createElement(ie.u, { content: l.createElement(de, null) }),
+            l.createElement(le.$, {
+              dataKey: "value",
+              barSize: 2,
+              fill: "url( #bar_linear )",
+            }),
+            l.createElement(re.d, {
+              y: n,
+              stroke: "#82FF01",
+              strokeDasharray: "6",
+            }),
+          ),
+        );
+      });
+      function de({ active: e, payload: t }) {
+        if (e && t && t.length) {
+          const e = t[0].payload;
+          return l.createElement(
+            E.gz,
+            null,
+            l.createElement("b", null, (0, oe.AV)(e.value)),
+            " on date ",
+            e.date,
+          );
+        }
+        return null;
+      }
+      function ue(e) {
         const { oEditablePlan: t } = e,
           [n] = (0, i.SZ)(() => [t.GetID()]),
           a = (0, $.HI)(n),
@@ -74349,9 +74525,13 @@
             strPercentLift: "Avg Daily Sales",
             bPercentLiftIsDollar: !0,
           }),
+          l.createElement("h3", null, "Daily Featuring Sales"),
+          l.createElement(ce, { promotionID: n, displayType: "sales" }),
+          l.createElement("h3", null, "Daily Featuring Units"),
+          l.createElement(ce, { promotionID: n, displayType: "units" }),
         );
       }
-      function te(e) {
+      function pe(e) {
         return l.createElement(
           l.Fragment,
           null,
@@ -74360,7 +74540,7 @@
           (0, y.Sc)(e.rtime, { bForce24HourClock: !1 }),
         );
       }
-      function ne(e) {
+      function _e(e) {
         const { oEditablePlan: t } = e,
           [n, a] = (0, i.SZ)(() => [
             t.BOnWatchList(b.L7.accountid),
@@ -74372,8 +74552,8 @@
           l.createElement(
             "div",
             { className: c().SectionCtn },
-            l.createElement(re, { oEditablePlan: t }),
-            l.createElement(oe, { oEditablePlan: t }),
+            l.createElement(Ee, { oEditablePlan: t }),
+            l.createElement(Se, { oEditablePlan: t }),
           ),
           l.createElement(
             "div",
@@ -74413,7 +74593,7 @@
                   {
                     onClick: (e) =>
                       (0, v.AM)(
-                        l.createElement(ae, { oEditablePlan: t }),
+                        l.createElement(he, { oEditablePlan: t }),
                         (0, D.RA)(e),
                       ),
                   },
@@ -74461,7 +74641,7 @@
                 ),
               ),
               "Created at ",
-              l.createElement(te, { rtime: t.GetPlan().create_time }),
+              l.createElement(pe, { rtime: t.GetPlan().create_time }),
             ),
           Boolean(t.GetPlan().last_modified_account) &&
             l.createElement(
@@ -74484,7 +74664,7 @@
                 ),
               ),
               "Updated at ",
-              l.createElement(te, { rtime: t.GetPlan().last_modified_time }),
+              l.createElement(pe, { rtime: t.GetPlan().last_modified_time }),
             ),
           l.createElement(
             "div",
@@ -74501,10 +74681,10 @@
               n ? "Remove from my watch list" : "Add to my watch list",
             ),
           ),
-          l.createElement(ue, { oEditablePlan: t }),
+          l.createElement(Ie, { oEditablePlan: t }),
         );
       }
-      function ae(e) {
+      function he(e) {
         const { oEditablePlan: t, closeModal: n } = e,
           [a, i] = (0, l.useState)(t.GetOwnerAccountID());
         return l.createElement(
@@ -74517,10 +74697,10 @@
             bOKDisabled: !a,
             onOK: () => t.SetPlanOwnerAccountID(a),
           },
-          l.createElement(ie, { nAccountID: a, fnSetAccountFilter: i }),
+          l.createElement(ge, { nAccountID: a, fnSetAccountFilter: i }),
         );
       }
-      function ie(e) {
+      function ge(e) {
         const {
             nAccountID: t,
             fnSetAccountFilter: n,
@@ -74529,7 +74709,7 @@
             className: o,
           } = e,
           s = a.J.map((e) => ({
-            label: l.createElement(le, {
+            label: l.createElement(ve, {
               key: e.id,
               accountID: e.id,
               displayName: e.displayName,
@@ -74558,7 +74738,7 @@
           )
         );
       }
-      function le(e) {
+      function ve(e) {
         const { accountID: t, displayName: n } = e,
           { data: a } = (0, o.IE)(t);
         return l.createElement(
@@ -74570,7 +74750,7 @@
           ")",
         );
       }
-      function re(e) {
+      function Ee(e) {
         const t = new URLSearchParams(),
           { oEditablePlan: n } = e;
         return (
@@ -74590,7 +74770,7 @@
           )
         );
       }
-      function oe(e) {
+      function Se(e) {
         const { oEditablePlan: t } = e,
           [n, a] = (0, i.SZ)(() => [
             t.BIsReviewed(),
@@ -74599,12 +74779,12 @@
         return l.createElement(
           l.Fragment,
           null,
-          Boolean(a) && l.createElement(me, { oEditablePlan: t }),
-          Boolean(!a && n) && l.createElement(ce, { oEditablePlan: t }),
-          Boolean(!a && !n) && l.createElement(se, { oEditablePlan: t }),
+          Boolean(a) && l.createElement(ye, { oEditablePlan: t }),
+          Boolean(!a && n) && l.createElement(fe, { oEditablePlan: t }),
+          Boolean(!a && !n) && l.createElement(De, { oEditablePlan: t }),
         );
       }
-      function se(e) {
+      function De(e) {
         const { oEditablePlan: t } = e;
         return l.createElement(
           "div",
@@ -74620,7 +74800,7 @@
               className: M.StatusBtn,
               onClick: (e) =>
                 (0, v.AM)(
-                  l.createElement(de, { oEditablePlan: t, bReviewVerify: !0 }),
+                  l.createElement(be, { oEditablePlan: t, bReviewVerify: !0 }),
                   (0, D.RA)(e),
                 ),
             },
@@ -74628,7 +74808,7 @@
           ),
         );
       }
-      function ce(e) {
+      function fe(e) {
         const { oEditablePlan: t } = e,
           n = t.GetReviewedAccount();
         return l.createElement(
@@ -74657,7 +74837,7 @@
                   className: M.StatusBtn,
                   onClick: (e) =>
                     (0, v.AM)(
-                      l.createElement(de, {
+                      l.createElement(be, {
                         oEditablePlan: t,
                         bReviewVerify: !1,
                       }),
@@ -74678,7 +74858,7 @@
           ),
         );
       }
-      function me(e) {
+      function ye(e) {
         const { oEditablePlan: t } = e,
           [n, a, r, o, s, c, m, u, p] = (0, i.SZ)(() => [
             t.GetSaleClanAccountID(),
@@ -74711,7 +74891,7 @@
               l.createElement(
                 "div",
                 null,
-                l.createElement(ee, { oEditablePlan: t }),
+                l.createElement(ue, { oEditablePlan: t }),
                 Boolean(u) &&
                   l.createElement(
                     l.Fragment,
@@ -74804,7 +74984,7 @@
           ),
         );
       }
-      function de(e) {
+      function be(e) {
         const { oEditablePlan: t, closeModal: n, bReviewVerify: a } = e;
         return l.createElement(
           B.P,
@@ -74836,7 +75016,7 @@
             ),
         );
       }
-      function ue(e) {
+      function Ie(e) {
         const { oEditablePlan: t } = e,
           [n, a, r] = (0, i.SZ)(() => [
             t.BRequireBroadcastModeration(),

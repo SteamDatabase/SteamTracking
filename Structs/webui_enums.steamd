@@ -770,6 +770,25 @@ enum EOverlayToStoreFlag
 	k_EOverlayToStoreFlag_AddToCartAndShow = 2;
 }
 
+enum EPlatformType
+{
+	k_EPlatformTypeUnknown = 0;
+	k_EPlatformTypeWin32 = 1;
+	k_EPlatformTypeWin64 = 2;
+	k_EPlatformTypeLinux64 = 3;
+	k_EPlatformTypeOSX = 4;
+	k_EPlatformTypePS3 = 5;
+	k_EPlatformTypeLinux32 = 6;
+	k_EPlatformTypeAndroid32 = 7;
+	k_EPlatformTypeAndroid64 = 8;
+	k_EPlatformTypeIOS32 = 9;
+	k_EPlatformTypeIOS64 = 10;
+	k_EPlatformTypeTVOS = 11;
+	k_EPlatformTypeEmbeddedClient = 12;
+	k_EPlatformTypeBrowser = 13;
+	k_EPlatformTypeMax = 14;
+}
+
 enum EPosition
 {
 	k_EPositionInvalid = undefined;

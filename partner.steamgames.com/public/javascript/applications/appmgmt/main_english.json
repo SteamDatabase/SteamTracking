@@ -1335,6 +1335,7 @@
     "SteamLearn_Config_DataSourcesDialog_Add_1": "Add 1 Data Source",
     "SteamLearn_Config_DataSourcesDialog_Add_Multiple": "Add %1$s Data Sources",
     "SteamLearn_Config_DataSources_Remove": "Remove Data Source",
+    "SteamLearn_Config_DataSources_Update": "Update Data Source",
     "SteamLearn_Config_DataSource_Inputs": "Data Source Inputs",
     "SteamLearn_Config_DataSource_InputsDesc": "How each element of each of the data sources is preprocessed and routed to a model input.",
     "SteamLearn_Config_DataSource_Input_Exclude": "Exclude",
