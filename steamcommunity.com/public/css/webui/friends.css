@@ -29235,11 +29235,11 @@ a.bbcode_ChatMessageTweet_Body_1RFo5 {
   align-items: center;
 }
 .chatVideoPlayControl .playButtonContainer {
-  width: 64px;
-  height: 64px;
+  --play-control-height: calc(8.8% + 20px);
+  height: var(--play-control-height);
   background-color: #000a;
   border-radius: 50%;
-  padding: 32px;
+  padding: calc(var(--play-control-height) / 2);
   margin: auto;
   align-self: center;
   transition: all 0.16s ease-in-out;

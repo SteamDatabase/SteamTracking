@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 	position: absolute;
 	left: -10000px;
 	top: auto;
-	
+
 	width: 1px;
 	height: 1px;
 	overflow: hidden;
@@ -1233,13 +1233,53 @@ input.filter_search_box:focus {
 
 #market_activity_block {
 	padding: 2px;
-	height: 132px;
+	height: 100px;
 	overflow: hidden;
 }
 
 .market_activity_line_item {
-	height: 32px;
-	padding: 6px;
+	clear: left;
+	display: block;
+	height: 24px;
+	padding: 4px;
+}
+
+.market_activity_heading {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.market_activity_price {
+	text-align: center;
+	vertical-align: middle;
+	float: right;
+	height: 24px;
+	width: 104px;
+	color: #AFAFAF;
+	padding-left: 4px;
+	margin-left: 4px;
+}
+
+.market_activity_price.market_activity_price_cancel {
+	color: #444444;
+}
+
+.market_activity_placeholder {
+	float: right;
+	height: 24px;
+	width: 183px;
+}
+
+.market_activity_cell {
+	vertical-align: middle;
+	height: 24px;
+}
+
+.market_activity_action {
+	vertical-align: middle;
+	height: 24px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .market_ticker_avatar img {
@@ -2583,7 +2623,7 @@ background: -webkit-linear-gradient( 150deg, #417a9b 5%,#67c1f5 95%);
 		display: block;
 	}
 
-	html.responsive .market_listing_their_price .market_arrow_up, 
+	html.responsive .market_listing_their_price .market_arrow_up,
 	html.responsive .market_listing_their_price .market_arrow_down {
 		position: static;
 	}

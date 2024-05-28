@@ -1406,6 +1406,7 @@
         PageHomeHowItWorks: "_2bWxopMGr7pattyTG9s1p5",
         EventPageHeaderImg: "_144Kf1whLyNHOOPRZLvepP",
         PageSubtitle: "FRVvERJu0cLA3TmUovTrJ",
+        DescriptorDrivenEventPageTitle: "UIMULcMvZKXpAu7iWuxz",
       };
     },
     95126: (e, t, n) => {
@@ -3092,7 +3093,7 @@
                   .then((e) => e.img_url),
               (e) => e.toString(),
             )),
-            (this.m_batchedRewardItemLoader = new U(
+            (this.m_batchedRewardItemLoader = new H(
               (e) => _.pQ.BatchedQueryRewardItems(this.m_anonymousTransport, e),
               (e) => {
                 const t = p.gA.Init(_.Nl);
@@ -3109,7 +3110,7 @@
                     ),
                     []),
             )),
-            (this.m_batchedCommunityInventoryLoader = new U(
+            (this.m_batchedCommunityInventoryLoader = new H(
               (e) => g.Ts.GetCommunityInventory(this.m_transport, e),
               (e) => {
                 const t = p.gA.Init(g.o0);
@@ -4667,7 +4668,7 @@
               e < S[1].length && M.push({ type: "clusterview", view: S[1][e] });
           i(new z(x, M));
           i(
-            new H(
+            new U(
               "stickers",
               [{ cluster: d, type: 0 }],
               (0, o.Xx)("#ShopPageTitle_Stickers"),
@@ -4676,7 +4677,7 @@
             ),
           );
           i(
-            new H(
+            new U(
               "emoticons",
               [{ cluster: u, type: 0 }],
               (0, o.Xx)("#ShopPageTitle_Emoticons"),
@@ -4685,7 +4686,7 @@
             ),
           ),
             i(
-              new H(
+              new U(
                 "chateffects",
                 [{ cluster: m, type: 0 }],
                 b(12, !0),
@@ -4714,7 +4715,7 @@
               { itemclass: [13], queryFilter: [2] },
             );
           i(
-            new H(
+            new U(
               "backgrounds",
               [
                 { cluster: D, type: 1 },
@@ -4728,7 +4729,7 @@
             ),
           ),
             i(
-              new H(
+              new U(
                 "avatar",
                 [
                   { cluster: p, type: 1 },
@@ -4740,7 +4741,7 @@
               ),
             );
           i(
-            new H(
+            new U(
               "steamdeck",
               [
                 { cluster: g, type: 1 },
@@ -4752,7 +4753,7 @@
             ),
           ),
             i(
-              new H(
+              new U(
                 "keyboard",
                 [{ cluster: g, type: 0 }],
                 (0, o.Xx)("#ShopPageTitle_SteamDeckKeyboardSkin"),
@@ -4761,7 +4762,7 @@
               ),
             ),
             i(
-              new H(
+              new U(
                 "startupmovie",
                 [
                   { cluster: f, type: 1 },
@@ -4773,7 +4774,7 @@
               ),
             ),
             i(
-              new H(
+              new U(
                 "itembundles",
                 [{ cluster: I, type: 0 }],
                 (0, o.Xx)("#ShopPageTitle_ItemBundles"),
@@ -4782,7 +4783,7 @@
               ),
             );
           i(
-            new H(
+            new U(
               "profilebundles",
               [
                 { cluster: y, type: 1 },
@@ -4795,7 +4796,7 @@
             ),
           );
           i(
-            new H(
+            new U(
               "artistprofiles",
               [{ cluster: v, type: 0, bHomogeneous: !0 }],
               (0, o.Xx)("#ShopPageTitle_ArtistProfiles"),
@@ -5172,7 +5173,7 @@
           );
         }
       }
-      class H extends z {
+      class U extends z {
         constructor(e, t, n, i, r, a) {
           super(
             e,
@@ -5184,7 +5185,7 @@
           );
         }
       }
-      class U {
+      class H {
         constructor(e, t, n) {
           (this.m_rgRequestParts = []),
             (this.m_fnMakeRequest = e),
@@ -8219,8 +8220,8 @@
         }
       }
       z.sm_nUnique = 0;
-      var H = n(83999);
-      function U(e) {
+      var U = n(83999);
+      function H(e) {
         const t = e.data,
           n = P(e.sale, e.effect.name, `${t.strImage}.png`);
         let i = null;
@@ -8268,7 +8269,7 @@
               "balloon_red",
               "balloon_yellow",
             ];
-          H.LQ(this.m_rgImages), this.GenerateBalloons();
+          U.LQ(this.m_rgImages), this.GenerateBalloons();
         }
         GetNextImage() {
           let e = this.m_rgImages[this.m_nNextImage % this.m_rgImages.length];
@@ -8289,7 +8290,7 @@
             this.m_rgBalloons.push(this.GenerateSingleBalloon(t, e));
           }
           let n = [70, 20];
-          H.LQ(n);
+          U.LQ(n);
           let i = 20 == n[1];
           for (let e of t) {
             let t = L.LO(-10, 10) + n.pop();
@@ -8323,7 +8324,7 @@
             r.Fragment,
             null,
             this.m_rgBalloons.map((e, t) =>
-              r.createElement(U, {
+              r.createElement(H, {
                 key: `${t}`,
                 data: e,
                 effect: this.props.effect,
@@ -10046,7 +10047,7 @@
           );
         }
       }
-      class He extends r.Component {
+      class Ue extends r.Component {
         GetDescription() {
           return "equip" == this.props.step
             ? (0, p.Xx)("#Redeem_Equip_SteamDeckStartupMovie")
@@ -10125,7 +10126,7 @@
           );
         }
       }
-      let Ue = class extends r.Component {
+      let He = class extends r.Component {
         GetDescription() {
           return (0, p.Xx)("#Redeem_UsePoints_Badge");
         }
@@ -10203,7 +10204,7 @@
               null);
         }
       };
-      Ue = (0, i.gn)([l.Pi], Ue);
+      He = (0, i.gn)([l.Pi], He);
       class Ve extends r.Component {
         GetDescription() {
           return "equip" == this.props.step
@@ -10739,11 +10740,11 @@
           13: Ge,
           14: Oe,
           15: Fe,
-          1: Ue,
+          1: He,
           12: ke,
           8: Ze,
           16: ze,
-          17: He,
+          17: Ue,
         },
         qe = (0, l.Pi)((e) => {
           var t;
@@ -11250,7 +11251,7 @@
         WG: () => V,
         MB: () => X,
         oY: () => Z,
-        h_: () => U,
+        h_: () => H,
         dw: () => W,
       });
       var i = n(85556),
@@ -11841,7 +11842,7 @@
             ),
           );
         },
-        H = {
+        U = {
           11: S,
           4: A,
           12: b,
@@ -11853,7 +11854,7 @@
           16: B,
           17: k,
         },
-        U = (0, a.Pi)((e) => {
+        H = (0, a.Pi)((e) => {
           var t;
           const { className: n } = e,
             a = (0, i._T)(e, ["className"]),
@@ -11883,7 +11884,7 @@
                 Object.assign({}, a, { className: o, onClick: e.onClick }),
               ),
             );
-          const m = H[e.definition.community_item_class];
+          const m = U[e.definition.community_item_class];
           return m
             ? r.createElement(
                 g.SV,
@@ -12499,8 +12500,8 @@
           );
         };
       var z = n(78656),
-        H = n(92372),
-        U = n(71714),
+        U = n(92372),
+        H = n(71714),
         V = n(97183);
       function Z(e) {
         return Math.max(0, e.cTotalMatchingUnfiltered - e.cTotalMatching);
@@ -12533,12 +12534,12 @@
           case 1:
             const t = r.createElement(Y, Object.assign({}, e));
             return e.descriptor.bHomogeneous
-              ? r.createElement(U.o, null, t)
+              ? r.createElement(H.o, null, t)
               : t;
           case 0:
             const n = r.createElement(J, Object.assign({}, e));
             return e.descriptor.bHomogeneous
-              ? r.createElement(U.o, null, n)
+              ? r.createElement(H.o, null, n)
               : n;
           case 2:
             return r.createElement(g.m, null, (t) =>
@@ -12640,7 +12641,7 @@
               (e, t) => a(e, t).rewards,
               (e) => r.createElement(te, { definition: e, key: e.defid }),
               {
-                itemClassName: H.ItemHover,
+                itemClassName: U.ItemHover,
                 fnRenderItemSkeleton: () => r.createElement(j.dw, null),
               },
             ),
@@ -12709,7 +12710,7 @@
             { title: t || a, subtitle: n || s, rightActions: m || void 0 },
             r.createElement(B.c, {
               style: { width: "100%" },
-              itemClassName: H.ItemHover,
+              itemClassName: U.ItemHover,
               getItems: c,
               renderItem: (e) =>
                 r.createElement(te, { definition: e, key: e.defid }),
@@ -12763,7 +12764,7 @@
                 imgSrc: s,
                 fullbleed: o,
                 style: { width: "100%" },
-                itemClassName: H.ItemHover,
+                itemClassName: U.ItemHover,
                 actions: r.createElement(
                   d.rU,
                   { to: I },
@@ -12804,7 +12805,7 @@
                 imgSrc: o,
                 fullbleed: l,
                 style: { width: "100%" },
-                itemClassName: H.ItemHover,
+                itemClassName: U.ItemHover,
                 actions: r.createElement(
                   d.rU,
                   { to: I },
@@ -12813,7 +12814,7 @@
                     {
                       onClick: () => s.push(I),
                       theme: c,
-                      className: H.MobileHeroAction,
+                      className: U.MobileHeroAction,
                     },
                     (0, h.Xx)("#SeeAllButton"),
                   ),
@@ -13396,15 +13397,15 @@
           return r.createElement(
             "span",
             Object.assign({ style: { fontFamily: "monospace" } }, n),
-            He(s),
+            Ue(s),
             ":",
-            He(o),
+            Ue(o),
             ":",
-            He(l),
+            Ue(l),
           );
         }),
-        He = (e) => e.toString().padStart(2, "0");
-      var Ue = n(42718),
+        Ue = (e) => e.toString().padStart(2, "0");
+      var He = n(42718),
         Ve = n(80751),
         Ze = n.n(Ve),
         Xe = n(31421),
@@ -13800,7 +13801,7 @@
         const { eventname: x } = e,
           D = (0, Qe.zD)(),
           [L, P] = r.useState(5),
-          T = (0, Ue.useQuery)(
+          T = (0, He.useQuery)(
             ["EventDetails", x],
             () =>
               (0, i.mG)(this, void 0, void 0, function* () {
@@ -13882,27 +13883,28 @@
         if (!R || !T.isSuccess || 1 != T.data.success)
           return console.error(`Failed to get event page for ${x}`), null;
         const O =
-          null ===
-            (g =
-              null ===
-                (u =
-                  null === (d = T.data) || void 0 === d ? void 0 : d.details) ||
-              void 0 === u
-                ? void 0
-                : u.included_apps) || void 0 === g
-            ? void 0
-            : g.concat(
+            null ===
+              (g =
                 null ===
-                  (I =
-                    null === (f = T.data) || void 0 === f
+                  (u =
+                    null === (d = T.data) || void 0 === d
                       ? void 0
-                      : f.details) || void 0 === I
+                      : d.details) || void 0 === u
                   ? void 0
-                  : I.priority_apps,
-              );
-        console.log("adil", k, D, D > k);
-        let F = r.createElement(Se._f, {
-          title:
+                  : u.included_apps) || void 0 === g
+              ? void 0
+              : g.concat(
+                  null ===
+                    (I =
+                      null === (f = T.data) || void 0 === f
+                        ? void 0
+                        : f.details) || void 0 === I
+                    ? void 0
+                    : I.priority_apps,
+                ),
+          F = r.createElement(
+            "span",
+            { className: p.DescriptorDrivenEventPageTitle },
             null !==
               (v =
                 null ===
@@ -13914,6 +13916,9 @@
                   : y.title) && void 0 !== v
               ? v
               : x,
+          );
+        let z = r.createElement(Se._f, {
+          title: F,
           subtitle: D > k ? (0, h.Xx)("#PointShop_Event_Over") : void 0,
         });
         return (
@@ -13922,7 +13927,7 @@
           void 0 === N
             ? void 0
             : N.strPageHeader) &&
-            (F = r.createElement(
+            (z = r.createElement(
               r.Fragment,
               null,
               r.createElement("img", {
@@ -13964,7 +13969,7 @@
                     G,
                   ),
                 },
-                F,
+                z,
               ),
               descriptor: R,
             }),
@@ -14899,14 +14904,14 @@
               focusable: !0,
             },
             i.map((e) => r.createElement(zt, { key: e }, (0, h.Xx)(e))),
-            a.map((e) => r.createElement(Ht, { key: e }, (0, h.Xx)(e))),
+            a.map((e) => r.createElement(Ut, { key: e }, (0, h.Xx)(e))),
           );
         },
         zt = ({ children: e }) =>
           r.createElement("div", { className: Pt.FaqQuestion }, e),
-        Ht = ({ children: e }) =>
+        Ut = ({ children: e }) =>
           r.createElement("div", { className: Pt.FaqAnswer }, e),
-        Ut = () => {
+        Ht = () => {
           let e = _.Vb.Get().GetConfig().points_conversion.unit_spend,
             t = _.Vb.Get().GetConfig().points_conversion.points;
           return r.createElement(
@@ -15311,12 +15316,12 @@
         var t, n, a, s, l;
         const { steamid: c } = e,
           m = new qt.K(c),
-          d = (0, Ue.useQuery)(
+          d = (0, He.useQuery)(
             ["EquippedProfileItems", c],
             () => _.Vb.Get().GetEquippedProfileItems(c),
             { staleTime: 1 / 0 },
           ),
-          u = (0, Ue.useQuery)(
+          u = (0, He.useQuery)(
             ["MiniprofileData", c],
             () =>
               (0, i.mG)(this, void 0, void 0, function* () {
@@ -15645,7 +15650,7 @@
                   r.createElement(
                     a.AW,
                     { path: s.Z.LoyaltyHowItWorks() },
-                    r.createElement(Ut, null),
+                    r.createElement(Ht, null),
                   ),
                   r.createElement(
                     a.AW,

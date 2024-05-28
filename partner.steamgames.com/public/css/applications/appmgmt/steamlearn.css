@@ -728,6 +728,16 @@ button.DialogButton {
 .yhrLnPkNW-XTcMa2lXBeb ._3sDBJ-bMrGlXMu4scVLoz7:hover {
   color: #e66;
 }
+.yhrLnPkNW-XTcMa2lXBeb .TgJ1hQZnfmvbjioKnXFZr {
+  width: fit-content;
+  color: #aaa;
+  font-size: 13px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+.yhrLnPkNW-XTcMa2lXBeb .TgJ1hQZnfmvbjioKnXFZr:hover {
+  color: #ddd;
+}
 ._26BWQmuzeIy5EQmHLgEs2o {
   display: flex;
   flex-direction: column;

@@ -403,11 +403,14 @@ textarea.gray {
 }
 
 .formrow {
-	display: flex;
-	flex-direction: row;
 	clear: left;
 	padding-bottom: 5px;
 	margin-bottom: 5px;
+}
+
+.formrow.flexRow {
+	display: flex;
+	flex-direction: row;
 }
 
 .formrow.text {

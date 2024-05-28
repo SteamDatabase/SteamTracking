@@ -14,8 +14,8 @@
         l = e(35427),
         m = e(62210),
         c = e(37563),
-        u = e(58670);
-      class p {
+        p = e(58670);
+      class u {
         constructor() {
           (this.m_mapAppIDToClanInfo = new Map()),
             (this.m_mapVanityToClanInfo = new Map()),
@@ -296,7 +296,7 @@
           );
         }
         GetCreatorStoreURL(t) {
-          let a = u.bq.GetCreatorHome(t);
+          let a = p.bq.GetCreatorHome(t);
           if (a) return a.GetCreatorHomeURL("developer");
           let e = this.GetClanInfoByClanAccountID(t.GetAccountID());
           return (
@@ -307,12 +307,12 @@
           );
         }
       }
-      (0, n.gn)([i.LO], p.prototype, "m_mapAppIDToClanInfo", void 0),
-        (0, n.gn)([i.LO], p.prototype, "m_mapVanityToClanInfo", void 0),
-        (0, n.gn)([i.LO], p.prototype, "m_mapClanAccountIDToClanInfo", void 0),
-        (0, n.gn)([i.aD], p.prototype, "RegisterClanData", null),
-        (0, n.gn)([i.aD], p.prototype, "InternalSetupValue", null);
-      const d = new p();
+      (0, n.gn)([i.LO], u.prototype, "m_mapAppIDToClanInfo", void 0),
+        (0, n.gn)([i.LO], u.prototype, "m_mapVanityToClanInfo", void 0),
+        (0, n.gn)([i.LO], u.prototype, "m_mapClanAccountIDToClanInfo", void 0),
+        (0, n.gn)([i.aD], u.prototype, "RegisterClanData", null),
+        (0, n.gn)([i.aD], u.prototype, "InternalSetupValue", null);
+      const d = new u();
       function _(t) {
         const [a, e] = (0, s.useState)(
             t ? d.GetClanInfoByClanAccountID(t) : void 0,
@@ -498,8 +498,8 @@
       (0, n.gn)([s.LO], c.prototype, "m_appidList", void 0),
         (0, n.gn)([s.LO], c.prototype, "m_nFollowers", void 0),
         (0, n.gn)([s.LO], c.prototype, "m_clanAccountFlags", void 0);
-      var u = e(35427);
-      class p {
+      var p = e(35427);
+      class u {
         constructor() {
           (this.m_mapClanToCreatorHome = new Map()),
             (this.m_mapAppToCreatorIDList = new Map()),
@@ -512,10 +512,10 @@
             this.ValidateStoreDefault(t) &&
               t.forEach((t) => {
                 let a = Number(t.creator_clan_id),
-                  e = u.K.InitFromClanID(a),
+                  e = p.K.InitFromClanID(a),
                   n = new c(e);
                 n.Initialize(t),
-                  (n.m_promise = p.GetAsPromise(n)),
+                  (n.m_promise = u.GetAsPromise(n)),
                   this.m_mapClanToCreatorHome.set(a, n);
               });
             let a = (0, m.kQ)("creatorhomeforapp", "application_config");
@@ -633,7 +633,7 @@
                 (0, s.z)(() => {
                   l.data.curators.forEach((t) => {
                     if (!this.m_mapClanToCreatorHome.has(t.creator_clan_id)) {
-                      let a = u.K.InitFromClanID(t.creator_clan_id),
+                      let a = p.K.InitFromClanID(t.creator_clan_id),
                         e = new c(a);
                       e.Initialize(t),
                         this.m_mapClanToCreatorHome.set(t.creator_clan_id, e);
@@ -651,18 +651,18 @@
             : [];
         }
       }
-      (0, n.gn)([s.LO], p.prototype, "m_mapClanToCreatorHome", void 0),
-        (0, n.gn)([s.LO], p.prototype, "m_mapAppToCreatorIDList", void 0),
-        (0, n.gn)([s.aD], p.prototype, "LazyInit", null);
-      const d = new p();
+      (0, n.gn)([s.LO], u.prototype, "m_mapClanToCreatorHome", void 0),
+        (0, n.gn)([s.LO], u.prototype, "m_mapAppToCreatorIDList", void 0),
+        (0, n.gn)([s.aD], u.prototype, "LazyInit", null);
+      const d = new u();
       function _(t) {
         var a;
-        const e = u.K.InitFromClanID(t),
+        const e = p.K.InitFromClanID(t),
           [n, r] = l.useState(d.GetCreatorHome(e)),
           i = (0, o.T)("useCreatorHome");
         return (
           l.useEffect(() => {
-            const a = u.K.InitFromClanID(t);
+            const a = p.K.InitFromClanID(t);
             d.BHasCreatorHomeLoaded(a)
               ? n || r(d.GetCreatorHome(a))
               : d.LoadCreatorHome(a).then(() => {
@@ -682,22 +682,6 @@
         );
       }
       window.g_CreatorHomeStore = d;
-    },
-    29480: (t, a, e) => {
-      e.d(a, { T: () => i });
-      var n = e(80751),
-        o = e.n(n),
-        r = e(47427);
-      function i(t) {
-        const a = r.useRef(o().CancelToken.source());
-        return (
-          r.useEffect(() => {
-            const e = a.current;
-            return () => e.cancel(t ? `${t}: unmounting` : "unmounting");
-          }, [t]),
-          a.current
-        );
-      }
     },
   },
 ]);

@@ -22,12 +22,6 @@ function ValidationMarkFieldOk( elem )
 
 }
 
-function BIsTwoFactorEnabled()
-{
-	var bEnabled = $J( document.body).hasClass( "two_factor_sale_enabled" );
-	return bEnabled;
-}
-
 RemoveListingDialog = {
 	m_bOKClicked: false,
 	m_bInitialized: false,
@@ -37,7 +31,7 @@ RemoveListingDialog = {
 	m_bAwaitingConfirmation: false,
 	m_fnDocumentKeyHandler: null,
 	m_modal: null,
-	
+
 	Initialize: function() {
 		$('market_removelisting_dialog_accept').observe( 'click', this.OnAccept.bindAsEventListener(this) );
 		$('market_removelisting_dialog_cancelbtn').observe( 'click', this.OnCancel.bindAsEventListener(this) );
@@ -161,7 +155,7 @@ RemoveListingDialog = {
 		$('market_removelisting_dialog_accept').hide();
 		$('market_removelisting_dialog_cancelbtn').hide();
 		$('market_removelisting_dialog_accept_throbber').hide();
-		
+
 		this.Dismiss();
 	},
 
@@ -191,7 +185,7 @@ RemoveListingDialog = {
 		$('market_removelisting_dialog_cancelbtn').fade({ duration: 0.25, from: 0, to: 1 });
 		$('market_removelisting_dialog_accept_throbber').fade({ duration: 0.25 });
 	},
-	
+
 	OnFailure: function( transport ) {
 		this.OnFailureEffects();
 		this.DisplayError( 'There was a problem removing your listing. Refresh the page and try again.' );
@@ -389,7 +383,7 @@ CreateBuyOrderDialog = {
 
 				if ( g_bRequiresBillingInfo )
 		{
-			var rgBadFields = { 
+			var rgBadFields = {
 				first_name : false,
 				last_name : false,
 				billing_address : false,
@@ -411,7 +405,7 @@ CreateBuyOrderDialog = {
 				else
 					ValidationMarkFieldOk( key );
 			}
-			
+
 			if ( errorString != '' )
 			{
 				this.DisplayError( errorString );
@@ -464,7 +458,7 @@ CreateBuyOrderDialog = {
 				billing_city: billing_city,
 				billing_state: billing_state,
 				billing_postal_code: billing_postal_code,
-				save_my_address: save_my_address ? '1' : '0'			
+				save_my_address: save_my_address ? '1' : '0'
 			},
 			crossDomain: true,
 			xhrFields: { withCredentials: true }
@@ -709,13 +703,6 @@ BuyItemDialog = {
 				return;
 			}
 
-			if ( BIsTwoFactorEnabled() )
-			{
-				this.m_nTotal -= nFeeSteam;
-				this.m_nFeeAmount -= nFeeSteam;
-				//nFeeSteam = 0;
-			}
-
 			$('market_buynow_dialog_totals_subtotal').update( v_currencyformat( this.m_nSubtotal, sWalletCurrencyCode ) );
 			$('market_buynow_dialog_totals_publisherfee').update( v_currencyformat( nFeePublisher, sWalletCurrencyCode ) );
 			$('market_buynow_dialog_totals_publisherfee_percent').update( ( rgListing['publisher_fee_percent'] * 100 ).toFixed(1) );
@@ -870,7 +857,7 @@ BuyItemDialog = {
 
 				if ( g_bRequiresBillingInfo )
 		{
-			var rgBadFields = { 
+			var rgBadFields = {
 				first_name : false,
 				last_name : false,
 				billing_address : false,
@@ -959,7 +946,7 @@ BuyItemDialog = {
 	OnSuccessEffects: function() {
 		$('market_buynow_dialog_cancel').hide();
 		$('market_buynow_dialog_cancel_close').show();
-		
+
 		$('market_buynow_dialog_purchase_throbber').fade({ duration: 0.25 });
 		new Effect.BlindUp( 'market_buynow_dialog_paymentinfo_frame_container', { duration: 0.25 } );
 		new Effect.BlindDown( 'market_buynow_dialog_purchasecomplete_message', { duration: 0.25 } );
@@ -995,7 +982,7 @@ BuyItemDialog = {
 
 			var sWalletCurrencyCode = GetCurrencyCode( g_rgWalletInfo['wallet_currency'] );
 			$('marketWalletBalanceAmount').update( v_currencyformat( g_rgWalletInfo['wallet_balance'], sWalletCurrencyCode ) );
-			
+
 			this.OnSuccessEffects();
 		}
 		else
@@ -1008,7 +995,7 @@ BuyItemDialog = {
 	OnFailureEffects: function() {
 		var queue = Effect.Queues.get('global');
 		queue.each(function(effect) { effect.cancel(); });
-		
+
 		$('market_buynow_dialog_purchase').show();
 		$('market_buynow_dialog_purchase').setOpacity('0');
 		$('market_buynow_dialog_purchase').fade({ duration: 0.25, from: 0, to: 1 });
@@ -1068,7 +1055,7 @@ function BuyMarketListing( sElementPrefix, listingid, appid, contextid, itemid )
 	{
 		return;
 	}
-	
+
 	BuyItemDialog.Show( sElementPrefix, listingid, g_rgAssets[appid][contextid][itemid] );
 }
 
@@ -1991,8 +1978,7 @@ function Market_LoadOrderSpread( item_nameid )
 			country: g_strCountryCode,
 			language: g_strLanguage,
 			currency: typeof( g_rgWalletInfo ) != 'undefined' && g_rgWalletInfo['wallet_currency'] != 0 ? g_rgWalletInfo['wallet_currency'] : 1,
-			item_nameid: item_nameid,
-			two_factor: BIsTwoFactorEnabled() ? 1 : 0
+			item_nameid: item_nameid
 		}
 	} ).error( function ( ) {
 	} ).success( function( data ) {
@@ -2116,8 +2102,7 @@ ItemActivityTicker = {
 				country: g_strCountryCode,
 				language: g_strLanguage,
 				currency: typeof( g_rgWalletInfo ) != 'undefined' && g_rgWalletInfo['wallet_currency'] != 0 ? g_rgWalletInfo['wallet_currency'] : 1,
-				item_nameid: this.m_llItemNameID,
-				two_factor: BIsTwoFactorEnabled() ? 1 : 0
+				item_nameid: this.m_llItemNameID
 			}
 		} ).fail( function( jqxhr ) {
 		} ).done( function( data ) {

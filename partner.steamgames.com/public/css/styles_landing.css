@@ -2019,7 +2019,15 @@ background: -webkit-linear-gradient( 45deg, #3b5c1f 5%,#4c7728 95%);
 		width: 100px;
 		display: inline-block;
 		text-transform: uppercase;
+		letter-spacing: unset;
 	}
+
+.sectionSubtitle {
+	font-size: 12px;
+	text-transform: unset;
+	color: #a1a7af;
+	letter-spacing: unset;
+}
 
 .platform_holder {
 	display: inline-block;

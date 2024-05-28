@@ -104,10 +104,9 @@
           { data: n } = (0, a.X1)(t),
           i = (0, a.T8)(),
           o = null == n ? void 0 : n.settings;
-        return e.notifications.filter((e) => {
-          const t = (0, u.nM)(e.type);
-          return !(0, a.Bu)(o, t.eFeature, i) && !(0, u.sA)(e.item);
-        });
+        return e.notifications.filter(
+          (e) => !(0, u.pH)(e.type, o, i) && !(0, u.sA)(e.item),
+        );
       }
       function U(e) {
         const { nTotalUnviewed: t } = e,
