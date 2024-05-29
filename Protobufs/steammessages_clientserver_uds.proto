@@ -51,6 +51,7 @@ message CMsgClientGetClientAppList {
 	optional bool only_changing = 5;
 	optional bool comics = 6;
 	optional bool include_client_info = 7;
+	repeated uint32 filter_appids = 8;
 }
 
 message CMsgClientGetClientAppListResponse {
@@ -84,6 +85,7 @@ message CMsgClientGetClientAppListResponse {
 		optional int32 queue_position = 22;
 		optional bool uninstalling = 23;
 		optional uint32 rt_time_scheduled = 24;
+		optional bool running = 25;
 	}
 
 	repeated .CMsgClientGetClientAppListResponse.App apps = 1;
@@ -113,6 +115,20 @@ message CMsgClientSetClientAppUpdateState {
 }
 
 message CMsgClientSetClientAppUpdateStateResponse {
+	optional uint32 result = 1;
+}
+
+message CMsgClientLaunchClientApp {
+	optional uint32 appid = 1;
+	optional uint32 language = 2;
+	optional uint32 launch_option_type = 3;
+	optional uint32 launch_option = 4;
+	optional uint32 launch_source = 5;
+	optional string args = 6;
+	optional string query_params = 7;
+}
+
+message CMsgClientLaunchClientAppResponse {
 	optional uint32 result = 1;
 }
 

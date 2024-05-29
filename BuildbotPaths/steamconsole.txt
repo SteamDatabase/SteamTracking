@@ -7,6 +7,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/netadr.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h

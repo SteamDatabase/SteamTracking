@@ -8,8 +8,11 @@
  I av_aes_ctr_alloc
  I av_aes_ctr_crypt
  I av_aes_ctr_free
+ I av_aes_ctr_get_iv
+ I av_aes_ctr_increment_iv
  I av_aes_ctr_init
  I av_aes_ctr_set_full_iv
+ I av_aes_ctr_set_random_iv
  I av_aes_init
  I av_append_path_component
  I av_asprintf
@@ -78,11 +81,13 @@
  I av_get_audio_frame_duration
  I av_get_audio_frame_duration2
  I av_get_bits_per_sample
+ I av_get_bytes_per_sample
  I av_get_channel_layout_nb_channels
  I av_get_channel_name
  I av_get_exact_bits_per_sample
  I av_get_media_type_string
  I av_get_picture_type_char
+ I av_get_pix_fmt_name
  I av_get_random_seed
  I av_gettime
  I av_gettime_relative
@@ -113,9 +118,11 @@
  I av_mul_q
  I av_new_packet
  I av_opt_copy
+ I av_opt_flag_is_set
  I av_opt_free
  I av_opt_get
  I av_opt_get_dict_val
+ I av_opt_get_int
  I av_opt_next
  I av_opt_ptr
  I av_opt_set
@@ -142,6 +149,7 @@
  I av_parser_init
  I av_parser_parse2
  I av_pix_fmt_desc_get
+ I av_pix_fmt_get_chroma_sub_sample
  I av_realloc_array
  I av_realloc_f
  I av_realloc_tracked
@@ -165,14 +173,18 @@
  I av_strcasecmp
  I av_strdup
  I av_strerror
+ I av_strireplace
  I av_stristr
  I av_strlcat
  I av_strlcatf
  I av_strlcpy
  I av_strncasecmp
  I av_strndup
+ I av_strnstr
  I av_strstart
+ I av_timecode_check_frame_rate
  I av_timecode_init
+ I av_timecode_init_from_string
  I av_timecode_make_string
  I av_usleep
  I av_vbprintf
@@ -186,6 +198,7 @@
  I avcodec_close
  I avcodec_decode_subtitle2
  I avcodec_descriptor_get
+ I avcodec_enum_to_chroma_pos
  I avcodec_find_decoder
  I avcodec_find_decoder_by_name
  I avcodec_free_context
@@ -205,6 +218,8 @@
  I avpriv_codec_get_cap_skip_frame_fill_param
  I avpriv_dict_set_timestamp
  I avpriv_find_pix_fmt
+ I avpriv_find_start_code
+ I avpriv_get_gamma_from_trc
  I avpriv_get_raw_pix_fmt_tags
  I avpriv_h264_has_num_reorder_frames
  I avpriv_mpa_freq_tab
@@ -212,8 +227,10 @@
  I avpriv_mpeg4audio_sample_rates
  I avpriv_mpegaudio_decode_header
  I avpriv_open
+ I avpriv_pix_fmt_bps_mov
  I avpriv_report_missing_feature
  I avpriv_request_sample
+ I avpriv_split_xiph_headers
  I avpriv_toupper4
  I avsubtitle_free
  R av_format_ffversion
@@ -410,8 +427,11 @@
  av_aes_ctr_alloc
  av_aes_ctr_crypt
  av_aes_ctr_free
+ av_aes_ctr_get_iv
+ av_aes_ctr_increment_iv
  av_aes_ctr_init
  av_aes_ctr_set_full_iv
+ av_aes_ctr_set_random_iv
  av_aes_init
  av_append_path_component
  av_asprintf
@@ -480,11 +500,13 @@
  av_get_audio_frame_duration
  av_get_audio_frame_duration2
  av_get_bits_per_sample
+ av_get_bytes_per_sample
  av_get_channel_layout_nb_channels
  av_get_channel_name
  av_get_exact_bits_per_sample
  av_get_media_type_string
  av_get_picture_type_char
+ av_get_pix_fmt_name
  av_get_random_seed
  av_gettime
  av_gettime_relative
@@ -515,9 +537,11 @@
  av_mul_q
  av_new_packet
  av_opt_copy
+ av_opt_flag_is_set
  av_opt_free
  av_opt_get
  av_opt_get_dict_val
+ av_opt_get_int
  av_opt_next
  av_opt_ptr
  av_opt_set
@@ -544,6 +568,7 @@
  av_parser_init
  av_parser_parse2
  av_pix_fmt_desc_get
+ av_pix_fmt_get_chroma_sub_sample
  av_realloc_array
  av_realloc_f
  av_realloc_tracked
@@ -567,14 +592,18 @@
  av_strcasecmp
  av_strdup
  av_strerror
+ av_strireplace
  av_stristr
  av_strlcat
  av_strlcatf
  av_strlcpy
  av_strncasecmp
  av_strndup
+ av_strnstr
  av_strstart
+ av_timecode_check_frame_rate
  av_timecode_init
+ av_timecode_init_from_string
  av_timecode_make_string
  av_usleep
  av_vbprintf
@@ -588,6 +617,7 @@
  avcodec_close
  avcodec_decode_subtitle2
  avcodec_descriptor_get
+ avcodec_enum_to_chroma_pos
  avcodec_find_decoder
  avcodec_find_decoder_by_name
  avcodec_free_context
@@ -607,6 +637,8 @@
  avpriv_codec_get_cap_skip_frame_fill_param
  avpriv_dict_set_timestamp
  avpriv_find_pix_fmt
+ avpriv_find_start_code
+ avpriv_get_gamma_from_trc
  avpriv_get_raw_pix_fmt_tags
  avpriv_h264_has_num_reorder_frames
  avpriv_mpa_freq_tab
@@ -614,12 +646,15 @@
  avpriv_mpeg4audio_sample_rates
  avpriv_mpegaudio_decode_header
  avpriv_open
+ avpriv_pix_fmt_bps_mov
  avpriv_report_missing_feature
  avpriv_request_sample
+ avpriv_split_xiph_headers
  avpriv_toupper4
  avsubtitle_free
  bind
  bind$UNIX2003
+ bsearch
  close
  close$UNIX2003
  closedir
@@ -629,6 +664,7 @@
  dyld_stub_binder
  fcntl
  fcntl$UNIX2003
+ fmod
  fprintf
  fputc
  free
@@ -646,6 +682,7 @@
  listen$UNIX2003
  llrint
  localtime_r
+ lrint
  lrintf
  lseek
  lstat$INODE64
@@ -657,6 +694,8 @@
  memset
  memset_pattern16
  mkdir
+ mktime
+ mktime$UNIX2003
  opendir$INODE64
  opendir$INODE64$UNIX2003
  poll

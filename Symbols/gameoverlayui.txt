@@ -413,6 +413,7 @@
  memmove
  memset
  memset_pattern16
+ mkdir
  mmap
  munmap
  objc_msgSend

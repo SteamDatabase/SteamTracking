@@ -761,8 +761,8 @@
 
 "Steam_ErrorOffline"	"Esta operación no se puede completar cuando Steam está en modo desconectado."
 
-"Steam_MonitorTitle_Offline"	"Monitor - Desconectado"
-"SteamRootGames_Offline"		"Juegos - Desconectado "
+"Steam_MonitorTitle_Offline"	"Monitor - Sin conexión"
+"SteamRootGames_Offline"		"Juegos - Sin conexión "
 "Steam_MonitorScanning_Offline"	"Steam está en modo desconectado, por lo que no se pueden descargar actualizaciones."
 "SteamUI_OfflineMode_GameNotReady"		"Este juego no está preparado para funcionar en modo desconectado."
 "SteamUI_OfflineMode_GameNotReady_Title"	"Juego no disponible"
@@ -1211,7 +1211,7 @@
 
 "Steam_SubscriptionCancelled_InvalidCDKey_Headline" "Clave de producto no válida"
 "Steam_SubscriptionCancelled_InvalidCDKey" "La clave de producto que has introducido no es válida.\n\nComprueba que no has escrito mal la clave. I, L y 1 pueden parecerse. Lo mismo sucede con V e Y y con 0 y O."
-"Steam_SubscriptionCancelled_InvalidCDKey2" "Si estás canjeando un código de la Cartera o una tarjeta regalo de Steam, haz clic aquí para canjearlo en la tienda de Steam."
+"Steam_SubscriptionCancelled_InvalidCDKey2" "Si estás canjeando un código de la Cartera o una tarjeta de regalo de Steam, haz clic aquí para canjearlo en la tienda de Steam."
 
 "Steam_SubscriptionCancelled_CDKey_MustOwnOtherApp_Headline" "Activa primero el juego original"
 "Steam_SubscriptionCancelled_CDKey_MustOwnOtherApp" "La clave de producto que has introducido requiere que tengas otro producto antes de activarla.\n\nSi estás intentando activar una expansión o un contenido descargable, activa primero el juego original para poder activar el contenido adicional."
@@ -2103,6 +2103,7 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "Steam_BackgroundDownloadsAllow"	"Permitir siempre descargas en segundo plano"
 "Steam_BackgroundDownloadsDeny"	"No permitir nunca descargas en segundo plano"
 
+// NOTE: no longer referenced, old vgui?
 "Steam_GameProperties_SteamInputSettings"	"Configuración de Steam Input"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Configuración de Steam Input por juego (es necesario reiniciar el juego)"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "Apagado forzoso"
@@ -3022,7 +3023,7 @@ Crea uno enviando un regalo por email a alguien que conozcas."
 "Steam_VideoDriverInvokeFailed_Title"			"Steam - Error"
 "Steam_VideoDriverInvokeFailed_Text"			"Ha habido un problema al ejecutar la herramienta de actualización del controlador de video."
 
-"Steam_InOfflineModeButNeedToLogIn" "No ha sido posible conectarse a la red de Steam. El 'Modo \nDesconectado' no está disponible porque no hay información\nde inicio de sesión de Steam almacenada en este equipo.\n\nNo podrás utilizar Steam hasta que te\nconectes de nuevo a la red de Steam."
+"Steam_InOfflineModeButNeedToLogIn" "No ha sido posible conectarse a la red de Steam. El 'Modo \nSin conexión' no está disponible porque no hay información\nde inicio de sesión de Steam almacenada en este equipo.\n\nNo podrás utilizar Steam hasta que te\nconectes de nuevo a la red de Steam."
 "Steam_InOfflineModeButNeedToLogIn_Link"			"Haz clic aquí para comprobar el estado de la red de Steam"
 
 "Skin_By_Random_n"			"Apariencia para Steam basada en un diseño de random_n"
@@ -3936,17 +3937,17 @@ Haz nuevos amigos en Steam enviando un regalo por email a alguien que conozcas."
 
 "Steam_Tooltip_Steam" "Steam"
 "Steam_Tooltip_Working" "Steam - Procesando"
-"Steam_Tooltip_Offline" "Steam - Desconectado"
+"Steam_Tooltip_Offline" "Steam - Sin conexión"
 "Steam_Tooltip_Syncing" "Steam - Sincronizando"
 "Steam_Tooltip_Downloading" "Steam - descargando a %s1/s"
 "Steam_Tooltip_VoiceActive" "Steam: en un chat de voz"
 "Steam_Tooltip_UnreadMessageS" "Steam: mensajes sin leer"
 
-"Friends_online"			"Conectado"
+"Friends_online"			"En línea"
 "Friends_away"			"Ausente"
 "Friends_busy"			"Ocupado"
 "Friends_snooze"			"Durmiendo"
-"Friends_offline"			"Desconectado"
+"Friends_offline"			"Sin conexión"
 "Friends_invisible"		"Invisible"
 "Friends_lookingtotrade"	"Deseando intercambiar"
 "Friends_lookingtoplay"		"Deseando jugar"

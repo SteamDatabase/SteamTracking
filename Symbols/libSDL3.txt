@@ -309,7 +309,7 @@
  T SDL_AddEventWatch
  T SDL_AddGamepadMapping
  T SDL_AddGamepadMappingsFromFile
- T SDL_AddGamepadMappingsFromRW
+ T SDL_AddGamepadMappingsFromIO
  T SDL_AddHintCallback
  T SDL_AddTimer
  T SDL_AddVulkanRenderSemaphores
@@ -322,7 +322,6 @@
  T SDL_AtomicSet
  T SDL_AtomicSetPtr
  T SDL_AttachVirtualJoystick
- T SDL_AttachVirtualJoystickEx
  T SDL_AudioDevicePaused
  T SDL_BindAudioStream
  T SDL_BindAudioStreams
@@ -342,8 +341,10 @@
  T SDL_CloseCamera
  T SDL_CloseGamepad
  T SDL_CloseHaptic
+ T SDL_CloseIO
  T SDL_CloseJoystick
  T SDL_CloseSensor
+ T SDL_CloseStorage
  T SDL_ComposeCustomBlendMode
  T SDL_ConvertAudioSamples
  T SDL_ConvertEventToRenderCoordinates
@@ -357,18 +358,19 @@
  T SDL_CreateColorCursor
  T SDL_CreateCondition
  T SDL_CreateCursor
+ T SDL_CreateDirectory
  T SDL_CreateHapticEffect
  T SDL_CreateMutex
  T SDL_CreatePalette
  T SDL_CreatePixelFormat
  T SDL_CreatePopupWindow
  T SDL_CreateProperties
- T SDL_CreateRW
  T SDL_CreateRWLock
  T SDL_CreateRenderer
  T SDL_CreateRendererWithProperties
  T SDL_CreateSemaphore
  T SDL_CreateSoftwareRenderer
+ T SDL_CreateStorageDirectory
  T SDL_CreateSurface
  T SDL_CreateSurfaceFrom
  T SDL_CreateSystemCursor
@@ -376,13 +378,14 @@
  T SDL_CreateTexture
  T SDL_CreateTextureFromSurface
  T SDL_CreateTextureWithProperties
- T SDL_CreateThread
- T SDL_CreateThreadWithStackSize
+ T SDL_CreateThreadRuntime
+ T SDL_CreateThreadWithPropertiesRuntime
  T SDL_CreateWindow
  T SDL_CreateWindowAndRenderer
  T SDL_CreateWindowWithProperties
  T SDL_CursorVisible
  T SDL_DYNAPI_entry
+ T SDL_DateTimeToTime
  T SDL_DelEventWatch
  T SDL_DelHintCallback
  T SDL_Delay
@@ -395,7 +398,6 @@
  T SDL_DestroyPalette
  T SDL_DestroyPixelFormat
  T SDL_DestroyProperties
- T SDL_DestroyRW
  T SDL_DestroyRWLock
  T SDL_DestroyRenderer
  T SDL_DestroySemaphore
@@ -414,8 +416,9 @@
  T SDL_EGL_SetEGLAttributeCallbacks
  T SDL_EnableScreenSaver
  T SDL_EnterAppMainCallbacks
+ T SDL_EnumerateDirectory
  T SDL_EnumerateProperties
- T SDL_Error
+ T SDL_EnumerateStorageDirectory
  T SDL_EventEnabled
  T SDL_FillSurfaceRect
  T SDL_FillSurfaceRects
@@ -485,8 +488,13 @@
  T SDL_GetCurrentDisplayOrientation
  T SDL_GetCurrentRenderOutputSize
  T SDL_GetCurrentThreadID
+ T SDL_GetCurrentTime
  T SDL_GetCurrentVideoDriver
  T SDL_GetCursor
+ T SDL_GetDateTimeLocalePreferences
+ T SDL_GetDayOfWeek
+ T SDL_GetDayOfYear
+ T SDL_GetDaysInMonth
  T SDL_GetDefaultAssertionHandler
  T SDL_GetDefaultCursor
  T SDL_GetDesktopDisplayMode
@@ -512,6 +520,7 @@
  T SDL_GetGamepadButtonFromString
  T SDL_GetGamepadButtonLabel
  T SDL_GetGamepadButtonLabelForType
+ T SDL_GetGamepadConnectionState
  T SDL_GetGamepadFirmwareVersion
  T SDL_GetGamepadFromInstanceID
  T SDL_GetGamepadFromPlayerIndex
@@ -532,7 +541,7 @@
  T SDL_GetGamepadName
  T SDL_GetGamepadPath
  T SDL_GetGamepadPlayerIndex
- T SDL_GetGamepadPowerLevel
+ T SDL_GetGamepadPowerInfo
  T SDL_GetGamepadProduct
  T SDL_GetGamepadProductVersion
  T SDL_GetGamepadProperties
@@ -560,10 +569,14 @@
  T SDL_GetHaptics
  T SDL_GetHint
  T SDL_GetHintBoolean
+ T SDL_GetIOProperties
+ T SDL_GetIOSize
+ T SDL_GetIOStatus
  T SDL_GetJoystickAxis
  T SDL_GetJoystickAxisInitialState
  T SDL_GetJoystickBall
  T SDL_GetJoystickButton
+ T SDL_GetJoystickConnectionState
  T SDL_GetJoystickFirmwareVersion
  T SDL_GetJoystickFromInstanceID
  T SDL_GetJoystickFromPlayerIndex
@@ -584,7 +597,7 @@
  T SDL_GetJoystickName
  T SDL_GetJoystickPath
  T SDL_GetJoystickPlayerIndex
- T SDL_GetJoystickPowerLevel
+ T SDL_GetJoystickPowerInfo
  T SDL_GetJoystickProduct
  T SDL_GetJoystickProductVersion
  T SDL_GetJoystickProperties
@@ -596,13 +609,19 @@
  T SDL_GetKeyFromScancode
  T SDL_GetKeyName
  T SDL_GetKeyboardFocus
+ T SDL_GetKeyboardInstanceName
  T SDL_GetKeyboardState
+ T SDL_GetKeyboards
+ T SDL_GetLogOutputFunction
+ T SDL_GetLogPriority
  T SDL_GetMasksForPixelFormatEnum
  T SDL_GetMaxHapticEffects
  T SDL_GetMaxHapticEffectsPlaying
  T SDL_GetMemoryFunctions
+ T SDL_GetMice
  T SDL_GetModState
  T SDL_GetMouseFocus
+ T SDL_GetMouseInstanceName
  T SDL_GetMouseState
  T SDL_GetNaturalDisplayOrientation
  T SDL_GetNumAllocations
@@ -616,10 +635,10 @@
  T SDL_GetNumJoystickButtons
  T SDL_GetNumJoystickHats
  T SDL_GetNumRenderDrivers
- T SDL_GetNumTouchFingers
  T SDL_GetNumVideoDrivers
  T SDL_GetNumberProperty
  T SDL_GetOriginalMemoryFunctions
+ T SDL_GetPathInfo
  T SDL_GetPenCapabilities
  T SDL_GetPenFromGUID
  T SDL_GetPenGUID
@@ -641,7 +660,6 @@
  T SDL_GetPropertyType
  T SDL_GetRGB
  T SDL_GetRGBA
- T SDL_GetRWProperties
  T SDL_GetRealGamepadInstanceType
  T SDL_GetRealGamepadType
  T SDL_GetRectAndLineIntersection
@@ -674,6 +692,7 @@
  T SDL_GetRendererInfo
  T SDL_GetRendererProperties
  T SDL_GetRevision
+ T SDL_GetSIMDAlignment
  T SDL_GetScancodeFromKey
  T SDL_GetScancodeFromName
  T SDL_GetScancodeName
@@ -690,6 +709,9 @@
  T SDL_GetSensorType
  T SDL_GetSensors
  T SDL_GetSilenceValueForFormat
+ T SDL_GetStorageFileSize
+ T SDL_GetStoragePathInfo
+ T SDL_GetStorageSpaceRemaining
  T SDL_GetStringProperty
  T SDL_GetSurfaceAlphaMod
  T SDL_GetSurfaceBlendMode
@@ -715,7 +737,7 @@
  T SDL_GetTouchDeviceName
  T SDL_GetTouchDeviceType
  T SDL_GetTouchDevices
- T SDL_GetTouchFinger
+ T SDL_GetTouchFingers
  T SDL_GetUserFolder
  T SDL_GetVersion
  T SDL_GetVideoDriver
@@ -724,7 +746,6 @@
  T SDL_GetWindowFlags
  T SDL_GetWindowFromID
  T SDL_GetWindowFullscreenMode
- T SDL_GetWindowGrab
  T SDL_GetWindowICCProfile
  T SDL_GetWindowID
  T SDL_GetWindowKeyboardGrab
@@ -742,6 +763,8 @@
  T SDL_GetWindowSizeInPixels
  T SDL_GetWindowSurface
  T SDL_GetWindowTitle
+ T SDL_GlobDirectory
+ T SDL_GlobStorageDirectory
  T SDL_HapticEffectSupported
  T SDL_HapticRumbleSupported
  T SDL_HasARMSIMD
@@ -753,9 +776,13 @@
  T SDL_HasClipboardText
  T SDL_HasEvent
  T SDL_HasEvents
+ T SDL_HasGamepad
+ T SDL_HasJoystick
+ T SDL_HasKeyboard
  T SDL_HasLASX
  T SDL_HasLSX
  T SDL_HasMMX
+ T SDL_HasMouse
  T SDL_HasNEON
  T SDL_HasPrimarySelectionText
  T SDL_HasProperty
@@ -769,6 +796,12 @@
  T SDL_HasScreenKeyboardSupport
  T SDL_HideCursor
  T SDL_HideWindow
+ T SDL_IOFromConstMem
+ T SDL_IOFromDynamicMem
+ T SDL_IOFromFile
+ T SDL_IOFromMem
+ T SDL_IOprintf
+ T SDL_IOvprintf
  T SDL_Init
  T SDL_InitHapticRumble
  T SDL_InitSubSystem
@@ -780,13 +813,13 @@
  T SDL_JoystickConnected
  T SDL_JoystickEventsEnabled
  T SDL_LoadBMP
- T SDL_LoadBMP_RW
+ T SDL_LoadBMP_IO
  T SDL_LoadFile
- T SDL_LoadFile_RW
+ T SDL_LoadFile_IO
  T SDL_LoadFunction
  T SDL_LoadObject
  T SDL_LoadWAV
- T SDL_LoadWAV_RW
+ T SDL_LoadWAV_IO
  T SDL_LockAudioStream
  T SDL_LockJoysticks
  T SDL_LockMutex
@@ -801,15 +834,9 @@
  T SDL_LogCritical
  T SDL_LogDebug
  T SDL_LogError
- T SDL_LogGetOutputFunction
- T SDL_LogGetPriority
  T SDL_LogInfo
  T SDL_LogMessage
  T SDL_LogMessageV
- T SDL_LogResetPriorities
- T SDL_LogSetAllPriority
- T SDL_LogSetOutputFunction
- T SDL_LogSetPriority
  T SDL_LogVerbose
  T SDL_LogWarn
  T SDL_MapRGB
@@ -821,7 +848,7 @@
  T SDL_Metal_DestroyView
  T SDL_Metal_GetLayer
  T SDL_MinimizeWindow
- T SDL_MixAudioFormat
+ T SDL_MixAudio
  T SDL_OnApplicationDidBecomeActive
  T SDL_OnApplicationDidEnterBackground
  T SDL_OnApplicationDidReceiveMemoryWarning
@@ -831,13 +858,19 @@
  T SDL_OpenAudioDevice
  T SDL_OpenAudioDeviceStream
  T SDL_OpenCameraDevice
+ T SDL_OpenFileStorage
  T SDL_OpenGamepad
  T SDL_OpenHaptic
  T SDL_OpenHapticFromJoystick
  T SDL_OpenHapticFromMouse
+ T SDL_OpenIO
  T SDL_OpenJoystick
  T SDL_OpenSensor
+ T SDL_OpenStorage
+ T SDL_OpenTitleStorage
  T SDL_OpenURL
+ T SDL_OpenUserStorage
+ T SDL_OutOfMemory
  T SDL_PauseAudioDevice
  T SDL_PauseHaptic
  T SDL_PeepEvents
@@ -852,24 +885,15 @@
  T SDL_QueryTexture
  T SDL_Quit
  T SDL_QuitSubSystem
- T SDL_RWFromConstMem
- T SDL_RWFromFile
- T SDL_RWFromMem
- T SDL_RWclose
- T SDL_RWprintf
- T SDL_RWread
- T SDL_RWseek
- T SDL_RWsize
- T SDL_RWtell
- T SDL_RWvprintf
- T SDL_RWwrite
  T SDL_RaiseWindow
+ T SDL_ReadIO
  T SDL_ReadS16BE
  T SDL_ReadS16LE
  T SDL_ReadS32BE
  T SDL_ReadS32LE
  T SDL_ReadS64BE
  T SDL_ReadS64LE
+ T SDL_ReadStorageFile
  T SDL_ReadSurfacePixel
  T SDL_ReadU16BE
  T SDL_ReadU16LE
@@ -881,7 +905,11 @@
  T SDL_RegisterEvents
  T SDL_ReleaseCameraFrame
  T SDL_ReloadGamepadMappings
+ T SDL_RemovePath
+ T SDL_RemoveStoragePath
  T SDL_RemoveTimer
+ T SDL_RenamePath
+ T SDL_RenameStoragePath
  T SDL_RenderClear
  T SDL_RenderClipEnabled
  T SDL_RenderCoordinatesFromWindow
@@ -907,6 +935,7 @@
  T SDL_ResetHint
  T SDL_ResetHints
  T SDL_ResetKeyboard
+ T SDL_ResetLogPriorities
  T SDL_RestoreWindow
  T SDL_ResumeAudioDevice
  T SDL_ResumeHaptic
@@ -916,13 +945,14 @@
  T SDL_RumbleJoystickTriggers
  T SDL_RunApp
  T SDL_RunHapticEffect
- T SDL_SIMDGetAlignment
  T SDL_SaveBMP
- T SDL_SaveBMP_RW
+ T SDL_SaveBMP_IO
  T SDL_ScreenKeyboardShown
  T SDL_ScreenSaverEnabled
+ T SDL_SeekIO
  T SDL_SendGamepadEffect
  T SDL_SendJoystickEffect
+ T SDL_SendJoystickVirtualSensorData
  T SDL_SetAssertionHandler
  T SDL_SetAudioPostmixCallback
  T SDL_SetAudioStreamFormat
@@ -950,8 +980,13 @@
  T SDL_SetJoystickLED
  T SDL_SetJoystickPlayerIndex
  T SDL_SetJoystickVirtualAxis
+ T SDL_SetJoystickVirtualBall
  T SDL_SetJoystickVirtualButton
  T SDL_SetJoystickVirtualHat
+ T SDL_SetJoystickVirtualTouchpad
+ T SDL_SetLogOutputFunction
+ T SDL_SetLogPriorities
+ T SDL_SetLogPriority
  T SDL_SetMainReady
  T SDL_SetMemoryFunctions
  T SDL_SetModState
@@ -995,7 +1030,6 @@
  T SDL_SetWindowFocusable
  T SDL_SetWindowFullscreen
  T SDL_SetWindowFullscreenMode
- T SDL_SetWindowGrab
  T SDL_SetWindowHitTest
  T SDL_SetWindowIcon
  T SDL_SetWindowInputFocus
@@ -1014,6 +1048,9 @@
  T SDL_SetX11EventHook
  T SDL_ShowCursor
  T SDL_ShowMessageBox
+ T SDL_ShowOpenFileDialog
+ T SDL_ShowOpenFolderDialog
+ T SDL_ShowSaveFileDialog
  T SDL_ShowSimpleMessageBox
  T SDL_ShowWindow
  T SDL_ShowWindowSystemMenu
@@ -1024,11 +1061,15 @@
  T SDL_StopHapticEffects
  T SDL_StopHapticRumble
  T SDL_StopTextInput
+ T SDL_StorageReady
  T SDL_SurfaceHasColorKey
  T SDL_SurfaceHasRLE
  T SDL_SyncWindow
+ T SDL_TellIO
  T SDL_TextInputActive
- T SDL_TextInputShown
+ T SDL_TimeFromWindows
+ T SDL_TimeToDateTime
+ T SDL_TimeToWindows
  T SDL_TryLockMutex
  T SDL_TryLockRWLockForReading
  T SDL_TryLockRWLockForWriting
@@ -1055,6 +1096,7 @@
  T SDL_UpdateWindowSurfaceRects
  T SDL_UpdateYUVTexture
  T SDL_Vulkan_CreateSurface
+ T SDL_Vulkan_DestroySurface
  T SDL_Vulkan_GetInstanceExtensions
  T SDL_Vulkan_GetVkGetInstanceProcAddr
  T SDL_Vulkan_LoadLibrary
@@ -1070,12 +1112,14 @@
  T SDL_WarpMouseInWindow
  T SDL_WasInit
  T SDL_WindowHasSurface
+ T SDL_WriteIO
  T SDL_WriteS16BE
  T SDL_WriteS16LE
  T SDL_WriteS32BE
  T SDL_WriteS32LE
  T SDL_WriteS64BE
  T SDL_WriteS64LE
+ T SDL_WriteStorageFile
  T SDL_WriteU16BE
  T SDL_WriteU16LE
  T SDL_WriteU32BE
@@ -1249,7 +1293,6 @@
  UTTypeCreatePreferredIdentifierForTag
  _Block_object_assign
  _Block_object_dispose
- _DefaultRuneLocale
  _Exit
  _NSConcreteGlobalBlock
  _NSConcreteStackBlock
@@ -1258,15 +1301,12 @@
  __bzero
  __divdi3
  __error
- __maskrune
  __memcpy_chk
  __objc_personality_v0
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
  __stdinp
- __tolower
- __toupper
  __udivdi3
  __umoddi3
  _dispatch_main_q
@@ -1283,6 +1323,9 @@
  atof
  atoi
  calloc
+ clock_get_time
+ closedir
+ closedir$UNIX2003
  cos
  cosf
  dispatch_async
@@ -1318,9 +1361,8 @@
  fwrite$UNIX2003
  getenv
  gettimeofday
- iconv
- iconv_close
- iconv_open
+ gmtime_r
+ host_get_clock_service
  kCFAllocatorDefault
  kCFBooleanFalse
  kCFBooleanTrue
@@ -1338,6 +1380,7 @@
  kTISPropertyUnicodeKeyLayoutData
  kUTTagClassMIMEType
  kUTTypeFileURL
+ localtime_r
  log
  log10
  log10f
@@ -1346,19 +1389,24 @@
  lroundf
  mach_absolute_time
  mach_error_string
+ mach_host_self
  mach_msg
+ mach_port_deallocate
+ mach_task_self_
  mach_timebase_info
  malloc
  memcmp
  memcpy
  memmove
  memset
+ memset_pattern16
  memset_pattern4
  mkdir
  modf
  modff
  nanosleep
  nanosleep$UNIX2003
+ nl_langinfo
  objc_alloc
  objc_autoreleasePoolPop
  objc_autoreleasePoolPush
@@ -1388,6 +1436,8 @@
  objc_sync_enter
  objc_sync_exit
  objc_unsafeClaimAutoreleasedReturnValue
+ opendir$INODE64
+ opendir$INODE64$UNIX2003
  pow
  powf
  pthread_attr_init
@@ -1437,7 +1487,10 @@
  pthread_setspecific
  pthread_sigmask
  pthread_sigmask$UNIX2003
+ readdir$INODE64
  realloc
+ remove
+ rename
  rewind
  scalbn
  scalbnf
@@ -1452,8 +1505,6 @@
  snprintf
  sscanf
  stat$INODE64
- strcasecmp
- strcasestr
  strchr
  strcmp
  strdup
@@ -1462,7 +1513,6 @@
  strlcat
  strlcpy
  strlen
- strncasecmp
  strncmp
  strnlen
  strnstr
@@ -1482,13 +1532,11 @@
  tanf
  vsnprintf
  vsscanf
- wcscasecmp
  wcscmp
  wcscpy
  wcslcat
  wcslcpy
  wcslen
- wcsncasecmp
  wcsncmp
  wcsncpy
  wcsnlen

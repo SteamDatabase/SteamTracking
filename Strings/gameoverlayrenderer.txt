@@ -68,6 +68,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/gameoverlayrenderer.dylib
+f&1$
 /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
@@ -261,7 +262,7 @@ L^_[]
 ^_[]
 ^_[]
 ^_[]
-tYF9
+tQF9
 ^_[]
 u7G9}
 ^_[]
@@ -280,6 +281,7 @@ u8QRW1
 ^_[]
 WVjQ
 ^_[]
+PPPWQ
 ^_[]
 ^_[]
 ^_[]
@@ -609,6 +611,8 @@ SteamStreamingMaximumResolution
 %dx%d
 SteamStreamingVideoDisableVSync
 SteamStreamingAllowGameVsync
+Received audio recording start message, drop flag is %d
+Received audio recording stop message
 Game Delayed OpenGL NV12
 Game OpenGL NV12
 Game Delayed OpenGL RGB
@@ -1600,8 +1604,8 @@ jIsOverlayEnabled
 aYY*
 Bvvv
 XJ\Z
-:>6x
-:J	s
+:>6|
+:F	s
 ,0"&
 GB,0"
 L d\8
@@ -1853,26 +1857,23 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-`_}[
-J[0 
-V<B9
-/|`hEs
-3Ht!o
-][cI
-:&7G
-Knz.
-{B=TH
-gsWM
-SsuX
-M(udr%
-~qD$
-QnW^
-^[sd#
+(#;oo
+h;Dwd;d
+-S^g
+,;Hw
+@tK(]l[b
+]}9!
+L'PA=
+-E6m~ ["0!
+b_/@K
+Hp1@>G
+OF|7
+.yce
+~qYX
 hBkT
-@SYG8
-Cf6dd
-h6%q|
-OF"lP{
+Tr/5
+.YEtz
+:A[[c4\d5
 4V-=
 0td#
 subject.OU
@@ -1932,8 +1933,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240524204439Z0/
+240527183327Z0/
+/@#sP_7
 1/0-
+/@#sP_7
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1941,22 +1944,15 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		/uLeeIDIHXyq/Xw1cqMFgrLqzKs=
+		A1eGxxCJP0qXZlegFEyYL0Ajc1A=
 		</data>
 	</array>
 </dict>
 </plist>
-zlWMn
-)cAq
-DY;:
-,V"U
-C|ZD}
-IwqV&
-:a/Q
- 9%{%
-K&|"=I
-20240524204455Z0
-]G&@[p
+U3o6
+mmVpN5
+4+G?
+20240527183401Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2011,15 +2007,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240524204455Z0#
+240527183401Z0#
 pC)t
-CP	>!
-LI]ENa
-W(e{Kz
--WHh@d#
-VSMw
-&2af
-iek=
+_yjt4
+#.FH
+< -b:
 __TEXT
 __text
 __TEXT
@@ -2081,7 +2073,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/gameoverlayrenderer.dylib
-jFW$
+@#i=B
 /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
@@ -2152,7 +2144,6 @@ AWAVSH
 [A^A_]
 AVSH
 [A^]
-`([A^]
 AVSH
 [A^]
 AWAVAUATSPA
@@ -2266,9 +2257,8 @@ AWAVATSI
 [A\A^A_]
 AVSH
 [A^]
-AWAVATSH
-wfHc
-[A\A^A_]
+AWAVAUATSH
+[A\A]A^A_]
 AVSH
 C@[A^]
 AVSA
@@ -2313,7 +2303,7 @@ AWAVSH
 AWAVAUATSH
 u8ASD
 ]0AS
-Y--}
+Y--~
 H[A\A]A^A_]
 AWAVAUATSH
 D9` 
@@ -2416,8 +2406,8 @@ AWAVATSI
 AWAVAUATSH
 )C0f
 )C f
-L9 t
 L98t
+L9(t
 )C0f
 )C f
 [A\A]A^A_]
@@ -2457,7 +2447,7 @@ AWAVSPA
 AWAVSPA
 [A^A_]
 AWAVAUATSH
-Qt*I
+Qt)I
 [A\A]A^A_]
 AWAVAUATSH
 [A\A]A^A_]
@@ -2466,6 +2456,7 @@ AVSI
 AWAVAUATSPH
 [A\A]A^A_]
 AVSH
+H9=[
 [A^]
 AWAVATSH
 L9x 
@@ -2551,6 +2542,7 @@ AWAVATSH
 L$HI
 H92u
 0[A\A^A_]
+H9=<e
 AWAVSPI
 [A^A_]
 AWAVSP
@@ -2578,7 +2570,6 @@ AWAVATSH
 0[A\A^A_]
 0[A\A^A_]
 AWAVSPD
-L95}P
 [A^A_]
 [A^A_]
 AWAVATS
@@ -2863,6 +2854,7 @@ UAWAVATSH
 }%E1
 H;D$
 [A\A^A_]
+D95G
 UAWAVAUATSH
 D$`H
 D$8H
@@ -2979,6 +2971,8 @@ SteamStreamingMaximumResolution
 %dx%d
 SteamStreamingVideoDisableVSync
 SteamStreamingAllowGameVsync
+Received audio recording start message, drop flag is %d
+Received audio recording stop message
 Game Delayed OpenGL NV12
 Game OpenGL NV12
 Game Delayed OpenGL RGB
@@ -4036,7 +4030,7 @@ jIsOverlayEnabled
 G.11
 @~~~
 T:dV
->@.z
+>@.~
 C< 0
 n<Xn
 :"6~K
@@ -4297,18 +4291,31 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-j^q&
-iTAD
-k]VE
-'.I#
-[P^[
-c2Zi
-Gv9)
+VYtv
+r:n}yB
+|]c:%<
+6V8~-
+^/"f
+!Od(
+"M@nN
+0+95
+O5Wh$E
+&Ay!Z
+EU#b
+{{#|j
+;sHt~l
+YTkr
+0B(s
+	*A6
+3{(_uF
 	zOn
 0.>a
-"`-fM
-np4T9\.
-L3[,
+>;ZG
+ipD=
+4,d}'
+K{+4
+y#hKF3
+@_*V.
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -4366,9 +4373,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240524204439Z0/
-M$0<
+240527183327Z0/
+p@E-
 1/0-
+p@E-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4376,16 +4384,16 @@ M$0<
 	<key>cdhashes</key>
 	<array>
 		<data>
-		IKp0NUeVBKhY1H4yZOjtV6/yrIs=
+		w94jTfcPawiVbR1wQEUtwWPvNMI=
 		</data>
 	</array>
 </dict>
 </plist>
-0mq"
-{5iW
-,lcT
-/qNi
-20240524204455Z0
+K:i	VZ"
+.RC0{
+[Lhu
+20240527183401Z0
+)YQr
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -4446,10 +4454,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240524204455Z0#
+240527183401Z0#
 [Y>L
-zmwVNhVO
-deiJqhL
+[a`K
+\3#}|Q
+fh_~
 __TEXT
 __text
 __TEXT
@@ -4560,7 +4569,8 @@ $E9H
 h&A)
 (	29
 jh8)	
-29:;	
+B)Z(
+29|;	
  @9H
 h"@9h
 Th*@
@@ -4572,24 +4582,25 @@ XcZ@
 h&@9
 hvB9
 hrB9
-C9a"C9b&C9c*C9
-[)@B
+C9a"C9b&C9c*C9UB
+[)|B
 aBA9
+a~	p
 h&D)
-jN	p
-q+P	0
 9h6@
 h"@9
 h"@9
 yh:@
+`:	0
+@9	0
 Th#@
 -D@!
-`T	0
 X`rA
 X`BA
 T	!@
 T*!@
 Ci8}
+T`		p
 I+8k
 T	5@
 T	9@
@@ -4602,7 +4613,7 @@ BP7
 9h.A
 D9h.A
 9i.A
-T(#D
+T('D
 X`BA
 X`rA
 Th2A
@@ -4613,13 +4624,14 @@ X`~B
 X`zB
 X`&B
 Ti2A
-/	X 
+:	X 
+9*	X
+%	XX
 Am 8`
 #V)h
-			X)
 4h.@
 4b.@
-	AD9
+	aD9
 h2C9
 NH `
 m@)h
@@ -4631,6 +4643,9 @@ jaNF
  haN
 nA8!
 [A):
+"A9h
+&A9h
+&A9(
 Iz`*@z
 	K?Y
 /"E@
@@ -4640,10 +4655,10 @@ TYC@
 T( @
 {ixJ	
 T`2@
+Ay L
 T	!@
-Z) /
-\) .
-	mD9)
+[) 3
+]) 2
 T`2@
 T`2@
 T`2@
@@ -4651,7 +4666,6 @@ T`2@
 T`2@
 DqHL
 +ih8J	
-CC9@
 T`2@
 T`2@
 7`2@
@@ -4660,28 +4674,28 @@ T`2@
 T	|	
 i"X)
 Ci<}
-	iD9?
-)mD9)
+(}	X
+(}	X
 9h.@
 Th&@
 Th&@
 Rh:@
 9`&@
 4h&@
-`:	X
 T`2@
 4a2@
-T*;A
-TlMA
+T*CA
+TlUA
 hbD9
 4h"A
 hbD9
 hbD9h
+	L9(
 !IzH
-	!F9
+	AF9
 T`jt
 +ih8J	
-	QG9
+	qG9
 12CIMENullImpl
 4IIME
 :>->
@@ -4783,6 +4797,8 @@ SteamStreamingMaximumResolution
 %dx%d
 SteamStreamingVideoDisableVSync
 SteamStreamingAllowGameVsync
+Received audio recording start message, drop flag is %d
+Received audio recording stop message
 Game Delayed OpenGL NV12
 Game OpenGL NV12
 Game Delayed OpenGL RGB
@@ -5996,21 +6012,13 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-(D] 
-K3i=
-i\}m
-%i/s
-Jpu8
-1dDo
-,CUt?
-6S.U
-k"cg
-PP.hK
-]~cE
-I&V; 
-aZYNC
-:gtm
-D;U(Bq
+Qm;*cI1P
+V6p;
+ywV*Y5BY
+atH\
+):ShL
+:vn&:
+p|X&
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -6068,12 +6076,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240524204439Z0/
- py&
-V~Q{
+240527183327Z0/
 1/0-
- py&
-V~Q{
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -6081,35 +6085,40 @@ V~Q{
 	<key>cdhashes</key>
 	<array>
 		<data>
-		cHkmnyIymzGJBTQybcUaZKKn3A8=
+		Jo1VhdgFVD69afaMTHII/AcXXc8=
 		</data>
 	</array>
 </dict>
 </plist>
-D~*:m
-}_jf.
-/&X	
-:Uk$ZD
-H_2g
-20Hw5Dt
-Sgg9
-20240524204455Z0
+(kBU
+b>XT
+#!CE
++NH'
+;.UI
+@=`[
+20240527183401Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240502203557Z
-240613203556Z0B1
-Timestamp Signer NWK21
+240502205015Z
+240613205014Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-5.$r
->fPRh
-_#/%>+
+xRE$I
+Bd|) '{J
+k)pI
+\l5N
+M0&e
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-@(5p
+6E  
+Ga	L
+MKU0
+'p/{t
+9EC8
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -6148,8 +6157,7 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240524204455Z0#
-p~kd
-pC)t
-cU6Q]
->4:TYq
+240527183401Z0#
+[Y>L
+x_YV
+n{z4W{L!,

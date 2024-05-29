@@ -550,6 +550,7 @@ message CInputMouseMotionMsg {
 message CInputMouseWheelMsg {
 	optional uint32 input_mark = 1;
 	required .EStreamMouseWheelDirection direction = 2 [default = k_EStreamMouseWheelUp];
+	optional float amount = 3 [default = 1];
 }
 
 message CInputMouseDownMsg {

@@ -1023,6 +1023,8 @@ enum EMsg {
 	k_EMsgClientRequestMachineAuth = 5541;
 	k_EMsgClientRequestMachineAuthResponse = 5542;
 	k_EMsgClientScreenshotsChanged = 5543;
+	k_EMsgClientLaunchClientApp = 5544;
+	k_EMsgClientLaunchClientAppResponse = 5545;
 	k_EMsgClientGetCDNAuthToken = 5546;
 	k_EMsgClientGetCDNAuthTokenResponse = 5547;
 	k_EMsgClientDownloadRateStatistics = 5548;
@@ -1059,8 +1061,8 @@ enum EMsg {
 	k_EMsgClientCommentNotifications = 5582;
 	k_EMsgClientRequestCommentNotifications = 5583;
 	k_EMsgClientPersonaChangeResponse = 5584;
-	k_EMsgClientRequestWebAPIAuthenticateUserNonce = 5585;
-	k_EMsgClientRequestWebAPIAuthenticateUserNonceResponse = 5586;
+	k_EMsgClientRequestWebAPIAuthenticateUserNonce_Deprecated = 5585;
+	k_EMsgClientRequestWebAPIAuthenticateUserNonceResponse_Deprecated = 5586;
 	k_EMsgClientPlayerNicknameList = 5587;
 	k_EMsgAMClientSetPlayerNickname = 5588;
 	k_EMsgAMClientSetPlayerNicknameResponse = 5589;
@@ -1108,9 +1110,6 @@ enum EMsg {
 	k_EMsgMDSGetDepotManifest = 5829;
 	k_EMsgMDSGetDepotManifestResponse = 5830;
 	k_EMsgMDSGetDepotManifestChunk = 5831;
-	k_EMsgMDSGetDepotChunk = 5832;
-	k_EMsgMDSGetDepotChunkResponse = 5833;
-	k_EMsgMDSGetDepotChunkChunk = 5834;
 	k_EMsgMDSToCSFlushChunk = 5844;
 	k_EMsgMDSMigrateChunk = 5847;
 	k_EMsgMDSMigrateChunkResponse = 5848;
@@ -1405,6 +1404,12 @@ enum EMsg {
 	k_EMsgClientUnlockHEVCResponse_OBSOLETE = 9514;
 	k_EMsgRemoteClientStatusRequest = 9515;
 	k_EMsgRemoteClientStatusResponse = 9516;
+	k_EMsgRemoteClientAuthorizationRequest = 9517;
+	k_EMsgRemoteClientAuthorizationResponse = 9518;
+	k_EMsgRemoteClientAuthorizationCancelRequest = 9519;
+	k_EMsgRemoteClientAuthorizationConfirmed = 9520;
+	k_EMsgRemoteClientProofRequest = 9521;
+	k_EMsgRemoteClientProofResponse = 9522;
 	k_EMsgClientConcurrentSessionsBase = 9600;
 	k_EMsgClientPlayingSessionState = 9600;
 	k_EMsgClientKickPlayingSession = 9601;

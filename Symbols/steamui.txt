@@ -65,6 +65,7 @@
  CFErrorGetCode
  CFGetTypeID
  CFLocaleCopyCurrent
+ CFMakeCollectable
  CFNetworkCopyProxiesForAutoConfigurationScript
  CFNetworkCopyProxiesForURL
  CFNotificationCenterGetLocalCenter
@@ -92,6 +93,7 @@
  CFStringCreateWithCString
  CFStringCreateWithFormat
  CFStringGetCString
+ CFStringGetCStringPtr
  CFStringGetFileSystemRepresentation
  CFStringGetTypeID
  CFURLCopyFileSystemPath
@@ -174,9 +176,26 @@
  CGRegisterScreenRefreshCallback
  CGUnregisterScreenRefreshCallback
  CGWindowListCopyWindowInfo
+ CMBlockBufferCreateContiguous
+ CMBlockBufferGetDataPointer
+ CMBlockBufferIsRangeContiguous
+ CMSampleBufferGetDataBuffer
+ CMSampleBufferGetFormatDescription
+ CMSampleBufferGetImageBuffer
+ CMTimeMake
+ CMVideoFormatDescriptionGetH264ParameterSetAtIndex
+ CMVideoFormatDescriptionGetHEVCParameterSetAtIndex
  CStringNormalization::ValidateStatics(CValidator&, char const*)
  CTier0::ValidateGlobals(CValidator&)
  CURLUtils::ValidateStatics(CValidator&, char const*)
+ CVBufferRelease
+ CVPixelBufferCreateWithIOSurface
+ CVPixelBufferGetBaseAddressOfPlane
+ CVPixelBufferGetBytesPerRowOfPlane
+ CVPixelBufferGetIOSurface
+ CVPixelBufferLockBaseAddress
+ CVPixelBufferPoolCreatePixelBuffer
+ CVPixelBufferUnlockBaseAddress
  CVProfile_ExitScope
  Camellia_DecryptBlock_Rounds
  Camellia_Ekeygen
@@ -207,15 +226,9 @@
  D typeinfo for bool (char const*)
  D typeinfo for std::__1::__basic_string_common<true>
  D typeinfo for std::__1::__function::__base<bool (char const*)>
- D typeinfo for std::__1::__function::__base<int ()>
- D typeinfo for std::__1::__function::__base<unsigned int ()>
  D typeinfo for std::__1::__function::__base<void ()>
- D typeinfo for std::__1::__function::__base<void (bool const&)>
- D typeinfo for std::__1::__function::__base<void (float const&)>
  D typeinfo for std::__1::__function::__base<void (float)>
- D typeinfo for std::__1::__function::__base<void (int const&)>
  D typeinfo for std::__1::__function::__base<void (int, int, int, int, double, double, char const*)>
- D typeinfo for std::__1::__function::__base<void (unsigned long long const&)>
  D typeinfo for std::__1::bad_function_call
  D typeinfo for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D typeinfo for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
@@ -306,9 +319,11 @@
  IOSurfaceGetBytesPerRow
  IOSurfaceGetBytesPerRowOfPlane
  IOSurfaceGetHeight
+ IOSurfaceGetID
  IOSurfaceGetWidth
  IOSurfaceIncrementUseCount
  IOSurfaceLock
+ IOSurfaceLookup
  IOSurfaceUnlock
  InitCpuFlags
  InterpolateRow_AVX2
@@ -366,6 +381,10 @@
  OBJC_CLASS_$_NSUserDefaults
  OBJC_CLASS_$_NSWindow
  OBJC_CLASS_$_NSWorkspace
+ OBJC_CLASS_$_SCContentFilter
+ OBJC_CLASS_$_SCShareableContent
+ OBJC_CLASS_$_SCStream
+ OBJC_CLASS_$_SCStreamConfiguration
  OBJC_METACLASS_$_NSMenuItem
  OBJC_METACLASS_$_NSObject
  OSAtomicAdd32Barrier
@@ -402,15 +421,9 @@
  R typeinfo name for bool (char const*)
  R typeinfo name for std::__1::__basic_string_common<true>
  R typeinfo name for std::__1::__function::__base<bool (char const*)>
- R typeinfo name for std::__1::__function::__base<int ()>
- R typeinfo name for std::__1::__function::__base<unsigned int ()>
  R typeinfo name for std::__1::__function::__base<void ()>
- R typeinfo name for std::__1::__function::__base<void (bool const&)>
- R typeinfo name for std::__1::__function::__base<void (float const&)>
  R typeinfo name for std::__1::__function::__base<void (float)>
- R typeinfo name for std::__1::__function::__base<void (int const&)>
  R typeinfo name for std::__1::__function::__base<void (int, int, int, int, double, double, char const*)>
- R typeinfo name for std::__1::__function::__base<void (unsigned long long const&)>
  R typeinfo name for std::__1::bad_function_call
  R typeinfo name for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  R typeinfo name for std::__1::basic_ostringstream<wchar_t, std::__1::char_traits<wchar_t>, std::__1::allocator<wchar_t> >
@@ -1394,6 +1407,11 @@
  ThreadTerminateProcessCode
  VProfInternalEnterScopeCurrentThread
  VProfInternalGetProfileForCurrentThread
+ VTCompressionSessionCreate
+ VTCompressionSessionEncodeFrameWithOutputHandler
+ VTCompressionSessionGetPixelBufferPool
+ VTCompressionSessionInvalidate
+ VTSessionSetProperty
  V_AppendParamToURL
  V_AppendSlash
  V_BuildSortTitle
@@ -1500,6 +1518,7 @@
  _SpewMessageType
  _Unwind_Resume
  __CFConstantStringClassReference
+ __NSArray0__
  __assert_rtn
  __bzero
  __cxa_allocate_exception
@@ -1606,9 +1625,13 @@
  dispatch_group_async_f
  dispatch_group_create
  dispatch_group_wait
+ dispatch_once_f
  dispatch_queue_create
  dispatch_release
  dispatch_resume
+ dispatch_semaphore_create
+ dispatch_semaphore_signal
+ dispatch_semaphore_wait
  dispatch_set_context
  dispatch_source_cancel
  dispatch_source_create
@@ -1747,6 +1770,7 @@
  kCFAllocatorMalloc
  kCFAllocatorNull
  kCFBooleanFalse
+ kCFBooleanTrue
  kCFPreferencesAnyApplication
  kCFPreferencesAnyHost
  kCFPreferencesCurrentUser
@@ -1773,6 +1797,14 @@
  kCGWindowName
  kCGWindowNumber
  kCGWindowOwnerPID
+ kCMTimeInvalid
+ kCVImageBufferColorPrimaries_ITU_R_709_2
+ kCVImageBufferTransferFunction_ITU_R_709_2
+ kCVImageBufferYCbCrMatrix_ITU_R_601_4
+ kCVImageBufferYCbCrMatrix_ITU_R_709_2
+ kCVPixelBufferIOSurfacePropertiesKey
+ kCVPixelBufferOpenGLCompatibilityKey
+ kCVPixelBufferPixelFormatTypeKey
  kIOMasterPortDefault
  kIOSurfaceBytesPerElement
  kIOSurfaceBytesPerRow
@@ -1785,6 +1817,20 @@
  kRgbH709Constants
  kRgbI601Constants
  kRgbJPEGConstants
+ kVTCompressionPropertyKey_AllowFrameReordering
+ kVTCompressionPropertyKey_AverageBitRate
+ kVTCompressionPropertyKey_ColorPrimaries
+ kVTCompressionPropertyKey_DataRateLimits
+ kVTCompressionPropertyKey_MaxKeyFrameIntervalDuration
+ kVTCompressionPropertyKey_ProfileLevel
+ kVTCompressionPropertyKey_RealTime
+ kVTCompressionPropertyKey_TransferFunction
+ kVTCompressionPropertyKey_YCbCrMatrix
+ kVTEncodeFrameOptionKey_ForceKeyFrame
+ kVTProfileLevel_H264_Baseline_AutoLevel
+ kVTProfileLevel_H264_Main_AutoLevel
+ kVTProfileLevel_HEVC_Main_AutoLevel
+ kVTVideoEncoderSpecification_RequireHardwareAcceleratedVideoEncoder
  kYuvF709Constants
  kYuvH709Constants
  kYuvI601Constants
@@ -1859,6 +1905,7 @@
  nghttp2_submit_settings
  nghttp2_submit_window_update
  objc_alloc
+ objc_autorelease
  objc_autoreleasePoolPop
  objc_autoreleasePoolPush
  objc_enumerationMutation
@@ -1933,6 +1980,7 @@
  recvmsg
  remove
  rename
+ rewind
  rindex
  rmdir
  round

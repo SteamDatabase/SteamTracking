@@ -56,7 +56,7 @@
 "Steam_AccountName"	"Hesap adı"
 "Steam_Twofactor_Code"			"Steam Guard Kodu"
 "Steam_ErrorLoginNeedTwoFactor" "Lütfen geçerli Steam Guard Kimlik Doğrulayıcı kodunuzu giriniz."
-"Steam_ErrorLoginBadTwoFactor" "Bu iki faktör kodu geçersiz.\nLütfen geçerli Steam Guard Kimlik Doğrulayıcı kodunuzu giriniz."
+"Steam_ErrorLoginBadTwoFactor" "Bu iki aşamalı doğrulama kodu geçersiz.\nLütfen geçerli Steam Guard Kimlik Doğrulayıcı kodunuzu giriniz."
 
 "SteamGuardBanner"				"Intel® Kimlik Koruma Teknolojisi destekli Steam Guard"
 "LoginIPTNotDetected"			"2. Nesil Intel® Core™ İşlemci tespit edilmedi.\nBu hesap başka bir bilgisayarda kullanılamayabilir."

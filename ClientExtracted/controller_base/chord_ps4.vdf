@@ -32,6 +32,56 @@
 					}
 				}
 			}
+			"button_b"
+			{
+				"activators"
+				{
+					"Long_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action quit_application"
+						}
+						"settings"
+						{
+							"long_press_time"		"2400"
+						}
+					}
+					"Start_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action empty_binding"
+						}
+					}
+				}
+			}
+			"button_x"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action SHOW_KEYBOARD"
+						}
+					}
+				}
+			}
+			"button_a"
+			{
+				"activators"
+				{
+					"full_press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action system_key_1"
+						}
+					}
+				}
+			}
 		}
 	}
 	"group"
@@ -40,6 +90,23 @@
 		"mode"		"trigger"
 		"inputs"
 		{
+			"edge"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action toggle_magnifier"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
+				}
+			}
 		}
 	}
 	"group"
@@ -73,6 +140,23 @@
 		"mode"		"absolute_mouse"
 		"inputs"
 		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"mouse_button LEFT"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
 		}
 	}
 	"group"
@@ -190,6 +274,12 @@
 					}
 				}
 			}
+			"dpad_east"
+			{
+			}
+			"dpad_west"
+			{
+			}
 		}
 		"settings"
 		{
@@ -215,6 +305,38 @@
 		"mode"		"dpad"
 		"inputs"
 		{
+			"dpad_north"
+			{
+				"activators"
+				{
+					"full_press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action gr_marker"
+						}
+					}
+				}
+			}
+			"dpad_south"
+			{
+				"activators"
+				{
+					"full_press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action gr_toggle"
+						}
+					}
+				}
+			}
+			"dpad_east"
+			{
+			}
+			"dpad_west"
+			{
+			}
 		}
 		"settings"
 		{
@@ -250,11 +372,11 @@
 			{
 				"activators"
 				{
-					"Full_Press"
+					"full_press"
 					{
 						"bindings"
 						{
-							"binding"		"controller_action SHOW_KEYBOARD"
+							"binding"		"controller_action gr_toggle"
 						}
 					}
 				}
@@ -321,12 +443,12 @@
 		{
 			"7"		"switch active"
 			"0"		"button_diamond active"
-			"8"		"right_trackpad active"
+			"8"		"center_trackpad active"
 			"9"		"joystick active"
 			"4"		"left_trigger active"
 			"5"		"right_trigger active"
-			"10"		"right_joystick active"
-			"11"		"dpad active"
+			"10"	"right_joystick active"
+			"11"	"dpad active"
 		}
 	}
 	"settings"

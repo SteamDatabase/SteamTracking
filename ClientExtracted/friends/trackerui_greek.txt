@@ -477,7 +477,7 @@
 
 "Friends_ChatPasswordWarning_Title"		"Συναργερμός: Ασφάλεια λογαριασμού σε κίνδυνο"
 "Friends_ChatPasswordWarning_Info"			"Προσοχή: πρόκειται να μοιραστείτε τον κωδικό σας."
-"Friends_ChatPasswordWarning_Info2"		"Η Υποστήριξη Steam δεν θα χρειαστεί ποτέ τον κωδικό σας για οποιοδήποτε λόγο. Μοιράζοντας τον κωδικό σας, μπορεί να χάσετε τον λογαριασμό Steam σας και όλα σας τα παιχνίδια!\n\nΘέλετε σίγουρα να μοιραστείτε αυτή την πληροφορία;"
+"Friends_ChatPasswordWarning_Info2"		"Η Υποστήριξη Steam δεν θα χρειαστεί ποτέ τον κωδικό σας για οποιοδήποτε λόγο. Κοινοποιώντας τον κωδικό σας, μπορεί να χάσετε τον λογαριασμό Steam σας και όλα σας τα παιχνίδια!\n\nΘέλετε σίγουρα να κοινοποιήσετε αυτήν την πληροφορία;"
 "Friends_ChatPasswordWarning_Continue"		"Ναι, αποστολή του μηνύματος συνομιλίας μου"
 "Friends_ChatPasswordWarning_DontSend"		"Όχι, να μη σταλθεί"
 
@@ -736,7 +736,7 @@
 "Steam_Settings_Broadcast_RecordSystemAudio" "Καταγραφή ήχου από όλες τις εφαρμογές σε αυτόν τον υπολογιστή"
 "Steam_Settings_Broadcast_RecordMic" "Εγγραφή του μικροφώνου μου"
 "Steam_Settings_Broadcast_ConfigMic" "Διαμόρφωση μικροφώνου"
-"Steam_Settings_Broadcast_EnableHardwareSupport" "Ενεργοποίση υποστήριξης hardware *"
+"Steam_Settings_Broadcast_EnableHardwareSupport" "Ενεργοποίηση υποστήριξης υλισμικού *"
 "Steam_Settings_Broadcast_ShowDebugInfo" "Εμφάνιση στατιστικών μεταφόρτωσης"
 "Steam_Settings_Broadcast_ShowReminderBanner" "Πάντα να εμφανίζεται η κατάσταση Ζωντανά"
 "Steam_Settings_Broadcast_ShowChat" "Εμφάνιση της συνομιλίας θεατών εντός παιχνιδιού:"

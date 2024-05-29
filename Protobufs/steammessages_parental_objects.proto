@@ -1,0 +1,72 @@
+import "steammessages_base.proto";
+import "enums.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = true;
+option (force_php_generation) = true;
+
+message ParentalApp {
+	optional uint32 appid = 1;
+	optional bool is_allowed = 2;
+}
+
+message ParentalPlaytimeDay {
+	optional uint64 allowed_time_windows = 1;
+	optional uint32 allowed_daily_minutes = 2;
+}
+
+message ParentalPlaytimeRestrictions {
+	optional bool apply_playtime_restrictions = 2;
+	repeated .ParentalPlaytimeDay playtime_days = 15;
+}
+
+message ParentalTemporaryPlaytimeRestrictions {
+	optional .ParentalPlaytimeDay restrictions = 1;
+	optional uint32 rtime_expires = 2;
+}
+
+message ParentalSettings {
+	optional fixed64 steamid = 1;
+	optional uint32 applist_base_id = 2;
+	optional string applist_base_description = 3;
+	repeated .ParentalApp applist_base = 4;
+	repeated .ParentalApp applist_custom = 5;
+	optional uint32 passwordhashtype = 6;
+	optional bytes salt = 7;
+	optional bytes passwordhash = 8;
+	optional bool is_enabled = 9;
+	optional uint32 enabled_features = 10;
+	optional string recovery_email = 11;
+	optional bool is_site_license_lock = 12;
+	optional uint32 temporary_enabled_features = 13;
+	optional uint32 rtime_temporary_feature_expiration = 14;
+	optional .ParentalPlaytimeRestrictions playtime_restrictions = 15;
+	optional .ParentalTemporaryPlaytimeRestrictions temporary_playtime_restrictions = 16;
+	repeated uint32 excluded_store_content_descriptors = 17;
+	repeated uint32 excluded_community_content_descriptors = 18;
+	repeated uint32 utility_appids = 19;
+}
+
+message ParentalFeatureRequest {
+	optional fixed64 requestid = 1;
+	optional fixed64 family_groupid = 2;
+	optional fixed64 steamid = 3;
+	optional uint32 features = 4;
+	optional uint32 time_requested = 5;
+	optional bool approved = 6;
+	optional fixed64 steamid_responder = 7;
+	optional uint32 time_responded = 8;
+}
+
+message ParentalPlaytimeRequest {
+	optional fixed64 requestid = 1;
+	optional fixed64 family_groupid = 2;
+	optional fixed64 steamid = 3;
+	optional .ParentalPlaytimeDay current_playtime_restrictions = 4;
+	optional uint32 time_expires = 5;
+	optional uint32 time_requested = 6;
+	optional bool approved = 7;
+	optional fixed64 steamid_responder = 8;
+	optional uint32 time_responded = 9;
+	optional .ParentalTemporaryPlaytimeRestrictions restrictions_approved = 10;
+}

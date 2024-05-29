@@ -105,7 +105,6 @@
 		"enabled"		"1"
 		"tabPosition"		"0"
 		"paintbackground"		"1"
-		"labelText"		"#FileOpenDialog_Open"
 		"textAlignment"		"west"
 		"wrap"		"0"
 		"Default"		"0"

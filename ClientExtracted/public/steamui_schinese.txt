@@ -2109,6 +2109,7 @@
 "Steam_BackgroundDownloadsAllow"	"始终允许后台下载"
 "Steam_BackgroundDownloadsDeny"	"从不允许后台下载"
 
+// NOTE: no longer referenced, old vgui?
 "Steam_GameProperties_SteamInputSettings"	"Steam 输入设置"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "按游戏对 Steam 输入进行设置（游戏需要重启）"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "强制关闭"

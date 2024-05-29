@@ -3119,11 +3119,12 @@ steam://open/library/shared-apps/${}
 steam://open/library/view/home
 steam://open/library/view/soundtracks
 steam://open/library/view/tools
+steam://open/media
 steam://open/minigameslist
 steam://open/newforyou
 steam://open/runtimeinfo
 steam://open/screenshots
-steam://open/screenshots/${}
+steam://open/screenshots${}
 steam://open/servers
 steam://open/settings
 steam://open/settings/audio

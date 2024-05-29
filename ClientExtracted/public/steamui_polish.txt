@@ -2107,6 +2107,7 @@ Aby dokonane zmiany zostały uwzględnione, konieczne będzie wylogowanie się z
 "Steam_BackgroundDownloadsAllow"	"Zawsze zezwalaj na pobieranie w tle"
 "Steam_BackgroundDownloadsDeny"	"Nie zezwalaj na pobieranie w tle"
 
+// NOTE: no longer referenced, old vgui?
 "Steam_GameProperties_SteamInputSettings"	"Ustawienia Steam Input"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Ustawienie Steam Input zależnie od gry (wymaga ponownego uruchomienia gry)"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "Wymuszone wył."
@@ -2794,7 +2795,7 @@ Aby dokonane zmiany zostały uwzględnione, konieczne będzie wylogowanie się z
 "Steam_LaunchOption_Editor"						"Uruchom edytor gry"
 "Steam_LaunchOption_Config"						"Uruchom narzędzie konfiguracyjne"
 "Steam_LaunchOption_Manual"						"Pokaż instrukcję"
-"Steam_LaunchOption_Benchmark"				"Uruchom benchmark"
+"Steam_LaunchOption_Benchmark"				"Uruchom test wydajności"
 
 
 
@@ -4834,7 +4835,7 @@ zaktualizować system do wersji Mac OS X 10.7 lub wyższej."
 "RescueDialog_RestartSteam" "Zrestartuj Steam."
 "RescueDialog_RestartSteam_NoGPU" "Zrestartuj Steam z wyłączoną akceleracją GPU."
 "RescueDialog_RestartSteam_NoSandbox" "Zrestartuj Steam z wyłączonym trybem izolacji przeglądarki."
-"RescueDialog_RestartSteamWebHelper" "Zrestartuj steamwebhelper"
+"RescueDialog_RestartSteamWebHelper" "Zrestartuj steamwebhelper."
 "RescueDialog_ExitSteam" "Wyjdź ze Steam."
 
 "DownloadRegion_default"				 "Nieznany"

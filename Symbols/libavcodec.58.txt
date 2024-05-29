@@ -62,6 +62,7 @@
  I av_fifo_alloc_array
  I av_fifo_drain
  I av_fifo_freep
+ I av_fifo_generic_read
  I av_fifo_generic_write
  I av_fifo_realloc2
  I av_fifo_size
@@ -161,12 +162,14 @@
  I av_strtok
  I av_video_enc_params_create_side_data
  I avpriv_float_dsp_alloc
+ I avpriv_init_lls
  I avpriv_report_missing_feature
  I avpriv_request_sample
  I avpriv_set_systematic_pal2
  I avpriv_slicethread_create
  I avpriv_slicethread_execute
  I avpriv_slicethread_free
+ I avpriv_solve_lls
  R av_codec_ffversion
  R avpriv_ac3_channel_layout_tab
  R avpriv_mpa_bitrate_tab
@@ -396,6 +399,7 @@
  __bzero
  __divdi3
  __error
+ __isfinited
  __memcpy_chk
  __memset_chk
  __moddi3
@@ -412,6 +416,7 @@
  atan
  atan2f
  atanf
+ atoi
  av_bprint_clear
  av_bprint_finalize
  av_bprint_get_buffer
@@ -453,6 +458,7 @@
  av_fifo_alloc_array
  av_fifo_drain
  av_fifo_freep
+ av_fifo_generic_read
  av_fifo_generic_write
  av_fifo_realloc2
  av_fifo_size
@@ -552,21 +558,26 @@
  av_strtok
  av_video_enc_params_create_side_data
  avpriv_float_dsp_alloc
+ avpriv_init_lls
  avpriv_report_missing_feature
  avpriv_request_sample
  avpriv_set_systematic_pal2
  avpriv_slicethread_create
  avpriv_slicethread_execute
  avpriv_slicethread_free
+ avpriv_solve_lls
  bsearch
  calloc
  cbrt
  cbrtf
+ ceilf
  cos
  cosf
  dyld_stub_binder
  exp
  exp2
+ exp2f
+ expf
  floor
  fprintf
  free
@@ -629,6 +640,7 @@
  qsort
  rand
  round
+ roundf
  semaphore_create
  semaphore_destroy
  semaphore_signal

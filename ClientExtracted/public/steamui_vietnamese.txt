@@ -1324,7 +1324,7 @@ Công đoạn này nên hoàn thành dưới một phút."
 "Steam_UpdateNews_Title"	"Steam - Tin cập nhật"
 "Steam_SettingsNotification_Info"	"Báo cho tôi (bằng tin nhắn tức thì của Steam) về những thay đổi hoặc bổ sung tới:"
 "Steam_SettingsNotification_MyGames"	"Trò chơi của tôi"
-"Steam_SettingsNotification_UpcomingReleases"	"Sắp và mới ra mắt"
+"Steam_SettingsNotification_UpcomingReleases"	"Phát hành mới và sắp ra mắt"
 "Steam_PurchaseError_HardwarePromoAlreadyOwned" "Bạn đã sử dụng ưu đãi %subscription% trên tài khoản Steam này."
 
 "Steam_GamesDialog_RightClick_UpdateNews"	"Xem tin tức"
@@ -2108,6 +2108,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_BackgroundDownloadsAllow"	"Luôn luôn cho phép tải xuống ngầm"
 "Steam_BackgroundDownloadsDeny"	"Không bao giờ cho phép tải xuống ngầm"
 
+// NOTE: no longer referenced, old vgui?
 "Steam_GameProperties_SteamInputSettings"	"Thiết lập Steam Input"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Thiết lập Steam Input theo từng trò chơi (Cần phải khởi động lại trò chơi)"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "Bắt buộc tắt"
@@ -3201,7 +3202,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_ContentBetaOptOutOK"	"Hủy đăng ký nội dung beta thành công."
 "Steam_ContentBetaOptOutProblem"	"Đã có vấn đề phát sinh khi thoát ra khỏi nội dung beta."
 
-"Steam_Settings_NotifyMeWithSteamInstantMessages"	"Thông báo cho tôi về các phụ mục hoặc thay đổi với trò chơi của tôi, các sản phẩm mới và sắp ra mắt."
+"Steam_Settings_NotifyMeWithSteamInstantMessages"	"Thông báo cho tôi về các bổ sung hoặc thay đổi cho trò chơi của tôi, phát hành mới và sắp ra mắt."
 "Steam_Settings_DownloadsTitle"	"Tải xuống"
 "Steam_Settings_CloudTitle"	"Cloud"
 "Steam_Settings_FamilyTitle" "Gia đình"
@@ -3819,7 +3820,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "steam_NonSteam_OpenVR"		"Ứng dụng OpenVR"
 "steam_NonSteamMessage"		"Một vài thông tin chi tiết trên %gamename% không tồn tại bởi vì đây là bản mod hoặc lối tắt ngoài Steam. Steam vẫn sẽ quản lý việc khởi động trò chơi cho bạn và trong hầu hết mọi trường hợp, lớp phủ sẽ vẫn tồn tại trong trò chơi."
 "steam_NonSteamMessage_OpenVR"	"Bởi vì %gamename% không phải là ứng dụng Steam OpenVR, một số thông tin chi tiết sẽ không có sẵn. Tuy vậy, Steam vẫn sẽ khởi động ứng dụng cho bạn."
-"steam_welcome$apptype=game"			"Thông tin sản phẩm"
+"steam_welcome$apptype=game"			"Thông tin trò chơi"
 "steam_welcome$apptype=application"			"Thông tin ứng dụng"
 "steam_welcome$apptype=music"			"Thông tin nhạc"
 "steam_welcome$apptype=video"			"Thông tin video"

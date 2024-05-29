@@ -2103,6 +2103,7 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "Steam_BackgroundDownloadsAllow"	"Permitir siempre descargas en segundo plano"
 "Steam_BackgroundDownloadsDeny"	"No permitir nunca descargas en segundo plano"
 
+// NOTE: no longer referenced, old vgui?
 "Steam_GameProperties_SteamInputSettings"	"Configuración de Steam Input"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Ajustes de Steam Input por juego (requiere reiniciar el juego)"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "Desactivación forzosa"

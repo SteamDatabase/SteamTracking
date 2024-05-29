@@ -33,6 +33,14 @@ enum ETokenRenewalType {
 	k_ETokenRenewalType_Allow = 1;
 }
 
+enum EAuthenticationType {
+	k_EAuthenticationType_Unknown = 0;
+	k_EAuthenticationType_Password = 1;
+	k_EAuthenticationType_QR = 2;
+	k_EAuthenticationType_AccountCreation = 3;
+	k_EAuthenticationType_GuestAccount = 4;
+}
+
 enum EAuthTokenRevokeAction {
 	k_EAuthTokenRevokeLogout = 0;
 	k_EAuthTokenRevokePermanent = 1;
@@ -216,6 +224,7 @@ message CAuthentication_RefreshToken_Enumerate_Response {
 		optional .CAuthentication_RefreshToken_Enumerate_Response.TokenUsageEvent first_seen = 9;
 		optional .CAuthentication_RefreshToken_Enumerate_Response.TokenUsageEvent last_seen = 10;
 		optional int32 os_type = 11;
+		optional .EAuthenticationType authentication_type = 12 [default = k_EAuthenticationType_Unknown];
 	}
 
 	repeated .CAuthentication_RefreshToken_Enumerate_Response.RefreshTokenDescription refresh_tokens = 1;

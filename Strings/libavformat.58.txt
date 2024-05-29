@@ -44,7 +44,7 @@ ffffff.
 USWV
 ^_[]
 ffff.
-ffffff.
+fffff.
 fffff.
 USWV
 ^_[]
@@ -88,6 +88,39 @@ T$H;P4
 ^_[]
 =IEND
 =fcTL
+ffff.
+USWV
+D$`1
++D$ 
++L$ 
+EL$$
+L^_[]
+ffffff.
+USWV
+fff.
+ED$0
+ffff.
+fffff.
+^_[]
+USWV
+L$4	
+<^_[]
+USWV
+^_[]
+USWV
+D$$9
+#|$$
+fffff.
+fff.
+N9t$
+|$$t
+,^_[]
+fffff.
+USWV
+L$<	
+\$R	
+L$T	
+l^_[]
 USWV
 ffff.
 fffff.
@@ -321,6 +354,111 @@ USWV
 T$$v
 ^_[]
 USWV
+^_[]
+USWV
+;|$h
+D\$P
+l$xE1
+	we@
+fffff.
+;\$hrY
+|^_[]
+USWV
+L$,1
+L$0A
+^_[]
+USWV
+M0uD
+l$x)
+L$d+
+D$P+8
+T$P+
+9D$d
+9T$p
+9D$d
+9T$p
+l$p)
+t$d	
+t$p9
+D$Lf
+styp
+msdh
+msdh
+msix
+L$tu
+^_[]
+USWV
+D$,1
+D$(f
+D$<i
+|$@tK
+l$$tN
+^_[]
+fff.
+USWV
+99u)
+fffff.
+}&B1
+t$P1
+3t$L	
+L$x)
+D$L9D$P
+D$4+D$x
+H0;L>@~
+@4;D>D
+^_[]
+USWV
+|$0;O
+^_[]
+USWV
+@<iK
+L^_[]
+fff.
+ ^_[
+USWV
+mp4v
+mp4a
+;D$xu
+|^_[]
+fff.
+USWV
+^_[]
+t*Ht
+USWV
+ffffff.
+sidx
+ffff.
+fff.
+0&amp
+0&lt;
+Pfff.
+0&gt;
+0&quo
+0&apo
+D$`1
+ffff.
+ffffff.
+fffff.
+^_[]
+USWV
+;D$ s
+^_[]
+USWV
+;D$hu
+l^_[]
+ ^_[
+USWV
+t$|)
+L$|;
+\$|9
+T$p1
+^D$X
+ED$d
+\$|C
+|$lt 
+l$Lt
+^_[]
+USWV
 fff.
 t$,1
 ffff.
@@ -380,6 +518,7 @@ l$\E;l$H
 USWV
 $ffff.
 ^_[]
+fLaC
 ~d;z
 ffffff.
 USWV
@@ -516,6 +655,108 @@ ffffff.
 L$@;A
 ^_[]
 USWV
+^_[]
+USWV
+|$(1
+Lffffff.
+D$ 1
+,^_[]
+USWV
+^_[]
+USWV
+)D$`
+)D$P
+D$n1
+t$8f
+|$pk
+|$pk
+L$Lf
+L$8w
+D$b=
+t$<u
+L$Lk
+D$pf
+T$n9
+fff.
+!u"f
+-ffff.
+D$p1
+\$Lk
+D$pf
+T$n9
+L$pk
+L$n9
+^_[]
+USWV
+u	@9
+L$09
+L$09
+@;D$
+D$09
+T$$1
+fffff.
+fffff.
+(ffffff.
+L$0A;L$,
+T$(B
+L$09
+L$09
+L$09
+L$09
+L$09
+L$,9
+L$,9
+L$,9
+t$0w
+%fff.
+t$,w
+L$09
+D$0;T$(
+T$,B
+8C;\$ 
+T$$B
+D$09
+D$09
+D$09
+L$0B9
+\$(t:
+ffff.
+T$0)
+D$09
+D$09
+D$09
+D$,@;D$
+D$09
+D$09
+^_[]
+fffff.
+USWV
+H^_[]
+fffff.
+USWV
+T$ 	
+T$Hw
+L$ !O
+;D$ 
+;T$ 
+\$HF9
+t{fff.
+ABKu
+4^_[]
+0fffff.
+USWV
+^_[]
+fffff.
+USWV
+^_[]
+USWV
+^_[]
+USWV
+^_[]
+fff.
+ ^_[
+USWV
++D$t
 ^_[]
 USWV
 ffff.
@@ -742,6 +983,302 @@ D$<ff.
 D$D;8
 ^_[]
 USWV
+^_[]
+USWV
+t$P1
+ffffff.
+xBG	
+fff.
+|$<	t$`fff.
+\$H~.N
+ffff.
+ffff.
+xDG	
+t$Xffffff.
+xDG	
+t$Xffffff.
+9D$X
+L$XG;}
+|$@9
+L$X9
+T$H9
+)ffff.
+9\$L
+9\$X
+9\$d
+L$ 1
+kD$LL
+D$d)
+fff.
+l$H9
+L$LA
+u6fffff.
+D$41
+D$Xk
+t$@+D$`
+D$@)
+fffff.
+T$XB
+D$X1
+t$P~
+^_[]
+USWV
+G8#G<
+T5<t
+G8#G<
+^_[]
+fffff.
+USWV
+F8#F<
+\$l~;f.
+|$|~
+ffffff.
+;D$L
+D$h1
+l$lxPG
+t$h1
+fffff.
+l$lxPG
+\$d~0
+t$h1
+ffff.
+l$lxPG
+\$d~0
+ffffff.
+ffff.
+\$h~9
+t$x)
+fffff.
+$;|$H
+t$ts
+3D$P
+3L$T
+fff.
+ffff.
+^_[]
+T$8)
+L$8+N,
+USWV
+%fffff.
+|$,t	
+ffffff.
+T$@t
+3|$D	
+t$4f
+|$<k
+D$8@
+kL$<L
+T$<B;U
+wffff.
+^_[]
+ffff.
+USWV
+C8#C<
+C8#C<
+l$d	
+\$h~?f.
+ffffff.
+t$h	
+L$L+H@
+|$p	
+^_[]
+USWV
+d+E,
+<^_[]
+USWV
+T$L1
+t	B1
+T$,1
+D$<1
+ffffff.
+L$d1
+l$hxPG
+\$`~0
+L$xff.
+ffffff.
+ffff.
+t$x~4
+L$tff.
+fff.
+ffff.
+ffff.
+T$lB
+L$L;
+^_[]
+fffff.
+USWV
+	T$(
+|$ ffffff.
+,^_[]
+USWV
+ffff.
+D$Dk
+D$(1
+l$(Gf
+T$<t4
+L$(1
+\$$~<fffff.
+|$<;
+L^_[]
+USWV
+D$<+D$@
+ffffff.
+\$pt
+*ffffff.
+D$@)
+D$<+D$4
+	D$@
+\^_[]
+USWV
+D$l1
+L$`+A@
+fff.
+l$h	
+\$t~5
+L$lfffff.
+l$t	
+ffffff.
+xDF	
+fffff.
+^_[]
+USWV
+xDF	
+|$$ffffff.
+;L$xu
+|^_[]
+USWV
+,^_[]
+d+F,
+x8G	
+fff.
+USWV
+t$H1
+T$X1
+t$@	|$hfff.
+L$L~6f.
+ffffff.
+xGE	
+t$hffffff.
+xGE	
+t$hffffff.
+|$`t@
+4ffff.
+D$hM
+D$P!
+T$@ffff.
+fff.
+l$,	|$hfff.
+\$0~>ffff.
+ffffff.
+fff.
+|$$	l$hfff.
+\$0~>ffff.
+\$`tg
+L$H1
+fff.
+|$4	t$hfff.
+\$@~>ffff.
+ffff.
+D$Pu	
+ffffff.
+fff.
+t$H	|$h
+\$4f
+l$H1
+l$Lt
++\$,
+9D$H
+D$L1
+T$H1
+ffff.
+fff.
+l$4	|$hN
+D$41
+T$0t
++\$(
+3\$h1
+l$4	|$hN
+\$@~1O
+ffff.
+fff.
+l$0	|$hfff.
+\$4~>ffff.
+ffff.
+fff.
+|$0	l$hfff.
+\$4~>ffff.
+l$`u2
+T$H1
+t$41
+|$$	l$hN
+\$0M
+3L$@
+T$01
+T$Hu
+l$0	|$hN
+\$4~1O
+l$0	|$hN
+\$4~1O
+L$41
+fff.
+l$$	|$hN
+\$0~1O
+L$@1
+ffffff.
+fff.
+l$0	|$hN
+l$$	|$hN
+\$0~1O
+L$@1
+l$0	|$hN
+\$4~1O
+L$Hf
+fff.
+|$4	t$hfff.
+\$@~8f.
+fff.
+|$4	t$hfff.
+\$@~4f.
+L$Hfffff.
+fff.
+|$4	t$hfff.
+\$@~4f.
+fff.
+|$4	t$hfff.
+\$@~4f.
+fff.
+l$0	|$hfff.
+\$4~>ffff.
+fff.
+l$0	|$hfff.
+\$4~>ffff.
+D$41
+fff.
+l$0	|$hfff.
+\$@~0f.
+D$H1
+fff.
+|$4	l$hfff.
+~4f.
+^D$@
+^D$@
+^D$@
+^D$@
+^D$@
+^D$@
+^D$@
+^D$@
+^D$@
+^D$@
++D$@
+fff.
+fff.
+xGF	
+l$hffffff.
+t$@)
+t$H)
+l$`u	
+\$`)
 ^_[]
 USWV
 9L$D
@@ -1530,6 +2067,799 @@ E;l$8
 USWV
 ^_[]
 USWV
+^,io
+\$4r
+`ivx
+`i52
+ai12
+aivx
+`i13
+ai52
+`i53
+ai13
+`i15
+ai53
+`i55
+ai15
+`i16
+ai55
+`i56
+ai16uu
+@Vin
+ai56u`
+`i1p
+AVinuK
+`i5p
+ai1p
+ai5pt
+ai1qu
+ai5q
+T$@t%
+T$@t
+D=`ivx
+=`i52
+ =ai12
+=aivx
+=`i13
+=ai52
+=`i53
+=ai13
+=`i15
+=ai53
+=`i55
+=ai15
+=`i16
+=ai55ut
+=`i56
+=ai16ua
+=@Vin
+=ai56uN
+=`i1p
+=AVinu;
+=`i5p
+=ai1p
+=ai5pt
+=ai1qu
+=ai5q
+L$<;A
+D=`ivx
+=`i52
+=ai12
+L$<;A
+=aivx
+=`i13
+=ai52
+=`i53
+=ai13
+=`i15
+=ai53
+=`i55
+=ai15t{
+=`i16
+=ai55th
+=`i56
+=ai16
+=@Vin
+=ai56
+7=`i1p
+=AVin
+)=`i5p
+=ai1p
+=ai5pt
+=ai1qu
+=ai5q
+L$<;A
+l$@ku
+L$<#A0=
+|$@k?<+D:
+\$4tb
+l$@kU
+|$P	
+D$D9
+D$$t
+\$0uO
+D$D1
+\$0uw
+\$0k
+DD$D
+xA;N
+|$T1
+l^_[]
+fff.
+USWV
+@,iO
+,^_[]
+fff.
+USWV
+^_[]
+fffff.
+USWV
+fffff.
+`ivx
+`i52
+ai12
+aivx
+`i13
+ai52
+`i53
+ai13
+`i15
+ai53
+`i55
+ai15
+`i16
+ai55u}
+`i56
+ai16uh
+@Vin
+ai56uS
+`i1p
+AVinu>
+`i5p
+ai1pu)
+ai5p
+ai1q
+ai5q
+V`uB
+mdat
+Dtmcd
+uuid
+ffffff.
+ffffff.
+F1@t&
+^_[]
+USWV
+T$0;J
+D$ f
+D$Lf
+nD$$f
+nL$(f
+\$01
+D$0;H
+|^_[]
+USWV
+)D$Pf
+)D$@f
+D$|f
+pD$@Pf
+pL$PPf
+F1 t
+t$8~)1
+mfra
+mdat
+tfra
+D$@1
+D$PG
+$;8|
+L$4A9
+mfro
+^_[]
+free
+USWV
+ffff.
+tmcdu
+)D$`1
+L$xt
+fff.
+fff.
+rtp 
+fffff.
+ffffff.
+m2v1
+xd5c
+xd5b
+AVdn
+AVdh
+dvc 
+dv5n
+raw 
+raw 9
+avci
+ai1p
+xdv3
+xdv2
+dvh5
+dvh6
+xd54
+xd55
+dv5p
+dvpp
+dvcp
+dvhq
+dvhp
+ai55
+ai56
+xdvc
+xdvb
+xdv4
+xdv5
+xd5d
+xd5e
+ai5p
+ai5q
+xd5a
+xdv6
+xdv7
+xdvd
+xdve
+ai15
+aivx
+xd5f
+ai1q
+xd51
+xd59
+ai53
+ai52
+xdva
+xdv1
+ai5q
+xdv8
+xdvf
+ai13
+ai12
+ai1p
+xdv9
+ai5p
+ai16
+(D$`
+lx4n
+mx3n
+lx5n
+mx4n
+lx3p
+mx5ntm
+mx3pt
+mx4pt
+mx5pu?
+9raw uG
+fff.
+ai53
+ai13
+@ffffff.
+^_[]
+fff.
+USWV
+tmcdu
+rtp u
+^_[]
+USWV
+D$`f
+D$Pf
+D$@f
+D+Dtext
+ftab
+t$ 1
+L$4)
+encd
+L$$A1
+|^_[]
+USWV
+D$41
+;D$$
+;t$ 
+D$4~9
++D$4
+L$41
+;L$Xu
+\^_[]
+USWV
+moov
+ffff.
+83t8
+lchap
+Q,iq
+rtp u$
+(hint
+A,iT
+x ;Q
+(fall
+|8Dtmcduni
+D(ltmcd
+mvhd
+iods
+T$81
+ffffff.
+trak
+ffff.
+tkhd
+`ff.
+ffff.
+h;K4u
+=c608
+|$|t
+edts
+elst
+tref
+mdia
+mdhd
+(fffff.
+minf
+smhd
+vmhd
+ffffff.
+uJ=c608t[=c708tT=texttM
+=gpmdt
+=tmcduB
+=rtp 
+hmhd
+nmhd
+dinf
+dref
+url 
+uuid
+USMT
+MTDT
+Drtp 
+udta
+hnti
+sdp 
+=c608u
+name
+udta
+mvex
+trex
+uuid
+USMT
+MTDT
+meta
+hdlr
+mdta
+keys
+mdta
+ilst
+fff.
+data
+mdir
+appl
+ilst
+covr
+data
+ffff.
+tmpo
+data
+chpl
+ffff.
+udta
+^_[]
+XMP_
+fffff.
+USWV
+|$p1
+Q,+A
+l$01
+sidx
+D$D1
+|$tffffff.
+$9l$L
+l$8)
+T$$)
+|$pF9
+\^_[]
+USWV
+\$|1
+fffff.
+D$`f.
+D$tt
+t$p+\.
+t$|t
+fff.
+ffffff.
+L$x1
+D$HE
+C,iL$H
+L$xu
+mdat
+E1@t)
+ffff.
+\.\+S
+;|$H
+prft
+L$@1
+t$hH
+uuid
++\$x
+free
+EXBO9
+\$\C9
+fffff.
+mdat
+\$|;{
+^_[]
+USWV
+ffff.
+.ffff.
+ftyp
+piff
+cmfc
+iso6
+iso6
+iso5
+iso4
+isom
+iso2
+avc1
+mp41
+#C0=
+dash
+t$,tj
+L^_[]
+uuid
+PROF
+FPRF
+APRF
+mp4a
+VPRF
+avc1
+mp4v
+USWV
+moof
+mfhd
+T$p1
+L$$f
+traf
+tfhd
+JH+B
+L$Dt
+tfdt
+3t*@3|*<	
+uuid
+free
+~.fffff.
+ffff.
+t$<F9
+\^_[]
+ffffff.
+USWV
+D$@k
+ffffff.
+9t$@~
+9t$<u$
+\$`3
+<;t$l
+l$8u%
+trun
+#E0=
+9|$l
+L*H+D*
+<;|$l
+L^_[]
+USWV
+^_[]
+MSNV
+iso6
+iso5
+iso4
+f4v 
+isml
+qt  
+isom
+USWV
+)ff.
+^_[]
+ffffff.
+USWV
+,^_[]
+USWV
+\$T9
+D$T9
+/u*E
+loci
+\^_[]
+fffff.
+USWV
+\$01
+^_[]
+USWV
+data
+^_[]
+ffff.
+USWV
+data
+^_[]
+data
+USWV
+y;ff.
+;L$8u
+<^_[]
+ffff.
+USWV
+fffff.
+^_[]
+fffff.
+USWV
+tapt
+clef
+prof
+enof
+,^_[]
+USWV
+c608u@
+=tx3gu/
+rtp t(
+gpmdu.
+=mp4su,
+tmcdu
+)D$P
+)D$@
+l$ 1
+hdlr
+|$<t
+;D$hu
+l^_[]
+USWV
+gmhd
+gmin
+}Dc608
+text
+=gpmd
+gpmd
+=tmcd
+tmcd
+tcmi
+,^_[]
+USWV
+stbl
+stsd
+=gpmd
+t$H=tmcd
+lpcm
+enca
+gpmd
+=rtp 
+rtp 
+tims
+sH+{
+l$\9
+l$\|
+tmcd
+t#ff.
+\$81
+m=(P
+wave
+frma
+mp4a
+~Dmp4au
+enda
+dOps
+enda
+dfLa
+\$4)
+\$8)
+name
+wfex
+\$8)
+dmlp
+glbl
+chan
+\$0)
+t=H+T=
+l$\t
+L$Xt
+stts
+rtp u!
+sdtp
+ffffff.
+fff.
+ffffff.
+ctts
+fffff.
+stsc
+stsz
+L$L1
+T$Xk
+l8$9
+T$XB9
+co64
+stco
+sgpd
+roll
+sbgp
+roll
+ffff.
+fffff.
+\$,1
+ffff.
+|$Tt
+|$<t
+|$<C
+\$\tY
+|$<G
+sbgp
+roll
+l^_[]
+ffff.
+USWV
+fff.
+,^_[]
+USWV
+encv
+FFMP
+fff.
+AD=mp4v
+d263
+FFMP
+av1C
+=`ivx
+=`i52
+=ai12
+ACLR
+ACLR
+0001
+=aivx
+|$\1
+T$h9
+AGE9
+9\$\u
++L$h
+D$dt
+D$d9
+=`i13
+=ai52
+vpcC
+=`i53
+=ai13
+R10k
+DpxE
+DpxE
+hvcC
+{Dhvc1
+=`i15
+=ai53
+DAVdh
+ADHR
+0001
+=`i55
+=ai15
+APRG
+APRG
+0001
+ARES
+ARES
+0001
+dvc1
+=`i16
+=ai55
+=`i56
+=ai16
+=@Vin
+=ai56tD
+=`i1p
+=AVint1
+=`i5p
+=ai1pt
+=ai5pt
+=ai1qt
+=ai5q
+glbl
+fiel
+gama
+colr
+prof
+colr
+nclx
+nclc
+clli
+mdcv
+st3d
+sv3d
+svhd
+proj
+prhd
+cbmp
+equi
+dvvC
+dvcC
+pasp
+clap
+t$tt
+^_[]
+avcC
+uuid
+USWV
+esds
+|$ f
+l$ f
+,^_[]
+samr
+damr
+FFMP
+ffffff.
+USWV
+dac3
+<^_[]
+ffffff.
+USWV
+gfff.
+D$0)
+hffff.
+D$0)
+D$0)
+Rff.
+D$0)
+D$0)
+dffff.
+D$0)
+gfff.
+D$0)
+D$0)
+jff.
+D$0)
+fffff.
+D$0)
+D$0)
+GHB9
+D$09
+|$$)
+dec3
+<^_[]
+USWV
+~DtmcduH
+l$$1
+l$(	
+,^_[]
+USWV
+],iB
+t$4t[
+t$4+C
+9t$ 
+9L$ 
+\$0+D
+C1 t	1
+<^_[]
+USWV
+t[;B$
+^_[]
+USWV
+D$ 1
++l$4
+tM;G$r"
+^_[]
+ffffff.
+USWV
+T$(f
+fff.
+t$Df.
+l$8tT
+T$.f
+;C$r(
+D$$~4
+^_[]
+USWV
+senc
+saio
+saiz
+^_[]
+ffff.
+USWV
+sinf
+frma
+schm
+cenc
+schi
+tenc
+^_[]
+USWV
+i\$D
+Drtp 
+iD$H
+,^_[]
+fff.
+USWV
+D$\1
+fffff.
+|$|ffff.
+D$x9
+L$X1
+ffffff.
+|$T|7
+L$tA
+l$tE
+t$PF
+^_[]
+USWV
+fff.
+^_[]
+USWV
 ffff.
 t$(9
 T$,9
@@ -1929,6 +3259,11 @@ USWV
 ^_[]
 ffff.
 ffff.
+USWV
+T$L9
++L$ 
+L$H;i4|
+,^_[]
 |$$1
 ffffff.
 USWV
@@ -1957,6 +3292,33 @@ D$@)
 ;l$,
 \$4t
 L^_[]
+USWV
+^_[]
+USWV
+E`u$
+r"=4P
+l$8f
+D$Bq
+D$<2
+D$:f
+l$8f
+D$>f
++\$$
+^_[]
+fff.
+ffff.
+fff.
+USWV
+fffff.
+	uJf.
+-fffff.
+^_[]
+USWV
+^_[]
+USWV
+LIST
+INFO
+^_[]
 USWV
 (^_[]
 USWV
@@ -2111,6 +3473,18 @@ L$(9
 L$(9
 D$$)
 ,^_[]
+Qh^_[
+USWV
+ffff.
+|$$1
+fff.
+t-f.
+<^_[]
+ffffff.
+USWV
+^_[]
+USWV
+^_[]
 USWV
 )D$P
 )D$@
@@ -2774,6 +4148,8 @@ D$\k
 ffffff.
 	;L$xu
 |^_[]
+USWV
+,^_[]
 WAVEu+
 9RIFFt 
 9RIFXt
@@ -2817,6 +4193,7 @@ datau
 ffffff.
 USWV
 ,^_[]
+:wvpkuN
 ffff.
 ^_[]
 ^_[]
@@ -2898,6 +4275,7 @@ max_fps
 maximum framerate (0 is no limit)
 default_fps
 default framerate (0 is as fast as possible)
+libavformat/av1.c
 libavformat/avc.c
 URLContext
 protocol_whitelist
@@ -2937,6 +4315,296 @@ Statistics: %lld bytes read, %d seeks
 Invalid return value 0 for stream protocol
 Failed to decrease buffer size
 Invalid UTF8 sequence in avio_put_str16%s
+$RepresentationID$
+$Number
+$Bandwidth
+$Time
+%%%s
+%s%c%s
+Failed to parse format-tag beginning with %s. Expected either a closing '$' character or a format-string like '%%0[width]d', where width must be a single digit
+dash
+DASH Muxer
+At least one profile must be enabled.
+The min_seg_duration option is deprecated and will be removed. Please use the -seg_duration
+LHLS is experimental, Please set -strict experimental in order to enable it.
+LHLS option will be ignored as streaming is not enabled
+LHLS option will be ignored as hls_playlist is not enabled
+LDash option will be ignored as streaming is not enabled
+Target latency option will be ignored as streaming is not enabled
+Global SIDX option will be ignored as single_file is not enabled
+Global SIDX option will be ignored as streaming is enabled
+Changing frag_type from none to every_frame as streaming is enabled
+Enabling Producer Reference Time element for Low Latency mode
+Producer Reference Time element option will be ignored as utc_timing_url is not set
+Producer Reference Time element option will be ignored as streaming is not enabled
+Low Latency mode enabled without Producer Reference Time element option! Resulting manifest may not be complaint
+Target latency option will be ignored as Producer Reference Time element will not be written
+Minimum playback rate value is higer than the Maximum. Both will be ignored
+libavformat/dashenc.c
+No bit rate set for stream %d
+language
+role
+$ext$
+One or many segment file names doesn't end with .webm. Override -init_seg_name and/or -media_seg_name and/or -single_file_name to end with the extension .webm
+One or more streams in WebM output format. Streaming option will be ignored
+%s-stream%d.%s
+%s%s
+Segment duration %lld is outside the allowed range for DVB-DASH profile
+frag_type set to duration for stream %d but no frag_duration set
+Fragment duration %lld is longer than Segment duration %lld
+frag_type set to P-Frame reordering, but no parser found for stream %d
+movflags
++dash+delay_moov+skip_sidx+skip_trailer
++dash+delay_moov+global_sidx+skip_trailer
++dash+delay_moov+skip_trailer
++frag_every_frame
++frag_custom
+frag_duration
+write_prft
+wallclock
+cluster_time_limit
+cluster_size_limit
+dash_track_number
+live
+Representation %d init segment will be written to: %s
+Conflicting stream par values in Adaptation Set %d
+no video stream and no seg duration set
+no video stream and P-frame fragmentation set
+mp4a
+mp4v
+.%02x
+Incomplete RFC 6381 codec string for mp4v
+avc1
+.%02x%02x%02x
+av01
+.%01u.%02u%s.%02u
+.%01u.%01u%01u%01u.%02u.%02u.%02u.%01u
+vp09.%02d.%02d.%02d
+Could not find VP9 profile and/or level
+vorbis
+opus
+flac
+method
+user_agent
+multiple_requests
+timeout
+Could not select DASH segment type for stream %d
+Could not get extension type for stream %d
+No mp4 streams, disabling HLS manifest generation
+webm
+auto
+%.*s
+"%s" is not a valid value for an AdaptationSet id
+seg_duration=
+frag_duration=
+Unable to parse option value "%s" as duration
+frag_type=
+duration
+pframes
+every_frame
+none
+Unable to parse option value "%s" as fragment type
+descriptor=
+Parse error, descriptor string should be a self-closing xml tag
+trick_id=
+streams=
+Map all streams of type %s
+Selected stream "%s" not found!
+Map stream %d
+Stream %d is not mapped to an AdaptationSet
+reference AdaptationSet id "%d" not found for trick mode AdaptationSet id "%d"
+Codec type of stream %d doesn't match AdaptationSet's media type
+Stream %d is already assigned to an AdaptationSet
+DVB-DASH profile allows a max of 16 Representations per Adaptation Set
+DVB-DASH profile allows a max of 16 Adaptation Sets
+%smaster.m3u8
+DELETE
+failed to delete %s
+failed to delete %s: %s
+%smedia_%d.m3u8
+media_%d.m3u8
+Out of memory for filename
+Representation %d media segment %d written to: %s
+title
+Cannot use rename on non file protocol, this may lead to races and temporary partial files
+%s.tmp
+<?xml version="1.0" encoding="utf-8"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="urn:mpeg:dash:schema:mpd:2011"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-DASH_schema_files/DASH-MPD.xsd"
+	profiles="
+urn:mpeg:dash:profile:isoff-live:2011
+urn:dvb:dash:profile:dvb-dash:2014"
+	type="%s"
+static
+dynamic
+	mediaPresentationDuration="
+	minimumUpdatePeriod="PT%lldS"
+	suggestedPresentationDelay="PT%lldS"
+	availabilityStartTime="%s"
+	publishTime="%s"
+	timeShiftBufferDepth="
+	maxSegmentDuration="
+	minBufferTime="
+	<ProgramInformation>
+		<Title>%s</Title>
+	</ProgramInformation>
+	<ServiceDescription id="0">
+		<Latency target="%lld"
+ referenceId="%d"
+		<PlaybackRate min="%.2f" max="%.2f"/>
+	</ServiceDescription>
+	<Period id="0" start="
+	<Period id="0" start="PT0.0S">
+	</Period>
+	<UTCTiming schemeIdUri="urn:mpeg:dash:utc:http-xsdate:2014" value="%s"/>
+</MPD>
+master.m3u8
+		<AdaptationSet id="%d" contentType="%s" startWithSAP="1" segmentAlignment="true" bitstreamSwitching="true"
+video
+audio
+ maxFrameRate="%d/%d"
+ frameRate="%d/%d"
+ maxWidth="%d" maxHeight="%d"
+ par="%d:%d"
+ lang="%s"
+			<Resync dT="%lld" type="0"/>
+			<EssentialProperty id="%d" schemeIdUri="http://dashif.org/guidelines/trickmode" value="%d"/>
+			<Role schemeIdUri="urn:mpeg:dash:role:2011" value="%s"/>
+			%s
+ bandwidth="%d"
+			<Representation id="%d" mimeType="video/%s" codecs="%s"%s width="%d" height="%d"
+ scanType="unknown"
+ scanType="interlaced"
+ sar="%d:%d"
+ maxPlayoutRate="%d"
+ codingDependency="false"
+			<Representation id="%d" mimeType="audio/%s" codecs="%s"%s audioSamplingRate="%d">
+				<AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="%d" />
+				<ProducerReferenceTime id="%d" inband="true" type="%s" wallClockTime="%s" presentationTime="%lld">
+captured
+encoder
+					<UTCTiming schemeIdUri="urn:mpeg:dash:utc:http-xsdate:2014" value="%s"/>
+				</ProducerReferenceTime>
+				<Resync dT="%lld" type="1"/>
+			</Representation>
+		</AdaptationSet>
+				<SegmentTemplate timescale="%d" 
+duration="%lld" 
+availabilityTimeOffset="%.3f" 
+availabilityTimeComplete="false" 
+initialization="%s" media="%s" startNumber="%d"
+ presentationTimeOffset="%lld"
+					<SegmentTimeline>
+						<S 
+t="%lld" 
+d="%lld" 
+r="%d" 
+					</SegmentTimeline>
+				</SegmentTemplate>
+				<BaseURL>%s</BaseURL>
+				<SegmentList timescale="%d" duration="%lld" startNumber="%d">
+					<Initialization range="%lld-%lld" />
+					<SegmentURL mediaRange="%lld-%lld" 
+indexRange="%lld-%lld" 
+				</SegmentList>
+					<Initialization sourceURL="%s" />
+					<SegmentURL media="%s" />
+ff_hls_write_file_entry get error
+#EXT-X-PREFETCH:%s
+&amp;
+&lt;
+&gt;
+&apos;
+&quot;
+%Y-%m-%dT%H:%M:%S
+.%03dZ
+%d.%dS
+Unable to open %s for writing: %s
+Correcting the segment index after file %s: current=%d corrected=%d
+Segment durations differ too much, enable use_timeline and use_template, or keep a stricter keyframe interval
+os->parser
+dash muxer
+adaptation_sets
+Adaptation sets. Syntax: id=0,streams=0,1,2 id=1,streams=3,4 and so on
+window_size
+number of segments kept in the manifest
+extra_window_size
+number of segments kept outside of the manifest before removing from disk
+min_seg_duration
+minimum segment duration (in microseconds) (will be deprecated)
+seg_duration
+segment duration (in seconds, fractional value can be set)
+fragment duration (in seconds, fractional value can be set)
+frag_type
+set type of interval for fragments
+one fragment per segment
+fragment at every frame
+fragment at specific time intervals
+fragment at keyframes and following P-Frame reordering (Video only, experimental)
+remove_at_exit
+remove all segments when finished
+use_template
+Use SegmentTemplate instead of SegmentList
+use_timeline
+Use SegmentTimeline in SegmentTemplate
+single_file
+Store all segments in one file, accessed using byte ranges
+single_file_name
+DASH-templated name to be used for baseURL. Implies storing all segments in one file, accessed using byte ranges
+init_seg_name
+DASH-templated name to used for the initialization segment
+init-stream$RepresentationID$.$ext$
+media_seg_name
+DASH-templated name to used for the media segments
+chunk-stream$RepresentationID$-$Number%05d$.$ext$
+utc_timing_url
+URL of the page that will return the UTC timestamp in ISO format
+set the HTTP method
+http_user_agent
+override User-Agent field in HTTP header
+http_persistent
+Use persistent HTTP connections
+hls_playlist
+Generate HLS playlist files(master.m3u8, media_%d.m3u8)
+streaming
+Enable/Disable streaming mode of output. Each frame will be moof fragment
+set timeout for socket I/O operations
+index_correction
+Enable/Disable segment index correction logic
+format_options
+set list of options for the container format (mp4/webm) used for dash
+global_sidx
+Write global SIDX atom. Applicable only for single file, mp4 output, non-streaming mode
+dash_segment_type
+set dash segment files type
+segment_type
+select segment file format based on codec
+make segment file in ISOBMFF format
+make segment file in WebM format
+ignore_io_errors
+Ignore IO errors during open and write. Useful for long-duration runs with network output
+lhls
+Enable Low-latency HLS(Experimental). Adds #EXT-X-PREFETCH tag with current segment's URI
+ldash
+Enable Low-latency dash. Constrains the value of a few elements
+master_m3u8_publish_rate
+Publish master playlist every after this many segment intervals
+Write producer reference time element
+mpd_profile
+Set profiles. Elements and values used in the manifest may be constrained by them
+MPEG-DASH ISO Base media file format live profile
+dvb_dash
+DVB-DASH profile
+http_opts
+HTTP protocol options
+target_latency
+Set desired target latency for Low-latency dash
+min_playback_rate
+Set desired minimum playback rate
+max_playback_rate
+Set desired maximum playback rate
 libavformat/dump.c
 %s #%d, %s, %s '%s':
 Output
@@ -2955,7 +4623,6 @@ end %f
 name
   Program %d %s
   No Program
-language
 dump_separator
     Stream #%d:%d
 [0x%x]
@@ -3064,8 +4731,6 @@ libavformat/flac_picture.c
 Attached picture metadata block too big %u
 Correcting truncated metadata picture size from %u to %u
 comment
-title
-flac
 raw FLAC
 libavformat/flacdec.c
 Error parsing attached picture.
@@ -3121,7 +4786,6 @@ Keyframe index parsing failed
 Missing AMF_END_OF_OBJECT in AMF_DATA_TYPE_OBJECT
 Missing AMF_END_OF_OBJECT in AMF_DATA_TYPE_MIXEDARRAY, found %d
 unsupported amf type %d
-duration
 videodatarate
 audiodatarate
 datastream
@@ -3133,7 +4797,6 @@ audiosamplesize
 stereo
 width
 height
-encoder
 Open Broadcaster Software v0.%d
 metadatacreator
 MEGA
@@ -3237,6 +4900,60 @@ maximum valid delay between frames (in hundredths of seconds)
 default_delay
 default delay between frames (in hundredths of second)
 ignore loop setting (netscape extension)
+configurationVersion:                %hhu
+general_profile_space:               %hhu
+general_tier_flag:                   %hhu
+general_profile_idc:                 %hhu
+general_profile_compatibility_flags: 0x%08x
+general_constraint_indicator_flags:  0x%012llx
+general_level_idc:                   %hhu
+min_spatial_segmentation_idc:        %hu
+parallelismType:                     %hhu
+chromaFormat:                        %hhu
+bitDepthLumaMinus8:                  %hhu
+bitDepthChromaMinus8:                %hhu
+avgFrameRate:                        %hu
+constantFrameRate:                   %hhu
+numTemporalLayers:                   %hhu
+temporalIdNested:                    %hhu
+lengthSizeMinusOne:                  %hhu
+numOfArrays:                         %hhu
+array_completeness[%hhu]:               %hhu
+NAL_unit_type[%hhu]:                    %hhu
+numNalus[%hhu]:                         %hu
+nalUnitLength[%hhu][%hu]:                 %hu
+#EXTM3U
+#EXT-X-VERSION:%d
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="group_%s"
+,NAME="audio_%d",DEFAULT=%s,
+LANGUAGE="%s",
+URI="%s"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="%s"
+,NAME="subtitle_%d",DEFAULT=%s,
+Bandwidth info not available, set audio and video bitrates
+#EXT-X-STREAM-INF:BANDWIDTH=%d
+,RESOLUTION=%dx%d
+,CODECS="%s"
+,AUDIO="group_%s"
+,CLOSED-CAPTIONS="%s"
+,SUBTITLES="%s"
+#EXT-X-ALLOW-CACHE:%s
+#EXT-X-TARGETDURATION:%d
+#EXT-X-MEDIA-SEQUENCE:%lld
+EXT-X-MEDIA-SEQUENCE:%lld
+#EXT-X-PLAYLIST-TYPE:EVENT
+#EXT-X-PLAYLIST-TYPE:VOD
+#EXT-X-I-FRAMES-ONLY
+#EXT-X-MAP:URI="%s"
+,BYTERANGE="%lld@%lld"
+#EXT-X-DISCONTINUITY
+#EXTINF:%ld,
+#EXTINF:%f,
+#EXT-X-BYTERANGE:%lld@%lld
+strftime error in ff_hls_write_file_entry
+%c%02d%02d
+#EXT-X-PROGRAM-DATE-TIME:%s.%03d%s
+#EXT-X-ENDLIST
 Blues
 Classic Rock
 Country
@@ -3619,7 +5336,6 @@ Max EBML element depth (%d) reached, cannot parse further.
 Length %d indicated by an EBML number's first byte 0x%02x at pos %lld (0x%llx) exceeds max length %d.
 Read error at pos. %llu (0x%llx)
 WebM DASH Manifest demuxer
-live
 flag indicating that the input is a live file that only has the headers.
 bandwidth
 bandwidth of this stream to be specified in the DASH manifest.
@@ -3670,8 +5386,83 @@ Lavf%d.%d.%d
 Invalid FLAC private data
 MAIN
 matroska
-webm
 (none)
+WebM
+video/webm
+vp9_superframe
+The Matroska muxer does not yet support muxing %s
+Stream %d will be ignored as WebM doesn't support attachments.
+Attachment stream %d has no mimetype tag and it cannot be deduced from the codec id.
+text/plain
+Could not write cached audio packet ret:%d
+Insufficient space reserved for Cues: %d < %llu. No Cues will be output.
+end duration = %llu
+stream %d end duration = %llu
+%02d:%02d:%012.9f
+bytes <= 8
+libavformat/matroskaenc.c
+length < (1ULL << 56) - 1
+bytes >= needed_bytes
+size >= 2
+idx >= 0 && idx < num_tracks
+Invalid chapter start (%lld) or end (%lld).
+encoding_tool
+Can't write packet with unknown timestamp
+Starting new cluster due to timestamp
+Starting new cluster with timestamp %lld at offset %lld bytes
+Writing block of size %d with pts %lld, dts %lld, duration %lld at relative offset %lld in cluster at offset %lld. TrackNumber %u, keyframe %d
+%.*s
+%.*s
+%.*s
+Error when reformatting data of a packet from stream %d.
+Flushing cluster at offset %llu bytes
+Error parsing AAC extradata, unable to determine samplerate.
+Invalid FLAC STREAMINFO metadata for output stream %d
+Ignoring new extradata in a packet for stream %d.
+codec %s is not supported by this format
+No bmp codec tag found for codec %s
+No wav codec tag found for codec %s
+Invalid extradata found, ALAC expects a 36-byte QuickTime atom.
+Lavf
+Lavf58.45.100
+0x%llx
+Extradata corrupt.
+Write early duration from recording time = %llu
+Write early duration from metadata = %llu
+DURATION
+Attachment stream %d has no filename tag.
+D_WEBVTT/SUBTITLES
+Only VP8 or VP9 or AV1 video and Vorbis or Opus audio and WebVTT subtitles are supported for WebM.
+Raw RGB is not supported Natively in Matroska, you can use AVI or NUT or
+If you would like to store it anyway using VFW mode, enable allow_raw_vfw (-allow_raw_vfw 1)
+Overflow in display width
+Initial padding is invalid
+Subtitle codec %d is not supported.
+Only audio, video, and subtitles are supported for Matroska.
+Unknown projection type
+The specified stereo mode is not valid.
+get_metadata_duration found duration in context metadata: %lld
+get_metadata_duration returned: %lld
+webm muxer
+reserve_index_space
+Reserve a given amount of space (in bytes) at the beginning of the file for the index (cues).
+Store at most the provided amount of bytes in a cluster. 
+Store at most the provided number of milliseconds in a cluster.
+Create a WebM file conforming to WebM DASH specification
+Track number for the DASH stream
+Write files assuming it is a live stream.
+allow_raw_vfw
+allow RAW VFW mode
+write_crc32
+write a CRC32 element inside every Level 1 element
+default_mode
+Controls how a track's FlagDefault is inferred
+infer
+For each track type, mark the first track of disposition default as default; if none exists, mark the first track as default.
+infer_no_subs
+For each track type, mark the first track of disposition default as default; for audio and video: if none exists, mark the first track as default.
+passthrough
+Use the disposition flag as-is
 c->fc->nb_streams >= 1
 libavformat/mov.c
 invalid size %lld in stsd
@@ -3726,7 +5517,6 @@ Modify the AVIndex according to the editlists. Use this option to decode in the 
 ignore_chapters
 use_mfra_for
 use mfra for fragment timestamps
-auto
 export_all
 Export unrecognized metadata entries
 export_xmp
@@ -4045,6 +5835,305 @@ Sorenson H263
 multiple fourcc not supported
 chan: layout=%u bitmap=%u num_descr=%u
 reached EOF while reading channel layout
+fatal error, input is not a single packet, implement a AVParser for it
+fatal error, input packet contains no samples
+libavformat/movenc.c
+Track %d starts with a nonzero dts %lld, while the moov already has been written. Set the delay_moov flag to handle this case.
+pts has no value
+MP4 (MPEG-4 Part 14)
+video/mp4
+mp4 muxer
+MOV muxer flags
+rtphint
+Add RTP hint tracks
+moov_size
+maximum moov size so it can be placed at the begin
+empty_moov
+Make the initial moov atom empty
+frag_keyframe
+Fragment at video keyframes
+frag_every_frame
+Fragment at every frame
+separate_moof
+Write separate moof/mdat atoms for each track
+frag_custom
+Flush fragments on caller requests
+isml
+Create a live smooth streaming feed (for pushing to a publishing point)
+faststart
+Run a second pass to put the index (moov atom) at the beginning of the file
+omit_tfhd_offset
+Omit the base data offset in tfhd atoms
+disable_chpl
+Disable Nero chapter atom
+default_base_moof
+Set the default-base-is-moof flag in tfhd atoms
+Write DASH compatible fragmented MP4
+cmaf
+Write CMAF compatible fragmented MP4
+frag_discont
+Signal that the next fragment is discontinuous from earlier ones
+delay_moov
+Delay writing the initial moov until the first fragment is cut, or until the first fragment flush
+Write a global sidx index at the start of the file
+skip_sidx
+Skip writing of sidx atom
+write_colr
+Write colr atom (Experimental, may be renamed or changed, do not use from scripts)
+prefer_icc
+If writing colr atom prioritise usage of ICC profile if it exists in stream packet side data
+write_gama
+Write deprecated gama atom
+use_metadata_tags
+Use mdta atom for metadata.
+skip_trailer
+Skip writing the mfra/tfra/mfro trailer for fragmented files
+negative_cts_offsets
+Use negative CTS offsets (reducing the need for edit lists)
+rtpflags
+RTP muxer flags
+latm
+Use MP4A-LATM packetization instead of MPEG4-GENERIC for AAC
+rfc2190
+Use RFC 2190 packetization instead of RFC 4629 for H.263
+skip_rtcp
+Don't send RTCP sender reports
+h264_mode0
+Use mode 0 for H.264 in RTP
+send_bye
+Send RTCP BYE packets when finishing
+skip_iods
+Skip writing iods atom.
+iods_audio_profile
+iods audio profile atom.
+iods_video_profile
+iods video profile atom.
+Maximum fragment duration
+min_frag_duration
+Minimum fragment duration
+frag_size
+Maximum fragment size
+ism_lookahead
+Number of lookahead entries for ISM files
+video_track_timescale
+set timescale of all video tracks
+brand
+Override major brand
+use_editlist
+use edit list
+fragment_index
+Fragment number of the next fragment
+mov_gamma
+gamma value for gama atom
+frag_interleave
+Interleave samples within fragments (max number of consecutive samples, lower is tighter interleaving, but with more overhead)
+encryption_scheme
+Configures the encryption scheme, allowed values are none, cenc-aes-ctr
+encryption_key
+The media encryption key (hex)
+encryption_kid
+The media encryption key identifier (hex)
+use_stream_ids_as_track_ids
+use stream ids as track ids
+write_tmcd
+force or disable writing tmcd
+Write producer reference time box with specified time source
+prft
+empty_hdlr_name
+write zero-length name string in hdlr atoms within mdia and minf atoms
+ipod
+ismv
+Empty MOOV enabled; disabling automatic bitstream filtering
+Global SIDX enabled; Ignoring skip_sidx option
+No meaningful edit list will be written when using empty_moov without delay_moov
+Edit list enabled; Assuming writing CMAF Track File
+Sample interleaving in fragments is mutually exclusive with omit_tfhd_offset and separate_moof
+muxer does not support non seekable output
+You requested a copy of the original timecode track so timecode metadata are now ignored
+cenc-aes-ctr
+Invalid encryption key len %d expected %d
+Invalid encryption kid len %d expected %d
+unsupported encryption scheme %s
+Could not find tag for codec %s in stream #%d, codec not currently supported in container
+D-10/IMX must use 720x608 or 720x512 video resolution
+Warning: some tools, like mp4split, assume a timescale of 10000000 for ISMV.
+Resolution %dx%d too large for mov/mp4
+WARNING codec timebase is very high. If duration is too long,
+file may not be playable by quicktime. Specify a shorter timebase
+or choose different container.
+%s only supported in MP4.
+VP8 muxing is currently not supported.
+track %d: codec frame size is not set
+track %d: codec block align is not set for adpcm
+track %d: muxing mp3 at %dhz is not standard, to mux anyway set strict to -1
+track %d: muxing mp3 at %dhz is not standard in MP4
+%s in MP4 support is experimental, add '-strict %d' if you want to use it.
+Warning, extension is not .m4a nor .m4v Quicktime/Ipod might not play the file
+Using MS style video codec tag, the file may be unplayable!
+Using MS style audio codec tag, the file may be unplayable!
+timecode: tbc=%d/%d invalid, fallback on %d/%d
+%s rawvideo cannot be written to mov, output file will be unreadable
+unsupported height for dv codec
+Starting second pass: moving the moov atom to the beginning of the file
+reserved_moov_size is too small, needed %lld additional
+free
+Starting second pass: inserting sidx atoms
+Non-consecutive fragments, writing incorrect sidx
+Estimating the duration of the last packet in a fragment, consider setting the duration field in AVPacket instead.
+Unable to write PRFT, no entries in the track
+Unable to write PRFT, first PTS is invalid
+Unsupported PRFT box configuration: %d
+PSP mode need one video and one audio stream
+Frame rate %f outside supported range
+3gp6
+3gp4
+3g2b
+3g2a
+M4V 
+M4A 
+next_dts >= 0
+next_dts <= 2147483647
+perf
+titl
+auth
+author
+gnre
+dscp
+albm
+cprt
+yrrc
+meta
+aART
+desc
+ldes
+tvsh
+tven
+tvnn
+keyw
+tves
+tvsn
+stik
+hdvd
+pgap
+cpil
+tmpo
+disk
+trkn
+earth
+malformed location metadata
+Lavc58.91.100
+2006/04/01 11:11:11
+Not writing any edit list even though one would have been required
+a=control:streamid=%d
+track->par->codec_id == AV_CODEC_ID_OPUS || track->par->codec_id == AV_CODEC_ID_AAC
+stss
+stps
+fps %d is too large
+tmcd
+reel_name length %llu is too large
+not writing 'chan' tag due to lack of channel information
+Cannot write moov atom before TrueHD packets. Set the delay_moov flag to fix this.
+invalid extradata size
+Cannot write moov atom before EAC3 packets parsed.
+Internal error, put_bits buffer too small
+Cannot write moov atom before AC3 packets. Set the delay_moov flag to fix this.
+Not writing 'gama' atom. Format is not MOV.
+Not writing 'colr' atom. Format is not MOV or MP4.
+dvvC
+dvcC
+DOVI in %s box, version: %d.%d, profile: %d, level: %d, rpu flag: %d, el flag: %d, bl flag: %d, compatibility id: %d
+Unsupported projection %d. sv3d not written.
+Unsupported stereo_3d flags %x. st3d not written.
+Unsupported stereo_3d type %s. st3d not written.
+Not writing 'mdcv' atom. Missing mastering metadata.
+Not writing 'clli' atom. No content light level info.
+no ICC profile found, will write nclx/nclc colour info instead
+track->mode == 0x02 || track->mode == 0x01
+gamma value %g
+writing gama value %d
+track->mode == 0x02
+gamma value unknown, unable to write gama atom
+DpxE
+moov atom written before any packets, unable to write correct dvc1 atom. Set the delay_moov flag to fix this.
+Could not locate DNxHD bit stream in vos_data
+Could not locate DNxHD bit stream, vos_data too small
+XDCAM
+ HD422
+ %d%c
+url 
+Lucida Grande
+dhlr
+DataHandler
+mhlr
+vide
+VideoHandler
+soun
+SoundHandler
+clcp
+ClosedCaptionHandler
+sbtl
+subp
+SubtitleHandler
+hint
+HintHandler
+TimeCodeHandler
+GoPro MET
+Unknown hldr_type for %s, writing dummy values
+FATAL error, file duration too long for timebase, this file will not be
+playable with QuickTime. Choose a different timebase with -video_track_timescale or a different container format
+EDTS using dts:%lld cts:%d instead of dts:%lld cts:%lld tid:%d
+av_rescale_rnd(start_dts, 1000, track->timescale, AV_ROUND_DOWN) <= 0
+track width is too large
+track height is too large
+Unable to re-open %s output file for the second pass (faststart)
+Got more than one picture in stream %d, ignoring.
+<smil xmlns="http://www.w3.org/2001/SMIL20/Language">
+<head>
+<meta name="creator" content="%s" />
+</head>
+<body>
+<switch>
+<%s systemBitrate="%lld">
+systemBitrate
+trackID
+systemLanguage
+trackName
+CodecPrivateData
+FourCC
+H264
+WVC1
+MaxWidth
+MaxHeight
+DisplayWidth
+DisplayHeight
+AACP
+AACH
+AACL
+WMAP
+AudioTag
+Channels
+SamplingRate
+BitsPerSample
+PacketSize
+</%s>
+</switch>
+</body>
+</smil>
+<param name="%s" value="%s" valuetype="data"/>
+<param name="%s" value="%d" valuetype="data"/>
+wide
+palette:
+%06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x
+size:
+%dx%d
+mov muxer
+Application provided duration: %lld / timestamp: %lld is out of range for mov/mp4 format
+Application provided duration: %lld is invalid
+CENC-AVC: remaining size %d smaller than nal length+type %d
+CENC-AVC: nal size %d remaining %d
+Unable to initialize hinting of stream %d
+libavformat/movenchint.c
+rtpo
 MP2/3 (MPEG audio layer 2/3)
 mp2,mp3,m2a,mpa
 Using MP3 TOC to seek; may be imprecise.
@@ -4093,7 +6182,6 @@ sample rate not set
 dimensions not set
 Aspect ratio mismatch between muxer (%d/%d) and encoder layer (%d/%d)
 Tag %s incompatible with output codec id '%d' (%s)
-Lavf58.45.100
 encoder-
 Failed to set close on exec
 setsockopt(SO_NOSIGPIPE) failed
@@ -4211,7 +6299,6 @@ keepside
 deprecated, does nothing
 fastseek
 fast but inaccurate seeks
-latm
 nobuffer
 reduce the latency introduced by optional buffering
 bitexact
@@ -4341,6 +6428,10 @@ libavformat/riffdec.c
 out of memory, unable to read INFO tag
 premature end of file while reading INFO tag
 unknown subformat:%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x {%02x%02x%02x%02x-%02x%02x-%02x%02x-%02x%02x-%02x%02x%02x%02x%02x%02x}
+(start&1) == 0
+libavformat/riffenc.c
+requested bits_per_coded_sample (%d) and actually stored (%d) differ
+BottomUp
 Unable to read as many bytes as AMF string signaled
 libavformat/rtmppkt.c
 bytestream2_tell(&gb) >= 0 && bytestream2_tell(&gb) <= data_end - data
@@ -4409,7 +6500,6 @@ URL of the target stream. Defaults to proto://host[:port]/app.
 rtmp_listen
 Listen for incoming rtmp connections
 listen
-timeout
 Maximum timeout (in seconds) to wait for incoming connections. -1 is infinite. Implies -rtmp_listen 1
 Seek on stream index %d at timestamp %lld with flags %08x
 Unable to send seek command on stream index %d at timestamp %lld with flags %08x
@@ -4487,7 +6577,6 @@ nonce
 Ignoring unsupported var %s
 Variable %s has NULL value
 adobe
-auth
 00000001
 %08x
 /_definst_
@@ -4573,6 +6662,7 @@ Signature mismatch
 Hash of the decompressed SWF file is not 32 bytes long.
 Cannot open connection %s.
 Genuine Adobe Flash Player 001
+payload_type
 Listen for incoming connections
 set timeout (in microseconds) of socket I/O operations
 listen_timeout
@@ -4599,7 +6689,7 @@ libavformat/url.c
 invalid:%s
 truncated
 syntax_error
---prefix=/Users/buildbot/buildslave/libav_osx/build/dev/build_osx32 --cc=clang --extra-cflags='-m32 -arch i386 -march=prescott -mtune=core2 -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9 -fasm-blocks' --ld=clang --extra-ldflags='-m32 -arch i386 -march=prescott -mtune=core2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9' --arch=x86 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avfilter --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser='h264,hevc' --enable-decoder='aac,h264,hevc,gif,vorbis,mp3,flac,alac,pcm*,valve*,apng,libvpx_vp8,libvpx_vp9' --enable-encoder='h264_vaapi,hevc_vaapi' --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv,apng' --enable-hwaccels --enable-videotoolbox --enable-muxer=flv --disable-decoder='h263,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
+--prefix=/Users/buildbot/buildslave/libav_osx/build/dev/build_osx32 --cc=clang --extra-cflags='-m32 -arch i386 -march=prescott -mtune=core2 -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9 -fasm-blocks' --ld=clang --extra-ldflags='-m32 -arch i386 -march=prescott -mtune=core2 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9' --arch=x86 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avfilter --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser='h264,hevc' --enable-decoder='aac,h264,hevc,gif,vorbis,mp3,flac,alac,pcm*,valve*,apng,libvpx_vp8,libvpx_vp9' --enable-encoder='aac,h264_vaapi,hevc_vaapi' --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv,apng' --enable-hwaccels --enable-videotoolbox --enable-muxer='aac,flv,mp4,dash,webm' --disable-decoder='h263,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
 libavformat license: LGPL version 2.1 or later
 !dst->codec_whitelist && !dst->format_whitelist && !dst->protocol_whitelist && !dst->protocol_blacklist
 libavformat/utils.c
@@ -4739,6 +6829,7 @@ ALBUMARTIST
 TRACKNUMBER
 DISCNUMBER
 DESCRIPTION
+Unsupported pixel format (%d)
 WAV / WAVE (Waveform Audio)
 invalid start code %s in RIFF header
 invalid format in RIFF header
@@ -4810,7 +6901,7 @@ GIF87aGIF89a
        
 				
 																
-TALBTBPMTCOMTCONTCOPTDLYTENCTEXTTFLTTIT1TIT2TIT3TKEYTLANTLENTMEDTOALTOFNTOLYTOPETOWNTPE1TPE2TPE3TPE4TPOSTPUBTRCKTRSNTRSOTSRCTSSE
+@TALBTBPMTCOMTCONTCOPTDLYTENCTEXTTFLTTIT1TIT2TIT3TKEYTLANTLENTMEDTOALTOFNTOLYTOPETOWNTPE1TPE2TPE3TPE4TPOSTPUBTRCKTRSNTRSOTSRCTSSE
 TDENTDORTDRCTDRLTDTGTIPLTMCLTMOOTPROTSOATSOPTSOTTSST
 TDATTIMETORYTRDATSIZTYER
 image/gif
@@ -5178,6 +7269,55 @@ application/x-truetype-font
 application/x-font
 application/vnd.ms-opentype
 binary
+mp4v
+avc1
+avc3
+hev1
+hvc1
+mp4v
+mp4v
+mp4v=
+mp4vX
+mp4vF
+vc-1t
+drac
+mp4v
+vp09
+av01
+mp4a-P
+mp4a
+mp4a
+mp4a
+ac-3(P
+ec-3
+mp4a,P
+mlpa
+fLaC<P
+Opus
+mp4a
+mp4a
+mp4a
+mp4s
+tx3g
+gpmd
+mhm1
+wma 
+yuv2
+yuvs
+2vuy
+raw 
+L555
+L565
+B565
+b16g
+raw 
+24BG
+raw  
+BGRA 
+RGBA 
+ABGR 
+b48r0
+encd
 Mbp?
 BBCD
 fffff3ff
@@ -5620,9 +7760,61 @@ MV303
 nlc1
 HEVC
 H265
+IARL
+IART
+IAS1
+IAS2
+IAS3
+IAS4
+IAS5
+IAS6
+IAS7
+IAS8
+IAS9
+ICMS
+ICMT
+ICOP
+ICRD
+ICRP
+IDIM
+IDPI
+IENG
+IGNR
+IKEY
+ILGT
+ILNG
+IMED
+INAM
+IPLT
+IPRD
+IPRT
+ITRK
+ISBJ
+ISFT
+ISHP
+ISMP
+ISRC
+ISRF
+ITCH
 2 F!\#J&U(8*W+A-;0O1]3Y7_=LCSMPFLV
 Genuine Adobe Flash Media Server 001
 Genuine Adobe Flash Player 001
+PCMU
+G723
+DVI4
+DVI4
+PCMA
+G722
+QCELP
+G728
+DVI4
+DVI4
+G729
+CelB
+JPEG
+H261
+MP2T
+H263
 0123456789ABCDEF0123456789abcdef
 Mb@?
 @j@ffffff
@@ -5709,104 +7901,107 @@ fu`z
 /yQA
 &]|v
  inflate 1.2.11 Copyright 1995-2017 Mark Adler 
-ACLRP
-APRG
-AALP
-ARESP
-avss
-av1CP
-chpl 
-co64
-colr`
-ctts0
-dinf0r
-DpxEP
+ACLR
+APRG@
+AALP@
+ARES
+avss`
+av1C
+chplp
+co64 
+colr
+ctts
+dinf
+DpxE
 dref
-edts0r
-elst
-endaP
-fiel
-adrm
+edts
+elst`
+enda
+fiel`
+adrmP
 ftyp
-glbl@
+glbl
 hdlr
 ilst
-jp2h
-mdat0
-mdhdP
-mdia0r
-meta
-minf0r
+jp2h@
+mdat
+mdhd
+mdia
+meta 
+minf
 moof
 moov
-mvex0r
-mvhd
-SMI 
-alac0
-avcC@
-paspp
-sidxP
-stbl0r
-stco
-stps
-strf
+mvex
+mvhd`
+SMI @
+alac
+avcC
+pasp
+sidx
+stbl
+stco 
+stps0
+strf@
 stsc
-stsd@
-stss
+stsd
+stss`
 stsz
 stts
 stz2
-sdtp0
+sdtp
 tkhd
-tfdt
-tfhd
-trak@(
-traf0r
-tref0r
-tmcd
-chap a
+tfdt@	
+tfhd@
+trak
+traf
+tref
+tmcd0E
+chappE
 trex
 trun
-udta0r
+udta
 wave
-esds
-dac30v
+esds`Z
+dac3
 dec3
 ddts
-wide`z
-wfex
-cmovp{
-chanP}
-dvc1
+wide
+wfex@_
+cmov
+chan
+dvc10b
 sbgp
-hvcC@
-uuid
-freeP
----- 
-sinf0r
-frma@
-senc
-saiz
-saio`
-pssh0
-schm
-schi0r
+hvcC
+uuidPd
+free
+----pl
+sinf
+frma
+senc`q
+saiz0s
+saio
+pssh
+schm0|
+schi
 tenc
-dfLa
-st3d@
-sv3d0
-dOps
+dfLa@
+st3d
+sv3d
+dOps@
 dmlp
-SmDm@
-CoLL`
+SmDm
+CoLL
 vpcC
-mdcv
-clli
+mdcv`
+clli 
 dvcC
 dvvC
-[AZBYA^A`
+A]BYARA\A`
+CUAZAp
 p RJRJR0XSCRCRJRJR0Xp
 RCR0Xp
+RJRJRJRJRJRJRISISISISISJRJRJRJRJRBp
+RJRJRJRJRJRJRJRJRJRJRISISISISJRJRJRJRJRISISISJRJRJR0Xp
 p RCTBp
 YJRJRJR0Xp
 p RJRJRJR0XRAp
@@ -5819,8 +8014,10 @@ pDpD
 ptp\ptp\p
 pDptp
 RJR0XUDp,p
+p RJRJRJRJRJRJRJRJRISISISIp0p
 p RJRJRJRJRJRISISISISJRJRJRBp
 RJR0\
+p RISISJRISISISISISISISISISISISISISISISISISISISISISISISISISISISISJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRJRIRJRJS0Xp
 p R0X`
 RCRBSCSCRAp
 p(SISJRJRJp(SISISISISISISISISISISISISISISISJRJRJRJRJRIRJSJRJRJRJRJRJRISISISISISISISISISISJRJRJRJRJRJRJRISISISIRJSISISJRISISISISISBp
@@ -5838,20 +8035,23 @@ RAp RJRJRJRJRJRJR0XTB
 p XBR0X\Ap
 S0XRCp
 SIRAp
+SIUAp
 SARFRAp
 UGRAp
 UGRAp
 UGTDRBSIp
 SIRAp
 UGRCp
-SHRAp
+SHTEp
 UGRAp
+RBSIWDRBSIUAp
 V0DRBRDSAQ
 @_av_buffer_default_free
 @_av_default_item_name
 @_avpriv_ac3_channel_layout_tab
 @_avpriv_mpa_freq_tab
 @_avpriv_mpeg4audio_sample_rates
+@_avpriv_pix_fmt_bps_mov
 @___stack_chk_guard
 @dyld_stub_binder
 @_av_bitstream_filter_filter
@@ -5895,10 +8095,12 @@ V0DRBRDSAQ
 @_av_get_audio_frame_duration
 @_av_get_audio_frame_duration2
 @_av_get_bits_per_sample
+@_av_get_bytes_per_sample
 @_av_get_channel_layout_nb_channels
 @_av_get_exact_bits_per_sample
 @_av_get_media_type_string
 @_av_get_picture_type_char
+@_av_get_pix_fmt_name
 @_av_grow_packet
 @_av_image_check_sar
 @_av_image_check_size
@@ -5939,6 +8141,7 @@ V0DRBRDSAQ
 @_av_parser_init
 @_av_parser_parse2
 @_av_pix_fmt_desc_get
+@_av_pix_fmt_get_chroma_sub_sample
 @_av_realloc_array
 @_av_realloc_f
 @_av_realloc_tracked
@@ -5961,6 +8164,7 @@ V0DRBRDSAQ
 @_avcodec_close
 @_avcodec_decode_subtitle2
 @_avcodec_descriptor_get
+@_avcodec_enum_to_chroma_pos
 @_avcodec_find_decoder
 @_avcodec_find_decoder_by_name
 @_avcodec_free_context
@@ -5978,12 +8182,14 @@ V0DRBRDSAQ
 @_avcodec_string
 @_avpriv_codec_get_cap_skip_frame_fill_param
 @_avpriv_find_pix_fmt
+@_avpriv_find_start_code
 @_avpriv_get_raw_pix_fmt_tags
 @_avpriv_h264_has_num_reorder_frames
 @_avpriv_mpeg4audio_get_config2
 @_avpriv_mpegaudio_decode_header
 @_avpriv_report_missing_feature
 @_avpriv_request_sample
+@_avpriv_split_xiph_headers
 @_avpriv_toupper4
 @_avsubtitle_free
 @_av_add_stable
@@ -5992,8 +8198,11 @@ V0DRBRDSAQ
 @_av_aes_ctr_alloc
 @_av_aes_ctr_crypt
 @_av_aes_ctr_free
+@_av_aes_ctr_get_iv
+@_av_aes_ctr_increment_iv
 @_av_aes_ctr_init
 @_av_aes_ctr_set_full_iv
+@_av_aes_ctr_set_random_iv
 @_av_aes_init
 @_av_append_path_component
 @_av_asprintf
@@ -6033,8 +8242,10 @@ V0DRBRDSAQ
 @_av_mastering_display_metadata_alloc
 @_av_match_name
 @_av_memdup
+@_av_opt_flag_is_set
 @_av_opt_get
 @_av_opt_get_dict_val
+@_av_opt_get_int
 @_av_opt_ptr
 @_av_opt_set_bin
 @_av_opt_set_dict_val
@@ -6052,16 +8263,21 @@ V0DRBRDSAQ
 @_av_stereo3d_alloc
 @_av_stereo3d_type_name
 @_av_strcasecmp
+@_av_strireplace
 @_av_stristr
 @_av_strlcpy
 @_av_strncasecmp
 @_av_strndup
+@_av_strnstr
 @_av_strstart
+@_av_timecode_check_frame_rate
 @_av_timecode_init
+@_av_timecode_init_from_string
 @_av_timecode_make_string
 @_av_usleep
 @_av_vbprintf
 @_avpriv_dict_set_timestamp
+@_avpriv_get_gamma_from_trc
 @_avpriv_open
 @___bzero
 @___divdi3
@@ -6080,10 +8296,12 @@ V0DRBRDSAQ
 @_access
 @_atoi
 @_bind$UNIX2003
+@_bsearch
 @_close$UNIX2003
 @_closedir$UNIX2003
 @_connect$UNIX2003
 @_fcntl$UNIX2003
+@_fmod
 @_fprintf
 @_fputc
 @_free
@@ -6099,6 +8317,7 @@ V0DRBRDSAQ
 @_listen$UNIX2003
 @_llrint
 @_localtime_r
+@_lrint
 @_lrintf
 @_lseek
 @_lstat$INODE64
@@ -6110,6 +8329,7 @@ V0DRBRDSAQ
 @_memset
 @_memset_pattern16
 @_mkdir
+@_mktime$UNIX2003
 @_opendir$INODE64$UNIX2003
 @_poll$UNIX2003
 @_pthread_mutex_lock
@@ -6145,12 +8365,13 @@ V0DRBRDSAQ
 subtitle_free
 Apriv_
 codec_
-%format_
+	io_
+(format_
 encryption_in
 xiphlacing
 timecode_
 new_p
-#write_
+%write_
 sprintf
 stable
 index_entry
@@ -6160,25 +8381,27 @@ rypt
 alloc
 crypt
 free
-init
-set_full_iv
+get_iv
+set_
+crement_iv
+full_iv
+random_iv
 toupper4
+pix_fmt_bps_mov
 open
 h264_has_num_reorder_frames
-get_raw_pix_fmt_tags
-find_pix_fmt
+get_
+find_
 dict_set_timestamp
 codec_get_cap_skip_frame_fill_param
 ac3_channel_layout_tab
-'set_pts_info
-:new_chapter
+*new_chapter
 end_pa
 ly_bitstream_filters
 th_component
 cket
-quest_sample
-port_missing_feature
-gister_devices
+plit_xiph_headers
+et_pts_info
 ase64_
 itstream_filter_filter
 print
@@ -6201,16 +8424,22 @@ create
 default_free
 unref
 alloc
+quest_sample
+	port_missing_feature
+	gister_devices
 receive_frame
 open2
 is_open
 get_name
+enum_to_chroma_pos
 alloc_context3
+tring
+end_packet
 dec_
-	lor_
+lor_
 mpare_
 ntent_light_metadata_alloc
-	get_
+get_
 s_decoder
 terate
 primaries_name
@@ -6222,17 +8451,10 @@ ynarray_add
 ump_format
 fault_item_name
 muxer_
-ix_fmt_to_codec_tag
-arameters_
-a_freq_tab
-audio_decode_header
-4audio_
 rac_parse_sequence_header
 splay_rotation_get
 free
 _int
-sample_rates
-get_config2
 _nofree
 it_info_
 clone
@@ -6247,23 +8469,30 @@ ast_
 mt_ctx_get_duration_estimation_method
 malloc
 realloc
+a_freq_tab
+audio_decode_header
+4audio_
+sample_rates
+get_config2
+lename_number_test
+default_stream_index
+<program_from_stream
+=best_stream
+fo_tag
+put_format
+ix_fmt_to_codec_tag
+arameters_
+raw_pix_fmt_tags
+gamma_from_trc
+start_code
+pix_fmt
 to_context
 copy
 alloc
-lename_number_test
-default_stream_index
-9program_from_stream
-:best_stream
-fo_tag
-put_format
 om_context
 ree_context
 ind_decoder
 _by_name
-scriptor_get
-code_subtitle2
-lose
-hroma_pos_to_enum
 urcc_make_string
 rmat_
 ame_
@@ -6273,48 +8502,45 @@ row_packet
 uess_
 time
 	audio_frame_duration
-bits_per_sample
 channel_
 exact_bits_per_sample
 media_type_string
 random_seed
 output_timestamp
-1frame_filename
+4frame_filename
+its_per_sample
+ytes_per_sample
 layout_nb_channels
 name
-tring
-end_packet
+scriptor_get
+code_subtitle2
+lose
+hroma_pos_to_enum
+acket
+cture_type_char
+x_fmt_name
+_relative
 orbis_parse_
 bprintf
 reset
 init
 ame_flags
-icture_type_char
-acket
-_relative
-sleep
-rl_split
-make_string
-init
-pherical_
-#dp_create
-2eek_frame
-ereo3d_
-start
-istr
-"casecmp
 mac_
 ex_dump
 alloc
 init
 update
 inal
-casecmp
 mage_check_s
 format_next
 it_packet
 terleaved_write_
-1dex_search_timestamp
+4dex_search_timestamp
+sleep
+rl_split
+make_string
+init
+check_frame_rate
 fg_init
 zo1x_decode
 emdup
@@ -6325,6 +8551,7 @@ array
 tracked
 array
 tracked
+_from_string
 list
 name
 alloc
@@ -6334,168 +8561,188 @@ update
 xer_iterate
 acket
 rogram
-rror
+pherical_
+'dp_create
+5eek_frame
+ereo3d_
+start
+%dup
+%casecmp
 format_next
 copy
-free
-next
-_dict_val
-from_string
+ get
+ next
+ ptr
+ set
+lag_is_set
+ ree
+dict_val
+ int
+!from_string
 efaults
-_val
-ix_fmt_desc_get
-"kt_dump
+!ict
+!_val
+!ix_fmt_
+$kt_dump
 cket_
- rse
- copy_props
-!free
-!get_side_data
-!new_side_data
-!pack_dictionary
-!unref
+!rse
+"copy_props
+"free
+"get_side_data
+"new_side_data
+#pack_dictionary
+#unref
 dd_side_data
-!lloc
+"lloc
 ake_refcounted
-!ove_ref
-!scale_ts
+#ove_ref
+#scale_ts
 _time
 close
-"init
-"parse2
-type_name
-"alloc
-tile_bounds
-#projection_name
-#alloc
-rink_packet
-update
 #init
-#final
-#alloc
-#duce
-$scale
-$gister_
+$parse2
+desc_get
+$get_chroma_sub_sample
+$dup
+$casecmp
+%replace
+rror
+%am_
+%duce
+&scale
+'gister_
 lloc
 array
-$tracked
+&tracked
 _array
+type_name
+&alloc
+tile_bounds
+'projection_name
+'alloc
+'rnd
 _rnd
+'rink_packet
+alloc
+'final
+'init
+'update
 iterate
-%open
-%input_format
-%output_format
-&open
-*get_
-+handshake
-,enum_protocols
+(open
+(input_format
+(output_format
+)open
+-get_
+.handshake
+/enum_protocols
 ind_protocol_name
-&ree_directory_entry
-(lush
-)eof
+)ree_directory_entry
++lush
+,eof
 heck
-'lose
-(ontext_free
+*lose
++ontext_free
 move
-'delete
-'yn_buf
-(partial
-*to_bprint
-(yn_buf
+*delete
+*yn_buf
++partial
+-to_bprint
++yn_buf
 lloc_context
-(ccept
-(rite
++ccept
++rite
 _marker
-)kip
-)ize
+,kip
+,ize
 _time
 ut_str
-,ause
-+dyn_buf
-,otocol_get_class
-,_string_array
+/ause
+.dyn_buf
+/otocol_get_class
+/_string_array
 _log
--_log2
--codec
-.sample_aspect_ratio
+0_log2
+0codec
+1sample_aspect_ratio
 ormat
-.rame_rate
+1rame_rate
 be_input_
-.gram_add_stream_index
+1gram_add_stream_index
 format
-.buffer
+1buffer
 get_
-0alloc_
-0init_output
-1write_header
-1version
-2license
-3que
-8open_input
-9seek_file
-:match_stream_specifier
-;transfer_internal_stream_timing_info
+3alloc_
+3init_output
+4write_header
+4version
+5license
+6que
+;open_input
+<seek_file
+=match_stream_specifier
+>transfer_internal_stream_timing_info
 mov_
-0class
-2riff_
+3class
+5riff_
 video_tags
-0audio_tags
+3audio_tags
 output_context2
-1context
+4context
 frame
-1trailer
-1uncoded_frame
+4trailer
+4uncoded_frame
 frame
-1uncoded_frame
+4uncoded_frame
 _query
 video_tags
-2audio_tags
+5audio_tags
 onfiguration
-3lose_input
+6lose_input
 get_
-3set_r
-4add_side_data
-;new_side_data
-3end_pts
-8parser
-8side_data
-;codec_timebase
+6set_r
+7add_side_data
+>new_side_data
+6end_pts
+;parser
+;side_data
+>codec_timebase
 _frame_rate
-4ecommended_encoder_configuration
+7ecommended_encoder_configuration
 _frame_rate
-4ecommended_encoder_configuration
+7ecommended_encoder_configuration
 get_
-5set_
-6inject_global_side_data
-8ffversion
+8set_
+9inject_global_side_data
+;ffversion
 video_codec
-6audio_codec
-7subtitle_codec
-7data_codec
-7metadata_header_padding
-7control_message_cb
-8probe_score
+9audio_codec
+:subtitle_codec
+:data_codec
+:metadata_header_padding
+:control_message_cb
+;probe_score
 video_codec
-7audio_codec
-7subtitle_codec
-7data_codec
-7metadata_header_padding
-7control_message_cb
+:audio_codec
+:subtitle_codec
+:data_codec
+:metadata_header_padding
+:control_message_cb
 aque
-7en_cb
+:en_cb
 aque
-8en_cb
+;en_cb
 ue_attached_pictures
-8ry_codec
+;ry_codec
 ree_context
-9lush
-9ind_stream_info
+<lush
+<ind_stream_info
 frame
-:ause
+=ause
 w_stream
-:twork_
+=twork_
 init
-;deinit
-@000
+>deinit
+@000P
 0``P
 @@@P
 @@@0 @
@@ -6516,10 +8763,16 @@ _av_aes_ctr_crypt
 _av_aes_ctr_crypt
 _av_aes_ctr_free
 _av_aes_ctr_free
+_av_aes_ctr_get_iv
+_av_aes_ctr_get_iv
+_av_aes_ctr_increment_iv
+_av_aes_ctr_increment_iv
 _av_aes_ctr_init
 _av_aes_ctr_init
 _av_aes_ctr_set_full_iv
 _av_aes_ctr_set_full_iv
+_av_aes_ctr_set_random_iv
+_av_aes_ctr_set_random_iv
 _av_aes_init
 _av_aes_init
 _av_append_packet
@@ -6689,6 +8942,8 @@ _av_get_audio_frame_duration2
 _av_get_audio_frame_duration2
 _av_get_bits_per_sample
 _av_get_bits_per_sample
+_av_get_bytes_per_sample
+_av_get_bytes_per_sample
 _av_get_channel_layout_nb_channels
 _av_get_channel_layout_nb_channels
 _av_get_channel_name
@@ -6703,6 +8958,8 @@ _av_get_output_timestamp
 _av_get_packet
 _av_get_picture_type_char
 _av_get_picture_type_char
+_av_get_pix_fmt_name
+_av_get_pix_fmt_name
 _av_get_random_seed
 _av_get_random_seed
 _av_gettime
@@ -6777,12 +9034,16 @@ _av_new_program
 _av_oformat_next
 _av_opt_copy
 _av_opt_copy
+_av_opt_flag_is_set
+_av_opt_flag_is_set
 _av_opt_free
 _av_opt_free
 _av_opt_get
 _av_opt_get
 _av_opt_get_dict_val
 _av_opt_get_dict_val
+_av_opt_get_int
+_av_opt_get_int
 _av_opt_next
 _av_opt_next
 _av_opt_ptr
@@ -6835,6 +9096,8 @@ _av_parser_parse2
 _av_parser_parse2
 _av_pix_fmt_desc_get
 _av_pix_fmt_desc_get
+_av_pix_fmt_get_chroma_sub_sample
+_av_pix_fmt_get_chroma_sub_sample
 _av_pkt_dump2
 _av_pkt_dump_log2
 _av_probe_input_buffer
@@ -6907,6 +9170,8 @@ _av_stream_set_r_frame_rate
 _av_stream_set_recommended_encoder_configuration
 _av_strerror
 _av_strerror
+_av_strireplace
+_av_strireplace
 _av_stristr
 _av_stristr
 _av_strlcat
@@ -6919,10 +9184,16 @@ _av_strncasecmp
 _av_strncasecmp
 _av_strndup
 _av_strndup
+_av_strnstr
+_av_strnstr
 _av_strstart
 _av_strstart
+_av_timecode_check_frame_rate
+_av_timecode_check_frame_rate
 _av_timecode_init
 _av_timecode_init
+_av_timecode_init_from_string
+_av_timecode_init_from_string
 _av_timecode_make_string
 _av_timecode_make_string
 _av_url_split
@@ -6954,6 +9225,8 @@ _avcodec_decode_subtitle2
 _avcodec_decode_subtitle2
 _avcodec_descriptor_get
 _avcodec_descriptor_get
+_avcodec_enum_to_chroma_pos
+_avcodec_enum_to_chroma_pos
 _avcodec_find_decoder
 _avcodec_find_decoder
 _avcodec_find_decoder_by_name
@@ -7074,6 +9347,10 @@ _avpriv_dict_set_timestamp
 _avpriv_dict_set_timestamp
 _avpriv_find_pix_fmt
 _avpriv_find_pix_fmt
+_avpriv_find_start_code
+_avpriv_find_start_code
+_avpriv_get_gamma_from_trc
+_avpriv_get_gamma_from_trc
 _avpriv_get_raw_pix_fmt_tags
 _avpriv_get_raw_pix_fmt_tags
 _avpriv_h264_has_num_reorder_frames
@@ -7091,12 +9368,16 @@ _avpriv_mpegaudio_decode_header
 _avpriv_new_chapter
 _avpriv_open
 _avpriv_open
+_avpriv_pix_fmt_bps_mov
+_avpriv_pix_fmt_bps_mov
 _avpriv_register_devices
 _avpriv_report_missing_feature
 _avpriv_report_missing_feature
 _avpriv_request_sample
 _avpriv_request_sample
 _avpriv_set_pts_info
+_avpriv_split_xiph_headers
+_avpriv_split_xiph_headers
 _avpriv_toupper4
 _avpriv_toupper4
 _avsubtitle_free
@@ -7127,8 +9408,11 @@ _av_aes_crypt
 _av_aes_ctr_alloc
 _av_aes_ctr_crypt
 _av_aes_ctr_free
+_av_aes_ctr_get_iv
+_av_aes_ctr_increment_iv
 _av_aes_ctr_init
 _av_aes_ctr_set_full_iv
+_av_aes_ctr_set_random_iv
 _av_aes_init
 _av_append_path_component
 _av_asprintf
@@ -7197,11 +9481,13 @@ _av_gcd
 _av_get_audio_frame_duration
 _av_get_audio_frame_duration2
 _av_get_bits_per_sample
+_av_get_bytes_per_sample
 _av_get_channel_layout_nb_channels
 _av_get_channel_name
 _av_get_exact_bits_per_sample
 _av_get_media_type_string
 _av_get_picture_type_char
+_av_get_pix_fmt_name
 _av_get_random_seed
 _av_gettime
 _av_gettime_relative
@@ -7232,9 +9518,11 @@ _av_memdup
 _av_mul_q
 _av_new_packet
 _av_opt_copy
+_av_opt_flag_is_set
 _av_opt_free
 _av_opt_get
 _av_opt_get_dict_val
+_av_opt_get_int
 _av_opt_next
 _av_opt_ptr
 _av_opt_set
@@ -7261,6 +9549,7 @@ _av_parser_close
 _av_parser_init
 _av_parser_parse2
 _av_pix_fmt_desc_get
+_av_pix_fmt_get_chroma_sub_sample
 _av_realloc_array
 _av_realloc_f
 _av_realloc_tracked
@@ -7284,14 +9573,18 @@ _av_stereo3d_type_name
 _av_strcasecmp
 _av_strdup
 _av_strerror
+_av_strireplace
 _av_stristr
 _av_strlcat
 _av_strlcatf
 _av_strlcpy
 _av_strncasecmp
 _av_strndup
+_av_strnstr
 _av_strstart
+_av_timecode_check_frame_rate
 _av_timecode_init
+_av_timecode_init_from_string
 _av_timecode_make_string
 _av_usleep
 _av_vbprintf
@@ -7305,6 +9598,7 @@ _avcodec_chroma_pos_to_enum
 _avcodec_close
 _avcodec_decode_subtitle2
 _avcodec_descriptor_get
+_avcodec_enum_to_chroma_pos
 _avcodec_find_decoder
 _avcodec_find_decoder_by_name
 _avcodec_free_context
@@ -7324,6 +9618,8 @@ _avpriv_ac3_channel_layout_tab
 _avpriv_codec_get_cap_skip_frame_fill_param
 _avpriv_dict_set_timestamp
 _avpriv_find_pix_fmt
+_avpriv_find_start_code
+_avpriv_get_gamma_from_trc
 _avpriv_get_raw_pix_fmt_tags
 _avpriv_h264_has_num_reorder_frames
 _avpriv_mpa_freq_tab
@@ -7331,15 +9627,19 @@ _avpriv_mpeg4audio_get_config2
 _avpriv_mpeg4audio_sample_rates
 _avpriv_mpegaudio_decode_header
 _avpriv_open
+_avpriv_pix_fmt_bps_mov
 _avpriv_report_missing_feature
 _avpriv_request_sample
+_avpriv_split_xiph_headers
 _avpriv_toupper4
 _avsubtitle_free
 _bind$UNIX2003
+_bsearch
 _close$UNIX2003
 _closedir$UNIX2003
 _connect$UNIX2003
 _fcntl$UNIX2003
+_fmod
 _fprintf
 _fputc
 _free
@@ -7355,6 +9655,7 @@ _hypot
 _listen$UNIX2003
 _llrint
 _localtime_r
+_lrint
 _lrintf
 _lseek
 _lstat$INODE64
@@ -7366,6 +9667,7 @@ _memmove
 _memset
 _memset_pattern16
 _mkdir
+_mktime$UNIX2003
 _opendir$INODE64$UNIX2003
 _poll$UNIX2003
 _pthread_mutex_lock
@@ -7427,6 +9729,7 @@ __bss
 __DATA
 __LINKEDIT
 @loader_path/libavformat.58.dylib
+JRK*RE7$
 @loader_path/libavcodec.58.dylib
 @loader_path/libavutil.56.dylib
 /usr/lib/libSystem.B.dylib
@@ -7452,14 +9755,13 @@ t$ L
 UAVSI
 fffff.
 [A^]
-ffffff.
+fffff.
 fffff.
 t-f.
 ffff.
 ffff.
 ffff.
 AWAVSI
-t-f.
 [A^A_
 UAWAVAUATSH
 [A\A]A^A_]
@@ -7508,6 +9810,61 @@ t$XD
 =fcTL
 t$XD
 [A\A]A^A_]
+UAWAVAUATSH
+fffff.
+D$ H
+T$0H
+L$,L
+D$(L
+d$(L
+D$ H
+T$0H
+L$,M
+8[A\A]A^A_]
+UAWAVAUATSH
+L$ H
+T$(H
+|$0Hc*E1
+D$0H
+fff.
+D$0A)
+T$0H
+C@Hc
+D$(Lc(M
+ffff.
+ffffff.
+|$8D
+[A\A]A^A_]
+UAWAVAUATSH
+d$ L
+T$ H
+t#HcD$
+([A\A]A^A_]
+([A\A]A^A_]
+UAWAVATSI
+</tX
+fff.
+[A\A^A_]
+UAWAVAUATSI
+u	fA
+[A\A]A^A_]
+UAWAVAUATSH
+fffff.
+T$(H
+L$$L
+D$ L
+Sff.
+T$(H
+Hct$$H
+|$`H
+|$`H
+t$J	
+L$L	
+L$DH
+t$8H
+|$XH
+t$0H
+h[A\A]A^A_]
 tgffff.
 UAWAVAUATSPI
 [A\A]A^A_]
@@ -7843,6 +10200,369 @@ UAWAVAUATSPA
 ?wnA
 [A\A]A^A_]
 ffff.
+UAWAVAUATSPI
+4tfffff.
+<|H9
+[A\A]A^A_]
+UAWAVAUATSH
+L$ D
+L$$I
+t$8H
+|$(H
+|$PE1
+\$8L)
+l$(H
+H;\$0
+d$PM
+D$(H
+|$AH
+d$PM
+D$(H
+t$8H)
+D$AD
+|$AL
+d$PI
+	wYH
+|$AL
+L$P1
+D$(H
+t$8I)
+L;l$0
+D$(H
+t$8H)
+D$AD
+D$(H
+t$8H)
+D$AD
+D$(H
+t$8H)
+D$AL
+|$(L
+T$8L)
+X[A\A]A^A_]
+UAWAVAUATSH
+l$ E1
+HcD$
+D;`,
+[A\A]A^A_]
+UAWAVAUATSH
+C0IcL$$H
+D$`I
+D$@M
+uHLi
+D$hK
+D$HH
+D$`H
+D$8H
+T$@I
+I)D$
+\$XA
+IcD$$H
+D$HI
+HiD$H
+D$$A
+H91u
+L$(I
+l$PM
+\$PH
+D$HK
+D>(H
+D$hK
+|$0I
+|$@H
+D$`H
+|$0L
+l$PI
+|$0L
+l$PI
+L$(H+)Oc
+L$8K
+t> I
+L$ I
+T$HH
+D$8H
+\$ A
+D$`H
+D$`H
+l$`H
+D$(H+8H
+gfffffffH
+H9T$
+H9T$
+L$HH
+T$$1
+T$@I
+l$Xti
+T$@I
+T$@I
+l$XH9
+L$`H
+D$8H
+D$HH
+D$0f
+D$`H
+HkL$ hH
+t$@H
+uiHkD$ hH
+D$`H
+T$PH
+D$HH
+D$ C
+D$@K
+D$(C
+L$`H
+L$`K
+D$HH
+stypH
+msdhH
+msdhH
+msixH
+D$`C
+\$@C
+L$$G
+l$PL
+\$`H
+|$xH
+l$XL
+D$@L
+T$$1
+|$HH
+D$HH
+l$XL
+[A\A]A^A_]
+UAWAVAUATSH
+D$ I
+D$8Ii
+L$0H
+T$(E1
+t$8H
+l$0I
+t.,H
+l$@H
+D;c,
+D$ H
+[A\A]A^A_]
+UAWAVAUATSH
+~$@KL
+IcF$I
+G,Hi
+l$pL
+D$`E1
+T$hH
+L$hH
+L$hH
+L$hH
+AdH;
+D91u(E
+l$pL
+fff.
+l$pL
+fff.
+D$0H
+D$`E1
+D$XH
+T$HH
+D$XH
+l$@M
+L$0H
+D$0H
+l$8H
+D$0H
+D$0H
+D$0H
+l$@J
+D- H
+\$hL
+\$hH
+\$hL
+t$PI
+|/,H
+|/,H
+\$@L
+L$hH
+D$hH
+l$XH
+l$HI
+t- A
+L$PH
+|$hL
+l$hH
+T$8H
+|$PH
+0LcRPM
+BT~`Mc
+d$XH
+t$HI
+l40H
+d$XH
+t$HA
+T40E
+D44I
+l48Hc
+T48E
+D4<I
+H8A;L4P~
+@<A;D4T~
+HcV8H
+HcN<H
+D,\A
+D$PH
+D$`H
+D$`I
+A;G,
+D$(H
+[A\A]A^A_]
+fff.
+UAWAVAUATSH
+E;&|
+E;l$,
+[A\A]A^A_]
+[A\A]A^A_]
+fffff.
+AWAVSH
+IcO$H
+@HHi
+u=IcG$I
+`[A^A_
+AVSPH
+UAWAVATSH
+)D$`
+L$HL
+L$(D
+mp4vuDH
+L$HD
+D$LD
+L$PH
+mp4a
+|$8H
+|$8H
+l$@I
+L$,D
+D$-D
+$H;D$xu
+[A\A^A_]
+AVSPA
+\3$H
+HHLi
+D3Xt
+UAWAVAUATSH
+D$HE
+x/Ic
+XHHi
+L$(H
+t/H)
+D$HM
+L$(A
+L$@Ic
+L$XD
+L$xf
+T$XH
+L$(C9
+D$pH
+sidxI
+D$pffffff.
+u*H9
+|$hH
+D$`C
+D$PH
+D$`H
+D$HA9
+L$8H
+\$HA
+ffff.
+PHIi
+E+` E
+`HLi
+uKH+
+A;m,
+D$(M
+t$ H
+|$0M
+l$0L
+r/Hi
+l$0H
+l$0H
+r/Hi
+r/Hi
+ffffff.
+&unHc
+&amp
+&lt;
+>uKHc
+&gt;
+&quo
+'u!Hc
+&apo
+fff.
+l$0uxI
+D$XI
+D$`A
+xDH9
+fffff.
+L$PI
+L$8I
+L$HI
+L$@1
+qHLi
+D$pK
+D$HL
+D$@L
+D$PHc
+D$HH
+\$xH
+D$pH
+T&,1
+E;7|
+\$h1
+u)Hc
+E;'L
+\$h1
+T&,1
+E;'|
+\$xt
+|$pL
+t$XH
+l$0A;E
+t$ H
+D$(H
+L$0ffff.
+D$0L
+P H9
+L$01
+D$,H
+T$0H
+T$0H
+l$0t
+[A\A]A^A_]
+AWAVAUATSH
+[A\A]A^A_
+AWAVAUATSH
+D$XI
+H;D$Xu
+`[A\A]A^A_
+AWAVATSPI
+[A\A^A_
+UAWAVAUATSH
+L$LA
+t$hI
+D$XH
+L$dH
+|$xH
+D$hL
+t$0H
+|$hM
+T$@Mc
+ffffff.
+T$@I
+UDIc
+D$XIc
+D$pI
+^D$XLc
+T$PH
+l$0t
+d$ht	H
+t$hI
+[A\A]A^A_]
 fff.
 UAWAVAUATSH
 T$4I
@@ -7966,6 +10686,10 @@ HcD$$H
 H9K0
 K H)
 [A\A]A^A_]
+AVSPI
+fLaC
+"|#H
+3w:H
 Qd;W
 AVSPH
 { Hc
@@ -8344,6 +11068,131 @@ t$0D
 $$y5
 t"Hc
 fffff.
+[A\A]A^A_]
+UAWAVAUATSH
+T$$H
+T$$H
+Hc\$$E1
+fffff.
+([A\A]A^A_]
+UAWAVAUATSPM
+[A\A]A^A_]
+ffffff.
+UAWAVAUATSH
+)D$`
+)D$PH
+D$Xf
+L$4H
+|$(H
+D$xH
+l$xI
+L$Hf.
+L$ A
+D$n1
+|$pH
+|$pH
+D$nD
+w<ffff.
+T$pH
+\$nL
+|$p@
+D$8A
+T$@H
+D$4A
+"t)L
+L$HE
+D$b=
+L$QH
+L$RH
+L$SH
+L$TH
+L$XH
+L$`H
+L$bH
+L$dH
+L$eH
+L$fH
+L$gH
+L$hH
+L$jH
+L$kH
+L$lH
+L$mH
+L$nH
+D$pL
+ffff.
+D$pF
+D$pF
+D$pfB
+D$pB
+T$n9
+!u"f
+-ffff.
+t$PH
+\$(H
+t$TH
+t$XH
+t$XH
+t$`H
+t$hH
+t$nH
+D$pE1
+D$pB
+D$pfB
+tTfff.
+D$pJ
+D$pB
+T$n9
+ffff.
+D$pH
+D$pH
+D$pH
+L$n9
+[A\A]A^A_]
+UAWAVAUATSH
+%fffff.
+$ff.
+ffffff.
+Wfff.
+(ffffff.
+&ffff.
+fff.
+8ffffff.
+<	D9
+<	D9
+[A\A]A^A_]
+fffff.
+UAWAVAUATS
+tzffff.
+[A\A]A^A_]
+UAVSA
+[A^]
+UAWAVATSD
+[A\A^A_]
+[A\A^A_]
+ffff.
+UAWAVATSD
+[A\A^A_]
+[A\A^A_]
+AWAVAUATSM
+T$0H
+T$8H
+[A\A]A^A_
+[A\A]A^A_
+[A\A]A^A_
+fffff.
+UAWAVAUATSPE
+l$@H
+[A\A]A^A_]
+[A\A]A^A_]
+UAWAVSPM
+[A^A_]
+UAWAVAUATSH
+|$XH
+|$XH
+H+D$X
+L	+Hc
+D$`1
 [A\A]A^A_]
 AWAVATSH
 |$ 1
@@ -8827,6 +11676,558 @@ t$ 1
 AWAVATSPI
 HcS(
 [A\A^A_
+UAWAVAUATSH
+l$H1
+;k,r
+\$0E1
+t$@H
+ffff.
+l$@~&
+\$(H
+l$HxRL
+t$@M
+D$0H
+ffff.
+t$8H
+t$8H
+l$HA
+t$X1
+~WHiD$X
+L$hH
+|$`1
+ffff.
+D$`H9
+A;m,r
+D$8fH
+D$8fH
+l$HI
+t$@L
+D$ H
+A;D$,M
+D$8H
+D$8H
+ffffff.
+x>Hc
+L$@E
+*fff.
+D$@9
+A;F,r
+|$ H
+t$8H
+t$0A
+D$(H
+D$8I
+l$pH
+t$@H
+|$@L
+l$pL
+fffff.
+\$@H
+fff.
+l$pL
+fffff.
+d$pH
+D$@H
+\$pL
+L$(H
+l$p1
+l$8H
+ffffff.
+E;f,
+D$xH
+L$@H
+fff.
+u.ffff.
+|$@H
+D$@H
+D$(E1
+fffff.
+D$@L
+|$@H
+T$(H
+D$(L
+fff.
+l$xHc
+~-I	
+u,E9
+D$@H
+D$(E1
+fffff.
+D$@H
+D$8I
+L$8L
+|$@H
+E;e,
+D$@H
+T$@H
+\$ H
+t$HH
+\$H~
+|$0D
+[A\A]A^A_]
+ffff.
+UAWAVAUATSH
+|$(Lc
+D$ H
+fffff.
+A;F,r
+t$DL
+HcT$D
+t=@1
+t=@t	H
+t= 1
+T$DH
+|$8H
+L$8D
+t$DL
+HcT$D
+|$(IcO$H
+l$$t
+l$$L
+H+kXH
+u	H;
+fff.
+A;F,r
+IcO$H
+x[A\A]A^A_]
+UAWAVAUATSH
+D$8L
+t$xH
+D$\H
+t$(H
+l$ L
+\$0H
+L$0H
+L$pH
+D$PH
+D$HH
+D$pL
+l$@E
+ffff.
+l$@~*f.
+d$HL
+;D$\
+L$8H
+D$`H
+D$hE1
+|$pE
+l$h~!
+D$pH
+D$h1
+\$h~*f.
+D$pH
+D$h1
+\$h~*f.
+|$pI
+|$pH
+\$h~%
+l$`H
+d$HL
+l$@xWL
+(L;|$Ps
+|$pH
+d$HE
+l$(x$
+|$x1
+l$ H
+[A\A]A^A_]
+D$hH
+H+S@H
+D$pfH
+L$0H
+\$0H
+xwHc
+t=L9
+D$hD)
+D$hL
+D$h1
+4fffff.
+UAWAVAUATSH
+'fffff.
+fffff.
+|$pA
+fffff.
+A;^,
+[A\A]A^A_]
+HcF$H
+ffffff.
+UAWAVAUATSH
+G0IcL$$H
+\$(E
+L$@H
+I+GXH
+T$XH
+l$xL
+;F,r
+l$xH
+T$Xt
+T$XH
+l$xL
+T$XH
+l$xL
+l$hA
+x E1
+|$`L
+t$pM
+t$HA
+\$PE
+ffffff.
+\$H~(
+|$`I
+l$hL
+t$pL
+D$PH
+D$HH
+|$pL
+l$hL
+|$`H
+IcD$$L
+D$xt
+D$XH
+D$xH
+D$XH
+D$@H
+d$PL
+T$8B
+L$xH
+D$XL
+ffff.
+D$HL
+T$ A
+D$HH
+\$PH
+	|XH
+D$HH
+\$PH
+\$PL
+l$hL
+D$xI
+D$PH
+d$Px/A
+~-ffffff.
+\$xH
+l$pfffff.
+~3H	
+\$XD
+D$XD
+~*H	
+t$0+pXL
+ffffff.
+~-ffffff.
+\$xH
+fffff.
+~0H	
+|$pH
+|$`H
+I+_@Ic
+l$HH
+t$$I
+I+_@Ic
+T$HH
+GhHc
+[A\A]A^A_]
+ffff.
+UAWAVAUATSH
+I+D$@Ic
+~,H	
+T$ H
+t$ H
+([A\A]A^A_]
+UAWAVAUATSH
+l$XM
+L$(I
+ffff.
+d$0H
+l$8L
+t$ A
+|$pM
+t$hH
+l$`H
+\$@H
+D$PE1
+l$HE
+l$P~'
+D$hfffff.
+\$h~*f.
+D$`fffff.
+\$`~*f.
+D$pH
+D$hL
+fffff.
+l$hH
+ffff.
+l$HH
+l$8L
+D$pL
+D$pH
+|$ H
+\$@H
+l$XA;
+|$(I
+|$8H
+[A\A]A^A_]
+UAWAVATS
+fffff.
+[A\A^A_]
+UAWAVAUATSH
+|$8H
+l$ H
+D$0H
+d$@I
+d$@E
+d$@H
+D$8J
+fff.
+\$(E
+\$(~%f
+\$@1
+l$0H
+|$8x`L
+fffff.
+l$ H
+H[A\A]A^A_]
+ffffff.
+UAWAVAUATSH
+t$0H
+t$@L
+|$8I
+ffff.
+|$PH
+D$(H
+D$8L
+|$0H
+d$@Hc\$H1
+~-I	
+X[A\A]A^A_]
+fffff.
+UAWAVAUATSH
+t$pH
+G0HcQ$H
+D$PH
+\$HH
+\$HH
+|$8H
+T$`H
+t$hH
+T$XL
+L$pH
+T$ D
+l( )
+l$Ht+
+D$@tF
+D$@A
+l$PH
+L$`H
+T$hH
+t$HD
+ffffff.
+D$HD
+l$8B
+ffff.
+l$XD
+D$`H
+L$hL
+L$xH
+l$XL
+\$x~*ff.
+d$xE
+ffffff.
+\$P~*f.
+fff.
+t$0D
+ffff.
+D$@H
+H+\$@H
+ffff.
+L$$H
+[A\A]A^A_]
+UAWAVAUATSH
+D$pH
+L$0L
+D$$I
+D$(Hc
+T$$L
+T$(L
+T$,L
+ffff.
+H;D$pu
+x[A\A]A^A_]
+UAWAVAUATSH
+[A\A]A^A_]
+H+C@Hc
+fff.
+UAWAVAUATSH
+L$hH
+t$`I
+L$HA
+D$8A
+l$pL
+D$0H
+l$XE
+fff.
+t$@~$
+D$hH
+t$pI
+t$@D
+t$pI
+t$pH
+t$pL
+d$Pu$
+@8@t4
+l$XuCA
+d$pA
+!u"H
+4fffff.
+fff.
+D$H!
+L$HL
+d$pH
+d$PL
+T$HA
+T$HL
+d$PIc
+l$XH
+l$p~"f
+D$@IcEpH
+\$p~$
+L$hH
+D$pfH
+D$pfH
+|$XA
+D$pA
+|$XH
+l$p~+ff.
+l$@H
+d$Pff.
+D$@1
+T$HHc
+D$pA
+ffffff.
+D$@L
+d$PL
+T$HA
+HcGTH
+D$@L
+d$PL
+L$hH
+L$HL
+D$0H
+H+\$0H
+[A\A]A^A_]
+d$PL
+|$pL
+d$PHi
+D$@A
+l$XH
+|$pL
+D$pHc
+L$pH
+u9L9
+D$@A
+l$XH
+l$@~ A
+l$Pt>A
+D$(IcE8H
+D$8A
+l$8~'
+D$XHc@<H
+D$8A
+ffffff.
+l$8~'
+\$ H
+D$`D
+l$ H
+d$PL
+\$ H
+d$PL
+\$ H
+\$ H
+\$ H
+\$ H
+D$8I
+l$Xu!I
+l$XL
+d$P1
+\$ H
+|$ L
+t$@D
+l$8H
+|$XL
+t$@D
+l$8H
+D$pH
+\$ t
+D$PH
+D$pHch@H
+l$8L
+t$@I
+Ic_8LchDH
+t$@L
+|$XH
+|$XH9
+D$XHcH<I
+D$8A
+l$8~ A
+D$8A
+l$8~ A
+t$@A
+fff.
+l$8E
+|$8H
+D$8A
+|$8H
+D$8A
+\$8~ A
+\$ H
+ffff.
+ffffff.
+fffff.
+D$XD
+ffff.
+D$XD
+ffff.
+D$XD
+ffff.
+ffff.
+ffff.
+fffff.
+|$8E
+fff.
+\$8~2L
+ffff.
+D$8H
+^D$8
+D$8fH
+^D$8
+D$8fH
+^D$8
+D$8fH
+^D$8
+D$8fH
+^D$8
+D$8fH
+^D$8
+D$8fH
+^D$8
+D$8fH
+^D$8
+D$8fH
+D$8H
+^D$8
+D$8fH
+^D$8
+D$8fH
+\$ H
+ffffff.
+\$ H
+D$pfH
+D$pfH
+D$pfH
+l$ H
+\$ H
+|$(I
+fff.
+|$XH
 UAWAVAUATSH
 t3ffffff.
 ,$t&f
@@ -9857,6 +13258,1298 @@ UAWAVSPH
 E,E1
 [A^A_]
 UAWAVAUATSH
+t$PI
+^ HcF$M
+}8Li
+D$<A
+ETt\A
+l$HK
+l$HI
+l$HH
+\$@L
+l$0K
+D'hH
+\$@L
+T$PH
+\$@L
+l$0K
+t'0A
+HcD$lH
+t$(L
+t&tB
+l$P~)B
+T&XI
+`ivx
+`i52
+ai12
+aivx
+`i13
+ai52
+`i53
+ai13
+`i15
+ai53
+`i55
+ai15
+`i16
+ai55
+`i56
+ai16
+@Vin
+ai56
+`i1p
+AVin
+`i5p
+ai1p
+ai5pt
+ai1qu
+ai5qM
+D'X=`ivx
+=`i52
+ =ai12
+=aivx
+=`i13
+=ai52
+l'xH
+\$HH
+=`i53
+=ai13
+=`i15
+=ai53
+=`i55
+=ai15
+=`i16
+=ai55u|
+=`i56
+=ai16ui
+=@Vin
+=ai56uV
+=`i1p
+=AVinuC
+=`i5p
+=ai1p
+=ai5pt
+=ai1qu
+=ai5qM
+D$lA
+\'xH
+l$PH
+HcT$lH
+HcL$lH
+HcE$H
+|$(H
+L$0;A
+t$XH
+T$l1
+D'X=`ivx
+=`i52
+=ai12
+L$0;A
+t$XH
+T$lH
+=aivx
+=`i13
+=ai52
+=`i53
+=ai13
+=`i15
+=ai53
+=`i55
+=ai15t
+=`i16
+=ai55tl
+=`i56
+=ai16
+=@Vin
+=ai56
+9=`i1p
+=AVin
++=`i5p
+=ai1p
+=ai5pt
+=ai1qu
+=ai5qM
+L$HH
+L$lH
+|$(H
+L$lH
+L$0;A
+t$XH
+D$<H
+T$lH
+\$ 1
+HcL$lH)
+Ic	H
+D$lIc	H
+t$PI
+Ic	H
+Ic	H
+L$ H
+L$0#A@=
+@u$K
+Ic	H
+T$ H
+u8L9
+D$ H
+|$(L
+|$(L
+l$ t
+~@L9
+\$HH
+D$@Ic^ 1
+T$pH
+T$tM
+L$HE
+t$PL
+L$lH
+\$Ht
+D'@H
+L$HIc
+l$ H
+|$@H
+\$HB
+D'@A
+D'DH
+D&(LcL$lH
+D$0L
+x.;P
+D$XE1
+t$Pt
+Hc|$hH
+\$<H
+|$XH
+D$PH9x
+x[A\A]A^A_]
+fff.
+AWAVATSPI
+IcL$$H
+@8Hi
+L$@1
+[A\A^A_
+ffff.
+UAWAVAUATSPH
+<$E1
+}&Hc
+[A\A]A^A_]
+UAWAVAUATSH
+T$xf
+t$xI
+ffffff.
+D$XH
+D$PH
+D$HH
+D$@H
+D$8H
+D$0H
+D$(H
+D$ H
+D+xH
+D+x1
+D+t@
+`ivx
+`i52
+ai12
+aivx
+`i13
+ai52
+`i53
+ai13
+`i15
+ai53
+`i55
+ai15
+`i16
+ai55u}
+`i56
+ai16uh
+@Vin
+ai56uS
+`i1p
+AVinu>
+`i5p
+ai1pu)
+ai5p
+ai1q
+ai5q
+D+xA
+l+tH
+l+xI
+D3hH
+T3PL
+L3XL
+4;;2u
+A;1u
+D;a,
+T$xI
+mdatH
+t$xt\
+fff.
+F0Hc
+T$xH
+D$pD
+Lit$x
+D5XtmcdF
+D5hA
+L5XJ
+T5`J
+\$pH
+XPHc
+D;g,
+D$x1
+uuidH
+|$H1
+Lc L
+5ffff.
+ffff.
+ffffff.
+l$xH
+EA@A
+[A\A]A^A_]
+UAWAVAUATSH
+t$ H
+HcN$H
+S8Hi
+D*`H
+l$0L
+ffffff.
+L$ H;i
+D$.H
+D$HH
+l$8H
+l$@H
+d$TH
+l$ E1
+tAHcB(H
+HcJ8H
+t$ L
+L$ 1
+L$ ;A |
+t$ L
+t$ L
+[A\A]A^A_]
+UAWAVAUATSH
+|$0L
+fff.
+l$8M
+D$0D;p,M
+l$(1
+l$@f
+t$8I
+D$>H
+D$XL
+d$HL
+d$PM
+\$dH
+|$0L
+ffff.
+l$(1
+l$(u?A
+#t/H
+t$ H
+d$ L
+|$0H
+CA t
+ffffff.
+@tuH
+|$ H
+mfraL
+mdatL
+\$0H
+u8Hi
+L$0M
+tfraL
+(E;7|
+L$0H
+mfroL
+freeL
+[A\A]A^A_]
+UAWAVAUATSH
+|$8L
+t$HI
+d$PM
+ t"H
+A#F@A
+A#F@A
+D$XE1
+D$`H
+|$hH
+T$`L
+d$Px
+G,A9
+D$X1
+tmcdu#1
+t$HA
+l$@I
+\$XH
+D$`A
+D5PA
+\$(H
+t$PH
+D$`H
+ uuL
+d$PH
+d$PH
+\$(L
+D$`H
+rtp 
+fffff.
+t$PI
+D$`H
+|$8L
+t$HL
+d$0H
+t$PA
+|4XL
+D$`H
+D$ M
+L$XH
+t$P1
+m2v1D
+L$`H
+xd5c
+t$HL
+xd5b
+AVdn
+dvc 
+dv5n
+AVdh
+D$`H
+raw 
+L$`H
+raw 9
+D$ M
+L$XH
+t$P1
+avciD
+L$`H
+t$HL
+ai1p
+L$XH
+D$`H
+|$8L
+L$XH
+D$`H
+|$8L
+d$0L
+L$XH
+xdv3
+t$HL
+xdv2
+dvh5
+dvh6
+xd54
+xd55
+dv5p
+dvpp
+dvcp
+dvhq
+L$XH
+dvhp
+ai55
+t$HL
+ai56
+t$HL
+xdvc
+t$HL
+xdvb
+xdv4
+xdv5
+xd5d
+t$HL
+xd5e
+ai5p
+ai5q
+t$HL
+xd5a
+xdv6
+t$HL
+d$0t~
+xdv7
+xdvd
+t$HL
+d$0tZ
+xdve
+ai15
+t$HL
+d$0t
+ai16
+t$HL
+d$0I
+|4XA
+\4XA
+l$@L
+l$@L
+lx4n
+mx3n
+L$0H
+t$PL
+t$PH
+uMHc@xH
+lx5n
+mx4n
+lx3p
+mx5n
+L$0L
+t$PA
+L$0I
+D$`H
+t$PI
+D$`H
+mx3pt
+mx4pt
+mx5puC
+@uOA
+t$PL
+t$PL
+L$XH
+D$`H
+;raw u4
+L$`H
+ffff.
+@u#I
+D$`H
+aivx
+xd5f
+ai1q
+xd51
+xd59
+ai53
+t$HL
+ai52I
+xdva
+xdv1
+t$HL
+d$0u{
+ai5q
+xdv8
+xdvf
+ai13
+t$HL
+ai12
+ai1p
+xdv9
+t$HL
+ai5p
+ai53
+ai13
+fffff.
+D$0H
+|$8H
+D$XH
+[A\A]A^A_]
+UAWAVSPL
+IcN H
+t6Hi
+F8Hc
+tmcdu
+rtp u
+[A^A_]
+[A^A_]
+HcF$H
+ffffff.
+UAWAVAUATSH
+)D$P
+)D$@
+)D$0
+)D$ 
+D+Xtext
+D+hH
+|$p1
+|$p1
+|$p1
+|$p1
+|$p1
+|$p1
+|$p1
+|$p1
+|$p1
+|$p1
+|$p1
+|$p1
+|$p1
+|$p1
+|$p1
+|$p1
+|$p1
+|$p1
+ftab
+|$p1
+|$pH
+L+hH
+D$ H
+\$PH
+D$0Hc
+D$(H
+D$(H
+encdH
+x[A\A]A^A_]
+UAWAVAUATSH
+D$`I
+|$8H
+~/Hc
+ffffff.
+|$@L
+D$PIc
+l$XI
+|$ H
+t$(L
+|$ H
+|$(H
+|$(1
+|$(H
+|$(Mc
+L$ H
+H;\$
+t$(H
+H;D$`u
+h[A\A]A^A_]
+UAWAVAUATSH
+D$ 1
+moovL
+ffffff.
+C8Ii
+D:8I
+A;)H
+fff.
+fffff.
+chapIcS I
+s8Hi
+A;G,r
+rtp u"
+<hintHcD
+K8Hi
+<fallHc
+XtmcduNHc
+tmcdI
+mvhdL
+iodsL
+Q8Ii
+D;u,A
+D$XA
+D$TH
+D$HH
+L$@L
+D$x1
+trakH
+L$pH
+fffff.
+L$pH
+L$pH
+\$hH
+t$8C
+tkhdL
+ffffff.
+D<TH
+D$0C
+t<TL
+D<hH
+D$xK
+\$h1
+D$xH
+D$xH
+D$xH
+D$xH
+u(Hcu8H
+`fffff.
+Hcx@Hc]8H
+HcPDH
+;E<u
+L$pD
+L$(J
+@(I9
+Hcp(H
+D$pD
+=c608
+L$(L
+t$`@
+edtsL
+elstL
+L$`H
+t$(H
+trefL
+D$`1
+mdiaL
+mdhdL
+d$hI
+ ffffff.
+@u'L
+ ffff.
+minfL
+D$xH
+smhdL
+vmhdL
+=c608t$=c708t
+=textt
+v=gpmdt
+=tmcdu
+=rtp ux
+hmhdL
+nmhdL
+dinfL
+drefL
+url L
+\$`H
+uuidL
+USMTL
+MTDTL
+Xrtp L
+udtaL
+hntiL
+sdp L
+D$xH
+=c608u
+nameH
+udtaL
+D$TA
+D$HH
+L$@H
+\$XH
+t$8H
+mvexL
+fff.
+trexL
+uuidL
+USMTL
+MTDTL
+metaL
+hdlrL
+mdtaL
+keysL
+]ff.
+mdtaL
+ilstL
+dataL
+mdirL
+applL
+ilstL
+ffff.
+covrL
+dataH
+tmpoL
+dataL
+chplH
+udtaL
+\$ H
+[A\A]A^A_]
+XMP_L
+fffff.
+UAWAVAUATSH
+<$E1
+|$`I
+-ffffff.
+|$`A
+ffff.
+\$PL
+|$`1
+D$(H
+l$0L
+d$8K
+HcQ(H
+|$\H
+|$HH!
+D$(H
+l$0L
+d$8K
+sidxL
+t+TL
+D$ 1
+D$H1
+D$HH
+JcL(
+D$HH
+d$8Ic
+t$(L
+l$0A)
+h[A\A]A^A_]
+UAWAVAUATSH
+ffff.
+|$XI
+ffffff.
+|$XH
+|$XM
+xpE1
+D$HA
+l$XH
+} E1
+@A t
+L$HH
+D$TH
+D$XL
+p HcD$TI
+H8Hi
+mdat
+EA@t
+X8Ii
+T$8H
+D$HE
+T$8A
+D;t$T
+l$ H
+\$(L
+t$0H
+\$XH
+\$xH
+l$DD
+D$HH
+prftL
+D$xE
+l$pA
+L$HH
+L$@1
+fffff.
+X8x	D9
+l$hN
+l$hJ
+D$@A
+Hcr(H
+Hco(H+W
+\$pH
+D$`H
+fff.
+uuidL
+freeL
+t$`H
+l$DH
+l$hH
+fff.
+|$pL
+\$XH
+mdat
+t$0H
+\$(H
+D$8H
+9ffff.
+L$XH
+D$XH
+[A\A]A^A_]
+UAWAVAUATSPI
+-ff.
+ftypL
+piff
+cmfcL
+D$@%
+iso6
+iso6L
+iso5
+iso4L
+isomL
+iso2L
+avc1L
+mp41L
+A#D$@=
+dashL
+fff.
+HcHTE1
+Hc@PH
+uuidL
+PROFL
+FPRFL
+APRFL
+mp4aL
+VPRFL
+avc1L
+mp4vL
+[A\A]A^A_]
+UAWAVAUATSH
+l$@I
+moofL
+mfhdL
+L$@H
+x	A9
+D$8L
+L$(1
+trafL
+tfhdL
+T$(~@
+AHH+A
+L$(t
+ tOA
+L$(H
+L$(H
+l$ 1
+tfdtL
+D$ H
+L$(H
+D$ H
+L$(L
+t$@H
+L$4A
+\$@H
+uuidL
+\$ H
+l$(H
+Hcp(H
+HcH(H+p
+freeL
+H[A\A]A^A_]
+UAWAVAUATSH
+\$4E
+l$(L
+@;\$4|
+l$(u,A
+D$(D
+trunH
+A#E@=
+t)Ic
+D9d$4
+t((L
+@D;d$4
+8[A\A]A^A_]
+ffffff.
+UAWAVAUATSPE
+[A\A]A^A_]
+[A\A]A^A_]
+MSNV
+iso6
+iso5
+iso4
+ uDE
+f4v 
+isml
+qt  
+isom
+UAVS
+t-;N,s
+W8Hi
+[A^]
+UAWAVAUATSPH
+t'ffff.
+[A\A]A^A_]
+[A\A]A^A_]
+UAWAVAUATSH
+T$$L
+/u I
+lociL
+t$$L
+([A\A]A^A_]
+UAWAVAUATSPE
+[A\A]A^A_]
+UAWAVATSE
+dataH
+[A\A^A_]
+[A\A^A_]
+[A\A^A_]
+fffff.
+UAWAVATSA
+dataH
+[A\A^A_]
+[A\A^A_]
+UAVS
+dataH
+[A^]
+UAWAVAUATSH
+D$ A
+ffffff.
+y7fffff.
+H;D$ u
+([A\A]A^A_]
+UAWAVSP
+fff.
+[A^A_]
+[A^A_]
+AWAVATSPI
+GhHcx@Hcp8HcPD
+taptH
+clefH
+profH
+enofH
+[A\A^A_
+fffff.
+UAWAVAUATSH
+D$@I
+c608u\H
+tx3guFH
+rtp tC
+gpmduUH
+mp4suHL
+tmcdu
+)D$0
+)D$ 
+hdlrL
+H;D$@u
+H[A\A]A^A_]
+fff.
+AWAVAUATSI
+gmhdH
+gminH
+Xc608
+textH
+=gpmdu81
+gpmdH
+=tmcd
+tmcdH
+tcmiH
+[A\A]A^A_
+UAWAVAUATSH
+stblL
+stsdL
+l$ L
+\$XA
+l$ L
+t$XL
+l$ H
+=gpmd
+=tmcd
+D$`HcXPH
+LcxTM
+lpcm
+encaL
+*@tfH
+t$0L
+D$hA
+gpmdL
+=rtp 
+rtp L
+timsL
+LcxdHcXhL
+iHH+i
+A;\$
+tmcdL
+t$LL
+D$`H
+D$0I
+L$hHcIpH
+t$0L
+o=(P
+waveL
+frmaL
+t$XL
+mp4aL
+|$Xmp4au
+endaL
+dOpsL
+endaL
+t$XL
+D$Zf
+T$h1
+dfLaL
+D$hL
+D$hH
+D$hH
+D$hH
+D$hH
+D$hD
+nameL
+t$PL
+wfexL
+D$`H
+dmlpL
+glblL
+chanL
+t$4L
+\$ H
+fff.
+sttsL
+ffffff.
+rtp u$A
+sdtpL
+fff.
+@A;o
+fffff.
+@A;T$
+cttsL
+d$(E1
+D$ 1
+stscL
+t$8L
+L$(H
+l$ H
+stszL
+D$(D
+D$(H
+\$(H
+|$(A
+t3fff.
+l$ H
+co64
+stcoL
+=ffffff.
+sgpdL
+rollL
+fff.
+sbgpL
+rollL
+D$ E1
+D$ H
+Hfffff.
+D$ H
+t$ A
+sbgpL
+rollL
+8[A\A]A^A_]
+D$xf
+D$xf
+UAWAVAUATSH
+~9E1
+[A\A]A^A_]
+UAWAVAUATSH
+encv
+FFMPL
+nTE1
+GX=mp4vM
+d263L
+FFMPL
+av1CL
+IcFtH
+=`ivx
+=`i52
+=ai12
+ACLRL
+ACLRL
+0001L
+=aivx
+L$lA
+L$`1
+L$@1
+L$H1
+\$\M
+L$PH9
+=`i13
+=ai52
+vpcCL
+=`i53
+=ai13
+R10k
+DpxEL
+DpxE
+hvcCL
+~Xhvc1
+D$@	
+=`i15
+=ai53
+{XAVdh
+ADHRL
+0001L
+=`i55
+=ai15
+APRGL
+APRGL
+0001L
+ARESL
+ARESL
+0001L
+dvc1L
+8=`i16
+=ai55
+=`i56
+=ai16
+=@Vin
+=ai56tD
+=`i1p
+=AVint1
+=`i5p
+=ai1pt
+=ai5pt
+=ai1qt
+=ai5q
+glblL
+fielL
+gamaL
+colrL
+profL
+colrL
+nclx
+nclcL
+clliL
+mdcvL
+U Hc
+U(Hc
+U0Hc
+U8Hc
+UHHc
+U@Hc
+fHc;H
+st3dL
+D$p1
+sv3dL
+svhdL
+projL
+prhdL
+cbmpL
+equiL
+\$pH
+dvvC
+dvcCL
+FhHcHDH
+t\HcP@H
+paspL
+clapL
+l$xH
+[A\A]A^A_]
+avcCL
+uuidL
+@hkL
+O$_L
+UAWAVAUATSPI
+esdsL
+ffffff.
+ffffff.
+[A\A]A^A_]
+AVSPI
+samr
+damrH
+FFMPH
+AVSH
+dac3L
+fffff.
+UAWAVAUATSH
+E\Dk
+t$ H
+\$ A
+\$ A
+Lfffff.
+l$ D
+\$ A
+Off.
+affffff.
+fff.
+ffffff.
+t$ H
+t$ H
+t$ A
+t$ A
+dec3H
+([A\A]A^A_]
+AWAVSH
+{Xtmcdu6
+t0Hc
+w8Li
+[A^A_
+[A^A_
+UAWAVAUATSH
+IcF$M
+o8Li
+D%hH
+IcF H
+;C,r
+D%hH
+u"Hc
+HcT$$H
+D$$H
+t6IcN$1
+;K,s+I
+IcO\H
+t	H9
+IcOdH
+W0H9
+tpIcO`H9
+EA t
+([A\A]A^A_]
+UAWAVAUATSH
+F0fA
+$$fffff.
+tXI;F@r#
+A+N0
+F fA
+[A\A]A^A_]
+UAWAVAUATSH
+L$ I
+d$(I
+E0fA
+Lct$ H
+l$0M
+"fff.
+D$ D)
+D$ M9
+|$(H
+t]H;E@L
+[A\A]A^A_]
+fff.
+UAWAVAUATSH
+L$<L
+D$@H
+L$HH
+T$0H
+l$<E
+l$@H
+|$HL
+\$,E
+D$ ff.
+fffff.
+D$<A
+d$P~dH
+D$@H
+\$8fff.
+|$HL
+|$0tZH
+F(Ic
+D$ H
+l$@H
+l$<E
+H;F@H
+[A\A]A^A_]
+fff.
+AWAVAUATSH
+sencH
+saioH
+saizH
+[A\A]A^A_
+UAWAVATSI
+sinfH
+frmaH
+t$XH
+schmH
+cencH
+schiH
+tencH
+[A\A^A_]
+UAWAVSPA
+[A^A_]
+UAWAVAUATSH
+y8Lc
+D7Xrtp G
+L7hH
+D7hA
+([A\A]A^A_]
+UAWAVAUATSH
+p8Hi
+T$tH
+l$`D
+l$`H
+l$`D
+l$`H
+l$`H
+l$`H
+D$PE1
+t$H1
+T$xH
+D$XE1
+A;(v
+l$@fD
+\$ L
+D$(L
+|$0L
+l$`L
+t$PfA
+D$<E1
+D$PL
+l$<D
+l$XH
+,&E)
+D$h1
+\$xH
+l$XH
+L$hD
+\$XH
+L$xH
+d$hH
+fffff.
+l$XL
+fff.
+|$0A
+D$<H
+L$PH
+D$@)
+l$`L
+t$HL
+D$(L
+\$ L
+[A\A]A^A_]
+AWAVAUATSI
+ffff.
+[A\A]A^A_
+[A\A]A^A_
+UAWAVAUATSH
 ffffff.
 D$(f
 uzHcL$0L
@@ -10442,9 +15135,7 @@ McD?@D
 [A\A]A^A_]
 fff.
 AWAVAUATSI
-o%N3
 T2tfffff.
-o%82
 tfffff.
 pA;D
 [A\A]A^A_
@@ -10581,6 +15272,16 @@ UAWAVSPH
 [A^A_]
 AVSPH
 ffffff.
+UAWAVAUATSH
+$IcP(H
+u-Icx8H
+L$(L
+t$ Hc
+D$(H
+D$0H
+D$0E
+D;k<|
+8[A\A]A^A_]
 UAWAVSPE
 [A^A_]
 UAWAVAUATSPH
@@ -10611,6 +15312,47 @@ uSfff.
 t$ H
 H;l$
 ([A\A]A^A_]
+fff.
+AWAVSI
+[A^A_
+UAWAVAUATSH
+|$8H
+D$,A
+d$(A
+|$8A
+t$ A
+IcMtH
+t$ A
+Eiup
+t$@f
+D$Jq
+D$D2
+D$Bf
+t$@f
+D$Ff
+D$@L
+d$@M
+u	M9
+D$8A
+ffff.
+D$ )
+[A\A]A^A_]
+UAWAVAUATSH
+	|"H
+[A\A]A^A_]
+	u?ffffff.
+[A\A]A^A_]
+AWAVAUATSI
+[A\A]A^A_
+AWAVATSPI
+[A\A^A_
+[A\A^A_
+UAWAVAUATSPI
+ffff.
+[A\A]A^A_]
+LISTL
+INFOL
+[A\A]A^A_]
 UAWAVAUATS
 fff.
 [A\A]A^A_]
@@ -10972,6 +15714,21 @@ kh9kl}
 {`Hc
 LcchM
 [A\A]A^A_]
+UAWAVAUATSH
+ffff.
+A9|$
+9A;|$
+:A;|$
+A;D$
+A;D$
+[A\A]A^A_]
+fffff.
+UAWAVSPA
+F9t=
+[A^A_]
+UAWAVAUATSH
+T$ H
+([A\A]A^A_]
 UAWAVATSH
 )D$`
 )D$P
@@ -11909,6 +16666,11 @@ D$8H
 ;D$4
 H;D$`u
 h[A\A]A^A_]
+UAWAVAUATSH
+|lH=
+|VH=
+[A\A]A^A_]
+AVSH
 !|:H
 WAVEu+
 9RIFFt 
@@ -11984,6 +16746,7 @@ UAWAVAUATSPA
 Hcu$H
 [A\A]A^A_]
 [A\A]A^A_]
+>wvpkuN
 t ffffff.
 AVS1
 C3\2
@@ -12116,6 +16879,7 @@ max_fps
 maximum framerate (0 is no limit)
 default_fps
 default framerate (0 is as fast as possible)
+libavformat/av1.c
 libavformat/avc.c
 URLContext
 protocol_whitelist
@@ -12155,6 +16919,296 @@ Statistics: %lld bytes read, %d seeks
 Invalid return value 0 for stream protocol
 Failed to decrease buffer size
 Invalid UTF8 sequence in avio_put_str16%s
+$RepresentationID$
+$Number
+$Bandwidth
+$Time
+%%%s
+%s%c%s
+Failed to parse format-tag beginning with %s. Expected either a closing '$' character or a format-string like '%%0[width]d', where width must be a single digit
+dash
+DASH Muxer
+At least one profile must be enabled.
+The min_seg_duration option is deprecated and will be removed. Please use the -seg_duration
+LHLS is experimental, Please set -strict experimental in order to enable it.
+LHLS option will be ignored as streaming is not enabled
+LHLS option will be ignored as hls_playlist is not enabled
+LDash option will be ignored as streaming is not enabled
+Target latency option will be ignored as streaming is not enabled
+Global SIDX option will be ignored as single_file is not enabled
+Global SIDX option will be ignored as streaming is enabled
+Changing frag_type from none to every_frame as streaming is enabled
+Enabling Producer Reference Time element for Low Latency mode
+Producer Reference Time element option will be ignored as utc_timing_url is not set
+Producer Reference Time element option will be ignored as streaming is not enabled
+Low Latency mode enabled without Producer Reference Time element option! Resulting manifest may not be complaint
+Target latency option will be ignored as Producer Reference Time element will not be written
+Minimum playback rate value is higer than the Maximum. Both will be ignored
+libavformat/dashenc.c
+No bit rate set for stream %d
+language
+role
+$ext$
+One or many segment file names doesn't end with .webm. Override -init_seg_name and/or -media_seg_name and/or -single_file_name to end with the extension .webm
+One or more streams in WebM output format. Streaming option will be ignored
+%s-stream%d.%s
+%s%s
+Segment duration %lld is outside the allowed range for DVB-DASH profile
+frag_type set to duration for stream %d but no frag_duration set
+Fragment duration %lld is longer than Segment duration %lld
+frag_type set to P-Frame reordering, but no parser found for stream %d
+movflags
++dash+delay_moov+skip_sidx+skip_trailer
++dash+delay_moov+global_sidx+skip_trailer
++dash+delay_moov+skip_trailer
++frag_every_frame
++frag_custom
+frag_duration
+write_prft
+wallclock
+cluster_time_limit
+cluster_size_limit
+dash_track_number
+live
+Representation %d init segment will be written to: %s
+Conflicting stream par values in Adaptation Set %d
+no video stream and no seg duration set
+no video stream and P-frame fragmentation set
+mp4a
+mp4v
+.%02x
+Incomplete RFC 6381 codec string for mp4v
+avc1
+.%02x%02x%02x
+av01
+.%01u.%02u%s.%02u
+.%01u.%01u%01u%01u.%02u.%02u.%02u.%01u
+vp09.%02d.%02d.%02d
+Could not find VP9 profile and/or level
+vorbis
+opus
+flac
+method
+user_agent
+multiple_requests
+timeout
+Could not select DASH segment type for stream %d
+Could not get extension type for stream %d
+No mp4 streams, disabling HLS manifest generation
+webm
+auto
+%.*s
+"%s" is not a valid value for an AdaptationSet id
+seg_duration=
+frag_duration=
+Unable to parse option value "%s" as duration
+frag_type=
+duration
+pframes
+every_frame
+none
+Unable to parse option value "%s" as fragment type
+descriptor=
+Parse error, descriptor string should be a self-closing xml tag
+trick_id=
+streams=
+Map all streams of type %s
+Selected stream "%s" not found!
+Map stream %d
+Stream %d is not mapped to an AdaptationSet
+reference AdaptationSet id "%d" not found for trick mode AdaptationSet id "%d"
+Codec type of stream %d doesn't match AdaptationSet's media type
+Stream %d is already assigned to an AdaptationSet
+DVB-DASH profile allows a max of 16 Representations per Adaptation Set
+DVB-DASH profile allows a max of 16 Adaptation Sets
+%smaster.m3u8
+DELETE
+failed to delete %s
+failed to delete %s: %s
+%smedia_%d.m3u8
+media_%d.m3u8
+Out of memory for filename
+Representation %d media segment %d written to: %s
+title
+Cannot use rename on non file protocol, this may lead to races and temporary partial files
+%s.tmp
+<?xml version="1.0" encoding="utf-8"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="urn:mpeg:dash:schema:mpd:2011"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-DASH_schema_files/DASH-MPD.xsd"
+	profiles="
+urn:mpeg:dash:profile:isoff-live:2011
+urn:dvb:dash:profile:dvb-dash:2014"
+	type="%s"
+static
+dynamic
+	mediaPresentationDuration="
+	minimumUpdatePeriod="PT%lldS"
+	suggestedPresentationDelay="PT%lldS"
+	availabilityStartTime="%s"
+	publishTime="%s"
+	timeShiftBufferDepth="
+	maxSegmentDuration="
+	minBufferTime="
+	<ProgramInformation>
+		<Title>%s</Title>
+	</ProgramInformation>
+	<ServiceDescription id="0">
+		<Latency target="%lld"
+ referenceId="%d"
+		<PlaybackRate min="%.2f" max="%.2f"/>
+	</ServiceDescription>
+	<Period id="0" start="
+	<Period id="0" start="PT0.0S">
+	</Period>
+	<UTCTiming schemeIdUri="urn:mpeg:dash:utc:http-xsdate:2014" value="%s"/>
+</MPD>
+master.m3u8
+		<AdaptationSet id="%d" contentType="%s" startWithSAP="1" segmentAlignment="true" bitstreamSwitching="true"
+video
+audio
+ maxFrameRate="%d/%d"
+ frameRate="%d/%d"
+ maxWidth="%d" maxHeight="%d"
+ par="%d:%d"
+ lang="%s"
+			<Resync dT="%lld" type="0"/>
+			<EssentialProperty id="%d" schemeIdUri="http://dashif.org/guidelines/trickmode" value="%d"/>
+			<Role schemeIdUri="urn:mpeg:dash:role:2011" value="%s"/>
+			%s
+ bandwidth="%d"
+			<Representation id="%d" mimeType="video/%s" codecs="%s"%s width="%d" height="%d"
+ scanType="unknown"
+ scanType="interlaced"
+ sar="%d:%d"
+ maxPlayoutRate="%d"
+ codingDependency="false"
+			<Representation id="%d" mimeType="audio/%s" codecs="%s"%s audioSamplingRate="%d">
+				<AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="%d" />
+				<ProducerReferenceTime id="%d" inband="true" type="%s" wallClockTime="%s" presentationTime="%lld">
+captured
+encoder
+					<UTCTiming schemeIdUri="urn:mpeg:dash:utc:http-xsdate:2014" value="%s"/>
+				</ProducerReferenceTime>
+				<Resync dT="%lld" type="1"/>
+			</Representation>
+		</AdaptationSet>
+				<SegmentTemplate timescale="%d" 
+duration="%lld" 
+availabilityTimeOffset="%.3f" 
+availabilityTimeComplete="false" 
+initialization="%s" media="%s" startNumber="%d"
+ presentationTimeOffset="%lld"
+					<SegmentTimeline>
+						<S 
+t="%lld" 
+d="%lld" 
+r="%d" 
+					</SegmentTimeline>
+				</SegmentTemplate>
+				<BaseURL>%s</BaseURL>
+				<SegmentList timescale="%d" duration="%lld" startNumber="%d">
+					<Initialization range="%lld-%lld" />
+					<SegmentURL mediaRange="%lld-%lld" 
+indexRange="%lld-%lld" 
+				</SegmentList>
+					<Initialization sourceURL="%s" />
+					<SegmentURL media="%s" />
+ff_hls_write_file_entry get error
+#EXT-X-PREFETCH:%s
+&amp;
+&lt;
+&gt;
+&apos;
+&quot;
+%Y-%m-%dT%H:%M:%S
+.%03dZ
+%d.%dS
+Unable to open %s for writing: %s
+Correcting the segment index after file %s: current=%d corrected=%d
+Segment durations differ too much, enable use_timeline and use_template, or keep a stricter keyframe interval
+os->parser
+dash muxer
+adaptation_sets
+Adaptation sets. Syntax: id=0,streams=0,1,2 id=1,streams=3,4 and so on
+window_size
+number of segments kept in the manifest
+extra_window_size
+number of segments kept outside of the manifest before removing from disk
+min_seg_duration
+minimum segment duration (in microseconds) (will be deprecated)
+seg_duration
+segment duration (in seconds, fractional value can be set)
+fragment duration (in seconds, fractional value can be set)
+frag_type
+set type of interval for fragments
+one fragment per segment
+fragment at every frame
+fragment at specific time intervals
+fragment at keyframes and following P-Frame reordering (Video only, experimental)
+remove_at_exit
+remove all segments when finished
+use_template
+Use SegmentTemplate instead of SegmentList
+use_timeline
+Use SegmentTimeline in SegmentTemplate
+single_file
+Store all segments in one file, accessed using byte ranges
+single_file_name
+DASH-templated name to be used for baseURL. Implies storing all segments in one file, accessed using byte ranges
+init_seg_name
+DASH-templated name to used for the initialization segment
+init-stream$RepresentationID$.$ext$
+media_seg_name
+DASH-templated name to used for the media segments
+chunk-stream$RepresentationID$-$Number%05d$.$ext$
+utc_timing_url
+URL of the page that will return the UTC timestamp in ISO format
+set the HTTP method
+http_user_agent
+override User-Agent field in HTTP header
+http_persistent
+Use persistent HTTP connections
+hls_playlist
+Generate HLS playlist files(master.m3u8, media_%d.m3u8)
+streaming
+Enable/Disable streaming mode of output. Each frame will be moof fragment
+set timeout for socket I/O operations
+index_correction
+Enable/Disable segment index correction logic
+format_options
+set list of options for the container format (mp4/webm) used for dash
+global_sidx
+Write global SIDX atom. Applicable only for single file, mp4 output, non-streaming mode
+dash_segment_type
+set dash segment files type
+segment_type
+select segment file format based on codec
+make segment file in ISOBMFF format
+make segment file in WebM format
+ignore_io_errors
+Ignore IO errors during open and write. Useful for long-duration runs with network output
+lhls
+Enable Low-latency HLS(Experimental). Adds #EXT-X-PREFETCH tag with current segment's URI
+ldash
+Enable Low-latency dash. Constrains the value of a few elements
+master_m3u8_publish_rate
+Publish master playlist every after this many segment intervals
+Write producer reference time element
+mpd_profile
+Set profiles. Elements and values used in the manifest may be constrained by them
+MPEG-DASH ISO Base media file format live profile
+dvb_dash
+DVB-DASH profile
+http_opts
+HTTP protocol options
+target_latency
+Set desired target latency for Low-latency dash
+min_playback_rate
+Set desired minimum playback rate
+max_playback_rate
+Set desired maximum playback rate
 libavformat/dump.c
 %s #%d, %s, %s '%s':
 Output
@@ -12173,7 +17227,6 @@ end %f
 name
   Program %d %s
   No Program
-language
 dump_separator
     Stream #%d:%d
 [0x%x]
@@ -12282,8 +17335,6 @@ libavformat/flac_picture.c
 Attached picture metadata block too big %u
 Correcting truncated metadata picture size from %u to %u
 comment
-title
-flac
 raw FLAC
 libavformat/flacdec.c
 Error parsing attached picture.
@@ -12339,7 +17390,6 @@ Keyframe index parsing failed
 Missing AMF_END_OF_OBJECT in AMF_DATA_TYPE_OBJECT
 Missing AMF_END_OF_OBJECT in AMF_DATA_TYPE_MIXEDARRAY, found %d
 unsupported amf type %d
-duration
 videodatarate
 audiodatarate
 datastream
@@ -12351,7 +17401,6 @@ audiosamplesize
 stereo
 width
 height
-encoder
 Open Broadcaster Software v0.%d
 metadatacreator
 MEGA
@@ -12455,6 +17504,60 @@ maximum valid delay between frames (in hundredths of seconds)
 default_delay
 default delay between frames (in hundredths of second)
 ignore loop setting (netscape extension)
+configurationVersion:                %hhu
+general_profile_space:               %hhu
+general_tier_flag:                   %hhu
+general_profile_idc:                 %hhu
+general_profile_compatibility_flags: 0x%08x
+general_constraint_indicator_flags:  0x%012llx
+general_level_idc:                   %hhu
+min_spatial_segmentation_idc:        %hu
+parallelismType:                     %hhu
+chromaFormat:                        %hhu
+bitDepthLumaMinus8:                  %hhu
+bitDepthChromaMinus8:                %hhu
+avgFrameRate:                        %hu
+constantFrameRate:                   %hhu
+numTemporalLayers:                   %hhu
+temporalIdNested:                    %hhu
+lengthSizeMinusOne:                  %hhu
+numOfArrays:                         %hhu
+array_completeness[%hhu]:               %hhu
+NAL_unit_type[%hhu]:                    %hhu
+numNalus[%hhu]:                         %hu
+nalUnitLength[%hhu][%hu]:                 %hu
+#EXTM3U
+#EXT-X-VERSION:%d
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="group_%s"
+,NAME="audio_%d",DEFAULT=%s,
+LANGUAGE="%s",
+URI="%s"
+#EXT-X-MEDIA:TYPE=SUBTITLES,GROUP-ID="%s"
+,NAME="subtitle_%d",DEFAULT=%s,
+Bandwidth info not available, set audio and video bitrates
+#EXT-X-STREAM-INF:BANDWIDTH=%d
+,RESOLUTION=%dx%d
+,CODECS="%s"
+,AUDIO="group_%s"
+,CLOSED-CAPTIONS="%s"
+,SUBTITLES="%s"
+#EXT-X-ALLOW-CACHE:%s
+#EXT-X-TARGETDURATION:%d
+#EXT-X-MEDIA-SEQUENCE:%lld
+EXT-X-MEDIA-SEQUENCE:%lld
+#EXT-X-PLAYLIST-TYPE:EVENT
+#EXT-X-PLAYLIST-TYPE:VOD
+#EXT-X-I-FRAMES-ONLY
+#EXT-X-MAP:URI="%s"
+,BYTERANGE="%lld@%lld"
+#EXT-X-DISCONTINUITY
+#EXTINF:%ld,
+#EXTINF:%f,
+#EXT-X-BYTERANGE:%lld@%lld
+strftime error in ff_hls_write_file_entry
+%c%02d%02d
+#EXT-X-PROGRAM-DATE-TIME:%s.%03d%s
+#EXT-X-ENDLIST
 Blues
 Classic Rock
 Country
@@ -12837,7 +17940,6 @@ Max EBML element depth (%d) reached, cannot parse further.
 Length %d indicated by an EBML number's first byte 0x%02x at pos %lld (0x%llx) exceeds max length %d.
 Read error at pos. %llu (0x%llx)
 WebM DASH Manifest demuxer
-live
 flag indicating that the input is a live file that only has the headers.
 bandwidth
 bandwidth of this stream to be specified in the DASH manifest.
@@ -12888,8 +17990,83 @@ Lavf%d.%d.%d
 Invalid FLAC private data
 MAIN
 matroska
-webm
 (none)
+WebM
+video/webm
+vp9_superframe
+The Matroska muxer does not yet support muxing %s
+Stream %d will be ignored as WebM doesn't support attachments.
+Attachment stream %d has no mimetype tag and it cannot be deduced from the codec id.
+text/plain
+Could not write cached audio packet ret:%d
+Insufficient space reserved for Cues: %d < %llu. No Cues will be output.
+end duration = %llu
+stream %d end duration = %llu
+%02d:%02d:%012.9f
+bytes <= 8
+libavformat/matroskaenc.c
+length < (1ULL << 56) - 1
+bytes >= needed_bytes
+size >= 2
+idx >= 0 && idx < num_tracks
+Invalid chapter start (%lld) or end (%lld).
+encoding_tool
+Can't write packet with unknown timestamp
+Starting new cluster due to timestamp
+Starting new cluster with timestamp %lld at offset %lld bytes
+Writing block of size %d with pts %lld, dts %lld, duration %lld at relative offset %lld in cluster at offset %lld. TrackNumber %u, keyframe %d
+%.*s
+%.*s
+%.*s
+Error when reformatting data of a packet from stream %d.
+Flushing cluster at offset %llu bytes
+Error parsing AAC extradata, unable to determine samplerate.
+Invalid FLAC STREAMINFO metadata for output stream %d
+Ignoring new extradata in a packet for stream %d.
+codec %s is not supported by this format
+No bmp codec tag found for codec %s
+No wav codec tag found for codec %s
+Invalid extradata found, ALAC expects a 36-byte QuickTime atom.
+Lavf
+Lavf58.45.100
+0x%llx
+Extradata corrupt.
+Write early duration from recording time = %llu
+Write early duration from metadata = %llu
+DURATION
+Attachment stream %d has no filename tag.
+D_WEBVTT/SUBTITLES
+Only VP8 or VP9 or AV1 video and Vorbis or Opus audio and WebVTT subtitles are supported for WebM.
+Raw RGB is not supported Natively in Matroska, you can use AVI or NUT or
+If you would like to store it anyway using VFW mode, enable allow_raw_vfw (-allow_raw_vfw 1)
+Overflow in display width
+Initial padding is invalid
+Subtitle codec %d is not supported.
+Only audio, video, and subtitles are supported for Matroska.
+Unknown projection type
+The specified stereo mode is not valid.
+get_metadata_duration found duration in context metadata: %lld
+get_metadata_duration returned: %lld
+webm muxer
+reserve_index_space
+Reserve a given amount of space (in bytes) at the beginning of the file for the index (cues).
+Store at most the provided amount of bytes in a cluster. 
+Store at most the provided number of milliseconds in a cluster.
+Create a WebM file conforming to WebM DASH specification
+Track number for the DASH stream
+Write files assuming it is a live stream.
+allow_raw_vfw
+allow RAW VFW mode
+write_crc32
+write a CRC32 element inside every Level 1 element
+default_mode
+Controls how a track's FlagDefault is inferred
+infer
+For each track type, mark the first track of disposition default as default; if none exists, mark the first track as default.
+infer_no_subs
+For each track type, mark the first track of disposition default as default; for audio and video: if none exists, mark the first track as default.
+passthrough
+Use the disposition flag as-is
 c->fc->nb_streams >= 1
 libavformat/mov.c
 invalid size %lld in stsd
@@ -12944,7 +18121,6 @@ Modify the AVIndex according to the editlists. Use this option to decode in the 
 ignore_chapters
 use_mfra_for
 use mfra for fragment timestamps
-auto
 export_all
 Export unrecognized metadata entries
 export_xmp
@@ -13263,6 +18439,305 @@ Sorenson H263
 multiple fourcc not supported
 chan: layout=%u bitmap=%u num_descr=%u
 reached EOF while reading channel layout
+fatal error, input is not a single packet, implement a AVParser for it
+fatal error, input packet contains no samples
+libavformat/movenc.c
+Track %d starts with a nonzero dts %lld, while the moov already has been written. Set the delay_moov flag to handle this case.
+pts has no value
+MP4 (MPEG-4 Part 14)
+video/mp4
+mp4 muxer
+MOV muxer flags
+rtphint
+Add RTP hint tracks
+moov_size
+maximum moov size so it can be placed at the begin
+empty_moov
+Make the initial moov atom empty
+frag_keyframe
+Fragment at video keyframes
+frag_every_frame
+Fragment at every frame
+separate_moof
+Write separate moof/mdat atoms for each track
+frag_custom
+Flush fragments on caller requests
+isml
+Create a live smooth streaming feed (for pushing to a publishing point)
+faststart
+Run a second pass to put the index (moov atom) at the beginning of the file
+omit_tfhd_offset
+Omit the base data offset in tfhd atoms
+disable_chpl
+Disable Nero chapter atom
+default_base_moof
+Set the default-base-is-moof flag in tfhd atoms
+Write DASH compatible fragmented MP4
+cmaf
+Write CMAF compatible fragmented MP4
+frag_discont
+Signal that the next fragment is discontinuous from earlier ones
+delay_moov
+Delay writing the initial moov until the first fragment is cut, or until the first fragment flush
+Write a global sidx index at the start of the file
+skip_sidx
+Skip writing of sidx atom
+write_colr
+Write colr atom (Experimental, may be renamed or changed, do not use from scripts)
+prefer_icc
+If writing colr atom prioritise usage of ICC profile if it exists in stream packet side data
+write_gama
+Write deprecated gama atom
+use_metadata_tags
+Use mdta atom for metadata.
+skip_trailer
+Skip writing the mfra/tfra/mfro trailer for fragmented files
+negative_cts_offsets
+Use negative CTS offsets (reducing the need for edit lists)
+rtpflags
+RTP muxer flags
+latm
+Use MP4A-LATM packetization instead of MPEG4-GENERIC for AAC
+rfc2190
+Use RFC 2190 packetization instead of RFC 4629 for H.263
+skip_rtcp
+Don't send RTCP sender reports
+h264_mode0
+Use mode 0 for H.264 in RTP
+send_bye
+Send RTCP BYE packets when finishing
+skip_iods
+Skip writing iods atom.
+iods_audio_profile
+iods audio profile atom.
+iods_video_profile
+iods video profile atom.
+Maximum fragment duration
+min_frag_duration
+Minimum fragment duration
+frag_size
+Maximum fragment size
+ism_lookahead
+Number of lookahead entries for ISM files
+video_track_timescale
+set timescale of all video tracks
+brand
+Override major brand
+use_editlist
+use edit list
+fragment_index
+Fragment number of the next fragment
+mov_gamma
+gamma value for gama atom
+frag_interleave
+Interleave samples within fragments (max number of consecutive samples, lower is tighter interleaving, but with more overhead)
+encryption_scheme
+Configures the encryption scheme, allowed values are none, cenc-aes-ctr
+encryption_key
+The media encryption key (hex)
+encryption_kid
+The media encryption key identifier (hex)
+use_stream_ids_as_track_ids
+use stream ids as track ids
+write_tmcd
+force or disable writing tmcd
+Write producer reference time box with specified time source
+prft
+empty_hdlr_name
+write zero-length name string in hdlr atoms within mdia and minf atoms
+ipod
+ismv
+Empty MOOV enabled; disabling automatic bitstream filtering
+Global SIDX enabled; Ignoring skip_sidx option
+No meaningful edit list will be written when using empty_moov without delay_moov
+Edit list enabled; Assuming writing CMAF Track File
+Sample interleaving in fragments is mutually exclusive with omit_tfhd_offset and separate_moof
+muxer does not support non seekable output
+You requested a copy of the original timecode track so timecode metadata are now ignored
+cenc-aes-ctr
+Invalid encryption key len %d expected %d
+Invalid encryption kid len %d expected %d
+unsupported encryption scheme %s
+Could not find tag for codec %s in stream #%d, codec not currently supported in container
+D-10/IMX must use 720x608 or 720x512 video resolution
+Warning: some tools, like mp4split, assume a timescale of 10000000 for ISMV.
+Resolution %dx%d too large for mov/mp4
+WARNING codec timebase is very high. If duration is too long,
+file may not be playable by quicktime. Specify a shorter timebase
+or choose different container.
+%s only supported in MP4.
+VP8 muxing is currently not supported.
+track %d: codec frame size is not set
+track %d: codec block align is not set for adpcm
+track %d: muxing mp3 at %dhz is not standard, to mux anyway set strict to -1
+track %d: muxing mp3 at %dhz is not standard in MP4
+%s in MP4 support is experimental, add '-strict %d' if you want to use it.
+Warning, extension is not .m4a nor .m4v Quicktime/Ipod might not play the file
+Using MS style video codec tag, the file may be unplayable!
+Using MS style audio codec tag, the file may be unplayable!
+timecode: tbc=%d/%d invalid, fallback on %d/%d
+%s rawvideo cannot be written to mov, output file will be unreadable
+unsupported height for dv codec
+Starting second pass: moving the moov atom to the beginning of the file
+reserved_moov_size is too small, needed %lld additional
+free
+Starting second pass: inserting sidx atoms
+Non-consecutive fragments, writing incorrect sidx
+Estimating the duration of the last packet in a fragment, consider setting the duration field in AVPacket instead.
+Unable to write PRFT, no entries in the track
+Unable to write PRFT, first PTS is invalid
+Unsupported PRFT box configuration: %d
+PSP mode need one video and one audio stream
+Frame rate %f outside supported range
+3gp6
+3gp4
+3g2b
+3g2a
+M4V 
+M4A 
+next_dts >= 0
+next_dts <= 2147483647
+perf
+titl
+auth
+author
+gnre
+dscp
+albm
+cprt
+yrrc
+meta
+aART
+desc
+ldes
+tvsh
+tven
+tvnn
+keyw
+tves
+tvsn
+stik
+hdvd
+pgap
+cpil
+tmpo
+disk
+trkn
+earth
+malformed location metadata
+Lavc58.91.100
+2006/04/01 11:11:11
+Not writing any edit list even though one would have been required
+a=control:streamid=%d
+track->par->codec_id == AV_CODEC_ID_OPUS || track->par->codec_id == AV_CODEC_ID_AAC
+stss
+stps
+fps %d is too large
+tmcd
+reel_name length %llu is too large
+not writing 'chan' tag due to lack of channel information
+Cannot write moov atom before TrueHD packets. Set the delay_moov flag to fix this.
+invalid extradata size
+Cannot write moov atom before EAC3 packets parsed.
+Internal error, put_bits buffer too small
+Cannot write moov atom before AC3 packets. Set the delay_moov flag to fix this.
+Not writing 'gama' atom. Format is not MOV.
+Not writing 'colr' atom. Format is not MOV or MP4.
+dvvC
+dvcC
+DOVI in %s box, version: %d.%d, profile: %d, level: %d, rpu flag: %d, el flag: %d, bl flag: %d, compatibility id: %d
+Unsupported projection %d. sv3d not written.
+Unsupported stereo_3d flags %x. st3d not written.
+Unsupported stereo_3d type %s. st3d not written.
+Not writing 'mdcv' atom. Missing mastering metadata.
+Not writing 'clli' atom. No content light level info.
+no ICC profile found, will write nclx/nclc colour info instead
+track->mode == 0x02 || track->mode == 0x01
+gamma value %g
+writing gama value %d
+track->mode == 0x02
+gamma value unknown, unable to write gama atom
+DpxE
+moov atom written before any packets, unable to write correct dvc1 atom. Set the delay_moov flag to fix this.
+Could not locate DNxHD bit stream in vos_data
+Could not locate DNxHD bit stream, vos_data too small
+XDCAM
+ HD422
+ %d%c
+url 
+Lucida Grande
+dhlr
+DataHandler
+mhlr
+vide
+VideoHandler
+soun
+SoundHandler
+clcp
+ClosedCaptionHandler
+sbtl
+subp
+SubtitleHandler
+hint
+HintHandler
+TimeCodeHandler
+GoPro MET
+Unknown hldr_type for %s, writing dummy values
+FATAL error, file duration too long for timebase, this file will not be
+playable with QuickTime. Choose a different timebase with -video_track_timescale or a different container format
+EDTS using dts:%lld cts:%d instead of dts:%lld cts:%lld tid:%d
+av_rescale_rnd(start_dts, 1000, track->timescale, AV_ROUND_DOWN) <= 0
+track width is too large
+track height is too large
+Unable to re-open %s output file for the second pass (faststart)
+Got more than one picture in stream %d, ignoring.
+<smil xmlns="http://www.w3.org/2001/SMIL20/Language">
+<head>
+<meta name="creator" content="%s" />
+</head>
+<body>
+<switch>
+<%s systemBitrate="%lld">
+systemBitrate
+trackID
+systemLanguage
+trackName
+CodecPrivateData
+FourCC
+H264
+WVC1
+MaxWidth
+MaxHeight
+DisplayWidth
+DisplayHeight
+AACP
+AACH
+AACL
+WMAP
+AudioTag
+Channels
+SamplingRate
+BitsPerSample
+PacketSize
+</%s>
+</switch>
+</body>
+</smil>
+<param name="%s" value="%s" valuetype="data"/>
+<param name="%s" value="%d" valuetype="data"/>
+wide
+palette:
+%06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x, %06x
+size:
+%dx%d
+mov muxer
+Application provided duration: %lld / timestamp: %lld is out of range for mov/mp4 format
+Application provided duration: %lld is invalid
+CENC-AVC: remaining size %d smaller than nal length+type %d
+CENC-AVC: nal size %d remaining %d
+Unable to initialize hinting of stream %d
+libavformat/movenchint.c
+rtpo
 MP2/3 (MPEG audio layer 2/3)
 mp2,mp3,m2a,mpa
 Using MP3 TOC to seek; may be imprecise.
@@ -13311,7 +18786,6 @@ sample rate not set
 dimensions not set
 Aspect ratio mismatch between muxer (%d/%d) and encoder layer (%d/%d)
 Tag %s incompatible with output codec id '%d' (%s)
-Lavf58.45.100
 encoder-
 Failed to set close on exec
 setsockopt(SO_NOSIGPIPE) failed
@@ -13429,7 +18903,6 @@ keepside
 deprecated, does nothing
 fastseek
 fast but inaccurate seeks
-latm
 nobuffer
 reduce the latency introduced by optional buffering
 bitexact
@@ -13559,6 +19032,10 @@ libavformat/riffdec.c
 out of memory, unable to read INFO tag
 premature end of file while reading INFO tag
 unknown subformat:%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x {%02x%02x%02x%02x-%02x%02x-%02x%02x-%02x%02x-%02x%02x%02x%02x%02x%02x}
+(start&1) == 0
+libavformat/riffenc.c
+requested bits_per_coded_sample (%d) and actually stored (%d) differ
+BottomUp
 Unable to read as many bytes as AMF string signaled
 libavformat/rtmppkt.c
 bytestream2_tell(&gb) >= 0 && bytestream2_tell(&gb) <= data_end - data
@@ -13627,7 +19104,6 @@ URL of the target stream. Defaults to proto://host[:port]/app.
 rtmp_listen
 Listen for incoming rtmp connections
 listen
-timeout
 Maximum timeout (in seconds) to wait for incoming connections. -1 is infinite. Implies -rtmp_listen 1
 Seek on stream index %d at timestamp %lld with flags %08x
 Unable to send seek command on stream index %d at timestamp %lld with flags %08x
@@ -13705,7 +19181,6 @@ nonce
 Ignoring unsupported var %s
 Variable %s has NULL value
 adobe
-auth
 00000001
 %08x
 /_definst_
@@ -13791,6 +19266,7 @@ Signature mismatch
 Hash of the decompressed SWF file is not 32 bytes long.
 Cannot open connection %s.
 Genuine Adobe Flash Player 001
+payload_type
 Listen for incoming connections
 set timeout (in microseconds) of socket I/O operations
 listen_timeout
@@ -13817,7 +19293,7 @@ libavformat/url.c
 invalid:%s
 truncated
 syntax_error
---prefix=/Users/buildbot/buildslave/libav_osx/build/dev/build_osx64 --cc=clang --extra-cflags='-m64 -arch x86_64 -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9 -fasm-blocks' --ld=clang --extra-ldflags='-m64 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9' --arch=x86 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avfilter --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser='h264,hevc' --enable-decoder='aac,h264,hevc,gif,vorbis,mp3,flac,alac,pcm*,valve*,apng,libvpx_vp8,libvpx_vp9' --enable-encoder='h264_vaapi,hevc_vaapi' --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv,apng' --enable-hwaccels --enable-videotoolbox --enable-muxer=flv --disable-decoder='h263,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
+--prefix=/Users/buildbot/buildslave/libav_osx/build/dev/build_osx64 --cc=clang --extra-cflags='-m64 -arch x86_64 -g -O2 -fno-strict-aliasing -ffast-math -gdwarf-2 -pipe -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9 -fasm-blocks' --ld=clang --extra-ldflags='-m64 -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -mmacosx-version-min=10.9' --arch=x86 --enable-shared --disable-static --enable-runtime-cpudetect --disable-all --enable-avcodec --enable-avfilter --enable-avutil --enable-avresample --enable-avformat --enable-swscale --enable-parser='h264,hevc' --enable-decoder='aac,h264,hevc,gif,vorbis,mp3,flac,alac,pcm*,valve*,apng,libvpx_vp8,libvpx_vp9' --enable-encoder='aac,h264_vaapi,hevc_vaapi' --enable-demuxer='aac,matroska,gif,ogg,mov,mp3,flac,wav,flv,apng' --enable-hwaccels --enable-videotoolbox --enable-muxer='aac,flv,mp4,dash,webm' --disable-decoder='h263,mpeg1video,mpeg2video,vc1,vp8,vp9' --enable-libvpx --enable-libvorbis --enable-protocol='file,rtmp'
 libavformat license: LGPL version 2.1 or later
 !dst->codec_whitelist && !dst->format_whitelist && !dst->protocol_whitelist && !dst->protocol_blacklist
 libavformat/utils.c
@@ -13957,6 +19433,7 @@ ALBUMARTIST
 TRACKNUMBER
 DISCNUMBER
 DESCRIPTION
+Unsupported pixel format (%d)
 WAV / WAVE (Waveform Audio)
 invalid start code %s in RIFF header
 invalid format in RIFF header
@@ -14396,6 +19873,55 @@ application/x-truetype-font
 application/x-font
 application/vnd.ms-opentype
 binary
+mp4v
+avc1
+avc3
+hev1
+hvc1
+mp4v
+mp4v
+mp4v=
+mp4vX
+mp4vF
+vc-1t
+drac
+mp4v
+vp09
+av01
+mp4a-P
+mp4a
+mp4a
+mp4a
+ac-3(P
+ec-3
+mp4a,P
+mlpa
+fLaC<P
+Opus
+mp4a
+mp4a
+mp4a
+mp4s
+tx3g
+gpmd
+mhm1
+wma 
+yuv2
+yuvs
+2vuy
+raw 
+L555
+L565
+B565
+b16g
+raw 
+24BG
+raw  
+BGRA 
+RGBA 
+ABGR 
+b48r0
+encd
 Mbp?
 BBCD
 fffff3ff
@@ -14838,9 +20364,61 @@ MV303
 nlc1
 HEVC
 H265
+IARL
+IART
+IAS1
+IAS2
+IAS3
+IAS4
+IAS5
+IAS6
+IAS7
+IAS8
+IAS9
+ICMS
+ICMT
+ICOP
+ICRD
+ICRP
+IDIM
+IDPI
+IENG
+IGNR
+IKEY
+ILGT
+ILNG
+IMED
+INAM
+IPLT
+IPRD
+IPRT
+ITRK
+ISBJ
+ISFT
+ISHP
+ISMP
+ISRC
+ISRF
+ITCH
 2 F!\#J&U(8*W+A-;0O1]3Y7_=LCSMP
 Genuine Adobe Flash Media Server 001
 Genuine Adobe Flash Player 001
+PCMU
+G723
+DVI4
+DVI4
+PCMA
+G722
+QCELP
+G728
+DVI4
+DVI4
+G729
+CelB
+JPEG
+H261
+MP2T
+H263
 FFmpeg version 4.3.4
 0123456789ABCDEF0123456789abcdef
 =}~O
@@ -15022,9 +20600,11 @@ mdcv
 clli
 dvcC
 dvvC
-!(SB`
+!0SB`
+AZBp
 p8RFRFRNSBRCRFRFRNp
 RCRNp
+RFRFRFRFRFRFRESESESESESFRFRFRFRFRAp RAp RFRFRFRFRFRFRFRFRFRFRESESESESFRFRFRFRFRESESESFRFRFRNp
 p8RCTBp p
 WARFRFRFRNp
 p8RFRFRFRNRAp
@@ -15035,7 +20615,9 @@ ASAp
 pXp8p
 pXpX
 SFRNUDp8p
-pxRAp8RFRFRFRFRFRESESESESFRFRFRAp RFR0x
+pxRAp8RFRFRFRFRFRFRFRFRESESESEp@p
+p8RFRFRFRFRFRESESESESFRFRFRAp RFR0x
+p8RESESFRESESESESESESESESESESESESESESESESESESESESESESESESESESESESFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRFRERFRFSNp
 p8RN`
 RBRBSBSBRAp
 p0SESFRFRFp0SESESESESESESESESESESESESESESESFRFRFRFRFRERFSFRFRFRFRFRFRESESESESESESESESESESFRFRFRFRFRFRFRESESESERFSESESFRESESESESESAp RFRFRFRFRFRFRNSAVAp RNRN`
@@ -15050,19 +20632,23 @@ p8RAp
 RApHRFRFRFRFRFRFRNSA
 p8XBRN\Ap
 SIRAp
+SIUAp
 SARFRAp
 UGRAp
 UGRAp
 UGTBRBSIp
 SIRAp
-UGRCp SHRAp
+UGRCp SHTCp
+SAp8UAp
 UGRAp
+RBSIWBRBSIUAp
 SAp8RAp(VNRBRCSAQ
 @_av_buffer_default_free
 @_av_default_item_name
 @_avpriv_ac3_channel_layout_tab
 @_avpriv_mpa_freq_tab
 @_avpriv_mpeg4audio_sample_rates
+@_avpriv_pix_fmt_bps_mov
 @___stack_chk_guard
 @dyld_stub_binder
 @_av_bitstream_filter_filter
@@ -15106,10 +20692,12 @@ SAp8RAp(VNRBRCSAQ
 @_av_get_audio_frame_duration
 @_av_get_audio_frame_duration2
 @_av_get_bits_per_sample
+@_av_get_bytes_per_sample
 @_av_get_channel_layout_nb_channels
 @_av_get_exact_bits_per_sample
 @_av_get_media_type_string
 @_av_get_picture_type_char
+@_av_get_pix_fmt_name
 @_av_grow_packet
 @_av_image_check_sar
 @_av_image_check_size
@@ -15150,6 +20738,7 @@ SAp8RAp(VNRBRCSAQ
 @_av_parser_init
 @_av_parser_parse2
 @_av_pix_fmt_desc_get
+@_av_pix_fmt_get_chroma_sub_sample
 @_av_realloc_array
 @_av_realloc_f
 @_av_realloc_tracked
@@ -15172,6 +20761,7 @@ SAp8RAp(VNRBRCSAQ
 @_avcodec_close
 @_avcodec_decode_subtitle2
 @_avcodec_descriptor_get
+@_avcodec_enum_to_chroma_pos
 @_avcodec_find_decoder
 @_avcodec_find_decoder_by_name
 @_avcodec_free_context
@@ -15189,12 +20779,14 @@ SAp8RAp(VNRBRCSAQ
 @_avcodec_string
 @_avpriv_codec_get_cap_skip_frame_fill_param
 @_avpriv_find_pix_fmt
+@_avpriv_find_start_code
 @_avpriv_get_raw_pix_fmt_tags
 @_avpriv_h264_has_num_reorder_frames
 @_avpriv_mpeg4audio_get_config2
 @_avpriv_mpegaudio_decode_header
 @_avpriv_report_missing_feature
 @_avpriv_request_sample
+@_avpriv_split_xiph_headers
 @_avpriv_toupper4
 @_avsubtitle_free
 @_av_add_stable
@@ -15203,8 +20795,11 @@ SAp8RAp(VNRBRCSAQ
 @_av_aes_ctr_alloc
 @_av_aes_ctr_crypt
 @_av_aes_ctr_free
+@_av_aes_ctr_get_iv
+@_av_aes_ctr_increment_iv
 @_av_aes_ctr_init
 @_av_aes_ctr_set_full_iv
+@_av_aes_ctr_set_random_iv
 @_av_aes_init
 @_av_append_path_component
 @_av_asprintf
@@ -15244,8 +20839,10 @@ SAp8RAp(VNRBRCSAQ
 @_av_mastering_display_metadata_alloc
 @_av_match_name
 @_av_memdup
+@_av_opt_flag_is_set
 @_av_opt_get
 @_av_opt_get_dict_val
+@_av_opt_get_int
 @_av_opt_ptr
 @_av_opt_set_bin
 @_av_opt_set_dict_val
@@ -15263,16 +20860,21 @@ SAp8RAp(VNRBRCSAQ
 @_av_stereo3d_alloc
 @_av_stereo3d_type_name
 @_av_strcasecmp
+@_av_strireplace
 @_av_stristr
 @_av_strlcpy
 @_av_strncasecmp
 @_av_strndup
+@_av_strnstr
 @_av_strstart
+@_av_timecode_check_frame_rate
 @_av_timecode_init
+@_av_timecode_init_from_string
 @_av_timecode_make_string
 @_av_usleep
 @_av_vbprintf
 @_avpriv_dict_set_timestamp
+@_avpriv_get_gamma_from_trc
 @_avpriv_open
 @___bzero
 @___error
@@ -15286,10 +20888,12 @@ SAp8RAp(VNRBRCSAQ
 @_access
 @_atoi
 @_bind
+@_bsearch
 @_close
 @_closedir
 @_connect
 @_fcntl
+@_fmod
 @_fprintf
 @_fputc
 @_free
@@ -15305,6 +20909,7 @@ SAp8RAp(VNRBRCSAQ
 @_listen
 @_llrint
 @_localtime_r
+@_lrint
 @_lrintf
 @_lseek
 @_lstat$INODE64
@@ -15316,6 +20921,7 @@ SAp8RAp(VNRBRCSAQ
 @_memset
 @_memset_pattern16
 @_mkdir
+@_mktime
 @_opendir$INODE64
 @_poll
 @_pthread_mutex_lock
@@ -15351,12 +20957,13 @@ SAp8RAp(VNRBRCSAQ
 subtitle_free
 Apriv_
 codec_
-%format_
+	io_
+(format_
 encryption_in
 xiphlacing
 timecode_
 new_p
-#write_
+%write_
 sprintf
 stable
 index_entry
@@ -15366,25 +20973,27 @@ rypt
 alloc
 crypt
 free
-init
-set_full_iv
+get_iv
+set_
+crement_iv
+full_iv
+random_iv
 toupper4
+pix_fmt_bps_mov
 open
 h264_has_num_reorder_frames
-get_raw_pix_fmt_tags
-find_pix_fmt
+get_
+find_
 dict_set_timestamp
 codec_get_cap_skip_frame_fill_param
 ac3_channel_layout_tab
-'set_pts_info
-:new_chapter
+*new_chapter
 end_pa
 ly_bitstream_filters
 th_component
 cket
-quest_sample
-port_missing_feature
-gister_devices
+plit_xiph_headers
+et_pts_info
 ase64_
 itstream_filter_filter
 print
@@ -15407,16 +21016,22 @@ create
 default_free
 unref
 alloc
+quest_sample
+	port_missing_feature
+	gister_devices
 receive_frame
 open2
 is_open
 get_name
+enum_to_chroma_pos
 alloc_context3
+tring
+end_packet
 dec_
-	lor_
+lor_
 mpare_
 ntent_light_metadata_alloc
-	get_
+get_
 s_decoder
 terate
 primaries_name
@@ -15428,17 +21043,10 @@ ynarray_add
 ump_format
 fault_item_name
 muxer_
-ix_fmt_to_codec_tag
-arameters_
-a_freq_tab
-audio_decode_header
-4audio_
 rac_parse_sequence_header
 splay_rotation_get
 free
 _int
-sample_rates
-get_config2
 _nofree
 it_info_
 clone
@@ -15453,23 +21061,30 @@ ast_
 mt_ctx_get_duration_estimation_method
 malloc
 realloc
+a_freq_tab
+audio_decode_header
+4audio_
+sample_rates
+get_config2
+lename_number_test
+default_stream_index
+<program_from_stream
+=best_stream
+fo_tag
+put_format
+ix_fmt_to_codec_tag
+arameters_
+raw_pix_fmt_tags
+gamma_from_trc
+start_code
+pix_fmt
 to_context
 copy
 alloc
-lename_number_test
-default_stream_index
-9program_from_stream
-:best_stream
-fo_tag
-put_format
 om_context
 ree_context
 ind_decoder
 _by_name
-scriptor_get
-code_subtitle2
-lose
-hroma_pos_to_enum
 urcc_make_string
 rmat_
 ame_
@@ -15479,48 +21094,45 @@ row_packet
 uess_
 time
 	audio_frame_duration
-bits_per_sample
 channel_
 exact_bits_per_sample
 media_type_string
 random_seed
 output_timestamp
-1frame_filename
+4frame_filename
+its_per_sample
+ytes_per_sample
 layout_nb_channels
 name
-tring
-end_packet
+scriptor_get
+code_subtitle2
+lose
+hroma_pos_to_enum
+acket
+cture_type_char
+x_fmt_name
+_relative
 orbis_parse_
 bprintf
 reset
 init
 ame_flags
-icture_type_char
-acket
-_relative
-sleep
-rl_split
-make_string
-init
-pherical_
-#dp_create
-2eek_frame
-ereo3d_
-start
-istr
-"casecmp
 mac_
 ex_dump
 alloc
 init
 update
 inal
-casecmp
 mage_check_s
 format_next
 it_packet
 terleaved_write_
-1dex_search_timestamp
+4dex_search_timestamp
+sleep
+rl_split
+make_string
+init
+check_frame_rate
 fg_init
 zo1x_decode
 emdup
@@ -15531,6 +21143,7 @@ array
 tracked
 array
 tracked
+_from_string
 list
 name
 alloc
@@ -15540,168 +21153,188 @@ update
 xer_iterate
 acket
 rogram
-rror
+pherical_
+'dp_create
+5eek_frame
+ereo3d_
+start
+%dup
+%casecmp
 format_next
 copy
-free
-next
-_dict_val
-from_string
+ get
+ next
+ ptr
+ set
+lag_is_set
+ ree
+dict_val
+ int
+!from_string
 efaults
-_val
-ix_fmt_desc_get
-"kt_dump
+!ict
+!_val
+!ix_fmt_
+$kt_dump
 cket_
- rse
- copy_props
-!free
-!get_side_data
-!new_side_data
-!pack_dictionary
-!unref
+!rse
+"copy_props
+"free
+"get_side_data
+"new_side_data
+#pack_dictionary
+#unref
 dd_side_data
-!lloc
+"lloc
 ake_refcounted
-!ove_ref
-!scale_ts
+#ove_ref
+#scale_ts
 _time
 close
-"init
-"parse2
-type_name
-"alloc
-tile_bounds
-#projection_name
-#alloc
-rink_packet
-update
 #init
-#final
-#alloc
-#duce
-$scale
-$gister_
+$parse2
+desc_get
+$get_chroma_sub_sample
+$dup
+$casecmp
+%replace
+rror
+%am_
+%duce
+&scale
+'gister_
 lloc
 array
-$tracked
+&tracked
 _array
+type_name
+&alloc
+tile_bounds
+'projection_name
+'alloc
+'rnd
 _rnd
+'rink_packet
+alloc
+'final
+'init
+'update
 iterate
-%open
-%input_format
-%output_format
-&open
-*get_
-+handshake
-,enum_protocols
+(open
+(input_format
+(output_format
+)open
+-get_
+.handshake
+/enum_protocols
 ind_protocol_name
-&ree_directory_entry
-(lush
-)eof
+)ree_directory_entry
++lush
+,eof
 heck
-'lose
-(ontext_free
+*lose
++ontext_free
 move
-'delete
-'yn_buf
-(partial
-*to_bprint
-(yn_buf
+*delete
+*yn_buf
++partial
+-to_bprint
++yn_buf
 lloc_context
-(ccept
-(rite
++ccept
++rite
 _marker
-)kip
-)ize
+,kip
+,ize
 _time
 ut_str
-,ause
-+dyn_buf
-,otocol_get_class
-,_string_array
+/ause
+.dyn_buf
+/otocol_get_class
+/_string_array
 _log
--_log2
--codec
-.sample_aspect_ratio
+0_log2
+0codec
+1sample_aspect_ratio
 ormat
-.rame_rate
+1rame_rate
 be_input_
-.gram_add_stream_index
+1gram_add_stream_index
 format
-.buffer
+1buffer
 get_
-0alloc_
-0init_output
-1write_header
-1version
-2license
-3que
-8open_input
-9seek_file
-:match_stream_specifier
-;transfer_internal_stream_timing_info
+3alloc_
+3init_output
+4write_header
+4version
+5license
+6que
+;open_input
+<seek_file
+=match_stream_specifier
+>transfer_internal_stream_timing_info
 mov_
-0class
-2riff_
+3class
+5riff_
 video_tags
-0audio_tags
+3audio_tags
 output_context2
-1context
+4context
 frame
-1trailer
-1uncoded_frame
+4trailer
+4uncoded_frame
 frame
-1uncoded_frame
+4uncoded_frame
 _query
 video_tags
-2audio_tags
+5audio_tags
 onfiguration
-3lose_input
+6lose_input
 get_
-3set_r
-4add_side_data
-;new_side_data
-3end_pts
-8parser
-8side_data
-;codec_timebase
+6set_r
+7add_side_data
+>new_side_data
+6end_pts
+;parser
+;side_data
+>codec_timebase
 _frame_rate
-4ecommended_encoder_configuration
+7ecommended_encoder_configuration
 _frame_rate
-4ecommended_encoder_configuration
+7ecommended_encoder_configuration
 get_
-5set_
-6inject_global_side_data
-8ffversion
+8set_
+9inject_global_side_data
+;ffversion
 video_codec
-6audio_codec
-7subtitle_codec
-7data_codec
-7metadata_header_padding
-7control_message_cb
-8probe_score
+9audio_codec
+:subtitle_codec
+:data_codec
+:metadata_header_padding
+:control_message_cb
+;probe_score
 video_codec
-7audio_codec
-7subtitle_codec
-7data_codec
-7metadata_header_padding
-7control_message_cb
+:audio_codec
+:subtitle_codec
+:data_codec
+:metadata_header_padding
+:control_message_cb
 aque
-7en_cb
+:en_cb
 aque
-8en_cb
+;en_cb
 ue_attached_pictures
-8ry_codec
+;ry_codec
 ree_context
-9lush
-9ind_stream_info
+<lush
+<ind_stream_info
 frame
-:ause
+=ause
 w_stream
-:twork_
+=twork_
 init
-;deinit
-0   
+>deinit
+0   @
 0@@P
 000@
 0000 @
@@ -15722,10 +21355,16 @@ _av_aes_ctr_crypt
 _av_aes_ctr_crypt
 _av_aes_ctr_free
 _av_aes_ctr_free
+_av_aes_ctr_get_iv
+_av_aes_ctr_get_iv
+_av_aes_ctr_increment_iv
+_av_aes_ctr_increment_iv
 _av_aes_ctr_init
 _av_aes_ctr_init
 _av_aes_ctr_set_full_iv
 _av_aes_ctr_set_full_iv
+_av_aes_ctr_set_random_iv
+_av_aes_ctr_set_random_iv
 _av_aes_init
 _av_aes_init
 _av_append_packet
@@ -15895,6 +21534,8 @@ _av_get_audio_frame_duration2
 _av_get_audio_frame_duration2
 _av_get_bits_per_sample
 _av_get_bits_per_sample
+_av_get_bytes_per_sample
+_av_get_bytes_per_sample
 _av_get_channel_layout_nb_channels
 _av_get_channel_layout_nb_channels
 _av_get_channel_name
@@ -15909,6 +21550,8 @@ _av_get_output_timestamp
 _av_get_packet
 _av_get_picture_type_char
 _av_get_picture_type_char
+_av_get_pix_fmt_name
+_av_get_pix_fmt_name
 _av_get_random_seed
 _av_get_random_seed
 _av_gettime
@@ -15983,12 +21626,16 @@ _av_new_program
 _av_oformat_next
 _av_opt_copy
 _av_opt_copy
+_av_opt_flag_is_set
+_av_opt_flag_is_set
 _av_opt_free
 _av_opt_free
 _av_opt_get
 _av_opt_get
 _av_opt_get_dict_val
 _av_opt_get_dict_val
+_av_opt_get_int
+_av_opt_get_int
 _av_opt_next
 _av_opt_next
 _av_opt_ptr
@@ -16041,6 +21688,8 @@ _av_parser_parse2
 _av_parser_parse2
 _av_pix_fmt_desc_get
 _av_pix_fmt_desc_get
+_av_pix_fmt_get_chroma_sub_sample
+_av_pix_fmt_get_chroma_sub_sample
 _av_pkt_dump2
 _av_pkt_dump_log2
 _av_probe_input_buffer
@@ -16113,6 +21762,8 @@ _av_stream_set_r_frame_rate
 _av_stream_set_recommended_encoder_configuration
 _av_strerror
 _av_strerror
+_av_strireplace
+_av_strireplace
 _av_stristr
 _av_stristr
 _av_strlcat
@@ -16125,10 +21776,16 @@ _av_strncasecmp
 _av_strncasecmp
 _av_strndup
 _av_strndup
+_av_strnstr
+_av_strnstr
 _av_strstart
 _av_strstart
+_av_timecode_check_frame_rate
+_av_timecode_check_frame_rate
 _av_timecode_init
 _av_timecode_init
+_av_timecode_init_from_string
+_av_timecode_init_from_string
 _av_timecode_make_string
 _av_timecode_make_string
 _av_url_split
@@ -16160,6 +21817,8 @@ _avcodec_decode_subtitle2
 _avcodec_decode_subtitle2
 _avcodec_descriptor_get
 _avcodec_descriptor_get
+_avcodec_enum_to_chroma_pos
+_avcodec_enum_to_chroma_pos
 _avcodec_find_decoder
 _avcodec_find_decoder
 _avcodec_find_decoder_by_name
@@ -16280,6 +21939,10 @@ _avpriv_dict_set_timestamp
 _avpriv_dict_set_timestamp
 _avpriv_find_pix_fmt
 _avpriv_find_pix_fmt
+_avpriv_find_start_code
+_avpriv_find_start_code
+_avpriv_get_gamma_from_trc
+_avpriv_get_gamma_from_trc
 _avpriv_get_raw_pix_fmt_tags
 _avpriv_get_raw_pix_fmt_tags
 _avpriv_h264_has_num_reorder_frames
@@ -16297,12 +21960,16 @@ _avpriv_mpegaudio_decode_header
 _avpriv_new_chapter
 _avpriv_open
 _avpriv_open
+_avpriv_pix_fmt_bps_mov
+_avpriv_pix_fmt_bps_mov
 _avpriv_register_devices
 _avpriv_report_missing_feature
 _avpriv_report_missing_feature
 _avpriv_request_sample
 _avpriv_request_sample
 _avpriv_set_pts_info
+_avpriv_split_xiph_headers
+_avpriv_split_xiph_headers
 _avpriv_toupper4
 _avpriv_toupper4
 _avsubtitle_free
@@ -16328,8 +21995,11 @@ _av_aes_crypt
 _av_aes_ctr_alloc
 _av_aes_ctr_crypt
 _av_aes_ctr_free
+_av_aes_ctr_get_iv
+_av_aes_ctr_increment_iv
 _av_aes_ctr_init
 _av_aes_ctr_set_full_iv
+_av_aes_ctr_set_random_iv
 _av_aes_init
 _av_append_path_component
 _av_asprintf
@@ -16398,11 +22068,13 @@ _av_gcd
 _av_get_audio_frame_duration
 _av_get_audio_frame_duration2
 _av_get_bits_per_sample
+_av_get_bytes_per_sample
 _av_get_channel_layout_nb_channels
 _av_get_channel_name
 _av_get_exact_bits_per_sample
 _av_get_media_type_string
 _av_get_picture_type_char
+_av_get_pix_fmt_name
 _av_get_random_seed
 _av_gettime
 _av_gettime_relative
@@ -16433,9 +22105,11 @@ _av_memdup
 _av_mul_q
 _av_new_packet
 _av_opt_copy
+_av_opt_flag_is_set
 _av_opt_free
 _av_opt_get
 _av_opt_get_dict_val
+_av_opt_get_int
 _av_opt_next
 _av_opt_ptr
 _av_opt_set
@@ -16462,6 +22136,7 @@ _av_parser_close
 _av_parser_init
 _av_parser_parse2
 _av_pix_fmt_desc_get
+_av_pix_fmt_get_chroma_sub_sample
 _av_realloc_array
 _av_realloc_f
 _av_realloc_tracked
@@ -16485,14 +22160,18 @@ _av_stereo3d_type_name
 _av_strcasecmp
 _av_strdup
 _av_strerror
+_av_strireplace
 _av_stristr
 _av_strlcat
 _av_strlcatf
 _av_strlcpy
 _av_strncasecmp
 _av_strndup
+_av_strnstr
 _av_strstart
+_av_timecode_check_frame_rate
 _av_timecode_init
+_av_timecode_init_from_string
 _av_timecode_make_string
 _av_usleep
 _av_vbprintf
@@ -16506,6 +22185,7 @@ _avcodec_chroma_pos_to_enum
 _avcodec_close
 _avcodec_decode_subtitle2
 _avcodec_descriptor_get
+_avcodec_enum_to_chroma_pos
 _avcodec_find_decoder
 _avcodec_find_decoder_by_name
 _avcodec_free_context
@@ -16525,6 +22205,8 @@ _avpriv_ac3_channel_layout_tab
 _avpriv_codec_get_cap_skip_frame_fill_param
 _avpriv_dict_set_timestamp
 _avpriv_find_pix_fmt
+_avpriv_find_start_code
+_avpriv_get_gamma_from_trc
 _avpriv_get_raw_pix_fmt_tags
 _avpriv_h264_has_num_reorder_frames
 _avpriv_mpa_freq_tab
@@ -16532,15 +22214,19 @@ _avpriv_mpeg4audio_get_config2
 _avpriv_mpeg4audio_sample_rates
 _avpriv_mpegaudio_decode_header
 _avpriv_open
+_avpriv_pix_fmt_bps_mov
 _avpriv_report_missing_feature
 _avpriv_request_sample
+_avpriv_split_xiph_headers
 _avpriv_toupper4
 _avsubtitle_free
 _bind
+_bsearch
 _close
 _closedir
 _connect
 _fcntl
+_fmod
 _fprintf
 _fputc
 _free
@@ -16556,6 +22242,7 @@ _hypot
 _listen
 _llrint
 _localtime_r
+_lrint
 _lrintf
 _lseek
 _lstat$INODE64
@@ -16567,6 +22254,7 @@ _memmove
 _memset
 _memset_pattern16
 _mkdir
+_mktime
 _opendir$INODE64
 _poll
 _pthread_mutex_lock

@@ -2111,6 +2111,7 @@ Değişikliklerin etkili olması için OSX platformundan çıkış yapmalısın�
 "Steam_BackgroundDownloadsAllow"	"Arka plan indirmelerine her zaman izin ver"
 "Steam_BackgroundDownloadsDeny"	"Arka plan indirmelerine hiçbir zaman izin verme"
 
+// NOTE: no longer referenced, old vgui?
 "Steam_GameProperties_SteamInputSettings"	"Steam Girdi Ayarları"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Oyuna Özel Steam Girdi Ayarı (Oyunun yeniden başlatılmasını gerektirir)"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "Zorunlu Kapalı"

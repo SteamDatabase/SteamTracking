@@ -153,8 +153,8 @@
 
 "Friends_BetaHomePage"				"Pagina de informații a serviciului Beta Prieteni"
 
-"Friends_PleaseSetFriendsName"		"Numele profilului nu a fost setat."
-"Friends_SetFriendsName"				"Schimbă numele profilului..."
+"Friends_PleaseSetFriendsName"		"Numele tău de profil nu a fost setat."
+"Friends_SetFriendsName"				"Schimbă numele de profil..."
 
 "Friends_TargetBlocked"				"Setările profilului acestui utilizator te împiedică să-l contactezi momentan."
 "Friends_TargetIgnored"				"%search% te ignoră."
@@ -175,7 +175,7 @@
 "Friends_ChatFilterBlockWarning"		"O adresă a fost eliminată din mesajul următor din motive de securitate."
 
 "Friends_invalidname_title"			"Prieteni - Nume rezervat"
-"Friends_invalidname_info"			"Numele profilului nu poate fi „[unknown]” și nu poate conține cuvintele „Valve”, „Steam” sau „Asistență”. Te rugăm să alegi alt nume."
+"Friends_invalidname_info"			"Numele tău de profil nu poate fi „[unknown]” și nu poate conține cuvintele „Valve”, „Steam” sau „Asistență”. Te rugăm să alegi alt nume."
 
 "Friends_JoinGame_Dialog"				"Jocul pentru %friend% nu a fost găsit."
 "Friends_Friendlist_Friends"			"PRIETENI"
@@ -367,7 +367,7 @@
 
 
 "Friends_Settings_TabTitle"			"Prieteni"
-"Friends_Nickname"					"Nume profil"
+"Friends_Nickname"					"Numele de profil"
 "Friends_Avatar"						"Avatar"
 "Friends_AutoSignIntoFriendsOnStartup"	"Conectează-mă automat la serviciul Prieteni când pornesc Steam"
 "Friends_ShowTimeInChatLog"	"Afișează marcaje temporale în jurnalul de chat"
@@ -385,11 +385,11 @@
 "Friends_FlashWindowNever"		"Niciodată"
 "Friends_ViewSteamCommunityProfile"	"Vezi profilul meu din comunitatea Steam"
 "Friends_ChangeAvatar"				"Schimbă"
-"Friends_NameTooShort_Title"			"Prieteni - Nume profil prea scurt"
-"Friends_NameTooShort_Info"			"Câmpul „Nume profil” trebuie să conțină cel puțin două caractere."
-"Friends_NameChangeFailed_Title"		"Prieteni - Numele profilului nu a putut fi modificat"
-"Friends_NameChangeFailed_Info"		"Numele profilului nu a putut fi schimbat. Te rugăm să încerci din nou în câteva minute."
-"Friends_NameChangeThrottled_Info"		"Schimbarea frecventă a denumirii profilului nu este permisă. Te rugăm să încerci din nou în câteva minute."
+"Friends_NameTooShort_Title"			"Prieteni - Numele de profil e prea scurt"
+"Friends_NameTooShort_Info"			"Câmpul „Numele de profil” trebuie să conțină cel puțin două caractere."
+"Friends_NameChangeFailed_Title"		"Prieteni - Numele de profil nu a putut fi modificat"
+"Friends_NameChangeFailed_Info"		"Numele de profil nu a putut fi schimbat. Te rugăm să încerci din nou în câteva minute."
+"Friends_NameChangeThrottled_Info"		"Nu este permisă schimbarea foarte frecventă a numelui de profil. Te rugăm să încerci din nou în câteva minute."
 
 "Friends_OnlineNotification_Info"			"este online acum"
 "Friends_InGameNotification_Info"			"se joacă acum"
@@ -412,7 +412,7 @@
 "Friends_AddPlayerAsFriend"				"Adaugă un prieten..."
 "Friends_NoRecentlyPlayedWithUsers"		"Nu ai jucat recent cu niciun prieten."
 "Friends_NoCurrentlyPlayedWithUsers"		"Serverul nu a găsit utilizatori Steam."
-"Friends_PlayerName"						"Nume profil"
+"Friends_PlayerName"						"Numele de profil"
 "Friends_SteamIDURLHeader"				"Profil Steam"
 "Friends_PlayerRelationship"				"Relație"
 "Friends_PlayedWithGame"					"Joc"

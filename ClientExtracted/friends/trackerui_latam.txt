@@ -100,7 +100,7 @@
 "Friends_CannotAddSelfToList"				"¡No puedes agregarte a ti mismo a tu lista de amigos!"
 "Friends_CannotAddFriendWhoIsAlreadyInList" "%search% ya se encuentra en tu lista de amigos con el nombre '%friend%'."
 
-"Friends_ConnectedButOffline"					"Tu estado está configurado como Desconectado para todos tus amigos."
+"Friends_ConnectedButOffline"					"Tu estado está configurado como Sin conexión para todos tus amigos."
 "Friends_NoFriendsInList"						"¿Por qué no invitas a alguien a ser tu amigo?"
 "Friends_GoOnline"							"Conectarse"
 "Friends_SignIn_RefreshPassword"				"Registrarse…"
@@ -286,7 +286,7 @@
 "Friends_Chat_Closed_Info"            "Se ha cerrado el chat %chat%."
 "Friends_Chat_Closed_Entry"           "Se ha cerrado el chat.\n"
 
-"Friends_Chat_Offline_Entry"           "Tu estado es Desconectado.\n"
+"Friends_Chat_Offline_Entry"           "Tu estado es Sin conexión.\n"
 "Friends_Chat_Offline_Rejoin_Entry"    "Ahora estás en línea y has vuelto a unirte al chat.\n"
 
 "Friends_Chat_FailedRejoin_Entry"			"No has podido volver a unirte al chat.\n"
@@ -668,10 +668,10 @@
 "friends_setnickname_title"		"Amigos: %friend%"
 "friends_setnickname_info"		"Añade un alias persistente a este jugador para seguirle la pista."
 "friends_managefriends"			"Administrar amigos"
-"Friends_WebStatus_Tooltip"		"Conectado desde un navegador web"
-"Friends_MobileStatus_Tooltip"	"Conectado desde un dispositivo móvil"
-"Friends_BigPictureStatus_Tooltip"	"Conectado desde Big Picture"
-"Friends_VRStatusStatus_Tooltip" "Conectado en RV"
+"Friends_WebStatus_Tooltip"		"En línea desde un navegador web"
+"Friends_MobileStatus_Tooltip"	"En línea desde un dispositivo móvil"
+"Friends_BigPictureStatus_Tooltip"	"En línea desde Big Picture"
+"Friends_VRStatusStatus_Tooltip" "En línea en RV"
 
 "friends_newturn_info" "1 nuevo turno te espera"
 "friends_newturns_info" "%turns% nuevos turnos te esperan"

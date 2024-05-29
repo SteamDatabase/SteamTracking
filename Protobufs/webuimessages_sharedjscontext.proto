@@ -1,0 +1,32 @@
+import "enums.proto";
+import "steammessages_base.proto";
+import "webuimessages_base.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = true;
+
+message CSharedJSContext_GetDesiredSteamUIWindows_Request {
+}
+
+message CMsgSteamUIBrowserWindow {
+	optional int32 id = 1;
+	optional int32 pid = 2;
+	optional int32 browser_id = 3;
+	optional int32 window_type = 4;
+	optional int32 x = 5;
+	optional int32 y = 6;
+	optional uint64 appid = 7;
+	optional uint64 parent_window_handle = 8;
+	optional string app_name = 9;
+	optional bool gamepadui_via_gamescope = 10;
+}
+
+message CSharedJSContext_GetDesiredSteamUIWindows_Response {
+	repeated .CMsgSteamUIBrowserWindow windows = 1;
+}
+
+service SharedJSContext {
+	option (webui_service_execution_site) = k_EClientExecutionSiteSteamUI;
+
+	rpc GetDesiredSteamUIWindows (.CSharedJSContext_GetDesiredSteamUIWindows_Request) returns (.CSharedJSContext_GetDesiredSteamUIWindows_Response);
+}

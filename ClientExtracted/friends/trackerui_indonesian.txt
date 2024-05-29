@@ -750,7 +750,7 @@
 "Steam_Settings_Broadcast_DimensionsHeader" "Dimensi Video:"
 "Steam_Settings_Broadcast_EncoderHeader" "Optimalkan pengodean untuk:"
 "Steam_Settings_Broadcast_EncoderQuality" "Kualitas Terbaik"
-"Steam_Settings_Broadcast_EncoderPerformance" "Performa Terbaik"
+"Steam_Settings_Broadcast_EncoderPerformance" "Kinerja Terbaik"
 "Steam_Settings_Broadcast_StatusNotBroadcast" "Tidak sedang Siaran"
 "Steam_Settings_Broadcast_StatusBroadcast" "Sedang Siaran"
 "Steam_Settings_Broadcast_ShowChat_Off" "Mati"
@@ -767,7 +767,7 @@
 "Steam_Settings_Broadcast_RequiresRestart" "* Restart game dibutuhkan sebelum menerapkan"
 
 "Broadcast_RecordingError_NoAudio" "Steam tidak dapat merekam audio siaran ini"
-"Broadcast_RecordingError_LowVideo" "Steam mengubah pengodean Siaran ke \"Performa Terbaik\""
+"Broadcast_RecordingError_LowVideo" "Steam mengubah pengodean Siaran ke \"Kinerja Terbaik\""
 
 "Broadcast_RecordingError_Title" "Siaran — Audio tidak terekam"
 "Broadcast_RecordingError_General" "Steam tidak dapat merekam audio untuk siaran ini. Mohon kunjungi artikel bantuan di bawah ini untuk bantuan troubleshoot kendala ini."

@@ -1,0 +1,138 @@
+import "enums.proto";
+import "steammessages_base.proto";
+import "webuimessages_base.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = true;
+
+message CBluetoothManager_GetState_Request {
+}
+
+message CMsgBluetoothManagerAdapterInfo {
+	optional uint32 id = 1;
+}
+
+message CMsgBluetoothManagerDeviceInfo {
+	optional uint32 id = 1;
+	optional bool should_hide_hint = 2;
+	optional .EBluetoothDeviceType etype = 3 [default = k_BluetoothDeviceType_Invalid];
+	optional bool is_connected = 4;
+	optional bool is_paired = 5;
+	optional int32 strength_raw = 6;
+}
+
+message CBluetoothManager_GetState_Response {
+	optional bool is_service_available = 1;
+	optional bool is_enabled = 2;
+	optional bool is_discovering = 3;
+	repeated .CMsgBluetoothManagerAdapterInfo adapters = 4;
+	repeated .CMsgBluetoothManagerDeviceInfo devices = 5;
+}
+
+message CBluetoothManager_GetAdapterDetails_Request {
+	optional uint32 id = 1;
+}
+
+message CMsgBluetoothManagerAdapterDetails {
+	optional uint32 id = 1 [default = 0];
+	optional string mac = 2;
+	optional string name = 3;
+	optional bool is_enabled = 4;
+	optional bool is_discovering = 5;
+}
+
+message CBluetoothManager_GetAdapterDetails_Response {
+	optional .CMsgBluetoothManagerAdapterDetails adapter = 1;
+}
+
+message CBluetoothManager_GetDeviceDetails_Request {
+	optional uint32 id = 1;
+}
+
+message CMsgBluetoothManagerDeviceDetails {
+	optional uint32 id = 1 [default = 0];
+	optional uint32 adapter_id = 2 [default = 0];
+	optional .EBluetoothDeviceType etype = 3 [default = k_BluetoothDeviceType_Invalid];
+	optional string mac = 4;
+	optional string name = 5;
+	optional bool is_connected = 6;
+	optional bool is_paired = 7;
+	optional bool is_pairing = 8;
+	optional bool wake_allowed = 9;
+	optional bool wake_allowed_supported = 10;
+	optional int32 battery_percent = 11;
+	optional bool operation_in_progress = 12;
+}
+
+message CBluetoothManager_GetDeviceDetails_Response {
+	optional .CMsgBluetoothManagerDeviceDetails device = 1;
+}
+
+message CBluetoothManager_StateChanged_Notification {
+}
+
+message CBluetoothManager_SetDiscovering_Request {
+	optional bool enabled = 1;
+}
+
+message CBluetoothManager_SetDiscovering_Response {
+}
+
+message CBluetoothManager_Pair_Request {
+	optional uint32 device = 1;
+}
+
+message CBluetoothManager_Pair_Response {
+}
+
+message CBluetoothManager_CancelPair_Request {
+	optional uint32 device = 1;
+}
+
+message CBluetoothManager_CancelPair_Response {
+}
+
+message CBluetoothManager_Forget_Request {
+	optional uint32 device = 1;
+}
+
+message CBluetoothManager_Forget_Response {
+}
+
+message CBluetoothManager_Connect_Request {
+	optional uint32 device = 1;
+}
+
+message CBluetoothManager_Connect_Response {
+}
+
+message CBluetoothManager_Disconnect_Request {
+	optional uint32 device = 1;
+}
+
+message CBluetoothManager_Disconnect_Response {
+}
+
+message CBluetoothManager_SetWakeAllowed_Request {
+	optional uint32 device = 1;
+	optional bool allowed = 2;
+}
+
+message CBluetoothManager_SetWakeAllowed_Response {
+}
+
+service BluetoothManager {
+	option (webui_service_execution_site) = k_EClientExecutionSiteSteamUI;
+
+	rpc GetState (.CBluetoothManager_GetState_Request) returns (.CBluetoothManager_GetState_Response);
+	rpc GetAdapterDetails (.CBluetoothManager_GetAdapterDetails_Request) returns (.CBluetoothManager_GetAdapterDetails_Response);
+	rpc GetDeviceDetails (.CBluetoothManager_GetDeviceDetails_Request) returns (.CBluetoothManager_GetDeviceDetails_Response);
+	rpc NotifyStateChanged (.CBluetoothManager_StateChanged_Notification) returns (.WebUINoResponse);
+	rpc SetDiscovering (.CBluetoothManager_SetDiscovering_Request) returns (.CBluetoothManager_SetDiscovering_Response);
+	rpc Pair (.CBluetoothManager_Pair_Request) returns (.CBluetoothManager_Pair_Response);
+	rpc CancelPair (.CBluetoothManager_CancelPair_Request) returns (.CBluetoothManager_CancelPair_Response);
+	rpc Forget (.CBluetoothManager_Forget_Request) returns (.CBluetoothManager_Forget_Response);
+	rpc Connect (.CBluetoothManager_Connect_Request) returns (.CBluetoothManager_Connect_Response);
+	rpc Disconnect (.CBluetoothManager_Disconnect_Request) returns (.CBluetoothManager_Disconnect_Response);
+	rpc SetWakeAllowed (.CBluetoothManager_SetWakeAllowed_Request) returns (.CBluetoothManager_SetWakeAllowed_Response);
+}

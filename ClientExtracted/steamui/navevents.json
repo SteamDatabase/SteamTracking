@@ -116,6 +116,7 @@
     "explore": 239,
     "browse-tags": 240,
     "tags": 241,
+    "content-hub-carousel": 242,
     "Action": 250,
     "Adventure": 251,
     "Strategy": 252,
@@ -225,6 +226,7 @@
     "autumnsale": 660,
     "wintersale": 661,
     "yearinreview": 662,
+    "springsale": 663,
     "mobileapp": 700,
     "summary": 701,
     "mobilestorefront": 702,
@@ -460,6 +462,10 @@
     "recommended-by-deep-dive-carousel_cluster_recent": 2511,
     "recommended-by-deep-dive-carousel_cluster_games": 2512,
     "recommended-by-deep-dive-carousel_cluster_playtime": 2513,
+    "recommended-by-deep-dive-carousel-default": 2514,
+    "recommended-by-deep-dive-carousel-cluster-recent": 2515,
+    "recommended-by-deep-dive-carousel-cluster-games": 2516,
+    "recommended-by-deep-dive-carousel-cluster-playtime": 2517,
     "trendingreviews": 2600,
     "ajaxgetrecentreviews": 2601,
     "community-recommendations": 2602,
@@ -561,5 +567,6 @@
     "salesectionlinks": 100730,
     "salesectionrewards": 100731,
     "salesectiontext": 100732,
-    "salesectioneventschedule": 100733
+    "salesectioneventschedule": 100733,
+    "salesmartpersonalizedcarousel": 100734
 }

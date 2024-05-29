@@ -388,6 +388,7 @@
 	"Steam_RetailInstallLocked_Title" "蒸汽平台 - 游戏被锁定"
 	"Steam_RetailInstallLocked_Info" "%product% 尚未正式发布，目前不能被解锁。 请查看蒸汽平台新闻了解发布时间。\n蒸汽平台会在游戏解锁时向您发送通知。"
 	"Steam_SystemRebootRequired_Title" "蒸汽平台 - 需要重启系统"
+	"Steam_ForumsURL" "http://steamchina.com/index.php?area=forums"
 	"Steam_CCDeclined_SupportLink" "访问蒸汽平台客服网站获取更多信息"
 	"Steam_BackupFileAlreadyExists_Title" "蒸汽平台 - 备份"
 	"Steam_BackupFileAlreadyExists_Info" "无法在以下路径创建蒸汽平台备份文件：\n\n%path%\n\n已存在以该名称命名的目录。"

@@ -349,6 +349,16 @@ div.ModalPosition_TopBar {
   user-select: none;
   margin-right: 26px;
 }
+.SettingsDialogSubHeader {
+  color: #8b929a;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 36px;
+  text-transform: uppercase;
+  user-select: none;
+  margin-right: 26px;
+}
 .DialogContent_InnerWidth .DialogBody .DialogHeader {
   margin-right: 0px;
 }
@@ -376,7 +386,7 @@ div.ModalPosition_TopBar {
   width: auto;
 }
 .DialogBodyText {
-  color: #969696;
+  color: #acb2b8;
   font-size: 16px;
   line-height: 19px;
   font-weight: 300;
@@ -387,7 +397,7 @@ div.ModalPosition_TopBar {
   user-select: text;
 }
 .DialogBodyText p a {
-  color: #969696;
+  color: #acb2b8;
   text-decoration: underline;
 }
 .DialogBodyText p a:hover {
@@ -402,7 +412,7 @@ div.ModalPosition_TopBar {
 .DialogLabel,
 .DialogLabelStrong {
   font-weight: 300;
-  color: #969696;
+  color: #acb2b8;
   text-transform: uppercase;
   line-height: 19px;
   font-size: 13px;
@@ -546,8 +556,9 @@ div.ModalPosition_TopBar {
   padding: 6px;
   padding-left: 12px;
 }
-.DialogToggleField.Disabled .DialogToggle_Label {
-  color: #555;
+.DialogToggleField.Disabled .DialogToggle_Label,
+.DialogToggleField.Disabled .DialogToggle_Description {
+  opacity: 0.3;
 }
 .DialogDropDown._DialogInputContainer.Active {
   outline: none;
@@ -792,7 +803,8 @@ button.TextButton.gpfocus {
   color: #555;
   cursor: default;
 }
-.Disabled .DialogToggleField_Option.Active {
+.Disabled .DialogToggleField_Option.Active,
+.Disabled .DialogToggleField_Option.Off.Active {
   color: #666;
   background-color: #434953;
 }
@@ -1096,7 +1108,7 @@ button.TextButton.gpfocus {
 .DialogCheckbox:hover:not(.Disabled),
 .DialogCheckbox_Container:focus .DialogCheckbox:not(.Disabled),
 .DialogCheckbox:focus:not(.Disabled) {
-  background-color: #1e1f23;
+  background-color: #090909;
 }
 .DialogCheckbox_Container:focus,
 .DialogCheckbox:focus {
@@ -2529,7 +2541,7 @@ html._2GpKTB_eizdXpH2xVGbMKi body {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: stretch;
-  background-color: #202226;
+  background-color: #2a2e36;
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 6px;
@@ -2547,19 +2559,38 @@ html._2GpKTB_eizdXpH2xVGbMKi body {
   padding: 6px;
   margin-right: 6px;
   transition: background-color 0.18s ease-in-out;
-  background-color: #202226;
+  background-color: #2a2e36;
   border-radius: 2px;
+  color: #b8bcbf;
   cursor: pointer;
   font-size: 14px;
+  text-shadow: 0px 0px 4px #0d4f7e;
+}
+._3lwcRYJ_r7x01Cn15bcdYI._3Yc8UCsmMtheFi5YrgQO-p {
+  cursor: default;
 }
 ._3lwcRYJ_r7x01Cn15bcdYI._3ZBFoxumQBb1JEVw_DZzaC,
 ._3lwcRYJ_r7x01Cn15bcdYI._3ZBFoxumQBb1JEVw_DZzaC:hover {
-  background-color: #1f8dff;
+  background: radial-gradient(#1a9fffbb 0%, #1a9fff 100%);
   cursor: default;
   color: #fff;
+  border-right: none;
 }
-._3lwcRYJ_r7x01Cn15bcdYI:hover {
-  background-color: #33363e;
+._3lwcRYJ_r7x01Cn15bcdYI._3ZBFoxumQBb1JEVw_DZzaC._3Yc8UCsmMtheFi5YrgQO-p,
+._3lwcRYJ_r7x01Cn15bcdYI._3ZBFoxumQBb1JEVw_DZzaC._3Yc8UCsmMtheFi5YrgQO-p:hover {
+  background-color: #3d4450;
+}
+._3lwcRYJ_r7x01Cn15bcdYI:not(._3Yc8UCsmMtheFi5YrgQO-p):hover {
+  background-color: #464d58;
+}
+._3lwcRYJ_r7x01Cn15bcdYI:not(
+    ._3Yc8UCsmMtheFi5YrgQO-p
+  )._3ZBFoxumQBb1JEVw_DZzaC:hover {
+  background-color: radial-gradient(
+    155.42% 100% at 0% 0%,
+    #1f2a39 0 0%,
+    #1aa0ff53 100%
+  );
 }
 ._1R-DVEa2yqX0no8BYLtn9N {
   padding: 10px 15px;
@@ -2810,7 +2841,7 @@ html._2GpKTB_eizdXpH2xVGbMKi body {
 ._EebF_xe4DGRZ9a0XkyDj {
   line-height: 16px;
   white-space: nowrap;
-  overflow: scroll;
+  overflow: auto;
   flex-shrink: 1;
   flex-grow: 1;
   display: flex;
@@ -2829,10 +2860,10 @@ html._2GpKTB_eizdXpH2xVGbMKi body {
 .bkfjn0yka2uHNqEvWZaTJ {
   display: flex;
   align-items: center;
-  white-space: normal;
-  max-width: 180px;
+  max-width: 220px;
   text-overflow: ellipsis;
-  padding: 10px 16px 10px 24px;
+  white-space: normal;
+  padding: 10px 8px 10px 24px;
   font-size: 14px;
   font-weight: 400;
   color: #b8bcbf;
@@ -2847,7 +2878,7 @@ html._2GpKTB_eizdXpH2xVGbMKi body {
 .bkfjn0yka2uHNqEvWZaTJ .U6HcKswXzjmWtFxbjxuz4 {
   height: 20px;
   width: 20px;
-  margin-right: 16px;
+  margin-right: 12px;
 }
 .bkfjn0yka2uHNqEvWZaTJ .U6HcKswXzjmWtFxbjxuz4.DesktopUI,
 .DesktopUI .bkfjn0yka2uHNqEvWZaTJ .U6HcKswXzjmWtFxbjxuz4 {
@@ -2856,6 +2887,7 @@ html._2GpKTB_eizdXpH2xVGbMKi body {
 .bkfjn0yka2uHNqEvWZaTJ ._2X9_IsQsEJDpAd2JGrHdJI {
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .bkfjn0yka2uHNqEvWZaTJ._1RDp9x1K3WsjXf7hYWmmiX,
 .bkfjn0yka2uHNqEvWZaTJ._1RDp9x1K3WsjXf7hYWmmiX:hover,
@@ -3607,6 +3639,19 @@ button._1kn7017HPxqS3NKx_wnI4e.DialogButton:enabled:active:hover:before {
   background: #3d4450;
   color: #fff;
 }
+.S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocus.DesktopUI,
+.DesktopUI .S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocus,
+.S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocuswithin.DesktopUI,
+.DesktopUI .S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocuswithin,
+.S-_LaQG5eEOM2HWZ-geJI._27UVYW_V-GslmLf0-gfVCM:not(
+    ._1pmyxI3wxLrWwGnc52yVns
+  ):hover.DesktopUI,
+.DesktopUI
+  .S-_LaQG5eEOM2HWZ-geJI._27UVYW_V-GslmLf0-gfVCM:not(
+    ._1pmyxI3wxLrWwGnc52yVns
+  ):hover {
+  background: none;
+}
 .S-_LaQG5eEOM2HWZ-geJI._1lUZxgL06M64Pd0dTKSTyk
   + .S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocus,
 ._23kNbTg9_TY8TV_uLN8MJy + .S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocus,
@@ -3647,6 +3692,19 @@ button._1kn7017HPxqS3NKx_wnI4e.DialogButton:enabled:active:hover:before {
   margin-top: -1.5px;
   border-top: solid 1.5px transparent;
 }
+.S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocus.DesktopUI::after,
+.DesktopUI .S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocus::after,
+.S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocuswithin.DesktopUI::after,
+.DesktopUI .S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocuswithin::after,
+.S-_LaQG5eEOM2HWZ-geJI._27UVYW_V-GslmLf0-gfVCM:not(
+    ._1pmyxI3wxLrWwGnc52yVns
+  ):hover.DesktopUI::after,
+.DesktopUI
+  .S-_LaQG5eEOM2HWZ-geJI._27UVYW_V-GslmLf0-gfVCM:not(
+    ._1pmyxI3wxLrWwGnc52yVns
+  ):hover::after {
+  display: inherit;
+}
 .S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocus::after,
 .S-_LaQG5eEOM2HWZ-geJI.wE4V6Ei2Sy2qWDo_XNcwn.gpfocuswithin::after,
 .S-_LaQG5eEOM2HWZ-geJI._27UVYW_V-GslmLf0-gfVCM:not(
@@ -3666,6 +3724,13 @@ button._1kn7017HPxqS3NKx_wnI4e.DialogButton:enabled:active:hover:before {
 }
 .S-_LaQG5eEOM2HWZ-geJI._27UVYW_V-GslmLf0-gfVCM:not(._1pmyxI3wxLrWwGnc52yVns) {
   cursor: pointer;
+}
+.S-_LaQG5eEOM2HWZ-geJI.DesktopUI._27UVYW_V-GslmLf0-gfVCM:not(
+    ._1pmyxI3wxLrWwGnc52yVns
+  ),
+.DesktopUI
+  .S-_LaQG5eEOM2HWZ-geJI._27UVYW_V-GslmLf0-gfVCM:not(._1pmyxI3wxLrWwGnc52yVns) {
+  cursor: default;
 }
 .S-_LaQG5eEOM2HWZ-geJI .Focusable {
   scroll-margin: 20px 0 55px 0;
@@ -4258,6 +4323,7 @@ button._1Z-CctcUAd2cuoe30TyZMb svg {
   --inverse-normalized-default-value: calc(
     1 - var(--normalized-slider-default-value)
   );
+  --slider-handle-width: 24px;
   position: relative;
   display: flex;
   height: 24px;
@@ -4316,7 +4382,10 @@ button._1Z-CctcUAd2cuoe30TyZMb svg {
   --gradient-split-pct: calc(
     100% * var(--normalized-slider-default-value) /
       var(--normalized-slider-value) -
-      (24px * 0.5 * var(--signed-normalized-slider-default-value))
+      (
+        var(--slider-handle-width) * 0.5 *
+          var(--signed-normalized-slider-default-value)
+      )
   );
 }
 .uanTsGchIL7AW8XzKY-3v .Mq25Nap224hVdTdtXSsnq::before {
@@ -4349,8 +4418,7 @@ button._1Z-CctcUAd2cuoe30TyZMb svg {
   position: absolute;
   transform: translateX(
     calc(
-      -100% * var(--inverse-normalized-value) + (24px *
-            var(--inverse-normalized-value))
+      -100% * var(--inverse-normalized-value) + var(--slider-handle-width) * var(--inverse-normalized-value)
     )
   );
 }
@@ -4671,8 +4739,9 @@ button._1Z-CctcUAd2cuoe30TyZMb svg {
   position: absolute;
   transform: translateX(
     calc(
-      -100% * var(--inverse-normalized-default-value) + (24px *
-            var(--inverse-normalized-default-value))
+      -100% * var(--inverse-normalized-default-value) + var(
+          --slider-handle-width
+        ) * var(--inverse-normalized-default-value)
     )
   );
 }

@@ -234,7 +234,7 @@ Tämä kestää alle minuutin."
 "SteamUI_JoinDialog_KickSessions_Error" "Pelissä %game% olevan toisen istunnon katkaisu epäonnistui"
 
 "SteamUI_JoinDialog_VerifyingFiles_Error" "Allekirjoitettujen tiedostojen vahvistus epäonnistui pelille %game%. Sisällön vahvistusta vaaditaan."
-"SteamUI_JoinDialog_CreateProcess_Error" "Prosessin käynnistäminen pelille %game% epäonnistui:\n\n%detail%"
+"SteamUI_JoinDialog_CreateProcess_Error" "Pelin %game% käynnistäminen epäonnistui:\n\n%detail%"
 "SteamUI_JoinDialog_CreateProcess_Error_Detail_macOS" "32-bittisiä sovelluksia ei enää tueta macOS 10.15:ssä tai uudemmissa versioissa."
 
 "SteamUI_JoinDialog_OpenVRStartupFailure" "Pelin %game% aloittaminen VR:ssä epäonnistui. (Virhe: %error%)"
@@ -1950,7 +1950,7 @@ Sinun täytyy kirjautua ulos OS X:stä ottaaksesi asetukset käyttöön."
 "Steam_Game_SteamStorePage"		"Kauppasivu"
 "Steam_Game_GameHub"			"Yhteisökeskus"
 
-"Steam_Game_RecommendGame"		"Arvioi peli"
+"Steam_Game_RecommendGame"		"Kirjoita arvostelu"
 
 "Steam_Automatic_Updates"		"Automaattiset päivitykset"
 "Steam_Game_UpdateHistory"		"Näytä pelin %game% päivityshistoria"
@@ -2108,6 +2108,7 @@ Sinun täytyy kirjautua ulos OS X:stä ottaaksesi asetukset käyttöön."
 "Steam_BackgroundDownloadsAllow"	"Salli aina taustalla lataaminen"
 "Steam_BackgroundDownloadsDeny"	"Älä koskaan salli taustalatauksia"
 
+// NOTE: no longer referenced, old vgui?
 "Steam_GameProperties_SteamInputSettings"	"Steamin syöttölaiteasetukset"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Pelikohtaiset Steam-syöteasetukset (edellyttää pelin uudelleenkäynnistämistä)"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "Aina pois"
@@ -4582,7 +4583,7 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "Steam_Settings_Streaming_DeviceName" "LAITE"
 "Steam_Settings_Streaming_Status" "TILA"
 "Steam_Settings_Streaming_EnableStreaming" "Ota Remote Play käyttöön"
-"Steam_Settings_Streaming_Pair" "Pariliitä Steam Link"
+"Steam_Settings_Streaming_Pair" "Muodosta laitepari Steam Linkin kanssa"
 "Steam_Settings_Streaming_Unpair" "Poista laitepari"
 "Steam_Settings_Streaming_UnpairConfirmation" "Haluatko varmasti poistaa kaikki laiteparit?"
 "Steam_Settings_Streaming_SetPIN" "Määritä suojakoodi"

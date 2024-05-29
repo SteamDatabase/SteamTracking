@@ -327,14 +327,15 @@ enum EControllerTypeFlags
 	k_EControllerTypeFlags_SwitchJoyconPair = 8192;
 	k_EControllerTypeFlags_MobileTouchController = 16384;
 	k_EControllerTypeFlags_PS5EdgeController = 32768;
+	k_EControllerTypeFlags_HoriController = 65536;
 	k_EControllerTypeFlags_AllControllers = 131071;
 	k_EControllerTypeFlags_AllSteamControllers = 7;
 	k_EControllerTypeFlags_AllPlaystationControllers = 32824;
 	k_EControllerTypeFlags_AllXBoxControllers = 448;
 	k_EControllerTypeFlags_AllNintendoControllers = 13824;
-	k_EControllerTypeFlags_2Grips = 41223;
-	k_EControllerTypeFlags_4Grips = 41222;
-	k_EControllerTypeFlags_Gyro = 62007;
+	k_EControllerTypeFlags_2Grips = 106759;
+	k_EControllerTypeFlags_4Grips = 106758;
+	k_EControllerTypeFlags_Gyro = 127543;
 	k_EControllerTypeFlags_Trackpad = 49207;
 	k_EControllerTypeFlags_CenterTrackpad = 49200;
 	k_EControllerTypeFlags_RightJoystick = 126972;
@@ -1173,6 +1174,16 @@ enum SystemKey
 	SystemKey1 = 1;
 }
 
+enum UnnamedEnum0088a21d353911da
+{
+	Achievements = 0;
+	Controller = 1;
+	Guides = 2;
+	Notes = 3;
+	Browser = 4;
+	GR = 5;
+}
+
 enum UnnamedEnum008b8bff579bf723
 {
 	AppIcons = 0;
@@ -1979,34 +1990,6 @@ enum UnnamedEnum442e63328704c13b
 	Center = 2;
 	Right = 4;
 	Full = 7;
-}
-
-enum UnnamedEnum44447dc70502f5eb
-{
-	None = 0;
-	Minimized = 1;
-	Hidden = 2;
-	TooltipHint = 4;
-	NoTaskbarIcon = 8;
-	Resizable = 16;
-	ScalePosition = 32;
-	ScaleSize = 64;
-	Maximized = 128;
-	BackgroundTransparent = 256;
-	NotFocusable = 512;
-	FullScreen = 1024;
-	Fullscreen_Exclusive = 2048;
-	ApplyBrowserScaleToDimensions = 4096;
-	AlwaysOnTop = 8192;
-	NoWindowShadow = 16384;
-	NoMinimize = 32768;
-	PopUpMenuHint = 65536;
-	IgnoreSavedSize = 131072;
-	NoRoundedCorners = 262144;
-	ForceRoundedCorners = 524288;
-	OverrideRedirect = 1048576;
-	IgnoreSteamDisplayScale = 2097152;
-	NoDefaultURL = 4194304;
 }
 
 enum UnnamedEnum444e26d5fd11557e
@@ -2933,7 +2916,16 @@ enum UnnamedEnum84f925970b2abf75
 	Down = 1;
 }
 
-enum UnnamedEnum850d42e0163562b7
+enum UnnamedEnum866d82e66e6a644d
+{
+	Unknown = 0;
+	Above = 1;
+	OnScreen = 2;
+	Below = 3;
+	Empty = 4;
+}
+
+enum UnnamedEnum869d78ff95ee9ad9
 {
 	Notifications = 0;
 	RemotePlayTogetherControls = 1;
@@ -2943,16 +2935,6 @@ enum UnnamedEnum850d42e0163562b7
 	Perf = 5;
 	Help = 6;
 	Soundtrack = 7;
-	PerfInternal = 8;
-}
-
-enum UnnamedEnum866d82e66e6a644d
-{
-	Unknown = 0;
-	Above = 1;
-	OnScreen = 2;
-	Below = 3;
-	Empty = 4;
 }
 
 enum UnnamedEnum899cc823eee04c7f
@@ -3718,15 +3700,6 @@ enum UnnamedEnumc871c27f28c8b37d
 	Knockout = 0;
 	Light = 1;
 	Dark = 2;
-}
-
-enum UnnamedEnumc8fc67fa54b26a6f
-{
-	Achievements = 0;
-	Controller = 1;
-	Guides = 2;
-	Notes = 3;
-	Browser = 4;
 }
 
 enum UnnamedEnumc97b61f74c670b3e

@@ -40,6 +40,12 @@ enum ESettingProfileMode {
 	k_ESettingProfileMode_PerGamePerDisplay = 2;
 }
 
+enum EGRMode {
+	k_EGRMode_Never = 0;
+	k_EGRMode_Always = 1;
+	k_EGRMode_Manual = 2;
+}
+
 message CMsgHotkey {
 	optional uint32 key_code = 1;
 	optional bool alt_key = 2;
@@ -80,6 +86,7 @@ message CMsgClientSettings {
 	optional bool skip_steamvr_install_dialog = 19 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\SteamVRHMDVGUIWarning"];
 	optional bool always_show_user_chooser = 20 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "WebStorage\\Auth\\AlwaysShowUserChooser"];
 	optional bool show_family_sharing_notifications = 3000 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional bool show_copy_count_in_library = 3001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "ShowCopyCountInLibrary", (setting_default_bool) = true];
 	optional int32 overlay_fps_counter_corner = 4000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayShowFPSCorner"];
 	optional bool overlay_fps_counter_high_contrast = 4001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayShowFPSContrast"];
 	optional .CMsgHotkey overlay_key = 4002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayShortcutKey", (setting_default_string) = "Shift\tKEY_TAB"];
@@ -174,7 +181,6 @@ message CMsgClientSettings {
 	optional bool startup_movie_used_for_resume = 16003 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Customization/StartupMovie/UsedForResume"];
 	optional bool game_notes_enable_spellcheck = 17001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "GameNotesEnableSpellcheck", (setting_default_bool) = true];
 	optional int32 screenshot_items_per_row = 18000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "ScreenshotViewItemsPerRow", (setting_default_int) = 1];
-	optional bool g_background_enabled = 18200 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional string g_background_path = 18201 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional string g_background_max_keep = 18202 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional int32 g_background_time_resolution = 18203 [(setting_store) = k_EClientSettingStore_CustomFunc];
@@ -182,6 +188,8 @@ message CMsgClientSettings {
 	optional .CMsgHotkey g_background_tg = 18208 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool g_background_a_m = 18209 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional int32 g_background_br = 18210 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional bool g_background_a_s = 18211 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional .EGRMode g_background_mode = 18212 [default = k_EGRMode_Never, (setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool show_timestamps_in_console = 20000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Developer\\ShowTimestampsInConsole"];
 	optional bool force_oobe = 20001 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\ForceOOBE"];
 	optional int32 override_browser_composer_mode = 20002 [(setting_store) = k_EClientSettingStore_CustomFunc];
@@ -202,6 +210,8 @@ message CMsgClientSettings {
 	optional int32 steamos_tdp_limit = 22002 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/TDPLimit", (setting_default_int) = 0, (setting_profile_mode) = k_ESettingProfileMode_PerGame];
 	optional bool steamos_cec_enabled = 22003 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/CECEnabled", (setting_default_bool) = true];
 	optional bool steamos_cec_wake_on_resume = 22004 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/WakeOnResume", (setting_default_bool) = true];
+	optional bool steamos_wifi_debug = 22005 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/WifiDebug", (setting_default_bool) = false];
+	optional bool steamos_wifi_force_wpa_supplicant = 22006 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/WifiForceWPASupplicant", (setting_default_bool) = false];
 	optional bool setting_validation_bool = 23001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyBool"];
 	optional .EHDRVisualization setting_validation_enum = 23002 [default = k_EHDRVisualization_None, (setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyEnum"];
 	optional int32 setting_validation_int32 = 23003 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyInt32"];
@@ -209,4 +219,5 @@ message CMsgClientSettings {
 	optional uint64 setting_validation_uint64 = 23005 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyUInt64"];
 	optional float setting_validation_float = 23006 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyFloat"];
 	optional string setting_validation_string = 23007 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SettingValidation/DummyString"];
+	optional bool system_bluetooth_enabled = 24000 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "System/Bluetooth/Enabled", (setting_default_bool) = false];
 }

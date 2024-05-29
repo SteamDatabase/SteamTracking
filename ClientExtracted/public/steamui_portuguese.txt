@@ -2103,6 +2103,7 @@ Precisarás de encerrar a sessão do OSX para que as mudanças tenham efeito."
 "Steam_BackgroundDownloadsAllow"	"Permitir sempre downloads em 2.º plano"
 "Steam_BackgroundDownloadsDeny"	"Nunca permitir downloads em 2.º plano"
 
+// NOTE: no longer referenced, old vgui?
 "Steam_GameProperties_SteamInputSettings"	"Definições de Steam Input"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Definição de Steam Input neste jogo (terá de ser reiniciado)"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "Manter desativado"

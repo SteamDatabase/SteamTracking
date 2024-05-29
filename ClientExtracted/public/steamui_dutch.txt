@@ -2111,6 +2111,7 @@ Je moet uitloggen op OSX om de veranderingen door te voeren."
 "Steam_BackgroundDownloadsAllow"	"Altijd downloads op de achtergrond toestaan"
 "Steam_BackgroundDownloadsDeny"	"Downloads op de achtergrond nooit toestaan"
 
+// NOTE: no longer referenced, old vgui?
 "Steam_GameProperties_SteamInputSettings"	"Steam Input-instellingen"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Steam Input-configuratie per spel (herstart spel vereist)"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "Geforceerd uit"

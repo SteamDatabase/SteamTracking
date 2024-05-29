@@ -1,7 +1,7 @@
 "Language" "finnish" 
 "Tokens" 
 { 
-"SteamBootstrapper_UpdatingSteam"				"Päivitetään %appname%ia..."
+"SteamBootstrapper_UpdatingSteam"				"Päivitetään %appname%iä"
 "SteamBootstrapper_ElevationPrompt"			"%appname%in pitää tehdä päivitys ennen käynnistämistä."
 "SteamBootstrapper_ReadOnlyInstallOSX"		"%appname% ei pysty kirjoittamaan asennushakemistoonsa. Varmista, että et yritä käyttää levykuvaa käynnistämiseen."
 "SteamBootstrapper_RunFromDiskImageOSX"		"Ole hyvä ja vedä %appname% Applications-kansioosi ennen kuin käynnistät sen."
@@ -24,7 +24,7 @@
 "SteamBootstrapper_UpdatePrepare"				"Valmistellaan päivitystä..."
 "SteamBootstrapper_UpdateDownload"			"Ladataan päivitystä..."
 "SteamBootstrapper_UpdateDownloading"			"Ladataan päivitystä (%bytes% / %size% kt)..."
-"SteamBootstrapper_UpdateExtractingPackage"	"Puretaan pakettia..."
+"SteamBootstrapper_UpdateExtractingPackage"	"Puretaan pakettia"
 "SteamBootstrapper_UpdateInstalling"			"Asennetaan päivitystä..."
 "SteamBootstrapper_InstallVerify"				"Vahvistetaan asennusta"
 "SteamBootstrapper_DownloadComplete"			"Lataaminen suoritettu."

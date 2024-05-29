@@ -676,7 +676,7 @@
 "SteamUI_CreateAccount_DifferentNames" "A „Vissza” gombra kattintva próbálkozhatsz új névvel, vagy válassz\na lenti javaslatok közül, és kattints a „Tovább” gombra."
 "SteamUI_CreateAccount_SuggestedNames" "Javasolt fióknevek:"
 "SteamUI_CreateAccount_Names" "Nevek"
-"Steam_ForgottenPassword_MarketRestriction" "Megjegyzés: ha visszaállítod a jelszavad, akkor ideiglenesen korlátozva leszel a cserélésben és a Közösségi Piacon."
+"Steam_ForgottenPassword_MarketRestriction" "Megjegyzés: ha új jelszót kérsz, ideiglenesen korlátozva leszel a cserélésben és a Közösségi Piacon."
 "Steam_ForgottenPassword_FAQ" "A Csere és Piaci korlátozások GYIK megnézése"
 "Steam_ForgottenPassword_VerificationCode" "Hitelesítő kód"
 
@@ -1158,7 +1158,7 @@
 "SteamUI_CCWarning" "Steam - Figyelmeztetés"
 
 "SteamUI_ForgottenPasswordResetType" "A Steam fiókod bejelentkezési adatainak felderítéséhez először a fióknevedre van szükségünk."
-"SteamUI_ForgottenPasswordResetType2" "Mit kell visszaállítanod? Itt visszaállíthatod a jelszavad, vagy ha elvesztetted a hozzáférést a Steam Guard hitelesítő alkalmazásodhoz, eltávolíthatod azt a fiókodról."
+"SteamUI_ForgottenPasswordResetType2" "Mit kell visszaszerezned? Itt tudsz új jelszót kérni, vagy ha elvesztetted a hozzáférést a Steam Guard hitelesítő alkalmazásodhoz, el tudod távolítani azt a fiókodról."
 "SteamUI_ForgottenPasswordGetAccountName" "Nem tudom a fióknevemet."
 "SteamUI_ForgottenPasswordResetPassword" "Tudom a fióknevemet."
 "SteamUI_ForgottenPasswordForgotPassword" "Elfelejtettem a jelszavam."
@@ -1171,8 +1171,8 @@
 "Steam_CDKey" "Termékkód"
 "SteamUI_ForgottenPasswordEnterCDKey" "A fiókneved felderítéséhez kérjük, add meg a termékkódot, amelyet a Steam fiókodhoz aktiváltál."
 "SteamUI_ForgottenPasswordOtherText" "A fiókod adatainak felderítéséhez ismerned kell a kapcsolattartó e-mail-címet vagy a termékkódot, amelyet a fiók aktiválásakor használtál."
-"SteamUI_ForgottenPasswordSentEmailEmail" "Elküldtük neked e-mailben a Steam fiókod nevét.\n\nMiután megkaptad az e-mailt, újra az „Elfelejtett fiók felderítése” gombra kattintva alaphelyzetbe állíthatod a jelszavad."
-"SteamUI_ForgottenPasswordSentEmailCDKey" "E-mailt küldtünk az általad megadott termékkód tulajdonosának. Miután megkaptad ezt a fióknevet, az „Elfelejtett fiók felderítése” gombbal alaphelyzetbe állíthatod a jelszavad."
+"SteamUI_ForgottenPasswordSentEmailEmail" "Elküldtük neked e-mailben a Steam fiókod nevét.\n\nMiután megkaptad az e-mailt, újra az „Elfelejtett fiók felderítése” gombra kattintva új jelszót tudsz kérni."
+"SteamUI_ForgottenPasswordSentEmailCDKey" "E-mailt küldtünk az általad megadott termékkód tulajdonosának. Miután megkaptad ezt a fióknevet, újra az „Elfelejtett fiók felderítése” gombra kattintva új jelszót tudsz kérni."
 "Steam_ForgottenPassword_RequestFailed" "A művelet sikertelen. Kérjük, próbáld újra."
 
 "Steam_CreateNewAccount_EmailAddrAlreadyInUse" "Már létezik Steam fiók ezzel a kapcsolattartó e-mail-címmel. Ha korábban már létrehoztál Steam egy fiókot, egy új létrehozása helyett inkább használd a meglevőt."
@@ -2099,6 +2099,7 @@
 "Steam_BackgroundDownloadsAllow"	"Háttér-letöltések mindig engedélyezve"
 "Steam_BackgroundDownloadsDeny"	"Háttér-letöltések sosem engedélyezve"
 
+// NOTE: no longer referenced, old vgui?
 "Steam_GameProperties_SteamInputSettings"	"Steam Bevitel beállítások"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Játékonkénti Steam Bevitel beállítások (játék-újraindítást igényel)"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "Kényszerített - Ki"

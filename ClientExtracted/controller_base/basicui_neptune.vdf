@@ -3738,19 +3738,6 @@
 					}
 				}
 			}
-			"always_on_action"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"controller_action ts_n"
-						}
-					}
-				}
-			}
 		}
 	}
 	"group"
@@ -3880,19 +3867,6 @@
 					}
 				}
 			}
-			"always_on_action"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"controller_action ts_n"
-						}
-					}
-				}
-			}
 		}
 	}
 	"group"
@@ -3923,19 +3897,6 @@
 						"bindings"
 						{
 							"binding"		"game_action Mouse RSHOULDER, Space"
-						}
-					}
-				}
-			}
-			"always_on_action"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"controller_action ts_n"
 						}
 					}
 				}
@@ -4052,19 +4013,6 @@
 					}
 				}
 			}
-			"always_on_action"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"controller_action ts_n"
-						}
-					}
-				}
-			}
 		}
 	}
 	"group"
@@ -4142,19 +4090,6 @@
 						"bindings"
 						{
 							"binding"		"game_action WebBrowser FriendsUIToggleVoiceChat, Toggle Voice Chat"
-						}
-					}
-				}
-			}
-			"always_on_action"
-			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"controller_action ts_n"
 						}
 					}
 				}

@@ -2107,6 +2107,7 @@ Steam にアクセスするには、このアイコンを右クリックして�
 "Steam_BackgroundDownloadsAllow"	"バックグラウンドでのダウンロードを許可する"
 "Steam_BackgroundDownloadsDeny"	"バックグラウンドでのダウンロードを許可しない"
 
+// NOTE: no longer referenced, old vgui?
 "Steam_GameProperties_SteamInputSettings"	"Steam 入力の設定"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Steam 入力をゲーム毎の設定にする (ゲームの再起動が必要)"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "強制オフ"
