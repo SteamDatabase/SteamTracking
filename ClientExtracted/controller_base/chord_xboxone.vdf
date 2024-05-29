@@ -372,29 +372,9 @@
 		{
 			"dpad_north"
 			{
-				"activators"
-				{
-					"full_press"
-					{
-						"bindings"
-						{
-							"binding"		"controller_action gr_marker"
-						}
-					}
-				}
 			}
 			"dpad_south"
 			{
-				"activators"
-				{
-					"full_press"
-					{
-						"bindings"
-						{
-							"binding"		"controller_action gr_toggle"
-						}
-					}
-				}
 			}
 			"dpad_east"
 			{
