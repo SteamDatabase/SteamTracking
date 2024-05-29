@@ -290,16 +290,6 @@
 			}
 			"button_menu"
 			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"controller_action gr_toggle"
-						}
-					}
-				}
 			}
 			"left_bumper"
 			{
@@ -363,16 +353,6 @@
 		{
 			"click"
 			{
-				"activators"
-				{
-					"Full_Press"
-					{
-						"bindings"
-						{
-							"binding"		"controller_action gr_marker"
-						}
-					}
-				}
 			}
 		}
 	}
