@@ -2108,6 +2108,7 @@
 "Steam_BackgroundDownloadsAllow"	"Завжди дозволяти фонові завантаження"
 "Steam_BackgroundDownloadsDeny"	"Ніколи не дозволяти фонові завантаження"
 
+// NOTE: no longer referenced, old vgui?
 "Steam_GameProperties_SteamInputSettings"	"Налаштування введення Steam"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Налашт. введення Steam для окремої гри (вимагає перезапуску гри)"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "Примусово вимк."

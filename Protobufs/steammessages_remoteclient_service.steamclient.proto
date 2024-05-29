@@ -7,6 +7,8 @@ option cc_generic_services = true;
 service RemoteClient {
 	rpc GetPairingInfo (.CRemoteClient_GetPairingInfo_Request) returns (.CRemoteClient_GetPairingInfo_Response);
 	rpc NotifyOnline (.CRemoteClient_Online_Notification) returns (.NoResponse);
+	rpc GetRecentClients (.CRemoteClient_GetRecentClients_Request) returns (.CRemoteClient_GetRecentClients_Response);
+	rpc MarkTaskComplete (.CRemoteClient_MarkTaskComplete_Request) returns (.CRemoteClient_MarkTaskComplete_Response);
 	rpc NotifyReplyPacket (.CRemoteClient_ReplyPacket_Notification) returns (.NoResponse);
 	rpc AllocateRelayServer (.CRemoteClient_AllocateRelayServer_Request) returns (.CRemoteClient_AllocateRelayServer_Response);
 	rpc AllocateSDR (.CRemoteClient_AllocateSDR_Request) returns (.CRemoteClient_AllocateSDR_Response);
@@ -28,4 +30,5 @@ service RemoteClientSteamClient {
 	rpc NotifySteamBroadcastPacket (.CRemoteClient_SteamBroadcast_Notification) returns (.NoResponse);
 	rpc NotifySteamToSteamPacket (.CRemoteClient_SteamToSteam_Notification) returns (.NoResponse);
 	rpc NotifyRemotePlayTogetherPacket (.CRemotePlayTogether_Notification) returns (.NoResponse);
+	rpc NotifyTaskList (.CRemoteClient_TaskList_Notification) returns (.NoResponse);
 }

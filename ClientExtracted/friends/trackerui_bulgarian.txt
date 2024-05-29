@@ -111,7 +111,7 @@
 "Friends_NotConnectedToFriendsNetwork"		"Не може да бъде установена връзка към мрежата за приятелите. Steam автоматично ще опитва отново, докато услугата не стане достъпна."
 "Friends_NotConnectedToFriendsNetwork_InvalidPassword"	"Нужно е отново да влезете в Steam, с цел да използвате „Приятели“."
 "Friends_NotConnectedToFriendsNetwork_LoggedInElsewhere"	"Отписани сте от приятели, защото този акаунт се използва другаде.\n"
-"Friends_NotConnectedToFriendsNetwork_InvalidVersion"		"Тази версия на Steam е прекалено стара да се свърже към „Приятели“. Рестартирайте Steam, за да получите най-скорошното обновление."
+"Friends_NotConnectedToFriendsNetwork_InvalidVersion"		"Тази версия на Steam е прекалено стара да се свърже към „Приятели“. Рестартирайте Steam, за да получите последното обновление."
 "Friends_NotConnectedToFriendsNetwork_ServersBusy"		"Понастоящем Steam сървърите са свалени за рутина профилактика. Приятелите Ви ще се свържат автоматично, веднага щом са на разположение."
 "Friends_NotConnectedToFriendsNetwork_NoConnection"		"Не може да се установи мрежова връзка към Steam сървърите. Steam автоматично ще прави повторни опити за свързване, докато услугата стане достъпна."
 "Friends_NotAvailableInOfflineMode"			"Приятелите не са достъпни в режим „Извън линия“."

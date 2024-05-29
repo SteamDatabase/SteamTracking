@@ -3,19 +3,16 @@ __TEXT
 
 __text
 __TEXT
-o
-o
 __stubs
 __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
+h6
 __const
 __TEXT
-SD
 __objc_methname
 __TEXT
->$
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
@@ -23,6 +20,7 @@ __cstring
 __TEXT
 __unwind_info
 __TEXT
+!
 __DATA
 __nl_symbol_ptr
 __DATA
@@ -54,6 +52,7 @@ __data
 __DATA
 __bss
 __DATA
+x9
 __common
 __DATA
 H
@@ -101,7 +100,7 @@ X
 -
 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
 p
-6
+8
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
 h
 /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
@@ -113,17 +112,24 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-H
 )
 NSt3__117bad_function_callE
 10CUtlVectorIN12CFontAmalgam10TFontRangeE10CUtlMemoryIS1_EE
+10CUtlMemoryIN12CFontAmalgam10TFontRangeEE
+10CUtlMemoryI16SFontDescriptionE
 10CUtlVectorI12CFontAmalgam10CUtlMemoryIS0_EE
+10CUtlMemoryI12CFontAmalgamE
 7CUtlMapIN12CFontManager15CFontAttributesENS0_9CFontInfoEi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIN12CFontManager15CFontAttributesENS1_9CFontInfoEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIN12CFontManager15CFontAttributesENS2_9CFontInfoEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlVectorIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tE10CUtlMemoryIS4_EE
+10CUtlMemoryIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tEE
 10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
+10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
 7CUtlMapItN12CFontManager13CFontDataFileEi8CDefLessE
 10CUtlRBTreeIN7CUtlMapItN12CFontManager13CFontDataFileEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEtE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapItN12CFontManager13CFontDataFileEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEtE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN8COSXFont11abc_cache_tEtPFbRKS2_S4_E25CDefRBTreeBalanceListenerItES2_E6Node_tEE
 N4vgui6BitmapE
 N4vgui6IImageE
 ?
@@ -202,34 +208,50 @@ N4vgui6IInputE
 14IBaseInterface
 16IIMEPostCallback
 14CUtlLinkedListIN10CInputBase14InputContext_tEiE
+10CUtlMemoryIN14CUtlLinkedListIN10CInputBase14InputContext_tEiE10ListElem_tEE
 10CUtlVectorIPN4vgui6VPanelE10CUtlMemoryIS2_EE
+10CUtlMemoryIPN4vgui6VPanelEE
 7CUtlMapI8HotKey_tPN4vgui6VPanelEi8CDefLessE
 10CUtlRBTreeIN7CUtlMapI8HotKey_tPN4vgui6VPanelEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI8HotKey_tPN4vgui6VPanelEi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 9CInputOSX
 9CStyleSet
 16CStyleAppearance
 N4vgui11IAppearanceE
 11KeyValuesAD
 10CUtlVectorIN4vgui16layoutcmd_base_tE10CUtlMemoryIS1_EE
+10CUtlMemoryIN4vgui16layoutcmd_base_tEE
 N4vgui16layoutcmd_base_tE
 10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
+10CUtlMemoryI10CUtlStringE
 7CUtlMapIN11CLayoutFile15AppearanceKey_tE7CUtlPtrI16CStyleAppearanceEi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIN11CLayoutFile15AppearanceKey_tE7CUtlPtrI16CStyleAppearanceEi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIN11CLayoutFile15AppearanceKey_tE7CUtlPtrI16CStyleAppearanceEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 7CUtlPtrI16CStyleAppearanceE
 11CUtlHashMapI7CUtlPtrI16CStyleAppearanceEbN11CLayoutFile11StyleEqualsENS3_9StyleHashES2_E
 10CUtlVectorIN11CUtlHashMapI7CUtlPtrI16CStyleAppearanceEbN11CLayoutFile11StyleEqualsENS4_9StyleHashES3_E12HashBucket_tE10CUtlMemoryIS8_EE
+10CUtlMemoryIN11CUtlHashMapI7CUtlPtrI16CStyleAppearanceEbN11CLayoutFile11StyleEqualsENS4_9StyleHashES3_E12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapI7CUtlPtrI16CStyleAppearanceEbN11CLayoutFile11StyleEqualsENS4_9StyleHashES3_E6Node_tEE
 10CUtlRBTreeIji8CDefLess25CDefRBTreeBalanceListenerIiEjE
+10CUtlMemoryIN10CUtlRBTreeIji8CDefLess25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlVectorI5Color10CUtlMemoryIS0_EE
+10CUtlMemoryI5ColorE
 10CUtlVectorIN16CStyleAppearance8DrawOp_tE10CUtlMemoryIS1_EE
+10CUtlMemoryIN16CStyleAppearance8DrawOp_tEE
 8CUtlDictI5Color22CDefCaselessStringLessiE
 7CUtlMapIPKc5Colori22CDefCaselessStringLessE
 10CUtlRBTreeIN7CUtlMapIPKc5Colori22CDefCaselessStringLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKc5Colori22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlVectorIP9CStyleSet10CUtlMemoryIS1_EE
+10CUtlMemoryIP9CStyleSetE
 7CUtlMapIjP10CUtlVectorI7style_t10CUtlMemoryIS1_EEi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIjP10CUtlVectorI7style_t10CUtlMemoryIS2_EEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjP10CUtlVectorI7style_tS_IS3_EEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 10CUtlVectorI7style_t10CUtlMemoryIS0_EE
+10CUtlMemoryI7style_tE
 7style_t
 10CUtlVectorIj10CUtlMemoryIjEE
+10CUtlMemoryIjE
 [
 u
 n
@@ -249,14 +271,21 @@ g
 N4vgui9ILocalizeE
 10CUtlString
 10CUtlRBTreeIN21CLocalizedStringTable17localizedstring_tEiPFbRKS1_S3_E25CDefRBTreeBalanceListenerIiES1_E
+10CUtlMemoryIN10CUtlRBTreeIN21CLocalizedStringTable17localizedstring_tEiPFbRKS2_S4_E25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlVectorIc10CUtlMemoryIcEE
+10CUtlMemoryIcE
 10CUtlVectorIw10CUtlMemoryIwEE
+10CUtlMemoryIwE
 10CUtlVectorI10CUtlSymbol10CUtlMemoryIS0_EE
+10CUtlMemoryI10CUtlSymbolE
 10CUtlRBTreeIN21CLocalizedStringTable11fastvalue_tEiPFbRKS1_S3_E25CDefRBTreeBalanceListenerIiES1_E
+10CUtlMemoryIN10CUtlRBTreeIN21CLocalizedStringTable11fastvalue_tEiPFbRKS2_S4_E25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 N4vgui12MemoryBitmapE
 C
 N4vgui20INotificationManagerE
+10CUtlMemoryIyE
 10CUtlVectorIN20CNotificationManager17NotificationPanelE10CUtlMemoryIS1_EE
+10CUtlMemoryIN20CNotificationManager17NotificationPanelEE
 0@
 0@
 0@14CSchemeManager
@@ -264,16 +293,23 @@ N4vgui14ISchemeManagerE
 7CScheme
 N4vgui7ISchemeE
 10CUtlVectorIN7CScheme11fontalias_tE10CUtlMemoryIS1_EE
+10CUtlMemoryIN7CScheme11fontalias_tEE
 10CUtlVectorIP7CScheme10CUtlMemoryIS1_EE
+10CUtlMemoryIP7CSchemeE
 7CUtlMapIPKcPN4vgui6BitmapEi22CDefStringLessFilenameE
 10CUtlRBTreeIN7CUtlMapIPKcPN4vgui6BitmapEi22CDefStringLessFilenameE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcPN4vgui6BitmapEi22CDefStringLessFilenameE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 7CUtlMapIPKcP11CLayoutFilei22CDefStringLessFilenameE
 10CUtlRBTreeIN7CUtlMapIPKcP11CLayoutFilei22CDefStringLessFilenameE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcP11CLayoutFilei22CDefStringLessFilenameE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 10CUtlRBTreeIiiN14CSchemeManager12CObjLessFuncIiS0_EE25CDefRBTreeBalanceListenerIiEiE
+10CUtlMemoryIN10CUtlRBTreeIiiN14CSchemeManager12CObjLessFuncIiS1_EE25CDefRBTreeBalanceListenerIiEiE6Node_tEE
 7CUtlMapIN14CSchemeManager9FontKey_tEmi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIN14CSchemeManager9FontKey_tEmi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIN14CSchemeManager9FontKey_tEmi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 7CUtlMapIPKcbi22CDefStringLessFilenameE
 10CUtlRBTreeIN7CUtlMapIPKcbi22CDefStringLessFilenameE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcbi22CDefStringLessFilenameE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
 @?
 4IIME
 18CSerializedSurface
@@ -286,16 +322,25 @@ N4vgui8ISurfaceE
 10CUtlVectorIy10CUtlMemoryIyEE
 11CUtlHashMapI10CUtlStringPN4vgui6IImageE24CDefCaselessStringEquals25HashFunctorStringCaselessS0_E
 10CUtlVectorIN11CUtlHashMapI10CUtlStringPN4vgui6IImageE24CDefCaselessStringEquals25HashFunctorStringCaselessS1_E12HashBucket_tE10CUtlMemoryIS8_EE
+10CUtlMemoryIN11CUtlHashMapI10CUtlStringPN4vgui6IImageE24CDefCaselessStringEquals25HashFunctorStringCaselessS1_E12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapI10CUtlStringPN4vgui6IImageE24CDefCaselessStringEquals25HashFunctorStringCaselessS1_E6Node_tEE
 7CUtlMapIyPN12CBaseSurface19ChildWindowVector_tEi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIyPN12CBaseSurface19ChildWindowVector_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIyPN12CBaseSurface19ChildWindowVector_tEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 10CUtlVectorIN12CBaseSurface17ChildWindowZPos_tE10CUtlMemoryIS1_EE
+10CUtlMemoryIN12CBaseSurface17ChildWindowZPos_tEE
 10CUtlRBTreeIN4vgui7TextureEi8CDefLess25CDefRBTreeBalanceListenerIiES1_E
+10CUtlMemoryIN10CUtlRBTreeIN4vgui7TextureEi8CDefLess25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 10CUtlVectorIN4vgui16TextColorRange_tE10CUtlMemoryIS1_EE
+10CUtlMemoryIN4vgui16TextColorRange_tEE
 10CUtlVectorIN12CBaseSurface16TraversalEntry_tE10CUtlMemoryIS1_EE
+10CUtlMemoryIN12CBaseSurface16TraversalEntry_tEE
 7CUtlMapIyss8CDefLessE
 10CUtlRBTreeIN7CUtlMapIyss8CDefLessE6Node_tEsNS2_8CKeyLessE25CDefRBTreeBalanceListenerIsEyE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIyss8CDefLessE6Node_tEsNS3_8CKeyLessE25CDefRBTreeBalanceListenerIsEyE6Node_tEE
 7CUtlMapIyN4vgui6Size_tEi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIyN4vgui6Size_tEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIyN4vgui6Size_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 14ISurfaceHelper
 C
 C
@@ -308,16 +353,24 @@ N4vgui5IVGuiE
 14CUtlLinkedListIN5CVGui9Context_tEiE
 14CUtlLinkedListIN4vgui13SerialPanel_tEjE
 14CUtlLinkedListI13MessageItem_tiE
+10CUtlMemoryIN14CUtlLinkedListIN4vgui13SerialPanel_tEjE10ListElem_tEE
 10CUtlVectorIPN5CVGui6Tick_tE10CUtlMemoryIS2_EE
+10CUtlMemoryIPN5CVGui6Tick_tEE
+10CUtlMemoryIN14CUtlLinkedListIN5CVGui9Context_tEiE10ListElem_tEE
+10CUtlMemoryIN14CUtlLinkedListI13MessageItem_tiE10ListElem_tEE
 17CUtlPriorityQueueI13MessageItem_tPFbRKS0_S2_E32CDefUtlPriorityQueueSetIndexFuncIS0_EE
 10CUtlVectorI13MessageItem_t10CUtlMemoryIS0_EE
+10CUtlMemoryI13MessageItem_tE
 N4vgui9VGUISetupE
 N4vgui10IVGuiSetupE
 10CUtlVectorIPFPvPKcPiE10CUtlMemoryIS5_EE
+10CUtlMemoryIPFPvPKcPiEE
 10CUtlVectorIN4vgui10IVGuiSetup15EGraphicsOptionE10CUtlMemoryIS2_EE
+10CUtlMemoryIN4vgui10IVGuiSetup15EGraphicsOptionEE
 23CVGuiSystemModuleLoader
 17IVGuiModuleLoader
 10CUtlVectorIN23CVGuiSystemModuleLoader8module_tE10CUtlMemoryIS1_EE
+10CUtlMemoryIN23CVGuiSystemModuleLoader8module_tEE
 8
 <
 :
@@ -760,7 +813,9 @@ UUUUUUUUUUUUUUUUUUUUUUUU
 0123456789ABCDEF
 11CPathString
 14CUtlLinkedListI10CUtlStringiE
+10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
 10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
+10CUtlMemoryI13ModuleCount_tE
 %
 f
 %
@@ -776,7 +831,6 @@ d
 21CUtlCStringConversion
 18CUtlCharConversion
 19CUtlNoEscConversion
-14CUtlMemoryBase
 12CIMENullImpl
 STEAM_APP_BUNDLE_PATH
 en_US
@@ -788,23 +842,26 @@ r
 ../Info.plist
 ../..
 Unknown
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
+num > 0
+0
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 1.6.37
 PNG load error %s
 PNG load warning %s
 LoadTGA: Only type 2 and 10 targa RGB images supported
 Texture_LoadTGA: Only 32 or 24 bit images supported (no colormaps)
-0
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/vgui_surfacelib/FontAmalgam.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/vgui_surfacelib/FontAmalgam.cpp
 m_Fonts[i].font->IsValid()
 CFontAmalgam
 m_Fonts
 m_strName
+num >= 0
 m_Memory
 deferredFontName
 en_US.UTF-8
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/vgui_surfacelib/FontManager.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/vgui_surfacelib/FontManager.cpp
 font != vgui::INVALID_FONT
 descs.Count() >= 1
 m_FontAmalgams.IsValidIndex( font )
@@ -824,6 +881,8 @@ m_PlatformFonts[ i ]
 m_FontDataFileNames
 m_FontDataFiles
 m_FontDataFiles[ i ]
+nGrowSize >= 0
+m_nAllocationCount >= 0
 CFontInfo
 m_font
 m_descs
@@ -831,7 +890,7 @@ name
 CFontDataFile
 !pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
 count >= 0
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlsymbol.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
 pPool->m_SpaceUsed < 0xFFFF
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
@@ -841,7 +900,7 @@ CUtlSymbolTable
 m_StringPools
 m_Lookup
 bold
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/vgui_surfacelib/osxfont.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/vgui_surfacelib/osxfont.cpp
 !"Context ref not setup to allow GetStringRGBA"
 !"Unable to convert string"
 !"Unable to set layout"
@@ -871,9 +930,9 @@ ATSFontFindFromPostScriptName
 ATSFontGetHorizontalMetrics
 Helvetica Bold
 vgui::Bitmap
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/vector2d.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vector2d.h
 vOther.IsValid()
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/fonttexturecache.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/fonttexturecache.cpp
 texCoords
 No valid page for string texture of %dx%d size
 Invalid width or height to AllocatePageForString()
@@ -881,12 +940,12 @@ m_rgPageLists[pagetype].IsValidIndex( pageIndex )
 drawY >= 0
 drawY < page.tall
 false
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utllinkedlist.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
 IsValidIndex(elem)
 IsInList(before)
 m_TotalElements != InvalidIndex()
 %s overflow!
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
@@ -943,7 +1002,7 @@ zZKEY_Z
 -_KEY_MINUS
 =+KEY_EQUAL, L
 KEY_SPACE
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/inputbase.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/inputbase.cpp
 context != DEFAULT_INPUT_CONTEXT
 (context == DEFAULT_INPUT_CONTEXT) || m_Contexts.IsValidIndex(context)
 -vguifocus
@@ -1008,13 +1067,13 @@ inputContext.m_mapKeyCodeHooks
 g_pInputBase
 VGUI_Input005
 VGUI_InputInternal001
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/inputosx.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/inputosx.cpp
 CInputOSX SetCursorPos not implemented
 LayoutFile
 render
 render_bg
 style
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/layoutfile.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/layoutfile.cpp
 !style->IsDirty()
 parsing of file '%s' failed
 error loading file '%s', %s
@@ -1159,14 +1218,14 @@ m_dictColors
 m_vecBaseStyleSets
 m_mapStyleLists
 m_kvSettings
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 font-outerglow-filtersize
 textcolor
 bgcolor
 shadowtextcolor
 selectedtextcolor
 selectedbgcolor
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/bitstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 bitNum >= 0 && bitNum < this->Size()
 m_pkv
 Element( i )
@@ -1181,7 +1240,10 @@ m_pRef->m_pT
 m_vecHashBuckets
 m_memNodes
 m_bitsMigratedBuckets
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utldict.h
+numElements >= 0
+numElements <= m_nAllocationCount
+m_pMemory
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
 m_vecParentNames
 -ccsyntax
 Spew details about the localized strings we load
@@ -1208,7 +1270,7 @@ wb
 "lang"{"Language" "English""Tokens"{
 }}
 reloading localization file %s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/LocalizedStringTable.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/LocalizedStringTable.cpp
 s_pTable
 Bad format string in CLocalizeStringTable::ConstructString
 !("CLocalizedStringTable::ConstructString - Found a %s# escape sequence who's index was more than the number of args.")
@@ -1239,7 +1301,7 @@ Horizontal
 None
 Vertical
 SetAlpha
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/NotificationManager.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/NotificationManager.cpp
 flFrameTime < panel.m_flLastEventTime + m_flFadeOutTime
 Invalid m_Position for NotificationManager!
 VGUI_NotificationManager002
@@ -1248,7 +1310,7 @@ m_vecPanelsToDelete
 m_vecPanelList
 g_NotificationManager
 VGUI_Scheme010
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/Scheme.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/Scheme.cpp
 !"Invalid scheme requested."
 Scheme
 SKIN
@@ -1308,7 +1370,7 @@ elem + num <= Count()
 CUtlDict
 -pid
 Pid that we should be watching for
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/SerializedSurface.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/SerializedSurface.cpp
 m_fdShMemFDSender >= 0
 /tmp/steam_chrome_overlay_uid%d_spid%s
 top >= 0
@@ -1356,14 +1418,14 @@ oldwide
 oldtall
 Valve Steam GameOverlay
 ATSFontActivateFromFileReference
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 nBytes
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/surface_base.h
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlhashmap.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/surface_base.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
 CUtlHashMap::RemoveAt - Invalid index
 CUtlHashMap::RemoveAt - couldn't find bucket for item
 ChromeHTML_Controller_003
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/surface_base.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/surface_base.cpp
 CBaseSurface::PushMakeCurrent
 !"Warning: VPanel with no drawing context"
 font != INVALID_FONT
@@ -1425,14 +1487,14 @@ m_VPanelScreenSizes
 g_pInternalSurface
 FontManager()
 !pszString || pszString[nChars] == '\0'
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/vgui/ISurface.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vgui/ISurface.h
 m_iStart <= m_iEnd
 (unsigned)elem <= (unsigned)m_Size
 IsInList(after)
 !"Current texture not set"
 id
 wide && tall
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/surface_osx.mm
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/surface_osx.mm
 unmarkText was called, this is unexpected
 ApplyBlurAndTransparencyToTextBitmap
 MainMenu
@@ -1491,7 +1553,7 @@ template <class T> CBaseOSXSurface<T>::PushMakeCurrent
 plat->m_pNSWindow == window
 IsPointInCaptureRegion
 !"Failed to create CGLayer"
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/surface_osx.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/surface_osx.h
 !"Implement me"
 DeviceChange
 com.valvesoftware.steam.ActivateSteam
@@ -1519,7 +1581,7 @@ VGUI_System010
 com.apple.pasteboard.clipboard
 /usr/bin/open
 public.utf8-plain-text
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/system_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/system_posix.cpp
 dialogName && *dialogName
 %s_%d
 UserConfigData
@@ -1529,7 +1591,7 @@ UserConfigData
 /Applications
 m_pUserConfigData
 g_System
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/timeutils.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/timeutils.cpp
 maxUnitCount == 1 || maxUnitCount == 2
 secondsInterval >= 0
 #vgui_TimeLeft
@@ -1541,7 +1603,7 @@ Num %5u, Size %4u, Total Kb %2u, Class %s
 Total Panels %u, total size in Kb %u
 -vguimessages
 set to see debug vgiui2 messages
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/vgui.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/vgui.cpp
 context != DEFAULT_VGUI_CONTEXT
 (context == DEFAULT_VGUI_CONTEXT) || m_Contexts.IsValidIndex(context)
 INotificationManager()->RunFrame()
@@ -1584,7 +1646,7 @@ VGUI Globals
 g_VGui
 CUtlSymbol::ValidateGlobals
 VGUI_Surface039
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/vguisetup.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/vguisetup.cpp
 opengl vgui not supported on mac
 VGUISetup
 m_Factories
@@ -1592,7 +1654,7 @@ m_GraphicsOptions
 VGUI_Setup001
 g_VGuiSetup
 VGuiModuleLoader004
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/vguisystemmoduleloader.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/vguisystemmoduleloader.cpp
 Platform Error: module '%s' failed to initialize
 Platform
 steam/games/PlatformMenu.vdf
@@ -1613,7 +1675,7 @@ m_pPlatformModuleData
 VFileSystem014
 VGUI_Panel010
 VGUI_Application_001
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/vgui_key_translation.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/vgui_key_translation.cpp
 Keycode not in range of s_pVirtualKeyToVGUI
 pDesc->macKeyCode == -1 || s_pVirtualKeyToVGUI[ pDesc->macKeyCode ] == 0
 s_pVGUIToVirtualKey[ keyMap[i].vguiKeyCode ] == 0
@@ -1810,7 +1872,7 @@ Application jmp_buf size changed
 libpng error: %s
 undefined
 libpng warning: %s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/bitstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
 resizeNumBits >= 0
 !m_pInt
 GetInts()
@@ -1821,7 +1883,7 @@ Convars
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
 .
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock %s %s failed. errno = %d
@@ -1843,12 +1905,12 @@ m_listChangedFiles
 cbActual < (uint32)nBufSizeWithTerminator
 CPathString
 %s/%s%s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/interface.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
 g_VecLoadedModules
 g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
 CreateInterface
 ReadToken overflow
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/KeyValues.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
 filesystem
 You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 "
@@ -1904,7 +1966,7 @@ KeyValues Error: %s in file %s [offset: %d]
 *),
 %.18g
 %u
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 nSize != 0
 Expected %lld but got %lld!
@@ -1923,19 +1985,10 @@ a
 \
 ?
 '
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
-nSizeOfType > 0
-nGrowSize >= 0
-m_nAllocationCount >= 0
-m_unSizeOfElements == mem.m_unSizeOfElements
-numElements >= 0
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
-num > 0
-num >= 0
-numElements <= m_nAllocationCount
-m_pMemory
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 Assertion failed: length > k_cchMaxString
 CUtlStringBuilder::InternalPrepareBuffer
@@ -1944,15 +1997,15 @@ nMinCapacity >= nChars
 nMinCapacity <= k_nMaxStringSize
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlsymbol.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_bAllowStaticSymbolTable
 s_pSymbolTable
 %02d:%02d:%02d
 %02d/%02d/%02d
 00:00:00
 01/01/00
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/enum_names.cpp
-Missing String for %s (%d)
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp
+Missing String for %s (%d). If this comes from user data or could be valid, provide a default to avoid asserting.
 EUniverse
 Invalid
 Public
@@ -1961,9 +2014,9 @@ Internal
 Dev
 invalid
 SaveBufferToFile: couldn't open file "%s" in path "%s".
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/filesystem_helpers.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/filesystem_helpers.cpp
 LoadFileIntoBuffer: NULL parameters
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/language.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/language.cpp
 !"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
 zh_CN
 none
@@ -2172,7 +2225,7 @@ SteamBootstrapper_GetEUniverse
 /registry.vdf
 Registry
 registry
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/registry.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/registry.cpp
 Failed loading registry KV.
 Could not read existing registry file.
 %s/%s/%s
@@ -2189,12 +2242,12 @@ HKLM32
 HKEY_LOCAL_MACHINE_WOW64_64
 HKLM64
 Library/Application Support/Steam
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/clientdirectories.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/clientdirectories.h
 Unable to get home directory
 SteamUniverse
 SteamRealm
 China
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/timeutils.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/timeutils.cpp
 vars
 days
 hours
@@ -2226,15 +2279,15 @@ Seconds
 @
 @
 0
-0
-
 
 A;E
 0
+@
 Ic]
-
-
-F
+8
+'
+`
+0
 @
 `
 `
@@ -2273,10 +2326,11 @@ A
 @
 @
 
-j
 =
 @
 Ic]
+&
+?
 @
 @
 0
@@ -2286,5 +2340,6 @@ Ic]
 @
 @
 @
+0
 0
 0

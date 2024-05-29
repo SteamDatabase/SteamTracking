@@ -118,7 +118,7 @@ tela. Para acessar o Steam, clique com o botão direito no seu ícone."
 "Steam_ForgottenPassword_EnterAuthCodeDescription" "Informe o código atual do seu autenticador do Steam Guard, disponível no aplicativo do Steam no seu celular."
 "Steam_ForgottenPassword_EnterAuthCode" "Código do Steam Guard"
 "Steam_ForgottenPassword_EnterSms" "Código SMS"
-"Steam_ForgottenPassword_EnterSmsDescription"	"Enviamos um código SMS ao seu nº de telefone. Informe-o abaixo."
+"Steam_ForgottenPassword_EnterSmsDescription"	"Enviamos um código SMS para o seu número de telefone. Informe-o abaixo."
 
 "Steam_ForgottenPassword_EmailCodeDescription" "Uma mensagem de e-mail contendo um código de verificação foi enviada para o seu endereço de e-mail.\n\nInforme o código abaixo para prosseguirmos."
 "Steam_ForgottenPassword_EmailCode" "Código do e-mail"
@@ -643,7 +643,7 @@ tela. Para acessar o Steam, clique com o botão direito no seu ícone."
 "Steam_ChangeContactEmailWizard_Contact" "Este novo endereço será usado para confirmar compras futuras e ajudá-lo a gerenciar o acesso à sua conta Steam."
 "Steam_ChangeContactEmailWizard_NotChangedYet" "Contatando os Servidores Steam para enviar um código de confirmação ao seu novo endereço de e-mail proposto..."
 "Steam_ChangeContactEmailWizard_WaitingForVerify" "Esta alteração estará concluída assim que você confirmar o recebimento daquele e-mail, clicando no link nele contido."
-"Steam_WeMaySMSYou" "O Steam poderá confirmar esta alteração com uma mensagem de texto enviada por SMS ao seu nº de telefone."
+"Steam_WeMaySMSYou" "O Steam poderá confirmar esta alteração com uma mensagem de texto enviada por SMS para o seu número de telefone."
 "Steam_ChangeEmail_MissingSMSCode" "Uma mensagem de texto foi enviada por SMS ao nº de telefone associado à sua conta. Será necessário informar o código de alteração de e-mail contido na mensagem."
 
 "Steam_ChangeCred_ClickNext"		"Clique em \"Avançar\" para iniciar o processo de atualização da senha."
@@ -1371,7 +1371,7 @@ A sua assinatura está registrada na seguinte conta Steam: %accountname%. No fut
 "Steam_SubscriptionCancelled_PaymentCardAlert_Info" 		"Esta transação não foi processada porque o banco emissor do cartão de crédito identificou usos potencialmente fraudulentos.\n\nNós iremos processar fraudadores até onde a lei permitir."
 
 "Steam_InstallDirectXDialog_Title"	"Steam — DirectX mais recente necessário"
-"Steam_InstallDirextX_Info"		"A última versão do Microsoft DirectX(r) é necessária para jogar %game%."
+"Steam_InstallDirextX_Info"		"A versão mais recente do Microsoft DirectX(r) é necessária para jogar %game%."
 "Steam_InstallDirextX_Link"		"Site de download do Microsoft DirectX(r)"
 
 "Steam_PurchaseError_AllAppsInSubscriptionAlreadyOwned"	"Você já possui todos estes jogos.\nVocê pode acessá-los na sua Biblioteca de Jogos Steam."
@@ -1434,13 +1434,13 @@ A sua assinatura está registrada na seguinte conta Steam: %accountname%. No fut
 "SteamUI_VidDriverVersion"		"Versão:"
 
 "SteamUI_DriverOutdated_Title"		"Driver de vídeo desatualizado"
-"SteamUI_DriverOutdated_Info"		"Os seus drivers de vídeo estão desatualizados e poderão causar problemas caso deseje continuar a rodar o jogo. Recomendamos fortemente que você siga o link abaixo e atualize os seus drivers de vídeo para a última versão disponibilizada pela fabricante da sua placa."
+"SteamUI_DriverOutdated_Info"		"Os seus drivers de vídeo estão desatualizados e poderão causar problemas caso deseje continuar a rodar o jogo. Recomendamos fortemente que você siga o link abaixo e atualize os seus drivers de vídeo para a versão mais recente disponibilizada pelo fabricante da sua placa."
 "SteamUI_OutdatedUrlLabel"		"Ir para página de atualização de driver..."
 "SteamUI_ContinueOutdated"		"Continuar mesmo assim"
 "SteamUI_SuppressOutdated"		"Não exibir este aviso novamente"
 
 "SteamUI_DriverUnsupported_Title"	"Placa de vídeo não suportada"
-"SteamUI_DriverUnsupported_Info"	"O seu hardware de vídeo não atende aos requisitos mínimos deste jogo. Caso escolha continuar a iniciar o jogo mesmo assim, você poderá enfrentar problemas de estabilidade ou desempenho no jogo. Recomendamos fortemente que você siga o link abaixo e atualize os seus drivers de vídeo para a última versão disponibilizada pela fabricante da sua placa."
+"SteamUI_DriverUnsupported_Info"	"O seu hardware de vídeo não atende aos requisitos mínimos deste jogo. Caso escolha continuar a iniciar o jogo mesmo assim, você poderá enfrentar problemas de estabilidade ou desempenho no jogo. Recomendamos fortemente que você siga o link abaixo e atualize os seus drivers de vídeo para a versão mais recente disponibilizada pelo fabricante da sua placa."
 "SteamUI_DriverDenied_Info"		"Seu hardware de vídeo não atende aos requisitos mínimos deste jogo. Este jogo não pode ser rodado neste hardware."
 "SteamUI_UnsupportedUrlLabel"		"Exibir os requisitos mínimos..."
 "SteamUI_ContinueUnsupported"		"Continuar mesmo assim"
@@ -2107,6 +2107,7 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_BackgroundDownloadsAllow"	"Sempre permitir downloads em segundo plano"
 "Steam_BackgroundDownloadsDeny"	"Nunca permitir downloads em segundo plano"
 
+// NOTE: no longer referenced, old vgui?
 "Steam_GameProperties_SteamInputSettings"	"Configurações de entrada"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Usar configuração de entrada do Steam (requer reinicialização do jogo)"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "Não"
@@ -2219,10 +2220,10 @@ Você precisará finalizar a sessão no macOS para que a alteração surta efeit
 "Steam_minigamescolumn_media"			"MÍDIA"
 "SteamUI_GamesDialog_RightClick_BackupMedia" "Criar cópia dos arquivos de mídia"
 "SteamUI_CantRunMediaDueToOSVersion"		"Não é possível iniciar %game% porque o sistema operacional %osversion% não é suportado."
-"SteamUI_CantRunMediaDueToMediaPlayerVersion"   "Não é possível iniciar %game% porque a versão do Windows Media Player é [%detectedVersion%], mas a versão %requiredVersion% é necessária para reproduzir a mídia.\nInstale a última versão do Windows Media Player de:"
-"SteamUI_CantRunMediaDueToMediaPlayerNotInstalled"   "Não foi possível iniciar %game% porque o Windows Media Player não está instalado.\nInstale a última versão do Windows Media Player no site"
+"SteamUI_CantRunMediaDueToMediaPlayerVersion"   "Não é possível iniciar %game% porque a versão do Windows Media Player é [%detectedVersion%], mas a versão %requiredVersion% é necessária para reproduzir a mídia.\nInstale a versão mais recente do Windows Media Player em:"
+"SteamUI_CantRunMediaDueToMediaPlayerNotInstalled"   "Não foi possível iniciar %game% porque o Windows Media Player não está instalado.\nInstale a versão mais recente do Windows Media Player em:"
 "SteamUI_WindowsMediaPlayerInstallURL"		"http://www.microsoft.com/windows/windowsmedia/default.mspx"
-"SteamUI_CantRunMediaDueToMediaPlayerNotInstalledOSX"   "Não é possível iniciar %game% porque os Componentes do Windows Media para QuickTime não estão instalados.\nInstale a última versão dos Componentes do Windows Media para QuickTime de:"
+"SteamUI_CantRunMediaDueToMediaPlayerNotInstalledOSX"   "Não é possível iniciar %game% porque os Componentes do Windows Media para QuickTime não estão instalados.\nInstale a versão mais recente dos Componentes do Windows Media para QuickTime em:"
 "SteamUI_WindowsMediaPlayerInstallURLOSX"	"http://www.microsoft.com/windows/windowsmedia/player/wmcomponents.mspx"
 
 "Steam_UnknownErrorLaunchingMedia"		"Erro desconhecido ao iniciar mídia."

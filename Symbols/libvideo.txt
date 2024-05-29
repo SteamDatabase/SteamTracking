@@ -28,12 +28,33 @@
  CFStringCreateWithFormat
  CFStringGetCString
  CFURLCreateWithBytes
+ D tinyxml2::XMLDocument::_errorNames
+ D tinyxml2::XMLUtil::writeBoolFalse
+ D tinyxml2::XMLUtil::writeBoolTrue
  D typeinfo for std::__1::__basic_string_common<true>
  D typeinfo for std::__1::__function::__base<void (unsigned long long)>
  D typeinfo for std::__1::bad_function_call
  D typeinfo for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D typeinfo for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D typeinfo for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
+ D typeinfo for tinyxml2::XMLAttribute
+ D typeinfo for tinyxml2::XMLComment
+ D typeinfo for tinyxml2::XMLDeclaration
+ D typeinfo for tinyxml2::XMLDocument
+ D typeinfo for tinyxml2::XMLElement
+ D typeinfo for tinyxml2::XMLNode
+ D typeinfo for tinyxml2::XMLPrinter
+ D typeinfo for tinyxml2::XMLText
+ D typeinfo for tinyxml2::XMLUnknown
+ D typeinfo for tinyxml2::XMLVisitor
+ D vtable for tinyxml2::XMLComment
+ D vtable for tinyxml2::XMLDeclaration
+ D vtable for tinyxml2::XMLDocument
+ D vtable for tinyxml2::XMLElement
+ D vtable for tinyxml2::XMLNode
+ D vtable for tinyxml2::XMLPrinter
+ D vtable for tinyxml2::XMLText
+ D vtable for tinyxml2::XMLUnknown
  OBJC_CLASS_$_NSArray
  OBJC_CLASS_$_NSFileManager
  OBJC_CLASS_$_NSProcessInfo
@@ -66,6 +87,16 @@
  R typeinfo name for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  R typeinfo name for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  R typeinfo name for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
+ R typeinfo name for tinyxml2::XMLAttribute
+ R typeinfo name for tinyxml2::XMLComment
+ R typeinfo name for tinyxml2::XMLDeclaration
+ R typeinfo name for tinyxml2::XMLDocument
+ R typeinfo name for tinyxml2::XMLElement
+ R typeinfo name for tinyxml2::XMLNode
+ R typeinfo name for tinyxml2::XMLPrinter
+ R typeinfo name for tinyxml2::XMLText
+ R typeinfo name for tinyxml2::XMLUnknown
+ R typeinfo name for tinyxml2::XMLVisitor
  SCDynamicStoreCopyProxies
  SCDynamicStoreKeyCreateProxies
  SecCertificateCreateWithData
@@ -1433,6 +1464,204 @@
  T sha256_block_data_order
  T sha256_multi_block
  T sha512_block_data_order
+ T tinyxml2::StrPair::CollapseWhitespace()
+ T tinyxml2::StrPair::GetStr()
+ T tinyxml2::StrPair::ParseName(char*)
+ T tinyxml2::StrPair::ParseText(char*, char const*, int, int*)
+ T tinyxml2::StrPair::Reset()
+ T tinyxml2::StrPair::SetStr(char const*, int)
+ T tinyxml2::StrPair::TransferTo(tinyxml2::StrPair*)
+ T tinyxml2::StrPair::~StrPair()
+ T tinyxml2::XMLAttribute::Name() const
+ T tinyxml2::XMLAttribute::ParseDeep(char*, bool, int*)
+ T tinyxml2::XMLAttribute::QueryBoolValue(bool*) const
+ T tinyxml2::XMLAttribute::QueryDoubleValue(double*) const
+ T tinyxml2::XMLAttribute::QueryFloatValue(float*) const
+ T tinyxml2::XMLAttribute::QueryInt64Value(long long*) const
+ T tinyxml2::XMLAttribute::QueryIntValue(int*) const
+ T tinyxml2::XMLAttribute::QueryUnsigned64Value(unsigned long long*) const
+ T tinyxml2::XMLAttribute::QueryUnsignedValue(unsigned int*) const
+ T tinyxml2::XMLAttribute::SetAttribute(bool)
+ T tinyxml2::XMLAttribute::SetAttribute(char const*)
+ T tinyxml2::XMLAttribute::SetAttribute(double)
+ T tinyxml2::XMLAttribute::SetAttribute(float)
+ T tinyxml2::XMLAttribute::SetAttribute(int)
+ T tinyxml2::XMLAttribute::SetAttribute(long long)
+ T tinyxml2::XMLAttribute::SetAttribute(unsigned int)
+ T tinyxml2::XMLAttribute::SetAttribute(unsigned long long)
+ T tinyxml2::XMLAttribute::SetName(char const*)
+ T tinyxml2::XMLAttribute::Value() const
+ T tinyxml2::XMLComment::Accept(tinyxml2::XMLVisitor*) const
+ T tinyxml2::XMLComment::ParseDeep(char*, tinyxml2::StrPair*, int*)
+ T tinyxml2::XMLComment::ShallowClone(tinyxml2::XMLDocument*) const
+ T tinyxml2::XMLComment::ShallowEqual(tinyxml2::XMLNode const*) const
+ T tinyxml2::XMLComment::XMLComment(tinyxml2::XMLDocument*)
+ T tinyxml2::XMLComment::~XMLComment()
+ T tinyxml2::XMLDeclaration::Accept(tinyxml2::XMLVisitor*) const
+ T tinyxml2::XMLDeclaration::ParseDeep(char*, tinyxml2::StrPair*, int*)
+ T tinyxml2::XMLDeclaration::ShallowClone(tinyxml2::XMLDocument*) const
+ T tinyxml2::XMLDeclaration::ShallowEqual(tinyxml2::XMLNode const*) const
+ T tinyxml2::XMLDeclaration::XMLDeclaration(tinyxml2::XMLDocument*)
+ T tinyxml2::XMLDeclaration::~XMLDeclaration()
+ T tinyxml2::XMLDocument::Accept(tinyxml2::XMLVisitor*) const
+ T tinyxml2::XMLDocument::Clear()
+ T tinyxml2::XMLDocument::ClearError()
+ T tinyxml2::XMLDocument::DeepCopy(tinyxml2::XMLDocument*) const
+ T tinyxml2::XMLDocument::DeleteNode(tinyxml2::XMLNode*)
+ T tinyxml2::XMLDocument::ErrorIDToName(tinyxml2::XMLError)
+ T tinyxml2::XMLDocument::ErrorName() const
+ T tinyxml2::XMLDocument::ErrorStr() const
+ T tinyxml2::XMLDocument::Identify(char*, tinyxml2::XMLNode**)
+ T tinyxml2::XMLDocument::LoadFile(__sFILE*)
+ T tinyxml2::XMLDocument::LoadFile(char const*)
+ T tinyxml2::XMLDocument::MarkInUse(tinyxml2::XMLNode const*)
+ T tinyxml2::XMLDocument::NewComment(char const*)
+ T tinyxml2::XMLDocument::NewDeclaration(char const*)
+ T tinyxml2::XMLDocument::NewElement(char const*)
+ T tinyxml2::XMLDocument::NewText(char const*)
+ T tinyxml2::XMLDocument::NewUnknown(char const*)
+ T tinyxml2::XMLDocument::Parse()
+ T tinyxml2::XMLDocument::Parse(char const*, unsigned long)
+ T tinyxml2::XMLDocument::PopDepth()
+ T tinyxml2::XMLDocument::Print(tinyxml2::XMLPrinter*) const
+ T tinyxml2::XMLDocument::PrintError() const
+ T tinyxml2::XMLDocument::PushDepth()
+ T tinyxml2::XMLDocument::SaveFile(__sFILE*, bool)
+ T tinyxml2::XMLDocument::SaveFile(char const*, bool)
+ T tinyxml2::XMLDocument::SetError(tinyxml2::XMLError, int, char const*, ...)
+ T tinyxml2::XMLDocument::XMLDocument(bool, tinyxml2::Whitespace)
+ T tinyxml2::XMLDocument::~XMLDocument()
+ T tinyxml2::XMLElement::Accept(tinyxml2::XMLVisitor*) const
+ T tinyxml2::XMLElement::Attribute(char const*, char const*) const
+ T tinyxml2::XMLElement::BoolAttribute(char const*, bool) const
+ T tinyxml2::XMLElement::BoolText(bool) const
+ T tinyxml2::XMLElement::CreateAttribute()
+ T tinyxml2::XMLElement::DeleteAttribute(char const*)
+ T tinyxml2::XMLElement::DeleteAttribute(tinyxml2::XMLAttribute*)
+ T tinyxml2::XMLElement::DoubleAttribute(char const*, double) const
+ T tinyxml2::XMLElement::DoubleText(double) const
+ T tinyxml2::XMLElement::FindAttribute(char const*) const
+ T tinyxml2::XMLElement::FindOrCreateAttribute(char const*)
+ T tinyxml2::XMLElement::FloatAttribute(char const*, float) const
+ T tinyxml2::XMLElement::FloatText(float) const
+ T tinyxml2::XMLElement::GetText() const
+ T tinyxml2::XMLElement::InsertNewChildElement(char const*)
+ T tinyxml2::XMLElement::InsertNewComment(char const*)
+ T tinyxml2::XMLElement::InsertNewDeclaration(char const*)
+ T tinyxml2::XMLElement::InsertNewText(char const*)
+ T tinyxml2::XMLElement::InsertNewUnknown(char const*)
+ T tinyxml2::XMLElement::Int64Attribute(char const*, long long) const
+ T tinyxml2::XMLElement::Int64Text(long long) const
+ T tinyxml2::XMLElement::IntAttribute(char const*, int) const
+ T tinyxml2::XMLElement::IntText(int) const
+ T tinyxml2::XMLElement::ParseAttributes(char*, int*)
+ T tinyxml2::XMLElement::ParseDeep(char*, tinyxml2::StrPair*, int*)
+ T tinyxml2::XMLElement::QueryBoolText(bool*) const
+ T tinyxml2::XMLElement::QueryDoubleText(double*) const
+ T tinyxml2::XMLElement::QueryFloatText(float*) const
+ T tinyxml2::XMLElement::QueryInt64Text(long long*) const
+ T tinyxml2::XMLElement::QueryIntText(int*) const
+ T tinyxml2::XMLElement::QueryUnsigned64Text(unsigned long long*) const
+ T tinyxml2::XMLElement::QueryUnsignedText(unsigned int*) const
+ T tinyxml2::XMLElement::SetText(bool)
+ T tinyxml2::XMLElement::SetText(char const*)
+ T tinyxml2::XMLElement::SetText(double)
+ T tinyxml2::XMLElement::SetText(float)
+ T tinyxml2::XMLElement::SetText(int)
+ T tinyxml2::XMLElement::SetText(long long)
+ T tinyxml2::XMLElement::SetText(unsigned int)
+ T tinyxml2::XMLElement::SetText(unsigned long long)
+ T tinyxml2::XMLElement::ShallowClone(tinyxml2::XMLDocument*) const
+ T tinyxml2::XMLElement::ShallowEqual(tinyxml2::XMLNode const*) const
+ T tinyxml2::XMLElement::Unsigned64Attribute(char const*, unsigned long long) const
+ T tinyxml2::XMLElement::Unsigned64Text(unsigned long long) const
+ T tinyxml2::XMLElement::UnsignedAttribute(char const*, unsigned int) const
+ T tinyxml2::XMLElement::UnsignedText(unsigned int) const
+ T tinyxml2::XMLElement::XMLElement(tinyxml2::XMLDocument*)
+ T tinyxml2::XMLElement::~XMLElement()
+ T tinyxml2::XMLNode::DeepClone(tinyxml2::XMLDocument*) const
+ T tinyxml2::XMLNode::DeleteChild(tinyxml2::XMLNode*)
+ T tinyxml2::XMLNode::DeleteChildren()
+ T tinyxml2::XMLNode::DeleteNode(tinyxml2::XMLNode*)
+ T tinyxml2::XMLNode::FirstChildElement(char const*) const
+ T tinyxml2::XMLNode::InsertAfterChild(tinyxml2::XMLNode*, tinyxml2::XMLNode*)
+ T tinyxml2::XMLNode::InsertChildPreamble(tinyxml2::XMLNode*) const
+ T tinyxml2::XMLNode::InsertEndChild(tinyxml2::XMLNode*)
+ T tinyxml2::XMLNode::InsertFirstChild(tinyxml2::XMLNode*)
+ T tinyxml2::XMLNode::LastChildElement(char const*) const
+ T tinyxml2::XMLNode::NextSiblingElement(char const*) const
+ T tinyxml2::XMLNode::ParseDeep(char*, tinyxml2::StrPair*, int*)
+ T tinyxml2::XMLNode::PreviousSiblingElement(char const*) const
+ T tinyxml2::XMLNode::SetValue(char const*, bool)
+ T tinyxml2::XMLNode::ToElementWithName(char const*) const
+ T tinyxml2::XMLNode::Unlink(tinyxml2::XMLNode*)
+ T tinyxml2::XMLNode::Value() const
+ T tinyxml2::XMLNode::XMLNode(tinyxml2::XMLDocument*)
+ T tinyxml2::XMLNode::~XMLNode()
+ T tinyxml2::XMLPrinter::CloseElement(bool)
+ T tinyxml2::XMLPrinter::OpenElement(char const*, bool)
+ T tinyxml2::XMLPrinter::PrepareForNewNode(bool)
+ T tinyxml2::XMLPrinter::Print(char const*, ...)
+ T tinyxml2::XMLPrinter::PrintSpace(int)
+ T tinyxml2::XMLPrinter::PrintString(char const*, bool)
+ T tinyxml2::XMLPrinter::PushAttribute(char const*, bool)
+ T tinyxml2::XMLPrinter::PushAttribute(char const*, char const*)
+ T tinyxml2::XMLPrinter::PushAttribute(char const*, double)
+ T tinyxml2::XMLPrinter::PushAttribute(char const*, int)
+ T tinyxml2::XMLPrinter::PushAttribute(char const*, long long)
+ T tinyxml2::XMLPrinter::PushAttribute(char const*, unsigned int)
+ T tinyxml2::XMLPrinter::PushAttribute(char const*, unsigned long long)
+ T tinyxml2::XMLPrinter::PushComment(char const*)
+ T tinyxml2::XMLPrinter::PushDeclaration(char const*)
+ T tinyxml2::XMLPrinter::PushHeader(bool, bool)
+ T tinyxml2::XMLPrinter::PushText(bool)
+ T tinyxml2::XMLPrinter::PushText(char const*, bool)
+ T tinyxml2::XMLPrinter::PushText(double)
+ T tinyxml2::XMLPrinter::PushText(float)
+ T tinyxml2::XMLPrinter::PushText(int)
+ T tinyxml2::XMLPrinter::PushText(long long)
+ T tinyxml2::XMLPrinter::PushText(unsigned int)
+ T tinyxml2::XMLPrinter::PushText(unsigned long long)
+ T tinyxml2::XMLPrinter::PushUnknown(char const*)
+ T tinyxml2::XMLPrinter::Putc(char)
+ T tinyxml2::XMLPrinter::SealElementIfJustOpened()
+ T tinyxml2::XMLPrinter::Visit(tinyxml2::XMLComment const&)
+ T tinyxml2::XMLPrinter::Visit(tinyxml2::XMLDeclaration const&)
+ T tinyxml2::XMLPrinter::Visit(tinyxml2::XMLText const&)
+ T tinyxml2::XMLPrinter::Visit(tinyxml2::XMLUnknown const&)
+ T tinyxml2::XMLPrinter::VisitEnter(tinyxml2::XMLDocument const&)
+ T tinyxml2::XMLPrinter::VisitEnter(tinyxml2::XMLElement const&, tinyxml2::XMLAttribute const*)
+ T tinyxml2::XMLPrinter::VisitExit(tinyxml2::XMLElement const&)
+ T tinyxml2::XMLPrinter::Write(char const*, unsigned long)
+ T tinyxml2::XMLPrinter::XMLPrinter(__sFILE*, bool, int)
+ T tinyxml2::XMLText::Accept(tinyxml2::XMLVisitor*) const
+ T tinyxml2::XMLText::ParseDeep(char*, tinyxml2::StrPair*, int*)
+ T tinyxml2::XMLText::ShallowClone(tinyxml2::XMLDocument*) const
+ T tinyxml2::XMLText::ShallowEqual(tinyxml2::XMLNode const*) const
+ T tinyxml2::XMLUnknown::Accept(tinyxml2::XMLVisitor*) const
+ T tinyxml2::XMLUnknown::ParseDeep(char*, tinyxml2::StrPair*, int*)
+ T tinyxml2::XMLUnknown::ShallowClone(tinyxml2::XMLDocument*) const
+ T tinyxml2::XMLUnknown::ShallowEqual(tinyxml2::XMLNode const*) const
+ T tinyxml2::XMLUnknown::XMLUnknown(tinyxml2::XMLDocument*)
+ T tinyxml2::XMLUnknown::~XMLUnknown()
+ T tinyxml2::XMLUtil::ConvertUTF32ToUTF8(unsigned long, char*, int*)
+ T tinyxml2::XMLUtil::GetCharacterRef(char const*, char*, int*)
+ T tinyxml2::XMLUtil::ReadBOM(char const*, bool*)
+ T tinyxml2::XMLUtil::SetBoolSerialization(char const*, char const*)
+ T tinyxml2::XMLUtil::ToBool(char const*, bool*)
+ T tinyxml2::XMLUtil::ToDouble(char const*, double*)
+ T tinyxml2::XMLUtil::ToFloat(char const*, float*)
+ T tinyxml2::XMLUtil::ToInt(char const*, int*)
+ T tinyxml2::XMLUtil::ToInt64(char const*, long long*)
+ T tinyxml2::XMLUtil::ToStr(bool, char*, int)
+ T tinyxml2::XMLUtil::ToStr(double, char*, int)
+ T tinyxml2::XMLUtil::ToStr(float, char*, int)
+ T tinyxml2::XMLUtil::ToStr(int, char*, int)
+ T tinyxml2::XMLUtil::ToStr(long long, char*, int)
+ T tinyxml2::XMLUtil::ToStr(unsigned int, char*, int)
+ T tinyxml2::XMLUtil::ToStr(unsigned long long, char*, int)
+ T tinyxml2::XMLUtil::ToUnsigned(char const*, unsigned int*)
+ T tinyxml2::XMLUtil::ToUnsigned64(char const*, unsigned long long*)
  T vpaes_cbc_encrypt
  T vpaes_decrypt
  T vpaes_encrypt
@@ -1609,6 +1838,7 @@
  feof
  ferror
  fflush
+ fgetc
  fgets
  fileno
  flock
@@ -1624,10 +1854,12 @@
  free
  freeaddrinfo
  fseek
+ fseeko
  fstat$INODE64
  fsync
  fsync$UNIX2003
  ftell
+ ftello
  fwrite
  fwrite$UNIX2003
  getaddrinfo
@@ -1750,6 +1982,7 @@
  pthread_rwlock_wrlock$UNIX2003
  pthread_self
  pthread_setspecific
+ puts
  qsort
  read
  read$UNIX2003

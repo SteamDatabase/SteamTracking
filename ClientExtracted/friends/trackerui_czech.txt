@@ -119,8 +119,8 @@
 
 "Friends_UserRequestingFriendship_Title"		"Přátelé – %friend%"
 "Friends_UserRequestingFriendship_Info"		"Uživatel %friend% si Vás přidal do svého seznamu přátel."
-"Friends_AllowUserToSeeMeOnline"				"Povolit, aby uživatel %friend% viděl, kdy jste Online, a mohl Vás kontaktovat."
-"Friends_BlockUserFromSeeingMeOnline"			"Zakázat, aby uživatel viděl, kdy jste Online, a tudíž Vás nemohl kontaktovat."
+"Friends_AllowUserToSeeMeOnline"				"Povolit, aby uživatel %friend% viděl, kdy jste online, a mohl Vás kontaktovat."
+"Friends_BlockUserFromSeeingMeOnline"			"Zakázat, aby uživatel viděl, kdy jste online, a tudíž Vás nemohl kontaktovat."
 
 "Friends_AddFriend_Title"			"Přidat přítele"
 
@@ -271,7 +271,7 @@
 "Friends_Chat_ActionResultNotAllowedOnSelf"           "Tuto akci nemůžete provést sami na sobě."
 "Friends_Chat_ActionResultChatDoesntExist"			"Konverzace byla ukončena."
 "Friends_Chat_ActionResultChatFull  "					"Konverzace je plná."
-"Friends_Chat_ActionResultNotOnline"                  "Tuto akci nemůžete provést, pokud nejste Online."
+"Friends_Chat_ActionResultNotOnline"                  "Tuto akci nemůžete provést, pokud nejste online."
 
 
 "Friends_Chat_Kicked_Title"           "Byli jste vyhozeni"
@@ -391,7 +391,7 @@
 "Friends_NameChangeFailed_Info"		"Změna jména na profilu se nezdařila. Zkuste to znovu za pár minut."
 "Friends_NameChangeThrottled_Info"		"Velmi časté změny jména na profilu nejsou povoleny. Zkuste to znovu za pár minut."
 
-"Friends_OnlineNotification_Info"			"je právě Online"
+"Friends_OnlineNotification_Info"			"je právě online"
 "Friends_InGameNotification_Info"			"právě hraje hru"
 "Friends_InAppNotification_Info"			"právě používá aplikaci"
 "Friends_ChatInvitation_Info"				"Vás pozval do konverzace s"

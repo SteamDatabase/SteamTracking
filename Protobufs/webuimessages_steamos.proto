@@ -23,6 +23,9 @@ message CSteamOSManagerState {
 	optional int32 tdp_limit_min = 8;
 	optional int32 tdp_limit_max = 9;
 	optional bool is_cec_available = 10;
+	optional bool is_wifi_debug_supported = 11;
+	optional bool is_wifi_debug_force_disabled = 12;
+	optional bool is_wifi_force_wpa_supplicant_supported = 13;
 }
 
 message CSteamOSManager_GetState_Request {

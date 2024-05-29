@@ -32,6 +32,56 @@
 					}
 				}
 			}
+			"button_b"
+			{
+				"activators"
+				{
+					"Long_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action quit_application"
+						}
+						"settings"
+						{
+							"long_press_time"		"2400"
+						}
+					}
+					"Start_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action empty_binding"
+						}
+					}
+				}
+			}
+			"button_x"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action SHOW_KEYBOARD"
+						}
+					}
+				}
+			}
+			"button_a"
+			{
+				"activators"
+				{
+					"full_press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action system_key_1"
+						}
+					}
+				}
+			}
 		}
 	}
 	"group"
@@ -44,6 +94,17 @@
 			{
 				"activators"
 				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action toggle_magnifier"
+						}
+						"settings"
+						{
+							"haptic_intensity"		"2"
+						}
+					}
 				}
 			}
 		}
@@ -309,13 +370,42 @@
 		"mode"		"dpad"
 		"inputs"
 		{
+			"dpad_north"
+			{
+				"activators"
+				{
+					"full_press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action gr_marker"
+						}
+					}
+				}
+			}
+			"dpad_south"
+			{
+				"activators"
+				{
+					"full_press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action gr_toggle"
+						}
+					}
+				}
+			}
+			"dpad_east"
+			{
+			}
+			"dpad_west"
+			{
+			}
 		}
 		"settings"
 		{
 			"layout"		"3"
-		}
-		"gameactions"
-		{
 		}
 	}
 	"preset"

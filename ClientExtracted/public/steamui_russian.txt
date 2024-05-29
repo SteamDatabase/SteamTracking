@@ -836,7 +836,7 @@
 "SteamUI_Selection_Turkish"			"Türkçe (турецкий)"
 "SteamUI_Selection_Arabic"			"العربية (арабский)"
 "SteamUI_Selection_Ukrainian"			"Українська (украинский)"
-"SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (испанский Лат. Ам.)"
+"SteamUI_Selection_Latam_Spanish"	"Español-Latinoamérica (латиноам. испанский)"
 "SteamUI_Selection_Vietnamese"		"Tiếng Việt (вьетнамский)"
 "SteamUI_Selection_Indonesian"		"Bahasa Indonesia (индонезийский)"
 
@@ -2104,6 +2104,7 @@
 "Steam_BackgroundDownloadsAllow"	"Всегда разрешать фоновые загрузки"
 "Steam_BackgroundDownloadsDeny"	"Запрещать фоновые загрузки"
 
+// NOTE: no longer referenced, old vgui?
 "Steam_GameProperties_SteamInputSettings"	"Настройки системы ввода Steam"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Настройки ввода Steam для отдельных игр (требуется перезапуск игры)"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "Принуд. выкл."

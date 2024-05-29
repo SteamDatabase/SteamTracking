@@ -2108,6 +2108,7 @@ Steam，請在其圖示上按右鍵。"
 "Steam_BackgroundDownloadsAllow"	"總是允許背景下載"
 "Steam_BackgroundDownloadsDeny"	"永不允許背景下載"
 
+// NOTE: no longer referenced, old vgui?
 "Steam_GameProperties_SteamInputSettings"	"Steam 輸入設定"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Steam 輸入的個別遊戲設定（需要重新啟動遊戲）"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "強制關閉"
@@ -3201,7 +3202,7 @@ Mac OS X 10.7 或是更高的版本。"
 "Steam_Settings_NotifyMeWithSteamInstantMessages"	"當我的遊戲有新內容或變動時，以及有新品或即將推出商品時通知我。"
 "Steam_Settings_DownloadsTitle"	"下載"
 "Steam_Settings_CloudTitle"	"雲端"
-"Steam_Settings_FamilyTitle" "家庭"
+"Steam_Settings_FamilyTitle" "親友群組"
 
 "Steam_P2PMoreInfoLink"	"這是什麼？"
 

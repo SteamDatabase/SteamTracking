@@ -2108,6 +2108,7 @@ Dovrai uscire dall'OSX affinché la modifica abbia effetto."
 "Steam_BackgroundDownloadsAllow"	"Permetti sempre i download in background"
 "Steam_BackgroundDownloadsDeny"	"Non permettere mai i download in background"
 
+// NOTE: no longer referenced, old vgui?
 "Steam_GameProperties_SteamInputSettings"	"Impostazioni di Steam Input"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Impostazioni di Steam Input per gioco (richiede il riavvio del gioco)."
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "Arresto forzato"

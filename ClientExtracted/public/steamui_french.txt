@@ -2108,6 +2108,7 @@ Vous devrez vous déconnecter de OSX pour que le changement prenne effet."
 "Steam_BackgroundDownloadsAllow"	"Toujours autoriser les téléchargements en arrière-plan"
 "Steam_BackgroundDownloadsDeny"	"Ne jamais autoriser les téléchargements en arrière-plan"
 
+// NOTE: no longer referenced, old vgui?
 "Steam_GameProperties_SteamInputSettings"	"Paramètres d'entrée Steam"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Paramètre Steam Input spécifique à chaque jeu (redémarrage du jeu nécessaire)"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "Désactivé"

@@ -71,7 +71,7 @@
 "Friends_InviteFriendToGame"		"Gửi lời mời chơi"
 "Friends_JoinGame"				"Tham gia trò chơi"
 "Friends_LaunchGame"				"Khởi động trò chơi"
-"Friends_ViewGameInfo"			"Xem thông tin sản phẩm"
+"Friends_ViewGameInfo"			"Xem thông tin trò chơi"
 "Friends_UserDetails"				"Xem chi tiết người dùng"
 "Friends_RemoveUser"				"Gỡ bỏ người bạn này..."
 

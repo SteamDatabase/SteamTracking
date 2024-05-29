@@ -536,7 +536,7 @@
 "Library_ControllerSaveDefaultTitle" "Offizielle Konfiguration"
 "SettingsController_AutosaveName" "Pers. autom. Speichern"
 "SettingsController_SteamController" "Steam Controller"
-"controller_none"									"Keiner"
+"controller_none"									"Keine Auswahl"
 "controller_unknown"								"Unbekannter Controller"
 "controller_steamcontroller_unknown"				"Steam Controller"
 "controller_steamcontroller_gordon" 				"Steam Controller"

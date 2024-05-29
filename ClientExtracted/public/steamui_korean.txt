@@ -94,7 +94,7 @@
 "Steam_ErrorPasswordsDontMatch" "입력하신 비밀번호가 서로 일치하지 않습니다.\n두 칸에 동일한 비밀번호를 입력해 주세요."
 "Steam_ErrorCantStartGame" "이 게임은 현재 이용할 수 없습니다.\n나중에 다시 시도해 주세요."
 "Steam_ErrorCantStartGameDetailed" "게임을 시작할 수 없습니다(%error%)."
-"Steam_ErrorCantRunBecauseRequires64bitOS"	"32비트 Windows가 실행 중이기 때문에 게임을 시작할 수 없습니다. 게임을 시작하려면 64비트 버전이 필요합니다. \n\n게임에 32비트용 시작 옵션이 있다면 선택해 주세요. 옵션이 없다면 64비트 Windows 컴퓨터가 필요합니다. \n64비트 Windows 컴퓨터가 없다면 아래를 클릭하여 환불 요청에 대해 알아보세요.\n"
+"Steam_ErrorCantRunBecauseRequires64bitOS"	"32비트 Windows가 실행 중이기 때문에 게임을 시작할 수 없습니다. 게임을 시작하려면 64비트 버전이 필요합니다. \n\n게임에 32비트용 실행 옵션이 있다면 선택해 주세요. 옵션이 없다면 64비트 Windows 컴퓨터가 필요합니다. \n64비트 Windows 컴퓨터가 없다면 아래를 클릭하여 환불 요청에 대해 알아보세요.\n"
 "Steam_ErrorCantStartGameDependency" "공유 콘텐츠가 포함된 게임을 실행하는 데 실패했습니다. 게임을 먼저 업데이트하세요.\n\n %detail%"
 "Steam_ErrorUsernameTooShort" "이름은 3자 이상이어야 합니다."
 "Steam_ErrorPasswordTooShort2" "비밀번호는 8자 이상이어야 합니다."
@@ -321,7 +321,7 @@
 
 "SteamUI_SpecialOffersDialog_Close"	"닫기"
 
-"SteamUI_GamePropertiesContent_LaunchOptions"	"시작 옵션"
+"SteamUI_GamePropertiesContent_LaunchOptions"	"실행 옵션"
 "SteamUI_GamePropertiesContent_StatusLabel"	"상태:"
 "SteamUI_GamePropertiesContent_AcquiredLabel"	"획득한 분량:"
 "SteamUI_GamePropertiesContent_HostingBy"	"콘텐츠 호스트 제공:"
@@ -482,7 +482,7 @@
 "Steam_UseH264HWAccel_Option"			"지원 가능한 경우 하드웨어 디코딩 활성화 (다시 시작 필요)"
 
 "Steam_ErrorFilesystemNotExecutable_Title"	"Steam - 오류"
-"Steam_ErrorFilesystemNotExecutable"		"선택한 파일 시스템은 파일 실행을 허용하지 않습니다.\n시작 옵션과 함께 다시 마운트한 다음 다시 시도하세요."
+"Steam_ErrorFilesystemNotExecutable"		"선택한 파일 시스템은 파일 실행을 허용하지 않습니다.\n실행 옵션과 함께 다시 마운트한 다음 다시 시도하세요."
 "Steam_ErrorNotEnoughDiskSpace_Title"		"Steam - 오류"
 "Steam_ErrorNotEnoughDiskSpace"				"디스크 공간이 부족하여 게임을 실행할 수 없습니다.\n디스크 공간을 확보한 다음 다시 시도하세요."
 "Steam_DeleteApplicationConfirmation_Title"	"애플리케이션 파일을 삭제할까요?"
@@ -1901,7 +1901,7 @@
 "Steam_SteamSubscriberAgreement_Title"		"Steam 이용 약관"
 "Steam_CybercafeSubscriberAgreement_Title"	"Steam - PC방 계정 만들기"
 
-"Steam_LaunchOptions_Title"		"시작 옵션 - %game%"
+"Steam_LaunchOptions_Title"		"실행 옵션 - %game%"
 "Steam_GameProperties_Title"		"%game% - 속성"
 "Steam_GameProperties_Close"		"닫기"
 
@@ -1915,7 +1915,7 @@
 "Steam_Game_Manual"				"매뉴얼"
 "Steam_Game_NoManual"			"[ 제공되지 않음 ]"
 "Steam_Game_DefaultManual" 		"%game% 매뉴얼"
-"Steam_Game_SetLaunchOptions"			"시작 옵션 설정..."
+"Steam_Game_SetLaunchOptions"			"실행 옵션 설정..."
 "Steam_Game_CreateDesktopShortcut"	"바탕 화면 바로 가기 만들기"
 "Steam_Game_AllowOtherDownloads$appType=game"	"이 게임을 실행하는 동안 Steam에서 다른 업데이트를 다운로드할 수 있도록 허용"
 "Steam_Game_AllowOtherDownloads$appType=tool"	"이 도구를 실행하는 동안 Steam에서 다른 업데이트를 다운로드할 수 있도록 허용"
@@ -1972,7 +1972,7 @@
 "steam_monitor_peakusage"		"다운로드 최고 속도"
 "steam_monitor_totaldownloaded"		"이 세션에서 다운로드한 총 바이트 수"
 
-"Steam_SubscriptionCancelled_PaymentCardDeclined_InsufficientFunds"		"%subscription%에 대한 가입 절차가 완료되지 않았습니다. 계정에 잔고가 부족하여 귀하의 신용카드 정보가 해당 신용카드 회사에서 거부되었습니다.\n\n신용카드 업체가 해당 계정의 거래를 \"일시적으로 보류\"하는 경우가 간혹 있지만, 실제로 청구되지 않습니다."
+"Steam_SubscriptionCancelled_PaymentCardDeclined_InsufficientFunds"		"%subscription%에 대한 가입 절차가 완료되지 않았습니다. 계정에 잔액이 부족하여 귀하의 신용카드 정보가 해당 신용카드 회사에서 거부되었습니다.\n\n신용카드 업체가 해당 계정의 거래를 \"일시적으로 보류\"하는 경우가 간혹 있지만, 실제로 청구되지 않습니다."
 "Steam_SubscriptionCancelled_PaymentCardDeclined_AVSFailure"				"%subscription%에 대한 가입 절차가 완료되지 않았습니다. 입력한 주소가 올바르지 않아 귀하의 신용카드 정보가 해당 신용카드 회사에서 거부되었습니다.\n\n신용카드 업체가 해당 계정의 거래를 \"일시적으로 보류\"하는 경우가 간혹 있지만, 실제로 청구되지 않습니다. 아래 정보를 검토하신 후에 신용카드가 실수로 승인되지 않았다고 생각되시면 구매 절차를 다시 시도하세요."
 
 "ServerBrowser_ModNotInstalled" "이 타사 MOD가 설치되지 않았습니다."
@@ -2111,6 +2111,7 @@
 "Steam_BackgroundDownloadsAllow"	"언제나 백그라운드 다운로드 허용"
 "Steam_BackgroundDownloadsDeny"	"백그라운드 다운로드 절대 허용 안함"
 
+// NOTE: no longer referenced, old vgui?
 "Steam_GameProperties_SteamInputSettings"	"Steam Input 설정"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "게임별 Steam Input 설정(게임 재실행 필요)"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "강제로 끄기"
@@ -2509,8 +2510,8 @@
 "SteamUI_GameExplorer_AddGame_Failure" "게임 탐색기에 게임을 추가하지 못했습니다."
 "SteamUI_GameExplorer_AddGame" "게임 탐색기에 추가"
 "SteamUI_GameExplorer_RemoveGame" "게임 탐색기에서 삭제"
-"SteamUI_PlatformParentalControl_Title" "Windows 가족 모드 설정"
-"SteamUI_PlatformParentalControl_Blocked" "Windows 가족 모드 설정에 의해 현재 사용자에게 게임이 차단되었습니다."
+"SteamUI_PlatformParentalControl_Title" "Windows 자녀 보호 설정"
+"SteamUI_PlatformParentalControl_Blocked" "Windows 자녀 보호 설정에 의해 현재 사용자에게 게임이 차단되었습니다."
 
 "SteamUI_ShortcutName"			"이름:"
 "SteamUI_ShortcutTarget"			"대상:"
@@ -2834,7 +2835,7 @@
 "Steam_SendGuestPass_Title$type=guestpass"		"게스트 패스 보내기"
 
 "Steam_SendGuestPass_InvitationSentHeadline$type=guestpass" "게스트 패스 전송 성공!"
-"Steam_SendGuestPass_InvitationSent$type=guestpass"	"%search%에게 %package% 게스트 패스를 받으라는 이메일 초대장을 보냈습니다.\n\n친구 목록을 살펴보십시오. 온라인에서 플레이 중인 친구를 확인할 수 있습니다."
+"Steam_SendGuestPass_InvitationSent$type=guestpass"	"%search%에게 %package% 게스트 패스를 받으라는 이메일 초대장을 보냈습니다.\n\n친구 목록을 살펴보세요. 온라인에서 플레이 중인 친구를 확인할 수 있습니다."
 
 "Steam_SendGuestPass_DefaultInviteErrorHeadline$type=guestpass"	"게스트 패스 전송 실패"
 "Steam_SendGuestPass_DefaultInviteError$type=guestpass"	"죄송합니다. %search%에게 게스트 패스를 보내는 중 문제가 발생했습니다."
@@ -3237,7 +3238,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_SendGuestPass_Title$type=gift"		"선물 보내기"
 
 "Steam_SendGuestPass_InvitationSentHeadline$type=gift" "선물을 보냈습니다!"
-"Steam_SendGuestPass_InvitationSent$type=gift"	"%search%에게 %package% 선물을 받으라는 이메일 초대장을 보냈습니다.\n\n친구 목록을 살펴보십시오. 온라인에서 플레이 중인 친구를 확인할 수 있습니다."
+"Steam_SendGuestPass_InvitationSent$type=gift"	"%search%에게 %package% 선물을 받으라는 이메일 초대장을 보냈습니다.\n\n친구 목록을 살펴보세요. 온라인에서 플레이 중인 친구를 확인할 수 있습니다."
 
 "Steam_SendGuestPass_DefaultInviteErrorHeadline$type=gift"	"선물 보내기 실패"
 "Steam_SendGuestPass_DefaultInviteError$type=gift"	"죄송합니다. %search%에게 선물을 보내는 중 문제가 발생했습니다."
@@ -3391,7 +3392,7 @@ Windows에 관리자로 로그인해야 합니다.
 
 "Steam_SubscriptionCancelled_PaymentCardDeclinedCart" "다음 항목에 대한 등록 절차가 완료되지 않았습니다. 사용자의 신용카드 정보가 해당 신용카드 업체에서 거부되었습니다.\n\n신용카드 업체가 해당 계정의 거래를 \"일시적으로 보류\"하는 경우가 간혹 있지만, 실제로 청구되지는 않습니다. 아래 정보를 검토하신 후에 신용카드가 실수로 승인되지 않았다고 생각되시면 구매 절차를 다시 시도하세요."
 "Steam_SubscriptionCancelled_PaymentCardDeclined_AVSFailureCart"				"다음 항목에 대한 등록 절차가 완료되지 않았습니다. 입력한 주소가 올바르지 않아 귀하의 신용카드 정보가 해당 신용카드 회사에서 거부되었습니다.\n\n신용카드 업체가 해당 계정의 거래를 \"일시적으로 보류\"하는 경우가 간혹 있지만, 실제로 청구되지 않습니다. 아래 정보를 검토하신 후에 신용카드가 실수로 승인되지 않았다고 생각되시면 구매 절차를 다시 시도하세요."
-"Steam_SubscriptionCancelled_PaymentCardDeclined_InsufficientFundsCart"		"다음 항목에 대한 등록 절차가 완료되지 않았습니다. 계정에 잔고가 부족하여 귀하의 신용카드 정보가 해당 신용카드 회사에서 거부되었습니다.\n\n신용카드 업체가 해당 계정의 거래를 \"일시적으로 보류\"하는 경우가 간혹 있지만, 실제로 청구되지 않습니다."
+"Steam_SubscriptionCancelled_PaymentCardDeclined_InsufficientFundsCart"		"다음 항목에 대한 등록 절차가 완료되지 않았습니다. 계정에 잔액이 부족하여 귀하의 신용카드 정보가 해당 신용카드 회사에서 거부되었습니다.\n\n신용카드 업체가 해당 계정의 거래를 \"일시적으로 보류\"하는 경우가 간혹 있지만, 실제로 청구되지 않습니다."
 "Steam_Subscription_Preorder_PreProcessCart" "예약 주문이 완료되었으며 게임은 빠른 시일 내에 공식적으로 출시됩니다. 결제가 처리되었습니다.\n\n게임이 출시되는 즉시 알려드리겠습니다. 주문해 주셔서 감사합니다!"
 "Steam_SubscriptionSuccessCart$purchasetype=regular" "다음 항목에 대한 등록 절차가 완료되었습니다. %accountname% Steam 계정으로 등록되었습니다. 게임을 플레이하려면 이 계정으로 로그인해야 합니다. 주문해 주셔서 감사합니다!"
 "Steam_SubscriptionSuccessCart$purchasetype=gift" "다음 선물이 %giftee%에게 전송되었습니다. 주문해 주셔서 감사합니다!"
@@ -4206,7 +4207,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_AppUpdateError_42"		"다운로드 파일 누락"
 "Steam_AppUpdateError_43"		"사용자를 위한 디스크 여유 공간이 부족합니다. 운영 체제 디스크 할당량 설정을 확인하세요."
 "Steam_AppUpdateError_44"		"사업장 라이선스 잠김"
-"Steam_AppUpdateError_45"		"가족 모드에 의해 차단됨"
+"Steam_AppUpdateError_45"		"자녀 보호 기능에 의해 차단됨"
 "Steam_AppUpdateError_46"		"생성 프로세스 실패"
 "Steam_AppUpdateError_47"		"Steam 클라이언트가 최신 버전이 아닙니다."
 "Steam_AppUpdateError_48"		"허용한 플레이 시간 초과"
@@ -4263,7 +4264,7 @@ Windows에 관리자로 로그인해야 합니다.
 
 
 "Steam_DeviceAuth_RequestDialog_Title" "가족 라이브러리 공유 요청"
-"Steam_DeviceAuth_RequestDialog_To" "안녕하세요 %owner% 님,"
+"Steam_DeviceAuth_RequestDialog_To" "안녕하세요, %owner% 님."
 "Steam_DeviceAuth_RequestDialog_From" "감사합니다,\n%user%님"
 "Steam_DeviceAuth_RequestDialog_Text" "이 컴퓨터에 귀하의 Steam 라이브러리 접근 권한을 공유하시겠습니까?"
 "Steam_DeviceAuth_RequestDialog_Description" "이 컴퓨터의 이름을 붙여주세요:"

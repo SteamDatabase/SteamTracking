@@ -31,6 +31,56 @@
 					}
 				}
 			}
+			"button_b"
+			{
+				"activators"
+				{
+					"Long_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action quit_application"
+						}
+						"settings"
+						{
+							"long_press_time"		"2400"
+						}
+					}
+					"Start_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action empty_binding"
+						}
+					}
+				}
+			}
+			"button_x"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action SHOW_KEYBOARD"
+						}
+					}
+				}
+			}
+			"button_a"
+			{
+				"activators"
+				{
+					"full_press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action system_key_1"
+						}
+					}
+				}
+			}
 		}
 	}
 	"group"
@@ -246,7 +296,7 @@
 					{
 						"bindings"
 						{
-							"binding"		"controller_action SHOW_KEYBOARD"
+							"binding"		"controller_action gr_toggle"
 						}
 					}
 				}
@@ -305,6 +355,27 @@
 			}
 		}
 	}
+	"group"
+	{
+		"id"		"7"
+		"mode"		"switches"
+		"inputs"
+		{
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action gr_marker"
+						}
+					}
+				}
+			}
+		}
+	}
 	"preset"
 	{
 		"id"		"0"
@@ -317,6 +388,7 @@
 			"9"		"joystick active"
 			"4"		"left_trigger active"
 			"5"		"right_trigger active"
+			"1"		"left_trackpad active"
 		}
 	}
 	"settings"

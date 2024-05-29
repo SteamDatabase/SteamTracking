@@ -1,3 +1,6 @@
+.XMzh-q6cNUTwCXMbDdbFk {
+  overflow: hidden;
+}
 .mutualFriendsContainer {
   padding: 12px 16px 4px 16px;
 }
@@ -835,16 +838,19 @@
   padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
-.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *:not(.chatUploadContainer),
+.GamepadMode
+  .chatWindow
+  .chatEntry.gpfocuswithin
+  > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-.chatWindow .chatEntry > *.GamepadMode,
-.GamepadMode .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *:not(.chatUploadContainer).GamepadMode,
+.GamepadMode .chatWindow .chatEntry > *:not(.chatUploadContainer) {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -2421,9 +2427,14 @@
 }
 ._3kEgIPZCMTtXeWWzzRLo4K ._3nIwHFIw4nSXC_DUrzO_a6 {
   display: none;
-  background-color: #1e1f24;
-  border: 1px solid dimgray;
-  border-radius: 6px;
+  background: radial-gradient(
+    ellipse farthest-corner at 50% 0%,
+    #3c4047 0%,
+    #3c4047 50%,
+    #33363d 100%
+  );
+  box-shadow: 0 10px 32px 0px #000000ab;
+  z-index: 1600;
   padding: 4px;
   margin-right: 4px;
   position: absolute;
@@ -2445,14 +2456,14 @@
   display: flex;
 }
 ._3kEgIPZCMTtXeWWzzRLo4K ._3nIwHFIw4nSXC_DUrzO_a6 .x623f5XW8KKftpfX7C_tg {
-  width: 24px;
-  height: 24px;
-  stroke: #717f8f;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
 }
 ._3kEgIPZCMTtXeWWzzRLo4K ._3nIwHFIw4nSXC_DUrzO_a6 .x623f5XW8KKftpfX7C_tg:hover {
   opacity: 1;
-  stroke: #fff;
+  color: #fff;
+  fill: #fff;
 }
 .rxyzesZzc-USW172B3cgO {
   display: flex;
@@ -2490,7 +2501,6 @@
   border-radius: 4px;
   background-color: #33363d;
   margin-right: 5px;
-  border: 1px solid #202020;
   padding: 2px 3px;
   cursor: pointer;
   user-select: none;
@@ -3260,16 +3270,19 @@
   padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
-.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *:not(.chatUploadContainer),
+.GamepadMode
+  .chatWindow
+  .chatEntry.gpfocuswithin
+  > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-.chatWindow .chatEntry > *.GamepadMode,
-.GamepadMode .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *:not(.chatUploadContainer).GamepadMode,
+.GamepadMode .chatWindow .chatEntry > *:not(.chatUploadContainer) {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -5202,16 +5215,19 @@
   padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
-.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *:not(.chatUploadContainer),
+.GamepadMode
+  .chatWindow
+  .chatEntry.gpfocuswithin
+  > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-.chatWindow .chatEntry > *.GamepadMode,
-.GamepadMode .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *:not(.chatUploadContainer).GamepadMode,
+.GamepadMode .chatWindow .chatEntry > *:not(.chatUploadContainer) {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -7215,16 +7231,19 @@
   padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
-.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *:not(.chatUploadContainer),
+.GamepadMode
+  .chatWindow
+  .chatEntry.gpfocuswithin
+  > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-.chatWindow .chatEntry > *.GamepadMode,
-.GamepadMode .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *:not(.chatUploadContainer).GamepadMode,
+.GamepadMode .chatWindow .chatEntry > *:not(.chatUploadContainer) {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -9049,16 +9068,19 @@
   padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
-.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *:not(.chatUploadContainer),
+.GamepadMode
+  .chatWindow
+  .chatEntry.gpfocuswithin
+  > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-.chatWindow .chatEntry > *.GamepadMode,
-.GamepadMode .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *:not(.chatUploadContainer).GamepadMode,
+.GamepadMode .chatWindow .chatEntry > *:not(.chatUploadContainer) {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -10647,8 +10669,8 @@
   line-height: 10px;
 }
 ._241QXrW6UHsnFfr_61iEsq {
-  background: none !important;
-  background-color: #25282e !important;
+  max-height: 100%;
+  min-height: 100%;
 }
 ._2NVbSaqD0yWMMczl37cIAE {
   background-color: #2f3137;
@@ -10678,33 +10700,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-}
-.MDVOG38nM59C3Srt8VxEC .iRAI5OznyIRQ_pI7nzHbj {
-  flex: 1;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #91c257;
-  line-height: 1.2em;
-  font-weight: bold;
-  letter-spacing: 0.07em;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-.MDVOG38nM59C3Srt8VxEC .iRAI5OznyIRQ_pI7nzHbj ._2OG9Y0VuYcR5HBpWtwcp-d {
-  cursor: pointer;
-  margin-top: 2px;
-  flex-direction: row;
-  align-items: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-right: 24px;
-}
-.MDVOG38nM59C3Srt8VxEC .iRAI5OznyIRQ_pI7nzHbj .Ar7sNGQLQtBKnkfp6jkvX {
-  width: 18px;
-  height: 18px;
-  margin-right: 6px;
 }
 .MDVOG38nM59C3Srt8VxEC ._1Elq-DoCrkMYMgkNesRMw7 {
   display: flex;
@@ -10752,6 +10747,7 @@
 }
 ._1tVseqmGR0rKVT71bwYTxK {
   margin-top: 12px;
+  width: 100%;
 }
 ._1tVseqmGR0rKVT71bwYTxK ._3JxzOaH5xT9iQUCAXJ0CFH {
   margin-top: 12px;
@@ -11441,6 +11437,7 @@ svg._208P2nHNWB4cUnqOgbfdoV {
 }
 ._1t50mK4QGV0JNsuzSLz_4W.DialogFooter {
   margin-top: 0;
+  margin-bottom: 24px;
 }
 @keyframes JSEuEo0N8pu2G_aNNd4zR {
   from {
@@ -12155,16 +12152,19 @@ svg._208P2nHNWB4cUnqOgbfdoV {
   padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
-.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *:not(.chatUploadContainer),
+.GamepadMode
+  .chatWindow
+  .chatEntry.gpfocuswithin
+  > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-.chatWindow .chatEntry > *.GamepadMode,
-.GamepadMode .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *:not(.chatUploadContainer).GamepadMode,
+.GamepadMode .chatWindow .chatEntry > *:not(.chatUploadContainer) {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -14525,9 +14525,13 @@ a._1fqeTSmMdlqGxE5pVy7Vvi {
 .chatVideoContainer {
   background-color: #2c3036;
   max-width: 600px;
-  padding-bottom: 24px;
   box-shadow: none;
   background: none;
+  padding-bottom: 24px;
+}
+.chatVideoContainer.GamepadMode,
+.GamepadMode .chatVideoContainer {
+  padding-bottom: 0px;
 }
 .chatVideoContainer .BBCodeResizeControl {
   width: 24px;
@@ -14579,11 +14583,16 @@ a._1fqeTSmMdlqGxE5pVy7Vvi {
 .chatImageContainer.Resized {
   max-width: 1280px;
 }
+.BBCodeResizableComponent {
+  display: flex;
+  flex-direction: column;
+}
 .BBCodeResizableComponent.Minimized {
   background-color: transparent;
   box-shadow: 0 0 0 0 #00000000;
-  min-height: 0px;
+  min-height: 21px;
   transition-delay: 0s;
+  flex-direction: row;
 }
 .BBCodeResizableComponent.Minimized:hover .BBCodeCollapseControl {
   opacity: 1;
@@ -14631,7 +14640,6 @@ a._1fqeTSmMdlqGxE5pVy7Vvi {
   opacity: 0;
   cursor: pointer;
   transform: translateX(32px);
-  top: 2px;
   text-transform: uppercase;
   letter-spacing: 1px;
   white-space: nowrap;
@@ -14915,6 +14923,8 @@ a._1fqeTSmMdlqGxE5pVy7Vvi {
   opacity: 1;
   width: 16px;
   height: 16px;
+  top: 2px;
+  right: 0;
 }
 .Minimized .BBCodeCollapseControl .SVGIcon_Button {
   width: 16px;
@@ -14969,7 +14979,7 @@ a._1fqeTSmMdlqGxE5pVy7Vvi {
 }
 .BBCodeCollapseControl .SVGIcon_Button {
   top: 0px;
-  right: 1px;
+  right: 0px;
 }
 .BBCodeResizableComponent:hover .BBCodeCollapseControl {
   opacity: 0.5;
@@ -15254,6 +15264,31 @@ div:hover > .BBCodeCollapseControl {
   line-height: 30px;
   font-size: 26px;
   margin-right: 8px;
+}
+._3fl5XK_IvRxror5JMAAuGW {
+  z-index: 1;
+  margin: auto;
+}
+._3fl5XK_IvRxror5JMAAuGW ._2yQ3wYfgD39aHOL1tRj_m2 {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 4px;
+  gap: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  color: #969aa1;
+}
+._3fl5XK_IvRxror5JMAAuGW ._2yQ3wYfgD39aHOL1tRj_m2:hover {
+  color: #d5d7d9;
+}
+._3fl5XK_IvRxror5JMAAuGW ._2yQ3wYfgD39aHOL1tRj_m2 .yjWvkPdhmEkXWxImAduM7 {
+  width: 24px;
+  height: 24px;
+}
+._3fl5XK_IvRxror5JMAAuGW ._2yQ3wYfgD39aHOL1tRj_m2 .LGAs6aF7d2rReocTfB8T4 {
+  font-size: 14px;
 }
 @keyframes _30xS5yJowmQASTWfeuDcfu {
   from {
@@ -15968,16 +16003,19 @@ div:hover > .BBCodeCollapseControl {
   padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
-.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *:not(.chatUploadContainer),
+.GamepadMode
+  .chatWindow
+  .chatEntry.gpfocuswithin
+  > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-.chatWindow .chatEntry > *.GamepadMode,
-.GamepadMode .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *:not(.chatUploadContainer).GamepadMode,
+.GamepadMode .chatWindow .chatEntry > *:not(.chatUploadContainer) {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -17752,16 +17790,19 @@ div:hover > .BBCodeCollapseControl {
   padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
-.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *:not(.chatUploadContainer),
+.GamepadMode
+  .chatWindow
+  .chatEntry.gpfocuswithin
+  > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-.chatWindow .chatEntry > *.GamepadMode,
-.GamepadMode .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *:not(.chatUploadContainer).GamepadMode,
+.GamepadMode .chatWindow .chatEntry > *:not(.chatUploadContainer) {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -19360,16 +19401,19 @@ div:hover > .BBCodeCollapseControl {
   padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
-.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *:not(.chatUploadContainer),
+.GamepadMode
+  .chatWindow
+  .chatEntry.gpfocuswithin
+  > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-.chatWindow .chatEntry > *.GamepadMode,
-.GamepadMode .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *:not(.chatUploadContainer).GamepadMode,
+.GamepadMode .chatWindow .chatEntry > *:not(.chatUploadContainer) {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -21073,16 +21117,19 @@ div:hover > .BBCodeCollapseControl {
   padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
-.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *:not(.chatUploadContainer),
+.GamepadMode
+  .chatWindow
+  .chatEntry.gpfocuswithin
+  > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-.chatWindow .chatEntry > *.GamepadMode,
-.GamepadMode .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *:not(.chatUploadContainer).GamepadMode,
+.GamepadMode .chatWindow .chatEntry > *:not(.chatUploadContainer) {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -22705,16 +22752,19 @@ div:hover > .BBCodeCollapseControl {
   padding: 0px 50px 40px 0px;
   background-color: transparent;
 }
-.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *,
-.GamepadMode .chatWindow .chatEntry.gpfocuswithin > * {
+.chatWindow .chatEntry.GamepadMode.gpfocuswithin > *:not(.chatUploadContainer),
+.GamepadMode
+  .chatWindow
+  .chatEntry.gpfocuswithin
+  > *:not(.chatUploadContainer) {
   animation-name: ItemFocusAnim-darkerGrey;
   z-index: 1;
   animation-name: ItemFocusAnim-darkGrey;
   background-color: #3d4450;
   color: #fff;
 }
-.chatWindow .chatEntry > *.GamepadMode,
-.GamepadMode .chatWindow .chatEntry > * {
+.chatWindow .chatEntry > *:not(.chatUploadContainer).GamepadMode,
+.GamepadMode .chatWindow .chatEntry > *:not(.chatUploadContainer) {
   margin-bottom: 0px;
   box-shadow: none;
   background-color: rgba(35, 38, 46, 0.45);
@@ -26911,6 +26961,14 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
   flex-direction: column;
   align-items: center;
 }
+.chatUploadContainer.GamepadMode,
+.GamepadMode .chatUploadContainer {
+  padding: 10px;
+  z-index: 100;
+  gap: 4px;
+  opacity: 1;
+  background-color: #2c3036;
+}
 .chatFileUploadPreviewContainer img {
   border-radius: 4px;
   box-shadow: 0 0 4px 1px #000;
@@ -26954,11 +27012,12 @@ body.in_global_drag .chatWindow .chatBody .chatHistoryAndMembers,
   vertical-align: middle;
   box-shadow: 0 0 4px 1px #00000088;
 }
+.chatFileUploadCancel:hover,
+.chatFileUploadCancel.gpfocus {
+  background-color: rgba(92, 100, 114, 0.9);
+}
 .chatFileUploadCancel .SVGIcon_X_Line line {
   stroke: #fff;
-}
-.chatFileUploadCancel:hover {
-  background-color: rgba(92, 100, 114, 0.9);
 }
 .uploadOptions {
   width: 100%;
@@ -28817,6 +28876,12 @@ a.connectionStatus:visited {
 .TheaterMode .BroadcastChatExpander.bottom {
   left: 0;
 }
+.ChatRoomGroup_WindowContent {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
 .ChatRoomGroup_Main_ContentAndMembers,
 .ChatRoomGroup_Main_Content,
 .ChatRoomGroup_MainAndChatEntry {
@@ -28923,8 +28988,6 @@ a.connectionStatus:visited {
   padding: 14px 6px;
   min-height: 100%;
   box-sizing: border-box;
-  scroll-padding-top: 100px;
-  scroll-padding-bottom: 100px;
 }
 .chatRoomGroupNavColumn {
   position: relative;
@@ -30251,13 +30314,13 @@ html.web_chat_frame .perf_timing_area {
 .msg a {
   color: #6dcff6;
   text-decoration: none;
+}
+.msg .msgText > a {
   border-bottom: 1px dotted rgba(109, 207, 246, 0.6);
   padding-bottom: 0px;
 }
-.msg a.OpenGraphImgContainer:hover,
-.msg a.OpenGraphImgContainer {
-  border-bottom: none;
-  padding-bottom: 0;
+.msg .msgText > a:hover {
+  border-bottom: 1px dotted rgba(176, 233, 255, 0.5);
 }
 .msg a.OpenGraphImgContainer:hover {
   filter: brightness(1.2);
@@ -30265,7 +30328,6 @@ html.web_chat_frame .perf_timing_area {
 .msg a:hover {
   color: #b0e9ff;
   text-decoration: none;
-  border-bottom: 1px dotted rgba(176, 233, 255, 0.5);
 }
 .ChatRoomSpeaker .speaker {
   display: flex;
@@ -36388,6 +36450,33 @@ button.DialogButton.roleButton.currentUserRole .SVGIcon_DialogCheck,
 body.VR {
   zoom: 200%;
 }
+._3_O2LY4C7MjvuNmCO4e0At {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+._3_O2LY4C7MjvuNmCO4e0At._3Xc-gNWMTY3JUE0ufjKhCX,
+._3_O2LY4C7MjvuNmCO4e0At._2kyBeb0jWReRvPz6OZjNOp,
+._3_O2LY4C7MjvuNmCO4e0At._1DewVR__l846nIfNbOlUr_ {
+  opacity: 0;
+}
+._3_O2LY4C7MjvuNmCO4e0At._2h55eyTHYZO_Qcd6vQIo74 {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+._3_O2LY4C7MjvuNmCO4e0At._3gauxIXBwpzSH3XmTpjyTE,
+._3_O2LY4C7MjvuNmCO4e0At._3DYytGy5vAB95wakbqbZFU {
+  opacity: 1;
+}
+._3_O2LY4C7MjvuNmCO4e0At._3faNt42bvNAqFGnOR2mZIV {
+  opacity: 0;
+  transition: opacity 200ms;
+}
 .buttonBack___1mlaL,
 .buttonFirst___2rhFr,
 .buttonLast___2yuh0,
@@ -36540,6 +36629,52 @@ body.VR {
   bottom: 0;
   left: 0;
   background-color: #f4f4f4;
+}
+._3RsMJ-oaZ0Kj7V7IsdwX9Z {
+  padding: 0px 40px;
+  height: fit-content;
+}
+._1fdrkd7SVxW5GGvl9vvn5E {
+  width: 100%;
+}
+.qDGW-dv5rg2457fA4dKkO {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  user-select: none;
+  margin-bottom: 20px;
+}
+.KpY2TOMzXBBhoa_0zPxGo {
+  width: 100%;
+  font-size: 16px;
+  color: #dcdedf;
+  display: flex;
+  flex-direction: column;
+}
+.KpY2TOMzXBBhoa_0zPxGo ._1x8kY7oL9OFr7dcQZmUWRg {
+  display: flex;
+}
+.KpY2TOMzXBBhoa_0zPxGo ._2cHKpCBYfeqDuJIfnwQNSW {
+  float: right;
+  width: 150px;
+  height: 150px;
+  margin-left: 20px;
+}
+.KpY2TOMzXBBhoa_0zPxGo ._1CCXUJbtZQBSFHs_7YnrWO {
+  clear: both;
+  width: 100%;
+}
+.KpY2TOMzXBBhoa_0zPxGo ._2yEfUru4HxMHwNO_Zds5je {
+  background-color: #23262e;
+  padding: 10px;
+  margin-top: 15px;
+  color: #fff;
+}
+.KpY2TOMzXBBhoa_0zPxGo ._2FLb2e2xswyJpvCdCfXOzk {
+  width: fit-content;
+  padding: 0px 30px;
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 /*# sourceMappingURL=../../sourcemaps/css/libraries/libraries~2dcc5aaf7.css.map*/

@@ -119,11 +119,14 @@
 }
 ._1dBCPkyWYRX7FwOcOEDrOo {
   flex: 1;
-  height: auto;
+  height: 50vh;
 }
 ._1dBCPkyWYRX7FwOcOEDrOo .DialogContentTransition {
   width: auto;
   max-width: none;
+}
+._1dBCPkyWYRX7FwOcOEDrOo .PageListColumn {
+  min-height: unset !important;
 }
 ._1dBCPkyWYRX7FwOcOEDrOo ._2r0iBG84H79jitflfzloHL > .DialogContent_InnerWidth {
   max-width: none;
@@ -150,7 +153,7 @@
 ._1dBCPkyWYRX7FwOcOEDrOo ._2J6kvK4A5CTbr_o4ZYqycZ {
   width: 36px;
   height: 36px;
-  margin: 0px 0px 10px 10px;
+  margin: 10px;
   padding: 0px;
 }
 .BasicUI ._1dBCPkyWYRX7FwOcOEDrOo ._2J6kvK4A5CTbr_o4ZYqycZ {

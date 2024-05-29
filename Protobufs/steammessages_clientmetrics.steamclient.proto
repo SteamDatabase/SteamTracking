@@ -1,6 +1,7 @@
 import "steammessages_base.proto";
 import "steammessages_unified_base.steamclient.proto";
 import "clientmetrics.proto";
+import "enums.proto";
 
 option cc_generic_services = true;
 
@@ -14,6 +15,15 @@ enum ESteamPipeOperationType {
 	k_ESteamPipeOperationType_DecryptCPU = 1;
 	k_ESteamPipeOperationType_DiskRead = 2;
 	k_ESteamPipeOperationType_DiskWrite = 3;
+}
+
+enum EClipShareMethod {
+	k_EClipShareMethod_Chat = 1;
+	k_EClipShareMethod_Clipboard = 2;
+	k_EClipShareMethod_File = 3;
+	k_EClipShareMethod_SendClip = 4;
+	k_EClipShareMethod_SaveToMedia = 5;
+	k_EClipShareMethod_CreateLink = 6;
 }
 
 message CClientMetrics_AppInterfaceCreation {
@@ -175,6 +185,22 @@ message CClientMetrics_ReportClientArgs_Notification {
 	optional bool fps_counter_enabled = 7;
 	optional bool library_low_bandwidth_mode_enabled = 8;
 	optional bool library_low_perf_mode_enabled = 9;
+	optional int32 gr_mode = 10;
+}
+
+message CClientMetrics_ClipShare_Notification {
+	optional uint32 eresult = 1 [default = 2];
+	optional .EClipShareMethod share_method = 2 [default = k_EClipShareMethod_Chat];
+	optional float seconds = 3;
+	optional uint64 bytes = 4;
+	optional fixed64 gameid = 5;
+}
+
+message CClientMetrics_EndGameRecording_Notification {
+	optional .EGameRecordingType recording_type = 1 [default = k_EGameRecordingType_Unknown];
+	optional float seconds = 2;
+	optional uint64 bytes = 3;
+	optional fixed64 gameid = 4;
 }
 
 service ClientMetrics {
@@ -189,4 +215,6 @@ service ClientMetrics {
 	rpc ClientCloudAppSyncStats (.CClientMetrics_CloudAppSyncStats_Notification) returns (.NoResponse);
 	rpc ClientDownloadResponseCodeCounts (.CClientMetrics_ContentDownloadResponse_Counts_Notification) returns (.NoResponse);
 	rpc ReportClientArgs (.CClientMetrics_ReportClientArgs_Notification) returns (.NoResponse);
+	rpc ReportClipShare (.CClientMetrics_ClipShare_Notification) returns (.NoResponse);
+	rpc ReportEndGameRecording (.CClientMetrics_EndGameRecording_Notification) returns (.NoResponse);
 }

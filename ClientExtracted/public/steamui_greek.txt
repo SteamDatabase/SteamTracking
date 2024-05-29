@@ -2105,6 +2105,7 @@
 "Steam_BackgroundDownloadsAllow"	"Να επιτρέπονται πάντα λήψεις παρασκηνίου"
 "Steam_BackgroundDownloadsDeny"	"Να μην επιτρέπονται ποτέ λήψεις παρασκηνίου"
 
+// NOTE: no longer referenced, old vgui?
 "Steam_GameProperties_SteamInputSettings"	"Ρυθμίσεις Steam Input"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Ρυθμίσεις Steam Input ανά παιχνίδι (απαιτείται επανεκκίνηση παιχνιδιού)"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "Εξαναγκαστικά ανενεργό"

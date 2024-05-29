@@ -133,6 +133,7 @@ message CPlayer_GetOwnedGames_Response {
 		optional int32 playtime_windows_forever = 8;
 		optional int32 playtime_mac_forever = 9;
 		optional int32 playtime_linux_forever = 10;
+		optional int32 playtime_deck_forever = 20;
 		optional uint32 rtime_last_played = 11;
 		optional string capsule_filename = 12;
 		optional string sort_as = 13;
@@ -609,12 +610,15 @@ message CPlayer_GetLastPlayedTimes_Response {
 		optional int32 playtime_windows_forever = 6;
 		optional int32 playtime_mac_forever = 7;
 		optional int32 playtime_linux_forever = 8;
+		optional int32 playtime_deck_forever = 16;
 		optional uint32 first_windows_playtime = 9;
 		optional uint32 first_mac_playtime = 10;
 		optional uint32 first_linux_playtime = 11;
+		optional uint32 first_deck_playtime = 17;
 		optional uint32 last_windows_playtime = 12;
 		optional uint32 last_mac_playtime = 13;
 		optional uint32 last_linux_playtime = 14;
+		optional uint32 last_deck_playtime = 18;
 		optional uint32 playtime_disconnected = 15;
 	}
 

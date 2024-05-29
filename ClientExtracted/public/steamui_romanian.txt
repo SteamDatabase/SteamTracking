@@ -131,7 +131,7 @@
 "Steam_Login_CapsLockWarning"	"Caps Lock activat"
 
 "SteamUI_CreateAccount_Title"	"Creează un cont Steam"
-"SteamUI_CreateAccount_Nickname"	"Nume profil"
+"SteamUI_CreateAccount_Nickname"	"Numele de profil"
 "SteamUI_CreateAccount_FirstName" "Prenume"
 "SteamUI_CreateAccount_LastName"	"Nume"
 "SteamUI_CreateAccount_Error"	"Steam - Eroare la crearea contului"
@@ -272,7 +272,7 @@
 "SteamUI_JoinDialog_DataRequestFailed_Text" "Serverele Steam sunt prea solicitate pentru a procesa cererea pentru %game%.\nCodul erorii (%error%)"
 
 "SteamUI_JoinDialog_CloudSyncFailed_Title" "Steam - Avertisment"
-"SteamUI_JoinDialog_CloudSyncFailed_Text" "Steam nu a putut sincroniza fișierele tale pentru %game% cu Cloud"
+"SteamUI_JoinDialog_CloudSyncFailed_Text" "Steam nu a putut sincroniza fișierele tale pentru %game% cu Steam Cloud"
 "SteamUI_JoinDialog_CloudSyncFailed_Detail" "Dacă ai folosit această aplicație și de pe un alt PC, e posibil ca setările să nu fie sincronizate cu informațiile stocate online. Dacă pornești acum aplicație, e posibil să pierzi schimbările făcute."
 
 "Steam_CloudConflict_Title" "Steam - Conflict Sincronizare Cloud"
@@ -1317,7 +1317,7 @@ Te rugăm să reintroduci parola dorită."
 "Steam_BrowseGames"		"Răsfoiește jocurile..."
 "Steam_Storefront_Title"	"Steam - Răsfoiește jocurile"
 "Steam_RegisterProductCode"	"Activează un produs pe Steam..."
-"Steam_RedeemWalletVoucher"	"Valorifică un cod pentru Portofelul Steam..."
+"Steam_RedeemWalletVoucher"	"Activează un cod pentru portofelul Steam..."
 "Steam_Wallet_PendingBalance" "%amount% (%amount_delayed% în așteptare)"
 
 "Steam_PurchaseError_SubscriptionAlreadyOwned"	"Deții deja %subscription%."
@@ -2102,6 +2102,7 @@ Te rugăm să reintroduci parola dorită."
 "Steam_BackgroundDownloadsAllow"	"Permite întotdeauna descărcări în fundal"
 "Steam_BackgroundDownloadsDeny"	"Nu permite niciodată descărcări în fundal"
 
+// NOTE: no longer referenced, old vgui?
 "Steam_GameProperties_SteamInputSettings"	"Setări Steam Input"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Setarea Steam Input în funcție de joc (necesită relansarea jocului)"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "Dezactivat forțat"
@@ -2208,7 +2209,7 @@ Te rugăm să reintroduci parola dorită."
 
 "Steam_ValidationResults_NoFailures"	"Toate fișierele au fost validate."
 "Steam_ValidationResults_OneFailure"	"1 fișier nu a fost validat și va trebui să fie descărcat din nou."
-"Steam_ValidationResults_Failures"		"%num% fișiere nu au fost validate și vor fi descărcate din nou."
+"Steam_ValidationResults_Failures"		"Au fost identificate fișiere care nu au putut fi validate, iar acestea vor fi descărcate din nou. (Numărul fișierelor nevalidate: %num%)"
 
 "steam_mymedia"		"Fișiere Media"
 "Steam_minigamescolumn_media"			"MEDIA"
@@ -3573,7 +3574,7 @@ Fă-ți un prieten nou pe Steam, trimițând un cadou prin e-mail către cineva 
 
 "Steam_LockedAccountRecover_Title" "Steam Guard - Autorizarea calculatorului necesară"
 "Steam_RecoverLocked_Info" "Salut! Am observat că te autentifici de pe un PC nou."
-"Steam_RecoverLocked_Details" "Ca o măsură suplimentară de securitate, va trebui să autorizezi accesul de pe acest PC introducând codul special pe care tocmai ți l-am trimis pe adresa de e-mail %s1."
+"Steam_RecoverLocked_Details" "Ca o măsură suplimentară de securitate, va trebui să autorizezi accesul de pe acest PC introducând codul special pe care tocmai ți l-am trimis la adresa de e-mail %s1."
 "Steam_RecoverLocked_UseCode" "Am primit mesajul din partea Departamentului de Asistență și sunt pregătit să introduc codul special de acces."
 "Steam_RecoverLocked_MustRecover" "Ce mesaj pe e-mail? Nu am primit nimic..."
 "Steam_RecoverLocked_WhyIsThisHappening" "De ce se întâmplă asta?"
@@ -3894,7 +3895,7 @@ Fă-ți un prieten nou pe Steam, trimițând un cadou prin e-mail către cineva 
 "steam_client_edit_categories_multi" "Setează o categorie pentru aceste jocuri pentru a le găsi mai repede și pentru a-ți organiza Colecția. Titlurile dintr-o categorie vor fi grupate în lista de jocuri."
 
 "steam_topmenu_friends"	"Prieteni (%friends_online%)"
-"steam_menu_set_profile"	"Schimbă numele profilului..."
+"steam_menu_set_profile"	"Schimbă numele de profil..."
 "steam_menu_set_avatar"	"Schimbă avatarul..."
 "steam_menu_edit_profile_name_avatar"	"Editează numele de profil/avatarul..."
 "steam_menu_friends_view" "Prieteni"
@@ -4573,7 +4574,7 @@ Artiști"
 "Steam_Settings_Streaming_DeviceName" "NUMELE DISPOZITIVULUI"
 "Steam_Settings_Streaming_Status" "STARE"
 "Steam_Settings_Streaming_EnableStreaming" "Activează Remote Play"
-"Steam_Settings_Streaming_Pair" "Asociază Steam Linkul"
+"Steam_Settings_Streaming_Pair" "Asociază Steam Link"
 "Steam_Settings_Streaming_Unpair" "Anulează asocierea\ndispozitivelor"
 "Steam_Settings_Streaming_UnpairConfirmation" "Sigur dorești să anulezi asocierea tuturor dispozitivelor?"
 "Steam_Settings_Streaming_SetPIN" "Setează codul\nde securitate"

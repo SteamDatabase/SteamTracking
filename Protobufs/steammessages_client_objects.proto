@@ -214,6 +214,9 @@ message CMsgBluetoothDevicesData {
 		optional bool is_connected = 6;
 		optional bool is_paired = 7;
 		optional int32 strength_raw = 8;
+		optional bool wake_allowed = 9;
+		optional bool wake_allowed_supported = 10;
+		optional int32 battery_percent = 11;
 	}
 
 	message Manager {

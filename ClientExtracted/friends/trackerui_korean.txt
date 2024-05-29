@@ -166,7 +166,7 @@
 "Friends_InvitationPending"			"%search% 님이 Steam에 참가하라는 초대를 받았으며 수락하면 사용자의 친구 목록에 추가됩니다."
 "Friends_InvitationSent"				"%search%에게 이메일 초대장을 보냈으며 수락하면 사용자의 친구 목록에 추가됩니다.\n"
 "Friends_DefaultInviteError"			"%search% 계정으로 초대장을 보내는 중 문제가 발생했습니다." 
-"Friends_TooManyPendingInvitations"   "최근에 초대장을 너무 많이 보냈습니다. 며칠 후에 %search% 님을 다시 초대해 보십시오."
+"Friends_TooManyPendingInvitations"   "최근에 초대장을 너무 많이 보냈습니다. 며칠 후에 %search% 님을 다시 초대해 보세요."
 "Friends_InvitationBlocking"		"이 사용자의 모든 통신을 차단 중입니다. 다시 통신하려면 Steam 커뮤니티 페이지를 방문하여 차단을 해제하세요."
 
 "Friends_DontGiveOutPassword"			"절대로 남에게 비밀번호를 알려주지 마세요.\n"
@@ -400,7 +400,7 @@
 "Friends_PostNotification_Info"			"게시일:"
 "Friends_GameInvitation_Info"				"님이 게임에 초대했습니다."
 "Friends_ChatNoTextNotification_Info"		"님이 메시지를 전송함"
-"Friends_BroadcastChannelLive"		"님이 SteamTV에서 생방송 중입니다"
+"Friends_BroadcastChannelLive"		"님이 SteamTV에서 실시간 방송 중"
 
 "Friends_OnlineNotification_Hotkey"		"보려면 %hotkey% 키를 누르세요"
 "Friends_InviteNotification_Hotkey"		"보려면 %hotkey% 키를 누르세요"

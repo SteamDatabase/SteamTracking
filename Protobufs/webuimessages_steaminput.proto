@@ -1,0 +1,132 @@
+import "steammessages_base.proto";
+import "webuimessages_base.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = true;
+
+message CSteamInputService_ControllerButtonStateChanged_Notification {
+	optional uint32 controller_index = 1;
+	optional bool dpad_up = 2;
+	optional bool dpad_down = 3;
+	optional bool dpad_left = 4;
+	optional bool dpad_right = 5;
+	optional bool button_south = 6;
+	optional bool button_east = 7;
+	optional bool button_west = 8;
+	optional bool button_north = 9;
+	optional bool button_back_view = 10;
+	optional bool button_start_options = 11;
+	optional bool button_steam = 12;
+	optional bool button_quick_access = 13;
+	optional bool button_mute_capture = 14;
+	optional bool left_stick_click = 15;
+	optional bool left_stick_touch = 16;
+	optional bool left_stick_deflect = 17;
+	optional bool right_stick_click = 18;
+	optional bool right_stick_touch = 19;
+	optional bool right_stick_deflect = 20;
+	optional bool center_trackpad_touch = 21;
+	optional bool center_trackpad_click = 22;
+	optional bool left_trackpad_touch = 23;
+	optional bool left_trackpad_click = 24;
+	optional bool right_trackpad_touch = 25;
+	optional bool right_trackpad_click = 26;
+	optional bool left_bumper = 27;
+	optional bool left_trigger = 28;
+	optional bool l4 = 29;
+	optional bool l5 = 30;
+	optional bool left_aux = 31;
+	optional bool right_bumper = 32;
+	optional bool right_trigger = 33;
+	optional bool r4 = 34;
+	optional bool r5 = 35;
+	optional bool right_aux = 36;
+}
+
+message ControllerVector2 {
+	optional float x = 1;
+	optional float y = 2;
+}
+
+message ControllerVector3 {
+	optional float x = 1;
+	optional float y = 2;
+	optional float z = 3;
+}
+
+message ControllerQuaternion {
+	optional float w = 1;
+	optional float x = 2;
+	optional float y = 3;
+	optional float z = 4;
+}
+
+message ControllerGyroEulerAngles {
+	optional float pitch = 1;
+	optional float yaw = 2;
+	optional float roll = 3;
+}
+
+message CSteamInputService_ControllerAxesStateChange_Notification {
+	optional uint32 controller_index = 1;
+	optional .ControllerVector2 joystick_left = 2;
+	optional .ControllerVector2 joystick_right = 3;
+	optional .ControllerVector2 trackpad_left = 4;
+	optional .ControllerVector2 trackpad_right = 5;
+	optional .ControllerVector2 trackpad_center = 6;
+	optional float trackpad_pressure_left = 7;
+	optional float trackpad_pressure_right = 8;
+	optional float trigger_left = 9;
+	optional float trigger_right = 10;
+}
+
+message CSteamInputService_GyroQuaternionChanged_Notification {
+	optional uint32 controller_index = 1;
+	optional uint32 imu_index = 2;
+	optional .ControllerQuaternion gyro_raw_quaternion = 3;
+	optional .ControllerQuaternion gyro_filtered_quaternion = 4;
+	optional uint32 imu_sensor_delta_time = 5;
+}
+
+message CSteamInputService_GyroSpeedChanged_Notification {
+	optional uint32 controller_index = 1;
+	optional uint32 imu_index = 2;
+	optional .ControllerGyroEulerAngles gyro_raw_speed = 3;
+	optional .ControllerGyroEulerAngles gyro_filtered_speed = 4;
+}
+
+message CSteamInputService_GyroAccelerometerChanged_Notification {
+	optional uint32 controller_index = 1;
+	optional uint32 imu_index = 2;
+	optional .ControllerVector3 acceleromter_1g = 4;
+	optional .ControllerVector3 trusted_gravity_1g = 5;
+}
+
+message CSteamInputService_GyroCalibration_Notification {
+	optional uint32 controller_index = 1;
+	optional uint32 imu_index = 2;
+	optional float acceleromter_noise = 3;
+	optional float gyroscope_noise = 4;
+	optional float calibration_progress = 5;
+}
+
+message CSteamInputService_ControllerStateFlow_Request {
+	optional uint32 controller_index = 1;
+	optional uint32 flow_mode = 2;
+}
+
+message CSteamInputService_ControllerStateFlow_Response {
+}
+
+service SteamInputManager {
+	option (webui_service_execution_site) = k_EClientExecutionSiteClientdll;
+
+	rpc NotifyButtonStateChanged (.CSteamInputService_ControllerButtonStateChanged_Notification) returns (.WebUINoResponse);
+	rpc NotifyAxesStateChanged (.CSteamInputService_ControllerAxesStateChange_Notification) returns (.WebUINoResponse);
+	rpc NotifyGyroQuaternionStateChanged (.CSteamInputService_GyroQuaternionChanged_Notification) returns (.WebUINoResponse);
+	rpc NotifyGyroSpeedStateChanged (.CSteamInputService_GyroSpeedChanged_Notification) returns (.WebUINoResponse);
+	rpc NotifyGyroAccelerometerStateChanged (.CSteamInputService_GyroAccelerometerChanged_Notification) returns (.WebUINoResponse);
+	rpc NotifyGyroCalibrationStateChanged (.CSteamInputService_GyroCalibration_Notification) returns (.WebUINoResponse);
+	rpc StartControllerStateFlow (.CSteamInputService_ControllerStateFlow_Request) returns (.CSteamInputService_ControllerStateFlow_Response);
+	rpc EndControllerStateFlow (.CSteamInputService_ControllerStateFlow_Request) returns (.CSteamInputService_ControllerStateFlow_Response);
+}

@@ -10,7 +10,7 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-D#
+,#
 __objc_methname
 __TEXT
 __unwind_info
@@ -41,9 +41,10 @@ __thread_bss
 __DATA
 __bss
 __DATA
+Q5
 __common
 __DATA
-@E
+D
 H
 __LINKEDIT
 
@@ -118,6 +119,7 @@ N16CCallbackHandler21CCallback_OnLoggedOffE
 23IConCommandBaseAccessor
 20CMultipleCallResultsI19CPreDepotOperations27InstallScriptSignResponse_tE
 10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE
+10CUtlMemoryIN10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 20CMultipleCallResultsI19CPreDepotOperations17DRMWrapResponse_tE
 20CMultipleCallResultsI19CPreDepotOperations17CEGWrapResponse_tE
 N23CWorkshopItemDownloader30CCallback_OnDownloadItemResultE
@@ -130,15 +132,20 @@ NSt3__117bad_function_callE
 8CAutoPtrI7CUtlMapIybi8CDefLessEE
 7CUtlMapIybi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIybi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
 8CAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
 7CUtlMapI10CUtlStringbi8CDefLessE
 10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringbi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
 10CUtlVectorIN6ConVar22ConVarChangeCallback_tE10CUtlMemoryIS1_EE
+10CUtlMemoryIN6ConVar22ConVarChangeCallback_tEE
 11CPathString
 17CFileWriterThread
 10CUtlVectorIPK11CFileWriter10CUtlMemoryIS2_EE
+10CUtlMemoryIPK11CFileWriterE
 N17CFileWriterThread14CFileWriteItemE
 N17CFileWriterThread19CFileWriterWorkItemE
+10CUtlMemoryIhE
 t
 r
 u
@@ -150,7 +157,6 @@ s
 e
 18CUtlCharConversion
 19CUtlNoEscConversion
-14CUtlMemoryBase
 %Y-%m-%d %H:%M:%S
 Logger
 none
@@ -211,7 +217,6 @@ ClientAPI_InitGlobalInstance: InternalAPI_Init_Internal failed, most likely beca
 ClientAPI_Init(GlobalInstance): GetIClientProductBuilder returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientDepotBuilder returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientInventory returned NULL.
-ClientAPI_Init(GlobalInstance): GetIClientBluetoothManager returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientParties returned NULL.
 ClientAPI_RunCallbacks
 IVRSteamPrivate_023
@@ -274,7 +279,7 @@ help
 %s/
 login
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
-Missing String for %s (%d)
+Missing String for %s (%d). If this comes from user data or could be valid, provide a default to avoid asserting.
 Unknown
 OK
 0
@@ -294,9 +299,12 @@ Exceeded limit of number of vpk files supported (%d)!
 .%s
 %s%s%s crc=0x%x metadatasz=%d
 fnumber=%d ofs=0x%x sz=%d
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+num > 0
 count >= 0
+num >= 0
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 appid
 1
@@ -319,6 +327,7 @@ betapassword
 language
 ERROR! Password check for AppId %d failed to start.
 ERROR! Password check for AppId %d returned error %s.
+ERROR! Failed to set beta '%s'
 ERROR! Unknown app '%u'
 ERROR! Failed to install app '%u' (%s)
 Success! App '%u' already up to date.
@@ -860,6 +869,8 @@ cbActual < (uint32)nBufSizeWithTerminator
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 CFileWriterThread
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h
+nGrowSize >= 0
+m_nAllocationCount >= 0
 m_Count == 0
 pNode && pNode->Next == QueueEnd()
 m_queueItemsPending
@@ -966,12 +977,7 @@ a
 '
 %.18g
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
-nSizeOfType > 0
-nGrowSize >= 0
-m_nAllocationCount >= 0
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
-num > 0
-num >= 0
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlqueue.cpp
 IsPowerOfTwo( nNewCapacity )
 nPreSplit > 0 && nPreSplit + nPostSplit == nCount
@@ -1516,10 +1522,10 @@ E
 
 
 
-
 @
 0
 0
+6
 j
 @
 @
@@ -1535,7 +1541,6 @@ Ic]
 @
 @
 0
-!
 @
 @
 @
@@ -1547,7 +1552,6 @@ Ic]
 0
 0
 0
-a
-\
 0
+"
 

@@ -5,11 +5,11 @@ __symbol_stub
 __TEXT
 __stub_helper
 __TEXT
+__gcc_except_tab__TEXT
 __cstring
 __TEXT
 __const
 __TEXT
-__gcc_except_tab__TEXT
 __unwind_info
 __TEXT
 __OBJC
@@ -40,6 +40,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libvstdlib_s.dylib
+u!1f
 @loader_path/libtier0_s.dylib
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
@@ -54,6 +55,8 @@ __LINKEDIT
 ^_[]
 ^_[]
 ^_[]
+RQWP
+^_[]
 <\t	
 ^_[]
 <^_[]
@@ -67,12 +70,11 @@ VSRQW
 ^_[]
 98u*
 ,^_[]
+$^_[]
 SWVP
 ^_[]
 ^_[]
 ^_[]
-^_[]
-0^_[]
 ^_[]
 ^_[]
 ^_[]
@@ -83,29 +85,26 @@ VWQPS
 ^_[]
 ^_[]
 ^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-Pj\R
-x,tQ
-^_[]
-QjTP
-VVjxPSQ
-^_[]
-^_[]
-6SPQ
-WPRQ
-SSh2
+VVhw
 ^_[]
 SWQP
-RRh]
+RRh*
 ^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+^_[]
+WPRQ
+^_[]
+^_[]
+x+tS
+^_[]
+Pj\R
+^_[]
+Qj#P
 ^_[]
  ^_]
  ^_]
@@ -119,65 +118,72 @@ rw;}
 ^_[]
 ^_[]
 ^_[]
+WPRQ
 ^_[]
-G;~@|
+^_[]
+G;~8|
 ^_[]
 ^_[]
 Pj`Q
 ^_[]
+9_8vr
 ^_[]
-9_@vr
-^_[]
-^_[]
-t/~"
 ^_[]
 <^_[]
 ^_[]
 ,^_[]
-<^_[]
+,^_[]
 ^_[]
-9O@vi
+9O8vi
 ^_[]
 ^_[]
+F8;F u
 ^_[]
 40Sj
 ^_[]
 ,^_[]
-RQWP
+SWQP
+RRh*
 ^_[]
+WPRQ
 ^_[]
-9Z v
 u,9\
-9Z v
 u19\
-tc9B v
+tb9B
+^_[]
+WPRQ
+^_[]
+^_[]
+^_[]
+^_[]
+9X$v(
+^_[]
+D3P+M
+HL;M
+9P$v"
+^_[]
+<^_[]
+HL;M
+^_[]
+^_[]
+^_[]
 ^_[]
 ^_[]
 ,^_[]
+D8p1
 ^_[]
-9x(v&
-@4i|
 ^_[]
-HL;M
-9r(v!
-^_[]
-P@iL
-L^_[]
-HL;M
+WPRQ
 ^_[]
 ^_[]
 ^_[]
-@4iD
-@4iD
-^_[]
-^_[]
-,^_[]
-^_[]
-9w v
-9w v
-tp9G v
+WPRQ
 ^_[]
 pT9phu
+WPRQ
+^_[]
+WPRQ
+^_[]
 ^_[]
 ^_[]
 ^_[]
@@ -190,11 +196,9 @@ RPh:
 PPhT
 QPh[
 ^_[]
-tnG9
+t^G9
 ^_[]
-l^_[]
-^_[]
-^_[]
+\^_[]
 ^_[]
 ^_[]
 ^_[]
@@ -203,7 +207,19 @@ l^_[]
 ^_[]
 ^_[]
 ^_[]
-$^_[]
+WPRQ
+^_[]
+z 9z,u
+^_[]
+WPRQ
+^_[]
+z 9z,u
+^_[]
+WPRQ
+^_[]
+z 9z,u
+^_[]
+WPRQ
 ^_[]
 \^_[]
 ^_[]
@@ -238,14 +254,22 @@ RRh/
 j~j P
 ^_[]
 ^_[]
+WPRQ
+^_[]
 ^_[]
 ^_[]
 VSSP
 ^_[]
 ^_[]
 <^_[]
+WRQP
+SSh*
 ^_[]
+z 9z,u
 ^_[]
+WPRQ
+^_[]
+0^_[]
 w	^_[]
 ^_[]
 ^_[]
@@ -291,6 +315,9 @@ VUUU
 QPRj 
 Pj V
 <^_[]
+^_[]
+SWQP
+RRh*
 ^_[]
 ^_[]
 SWVP
@@ -339,7 +366,7 @@ PQVS
 ^_[]
 ,^_[]
 ^_[]
-<^_[]
+,^_[]
 <^_[]
 <^_[]
 <^_[]
@@ -369,9 +396,7 @@ VRQP
 RQWV
 ^_[]
 <\u!
-< t7<"
-<\t$
-r!<\t
+r$<\t <`t
 ,^_[]
 <^_[]
 ^_[]
@@ -383,8 +408,7 @@ r!<\t
 }qC9
 j<[u
 ^_[]
-E 9E
-E 9E
+;E r
 ^_[]
 ^_[]
 <:t?<?u
@@ -424,8 +448,17 @@ SWVP
 WWh8
 ^_[]
 l^_[]
+O 9O,u
+^_[]
+WPRQ
 ^_[]
  ^_]
+O 9O,u
+^_[]
+WPRQ
+^_[]
+SWQP
+RRh*
 ^_[]
 SWVP
 ^_[]
@@ -477,24 +510,30 @@ SWVP
 ,^_[]
 ^_[]
 ^_[]
+WPRQ
+^_[]
 ^_[]
 tu</tq
 ^_[]
 ^_[]
 ^_[]
-9G8|,
-9G8|!
-C 	<
-G8;G<uY
+WRQP
+SSh*
+^_[]
+WPRQ
+^_[]
+G0;G4uX
 ,^_[]
-A 	4
+WPRQ
+^_[]
 <^_[]
 ^_[]
-;CH|N
-;s@|D
+;C@|N
+;s8|D
+^_[]
 ^_[]
 %lld
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/bitstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
 resizeNumBits >= 0
 !m_pInt
 GetInts()
@@ -503,12 +542,14 @@ CVariableBitStringBase
 false
 %llu
 console
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 !pszString || pszString[nChars] == '\0'
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
+num > 0
 m_Tree
 m_Elements
 m_Memory
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock %s %s failed. errno = %d
@@ -523,16 +564,18 @@ Unbuffered read should be called with cubData length that is aligned to system p
 Seeking to a position which is not sector aligned will break unbuffered io
 cbToRead <= 1024 * 1024 * 1024
 cbActual < (uint32)nBufSizeWithTerminator
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlbuffer.h
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
+nGrowSize >= 0
+m_nAllocationCount >= 0
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utllinkedlist.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
 m_TotalElements != InvalidIndex()
 %s overflow!
 IsValidIndex(elem)
 IsInList(before)
 Invalid index %u
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
@@ -540,7 +583,7 @@ CPathString
 %s%s
 IVALIDATE001
 Memory leak: mempool blocks left in memory: %d
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/mempool.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/mempool.cpp
 CMemoryPool::AddNewBlob: mode == GROW_NONE
 blobSize <= nMaxBlobSize
 pBlob
@@ -575,23 +618,18 @@ getRelationship:ofDirectoryAtURL:toItemAtURL:error:
 path
 hasPrefix:
 length
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
+num >= 0
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 nSize >= 0
 m_Put >= 0
 offset >= 0
 offset >= -m_Put && offset <= INT_MAX-m_Put
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
-nSizeOfType > 0
-nGrowSize >= 0
-m_nAllocationCount >= 0
-m_unSizeOfElements == mem.m_unSizeOfElements
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
-num > 0
-num >= 0
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 CUtlString::VAppendFormat
 Assertion failed: length > k_cchMaxString
@@ -602,7 +640,7 @@ nMinCapacity <= k_nMaxStringSize
 len > 0 || HasError()
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/commandline.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/commandline.cpp
 (int)(intp)m_hParam != -1
 m_bInitialized
 Parameter file '%s' not found, skipping...
@@ -618,14 +656,12 @@ m_vecParms
 m_vecParms[i]
 m_listCommandLineOption
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
-(elem == Count()) || IsValidIndex(elem)
 Not continuing coroutine due to g_bPreventCoroutineContinue, %s
 Unknown
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/coroutine.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/coroutine.cpp
 GCoroutineMgr().IsValidCoroutine(hCoroutine)
 Coroutine_IsActive()
 test string
-coroutines.Base() == NULL
 GCoroutineMgr().IsAnyCoroutineActive()
 g_VecPCoroutineMgr[i]
 g_VecPCoroutineMgr
@@ -635,7 +671,7 @@ g_VecPCoroutineMgr
 m_cubSavedStack < k_cubMaxCoroutineStackSize
 m_pStackHigh
 m_pSavedStack
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/vprof.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
 m_pszName
 m_VecCoroutineStack.Count() > 1
 CCoroutineMgr
@@ -646,9 +682,9 @@ CCoroutine
 VEngineCvar002
 WARNING: unable to link %s and %s because one or more is a ConCommand.
 CDefaultCvar cvar
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/cvar.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/cvar.cpp
 !m_fnGlobalChangeCallback || !callback
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/debugstatssystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/debugstatssystem.cpp
 *(CDebugStatsSystem*)DebugStatsSystem()
 String pool bytes used %u, max %u, %u pools
 Total number of strings %u, longest string size %u, avg size %u
@@ -658,7 +694,7 @@ Bucket size : count
 nTotal number of strings %u, longest string size %u, avg size %u
 Leaked KeyValues (%u):
 %s (%u)
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/keyvaluessystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/keyvaluessystem.cpp
 size < INT_MAX
 CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
 CKeyValuesSystem::AddStringToPool: out of memory
@@ -668,7 +704,7 @@ m_HashItemMemPool
 m_LeakTrack
 m_mapConditionalSymbolTable
 KeyValuesSystem()
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/osversion.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
 Invalid macOS version %d.%d.%d
 MacOS %d.%d.%d
 Windows
@@ -795,12 +831,12 @@ processInfo
 operatingSystemVersion
 respondsToSelector:
 defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/parseurl.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/parseurl.cpp
 pchURL != NULL
 pchStart
 pchEnd
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/vstdlib/../tier1/utlstring.h
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/stringnormalize.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vstdlib/../tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/stringnormalize.cpp
 pwchSrc != NULL
 pwchDest != NULL
 CStringNormalize is full of quirks that need fixing. You just hit one. Don't pass buffers > 1kb.
@@ -809,7 +845,7 @@ CStringNormalization statics
 g_mapPairs
 0x%4.4X is both the source and destination of a normalization mapping
 out of order normalization entry
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
 dest != NULL
 src != NULL
 count == 0 || s1 != NULL
@@ -1012,8 +1048,8 @@ nBytes
 &lsquo;
 &rsquo;
 &hellip;
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utldict.h
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools_unicode.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools_unicode.cpp
 invalid input pointer
 in != out
 !(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
@@ -1021,7 +1057,7 @@ count >= 0
 :/?#
 %.*s://%s
 gCURLUtils_hashTLDs
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/bitstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 bitNum >= 0 && bitNum < this->Size()
 ACADEMY
 ACCOUNTANTS
@@ -1386,14 +1422,18 @@ NSt3__117bad_function_callE
 ?21CUtlCStringConversion
 18CUtlCharConversion
 19CUtlNoEscConversion
-14CUtlMemoryBase
 N11SteamStdLib12CCommandLineE
 N11SteamStdLib12ICommandLineE
 14CUtlLinkedListIN11SteamStdLib12CCommandLine18CommandLineParam_tEiE
 10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
+10CUtlMemoryI10CUtlStringE
+10CUtlMemoryIN14CUtlLinkedListIN11SteamStdLib12CCommandLine18CommandLineParam_tEiE10ListElem_tEE
 14CUtlLinkedListI10CCoroutineiE
+10CUtlMemoryIN14CUtlLinkedListI10CCoroutineiE10ListElem_tEE
 10CUtlVectorIi10CUtlMemoryIiEE
+10CUtlMemoryIiE
 10CUtlVectorIP13CCoroutineMgr10CUtlMemoryIS1_EE
+10CUtlMemoryIP13CCoroutineMgrE
 12CDefaultCvar
 5ICvar
 17CDebugStatsSystem
@@ -1402,12 +1442,15 @@ N11SteamStdLib12ICommandLineE
 16IKeyValuesSystem
 7CUtlMapIPvii8CDefLessE
 10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 7CUtlMapIjbi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 ?20CUniformRandomStream
 20IUniformRandomStream
 7CUtlMapIwPKwi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIwPKwi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEwE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIwPKwi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEwE6Node_tEE
 N(knN
  &   ! 
 %$%a%b%V%U%c%Q%W%]%\%[%
@@ -1421,6 +1464,8 @@ e"d" #!#
 ,/$`,
 11CUtlHashMapIPKcb24CDefCaselessStringEquals25HashFunctorStringCaselessS1_E
 10CUtlVectorIN11CUtlHashMapIPKcb24CDefCaselessStringEquals25HashFunctorStringCaselessS2_E12HashBucket_tE10CUtlMemoryIS6_EE
+10CUtlMemoryIN11CUtlHashMapIPKcb24CDefCaselessStringEquals25HashFunctorStringCaselessS2_E12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIPKcb24CDefCaselessStringEquals25HashFunctorStringCaselessS2_E6Node_tEE
 19CVStdLibDLLValidate
 9IValidate
 `*D`MBp
@@ -1811,10 +1856,11 @@ NSt3__117bad_function_callE
 420CUniformRandomStream
 NSt3__117bad_function_callE
 520CUniformRandomStream
-t:J. "R
-vXLp
+t:J*"R
+VV6l
 d2BV
-		;}
+>HRV
+1VVV
 5&+"&5
 TJ"0
 				2
@@ -2220,20 +2266,20 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-K^!8&
-gSpj
-;c?{
-nH}g
-K#+;	&>
-L[.N.J
-/tab
-61{y
-2?O-9
-!7nt8
-hAqn
-Fr2Z
-LTQ?]g
-,Ho&^'
+wLPU
+RyR2
+wV9/
+	-g :G
++wU.I4
+|]S`Kq
+70<in`
+3l\Q
+W)ESwM
+[WFj
+7u57
+|TBa
+<g?s
+s%ig
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -2291,11 +2337,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240524204500Z0/
-<$s[~]}
-V*0<
+240527183346Z0/
+>`0<
 1/0-
-<$s[~]}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2303,13 +2347,14 @@ V*0<
 	<key>cdhashes</key>
 	<array>
 		<data>
-		wlNg9fNmUAL0MMDTTHmPxayJ8QY=
+		iwjwABKSI44j/lQ/HoNw2AKLdT4=
 		</data>
 	</array>
 </dict>
 </plist>
-20240524204516Z0
-=;wNT.
+QRrT
+VO^6
+20240527183420Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2370,10 +2415,14 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240524204516Z0#
-dOzIs
+240527183420Z0#
+4O0+
 [Y>L
-Oo54z
+7tfo
+*4MlRJ
+iKi+X
+FCf2X
+P=6O6
 __TEXT
 __text
 __TEXT
@@ -2413,7 +2462,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libvstdlib_s.dylib
-C!?%$
 @loader_path/libtier0_s.dylib
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
@@ -2459,16 +2507,6 @@ K H9
 [A^A_]
 AVSH
 [A^]
-AWAVAUATSH
-K$D9
-K$D9
-HcT0
-(Ic{
-;Jc|9
-D97u
-Ic;H
-([A\A]A^A_]
-([A\A]A^A_]
 AWAVAUATSD
 [A\A]A^A_]
 u6LcS
@@ -2509,46 +2547,37 @@ AWAVAUATSPH
 [A\A]A^A_]
 AWAVSPA
 [A^A_]
-;C ~:
 AWAVSP
 [A^A_]
 AVSI
 [A^]
 AWAVSP
-t6IcF
+[A^A_]
+[A^]
+AWAVSP
+t5IcF
 [A^A_]
 [A^A_]
 AWAVSPA
-uiE1
+udE1
 [A^A_]
 AWAVATSI
-|$$E
 IcD$
 IcD$
 IcD$
 [A\A^A_]
-t#IcD$
+t"IcD$
 [A\A^A_]
 [A\A^A_]
 AWAVSPA
-tSIcO
-t"IcG
+tQIcO
+t!IcG
 [A^A_]
 [A^A_]
-AVSA
-C D9
-C D)
 [A^]
 AVSA
 [A^]
-AVSI
-[A^]
-AWAVSP
-[A^A_]
-[A^]
-[A^]
-AVSH
-[A^]
+x+tMH
 AWAVATSH
 [A\A^A_]
 AWAVSH
@@ -2575,134 +2604,136 @@ AVSH
 AWAVSPI
 [A^A_]
 AWAVSPI
-IcF`H9
+IcFPH9
 [A^A_]
 AVSH
 [A^]
 AWAVSPI
 [A^A_]
-9w`vvH
-G@Hc
+9wPvvH
+G0Hc
 AVSH
 [A^]
-AWAVAUATSPH
-[A\A]A^A_]
 AWAVATSI
-D$@H
-D$PI
-\$(L
 P [A\A^A_]
 AWAVAUATSH
-w.HcJ(H
-Lcr(L
+w*IcN H
+Mcn A
 8[A\A]A^A_]
 AWAVAUATSH
 w*HcM
 w*HcM
 v*HcM
-IcF(I9
+HcC I9
 [A\A]A^A_]
 AWAVAUATSH
-(9w`
-G@Hc
-D$(A
-IcD$(H9
+(9wP
+G0Hc
+D$ A
+IcD$ H9
 ([A\A]A^A_]
 AWAVATSH
- 9w`
-G@Hc
-w*IcN(H
-Mcf(L
-w*IcN(H
-Mcf(L
-IcF(I
+ 9wP
+G0Hc
+w*IcN H
+Ic^ 
+w*IcN H
+Ic^ 
+IcF I
  [A\A^A_]
-AWAVAUATSP9w`
-G@Hc
+AWAVAUATSP9wP
+G0Hc
 =tnI
-HcC(I9
+HcC I9
 [A\A]A^A_]
-;C(}
+;C }
 AWAVAUATSPE1
-9w`v|I
-G@Hc
-IcD$(H9
+9wPv|I
+G0Hc
+IcD$ H9
 [A\A]A^A_]
 AVSA
-9w(w
-D9s(v
+9w w
+D9s v
 [A^]
 AVSH
 [A^]
 AVSH
 [A^]
-AWAVATSH
-F@Ic
-[A\A^A_]
+AWAVAUATSH
+McwHI
+GPA;G8u
+[A\A]A^A_]
 AWAVATSI
-HcG H
-[A\A^A_]
-AWAVATSI
-D$@L
+D$0L
 [A\A^A_]
 AWAVAUATSPH
-IcF(H
+~PE1
+Hc@ I
 [A\A]A^A_]
-HcGP]
-G@Hc
+HcG@]
+G0Hc
 IHcD
-G@Hc
-G@Hc
+G0Hc
+G0Hc
 AVSH
 r:H9
 [A^]
 [A^]
-AWAVAUATSH
-[A\A]A^A_]
+t>Hc
+[A^]
+t>Hc
+[A^]
 AWAVAUATSPA
-9W(v
+9W v
 dD9d
 u$D9t
-E9u(v
+E9u v
 u&D9t
 tWIc
-E9}(v
+E9} v
 RD9|
 [A\A]A^A_]
+[A^]
+AVSH
+[A^]
+AVSH
+[A^]
 AVSH
 [A^]
 AVSH
 w-Hc
-Lc5fp
 [A^]
-AWAVAUATSH
-EHIi
-[A\A]A^A_]
+AWAVSPH
+[A^A_]
 AWAVSPI
 [A^A_]
 AWAVAUATSH
-D9`hv1H
-@HIc
-w-Ic
+D9x`v1H
+@@Ic
+@pH9
+w-Hc
+CxA9
+@pHcD
+@pHcD
 	H;M
 [A\A]A^A_]
-HhL9
-w5IcM
+<$Hc
+w2IcM
 0HcP
+OpHcD
 SPHc
 AWAVATS
-9whv'I
+9w`v'I
 u-C9
-^`[A\A^A_]
+^X[A\A^A_]
 AVSH
 [A^]
 AWAVAUATSH
-X[A\A]A^A_]
-HhH9
-w1Hc
-Lc;E
-d$PI
-L$hH
+NpLcd
+H[A\A]A^A_]
+w1Ic
+Mc&D
 0HcP
 AWAVAUATSPI
 w*IcM
@@ -2710,35 +2741,49 @@ w*IcM
 AWAVAUATSH
 w*HcM
 [A\A]A^A_]
+@pHcD
 AVSH
+@pHcD
 [A^]
 AWAVSPI
 [A^A_]
-AWAVATSH
-|$@H
-|$HL
-[A\A^A_]
-AWAVAUATSH
-w-Ic
+AWAVAUATSPH
 [A\A]A^A_]
-}HIi
-EHIi
+AWAVAUATSH
+w-Hc
+CxA9
+[A\A]A^A_]
 AWAVATSA
-HcG H
+G A;G
 [A\A^A_]
 AWAVAUATSPA
-9W(v
+9W v
 u'D9
-E9u(v!I
+E9u v!I
 u)D9
 tlIc
-E9}(v
+E9} v
 [A\A]A^A_]
+t>Hi
+[A^]
 AVSH
 [A^]
 AVSH
+[A^]
+AWAVAUATSPH
+[A\A]A^A_]
 [A^]
 AWAVAUATSH
+AVSH
+[A^]
+AVSH
+[A^]
+AVSH
+[A^]
+t>Hc
+[A^]
+t>Hc
+[A^]
 AVSH
 [A^]
 AVSH
@@ -2767,17 +2812,9 @@ AWAVAUATSPA
 AWAVAUATSH
 w)Hc
 [A\A]A^A_]
-AWAVAUATSPI
-Mc~ I
-N8Lc
-[A\A]A^A_]
 RHcD
 AWAVAUATSH
-X[A\A]A^A_]
-AWAVAUATSPI
-Mc~ I
-N8Lc
-[A\A]A^A_]
+H[A\A]A^A_]
 AVSH
 [A^]
 AWAVAUATSH
@@ -2797,6 +2834,31 @@ AWAVSPL
 [A^A_]
 AWAVAUATSPH
 [A\A]A^A_]
+AVSH
+[A^]
+AVSH
+[A^]
+t>Hc
+[A^]
+AWAVAUATSPI
+Mcg I
+_$A9_8u
+O0Lc
+[A\A]A^A_]
+[A^]
+t>Hc
+[A^]
+AWAVAUATSH
+K$D9
+K$D9
+HcT0
+(Ic{
+;Jc|9
+D97u
+Ic;H
+([A\A]A^A_]
+([A\A]A^A_]
+[A^]
 AVSH
 [A^]
 AVSH
@@ -2843,11 +2905,13 @@ AWAVATSH
 [A\A^A_]
 AVSH
 [A^]
+t>Hc
+[A^]
+AWAVATSH
+[A\A^A_]
 AWAVAUATSH
 [A\A]A^A_]
-AWAVAUATSH
-[A\A]A^A_]
-W8Hc
+W0Hc
 AWAVATSH
 [A\A^A_]
 AVSH
@@ -2855,10 +2919,17 @@ AVSH
 AWAVAUATSP
 C9\5
 [A\A]A^A_]
+t>Hc
+[A^]
 AWAVAUATSPI
-Mc~ I
-N8Lc
+Mcg I
+_$A9_8u
+O0Lc
 [A\A]A^A_]
+t>Hc
+[A^]
+AVSH
+[A^]
 AWAVSPA
 [A^A_]
 AWAVSPH
@@ -2918,6 +2989,8 @@ AWAVAUATSH
 ([A\A]A^A_]
 AWAVATSH
 [A\A^A_]
+t>Hc
+[A^]
 AWAVATSH
 [A\A^A_]
 |jHc
@@ -2927,8 +3000,8 @@ AWAVAUATSPA
 [A\A]A^A_]
 AWAVATSH
 [A\A^A_]
-AWAVAUATSH
-[A\A]A^A_]
+AWAVATSH
+[A\A^A_]
 AWAVATSH
 [A\A^A_]
 t^UH
@@ -3007,25 +3080,25 @@ tDUH
 AWAVSP
 [A^A_]
 AWAVAUATSH
-w2HcK
-w.HcS
+w2HcO
+w.HcW
 8[A\A]A^A_]
 AWAVAUATSH
 8[A\A]A^A_]
 8[A\A]A^A_]
 AWAVAUATSH
-H[A\A]A^A_]
-H[A\A]A^A_]
+8[A\A]A^A_]
+8[A\A]A^A_]
 AWAVAUATSH
 ([A\A]A^A_]
 AWAVAUATSH
 w/IcL$
-Mcl$
+Ic\$
 	H;M
 8[A\A]A^A_]
 AWAVAUATSH
 w/IcL$
-Mcl$
+Ic\$
 	H;M
 8[A\A]A^A_]
 AWAVAUATSH
@@ -3064,7 +3137,6 @@ AWAVATSH
 [A\A^A_]
 AWAVAUATSH
 < t4<"
-<"t}
 8[A\A]A^A_]
 AWAVAUATSH
 <"t	E
@@ -3092,7 +3164,8 @@ AWAVAUATSH
 AWAVAUATSH
 ([A\A]A^A_]
 AWAVAUATSH
-/uiH
+t;E1
+/uoH
 w.HcM
 [A\A]A^A_]
 AWAVAUATSH
@@ -3121,10 +3194,12 @@ AWAVAUATSPD
 AWAVAUATSP9
 [A\A]A^A_]
 AWAVAUATSH
-w*IcM
-w*IcM
-=u.H
-([A\A]A^A_]
+w+IcL$
+Ic\$
+w+IcL$
+Ic\$
+=u6H
+[A\A]A^A_]
 AVSH
 [A^]
 AWAVSPI
@@ -3166,17 +3241,22 @@ AWAVAUATSH
 <&u!
 H[A\A]A^A_]
 AWAVAUATSH
-w8Ic
+w0Ic
 [A\A]A^A_]
 AVSI
 [A^]
 AWAVAUATSH
-w&HcM
+w"HcE
 h[A\A]A^A_]
+t>Hc
+[A^]
 AWAVAUATSP
 Mcg I
-O8Lc
+W$A9W8u
+O0Lc
 [A\A]A^A_]
+t>Hc
+[A^]
 AWAVAUATSD
 tgA97
 9LcP
@@ -3187,8 +3267,13 @@ tgA97
 [A\A]A^A_]
 AWAVAUATSP
 Mcg I
-O8Lc
+W$A9W8u
+O0Lc
 [A\A]A^A_]
+t>Hc
+[A^]
+t>Hc
+[A^]
 AWAVATSH
 [A\A^A_]
 AWAVATSH
@@ -3227,9 +3312,10 @@ AWAVSH
 AWAVAUATSH
 [A\A]A^A_]
 AWAVAUATSH
-Mc|$
-v"H9
 Ic\$
+v"L9
+Ic\$
+A+t$
 [A\A]A^A_]
 AWAVAUATSH
 , E9
@@ -3294,6 +3380,8 @@ AWAVAUATSPI
 [A\A]A^A_]
 AWAVSPI
 [A^A_]
+t>Hc
+[A^]
 AWAVATSH
 [A\A^A_]
 AWAVSPI
@@ -3301,45 +3389,50 @@ td</t`H
 [A^A_]
 AVSH
 [A^]
-AWAVAUATSP
+AWAVAUATSPA
 [A\A]A^A_]
 [A\A]A^A_]
 AWAVSPI
-K@Hc
+K0Hc
 [A^A_]
+t>Hc
+[A^]
+t>Hc
+[A^]
 AWAVAUATSH
-9GTH
-9GT|"
-G0F	$
-G@Ic
-;_dL
-GT;GXu[Hc
+G(F	$
+G0Ic
+;_TL
+GD;GHuZHc
 Lc;I
-W@Ic
+W0Ic
 8[A\A]A^A_]
+t>Hc
+[A^]
 AWAVAUATSH
-G`A9
-E9} 
-E9} 
-E0B	
-E@Mc
-E`A9
+GPA9
+E(B	
+E0Mc
+EPA9
 ([A\A]A^A_]
 ([A\A]A^A_]
-AWAVSPH
-[A^A_]
 AVSH
 [A^]
 AWAVSPH
 [A^A_]
 AWAVAUATSH
 Lc+I
-E;fd|ZE
-E;n\|ME
-E9n 
+E;fT|ZE
+E;nL|ME
 [A\A]A^A_]
-%lld
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/bitstring.cpp
+AVSH
+[A^]
+AVSH
+[A^]
+AWAVAUATSH
+<$Ii
+[A\A]A^A_]
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
 resizeNumBits >= 0
 !m_pInt
 GetInts()
@@ -3348,10 +3441,12 @@ CVariableBitStringBase
 false
 %llu
 console
+!pszString || pszString[nChars] == '\0'
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
 m_Tree
 m_Elements
 m_Memory
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock %s %s failed. errno = %d
 LOCK_EX
@@ -3364,14 +3459,16 @@ Unbuffered read should be called with pvData buffer that is aligned to system pa
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Seeking to a position which is not sector aligned will break unbuffered io
 cbActual < (uint32)nBufSizeWithTerminator
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utllinkedlist.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
+nGrowSize >= 0
+m_nAllocationCount >= 0
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
 m_TotalElements != InvalidIndex()
 %s overflow!
 IsValidIndex(elem)
 IsInList(before)
 Invalid index %u
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
@@ -3379,7 +3476,7 @@ CPathString
 %s%s
 IVALIDATE001
 Memory leak: mempool blocks left in memory: %d
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/mempool.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/mempool.cpp
 CMemoryPool::AddNewBlob: mode == GROW_NONE
 blobSize <= nMaxBlobSize
 pBlob
@@ -3387,23 +3484,18 @@ CMemoryPool::Alloc: ran out of memory
 k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 CMemoryPool
 unknown
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
+num >= 0
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 nSize >= 0
 m_Put >= 0
 offset >= 0
 offset >= -m_Put && offset <= INT_MAX-m_Put
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
-nSizeOfType > 0
-nGrowSize >= 0
-m_nAllocationCount >= 0
-m_unSizeOfElements == mem.m_unSizeOfElements
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
-num > 0
-num >= 0
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 CUtlString::VAppendFormat
 Assertion failed: length > k_cchMaxString
@@ -3414,7 +3506,7 @@ nMinCapacity <= k_nMaxStringSize
 len > 0 || HasError()
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/commandline.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/commandline.cpp
 (int)(intp)m_hParam != -1
 m_bInitialized
 Parameter file '%s' not found, skipping...
@@ -3430,14 +3522,12 @@ m_vecParms
 m_vecParms[i]
 m_listCommandLineOption
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
-(elem == Count()) || IsValidIndex(elem)
 Not continuing coroutine due to g_bPreventCoroutineContinue, %s
 Unknown
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/coroutine.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/coroutine.cpp
 GCoroutineMgr().IsValidCoroutine(hCoroutine)
 Coroutine_IsActive()
 test string
-coroutines.Base() == NULL
 GCoroutineMgr().IsAnyCoroutineActive()
 g_VecPCoroutineMgr[i]
 g_VecPCoroutineMgr
@@ -3447,7 +3537,7 @@ g_VecPCoroutineMgr
 m_cubSavedStack < k_cubMaxCoroutineStackSize
 m_pStackHigh
 m_pSavedStack
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/vprof.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
 m_pszName
 m_VecCoroutineStack.Count() > 1
 CCoroutineMgr
@@ -3458,9 +3548,9 @@ CCoroutine
 VEngineCvar002
 WARNING: unable to link %s and %s because one or more is a ConCommand.
 CDefaultCvar cvar
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/cvar.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/cvar.cpp
 !m_fnGlobalChangeCallback || !callback
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/debugstatssystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/debugstatssystem.cpp
 *(CDebugStatsSystem*)DebugStatsSystem()
 String pool bytes used %u, max %u, %u pools
 Total number of strings %u, longest string size %u, avg size %u
@@ -3470,7 +3560,7 @@ Bucket size : count
 nTotal number of strings %u, longest string size %u, avg size %u
 Leaked KeyValues (%u):
 %s (%u)
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/keyvaluessystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/keyvaluessystem.cpp
 size < INT_MAX
 CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
 CKeyValuesSystem::AddStringToPool: out of memory
@@ -3480,7 +3570,7 @@ m_HashItemMemPool
 m_LeakTrack
 m_mapConditionalSymbolTable
 KeyValuesSystem()
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/osversion.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
 Invalid macOS version %d.%d.%d
 MacOS %d.%d.%d
 Windows
@@ -3603,12 +3693,12 @@ CGLCreateContext
 CGLDestroyContext
 CGLGetParameter
 defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/parseurl.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/parseurl.cpp
 pchURL != NULL
 pchStart
 pchEnd
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/vstdlib/../tier1/utlstring.h
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/stringnormalize.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vstdlib/../tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/stringnormalize.cpp
 pwchSrc != NULL
 pwchDest != NULL
 CStringNormalize is full of quirks that need fixing. You just hit one. Don't pass buffers > 1kb.
@@ -3617,7 +3707,7 @@ CStringNormalization statics
 g_mapPairs
 0x%4.4X is both the source and destination of a normalization mapping
 out of order normalization entry
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
 dest != NULL
 src != NULL
 count == 0 || s1 != NULL
@@ -3652,6 +3742,7 @@ destCapacity != 0
  bps
 %i%s
 %%.%if%s
+%lld
 outsize >= ( inputbytes * 2 ) + 1
 0123456789abcdef
 outsize >= 1
@@ -3711,8 +3802,7 @@ steam://close
 steam://close/
 Error decoding string1: %s
 Error decoding string2: %s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlstring.h
-!pszString || pszString[nChars] == '\0'
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 &quot;
 &#039;
 &lt;
@@ -3720,7 +3810,6 @@ Error decoding string2: %s
 &amp;
 &nbsp;
 <br>
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlbuffer.h
 nBytes
 &apos;
 &trade;
@@ -3825,9 +3914,11 @@ nBytes
 &lsquo;
 &rsquo;
 &hellip;
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utldict.h
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools_unicode.cpp
+num > 0
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools_unicode.cpp
 invalid input pointer
 in != out
 !(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
@@ -3835,7 +3926,7 @@ count >= 0
 :/?#
 %.*s://%s
 gCURLUtils_hashTLDs
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/bitstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 bitNum >= 0 && bitNum < this->Size()
 ACADEMY
 ACCOUNTANTS
@@ -4200,14 +4291,18 @@ NSt3__117bad_function_callE
 ?21CUtlCStringConversion
 18CUtlCharConversion
 19CUtlNoEscConversion
-14CUtlMemoryBase
 N11SteamStdLib12CCommandLineE
 N11SteamStdLib12ICommandLineE
 14CUtlLinkedListIN11SteamStdLib12CCommandLine18CommandLineParam_tEiE
 10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
+10CUtlMemoryI10CUtlStringE
+10CUtlMemoryIN14CUtlLinkedListIN11SteamStdLib12CCommandLine18CommandLineParam_tEiE10ListElem_tEE
 14CUtlLinkedListI10CCoroutineiE
+10CUtlMemoryIN14CUtlLinkedListI10CCoroutineiE10ListElem_tEE
 10CUtlVectorIi10CUtlMemoryIiEE
+10CUtlMemoryIiE
 10CUtlVectorIP13CCoroutineMgr10CUtlMemoryIS1_EE
+10CUtlMemoryIP13CCoroutineMgrE
 12CDefaultCvar
 5ICvar
 17CDebugStatsSystem
@@ -4216,12 +4311,15 @@ N11SteamStdLib12ICommandLineE
 16IKeyValuesSystem
 7CUtlMapIPvii8CDefLessE
 10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 7CUtlMapIjbi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 20CUniformRandomStream
 20IUniformRandomStream
 7CUtlMapIwPKwi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIwPKwi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEwE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIwPKwi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEwE6Node_tEE
 N(knN
  &   ! 
 %$%a%b%V%U%c%Q%W%]%\%[%
@@ -4235,6 +4333,8 @@ e"d" #!#
 ,/$`,
 11CUtlHashMapIPKcb24CDefCaselessStringEquals25HashFunctorStringCaselessS1_E
 10CUtlVectorIN11CUtlHashMapIPKcb24CDefCaselessStringEquals25HashFunctorStringCaselessS2_E12HashBucket_tE10CUtlMemoryIS6_EE
+10CUtlMemoryIN11CUtlHashMapIPKcb24CDefCaselessStringEquals25HashFunctorStringCaselessS2_E12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIPKcb24CDefCaselessStringEquals25HashFunctorStringCaselessS2_E6Node_tEE
 19CVStdLibDLLValidate
 9IValidate
 stringWithCString:encoding:
@@ -4654,9 +4754,12 @@ NSt3__117bad_function_callE
 420CUniformRandomStream
 NSt3__117bad_function_callE
 520CUniformRandomStream
-d4@.
-xHDt
+d4@ &F
+F:RJ
+FF.m
 \6@>
+>>HF
+*FFF
 w-bM
 23qX66
 WVZTU
@@ -5054,26 +5157,27 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-qM~|^
-ir."
-ne	:
-.K"G
-0tER
-OQA+
-W~L*
-lI^6
-*jV{o
-XwGL
-_wo%
-?B*b2
-Im]R
-D10(O
-L#@1
-$:|]
-7#-R
-IQZ6
-3ZzL
-{Te=H
+#6%N
+>^67
+^1*MC:
+I:*q
+wk|.
+h~OiN
+a(*R!
+QP1_,S
+{{SU
+i:<J
+m@cpTJn
+W!8N
+!9Z_|
+pM4`<"t
+J[(VQ~
+,F9h
+15~Z<
+{.xkew
+iRil d
+8&S"
+1[s3
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -5131,7 +5235,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240524204500Z0/
+240527183346Z0/
 1/0-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -5140,16 +5244,14 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		9ANp0vAvuo2VuRClS6fb0N7rB/M=
+		8E0gmiiOjZNMDRDTFHVfaoNdk28=
 		</data>
 	</array>
 </dict>
 </plist>
-{!Q$
-#^Ns
-WJNj
-OA45
-20240524204516Z0
+icw)
+ FaH
+20240527183420Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -5204,10 +5306,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240524204516Z0#
-<Uw>
+240527183420Z0#
 pC)t
-~8#O
+ +1}tum
+jQk$
+$ ##?
+;mU,6
 __TEXT
 __text
 __TEXT
@@ -5215,11 +5319,11 @@ __stubs
 __TEXT
 __stub_helper
 __TEXT
+__gcc_except_tab__TEXT
 __cstring
 __TEXT
 __const
 __TEXT
-__gcc_except_tab__TEXT
 __objc_methname
 __TEXT
 __unwind_info
@@ -5260,8 +5364,10 @@ __LINKEDIT
 /usr/lib/libobjc.A.dylib
 TH|@
 R*|@
-;9@g
-;9`e
+	A{9
+R	A;9
+	E{9
+R	E;9
 TK	@
 R)|@
 IEI*(}
@@ -5270,116 +5376,124 @@ jr@yI
 j.@iT
 	*u}	
 hr@y
+Th~@9
+7iz@9
 ?i(8
- 7hJ@y
+hz@9
+6h~@9h
+|@9I
+|@9	
+hz@9
+Rh~@9
+Th&C
+Rhz@9
+ 7h:@y
 _8?)
 6i(8h
- 7hJ@y(
+4h~@9h
+ 7h:@y(
 6i(8h
 ?i(8h
-ThJ@yH
+Th:@yH
 6i(8h
 4i(8h
-Th"@
 h^@9
 j98v
 j48u
 h.@y
+6`&D
 R* *
 Tn}@
-=h"@
-Th"@
-T|*@
-9h*@
-K!C7
+@9(2
+9h"@
+K!C5
+j&C)
+/t)l.
 R* *
 R* *
-Tv*@
-Tv*@
 R* *
 R* *
-4h*@
-Th"@
+4h"@
 R( )
 R)|)
 R( )
 Rh!	
 TM}@
-Th*@
+Th"@
 R(!*
 R*I(8
 A@q+
+R	g	
 Rl"*
 TN}@
 A@q+
-Twb@
 RH!	
 T-}@
-Th*@
+Th"@
 R(!*
-&B)3
 	!B)
 	!B)
-TJ!	
-RJ!	
-RH!	
 R($*
 kD	A:a
-TJ!	
-RJ!	
-RH!	
 @9(	
-T9|@
+T:|@
 TJ!	
 RJ!	
-T9|@
-R(#	
+T:|@
+RH#	
 RH!	
 RK}@
 Rh!	
-	Et9
-R	E49
-(I49
-*At9
-R*A49
+	Es9
+R	E39
+6`oF
+(I39
+*As9
+R*A39
 T	]	
 ii8J	
 ii8J	
 yixJ	
 +yhxJ	
 ii8J	
- e	0
 #A)h&
 6 +B
-4":	0
 @9M!
 @9M!
 TH! 
-T6|@
-bk	P
-	qx9
-R	q89
-Bi	p
-	yx9I
-R	y89@\	P
-	ux9I
-R	u89@Y	P
-	}x9I
-R	}89
-"S	p
-R"D	
-`0	0
-"3	p
+"{	P
+Bk	0
+	Qw9
+R	Q79 .
+	Yw9I
+R	Y79
+	Uw9I
+R	U79
+	]w9I
+R	]79
+bC	0
+i1	P
+Thgw95
+7ug79
+Ba	P
 K"}@
-b8	0
-"8	P
-6@#	0
-b/	P
-B-	P
 Thjv8H
 Thjw8
+T@{	0
+T@u	0
+ t	0
+T n	0
+b}	p
+B~	p
+`f	0
+@e	0
+bq	p
+"m	p
 h(8*
+"i	0
 h(8l
+J]	p
+"X	P
 7.},
 mJh8
 ?i78
@@ -5413,6 +5527,7 @@ h+8Hik8l
 k:86
 k:86
 ik8k
+@9 -
 hji8
 tju8
 _8?q
@@ -5435,14 +5550,7 @@ R	kzx*
 ji8?
 7HK6
 7J)(
-}	X)
-H{	X
-Ip	X)
 .@8w
-hM	X
-	I	X)
-hF	X
-iD	X)
 @9 z
 Tkj 8
 lj 8
@@ -5451,8 +5559,12 @@ qj08
 mj08-
 R(}@
 /@9)
+	]	X)
 <!(a
+	T	X)
+Q	X)
 <!(a
+H	X)
 T(|@
 @ya|@
 T	|@
@@ -5484,6 +5596,9 @@ q )Wz
 q )Wz
 )Zzh
 (ihx
+ 6 d
+ 6@W
+j&A)
 ?A@q
 ?A@q
 ++K*K
@@ -5542,12 +5657,10 @@ Tkzj
 Tjzi
  *	P
 .@8h
+	)tb
 @9	!
-7h"@
-7h"@
-Th"@
 %lld
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/bitstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
 resizeNumBits >= 0
 !m_pInt
 GetInts()
@@ -5556,12 +5669,14 @@ CVariableBitStringBase
 false
 %llu
 console
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 !pszString || pszString[nChars] == '\0'
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
+num > 0
 m_Tree
 m_Elements
 m_Memory
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock %s %s failed. errno = %d
@@ -5575,16 +5690,18 @@ Unbuffered read should be called with pvData buffer that is aligned to system pa
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Seeking to a position which is not sector aligned will break unbuffered io
 cbActual < (uint32)nBufSizeWithTerminator
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlbuffer.h
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
+nGrowSize >= 0
+m_nAllocationCount >= 0
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utllinkedlist.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
 m_TotalElements != InvalidIndex()
 %s overflow!
 IsValidIndex(elem)
 IsInList(before)
 Invalid index %u
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
@@ -5592,7 +5709,7 @@ CPathString
 %s%s
 IVALIDATE001
 Memory leak: mempool blocks left in memory: %d
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/mempool.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/mempool.cpp
 CMemoryPool::AddNewBlob: mode == GROW_NONE
 blobSize <= nMaxBlobSize
 pBlob
@@ -5600,23 +5717,18 @@ CMemoryPool::Alloc: ran out of memory
 k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 CMemoryPool
 unknown
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
+num >= 0
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 nSize >= 0
 m_Put >= 0
 offset >= 0
 offset >= -m_Put && offset <= INT_MAX-m_Put
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
-nSizeOfType > 0
-nGrowSize >= 0
-m_nAllocationCount >= 0
-m_unSizeOfElements == mem.m_unSizeOfElements
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
-num > 0
-num >= 0
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 CUtlString::VAppendFormat
 Assertion failed: length > k_cchMaxString
@@ -5627,7 +5739,7 @@ nMinCapacity <= k_nMaxStringSize
 len > 0 || HasError()
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/commandline.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/commandline.cpp
 (int)(intp)m_hParam != -1
 m_bInitialized
 Parameter file '%s' not found, skipping...
@@ -5643,14 +5755,12 @@ m_vecParms
 m_vecParms[i]
 m_listCommandLineOption
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
-(elem == Count()) || IsValidIndex(elem)
 Not continuing coroutine due to g_bPreventCoroutineContinue, %s
 Unknown
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/coroutine.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/coroutine.cpp
 GCoroutineMgr().IsValidCoroutine(hCoroutine)
 Coroutine_IsActive()
 test string
-coroutines.Base() == NULL
 GCoroutineMgr().IsAnyCoroutineActive()
 g_VecPCoroutineMgr[i]
 g_VecPCoroutineMgr
@@ -5660,7 +5770,7 @@ g_VecPCoroutineMgr
 m_cubSavedStack < k_cubMaxCoroutineStackSize
 m_pStackHigh
 m_pSavedStack
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/vprof.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
 m_pszName
 m_VecCoroutineStack.Count() > 1
 CCoroutineMgr
@@ -5671,9 +5781,9 @@ CCoroutine
 VEngineCvar002
 WARNING: unable to link %s and %s because one or more is a ConCommand.
 CDefaultCvar cvar
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/cvar.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/cvar.cpp
 !m_fnGlobalChangeCallback || !callback
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/debugstatssystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/debugstatssystem.cpp
 *(CDebugStatsSystem*)DebugStatsSystem()
 String pool bytes used %u, max %u, %u pools
 Total number of strings %u, longest string size %u, avg size %u
@@ -5683,7 +5793,7 @@ Bucket size : count
 nTotal number of strings %u, longest string size %u, avg size %u
 Leaked KeyValues (%u):
 %s (%u)
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/keyvaluessystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/keyvaluessystem.cpp
 size < INT_MAX
 CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
 CKeyValuesSystem::AddStringToPool: out of memory
@@ -5693,7 +5803,7 @@ m_HashItemMemPool
 m_LeakTrack
 m_mapConditionalSymbolTable
 KeyValuesSystem()
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/osversion.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
 Invalid macOS version %d.%d.%d
 MacOS %d.%d.%d
 Windows
@@ -5816,12 +5926,12 @@ CGLCreateContext
 CGLDestroyContext
 CGLGetParameter
 defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/parseurl.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/parseurl.cpp
 pchURL != NULL
 pchStart
 pchEnd
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/vstdlib/../tier1/utlstring.h
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/stringnormalize.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vstdlib/../tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/stringnormalize.cpp
 pwchSrc != NULL
 pwchDest != NULL
 CStringNormalize is full of quirks that need fixing. You just hit one. Don't pass buffers > 1kb.
@@ -5830,7 +5940,7 @@ CStringNormalization statics
 g_mapPairs
 0x%4.4X is both the source and destination of a normalization mapping
 out of order normalization entry
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
 dest != NULL
 src != NULL
 count == 0 || s1 != NULL
@@ -6034,8 +6144,8 @@ nBytes
 &lsquo;
 &rsquo;
 &hellip;
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utldict.h
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools_unicode.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools_unicode.cpp
 invalid input pointer
 in != out
 !(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
@@ -6043,7 +6153,7 @@ count >= 0
 :/?#
 %.*s://%s
 gCURLUtils_hashTLDs
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/bitstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 bitNum >= 0 && bitNum < this->Size()
 ACADEMY
 ACCOUNTANTS
@@ -6408,14 +6518,18 @@ NSt3__117bad_function_callE
 21CUtlCStringConversion
 18CUtlCharConversion
 19CUtlNoEscConversion
-14CUtlMemoryBase
 N11SteamStdLib12CCommandLineE
 N11SteamStdLib12ICommandLineE
 14CUtlLinkedListIN11SteamStdLib12CCommandLine18CommandLineParam_tEiE
 10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
+10CUtlMemoryI10CUtlStringE
+10CUtlMemoryIN14CUtlLinkedListIN11SteamStdLib12CCommandLine18CommandLineParam_tEiE10ListElem_tEE
 14CUtlLinkedListI10CCoroutineiE
+10CUtlMemoryIN14CUtlLinkedListI10CCoroutineiE10ListElem_tEE
 10CUtlVectorIi10CUtlMemoryIiEE
+10CUtlMemoryIiE
 10CUtlVectorIP13CCoroutineMgr10CUtlMemoryIS1_EE
+10CUtlMemoryIP13CCoroutineMgrE
 12CDefaultCvar
 5ICvar
 17CDebugStatsSystem
@@ -6424,14 +6538,17 @@ N11SteamStdLib12ICommandLineE
 16IKeyValuesSystem
 7CUtlMapIPvii8CDefLessE
 10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPvii8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 7CUtlMapIjbi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS2_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjbi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
 ?BEHKNQTWZ]`cfilorux{~
 adgj
 ?20CUniformRandomStream
 20IUniformRandomStream
 7CUtlMapIwPKwi8CDefLessE
 10CUtlRBTreeIN7CUtlMapIwPKwi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEwE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIwPKwi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEwE6Node_tEE
 $tI(knN
  &   ! 
 %$%a%b%V%U%c%Q%W%]%\%[%
@@ -6445,6 +6562,8 @@ e"d" #!#
 ,/$`,
 11CUtlHashMapIPKcb24CDefCaselessStringEquals25HashFunctorStringCaselessS1_E
 10CUtlVectorIN11CUtlHashMapIPKcb24CDefCaselessStringEquals25HashFunctorStringCaselessS2_E12HashBucket_tE10CUtlMemoryIS6_EE
+10CUtlMemoryIN11CUtlHashMapIPKcb24CDefCaselessStringEquals25HashFunctorStringCaselessS2_E12HashBucket_tEE
+10CUtlMemoryIN11CUtlHashMapIPKcb24CDefCaselessStringEquals25HashFunctorStringCaselessS2_E6Node_tEE
 19CVStdLibDLLValidate
 9IValidate
 stringWithCString:encoding:
@@ -6863,6 +6982,7 @@ S20CUniformRandomStream
 4I20CUniformRandomStream
 pDPP
 `$4 
+4XXX
 Ll(D
 lD,T
 lDD$0||
@@ -7260,21 +7380,30 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-gVOt
-6">=w
-~	{f!
-Un='
-h%Kpb
-QA1}
-0itJ
-O.lkb
-%-Gc
-9m<o
-"&)[m
-XN0e
-(-AAl
-|_t=
-k*pU
+/s]0S5
+|9Ql
+#%#5W
+7hJ<D
+IlZ"
+j[%k&
+p7Z)
+0/N@
+o$L5O
+g5Ud
+L@gA
+@XpM$
+6r~h
+wdxZX
+$xHf4
+]KO3
+P7c^
+YD9{ce'
+z`k8	As
+D%DMh
+Fqvg
+KD3{
+R ee
+MZ=R`
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -7332,7 +7461,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240524204500Z0/
+240527183346Z0/
 1/0-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -7341,38 +7470,30 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		4UTijdRtTwNjWr4gn+uWVsoONEA=
+		N9ENem/G2gCPaJlgMf24hHIUZwo=
 		</data>
 	</array>
 </dict>
 </plist>
-}--m\
-lip0[!
-]<z!
-RZ"#
-20240524204516Z0
+L7)M
+N#,"yi
+20240527183420Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240502205015Z
-240613205014Z0B1
-Timestamp Signer NWK11
+240502203557Z
+240613203556Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-xRE$I
-Bd|) '{J
-k)pI
-\l5N
-M0&e
+5.$r
+>fPRh
+_#/%>+
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-6E  
-Ga	L
-MKU0
-'p/{t
-9EC8
+@(5p
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -7411,10 +7532,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240524204516Z0#
-[Y>L
-NZ-VC
-I@uV
-iB0,
-BN#v@
-7@z/Z1
+240527183420Z0#
+FuP+
+s$=L
+pC)t
+9'<d
+tXT 
+N>vC

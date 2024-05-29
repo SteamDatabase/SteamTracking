@@ -2114,6 +2114,7 @@ Du må logge av macOS for at endringen skal tre i kraft."
 "Steam_BackgroundDownloadsAllow"	"Tillat alltid nedlastinger i bakgrunnen"
 "Steam_BackgroundDownloadsDeny"	"Tillat aldri nedlastinger i bakgrunnen"
 
+// NOTE: no longer referenced, old vgui?
 "Steam_GameProperties_SteamInputSettings"	"Innstillinger for Steam Input"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Innstilling for Steam Input per spill (krever omstart av spill)"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "Tvunget av"

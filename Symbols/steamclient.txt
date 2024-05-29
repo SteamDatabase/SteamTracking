@@ -365,7 +365,6 @@
  V_AppendParamToURL
  V_AppendSlash
  V_BasicHtmlEntityEncode
- V_CP437CharsToUTF8
  V_ComposeFileName
  V_ConvertUUIDToString(V_UUID const*, EUUIDStringFlags, char*, int)
  V_CopyAndFixSlashes

@@ -52,16 +52,24 @@ enum EClientNotificationType {
 	k_EClientNotificationType_FamilyPurchaseRequestResponse = 47;
 	k_EClientNotificationType_ParentalFeatureRequest = 48;
 	k_EClientNotificationType_ParentalPlaytimeRequest = 49;
-	k_EClientNotificationType_GRE = 50;
+	k_EClientNotificationType_GameRecordingError = 50;
 	k_EClientNotificationType_ParentalFeatureResponse = 51;
 	k_EClientNotificationType_ParentalPlaytimeResponse = 52;
 	k_EClientNotificationType_RequestedGameAdded = 53;
+	k_EClientNotificationType_ClipDownloaded = 54;
+	k_EClientNotificationType_GameRecordingStart = 55;
+	k_EClientNotificationType_GameRecordingStop = 56;
 }
 
 enum ESystemUpdateNotificationType {
 	k_ESystemUpdateNotificationType_Invalid = 0;
 	k_ESystemUpdateNotificationType_Available = 1;
 	k_ESystemUpdateNotificationType_NeedsRestart = 2;
+}
+
+enum EGameRecordingErrorType {
+	k_EGameRecordingErrorGeneral = 1;
+	k_EGameRecordingErrorLowDiskSpace = 2;
 }
 
 message CClientNotificationCloudSyncFailure {
@@ -246,6 +254,20 @@ message CClientNotificationPlaytimeWarning {
 	optional uint32 playtime_remaining = 2;
 }
 
-message CClientNotificationGRE {
+message CClientNotificationGameRecordingError {
 	optional fixed64 game_id = 1;
+	optional .EGameRecordingErrorType error_type = 2 [default = k_EGameRecordingErrorGeneral];
+}
+
+message CClientNotificationClipDownloaded {
+	optional string clip_id = 1;
+}
+
+message CClientNotificationGameRecordingStart {
+	optional fixed64 game_id = 1;
+}
+
+message CClientNotificationGameRecordingStop {
+	optional fixed64 game_id = 1;
+	optional string clip_id = 2;
 }

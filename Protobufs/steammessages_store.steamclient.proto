@@ -314,6 +314,25 @@ message CStore_UpdatePackageReservations_Response {
 	repeated .CPackageReservationStatus reservation_status = 1;
 }
 
+message CStore_GetWishlistDemoEmailStatus_Request {
+	optional uint32 appid = 1;
+	optional uint32 demo_appid = 2;
+}
+
+message CStore_GetWishlistDemoEmailStatus_Response {
+	optional bool can_fire = 1 [default = false];
+	optional uint32 time_staged = 2;
+	optional uint32 demo_release_date = 3;
+}
+
+message CStore_QueueWishlistDemoEmailToFire_Request {
+	optional uint32 appid = 1;
+	optional uint32 demo_appid = 2;
+}
+
+message CStore_QueueWishlistDemoEmailToFire_Response {
+}
+
 message CReservationPositionMessage {
 	optional uint32 edistributor = 1;
 	optional string product_identifier = 2;
@@ -389,6 +408,8 @@ service Store {
 	rpc GetTrendingAppsAmongFriends (.CStore_GetTrendingAppsAmongFriends_Request) returns (.CStore_GetTrendingAppsAmongFriends_Response);
 	rpc MigratePartnerLinkTracking (.CStore_MigratePartnerLinkTracking_Notification) returns (.NoResponse);
 	rpc UpdatePackageReservations (.CStore_UpdatePackageReservations_Request) returns (.CStore_UpdatePackageReservations_Response);
+	rpc GetWishlistDemoEmailStatus (.CStore_GetWishlistDemoEmailStatus_Request) returns (.CStore_GetWishlistDemoEmailStatus_Response);
+	rpc QueueWishlistDemoEmailToFire (.CStore_QueueWishlistDemoEmailToFire_Request) returns (.CStore_QueueWishlistDemoEmailToFire_Response);
 	rpc SetReservationPositionMessage (.CStore_SetReservationPositionMessage_Request) returns (.CStore_SetReservationPositionMessage_Response);
 	rpc DeleteReservationPositionMessage (.CStore_DeleteReservationPositionMessage_Request) returns (.CStore_DeleteReservationPositionMessage_Response);
 	rpc GetAllReservationPositionMessages (.CStore_GetAllReservationPositionMessages_Request) returns (.CStore_GetAllReservationPositionMessages_Response);

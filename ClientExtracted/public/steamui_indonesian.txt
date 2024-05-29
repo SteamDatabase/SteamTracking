@@ -133,7 +133,7 @@ Mohon tunggu sebentar."
 "Steam_Login_Title"		"Login Steam"
 "Steam_RefreshLogin_Title"		"Refresh Login Steam"
 "Steam_Login_CreateNewAccount"	"Buat akun baru..."
-"Steam_Login_RetrievePassword"	"Tidak dapat masuk..."
+"Steam_Login_RetrievePassword"	"Tidak bisa login..."
 "Steam_Login_NoAccount"		"Tidak punya akun Steam?"
 "Steam_Login_ForgotPassword"	"Butuh bantuan untuk masuk?"
 "Steam_Login_CapsLockWarning"	"Caps Lock Aktif"
@@ -1398,7 +1398,7 @@ Mohon tunggu sebentar."
 "Steam_DecryptingSteamCaches_Label"	"Mohon tunggu sementara Steam membuka file game."
 
 "SteamUI_Enable_Proprietary_Drivers_Title" "Aktifkan Paket Driver Proprietary"
-"SteamUI_Enable_Proprietary_Drivers_Info" "Steam memerlukan driver proprietary dari vendor agar dapat memberikan performa yang terbaik. Mohon aktifkan paket driver proprietary di pengaturan sistemmu."
+"SteamUI_Enable_Proprietary_Drivers_Info" "Steam memerlukan driver proprietary dari vendor agar dapat memberikan kinerja yang terbaik. Mohon aktifkan paket driver proprietary di pengaturan sistemmu."
 "SteamUI_Enable_Proprietary_Drivers_Button" "Aktifkan"
 
 "SteamUI_Upgrade_Installed_VideoDriver_Package" "Versi terbaru dari paket driver grafis yang terinstal, %installed_package_name%, telah tersedia: %installed_package_version%.\nKami menyarankan untuk meningkatkan sistemmu ke paket driver baru ini."
@@ -1406,7 +1406,7 @@ Mohon tunggu sebentar."
 
 "SteamUI_Candidate_VideoDriver_Package_Available_Title" "Paket Driver Baru Tersedia"
 "SteamUI_SwitchTo_Candidate_VideoDriver_Package_Info" "Paket driver grafis yang terinstal sekarang adalah %installed_package_name%, versi %installed_package_version%.\nPaket driver grafis %candidate_package_name%, versi %candidate_package_version% memiliki versi driver yang lebih baru.\nKami menyarankan untuk meningkatkan ke paket ini."
-"SteamUI_Install_Candidate_VideoDriver_Package_Info" "Kami menyarankan untuk menginstal paket driver grafis %candidate_package_name% untuk mendapatkan performa terbaik."
+"SteamUI_Install_Candidate_VideoDriver_Package_Info" "Kami menyarankan untuk menginstal paket driver grafis %candidate_package_name% untuk mendapatkan kinerja terbaik."
 "SteamUI_Install_Candidate_VideoDriver_Button" "Instal"
 
 "SteamUI_VideoDriver_Recommendation_None_Title" "Verifikasi Driver Grafis"
@@ -1416,7 +1416,7 @@ Mohon tunggu sebentar."
 "SteamUI_VideoDriver_Detection_Disabled_Info" "Steam tidak dapat melakukan pendeteksian driver grafis di sistemmu."
 
 "SteamUI_Add_Package_Repository_Title" "Tambahkan Repositori Paket"
-"SteamUI_Add_Package_Repository_Info" "Kami menyarankan untuk menginstal repositori paket %repository_name% untuk performa driver grafis yang terbaik."
+"SteamUI_Add_Package_Repository_Info" "Kami menyarankan untuk menginstal repositori paket %repository_name% untuk kinerja driver grafis yang terbaik."
 "SteamUI_Add_Package_Repository_Button" "Tambahkan"
 
 "SteamUI_Update_Package_Index_Title" "Pengelolaan Paket"
@@ -1445,16 +1445,16 @@ Mohon tunggu sebentar."
 "SteamUI_SuppressOutdated"		"Jangan tampilkan peringatan ini lagi"
 
 "SteamUI_DriverUnsupported_Title"	"GPU Tidak Didukung"
-"SteamUI_DriverUnsupported_Info"	"Hardware grafismu tidak memenuhi persyaratan minimum yang telah ditentukan untuk game ini. Jika kamu tetap lanjut menjalankan gamenya, masalah pada kestabilan atau performa dalam game dapat terjadi. Kami sangat menyarankan untuk mengeklik tautan di bawah ini dan perbarui driver grafismu ke versi yang terbaru dari vendor drivermu."
+"SteamUI_DriverUnsupported_Info"	"Hardware grafismu tidak memenuhi persyaratan minimum yang telah ditentukan untuk game ini. Jika kamu tetap lanjut menjalankan gamenya, masalah pada kestabilan atau kinerja dalam game dapat terjadi. Kami sangat menyarankan untuk mengeklik tautan di bawah ini dan perbarui driver grafismu ke versi yang terbaru dari vendor drivermu."
 "SteamUI_DriverDenied_Info"		"Hardware grafismu tidak memenuhi persyaratan minimum yang telah ditentukan untuk game ini. Game ini tidak dapat dijalankan di hardware ini."
 "SteamUI_UnsupportedUrlLabel"		"Tampilkan persyaratan minimum..."
 "SteamUI_ContinueUnsupported"		"Tetap Lanjutkan"
 "SteamUI_SuppressUnsupported"		"Jangan tampilkan peringatan ini lagi"
 
 "SteamUI_DriverUnknown_Title"		"GPU Tidak Dikenal"
-"SteamUI_DriverUnknown_Info"		"GPU-mu tidak ditemukan di dalam basis data kami. Karena itu, masalah kestabilan atau performa dalam game dapat terjadi. Kami akan sangat menghargai bantuanmu dalam memastikan bahwa kami memiliki informasi yang cukup untuk mengidentifikasi GPU dan driver-mu di masa mendatang. Dengan mengeklik tombol Unggah Detail kamu dapat membantu kami melacak GPU yang belum ada di basis data kami."
+"SteamUI_DriverUnknown_Info"		"GPU-mu tidak ditemukan di dalam basis data kami. Karena itu, masalah kestabilan atau kinerja dalam game dapat terjadi. Kami akan sangat menghargai bantuanmu dalam memastikan bahwa kami memiliki informasi yang cukup untuk mengidentifikasi GPU dan driver-mu di masa mendatang. Dengan mengeklik tombol Unggah Rincian, kamu dapat membantu kami melacak GPU yang belum ada di basis data kami."
 "SteamUI_UnknownUrlLabel"		"Lihat Kebijakan Privasi Valve..."
-"SteamUI_UnknownUpload"			"Rincian Pengunggahan"
+"SteamUI_UnknownUpload"			"Unggah Rincian"
 "SteamUI_ContinueUnknown"		"Tetap Lanjutkan"
 "SteamUI_SuppressUnknown"		"Jangan tampilkan peringatan ini lagi"
 
@@ -1474,8 +1474,8 @@ Mohon tunggu sebentar."
 "SteamUI_MBPGPUWarning_Title"	"Steam - Beberapa GPU terdeteksi"
 "Steam_MBPGPUWarning_Info"	"MacBook Pro-mu memiliki dua GPU dan sedang dikonfigurasi untuk efisiensi daya, bukan kecepatan.
 
-Untuk pengalaman terbaik, kami menyarankan untuk beralih ke GPU dengan performa yang lebih baik dengan membuka 
-panel preferensi sistem Penghemat Energi dan pilih grafis \"Performa Tinggi\".
+Untuk pengalaman terbaik, kami menyarankan untuk beralih ke GPU dengan kinerja yang lebih baik dengan membuka 
+panel preferensi sistem Penghemat Energi dan pilih grafis \"Kinerja Tinggi\".
 
 Kamu harus logout dari OS X agar perubahan dapat diterapkan."
 
@@ -2112,6 +2112,7 @@ Kamu harus logout dari OS X agar perubahan dapat diterapkan."
 "Steam_BackgroundDownloadsAllow"	"Selalu izinkan unduhan di latar belakang"
 "Steam_BackgroundDownloadsDeny"	"Jangan izinkan unduhan di latar belakang"
 
+// NOTE: no longer referenced, old vgui?
 "Steam_GameProperties_SteamInputSettings"	"Pengaturan Steam Input"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn" "Pengaturan Steam Input per Game (Restart game dibutuhkan)"
 "Steam_GameProperties_SteamInputSettings_PerGameOptIn_ForcedOff" "Dimatikan Paksa"
@@ -2497,7 +2498,7 @@ Kamu harus logout dari OS X agar perubahan dapat diterapkan."
 "Steam_RegionRestrictedCode_SupportURL"	"https://support.steampowered.com/kb/1266-QFZC-2141/"
 
 "Steam_FragmentationBad_Title"			"Steam - Peringatan fragmentasi disk"
-"Steam_FragmentationBad_Info"				"File game-mu memiliki level fragmentasi disk yang tinggi. Hal ini dapat mengakibatkan waktu muat melambat dan performa game menurun. \n\nSteam dapat mengoptimasi file game-mu sekarang.\n"
+"Steam_FragmentationBad_Info"				"File game-mu memiliki level fragmentasi disk yang tinggi. Hal ini dapat mengakibatkan waktu muat melambat dan kinerja game menurun. \n\nSteam dapat mengoptimasi file game-mu sekarang.\n"
 "Steam_FragmentationBad_RunDefrag"		"Jalankan defrag"
 "Steam_FragmentationBad_RunGame"			"Mainkan game"
 
@@ -3460,7 +3461,7 @@ Buat Teman baru di Steam dengan mengirimkan hadiah ke kenalanmu."
 
 "Steam_ValidateGame_GameRunning"	"Mohon tutup game atau alat yang masih berjalan sebelum mencoba untuk memverifikasi file lokalmu."
 
-"Steam_RegionLabel"	"Wilayah Unduh"
+"Steam_RegionLabel"	"Wilayah Pengunduhan"
 "Steam_RegionInfo"	"Steam memilih lokasi server unduh terdekat, namun masih dapat diganti"
 "Steam_LibrariesLabel"	"Koleksi Konten"
 "Steam_DownloadRestrictionsLabel"	"Pembatasan Unduhan"
@@ -4393,7 +4394,7 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 "Steam_OtherSessionPlaying_Title" "Eror - Steam"
 "Steam_OtherSessionPlaying_Text" "Kamu sedang login di komputer lain yang sedang menjalankan \"%existing_app%\".\nMeluncurkan \"%launching_app%\" di sini akan memutuskan sesi di tempat lain."
 
-"Steam_SystemRequirementWarning_Title" "Peringatan Performa"
+"Steam_SystemRequirementWarning_Title" "Peringatan Kinerja"
 "Steam_SystemRequirementWarning_Text" "Sistemmu tidak memenuhi persyaratan minimum sistem yang direkomendasikan oleh %game%."
 "Steam_SystemRequirementWarning_Link" "Tampilkan persyaratan sistem"
 
@@ -4599,11 +4600,11 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 "Steam_Settings_Streaming_QualityBeautiful" "Indah"
 "Steam_Settings_Streaming_AdvancedHostOptions" "Opsi Hosting Lanjutan"
 "Steam_Settings_Streaming_AdvancedHostOptions_Title" "Opsi Hosting Lanjutan"
-"Steam_Settings_Streaming_AdvancedHostOptions_Description" "Untuk meningkatkan performa streaming dari komputer ini, coba kurangi resolusi game atau sesuaikan pengaturan berikut."
+"Steam_Settings_Streaming_AdvancedHostOptions_Description" "Untuk meningkatkan kinerja streaming dari komputer ini, coba kurangi resolusi game atau sesuaikan pengaturan berikut."
 "Steam_Settings_Streaming_AdvancedClientOptions" "Opsi Client Lanjutan"
 "Steam_Settings_Streaming_AdvancedClientOptions_Title" "Opsi Client Lanjutan"
-"Steam_Settings_Streaming_AdvancedClientOptions_DescriptionLocal" "Untuk meningkatkan performa streaming ke komputer ini, coba kurangi resolusi game atau sesuaikan pengaturan berikut."
-"Steam_Settings_Streaming_AdvancedClientOptions_DescriptionRemote" "Untuk meningkatkan performa streaming ke %streamingclient%, coba kurangi resolusi game atau sesuaikan pengaturan berikut."
+"Steam_Settings_Streaming_AdvancedClientOptions_DescriptionLocal" "Untuk meningkatkan kinerja streaming ke komputer ini, coba kurangi resolusi game atau sesuaikan pengaturan berikut."
+"Steam_Settings_Streaming_AdvancedClientOptions_DescriptionRemote" "Untuk meningkatkan kinerja streaming ke %streamingclient%, coba kurangi resolusi game atau sesuaikan pengaturan berikut."
 "Steam_Settings_Streaming_EnableCaptureNVFBC" "Gunakan Capture NVFBC di GPU NVIDIA"
 "Steam_Settings_Streaming_EnableHardwareEncoding" "Aktifkan hardware pengodean"
 "Steam_Settings_Streaming_EnableHardwareEncodingNVIDIA" "Aktifkan hardware pengodean di GPU NVIDIA"
@@ -4612,7 +4613,7 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 "Steam_Settings_Streaming_EnableHardwareDecoding" "Aktifkan pendekodean hardware"
 "Steam_Settings_Streaming_EnableTrafficPriority_Description" "Jika kamu memiliki router yang lebih baru atau lebih baik, kamu juga dapat mengaktifkan pemprioritasan lalu lintas jaringan."
 "Steam_Settings_Streaming_EnableTrafficPriority" "Pemprioritasan lalu lintas jaringan"
-"Steam_Settings_Streaming_PerformanceOverlay" "Overlay Performa"
+"Steam_Settings_Streaming_PerformanceOverlay" "Overlay Kinerja"
 "Steam_Settings_Streaming_PerformanceOverlayDisabled" "Nonaktif"
 "Steam_Settings_Streaming_PerformanceOverlayIcons" "Ikon"
 "Steam_Settings_Streaming_PerformanceOverlayDetails" "Rincian"
@@ -4654,7 +4655,7 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 "Steam_Settings_Streaming_P2PScopeOnlyMe" "Perangkat Saya"
 "Steam_Settings_Streaming_P2PScopeEveryone" "Semua Perangkat"
 "Steam_Settings_Streaming_ChangeDesktopResolution" "Samakan resolusi desktop dengan client yang melakukan stream"
-"Steam_Settings_Streaming_DynamicallyAdjustResolution" "Atur resolusi capture secara dinamis untuk meningkatkan performa"
+"Steam_Settings_Streaming_DynamicallyAdjustResolution" "Atur resolusi capture secara dinamis untuk meningkatkan kinerja"
 "Steam_Settings_Streaming_AudioChannelSelect" "Konfigurasi Speaker"
 "Steam_Settings_Streaming_AudioChannelAuto" "Deteksi Otomatis"
 "Steam_Settings_Streaming_AudioChannelAuto_Channels" "Deteksi Otomatis (%channels%)"
@@ -4696,7 +4697,7 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 
 "SteamUI_StreamingIntro_Title"		"Selamat Datang di Steam Remote Play"
 "SteamUI_StreamingIntro"			"Kamu akan menjalankan game ini di komputer lain dan memainkannya di sini menggunakan Steam Remote Play."
-"SteamUI_StreamingIntro2"			"Pengalaman bermainmu bisa berbeda tergantung dari hardware dan jaringan rumahmu. Untuk meningkatkan performa, kunjungi pengaturan Remote Play."
+"SteamUI_StreamingIntro2"			"Pengalaman bermainmu bisa berbeda tergantung dari hardware dan jaringan rumahmu. Untuk meningkatkan kinerja, kunjungi pengaturan Remote Play."
 "SteamUI_StreamLaunch_ProgressTitle"		"%game% - Peluncuran Stream"
 "SteamUI_StreamLaunch_ServerProgress"			"Bersiap untuk streaming %game%..."
 "SteamUI_StreamLaunch_RemoteStart"				"Bersiap untuk streaming %game%..."
@@ -4815,8 +4816,8 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 "Steam_ViewSSAInBrowser" "Kamu harus membaca dan menyetujui Perjanjian Pelanggan Steam.\n<a href=\"%url%\">Klik Di sini</a> untuk membuka dokumen persetujuan di perambanmu. Kembali ke jendela ini untuk melanjutkan."
 
 "Steam_VR2DGameWarning_Title" "Peringatan"
-"Steam_VR2DGameWarning_Desc" "%launching_app% akan diluncurkan di lingkungan VR HMD dan juga di desktop-mu.\nPerforma mungkin tidak dapat berjalan dalam mode ini. Untuk meluncurkan game ini hanya di desktop-mu, silakan tutup SteamVR sebelum meluncurkan game."
-"Steam_VR2DGameWarning_Desc_Old" "%launching_app% tidak mendukung VR. Ini akan muncul di desktop-mu dan dapat memengaruhi performa VR."
+"Steam_VR2DGameWarning_Desc" "%launching_app% akan diluncurkan di lingkungan VR HMD dan juga di desktop-mu.\\Kinerja mungkin tidak dapat berjalan dalam mode ini. Untuk meluncurkan game ini hanya di desktop-mu, silakan tutup SteamVR sebelum meluncurkan game."
+"Steam_VR2DGameWarning_Desc_Old" "%launching_app% tidak mendukung VR. Ini akan muncul di desktop-mu dan dapat memengaruhi kinerja VR."
 "Steam_VR2DGameWarning_Desc_VRGame" "%launching_app% mendukung VR, tapi kamu telah memilih versi desktop-nya. Apa kamu ingin lanjut?"
 
 "Steam_OculusOnlyGameWarning_Title" "Peringatan"
