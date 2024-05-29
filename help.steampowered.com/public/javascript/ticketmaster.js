@@ -1965,15 +1965,17 @@ function FillTicketQueueLinks( strCurrentTicket )
 	var vecRequests = NextPrev.GetHelpRequests();
 	for ( var i = 0; i < vecRequests.length; i++ )
 	{
+		var bPreloaded = NextPrev.HasPagePreloaded( vecRequests[i] );
+		var strText = bPreloaded ? NextPrev.GetTicketAccount( vecRequests[i] ) : vecRequests[i];
 		PreloadTicket( vecRequests[i] );
 		if ( vecRequests[i] != strCurrentTicket )
 		{
-			var strStyleDisabled = !NextPrev.HasPagePreloaded( vecRequests[i] ) ? 'disabled' : '';
-			var $elTicket = elQueue.append( '<a class="' + strStyleDisabled + ' ticket_queue_link" data-ticket="' + vecRequests[i] + '" href="javascript:LoadPreloadedTicket( \'' + vecRequests[i] + '\')">' + vecRequests[i] + '</a>' );
+			var strStyleDisabled = !bPreloaded ? 'disabled' : '';
+			var $elTicket = elQueue.append( '<a class="' + strStyleDisabled + ' ticket_queue_link" data-ticket="' + vecRequests[i] + '" href="javascript:LoadPreloadedTicket( \'' + vecRequests[i] + '\')">' + strText + '</a>' );
 		}
 		else
 		{
-			var $elTicket = elQueue.append( '<span data-ticket="' + strCurrentTicket + '" class="ticket_queue_link current_queue_pos">' + vecRequests[i] + '</span>' );
+			var $elTicket = elQueue.append( '<span data-ticket="' + strCurrentTicket + '" class="ticket_queue_link current_queue_pos">' + strText + '</span>' );
 		}
 	}
 
@@ -1989,7 +1991,7 @@ function PreloadTicket( strTicketRef )
 	if ( !NextPrev.HasPagePreloaded( strTicketRef ) && !NextPrev.IsPagePreloading( strTicketRef ) )
 	{
 		// set empty so we dont try to load it multiple times if multiple requests
-		NextPrev.SetPagePreload( strTicketRef, 'loading' );
+		NextPrev.SetPagePreload( strTicketRef, { html:'loading', account_name:'undefined' } );
 		$J.ajax({
 			type: "GET",
 			url: "https://help.steampowered.com/ticketmaster/AjaxPreloadTicket/" + strTicketRef,
@@ -2001,9 +2003,10 @@ function PreloadTicket( strTicketRef )
 			})
 			.done( function( data )
 			{
-				NextPrev.SetPagePreload( strTicketRef, data.html );
+				NextPrev.SetPagePreload( strTicketRef, data );
 				console.log( 'Preloaded: ' + strTicketRef );
 				$J("#ticket_queue").find("[data-ticket='" + strTicketRef + "']").removeClass( 'disabled' );
+				$J("#ticket_queue").find("[data-ticket='" + strTicketRef + "']").text( data.account_name );
 			});
 	}
 }
@@ -2084,25 +2087,30 @@ var NextPrev = {
 
 	HasPagePreloaded: function( strTicketRef )
 	{
-		return NextPrev.mapTickets.has( strTicketRef ) && NextPrev.mapTickets.get( strTicketRef ) != 'loading';
+		return NextPrev.mapTickets.has( strTicketRef ) && NextPrev.mapTickets.get( strTicketRef ).html != 'loading';
 	},
 
 	IsPagePreloading: function( strTicketRef )
 	{
-		return 	NextPrev.mapTickets.get( strTicketRef ) == 'loading';
+		return 	NextPrev.mapTickets.has( strTicketRef ) && NextPrev.mapTickets.get( strTicketRef ).html == 'loading';
 	},
 
-	SetPagePreload: function( strTicketRef, strHTML )
+	SetPagePreload: function( strTicketRef, pageData )
 	{
-		if ( !NextPrev.mapTickets.has( strTicketRef ) || NextPrev.mapTickets.get( strTicketRef ) == 'loading' )
+		if ( !NextPrev.mapTickets.has( strTicketRef ) || NextPrev.mapTickets.get( strTicketRef ).html == 'loading' )
 		{
-			NextPrev.mapTickets.set( strTicketRef, strHTML );
+			NextPrev.mapTickets.set( strTicketRef, pageData );
 		}
 	},
 
 	GetPagePreload: function( strTicketRef )
 	{
-		return NextPrev.mapTickets.get( strTicketRef );
+		return NextPrev.mapTickets.get( strTicketRef ).html;
+	},
+
+	GetTicketAccount: function( strTicketRef )
+	{
+		return NextPrev.mapTickets.get( strTicketRef ).account_name;
 	},
 
 	GetNextRequest : function( strTicket )
@@ -2154,23 +2162,38 @@ function InitPreapprovalQueue( txnID, accountID, strTicketRef )
 var PreapprovalQueue = {
 	mapApprovals: new Map(),
 	mapDenials: new Map(),
+	mapHijacks: new Map(),
 	rgCurrentTicket: [],
 
 	bEnableKeyNav: false,
 
-	HandleTxn: function( bApprove, txnID, accountID, strTicketRef )
+	HandleTxn: function( bApprove, txnID, accountID, strTicketRef, bHijacked = false )
 	{
+		PreapprovalQueue.RemoveTxn( txnID );
 		if ( bApprove )
 		{
-			PreapprovalQueue.mapDenials.delete( txnID );
 			PreapprovalQueue.mapApprovals.set( txnID, [ accountID, strTicketRef ] );
 		}
 		else
 		{
-			PreapprovalQueue.mapApprovals.delete( txnID );
-			PreapprovalQueue.mapDenials.set( txnID, [ accountID, strTicketRef ] );
+			if ( bHijacked )
+			{
+				PreapprovalQueue.mapHijacks.set( txnID, [ accountID, strTicketRef ] );
+			}
+			else
+			{
+				PreapprovalQueue.mapDenials.set( txnID, [ accountID, strTicketRef ] );
+			}
 		}
 
+		PreapprovalQueue.RenderQueue();
+	},
+
+	RemoveTxn: function( txnID )
+	{
+		PreapprovalQueue.mapApprovals.delete( txnID );
+		PreapprovalQueue.mapDenials.delete( txnID );
+		PreapprovalQueue.mapHijacks.delete( txnID );
 		PreapprovalQueue.RenderQueue();
 	},
 
@@ -2201,30 +2224,43 @@ var PreapprovalQueue = {
 		{
 			PreapprovalQueue.HandleTxn( false, PreapprovalQueue.rgCurrentTicket[0], PreapprovalQueue.rgCurrentTicket[1], PreapprovalQueue.rgCurrentTicket[2] );
 		}
+		else if ( key == 'h' )
+		{
+			PreapprovalQueue.HandleTxn( false, PreapprovalQueue.rgCurrentTicket[0], PreapprovalQueue.rgCurrentTicket[1], PreapprovalQueue.rgCurrentTicket[2], true );
+		}
+		else if ( key == 'u' )
+		{
+			PreapprovalQueue.RemoveTxn( PreapprovalQueue.rgCurrentTicket[0] );
+		}
 	},
 
 	ResolveApprovals: function()
 	{
 		var approvals = Object.fromEntries(PreapprovalQueue.mapApprovals);
 		var denials = Object.fromEntries(PreapprovalQueue.mapDenials);
+		var hijacks = Object.fromEntries(PreapprovalQueue.mapHijacks);
+
+		var $WaitDialog = ShowBlockingWaitDialog( 'Pre-approval', 'Submitting pre-approvals' );
 
 		$J.ajax({
 			type: "POST",
 			url: "https://help.steampowered.com/ticketmaster/AjaxPreapproveTxns/",
 			data: {
 				approveTxns: JSON.stringify( approvals ),
-				denyTxns: JSON.stringify( denials )
+				denyTxns: JSON.stringify( denials ),
+				hijackTxns: JSON.stringify( hijacks )
 			}
 		})
 			.fail( function( xhr )
 			{
-				console.log( xhr );
-				console.log( 'fail' );
+				ShowAlertDialog( 'Pre-approval', 'Failed to process pre-approvals.  Your transactions will be refreshed to ensure you have the latest state.' ).done( function() { location.reload() } );
 			})
 			.done( function( data )
 			{
-				console.log( data );
-				console.log( 'done' )
+				ShowAlertDialog( 'Pre-approval', 'Finished submitting all pre-approvals.  Any submitted tickets have been resolved.' );
+			}).always( function()
+			{
+				$WaitDialog.Dismiss();
 			});
 	},
 
@@ -2240,11 +2276,25 @@ var PreapprovalQueue = {
 		PreapprovalQueue.mapApprovals.forEach(
 			function( value, key ) {
 				elApprovalQueue.append( '<div data-ticket="' + value[1] + '" class="">' + key + '</div>' );
+				var elTicketQueueEntry = $J("#ticket_queue").find("[data-ticket='" + value[1] + "']");
+				elTicketQueueEntry.removeClass( 'ticket_queue_deny' );
+				elTicketQueueEntry.addClass( 'ticket_queue_approve' );
 			} );
 
 		PreapprovalQueue.mapDenials.forEach(
 			function( value, key ) {
 				elDenialQueue.append( '<div data-ticket="' + value[1] + '" class="">' + key + '</div>' );
+				var elTicketQueueEntry = $J("#ticket_queue").find("[data-ticket='" + value[1] + "']");
+				elTicketQueueEntry.addClass( 'ticket_queue_deny' );
+				elTicketQueueEntry.removeClass( 'ticket_queue_approve' );
+			} );
+
+		PreapprovalQueue.mapHijacks.forEach(
+			function( value, key ) {
+				elHijackQueue.append( '<div data-ticket="' + value[1] + '" class="">' + key + '</div>' );
+				var elTicketQueueEntry = $J("#ticket_queue").find("[data-ticket='" + value[1] + "']");
+				elTicketQueueEntry.addClass( 'ticket_queue_deny' );
+				elTicketQueueEntry.removeClass( 'ticket_queue_approve' );
 			} );
 	}
 };
