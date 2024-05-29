@@ -486,7 +486,6 @@ enum EGamingDeviceType
 enum eGyroButtonBitMask
 {
 	k_eGyroButtonBitMask_RightTriggerFullPull = 0;
-	k_eGyroButtonBitMask_FIRST = 0;
 	k_eGyroButtonBitMask_LeftTriggerFullPull = 1;
 	k_eGyroButtonBitMask_ButtonRightBumper = 2;
 	k_eGyroButtonBitMask_ButtonLeftBumper = 3;
@@ -533,7 +532,6 @@ enum eGyroButtonBitMask
 	k_eGyroButtonBitMask_ButtonMacro1Finger = 48;
 	k_eGyroButtonBitMask_ButtonMacro2Finger = 49;
 	k_eGyroButtonBitMask_ButtonQuickAccessMenu = 50;
-	k_eGyroButtonBitMask_LAST = 50;
 }
 
 enum EHide
