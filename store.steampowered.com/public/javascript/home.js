@@ -778,7 +778,7 @@ GHomepage = {
 				$CapCtn.attr('href', GStoreItemData.GetBundleURL( unBundleID, 'main_cluster_recommended_byfriends', nDepth ));
 			}
 		}
-		else if( rgRecommendationReasons.recent_release_by_creator )
+		else if( rgRecommendationReasons.recent_release_by_creator && rgRecommendationReasons.recent_release_by_creator.creator_info )
 		{
 						var creator = rgRecommendationReasons.recent_release_by_creator.creator_info;
 			rgRecommendationReasons.recent_release_by_creator = false;
@@ -791,7 +791,7 @@ GHomepage = {
 			$RecommendedReason.append( $ReasonMain );
 			$CapCtn.attr('href', GStoreItemData.GetAppURL( unAppID, 'main_cluster_followed_creator', nDepth ));
 		}
-		else if( rgRecommendationReasons.recommended_by_curator )
+		else if( rgRecommendationReasons.recommended_by_curator && rgRecommendationReasons.recommended_by_curator.rgCurators )
 		{
 			var reason = rgRecommendationReasons.recommended_by_curator;
 			rgRecommendationReasons.recommended_by_curator = false;
@@ -2461,9 +2461,9 @@ function GetAvatarURL( strAvatarHash, sizeStr )
 function GetScreenshotURL( appid, filename, sizeStr )
 {
 	if( sizeStr )
-		return 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/' + 'apps/' + appid + '/' + filename.replace('.jpg', sizeStr + '.jpg');
+		return 'https://cdn.cloudflare.steamstatic.com/steam/' + 'apps/' + appid + '/' + filename.replace('.jpg', sizeStr + '.jpg');
 
-	return 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/' + 'apps/' + appid + '/' + filename;
+	return 'https://cdn.cloudflare.steamstatic.com/steam/' + 'apps/' + appid + '/' + filename;
 }
 
 GSteamCurators = {
