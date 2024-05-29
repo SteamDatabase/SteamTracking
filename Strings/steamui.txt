@@ -24996,7 +24996,7 @@ sOSBuildId
 System details: codename:%s variant:%s version:%s build:%s bios:%s cef_debugging:%d
 nSteamVersion
 sSteamBuildDate
-May 28 2024 16:32:25
+May 28 2024 19:35:47
 sSteamAPI
 SteamClient021
 sCPUVendor
