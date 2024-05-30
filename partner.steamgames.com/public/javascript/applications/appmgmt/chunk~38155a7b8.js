@@ -1048,7 +1048,12 @@
       };
     },
     46750: (e) => {
-      e.exports = { WithBox: "Y8Nm1z765AoqpdvMSwdWk" };
+      e.exports = {
+        WithBox: "Y8Nm1z765AoqpdvMSwdWk",
+        SideBySide: "_1J1S1afbY87Eh4tId7j3sx",
+        GraphCtn: "_1LaTKzVsF3Fn7X15owSSUq",
+        PromoDetails: "_2ExrE_Vps40qyzUQXhbiQ1",
+      };
     },
     18133: (e) => {
       e.exports = {
@@ -1453,6 +1458,8 @@
         Date: "_17dLAP-RyWwuTzck9Gz47f",
         Creator: "_3VjL-JocxpP2ljeZhqUIRk",
         Visibility: "wvE-jG0F6Bz8vnGxKpQQY",
+        Revenue: "_2oBY-a9UYtSwgEOESAqMZZ",
+        Small: "_18G4aX1ScPJrnNOPWKuI6y",
         CountryList: "_17dzIUq2f_CSOR1Eug7HUe",
         OwnerLimit: "LDwRnmtVW5slGcNhaiHPs",
         CapsulePlatform: "_2OJsE_nWOGFfZwO3NXSNsz",
@@ -59863,7 +59870,7 @@
             r.createElement(
               "a",
               {
-                href: "https://confluence.valve.org/display/STEAM/IM+Channel+Guidelines",
+                href: "https://confluence.valve.org/display/SteamBiz/Curated+Promotion+Thresholds",
               },
               "Admin Guidelines",
             ),
@@ -65950,7 +65957,7 @@
               r.createElement(
                 "a",
                 {
-                  href: "https://confluence.valve.org/display/STEAM/IM+Channel+Guidelines",
+                  href: "https://confluence.valve.org/display/SteamBiz/Curated+Promotion+Thresholds",
                 },
                 "Admin Guidelines",
               ),
@@ -69616,18 +69623,9 @@
                       { id: "bar_linear", x1: "0", x2: "0", y1: "0", y2: "1" },
                       r.createElement("stop", { stopColor: "#1A9FFF" }),
                       r.createElement("stop", {
-                        offset: "0.01",
-                        stopColor: "#1A9FFF",
-                      }),
-                      r.createElement("stop", {
-                        offset: "0.0101",
-                        stopColor: "#1A9FFF",
-                        stopOpacity: "0.5",
-                      }),
-                      r.createElement("stop", {
                         offset: "1",
-                        stopColor: "#30363D",
-                        stopOpacity: "0.5",
+                        stopColor: "#1A9FFF",
+                        stopOpacity: "1",
                       }),
                     ),
                   ),
@@ -69687,9 +69685,10 @@
               x: 0,
               y: 0,
               dy: 16,
-              textAnchor: "end",
+              textAnchor: "middle",
               fill: "#FFFFFF",
-              transform: "rotate(-35)",
+              transform: "rotate(0)",
+              "font-size": "11px",
             },
             i,
           ),
@@ -69737,13 +69736,13 @@
                 { id: "colorUSD", x1: "0", y1: "0", x2: "1", y2: "1" },
                 r.createElement("stop", {
                   offset: "0%",
-                  stopColor: "#8884d8",
-                  stopOpacity: 0.8,
+                  stopColor: "#93D329",
+                  stopOpacity: 1,
                 }),
                 r.createElement("stop", {
                   offset: "100%",
-                  stopColor: "#8884d8",
-                  stopOpacity: 0.2,
+                  stopColor: "#93D329",
+                  stopOpacity: 1,
                 }),
               ),
               r.createElement(
@@ -69751,20 +69750,21 @@
                 { id: "colorUNITS", x1: "0", y1: "0", x2: "1", y2: "1" },
                 r.createElement("stop", {
                   offset: "0%",
-                  stopColor: "#82ca9d",
-                  stopOpacity: 0.8,
+                  stopColor: "#808080",
+                  stopOpacity: 1,
                 }),
                 r.createElement("stop", {
                   offset: "100%",
-                  stopColor: "#82ca9d",
-                  stopOpacity: 0.2,
+                  stopColor: "#808080",
+                  stopOpacity: 1,
                 }),
               ),
             ),
-            r.createElement(Ui.q, { strokeDasharray: "3 3" }),
+            r.createElement(Ui.q, { strokeDasharray: "1", stroke: "#3E454C" }),
             r.createElement(ji.K, {
               type: "number",
               orientation: "bottom",
+              tick: { fill: "white" },
               domain: [0, "dataMax"],
               label: {
                 value: "USD",
@@ -69777,12 +69777,15 @@
             r.createElement(Hi.B, {
               dataKey: "name",
               type: "category",
+              padding: { top: 14 },
+              tick: { fill: "white", textAnchor: "end" },
               width: 150,
             }),
             r.createElement(Vi.u, {
               wrapperStyle: { outline: "none" },
               allowEscapeViewBox: { x: !1, y: !0 },
               isAnimationActive: !1,
+              itemStyle: { background: "black" },
               offset: 0,
               content: r.createElement(al, null),
             }),
@@ -69809,7 +69812,7 @@
           return r.createElement(
             pe.gz,
             null,
-            r.createElement("h3", null, e.name),
+            r.createElement("h4", null, e.name),
             r.createElement(
               "ul",
               null,
@@ -69847,8 +69850,21 @@
           }, [t]);
         return r.createElement(
           "div",
-          null,
-          r.createElement("h3", null, t.promoPlan.name),
+          { className: Ji.PromoDetails },
+          r.createElement(
+            "h4",
+            null,
+            t.promoPlan.name,
+            r.createElement(
+              "a",
+              {
+                href: `${Yt.De.PARTNER_BASE_URL}promotion/planning/edit/${t.promoPlan.id}`,
+                target: "_blank",
+              },
+              "See promo plan",
+            ),
+          ),
+          r.createElement("br", null),
           r.createElement(
             "div",
             { className: (0, x.Z)(zt.Row, zt.Primary, zt.HeaderRow) },
@@ -69859,22 +69875,22 @@
             ),
             r.createElement(
               "div",
-              { className: (0, x.Z)(zt.Col, zt.Date) },
+              { className: (0, x.Z)(zt.Col, zt.Revenue) },
               "Gross Revenue",
             ),
             r.createElement(
               "div",
-              { className: (0, x.Z)(zt.Col, zt.Creator) },
+              { className: (0, x.Z)(zt.Col, zt.Revenue) },
               "Gross Items",
             ),
             r.createElement(
               "div",
-              { className: (0, x.Z)(zt.Col, zt.Creator) },
+              { className: (0, x.Z)(zt.Col, zt.Small) },
               "Discount",
             ),
             r.createElement(
               "div",
-              { className: (0, x.Z)(zt.Col, zt.Creator) },
+              { className: (0, x.Z)(zt.Col, zt.Small) },
               "Price",
             ),
           ),
@@ -69909,22 +69925,22 @@
             ),
             r.createElement(
               "div",
-              { className: (0, x.Z)(zt.Col, zt.Date) },
+              { className: (0, x.Z)(zt.Col, zt.Revenue) },
               Zi(a),
             ),
             r.createElement(
               "div",
-              { className: (0, x.Z)(zt.Col, zt.Creator) },
+              { className: (0, x.Z)(zt.Col, zt.Revenue) },
               t.gross_units_sold.toLocaleString(),
             ),
             r.createElement(
               "div",
-              { className: (0, x.Z)(zt.Col, zt.Creator) },
+              { className: (0, x.Z)(zt.Col, zt.Small) },
               "???",
             ),
             r.createElement(
               "div",
-              { className: (0, x.Z)(zt.Col, zt.Creator) },
+              { className: (0, x.Z)(zt.Col, zt.Small) },
               "???",
             ),
           ),
@@ -69934,14 +69950,19 @@
         const t = Mi();
         return r.createElement(
           "div",
-          { className: y().EditCtn },
+          { className: (0, x.Z)(y().AdminPageCtn, y().WidePageCtn) },
           r.createElement(
             "div",
             { className: y().PageTitle },
+            "Weekend and Midweek Deal Performance",
+          ),
+          r.createElement("hr", null),
+          r.createElement(
+            "p",
+            null,
             "Key Longitudinal Analysis of Featured Franchises Report ",
             r.createElement("span", null, "(K.L.A.F.F. Report)"),
           ),
-          r.createElement("hr", null),
           Boolean(!t || 0 == (null == t ? void 0 : t.length))
             ? r.createElement(L.V, {
                 string: "Loading",
@@ -69983,7 +70004,7 @@
         const { type: t, week: n } = e,
           a = "midweek" == t ? n.rgMidweeks : n.rgWeekends,
           [i, l] = (0, r.useState)(() =>
-            (null == a ? void 0 : a.length) > 0 ? a[0] : null,
+            (null == a ? void 0 : a.length) > 0 ? a[a.length - 1] : null,
           ),
           o = (0, r.useMemo)(
             () =>
@@ -70000,10 +70021,10 @@
             (s = zi(a[0].promoPlan.start_date, a[0].promoPlan.end_date)),
           r.createElement(
             "div",
-            { className: (0, x.Z)($i().WithBox) },
+            { className: (0, x.Z)($i().WithBox, $i().SideBySide) },
             r.createElement(
               "div",
-              null,
+              { className: (0, x.Z)($i().GraphCtn) },
               r.createElement("h3", null, Na.j.get(t), " - ", s),
               r.createElement(nl, {
                 data: o,
@@ -73664,7 +73685,7 @@
     },
     10816: (e, t, n) => {
       "use strict";
-      n.d(t, { l4: () => pe, S7: () => _e, $t: () => ge });
+      n.d(t, { l4: () => _e, S7: () => he, $t: () => Ee });
       var a = n(76330),
         i = n(30750),
         l = n(47427),
@@ -73842,7 +73863,7 @@
                   ),
                   l.createElement("br", null),
                   l.createElement(m.__, null, "Completed:"),
-                  l.createElement(pe, { rtime: t.GetArtworkCompleteTime() }),
+                  l.createElement(_e, { rtime: t.GetArtworkCompleteTime() }),
                 ),
               )
             : l.createElement(
@@ -74244,6 +74265,7 @@
               : "Remove the asset delivery review status from this plan?",
             closeModal: n,
             bAllowFullSize: !0,
+            bDisableBackgroundDismiss: !0,
             onOK: () => {
               a
                 ? t.SetDeliveryReviewedAccountAndTime(
@@ -74531,7 +74553,8 @@
           l.createElement(ce, { promotionID: n, displayType: "units" }),
         );
       }
-      function pe(e) {
+      var pe = n(56164);
+      function _e(e) {
         return l.createElement(
           l.Fragment,
           null,
@@ -74540,11 +74563,10 @@
           (0, y.Sc)(e.rtime, { bForce24HourClock: !1 }),
         );
       }
-      function _e(e) {
+      function he(e) {
         const { oEditablePlan: t } = e,
-          [n, a] = (0, i.SZ)(() => [
-            t.BOnWatchList(b.L7.accountid),
-            t.GetOwnerAccountID(),
+          [n] = (0, i.SZ)(() => [
+            t.GetEndDate() < r.JW.GetTimeNowWithOverride(),
           ]);
         return l.createElement(
           "div",
@@ -74552,9 +74574,24 @@
           l.createElement(
             "div",
             { className: c().SectionCtn },
-            l.createElement(Ee, { oEditablePlan: t }),
-            l.createElement(Se, { oEditablePlan: t }),
+            l.createElement(De, { oEditablePlan: t }),
+            l.createElement(fe, { oEditablePlan: t }),
           ),
+          Boolean(n)
+            ? l.createElement(
+                pe.ug,
+                { title: "Shipping Status", bStartMinimized: n },
+                l.createElement(ge, { oEditablePlan: t }),
+              )
+            : l.createElement(ge, { oEditablePlan: t }),
+        );
+      }
+      function ge(e) {
+        const { oEditablePlan: t } = e,
+          [n] = (0, i.SZ)(() => [t.BOnWatchList(b.L7.accountid)]);
+        return l.createElement(
+          l.Fragment,
+          null,
           l.createElement(
             "div",
             { className: c().SectionCtn },
@@ -74593,7 +74630,7 @@
                   {
                     onClick: (e) =>
                       (0, v.AM)(
-                        l.createElement(he, { oEditablePlan: t }),
+                        l.createElement(ve, { oEditablePlan: t }),
                         (0, D.RA)(e),
                       ),
                   },
@@ -74641,7 +74678,7 @@
                 ),
               ),
               "Created at ",
-              l.createElement(pe, { rtime: t.GetPlan().create_time }),
+              l.createElement(_e, { rtime: t.GetPlan().create_time }),
             ),
           Boolean(t.GetPlan().last_modified_account) &&
             l.createElement(
@@ -74664,7 +74701,7 @@
                 ),
               ),
               "Updated at ",
-              l.createElement(pe, { rtime: t.GetPlan().last_modified_time }),
+              l.createElement(_e, { rtime: t.GetPlan().last_modified_time }),
             ),
           l.createElement(
             "div",
@@ -74681,10 +74718,10 @@
               n ? "Remove from my watch list" : "Add to my watch list",
             ),
           ),
-          l.createElement(Ie, { oEditablePlan: t }),
+          l.createElement(ke, { oEditablePlan: t }),
         );
       }
-      function he(e) {
+      function ve(e) {
         const { oEditablePlan: t, closeModal: n } = e,
           [a, i] = (0, l.useState)(t.GetOwnerAccountID());
         return l.createElement(
@@ -74697,10 +74734,10 @@
             bOKDisabled: !a,
             onOK: () => t.SetPlanOwnerAccountID(a),
           },
-          l.createElement(ge, { nAccountID: a, fnSetAccountFilter: i }),
+          l.createElement(Ee, { nAccountID: a, fnSetAccountFilter: i }),
         );
       }
-      function ge(e) {
+      function Ee(e) {
         const {
             nAccountID: t,
             fnSetAccountFilter: n,
@@ -74709,7 +74746,7 @@
             className: o,
           } = e,
           s = a.J.map((e) => ({
-            label: l.createElement(ve, {
+            label: l.createElement(Se, {
               key: e.id,
               accountID: e.id,
               displayName: e.displayName,
@@ -74738,7 +74775,7 @@
           )
         );
       }
-      function ve(e) {
+      function Se(e) {
         const { accountID: t, displayName: n } = e,
           { data: a } = (0, o.IE)(t);
         return l.createElement(
@@ -74750,7 +74787,7 @@
           ")",
         );
       }
-      function Ee(e) {
+      function De(e) {
         const t = new URLSearchParams(),
           { oEditablePlan: n } = e;
         return (
@@ -74770,7 +74807,7 @@
           )
         );
       }
-      function Se(e) {
+      function fe(e) {
         const { oEditablePlan: t } = e,
           [n, a] = (0, i.SZ)(() => [
             t.BIsReviewed(),
@@ -74779,12 +74816,12 @@
         return l.createElement(
           l.Fragment,
           null,
-          Boolean(a) && l.createElement(ye, { oEditablePlan: t }),
-          Boolean(!a && n) && l.createElement(fe, { oEditablePlan: t }),
-          Boolean(!a && !n) && l.createElement(De, { oEditablePlan: t }),
+          Boolean(a) && l.createElement(Ie, { oEditablePlan: t }),
+          Boolean(!a && n) && l.createElement(be, { oEditablePlan: t }),
+          Boolean(!a && !n) && l.createElement(ye, { oEditablePlan: t }),
         );
       }
-      function De(e) {
+      function ye(e) {
         const { oEditablePlan: t } = e;
         return l.createElement(
           "div",
@@ -74800,7 +74837,7 @@
               className: M.StatusBtn,
               onClick: (e) =>
                 (0, v.AM)(
-                  l.createElement(be, { oEditablePlan: t, bReviewVerify: !0 }),
+                  l.createElement(Ce, { oEditablePlan: t, bReviewVerify: !0 }),
                   (0, D.RA)(e),
                 ),
             },
@@ -74808,7 +74845,7 @@
           ),
         );
       }
-      function fe(e) {
+      function be(e) {
         const { oEditablePlan: t } = e,
           n = t.GetReviewedAccount();
         return l.createElement(
@@ -74837,7 +74874,7 @@
                   className: M.StatusBtn,
                   onClick: (e) =>
                     (0, v.AM)(
-                      l.createElement(be, {
+                      l.createElement(Ce, {
                         oEditablePlan: t,
                         bReviewVerify: !1,
                       }),
@@ -74858,7 +74895,7 @@
           ),
         );
       }
-      function ye(e) {
+      function Ie(e) {
         const { oEditablePlan: t } = e,
           [n, a, r, o, s, c, m, u, p] = (0, i.SZ)(() => [
             t.GetSaleClanAccountID(),
@@ -74984,7 +75021,7 @@
           ),
         );
       }
-      function be(e) {
+      function Ce(e) {
         const { oEditablePlan: t, closeModal: n, bReviewVerify: a } = e;
         return l.createElement(
           B.P,
@@ -75016,7 +75053,7 @@
             ),
         );
       }
-      function Ie(e) {
+      function ke(e) {
         const { oEditablePlan: t } = e,
           [n, a, r] = (0, i.SZ)(() => [
             t.BRequireBroadcastModeration(),
