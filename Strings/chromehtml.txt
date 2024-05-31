@@ -99,7 +99,6 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
-0r
 NSt3__117bad_function_callE
 N3IPC15BinarySemaphoreE
 N3IPC6IMutexE
@@ -1063,6 +1062,8 @@ disables sandboxing in CEF
 -cef-disable-sandbox
 -cef-disable-seccomp-sandbox
 disables CEF seccomp-bpf sandbox on Linux
+-cef-disable-gpu-sandbox
+disables CEF gpu-process sandbox
 -cef-force-sandbox
 force sandboxing in CEF
 -cef-log-sandbox
@@ -1219,6 +1220,7 @@ DcheckIsFatal
 --device-scale-factor=1
 --no-sandbox
 --enable-sandbox-logging
+--disable-gpu-sandbox
 --disable-winh264
 --single-process
 --in-process-gpu
@@ -2435,16 +2437,13 @@ id
 @
 
 @
+#
 
-{
-
-
-/
 @
 Ic]
-7
+,
+$
 0
-
 
 
 
@@ -2461,7 +2460,7 @@ AT=
 D
 @
 @
-t
+x
 @
 Hc
 Hc
@@ -2493,6 +2492,7 @@ IcE
 IcE
 @
 @
+
 
 V
 =
@@ -2517,7 +2517,6 @@ M9e
 ?
 ?
 :
-L
 ?
 ?
 ?
