@@ -1,4 +1,4 @@
-var CLSTAMP = "8934059";
+var CLSTAMP = "8940472";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -1619,9 +1619,9 @@ var CLSTAMP = "8934059";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "May 29 2024 : 00:42:13",
-                BUILD_TIME_UTC: "May 29 2024 : 07:42:13",
-                BUILD_RTIME_UTC: 1716968533,
+                BUILD_TIME_LOCAL: "May 30 2024 : 18:05:13",
+                BUILD_TIME_UTC: "May 31 2024 : 01:05:13",
+                BUILD_RTIME_UTC: 1717117513,
               }.MOBILE_BUILD && "addEventListener" in window)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -33824,7 +33824,7 @@ var CLSTAMP = "8934059";
       },
       25543: (e, t, n) => {
         "use strict";
-        n.d(t, { t: () => M });
+        n.d(t, { t: () => E });
         var r = n(85556),
           i = n(49550),
           o = n(27378),
@@ -33915,8 +33915,9 @@ var CLSTAMP = "8934059";
           p = n(50947),
           g = n(16605),
           f = n(25929),
-          v = n(86329);
-        function L(e) {
+          v = n(86329),
+          L = n(29853);
+        function M(e) {
           o.useEffect(() => {
             if (e)
               return (
@@ -33925,7 +33926,7 @@ var CLSTAMP = "8934059";
               );
           }, [e]);
         }
-        function M(e) {
+        function E(e) {
           let {
               ModalManager: t,
               bRegisterModalManager: n = !0,
@@ -33941,7 +33942,7 @@ var CLSTAMP = "8934059";
           const C = t.modals,
             u = C && !!C.length,
             d = t.active_modal;
-          L(u),
+          M(u),
             (function (e) {
               const t = (0, l.Wy)().ownerWindow,
                 n = (0, p.NW)(),
@@ -33968,19 +33969,19 @@ var CLSTAMP = "8934059";
               [e],
             );
           })(t, n);
-          let M = null;
+          let L = null;
           return (
             C && C.length
-              ? (M = C.map((e) =>
+              ? (L = C.map((e) =>
                   e instanceof g.kv
-                    ? o.createElement(w, {
+                    ? o.createElement(k, {
                         key: e.key,
                         modal: e,
                         active: e == d,
-                        Component: null != s ? s : k,
+                        Component: null != s ? s : H,
                       })
                     : e instanceof g.QA
-                      ? o.createElement(E, {
+                      ? o.createElement(w, {
                           key: e.key,
                           modal: e,
                           active: e == d,
@@ -34004,15 +34005,15 @@ var CLSTAMP = "8934059";
                   o.createElement("div", {
                     className: "ModalOverlayContent ModalOverlayBackground",
                   }),
-                  M,
+                  L,
                 ),
               ),
               o.createElement(h, { ModalManager: t }),
-              o.createElement(H, { ModalManager: t }),
+              o.createElement(_, { ModalManager: t }),
             )
           );
         }
-        function E(e) {
+        function w(e) {
           const { modal: t, active: n } = e;
           return (
             o.useEffect(
@@ -34032,7 +34033,7 @@ var CLSTAMP = "8934059";
             )
           );
         }
-        function w(e) {
+        function k(e) {
           const { modal: t, active: n, Component: r } = e,
             i = (0, p.NW)();
           return (
@@ -34055,14 +34056,18 @@ var CLSTAMP = "8934059";
             )
           );
         }
-        const k = o.forwardRef(function (e, t) {
+        const H = o.forwardRef(function (e, t) {
           const { className: n, active: r, children: i } = e,
             l = o.useRef();
           o.useEffect(() => {
             const e = l.current;
             if (e && r) {
               const t = e.firstChild;
-              t && t.focus && t.focus();
+              t &&
+                !(0, L.ni)(t, t.ownerDocument.activeElement) &&
+                t &&
+                t.focus &&
+                t.focus();
             }
           }, [r]);
           const s = (0, p.BE)(l, t);
@@ -34072,7 +34077,7 @@ var CLSTAMP = "8934059";
             i,
           );
         });
-        function H(e) {
+        function _(e) {
           const { ModalManager: t } = e,
             n = (0, p.NW)();
           return (
@@ -45372,9 +45377,9 @@ var CLSTAMP = "8934059";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "May 29 2024 : 00:42:13",
-                    BUILD_TIME_UTC: "May 29 2024 : 07:42:13",
-                    BUILD_RTIME_UTC: 1716968533,
+                    BUILD_TIME_LOCAL: "May 30 2024 : 18:05:13",
+                    BUILD_TIME_UTC: "May 31 2024 : 01:05:13",
+                    BUILD_RTIME_UTC: 1717117513,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -45945,7 +45950,7 @@ var CLSTAMP = "8934059";
       {
         27: "02d37250737fbf3fa2d3",
         33: "fcd9d2fcec49882c784e",
-        58: "91d516e4f5b938ce186f",
+        58: "4fced7759e9be6c91cb2",
         131: "9f4b6f1179ba243d40c6",
         146: "17821e34d2b46c438397",
         200: "8968dbea347c5c74109b",
@@ -46050,7 +46055,7 @@ var CLSTAMP = "8934059";
         7781: "2cc2489e059158b26c72",
         7832: "9d6d3d860dea2a65797b",
         7850: "6b1794c3a5d344bf28d6",
-        7962: "83e71939dc3b52d81644",
+        7962: "1f681dd5b42f5b7b8c82",
         8011: "0f452866bc3f5f02af90",
         8052: "46d969dc9271e04ec1ee",
         8085: "aa23c9ca42ebe79401a7",
@@ -46061,7 +46066,7 @@ var CLSTAMP = "8934059";
         8282: "6caae4b962b18ebf5b34",
         8319: "39401a00ceb5042f4a0c",
         8433: "13f6d4cd7c1163a4608a",
-        8467: "a17b230020956e1a39f3",
+        8467: "f8268bfc06ca2b605c52",
         8490: "4f5e92f12a76168d940b",
         8778: "93c8db9b30a5a057fd8d",
         8805: "340d65d13b70b0f9f611",
