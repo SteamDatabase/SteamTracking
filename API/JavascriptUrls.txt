@@ -1084,9 +1084,11 @@ ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?appidlist=${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?bundleid=${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?partneridlist=${partnerid}
+${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?rt_feature_start=${}&rt_feature_end=${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?saleclaneventgid=${}&saleclanaccountid=${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=${}${}&count=${}${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=${}&count=${}${}
+${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=0&count=100${}
 ${PARTNER_BASE_URL}promotion/marketingmessages/ajaxgetsnrmetrics
 ${PARTNER_BASE_URL}promotion/marketingmessages/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}promotion/marketingmessages/dashboard

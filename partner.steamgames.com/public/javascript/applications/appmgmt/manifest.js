@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8938366";
+var CLSTAMP = "8942401";
 (() => {
   "use strict";
   var e,
@@ -22,14 +22,14 @@ var CLSTAMP = "8938366";
       if (!n) {
         var d = 1 / 0;
         for (f = 0; f < e.length; f++) {
-          for (var [n, s, c] = e[f], r = !0, o = 0; o < n.length; o++)
-            (!1 & c || d >= c) && Object.keys(i.O).every((e) => i.O[e](n[o]))
-              ? n.splice(o--, 1)
+          for (var [n, s, c] = e[f], r = !0, b = 0; b < n.length; b++)
+            (!1 & c || d >= c) && Object.keys(i.O).every((e) => i.O[e](n[b]))
+              ? n.splice(b--, 1)
               : ((r = !1), c < d && (d = c));
           if (r) {
             e.splice(f--, 1);
-            var b = s();
-            void 0 !== b && (a = b);
+            var o = s();
+            void 0 !== o && (a = o);
           }
         }
         return a;
@@ -292,7 +292,7 @@ var CLSTAMP = "8938366";
         3685: "450f53961a3afbbd89bc",
         3710: "eefb48bd567c5f2d6bd4",
         3768: "cdc1ba4da23a8e531749",
-        3863: "f9028be613ebb28ba9f9",
+        3863: "2a847490a341ef07bdd9",
         4033: "506b0f00fc5f025edb11",
         4103: "9709b66dc05bd8b1deaa",
         4108: "7adc2eaf3f27465961b9",
@@ -354,7 +354,7 @@ var CLSTAMP = "8938366";
         7181: "e0d39ef216608c27445f",
         7236: "1312bfc86e4e9cec8610",
         7240: "f3387d356ae04632d159",
-        7485: "305645f7bc54be1cbac3",
+        7485: "34779b7ad08680e5162b",
         7602: "fb252827f60ae4c47220",
         7682: "e1a03a02efc05c5c7093",
         7724: "c8322269d2d47d1e5178",
@@ -389,7 +389,7 @@ var CLSTAMP = "8938366";
         9663: "4f0842657a23cd3c37df",
         9753: "b58834cc32a7d9ae481e",
         9784: "f8ef3412405289a72291",
-        9828: "6a2463df5d8a08c8148c",
+        9828: "8ed90090f0a770fd2f9f",
         9899: "1f48f5aedcc9093f4b36",
         9903: "cd4a78393b471e50f3c5",
         9919: "de58d247468b7de2b3d0",
@@ -425,14 +425,14 @@ var CLSTAMP = "8938366";
         2529: "a445f11c7c6247c41201",
         3599: "7d397c627b354e1a49cf",
         3710: "efb1278fcf23c9cbf61b",
-        3863: "881d6ce86eb2e297fd38",
+        3863: "baf1aafb7f98bcd5961c",
         4601: "f294db5e57c6dfd50f7b",
         4935: "33eb9d66d0507e03ca68",
         5676: "19faea1384dba07568e7",
         6699: "4694d750def959727f73",
         6808: "7fdbc85de533f923151d",
         6853: "969278b06eb0eb83065e",
-        7485: "b7a243c5bfe1561b643f",
+        7485: "b3bbca29e4742bd69c36",
         7762: "61877d984bfcf3e7f40f",
         8974: "da1ea028662462481464",
       }[e]),
@@ -450,14 +450,14 @@ var CLSTAMP = "8938366";
     (i.l = (e, a, n, d) => {
       if (s[e]) s[e].push(a);
       else {
-        var r, o;
+        var r, b;
         if (void 0 !== n)
           for (
-            var b = document.getElementsByTagName("script"), f = 0;
-            f < b.length;
+            var o = document.getElementsByTagName("script"), f = 0;
+            f < o.length;
             f++
           ) {
-            var t = b[f];
+            var t = o[f];
             if (
               t.getAttribute("src") == e ||
               t.getAttribute("data-webpack") == c + n
@@ -467,7 +467,7 @@ var CLSTAMP = "8938366";
             }
           }
         r ||
-          ((o = !0),
+          ((b = !0),
           ((r = document.createElement("script")).charset = "utf-8"),
           (r.timeout = 120),
           i.nc && r.setAttribute("nonce", i.nc),
@@ -491,7 +491,7 @@ var CLSTAMP = "8938366";
           );
         (r.onerror = l.bind(null, r.onerror)),
           (r.onload = l.bind(null, r.onload)),
-          o && document.head.appendChild(r);
+          b && document.head.appendChild(r);
       }
     }),
     (i.r = (e) => {
@@ -544,7 +544,7 @@ var CLSTAMP = "8938366";
                       else {
                         var r = n && n.type,
                           i = (n && n.target && n.target.href) || a,
-                          o = new Error(
+                          b = new Error(
                             "Loading CSS chunk " +
                               e +
                               " failed.\n(" +
@@ -553,12 +553,12 @@ var CLSTAMP = "8938366";
                               i +
                               ")",
                           );
-                        (o.name = "ChunkLoadError"),
-                          (o.code = "CSS_CHUNK_LOAD_FAILED"),
-                          (o.type = r),
-                          (o.request = i),
+                        (b.name = "ChunkLoadError"),
+                          (b.code = "CSS_CHUNK_LOAD_FAILED"),
+                          (b.type = r),
+                          (b.request = i),
                           d.parentNode && d.parentNode.removeChild(d),
-                          c(o);
+                          c(b);
                       }
                     }),
                   (d.href = a),
@@ -639,14 +639,14 @@ var CLSTAMP = "8938366";
       var a = (a, n) => {
           var s,
             c,
-            [d, r, o] = n,
-            b = 0;
+            [d, r, b] = n,
+            o = 0;
           if (d.some((a) => 0 !== e[a])) {
             for (s in r) i.o(r, s) && (i.m[s] = r[s]);
-            if (o) var f = o(i);
+            if (b) var f = b(i);
           }
-          for (a && a(n); b < d.length; b++)
-            (c = d[b]), i.o(e, c) && e[c] && e[c][0](), (e[c] = 0);
+          for (a && a(n); o < d.length; o++)
+            (c = d[o]), i.o(e, c) && e[c] && e[c][0](), (e[c] = 0);
           return i.O(f);
         },
         n = (self.webpackChunkappmgmt_storeadmin =
