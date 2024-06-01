@@ -1,4 +1,4 @@
-var CLSTAMP = "8940472";
+var CLSTAMP = "8942623";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -1619,9 +1619,9 @@ var CLSTAMP = "8940472";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "May 30 2024 : 18:05:13",
-                BUILD_TIME_UTC: "May 31 2024 : 01:05:13",
-                BUILD_RTIME_UTC: 1717117513,
+                BUILD_TIME_LOCAL: "May 31 2024 : 15:41:45",
+                BUILD_TIME_UTC: "May 31 2024 : 22:41:45",
+                BUILD_RTIME_UTC: 1717195305,
               }.MOBILE_BUILD && "addEventListener" in window)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -4617,43 +4617,50 @@ var CLSTAMP = "8940472";
               e === i.eV.CANCEL
             );
           }
-          GetEventTarget(e, t = !1) {
-            var n, r, o, l, s;
-            let a = this.GetActiveContext();
-            !a && t && (a = this.FindAnActiveContext());
-            let c =
-              null === (n = null == a ? void 0 : a.ActiveWindow) || void 0 === n
+          GetEventTarget(e, t, n = !1) {
+            var r, o, l, s, a;
+            let c = this.GetActiveContext();
+            !c && n && (c = this.FindAnActiveContext());
+            let C =
+              null === (r = null == c ? void 0 : c.ActiveWindow) || void 0 === r
                 ? void 0
-                : n.document.activeElement;
-            if (null == a ? void 0 : a.m_LastActiveNavTree) {
-              let n =
-                null ===
-                  (o =
-                    null === (r = this.m_navigationSource) || void 0 === r
-                      ? void 0
-                      : r.Value) || void 0 === o
-                  ? void 0
-                  : o.eActivationSourceType;
+                : r.document.activeElement;
+            if (null == c ? void 0 : c.m_LastActiveNavTree) {
               if (
+                (t ||
+                  (t =
+                    null ===
+                      (l =
+                        null === (o = this.m_navigationSource) || void 0 === o
+                          ? void 0
+                          : o.Value) || void 0 === l
+                      ? void 0
+                      : l.eActivationSourceType),
                 !(
-                  a.m_LastActiveNavTree.GetLastFocusedNode() ||
-                  (n != i.Rr.GAMEPAD && n != i.Rr.KEYBOARD) ||
-                  (t && a.m_LastActiveNavTree.TakeFocus(u.uS.GAMEPAD, !0),
+                  c.m_LastActiveNavTree.GetLastFocusedNode() ||
+                  (t != i.Rr.GAMEPAD && t != i.Rr.KEYBOARD) ||
+                  (g(
+                    `GetEventTarget: Context ${c.LogName()} tree ${c.m_LastActiveNavTree.id} has no focused node, ${n ? "finding one" : "will not find one"}`,
+                  ),
+                  n && c.m_LastActiveNavTree.TakeFocus(u.uS.GAMEPAD, !0),
                   this.BGlobalGamepadButton(e))
-                )
+                ))
               )
-                return [void 0, a];
-              a.m_LastActiveNavTree.GetLastFocusedNode() &&
-                (c =
-                  null ===
-                    (s =
-                      null === (l = a.m_LastActiveNavTree) || void 0 === l
-                        ? void 0
-                        : l.GetLastFocusedNode()) || void 0 === s
-                    ? void 0
-                    : s.Element);
+                return [void 0, c];
+              c.m_LastActiveNavTree.GetLastFocusedNode()
+                ? (C =
+                    null ===
+                      (a =
+                        null === (s = c.m_LastActiveNavTree) || void 0 === s
+                          ? void 0
+                          : s.GetLastFocusedNode()) || void 0 === a
+                      ? void 0
+                      : a.Element)
+                : g(
+                    `GetEventTarget: Context ${c.LogName()} tree ${c.m_LastActiveNavTree.id} still has no focused node - will fall back to document.activeElement`,
+                  );
             }
-            return [c, a];
+            return [C, c];
           }
           ChangeNavigationSource(e, t) {
             let n = this.m_navigationSource.Value,
@@ -4688,7 +4695,8 @@ var CLSTAMP = "8940472";
             );
             let h = l,
               d = s;
-            (null != h && null != d) || ([h, d] = this.GetEventTarget(t, !0)),
+            (null != h && null != d) ||
+              ([h, d] = this.GetEventTarget(t, n, !0)),
               !(null == d ? void 0 : d.BIsGamepadInputSuppressed()) || a
                 ? (this.ChangeNavigationSource(n, r),
                   e &&
@@ -45377,9 +45385,9 @@ var CLSTAMP = "8940472";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "May 30 2024 : 18:05:13",
-                    BUILD_TIME_UTC: "May 31 2024 : 01:05:13",
-                    BUILD_RTIME_UTC: 1717117513,
+                    BUILD_TIME_LOCAL: "May 31 2024 : 15:41:45",
+                    BUILD_TIME_UTC: "May 31 2024 : 22:41:45",
+                    BUILD_RTIME_UTC: 1717195305,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -45950,7 +45958,7 @@ var CLSTAMP = "8940472";
       {
         27: "02d37250737fbf3fa2d3",
         33: "fcd9d2fcec49882c784e",
-        58: "4fced7759e9be6c91cb2",
+        58: "e1841a52e1f9370ed2d7",
         131: "9f4b6f1179ba243d40c6",
         146: "17821e34d2b46c438397",
         200: "8968dbea347c5c74109b",
