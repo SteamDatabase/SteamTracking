@@ -205,7 +205,7 @@ function fnRenderHeroCapsule( oItem )
 
 	var $Cap = $J( '<div/>', {'class': 'hero_capsule', 'data-ds-appid': oItem.appid, 'data-panel': '{"clickOnActivate":"firstChild","onOptionsActionDescription":"Add to Cart","onOptionsButton":"%onOptionsButton%","flow-children":"column"}'.replace( '%onOptionsButton%', purchaseAction ) } );
 	$Cap.append( $J('<a/>', {'class': 'hero_click_overlay', 'href': url, 'aria-label': rgItemData.name } ) );
-	$Cap.append( $J('<img/>', {'class': 'hero_capsule_img', 'alt': rgItemData.name, 'style': 'max-height: 450px', src: 'https://store.cloudflare.steamstatic.com/public/images/blank.gif', 'data-image-url': rgItemData[ 'hero_capsule' ] ?? rgItemData[ 'main_capsule' ] } ) );
+	$Cap.append( $J('<img/>', {'class': 'hero_capsule_img', 'alt': rgItemData.name, 'style': 'max-height: 450px', src: 'https://store.akamai.steamstatic.com/public/images/blank.gif', 'data-image-url': rgItemData[ 'hero_capsule' ] ?? rgItemData[ 'main_capsule' ] } ) );
 
 	if ( rgItemData.has_live_broadcast )
 	{
@@ -340,7 +340,7 @@ function HomeSaleSteamAwardWinners( $Parent, rgSteamAwardWinners, rgSteamAwardDe
 		let purchaseAction = 'addToCart( %subid% )'.replace( '%subid%', rgItemData.pricing_subid );
 		let $Cap = $J( '<div/>', {'class': 'winner_ctn', 'data-panel': '{"clickOnActivate":"firstChild","onOptionsActionDescription":"Add to Cart","onOptionsButton":"%onOptionsButton%","flow-children":"column"}'.replace( '%onOptionsButton%', purchaseAction ) } );
 		$Cap.append( $J('<a/>', {'class': 'hero_click_overlay', 'href': params['href'], 'aria-label': rgItemData.name } ) );
-		$Cap.append( $J('<div/>', {'class': 'category_background', 'style': 'background-image: url( \'https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2023/backgrounds/awardbg_' + def.voteid +'.jpg\');' } ) );
+		$Cap.append( $J('<div/>', {'class': 'category_background', 'style': 'background-image: url( \'https://cdn.akamai.steamstatic.com/store/promo/steamawards2023/backgrounds/awardbg_' + def.voteid +'.jpg\');' } ) );
 
 		let $Content = $J('<div/>', {'class': 'category_content' } );
 		$Content.append( $J('<div/>', {'class': 'category_title' } ).append( def.localization.title_linebreak.replace( '<1></1>', '<br/>' ).replace( '<2></2>', '<br/>' ) ) );
@@ -356,6 +356,31 @@ function HomeSaleSteamAwardWinners( $Parent, rgSteamAwardWinners, rgSteamAwardDe
 
 		$WinnerCapsules.append( $Cap );
 	} );
+}
+
+function HomeRenderSpecialDealsCarousel( rgSpecialDealItems )
+{
+	if ( !rgSpecialDealItems )
+		return;
+	
+	let $SpecialDealsCarousel = $J( '#featured_special_deals' );
+
+	if ( !$SpecialDealsCarousel || !$SpecialDealsCarousel.length )
+		return;
+
+	let rgSpecialDeals = GHomepage.FilterItemsForDisplay(
+		rgSpecialDealItems, 'home', 3, 24, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
+	);
+
+	if ( rgSpecialDeals )
+	{
+		GHomepage.FillPagedCapsuleCarousel( rgSpecialDeals, $SpecialDealsCarousel, function( oItem, strFeature, rgOptions, nDepth ) {
+			return SaleCap( oItem, strFeature, 'discount_block_inline', false, false );
+		}, 'sale_deep_discounts', 3 );
+
+		BindSaleCapAutoSizeEvents( $SpecialDealsCarousel );
+		GDynamicStore.MarkAppDisplayed( rgSpecialDeals );
+	}
 }
 
 function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rgSteamAwardDefs )
@@ -374,6 +399,8 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 	{
 		HomeSaleFilterHeroes( $J('.hero_parent_ctn'), SortItemListByPriorityList( rgDisplayLists.heros, 'tier1' ) );
 	}
+
+	HomeRenderSpecialDealsCarousel( rgDisplayLists.special_deals );
 
 	var rgAllTier1Items = GHomepage.MergeLists( rgDisplayLists.sale_tier1, false, rgDisplayLists.sale_tier1_fallback, false );
 
@@ -590,12 +617,12 @@ function SaleCap( item, strFeatureContext, strDiscountClass, bUseSmallCap, bPref
 	{
 		if ( bPreferHeaderImg && typeof rgItemData['header'] !== 'undefined' )
 		{
-			$Img = $J( '<img/>', {'class': 'sale_capsule_image autosize', 'src': 'https://store.cloudflare.steamstatic.com/public/images/v6/home/header_placeholder_460x215.gif' } );
+			$Img = $J( '<img/>', {'class': 'sale_capsule_image autosize', 'src': 'https://store.akamai.steamstatic.com/public/images/v6/home/header_placeholder_460x215.gif' } );
 			$Img.data('src-header', rgItemData['header'] );
 		}
 		else
 		{
-			$Img = $J( '<img/>', {'class': 'sale_capsule_image autosize', 'src': 'https://store.cloudflare.steamstatic.com/public/images/v6/home/maincap_placeholder_616x353.gif' } );
+			$Img = $J( '<img/>', {'class': 'sale_capsule_image autosize', 'src': 'https://store.akamai.steamstatic.com/public/images/v6/home/maincap_placeholder_616x353.gif' } );
 			$Img.data('src-maincap', rgItemData['main_capsule'] );
 		}
 
@@ -679,13 +706,13 @@ function AddMicrotrailersToStaticCaps( $Parent )
 
 function TagBoxTopDecoration()
 {
-	var imgStr = '<div class="home_category_top_decoration"><img src="https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/snow_ceiling.png"/></div>';
+	var imgStr = '<div class="home_category_top_decoration"><img src="https://cdn.akamai.steamstatic.com/store/promo/winter2019/snow_ceiling.png"/></div>';
 	return '';
 }
 
 function SaleTagTexture( suffix )
 {
-	return 'background-image: url("https://cdn.cloudflare.steamstatic.com/store/promo/summer2023/' + suffix + '_page.png?v=2"); background-repeat: repeat;';
+	return 'background-image: url("https://cdn.akamai.steamstatic.com/store/promo/summer2023/' + suffix + '_page.png?v=2"); background-repeat: repeat;';
 }
 
 function SaleTagGradient( colorsIn )
@@ -1121,7 +1148,7 @@ function BuildFranchiseCap( FranchiseData, bAlternate )
 
 		$Cap.append( $J('<a/>', {'class': 'hero_click_overlay', 'href': url } ) );
 		$Cap.append( $J('<img/>', {'class': 'franchise_background', 'src': FranchiseData.strBackgroundImageURL } ) );
-        $Cap.append( $J('<img/>', {'class': 'franchise_placeholder', 'src': 'https://cdn.cloudflare.steamstatic.com/store/promo/winter2019/franchise_placeholder.gif' } ) );
+        $Cap.append( $J('<img/>', {'class': 'franchise_placeholder', 'src': 'https://cdn.akamai.steamstatic.com/store/promo/winter2019/franchise_placeholder.gif' } ) );
 		$Cap.append( $J( '<div/>', {'class': 'franchise_logo_ctn'} ).append( $J('<img/>', {'class': 'franchise_logo', 'src': FranchiseData.strLogoImageURL } ) ) );
 
 		$Cap.append( $J('<div/>', {'class': 'franchise_discount_tag' } ).text( 'Up to {PCT}% Off'.replace( /\{PCT\}/, FranchiseData.nDiscountMax ) ) );

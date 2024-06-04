@@ -4110,7 +4110,7 @@
         constructor(e = null) {
           super(),
             Z.prototype.appid || a.aR(Z.M()),
-            s.initialize(this, e, 0, -1, [2], null);
+            s.initialize(this, e, 0, -1, [2, 15], null);
         }
         static M() {
           return (
@@ -4165,6 +4165,14 @@
                     d: 1,
                     br: a.FE.readEnum,
                     bw: a.Xc.writeEnum,
+                  },
+                  content_descriptors: {
+                    n: 15,
+                    r: !0,
+                    q: !0,
+                    br: a.FE.readUint32,
+                    pbr: a.FE.readPackedUint32,
+                    bw: a.Xc.writeRepeatedUint32,
                   },
                 },
               }),
@@ -5786,6 +5794,11 @@
                     n: 1,
                     br: a.FE.readUint64String,
                     bw: a.Xc.writeUint64String,
+                  },
+                  target_client_type: {
+                    n: 2,
+                    br: a.FE.readUint32,
+                    bw: a.Xc.writeUint32,
                   },
                 },
               }),

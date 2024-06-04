@@ -3542,6 +3542,9 @@ function ReleaseGameCommon( url, data )
 				$J('#release_details_container').hide();
 				$J('#publish_success').show();
 			}
+
+			// refresh the send demo wishlist emails button
+			window?.AppLandingRefreshCallbacks?.Dispatch();
 		},
 		error: function( response )
 		{

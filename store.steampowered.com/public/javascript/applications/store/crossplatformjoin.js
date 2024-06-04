@@ -54,7 +54,7 @@
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: (0, o.Xx)("#Login_SignIn") },
+          { strTitle: (0, o.Xx)("#Login_SignInTitle") },
         );
       }
       function p(e, t) {
@@ -65,7 +65,7 @@
             guestOption: t,
           }),
           window,
-          { strTitle: (0, o.Xx)("#Login_SignIn") },
+          { strTitle: (0, o.Xx)("#Login_SignInTitle") },
         );
       }
       function f(e) {

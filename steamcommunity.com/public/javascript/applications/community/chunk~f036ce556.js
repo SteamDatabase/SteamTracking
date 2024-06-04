@@ -2972,7 +2972,7 @@
               { className: k().PrimaryHeader },
               e.refreshInfo
                 ? (0, V.Xx)("#Login_RefreshSignIn")
-                : (0, V.Xx)("#Login_SignIn"),
+                : (0, V.Xx)("#Login_SignInTitle"),
             ),
             o.createElement(ge, { refreshInfo: e.refreshInfo }),
           );

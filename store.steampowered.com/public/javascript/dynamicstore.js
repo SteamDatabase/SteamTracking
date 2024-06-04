@@ -2673,15 +2673,15 @@ function ShowHowDoDiscoveryQueuesWorkDialog()
 
 function GetAvatarURL( strHash, strSize )
 {
-	return "https:\/\/avatars.cloudflare.steamstatic.com\/" + strHash + strSize + '.jpg';
+	return "https:\/\/avatars.akamai.steamstatic.com\/" + strHash + strSize + '.jpg';
 }
 
 function GetScreenshotURL( appid, filename, sizeStr )
 {
 	if( sizeStr )
-		return 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/' + 'apps/' + appid + '/' + filename.replace('.jpg', sizeStr + '.jpg');
+		return 'https://shared.akamai.steamstatic.com/store_item_assets/steam/' + 'apps/' + appid + '/' + filename.replace('.jpg', sizeStr + '.jpg');
 
-	return 'https://shared.cloudflare.steamstatic.com/store_item_assets/steam/' + 'apps/' + appid + '/' + filename;
+	return 'https://shared.akamai.steamstatic.com/store_item_assets/steam/' + 'apps/' + appid + '/' + filename;
 }
 
 
@@ -2742,7 +2742,7 @@ function UpdateStoreBannerForAdditionalCartDiscount( nCartDiscount )
 			<div class="sparkleStar star3"></div> \
 		</div> \
 		</div> \
-		<div class="lunar_sale_title"><img src="https://store.cloudflare.steamstatic.com/public/images/promo/lunar2019/lny2019_title_en.png"/></div> \
+		<div class="lunar_sale_title"><img src="https://store.akamai.steamstatic.com/public/images/promo/lunar2019/lny2019_title_en.png"/></div> \
 		<div class="lunar_sale_spacer lunar_leftspacer"></div> \
 		<div class="lunar_sale_supersavings_label"><div class="highlight">%header%</div><div class="subtitle">%discount%</div></div> \
 		<div class="lunar_sale_spacer lunar_rightspacer">\

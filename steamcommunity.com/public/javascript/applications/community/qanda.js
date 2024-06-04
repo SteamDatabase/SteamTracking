@@ -776,7 +776,7 @@
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: (0, a.Xx)("#Login_SignIn") },
+          { strTitle: (0, a.Xx)("#Login_SignInTitle") },
         );
       }
       function m(e) {

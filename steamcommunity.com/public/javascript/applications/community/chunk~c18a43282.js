@@ -1321,6 +1321,8 @@
             height: 160,
             rgAcceptableTypes: a,
           },
+          app_header_capsule: { width: 460, height: 215, rgAcceptableTypes: i },
+          app_main_capsule: { width: 616, height: 353, rgAcceptableTypes: i },
         };
       function o(e, t, n) {
         const a = s[n];
@@ -1492,7 +1494,7 @@
       });
       var a = n(85556),
         i = n(54842),
-        r = n(16833),
+        r = n(19403),
         s = n(38071),
         o = n(5891),
         l = n(35427),
@@ -13033,12 +13035,12 @@
           e.children,
         );
       }
-      const se = s.forwardRef(function (e, t) {
-        const { hoverProps: n, children: a } = e,
-          i = s.useCallback((e) => (null == e ? void 0 : e.focus()), []);
+      function se(e) {
+        const { hoverProps: t, children: n } = e,
+          a = s.useCallback((e) => (null == e ? void 0 : e.focus()), []);
         return s.createElement(
           d.T,
-          Object.assign({}, n),
+          Object.assign({}, t),
           s.createElement(
             l.Z,
             {
@@ -13049,12 +13051,12 @@
             },
             s.createElement(
               "div",
-              { ref: i, className: P().HoverContentTransition, tabIndex: -1 },
-              a,
+              { ref: a, className: P().HoverContentTransition, tabIndex: -1 },
+              n,
             ),
           ),
         );
-      });
+      }
       function oe(e) {
         const {
             hoverContent: t,
@@ -13243,7 +13245,7 @@
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: (0, r.Xx)("#Login_SignIn") },
+          { strTitle: (0, r.Xx)("#Login_SignInTitle") },
         );
       }
       function u(e) {
@@ -13477,7 +13479,7 @@
     },
     85884: (e, t, n) => {
       "use strict";
-      n.d(t, { Hl: () => Z, S$: () => X, a4: () => K, ju: () => x });
+      n.d(t, { Hl: () => z, S$: () => Y, a4: () => X, ju: () => U });
       var a = n(27605),
         i = n(47427),
         r = n(23231),
@@ -13515,8 +13517,9 @@
         V = n(85305),
         M = n(7769),
         P = n.n(M),
-        F = n(34913);
-      const x = (0, a.Pi)((e) => {
+        F = n(34913),
+        x = n(7260);
+      const U = (0, a.Pi)((e) => {
           var t;
           const {
               myInstance: n,
@@ -13538,10 +13541,10 @@
               bHidePlatforms: F,
               bHideContainedApps: x,
               bAllowTwoLinesForHeader: U,
-              bShowReviewSummary: W,
+              bShowReviewSummary: j,
               bShowDeckCompatibilityDialog: Z,
               bAutoFocus: z,
-              fnOnClickOverride: X,
+              fnOnClickOverride: K,
               bIsMarketingMessage: Y,
             } = e,
             J = (0, N.bJ)(),
@@ -13598,14 +13601,14 @@
                 s.Ks,
                 Object.assign(
                   {
-                    onClick: Y ? X : null,
+                    onClick: Y ? K : null,
                     className: (0, T.Z)(
                       P().StoreSaleWidgetContainer,
                       P().SaleItemDefaultCapsuleDisplay,
                       Y ? P().MarketingMessage : "",
                     ),
                   },
-                  (0, b.h)(u, J, te, void 0, X),
+                  (0, b.h)(u, J, te, void 0, K),
                   { preferredFocus: oe },
                 ),
                 i.createElement(
@@ -13614,15 +13617,15 @@
                   i.createElement(
                     "a",
                     {
-                      href: X ? void 0 : de,
-                      target: O.De.IN_CLIENT || X ? void 0 : "_blank",
-                      onClick: X,
+                      href: K ? void 0 : de,
+                      target: O.De.IN_CLIENT || K ? void 0 : "_blank",
+                      onClick: K,
                     },
                     i.createElement(
                       "div",
                       { className: P().StoreSaleWidgetImage },
                       i.createElement(E.v, { appids: q }),
-                      i.createElement(K, { info: A, imageType: "header" }),
+                      i.createElement(X, { info: A, imageType: "header" }),
                       i.createElement(B.y, {
                         eDeckCompatibilityCategory:
                           null === (t = u.GetPlatforms()) || void 0 === t
@@ -13641,7 +13644,7 @@
                       oe ? P().Bundle : "",
                     ),
                   },
-                  Boolean(ce && !X) &&
+                  Boolean(ce && !K) &&
                     i.createElement(V.RJ, {
                       appID: h.id,
                       classOverride: (0, T.Z)(
@@ -13656,9 +13659,9 @@
                     i.createElement(
                       "a",
                       {
-                        href: X ? void 0 : de,
+                        href: K ? void 0 : de,
                         target: O.De.IN_CLIENT ? void 0 : "_blank",
-                        onClick: X,
+                        onClick: K,
                       },
                       i.createElement(
                         "div",
@@ -13720,9 +13723,9 @@
                             }),
                         ),
                     ),
-                    W && i.createElement(V.Yb, { appInfo: h }),
+                    j && i.createElement(V.Yb, { appInfo: h }),
                   ),
-                  oe && i.createElement(j, { info: _ }),
+                  oe && i.createElement(W, { info: _ }),
                   Boolean(ce && ie) &&
                     i.createElement(
                       "div",
@@ -13746,7 +13749,7 @@
                           )
                         : ie,
                     ),
-                  Boolean(!X)
+                  Boolean(!K)
                     ? i.createElement(
                         i.Fragment,
                         null,
@@ -13774,7 +13777,7 @@
                   i.createElement(
                     "div",
                     { className: P().StoreSaleWidgetBgTint },
-                    i.createElement(K, { info: h, imageType: "header" }),
+                    i.createElement(X, { info: h, imageType: "header" }),
                   ),
                 ),
               ),
@@ -13788,8 +13791,8 @@
               ),
           );
         }),
-        U = 6;
-      function j(e) {
+        j = 6;
+      function W(e) {
         const { info: t } = e,
           [n] = (0, g.jk)(t.id, (0, _.TM)(t.type), {}),
           [a, r] = i.useState(null);
@@ -13816,9 +13819,9 @@
                   "div",
                   { className: P().PreviewCtn },
                   a
-                    .slice(0, U)
+                    .slice(0, j)
                     .map((e) =>
-                      i.createElement(W, {
+                      i.createElement(Z, {
                         key: `preview${e.id}_${e.type}`,
                         info: e,
                       }),
@@ -13828,7 +13831,7 @@
             : null
         );
       }
-      function W(e) {
+      function Z(e) {
         const { info: t } = e,
           [n] = (0, g.Vm)(t.id, (0, _.TM)(t.type), { include_assets: !0 }),
           a = null == n ? void 0 : n.GetAssets().GetSmallCapsuleURL();
@@ -13847,7 +13850,7 @@
           }),
         );
       }
-      const Z = (e) => {
+      const z = (e) => {
           const {
               info: t,
               bShowAsMuted: n,
@@ -13902,11 +13905,11 @@
               ),
               c && i.createElement("div", { className: P().CapsuleName }, _),
               l &&
-                i.createElement(z, Object.assign({ creatorAccountID: l }, e)),
+                i.createElement(K, Object.assign({ creatorAccountID: l }, e)),
             )
           );
         },
-        z = (e) => {
+        K = (e) => {
           const { creatorAccountID: t, bShowAsMuted: n, strClassName: a } = e,
             [r, s] = (0, p.KU)(t);
           return i.createElement(
@@ -13923,7 +13926,7 @@
             ),
           );
         };
-      function K(e) {
+      function X(e) {
         const { info: t, imageType: n } = e,
           [a] = (0, g.jk)(t.id, (0, _.TM)(t.type), { include_assets: !0 });
         if (!a)
@@ -13958,7 +13961,7 @@
           }),
         );
       }
-      const X = (0, a.Pi)((e) => {
+      const Y = (0, a.Pi)((e) => {
         const t = R.LZ.GetWithFallback(
           e.link.localized_link_capsule,
           e.language,
@@ -13974,7 +13977,7 @@
             "div",
             { className: P().CapsuleContainer },
             Boolean(e.link.localized_link_capsule) &&
-              i.createElement("img", {
+              i.createElement(x.l, {
                 className: P().LinkCapsuleImage,
                 src: `${(0, u.OL)()}${e.clanAccountID}/${t}`,
               }),
@@ -14921,7 +14924,7 @@
             o,
           );
         }
-        return a.createElement(a.Fragment, null, e.children);
+        return a.createElement("span", { style: s, className: t }, o);
       }
       function p(e) {
         const { section: t } = e;

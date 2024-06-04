@@ -125,7 +125,7 @@
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: (0, n.Xx)("#Login_SignIn") },
+          { strTitle: (0, n.Xx)("#Login_SignInTitle") },
         );
       }
       function h(e, t) {
@@ -136,7 +136,7 @@
             guestOption: t,
           }),
           window,
-          { strTitle: (0, n.Xx)("#Login_SignIn") },
+          { strTitle: (0, n.Xx)("#Login_SignInTitle") },
         );
       }
       function g(e) {

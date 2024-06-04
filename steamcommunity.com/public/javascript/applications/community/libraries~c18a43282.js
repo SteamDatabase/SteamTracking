@@ -420,6 +420,95 @@
         (R.defaultProps = F),
         (R.displayName = "Waypoint");
     },
+    19403: (e, r, t) => {
+      t.d(r, {
+        NO: () => l,
+        iP: () => n,
+        p8: () => o,
+        pA: () => s,
+        yp: () => i,
+      });
+      const i = [
+          "h1",
+          "h2",
+          "h3",
+          "h4",
+          "h5",
+          "smalltext",
+          "b",
+          "u",
+          "hr",
+          "i",
+          "img",
+          "strike",
+          "spoiler",
+          "noparse",
+          "url",
+          "list",
+          "olist",
+          "quote",
+          "pullquote",
+          "code",
+          "table",
+          "tr",
+          "td",
+          "th",
+          "previewyoutube",
+          "looping_media",
+          "roomeffect",
+          "sticker",
+          "price",
+          "pricesavings",
+          "trailer",
+          "speaker",
+          "doclink",
+          "video",
+          "vod",
+          "youtubeorvideo",
+          "giveawayeligible",
+          "claimitem",
+          "packagepurchaseable",
+          "actiondialog",
+          "uploadfilebutton",
+          "docimg",
+        ],
+        n = [
+          "h1",
+          "h2",
+          "h3",
+          "b",
+          "u",
+          "i",
+          "strike",
+          "spoiler",
+          "noparse",
+          "url",
+        ],
+        a = [
+          "img",
+          "previewyoutube",
+          "looping_media",
+          "roomeffect",
+          "video",
+          "vod",
+          "trailer",
+          "youtubeorvideo",
+          "docimg",
+        ],
+        s = i.filter((e) => -1 == a.indexOf(e));
+      function o(e, r = null, t = " ") {
+        let n = null == r ? void 0 : r.join("|");
+        n || (n = i.join("|") + "|\\*");
+        const a = new RegExp("\\[(" + n + ")\\b[^\\]]*\\].*?\\[/\\1\\]", "gi");
+        return e.replace(a, t);
+      }
+      function l(e, r = null, t = "") {
+        let n = null == r ? void 0 : r.join("|");
+        n || (n = i.join("|") + "|\\*");
+        const a = "\\[\\/?(?:" + n + "){1,}.*?]";
+        return e.replace(new RegExp(a, "gi"), t);
+      }
+    },
     89631: (e, r, t) => {
       function i(e) {
         return (
@@ -2501,67 +2590,11 @@
           return "CStore_GetStorePreferences_Request";
         }
       }
-      class P extends l {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            P.prototype.preferences || n.aR(P.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            P.sm_m ||
-              (P.sm_m = {
-                proto: P,
-                fields: {
-                  preferences: { n: 1, c: I },
-                  tag_preferences: { n: 2, c: C },
-                  content_descriptor_preferences: { n: 3, c: o.cF },
-                },
-              }),
-            P.sm_m
-          );
-        }
-        static MBF() {
-          return P.sm_mbf || (P.sm_mbf = n.Bh(P.M())), P.sm_mbf;
-        }
-        toObject(e = !1) {
-          return P.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return n.TA(P.M(), e, r);
-        }
-        static fromObject(e) {
-          return n.aD(P.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new i.BinaryReader(e),
-            t = new P();
-          return P.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return n.F(P.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return P.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          n.l2(P.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return P.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CStore_GetStorePreferences_Response";
-        }
-      }
       class k extends l {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            k.prototype.num_apps || n.aR(k.M()),
+            k.prototype.preferences || n.aR(k.M()),
             l.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
@@ -2570,12 +2603,9 @@
               (k.sm_m = {
                 proto: k,
                 fields: {
-                  num_apps: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  num_top_friends: {
-                    n: 2,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
+                  preferences: { n: 1, c: I },
+                  tag_preferences: { n: 2, c: C },
+                  content_descriptor_preferences: { n: 3, c: o.cF },
                 },
               }),
             k.sm_m
@@ -2611,6 +2641,65 @@
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return k.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CStore_GetStorePreferences_Response";
+        }
+      }
+      class P extends l {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            P.prototype.num_apps || n.aR(P.M()),
+            l.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            P.sm_m ||
+              (P.sm_m = {
+                proto: P,
+                fields: {
+                  num_apps: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
+                  num_top_friends: {
+                    n: 2,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
+                },
+              }),
+            P.sm_m
+          );
+        }
+        static MBF() {
+          return P.sm_mbf || (P.sm_mbf = n.Bh(P.M())), P.sm_mbf;
+        }
+        toObject(e = !1) {
+          return P.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return n.TA(P.M(), e, r);
+        }
+        static fromObject(e) {
+          return n.aD(P.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new P();
+          return P.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return n.F(P.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return P.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          n.l2(P.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return P.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStore_GetTrendingAppsAmongFriends_Request";
@@ -4012,14 +4101,14 @@
             return e.SendMsg(
               "Store.GetStorePreferences#1",
               (0, a.MD)(D, r),
-              P,
+              k,
               { ePrivilege: 1 },
             );
           }),
           (e.GetTrendingAppsAmongFriends = function (e, r) {
             return e.SendMsg(
               "Store.GetTrendingAppsAmongFriends#1",
-              (0, a.MD)(k, r),
+              (0, a.MD)(P, r),
               x,
               { bConstMethod: !0, ePrivilege: 1 },
             );

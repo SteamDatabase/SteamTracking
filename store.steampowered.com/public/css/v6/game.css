@@ -424,6 +424,10 @@ img.game_header_image_full {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc481746', endColorstr='#cca554b1',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
+.game_area_dlc_bubble ul {
+	margin-left: 16px;
+}
+
 .game_area_soundtrack_bubble {
     background: -webkit-linear-gradient( 30deg, #9d2f52 5%,#ce7e94 95%);
 	background: linear-gradient( 60deg, #9d2f52 5%,#ce7e94 95%);

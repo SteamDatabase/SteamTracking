@@ -972,6 +972,8 @@
             height: 160,
             rgAcceptableTypes: n,
           },
+          app_header_capsule: { width: 460, height: 215, rgAcceptableTypes: i },
+          app_main_capsule: { width: 616, height: 353, rgAcceptableTypes: i },
         };
       function r(e, t, a) {
         const n = s[a];
@@ -1130,7 +1132,7 @@
       });
       var n = a(85556),
         i = a(54842),
-        s = a(83682),
+        s = a(19403),
         r = a(38071);
       const o = {
         bBroadcastEnabled: !1,
@@ -1502,6 +1504,7 @@
           "show_library_demo_detail",
           "clear_library_demo_detail",
           "repost_source_possible",
+          "autocreate_promotools",
         ],
         re = [
           "patchnotes",
@@ -11352,12 +11355,12 @@
           e.children,
         );
       }
-      const re = r.forwardRef(function (e, t) {
-        const { hoverProps: a, children: n } = e,
-          i = r.useCallback((e) => (null == e ? void 0 : e.focus()), []);
+      function re(e) {
+        const { hoverProps: t, children: a } = e,
+          n = r.useCallback((e) => (null == e ? void 0 : e.focus()), []);
         return r.createElement(
           c.T,
-          Object.assign({}, a),
+          Object.assign({}, t),
           r.createElement(
             l.Z,
             {
@@ -11368,12 +11371,12 @@
             },
             r.createElement(
               "div",
-              { ref: i, className: M().HoverContentTransition, tabIndex: -1 },
-              n,
+              { ref: n, className: M().HoverContentTransition, tabIndex: -1 },
+              a,
             ),
           ),
         );
-      });
+      }
       function oe(e) {
         const {
             hoverContent: t,
@@ -11570,7 +11573,7 @@
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: (0, s.Xx)("#Login_SignIn") },
+          { strTitle: (0, s.Xx)("#Login_SignInTitle") },
         );
       }
       function _(e, t) {
@@ -11581,7 +11584,7 @@
             guestOption: t,
           }),
           window,
-          { strTitle: (0, s.Xx)("#Login_SignIn") },
+          { strTitle: (0, s.Xx)("#Login_SignInTitle") },
         );
       }
       function h(e) {
@@ -11815,7 +11818,7 @@
     },
     85884: (e, t, a) => {
       "use strict";
-      a.d(t, { Hl: () => z, S$: () => J, a4: () => X, ju: () => x });
+      a.d(t, { Hl: () => Z, S$: () => q, a4: () => J, ju: () => j });
       var n = a(27605),
         i = a(47427),
         s = a(23231),
@@ -11853,8 +11856,9 @@
         U = a(85305),
         F = a(7769),
         M = a.n(F),
-        V = a(34913);
-      const x = (0, n.Pi)((e) => {
+        V = a(34913),
+        x = a(7260);
+      const j = (0, n.Pi)((e) => {
           var t;
           const {
               myInstance: a,
@@ -11876,10 +11880,10 @@
               bHidePlatforms: V,
               bHideContainedApps: x,
               bAllowTwoLinesForHeader: j,
-              bShowReviewSummary: W,
+              bShowReviewSummary: H,
               bShowDeckCompatibilityDialog: z,
               bAutoFocus: Z,
-              fnOnClickOverride: J,
+              fnOnClickOverride: X,
               bIsMarketingMessage: q,
             } = e,
             Y = (0, P.bJ)(),
@@ -11936,14 +11940,14 @@
                 r.Ks,
                 Object.assign(
                   {
-                    onClick: q ? J : null,
+                    onClick: q ? X : null,
                     className: (0, L.Z)(
                       M().StoreSaleWidgetContainer,
                       M().SaleItemDefaultCapsuleDisplay,
                       q ? M().MarketingMessage : "",
                     ),
                   },
-                  (0, C.h)(u, Y, te, void 0, J),
+                  (0, C.h)(u, Y, te, void 0, X),
                   { preferredFocus: oe },
                 ),
                 i.createElement(
@@ -11952,15 +11956,15 @@
                   i.createElement(
                     "a",
                     {
-                      href: J ? void 0 : ce,
-                      target: O.De.IN_CLIENT || J ? void 0 : "_blank",
-                      onClick: J,
+                      href: X ? void 0 : ce,
+                      target: O.De.IN_CLIENT || X ? void 0 : "_blank",
+                      onClick: X,
                     },
                     i.createElement(
                       "div",
                       { className: M().StoreSaleWidgetImage },
                       i.createElement(I.v, { appids: K }),
-                      i.createElement(X, { info: w, imageType: "header" }),
+                      i.createElement(J, { info: w, imageType: "header" }),
                       i.createElement(B.y, {
                         eDeckCompatibilityCategory:
                           null === (t = u.GetPlatforms()) || void 0 === t
@@ -11979,7 +11983,7 @@
                       oe ? M().Bundle : "",
                     ),
                   },
-                  Boolean(de && !J) &&
+                  Boolean(de && !X) &&
                     i.createElement(U.RJ, {
                       appID: _.id,
                       classOverride: (0, L.Z)(
@@ -11994,9 +11998,9 @@
                     i.createElement(
                       "a",
                       {
-                        href: J ? void 0 : ce,
+                        href: X ? void 0 : ce,
                         target: O.De.IN_CLIENT ? void 0 : "_blank",
-                        onClick: J,
+                        onClick: X,
                       },
                       i.createElement(
                         "div",
@@ -12058,9 +12062,9 @@
                             }),
                         ),
                     ),
-                    W && i.createElement(U.Yb, { appInfo: _ }),
+                    H && i.createElement(U.Yb, { appInfo: _ }),
                   ),
-                  oe && i.createElement(H, { info: h }),
+                  oe && i.createElement(W, { info: h }),
                   Boolean(de && ie) &&
                     i.createElement(
                       "div",
@@ -12084,7 +12088,7 @@
                           )
                         : ie,
                     ),
-                  Boolean(!J)
+                  Boolean(!X)
                     ? i.createElement(
                         i.Fragment,
                         null,
@@ -12112,7 +12116,7 @@
                   i.createElement(
                     "div",
                     { className: M().StoreSaleWidgetBgTint },
-                    i.createElement(X, { info: _, imageType: "header" }),
+                    i.createElement(J, { info: _, imageType: "header" }),
                   ),
                 ),
               ),
@@ -12126,8 +12130,8 @@
               ),
           );
         }),
-        j = 6;
-      function H(e) {
+        H = 6;
+      function W(e) {
         const { info: t } = e,
           [a] = (0, g.jk)(t.id, (0, h.TM)(t.type), {}),
           [n, s] = i.useState(null);
@@ -12154,9 +12158,9 @@
                   "div",
                   { className: M().PreviewCtn },
                   n
-                    .slice(0, j)
+                    .slice(0, H)
                     .map((e) =>
-                      i.createElement(W, {
+                      i.createElement(z, {
                         key: `preview${e.id}_${e.type}`,
                         info: e,
                       }),
@@ -12166,7 +12170,7 @@
             : null
         );
       }
-      function W(e) {
+      function z(e) {
         const { info: t } = e,
           [a] = (0, g.Vm)(t.id, (0, h.TM)(t.type), { include_assets: !0 }),
           n = null == a ? void 0 : a.GetAssets().GetSmallCapsuleURL();
@@ -12185,7 +12189,7 @@
           }),
         );
       }
-      const z = (e) => {
+      const Z = (e) => {
           const {
               info: t,
               bShowAsMuted: a,
@@ -12240,11 +12244,11 @@
               ),
               d && i.createElement("div", { className: M().CapsuleName }, h),
               l &&
-                i.createElement(Z, Object.assign({ creatorAccountID: l }, e)),
+                i.createElement(X, Object.assign({ creatorAccountID: l }, e)),
             )
           );
         },
-        Z = (e) => {
+        X = (e) => {
           const { creatorAccountID: t, bShowAsMuted: a, strClassName: n } = e,
             [s, r] = (0, p.KU)(t);
           return i.createElement(
@@ -12261,7 +12265,7 @@
             ),
           );
         };
-      function X(e) {
+      function J(e) {
         const { info: t, imageType: a } = e,
           [n] = (0, g.jk)(t.id, (0, h.TM)(t.type), { include_assets: !0 });
         if (!n)
@@ -12296,7 +12300,7 @@
           }),
         );
       }
-      const J = (0, n.Pi)((e) => {
+      const q = (0, n.Pi)((e) => {
         const t = R.LZ.GetWithFallback(
           e.link.localized_link_capsule,
           e.language,
@@ -12312,7 +12316,7 @@
             "div",
             { className: M().CapsuleContainer },
             Boolean(e.link.localized_link_capsule) &&
-              i.createElement("img", {
+              i.createElement(x.l, {
                 className: M().LinkCapsuleImage,
                 src: `${(0, u.OL)()}${e.clanAccountID}/${t}`,
               }),
@@ -13257,7 +13261,7 @@
             o,
           );
         }
-        return n.createElement(n.Fragment, null, e.children);
+        return n.createElement("span", { style: r, className: t }, o);
       }
       function p(e) {
         const { section: t } = e;

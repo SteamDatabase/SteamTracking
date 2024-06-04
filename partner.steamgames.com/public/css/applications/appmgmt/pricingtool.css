@@ -1152,6 +1152,46 @@ img {
   width: 16px;
   height: 16px;
 }
+.react-select-container .react-select__control {
+  background: #dce8fb14;
+  border-color: transparent;
+  box-shadow: 0 0 0 transparent;
+}
+.react-select-container .react-select__control:hover {
+  background: #464d58;
+  border-color: transparent;
+}
+.react-select-container .react-select__control .react-select__single-value {
+  color: #d9dde1;
+}
+.react-select-container .react-select__control .react-select__input-container {
+  color: #d9dde1;
+}
+.react-select-container
+  .react-select__control
+  input[type="text"].react-select__input {
+  color: #d9dde1;
+  box-shadow: unset;
+}
+.react-select-container
+  .react-select__control
+  .react-select__indicator-separator {
+  background-color: #42494d;
+}
+.react-select-container .react-select__menu {
+  background-color: #373c44;
+  margin-top: 2px;
+}
+.react-select-container .react-select__menu .react-select__option {
+  color: #d9dde1;
+}
+.react-select-container .react-select__menu .react-select__option--is-focused {
+  color: #d9dde1;
+  background-color: #3e444d;
+}
+.react-select-container .react-select__menu .react-select__option--is-selected {
+  background-color: #1c8cde;
+}
 ._353rnPLVzyQBQhakxhkl7u {
   display: flex;
   flex-direction: column;

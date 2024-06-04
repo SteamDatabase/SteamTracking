@@ -466,6 +466,10 @@
                 ? void 0
                 : i.toObject()),
             (this.m_strInternalName = e.internal_name()),
+            (1 != this.m_eItemType && 2 != this.m_eItemType) ||
+              (this.m_SelfPurchaseOption = e.self_purchase_option(!1)
+                ? e.self_purchase_option().toObject()
+                : this.m_BestPurchaseOption),
             this.MergeData(e, t);
         }
         MergeData(e, t) {
@@ -1056,12 +1060,7 @@
           );
         }
         GetSelfPurchaseOption() {
-          var e;
-          this.BCheckDataRequestIncluded({ include_all_purchase_options: !0 });
-          const t = 2 === this.m_eItemType ? "bundleid" : "packageid";
-          return null === (e = this.m_rgPurchaseOptions) || void 0 === e
-            ? void 0
-            : e.find((e) => e[t] && e[t] === this.m_unID);
+          return this.m_SelfPurchaseOption;
         }
         BHasAgeSafeScreenshots() {
           return this.GetOnlyAllAgesSafeScreenshots().length > 0;

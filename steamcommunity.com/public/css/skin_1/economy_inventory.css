@@ -2,7 +2,7 @@
 
 #BG_top {
 	position:relative;
-	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/bg_top.gif');
+	background-image:url('https://community.akamai.steamstatic.com/public/images/skin_1/bg_top.gif');
 	background-repeat:no-repeat;
 	width:958px;
 	height:98px;
@@ -10,7 +10,7 @@
 	margin: 0px auto;
 }
 #BG_bottom {
-	background-image:url('https://community.cloudflare.steamstatic.com/public/images/skin_1/bg_bottom.gif');
+	background-image:url('https://community.akamai.steamstatic.com/public/images/skin_1/bg_bottom.gif');
 	background-repeat:repeat-y;
 	width:958px;
 	text-align:left;
@@ -156,7 +156,7 @@
 	width: 32px;
 	line-height: 54px;
 	padding-right: 8px;
-	
+
 	float: left;
 	display: block;
 	vertical-align: middle;
@@ -209,7 +209,7 @@
 	width: 2px;
 	height: 54px;
 
-	background-image:url('https://community.cloudflare.steamstatic.com/public/images/economy/game_button_separator.png');
+	background-image:url('https://community.akamai.steamstatic.com/public/images/economy/game_button_separator.png');
 	background-repeat:no-repeat;
 }
 
@@ -309,7 +309,7 @@ a.games_list_tab:hover {
 
 .view_inventory_page .item.activeInfo, .view_inventory_page .item:hover {
 	background-position: -1px -197px;
-	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/trade_itemholder.png' );
+	background-image: url( 'https://community.akamai.steamstatic.com/public/images/economy/trade_itemholder.png' );
 	background-repeat: no-repeat;
 }
 
@@ -372,7 +372,7 @@ html.responsive .responsive_fixonscroll_ctn #contextselect {
 
 #contextselect {
 	background-color: #000000;
-	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/context_arrow.png' );
+	background-image: url( 'https://community.akamai.steamstatic.com/public/images/economy/context_arrow.png' );
 	background-repeat: no-repeat;
 	background-position: right top;
 	border: 1px solid #676767;
@@ -574,8 +574,8 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 .pending_gift {
 	border: 1px solid #4d4d4e;
 	border-radius: 2px;
-	background-color: #373634;
-	background-image: url( 'https://community.cloudflare.steamstatic.com/public/images/economy/pendinggift_bg.jpg' );
+	background-color: #262d37;
+	background-image: url( 'https://community.akamai.steamstatic.com/public/images/economy/pendinggift_bg.jpg?v=2' );
 	background-repeat: no-repeat;
 	background-position: bottom right;
 
@@ -585,7 +585,7 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 
 .pending_gift_template_1
 {
-	background-image: url( 'https://community.cloudflare.steamstatic.com/public/shared/images/promo/lny2019/bg_gift_pending.jpg' ) !important;	
+	background-image: url( 'https://community.akamai.steamstatic.com/public/shared/images/promo/lny2019/bg_gift_pending.jpg' ) !important;
 	background-position: 0% 0% !important;
 	background-size: cover;
 }
@@ -655,11 +655,11 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 }
 
 .pending_gift .content {
-	background-color: #292929;
+	background-color: #2a3340;
 	padding: 18px 25px;
-	
-	box-shadow: inset 2px 2px 8px #202020;
-	-webkit-box-shadow: inset 0 0 16px #1A1A1A;
+
+	box-shadow: inset 2px 2px 8px #181C24FF;
+	-webkit-box-shadow: inset 0 0 16px #181C24FF;
 }
 
 .pending_gift .content b {
@@ -672,14 +672,21 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 		font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
 
-			background-image: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAChCAIAAACJa0IwAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADtJREFUeNpiMDI0ZGJgYCAL/ydW7f//1DOPgFmUmEGu3v+khBuS/v/khDtU/38y44xqZmAxk0zzAAIMABL1Grxx35GEAAAAAElFTkSuQmCC' );
-	background-repeat: repeat-x;
+			background-repeat: repeat-x;
 	background-position: top;
 }
 
 .pending_gift .content p {
 	margin-top: 0px;
 	margin-bottom: 10px;
+}
+
+.pending_gift .content p.gift_msg_body {
+	margin-bottom: 14px;
+}
+
+.pending_gift .content p.gift_msg_sentiment {
+	margin-bottom: 0;
 }
 
 .gift_message .signature_line {
@@ -702,12 +709,12 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 	max-width: 434px;
 	margin: 70px auto 0px;
 	text-align: center;
-	color: #b4b4b4;
+	color: #abb2b7;
 	padding: 25px 25px;
 }
 
 .gift_controls .gift_status {
-	color: #767676;
+	color: #abb2b7;
 }
 
 .gift_controls_buttons {
@@ -832,7 +839,7 @@ p.pending_gifts_none {
 }
 
 .alertbox_header, .alertbox_header .leftcap, .alertbox_header .rightcap {
-	background-image: url( https://community.cloudflare.steamstatic.com/public/images/economy/alertbox_header.png );
+	background-image: url( https://community.akamai.steamstatic.com/public/images/economy/alertbox_header.png );
 }
 
 .alertbox_header {
@@ -899,7 +906,7 @@ p.pending_gifts_none {
 	text-align: center;
 	color: #b4b4b4;
 
-	background-image: url( https://community.cloudflare.steamstatic.com/public/images/economy/alertbox_scrollcontrol_shadow.png );
+	background-image: url( https://community.akamai.steamstatic.com/public/images/economy/alertbox_scrollcontrol_shadow.png );
 	background-repeat: repeat-y;
 }
 

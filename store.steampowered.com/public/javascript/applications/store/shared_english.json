@@ -1101,6 +1101,7 @@
     "MobileLogin_FreeAndEasy": "It's free and easy. Discover thousands of PC games to play with millions of new friends.",
     "MobileLogin_LearnMoreAboutSteam": "Learn more about Steam",
     "MobileLogin_Error_RateLimitExceeded": "There have been too many login failures from your network in a short time period. Please wait and try again later.",
+    "Login_SignInTitle": "Sign in",
     "Login_SignIn": "Sign in",
     "Login_SigningIn": "Signing in",
     "Login_AccountName": "Steam Account Name",

@@ -577,6 +577,23 @@ body.v6.rewards .ModalPosition_Content {
   color: #fff;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
+._2slUuJn3UIDWrXWtQE5K3o:has(.UIMULcMvZKXpAu7iWuxz) {
+  background: linear-gradient(130deg, #172d36, #182431);
+  -webkit-background-clip: text;
+  background-clip: text;
+  padding-top: 480px;
+}
+._399XJVziSRXteE0UwuS2Cj:has(.UIMULcMvZKXpAu7iWuxz) ._1Lf5512-BMNbp1bfLQXpQG {
+  background-size: unset;
+  background-position: calc(50% + 95px) 0;
+  -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 800px);
+  mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 800px);
+}
+@media screen and (max-width: 965px) {
+  ._399XJVziSRXteE0UwuS2Cj:has(.UIMULcMvZKXpAu7iWuxz) ._1Lf5512-BMNbp1bfLQXpQG {
+    background-position: 50% 0;
+  }
+}
 .UIMULcMvZKXpAu7iWuxz {
   color: hotpink !important;
 }
@@ -6573,32 +6590,24 @@ body.v6.rewards .ModalPosition_Content {
 @media (max-width: 1600px) {
   ._1zw0IYqnKh-6iLonZf9P-G,
   ._1vgF7y8x0h-yXyDW_zLgnG {
-    -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 50%);
-    mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 50%);
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      black,
+      rgba(0, 0, 0, 0) 50vw
+    );
+    mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 50vw);
   }
 }
 @media (max-width: 1280px) {
   ._1zw0IYqnKh-6iLonZf9P-G,
   ._1vgF7y8x0h-yXyDW_zLgnG {
-    -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 30%);
-    mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 30%);
     background-size: 120%;
-  }
-}
-@media (max-width: 900px) {
-  ._1zw0IYqnKh-6iLonZf9P-G,
-  ._1vgF7y8x0h-yXyDW_zLgnG {
-    -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 32%);
-    mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 32%);
-    background-size: 150%;
   }
 }
 @media (max-width: 720px) {
   ._1zw0IYqnKh-6iLonZf9P-G,
   ._1vgF7y8x0h-yXyDW_zLgnG {
     background-position: top;
-    -webkit-mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 37%);
-    mask-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0) 37%);
     background-size: 220%;
   }
 }

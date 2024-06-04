@@ -1,59 +1,17 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
+"use strict";
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [2558],
   {
-    72869: (e) => {
-      e.exports = {
-        Bold: "_1opdqAOxXrGF6BBCpWBSwD",
-        Italic: "_3PSCEwXIQOjACd8vcBVCh5",
-        Paragraph: "_3zjknFIbJGBGezHbYjCrVE",
-        Header1: "_38GFQhbMgQS_1y-yV_MAza",
-        Header2: "_2ZqUvIHTeQdmj5n3wCqp5s",
-        Header3: "KePJsJFkRONeGxLE3PKlF",
-        Header4: "_12a97iox1ZnYnQgXLpvafk",
-        Header5: "_4GmIVQlN3tVVTtLvuOhUV",
-        CenterSpan: "_3RAiCNw0-UoPo_4awvb1mA",
-        SmallText: "UvZC_c1WvBWOxlmJu7qCo",
-        Underline: "_3vpZiV7iSLrM6hY_mXk2k2",
-        Strike: "_3dQvq4jSQdWUz4WSgIjESL",
-        Spoiler: "_3CaxnwuIvFNL4Dlz6VYwHm",
-        Revealed: "_35II0clQ4RixPf4ZSRqXPh",
-        SpoilerText: "_1owPz2jY3VWy1TyVCWb7Gs",
-        DisabledMouseEvents: "_3QOEiyJx6JNKSPfGtfeQRO",
-        BlockQuote: "_2sfhtLUZT0Q5XZbbP0ybRr",
-        QuoteAuthor: "_2CMyS9Y6n11x4PMJHri59E",
-        PullQuote: "_3DRIe0jpfxAeqHxvn4iq3m",
-        Code: "_1AelsP7HuMD8QF_8MVP602",
-        CodeBlock: "_1paKwApiKpt_82rqeHdUh2",
-        List: "tfM5VWgPClhy8MTX_pNLF",
-        OrderedList: "_3Ve1EOUy_uAbrn63gbK5U",
-        ListItem: "_3DlO014RzYr_m9lI620soy",
-        HR: "_26oRBOf5CSY0iZsXJ_juPw",
-        Table: "_2Z51g3jeZDA1f76UU-hlG3",
-        NoBorder: "_3aoMET6BC38Vks1LAxB0rO",
-        TableRow: "Ms77JiTbY6cF3X9kDmu_I",
-        TableData: "_2t3YCtmlffdVpfB7Gy7NEW",
-        TableHeader: "_1vvfxMDi4YsoiPx4a-EQpH",
-        EqualCells: "_5b-QB3nK-8ib6IKjTAtyp",
-        ExpandSectionBlock: "YvEQhAIQTyLOKf4OZCW_o",
-        ExpandSectionHeader: "_3OxxMP4ilAfeJHPZJlq-3y",
-        EmbedArrow: "WXJl-z3InzcPSdkJYNQdR",
-        ExpandSectionBody: "_2sCNLKNv2RQrux8JZHAj7W",
-        ExpandSection_WithTitle: "_22nl0JNsidayri6K48VGaW",
-        LinkButton: "lMVeYbREjOZyypw7mp3qS",
-        Image: "_1CmpCOpiyFBd8ePBHSdJZ5",
-      };
-    },
     80878: (e, t, o) => {
-      "use strict";
-      o.d(t, { Gg: () => h, L4: () => _ });
+      o.d(t, { Gg: () => h, L4: () => f });
       var i = o(85556),
         l = o(80751),
         a = o.n(l),
         s = o(54842),
-        r = o(62210),
-        p = o(31846),
+        p = o(62210),
+        r = o(31846),
         d = o(37563);
       class n {
         constructor() {
@@ -117,7 +75,7 @@
             const { processor: i = m, info: s } = t;
             if (!e) return void this.SetFileToUpload(null);
             this.m_fileUploadProps.fileInfo = s;
-            const r =
+            const p =
               null !==
                 (a =
                   null === (l = (o = this.m_Callbacks).GetFileNameOverride) ||
@@ -129,9 +87,9 @@
             if (e.size > 1024 * this.m_Callbacks.GetMaxFileSizeMB() * 1024)
               return void this.SetUploadFileError(
                 4,
-                (0, p.Xx)(
+                (0, r.Xx)(
                   "#Chat_Settings_Error_ChatFileTooLarge_dynamic",
-                  r,
+                  p,
                   this.m_Callbacks.GetMaxFileSizeMB(),
                 ),
               );
@@ -152,7 +110,7 @@
             )
               return void this.SetUploadFileError(
                 5,
-                (0, p.Xx)("#Chat_Settings_Error_ChatFileTypeNotSupported", r),
+                (0, r.Xx)("#Chat_Settings_Error_ChatFileTypeNotSupported", p),
               );
             const n = yield i(e);
             this.SetFileToUpload(n.file),
@@ -177,7 +135,7 @@
             if (e.size > 1024 * this.m_Callbacks.GetMaxFileSizeMB() * 1024)
               return void this.SetUploadFileError(
                 4,
-                (0, p.Xx)(
+                (0, r.Xx)(
                   "#Chat_Settings_Error_ChatFileTooLarge_dynamic",
                   i,
                   this.m_Callbacks.GetMaxFileSizeMB(),
@@ -188,7 +146,7 @@
               ? this.SetFileToUpload(e)
               : this.SetUploadFileError(
                   5,
-                  (0, p.Xx)("#Chat_Settings_Error_ChatFileTypeNotSupported", i),
+                  (0, r.Xx)("#Chat_Settings_Error_ChatFileTypeNotSupported", i),
                 );
           });
         }
@@ -254,7 +212,7 @@
                 return (
                   this.SetUploadFileError(
                     3,
-                    (0, p.Xx)("#Chat_Settings_Error_ExportFailed"),
+                    (0, r.Xx)("#Chat_Settings_Error_ExportFailed"),
                   ),
                   new Response()
                 );
@@ -265,7 +223,7 @@
             let t = this.m_fileUploadProps.file;
             if (!t)
               throw (
-                ((0, r.X)(
+                ((0, p.X)(
                   !1,
                   "Must SetImageFileToUpload before calling BeginFileUpload",
                 ),
@@ -315,8 +273,8 @@
                         ? null == e
                           ? void 0
                           : e.message
-                        : (0, p.Xx)("#Chat_Settings_Error_ServerError")),
-                      (this.m_fileUploadProps.strErrorDescription = (0, p.Xx)(
+                        : (0, r.Xx)("#Chat_Settings_Error_ServerError")),
+                      (this.m_fileUploadProps.strErrorDescription = (0, r.Xx)(
                         "#Chat_Upload_ErrorStart",
                         o,
                       ));
@@ -330,11 +288,11 @@
                 this.DoFileUpload(e.result)
               );
             } catch (e) {
-              let t = e || (0, p.Xx)("#ConnectionTrouble_FailedToConnect");
+              let t = e || (0, r.Xx)("#ConnectionTrouble_FailedToConnect");
               throw (
                 ((0, s.z)(() => {
                   (this.m_fileUploadProps.eUploadState = 3),
-                    (this.m_fileUploadProps.strErrorDescription = (0, p.Xx)(
+                    (this.m_fileUploadProps.strErrorDescription = (0, r.Xx)(
                       "#Chat_Upload_ErrorStart",
                       t,
                     ));
@@ -374,7 +332,7 @@
               throw (
                 (this.LogFileUploadMessage(t.response),
                 (0, s.z)(() => {
-                  (this.m_fileUploadProps.strErrorDescription = (0, p.Xx)(
+                  (this.m_fileUploadProps.strErrorDescription = (0, r.Xx)(
                     "#Chat_Upload_ErrorCloud",
                   )),
                     (this.m_fileUploadProps.eUploadState = 3),
@@ -445,8 +403,8 @@
                     t.response.status, e && e.success;
                     i = e.message
                       ? e.message
-                      : (0, p.Xx)("#Chat_Settings_Error_ServerError");
-                  } else i = (0, p.Xx)("#ConnectionTrouble_FailedToConnect");
+                      : (0, r.Xx)("#Chat_Settings_Error_ServerError");
+                  } else i = (0, r.Xx)("#ConnectionTrouble_FailedToConnect");
                   (this.m_fileUploadProps.strErrorDescription = `Failed to commit upload: ${i}`),
                     this.m_onComplete && this.m_onComplete(2, o.size);
                 }),
@@ -470,7 +428,7 @@
           let o = new FileReader();
           (o.onload = () => {
             let i = e,
-              l = _(o.result),
+              l = f(o.result),
               a = new Blob([l], { type: e.type });
             if (a) {
               let t = a;
@@ -489,7 +447,7 @@
             o.readAsArrayBuffer(e);
         });
       }
-      function _(e) {
+      function f(e) {
         let t = new DataView(e),
           o = 0,
           i = 0,
@@ -506,24 +464,24 @@
             else if (65498 == s) break;
             (o += t.getUint16(o)), (s = t.getUint16(o)), (o += 2);
           }
-          let r = e.byteLength - i;
+          let p = e.byteLength - i;
           if (
             (l.forEach((e) => {
-              r += e.offset - e.recess;
+              p += e.offset - e.recess;
             }),
-            r === e.byteLength)
+            p === e.byteLength)
           )
             return e;
-          const p = new Uint8Array(r);
+          const r = new Uint8Array(p);
           if (l.length > 0) {
             let t = 0;
             l.forEach((o) => {
               let i = o.offset - o.recess;
-              p.set(new Uint8Array(e.slice(o.recess, o.offset)), t), (t += i);
+              r.set(new Uint8Array(e.slice(o.recess, o.offset)), t), (t += i);
             }),
-              p.set(new Uint8Array(e.slice(i)), t);
+              r.set(new Uint8Array(e.slice(i)), t);
           }
-          return p.buffer;
+          return r.buffer;
         }
         return e;
       }

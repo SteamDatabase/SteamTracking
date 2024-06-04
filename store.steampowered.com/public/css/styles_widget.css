@@ -12,17 +12,27 @@ a, a:hover {
 }
 
 #widget {
-    border: 1px solid #2d3139;
-    background-color: #282e39;
-	/*width: 614px;*/
+	border-radius: 4px;
+	border-top: 1px solid #424c5c;
+	border-left: 1px solid #424c5c;
+	background: linear-gradient(130deg, #3b4351, #282e39);
+	box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
 	height: 146px;
 	padding: 10px 15px;
 	position: relative;
 	margin: 0 auto;
+}
+
+#widget:after {
+	position: absolute;
+	display: block;
+	right: 5px;
+	top: 5px;
+	content: ' ';
+	width: 40px;
+	height: 40px;
 	background-image: url(/public/images/v6/steam_ico.png);
 	background-repeat: no-repeat;
-    background-position-x: 99%;
-    background-position-y: 5px;
 }
 
 #widget .game_purchase_action {

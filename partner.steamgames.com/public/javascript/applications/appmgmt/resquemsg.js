@@ -4,157 +4,6 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [6808],
   {
-    77681: (e) => {
-      e.exports = {
-        AdminPageCtn: "KNaeCD6UV4vrGi5cYBg21",
-        WidePageCtn: "_3-DwxVHNOluC7zhV1FPddZ",
-        PageTitleFlexCtn: "SZQhWSUC55sGfQKJPjgQm",
-        PageTitle: "_15d88csjOy7uzCM34zWNrh",
-        Beta: "TuglBCSEDSD51dcL0kvQe",
-        PageSubTitle: "_3gMUtxSzcV7C8KnOEqTibK",
-        ValveOnlyTitle: "_3ccYiTiBBhsz_FzwAqweZ6",
-        ValveOnlyBackground: "TRbfz3q0UB2R47hZvZZNh",
-        ColumnCtn: "_1MnmnF9JcRAejgAk9UOsLt",
-        LeftCol: "_1neFt8nIdNUGdYmSEqTzl7",
-        ColHeader: "uP0hvdEVvz5127_-n5loP",
-        ColHeaderImg: "_3OYqx-pYYdise2EgXltlTR",
-        SectionCtn: "_3la4r_9TOHZPb-VDj5myx-",
-        Bright: "_1Sq2a7RtrOQxLJ14yUih7k",
-        ActionBar: "_1lvk-kJSu5p3aNMgkyKvs5",
-        SectionIntroRequirements: "_2wFwI05Xu81kJNzscbUblG",
-        warning: "_3RQNxqPzblkdDxnXNPvbti",
-        RightCol: "p8nGmITwaheftXwwyY6XG",
-        NoSticky: "_1sSkEwdvPphzJ9sd0RpdF3",
-        SmallText: "_1YUYdQKh7vPLQlJ8EuMiZS",
-        Button: "_3T0UPaCRvzoXTiTW9F8yrB",
-        TitleSmall: "oEKkskdGlFwuZAA2TPJfo",
-        DefaultSectionCtn: "_2Cn7rbcVY7f3AyvqhIM5hg",
-        Indent: "_225jnmgDXqpJkfUMzBRt_u",
-        DashLink: "_2y93_eFXPYAmTDGtPtVE8R",
-        FlexRow: "_2OkCwT0q1Qy5jGysX_3tam",
-        MarginBottom: "_1qVJSBD-eSeakEgljHmdcw",
-        StatusLineItemCtn: "jtOdk0RuDQVX3xGdrtdDS",
-        StatusIcon: "gwjXHCLDcS1d0R9DPt9t-",
-        StatusIconDone: "_20lWedlSWTr3X2FKXd_DmM",
-        UploadedImageDisplayCtn: "suH0cxbVAafzZpg0AJlJJ",
-        UploaderLeftCol: "_1lUkCA_cMgztPMxP2gMj1y",
-        MarketingMessage: "_35SptUVhPwY9aGS_ZZ0cZd",
-        BannerPreview: "_1HJLoYXqw6PkToQR7LQ1fo",
-        UploaderRightCol: "_1qxnk333zwWpzz9ki-VK0t",
-        LangCountTitle: "_32cplS1RDjVWb3oLIlVoNc",
-        LangSelectCtn: "_1HRVR8vIJe7nYIK9s9g7Pu",
-        UploaderImgLang: "_35KwLaxU2PPwUFnrUwFOoc",
-        LangSelected: "_362rk-was5qZz2E3eXx-3j",
-        DeleteAll: "_2aArL6ipvnx9CbmS73YprA",
-        EditCtn: "_152-T8Agxtw7zNAyen1c_m",
-        StatusBtn: "_3diJDrSS_jGDYFmHWjsUnt",
-        HalfWidthBtnCtn: "_1mhRcJXe6kzbeI9q-sS-Ec",
-        StatReportCtn: "_1vqQFiuYoW3Bj0XicmLtwI",
-        Stat: "_10RmiHwywjThshCLaNo4FU",
-        BigStat: "_2Agsiu_b_trgVw5Tk4TEqm",
-        IncreaseRateInfo: "_2sCgJMjUwzxJD6U0nAvaQO",
-      };
-    },
-    71741: (e) => {
-      e.exports = {
-        "duration-app-launch": "800ms",
-        PartnerEventFont: "_22_fGxD1rxLRjTmEs4fpJN",
-        Clear: "_2BXhGeAkEZXReIBs1q6iG3",
-        Divider: "_1u63OZOUO8ejFLl83_aFKQ",
-        EventDefaultRowContainer: "_2pVkYef_JboBRTJDsI5XrR",
-        EventStartPublic: "_13cijqNyra467La1xbDgy0",
-        EventOptions: "ShLAXJyjCB5R_Y81P3-VX",
-        EventStatusContainer: "_1dNhj3aKodzkwfU16oYND",
-        FlexColumnContainer: "WmMRFd2F9FMje__jWs2c4",
-        FlexRowContainer: "elLwmClZ5oSY2aer18vUt",
-        Centered: "_1HqKtO0h5lgj9h0J4mUz51",
-        FlexContainSpaceBetween: "_2MHtA5ZPqa6yMB-WNNys1_",
-        FlexRowWrapSpaceBetweenContainer: "Dtr2QSwAjrR1TzFyE3-BV",
-        FlexRowWrapFlexStartContainer: "_15EK8oKkXXhkYYD1995NeY",
-        SaveBackground: "dpb4wNGbh2HsDaP8sGIsE",
-        SupportedGroupLabel: "_2YjA1EPu2wLxQsG0q0EnBS",
-        LanguageWithContent: "_1mZ9rmSPJoVvf2B3Qug5dZ",
-        LargeInput: "PJvHCWuMfWFNGAnUrc5sL",
-        InputBorder: "udsJYi3FfK7jf9k6x8C_8",
-        RadioOption: "_2UbigK-jBvbAlI2x6ACeW3",
-        FlexGrow: "IQIYvuCEhjK67AX4HhGRO",
-        EventEditorTextTitleCtn: "_2Zzv2Bmql0eJwbvkJBwYuN",
-        doclink: "_1ge0tlUexoy7zjWcyzOfS6",
-        EventEditorUnpaddedTextTitle: "_3ByoxfFwTDbtxfRiZffvVR",
-        EventEditorTextTitle: "_1q_7gkHl0t3O6Xn1mLOo_9",
-        EventEditorTextTitleLengthInfo: "_1eoiU4oJuNicls_w9-G4-K",
-        CollapsableSectionTitle: "_10FD9HmlE20EDXyk60EdA8",
-        SectionTitle: "_1Wgh0WQu1_npRyQP18CK90",
-        EventSectionTitleCtn: "_1qQl6pXbyn0yw4nEKR_vHi",
-        EventSectionTitle: "YggHeJRs5J9pSHeBJ_wMN",
-        EventSectionSpacer: "_1Z2oL2TwXjHwQ1hndP4OiM",
-        EventSectionMoreBtn: "_2BYpybC_CxVL2h2iJaN8Bg",
-        EventEditorSpacerPadding: "_12MTxhWYRd9y6nISAZ_UnW",
-        EventEditorVisibilityCtn: "_1-veXdXA0v95XZhDClOEp4",
-        EventEditorTextSubTitle: "_2hvrHXv-9YJ_HZwdW1Yi6r",
-        FloatingTitle: "_38ZrqpqJnDebtAz3y1TqGT",
-        EventEditorEventStatus: "_3dxy2T8x1pk6OjFgWQSTCE",
-        EventHidden: "_3oD7cGykuzlqnfVXev8JDs",
-        EventVisible: "_3sin0w04DXfKLZH9M923t8",
-        EventBarBackAndTitle: "_1rQbs6JYrj8dcI7ulhqAHq",
-        EventBarTitleCtn: "_1bUXkxwlWqoLUkJx4mP5E",
-        EventBarTitle: "_3K6Ror7Nj83ysihgViAvjd",
-        EventEditButtons: "_3N6fzJF2V9mi47EHYuAEiK",
-        EventStatus: "_3uDnLpoGwbP-lVipnNwJTm",
-        EventBarBack: "BUxe5edxrjnB3sckTkcDh",
-        EditPreviewButton: "_3NmFFZyqnB0ITWJGvJNDqk",
-        Delete: "_2GdGzjX59SeWcOhf9bGYki",
-        Disabled: "v6Qy-glA7sDsXSv321g2_",
-        BrowseMoreButton: "_3GBlO1g_jz3O_-xFJKPo0g",
-        Button: "_3P0Tm2XKLVG_I9wjP3H-Zs",
-        Icon: "_3p1Hj4MxioFD7iM63Z3s6T",
-        Primary: "_2chVKJsutfE3lDkcFAqyeZ",
-        ClearThings: "_3WXykpA6Kzr-GZbs-xNRgY",
-        OnIndicator: "_3fA-n2DjHbEXOjH8yJDjWK",
-        OffIndicator: "_22oxx3ra_nx6U1egpcNMGO",
-        IconImage: "_9JzcWM2TPeeznG62hmrtI",
-        RightColumnContainer: "_3DcKivjvkvNAkDucRLw1w5",
-        EventPublishButton: "_1d84FQy71PnISwXFbOXcPx",
-        FloatRight: "_3tfNK_vyn6tIKWPDii6sff",
-        TTip: "_3OCGyrCeNKFAnuBU9PG2N3",
-        ValveSupportOnly: "_3lW3GgqO6DUN_J99j87rB4",
-        ArtworkAgeNotAppropriate: "_2BmFvku3qsuH4WKQm7A4Mw",
-        EventDashboardHeader: "f16DdpCs9ZpNzhQBCKmfP",
-        ContainerSpaceBetween: "_3QHVXnPxJuRhQFaaOlCjOc",
-        EventDashboardTitles: "c1VG5muvfvFaBAOLAA7C4",
-        EventDashboardActions: "_33J6yVJU13tCn254BqAFAC",
-        EventDashboardStatsCtn: "_39Giqruo6szVXi91aLU32P",
-        EventDashboardAppCtn: "_2to8484gM6Qr2dBlG79lGk",
-        maintitle: "_2hNVNZmo17H17c3Asborfa",
-        AppTitle: "_1XYbE1f9ZGP7nZeehZJYKz",
-        subtitle: "_16zOXVLL9lA_icrO9exNFA",
-        ValveOnlyBackground: "R4o6q5hncc3-NbHrBItgS",
-        ValveOnlyAdminBackground: "_1ZfNJaoQ7gAP_3KRqJdKoJ",
-        Columns: "_1dQIj-HUnAuT0kk8ebCrNB",
-        LeftCol: "PzQ1bZrN0AJNpSpFl790Y",
-        RightCol: "_1y0mVohcDvYGXHf0k4kUQR",
-        DropDownScroll: "_31SMPImMR3WfYsGDJXWLLO",
-        DropDownScrollItem: "_1gJSm4R0tJoIXWyvuVbqpE",
-        CloseButton: "_1y6UVyR2qDh-NxBMscKg4-",
-        CloseSectionTools: "_2rLRqIS4OD6oj9g4HKdLiG",
-        HalfColumn: "_1sMNJGE8oKT5VzFDeWD1AJ",
-        tooltip_Ctn: "_3tZQlq2SCmMhllfgwGUpJ0",
-        SaleEditorSpacing: "_26P7EgY4J1T2grp3VUm3Pn",
-        SaleSectionHeader: "_3FRxVBrTtFQLhmHRstBbC_",
-        SaleSectionSubtitle: "_1JRr347o2bE6JhsAH2xicE",
-        SaleSectionContainer: "_1UD2hUjCkCaT0iG7AlOB7w",
-        AddSectionButton: "_15e-DuEt3rklSszYftj_j_",
-        EventElementRequired: "appjekVsG16gF0TXA7A9z",
-        EventElementOptional: "_35lj0GWfP_YLh7R3N-0E7Y",
-        HelperTooltip: "_3UCPo4bysBaoopie0W_urh",
-        PixelOffsetCtn: "_3u_zWceLsLZ_Sw4hJ_PSrJ",
-        PixelOffsetRow: "brxQbAx9vyoTUNgI9SSuV",
-        PixelOffsetNote: "_3g0iBkQb0HXeD717c2tmaW",
-        PixelOffsetCallout: "_33i_61lSlstJXhjjG5saSS",
-        Error: "HSnMSSY5qFoFUg8EAKdx0",
-        GamepadOnlyScrollPanel: "cEBYfOugpaX6Tk_iRMYnw",
-      };
-    },
     52813: (e) => {
       e.exports = { Ctn: "Zy-bB4qltLmCSrJoRyk10" };
     },
@@ -167,8 +16,8 @@
         DatePreview: "_2p-FIFIwIlMJ256q0Zj7lo",
       };
     },
-    95126: (e, t, n) => {
-      var s = {
+    95126: (e, t, s) => {
+      var r = {
         "./af": 75436,
         "./af.js": 75436,
         "./ar": 27662,
@@ -444,40 +293,40 @@
         "./zh-tw": 79204,
         "./zh-tw.js": 79204,
       };
-      function r(e) {
+      function n(e) {
         var t = o(e);
-        return n(t);
+        return s(t);
       }
       function o(e) {
-        if (!n.o(s, e)) {
+        if (!s.o(r, e)) {
           var t = new Error("Cannot find module '" + e + "'");
           throw ((t.code = "MODULE_NOT_FOUND"), t);
         }
-        return s[e];
+        return r[e];
       }
-      (r.keys = function () {
-        return Object.keys(s);
+      (n.keys = function () {
+        return Object.keys(r);
       }),
-        (r.resolve = o),
-        (e.exports = r),
-        (r.id = 95126);
+        (n.resolve = o),
+        (e.exports = n),
+        (n.id = 95126);
     },
-    64936: (e, t, n) => {
+    64936: (e, t, s) => {
       "use strict";
-      n.d(t, { F_: () => m, JW: () => d, kl: () => p, zD: () => v });
-      var s = n(85556),
-        r = n(54842),
-        o = n(37485),
-        a = n.n(o),
-        i = n(47427),
-        l = n(29480),
-        c = n(37563);
+      s.d(t, { F_: () => m, JW: () => d, kl: () => p, zD: () => f });
+      var r = s(85556),
+        n = s(54842),
+        o = s(37485),
+        a = s.n(o),
+        i = s(47427),
+        l = s(29480),
+        c = s(37563);
       class u {
         constructor() {
           (this.bOpenEventLandingPage = !1),
             (this.bIncludeFeaturedAsGameSource = !0),
             (this.nOverrideDateNow = void 0),
-            (0, r.rC)(this);
+            (0, n.rC)(this);
         }
         get bRequireAllEventsLoadedInTimeBlock() {
           return !1;
@@ -512,77 +361,77 @@
             ("dev" == c.De.WEB_UNIVERSE || "beta" == c.De.WEB_UNIVERSE)
           ) {
             const e = t.get("t");
-            let n = /^\d+$/.test(e) ? a().unix(Number.parseInt(e)) : a()(e);
-            (this.nOverrideDateNow = Math.floor(n.unix())),
+            let s = /^\d+$/.test(e) ? a().unix(Number.parseInt(e)) : a()(e);
+            (this.nOverrideDateNow = Math.floor(s.unix())),
               console.log(
                 "CEventCalendarDevFeatures overriding partner event time: " +
                   this.nOverrideDateNow +
                   " " +
-                  n.format(),
+                  s.format(),
               );
           }
         }
       }
-      (0, s.gn)([r.LO], u.prototype, "nOverrideDateNow", void 0);
+      (0, r.gn)([n.LO], u.prototype, "nOverrideDateNow", void 0);
       const d = new u();
       function m(e = 1) {
-        const [t, n] = i.useState(() => h()),
-          s = (0, l.T)("useTimeNowWithOverride"),
-          r = i.useCallback(() => {
-            s.token.reason || n(h());
+        const [t, s] = i.useState(() => _()),
+          r = (0, l.T)("useTimeNowWithOverride"),
+          n = i.useCallback(() => {
+            r.token.reason || s(_());
           }, []);
         return (
           i.useEffect(() => {
             const t = 1e3 * e,
-              n = t - (Date.now() % t),
-              s = window.setTimeout(r, n);
+              s = t - (Date.now() % t),
+              r = window.setTimeout(n, s);
             return () => {
-              window.clearTimeout(s);
+              window.clearTimeout(r);
             };
-          }, [t, e, r]),
+          }, [t, e, n]),
           t
         );
       }
       window.g_EventCalendarDevFeatures = d;
-      const _ = new Date(),
-        g = Math.floor(_.getTime() / 1e3);
-      function h() {
+      const g = new Date(),
+        h = Math.floor(g.getTime() / 1e3);
+      function _() {
         const e = Math.floor(Date.now() / 1e3);
-        return d.nOverrideDateNow ? d.nOverrideDateNow + (e - g) : e;
+        return d.nOverrideDateNow ? d.nOverrideDateNow + (e - h) : e;
       }
       function p() {
         var e;
-        return null !== (e = d.nOverrideDateNow) && void 0 !== e ? e : g;
+        return null !== (e = d.nOverrideDateNow) && void 0 !== e ? e : h;
       }
-      function v() {
+      function f() {
         return i.useMemo(() => p(), []);
       }
     },
-    29480: (e, t, n) => {
+    29480: (e, t, s) => {
       "use strict";
-      n.d(t, { T: () => a });
-      var s = n(80751),
-        r = n.n(s),
-        o = n(47427);
+      s.d(t, { T: () => a });
+      var r = s(80751),
+        n = s.n(r),
+        o = s(47427);
       function a(e) {
-        const t = o.useRef(r().CancelToken.source());
+        const t = o.useRef(n().CancelToken.source());
         return (
           o.useEffect(() => {
-            const n = t.current;
-            return () => n.cancel(e ? `${e}: unmounting` : "unmounting");
+            const s = t.current;
+            return () => s.cancel(e ? `${e}: unmounting` : "unmounting");
           }, [e]),
           t.current
         );
       }
     },
-    16649: (e, t, n) => {
+    16649: (e, t, s) => {
       "use strict";
-      n.d(t, { l: () => a });
-      var s = n(80751),
-        r = n.n(s),
-        o = n(79545);
+      s.d(t, { l: () => a });
+      var r = s(80751),
+        n = s.n(r),
+        o = s(79545);
       function a(e) {
-        if (r().isCancel(e))
+        if (n().isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
         if (
           void 0 !== e.response &&
@@ -651,22 +500,22 @@
           : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
       }
     },
-    84877: (e, t, n) => {
+    84877: (e, t, s) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => K });
-      var s = n(47427),
-        r = n(82756);
-      const o = (0, r.kQ)("physical_goods", "application_config");
-      var a = n(85556),
-        i = n(79545),
-        l = n(75375),
-        c = n(77581),
-        u = n(62210),
-        d = n(16649),
-        m = n(45492),
-        _ = n(20417),
-        g = n(65255);
-      class h {
+      s.r(t), s.d(t, { default: () => X });
+      var r = s(47427),
+        n = s(82756);
+      const o = (0, n.kQ)("physical_goods", "application_config");
+      var a = s(85556),
+        i = s(79545),
+        l = s(75375),
+        c = s(77581),
+        u = s(62210),
+        d = s(16649),
+        m = s(45492),
+        g = s(20417),
+        h = s(65255);
+      class _ {
         GetKey(e) {
           return `${e.edistributor}_${e.product_identifier}`;
         }
@@ -721,35 +570,35 @@
                 !1
               );
             e.forEach((e) => {
-              let n = t.Body().add_settings();
-              n.set_edistributor(e.edistributor),
-                n.set_product_identifier(e.product_identifier),
-                n.set_start_queue_position(e.start_queue_position),
-                n.set_rtime_estimated_notification(
+              let s = t.Body().add_settings();
+              s.set_edistributor(e.edistributor),
+                s.set_product_identifier(e.product_identifier),
+                s.set_start_queue_position(e.start_queue_position),
+                s.set_rtime_estimated_notification(
                   e.rtime_estimated_notification,
                 ),
-                n.set_localization_token(e.localization_token);
+                s.set_localization_token(e.localization_token);
             });
-            let n = null;
+            let s = null;
             try {
-              const s = yield l.d6.SetReservationPositionMessage(
+              const r = yield l.d6.SetReservationPositionMessage(
                 this.m_steamInterface.GetServiceTransport(),
                 t,
               );
-              if (1 == s.GetEResult()) {
+              if (1 == r.GetEResult()) {
                 const t = new Set(),
-                  n = Math.floor(Date.now() / 1e3);
+                  s = Math.floor(Date.now() / 1e3);
                 return (
                   e.forEach((e) => {
-                    (e.accountid = g.L7.accountid), (e.rtime_created = n);
-                    const s = this.GetKey(e);
-                    let r = this.m_mapProductPositionMsgList.get(s);
-                    const o = r.findIndex(
+                    (e.accountid = h.L7.accountid), (e.rtime_created = s);
+                    const r = this.GetKey(e);
+                    let n = this.m_mapProductPositionMsgList.get(r);
+                    const o = n.findIndex(
                       (t) => t.start_queue_position == e.start_queue_position,
                     );
-                    let a = [...r];
+                    let a = [...n];
                     o >= 0 ? (a[o] = e) : (a.push(e), this.SortList(a)),
-                      this.m_mapProductPositionMsgList.set(s, a),
+                      this.m_mapProductPositionMsgList.set(r, a),
                       t.add(this.GetKey(e));
                   }),
                   Array.from(t).forEach((e) => {
@@ -760,15 +609,15 @@
                   !0
                 );
               }
-              n = (0, d.l)(s);
+              s = (0, d.l)(r);
             } catch (e) {
-              n = (0, d.l)(e);
+              s = (0, d.l)(e);
             }
             return (
               console.error(
                 "CReservationMessagingStore.SetPositionMessages failed: " +
-                  (null == n ? void 0 : n.strErrorMsg),
-                n,
+                  (null == s ? void 0 : s.strErrorMsg),
+                s,
               ),
               !1
             );
@@ -780,35 +629,35 @@
             t.Body().set_edistributor(e.edistributor),
               t.Body().set_product_identifier(e.product_identifier),
               t.Body().set_start_queue_position(e.start_queue_position);
-            let n = null;
+            let s = null;
             try {
-              const s = yield l.d6.DeleteReservationPositionMessage(
+              const r = yield l.d6.DeleteReservationPositionMessage(
                 this.m_steamInterface.GetServiceTransport(),
                 t,
               );
-              if (1 == s.GetEResult()) {
+              if (1 == r.GetEResult()) {
                 const t = this.GetKey(e);
-                let n = this.m_mapProductPositionMsgList.get(t);
-                const s = n.findIndex(
+                let s = this.m_mapProductPositionMsgList.get(t);
+                const r = s.findIndex(
                     (t) => t.start_queue_position == e.start_queue_position,
                   ),
-                  r = [...n];
+                  n = [...s];
                 return (
-                  r.splice(s, 1),
-                  this.m_mapProductPositionMsgList.set(t, r),
-                  this.GetPositionListChangeCallback(e).Dispatch(r),
+                  n.splice(r, 1),
+                  this.m_mapProductPositionMsgList.set(t, n),
+                  this.GetPositionListChangeCallback(e).Dispatch(n),
                   !0
                 );
               }
-              n = (0, d.l)(s);
+              s = (0, d.l)(r);
             } catch (e) {
-              n = (0, d.l)(e);
+              s = (0, d.l)(e);
             }
             return (
               console.error(
                 "CReservationMessagingStore.SetPositionMessages failed: " +
-                  (null == n ? void 0 : n.strErrorMsg),
-                n,
+                  (null == s ? void 0 : s.strErrorMsg),
+                s,
               ),
               !1
             );
@@ -825,12 +674,12 @@
         }
         static Get() {
           return (
-            h.s_Singleton ||
-              ((h.s_Singleton = new h()),
-              h.s_Singleton.Init(),
-              "dev" == g.De.WEB_UNIVERSE &&
-                (window.g_ReservationMessagingStore = h.s_Singleton)),
-            h.s_Singleton
+            _.s_Singleton ||
+              ((_.s_Singleton = new _()),
+              _.s_Singleton.Init(),
+              "dev" == h.De.WEB_UNIVERSE &&
+                (window.g_ReservationMessagingStore = _.s_Singleton)),
+            _.s_Singleton
           );
         }
         constructor() {
@@ -840,18 +689,18 @@
             (this.m_steamInterface = null);
         }
         Init() {
-          const e = (0, r.kQ)(
+          const e = (0, n.kQ)(
             "promotion_operation_token",
             "application_config",
           );
           (0, u.X)(Boolean(e), "require promotion_operation_token"),
-            "dev" == g.De.WEB_UNIVERSE &&
+            "dev" == h.De.WEB_UNIVERSE &&
               console.log(
                 "DEV_DEBUG Initializing CReservationMessagingStore with access token ",
                 e,
               ),
-            (this.m_steamInterface = new c.J(g.De.WEBAPI_BASE_URL, e));
-          const t = (0, r.kQ)(
+            (this.m_steamInterface = new c.J(h.De.WEBAPI_BASE_URL, e));
+          const t = (0, n.kQ)(
             "reservation_queue_position_messages",
             "application_config",
           );
@@ -879,11 +728,11 @@
         }
       }
       function p() {
-        const [e, t] = (0, s.useState)(() => h.Get().GetAllProducts());
-        return (0, _.Qg)(h.Get().GetProductListChangeCallback(), t), e;
+        const [e, t] = (0, r.useState)(() => _.Get().GetAllProducts());
+        return (0, g.Qg)(_.Get().GetProductListChangeCallback(), t), e;
       }
-      function v() {
-        const e = h.Get();
+      function f() {
+        const e = _.Get();
         return {
           fnAddProductID: e.AddProductID,
           fnSetPositionMessages: e.SetPositionMessages,
@@ -892,37 +741,37 @@
             e.ReloadReservationPositionMessages,
         };
       }
-      (0, a.gn)([_.ak], h.prototype, "AddProductID", null),
-        (0, a.gn)([_.ak], h.prototype, "SetPositionMessages", null),
-        (0, a.gn)([_.ak], h.prototype, "DeletePositionMessage", null),
+      (0, a.gn)([g.ak], _.prototype, "AddProductID", null),
+        (0, a.gn)([g.ak], _.prototype, "SetPositionMessages", null),
+        (0, a.gn)([g.ak], _.prototype, "DeletePositionMessage", null),
         (0, a.gn)(
-          [_.ak],
-          h.prototype,
+          [g.ak],
+          _.prototype,
           "ReloadReservationPositionMessages",
           null,
         );
-      var f = n(15459),
-        E = n(90077),
-        S = n(1485);
-      function j(e) {
-        const [t, n] = (0, s.useState)(null),
-          { fnAddProductID: r } = v();
-        return s.createElement(
+      var v = s(15459),
+        E = s(90077),
+        j = s(1485);
+      function b(e) {
+        const [t, s] = (0, r.useState)(null),
+          { fnAddProductID: n } = f();
+        return r.createElement(
           "div",
           null,
-          s.createElement(S.__, null, "Add Product SKU:"),
-          s.createElement(
+          r.createElement(j.__, null, "Add Product SKU:"),
+          r.createElement(
             "p",
             null,
             "Select an item for which we want to communicate a reservation status.",
           ),
-          s.createElement(b, { selected: t, setSelected: n }),
-          s.createElement(
-            S.zx,
+          r.createElement(S, { selected: t, setSelected: s }),
+          r.createElement(
+            j.zx,
             {
               disabled: !t,
               onClick: () => {
-                r(t), n(null);
+                n(t), s(null);
               },
             },
             "Add ",
@@ -931,15 +780,15 @@
           ),
         );
       }
-      function b(e) {
-        const { selected: t, setSelected: n } = e,
-          r = (0, s.useRef)(),
+      function S(e) {
+        const { selected: t, setSelected: s } = e,
+          n = (0, r.useRef)(),
           a = (function () {
-            const [e] = (0, s.useState)(() => o);
+            const [e] = (0, r.useState)(() => o);
             return e;
           })(),
           i = p(),
-          l = (0, s.useMemo)(
+          l = (0, r.useMemo)(
             () =>
               a && i
                 ? a
@@ -959,8 +808,8 @@
                 : [],
             [a, i],
           );
-        (0, s.useEffect)(() => {
-          (null == r ? void 0 : r.current) && r.current.clearValue();
+        (0, r.useEffect)(() => {
+          (null == n ? void 0 : n.current) && n.current.clearValue();
         }, [i]);
         const c =
           null == l
@@ -971,38 +820,38 @@
                   t.edistributor == e.value.edistributor &&
                   t.product_identifier == e.value.product_identifier,
               );
-        return s.createElement(f.ZP, {
+        return r.createElement(v.ZP, {
           isSearchable: !0,
-          ref: r,
+          ref: n,
           isMulti: !1,
           isClearable: !0,
           className: E.ItemSelect,
           options: l,
           value: c,
           onChange: (e) => {
-            e && n(e);
+            e && s(e);
           },
         });
       }
-      var C = n(83743),
-        k = n(92012),
-        M = n(38201),
-        R = n(77178),
-        w = n(90069),
-        D = n(56164),
-        P = n(50423),
-        A = n(31846),
-        y = n(71741),
-        T = n(52813),
-        N = n.n(T),
-        G = n(64936);
-      function B(e, t) {
+      var M = s(83743),
+        k = s(92012),
+        C = s(38201),
+        R = s(77178),
+        w = s(90069),
+        y = s(56164),
+        D = s(50423),
+        P = s(31846),
+        N = s(71741),
+        T = s(52813),
+        I = s.n(T),
+        L = s(64936);
+      function A(e, t) {
         return e > t + 1 ? e - t : e + 12 - t;
       }
-      function I(e) {
-        const { strToken: t, rtEstimatedNotifcationDate: n } = e,
-          r = new Date(1e3 * n),
-          o = r.getMonth() + 1;
+      function G(e) {
+        const { strToken: t, rtEstimatedNotifcationDate: s } = e,
+          n = new Date(1e3 * s),
+          o = n.getMonth() + 1;
         let a = "",
           i = "",
           l = "",
@@ -1010,42 +859,42 @@
         switch (t) {
           case "#Sale_Reservation_Year":
           case "#Sale_Reservation_AfterYear":
-            a = "" + r.getFullYear();
+            a = "" + n.getFullYear();
             break;
           case "#Sale_Reservation_MonthYear":
           case "#Sale_Reservation_AfterMonthYear":
-            (a = (0, A.Xx)("#Sale_Reservation_MonthNoun_" + o)),
-              (i = "" + r.getFullYear());
+            (a = (0, P.Xx)("#Sale_Reservation_MonthNoun_" + o)),
+              (i = "" + n.getFullYear());
             break;
           case "#Sale_Reservation_TwoMonthRangeYear":
-            (a = (0, A.Xx)("#Sale_Reservation_MonthNoun_" + B(o, 1))),
-              (i = (0, A.Xx)("#Sale_Reservation_MonthNoun_" + o)),
-              (l = "" + r.getFullYear());
+            (a = (0, P.Xx)("#Sale_Reservation_MonthNoun_" + A(o, 1))),
+              (i = (0, P.Xx)("#Sale_Reservation_MonthNoun_" + o)),
+              (l = "" + n.getFullYear());
             break;
           case "#Sale_Reservation_ThreeMonthRangeYear":
-            (a = (0, A.Xx)("#Sale_Reservation_MonthNoun_" + B(o, 2))),
-              (i = (0, A.Xx)("#Sale_Reservation_MonthNoun_" + o)),
-              (l = "" + r.getFullYear());
+            (a = (0, P.Xx)("#Sale_Reservation_MonthNoun_" + A(o, 2))),
+              (i = (0, P.Xx)("#Sale_Reservation_MonthNoun_" + o)),
+              (l = "" + n.getFullYear());
             break;
           case "#Sale_Reservation_FourMonthRangeYear":
-            (a = (0, A.Xx)("#Sale_Reservation_MonthNoun_" + B(o, 3))),
-              (i = (0, A.Xx)("#Sale_Reservation_MonthNoun_" + o)),
-              (l = "" + r.getFullYear());
+            (a = (0, P.Xx)("#Sale_Reservation_MonthNoun_" + A(o, 3))),
+              (i = (0, P.Xx)("#Sale_Reservation_MonthNoun_" + o)),
+              (l = "" + n.getFullYear());
             break;
           case "#Sale_Reservation_Quarter_ThreeMonths":
             (c = "#Sale_Reservation_Quarter" + (Math.floor((o - 1) / 3) + 1)),
-              (a = "" + r.getFullYear());
+              (a = "" + n.getFullYear());
             break;
           case "#Sale_Reservation_AfterQuarter_ThreeMonths":
             (c =
               "#Sale_Reservation_AfterQuarter" + (Math.floor((o - 1) / 3) + 1)),
-              (a = (0, A.Xx)("#Sale_Reservation_MonthNoun_" + o)),
-              (i = "" + r.getFullYear());
+              (a = (0, P.Xx)("#Sale_Reservation_MonthNoun_" + o)),
+              (i = "" + n.getFullYear());
             break;
           case "#Sale_Reservation_RelativeWeekly":
             {
-              const e = G.JW.GetTimeNowWithOverride(),
-                t = Math.floor((n - e) / 86400);
+              const e = L.JW.GetTimeNowWithOverride(),
+                t = Math.floor((s - e) / 86400);
               t < 7 ||
                 (t < 28
                   ? ((c = "#Sale_Reservation_RelativeWeekly_Plural"),
@@ -1057,126 +906,126 @@
           default:
             c = "#Sale_Reservation_Fallback";
         }
-        return s.createElement(
+        return r.createElement(
           "div",
-          { className: N().Ctn },
-          (0, A.Xx)(c, a, i, l, ""),
+          { className: I().Ctn },
+          (0, P.Xx)(c, a, i, l, ""),
         );
       }
-      function L(e) {
+      function z(e) {
         const t = p();
         return t && 0 != t.length
-          ? s.createElement(
+          ? r.createElement(
               "div",
               null,
               t.map((e) =>
-                s.createElement(z, {
+                r.createElement(F, {
                   key: `${e.edistributor}_${e.product_identifier}`,
                   productID: e,
                 }),
               ),
             )
-          : s.createElement(
+          : r.createElement(
               "div",
               null,
               "No products with reservation position messages exists.",
             );
       }
-      function x(e) {
-        return s.createElement(
+      function O(e) {
+        return r.createElement(
           "div",
           null,
-          s.createElement(S.__, null, "instructions:"),
-          s.createElement(
+          r.createElement(j.__, null, "instructions:"),
+          r.createElement(
             "p",
             null,
             "Select an item from the drop-down to the left to set it as a visible item that we're taking reservations for.",
           ),
-          s.createElement(
+          r.createElement(
             "p",
             null,
             "Once selected, you can add groupings of item quantities and a description of how we want to describe the date at which those people will recieve their items.",
           ),
         );
       }
-      function O(e) {
+      function x(e) {
         p();
-        return s.createElement(
+        return r.createElement(
           "div",
           null,
-          s.createElement(S.__, null, "Force update:"),
-          s.createElement(
+          r.createElement(j.__, null, "Force update:"),
+          r.createElement(
             "p",
             null,
             "By default, the server caches the list in memory and that list will refresh from SQL every hour. You can use the force button to refresh immediately across all of the servers.",
           ),
-          s.createElement(
+          r.createElement(
             "p",
             null,
             "We recommend we force a refresh when all changes are done, otherwise, it will be somewhat random (within an hour) between each server picking up the updates -- so users might get different messages if they reload the page until all servers refresh.",
           ),
-          s.createElement(
-            S.zx,
+          r.createElement(
+            j.zx,
             {
-              onClick: (e) => (0, w.AM)(s.createElement(Y, null), (0, P.RA)(e)),
+              onClick: (e) => (0, w.AM)(r.createElement(Q, null), (0, D.RA)(e)),
             },
             "Force Reload Definitions on Steam Servers",
           ),
         );
       }
-      function z(e) {
+      function F(e) {
         const { productID: t } = e,
-          n = (function (e) {
+          s = (function (e) {
             return o.find(
               (t) =>
                 t.edistributor == e.edistributor &&
                 t.product_identifier == e.product_identifier,
             );
           })(t),
-          r = n.product_description + " " + n.distributor,
+          n = s.product_description + " " + s.distributor,
           a = (function (e) {
-            const [t, n] = (0, s.useState)(() =>
-              h.Get().GetPositionMessagingForProduct(e),
+            const [t, s] = (0, r.useState)(() =>
+              _.Get().GetPositionMessagingForProduct(e),
             );
-            return (0, _.Qg)(h.Get().GetPositionListChangeCallback(e), n), t;
+            return (0, g.Qg)(_.Get().GetPositionListChangeCallback(e), s), t;
           })(t);
-        return s.createElement(
-          D.ug,
+        return r.createElement(
+          y.ug,
           {
             bStartMinimized: !1,
-            title: r,
-            tooltip: `distributor enum: ${n.edistributor}, part number: ${n.part_number}, product identifier: ${n.product_identifier}`,
+            title: n,
+            tooltip: `distributor enum: ${s.edistributor}, part number: ${s.part_number}, product identifier: ${s.product_identifier}`,
           },
-          s.createElement(
-            S.zx,
+          r.createElement(
+            j.zx,
             {
               onClick: (e) =>
-                (0, w.AM)(s.createElement(U, { productID: t }), (0, P.RA)(e)),
+                (0, w.AM)(r.createElement(B, { productID: t }), (0, D.RA)(e)),
             },
             "Add new start position",
           ),
-          s.createElement(
+          r.createElement(
             "table",
             { className: E.ItemTable },
-            s.createElement(
+            r.createElement(
               "thead",
               null,
-              s.createElement(
+              r.createElement(
                 "tr",
                 null,
-                s.createElement("th", null, "Starting Queue Position"),
-                s.createElement("th", null, "Estimate Date Receive Invite"),
-                s.createElement("th", null, "Localized Date"),
-                s.createElement("th", null, "Entry Created By"),
-                s.createElement("th", null),
+                r.createElement("th", null, "Starting Queue Position"),
+                r.createElement("th", null, "Estimate Date Receive Invite"),
+                r.createElement("th", null, "Localized Date"),
+                r.createElement("th", null, "Entry Created By"),
+                r.createElement("th", null),
               ),
             ),
-            s.createElement(
+            r.createElement(
               "tbody",
               null,
               a.map((e) =>
-                s.createElement(F, {
-                  key: r + e.start_queue_position,
+                r.createElement(q, {
+                  key: n + e.start_queue_position,
                   positionMsg: e,
                 }),
               ),
@@ -1184,61 +1033,61 @@
           ),
         );
       }
-      function F(e) {
+      function q(e) {
         const { positionMsg: t } = e;
-        return s.createElement(
+        return r.createElement(
           "tr",
           null,
-          s.createElement("td", null, t.start_queue_position.toLocaleString()),
-          s.createElement(
+          r.createElement("td", null, t.start_queue_position.toLocaleString()),
+          r.createElement(
             "td",
             null,
-            (0, A.$1)(t.rtime_estimated_notification),
+            (0, P.$1)(t.rtime_estimated_notification),
           ),
-          s.createElement(
+          r.createElement(
             "td",
             null,
-            s.createElement(I, {
+            r.createElement(G, {
               rtEstimatedNotifcationDate: t.rtime_estimated_notification,
               strToken: t.localization_token,
             }),
           ),
-          s.createElement(
+          r.createElement(
             "td",
             null,
-            s.createElement(
+            r.createElement(
               "div",
               null,
-              s.createElement(M.N, { accountID: t.accountid }),
+              r.createElement(C.N, { accountID: t.accountid }),
             ),
-            s.createElement("br", null),
+            r.createElement("br", null),
             "On: ",
-            (0, A.$1)(t.rtime_created),
+            (0, P.$1)(t.rtime_created),
           ),
-          s.createElement(
+          r.createElement(
             "td",
             null,
-            s.createElement(
-              S.zx,
+            r.createElement(
+              j.zx,
               {
                 onClick: (e) =>
                   (0, w.AM)(
-                    s.createElement(U, {
+                    r.createElement(B, {
                       productID: t,
                       existingPositionMsg: t,
                     }),
-                    (0, P.RA)(e),
+                    (0, D.RA)(e),
                   ),
               },
               "Update",
             ),
-            s.createElement(
-              S.zx,
+            r.createElement(
+              j.zx,
               {
                 onClick: (e) =>
                   (0, w.AM)(
-                    s.createElement(J, { positionMsg: t }),
-                    (0, P.RA)(e),
+                    r.createElement(Y, { positionMsg: t }),
+                    (0, D.RA)(e),
                   ),
               },
               "Delete",
@@ -1246,36 +1095,36 @@
           ),
         );
       }
-      function U(e) {
-        const { productID: t, existingPositionMsg: n, closeModal: r } = e,
-          { fnSetPositionMessages: o } = v(),
+      function B(e) {
+        const { productID: t, existingPositionMsg: s, closeModal: n } = e,
+          { fnSetPositionMessages: o } = f(),
           a = Math.floor(Date.now() / 1e3),
-          [i, l] = (0, s.useState)(
-            (null == n ? void 0 : n.start_queue_position) || 0,
+          [i, l] = (0, r.useState)(
+            (null == s ? void 0 : s.start_queue_position) || 0,
           ),
-          [c, u] = (0, s.useState)(
-            (null == n ? void 0 : n.rtime_estimated_notification) || a + 86400,
+          [c, u] = (0, r.useState)(
+            (null == s ? void 0 : s.rtime_estimated_notification) || a + 86400,
           ),
-          [d, m] = (0, s.useState)(
-            (null == n ? void 0 : n.localization_token) ||
+          [d, m] = (0, r.useState)(
+            (null == s ? void 0 : s.localization_token) ||
               "#Sale_Reservation_MonthYear",
           ),
-          _ = n ? "Update Queue Range" : "Create Queue Range",
-          g = (0, C.tx)();
-        return g.bLoading
-          ? s.createElement(C.NT, {
-              state: g,
-              strDialogTitle: _,
-              closeModal: r,
+          g = s ? "Update Queue Range" : "Create Queue Range",
+          h = (0, M.tx)();
+        return h.bLoading
+          ? r.createElement(M.NT, {
+              state: h,
+              strDialogTitle: g,
+              closeModal: n,
             })
-          : s.createElement(
+          : r.createElement(
               R.uH,
               {
                 bDisableBackgroundDismiss: !0,
-                strTitle: _,
-                onCancel: r,
+                strTitle: g,
+                onCancel: n,
                 onOK: () => {
-                  g.fnSetLoading(!0);
+                  h.fnSetLoading(!0);
                   const e = Object.assign(Object.assign({}, t), {
                     start_queue_position: i,
                     rtime_estimated_notification: c,
@@ -1283,26 +1132,26 @@
                   });
                   o([e]).then((e) => {
                     e
-                      ? (g.fnSetSuccess(!0),
-                        g.fnSetStrSuccess("Successfully created position"))
-                      : (g.fnSetSuccess(!1),
-                        g.fnSetStrError(
+                      ? (h.fnSetSuccess(!0),
+                        h.fnSetStrSuccess("Successfully created position"))
+                      : (h.fnSetSuccess(!1),
+                        h.fnSetStrError(
                           "Failed, please check console logs and/or try again",
                         ));
                   });
                 },
               },
-              s.createElement(
+              r.createElement(
                 "div",
                 { className: E.NewEntryCtn },
-                s.createElement(
+                r.createElement(
                   "p",
                   null,
                   "When we get to accepting reservation number ",
-                  s.createElement("i", null, "n"),
+                  r.createElement("i", null, "n"),
                   ", show those users a date they can anticipate to recieve an invite to purchase.",
                 ),
-                s.createElement(S.II, {
+                r.createElement(j.II, {
                   type: "number",
                   min: "0",
                   value: i,
@@ -1319,7 +1168,7 @@
                     );
                   },
                 }),
-                s.createElement(k.A, {
+                r.createElement(k.A, {
                   bShowTimeZone: !0,
                   strDescription: "Estimated Time Users will receive invite",
                   strDescToolTip:
@@ -1328,8 +1177,8 @@
                   fnGetTimeToUpdate: () => c,
                   fnSetTimeToUpdate: u,
                 }),
-                s.createElement("br", null),
-                s.createElement(X, {
+                r.createElement("br", null),
+                r.createElement(W, {
                   strToken: d,
                   fnSetToken: m,
                   rtEstimateDate: c,
@@ -1337,24 +1186,24 @@
               ),
             );
       }
-      function J(e) {
-        const { positionMsg: t, closeModal: n } = e,
-          { fnDeletePositionMessage: r } = v(),
+      function Y(e) {
+        const { positionMsg: t, closeModal: s } = e,
+          { fnDeletePositionMessage: n } = f(),
           o = `Delete Queue Position ${t.start_queue_position.toLocaleString()}`,
-          a = (0, C.tx)();
+          a = (0, M.tx)();
         return a.bLoading
-          ? s.createElement(C.NT, {
+          ? r.createElement(M.NT, {
               state: a,
               strDialogTitle: o,
-              closeModal: n,
+              closeModal: s,
             })
-          : s.createElement(R.uH, {
+          : r.createElement(R.uH, {
               strTitle: o,
               strDescription: "Are you sure, this action is no undo'able?",
-              onCancel: n,
+              onCancel: s,
               onOK: () => {
                 a.fnSetLoading(!0),
-                  r(t).then((e) => {
+                  n(t).then((e) => {
                     e
                       ? (a.fnSetSuccess(!0),
                         a.fnSetStrSuccess("Successfully delete position"))
@@ -1366,25 +1215,25 @@
               },
             });
       }
-      function Y(e) {
+      function Q(e) {
         const { closeModal: t } = e,
-          { fnReloadReservationPositionMessages: n } = v(),
-          [r, o] = (0, s.useState)(!1);
+          { fnReloadReservationPositionMessages: s } = f(),
+          [n, o] = (0, r.useState)(!1);
         return (
-          (0, s.useEffect)(() => {
-            n().then(() => o(!0));
-          }, [n]),
-          s.createElement(R.uH, {
+          (0, r.useEffect)(() => {
+            s().then(() => o(!0));
+          }, [s]),
+          r.createElement(R.uH, {
             bAlertDialog: !0,
             strTitle: "Reload Definition",
-            strDescription: r
+            strDescription: n
               ? "Reloading..."
               : "Reload send to server, safe to close dialog",
             closeModal: t,
           })
         );
       }
-      const q = [
+      const U = [
         "#Sale_Reservation_MonthYear",
         "#Sale_Reservation_TwoMonthRangeYear",
         "#Sale_Reservation_ThreeMonthRangeYear",
@@ -1396,108 +1245,108 @@
         "#Sale_Reservation_AfterQuarter_ThreeMonths",
         "#Sale_Reservation_RelativeWeekly",
       ];
-      function X(e) {
-        const { strToken: t, fnSetToken: n, rtEstimateDate: r } = e,
-          o = (0, s.useMemo)(
+      function W(e) {
+        const { strToken: t, fnSetToken: s, rtEstimateDate: n } = e,
+          o = (0, r.useMemo)(
             () =>
-              q.map((e) => ({
-                label: s.createElement(I, {
+              U.map((e) => ({
+                label: r.createElement(G, {
                   strToken: e,
-                  rtEstimatedNotifcationDate: r,
+                  rtEstimatedNotifcationDate: n,
                 }),
                 data: e,
               })),
-            [r],
+            [n],
           );
-        return s.createElement(
+        return r.createElement(
           "div",
           null,
-          s.createElement(S.ry, {
-            strDropDownClassName: y.DropDownScroll,
+          r.createElement(j.ry, {
+            strDropDownClassName: N.DropDownScroll,
             label: "Date Format",
             rgOptions: o,
             selectedOption: t,
-            onChange: (e) => n(e.data),
+            onChange: (e) => s(e.data),
             bDisableMouseOverlay: !0,
             contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
           }),
-          s.createElement(
+          r.createElement(
             "div",
             null,
-            s.createElement("h3", null, "This will display to users as: "),
-            s.createElement(
+            r.createElement("h3", null, "This will display to users as: "),
+            r.createElement(
               "div",
               { className: E.DatePreview },
-              s.createElement(
+              r.createElement(
                 "div",
                 null,
-                (0, A.Xx)("#Sale_Reservation_ExpectedDate"),
+                (0, P.Xx)("#Sale_Reservation_ExpectedDate"),
               ),
-              s.createElement(I, {
-                rtEstimatedNotifcationDate: r,
+              r.createElement(G, {
+                rtEstimatedNotifcationDate: n,
                 strToken: t,
               }),
             ),
           ),
         );
       }
-      var V = n(13129),
-        W = n(77681),
-        Q = n.n(W);
-      function K(e) {
-        return s.createElement(
+      var $ = s(13129),
+        K = s(77681),
+        V = s.n(K);
+      function X(e) {
+        return r.createElement(
           "div",
-          { className: (0, V.Z)(E.ctn, Q().AdminPageCtn) },
-          s.createElement(
+          { className: (0, $.Z)(E.ctn, V().AdminPageCtn) },
+          r.createElement(
             "h1",
-            { className: Q().PageTitle },
+            { className: V().PageTitle },
             "Reservation Queue - Messaging Tools",
           ),
-          s.createElement("hr", { className: "VO" }),
-          s.createElement(
+          r.createElement("hr", { className: "VO" }),
+          r.createElement(
             "div",
-            { className: Q().ColumnCtn },
-            s.createElement(
+            { className: V().ColumnCtn },
+            r.createElement(
               "div",
-              { className: Q().LeftCol },
-              s.createElement(
+              { className: V().LeftCol },
+              r.createElement(
                 "div",
-                { className: Q().SectionCtn },
-                s.createElement(j, null),
+                { className: V().SectionCtn },
+                r.createElement(b, null),
               ),
-              s.createElement(
+              r.createElement(
                 "div",
-                { className: Q().SectionCtn },
-                s.createElement(L, null),
+                { className: V().SectionCtn },
+                r.createElement(z, null),
               ),
             ),
-            s.createElement(
+            r.createElement(
               "div",
-              { className: Q().RightCol },
-              s.createElement(
+              { className: V().RightCol },
+              r.createElement(
                 "div",
-                { className: Q().SectionCtn },
-                s.createElement(x, null),
+                { className: V().SectionCtn },
+                r.createElement(O, null),
               ),
-              s.createElement(
+              r.createElement(
                 "div",
-                { className: Q().SectionCtn },
-                s.createElement(O, null),
+                { className: V().SectionCtn },
+                r.createElement(x, null),
               ),
-              s.createElement(
+              r.createElement(
                 "div",
-                { className: Q().SectionCtn },
-                s.createElement(S.__, null, "Useful Links:"),
-                s.createElement(
+                { className: V().SectionCtn },
+                r.createElement(j.__, null, "Useful Links:"),
+                r.createElement(
                   "ul",
                   null,
-                  s.createElement(
+                  r.createElement(
                     "li",
                     null,
-                    s.createElement(
+                    r.createElement(
                       "a",
                       {
-                        href: `${g.De.STATS_BASE_URL}steamdeck/reservations/`,
+                        href: `${h.De.STATS_BASE_URL}steamdeck/reservations/`,
                         target: "_blank",
                       },
                       "Steam Deck reservation stats page",
@@ -1509,12 +1358,6 @@
           ),
         );
       }
-    },
-    36595: (e, t, n) => {
-      "use strict";
-      n.d(t, { Z: () => s });
-      const s =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcJJREFUeNqkUz1PAkEQfStggjESejU0GozlGqn8SGywkYIYY0IsaLCwIBTQUN5fMLGm8S8QSWwslVAYjAlUBEJDhCgWwp3nzN6eHqIVl8zN7rx5b+dm9oRt25jlmcOMj59f10JAkPcBcXIGWdECyqYn6TfGdZ9S9d4K4gQYx4WCtJzE+G/sKJudwpQABUGnGSf5vKzX60jmctL8SYzz+iCdls1mEzuplMIsLSC4iSUh1ClUlpHIZGStVkM0GsVNqVRlIJZIyG63i1AohMdKpUrZRQqXz4j7LWA7VSiR/WRSNhsNRRgOh+i02wgGg3hrtRSZelLmI6cExs7nKJGVtTX50uupMn0+H157PUWmZpYDXLoWUFPo6MC87jivx4MBFtxOWZYS11VipNdT98DWDVsPh2XQNLFIMdc4xpg9OZ3JMdIpRowSXVKt36+yuXvGxn+N0XS+3zj0kG+JSPEi261H5FCLmN9lUyNWyZ+Qag54eA6Hbfa8j1A88g+2qrlqCkKIZdovbAG7m8D5E3B5D9xR7IPsk/u7DextABd14OrBwd6J23YFligQ0IPwXE7lbedXUAPya5yHMiLuq5j1d/4SYAAj3NATBGE4PgAAAABJRU5ErkJggg==";
     },
   },
 ]);
