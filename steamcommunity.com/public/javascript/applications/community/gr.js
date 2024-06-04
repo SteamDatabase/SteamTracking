@@ -45,15 +45,15 @@
       r.d(t, { N1: () => l });
       var n = r(8416),
         i = r(77936),
-        o = r(22520),
-        C = r(62210);
+        C = r(22520),
+        o = r(62210);
       class l {
         constructor(e, t, r) {
           if ("string" == typeof e) this.m_ulGameID = n.Z.fromString(e, !0);
           else {
             const i = r,
-              o = ((255 & e) << 24) + (16777215 & t);
-            this.m_ulGameID = n.Z.fromBits(o, i, !0);
+              C = ((255 & e) << 24) + (16777215 & t);
+            this.m_ulGameID = n.Z.fromBits(C, i, !0);
           }
         }
         GetAppID() {
@@ -86,15 +86,15 @@
         BIsValid() {
           switch (this.GetType()) {
             case i.b7.k_EGameIDTypeApp:
-              return this.GetAppID() !== o.kI;
+              return this.GetAppID() !== C.kI;
             case i.b7.k_EGameIDTypeGameMod:
-              return this.GetAppID() !== o.kI && 2147483648 & this.GetModID();
+              return this.GetAppID() !== C.kI && 2147483648 & this.GetModID();
             case i.b7.k_EGameIDTypeShortcut:
               return 0 != (2147483648 & this.GetModID());
             case i.b7.k_EGameIDTypeP2P:
-              return this.GetAppID() === o.kI && 2147483648 & this.GetModID();
+              return this.GetAppID() === C.kI && 2147483648 & this.GetModID();
             default:
-              return (0, C.X)(!1, `Unknown GameID type: ${this.GetType()}`), !1;
+              return (0, o.X)(!1, `Unknown GameID type: ${this.GetType()}`), !1;
           }
         }
         static InitFromAppID(e) {
@@ -110,15 +110,15 @@
       r.d(t, { hh: () => l });
       var n = r(85556),
         i = (r(47427), r(65255)),
-        o = r(10082),
-        C = r(54842);
+        C = r(10082),
+        o = r(54842);
       class l {
         constructor() {
           (this.m_mapAppMarkerLoadingPromises = new Map()),
             (this.m_mapAppMarkers = new Map()),
             (this.m_mapURLForApp = new Map()),
             (this.m_fnTimelineURLGenerator = void 0),
-            (0, C.rC)(this);
+            (0, o.rC)(this);
         }
         BIsLoaded(e) {
           return this.m_mapAppMarkers.has(e);
@@ -166,14 +166,14 @@
               n.ok ||
                 (i.De.IN_CLIENT &&
                   SteamClient.Apps.ReportLibraryAssetCacheMiss(e, 6));
-              const C = yield n.text(),
+              const o = yield n.text(),
                 l = new DOMParser(),
                 s = l
-                  .parseFromString(C, "image/svg+xml")
+                  .parseFromString(o, "image/svg+xml")
                   .getElementsByTagName("defs")[0];
               Array.from(s.children).forEach((e) => {
                 var t;
-                const n = (0, o.iv)(
+                const n = (0, C.iv)(
                     null ===
                       (t = e.attributes.getNamedItem("steam-timeline-color")) ||
                       void 0 === t
@@ -208,18 +208,18 @@
       function s(e) {
         return `${i.De.BASE_URL_SHARED_CDN}app_config/timeline/${e}_markers.svg`;
       }
-      (0, n.gn)([C.LO], l.prototype, "m_mapAppMarkerLoadingPromises", void 0),
-        (0, n.gn)([C.LO], l.prototype, "m_mapAppMarkers", void 0),
-        (0, n.gn)([C.LO], l.prototype, "m_mapURLForApp", void 0),
-        (0, n.gn)([C.LO], l.prototype, "m_fnTimelineURLGenerator", void 0);
+      (0, n.gn)([o.LO], l.prototype, "m_mapAppMarkerLoadingPromises", void 0),
+        (0, n.gn)([o.LO], l.prototype, "m_mapAppMarkers", void 0),
+        (0, n.gn)([o.LO], l.prototype, "m_mapURLForApp", void 0),
+        (0, n.gn)([o.LO], l.prototype, "m_fnTimelineURLGenerator", void 0);
     },
     2253: (e, t, r) => {
       "use strict";
       r.d(t, { B: () => c, p: () => a });
       var n = r(85556),
         i = r(54842),
-        o = r(30750),
-        C = r(47427),
+        C = r(30750),
+        o = r(47427),
         l = r(37563);
       class s {
         constructor() {
@@ -245,10 +245,10 @@
         s.Get().Init(e);
       }
       function c(e, t) {
-        const [r, n] = (0, C.useState)(),
-          i = (0, o.SZ)(() => s.Get().GetMarkerStore().BIsLoaded(e));
+        const [r, n] = (0, o.useState)(),
+          i = (0, C.SZ)(() => s.Get().GetMarkerStore().BIsLoaded(e));
         return (
-          (0, C.useEffect)(() => {
+          (0, o.useEffect)(() => {
             const r = s.Get().GetMarkerStore().GetGameMarkerSVGById(e, t);
             r && i && n(r);
           }, [e, i, t]),
@@ -270,8 +270,8 @@
       });
       var n = r(65255),
         i = r(77556),
-        o = r(37563);
-      const C = "steam_";
+        C = r(37563);
+      const o = "steam_";
       var l;
       function s(e) {
         switch (e) {
@@ -323,8 +323,8 @@
           this.m_mapSteamTimelineMarkers = new Map();
         }
         GetMarkerByID(e) {
-          const t = e.toLowerCase().startsWith(C)
-            ? e.slice(C.length).toLowerCase()
+          const t = e.toLowerCase().startsWith(o)
+            ? e.slice(o.length).toLowerCase()
             : e.toLowerCase();
           return this.m_mapSteamTimelineMarkers.has(t)
             ? this.m_mapSteamTimelineMarkers.get(t)
@@ -332,7 +332,7 @@
         }
         GetAllUseableMarkerID() {
           return Array.from(this.m_mapSteamTimelineMarkers.keys()).map(
-            (e) => C + e,
+            (e) => o + e,
           );
         }
         static Get() {
@@ -360,7 +360,7 @@
             this.AddMarker("combat", i.jf, l.Gray),
             this.AddMarker("chest", i.bz, l.Gray),
             this.AddMarker("view", i.G7, l.Gray),
-            (0, o.h4)()
+            (0, C.h4)()
               ? this.AddMarker("death", i.X, l.Gray)
               : this.AddMarker("death", i.hF, l.Gray),
             this.AddMarker("x", i.X, l.Gray),
@@ -413,7 +413,7 @@
         return { func: i.Jx, color: l.Gray };
       }
       function w(e) {
-        return e.toLowerCase().startsWith(C);
+        return e.toLowerCase().startsWith(o);
       }
     },
     42695: (e, t, r) => {
@@ -421,11 +421,11 @@
       r.d(t, { q: () => d });
       var n = r(85556),
         i = r(79545),
-        o = r(14351),
-        C = r(68785),
+        C = r(14351),
+        o = r(68785),
         l = r(46984),
         s = r(16997);
-      const a = new C.sO("ReactUsageReporting").Debug,
+      const a = new o.sO("ReactUsageReporting").Debug,
         c = 1e3 * l._H.PerMinute;
       class h {
         constructor() {
@@ -470,26 +470,26 @@
         }
         SendMetrics() {
           if (!this.m_bInitialized) return;
-          const e = i.gA.Init(o.YH);
+          const e = i.gA.Init(C.YH);
           e.Body().set_product(this.m_strProduct),
             e.Body().set_version(this.m_strVersion),
             this.m_mapRoutes.forEach((t, r) => {
-              let n = new o.Be();
+              let n = new C.Be();
               n.set_route(r), n.set_count(t), e.Body().add_routes(n);
             }),
             this.m_mapComponents.forEach((t, r) => {
-              let n = new o.Hy();
+              let n = new C.Hy();
               n.set_component(r), n.set_count(t), e.Body().add_components(n);
             }),
             this.m_mapActions.forEach((t, r) => {
-              let n = new o.Js();
+              let n = new C.Js();
               n.set_action(r), n.set_count(t), e.Body().add_actions(n);
             }),
             this.m_mapRoutes.clear(),
             this.m_mapComponents.clear(),
             this.m_mapActions.clear(),
             (this.m_reportCount = 0),
-            o.TF.ReportReactUsage(this.m_transport, e);
+            C.TF.ReportReactUsage(this.m_transport, e);
         }
         get version() {
           return this.m_strVersion;
@@ -506,13 +506,13 @@
       r.d(t, { NT: () => c, T$: () => a, tx: () => s });
       var n = r(47427),
         i = r(50898),
-        o = r(72297),
-        C = r(31846),
+        C = r(72297),
+        o = r(31846),
         l = r(46882);
       function s() {
         const [e, t] = (0, n.useState)(!1),
           [r, i] = (0, n.useState)(!1),
-          [o, C] = (0, n.useState)(!1),
+          [C, o] = (0, n.useState)(!1),
           [l, s] = (0, n.useState)(null),
           [a, c] = (0, n.useState)(null),
           [h, d] = (0, n.useState)(null),
@@ -521,7 +521,7 @@
         return {
           bLoading: e,
           bError: r,
-          bSuccess: o,
+          bSuccess: C,
           strError: l,
           strSuccess: a,
           elSuccess: u,
@@ -529,7 +529,7 @@
           strThrobber: L,
           fnSetLoading: t,
           fnSetError: i,
-          fnSetSuccess: C,
+          fnSetSuccess: o,
           fnSetStrError: s,
           fnSetStrSuccess: c,
           fnSetElSuccess: m,
@@ -564,8 +564,8 @@
               Boolean(u) &&
                 n.createElement(
                   "div",
-                  { className: o.ErrorStylesWithIcon },
-                  u || (0, C.Xx)("#Error_ErrorCommunicatingWithNetwork"),
+                  { className: C.ErrorStylesWithIcon },
+                  u || (0, o.Xx)("#Error_ErrorCommunicatingWithNetwork"),
                 ),
               Boolean(p) && p,
             )
@@ -574,7 +574,7 @@
                 i.uH,
                 {
                   strTitle: t,
-                  strDescription: m || (0, C.Xx)("#EventDisplay_Share_Success"),
+                  strDescription: m || (0, o.Xx)("#EventDisplay_Share_Success"),
                   bAlertDialog: !0,
                   closeModal: s,
                 },
@@ -584,7 +584,7 @@
                 i.uH,
                 { strTitle: t, closeModal: () => {} },
                 n.createElement(l.V, {
-                  string: a || w || (0, C.Xx)("#Loading"),
+                  string: a || w || (0, o.Xx)("#Loading"),
                   size: "medium",
                   position: "center",
                 }),
@@ -603,33 +603,34 @@
         Eq: () => J,
         FE: () => G,
         FG: () => h,
-        G7: () => W,
+        G7: () => O,
         Gu: () => s,
         I8: () => y,
-        Io: () => E,
+        Io: () => _,
         Jx: () => l,
+        KD: () => Y,
         KT: () => z,
         MC: () => d,
         OQ: () => D,
-        Q0: () => S,
+        Q0: () => x,
         Qm: () => u,
-        Ux: () => x,
+        Ux: () => S,
         Vy: () => L,
         W4: () => T,
         WF: () => q,
         WN: () => f,
         X: () => N,
-        Xd: () => I,
+        Xd: () => H,
         Xs: () => p,
         ZA: () => V,
         _O: () => w,
-        _n: () => C,
+        _n: () => o,
         bK: () => B,
         bz: () => P,
         cW: () => Q,
-        en: () => _,
-        ge: () => o,
-        hF: () => O,
+        en: () => E,
+        ge: () => C,
+        hF: () => W,
         hy: () => g,
         jf: () => U,
         kI: () => a,
@@ -637,14 +638,14 @@
         rZ: () => c,
         rp: () => k,
         sO: () => R,
-        u4: () => H,
+        u4: () => I,
         v3: () => j,
         w_: () => X,
       });
       var n = r(85556),
         i = r(47427);
       r(69622);
-      function o(e) {
+      function C(e) {
         return i.createElement(
           "svg",
           Object.assign(
@@ -663,7 +664,7 @@
           }),
         );
       }
-      function C(e) {
+      function o(e) {
         return i.createElement(
           "svg",
           Object.assign(
@@ -968,7 +969,7 @@
           }),
         );
       }
-      function _(e) {
+      function E(e) {
         return i.createElement(
           "svg",
           {
@@ -986,7 +987,7 @@
           }),
         );
       }
-      function E(e) {
+      function _(e) {
         return i.createElement(
           "svg",
           {
@@ -1054,7 +1055,7 @@
           }),
         );
       }
-      function S(e) {
+      function x(e) {
         return i.createElement(
           "svg",
           {
@@ -1070,7 +1071,7 @@
           }),
         );
       }
-      function x(e) {
+      function S(e) {
         return i.createElement(
           "svg",
           {
@@ -1141,7 +1142,7 @@
           }),
         );
       }
-      function I(e) {
+      function H(e) {
         return i.createElement(
           "svg",
           {
@@ -1157,7 +1158,7 @@
           }),
         );
       }
-      function H(e) {
+      function I(e) {
         return i.createElement(
           "svg",
           {
@@ -1305,7 +1306,7 @@
           }),
         );
       }
-      function W(e) {
+      function O(e) {
         return i.createElement(
           "svg",
           {
@@ -1323,7 +1324,7 @@
           }),
         );
       }
-      function O(e) {
+      function W(e) {
         return i.createElement(
           "svg",
           {
@@ -1496,6 +1497,29 @@
           }),
         );
       }
+      function Y(e) {
+        return i.createElement(
+          "svg",
+          Object.assign(
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+            },
+            e,
+          ),
+          i.createElement("path", {
+            fill: "currentColor",
+            d: "M27 20.1931C26.9943 23.588 25.6228 26.8421 23.1861 29.2427C20.7495 31.6432 17.4463 32.9943 14.0003 32.9999C12.2937 33.0055 10.603 32.6766 9.02663 32.0323C7.45029 31.3879 6.01984 30.4411 4.81854 29.2469C2.3908 26.8485 1.01923 23.6049 1.0006 20.2178C0.93382 13.0373 6.47794 7.52611 13.8968 7.3896H19.6875V4L27 9.19871L19.6875 14.3991V11.1723H13.9519C8.7116 11.271 4.7935 15.1424 4.84024 20.1783C4.88532 25.1649 8.99373 29.2238 14.0003 29.2238C16.4289 29.2212 18.7572 28.2696 20.4745 26.5778C22.1918 24.8861 23.1577 22.5923 23.1604 20.1997",
+          }),
+          i.createElement("rect", {
+            fill: "currentColor",
+            width: "3",
+            height: "32",
+            transform: "matrix(-1 0 0 1 34.1738 2)",
+          }),
+        );
+      }
     },
     79842: (e, t, r) => {
       "use strict";
@@ -1507,8 +1531,8 @@
         });
       var n = r(85556),
         i = r(47427),
-        o = r(40057),
-        C = r(42718),
+        C = r(40057),
+        o = r(42718),
         l = r(79545),
         s = r(6279),
         a = r(91707),
@@ -1535,8 +1559,8 @@
       function p(e) {
         const { clipID: t } = e,
           r = (function (e) {
-            const t = (0, o.bY)();
-            return (0, C.useQuery)(["grclip", e], () =>
+            const t = (0, C.bY)();
+            return (0, o.useQuery)(["grclip", e], () =>
               (0, n.mG)(this, void 0, void 0, function* () {
                 const r = l.gA.Init(s.qS);
                 r.Body().set_clip_id(e);
@@ -1547,16 +1571,16 @@
                     void n.DEBUG_LogToConsole()
                   );
                 let i,
-                  o = n.Body().toObject().clip,
-                  C = [];
-                if (0 == o.video_ids.length)
+                  C = n.Body().toObject().clip,
+                  o = [];
+                if (0 == C.video_ids.length)
                   return (
                     (0, c.F0)("No video ids in clip", e),
                     void n.DEBUG_LogToConsole()
                   );
-                for (let e of o.video_ids)
+                for (let e of C.video_ids)
                   (i && i.timeline_id == e.server_timeline_id) ||
-                    ((i = w(o, e)), C.push(i)),
+                    ((i = w(C, e)), o.push(i)),
                     i.recordings.push({
                       recording_id: e.video_manager_video_id,
                       start_offset_ms: e.start_offset_ms.toFixed(0),
@@ -1564,7 +1588,7 @@
                       recording_type: 4,
                       cdn_manifest_url: e.manifest_url,
                     });
-                return { clip_id: o.clip_id, game_id: o.gameid, timelines: C };
+                return { clip_id: C.clip_id, game_id: C.gameid, timelines: o };
               }),
             );
           })(t);

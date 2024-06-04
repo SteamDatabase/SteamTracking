@@ -334,12 +334,14 @@ function FinishFormVerification()
 
 		if ( !( $('lt').value == 1 || $('lt').value == 4 ) )
 	{
-		var ssa_check = $('i_agree_check');
-		if ( !ssa_check.checked )
-		{
-			errorString += 'You must agree to the Steam Subscriber Agreement to continue.<br/>';
-			rgBadFields.ssa_box = true;
-		}
+		$J( 'input[type=checkbox]' ).each( function() {
+			if ( !$J( this ).is(':checked') )
+			{
+				errorString += 'You must agree to the Steam Subscriber Agreement to continue.<br/>';
+				rgBadFields.ssa_box = true;
+				return false;
+			}
+		} );
 	}
 
 		for ( var key in rgBadFields )
@@ -740,7 +742,7 @@ function CheckAccountNameAvailability()
 
 	      	if ( result && result.bAvailable )
 	      	{
-				elAvailibility.html('<img class="green_check" src="https://community.cloudflare.steamstatic.com/public/shared/images/joinsteam/icon_check.png?v=1" > Available');
+				elAvailibility.html('<img class="green_check" src="https://community.akamai.steamstatic.com/public/shared/images/joinsteam/icon_check.png?v=1" > Available');
 				elAvailibility.css( 'background', '#5c7e10' );
 				$('form_row_choose_suggested_name').style.display = 'none';
 				g_bAccountNameAvailable = true;

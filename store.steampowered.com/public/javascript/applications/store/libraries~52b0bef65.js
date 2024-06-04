@@ -22,7 +22,13 @@
         });
     },
     62768: (e, r, t) => {
-      t.d(r, { Cg: () => d, TC: () => R, dc: () => M, pM: () => c });
+      t.d(r, {
+        Cg: () => d,
+        TC: () => R,
+        _b: () => f,
+        dc: () => M,
+        pM: () => c,
+      });
       var i = t(10059),
         a = t(39087),
         s = t(79545),
@@ -588,7 +594,7 @@
             z.sm_m ||
               (z.sm_m = {
                 proto: z,
-                fields: { pages: { n: 1, c: f, r: !0, q: !0 } },
+                fields: { pages: { n: 1, c: p, r: !0, q: !0 } },
               }),
             z.sm_m
           );
@@ -628,18 +634,18 @@
           return "CSteamCharts_GetBestOfYearPages_Response";
         }
       }
-      class f extends l {
+      class p extends l {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            f.prototype.name || a.aR(f.M()),
+            p.prototype.name || a.aR(p.M()),
             l.initialize(this, e, 0, -1, [3, 4], null);
         }
         static M() {
           return (
-            f.sm_m ||
-              (f.sm_m = {
-                proto: f,
+            p.sm_m ||
+              (p.sm_m = {
+                proto: p,
                 fields: {
                   name: { n: 1, br: a.FE.readString, bw: a.Xc.writeString },
                   url_path: { n: 2, br: a.FE.readString, bw: a.Xc.writeString },
@@ -661,6 +667,66 @@
                     n: 5,
                     br: a.FE.readUint32,
                     bw: a.Xc.writeUint32,
+                  },
+                },
+              }),
+            p.sm_m
+          );
+        }
+        static MBF() {
+          return p.sm_mbf || (p.sm_mbf = a.Bh(p.M())), p.sm_mbf;
+        }
+        toObject(e = !1) {
+          return p.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return a.TA(p.M(), e, r);
+        }
+        static fromObject(e) {
+          return a.aD(p.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new p();
+          return p.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return a.F(p.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          a.l2(p.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSteamCharts_GetBestOfYearPages_Response_BestOfYearPage";
+        }
+      }
+      class f extends l {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            f.prototype.context || a.aR(f.M()),
+            l.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            f.sm_m ||
+              (f.sm_m = {
+                proto: f,
+                fields: {
+                  context: { n: 1, c: n.WJ },
+                  data_request: { n: 2, c: n.Qn },
+                  top_played_period: {
+                    n: 3,
+                    br: a.FE.readEnum,
+                    bw: a.Xc.writeEnum,
                   },
                 },
               }),
@@ -699,61 +765,6 @@
           return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CSteamCharts_GetBestOfYearPages_Response_BestOfYearPage";
-        }
-      }
-      class p extends l {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            p.prototype.context || a.aR(p.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            p.sm_m ||
-              (p.sm_m = {
-                proto: p,
-                fields: {
-                  context: { n: 1, c: n.WJ },
-                  data_request: { n: 2, c: n.Qn },
-                },
-              }),
-            p.sm_m
-          );
-        }
-        static MBF() {
-          return p.sm_mbf || (p.sm_mbf = a.Bh(p.M())), p.sm_mbf;
-        }
-        toObject(e = !1) {
-          return p.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return a.TA(p.M(), e, r);
-        }
-        static fromObject(e) {
-          return a.aD(p.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new i.BinaryReader(e),
-            t = new p();
-          return p.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return a.F(p.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          a.l2(p.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
           return "CSteamCharts_GetMostPlayedSteamDeckGames_Request";
         }
       }
@@ -769,7 +780,14 @@
             g.sm_m ||
               (g.sm_m = {
                 proto: g,
-                fields: { ranks: { n: 1, c: w, r: !0, q: !0 } },
+                fields: {
+                  ranks: { n: 1, c: w, r: !0, q: !0 },
+                  top_played_period: {
+                    n: 2,
+                    br: a.FE.readEnum,
+                    bw: a.Xc.writeEnum,
+                  },
+                },
               }),
             g.sm_m
           );
@@ -825,7 +843,7 @@
                   rank: { n: 1, br: a.FE.readInt32, bw: a.Xc.writeInt32 },
                   appid: { n: 2, br: a.FE.readUint32, bw: a.Xc.writeUint32 },
                   item: { n: 3, c: n.VL },
-                  last_week_rank: {
+                  last_period_rank: {
                     n: 4,
                     br: a.FE.readInt32,
                     bw: a.Xc.writeInt32,
@@ -907,7 +925,7 @@
           (e.GetMostPlayedSteamDeckGames = function (e, r) {
             return e.SendMsg(
               "SteamCharts.GetMostPlayedSteamDeckGames#1",
-              (0, s.MD)(p, r),
+              (0, s.MD)(f, r),
               g,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );

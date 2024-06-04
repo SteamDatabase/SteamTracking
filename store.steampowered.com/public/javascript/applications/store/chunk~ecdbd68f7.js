@@ -468,7 +468,8 @@
           } else "number" == typeof e && (r = e);
           return !t ||
             r == this.m_unAccountID ||
-            (this.m_TextFilterPreferences.bIgnoreFriends &&
+            (e &&
+              this.m_TextFilterPreferences.bIgnoreFriends &&
               this.m_DataAccess.BIsFriend(r))
             ? t
             : t.replace(this.m_regexBannedWords, (e) =>

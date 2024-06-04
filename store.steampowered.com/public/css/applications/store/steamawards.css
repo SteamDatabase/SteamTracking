@@ -35,7 +35,7 @@ body.v6.SteamAwardsNominations #footer_spacer {
 }
 ._1TnKc86XFqFWZThfWLgaRw {
   position: relative;
-  background: url("https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2023/SA_header_still.png?v=2")
+  background: url("https://cdn.akamai.steamstatic.com/store/promo/steamawards2023/SA_header_still.png?v=2")
     no-repeat;
   background-position: center;
   background-size: contain;
@@ -844,7 +844,7 @@ body.SteamAwardsVoting .responsive_page_frame {
 }
 ._1oXTW_jpUID161hkqtu59M {
   position: relative;
-  background: url("https://cdn.cloudflare.steamstatic.com/store/promo/steamawards2023/SA_header_still.png?v=2")
+  background: url("https://cdn.akamai.steamstatic.com/store/promo/steamawards2023/SA_header_still.png?v=2")
     no-repeat;
   background-position: center;
   background-size: contain;

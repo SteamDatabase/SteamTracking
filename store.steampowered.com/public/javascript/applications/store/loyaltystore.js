@@ -1406,7 +1406,10 @@
         PageHomeHowItWorks: "_2bWxopMGr7pattyTG9s1p5",
         EventPageHeaderImg: "_144Kf1whLyNHOOPRZLvepP",
         PageSubtitle: "FRVvERJu0cLA3TmUovTrJ",
+        PageTitle: "_2slUuJn3UIDWrXWtQE5K3o",
         DescriptorDrivenEventPageTitle: "UIMULcMvZKXpAu7iWuxz",
+        ParallaxRoot: "_399XJVziSRXteE0UwuS2Cj",
+        ParallaxBackground: "_1Lf5512-BMNbp1bfLQXpQG",
       };
     },
     95126: (e, t, n) => {
@@ -2689,7 +2692,7 @@
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: (0, a.Xx)("#Login_SignIn") },
+          { strTitle: (0, a.Xx)("#Login_SignInTitle") },
         );
       }
       function _(e, t) {
@@ -2700,7 +2703,7 @@
             guestOption: t,
           }),
           window,
-          { strTitle: (0, a.Xx)("#Login_SignIn") },
+          { strTitle: (0, a.Xx)("#Login_SignInTitle") },
         );
       }
       function g(e) {
@@ -7372,20 +7375,21 @@
     42364: (e, t, n) => {
       "use strict";
       n.d(t, {
-        nz: () => x,
-        Uv: () => S,
-        Nn: () => C,
-        Dj: () => y,
-        OC: () => N,
-        _f: () => P,
+        nz: () => D,
+        Uv: () => A,
+        Nn: () => y,
+        Dj: () => E,
+        OC: () => M,
+        _f: () => T,
       });
       var i = n(85556),
         r = n(47427),
         a = n(27605),
         s = n(6725),
-        o = n(38244),
-        l = n(8285);
-      class c extends r.Component {
+        o = n(69247),
+        l = n(38244),
+        c = n(8285);
+      class m extends r.Component {
         componentDidUpdate(e) {
           this.props.location.pathname !== e.location.pathname &&
             this.UpdateScroll();
@@ -7409,22 +7413,22 @@
           return null;
         }
       }
-      const m = (0, l.EN)(c);
-      var d = n(13129),
-        u = n(97183),
-        p = n(49236);
-      const _ =
+      const d = (0, c.EN)(m);
+      var u = n(13129),
+        p = n(97183),
+        _ = n(49236);
+      const g =
           n.p +
           "images/applications/store/diamonds_tile.png?v=valveisgoodatcaching",
-        g =
-          n.p +
-          "images/applications/store/home_background.png?v=valveisgoodatcaching",
         h =
           n.p +
+          "images/applications/store/home_background.png?v=valveisgoodatcaching",
+        f =
+          n.p +
           "images/applications/store/halloween_2020_pointspage_bg.png?v=valveisgoodatcaching";
-      var f = n(13499),
-        I = n(65255);
-      const C = (e) => {
+      var I = n(13499),
+        C = n(65255);
+      const y = (e) => {
           var { className: t } = e,
             n = (0, i._T)(e, ["className"]);
           const a = r.useRef();
@@ -7434,87 +7438,95 @@
             r.createElement(
               "div",
               Object.assign(
-                { ref: a, className: (0, d.Z)(s.StandardRoot, t) },
+                { ref: a, className: (0, u.Z)(s.StandardRoot, t) },
                 n,
               ),
             ),
-            r.createElement(m, { scrollElement: a.current }),
+            r.createElement(d, { scrollElement: a.current }),
           );
         },
-        y = (e) => {
+        E = (e) => {
           var { className: t } = e,
             n = (0, i._T)(e, ["className"]);
           return r.createElement(
             "div",
-            Object.assign({ className: (0, d.Z)(s.StandardBackground, t) }, n),
+            Object.assign({ className: (0, u.Z)(s.StandardBackground, t) }, n),
           );
         },
-        E = ({ children: e }) =>
-          r.createElement(C, { className: s.ParallaxRoot }, e),
-        v = ({ children: e, src: t, className: n }) =>
+        v = ({ children: e }) =>
+          r.createElement(
+            y,
+            { className: (0, u.Z)(s.ParallaxRoot, o.ParallaxRoot) },
+            e,
+          ),
+        w = ({ children: e, src: t, className: n }) =>
           r.createElement(
             r.Fragment,
             null,
             e,
             r.createElement("div", {
-              className: (0, d.Z)(s.ParallaxBackground, n),
+              className: (0, u.Z)(
+                s.ParallaxBackground,
+                o.ParallaxBackground,
+                n,
+              ),
               style: { backgroundImage: `url(${t})` },
             }),
           );
-      function w(e) {
-        const t = (0, o.Vt)(["xxsmall", "small", "xxlarge"]),
-          n = (0, o.mZ)("(max-width: 965px)") || I.De.IN_GAMEPADUI,
-          i = (0, o.UB)(t);
+      function N(e) {
+        const t = (0, l.Vt)(["xxsmall", "small", "xxlarge"]),
+          n = (0, l.mZ)("(max-width: 965px)") || C.De.IN_GAMEPADUI,
+          i = (0, l.UB)(t);
         return r.createElement(
-          u.RS,
+          p.RS,
           { spacing: { horizontal: i } },
           r.createElement(
-            o.xu,
+            l.xu,
             {
               display: "flex",
               justifyContent: "center",
               paddingBottom: "xlarge",
               className: s.StandardLayout,
             },
-            !n && r.createElement(p.A, null),
+            !n && r.createElement(_.A, null),
             r.createElement(
-              o.Kq,
+              l.Kq,
               { itemClassName: s.PageItem, className: s.ItemContainer },
               e.children,
             ),
           ),
         );
       }
-      const N = ({ background: e, children: t }) => {
-          let n = _;
+      const M = ({ background: e, children: t }) => {
+          let n = g;
           return (
             e && (n = e),
             r.createElement(
-              E,
+              v,
               null,
-              r.createElement(v, { src: n }, r.createElement(w, null, t)),
+              r.createElement(w, { src: n }, r.createElement(N, null, t)),
             )
           );
         },
-        M = ({ children: e }) =>
-          r.createElement(v, { src: g, className: s.HomeBackground }, e),
         S = ({ children: e }) =>
+          r.createElement(w, { src: h, className: s.HomeBackground }, e),
+        A = ({ children: e }) =>
           r.createElement(
-            E,
+            v,
             null,
-            r.createElement(M, null, r.createElement(w, null, e)),
+            r.createElement(S, null, r.createElement(N, null, e)),
           ),
-        A = (0, a.Pi)(({ children: e, appid: t }) => {
+        b = (0, a.Pi)(({ children: e, appid: t }) => {
           const n = (function (e) {
             const [t, n] = r.useState("");
             return (
               r.useEffect(() => {
                 let t = !0;
-                const i = (0, f.xL)(e);
+                const i = (0, I.xL)(e);
                 n(i);
                 const r = new Image();
                 return (
-                  (r.onerror = () => t && n((0, f.k6)(e))),
+                  (r.onerror = () => t && n((0, I.k6)(e))),
                   (r.src = i),
                   () => {
                     t = !1;
@@ -7525,24 +7537,24 @@
             );
           })(t);
           return r.createElement(
-            v,
+            w,
             { src: n, className: s.ParallaxAppBackground },
             e,
           );
         }),
-        b = { 1461450: h };
-      function x(e) {
-        return e.appid in b
-          ? r.createElement(D, Object.assign({}, e))
-          : r.createElement(L, Object.assign({}, e));
-      }
+        x = { 1461450: f };
       function D(e) {
+        return e.appid in x
+          ? r.createElement(L, Object.assign({}, e))
+          : r.createElement(P, Object.assign({}, e));
+      }
+      function L(e) {
         const { children: t, appid: n } = e,
           i = (function (e) {
-            return b[e];
+            return x[e];
           })(n);
         return r.createElement(
-          C,
+          y,
           null,
           r.createElement(
             "div",
@@ -7550,24 +7562,29 @@
               style: { backgroundImage: `url("${i}")` },
               className: s.CustomAppBackground,
             },
-            r.createElement(w, null, t),
+            r.createElement(N, null, t),
           ),
         );
       }
-      function L(e) {
+      function P(e) {
         const { children: t, appid: n } = e;
         return r.createElement(
-          E,
+          v,
           null,
-          r.createElement(A, { appid: n }, r.createElement(w, null, t)),
+          r.createElement(b, { appid: n }, r.createElement(N, null, t)),
         );
       }
-      const P = ({ title: e, subtitle: t, headerImage: n }) =>
+      const T = ({ title: e, subtitle: t, headerImage: n }) =>
         r.createElement(
           r.Fragment,
           null,
           n && r.createElement("img", { className: s.PageHeaderImage, src: n }),
-          e && r.createElement("div", { className: s.PageTitle }, e),
+          e &&
+            r.createElement(
+              "div",
+              { className: (0, u.Z)(s.PageTitle, o.PageTitle) },
+              e,
+            ),
           t && r.createElement("div", { className: s.PageSubtitle }, t),
         );
     },

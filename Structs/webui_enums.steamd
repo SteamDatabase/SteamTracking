@@ -1651,6 +1651,12 @@ enum UnnamedEnum283f4983bc5112eb
 	Error = 3;
 }
 
+enum UnnamedEnum295da9fc8d96f653
+{
+	AppID = 0;
+	AccountID = 1;
+}
+
 enum UnnamedEnum2ad3a297ec46ebfc
 {
 	k_Custom = 0;

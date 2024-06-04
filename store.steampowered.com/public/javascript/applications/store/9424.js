@@ -1906,7 +1906,7 @@
               { className: N().PrimaryHeader },
               e.refreshInfo
                 ? (0, X.Xx)("#Login_RefreshSignIn")
-                : (0, X.Xx)("#Login_SignIn"),
+                : (0, X.Xx)("#Login_SignInTitle"),
             ),
             a.createElement(Ce, { refreshInfo: e.refreshInfo }),
           );

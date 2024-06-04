@@ -298,10 +298,6 @@ p.currency_change_confirm_dialog_footer {
 		html.responsive.mobile_client .account_settings_container {
 			padding: 4px 8px;
 		}
-
-		html.responsive.mobile_client .account_preferences input[type=checkbox], .account_preferences label {
-			display: contents;
-		}
 }
 
 @media screen and (max-width: 910px)

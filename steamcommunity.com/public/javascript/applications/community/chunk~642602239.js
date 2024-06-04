@@ -38,6 +38,7 @@
         PreviewYouTubeVideo: "_2ydks0zXuSegy8SWijqkmu",
         sizeThumb: "kQ_wgWcGNL07sIwGVIJ5Z",
         sizeFull: "_2GDYxwH7GMXLMG3s5EEMy9",
+        PlaceholderImg: "_2ql2qj2wtenENb-L4JoYdk",
         floatLeft: "_3ZwVB7qRUAXZBDGNNQwx3R",
         floatRight: "_1VimJ875doFZeJ1P97oNv7",
       };
@@ -303,7 +304,7 @@
         v = n(31846),
         S = n(13499),
         C = n(37563),
-        y = n(72869),
+        y = n(42090),
         b = n.n(y),
         I = n(43090),
         D = n(77115);
@@ -734,6 +735,20 @@
               autocloses: !1,
             },
           ],
+          [
+            "p",
+            {
+              Constructor: function (e) {
+                return i.createElement(
+                  "p",
+                  { className: b().Paragraph },
+                  e.children,
+                );
+              },
+              autocloses: !1,
+              skipFollowingNewline: !0,
+            },
+          ],
         ]),
         w = new Map([
           ["looping_media", { Constructor: X, autocloses: !1 }],
@@ -989,7 +1004,7 @@
         i = n(60646),
         o = n(33682),
         a = n(13499),
-        s = n(4481),
+        s = n(20142),
         l = n(23231);
       class c extends s.DX {
         constructor(e, t, n, r) {
@@ -2439,17 +2454,17 @@
     4684: (e, t, n) => {
       "use strict";
       n.d(t, { N: () => l });
-      var r = n(16833),
+      var r = n(92309),
         i = n(47427),
         o = n(29525),
-        a = n(4481);
+        a = n(20142);
       function s(e) {
         return new a.So(new a.LT(), 0);
       }
       function l(e) {
         const { text: t, languageOverride: n } = e,
           [a] = (0, i.useState)(
-            new r.Z6(new Map([...Array.from(o.Be.entries())]), s, n),
+            new r.Z(new Map([...Array.from(o.Be.entries())]), s, n),
           );
         return i.createElement(i.Fragment, null, a.ParseBBCode(t, {}));
       }
@@ -2545,6 +2560,7 @@
           "div",
           { className: (0, l.Z)(h().PreviewYouTubeVideo, g, E), id: t },
           r.createElement("img", {
+            className: h().PlaceholderImg,
             src:
               d.De.COMMUNITY_CDN_URL +
               "public/shared/images/responsive/youtube_16x9_placeholder.gif",
@@ -2991,7 +3007,7 @@
         h = n(31846),
         _ = n(20417);
       function g(e, t) {
-        return e + "economy/sticker/" + t;
+        return e + "economy/sticker/" + encodeURIComponent(t);
       }
       var E = n(37563),
         f = n(1485),
@@ -3351,7 +3367,7 @@
                       a.createElement(oe, null),
                     ),
                   renderContent: () =>
-                    a.createElement(j, {
+                    a.createElement(z, {
                       store: t,
                       onItemSelect: (e) => c(e.name),
                     }),
@@ -3467,7 +3483,7 @@
                         a.createElement(oe, null),
                       ),
                     renderContent: () =>
-                      a.createElement(j, {
+                      a.createElement(z, {
                         store: e,
                         onItemSelect: (e) => r(e.name),
                       }),
@@ -3653,11 +3669,11 @@
             renderEmpty: () =>
               i
                 ? a.createElement(A, null, (0, h.Xx)("#AddonPicker_NoResults"))
-                : a.createElement(z, null),
+                : a.createElement(j, null),
           });
         }
       }
-      function z() {
+      function j() {
         return a.createElement(
           a.Fragment,
           null,
@@ -3688,7 +3704,7 @@
           ),
         );
       }
-      class j extends a.Component {
+      class z extends a.Component {
         constructor() {
           super(...arguments), (this.state = { filter: "" });
         }
@@ -3840,7 +3856,7 @@
                           null,
                           (0, h.Xx)("#AddonPicker_NoResults"),
                         )
-                      : a.createElement(z, null),
+                      : a.createElement(j, null),
                 },
               ],
             })
@@ -3878,7 +3894,7 @@
                         null,
                         (0, h.Xx)("#AddonPicker_NoResults"),
                       )
-                    : a.createElement(z, null),
+                    : a.createElement(j, null),
               },
             ],
           });
@@ -4304,8 +4320,8 @@
       n.d(t, { d: () => St });
       var r = n(85556),
         i = n(47427),
-        o = n(16833),
-        a = n(4481),
+        o = n(92309),
+        a = n(20142),
         s = n(29525),
         l = n(58635),
         c = n(20417),
@@ -4679,8 +4695,8 @@
         Z = n(10777),
         W = n(59728),
         Y = n(60537),
-        z = n.n(Y);
-      function j(e) {
+        j = n.n(Y);
+      function z(e) {
         const { defid: t, url: n } = e,
           r = (0, Z.O)(t);
         if (!r || !r.community_item_data) return null;
@@ -4692,7 +4708,7 @@
             console.log("reward itemdef", (0, X.ZN)(r)),
           i.createElement(
             "div",
-            { className: z().Ctn },
+            { className: j().Ctn },
             i.createElement(
               W.HP,
               { toolTipContent: r.community_item_data.item_description },
@@ -4812,7 +4828,7 @@
               return i.createElement(
                 "div",
                 { className: (0, b.Z)(F.LoyaltyRewardCtn) },
-                i.createElement(j, { defid: n, url: e }),
+                i.createElement(z, { defid: n, url: e }),
               );
           }
         }
@@ -5097,7 +5113,7 @@
       }
       var We = n(82493),
         Ye = n(56365);
-      function ze(e) {
+      function je(e) {
         const { fileUploadManager: t } = e,
           n = (0, i.useRef)();
         return i.createElement(
@@ -5134,11 +5150,11 @@
           ),
         );
       }
-      var je = n(30750),
+      var ze = n(30750),
         Qe = n(42742);
       function Je(e) {
         const { fileUploadManager: t } = e,
-          n = (0, je.SZ)(() => t.file_upload_props.eUploadState);
+          n = (0, ze.SZ)(() => t.file_upload_props.eUploadState);
         return 1 == n
           ? i.createElement(qe, { fileUploadManager: t })
           : 3 == n || 5 == n || 4 == n
@@ -5187,7 +5203,7 @@
       }
       function Ke(e) {
         const { fileUploadManager: t } = e,
-          [n, r, o] = (0, je.SZ)(() => [
+          [n, r, o] = (0, ze.SZ)(() => [
             t.file_upload_props.file,
             t.file_upload_props.displayFileName,
             t.file_upload_props.uploadProgress,
@@ -5215,7 +5231,7 @@
       }
       function $e(e) {
         const { fileUploadManager: t } = e,
-          [n, o, a] = (0, je.SZ)(() => [
+          [n, o, a] = (0, ze.SZ)(() => [
             t.file_upload_props.strErrorDescription,
             t.file_upload_props.displayFileName,
             t.file_upload_props.eUploadState,
@@ -5609,7 +5625,7 @@
           ? i.createElement(
               "div",
               null,
-              i.createElement(ze, { fileUploadManager: o }),
+              i.createElement(je, { fileUploadManager: o }),
               i.createElement(Je, { fileUploadManager: o }),
             )
           : t
@@ -5619,7 +5635,7 @@
       class St extends i.Component {
         constructor(e) {
           super(e),
-            (this.m_parser = new o.Z6(
+            (this.m_parser = new o.Z(
               St.sm_BBCodeDictionary,
               this.ElementAccumulator,
               e.languageOverride,
@@ -5956,40 +5972,43 @@
         }
         render() {
           const e = this.props.bOnlyShowIcon && !this.state.bIsOpen,
-            t = this.BHasSomeNotificationSetting();
-          return a.createElement(
-            "div",
-            {
-              className: (0, D.Z)({
-                [T.ReminderCheckBox]: !0,
-                [L().ReminderCtn]: !0,
-                [T.IconMode]: e,
-                [T.TextMode]: !e,
-                ReminderSet: t,
-                RemindMeWidget: !0,
-              }),
-              onClick: this.ToggleMenu,
-              ref: this.m_elDropDownRef,
-            },
-            t &&
-              a.createElement(
+            t = this.BHasSomeNotificationSetting(),
+            n = (0, p.kl)();
+          return this.props.eventModel.startTime < n
+            ? null
+            : a.createElement(
                 "div",
-                { className: T.RemindCheck },
-                a.createElement(C.JrY, null),
-              ),
-            e &&
-              a.createElement(
-                "div",
-                { className: T.RemindBell },
-                a.createElement(C.Uos, null),
-              ),
-            a.createElement(
-              "div",
-              { className: T.ReminderDefault },
-              (0, N.Xx)("#EventDisplay_Reminder_SetReminder"),
-            ),
-            a.createElement("div", { className: T.ReminderOptions }),
-          );
+                {
+                  className: (0, D.Z)({
+                    [T.ReminderCheckBox]: !0,
+                    [L().ReminderCtn]: !0,
+                    [T.IconMode]: e,
+                    [T.TextMode]: !e,
+                    ReminderSet: t,
+                    RemindMeWidget: !0,
+                  }),
+                  onClick: this.ToggleMenu,
+                  ref: this.m_elDropDownRef,
+                },
+                t &&
+                  a.createElement(
+                    "div",
+                    { className: T.RemindCheck },
+                    a.createElement(C.JrY, null),
+                  ),
+                e &&
+                  a.createElement(
+                    "div",
+                    { className: T.RemindBell },
+                    a.createElement(C.Uos, null),
+                  ),
+                a.createElement(
+                  "div",
+                  { className: T.ReminderDefault },
+                  (0, N.Xx)("#EventDisplay_Reminder_SetReminder"),
+                ),
+                a.createElement("div", { className: T.ReminderOptions }),
+              );
         }
       };
       function O(e) {

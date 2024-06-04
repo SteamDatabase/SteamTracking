@@ -3,48 +3,6 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [259],
   {
-    72869: (e) => {
-      e.exports = {
-        Bold: "_1opdqAOxXrGF6BBCpWBSwD",
-        Italic: "_3PSCEwXIQOjACd8vcBVCh5",
-        Paragraph: "_3zjknFIbJGBGezHbYjCrVE",
-        Header1: "_38GFQhbMgQS_1y-yV_MAza",
-        Header2: "_2ZqUvIHTeQdmj5n3wCqp5s",
-        Header3: "KePJsJFkRONeGxLE3PKlF",
-        Header4: "_12a97iox1ZnYnQgXLpvafk",
-        Header5: "_4GmIVQlN3tVVTtLvuOhUV",
-        CenterSpan: "_3RAiCNw0-UoPo_4awvb1mA",
-        SmallText: "UvZC_c1WvBWOxlmJu7qCo",
-        Underline: "_3vpZiV7iSLrM6hY_mXk2k2",
-        Strike: "_3dQvq4jSQdWUz4WSgIjESL",
-        Spoiler: "_3CaxnwuIvFNL4Dlz6VYwHm",
-        Revealed: "_35II0clQ4RixPf4ZSRqXPh",
-        SpoilerText: "_1owPz2jY3VWy1TyVCWb7Gs",
-        DisabledMouseEvents: "_3QOEiyJx6JNKSPfGtfeQRO",
-        BlockQuote: "_2sfhtLUZT0Q5XZbbP0ybRr",
-        QuoteAuthor: "_2CMyS9Y6n11x4PMJHri59E",
-        PullQuote: "_3DRIe0jpfxAeqHxvn4iq3m",
-        Code: "_1AelsP7HuMD8QF_8MVP602",
-        CodeBlock: "_1paKwApiKpt_82rqeHdUh2",
-        List: "tfM5VWgPClhy8MTX_pNLF",
-        OrderedList: "_3Ve1EOUy_uAbrn63gbK5U",
-        ListItem: "_3DlO014RzYr_m9lI620soy",
-        HR: "_26oRBOf5CSY0iZsXJ_juPw",
-        Table: "_2Z51g3jeZDA1f76UU-hlG3",
-        NoBorder: "_3aoMET6BC38Vks1LAxB0rO",
-        TableRow: "Ms77JiTbY6cF3X9kDmu_I",
-        TableData: "_2t3YCtmlffdVpfB7Gy7NEW",
-        TableHeader: "_1vvfxMDi4YsoiPx4a-EQpH",
-        EqualCells: "_5b-QB3nK-8ib6IKjTAtyp",
-        ExpandSectionBlock: "YvEQhAIQTyLOKf4OZCW_o",
-        ExpandSectionHeader: "_3OxxMP4ilAfeJHPZJlq-3y",
-        EmbedArrow: "WXJl-z3InzcPSdkJYNQdR",
-        ExpandSectionBody: "_2sCNLKNv2RQrux8JZHAj7W",
-        ExpandSection_WithTitle: "_22nl0JNsidayri6K48VGaW",
-        LinkButton: "lMVeYbREjOZyypw7mp3qS",
-        Image: "_1CmpCOpiyFBd8ePBHSdJZ5",
-      };
-    },
     99970: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
@@ -80,6 +38,7 @@
         PreviewYouTubeVideo: "_2ydks0zXuSegy8SWijqkmu",
         sizeThumb: "kQ_wgWcGNL07sIwGVIJ5Z",
         sizeFull: "_2GDYxwH7GMXLMG3s5EEMy9",
+        PlaceholderImg: "_2ql2qj2wtenENb-L4JoYdk",
         floatLeft: "_3ZwVB7qRUAXZBDGNNQwx3R",
         floatRight: "_1VimJ875doFZeJ1P97oNv7",
       };
@@ -250,14 +209,14 @@
         GS: () => O,
         HC: () => M,
         LW: () => R,
-        MJ: () => H,
+        MJ: () => G,
         R6: () => N,
-        YC: () => U,
+        YC: () => V,
         aV: () => B,
         im: () => A,
         jj: () => F,
         pu: () => T,
-        qy: () => V,
+        qy: () => U,
         vZ: () => L,
         zV: () => I,
       });
@@ -279,7 +238,7 @@
         v = n(31846),
         f = n(13499),
         S = n(37563),
-        C = n(72869),
+        C = n(42090),
         k = n.n(C),
         y = n(43090),
         b = n(77115);
@@ -701,12 +660,26 @@
             autocloses: !1,
           },
         ],
+        [
+          "p",
+          {
+            Constructor: function (e) {
+              return i.createElement(
+                "p",
+                { className: k().Paragraph },
+                e.children,
+              );
+            },
+            autocloses: !1,
+            skipFollowingNewline: !0,
+          },
+        ],
       ]);
       new Map([
         ["looping_media", { Constructor: F, autocloses: !1 }],
-        ["video", { Constructor: V, autocloses: !1 }],
-        ["youtubeorvideo", { Constructor: U, autocloses: !1 }],
-        ["previewyoutube", { Constructor: H, autocloses: !1 }],
+        ["video", { Constructor: U, autocloses: !1 }],
+        ["youtubeorvideo", { Constructor: V, autocloses: !1 }],
+        ["previewyoutube", { Constructor: G, autocloses: !1 }],
       ]);
       function L(e, t, n = 0) {
         if (null == e ? void 0 : e.startsWith(b.A)) return (0, c.pd)(e);
@@ -833,7 +806,7 @@
           )
         );
       }
-      function H(e) {
+      function G(e) {
         if ((0, S.h4)()) return null;
         let t = A(e.args);
         if (t) {
@@ -858,7 +831,7 @@
         }
         return i.createElement(i.Fragment, null);
       }
-      function G(e) {
+      function H(e) {
         let t = A(e.args, "poster");
         t && (t = (0, f.et)(t));
         const n = new Array();
@@ -892,7 +865,7 @@
         return { sPoster: t, rgVideoSources: n, rgVideoTracks: s };
       }
       function F(e) {
-        const t = G(e);
+        const t = H(e);
         return i.createElement(p.Y, {
           video: t,
           bAutoPlay: !0,
@@ -900,8 +873,8 @@
           bLoop: !0,
         });
       }
-      function V(e) {
-        const t = G(e),
+      function U(e) {
+        const t = H(e),
           n = e.children ? e.children.toString() : void 0;
         n &&
           n.startsWith("http") &&
@@ -919,9 +892,9 @@
           bLoop: l ? c : r,
         });
       }
-      function U(e) {
+      function V(e) {
         if ((0, S.h4)() || "CN" == S.De.COUNTRY.toLocaleUpperCase())
-          return V(e);
+          return U(e);
         const t = A(e.args, "youtubeid"),
           n = A(e.args, "size"),
           o = A(e.args, "seconds");
@@ -1340,17 +1313,17 @@
     4684: (e, t, n) => {
       "use strict";
       n.d(t, { N: () => l });
-      var o = n(83682),
+      var o = n(31932),
         i = n(47427),
         r = n(29525),
-        s = n(4481);
+        s = n(20142);
       function a(e) {
         return new s.So(new s.LT(), 0);
       }
       function l(e) {
         const { text: t, languageOverride: n } = e,
           [s] = (0, i.useState)(
-            new o.Z6(new Map([...Array.from(r.Be.entries())]), a, n),
+            new o.Z(new Map([...Array.from(r.Be.entries())]), a, n),
           );
         return i.createElement(i.Fragment, null, s.ParseBBCode(t, {}));
       }
@@ -1446,6 +1419,7 @@
           "div",
           { className: (0, l.Z)(p().PreviewYouTubeVideo, E, _), id: t },
           o.createElement("img", {
+            className: p().PlaceholderImg,
             src:
               d.De.COMMUNITY_CDN_URL +
               "public/shared/images/responsive/youtube_16x9_placeholder.gif",
@@ -1465,7 +1439,7 @@
     33682: (e, t, n) => {
       "use strict";
       n.d(t, {
-        hp: () => V,
+        hp: () => U,
         tk: () => B,
         ag: () => X,
         uC: () => Z,
@@ -1517,7 +1491,7 @@
         p = n(31846),
         g = n(20417);
       function E(e, t) {
-        return e + "economy/sticker/" + t;
+        return e + "economy/sticker/" + encodeURIComponent(t);
       }
       var _ = n(37563),
         v = n(1485),
@@ -1783,16 +1757,16 @@
               ),
             ),
           );
-      function H(e) {
+      function G(e) {
         return e.recent_emoticons;
       }
-      function G(e) {
+      function H(e) {
         return e.recent_stickers;
       }
       function F(e) {
-        return H(e).length + G(e).length > 0;
+        return G(e).length + H(e).length > 0;
       }
-      const V = (0, r.Pi)((e) => {
+      const U = (0, r.Pi)((e) => {
         const {
           emoticonStore: t,
           emoticonHoverStore: n,
@@ -1877,7 +1851,7 @@
                       s.createElement(re, null),
                     ),
                   renderContent: () =>
-                    s.createElement(z, {
+                    s.createElement(j, {
                       store: t,
                       onItemSelect: (e) => c(e.name),
                     }),
@@ -1904,7 +1878,7 @@
           )
         );
       });
-      let U = class extends s.Component {
+      let V = class extends s.Component {
         constructor(e) {
           super(e), (this.state = { strSearchText: "" });
           let t = this.props.emoticonStore;
@@ -1993,7 +1967,7 @@
                         s.createElement(re, null),
                       ),
                     renderContent: () =>
-                      s.createElement(z, {
+                      s.createElement(j, {
                         store: e,
                         onItemSelect: (e) => o(e.name),
                       }),
@@ -2004,51 +1978,8 @@
           );
         }
       };
-      U = (0, o.gn)([r.Pi], U);
+      V = (0, o.gn)([r.Pi], V);
       class X extends s.Component {
-        constructor(e) {
-          super(e), (this.state = { strSearchText: "" });
-          let t = this.props.emoticonStore;
-          t.is_initialized ||
-            (t.UpdateEmoticonList(),
-            (this.m_disposeEmoticonStore = (0, i.gx)(
-              () => t.is_initialized,
-              () => this.forceUpdate(),
-            )));
-        }
-        componentWillUnmount() {
-          this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
-        }
-        render() {
-          return s.createElement(
-            u.xV,
-            null,
-            s.createElement(k, {
-              config: [
-                {
-                  renderTab: () =>
-                    s.createElement(
-                      "span",
-                      {
-                        title: (0, p.Xx)("#AddonPicker_Emoticons"),
-                        className: x().PickerTab,
-                      },
-                      s.createElement(se, null),
-                    ),
-                  renderContent: () =>
-                    s.createElement(Q, {
-                      store: this.props.emoticonStore,
-                      hoverStore: this.props.emoticonHoverStore,
-                      onItemSelect: (e) => this.props.OnSelected(e.name, !1),
-                      flairGroupID: this.props.strFlairGroupID,
-                    }),
-                },
-              ],
-            }),
-          );
-        }
-      }
-      class Z extends s.Component {
         constructor(e) {
           super(e), (this.state = { strSearchText: "" });
           let t = this.props.emoticonStore;
@@ -2091,6 +2022,49 @@
           );
         }
       }
+      class Z extends s.Component {
+        constructor(e) {
+          super(e), (this.state = { strSearchText: "" });
+          let t = this.props.emoticonStore;
+          t.is_initialized ||
+            (t.UpdateEmoticonList(),
+            (this.m_disposeEmoticonStore = (0, i.gx)(
+              () => t.is_initialized,
+              () => this.forceUpdate(),
+            )));
+        }
+        componentWillUnmount() {
+          this.m_disposeEmoticonStore && this.m_disposeEmoticonStore();
+        }
+        render() {
+          return s.createElement(
+            u.xV,
+            null,
+            s.createElement(k, {
+              config: [
+                {
+                  renderTab: () =>
+                    s.createElement(
+                      "span",
+                      {
+                        title: (0, p.Xx)("#AddonPicker_Emoticons"),
+                        className: x().PickerTab,
+                      },
+                      s.createElement(se, null),
+                    ),
+                  renderContent: () =>
+                    s.createElement(Q, {
+                      store: this.props.emoticonStore,
+                      hoverStore: this.props.emoticonHoverStore,
+                      onItemSelect: (e) => this.props.OnSelected(e.name, !1),
+                      flairGroupID: this.props.strFlairGroupID,
+                    }),
+                },
+              ],
+            }),
+          );
+        }
+      }
       class Y extends s.Component {
         constructor() {
           super(...arguments), (this.state = { filter: "" });
@@ -2105,10 +2079,10 @@
             { filter: i } = this.state,
             r = [];
           return (
-            H(e) &&
+            G(e) &&
               r.push({
                 title: (0, p.Xx)("#AddonPicker_RecentEmoticons"),
-                items: c.u.FilterEmoticons(H(e), i),
+                items: c.u.FilterEmoticons(G(e), i),
                 onItemSelect: n,
                 renderItem: (e) =>
                   s.createElement(K, { emoticon: e, emoticonHoverStore: t }),
@@ -2125,10 +2099,10 @@
                         ),
                   ),
               }),
-            G(e).length &&
+            H(e).length &&
               r.push({
                 title: (0, p.Xx)("#AddonPicker_RecentStickers"),
-                items: c.u.FilterStickers(G(e), i),
+                items: c.u.FilterStickers(H(e), i),
                 onItemSelect: o,
                 renderItem: (e) => s.createElement($, { sticker: e }),
                 keyExtractor: ({ name: e }) => e,
@@ -2179,11 +2153,11 @@
             renderEmpty: () =>
               i
                 ? s.createElement(I, null, (0, p.Xx)("#AddonPicker_NoResults"))
-                : s.createElement(j, null),
+                : s.createElement(z, null),
           });
         }
       }
-      function j() {
+      function z() {
         return s.createElement(
           s.Fragment,
           null,
@@ -2214,7 +2188,7 @@
           ),
         );
       }
-      class z extends s.Component {
+      class j extends s.Component {
         constructor() {
           super(...arguments), (this.state = { filter: "" });
         }
@@ -2313,7 +2287,7 @@
           });
         }
       }
-      let Q = class extends s.Component {
+      let q = class extends s.Component {
         constructor() {
           super(...arguments), (this.state = { filter: "" });
         }
@@ -2327,10 +2301,10 @@
             { filter: i } = this.state,
             r = [];
           return (
-            H(e).length &&
+            G(e).length &&
               r.push({
                 title: (0, p.Xx)("#AddonPicker_RecentEmoticons"),
-                items: c.u.FilterEmoticons(H(e), i),
+                items: c.u.FilterEmoticons(G(e), i),
                 onItemSelect: n,
                 renderItem: (e) =>
                   s.createElement(K, { emoticon: e, emoticonHoverStore: t }),
@@ -2366,15 +2340,15 @@
                           null,
                           (0, p.Xx)("#AddonPicker_NoResults"),
                         )
-                      : s.createElement(j, null),
+                      : s.createElement(z, null),
                 },
               ],
             })
           );
         }
       };
-      Q = (0, o.gn)([r.Pi], Q);
-      let q = class extends s.Component {
+      q = (0, o.gn)([r.Pi], q);
+      let Q = class extends s.Component {
         constructor() {
           super(...arguments), (this.state = { filter: "" });
         }
@@ -2404,13 +2378,13 @@
                         null,
                         (0, p.Xx)("#AddonPicker_NoResults"),
                       )
-                    : s.createElement(j, null),
+                    : s.createElement(z, null),
               },
             ],
           });
         }
       };
-      q = (0, o.gn)([r.Pi], q);
+      Q = (0, o.gn)([r.Pi], Q);
       const K = (e) => {
         const { emoticon: t, emoticonHoverStore: n, large: o } = e,
           i = !t.last_used && t.time_received;
@@ -2827,7 +2801,7 @@
     },
     26293: (e, t, n) => {
       "use strict";
-      n.d(t, { C: () => X, m: () => U });
+      n.d(t, { C: () => X, m: () => V });
       var o = n(85556),
         i = n(27605),
         r = n(37485),
@@ -2929,11 +2903,11 @@
         B = n(11448),
         O = n.n(B),
         M = n(74009),
-        H = n(38752),
-        G = n(71741),
+        G = n(38752),
+        H = n(71741),
         F = n(80212),
-        V = n(63493);
-      let U = class extends s.Component {
+        U = n(63493);
+      let V = class extends s.Component {
         constructor() {
           super(...arguments),
             (this.m_elDropDownRef = s.createRef()),
@@ -3007,8 +2981,8 @@
                 bDisablePopTop: !0,
                 bMatchWidth: !0,
                 strClassName: (0, N.Z)(
-                  H.ReminderDialog,
-                  H.ReminderOptions,
+                  G.ReminderDialog,
+                  G.ReminderOptions,
                   C.contextMenu,
                 ),
               };
@@ -3053,40 +3027,43 @@
         }
         render() {
           const e = this.props.bOnlyShowIcon && !this.state.bIsOpen,
-            t = this.BHasSomeNotificationSetting();
-          return s.createElement(
-            "div",
-            {
-              className: (0, N.Z)({
-                [H.ReminderCheckBox]: !0,
-                [O().ReminderCtn]: !0,
-                [H.IconMode]: e,
-                [H.TextMode]: !e,
-                ReminderSet: t,
-                RemindMeWidget: !0,
-              }),
-              onClick: this.ToggleMenu,
-              ref: this.m_elDropDownRef,
-            },
-            t &&
-              s.createElement(
+            t = this.BHasSomeNotificationSetting(),
+            n = (0, h.kl)();
+          return this.props.eventModel.startTime < n
+            ? null
+            : s.createElement(
                 "div",
-                { className: H.RemindCheck },
-                s.createElement(L.JrY, null),
-              ),
-            e &&
-              s.createElement(
-                "div",
-                { className: H.RemindBell },
-                s.createElement(L.Uos, null),
-              ),
-            s.createElement(
-              "div",
-              { className: H.ReminderDefault },
-              (0, I.Xx)("#EventDisplay_Reminder_SetReminder"),
-            ),
-            s.createElement("div", { className: H.ReminderOptions }),
-          );
+                {
+                  className: (0, N.Z)({
+                    [G.ReminderCheckBox]: !0,
+                    [O().ReminderCtn]: !0,
+                    [G.IconMode]: e,
+                    [G.TextMode]: !e,
+                    ReminderSet: t,
+                    RemindMeWidget: !0,
+                  }),
+                  onClick: this.ToggleMenu,
+                  ref: this.m_elDropDownRef,
+                },
+                t &&
+                  s.createElement(
+                    "div",
+                    { className: G.RemindCheck },
+                    s.createElement(L.JrY, null),
+                  ),
+                e &&
+                  s.createElement(
+                    "div",
+                    { className: G.RemindBell },
+                    s.createElement(L.Uos, null),
+                  ),
+                s.createElement(
+                  "div",
+                  { className: G.ReminderDefault },
+                  (0, I.Xx)("#EventDisplay_Reminder_SetReminder"),
+                ),
+                s.createElement("div", { className: G.ReminderOptions }),
+              );
         }
       };
       function X(e) {
@@ -3097,23 +3074,23 @@
           return t
             ? s.createElement(
                 "div",
-                { className: V.ErrorDiv },
+                { className: U.ErrorDiv },
                 (0, I.Xx)("#EventDidplay_Reminder_EventNotVisible", n),
               )
             : null;
         const l = (0, a.jM)(E.De.LANGUAGE);
         return s.createElement(
-          U,
+          V,
           Object.assign({ lang: l }, i, { eventModel: r }),
         );
       }
       function Z(e) {
         return r.unix(e).utc().format("YYYYMMDD[T]HHmmss[Z]");
       }
-      (0, o.gn)([w.ak], U.prototype, "ToggleMenu", null),
-        (0, o.gn)([w.ak], U.prototype, "ShowMenu", null),
-        (0, o.gn)([w.ak], U.prototype, "HideMenu", null),
-        (U = (0, o.gn)([i.Pi], U));
+      (0, o.gn)([w.ak], V.prototype, "ToggleMenu", null),
+        (0, o.gn)([w.ak], V.prototype, "ShowMenu", null),
+        (0, o.gn)([w.ak], V.prototype, "HideMenu", null),
+        (V = (0, o.gn)([i.Pi], V));
       let Y = class extends s.Component {
         constructor() {
           super(...arguments), (this.state = { bIsRequestInFlight: !1 });
@@ -3225,8 +3202,8 @@
               "div",
               {
                 className: (0, N.Z)(
-                  H.ReminderCheckBox,
-                  o ? H.IconMode : H.TextMode,
+                  G.ReminderCheckBox,
+                  o ? G.IconMode : G.TextMode,
                   "RemindMeWidget",
                 ),
                 onClick: r,
@@ -3234,41 +3211,41 @@
               i() &&
                 s.createElement(
                   "div",
-                  { className: H.RemindCheck },
+                  { className: G.RemindCheck },
                   s.createElement(L.JrY, null),
                 ),
               o &&
                 s.createElement(
                   "div",
-                  { className: H.RemindBell },
+                  { className: G.RemindBell },
                   s.createElement(L.Uos, null),
                 ),
               s.createElement(
                 "div",
-                { className: H.ReminderDefault },
+                { className: G.ReminderDefault },
                 (0, I.Xx)("#EventDisplay_Reminder_SetReminder"),
               ),
-              s.createElement("div", { className: H.ReminderOpennedOptions }),
+              s.createElement("div", { className: G.ReminderOpennedOptions }),
             ),
             s.createElement(
               "div",
               {
                 className: (0, N.Z)(
-                  H.FlexColumnContainer,
-                  H.ReminderBackground,
-                  n && H.ReminderExpandsLeft,
+                  G.FlexColumnContainer,
+                  G.ReminderBackground,
+                  n && G.ReminderExpandsLeft,
                 ),
               },
               this.state.bIsRequestInFlight &&
                 s.createElement(A.V, {
-                  className: H.RpcThrobber,
+                  className: G.RpcThrobber,
                   size: "xlarge",
                   position: "center",
                 }),
               c &&
                 s.createElement(
                   "div",
-                  { className: H.FullStartTime },
+                  { className: G.FullStartTime },
                   (0, I.kQ)(
                     "#EventDisplay_EventUpcoming_WithDateAndTime",
                     (0, I.$1)(
@@ -3283,16 +3260,16 @@
                 ),
               s.createElement(
                 "div",
-                { className: H.ReminderOptionsHeader },
+                { className: G.ReminderOptionsHeader },
                 (0, I.Xx)("#EventDisplay_Reminder_GetNotification_Via"),
               ),
               s.createElement(
                 "div",
-                { className: (0, N.Z)(H.ReminderOption, !a && H.Unverified) },
+                { className: (0, N.Z)(G.ReminderOption, !a && G.Unverified) },
                 s.createElement(
                   R.HP,
                   {
-                    className: H.CheckboxWrapper,
+                    className: G.CheckboxWrapper,
                     bTopmost: !0,
                     toolTipContent: (0, I.Xx)(
                       a
@@ -3316,7 +3293,7 @@
                 !a &&
                   s.createElement(
                     "div",
-                    { className: G.FlexColumnContainer },
+                    { className: H.FlexColumnContainer },
                     s.createElement(
                       "a",
                       {
@@ -3333,11 +3310,11 @@
               ),
               s.createElement(
                 "div",
-                { className: (0, N.Z)(H.ReminderOption, !l && H.Unverified) },
+                { className: (0, N.Z)(G.ReminderOption, !l && G.Unverified) },
                 s.createElement(
                   R.HP,
                   {
-                    className: H.CheckboxWrapper,
+                    className: G.CheckboxWrapper,
                     bTopmost: !0,
                     toolTipContent: (0, I.Xx)(
                       l
@@ -3361,7 +3338,7 @@
                 !l &&
                   s.createElement(
                     "div",
-                    { className: G.FlexColumnContainer },
+                    { className: H.FlexColumnContainer },
                     s.createElement(
                       "a",
                       {
@@ -3381,16 +3358,16 @@
                 null,
                 s.createElement(
                   "div",
-                  { className: H.ReminderOptionsHeader },
+                  { className: G.ReminderOptionsHeader },
                   (0, I.Xx)("#EventDisplay_Reminder_AddToCalendar"),
                 ),
                 s.createElement(
                   "div",
-                  { className: H.ReminderCalendarOptions },
+                  { className: G.ReminderCalendarOptions },
                   s.createElement(
                     "a",
                     {
-                      className: H.ReminderOption,
+                      className: G.ReminderOption,
                       href: this.GetICSDownloadLink("ics"),
                       onClick: () =>
                         this.TrackEventAction(u.g.k_eReminder_CalendarApple),
@@ -3400,7 +3377,7 @@
                   s.createElement(
                     "a",
                     {
-                      className: H.ReminderOption,
+                      className: G.ReminderOption,
                       target: E.De.IN_CLIENT ? void 0 : "_blank",
                       href: this.GetGoogleCalendarLink(),
                       onClick: () =>
@@ -3411,7 +3388,7 @@
                   s.createElement(
                     "a",
                     {
-                      className: H.ReminderOption,
+                      className: G.ReminderOption,
                       href: this.GetICSDownloadLink("outlook"),
                       onClick: () =>
                         this.TrackEventAction(u.g.k_eReminder_CalendarOutlook),

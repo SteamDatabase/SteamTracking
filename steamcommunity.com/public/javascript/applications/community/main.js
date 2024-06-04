@@ -2217,6 +2217,7 @@
       var v = n(47692),
         f = n(43235);
       var _, C;
+      n(20417);
       function b() {
         return (0, h.Me)() ? _.BackgroundTransparent : _.None;
       }
@@ -2415,9 +2416,11 @@
               (this.m_renderWhenReady = s),
               null === (n = this.m_renderWhenReady) ||
                 void 0 === n ||
-                n.SetTarget(() =>
-                  this.RenderInternal(this.m_popup, this.m_element, o),
-                )),
+                n.SetTarget(() => {
+                  this.m_popup &&
+                    this.m_element &&
+                    this.RenderInternal(this.m_popup, this.m_element, o);
+                })),
             y.AddTrackedPopup(this),
             a &&
               (this.OnCreateInternal(),
@@ -2457,7 +2460,7 @@
                 (t.ownerDocument.body.className += " VR"),
               this.Render(e, t),
               this.OnLoad(),
-              e.SteamClient &&
+              (null == e ? void 0 : e.SteamClient) &&
                 !this.m_bCreateHidden &&
                 (n != c.IF.k_EWindowBringToFrontInvalid
                   ? e.SteamClient.Window.BringToFront(n)
@@ -4869,43 +4872,50 @@
             e === i.eV.CANCEL
           );
         }
-        GetEventTarget(e, t = !1) {
-          var n, o, r, s, a;
-          let l = this.GetActiveContext();
-          !l && t && (l = this.FindAnActiveContext());
-          let c =
-            null === (n = null == l ? void 0 : l.ActiveWindow) || void 0 === n
+        GetEventTarget(e, t, n = !1) {
+          var o, r, s, a, l;
+          let c = this.GetActiveContext();
+          !c && n && (c = this.FindAnActiveContext());
+          let u =
+            null === (o = null == c ? void 0 : c.ActiveWindow) || void 0 === o
               ? void 0
-              : n.document.activeElement;
-          if (null == l ? void 0 : l.m_LastActiveNavTree) {
-            let n =
-              null ===
-                (r =
-                  null === (o = this.m_navigationSource) || void 0 === o
-                    ? void 0
-                    : o.Value) || void 0 === r
-                ? void 0
-                : r.eActivationSourceType;
+              : o.document.activeElement;
+          if (null == c ? void 0 : c.m_LastActiveNavTree) {
             if (
+              (t ||
+                (t =
+                  null ===
+                    (s =
+                      null === (r = this.m_navigationSource) || void 0 === r
+                        ? void 0
+                        : r.Value) || void 0 === s
+                    ? void 0
+                    : s.eActivationSourceType),
               !(
-                l.m_LastActiveNavTree.GetLastFocusedNode() ||
-                (n != i.Rr.GAMEPAD && n != i.Rr.KEYBOARD) ||
-                (t && l.m_LastActiveNavTree.TakeFocus(h.uS.GAMEPAD, !0),
+                c.m_LastActiveNavTree.GetLastFocusedNode() ||
+                (t != i.Rr.GAMEPAD && t != i.Rr.KEYBOARD) ||
+                (v(
+                  `GetEventTarget: Context ${c.LogName()} tree ${c.m_LastActiveNavTree.id} has no focused node, ${n ? "finding one" : "will not find one"}`,
+                ),
+                n && c.m_LastActiveNavTree.TakeFocus(h.uS.GAMEPAD, !0),
                 this.BGlobalGamepadButton(e))
-              )
+              ))
             )
-              return [void 0, l];
-            l.m_LastActiveNavTree.GetLastFocusedNode() &&
-              (c =
-                null ===
-                  (a =
-                    null === (s = l.m_LastActiveNavTree) || void 0 === s
-                      ? void 0
-                      : s.GetLastFocusedNode()) || void 0 === a
-                  ? void 0
-                  : a.Element);
+              return [void 0, c];
+            c.m_LastActiveNavTree.GetLastFocusedNode()
+              ? (u =
+                  null ===
+                    (l =
+                      null === (a = c.m_LastActiveNavTree) || void 0 === a
+                        ? void 0
+                        : a.GetLastFocusedNode()) || void 0 === l
+                    ? void 0
+                    : l.Element)
+              : v(
+                  `GetEventTarget: Context ${c.LogName()} tree ${c.m_LastActiveNavTree.id} still has no focused node - will fall back to document.activeElement`,
+                );
           }
-          return [c, l];
+          return [u, c];
         }
         ChangeNavigationSource(e, t) {
           let n = this.m_navigationSource.Value,
@@ -4937,7 +4947,7 @@
           );
           let d = s,
             m = a;
-          (null != d && null != m) || ([d, m] = this.GetEventTarget(t, !0)),
+          (null != d && null != m) || ([d, m] = this.GetEventTarget(t, n, !0)),
             !(null == m ? void 0 : m.BIsGamepadInputSuppressed()) || l
               ? (this.ChangeNavigationSource(n, o),
                 e &&
@@ -10675,7 +10685,6 @@
         RD: () => d,
         TW: () => we,
         ry: () => fe,
-        lm: () => Me,
         gN: () => lt,
         $_: () => E,
         ZY: () => Gt,
@@ -10936,7 +10945,7 @@
       function F(e) {
         return i.createElement(
           y,
-          null,
+          { className: e.className },
           i.createElement(
             N,
             {
@@ -16579,7 +16588,7 @@
           },
           i.createElement(
             "g",
-            { "clip-path": t },
+            { clipPath: t },
             i.createElement("path", {
               fillRule: "evenodd",
               clipRule: "evenodd",
@@ -16601,17 +16610,17 @@
             i.createElement("path", {
               d: "M15.7367 15.8813C15.8603 15.9985 16.0258 16.0611 16.196 16.0551C16.3662 16.0491 16.5269 15.9751 16.642 15.8495L19.9457 12.3552C20.0574 12.2373 20.1196 12.081 20.1196 11.9185C20.1196 11.7561 20.0573 11.5998 19.9456 11.4817L16.642 7.98754C16.4836 7.83383 16.2568 7.77333 16.0429 7.82773C15.829 7.88217 15.6587 8.04368 15.593 8.25437C15.5273 8.46511 15.5757 8.69481 15.7208 8.86109L18.5956 11.9265L15.7049 14.976C15.5878 15.0996 15.5251 15.2651 15.5311 15.4353C15.5371 15.6055 15.6112 15.7662 15.7367 15.8813Z",
               stroke: "currentColor",
-              "stroke-linecap": "round",
+              strokeLinecap: "round",
             }),
             i.createElement("path", {
               d: "M8.54967 7.96706C8.42606 7.8499 8.26056 7.78729 8.09036 7.79323C7.92016 7.79923 7.75947 7.87327 7.64433 7.99885L4.3566 11.4931C4.24487 11.611 4.18262 11.7673 4.18262 11.9298C4.18262 12.0923 4.24487 12.2486 4.3566 12.3666L7.66021 15.8608C7.81858 16.0145 8.0454 16.075 8.25929 16.0206C8.47317 15.9662 8.64353 15.8047 8.70919 15.594C8.7749 15.3832 8.72651 15.1535 8.58139 14.9873L5.69072 11.9219L8.58139 8.8724C8.69854 8.74878 8.7612 8.58328 8.75521 8.41309C8.74926 8.24284 8.63698 8.04871 8.51145 7.93363L8.54967 7.96706Z",
               stroke: "currentColor",
-              "stroke-linecap": "round",
+              strokeLinecap: "round",
             }),
             i.createElement("path", {
               d: "M10.5975 18.3253H10.7564C10.8952 18.3227 11.0294 18.2748 11.1384 18.1887C11.2474 18.1027 11.3252 17.9833 11.3599 17.8489L14.187 6.30208C14.2409 6.0808 14.1727 5.84752 14.008 5.6902C13.8433 5.53287 13.6072 5.47539 13.3886 5.53934C13.17 5.6033 13.0021 5.77903 12.9482 6.00031L10.121 17.5471C10.0782 17.7136 10.1047 17.8904 10.1945 18.0371C10.2843 18.1837 10.4298 18.2878 10.5975 18.3253Z",
               stroke: "currentColor",
-              "stroke-linecap": "round",
+              strokeLinecap: "round",
             }),
           ),
           i.createElement(
@@ -16999,7 +17008,7 @@
     },
     7341: (e, t, n) => {
       "use strict";
-      n.d(t, { t: () => b });
+      n.d(t, { t: () => w });
       var o = n(85556),
         i = n(15481),
         r = n(47427),
@@ -17087,8 +17096,9 @@
         g = n(20417),
         v = n(61809),
         f = n(45329),
-        _ = n(58412);
-      function C(e) {
+        _ = n(58412),
+        C = n(50423);
+      function b(e) {
         r.useEffect(() => {
           if (e)
             return (
@@ -17097,7 +17107,7 @@
             );
         }, [e]);
       }
-      function b(e) {
+      function w(e) {
         let {
             ModalManager: t,
             bRegisterModalManager: n = !0,
@@ -17113,7 +17123,7 @@
         const u = t.modals,
           h = u && !!u.length,
           m = t.active_modal;
-        C(h),
+        b(h),
           (function (e) {
             const t = (0, s.Wy)().ownerWindow,
               n = (0, g.NW)(),
@@ -17140,19 +17150,19 @@
             [e],
           );
         })(t, n);
-        let b = null;
+        let C = null;
         return (
           u && u.length
-            ? (b = u.map((e) =>
+            ? (C = u.map((e) =>
                 e instanceof v.kv
-                  ? r.createElement(E, {
+                  ? r.createElement(S, {
                       key: e.key,
                       modal: e,
                       active: e == m,
-                      Component: null != a ? a : S,
+                      Component: null != a ? a : D,
                     })
                   : e instanceof v.QA
-                    ? r.createElement(w, {
+                    ? r.createElement(E, {
                         key: e.key,
                         modal: e,
                         active: e == m,
@@ -17176,15 +17186,15 @@
                 r.createElement("div", {
                   className: "ModalOverlayContent ModalOverlayBackground",
                 }),
-                b,
+                C,
               ),
             ),
             r.createElement(d, { ModalManager: t }),
-            r.createElement(D, { ModalManager: t }),
+            r.createElement(M, { ModalManager: t }),
           )
         );
       }
-      function w(e) {
+      function E(e) {
         const { modal: t, active: n } = e;
         return (
           r.useEffect(
@@ -17204,7 +17214,7 @@
           )
         );
       }
-      function E(e) {
+      function S(e) {
         const { modal: t, active: n, Component: o } = e,
           i = (0, g.NW)();
         return (
@@ -17227,24 +17237,25 @@
           )
         );
       }
-      const S = r.forwardRef(function (e, t) {
-        const { className: n, active: o, children: i } = e,
-          s = r.useRef();
-        r.useEffect(() => {
-          const e = s.current;
-          if (e && o) {
-            const t = e.firstChild;
-            t && t.focus && t.focus();
-          }
-        }, [o]);
-        const a = (0, g.BE)(s, t);
-        return r.createElement(
-          "div",
-          { ref: a, className: n, tabIndex: -1 },
-          i,
-        );
-      });
       function D(e) {
+        const { className: t, active: n, children: o } = e,
+          i = r.useRef(null);
+        return (
+          r.useEffect(() => {
+            const e = i.current;
+            if (e && n) {
+              const t = e.firstChild;
+              t &&
+                !(0, C.ni)(t, t.ownerDocument.activeElement) &&
+                t &&
+                t.focus &&
+                t.focus();
+            }
+          }, [n]),
+          r.createElement("div", { ref: i, className: t, tabIndex: -1 }, o)
+        );
+      }
+      function M(e) {
         const { ModalManager: t } = e,
           n = (0, g.NW)();
         return (
@@ -25484,7 +25495,9 @@
             n.e(4264),
             n.e(483),
             n.e(3275),
+            n.e(823),
             n.e(6656),
+            n.e(9641),
             n.e(6148),
             n.e(2822),
             n.e(4040),
@@ -25508,8 +25521,10 @@
             n.e(4264),
             n.e(483),
             n.e(3275),
+            n.e(823),
             n.e(6656),
             n.e(7978),
+            n.e(9641),
             n.e(2829),
             n.e(2468),
             n.e(1421),
@@ -25540,8 +25555,10 @@
             n.e(4264),
             n.e(483),
             n.e(3275),
+            n.e(823),
             n.e(6656),
             n.e(7978),
+            n.e(9641),
             n.e(2829),
             n.e(2468),
             n.e(1421),
@@ -25561,7 +25578,6 @@
             n.e(508),
             n.e(5119),
             n.e(400),
-            n.e(367),
             n.e(9349),
           ]).then(n.bind(n, 22716)),
         ),
@@ -25574,8 +25590,10 @@
             n.e(4264),
             n.e(483),
             n.e(3275),
+            n.e(823),
             n.e(6656),
             n.e(7978),
+            n.e(9641),
             n.e(2829),
             n.e(2468),
             n.e(1421),
@@ -25615,6 +25633,7 @@
             n.e(4264),
             n.e(483),
             n.e(3275),
+            n.e(823),
             n.e(6656),
             n.e(7978),
             n.e(4359),
@@ -25641,11 +25660,12 @@
         H = i.lazy(() =>
           Promise.all([
             n.e(397),
+            n.e(823),
             n.e(6820),
             n.e(2822),
             n.e(2558),
             n.e(6838),
-          ]).then(n.bind(n, 75460)),
+          ]).then(n.bind(n, 71270)),
         ),
         G = i.lazy(() => n.e(8647).then(n.bind(n, 16567))),
         U = i.lazy(() =>
@@ -25657,8 +25677,10 @@
             n.e(4264),
             n.e(483),
             n.e(3275),
+            n.e(823),
             n.e(6656),
             n.e(7978),
+            n.e(9641),
             n.e(2829),
             n.e(2468),
             n.e(2837),
@@ -25678,7 +25700,6 @@
             n.e(8610),
             n.e(508),
             n.e(8120),
-            n.e(367),
             n.e(3499),
           ]).then(n.bind(n, 85857)),
         ),
@@ -25691,6 +25712,7 @@
             n.e(4264),
             n.e(483),
             n.e(3275),
+            n.e(823),
             n.e(6656),
             n.e(7978),
             n.e(4359),

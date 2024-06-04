@@ -581,6 +581,7 @@
             (this.m_rgTestNotifications = []),
             (this.m_currentNotificationsData = null),
             (this.m_strRemoteClientID = ""),
+            (this.m_eTargetClientType = 0),
             (this.m_fnOnNotificationCallback = null),
             (0, L.rC)(this);
         }
@@ -593,8 +594,8 @@
         RegisterOnNotificationCallback(e) {
           this.m_fnOnNotificationCallback = e;
         }
-        SetRemoteClientID(e) {
-          this.m_strRemoteClientID = e;
+        SetClientFilters(e, t = 0) {
+          (this.m_strRemoteClientID = e), (this.m_eTargetClientType = t);
         }
         NotifyServerNotificationsRead(e) {
           this.m_rgNotifyServerRead.push(...e), this.UpdateServer();
@@ -687,6 +688,7 @@
         MarkAllItemsViewed() {
           const e = c.gA.Init(A.a2);
           e.Body().set_remote_client_id(this.m_strRemoteClientID),
+            e.Body().set_target_client_type(this.m_eTargetClientType),
             A.ST.MarkNotificationsViewed(this.m_transport, e),
             (this.m_nUnviewed = 0);
         }
@@ -824,7 +826,7 @@
                   : e.notifications) ||
               void 0 === t ||
               t.forEach((e) => {
-                if (!this.BExcludeRemoteClientIDTargetedNotification(e)) {
+                if (!this.BExcludeClientTargetedNotification(e)) {
                   if (this.m_rgNotifyServerHidden.length > 0) {
                     -1 !==
                       this.m_rgNotifyServerHidden.findIndex(
@@ -893,14 +895,18 @@
             (this.m_bLoaded = !0),
             (this.m_nUnviewed = m);
         }
-        BExcludeRemoteClientIDTargetedNotification(e) {
-          var t;
+        BExcludeClientTargetedNotification(e) {
+          const t = oe(e.body_data);
           return (
-            24 == e.notification_type &&
-            this.m_strRemoteClientID !=
-              (null === (t = oe(e.body_data)) || void 0 === t
-                ? void 0
-                : t.remote_client_id)
+            !!t &&
+            (!(
+              !t.remote_client_id ||
+              this.m_strRemoteClientID == t.remote_client_id
+            ) ||
+              !(
+                !t.target_client_types ||
+                this.m_eTargetClientType & t.target_client_types
+              ))
           );
         }
         BReplaceRollupItem(e, t) {
@@ -3561,7 +3567,8 @@
           } else "number" == typeof e && (i = e);
           return !t ||
             i == this.m_unAccountID ||
-            (this.m_TextFilterPreferences.bIgnoreFriends &&
+            (e &&
+              this.m_TextFilterPreferences.bIgnoreFriends &&
               this.m_DataAccess.BIsFriend(i))
             ? t
             : t.replace(this.m_regexBannedWords, (e) =>

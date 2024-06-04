@@ -22,8 +22,8 @@
         o = a(28918),
         i = a(13129),
         l = a(37563),
-        m = a(16833),
-        d = a(4481),
+        m = a(92309),
+        d = a(20142),
         u = a(29525),
         c = a(58635),
         _ = a(21571),
@@ -132,7 +132,7 @@
                 ),
               [],
             ),
-            n = r.useRef(new m.Z6(h, s));
+            n = r.useRef(new m.Z(h, s, l.De.LANGUAGE));
           return r.createElement(
             "div",
             { className: p().FAQContainer },
@@ -149,7 +149,7 @@
         wl: () => D,
         SP: () => E,
         EH: () => Q,
-        Ky: () => I,
+        Ky: () => G,
         NV: () => y,
       });
       var r = a(85556),
@@ -944,7 +944,7 @@
         const t = A.Get().GetAllFAQSummaries();
         return l.useRef([t, !0]).current;
       }
-      function I(t, e, a) {
+      function G(t, e, a) {
         const [r, s] = l.useState(null),
           [n, o] = l.useState(!1);
         return (
