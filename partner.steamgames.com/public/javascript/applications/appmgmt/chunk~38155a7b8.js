@@ -1217,6 +1217,7 @@
         SalePageContainer: "_14q9eJO4Iq17ONG4-Kxsik",
         SalePageDropdown: "_2kzqppJ97cvHf2cf3LA9cb",
         GroupDropdown: "_18yeKZ4XYo5a3Fp-7CnR0n",
+        MissingCreatorHome: "_1-IRXSo7I0NrniPLqX06Mo",
         DiscountBody: "_3tOBZX1cWc4ydr-D9vziWW",
         DiscountButtonRow: "_2Qkeo12FKR-U9SHc_Fu6q0",
         DiscountPercentage: "_3yMTPMRaT00YVSwsCprHfI",
@@ -65791,106 +65792,136 @@
                         oe._H.PerDay,
                 )
                 .map((e) => ({ label: e.name, data: e.gid_clan_event }));
-              return t.length && t.push({ label: "", data: "" }), t;
+              return (
+                t.length && t.push({ label: "", data: "" }),
+                v &&
+                  !t.find((e) => e.data == v) &&
+                  t.push({ label: v, data: v }),
+                t
+              );
             }
             return [];
-          }, [null == l ? void 0 : l.rtime32_start_time, d, p]);
+          }, [null == l ? void 0 : l.rtime32_start_time, d, p, v]);
         return l
-          ? (null == d ? void 0 : d.length)
-            ? r.createElement(
-                "div",
-                { className: It.SalePageContainer },
-                r.createElement(
+          ? !p ||
+            !v ||
+            ((null == d ? void 0 : d.length) &&
+              (null == d ? void 0 : d.find((e) => e.clan_account_id == p)))
+            ? (null == d ? void 0 : d.length)
+              ? r.createElement(
                   "div",
-                  { className: It.SalePageLabel },
-                  (0, O.Xx)("#DailyDeals_SalePage_CreatorHome_Label"),
-                ),
-                r.createElement(
-                  "div",
-                  { className: It.GroupDropdown },
-                  r.createElement(b.TW, {
-                    selectedOption: p.toString(),
-                    menuLabel: "clan",
-                    rgOptions: D,
-                    onChange: (e) => _(parseInt(e.data)),
-                  }),
-                ),
-                !!p &&
-                  !!f.length &&
+                  { className: It.SalePageContainer },
                   r.createElement(
-                    r.Fragment,
-                    null,
-                    r.createElement(
-                      "div",
-                      { className: It.SalePageLabel },
-                      (0, O.Xx)("#DailyDeals_SalePage_SalePage_Label"),
-                    ),
-                    r.createElement(
-                      "div",
-                      { className: It.SalePageDropdown },
-                      r.createElement(b.TW, {
-                        selectedOption: v.toString(),
-                        menuLabel: "salepage",
-                        rgOptions: f,
-                        onChange: (e) =>
-                          ((e) => {
-                            var t, n;
-                            E(e);
-                            const a =
-                              null ===
-                                (n =
-                                  null ===
-                                    (t = d.find(
-                                      (e) => e.clan_account_id == p,
-                                    )) || void 0 === t
-                                    ? void 0
-                                    : t.sale_pages) || void 0 === n
-                                ? void 0
-                                : n.find((t) => t.gid_clan_event == e);
-                            a
-                              ? (s(
-                                  l.gid,
-                                  m,
-                                  p,
-                                  a.start_time,
-                                  a.end_time,
-                                  a.gid_clan_event,
-                                ),
-                                o.invalidateQueries((0, le.rt)(u.L7.accountid)))
-                              : (0, kt.F0)(
-                                  "Daily Deals - failed to set the daily deal sale page.  Unexpected error loading sale page id:" +
-                                    e,
-                                );
-                          })(e.data),
-                      }),
-                    ),
+                    "div",
+                    { className: It.SalePageLabel },
+                    (0, O.Xx)("#DailyDeals_SalePage_CreatorHome_Label"),
                   ),
-                !!p &&
-                  !v &&
                   r.createElement(
-                    b.zx,
-                    {
-                      onClick: (e) => {
-                        (0, N.AM)(
-                          r.createElement(Vt, {
-                            deal: l,
-                            clanID: p,
-                            clanName: g.clan_name,
-                          }),
-                          (0, M.RA)(e),
-                        );
+                    "div",
+                    { className: It.GroupDropdown },
+                    r.createElement(b.TW, {
+                      selectedOption: p.toString(),
+                      menuLabel: "clan",
+                      rgOptions: D,
+                      onChange: (e) => _(parseInt(e.data)),
+                    }),
+                  ),
+                  !!p &&
+                    !!f.length &&
+                    r.createElement(
+                      r.Fragment,
+                      null,
+                      r.createElement(
+                        "div",
+                        { className: It.SalePageLabel },
+                        (0, O.Xx)("#DailyDeals_SalePage_SalePage_Label"),
+                      ),
+                      r.createElement(
+                        "div",
+                        { className: It.SalePageDropdown },
+                        r.createElement(b.TW, {
+                          selectedOption: v.toString(),
+                          menuLabel: "salepage",
+                          rgOptions: f,
+                          onChange: (e) =>
+                            ((e) => {
+                              var t, n;
+                              if (e == v) return;
+                              E(e);
+                              const a =
+                                null ===
+                                  (n =
+                                    null ===
+                                      (t = d.find(
+                                        (e) => e.clan_account_id == p,
+                                      )) || void 0 === t
+                                      ? void 0
+                                      : t.sale_pages) || void 0 === n
+                                  ? void 0
+                                  : n.find((t) => t.gid_clan_event == e);
+                              a
+                                ? (s(
+                                    l.gid,
+                                    m,
+                                    p,
+                                    a.start_time,
+                                    a.end_time,
+                                    a.gid_clan_event,
+                                  ),
+                                  o.invalidateQueries(
+                                    (0, le.rt)(u.L7.accountid),
+                                  ))
+                                : (0, kt.F0)(
+                                    "Daily Deals - failed to set the daily deal sale page.  Unexpected error loading sale page id:" +
+                                      e,
+                                  );
+                            })(e.data),
+                        }),
+                      ),
+                    ),
+                  !!p &&
+                    !v &&
+                    r.createElement(
+                      b.zx,
+                      {
+                        onClick: (e) => {
+                          (0, N.AM)(
+                            r.createElement(Vt, {
+                              deal: l,
+                              clanID: p,
+                              clanName: g.clan_name,
+                            }),
+                            (0, M.RA)(e),
+                          );
+                        },
                       },
-                    },
-                    (0, O.Xx)("#DailyDeals_SalePage_Create"),
+                      (0, O.Xx)("#DailyDeals_SalePage_Create"),
+                    ),
+                )
+              : r.createElement(
+                  "div",
+                  {
+                    className: (0, x.Z)(
+                      It.SalePageContainer,
+                      It.MissingCreatorHome,
+                    ),
+                  },
+                  (0, O.kQ)(
+                    "#DailyDeals_SalePage_MissingCreatorHome",
+                    r.createElement(
+                      "a",
+                      { href: S },
+                      (0, O.Xx)("#DailyDeals_SalePage_CreateCreatorHomeLink"),
+                    ),
                   ),
-              )
+                )
             : r.createElement(
                 "div",
                 { className: It.SalePageContainer },
                 r.createElement(
-                  "a",
-                  { href: S },
-                  (0, O.Xx)("#DailyDeals_SalePage_MissingCreatorHome"),
+                  "div",
+                  null,
+                  (0, O.Xx)("#DailyDeals_SalePage_SalePageCreated"),
                 ),
               )
           : r.createElement(
