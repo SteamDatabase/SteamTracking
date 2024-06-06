@@ -65550,13 +65550,12 @@
                   m,
                 );
         let p = null;
-        if (u.L7.is_support)
-          if (null == o ? void 0 : o.partner_jsondata) {
-            const e = JSON.parse(o.partner_jsondata);
-            e && e.require_sale_page && (p = r.createElement(Xt, { deal: o }));
-          } else
-            (null == a ? void 0 : a.require_sale_page) &&
-              (p = r.createElement(Xt, null));
+        if (null == o ? void 0 : o.partner_jsondata) {
+          const e = JSON.parse(o.partner_jsondata);
+          e && e.require_sale_page && (p = r.createElement(Xt, { deal: o }));
+        } else
+          (null == a ? void 0 : a.require_sale_page) &&
+            (p = r.createElement(Xt, null));
         return r.createElement(
           "div",
           { className: It.DailyDealStatusContainer },
@@ -65573,7 +65572,6 @@
               r.createElement(
                 "div",
                 { className: (0, x.Z)(It.DailyDealTitle, It.Orange) },
-                "(VO) ",
                 (0, O.Xx)("#DailyDeals_SalePage_Required"),
               ),
               r.createElement("div", { className: It.SalePageBody }, p),
