@@ -91,7 +91,7 @@
     },
     80212: (e, t, i) => {
       "use strict";
-      i.d(t, { Xt: () => p, _I: () => h, hx: () => u });
+      i.d(t, { Xt: () => p, _I: () => g, hx: () => u });
       var a = i(47427),
         s = i(90069),
         n = i(31846),
@@ -104,7 +104,7 @@
         return a.createElement(
           s.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          a.createElement(g, {
+          a.createElement(h, {
             redirectURL: e.redirectURL,
             guestOption: e.guestOption,
           }),
@@ -128,7 +128,7 @@
           { strTitle: (0, n.Xx)("#Login_SignInTitle") },
         );
       }
-      function h(e, t) {
+      function g(e, t) {
         (0, s.AM)(
           a.createElement(m, {
             ownerWin: window,
@@ -139,7 +139,7 @@
           { strTitle: (0, n.Xx)("#Login_SignInTitle") },
         );
       }
-      function g(e) {
+      function h(e) {
         const { redirectURL: t, guestOption: i } = e,
           [s] = (0, a.useState)(
             new r.J(o.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
@@ -183,9 +183,9 @@
         m = i(13129),
         u = i(31846),
         p = i(20417),
-        h = i(94261),
-        g = i(93962),
-        _ = i.n(g),
+        g = i(94261),
+        h = i(93962),
+        _ = i.n(h),
         E = i(80751),
         T = i.n(E);
       !(function (e) {
@@ -341,7 +341,7 @@
           (e[(e.AddToWishlist = 2)] = "AddToWishlist"),
           (e[(e.AddToCart = 3)] = "AddToCart");
       })(y || (y = {}));
-      class R {
+      class f {
         constructor() {
           (this.m_fPopularityValue = void 0),
             (this.m_fRecencyValue = void 0),
@@ -467,7 +467,7 @@
           return this.m_ResultDataCache.isExpired();
         }
         getRecommendations() {
-          const e = f.getResults(
+          const e = R.getResults(
             v.INCLUDE_PLAYED,
             v.ALGORITHM,
             v.REINFERENCE,
@@ -488,7 +488,7 @@
           );
         }
         getAppInfo() {
-          const e = f.getResults(
+          const e = R.getResults(
             v.INCLUDE_PLAYED,
             v.ALGORITHM,
             v.REINFERENCE,
@@ -620,7 +620,7 @@
         }
         onAddToWishlist(e, t) {
           return (0, s.mG)(this, void 0, void 0, function* () {
-            f.getAppInfo()[e].w = !0;
+            R.getAppInfo()[e].w = !0;
             let i = { sessionid: v.SESSION_ID, appid: e };
             const a = yield T().post(
               `${v.BASE_URL}recommender/${v.STEAM_ID}/wishlist?snr=${v.LINK_PARAM}`,
@@ -645,26 +645,19 @@
         onGoToWishlist() {
           window.location.href = `${v.COMMUNITY_BASE_URL}profiles/${v.STEAM_ID}/wishlist`;
         }
-        onAddToCart(e, t) {
-          return (0, s.mG)(this, void 0, void 0, function* () {
-            let i = { sessionid: v.SESSION_ID, appid: e };
-            yield T().post(
-              `${v.BASE_URL}recommender/${v.STEAM_ID}/cart?snr=${v.LINK_PARAM}`,
-              i,
-            );
-            let a = {
-              account_id: v.ACCOUNT_ID,
-              session_id: v.SESSION_ID,
-              app_id: e,
-              app_rank: t,
-              action: y.AddToCart,
-              algorithm: 1,
-              setting_1: 100 * this.m_fPopularityValue,
-              setting_2: 100 * this.m_fRecencyValue,
-            };
-            yield T().post(`${v.BASE_URL}recommender/${v.STEAM_ID}/stats`, a),
-              (window.location.href = `${n.De.STORE_BASE_URL}cart`);
-          });
+        onAddToCart(e, t, i) {
+          window.AddItemToCart(t);
+          let a = {
+            account_id: v.ACCOUNT_ID,
+            session_id: v.SESSION_ID,
+            app_id: e,
+            app_rank: i,
+            action: y.AddToCart,
+            algorithm: 1,
+            setting_1: 100 * this.m_fPopularityValue,
+            setting_2: 100 * this.m_fRecencyValue,
+          };
+          return T().post(`${v.BASE_URL}recommender/${v.STEAM_ID}/stats`, a);
         }
         onMuteClicked() {
           this.m_bShouldMute = !0;
@@ -679,46 +672,46 @@
           return this.m_bUseMicrotrailers;
         }
       }
-      (0, s.gn)([l.LO], R.prototype, "m_fPopularityValue", void 0),
-        (0, s.gn)([l.LO], R.prototype, "m_fRecencyValue", void 0),
-        (0, s.gn)([l.LO], R.prototype, "m_rgFilterTags", void 0),
-        (0, s.gn)([l.LO], R.prototype, "m_rgExcludeTags", void 0),
-        (0, s.gn)([l.LO], R.prototype, "m_fQueuedPopularityValue", void 0),
-        (0, s.gn)([l.LO], R.prototype, "m_fQueuedRecencyValue", void 0),
-        (0, s.gn)([l.LO], R.prototype, "m_bExcludeWishlisted", void 0),
-        (0, s.gn)([l.LO], R.prototype, "m_bShouldMute", void 0),
-        (0, s.gn)([l.LO], R.prototype, "m_bUseMicrotrailers", void 0),
-        (0, s.gn)([l.LO], R.prototype, "m_bIgnoredEdited", void 0),
-        (0, s.gn)([p.ak], R.prototype, "getTagHeight", null),
-        (0, s.gn)([p.ak], R.prototype, "onPopularityChanged", null),
-        (0, s.gn)([p.ak], R.prototype, "onRecencyChanged", null),
-        (0, s.gn)([p.ak], R.prototype, "onTagFilterAdd", null),
-        (0, s.gn)([p.ak], R.prototype, "onTagFilterRemove", null),
-        (0, s.gn)([p.ak], R.prototype, "onTagExcludeAdd", null),
-        (0, s.gn)([p.ak], R.prototype, "onTagExcludeRemove", null),
-        (0, s.gn)([p.ak], R.prototype, "doTagsPassFilter", null),
-        (0, s.gn)([p.ak], R.prototype, "doTagsFailExclusion", null),
-        (0, s.gn)([p.ak], R.prototype, "onExcludeWishlistedToggled", null),
-        (0, s.gn)([p.ak], R.prototype, "onSaveUserSettings", null),
-        (0, s.gn)([p.ak], R.prototype, "onToggleIgnore", null),
-        (0, s.gn)([p.ak], R.prototype, "onUpdateWithIgnored", null),
-        (0, s.gn)([p.ak], R.prototype, "onAddToWishlist", null),
-        (0, s.gn)([p.ak], R.prototype, "onGoToWishlist", null),
-        (0, s.gn)([p.ak], R.prototype, "onAddToCart", null),
-        (0, s.gn)([p.ak], R.prototype, "onMuteClicked", null),
-        (0, s.gn)([p.ak], R.prototype, "onUnMuteClicked", null),
-        (0, s.gn)([p.ak], R.prototype, "shouldMute", null),
-        (0, s.gn)([p.ak], R.prototype, "shouldUseMicrotrailers", null);
-      const f = new R();
-      window.g_InteractiveRecommender = f;
+      (0, s.gn)([l.LO], f.prototype, "m_fPopularityValue", void 0),
+        (0, s.gn)([l.LO], f.prototype, "m_fRecencyValue", void 0),
+        (0, s.gn)([l.LO], f.prototype, "m_rgFilterTags", void 0),
+        (0, s.gn)([l.LO], f.prototype, "m_rgExcludeTags", void 0),
+        (0, s.gn)([l.LO], f.prototype, "m_fQueuedPopularityValue", void 0),
+        (0, s.gn)([l.LO], f.prototype, "m_fQueuedRecencyValue", void 0),
+        (0, s.gn)([l.LO], f.prototype, "m_bExcludeWishlisted", void 0),
+        (0, s.gn)([l.LO], f.prototype, "m_bShouldMute", void 0),
+        (0, s.gn)([l.LO], f.prototype, "m_bUseMicrotrailers", void 0),
+        (0, s.gn)([l.LO], f.prototype, "m_bIgnoredEdited", void 0),
+        (0, s.gn)([p.ak], f.prototype, "getTagHeight", null),
+        (0, s.gn)([p.ak], f.prototype, "onPopularityChanged", null),
+        (0, s.gn)([p.ak], f.prototype, "onRecencyChanged", null),
+        (0, s.gn)([p.ak], f.prototype, "onTagFilterAdd", null),
+        (0, s.gn)([p.ak], f.prototype, "onTagFilterRemove", null),
+        (0, s.gn)([p.ak], f.prototype, "onTagExcludeAdd", null),
+        (0, s.gn)([p.ak], f.prototype, "onTagExcludeRemove", null),
+        (0, s.gn)([p.ak], f.prototype, "doTagsPassFilter", null),
+        (0, s.gn)([p.ak], f.prototype, "doTagsFailExclusion", null),
+        (0, s.gn)([p.ak], f.prototype, "onExcludeWishlistedToggled", null),
+        (0, s.gn)([p.ak], f.prototype, "onSaveUserSettings", null),
+        (0, s.gn)([p.ak], f.prototype, "onToggleIgnore", null),
+        (0, s.gn)([p.ak], f.prototype, "onUpdateWithIgnored", null),
+        (0, s.gn)([p.ak], f.prototype, "onAddToWishlist", null),
+        (0, s.gn)([p.ak], f.prototype, "onGoToWishlist", null),
+        (0, s.gn)([p.ak], f.prototype, "onAddToCart", null),
+        (0, s.gn)([p.ak], f.prototype, "onMuteClicked", null),
+        (0, s.gn)([p.ak], f.prototype, "onUnMuteClicked", null),
+        (0, s.gn)([p.ak], f.prototype, "shouldMute", null),
+        (0, s.gn)([p.ak], f.prototype, "shouldUseMicrotrailers", null);
+      const R = new f();
+      window.g_InteractiveRecommender = R;
       var L = i(80212),
         D = i(25006);
       !(function () {
         let e = (0, n.kQ)("ir_config", "application_config");
-        e && (Object.assign(v, e), f.Init());
+        e && (Object.assign(v, e), R.Init());
       })();
       const N = ({ accountID: e }) => {
-          const t = f.getInputApps(),
+          const t = R.getInputApps(),
             i = Object.keys(t).length;
           let a = 0;
           return (
@@ -727,27 +720,27 @@
             }),
             r.createElement(
               "div",
-              { className: h.IdentityBlock },
+              { className: g.IdentityBlock },
               r.createElement("img", {
-                className: h.Avatar,
+                className: g.Avatar,
                 src: v.AVATAR_URL,
               }),
               r.createElement(
                 "div",
-                { className: h.PersonalInfo },
+                { className: g.PersonalInfo },
                 r.createElement(
                   "div",
-                  { className: h.Persona },
+                  { className: g.Persona },
                   v.PERSONA_NAME,
                 ),
                 r.createElement(
                   "div",
-                  { className: h.GameCount },
+                  { className: g.GameCount },
                   (0, u.Xx)("#PlaytimeList_RecentGames", i),
                 ),
                 r.createElement(
                   "div",
-                  { className: h.TotalTime },
+                  { className: g.TotalTime },
                   (0, u.Xx)("#PlaytimeList_HoursTotal", a),
                 ),
               ),
@@ -769,27 +762,27 @@
                   (d = (0, u.Xx)("#PlaytimeList_LastPlayed", l))),
             r.createElement(
               "div",
-              { className: (0, m.Z)(h.PlayedGame, s && h.Ignored) },
+              { className: (0, m.Z)(g.PlayedGame, s && g.Ignored) },
               r.createElement(
                 "a",
                 { href: `${v.BASE_URL}app/${e}?snr=${v.LINK_PARAM}` },
-                r.createElement("img", { className: h.Logo, src: n }),
+                r.createElement("img", { className: g.Logo, src: n }),
               ),
               r.createElement(
                 "div",
-                { className: h.PlaytimeInfo },
+                { className: g.PlaytimeInfo },
                 r.createElement(
                   "div",
-                  { className: h.HoursPlayed },
+                  { className: g.HoursPlayed },
                   (0, u.Xx)("#PlaytimeList_Hours", i),
                 ),
-                r.createElement("div", { className: h.Title }, t),
-                r.createElement("div", { className: h.LastPlayed }, d),
+                r.createElement("div", { className: g.Title }, t),
+                r.createElement("div", { className: g.LastPlayed }, d),
                 r.createElement(
                   "div",
                   {
-                    className: h.IgnoreToggle,
-                    onClick: () => f.onToggleIgnore(e),
+                    className: g.IgnoreToggle,
+                    onClick: () => R.onToggleIgnore(e),
                   },
                   (0, u.Xx)(
                     s ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore",
@@ -804,20 +797,20 @@
           super(e), (this.state = {});
         }
         render() {
-          const e = f.getInputApps();
+          const e = R.getInputApps();
           let t = [];
           if (!e)
             return r.createElement(
               "div",
-              { className: h.PlaytimeList },
+              { className: g.PlaytimeList },
               r.createElement(
                 "div",
-                { className: h.Header },
+                { className: g.Header },
                 (0, u.Xx)("#PlaytimeList_Header"),
               ),
-              r.createElement("div", { className: h.Loading }),
+              r.createElement("div", { className: g.Loading }),
             );
-          f.getAppInfo();
+          R.getAppInfo();
           const i = e.slice().sort((e, t) => t.l - e.l);
           return (
             Object.keys(i).map((e) => {
@@ -835,14 +828,14 @@
             }),
             r.createElement(
               "div",
-              { className: h.PlaytimeList },
+              { className: g.PlaytimeList },
               r.createElement(
                 "div",
-                { className: h.Header },
+                { className: g.Header },
                 (0, u.Xx)("#PlaytimeList_Header"),
               ),
               r.createElement(N, { accountID: this.props.accountID }),
-              r.createElement("div", { className: h.List }, t),
+              r.createElement("div", { className: g.List }, t),
             )
           );
         }
@@ -864,13 +857,13 @@
             c = l ? l[d] : "";
           return r.createElement(
             "div",
-            { className: h.OptionSlider },
-            r.createElement("div", { className: h.Title }, e),
+            { className: g.OptionSlider },
+            r.createElement("div", { className: g.Title }, e),
             r.createElement(
               "div",
-              { className: h.Labels },
-              r.createElement("div", { className: h.Min }, t),
-              r.createElement("div", { className: h.Max }, i),
+              { className: g.Labels },
+              r.createElement("div", { className: g.Min }, t),
+              r.createElement("div", { className: g.Max }, i),
             ),
             r.createElement("input", {
               type: "range",
@@ -880,16 +873,16 @@
               value: n,
               onChange: o,
             }),
-            r.createElement("div", { className: h.OptionalLabel }, c),
+            r.createElement("div", { className: g.OptionalLabel }, c),
           );
         },
         C = ({ className: e, titleLabel: t, checked: i, onChange: a }) =>
           r.createElement(
             "label",
-            { className: (0, m.Z)(h.OptionCheckbox, e && e) },
+            { className: (0, m.Z)(g.OptionCheckbox, e && e) },
             r.createElement("input", {
               type: "checkbox",
-              className: h.Checkbox,
+              className: g.Checkbox,
               checked: i,
               onChange: a,
             }),
@@ -905,7 +898,7 @@
             (this.state = { value: "", suggestions: [] });
         }
         componentDidMount() {
-          const e = f.getTags();
+          const e = R.getTags();
           if (e)
             for (const t of e)
               this.rgTags.push({ id: parseInt(t.tagid), name: t.name });
@@ -965,24 +958,24 @@
           };
           let t = [];
           for (const e of this.selectedtags) {
-            let i = f.m_TagNameMap.get(e);
+            let i = R.m_TagNameMap.get(e);
             t.push(
               r.createElement(
                 "div",
                 {
                   key: e,
-                  className: h.SelectedTag,
+                  className: g.SelectedTag,
                   onClick: (t) => this.onRemoveSelectedTag(e),
                 },
                 r.createElement("div", null, i),
-                r.createElement("div", { className: h.Close }, "X"),
+                r.createElement("div", { className: g.Close }, "X"),
               ),
             );
           }
           return r.createElement(
             "div",
-            { className: h.OptionTagList },
-            r.createElement("div", { className: h.Label }, this.props.title),
+            { className: g.OptionTagList },
+            r.createElement("div", { className: g.Label }, this.props.title),
             r.createElement(_(), {
               suggestions: this.state.suggestions,
               onSuggestionsFetchRequested: this.onFetchRequested,
@@ -993,10 +986,10 @@
               renderSuggestion: (e) => r.createElement("div", null, e.name),
               inputProps: e,
               theme: {
-                input: h.SuggestionInput,
-                suggestion: h.OptionSuggestion,
-                suggestionsList: h.SuggestionsList,
-                suggestionsContainerOpen: h.SuggestionContainerOpen,
+                input: g.SuggestionInput,
+                suggestion: g.OptionSuggestion,
+                suggestionsList: g.SuggestionsList,
+                suggestionsContainerOpen: g.SuggestionContainerOpen,
               },
             }),
             t,
@@ -1013,7 +1006,7 @@
         (0, s.gn)([p.ak], P.prototype, "onRemoveSelectedTag", null),
         (P = (0, s.gn)([o.Pi], P));
       const U = (0, o.Pi)(() => {
-        const e = f.getTags();
+        const e = R.getTags();
         let t = [];
         if (e)
           for (const i of e) t.push({ id: parseInt(i.tagid), name: i.name });
@@ -1025,22 +1018,22 @@
           (0, u.Xx)("#FilterAge_12"),
           (0, u.Xx)("#FilterAge_6"),
         ];
-        let a = f.m_rgSavedExcludeTags,
-          s = f.m_rgSavedFilterTags;
+        let a = R.m_rgSavedExcludeTags,
+          s = R.m_rgSavedFilterTags;
         return r.createElement(
           "div",
-          { className: h.RecommendationOptions },
+          { className: g.RecommendationOptions },
           r.createElement(
             "div",
-            { className: (0, m.Z)(h.Row, h.FirstRow) },
+            { className: (0, m.Z)(g.Row, g.FirstRow) },
             r.createElement(x, {
               minLabel: (0, u.Xx)("#Popularity_Popular"),
               titleLabel: (0, u.Xx)("#Popularity_Title"),
               maxLabel: (0, u.Xx)("#Popularity_Niche"),
               minValue: 0,
               maxValue: 1,
-              value: f.m_fQueuedPopularityValue,
-              onChange: f.onPopularityChanged,
+              value: R.m_fQueuedPopularityValue,
+              onChange: R.onPopularityChanged,
             }),
             r.createElement(x, {
               minLabel: (0, u.Xx)("#Recency_Older"),
@@ -1048,41 +1041,41 @@
               maxLabel: (0, u.Xx)("#Recency_Newer"),
               minValue: 0,
               maxValue: 1,
-              value: f.m_fQueuedRecencyValue,
-              onChange: f.onRecencyChanged,
+              value: R.m_fQueuedRecencyValue,
+              onChange: R.onRecencyChanged,
               sliderLabels: i,
             }),
           ),
           r.createElement(
             "div",
-            { className: (0, m.Z)(h.Row, h.SecondRow) },
+            { className: (0, m.Z)(g.Row, g.SecondRow) },
             r.createElement(P, {
               title: (0, u.Xx)("#TagFilterMultiple_Title"),
               tagoptions: t,
               selectedtags: s,
               key: "Filter" + s.toString(),
-              onAddTag: f.onTagFilterAdd,
-              onRemoveTag: f.onTagFilterRemove,
+              onAddTag: R.onTagFilterAdd,
+              onRemoveTag: R.onTagFilterRemove,
             }),
             r.createElement(P, {
               title: (0, u.Xx)("#TagExcludeMultiple_Title"),
               tagoptions: t,
               selectedtags: a,
               key: "Exclude" + a.toString(),
-              onAddTag: f.onTagExcludeAdd,
-              onRemoveTag: f.onTagExcludeRemove,
+              onAddTag: R.onTagExcludeAdd,
+              onRemoveTag: R.onTagExcludeRemove,
             }),
             r.createElement(C, {
-              className: h.WishlistCheckbox,
+              className: g.WishlistCheckbox,
               titleLabel: (0, u.Xx)("#ExcludeWishlisted"),
-              checked: f.m_bExcludeWishlisted,
-              onChange: f.onExcludeWishlistedToggled,
+              checked: R.m_bExcludeWishlisted,
+              onChange: R.onExcludeWishlistedToggled,
             }),
             r.createElement(
               "button",
               {
-                className: h.SaveUserSettingsButton,
-                onClick: f.onSaveUserSettings,
+                className: g.SaveUserSettingsButton,
+                onClick: R.onSaveUserSettings,
                 title: (0, u.Xx)("#SaveUserSettingsTooltip"),
               },
               (0, u.Xx)("#SaveUserSettings"),
@@ -1096,7 +1089,7 @@
             (this.m_videoRef = r.createRef()),
             (this.state = {
               hovered: !1,
-              wishlisted: f.getAppInfo()[e.appID].w,
+              wishlisted: R.getAppInfo()[e.appID].w,
             });
         }
         componentDidMount() {
@@ -1128,37 +1121,37 @@
               this.m_videoRef.current.pause());
         }
         onMuteToggle(e) {
-          f.shouldMute()
-            ? (f.onUnMuteClicked(),
-              this.m_videoRef &&
-                this.m_videoRef.current &&
-                (this.m_videoRef.current.muted = !1))
-            : (f.onMuteClicked(),
-              this.m_videoRef &&
-                this.m_videoRef.current &&
-                (this.m_videoRef.current.muted = !0)),
-            e.preventDefault(),
-            e.stopPropagation();
+          e.preventDefault(),
+            e.stopPropagation(),
+            R.shouldMute()
+              ? (R.onUnMuteClicked(),
+                this.m_videoRef &&
+                  this.m_videoRef.current &&
+                  (this.m_videoRef.current.muted = !1))
+              : (R.onMuteClicked(),
+                this.m_videoRef &&
+                  this.m_videoRef.current &&
+                  (this.m_videoRef.current.muted = !0));
         }
         onAddToWishlist(e) {
-          f.onAddToWishlist(this.props.appID, this.props.rank),
-            this.setState({ wishlisted: !0 }),
-            e.preventDefault(),
-            e.stopPropagation();
+          e.preventDefault(),
+            e.stopPropagation(),
+            R.onAddToWishlist(this.props.appID, this.props.rank),
+            this.setState({ wishlisted: !0 });
         }
         onGoToWishlist(e) {
-          f.onGoToWishlist(), e.preventDefault(), e.stopPropagation();
+          e.preventDefault(), e.stopPropagation(), R.onGoToWishlist();
         }
-        onAddToCart(e) {
-          f.onAddToCart(this.props.appID, this.props.rank),
-            e.preventDefault(),
-            e.stopPropagation();
+        onAddToCart(e, t) {
+          e.preventDefault(),
+            e.stopPropagation(),
+            R.onAddToCart(this.props.appID, t, this.props.rank);
         }
         render() {
           const { appID: e, score: t, rank: i, width: a } = this.props,
             s =
               "https://steamcdn-a.akamaihd.net/steam/apps/" + e + "/header.jpg",
-            n = f.getAppInfo()[e];
+            n = R.getAppInfo()[e];
           if (!n) return r.createElement("div", null);
           const o = n.n,
             l =
@@ -1173,8 +1166,8 @@
                 (p.push(
                   r.createElement(
                     "div",
-                    { key: `${e}_${i}`, className: h.Tag },
-                    f.getTagName(i),
+                    { key: `${e}_${i}`, className: g.Tag },
+                    R.getTagName(i),
                   ),
                 ),
                 t++,
@@ -1182,58 +1175,60 @@
               )
                 break;
           }
-          const g = parseInt(h.smallentrywidth),
-            _ = parseInt(h.optionswrapwidth);
+          const h = parseInt(g.smallentrywidth),
+            _ = parseInt(g.optionswrapwidth);
           let E = 112,
             T = !0;
-          a < g ? ((E = 66), (T = !1)) : a < _ && ((E = 87), (T = !1));
+          a < h ? ((E = 66), (T = !1)) : a < _ && ((E = 87), (T = !1));
           const S = T && this.state.hovered,
             y = Math.min(Number(t) / 100, 1e3);
-          let R = !1,
+          let f = !1,
             L = !1,
             D = !0,
             N = "",
             I = "",
             A = "",
             x = "",
-            C = "",
-            P = !1,
-            U = !0;
+            C = 0,
+            P = "",
+            U = !1,
+            w = !0;
           if (S) {
-            const e = f.getDetails(this.props.appID);
+            const e = R.getDetails(this.props.appID);
             e &&
-              ((R = !0),
+              ((f = !0),
               (L = e.discount_pct > 0),
               (D = "0" == e.discount_price),
+              (C = e.packageid),
               "probably" ==
               document
                 .createElement("video")
                 .canPlayType('video/webm; codecs="vp8, vorbis"')
-                ? f.shouldUseMicrotrailers() && e.microtrailer_webm
-                  ? ((C = e.microtrailer_webm), (P = !0), (U = !1))
-                  : (C = e.video_webm)
-                : f.shouldUseMicrotrailers() && e.microtrailer_mp4
-                  ? ((C = e.microtrailer_mp4), (P = !0), (U = !1))
-                  : (C = e.video_mp4),
+                ? R.shouldUseMicrotrailers() && e.microtrailer_webm
+                  ? ((P = e.microtrailer_webm), (U = !0), (w = !1))
+                  : (P = e.video_webm)
+                : R.shouldUseMicrotrailers() && e.microtrailer_mp4
+                  ? ((P = e.microtrailer_mp4), (U = !0), (w = !1))
+                  : (P = e.video_mp4),
               (N = `-${e.discount_pct}%`),
               (I = e.base_price),
               (A = D ? (0, u.Xx)("#FreeToPlay") : e.discount_price),
               (x = e.description));
           }
-          const w = C && C.length > 0;
+          const M = P && P.length > 0;
           return r.createElement(
             d.ZP,
             { appID: e },
             r.createElement(
-              M,
+              b,
               {
                 href: `${v.BASE_URL}app/${e}`,
                 className: (0, m.Z)(
-                  h.RecommendationEntry,
+                  g.RecommendationEntry,
                   "ds_flagged",
                   "ds_wishlist",
-                  i > 32 && h.Hidden,
-                  S && h.Hovered,
+                  i > 32 && g.Hidden,
+                  S && g.Hovered,
                 ),
                 style: { top: Math.min(33, i) * E },
                 onMouseEnter: this.OnHover,
@@ -1241,12 +1236,12 @@
               },
               r.createElement(
                 "div",
-                { className: h.TopEntrySection },
+                { className: g.TopEntrySection },
                 r.createElement(
                   "div",
-                  { className: h.LeftSection },
+                  { className: g.LeftSection },
                   r.createElement("img", {
-                    className: (0, m.Z)(h.Logo, (!w || !S) && h.Revealed),
+                    className: (0, m.Z)(g.Logo, (!M || !S) && g.Revealed),
                     src: s,
                   }),
                   r.createElement("video", {
@@ -1254,23 +1249,23 @@
                     className: (0, m.Z)(
                       "highlight_player_item",
                       "highlight_movie",
-                      h.Video,
-                      w && S && h.Revealed,
+                      g.Video,
+                      M && S && g.Revealed,
                     ),
                     playsInline: !0,
                     autoPlay: !0,
-                    muted: U && f.shouldMute(),
-                    src: C,
-                    loop: P,
+                    muted: w && R.shouldMute(),
+                    src: P,
+                    loop: U,
                   }),
-                  U &&
+                  w &&
                     r.createElement(
                       "div",
                       {
-                        className: (0, m.Z)(h.UnMute, w && h.Revealed),
+                        className: (0, m.Z)(g.UnMute, M && g.Revealed),
                         onClick: (e) => this.onMuteToggle(e),
                       },
-                      r.createElement(c.ffh, { muted: f.shouldMute() }),
+                      r.createElement(c.ffh, { muted: R.shouldMute() }),
                     ),
                   this.state.wishlisted &&
                     r.createElement(
@@ -1279,7 +1274,7 @@
                         className: (0, m.Z)(
                           "ds_flag",
                           "ds_wishlist_flag",
-                          h.WishlistFlag,
+                          g.WishlistFlag,
                         ),
                       },
                       (0, u.Xx)("#Recommendation_OnWishlist") + "  ",
@@ -1287,53 +1282,53 @@
                 ),
                 r.createElement(
                   "div",
-                  { className: h.RightSection },
-                  r.createElement("div", { className: h.Name }, o),
+                  { className: g.RightSection },
+                  r.createElement("div", { className: g.Name }, o),
                   r.createElement(
                     "div",
-                    { className: h.CenterSection },
+                    { className: g.CenterSection },
                     r.createElement(
                       "div",
                       {
                         className: (0, m.Z)(
-                          h.CenterOption,
-                          h.CenterDefault,
-                          S && h.Hidden,
+                          g.CenterOption,
+                          g.CenterDefault,
+                          S && g.Hidden,
                         ),
                       },
-                      r.createElement("div", { className: h.Released }, l),
+                      r.createElement("div", { className: g.Released }, l),
                       r.createElement(
                         "div",
-                        { className: h.BarContainer },
+                        { className: g.BarContainer },
                         r.createElement("div", {
-                          className: h.Bar,
+                          className: g.Bar,
                           style: { width: `${y}%` },
                         }),
                       ),
-                      r.createElement("div", { className: h.Tags }, p),
+                      r.createElement("div", { className: g.Tags }, p),
                     ),
                     r.createElement(
                       "div",
                       {
                         className: (0, m.Z)(
-                          h.CenterOption,
-                          h.CenterHovered,
-                          !S && h.Hidden,
+                          g.CenterOption,
+                          g.CenterHovered,
+                          !S && g.Hidden,
                         ),
                       },
                       x,
                     ),
                   ),
-                  R &&
+                  f &&
                     r.createElement(
                       "div",
-                      { className: h.BottomEntrySection },
+                      { className: g.BottomEntrySection },
                       r.createElement(
                         "div",
                         {
                           className: (0, m.Z)(
                             "game_purchase_action",
-                            h.PurchaseSection,
+                            g.PurchaseSection,
                           ),
                         },
                         r.createElement(
@@ -1341,7 +1336,7 @@
                           {
                             className: (0, m.Z)(
                               "game_purchase_action_bg",
-                              h.PurchaseBG,
+                              g.PurchaseBG,
                             ),
                           },
                           L &&
@@ -1378,7 +1373,7 @@
                                 className: (0, m.Z)(
                                   "game_purchase_price",
                                   "price",
-                                  h.Price,
+                                  g.Price,
                                 ),
                               },
                               A,
@@ -1388,7 +1383,7 @@
                               "div",
                               {
                                 className: "btn_addtocart",
-                                onClick: (e) => this.onAddToCart(e),
+                                onClick: (e) => this.onAddToCart(e, C),
                               },
                               r.createElement(
                                 "span",
@@ -1411,7 +1406,7 @@
                           "div",
                           {
                             id: "add_to_wishlist_area",
-                            className: h.WishlistSection,
+                            className: g.WishlistSection,
                             onClick: (e) => this.onAddToWishlist(e),
                           },
                           r.createElement(
@@ -1432,8 +1427,8 @@
                             className: (0, m.Z)(
                               "btnv6_blue_hoverfade btn_medium",
                               "queue_btn_active",
-                              h.Wishlisted,
-                              h.WishlistSection,
+                              g.Wishlisted,
+                              g.WishlistSection,
                             ),
                             "data-tooltip-text": (0, u.Xx)(
                               "#OnWishlistTooltip",
@@ -1463,23 +1458,23 @@
         (0, s.gn)([p.ak], w.prototype, "onGoToWishlist", null),
         (0, s.gn)([p.ak], w.prototype, "onAddToCart", null),
         (w = (0, s.gn)([o.Pi], w));
-      const M = r.forwardRef(function (e, t) {
+      const b = r.forwardRef(function (e, t) {
         const { href: i } = e,
           a = (0, s._T)(e, ["href"]),
           n = (0, D.YR)(i);
         return r.createElement("a", Object.assign({}, a, { ref: t, href: n }));
       });
-      let b = class extends r.Component {
+      let M = class extends r.Component {
         constructor(e) {
           super(e), (this.state = { sortedRecommendedApps: [] });
         }
         render() {
           let e = [];
-          const t = f.m_fRecencyValue * (v.NUM_RECENCY_STEPS - 1 - 0.001),
+          const t = R.m_fRecencyValue * (v.NUM_RECENCY_STEPS - 1 - 0.001),
             i = Math.floor(t),
             a = i + 1,
             s = t - i,
-            n = f.m_fPopularityValue * (v.NUM_POPULARITY_STEPS - 1 - 0.001),
+            n = R.m_fPopularityValue * (v.NUM_POPULARITY_STEPS - 1 - 0.001),
             o = Math.floor(n),
             l = o + 1,
             d = n - o;
@@ -1492,12 +1487,12 @@
             e.push({ index: a * v.NUM_RECENCY_STEPS + l, weight: s * d });
           let c = new Map(),
             p = 0;
-          const g = f.getRecommendations(),
-            _ = f.getAppInfo();
+          const h = R.getRecommendations(),
+            _ = R.getAppInfo();
           let E = [];
-          if (g) {
+          if (h) {
             for (const t of e) {
-              const e = g.request_results[t.index];
+              const e = h.request_results[t.index];
               if (e) {
                 p = Math.max(p, e.max_weight);
                 for (const i of e.app_recommendations) {
@@ -1507,7 +1502,7 @@
                     _[e].o ||
                     _[e].i ||
                     _[e].ti ||
-                    (_[e].w && f.m_bExcludeWishlisted)
+                    (_[e].w && R.m_bExcludeWishlisted)
                   )
                     continue;
                   const a = (c.get(e) || 0) + i.weight * t.weight;
@@ -1518,10 +1513,10 @@
             let t = [];
             c.forEach((e, i) => t.push({ appid: i, score: e })),
               (t = t.filter(
-                (e) => _[e.appid].t && f.doTagsPassFilter(_[e.appid].t),
+                (e) => _[e.appid].t && R.doTagsPassFilter(_[e.appid].t),
               )),
               (t = t.filter(
-                (e) => _[e.appid].t && !f.doTagsFailExclusion(_[e.appid].t),
+                (e) => _[e.appid].t && !R.doTagsFailExclusion(_[e.appid].t),
               )),
               (t = t.filter((e) => e.score > 0));
             let i = t.sort((e, t) => t.score - e.score);
@@ -1545,7 +1540,7 @@
                   "div",
                   {
                     key: "no_recommedations_due_to_filter",
-                    className: h.NoRecommendationsMessage,
+                    className: g.NoRecommendationsMessage,
                   },
                   (0, u.Xx)("#NoRecommendationsDueToFilter"),
                 ),
@@ -1554,15 +1549,15 @@
             E.push(
               r.createElement("div", {
                 key: "recommendations_loading",
-                className: h.RecommendationsLoading,
+                className: g.RecommendationsLoading,
               }),
             );
           return r.createElement(
             "div",
-            { className: h.RecommendationList },
+            { className: g.RecommendationList },
             r.createElement(
               "div",
-              { className: h.Header },
+              { className: g.Header },
               (0, u.Xx)("#Recommendations_Header"),
             ),
             r.createElement(U, null),
@@ -1570,8 +1565,8 @@
               "div",
               {
                 className: (0, m.Z)(
-                  h.List,
-                  f.areResultsExpired() && h.Updating,
+                  g.List,
+                  R.areResultsExpired() && g.Updating,
                 ),
               },
               E,
@@ -1579,7 +1574,7 @@
           );
         }
       };
-      b = (0, s.gn)([o.Pi], b);
+      M = (0, s.gn)([o.Pi], M);
       let k = class extends r.Component {
         constructor() {
           super(...arguments), (this.state = { width: window.innerWidth });
@@ -1605,45 +1600,45 @@
                 r.createElement(
                   "div",
                   {
-                    className: h.App,
-                    style: { height: 3840 + 26 * f.getTagHeight() },
+                    className: g.App,
+                    style: { height: 3840 + 26 * R.getTagHeight() },
                   },
                   r.createElement(
                     "div",
-                    { className: h.Container },
+                    { className: g.Container },
                     r.createElement(
                       "div",
-                      { className: h.TopSection },
+                      { className: g.TopSection },
                       r.createElement(
                         "div",
-                        { className: h.Header },
+                        { className: g.Header },
                         (0, u.Xx)("#HeaderTitle"),
                       ),
                       r.createElement(
                         "div",
-                        { className: h.Body },
+                        { className: g.Body },
                         (0, u.Xx)("#HeaderBody1"),
                       ),
                     ),
                     r.createElement(
                       "div",
-                      { className: h.BottomSection },
+                      { className: g.BottomSection },
                       r.createElement(A, { accountID: n.L7.accountid }),
-                      r.createElement("div", { className: h.VerticalBar }),
-                      r.createElement(b, { width: this.state.width }),
+                      r.createElement("div", { className: g.VerticalBar }),
+                      r.createElement(M, { width: this.state.width }),
                     ),
                   ),
                 ),
               )
             : r.createElement(
                 "div",
-                { className: h.App },
+                { className: g.App },
                 r.createElement(
                   "div",
-                  { className: h.Login },
+                  { className: g.Login },
                   r.createElement(
                     "div",
-                    { className: h.Text },
+                    { className: g.Text },
                     (0, u.Xx)("#LoginText"),
                   ),
                   r.createElement(
