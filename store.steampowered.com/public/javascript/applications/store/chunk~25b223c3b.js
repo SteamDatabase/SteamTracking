@@ -2966,34 +2966,31 @@
               );
         }
         ShowMenu() {
-          if (this.m_iMenuInstance) this.m_iMenuInstance.Show();
-          else {
-            let e = s.createElement(
-                Y,
-                Object.assign({}, this.props, {
-                  fnHasReminderSet: () => this.BHasSomeNotificationSetting(),
-                  fnHidePanel: this.HideMenu,
-                }),
+          let e = s.createElement(
+              Y,
+              Object.assign({}, this.props, {
+                fnHasReminderSet: (e) => this.BHasSomeNotificationSetting(e),
+                fnHidePanel: this.HideMenu,
+              }),
+            ),
+            t = {
+              bOverlapHorizontal: !0,
+              bOverlapVertical: !0,
+              bDisablePopTop: !0,
+              bMatchWidth: !0,
+              strClassName: (0, N.Z)(
+                G.ReminderDialog,
+                G.ReminderOptions,
+                C.contextMenu,
               ),
-              t = {
-                bOverlapHorizontal: !0,
-                bOverlapVertical: !0,
-                bDisablePopTop: !0,
-                bMatchWidth: !0,
-                strClassName: (0, N.Z)(
-                  G.ReminderDialog,
-                  G.ReminderOptions,
-                  C.contextMenu,
-                ),
-              };
-            (this.m_iMenuInstance = (0, l.yV)(
-              e,
-              this.m_elDropDownRef.current,
-              t,
-            )),
-              this.m_iMenuInstance.SetOnHideCallback(this.HideMenu);
-          }
-          this.setState({ bIsOpen: !0 }),
+            };
+          (this.m_iMenuInstance = (0, l.yV)(
+            e,
+            this.m_elDropDownRef.current,
+            t,
+          )),
+            this.m_iMenuInstance.SetOnHideCallback(this.HideMenu),
+            this.setState({ bIsOpen: !0 }),
             u.Y.RecordAppInteractionEvent(
               this.props.eventModel.appid,
               u.g.k_eReminder_Opened,
@@ -3003,9 +3000,8 @@
           this.m_iMenuInstance && this.m_iMenuInstance.Hide(),
             this.setState({ bIsOpen: !1 });
         }
-        BHasSomeNotificationSetting() {
-          const { eventModel: e } = this.props,
-            t = e.GID;
+        BHasSomeNotificationSetting(e) {
+          const t = e.GID;
           return (
             (S.BHasValidatedEmail() &&
               p.cb
@@ -3027,7 +3023,7 @@
         }
         render() {
           const e = this.props.bOnlyShowIcon && !this.state.bIsOpen,
-            t = this.BHasSomeNotificationSetting(),
+            t = this.BHasSomeNotificationSetting(this.props.eventModel),
             n = (0, h.kl)();
           return this.props.eventModel.startTime < n
             ? null
@@ -3208,7 +3204,7 @@
                 ),
                 onClick: r,
               },
-              i() &&
+              i(this.props.eventModel) &&
                 s.createElement(
                   "div",
                   { className: G.RemindCheck },
