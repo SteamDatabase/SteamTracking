@@ -312,6 +312,7 @@
  T SDL_AddGamepadMappingsFromIO
  T SDL_AddHintCallback
  T SDL_AddTimer
+ T SDL_AddTimerNS
  T SDL_AddVulkanRenderSemaphores
  T SDL_AllocateEventMemory
  T SDL_AtomicAdd
@@ -497,6 +498,7 @@
  T SDL_GetDaysInMonth
  T SDL_GetDefaultAssertionHandler
  T SDL_GetDefaultCursor
+ T SDL_GetDefaultKeyFromScancode
  T SDL_GetDesktopDisplayMode
  T SDL_GetDisplayBounds
  T SDL_GetDisplayContentScale
@@ -741,6 +743,7 @@
  T SDL_GetUserFolder
  T SDL_GetVersion
  T SDL_GetVideoDriver
+ T SDL_GetWindowAspectRatio
  T SDL_GetWindowBordersSize
  T SDL_GetWindowDisplayScale
  T SDL_GetWindowFlags
@@ -762,6 +765,7 @@
  T SDL_GetWindowSize
  T SDL_GetWindowSizeInPixels
  T SDL_GetWindowSurface
+ T SDL_GetWindowSurfaceVSync
  T SDL_GetWindowTitle
  T SDL_GlobDirectory
  T SDL_GlobStorageDirectory
@@ -872,6 +876,7 @@
  T SDL_OpenUserStorage
  T SDL_OutOfMemory
  T SDL_PauseAudioDevice
+ T SDL_PauseAudioStreamDevice
  T SDL_PauseHaptic
  T SDL_PeepEvents
  T SDL_PenConnected
@@ -938,6 +943,7 @@
  T SDL_ResetLogPriorities
  T SDL_RestoreWindow
  T SDL_ResumeAudioDevice
+ T SDL_ResumeAudioStreamDevice
  T SDL_ResumeHaptic
  T SDL_RumbleGamepad
  T SDL_RumbleGamepadTriggers
@@ -1026,6 +1032,7 @@
  T SDL_SetTextureScaleMode
  T SDL_SetThreadPriority
  T SDL_SetWindowAlwaysOnTop
+ T SDL_SetWindowAspectRatio
  T SDL_SetWindowBordered
  T SDL_SetWindowFocusable
  T SDL_SetWindowFullscreen
@@ -1044,6 +1051,7 @@
  T SDL_SetWindowResizable
  T SDL_SetWindowShape
  T SDL_SetWindowSize
+ T SDL_SetWindowSurfaceVSync
  T SDL_SetWindowTitle
  T SDL_SetX11EventHook
  T SDL_ShowCursor

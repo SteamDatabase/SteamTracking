@@ -1,4 +1,4 @@
-var CLSTAMP = "8943271";
+var CLSTAMP = "8959953";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -1383,7 +1383,7 @@ var CLSTAMP = "8943271";
                   (t.ownerDocument.body.className += " VR"),
                 this.Render(e, t),
                 this.OnLoad(),
-                e.SteamClient &&
+                (null == e ? void 0 : e.SteamClient) &&
                   !this.m_bCreateHidden &&
                   (n != h.IF.k_EWindowBringToFrontInvalid
                     ? e.SteamClient.Window.BringToFront(n)
@@ -1619,9 +1619,9 @@ var CLSTAMP = "8943271";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "May 31 2024 : 18:51:07",
-                BUILD_TIME_UTC: "Jun 1 2024 : 01:51:07",
-                BUILD_RTIME_UTC: 1717206667,
+                BUILD_TIME_LOCAL: "Jun 7 2024 : 13:26:43",
+                BUILD_TIME_UTC: "Jun 7 2024 : 20:26:43",
+                BUILD_RTIME_UTC: 1717792003,
               }.MOBILE_BUILD && "addEventListener" in window)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -42688,23 +42688,25 @@ var CLSTAMP = "8943271";
         function _(e, t) {
           let n = null == e ? void 0 : e.parentElement;
           for (; n; ) {
-            if (!t || "x" == t) {
-              const e = window.getComputedStyle(n);
-              if (
-                "scroll" == e.overflowX ||
-                "auto" == e.overflowX ||
-                "fixed" == e.position
-              )
-                break;
-            }
-            if (!t || "y" == t) {
-              const e = window.getComputedStyle(n);
-              if (
-                "scroll" == e.overflowY ||
-                "auto" == e.overflowY ||
-                "fixed" == e.position
-              )
-                break;
+            if (r(n)) {
+              if (!t || "x" == t) {
+                const e = window.getComputedStyle(n);
+                if (
+                  "scroll" == e.overflowX ||
+                  "auto" == e.overflowX ||
+                  "fixed" == e.position
+                )
+                  break;
+              }
+              if (!t || "y" == t) {
+                const e = window.getComputedStyle(n);
+                if (
+                  "scroll" == e.overflowY ||
+                  "auto" == e.overflowY ||
+                  "fixed" == e.position
+                )
+                  break;
+              }
             }
             n = n.parentElement;
           }
@@ -45385,9 +45387,9 @@ var CLSTAMP = "8943271";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "May 31 2024 : 18:51:07",
-                    BUILD_TIME_UTC: "Jun 1 2024 : 01:51:07",
-                    BUILD_RTIME_UTC: 1717206667,
+                    BUILD_TIME_LOCAL: "Jun 7 2024 : 13:26:43",
+                    BUILD_TIME_UTC: "Jun 7 2024 : 20:26:43",
+                    BUILD_RTIME_UTC: 1717792003,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -45958,7 +45960,7 @@ var CLSTAMP = "8943271";
       {
         27: "02d37250737fbf3fa2d3",
         33: "fcd9d2fcec49882c784e",
-        58: "802ececce55a02fa0635",
+        58: "c0b60e24f5fc2e5c0016",
         131: "9f4b6f1179ba243d40c6",
         146: "17821e34d2b46c438397",
         200: "8968dbea347c5c74109b",
@@ -46063,7 +46065,7 @@ var CLSTAMP = "8943271";
         7781: "2cc2489e059158b26c72",
         7832: "9d6d3d860dea2a65797b",
         7850: "6b1794c3a5d344bf28d6",
-        7962: "1f681dd5b42f5b7b8c82",
+        7962: "ac1985586ab408efdaf7",
         8011: "0f452866bc3f5f02af90",
         8052: "46d969dc9271e04ec1ee",
         8085: "aa23c9ca42ebe79401a7",
@@ -46074,7 +46076,7 @@ var CLSTAMP = "8943271";
         8282: "6caae4b962b18ebf5b34",
         8319: "39401a00ceb5042f4a0c",
         8433: "13f6d4cd7c1163a4608a",
-        8467: "f8268bfc06ca2b605c52",
+        8467: "bec11f10e758770fc77b",
         8490: "4f5e92f12a76168d940b",
         8778: "93c8db9b30a5a057fd8d",
         8805: "340d65d13b70b0f9f611",

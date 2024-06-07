@@ -10,6 +10,8 @@
  AudioServicesDisposeSystemSoundID
  AudioServicesPlaySystemSound
  CFArrayCreate
+ CFArrayGetCount
+ CFArrayGetValueAtIndex
  CFDataCreate
  CFDataGetBytePtr
  CFDataGetLength
@@ -74,7 +76,13 @@
  CGLayerRelease
  CGMainDisplayID
  CTFontCreateWithName
+ CTFontGetBoundingRectsForGlyphs
+ CTFontGetGlyphsForCharacters
  CTFontGetPlatformFont
+ CTLineCreateWithAttributedString
+ CTLineGetBoundsWithOptions
+ CTLineGetGlyphRuns
+ CTRunGetTypographicBounds
  CVProfile_ExitScope
  CValidator::ClaimArrayMemory(void const*)
  CValidator::ClaimMemory(void const*)
@@ -103,9 +111,13 @@
  NSApp
  NSBeep
  NSDefaultRunLoopMode
+ NSFontAttributeName
+ NSFontIdentityMatrix
+ NSForegroundColorAttributeName
  NSMenuDidBeginTrackingNotification
  NSMenuDidEndTrackingNotification
  NSMenuWillSendActionNotification
+ NSUnderlineStyleAttributeName
  NSWorkspaceActiveSpaceDidChangeNotification
  NSWorkspaceDidActivateApplicationNotification
  NSWorkspaceDidDeactivateApplicationNotification
@@ -119,6 +131,7 @@
  OBJC_CLASS_$_NSAutoreleasePool
  OBJC_CLASS_$_NSBitmapImageRep
  OBJC_CLASS_$_NSBundle
+ OBJC_CLASS_$_NSColor
  OBJC_CLASS_$_NSColorSpace
  OBJC_CLASS_$_NSCursor
  OBJC_CLASS_$_NSDate
@@ -127,14 +140,18 @@
  OBJC_CLASS_$_NSEvent
  OBJC_CLASS_$_NSFileManager
  OBJC_CLASS_$_NSFont
+ OBJC_CLASS_$_NSFontDescriptor
+ OBJC_CLASS_$_NSFontManager
  OBJC_CLASS_$_NSGraphicsContext
  OBJC_CLASS_$_NSImage
  OBJC_CLASS_$_NSLocale
  OBJC_CLASS_$_NSMenu
  OBJC_CLASS_$_NSMenuItem
  OBJC_CLASS_$_NSMutableArray
+ OBJC_CLASS_$_NSMutableAttributedString
  OBJC_CLASS_$_NSNotificationCenter
  OBJC_CLASS_$_NSNull
+ OBJC_CLASS_$_NSNumber
  OBJC_CLASS_$_NSObject
  OBJC_CLASS_$_NSOpenPanel
  OBJC_CLASS_$_NSProcessInfo
@@ -192,11 +209,14 @@
  V_UTF16ToUTF32
  V_UTF16ToUTF8
  V_UTF32CharsToUTF16
+ V_UTF32CharsToUTF8
  V_UTF32ToUTF16
  V_UTF32ToUTF8
  V_UTF8ToUTF16
  V_UTF8ToUTF32
+ V_UnicodeAdvance(char*, int)
  V_UnicodeCaseConvert(CUtlVector<wchar_t, CUtlMemory<wchar_t> >&, int, EStringConvertErrorPolicy)
+ V_UnicodeLength(char const*)
  V_atof
  V_atoi
  V_atoui64
