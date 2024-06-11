@@ -88,7 +88,7 @@ function OnModalContentLoaded()
 
 	$( 'modalContentWait' ).hide();
 	modalContent[activeContent.src] = activeContent;
-	activeContent.show();
+	$( activeContent ).style.visibility = 'visible';
 	SizeModalContent( activeContent );
 }
 
@@ -318,7 +318,7 @@ function ShowModalContent_Deferred( url, titleBarText, titleBarURL, sizeToFit )
 	else
 	{
 		modalContentLoaded = false;
-		iframeContent = new Element( 'iframe', { 'class' : 'modalContent_iFrame', 'onLoad' : 'OnModalContentFullyLoaded()', 'style' : 'display: none;', 'scrolling' : sizeToFit ? 'no' : 'auto' } );
+		iframeContent = new Element( 'iframe', { 'class' : 'modalContent_iFrame', 'onLoad' : 'OnModalContentFullyLoaded()', 'style' : 'visibility: hidden;', 'scrolling' : sizeToFit ? 'no' : 'auto' } );
 		iframeContent.src = url;
 		activeContent = iframeContent;
 		activeContent.sizeToFit = sizeToFit;

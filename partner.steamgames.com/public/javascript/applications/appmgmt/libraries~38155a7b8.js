@@ -28459,6 +28459,11 @@
                     bw: n.Xc.writeUint32,
                   },
                   end_time: { n: 6, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
+                  external_sale_event_type: {
+                    n: 7,
+                    br: n.FE.readUint32,
+                    bw: n.Xc.writeUint32,
+                  },
                 },
               }),
             ae.sm_m
@@ -28734,6 +28739,11 @@
                     n: 20,
                     br: n.FE.readBool,
                     bw: n.Xc.writeBool,
+                  },
+                  require_sale_page_type: {
+                    n: 21,
+                    br: n.FE.readEnum,
+                    bw: n.Xc.writeEnum,
                   },
                 },
               }),

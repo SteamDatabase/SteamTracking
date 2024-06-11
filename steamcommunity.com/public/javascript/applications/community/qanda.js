@@ -116,6 +116,12 @@
         ShortDateRange: "_3sqcQTW9oCh_HBrotB1Dkw",
       };
     },
+    11209: (e) => {
+      e.exports = {
+        SectionTitleHeader: "_1K5gAgxxFp6Fb_mLLeHwQi",
+        required_title: "_29VCzH1j-cbaFKeMAv4xX_",
+      };
+    },
     95126: (e, t, n) => {
       var r = {
         "./af": 75436,
@@ -654,7 +660,7 @@
     },
     64936: (e, t, n) => {
       "use strict";
-      n.d(t, { F_: () => m, JW: () => d, kl: () => f, zD: () => E });
+      n.d(t, { F_: () => m, JW: () => d, kl: () => E, zD: () => g });
       var r = n(85556),
         s = n(54842),
         a = n(37485),
@@ -716,10 +722,10 @@
       (0, r.gn)([s.LO], u.prototype, "nOverrideDateNow", void 0);
       const d = new u();
       function m(e = 1) {
-        const [t, n] = o.useState(() => p()),
+        const [t, n] = o.useState(() => v()),
           r = (0, l.T)("useTimeNowWithOverride"),
           s = o.useCallback(() => {
-            r.token.reason || n(p());
+            r.token.reason || n(v());
           }, []);
         return (
           o.useEffect(() => {
@@ -735,17 +741,17 @@
       }
       window.g_EventCalendarDevFeatures = d;
       const h = new Date(),
-        v = Math.floor(h.getTime() / 1e3);
-      function p() {
+        p = Math.floor(h.getTime() / 1e3);
+      function v() {
         const e = Math.floor(Date.now() / 1e3);
-        return d.nOverrideDateNow ? d.nOverrideDateNow + (e - v) : e;
-      }
-      function f() {
-        var e;
-        return null !== (e = d.nOverrideDateNow) && void 0 !== e ? e : v;
+        return d.nOverrideDateNow ? d.nOverrideDateNow + (e - p) : e;
       }
       function E() {
-        return o.useMemo(() => f(), []);
+        var e;
+        return null !== (e = d.nOverrideDateNow) && void 0 !== e ? e : p;
+      }
+      function g() {
+        return o.useMemo(() => E(), []);
       }
     },
     80212: (e, t, n) => {
@@ -812,13 +818,13 @@
     24827: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Ai: () => g,
-        H6: () => f,
-        Kj: () => v,
+        Ai: () => f,
+        H6: () => E,
+        Kj: () => p,
         Sw: () => _,
-        Zg: () => E,
+        Zg: () => g,
         uv: () => j,
-        w$: () => p,
+        w$: () => v,
       });
       var r = n(85556),
         s = n(47427),
@@ -831,13 +837,13 @@
         d = n.n(u),
         m = n(64936);
       const h = n(98973);
-      function v(e) {
+      function p(e) {
         const t = h.tz.guess(),
           n = h.unix(e).tz(t),
           r = (0, i.CE)();
         return r && n.locale(r), n.format("LT");
       }
-      function p(e, t) {
+      function v(e, t) {
         const n = h.tz.guess(),
           r = h.unix(e).tz(n),
           a = (0, i.CE)();
@@ -858,7 +864,7 @@
           )
         );
       }
-      const f = (0, o.Pi)((e) => {
+      const E = (0, o.Pi)((e) => {
           const {
               dateAndTime: t,
               bSingleLine: n,
@@ -877,7 +883,7 @@
                 { className: r || a ? u.DateAndTimeInline : u.DateAndTime },
                 o && c,
                 s.createElement("span", null, " "),
-                Boolean(t && l) && p(t, !0),
+                Boolean(t && l) && v(t, !0),
               )
             : s.createElement(
                 "div",
@@ -893,15 +899,15 @@
                 s.createElement(
                   "div",
                   { className: u.LocalizedTime },
-                  Boolean(t && l) && p(t, !0),
+                  Boolean(t && l) && v(t, !0),
                 ),
               );
         }),
-        E = (e) => {
+        g = (e) => {
           const t = s.createElement(
             "div",
             { className: e.stylesmodule.DateToolTip },
-            s.createElement(f, {
+            s.createElement(E, {
               dateAndTime: e.rtFullDate,
               bSingleLine: !0,
               stylesmodule: e.stylesmodule,
@@ -918,7 +924,7 @@
             e.children,
           );
         };
-      let g = class extends s.Component {
+      let f = class extends s.Component {
         render() {
           const { startDateAndTime: e, endDateAndTime: t } = this.props,
             n = this.props.stylesmodule
@@ -954,7 +960,7 @@
                 ),
                 " ",
               ),
-              s.createElement(f, { stylesmodule: n, dateAndTime: e }),
+              s.createElement(E, { stylesmodule: n, dateAndTime: e }),
             );
           let o = e <= a && a <= t;
           const u = (0, c.yK)(new Date(1e3 * e), new Date(1e3 * t));
@@ -975,7 +981,7 @@
                       : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
                 ),
               ),
-              s.createElement(f, {
+              s.createElement(E, {
                 stylesmodule: n,
                 bSingleLine: !0,
                 dateAndTime: e,
@@ -993,7 +999,7 @@
                     : "#EventDisplay_TimeEndsOn",
                 ),
               ),
-              s.createElement(f, {
+              s.createElement(E, {
                 stylesmodule: n,
                 bSingleLine: !0,
                 bOnlyTime: u,
@@ -1018,7 +1024,7 @@
           );
         }
       };
-      g = (0, r.gn)([o.Pi], g);
+      f = (0, r.gn)([o.Pi], f);
       let j = class extends s.Component {
         render() {
           const {
@@ -1049,7 +1055,7 @@
               (0, i.$1)(e, l),
             );
           let h = s.createElement(
-            E,
+            g,
             { rtFullDate: e, stylesmodule: r },
             s.createElement(
               "div",
@@ -1066,7 +1072,7 @@
             (o < e &&
               e < o + c._H.PerWeek &&
               (h = s.createElement(
-                E,
+                g,
                 { rtFullDate: e, stylesmodule: r },
                 s.createElement(
                   "div",
@@ -1077,7 +1083,7 @@
                     s.createElement(
                       "div",
                       { className: r.ShortDateAndTime },
-                      p(e),
+                      v(e),
                       " ",
                     ),
                   ),
@@ -1086,10 +1092,10 @@
             n || null == t || t < 1)
           )
             return h;
-          const v = e <= o && o <= t;
-          v &&
+          const p = e <= o && o <= t;
+          p &&
             (h = s.createElement(
-              E,
+              g,
               { rtFullDate: e, className: r.ActiveEvent, stylesmodule: r },
               s.createElement(
                 "span",
@@ -1097,15 +1103,15 @@
                 (0, i.Xx)("#Time_Now"),
               ),
             ));
-          let f = null;
-          const g = v ? t - o : t - e;
-          if (g <= c._H.PerDay) {
+          let E = null;
+          const f = p ? t - o : t - e;
+          if (f <= c._H.PerDay) {
             const e = s.createElement(
               "div",
               { className: r.ShortDateAndTime },
-              (0, i.yW)(g, !0),
+              (0, i.yW)(f, !0),
             );
-            f =
+            E =
               t < o
                 ? s.createElement(
                     "div",
@@ -1117,7 +1123,7 @@
                     "div",
                     { className: r.RightSideTitles },
                     (0, i.kQ)(
-                      v
+                      p
                         ? "#EventDisplay_TimeLeft"
                         : "#EventDisplay_RunsForDuration",
                       e,
@@ -1125,7 +1131,7 @@
                   );
           } else {
             const e = a.getFullYear() == new Date(1e3 * t).getFullYear();
-            f = s.createElement(
+            E = s.createElement(
               s.Fragment,
               null,
               s.createElement(
@@ -1144,7 +1150,7 @@
               ),
             );
           }
-          const j = s.createElement(E, { rtFullDate: t, stylesmodule: r }, f);
+          const j = s.createElement(g, { rtFullDate: t, stylesmodule: r }, E);
           return s.createElement("div", { className: r.ShortDateRange }, h, j);
         }
       };
@@ -1172,8 +1178,8 @@
                 month: null != n ? n : "long",
                 year: o ? void 0 : "numeric",
               },
-              v = s.toLocaleDateString(i.Yt.GetPreferredLocales(), h);
-            if (d) return v;
+              p = s.toLocaleDateString(i.Yt.GetPreferredLocales(), h);
+            if (d) return p;
             {
               const e = {
                 day: "numeric",
@@ -1181,7 +1187,7 @@
                 year: c ? void 0 : "numeric",
               };
               return (
-                v + " - " + a.toLocaleDateString(i.Yt.GetPreferredLocales(), e)
+                p + " - " + a.toLocaleDateString(i.Yt.GetPreferredLocales(), e)
               );
             }
           })(t, n, r),
@@ -1189,6 +1195,85 @@
         );
       }
       j = (0, r.gn)([o.Pi], j);
+    },
+    56164: (e, t, n) => {
+      "use strict";
+      n.d(t, { bC: () => v, fU: () => p, mY: () => m, ug: () => h });
+      var r = n(1485),
+        s = n(31846),
+        a = n(62613),
+        i = n(47427),
+        o = n(13129),
+        l = n(71741),
+        c = n(10162),
+        u = n(27605),
+        d = n(11209);
+      const m = (0, u.Pi)((e) =>
+        i.createElement(
+          i.Fragment,
+          null,
+          i.createElement(
+            "div",
+            {
+              className: (0, o.Z)(
+                e.className ? e.className : "",
+                d.SectionTitleHeader,
+                d.required_title,
+                "SectionTitleHeader",
+              ),
+            },
+            i.createElement(
+              "div",
+              {
+                className: (0, o.Z)(
+                  l.CollapsableSectionTitle,
+                  "EventEditorTextTitle",
+                ),
+              },
+              e.title,
+              Boolean(e.tooltip) && i.createElement(v, { tooltip: e.tooltip }),
+            ),
+            i.createElement(p, {
+              bIsMinimized: e.getMinimized(),
+              fnToggleMinimize: e.toggleMinimized,
+            }),
+          ),
+          !e.getMinimized() && i.createElement(c.SV, null, e.children),
+        ),
+      );
+      function h(e) {
+        const [t, n] = i.useState(Boolean(e.bStartMinimized));
+        return i.createElement(
+          m,
+          Object.assign({}, e, {
+            getMinimized: () => t,
+            toggleMinimized: () => n(!t),
+          }),
+          e.children,
+        );
+      }
+      function p(e) {
+        const { bIsMinimized: t, fnToggleMinimize: n } = e,
+          o = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
+        return i.createElement(
+          r.zx,
+          { "data-tooltip-text": (0, s.Xx)(o), onClick: n },
+          e.bIsMinimized
+            ? i.createElement(a.YqJ, null)
+            : i.createElement(a.gR, null),
+        );
+      }
+      function v(e) {
+        return i.createElement(
+          "span",
+          {
+            "data-tooltip-text": e.tooltip,
+            className: (0, o.Z)(l.HelperTooltip, "HelperTooltip"),
+          },
+          " ",
+          i.createElement(a.WWB, null),
+        );
+      }
     },
     16649: (e, t, n) => {
       "use strict";

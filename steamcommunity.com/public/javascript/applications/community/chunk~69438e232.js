@@ -552,7 +552,7 @@
         d = n(89e3),
         m = n(35427),
         p = n(19399),
-        u = n(68985),
+        u = n(15896),
         h = n(60646),
         g = n(20417),
         E = n(33682),
@@ -1063,8 +1063,8 @@
         (0, a.gn)([g.ak], w.prototype, "FocusTextInput", null),
         (0, a.gn)([g.ak], w.prototype, "GetTextAreaRef", null),
         (0, a.gn)([g.ak], w.prototype, "GetTextAreaCurrent", null);
-      var b = n(1485),
-        B = n(63109),
+      var B = n(1485),
+        b = n(63109),
         O = n(71741),
         R = n.n(O),
         G = n(50898),
@@ -1159,7 +1159,7 @@
           Boolean(f) && i.createElement("p", null, f),
           A &&
             i.createElement(
-              b.zx,
+              B.zx,
               {
                 onClick: (e) => {
                   const t = (0, H.RA)(e);
@@ -1192,7 +1192,7 @@
                     size: "small",
                   })
                 : i.createElement(
-                    b.zx,
+                    B.zx,
                     {
                       onClick: () =>
                         (0, a.mG)(void 0, void 0, void 0, function* () {
@@ -1246,7 +1246,7 @@
                   ),
             ),
           i.createElement(
-            b.zx,
+            B.zx,
             {
               onClick: (e) => {
                 const t = new m.K(X.JA.CLANSTEAMID);
@@ -1788,7 +1788,7 @@
                   "data-tooltip-text": (0, N.Xx)("#Editor_Emoticon"),
                 },
                 this.props.emoticonStore &&
-                  i.createElement(B.Z, {
+                  i.createElement(b.Z, {
                     title: " ",
                     className: (0, D.Z)(Q().EmoteOuter),
                     disabled: !1,
@@ -2319,7 +2319,7 @@
           i.createElement(
             "div",
             { className: Q().InsertSpeakerCtn },
-            i.createElement(b.II, {
+            i.createElement(B.II, {
               type: "text",
               label: (0, N.Xx)("#EventEditor_AddSpeaker_Name"),
               value: t,
@@ -2329,13 +2329,13 @@
             i.createElement(
               "div",
               { className: Q().TitleGroup },
-              i.createElement(b.II, {
+              i.createElement(B.II, {
                 type: "text",
                 label: (0, N.Xx)("#EventEditor_AddSpeaker_Title"),
                 value: a,
                 onChange: (e) => o(e.target.value),
               }),
-              i.createElement(b.II, {
+              i.createElement(B.II, {
                 type: "text",
                 label: (0, N.Xx)("#EventEditor_AddSpeaker_Company"),
                 value: r,
@@ -2386,12 +2386,12 @@
                 "div",
                 { className: Q().AssociateRowCtn },
                 i.createElement(
-                  b.zx,
+                  B.zx,
                   { onClick: () => E(new m.K(X.L7.steamid)) },
                   (0, N.Xx)("#EventEditor_SteamAccount_addme"),
                 ),
                 i.createElement(
-                  b.zx,
+                  B.zx,
                   {
                     onClick: (e) =>
                       (0, c.yV)(
@@ -2402,7 +2402,7 @@
                   (0, N.Xx)("#EventEditor_SteamAccount_addfriend"),
                 ),
                 i.createElement(
-                  b.zx,
+                  B.zx,
                   { onClick: () => E(void 0) },
                   (0, N.Xx)("#EventEditor_SteamAccount_clear"),
                 ),
@@ -2432,7 +2432,7 @@
                 { className: "DialogLabel" },
                 (0, N.Xx)("#EventEditor_AddSpeaker_About"),
               ),
-              i.createElement(b.E0, {
+              i.createElement(B.E0, {
                 value: l,
                 onChange: (e) => d(e.target.value),
                 rows: 8,
@@ -2597,17 +2597,17 @@
                     className: Q().BBCodeEditorInputStyles,
                   },
                   i.createElement(
-                    b.h4,
+                    B.h4,
                     null,
                     " ",
                     (0, N.Xx)("#EventEditor_ImportFromHTML"),
                     " ",
                   ),
                   i.createElement(
-                    b.uT,
+                    B.uT,
                     null,
                     i.createElement(
-                      b.Ac,
+                      B.Ac,
                       null,
                       i.createElement(
                         "div",
@@ -2680,9 +2680,9 @@
                       ),
                     ),
                     i.createElement(
-                      b.$_,
+                      B.$_,
                       null,
-                      i.createElement(b.$0, {
+                      i.createElement(B.$0, {
                         onCancel: e,
                         strOKText: (0, N.Xx)("#Button_Overwrite"),
                         onUpdate: this.OnConvertAndAppendHTML,
@@ -2709,7 +2709,7 @@
         i = n(58112),
         l = n(77936),
         c = n(91618),
-        d = n(68985),
+        d = n(15896),
         m = n(93243),
         p = n(64936),
         u = n(42855),
@@ -2804,7 +2804,7 @@
         const A = u.cb.Get().GetPartnerEventPermissions(E.K.InitFromClanID(n)),
           k = A && (A.can_edit || A.support_user),
           w = (0, f.h4)(),
-          b =
+          B =
             f.De.STORE_BASE_URL +
             "feeds/" +
             (0, L.x3)() +
@@ -2813,7 +2813,7 @@
             f.De.COUNTRY +
             "&l=" +
             f.De.LANGUAGE,
-          B = s.createElement("img", { className: y().AppBannerLogo, src: a });
+          b = s.createElement("img", { className: y().AppBannerLogo, src: a });
         return s.createElement(
           "div",
           { className: y().AppBannerCtn },
@@ -2836,7 +2836,7 @@
                         style: { minWidth: "320px" },
                       },
                     },
-                    B,
+                    b,
                   )
                 : s.createElement(
                     N._,
@@ -2845,12 +2845,12 @@
                       id: r,
                       hoverClassName: y().AppBannerLogoCtn,
                     },
-                    B,
+                    b,
                   )
               : s.createElement(
                   "div",
                   { className: y().AppBannerLogoCtn },
-                  B,
+                  b,
                   " ",
                 ),
             s.createElement(
@@ -2918,7 +2918,7 @@
                     "a",
                     {
                       className: y().AppBannerLink,
-                      href: (0, T.OL)(b),
+                      href: (0, T.OL)(B),
                       target: f.De.IN_CLIENT ? void 0 : "_blank",
                     },
                     s.createElement(_.opd, null),
@@ -2941,8 +2941,8 @@
         );
       });
       var w = n(41424),
-        b = n(78356),
-        B = n(46521),
+        B = n(78356),
+        b = n(46521),
         O = n(98851),
         R = n.n(O),
         G = n(70609),
@@ -2967,7 +2967,6 @@
           n.e(3070),
           n.e(3973),
           n.e(9173),
-          n.e(5119),
           n.e(2449),
           n.e(2832),
           n.e(4601),
@@ -3543,9 +3542,9 @@
                   ),
                 ),
               e.BHasTag("steam_award_nomination_request") &&
-                s.createElement(B.yi, { event: e, lang: S }),
+                s.createElement(b.yi, { event: e, lang: S }),
               e.BHasTag("steam_award_vote_request") &&
-                s.createElement(B.WF, {
+                s.createElement(b.WF, {
                   appID: e.appid,
                   bIsEventActionEnabled: e.BIsEventActionEnabled(),
                   voteCategories: e.GetSteamAwardNomineeCategories(),
@@ -3562,7 +3561,7 @@
                     ),
                     onContextMenu: f.De.IN_CLIENT ? h.T : void 0,
                   },
-                  s.createElement(b.d, {
+                  s.createElement(B.d, {
                     text: _,
                     partnerEventStore: n,
                     event: e,
@@ -3754,7 +3753,7 @@
       "use strict";
       n.d(t, { Y: () => u, k: () => m });
       var a = n(47427),
-        o = n(68985),
+        o = n(15896),
         r = n(1485),
         s = n(10162),
         i = n(50898),
@@ -4079,7 +4078,7 @@
         N = n(1485),
         k = n(10162),
         w = n(46882);
-      const b = (0, r.Pi)((e) => {
+      const B = (0, r.Pi)((e) => {
         const { eventModel: t } = e,
           [n, r] = (0, o.useState)(!0),
           [s, l] = (0, o.useState)(new Set()),
@@ -4249,7 +4248,7 @@
           )
         );
       });
-      var B = n(91618),
+      var b = n(91618),
         O = n(82493),
         R = n(24549),
         G = n(41208),
@@ -4384,7 +4383,7 @@
         }
         OpenRepostDialogs(e) {
           (0, m.AM)(
-            o.createElement(b, { eventModel: this.props.eventModel }),
+            o.createElement(B, { eventModel: this.props.eventModel }),
             (0, p.RA)(e),
           );
         }
@@ -4400,7 +4399,7 @@
             r = (0, s.h4)(),
             l = s.L7.logged_in && x.Get().BCanRepostPartnerEvent();
           return o.createElement(
-            B.s,
+            b.s,
             { className: g().Container, "flow-children": "row", focusable: !1 },
             o.createElement(
               "div",
@@ -4415,7 +4414,7 @@
                   (0, R.AV)(t),
                 ),
                 o.createElement(
-                  B.s,
+                  b.s,
                   {
                     focusable: !0,
                     className: (0, u.Z)(
@@ -4439,7 +4438,7 @@
                   ),
                 ),
                 o.createElement(
-                  B.s,
+                  b.s,
                   {
                     focusable: !0,
                     className: (0, u.Z)(
@@ -4469,7 +4468,7 @@
                   "div",
                   { className: g().VoteContainer },
                   o.createElement(
-                    B.s,
+                    b.s,
                     {
                       focusable: !0,
                       className: (0, u.Z)(
@@ -4491,7 +4490,7 @@
               { className: g().ShareContainer },
               !this.props.bInGamepadUI &&
                 o.createElement(
-                  B.s,
+                  b.s,
                   {
                     focusable: !0,
                     className: (0, u.Z)(
@@ -4546,7 +4545,7 @@
             ),
           !n &&
             o.createElement(
-              B.s,
+              b.s,
               {
                 focusable: !0,
                 onActivate: a,
@@ -4726,66 +4725,6 @@
       };
       _ = (0, a.gn)([s.Pi], _);
     },
-    71472: (e, t, n) => {
-      "use strict";
-      n.d(t, { Ar: () => l, Wo: () => c, i9: () => i, ks: () => r });
-      var a = n(47427),
-        o = n(8285);
-      function r(e, t) {
-        let n;
-        "string" == typeof e
-          ? (n = e)
-          : "location" in e
-            ? (n = e.location.search)
-            : "search" in e && (n = e.search);
-        const a = new URLSearchParams(n.substring(1));
-        if (a.has(t)) {
-          const e = a.getAll(t);
-          return e[e.length - 1];
-        }
-      }
-      const s = (e) => null != e;
-      function i(e, t, n, a = !1) {
-        const o = new URLSearchParams(e.location.search.substring(1));
-        o.delete(t),
-          s(n) && o.append(t, n),
-          a
-            ? e.replace(`?${o.toString()}`, Object.assign({}, e.location.state))
-            : e.push(`?${o.toString()}`);
-      }
-      function l(e, t) {
-        const n = (0, o.k6)(),
-          l = (0, o.TH)(),
-          c = (0, a.useMemo)(() => {
-            const n = r(l.search, e);
-            return s(n)
-              ? s(t)
-                ? "boolean" == typeof t
-                  ? t.constructor("false" !== n)
-                  : t.constructor(n)
-                : n
-              : t;
-          }, [l.search, e, t]),
-          d = (0, a.useCallback)(
-            (t) => {
-              i(n, e, s(t) ? String(t) : null);
-            },
-            [n, e],
-          );
-        return [c, d];
-      }
-      function c(e, t, n = !1) {
-        const a = new URLSearchParams(e.location.search.substring(1));
-        for (const e in t)
-          if (t.hasOwnProperty(e)) {
-            const n = t[e];
-            a.delete(e), s(n) && a.append(e, n);
-          }
-        n
-          ? e.replace(`?${a.toString()}`, Object.assign({}, e.location.state))
-          : e.push(`?${a.toString()}`);
-      }
-    },
     27910: (e, t, n) => {
       "use strict";
       n.d(t, { uW: () => g });
@@ -4906,7 +4845,7 @@
     },
     46521: (e, t, n) => {
       "use strict";
-      n.d(t, { WF: () => U, yi: () => B });
+      n.d(t, { WF: () => U, yi: () => b });
       var a = n(85556),
         o = n(80751),
         r = n.n(o),
@@ -4999,8 +4938,8 @@
           return null;
         });
       }
-      const b = { include_assets: !0 };
-      function B(e) {
+      const B = { include_assets: !0 };
+      function b(e) {
         var t, n;
         const { event: a, lang: o, previewMode: r } = e,
           [s] = (0, i.SZ)(() => [a.GetSteamAwardCategory()]),
@@ -5248,8 +5187,8 @@
             fnOnCancel: r,
             closeModal: s,
           } = e,
-          [i] = (0, u.vs)(t, b),
-          [l] = (0, u.vs)(n, b);
+          [i] = (0, u.vs)(t, B),
+          [l] = (0, u.vs)(n, B);
         return c.createElement(
           f.uH,
           {
@@ -5933,8 +5872,8 @@
         N = n(35427),
         k = n(82182),
         w = n(87972),
-        b = n(16649),
-        B = n(46882),
+        B = n(16649),
+        b = n(46882),
         O = n(78356),
         R = n(5918),
         G = n.n(R),
@@ -6016,7 +5955,7 @@
                 o.token.reason ||
                   (_(!0), E((0, m.Xx)("#EventDisplay_Share_Success")));
               } catch (e) {
-                const t = (0, b.l)(e),
+                const t = (0, B.l)(e),
                   n =
                     (0, m.Xx)("#EventDisplay_Share_Failure") +
                     "\n\n" +
@@ -6046,7 +5985,7 @@
                   "div",
                   { className: G().Container },
                   0 == (null == g ? void 0 : g.length)
-                    ? o.createElement(B.V, { position: "center" })
+                    ? o.createElement(b.V, { position: "center" })
                     : o.createElement("div", null, g),
                   Boolean(v) &&
                     o.createElement(

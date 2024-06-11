@@ -47,7 +47,9 @@
         ListWeeksDebut: "_2MncBw552vxKbkM9arCywZ",
         ListWeeksReturning: "_1aZmrNWUBvB33x3h8za9bF",
         TopSectionFlex: "_2bKWdV5U2BrfG3oLiJtjxp",
+        SteamDeckChartDropdown: "_1N8CP2dzq0c62RNm-MTTek",
         SteamDeckBanner: "_1cbTAisove0MJRamLa2SpQ",
+        SteamDeckBannerWords: "E83jGEMUS1yGii53esbcf",
         SteamDeckBannerTitle: "_3dna9-Ja8UALHZrp-pACoL",
         SteamDeckBannerDesc: "_1BY2vugkNlWaYquJZTLt7k",
       };
@@ -182,7 +184,9 @@
         ListWeeksDebut: "_3VOg1Au8rs5wnnu2fXny0M",
         ListWeeksReturning: "CQijl-dgrfQHKUydm9c2F",
         TopSectionFlex: "_2FYj4SNQUSjh_Q6gsQ8YX8",
+        SteamDeckChartDropdown: "IqoCNSPPuJngiwqCn1Yio",
         SteamDeckBanner: "_2ukfIQbMBHCDkpsiFfK2go",
+        SteamDeckBannerWords: "AtbS6Suu1__tuuK5r43oa",
         SteamDeckBannerTitle: "_2ll5irwHKJ6i4VUArLyaOo",
         SteamDeckBannerDesc: "_3hT5aJvGLEBs1ZQ_nXE4mq",
         WeekBrowseLink: "DOEXqWm8o_z-orpDgJhRO",
@@ -1444,7 +1448,7 @@
       function Y(e) {
         return "global" == e ? "" : e;
       }
-      function Q(e, t) {
+      function q(e, t) {
         let a = "",
           r = "";
         return (
@@ -1452,7 +1456,7 @@
           { direction: a, symbol: r }
         );
       }
-      function q(e, t, a, r) {
+      function Q(e, t, a, r) {
         const n = (0, X.k6)();
         return (
           g.useEffect(() => {
@@ -1471,8 +1475,8 @@
         );
       }
       var K = a(54457),
-        $ = a(13129),
-        J = a(24549),
+        J = a(13129),
+        $ = a(24549),
         ee = a(14467),
         te = a.n(ee),
         ae = a(8114),
@@ -1490,7 +1494,7 @@
           const t = x();
           return t.isLoading
             ? g.createElement("div", {
-                className: (0, $.Z)(
+                className: (0, J.Z)(
                   te().ChartContainerPlaceholder,
                   de().Placeholder,
                 ),
@@ -1517,7 +1521,7 @@
                       g.createElement(
                         "div",
                         { className: te().StatsTitle },
-                        (0, J.AV)(t.data.peak),
+                        (0, $.AV)(t.data.peak),
                       ),
                       g.createElement(
                         "div",
@@ -1535,7 +1539,7 @@
                       g.createElement(
                         "div",
                         { className: te().StatsTitle },
-                        (0, J.AV)(t.data.current),
+                        (0, $.AV)(t.data.current),
                       ),
                       g.createElement(
                         "div",
@@ -1588,7 +1592,7 @@
               ),
               g.createElement(ne.q, { vertical: !1, stroke: "#a0aab6" }),
               g.createElement(se.B, {
-                tickFormatter: J.X_,
+                tickFormatter: $.X_,
                 tick: { fill: "white" },
                 axisLine: !1,
               }),
@@ -1614,7 +1618,7 @@
             null,
             (0, L.kQ)(
               "#SteamCharts_OverviewGraph_Tooltip_OnlineAt",
-              g.createElement("b", null, (0, J.AV)(e.users)),
+              g.createElement("b", null, (0, $.AV)(e.users)),
               e.date.toLocaleString(),
             ),
           );
@@ -1645,7 +1649,7 @@
             { className: ke().PageContainer },
             g.createElement(
               "div",
-              { className: (0, $.Z)(ye().HeaderCtn, ye().WithSubtitle) },
+              { className: (0, J.Z)(ye().HeaderCtn, ye().WithSubtitle) },
               g.createElement(
                 "h1",
                 null,
@@ -1669,7 +1673,7 @@
             ),
             g.createElement(
               "div",
-              { className: (0, $.Z)(de().PageSection, ke().SideBySideCharts) },
+              { className: (0, J.Z)(de().PageSection, ke().SideBySideCharts) },
               g.createElement(
                 "div",
                 { className: ke().Chart },
@@ -1738,7 +1742,7 @@
             ),
             g.createElement(
               "div",
-              { className: (0, $.Z)(de().PageSection, ke().SideBySideCharts) },
+              { className: (0, J.Z)(de().PageSection, ke().SideBySideCharts) },
               g.createElement(
                 "div",
                 { className: ke().Chart },
@@ -1750,7 +1754,7 @@
               ),
               g.createElement(
                 "div",
-                { className: (0, $.Z)(ke().Chart, ke().Monthly) },
+                { className: (0, J.Z)(ke().Chart, ke().Monthly) },
                 g.createElement(
                   me.SV,
                   null,
@@ -1807,7 +1811,7 @@
           { data: s } = (0, K.cs)(...t.GetRealTimeTopSellersQuery());
         if (!s || !s.GetItems().length)
           return g.createElement("div", {
-            className: (0, $.Z)(
+            className: (0, J.Z)(
               ke().OverviewChartPlaceholder,
               de().Placeholder,
             ),
@@ -1851,7 +1855,7 @@
           s = C(t.MostPlayedStore);
         if (!s || s.isLoading)
           return g.createElement("div", {
-            className: (0, $.Z)(
+            className: (0, J.Z)(
               ke().OverviewChartPlaceholder,
               de().Placeholder,
             ),
@@ -1879,7 +1883,7 @@
                 rank: 1,
                 item: l.Item,
                 itemDesc: r,
-                addData: (0, J.AV)(l.nConcurrentInGame),
+                addData: (0, $.AV)(l.nConcurrentInGame),
                 addDataDesc: (0, L.Xx)(
                   "#SteamCharts_OverviewGraph_Desc_InGame",
                 ),
@@ -1892,7 +1896,7 @@
                   key: e.Item.GetUniqueID(),
                   rank: t + 2,
                   item: e.Item,
-                  addData: (0, J.AV)(e.nConcurrentInGame),
+                  addData: (0, $.AV)(e.nConcurrentInGame),
                 }),
               ),
             n,
@@ -2060,11 +2064,11 @@
             null,
             g.createElement("img", {
               src: e,
-              className: (0, $.Z)(ke().BestOfYearBanner, ke().Big),
+              className: (0, J.Z)(ke().BestOfYearBanner, ke().Big),
             }),
             g.createElement("img", {
               src: t,
-              className: (0, $.Z)(ke().BestOfYearBanner, ke().Mobile),
+              className: (0, J.Z)(ke().BestOfYearBanner, ke().Mobile),
             }),
           );
         }
@@ -2142,7 +2146,7 @@
                         },
                         g.createElement(
                           "span",
-                          { className: (0, $.Z)(ye().MenuItemIcon) },
+                          { className: (0, J.Z)(ye().MenuItemIcon) },
                           g.createElement(Oe.SK8, null),
                         ),
                         (0, L.Xx)("#SteamCharts_Menu_Overview"),
@@ -2241,7 +2245,7 @@
               },
               g.createElement(
                 "span",
-                { className: (0, $.Z)(ye().MenuItemIcon) },
+                { className: (0, J.Z)(ye().MenuItemIcon) },
                 g.createElement(Oe.faS, null),
               ),
               (0, L.vX)(t, { timeZone: "UTC" }),
@@ -2250,7 +2254,7 @@
         }
         return g.createElement(
           "div",
-          { className: (0, $.Z)(ye().MenuGroup, ye().Weekly) },
+          { className: (0, J.Z)(ye().MenuGroup, ye().Weekly) },
           g.createElement(
             "div",
             { className: ye().MenuHeader },
@@ -2276,7 +2280,7 @@
             },
             g.createElement(
               "span",
-              { className: (0, $.Z)(ye().MenuItemIcon) },
+              { className: (0, J.Z)(ye().MenuItemIcon) },
               g.createElement(Oe.faS, null),
             ),
             (0, H.Ti)(t),
@@ -2284,7 +2288,7 @@
         });
         return g.createElement(
           "div",
-          { className: (0, $.Z)(ye().MenuGroup, ye().Monthly) },
+          { className: (0, J.Z)(ye().MenuGroup, ye().Monthly) },
           g.createElement(
             "div",
             { className: ye().MenuHeader },
@@ -2306,7 +2310,7 @@
             { className: r ? ye().ActiveLink : "", href: a, key: t },
             g.createElement(
               "span",
-              { className: (0, $.Z)(ye().MenuItemIcon) },
+              { className: (0, J.Z)(ye().MenuItemIcon) },
               g.createElement(Oe.faS, null),
             ),
             (0, H.o9)(t),
@@ -2314,7 +2318,7 @@
         });
         return g.createElement(
           "div",
-          { className: (0, $.Z)(ye().MenuGroup, ye().Monthly) },
+          { className: (0, J.Z)(ye().MenuGroup, ye().Monthly) },
           g.createElement(
             "div",
             { className: ye().MenuHeader },
@@ -2337,7 +2341,7 @@
           { item: t, feature: "topchartlist", className: He().TopChartItem },
           r
             ? g.createElement(Ye, { Item: t })
-            : g.createElement(Qe, {
+            : g.createElement(qe, {
                 strName: t.GetName(),
                 bExcludedByPreferences: a,
               }),
@@ -2357,7 +2361,7 @@
               { className: He().CapsuleDecorator },
               g.createElement(
                 "span",
-                { className: (0, $.Z)(He().Banner) },
+                { className: (0, J.Z)(He().Banner) },
                 g.createElement("img", {
                   src: r ? Ze.Z : ze.Z,
                   className: He().LinesImg,
@@ -2376,7 +2380,7 @@
           g.createElement("div", { className: He().GameName }, t.GetName()),
         );
       }
-      function Qe(e) {
+      function qe(e) {
         const { strName: t, bExcludedByPreferences: a } = e;
         return g.createElement(
           "div",
@@ -2391,10 +2395,10 @@
           ),
         );
       }
-      var qe = a(92797),
+      var Qe = a(92797),
         Ke = a(86437),
-        $e = a(85305),
-        Je = a(31421);
+        Je = a(85305),
+        $e = a(31421);
       function et(e) {
         const { children: t, mostPlayedOption: a } = e;
         return g.createElement(
@@ -2418,13 +2422,13 @@
               ),
               g.createElement(
                 "th",
-                { className: (0, $.Z)(He().RightCell, He().Price) },
+                { className: (0, J.Z)(He().RightCell, He().Price) },
                 (0, L.Xx)("#SteamCharts_TopSellers_TablePrice"),
               ),
               g.createElement(tt, { mostPlayedOption: a }),
               g.createElement(
                 "th",
-                { className: (0, $.Z)(He().RightCell, He().PeakInGame) },
+                { className: (0, J.Z)(He().RightCell, He().PeakInGame) },
                 g.createElement(
                   ie.HP,
                   {
@@ -2469,7 +2473,7 @@
             )
           : g.createElement(
               "th",
-              { className: (0, $.Z)(He().RightCell, He().Concurrent) },
+              { className: (0, J.Z)(He().RightCell, He().Concurrent) },
               g.createElement(
                 ie.HP,
                 {
@@ -2508,7 +2512,7 @@
             { className: He().HoverCell },
             !s &&
               g.createElement(
-                $e.ll,
+                Je.ll,
                 {
                   className: He().HoverSource,
                   item: l,
@@ -2526,7 +2530,7 @@
           g.createElement(
             "td",
             {
-              className: (0, $.Z)(
+              className: (0, J.Z)(
                 He().CapsuleCell,
                 !a.BIsVisible() && He().Unavailable,
               ),
@@ -2539,7 +2543,7 @@
             g.createElement(
               "div",
               { className: He().PriceWidget },
-              g.createElement(qe.Jc, { info: l }),
+              g.createElement(Qe.Jc, { info: l }),
             ),
           ),
           n(),
@@ -2549,9 +2553,9 @@
       function rt(e) {
         const { rank: t } = e,
           { nRank: a, Item: r, nRankLastWeek: n, nPeakInGame: s } = t,
-          l = (0, J.AV)(s),
+          l = (0, $.AV)(s),
           o = (0, fe.bJ)(),
-          c = (0, Je.Hf)(r.GetStorePageURL(), o);
+          c = (0, $e.Hf)(r.GetStorePageURL(), o);
         return g.createElement(
           "tr",
           {
@@ -2569,10 +2573,10 @@
       }
       function nt(e) {
         const { nRank: t, nRankLastWeek: a } = e,
-          { direction: r, symbol: n } = Q(a, t);
+          { direction: r, symbol: n } = q(a, t);
         return g.createElement(
           "td",
-          { className: (0, $.Z)(He().ChangeCell, r) },
+          { className: (0, J.Z)(He().ChangeCell, r) },
           g.createElement(
             ie.HP,
             {
@@ -2595,10 +2599,10 @@
       function st(e) {
         const { rank: t } = e,
           { nRank: a, Item: r, nConcurrentInGame: n, nPeakInGame: s } = t,
-          l = (0, J.AV)(n),
-          o = (0, J.AV)(s),
+          l = (0, $.AV)(n),
+          o = (0, $.AV)(s),
           c = (0, fe.bJ)(),
-          i = (0, Je.Hf)(r.GetStorePageURL(), c);
+          i = (0, $e.Hf)(r.GetStorePageURL(), c);
         return g.createElement(
           "tr",
           {
@@ -2612,7 +2616,7 @@
             renderOptionBasedCell: () =>
               g.createElement(
                 "td",
-                { className: (0, $.Z)(He().ConcurrentCell) },
+                { className: (0, J.Z)(He().ConcurrentCell) },
                 l,
               ),
           }),
@@ -2631,7 +2635,7 @@
             { className: de().ChartPage },
             g.createElement(
               "div",
-              { className: (0, $.Z)(ye().HeaderCtn, ye().WithSubtitle) },
+              { className: (0, J.Z)(ye().HeaderCtn, ye().WithSubtitle) },
               g.createElement(
                 "h1",
                 null,
@@ -2813,7 +2817,7 @@
               ),
               g.createElement(
                 "th",
-                { className: (0, $.Z)(He().RightCell, He().Price) },
+                { className: (0, J.Z)(He().RightCell, He().Price) },
                 g.createElement(
                   ie.HP,
                   {
@@ -2876,13 +2880,13 @@
           { nRank: a, Item: r, nRankLastWeek: n, nConsecutiveWeeks: s } = t,
           l = (0, Ve.C)(r),
           o = (0, fe.bJ)(),
-          c = (0, Je.Hf)(r.GetStorePageURL(), o),
+          c = (0, $e.Hf)(r.GetStorePageURL(), o),
           i = r.GetBestPurchaseOption();
         let m = "";
         r.BIsFree()
           ? (m = (0, L.Xx)("#SteamCharts_TopSellers_TableFree"))
           : i && (m = i.formatted_final_price);
-        const u = (0, J.AV)(s),
+        const u = (0, $.AV)(s),
           d = {
             id: r.GetAppID() || r.GetID(),
             type: (0, Ke.Ds)(
@@ -2901,7 +2905,7 @@
             { className: He().HoverCell },
             !l &&
               g.createElement(
-                $e.ll,
+                Je.ll,
                 {
                   className: He().HoverSource,
                   item: d,
@@ -2919,7 +2923,7 @@
           g.createElement(
             "td",
             {
-              className: (0, $.Z)(
+              className: (0, J.Z)(
                 He().CapsuleCell,
                 !r.BIsVisible() && He().Unavailable,
               ),
@@ -2932,7 +2936,7 @@
             g.createElement(
               "div",
               { className: He().PriceWidget },
-              g.createElement(qe.nk, { storeItem: r }),
+              g.createElement(Qe.nk, { storeItem: r }),
             ),
           ),
           g.createElement(pt, { rank: t }),
@@ -2954,7 +2958,7 @@
       function pt(e) {
         const { rank: t } = e,
           { nRank: a, nRankLastWeek: r, bFirstTop100: n } = t,
-          { direction: s, symbol: l } = Q(r, a);
+          { direction: s, symbol: l } = q(r, a);
         let o;
         return (
           (o =
@@ -2973,7 +2977,7 @@
                   )),
           g.createElement(
             "td",
-            { className: (0, $.Z)(He().ChangeCell, s) },
+            { className: (0, J.Z)(He().ChangeCell, s) },
             g.createElement(
               ie.HP,
               {
@@ -3034,7 +3038,7 @@
             [n],
           ),
           { rtCurrentWeek: l, bCountryListInitialized: o } = G(t, T.De.COUNTRY),
-          c = q(t, o, a, Ft.TopSelling);
+          c = Q(t, o, a, Ft.TopSelling);
         return g.createElement(
           Ee.P,
           { title: (0, L.Xx)("#SteamCharts_Menu_TopSelling") },
@@ -3043,7 +3047,7 @@
             { className: de().ChartPage },
             g.createElement(
               "div",
-              { className: (0, $.Z)(ye().HeaderCtn, ye().WithSubtitle) },
+              { className: (0, J.Z)(ye().HeaderCtn, ye().WithSubtitle) },
               g.createElement(
                 "h1",
                 null,
@@ -3186,7 +3190,7 @@
         const { rtCurrentWeek: l, bCountryListInitialized: o } = G(t, s);
         l && (!n || n > l) && (n = l), n < Z && (n = Z);
         const c = g.useCallback((e) => Ft.TopSellers(e, V(n)), [n]),
-          i = q(t, o, r, c),
+          i = Q(t, o, r, c),
           m = (0, X.k6)(),
           u = a && V(n) == a;
         return (
@@ -3207,7 +3211,7 @@
                   { className: de().ChartPage },
                   g.createElement(
                     "div",
-                    { className: (0, $.Z)(ye().HeaderCtn, ye().WithSubtitle) },
+                    { className: (0, J.Z)(ye().HeaderCtn, ye().WithSubtitle) },
                     g.createElement(
                       "h1",
                       null,
@@ -3283,12 +3287,12 @@
             ),
             g.createElement(
               "div",
-              { className: (0, $.Z)(ye().ChartRangeText, ye().LongDate) },
+              { className: (0, J.Z)(ye().ChartRangeText, ye().LongDate) },
               z(t),
             ),
             g.createElement(
               "div",
-              { className: (0, $.Z)(ye().ChartRangeText, ye().ShortDate) },
+              { className: (0, J.Z)(ye().ChartRangeText, ye().ShortDate) },
               (function (e) {
                 return (0, L.Xx)(
                   "#SteamCharts_TopSellers_WeeklyRangeShort",
@@ -3303,7 +3307,7 @@
         const { strLink: t, children: a } = e;
         return g.createElement(
           "div",
-          { className: (0, $.Z)(ye().ChartNavCtn, t ? "" : ye().Disabled) },
+          { className: (0, J.Z)(ye().ChartNavCtn, t ? "" : ye().Disabled) },
           g.createElement(
             Ce.rU,
             {
@@ -3518,7 +3522,7 @@
             { className: de().ChartPage },
             g.createElement(
               "div",
-              { className: (0, $.Z)(ye().HeaderCtn, ye().WithSubtitle) },
+              { className: (0, J.Z)(ye().HeaderCtn, ye().WithSubtitle) },
               g.createElement(
                 "h1",
                 null,
@@ -3551,10 +3555,10 @@
             ),
             g.createElement(
               "div",
-              { className: (0, $.Z)(de().PageSection) },
+              { className: (0, J.Z)(de().PageSection) },
               g.createElement(
                 "div",
-                { className: (0, $.Z)(de().SectionTitle) },
+                { className: (0, J.Z)(de().SectionTitle) },
                 g.createElement(
                   "b",
                   null,
@@ -3567,10 +3571,10 @@
             ),
             g.createElement(
               "div",
-              { className: (0, $.Z)(de().PageSection) },
+              { className: (0, J.Z)(de().PageSection) },
               g.createElement(
                 "div",
-                { className: (0, $.Z)(de().SectionTitle) },
+                { className: (0, J.Z)(de().SectionTitle) },
                 g.createElement(
                   "b",
                   null,
@@ -3579,7 +3583,7 @@
               ),
               g.createElement(
                 "div",
-                { className: (0, $.Z)(Bt().CategoryBlock) },
+                { className: (0, J.Z)(Bt().CategoryBlock) },
                 g.createElement(
                   me.SV,
                   null,
@@ -3642,7 +3646,7 @@
         return g.createElement(
           "div",
           {
-            className: (0, $.Z)(
+            className: (0, J.Z)(
               Bt().HelpRequestChartContainer,
               !e.data && de().Placeholder,
             ),
@@ -3664,7 +3668,7 @@
               tickFormatter: Xt,
               interval: 7,
             }),
-            g.createElement(se.B, { type: "number", tickFormatter: J.AV }),
+            g.createElement(se.B, { type: "number", tickFormatter: $.AV }),
             g.createElement(le.u, { content: g.createElement(Ut, null) }),
             g.createElement(Ot.D, null),
             a.map((e) =>
@@ -3690,7 +3694,7 @@
             null,
             g.createElement("div", null, Xt(t), ":"),
             Object.keys(r).map((e) =>
-              g.createElement("div", { key: e }, e, ": ", (0, J.AV)(r[e])),
+              g.createElement("div", { key: e }, e, ": ", (0, $.AV)(r[e])),
             ),
           );
         }
@@ -3754,19 +3758,19 @@
               ),
             )
           : g.createElement("div", {
-              className: (0, $.Z)(de().Placeholder, Bt().Placeholder),
+              className: (0, J.Z)(de().Placeholder, Bt().Placeholder),
             });
       }
       function Zt(e) {
         const { row: t } = e;
         return g.createElement(
           "tr",
-          { className: (0, $.Z)(de().TableRow, Bt().TableRow) },
+          { className: (0, J.Z)(de().TableRow, Bt().TableRow) },
           g.createElement("td", { className: Bt().Category }, t.name),
           g.createElement(
             "td",
             { className: Bt().Submitted24h },
-            (0, J.AV)(t.last24),
+            (0, $.AV)(t.last24),
           ),
           g.createElement(
             "td",
@@ -3831,7 +3835,7 @@
             DynamicUserStore: u,
             BestOfYearStore: d,
           },
-          g.createElement(Qt, null),
+          g.createElement(qt, null),
           g.createElement(
             fe.ZP,
             { domain: "store.steampowered.com", controller: "steamcharts" },
@@ -3954,7 +3958,7 @@
           ),
         );
       }
-      function Qt() {
+      function qt() {
         const { pathname: e } = (0, X.TH)();
         return (
           g.useEffect(() => {

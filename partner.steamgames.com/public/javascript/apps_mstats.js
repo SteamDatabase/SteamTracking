@@ -75,7 +75,8 @@ function testUTMLink( linktotest )
 
 	// check if there are other issues with the link.
 	// Allow steam://openurl/ at the start
-	let re = new RegExp( '^(steam:\/\/openurl\/)?https?:\/\/store\.steampowered\.com\/app\/[0-9]+(\/?|\/[A-Za-z0-9_]*\/?)\\?(utm_campaign|utm_source|(utm_[A-Za-z0-9_]*=[A-Za-z0-9_]*&utm_campaign)|(utm_[A-Za-z0-9_]*=[A-Za-z0-9_]*&utm_source))=', 'i' );
+	// The character check A-Za-z0-9$_.!*(),%\'\- is non-reserved URL characters and % to allow for url encoded characters
+	let re = new RegExp( '^(steam:\/\/openurl\/)?https?:\/\/store\.steampowered\.com\/app\/[0-9]+(\/?|\/[A-Za-z0-9_]*\/?)\\?(utm_[A-Za-z]+=[A-Za-z0-9$_.!*(),%\'\-]+\&*)*(utm_source=[A-Za-z0-9$_.!*(),%\'\-]+|utm_campaign=[A-Za-z0-9$_.!*(),%\'\-]+)+', 'i' );
 
 	return re.test( linktotest ) ? successlabel : errorlabel + 'The link does not appear valid. If you believe the link is formatted correctly please <a target="_blank" href="https://help.steampowered.com/en/wizard/HelpWithPublishing?issueid=905">contact us</a>.';
 

@@ -15997,7 +15997,7 @@
           ),
         );
       });
-      var zr = a(68985);
+      var zr = a(15896);
       function Zr(e, t, a) {
         return {
           color: e,
@@ -21062,7 +21062,7 @@
         A = a(45335),
         k = a(83059),
         B = a(28538),
-        L = a(68985),
+        L = a(15896),
         T = a(74009);
       function P(e) {
         return (
@@ -23506,7 +23506,7 @@
     11578: (e, t, a) => {
       "use strict";
       a.d(t, { V: () => r });
-      var n = a(68985);
+      var n = a(15896);
       function r(e, t, a) {
         if (e.disable_background && !a)
           return { paddingLeft: 0, paddingRight: 0 };

@@ -714,6 +714,7 @@
         InfoStylesBackground: "_3YqPicnANA2QCmuZdBuzHa",
         Padding: "_2oWai6yw7SRKZ3UtbQqcZt",
         NotTooWideModal: "_3P6SelqDLJPtYY0xlkOEfE",
+        ImageManageDialog: "_3m3RVvfgDyt28g_j9n5z0J",
       };
     },
     56707: (e) => {
@@ -868,6 +869,7 @@
         ComparisonRichTable: "_2w_R3Bo-RtRevFBLLm7YiP",
         VisualBar: "_1wyrgeD5xB4NDh_j0XcbRe",
         QuickViewCtn: "_12r1vgRWsvnLlqz1vk7yTj",
+        SaleItems: "_1MosDHRNRdW5MSA-g1oxTa",
       };
     },
     21401: (e) => {
@@ -20417,6 +20419,7 @@
           s.Ks,
           Object.assign(
             {
+              className: "tool-tip-source",
               noFocusRing: !0,
               focusable:
                 null !== (t = e.bNavStop) && void 0 !== t ? t : !!n.onClick,
@@ -21489,23 +21492,25 @@
       function _(e, t) {
         let n = null == e ? void 0 : e.parentElement;
         for (; n; ) {
-          if (!t || "x" == t) {
-            const e = window.getComputedStyle(n);
-            if (
-              "scroll" == e.overflowX ||
-              "auto" == e.overflowX ||
-              "fixed" == e.position
-            )
-              break;
-          }
-          if (!t || "y" == t) {
-            const e = window.getComputedStyle(n);
-            if (
-              "scroll" == e.overflowY ||
-              "auto" == e.overflowY ||
-              "fixed" == e.position
-            )
-              break;
+          if (o(n)) {
+            if (!t || "x" == t) {
+              const e = window.getComputedStyle(n);
+              if (
+                "scroll" == e.overflowX ||
+                "auto" == e.overflowX ||
+                "fixed" == e.position
+              )
+                break;
+            }
+            if (!t || "y" == t) {
+              const e = window.getComputedStyle(n);
+              if (
+                "scroll" == e.overflowY ||
+                "auto" == e.overflowY ||
+                "fixed" == e.position
+              )
+                break;
+            }
           }
           n = n.parentElement;
         }
@@ -22611,7 +22616,6 @@
         vK: () => o.vK,
         Yz: () => o.Yz,
         kD: () => o.kD,
-        S: () => o.S,
         X9: () => o.X9,
         BE: () => i.BE,
         I5: () => o.I5,
@@ -22694,18 +22698,17 @@
       "use strict";
       n.d(t, {
         B8: () => s,
-        Dc: () => _,
-        I5: () => b,
+        Dc: () => g,
+        I5: () => C,
         JI: () => d,
         KM: () => c,
         NW: () => l,
         Qg: () => m,
-        S: () => v,
-        X9: () => C,
+        X9: () => v,
         Yz: () => a,
         e1: () => p,
         eF: () => u,
-        kD: () => f,
+        kD: () => _,
         vK: () => h,
       });
       var o = n(47427),
@@ -22792,24 +22795,7 @@
           t
         );
       }
-      function g(e) {
-        const t = o.useRef(null);
-        return (
-          o.useEffect(() => {
-            t.current = e;
-          }),
-          t.current
-        );
-      }
-      function v(e, t, n = "") {
-        var i;
-        const r = null !== (i = g(t)) && void 0 !== i ? i : [];
-        for (let e = 0; e < r.length; e++)
-          r[e] !== t[e] &&
-            console.log(`[${n}] useMemo dependency #${e} changed:`, r[e], t[e]);
-        return o.useMemo(e, t);
-      }
-      function _(e, t) {
+      function g(e, t) {
         return (
           (function (e, t) {
             const [n, i] = o.useState(e);
@@ -22826,7 +22812,7 @@
           })(e, t) || e
         );
       }
-      function C(e = !1) {
+      function v(e = !1) {
         const [t, n] = o.useState(e);
         return [
           t,
@@ -22834,7 +22820,7 @@
           o.useCallback(() => n(!1), []),
         ];
       }
-      function f(e) {
+      function _(e) {
         const t = o.useRef();
         return o.useCallback(
           () => (
@@ -22845,7 +22831,7 @@
           [e],
         );
       }
-      function b(e) {
+      function C(e) {
         return (0, i.xK)(
           (t) => {
             if (!t || !e) return;
@@ -24459,7 +24445,7 @@
             n.e(2715),
             n.e(7485),
             n.e(2136),
-          ]).then(n.bind(n, 50073)),
+          ]).then(n.bind(n, 34083)),
         ),
         de = c.lazy(() =>
           Promise.all([
@@ -24515,11 +24501,11 @@
             n.e(2715),
             n.e(7485),
             n.e(2136),
-          ]).then(n.bind(n, 75816)),
+          ]).then(n.bind(n, 91843)),
         ),
         me = c.lazy(() =>
           Promise.all([n.e(3552), n.e(5612), n.e(5117), n.e(5676)]).then(
-            n.bind(n, 30141),
+            n.bind(n, 67890),
           ),
         ),
         pe = c.lazy(() =>
@@ -24536,7 +24522,7 @@
             n.e(9784),
             n.e(4650),
             n.e(8974),
-          ]).then(n.bind(n, 46579)),
+          ]).then(n.bind(n, 9818)),
         ),
         ge = c.lazy(() => n.e(4935).then(n.bind(n, 21452))),
         ve = c.lazy(() =>

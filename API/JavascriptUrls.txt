@@ -380,6 +380,7 @@ ${COMMUNITY_URL}oauth/login?client_id=${CLIENT_ID}&response_type=token&state=fil
 ${HELP_BASE_URL}
 ${HELP_BASE_URL}${}/
 ${HELP_BASE_URL}en/ticketmaster/ticket/${help_requestid}
+${HELP_BASE_URL}en/wizard/HelpRequest/${_ ? _ : _}
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=919
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=933
 ${HELP_BASE_URL}faqs/view/${url_code}
@@ -387,7 +388,6 @@ ${HELP_BASE_URL}faqs/view/054C-3167-DD7F-49D4
 ${HELP_BASE_URL}faqs/view/0689-74B8-92AC-10F2
 ${HELP_BASE_URL}faqs/view/548F-BC55-89EB-1BC8
 ${HELP_BASE_URL}faqs/view/71D3-35C2-AD96-AA3A
-${HELP_BASE_URL}ticketmaster/ticket/${_ ? _ : _}
 ${HELP_BASE_URL}wizard/HelpRecoverFamilyMember?childid=${}
 ${HELP_BASE_URL}wizard/HelpRequest/${ticket}
 ${HELP_BASE_URL}wizard/HelpRequests
@@ -1016,6 +1016,7 @@ ${PARTNER_BASE_URL}optin/ajaxinvitepartnersorapps
 ${PARTNER_BASE_URL}optin/ajaxpruneapp
 ${PARTNER_BASE_URL}optin/ajaxrefreshoptinstats
 ${PARTNER_BASE_URL}optin/ajaxsetappealsdecision/${}
+${PARTNER_BASE_URL}optin/ajaxsubmitsurvey/pageid
 ${PARTNER_BASE_URL}optin/ajaxupdateadditionalfeaturingapps
 ${PARTNER_BASE_URL}optin/ajaxupdateoptinregistration/${appid}
 ${PARTNER_BASE_URL}optin/ajaxupdateoptinregistration/${}
@@ -1036,6 +1037,8 @@ ${PARTNER_BASE_URL}optin/sale/${}/${}
 ${PARTNER_BASE_URL}optin/sale/${}/100
 ${PARTNER_BASE_URL}optin/sale/${}/220
 ${PARTNER_BASE_URL}optin/salepreview/${}/20
+${PARTNER_BASE_URL}optin/survey/${}/${}
+${PARTNER_BASE_URL}optin/survey/${}/220
 ${PARTNER_BASE_URL}packages/approvepricing
 ${PARTNER_BASE_URL}packages/createoreditdiscount/${packageID}
 ${PARTNER_BASE_URL}packages/discounts/${packageID}
@@ -1091,7 +1094,7 @@ ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?rt_feature_start=${}&rt
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?saleclaneventgid=${}&saleclanaccountid=${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=${}${}&count=${}${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=${}&count=${}${}
-${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=0&count=100${}
+${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=0&count=50${}
 ${PARTNER_BASE_URL}promotion/marketingmessages/ajaxgetsnrmetrics
 ${PARTNER_BASE_URL}promotion/marketingmessages/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}promotion/marketingmessages/dashboard
@@ -2835,6 +2838,7 @@ https://store.akamai.steamstatic.com/public/images/loyalty/reactions/still/${awa
 https://store.akamai.steamstatic.com/public/images/recommended_thumb.png
 https://store.akamai.steamstatic.com/public/images/v5/ico_external_link.gif
 https://store.akamai.steamstatic.com/public/images/v6/home/header_placeholder_460x215.gif
+https://store.akamai.steamstatic.com/public/images/v6/home/hero_placeholder_374x448.gif
 https://store.akamai.steamstatic.com/public/images/v6/home/maincap_placeholder_616x353.gif
 https://store.akamai.steamstatic.com/public/shared/images/apphubs/play_icon80.png
 https://store.akamai.steamstatic.com/public/shared/images/icon_share_ios.svg

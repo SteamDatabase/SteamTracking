@@ -1145,9 +1145,10 @@
         $N: () => l,
         D_: () => r,
         FR: () => o,
-        Vy: () => c,
-        W4: () => d,
+        Vy: () => d,
+        W4: () => m,
         h1: () => s,
+        hu: () => c,
       });
       const a = [1, 3, 2],
         i = [1, 3],
@@ -1337,10 +1338,16 @@
           (!!a.bDisableEnforceDimensions || !(e < a.width || t < a.height))
         );
       }
-      function c(e, t) {
-        return t.filter((t) => d(e, t));
+      function c(e) {
+        const t = s[e];
+        return (
+          t.rgAcceptableTypes.includes(6) || t.rgAcceptableTypes.includes(7)
+        );
       }
       function d(e, t) {
+        return t.filter((t) => m(e, t));
+      }
+      function m(e, t) {
         return s[t].rgAcceptableTypes.includes(e);
       }
     },
@@ -1455,7 +1462,7 @@
         Z9: () => M,
         TL: () => k,
         Kt: () => P,
-        fY: () => U,
+        fY: () => x,
         MZ: () => se,
         a4: () => ne,
         Zx: () => ae,
@@ -1488,7 +1495,7 @@
         RQ: () => O,
         _L: () => N,
         z5: () => j,
-        Pg: () => x,
+        Pg: () => U,
         Vv: () => oe,
         ON: () => he,
       });
@@ -1499,7 +1506,7 @@
         o = n(5891),
         l = n(35427),
         c = n(19399),
-        d = n(68985),
+        d = n(15896),
         m = n(93243),
         u = n(58670),
         p = n(64936),
@@ -1576,7 +1583,7 @@
           (e[(e.k_EEventStateStaged = 1)] = "k_EEventStateStaged"),
           (e[(e.k_EEventStateVisible = 2)] = "k_EEventStateVisible");
       })(F || (F = {}));
-      const x = [
+      const U = [
         "newandtrending",
         "topwishlisted",
         "trendingwishlisted",
@@ -1596,8 +1603,8 @@
         "contenthub_upcoming",
         "contenthub_all",
       ];
-      function U(e) {
-        return x.indexOf(e) >= 0;
+      function x(e) {
+        return U.indexOf(e) >= 0;
       }
       const j = [
         {
@@ -1852,6 +1859,9 @@
           "enable_steam_china",
           "disable_steam_global",
           "adult_only_content",
+          "stablechannel",
+          "betachannel",
+          "previewchannel",
         ],
         ue = [
           "patchnotes",
@@ -2105,12 +2115,7 @@
               ? (t = this.jsondata.localized_sale_logo)
               : "sale_overlay" === e
                 ? (t = this.jsondata.localized_sale_overlay)
-                : "localized_image_group" === e ||
-                    "link_capsule" === e ||
-                    "product_banner_override" === e ||
-                    "product_mobile_banner_override" === e ||
-                    "sale_section_title" === e ||
-                    "schedule_track_art" === e
+                : d.KU.includes(e)
                   ? (t = d.U8.GetLocalizedImageGroupForEditAsImgArray(
                       this.clanSteamID,
                     ))
@@ -2149,6 +2154,10 @@
           return n && n.length > t && null != n[t]
             ? n[t].substr(0, n[t].length - 4)
             : null;
+        }
+        GetImageHashAndExt(e, t = 0) {
+          let n = this.GetImgArray(e);
+          return n && n.length > t && null != n[t] ? n[t] : null;
         }
         BHasSomeImage(e) {
           let t = this.GetImgArray(e);
@@ -5327,7 +5336,7 @@
         m = n(50423),
         u = n(31846),
         p = n(37563),
-        h = n(68985),
+        h = n(15896),
         _ = n(12055),
         g = n(20029);
       class v {
@@ -5608,13 +5617,13 @@
     },
     12055: (e, t, n) => {
       "use strict";
-      n.d(t, { Mr: () => m });
+      n.d(t, { Mr: () => p, RB: () => d, nZ: () => m });
       var a = n(85556),
         i = n(54842),
         r = n(27174),
         s = n(50423),
         o = n(31846),
-        l = n(68985);
+        l = n(15896);
       class c {
         constructor(e, t, n, a, s, o) {
           if (
@@ -5655,18 +5664,18 @@
           }
           const d = this.width >= a && this.height >= i,
             m = s ? this.width === a && this.height === i : d,
-            p = n && n != this.fileType,
-            h =
+            u = n && n != this.fileType,
+            p =
               !!(e && e.length > 0) &&
               0 == (0, r.Vy)(this.fileType, e || []).length,
-            _ = Boolean(u(this.fileType));
+            _ = Boolean(h(this.fileType));
           let g = "",
             v = !1;
           return (
             c
-              ? h
+              ? p
                 ? (g = (0, o.Xx)("#ImageUpload_InvalidFileType"))
-                : p
+                : u
                   ? (g = (0, o.Xx)(
                       "#ImageUpload_InvalidFormat",
                       l.aN.GetExtensionStringForFileType(n),
@@ -5694,19 +5703,37 @@
         (0, a.gn)([i.LO], c.prototype, "type", void 0),
         (0, a.gn)([i.LO], c.prototype, "status", void 0),
         (0, a.gn)([i.LO], c.prototype, "message", void 0);
-      function d(e) {
+      class d extends c {
+        constructor(e, t, n, a) {
+          super(e, t, a, n.src, n.videoWidth, n.videoHeight), (this.video = n);
+        }
+        BIsOriginalMinimumDimensions(e) {
+          return (0, r.$N)(this.video.videoWidth, this.video.videoHeight, e);
+        }
+        GetResizeDimension() {}
+      }
+      class m extends c {
+        constructor(e, t, n) {
+          super(e, t, n, URL.createObjectURL(e), 0, 0);
+        }
+        BIsOriginalMinimumDimensions(e) {
+          return (0, r.hu)(e);
+        }
+        GetResizeDimension() {}
+      }
+      function u(e) {
         const t = e.split(".").pop().toLocaleLowerCase();
         return "webm" == t || "mp4" == t;
       }
-      class m extends c {
+      class p extends c {
         constructor(e, t, n, a, r) {
           super(
             e,
             t,
             a,
             n.src,
-            d(e.name) ? n.videoWidth : n.width,
-            d(e.name) ? n.videoHeight : n.height,
+            u(e.name) ? n.videoWidth : n.width,
+            u(e.name) ? n.videoHeight : n.height,
           ),
             (this.bCropped = !1),
             (0, i.rC)(this),
@@ -5721,7 +5748,7 @@
         CropImage(e, t, n, i, r, o, l) {
           return (0, a.mG)(this, void 0, void 0, function* () {
             return new Promise((a, c) => {
-              const d = u(l);
+              const d = h(l);
               if (!d) return void c("Invalid format provided");
               const m = document.createElement("canvas");
               (m.width = r), (m.height = o);
@@ -5759,7 +5786,7 @@
           })(this.type);
         }
       }
-      function u(e) {
+      function h(e) {
         switch (e) {
           case 3:
             return "image/png";
@@ -5767,7 +5794,7 @@
             return "image/jpeg";
         }
       }
-      (0, a.gn)([i.LO], m.prototype, "bCropped", void 0);
+      (0, a.gn)([i.LO], p.prototype, "bCropped", void 0);
     },
     20029: (e, t, n) => {
       "use strict";
@@ -5795,15 +5822,16 @@
         return i || t;
       }
     },
-    68985: (e, t, n) => {
+    15896: (e, t, n) => {
       "use strict";
       n.d(t, {
-        aN: () => y,
-        S6: () => I,
-        FN: () => E,
-        U8: () => b,
-        C3: () => w,
-        Fm: () => D,
+        aN: () => B,
+        S6: () => G,
+        FN: () => A,
+        U8: () => L,
+        KU: () => k,
+        C3: () => T,
+        Fm: () => R,
       });
       var a = n(85556),
         i = n(77936),
@@ -5823,8 +5851,225 @@
         C = n(46984),
         f = n(37563),
         S = n(19399);
-      var E;
-      function I(e, t, n, a = !1) {
+      var E = n(16997),
+        I = n(65255),
+        y = n(12055),
+        b = n(20029);
+      class w {
+        constructor(e, t) {
+          (this.m_filesToUpload = o.LO.array()),
+            (this.m_strUploadPath = null),
+            (this.m_fnUploadSuccessCallback = null),
+            (0, o.rC)(this),
+            (this.m_strUploadPath = e),
+            (this.m_fnUploadSuccessCallback = t);
+        }
+        GetUploadImages() {
+          return this.m_filesToUpload;
+        }
+        ClearImages() {
+          this.m_filesToUpload = o.LO.array();
+        }
+        DeleteUploadImage(e) {
+          const t = this.m_filesToUpload.findIndex(
+            (t) => e.file == t.file && e.uploadTime == t.uploadTime,
+          );
+          t >= 0 &&
+            (this.m_filesToUpload.splice(t, 1),
+            (this.m_filesToUpload = [...this.m_filesToUpload]));
+        }
+        isImageFile(e) {
+          return e.type.startsWith("image/");
+        }
+        isVideoFile(e) {
+          return e.type.startsWith("video/");
+        }
+        isSubtitleTextFile(e) {
+          return (
+            e.type.startsWith("text/") ||
+            ("" == e.type && e.name.split("?")[0].endsWith(".vtt")) ||
+            ("" == e.type && e.name.split("?")[0].endsWith(".srt"))
+          );
+        }
+        AddImageForLanguage(e, t, n, i) {
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            let a = !1;
+            return (
+              yield new Promise((r) => {
+                if (this.isImageFile(e)) {
+                  const s = new FileReader();
+                  (s.onload = () => {
+                    const o = new Image();
+                    (o.onload = () => {
+                      const s = new y.Mr(e, t, o, n, i);
+                      (this.m_filesToUpload = [...this.m_filesToUpload, s]),
+                        (a = !0),
+                        r();
+                    }),
+                      (o.onerror = (e) => {
+                        console.error(
+                          "CCloudImageUploader failed to load the image, details",
+                          e,
+                        ),
+                          (a = !1),
+                          r();
+                      }),
+                      (o.src = s.result.toString());
+                  }),
+                    s.readAsDataURL(e);
+                } else if (this.isVideoFile(e)) {
+                  const i = document.createElement("video");
+                  (i.preload = "metadata"),
+                    i.addEventListener("loadedmetadata", () => {
+                      const s = new y.RB(e, t, i, n);
+                      (this.m_filesToUpload = [...this.m_filesToUpload, s]),
+                        (a = !0),
+                        r();
+                    }),
+                    (i.onerror = (e) => {
+                      console.error(
+                        "CCloudImageUploader failed to load the video, details",
+                        e,
+                      ),
+                        (a = !1),
+                        r();
+                    }),
+                    (i.src = URL.createObjectURL(e));
+                } else
+                  this.isSubtitleTextFile(e)
+                    ? ((this.m_filesToUpload = [
+                        ...this.m_filesToUpload,
+                        new y.nZ(e, t, n),
+                      ]),
+                      (a = !0),
+                      r())
+                    : (console.error(
+                        "CCloudImageUploader failed to determine file type, not image, video or subtitle",
+                        e,
+                        e.type,
+                      ),
+                      (a = !1));
+              }),
+              a
+            );
+          });
+        }
+        UploadAllImages(e, t, n, i, r) {
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            const a = {};
+            for (const e of this.m_filesToUpload)
+              if ("pending" === e.status) {
+                const t = e.IsValidAssetType(n, i, r);
+                if (!t.error && !t.needsCrop) {
+                  e.status = "uploading";
+                  a[`${e.uploadTime}/${e.file.name}`] = this.UploadFile(
+                    e.file,
+                    e.file.name,
+                    e.language,
+                    t.match,
+                  );
+                }
+              }
+            const s = yield (0, g.bX)(a);
+            return (
+              Object.keys(s).forEach((n) => {
+                const a = s[n],
+                  i = this.m_filesToUpload.find(
+                    (e) => `${e.uploadTime}/${e.file.name}` === n,
+                  );
+                if (i)
+                  if (a && 1 === a.success) {
+                    i.status = "success";
+                    const n = (0, b.C)(a.language, t, e);
+                    this.m_fnUploadSuccessCallback(
+                      a.image_hash,
+                      a.file_name,
+                      n,
+                      (function (e) {
+                        switch (e) {
+                          case 2:
+                            return "image/gif";
+                          case 1:
+                            return "image/jpeg";
+                          case 3:
+                            return "image/png";
+                          case 4:
+                            return "video/mp4";
+                          case 5:
+                            return "video/webm";
+                          case 6:
+                            return "text/vtt";
+                          case 7:
+                            return "text/srt";
+                        }
+                        return null;
+                      })(a.file_type),
+                      i.type,
+                      i.width,
+                      i.height,
+                    );
+                  } else (i.status = "failed"), (i.message = a.message);
+              }),
+              s
+            );
+          });
+        }
+        UploadFile(e, t, n, i, r, o) {
+          return (0, a.mG)(this, void 0, void 0, function* () {
+            let a = null;
+            const r = new FormData();
+            r.append("assetfile", e, t),
+              r.append("sessionid", I.De.SESSIONID),
+              r.append("elangauge", "" + n),
+              r.append("originalname", t),
+              i && r.append("arttype", i);
+            const o = D(t);
+            if (!o)
+              return {
+                success: 8,
+                message: "Invalid file extension, cannot determine mimetype",
+              };
+            r.append("mimetype", o);
+            try {
+              a = yield s().post(this.m_strUploadPath, r, {
+                withCredentials: !0,
+                headers: { "Content-Type": "multipart/form-data" },
+              });
+            } catch (e) {
+              const t = (0, _.l)(e);
+              console.log("CCloudImageUploader.UploadFile failed ", t, e),
+                (a = e.response);
+            }
+            return null == a ? void 0 : a.data;
+          });
+        }
+      }
+      function D(e) {
+        const t = e.toLowerCase();
+        return t.endsWith(".jpg")
+          ? "image/jpeg"
+          : t.endsWith(".png")
+            ? "image/png"
+            : t.endsWith(".gif")
+              ? "image/gif"
+              : t.endsWith(".mp4")
+                ? "video/mp4"
+                : t.endsWith(".webm")
+                  ? "video/webm"
+                  : t.endsWith(".srt")
+                    ? "text/srt"
+                    : t.endsWith(".vtt")
+                      ? "text/vtt"
+                      : null;
+      }
+      (0, a.gn)([o.LO], w.prototype, "m_filesToUpload", void 0),
+        (0, a.gn)([E.a], w.prototype, "GetUploadImages", null),
+        (0, a.gn)([E.a], w.prototype, "ClearImages", null),
+        (0, a.gn)([E.a], w.prototype, "DeleteUploadImage", null),
+        (0, a.gn)([E.a], w.prototype, "AddImageForLanguage", null),
+        (0, a.gn)([E.a], w.prototype, "UploadAllImages", null);
+      var A;
+      function G(e, t, n, a = !1) {
         if (n)
           for (let i of n) {
             if (a ? (0, c.$N)(e, t, i) : (0, c.FR)(e, t, i)) return i;
@@ -5836,8 +6081,16 @@
           (e.background_mini = "_480x156"),
           (e.capsule_main = "_400x225"),
           (e.spotlight_main = "_1054x230");
-      })(E || (E = {}));
-      class y {
+      })(A || (A = {}));
+      const k = [
+        "localized_image_group",
+        "link_capsule",
+        "product_mobile_banner_override",
+        "product_banner_override",
+        "sale_section_title",
+        "schedule_track_art",
+      ];
+      class B {
         constructor() {
           (this.m_mapClanToImages = new Map()),
             (this.m_mapClanImageLoadPromises = new Map()),
@@ -5884,7 +6137,7 @@
           }
         }
         static GetExtensionString(e) {
-          return y.GetExtensionStringForFileType(e.file_type) || ".jpg";
+          return B.GetExtensionStringForFileType(e.file_type) || ".jpg";
         }
         static GetExtensionTypeFromURL(e) {
           return (function (e) {
@@ -5911,10 +6164,10 @@
           })(e);
         }
         static GetHashAndExt(e) {
-          return e.image_hash + y.GetExtensionString(e);
+          return e ? e.image_hash + B.GetExtensionString(e) : null;
         }
         static GetThumbHashAndExt(e) {
-          return e.thumbnail_hash + y.GetExtensionString(e);
+          return e ? e.thumbnail_hash + B.GetExtensionString(e) : null;
         }
         AddClanImageDragListener(e) {
           -1 == this.m_vecClanImageDragListener.indexOf(e) &&
@@ -5985,7 +6238,7 @@
           return t || new Array();
         }
         GetFilteredClanImages(e, t) {
-          let n = b.GetClanImages(e);
+          let n = L.GetClanImages(e);
           return this.GetFilteredClanImagesList(n, t);
         }
         GetFilteredClanImagesList(e, t) {
@@ -6054,8 +6307,8 @@
         static GetExtensionStringFromHashAndExt(e) {
           return e.substring(e.lastIndexOf("."));
         }
-        static GenerateArtworkURLFromHashAndExtensions(e, t, n = E.full, a, r) {
-          if (n != E.full || a) {
+        static GenerateArtworkURLFromHashAndExtensions(e, t, n = A.full, a, r) {
+          if (n != A.full || a) {
             let s = t.substring(t.lastIndexOf(".")),
               o = t.substring(0, t.length - s.length);
             return a && "localized_image_group" == r
@@ -6080,21 +6333,12 @@
           return n && (a += "&lang=" + n), a;
         }
         static GetMimeType(e) {
-          let t = e.substr(e.length - 3);
-          switch (t) {
-            case "jpg":
-              return "image/jpeg";
-            case "gif":
-              return "image/gif";
-            case "png":
-              return "image/png";
-          }
-          return "image/" + t;
+          return D(e);
         }
         AsyncGetImageResolution(e, t, n, i, r) {
           return (0, a.mG)(this, void 0, void 0, function* () {
-            const a = t + y.GetExtensionString({ file_type: n }),
-              s = y.GenerateEditableArtworkURLFromHashAndExtension(e, a);
+            const a = t + B.GetExtensionString({ file_type: n }),
+              s = B.GenerateEditableArtworkURLFromHashAndExtension(e, a);
             return yield this.AsyncGetImageResolutionInternal(s, i, r);
           });
         }
@@ -6198,7 +6442,7 @@
                 width: s,
                 height: s,
               });
-            return u.image_hash + y.GetExtensionString(u);
+            return u.image_hash + B.GetExtensionString(u);
           });
         }
         BDoesClanImageFileExistsOnCDNOrOrigin(e, t, n, i) {
@@ -6231,6 +6475,12 @@
               null,
             )));
         }
+        GetPrimaryImageForImageGroup() {
+          var e;
+          return null === (e = this.m_curLocImageGroup) || void 0 === e
+            ? void 0
+            : e.primaryImage;
+        }
         ClearImageGroup() {
           (this.m_curLocImageGroup = null),
             (this.m_curLocImageGroupType = null);
@@ -6239,10 +6489,16 @@
           return this.m_curLocImageGroup;
         }
         GetLocalizedImageGroupForEditAsURL(e, t) {
-          let n = this.m_curLocImageGroup.primaryImage;
-          return this.m_curLocImageGroup.localized_images[t]
-            ? this.m_curLocImageGroup.localized_images[t]
-            : y.GenerateArtworkURLFromHashAndExtensions(e, y.GetHashAndExt(n));
+          if (this.m_curLocImageGroup) {
+            let n = this.m_curLocImageGroup.primaryImage;
+            return this.m_curLocImageGroup.localized_images[t]
+              ? this.m_curLocImageGroup.localized_images[t]
+              : B.GenerateArtworkURLFromHashAndExtensions(
+                  e,
+                  B.GetHashAndExt(n),
+                );
+          }
+          return null;
         }
         GetLocalizedImageGroupForEditAsImgArray(e) {
           return this.GetAllLocalizedGroupImages();
@@ -6251,7 +6507,7 @@
           return (0, a.mG)(this, void 0, void 0, function* () {
             let t = this.m_curLocImageGroup.primaryImage,
               n = d.K.InitFromClanID(t.clanAccountID),
-              a = y.GetHashAndExt(t),
+              a = B.GetHashAndExt(t),
               i = [];
             for (let t = 0; t < 31; ++t)
               i.push(this.BDoesClanImageFileExistsOnCDNOrOrigin(e, n, a, t));
@@ -6260,10 +6516,10 @@
               for (let e = 0; e < 31; ++e)
                 r[e] &&
                   (this.m_curLocImageGroup.localized_images[e] =
-                    y.GenerateArtworkURLFromHashAndExtensions(
+                    B.GenerateArtworkURLFromHashAndExtensions(
                       n,
                       a,
-                      E.full,
+                      A.full,
                       e,
                       this.m_curLocImageGroupType,
                     ));
@@ -6273,10 +6529,10 @@
         SetLocalizedImageGroupAtLang(e, t, n) {
           this.m_curLocImageGroup &&
             (this.m_curLocImageGroup.localized_images[e] = n
-              ? y.GenerateArtworkURLFromHashAndExtensions(
+              ? B.GenerateArtworkURLFromHashAndExtensions(
                   t,
                   n,
-                  E.full,
+                  A.full,
                   e,
                   this.m_curLocImageGroupType,
                 )
@@ -6286,12 +6542,12 @@
           let n = this.m_curLocImageGroup.primaryImage;
           if (n.image_hash == e) {
             let e = d.K.InitFromClanID(n.clanAccountID),
-              a = y.GetHashAndExt(n);
+              a = B.GetHashAndExt(n);
             this.m_curLocImageGroup.localized_images[t] =
-              y.GenerateArtworkURLFromHashAndExtensions(
+              B.GenerateArtworkURLFromHashAndExtensions(
                 e,
                 a,
-                E.full,
+                A.full,
                 t,
                 this.m_curLocImageGroupType,
               );
@@ -6305,23 +6561,23 @@
           );
         }
       }
-      (0, a.gn)([o.LO], y.prototype, "m_mapClanToImages", void 0),
-        (0, a.gn)([o.LO], y.prototype, "m_mapClanImageLoadState", void 0),
-        (0, a.gn)([o.LO], y.prototype, "m_curLocImageGroup", void 0);
-      const b = new y();
-      function w(e) {
-        const [t, n] = (0, l.useState)(b.GetClanImagesByAccount(e));
-        return (0, v.Qg)(b.GetImageListCallbackForClanAccountID(e), n), t;
+      (0, a.gn)([o.LO], B.prototype, "m_mapClanToImages", void 0),
+        (0, a.gn)([o.LO], B.prototype, "m_mapClanImageLoadState", void 0),
+        (0, a.gn)([o.LO], B.prototype, "m_curLocImageGroup", void 0);
+      const L = new B();
+      function T(e) {
+        const [t, n] = (0, l.useState)(L.GetClanImagesByAccount(e));
+        return (0, v.Qg)(L.GetImageListCallbackForClanAccountID(e), n), t;
       }
-      function D(e) {
+      function R(e) {
         const t = d.K.InitFromClanID(e),
           n = (0, u.T)("useLoadClanImages"),
-          [a, i] = (0, l.useState)(() => b.BHasLoadedClanImages(t));
+          [a, i] = (0, l.useState)(() => L.BHasLoadedClanImages(t));
         return (
           (0, l.useEffect)(() => {
             const t = d.K.InitFromClanID(e);
-            b.BHasLoadedClanImages(t) ||
-              b.LoadClanImages(t, !1, n).then(() => i(!0));
+            L.BHasLoadedClanImages(t) ||
+              L.LoadClanImages(t, !1, n).then(() => i(!0));
           }, [e, n]),
           a
         );
@@ -12407,8 +12663,8 @@
         M = n(35714),
         P = n.n(M),
         F = n(80212),
-        x = n(7769),
-        U = n.n(x),
+        U = n(7769),
+        x = n.n(U),
         j = n(29480);
       const W = "DEBUG_UseNewGameHover";
       function Z() {
@@ -12934,7 +13190,7 @@
               {
                 className: (0, T.Z)(
                   P().GameHoverCapsuleCtn,
-                  U().InGameHover,
+                  x().InGameHover,
                   a && P().UseHidingBottomHalf,
                 ),
                 onClick: o,
@@ -13479,7 +13735,7 @@
     },
     85884: (e, t, n) => {
       "use strict";
-      n.d(t, { Hl: () => z, S$: () => Y, a4: () => X, ju: () => U });
+      n.d(t, { Hl: () => z, S$: () => Y, a4: () => X, ju: () => x });
       var a = n(27605),
         i = n(47427),
         r = n(23231),
@@ -13518,8 +13774,8 @@
         M = n(7769),
         P = n.n(M),
         F = n(34913),
-        x = n(7260);
-      const U = (0, a.Pi)((e) => {
+        U = n(7260);
+      const x = (0, a.Pi)((e) => {
           var t;
           const {
               myInstance: n,
@@ -13539,8 +13795,8 @@
               bHidePrice: H,
               bUseSubscriptionLayout: M,
               bHidePlatforms: F,
-              bHideContainedApps: x,
-              bAllowTwoLinesForHeader: U,
+              bHideContainedApps: U,
+              bAllowTwoLinesForHeader: x,
               bShowReviewSummary: j,
               bShowDeckCompatibilityDialog: Z,
               bAutoFocus: z,
@@ -13571,7 +13827,7 @@
               : (0, R.Xx)("#Sale_BundleSave", ae));
           const re = (0, m.mY)(J),
             se = (0, r.bt)(u.GetStorePageURL()),
-            oe = Boolean(!x && ae > 0),
+            oe = Boolean(!U && ae > 0),
             le = u.BHasTags()
               ? u.GetTagIDs()
               : (null == p ? void 0 : p.BHasTags())
@@ -13588,7 +13844,7 @@
               {
                 className: (0, T.Z)({
                   [P().StoreSaleWidgetOuterContainer]: !0,
-                  [P().AllowTwoLineHeader]: U,
+                  [P().AllowTwoLineHeader]: x,
                 }),
                 onMouseEnter: () => c(!0),
                 onMouseLeave: () => c(!1),
@@ -13977,7 +14233,7 @@
             "div",
             { className: P().CapsuleContainer },
             Boolean(e.link.localized_link_capsule) &&
-              i.createElement(x.l, {
+              i.createElement(U.l, {
                 className: P().LinkCapsuleImage,
                 src: `${(0, u.OL)()}${e.clanAccountID}/${t}`,
               }),
@@ -15393,7 +15649,7 @@
           case o.FX.LeftTrackpadClick:
             return s.createElement(P, { bIsKnockout: n, className: t });
           case o.FX.RightTrackpadClick:
-            return s.createElement(x, { bIsKnockout: n, className: t });
+            return s.createElement(U, { bIsKnockout: n, className: t });
           case o.FX.RearLeftUpper:
             return s.createElement(O, { bIsKnockout: n, className: t });
           case o.FX.RearRightUpper:
@@ -15403,7 +15659,7 @@
           case o.FX.RearRightLower:
             return s.createElement(V, { bIsKnockout: n, className: t });
           default:
-            return s.createElement(U, { bIsKnockout: n, className: t });
+            return s.createElement(x, { bIsKnockout: n, className: t });
         }
       }
       function h(e) {
@@ -16772,7 +17028,7 @@
               }),
             );
       }
-      function x(e) {
+      function U(e) {
         var { bIsKnockout: t } = e,
           n = (0, r._T)(e, ["bIsKnockout"]);
         return t
@@ -16824,7 +17080,7 @@
               }),
             );
       }
-      function U(e) {
+      function x(e) {
         var { bIsKnockout: t } = e,
           n = (0, r._T)(e, ["bIsKnockout"]);
         return t

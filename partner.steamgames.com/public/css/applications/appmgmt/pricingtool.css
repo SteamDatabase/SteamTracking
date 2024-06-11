@@ -1152,6 +1152,9 @@ img {
   width: 16px;
   height: 16px;
 }
+.tool-tip-source {
+  cursor: default;
+}
 .react-select-container .react-select__control {
   background: #dce8fb14;
   border-color: transparent;

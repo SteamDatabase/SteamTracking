@@ -439,12 +439,23 @@
         }
       }
     },
-    17625: (e, t, n) => {
-      n.d(t, { B: () => S });
+    28147: (e, t, n) => {
+      n.d(t, { B: () => o });
+      var r = n(96394),
+        i = n(4005);
+      function o(e, t, n) {
+        var o;
+        const s = (0, r.m8)(),
+          l = null === (o = s.spec.key) || void 0 === o ? void 0 : o.get(n),
+          a = [...n.plugins.filter((e) => e != l), s];
+        return i.yy.create({ schema: t, doc: e, plugins: a });
+      }
+    },
+    32300: (e, t, n) => {
+      n.d(t, { l8: () => x, xh: () => S, U$: () => M });
       for (
         var r = n(23612),
-          i = n(96394),
-          o = {
+          i = {
             8: "Backspace",
             9: "Tab",
             10: "Enter",
@@ -498,7 +509,7 @@
             221: "]",
             222: "'",
           },
-          s = {
+          o = {
             48: ")",
             49: "!",
             50: "@",
@@ -524,26 +535,26 @@
             221: "}",
             222: '"',
           },
-          l = "undefined" != typeof navigator && /Mac/.test(navigator.platform),
-          a =
+          s = "undefined" != typeof navigator && /Mac/.test(navigator.platform),
+          l =
             "undefined" != typeof navigator &&
             /MSIE \d|Trident\/(?:[7-9]|\d{2,})\..*rv:(\d+)/.exec(
               navigator.userAgent,
             ),
-          c = 0;
-        c < 10;
-        c++
+          a = 0;
+        a < 10;
+        a++
       )
-        o[48 + c] = o[96 + c] = String(c);
-      for (c = 1; c <= 24; c++) o[c + 111] = "F" + c;
-      for (c = 65; c <= 90; c++)
-        (o[c] = String.fromCharCode(c + 32)), (s[c] = String.fromCharCode(c));
-      for (var h in o) s.hasOwnProperty(h) || (s[h] = o[h]);
-      var d = n(4005);
-      const p =
+        i[48 + a] = i[96 + a] = String(a);
+      for (a = 1; a <= 24; a++) i[a + 111] = "F" + a;
+      for (a = 65; a <= 90; a++)
+        (i[a] = String.fromCharCode(a + 32)), (o[a] = String.fromCharCode(a));
+      for (var c in i) o.hasOwnProperty(c) || (o[c] = i[c]);
+      var h = n(4005);
+      const d =
         "undefined" != typeof navigator &&
         /Mac|iP(hone|[oa]d)/.test(navigator.platform);
-      function u(e) {
+      function p(e) {
         let t,
           n,
           r,
@@ -560,7 +571,7 @@
           else {
             if (!/^mod$/i.test(s))
               throw new Error("Unrecognized modifier name: " + s);
-            p ? (i = !0) : (n = !0);
+            d ? (i = !0) : (n = !0);
           }
         }
         return (
@@ -571,7 +582,7 @@
           s
         );
       }
-      function f(e, t, n = !0) {
+      function u(e, t, n = !0) {
         return (
           t.altKey && (e = "Alt-" + e),
           t.ctrlKey && (e = "Ctrl-" + e),
@@ -580,26 +591,26 @@
           e
         );
       }
-      function m(e) {
-        return new d.Sy({ props: { handleKeyDown: g(e) } });
+      function f(e) {
+        return new h.Sy({ props: { handleKeyDown: m(e) } });
       }
-      function g(e) {
+      function m(e) {
         let t = (function (e) {
           let t = Object.create(null);
-          for (let n in e) t[u(n)] = e[n];
+          for (let n in e) t[p(n)] = e[n];
           return t;
         })(e);
         return function (e, n) {
           let r,
-            i = (function (e) {
+            a = (function (e) {
               var t =
                 (!(
-                  (l && e.metaKey && e.shiftKey && !e.ctrlKey && !e.altKey) ||
-                  (a && e.shiftKey && e.key && 1 == e.key.length) ||
+                  (s && e.metaKey && e.shiftKey && !e.ctrlKey && !e.altKey) ||
+                  (l && e.shiftKey && e.key && 1 == e.key.length) ||
                   "Unidentified" == e.key
                 ) &&
                   e.key) ||
-                (e.shiftKey ? s : o)[e.keyCode] ||
+                (e.shiftKey ? o : i)[e.keyCode] ||
                 e.key ||
                 "Unidentified";
               return (
@@ -612,96 +623,132 @@
                 t
               );
             })(n),
-            c = t[f(i, n)];
+            c = t[u(a, n)];
           if (c && c(e.state, e.dispatch, e)) return !0;
-          if (1 == i.length && " " != i) {
+          if (1 == a.length && " " != a) {
             if (n.shiftKey) {
-              let r = t[f(i, n, !1)];
+              let r = t[u(a, n, !1)];
               if (r && r(e.state, e.dispatch, e)) return !0;
             }
             if (
-              (n.shiftKey || n.altKey || n.metaKey || i.charCodeAt(0) > 127) &&
-              (r = o[n.keyCode]) &&
-              r != i
+              (n.shiftKey || n.altKey || n.metaKey || a.charCodeAt(0) > 127) &&
+              (r = i[n.keyCode]) &&
+              r != a
             ) {
-              let i = t[f(r, n)];
+              let i = t[u(r, n)];
               if (i && i(e.state, e.dispatch, e)) return !0;
             }
           }
           return !1;
         };
       }
-      var y = n(52599),
-        w = n(2761),
-        b = n(93109);
-      function v(e) {
-        const t = (0, r.QF)(
-          r.uo,
-          (t, n) => (
-            n &&
-              n(
-                t.tr
-                  .replaceSelectionWith(e.nodes.hard_break.create())
-                  .scrollIntoView(),
-              ),
-            !0
-          ),
-        );
-        return m({
-          "Mod-z": i.Yw,
-          "Mod-y": i.KX,
-          Backspace: y.dU,
-          "Mod-Enter": t,
-          "Shift-Enter": t,
-          "Mod-b": (0, r.w9)(e.marks.strong),
-          "Mod-i": (0, r.w9)(e.marks.italic),
-          Enter: (0, w.s6)(e.nodes.list_item),
-          "Mod-[": (0, w.IB)(e.nodes.list_item),
-          "Mod-]": (0, w.bw)(e.nodes.list_item),
-          "Shift-Ctrl-1": (0, r.uJ)(e.nodes.heading, { level: 1 }),
-          "Shift-Ctrl-2": (0, r.uJ)(e.nodes.heading, { level: 2 }),
-          "Shift-Ctrl-3": (0, r.uJ)(e.nodes.heading, { level: 3 }),
-          "Shift-Ctrl-0": (0, r.uJ)(e.nodes.paragraph),
-        });
+      var g = n(47427),
+        y = n(96394),
+        w = n(52599),
+        b = n(2761),
+        v = n(93109);
+      const k = g.createContext(null);
+      function S(e) {
+        return g.createElement(k.Provider, { value: e.view }, e.children);
       }
-      function k(e) {
-        return (0, y.Hw)({
-          rules: [
-            (0, y.S0)(
-              /^(\d+)\.\s$/,
-              e.nodes.ordered_list,
-              (e) => ({ order: parseInt(e[1]) }),
-              (e, t) => t.childCount + t.attrs.order == parseInt(e[1]),
+      function x(e) {
+        const { schema: t, onUpdate: n } = e,
+          i = g.useRef(n);
+        return (
+          (i.current = n),
+          M(
+            g.useMemo(
+              () =>
+                new h.Sy({
+                  view: (e) => ({ update: (...e) => i.current(...e) }),
+                }),
+              [],
             ),
-            (0, y.S0)(/^\s*([-+*])\s$/, e.nodes.bullet_list),
-            (0, b.Cf)(/\*([^*]+)\*/, e.marks.strong),
-            (0, b.Cf)(/_([^_]+)_/, e.marks.italic),
-            (0, b.Cf)(/~([^~]+)~/, e.marks.strike),
-            (0, b.Cf)(/`([^`]+)`/, e.marks.code),
-            (0, y.zK)(/^```$/, e.nodes.code_block),
-            (0, y.zK)(/^(#{1,5})\s$/, e.nodes.heading, (e) => ({
-              level: e[1].length,
-            })),
-          ],
-        });
+          ),
+          M(
+            g.useMemo(
+              () =>
+                (function (e) {
+                  const t = (0, r.QF)(
+                    r.uo,
+                    (t, n) => (
+                      n &&
+                        n(
+                          t.tr
+                            .replaceSelectionWith(e.nodes.hard_break.create())
+                            .scrollIntoView(),
+                        ),
+                      !0
+                    ),
+                  );
+                  return f({
+                    "Mod-z": y.Yw,
+                    "Mod-y": y.KX,
+                    Backspace: w.dU,
+                    "Mod-Enter": t,
+                    "Shift-Enter": t,
+                    "Mod-b": (0, r.w9)(e.marks.strong),
+                    "Mod-i": (0, r.w9)(e.marks.italic),
+                    Enter: (0, b.s6)(e.nodes.list_item),
+                    "Mod-[": (0, b.IB)(e.nodes.list_item),
+                    "Mod-]": (0, b.bw)(e.nodes.list_item),
+                    "Shift-Ctrl-1": (0, r.uJ)(e.nodes.heading, { level: 1 }),
+                    "Shift-Ctrl-2": (0, r.uJ)(e.nodes.heading, { level: 2 }),
+                    "Shift-Ctrl-3": (0, r.uJ)(e.nodes.heading, { level: 3 }),
+                    "Shift-Ctrl-0": (0, r.uJ)(e.nodes.paragraph),
+                  });
+                })(t),
+              [t],
+            ),
+          ),
+          M(g.useMemo(() => f(r.YR), [])),
+          M(
+            g.useMemo(
+              () =>
+                (function (e) {
+                  return (0, w.Hw)({
+                    rules: [
+                      (0, w.S0)(
+                        /^(\d+)\.\s$/,
+                        e.nodes.ordered_list,
+                        (e) => ({ order: parseInt(e[1]) }),
+                        (e, t) =>
+                          t.childCount + t.attrs.order == parseInt(e[1]),
+                      ),
+                      (0, w.S0)(/^\s*([-+*])\s$/, e.nodes.bullet_list),
+                      (0, v.Cf)(/\*([^*]+)\*/, e.marks.strong),
+                      (0, v.Cf)(/_([^_]+)_/, e.marks.italic),
+                      (0, v.Cf)(/~([^~]+)~/, e.marks.strike),
+                      (0, v.Cf)(/`([^`]+)`/, e.marks.code),
+                      (0, w.zK)(/^```$/, e.nodes.code_block),
+                      (0, w.zK)(/^(#{1,5})\s$/, e.nodes.heading, (e) => ({
+                        level: e[1].length,
+                      })),
+                    ],
+                  });
+                })(t),
+              [t],
+            ),
+          ),
+          null
+        );
       }
-      function S(e, t, n) {
-        const o = new d.Sy({ view: (e) => ({ update: n }) });
-        return d.yy.create({
-          schema: t,
-          doc: e,
-          plugins: [(0, i.m8)(), v(t), m(r.YR), o, k(t)],
-        });
+      function M(e) {
+        const t = g.useContext(k);
+        g.useEffect(() => {
+          if (t && e && !t.isDestroyed)
+            return (0, v.Wh)(t, e), () => (0, v.BA)(t, e);
+        }, [t, e]);
       }
     },
     79500: (e, t, n) => {
-      n.d(t, { P: () => a });
+      n.d(t, { Pp: () => a });
       var r = n(42090),
         i = n.n(r),
         o = n(2761),
         s = n(13129);
-      function l(e, t) {
-        return () => [e, { class: t }, 0];
+      function l(e, t, n = 0) {
+        return () => [e, { class: t }, n];
       }
       const a = {
         nodes: {
@@ -944,36 +991,28 @@
     },
     93109: (e, t, n) => {
       n.d(t, {
+        BA: () => s,
         Cf: () => c,
         MW: () => l,
-        U$: () => s,
         VM: () => h,
+        Wh: () => o,
         pp: () => a,
       });
       var r = n(52599),
-        i = n(4005),
-        o = n(47427);
+        i = n(4005);
+      function o(e, t) {
+        const n = e.state;
+        if (!e.state.plugins.includes(t)) {
+          const r = [...e.state.plugins, t];
+          e.updateState(n.reconfigure({ plugins: r }));
+        }
+      }
       function s(e, t) {
-        o.useEffect(() => {
-          if (e && t && !e.isDestroyed)
-            return (
-              (function (e, t) {
-                const n = e.state;
-                if (!e.state.plugins.includes(t)) {
-                  const r = [...e.state.plugins, t];
-                  e.updateState(n.reconfigure({ plugins: r }));
-                }
-              })(e, t),
-              () =>
-                (function (e, t) {
-                  if (!e.isDestroyed) {
-                    const n = e.state,
-                      r = n.plugins.filter((e) => e !== t);
-                    e.updateState(n.reconfigure({ plugins: r }));
-                  }
-                })(e, t)
-            );
-        }, [e, t]);
+        if (!e.isDestroyed) {
+          const n = e.state,
+            r = n.plugins.filter((e) => e !== t);
+          e.updateState(n.reconfigure({ plugins: r }));
+        }
       }
       function l(e, t) {
         const { from: n, $from: r, to: i, empty: o } = e.selection;

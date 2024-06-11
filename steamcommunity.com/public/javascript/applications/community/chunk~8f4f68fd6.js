@@ -1212,7 +1212,6 @@
         10: { rollup_field: "general", eFeature: d.zE },
         11: { rollup_field: "help_request_replies", eFeature: d.zE },
         12: { rollup_field: "async_game_updates", eFeature: d.zE },
-        13: { rollup_field: void 0, eFeature: 4 },
         14: { rollup_field: "moderator_messages", eFeature: 2 },
         15: { rollup_field: "parental_feature_requests", eFeature: d.zE },
         16: { rollup_field: "family_invites", eFeature: d.zE },

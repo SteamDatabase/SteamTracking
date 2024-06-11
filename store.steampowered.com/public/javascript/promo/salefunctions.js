@@ -205,7 +205,7 @@ function fnRenderHeroCapsule( oItem )
 
 	var $Cap = $J( '<div/>', {'class': 'hero_capsule', 'data-ds-appid': oItem.appid, 'data-panel': '{"clickOnActivate":"firstChild","onOptionsActionDescription":"Add to Cart","onOptionsButton":"%onOptionsButton%","flow-children":"column"}'.replace( '%onOptionsButton%', purchaseAction ) } );
 	$Cap.append( $J('<a/>', {'class': 'hero_click_overlay', 'href': url, 'aria-label': rgItemData.name } ) );
-	$Cap.append( $J('<img/>', {'class': 'hero_capsule_img', 'alt': rgItemData.name, 'style': 'max-height: 450px', src: 'https://store.akamai.steamstatic.com/public/images/blank.gif', 'data-image-url': rgItemData[ 'hero_capsule' ] ?? rgItemData[ 'main_capsule' ] } ) );
+	$Cap.append( $J('<img/>', {'class': 'hero_capsule_img', 'alt': rgItemData.name, 'style': 'max-height: 450px', src: 'https://store.akamai.steamstatic.com/public/images/v6/home/hero_placeholder_374x448.gif', 'data-image-url': rgItemData[ 'hero_capsule' ] ?? rgItemData[ 'main_capsule' ] } ) );
 
 	if ( rgItemData.has_live_broadcast )
 	{
@@ -362,7 +362,7 @@ function HomeRenderSpecialDealsCarousel( rgSpecialDealItems )
 {
 	if ( !rgSpecialDealItems )
 		return;
-	
+
 	let $SpecialDealsCarousel = $J( '#featured_special_deals' );
 
 	if ( !$SpecialDealsCarousel || !$SpecialDealsCarousel.length )
@@ -375,11 +375,34 @@ function HomeRenderSpecialDealsCarousel( rgSpecialDealItems )
 	if ( rgSpecialDeals )
 	{
 		GHomepage.FillPagedCapsuleCarousel( rgSpecialDeals, $SpecialDealsCarousel, function( oItem, strFeature, rgOptions, nDepth ) {
-			return SaleCap( oItem, strFeature, 'discount_block_inline', false, false );
+			return SaleCap( oItem, strFeature, 'discount_block_inline', false, false, true );
 		}, 'sale_deep_discounts', 3 );
 
-		BindSaleCapAutoSizeEvents( $SpecialDealsCarousel );
 		GDynamicStore.MarkAppDisplayed( rgSpecialDeals );
+	}
+}
+
+function HomeRenderSteamDeckSection( rgFeaturedSteamDeckGames )
+{
+	if ( !rgFeaturedSteamDeckGames )
+		return;
+
+	let $SteamDeckCarousel = $J( '#featured_steam_deck_games' );
+
+	if ( !$SteamDeckCarousel || !$SteamDeckCarousel.length )
+		return;
+
+	let rgSteamDeckGames = GHomepage.FilterItemsForDisplay(
+		rgFeaturedSteamDeckGames, 'home', 3, 24, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: false }
+	);
+
+	if ( rgSteamDeckGames )
+	{
+		GHomepage.FillPagedCapsuleCarousel( rgSteamDeckGames, $SteamDeckCarousel, function( oItem, strFeature, rgOptions, nDepth ) {
+			return SaleCap( oItem, strFeature, 'discount_block_inline', false, false, true );
+		}, 'sale_deck_mostplayed', 3 );
+
+		GDynamicStore.MarkAppDisplayed( rgSteamDeckGames );
 	}
 }
 
@@ -451,11 +474,12 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 		}
 	}
 
-	var $DiscountsArea = $J('#sale_discounts_area');
-	new CScrollOffsetWatcher( $DiscountsArea, function() {
-		SaleRenderDiscountsArea( rgDisplayLists.under10, rgDisplayLists.sale_deals );
-		$DiscountsArea.css('height', '' );
+	var $Under10Area = $J('#sale_under10_area');
+	new CScrollOffsetWatcher( $Under10Area, function() {
+		SaleRenderUnder10Section( rgDisplayLists.under10 );
+		$Under10Area.css('height', '' );
 	} );
+
 
 	// process tag sections first, pulling in featured items into the tag blocks we display
 	var $TagBlock = $J('#sale_tag_categories');
@@ -480,6 +504,8 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 
 	AddMicrotrailersToStaticCaps( $J('.home_topsellers_games_ctn' ) );
 	AddMicrotrailersToStaticCaps( $J('.home_newupcoming_games_ctn') );
+
+	HomeRenderSteamDeckSection( rgDisplayLists.most_played_deck );
 
 	// Render the featured events section
 	// RenderSeasonalSaleInGameEventsCarousel( rgFeaturedSeasonEvents, rgDisplayLists.feature_event_apps );
@@ -592,7 +618,7 @@ function SaleRow( rgItems, $Parent, nItems, strFeatureContext, fnRenderFunc )
 	return rgItems.slice( rgItemsThisRow.length );
 }
 
-function SaleCap( item, strFeatureContext, strDiscountClass, bUseSmallCap, bPreferHeaderImg )
+function SaleCap( item, strFeatureContext, strDiscountClass, bUseSmallCap, bPreferHeaderImg, bDisableAutosizer )
 {
 	var params = { 'class': 'sale_capsule' };
 
@@ -609,25 +635,38 @@ function SaleCap( item, strFeatureContext, strDiscountClass, bUseSmallCap, bPref
 	GStoreItemData.BindHoverEventsForItem( $CapCtn, item );
 
 	var $Img;
-	if ( bUseSmallCap )
+	if ( bDisableAutosizer )
 	{
-		$Img = $J( '<img/>', {'class': 'sale_capsule_image', 'src':  rgItemData['small_capsule'] } );
+		$Img = $J('<img/>', {'class': 'sale_capsule_image', 'src': rgItemData['main_capsule']});
 	}
 	else
 	{
-		if ( bPreferHeaderImg && typeof rgItemData['header'] !== 'undefined' )
+		if ( bUseSmallCap )
 		{
-			$Img = $J( '<img/>', {'class': 'sale_capsule_image autosize', 'src': 'https://store.akamai.steamstatic.com/public/images/v6/home/header_placeholder_460x215.gif' } );
-			$Img.data('src-header', rgItemData['header'] );
+			$Img = $J('<img/>', {'class': 'sale_capsule_image', 'src': rgItemData['small_capsule']});
 		}
 		else
 		{
-			$Img = $J( '<img/>', {'class': 'sale_capsule_image autosize', 'src': 'https://store.akamai.steamstatic.com/public/images/v6/home/maincap_placeholder_616x353.gif' } );
-			$Img.data('src-maincap', rgItemData['main_capsule'] );
-		}
+			if ( bPreferHeaderImg && typeof rgItemData['header'] !== 'undefined' )
+			{
+				$Img = $J('<img/>', {
+					'class': 'sale_capsule_image autosize',
+					'src': 'https://store.akamai.steamstatic.com/public/images/v6/home/header_placeholder_460x215.gif'
+				});
+				$Img.data('src-header', rgItemData['header']);
+			} else
+			{
+				$Img = $J('<img/>', {
+					'class': 'sale_capsule_image autosize',
+					'src': 'https://store.akamai.steamstatic.com/public/images/v6/home/maincap_placeholder_616x353.gif'
+				});
+				$Img.data('src-maincap', rgItemData['main_capsule']);
+			}
 
-		$Img.data('src-smallcap', rgItemData['small_capsule'] );
+			$Img.data('src-smallcap', rgItemData['small_capsule']);
+		}
 	}
+
 	$Img.attr( 'alt', rgItemData['name'] );
 
 	$CapCtn.append( $J('<div/>', {'class': 'sale_capsule_image_ctn' } ).append( $J('<div/>', {'class': 'sale_capsule_image_hover'} ), $Img ) );
@@ -885,8 +924,8 @@ function SaleTagBackground( colors )
 	var r = Number.parseInt( hex[1] + hex[2], 16 );
 	var g = Number.parseInt( hex[3] + hex[4], 16 );
 	var b = Number.parseInt( hex[5] + hex[6], 16 );
-	// return 'background: rgba( ' + r + ', ' + g + ', ' + b + ', 0.3 );';
-	return 'background: #ffffff11';
+	return 'background: rgba( ' + r + ', ' + g + ', ' + b + ', 0.3 );';
+	// return 'background: #ffffff11';
 }
 
 function SaleTagBlock( $Parent, rgPersonalizedTagData )
@@ -919,7 +958,7 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 	// id, colors, name, items
 	var $Ctn = $J( '<div/>', {'class': 'home_category_ctn'} );
 
-	var $TitleCtn = $J('<div/>', { 'class': 'home_category_title_ctn', style: SaleTagTexture( texture ) } ).append( $J('<div/>', { 'class': 'home_category_title'}).html( title ) );
+	var $TitleCtn = $J('<div/>', { 'class': 'home_category_title_ctn', style: SaleTagBackground( colors ) } ).append( $J('<div/>', { 'class': 'home_category_title'}).html( title ) );
 	var $FocusCtn = $J('<div/>', { 'class': 'home_category_focus_ctn'} );
 
 	var $TopDecoration = TagBoxTopDecoration();
@@ -948,13 +987,13 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 	else{
 		if ( "subtitle" in rgTagData )
 		{
-			$Ctn.append( $J('<div/>', { 'class': 'home_category_title_ctn', style: SaleTagTexture( texture ) } ).
+			$Ctn.append( $J('<div/>', { 'class': 'home_category_title_ctn', style: SaleTagBackground( colors ) } ).
 				append( $J('<div/>', { 'class': 'home_category_title'}).html( rgTagData.name ) ).
 				append( $J('<div/>', { 'class': 'home_category_subtitle'}).html( rgTagData.subtitle ) ) );
 		}
 		else
 		{
-			$Ctn.append( $J('<div/>', { 'class': 'home_category_title_ctn', style: SaleTagTexture( texture ) } ).
+			$Ctn.append( $J('<div/>', { 'class': 'home_category_title_ctn', style: SaleTagBackground( colors ) } ).
 				append( $J('<div/>', { 'class': 'home_tag_category_title'}).html( rgTagData.name ) ) );
 		}
 	}
@@ -1199,6 +1238,29 @@ function BuildFranchiseCap( FranchiseData, bAlternate )
 		FranchiseData[field].css( 'opacity', '');
 
 	return FranchiseData ? FranchiseData[field] : null;
+}
+
+function SaleRenderUnder10Section( rgUnder10 )
+{
+	var rgUnder10Filtered = GHomepage.FilterItemsForDisplay(
+		rgUnder10, 'sale', 4, 8, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
+	);
+
+	TryPopulateSaleItems( rgUnder10Filtered, rgUnder10, 4, 8 );
+
+	let $Under10Ctn = $J('#10off_tier' );
+
+	if ( $Under10Ctn.length && rgUnder10Filtered.length == 8 )
+	{
+		let rgCaps = [];
+		for( let i = 0; i < rgUnder10Filtered.length; i++ )
+		{
+			rgCaps.push( SaleCap( rgUnder10Filtered[i], 'under10', 'discount_block_inline' ) );
+		}
+		$Under10Ctn.append( rgCaps );
+		GDynamicStore.MarkAppDisplayed( rgUnder10Filtered );
+		BindSaleCapAutoSizeEvents( $Under10Ctn );
+	}
 }
 
 function SaleRenderDiscountsArea( rgUnder10, rgDeals )

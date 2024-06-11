@@ -227,7 +227,7 @@
         a = n(91618),
         l = n(31421),
         c = n(19399),
-        m = n(68985),
+        m = n(15896),
         d = n(64561),
         u = n(14411),
         h = n(26293),
@@ -668,6 +668,7 @@
                 "p",
                 { className: k().Paragraph },
                 e.children,
+                i.createElement("wbr", null),
               );
             },
             autocloses: !1,

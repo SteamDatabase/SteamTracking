@@ -1028,8 +1028,9 @@
           activeBitColor: s = null,
           inactiveBitColor: i = null,
           borderWidth: l = 3,
+          typeNumber: c = 6,
         } = e;
-        const c = (function (e, t = {}) {
+        const m = (function (e, t = {}) {
           const { typeNumber: n, errorCorrectLevel: r } = t,
             [o, s] = (0, a.useState)();
           return (
@@ -1038,37 +1039,37 @@
             }, [e, n, r]),
             o
           );
-        })(n, { typeNumber: 6, errorCorrectLevel: t });
-        if (!c) return null;
-        let m = [];
-        for (let e = 0; e < l; e++) m.push(Array(c.length + 2 * l).fill(!1));
-        for (let e = 0; e < c.length; e++)
-          m.push([].concat(Array(l).fill(!1), c[e], Array(l).fill(!1)));
-        for (let e = 0; e < l; e++) m.push(Array(c.length + 2 * l).fill(!1));
-        const u = [],
-          d = (0, o.Z)(F().Bit),
-          h = (0, o.Z)(F().Bit, F().Active),
-          _ = null !== s ? { backgroundColor: s } : {},
-          g = null !== i ? { backgroundColor: i } : {};
+        })(n, { typeNumber: c, errorCorrectLevel: t });
+        if (!m) return null;
+        let u = [];
+        for (let e = 0; e < l; e++) u.push(Array(m.length + 2 * l).fill(!1));
         for (let e = 0; e < m.length; e++)
-          for (let t = 0; t < m.length; t++) {
-            const n = m[e][t];
-            u.push(
+          u.push([].concat(Array(l).fill(!1), m[e], Array(l).fill(!1)));
+        for (let e = 0; e < l; e++) u.push(Array(m.length + 2 * l).fill(!1));
+        const d = [],
+          h = (0, o.Z)(F().Bit),
+          _ = (0, o.Z)(F().Bit, F().Active),
+          g = null !== s ? { backgroundColor: s } : {},
+          C = null !== i ? { backgroundColor: i } : {};
+        for (let e = 0; e < u.length; e++)
+          for (let t = 0; t < u.length; t++) {
+            const n = u[e][t];
+            d.push(
               a.createElement("div", {
                 key: `${e}_${t}`,
-                className: n ? h : d,
-                style: n ? _ : g,
+                className: n ? _ : h,
+                style: n ? g : C,
               }),
             );
           }
-        let C = m.length;
+        let E = u.length;
         return a.createElement(
           "div",
           {
             className: (0, o.Z)(F().QRBits, r),
-            style: { gridTemplateColumns: `repeat( ${C}, 1fr )` },
+            style: { gridTemplateColumns: `repeat( ${E}, 1fr )` },
           },
-          u,
+          d,
         );
       }
       !(function (e) {

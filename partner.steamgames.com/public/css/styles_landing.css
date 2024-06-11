@@ -3712,3 +3712,16 @@ div#webapi_panel a.webapi_key_unsecured {
 	font-size: 14px;
 	font-family: monospace;
 }
+
+.convertDemoToStandalonePublishWarning {
+	margin-top: 16px;
+	font-style: italic;
+	color: #d8c300;
+}
+
+.cantPublishPostReleaseWarning {
+	margin-top: 8px;
+	margin-bottom: 8px;
+	font-style: italic;
+	color: #d8c300;
+}

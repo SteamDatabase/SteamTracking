@@ -29,235 +29,74 @@
         LoadEventsButton: "_2qtK6EgvPizbxuOUs7kxeA",
       };
     },
-    87699: (e, t, a) => {
+    18312: (e, t, n) => {
       "use strict";
-      a.d(t, { C: () => c, R: () => l });
-      var n = a(85556),
-        r = a(54842),
-        o = a(35427),
-        i = a(64936),
-        s = a(82071);
-      class l {
-        constructor() {
-          (this.m_mapBroadcasterSteamIDToEvents = new Map()),
-            (this.m_mapBroadcasterSteamIDData = new Map()),
-            (0, r.rC)(this);
-        }
-        static GetBBCodeParam(e, t, a = "") {
-          const n = new RegExp(`\\W${t}\\W*=\\W*\\"(.*?)\\"`, "gmi").exec(e);
-          return n ? n[1] : a;
-        }
-        static ParseCalendarEventPresentersFromText(e) {
-          const t = /\[\W*speaker(\W[\s\S]*?)\]([\s\S]*?)\[\W*\/speaker\W*\]/gi,
-            a = new Array();
-          for (;;) {
-            const n = t.exec(e);
-            if (null === n) break;
-            const r = n[1],
-              i = n[2],
-              s = l.GetBBCodeParam(r, "steamid"),
-              c = {
-                steamID: s ? new o.K(s) : void 0,
-                name: l.GetBBCodeParam(r, "name"),
-                title: l.GetBBCodeParam(r, "title"),
-                company: l.GetBBCodeParam(r, "company"),
-                photo: l.GetBBCodeParam(r, "photo"),
-                bio: i,
-              };
-            a.push(c);
-          }
-          return a;
-        }
-        static ParseEventModelPresenters(e, t) {
-          const a = e.GetDescriptionWithFallback(t);
-          return l.ParseCalendarEventPresentersFromText(a);
-        }
-        static ParseEventAppReferencesFromText(e) {
-          const t = /\/\/store\.steampowered\.com\/app\/(\d+)/gi,
-            a = new Set();
-          for (;;) {
-            const n = t.exec(e);
-            if (null === n) break;
-            const r = n[1];
-            a.add(Number(r));
-          }
-          return a;
-        }
-        static ParseEventModelAppReferences(e, t) {
-          var a;
-          const n = e.GetDescriptionWithFallback(t),
-            r = l.ParseEventAppReferencesFromText(n);
-          if (
-            null === (a = e.jsondata) || void 0 === a
-              ? void 0
-              : a.referenced_appids
-          )
-            for (const t of e.jsondata.referenced_appids) r.add(t);
-          return r;
-        }
-        BuildBroadcasterSteamIDToActiveEventMap(e) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            const t = i.JW.GetTimeNowWithOverride(),
-              a = e.GetCalendarItemsInTimeRange(t - 3600, t);
-            for (const e of a.rgCalendarItems)
-              s.j1.QueueLoadPartnerEvent(e.clanid, e.unique_id);
-            const n = a.rgCalendarItems.map((e) =>
-                s.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                  o.K.InitFromClanID(e.clanid),
-                  e.unique_id,
-                  0,
-                ),
-              ),
-              r = yield Promise.all(n),
-              l = new Map();
-            for (const e of r)
-              if (e && !(e.endTime && e.endTime < t))
-                for (const t of e.GetBroadcastWhitelistAsSteamIDs())
-                  l.has(t) ? l.get(t).push(e) : l.set(t, [e]);
-            return l;
-          });
-        }
-        IsBroadcasterAlreadyBound(e, t) {
-          const a = this.m_mapBroadcasterSteamIDToEvents.get(e),
-            n = a ? a.length : 0;
-          if ((t ? t.length : 0) != n) return !1;
-          for (let e = 0; e < n; e++) if (a[e] != t[e].GID) return !1;
-          return !0;
-        }
-        static BuildSteamIDToPresenterMapFromEventList(e, t) {
-          let a = new Map();
-          for (const n of e) {
-            if (!n) continue;
-            const e = l.ParseEventModelPresenters(n, t);
-            for (const t of e)
-              t.steamID && a.set(t.steamID.ConvertTo64BitString(), t);
-          }
-          return a;
-        }
-        RemoveCachedDataIfNotInMap(e) {
-          const t = new Array();
-          this.m_mapBroadcasterSteamIDToEvents.forEach((a, n) => {
-            e.has(n) || t.push(n);
-          }),
-            t.forEach((e) => {
-              this.m_mapBroadcasterSteamIDData.delete(e),
-                this.m_mapBroadcasterSteamIDToEvents.delete(e);
-            });
-        }
-        static BuildAppIDRefsForEventList(e, t) {
-          const a = new Set();
-          for (const n of e) {
-            l.ParseEventModelAppReferences(n, t).forEach((e) => a.add(e));
-          }
-          return Array.from(a);
-        }
-        UpdateCachedDataFromEvents(e, t) {
-          e.forEach((e, a) => {
-            if (this.IsBroadcasterAlreadyBound(a, e)) return;
-            const n = {
-              m_mapPresenters: l.BuildSteamIDToPresenterMapFromEventList(e, t),
-              m_rgAppIDs: l.BuildAppIDRefsForEventList(e, t),
-            };
-            this.m_mapBroadcasterSteamIDData.set(a, n),
-              this.m_mapBroadcasterSteamIDToEvents.set(
-                a,
-                e.map((e) => e.GID),
-              );
-          });
-        }
-        SynchronizeEventsWithBroadcasts(e, t) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            const a = yield this.BuildBroadcasterSteamIDToActiveEventMap(e);
-            this.RemoveCachedDataIfNotInMap(a),
-              this.UpdateCachedDataFromEvents(a, t);
-          });
-        }
-        GetPresenterMapForBroadcasterSteamID(e) {
-          var t;
-          return null === (t = this.m_mapBroadcasterSteamIDData.get(e)) ||
-            void 0 === t
-            ? void 0
-            : t.m_mapPresenters;
-        }
-        GetAppIDListForBroadcasterSteamID(e) {
-          var t;
-          return null === (t = this.m_mapBroadcasterSteamIDData.get(e)) ||
-            void 0 === t
-            ? void 0
-            : t.m_rgAppIDs;
-        }
-      }
-      (0, n.gn)([r.LO], l.prototype, "m_mapBroadcasterSteamIDData", void 0);
-      const c = new l();
-    },
-    18312: (e, t, a) => {
-      "use strict";
-      a.r(t), a.d(t, { default: () => J });
-      var n = a(760),
-        r = a(74257),
-        o = a(85556),
-        i = a(80751),
-        s = a.n(i),
-        l = a(54842),
-        c = a(27605),
-        d = a(47427),
-        m = a(35427),
-        u = a(78910),
-        g = a(1485),
-        p = a(50898),
-        h = a(90069),
-        v = a(62613),
-        E = a(46882),
-        f = a(50423),
-        _ = a(31846),
-        S = a(16649),
-        I = a(37563),
-        C = a(19758),
-        D = a(95315),
-        A = a(58670),
-        M = a(22042),
-        B = a(10162),
-        b = a(7765),
-        w = a(45284),
-        T = a(65534);
-      const G = (e) => {
+      n.r(t), n.d(t, { default: () => X });
+      var a = n(760),
+        r = n(74257),
+        o = n(85556),
+        l = n(80751),
+        i = n.n(l),
+        s = n(54842),
+        c = n(27605),
+        d = n(47427),
+        u = n(35427),
+        m = n(78910),
+        g = n(1485),
+        h = n(50898),
+        p = n(90069),
+        v = n(62613),
+        E = n(46882),
+        _ = n(50423),
+        S = n(31846),
+        f = n(16649),
+        C = n(37563),
+        I = n(19758),
+        A = n(95315),
+        M = n(58670),
+        b = n(22042),
+        D = n(10162),
+        w = n(7765),
+        L = n(45284),
+        T = n(65534);
+      const y = (e) => {
           const {
               strLabel: t,
-              strToolTip: a,
-              fnSetCurator: n,
+              strToolTip: n,
+              fnSetCurator: a,
               bLimitToCreatorHome: r,
             } = e,
-            i = (0, d.useRef)(null),
             l = (0, d.useRef)(null),
+            s = (0, d.useRef)(null),
             c = (0, d.useRef)(0),
-            m = (0, d.useRef)();
+            u = (0, d.useRef)();
           (0, d.useEffect)(
             () => () => {
               window.clearTimeout(c.current),
-                i.current && i.current("SearchForCurator: unmounting"),
-                l.current && l.current.Hide();
+                l.current && l.current("SearchForCurator: unmounting"),
+                s.current && s.current.Hide();
             },
             [],
           );
-          const u = (0, d.useCallback)(
+          const m = (0, d.useCallback)(
             (e) =>
               (0, o.mG)(void 0, void 0, void 0, function* () {
                 const t = e.target.value;
                 t &&
                   0 != t.trim().length &&
                   (window.clearTimeout(c.current),
-                  i.current && i.current("SearchForCurator: new request"),
+                  l.current && l.current("SearchForCurator: new request"),
                   (c.current = window.setTimeout(
                     () =>
                       (0, o.mG)(void 0, void 0, void 0, function* () {
-                        const e = s().CancelToken.source();
-                        i.current = e.cancel;
+                        const e = i().CancelToken.source();
+                        l.current = e.cancel;
                         try {
-                          const a = yield A.bq.SearchCreatorHomeStore(t, r, e);
+                          const n = yield M.bq.SearchCreatorHomeStore(t, r, e);
                           if (e.token.reason) return;
-                          l.current = (0, D.yV)(
-                            d.createElement(P, { list: a, fnSetCurator: n }),
-                            m.current.element,
+                          s.current = (0, A.yV)(
+                            d.createElement(G, { list: n, fnSetCurator: a }),
+                            u.current.element,
                             {
                               bOverlapHorizontal: !0,
                               bMatchWidth: !0,
@@ -269,93 +108,93 @@
                           );
                         } catch (t) {
                           if (e.token.reason) return;
-                          const a = (0, S.l)(t);
+                          const n = (0, f.l)(t);
                           console.log(
                             "SearchForCurator.SearchCreatorHomeStore error " +
-                              a.strErrorMsg,
-                            a,
+                              n.strErrorMsg,
+                            n,
                           );
                         }
                       }),
                     300,
                   )));
               }),
-            [n, r],
+            [a, r],
           );
           return d.createElement(
-            B.SV,
+            D.SV,
             null,
             d.createElement(g.II, {
               type: "text",
               label: t,
-              onChange: u,
+              onChange: m,
               onBlur: (e) =>
-                setTimeout(() => l.current && l.current.Hide(), 200),
-              ref: m,
-              tooltip: a,
+                setTimeout(() => s.current && s.current.Hide(), 200),
+              ref: u,
+              tooltip: n,
             }),
           );
         },
-        P = (e) => {
-          const { list: t, fnSetCurator: a } = e;
+        G = (e) => {
+          const { list: t, fnSetCurator: n } = e;
           return d.createElement(
-            M.xV,
+            b.xV,
             { className: T.SearchResults },
             t.map((e) =>
               d.createElement(
-                M.Zo,
+                b.Zo,
                 {
                   key: "curatorresult" + e.GetClanAccountID(),
-                  onSelected: () => a(e),
+                  onSelected: () => n(e),
                 },
                 d.createElement(
                   "div",
                   { style: { display: "flex", alignItems: "center" } },
                   d.createElement(
                     "div",
-                    { className: b.GameImageContainer },
+                    { className: w.GameImageContainer },
                     d.createElement("img", {
                       src: e.GetAvatarURLFullSize(),
-                      className: b.AvatarImage,
+                      className: w.AvatarImage,
                     }),
                   ),
-                  (0, w.HA)(e.GetName()),
+                  (0, L.HA)(e.GetName()),
                 ),
               ),
             ),
           );
         };
-      var y = a(43389);
-      const L = (0, c.Pi)((e) => {
+      var N = n(43389);
+      const R = (0, c.Pi)((e) => {
           const t = (function () {
-            const [e, t] = d.useState(!F.Get().BHasLoadCompleted());
+            const [e, t] = d.useState(!H.Get().BHasLoadCompleted());
             return (
               d.useEffect(() => {
-                F.Get().BHasLoadCompleted() ||
-                  F.Get()
+                H.Get().BHasLoadCompleted() ||
+                  H.Get()
                     .LoadSalePageMigrationInfo()
                     .finally(() => t(!1));
               }, []),
-              e ? void 0 : F.Get().GetMigrationRecords()
+              e ? void 0 : H.Get().GetMigrationRecords()
             );
           })();
           if (!t)
             return d.createElement(E.V, {
-              string: (0, _.Xx)("#Loading"),
+              string: (0, S.Xx)("#Loading"),
               position: "center",
               size: "medium",
             });
-          const a = t.filter((e) => !e.gid_clan_event),
-            n = a.filter(
+          const n = t.filter((e) => !e.gid_clan_event),
+            a = n.filter(
               (e) =>
                 e.display_name.toLocaleLowerCase().indexOf("franchise") >= 0,
             ),
-            r = a.filter(
+            r = n.filter(
               (e) =>
                 e.display_name.toLocaleLowerCase().indexOf("franchise") < 0,
             ),
             o = t.filter((e) => Boolean(e.gid_clan_event && e.hidden)),
-            i = t.filter((e) => Boolean(e.gid_clan_event && !e.hidden));
+            l = t.filter((e) => Boolean(e.gid_clan_event && !e.hidden));
           return d.createElement(
             "div",
             null,
@@ -365,35 +204,35 @@
               null,
               "For unmigrated or migrated but unpublished pages, you can view the existing sale page using a not logged in browser (or incognito mode). You can see the new sale page being built on the store if logged in using a Valve Admin account.",
             ),
-            d.createElement(R, {
+            d.createElement(B, {
               strName: "Unmigrated Franchises",
-              records: n,
+              records: a,
             }),
-            d.createElement(R, {
+            d.createElement(B, {
               strName: "Unmigrated Generic Sale PAges",
               records: r,
               bHideByDefault: !0,
             }),
-            d.createElement(R, { strName: "Migrated but Hidden", records: o }),
-            d.createElement(R, {
+            d.createElement(B, { strName: "Migrated but Hidden", records: o }),
+            d.createElement(B, {
               strName: "Migrated and Visible",
-              records: i,
+              records: l,
               bHideByDefault: !0,
             }),
           );
         }),
-        R = (e) => {
-          const { strName: t, records: a, bHideByDefault: n } = e,
-            [r, o] = (0, d.useState)(n);
+        B = (e) => {
+          const { strName: t, records: n, bHideByDefault: a } = e,
+            [r, o] = (0, d.useState)(a);
           return d.createElement(
             "div",
-            { className: C.SectionContainer },
+            { className: I.SectionContainer },
             d.createElement(
               "h2",
-              { className: C.SectionTitle, onDoubleClick: () => o(!r) },
+              { className: I.SectionTitle, onDoubleClick: () => o(!r) },
               t,
               " (",
-              a.length,
+              n.length,
               ")",
               d.createElement("span", null, " "),
               d.createElement(
@@ -407,35 +246,35 @@
               ? d.createElement(
                   g.zx,
                   { onClick: () => o(!1) },
-                  (0, _.Xx)("#Sale_ShowContents"),
+                  (0, S.Xx)("#Sale_ShowContents"),
                 )
               : d.createElement(
                   d.Fragment,
                   null,
-                  a.map((e) =>
-                    d.createElement(N, { key: e.sale_page_id, record: e }),
+                  n.map((e) =>
+                    d.createElement(O, { key: e.sale_page_id, record: e }),
                   ),
                 ),
           );
         },
-        N = (0, c.Pi)((e) => {
+        O = (0, c.Pi)((e) => {
           const { record: t } = e,
-            a = (0, u.P4)(t.clan_account_id);
+            n = (0, m.P4)(t.clan_account_id);
           return d.createElement(
             d.Fragment,
             null,
             d.createElement(
               "div",
-              { className: C.RecordCtn },
+              { className: I.RecordCtn },
               d.createElement(
                 "div",
-                { className: C.RecordInfoCtn },
+                { className: I.RecordInfoCtn },
                 d.createElement(
                   "div",
                   null,
                   d.createElement(
                     "a",
-                    { href: I.De.STORE_BASE_URL + "sale/" + t.vanity },
+                    { href: C.De.STORE_BASE_URL + "sale/" + t.vanity },
                     d.createElement(
                       "b",
                       null,
@@ -443,15 +282,15 @@
                     ),
                   ),
                 ),
-                Boolean(a) &&
+                Boolean(n) &&
                   d.createElement(
                     "div",
                     null,
                     d.createElement(
                       "a",
-                      { href: a.vanity_url },
+                      { href: n.vanity_url },
                       "Sale Page part of ",
-                      a.group_name,
+                      n.group_name,
                     ),
                   ),
                 Boolean(t.gid_clan_event) &&
@@ -462,9 +301,9 @@
                       "a",
                       {
                         href:
-                          I.De.COMMUNITY_BASE_URL +
+                          C.De.COMMUNITY_BASE_URL +
                           "gid/" +
-                          m.K.InitFromClanID(
+                          u.K.InitFromClanID(
                             t.clan_account_id,
                           ).ConvertTo64BitString() +
                           "/partnerevents/edit/" +
@@ -479,9 +318,9 @@
                   g.zx,
                   {
                     onClick: (e) =>
-                      (0, h.AM)(
-                        d.createElement(O, { record: t }),
-                        (0, f.RA)(e),
+                      (0, p.AM)(
+                        d.createElement(P, { record: t }),
+                        (0, _.RA)(e),
                       ),
                   },
                   "Migrate Sale Page",
@@ -490,33 +329,33 @@
             d.createElement("hr", null),
           );
         }),
-        O = (e) => {
-          const { record: t, closeModal: a } = e,
-            [n, r] = (0, d.useState)(t.clan_account_id),
-            [o, i] = (0, d.useState)(!1),
-            [s, l] = (0, d.useState)(void 0),
-            [c, u] = (0, d.useState)(!1),
-            [g, h] = (0, d.useState)(t.gid_clan_event),
-            [v, f] = (0, d.useState)(null);
+        P = (e) => {
+          const { record: t, closeModal: n } = e,
+            [a, r] = (0, d.useState)(t.clan_account_id),
+            [o, l] = (0, d.useState)(!1),
+            [i, s] = (0, d.useState)(void 0),
+            [c, m] = (0, d.useState)(!1),
+            [g, p] = (0, d.useState)(t.gid_clan_event),
+            [v, _] = (0, d.useState)(null);
           return d.createElement(
-            p.uH,
+            h.uH,
             {
               strTitle: "Migrate Sale page",
               strDescription: `Will migrate the sale page ${t.vanity} to the below clan `,
-              bOKDisabled: !n || o,
+              bOKDisabled: !a || o,
               onOK: () => {
-                i(!0),
-                  F.Get()
+                l(!0),
+                  H.Get()
                     .MigrateOrUpdateSalePage(
                       t.sale_page_id,
-                      n,
+                      a,
                       t.gid_clan_event,
                     )
-                    .then(([e, t, a]) => {
-                      l(e), u(t), h(a);
+                    .then(([e, t, n]) => {
+                      s(e), m(t), p(n);
                     });
               },
-              onCancel: a,
+              onCancel: n,
             },
             Boolean(t.clan_account_id)
               ? d.createElement(
@@ -533,20 +372,20 @@
               : d.createElement(
                   d.Fragment,
                   null,
-                  d.createElement(G, {
+                  d.createElement(y, {
                     bLimitToCreatorHome: !0,
                     strLabel: "Search for Creator Home to house the Sale Event",
                     strToolTip:
                       "Partner Event sales must belong to a creator home (which is a curator with games associated to it from the partner site)",
                     fnSetCurator: (e) => {
-                      r(e.GetClanAccountID()), f(e);
+                      r(e.GetClanAccountID()), _(e);
                     },
                   }),
                   Boolean(v) && d.createElement(k, { creatorHome: v }),
                 ),
-            Boolean(o && !s) &&
+            Boolean(o && !i) &&
               d.createElement(E.V, { position: "center", size: "medium" }),
-            Boolean(s) && d.createElement("div", null, s),
+            Boolean(i) && d.createElement("div", null, i),
             Boolean(c) &&
               d.createElement(
                 "div",
@@ -557,7 +396,7 @@
                   d.createElement(
                     "a",
                     {
-                      href: I.De.STORE_BASE_URL + "sale/" + t.vanity,
+                      href: C.De.STORE_BASE_URL + "sale/" + t.vanity,
                       target: "_blank",
                     },
                     "Sale Page",
@@ -570,9 +409,9 @@
                     "a",
                     {
                       href:
-                        I.De.COMMUNITY_BASE_URL +
+                        C.De.COMMUNITY_BASE_URL +
                         "gid/" +
-                        m.K.InitFromClanID(n).ConvertTo64BitString() +
+                        u.K.InitFromClanID(a).ConvertTo64BitString() +
                         "/partnerevents/edit/" +
                         g,
                       target: "_blank",
@@ -585,8 +424,8 @@
         },
         k = (e) => {
           const { creatorHome: t } = e,
-            a = m.K.InitFromClanID(t.GetClanAccountID()),
-            n = t.GetClanAccountID();
+            n = u.K.InitFromClanID(t.GetClanAccountID()),
+            a = t.GetClanAccountID();
           return t
             ? d.createElement(
                 "div",
@@ -595,9 +434,9 @@
                   "div",
                   null,
                   "ClanID = ",
-                  n,
+                  a,
                   " - SteamID ",
-                  a.ConvertTo64BitString(),
+                  n.ConvertTo64BitString(),
                 ),
                 d.createElement(
                   "div",
@@ -607,7 +446,7 @@
                     {
                       href:
                         "https://steamsupport.valvesoftware.com/clan/overview/" +
-                        a.ConvertTo64BitString(),
+                        n.ConvertTo64BitString(),
                     },
                     "Group Support Page",
                   ),
@@ -626,22 +465,22 @@
                       "Read more about the state here.",
                     ),
                   ),
-                d.createElement(y.oZ, {
+                d.createElement(N.oZ, {
                   creatorID: t.GetCreatorHomeIdentifier(),
                   bHideCreatorType: !0,
                 }),
               )
             : null;
         };
-      class F {
+      class H {
         BHasLoadCompleted() {
           return this.m_bLoadComplete;
         }
         GetMigrationRecords() {
           return this.m_listSaleState;
         }
-        MigrateOrUpdateSalePage(e, t, a) {
-          var n, r;
+        MigrateOrUpdateSalePage(e, t, n) {
+          var a, r;
           return (0, o.mG)(this, void 0, void 0, function* () {
             const o = this.m_mapSaleIDToInfo.get(e);
             if (!o)
@@ -658,26 +497,26 @@
                 void 0,
               ];
             try {
-              const i =
-                I.De.COMMUNITY_BASE_URL + "migrate/ajaxcreateupdatesalepage";
+              const l =
+                C.De.COMMUNITY_BASE_URL + "migrate/ajaxcreateupdatesalepage";
               let c = new URLSearchParams();
-              c.append("sessionid", I.De.SESSIONID),
+              c.append("sessionid", C.De.SESSIONID),
                 c.append("salePageID", e),
                 c.append("clanAccountID", "" + t),
-                a && c.append("gidClanEvent", a);
-              const d = yield s().post(i, c, { withCredentials: !0 });
+                n && c.append("gidClanEvent", n);
+              const d = yield i().post(l, c, { withCredentials: !0 });
               if (
                 200 == (null == d ? void 0 : d.status) &&
                 1 ==
-                  (null === (n = null == d ? void 0 : d.data) || void 0 === n
+                  (null === (a = null == d ? void 0 : d.data) || void 0 === a
                     ? void 0
-                    : n.success) &&
+                    : a.success) &&
                 (null === (r = null == d ? void 0 : d.data) || void 0 === r
                   ? void 0
                   : r.gidClanEvent)
               )
                 return (
-                  (0, l.z)(() => {
+                  (0, s.z)(() => {
                     o.gid_clan_event ||
                       ((o.gid_clan_event = d.data.gidClanEvent),
                       (o.clan_account_id = t),
@@ -688,7 +527,7 @@
                   [d.data.msg || "Success", !0, d.data.gidClanEvent]
                 );
               {
-                const e = (0, S.l)(d);
+                const e = (0, f.l)(d);
                 return (
                   console.error(
                     "CMigrateSaleStore.LoadSalePageMigrationInfo: failed with " +
@@ -699,7 +538,7 @@
                 );
               }
             } catch (e) {
-              const t = (0, S.l)(e);
+              const t = (0, f.l)(e);
               console.error(
                 "CMigrateSaleStore.MigrateOrUpdateSalePage: caught error with " +
                   t.strErrorMsg,
@@ -723,10 +562,10 @@
           var e, t;
           return (0, o.mG)(this, void 0, void 0, function* () {
             try {
-              const a =
-                  I.De.COMMUNITY_BASE_URL + "migrate/ajaxgetsalepagestomigrate",
-                n = { sessionid: I.De.SESSIONID },
-                r = yield s().get(a, { params: n, withCredentials: !0 });
+              const n =
+                  C.De.COMMUNITY_BASE_URL + "migrate/ajaxgetsalepagestomigrate",
+                a = { sessionid: C.De.SESSIONID },
+                r = yield i().get(n, { params: a, withCredentials: !0 });
               if (
                 ((this.m_bLoadComplete = !0),
                 200 == (null == r ? void 0 : r.status) &&
@@ -739,7 +578,7 @@
                     : t.data))
               )
                 return (
-                  (0, l.z)(() => {
+                  (0, s.z)(() => {
                     r.data.data.forEach((e) => {
                       this.m_mapSaleIDToInfo.set(e.sale_page_id, e),
                         this.m_listSaleState.push(
@@ -754,7 +593,7 @@
                   this.m_listSaleState
                 );
               {
-                const e = (0, S.l)(r);
+                const e = (0, f.l)(r);
                 console.error(
                   "CMigrateSaleStore.LoadSalePageMigrationInfo: failed with " +
                     e.strErrorMsg,
@@ -762,7 +601,7 @@
                 );
               }
             } catch (e) {
-              const t = (0, S.l)(e);
+              const t = (0, f.l)(e);
               console.error(
                 "CMigrateSaleStore.LoadSalePageMigrationInfo: caught error with " +
                   t.strErrorMsg,
@@ -774,11 +613,11 @@
         }
         static Get() {
           return (
-            F.s_Singleton ||
-              ((F.s_Singleton = new F()),
-              ("dev" != I.De.WEB_UNIVERSE && "beta" != I.De.WEB_UNIVERSE) ||
-                (window.g_MigrateSaleStore = F.s_Singleton)),
-            F.s_Singleton
+            H.s_Singleton ||
+              ((H.s_Singleton = new H()),
+              ("dev" != C.De.WEB_UNIVERSE && "beta" != C.De.WEB_UNIVERSE) ||
+                (window.g_MigrateSaleStore = H.s_Singleton)),
+            H.s_Singleton
           );
         }
         constructor() {
@@ -786,21 +625,21 @@
             (this.m_listSaleState = new Array()),
             (this.m_stateLoadPromise = null),
             (this.m_bLoadComplete = !1),
-            (0, l.rC)(this);
+            (0, s.rC)(this);
         }
       }
-      (0, o.gn)([l.LO], F.prototype, "m_mapSaleIDToInfo", void 0),
-        (0, o.gn)([l.LO], F.prototype, "m_listSaleState", void 0);
-      var H = a(93243),
-        x = a(42855),
-        U = a(71472);
+      (0, o.gn)([s.LO], H.prototype, "m_mapSaleIDToInfo", void 0),
+        (0, o.gn)([s.LO], H.prototype, "m_listSaleState", void 0);
+      var U = n(93243),
+        x = n(42855),
+        F = n(71472);
       class z {
         constructor() {
           (this.m_rgApps = []),
             (this.m_rgClanAccountIDs = []),
             (this.m_nHighestAppOffsetRequested = 0),
             (this.m_nHighestClanOffsetRequested = 0),
-            (0, l.rC)(this);
+            (0, s.rC)(this);
         }
         static Get() {
           return (
@@ -811,25 +650,25 @@
           );
         }
         Init() {}
-        GetApps(e, t, a) {
-          const n = Math.max(e, this.m_nHighestAppOffsetRequested),
-            r = e + t - n;
+        GetApps(e, t, n) {
+          const a = Math.max(e, this.m_nHighestAppOffsetRequested),
+            r = e + t - a;
           return (
-            r > 0 && (this.m_mostRecentRequest = this.FetchApps(n, r, a)),
+            r > 0 && (this.m_mostRecentRequest = this.FetchApps(a, r, n)),
             this.m_rgApps.slice(e, e + t)
           );
         }
-        FetchApps(e, t, a, n) {
+        FetchApps(e, t, n, a) {
           var r;
           return (0, o.mG)(this, void 0, void 0, function* () {
-            if (this.m_startAppID && this.m_startAppID != a)
+            if (this.m_startAppID && this.m_startAppID != n)
               throw new Error(
                 "Cannot switch starting AppID from " +
                   this.m_startAppID +
                   " to " +
-                  a,
+                  n,
               );
-            this.m_startAppID = a;
+            this.m_startAppID = n;
             let o = Math.max(t, 20);
             for (
               this.m_nHighestAppOffsetRequested = e + o,
@@ -838,36 +677,36 @@
 
             ) {
               const t = Math.min(o, 100),
-                i = { offset: e, nBatchSize: t, start_appid: a },
-                c = I.De.COMMUNITY_BASE_URL + "migrate/ajaxgetallapps";
+                l = { offset: e, nBatchSize: t, start_appid: n },
+                c = C.De.COMMUNITY_BASE_URL + "migrate/ajaxgetallapps";
               let d = null;
               try {
-                const a = yield s().get(c, {
-                  params: i,
+                const n = yield i().get(c, {
+                  params: l,
                   withCredentials: !0,
-                  cancelToken: null == n ? void 0 : n.token,
+                  cancelToken: null == a ? void 0 : a.token,
                 });
                 if (
                   1 ==
-                    (null === (r = null == a ? void 0 : a.data) || void 0 === r
+                    (null === (r = null == n ? void 0 : n.data) || void 0 === r
                       ? void 0
                       : r.success) &&
-                  a.data.apps
+                  n.data.apps
                 ) {
-                  (0, l.z)(() => {
+                  (0, s.z)(() => {
                     if (e > this.m_rgApps.length)
                       for (let t = this.m_rgApps.length; t < e; t++)
                         this.m_rgApps[t] = null;
-                    for (let n = 0; n < t; n++)
-                      this.m_rgApps[e + n] = a.data.apps[n];
+                    for (let a = 0; a < t; a++)
+                      this.m_rgApps[e + a] = n.data.apps[a];
                   }),
                     (e += t),
                     (o -= t);
                   continue;
                 }
-                d = (0, S.l)(null == a ? void 0 : a.data);
+                d = (0, f.l)(null == n ? void 0 : n.data);
               } catch (e) {
-                d = (0, S.l)(e);
+                d = (0, f.l)(e);
               }
               throw new Error(
                 "ajax request failed with error " +
@@ -880,76 +719,76 @@
           });
         }
         GetClanAccountIDs(e, t) {
-          const a = this.m_nHighestClanOffsetRequested,
-            n = e + t - a;
+          const n = this.m_nHighestClanOffsetRequested,
+            a = e + t - n;
           return (
-            n > 0 && this.FetchClans(a, n),
+            a > 0 && this.FetchClans(n, a),
             this.m_rgClanAccountIDs.slice(e, e + t)
           );
         }
-        FetchClans(e, t, a) {
-          var n;
+        FetchClans(e, t, n) {
+          var a;
           return (0, o.mG)(this, void 0, void 0, function* () {
             this.m_nHighestClanOffsetRequested = e + t;
             const r = { offset: e, count: t },
-              o = I.De.COMMUNITY_BASE_URL + "migrate/ajaxgetallclans";
-            let i = null;
+              o = C.De.COMMUNITY_BASE_URL + "migrate/ajaxgetallclans";
+            let l = null;
             try {
-              const e = yield s().get(o, {
+              const e = yield i().get(o, {
                 params: r,
                 withCredentials: !0,
-                cancelToken: null == a ? void 0 : a.token,
+                cancelToken: null == n ? void 0 : n.token,
               });
               if (
                 1 ==
-                  (null === (n = null == e ? void 0 : e.data) || void 0 === n
+                  (null === (a = null == e ? void 0 : e.data) || void 0 === a
                     ? void 0
-                    : n.success) &&
+                    : a.success) &&
                 e.data.accountids
               )
                 return void (this.m_rgClanAccountIDs =
                   this.m_rgClanAccountIDs.concat(
                     e.data.accountids.map(Number),
                   ));
-              i = (0, S.l)(null == e ? void 0 : e.data);
+              l = (0, f.l)(null == e ? void 0 : e.data);
             } catch (e) {
-              i = (0, S.l)(e);
+              l = (0, f.l)(e);
             }
             console.error(
               "FetchClans: ajax request failed with error",
-              i.strErrorMsg,
+              l.strErrorMsg,
             );
           });
         }
       }
-      (0, o.gn)([l.LO.shallow], z.prototype, "m_rgApps", void 0),
-        (0, o.gn)([l.LO.shallow], z.prototype, "m_rgClanAccountIDs", void 0);
-      var W = a(73941),
-        V = a(46452),
-        q = a.n(V);
-      const Y = (0, c.Pi)((e) => {
-          const [t, a] = (0, d.useState)(!0);
+      (0, o.gn)([s.LO.shallow], z.prototype, "m_rgApps", void 0),
+        (0, o.gn)([s.LO.shallow], z.prototype, "m_rgClanAccountIDs", void 0);
+      var V = n(73941),
+        Y = n(46452),
+        q = n.n(Y);
+      const W = (0, c.Pi)((e) => {
+          const [t, n] = (0, d.useState)(!0);
           (0, d.useEffect)(() => {
-            Promise.all([x.cb.InitGlobal(), r.wk.Init()]).then(() => a(!1));
+            Promise.all([x.cb.InitGlobal(), r.wk.Init()]).then(() => n(!1));
           }, []);
-          const [n, o] = (0, U.Ar)("start", 0),
-            [i, s] = (0, U.Ar)("start_appid", 0),
-            [l, c] = (0, U.Ar)("count", 10),
-            [m, u] = (0, U.Ar)("autoload", !0),
-            [g, p] = (0, U.Ar)("batch_size", 1),
-            [h, v] = (0, U.Ar)("automigrate", !1),
-            [f, _] = (0, d.useState)(!1),
-            [S, I] = (0, U.Ar)("rolling", 0),
-            [C, D] = (0, d.useState)(new Set()),
-            A = (0, d.useRef)(0),
-            M = z.Get().GetApps(n, l, i),
-            B = 0 == S ? M : M.filter((e) => !C.has(Number(e.id))).slice(0, S),
-            b = (e, t) => {
-              C.has(e) ||
+          const [a, o] = (0, F.Ar)("start", 0),
+            [l, i] = (0, F.Ar)("start_appid", 0),
+            [s, c] = (0, F.Ar)("count", 10),
+            [u, m] = (0, F.Ar)("autoload", !0),
+            [g, h] = (0, F.Ar)("batch_size", 1),
+            [p, v] = (0, F.Ar)("automigrate", !1),
+            [_, S] = (0, d.useState)(!1),
+            [f, C] = (0, F.Ar)("rolling", 0),
+            [I, A] = (0, d.useState)(new Set()),
+            M = (0, d.useRef)(0),
+            b = z.Get().GetApps(a, s, l),
+            D = 0 == f ? b : b.filter((e) => !I.has(Number(e.id))).slice(0, f),
+            w = (e, t) => {
+              I.has(e) ||
                 (console.log("completed: ", e, t),
-                C.add(e),
-                (A.current += t),
-                D(new Set(C)));
+                I.add(e),
+                (M.current += t),
+                A(new Set(I)));
             };
           return d.createElement(
             "div",
@@ -959,14 +798,14 @@
               { className: q().ToolHeader },
               "Partner Events Migration Tools",
             ),
-            B.map((e) =>
-              d.createElement(j, {
+            D.map((e) =>
+              d.createElement($, {
                 key: e.id,
                 app: e,
-                bAutoLoad: m,
-                bAutoMigrate: h || f,
+                bAutoLoad: u,
+                bAutoMigrate: p || _,
                 nMigrateBatchSize: g,
-                fnOnCompletion: b,
+                fnOnCompletion: w,
               }),
             ),
             t &&
@@ -975,7 +814,7 @@
                 position: "center",
                 string: "initializing",
               }),
-            !M.length &&
+            !b.length &&
               d.createElement(E.V, {
                 size: "xlarge",
                 position: "center",
@@ -986,160 +825,160 @@
               {
                 className: q().LoadEventsButton,
                 onClick: () => {
-                  _(!1), D(new Set()), o(n + l);
+                  S(!1), A(new Set()), o(a + s);
                 },
               },
               "LOAD NEXT PAGE",
             ),
-            !h &&
+            !p &&
               d.createElement(
                 "div",
-                { className: q().LoadEventsButton, onClick: () => _(!0) },
+                { className: q().LoadEventsButton, onClick: () => S(!0) },
                 "MIGRATE ALL ON PAGE",
               ),
             d.createElement(
               "div",
               { className: q().StatusMessage },
-              C.size +
+              I.size +
                 " OF " +
-                M.length +
+                b.length +
                 " APPS COMPLETE. #EVENTS: " +
-                A.current,
+                M.current,
             ),
           );
         }),
-        j = (0, c.Pi)((e) => {
+        $ = (0, c.Pi)((e) => {
           const t = Number(e.app.id),
-            [a, n] = (0, d.useState)(0),
-            [i, s] = (0, d.useState)([]),
-            [l, c] = (0, d.useState)(!1),
-            m = (0, d.useRef)(new Set()),
-            u = (0, d.useRef)(0);
+            [n, a] = (0, d.useState)(0),
+            [l, i] = (0, d.useState)([]),
+            [s, c] = (0, d.useState)(!1),
+            u = (0, d.useRef)(new Set()),
+            m = (0, d.useRef)(0);
           (0, d.useEffect)(() => {
-            H.sV.LoadOGGClanInfoForAppID(t).then((e) => {
-              var a;
+            U.sV.LoadOGGClanInfoForAppID(t).then((e) => {
+              var n;
               return console.log(
                 "Loaded app",
                 t,
                 null == e ? void 0 : e.group_name,
-                null === (a = null == e ? void 0 : e.clanSteamID) ||
-                  void 0 === a
+                null === (n = null == e ? void 0 : e.clanSteamID) ||
+                  void 0 === n
                   ? void 0
-                  : a.ConvertTo64BitString(),
+                  : n.ConvertTo64BitString(),
               );
             });
           }, [t]);
-          const g = H.sV.GetOGGClanInfo(t),
-            p = g ? g.group_name : e.app.name,
-            h = `${I.De.COMMUNITY_BASE_URL}games/${g ? g.vanity_url : t}/partnerevents/`,
-            v = i.length,
-            f = a == v,
-            _ = i.filter((e) => e.BIsVisibleEvent()),
-            C = _.length,
-            D = _.filter(
+          const g = U.sV.GetOGGClanInfo(t),
+            h = g ? g.group_name : e.app.name,
+            p = `${C.De.COMMUNITY_BASE_URL}games/${g ? g.vanity_url : t}/partnerevents/`,
+            v = l.length,
+            _ = n == v,
+            S = l.filter((e) => e.BIsVisibleEvent()),
+            I = S.length,
+            A = S.filter(
               (e) =>
                 e.bOldAnnouncement &&
                 g &&
                 g.clanAccountID != e.announcementClanSteamID.GetAccountID(),
             ).length,
-            A = _.filter(
+            M = S.filter(
               (e) =>
                 e.bOldAnnouncement &&
-                !m.current.has(e.AnnouncementGID) &&
+                !u.current.has(e.AnnouncementGID) &&
                 (!g ||
                   g.clanAccountID == e.announcementClanSteamID.GetAccountID()),
             ),
-            M = A.length,
-            B = !f && M > 0 && (null == g ? void 0 : g.clanSteamID),
-            b = () =>
+            b = M.length,
+            D = !_ && b > 0 && (null == g ? void 0 : g.clanSteamID),
+            w = () =>
               (0, o.mG)(void 0, void 0, void 0, function* () {
-                const e = a;
-                n(a + 50), c(!0);
+                const e = n;
+                a(n + 50), c(!0);
                 const o = yield r.wk.LoadPartnerEventsPageable(
                   void 0,
                   t,
                   e,
                   50,
                 );
-                s(i.concat(o)), c(!1);
+                i(l.concat(o)), c(!1);
               });
           (0, d.useEffect)(() => {
-            e.bAutoLoad && f && !l && b();
+            e.bAutoLoad && _ && !s && w();
           });
-          const w = (e, t) => {
-              t ? (u.current += 1) : m.current.add(e);
+          const L = (e, t) => {
+              t ? (m.current += 1) : u.current.add(e);
             },
             T = () =>
               (0, o.mG)(void 0, void 0, void 0, function* () {
                 c(!0),
-                  yield (function (e, t, a, n, i) {
+                  yield (function (e, t, n, a, l) {
                     return (0, o.mG)(this, void 0, void 0, function* () {
                       for (const o of e.slice(0, t)) {
                         console.log(
                           "Migrating",
-                          a,
+                          n,
                           o.AnnouncementGID,
                           o.GetNameWithFallback(0),
                           o,
                         );
                         try {
-                          const e = yield (0, W.HO)(o.AnnouncementGID, a, n);
+                          const e = yield (0, V.HO)(o.AnnouncementGID, n, a);
                           if (e) console.warn("Already migrated to event", e);
                           else {
                             const e = r.wk.GetEditModel();
                             e.AddTag("auto_migrated"),
                               e.AddTag("hide_library_overview"),
                               e.AddTag("hide_library_detail"),
-                              yield r.wk.SaveModel(n),
+                              yield r.wk.SaveModel(a),
                               console.log("Successfully migrated the event!"),
                               (o.bOldAnnouncement = !1),
-                              i(o.AnnouncementGID, !0);
+                              l(o.AnnouncementGID, !0);
                           }
                         } catch (e) {
-                          const t = (0, S.l)(e);
+                          const t = (0, f.l)(e);
                           console.error(
                             "MigrateEvents: " + t.strErrorMsg.slice(0, 512),
                             t,
                           ),
-                            i(o.AnnouncementGID, !1);
+                            l(o.AnnouncementGID, !1);
                         }
                       }
                     });
-                  })(A, e.nMigrateBatchSize, t, g.clanSteamID, w),
+                  })(M, e.nMigrateBatchSize, t, g.clanSteamID, L),
                   c(!1);
               });
           return (
             (0, d.useEffect)(() => {
-              e.bAutoMigrate && B && !l && T();
+              e.bAutoMigrate && D && !s && T();
             }),
             (0, d.useEffect)(() => {
-              f || B || l || e.fnOnCompletion(t, u.current);
+              _ || D || s || e.fnOnCompletion(t, m.current);
             }),
             d.createElement(
               "div",
               { className: q().ClanRow },
               d.createElement("div", { className: q().ID }, t),
-              d.createElement("a", { className: q().ClanName, href: h }, p),
+              d.createElement("a", { className: q().ClanName, href: p }, h),
               d.createElement(
                 "div",
                 { className: q().Counts },
-                `Loaded: ${v}\tVisible: ${C}\tOld: ${M}`,
-                D > 0 &&
+                `Loaded: ${v}\tVisible: ${I}\tOld: ${b}`,
+                A > 0 &&
                   d.createElement(
                     "span",
                     { className: q().LinkedAnnouncements },
-                    `Linked: ${D}`,
+                    `Linked: ${A}`,
                   ),
               ),
-              f
+              _
                 ? d.createElement(
                     "div",
-                    { className: q().LoadEventsButton, onClick: b },
+                    { className: q().LoadEventsButton, onClick: w },
                     "LOAD EVENTS",
                   )
-                : l
+                : s
                   ? d.createElement(E.V, { size: "small" })
-                  : B
+                  : D
                     ? d.createElement(
                         "div",
                         { className: q().MigrateEventsButton, onClick: T },
@@ -1153,29 +992,29 @@
             )
           );
         });
-      var $ = a(8285),
-        K = a(82071),
-        Z = (a(34345), a(69406));
-      function J(e) {
-        const [t, a] = d.useState(!0);
+      var j = n(8285),
+        K = n(82071),
+        Z = (n(34345), n(69406));
+      function X(e) {
+        const [t, n] = d.useState(!0);
         return (
           d.useEffect(() => {
-            K.j1.Init(), Promise.all([]).then(() => a(!1));
+            K.j1.Init(), Promise.all([]).then(() => n(!1));
           }, []),
           t
             ? d.createElement(E.V, { position: "center", size: "medium" })
             : d.createElement(
-                $.rs,
+                j.rs,
                 null,
-                d.createElement($.AW, {
-                  path: n.wZ.MigrateSaleEvents(),
-                  component: L,
+                d.createElement(j.AW, {
+                  path: a.wZ.MigrateSaleEvents(),
+                  component: R,
                 }),
-                d.createElement($.AW, {
-                  path: n.wZ.MigrateEvents(),
-                  component: Y,
+                d.createElement(j.AW, {
+                  path: a.wZ.MigrateEvents(),
+                  component: W,
                 }),
-                d.createElement($.AW, { component: Z.R }),
+                d.createElement(j.AW, { component: Z.R }),
               )
         );
       }

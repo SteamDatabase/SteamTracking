@@ -60,7 +60,7 @@ function SaveSurvey( appid )
 		}
 		else if ( response.success == 24 )
 		{
-			ShowAlertDialog( 'Error Saving Survey', 'You do not have permission to edit one of the selected categories after your game has been released.' );
+			ShowAlertDialog( 'Error Saving Survey', 'You do not have permission to edit one of the selected categories after your game has been reviewed.' ).done( function() { location.reload(); } );
 		}
 		else
 		{

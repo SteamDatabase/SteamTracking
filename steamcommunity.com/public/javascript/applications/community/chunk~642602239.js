@@ -221,6 +221,7 @@
         InfoStylesBackground: "_3YqPicnANA2QCmuZdBuzHa",
         Padding: "_2oWai6yw7SRKZ3UtbQqcZt",
         NotTooWideModal: "_3P6SelqDLJPtYY0xlkOEfE",
+        ImageManageDialog: "_3m3RVvfgDyt28g_j9n5z0J",
       };
     },
     16003: (e) => {
@@ -293,7 +294,7 @@
         l = n(89e3),
         c = n(31421),
         m = n(19399),
-        d = n(68985),
+        d = n(15896),
         u = n(64561),
         p = n(14411),
         h = n(867),
@@ -743,6 +744,7 @@
                   "p",
                   { className: b().Paragraph },
                   e.children,
+                  i.createElement("wbr", null),
                 );
               },
               autocloses: !1,
@@ -4431,7 +4433,7 @@
         N = n.n(D),
         w = n(27605),
         k = n(77936),
-        R = n(68985),
+        R = n(15896),
         x = n(93243),
         A = n(82071),
         L = n(34310),
@@ -5022,7 +5024,6 @@
             n.e(3070),
             n.e(3973),
             n.e(9173),
-            n.e(5119),
             n.e(2449),
             n.e(2832),
             n.e(4601),
@@ -5911,34 +5912,31 @@
               );
         }
         ShowMenu() {
-          if (this.m_iMenuInstance) this.m_iMenuInstance.Show();
-          else {
-            let e = a.createElement(
-                H,
-                Object.assign({}, this.props, {
-                  fnHasReminderSet: () => this.BHasSomeNotificationSetting(),
-                  fnHidePanel: this.HideMenu,
-                }),
+          let e = a.createElement(
+              H,
+              Object.assign({}, this.props, {
+                fnHasReminderSet: (e) => this.BHasSomeNotificationSetting(e),
+                fnHidePanel: this.HideMenu,
+              }),
+            ),
+            t = {
+              bOverlapHorizontal: !0,
+              bOverlapVertical: !0,
+              bDisablePopTop: !0,
+              bMatchWidth: !0,
+              strClassName: (0, D.Z)(
+                T.ReminderDialog,
+                T.ReminderOptions,
+                g.contextMenu,
               ),
-              t = {
-                bOverlapHorizontal: !0,
-                bOverlapVertical: !0,
-                bDisablePopTop: !0,
-                bMatchWidth: !0,
-                strClassName: (0, D.Z)(
-                  T.ReminderDialog,
-                  T.ReminderOptions,
-                  g.contextMenu,
-                ),
-              };
-            (this.m_iMenuInstance = (0, l.yV)(
-              e,
-              this.m_elDropDownRef.current,
-              t,
-            )),
-              this.m_iMenuInstance.SetOnHideCallback(this.HideMenu);
-          }
-          this.setState({ bIsOpen: !0 }),
+            };
+          (this.m_iMenuInstance = (0, l.yV)(
+            e,
+            this.m_elDropDownRef.current,
+            t,
+          )),
+            this.m_iMenuInstance.SetOnHideCallback(this.HideMenu),
+            this.setState({ bIsOpen: !0 }),
             u.Y.RecordAppInteractionEvent(
               this.props.eventModel.appid,
               u.g.k_eReminder_Opened,
@@ -5948,9 +5946,8 @@
           this.m_iMenuInstance && this.m_iMenuInstance.Hide(),
             this.setState({ bIsOpen: !1 });
         }
-        BHasSomeNotificationSetting() {
-          const { eventModel: e } = this.props,
-            t = e.GID;
+        BHasSomeNotificationSetting(e) {
+          const t = e.GID;
           return (
             (_.N.BHasValidatedEmail() &&
               h.cb
@@ -5972,7 +5969,7 @@
         }
         render() {
           const e = this.props.bOnlyShowIcon && !this.state.bIsOpen,
-            t = this.BHasSomeNotificationSetting(),
+            t = this.BHasSomeNotificationSetting(this.props.eventModel),
             n = (0, p.kl)();
           return this.props.eventModel.startTime < n
             ? null
@@ -6153,7 +6150,7 @@
                 ),
                 onClick: o,
               },
-              i() &&
+              i(this.props.eventModel) &&
                 a.createElement(
                   "div",
                   { className: T.RemindCheck },

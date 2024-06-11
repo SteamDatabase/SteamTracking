@@ -2030,6 +2030,15 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   > form {
   padding-right: 8px;
 }
+._3m3RVvfgDyt28g_j9n5z0J .DialogFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+._3m3RVvfgDyt28g_j9n5z0J .DialogFooter button.DialogButton {
+  margin-left: 8px;
+  width: fit-content;
+}
 ._3HeHPkhxLDKHDLqQp_XLag {
   height: 32px;
 }

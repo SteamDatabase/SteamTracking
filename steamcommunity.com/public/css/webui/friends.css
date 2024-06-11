@@ -1,6 +1,3 @@
-.vrpopups_BodyNoOverflow_26wAD {
-  overflow: hidden;
-}
 .crossfade {
   position: relative;
   overflow: hidden;
@@ -11094,6 +11091,7 @@ html:not(.touch)
 }
 .partnereventshared_EventDefaultRowContainer_3WO6c.partnereventshared_EventStartPublic_2LU_Y {
   border-left: 1px solid #a3cf06;
+  display: flex;
 }
 .partnereventshared_EventOptions_2r_Qe {
   margin-left: 10px;
@@ -37064,6 +37062,9 @@ div:hover > .BBCodeCollapseControl {
 .main_SteamPageHeaderTopLink_2mGrI:hover {
   color: #fff;
 }
+.vrpopups_BodyNoOverflow_26wAD {
+  overflow: hidden;
+}
 .ClientUIControls div {
   cursor: default;
 }
@@ -37758,6 +37759,9 @@ img {
   cursor: pointer;
   width: 16px;
   height: 16px;
+}
+.tool-tip-source {
+  cursor: default;
 }
 .react-select-container .react-select__control {
   background: #dce8fb14;

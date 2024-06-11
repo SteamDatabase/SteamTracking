@@ -15,12 +15,12 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_2OusV",
       };
     },
-    612: (e, t, n) => {
+    44: (e, t, n) => {
       "use strict";
       n.d(t, { Pf: () => r, y5: () => a });
       var i = n(556),
-        o = n(960),
-        s = n(662);
+        o = n(580),
+        s = n(767);
       class r {
         constructor() {
           (this.m_fnCallback = void 0),
@@ -84,7 +84,7 @@
       }
       (0, i.gn)([o.a], a.prototype, "OnMessage", null);
     },
-    662: (e, t, n) => {
+    767: (e, t, n) => {
       "use strict";
       n.d(t, { i: () => o, l: () => i });
       const i = "GamepadInput";
@@ -97,14 +97,14 @@
           (e[(e.Full = 4)] = "Full");
       })(o || (o = {}));
     },
-    942: (e, t, n) => {
+    675: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { InitializeGamepadNavigation: () => vt });
       var i,
         o = n(556),
         s = n(311),
         r = n.n(s),
-        a = n(738);
+        a = n(576);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -164,10 +164,10 @@
           l
         );
       }
-      var v = n(960),
-        g = n(662),
-        _ = n(830),
-        p = n(612);
+      var v = n(580),
+        g = n(767),
+        _ = n(497),
+        p = n(44);
       class f {
         constructor(e) {
           (this.m_bIsGamepadInputExternallyControlled = !1),
@@ -256,23 +256,25 @@
       function b(e, t) {
         let n = null == e ? void 0 : e.parentElement;
         for (; n; ) {
-          if (!t || "x" == t) {
-            const e = window.getComputedStyle(n);
-            if (
-              "scroll" == e.overflowX ||
-              "auto" == e.overflowX ||
-              "fixed" == e.position
-            )
-              break;
-          }
-          if (!t || "y" == t) {
-            const e = window.getComputedStyle(n);
-            if (
-              "scroll" == e.overflowY ||
-              "auto" == e.overflowY ||
-              "fixed" == e.position
-            )
-              break;
+          if (A(n)) {
+            if (!t || "x" == t) {
+              const e = window.getComputedStyle(n);
+              if (
+                "scroll" == e.overflowX ||
+                "auto" == e.overflowX ||
+                "fixed" == e.position
+              )
+                break;
+            }
+            if (!t || "y" == t) {
+              const e = window.getComputedStyle(n);
+              if (
+                "scroll" == e.overflowY ||
+                "auto" == e.overflowY ||
+                "fixed" == e.position
+              )
+                break;
+            }
           }
           n = n.parentElement;
         }
@@ -599,7 +601,7 @@
             : e || console.warn(t, ...n);
         } catch (e) {}
       }
-      var y = n(245);
+      var y = n(996);
       class B {
         GetObject(e) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -1031,7 +1033,7 @@
           );
         }
       }
-      var z = n(320);
+      var z = n(140);
       const Q = new x("FocusNavigation").Debug,
         q = new x("GamepadEvents").Debug;
       class J {
