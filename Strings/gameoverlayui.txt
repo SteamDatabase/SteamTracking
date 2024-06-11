@@ -21,8 +21,6 @@ __TEXT
 (
 __unwind_info
 __TEXT
-D5"
-D5"
 __eh_frame
 __TEXT
 __DATA
@@ -42,21 +40,20 @@ __mod_init_func
 __DATA
 __const
 __DATA
+#
 __cfstring
 __DATA
+03-
+03-
 __objc_classlist__DATA
-`4-
-`4-
 __objc_imageinfo__DATA
-h4-
-h4-
 __objc_const
 __DATA
-p4-
-p4-
 __objc_selrefs
 __DATA
 __objc_classrefs__DATA
+8-
+8-
 __objc_superrefs__DATA
 __objc_ivar
 __DATA
@@ -65,21 +62,22 @@ __DATA
 P
 __data
 __DATA
+@9-
+@9-
 __thread_vars
 __DATA
+w-
 0
+w-
 __thread_data
 __DATA
-x-
+@w-
 @
-x-
+@w-
 __thread_bss
 __DATA
-@x-
 __bss
 __DATA
-@|-
-12
 __common
 __DATA
 H
@@ -7847,8 +7845,8 @@ Steam pid that launched us
 VGUI_Application_001
 OK
 Cancel
-Jun  7 2024
-11:48:41
+Jun 10 2024
+15:10:24
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -9506,6 +9504,7 @@ MP4 Media File (*.mp4)
 Ogg Media File (*.ogv)
 *%s
 All files
+Supported Types (%s)
 findcount
 findactive
 DismissJSDialog
@@ -10525,10 +10524,13 @@ flock %s %s failed. errno = %d
 LOCK_EX
 LOCK_SH
 fcntl failed to set F_NOCACHE
+BCreateDirectory
 *
 rb
 %lf
+CFileReader::BOpenFile
 unsupported flags 0x%x passed to CFileReader::BOpenFile
+CFileReader::Read
 BIsOpen()
 cubBytesToRead < INT32_MAX
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
@@ -10542,6 +10544,7 @@ File change notification for %s but no file contents changed based on hash
 m_strWatchPath
 m_mapFileWatchData
 m_mapFileWatchData.Key( i )
+LoadFileRangeIntoBuffer_Internal
 cbActual < (uint32)nBufSizeWithTerminator
 nGrowSize >= 0
 m_nAllocationCount >= 0
@@ -10661,6 +10664,7 @@ CUtlStringBuilder::InternalPrepareBuffer
 nMinCapacity > Capacity()
 nMinCapacity >= nChars
 nMinCapacity <= k_nMaxStringSize
+len > 0 || HasError()
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
@@ -10908,6 +10912,7 @@ Dec
 %04d%02d%02d%02d%02d%02d
 0
 Ic]
+|,
 
 
 
@@ -10930,8 +10935,16 @@ j
 j
 j
 j
-"
-"
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
 j
 j
 j
@@ -10954,8 +10967,6 @@ AT=
 D
 @
 @
-!
-!
 @
 Hc
 Hc
@@ -11135,13 +11146,13 @@ P
 @
 ?
 @
+
 d
 
 
 
 P
 .
-
 j
 j
 j
@@ -11162,18 +11173,17 @@ j
 j
 j
 j
-
-
-
 j
 j
+j
+j
+
+0
 j
 j
 0
 j
 j
-X
-0
 j
 j
 j
@@ -11183,9 +11193,7 @@ j
 j
 j
 j
-j
-j
-'
+)
 
 
 
@@ -11206,6 +11214,11 @@ j
 j
 j
 j
+
+
+
+
+
 
 d
 &
@@ -11215,6 +11228,7 @@ A+]
 =
 =
 @
+Z
 j
 j
 j
@@ -11442,13 +11456,14 @@ d
 @
 =
 d
+HcS
+Hc@
 
 =
 @
 =*.*
 =
 @
-Ic]
 @
 @
 0
@@ -11460,8 +11475,12 @@ Ic]
 @
 @
 @
+0
+0
+0
 0
 0
 0
 0
 E
+Ic]

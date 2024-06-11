@@ -8,7 +8,6 @@ __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
-89
 __const
 __TEXT
 __objc_methname
@@ -1893,7 +1892,9 @@ LOCK_SH
 fcntl failed to set F_NOCACHE
 rb
 %lld
+CFileReader::BOpenFile
 unsupported flags 0x%x passed to CFileReader::BOpenFile
+CFileReader::Read
 BIsOpen()
 cubBytesToRead < INT32_MAX
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
@@ -1903,6 +1904,7 @@ Seeking to a position which is not sector aligned will break unbuffered io
 %s/%s
 !"Failed to CFStringCreateWithCString watcher path"
 m_listChangedFiles
+LoadFileRangeIntoBuffer_Internal
 cbActual < (uint32)nBufSizeWithTerminator
 CPathString
 %s/%s%s
@@ -2279,6 +2281,7 @@ Seconds
 @
 @
 @
+Ic]
 0
 
 A;E
@@ -2330,7 +2333,6 @@ A
 
 =
 @
-Ic]
 &
 ?
 @

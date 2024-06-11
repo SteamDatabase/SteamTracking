@@ -1,15 +1,11 @@
 __TEXT
-@-
-@-
 __text
 __TEXT
-@
-$"%
-@
+p
+d#%
+p
 __stubs
 __TEXT
-$b%
-$b%
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
@@ -17,19 +13,15 @@ __const
 __TEXT
 __cstring
 __TEXT
-p*
-p*
+p<*
+p<*
 __objc_methname
 __TEXT
 __unwind_info
 __TEXT
 __DATA
-@-
-@-
 __nl_symbol_ptr
 __DATA
-@-
-@-
 __got
 __DATA
 __la_symbol_ptr
@@ -48,25 +40,26 @@ __DATA
 pU
 __thread_vars
 __DATA
+`\0
 0
+`\0
 __thread_data
 __DATA
 @
 __thread_bss
 __DATA
+]0
 __bss
 __DATA
-!0
+a0
 __common
 __DATA
 H
 __LINKEDIT
-@0
 
 8
 @loader_path/steamservice.dylib
 "
-@0
 P
 
 *
@@ -94,17 +87,27 @@ h
 &
 )
 0
-!
 0
-%
+""
 !
+r!
+%
 Hi
+!
+!
 Ic]
 H=
-w)
-Q+
+y)
+4!
+Y
+S+
 &
-N$
+%
+$
+$
+$
+$
+$
 $
 $
 $
@@ -119,10 +122,9 @@ AT=
 D
 @
 @
-h(
-~#
-'(
-O+
+j(
+)(
+_+
 @
 Hc
 Hc
@@ -155,28 +157,19 @@ IcE
 @
 @
 ]
++
++
++
 #
 #
 #
 #
-#
-#
-#
-#
-#
-'
+e"
 V
-'"
-"
-"
+O"
 "
 =
-&
-&
-!
-!
-!
-=
+w!
 10CIPCServer
 10IIPCServer
 11CPipeWaiter
@@ -8598,6 +8591,7 @@ fcntl failed to set F_NOCACHE
 ret != 0
 g_pFioAsyncEnqueue == NULL
 g_pFioAsyncFinalize == NULL
+BCreateDirectory
 TMPDIR
 /var/tmp/
 %s/steamXXXXXX
@@ -8609,7 +8603,9 @@ BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result i
 BSaveBufferToFileWithTemporary() failed to find unused file temp name
 %s.%u.tmp
 %lf
+CFileReader::BOpenFile
 unsupported flags 0x%x passed to CFileReader::BOpenFile
+CFileReader::Read
 BIsOpen()
 cubBytesToRead < INT32_MAX
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
@@ -8619,6 +8615,7 @@ Seeking to a position which is not sector aligned will break unbuffered io
 /
 ..
 %s/%s
+LoadFileRangeIntoBuffer_Internal
 cbActual < (uint32)nBufSizeWithTerminator
 CPathString
 .dylib
@@ -8783,8 +8780,8 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-Jun  7 2024
-11:45:50
+Jun 10 2024
+15:07:42
 Jan
 Feb
 Mar
@@ -9391,17 +9388,27 @@ CWorkThread -- OnWorkItemCompleted - ordered
 m_cCurrentDepth > 0
 %s%s%s
 0
-!
 0
-%
+""
 !
+r!
+%
 Hi
+!
+!
 Ic]
 H=
-w)
-Q+
+y)
+4!
+Y
+S+
 &
-N$
+%
+$
+$
+$
+$
+$
 $
 $
 $
@@ -9416,10 +9423,9 @@ AT=
 D
 @
 @
-h(
-~#
-'(
-O+
+j(
+)(
+_+
 @
 Hc
 Hc
@@ -9452,49 +9458,39 @@ IcE
 @
 @
 ]
++
++
++
 #
 #
 #
 #
-#
-#
-#
-#
-#
-'
+e"
 V
-'"
-"
-"
+O"
 "
 =
+w!
 &
 &
-!
+&
 !
 !
 =
-o
-O%
-i
+Q%
 !
 @
-@
-&
-&
-&
-&
-&
-'"
-"
-"
+$
 '
+$
+@
+&
+&
+)"
+"
+"
 !
-!
-c
-&
-&
-&
+e
 @
 M9e
 @
@@ -9856,7 +9852,6 @@ H
 
 
 *
-
 Hc
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
@@ -9891,7 +9886,7 @@ SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 @
-s
+u
 d
 @
 
@@ -9954,6 +9949,7 @@ A
 
 H=
 0
+v
 &
 @
 @

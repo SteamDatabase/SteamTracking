@@ -6,8 +6,8 @@ __text
 __TEXT
 __stubs
 __TEXT
-"e"
-"e"
+Bc"
+Bc"
 __stub_helper
 __TEXT
 __cstring
@@ -19,8 +19,6 @@ __objc_methname
 __TEXT
 __unwind_info
 __TEXT
-4O'
-4O'
 __DATA
 @(
 @(
@@ -64,8 +62,6 @@ __LINKEDIT
 @loader_path/friendsui.dylib
 "
 @1
-
-i1
 (#
 (%
 P
@@ -99,7 +95,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-hH
+pH
 )
 0(2
 22CJSCallbackFunc_HTMLJS
@@ -4365,6 +4361,7 @@ MP4 Media File (*.mp4)
 Ogg Media File (*.ogv)
 *%s
 All files
+Supported Types (%s)
 findcount
 findactive
 OnCloseWindow
@@ -5598,34 +5595,38 @@ steamIDChat.GetEAccountType() == k_EAccountTypeChat
 k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 steammessages_base.proto
 steammessages_parental_objects.proto
-O^#
-g^#
+o\#
 0
-W0
-@!
+f0
+e0
 !
 !
-!
-'
 
 @
 @
 
 
 &
+&
 x
+&
 
+%
 =
 @
 =
+%
+-$
 -
-T,
+2$
+)$
 p
 0
 p
 0
 p
 0
+w#
 $
 $
 p
@@ -5634,16 +5635,19 @@ p
 0
 p
 0
+#
+#
 p
 0
 p
 0
 0
 Ic]
-"
 |
 p
 0
+"
+*
 0
 0
 AT=
@@ -5654,9 +5658,6 @@ AT=
 D
 @
 @
-!
-!
-*
 @
 Hc
 Hc
@@ -5693,8 +5694,8 @@ V
 =
 !
 @
-T$
 @
+$
 &
 @
 M9e
@@ -5747,10 +5748,8 @@ B
 @
 @
 @
-
 d
 A+M
-t7f9c
 j
 j
 j
@@ -5766,7 +5765,6 @@ D
 0
 j
 j
-d
 0
 j
 j
@@ -5779,6 +5777,7 @@ j
 j
 j
 j
+,
 
 
 
@@ -5805,6 +5804,7 @@ d
 d
 0
 A+]
+
 =
 =
 @
@@ -5954,8 +5954,6 @@ j
 j
 j
 j
-
-
 =
 @
 @
@@ -6006,7 +6004,6 @@ d
 =*.*
 =
 @
-Ic]
 @
 @
 0
@@ -6018,6 +6015,8 @@ Ic]
 @
 @
 @
+0
+0
 0
 0
 0
@@ -6025,6 +6024,7 @@ Ic]
 0
 &
 E
+Ic]
 p
 @
 @

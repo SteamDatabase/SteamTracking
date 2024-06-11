@@ -691,7 +691,7 @@
  T SDL_GetRenderWindow
  T SDL_GetRenderer
  T SDL_GetRendererFromTexture
- T SDL_GetRendererInfo
+ T SDL_GetRendererName
  T SDL_GetRendererProperties
  T SDL_GetRevision
  T SDL_GetSIMDAlignment

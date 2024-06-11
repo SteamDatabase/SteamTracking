@@ -5,11 +5,11 @@ __symbol_stub
 __TEXT
 __stub_helper
 __TEXT
-__gcc_except_tab__TEXT
 __cstring
 __TEXT
 __const
 __TEXT
+__gcc_except_tab__TEXT
 __unwind_info
 __TEXT
 __OBJC
@@ -40,7 +40,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libvstdlib_s.dylib
-u!1f
 @loader_path/libtier0_s.dylib
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
@@ -62,14 +61,12 @@ RQWP
 <^_[]
 ^_[]
 ,^_[]
-u49u
-l^_[]
-^_[]
-^_[]
+|^_[]
+,^_[]
+A$;}
+<^_[]
 VSRQW
 ^_[]
-98u*
-,^_[]
 $^_[]
 SWVP
 ^_[]
@@ -217,6 +214,8 @@ z 9z,u
 ^_[]
 WPRQ
 ^_[]
+98u*
+,^_[]
 z 9z,u
 ^_[]
 WPRQ
@@ -556,12 +555,15 @@ flock %s %s failed. errno = %d
 LOCK_EX
 LOCK_SH
 fcntl failed to set F_NOCACHE
+CFileReader::BOpenFile
 unsupported flags 0x%x passed to CFileReader::BOpenFile
+CFileReader::Read
 BIsOpen()
 cubBytesToRead < INT32_MAX
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Seeking to a position which is not sector aligned will break unbuffered io
+LoadFileRangeIntoBuffer_Internal
 cbToRead <= 1024 * 1024 * 1024
 cbActual < (uint32)nBufSizeWithTerminator
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
@@ -2266,20 +2268,27 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-wLPU
-RyR2
-wV9/
-	-g :G
-+wU.I4
-|]S`Kq
-70<in`
-3l\Q
-W)ESwM
-[WFj
-7u57
-|TBa
-<g?s
-s%ig
+<=OVk1
+^kF77
+1D1a
+>+l+
+0nrp!
+\	7[
+T;;%
+V/<K3
+[=_MV
+~wd^=
+}[;'
+gM\HZ
+#,CF
+c\Mo
+M"H?
+o%Kf
+KKPvg
+$w#DW
+79g!
+zzFb
+hxnaE
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -2337,8 +2346,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240607184627Z0/
->`0<
+240610220819Z0/
 1/0-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -2347,37 +2355,35 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		iwjwABKSI44j/lQ/HoNw2AKLdT4=
+		2vAeh6RBA/0vxJHnATaeow0Q0BE=
 		</data>
 	</array>
 </dict>
 </plist>
-(R'I&
-;RZk
-@PaO
-20240607184720Z0
+<4Om
+\gv0
+20240610220931Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240530203058Z
-240711203057Z0B1
-Timestamp Signer NWK21
+240530204516Z
+240711204515Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
- {]g
-t0@j;
-+G(E
--T*K[@H.
-Mljyx
+[92qNd%
+eO@B
+4VokT
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-@PM#
-kEHv
-m	/]
-4C@-(
-0bZ?\
+u34<
+ZRAW`O[
+#;a=i
+SVA7L
+qTD\
+h;=u
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2416,8 +2422,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240607184720Z0#
-BePk
+240610220931Z0#
+Cvh{
+HDKHP#e
+9N4[
 __TEXT
 __text
 __TEXT
@@ -2487,16 +2495,16 @@ AWAVAUATSH
 8#u1E
 [A\A]A^A_]
 AWAVAUATSH
-u+D9u
-h[A\A]A^A_]
-AWAVATSA
-[A\A^A_]
+u/D9m
+x[A\A]A^A_]
+AWAVSPA
+[A^A_]
 AWAVAUATSH
+s(E1
+teH9
+uoLc}
+q(A9
 ([A\A]A^A_]
-p(E1
-toH9
-uuLc}
-r(A9
 AWAVSPH
 K H9
 [A^A_]
@@ -3447,12 +3455,15 @@ flock %s %s failed. errno = %d
 LOCK_EX
 LOCK_SH
 fcntl failed to set F_NOCACHE
+CFileReader::BOpenFile
 unsupported flags 0x%x passed to CFileReader::BOpenFile
+CFileReader::Read
 BIsOpen()
 cubBytesToRead < INT32_MAX
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Seeking to a position which is not sector aligned will break unbuffered io
+LoadFileRangeIntoBuffer_Internal
 cbActual < (uint32)nBufSizeWithTerminator
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 nGrowSize >= 0
@@ -5152,27 +5163,26 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-#6%N
->^67
-^1*MC:
-I:*q
-wk|.
-h~OiN
-a(*R!
-QP1_,S
-{{SU
-i:<J
-m@cpTJn
-W!8N
-!9Z_|
-pM4`<"t
-J[(VQ~
-,F9h
-15~Z<
-{.xkew
-iRil d
-8&S"
-1[s3
+zn/QL
+HKRR
+zX~\n
+x;O*
+%1n|
+"Fg$
+;4{Z5
+I'd+`D
+dOr"K
+5;x[
+vq-U`
+8O+Oj
+&dRlM
+^P%	
+a}8_^
+,jE.
+V:Z-
+y0hgA
+;+?g
+2y>L
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -5230,7 +5240,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240607184627Z0/
+240610220819Z0/
 1/0-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -5239,37 +5249,38 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		8E0gmiiOjZNMDRDTFHVfaoNdk28=
+		gYKhYkmVcxXmFjZdFlRZZZDnJFs=
 		</data>
 	</array>
 </dict>
 </plist>
-| =J.R
-Cdfu'
-]A?j
-20240607184720Z0
+LC1y{
+@E@C
+ S"w
+D.8:d
+Vv]o
+20240610220931Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240530203058Z
-240711203057Z0B1
-Timestamp Signer NWK21
+240530204516Z
+240711204515Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
- {]g
-t0@j;
-+G(E
--T*K[@H.
-Mljyx
+[92qNd%
+eO@B
+4VokT
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-@PM#
-kEHv
-m	/]
-4C@-(
-0bZ?\
+u34<
+ZRAW`O[
+#;a=i
+SVA7L
+qTD\
+h;=u
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -5308,13 +5319,15 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240607184720Z0#
-75ss 
-3;Q'
-UGdE9
-j3N_t
-\2~1pq
-O1	J
+240610220931Z0#
+Cvh{
+HDKHP#e
+%zUW
+$gd2K
+Pho2
+&'X:
+N$#Q}p]
+'[>6
 __TEXT
 __text
 __TEXT
@@ -5368,9 +5381,9 @@ __LINKEDIT
 TH|@
 R*|@
 	A{9
-R	A;9
+R	A;9 
 	E{9
-R	E;9
+R	E;9@
 TK	@
 R)|@
 IEI*(}
@@ -5448,7 +5461,7 @@ RH!
 RK}@
 Rh!	
 	Es9
-R	E39
+R	E39(
 6`oF
 (I39
 *As9
@@ -5464,39 +5477,32 @@ ii8J
 @9M!
 @9M!
 TH! 
-"{	P
-Bk	0
 	Qw9
-R	Q79 .
+R	Q79
 	Yw9I
 R	Y79
 	Uw9I
 R	U79
 	]w9I
 R	]79
-bC	0
-i1	P
+	6	P
 Thgw95
 7ug79
-Ba	P
+B!	0
 K"}@
 Thjv8H
 Thjw8
-T@{	0
-T@u	0
- t	0
-T n	0
-b}	p
-B~	p
-`f	0
-@e	0
-bq	p
-"m	p
+T |	p
+@m	p
+ l	p
+bx	0
+"t	0
 h(8*
-"i	0
 h(8l
-J]	p
-"X	P
+Jd	0
+Id	P
+Jb	P
+)a	P
 7.},
 mJh8
 ?i78
@@ -5562,16 +5568,18 @@ qj08
 mj08-
 R(}@
 /@9)
-	]	X)
+d	X)
 <!(a
-	T	X)
-Q	X)
+[	X)
+)Y	X)
 <!(a
-H	X)
+)P	X)
 T(|@
 @ya|@
+(/	X
 T	|@
 ji8_
+	XvE
 @@qj
 @@q(
 R()H*(
@@ -5599,8 +5607,7 @@ q )Wz
 q )Wz
 )Zzh
 (ihx
- 6 d
- 6@W
+ 6 ^
 j&A)
 ?A@q
 ?A@q
@@ -5686,12 +5693,15 @@ flock %s %s failed. errno = %d
 LOCK_EX
 LOCK_SH
 fcntl failed to set F_NOCACHE
+CFileReader::BOpenFile
 unsupported flags 0x%x passed to CFileReader::BOpenFile
+CFileReader::Read
 BIsOpen()
 cubBytesToRead < INT32_MAX
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Seeking to a position which is not sector aligned will break unbuffered io
+LoadFileRangeIntoBuffer_Internal
 cbActual < (uint32)nBufSizeWithTerminator
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 nGrowSize >= 0
@@ -7383,28 +7393,28 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-/s]0S5
-|9Ql
-#%#5W
-7hJ<D
-IlZ"
-j[%k&
-p7Z)
-0/N@
-o$L5O
-g5Ud
-L@gA
-@XpM$
-6r~h
-wdxZX
-$xHf4
-]KO3
-P7c^
-YD9{ce'
-z`k8	As
-D%DMh
-Fqvg
-KD3{
+`LX\on
+gmRe
+}ks!R
+4SZ/8e
+Q%e"
+}6wo"
+1Cp}b=
+hw'CE
+/vF8
+sd<p
+)Ayn
+Z+HB
+#h^Z2
+Mb`MX
+,6oEZ
+O,u,
+!VRg
+yV+~Q
+10~l
+~C2q
+#=T4
+a%}?
 R ee
 MZ=R`
 subject.OU
@@ -7464,8 +7474,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240607184627Z0/
+240610220819Z0/
++&.S`po
 1/0-
++&.S`po
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -7473,18 +7485,14 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		N9ENem/G2gCPaJlgMf24hHIUZwo=
+		MrovcvrMIaH7cbzNyv9YF7RSZks=
 		</data>
 	</array>
 </dict>
 </plist>
-wj8t
-uRB-'
-{(pQAi
-X*wY
-[!~ p
-5+J-
-20240607184720Z0
+W$(L
+bKXS"d
+20240610220931Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -7545,6 +7553,6 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240607184720Z0#
-Pv,H
-jT.T
+240610220931Z0#
+n+YJ7zGI
++$D\

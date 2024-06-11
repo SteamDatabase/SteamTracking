@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+PF
+PF
 __stubs
 __TEXT
 __stub_helper
@@ -247,6 +249,7 @@ CUtlSymbol::ValidateGlobals
 .
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
+BCreateDirectory
 %s%c%s
 /
 ..
@@ -278,17 +281,17 @@ nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 s_bAllowStaticSymbolTable
 s_pSymbolTable
 0
+{
 0
-q
 @
 @
-k
-p
-P
-)
-'
+G
+v
+;
+*
 =
 @
 =
 @
 =*.*
+V

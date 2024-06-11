@@ -11,12 +11,12 @@ __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
-t05
-t05
+$35
+$35
 __const
 __TEXT
-z6
-z6
+~6
+~6
 __objc_methname
 __TEXT
 T
@@ -120,56 +120,45 @@ h
 (kD
 8?
 )
-Z=
+^=
 0
+d=
 )
 H
 0
 @
 @
 H
-*
-*
-*
 @
 @
 @
 @
 $
 Hi
-y5
+}5
 Hi
 Hi
-4
 Ic]
-g)
-o9
-)
-4)
-j3
+t)
+s9
 
 %
+)
+)
 '
 '
 '
-+
-(
-(
+9
 
 5
 +=
-|2
-(
+2
+t2
 u@
-2(
+8
+%'
 
 0
-8
-2
-2
-2
-2
-2
 2
 2
 2
@@ -214,6 +203,10 @@ IcE
 IcE
 @
 @
+1
+1
+1
+7
 NSt3__117bad_function_callE
 15CBaseFileSystem
 11IFileSystem
@@ -2432,7 +2425,7 @@ ReLaunchCmdLine
 ClientLauncherType
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
-Startup - updater built Jun  7 2024 11:48:24
+Startup - updater built Jun 10 2024 15:10:13
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2723,8 +2716,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Jun  7 2024
-11:48:25
+Jun 10 2024
+15:10:14
 crashhandler004
 steam
 Steam Executable Crash
@@ -2822,7 +2815,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-11:48:23
+15:10:12
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10712,6 +10705,7 @@ fcntl failed to set F_NOCACHE
 ret != 0
 g_pFioAsyncEnqueue == NULL
 g_pFioAsyncFinalize == NULL
+BCreateDirectory
 ab
 flock LOCK_EX %s failed, errno = %d
 write %s failed, errno = %d
@@ -10722,15 +10716,22 @@ BSaveBufferToFileWithTemporary() failed to find unused file temp name
 %lf
 unReadAheadChunkSize should be zero when using bUnbuffered = true
 unReadAheadChunkSize < INT32_MAX/2
+CFileReader::BOpenFile
 unsupported flags 0x%x passed to CFileReader::BOpenFile
+CFileReader::Read
 BIsOpen()
 cubBytesToRead < INT32_MAX
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Seeking to a position which is not sector aligned will break unbuffered io
+CFileWriter::BOpenFileInternal
+CFileWriter::Write
 cubData < INT32_MAX
+CFileWriter::FlushInternal
 Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
+CFileWriter::Close
 ..
+LoadFileRangeIntoBuffer_Internal
 cbActual < (uint32)nBufSizeWithTerminator
 CFileWriterThread
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h
@@ -10940,7 +10941,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-11:45:50
+15:07:42
 Jan
 Feb
 Mar
@@ -13376,57 +13377,45 @@ file_ofs == pFile->GetBytesWritten()
 
 
 0
-0;>
-Z=
+^=
 0
+d=
 )
 H
 0
 @
 @
 H
-*
-*
-*
 @
 @
 @
 @
 $
 Hi
-y5
+}5
 Hi
 Hi
-4
 Ic]
-g)
-o9
-)
-4)
-j3
+t)
+s9
 
 %
+)
+)
 '
 '
 '
-+
-(
-(
+9
 
 5
 +=
-|2
-(
+2
+t2
 u@
-2(
+8
+%'
 
 0
-8
-2
-2
-2
-2
-2
 2
 2
 2
@@ -13471,53 +13460,57 @@ IcE
 IcE
 @
 @
+1
+1
+1
+7
 V
 0
 0
-0
-0
 =
-Y/
-/
+8
+8
 /
 /
 /
 /
 /
 =
+5
 Y9
-7
-@4
+D4
 .
 .
-6
+.
 !
 @
-3
-3
 @
 &
+-
 L6
-f1
-+
-C1
+j1
+G1
 1
 1
 1
 1
-1
-,
+**
 *
-*
-3
-00
+40
+0
+0
+0
+0
+0
+2
+~)
 d)
 @
-)
-)
 M9e
+)
 @
 @
+/
 /
 /
 ?
@@ -13532,7 +13525,6 @@ M9e
 ?
 ?
 :
-](
 ?
 ?
 ?
@@ -13549,14 +13541,16 @@ AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 `
 `
 @
-'
 j
 j
 Pj
 ARj
 j
-G-
-6-
+K-
+:-
+c&
+/
+/
 1
 0
 1
@@ -13575,6 +13569,7 @@ M)u
 %
 =
 Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@openssl.org>
+$
 pppp
 pp
 ,,
@@ -13867,8 +13862,7 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 4
 =
 @
-9*
-,
+=*
 
 @
 @
@@ -13877,7 +13871,9 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 
 
 
-*
+,
+,
+,
 H=
 Ic]
 j
@@ -13887,15 +13883,19 @@ j
 j
 j
 
+b!
 t$I;M
+"
 e
 W
 ,7~5d
 #*
 H
 0
-'"
-_"
++"
+c"
+"
+"
 
 
 
@@ -14230,15 +14230,14 @@ Hc
 @
 @
 0
-#
 &
-
 @
 @
-
-
-
 @
+
+
+
+
 =h2
 P
 P
@@ -14257,7 +14256,6 @@ P
 =a
 0
 Hi
-y
 $
 $
 $

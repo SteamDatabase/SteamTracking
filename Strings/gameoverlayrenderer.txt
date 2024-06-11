@@ -68,7 +68,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/gameoverlayrenderer.dylib
-f&1$
 /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
@@ -1138,6 +1137,7 @@ GameOverlay_MovieStream_%u
 Created movie stream %s
 Couldn't create movie stream %s
 Deleting movie stream
+STEAM_OVERLAY_DISABLE_WAIT_FOR_CEF_FRAME
 VR_Compositor_OverlayVSync_%u
 SteamGamepadUI
 SteamDisableOverlayDPIScaling
@@ -1350,7 +1350,6 @@ BTCRCSAp
 TATATC
 YBVCRCS"
 \DRA`
-B^A`
 ASAXAXA`
 A^A[A^A\A`
 RCRB
@@ -1857,25 +1856,26 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-(#;oo
-h;Dwd;d
--S^g
-,;Hw
-@tK(]l[b
-]}9!
-L'PA=
--E6m~ ["0!
-b_/@K
-Hp1@>G
-OF|7
-.yce
-~qYX
-hBkT
-Tr/5
-.YEtz
-:A[[c4\d5
-4V-=
-0td#
+u,zQ
+GL/m
+}BJ$
+lg"S|
+W5Ec
+:c[P
+m(n(
+woch
+Vh|FW
+#j;r~
+f9ThX
+g	AN}
+puJ#$,`
+f3z{
+#f&k<
+wN.Vh
+UK>Y>.
+.?'8
+ r.\k
+&y)rq
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -1933,10 +1933,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240607184605Z0/
-/@#sP_7
+240610220755Z0/
+[w;O
 1/0-
-/@#sP_7
+[w;O
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1944,39 +1944,39 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		A1eGxxCJP0qXZlegFEyYL0Ajc1A=
+		gxNVMG0ckvjkKY7OZf/wPiZs0Fs=
 		</data>
 	</array>
 </dict>
 </plist>
-V}5	=
-?k,=
-K\u1qN
-Tbp_
-nnoL
-LSak
-20240607184658Z0
+5VsJ&#
+&>fzJ
+7.IC
+LR21
+8q}c
+20240610220907Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240530204516Z
-240711204515Z0B1
-Timestamp Signer NWK11
+240530203058Z
+240711203057Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-[92qNd%
-eO@B
-4VokT
+ {]g
+t0@j;
++G(E
+-T*K[@H.
+Mljyx
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-u34<
-ZRAW`O[
-#;a=i
-SVA7L
-qTD\
-h;=u
+@PM#
+kEHv
+m	/]
+4C@-(
+0bZ?\
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2015,11 +2015,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240607184658Z0#
-Cvh{
-HDKHP#e
-Zf7R
- a8g
+240610220907Z0#
+fk9R
+l^{N/
+	/~o
+\ 1F
+A8S!
 __TEXT
 __text
 __TEXT
@@ -2081,7 +2082,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/gameoverlayrenderer.dylib
-@#i=B
 /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
@@ -2311,11 +2311,11 @@ AWAVSH
 AWAVAUATSH
 u8ASD
 ]0AS
-Y--~
 H[A\A]A^A_]
 AWAVAUATSH
 D9` 
 D9c ~
+Y%9{
 [A\A]A^A_]
 P A9
 [A\A]A^A_]
@@ -2350,6 +2350,7 @@ AWAVAUATSH
 H9^ 
 t$H9Y w
 D9A4u
+(%#b
 [A\A]A^A_]
 AWAVAUATSH
 8[A\A]A^A_]
@@ -2464,7 +2465,6 @@ AVSI
 AWAVAUATSPH
 [A\A]A^A_]
 AVSH
-H9=[
 [A^]
 AWAVATSH
 L9x 
@@ -2508,6 +2508,9 @@ AWAVSH
 D;sXtzH
 	H;M
 X[A^A_]
+AVSA
+t	[A^]
+[A^]
 AWAVAUATSH
 Hc^ H
 u%E;u 
@@ -2550,7 +2553,7 @@ AWAVATSH
 L$HI
 H92u
 0[A\A^A_]
-H9=<e
+H9=te
 AWAVSPI
 [A^A_]
 AWAVSP
@@ -2578,6 +2581,7 @@ AWAVATSH
 0[A\A^A_]
 0[A\A^A_]
 AWAVSPD
+L954Q
 [A^A_]
 [A^A_]
 AWAVATS
@@ -2862,7 +2866,7 @@ UAWAVATSH
 }%E1
 H;D$
 [A\A^A_]
-D95G
+D95w
 UAWAVAUATSH
 D$`H
 D$8H
@@ -3279,6 +3283,7 @@ GameOverlay_MovieStream_%u
 Created movie stream %s
 Couldn't create movie stream %s
 Deleting movie stream
+STEAM_OVERLAY_DISABLE_WAIT_FOR_CEF_FRAME
 VR_Compositor_OverlayVSync_%u
 SteamGamepadUI
 SteamDisableOverlayDPIScaling
@@ -4299,30 +4304,28 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-VYtv
-r:n}yB
-|]c:%<
-6V8~-
-^/"f
-!Od(
-"M@nN
-0+95
-O5Wh$E
-&Ay!Z
-EU#b
-{{#|j
-;sHt~l
-YTkr
-0B(s
-	*A6
-3{(_uF
-	zOn
-0.>a
->;ZG
-ipD=
-4,d}'
-K{+4
-y#hKF3
+o1s/
+^'v{5
+t=9aX
+?t=	
+<Py|
+Iv$>
+e?i:
+MN~a+?$
++Ngr
+CCA7#
+rE`>y,
+r1]JM
+zv"t+
+76e7@L
+!;VNE2
+W'm 
+<y{+x&
+9u9OF
+k/b3
+BKW|Aopo
+P',f
+!'UE
 @_*V.
 subject.OU
 MXGJJ98X76
@@ -4381,10 +4384,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240607184605Z0/
-p@E-
+240610220756Z0/
 1/0-
-p@E-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4392,16 +4393,13 @@ p@E-
 	<key>cdhashes</key>
 	<array>
 		<data>
-		w94jTfcPawiVbR1wQEUtwWPvNMI=
+		LxUaLaOWEObt9SzAyd8howh7dos=
 		</data>
 	</array>
 </dict>
 </plist>
-4NR#
-=w{)
-@6hl
-IF}H
-20240607184658Z0
+l}M:
+20240610220907Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -4461,11 +4459,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240607184658Z0#
+240610220907Z0#
 Cvh{
 HDKHP#e
-*Z4m
-b28w
+#5i 
+Z;]as
 __TEXT
 __text
 __TEXT
@@ -4558,6 +4556,7 @@ ia@9i
 	a@9Ia
 ia@9i
 	a@9Ia
+@9*V
 h&B)
 	@z`
 56P@
@@ -4576,7 +4575,7 @@ $E9H
 h&A)
 (	29
 jh8)	
-B)Z(
+B)R(
 29|;	
  @9H
 h"@9h
@@ -4589,57 +4588,55 @@ XcZ@
 h&@9
 hvB9
 hrB9
-C9a"C9b&C9c*C9UB
-[)|B
+C9a"C9b&C9c*C9~B
 aBA9
-a~	p
 h&D)
 9h6@
 h"@9
 h"@9
 yh:@
-`:	0
-@9	0
+`>	0
 Th#@
 -D@!
-X`rA
-X`BA
-T	!@
+@d	0
+4h&A
+X`RA
+T*!@
 T*!@
 Ci8}
-T`		p
+Th>A
+ThBA
 I+8k
 T	5@
 T	9@
 S@9h6
 -!(%
-X`rA
-X`BA
+X`RA
 87		)
 BP7	
-9h.A
-D9h.A
-9i.A
-T('D
-X`BA
-X`rA
-Th2A
-abF9brF9c
-arG9 
-X`"B
-X`~B
-X`zB
-X`&B
-Ti2A
-:	X 
-9*	X
-%	XX
+9h>A
+D9h>A
+9i>A
+T(7D
+X`RA
+ThBA
+X`2B
+X`*B
+X`6B
+TiBA
+T`.A
+A	X 
+7hBD9(
+Y1	X
+-	XX
+i*\)(
 Am 8`
+4h&])
+h&])
 #V)h
 4h.@
 4b.@
-	aD9
-h2C9
+hbC9
 NH `
 m@)h
 nB8!
@@ -4662,10 +4659,9 @@ TYC@
 T( @
 {ixJ	
 T`2@
-Ay L
 T	!@
-[) 3
-]) 2
+Z)@;
+\)@:
 T`2@
 T`2@
 T`2@
@@ -4673,36 +4669,34 @@ T`2@
 T`2@
 DqHL
 +ih8J	
+CC9`
 T`2@
 T`2@
 7`2@
 4tB@
 #A)j:@
 T	|	
-i"X)
 Ci<}
-(}	X
-(}	X
+	)E9i
 9h.@
 Th&@
 Th&@
-Rh:@
+J%E9
 9`&@
 4h&@
 T`2@
 4a2@
-T*CA
-TlUA
+T*SA
+Qh9(
+TleA
 hbD9
 4h"A
 hbD9
 hbD9h
-	L9(
 !IzH
-	AF9
+5F9h
 T`jt
 +ih8J	
-	qG9
 12CIMENullImpl
 4IIME
 :>->
@@ -5104,6 +5098,7 @@ GameOverlay_MovieStream_%u
 Created movie stream %s
 Couldn't create movie stream %s
 Deleting movie stream
+STEAM_OVERLAY_DISABLE_WAIT_FOR_CEF_FRAME
 VR_Compositor_OverlayVSync_%u
 SteamGamepadUI
 SteamDisableOverlayDPIScaling
@@ -6019,13 +6014,24 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-Qm;*cI1P
-V6p;
-ywV*Y5BY
-atH\
-):ShL
-:vn&:
-p|X&
+(sP:
+BjRt8
+5\x+[
+f]3W
+Telc:
+V[t_/
+Y,BVd
+h tD
+m=Jnax}
+Gp,i_
+!xR=%P
+.IlF
++e] 
+@+b 
+kl]K
+%,)_(e^
+S)Or.>
+r{1l
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -6083,7 +6089,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240607184605Z0/
+240610220756Z0/
 1/0-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -6092,37 +6098,37 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		Jo1VhdgFVD69afaMTHII/AcXXc8=
+		u9MYROou4xFFBLN+hqVo1BdhmPQ=
 		</data>
 	</array>
 </dict>
 </plist>
-,@;_
-(^~]R'
-K&$W
-;1n)
-20240607184658Z0
+r|0*+
+7XqdLS
+[Y@]!
+20240610220907Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240530204516Z
-240711204515Z0B1
-Timestamp Signer NWK11
+240530203058Z
+240711203057Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-[92qNd%
-eO@B
-4VokT
+ {]g
+t0@j;
++G(E
+-T*K[@H.
+Mljyx
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-u34<
-ZRAW`O[
-#;a=i
-SVA7L
-qTD\
-h;=u
+@PM#
+kEHv
+m	/]
+4C@-(
+0bZ?\
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -6161,11 +6167,7 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240607184658Z0#
-*D0+
-Cvh{
-HDKHP#e
-y{cl_#
-<*%"
-\tUZ
-+QiA
+240610220907Z0#
+*[0+
+[$Y&|A
++326

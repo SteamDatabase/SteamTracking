@@ -10,7 +10,7 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-,#
+|$
 __objc_methname
 __TEXT
 __unwind_info
@@ -848,6 +848,7 @@ LOCK_EX
 LOCK_SH
 fcntl failed to set F_NOCACHE
 ret != 0
+BCreateDirectory
 flock LOCK_EX %s failed, errno = %d
 write %s failed, errno = %d
 fsync %s failed, errno = %d
@@ -855,16 +856,23 @@ fsync %s failed, errno = %d
 %lf
 unReadAheadChunkSize should be zero when using bUnbuffered = true
 unReadAheadChunkSize < INT32_MAX/2
+CFileReader::BOpenFile
 unsupported flags 0x%x passed to CFileReader::BOpenFile
+CFileReader::Read
 BIsOpen()
 cubBytesToRead < INT32_MAX
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Seeking to a position which is not sector aligned will break unbuffered io
+CFileWriter::BOpenFileInternal
+CFileWriter::Write
 cubData < INT32_MAX
+CFileWriter::FlushInternal
 Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
+CFileWriter::Close
 %s%c%s
 ..
+LoadFileRangeIntoBuffer_Internal
 cbActual < (uint32)nBufSizeWithTerminator
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 CFileWriterThread
@@ -1537,21 +1545,22 @@ Ic]
 =
 @
 =*.*
+@
+@
+0
+@
+@
+@
+@
+@
+@
+0
+0
+0
+0
+0
+q
+0
 Ic]
-@
-@
-0
-@
-@
-@
-@
-@
-@
-0
-0
-0
-0
-0
-0
 "
 
