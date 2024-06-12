@@ -975,8 +975,8 @@
       "use strict";
       a.r(t),
         a.d(t, {
-          FamilyTabContainer: () => Va,
-          GenerateNameElementForHistory: () => Ka,
+          FamilyTabContainer: () => Ka,
+          GenerateNameElementForHistory: () => Va,
           default: () => Ta,
         });
       var n = a(47427),
@@ -1032,8 +1032,8 @@
           m = (0, y.MP)(a, i),
           d = (0, v.IE)(t),
           [N, I] = (0, n.useState)(!1),
-          [D, M] = (0, n.useState)(!1),
-          { setErrorMessage: w } = (0, y.cL)();
+          [D, w] = (0, n.useState)(!1),
+          { setErrorMessage: M } = (0, y.cL)();
         (0, y.sT)(d, "#FamilyManagement_ErrorLoadFamilyInviteGeneric");
         const P = (0, f.k6)(),
           R = !!b((0, f.TH)(), C);
@@ -1091,19 +1091,18 @@
                   closeModal: G,
                   onCancel: G,
                   onOK: () => {
-                    w(null),
+                    M(null),
                       c.mutate(null, {
                         onSuccess: (e) => {
-                          e.cooldown_skip_granted() && M(!0),
-                            e.invite_already_accepted()
-                              ? I("alreadyaccepted")
-                              : 1 === e.two_factor_method()
-                                ? I("awaitmobile2fa")
-                                : 2 === e.two_factor_method()
-                                  ? I("awaitemail2fa")
-                                  : e.cooldown_skip_granted()
-                                    ? s(!0)
-                                    : P.push("/account/familymanagement");
+                          e.cooldown_skip_granted() && w(!0),
+                            1 === e.two_factor_method()
+                              ? F.De.IN_MOBILE_WEBVIEW
+                                ? (window.location.href =
+                                    "steammobile://confirmations?first_of_type=11")
+                                : I("awaitmobile2fa")
+                              : 2 === e.two_factor_method()
+                                ? I("awaitemail2fa")
+                                : P.push("/account/familymanagement");
                         },
                       });
                   },
@@ -1283,7 +1282,7 @@
               {
                 className: _.DeclineInviteButton,
                 onClick: () => {
-                  w(null), m.mutate(), R && P.push("/account/familymanagement");
+                  M(null), m.mutate(), R && P.push("/account/familymanagement");
                 },
               },
               (0, p.Xx)("#FamilyManagement_DeclineInviteButton"),
@@ -1362,12 +1361,12 @@
         );
       }
       const D = "familyid",
-        M = "invite";
-      function w() {
+        w = "invite";
+      function M() {
         const e = (0, f.k6)(),
           t = (0, f.TH)(),
           a = b(t, D),
-          l = b(t, M),
+          l = b(t, w),
           r = b(t, N),
           { isLoading: s, data: i } = (0, y.Rs)(),
           { mutate: o } = (0, y.sj)(a, l, r);
@@ -1387,7 +1386,7 @@
         const e = (0, f.k6)(),
           t = (0, f.TH)(),
           a = b(t, D),
-          l = b(t, M),
+          l = b(t, w),
           r = b(t, N);
         return (
           (0, y.GY)(a, l, r).mutate(null, {
@@ -1520,7 +1519,7 @@
           n.createElement(
             B.s,
             { className: R.MethodButtons },
-            n.createElement(V, { familyGroupID: t, onSelect: a }),
+            n.createElement(K, { familyGroupID: t, onSelect: a }),
           ),
           n.createElement(z, { familyGroupID: t, onSelect: a }),
         );
@@ -1593,7 +1592,7 @@
                   onClose: l,
                   eMethod: "awaitemail2fa" === m ? 2 : 1,
                 })
-              : n.createElement(K, {
+              : n.createElement(V, {
                   steamid: a,
                   role: i,
                   onCancel: () => o(0),
@@ -1670,7 +1669,7 @@
           n.createElement("div", { className: R.Text }, (0, p.Xx)(l)),
         );
       }
-      function K(e) {
+      function V(e) {
         const { onCancel: t, onConfirm: a, steamid: l, role: r } = e,
           s = (0, v.IE)(l).data;
         return n.createElement(
@@ -1710,7 +1709,7 @@
           ),
         );
       }
-      function V(e) {
+      function K(e) {
         const { familyGroupID: t, onSelect: a } = e,
           [l, r] = (0, n.useState)(!1),
           s = (0, y.JM)(t)
@@ -2225,7 +2224,7 @@
         let n = e.m_strPlayerName;
         return t && (n = a ? `${e.m_strPlayerName} (${t})` : `${t}*`), n;
       }
-      function Me(e) {
+      function we(e) {
         var t, a;
         const n = new Ce.Kg(e),
           l = (0, v.IE)(e),
@@ -2243,9 +2242,9 @@
           ? De(l.data, i, o)
           : null;
       }
-      function we(e) {
+      function Me(e) {
         const { item: t, strSteamID: a } = e,
-          l = Me(a),
+          l = we(a),
           r = t.appid,
           { settings: s, mapAppsAllowed: i } = (0, de.X1)(a).data,
           o = (null == i ? void 0 : i.get(t.appid)) || !1,
@@ -2330,7 +2329,7 @@
             i.members
               .filter((e) => 2 == e.role)
               .map((e) =>
-                n.createElement(we, {
+                n.createElement(Me, {
                   key: e.steamid,
                   item: t,
                   strSteamID: e.steamid,
@@ -2739,8 +2738,8 @@
       var Qe = a(59728),
         je = a(38244),
         Ue = a(42718),
-        Ke = a(44922),
-        Ve = a(79545),
+        Ve = a(44922),
+        Ke = a(79545),
         Je = a(80998),
         Ze = a(40057),
         Ye = a(15690);
@@ -3189,7 +3188,7 @@
               queryFn: () =>
                 (0, se.mG)(this, void 0, void 0, function* () {
                   if (e.length < 2) return [];
-                  const n = Ve.gA.Init(Ke.yk);
+                  const n = Ke.gA.Init(Ve.yk);
                   n.Body().set_query_name(JSON.stringify(a)),
                     n.Body().set_search_term(e),
                     (0, Je.pA)(n),
@@ -3203,7 +3202,7 @@
                     }),
                     n.Body().set_max_results(20),
                     n.Body().set_use_spellcheck(!0);
-                  let l = yield Ke.Ax.SearchSuggestions(t, n);
+                  let l = yield Ve.Ax.SearchSuggestions(t, n);
                   return l.BSuccess()
                     ? l
                         .Body()
@@ -3274,7 +3273,7 @@
             nTotal: r,
             setAllowAllApps: s,
           } = e,
-          i = Me(a);
+          i = we(a);
         return n.createElement(
           "div",
           { className: ue.SectionHeader },
@@ -3663,7 +3662,7 @@
           s,
         );
       }
-      function Mt(e) {
+      function wt(e) {
         var t;
         const { steamid: a, settings: l, dayIndexStart: r, closeModal: s } = e,
           [i, c] = n.useState(r),
@@ -3693,7 +3692,7 @@
           }),
         );
       }
-      function wt(e) {
+      function Mt(e) {
         const { dayIndex: t, onChange: a } = e,
           l = n.useCallback(
             (e) => {
@@ -3749,7 +3748,7 @@
           n.createElement(
             B.s,
             { className: ue.TopRow },
-            n.createElement(wt, { dayIndex: a, onChange: l }),
+            n.createElement(Mt, { dayIndex: a, onChange: l }),
             n.createElement(
               "div",
               { className: ue.Right },
@@ -3999,7 +3998,7 @@
           n.createElement(
             h.Yy,
             { active: m },
-            n.createElement(Mt, {
+            n.createElement(wt, {
               steamid: s,
               settings: i,
               dayIndexStart: o,
@@ -4371,20 +4370,20 @@
         )
           return null;
         const D = x.data,
-          M = Math.ceil(r.cooldown_seconds_remaining() / 86400 || 0);
-        let w = g
+          w = Math.ceil(r.cooldown_seconds_remaining() / 86400 || 0);
+        let M = g
           ? (0, p.Xx)("#FamilyManagement_RemoveMemberConfirmationText_Self")
           : (0, p.Xx)(
               "#FamilyManagement_RemoveMemberConfirmationText",
               null == D ? void 0 : D.m_strPlayerName,
             );
         return (
-          0 !== M &&
-            (w +=
+          0 !== w &&
+            (M +=
               " " +
               (g
-                ? (0, p.kb)("#FamilyManagement_CannotJoinFor_Self", M)
-                : (0, p.Xx)("#FamilyManagement_CannotJoinFor", M))),
+                ? (0, p.kb)("#FamilyManagement_CannotJoinFor_Self", w)
+                : (0, p.Xx)("#FamilyManagement_CannotJoinFor", w))),
           n.createElement(
             B.s,
             { className: le.FamilyMemberActions },
@@ -4422,7 +4421,7 @@
                   strTitle: (0, p.Xx)(
                     "#FamilyManagement_RemoveMemberConfirmationTitle",
                   ),
-                  strDescription: w,
+                  strDescription: M,
                   onOK: () => {
                     _(null),
                       u.mutate(null, { onSuccess: () => N.push(S.pathname) });
@@ -4466,12 +4465,12 @@
                       : "#FamilyManagement_RemoveMember",
                   ),
                 ),
-              C && n.createElement(Kt, { familyGroupID: a }),
+              C && n.createElement(Vt, { familyGroupID: a }),
             ),
           )
         );
       }
-      function Kt(e) {
+      function Vt(e) {
         const { familyGroupID: t } = e,
           [a, l, r] = (0, re.X9)(!1),
           s = (0, y.Rj)(t),
@@ -4573,7 +4572,7 @@
           ),
         );
       }
-      function Vt(e) {
+      function Kt(e) {
         const { familyGroupID: t, member: a } = e;
         return n.createElement(
           "div",
@@ -5553,7 +5552,7 @@
             ),
         );
       }
-      function Ma(e) {
+      function wa(e) {
         var t, a;
         const { appid: l } = e,
           [r, s] = n.useState(0),
@@ -5583,14 +5582,14 @@
           src: p,
         });
       }
-      function wa(e) {
+      function Ma(e) {
         const { appid: t } = e,
           [a] = (0, Fe.vs)(t, Ye.Z.k_DataRequest_Assets);
         return a
           ? n.createElement(
               r.IS,
               { href: a.GetStorePageURL() },
-              n.createElement(Ma, { appid: t }),
+              n.createElement(wa, { appid: t }),
             )
           : null;
       }
@@ -5615,7 +5614,7 @@
                   B.s,
                   { className: ba.AppListTooltipApps },
                   Array.from(m).map((e) =>
-                    n.createElement(wa, { key: e, appid: e }),
+                    n.createElement(Ma, { key: e, appid: e }),
                   ),
                 ),
           v = n.createElement(
@@ -5687,7 +5686,7 @@
                 n.createElement(
                   "div",
                   { className: ba.GameIcon },
-                  n.createElement(Ma, { appid: t }),
+                  n.createElement(wa, { appid: t }),
                 ),
                 n.createElement(
                   "div",
@@ -5822,14 +5821,14 @@
                       }),
                       n.createElement(f.AW, {
                         path: `${o.path}/confirm_join`,
-                        component: w,
+                        component: M,
                       }),
                       n.createElement(f.AW, {
                         path: `${o.path}/confirm_invite`,
                         component: P,
                       }),
                       d
-                        ? n.createElement(Va, {
+                        ? n.createElement(Ka, {
                             familyGroupID: m.data.family_groupid(),
                           })
                         : n.createElement(Xa, null),
@@ -6093,197 +6092,205 @@
             );
       }
       function Oa(e) {
-        var t, a, r, s;
-        const i = (0, y.Rs)(),
-          o =
-            null === (t = i.data) || void 0 === t
+        var t, a, l, r;
+        const s = (0, y.Rs)(),
+          i =
+            null === (t = s.data) || void 0 === t
               ? void 0
               : t.pending_group_invites().length,
-          [c, m] = (new T.K((0, l.M)()).GetAccountID(), (0, n.useState)(!1)),
+          [o, c] = (0, n.useState)(!1),
+          m = (0, f.k6)(),
           [u, d] = (0, n.useState)(!1),
-          _ = (0, f.k6)(),
-          [g, E] = (0, n.useState)(!1),
-          v = (0, f.TH)(),
-          h = b(v, C),
-          F = b(v, N);
+          _ = (0, f.TH)(),
+          g = b(_, C),
+          E = b(_, N),
+          v = (0, y.bF)(g, null);
         if (
-          i.data &&
-          !(null === (a = i.data) || void 0 === a
+          s.data &&
+          !(null === (a = s.data) || void 0 === a
             ? void 0
             : a.is_not_member_of_any_group()) &&
-          !u
+          !o
         )
-          return h
+          return g
             ? n.createElement(f.l_, {
-                to: `/account/familymanagement?invitation=${h}`,
+                to: `/account/familymanagement?invitation=${g}`,
               })
             : n.createElement(f.l_, { to: "/account/familymanagement" });
-        let S = null,
-          k = i.data.pending_group_invites();
-        if (h) {
-          const e = k.findIndex((e) => e.family_groupid() === h);
-          -1 !== e && ((S = k[e]), (k = k.slice()), k.splice(e, 1));
+        let h = null,
+          S = s.data.pending_group_invites();
+        if (g) {
+          const e = S.findIndex((e) => e.family_groupid() === g);
+          -1 !== e && ((h = S[e]), (S = S.slice()), S.splice(e, 1));
         }
-        return u
-          ? n.createElement(
-              La,
-              null,
-              n.createElement(Ha, {
-                active: u,
-                isCreate: !1,
-                closeModal: () => {
-                  d(!1), _.push("/account/familymanagement");
-                },
-                cooldownSeconds:
-                  null === (r = i.data) || void 0 === r
-                    ? void 0
-                    : r.cooldown_seconds_remaining(),
-              }),
-            )
-          : S
+        return (
+          null !== h &&
+            h.awaiting_2fa() &&
+            F.De.IN_MOBILE_WEBVIEW &&
+            (v.mutate(),
+            (window.location.href =
+              "steammobile://confirmations?first_of_type=11")),
+          o
             ? n.createElement(
                 La,
                 null,
-                n.createElement(
-                  "div",
-                  { className: ne.JoinFamilyContainer },
+                n.createElement(Ha, {
+                  active: o,
+                  isCreate: !1,
+                  closeModal: () => {
+                    c(!1), m.push("/account/familymanagement");
+                  },
+                  cooldownSeconds:
+                    null === (l = s.data) || void 0 === l
+                      ? void 0
+                      : l.cooldown_seconds_remaining(),
+                }),
+              )
+            : h
+              ? n.createElement(
+                  La,
+                  null,
                   n.createElement(
-                    "p",
-                    null,
-                    (0, p.yu)(
-                      "#FamilyManagement_PendingInvitesText",
-                      n.createElement("span", { className: ne.JoinWarning }),
-                      n.createElement("b", null),
+                    "div",
+                    { className: ne.JoinFamilyContainer },
+                    n.createElement(
+                      "p",
+                      null,
+                      (0, p.yu)(
+                        "#FamilyManagement_PendingInvitesText",
+                        n.createElement("span", { className: ne.JoinWarning }),
+                        n.createElement("b", null),
+                      ),
+                      " ",
                     ),
-                    " ",
+                    n.createElement(I, {
+                      key: g,
+                      inviterSteamID: h.inviter_steamid(),
+                      familyGroupID: h.family_groupid(),
+                      role: h.role(),
+                      nonce: E,
+                      setCooldownModalActive: c,
+                    }),
+                    S.length > 0 &&
+                      !u &&
+                      n.createElement(
+                        n.Fragment,
+                        null,
+                        n.createElement(
+                          "p",
+                          null,
+                          (0, p.Xx)(
+                            1 === S.length
+                              ? "#FamilyManagement_OtherInvite"
+                              : "#FamilyManagement_OtherInvites",
+                            S.length,
+                          ),
+                          " ",
+                          n.createElement(
+                            "a",
+                            { onClick: () => d(!0) },
+                            (0, p.Xx)("#FamilyManagement_Expand"),
+                          ),
+                        ),
+                      ),
+                    S.length > 0 &&
+                      u &&
+                      n.createElement(
+                        n.Fragment,
+                        null,
+                        n.createElement(
+                          "p",
+                          null,
+                          (0, p.Xx)(
+                            1 === S.length
+                              ? "#FamilyManagement_OtherInvite"
+                              : "#FamilyManagement_OtherInvites",
+                            S.length,
+                          ),
+                          " ",
+                          n.createElement(
+                            "a",
+                            { onClick: () => d(!1) },
+                            (0, p.Xx)("#FamilyManagement_Collapse"),
+                          ),
+                        ),
+                        n.createElement(
+                          "div",
+                          null,
+                          S.map((e) =>
+                            n.createElement(I, {
+                              inviterSteamID: e.inviter_steamid(),
+                              familyGroupID: e.family_groupid(),
+                              role: e.role(),
+                              key: e.family_groupid(),
+                              setCooldownModalActive: c,
+                            }),
+                          ),
+                        ),
+                      ),
                   ),
-                  n.createElement(I, {
-                    key: h,
-                    inviterSteamID: S.inviter_steamid(),
-                    familyGroupID: S.family_groupid(),
-                    role: S.role(),
-                    nonce: F,
-                    setCooldownModalActive: d,
-                  }),
-                  k.length > 0 &&
-                    !g &&
-                    n.createElement(
-                      n.Fragment,
-                      null,
-                      n.createElement(
-                        "p",
-                        null,
-                        (0, p.Xx)(
-                          1 === k.length
-                            ? "#FamilyManagement_OtherInvite"
-                            : "#FamilyManagement_OtherInvites",
-                          k.length,
-                        ),
-                        " ",
-                        n.createElement(
-                          "a",
-                          { onClick: () => E(!0) },
-                          (0, p.Xx)("#FamilyManagement_Expand"),
-                        ),
-                      ),
-                    ),
-                  k.length > 0 &&
+                )
+              : n.createElement(
+                  La,
+                  null,
+                  n.createElement(
+                    "div",
+                    { className: ne.JoinFamilyContainer },
                     g &&
-                    n.createElement(
-                      n.Fragment,
-                      null,
-                      n.createElement(
-                        "p",
-                        null,
-                        (0, p.Xx)(
-                          1 === k.length
-                            ? "#FamilyManagement_OtherInvite"
-                            : "#FamilyManagement_OtherInvites",
-                          k.length,
-                        ),
-                        " ",
-                        n.createElement(
-                          "a",
-                          { onClick: () => E(!1) },
-                          (0, p.Xx)("#FamilyManagement_Collapse"),
-                        ),
-                      ),
                       n.createElement(
                         "div",
-                        null,
-                        k.map((e) =>
-                          n.createElement(I, {
-                            inviterSteamID: e.inviter_steamid(),
-                            familyGroupID: e.family_groupid(),
-                            role: e.role(),
-                            key: e.family_groupid(),
-                            setCooldownModalActive: d,
-                          }),
-                        ),
+                        { className: ne.IncomingInviteGone },
+                        (0, p.Xx)("#FamilyManagement_IncomingInviteGone"),
                       ),
-                    ),
-                ),
-              )
-            : n.createElement(
-                La,
-                null,
-                n.createElement(
-                  "div",
-                  { className: ne.JoinFamilyContainer },
-                  h &&
                     n.createElement(
-                      "div",
-                      { className: ne.IncomingInviteGone },
-                      (0, p.Xx)("#FamilyManagement_IncomingInviteGone"),
-                    ),
-                  n.createElement(
-                    Wa,
-                    null,
-                    (0, p.Xx)("#FamilyManagement_JoinAFamily"),
-                  ),
-                  n.createElement(
-                    "p",
-                    null,
-                    (0, p.Xx)("#FamilyManagement_ToJoinInstructions"),
-                  ),
-                  n.createElement("br", null),
-                  o > 0 &&
-                    n.createElement(
-                      n.Fragment,
+                      Wa,
                       null,
-                      n.createElement(
-                        Wa,
-                        null,
-                        (0, p.Xx)("#FamilyManagement_PendingInvitesHeader"),
-                      ),
-                      n.createElement(
-                        "p",
-                        null,
-                        (0, p.yu)(
-                          "#FamilyManagement_PendingInvitesText",
-                          n.createElement("span", {
-                            className: ne.JoinWarning,
-                          }),
-                          n.createElement("b", null),
-                        ),
-                        " ",
-                      ),
-                      null === (s = i.data) || void 0 === s
-                        ? void 0
-                        : s
-                            .pending_group_invites()
-                            .map((e) =>
-                              n.createElement(I, {
-                                key: e.family_groupid(),
-                                inviterSteamID: e.inviter_steamid(),
-                                familyGroupID: e.family_groupid(),
-                                role: e.role(),
-                                setCooldownModalActive: d,
-                              }),
-                            ),
+                      (0, p.Xx)("#FamilyManagement_JoinAFamily"),
                     ),
-                ),
-              );
+                    n.createElement(
+                      "p",
+                      null,
+                      (0, p.Xx)("#FamilyManagement_ToJoinInstructions"),
+                    ),
+                    n.createElement("br", null),
+                    i > 0 &&
+                      n.createElement(
+                        n.Fragment,
+                        null,
+                        n.createElement(
+                          Wa,
+                          null,
+                          (0, p.Xx)("#FamilyManagement_PendingInvitesHeader"),
+                        ),
+                        n.createElement(
+                          "p",
+                          null,
+                          (0, p.yu)(
+                            "#FamilyManagement_PendingInvitesText",
+                            n.createElement("span", {
+                              className: ne.JoinWarning,
+                            }),
+                            n.createElement("b", null),
+                          ),
+                          " ",
+                        ),
+                        null === (r = s.data) || void 0 === r
+                          ? void 0
+                          : r
+                              .pending_group_invites()
+                              .map((e) =>
+                                n.createElement(I, {
+                                  key: e.family_groupid(),
+                                  inviterSteamID: e.inviter_steamid(),
+                                  familyGroupID: e.family_groupid(),
+                                  role: e.role(),
+                                  setCooldownModalActive: c,
+                                }),
+                              ),
+                      ),
+                  ),
+                )
+        );
       }
       function za(e) {
         const t = (0, y.Rs)(),
@@ -6386,7 +6393,7 @@
             ),
         );
       }
-      function Ka(e) {
+      function Va(e) {
         const t = (0, v.IE)(e),
           a = `${F.De.COMMUNITY_BASE_URL}profiles/${e}`;
         return t.isSuccess
@@ -6397,7 +6404,7 @@
             )
           : null;
       }
-      function Va(e) {
+      function Ka(e) {
         const { familyGroupID: t } = e,
           a = (function (e) {
             (0, l.M)();
@@ -6473,7 +6480,7 @@
                 Entry: ne.Entry,
                 Timestamp: ne.Timestamp,
                 EntryText: ne.EntryText,
-                FnRenderName: Ka,
+                FnRenderName: Va,
               }),
             })),
           n.createElement(m.n, {
@@ -6514,13 +6521,13 @@
               n.createElement(
                 g.In,
                 { strSteamID: m.steamid(), role: m.role() },
-                o && n.createElement(Vt, { familyGroupID: a, member: m }),
+                o && n.createElement(Kt, { familyGroupID: a, member: m }),
               ),
             d.map((e) =>
               n.createElement(
                 g.In,
                 { strSteamID: e.steamid(), role: e.role(), key: e.steamid() },
-                o && n.createElement(Vt, { familyGroupID: a, member: e }),
+                o && n.createElement(Kt, { familyGroupID: a, member: e }),
               ),
             ),
             o &&
@@ -6731,8 +6738,8 @@
               flexGrow: k,
               flexShrink: x,
               flexBasis: D,
-              flex: M,
-              className: w,
+              flex: w,
+              className: M,
               style: P,
             } = e,
             R = (0, n._T)(e, [
@@ -6772,7 +6779,7 @@
               f("margin-top", v || g || _),
               f("margin-right", h || y || _),
               f("margin-bottom", F || g || _),
-              w,
+              M,
             ),
             T = Object.assign(
               {
@@ -6784,7 +6791,7 @@
                 flexGrow: k,
                 flexShrink: x,
                 flexBasis: D,
-                flex: M,
+                flex: w,
               },
               P,
             ),

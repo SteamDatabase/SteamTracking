@@ -601,7 +601,12 @@
             rgAcceptableTypes: i,
           },
           background: { width: 1920, height: 622, rgAcceptableTypes: i },
-          hero: { width: 0, height: 0, rgAcceptableTypes: i },
+          hero: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: i,
+          },
           email_full: { width: 800, height: 300, rgAcceptableTypes: i },
           email_centered: { width: 644, height: 300, rgAcceptableTypes: i },
           broadcast_left: { width: 155, height: 337, rgAcceptableTypes: i },
@@ -705,6 +710,12 @@
           localized_marketingmessage_background: {
             width: 570,
             height: 600,
+            rgAcceptableTypes: i,
+          },
+          localized_email_image: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
             rgAcceptableTypes: i,
           },
           spotlight_art: { width: 306, height: 260, rgAcceptableTypes: a },

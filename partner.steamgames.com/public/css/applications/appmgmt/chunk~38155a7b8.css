@@ -9043,6 +9043,10 @@ textarea.VaLwylBilZSHWeTdxBQQC {
 ._2HIMHiGs8T7KdeDTQTfzpJ {
   display: inline-block;
 }
+._1KlTDoZ-hgxTzNT2E9dPyl {
+  color: #add8e6;
+  font-weight: 600;
+}
 ._3glD2lGMwlZh3hZb4XH6MW {
   background-color: hotpink;
 }
@@ -10743,6 +10747,9 @@ textarea._2V4yU656RPmLOdVgyglB17 {
 }
 ._2LeZ2BB6PDd0SHAzDKx5MD ._2JTPYfVtEKGXsiFzIHLijp {
   padding-bottom: 40px;
+}
+._2LeZ2BB6PDd0SHAzDKx5MD ._2JTPYfVtEKGXsiFzIHLijp img {
+  max-width: 100%;
 }
 ._2LeZ2BB6PDd0SHAzDKx5MD ._2JTPYfVtEKGXsiFzIHLijp ul {
   padding-top: 12px;
@@ -12554,12 +12561,19 @@ textarea._2V4yU656RPmLOdVgyglB17 {
 ._2I9RguJSPMrFA3BaCYsTDC .Shared_Radio_Group {
   background-color: #171a21;
 }
-._1Jy177UD-bRZbvJv1McCwE {
-  display: flex !important;
-  align-items: center;
+.yvFKrzh7VyheJNXRPEfQZ {
+  display: flex;
+  gap: 10px;
 }
 ._1M---DuBLBmJ3wziNwQwZK {
   height: 15px;
+}
+._19yKcT-6yXGzPTnwowUH_p {
+  padding-top: 5px;
+}
+._19yKcT-6yXGzPTnwowUH_p ._8VJYI1VS6M0clgIu1wQbl {
+  display: inline-flex;
+  margin-top: 5px;
 }
 ._2GEfYJTcLo5vBafPciEQQt {
   font-size: 12px;

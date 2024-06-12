@@ -42971,6 +42971,11 @@
             (e, t, a = 0) => {
               const n = w.K.InitFromClanID(v),
                 i = G.aN.GetHashAndExt(t);
+              if (0 == G.U8.GetAllLocalizedGroupImages().length) {
+                const t = i && G.aN.GetHashFromHashAndExt(i),
+                  a = t && G.U8.GetClanImageByImageHash(n, t);
+                a && G.U8.SetPrimaryImageForImageGroup(a, e);
+              }
               G.U8.SetLocalizedImageGroupAtLang(a, n, i);
             },
             [v],
