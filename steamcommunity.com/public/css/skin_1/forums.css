@@ -217,7 +217,7 @@ textarea.forumtopic_reply_textarea {
 	float: left;
 	height: 16px;
 	width: 16px;
-	padding: 16px 12px 16px 6px;
+	padding: 12px 12px 16px 6px;
 
 	position: relative;
 	z-index: 4;
@@ -1678,6 +1678,18 @@ a.view_messages:hover {
 
 .post_searchresult .searchresult_forumname {
 	padding: 2px;
+}
+
+.post_searchresult .forum_topic {
+	margin-bottom: 10px;
+}
+
+.post_searchresult .forum_topic_icon {
+	padding: 12px 12px 16px 6px;
+}
+
+.post_searchresult .forum_topic_name {
+	line-height: 48px;
 }
 
 .grouped_searchresults_forumname {
