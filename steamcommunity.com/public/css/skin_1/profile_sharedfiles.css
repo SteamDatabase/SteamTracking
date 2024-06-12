@@ -559,7 +559,7 @@ a.ScreenshotManagementButtonInactive, a.ScreenshotManagementButtonInactive:hover
 	margin-left: 25px;
 }
 
-#confirmBatchModal, #noSelectedShotsModal, #changeVisibilityModal, #privacyFailedModal {
+#confirmBatchModal, #noSelectedShotsModal, #changeVisibilityModal, #privacyFailedModal, #confirmUnlinkAccountModal {
 	position:absolute;
 	width:456px;
 	padding:10px;
@@ -755,4 +755,17 @@ a.pagingPageLink,a.pagingPageLink:hover,a.pagingPageLink:visited,a.pagingPageLin
 		float: none;
 		width: auto;
 	}
+}
+
+
+.modalTextV2 {
+	padding: 14px 0px;
+	color: white;
+}
+
+.modalActionButtonsV2 {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 }
