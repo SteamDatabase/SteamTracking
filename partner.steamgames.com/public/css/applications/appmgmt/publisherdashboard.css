@@ -354,7 +354,7 @@
 }
 ._2OvrUC8yEPw0y-ETj60eRx {
   margin-bottom: 1px;
-  background-color: #2a2d32;
+  background: linear-gradient(45deg, #3c3f45, #2a2d32);
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
   transition: box-shadow 0.3s ease-in-out;
 }

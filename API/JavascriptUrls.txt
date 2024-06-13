@@ -398,7 +398,6 @@ ${HELP_BASE_URL}wizard/HelpWithLoginInfo?lost=8&issueid=402
 ${HELP_BASE_URL}wizard/HelpWithPublishing?issueid=919
 ${HELP_BASE_URL}wizard/HelpWithPublishing?issueid=920
 ${HELP_BASE_URL}wizard/HelpWithPublishing?issueid=927
-${HELP_BASE_URL}wizard/HelpWithPublishing?issueid=938
 ${HELP_BASE_URL}wizard/HelpWithSteamGuardCode
 ${HELP_BASE_URL}wizard/HelpWithSteamMobileChat
 ${IMG_URL}${_ ? "favorite_star.png" : "favorite_star_empty.png"}
@@ -975,6 +974,7 @@ ${PARTNER_BASE_URL}doc/marketing/wishlist
 ${PARTNER_BASE_URL}doc/resources/Sales_Feature_Beta
 ${PARTNER_BASE_URL}doc/store/assets/promos
 ${PARTNER_BASE_URL}doc/store/coming_soon
+${PARTNER_BASE_URL}doc/store/creator_homepage
 ${PARTNER_BASE_URL}doc/store/discounting/csv
 ${PARTNER_BASE_URL}doc/store/pricing
 ${PARTNER_BASE_URL}doc/store/pricing#5
