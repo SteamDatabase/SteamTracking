@@ -29298,6 +29298,8 @@ div.LowPerfMode .rORbR_CuoyBuXGKfa8_2- {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 ._1j_gja8bHXjiS-BeSQk8hb ._1s_9cSxUjb4609MSH0EjWH .VKo9pLPbwpF3xIzL8Wnou {
   flex: 0 1 auto;

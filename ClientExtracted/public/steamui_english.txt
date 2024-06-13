@@ -4852,7 +4852,7 @@ Set a category for these games to help you find them quickly and organize your L
 "SteamUI_RunningIncompatibleTcpService" "An incompatible version of %incompatdll% (related to %incompatname%)\nhas been detected inside of the Steam process.\n\nWe suggest updating or uninstalling this software if you experience crashes\nor network slowdowns while running Steam or individual games."
 
 "SteamUI_RunningBannedSoftware" "Software That Modifies Steam Behavior"
-"SteamUI_RunningBannedSoftwareDesc" "Steam detected %incompatname%, which is third party software that may modify Steam for the purposes of bypassing security or ownership checks.\nThis software is known to crash Steam, violate the Steam Subscriber Agreement, and infringe the intellectual property of DLC makers. Use of\nthis software could result in VAC bans or account locks.\n\nPlease uninstall it in order to run Steam."
+"SteamUI_RunningBannedSoftwareDesc" "Steam detected %incompatname%, which is third party software that may modify Steam for the purposes of bypassing security or ownership checks.\nThis software is known to crash Steam, violate the Steam Subscriber Agreement, and infringe the intellectual property of DLC makers. Use of\nthis software could result in bans or account locks.\n\nPlease uninstall it in order to run Steam."
 
 "Steam_XboxDriverInstall_Title"		"Xbox Driver Installation"
 "Steam_XboxDriverInstall_Success"	"Driver successfully updated, and will be active after you restart your computer."

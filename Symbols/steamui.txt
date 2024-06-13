@@ -497,6 +497,7 @@
  SDL_GetJoystickProduct
  SDL_GetJoystickVendor
  SDL_GetJoysticks
+ SDL_GetLogOutputFunction
  SDL_GetNumJoystickAxes
  SDL_GetPlatform
  SDL_GetPrimaryDisplay
@@ -520,6 +521,8 @@
  SDL_ResumeAudioDevice
  SDL_SetGamepadMapping
  SDL_SetHint
+ SDL_SetLogOutputFunction
+ SDL_SetLogPriority
  SDL_SetWindowPosition
  SDL_ShowCursor
  SDL_ShowSimpleMessageBox

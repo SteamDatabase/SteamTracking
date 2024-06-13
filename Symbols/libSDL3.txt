@@ -732,6 +732,7 @@
  T SDL_GetTextureColorModFloat
  T SDL_GetTextureProperties
  T SDL_GetTextureScaleMode
+ T SDL_GetTextureSize
  T SDL_GetThreadID
  T SDL_GetThreadName
  T SDL_GetTicks
@@ -887,7 +888,6 @@
  T SDL_PumpEvents
  T SDL_PushEvent
  T SDL_PutAudioStreamData
- T SDL_QueryTexture
  T SDL_Quit
  T SDL_QuitSubSystem
  T SDL_RaiseWindow
@@ -898,6 +898,7 @@
  T SDL_ReadS32LE
  T SDL_ReadS64BE
  T SDL_ReadS64LE
+ T SDL_ReadS8
  T SDL_ReadStorageFile
  T SDL_ReadSurfacePixel
  T SDL_ReadU16BE
@@ -1127,6 +1128,7 @@
  T SDL_WriteS32LE
  T SDL_WriteS64BE
  T SDL_WriteS64LE
+ T SDL_WriteS8
  T SDL_WriteStorageFile
  T SDL_WriteU16BE
  T SDL_WriteU16LE
