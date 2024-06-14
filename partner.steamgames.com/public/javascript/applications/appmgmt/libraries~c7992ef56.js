@@ -3,7 +3,7 @@
 "use strict";
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [6630],
+  [8751],
   {
     15459: (e, t, n) => {
       n.d(t, { ZP: () => Or });

@@ -2,7 +2,7 @@
  ****/
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [3552],
+  [7201],
   {
     83146: (t, r, e) => {
       var n = e(77568)(e(49656), "DataView");

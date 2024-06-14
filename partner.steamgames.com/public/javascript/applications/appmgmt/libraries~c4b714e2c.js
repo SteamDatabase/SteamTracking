@@ -3,7 +3,7 @@
 "use strict";
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [6375],
+  [7234],
   {
     18015: (e, r, t) => {
       t.d(r, {

@@ -198,7 +198,7 @@
         "./shared_german.json": [50515, 6007],
         "./shared_greek.json": [93579, 4297],
         "./shared_hungarian.json": [46965, 5948],
-        "./shared_indonesian.json": [13386, 8754],
+        "./shared_indonesian.json": [13386, 7486],
         "./shared_italian.json": [42471, 5933],
         "./shared_japanese.json": [36603, 2844],
         "./shared_koreana.json": [40931, 6542],
@@ -244,7 +244,7 @@
         "./shared_german.json": [50515, 6007],
         "./shared_greek.json": [93579, 4297],
         "./shared_hungarian.json": [46965, 5948],
-        "./shared_indonesian.json": [13386, 8754],
+        "./shared_indonesian.json": [13386, 7486],
         "./shared_italian.json": [42471, 5933],
         "./shared_japanese.json": [36603, 2844],
         "./shared_koreana.json": [40931, 6542],
@@ -21604,21 +21604,22 @@
       "use strict";
       n.d(t, {
         $1: () => c.$1,
-        CE: () => b,
+        CE: () => S,
+        Jr: () => m,
         LJ: () => u,
-        LZ: () => _,
+        LZ: () => C,
         Mh: () => c.Mh,
         XG: () => c.XG,
         Xx: () => d,
-        Yt: () => S,
-        is: () => f,
+        Yt: () => E,
+        is: () => b,
         jr: () => c.jr,
         kQ: () => h,
-        kb: () => g,
+        kb: () => v,
         m9: () => c.m9,
         vX: () => c.vX,
         yW: () => c.yW,
-        yu: () => m,
+        yu: () => p,
       });
       var o = n(47427),
         i = n(77936),
@@ -21734,11 +21735,11 @@
         }
       }
       function d(e, ...t) {
-        let n = S.LocalizeString(e);
-        return void 0 === n ? e : v(n, ...t);
+        let n = E.LocalizeString(e);
+        return void 0 === n ? e : _(n, ...t);
       }
       function h(e, ...t) {
-        let n = S.LocalizeString(e);
+        let n = E.LocalizeString(e);
         if (void 0 === n) return e;
         let i,
           r = [],
@@ -21751,11 +21752,16 @@
         }
         return r.push(n.substr(a)), o.createElement(o.Fragment, null, ...r);
       }
-      function m(e, ...t) {
-        let n = S.LocalizeIfToken(e);
-        return void 0 === n ? e : p(n, ...t);
+      function m(e, t, ...n) {
+        return 1 === t || "1" === t
+          ? h(e, t, ...n)
+          : h(e + "_Plural", t.toLocaleString(), ...n);
       }
       function p(e, ...t) {
+        let n = E.LocalizeIfToken(e);
+        return void 0 === n ? e : g(n, ...t);
+      }
+      function g(e, ...t) {
         let n,
           i = [],
           r = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, "gs"),
@@ -21764,7 +21770,7 @@
           (s += n[0].length), i.push(n[1]);
           let e = parseInt(n[2]),
             r = n[3] || "",
-            a = p(r, ...t),
+            a = g(r, ...t),
             l = (e >= 1 && e <= t.length ? t[e - 1] : null)
               ? o.cloneElement(t[e - 1], {}, r ? a : null)
               : r;
@@ -21772,10 +21778,10 @@
         }
         return i.push(e.substr(s)), o.createElement(o.Fragment, null, ...i);
       }
-      function g(e, t, ...n) {
+      function v(e, t, ...n) {
         return 1 === t || "1" === t ? d(e, t, ...n) : d(e + "_Plural", t, ...n);
       }
-      function v(e, ...t) {
+      function _(e, ...t) {
         return 0 == t.length
           ? e
           : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, n) {
@@ -21786,7 +21792,7 @@
               return e;
             }));
       }
-      class _ {
+      class C {
         static Set(e, t, n) {
           if (e.length <= t) {
             if (t >= 31) return e;
@@ -21799,12 +21805,12 @@
         }
         static GetWithFallback(e, t) {
           if (e) {
-            return _.Get(e, t) || _.Get(e, u.GetELanguageFallback(t));
+            return C.Get(e, t) || C.Get(e, u.GetELanguageFallback(t));
           }
           return null;
         }
       }
-      const C = {
+      const f = {
           english: "en",
           german: "de",
           french: "fr",
@@ -21838,7 +21844,7 @@
           sc_schinese: "zh-cn",
           koreana: "ko",
         },
-        f = {
+        b = {
           "en-US": 0,
           "de-DE": 1,
           "fr-FR": 2,
@@ -21870,11 +21876,11 @@
           "vi-VN": 28,
           "id-ID": 30,
         };
-      function b() {
-        return C[s.De.LANGUAGE] || null;
+      function S() {
+        return f[s.De.LANGUAGE] || null;
       }
-      const S = new u();
-      window.LocalizationManager = S;
+      const E = new u();
+      window.LocalizationManager = E;
     },
     12251: (e, t, n) => {
       "use strict";
@@ -23798,6 +23804,7 @@
         TimelineMarkerEditor: () => "/apps/timelinemarkers/:appid(\\d+)",
         KeyWizardPackagePage: () => "/apps/packages/:appid(\\d+)",
         HardwareReservationQueueMessaging: () => "/hardware/reservationqueue",
+        RecapPages: () => "/recap",
         YearInReviewProgressMonitor: () => "/yearinreview/dashboard",
       };
       function r() {
@@ -24370,245 +24377,272 @@
         );
       }
       const ie = c.lazy(() =>
-          Promise.all([n.e(3059), n.e(1643), n.e(4535)]).then(n.bind(n, 81515)),
+          Promise.all([n.e(8754), n.e(256), n.e(4535)]).then(n.bind(n, 81515)),
         ),
         re = c.lazy(() => n.e(7762).then(n.bind(n, 36187))),
         se = c.lazy(() =>
-          Promise.all([n.e(7682), n.e(6699)]).then(n.bind(n, 7222)),
+          Promise.all([n.e(3334), n.e(6699)]).then(n.bind(n, 7222)),
         ),
         ae = c.lazy(() =>
-          Promise.all([n.e(7682), n.e(6699)]).then(n.bind(n, 2157)),
+          Promise.all([n.e(3334), n.e(6699)]).then(n.bind(n, 2157)),
         ),
         le = c.lazy(() =>
           Promise.all([
-            n.e(9645),
-            n.e(1478),
-            n.e(6375),
-            n.e(746),
-            n.e(2167),
-            n.e(9784),
-            n.e(2715),
+            n.e(1892),
+            n.e(6319),
+            n.e(7234),
+            n.e(3655),
+            n.e(665),
+            n.e(5631),
+            n.e(5572),
             n.e(2529),
           ]).then(n.bind(n, 22331)),
         ),
         ce = c.lazy(() =>
           Promise.all([
-            n.e(9645),
-            n.e(1478),
-            n.e(6375),
-            n.e(9754),
-            n.e(6630),
-            n.e(3059),
-            n.e(3552),
-            n.e(6234),
-            n.e(5612),
-            n.e(746),
-            n.e(979),
-            n.e(9129),
-            n.e(9828),
+            n.e(1892),
+            n.e(6319),
+            n.e(7234),
+            n.e(8072),
+            n.e(8751),
+            n.e(8754),
+            n.e(7201),
+            n.e(768),
+            n.e(1275),
+            n.e(3655),
+            n.e(4055),
+            n.e(4839),
+            n.e(9154),
             n.e(9603),
-            n.e(2167),
-            n.e(6853),
-            n.e(1643),
-            n.e(9784),
-            n.e(7682),
-            n.e(4650),
-            n.e(3710),
-            n.e(2715),
-            n.e(7485),
+            n.e(665),
+            n.e(7346),
+            n.e(256),
+            n.e(5631),
+            n.e(3334),
+            n.e(9845),
+            n.e(7660),
+            n.e(5572),
+            n.e(8644),
             n.e(2136),
           ]).then(n.bind(n, 82625)),
         ),
         ue = c.lazy(() =>
           Promise.all([
-            n.e(9645),
-            n.e(1478),
-            n.e(6375),
-            n.e(9754),
-            n.e(6630),
-            n.e(3059),
-            n.e(3552),
-            n.e(6234),
-            n.e(5612),
-            n.e(746),
-            n.e(979),
-            n.e(9129),
-            n.e(9828),
+            n.e(1892),
+            n.e(6319),
+            n.e(7234),
+            n.e(8072),
+            n.e(8751),
+            n.e(8754),
+            n.e(7201),
+            n.e(768),
+            n.e(1275),
+            n.e(3655),
+            n.e(4055),
+            n.e(4839),
+            n.e(9154),
             n.e(9603),
-            n.e(2167),
-            n.e(6853),
-            n.e(1643),
-            n.e(9784),
-            n.e(7682),
-            n.e(4650),
-            n.e(3710),
-            n.e(2715),
-            n.e(7485),
+            n.e(665),
+            n.e(7346),
+            n.e(256),
+            n.e(5631),
+            n.e(3334),
+            n.e(9845),
+            n.e(7660),
+            n.e(5572),
+            n.e(8644),
             n.e(2136),
           ]).then(n.bind(n, 34083)),
         ),
         de = c.lazy(() =>
           Promise.all([
-            n.e(9645),
-            n.e(1478),
-            n.e(6375),
-            n.e(9754),
-            n.e(6630),
-            n.e(3059),
-            n.e(3552),
-            n.e(6234),
-            n.e(5612),
-            n.e(746),
-            n.e(979),
-            n.e(9129),
-            n.e(9828),
+            n.e(1892),
+            n.e(6319),
+            n.e(7234),
+            n.e(8072),
+            n.e(8751),
+            n.e(8754),
+            n.e(7201),
+            n.e(768),
+            n.e(1275),
+            n.e(3655),
+            n.e(4055),
+            n.e(4839),
+            n.e(9154),
             n.e(9603),
-            n.e(2167),
-            n.e(6853),
-            n.e(1643),
-            n.e(9784),
-            n.e(7682),
-            n.e(4650),
-            n.e(3710),
-            n.e(2715),
-            n.e(7485),
+            n.e(665),
+            n.e(7346),
+            n.e(256),
+            n.e(5631),
+            n.e(3334),
+            n.e(9845),
+            n.e(7660),
+            n.e(5572),
+            n.e(8644),
             n.e(2136),
           ]).then(n.bind(n, 59997)),
         ),
         he = c.lazy(() =>
           Promise.all([
-            n.e(9645),
-            n.e(1478),
-            n.e(6375),
-            n.e(9754),
-            n.e(6630),
-            n.e(3059),
-            n.e(3552),
-            n.e(6234),
-            n.e(5612),
-            n.e(746),
-            n.e(979),
-            n.e(9129),
-            n.e(9828),
+            n.e(1892),
+            n.e(6319),
+            n.e(7234),
+            n.e(8072),
+            n.e(8751),
+            n.e(8754),
+            n.e(7201),
+            n.e(768),
+            n.e(1275),
+            n.e(3655),
+            n.e(4055),
+            n.e(4839),
+            n.e(9154),
             n.e(9603),
-            n.e(2167),
-            n.e(6853),
-            n.e(1643),
-            n.e(9784),
-            n.e(7682),
-            n.e(4650),
-            n.e(3710),
-            n.e(2715),
-            n.e(7485),
+            n.e(665),
+            n.e(7346),
+            n.e(256),
+            n.e(5631),
+            n.e(3334),
+            n.e(9845),
+            n.e(7660),
+            n.e(5572),
+            n.e(8644),
             n.e(2136),
           ]).then(n.bind(n, 69633)),
         ),
         me = c.lazy(() =>
-          Promise.all([n.e(3552), n.e(5612), n.e(5117), n.e(5676)]).then(
+          Promise.all([n.e(7201), n.e(1275), n.e(5117), n.e(5676)]).then(
             n.bind(n, 67890),
           ),
         ),
         pe = c.lazy(() =>
           Promise.all([
-            n.e(9645),
-            n.e(1478),
-            n.e(6375),
-            n.e(9754),
-            n.e(3552),
-            n.e(6234),
-            n.e(979),
-            n.e(2167),
-            n.e(6853),
-            n.e(9784),
-            n.e(4650),
+            n.e(1892),
+            n.e(6319),
+            n.e(7234),
+            n.e(8072),
+            n.e(7201),
+            n.e(768),
+            n.e(4055),
+            n.e(665),
+            n.e(7346),
+            n.e(5631),
+            n.e(9845),
             n.e(8974),
           ]).then(n.bind(n, 9818)),
         ),
         ge = c.lazy(() => n.e(4935).then(n.bind(n, 21452))),
         ve = c.lazy(() =>
           Promise.all([
-            n.e(9645),
-            n.e(1478),
-            n.e(6375),
-            n.e(9754),
-            n.e(6630),
-            n.e(3059),
-            n.e(3552),
-            n.e(6234),
-            n.e(5612),
-            n.e(746),
-            n.e(979),
-            n.e(9129),
-            n.e(9828),
-            n.e(2167),
-            n.e(6853),
-            n.e(1643),
-            n.e(9784),
-            n.e(7682),
-            n.e(4650),
-            n.e(3710),
-            n.e(2715),
-            n.e(7485),
+            n.e(1892),
+            n.e(6319),
+            n.e(7234),
+            n.e(8072),
+            n.e(8751),
+            n.e(8754),
+            n.e(7201),
+            n.e(768),
+            n.e(1275),
+            n.e(3655),
+            n.e(4055),
+            n.e(4839),
+            n.e(9154),
+            n.e(665),
+            n.e(7346),
+            n.e(256),
+            n.e(5631),
+            n.e(3334),
+            n.e(9845),
+            n.e(7660),
+            n.e(5572),
+            n.e(8644),
             n.e(3863),
           ]).then(n.bind(n, 53009)),
         ),
         _e = () => c.createElement("div", null),
         Ce = c.lazy(() =>
           Promise.all([
-            n.e(9645),
-            n.e(1478),
-            n.e(6375),
-            n.e(9754),
-            n.e(6630),
-            n.e(3059),
-            n.e(3552),
-            n.e(6234),
-            n.e(5612),
-            n.e(746),
-            n.e(979),
-            n.e(9129),
-            n.e(9828),
-            n.e(2167),
-            n.e(6853),
-            n.e(1643),
-            n.e(9784),
-            n.e(7682),
-            n.e(4650),
-            n.e(3710),
-            n.e(2715),
-            n.e(7485),
+            n.e(1892),
+            n.e(6319),
+            n.e(7234),
+            n.e(8072),
+            n.e(8751),
+            n.e(8754),
+            n.e(7201),
+            n.e(768),
+            n.e(1275),
+            n.e(3655),
+            n.e(4055),
+            n.e(4839),
+            n.e(9154),
+            n.e(665),
+            n.e(7346),
+            n.e(256),
+            n.e(5631),
+            n.e(3334),
+            n.e(9845),
+            n.e(7660),
+            n.e(5572),
+            n.e(8644),
             n.e(3599),
           ]).then(n.bind(n, 75907)),
         ),
         fe = c.lazy(() =>
           Promise.all([
-            n.e(9645),
-            n.e(1478),
-            n.e(9754),
-            n.e(6630),
-            n.e(6234),
-            n.e(6853),
-            n.e(4650),
+            n.e(1892),
+            n.e(6319),
+            n.e(8072),
+            n.e(8751),
+            n.e(768),
+            n.e(7346),
+            n.e(9845),
             n.e(6808),
           ]).then(n.bind(n, 84877)),
         ),
         be = c.lazy(() =>
           Promise.all([
-            n.e(9645),
-            n.e(6375),
-            n.e(9754),
-            n.e(6630),
-            n.e(3059),
-            n.e(9129),
-            n.e(2167),
-            n.e(6853),
-            n.e(1643),
-            n.e(7682),
-            n.e(3710),
+            n.e(1892),
+            n.e(7234),
+            n.e(8072),
+            n.e(8751),
+            n.e(8754),
+            n.e(4839),
+            n.e(665),
+            n.e(7346),
+            n.e(256),
+            n.e(3334),
+            n.e(7660),
             n.e(5706),
           ]).then(n.bind(n, 14720)),
+        ),
+        Se = c.lazy(() =>
+          Promise.all([
+            n.e(1892),
+            n.e(6319),
+            n.e(7234),
+            n.e(8072),
+            n.e(8751),
+            n.e(8754),
+            n.e(7201),
+            n.e(768),
+            n.e(1275),
+            n.e(3655),
+            n.e(4055),
+            n.e(4839),
+            n.e(9154),
+            n.e(665),
+            n.e(7346),
+            n.e(256),
+            n.e(5631),
+            n.e(3334),
+            n.e(9845),
+            n.e(7660),
+            n.e(5572),
+            n.e(8644),
+            n.e(8676),
+          ]).then(n.bind(n, 28953)),
         );
-      function Se(e) {
+      function Ee(e) {
         const t = (0, p.kQ)("publisherid", "application_config");
         return c.createElement(
           p.fI,
@@ -24620,7 +24654,7 @@
               O.R,
               null,
               c.createElement(
-                Me,
+                Le,
                 null,
                 c.createElement(L.Y0, null, e.children),
               ),
@@ -24628,7 +24662,7 @@
           ),
         );
       }
-      function Ee(e) {
+      function we(e) {
         let { children: t } = e,
           n = (0, I.H7)([s.Z.PricingTools(), s.Z.PromotionTools()]);
         return c.createElement(
@@ -24637,15 +24671,15 @@
           t,
         );
       }
-      function we(e) {
+      function De(e) {
         return c.createElement(
           b.VK,
           { basename: (0, s.l)() },
           c.createElement(
-            Se,
+            Ee,
             null,
             c.createElement(
-              Ee,
+              we,
               null,
               c.createElement(
                 c.Suspense,
@@ -24681,6 +24715,10 @@
                   c.createElement(S.AW, {
                     path: s.Z.ContentHubPages(),
                     component: be,
+                  }),
+                  c.createElement(S.AW, {
+                    path: s.Z.RecapPages(),
+                    component: Se,
                   }),
                   c.createElement(S.AW, {
                     path: s.Z.StoreGameAdminRoot(),
@@ -24860,12 +24898,12 @@
           ),
         );
       }
-      function De() {
+      function Me() {
         const e = (0, p.ip)("loyalty_webapi_token", "application_config");
         return new D.J(p.De.WEBAPI_BASE_URL, e);
       }
-      function Me(e) {
-        const t = (0, R.kD)(De),
+      function Le(e) {
+        const t = (0, R.kD)(Me),
           n = (0, R.kD)(c.useCallback(() => new w.Z(), []));
         return c.createElement(
           E.Ub,
@@ -24873,12 +24911,12 @@
           e.children,
         );
       }
-      var Le = n(54842),
-        ye = n(24522),
-        Te = n(92011),
-        Re = n(62210);
+      var ye = n(54842),
+        Te = n(24522),
+        Re = n(92011),
+        Oe = n(62210);
       n(34345);
-      function Oe(e) {
+      function Ie(e) {
         return (0, o.mG)(this, void 0, void 0, function* () {
           const [t, o, i, r] = yield Promise.all([
               n(11580)(`./shared_${e}.json`),
@@ -24906,27 +24944,27 @@
           }
         });
       }
-      (0, Le.jQ)({ enforceActions: "never" }),
+      (0, ye.jQ)({ enforceActions: "never" }),
         document.addEventListener("DOMContentLoaded", function () {
           return (0, o.mG)(this, void 0, void 0, function* () {
             document.getElementById("application_root")
               ? ((0, p.Ek)("application_config"),
-                (0, Te.Uh)().Init(
+                (0, Re.Uh)().Init(
                   "Partner",
                   CLSTAMP,
                   new D.J(p.De.WEBAPI_BASE_URL).GetServiceTransport(),
                 ),
-                yield Oe(p.De.LANGUAGE),
-                ye
-                  .s(document.getElementById("application_root"))
-                  .render(c.createElement(we, {})))
+                yield Ie(p.De.LANGUAGE),
+                Te.s(document.getElementById("application_root")).render(
+                  c.createElement(De, {}),
+                ))
               : ((0, p.Ek)(),
-                (0, Te.Uh)().Init(
+                (0, Re.Uh)().Init(
                   "Partner",
                   CLSTAMP,
                   new D.J(p.De.WEBAPI_BASE_URL).GetServiceTransport(),
                 ),
-                yield Oe(p.De.LANGUAGE),
+                yield Ie(p.De.LANGUAGE),
                 (function () {
                   let e = document.querySelectorAll(".StoreAdminReactRoot");
                   for (let t = 0; t < e.length; t++) {
@@ -24942,14 +24980,14 @@
                           );
                         break;
                       default:
-                        (0, Re.X)(!1, `unknown component: "${i}"`);
+                        (0, Oe.X)(!1, `unknown component: "${i}"`);
                     }
                   }
                 })());
           });
         }),
         (window.LocalizationManifestReady = function (e, t, n) {
-          (0, Re.X)("manifest" === t, `Expected manifest not "${t}"`),
+          (0, Oe.X)("manifest" === t, `Expected manifest not "${t}"`),
             m.Yt.InitDirect(n);
         });
     },

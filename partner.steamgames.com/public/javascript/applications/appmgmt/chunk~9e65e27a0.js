@@ -2,7 +2,7 @@
  ****/
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [3710],
+  [7660],
   {
     13450: (e) => {
       e.exports = {
@@ -9138,21 +9138,26 @@
         UploadFile(e, t, n, i, r, l) {
           return (0, a.mG)(this, void 0, void 0, function* () {
             let a = null;
-            const r = new FormData();
-            r.append("assetfile", e, t),
-              r.append("sessionid", m.De.SESSIONID),
-              r.append("elangauge", "" + n),
-              r.append("originalname", t),
-              i && r.append("arttype", i);
-            const l = p(t);
-            if (!l)
+            const l = new FormData();
+            l.append("assetfile", e, t),
+              l.append("sessionid", m.De.SESSIONID),
+              l.append("elangauge", "" + n),
+              l.append("originalname", t),
+              (null == r ? void 0 : r.length) > 0 &&
+                l.append(
+                  "resize",
+                  r.map((e) => e.width + "x" + e.height).join(","),
+                ),
+              i && l.append("arttype", i);
+            const d = p(t);
+            if (!d)
               return {
                 success: 8,
                 message: "Invalid file extension, cannot determine mimetype",
               };
-            r.append("mimetype", l);
+            l.append("mimetype", d);
             try {
-              a = yield s().post(this.m_strUploadPath, r, {
+              a = yield s().post(this.m_strUploadPath, l, {
                 withCredentials: !0,
                 headers: { "Content-Type": "multipart/form-data" },
               });

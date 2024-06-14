@@ -1037,6 +1037,7 @@ ${PARTNER_BASE_URL}optin/sale/${}/${}
 ${PARTNER_BASE_URL}optin/sale/${}/100
 ${PARTNER_BASE_URL}optin/sale/${}/220
 ${PARTNER_BASE_URL}optin/salepreview/${}/20
+${PARTNER_BASE_URL}optin/survey/${opt_in_id}/${nMostPopularAppId}
 ${PARTNER_BASE_URL}optin/survey/${}/${}
 ${PARTNER_BASE_URL}optin/survey/${}/220
 ${PARTNER_BASE_URL}packages/approvepricing
@@ -1128,6 +1129,7 @@ ${PARTNER_BASE_URL}pub/publisher/${publisherid}/
 ${PARTNER_BASE_URL}pub/publisher/${}
 ${PARTNER_BASE_URL}public/downloadics.php?${}
 ${PARTNER_BASE_URL}public/javascript/webui/storeadmin/
+${PARTNER_BASE_URL}recap/nextfest/${}/${m_partnerId}
 ${PARTNER_BASE_URL}sales/
 ${PARTNER_BASE_URL}sales/ajaxcreatesalepartnerevent
 ${PARTNER_BASE_URL}sales/ajaxgetsalerank

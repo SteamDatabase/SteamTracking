@@ -560,6 +560,7 @@
     "EventEditor_SaleValveApproval_Request_Partner": "Choose Partners whose Members can also access the request ticket",
     "EventEditor_SaleValveApproval_Request_Partner_ttip": "Optional: If chosen, other members of the partners can access and respond to the ticket.  By default only you can read, update and respond to the ticket created",
     "EventEditor_SaleValveApproval_Request_Error": "Failed to create ticket, please try again later",
+    "EventEditor_SaleValveApproval_Request_DuplicateError": "Unable to create a new ticket; a ticket of this type already exists. Please complete review of your other sale page before submitting this one or update the existing ticket to also include this page's review.",
     "EventEditor_SaleValveApproval_Request_Success": "Ticket Created Successfully!",
     "EventEditor_SaleValveApproval_Request_Link": "See Review Ticket...",
     "EventEditor_SaleValveApproval_Approved_Title": "Your page is approved and ready for you to publish",
