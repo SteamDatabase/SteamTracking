@@ -115,14 +115,6 @@ GContentHub = {
 		{
 			OnCHException ( e );
 		}
-
-		// Broadcast section goes on the end, as it decorates the storeitems with the live icon after the fact.
-		// Only show on the content hubs which we have specific information about.
-		if( window.hasOwnProperty('GSteamBroadcasts') && ( GContentHub.unTagID != 0 || GContentHub.unGenreID != 0 || GContentHub.unCategoryID != 0 )) {
-			try {
-				GSteamBroadcasts.Init( GContentHub.FilterItemsForDisplay, GContentHub.unTagID, GContentHub.unGenreID, GContentHub.unCategoryID );
-			} catch (e) { OnHomepageException(e); }
-		}
 	},
 
 	/**
@@ -201,7 +193,7 @@ GContentHub = {
 		var rgDisplayList = GContentHub.FilterItemsForDisplay(
 			GContentHub.oDisplayLists[ rgSectionInfo.id ], 'home', 4, 12, $J.extend(GContentHub.oFilters.all, GContentHub.oSettings, { games_already_in_library: false, localized: true, displayed_elsewhere: true, only_current_platform: true } )
 		);
-		
+
 		if ( rgDisplayList.length < 4 )
 			return;
 

@@ -232,8 +232,6 @@ GHomepage = {
 			GHomepage.rgContentHubs = rgParams.rgContentHubs || [];
 			GHomepage.bShuffleInMainLegacy = rgParams.bShuffleInMainLegacy;
 			GHomepage.rgMarketingMessages = rgParams.rgMarketingMessages;
-			GHomepage.nMaxBroadcasts = rgParams.nMaxBroadcasts;
-			GHomepage.bAutoPlayingFeaturedBroadcast = rgParams.bAutoPlayingFeaturedBroadcast || false;
 			GHomepage.bShowAllRecentlyUpdated = rgParams.bShowAllRecentlyUpdated || false;
 			GHomepage.unBackgroundAppID = rgParams.unBackgroundAppID || 0;
 		} catch( e ) { OnHomepageException(e); }
@@ -434,16 +432,6 @@ GHomepage = {
 			}, 10 );
 
 		} catch( e ) { OnHomepageException(e); }
-
-
-		// Broadcast section goes on the end, as it decorates the storeitems with the live icon after the fact.
-		if( window.hasOwnProperty('GSteamBroadcasts') && $J('#home_broadcast_scroll_target').length ) {
-			try {
-				new CScrollOffsetWatcher( '#home_broadcast_scroll_target', function() {
-					GSteamBroadcasts.Init( GHomepage.FilterItemsForDisplay, 0, 0, 0, GHomepage.nMaxBroadcasts, GHomepage.bAutoPlayingFeaturedBroadcast );
-				} );
-			} catch (e) { OnHomepageException(e); }
-		}
 
         // this is the only time we'll execute rgfnCustomRenders, future requests will be called directly
 		GHomepage.bInitialRenderComplete = true;

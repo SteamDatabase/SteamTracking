@@ -41480,9 +41480,11 @@
               (0, Kn.X)(
                 "localized_email_image" == i,
                 "unexpected artwork type",
-              );
-              const o = Object.assign({}, l);
-              (o[(0, ne.j_)(n)] = e + (0, Ne.UQ)(a)), r(o);
+              ),
+                r((t) => {
+                  const i = Object.assign({}, t);
+                  return (i[(0, ne.j_)(n)] = e + (0, Ne.UQ)(a)), i;
+                });
             },
           }),
           o.createElement(

@@ -499,9 +499,6 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 	GDynamicStorePage.FilterCapsules( 16, 16, $J( '#tab_upcoming_content .tab_content_items' ).children('.sale_capsule'), $J( '#tab_upcoming_content' ), { prepurchase: true, games_already_in_library: true, localized: true, enforce_minimum: true } );
 	GDynamicStorePage.FilterCapsules( 16, 16, $J( '#topsellers_tier' ).children('.sale_capsule'), $J( '#topsellers_tier' ), {dlc_for_you: true, games_already_in_library: true, localized: true, enforce_minimum: true } );
 
-	// NOTE: If we are already using home.js, then we don't need this. Found we were doubling up the streams
-	// GSteamBroadcasts.Init( GHomepage.FilterItemsForDisplay );
-
 	AddMicrotrailersToStaticCaps( $J('.home_topsellers_games_ctn' ) );
 	AddMicrotrailersToStaticCaps( $J('.home_newupcoming_games_ctn') );
 
