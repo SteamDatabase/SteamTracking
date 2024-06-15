@@ -1016,7 +1016,7 @@ ${PARTNER_BASE_URL}optin/ajaxinvitepartnersorapps
 ${PARTNER_BASE_URL}optin/ajaxpruneapp
 ${PARTNER_BASE_URL}optin/ajaxrefreshoptinstats
 ${PARTNER_BASE_URL}optin/ajaxsetappealsdecision/${}
-${PARTNER_BASE_URL}optin/ajaxsubmitsurvey/pageid
+${PARTNER_BASE_URL}optin/ajaxsubmitsurvey/${}/${appid}
 ${PARTNER_BASE_URL}optin/ajaxupdateadditionalfeaturingapps
 ${PARTNER_BASE_URL}optin/ajaxupdateoptinregistration/${appid}
 ${PARTNER_BASE_URL}optin/ajaxupdateoptinregistration/${}

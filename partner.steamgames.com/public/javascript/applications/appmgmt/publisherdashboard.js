@@ -558,46 +558,46 @@
             const [t] = (0, G.Ar)("recap"),
               n = a.useMemo(() => {
                 if (!t) return [];
-                const n = t,
-                  [a, s] = t.substring(14).split("_"),
-                  i = new Date(`${a} 1, ${s}`),
-                  r = {
-                    name: n,
-                    opt_in_id: n,
+                const [n, a] = t.substring(14).split("_"),
+                  s = new Date(`${n} 1, ${a}`),
+                  i = {
+                    id: `fakerecap_${t}`,
+                    name: t,
+                    opt_in_id: t,
                     type: "nextfest",
                     sale_clan_account: 39049601,
                     sale_clan_event_gid: "4148451028995460854",
-                    start_date: i.getTime() / 1e3,
-                    end_date: i.getTime() / 1e3 + 3 * v._H.PerDay,
+                    start_date: s.getTime() / 1e3,
+                    end_date: s.getTime() / 1e3 + 3 * v._H.PerDay,
                   },
-                  l = {
+                  r = {
                     description: {
-                      opt_in_name: n,
+                      opt_in_name: t,
                       type: 0,
                       active: !0,
-                      start_date: r.start_date,
-                      end_date: r.end_date,
+                      start_date: i.start_date,
+                      end_date: i.end_date,
                       definition: {},
                     },
                     rgEligibleApps: {},
                     rgRegisteredApps: {},
                     rgFeaturedApps: [],
                   },
-                  o = new H(
-                    `fakerecap_${n}`,
+                  l = new H(
+                    i.id,
                     e,
                     !1,
-                    r,
+                    i,
                     null,
-                    l,
-                    new Date(1e3 * l.description.start_date),
-                    new Date(1e3 * l.description.end_date),
+                    r,
+                    new Date(1e3 * r.description.start_date),
+                    new Date(1e3 * r.description.end_date),
                     "event",
-                    j(r),
+                    j(i),
                     !1,
                     V,
                   );
-                return (0, M.X)(Z(r), ""), [o];
+                return (0, M.X)(Z(i), ""), [l];
               }, [e, t]);
             return n;
           })(e);
@@ -1171,7 +1171,7 @@
             : void 0,
           E = Ae(),
           g = a.useMemo(() => {
-            if (!m || m.isLoading || !m.isSuccess) return null;
+            if (m.isLoading || !m.isSuccess) return null;
             const e = m.data.reduce(
               (e, t) => (t.rt_last_update_time > e ? t.rt_last_update_time : e),
               0,
@@ -1197,29 +1197,32 @@
               nConversions: s,
               nMostPopularAppId: i,
             };
-          }, [o.end_date, m]);
-        a.useEffect(() => {
-          !m ||
-            m.isLoading ||
-            (m.isSuccess && 0 != (null == g ? void 0 : g.nGameCount)) ||
-            E.SetHidden(o.id, !0);
-        }, [
-          E,
-          null == g ? void 0 : g.nGameCount,
-          o.id,
-          m,
-          m.isLoading,
-          m.isSuccess,
-        ]);
-        const D = P.Get().GetInfo(o.opt_in_id);
-        if (m && m.isLoading) return a.createElement(X.V, null);
+          }, [o.end_date, m.data, m.isLoading, m.isSuccess]),
+          D = P.Get().GetInfo(o.opt_in_id);
+        if (
+          (a.useEffect(() => {
+            ((m.isLoading ||
+              (m.isSuccess && g && 0 != (null == g ? void 0 : g.nGameCount))) &&
+              D) ||
+              E.SetHidden(o.id, !0);
+          }, [
+            E,
+            g,
+            null == g ? void 0 : g.nGameCount,
+            D,
+            o.id,
+            m,
+            m.isLoading,
+            m.isSuccess,
+          ]),
+          m && m.isLoading)
+        )
+          return a.createElement(X.V, null);
         if (!g) return;
         const T =
             g.nMostPopularAppId &&
-            (null == D
-              ? void 0
-              : D.rgRegisteredApps.find((e) => e.appid == g.nMostPopularAppId)
-                  .jsondata),
+            D.rgRegisteredApps.find((e) => e.appid == g.nMostPopularAppId)
+              .jsondata,
           y = T && JSON.parse(T),
           f =
             y &&

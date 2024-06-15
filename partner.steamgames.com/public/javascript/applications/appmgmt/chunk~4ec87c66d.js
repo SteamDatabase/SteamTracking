@@ -46113,25 +46113,25 @@
             }),
         );
       }
-      var Gi = n(25507),
-        xi = n.n(Gi);
-      const Li = ["unsatisfied", "nuetral", "satisfied"],
-        Bi = ["0", "1", "2-10", "11+"];
-      var Oi = n(82756);
+      const Gi = ["unsatisfied", "neutral", "satisfied"],
+        xi = ["0", "1", "2-10", "11+"];
+      var Li = n(82756),
+        Bi = n(25507),
+        Oi = n.n(Bi);
       function Mi(e) {
         const { pageid: t } = e,
           n = (function () {
             const [e] = (0, o.useState)(() =>
-                (0, Oi.kQ)("optin_title", "application_config"),
+                (0, Li.kQ)("optin_title", "application_config"),
               ),
               [t] = (0, o.useState)(() =>
-                (0, Oi.kQ)("optin_appid", "application_config"),
+                (0, Li.kQ)("optin_appid", "application_config"),
               ),
               [n] = (0, o.useState)(() =>
-                (0, Oi.kQ)("optin_survey_type", "application_config"),
+                (0, Li.kQ)("optin_survey_type", "application_config"),
               ),
               [a] = (0, o.useState)(() =>
-                (0, Oi.kQ)("optin_banner_url", "application_config"),
+                (0, Li.kQ)("optin_banner_url", "application_config"),
               );
             return {
               strOptInName: e,
@@ -46141,7 +46141,7 @@
             };
           })(),
           [a, i] = (0, o.useState)(() => ({
-            appid: 220,
+            appid: n.appid,
             accountid: xe.L7.accountid,
             survey_type: n.strSurveyType,
           })),
@@ -46163,13 +46163,14 @@
               strLocalizedOptInBanner: n.strOptInBannerURL,
               fnSaveSurveyResults: (e) =>
                 (0, I.mG)(this, void 0, void 0, function* () {
-                  const t = `${xe.De.PARTNER_BASE_URL}optin/ajaxsubmitsurvey/pageid`,
-                    n = new FormData();
-                  n.append("sessionid", xe.De.SESSIONID),
-                    n.append("surveyjson", JSON.stringify(e));
-                  const a = yield k().post(t, n, { withCredentials: !0 });
-                  r(!0), c(!(200 == (null == a ? void 0 : a.status)));
+                  const a = `${xe.De.PARTNER_BASE_URL}optin/ajaxsubmitsurvey/${t}/${n.appid}`,
+                    i = new FormData();
+                  i.append("sessionid", xe.De.SESSIONID),
+                    i.append("surveyjson", JSON.stringify(e));
+                  const l = yield k().post(a, i, { withCredentials: !0 });
+                  r(!0), c(!(200 == (null == l ? void 0 : l.status)));
                 }),
+              fnSetSurveyData: i,
             });
       }
       function Fi(e) {
@@ -46178,21 +46179,21 @@
             strOptInName: n,
             appid: a,
             oSurveyData: i,
-            fnSaveSurveyResults: l,
-            strLocalizedOptInBanner: r,
+            fnSetSurveyData: l,
+            fnSaveSurveyResults: r,
+            strLocalizedOptInBanner: s,
           } = e,
-          [s] = (0, Qe.vs)(a, { include_assets: !0 }),
-          [c, d] = (0, o.useState)(() => Object.assign({}, i));
-        let u = null;
+          [c] = (0, Qe.vs)(a, { include_assets: !0 });
+        let d = null;
         if ("survey_nextfest" === t)
-          u = o.createElement(Xi, { fnUpdateLocalSurvey: d, oSurveyData: c });
-        return u
+          d = o.createElement(Xi, { fnUpdateLocalSurvey: l, oSurveyData: i });
+        return d
           ? o.createElement(
               "div",
               { className: we().AdminPageCtn },
               o.createElement(
                 "div",
-                { className: xi().SurveyCtn },
+                { className: Oi().SurveyCtn },
                 o.createElement(
                   "div",
                   { className: we().PageTitle },
@@ -46205,13 +46206,13 @@
                   o.createElement(
                     "div",
                     { className: we().LeftCol },
-                    Boolean(r) &&
+                    Boolean(s) &&
                       o.createElement(
                         "div",
                         { className: we().ColHeader },
                         o.createElement("div", {
                           className: we().ColHeaderImg,
-                          style: { backgroundImage: `url( '${r}' )` },
+                          style: { backgroundImage: `url( '${s}' )` },
                         }),
                       ),
                     o.createElement(
@@ -46224,7 +46225,7 @@
                       ),
                       (0, G.Xx)("#OptIn_SurveyIntro"),
                     ),
-                    u,
+                    d,
                   ),
                   o.createElement(
                     "div",
@@ -46237,21 +46238,21 @@
                         null,
                         (0, G.Xx)(
                           "#OptIn_SurveySubTitle",
-                          (null == s ? void 0 : s.GetName()) || "" + a,
+                          (null == c ? void 0 : c.GetName()) || "" + a,
                         ),
                       ),
                       o.createElement("img", {
                         src:
-                          null == s
+                          null == c
                             ? void 0
-                            : s.GetAssets().GetSmallCapsuleURL(),
+                            : c.GetAssets().GetSmallCapsuleURL(),
                       }),
                     ),
                   ),
                 ),
                 o.createElement(
                   "div",
-                  { className: xi().SubmitSurveyCtn },
+                  { className: Oi().SubmitSurveyCtn },
                   o.createElement(
                     m.KM,
                     {
@@ -46259,7 +46260,7 @@
                         (0, g.AM)(
                           o.createElement(Ui, {
                             oSurveyData: i,
-                            fnSaveSurveyResults: l,
+                            fnSaveSurveyResults: r,
                           }),
                           (0, D.RA)(e),
                         ),
@@ -46272,13 +46273,15 @@
           : o.createElement("div", null, (0, G.Xx)("#OptIn_SurveyNoType"));
       }
       function Ui(e) {
-        const { oSurveyData: t, fnSaveSurveyResults: n } = e;
+        const { oSurveyData: t, fnSaveSurveyResults: n, closeModal: a } = e;
         return o.createElement(P.uH, {
-          strTitle: (0, G.Xx)("#OptIn_SubmitSurvey "),
+          strTitle: (0, G.Xx)("#OptIn_SubmitSurvey"),
           strDescription: (0, G.Xx)("#OptIn_SubmitSurvey_desc"),
-          onOK: () => {
-            n(t);
-          },
+          onOK: () =>
+            (0, I.mG)(this, void 0, void 0, function* () {
+              yield n(t), a();
+            }),
+          onCancel: a,
         });
       }
       const Hi = "Affirmative",
@@ -46308,7 +46311,7 @@
           null,
           o.createElement(ji, {
             strQuestionToken: "#OptIn_NextFest_Q1",
-            rgOptions: Li,
+            rgOptions: Gi,
             selected: a,
             fnSetSelected: (e) =>
               n(Object.assign(Object.assign({}, t), { satisfaction: e })),
@@ -46323,7 +46326,7 @@
           }),
           o.createElement(ji, {
             strQuestionToken: "#OptIn_NextFest_Q2",
-            rgOptions: Bi,
+            rgOptions: xi,
             selected: l,
             fnSetSelected: (e) =>
               n(Object.assign(Object.assign({}, t), { team_size: e })),
@@ -46387,7 +46390,7 @@
         } = e;
         return o.createElement(
           "div",
-          { className: (0, S.Z)(we().SectionCtn, xi().SurveyQuestionCtn) },
+          { className: (0, S.Z)(we().SectionCtn, Oi().SurveyQuestionCtn) },
           o.createElement("h2", null, (0, G.Xx)(t)),
           o.createElement(
             "div",
@@ -46395,7 +46398,7 @@
             n.map((e, n) =>
               o.createElement(
                 "div",
-                { key: e, className: xi().ResponseRow },
+                { key: e, className: Oi().ResponseRow },
                 o.createElement("input", {
                   type: "radio",
                   name: t,
@@ -46409,7 +46412,7 @@
                   { htmlFor: t + "_A" + (n + 1) },
                   o.createElement(
                     "span",
-                    { className: xi().ResponseText },
+                    { className: Oi().ResponseText },
                     (0, G.yu)(
                       t + "_A" + (n + 1),
                       o.createElement("span", null),
@@ -46422,12 +46425,12 @@
           Boolean(l && a === n[n.length - 1]) &&
             o.createElement(
               "div",
-              { className: xi().FollowUpText },
+              { className: Oi().FollowUpText },
               o.createElement(m.__, null, (0, G.Xx)(l)),
               o.createElement("textarea", {
                 className: (0, S.Z)(
                   "DialogTextInputBase",
-                  xi().FollowUpTextInput,
+                  Oi().FollowUpTextInput,
                 ),
                 value: r,
                 onChange: (e) => s(e.currentTarget.value),
@@ -46444,11 +46447,11 @@
         } = e;
         return o.createElement(
           "div",
-          { className: (0, S.Z)(we().SectionCtn, xi().SurveyQuestionCtn) },
+          { className: (0, S.Z)(we().SectionCtn, Oi().SurveyQuestionCtn) },
           o.createElement("h2", null, (0, G.Xx)(t)),
           o.createElement(
             "div",
-            { className: xi().FollowUpText },
+            { className: Oi().FollowUpText },
             o.createElement(m.II, {
               type: "text",
               value: n,
@@ -46534,6 +46537,7 @@
                 strLocalizedOptInBanner: h,
                 fnSaveSurveyResults: p,
                 oSurveyData: u,
+                fnSetSurveyData: p,
               }),
             ),
           o.createElement(
@@ -48824,7 +48828,7 @@
       const Ol = "app_review_elig_crit";
       function Ml(e) {
         const { bShowPruningCriteria: t } = e,
-          n = (0, Oi.kQ)("optin_eligibility_criteria", "application_config"),
+          n = (0, Li.kQ)("optin_eligibility_criteria", "application_config"),
           [a, i] = (0, xl._)(Ol, !1);
         return t && (null == n ? void 0 : n.length) > 1
           ? o.createElement(
