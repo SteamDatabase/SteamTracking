@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8976229";
+var CLSTAMP = "8976998";
 (() => {
   "use strict";
   var e,
@@ -172,6 +172,7 @@ var CLSTAMP = "8976229";
         6035: "marketing_ukrainian-json",
         6087: "main_latam-json",
         6169: "marketing_norwegian-json",
+        6317: "libraries~3ac1cf899",
         6319: "libraries~e459d0d7a",
         6492: "shared_spanish-json",
         6542: "shared_koreana-json",
@@ -291,7 +292,7 @@ var CLSTAMP = "8976229";
         3655: "124e422b2b32ef3be531",
         3685: "450f53961a3afbbd89bc",
         3768: "a175079fc8e7948a1871",
-        3863: "8705d2d130bb28832b65",
+        3863: "a007dc12d7fc8b25ba27",
         4033: "d89a5e38ca96c416b51c",
         4055: "dd561832c50d3e8515ec",
         4103: "9709b66dc05bd8b1deaa",
@@ -336,6 +337,7 @@ var CLSTAMP = "8976229";
         6035: "d04fe460cb8602e4908a",
         6087: "b852a7323419f1513fa1",
         6169: "8412393c3463399b84b9",
+        6317: "01a41d177dc9101d5747",
         6319: "7613f0e78076440c8f27",
         6492: "5e2e62f3c02ff3fcbb73",
         6542: "de6cff02c9c1c4b5c0ac",
@@ -343,7 +345,7 @@ var CLSTAMP = "8976229";
         6699: "fc6b3031f4fffe956723",
         6762: "2e1f0ab367e4a170f0e4",
         6808: "44a4e8459ee97d86ea0c",
-        6815: "0dab70566ce4350c8967",
+        6815: "dd91e2a445d804011a45",
         6817: "edbceb62b177345f9c36",
         6846: "f358fb1bb6d34498bbb8",
         7072: "280c4da852359eddb755",
@@ -374,7 +376,7 @@ var CLSTAMP = "8976229";
         8168: "be25e63012e67ba983c3",
         8385: "ec2604a6190451ec3fd9",
         8399: "832fd84c7ce2c24de085",
-        8644: "306f6a4bc8b17f316efd",
+        8644: "098f7e412c328560d5a9",
         8676: "e0dbcf874aa4ff895d56",
         8751: "5cc9794503657bb8c5e2",
         8754: "55cc9a288192405bc156",
@@ -426,7 +428,7 @@ var CLSTAMP = "8976229";
         2529: "31b64e05b78ee07ade37",
         3599: "7d397c627b354e1a49cf",
         3655: "da3b05b688206293fc3e",
-        3863: "5e36634288513c23e5d2",
+        3863: "35d7730f4c05b10b8330",
         4601: "f294db5e57c6dfd50f7b",
         4935: "33eb9d66d0507e03ca68",
         5676: "23d50183bb3539918f2b",

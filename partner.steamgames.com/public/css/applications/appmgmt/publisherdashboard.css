@@ -302,6 +302,7 @@
 ._1VsjyvH_Qjf3r0bxpSfx3V.moY4QzLn4xaOpu2clsn6r {
   -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  pointer-events: auto;
 }
 ._1VsjyvH_Qjf3r0bxpSfx3V._1aIkESy0vIWk6irYOhJ8aZ {
   max-height: none;
@@ -383,7 +384,16 @@
 }
 ._2JVkFc02Z_gli3Wk58ZdCn ._34znTi9--bnqLmasQq4rQk {
   font-size: 0.8em;
+  margin-right: 18px;
+  text-align: right;
+  color: #a7afb3;
+}
+._2JVkFc02Z_gli3Wk58ZdCn ._2zxwZ2e2RgdQAfI0y0_6wh {
   flex: 1;
+}
+._2JVkFc02Z_gli3Wk58ZdCn ._16vFdl_KejY4AT34jnVI-O {
+  cursor: pointer;
+  font-size: 0.8em;
   margin-right: 4px;
   text-align: right;
   color: #a7afb3;
