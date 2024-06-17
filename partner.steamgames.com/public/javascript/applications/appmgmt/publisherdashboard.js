@@ -737,7 +737,7 @@
       function V(e) {
         return (
           "nextfest" == e.type &&
-          (0, T.XL)(new Date(1e3 * e.end_date)) < (0, T.XL)(new Date())
+          new Date(1e3 * e.end_date).getTime() < new Date().getTime()
         );
       }
       function Z(e) {
