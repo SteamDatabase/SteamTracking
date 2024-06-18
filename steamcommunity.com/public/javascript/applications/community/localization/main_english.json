@@ -1790,6 +1790,7 @@
     "Sale_Section_RewardShelf_OnlyShowGranted_ttip": "Use in the instances where there are multiple awards but a user will not get them all by completing the quest / minigame.",
     "Sale_Section_RewardShelf_Item_Desc": "Optional Reward Description",
     "Sale_Section_RewardShelf_Item_Desc_ttip": "This text will appear beside the item. Useful if item is granted for completing some quest and providing context about the awards.",
+    "Sale_Section_RewardShelf_ItemInActiveWarning": "This item is currently in-active, please ensure app is release and publish community item before event starts.",
     "Sale_Section_Hide": "Hide section",
     "Sale_Section_Hide_ttip": "Hide this section completely from displaying",
     "Sale_Section_Disable": "Disable section",

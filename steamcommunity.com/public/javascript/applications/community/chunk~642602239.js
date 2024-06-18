@@ -276,13 +276,13 @@
         MJ: () => U,
         R6: () => L,
         V2: () => H,
-        YC: () => W,
+        YC: () => Z,
         YY: () => w,
         aV: () => P,
         im: () => R,
         jj: () => X,
         pu: () => M,
-        qy: () => Z,
+        qy: () => W,
         vZ: () => k,
         zV: () => B,
       });
@@ -754,8 +754,8 @@
         ]),
         w = new Map([
           ["looping_media", { Constructor: X, autocloses: !1 }],
-          ["video", { Constructor: Z, autocloses: !1 }],
-          ["youtubeorvideo", { Constructor: W, autocloses: !1 }],
+          ["video", { Constructor: W, autocloses: !1 }],
+          ["youtubeorvideo", { Constructor: Z, autocloses: !1 }],
           ["previewyoutube", { Constructor: U, autocloses: !1 }],
         ]);
       function k(e, t, n = 0) {
@@ -963,7 +963,7 @@
           bLoop: !0,
         });
       }
-      function Z(e) {
+      function W(e) {
         const t = V(e),
           n = e.children ? e.children.toString() : void 0;
         n &&
@@ -982,9 +982,9 @@
           bLoop: l ? c : o,
         });
       }
-      function W(e) {
+      function Z(e) {
         if ((0, C.h4)() || "CN" == C.De.COUNTRY.toLocaleUpperCase())
-          return Z(e);
+          return W(e);
         const t = R(e.args, "youtubeid"),
           n = R(e.args, "size"),
           r = R(e.args, "seconds");
@@ -2366,12 +2366,12 @@
         return (
           (0, a.useEffect)(() => {
             if (e && r && null == i) {
-              const n = r.find(
-                (n) => n.active && n.appid == e && n.item_type == t,
+              const i = r.find(
+                (r) => (n || r.active) && r.appid == e && r.item_type == t,
               );
-              n && o(n);
+              i && o(i);
             }
-          }, [i, r, e, t]),
+          }, [i, r, e, t, n]),
           i
         );
       }
@@ -2960,7 +2960,7 @@
         hp: () => H,
         tk: () => G,
         ag: () => X,
-        uC: () => Z,
+        uC: () => W,
         D3: () => re,
       });
       var r = n(85556),
@@ -3326,7 +3326,7 @@
                   a.createElement(le, null),
                 ),
               renderContent: () =>
-                a.createElement(W, {
+                a.createElement(Z, {
                   store: t,
                   hoverStore: n,
                   onEmoticonSelect: (e) => s(e.name),
@@ -3436,7 +3436,7 @@
                     a.createElement(le, null),
                   ),
                 renderContent: () =>
-                  a.createElement(W, {
+                  a.createElement(Z, {
                     store: e,
                     hoverStore: t,
                     onEmoticonSelect: (e) => n(e.name),
@@ -3540,7 +3540,7 @@
           );
         }
       }
-      class Z extends a.Component {
+      class W extends a.Component {
         constructor(e) {
           super(e), (this.state = { strSearchText: "" });
           let t = this.props.emoticonStore;
@@ -3583,7 +3583,7 @@
           );
         }
       }
-      class W extends a.Component {
+      class Z extends a.Component {
         constructor() {
           super(...arguments), (this.state = { filter: "" });
         }
@@ -4694,13 +4694,13 @@
       (0, r.gn)([c.ak], V.prototype, "OnSketchFabClick", null),
         (V = (0, r.gn)([w.Pi], V));
       var X = n(54842),
-        Z = n(10777),
-        W = n(59728),
+        W = n(10777),
+        Z = n(59728),
         Y = n(60537),
         j = n.n(Y);
       function z(e) {
         const { defid: t, url: n } = e,
-          r = (0, Z.O)(t);
+          r = (0, W.O)(t);
         if (!r || !r.community_item_data) return null;
         const o = r.appid,
           a = r.community_item_data.item_image_large,
@@ -4712,7 +4712,7 @@
             "div",
             { className: j().Ctn },
             i.createElement(
-              W.HP,
+              Z.HP,
               { toolTipContent: r.community_item_data.item_description },
               i.createElement("img", {
                 src: s,
@@ -5093,7 +5093,7 @@
         He = n(50423),
         Ve = n(97087),
         Xe = n(73168);
-      function Ze(e) {
+      function We(e) {
         const t = (0, v.id)(),
           n = (0, Ve.Zh)(Ve.H_),
           r = "true" === String((0, s.im)(e.args, "autoadvance")).toLowerCase();
@@ -5112,7 +5112,7 @@
           e.children,
         );
       }
-      var We = n(82493),
+      var Ze = n(82493),
         Ye = n(56365);
       function je(e) {
         const { fileUploadManager: t } = e,
@@ -5140,7 +5140,7 @@
             },
           }),
           i.createElement(
-            We.wl,
+            Ze.wl,
             {
               type: "button",
               title: (0, f.Xx)("#Button_Upload"),
@@ -5783,7 +5783,7 @@
               ["actiondialog", { Constructor: Et, autocloses: !1 }],
               ["uploadfilebutton", { Constructor: vt, autocloses: !0 }],
               ["docimg", { Constructor: lt, autocloses: !1 }],
-              ["carousel", { Constructor: Ze, autocloses: !1 }],
+              ["carousel", { Constructor: We, autocloses: !1 }],
             ])),
           ot).entries(),
         ),
@@ -6736,48 +6736,67 @@
     },
     14510: (e, t, n) => {
       "use strict";
-      n.d(t, { v: () => m, x: () => c });
+      n.d(t, { v: () => d, x: () => m });
       var r = n(30750),
         i = n(47427),
         o = n(74469),
         a = n(46882),
         s = n(31846),
-        l = n(37563);
-      function c(e) {
+        l = n(37563),
+        c = n(72297);
+      function m(e) {
         const { appid: t, community_item_type: n, bForEdit: r } = e,
-          c = (0, o.mn)(t, n, r);
+          m = (0, o.mn)(t, n, r),
+          d =
+            m && !m.active
+              ? i.createElement(
+                  "div",
+                  { className: c.WarningStylesBackground },
+                  (0, s.Xx)("#Sale_Section_RewardShelf_ItemInActiveWarning"),
+                )
+              : void 0;
         if (
-          (null == c ? void 0 : c.item_movie_mp4) &&
-          (null == c ? void 0 : c.item_movie_webm)
+          (null == m ? void 0 : m.item_movie_mp4) &&
+          (null == m ? void 0 : m.item_movie_webm)
         ) {
-          const e = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${null == c ? void 0 : c.item_image_large}`,
-            n = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${null == c ? void 0 : c.item_movie_webm}`,
-            r = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${null == c ? void 0 : c.item_movie_mp4}`;
+          const e = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${null == m ? void 0 : m.item_image_large}`,
+            n = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${null == m ? void 0 : m.item_movie_webm}`,
+            r = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${null == m ? void 0 : m.item_movie_mp4}`;
           return i.createElement(
-            "video",
-            { muted: !0, controls: !1, autoPlay: !0, loop: !0, poster: e },
-            i.createElement("source", { src: n, type: "video/webm" }),
-            Boolean(!l.De.IN_CLIENT) &&
-              i.createElement("source", { src: r, type: "video/mp4" }),
+            i.Fragment,
+            null,
+            i.createElement(
+              "video",
+              { muted: !0, controls: !1, autoPlay: !0, loop: !0, poster: e },
+              i.createElement("source", { src: n, type: "video/webm" }),
+              Boolean(!l.De.IN_CLIENT) &&
+                i.createElement("source", { src: r, type: "video/mp4" }),
+            ),
+            d,
           );
         }
-        if (c) {
-          const n = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${(null == c ? void 0 : c.item_image_small) || (null == c ? void 0 : c.item_image_large)}`;
-          return i.createElement("img", {
-            className: e.className,
-            src: n,
-            alt: null == c ? void 0 : c.item_name,
-          });
+        if (m) {
+          const n = `${l.De.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${(null == m ? void 0 : m.item_image_small) || (null == m ? void 0 : m.item_image_large)}`;
+          return i.createElement(
+            i.Fragment,
+            null,
+            i.createElement("img", {
+              className: e.className,
+              src: n,
+              alt: null == m ? void 0 : m.item_name,
+            }),
+            d,
+          );
         }
         return i.createElement(a.V, {
           size: "small",
           string: (0, s.Xx)("#Loading"),
         });
       }
-      function m(e) {
+      function d(e) {
         const { section: t, rewardDef: n, language: a } = e,
           s = (0, o.mn)(n.appid, n.community_item_type),
-          [m] = (0, r.SZ)(() => {
+          [c] = (0, r.SZ)(() => {
             var e;
             return [
               Boolean(
@@ -6809,11 +6828,11 @@
         return i.createElement(
           "a",
           { href: d },
-          i.createElement(c, {
+          i.createElement(m, {
             appid: null == n ? void 0 : n.appid,
             community_item_type: null == n ? void 0 : n.community_item_type,
           }),
-          Boolean(m) &&
+          Boolean(c) &&
             i.createElement("span", null, null == s ? void 0 : s.item_name),
         );
       }
