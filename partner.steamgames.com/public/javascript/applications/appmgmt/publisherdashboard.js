@@ -3939,18 +3939,31 @@
         const { nPartnerID: t, nDaysInThePast: n, fnUpdateDaysInPast: a } = e;
         return s.createElement(
           "div",
-          null,
-          s.createElement(o.ry, {
-            layout: "inline",
-            label: (0, l.Xx)("#PartnerStats_DayLabel"),
-            rgOptions: St,
-            selectedOption: n,
-            onChange: (e) => a(e.data),
-          }),
+          { className: xt.ModuleCtn },
           s.createElement(
-            "a",
-            { href: "#" },
-            (0, l.Xx)("#PartnerStats_ViewDetail"),
+            "div",
+            { className: xt.LeftAlign },
+            s.createElement(
+              "div",
+              { className: xt.ModuleTitle },
+              (0, l.Xx)("#PartnerStats_DayLabel"),
+            ),
+            s.createElement(o.ry, {
+              layout: "inline",
+              label: null,
+              rgOptions: St,
+              selectedOption: n,
+              onChange: (e) => a(e.data),
+            }),
+          ),
+          s.createElement(
+            "div",
+            { className: xt.ViewDetailLink },
+            s.createElement(
+              "a",
+              { href: "#" },
+              (0, l.Xx)("#PartnerStats_ViewDetail"),
+            ),
           ),
         );
       }
@@ -3967,18 +3980,18 @@
             (null === (t = i.daily_sales) || void 0 === t ? void 0 : t.length)
           ? s.createElement(
               "div",
-              null,
+              { className: xt.HeaderCtn },
               s.createElement(
                 "div",
-                null,
+                { className: xt.StatGroup },
                 s.createElement(
                   "div",
-                  null,
+                  { className: xt.Header },
                   (0, l.Xx)("#PartnerStats_Header_Revenue"),
                 ),
                 s.createElement(
                   "div",
-                  null,
+                  { className: xt.Numerals },
                   (function (...e) {
                     let t = 0;
                     return (
@@ -3995,15 +4008,15 @@
               ),
               s.createElement(
                 "div",
-                null,
+                { className: xt.StatGroup },
                 s.createElement(
                   "div",
-                  null,
+                  { className: xt.Header },
                   (0, l.Xx)("#PartnerStats_Header_Units"),
                 ),
                 s.createElement(
                   "div",
-                  null,
+                  { className: xt.Numerals },
                   Number.parseInt(
                     i.summary_sales.total_units_activated || "0",
                   ).toLocaleString(),
@@ -4011,13 +4024,13 @@
               ),
               s.createElement(
                 "div",
-                null,
+                { className: xt.StatGroup },
                 s.createElement(
                   "div",
-                  null,
+                  { className: xt.Header },
                   (0, l.Xx)("#PartnerStats_Header_Wishlists"),
                 ),
-                s.createElement("div", null, "TODO"),
+                s.createElement("div", { className: xt.Numerals }, "TODO"),
               ),
             )
           : null;

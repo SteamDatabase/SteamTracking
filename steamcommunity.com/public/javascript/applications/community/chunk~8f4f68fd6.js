@@ -219,8 +219,8 @@
         Pi: () => ae,
         sA: () => oe,
         tL: () => M,
-        fw: () => P,
-        gQ: () => x,
+        fw: () => x,
+        gQ: () => P,
         Nr: () => S,
         Zz: () => J,
         a8: () => b,
@@ -435,7 +435,7 @@
       function T(e) {
         return !!b(e);
       }
-      const F = [3, 5, 2, 4, 8, 9, 12, 22, 24];
+      const F = [3, 5, 2, 4, 8, 9, 12, 22, 24, 23];
       function k(e) {
         return null != F.findIndex((t) => t == e);
       }
@@ -457,8 +457,8 @@
         w = 600,
         B = new _.sO("SteamNotificationStore"),
         C = B.Debug,
-        U = B.Error,
-        G = B.Warning;
+        G = B.Error,
+        U = B.Warning;
       class M {
         constructor() {
           (this.m_rgNotificationRollups = []),
@@ -560,12 +560,12 @@
           if (-1 === n)
             return void (t
               ? this.NotifyServerNotificationsRead([e])
-              : U(
+              : G(
                   "Attempted to mark notification read that is not in the notification store",
                 ));
           let a = this.m_rgNotificationRollups[n];
           if (a.item.read)
-            U("Attempted to mark notification read that is already read");
+            G("Attempted to mark notification read that is already read");
           else if (
             ((a.item.read = !0),
             (null === (i = a.rgunread) || void 0 === i ? void 0 : i.length) > 0)
@@ -586,7 +586,7 @@
             (t) => t.item.notification_id == e,
           );
           if (-1 === n)
-            return void U(
+            return void G(
               "Attempted to mark notification hidden that is not in the notification store",
             );
           let a = this.m_rgNotificationRollups[n];
@@ -945,7 +945,7 @@
           m.Z.Get().QueueAppRequest(parseInt(o), { include_assets: !0 });
         }
       }
-      function P() {
+      function x() {
         return {
           comments: 0,
           inventory_items: 0,
@@ -972,7 +972,7 @@
           requested_game_added: 0,
         };
       }
-      function x(e, t, i, r, l, s = !0, c = !1) {
+      function P(e, t, i, r, l, s = !0, c = !1) {
         var m;
         return (0, n.mG)(this, void 0, void 0, function* () {
           if (!t) throw new Error("Invalid steamid for GetSteamNotifications");
@@ -984,7 +984,7 @@
           const d = yield a.ST.GetSteamNotifications(e, n);
           if (1 !== d.GetEResult())
             throw (
-              (G(
+              (U(
                 `Received error from GetSteamNotifications. Result ${d.GetEResult()}. Transport ${d.Hdr().transport_error()}`,
               ),
               new Error(`Error from GetSteamNotifications: ${d.GetEResult()}`))
@@ -1019,7 +1019,7 @@
                 return (0, n.mG)(this, void 0, void 0, function* () {
                   if (!(e && e.steamid && e.contextid && e.appid && e.assetid))
                     return (
-                      U("Item notification missing required attributes"), null
+                      G("Item notification missing required attributes"), null
                     );
                   const i = o.gA.Init(r.IX);
                   i.Body().set_steamid(e.steamid),
@@ -1031,7 +1031,7 @@
                   const a = yield r.$n.GetInventoryItemsWithDescriptions(t, i);
                   if (1 !== a.GetEResult())
                     return (
-                      U(
+                      G(
                         "Request for steam item metadata did not succeed",
                         a.GetEResult(),
                       ),
@@ -1045,7 +1045,7 @@
                   if (1 == s) {
                     const t = m.Z.Get().GetApp(parseInt(e.appid));
                     l = null == t ? void 0 : t.GetName();
-                  } else U("Failed getting app info", s);
+                  } else G("Failed getting app info", s);
                   return {
                     app_name: l,
                     item_data: a.Body().toObject().descriptions[0],
@@ -1096,70 +1096,86 @@
         );
       }
       function Y(e, t) {
-        var i, n, a, o;
-        let r = Z(t);
-        if (!r) return null;
+        var i, n, a, o, r, l, s, m, d;
+        let u = Z(t);
+        if (!u) return null;
         switch (e) {
           case 2:
-            return r.gifter_account;
+            return u.gifter_account;
           case 22:
             return {
-              responder_steamid: r.responder_steamid,
-              package_id: r.package_id,
-              bundle_id: r.bundle_id,
+              responder_steamid: u.responder_steamid,
+              package_id: u.package_id,
+              bundle_id: u.bundle_id,
             };
           case 9:
-            return parseInt(r.sender);
+            return parseInt(u.sender);
           case 8:
             return {
-              appid: r.appid,
-              count: null !== (i = r.count) && void 0 !== i ? i : 1,
-              appids: null !== (n = r.appids) && void 0 !== n ? n : [],
+              appid: u.appid,
+              count: null !== (i = u.count) && void 0 !== i ? i : 1,
+              appids: null !== (n = u.appids) && void 0 !== n ? n : [],
             };
           case 12:
-            return !r.appid || !r.state || (1 != r.state && 2 != r.state)
+            return !u.appid || !u.state || (1 != u.state && 2 != u.state)
               ? (C("Async game notification invalid data", t), null)
-              : { appid: parseInt(r.appid), state: parseInt(r.state) };
+              : { appid: parseInt(u.appid), state: parseInt(u.state) };
           case 3:
-            let l = {
-              owner_steam_id: r.owner_steam_id
-                ? new c.K(r.owner_steam_id)
+            let _ = {
+              owner_steam_id: u.owner_steam_id
+                ? new c.K(u.owner_steam_id)
                 : null,
-              bclan_account: V(r.bclan_account),
-              title: r.title,
-              comment: r.text,
-              time: r.last_post,
-              comment_type: Number(r.type),
-              topic_id: r.topic_id,
-              forum_id: r.forum_id,
-              account_steam_id: r.account_id
-                ? c.K.InitFromAccountID(r.account_id)
+              bclan_account: V(u.bclan_account),
+              title: u.title,
+              comment: u.text,
+              time: u.last_post,
+              comment_type: Number(u.type),
+              topic_id: u.topic_id,
+              forum_id: u.forum_id,
+              account_steam_id: u.account_id
+                ? c.K.InitFromAccountID(u.account_id)
                 : null,
-              bhas_friend: V(r.bhas_friend),
-              bis_forum: V(r.bis_forum),
-              last_post: r.last_post,
-              bsubscribed: V(r.subscribed),
-              bis_owner: V(r.bis_owner),
+              bhas_friend: V(u.bhas_friend),
+              bis_forum: V(u.bis_forum),
+              last_post: u.last_post,
+              bsubscribed: V(u.subscribed),
+              bis_owner: V(u.bis_owner),
             };
             return (
-              r.json_data &&
-                (l.json_data = {
-                  app_id: parseInt(r.json_data.app_id),
-                  file_type: parseInt(r.json_data.file_type),
-                  title: r.json_data.title,
+              u.json_data &&
+                (_.json_data = {
+                  app_id: parseInt(u.json_data.app_id),
+                  file_type: parseInt(u.json_data.file_type),
+                  title: u.json_data.title,
                 }),
-              l
+              _
             );
           case 5:
             return {
-              requestorID: parseInt(r.requestor_id),
-              state: r.state ? parseInt(r.state) : 0,
+              requestorID: parseInt(u.requestor_id),
+              state: u.state ? parseInt(u.state) : 0,
             };
           case 4:
             return {
-              appid: parseInt(r.app_id),
-              assetid: null !== (a = r.asset_id) && void 0 !== a ? a : "",
-              contextid: null !== (o = r.context_id) && void 0 !== o ? o : "",
+              appid: parseInt(u.app_id),
+              assetid: null !== (a = u.asset_id) && void 0 !== a ? a : "",
+              contextid: null !== (o = u.context_id) && void 0 !== o ? o : "",
+            };
+          case 23:
+            return {
+              url: null !== (r = u.url) && void 0 !== r ? r : "",
+              strGameName:
+                null !== (l = u.content_app_name) && void 0 !== l ? l : "",
+              mediaType:
+                null !== (s = u.media_type) && void 0 !== s ? s : "clip",
+              secDuration: parseFloat(
+                null !== (m = u.duration_seconds) && void 0 !== m ? m : 0,
+              ),
+              nSize: parseInt(
+                null !== (d = u.file_size) && void 0 !== d ? d : 0,
+              ),
+              strMachineName: u.machine_name,
+              rtExpiration: u.expiration,
             };
           default:
             return (
@@ -1443,12 +1459,12 @@
         const l = !!a && (3 == o || 4 == o);
         let s;
         return (
-          (s = 4 == o ? P : null != r ? r : x),
+          (s = 4 == o ? x : null != r ? r : P),
           n.createElement(
             "div",
             { className: T().Header },
             n.createElement(C, { icon: t }),
-            !!i && n.createElement(U, { title: i }),
+            !!i && n.createElement(G, { title: i }),
             l && s({ timestamp: a }),
           )
         );
@@ -1456,10 +1472,10 @@
       function C(e) {
         return n.createElement("div", { className: T().Icon }, e.icon);
       }
-      function U(e) {
+      function G(e) {
         return n.createElement("div", { className: T().Title }, e.title);
       }
-      function G(e) {
+      function U(e) {
         let t = (0, S.Z)(
           T().StandardNotificationDescription,
           e.multiline && T().Multiline,
@@ -1473,7 +1489,7 @@
         );
         return n.createElement("div", { className: t }, e.children);
       }
-      function P(e) {
+      function x(e) {
         if (void 0 === e.timestamp) return null;
         let t = new Date(),
           i = new Date(1e3 * e.timestamp),
@@ -1483,7 +1499,7 @@
           n.createElement("div", { className: T().Timestamp }, a)
         );
       }
-      function x(e) {
+      function P(e) {
         if (void 0 === e.timestamp) return null;
         let t = new Date(),
           i = new Date(1e3 * e.timestamp),
@@ -1622,7 +1638,7 @@
                   location: l,
                   fnRenderTimestamp: m,
                 }),
-                n.createElement(G, { multiline: !f }, p),
+                n.createElement(U, { multiline: !f }, p),
                 !!f && n.createElement(M, null, f),
                 d ? n.createElement(oe, { onHide: d }) : null,
               ),
@@ -1673,7 +1689,7 @@
                   location: i,
                   fnRenderTimestamp: r,
                 }),
-                n.createElement(G, null, m),
+                n.createElement(U, null, m),
                 n.createElement(M, null, u),
                 l ? n.createElement(oe, { onHide: l }) : null,
               ),
@@ -1721,7 +1737,7 @@
                   location: i,
                   fnRenderTimestamp: r,
                 }),
-                n.createElement(G, { multiline: !m }, c),
+                n.createElement(U, { multiline: !m }, c),
                 !!m && n.createElement(M, null, m),
                 l ? n.createElement(oe, { onHide: l }) : null,
               ),
@@ -1790,7 +1806,7 @@
                   location: r,
                   fnRenderTimestamp: c,
                 }),
-                n.createElement(G, { multiline: !_ }, N),
+                n.createElement(U, { multiline: !_ }, N),
                 !!_ && n.createElement(M, null, _),
                 m ? n.createElement(oe, { onHide: m }) : null,
               ),
@@ -1902,7 +1918,7 @@
               location: l,
               fnRenderTimestamp: m,
             }),
-            n.createElement(G, { multiline: !h }, S),
+            n.createElement(U, { multiline: !h }, S),
             !!h && n.createElement(M, null, h),
             _ ? n.createElement(oe, { onHide: _ }) : null,
           ),
@@ -1963,7 +1979,7 @@
                     location: o,
                     fnRenderTimestamp: s,
                   }),
-                  n.createElement(G, null, p),
+                  n.createElement(U, null, p),
                   n.createElement(M, null, null == i ? void 0 : i.GetName()),
                   c ? n.createElement(oe, { onHide: c }) : null,
                 ),
@@ -2020,7 +2036,7 @@
                   location: s,
                   fnRenderTimestamp: m,
                 }),
-                n.createElement(G, { multiline: !0 }, i),
+                n.createElement(U, { multiline: !0 }, i),
                 l ? n.createElement(oe, { onHide: l }) : null,
               ),
             );
@@ -2056,7 +2072,7 @@
               : void 0,
           ),
           C = (0, m.Fg)(p) ? c : null,
-          U = (0, m.x)(p) ? _ : null;
+          G = (0, m.x)(p) ? _ : null;
         10 == p.comment_type
           ? (b =
               (null === (i = p.owner_steam_id) || void 0 === i
@@ -2065,14 +2081,14 @@
                 ? 4 == f && C
                   ? (0, d.Xx)("#SteamNotifications_Comment_Your_Profile_By", C)
                   : (0, d.Xx)("#SteamNotifications_Comment_Your_Profile")
-                : U
+                : G
                   ? 4 == f && C
                     ? (0, d.Xx)(
                         "#SteamNotifications_Comment_Player_Profile_By",
                         C,
-                        U,
+                        G,
                       )
-                    : (0, d.Xx)("#SteamNotifications_Comment_Player_Profile", U)
+                    : (0, d.Xx)("#SteamNotifications_Comment_Player_Profile", G)
                   : (0, d.Xx)("#SteamNotifications_Comment_Profile"))
           : 5 == p.comment_type &&
               5 ==
@@ -2098,8 +2114,8 @@
             : !b &&
               (null === (r = p.json_data) || void 0 === r ? void 0 : r.title) &&
               (b = p.json_data.title);
-        let P = null;
-        P =
+        let x = null;
+        x =
           7 == p.comment_type && p.bis_forum && A
             ? n.createElement(
                 M,
@@ -2107,7 +2123,7 @@
                 (0, d.Xx)("#SteamNotifications_Comment_NewDiscussion", A),
               )
             : n.createElement(M, null, '"', A, '"');
-        let x = (0, d.Xx)("#SteamNotifications_Comment"),
+        let P = (0, d.Xx)("#SteamNotifications_Comment"),
           O = null;
         if (void 0 !== h && h > 1) {
           const e = "+" + (h - 1);
@@ -2117,7 +2133,7 @@
                 { className: W().AllNotificationsCommentPlus },
                 e,
               ))
-            : (x = x + " " + e);
+            : (P = P + " " + e);
         }
         let q = s;
         if (!F) {
@@ -2144,7 +2160,7 @@
               Object.assign({}, e, {
                 logo: q,
                 icon: e.icon,
-                title: x,
+                title: P,
                 body: b,
               }),
             )
@@ -2156,13 +2172,13 @@
                 Object.assign({ logo: q }, e),
                 n.createElement(B, {
                   icon: y,
-                  title: x,
+                  title: P,
                   timestamp: v,
                   location: f,
                   fnRenderTimestamp: N,
                 }),
-                n.createElement(G, null, b),
-                P,
+                n.createElement(U, null, b),
+                x,
                 O,
                 S ? n.createElement(oe, { onHide: S }) : null,
               ),
@@ -2249,7 +2265,7 @@
                     location: o,
                     fnRenderTimestamp: s,
                   }),
-                  n.createElement(G, { multiline: !f }, p),
+                  n.createElement(U, { multiline: !f }, p),
                   !!f && n.createElement(M, null, f),
                   c ? n.createElement(oe, { onHide: c }) : null,
                 ),

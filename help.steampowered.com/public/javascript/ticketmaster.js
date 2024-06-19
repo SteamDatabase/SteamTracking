@@ -65,6 +65,49 @@ function ClaimTickerCategoryForReview( elButton, ulCategoryID, strCategoryName, 
 	return ClaimTickerCategoryHelper( elButton, ulCategoryID, 'https://help.steampowered.com/ticketmaster/AjaxClaimTicketCategoryForReview/', strCategoryName, false, 'An error occurred while retrieving %s tickets for review. Please try again.', 'There are no more tickets in %s waiting for review. Please select another category.' )
 }
 
+function ClaimPreapprovalType( elButton, eType, strTypeName )
+{
+	// replace with throbber, save old html
+	var $Button = $J( elButton );
+	var $Throbber = $J( "<div class=\"throbber\">\r\n\t\t\t\t\t<div><\/div>\r\n\t\t\t\t\t<div><\/div>\r\n\t\t\t\t\t<div><\/div>\r\n\t\t\t\t<\/div>" );
+	var oldHTML = $Button.html();
+	$Button.html( $Throbber );
+	$Throbber.addClass( 'loading' );
+
+	// disable all buttons
+	$Button.closest( '.ticker_buckets' ).find( '.ticker_bucket_claim' ).css( 'pointer-events', 'none' );
+
+	$J.ajax({
+		type: "POST",
+		url: 'https://help.steampowered.com/ticketmaster/AjaxClaimPreapprovalType/',
+		data: {
+			line_item_type: eType
+		}
+	})
+		.fail( function( xhr )
+		{
+			ShowAlertDialog( 'Ticketmaster', 'An error occurred while retrieving %s tickets. Please try again.'.replace( /%s/, strTypeName ) ).done( function() { location.reload(); } );
+		})
+		.done( function( data )
+		{
+			if ( data.success == 1 )
+			{
+				location.reload();
+			}
+			else
+			{
+				ShowAlertDialog( 'Ticketmaster', 'An error occurred while retrieving %s tickets. Please try again.'.replace( /%s/, strTypeName ) ).done( function() { location.reload(); } );
+			}
+		})
+		.always( function( data )
+		{
+			$Button.html( oldHTML );
+			$Button.closest( '.ticker_buckets' ).find( '.ticker_bucket_claim' ).css( 'pointer-events', 'auto' );
+		});
+
+	return false;
+}
+
 function SubmitFormAndCallFunction( form , fnFunction )
 {
 	var $Form = $J( form );
@@ -2049,11 +2092,13 @@ var NextPrev = {
 	SetHelpRequests: function( vecHelpRequests )
 	{
 		sessionStorage.setItem( NextPrev.s_strKey, JSON.stringify( vecHelpRequests ) );
+		PreapprovalQueue.ClearCachedApprovals(); // we piggy back since this there is an implicit backwards connection from the preapproval queue to us
 	},
 
 	ClearHelpRequests: function()
 	{
 		sessionStorage.removeItem( NextPrev.s_strKey );
+		PreapprovalQueue.ClearCachedApprovals(); // we piggy back since this there is an implicit backwards connection from the preapproval queue to us
 	},
 
 	EnableKeyboardNav: function( bEnable )
@@ -2155,17 +2200,46 @@ function InitPreapprovalQueue( txnID, accountID, strTicketRef )
 	PreapprovalQueue.rgCurrentTicket.push( accountID );
 	PreapprovalQueue.rgCurrentTicket.push( strTicketRef );
 
+	PreapprovalQueue.InitFromCachedApprovals();
+
 	PreapprovalQueue.EnableKeyboardNav( true );
 	PreapprovalQueue.RenderQueue();
 }
 
 var PreapprovalQueue = {
+	strSessionKey: 'preapproval_cache',
 	mapApprovals: new Map(),
 	mapDenials: new Map(),
 	mapHijacks: new Map(),
 	rgCurrentTicket: [],
 
 	bEnableKeyNav: false,
+
+	InitFromCachedApprovals: function()
+	{
+		if ( sessionStorage.getItem( PreapprovalQueue.strSessionKey + '_approvals' ) )
+			PreapprovalQueue.mapApprovals = new Map( JSON.parse( sessionStorage.getItem( PreapprovalQueue.strSessionKey + '_approvals' ) ) );
+
+		if ( sessionStorage.getItem( PreapprovalQueue.strSessionKey + '_denials' ) )
+			PreapprovalQueue.mapDenials = new Map( JSON.parse( sessionStorage.getItem( PreapprovalQueue.strSessionKey + '_denials' ) ) );
+
+		if ( sessionStorage.getItem( PreapprovalQueue.strSessionKey + '_hijacks' ) )
+			PreapprovalQueue.mapHijacks = new Map( JSON.parse( sessionStorage.getItem( PreapprovalQueue.strSessionKey + '_hijacks' ) ) );
+	},
+
+	CacheApprovals: function()
+	{
+		sessionStorage.setItem( PreapprovalQueue.strSessionKey + '_approvals', JSON.stringify( Array.from( PreapprovalQueue.mapApprovals.entries() ) ) );
+		sessionStorage.setItem( PreapprovalQueue.strSessionKey + '_denials', JSON.stringify( Array.from( PreapprovalQueue.mapDenials.entries() ) ) );
+		sessionStorage.setItem( PreapprovalQueue.strSessionKey + '_hijacks', JSON.stringify( Array.from( PreapprovalQueue.mapHijacks.entries() ) ) );
+	},
+
+	ClearCachedApprovals: function()
+	{
+		sessionStorage.removeItem( NextPrev.s_strKey + '_approvals' );
+		sessionStorage.removeItem( NextPrev.s_strKey + '_denials' );
+		sessionStorage.removeItem( NextPrev.s_strKey + '_hijacks' );
+	},
 
 	HandleTxn: function( bApprove, txnID, accountID, strTicketRef, bHijacked = false )
 	{
@@ -2296,6 +2370,8 @@ var PreapprovalQueue = {
 				elTicketQueueEntry.addClass( 'ticket_queue_deny' );
 				elTicketQueueEntry.removeClass( 'ticket_queue_approve' );
 			} );
+
+		PreapprovalQueue.CacheApprovals();
 	}
 };
 

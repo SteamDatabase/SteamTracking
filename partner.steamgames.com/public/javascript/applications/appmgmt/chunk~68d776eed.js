@@ -1231,9 +1231,9 @@
           ]);
         return Object.assign(
           {
-            shared_secret: d.JQ(t),
-            identity_secret: d.JQ(n),
-            secret_1: d.JQ(r),
+            shared_secret: d.fromByteArray(t),
+            identity_secret: d.fromByteArray(n),
+            secret_1: d.fromByteArray(r),
           },
           l,
         );

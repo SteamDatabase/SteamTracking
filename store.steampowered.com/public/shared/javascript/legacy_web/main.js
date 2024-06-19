@@ -1,17 +1,17 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8979117";
+var CLSTAMP = "8982908";
 (() => {
   "use strict";
   var e,
     t,
     n = {
-      233: (e, t, n) => {
+      31: (e, t, n) => {
         n.d(t, { eV: () => r, Rr: () => a, oH: () => l });
         var i,
           r,
           a,
-          o = n(695);
+          o = n(961);
         class s {
           constructor(e) {
             this.m_config = e;
@@ -224,7 +224,7 @@ var CLSTAMP = "8979117";
           }
         }
       },
-      773: (e, t, n) => {
+      308: (e, t, n) => {
         function i(e, t) {
           return !!e && "object" == typeof e.SteamClient && t in e.SteamClient;
         }
@@ -237,16 +237,7 @@ var CLSTAMP = "8979117";
         }
         n.d(t, { U5: () => r });
       },
-      785: (e, t, n) => {
-        function i(e, t) {
-          return (function (e, t) {
-            const n = e.findIndex(t);
-            return n >= 0 && (e.splice(n, 1), !0);
-          })(e, (e) => t == e);
-        }
-        n.d(t, { Zf: () => i });
-      },
-      355: (e, t, n) => {
+      816: (e, t, n) => {
         function i(e, t, n) {
           return {
             get() {
@@ -261,17 +252,17 @@ var CLSTAMP = "8979117";
         }
         n.d(t, { a: () => i });
       },
-      695: (e, t, n) => {
+      961: (e, t, n) => {
         n.d(t, {
+          pB: () => o,
           Ar: () => p,
           Hf: () => h,
-          km: () => u,
-          pB: () => o,
           vq: () => c,
+          km: () => u,
         });
         var i = n(556),
-          r = n(785),
-          a = n(355);
+          r = n(383),
+          a = n(816);
         class o {
           constructor() {
             this.m_vecCallbacks = [];
@@ -396,7 +387,7 @@ var CLSTAMP = "8979117";
         }
         (0, i.gn)([a.a], h.prototype, "Unregister", null);
       },
-      204: (e, t, n) => {
+      734: (e, t, n) => {
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
           : console.error(
@@ -404,6 +395,15 @@ var CLSTAMP = "8979117";
             ),
           123 !== Array.from(new Set([123]))[0] &&
             console.error("Should not include prototypejs.");
+      },
+      383: (e, t, n) => {
+        function i(e, t) {
+          return (function (e, t) {
+            const n = e.findIndex(t);
+            return n >= 0 && (e.splice(n, 1), !0);
+          })(e, (e) => t == e);
+        }
+        n.d(t, { Zf: () => i });
       },
       311: (e) => {
         e.exports = jQuery;
@@ -505,7 +505,7 @@ var CLSTAMP = "8979117";
       "javascript/legacy_web/" +
       { 380: "desktop", 511: "gamepad" }[e] +
       ".js?contenthash=" +
-      { 380: "c1630fa8498471785cde", 511: "53bc1126820905aa5705" }[e]),
+      { 380: "1eacfe1697e37240124b", 511: "fce08de98946017de539" }[e]),
     (r.miniCssF = (e) =>
       "css/legacy_web/gamepad.css?contenthash=be44dba8ea7ddd48708c"),
     (r.g = (function () {
@@ -721,10 +721,10 @@ var CLSTAMP = "8979117";
     })(),
     (() => {
       var e = r(556),
-        t = (r(204), r(311)),
+        t = (r(734), r(311)),
         n = r.n(t),
-        i = r(233),
-        a = r(355);
+        i = r(31),
+        a = r(816);
       let o = [
         { index: 0, type: i.eV.OK, category: "action" },
         { index: 1, type: i.eV.CANCEL, category: "action" },
@@ -780,12 +780,12 @@ var CLSTAMP = "8979117";
         }
       }
       (0, e.gn)([a.a], s.prototype, "PollGamepads", null);
-      var c = r(773);
+      var c = r(308);
       function l(t) {
         return (0, e.mG)(this, void 0, void 0, function* () {
           const { InitializeGamepadNavigation: e } = yield r
             .e(511)
-            .then(r.bind(r, 745));
+            .then(r.bind(r, 521));
           e(t);
         });
       }
@@ -801,7 +801,7 @@ var CLSTAMP = "8979117";
                     (0, e.mG)(this, void 0, void 0, function* () {
                       const { InitializeForDesktop: e } = yield r
                         .e(380)
-                        .then(r.bind(r, 948));
+                        .then(r.bind(r, 20));
                       e();
                     });
                   })()

@@ -882,8 +882,8 @@
                 "span",
                 { className: r || a ? u.DateAndTimeInline : u.DateAndTime },
                 o && c,
-                s.createElement("span", null, " "),
-                Boolean(t && l) && v(t, !0),
+                o && l ? s.createElement("span", null, " ") : void 0,
+                Boolean(t && l) && v(t, l),
               )
             : s.createElement(
                 "div",
@@ -899,7 +899,7 @@
                 s.createElement(
                   "div",
                   { className: u.LocalizedTime },
-                  Boolean(t && l) && v(t, !0),
+                  Boolean(t && l) && v(t, l),
                 ),
               );
         }),

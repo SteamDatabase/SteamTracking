@@ -533,8 +533,8 @@
                 "span",
                 { className: s || i ? m.DateAndTimeInline : m.DateAndTime },
                 c && l,
-                r.createElement("span", null, " "),
-                Boolean(t && o) && p(t, !0),
+                c && o ? r.createElement("span", null, " ") : void 0,
+                Boolean(t && o) && p(t, o),
               )
             : r.createElement(
                 "div",
@@ -550,7 +550,7 @@
                 r.createElement(
                   "div",
                   { className: m.LocalizedTime },
-                  Boolean(t && o) && p(t, !0),
+                  Boolean(t && o) && p(t, o),
                 ),
               );
         }),
@@ -1886,7 +1886,7 @@
             n.e(460),
             n.e(8015),
             n.e(3398),
-            n.e(3540),
+            n.e(7344),
             n.e(3344),
             n.e(8820),
             n.e(6882),

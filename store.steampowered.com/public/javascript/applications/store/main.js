@@ -521,7 +521,7 @@
         s = n.n(r),
         o = n(54842),
         a = n(77936),
-        l = (n(83999), n(62210)),
+        l = (n(87225), n(62210)),
         c = n(45492),
         u = n(31846),
         d = n(45651),
@@ -4900,7 +4900,7 @@
       var i = n(85496),
         r = n(62210),
         s = n(45492),
-        o = n(83999);
+        o = n(87225);
       class a {
         constructor() {
           (this.m_callbacksMenusChanged = new s.pB()),
@@ -5102,7 +5102,7 @@
         d = n(31846),
         m = n(37563),
         h = n(62210),
-        p = n(83999);
+        p = n(87225);
       class g {
         constructor(e, t, n) {
           if (((this.m_rgLoadingLinks = []), (this.m_rgLoadingLinks = []), n))
@@ -5149,7 +5149,7 @@
       var v, C;
       n(20417);
       function S() {
-        return (0, m.Me)() ? v.BackgroundTransparent : v.None;
+        return (0, m.Me)() ? v.Composited : v.None;
       }
       function b(e) {
         let t = v.None;
@@ -5159,6 +5159,7 @@
               (t |= v.AlwaysOnTop),
               (t |= v.NoTaskbarIcon),
               (t |= v.NotFocusable),
+              (t |= v.TransparentParentWindow),
               t
             );
           case C.Notification:
@@ -5184,6 +5185,7 @@
               (t |= v.NoRoundedCorners),
               (t |= v.NoWindowShadow),
               (t |= v.PopUpMenuHint),
+              (t |= v.TransparentParentWindow),
               (t |= S()),
               t
             );
@@ -5193,6 +5195,7 @@
               (t |= v.NoRoundedCorners),
               (t |= v.NoWindowShadow),
               (t |= v.OverrideRedirect),
+              (t |= v.TransparentParentWindow),
               (t |= S()),
               t
             );
@@ -5208,7 +5211,7 @@
           (e[(e.ScalePosition = 32)] = "ScalePosition"),
           (e[(e.ScaleSize = 64)] = "ScaleSize"),
           (e[(e.Maximized = 128)] = "Maximized"),
-          (e[(e.BackgroundTransparent = 256)] = "BackgroundTransparent"),
+          (e[(e.Composited = 256)] = "Composited"),
           (e[(e.NotFocusable = 512)] = "NotFocusable"),
           (e[(e.FullScreen = 1024)] = "FullScreen"),
           (e[(e.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
@@ -5223,7 +5226,9 @@
           (e[(e.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
           (e[(e.OverrideRedirect = 1048576)] = "OverrideRedirect"),
           (e[(e.IgnoreSteamDisplayScale = 2097152)] =
-            "IgnoreSteamDisplayScale");
+            "IgnoreSteamDisplayScale"),
+          (e[(e.TransparentParentWindow = 4194304)] =
+            "TransparentParentWindow");
       })(v || (v = {})),
         (function (e) {
           (e[(e.Overlay = 0)] = "Overlay"),
@@ -5898,7 +5903,7 @@
       }
       var a = n(77936),
         l = n(13129);
-      n(53923), n(6276);
+      n(53923), n(62738);
       function c(e, t, n) {
         const r = i.useRef(void 0),
           [s, c] = i.useState(void 0),
@@ -6055,7 +6060,7 @@
         h = n(46009),
         p = n(75683),
         g = n(45284),
-        _ = n(6276);
+        _ = n(62738);
       const f = (e) => (t, n, i) =>
           i ? [e, t, n, i] : n ? [e, t, n] : t ? [e, t] : [e],
         v = f("get_family_group_for_user "),
@@ -8245,7 +8250,7 @@
       var i = n(85556),
         r = n(15633),
         s = n(43235),
-        o = n(83999),
+        o = n(87225),
         a = n(62210),
         l = n(16997),
         c = n(45492),
@@ -11729,26 +11734,25 @@
     },
     35427: (e, t, n) => {
       "use strict";
-      n.d(t, { K: () => a });
-      var i = n(94947),
-        r = n.n(i),
-        s = n(77936),
-        o = n(37563);
-      class a {
-        constructor(e = 0, t, n, i) {
-          e instanceof a
+      n.d(t, { K: () => o });
+      var i = n(7587),
+        r = n(77936),
+        s = n(37563);
+      class o {
+        constructor(e = 0, t, n, r) {
+          e instanceof o
             ? (this.m_ulSteamID = e.m_ulSteamID)
             : "string" == typeof e
-              ? (this.m_ulSteamID = r().fromString(e, !0))
-              : t && n && void 0 !== i
-                ? this.SetFromComponents(null != e ? e : 0, i, n, t)
-                : (this.m_ulSteamID = e ? r().fromNumber(e, !0) : r().UZERO);
+              ? (this.m_ulSteamID = i.Z.fromString(e, !0))
+              : t && n && void 0 !== r
+                ? this.SetFromComponents(null != e ? e : 0, r, n, t)
+                : (this.m_ulSteamID = e ? i.Z.fromNumber(e, !0) : i.Z.UZERO);
         }
         static InitFromAccountID(e) {
-          return new a(Number(e), o.De.EUNIVERSE, 1, s.QS);
+          return new o(Number(e), s.De.EUNIVERSE, 1, r.QS);
         }
         static InitFromClanID(e) {
-          return new a(Number(e), o.De.EUNIVERSE, 7, 0);
+          return new o(Number(e), s.De.EUNIVERSE, 7, 0);
         }
         GetAccountID() {
           return this.m_ulSteamID.getLowBitsUnsigned();
@@ -11814,7 +11818,7 @@
           }
         }
         static InitFromString(e) {
-          let t = new a();
+          let t = new o();
           try {
             let [n, i, r, s, o] =
                 e.match(/\[([I|g|A|G|M|P|C|U]):(\d+):(\d+):?(\d+)?\]/) || [],
@@ -11848,7 +11852,7 @@
           let t = this.GetUniverse();
           if (t <= 0 || t >= 5) return !1;
           if (1 == e) {
-            if (0 == this.GetAccountID() || this.GetInstance() > s.YO)
+            if (0 == this.GetAccountID() || this.GetInstance() > r.YO)
               return !1;
           } else if (7 == e) {
             if (0 == this.GetAccountID() || 0 != this.GetInstance()) return !1;
@@ -11862,7 +11866,7 @@
           return 7 == this.GetAccountType();
         }
         SetAccountID(e) {
-          this.m_ulSteamID = new (r())(
+          this.m_ulSteamID = new i.Z(
             e,
             this.m_ulSteamID.getHighBitsUnsigned(),
             !0,
@@ -11892,10 +11896,10 @@
             e,
           );
         }
-        SetFromComponents(e, t, n, i) {
-          let s = ((255 & i) << 24) + ((15 & n) << 20) + (1048575 & t),
+        SetFromComponents(e, t, n, r) {
+          let s = ((255 & r) << 24) + ((15 & n) << 20) + (1048575 & t),
             o = 4294967295 & e;
-          this.m_ulSteamID = new (r())(o, s, !0);
+          this.m_ulSteamID = new i.Z(o, s, !0);
         }
       }
     },
@@ -13032,7 +13036,7 @@
             e.preventDefault();
             try {
               yield o().post(n, r, { withCredentials: !0 }),
-                this.InvalidateCache(u),
+                this.InvalidateCache(),
                 (null == l ? void 0 : l.fnSetURL)
                   ? l.fnSetURL(i)
                   : (u.location.href = i);
@@ -13097,11 +13101,12 @@
         BIsPreferredPlatform(e) {
           return this.m_setPreferredPlatforms.has(e);
         }
-        InvalidateCache(e) {
-          const t = e || window;
-          t.localStorage.setItem(
+        InvalidateCache() {
+          window.localStorage.setItem(
             p,
-            (Number.parseInt(t.localStorage.getItem(p) || "0") + 1).toString(),
+            (
+              Number.parseInt(window.localStorage.getItem(p) || "0") + 1
+            ).toString(),
           );
         }
         static Get() {
@@ -13709,7 +13714,7 @@
       function E(e) {
         return !!y(e);
       }
-      const D = [3, 5, 2, 4, 8, 9, 12, 22, 24];
+      const D = [3, 5, 2, 4, 8, 9, 12, 22, 24, 23];
       function L(e) {
         return null != D.findIndex((t) => t == e);
       }
@@ -14343,70 +14348,86 @@
         );
       }
       function q(e, t) {
-        var n, i, r, s;
-        let o = Z(t);
-        if (!o) return null;
+        var n, i, r, s, o, a, l, u, d;
+        let m = Z(t);
+        if (!m) return null;
         switch (e) {
           case 2:
-            return o.gifter_account;
+            return m.gifter_account;
           case 22:
             return {
-              responder_steamid: o.responder_steamid,
-              package_id: o.package_id,
-              bundle_id: o.bundle_id,
+              responder_steamid: m.responder_steamid,
+              package_id: m.package_id,
+              bundle_id: m.bundle_id,
             };
           case 9:
-            return parseInt(o.sender);
+            return parseInt(m.sender);
           case 8:
             return {
-              appid: o.appid,
-              count: null !== (n = o.count) && void 0 !== n ? n : 1,
-              appids: null !== (i = o.appids) && void 0 !== i ? i : [],
+              appid: m.appid,
+              count: null !== (n = m.count) && void 0 !== n ? n : 1,
+              appids: null !== (i = m.appids) && void 0 !== i ? i : [],
             };
           case 12:
-            return !o.appid || !o.state || (1 != o.state && 2 != o.state)
+            return !m.appid || !m.state || (1 != m.state && 2 != m.state)
               ? (k("Async game notification invalid data", t), null)
-              : { appid: parseInt(o.appid), state: parseInt(o.state) };
+              : { appid: parseInt(m.appid), state: parseInt(m.state) };
           case 3:
-            let a = {
-              owner_steam_id: o.owner_steam_id
-                ? new c.K(o.owner_steam_id)
+            let h = {
+              owner_steam_id: m.owner_steam_id
+                ? new c.K(m.owner_steam_id)
                 : null,
-              bclan_account: $(o.bclan_account),
-              title: o.title,
-              comment: o.text,
-              time: o.last_post,
-              comment_type: Number(o.type),
-              topic_id: o.topic_id,
-              forum_id: o.forum_id,
-              account_steam_id: o.account_id
-                ? c.K.InitFromAccountID(o.account_id)
+              bclan_account: $(m.bclan_account),
+              title: m.title,
+              comment: m.text,
+              time: m.last_post,
+              comment_type: Number(m.type),
+              topic_id: m.topic_id,
+              forum_id: m.forum_id,
+              account_steam_id: m.account_id
+                ? c.K.InitFromAccountID(m.account_id)
                 : null,
-              bhas_friend: $(o.bhas_friend),
-              bis_forum: $(o.bis_forum),
-              last_post: o.last_post,
-              bsubscribed: $(o.subscribed),
-              bis_owner: $(o.bis_owner),
+              bhas_friend: $(m.bhas_friend),
+              bis_forum: $(m.bis_forum),
+              last_post: m.last_post,
+              bsubscribed: $(m.subscribed),
+              bis_owner: $(m.bis_owner),
             };
             return (
-              o.json_data &&
-                (a.json_data = {
-                  app_id: parseInt(o.json_data.app_id),
-                  file_type: parseInt(o.json_data.file_type),
-                  title: o.json_data.title,
+              m.json_data &&
+                (h.json_data = {
+                  app_id: parseInt(m.json_data.app_id),
+                  file_type: parseInt(m.json_data.file_type),
+                  title: m.json_data.title,
                 }),
-              a
+              h
             );
           case 5:
             return {
-              requestorID: parseInt(o.requestor_id),
-              state: o.state ? parseInt(o.state) : 0,
+              requestorID: parseInt(m.requestor_id),
+              state: m.state ? parseInt(m.state) : 0,
             };
           case 4:
             return {
-              appid: parseInt(o.app_id),
-              assetid: null !== (r = o.asset_id) && void 0 !== r ? r : "",
-              contextid: null !== (s = o.context_id) && void 0 !== s ? s : "",
+              appid: parseInt(m.app_id),
+              assetid: null !== (r = m.asset_id) && void 0 !== r ? r : "",
+              contextid: null !== (s = m.context_id) && void 0 !== s ? s : "",
+            };
+          case 23:
+            return {
+              url: null !== (o = m.url) && void 0 !== o ? o : "",
+              strGameName:
+                null !== (a = m.content_app_name) && void 0 !== a ? a : "",
+              mediaType:
+                null !== (l = m.media_type) && void 0 !== l ? l : "clip",
+              secDuration: parseFloat(
+                null !== (u = m.duration_seconds) && void 0 !== u ? u : 0,
+              ),
+              nSize: parseInt(
+                null !== (d = m.file_size) && void 0 !== d ? d : 0,
+              ),
+              strMachineName: m.machine_name,
+              rtExpiration: m.expiration,
             };
           default:
             return (
@@ -19697,7 +19718,7 @@
       n(64012);
       var Me = n(54842),
         Re = n(83654),
-        Ie = n(83999),
+        Ie = n(87225),
         Te = n(45651);
       const Ae = new (n(68785).sO)("DragDrop").Debug;
       class ke extends r.Component {
@@ -22893,7 +22914,23 @@
                         d: "M34.3449 14.6014C33.8808 15.2235 33.2755 16.0277 32.5792 16.936C31.0233 18.9655 29.0077 21.5211 27.0958 23.7256C27.6277 24.3118 28.0499 25.2335 28.4955 26.2061C29.4022 28.1853 30.4054 30.375 32.625 30.375C36 30.375 36 25.875 36 25.875C36 25.875 35.3209 19.5689 34.3449 14.6014Z",
                       }),
                     )
-                  : r.createElement(u, Object.assign({}, s));
+                  : "hori" == t
+                    ? r.createElement(
+                        "svg",
+                        Object.assign(
+                          {
+                            xmlns: "http://www.w3.org/2000/svg",
+                            viewBox: "0 0 279 190",
+                            fill: "none",
+                          },
+                          e,
+                        ),
+                        r.createElement("path", {
+                          fill: "currentColor",
+                          d: "M276.557 118.966L276.377 117.587C276.377 117.575 274.727 107.206 273.807 102.575C269.077 78.747 262.957 53.718 255.596 28.199C255.448 27.679 255.207 27.26 255.037 26.988C254.957 26.869 254.867 26.759 254.766 26.658C254.766 26.658 249.118 21.029 248.778 20.67C248.038 19.889 247.266 19.08 246.438 18.549C246.297 18.459 245.557 18.139 245.288 18.01C244.495 17.629 243.956 17.379 243.556 17.209C243.546 17.17 243.536 17.129 243.527 17.09C243.496 17.01 243.476 16.94 243.447 16.86C243.426 16.819 243.406 16.78 243.386 16.751C242.585 15.05 241.675 13.36 240.796 11.72L240.505 11.159C240.386 10.94 240.263 10.751 240.073 10.591C239.891 10.402 239.675 10.28 239.565 10.21C239.545 10.2 239.276 10.03 239.165 9.98C233.625 7.511 222.858 3.701 222.846 3.701C219.718 2.41 216.278 1.191 212.038 -0.149C210.688 -0.579 208.877 -1.079 206.926 -1.079C206.127 -1.079 205.346 -0.989 204.617 -0.819C202.926 -1.13 201.287 -1.409 199.717 -1.639C199.688 -1.649 197.457 -1.94 197.197 -1.969C197.047 -1.998 196.916 -1.998 196.787 -1.998C196.057 -1.998 195.346 -1.719 194.807 -1.219C194.647 -1.1 194.516 -0.949 194.397 -0.78C194.137 -0.44 192.708 1.441 191.688 2.762C177.307 1.89 161.506 1.431 142.077 1.332C142.067 1.332 126.397 1.41 126.097 1.41C126.097 1.41 106.898 1.832 98.2062 2.192C96.7762 2.262 95.4972 2.311 94.2672 2.362C91.9492 2.442 89.7382 2.522 87.0972 2.741C86.2072 1.568 85.1272 0.138 84.3972 -0.842C84.2972 -0.981 84.1762 -1.102 84.0472 -1.201C83.5862 -1.592 82.8462 -2 81.7762 -2C81.1862 -2 80.6712 -1.873 80.2082 -1.791C79.9482 -1.744 75.8272 -1.121 74.1872 -0.82C73.4472 -0.99 72.6672 -1.08 71.8472 -1.08C70.7772 -1.08 69.6172 -0.932 68.4272 -0.631C68.3982 -0.621 68.3662 -0.621 68.3372 -0.611C64.0462 0.649 59.8762 2.1 55.9682 3.69C55.9472 3.7 55.9272 3.71 55.9072 3.719C50.6372 5.408 45.1672 7.51 39.6372 9.979C39.3262 10.12 39.0262 10.35 38.8262 10.629L38.7172 10.779C38.7172 10.779 38.4242 11.22 38.2662 11.439C36.8362 13.548 35.8972 15.429 35.4162 17.148C34.9962 17.308 34.4262 17.58 33.5252 18.009C33.2552 18.138 32.7962 18.339 32.7752 18.349C32.0862 18.599 31.5152 19.148 30.6562 20.038C30.5062 20.188 30.4062 20.308 30.3362 20.368C30.3162 20.388 28.7562 21.948 28.7562 21.948C28.0572 22.657 26.4672 24.237 26.4362 24.268C26.2172 24.508 25.8872 24.817 25.5462 25.147C24.8362 25.829 24.1162 26.518 23.6062 27.249C23.5462 27.339 23.4972 27.429 23.4472 27.519C23.4072 27.619 23.3562 27.738 23.3272 27.839C22.5872 30.359 21.8172 33.038 21.1062 35.577C19.0462 42.827 16.9662 50.677 14.5372 60.247C10.0162 78.858 5.34716 98.065 2.43616 117.526C2.43616 117.546 2.33616 118.296 2.33616 118.296C0.536161 131.837 -1.33384 145.837 1.32616 159.616C2.81616 167.177 5.24616 173.155 8.77516 177.915C12.3162 182.905 17.4162 186.677 23.0952 188.507C26.2162 189.446 29.3752 189.927 32.5352 189.927C38.5052 189.927 44.0242 188.245 48.4852 185.075C59.3742 177.235 65.4952 162.106 70.8852 148.757C71.9242 146.187 73.9052 141.437 73.9142 141.405C74.1642 140.745 74.4532 139.995 74.7732 139.266C74.9942 138.846 75.9742 137.455 76.1442 137.196C76.3042 137.016 76.9842 136.257 77.1542 136.065C79.5332 133.805 82.6482 132.481 85.7182 132.45C85.7182 132.45 85.8862 132.448 86.1632 132.427H188.003C189.583 132.427 191.153 132.427 192.714 132.437C196.464 132.447 200.064 134.107 202.343 136.857C203.105 137.796 203.663 138.607 204.083 139.377C204.083 139.377 206.903 146.246 207.954 148.848C213.263 161.996 219.294 176.897 230.013 184.858C234.542 188.178 240.152 189.938 246.254 189.938C249.404 189.938 252.574 189.458 255.674 188.518C261.225 186.717 266.235 183.077 269.805 178.247C273.616 173.108 276.225 166.667 277.555 159.099C280.077 145.726 278.288 132.117 276.557 118.966ZM59.3422 67.242C51.7742 67.242 45.6172 61.086 45.6172 53.519C45.6172 45.951 51.7732 39.796 59.3422 39.796C66.9082 39.796 73.0652 45.95 73.0652 53.519C73.0652 61.085 66.9092 67.242 59.3422 67.242ZM121.963 93.212C121.965 93.267 121.955 93.294 121.947 93.335C121.586 95.048 120.058 96.29 118.31 96.29H108.806C108.769 96.29 108.755 96.292 108.701 96.29C108.453 96.347 108.267 96.546 108.267 96.811L108.3 106.147C108.3 106.182 108.302 106.217 108.302 106.258C108.302 108.006 107.062 109.535 105.349 109.893C105.337 109.897 105.324 109.899 105.312 109.899C103.865 110.2 102.408 110.35 100.951 110.35C99.4922 110.35 98.0332 110.198 96.5842 109.897C96.5742 109.897 96.5642 109.895 96.5552 109.893C94.8522 109.538 93.6142 108.022 93.6022 106.282V106.276V96.831C93.6022 96.788 93.6062 96.802 93.6022 96.759C93.5862 96.519 93.3872 96.325 93.1512 96.29C93.1162 96.292 93.0962 96.29 93.0632 96.29H83.6492C83.6452 96.29 83.6372 96.29 83.6332 96.29C81.8832 96.29 80.3562 95.048 79.9962 93.335C79.9922 93.323 79.9922 93.312 79.9902 93.3C79.3882 90.404 79.3882 87.47 79.9922 84.575C79.9922 84.563 79.9942 84.552 79.9962 84.54C80.3552 82.829 81.8812 81.622 83.6292 81.622C83.6762 81.622 83.7112 81.626 83.7642 81.624H93.0632C93.3482 81.624 93.5752 81.433 93.6272 81.179C93.6352 81.138 93.6312 81.113 93.6312 81.079L93.6022 71.6C93.6022 69.834 94.8442 68.303 96.5552 67.946C96.6062 67.936 96.6332 67.928 96.6862 67.919C99.5162 67.345 102.403 67.343 105.235 67.919C105.309 67.939 105.309 67.939 105.35 67.948C107.063 68.303 108.26 69.835 108.26 71.583C108.26 71.63 108.27 71.665 108.268 71.714V81.066C108.268 81.375 108.518 81.625 108.825 81.625L118.198 81.594C118.255 81.594 118.272 81.588 118.311 81.588C120.059 81.588 121.532 82.83 121.891 84.541C121.901 84.59 121.914 84.621 121.936 84.697C122.51 87.527 122.541 90.38 121.963 93.212ZM139.012 41.652C132.371 41.652 126.967 36.25 126.967 29.608C126.967 22.965 132.371 17.561 139.012 17.561C145.657 17.561 151.059 22.965 151.059 29.608C151.059 36.249 145.657 41.652 139.012 41.652ZM177.129 102.644C169.563 102.644 163.406 96.488 163.406 88.921C163.406 81.353 169.562 75.198 177.129 75.198C184.697 75.198 190.854 81.352 190.854 88.921C190.854 96.488 184.698 102.644 177.129 102.644ZM201.75 62.714C196.811 62.714 192.791 58.694 192.791 53.755C192.791 48.816 196.811 44.794 201.75 44.794C206.691 44.794 210.711 48.815 210.711 53.755C210.711 58.695 206.692 62.714 201.75 62.714ZM222.356 82.827C217.417 82.827 213.397 78.811 213.397 73.87C213.397 68.929 217.417 64.909 222.356 64.909C227.297 64.909 231.316 68.929 231.316 73.87C231.316 78.811 227.297 82.827 222.356 82.827ZM222.356 41.673C217.417 41.673 213.397 37.653 213.397 32.715C213.397 27.774 217.417 23.756 222.356 23.756C227.297 23.756 231.316 27.774 231.316 32.715C231.317 37.654 227.297 41.673 222.356 41.673ZM242.657 62.714C237.715 62.714 233.696 58.694 233.696 53.755C233.696 48.816 237.716 44.794 242.657 44.794C247.598 44.794 251.618 48.815 251.618 53.755C251.618 58.695 247.598 62.714 242.657 62.714Z",
+                        }),
+                      )
+                    : r.createElement(u, Object.assign({}, s));
       }
       function m(e) {
         const { controllerType: t } = e,
@@ -22920,6 +22957,8 @@
           case 38:
           case 44:
             return r.createElement(d, Object.assign({ type: "switchpro" }, n));
+          case 49:
+            return r.createElement(d, Object.assign({ type: "hori" }, n));
           default:
             return r.createElement(d, Object.assign({ type: "generic" }, n));
         }
@@ -24991,7 +25030,7 @@
       var i = n(47427),
         r = n(42287),
         s = n(50423),
-        o = n(83999),
+        o = n(87225),
         a = n(93855),
         l = n(10162);
       function c({ config: e, isDynamic: t }) {
@@ -27723,20 +27762,23 @@
           }),
         );
       }
-      function Re() {
+      function Re(e) {
         return r.createElement(
           "svg",
-          {
-            version: "1.1",
-            id: "base",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_AppleLogo",
-            x: "0px",
-            y: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
+          Object.assign(
+            {
+              version: "1.1",
+              id: "base",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: "SVGIcon_Button SVGIcon_AppleLogo",
+              x: "0px",
+              y: "0px",
+              width: "256px",
+              height: "256px",
+              viewBox: "0 0 256 256",
+            },
+            e,
+          ),
           r.createElement("path", {
             d: "M138.365,26.557c16.139-21.272,38.578-21.376,38.578-21.376s3.336,19.999-12.696,39.266 c-17.12,20.572-36.58,17.206-36.58,17.206S124.012,45.473,138.365,26.557z",
           }),
@@ -27745,20 +27787,23 @@
           }),
         );
       }
-      function Ie() {
+      function Ie(e) {
         return r.createElement(
           "svg",
-          {
-            version: "1.1",
-            id: "base",
-            xmlns: "http://www.w3.org/2000/svg",
-            className: "SVGIcon_Button SVGIcon_LinuxLogo",
-            x: "0px",
-            y: "0px",
-            width: "256px",
-            height: "256px",
-            viewBox: "0 0 256 256",
-          },
+          Object.assign(
+            {
+              version: "1.1",
+              id: "base",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: "SVGIcon_Button SVGIcon_LinuxLogo",
+              x: "0px",
+              y: "0px",
+              width: "256px",
+              height: "256px",
+              viewBox: "0 0 256 256",
+            },
+            e,
+          ),
           r.createElement("path", {
             d: "M234.16,207.854c-3.953-2.455-13.301-5.047-14.086-22.99c-3.539,3.146-3.13,19.863,6.746,23.182 c11.031,3.705,17.923,9.91-2.586,16.922c-13.577,4.645-15.887,6.074-26.637,15.021c-10.875,9.055-27.017,5.457-24.197-13.602 c1.469-9.934,2.313-18.141-0.158-26.773c-1.206-4.217-1.807-9.625-0.982-13.418c1.604-7.377,5.596-9.6,9.512-2.516 c2.457,4.441,3.315,9.641,12.111,10.064c13.819,0.66,16.555-13.354,20.973-13.99c2.944-0.428,5.889-8.764,3.646-22.25 c-2.403-14.438-10.897-37.234-21.791-48.795c-9.055-9.609-14.762-18.033-18.351-30.057c-3.017-10.103-4.7-19.936-4.079-29.335 c0.806-12.18-5.95-29.129-16.703-37.103c-6.73-4.993-17.287-7.667-26.841-7.562c-5.358,0.058-10.401,0.841-14.276,2.944 c-15.949,8.658-18.177,21.024-17.938,35.14c0.223,13.26,0.675,28.39,2.181,42.783c-1.782,6.609-11.068,19.138-17.013,26.762 c-7.993,7.896-12.03,23.157-17.203,36.491c-2.759,7.107-7.407,10.318-7.798,19.457c-0.108,2.555-0.021,9.168,2.423,7.277 c9.348-7.232,21.049,11,38.722,38.82c3.389,5.334,15.329,27.793-5.602,30.705c-7,0.979-18.271-4.07-29.192-6.742 c-9.812-2.398-19.775-3.822-25.352-5.391c-3.358-0.943-4.762-2.146-5.053-3.553c-0.773-3.729,4.075-8.955,4.321-13.369 c0.246-4.416-1.609-6.709-3.129-10.311c-1.522-3.609-1.919-6.313-0.701-7.859c0.948-1.205,2.873-1.707,6.005-1.4 c3.97,0.391,8.766-0.422,11.342-1.996c4.339-2.645,6.381-8.068,4.428-14.604c0,6.395-2.097,8.816-7.354,11.74 c-4.954,2.758-12.604,0.527-16.117,3.576c-4.229,3.672,1.509,13.146,1.04,20.104c-0.361,5.346-5.938,11.365-3.451,16.727 c2.502,5.395,14.17,5.979,26.336,8.523c17.293,3.619,27.375,9.912,35.365,10.211c11.656,0.432,13.441-11.531,31.743-11.693 c5.338-0.281,10.559-0.447,15.773-0.514c5.91-0.072,11.813-0.025,17.873,0.119c12.182,0.295,7.99,6.648,15.894,10.713 c6.667,3.426,18.654,2.072,21.522-0.664c3.88-3.701,14.298-12.604,22.28-16.625C227.758,227.004,251.121,218.375,234.16,207.854 z M170.973,212.664c-0.609,7.697-2.744,15.326-3.947,23.057c-4.075-0.154-3.679-3.139-2.37-7.322 c1.153-3.689,3.014-8.316,3.135-12.75c0.11-4.016-0.328-6.525-1.34-7.148c-1.013-0.623-2.599,0.643-4.787,4.168 c-4.677,7.529-14.802,10.84-24.258,12.023c-9.456,1.186-18.246,0.246-22.9-4.967c-1.592-1.783-4.232,0.486-4.546,0.959 c-0.42,0.635,1.541,1.865,3.019,4.578c2.159,3.959,4.212,9.969-0.902,12.711c0.061-13.943-4.352-14.76-8.862-23.277 c8.825-0.912,9.99-10.254,5.833-14.33c-3.424-3.359-22.319-17.387-27.251-22.902c-2.287-2.559-5.39-3.814-6.704-6.689 c-3.021-6.617-5.139-16.063-1.305-22.846c0.693-1.225,1.14-0.676,0.608,1.877c-3.01,14.473,6.413,26.293,8.486,20.23 c1.435-4.188,0.105-11.68,0.87-17.629c1.355-10.533,10.94-30.749,15.15-31.902c-6.494-12.026,7.613-21.441,7.441-31.997 c-0.113-6.864,6.029,8.439,12.202,11.685c6.894,3.623,14.472-6.829,25.228-12.131c3.043-1.501,6.945-3.225,6.685-4.504 c-1.265-6.171-14.129,7.613-25.618,8.078c-5.243,0.211-7.188-1.03-9.215-2.986c-6.123-5.918,0.624-0.979,9.729-2.626 c4.045-0.732,5.405-1.406,9.698-3.141c4.295-1.736,9.201-4.305,14.06-5.624c3.383-0.92,3.103-3.462,1.785-4.225 c-0.758-0.439-1.88-0.396-2.771,1.141c-2.085,3.604-11.887,5.688-14.945,6.623c-3.928,1.202-8.273,2.325-14.046,2.09 c-8.771-0.356-6.726-4.376-12.999-7.973c-1.839-1.054-1.343-3.824,1.103-6.269c1.28-1.282,4.79-2.005,6.53-4.919 c0.245-0.408,2.488-2.754,4.246-3.968c0.607-0.421,1.988-3.235,9.988-1.235l9.5,1c2.088,0.267,8.388,6.752,12.059,7.467 c12.047,2.345,3.195,9.25,4.761,17.61c1.766,9.442,7.984,6.948,13.573,31.949c1.17,1.522,5.797,2.964,10.309,22.17 c4.057,17.281-1.688,29.85,8.07,28.816c2.195-0.23,5.407-0.848,6.805-5.742c3.65-12.801-1.828-28.049-7.362-38.34 c-3.224-6-6.258-10.086-7.86-11.49c6.343,3.749,14.449,15.72,16.317,24.605c2.458,11.676,4.212,16.619,0.494,28.965 c2.146,1.074,7.483,3.34,7.483,5.889c-5.56-4.57-22.586-5.383-23.022,5.549c-2.904,0.059-5.098,0.295-6.969,2.514 C165.313,187.604,171.669,203.916,170.973,212.664z",
           }),
@@ -29883,77 +29928,6 @@
         }
       }
     },
-    83999: (e, t, n) => {
-      "use strict";
-      function i(e, t = 0) {
-        if ((null == e ? void 0 : e.length) > 1) {
-          let n = t > 0 ? Math.min(t, e.length) : e.length;
-          for (; 0 !== n; ) {
-            const t = Math.floor(Math.random() * n);
-            n -= 1;
-            const i = e[n];
-            (e[n] = e[t]), (e[t] = i);
-          }
-        }
-      }
-      function r(e, t) {
-        if (!e && !t) return !0;
-        if (!e || !t) return !1;
-        if (e.length != t.length) return !1;
-        for (let n = 0; n < e.length; n++) if (e[n] !== t[n]) return !1;
-        return !0;
-      }
-      function s(e, t, n) {
-        if (!e && !t) return !0;
-        if (!e || !t) return !1;
-        if (e.length !== t.length) return !1;
-        const i = e.slice().sort(n),
-          r = t.slice().sort(n);
-        for (let e = 0; e < i.length; e++) if (i[e] !== r[e]) return !1;
-        return !0;
-      }
-      function o(e, t) {
-        return a(e, (e) => t == e);
-      }
-      function a(e, t) {
-        const n = e.findIndex(t);
-        return n >= 0 && (e.splice(n, 1), !0);
-      }
-      function l(e, t) {
-        let n = 0,
-          i = e.length - 1;
-        for (; n <= i; ) {
-          const r = Math.floor((n + i) / 2),
-            s = t(e[r]);
-          if (s > 0) n = r + 1;
-          else if (s < 0) i = r - 1;
-          else {
-            if (i == r) return r;
-            if (r == n) return i > r && t(e[r + 1]) < 0 ? r : r + 1;
-            n = r;
-          }
-        }
-        return i;
-      }
-      function c(e, t, n) {
-        return (
-          e ||
-            console.error(
-              "array should be defined for us to fill in the missing indexes",
-            ),
-          e.length < t ? e.concat(Array(t - e.length).fill(n)) : e
-        );
-      }
-      n.d(t, {
-        Eo: () => s,
-        LG: () => c,
-        LQ: () => i,
-        Qf: () => a,
-        Zf: () => o,
-        sL: () => l,
-        wc: () => r,
-      });
-    },
     62210: (e, t, n) => {
       "use strict";
       function i(e, t, ...n) {
@@ -30070,37 +30044,16 @@
         Hf: () => p,
         bX: () => h,
         km: () => u,
-        pB: () => o,
+        pB: () => o.p,
         vq: () => l,
       });
       var i = n(85556),
-        r = n(83999),
-        s = n(16997);
-      class o {
-        constructor() {
-          this.m_vecCallbacks = [];
-        }
-        Register(e) {
-          this.m_vecCallbacks.push(e);
-          return {
-            Unregister: () => {
-              r.Zf(this.m_vecCallbacks, e);
-            },
-          };
-        }
-        Dispatch(...e) {
-          for (const t of Array.from(this.m_vecCallbacks)) t(...e);
-        }
-        ClearAllCallbacks() {
-          this.m_vecCallbacks = [];
-        }
-        CountRegistered() {
-          return this.m_vecCallbacks.length;
-        }
-      }
+        r = n(87225),
+        s = n(16997),
+        o = n(30255);
       class a {
         constructor(e, t) {
-          (this.m_callbacks = new o()),
+          (this.m_callbacks = new o.p()),
             (this.m_currentValue = e),
             (this.m_fnEquals = t);
         }
@@ -30616,7 +30569,7 @@
         r = n(77936),
         s = n(38071),
         o = n(37563),
-        a = n(83999),
+        a = n(87225),
         l = n(45492),
         c = n(12251);
       class u {
@@ -32560,13 +32513,13 @@
         E_: () => u,
         Ek: () => c.Ek,
         JA: () => a.JA,
-        Kc: () => y,
+        Kc: () => E,
         L7: () => a.L7,
         Me: () => _,
         S$: () => S,
         Uy: () => f,
         Wj: () => a.Wj,
-        Zv: () => E,
+        Zv: () => D,
         dk: () => a.dk,
         eG: () => v,
         eL: () => p,
@@ -32576,6 +32529,7 @@
         ip: () => c.ip,
         kQ: () => c.kQ,
         qt: () => d,
+        rI: () => y,
         wg: () => C,
         x: () => b,
         y9: () => c.y9,
@@ -32673,9 +32627,10 @@
       function w(e, t) {
         return 0 != t.length && e.startsWith(t);
       }
-      function y() {
+      const y = "unknown";
+      function E() {
         if (!window || !window.location || !window.location.href)
-          return console.warn("Unable to determine base url!"), "unknown";
+          return console.warn("Unable to determine base url!"), y;
         const e = window.location.href;
         return w(e, a.De.STORE_BASE_URL)
           ? a.De.STORE_BASE_URL
@@ -32699,7 +32654,7 @@
                             ? "https://steamloopback.host"
                             : "";
       }
-      function E() {
+      function D() {
         const e = window.location.href;
         return w(e, a.De.STORE_BASE_URL) || w(e, a.De.STORE_CHECKOUT_BASE_URL)
           ? "store"
@@ -34121,9 +34076,9 @@
             n.e(3398),
             n.e(3425),
             n.e(8973),
-            n.e(3540),
+            n.e(7344),
             n.e(3344),
-            n.e(1213),
+            n.e(2915),
             n.e(6882),
             n.e(7247),
             n.e(9424),
@@ -34134,7 +34089,7 @@
             n.e(1915),
             n.e(6470),
             n.e(6520),
-            n.e(708),
+            n.e(5304),
             n.e(9702),
             n.e(7311),
           ]).then(n.bind(n, 11001)),
@@ -34147,9 +34102,9 @@
             n.e(3398),
             n.e(3425),
             n.e(8973),
-            n.e(3540),
+            n.e(7344),
             n.e(3344),
-            n.e(1213),
+            n.e(2915),
             n.e(6882),
             n.e(7247),
             n.e(9424),
@@ -34160,7 +34115,7 @@
             n.e(1915),
             n.e(6470),
             n.e(6520),
-            n.e(708),
+            n.e(5304),
             n.e(9702),
             n.e(7311),
           ])
@@ -34321,6 +34276,7 @@
             n.e(8015),
             n.e(9766),
             n.e(3398),
+            n.e(9607),
             n.e(3807),
             n.e(2276),
             n.e(6882),
@@ -34453,10 +34409,11 @@
             n.e(3398),
             n.e(3425),
             n.e(8973),
-            n.e(3540),
+            n.e(7344),
             n.e(3245),
             n.e(8429),
             n.e(4801),
+            n.e(9607),
             n.e(8359),
             n.e(1712),
             n.e(9177),
@@ -34472,7 +34429,7 @@
             n.e(6470),
             n.e(6520),
             n.e(259),
-            n.e(708),
+            n.e(5304),
             n.e(4970),
             n.e(8038),
             n.e(3238),
@@ -34488,10 +34445,11 @@
             n.e(3398),
             n.e(3425),
             n.e(8973),
-            n.e(3540),
+            n.e(7344),
             n.e(3245),
             n.e(8429),
             n.e(4801),
+            n.e(9607),
             n.e(8359),
             n.e(1712),
             n.e(3344),
@@ -34509,7 +34467,7 @@
             n.e(6470),
             n.e(6520),
             n.e(259),
-            n.e(708),
+            n.e(5304),
             n.e(4970),
             n.e(8038),
             n.e(3238),
@@ -34525,10 +34483,11 @@
             n.e(3398),
             n.e(3425),
             n.e(8973),
-            n.e(3540),
+            n.e(7344),
             n.e(3245),
             n.e(8429),
             n.e(4801),
+            n.e(9607),
             n.e(8359),
             n.e(1712),
             n.e(3344),
@@ -34546,7 +34505,7 @@
             n.e(6470),
             n.e(6520),
             n.e(259),
-            n.e(708),
+            n.e(5304),
             n.e(4970),
             n.e(8038),
             n.e(3238),
@@ -34562,10 +34521,11 @@
             n.e(3398),
             n.e(3425),
             n.e(8973),
-            n.e(3540),
+            n.e(7344),
             n.e(3245),
             n.e(8429),
             n.e(4801),
+            n.e(9607),
             n.e(8359),
             n.e(1712),
             n.e(9177),
@@ -34581,7 +34541,7 @@
             n.e(6470),
             n.e(6520),
             n.e(259),
-            n.e(708),
+            n.e(5304),
             n.e(4970),
             n.e(8038),
             n.e(3238),
@@ -34597,10 +34557,11 @@
             n.e(3398),
             n.e(3425),
             n.e(8973),
-            n.e(3540),
+            n.e(7344),
             n.e(3245),
             n.e(8429),
             n.e(4801),
+            n.e(9607),
             n.e(8359),
             n.e(1712),
             n.e(9177),
@@ -34616,7 +34577,7 @@
             n.e(6470),
             n.e(6520),
             n.e(259),
-            n.e(708),
+            n.e(5304),
             n.e(4970),
             n.e(8038),
             n.e(3238),
@@ -34640,7 +34601,7 @@
             n.e(9766),
             n.e(3398),
             n.e(3425),
-            n.e(3540),
+            n.e(7344),
             n.e(9177),
             n.e(6882),
             n.e(7247),
@@ -34662,7 +34623,7 @@
             n.e(9766),
             n.e(3398),
             n.e(3425),
-            n.e(3540),
+            n.e(7344),
             n.e(9177),
             n.e(6882),
             n.e(7247),
@@ -34702,9 +34663,10 @@
             n.e(3398),
             n.e(3425),
             n.e(8973),
-            n.e(3540),
+            n.e(7344),
             n.e(3245),
             n.e(8429),
+            n.e(9607),
             n.e(1712),
             n.e(3807),
             n.e(3143),
@@ -34746,9 +34708,9 @@
             n.e(3398),
             n.e(3425),
             n.e(8973),
-            n.e(3540),
+            n.e(7344),
             n.e(3344),
-            n.e(1213),
+            n.e(2915),
             n.e(6882),
             n.e(7247),
             n.e(9424),
@@ -34759,7 +34721,7 @@
             n.e(1915),
             n.e(6470),
             n.e(6520),
-            n.e(708),
+            n.e(5304),
             n.e(9702),
             n.e(7311),
           ]).then(n.bind(n, 46193)),
@@ -34783,9 +34745,9 @@
             n.e(3398),
             n.e(3425),
             n.e(8973),
-            n.e(3540),
+            n.e(7344),
             n.e(3344),
-            n.e(1213),
+            n.e(2915),
             n.e(6882),
             n.e(7247),
             n.e(9424),
@@ -34796,7 +34758,7 @@
             n.e(1915),
             n.e(6470),
             n.e(6520),
-            n.e(708),
+            n.e(5304),
             n.e(9702),
             n.e(6957),
             n.e(7280),
@@ -34810,9 +34772,9 @@
             n.e(3398),
             n.e(3425),
             n.e(8973),
-            n.e(3540),
+            n.e(7344),
             n.e(3344),
-            n.e(1213),
+            n.e(2915),
             n.e(6882),
             n.e(7247),
             n.e(9424),
@@ -34823,7 +34785,7 @@
             n.e(1915),
             n.e(6470),
             n.e(6520),
-            n.e(708),
+            n.e(5304),
             n.e(9702),
             n.e(6957),
             n.e(3375),
@@ -34837,7 +34799,7 @@
             n.e(3398),
             n.e(3425),
             n.e(8973),
-            n.e(3540),
+            n.e(7344),
             n.e(3245),
             n.e(8429),
             n.e(4801),
@@ -34865,10 +34827,11 @@
             n.e(3398),
             n.e(3425),
             n.e(8973),
-            n.e(3540),
+            n.e(7344),
             n.e(3245),
             n.e(8429),
             n.e(4801),
+            n.e(9607),
             n.e(8359),
             n.e(1712),
             n.e(9177),
@@ -34884,7 +34847,7 @@
             n.e(6470),
             n.e(6520),
             n.e(259),
-            n.e(708),
+            n.e(5304),
             n.e(4970),
             n.e(8038),
             n.e(3238),
@@ -34902,10 +34865,11 @@
             n.e(3398),
             n.e(3425),
             n.e(8973),
-            n.e(3540),
+            n.e(7344),
             n.e(3245),
             n.e(8429),
             n.e(4801),
+            n.e(9607),
             n.e(8359),
             n.e(1712),
             n.e(9177),
@@ -34921,7 +34885,7 @@
             n.e(6470),
             n.e(6520),
             n.e(259),
-            n.e(708),
+            n.e(5304),
             n.e(4970),
             n.e(8038),
             n.e(3238),

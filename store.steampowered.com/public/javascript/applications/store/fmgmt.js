@@ -2019,7 +2019,7 @@
         he = a(88294),
         Fe = a(80886),
         be = a(14609),
-        Ce = a(6276),
+        Ce = a(62738),
         Ne = a(50423);
       function Se(e, t) {
         (0, be.b8)(e, `steam://open/games/details/${t}`);

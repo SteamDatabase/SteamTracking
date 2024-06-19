@@ -5,7 +5,7 @@
   [9173],
   {
     15619: (e, t, r) => {
-      r.d(t, { V: () => p, l: () => S });
+      r.d(t, { V: () => F, l: () => T });
       var i = r(85556),
         n = r(80751),
         s = r.n(n),
@@ -21,8 +21,11 @@
         u = r(67005),
         f = r(77131),
         x = r(16997);
-      const y = "(1)";
-      class S {
+      function y() {
+        return c.De.IN_MOBILE ? c.rI : (0, c.Kc)();
+      }
+      const S = "(1)";
+      class T {
         constructor(e) {
           (this.m_Transport = null),
             (this.m_Storage = null),
@@ -132,7 +135,7 @@
         }
         ObfuscateString(e) {
           try {
-            const t = new TextEncoder().encode(y + e);
+            const t = new TextEncoder().encode(S + e);
             return a.JQ(t);
           } catch (e) {
             return "";
@@ -142,7 +145,7 @@
           try {
             const t = a.b$(e);
             let r = new TextDecoder().decode(t);
-            return r.startsWith(y)
+            return r.startsWith(S)
               ? ((r = r.slice(3)), r)
               : (console.log(
                   "DeobfuscateString given invalid base64 data, ignoring: " + e,
@@ -222,7 +225,7 @@
                     .Body()
                     .preferences();
                 } else {
-                  let t = { sessionid: c.De.SESSIONID, origin: (0, c.Kc)() };
+                  let t = { sessionid: c.De.SESSIONID, origin: y() };
                   const r = yield s().get(
                     c.De.COMMUNITY_BASE_URL +
                       "textfilter/ajaxgetcommunitypreferences",
@@ -245,7 +248,7 @@
                       .Body()
                       .words();
                   } else {
-                    let e = { sessionid: c.De.SESSIONID, origin: (0, c.Kc)() };
+                    let e = { sessionid: c.De.SESSIONID, origin: y() };
                     const r = yield s().get(
                       c.De.COMMUNITY_BASE_URL +
                         "textfilter/ajaxgettextfiltercustomwords",
@@ -346,18 +349,18 @@
                 );
               }
             if (!r) {
-              t = `${c.De.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=banned&language=${e}&v=1&origin=${(0, c.Kc)()}`;
+              t = `${c.De.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=banned&language=${e}&v=1&origin=${y()}`;
               {
                 const e = yield s().get(t);
                 this.m_strBannedWords += e.data;
               }
-              t = `${c.De.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=profanity&language=${e}&v=1&origin=${(0, c.Kc)()}`;
+              t = `${c.De.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=profanity&language=${e}&v=1&origin=${y()}`;
               {
                 const e = yield s().get(t);
                 this.m_strProfanityWords += e.data;
               }
             }
-            t = `${c.De.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&language=${e}&v=1&origin=${(0, c.Kc)()}`;
+            t = `${c.De.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&language=${e}&v=1&origin=${y()}`;
             {
               const e = yield s().get(t);
               this.m_strCleanWords += e.data;
@@ -479,11 +482,11 @@
               );
         }
       }
-      let T;
-      function p() {
-        if (!T) {
+      let p;
+      function F() {
+        if (!p) {
           const e = new Set();
-          let t = { sessionid: c.De.SESSIONID, origin: (0, c.Kc)() };
+          let t = { sessionid: c.De.SESSIONID, origin: y() };
           s()
             .get(c.De.COMMUNITY_BASE_URL + "textfilter/ajaxgetfriendslist", {
               params: t,
@@ -501,19 +504,19 @@
                 (0, l.my)(n.efriendrelationship) &&
                   e.add(new h.K(n.ulfriendid).GetAccountID());
             }),
-            (T = (t) => e.has(t));
+            (p = (t) => e.has(t));
         }
-        return T;
+        return p;
       }
-      (0, i.gn)([o.LO], S.prototype, "m_TextFilterPreferences", void 0),
-        (0, i.gn)([o.LO], S.prototype, "m_mapPlayerCache", void 0),
-        (0, i.gn)([o.LO], S.prototype, "m_regexBannedWords", void 0),
-        (0, i.gn)([o.LO], S.prototype, "m_regexCleanWords", void 0),
-        (0, i.gn)([o.LO], S.prototype, "m_bInitialized", void 0),
-        (0, i.gn)([o.aD], S.prototype, "Init", null),
-        (0, i.gn)([x.a], S.prototype, "OnTextFilterDictionaryChanged", null),
-        (0, i.gn)([o.aD], S.prototype, "UpdateCommunityPreferences", null),
-        (0, i.gn)([o.aD], S.prototype, "BRebuildFilter", null);
+      (0, i.gn)([o.LO], T.prototype, "m_TextFilterPreferences", void 0),
+        (0, i.gn)([o.LO], T.prototype, "m_mapPlayerCache", void 0),
+        (0, i.gn)([o.LO], T.prototype, "m_regexBannedWords", void 0),
+        (0, i.gn)([o.LO], T.prototype, "m_regexCleanWords", void 0),
+        (0, i.gn)([o.LO], T.prototype, "m_bInitialized", void 0),
+        (0, i.gn)([o.aD], T.prototype, "Init", null),
+        (0, i.gn)([x.a], T.prototype, "OnTextFilterDictionaryChanged", null),
+        (0, i.gn)([o.aD], T.prototype, "UpdateCommunityPreferences", null),
+        (0, i.gn)([o.aD], T.prototype, "BRebuildFilter", null);
     },
   },
 ]);

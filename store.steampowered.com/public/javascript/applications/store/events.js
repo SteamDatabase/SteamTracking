@@ -2640,7 +2640,7 @@
         xe = (0, l.EN)(ke);
       var He = n(24289),
         Fe = n(70924),
-        Me = n(15896),
+        Me = n(68985),
         Re = n(30919),
         Oe = n(21053),
         Pe = n(59997),
@@ -5213,7 +5213,7 @@
         bn = n.n(Cn),
         yn = n(45206),
         fn = n(29480),
-        In = n(83999),
+        In = n(87225),
         wn = n(67775),
         Nn = n.n(wn);
       const Gn = "SteamNewsHub_SuggestCuratorsDismissed";

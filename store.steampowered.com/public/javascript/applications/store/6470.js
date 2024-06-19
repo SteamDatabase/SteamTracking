@@ -67,9 +67,9 @@
         i = a(31846),
         o = a(77936),
         l = a(42411),
-        c = a(13129),
-        m = a(16091),
-        A = a.n(m);
+        m = a(13129),
+        c = a(16091),
+        A = a.n(c);
       let u = class extends r.Component {
         static get hoverClass() {
           return A().hoverParent;
@@ -84,19 +84,19 @@
               "size",
               "dim",
             ]);
-          let m = "";
+          let c = "";
           return (
-            "medium" == i ? (m = A().Medium) : "large" == i && (m = A().Large),
+            "medium" == i ? (c = A().Medium) : "large" == i && (c = A().Large),
             r.createElement(
               "div",
               Object.assign(
                 {
-                  className: (0, c.Z)(
+                  className: (0, m.Z)(
                     A().SnoozeContainer,
                     t.online_state,
                     s,
                     a && A().animating,
-                    m,
+                    c,
                     o && A().Dim,
                   ),
                 },
@@ -104,17 +104,17 @@
               ),
               r.createElement(
                 "div",
-                { "data-text": "Z", className: (0, c.Z)(A().SnoozeZ, A().Z1) },
+                { "data-text": "Z", className: (0, m.Z)(A().SnoozeZ, A().Z1) },
                 "Z",
               ),
               r.createElement(
                 "div",
-                { "data-text": "Z", className: (0, c.Z)(A().SnoozeZ, A().Z2) },
+                { "data-text": "Z", className: (0, m.Z)(A().SnoozeZ, A().Z2) },
                 "Z",
               ),
               r.createElement(
                 "div",
-                { "data-text": "Z", className: (0, c.Z)(A().SnoozeZ, A().Z3) },
+                { "data-text": "Z", className: (0, m.Z)(A().SnoozeZ, A().Z3) },
                 "Z",
               ),
             )
@@ -132,8 +132,8 @@
         if (!t) return null;
         if (!t.is_online) return null;
         const o = t.HasStateFlag(512),
-          m = t.HasStateFlag(2048),
-          A = !m && t.HasStateFlag(1024);
+          c = t.HasStateFlag(2048),
+          A = !c && t.HasStateFlag(1024);
         return r.createElement(
           r.Fragment,
           null,
@@ -142,7 +142,7 @@
               "div",
               Object.assign(
                 {
-                  className: (0, c.Z)(
+                  className: (0, m.Z)(
                     a,
                     g().PersonaStatusIcon,
                     g().MobilePhoneIcon,
@@ -154,12 +154,12 @@
               ),
               r.createElement(h.Mr, null),
             ),
-          m &&
+          c &&
             r.createElement(
               "div",
               Object.assign(
                 {
-                  className: (0, c.Z)(
+                  className: (0, m.Z)(
                     a,
                     g().PersonaStatusIcon,
                     g().VRIcon,
@@ -176,7 +176,7 @@
               "div",
               Object.assign(
                 {
-                  className: (0, c.Z)(
+                  className: (0, m.Z)(
                     a,
                     g().PersonaStatusIcon,
                     g().BigPictureIcon,
@@ -213,7 +213,7 @@
               className: t,
               onContextMenu: a,
               persona: s,
-              eFriendRelationship: m,
+              eFriendRelationship: c,
               bIsSelf: A,
               bParenthesizeNicknames: d,
               strNickname: g,
@@ -253,8 +253,8 @@
             ]);
           let Z = null,
             H = null,
-            T = null,
-            M = [
+            M = null,
+            T = [
               t,
               v().personaNameAndStatusLabel,
               (0, l.sB)(s),
@@ -263,18 +263,18 @@
             ];
           _ || s.has_public_party_beacon
             ? (H = r.createElement(S, { persona: s }))
-            : (0, o.fk)(m)
-              ? ((H = (0, i.Xx)("#PersonaStateBlocked")), M.push(v().blocked))
+            : (0, o.fk)(c)
+              ? ((H = (0, i.Xx)("#PersonaStateBlocked")), T.push(v().blocked))
               : s.is_ingame
                 ? ((H =
-                    !s.is_in_nonsteam_game || A || (0, o.my)(m)
+                    !s.is_in_nonsteam_game || A || (0, o.my)(c)
                       ? s.GetCurrentGameName()
                       : (0, i.Xx)("#PersonaStateInNonSteamGame")),
                   A || y
                     ? A &&
                       s.is_awayOrSnooze &&
-                      (T = (0, i.Xx)("#PersonaStateAway"))
-                    : (T = s.GetCurrentGameRichPresence()))
+                      (M = (0, i.Xx)("#PersonaStateAway"))
+                    : (M = s.GetCurrentGameRichPresence()))
                 : s.m_broadcastAccountId &&
                   (H = (0, i.Xx)("#PersonaStateWatchingBroadcast")),
             H || (H = s.GetLocalizedOnlineStatus()),
@@ -289,12 +289,12 @@
                 { className: "ContextMenuButton", onClick: a },
                 r.createElement(p.$gZ, null),
               ))
-            : M.push(v().noContextMenu),
-            y && M.push(v().hidePersona),
-            C && (T = C()),
-            (!E && T) || M.push(v().twoLine);
+            : T.push(v().noContextMenu),
+            y && T.push(v().hidePersona),
+            C && (M = C()),
+            (!E && M) || T.push(v().twoLine);
           const U = !s.is_ingame && !b,
-            w = !Q && T,
+            w = !Q && M,
             K = H && (!E || !w),
             L = (0, o.hz)(N.De.LAUNCHER_TYPE);
           let j = g && !d,
@@ -303,12 +303,12 @@
           return r.createElement(
             "div",
             Object.assign({}, F, {
-              className: (0, c.Z)(...M),
+              className: (0, m.Z)(...T),
               onContextMenu: a,
             }),
             r.createElement(
               "div",
-              { className: (0, c.Z)(v().statusAndName, O && v().threeLines) },
+              { className: (0, m.Z)(v().statusAndName, O && v().threeLines) },
               r.createElement(
                 "div",
                 { className: v().playerName },
@@ -363,7 +363,7 @@
                   r.createElement(
                     "div",
                     {
-                      className: (0, c.Z)(
+                      className: (0, m.Z)(
                         v().gameName,
                         O && v().threeLines,
                         v().richPresenceLabel,
@@ -384,8 +384,8 @@
                 w &&
                   r.createElement(
                     "div",
-                    { className: (0, c.Z)(v().richPresenceLabel, "no-drag") },
-                    T,
+                    { className: (0, m.Z)(v().richPresenceLabel, "no-drag") },
+                    M,
                     " ",
                   ),
               ),
@@ -401,7 +401,7 @@
             bIgnorePersonaStatus: i,
             className: o,
           } = e,
-          m = (0, n._T)(e, [
+          c = (0, n._T)(e, [
             "persona",
             "bParenthesizeNicknames",
             "strNickname",
@@ -411,7 +411,7 @@
         let A = s && !a ? s : t.m_strPlayerName;
         return r.createElement(
           "span",
-          Object.assign({}, m, { className: (0, c.Z)(o, !i && (0, l.sB)(t)) }),
+          Object.assign({}, c, { className: (0, m.Z)(o, !i && (0, l.sB)(t)) }),
           r.createElement(
             "span",
             { className: v().playerName },
@@ -431,29 +431,32 @@
     },
     38605: (e, t, a) => {
       "use strict";
-      a.d(t, { o: () => p, _1: () => h, DY: () => g, vV: () => d });
+      a.d(t, { o: () => g, _1: () => E, DY: () => B, vV: () => h });
       var n = a(85556),
         r = a(47427),
         s = a(27605),
         i = a(42411),
         o = a(13129),
         l = a(37563),
-        c = a(28918);
-      const m =
-        a.p +
-        "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var A = a(5167),
-        u = a.n(A);
-      const p = r.memo(function (e) {
+        m = a(28918);
+      const c =
+          "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==",
+        A =
+          a.p +
+          "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
+      var u = a(5167),
+        p = a.n(u),
+        d = a(20020);
+      const g = r.memo(function (e) {
         const {
             strAvatarURL: t,
-            size: a,
+            size: a = "Medium",
             className: s,
             statusStyle: i,
             statusPosition: l,
-            children: A,
+            children: u,
           } = e,
-          p = (0, n._T)(e, [
+          g = (0, n._T)(e, [
             "strAvatarURL",
             "size",
             "className",
@@ -461,7 +464,7 @@
             "statusPosition",
             "children",
           ]),
-          d = r.useMemo(() => {
+          h = r.useMemo(() => {
             const e = [];
             return (
               t && e.push(t),
@@ -473,11 +476,13 @@
                       return "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=";
                     case "Medium":
                     case "MediumLarge":
-                      return "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==";
+                      return c;
                     case "Large":
                     case "X-Large":
                     case "FillArea":
-                      return m;
+                      return A;
+                    default:
+                      return (0, d.Z)(e, `Unhandled size ${e}`), c;
                   }
                 })(a),
               ),
@@ -489,32 +494,37 @@
           Object.assign(
             {
               className: (0, o.Z)(
-                u().avatarHolder,
+                p().avatarHolder,
                 "avatarHolder",
                 "no-drag",
-                a || "Medium",
+                a,
                 s,
               ),
             },
-            p,
+            g,
           ),
           r.createElement("div", {
-            className: (0, o.Z)(u().avatarStatus, "avatarStatus", l),
+            className: (0, o.Z)(p().avatarStatus, "avatarStatus", l),
             style: i,
           }),
-          r.createElement(c.j, {
-            className: (0, o.Z)(u().avatar, "avatar"),
-            rgSources: d,
+          r.createElement(m.j, {
+            className: (0, o.Z)(p().avatar, "avatar"),
+            rgSources: h,
             draggable: !1,
           }),
-          A,
+          u,
         );
       });
-      let d = class extends r.Component {
+      let h = class extends r.Component {
         render() {
           const e = this.props,
-            { persona: t, size: a, animatedAvatar: s, className: c } = e,
-            m = (0, n._T)(e, [
+            {
+              persona: t,
+              size: a = "Medium",
+              animatedAvatar: s,
+              className: m,
+            } = e,
+            c = (0, n._T)(e, [
               "persona",
               "size",
               "animatedAvatar",
@@ -531,40 +541,40 @@
                   : ("Large" != a && "X-Large" != a && "FillArea" != a) ||
                     (A = t.avatar_url_full)),
             r.createElement(
-              p,
+              g,
               Object.assign(
                 {
                   strAvatarURL: A,
                   size: a,
-                  className: (0, o.Z)((0, i.sB)(t), c),
+                  className: (0, o.Z)((0, i.sB)(t), m),
                 },
-                m,
+                c,
               ),
             )
           );
         }
       };
-      d = (0, n.gn)([s.Pi], d);
-      const g = (0, s.Pi)((e) => {
+      h = (0, n.gn)([s.Pi], h);
+      const B = (0, s.Pi)((e) => {
         const { profileItem: t, className: a, bDisableAnimation: s } = e,
           i = (0, n._T)(e, ["profileItem", "className", "bDisableAnimation"]);
         if (!t || !t.image_small || 0 == t.image_small.length) return null;
-        let c = s ? t.image_large : t.image_small;
+        let m = s ? t.image_large : t.image_small;
         return (
-          c || (c = t.image_small),
-          c.startsWith("https://") ||
-            (c = l.De.MEDIA_CDN_COMMUNITY_URL + "images/" + c),
+          m || (m = t.image_small),
+          m.startsWith("https://") ||
+            (m = l.De.MEDIA_CDN_COMMUNITY_URL + "images/" + m),
           r.createElement(
             "div",
             Object.assign(
-              { className: (0, o.Z)(u().avatarFrame, a, "avatarFrame") },
+              { className: (0, o.Z)(p().avatarFrame, a, "avatarFrame") },
               i,
             ),
-            r.createElement("img", { className: u().avatarFrameImg, src: c }),
+            r.createElement("img", { className: p().avatarFrameImg, src: m }),
           )
         );
       });
-      let h = class extends r.Component {
+      let E = class extends r.Component {
         constructor(e) {
           super(e),
             (this.state = { bAnimate: "None" != this.props.loopDuration }),
@@ -626,9 +636,9 @@
               children: i,
               style: o,
               bLimitProfileFrameAnimationTime: l,
-              bParentHovered: c,
+              bParentHovered: m,
             } = e,
-            m = (0, n._T)(e, [
+            c = (0, n._T)(e, [
               "loopDuration",
               "animatedAvatar",
               "avatarFrame",
@@ -638,7 +648,7 @@
               "bParentHovered",
             ]);
           return (
-            m.onClick &&
+            c.onClick &&
               (o = Object.assign(Object.assign({}, o), { cursor: "pointer" })),
             this.state.bAnimate || (a = null),
             r.createElement(
@@ -651,10 +661,10 @@
                 onMouseLeave: () => this.SetupAnimationTimer(),
               },
               r.createElement(
-                d,
-                Object.assign({ animatedAvatar: a }, m),
+                h,
+                Object.assign({ animatedAvatar: a }, c),
                 i,
-                r.createElement(g, {
+                r.createElement(B, {
                   profileItem: s,
                   bDisableAnimation: l && !this.state.bAnimate,
                 }),
@@ -663,7 +673,7 @@
           );
         }
       };
-      h = (0, n.gn)([s.Pi], h);
+      E = (0, n.gn)([s.Pi], E);
     },
     88619: (e, t, a) => {
       "use strict";
@@ -674,25 +684,25 @@
         i = a(42718),
         o = a(79545),
         l = a(35427),
-        c = a(3172),
-        m = a(82182),
+        m = a(3172),
+        c = a(82182),
         A = a(51915);
       function u(e) {
         const t = (0, s.bY)(),
           a = (0, r.M)(),
           o = (0, A.E8)(),
-          c = (0, i.useQueryClient)();
-        let m = Object.assign({ loadNicknames: !1, loadFavorites: !1 }, e);
+          m = (0, i.useQueryClient)();
+        let c = Object.assign({ loadNicknames: !1, loadFavorites: !1 }, e);
         return (0, i.useQuery)(
-          ["FriendsList", a, m],
+          ["FriendsList", a, c],
           () =>
             (0, n.mG)(this, void 0, void 0, function* () {
-              const e = c.fetchQuery(d(t, a)),
-                r = m.loadNicknames ? c.fetchQuery(g(t, a)) : void 0,
-                s = m.loadFavorites ? c.fetchQuery(B(t, a)) : void 0,
+              const e = m.fetchQuery(d(t, a)),
+                r = c.loadNicknames ? m.fetchQuery(g(t, a)) : void 0,
+                s = c.loadFavorites ? m.fetchQuery(B(t, a)) : void 0,
                 i = yield e,
                 u = new Map(
-                  i.map((e) => [e, c.fetchQuery((0, A.Zx)(o, t, e))]),
+                  i.map((e) => [e, m.fetchQuery((0, A.Zx)(o, t, e))]),
                 );
               let p;
               if (r) {
@@ -728,11 +738,11 @@
           queryFn: () =>
             (0, n.mG)(this, void 0, void 0, function* () {
               var t, a;
-              const n = o.gA.Init(c.Fi);
+              const n = o.gA.Init(m.Fi);
               return null ===
                 (a =
                   null ===
-                    (t = (yield c.qW.GetFriendsList(e, n))
+                    (t = (yield m.qW.GetFriendsList(e, n))
                       .Body()
                       .friendslist()) || void 0 === t
                     ? void 0
@@ -756,8 +766,8 @@
           queryKey: ["GetFriendNicknameList", t],
           queryFn: () =>
             (0, n.mG)(this, void 0, void 0, function* () {
-              const t = o.gA.Init(m.bM);
-              return (yield m.lk.GetNicknameList(e, t)).Body().toObject();
+              const t = o.gA.Init(c.bM);
+              return (yield c.lk.GetNicknameList(e, t)).Body().toObject();
             }),
         };
       }
@@ -779,9 +789,9 @@
           queryFn: () =>
             (0, n.mG)(this, void 0, void 0, function* () {
               var t;
-              const a = o.gA.Init(c.Zi);
+              const a = o.gA.Init(m.Zi);
               return null ===
-                (t = (yield c.qW.GetFavorites(e, a))
+                (t = (yield m.qW.GetFavorites(e, a))
                   .Body()
                   .toObject().favorites) || void 0 === t
                 ? void 0
@@ -791,9 +801,9 @@
       }
       function E(e, t) {
         return (0, n.mG)(this, void 0, void 0, function* () {
-          const a = o.gA.Init(m.$_);
+          const a = o.gA.Init(c.$_);
           a.Body().set_appid(t);
-          const n = yield m.lk.GetFriendsGameplayInfo(e, a);
+          const n = yield c.lk.GetFriendsGameplayInfo(e, a);
           return (
             n.BSuccess() ||
               console.warn(`Failed to get gameplay info: ${n.GetEResult()}`),
@@ -820,7 +830,7 @@
     },
     7686: (e, t, a) => {
       "use strict";
-      a.d(t, { Jr: () => o, Mr: () => l, tk: () => c });
+      a.d(t, { Jr: () => o, Mr: () => l, tk: () => m });
       var n = a(47427),
         r = a(62613),
         s = a(58538),
@@ -833,7 +843,7 @@
       function l() {
         return n.createElement(r.MrB, null);
       }
-      function c() {
+      function m() {
         return (0, i.id)()
           ? n.createElement(s.tkI, null)
           : n.createElement(r.j5H, null);

@@ -63,11 +63,9 @@ function BItemNotDisplayedElsewhere( item )
 	return item.appid && GDynamicStore.s_rgDisplayedApps.indexOf( item.appid ) !== -1;
 }
 
-function GenerateTagBlocks( rgTagData, rgTier1Unfiltered, rgTier2Unfiltered )
+function GenerateTagBlocks( $Parent, rgTagData, rgTier1Unfiltered, rgTier2Unfiltered )
 {
-	var rgTagBlocks = [];
 	var cTagBlocksToShow = 2;
-	var rgTagDataShown = [];
 
 	var rgTagDataWithItems = rgTagData.filter( function ( TagData ) { return TagData.items && TagData.items.length; } );
 
@@ -75,43 +73,43 @@ function GenerateTagBlocks( rgTagData, rgTier1Unfiltered, rgTier2Unfiltered )
 	var rgTier1 = rgTier1Unfiltered.filter( BItemNotDisplayedElsewhere );
 	var rgTier2 = rgTier2Unfiltered.filter( BItemNotDisplayedElsewhere );
 
-	for ( var iTagBlock = 0; iTagBlock < cTagBlocksToShow; iTagBlock++ )
+	let cTagBlocksShown = 0;
+	for( var iTag = 0; iTag < rgTagDataWithItems.length && cTagBlocksShown < cTagBlocksToShow; iTag++ )
 	{
-		var rgPersonalizedTagData = [];
+		const TagData = rgTagDataWithItems[iTag];
+		if ( !TagData.items )
+			continue;
 
-		for( var iTag = 0; iTag < rgTagDataWithItems.length; iTag++ )
-		{
-			var TagData = rgTagDataWithItems[iTag];
-			if ( !TagData.items || !TagData.items.length || rgTagDataShown.indexOf( TagData ) !== -1 )
-				continue;
+		PromoteFeaturedGamesWithinList( TagData, rgTier1, rgTier2 );
 
-			if ( iTagBlock == 0 )	// first pass only
-				PromoteFeaturedGamesWithinList( TagData, rgTier1, rgTier2 );
+		let rgItemsPassingFilter = GHomepage.FilterItemsForDisplay(
+			TagData.items, 'sale', 4, 4, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
+		);
 
-			var rgItemsPassingFilter = GHomepage.FilterItemsForDisplay(
-				TagData.items, 'sale', 6, 6, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
-			);
+		if ( rgItemsPassingFilter < 4 )
+			continue;
 
-			rgPersonalizedTagData.push( {
-				TagData: TagData,
-				rgItemsPassingFilter: rgItemsPassingFilter,
-				flUserScore: GetTagRelevanceForUser( TagData.tagids ),	/* scale of 0 - 1, with 1 being most relevant */
-				flTagScore: 1 - ( iTag / rgTagDataWithItems.length )			/* scale of 0 - 1, with 1 being foremost in the list */
-			});
-		}
+		let $Ctn = $J( '<div/>', {'class': 'home_discounts_block'} );
 
-		rgPersonalizedTagData.sort( TagBlockComparator );
+		let $TitleCtn = $J('<div/>', { 'class': 'home_title_ctn' } ).append( $J('<div/>', { 'class': 'home_title'}).html( TagData.name ) );
+		$TitleCtn.append( $J('<div/>', { 'class': 'home_line' } ) )
+		$Ctn.append( $TitleCtn );
 
-		var TagBlock = rgPersonalizedTagData.shift();
-		if ( typeof TagBlock !== 'undefined' )
-		{
-			rgTagBlocks.push( TagBlock );
-			rgTagDataShown.push( TagBlock.TagData );
-			GDynamicStore.MarkAppDisplayed( TagBlock.rgItemsPassingFilter );
-		}
+		let $GamesCtn =  $J('<div/>', { 'class': 'home_discount_games_ctn' } );
+		SaleRenderTwoByTwo( $GamesCtn, rgItemsPassingFilter, 'sale_tag_bucket' );
+		$Ctn.append( $GamesCtn );
+
+		let $SeeMore = $J('<div/>', { 'class': 'see_more_link' } );
+		$SeeMore.append( $J('<a/>', {'class': 'btnv6_white_transparent btn_small_tall', 'href': TagData.url } ).html( '<span>' + 'See More' + '</span>' ) );
+		$Ctn.append( $SeeMore );
+
+		$Parent.append( $Ctn );
+		GDynamicStore.MarkAppDisplayed( rgItemsPassingFilter );
+		cTagBlocksShown++;
 	}
 
-	return rgTagBlocks;
+	// we load with a fixed height to prevent the page from jumping around.  Eliminate that now.
+	$Parent.css( { minHeight: '' } );
 }
 
 function FindAndRemoveWhere( vec, fnPredicate )
@@ -443,16 +441,13 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 
 	HomeSaleBlock( rgTier1, $J('#tier1_target' ), 'sale_dailydeals_priority' );
 
-
 	var $FranchiseBlock = $J('#franchise_target' );
 	new CScrollOffsetWatcher( $FranchiseBlock, function() {
 		SaleFranchiseBlock( $FranchiseBlock, rgFranchiseData );
 	});
 
-
 	var $Tier2 = $J('#tier2_target' );
 	new CScrollOffsetWatcher( $Tier2, function() { HomeSaleBlock( rgTier2, $Tier2, 'sale_dailydeals_t2_priority'  ); } );
-
 
 	var $UserArea = $J('#home_sale_account_ctn');
 	if ( $UserArea.length )
@@ -479,18 +474,13 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 		SaleRenderUnder10Section( rgDisplayLists.under10 );
 		$Under10Area.css('height', '' );
 	} );
-
-
+	
 	// process tag sections first, pulling in featured items into the tag blocks we display
 	var $TagBlock = $J('#sale_tag_categories');
 	if ( $TagBlock.length )
 	{
 		new CScrollOffsetWatcher( $TagBlock, function() {
-			var rgPersonalizedTagData = GenerateTagBlocks( rgTagData, rgDisplayLists.sale_tier1, rgDisplayLists.sale_tier2 );
-			for ( var iTag = 0; iTag < rgPersonalizedTagData.length; iTag++ )
-			{
-				SaleTagBlock( $TagBlock, rgPersonalizedTagData[iTag] );
-			}
+			GenerateTagBlocks( $TagBlock, rgTagData, rgDisplayLists.sale_tier1, rgDisplayLists.sale_tier2 );
 		});
 	}
 
@@ -740,93 +730,6 @@ function AddMicrotrailersToStaticCaps( $Parent )
 	});
 }
 
-function TagBoxTopDecoration()
-{
-	var imgStr = '<div class="home_category_top_decoration"><img src="https://cdn.akamai.steamstatic.com/store/promo/winter2019/snow_ceiling.png"/></div>';
-	return '';
-}
-
-function SaleTagTexture( suffix )
-{
-	return 'background-image: url("https://cdn.akamai.steamstatic.com/store/promo/summer2023/' + suffix + '_page.png?v=2"); background-repeat: repeat;';
-}
-
-function SaleTagGradient( colorsIn )
-{
-	var colors = colorsIn.slice(); // don't want to modify
-
-	var strStyle = 'background: linear-gradient( 330deg, ' + colors.shift() + ' 0%, ';
-
-	// add midstop if needed
-	if ( colors.length >= 2 )
-		strStyle += colors.shift() + ' 45%, ';
-
-	strStyle += colors.shift() + ' 90% );';
-
-	return strStyle;
-}
-
-// Prioritize the genre/tag blocks based on the users tag preference, then display the renaming in the provided random order
-// Returns the priority list; can modify and alter the rgTagGenre list
-function PrioritizeTagGenreList( rgTagGenres )
-{
-	rgPriorityTagGenreList = [];
-
-	// Walk through the user's preference if any, and append to the rgPriorityTagGenreList list. Since multiple tagid
-	// can refer to the same entity, we null out the value, so we don't add the same item more than once.
-	//
-	// We won't have any recommendation tags for a not-logged in users, so we don't prioritize and fallback to random ordering.
-	if( GDynamicStore && GDynamicStore.s_rgRecommendedTags && GDynamicStore.s_rgRecommendedTags.length > 0 )
-	{
-		// Map the tagid to index into the rgTagGenres list;
-		const mapTagIDSourceIndex = new Map();
-		rgTagGenres.forEach( function ( TagGenre, index ) {
-			TagGenre.tagids.forEach( function( tagid ) {
-				mapTagIDSourceIndex.set( tagid, index );
-			});
-		});
-
-		GDynamicStore.s_rgRecommendedTags.forEach( function( preferredTag ) {
-			if( mapTagIDSourceIndex.has( preferredTag.tagid ) )
-			{
-				const index = mapTagIDSourceIndex.get( preferredTag.tagid );
-				if( rgTagGenres[index])
-				{
-					rgPriorityTagGenreList.push( rgTagGenres[index]);
-					rgTagGenres[index] = null; // invalidate so we don't add it again
-				}
-			}
-		});
-	}
-
-	rgTagGenres.forEach( function( TagGenre ) {
-		if (TagGenre) {
-			rgPriorityTagGenreList.push(TagGenre)
-		}
-	} );
-
-	return rgPriorityTagGenreList;
-}
-
-// Display the Tag Genre which are a list of art block that refer to a custom sale page for that tag/genre
-function RenderTagGenreBlock( rgTagGenres )
-{
-	// This has scroll row per contain
-	var $elCtn = $J( '#sale_tag_genre_ctn');
-
-	rgTagGenres.forEach( function ( TagGenre, index ) {
-
-		var nScrollRowIndex = Math.floor( index / 5 );
-		var $elScrollRow = $J( $elCtn.children()[ nScrollRowIndex] );
-		var $Link = $J('<a/>', { 'class': 'tag_square', 'href': TagGenre.url  } );
-
-		$Link.append( $J('<img/>', { 'class': 'tag_square_img', 'src': TagGenre.square } ) );
-		$Link.append( $J('<img/>', { 'class': 'tag_square_title_img', 'src': TagGenre.titleimg } ) );
-
-		$elScrollRow.append( $Link );
-	});
-}
-
 const k_MinItemPerEventFeaturingPage = 3;
 
 function RenderSeasonalSaleInGameEventsCarousel( rgFeaturedSeasonEvents, rgItems )
@@ -915,16 +818,6 @@ function RenderSeasonalSaleInGameEventsCarousel( rgFeaturedSeasonEvents, rgItems
 	$J('#' + elementName).show();
 }
 
-function SaleTagBackground( colors )
-{
-	var hex = colors[0];
-	var r = Number.parseInt( hex[1] + hex[2], 16 );
-	var g = Number.parseInt( hex[3] + hex[4], 16 );
-	var b = Number.parseInt( hex[5] + hex[6], 16 );
-	return 'background: rgba( ' + r + ', ' + g + ', ' + b + ', 0.3 );';
-	// return 'background: #ffffff11';
-}
-
 function SaleTagBlock( $Parent, rgPersonalizedTagData )
 {
 	var rgTagData = rgPersonalizedTagData.TagData;
@@ -945,21 +838,12 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 	else if(strTagMethod === "default") { title='<b>POPULAR GAMES </b><br/>SIMILAR TO';}
 	else { noTags = true;}
 
-	var rgTextures = [ 'a', 'b', 'c', 'd', 'e' ];
-	var randomKey = Math.floor( Math.random() * rgTextures.length );
-	var texture = rgTextures[ randomKey ];
-
 	TryPopulateSaleItems( rgItemsPassingFilter, rgTagData.items, 6, 6 );
 
-	var colors = rgTagData.colors;
-	// id, colors, name, items
 	var $Ctn = $J( '<div/>', {'class': 'home_category_ctn'} );
 
-	var $TitleCtn = $J('<div/>', { 'class': 'home_category_title_ctn', style: SaleTagBackground( colors ) } ).append( $J('<div/>', { 'class': 'home_category_title'}).html( title ) );
+	var $TitleCtn = $J('<div/>', { 'class': 'home_category_title_ctn' } ).append( $J('<div/>', { 'class': 'home_category_title'}).html( title ) );
 	var $FocusCtn = $J('<div/>', { 'class': 'home_category_focus_ctn'} );
-
-	var $TopDecoration = TagBoxTopDecoration();
-	$Ctn.append( $TopDecoration );
 
 	var focusCap = SaleCap( {"appid":focusedAppId}, 'sale_tag_bucket', 'discount_block_inline' );
 	$FocusCtn.append(focusCap);
@@ -984,20 +868,20 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 	else{
 		if ( "subtitle" in rgTagData )
 		{
-			$Ctn.append( $J('<div/>', { 'class': 'home_category_title_ctn', style: SaleTagBackground( colors ) } ).
+			$Ctn.append( $J('<div/>', { 'class': 'home_category_title_ctn' } ).
 				append( $J('<div/>', { 'class': 'home_category_title'}).html( rgTagData.name ) ).
 				append( $J('<div/>', { 'class': 'home_category_subtitle'}).html( rgTagData.subtitle ) ) );
 		}
 		else
 		{
-			$Ctn.append( $J('<div/>', { 'class': 'home_category_title_ctn', style: SaleTagBackground( colors ) } ).
+			$Ctn.append( $J('<div/>', { 'class': 'home_category_title_ctn' } ).
 				append( $J('<div/>', { 'class': 'home_tag_category_title'}).html( rgTagData.name ) ) );
 		}
 	}
 
 	BindSaleCapAutoSizeEvents( $FocusCtn );
 
-	var $Games = $J('<div/>', {'class': 'home_category_games_ctn', style: SaleTagBackground( colors ) } );
+	var $Games = $J('<div/>', {'class': 'home_category_games_ctn' } );
 	var $Row = $J('<div/>', {'class': 'salerow salerow3 multiline' } );
 
 	if ( "feature_name" in rgTagData )
@@ -1061,6 +945,10 @@ function SaleFranchiseBlock( $Parent, rgFranchiseData )
 
 		if ( iPageStart < 0 )
 			iPageStart += rgFranchiseData.length;
+
+		if ( iPageStart === rgFranchiseData.length )
+			iPageStart = 0;
+
 		var $Thumb = rg$Thumbs[ iPageStart / 3 ];
 		if ( $Thumb )
 		{

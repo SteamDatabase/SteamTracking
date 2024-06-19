@@ -284,7 +284,7 @@ CreateBuyOrderDialog = {
 	m_bPageNeedsRefresh: false,
 	m_nBestBuyPrice: null,
 	m_bActive: false,
-
+	
 	Initialize: function( unAppId, strMarketHashName, strMarketItemName, divPopup ) {
 		this.m_bInitialized = true;
 		this.m_divContents = divPopup;
@@ -293,6 +293,7 @@ CreateBuyOrderDialog = {
 		this.m_strMarketItemName = strMarketItemName;
 	},
 
+	
 	Show: function( unAppId, strMarketHashName, strMarketItemName, divPopup ) {
 		if ( !this.m_bInitialized )
 			this.Initialize( unAppId, strMarketHashName, strMarketItemName, divPopup );
@@ -303,6 +304,7 @@ CreateBuyOrderDialog = {
 			return;
 		}
 
+						
 		this.m_bActive = true;
 
 		// show the frame in the dialog
@@ -346,11 +348,13 @@ CreateBuyOrderDialog = {
 		this.UpdateTotal();
 	},
 
+
 	UpdateTotal: function() {
 		var currency = GetPriceValueAsInt( $J('#market_buy_commodity_input_price').val() );
 		var quantity = parseInt( $J('#market_buy_commodity_input_quantity').val() );
 		var price = Math.round( currency * quantity );
 
+		
 		var div = $J('#market_buy_commodity_order_total');
 		if ( isNaN(price) || !window.g_rgWalletInfo )
 			div.html( '--' );
@@ -360,7 +364,6 @@ CreateBuyOrderDialog = {
 		if ( !window.g_rgWalletInfo || isNaN(price) || g_rgWalletInfo['wallet_balance'] < price )
 		{
 			// show add funds
-			console.log(g_rgWalletInfo['wallet_balance']);
 			$J('#market_buyorder_dialog_purchase').hide();
 			$J('#market_buyorder_dialog_addfunds').show();
 			$J('#market_buyorder_dialog_accept_ssa_container').hide();
@@ -449,7 +452,7 @@ CreateBuyOrderDialog = {
 				appid: this.m_unAppId,
 				market_hash_name: this.m_strMarketHashName,
 				price_total: price_total,
-				quantity: quantity,
+								quantity: quantity,
 				first_name: first_name,
 				last_name: last_name,
 				billing_address: billing_address,

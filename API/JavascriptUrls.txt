@@ -2355,6 +2355,7 @@ https://help.steampowered.com/ticketmaster/AjaxAcknowledgeFeedback/
 https://help.steampowered.com/ticketmaster/AjaxAddFeedback/
 https://help.steampowered.com/ticketmaster/AjaxApproveFeedback/
 https://help.steampowered.com/ticketmaster/AjaxApproveRejectQuickTextEdit/
+https://help.steampowered.com/ticketmaster/AjaxClaimPreapprovalType/
 https://help.steampowered.com/ticketmaster/AjaxClaimTicketCategory/
 https://help.steampowered.com/ticketmaster/AjaxClaimTicketCategoryForReview/
 https://help.steampowered.com/ticketmaster/AjaxDeleteAttachment

@@ -775,6 +775,20 @@ div.visibilityselect div.option img, div.visibilityselect_options div.option img
 	float: right;
 }
 
+.title_container {
+display: flex;
+flex-direction: row;
+gap: 10px;
+}
+
+.title_container .mediaTitle {
+	flex-grow: 1;
+}
+
+.title_container settings_controls {
+	flex-grow: 0;
+}
+
 #settings_popup
 {
 	position: absolute;

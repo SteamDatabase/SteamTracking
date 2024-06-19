@@ -11,7 +11,7 @@ body.v6.sale_summer2024 .responsive_page_template_content {
             }
 
 body.v6.sale_summer2024 .home_page_takeover_sizer {
-                max-height: 475px;
+                max-height: 520px;
                 height: 55vw;
             }
 
@@ -51,7 +51,7 @@ body.v6.sale_summer2024 .home_ctn.discovery_queue_ctn, body.v6.sale_summer2024 .
 body.v6.sale_summer2024.infinite_scrolling #footer.small_footer {
     background: black;
             }
-body.v6.sale_summer2024 .home_sticker_ctn.mobile {
+body.v6.sale_summer2024 .home_sticker_ctn.mobile, body.v6.sale_summer2024 .home_deck_banner.mobile {
     display: none;
 }
 .page_background_holder_mobile {
@@ -336,7 +336,7 @@ body.v6.sale_summer2024 .home_sticker_ctn.mobile {
 	margin-top: 80px;
 }
 
-.home_giftcard_ctn:hover, .home_sticker_ctn:hover, .home_topgames_ctn:hover {
+.home_giftcard_ctn:hover, .home_sticker_ctn:hover, .home_topgames_ctn:hover, .home_deck_banner:hover {
 	transition-property: transform;
 	transition-duration: 0.3s;
 	transition-timing-function: cubic-bezier(0, 0.73, 0.48, 1);
@@ -593,51 +593,29 @@ body.v6.sale_summer2024 .carousel_container.paging_capsules .carousel_items.hero
 
 /* Add space for arrows */
 body.v6.sale_summer2024 .sale_capsule_carousel .carousel_items > * {
-	width: calc( 100% - 40px );
+	width: 100%;
 }
 
-body.v6.sale_summer2024 .sale_paged_carousel_ctn {
-	padding: 1% 43px;
+/* ================================================= */
+/* FOR HOMEPAGE SECTIONS WITH A BACKGROUND */
+.home_pagecontent_ctn .ctn_background .home_section_title {
+	padding: 12px 24px 0 24px;
+	margin-bottom: 0;
+}
+
+.home_pagecontent_ctn .ctn_background .home_section_subtitle {
+	padding: 0 24px;
+}
+.home_pagecontent_ctn .ctn_background .carousel_container.paging_capsules {
+	padding: 16px;
 }
 
 /* ================================================= */
 /* NEW FEATURED DISCOUNTS */
-.home_pagecontent_ctn.featured_special_deals {
+.home_pagecontent_ctn.featured_special_deals .ctn_background {
 	position: relative;
 	border-radius: 3px;
-	overflow: hidden;
-	margin-top: 20px;
-	margin-bottom: 40px;
 	background: linear-gradient(161deg, #F5DCC2 8.84%, #F1C18B 86.04%);
-}
-
-.featured_special_deals::before,
-.featured_special_deals::after {
-	display: block;
-	content: ' ';
-	position: absolute;
-	top: 0;
-	width: 58px;
-	max-width: 58px;
-	height: 100%;
-}
-.featured_special_deals::before {
-	left: 0;
-	background: linear-gradient(90deg, #efbf89 90%, hsl(32 75% 64% / 1));
-}
-.featured_special_deals::after {
-	right: 0;
-	background: linear-gradient(90deg, hsl(32 75% 64% / 1), #efbf89 10% );
-}
-@media screen and (max-width: 910px ) {
-	body.v6 .featured_special_deals::before,
-	body.v6 .featured_special_deals::after {
-		display: none;
-	}
-
-	body.v6 .home_pagecontent_ctn.sale_paged_carousel_ctn {
-		padding: 1% 3%;
-	}
 }
 
 .home_pagecontent_ctn.featured_special_deals .carousel_thumbs > div {
@@ -646,16 +624,6 @@ body.v6.sale_summer2024 .sale_paged_carousel_ctn {
 
 .home_pagecontent_ctn.featured_special_deals .carousel_thumbs > div.focus {
 	background-color: #e3535b;
-}
-
-.home_pagecontent_ctn.sale_paged_carousel_ctn .sale_capsule_carousel .carousel_container .arrow {
-	top: 15%;
-}
-.home_pagecontent_ctn.sale_paged_carousel_ctn .sale_capsule_carousel .carousel_container .arrow.left {
-	left: -43px;
-}
-.home_pagecontent_ctn.sale_paged_carousel_ctn .sale_capsule_carousel .carousel_container .arrow.right {
-	right: -43px;
 }
 
 .featured_special_deals .home_section_title {
@@ -667,21 +635,14 @@ body.v6.sale_summer2024 .sale_paged_carousel_ctn {
 	font-weight: 800;
 	line-height: normal;
 	text-transform: none;
-	margin-bottom: 0;
-	padding: 0px 10px 0 20px;
-	justify-content: center;
 }
 
 .featured_special_deals .home_section_subtitle {
-	font-size: 16px;
-	color: #69584F;
-	text-align: left;
-	padding: 0 10px 6px 20px;
+	color: black;
+	font-weight: 300;
 }
 
-.home_pagecontent_ctn.featured_special_deals .sale_capsule_image_ctn {
-	background: black;
-}
+
 
 /* ================================================= */
 /* END NEW FEATURED DISCOUNTS */
@@ -795,16 +756,22 @@ body.v6.sale_summer2024 .ds_options {
 
 
 .home_pagecontent_ctn {
-    max-width: 1200px;
+    max-width: 1800px;
 	box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
-    padding: 1% 0;
+    padding: 1% 50px;
     width: auto;
 }
 
+@media screen and (max-width: 910px ) {
+	.home_pagecontent_ctn {
+		padding: 1% 2%;
+	}
+}
+
 @media screen and (max-width: 500px ) {
-    .home_pagecontent_ctn.no_margin {
+    .home_pagecontent_ctn.no_mobile_margin {
         padding-left: 0;
         padding-right: 0;
     }
@@ -908,7 +875,6 @@ body.v6 .discount_block {}
 
 .home_section_subtitle {
 	font-size: 16px;
-	justify-content: center;
 	background: unset;
 	text-transform: none;
 }
@@ -948,7 +914,6 @@ body.v6 .discount_block {}
 .sale_capsule_image {
     display: block;
     max-width: 100%;
-    box-shadow: 2px 2px 9px #0e0a0a;
 }
 
 .sale_capsule.with_microtrailer .sale_capsule_image {
@@ -1104,14 +1069,6 @@ body.v6 .discount_block {}
     margin-bottom: 20px;
 }
 
-#tier1_target {
-	padding: 2% 3% 0% 3%;
-}
-
-#tier2_target {
-	padding: 2% 3% 0% 3%;
-}
-
 .home_morefeatured_ctn .home_section_title {
     		font-family: "Motiva Sans", Sans-serif;
 		font-weight: 300; /* light */
@@ -1168,29 +1125,42 @@ body.v6 .page_content_ctn {
 }
 
 .home_category_games_ctn .salerow3 .sale_capsule {
-    max-width: 374px;
-    min-width: 220px;
+	max-width: 49%;
+	min-width: 26%;
     width: auto;
     flex: 1;
 }
 
 .sale_capsule_carousel .sale_capsule {
-	width: 32%;
-	max-width: 355px;
+	flex-shrink: 1;
 	scroll-snap-align: start;
 }
 
 .home_deck_banner_ctn {
-	max-width: 1050px;
 	display: flex;
 	justify-content: center;
-	padding-bottom: 2%;
+	padding: 0 2% 2% 2%;
+	max-height: 285px;
+}
+
+.home_deck_banner img {
+	max-width: 100%;
 }
 
 .see_more_link {
     color: rgb(255, 255, 255);
 	text-align: right;
 	margin-top: 10px;
+	font-size: 14px;
+}
+
+.see_more_link a {
+	vertical-align: super;
+}
+
+.see_more_link a > span {
+	font-size: 14px;
+	padding: 3px 15px;
 }
 
 a:hover {
@@ -1796,20 +1766,10 @@ p.home_subtitle_ctn a {
         line-height: 22px;
     }
 
-	body.v6.sale_summer2024 .home_sticker_ctn.desktop {
-	display: none;
-}
-
 	body.v6.sale_summer2024 .split_banner_ctn .home_sticker_ctn.desktop {
 	display: flex;
 }
 
-	body.v6.sale_summer2024 .home_sticker_ctn.mobile {
-	display: block;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	height: auto;
-}
 }
 
 @media screen and (max-width: 620px )
@@ -2033,10 +1993,6 @@ p.home_subtitle_ctn a {
 	}
 }
 
-.home_franchises_ctn {
-    padding: 10px 0;
-}
-
 .home_franchises_ctn .home_section_title, .home_browsemore_ctn .home_section_title {
     margin: 16px 0 0px 0;
 }
@@ -2055,7 +2011,7 @@ p.home_subtitle_ctn a {
 
 .home_title_ctn {
 	display: flex;
-	font-size: 24px;
+	font-size: 26px;
     text-transform: uppercase;
     font-family: "Motiva Sans", Sans-serif;
     font-weight: 600;
@@ -2180,11 +2136,6 @@ p.home_subtitle_ctn a {
     display: none;
 }
 
-.home_topsellers_ctn
-{
-    max-width: 1200px;
-}
-
 .home_topsellers_ctn .home_topsellers_games_ctn, .home_under10_games_ctn {
     display: flex;
     flex-wrap: wrap;
@@ -2222,9 +2173,7 @@ p.home_subtitle_ctn a {
         text-align: center;
         font-weight: 500;
     }
-    .see_more_link {
-        text-align: center;
-    }
+
 }
 
 .TopSellerCapsule .ds_flag {
@@ -2441,12 +2390,12 @@ p.home_subtitle_ctn a {
 
 .salerow3 .sale_capsule
 {
-    width: 374px;
+    width: calc( 100% / 3 );
 }
 
 .salerow4 .sale_capsule
 {
-    width: 275px;
+    width: 25%;
 }
 
 .salerow.multiline
@@ -2550,6 +2499,26 @@ body.v6 .sale_capsule .discount_block_inline
     html.responsive .summer_bottom_text {
         font-size: 14px;
     }
+
+	html.responsive .home_deck_title_ctn {
+		display: block;
+    }
+
+	html.responsive body.v6.sale_summer2024 .home_sticker_ctn.mobile {
+		display: block;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		height: auto;
+	}
+
+	html.responsive body.v6.sale_summer2024 .home_deck_banner.mobile {
+		display: block;
+	}
+
+
+	html.responsive body.v6.sale_summer2024 .home_sticker_ctn.desktop, html.responsive body.v6.sale_summer2024 .home_deck_banner.desktop {
+		display: none;
+	}
 
     body.currency_wide .discount_pct {
         display: flex;
@@ -3316,7 +3285,7 @@ img.franchise_placeholder {
 
 
 .carousel_container .arrow.right {
-	right: -6%;
+	right: -50px;
 	background: rgba( 15, 10, 10, 0.25 );
 	transition: all .2s ease-in-out;
 }
@@ -3326,12 +3295,8 @@ img.franchise_placeholder {
 	background: rgba( 15, 10, 10, 0.35 );
 }
 
-.sale_capsule_carousel .carousel_container .arrow.right, .sale_capsule_carousel .carousel_container .arrow.right:hover {
-	right: -4%;
-}
-
 .carousel_container .arrow.left {
-	left: -6%;
+	left: -50px;
 	background: rgba( 15, 10, 10, 0.25 );
 	transition: all .2s ease-in-out;
 }
@@ -3341,17 +3306,11 @@ img.franchise_placeholder {
 	background: rgba( 15, 10, 10, 0.35 );
 }
 
-.sale_capsule_carousel .carousel_container .arrow.left, .sale_capsule_carousel .carousel_container .arrow.left:hover {
-	left: -4%;
-}
-
 .hero_parent_ctn .arrow.right {
-	right: -3%;
 	top: 33%;
 }
 
 .hero_parent_ctn .arrow.left {
-	left: -3%;
 	top: 33%;
 }
 
@@ -3424,7 +3383,7 @@ html.tablet body.v6.sale_summer2024 .carousel_container .carousel_items:not(.no_
 	justify-content: unset;
 }
 
-html.tablet body.v6.sale_summer2024 .home_pagecontent_ctn.no_margin {
+html.tablet body.v6.sale_summer2024 .home_pagecontent_ctn.no_mobile_margin {
 	padding-left: 0;
 	padding-right: 0;
 }

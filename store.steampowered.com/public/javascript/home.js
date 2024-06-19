@@ -199,11 +199,6 @@ GHomepage = {
 				}
 			}
 
-			if ( !rgParams.bShowTakeunder )
-			{
-				$J( '#home_takeunder_ctn' ).hide();
-			}
-
 			GHomepage.rgAppsRecommendedByCurators = rgParams.rgAppsRecommendedByCurators || [];
 			GHomepage.rgFriendRecommendations = v_shuffle(rgParams.rgFriendRecommendations) || [];
 			GHomepage.rgRecommendedAppsByCreators = v_shuffle(rgParams.rgRecommendedAppsByCreators) || [];

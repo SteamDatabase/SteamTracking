@@ -629,6 +629,12 @@
             bDisableEnforceDimensions: !0,
             rgAcceptableTypes: i,
           },
+          localized_background_art: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: i,
+          },
           sale_section_background: {
             width: 0,
             height: 0,
@@ -885,7 +891,7 @@
       n.d(t, {
         MZ: () => U,
         a4: () => M,
-        ac: () => G,
+        ac: () => A,
         bS: () => k,
         HL: () => B,
         oL: () => L,
@@ -895,7 +901,7 @@
         B3: () => F,
         wP: () => N,
         dn: () => C,
-        $Y: () => A,
+        $Y: () => G,
         sq: () => D,
         RQ: () => E,
         _L: () => b,
@@ -903,9 +909,9 @@
         Vv: () => V,
       });
       var a = n(85556),
-        i = n(54842),
-        s = n(19403),
-        r = n(38071);
+        i = n(19403),
+        s = n(38071),
+        r = n(54842);
       const o = {
         bBroadcastEnabled: !1,
         broadcastChatSetting: "hide",
@@ -950,13 +956,13 @@
         D = 39049601,
         E = 41316928,
         b = 4,
-        A = 20;
-      var G;
+        G = 20;
+      var A;
       !(function (e) {
         (e[(e.k_EEventStateUnpublished = 0)] = "k_EEventStateUnpublished"),
           (e[(e.k_EEventStateStaged = 1)] = "k_EEventStateStaged"),
           (e[(e.k_EEventStateVisible = 2)] = "k_EEventStateVisible");
-      })(G || (G = {}));
+      })(A || (A = {}));
       const w = [
         {
           label: "#Sale_BrowserSortOption_NewAndTrending",
@@ -1178,7 +1184,7 @@
             (this.m_nBuildID = void 0),
             (this.m_strBuildBranch = void 0),
             (this.postTime = void 0),
-            (this.visibility_state = G.k_EEventStateUnpublished),
+            (this.visibility_state = A.k_EEventStateUnpublished),
             (this.broadcaster = void 0),
             (this.jsondata = U),
             (this.nCommentCount = 0),
@@ -1198,7 +1204,7 @@
             (this.video_preview_type = void 0),
             (this.video_preview_id = void 0),
             (this.m_overrideCurrentDay = void 0),
-            (0, i.rC)(this);
+            (0, r.rC)(this);
         }
         BIsPartnerEvent() {
           return !this.bOldAnnouncement && Boolean(this.GID);
@@ -1361,11 +1367,11 @@
           return (
             !(
               !this.BInRealmGlobal() ||
-              !g.LJ.IsELanguageValidInRealm(e, r.IN.k_ESteamRealmGlobal)
+              !g.LJ.IsELanguageValidInRealm(e, s.IN.k_ESteamRealmGlobal)
             ) ||
             !(
               !this.BInRealmChina() ||
-              !g.LJ.IsELanguageValidInRealm(e, r.IN.k_ESteamRealmChina)
+              !g.LJ.IsELanguageValidInRealm(e, s.IN.k_ESteamRealmChina)
             )
           );
         }
@@ -1658,13 +1664,13 @@
         BIsVisibleEvent() {
           let e = Math.floor(h.JW.GetTimeNowWithOverride());
           return (
-            this.visibility_state == G.k_EEventStateVisible &&
+            this.visibility_state == A.k_EEventStateVisible &&
             e > this.visibilityStartTime &&
             (this.visibilityEndTime < 10 || e < this.visibilityEndTime)
           );
         }
         BIsStagedEvent() {
-          return this.visibility_state == G.k_EEventStateStaged;
+          return this.visibility_state == A.k_EEventStateStaged;
         }
         GetStartTimeAndDateUnixSeconds() {
           return this.startTime;
@@ -1748,7 +1754,7 @@
         }
         static GenerateSummaryFromText(e, t) {
           return e && 0 != e.trim().length
-            ? ((e = (0, s.p8)(e, [
+            ? ((e = (0, i.p8)(e, [
                 "img",
                 "h1",
                 "h2",
@@ -1760,7 +1766,7 @@
                 "roomeffect",
                 "sticker",
               ])),
-              (e = (0, s.NO)(e)),
+              (e = (0, i.NO)(e)),
               (e = (0, y.W5)(e)),
               (0, y.oU)(e, t || 180))
             : "";
@@ -2137,52 +2143,104 @@
         BContentHubDiscountedOnly() {
           return this.jsondata.content_hub_discounted_only;
         }
+        BIsBackgroundImageGroupingEnabled() {
+          var e;
+          return null === (e = this.jsondata.sale_background_img_groups) ||
+            void 0 === e
+            ? void 0
+            : e.enabled;
+        }
+        GetSalePageBackgroundImageGroupCount() {
+          var e;
+          return (
+            null === (e = this.jsondata.sale_background_img_groups) ||
+            void 0 === e
+              ? void 0
+              : e.enabled
+          )
+            ? this.jsondata.sale_background_img_groups.groups.length
+            : 0;
+        }
+        GetAllSalePageGroups() {
+          var e;
+          return (
+            null === (e = this.jsondata.sale_background_img_groups) ||
+            void 0 === e
+              ? void 0
+              : e.enabled
+          )
+            ? this.jsondata.sale_background_img_groups.groups
+            : [];
+        }
+        GetSalePageBackgroundGroup(e) {
+          var t;
+          return (
+            null === (t = this.jsondata.sale_background_img_groups) ||
+            void 0 === t
+              ? void 0
+              : t.enabled
+          )
+            ? this.jsondata.sale_background_img_groups.groups[e]
+            : null;
+        }
+        GetIncludedRealmList() {
+          const e = new Array();
+          return (
+            this.BInRealmGlobal() && e.push(s.IN.k_ESteamRealmGlobal),
+            this.BInRealmChina() && e.push(s.IN.k_ESteamRealmChina),
+            (0, _.X)(
+              e.length > 0,
+              `Event ${this.GID} is currently configured so that no realms are valid for display. Either enable Steam China or Global to address this issue`,
+            ),
+            e
+          );
+        }
       }
-      (0, a.gn)([i.LO], H.prototype, "GID", void 0),
-        (0, a.gn)([i.LO], H.prototype, "AnnouncementGID", void 0),
-        (0, a.gn)([i.LO], H.prototype, "forumTopicGID", void 0),
-        (0, a.gn)([i.LO], H.prototype, "type", void 0),
-        (0, a.gn)([i.LO], H.prototype, "appid", void 0),
-        (0, a.gn)([i.LO], H.prototype, "name", void 0),
-        (0, a.gn)([i.LO], H.prototype, "description", void 0),
-        (0, a.gn)([i.LO], H.prototype, "timestamp_loc_updated", void 0),
-        (0, a.gn)([i.LO], H.prototype, "startTime", void 0),
-        (0, a.gn)([i.LO], H.prototype, "endTime", void 0),
-        (0, a.gn)([i.LO], H.prototype, "visibilityStartTime", void 0),
-        (0, a.gn)([i.LO], H.prototype, "visibilityEndTime", void 0),
-        (0, a.gn)([i.LO], H.prototype, "m_nBuildID", void 0),
-        (0, a.gn)([i.LO], H.prototype, "m_strBuildBranch", void 0),
-        (0, a.gn)([i.LO], H.prototype, "postTime", void 0),
-        (0, a.gn)([i.LO], H.prototype, "visibility_state", void 0),
-        (0, a.gn)([i.LO], H.prototype, "broadcaster", void 0),
-        (0, a.gn)([i.LO], H.prototype, "jsondata", void 0),
-        (0, a.gn)([i.LO], H.prototype, "nCommentCount", void 0),
-        (0, a.gn)([i.LO], H.prototype, "nVotesUp", void 0),
-        (0, a.gn)([i.LO], H.prototype, "nVotesDown", void 0),
-        (0, a.gn)([i.LO], H.prototype, "bOldAnnouncement", void 0),
-        (0, a.gn)([i.LO], H.prototype, "announcementClanSteamID", void 0),
-        (0, a.gn)([i.LO], H.prototype, "loadedAllLanguages", void 0),
-        (0, a.gn)([i.LO], H.prototype, "bLoaded", void 0),
-        (0, a.gn)([i.LO], H.prototype, "deleteInProgress", void 0),
-        (0, a.gn)([i.LO], H.prototype, "vecTags", void 0),
-        (0, a.gn)([i.LO], H.prototype, "last_update_steamid", void 0),
-        (0, a.gn)([i.LO], H.prototype, "rtime32_last_modified", void 0),
+      (0, a.gn)([r.LO], H.prototype, "GID", void 0),
+        (0, a.gn)([r.LO], H.prototype, "AnnouncementGID", void 0),
+        (0, a.gn)([r.LO], H.prototype, "forumTopicGID", void 0),
+        (0, a.gn)([r.LO], H.prototype, "type", void 0),
+        (0, a.gn)([r.LO], H.prototype, "appid", void 0),
+        (0, a.gn)([r.LO], H.prototype, "name", void 0),
+        (0, a.gn)([r.LO], H.prototype, "description", void 0),
+        (0, a.gn)([r.LO], H.prototype, "timestamp_loc_updated", void 0),
+        (0, a.gn)([r.LO], H.prototype, "startTime", void 0),
+        (0, a.gn)([r.LO], H.prototype, "endTime", void 0),
+        (0, a.gn)([r.LO], H.prototype, "visibilityStartTime", void 0),
+        (0, a.gn)([r.LO], H.prototype, "visibilityEndTime", void 0),
+        (0, a.gn)([r.LO], H.prototype, "m_nBuildID", void 0),
+        (0, a.gn)([r.LO], H.prototype, "m_strBuildBranch", void 0),
+        (0, a.gn)([r.LO], H.prototype, "postTime", void 0),
+        (0, a.gn)([r.LO], H.prototype, "visibility_state", void 0),
+        (0, a.gn)([r.LO], H.prototype, "broadcaster", void 0),
+        (0, a.gn)([r.LO], H.prototype, "jsondata", void 0),
+        (0, a.gn)([r.LO], H.prototype, "nCommentCount", void 0),
+        (0, a.gn)([r.LO], H.prototype, "nVotesUp", void 0),
+        (0, a.gn)([r.LO], H.prototype, "nVotesDown", void 0),
+        (0, a.gn)([r.LO], H.prototype, "bOldAnnouncement", void 0),
+        (0, a.gn)([r.LO], H.prototype, "announcementClanSteamID", void 0),
+        (0, a.gn)([r.LO], H.prototype, "loadedAllLanguages", void 0),
+        (0, a.gn)([r.LO], H.prototype, "bLoaded", void 0),
+        (0, a.gn)([r.LO], H.prototype, "deleteInProgress", void 0),
+        (0, a.gn)([r.LO], H.prototype, "vecTags", void 0),
+        (0, a.gn)([r.LO], H.prototype, "last_update_steamid", void 0),
+        (0, a.gn)([r.LO], H.prototype, "rtime32_last_modified", void 0),
         (0, a.gn)(
-          [i.LO],
+          [r.LO],
           H.prototype,
           "rtime32_last_solr_search_col_updated",
           void 0,
         ),
         (0, a.gn)(
-          [i.LO],
+          [r.LO],
           H.prototype,
           "rtime32_last_local_modification",
           void 0,
         ),
-        (0, a.gn)([i.LO], H.prototype, "rtime32_moderator_reviewed", void 0),
-        (0, a.gn)([i.LO], H.prototype, "video_preview_type", void 0),
-        (0, a.gn)([i.LO], H.prototype, "video_preview_id", void 0),
-        (0, a.gn)([i.LO], H.prototype, "m_overrideCurrentDay", void 0);
+        (0, a.gn)([r.LO], H.prototype, "rtime32_moderator_reviewed", void 0),
+        (0, a.gn)([r.LO], H.prototype, "video_preview_type", void 0),
+        (0, a.gn)([r.LO], H.prototype, "video_preview_id", void 0),
+        (0, a.gn)([r.LO], H.prototype, "m_overrideCurrentDay", void 0);
     },
     64729: (e, t, n) => {
       "use strict";
@@ -3253,7 +3311,7 @@
       }
       var u = n(68324),
         h = n(77936),
-        p = n(83999),
+        p = n(87225),
         _ = n(62210),
         g = n(45492),
         S = n(31846),
@@ -3269,8 +3327,8 @@
           this.playback_speed = 1;
         }
       }
-      class A extends b {}
       class G extends b {}
+      class A extends b {}
       class w {
         constructor() {
           (this.m_steamIDBroadcast = ""),
@@ -3574,7 +3632,7 @@
           (this.m_allTimeSnapshot.m_nStallEvents += 1),
             (this.m_rgSnapShots[this.m_rgSnapShots.length - 1].m_nStallEvents +=
               1);
-          let a = new G();
+          let a = new A();
           this.GatherCommonStats(
             a,
             t,
@@ -3679,7 +3737,7 @@
           )
             return void this.CreateNewEmptySnapshot(t.videoHeight);
           this.LogFrameInfo(n), this.LogBufferDuration(e, t);
-          let a = new A(),
+          let a = new G(),
             i = this.m_rgSnapShots[this.m_rgSnapShots.length - 1];
           (a.frames_decoded = i.m_nFramesDecoded),
             (a.frames_dropped = i.m_nFramesDropped),
@@ -8112,10 +8170,10 @@
       "use strict";
       n.d(t, {
         FN: () => C,
-        Fm: () => G,
+        Fm: () => A,
         KU: () => E,
         S6: () => D,
-        U8: () => A,
+        U8: () => G,
         aN: () => b,
       });
       var a = n(85556),
@@ -8128,7 +8186,7 @@
         m = n(35427),
         c = n(37593),
         u = n(29480),
-        h = n(83999),
+        h = n(87225),
         p = n(62210),
         _ = n(16649),
         g = n(45492),
@@ -8158,6 +8216,7 @@
         "product_banner_override",
         "sale_section_title",
         "schedule_track_art",
+        "localized_background_art",
       ];
       class b {
         constructor() {
@@ -8286,7 +8345,7 @@
           return t || new Array();
         }
         GetFilteredClanImages(e, t) {
-          let n = A.GetClanImages(e);
+          let n = G.GetClanImages(e);
           return this.GetFilteredClanImagesList(n, t);
         }
         GetFilteredClanImagesList(e, t) {
@@ -8612,16 +8671,16 @@
       (0, a.gn)([o.LO], b.prototype, "m_mapClanToImages", void 0),
         (0, a.gn)([o.LO], b.prototype, "m_mapClanImageLoadState", void 0),
         (0, a.gn)([o.LO], b.prototype, "m_curLocImageGroup", void 0);
-      const A = new b();
-      function G(e) {
+      const G = new b();
+      function A(e) {
         const t = m.K.InitFromClanID(e),
           n = (0, u.T)("useLoadClanImages"),
-          [a, i] = (0, l.useState)(() => A.BHasLoadedClanImages(t));
+          [a, i] = (0, l.useState)(() => G.BHasLoadedClanImages(t));
         return (
           (0, l.useEffect)(() => {
             const t = m.K.InitFromClanID(e);
-            A.BHasLoadedClanImages(t) ||
-              A.LoadClanImages(t, !1, n).then(() => i(!0));
+            G.BHasLoadedClanImages(t) ||
+              G.LoadClanImages(t, !1, n).then(() => i(!0));
           }, [e, n]),
           a
         );
@@ -10238,7 +10297,7 @@
             e.preventDefault();
             try {
               yield r().post(n, i, { withCredentials: !0 }),
-                this.InvalidateCache(m),
+                this.InvalidateCache(),
                 (null == l ? void 0 : l.fnSetURL)
                   ? l.fnSetURL(a)
                   : (m.location.href = a);
@@ -10303,11 +10362,12 @@
         BIsPreferredPlatform(e) {
           return this.m_setPreferredPlatforms.has(e);
         }
-        InvalidateCache(e) {
-          const t = e || window;
-          t.localStorage.setItem(
+        InvalidateCache() {
+          window.localStorage.setItem(
             p,
-            (Number.parseInt(t.localStorage.getItem(p) || "0") + 1).toString(),
+            (
+              Number.parseInt(window.localStorage.getItem(p) || "0") + 1
+            ).toString(),
           );
         }
         static Get() {
@@ -11647,7 +11707,7 @@
         l = n(77936),
         d = n(51688),
         m = n(35427);
-      var c = n(83999),
+      var c = n(87225),
         u = n(62210),
         h = n(16649),
         p = n(45492),
@@ -12935,8 +12995,8 @@
             include_supported_languages: D,
             include_full_description: E,
             include_included_items: b,
-            include_assets_without_overrides: A,
-            apply_user_filters: G,
+            include_assets_without_overrides: G,
+            apply_user_filters: A,
           } = n;
         if (
           ((0, s.useEffect)(() => {
@@ -12954,8 +13014,8 @@
               include_supported_languages: D,
               include_full_description: E,
               include_included_items: b,
-              include_assets_without_overrides: A,
-              apply_user_filters: G,
+              include_assets_without_overrides: G,
+              apply_user_filters: A,
             };
             let s = null;
             return (
@@ -12975,7 +13035,7 @@
               () =>
                 null == s ? void 0 : s.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, a, c, h, p, _, g, S, v, f, y, I, C, D, E, b, A, G, m]),
+          }, [e, t, a, c, h, p, _, g, S, v, f, y, I, C, D, E, b, G, A, m]),
           !e)
         )
           return [null, 2];
@@ -13376,7 +13436,7 @@
     },
     17362: (e, t, n) => {
       "use strict";
-      n.d(t, { a: () => G });
+      n.d(t, { a: () => A });
       var a = n(47427),
         i = n(31421),
         s = n(77151);
@@ -13436,8 +13496,8 @@
         D = n(25006),
         E = n(46882),
         b = n(46189),
-        A = n.n(b);
-      function G(e) {
+        G = n.n(b);
+      function A(e) {
         var t;
         const { info: n, className: r } = e,
           o = (0, D.bJ)(),
@@ -13468,7 +13528,7 @@
             if (!m.inventory_available)
               return a.createElement(
                 "div",
-                { className: (0, y.Z)(A().ActionOutOfStock, r) },
+                { className: (0, y.Z)(G().ActionOutOfStock, r) },
                 a.createElement(
                   "span",
                   null,
@@ -13496,7 +13556,7 @@
                   (t = (0, I.Xx)("#EventDisplay_CallToAction_AddToAccount")),
               a.createElement(
                 "div",
-                { className: (0, y.Z)(A().Action, r), onClick: c },
+                { className: (0, y.Z)(G().Action, r), onClick: c },
                 a.createElement("span", null, t),
               )
             );
@@ -13505,7 +13565,7 @@
             const e = (0, i.Hf)(d.GetStorePageURL(), o);
             return a.createElement(
               "a",
-              { href: e, className: (0, y.Z)(A().Action, r) },
+              { href: e, className: (0, y.Z)(G().Action, r) },
               (0, I.Xx)("#EventDisplay_CallToAction_VisitStore"),
             );
           }
@@ -13547,7 +13607,7 @@
           );
         return a.createElement(
           "div",
-          { className: (0, y.Z)(A().Action, t), onClick: m },
+          { className: (0, y.Z)(G().Action, t), onClick: m },
           a.createElement("span", null, (0, I.Xx)("#Store_AddToCart")),
         );
       }
@@ -13887,7 +13947,7 @@
         D = n(31846),
         E = n(37563),
         b = n(73229),
-        A = n(21053);
+        G = n(21053);
       n(81913);
       !(function (e) {
         (e.Default = "default"),
@@ -13901,7 +13961,7 @@
           (e.Dev_Sales = "associated_sales");
       })(a || (a = {}));
       new Map();
-      var G = n(64936);
+      var A = n(64936);
       class w {
         constructor() {
           (this.m_mapBlockedAppIds = new Map()),
@@ -14030,7 +14090,7 @@
             (this.m_collectionMetaData = void 0),
             (0, u.rC)(this),
             (this.m_key = e),
-            (this.m_visibilityStore = new A.RC(t)),
+            (this.m_visibilityStore = new G.RC(t)),
             l.jg.Get().HintLoad();
         }
         GetNumEventsLoaded() {
@@ -14180,7 +14240,7 @@
         GetStoreInitializationTimestamp() {
           return (
             this.m_dtInitTime ||
-              (this.m_dtInitTime = G.JW.GetTimeNowWithOverrideAsDate()),
+              (this.m_dtInitTime = A.JW.GetTimeNowWithOverrideAsDate()),
             this.m_dtInitTime
           );
         }
@@ -14455,7 +14515,7 @@
               o = ("dev" === E.De.WEB_UNIVERSE ? 50 : 250) + 50 * s,
               l = this.GetTimeEdgeForDirection(
                 e,
-                G.JW.GetTimeNowWithOverride(),
+                A.JW.GetTimeNowWithOverride(),
               ),
               m = {
                 minTime: 0,
@@ -14803,7 +14863,7 @@
             "#EventCalendar_GameSource_UnhideCuratorsDialog_CancelButton",
           ),
           onOK: () => {
-            P().m_visibilityStore.SetGameSourceAllowed(A.Gf.k_ECurator, !0),
+            P().m_visibilityStore.SetGameSourceAllowed(G.Gf.k_ECurator, !0),
               t();
           },
           onCancel: () => {
@@ -14816,7 +14876,7 @@
         e ||
           (null !== k &&
             (P().m_visibilityStore.BCuratorUnhideOnFollowDialogDismissed() ||
-              P().m_visibilityStore.BIsGameSourceAllowed(A.Gf.k_ECurator) ||
+              P().m_visibilityStore.BIsGameSourceAllowed(G.Gf.k_ECurator) ||
               (0, O.AM)(s.createElement(W, null), window)));
       }
       function Z() {
@@ -14853,7 +14913,7 @@
             bFollowing: i,
             onFollowClick: r,
           } = e;
-          return G.JW.bIsFollowingEnabled
+          return A.JW.bIsFollowingEnabled
             ? s.createElement(
                 j.Ks,
                 {
@@ -14997,8 +15057,8 @@
         D = n(34909),
         E = n(11619),
         b = n(61440),
-        A = n(43301),
-        G = n(83502),
+        G = n(43301),
+        A = n(83502),
         w = n(62613),
         T = n(59728),
         B = n(62210),
@@ -15310,7 +15370,7 @@
               m = "#ReviewScore_PercentPositive_series";
           }
         return r.createElement(
-          A.K,
+          G.K,
           { url: l, className: (0, k.Z)(V().ReviewScore, "ReviewScore") },
           a &&
             null != s.percent_positive &&
@@ -15514,7 +15574,7 @@
                 Boolean(d && C) && r.createElement(f.Ws, { storeItem: y }),
                 Boolean(i) && i,
                 Boolean(m && C) &&
-                  r.createElement(G.r, { appid: t.id, bIsMuted: !1 }),
+                  r.createElement(A.r, { appid: t.id, bIsMuted: !1 }),
                 c && r.createElement(ee, { nCreatorAccountID: c }),
               ),
             ),
@@ -16083,7 +16143,7 @@
         D = n(13129),
         E = n(31846),
         b = n(58129);
-      function A(e) {
+      function G(e) {
         const { appids: t, hide_status_banners: n } = e,
           a = t.every((e) => y.jg.Get().BOwnsApp(e)),
           s = t.every((e) => y.jg.Get().BIsGameWishlisted(e)),
@@ -16128,8 +16188,8 @@
           r && i.createElement(b.x, null),
         );
       }
-      var G = n(80751),
-        w = n.n(G),
+      var A = n(80751),
+        w = n.n(A),
         T = n(16610),
         B = n(89631),
         L = n(95082);
@@ -16325,7 +16385,7 @@
               displayInfo: f,
               purchaseInfo: I,
               hoverType: b,
-              nHoverId: G,
+              nHoverId: A,
               artworkInfo: B,
               artworkStoreItem: L,
             } = (function (e, t) {
@@ -16526,7 +16586,7 @@
                     i.createElement(
                       "div",
                       { className: C().StoreSaleWidgetImage },
-                      i.createElement(A, { appids: se }),
+                      i.createElement(G, { appids: se }),
                       i.createElement(ae, { info: B, imageType: "header" }),
                       i.createElement(X, {
                         eDeckCompatibilityCategory:
@@ -16981,8 +17041,8 @@
         D = n(90069),
         E = n(62613),
         b = n(25006),
-        A = n(46882),
-        G = n(16649),
+        G = n(46882),
+        A = n(16649),
         w = n(13129),
         T = n(31846),
         B = n(37563);
@@ -17035,9 +17095,9 @@
                           const t = yield v.jg
                             .Get()
                             .UpdateGameWishlist(l, e, (0, S.mY)(o));
-                          n(!1), 1 != t.success && L((0, G.l)(t).strErrorMsg);
+                          n(!1), 1 != t.success && L((0, A.l)(t).strErrorMsg);
                         } catch (e) {
-                          n(!1), L((0, G.l)(e).strErrorMsg);
+                          n(!1), L((0, A.l)(e).strErrorMsg);
                         }
                       }
                     } else (0, I.Xt)();
@@ -17047,7 +17107,7 @@
               r.createElement(
                 "span",
                 null,
-                (i || t) && r.createElement(A.V, { size: "small" }),
+                (i || t) && r.createElement(G.V, { size: "small" }),
               ),
               !t && u && r.createElement(E.JrY, null),
               r.createElement(
@@ -17830,7 +17890,7 @@
         s = n(27605),
         r = n(20417);
       var o = n(36595),
-        l = n(83999),
+        l = n(87225),
         d = n(14846),
         m = n.n(d),
         c = n(7765),
@@ -19561,7 +19621,7 @@
               ("tagids" === t.type ||
                 "category" === t.type ||
                 "contenthub" == t.type) &&
-                s.createElement(A, { category: t }),
+                s.createElement(G, { category: t }),
             ),
           ),
           s.createElement(
@@ -19579,7 +19639,7 @@
           ),
         );
       }
-      function A(e) {
+      function G(e) {
         const { category: t } = e,
           [n, a] = (0, s.useState)(!1),
           [i, r] = (0, s.useState)(0);
@@ -19637,7 +19697,7 @@
                   { onClick: () => r(i + 1) },
                   "Refresh Stats",
                 ),
-                s.createElement(G, { category: t }),
+                s.createElement(A, { category: t }),
               )
             : s.createElement(d.ji, {
                 checked: n,
@@ -19647,7 +19707,7 @@
               }),
         );
       }
-      function G(e) {
+      function A(e) {
         var t;
         const { category: n } = e,
           a = (0, i.LV)(n.must, n.any, n.mustnot);
@@ -20085,7 +20145,7 @@
             { className: S.ThemeDetails },
             "handle: ",
             t.handle,
-            o.createElement(G, { category: t }),
+            o.createElement(A, { category: t }),
           ),
         );
       }
@@ -20113,7 +20173,7 @@
                 ),
               ),
               o.createElement("div", null, " Rank: ", t.long_term_sale_rank),
-              Boolean(n) && o.createElement(A, Object.assign({}, e)),
+              Boolean(n) && o.createElement(G, Object.assign({}, e)),
             )
           : o.createElement(
               "div",
@@ -20124,7 +20184,7 @@
               t.long_term_sale_rank,
             );
       }
-      function A(e) {
+      function G(e) {
         const { info: t, category: n } = e,
           a = (0, i.wl)(t.appid),
           s = (0, i.cZ)(n);
@@ -20149,7 +20209,7 @@
             ),
         );
       }
-      function G(e) {
+      function A(e) {
         var t, n, i;
         const { mapStoreTags: s, mapStoreCategories: r } = (0, a.Sz)(),
           { category: l } = e;

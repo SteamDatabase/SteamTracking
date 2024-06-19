@@ -40,16 +40,16 @@
     },
     42695: (e, t, n) => {
       "use strict";
-      n.d(t, { q: () => u });
+      n.d(t, { q: () => d });
       var o = n(85556),
         r = n(79545),
         a = n(14351),
-        i = n(68785),
-        s = n(46984),
-        l = n(16997);
-      const c = new i.sO("ReactUsageReporting").Debug,
-        m = 1e3 * s._H.PerMinute;
-      class d {
+        l = n(68785),
+        i = n(46984),
+        s = n(16997);
+      const c = new l.sO("ReactUsageReporting").Debug,
+        m = 1e3 * i._H.PerMinute;
+      class u {
         constructor() {
           (this.m_transport = null),
             (this.m_mapRoutes = new Map()),
@@ -120,12 +120,12 @@
           return this.m_strProduct;
         }
       }
-      (0, o.gn)([l.a], d.prototype, "CheckSend", null);
-      const u = new d();
+      (0, o.gn)([s.a], u.prototype, "CheckSend", null);
+      const d = new u();
     },
-    71270: (e, t, n) => {
+    31276: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => Ye });
+      n.r(t), n.d(t, { default: () => it });
       var o = n(47427),
         r = n(8285);
       const a = {
@@ -133,25 +133,25 @@
         AppNotes: (e, t) => `/notes/app/${e}/${null != t ? t : ""}`,
         ShortcutNotes: (e, t) => `/notes/shortcut/${e}/${null != t ? t : ""}`,
       };
-      var i = n(28017),
-        s = n(85556),
-        l = n(42718);
+      var l = n(28017),
+        i = n(85556),
+        s = n(42718);
       function c(e) {
         return e.trim();
       }
       function m(e) {
         return e.appid ? { appid: e.appid } : { shortcut: e.shortcut_name };
       }
-      const d = o.createContext({ mode: "page", store: null });
-      function u(e) {
+      const u = o.createContext({ mode: "page", store: null });
+      function d(e) {
         const {
             mode: t,
             store: n,
             closePopup: r,
             bPinnedView: a,
-            onClickURL: i,
-            bSpellcheckEnabled: s = !0,
-            setSpellcheckEnabled: l,
+            onClickURL: l,
+            bSpellcheckEnabled: i = !0,
+            setSpellcheckEnabled: s,
             children: c,
           } = e,
           m = o.useMemo(
@@ -160,19 +160,19 @@
               store: n,
               closePopup: r,
               bPinnedView: a,
-              onClickURL: i,
-              bSpellcheckEnabled: s,
-              setSpellcheckEnabled: l,
+              onClickURL: l,
+              bSpellcheckEnabled: i,
+              setSpellcheckEnabled: s,
             }),
-            [t, n, r, a, i, s, l],
+            [t, n, r, a, l, i, s],
           );
-        return o.createElement(d.Provider, { value: m }, c);
+        return o.createElement(u.Provider, { value: m }, c);
       }
       function p() {
-        return o.useContext(d).closePopup;
+        return o.useContext(u).closePopup;
       }
       function h() {
-        return o.useContext(d).store;
+        return o.useContext(u).store;
       }
       var f = n(31846);
       function b(e) {
@@ -182,22 +182,22 @@
       }
       function g(e) {
         const t = h();
-        return (0, l.useQuery)(
+        return (0, s.useQuery)(
           b(e),
           () =>
-            (0, s.mG)(this, void 0, void 0, function* () {
+            (0, i.mG)(this, void 0, void 0, function* () {
               return (yield t.GetGameNotesList(e, !0)) || [];
             }),
           { enabled: !!e },
         );
       }
       function E(e, t) {
-        const n = (0, l.useQueryClient)(),
+        const n = (0, s.useQueryClient)(),
           o = h(),
           r = e.id;
-        return (0, l.useMutation)(
+        return (0, s.useMutation)(
           () =>
-            (0, s.mG)(this, void 0, void 0, function* () {
+            (0, i.mG)(this, void 0, void 0, function* () {
               return e.not_persisted ? r : yield o.DeleteGameNote(m(e), r);
             }),
           {
@@ -224,9 +224,9 @@
         );
       }
       var T = n(73799),
-        C = n.n(T),
-        N = n(79545),
-        k = n(18015),
+        k = n.n(T),
+        C = n(79545),
+        N = n(18015),
         y = n(40057),
         S = n(65255),
         w = n(77936);
@@ -235,32 +235,32 @@
       function B(e) {
         return `appinfo_${e}_${S.De.LANGUAGE}`;
       }
-      function P(e) {
+      function F(e) {
         return Boolean(e && Date.now() - e.timeCached < G);
       }
-      function F(e) {
+      function P(e) {
         const t = (0, y.bY)(),
           n = (0, y.y$)();
-        return (0, l.useQuery)(
+        return (0, s.useQuery)(
           ["appinfo", e],
           () =>
-            (0, s.mG)(this, void 0, void 0, function* () {
+            (0, i.mG)(this, void 0, void 0, function* () {
               return (function (e, t) {
                 return (
                   x ||
-                    (x = new (C())(
+                    (x = new (k())(
                       (n) =>
-                        (0, s.mG)(this, void 0, void 0, function* () {
+                        (0, i.mG)(this, void 0, void 0, function* () {
                           const o = new Map();
                           (yield Promise.all(n.map((e) => t.GetObject(B(e)))))
-                            .filter(P)
+                            .filter(F)
                             .forEach(({ value: e }) => o.set(e.appid, e));
                           const r = n.slice().filter((e) => !o.has(e));
                           if (r.length) {
-                            const n = N.gA.Init(k.Fi);
+                            const n = C.gA.Init(N.Fi);
                             n.Body().set_language((0, w.jM)(S.De.LANGUAGE)),
                               n.Body().set_appids(r);
-                            const a = yield k.AE.GetApps(e, n);
+                            const a = yield N.AE.GetApps(e, n);
                             if (1 != a.GetEResult()) throw a.GetErrorMessage();
                             a.Body()
                               .toObject()
@@ -287,7 +287,7 @@
       function I() {
         const { data: e, isLoading: t } = (function () {
           const e = h();
-          return (0, l.useQuery)(["GameNotes", "GamesWithNotes"], () =>
+          return (0, s.useQuery)(["GameNotes", "GamesWithNotes"], () =>
             e.GetGamesWithNotes(),
           );
         })();
@@ -310,12 +310,12 @@
       }
       function L(e) {
         const { game: t } = e,
-          n = F(t.appid);
+          n = P(t.appid);
         return o.createElement(
           "li",
           null,
           o.createElement(
-            i.rU,
+            l.rU,
             { to: a.AppNotes(t.appid) },
             null == n ? void 0 : n.name,
           ),
@@ -324,702 +324,92 @@
       var R = n(42695),
         H = n(1485),
         A = n(58538),
-        M = n(50898),
-        U = n(20564),
-        O = n(96394),
-        X = n(2761),
-        j = n(93109),
-        $ = n(23612),
-        W = n(91618),
-        V = n(42287);
-      function z(e) {
-        const {
-            visible: t = !0,
-            className: n,
-            keepMounted: r = !1,
-            expandDirection: a = "height",
-            msAnimationDuration: i = 250,
-            children: s,
-          } = e,
-          {
-            style: l,
-            active: c,
-            refDiv: m,
-          } = (function (e, t = "height", n = 250) {
-            const r = o.useRef(),
-              a = o.useRef(!0),
-              [i, s] = o.useState("idle"),
-              [l, c] = o.useState({});
-            o.useLayoutEffect(() => {
-              a.current ? (a.current = !1) : s("start");
-            }, [e]),
-              o.useLayoutEffect(() => {
-                const n = r.current,
-                  o = "height" == t ? "scrollHeight" : "scrollWidth";
-                if ("start" == i) {
-                  const r = n[o];
-                  c((n) =>
-                    Object.assign(
-                      Object.assign({ [t]: e ? "0px" : `${r}px` }, n),
-                      { overflow: "hidden" },
-                    ),
-                  ),
-                    s("active");
-                } else if ("active" == i) {
-                  n.scrollTop;
-                  const r = n[o];
-                  c({ overflow: "hidden", [t]: e ? `${r}px` : "0px" });
-                  const a = () => {
-                    V.unstable_batchedUpdates(() => {
-                      c({}), s("idle");
-                    });
-                  };
-                  return (
-                    n.addEventListener("transitionend", a),
-                    () => {
-                      n.removeEventListener("transitionend", a);
-                    }
-                  );
-                }
-              }, [i, e]);
-            const m = Object.assign(Object.assign({}, l), {
-              transition: `${t} ${n}ms`,
-            });
-            return { style: m, active: "idle" != i, refDiv: r };
-          })(t, a, i);
-        return t || c || r
-          ? o.createElement("div", { className: n, ref: m, style: l }, s)
-          : null;
-      }
-      var Z = n(13129),
-        Q = n(20417),
-        q = n(56836);
-      function Y(e) {
-        const { schema: t, children: n } = e,
-          { callbacks: r, view: a } = re(),
-          [i, s] = o.useState(() => (0, j.MW)(a.state, t.marks.link)),
-          l = o.useCallback((e) => s((0, j.MW)(e.state, t.marks.link)), [t]);
-        (0, Q.Qg)(r, l);
-        const [c, m, d] = (0, Q.X9)();
-        return o.createElement(
-          o.Fragment,
-          null,
-          o.createElement(
-            M.Yy,
-            { active: c },
-            o.createElement(K, {
-              schema: t,
-              active: c,
-              closeModal: d,
-              view: a,
-            }),
-          ),
-          o.createElement(
-            H.zx,
-            {
-              className: (0, Z.Z)(q.CommandButton, i && q.Toggled),
-              onMouseDown: (e) => {
-                e.preventDefault(), m();
-              },
-              title: (0, f.Xx)("#FormattingToolbar_InsertLink"),
-            },
-            n,
-          ),
-        );
-      }
-      const K = o.memo(function (e) {
-        const { schema: t, active: n, closeModal: r, view: a } = e,
-          [i, s] = o.useState(""),
-          [l, c] = o.useState(""),
-          m = o.useRef(),
-          d = o.useRef();
-        return (
-          o.useLayoutEffect(() => {
-            if (n) {
-              let e = "";
-              a.state.selection.empty ||
-                (e = a.state.doc.cut(
-                  a.state.selection.from,
-                  a.state.selection.to,
-                ).textContent),
-                s(e),
-                e.startsWith("http")
-                  ? (c(e),
-                    m.current.Focus(),
-                    window.setTimeout(() => {
-                      m.current.element.select();
-                    }, 0))
-                  : 0 == e.length
-                    ? m.current.Focus()
-                    : d.current.Focus();
-            }
-          }, [n, a]),
-          o.createElement(
-            M.uH,
-            {
-              onOK: () => {
-                a.dispatch(
-                  a.state.tr.replaceRangeWith(
-                    a.state.selection.from,
-                    a.state.selection.to,
-                    t.text(i || l, [t.marks.link.create({ href: l })]),
-                  ),
-                ),
-                  a.focus(),
-                  r();
-              },
-              closeModal: r,
-              strTitle: (0, f.Xx)("#FormattingToolbar_InsertLink"),
-              strOKButtonText: (0, f.Xx)("#FormattingToolbar_InsertLink"),
-              bOKDisabled: 0 == l.length,
-            },
-            o.createElement(H.II, {
-              ref: m,
-              value: i,
-              onChange: (e) => s(e.currentTarget.value),
-              label: (0, f.Xx)("#FormattingToolbar_LinkText"),
-            }),
-            o.createElement(H.II, {
-              ref: d,
-              value: l,
-              onChange: (e) => c(e.currentTarget.value),
-              label: (0, f.Xx)("#FormattingToolbar_LinkAddress"),
-            }),
-          )
-        );
-      });
-      var J = n(59728),
-        ee = n(45492),
-        te = n(56617);
-      function ne(e) {
-        const {
-            schema: t,
-            view: n,
-            refUpdateToolbar: r,
-            className: a,
-            bSpellcheckEnabled: i,
-            setSpellcheckEnabled: s,
-          } = e,
-          [l, c] = (0, te.i4)("FormattingToolbar_Expanded", !1),
-          [m] = o.useState(() => new ee.pB());
-        o.useEffect(
-          () => ((0, Q.k$)(r, () => m.Dispatch(n)), () => (0, Q.k$)(r, void 0)),
-          [m, n, r],
-        );
-        const d = o.useMemo(() => ({ callbacks: m, view: n }), [m, n]);
-        return n
-          ? o.createElement(
-              oe.Provider,
-              { value: d },
-              o.createElement(
-                "div",
-                { className: (0, Z.Z)(q.Toolbar, a) },
-                o.createElement(
-                  ae,
-                  null,
-                  o.createElement(
-                    J.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_Undo",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      le,
-                      {
-                        title: (0, f.Xx)("#FormattingToolbar_Undo"),
-                        command: O.Yw,
-                        fnEnabledCheck: de,
-                      },
-                      o.createElement(A.DeA, null),
-                    ),
-                  ),
-                  o.createElement(
-                    J.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_Redo",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      le,
-                      {
-                        title: (0, f.Xx)("#FormattingToolbar_Redo"),
-                        command: O.KX,
-                        fnEnabledCheck: ue,
-                      },
-                      o.createElement(A.Jwt, null),
-                    ),
-                  ),
-                  o.createElement("div", { className: q.Gap }),
-                  o.createElement(
-                    J.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_Bold",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      se,
-                      {
-                        title: (0, f.Xx)("#FormattingToolbar_Bold"),
-                        mark: t.marks.strong,
-                      },
-                      o.createElement(A.DUs, null),
-                    ),
-                  ),
-                  o.createElement(
-                    J.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_Italic",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      se,
-                      {
-                        title: (0, f.Xx)("#FormattingToolbar_Italic"),
-                        mark: t.marks.italic,
-                      },
-                      o.createElement(A.tzG, null),
-                    ),
-                  ),
-                  o.createElement(
-                    J.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_Underline",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      se,
-                      {
-                        title: (0, f.Xx)("#FormattingToolbar_Underline"),
-                        mark: t.marks.underline,
-                      },
-                      o.createElement(A.nC9, null),
-                    ),
-                  ),
-                  o.createElement(
-                    J.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_Strike",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      se,
-                      {
-                        title: (0, f.Xx)("#FormattingToolbar_Strike"),
-                        mark: t.marks.strike,
-                      },
-                      o.createElement(A.z$U, null),
-                    ),
-                  ),
-                  o.createElement(
-                    J.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_InlineCode",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      se,
-                      {
-                        title: (0, f.Xx)("#FormattingToolbar_InlineCode"),
-                        mark: t.marks.code,
-                      },
-                      o.createElement(A.l2k, null),
-                    ),
-                  ),
-                  o.createElement("div", { className: q.Spacer }),
-                  o.createElement(
-                    J.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_ExpandOptions",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      H.zx,
-                      {
-                        className: (0, Z.Z)(
-                          q.CommandButton,
-                          q.ExpandButton,
-                          l && q.Toggled,
-                        ),
-                        onClick: () => c(!l),
-                      },
-                      o.createElement(A.Tt3, null),
-                    ),
-                  ),
-                ),
-                o.createElement(
-                  ae,
-                  { visible: l },
-                  o.createElement(
-                    J.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_Paragraph",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      ie,
-                      {
-                        nodeType: t.nodes.paragraph,
-                        title: (0, f.Xx)("#FormattingToolbar_Paragraph"),
-                      },
-                      o.createElement(A.Dos, null),
-                    ),
-                  ),
-                  o.createElement(
-                    J.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_HeadingLevel1",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      ie,
-                      {
-                        nodeType: t.nodes.heading,
-                        attrs: { level: 1 },
-                        title: (0, f.Xx)("#FormattingToolbar_HeadingLevelN", 1),
-                      },
-                      o.createElement(A.geY, null),
-                    ),
-                  ),
-                  o.createElement(
-                    J.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_HeadingLevel2",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      ie,
-                      {
-                        nodeType: t.nodes.heading,
-                        attrs: { level: 2 },
-                        title: (0, f.Xx)("#FormattingToolbar_HeadingLevelN", 2),
-                      },
-                      o.createElement(A.y3S, null),
-                    ),
-                  ),
-                  o.createElement(
-                    J.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_HeadingLevel3",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      ie,
-                      {
-                        nodeType: t.nodes.heading,
-                        attrs: { level: 3 },
-                        title: (0, f.Xx)("#FormattingToolbar_HeadingLevelN", 3),
-                      },
-                      o.createElement(A.Zhu, null),
-                    ),
-                  ),
-                  o.createElement(
-                    J.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_HeadingLevel4",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      ie,
-                      {
-                        nodeType: t.nodes.heading,
-                        attrs: { level: 4 },
-                        title: (0, f.Xx)("#FormattingToolbar_HeadingLevelN", 4),
-                      },
-                      o.createElement(A.P2P, null),
-                    ),
-                  ),
-                  o.createElement(
-                    J.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_HeadingLevel5",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      ie,
-                      {
-                        nodeType: t.nodes.heading,
-                        attrs: { level: 5 },
-                        title: (0, f.Xx)("#FormattingToolbar_HeadingLevelN", 5),
-                      },
-                      o.createElement(A.Lb, null),
-                    ),
-                  ),
-                  o.createElement(
-                    J.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_CodeBlock",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      ie,
-                      {
-                        nodeType: t.nodes.code_block,
-                        title: (0, f.Xx)("#FormattingToolbar_CodeBlock"),
-                      },
-                      o.createElement(A.N4L, null),
-                    ),
-                  ),
-                  o.createElement("div", { className: q.Gap }),
-                  o.createElement(
-                    J.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_BulletedList",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      ce,
-                      {
-                        title: (0, f.Xx)("#FormattingToolbar_BulletedList"),
-                        command: X.KI(t.nodes.bullet_list),
-                      },
-                      o.createElement(A.RAD, null),
-                    ),
-                  ),
-                  o.createElement(
-                    J.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_IndentList",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      ce,
-                      {
-                        title: (0, f.Xx)("#FormattingToolbar_IndentList"),
-                        command: X.IB(t.nodes.list_item),
-                      },
-                      o.createElement(A.FYd, null),
-                    ),
-                  ),
-                  o.createElement(
-                    J.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_OutdentList",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      ce,
-                      {
-                        title: (0, f.Xx)("#FormattingToolbar_OutdentList"),
-                        command: X.bw(t.nodes.list_item),
-                      },
-                      o.createElement(A.LcB, null),
-                    ),
-                  ),
-                  o.createElement("div", { className: q.Gap }),
-                  o.createElement(
-                    J.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_InsertLink",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      Y,
-                      { schema: t },
-                      o.createElement(A.hhG, null),
-                    ),
-                  ),
-                  o.createElement("div", { className: q.Spacer }),
-                  s &&
-                    o.createElement(
-                      J.HP,
-                      {
-                        toolTipContent: i
-                          ? "#FormattingToolbar_DisableSpellcheck"
-                          : "#FormattingToolbar_EnableSpellcheck",
-                        direction: "bottom",
-                      },
-                      o.createElement(
-                        me,
-                        { toggled: i, onClick: () => s(!i) },
-                        o.createElement(A.cSC, null),
-                      ),
-                    ),
-                ),
-              ),
-            )
-          : null;
-      }
-      const oe = o.createContext(void 0),
-        re = () => o.useContext(oe);
-      function ae(e) {
-        return o.createElement(
-          z,
-          { visible: e.visible },
-          o.createElement(
-            W.s,
-            { className: (0, Z.Z)(q.ToolbarRow), "flow-children": "row" },
-            e.children,
-          ),
-        );
-      }
-      function ie(e) {
-        const { nodeType: t, title: n, attrs: r, children: a } = e,
-          { callbacks: i, view: s } = re(),
-          [l, c] = o.useState(() => (0, j.pp)(s.state, t, r)),
-          m = o.useCallback((e) => c((0, j.pp)(e.state, t, r)), [t, r]);
-        (0, Q.Qg)(i, m);
-        const d = o.useMemo(() => $.uJ(t, r), [r, t]);
-        return o.createElement(ce, {
-          command: d,
-          title: n,
-          toggled: l,
-          children: a,
-        });
-      }
-      function se(e) {
-        const { mark: t, title: n, children: r } = e,
-          { callbacks: a, view: i } = re(),
-          [s, l] = o.useState(() => (0, j.MW)(i.state, t)),
-          c = o.useCallback((e) => l((0, j.MW)(e.state, t)), [t]);
-        (0, Q.Qg)(a, c);
-        const m = o.useMemo(() => $.w9(t), [t]);
-        return o.createElement(ce, {
-          command: m,
-          title: n,
-          toggled: s,
-          children: r,
-        });
-      }
-      function le(e) {
-        const { fnEnabledCheck: t } = e,
-          n = (0, s._T)(e, ["fnEnabledCheck"]),
-          { callbacks: r, view: a } = re(),
-          [i, l] = o.useState(() => t(a)),
-          c = o.useCallback((e) => l(t(e)), [t]);
-        return (
-          (0, Q.Qg)(r, c),
-          o.createElement(ce, Object.assign({}, n, { disabled: !i }))
-        );
-      }
-      function ce(e) {
-        const {
-            command: t,
-            toggled: n,
-            title: r,
-            disabled: a,
-            children: i,
-          } = e,
-          { view: s } = re();
-        return o.createElement(
-          H.zx,
-          {
-            className: (0, Z.Z)(q.CommandButton, n && q.Toggled),
-            title: r,
-            onMouseDown: (e) => {
-              e.preventDefault(), t(s.state, s.dispatch, s);
-            },
-            disabled: !0 === a,
-            focusable: !a,
-          },
-          i,
-        );
-      }
-      function me(e) {
-        const {
-          onClick: t,
-          toggled: n,
-          title: r,
-          disabled: a,
-          children: i,
-        } = e;
-        return o.createElement(
-          H.zx,
-          {
-            className: (0, Z.Z)(q.CommandButton, n && q.Toggled),
-            title: r,
-            onMouseDown: (e) => {
-              e.preventDefault(), t();
-            },
-            disabled: !0 === a,
-          },
-          i,
-        );
-      }
-      function de(e) {
-        return O.of(e.state) > 0;
-      }
-      function ue(e) {
-        return O.AH(e.state) > 0;
-      }
-      var pe = n(31934),
-        he = n(4005),
-        fe = n(28147),
-        be = n(6673),
-        ge = n(32300),
-        Ee = n(23126),
-        _e = n(13974),
-        ve = n(35643),
-        Te = n(50423),
-        Ce = n(31643);
-      function Ne() {
+        U = n(50898),
+        M = n(20564),
+        O = n(31934),
+        X = n(4005),
+        j = n(28147),
+        $ = n(6673),
+        W = n(32300),
+        V = n(93109),
+        z = n(23126),
+        Z = n(91618),
+        Q = n(13974),
+        q = n(35643),
+        Y = n(50423),
+        K = n(31643);
+      function J() {
         const [e, t] = o.useState(),
           [n, r] = o.useState(),
-          [a, i] = o.useState(),
-          s = o.useMemo(
+          [a, l] = o.useState(),
+          i = o.useMemo(
             () =>
-              new he.Sy({
+              new X.Sy({
                 props: {
                   handleDOMEvents: {
                     mouseover: (e, n) => {
                       const o = n.target;
-                      if ((0, Te.GB)(o) && "A" == o.nodeName) {
+                      if ((0, Y.GB)(o) && "A" == o.nodeName) {
                         const e = o.getBoundingClientRect();
-                        t(e.left + e.width / 2), r(e.bottom + 2), i(o);
-                      } else i(void 0);
+                        t(e.left + e.width / 2), r(e.bottom + 2), l(o);
+                      } else l(void 0);
                       return !1;
                     },
-                    mouseleave: (e, t) => (i(void 0), !1),
+                    mouseleave: (e, t) => (l(void 0), !1),
                   },
                 },
               }),
             [],
           );
-        if (((0, ge.U$)(s), !a)) return null;
-        const l = a.getAttribute("href");
+        if (((0, W.U$)(i), !a)) return null;
+        const s = a.getAttribute("href");
         return o.createElement(
-          ke,
+          ee,
           { top: n, left: e },
-          o.createElement("div", { className: Ce.Link }, l),
+          o.createElement("div", { className: K.Link }, s),
           o.createElement(
             "div",
-            { className: Ce.LinkHelp },
+            { className: K.LinkHelp },
             (0, f.Xx)("#UserGameNotes_ClickToOpenLink"),
           ),
         );
       }
-      function ke(e) {
+      function ee(e) {
         const { top: t, left: n, children: r } = e,
-          [a, i] = o.useState(0),
-          s = o.useRef();
+          [a, l] = o.useState(0),
+          i = o.useRef();
         o.useLayoutEffect(() => {
-          i(s.current.getBoundingClientRect().width);
+          l(i.current.getBoundingClientRect().width);
         }, [t, n, r]);
-        const l = { top: `${t}px`, left: `${Math.max(n - a / 2, 12)}px` };
+        const s = { top: `${t}px`, left: `${Math.max(n - a / 2, 12)}px` };
         return o.createElement(
           "div",
-          { className: Ce.Hover, style: l, ref: s },
+          { className: K.Hover, style: s, ref: i },
           r,
         );
       }
-      var ye = n(14609),
-        Se = n(13499),
-        we = n(37563);
-      function xe(e) {
+      var te = n(14609),
+        ne = n(13129),
+        oe = n(20417),
+        re = n(13499),
+        ae = n(37563),
+        le = n(56836);
+      function ie(e) {
         const {
             schemaConfig: t,
             bbcode: n,
             className: r,
             onUpdate: a,
-            refView: i,
-            onClickURL: s,
-            bSpellcheckEnabled: l = !0,
+            refView: l,
+            onClickURL: i,
+            bSpellcheckEnabled: s = !0,
             panelProps: c,
             children: m,
           } = e,
-          [d, u] = o.useState(),
+          [u, d] = o.useState(),
           p = o.useRef(),
           h = o.useRef();
-        h.current = s || Ge;
+        h.current = i || se;
         const b = o.useCallback(
           (e) => {
             var n, o;
@@ -1031,68 +421,68 @@
               );
             const r = p.current;
             r && r.destroy(),
-              (p.current = new pe.tk(e, {
+              (p.current = new O.tk(e, {
                 state:
                   null !== (o = null == r ? void 0 : r.state) && void 0 !== o
                     ? o
-                    : he.yy.create({ schema: t.pm_schema }),
+                    : X.yy.create({ schema: t.pm_schema }),
                 handleClickOn: (...e) =>
-                  (function (e, t, n, o, r, a, i, s) {
-                    if (s && (i.ctrlKey || 1 == i.button)) {
+                  (function (e, t, n, o, r, a, l, i) {
+                    if (i && (l.ctrlKey || 1 == l.button)) {
                       const n = r
                         .resolve(o - a)
                         .marks()
                         .find((t) => t.type == e.marks.link);
                       if (n)
-                        return t(n.attrs.href, i.view), i.preventDefault(), !0;
+                        return t(n.attrs.href, l.view), l.preventDefault(), !0;
                     }
                     return !1;
                   })(t.pm_schema, h.current, ...e),
                 clipboardTextParser: (...e) =>
                   (function (e, t, n, o, r) {
                     let a,
-                      i = [];
-                    for (; (a = t.match(Se.H7)); )
-                      a.index > 0 && i.push(e.text(t.substring(0, a.index))),
-                        i.push(
+                      l = [];
+                    for (; (a = t.match(re.H7)); )
+                      a.index > 0 && l.push(e.text(t.substring(0, a.index))),
+                        l.push(
                           e.text(a[0], [
-                            e.marks.link.create({ href: (0, Se.Pm)(a[0]) }),
+                            e.marks.link.create({ href: (0, re.Pm)(a[0]) }),
                           ]),
                         ),
                         (t = t.substring(a.index + a[0].length));
-                    t.length && i.push(e.text(t));
-                    return new Ee.p2(Ee.HY.from(i), n.start(), n.end());
+                    t.length && l.push(e.text(t));
+                    return new z.p2(z.HY.from(l), n.start(), n.end());
                   })(t.pm_schema, ...e),
               })),
-              u(p.current),
+              d(p.current),
               r || p.current.focus();
           },
           [t],
         );
         o.useEffect(() => {
-          d && d.updateState((0, fe.B)((0, be.B)(n, t), t.pm_schema, d.state));
-        }, [t, n, d]),
-          (0, Q.LY)(i, d);
+          u && u.updateState((0, j.B)((0, $.B)(n, t), t.pm_schema, u.state));
+        }, [t, n, u]),
+          (0, oe.LY)(l, u);
         const {
             refDiv: g,
             onActivate: E,
             onGamepadDirection: _,
           } = (function (e) {
-            const t = (0, we.qt)(),
+            const t = (0, ae.qt)(),
               n = o.useRef(),
               r = o.useCallback(
                 (e) => {
-                  (0, ve.LP)(e, t.IN_VR);
+                  (0, q.LP)(e, t.IN_VR);
                 },
                 [t.IN_VR],
               ),
-              a = (0, ve.CJ)({ onTextEntered: r }, () => {
+              a = (0, q.CJ)({ onTextEntered: r }, () => {
                 var e;
                 return null === (e = n.current) || void 0 === e
                   ? void 0
                   : e.ownerDocument.defaultView;
               }),
-              i = o.useCallback(() => {
+              l = o.useCallback(() => {
                 var t, o;
                 if (
                   (a.ShowVirtualKeyboard(),
@@ -1107,28 +497,28 @@
                       a = r.offsetTop;
                     if (void 0 !== a && a >= n.current.scrollTop) {
                       let t = r.getBoundingClientRect();
-                      (0, j.VM)(e.current, t.left, t.top);
+                      (0, V.VM)(e.current, t.left, t.top);
                       break;
                     }
                   }
                 }
               }, [a, e]),
-              s = o.useCallback((e) => e.currentTarget == e.target, []),
-              l = (0, _e.pj)(n, null, null, s);
-            return { refDiv: n, onActivate: i, onGamepadDirection: l };
+              i = o.useCallback((e) => e.currentTarget == e.target, []),
+              s = (0, Q.pj)(n, null, null, i);
+            return { refDiv: n, onActivate: l, onGamepadDirection: s };
           })(p),
-          v = (0, Q.BE)(g, b);
+          v = (0, oe.BE)(g, b);
         return o.createElement(
-          ge.xh,
-          { view: d },
+          W.xh,
+          { view: u },
           o.createElement(
-            W.s,
+            Z.s,
             Object.assign(
               {
-                key: `editordiv_${l}`,
-                className: (0, Z.Z)(r, q.Container),
+                key: `editordiv_${s}`,
+                className: (0, ne.Z)(r, le.Container),
                 ref: v,
-                spellCheck: l,
+                spellCheck: s,
                 focusable: !0,
                 onActivate: E,
                 onOKActionDescription: (0, f.Xx)("#UserGameNotes_Edit"),
@@ -1137,34 +527,35 @@
               c,
             ),
           ),
-          o.createElement(ge.l8, { onUpdate: a, schema: t.pm_schema }),
-          o.createElement(Ne, null),
+          o.createElement(W.l8, { onUpdate: a, schema: t.pm_schema }),
+          o.createElement(J, null),
           m,
         );
       }
-      function Ge(e, t) {
-        (0, ye.b8)(t, e);
+      function se(e, t) {
+        (0, te.b8)(t, e);
       }
-      var Be = n(25251),
-        Pe = n(79500),
-        Fe = n(85314);
-      const De = {
-          nodes: Object.assign({}, Pe.Pp.nodes),
-          marks: Object.assign({}, Pe.Pp.marks),
+      var ce = n(59728),
+        me = n(25251),
+        ue = n(79500),
+        de = n(85314);
+      const pe = {
+          nodes: Object.assign({}, ue.Pp.nodes),
+          marks: Object.assign({}, ue.Pp.marks),
         },
-        Ie = new Fe.F(De);
-      var Le = n(80878);
-      const Re =
+        he = new de.F(pe);
+      var fe = n(80878);
+      const be =
         n.p +
         "images/applications/community/image_error.svg?v=valveisgoodatcaching";
-      function He(e) {
-        const { uploadImage: t, nodeType: n, nMaxImageSize: r = Me } = e;
+      function ge(e) {
+        const { uploadImage: t, nodeType: n, nMaxImageSize: r = _e } = e;
         return (
-          (0, ge.U$)(
+          (0, W.U$)(
             o.useMemo(
               () =>
-                new he.Sy({
-                  key: new he.H$(`PMUploadImage_${n.name}`),
+                new X.Sy({
+                  key: new X.H$(`PMUploadImage_${n.name}`),
                   props: {
                     transformPasted: (...e) =>
                       (function (e, t, n, o) {
@@ -1177,11 +568,11 @@
                         ) {
                           let t = [
                             e.create({
-                              src: Re,
+                              src: be,
                               title: (0, f.Xx)("#UserGameNotes_ImageTooLarge"),
                             }),
                           ];
-                          return new Ee.p2(Ee.HY.from(t), 0, 0);
+                          return new z.p2(z.HY.from(t), 0, 0);
                         }
                         return n;
                       })(n, r, ...e),
@@ -1195,12 +586,12 @@
                         a.length > 0 &&
                           setTimeout(() => {
                             !(function (e, t, n) {
-                              (0, s.mG)(this, void 0, void 0, function* () {
+                              (0, i.mG)(this, void 0, void 0, function* () {
                                 for (const o of e) {
                                   const e = yield fetch(o),
                                     r = yield e.blob(),
-                                    a = (0, Le.L4)(yield r.arrayBuffer());
-                                  Ae(
+                                    a = (0, fe.L4)(yield r.arrayBuffer());
+                                  Ee(
                                     o,
                                     yield n(e.headers.get("Content-Type"), a),
                                     t,
@@ -1218,7 +609,7 @@
           null
         );
       }
-      function Ae(e, t, n) {
+      function Ee(e, t, n) {
         n.state.doc.descendants((o, r) => {
           if ("image" === o.type.name && o.attrs.src === e) {
             const e = n.state.tr.setNodeAttribute(r, "src", t);
@@ -1226,28 +617,686 @@
           }
         });
       }
-      const Me = 1048576;
-      const Ue = 15;
+      const _e = 1048576;
+      var ve = n(42287);
+      function Te(e) {
+        const {
+            visible: t = !0,
+            className: n,
+            keepMounted: r = !1,
+            expandDirection: a = "height",
+            msAnimationDuration: l = 250,
+            children: i,
+          } = e,
+          {
+            style: s,
+            active: c,
+            refDiv: m,
+          } = (function (e, t = "height", n = 250) {
+            const r = o.useRef(),
+              a = o.useRef(!0),
+              [l, i] = o.useState("idle"),
+              [s, c] = o.useState({});
+            o.useLayoutEffect(() => {
+              a.current ? (a.current = !1) : i("start");
+            }, [e]),
+              o.useLayoutEffect(() => {
+                const n = r.current,
+                  o = "height" == t ? "scrollHeight" : "scrollWidth";
+                if ("start" == l) {
+                  const r = n[o];
+                  c((n) =>
+                    Object.assign(
+                      Object.assign({ [t]: e ? "0px" : `${r}px` }, n),
+                      { overflow: "hidden" },
+                    ),
+                  ),
+                    i("active");
+                } else if ("active" == l) {
+                  n.scrollTop;
+                  const r = n[o];
+                  c({ overflow: "hidden", [t]: e ? `${r}px` : "0px" });
+                  const a = () => {
+                    ve.unstable_batchedUpdates(() => {
+                      c({}), i("idle");
+                    });
+                  };
+                  return (
+                    n.addEventListener("transitionend", a),
+                    () => {
+                      n.removeEventListener("transitionend", a);
+                    }
+                  );
+                }
+              }, [l, e]);
+            const m = Object.assign(Object.assign({}, s), {
+              transition: `${t} ${n}ms`,
+            });
+            return { style: m, active: "idle" != l, refDiv: r };
+          })(t, a, l);
+        return t || c || r
+          ? o.createElement("div", { className: n, ref: m, style: s }, i)
+          : null;
+      }
+      var ke = n(96394),
+        Ce = n(2761),
+        Ne = n(23612),
+        ye = n(45492);
+      const Se = () => o.useContext(xe);
+      function we(e) {
+        const { view: t, refUpdateToolbar: n, children: r } = e,
+          a = o.useRef();
+        a.current || (a.current = new ye.pB()),
+          o.useEffect(
+            () => (
+              (0, oe.k$)(n, () => a.current.Dispatch(t)),
+              () => (0, oe.k$)(n, void 0)
+            ),
+            [t, n],
+          );
+        const l = o.useMemo(() => ({ callbacks: a.current, view: t }), [t]);
+        return t ? o.createElement(xe.Provider, { value: l }, r) : null;
+      }
+      const xe = o.createContext(void 0);
+      function Ge() {
+        return o.createElement("div", { className: le.Gap });
+      }
+      function Be() {
+        return o.createElement("div", { className: le.Spacer });
+      }
+      function Fe(e) {
+        return o.createElement(
+          Z.s,
+          { className: (0, ne.Z)(le.ToolbarRow), "flow-children": "row" },
+          e.children,
+        );
+      }
+      function Pe(e) {
+        const { nodeType: t, title: n, attrs: r, children: a } = e,
+          { callbacks: l, view: i } = Se(),
+          [s, c] = o.useState(() => (0, V.pp)(i.state, t, r)),
+          m = o.useCallback((e) => c((0, V.pp)(e.state, t, r)), [t, r]);
+        (0, oe.Qg)(l, m);
+        const u = o.useMemo(() => Ne.uJ(t, r), [r, t]);
+        return o.createElement(Le, {
+          command: u,
+          title: n,
+          toggled: s,
+          children: a,
+        });
+      }
+      function De(e) {
+        const { mark: t, title: n, children: r } = e,
+          { callbacks: a, view: l } = Se(),
+          [i, s] = o.useState(() => (0, V.MW)(l.state, t)),
+          c = o.useCallback((e) => s((0, V.MW)(e.state, t)), [t]);
+        (0, oe.Qg)(a, c);
+        const m = o.useMemo(() => Ne.w9(t), [t]);
+        return o.createElement(Le, {
+          command: m,
+          title: n,
+          toggled: i,
+          children: r,
+        });
+      }
+      function Ie(e) {
+        const { fnEnabledCheck: t } = e,
+          n = (0, i._T)(e, ["fnEnabledCheck"]),
+          { callbacks: r, view: a } = Se(),
+          [l, s] = o.useState(() => t(a)),
+          c = o.useCallback((e) => s(t(e)), [t]);
+        return (
+          (0, oe.Qg)(r, c),
+          o.createElement(Le, Object.assign({}, n, { disabled: !l }))
+        );
+      }
+      function Le(e) {
+        const {
+            command: t,
+            toggled: n,
+            title: r,
+            disabled: a,
+            children: l,
+          } = e,
+          { view: i } = Se();
+        return o.createElement(
+          H.zx,
+          {
+            className: (0, ne.Z)(le.CommandButton, n && le.Toggled),
+            title: r,
+            onMouseDown: (e) => {
+              e.preventDefault(), t(i.state, i.dispatch, i);
+            },
+            disabled: !0 === a,
+            focusable: !a,
+          },
+          l,
+        );
+      }
+      function Re(e) {
+        const {
+          onClick: t,
+          toggled: n,
+          title: r,
+          disabled: a,
+          children: l,
+        } = e;
+        return o.createElement(
+          H.zx,
+          {
+            className: (0, ne.Z)(le.CommandButton, n && le.Toggled),
+            title: r,
+            onMouseDown: (e) => {
+              e.preventDefault(), t();
+            },
+            disabled: !0 === a,
+          },
+          l,
+        );
+      }
+      function He(e) {
+        const { schema: t, children: n } = e,
+          { callbacks: r, view: a } = Se(),
+          [l, i] = o.useState(() => (0, V.MW)(a.state, t.marks.link)),
+          s = o.useCallback((e) => i((0, V.MW)(e.state, t.marks.link)), [t]);
+        (0, oe.Qg)(r, s);
+        const [c, m, u] = (0, oe.X9)();
+        return o.createElement(
+          o.Fragment,
+          null,
+          o.createElement(
+            U.Yy,
+            { active: c },
+            o.createElement(Ae, {
+              schema: t,
+              active: c,
+              closeModal: u,
+              view: a,
+            }),
+          ),
+          o.createElement(
+            H.zx,
+            {
+              className: (0, ne.Z)(le.CommandButton, l && le.Toggled),
+              onMouseDown: (e) => {
+                e.preventDefault(), m();
+              },
+              title: (0, f.Xx)("#FormattingToolbar_InsertLink"),
+            },
+            n,
+          ),
+        );
+      }
+      const Ae = o.memo(function (e) {
+        const { schema: t, active: n, closeModal: r, view: a } = e,
+          [l, i] = o.useState(""),
+          [s, c] = o.useState(""),
+          m = o.useRef(),
+          u = o.useRef();
+        return (
+          o.useLayoutEffect(() => {
+            if (n) {
+              let e = "";
+              a.state.selection.empty ||
+                (e = a.state.doc.cut(
+                  a.state.selection.from,
+                  a.state.selection.to,
+                ).textContent),
+                i(e),
+                e.startsWith("http")
+                  ? (c(e),
+                    m.current.Focus(),
+                    window.setTimeout(() => {
+                      m.current.element.select();
+                    }, 0))
+                  : 0 == e.length
+                    ? m.current.Focus()
+                    : u.current.Focus();
+            }
+          }, [n, a]),
+          o.createElement(
+            U.uH,
+            {
+              onOK: () => {
+                a.dispatch(
+                  a.state.tr.replaceRangeWith(
+                    a.state.selection.from,
+                    a.state.selection.to,
+                    t.text(l || s, [t.marks.link.create({ href: s })]),
+                  ),
+                ),
+                  a.focus(),
+                  r();
+              },
+              closeModal: r,
+              strTitle: (0, f.Xx)("#FormattingToolbar_InsertLink"),
+              strOKButtonText: (0, f.Xx)("#FormattingToolbar_InsertLink"),
+              bOKDisabled: 0 == s.length,
+            },
+            o.createElement(H.II, {
+              ref: m,
+              value: l,
+              onChange: (e) => i(e.currentTarget.value),
+              label: (0, f.Xx)("#FormattingToolbar_LinkText"),
+            }),
+            o.createElement(H.II, {
+              ref: u,
+              value: s,
+              onChange: (e) => c(e.currentTarget.value),
+              label: (0, f.Xx)("#FormattingToolbar_LinkAddress"),
+            }),
+          )
+        );
+      });
+      function Ue() {
+        return o.createElement(
+          o.Fragment,
+          null,
+          o.createElement(
+            ce.HP,
+            { toolTipContent: "#FormattingToolbar_Undo", direction: "bottom" },
+            o.createElement(
+              Ie,
+              {
+                title: (0, f.Xx)("#FormattingToolbar_Undo"),
+                command: ke.Yw,
+                fnEnabledCheck: Me,
+              },
+              o.createElement(A.DeA, null),
+            ),
+          ),
+          o.createElement(
+            ce.HP,
+            { toolTipContent: "#FormattingToolbar_Redo", direction: "bottom" },
+            o.createElement(
+              Ie,
+              {
+                title: (0, f.Xx)("#FormattingToolbar_Redo"),
+                command: ke.KX,
+                fnEnabledCheck: Oe,
+              },
+              o.createElement(A.Jwt, null),
+            ),
+          ),
+        );
+      }
+      function Me(e) {
+        return ke.of(e.state) > 0;
+      }
       function Oe(e) {
+        return ke.AH(e.state) > 0;
+      }
+      function Xe(e) {
+        const { schema: t } = e;
+        return o.createElement(
+          o.Fragment,
+          null,
+          o.createElement(
+            ce.HP,
+            { toolTipContent: "#FormattingToolbar_Bold", direction: "bottom" },
+            o.createElement(
+              De,
+              {
+                title: (0, f.Xx)("#FormattingToolbar_Bold"),
+                mark: t.marks.strong,
+              },
+              o.createElement(A.DUs, null),
+            ),
+          ),
+          o.createElement(
+            ce.HP,
+            {
+              toolTipContent: "#FormattingToolbar_Italic",
+              direction: "bottom",
+            },
+            o.createElement(
+              De,
+              {
+                title: (0, f.Xx)("#FormattingToolbar_Italic"),
+                mark: t.marks.italic,
+              },
+              o.createElement(A.tzG, null),
+            ),
+          ),
+          o.createElement(
+            ce.HP,
+            {
+              toolTipContent: "#FormattingToolbar_Underline",
+              direction: "bottom",
+            },
+            o.createElement(
+              De,
+              {
+                title: (0, f.Xx)("#FormattingToolbar_Underline"),
+                mark: t.marks.underline,
+              },
+              o.createElement(A.nC9, null),
+            ),
+          ),
+          o.createElement(
+            ce.HP,
+            {
+              toolTipContent: "#FormattingToolbar_Strike",
+              direction: "bottom",
+            },
+            o.createElement(
+              De,
+              {
+                title: (0, f.Xx)("#FormattingToolbar_Strike"),
+                mark: t.marks.strike,
+              },
+              o.createElement(A.z$U, null),
+            ),
+          ),
+          o.createElement(
+            ce.HP,
+            {
+              toolTipContent: "#FormattingToolbar_InlineCode",
+              direction: "bottom",
+            },
+            o.createElement(
+              De,
+              {
+                title: (0, f.Xx)("#FormattingToolbar_InlineCode"),
+                mark: t.marks.code,
+              },
+              o.createElement(A.l2k, null),
+            ),
+          ),
+        );
+      }
+      function je(e) {
+        const { schema: t } = e;
+        return o.createElement(
+          ce.HP,
+          {
+            toolTipContent: "#FormattingToolbar_Paragraph",
+            direction: "bottom",
+          },
+          o.createElement(
+            Pe,
+            {
+              nodeType: t.nodes.paragraph,
+              title: (0, f.Xx)("#FormattingToolbar_Paragraph"),
+            },
+            o.createElement(A.Dos, null),
+          ),
+        );
+      }
+      function $e(e) {
+        const { schema: t, levels: n } = e;
+        return o.createElement(
+          o.Fragment,
+          null,
+          o.createElement(
+            ce.HP,
+            {
+              toolTipContent: "#FormattingToolbar_HeadingLevel1",
+              direction: "bottom",
+            },
+            o.createElement(
+              Pe,
+              {
+                nodeType: t.nodes.heading,
+                attrs: { level: 1 },
+                title: (0, f.Xx)("#FormattingToolbar_HeadingLevelN", 1),
+              },
+              o.createElement(A.geY, null),
+            ),
+          ),
+          n >= 2 &&
+            o.createElement(
+              ce.HP,
+              {
+                toolTipContent: "#FormattingToolbar_HeadingLevel2",
+                direction: "bottom",
+              },
+              o.createElement(
+                Pe,
+                {
+                  nodeType: t.nodes.heading,
+                  attrs: { level: 2 },
+                  title: (0, f.Xx)("#FormattingToolbar_HeadingLevelN", 2),
+                },
+                o.createElement(A.y3S, null),
+              ),
+            ),
+          n >= 3 &&
+            o.createElement(
+              ce.HP,
+              {
+                toolTipContent: "#FormattingToolbar_HeadingLevel3",
+                direction: "bottom",
+              },
+              o.createElement(
+                Pe,
+                {
+                  nodeType: t.nodes.heading,
+                  attrs: { level: 3 },
+                  title: (0, f.Xx)("#FormattingToolbar_HeadingLevelN", 3),
+                },
+                o.createElement(A.Zhu, null),
+              ),
+            ),
+          n >= 4 &&
+            o.createElement(
+              ce.HP,
+              {
+                toolTipContent: "#FormattingToolbar_HeadingLevel4",
+                direction: "bottom",
+              },
+              o.createElement(
+                Pe,
+                {
+                  nodeType: t.nodes.heading,
+                  attrs: { level: 4 },
+                  title: (0, f.Xx)("#FormattingToolbar_HeadingLevelN", 4),
+                },
+                o.createElement(A.P2P, null),
+              ),
+            ),
+          n >= 5 &&
+            o.createElement(
+              ce.HP,
+              {
+                toolTipContent: "#FormattingToolbar_HeadingLevel5",
+                direction: "bottom",
+              },
+              o.createElement(
+                Pe,
+                {
+                  nodeType: t.nodes.heading,
+                  attrs: { level: 5 },
+                  title: (0, f.Xx)("#FormattingToolbar_HeadingLevelN", 5),
+                },
+                o.createElement(A.Lb, null),
+              ),
+            ),
+        );
+      }
+      function We(e) {
+        const { schema: t } = e;
+        return o.createElement(
+          o.Fragment,
+          null,
+          o.createElement(
+            ce.HP,
+            {
+              toolTipContent: "#FormattingToolbar_BulletedList",
+              direction: "bottom",
+            },
+            o.createElement(
+              Le,
+              {
+                title: (0, f.Xx)("#FormattingToolbar_BulletedList"),
+                command: Ce.KI(t.nodes.bullet_list),
+              },
+              o.createElement(A.RAD, null),
+            ),
+          ),
+          o.createElement(
+            ce.HP,
+            {
+              toolTipContent: "#FormattingToolbar_IndentList",
+              direction: "bottom",
+            },
+            o.createElement(
+              Le,
+              {
+                title: (0, f.Xx)("#FormattingToolbar_IndentList"),
+                command: Ce.IB(t.nodes.list_item),
+              },
+              o.createElement(A.FYd, null),
+            ),
+          ),
+          o.createElement(
+            ce.HP,
+            {
+              toolTipContent: "#FormattingToolbar_OutdentList",
+              direction: "bottom",
+            },
+            o.createElement(
+              Le,
+              {
+                title: (0, f.Xx)("#FormattingToolbar_OutdentList"),
+                command: Ce.bw(t.nodes.list_item),
+              },
+              o.createElement(A.LcB, null),
+            ),
+          ),
+        );
+      }
+      function Ve(e) {
+        const { schema: t } = e;
+        return o.createElement(
+          ce.HP,
+          {
+            toolTipContent: "#FormattingToolbar_InsertLink",
+            direction: "bottom",
+          },
+          o.createElement(He, { schema: t }, o.createElement(A.hhG, null)),
+        );
+      }
+      function ze(e) {
+        const { bSpellcheckEnabled: t, setSpellcheckEnabled: n } = e;
+        return o.createElement(
+          ce.HP,
+          {
+            toolTipContent: t
+              ? "#FormattingToolbar_DisableSpellcheck"
+              : "#FormattingToolbar_EnableSpellcheck",
+            direction: "bottom",
+          },
+          o.createElement(
+            Re,
+            { toggled: t, onClick: () => n(!t) },
+            o.createElement(A.cSC, null),
+          ),
+        );
+      }
+      var Ze = n(56617);
+      function Qe(e) {
+        const {
+            schema: t,
+            view: n,
+            refUpdateToolbar: r,
+            className: a,
+            bSpellcheckEnabled: l,
+            setSpellcheckEnabled: i,
+          } = e,
+          [s, c] = (0, Ze.i4)("FormattingToolbar_Expanded", !1);
+        return o.createElement(
+          we,
+          { refUpdateToolbar: r, view: n },
+          o.createElement(
+            "div",
+            { className: (0, ne.Z)(le.Toolbar, a) },
+            o.createElement(
+              Fe,
+              null,
+              o.createElement(Ue, null),
+              o.createElement(Ge, null),
+              o.createElement(Xe, { schema: t }),
+              o.createElement(Be, null),
+              o.createElement(
+                ce.HP,
+                {
+                  toolTipContent: "#FormattingToolbar_ExpandOptions",
+                  direction: "bottom",
+                },
+                o.createElement(
+                  H.zx,
+                  {
+                    className: (0, ne.Z)(
+                      le.CommandButton,
+                      le.ExpandButton,
+                      s && le.Toggled,
+                    ),
+                    onClick: () => c(!s),
+                  },
+                  o.createElement(A.Tt3, null),
+                ),
+              ),
+            ),
+            o.createElement(
+              Te,
+              { visible: s },
+              o.createElement(
+                Fe,
+                null,
+                o.createElement(je, { schema: t }),
+                o.createElement($e, { schema: t, levels: 5 }),
+                o.createElement(
+                  ce.HP,
+                  {
+                    toolTipContent: "#FormattingToolbar_CodeBlock",
+                    direction: "bottom",
+                  },
+                  o.createElement(
+                    Pe,
+                    {
+                      nodeType: t.nodes.code_block,
+                      title: (0, f.Xx)("#FormattingToolbar_CodeBlock"),
+                    },
+                    o.createElement(A.N4L, null),
+                  ),
+                ),
+                o.createElement(Ge, null),
+                o.createElement(We, { schema: t }),
+                o.createElement(Ge, null),
+                o.createElement(Ve, { schema: t }),
+                o.createElement(Be, null),
+                i &&
+                  o.createElement(ze, {
+                    bSpellcheckEnabled: l,
+                    setSpellcheckEnabled: i,
+                  }),
+              ),
+            ),
+          ),
+        );
+      }
+      const qe = 15;
+      function Ye(e) {
         const { note: t } = e,
           [n, r] = o.useState(!1),
-          [a, i] = o.useState(),
+          [a, l] = o.useState(),
           c = o.useRef(),
-          u = o.useRef(),
+          d = o.useRef(),
           b = o.useRef(t.content),
           g = o.useRef(!1),
-          v = o.useContext(d).onClickURL,
+          v = o.useContext(u).onClickURL,
           T =
-            null === (C = o.useContext(d).bSpellcheckEnabled) ||
-            void 0 === C ||
-            C;
-        var C;
-        const N = o.useContext(d).setSpellcheckEnabled,
-          k = (function (e) {
+            null === (k = o.useContext(u).bSpellcheckEnabled) ||
+            void 0 === k ||
+            k;
+        var k;
+        const C = o.useContext(u).setSpellcheckEnabled,
+          N = (function (e) {
             const t = h();
             return o.useCallback(
               (n, o) =>
-                (0, s.mG)(this, void 0, void 0, function* () {
+                (0, i.mG)(this, void 0, void 0, function* () {
                   const r = new Uint8Array(o),
                     a = yield t.UploadImage(`notes_${e}_images/`, n, r);
                   return Promise.resolve("/gamenotes/" + a);
@@ -1255,13 +1304,13 @@
               [t, e],
             );
           })(t.appid),
-          y = (0, we.id)();
+          y = (0, ae.id)();
         b.current == t.content || g.current || (b.current = t.content);
         const S = b.current,
           w = (function () {
-            const e = (0, l.useQueryClient)(),
+            const e = (0, s.useQueryClient)(),
               t = h();
-            return (0, l.useMutation)(
+            return (0, s.useMutation)(
               (e) => t.SaveGameNote(e.note, e.title, e.bbcode),
               {
                 onMutate(t) {
@@ -1300,15 +1349,15 @@
                 (g.current ||
                   ((g.current = !0),
                   R.q.ReportTrackedAction("/GameNotes/NoteModified")),
-                (u.current = () => ({
-                  title: We(e.state.doc),
-                  bbcode: (0, U.d)(e.state.doc, Ie),
+                (d.current = () => ({
+                  title: tt(e.state.doc),
+                  bbcode: (0, M.d)(e.state.doc, he),
                 })),
                 r(!0));
           }, []);
         o.useEffect(() => {
           if (!n) return;
-          let e = u.current;
+          let e = d.current;
           const o = () => {
               if (e) {
                 const { title: n, bbcode: o } = e();
@@ -1316,16 +1365,16 @@
                   w.mutate({ note: t, title: n, bbcode: o }),
                   r(!1);
               }
-              (e = void 0), (u.current = void 0);
+              (e = void 0), (d.current = void 0);
             },
-            a = window.setTimeout(o, 1e3 * Ue);
+            a = window.setTimeout(o, 1e3 * qe);
           return () => {
             window.clearTimeout(a), o();
           };
         }, [w, n, t]);
         const G = p(),
           B = E(t, G),
-          P = {
+          F = {
             onSecondaryButton: () => B.mutate(),
             onSecondaryActionDescription: (0, f.Xx)(
               "#UserGameNotes_DeleteNote",
@@ -1333,78 +1382,78 @@
           };
         return o.createElement(
           "div",
-          { className: Be.NoteEditorArea },
+          { className: me.NoteEditorArea },
           !y &&
-            o.createElement(ne, {
-              schema: Ie.pm_schema,
+            o.createElement(Qe, {
+              schema: he.pm_schema,
               view: a,
               refUpdateToolbar: c,
-              className: Be.Toolbar,
+              className: me.Toolbar,
               bSpellcheckEnabled: T,
-              setSpellcheckEnabled: N,
+              setSpellcheckEnabled: C,
             }),
           o.createElement(
-            xe,
+            ie,
             {
-              schemaConfig: Ie,
-              className: Be.EditorInput,
+              schemaConfig: he,
+              className: me.EditorInput,
               bbcode: S,
               onUpdate: x,
-              refView: i,
+              refView: l,
               onClickURL: v,
               bSpellcheckEnabled: T,
-              panelProps: P,
+              panelProps: F,
             },
-            o.createElement(He, {
-              uploadImage: k,
-              nodeType: Ie.pm_schema.nodes.image,
+            o.createElement(ge, {
+              uploadImage: N,
+              nodeType: he.pm_schema.nodes.image,
             }),
           ),
-          !y && o.createElement(Xe, { note: t, bDirty: n }),
+          !y && o.createElement(Ke, { note: t, bDirty: n }),
         );
       }
-      function Xe(e) {
+      function Ke(e) {
         const { note: t, bDirty: n } = e,
-          [r, a, i] = (0, Q.X9)(!1),
-          s = "single" == o.useContext(d).mode,
-          l = p(),
-          c = E(t, l),
+          [r, a, l] = (0, oe.X9)(!1),
+          i = "single" == o.useContext(u).mode,
+          s = p(),
+          c = E(t, s),
           m = o.useCallback(() => {
             !n && t.not_persisted ? c.mutate() : a();
           }, [n, t, c, a]);
         return o.createElement(
           "div",
-          { className: Be.NoteActions },
-          r && o.createElement($e, { note: t, closeModal: i, deleteNote: c }),
+          { className: me.NoteActions },
+          r && o.createElement(et, { note: t, closeModal: l, deleteNote: c }),
           o.createElement(
-            J.HP,
+            ce.HP,
             { toolTipContent: "#UserGameNotes_DeleteNote", direction: "top" },
             o.createElement(H.zx, { onClick: m }, o.createElement(A.rFk, null)),
           ),
-          s && o.createElement(je, { bDirty: n }),
+          i && o.createElement(Je, { bDirty: n }),
         );
       }
-      function je(e) {
+      function Je(e) {
         const { bDirty: t } = e,
           n = p();
         return t
           ? o.createElement(
               H.KM,
-              { onClick: () => n(), className: Be.CloseWindowButton },
+              { onClick: () => n(), className: me.CloseWindowButton },
               (0, f.Xx)("#Button_SaveAndClose"),
             )
           : o.createElement(
               H.zx,
-              { onClick: () => n(), className: Be.CloseWindowButton },
+              { onClick: () => n(), className: me.CloseWindowButton },
               (0, f.Xx)("#Button_Close"),
             );
       }
-      function $e(e) {
+      function et(e) {
         const { note: t, closeModal: n, deleteNote: r } = e;
         return o.createElement(
-          M.Yy,
+          U.Yy,
           { active: !0 },
-          o.createElement(M.uH, {
+          o.createElement(U.uH, {
             strTitle: (0, f.Xx)("#UserGameNotes_DeleteNote"),
             strDescription: (0, f.Xx)("#UserGameNotes_PromptDelete"),
             onOK: () => r.mutate(),
@@ -1414,19 +1463,19 @@
           }),
         );
       }
-      function We(e) {
+      function tt(e) {
         let t = "";
         for (let n = 0; n < e.content.childCount; n++) {
           const o = e.content.child(n);
           if (o.isText) t += o.text;
           else {
             if (((t = t.trim()), t.length > 4)) return t;
-            if (((t = We(o)), t.length > 4)) return t;
+            if (((t = tt(o)), t.length > 4)) return t;
           }
         }
         return t.trim();
       }
-      function Ve() {
+      function nt() {
         const e = (0, r.$B)(),
           t = v(
             "appid" in e.params && Number(e.params.appid),
@@ -1434,8 +1483,8 @@
           );
         let n = e.params.noteid;
         const a = (0, r.k6)(),
-          i = (function (e) {
-            const t = (0, l.useQueryClient)(),
+          l = (function (e) {
+            const t = (0, s.useQueryClient)(),
               n = h();
             return o.useCallback(() => {
               const o = (0, f.Xx)("#UserGameNotes_UntitledNote_Title"),
@@ -1443,44 +1492,44 @@
               return _(t, e, (e) => [...e, r]), r.id;
             }, [t, n, e]);
           })(t),
-          { data: s, isLoading: c } = g(t);
+          { data: i, isLoading: c } = g(t);
         let m;
-        s && n && (m = s.find((e) => e.id === n)),
+        i && n && (m = i.find((e) => e.id === n)),
           o.useLayoutEffect(() => {
-            !s ||
-              (n && s.find((e) => e.id === n)) ||
-              (s.length > 0 && s[0].id ? Ze(a, t, s[0].id) : Ze(a, t, i()));
-          }, [a, t, n, s, i]);
-        const d = o.createElement(
-          J.HP,
+            !i ||
+              (n && i.find((e) => e.id === n)) ||
+              (i.length > 0 && i[0].id ? rt(a, t, i[0].id) : rt(a, t, l()));
+          }, [a, t, n, i, l]);
+        const u = o.createElement(
+          ce.HP,
           { toolTipContent: "#UserGameNotes_NewNote", direction: "top" },
           o.createElement(
             H.zx,
             {
-              className: Be.NewNoteButton,
+              className: me.NewNoteButton,
               onClick: () => {
-                const e = i();
-                Ze(a, t, e);
+                const e = l();
+                rt(a, t, e);
               },
             },
             o.createElement(A.ex9, null),
           ),
         );
-        return s
-          ? o.createElement(ze, {
+        return i
+          ? o.createElement(ot, {
               noteParent: t,
-              notes: s,
+              notes: i,
               activeNoteID: null == m ? void 0 : m.id,
-              actions: d,
+              actions: u,
             })
           : null;
       }
-      function ze(e) {
-        const { noteParent: t, notes: n, activeNoteID: a, actions: i } = e,
-          [s, l] = (0, te.i4)("NotesListCollapsed", !1),
-          c = o.useContext(d).bPinnedView,
-          m = (0, we.id)(),
-          u = n.map((e) => {
+      function ot(e) {
+        const { noteParent: t, notes: n, activeNoteID: a, actions: l } = e,
+          [i, s] = (0, Ze.i4)("NotesListCollapsed", !1),
+          c = o.useContext(u).bPinnedView,
+          m = (0, ae.id)(),
+          d = n.map((e) => {
             var t;
             return {
               title:
@@ -1488,25 +1537,25 @@
                   ? e.title
                   : (0, f.Xx)("#UserGameNotes_Untitled"),
               identifier: e.id,
-              content: o.createElement(Oe, { note: e }),
-              pageClassName: Be.NotePage,
+              content: o.createElement(Ye, { note: e }),
+              pageClassName: me.NotePage,
               hideTitle: !0,
             };
           }),
           p = (0, r.k6)(),
-          h = o.useCallback((e) => Ze(p, t, e), [p, t]);
+          h = o.useCallback((e) => rt(p, t, e), [p, t]);
         return o.createElement(H.TI, {
           title: (0, f.Xx)("#UserGameNotes_NotesList"),
-          pages: u,
-          className: (0, Z.Z)(Be.NotesPagedSettings, c && Be.PinnedView),
+          pages: d,
+          className: (0, ne.Z)(me.NotesPagedSettings, c && me.PinnedView),
           page: a,
           onPageRequested: h,
-          bottomControls: i,
-          hideList: s,
-          toggleHideList: c || m ? void 0 : () => l(!s),
+          bottomControls: l,
+          hideList: i,
+          toggleHideList: c || m ? void 0 : () => s(!i),
         });
       }
-      function Ze(e, t, n) {
+      function rt(e, t, n) {
         let o;
         (o =
           "appid" in t
@@ -1514,15 +1563,15 @@
             : a.ShortcutNotes(t.shortcut, n)),
           e.replace(o, e.location.state);
       }
-      var Qe = n(61578);
-      class qe {
+      var at = n(61578);
+      class lt {
         constructor(e) {
           this.m_SteamInterface = e;
         }
         GetGamesWithNotes() {
-          return (0, s.mG)(this, void 0, void 0, function* () {
-            const e = N.gA.Init(Qe.SX);
-            return (yield Qe.Rr.GetGamesWithNotes(
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            const e = C.gA.Init(at.SX);
+            return (yield at.Rr.GetGamesWithNotes(
               this.m_SteamInterface.GetServiceTransport(),
               e,
             ))
@@ -1531,10 +1580,10 @@
           });
         }
         GetGameNotesList(e, t) {
-          return (0, s.mG)(this, void 0, void 0, function* () {
-            const n = N.gA.Init(Qe.DI);
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            const n = C.gA.Init(at.DI);
             this.SetParentOnRequest(n, e), n.Body().set_include_content(t);
-            const o = yield Qe.Rr.GetNotesForGame(
+            const o = yield at.Rr.GetNotesForGame(
               this.m_SteamInterface.GetServiceTransport(),
               n,
             );
@@ -1544,8 +1593,8 @@
           });
         }
         SaveGameNote(e, t, n) {
-          return (0, s.mG)(this, void 0, void 0, function* () {
-            const o = N.gA.Init(Qe.ge);
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            const o = C.gA.Init(at.ge);
             e.not_persisted
               ? o.Body().set_create_new(!0)
               : o.Body().set_note_id(e.id),
@@ -1554,7 +1603,7 @@
                 : o.Body().set_shortcut_name(e.shortcut_name),
               o.Body().set_title(t),
               o.Body().set_content(n);
-            const r = yield Qe.Rr.SaveNote(
+            const r = yield at.Rr.SaveNote(
               this.m_SteamInterface.GetServiceTransport(),
               o,
             );
@@ -1563,10 +1612,10 @@
           });
         }
         DeleteGameNote(e, t) {
-          return (0, s.mG)(this, void 0, void 0, function* () {
-            const n = N.gA.Init(Qe.$$);
+          return (0, i.mG)(this, void 0, void 0, function* () {
+            const n = C.gA.Init(at.$$);
             this.SetParentOnRequest(n, e), n.Body().set_note_id(t);
-            const o = yield Qe.Rr.DeleteNote(
+            const o = yield at.Rr.DeleteNote(
               this.m_SteamInterface.GetServiceTransport(),
               n,
             );
@@ -1575,7 +1624,7 @@
           });
         }
         SyncNotes() {
-          return (0, s.mG)(this, void 0, void 0, function* () {});
+          return (0, i.mG)(this, void 0, void 0, function* () {});
         }
         SetParentOnRequest(e, t) {
           "appid" in t
@@ -1587,7 +1636,7 @@
           return (
             "appid" in e ? (n.appid = e.appid) : (n.shortcut_name = e.shortcut),
             Object.assign(
-              Object.assign({ id: "temp_" + qe.sm_lastNoteID++ }, n),
+              Object.assign({ id: "temp_" + lt.sm_lastNoteID++ }, n),
               {
                 ordinal: 0,
                 time_created: Date.now() / 1e3,
@@ -1603,11 +1652,11 @@
           return Promise.reject("NYI");
         }
       }
-      function Ye(e) {
+      function it(e) {
         const t = (0, y.lS)(),
-          [n] = o.useState(() => new qe(t));
+          [n] = o.useState(() => new lt(t));
         return o.createElement(
-          u,
+          d,
           { mode: "page", store: n },
           o.createElement(
             r.rs,
@@ -1616,7 +1665,7 @@
             o.createElement(
               r.AW,
               { path: a.AppNotes(":appid", ":noteid?") },
-              o.createElement(Ve, null),
+              o.createElement(nt, null),
             ),
             o.createElement(
               r.AW,
@@ -1626,7 +1675,7 @@
           ),
         );
       }
-      qe.sm_lastNoteID = 0;
+      lt.sm_lastNoteID = 0;
     },
   },
 ]);

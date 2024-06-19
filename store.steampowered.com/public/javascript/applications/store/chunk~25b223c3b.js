@@ -227,7 +227,7 @@
         a = n(91618),
         l = n(31421),
         c = n(19399),
-        m = n(15896),
+        m = n(68985),
         d = n(64561),
         u = n(14411),
         h = n(26293),
@@ -4346,8 +4346,8 @@
                 "span",
                 { className: o || r ? m.DateAndTimeInline : m.DateAndTime },
                 a && c,
-                i.createElement("span", null, " "),
-                Boolean(t && l) && g(t, !0),
+                a && l ? i.createElement("span", null, " ") : void 0,
+                Boolean(t && l) && g(t, l),
               )
             : i.createElement(
                 "div",
@@ -4363,7 +4363,7 @@
                 i.createElement(
                   "div",
                   { className: m.LocalizedTime },
-                  Boolean(t && l) && g(t, !0),
+                  Boolean(t && l) && g(t, l),
                 ),
               );
         }),
@@ -4739,7 +4739,7 @@
       var o,
         i = n(85556),
         r = n(47427),
-        s = n(83999),
+        s = n(87225),
         a = n(58112),
         l = n(20417),
         c = n(13129),

@@ -1567,6 +1567,7 @@
                     br: a.FE.readFixed64String,
                     bw: a.Xc.writeFixed64String,
                   },
+                  awaiting_2fa: { n: 4, br: a.FE.readBool, bw: a.Xc.writeBool },
                 },
               }),
             y.sm_m

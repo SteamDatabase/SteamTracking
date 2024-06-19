@@ -352,6 +352,7 @@
                 inline: !0,
                 group: "inline",
                 selectable: !1,
+                linebreakReplacement: !0,
                 parseDOM: [{ tag: "br" }],
                 toDOM: () => ["br"],
               },

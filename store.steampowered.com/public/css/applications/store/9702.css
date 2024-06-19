@@ -623,9 +623,6 @@ td.rdtYear:hover {
 ._3wPcWGmcqJzbUXHRTPYsXa:focus::placeholder {
   margin-left: 2px;
 }
-._3R_gixvbcQCJxxRTmCvpJw {
-  width: 600px;
-}
 ._3R_gixvbcQCJxxRTmCvpJw .DialogTextInputBase:focus {
   background: #23262e !important;
 }
@@ -643,6 +640,8 @@ td.rdtYear:hover {
   height: 70vh;
   display: flex;
   flex-direction: column;
+  width: 600px;
+  max-width: 100%;
 }
 ._2SDa5ofHp4X7qHQE540cIS ._1OuNJQWR-7lSdtgyJf69uF {
   margin: 10px 0;
@@ -686,11 +685,20 @@ td.rdtYear:hover {
 ._3qPIR-iXdtj8oUzr8cH1Ey ._1ki9msaNQoGECm27Yz5YGX {
   flex: 1;
   min-width: 0;
-  display: flex;
+}
+@media screen and (max-width: 440px) {
+  html:not(.force_desktop) ._3qPIR-iXdtj8oUzr8cH1Ey ._1ki9msaNQoGECm27Yz5YGX {
+    align-self: flex-start;
+  }
 }
 ._3FPeG6FVHnapQP5UKhrMvC {
   font-size: 13px;
   margin-left: auto;
+}
+@media screen and (max-width: 440px) {
+  html:not(.force_desktop) ._3FPeG6FVHnapQP5UKhrMvC {
+    align-self: flex-end;
+  }
 }
 ._3FPeG6FVHnapQP5UKhrMvC.YK5pj3LG0Q81ZMKdO9Mcc {
   color: #ffc82c;

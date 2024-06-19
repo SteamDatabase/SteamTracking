@@ -633,6 +633,10 @@ function UserReviewShowMore( id, context )
 {
 	$J('#ReviewContent'+context+id).parent().removeClass('partial');
 	$J('#ReviewContent'+context+id).parent().addClass('expanded');
+
+	// GamepadUI: Enable links in the review body as focus targets once
+	// the review is expanded.
+	$J('#ReviewContent'+context+id).find( 'div.content a' ).data( 'gpFocusDisabled', false );
 }
 
 function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
@@ -1659,7 +1663,11 @@ function CollapseLongReviews()
 		{
 			if ( !$J(i).hasClass('expanded') )
 			{
-				$J(i).addClass('partial')
+				$J(i).addClass('partial');
+
+				// In gamepadui links inside the review content should not be focusable if the review
+				// is collapsed. This prevents focus going to links the user cannot see.
+				$J(i).find( 'div.content a' ).data( 'gpFocusDisabled', true );
 			}
 		}
 	});

@@ -5540,7 +5540,7 @@ License: MIT
         At = a(80366),
         kt = a(32144),
         Mt = a(45167),
-        Nt = a(91494);
+        Nt = a(391);
       let Bt = class extends d.Component {
         constructor() {
           super(...arguments), (this.m_clanSteamID = new p.K(x.JA.CLANSTEAMID));
@@ -6582,7 +6582,7 @@ License: MIT
         da = a(68821),
         ma = a(53749),
         ua = a(34704),
-        _a = a(69590),
+        _a = a(76087),
         pa = a(82093);
       function Ea(e) {
         const { editModel: t } = e,
@@ -7136,8 +7136,8 @@ License: MIT
       var fa = a(95315),
         Ca = a(36194),
         ya = a(45651),
-        Da = a(55603),
-        Ta = a(65255);
+        Da = a(65255),
+        Ta = a(53372);
       function Ia(e) {
         const { editModel: t } = e,
           [a, n] = (0, Wt.SZ)(() => {
@@ -7268,7 +7268,7 @@ License: MIT
                 },
                 (0, I.Xx)("#Sale_BackgroundColor"),
               ),
-              Boolean(Ta.L7.is_support) &&
+              Boolean(Da.L7.is_support) &&
                 d.createElement(
                   "div",
                   {
@@ -7293,7 +7293,7 @@ License: MIT
             d.createElement(
               "div",
               { className: la().OptionCtn },
-              d.createElement(Da.K, {
+              d.createElement(Ta.K, {
                 setting: n,
                 fnUpdateSetting: (e) => {
                   t.GetEventModel().jsondata.sale_background_repeat != e &&
@@ -7782,8 +7782,8 @@ License: MIT
               return (0, o.mG)(this, void 0, void 0, function* () {
                 const n = { accountid: e, origin: self.origin },
                   l = yield s().get(
-                    `${Ta.De.COMMUNITY_BASE_URL}actions/ajaxgetuserpartnerinfo`,
-                    { params: n },
+                    `${Da.De.COMMUNITY_BASE_URL}actions/ajaxgetuserpartnerinfo`,
+                    { params: n, withCredentials: !0 },
                   );
                 if (
                   !l ||
@@ -8201,7 +8201,7 @@ License: MIT
                                   "CreateReviewRequestTicket failed.",
                                   e && (0, G.l)(e),
                                 ),
-                                null);
+                                29 == e.data.success ? e.data : null);
                           } catch (e) {
                             const t = (0, G.l)(e);
                             console.error(
@@ -8214,7 +8214,7 @@ License: MIT
                         });
                       })(t, a, c, u)
                         .then((e) => {
-                          e
+                          e && 1 == e.success
                             ? (r(
                                 Object.assign(Object.assign({}, i), {
                                   strSalePageApprovalHelpTicketReferenceCode:
@@ -8242,12 +8242,19 @@ License: MIT
                                   ),
                                 ),
                               ))
-                            : (p.fnSetError(!0),
-                              p.fnSetStrError(
-                                (0, I.Xx)(
-                                  "#EventEditor_SaleValveApproval_Request_Error",
-                                ),
-                              ));
+                            : 29 == e.success
+                              ? (p.fnSetError(!0),
+                                p.fnSetStrError(
+                                  (0, I.Xx)(
+                                    "#EventEditor_SaleValveApproval_Request_DuplicateError",
+                                  ),
+                                ))
+                              : (p.fnSetError(!0),
+                                p.fnSetStrError(
+                                  (0, I.Xx)(
+                                    "#EventEditor_SaleValveApproval_Request_Error",
+                                  ),
+                                ));
                         })
                         .catch((e) => {
                           p.fnSetError(!0),
@@ -9424,7 +9431,7 @@ License: MIT
           ),
           [c] = d.useState(new Dt.pB()),
           m =
-            !Ta.L7.is_support &&
+            !Da.L7.is_support &&
             !(null === (a = Kt.bq.GetCreatorHome(n.GetClanSteamID())) ||
             void 0 === a
               ? void 0
@@ -9845,7 +9852,7 @@ License: MIT
           )
         );
       };
-      var kn = a(83999),
+      var kn = a(87225),
         Mn = a(6183),
         Nn = a(86437),
         Bn = a(22042),
@@ -11265,7 +11272,7 @@ License: MIT
         DeleteWhiteListAccount(e) {
           let t = this.GetJSONData().broadcast_whitelist.indexOf(e);
           t < 0
-            ? "dev" == Ta.De.WEB_UNIVERSE &&
+            ? "dev" == Da.De.WEB_UNIVERSE &&
               console.log(
                 `EventBroadcastEditModel: Failed to find account to  ${e} in `,
                 this.GetJSONData().broadcast_whitelist,
@@ -13362,7 +13369,7 @@ License: MIT
       }
       var Yl = a(27174),
         $l = a(37593),
-        ei = a(15896);
+        ei = a(68985);
       class ti {
         LoadDLCForAppID(e, t) {
           return (0, o.mG)(this, void 0, void 0, function* () {
@@ -16015,7 +16022,7 @@ License: MIT
               queryFn: () =>
                 (0, o.mG)(this, void 0, void 0, function* () {
                   var t;
-                  const a = `${Ta.De.COMMUNITY_BASE_URL}demos/ajaxgetappdemoinfo`,
+                  const a = `${Da.De.COMMUNITY_BASE_URL}demos/ajaxgetappdemoinfo`,
                     n = { appid: e, origin: self.origin },
                     l = yield s().get(a, { params: n });
                   return (
@@ -18467,7 +18474,7 @@ License: MIT
           return null != e
             ? e
             : d.createElement(ro, {
-                appid: Ta.JA.APPID,
+                appid: Da.JA.APPID,
                 appid_or_vanity_str:
                   this.props.match.params.appid_or_vanity_str,
                 gid: "",

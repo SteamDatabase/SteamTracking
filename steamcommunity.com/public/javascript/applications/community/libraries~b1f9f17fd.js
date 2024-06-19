@@ -22981,6 +22981,11 @@
                     br: i.FE.readString,
                     bw: i.Xc.writeString,
                   },
+                  partner_id: {
+                    n: 2,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
                 },
               }),
             xe.sm_m
@@ -23114,6 +23119,11 @@
                   },
                   player_wishlist_count: {
                     n: 7,
+                    br: i.FE.readUint32,
+                    bw: i.Xc.writeUint32,
+                  },
+                  rt_last_update_time: {
+                    n: 9,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
                   },
@@ -23416,7 +23426,7 @@
               "PromotionStats.GetOptInDemoStats#1",
               (0, o.MD)(xe, t),
               Se,
-              { bConstMethod: !0, ePrivilege: 4 },
+              { bConstMethod: !0, ePrivilege: 1 },
             );
           };
         })(Re || (Re = {}));

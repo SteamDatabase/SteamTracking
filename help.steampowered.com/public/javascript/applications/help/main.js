@@ -3572,7 +3572,7 @@
       var i = n(5496),
         o = n(2210),
         r = n(5492),
-        s = n(3999);
+        s = n(7225);
       class a {
         constructor() {
           (this.m_callbacksMenusChanged = new r.pB()),
@@ -3683,7 +3683,7 @@
         d = n(1846),
         m = n(6948),
         h = n(2210),
-        p = n(3999);
+        p = n(7225);
       class _ {
         constructor(e, t, n) {
           if (((this.m_rgLoadingLinks = []), (this.m_rgLoadingLinks = []), n))
@@ -3730,7 +3730,7 @@
       var f, C;
       n(417);
       function E() {
-        return (0, m.Me)() ? f.BackgroundTransparent : f.None;
+        return (0, m.Me)() ? f.Composited : f.None;
       }
       function b(e) {
         let t = f.None;
@@ -3740,6 +3740,7 @@
               (t |= f.AlwaysOnTop),
               (t |= f.NoTaskbarIcon),
               (t |= f.NotFocusable),
+              (t |= f.TransparentParentWindow),
               t
             );
           case C.Notification:
@@ -3765,6 +3766,7 @@
               (t |= f.NoRoundedCorners),
               (t |= f.NoWindowShadow),
               (t |= f.PopUpMenuHint),
+              (t |= f.TransparentParentWindow),
               (t |= E()),
               t
             );
@@ -3774,6 +3776,7 @@
               (t |= f.NoRoundedCorners),
               (t |= f.NoWindowShadow),
               (t |= f.OverrideRedirect),
+              (t |= f.TransparentParentWindow),
               (t |= E()),
               t
             );
@@ -3789,7 +3792,7 @@
           (e[(e.ScalePosition = 32)] = "ScalePosition"),
           (e[(e.ScaleSize = 64)] = "ScaleSize"),
           (e[(e.Maximized = 128)] = "Maximized"),
-          (e[(e.BackgroundTransparent = 256)] = "BackgroundTransparent"),
+          (e[(e.Composited = 256)] = "Composited"),
           (e[(e.NotFocusable = 512)] = "NotFocusable"),
           (e[(e.FullScreen = 1024)] = "FullScreen"),
           (e[(e.Fullscreen_Exclusive = 2048)] = "Fullscreen_Exclusive"),
@@ -3804,7 +3807,9 @@
           (e[(e.ForceRoundedCorners = 524288)] = "ForceRoundedCorners"),
           (e[(e.OverrideRedirect = 1048576)] = "OverrideRedirect"),
           (e[(e.IgnoreSteamDisplayScale = 2097152)] =
-            "IgnoreSteamDisplayScale");
+            "IgnoreSteamDisplayScale"),
+          (e[(e.TransparentParentWindow = 4194304)] =
+            "TransparentParentWindow");
       })(f || (f = {})),
         (function (e) {
           (e[(e.Overlay = 0)] = "Overlay"),
@@ -6037,7 +6042,7 @@
       var c = n(3783),
         u = n(5556),
         d = n(3235),
-        m = n(3999),
+        m = n(7225),
         h = n(6997),
         p = n(5492),
         _ = n(423),
@@ -9192,7 +9197,7 @@
     5427: (e, t, n) => {
       "use strict";
       n.d(t, { K: () => s });
-      var i = n(8416),
+      var i = n(7587),
         o = n(7936),
         r = n(6948);
       class s {
@@ -15713,7 +15718,7 @@
           );
         }
       }
-      var Ce = n(3999),
+      var Ce = n(7225),
         Ee = n(5651);
       const be = new (n(8785).sO)("DragDrop").Debug;
       class Se extends o.Component {
@@ -22443,26 +22448,6 @@
         }
       }
     },
-    3999: (e, t, n) => {
-      "use strict";
-      function i(e, t) {
-        return o(e, (e) => t == e);
-      }
-      function o(e, t) {
-        const n = e.findIndex(t);
-        return n >= 0 && (e.splice(n, 1), !0);
-      }
-      function r(e, t, n) {
-        return (
-          e ||
-            console.error(
-              "array should be defined for us to fill in the missing indexes",
-            ),
-          e.length < t ? e.concat(Array(t - e.length).fill(n)) : e
-        );
-      }
-      n.d(t, { LG: () => r, Qf: () => o, Zf: () => i });
-    },
     2210: (e, t, n) => {
       "use strict";
       function i(e, t, ...n) {
@@ -22579,37 +22564,16 @@
         Hf: () => p,
         bX: () => h,
         km: () => u,
-        pB: () => s,
+        pB: () => s.p,
         vq: () => l,
       });
       var i = n(5556),
-        o = n(3999),
-        r = n(6997);
-      class s {
-        constructor() {
-          this.m_vecCallbacks = [];
-        }
-        Register(e) {
-          this.m_vecCallbacks.push(e);
-          return {
-            Unregister: () => {
-              o.Zf(this.m_vecCallbacks, e);
-            },
-          };
-        }
-        Dispatch(...e) {
-          for (const t of Array.from(this.m_vecCallbacks)) t(...e);
-        }
-        ClearAllCallbacks() {
-          this.m_vecCallbacks = [];
-        }
-        CountRegistered() {
-          return this.m_vecCallbacks.length;
-        }
-      }
+        o = n(7225),
+        r = n(6997),
+        s = n(255);
       class a {
         constructor(e, t) {
-          (this.m_callbacks = new s()),
+          (this.m_callbacks = new s.p()),
             (this.m_currentValue = e),
             (this.m_fnEquals = t);
         }
@@ -23080,7 +23044,7 @@
         o = n(7936),
         r = n(8071),
         s = n(6948),
-        a = n(3999),
+        a = n(7225),
         l = n(5492),
         c = n(2251);
       class u {
@@ -24473,14 +24437,15 @@
         JA: () => s.JA,
         De: () => s.De,
         fI: () => u,
-        Kc: () => g,
-        Zv: () => v,
+        Kc: () => v,
+        Zv: () => f,
         kQ: () => a.kQ,
         ip: () => a.ip,
         Ek: () => a.Ek,
         Uy: () => p,
         Me: () => h,
         h4: () => m,
+        rI: () => g,
         L7: () => s.L7,
         qt: () => c,
         id: () => d,
@@ -24559,9 +24524,10 @@
       function _(e, t) {
         return 0 != t.length && e.startsWith(t);
       }
-      function g() {
+      const g = "unknown";
+      function v() {
         if (!window || !window.location || !window.location.href)
-          return console.warn("Unable to determine base url!"), "unknown";
+          return console.warn("Unable to determine base url!"), g;
         const e = window.location.href;
         return _(e, s.De.STORE_BASE_URL)
           ? s.De.STORE_BASE_URL
@@ -24585,7 +24551,7 @@
                             ? "https://steamloopback.host"
                             : "";
       }
-      function v() {
+      function f() {
         const e = window.location.href;
         return _(e, s.De.STORE_BASE_URL) || _(e, s.De.STORE_CHECKOUT_BASE_URL)
           ? "store"
@@ -24825,7 +24791,7 @@
         h = n(8285),
         p = n(751),
         _ = n.n(p),
-        g = n(8416),
+        g = n(7587),
         v = n(4842),
         f = n(9545),
         C = n(8071),
@@ -25622,7 +25588,7 @@
       }
       var k = n(2287),
         M = n(423),
-        O = n(3999),
+        O = n(7225),
         N = n(3855),
         B = n(162);
       function G({ config: e, isDynamic: t }) {
@@ -26099,7 +26065,12 @@
             rgAcceptableTypes: Ae,
           },
           background: { width: 1920, height: 622, rgAcceptableTypes: Ae },
-          hero: { width: 0, height: 0, rgAcceptableTypes: Ae },
+          hero: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: Ae,
+          },
           email_full: { width: 800, height: 300, rgAcceptableTypes: Ae },
           email_centered: { width: 644, height: 300, rgAcceptableTypes: Ae },
           broadcast_left: { width: 155, height: 337, rgAcceptableTypes: Ae },
@@ -26117,6 +26088,12 @@
             rgAcceptableTypes: we,
           },
           localized_image_group: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
+            rgAcceptableTypes: Ae,
+          },
+          localized_background_art: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
@@ -26207,6 +26184,12 @@
           localized_marketingmessage_background: {
             width: 570,
             height: 600,
+            rgAcceptableTypes: Ae,
+          },
+          localized_email_image: {
+            width: 0,
+            height: 0,
+            bDisableEnforceDimensions: !0,
             rgAcceptableTypes: Ae,
           },
           spotlight_art: { width: 306, height: 260, rgAcceptableTypes: we },
@@ -26913,21 +26896,26 @@
         UploadFile(e, t, n, o, r, s) {
           return (0, i.mG)(this, void 0, void 0, function* () {
             let i = null;
-            const r = new FormData();
-            r.append("assetfile", e, t),
-              r.append("sessionid", We.De.SESSIONID),
-              r.append("elangauge", "" + n),
-              r.append("originalname", t),
-              o && r.append("arttype", o);
-            const s = Ke(t);
-            if (!s)
+            const s = new FormData();
+            s.append("assetfile", e, t),
+              s.append("sessionid", We.De.SESSIONID),
+              s.append("elangauge", "" + n),
+              s.append("originalname", t),
+              (null == r ? void 0 : r.length) > 0 &&
+                s.append(
+                  "resize",
+                  r.map((e) => e.width + "x" + e.height).join(","),
+                ),
+              o && s.append("arttype", o);
+            const a = Ke(t);
+            if (!a)
               return {
                 success: 8,
                 message: "Invalid file extension, cannot determine mimetype",
               };
-            r.append("mimetype", s);
+            s.append("mimetype", a);
             try {
-              i = yield _().post(this.m_strUploadPath, r, {
+              i = yield _().post(this.m_strUploadPath, s, {
                 withCredentials: !0,
                 headers: { "Content-Type": "multipart/form-data" },
               });
@@ -26985,6 +26973,7 @@
         "product_banner_override",
         "sale_section_title",
         "schedule_track_art",
+        "localized_background_art",
       ];
       class Qe {
         constructor() {
@@ -29427,6 +29416,58 @@
         BContentHubDiscountedOnly() {
           return this.jsondata.content_hub_discounted_only;
         }
+        BIsBackgroundImageGroupingEnabled() {
+          var e;
+          return null === (e = this.jsondata.sale_background_img_groups) ||
+            void 0 === e
+            ? void 0
+            : e.enabled;
+        }
+        GetSalePageBackgroundImageGroupCount() {
+          var e;
+          return (
+            null === (e = this.jsondata.sale_background_img_groups) ||
+            void 0 === e
+              ? void 0
+              : e.enabled
+          )
+            ? this.jsondata.sale_background_img_groups.groups.length
+            : 0;
+        }
+        GetAllSalePageGroups() {
+          var e;
+          return (
+            null === (e = this.jsondata.sale_background_img_groups) ||
+            void 0 === e
+              ? void 0
+              : e.enabled
+          )
+            ? this.jsondata.sale_background_img_groups.groups
+            : [];
+        }
+        GetSalePageBackgroundGroup(e) {
+          var t;
+          return (
+            null === (t = this.jsondata.sale_background_img_groups) ||
+            void 0 === t
+              ? void 0
+              : t.enabled
+          )
+            ? this.jsondata.sale_background_img_groups.groups[e]
+            : null;
+        }
+        GetIncludedRealmList() {
+          const e = new Array();
+          return (
+            this.BInRealmGlobal() && e.push(C.IN.k_ESteamRealmGlobal),
+            this.BInRealmChina() && e.push(C.IN.k_ESteamRealmChina),
+            (0, E.X)(
+              e.length > 0,
+              `Event ${this.GID} is currently configured so that no realms are valid for display. Either enable Steam China or Global to address this issue`,
+            ),
+            e
+          );
+        }
       }
       (0, i.gn)([v.LO], Xt.prototype, "GID", void 0),
         (0, i.gn)([v.LO], Xt.prototype, "AnnouncementGID", void 0),
@@ -31707,8 +31748,8 @@
                 "span",
                 { className: i || r ? c.DateAndTimeInline : c.DateAndTime },
                 s && l,
-                o.createElement("span", null, " "),
-                Boolean(t && a) && yn(t, !0),
+                s && a ? o.createElement("span", null, " ") : void 0,
+                Boolean(t && a) && yn(t, a),
               )
             : o.createElement(
                 "div",
@@ -31724,7 +31765,7 @@
                 o.createElement(
                   "div",
                   { className: c.LocalizedTime },
-                  Boolean(t && a) && yn(t, !0),
+                  Boolean(t && a) && yn(t, a),
                 ),
               );
         }),

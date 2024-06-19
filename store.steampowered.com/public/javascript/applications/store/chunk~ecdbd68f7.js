@@ -5,7 +5,7 @@
   [6002],
   {
     15619: (e, t, r) => {
-      r.d(t, { V: () => p, l: () => S });
+      r.d(t, { V: () => F, l: () => T });
       var i = r(85556),
         n = r(80751),
         s = r.n(n),
@@ -13,16 +13,19 @@
         o = r(54842),
         l = r(77936),
         d = r(79545),
-        c = r(35427),
-        g = r(82182),
+        g = r(35427),
+        c = r(82182),
         h = r(37563),
-        m = r(92011),
-        u = r(62210),
+        u = r(92011),
+        m = r(62210),
         _ = r(67005),
         f = r(77131),
         x = r(16997);
-      const y = "(1)";
-      class S {
+      function y() {
+        return h.De.IN_MOBILE ? h.rI : (0, h.Kc)();
+      }
+      const S = "(1)";
+      class T {
         constructor(e) {
           (this.m_Transport = null),
             (this.m_Storage = null),
@@ -42,12 +45,12 @@
             (this.m_bInitialized = !1),
             (this.m_nLoadLanguagesRetryTimeout = void 0),
             (0, o.rC)(this);
-          let t = new g.n8();
+          let t = new c.n8();
           (this.m_TextFilterPreferences = {
             eTextFilterSetting: t.text_filter_setting(),
             bIgnoreFriends: t.text_filter_ignore_friends(),
           }),
-            (this.m_TextFilterWords = new g.No()),
+            (this.m_TextFilterWords = new c.No()),
             (this.m_DataAccess = e);
         }
         Init(e = 0, t = null, r = null) {
@@ -132,7 +135,7 @@
         }
         ObfuscateString(e) {
           try {
-            const t = new TextEncoder().encode(y + e);
+            const t = new TextEncoder().encode(S + e);
             return a.JQ(t);
           } catch (e) {
             return "";
@@ -142,7 +145,7 @@
           try {
             const t = a.b$(e);
             let r = new TextDecoder().decode(t);
-            return r.startsWith(y)
+            return r.startsWith(S)
               ? ((r = r.slice(3)), r)
               : (console.log(
                   "DeobfuscateString given invalid base64 data, ignoring: " + e,
@@ -177,10 +180,10 @@
             );
             if (e)
               try {
-                this.m_TextFilterWords = g.No.fromObject(JSON.parse(e));
+                this.m_TextFilterWords = c.No.fromObject(JSON.parse(e));
               } catch (t) {
                 console.warn("Error parsing cached text filter word list", e),
-                  (this.m_TextFilterWords = new g.No());
+                  (this.m_TextFilterWords = new c.No());
               }
           });
         }
@@ -213,22 +216,22 @@
         }
         RequestUpdatedSettings() {
           return (0, i.mG)(this, void 0, void 0, function* () {
-            let e = new g.n8();
+            let e = new c.n8();
             if (0 !== this.m_unAccountID)
               try {
                 if (this.m_Transport) {
-                  let t = d.gA.Init(g.AP);
-                  e = (yield g.lk.GetCommunityPreferences(this.m_Transport, t))
+                  let t = d.gA.Init(c.AP);
+                  e = (yield c.lk.GetCommunityPreferences(this.m_Transport, t))
                     .Body()
                     .preferences();
                 } else {
-                  let t = { sessionid: h.De.SESSIONID, origin: (0, h.Kc)() };
+                  let t = { sessionid: h.De.SESSIONID, origin: y() };
                   const r = yield s().get(
                     h.De.COMMUNITY_BASE_URL +
                       "textfilter/ajaxgetcommunitypreferences",
                     { params: t, withCredentials: !0 },
                   );
-                  e = g.n8.fromObject(r.data.preferences);
+                  e = c.n8.fromObject(r.data.preferences);
                 }
               } catch (e) {}
             if (
@@ -236,22 +239,22 @@
               e.text_filter_words_revision() !==
                 this.m_TextFilterWords.text_filter_words_revision())
             ) {
-              let t = new g.No();
+              let t = new c.No();
               if (0 !== e.text_filter_words_revision())
                 try {
                   if (this.m_Transport) {
-                    let e = d.gA.Init(g.Oz);
-                    t = (yield g.lk.GetTextFilterWords(this.m_Transport, e))
+                    let e = d.gA.Init(c.Oz);
+                    t = (yield c.lk.GetTextFilterWords(this.m_Transport, e))
                       .Body()
                       .words();
                   } else {
-                    let e = { sessionid: h.De.SESSIONID, origin: (0, h.Kc)() };
+                    let e = { sessionid: h.De.SESSIONID, origin: y() };
                     const r = yield s().get(
                       h.De.COMMUNITY_BASE_URL +
                         "textfilter/ajaxgettextfiltercustomwords",
                       { params: e, withCredentials: !0 },
                     );
-                    t = g.No.fromObject(r.data.words);
+                    t = c.No.fromObject(r.data.words);
                   }
                 } catch (e) {}
               this.UpdateTextFilterWords(t);
@@ -292,7 +295,7 @@
                   (yield this.LoadLanguage("english"));
             } catch (t) {
               this.m_nLoadLanguagesRetryTimeout &&
-                ((0, u.X)(
+                ((0, m.X)(
                   !this.m_nLoadLanguagesRetryTimeout,
                   "Got two concurrent calls to TextFilteringStore.LoadLanguages",
                 ),
@@ -346,18 +349,18 @@
                 );
               }
             if (!r) {
-              t = `${h.De.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=banned&language=${e}&v=1&origin=${(0, h.Kc)()}`;
+              t = `${h.De.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=banned&language=${e}&v=1&origin=${y()}`;
               {
                 const e = yield s().get(t);
                 this.m_strBannedWords += e.data;
               }
-              t = `${h.De.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=profanity&language=${e}&v=1&origin=${(0, h.Kc)()}`;
+              t = `${h.De.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=profanity&language=${e}&v=1&origin=${y()}`;
               {
                 const e = yield s().get(t);
                 this.m_strProfanityWords += e.data;
               }
             }
-            t = `${h.De.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&language=${e}&v=1&origin=${(0, h.Kc)()}`;
+            t = `${h.De.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&language=${e}&v=1&origin=${y()}`;
             {
               const e = yield s().get(t);
               this.m_strCleanWords += e.data;
@@ -423,7 +426,7 @@
               this.m_regexBannedWords = new RegExp(e, "ugi");
             } catch (e) {
               console.warn("Couldn't compile textfilter bannedwords regex"),
-                (0, m.Uh)().ReportError(
+                (0, u.Uh)().ReportError(
                   new Error(
                     `Couldn't compile textfilter bannedwords regex: ${e}`,
                   ),
@@ -439,7 +442,7 @@
               this.m_regexCleanWords = new RegExp(t, "ugi");
             } catch (e) {
               console.warn("Couldn't compile textfilter cleanwords regex"),
-                (0, m.Uh)().ReportError(
+                (0, u.Uh)().ReportError(
                   new Error(
                     `Couldn't compile textfilter cleanwords regex: ${e}`,
                   ),
@@ -464,7 +467,7 @@
           if (!this.m_regexBannedWords) return t;
           let r = 0;
           if ("string" == typeof e && "" !== e) {
-            r = new c.K(e).GetAccountID();
+            r = new g.K(e).GetAccountID();
           } else "number" == typeof e && (r = e);
           return !t ||
             r == this.m_unAccountID ||
@@ -479,11 +482,11 @@
               );
         }
       }
-      let T;
-      function p() {
-        if (!T) {
+      let p;
+      function F() {
+        if (!p) {
           const e = new Set();
-          let t = { sessionid: h.De.SESSIONID, origin: (0, h.Kc)() };
+          let t = { sessionid: h.De.SESSIONID, origin: y() };
           s()
             .get(h.De.COMMUNITY_BASE_URL + "textfilter/ajaxgetfriendslist", {
               params: t,
@@ -499,21 +502,21 @@
                 ? i
                 : [])
                 (0, l.my)(n.efriendrelationship) &&
-                  e.add(new c.K(n.ulfriendid).GetAccountID());
+                  e.add(new g.K(n.ulfriendid).GetAccountID());
             }),
-            (T = (t) => e.has(t));
+            (p = (t) => e.has(t));
         }
-        return T;
+        return p;
       }
-      (0, i.gn)([o.LO], S.prototype, "m_TextFilterPreferences", void 0),
-        (0, i.gn)([o.LO], S.prototype, "m_mapPlayerCache", void 0),
-        (0, i.gn)([o.LO], S.prototype, "m_regexBannedWords", void 0),
-        (0, i.gn)([o.LO], S.prototype, "m_regexCleanWords", void 0),
-        (0, i.gn)([o.LO], S.prototype, "m_bInitialized", void 0),
-        (0, i.gn)([o.aD], S.prototype, "Init", null),
-        (0, i.gn)([x.a], S.prototype, "OnTextFilterDictionaryChanged", null),
-        (0, i.gn)([o.aD], S.prototype, "UpdateCommunityPreferences", null),
-        (0, i.gn)([o.aD], S.prototype, "BRebuildFilter", null);
+      (0, i.gn)([o.LO], T.prototype, "m_TextFilterPreferences", void 0),
+        (0, i.gn)([o.LO], T.prototype, "m_mapPlayerCache", void 0),
+        (0, i.gn)([o.LO], T.prototype, "m_regexBannedWords", void 0),
+        (0, i.gn)([o.LO], T.prototype, "m_regexCleanWords", void 0),
+        (0, i.gn)([o.LO], T.prototype, "m_bInitialized", void 0),
+        (0, i.gn)([o.aD], T.prototype, "Init", null),
+        (0, i.gn)([x.a], T.prototype, "OnTextFilterDictionaryChanged", null),
+        (0, i.gn)([o.aD], T.prototype, "UpdateCommunityPreferences", null),
+        (0, i.gn)([o.aD], T.prototype, "BRebuildFilter", null);
     },
     29480: (e, t, r) => {
       r.d(t, { T: () => a });
