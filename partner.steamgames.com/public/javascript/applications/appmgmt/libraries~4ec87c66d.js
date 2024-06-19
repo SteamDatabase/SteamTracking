@@ -29392,14 +29392,24 @@
         constructor(e = null) {
           super(),
             ze.prototype.stats || n.aR(ze.M()),
-            s.initialize(this, e, 0, -1, [1], null);
+            s.initialize(this, e, 0, -1, [1, 2], null);
         }
         static M() {
           return (
             ze.sm_m ||
               (ze.sm_m = {
                 proto: ze,
-                fields: { stats: { n: 1, c: Me, r: !0, q: !0 } },
+                fields: {
+                  stats: { n: 1, c: Me, r: !0, q: !0 },
+                  appid_without_permissions: {
+                    n: 2,
+                    r: !0,
+                    q: !0,
+                    br: n.FE.readUint32,
+                    pbr: n.FE.readPackedUint32,
+                    bw: n.Xc.writeRepeatedUint32,
+                  },
+                },
               }),
             ze.sm_m
           );

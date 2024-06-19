@@ -21553,20 +21553,21 @@
       "use strict";
       n.d(t, {
         $1: () => c.$1,
-        CE: () => S,
+        CE: () => w,
         Jr: () => m,
         LJ: () => u,
-        LZ: () => C,
+        LZ: () => f,
         Mh: () => c.Mh,
         XG: () => c.XG,
         Xx: () => d,
-        Yt: () => w,
-        is: () => b,
+        Yt: () => E,
+        is: () => S,
         jr: () => c.jr,
         kQ: () => h,
-        kb: () => v,
+        kb: () => _,
         m9: () => c.m9,
         vX: () => c.vX,
+        x$: () => g,
         yW: () => c.yW,
         yu: () => p,
       });
@@ -21684,11 +21685,11 @@
         }
       }
       function d(e, ...t) {
-        let n = w.LocalizeString(e);
-        return void 0 === n ? e : _(n, ...t);
+        let n = E.LocalizeString(e);
+        return void 0 === n ? e : C(n, ...t);
       }
       function h(e, ...t) {
-        let n = w.LocalizeString(e);
+        let n = E.LocalizeString(e);
         if (void 0 === n) return e;
         let i,
           r = [],
@@ -21707,10 +21708,17 @@
           : h(e + "_Plural", t.toLocaleString(), ...n);
       }
       function p(e, ...t) {
-        let n = w.LocalizeIfToken(e);
-        return void 0 === n ? e : g(n, ...t);
+        let n = E.LocalizeIfToken(e);
+        return void 0 === n ? e : v(n, ...t);
       }
-      function g(e, ...t) {
+      function g(e, t, ...n) {
+        let o;
+        return (
+          (o = d(1 === t || "1" === t ? e : e + "_Plural", t)),
+          void 0 === o ? e : v(o, ...n)
+        );
+      }
+      function v(e, ...t) {
         let n,
           i = [],
           r = new RegExp(/(.*?)<(\d+)>(.*?)<\/(\2)>/, "gs"),
@@ -21719,7 +21727,7 @@
           (s += n[0].length), i.push(n[1]);
           let e = parseInt(n[2]),
             r = n[3] || "",
-            a = g(r, ...t),
+            a = v(r, ...t),
             l = (e >= 1 && e <= t.length ? t[e - 1] : null)
               ? o.cloneElement(t[e - 1], {}, r ? a : null)
               : r;
@@ -21727,10 +21735,10 @@
         }
         return i.push(e.substr(s)), o.createElement(o.Fragment, null, ...i);
       }
-      function v(e, t, ...n) {
+      function _(e, t, ...n) {
         return 1 === t || "1" === t ? d(e, t, ...n) : d(e + "_Plural", t, ...n);
       }
-      function _(e, ...t) {
+      function C(e, ...t) {
         return 0 == t.length
           ? e
           : (e = e.replace(/%(?:(\d+)\$)?s/g, function (e, n) {
@@ -21741,7 +21749,7 @@
               return e;
             }));
       }
-      class C {
+      class f {
         static Set(e, t, n) {
           if (e.length <= t) {
             if (t >= 31) return e;
@@ -21754,12 +21762,12 @@
         }
         static GetWithFallback(e, t) {
           if (e) {
-            return C.Get(e, t) || C.Get(e, u.GetELanguageFallback(t));
+            return f.Get(e, t) || f.Get(e, u.GetELanguageFallback(t));
           }
           return null;
         }
       }
-      const f = {
+      const b = {
           english: "en",
           german: "de",
           french: "fr",
@@ -21793,7 +21801,7 @@
           sc_schinese: "zh-cn",
           koreana: "ko",
         },
-        b = {
+        S = {
           "en-US": 0,
           "de-DE": 1,
           "fr-FR": 2,
@@ -21825,11 +21833,11 @@
           "vi-VN": 28,
           "id-ID": 30,
         };
-      function S() {
-        return f[s.De.LANGUAGE] || null;
+      function w() {
+        return b[s.De.LANGUAGE] || null;
       }
-      const w = new u();
-      window.LocalizationManager = w;
+      const E = new u();
+      window.LocalizationManager = E;
     },
     12251: (e, t, n) => {
       "use strict";

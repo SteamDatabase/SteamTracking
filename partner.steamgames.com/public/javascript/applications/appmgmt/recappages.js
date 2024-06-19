@@ -6,57 +6,62 @@
   [8676],
   {
     28953: (e, t, a) => {
-      a.r(t), a.d(t, { RecapHubRoutes: () => C, default: () => R });
+      a.r(t), a.d(t, { RecapHubRoutes: () => S, default: () => A });
       var n = a(47427),
         r = a(69406),
-        l = a(28017),
-        c = a(8285),
-        s = a(760),
-        m = a(77936),
+        s = a(28017),
+        l = a(8285),
+        m = a(760),
+        c = a(77936),
         i = a(4771),
         p = a(81070),
         o = a(71363),
         d = a(77681),
         u = a.n(d),
-        _ = a(13129),
-        E = a(31846),
-        g = a(65255),
-        v = a(82756),
-        N = a(91398),
-        x = a(4942),
-        f = a(24827);
-      function h(e) {
+        _ = a(24827),
+        E = a(13129),
+        g = a(31846),
+        v = a(65255),
+        N = a(82756),
+        f = a(91398),
+        h = a(4942);
+      function x(e) {
         const { pagePostFix: t, nPartnerID: a } = e,
           r = "sale_nextfest_" + t,
-          l = (0, p.r)(r),
-          c = (0, o.C)(g.L7.accountid, a),
-          s = (0, i.Xj)(l.event_title, (0, m.jM)(g.De.LANGUAGE)),
-          d = (0, x.fV)(l),
-          h = (function () {
+          s = (0, p.r)(r),
+          l = (0, o.C)(v.L7.accountid, a),
+          m = (0, i.Xj)(s.event_title, (0, c.jM)(v.De.LANGUAGE)),
+          d = (0, h.fV)(s),
+          { rgDemoStats: x, rgAppSansPermissions: S } = (function () {
             const [e] = (0, n.useState)(() =>
-              (0, v.kQ)("demo_stats", "application_config"),
+              (0, N.kQ)("demo_stats", "application_config"),
             );
-            return e;
+            return {
+              rgDemoStats: e.stats || [],
+              rgAppSansPermissions: Array.from(
+                new Set(e.appid_without_permissions || []),
+              ),
+            };
           })(),
-          [C, R, b] = (0, n.useMemo)(
+          [A, C, P] = (0, n.useMemo)(
             () => [
-              h.reduce(
+              x.reduce(
                 (e, t) =>
                   t.rt_last_update_time > e ? t.rt_last_update_time : e,
                 0,
               ),
-              h.reduce((e, t) => (t.rt_end_time > e ? t.rt_end_time : e), 0),
-              new Set(h.map((e) => e.appid)).size,
+              x.reduce((e, t) => (t.rt_end_time > e ? t.rt_end_time : e), 0),
+              new Set(x.map((e) => e.appid)).size,
             ],
-            [h],
+            [x],
           );
         return n.createElement(
           "div",
-          { className: (0, _.Z)(u().AdminPageCtn) },
+          { className: (0, E.Z)(u().AdminPageCtn) },
           n.createElement(
             "div",
             { className: u().PageTitle },
-            (0, E.Xx)("#Recap_NextFest_Title", s),
+            (0, g.Xx)("#Recap_NextFest_Title", m),
           ),
           n.createElement("hr", null),
           n.createElement(
@@ -83,66 +88,71 @@
                 n.createElement(
                   "div",
                   null,
-                  (0, E.Xx)(
+                  (0, g.Xx)(
                     "#Recap_ForPartner",
-                    null == c ? void 0 : c.partner_name,
+                    null == l ? void 0 : l.partner_name,
                   ),
                 ),
-                Boolean(0 == h.length)
+                Boolean(0 == x.length)
                   ? n.createElement(
                       "div",
                       null,
-                      (0, E.Xx)("#Recap_Stats_NoAppsIncluded"),
+                      (0, g.Xx)("#Recap_Stats_NoAppsIncluded"),
                     )
                   : n.createElement(
                       "div",
                       null,
-                      (0, E.Xx)(
+                      (0, g.Xx)(
                         "#Recap_Stats_Computed",
-                        (0, E.$1)(C),
-                        (0, f.Kj)(C),
+                        (0, g.$1)(A),
+                        (0, _.Kj)(A),
                       ),
                     ),
               ),
             ),
           ),
-          Boolean(0 == h.length)
+          Boolean(0 == x.length && 0 == S.length)
             ? n.createElement(
                 "div",
                 null,
-                (0, E.Xx)("#Recap_Stats_NoAppsIncluded"),
+                (0, g.Xx)("#Recap_Stats_NoAppsIncluded"),
               )
             : n.createElement(
                 n.Fragment,
                 null,
-                Boolean(b > 1) &&
-                  n.createElement(N.by, { rgDemo: h, rtLatestEndDate: R }),
-                n.createElement(N.Iy, {
-                  rgDemo: h,
-                  rtLatestEndDate: R,
-                  nUniqueApps: b,
+                Boolean(P > 1) &&
+                  n.createElement(f.by, {
+                    rgDemo: x,
+                    rtLatestEndDate: C,
+                    rgAppSansPermissions: S,
+                  }),
+                n.createElement(f.Iy, {
+                  rgDemo: x,
+                  rtLatestEndDate: C,
+                  nUniqueApps: P,
                   bShowDiscoveryGraph: !0,
+                  rgAppSansPermissions: S,
                 }),
               ),
         );
       }
-      const C = { NextFestRecap: (e, t) => `/nextfest/${e}/${t}` };
-      function R(e) {
+      const S = { NextFestRecap: (e, t) => `/nextfest/${e}/${t}` };
+      function A(e) {
         return n.createElement(
-          l.VK,
-          { basename: (0, s.l)() + "recap/" },
+          s.VK,
+          { basename: (0, m.l)() + "recap/" },
           n.createElement(
-            c.rs,
+            l.rs,
             null,
-            n.createElement(c.AW, {
-              path: C.NextFestRecap(":postfix", ":partnerid(\\d+)"),
+            n.createElement(l.AW, {
+              path: S.NextFestRecap(":postfix", ":partnerid(\\d+)"),
               render: (e) =>
-                n.createElement(h, {
+                n.createElement(x, {
                   pagePostFix: e.match.params.postfix,
                   nPartnerID: Number.parseInt(e.match.params.partnerid),
                 }),
             }),
-            n.createElement(c.AW, { component: r.R }),
+            n.createElement(l.AW, { component: r.R }),
           ),
         );
       }

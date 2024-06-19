@@ -334,6 +334,9 @@
   position: sticky;
   top: 0;
 }
+._1PgBwG06u7lkqBrHh0lGdh._3OVNqEWqvhOhrjsR5SgOQ3 {
+  visibility: hidden;
+}
 ._2gBsUSd4zPyGk451opeP1k {
   margin-bottom: 20px;
   width: 100%;
@@ -377,6 +380,7 @@
   height: 28px;
   color: #fff;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  background-color: #bad1e721;
 }
 ._2JVkFc02Z_gli3Wk58ZdCn ._1PWl9VImc2pIq7OdlNtrVN {
   color: #ca5029;
@@ -430,10 +434,12 @@
   padding: 0px 6px;
   flex: 1;
   text-align: left;
-  background-color: #bad1e721;
   backdrop-filter: blur(8px);
   font-size: 14px;
   font-weight: 400;
+}
+._1VxkAwTIvWU2gB-71xXUDP .wQNhOW92EGSW0_tW7f75e {
+  margin-left: 29px;
 }
 ._2L_1oiBHK2dz3vQ1TBnm9j {
   display: flex;
@@ -783,7 +789,7 @@
 ._3_yMxSFo_FV_uDWmUpaCVG {
   position: relative;
   display: grid;
-  grid-template-columns: 272px auto auto auto;
+  grid-template-columns: 272px 1fr 1fr 1fr;
   grid-template-areas: "image text text text" "image plays wishlists conversions" "survey survey survey survey";
   gap: 6px;
 }
@@ -812,15 +818,25 @@
   display: flex;
   flex-direction: row;
 }
-.hh50Ajalf3yxh76nsG4Ht {
+._3fkqqnlhHRzeVp5gMVBrxh {
+  display: flex;
+  flex-direction: column;
   flex: 1;
+}
+.hh50Ajalf3yxh76nsG4Ht {
   font-size: 15px;
   color: #d0d0d0;
 }
+._2L7-K-pqupMVURy7IrfPq1 {
+  font-size: 13px;
+  color: silver;
+  margin: 4px 0;
+}
 ._4KHdcJt3RtSJUO7so87l7 {
+  align-self: center;
   background: #505962;
   font-size: 12px;
-  margin: 4px;
+  margin: 4px 4px 4px 16px;
   padding: 4px 12px;
   transition:
     background-color 0.3s ease-in-out,
@@ -852,6 +868,7 @@
   font-weight: 600;
 }
 .X-UQBnpHbbCzMbru9T2jV {
+  text-align: center;
   font-size: 11px;
   color: #434953;
 }

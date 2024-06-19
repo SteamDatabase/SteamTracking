@@ -19931,39 +19931,39 @@
       "use strict";
       n.d(t, { L: () => c, f: () => m });
       var a = n(85556),
-        i = n(47427),
-        l = n(42718),
-        r = n(79270),
-        o = n(5697),
-        s = n(79545);
+        i = n(79545),
+        l = n(5697),
+        r = n(47427),
+        o = n(42718),
+        s = n(79270);
       function c(e) {
-        const t = (0, r.i)();
-        return (0, l.useQuery)(
+        const t = (0, s.i)();
+        return (0, o.useQuery)(
           `demostats_${e}`,
           () =>
             (0, a.mG)(this, void 0, void 0, function* () {
-              const n = s.gA.Init(o.mG);
+              const n = i.gA.Init(l.mG);
               n.Body().set_opt_in_name(e);
-              return (yield o.mY.GetOptInDemoStats(t, n)).Body().toObject()
+              return (yield l.mY.GetOptInDemoStats(t, n)).Body().toObject()
                 .stats;
             }),
           { enabled: e && e.startsWith("sale_") },
         );
       }
       function m(e, t) {
-        const n = (0, r.i)(),
-          c = (0, l.useQuery)(
+        const n = (0, s.i)(),
+          c = (0, o.useQuery)(
             `demostats_${e}_${t}`,
             () =>
               (0, a.mG)(this, void 0, void 0, function* () {
-                const a = s.gA.Init(o.mG);
+                const a = i.gA.Init(l.mG);
                 a.Body().set_opt_in_name(e), a.Body().set_partner_id(t);
-                return (yield o.mY.GetOptInDemoStats(n, a)).Body().toObject()
+                return (yield l.mY.GetOptInDemoStats(n, a)).Body().toObject()
                   .stats;
               }),
             { enabled: e && e.startsWith("sale_") },
           );
-        return i.useMemo(() => c, [e, t, c.isLoading]);
+        return r.useMemo(() => c, [e, t, c.isLoading]);
       }
     },
     86236: (e, t, n) => {
@@ -32687,42 +32687,44 @@
     },
     91398: (e, t, n) => {
       "use strict";
-      n.d(t, { by: () => U, Iy: () => H, kK: () => F });
+      n.d(t, { by: () => H, Iy: () => V, kK: () => U });
       var a = n(64523),
         i = n(86236),
         l = n(47427),
         r = n(28017),
         o = n(80886),
-        s = n(71741),
+        s = n(77681),
         c = n.n(s),
-        m = n(77681),
-        d = n.n(m),
-        u = n(98255),
-        p = n.n(u),
-        _ = n(59850),
-        h = n.n(_),
-        g = n(1485),
-        v = n(10162),
-        E = n(85305),
-        S = n(24827),
-        D = n(46882),
-        f = n(13129),
-        y = n(31846),
-        b = n(78105),
-        I = n(8114),
-        C = n(22559),
-        k = n(48359),
-        A = n(56886),
-        w = n(72236),
-        P = n(28531),
-        T = n(90291),
-        N = n(59728),
-        R = n(56104),
-        G = n.n(R);
-      const x = l.memo((e) => {
+        m = n(1485),
+        d = n(10162),
+        u = n(85305),
+        p = n(71741),
+        _ = n.n(p),
+        h = n(24827),
+        g = n(46882),
+        v = n(13129),
+        E = n(31846),
+        S = n(78105),
+        D = n(8114),
+        f = n(22559),
+        y = n(48359),
+        b = n(56886),
+        I = n(72236),
+        C = n(28531),
+        k = n(90291),
+        A = n(59728),
+        w = n(56104),
+        P = n.n(w);
+      const T = l.memo((e) => {
         const { data: t, appid: n } = e,
           a = (0, l.useCallback)(
-            (e, n) => (t[n] ? (0, y.$1)(t[n].rt_end_time, !0) : ""),
+            (e, n) =>
+              t[n]
+                ? new Intl.DateTimeFormat(navigator.language, {
+                    month: "numeric",
+                    day: "numeric",
+                  }).format(new Date(1e3 * t[n].rt_end_time))
+                : "",
             [t],
           ),
           i = (0, l.useMemo)(() => {
@@ -32740,18 +32742,18 @@
           }, [n, t]);
         return l.createElement(
           "div",
-          { className: G().ChartContainer },
+          { className: P().ChartContainer },
           l.createElement(
             "div",
-            { className: G().Chart },
+            { className: P().Chart },
             l.createElement(
-              v.SV,
+              d.SV,
               null,
               l.createElement(
-                I.h,
+                D.h,
                 { width: "100%", height: "100%" },
                 l.createElement(
-                  C.c,
+                  f.c,
                   {
                     data: i,
                     layout: "horizontal",
@@ -32772,27 +32774,27 @@
                       }),
                     ),
                   ),
-                  l.createElement(k.q, { vertical: !1, stroke: "#a0aab6" }),
-                  l.createElement(A.B, {
-                    tickFormatter: b.H_,
+                  l.createElement(y.q, { vertical: !1, stroke: "#a0aab6" }),
+                  l.createElement(b.B, {
+                    tickFormatter: S.H_,
                     tick: { fill: "white" },
                     axisLine: !0,
                   }),
-                  l.createElement(w.u, {
+                  l.createElement(I.u, {
                     wrapperStyle: { outline: "none" },
                     allowEscapeViewBox: { x: !1, y: !0 },
                     isAnimationActive: !1,
                     offset: 0,
-                    content: l.createElement(L, null),
+                    content: l.createElement(N, null),
                   }),
-                  l.createElement(P.$, {
+                  l.createElement(C.$, {
                     dataKey: "adjusted_demo_player_count",
                     barSize: 60,
                     fill: "url( #bar_linear )",
                   }),
-                  l.createElement(T.K, {
+                  l.createElement(k.K, {
                     interval: 0,
-                    tick: l.createElement(B, null),
+                    tick: l.createElement(R, null),
                     tickFormatter: a,
                   }),
                 ),
@@ -32801,22 +32803,22 @@
           ),
         );
       });
-      function L({ active: e, payload: t }) {
+      function N({ active: e, payload: t }) {
         if (e && t && t.length) {
           const e = t[0].payload;
           return l.createElement(
-            N.gz,
+            A.gz,
             null,
-            (0, y.Xx)(
+            (0, E.Xx)(
               "#Recap_NextFest_Graph_tooltip",
-              (0, b.H_)(e.adjusted_demo_player_count),
-              (0, y.$1)(e.rt_end_time),
+              (0, S.H_)(e.adjusted_demo_player_count),
+              (0, E.$1)(e.rt_end_time),
             ),
           );
         }
         return null;
       }
-      function B(e) {
+      function R(e) {
         const { x: t, y: n, payload: a } = e,
           i = e.tickFormatter(a.value, a.index);
         return l.createElement(
@@ -32837,14 +32839,19 @@
           ),
         );
       }
-      var O,
-        M = n(69633);
-      function F(e) {
+      var G,
+        x = n(98255),
+        L = n.n(x),
+        B = n(59850),
+        O = n.n(B),
+        M = n(69633),
+        F = n(65255);
+      function U(e) {
         var t;
         const { bShowOnlySummary: n } = e,
           o = i.On.Get(),
           s = (0, a.L)(o.GetOptInPageID()),
-          c = (0, l.useMemo)(() => {
+          u = (0, l.useMemo)(() => {
             let e = 0;
             return (
               s.data &&
@@ -32854,7 +32861,7 @@
               e
             );
           }, [s.data]),
-          [m] = (0, l.useMemo)(() => {
+          [p] = (0, l.useMemo)(() => {
             var e;
             return [
               null === (e = s.data) || void 0 === e
@@ -32867,17 +32874,17 @@
             ];
           }, [s.data]);
         return s.isLoading
-          ? l.createElement(D.V, null)
+          ? l.createElement(g.V, null)
           : (null === (t = s.data) || void 0 === t ? void 0 : t.length)
             ? l.createElement(
-                v.SV,
+                d.SV,
                 null,
                 l.createElement(
                   "div",
                   {
-                    className: (0, f.Z)(
-                      n ? "" : d().AdminPageCtn,
-                      d().WidePageCtn,
+                    className: (0, v.Z)(
+                      n ? "" : c().AdminPageCtn,
+                      c().WidePageCtn,
                     ),
                   },
                   !n &&
@@ -32886,20 +32893,20 @@
                       null,
                       l.createElement(
                         "div",
-                        { className: d().PageTitle },
+                        { className: c().PageTitle },
                         "OptIn Admin Demo Stats Analysis: ",
                         o.GetName(),
                       ),
                       l.createElement(
                         "div",
-                        { className: d().PageSubTitle },
+                        { className: c().PageSubTitle },
                         "These are stats focussed on demos plays and wishlists that occurred during the fest, calculated after each days completion. The data is computed once per day of the fest, after the day is completed; in other words, the first report available will be 1 day after the starts of the event. This is on the promotion server task 'SteamFestDemoPlayerRollup'.",
                       ),
                       l.createElement(
                         "div",
                         null,
                         l.createElement(
-                          g.zx,
+                          m.zx,
                           null,
                           l.createElement(
                             r.rU,
@@ -32914,37 +32921,38 @@
                         "div",
                         null,
                         "Stats Last Collected: ",
-                        (0, y.$1)(m),
+                        (0, E.$1)(p),
                         " @ ",
-                        (0, S.Kj)(m),
+                        (0, h.Kj)(p),
                       ),
                     ),
                   l.createElement(
                     "div",
                     null,
-                    l.createElement(U, {
+                    l.createElement(H, {
                       rgDemo: s.data,
-                      rtLatestEndDate: c,
+                      rtLatestEndDate: u,
                       bShowOnlySummary: n,
                     }),
                     !n &&
-                      l.createElement(H, {
+                      l.createElement(V, {
                         rgDemo: s.data,
-                        rtLatestEndDate: c,
+                        rtLatestEndDate: u,
                       }),
                   ),
                 ),
               )
             : l.createElement("div", null, "No data to show");
       }
-      function U(e) {
+      function H(e) {
         const {
             rgDemo: t,
             rtLatestEndDate: n,
             bShowOnlySummary: a,
             className: i,
+            rgAppSansPermissions: r,
           } = e,
-          [r, o, s, c] = (0, l.useMemo)(() => {
+          [o, s, m, d] = (0, l.useMemo)(() => {
             let e = 0,
               a = 0,
               i = 0,
@@ -32957,93 +32965,108 @@
                   (i += t.wishlist_count),
                   (l += t.player_wishlist_count));
               }),
+              (e += (null == r ? void 0 : r.length) || 0),
               [e, a, i, l]
             );
-          }, [t, n]);
+          }, [t, n, r]);
         return l.createElement(
           "div",
-          { className: (0, f.Z)(d().StatReportCtn, i) },
+          { className: (0, v.Z)(c().StatReportCtn, i) },
           l.createElement(
             "div",
-            { className: d().Stat },
+            { className: c().Stat },
             l.createElement(
               "div",
-              { className: d().BigStat },
-              r.toLocaleString(),
-            ),
-            l.createElement(
-              "span",
-              { className: d().SmallText },
-              (0, y.Xx)("#Recap_NextFest_Headline_Apps"),
-            ),
-          ),
-          l.createElement(
-            "div",
-            { className: d().Stat },
-            l.createElement(
-              "div",
-              { className: d().BigStat },
+              { className: c().BigStat },
               o.toLocaleString(),
             ),
             l.createElement(
               "span",
-              { className: d().SmallText },
-              (0, y.Xx)("#Recap_NextFest_Headline_Plays"),
+              { className: c().SmallText },
+              (0, E.Xx)("#Recap_NextFest_Headline_Apps"),
             ),
           ),
           l.createElement(
             "div",
-            { className: d().Stat },
+            { className: c().Stat },
             l.createElement(
               "div",
-              { className: d().BigStat },
+              { className: c().BigStat },
               s.toLocaleString(),
             ),
             l.createElement(
               "span",
-              { className: d().SmallText },
-              (0, y.Xx)("#Recap_NextFest_Headline_Wishlist"),
+              { className: c().SmallText },
+              (0, E.Xx)("#Recap_NextFest_Headline_Plays"),
+            ),
+          ),
+          l.createElement(
+            "div",
+            { className: c().Stat },
+            l.createElement(
+              "div",
+              { className: c().BigStat },
+              m.toLocaleString(),
+            ),
+            l.createElement(
+              "span",
+              { className: c().SmallText },
+              (0, E.Xx)("#Recap_NextFest_Headline_Wishlist"),
             ),
           ),
           Boolean(!a) &&
             l.createElement(
               "div",
-              { className: d().Stat },
+              { className: c().Stat },
               l.createElement(
                 "div",
-                { className: d().BigStat },
-                c.toLocaleString(),
+                { className: c().BigStat },
+                d.toLocaleString(),
               ),
               l.createElement(
                 "span",
-                { className: d().SmallText },
-                (0, y.Xx)("#Recap_NextFest_Headline_PlaysAndWish"),
+                { className: c().SmallText },
+                (0, E.Xx)("#Recap_NextFest_Headline_PlaysAndWish"),
               ),
             ),
         );
       }
-      function H(e) {
+      function V(e) {
         const {
             rgDemo: t,
             rtLatestEndDate: n,
             nUniqueApps: a,
             className: i,
             bShowDiscoveryGraph: r,
+            rgAppSansPermissions: o,
           } = e,
-          [o, s] = (0, l.useState)(O.by_player),
-          [m, d] = (0, l.useState)(!1),
-          u = (0, l.useMemo)(() => {
+          [s, c] = (0, l.useState)(G.by_player),
+          [d, u] = (0, l.useState)(!1),
+          p = (0, l.useMemo)(() => {
             const e = new Array();
             return (
-              e.push({ label: "Sort By Players", data: O.by_player }),
-              e.push({ label: "Sort By Wishlist", data: O.by_wishlist }),
+              e.push({ label: "Sort By Players", data: G.by_player }),
+              e.push({ label: "Sort By Wishlists", data: G.by_wishlist }),
               e.push({
                 label: "Sort By Players who Wishlisted",
-                data: O.by_play_wish,
+                data: G.by_play_wish,
               }),
               e
             );
-          }, []);
+          }, []),
+          h = (0, l.useMemo)(
+            () =>
+              t
+                .filter((e) => e.rt_end_time == n)
+                .sort((e, t) =>
+                  s == G.by_player
+                    ? t.demo_player_count - e.demo_player_count
+                    : s == G.by_wishlist
+                      ? t.wishlist_count - e.wishlist_count
+                      : t.player_wishlist_count - e.player_wishlist_count,
+                ),
+            [t, n, s],
+          );
         return l.createElement(
           "div",
           { className: i },
@@ -33052,22 +33075,22 @@
             l.createElement(
               l.Fragment,
               null,
-              l.createElement(g.ry, {
+              l.createElement(m.ry, {
                 label: "Sort Order:",
-                strDropDownClassName: c().DropDownScroll,
-                rgOptions: u,
-                selectedOption: o,
-                onChange: (e) => s(e.data),
+                strDropDownClassName: _().DropDownScroll,
+                rgOptions: p,
+                selectedOption: s,
+                onChange: (e) => c(e.data),
               }),
-              l.createElement(g.ji, {
+              l.createElement(m.ji, {
                 label: "Compact Display",
-                checked: m,
-                onChange: d,
+                checked: d,
+                onChange: u,
               }),
             ),
           l.createElement(
             "div",
-            { className: p().ComparisonRichTable },
+            { className: L().ComparisonRichTable },
             l.createElement(
               "table",
               null,
@@ -33078,70 +33101,130 @@
                   "tr",
                   null,
                   l.createElement("th", null, "#"),
-                  !m && l.createElement("th", null),
+                  !d && l.createElement("th", null),
                   l.createElement(
                     "th",
                     null,
-                    (0, y.Xx)("#Recap_NextFest_AppID"),
-                  ),
-                  l.createElement(
-                    "th",
-                    null,
-                    (0, y.Xx)("#Recap_NextFest_DemoAppID"),
+                    (0, E.Xx)("#Recap_NextFest_AppID"),
                   ),
                   l.createElement(
                     "th",
                     null,
-                    (0, y.Xx)("#Recap_NextFest_GameName"),
+                    (0, E.Xx)("#Recap_NextFest_DemoAppID"),
+                  ),
+                  l.createElement(
+                    "th",
+                    null,
+                    (0, E.Xx)("#Recap_NextFest_GameName"),
                   ),
                   l.createElement(
                     "th",
                     { style: { textAlign: "right" } },
-                    (0, y.Xx)("#Recap_NextFest_TotalPlayers"),
+                    (0, E.Xx)("#Recap_NextFest_TotalPlayers"),
                   ),
                   l.createElement(
                     "th",
                     { style: { textAlign: "right" } },
-                    (0, y.Xx)("#Recap_NextFest_TotalWishlist"),
+                    (0, E.Xx)("#Recap_NextFest_TotalWishlist"),
                   ),
                   l.createElement(
                     "th",
                     { style: { textAlign: "right" } },
-                    (0, y.Xx)("#Recap_NextFest_PlayerWishlist"),
+                    (0, E.Xx)("#Recap_NextFest_PlayerWishlist"),
                   ),
-                  !m &&
+                  !d &&
                     r &&
                     l.createElement(
                       "th",
                       null,
-                      (0, y.Xx)("#Recap_NextFest_Graph"),
+                      (0, E.Xx)("#Recap_NextFest_Graph"),
                     ),
                 ),
               ),
               l.createElement(
                 "tbody",
                 null,
-                t
-                  .filter((e) => e.rt_end_time == n)
-                  .sort((e, t) =>
-                    o == O.by_player
-                      ? t.demo_player_count - e.demo_player_count
-                      : o == O.by_wishlist
-                        ? t.wishlist_count - e.wishlist_count
-                        : t.player_wishlist_count - e.player_wishlist_count,
-                  )
-                  .map((e, n) =>
-                    l.createElement(X, {
-                      key: e.appid,
-                      demo: e,
-                      rgAllDemos: t,
-                      index: n,
-                      bCompact: m,
-                      bShowDiscoveryGraph: !m && r,
-                    }),
-                  ),
+                h.map((e, n) =>
+                  l.createElement(q, {
+                    key: e.appid,
+                    demo: e,
+                    rgAllDemos: t,
+                    index: n,
+                    bCompact: d,
+                    bShowDiscoveryGraph: !d && r,
+                  }),
+                ),
+                null == o
+                  ? void 0
+                  : o.map((e, t) =>
+                      l.createElement(X, {
+                        appid: e,
+                        bCompact: d,
+                        key: "hidden" + e,
+                        index: h.length + t,
+                      }),
+                    ),
               ),
             ),
+          ),
+          Boolean((null == o ? void 0 : o.length) > 0) &&
+            l.createElement(
+              "a",
+              {
+                href: `${F.De.PARTNER_BASE_URL}doc/gettingstarted/managing_users`,
+                target: "_blank",
+              },
+              (0, E.Xx)("#Recap_NextFest_ManagingUserLinks"),
+            ),
+        );
+      }
+      function X(e) {
+        const { appid: t, bCompact: n, index: a } = e,
+          [i] = (0, o.vs)(t, j),
+          r = (0, l.useMemo)(() => ({ id: t, type: "game" }), [t]),
+          s =
+            (null == i ? void 0 : i.GetName()) ||
+            (0, E.Xx)("#Recap_NextFest_LoadingApp", t);
+        return l.createElement(
+          "tr",
+          null,
+          l.createElement("td", null, (a + 1).toLocaleString()),
+          !n &&
+            l.createElement(
+              "td",
+              null,
+              l.createElement(
+                u.ll,
+                {
+                  item: r,
+                  hoverProps: {
+                    direction: "overlay",
+                    style: { minWidth: "320px" },
+                  },
+                },
+                l.createElement("img", {
+                  className: O().AppImgCtn,
+                  src: `https://cdn.cloudflare.steamstatic.com/steam/apps/${t}/capsule_231x87.jpg`,
+                  loading: "lazy",
+                  alt: s,
+                }),
+              ),
+            ),
+          l.createElement("td", null, t),
+          l.createElement("td", null),
+          l.createElement(
+            "td",
+            null,
+            l.createElement(
+              "a",
+              { href: null == i ? void 0 : i.GetStorePageURL() },
+              s,
+            ),
+          ),
+          l.createElement(
+            "td",
+            { colSpan: 4, style: { textAlign: "right" } },
+            (0, E.Xx)("#Recap_NextFest_NoAccess"),
           ),
         );
       }
@@ -33149,9 +33232,9 @@
         (e[(e.by_player = 1)] = "by_player"),
           (e[(e.by_wishlist = 2)] = "by_wishlist"),
           (e[(e.by_play_wish = 3)] = "by_play_wish");
-      })(O || (O = {}));
-      const V = {};
-      function X(e) {
+      })(G || (G = {}));
+      const j = {};
+      function q(e) {
         const {
             demo: t,
             index: n,
@@ -33159,8 +33242,10 @@
             bShowDiscoveryGraph: i,
             rgAllDemos: r,
           } = e,
-          [s] = (0, o.vs)(t.appid, V),
-          c = (null == s ? void 0 : s.GetName()) || "loading",
+          [s] = (0, o.vs)(t.appid, j),
+          c =
+            (null == s ? void 0 : s.GetName()) ||
+            (0, E.Xx)("#Recap_NextFest_LoadingApp", t.appid),
           m = (0, l.useMemo)(() => ({ id: t.appid, type: "game" }), [t]);
         return l.createElement(
           "tr",
@@ -33171,7 +33256,7 @@
               "td",
               null,
               l.createElement(
-                E.ll,
+                u.ll,
                 {
                   item: m,
                   hoverProps: {
@@ -33180,7 +33265,7 @@
                   },
                 },
                 l.createElement("img", {
-                  className: h().AppImgCtn,
+                  className: O().AppImgCtn,
                   src: `https://cdn.cloudflare.steamstatic.com/steam/apps/${t.appid}/capsule_231x87.jpg`,
                   loading: "lazy",
                   alt: c,
@@ -33217,7 +33302,7 @@
             l.createElement(
               "td",
               null,
-              l.createElement(x, { data: r, appid: t.appid }),
+              l.createElement(T, { data: r, appid: t.appid }),
             ),
         );
       }

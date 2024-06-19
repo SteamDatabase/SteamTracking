@@ -962,6 +962,7 @@ ${PARTNER_BASE_URL}discounts/ajaxgetdiscountbyapp
 ${PARTNER_BASE_URL}discounts/ajaxgetdiscountbybundle
 ${PARTNER_BASE_URL}doc/${}
 ${PARTNER_BASE_URL}doc/features/playtest#4
+${PARTNER_BASE_URL}doc/gettingstarted/managing_users
 ${PARTNER_BASE_URL}doc/marketing/discounts
 ${PARTNER_BASE_URL}doc/marketing/discounts#limits
 ${PARTNER_BASE_URL}doc/marketing/discounts/dailydeal
@@ -1037,7 +1038,7 @@ ${PARTNER_BASE_URL}optin/sale/${}/${}
 ${PARTNER_BASE_URL}optin/sale/${}/100
 ${PARTNER_BASE_URL}optin/sale/${}/220
 ${PARTNER_BASE_URL}optin/salepreview/${}/20
-${PARTNER_BASE_URL}optin/survey/${opt_in_id}/${nMostPopularAppId}
+${PARTNER_BASE_URL}optin/survey/${opt_in_id}/${}
 ${PARTNER_BASE_URL}optin/survey/${}/${}
 ${PARTNER_BASE_URL}optin/survey/${}/220
 ${PARTNER_BASE_URL}packages/approvepricing
