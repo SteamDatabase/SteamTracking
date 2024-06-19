@@ -1149,37 +1149,37 @@
         ]);
       }
       function J(e) {
-        var t, n;
-        const { eventData: a } = e,
-          r = (0, S.jM)(i.De.LANGUAGE),
-          o = a.m_plan,
-          { eventModel: d, bLoading: c } = (0, k.Mx)(
-            o.sale_clan_account,
-            o.sale_clan_event_gid,
+        var t, n, a;
+        const { eventData: r } = e,
+          o = (0, S.jM)(i.De.LANGUAGE),
+          d = r.m_plan,
+          { eventModel: c, bLoading: m } = (0, k.Mx)(
+            d.sale_clan_account,
+            d.sale_clan_event_gid,
           ),
-          m = (0, F.f)(o.opt_in_id, a.m_partnerId),
-          p =
-            !c &&
-            (null == d
+          p = (0, F.f)(d.opt_in_id, r.m_partnerId),
+          _ =
+            !m &&
+            (null == c
               ? void 0
-              : d.GetImageURL("capsule", r, L.FN.capsule_main)),
-          _ = !c && (null == d ? void 0 : d.GetSaleURL()),
-          u = (
-            null === (t = o.opt_in_id) || void 0 === t
+              : c.GetImageURL("capsule", o, L.FN.capsule_main)),
+          u = !m && (null == c ? void 0 : c.GetSaleURL()),
+          E = (
+            null === (t = d.opt_in_id) || void 0 === t
               ? void 0
               : t.startsWith("sale_nextfest_")
           )
-            ? `${i.De.PARTNER_BASE_URL}recap/nextfest/${o.opt_in_id.substring(14)}/${a.m_partnerId}`
+            ? `${i.De.PARTNER_BASE_URL}recap/nextfest/${d.opt_in_id.substring(14)}/${r.m_partnerId}`
             : void 0,
-          E = Ue(),
-          g = s.useMemo(() => {
-            if (m.isLoading || !m.isSuccess) return null;
-            const e = m.data.reduce(
+          g = Ue(),
+          D = s.useMemo(() => {
+            if (p.isLoading || !p.isSuccess) return null;
+            const e = p.data.reduce(
               (e, t) => (t.rt_last_update_time > e ? t.rt_last_update_time : e),
               0,
             );
-            if (e < o.end_date) return null;
-            const t = m.data.filter(
+            if (e < d.end_date) return null;
+            const t = p.data.filter(
                 (t) => 0 != e && t.rt_last_update_time == e,
               ),
               n = t.reduce((e, t) => e + t.demo_player_count, 0),
@@ -1199,51 +1199,55 @@
               nConversions: s,
               nMostPopularAppId: i,
             };
-          }, [o.end_date, m.data, m.isLoading, m.isSuccess]),
-          D = P.Get().GetInfo(o.opt_in_id);
+          }, [d.end_date, p.data, p.isLoading, p.isSuccess]),
+          h = P.Get().GetInfo(d.opt_in_id);
         if (
           (s.useEffect(() => {
-            ((m.isLoading ||
-              (m.isSuccess && g && 0 != (null == g ? void 0 : g.nGameCount))) &&
-              D) ||
-              E.SetHidden(o.id, !0);
+            ((p.isLoading ||
+              (p.isSuccess && D && 0 != (null == D ? void 0 : D.nGameCount))) &&
+              h) ||
+              g.SetHidden(d.id, !0);
           }, [
-            E,
             g,
-            null == g ? void 0 : g.nGameCount,
             D,
-            o.id,
-            m,
-            m.isLoading,
-            m.isSuccess,
+            null == D ? void 0 : D.nGameCount,
+            h,
+            d.id,
+            p,
+            p.isLoading,
+            p.isSuccess,
           ]),
-          m && m.isLoading)
+          p && p.isLoading)
         )
           return s.createElement(X.V, null);
-        if (!g) return;
-        const h =
-            g.nMostPopularAppId &&
-            D.rgRegisteredApps.find((e) => e.appid == g.nMostPopularAppId)
-              .jsondata,
-          f = h && JSON.parse(h),
-          y =
-            f &&
-            !(null === (n = f.survey_response) || void 0 === n
+        if (!D) return;
+        const f =
+            D.nMostPopularAppId &&
+            (null ===
+              (n = h.rgRegisteredApps.find(
+                (e) => e.appid == D.nMostPopularAppId,
+              )) || void 0 === n
               ? void 0
-              : n.some((e) => e.accountid == i.L7.accountid)),
-          I = `${i.De.PARTNER_BASE_URL}optin/survey/${o.opt_in_id}/${g.nMostPopularAppId}`,
-          b = new Intl.NumberFormat((0, l.CE)());
+              : n.jsondata),
+          y = f && JSON.parse(f),
+          I =
+            y &&
+            !(null === (a = y.survey_response) || void 0 === a
+              ? void 0
+              : a.some((e) => e.accountid == i.L7.accountid)),
+          b = `${i.De.PARTNER_BASE_URL}optin/survey/${d.opt_in_id}/${D.nMostPopularAppId}`,
+          N = new Intl.NumberFormat((0, l.CE)());
         return s.createElement(
           "div",
           { className: x.RecapItemContainer },
-          p &&
+          _ &&
             s.createElement(
               "div",
               { className: x.RecapItemImage },
               s.createElement(
                 T.ex,
-                { href: _, target: "_blank" },
-                s.createElement("img", { src: p }),
+                { href: u, target: "_blank" },
+                s.createElement("img", { src: _ }),
               ),
             ),
           s.createElement(
@@ -1262,16 +1266,16 @@
                 { className: x.RecapTextGameCount },
                 (0, l.Jr)(
                   "#Dashboard_UpcomingEvents_RecapNextFest_TextGameCount",
-                  g.nGameCount,
+                  D.nGameCount,
                   s.createElement("b", null),
                 ),
               ),
-              u &&
+              E &&
                 s.createElement(
                   "button",
                   {
                     className: x.RecapTextFullSummaryButton,
-                    onClick: () => window.open(u, "_blank"),
+                    onClick: () => window.open(E, "_blank"),
                   },
                   (0, l.Xx)(
                     "#Dashboard_UpcomingEvents_RecapNextFest_TextFullSummary",
@@ -1285,7 +1289,7 @@
             s.createElement(
               "div",
               { className: x.RecapBoxCount },
-              b.format(g.nDemoPlays),
+              N.format(D.nDemoPlays),
             ),
             s.createElement(
               "div",
@@ -1299,7 +1303,7 @@
             s.createElement(
               "div",
               { className: x.RecapBoxCount },
-              b.format(g.nWishlists),
+              N.format(D.nWishlists),
             ),
             s.createElement(
               "div",
@@ -1315,7 +1319,7 @@
             s.createElement(
               "div",
               { className: x.RecapBoxCount },
-              b.format(g.nConversions),
+              N.format(D.nConversions),
             ),
             s.createElement(
               "div",
@@ -1325,7 +1329,7 @@
               ),
             ),
           ),
-          y &&
+          I &&
             s.createElement(
               "div",
               { className: x.RecapSurveyArea },
@@ -1338,7 +1342,7 @@
                 "button",
                 {
                   className: x.RecapSurveyButton,
-                  onClick: () => window.open(I, "_blank"),
+                  onClick: () => window.open(b, "_blank"),
                 },
                 (0, l.Xx)(
                   "#Dashboard_UpcomingEvents_RecapNextFest_SurveyButton",
