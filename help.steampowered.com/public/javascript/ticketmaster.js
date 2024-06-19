@@ -2225,6 +2225,8 @@ var PreapprovalQueue = {
 
 		if ( sessionStorage.getItem( PreapprovalQueue.strSessionKey + '_hijacks' ) )
 			PreapprovalQueue.mapHijacks = new Map( JSON.parse( sessionStorage.getItem( PreapprovalQueue.strSessionKey + '_hijacks' ) ) );
+
+		PreapprovalQueue.RenderQueue();
 	},
 
 	CacheApprovals: function()
@@ -2347,9 +2349,11 @@ var PreapprovalQueue = {
 		var elHijackQueue = $J( '.hijacked_queue' );
 		elHijackQueue.empty();
 
+		//'<a class="' + strStyleDisabled + ' ticket_queue_link" data-ticket="' + vecRequests[i] + '" href="javascript:LoadPreloadedTicket( \'' + vecRequests[i] + '\')">' + strText + '</a>'
+
 		PreapprovalQueue.mapApprovals.forEach(
 			function( value, key ) {
-				elApprovalQueue.append( '<div data-ticket="' + value[1] + '" class="">' + key + '</div>' );
+				elApprovalQueue.append( '<div data-ticket="' + value[1] + '" class=""><a href="javascript:LoadPreloadedTicket( \'' + value[1] + '\')">' + key + '</a></div>' );
 				var elTicketQueueEntry = $J("#ticket_queue").find("[data-ticket='" + value[1] + "']");
 				elTicketQueueEntry.removeClass( 'ticket_queue_deny' );
 				elTicketQueueEntry.addClass( 'ticket_queue_approve' );
@@ -2357,7 +2361,7 @@ var PreapprovalQueue = {
 
 		PreapprovalQueue.mapDenials.forEach(
 			function( value, key ) {
-				elDenialQueue.append( '<div data-ticket="' + value[1] + '" class="">' + key + '</div>' );
+				elDenialQueue.append( '<div data-ticket="' + value[1] + '" class=""><a href="javascript:LoadPreloadedTicket( \'' + value[1] + '\')">' + key + '</a></div>' );
 				var elTicketQueueEntry = $J("#ticket_queue").find("[data-ticket='" + value[1] + "']");
 				elTicketQueueEntry.addClass( 'ticket_queue_deny' );
 				elTicketQueueEntry.removeClass( 'ticket_queue_approve' );
@@ -2365,7 +2369,7 @@ var PreapprovalQueue = {
 
 		PreapprovalQueue.mapHijacks.forEach(
 			function( value, key ) {
-				elHijackQueue.append( '<div data-ticket="' + value[1] + '" class="">' + key + '</div>' );
+				elHijackQueue.append( '<div data-ticket="' + value[1] + '" class=""><a href="javascript:LoadPreloadedTicket( \'' + value[1] + '\')">' + key + '</a></div>' );
 				var elTicketQueueEntry = $J("#ticket_queue").find("[data-ticket='" + value[1] + "']");
 				elTicketQueueEntry.addClass( 'ticket_queue_deny' );
 				elTicketQueueEntry.removeClass( 'ticket_queue_approve' );
