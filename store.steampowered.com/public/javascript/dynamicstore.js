@@ -2818,4 +2818,49 @@ function UpdateStoreBannerForPromotionalDiscount( nDiscount, nMinCartAmount, nAv
 	return true;
 }
 
+function BuildCreatorCapsuleToAppend( oItem )
+{
+	var $CreatorsCtn = $J('<div class="recommended_creators_container" />');
+
+	var $AvatarsCtn = $J('<div class="avatars" />');
+	$CreatorsCtn.append($AvatarsCtn);
+
+	var $AvatarCap = $J('<a href="%1$s" title="%3$s"><img src="%2$s" alt="%3$s"></a>'.replace(/\%1\$s/g, oItem.link).replace(/\%2\$s/g, GetAvatarURL( oItem.avatar_sha, '_medium' ) ).replace(/\%3\$s/g, oItem.name) );
+	$AvatarsCtn.append( $AvatarCap );
+
+	var $Actions = $J('<div class="actions" />');
+	var $FollowLink = $J('<a href="#" class="btnv6_white_transparent btn_small_thin" />' );
+	$FollowLink.data('ds-following', oItem.following );
+	$FollowLink.bind('updateFollowState', function () {
+		if ( $FollowLink.data('ds-following') )
+		{
+			$FollowLink.html( '<span><img src="https://store.akamai.steamstatic.com/public/images/v6/ico/ico_selected_green.png">Following</span>' );
+			$FollowLink.addClass( "following_button" );
+			$FollowLink.removeClass( "follow_button" );
+		}
+		else
+		{
+			$FollowLink.html( '<span>Follow</span>' );
+			$FollowLink.removeClass( "following_button" );
+			$FollowLink.addClass( "follow_button" );
+		}
+	});
+
+	$FollowLink.trigger('updateFollowState');
+
+	$FollowLink.on( 'click', function() {
+		FollowCuratorWithCallback( oItem.creatorid, !$FollowLink.data('ds-following'), function(){
+			$FollowLink.data('ds-following', !$FollowLink.data('ds-following') );
+			$FollowLink.trigger('updateFollowState');
+		});
+		event.preventDefault();
+	});
+
+	$Actions.append( $FollowLink );
+
+	$AvatarsCtn.append( $Actions );
+
+	return $CreatorsCtn;
+}
+
 
