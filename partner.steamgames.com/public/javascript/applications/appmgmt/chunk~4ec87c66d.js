@@ -19944,8 +19944,11 @@
             (0, a.mG)(this, void 0, void 0, function* () {
               const n = i.gA.Init(l.mG);
               n.Body().set_opt_in_name(e);
-              return (yield l.mY.GetOptInDemoStats(t, n)).Body().toObject()
-                .stats;
+              const a = (yield l.mY.GetOptInDemoStats(t, n)).Body().toObject();
+              return {
+                stats: a.stats,
+                appIdsWithoutPermissions: a.appid_without_permissions,
+              };
             }),
           { enabled: e && e.startsWith("sale_") },
         );
@@ -19958,8 +19961,13 @@
               (0, a.mG)(this, void 0, void 0, function* () {
                 const a = i.gA.Init(l.mG);
                 a.Body().set_opt_in_name(e), a.Body().set_partner_id(t);
-                return (yield l.mY.GetOptInDemoStats(n, a)).Body().toObject()
-                  .stats;
+                const r = (yield l.mY.GetOptInDemoStats(n, a))
+                  .Body()
+                  .toObject();
+                return {
+                  stats: r.stats,
+                  appIdsWithoutPermissions: r.appid_without_permissions,
+                };
               }),
             { enabled: e && e.startsWith("sale_") },
           );
@@ -32847,35 +32855,43 @@
         M = n(69633),
         F = n(65255);
       function U(e) {
-        var t;
-        const { bShowOnlySummary: n } = e,
-          o = i.On.Get(),
-          s = (0, a.L)(o.GetOptInPageID()),
-          u = (0, l.useMemo)(() => {
-            let e = 0;
+        var t, n, o;
+        const { bShowOnlySummary: s } = e,
+          u = i.On.Get(),
+          p = (0, a.L)(u.GetOptInPageID()),
+          _ = (0, l.useMemo)(() => {
+            var e;
+            let t = 0;
             return (
-              s.data &&
-                s.data.forEach((t) => {
-                  t.rt_end_time > e && (e = t.rt_end_time);
+              (null === (e = p.data) || void 0 === e ? void 0 : e.stats) &&
+                p.data.stats.forEach((e) => {
+                  e.rt_end_time > t && (t = e.rt_end_time);
                 }),
-              e
+              t
             );
-          }, [s.data]),
-          [p] = (0, l.useMemo)(() => {
+          }, [p.data]),
+          [S] = (0, l.useMemo)(() => {
             var e;
             return [
-              null === (e = s.data) || void 0 === e
+              null === (e = p.data) || void 0 === e
                 ? void 0
-                : e.reduce(
+                : e.stats.reduce(
                     (e, t) =>
                       t.rt_last_update_time > e ? t.rt_last_update_time : e,
                     0,
                   ),
             ];
-          }, [s.data]);
-        return s.isLoading
+          }, [null === (t = p.data) || void 0 === t ? void 0 : t.stats]);
+        return p.isLoading
           ? l.createElement(g.V, null)
-          : (null === (t = s.data) || void 0 === t ? void 0 : t.length)
+          : (
+                null ===
+                  (o =
+                    null === (n = p.data) || void 0 === n ? void 0 : n.stats) ||
+                void 0 === o
+                  ? void 0
+                  : o.length
+              )
             ? l.createElement(
                 d.SV,
                 null,
@@ -32883,11 +32899,11 @@
                   "div",
                   {
                     className: (0, v.Z)(
-                      n ? "" : c().AdminPageCtn,
+                      s ? "" : c().AdminPageCtn,
                       c().WidePageCtn,
                     ),
                   },
-                  !n &&
+                  !s &&
                     l.createElement(
                       l.Fragment,
                       null,
@@ -32895,7 +32911,7 @@
                         "div",
                         { className: c().PageTitle },
                         "OptIn Admin Demo Stats Analysis: ",
-                        o.GetName(),
+                        u.GetName(),
                       ),
                       l.createElement(
                         "div",
@@ -32921,23 +32937,23 @@
                         "div",
                         null,
                         "Stats Last Collected: ",
-                        (0, E.$1)(p),
+                        (0, E.$1)(S),
                         " @ ",
-                        (0, h.Kj)(p),
+                        (0, h.Kj)(S),
                       ),
                     ),
                   l.createElement(
                     "div",
                     null,
                     l.createElement(H, {
-                      rgDemo: s.data,
-                      rtLatestEndDate: u,
-                      bShowOnlySummary: n,
+                      rgDemo: p.data.stats,
+                      rtLatestEndDate: _,
+                      bShowOnlySummary: s,
                     }),
-                    !n &&
+                    !s &&
                       l.createElement(V, {
-                        rgDemo: s.data,
-                        rtLatestEndDate: u,
+                        rgDemo: p.data.stats,
+                        rtLatestEndDate: _,
                       }),
                   ),
                 ),
