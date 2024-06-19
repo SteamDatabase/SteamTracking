@@ -847,7 +847,9 @@
                             : (0, N.Xx)(
                                 "#Cart_Error_MissingMustOwnApps_LineItem",
                               ),
-                          appids: e.errors.missing_must_own_appids,
+                          appids: Array.from(
+                            new Set(e.errors.missing_must_own_appids).values(),
+                          ),
                         }),
                       (null ===
                         (f =
