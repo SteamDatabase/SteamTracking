@@ -7046,7 +7046,13 @@
       function F(e) {
         const { strUploadAjaxURL: t, fnOnUploadSuccess: n } = e,
           [i] = (0, a.useState)(new M._3(t, n));
-        return a.createElement(G, Object.assign({}, e, { imageUploader: i }));
+        return (
+          (0, a.useEffect)(() => {
+            i.GetFnOnUploadSuccess() != n && i.SetFnOnUploadSuccess(n),
+              i.GetUploadPath() != t && i.SetUploadPath(t);
+          }, [i, n, t]),
+          a.createElement(G, Object.assign({}, e, { imageUploader: i }))
+        );
       }
     },
     8897: (e, t, n) => {
@@ -58561,11 +58567,11 @@
     43527: (e, t, n) => {
       "use strict";
       n.d(t, { H: () => P });
-      var a = n(43204),
-        i = n(30750),
-        l = n(47427),
-        r = n(38071),
-        o = n(77936),
+      var a = n(38071),
+        i = n(77936),
+        l = n(43204),
+        r = n(30750),
+        o = n(47427),
         s = n(27174),
         c = n(98330),
         m = n(77681),
@@ -58589,46 +58595,46 @@
         w = n(60688);
       function P(e) {
         const { bAssetUploadOnly: t, promotionPlanID: n } = e,
-          i = (0, a.fL)();
-        return l.createElement(
+          a = (0, l.fL)();
+        return o.createElement(
           "div",
           null,
-          l.createElement(
+          o.createElement(
             "div",
             { className: w.EditCtn },
-            l.createElement(
+            o.createElement(
               "div",
               { className: d().PageTitle },
               "Marketing Message - Asset Management",
             ),
-            l.createElement("hr", null),
-            l.createElement(
+            o.createElement("hr", null),
+            o.createElement(
               "div",
               { className: d().ColumnCtn },
-              l.createElement(
+              o.createElement(
                 "div",
                 { className: d().LeftCol },
-                Boolean(!t) && l.createElement(T, { oEditableMessage: i }),
-                l.createElement(x, { oEditableMessage: i }),
+                Boolean(!t) && o.createElement(T, { oEditableMessage: a }),
+                o.createElement(x, { oEditableMessage: a }),
               ),
-              l.createElement(k.C, {
-                oEditableMessage: i,
+              o.createElement(k.C, {
+                oEditableMessage: a,
                 bAssetUploadOnly: t,
                 promotionPlanID: n,
               }),
             ),
-            l.createElement("br", null),
+            o.createElement("br", null),
           ),
         );
       }
       function T(e) {
-        const t = (0, a.fL)(),
-          [n] = (0, i.SZ)(() => [t.GetInternalAssetURL()]);
-        return l.createElement(
+        const t = (0, l.fL)(),
+          [n] = (0, r.SZ)(() => [t.GetInternalAssetURL()]);
+        return o.createElement(
           "div",
           { className: d().SectionCtn },
-          l.createElement(_.__, null, "Internal Assets Location"),
-          l.createElement(_.II, {
+          o.createElement(_.__, null, "Internal Assets Location"),
+          o.createElement(_.II, {
             type: "text",
             value: n,
             placeholder: "enter fileserver location",
@@ -58636,15 +58642,15 @@
             tooltip:
               "Valve Only: Lets us refer to a folder on \\fileserver for communicating where we are keeping the assets for the event or a similar part event",
           }),
-          l.createElement("br", null),
-          l.createElement("br", null),
-          l.createElement(N, { oEditableMessage: t }),
-          l.createElement(R, { oEditableMessage: t }),
+          o.createElement("br", null),
+          o.createElement("br", null),
+          o.createElement(N, { oEditableMessage: t }),
+          o.createElement(R, { oEditableMessage: t }),
         );
       }
       function N(e) {
-        const t = (0, a.fL)(),
-          [n, i] = (0, l.useState)(
+        const t = (0, l.fL)(),
+          [n, a] = (0, o.useState)(
             (function (e) {
               if (e.BHasAnimatedAssets()) return "mm_animated_image";
               if ("featured_video" === e.GetCustomTemplate())
@@ -58652,7 +58658,7 @@
               return "mm_image";
             })(t),
           ),
-          r = (0, l.useMemo)(
+          i = (0, o.useMemo)(
             () => [
               {
                 label: "Static Image",
@@ -58674,10 +58680,10 @@
             ],
             [],
           );
-        return l.createElement(_.ry, {
+        return o.createElement(_.ry, {
           label: "Maketing Message Display",
           strClassName: (0, b.Z)(E().DropDownScroll),
-          rgOptions: r,
+          rgOptions: i,
           selectedOption: n,
           onChange: (e) => {
             switch (e.data) {
@@ -58691,27 +58697,27 @@
                 t.SetAnimatedAssetsEnabled(!1),
                   t.SetCustomTemplate("featured_video");
             }
-            i(e.data);
+            a(e.data);
           },
         });
       }
       function R(e) {
         const { oEditableMessage: t } = e,
-          [n, a, r] = (0, i.SZ)(() => [
+          [n, a, i] = (0, r.SZ)(() => [
             t.GetCustomTemplate(),
             t.GetFeaturedVideoMP4Url() || "",
             t.GetFeaturedVideoWebMUrl() || "",
           ]);
         return "featured_video" != n
           ? null
-          : l.createElement(
-              l.Fragment,
+          : o.createElement(
+              o.Fragment,
               null,
-              l.createElement(
+              o.createElement(
                 "p",
                 null,
                 "We need both a .webm and .mp4 of the featured video. They need to be uploaded to CDN.",
-                l.createElement(
+                o.createElement(
                   "a",
                   {
                     href: "https://confluence.valve.org/pages/viewpage.action?pageId=131008106",
@@ -58719,7 +58725,7 @@
                   "Here is how",
                 ),
                 ". Also here are a ",
-                l.createElement(
+                o.createElement(
                   "a",
                   {
                     href: "https://confluence.valve.org/display/STEAM/Marketing+Message+Template%3A+Featured+Video",
@@ -58728,59 +58734,59 @@
                 ),
                 ".",
               ),
-              l.createElement(_.II, {
+              o.createElement(_.II, {
                 type: "url",
                 label: "MP4 (1920x1080)",
                 value: a,
                 onChange: (e) =>
                   t.SetFeaturedVideoMP4Url(e.currentTarget.value),
               }),
-              l.createElement(G, {
+              o.createElement(G, {
                 strURL: a,
                 mimetype: "video/mp4",
                 extension: ".mp4",
               }),
-              l.createElement(_.II, {
+              o.createElement(_.II, {
                 type: "url",
                 label: "WebM (1920x1080)",
-                value: r,
+                value: i,
                 onChange: (e) =>
                   t.SetFeaturedVideoWebMUrl(e.currentTarget.value),
               }),
-              l.createElement(G, {
-                strURL: r,
+              o.createElement(G, {
+                strURL: i,
                 mimetype: "video/webm",
                 extension: ".webm",
               }),
             );
       }
       function G(e) {
-        const { strURL: t, extension: n, mimetype: i } = e;
+        const { strURL: t, extension: n, mimetype: a } = e;
         if (!t || 0 == t.trim().length) return null;
-        const r = !(0, a.V4)(t, n);
-        return l.createElement(
+        const i = !(0, l.V4)(t, n);
+        return o.createElement(
           "div",
           null,
-          r
-            ? l.createElement(
+          i
+            ? o.createElement(
                 "div",
                 { className: g.ErrorStylesWithIcon },
                 "Error: URL format is wrong or missing extensions (",
                 n,
                 ")",
               )
-            : l.createElement(
+            : o.createElement(
                 _.zx,
                 {
                   onClick: (e) =>
                     (0, f.AM)(
-                      l.createElement(
+                      o.createElement(
                         D.uH,
                         { strTitle: "Preview " + n, bAllowFullSize: !0 },
-                        l.createElement(
+                        o.createElement(
                           "video",
                           { controls: !0, muted: !0, height: "270" },
-                          l.createElement("source", { src: t, type: i }),
+                          o.createElement("source", { src: t, type: a }),
                         ),
                       ),
                       (0, I.RA)(e),
@@ -58792,17 +58798,18 @@
       }
       function x(e) {
         const { oEditableMessage: t } = e,
-          [n, a, o, m] = (0, i.SZ)(() => [
+          [n, i, l, m, p] = (0, r.SZ)(() => [
             t.GetRealm(),
             t.GetAssetsObject("ll_image"),
             t.BHasAnimatedAssets(),
             "featured_video" === t.GetCustomTemplate(),
+            t.GetGID(),
           ]),
-          p = Boolean(0 != n),
-          _ = (0, l.useMemo)(() => {
+          _ = Boolean(0 != n),
+          v = (0, o.useMemo)(() => {
             const e = ["localized_marketing_message"];
             return (
-              o
+              l
                 ? (e.push("localized_marketingmessage_mp4"),
                   e.push("localized_marketingmessage_webm"),
                   (0, y.X)(
@@ -58815,16 +58822,16 @@
                   e.push("localized_subtitles")),
               e
             );
-          }, [o, m]),
-          v = (0, l.useMemo)(
-            () => [r.IN.k_ESteamRealmGlobal, r.IN.k_ESteamRealmChina],
+          }, [l, m]),
+          E = (0, o.useMemo)(
+            () => [a.IN.k_ESteamRealmGlobal, a.IN.k_ESteamRealmChina],
             [],
           ),
-          E = (0, l.useCallback)(
+          S = (0, o.useCallback)(
             (e, n, a, i, l, r, o) => {
               (0, y.X)(
                 null != a && a >= 0 && a < 31,
-                "Unexpected value for elang: " + a,
+                "Unexpected value for elang: " + a + " " + p,
               );
               let m = null;
               switch (i) {
@@ -58856,44 +58863,44 @@
               }
               m && t.SetTemplateAssetImagePath(e + (0, c.UQ)(i), m, a);
             },
-            [t],
+            [t, p],
           );
-        return l.createElement(
-          l.Fragment,
+        return o.createElement(
+          o.Fragment,
           null,
-          l.createElement(
+          o.createElement(
             "div",
             { className: d().SectionCtn },
-            l.createElement(
+            o.createElement(
               "h2",
               { className: "inline" },
               "MARKETING MESSAGE ASSETS",
             ),
-            l.createElement("hr", null),
-            Boolean(p && (!a || !a.sc_schinese)) &&
-              l.createElement(
+            o.createElement("hr", null),
+            Boolean(_ && (!i || !i.sc_schinese)) &&
+              o.createElement(
                 "div",
                 { className: g.WarningStylesWithIcon },
-                l.createElement(
+                o.createElement(
                   "div",
                   null,
                   "Marketing Message will appear in Steam China, we require a Steam China Simplified Chinese Asset. Please ensure the sc_schinese asset handles these two cases:",
                 ),
-                l.createElement(
+                o.createElement(
                   "ol",
                   null,
-                  l.createElement(
+                  o.createElement(
                     "li",
                     null,
                     "If we mention Steam, in Steam China has a specific name: ",
-                    l.createElement("img", {
+                    o.createElement("img", {
                       src:
                         C.De.STORE_CDN_URL +
                         "public/shared/images/header/logo_steamchina.svg?t=962016",
                       height: "40",
                     }),
                   ),
-                  l.createElement(
+                  o.createElement(
                     "li",
                     null,
                     "If there is a time in the artwork, then it must localized to China Standard Time",
@@ -58901,117 +58908,117 @@
                 ),
               ),
             Boolean("dev" == C.De.WEB_UNIVERSE) &&
-              l.createElement(
+              o.createElement(
                 "div",
                 { className: g.WarningStylesWithIcon },
                 "Remember: To be able to upload assets in DEV you need to be VPN'ed into the RACK.",
               ),
-            l.createElement(u.j, {
-              rgSupportArtwork: _,
-              rgRealmList: v,
+            o.createElement(u.j, {
+              rgSupportArtwork: v,
+              rgRealmList: E,
               strOverrideDragAndDropText:
                 "Drag any asset here to upload (max 5MB)",
               strUploadAjaxURL: `${C.De.PARTNER_BASE_URL}promotion/marketingmessages/ajaxuploadasset/${t.GetGID()}`,
-              fnOnUploadSuccess: E,
+              fnOnUploadSuccess: S,
             }),
-            l.createElement(
+            o.createElement(
               h.SV,
               null,
-              l.createElement("br", null),
-              l.createElement("h3", null, "Static Assets Only"),
-              l.createElement(
+              o.createElement("br", null),
+              o.createElement("h3", null, "Static Assets Only"),
+              o.createElement(
                 "div",
                 null,
-                l.createElement("span", null, "570px by 600px"),
+                o.createElement("span", null, "570px by 600px"),
                 " (.jpg,.png,.gif)",
               ),
-              l.createElement(O, {
+              o.createElement(O, {
                 oEditableMessage: t,
                 assetType: "ll_image",
               }),
-              l.createElement(L, { oEditableMessage: t }),
-              l.createElement(B, { oEditableMessage: t }),
+              o.createElement(L, { oEditableMessage: t }),
+              o.createElement(B, { oEditableMessage: t }),
             ),
           ),
-          l.createElement(A.p, { oEditableMessage: t }),
+          o.createElement(A.p, { oEditableMessage: t }),
         );
       }
       function L(e) {
         const { oEditableMessage: t } = e,
-          [n] = (0, i.SZ)(() => [t.BHasAnimatedAssets()]);
+          [n] = (0, r.SZ)(() => [t.BHasAnimatedAssets()]);
         return n
-          ? l.createElement(
+          ? o.createElement(
               "div",
               null,
-              l.createElement("br", null),
-              l.createElement("h3", null, "Animated Assets"),
-              l.createElement(
+              o.createElement("br", null),
+              o.createElement("h3", null, "Animated Assets"),
+              o.createElement(
                 "div",
                 null,
                 "Animated Assets require both matching .webm/.mp4 files. Will fallback to static assets if animated asset is missing or client is setup for low-bandwidth mode.",
               ),
-              l.createElement("br", null),
-              l.createElement(_.__, null, "WebM"),
-              l.createElement(
+              o.createElement("br", null),
+              o.createElement(_.__, null, "WebM"),
+              o.createElement(
                 "div",
                 null,
                 ".Webm 570px by 600px (required for Steam Client)",
               ),
-              l.createElement(O, { oEditableMessage: t, assetType: "webm" }),
-              l.createElement("br", null),
-              l.createElement(_.__, null, "MP4"),
-              l.createElement(
+              o.createElement(O, { oEditableMessage: t, assetType: "webm" }),
+              o.createElement("br", null),
+              o.createElement(_.__, null, "MP4"),
+              o.createElement(
                 "div",
                 null,
                 ".Mp4 570px by 600px (required for iOS)",
               ),
-              l.createElement(O, { oEditableMessage: t, assetType: "mp4" }),
+              o.createElement(O, { oEditableMessage: t, assetType: "mp4" }),
             )
           : null;
       }
       function B(e) {
         const { oEditableMessage: t } = e,
-          [n] = (0, i.SZ)(() => [t.GetCustomTemplate()]);
+          [n] = (0, r.SZ)(() => [t.GetCustomTemplate()]);
         return "featured_video" != n
           ? null
-          : l.createElement(
+          : o.createElement(
               "div",
               null,
-              l.createElement("br", null),
-              l.createElement(
+              o.createElement("br", null),
+              o.createElement(
                 "h3",
                 null,
                 "Feature Video Template Specific Assets",
               ),
-              l.createElement("br", null),
-              l.createElement(_.__, null, "Background Image"),
-              l.createElement(
+              o.createElement("br", null),
+              o.createElement(_.__, null, "Background Image"),
+              o.createElement(
                 "div",
                 null,
-                l.createElement("span", null, "570px by 600px"),
+                o.createElement("span", null, "570px by 600px"),
                 " (Video sits on top of this asset; .png/.jpg) ",
               ),
-              l.createElement(O, {
+              o.createElement(O, {
                 oEditableMessage: t,
                 assetType: "background",
               }),
-              l.createElement("br", null),
-              l.createElement(_.__, null, "Poster Image"),
-              l.createElement(
+              o.createElement("br", null),
+              o.createElement(_.__, null, "Poster Image"),
+              o.createElement(
                 "div",
                 null,
-                l.createElement("span", null, "528px by 297px"),
+                o.createElement("span", null, "528px by 297px"),
                 " (localized video poster image; shown on top of video prior to play; .png/.jpg)",
               ),
-              l.createElement(O, { oEditableMessage: t, assetType: "poster" }),
-              l.createElement("br", null),
-              l.createElement(_.__, null, "Subtitles"),
-              l.createElement(
+              o.createElement(O, { oEditableMessage: t, assetType: "poster" }),
+              o.createElement("br", null),
+              o.createElement(_.__, null, "Subtitles"),
+              o.createElement(
                 "div",
                 null,
                 ".vtt/.srt format (include extension or mapping will fail)",
               ),
-              l.createElement(O, {
+              o.createElement(O, {
                 oEditableMessage: t,
                 assetType: "subtitles",
               }),
@@ -59019,25 +59026,25 @@
       }
       function O(e) {
         const { oEditableMessage: t, assetType: n } = e,
-          [a, r, s] = (0, i.SZ)(() => [
+          [a, l, s] = (0, r.SZ)(() => [
             t.GetAssetsObject(n),
             t.GetGID(),
             t.GetAssetsModifyTime(),
           ]),
           c = Object.keys(a)
             .sort()
-            .map((e) => (0, o.jM)(e)),
-          m = (0, l.useCallback)(
+            .map((e) => (0, i.jM)(e)),
+          m = (0, o.useCallback)(
             (e) => {
-              const t = (0, o.j_)(e);
-              return a[t] ? (0, S.i)(r, e, s, a[t]) : null;
+              const t = (0, i.j_)(e);
+              return a[t] ? (0, S.i)(l, e, s, a[t]) : null;
             },
-            [r, s, a],
+            [l, s, a],
           );
-        return l.createElement(
+        return o.createElement(
           "div",
           { className: d().MarketingMessage },
-          l.createElement(p.V, {
+          o.createElement(p.V, {
             rgAssetLangs: c,
             fnGetAssetUrl: m,
             fnDeletAssetLang: (e) => t.DeleteAssetObjectLang(n, e),

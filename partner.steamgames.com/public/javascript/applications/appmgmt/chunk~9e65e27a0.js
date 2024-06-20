@@ -9044,6 +9044,18 @@
             (this.m_strUploadPath = e),
             (this.m_fnUploadSuccessCallback = t);
         }
+        GetFnOnUploadSuccess() {
+          return this.m_fnUploadSuccessCallback;
+        }
+        SetFnOnUploadSuccess(e) {
+          this.m_fnUploadSuccessCallback = e;
+        }
+        GetUploadPath() {
+          return this.m_strUploadPath;
+        }
+        SetUploadPath(e) {
+          this.m_strUploadPath = e;
+        }
         GetUploadImages() {
           return this.m_filesToUpload;
         }
