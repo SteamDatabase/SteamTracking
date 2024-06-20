@@ -23958,7 +23958,7 @@
         Gt: () => d,
         it: () => u,
         dn: () => i.dn,
-        ak: () => h.a,
+        ak: () => m.a,
         B8: () => o.B8,
         k$: () => i.k$,
         Qg: () => o.Qg,
@@ -23978,6 +23978,7 @@
         e1: () => o.e1,
         fB: () => o.fB,
         Dc: () => o.Dc,
+        kc: () => h,
       });
       var o = n(93855),
         i = n(32573),
@@ -24026,7 +24027,24 @@
         const n = new e.ownerDocument.defaultView.IntersectionObserver(...t);
         return n.observe(e), n;
       }
-      var h = n(16997);
+      function h() {
+        const [e, t] = (0, r.useState)(!1),
+          n = c((0, r.useCallback)((e) => t(e.isIntersecting), [])),
+          { style: o, ref: s } = (function () {
+            const [e, t] = (0, r.useState)(null),
+              [n, o] = (0, r.useState)(null);
+            return (
+              (0, r.useEffect)(() => {
+                e && o(window.getComputedStyle(e));
+              }, [e]),
+              { style: n, ref: t }
+            );
+          })(),
+          a = (0, i.BE)(n, s),
+          l = !o || "hidden" !== o.visibility;
+        return { bVisible: e && l, ref: a };
+      }
+      var m = n(16997);
     },
     2041: (e, t, n) => {
       "use strict";

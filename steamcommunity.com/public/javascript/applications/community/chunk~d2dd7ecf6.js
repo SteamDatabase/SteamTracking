@@ -1629,7 +1629,7 @@
               onSubmit: I,
               onChange: I,
               multiple: !0,
-              accept: "image/png, image/jpeg, image/gif",
+              accept: "image/png, image/jpeg, image/gif, image/webp",
             }),
           ),
           i,

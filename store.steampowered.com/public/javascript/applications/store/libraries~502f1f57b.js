@@ -1899,6 +1899,105 @@
       var r = n(12133)("toUpperCase");
       t.exports = r;
     },
+    36904: (t, e, n) => {
+      "use strict";
+      function r() {
+        var t = this.constructor.getDerivedStateFromProps(
+          this.props,
+          this.state,
+        );
+        null != t && this.setState(t);
+      }
+      function i(t) {
+        this.setState(
+          function (e) {
+            var n = this.constructor.getDerivedStateFromProps(t, e);
+            return null != n ? n : null;
+          }.bind(this),
+        );
+      }
+      function o(t, e) {
+        try {
+          var n = this.props,
+            r = this.state;
+          (this.props = t),
+            (this.state = e),
+            (this.__reactInternalSnapshotFlag = !0),
+            (this.__reactInternalSnapshot = this.getSnapshotBeforeUpdate(n, r));
+        } finally {
+          (this.props = n), (this.state = r);
+        }
+      }
+      function a(t) {
+        var e = t.prototype;
+        if (!e || !e.isReactComponent)
+          throw new Error("Can only polyfill class components");
+        if (
+          "function" != typeof t.getDerivedStateFromProps &&
+          "function" != typeof e.getSnapshotBeforeUpdate
+        )
+          return t;
+        var n = null,
+          a = null,
+          u = null;
+        if (
+          ("function" == typeof e.componentWillMount
+            ? (n = "componentWillMount")
+            : "function" == typeof e.UNSAFE_componentWillMount &&
+              (n = "UNSAFE_componentWillMount"),
+          "function" == typeof e.componentWillReceiveProps
+            ? (a = "componentWillReceiveProps")
+            : "function" == typeof e.UNSAFE_componentWillReceiveProps &&
+              (a = "UNSAFE_componentWillReceiveProps"),
+          "function" == typeof e.componentWillUpdate
+            ? (u = "componentWillUpdate")
+            : "function" == typeof e.UNSAFE_componentWillUpdate &&
+              (u = "UNSAFE_componentWillUpdate"),
+          null !== n || null !== a || null !== u)
+        ) {
+          var c = t.displayName || t.name,
+            l =
+              "function" == typeof t.getDerivedStateFromProps
+                ? "getDerivedStateFromProps()"
+                : "getSnapshotBeforeUpdate()";
+          throw Error(
+            "Unsafe legacy lifecycles will not be called for components using new component APIs.\n\n" +
+              c +
+              " uses " +
+              l +
+              " but also contains the following legacy lifecycles:" +
+              (null !== n ? "\n  " + n : "") +
+              (null !== a ? "\n  " + a : "") +
+              (null !== u ? "\n  " + u : "") +
+              "\n\nThe above lifecycles should be removed. Learn more about this warning here:\nhttps://fb.me/react-async-component-lifecycle-hooks",
+          );
+        }
+        if (
+          ("function" == typeof t.getDerivedStateFromProps &&
+            ((e.componentWillMount = r), (e.componentWillReceiveProps = i)),
+          "function" == typeof e.getSnapshotBeforeUpdate)
+        ) {
+          if ("function" != typeof e.componentDidUpdate)
+            throw new Error(
+              "Cannot polyfill getSnapshotBeforeUpdate() for components that do not define componentDidUpdate() on the prototype",
+            );
+          e.componentWillUpdate = o;
+          var s = e.componentDidUpdate;
+          e.componentDidUpdate = function (t, e, n) {
+            var r = this.__reactInternalSnapshotFlag
+              ? this.__reactInternalSnapshot
+              : n;
+            s.call(this, t, e, r);
+          };
+        }
+        return t;
+      }
+      n.r(e),
+        n.d(e, { polyfill: () => a }),
+        (r.__suppressDeprecationWarning = !0),
+        (i.__suppressDeprecationWarning = !0),
+        (o.__suppressDeprecationWarning = !0);
+    },
     15819: (t, e, n) => {
       "use strict";
       n.d(e, { ZP: () => ae, bO: () => et });
@@ -2067,35 +2166,35 @@
             : null,
         L = Object.assign,
         R = Object.prototype.toString.call.bind(Object.prototype.toString);
-      var z = $();
-      $({ strict: !0 }),
-        $({ circular: !0 }),
-        $({ circular: !0, strict: !0 }),
-        $({
+      var z = U();
+      U({ strict: !0 }),
+        U({ circular: !0 }),
+        U({ circular: !0, strict: !0 }),
+        U({
           createInternalComparator: function () {
             return h;
           },
         }),
-        $({
+        U({
           strict: !0,
           createInternalComparator: function () {
             return h;
           },
         }),
-        $({
+        U({
           circular: !0,
           createInternalComparator: function () {
             return h;
           },
         }),
-        $({
+        U({
           circular: !0,
           createInternalComparator: function () {
             return h;
           },
           strict: !0,
         });
-      function $(t) {
+      function U(t) {
         void 0 === t && (t = {});
         var e,
           n = t.circular,
@@ -2231,9 +2330,9 @@
                 })(r);
         });
       }
-      function U(t) {
+      function $(t) {
         return (
-          (U =
+          ($ =
             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (t) {
                   return typeof t;
@@ -2246,7 +2345,7 @@
                     ? "symbol"
                     : typeof t;
                 }),
-          U(t)
+          $(t)
         );
       }
       function W(t) {
@@ -2301,7 +2400,7 @@
                   ? void F(n.bind(null, a), o)
                   : (n(o), void F(n.bind(null, a)));
               }
-              "object" === U(r) && t(r), "function" == typeof r && r();
+              "object" === $(r) && t(r), "function" == typeof r && r();
             }
           };
         return {
@@ -3174,7 +3273,7 @@
           zt(t)
         );
       }
-      var $t = (function (t) {
+      var Ut = (function (t) {
         !(function (t, e) {
           if ("function" != typeof e && null !== e)
             throw new TypeError(
@@ -3446,8 +3545,8 @@
           a
         );
       })(r.PureComponent);
-      ($t.displayName = "Animate"),
-        ($t.defaultProps = {
+      (Ut.displayName = "Animate"),
+        (Ut.defaultProps = {
           begin: 0,
           duration: 1e3,
           from: "",
@@ -3460,7 +3559,7 @@
           onAnimationEnd: function () {},
           onAnimationStart: function () {},
         }),
-        ($t.propTypes = {
+        (Ut.propTypes = {
           from: o().oneOfType([o().object, o().string]),
           to: o().oneOfType([o().object, o().string]),
           attributeName: o().string,
@@ -3493,8 +3592,8 @@
           onAnimationStart: o().func,
           onAnimationReStart: o().func,
         });
-      const Ft = $t;
-      var Ut = n(91514),
+      const Ft = Ut;
+      var $t = n(91514),
         Wt = ["children", "appearOptions", "enterOptions", "leaveOptions"];
       function Zt(t) {
         return (
@@ -3780,7 +3879,7 @@
                       e.leaveOptions,
                       Ht(e, Wt));
                   return r.createElement(
-                    Ut.Transition,
+                    $t.Transition,
                     qt({}, i, {
                       onEnter: this.handleEnter,
                       onExit: this.handleExit,
@@ -3812,7 +3911,7 @@
           o = t.enter,
           a = t.leave;
         return r.createElement(
-          Ut.TransitionGroup,
+          $t.TransitionGroup,
           { component: e },
           r.Children.map(n, function (t, e) {
             return r.createElement(
@@ -4666,7 +4765,7 @@
     },
     28531: (t, e, n) => {
       "use strict";
-      n.d(e, { $: () => U });
+      n.d(e, { $: () => $ });
       var r = n(47427),
         i = n(84148),
         o = n(15819),
@@ -4906,7 +5005,7 @@
           var n = null != arguments[e] ? arguments[e] : {};
           e % 2
             ? N(Object(n), !0).forEach(function (e) {
-                $(t, e, n[e]);
+                U(t, e, n[e]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -4989,7 +5088,7 @@
           z(t)
         );
       }
-      function $(t, e, n) {
+      function U(t, e, n) {
         return (
           (e = F(e)) in t
             ? Object.defineProperty(t, e, {
@@ -5015,7 +5114,7 @@
         })(t, "string");
         return "symbol" === T(e) ? e : String(e);
       }
-      var U = (function (t) {
+      var $ = (function (t) {
         !(function (t, e) {
           if ("function" != typeof e && null !== e)
             throw new TypeError(
@@ -5040,15 +5139,15 @@
           for (var e = arguments.length, n = new Array(e), r = 0; r < e; r++)
             n[r] = arguments[r];
           return (
-            $(R((t = c.call.apply(c, [this].concat(n)))), "state", {
+            U(R((t = c.call.apply(c, [this].concat(n)))), "state", {
               isAnimationFinished: !1,
             }),
-            $(R(t), "id", (0, d.EL)("recharts-bar-")),
-            $(R(t), "handleAnimationEnd", function () {
+            U(R(t), "id", (0, d.EL)("recharts-bar-")),
+            U(R(t), "handleAnimationEnd", function () {
               var e = t.props.onAnimationEnd;
               t.setState({ isAnimationFinished: !0 }), e && e();
             }),
-            $(R(t), "handleAnimationStart", function () {
+            U(R(t), "handleAnimationStart", function () {
               var e = t.props.onAnimationStart;
               t.setState({ isAnimationFinished: !1 }), e && e();
             }),
@@ -5334,8 +5433,8 @@
           p
         );
       })(r.PureComponent);
-      $(U, "displayName", "Bar"),
-        $(U, "defaultProps", {
+      U($, "displayName", "Bar"),
+        U($, "defaultProps", {
           xAxisId: 0,
           yAxisId: 0,
           legendType: "rect",
@@ -5349,7 +5448,7 @@
           animationDuration: 400,
           animationEasing: "ease",
         }),
-        $(U, "getComposedData", function (t) {
+        U($, "getComposedData", function (t) {
           var e = t.props,
             n = t.item,
             r = t.barPosition,
@@ -8004,13 +8103,13 @@
                   M({}, e, { className: "recharts-area-dot" }),
                 );
         });
-      var $ = n(28531),
+      var U = n(28531),
         F = n(52942),
-        U = function () {
+        $ = function () {
           return null;
         };
-      (U.displayName = "ZAxis"),
-        (U.defaultProps = {
+      ($.displayName = "ZAxis"),
+        ($.defaultProps = {
           zAxisId: 0,
           range: [64, 64],
           scale: "auto",
@@ -8574,7 +8673,7 @@
             f = h()(e.dataKey) ? i.props.dataKey : e.dataKey,
             p = h()(n.dataKey) ? i.props.dataKey : n.dataKey,
             d = r && r.dataKey,
-            y = r ? r.range : U.defaultProps.range,
+            y = r ? r.range : $.defaultProps.range,
             v = y && y[0],
             m = e.scale.bandwidth ? e.scale.bandwidth() : 0,
             g = n.scale.bandwidth ? n.scale.bandwidth() : 0,
@@ -8656,11 +8755,11 @@
         pt = n(52871),
         ht = (0, i.z)({
           chartName: "ComposedChart",
-          GraphicalChild: [F.x, z, $.$, lt],
+          GraphicalChild: [F.x, z, U.$, lt],
           axisComponents: [
             { axisType: "xAxis", AxisComp: st.K },
             { axisType: "yAxis", AxisComp: ft.B },
-            { axisType: "zAxis", AxisComp: U },
+            { axisType: "zAxis", AxisComp: $ },
           ],
           formatAxisMap: pt.t9,
         });
@@ -8971,9 +9070,9 @@
         L = n(14166),
         R = n(83821),
         z = n(94797),
-        $ = n(31917),
+        U = n(31917),
         F = n(93998),
-        U = n(47094),
+        $ = n(47094),
         W = n(81156),
         Z = ["viewBox"],
         q = ["viewBox"],
@@ -9217,7 +9316,7 @@
                   o = i.viewBox,
                   a = K(i, q);
                 return (
-                  !(0, $.w)(n, o) || !(0, $.w)(r, a) || !(0, $.w)(e, this.state)
+                  !(0, U.w)(n, o) || !(0, U.w)(r, a) || !(0, U.w)(e, this.state)
                 );
               },
             },
@@ -9478,7 +9577,7 @@
                           this.state.fontSize,
                           this.state.letterSpacing,
                         ),
-                        U._.renderCallByParent(this.props),
+                        $._.renderCallByParent(this.props),
                       )
                 );
               },
@@ -10535,7 +10634,7 @@
           D.m,
           { className: (0, x.Z)("recharts-reference-dot", h) },
           Nt.renderDot(p, d),
-          U._.renderCallByParent(t, {
+          $._.renderCallByParent(t, {
             x: s - i,
             y: f - i,
             width: 2 * i,
@@ -10661,7 +10760,7 @@
           t
         );
       }
-      function $t(t) {
+      function Ut(t) {
         var e = t.x1,
           n = t.x2,
           i = t.y1,
@@ -10705,14 +10804,14 @@
         return r.createElement(
           D.m,
           { className: (0, x.Z)("recharts-reference-area", a) },
-          $t.renderRect(h, Rt(Rt({ clipPath: y }, (0, z.L6)(t, !0)), d)),
-          U._.renderCallByParent(t, d),
+          Ut.renderRect(h, Rt(Rt({ clipPath: y }, (0, z.L6)(t, !0)), d)),
+          $._.renderCallByParent(t, d),
         );
       }
       function Ft(t) {
         return (
           (function (t) {
-            if (Array.isArray(t)) return Ut(t);
+            if (Array.isArray(t)) return $t(t);
           })(t) ||
           (function (t) {
             if (
@@ -10723,7 +10822,7 @@
           })(t) ||
           (function (t, e) {
             if (!t) return;
-            if ("string" == typeof t) return Ut(t, e);
+            if ("string" == typeof t) return $t(t, e);
             var n = Object.prototype.toString.call(t).slice(8, -1);
             "Object" === n && t.constructor && (n = t.constructor.name);
             if ("Map" === n || "Set" === n) return Array.from(t);
@@ -10731,7 +10830,7 @@
               "Arguments" === n ||
               /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
             )
-              return Ut(t, e);
+              return $t(t, e);
           })(t) ||
           (function () {
             throw new TypeError(
@@ -10740,13 +10839,13 @@
           })()
         );
       }
-      function Ut(t, e) {
+      function $t(t, e) {
         (null == e || e > t.length) && (e = t.length);
         for (var n = 0, r = new Array(e); n < e; n++) r[n] = t[n];
         return r;
       }
-      ($t.displayName = "ReferenceArea"),
-        ($t.defaultProps = {
+      (Ut.displayName = "ReferenceArea"),
+        (Ut.defaultProps = {
           isFront: !1,
           ifOverflow: "discard",
           xAxisId: 0,
@@ -10757,7 +10856,7 @@
           stroke: "none",
           strokeWidth: 1,
         }),
-        ($t.renderRect = function (t, e) {
+        (Ut.renderRect = function (t, e) {
           return r.isValidElement(t)
             ? r.cloneElement(t, e)
             : u()(t)
@@ -10771,7 +10870,7 @@
           var o = (0, z.NN)(t, Dt.d),
             a = (0, z.NN)(t, Nt),
             u = [].concat(Ft(o), Ft(a)),
-            c = (0, z.NN)(t, $t),
+            c = (0, z.NN)(t, Ut),
             l = "".concat(r, "Id"),
             s = r[0],
             f = e;
@@ -11616,7 +11715,7 @@
       function ze(t) {
         return "number" === t ? [0, "auto"] : void 0;
       }
-      var $e = function (t, e, n, r) {
+      var Ue = function (t, e, n, r) {
           var i = t.graphicalItems,
             o = t.tooltipAxis,
             a = Re(e, t);
@@ -11656,7 +11755,7 @@
             l = (0, at.VO)(o, a, c, u);
           if (l >= 0 && c) {
             var s = c[l] && c[l].value,
-              f = $e(t, e, l, s),
+              f = Ue(t, e, l, s),
               p = (function (t, e, n, r) {
                 var i = e.find(function (t) {
                   return t && t.index === n;
@@ -11692,7 +11791,7 @@
           }
           return null;
         },
-        Ue = function (t, e) {
+        $e = function (t, e) {
           var n = e.axes,
             r = e.graphicalItems,
             i = e.axisType,
@@ -11840,7 +11939,7 @@
             d = {};
           return (
             h && h.length
-              ? (d = Ue(t, {
+              ? (d = $e(t, {
                   axes: h,
                   graphicalItems: o,
                   axisType: r,
@@ -12489,7 +12588,7 @@
                         v = Math.min(c, y.x + y.width),
                         m = Math.min(l, y.y + y.height),
                         g = h[s] && h[s].value,
-                        b = $e(a.state, a.props.data, s),
+                        b = Ue(a.state, a.props.data, s),
                         x = h[s]
                           ? {
                               x: "horizontal" === n ? h[s].coordinate : v,
@@ -13471,7 +13570,7 @@
                 u !== e.prevHeight ||
                 c !== e.prevLayout ||
                 l !== e.prevStackOffset ||
-                !(0, $.w)(s, e.prevMargin)
+                !(0, U.w)(s, e.prevMargin)
               ) {
                 var d = Ze(t),
                   y = {
@@ -16010,9 +16109,9 @@
           }
           var z = [];
           if (d) {
-            var $ = O[0].width,
+            var U = O[0].width,
               F = w.width;
-            z.push("scale(".concat(((0, u.hj)(F) ? F / $ : 1) / $, ")"));
+            z.push("scale(".concat(((0, u.hj)(F) ? F / U : 1) / U, ")"));
           }
           return (
             E &&
@@ -16827,7 +16926,7 @@
           z(t)
         );
       }
-      function $(t, e) {
+      function U(t, e) {
         var n = Object.keys(t);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(t);
@@ -16843,12 +16942,12 @@
         for (var e = 1; e < arguments.length; e++) {
           var n = null != arguments[e] ? arguments[e] : {};
           e % 2
-            ? $(Object(n), !0).forEach(function (e) {
+            ? U(Object(n), !0).forEach(function (e) {
                 H(t, e, n[e]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-              : $(Object(n)).forEach(function (e) {
+              : U(Object(n)).forEach(function (e) {
                   Object.defineProperty(
                     t,
                     e,
@@ -16858,7 +16957,7 @@
         }
         return t;
       }
-      function U(t, e) {
+      function $(t, e) {
         for (var n = 0; n < e.length; n++) {
           var r = e[n];
           (r.enumerable = r.enumerable || !1),
@@ -17041,8 +17140,8 @@
                 );
               },
             },
-          ]) && U(e.prototype, n),
-          i && U(e, i),
+          ]) && $(e.prototype, n),
+          i && $(e, i),
           Object.defineProperty(e, "prototype", { writable: !1 }),
           a
         );
@@ -17911,7 +18010,7 @@
           z.apply(this, arguments)
         );
       }
-      function $(t, e) {
+      function U(t, e) {
         var n = Object.keys(t);
         if (Object.getOwnPropertySymbols) {
           var r = Object.getOwnPropertySymbols(t);
@@ -17927,12 +18026,12 @@
         for (var e = 1; e < arguments.length; e++) {
           var n = null != arguments[e] ? arguments[e] : {};
           e % 2
-            ? $(Object(n), !0).forEach(function (e) {
-                U(t, e, n[e]);
+            ? U(Object(n), !0).forEach(function (e) {
+                $(t, e, n[e]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-              : $(Object(n)).forEach(function (e) {
+              : U(Object(n)).forEach(function (e) {
                   Object.defineProperty(
                     t,
                     e,
@@ -17942,7 +18041,7 @@
         }
         return t;
       }
-      function U(t, e, n) {
+      function $(t, e, n) {
         return (
           (e = (function (t) {
             var e = (function (t, e) {
@@ -19073,7 +19172,7 @@
           symbolTriangle: O,
           symbolWye: P,
         },
-        $ = Math.PI / 180,
+        U = Math.PI / 180,
         F = function (t) {
           var e,
             n,
@@ -19151,7 +19250,7 @@
                             case "square":
                               return t * t;
                             case "star":
-                              var r = 18 * $;
+                              var r = 18 * U;
                               return (
                                 1.25 *
                                 t *
@@ -19184,7 +19283,7 @@
         a3: () => Z,
         lT: () => R,
         V$: () => z,
-        w7: () => $,
+        w7: () => U,
       });
       var r = n(47427),
         i = n(8889),
@@ -19639,7 +19738,7 @@
       function z(t, e) {
         return null != e && "sectors" in t.props;
       }
-      function $(t, e) {
+      function U(t, e) {
         return null != e && "points" in t.props;
       }
       function F(t, e) {
@@ -19657,7 +19756,7 @@
                 : r.y) || t.y === e.y;
         return i && o;
       }
-      function U(t, e) {
+      function $(t, e) {
         var n = t.endAngle === e.endAngle,
           r = t.startAngle === e.startAngle;
         return n && r;
@@ -19679,7 +19778,7 @@
                 ? (n = "trapezoids")
                 : z(t, e)
                   ? (n = "sectors")
-                  : $(t, e) && (n = "points"),
+                  : U(t, e) && (n = "points"),
               n
             );
           })(n, e),
@@ -19703,7 +19802,7 @@
                   void 0 === r
                   ? void 0
                   : r.payload
-                : $(t, e)
+                : U(t, e)
                   ? e.payload
                   : {};
           })(n, e),
@@ -19713,7 +19812,7 @@
                 var r = (function (t, e) {
                   var n;
                   return (
-                    R(t, e) ? (n = F) : z(t, e) ? (n = U) : $(t, e) && (n = W),
+                    R(t, e) ? (n = F) : z(t, e) ? (n = $) : U(t, e) && (n = W),
                     n
                   );
                 })(n, e);
@@ -20096,7 +20195,7 @@
         qz: () => xo,
         pt: () => bo,
         Yj: () => Fo,
-        Fy: () => $o,
+        Fy: () => Uo,
         Hv: () => zo,
         Rf: () => Ao,
         gF: () => vo,
@@ -20104,7 +20203,7 @@
         EB: () => Wo,
         fk: () => go,
         wh: () => Lo,
-        O3: () => Uo,
+        O3: () => $o,
         uY: () => Po,
         g$: () => Ro,
         Qo: () => Yo,
@@ -20144,9 +20243,9 @@
           scaleSqrt: () => fe,
           scaleSymlog: () => ie,
           scaleThreshold: () => Se,
-          scaleTime: () => Ur,
+          scaleTime: () => $r,
           scaleUtc: () => Wr,
-          tickFormat: () => Ut,
+          tickFormat: () => $t,
         });
       var i = n(9756);
       const o = Math.sqrt(50),
@@ -20451,21 +20550,21 @@
               6 === n
                 ? z(e)
                 : 3 === n
-                  ? new U(
+                  ? new $(
                       ((e >> 8) & 15) | ((e >> 4) & 240),
                       ((e >> 4) & 15) | (240 & e),
                       ((15 & e) << 4) | (15 & e),
                       1,
                     )
                   : 8 === n
-                    ? $(
+                    ? U(
                         (e >> 24) & 255,
                         (e >> 16) & 255,
                         (e >> 8) & 255,
                         (255 & e) / 255,
                       )
                     : 4 === n
-                      ? $(
+                      ? U(
                           ((e >> 12) & 15) | ((e >> 8) & 240),
                           ((e >> 8) & 15) | ((e >> 4) & 240),
                           ((e >> 4) & 15) | (240 & e),
@@ -20473,18 +20572,18 @@
                         )
                       : null)
             : (e = M.exec(t))
-              ? new U(e[1], e[2], e[3], 1)
+              ? new $(e[1], e[2], e[3], 1)
               : (e = T.exec(t))
-                ? new U(
+                ? new $(
                     (255 * e[1]) / 100,
                     (255 * e[2]) / 100,
                     (255 * e[3]) / 100,
                     1,
                   )
                 : (e = _.exec(t))
-                  ? $(e[1], e[2], e[3], e[4])
+                  ? U(e[1], e[2], e[3], e[4])
                   : (e = C.exec(t))
-                    ? $(
+                    ? U(
                         (255 * e[1]) / 100,
                         (255 * e[2]) / 100,
                         (255 * e[3]) / 100,
@@ -20497,24 +20596,24 @@
                         : I.hasOwnProperty(t)
                           ? z(I[t])
                           : "transparent" === t
-                            ? new U(NaN, NaN, NaN, 0)
+                            ? new $(NaN, NaN, NaN, 0)
                             : null
         );
       }
       function z(t) {
-        return new U((t >> 16) & 255, (t >> 8) & 255, 255 & t, 1);
+        return new $((t >> 16) & 255, (t >> 8) & 255, 255 & t, 1);
       }
-      function $(t, e, n, r) {
-        return r <= 0 && (t = e = n = NaN), new U(t, e, n, r);
+      function U(t, e, n, r) {
+        return r <= 0 && (t = e = n = NaN), new $(t, e, n, r);
       }
       function F(t, e, n, r) {
         return 1 === arguments.length
           ? ((i = t) instanceof O || (i = R(i)),
-            i ? new U((i = i.rgb()).r, i.g, i.b, i.opacity) : new U())
-          : new U(t, e, n, null == r ? 1 : r);
+            i ? new $((i = i.rgb()).r, i.g, i.b, i.opacity) : new $())
+          : new $(t, e, n, null == r ? 1 : r);
         var i;
       }
-      function U(t, e, n, r) {
+      function $(t, e, n, r) {
         (this.r = +t), (this.g = +e), (this.b = +n), (this.opacity = +r);
       }
       function W() {
@@ -20620,26 +20719,26 @@
         toString: L,
       }),
         x(
-          U,
+          $,
           F,
           w(O, {
             brighter(t) {
               return (
                 (t = null == t ? S : Math.pow(S, t)),
-                new U(this.r * t, this.g * t, this.b * t, this.opacity)
+                new $(this.r * t, this.g * t, this.b * t, this.opacity)
               );
             },
             darker(t) {
               return (
                 (t = null == t ? j : Math.pow(j, t)),
-                new U(this.r * t, this.g * t, this.b * t, this.opacity)
+                new $(this.r * t, this.g * t, this.b * t, this.opacity)
               );
             },
             rgb() {
               return this;
             },
             clamp() {
-              return new U(H(this.r), H(this.g), H(this.b), q(this.opacity));
+              return new $(H(this.r), H(this.g), H(this.b), q(this.opacity));
             },
             displayable() {
               return (
@@ -20688,7 +20787,7 @@
                 n = this.l,
                 r = n + (n < 0.5 ? n : 1 - n) * e,
                 i = 2 * n - r;
-              return new U(
+              return new $(
                 Q(t >= 240 ? t - 240 : t + 120, i, r),
                 Q(t, i, r),
                 Q(t < 120 ? t + 240 : t - 120, i, r),
@@ -21176,7 +21275,7 @@
         Lt,
         Rt,
         zt = Array.prototype.map,
-        $t = [
+        Ut = [
           "y",
           "z",
           "a",
@@ -21288,7 +21387,7 @@
                   (S ? ("(" === f ? f : l) : "-" === f || "(" === f ? "" : f) +
                   p),
                 (j =
-                  ("s" === g ? $t[8 + At / 3] : "") +
+                  ("s" === g ? Ut[8 + At / 3] : "") +
                   j +
                   (S && "(" === f ? ")" : "")),
                 O)
@@ -21342,14 +21441,14 @@
             var n = f((((t = Mt(t)).type = "f"), t)),
               r = 3 * Math.max(-8, Math.min(8, Math.floor(Ct(e) / 3))),
               i = Math.pow(10, -r),
-              o = $t[8 + r / 3];
+              o = Ut[8 + r / 3];
             return function (t) {
               return n(i * t) + o;
             };
           },
         };
       }
-      function Ut(t, e, n, r) {
+      function $t(t, e, n, r) {
         var i,
           o = f(t, e, n);
         switch ((r = Mt(null == r ? ",f" : r)).type) {
@@ -21407,7 +21506,7 @@
           }),
           (t.tickFormat = function (t, n) {
             var r = e();
-            return Ut(r[0], r[r.length - 1], null == t ? 10 : t, n);
+            return $t(r[0], r[r.length - 1], null == t ? 10 : t, n);
           }),
           (t.nice = function (n) {
             null == n && (n = 10);
@@ -22110,7 +22209,7 @@
             (t, e) => (e - t) / Pe,
             (t) => t.getHours(),
           )),
-        $e =
+        Ue =
           (ze.range,
           De(
             (t) => {
@@ -22123,7 +22222,7 @@
             (t) => t.getUTCHours(),
           )),
         Fe =
-          ($e.range,
+          (Ue.range,
           De(
             (t) => t.setHours(0, 0, 0, 0),
             (t, e) => t.setDate(t.getDate() + e),
@@ -22132,7 +22231,7 @@
               ke,
             (t) => t.getDate() - 1,
           )),
-        Ue =
+        $e =
           (Fe.range,
           De(
             (t) => {
@@ -22145,7 +22244,7 @@
             (t) => t.getUTCDate() - 1,
           )),
         We =
-          (Ue.range,
+          ($e.range,
           De(
             (t) => {
               t.setUTCHours(0, 0, 0, 0);
@@ -22323,7 +22422,7 @@
           u,
         ];
       }
-      const [pn, hn] = fn(sn, cn, Qe, We, $e, Re),
+      const [pn, hn] = fn(sn, cn, Qe, We, Ue, Re),
         [dn, yn] = fn(ln, un, qe, Fe, ze, Le);
       function vn(t) {
         if (0 <= t.y && t.y < 100) {
@@ -22408,7 +22507,7 @@
         var r = jn.exec(e.slice(n, n + 2));
         return r ? ((t.m = r[0] - 1), n + r[0].length) : -1;
       }
-      function $n(t, e, n) {
+      function Un(t, e, n) {
         var r = jn.exec(e.slice(n, n + 2));
         return r ? ((t.d = +r[0]), n + r[0].length) : -1;
       }
@@ -22416,7 +22515,7 @@
         var r = jn.exec(e.slice(n, n + 3));
         return r ? ((t.m = 0), (t.d = +r[0]), n + r[0].length) : -1;
       }
-      function Un(t, e, n) {
+      function $n(t, e, n) {
         var r = jn.exec(e.slice(n, n + 2));
         return r ? ((t.H = +r[0]), n + r[0].length) : -1;
       }
@@ -22532,7 +22631,7 @@
         return An(t.getUTCHours() % 12 || 12, e, 2);
       }
       function br(t, e) {
-        return An(1 + Ue.count(sn(t), t), e, 3);
+        return An(1 + $e.count(sn(t), t), e, 3);
       }
       function xr(t, e) {
         return An(t.getUTCMilliseconds(), e, 3);
@@ -22603,7 +22702,7 @@
       function zr(t) {
         return new Date(t);
       }
-      function $r(t) {
+      function Ur(t) {
         return t instanceof Date ? +t : +new Date(+t);
       }
       function Fr(t, e, n, r, i, o, a, u, c, l) {
@@ -22642,7 +22741,7 @@
             return new Date(f(t));
           }),
           (s.domain = function (t) {
-            return arguments.length ? p(Array.from(t, $r)) : p().map(zr);
+            return arguments.length ? p(Array.from(t, Ur)) : p().map(zr);
           }),
           (s.ticks = function (e) {
             var n = p();
@@ -22665,7 +22764,7 @@
           s
         );
       }
-      function Ur() {
+      function $r() {
         return Pt.o.apply(
           Fr(dn, yn, ln, un, qe, Fe, ze, Le, Be, xn).domain([
             new Date(2e3, 0, 1),
@@ -22676,7 +22775,7 @@
       }
       function Wr() {
         return Pt.o.apply(
-          Fr(pn, hn, sn, cn, Qe, Ue, $e, Re, Be, wn).domain([
+          Fr(pn, hn, sn, cn, Qe, $e, Ue, Re, Be, wn).domain([
             Date.UTC(2e3, 0, 1),
             Date.UTC(2e3, 0, 2),
           ]),
@@ -23085,13 +23184,13 @@
               c: function (t, n, r) {
                 return S(t, e, n, r);
               },
-              d: $n,
-              e: $n,
+              d: Un,
+              e: Un,
               f: Hn,
               g: Bn,
               G: In,
-              H: Un,
-              I: Un,
+              H: $n,
+              I: $n,
               j: Fn,
               L: qn,
               m: zn,
@@ -23162,7 +23261,7 @@
                   "Z" in o
                     ? ((i = (r = mn(gn(o.y, 0, 1))).getUTCDay()),
                       (r = i > 4 || 0 === i ? tn.ceil(r) : tn(r)),
-                      (r = Ue.offset(r, 7 * (o.V - 1))),
+                      (r = $e.offset(r, 7 * (o.V - 1))),
                       (o.y = r.getUTCFullYear()),
                       (o.m = r.getUTCMonth()),
                       (o.d = r.getUTCDate() + ((o.w + 6) % 7)))
@@ -23383,7 +23482,7 @@
               : t.apply(void 0, arguments);
           };
         },
-        $i = function t(e, n) {
+        Ui = function t(e, n) {
           return 1 === e
             ? n
             : zi(function () {
@@ -23416,9 +23515,9 @@
               });
         },
         Fi = function (t) {
-          return $i(t.length, t);
+          return Ui(t.length, t);
         },
-        Ui = function (t, e) {
+        $i = function (t, e) {
           for (var n = [], r = t; r < e; ++r) n[r - t] = r;
           return n;
         },
@@ -23598,7 +23697,7 @@
           Wi(function (t) {
             return i.add(new (Ni())(t - a).mul(r)).toNumber();
           }),
-          Ui,
+          $i,
         )(0, e);
       }
       function eo(t, e, n, r) {
@@ -23649,14 +23748,14 @@
               l === 1 / 0
                 ? [c].concat(
                     Xi(
-                      Ui(0, i - 1).map(function () {
+                      $i(0, i - 1).map(function () {
                         return 1 / 0;
                       }),
                     ),
                   )
                 : [].concat(
                     Xi(
-                      Ui(0, i - 1).map(function () {
+                      $i(0, i - 1).map(function () {
                         return -1 / 0;
                       }),
                     ),
@@ -23695,7 +23794,7 @@
                 Wi(function (t) {
                   return new (Ni())(c).add(new (Ni())(t).mul(s)).toNumber();
                 }),
-                Ui,
+                $i,
               )(0, a).filter(function (t) {
                 return t >= c && t <= l;
               });
@@ -24522,7 +24621,7 @@
           var c = yo(i, yi()(a) ? e.dataKey : a);
           return yi()(c) ? null : e.scale(c);
         },
-        $o = function (t) {
+        Uo = function (t) {
           var e = t.axis,
             n = t.ticks,
             r = t.offset,
@@ -24543,7 +24642,7 @@
           }
           return n[0];
         },
-        Uo = function (t, e) {
+        $o = function (t, e) {
           var n = t.props.stackId;
           if ((0, oo.P2)(n)) {
             var r = e[n];

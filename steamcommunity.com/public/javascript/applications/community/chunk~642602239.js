@@ -6872,21 +6872,21 @@
       }
       (0, r.gn)([m.ak], d.prototype, "BUserHasVolumePreference", null),
         (0, r.gn)([m.ak], d.prototype, "SetVolumePreference", null);
-      const u = (e) => {
-        const { video: t, bAutoPlay: n, bControls: r, bLoop: m, bMuted: u } = e,
-          p = (0, i.useMemo)(() => {
+      const u = (0, i.forwardRef)(function (e, t) {
+        const { video: n, bAutoPlay: r, bControls: m, bLoop: u, bMuted: p } = e,
+          h = (0, i.useMemo)(() => {
             var e;
             return Boolean(
-              null === (e = t.rgVideoTracks) || void 0 === e
+              null === (e = n.rgVideoTracks) || void 0 === e
                 ? void 0
                 : e.some(
                     (e) => "subtitles" == e.sKind || "captions" == e.sKind,
                   ),
             );
-          }, [t.rgVideoTracks]),
-          [h, _] = i.useState(!1);
-        if (!t.rgVideoSources || !t.rgVideoSources.length) return null;
-        const g = (e) => {
+          }, [n.rgVideoTracks]),
+          [_, g] = i.useState(!1);
+        if (!n.rgVideoSources || !n.rgVideoSources.length) return null;
+        const E = (e) => {
             const t = new URL(e);
             return (
               (t.search =
@@ -6894,45 +6894,45 @@
               t.toString()
             );
           },
-          E = t.rgVideoSources
+          f = n.rgVideoSources
             .filter((e) => Boolean(e.sURL))
             .map((e) =>
               i.createElement("source", {
                 key: e.sURL,
-                src: g(e.sURL),
+                src: E(e.sURL),
                 type: e.sFormat,
               }),
             ),
-          f = t.rgVideoTracks
-            ? t.rgVideoTracks.map((e) => {
-                let n = e.eLanguage;
+          v = n.rgVideoTracks
+            ? n.rgVideoTracks.map((e) => {
+                let t = e.eLanguage;
                 if ((0, c.h4)())
-                  if (s.LJ.IsELanguageValidInRealm(n, a.IN.k_ESteamRealmChina))
-                    n = s.LJ.GetELanguageFallback(n);
+                  if (s.LJ.IsELanguageValidInRealm(t, a.IN.k_ESteamRealmChina))
+                    t = s.LJ.GetELanguageFallback(t);
                   else {
-                    if (6 !== n) return null;
+                    if (6 !== t) return null;
                     if (
-                      t.rgVideoTracks.find(
-                        (e) => s.LJ.GetELanguageFallback(e.eLanguage) === n,
+                      n.rgVideoTracks.find(
+                        (e) => s.LJ.GetELanguageFallback(e.eLanguage) === t,
                       )
                     )
                       return null;
                   }
                 else if (
-                  !s.LJ.IsELanguageValidInRealm(n, a.IN.k_ESteamRealmGlobal)
+                  !s.LJ.IsELanguageValidInRealm(t, a.IN.k_ESteamRealmGlobal)
                 )
                   return null;
                 return i.createElement("track", {
-                  key: e.sURL + n,
-                  src: g(e.sURL),
+                  key: e.sURL + t,
+                  src: E(e.sURL),
                   kind: e.sKind,
                   default: e.bDefault,
-                  srcLang: (0, o.dt)(n),
-                  label: (0, s.Xx)("#language_selection_" + (0, o.j_)(n)),
+                  srcLang: (0, o.dt)(t),
+                  label: (0, s.Xx)("#language_selection_" + (0, o.j_)(t)),
                 });
               })
             : null,
-          v = (function (e) {
+          S = (function (e) {
             return !(
               !(0, l.dK)(e.sPoster) ||
               (e.rgVideoSources &&
@@ -6940,34 +6940,34 @@
               (e.rgVideoTracks &&
                 e.rgVideoTracks.some((e) => !(0, l.dK)(e.sURL)))
             );
-          })(t);
-        let S;
-        (!v || (p && "public" == c.De.WEB_UNIVERSE)) && (S = "anonymous");
-        const C = u || (n && d.Get().BVolumePreferenceMuted()),
-          y = t.sPoster ? g(t.sPoster) : "";
+          })(n);
+        let C;
+        (!S || (h && "public" == c.De.WEB_UNIVERSE)) && (C = "anonymous");
+        const y = p || (r && d.Get().BVolumePreferenceMuted()),
+          b = n.sPoster ? E(n.sPoster) : "";
         return i.createElement(
           "video",
           {
             width: "100%",
             height: "auto",
-            autoPlay: n,
-            muted: C,
+            autoPlay: r,
+            muted: y,
             playsInline: !0,
-            controls: r,
-            poster: y,
-            loop: m,
-            crossOrigin: S,
+            controls: m,
+            poster: b,
+            loop: u,
+            crossOrigin: C,
             onVolumeChange: (e) => {
               const t = e.target,
                 n = t.muted ? 0 : t.volume;
-              h && d.Get().SetVolumePreference(n);
+              _ && d.Get().SetVolumePreference(n);
             },
             onPlay: (e) => {
               const t = e.target,
-                r = 0 == t.currentTime,
+                n = 0 == t.currentTime,
                 i = d.Get().BUserHasVolumePreference();
-              if ((_(!0), r))
-                if (i || n)
+              if ((g(!0), n))
+                if (i || r)
                   i &&
                     ((t.volume = d.Get().GetVolumePreference()),
                     (t.muted = d.Get().BVolumePreferenceMuted()));
@@ -6976,11 +6976,12 @@
                   d.Get().SetVolumePreference(e);
                 }
             },
+            ref: t,
           },
-          E,
           f,
+          v,
         );
-      };
+      });
     },
     7686: (e, t, n) => {
       "use strict";

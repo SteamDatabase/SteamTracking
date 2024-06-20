@@ -300,6 +300,7 @@
         TabButton: "_3ZFfZWEGf3r02Hw4lZFW-9",
         DefaultCreatorCtn: "_1TAEj-lKWE2ELdDrEx8kYh",
         EventSectionViewAllCtn: "_3RuY24eNFu6WSirS39sVUR",
+        SaleSectionBackgroundImageGroupEdit: "_1vWb-PPJIdCrShIUNfM2eH",
       };
     },
     7769: (e) => {
@@ -1256,7 +1257,7 @@
           localized_marketing_message: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: a,
+            rgAcceptableTypes: [1, 3, 2, 10],
           },
           localized_optin_banner: {
             width: 1e3,
@@ -1480,31 +1481,32 @@
         TL: () => k,
         Kt: () => P,
         fY: () => x,
-        MZ: () => se,
-        a4: () => ne,
-        Zx: () => ae,
+        MZ: () => oe,
+        a4: () => ae,
+        Zx: () => ie,
         ac: () => F,
         bS: () => Y,
         HL: () => K,
         oL: () => X,
-        J7: () => ie,
+        YH: () => Q,
+        J7: () => re,
         PJ: () => z,
         zf: () => J,
         MF: () => q,
-        in: () => ue,
-        bH: () => pe,
-        eu: () => ee,
-        qH: () => Q,
-        kd: () => $,
-        B3: () => te,
+        in: () => pe,
+        bH: () => he,
+        eu: () => te,
+        qH: () => $,
+        kd: () => ee,
+        B3: () => ne,
         fD: () => W,
-        VL: () => re,
-        ax: () => _e,
+        VL: () => se,
+        ax: () => ge,
         xb: () => Z,
         bN: () => T,
-        GB: () => de,
-        AT: () => ce,
-        wP: () => le,
+        GB: () => ce,
+        AT: () => me,
+        wP: () => de,
         dn: () => B,
         QK: () => L,
         $Y: () => H,
@@ -1513,8 +1515,8 @@
         _L: () => N,
         z5: () => j,
         Pg: () => U,
-        Vv: () => oe,
-        ON: () => he,
+        Vv: () => le,
+        ON: () => _e,
       });
       var a = n(85556),
         i = n(19403),
@@ -1727,21 +1729,21 @@
         }
       }
       const Z = "bordered";
-      var z, K, X, Y, J, q;
-      function Q(e) {
+      var z, K, X, Y, J, q, Q;
+      function $(e) {
         return e.carousel_rows || 1;
       }
-      function $(e) {
+      function ee(e) {
         return e.cap_item_count || 0;
       }
-      function ee(e) {
+      function te(e) {
         return e.cap_section_row_count && e.cap_section_row_count > 0
           ? e.cap_section_row_count
           : e.cap_section_content
             ? 4
             : 0;
       }
-      function te(e) {
+      function ne(e) {
         return Boolean(null == e ? void 0 : e.store_filter)
           ? JSON.stringify(e.store_filter)
           : void 0;
@@ -1791,8 +1793,15 @@
         (function (e) {
           (e.Summary = "summary"),
             (e.SummaryLargeImage = "summary_large_image");
-        })(q || (q = {}));
-      const ne = {
+        })(q || (q = {})),
+        (function (e) {
+          (e.SingleMedia = "SingleMedia"),
+            (e.DoubleMedia = "DoubleMedia"),
+            (e.QuadMedia = "QuadMedia"),
+            (e.MediaLeft = "MediaLeft"),
+            (e.MediaRight = "MediaLeft");
+        })(Q || (Q = {}));
+      const ae = {
           capsules: [],
           events: [],
           links: [],
@@ -1801,9 +1810,9 @@
           default_label: "#Sale_default_label",
           section_type: "unselected_empty",
         },
-        ae = { internal_type: "subscription_pricing" };
-      var ie;
-      function re(e, t) {
+        ie = { internal_type: "subscription_pricing" };
+      var re;
+      function se(e, t) {
         (e.library_spotlight = void 0),
           e.email_setting &&
             ((e.email_setting.locked = void 0),
@@ -1831,8 +1840,8 @@
       !(function (e) {
         (e[(e.k_ETaggedItems = 0)] = "k_ETaggedItems"),
           (e[(e.k_EContentHub = 1)] = "k_EContentHub");
-      })(ie || (ie = {}));
-      const se = Object.assign(
+      })(re || (re = {}));
+      const oe = Object.assign(
           Object.assign(
             {
               localized_subtitle: new Array(31),
@@ -1860,11 +1869,11 @@
           ),
           { bScheduleEnabled: !1, scheduleEntries: [] },
         ),
-        oe = "old_announce_",
-        le = 80,
-        de = 120,
-        ce = 180,
-        me = [
+        le = "old_announce_",
+        de = 80,
+        ce = 120,
+        me = 180,
+        ue = [
           "workshop",
           "patchnotes",
           "contenthub",
@@ -1880,7 +1889,7 @@
           "betachannel",
           "previewchannel",
         ],
-        ue = [
+        pe = [
           "patchnotes",
           "steam_award_nomination_request",
           "steam_award_vote_request",
@@ -1893,7 +1902,7 @@
           "curator_group_members",
           "curator_public",
         ];
-      class pe {
+      class he {
         constructor() {
           (this.GID = void 0),
             (this.AnnouncementGID = void 0),
@@ -1912,7 +1921,7 @@
             (this.postTime = void 0),
             (this.visibility_state = F.k_EEventStateUnpublished),
             (this.broadcaster = void 0),
-            (this.jsondata = se),
+            (this.jsondata = oe),
             (this.nCommentCount = 0),
             (this.nVotesUp = 0),
             (this.nVotesDown = 0),
@@ -1936,7 +1945,7 @@
           return !this.bOldAnnouncement && Boolean(this.GID);
         }
         static FromJSON(e) {
-          let t = new pe(),
+          let t = new he(),
             n = JSON.parse(e);
           return (
             Object.assign(t, n),
@@ -1972,7 +1981,7 @@
           );
         }
         clone(e = !1) {
-          let t = new pe();
+          let t = new he();
           return (
             (t.GID = this.GID),
             (t.AnnouncementGID = this.AnnouncementGID),
@@ -2024,7 +2033,7 @@
                 (t.m_strBuildBranch = this.m_strBuildBranch),
                 this.vecTags.forEach((e) => t.vecTags.push(e)))
               : this.vecTags.forEach((e) => {
-                  me.includes(e) && t.vecTags.push(e);
+                  ue.includes(e) && t.vecTags.push(e);
                 }),
             t
           );
@@ -2451,7 +2460,7 @@
                 ? void 0
                 : t.localized_subtitle,
               e,
-            ) || pe.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
+            ) || he.GenerateSummaryFromText(this.GetDescriptionWithFallback(e))
           );
         }
         GetSummaryWithFallback(e, t) {
@@ -2463,7 +2472,7 @@
                 : n.localized_summary,
               e,
             ) ||
-            pe.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
+            he.GenerateSummaryFromText(this.GetDescriptionWithFallback(e), t)
           );
         }
         GetSummary(e) {
@@ -2494,7 +2503,7 @@
               ])),
               (e = (0, i.NO)(e)),
               (e = (0, S.W5)(e)),
-              (0, S.oU)(e, t || ce))
+              (0, S.oU)(e, t || me))
             : "";
         }
         BHasTag(e) {
@@ -2683,14 +2692,14 @@
             null === (n = this.jsondata.tagged_items) ||
               void 0 === n ||
               n.forEach((e) => {
-                pe.AccumulateCapsuleListIDs([e.capsule], a, i, t);
+                he.AccumulateCapsuleListIDs([e.capsule], a, i, t);
               }),
             this.jsondata.sale_sections.forEach((e) => {
               if ("items" === e.section_type)
-                pe.AccumulateCapsuleListIDs(e.capsules, a, i, t);
+                he.AccumulateCapsuleListIDs(e.capsules, a, i, t);
               else if ("tabs" === e.section_type && e.tabs)
                 for (const n of e.tabs)
-                  pe.AccumulateCapsuleListIDs(n.capsules, a, i, t);
+                  he.AccumulateCapsuleListIDs(n.capsules, a, i, t);
             }),
             i
           );
@@ -2834,7 +2843,7 @@
         }
         BUsesContentHubForItemSource() {
           return (
-            this.jsondata.item_source_type === ie.k_EContentHub &&
+            this.jsondata.item_source_type === re.k_EContentHub &&
             Boolean(this.jsondata.source_content_hub)
           );
         }
@@ -2875,6 +2884,9 @@
             void 0 === e
             ? void 0
             : e.enabled;
+        }
+        GetSalePageGroupDefinition() {
+          return this.jsondata.sale_background_img_groups;
         }
         GetSalePageBackgroundImageGroupCount() {
           var e;
@@ -2922,56 +2934,56 @@
           );
         }
       }
-      (0, a.gn)([s.LO], pe.prototype, "GID", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "AnnouncementGID", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "forumTopicGID", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "type", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "appid", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "name", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "description", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "timestamp_loc_updated", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "startTime", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "endTime", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "visibilityStartTime", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "visibilityEndTime", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "m_nBuildID", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "m_strBuildBranch", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "postTime", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "visibility_state", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "broadcaster", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "jsondata", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "nCommentCount", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "nVotesUp", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "nVotesDown", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "bOldAnnouncement", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "announcementClanSteamID", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "loadedAllLanguages", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "bLoaded", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "deleteInProgress", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "vecTags", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "last_update_steamid", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "rtime32_last_modified", void 0),
+      (0, a.gn)([s.LO], he.prototype, "GID", void 0),
+        (0, a.gn)([s.LO], he.prototype, "AnnouncementGID", void 0),
+        (0, a.gn)([s.LO], he.prototype, "forumTopicGID", void 0),
+        (0, a.gn)([s.LO], he.prototype, "type", void 0),
+        (0, a.gn)([s.LO], he.prototype, "appid", void 0),
+        (0, a.gn)([s.LO], he.prototype, "name", void 0),
+        (0, a.gn)([s.LO], he.prototype, "description", void 0),
+        (0, a.gn)([s.LO], he.prototype, "timestamp_loc_updated", void 0),
+        (0, a.gn)([s.LO], he.prototype, "startTime", void 0),
+        (0, a.gn)([s.LO], he.prototype, "endTime", void 0),
+        (0, a.gn)([s.LO], he.prototype, "visibilityStartTime", void 0),
+        (0, a.gn)([s.LO], he.prototype, "visibilityEndTime", void 0),
+        (0, a.gn)([s.LO], he.prototype, "m_nBuildID", void 0),
+        (0, a.gn)([s.LO], he.prototype, "m_strBuildBranch", void 0),
+        (0, a.gn)([s.LO], he.prototype, "postTime", void 0),
+        (0, a.gn)([s.LO], he.prototype, "visibility_state", void 0),
+        (0, a.gn)([s.LO], he.prototype, "broadcaster", void 0),
+        (0, a.gn)([s.LO], he.prototype, "jsondata", void 0),
+        (0, a.gn)([s.LO], he.prototype, "nCommentCount", void 0),
+        (0, a.gn)([s.LO], he.prototype, "nVotesUp", void 0),
+        (0, a.gn)([s.LO], he.prototype, "nVotesDown", void 0),
+        (0, a.gn)([s.LO], he.prototype, "bOldAnnouncement", void 0),
+        (0, a.gn)([s.LO], he.prototype, "announcementClanSteamID", void 0),
+        (0, a.gn)([s.LO], he.prototype, "loadedAllLanguages", void 0),
+        (0, a.gn)([s.LO], he.prototype, "bLoaded", void 0),
+        (0, a.gn)([s.LO], he.prototype, "deleteInProgress", void 0),
+        (0, a.gn)([s.LO], he.prototype, "vecTags", void 0),
+        (0, a.gn)([s.LO], he.prototype, "last_update_steamid", void 0),
+        (0, a.gn)([s.LO], he.prototype, "rtime32_last_modified", void 0),
         (0, a.gn)(
           [s.LO],
-          pe.prototype,
+          he.prototype,
           "rtime32_last_solr_search_col_updated",
           void 0,
         ),
         (0, a.gn)(
           [s.LO],
-          pe.prototype,
+          he.prototype,
           "rtime32_last_local_modification",
           void 0,
         ),
-        (0, a.gn)([s.LO], pe.prototype, "rtime32_moderator_reviewed", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "video_preview_type", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "video_preview_id", void 0),
-        (0, a.gn)([s.LO], pe.prototype, "m_overrideCurrentDay", void 0);
-      const he = (e) => {
+        (0, a.gn)([s.LO], he.prototype, "rtime32_moderator_reviewed", void 0),
+        (0, a.gn)([s.LO], he.prototype, "video_preview_type", void 0),
+        (0, a.gn)([s.LO], he.prototype, "video_preview_id", void 0),
+        (0, a.gn)([s.LO], he.prototype, "m_overrideCurrentDay", void 0);
+      const _e = (e) => {
         const t = (0, f.b)(e.appid);
         return e.appid ? t : I.JA.IS_ALLOWED_SC;
       };
-      function _e(e) {
+      function ge(e) {
         return null == e ? void 0 : e.replace("(", "\\(").replace(")", "\\)");
       }
     },
@@ -5988,6 +6000,8 @@
               return ".srt";
             case 6:
               return ".vtt";
+            case 10:
+              return ".webp";
           }
         }
         static GetExtensionString(e) {
@@ -6606,6 +6620,8 @@
                             return "text/vtt";
                           case 7:
                             return "text/srt";
+                          case 10:
+                            return "image/webp";
                         }
                         return null;
                       })(a.file_type),
@@ -6670,7 +6686,9 @@
                     ? "text/srt"
                     : t.endsWith(".vtt")
                       ? "text/vtt"
-                      : null;
+                      : t.endsWith(".webp")
+                        ? "image/webp"
+                        : null;
       }
       (0, a.gn)([o.LO], g.prototype, "m_filesToUpload", void 0),
         (0, a.gn)([d.a], g.prototype, "GetUploadImages", null),

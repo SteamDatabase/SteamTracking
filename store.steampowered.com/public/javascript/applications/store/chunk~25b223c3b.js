@@ -208,12 +208,12 @@
         Be: () => P,
         GS: () => O,
         HC: () => M,
-        LW: () => R,
+        LW: () => A,
         MJ: () => G,
         R6: () => N,
         YC: () => V,
         aV: () => B,
-        im: () => A,
+        im: () => R,
         jj: () => F,
         pu: () => T,
         qy: () => U,
@@ -296,7 +296,7 @@
           "center",
           {
             Constructor: function (e) {
-              let t = A(e.args, "id");
+              let t = R(e.args, "id");
               t &&
                 "string" == typeof t &&
                 t.length > 0 &&
@@ -400,15 +400,15 @@
           "url",
           {
             Constructor: function (e) {
-              let t = A(e.args);
+              let t = R(e.args);
               if (!t) {
                 const n = e.children;
                 "string" == typeof n &&
                   (n.startsWith("http://") || n.startsWith("https://")) &&
                   (t = n);
               }
-              const n = "button" == A(e.args, "style") ? k().LinkButton : null;
-              let o = A(e.args, "id");
+              const n = "button" == R(e.args, "style") ? k().LinkButton : null;
+              let o = R(e.args, "id");
               o &&
                 "string" == typeof o &&
                 o.length > 0 &&
@@ -480,8 +480,8 @@
           "table",
           {
             Constructor: function (e) {
-              const t = A(e.args, "noborder"),
-                n = A(e.args, "equalcells");
+              const t = R(e.args, "noborder"),
+                n = R(e.args, "equalcells");
               return i.createElement(
                 "div",
                 {
@@ -533,7 +533,7 @@
           "td",
           {
             Constructor: function (e) {
-              const t = A(e.args, "width");
+              const t = R(e.args, "width");
               return i.createElement(
                 "div",
                 {
@@ -552,7 +552,7 @@
           "expand",
           {
             Constructor: function (e) {
-              const t = Boolean(A(e.args, "expanded")),
+              const t = Boolean(R(e.args, "expanded")),
                 [n, o] = i.useState(t),
                 r = (function (e, t) {
                   switch (e) {
@@ -581,7 +581,7 @@
                         style: k().ExpandSection_ShowMore,
                       };
                   }
-                })(A(e.args, "type"), A(e.args, "title"));
+                })(R(e.args, "type"), R(e.args, "title"));
               return i.createElement(
                 "div",
                 {
@@ -619,7 +619,7 @@
           {
             Constructor: function (e) {
               const { event: t, showErrorInfo: n } = e.context,
-                o = A(e.args);
+                o = R(e.args);
               if (o)
                 return i.createElement(h.C, { eventGID: o, bPreviewMode: n });
               if (t) {
@@ -635,8 +635,8 @@
           "doclink",
           {
             Constructor: function (e) {
-              const t = A(e.args),
-                n = "button" == A(e.args, "style") ? k().LinkButton : null;
+              const t = R(e.args),
+                n = "button" == R(e.args, "style") ? k().LinkButton : null;
               return i.createElement(
                 x,
                 { className: n, href: `${S.De.PARTNER_BASE_URL}doc/${t}` },
@@ -650,7 +650,7 @@
           "color",
           {
             Constructor: function (e) {
-              const t = A(e.args);
+              const t = R(e.args);
               return i.createElement(
                 "span",
                 { style: { color: t } },
@@ -701,10 +701,10 @@
         }
         return e;
       }
-      function A(e, t) {
+      function R(e, t) {
         return void 0 === t ? e[""] : e[t];
       }
-      function R(e, t) {
+      function A(e, t) {
         return (n) =>
           e(
             Object.assign(Object.assign({}, n), {
@@ -713,9 +713,9 @@
           );
       }
       function D(e, t) {
-        let n = A(e.args, "id");
+        let n = R(e.args, "id");
         return (
-          n || (n = A(e.args)),
+          n || (n = R(e.args)),
           n &&
             "string" == typeof n &&
             n.length > 0 &&
@@ -763,7 +763,7 @@
         );
       };
       function T(e) {
-        const t = A(e.args, "author");
+        const t = R(e.args, "author");
         return i.createElement(
           "blockquote",
           { className: (0, _.Z)(k().BlockQuote, e.className) },
@@ -793,7 +793,7 @@
         );
       }
       function M(e) {
-        let t = A(e.args, "id");
+        let t = R(e.args, "id");
         return (
           t &&
             "string" == typeof t &&
@@ -809,7 +809,7 @@
       }
       function G(e) {
         if ((0, S.h4)()) return null;
-        let t = A(e.args);
+        let t = R(e.args);
         if (t) {
           let e = t.split(";");
           if (2 == e.length) {
@@ -833,20 +833,20 @@
         return i.createElement(i.Fragment, null);
       }
       function H(e) {
-        let t = A(e.args, "poster");
+        let t = R(e.args, "poster");
         t && (t = (0, f.et)(t));
         const n = new Array();
         {
-          const t = A(e.args, "mp4");
+          const t = R(e.args, "mp4");
           t && n.push({ sURL: (0, f.et)(t), sFormat: "video/mp4" });
-          const o = A(e.args, "webm");
+          const o = R(e.args, "webm");
           o && n.push({ sURL: (0, f.et)(o), sFormat: "video/webm" });
         }
         const o = (0, r.jM)(S.De.LANGUAGE),
           i = 0 != o,
           s = new Array();
         for (let t = 0; t < 31; t++) {
-          const n = A(e.args, "sub_" + (0, r.dt)(t));
+          const n = R(e.args, "sub_" + (0, r.dt)(t));
           n &&
             s.push({
               sURL: (0, f.et)(n),
@@ -854,7 +854,7 @@
               sKind: "subtitles",
               bDefault: i && t == o,
             });
-          const a = A(e.args, "cap_" + (0, r.dt)(t));
+          const a = R(e.args, "cap_" + (0, r.dt)(t));
           a &&
             s.push({
               sURL: (0, f.et)(a),
@@ -880,11 +880,11 @@
         n &&
           n.startsWith("http") &&
           t.rgVideoSources.push({ sURL: (0, f.et)(n), sFormat: "video/webm" });
-        const o = A(e.args, "autoplay"),
+        const o = R(e.args, "autoplay"),
           r = "0" !== o && "off" !== o && "false" !== o,
-          s = A(e.args, "controls"),
+          s = R(e.args, "controls"),
           a = "0" !== s && "off" !== s && "false" !== s,
-          l = A(e.args, "loop"),
+          l = R(e.args, "loop"),
           c = "0" !== s && "off" !== s && "false" !== s;
         return i.createElement(p.Y, {
           video: t,
@@ -896,9 +896,9 @@
       function V(e) {
         if ((0, S.h4)() || "CN" == S.De.COUNTRY.toLocaleUpperCase())
           return U(e);
-        const t = A(e.args, "youtubeid"),
-          n = A(e.args, "size"),
-          o = A(e.args, "seconds");
+        const t = R(e.args, "youtubeid"),
+          n = R(e.args, "size"),
+          o = R(e.args, "seconds");
         let r = "full" == n ? u.sizeFull : u.sizeThumb,
           s = "full" == n ? "" : "leftthumb" == n ? u.floatLeft : u.floatRight;
         return i.createElement(d.O, {
@@ -1601,7 +1601,7 @@
           )
         );
       }
-      function A(e) {
+      function R(e) {
         const { title: t, onFilterChange: n, filter: i, onSubmit: r } = e,
           a = (0, o._T)(e, ["title", "onFilterChange", "filter", "onSubmit"]);
         return s.createElement(
@@ -1619,7 +1619,7 @@
           s.createElement(N, { value: i, onChange: n, onSubmit: r }),
         );
       }
-      function R(e) {
+      function A(e) {
         const { onFilterChange: t, filter: n, sections: i, title: r } = e;
         return s.createElement(
           s.Fragment,
@@ -2119,7 +2119,7 @@
                         ),
                   ),
               }),
-            s.createElement(R, {
+            s.createElement(A, {
               onFilterChange: (e) => this.setState({ filter: e }),
               filter: i,
               sections: r,
@@ -2141,7 +2141,7 @@
             { filter: i } = this.state,
             r = !i && o ? e.GetFlairListByGroupID(o) : e.emoticon_list,
             a = c.u.FilterEmoticons(r, i).slice(0, 1e3);
-          return s.createElement(A, {
+          return s.createElement(R, {
             title: (0, p.Xx)("#AddonPicker_Emoticons"),
             items: a,
             onItemSelect: n,
@@ -2197,7 +2197,7 @@
           const { store: e, onItemSelect: t } = this.props,
             { filter: n } = this.state,
             o = c.u.FilterStickers(e.GetStickerList(), n);
-          return s.createElement(A, {
+          return s.createElement(R, {
             title: (0, p.Xx)("#EmoticonPicker_StickerHeading"),
             items: o,
             onItemSelect: t,
@@ -2246,7 +2246,7 @@
           const { store: e, effectSettings: t, onItemSelect: n } = this.props,
             { filter: o } = this.state,
             i = e.GetEffectList().filter(({ name: e }) => e.indexOf(o) > -1);
-          return s.createElement(A, {
+          return s.createElement(R, {
             title: (0, p.Xx)("#EmoticonPicker_EffectHeading"),
             items: i,
             onItemSelect: n,
@@ -2322,7 +2322,7 @@
                         ),
                   ),
               }),
-            s.createElement(R, {
+            s.createElement(A, {
               onFilterChange: (e) => this.setState({ filter: e }),
               filter: i,
               sections: [
@@ -2361,7 +2361,7 @@
               flairGroupID: o,
             } = this.props,
             { filter: i } = this.state;
-          return s.createElement(R, {
+          return s.createElement(A, {
             onFilterChange: (e) => this.setState({ filter: e }),
             filter: i,
             sections: [
@@ -2893,8 +2893,8 @@
         b = n(27438),
         P = n(90069),
         L = n(62613),
-        A = n(46882),
-        R = n(59728),
+        R = n(46882),
+        A = n(59728),
         D = n(16649),
         N = n(13129),
         I = n(31846),
@@ -3234,7 +3234,7 @@
                 ),
               },
               this.state.bIsRequestInFlight &&
-                s.createElement(A.V, {
+                s.createElement(R.V, {
                   className: G.RpcThrobber,
                   size: "xlarge",
                   position: "center",
@@ -3264,7 +3264,7 @@
                 "div",
                 { className: (0, N.Z)(G.ReminderOption, !a && G.Unverified) },
                 s.createElement(
-                  R.HP,
+                  A.HP,
                   {
                     className: G.CheckboxWrapper,
                     bTopmost: !0,
@@ -3309,7 +3309,7 @@
                 "div",
                 { className: (0, N.Z)(G.ReminderOption, !l && G.Unverified) },
                 s.createElement(
-                  R.HP,
+                  A.HP,
                   {
                     className: G.CheckboxWrapper,
                     bTopmost: !0,
@@ -3613,21 +3613,21 @@
       }
       (0, o.gn)([m.ak], d.prototype, "BUserHasVolumePreference", null),
         (0, o.gn)([m.ak], d.prototype, "SetVolumePreference", null);
-      const u = (e) => {
-        const { video: t, bAutoPlay: n, bControls: o, bLoop: m, bMuted: u } = e,
-          h = (0, i.useMemo)(() => {
+      const u = (0, i.forwardRef)(function (e, t) {
+        const { video: n, bAutoPlay: o, bControls: m, bLoop: u, bMuted: h } = e,
+          p = (0, i.useMemo)(() => {
             var e;
             return Boolean(
-              null === (e = t.rgVideoTracks) || void 0 === e
+              null === (e = n.rgVideoTracks) || void 0 === e
                 ? void 0
                 : e.some(
                     (e) => "subtitles" == e.sKind || "captions" == e.sKind,
                   ),
             );
-          }, [t.rgVideoTracks]),
-          [p, g] = i.useState(!1);
-        if (!t.rgVideoSources || !t.rgVideoSources.length) return null;
-        const E = (e) => {
+          }, [n.rgVideoTracks]),
+          [g, E] = i.useState(!1);
+        if (!n.rgVideoSources || !n.rgVideoSources.length) return null;
+        const _ = (e) => {
             const t = new URL(e);
             return (
               (t.search =
@@ -3635,45 +3635,45 @@
               t.toString()
             );
           },
-          _ = t.rgVideoSources
+          v = n.rgVideoSources
             .filter((e) => Boolean(e.sURL))
             .map((e) =>
               i.createElement("source", {
                 key: e.sURL,
-                src: E(e.sURL),
+                src: _(e.sURL),
                 type: e.sFormat,
               }),
             ),
-          v = t.rgVideoTracks
-            ? t.rgVideoTracks.map((e) => {
-                let n = e.eLanguage;
+          f = n.rgVideoTracks
+            ? n.rgVideoTracks.map((e) => {
+                let t = e.eLanguage;
                 if ((0, c.h4)())
-                  if (a.LJ.IsELanguageValidInRealm(n, s.IN.k_ESteamRealmChina))
-                    n = a.LJ.GetELanguageFallback(n);
+                  if (a.LJ.IsELanguageValidInRealm(t, s.IN.k_ESteamRealmChina))
+                    t = a.LJ.GetELanguageFallback(t);
                   else {
-                    if (6 !== n) return null;
+                    if (6 !== t) return null;
                     if (
-                      t.rgVideoTracks.find(
-                        (e) => a.LJ.GetELanguageFallback(e.eLanguage) === n,
+                      n.rgVideoTracks.find(
+                        (e) => a.LJ.GetELanguageFallback(e.eLanguage) === t,
                       )
                     )
                       return null;
                   }
                 else if (
-                  !a.LJ.IsELanguageValidInRealm(n, s.IN.k_ESteamRealmGlobal)
+                  !a.LJ.IsELanguageValidInRealm(t, s.IN.k_ESteamRealmGlobal)
                 )
                   return null;
                 return i.createElement("track", {
-                  key: e.sURL + n,
-                  src: E(e.sURL),
+                  key: e.sURL + t,
+                  src: _(e.sURL),
                   kind: e.sKind,
                   default: e.bDefault,
-                  srcLang: (0, r.dt)(n),
-                  label: (0, a.Xx)("#language_selection_" + (0, r.j_)(n)),
+                  srcLang: (0, r.dt)(t),
+                  label: (0, a.Xx)("#language_selection_" + (0, r.j_)(t)),
                 });
               })
             : null,
-          f = (function (e) {
+          S = (function (e) {
             return !(
               !(0, l.dK)(e.sPoster) ||
               (e.rgVideoSources &&
@@ -3681,34 +3681,34 @@
               (e.rgVideoTracks &&
                 e.rgVideoTracks.some((e) => !(0, l.dK)(e.sURL)))
             );
-          })(t);
-        let S;
-        (!f || (h && "public" == c.De.WEB_UNIVERSE)) && (S = "anonymous");
-        const C = u || (n && d.Get().BVolumePreferenceMuted()),
-          k = t.sPoster ? E(t.sPoster) : "";
+          })(n);
+        let C;
+        (!S || (p && "public" == c.De.WEB_UNIVERSE)) && (C = "anonymous");
+        const k = h || (o && d.Get().BVolumePreferenceMuted()),
+          y = n.sPoster ? _(n.sPoster) : "";
         return i.createElement(
           "video",
           {
             width: "100%",
             height: "auto",
-            autoPlay: n,
-            muted: C,
+            autoPlay: o,
+            muted: k,
             playsInline: !0,
-            controls: o,
-            poster: k,
-            loop: m,
-            crossOrigin: S,
+            controls: m,
+            poster: y,
+            loop: u,
+            crossOrigin: C,
             onVolumeChange: (e) => {
               const t = e.target,
                 n = t.muted ? 0 : t.volume;
-              p && d.Get().SetVolumePreference(n);
+              g && d.Get().SetVolumePreference(n);
             },
             onPlay: (e) => {
               const t = e.target,
-                o = 0 == t.currentTime,
+                n = 0 == t.currentTime,
                 i = d.Get().BUserHasVolumePreference();
-              if ((g(!0), o))
-                if (i || n)
+              if ((E(!0), n))
+                if (i || o)
                   i &&
                     ((t.volume = d.Get().GetVolumePreference()),
                     (t.muted = d.Get().BVolumePreferenceMuted()));
@@ -3717,11 +3717,12 @@
                   d.Get().SetVolumePreference(e);
                 }
             },
+            ref: t,
           },
-          _,
           v,
+          f,
         );
-      };
+      });
     },
     47242: (e, t, n) => {
       "use strict";

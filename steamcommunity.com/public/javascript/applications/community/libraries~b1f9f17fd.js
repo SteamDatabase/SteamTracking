@@ -2675,17 +2675,17 @@
       const D = W || A || Function("return this")();
       const Z = D.Symbol;
       var L = Object.prototype,
-        G = L.hasOwnProperty,
-        U = L.toString,
+        U = L.hasOwnProperty,
+        G = L.toString,
         N = Z ? Z.toStringTag : void 0;
       const H = function (e) {
-        var t = G.call(e, N),
+        var t = U.call(e, N),
           r = e[N];
         try {
           e[N] = void 0;
           var n = !0;
         } catch (e) {}
-        var i = U.call(e);
+        var i = G.call(e);
         return n && (t ? (e[N] = r) : delete e[N]), i;
       };
       var X = Object.prototype.toString;
@@ -2911,12 +2911,12 @@
           module &&
           !module.nodeType &&
           module,
-        Ge = Le && Le.exports === Ze ? D.Buffer : void 0,
-        Ue = Ge ? Ge.allocUnsafe : void 0;
+        Ue = Le && Le.exports === Ze ? D.Buffer : void 0,
+        Ge = Ue ? Ue.allocUnsafe : void 0;
       const Ne = function (e, t) {
         if (t) return e.slice();
         var r = e.length,
-          n = Ue ? Ue(r) : new e.constructor(r);
+          n = Ge ? Ge(r) : new e.constructor(r);
         return e.copy(n), n;
       };
       const He = D.Uint8Array;
@@ -3128,17 +3128,17 @@
         if (null != e) for (var r in Object(e)) t.push(r);
         return t;
       };
-      var Gt = Object.prototype.hasOwnProperty;
-      const Ut = function (e) {
+      var Ut = Object.prototype.hasOwnProperty;
+      const Gt = function (e) {
         if (!$(e)) return Lt(e);
         var t = et(e),
           r = [];
         for (var n in e)
-          ("constructor" != n || (!t && Gt.call(e, n))) && r.push(n);
+          ("constructor" != n || (!t && Ut.call(e, n))) && r.push(n);
         return r;
       };
       const Nt = function (e) {
-        return ut(e) ? Zt(e, !0) : Ut(e);
+        return ut(e) ? Zt(e, !0) : Gt(e);
       };
       const Ht = function (e) {
         return kt(e, Nt(e));
@@ -3974,12 +3974,12 @@
         var r = Ir(e).toHsl();
         return (r.s -= t / 100), (r.s = nn(r.s)), Ir(r);
       }
-      function Gr(e, t) {
+      function Ur(e, t) {
         t = 0 === t ? 0 : t || 10;
         var r = Ir(e).toHsl();
         return (r.s += t / 100), (r.s = nn(r.s)), Ir(r);
       }
-      function Ur(e) {
+      function Gr(e) {
         return Ir(e).desaturate(100);
       }
       function Nr(e, t) {
@@ -4293,10 +4293,10 @@
           return this._applyModification(Lr, arguments);
         },
         saturate: function () {
-          return this._applyModification(Gr, arguments);
+          return this._applyModification(Ur, arguments);
         },
         greyscale: function () {
-          return this._applyModification(Ur, arguments);
+          return this._applyModification(Gr, arguments);
         },
         spin: function () {
           return this._applyModification(Vr, arguments);
@@ -5139,8 +5139,8 @@
         );
       };
       var Ln = Z ? Z.prototype : void 0,
-        Gn = Ln ? Ln.valueOf : void 0;
-      const Un = function (e, t, r, n, i, o, a) {
+        Un = Ln ? Ln.valueOf : void 0;
+      const Gn = function (e, t, r, n, i, o, a) {
         switch (r) {
           case "[object DataView]":
             if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset)
@@ -5168,7 +5168,7 @@
             var u = An(s(e), s(t), n, i, o, a);
             return a.delete(e), u;
           case "[object Symbol]":
-            if (Gn) return Gn.call(e) == Gn.call(t);
+            if (Un) return Un.call(e) == Un.call(t);
         }
         return !1;
       };
@@ -5307,7 +5307,7 @@
         if (p && !u)
           return (
             o || (o = new ke()),
-            a || Pt(e) ? An(e, t, r, n, i, o) : Un(e, t, l, r, n, i, o)
+            a || Pt(e) ? An(e, t, r, n, i, o) : Gn(e, t, l, r, n, i, o)
           );
         if (!(1 & r)) {
           var f = u && yi.call(e, "__wrapped__"),
@@ -5452,11 +5452,11 @@
           e = e[Zi(t[r++])];
         return r && r == n ? e : void 0;
       };
-      const Gi = function (e, t, r) {
+      const Ui = function (e, t, r) {
         var n = null == e ? void 0 : Li(e, t);
         return void 0 === n ? r : n;
       };
-      const Ui = function (e, t) {
+      const Gi = function (e, t) {
         return null != e && t in Object(e);
       };
       const Ni = function (e, t, r) {
@@ -5473,13 +5473,13 @@
               (lt(e) || st(e));
       };
       const Hi = function (e, t) {
-        return null != e && Ni(e, t, Ui);
+        return null != e && Ni(e, t, Gi);
       };
       const Xi = function (e, t) {
         return Oi(e) && Si(t)
           ? Ci(Zi(e), t)
           : function (r) {
-              var n = Gi(r, e);
+              var n = Ui(r, e);
               return void 0 === n && n === t ? Hi(r, e) : wi(t, n, 3);
             };
       };
@@ -7417,7 +7417,7 @@
           );
         return n.createElement("div", { style: r.picker });
       };
-      const Go = function () {
+      const Uo = function () {
         var e = (0, i.ZP)({
           default: {
             triangle: {
@@ -7470,7 +7470,7 @@
           ),
         );
       };
-      const Uo = function (e) {
+      const Go = function (e) {
         var t = e.onClick,
           r = e.label,
           o = e.children,
@@ -7672,7 +7672,7 @@
                       n.createElement(_, {
                         direction: "vertical",
                         hsl: this.props.hsl,
-                        pointer: Go,
+                        pointer: Uo,
                         onChange: this.props.onChange,
                       }),
                     ),
@@ -7693,12 +7693,12 @@
                         n.createElement(
                           "div",
                           { style: s.actions },
-                          n.createElement(Uo, {
+                          n.createElement(Go, {
                             label: "OK",
                             onClick: this.props.onAccept,
                             active: !0,
                           }),
-                          n.createElement(Uo, {
+                          n.createElement(Go, {
                             label: "Cancel",
                             onClick: this.props.onCancel,
                           }),
@@ -9997,7 +9997,7 @@
                   return e.__proto__ || Object.getPrototypeOf(e);
                 })(e);
           }
-          function G(e, t) {
+          function U(e, t) {
             var r = Object.keys(e);
             if (Object.getOwnPropertySymbols) {
               var n = Object.getOwnPropertySymbols(e);
@@ -10009,11 +10009,11 @@
             }
             return r;
           }
-          function U(e) {
+          function G(e) {
             for (var t = 1; t < arguments.length; t++) {
               var r = null != arguments[t] ? arguments[t] : {};
               t % 2
-                ? G(Object(r), !0).forEach(function (t) {
+                ? U(Object(r), !0).forEach(function (t) {
                     N(e, t, r[t]);
                   })
                 : Object.getOwnPropertyDescriptors
@@ -10021,7 +10021,7 @@
                       e,
                       Object.getOwnPropertyDescriptors(r),
                     )
-                  : G(Object(r)).forEach(function (t) {
+                  : U(Object(r)).forEach(function (t) {
                       Object.defineProperty(
                         e,
                         t,
@@ -10081,7 +10081,7 @@
                     ((r = e.timeConstraints),
                     (o = {}),
                     Object.keys(H).forEach(function (e) {
-                      o[e] = U(U({}, H[e]), r[e] || {});
+                      o[e] = G(G({}, H[e]), r[e] || {});
                     }),
                     o)),
                   (t.state = t.getTimeParts(e.selectedDate || e.viewDate)),
@@ -11553,7 +11553,7 @@
     },
     69395: (e, t, r) => {
       "use strict";
-      r.d(t, { rj: () => G });
+      r.d(t, { rj: () => U });
       var n = r(91610),
         i = r(31945),
         o = r(76345),
@@ -13468,8 +13468,8 @@
         isScrollingOptOut: !1,
       }),
         h(L);
-      const G = L;
-      function U(e) {
+      const U = L;
+      function G(e) {
         var t = e.cellCount,
           r = e.overscanCellsCount,
           n = e.scrollDirection,
@@ -15419,7 +15419,7 @@
                         i = e.width,
                         o = v("ReactVirtualized__List", t);
                       return u.createElement(
-                        G,
+                        U,
                         (0, m.Z)({}, this.props, {
                           autoContainerWidth: !0,
                           cellRenderer: this._cellRenderer,
@@ -15449,7 +15449,7 @@
           return null;
         },
         onRowsRendered: function () {},
-        overscanIndicesGetter: U,
+        overscanIndicesGetter: G,
         overscanRowCount: 10,
         scrollToAlignment: "auto",
         scrollToIndex: -1,
@@ -16304,14 +16304,14 @@
           })(u.PureComponent)),
         (0, c.Z)(Ie, "propTypes", null),
         We);
-      function Ge() {}
+      function Ue() {}
       (0, c.Z)(Le, "defaultProps", {
         autoHeight: !1,
         keyMapper: function (e) {
           return e;
         },
-        onCellsRendered: Ge,
-        onScroll: Ge,
+        onCellsRendered: Ue,
+        onScroll: Ue,
         overscanByPixels: 20,
         role: "grid",
         scrollingResetTimeInterval: 150,
@@ -16320,7 +16320,7 @@
         rowDirection: "ltr",
       });
       h(Le);
-      var Ue = (function () {
+      var Ge = (function () {
         function e() {
           var t = this,
             r =
@@ -16614,7 +16614,7 @@
             l &&
               ((i._deferredMeasurementCacheBottomLeftGrid =
                 p > 0
-                  ? new Ue({
+                  ? new Ge({
                       cellMeasurerCache: l,
                       columnIndexOffset: 0,
                       rowIndexOffset: p,
@@ -16622,7 +16622,7 @@
                   : l),
               (i._deferredMeasurementCacheBottomRightGrid =
                 d > 0 || p > 0
-                  ? new Ue({
+                  ? new Ge({
                       cellMeasurerCache: l,
                       columnIndexOffset: d,
                       rowIndexOffset: p,
@@ -16630,7 +16630,7 @@
                   : l),
               (i._deferredMeasurementCacheTopRightGrid =
                 d > 0
-                  ? new Ue({
+                  ? new Ge({
                       cellMeasurerCache: l,
                       columnIndexOffset: d,
                       rowIndexOffset: 0,
@@ -16995,7 +16995,7 @@
                       : 0,
                     p = o ? c + d : c,
                     f = u.createElement(
-                      G,
+                      U,
                       (0, m.Z)({}, e, {
                         cellRenderer: this._cellRendererBottomLeftGrid,
                         className: this.props.classNameBottomLeftGrid,
@@ -17038,7 +17038,7 @@
                     o = e.scrollToColumn,
                     a = e.scrollToRow;
                   return u.createElement(
-                    G,
+                    U,
                     (0, m.Z)({}, e, {
                       cellRenderer: this._cellRendererBottomRightGrid,
                       className: this.props.classNameBottomRightGrid,
@@ -17068,7 +17068,7 @@
                     r = e.fixedRowCount;
                   return t && r
                     ? u.createElement(
-                        G,
+                        U,
                         (0, m.Z)({}, e, {
                           className: this.props.classNameTopLeftGrid,
                           columnCount: t,
@@ -17106,7 +17106,7 @@
                     ((g = p + h),
                     (v = He({}, this._topRightGridStyle, { left: 0 })));
                   var b = u.createElement(
-                    G,
+                    U,
                     (0, m.Z)({}, e, {
                       cellRenderer: this._cellRendererTopRightGrid,
                       className: this.props.classNameTopRightGrid,
@@ -17585,7 +17585,7 @@
                         ),
                       }),
                     u.createElement(
-                      G,
+                      U,
                       (0, m.Z)({}, this.props, {
                         "aria-readonly": null,
                         autoContainerWidth: !0,
@@ -17901,7 +17901,7 @@
         onScroll: function () {
           return null;
         },
-        overscanIndicesGetter: U,
+        overscanIndicesGetter: G,
         overscanRowCount: 10,
         rowRenderer: Ke,
         headerRowRenderer: Ve,
@@ -20667,18 +20667,18 @@
           return "CPromotionPlanning_SetPromotionEmailTarget_Response";
         }
       }
-      class G extends a {
+      class U extends a {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            G.prototype.promotion_id || i.aR(G.M()),
+            U.prototype.promotion_id || i.aR(U.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            G.sm_m ||
-              (G.sm_m = {
-                proto: G,
+            U.sm_m ||
+              (U.sm_m = {
+                proto: U,
                 fields: {
                   promotion_id: {
                     n: 1,
@@ -20689,65 +20689,6 @@
                     n: 2,
                     br: i.FE.readUint32,
                     bw: i.Xc.writeUint32,
-                  },
-                },
-              }),
-            G.sm_m
-          );
-        }
-        static MBF() {
-          return G.sm_mbf || (G.sm_mbf = i.Bh(G.M())), G.sm_mbf;
-        }
-        toObject(e = !1) {
-          return G.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.TA(G.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.aD(G.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new n.BinaryReader(e),
-            r = new G();
-          return G.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.F(G.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new n.BinaryWriter();
-          return G.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.l2(G.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new n.BinaryWriter();
-          return G.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPromotionPlanning_GetPromotionPlanPackageSales_Request";
-        }
-      }
-      class U extends a {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            U.prototype.promo_plan_package_sales_details || i.aR(U.M()),
-            a.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            U.sm_m ||
-              (U.sm_m = {
-                proto: U,
-                fields: {
-                  promo_plan_package_sales_details: {
-                    n: 1,
-                    c: N,
-                    r: !0,
-                    q: !0,
                   },
                 },
               }),
@@ -20784,6 +20725,65 @@
         serializeBase64String() {
           var e = new n.BinaryWriter();
           return U.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CPromotionPlanning_GetPromotionPlanPackageSales_Request";
+        }
+      }
+      class G extends a {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            G.prototype.promo_plan_package_sales_details || i.aR(G.M()),
+            a.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            G.sm_m ||
+              (G.sm_m = {
+                proto: G,
+                fields: {
+                  promo_plan_package_sales_details: {
+                    n: 1,
+                    c: N,
+                    r: !0,
+                    q: !0,
+                  },
+                },
+              }),
+            G.sm_m
+          );
+        }
+        static MBF() {
+          return G.sm_mbf || (G.sm_mbf = i.Bh(G.M())), G.sm_mbf;
+        }
+        toObject(e = !1) {
+          return G.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.TA(G.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.aD(G.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new n.BinaryReader(e),
+            r = new G();
+          return G.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.F(G.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new n.BinaryWriter();
+          return G.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.l2(G.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new n.BinaryWriter();
+          return G.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CPromotionPlanning_GetPromotionPlanPackageSales_Response";
@@ -23031,14 +23031,24 @@
         constructor(e = null) {
           super(),
             Se.prototype.stats || i.aR(Se.M()),
-            a.initialize(this, e, 0, -1, [1], null);
+            a.initialize(this, e, 0, -1, [1, 2], null);
         }
         static M() {
           return (
             Se.sm_m ||
               (Se.sm_m = {
                 proto: Se,
-                fields: { stats: { n: 1, c: Be, r: !0, q: !0 } },
+                fields: {
+                  stats: { n: 1, c: Be, r: !0, q: !0 },
+                  appid_without_permissions: {
+                    n: 2,
+                    r: !0,
+                    q: !0,
+                    br: i.FE.readUint32,
+                    pbr: i.FE.readPackedUint32,
+                    bw: i.Xc.writeRepeatedUint32,
+                  },
+                },
               }),
             Se.sm_m
           );
@@ -23332,8 +23342,8 @@
           (e.GetPromotionPlanPackageSales = function (e, t) {
             return e.SendMsg(
               "PromotionPlanning.GetPromotionPlanPackageSales#1",
-              (0, o.MD)(G, t),
-              U,
+              (0, o.MD)(U, t),
+              G,
               { bConstMethod: !0, ePrivilege: 4 },
             );
           }),
