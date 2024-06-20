@@ -6019,6 +6019,9 @@ a._3kBeS-c9IiQJGWwUB4cO5H:hover {
     grid-template-rows: 1fr 1fr 1fr 1fr;
   }
 }
+._25aUAYYSXvX3Jx1KXXICKx {
+  display: flex;
+}
 ._25aUAYYSXvX3Jx1KXXICKx._1SarTr8Zq96waf49sFrrqc {
-  border: 1px solid red;
+  box-shadow: 0 0 20px 5px #48abe04f;
 }

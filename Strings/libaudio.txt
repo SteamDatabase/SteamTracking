@@ -251,11 +251,11 @@ $^_[]
 10CUtlMemoryIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tEE
 10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
 10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/audio/audiocontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/audio/audiocontroller.cpp
 m_mapSoundImages
 m_vecDevices
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlmemory.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 num > 0
 m_Tree
@@ -266,7 +266,7 @@ Element( i )
 SOUND
 VOICE
 MUSIC
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/audio/milesaudiodevice.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/audio/milesaudiodevice.cpp
 m_nChannels == 1 || m_nChannels == 2
 Failed to open digital audio driver %s
 m_strUniqueName
@@ -276,10 +276,10 @@ m_vecAudioSounds
 m_vecAudioOutputStreams
 ( CMilesAudioOutputStream * ) m_vecAudioOutputStreams[i]
 m_strFileName
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/audio/milesaudiooutputstream.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/audio/milesaudiooutputstream.cpp
 nChannels == 1 || nChannels == 2
 m_nBytesPerSample == 2
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/audio/milesaudiosound.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/audio/milesaudiosound.cpp
 m_nCount == 0
 .mp3
 Volume Ramp Filter
@@ -336,15 +336,15 @@ AIL_sample_volume_pan
 AIL_enumerate_filters
 AIL_set_sample_position
 libMilesX86.dylib
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/audio/mileswrapper.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/audio/mileswrapper.cpp
 failed to load miles library
 IVALIDATE001
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/interface.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/interface.h
 m_pModule
 MilesLoader
 s_pAudioController
 CUtlSymbol
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock %s %s failed. errno = %d
@@ -356,7 +356,7 @@ m_nAllocationCount >= 0
 CPathString
 .dylib
 %s/%s%s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/interface.cpp
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 .cpl
 %s%s
@@ -387,21 +387,21 @@ getRelationship:ofDirectoryAtURL:toItemAtURL:error:
 path
 hasPrefix:
 length
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 Assertion failed: length > k_cchMaxString
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlsymbol.cpp
 s_bAllowStaticSymbolTable
 s_pSymbolTable
 CUtlSymbolTable
 m_StringPools
 m_Lookup
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlsymbol.h
 pPool->m_SpaceUsed < 0xFFFF
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 D`&A`3Ap
@@ -583,14 +583,9 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-,&`/I
-}$<I
-Bt. j.WIIY7#
-9TbQ"
-\oS@,
-Nm-8
-'CnJ
-&&[G
+yAgb4fF
+M/[P
+=!k^
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -648,8 +643,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240618223659Z0/
+240620001410Z0/
+Cw(E
 1/0-
+Cw(E
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -657,16 +654,15 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		/tOJGllSbqHIsI5P4Cxb+cIC6Cg=
+		YRJDdyhFHQd6K+ekrIbxBHsZwqQ=
 		</data>
 	</array>
 </dict>
 </plist>
-XGz?
-FdGb
-7Y5^
-,ZQb@[
-20240618223859Z0
+]''XuH*'p
+C(.b}
+\l ;
+20240620001411Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -727,9 +723,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240618223859Z0#
-f^bl
-Ek@S
+240620001411Z0#
+\C4	?7
+F@&x
 __TEXT
 __text
 __TEXT
@@ -957,6 +953,7 @@ AWAVSPI
 [A^A_]
 AWAVAUATSH
 w,Hc
+Lc5/b
 [A\A]A^A_]
 t3UH
 t>Hc
@@ -1097,11 +1094,11 @@ fE9K
 10CUtlMemoryIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tEE
 10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
 10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/audio/audiocontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/audio/audiocontroller.cpp
 m_mapSoundImages
 m_vecDevices
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlmemory.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 num > 0
 m_Tree
@@ -1112,7 +1109,7 @@ Element( i )
 SOUND
 VOICE
 MUSIC
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/audio/milesaudiodevice.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/audio/milesaudiodevice.cpp
 m_nChannels == 1 || m_nChannels == 2
 Failed to open digital audio driver %s
 m_strUniqueName
@@ -1122,10 +1119,10 @@ m_vecAudioSounds
 m_vecAudioOutputStreams
 ( CMilesAudioOutputStream * ) m_vecAudioOutputStreams[i]
 m_strFileName
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/audio/milesaudiooutputstream.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/audio/milesaudiooutputstream.cpp
 nChannels == 1 || nChannels == 2
 m_nBytesPerSample == 2
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/audio/milesaudiosound.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/audio/milesaudiosound.cpp
 m_nCount == 0
 .mp3
 Volume Ramp Filter
@@ -1182,15 +1179,15 @@ AIL_sample_volume_pan
 AIL_enumerate_filters
 AIL_set_sample_position
 libMilesX64.dylib
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/audio/mileswrapper.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/audio/mileswrapper.cpp
 failed to load miles library
 IVALIDATE001
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/interface.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/interface.h
 m_pModule
 MilesLoader
 s_pAudioController
 CUtlSymbol
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock %s %s failed. errno = %d
@@ -1202,25 +1199,25 @@ m_nAllocationCount >= 0
 CPathString
 .dylib
 %s/%s%s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/interface.cpp
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 .cpl
 %s%s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 Assertion failed: length > k_cchMaxString
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlsymbol.cpp
 s_bAllowStaticSymbolTable
 s_pSymbolTable
 CUtlSymbolTable
 m_StringPools
 m_Lookup
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlsymbol.h
 pPool->m_SpaceUsed < 0xFFFF
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 stringWithCString:encoding:
@@ -1428,13 +1425,8 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
->@z4
-%BABJ
-urhe
-eUB6
-aqJA
-~F0@I
-i0kR
+MURUI
+Hh$&`
 }xmm
 subject.OU
 MXGJJ98X76
@@ -1493,8 +1485,12 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240618223700Z0/
+240620001410Z0/
+`yus
+b+t/
 1/0-
+`yus
+b+t/
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1502,16 +1498,18 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		IZYh5+D+wK9nPwomoy7uRRv7dKs=
+		80iPDk3XbPNgeXVzH/EfTxS99Z0=
 		</data>
 	</array>
 </dict>
 </plist>
-V%3R
-GLtZq
-DFq7
- X7u\
-20240618223859Z0
+,Hxm
+4HN_
+2-IL
+$TTAB5
+\9)Gv
+xr	zy
+20240620001411Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -1572,9 +1570,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240618223859Z0#
-_IA(
-:]>Zi
+240620001411Z0#
+e?){zJ
+0.1 t
+Rdtx8
+:$hy
+FSd5
 __TEXT
 __text
 __TEXT
@@ -1648,6 +1649,7 @@ R`jt
 4cF@
 hBA9
 jh8?
+j(8(
 .@y?
 *ijx_
 h.@y
@@ -1737,11 +1739,11 @@ oh-x
 10CUtlMemoryIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tEE
 10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
 10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/audio/audiocontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/audio/audiocontroller.cpp
 m_mapSoundImages
 m_vecDevices
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlmemory.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 num > 0
 m_Tree
@@ -1752,7 +1754,7 @@ Element( i )
 SOUND
 VOICE
 MUSIC
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/audio/milesaudiodevice.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/audio/milesaudiodevice.cpp
 m_nChannels == 1 || m_nChannels == 2
 Failed to open digital audio driver %s
 m_strUniqueName
@@ -1762,10 +1764,10 @@ m_vecAudioSounds
 m_vecAudioOutputStreams
 ( CMilesAudioOutputStream * ) m_vecAudioOutputStreams[i]
 m_strFileName
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/audio/milesaudiooutputstream.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/audio/milesaudiooutputstream.cpp
 nChannels == 1 || nChannels == 2
 m_nBytesPerSample == 2
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/audio/milesaudiosound.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/audio/milesaudiosound.cpp
 m_nCount == 0
 .mp3
 Volume Ramp Filter
@@ -1822,15 +1824,15 @@ AIL_sample_volume_pan
 AIL_enumerate_filters
 AIL_set_sample_position
 libMilesARM64.dylib
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/audio/mileswrapper.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/audio/mileswrapper.cpp
 failed to load miles library
 IVALIDATE001
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/interface.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/interface.h
 m_pModule
 MilesLoader
 s_pAudioController
 CUtlSymbol
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock %s %s failed. errno = %d
@@ -1842,25 +1844,25 @@ m_nAllocationCount >= 0
 CPathString
 .dylib
 %s/%s%s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/interface.cpp
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 .cpl
 %s%s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 Assertion failed: length > k_cchMaxString
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlsymbol.cpp
 s_bAllowStaticSymbolTable
 s_pSymbolTable
 CUtlSymbolTable
 m_StringPools
 m_Lookup
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlsymbol.h
 pPool->m_SpaceUsed < 0xFFFF
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 stringWithCString:encoding:
@@ -2066,15 +2068,6 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-z.u-Z
-VtQ1
-oet`[
-_.l0v
-(@M}
-H$w!
-CcDp
-Ac&P
-(Fp'
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -2132,12 +2125,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240618223700Z0/
-+Hj-
-vY)]Z
+240620001410Z0/
+CJ_?
 1/0-
-+Hj-
-vY)]Z
+CJ_?
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2145,14 +2136,14 @@ vY)]Z
 	<key>cdhashes</key>
 	<array>
 		<data>
-		KQTtBStIai39JEGMhou8LxNoKaE=
+		+RRyhkNKXz+bDM8Vg1NLvDb+oEc=
 		</data>
 	</array>
 </dict>
 </plist>
--9#~
-nXP6
-20240618223859Z0
+n?E,
+NoM4_
+20240620001411Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2213,6 +2204,7 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240618223859Z0#
-H,0+
-wx$!
+240620001411Z0#
+sxkXx
+<,1V
+=-F4qV

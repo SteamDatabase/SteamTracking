@@ -789,7 +789,7 @@ HCVj
 <^_[]
 ^_[]
 ^_[]
-tE<?tA
+t4<?t0
 8N%t
 ^_[]
 F$<?t
@@ -4133,7 +4133,7 @@ Can't create render targets, GL_EXT_framebuffer_object not available
 Render targets not supported by OpenGL
 Texture format %s not supported by OpenGL
 opengl.texture
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/SDL3/src/render/opengl/SDL_render_gl.c
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/external/SDL3/src/render/opengl/SDL_render_gl.c
 GL_CreateTexture
 glGenTextures()
 SDL.texture.opengl.texture
@@ -4396,7 +4396,7 @@ void main()
     gl_FragColor = vec4(rgb, 1.0) * v_color;
 opengles2
 GL_EXT_blend_minmax
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/SDL3/src/render/opengles2/SDL_render_gles2.c
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/external/SDL3/src/render/opengles2/SDL_render_gles2.c
 GLES2_CreateRenderer
 glActiveTexture
 Couldn't load GLES2 function %s: %s
@@ -4575,7 +4575,7 @@ Software renderer doesn't have an output surface
 Cannot create surface
 viewport != ((void*)0)
 SetDrawState
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/SDL3/src/render/software/SDL_render_sw.c
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/external/SDL3/src/render/software/SDL_render_sw.c
 Tried to read outside of surface bounds
 triangle area overflow
 integer overflow (%s = %lld)
@@ -8899,136 +8899,117 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-zI%u
-Ue`4
-$h*]
-U=L&
-	-%l
-z%"2kh+
+* Q0
+n"e^
+liP%*O
+	8Ln%c
+b5<gtw
 Of#_I
 ]scA]
-tQ`z
+63]+v)3; 
+ojn1ElC
 BN/f
 dWx[VS
-]J(:
-AX5>x)
-W)'>v
-CS*qI{
-2	/1hs
-3|zaML
-xT?J
-]JZB
-2C+n5
-wzEp
-,Gth
-<pf,
-[e?O
-9x\)
-ph;D
-[ZQE"
-Zz5W
-3a% -
-VjsE
-71l|F>jz(X
-t53;
-[|b?
-Di&vFt
-C9#~
-r3P!n
-hLqf
-[2W^
-HdJ 
-Z(y"
-ZG9.
-%svtW
-2wR|~
-Ni{T
-NTY	
-!wMh
-[80U*
-B}-m
-6/Xi).F
-==u"8`]
-y`4>f
-j@18
-$]R"
-tIB$
-,<In>
-AL4J
-A0dOX
-A6pP
-A'Op
-mPnr
-)dn=
-c)	~
-nf2O
-46l3
-ts<$B
-lh!^
-FIiCr
-9o+.
-PK&b
-z5-De
-'&fD
-Ogxxn
-J6<O3
-SKuvy=ioAP
-8&AN
-P2AOe;
-l&b`d]
-%|TY
-Mq_uis
-Js}'
-{U:U=3#
-tdaw
-xf[U
-Gd/-
-i	hV
--,wT
-=BCKf
-nC?l
-NB`]+h1oM((D
-4'~*#
-+%5`
-uX>/.
-iROXz
-=,'i
--mvqidf
-':\c
-!QAQQ
-0MRd
-BxL 
-J_c6
-Nc?*)
-E"%[Rl
-HLAn
-c(fu(
-J`1<
-(Z_'
-p8W=X
-RYBhSe
-M9ME
-@83	AA)
-VeJm
-2R@$
-5FgG
-= gC
-)$>gm)
-7D4E
-4"Z<F
-:|L6
-B-eX
-@;_D787
-b8Xr
-(M@a
-,$#@
->-fIC
+Umf`Y
+b>t(
+vXwh
+3V#.!
+kRl_
+K,G8
+YXaSvPf
+ChH/
+~`NI
+5f%*T
+)x6gh
+" i~
+.x}f
+fd/(GW
+_'(y
+He0<
+59a.E
+(M}^X$
+%	fo=
+mB	X}
+/!F`
+2BX|i
+g"`V^{
+(L8:
+?T9$
+4Syw
+Y%n]^3[
+Q66#
+vQMs
+b}}K
+e-6b
+LnE!
+=$dQ
+m7c+
+_IFc
++W}s
+nf1V
+ns_<n
+DE.W
+~t		/|U
+.ynr
+wT@Nn
+t}`s-
+Irj`
+47Mq
+! Fi6
+Z	%I
+;C`=t
+"k'Qh
+:!q}
+A[.4
+(=Rr
+X4$?"
+Gi_M
+SN],
+ME9/5x
+?F&=
+FFX9
+0JNe
+j`Nh[
+1aJ^
+$!z1
+K<oB_1mM
+m#SX
+ISQ&
+9.8n
+&-;i
+f:0B
+L/tf
+]DRdJ
+<Vjj71
+GXh!)
+{Tfd
+[%d~
+C}u"
+m2ig
+u	O\
+AlK~
+Tqte
+eDOM
+ZtbP
+\_vd
+D@%#{
+.KV1
+/z5<
+,))Z-
+t^g&p
+:Rw%
+4.@^#z
+FTxJ
+^hiS
+	%~H
+vQ-n*
+wH)D
+F"25
+G4Q1_
+%OW_
 xW!P
 u{>8p
 i_$Q
-M@fJ
-XR+V	
- %m9 F=
 X]ua
 wP:'
 subject.OU
@@ -9088,8 +9069,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240618223639Z0/
+240620001351Z0/
+2sXM
 1/0-
+2sXM
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -9097,37 +9080,42 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		wnrJFeYpWwU7iv29F0Wlf1ml9AY=
+		DzE2Z90qhvcfMnNYTYHKQ58MfVk=
 		</data>
 	</array>
 </dict>
 </plist>
-o5+lW
-?OL+
-Lm21
-/?v^,
-20240618223839Z0
+t=uO
+D"":
+'Tke
+%Q&=
+yS`9
+{76v|
+T?AsA
+ +xQi
+20240620001351Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240530204516Z
-240711204515Z0B1
-Timestamp Signer NWK11
+240530203058Z
+240711203057Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-[92qNd%
-eO@B
-4VokT
+ {]g
+t0@j;
++G(E
+-T*K[@H.
+Mljyx
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-u34<
-ZRAW`O[
-#;a=i
-SVA7L
-qTD\
-h;=u
+@PM#
+kEHv
+m	/]
+4C@-(
+0bZ?\
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -9166,13 +9154,10 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240618223839Z0#
-Cvh{
-HDKHP#e
-4J]3
-6n2I
-8OJr
-##3Z
+240620001351Z0#
+C0 z
+m\Dm
+b/npi}kb
 __TEXT
 __text
 __TEXT
@@ -10576,7 +10561,7 @@ AVSH
 AWAVAUATSH
 [A\A]A^A_]
 AWAVATSI
-upLc=
+upLc=*
 t-Hc
 [A\A^A_]
 AWAVATSI
@@ -10633,7 +10618,7 @@ AVSH
 [A^]
 AWAVATSH
 [A\A^A_]
-AVSLc5G
+AVSLc5w
 [A^]
 AWAVSPH
 [A^A_]
@@ -10641,16 +10626,17 @@ AWAVSPH
 AWAVSP1
 [A^A_]
 x Hc@
-twH9=
+twH9=(
 t0H9
 AWAVSPH
 u<E1
 [A^A_]
 AWAVAUATSH
+Lc-J
 [A\A]A^A_]
 AWAVATSH
 [A\A^A_]
-t+H9=B
+t+H9=r
 AWAVATSH
 [A\A^A_]
 [A\A^A_]
@@ -10712,7 +10698,6 @@ L9!t
 [A\A]A^A_]
 AWAVAUATSH
 u=L9-
-L9-X
 L9.t
 L9/t
 [A\A]A^A_]
@@ -10799,7 +10784,7 @@ AWAVAUATSH
 AWAVATS
 [A\A^A_]
 x*9=
-x#9={V
+x#9=
 AWAVATSH
 D$(H
 D$(L
@@ -11445,7 +11430,7 @@ AWAVATSI
 [A\A^A_]
 [A\A^A_]
 AVSH
-tF<?tB
+t5<?t1
 8K-t
 [A^]
 C,<?t
@@ -13182,7 +13167,7 @@ IcL$
 IcD$
 E;|$
 t$ A
-o5*'
+o5&'
 IcL$
 IcT$
 w Ic_
@@ -13200,12 +13185,12 @@ Ic0H
 [A\A]A^A_]
 0t2A
 AWAVAUATSH
-5Rb	
+5Nb	
 [A\A]A^A_]
 	H;M
 [A\A]A^A_]
-5;z	
-5#x	
+5Lz	
+54x	
 YV12
 IYUV
 NV12
@@ -13227,19 +13212,20 @@ MV12~N
 NV12tZ
 IYUVtR
 YV12tJ
-=9l	
-5kl	
+=Jl	
+5|l	
 [A\A]A^A_]
 P010t
 NV21
 [A\A]A^A_]
 P010
 )F@H
-5-k	
-58j	
+5>k	
+5Ij	
 YV12t
 NV21u
-5Zh	
+5kh	
+50g	
 [A\A]A^A_]
 AWAVAUATSH
 AVASAR
@@ -13251,17 +13237,17 @@ SASPAR
 AWAVAUATSH
 AVARATPAS
 8[A\A]A^A_]
-=Wd	
+=hd	
 8[A\A]A^A_]
 AWAVAUATSH
 T$$D
 l$ H
 AUARPAVAS
-=Pc	
+=ac	
 [A\A]A^A_]
 [A\A]A^A_]
 AWAVAUATSH
-=bc	
+=sc	
 [A\A]A^A_]
 [A\A]A^A_]
 [A\A]A^A_]
@@ -13285,7 +13271,7 @@ AWAVAUATSH
 =P010t7
 =NV21t0A
 T$ H
-=$Y	
+=5Y	
 T$|I
 [A\A]A^A_]
 AWAVAUATSH
@@ -13293,9 +13279,10 @@ x[A\A]A^A_]
 AWAVAUATSPI
 [A\A]A^A_]
 AWAVSH
-5VT	
+5gT	
+5"S	
 [A^A_]
-=7R	
+=HR	
 AWAVAUATSPL
 t$@L
 t$8H
@@ -13306,20 +13293,21 @@ AVSH
 s'UH
 AWAVAUATSH
 [A\A]A^A_]
-5*p	
-5Wo	
-5Hk	
+5;p	
+5ho	
+5Yk	
 tvE1
 tqE1
 toE1
 t4E1
 AWAVATSH
+5	<	
 [A\A^A_]
 AWAVAUATSH
 )F H
-54;	
+5E;	
 [A\A]A^A_]
-5G:	
+5X:	
 AVSH
 [A^]
 AWAVAUATSH
@@ -13330,8 +13318,8 @@ x[A\A]A^A_]
 AWAVAUATSH
 )F H
 [A\A]A^A_]
-5[4	
-5 4	
+5l4	
+514	
 AWAVAUATSH
 )@ E1
 PASARj
@@ -13361,14 +13349,14 @@ T$0H
 T$@1
 [A\A]A^A_]
 AWAVSPI
-5O$	
+5`$	
 [A^A_]
 [A^A_]
 AWAVSH
 X[A^A_]
 AWAVAUATSH
 [A\A]A^A_]
-=a 	
+=r 	
 AVSI
 [A^]
 [A^]
@@ -13383,29 +13371,29 @@ t2E1
 AWAVAUATSPI
 [A\A]A^A_]
 r	[A^]
-=S9	
+=d9	
 [A^]
 AWAVATSA
 [A\A^A_]
 AWAVAUATSPH
-%T3	
--S3	
-=H3	
+%e3	
+-d3	
+=Y3	
 ASAR
 [A\A]A^A_]
 AWAVAUATSH
-=n1	
-=d1	
+=u1	
+5T1	
 5C1	
 521	
-5!1	
 )G H
-=S0	
+=d0	
+5%0	
 [A\A]A^A_]
 AWAVAUATSH
 [A\A]A^A_]
-5a,	
-5Y,	
+5m,	
+5e,	
 AWAVAUATSH
 [A\A]A^A_]
 AWAVAUATSP1
@@ -13759,12 +13747,12 @@ AVSH
 AWAVSH
 [A^A_]
 AWAVAUATSH
--La	
+-Xa	
 ([A\A]A^A_]
 AWAVAUATSP
 [A\A]A^A_]
 AWAVAUATSH
-%`]	
+%l]	
 X[A\A]A^A_]
 AWAVAUATSH
 )F A
@@ -13775,19 +13763,19 @@ AWAVAUATSH
 AVSH
 [A^]
 [A^]
-%_X	
+%kX	
 AWAVAUATSPH
 ARSA
 [A\A]A^A_]
 AWAVATSH
-%4V	
+%@V	
 [A\A^A_]
 AWAVAUATSH
 LRUG
 LRUGA
 [A\A]A^A_]
 AWAVAUATSH
-=ZT	
+=fT	
 L98t
 [A\A]A^A_]
 AWAVAUATSP
@@ -13797,29 +13785,26 @@ GH@u+
 [A\A]A^A_]
 @H@t
 AWAVSH
-=sN	
 [A^A_]
 AWAVATSH
 ----A
-%{M	
 [A\A^A_]
 AWAVAUATSH
-5?K	
-%mL	
--KK	
--&I	
-=xH	
-=aE	
-%NE	
+5KK	
+%yL	
+-WK	
+-2I	
+=mE	
+%ZE	
 LRUGA
 LRUGA
 H[A\A]A^A_]
 AWAVAUATSH
-=1C	
+==C	
 [A\A]A^A_]
 AWAVAUATSPI
 StjL
-5&B	
+52B	
 [A\A]A^A_]
 AWAVSPI
 [A^A_]
@@ -13828,29 +13813,30 @@ AWAVATSH
 AWAVAUATSH
 [A\A]A^A_]
 AWAVAUATSPH
--U?	
+-a?	
 [A\A]A^A_]
 AWAVAUATSPI
+-&>	
 [A\A]A^A_]
 AWAVAUATSPM
-5U<	
+5a<	
 [A\A]A^A_]
 AWAVAUATSH
 [A\A]A^A_]
-%#:	
+%/:	
 AWAVSPH
 [A^A_]
 AWAVAUATSH
 = OSIu
 [A\A]A^A_]
 AWAVAUATSH
--76	
+-C6	
 X[A\A]A^A_]
 AWAVAUATSPH
 [A\A]A^A_]
 AWAVAUATSPI
--g4	
-5D4	
+-s4	
+5P4	
 [A\A]A^A_]
 AWAVAUATSPH
 = OSI
@@ -13862,11 +13848,11 @@ AVSH
 [A^]
 [A^]
 AWAVAUATSH
-%r.	
+%~.	
 X[A\A]A^A_]
 AWAVAUATSH
 l$(H
-5#-	
+5/-	
 IcD$ 
 IcD$ H
 H[A\A]A^A_]
@@ -13875,12 +13861,12 @@ AWAVATSH
 AWAVSP
 [A^A_]
 AWAVATSH
-%i)	
+%u)	
 @[A\A^A_]
 AWAVAUATSH
-5/(	
-5X'	
-59'	
+5;(	
+5d'	
+5E'	
 X[A\A]A^A_]
 AVSH
 [A^]
@@ -13888,8 +13874,7 @@ AVSH
 [A^]
 AWAVAUATSH
 [A\A]A^A_]
-%N$	
-%p#	
+%^$	
 AWAVAUATSH
 @u0I9
 u+I9
@@ -13923,9 +13908,7 @@ D$8H
 IcD$
 [A\A]A^A_]
 u?z=H
-5m}	
-5t}	
-5{}	
+5}}	
 [A^]
 AWAVSPH
 [A^A_]
@@ -13935,7 +13918,7 @@ L$ D
 AWAVAUATSPA
 [A\A]A^A_]
 AWAVSP
-=(z	
+=8z	
 [A^A_]
 AWAVAUATSH
 ([A\A]A^A_]
@@ -14064,265 +14047,274 @@ t.E1
 AWAVAUATSPI
 [A\A]A^A_]
 AWAVAUATSH
-5%~	
-5!{	
-5T~	
+55~	
+51{	
+5d~	
 x[A\A]A^A_]
 AWAVAUATSH
 ([A\A]A^A_]
-5xy	
-5Dy	
+5Ty	
 ([A\A]A^A_]
 AWAVATSH
 [A\A^A_]
-5%v	
+55v	
 AWAVSPI
+5&{	
 [A^A_]
 AWAVAUATSPI
-56t	
+5Ft	
 [A\A]A^A_]
 AWAVAUATSPI
-5-t	
-5+t	
+5=t	
+5;t	
 [A\A]A^A_]
 AWAVAUATSH
 x[A\A]A^A_]
 AWAVAUATSH
-5Lu	
-=||	
-5=u	
+5\u	
+5Mu	
 )D$ A
 )D$0L
--Tt	
+-dt	
 L98t
+5,j	
 [A\A]A^A_]
 AWAVAUATSH
-5v}	
-5Uu	
-="u	
-5Zn	
-5rt	
-= t	
-5,t	
+5eu	
+=2u	
+5jn	
+=0t	
+5<t	
 \$<f
 [A\A]A^A_]
 AWAVAUATSH
-5fy	
+5vy	
 CH t&H
-5Cp	
+5Sp	
 [A\A]A^A_]
 AWAVAUATSPH
-5kh	
+5{h	
 [A\A]A^A_]
-=mv	
+=}v	
 AWAVAUATSPH
-5^q	
-=Dq	
+5nq	
+=Tq	
 [A\A]A^A_]
 AVSH
-5sm	
 [A^]
 AWAVAUATSPI
-=Tg	
+=dg	
 @H tnL
-5jl	
-5kf	
+5zl	
+5{f	
 [A\A]A^A_]
 [A\A]A^A_]
 AWAVAUATSH
 T$8A
-=2n	
+=Bn	
+5)i	
 ([A\A]A^A_]
 AWAVAUATSPI
--jp	
-5eh	
+-zp	
+5uh	
 [A\A]A^A_]
 [A\A]A^A_]
 AWAVAUATSH
-5Jd	
-= o	
+5.h	
+5-Z	
+5Zd	
+=0o	
+5	f	
 [A\A]A^A_]
 AWAVAUATSH
 )E0A
 )E A
-5Dc	
-5NY	
+5Tc	
+5^Y	
 L9(t
 [A\A]A^A_]
 AWAVAUATSPI
 [A\A]A^A_]
 AWAVAUATSH
-5[]	
-5ta	
-5a`	
+5k]	
+5!a	
+5q`	
+5-b	
 [A\A]A^A_]
 AWAVSPI
+=$j	
 [A^A_]
 [A^A_]
 AWAVAUATSPI
--,i	
-5[a	
-59a	
-5sa	
-=Ye	
-5"a	
-58a	
-5g_	
-5[_	
+-<i	
+5ka	
+5Ia	
+=ie	
+52a	
+5Ha	
+5w_	
+5k_	
 [A\A]A^A_]
 AWAVAUATSPI
-5^Z	
-5k`	
-57`	
+5nZ	
+5{`	
+5G`	
 [A\A]A^A_]
 AWAVSPI
-= g	
+=0g	
 [A^A_]
-5@^	
+5P^	
 [A^A_]
 AWAVAUATSH
-={f	
-5r^	
-5X^	
-5B]	
+5h^	
+5R]	
 8[A\A]A^A_]
 EH H
-=;a	
+=Ka	
 *D)l
-5Z\	
+5j\	
 *D)p
+5,\	
 *D)t
 *D)x
-5T[	
-5.[	
+5!\	
+5d[	
+5>[	
 AWAVAUATSH
-5c[	
-5@[	
+5s[	
+5'V	
+5P[	
 ([A\A]A^A_]
-5FQ	
+5VQ	
 AWAVSPI
-5qR	
 [A^A_]
-5\R	
+5lR	
 AWAVAUATSH
-=+_	
+=;_	
 A9\$ ~,
 x(A9L$$~
+5#W	
 [A\A]A^A_]
 AWAVAUATSPI
-5JP	
-5wN	
+5ZP	
 [A\A]A^A_]
 AWAVAUATSH
-5tT	
-5e[	
+5*I	
+5/P	
+-!N	
+5u[	
+5/M	
 H[A\A]A^A_]
 AWAVAUATSH
-5iK	
-5NL	
+5yK	
+5^L	
 [A\A]A^A_]
 AWAVAUATSPH
-5lJ	
+5|J	
 [A\A]A^A_]
 AWAVAUATSH
-=GW	
-5=K	
-5}O	
-=FS	
-5OO	
-5hG	
+=WW	
+5MK	
+=VS	
+5_O	
+5xG	
 GK@H
-5nN	
+5~N	
 [A\A]A^A_]
-=)Q	
+=9Q	
 AWAVAUATSPI
 	s#A
 [A\A]A^A_]
 AVSH
 @[A^]
+5%K	
 AWAVSPH
+5 D	
 [A^A_]
 AWAVATSH
+5.J	
+5 J	
 [A\A^A_]
 AWAVAUATSH
-5YI	
-5	<	
+5iI	
 )G0A
 )G A
-5k;	
+5{;	
 L90t
 [A\A]A^A_]
-53G	
+5CG	
+5)G	
 AWAVAUATSH
-5iF	
+5yF	
 )C0L
 [A\A]A^A_]
 AWAVAUATSH
-54?	
+5D?	
 ([A\A]A^A_]
 AWAVAUATSPI
-5gA	
+5wA	
 [A\A]A^A_]
 AWAVAUATSPI
 [A\A]A^A_]
 AWAVSH
-5n@	
+5~@	
 X[A^A_]
 AWAVAUATSH
-=wB	
-5P8	
-=D8	
-5z2	
+5`8	
+=T8	
 T$HI
 T$Hf
-5q8	
-5t>	
-5)>	
-5o/	
-5O7	
-5:/	
-=;@	
-5z8	
-=q>	
-5*-	
-=-?	
-D$$H
+5	>	
+59>	
+5.<	
 5_7	
+5J/	
+5#7	
+=K@	
+5:-	
+==?	
+D$$H
+5o7	
 D$HH
 D$HH
 L$HH
 L$HH
 L$HH
 D$HH
-5e/	
-5N1	
-5b9	
+5u/	
+5^1	
+5r9	
 I#D$HH
 L$HH
-5&/	
-5G5	
-5a(	
+56/	
+5W5	
+5)5	
+5q(	
 D$H t
 T$HL
 [A\A]A^A_]
 AWAVAUATSH
 )C f
 )C0H
-=g5	
-5'$	
+=w5	
+57$	
 L9(t
+5,#	
 )C0f
 )C f
-5g"	
+5w"	
 L90t
 [A\A]A^A_]
 AWAVAUATSH
-=Y0	
-5",	
-5&.	
+5!)	
+5',	
+=i0	
+52,	
+56.	
+5(-	
 )G0A
 )G A
-5,(	
+5<(	
 L9(t
 [A\A]A^A_]
 AWAVATSH
@@ -14330,18 +14322,21 @@ AWAVATSH
 AWAVSPH
 [A^A_]
 AWAVAUATSH
-5G)	
-5W&	
+5W)	
+5g&	
 [A\A]A^A_]
 AWAVAUATSH
+5+(	
 [A\A]A^A_]
 AWAVAUATSH
-5)$	
-5.#	
-5&#	
+5$!	
+59$	
+5>#	
+56#	
+5#$	
 [A\A]A^A_]
 AWAVAUATSH
-5Z#	
+5j#	
 [A\A]A^A_]
 AWAVAUATSH
 [A\A]A^A_]
@@ -14352,9 +14347,8 @@ x[A\A]A^A_]
 AWAVAUATSPI
 [A\A]A^A_]
 AWAVATSH
-5~ 	
-5d 	
-5; 	
+5t 	
+5K 	
 [A\A^A_]
 AWAVAUATSH
 [A\A]A^A_]
@@ -14374,7 +14368,7 @@ AWAVAUATSH
 AWAVAUATSPA
 [A\A]A^A_]
 AWAVAUATSH
-5a		
+5q		
 [A\A]A^A_]
 AWAVAUATSH
 ([A\A]A^A_]
@@ -14451,7 +14445,7 @@ A#G A
 [A\A]A^A_]
 AWAVAUATSD
 w(HcG<H
-%N,	
+%^,	
 [A\A]A^A_]
 w(LcG<D
 AVSD
@@ -18012,7 +18006,7 @@ Can't create render targets, GL_EXT_framebuffer_object not available
 Render targets not supported by OpenGL
 Texture format %s not supported by OpenGL
 opengl.texture
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/SDL3/src/render/opengl/SDL_render_gl.c
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/external/SDL3/src/render/opengl/SDL_render_gl.c
 GL_CreateTexture
 glGenTextures()
 SDL.texture.opengl.texture
@@ -18274,7 +18268,7 @@ void main()
     gl_FragColor = vec4(rgb, 1.0) * v_color;
 opengles2
 GL_EXT_blend_minmax
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/SDL3/src/render/opengles2/SDL_render_gles2.c
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/external/SDL3/src/render/opengles2/SDL_render_gles2.c
 GLES2_CreateRenderer
 glActiveTexture
 Couldn't load GLES2 function %s: %s
@@ -18453,7 +18447,7 @@ Software renderer doesn't have an output surface
 Cannot create surface
 viewport != ((void*)0)
 SetDrawState
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/SDL3/src/render/software/SDL_render_sw.c
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/external/SDL3/src/render/software/SDL_render_sw.c
 Tried to read outside of surface bounds
 triangle area overflow
 integer overflow (%s = %lld)
@@ -23476,145 +23470,135 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-NJY$
+&gvEx
+]P;K
 ummAB
-O\U[
-7,S5FDi
-h|	y5
-1aBH
-o|z(
-QiM6'
-5Md[)%;
-tfFKT
-<B[9
-J.>U
-!No:
-+n5x
-E DYCz
-l>U~v
-<xuK
-YDHI
-o4u4$
-4NpI
-*O`q
-HYs8
-1Wli
-"SQT
-~6@+
-A&x\
-W="9
- $4_Y
-b, Z
-.]T,a4
-zv;o
-uC=f
-@Uvd
-H#UB/S|
-=X5e8
-wp&X
-3xt0
-Q{8<-
-c)a(
-R#Xm
-w/g	Om
-j*>9
-Kn_9
-nG#F
-naCK
-KG7]
-R1c%o
-0)S;
-.onb>.
-I`eYW
-7/gt
-#K$v
-ERP3is
- WGN
-~W/m
-.>yH
-"6DE
-H=^nn
-lKWm
-cDLH<
-rL'1
-VgQ"
-3b1S
-Rr?r
-QXvfm
-p}Z?O
-x3GZ
-+=Yx
-+:fT[
-nYG:
-#cN%
-XX*Y
-$B_nW
-scKP
-#yB;
-\NMt
-b@%^
-\W{\
-e#}L
-ATA6Wy
-!jiE((
--/hV
-R	D+1
-5dk/
-53:.
-}SRQ
-b$se
-S!fv
-l{7h
-GU1}
-#yxse
-%i8O
-?l/e
-?#}E
-1H>W
-D'48]F9
-{G?y
-7z[v
-o\lLymG0}cpIPd
-nq=z
-u;p1
-+7@^<
-F_6<
-fK)9
-I$ 7
-"z5u]
-01+5
-|&LQ
-Vuu=
-}G.s
-1zY_
-~uyi
-&+&*
+'w0<
+hn0p
+"/2!
+SR{$
++CP%k
+.hS#
+R[9/2
+r}>zI]B
+y]<=
+[/lx(
+Wp!D
+2USS
+\<}^
+xam0
+;7e2
++/cg
+t)d',
+&LB"'
+JB!j
+FSEV
+IE4<m
+PHN8
+q{(=
+)M^0
+~6JS
+d%?B.
+-|"I
+uUi[
+T:7x
+*KR9h
+UI\8
+LO%F
+ss[C
+aD=|O
+(pk!
+2$:Td
+ZXw>M
+tg"C;
+4S-z|
+]AbJl
+F;f*
+p3AOx
+m-`k?h
+QgMl
+}aWG
++3?H4
+tmf,R
+o7W,8
+;wW3
+j+j&A
+)~b>
+;>WW
+Wr16
+"n3V{
+Mdsi
+wg (
+O0kz
+~|M+
+'s3q
+`$O%
+O9d;
+K!+|
+t3@Q
+*HlzF
+gydH
+kri2
+xQ3f
+`oY;y
+5 ,An~	W
+}r*.%
+6Qg#W
+9l8jU
+Iot1g
+Bnd<
+7S"g
+QN#7Fk
+jFr<
+K99Fb
+tCyL
+r-"6:
+85dE
+>^Pf
+ODd-
+oy!^
+8Bgy
+hI5O1
+tjYe
+Z1ml@
+\8^ZJ
+6B`@
+:	UC
+tPwh	
+4mT}
+m	Wf
+ `d/
+lp4[
+HPp0}
+0G>X
+Up5@1X
+`XJ${
+|G+*
+R%5X5 
+S9u7
+dH	p
+-.M9'
+o90esL[
+yW,$~
+Pqr+
+wcj= 
+Xl'$
+l`$JQ
 9[&=
 )onj
-W$iEJ
-3`~vW
-Lu4gIR^
-2x:W
-a<J/iK{=:
-_K_V
-b Y[
-u@g8
-t?q_r
-=/9`*
-H6vhz
-Zk\4
-}{7BX
-/]ehE
+?3~D@
+E}a'#X
+#&jh
++xgZ
+{cvl
+o?[)x
+pDXP
 :a+3
-a-xD-
-lBED
-"Leh
-U/~;%
->VS'
-f]bKw
-Y af1
-6JV%
-%6}4
+a-xD-R
+GL_pSi
+!p:_
+"i=I.
+ 	c,
 $?[c
 xUl:
 -kFE
@@ -23677,7 +23661,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240618223639Z0/
+240620001351Z0/
 1/0-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -23686,17 +23670,14 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		75A7TciLabLWHIpCHsk5jEsvqTU=
+		iYTapg+e8aIAQ23Qrza0xmZJhqM=
 		</data>
 	</array>
 </dict>
 </plist>
-	Jn	mq
-0Ql*sZ
-t(:A
-.[f|
-w}'{A'm
-20240618223839Z0
+1*u2
+b(Ok7
+20240620001351Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -23757,8 +23738,12 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240618223839Z0#
-zj|Wp
+240620001351Z0#
+nK2DA
+Jk^'
+8@)f
+,|8d
+wp"7
 __TEXT
 __text
 __TEXT
@@ -23927,37 +23912,38 @@ T@
 @9J9G
 *ij8
 T@  
-4!i}p
-`:}P
-4!b}p
-@`}p
-A`}p
-4a^}
-4!\}P
-4A[}p
-@Y}0
-`V}P
+4Ah}P
+Hd}P
+@b}0
+Ab}0
+4!b}
+4aa}0
+a[}0
 R,A*
-9K}P
+`H}p
+T J}0
+@C}0
+T@N}
+@:}0
 By_E
-T@=}0
+Ty?}0
+T,et
 Cy_!
 CyK!
-JVtP
+ <}0
+T 2}0
 Lyixk	
-(N}0
+@#}p
 {"xM
 h{8{
 ynx<he8)
 )k,8
-h-}0
  j`x
 30Z`x
 ypihx
 xPihx
 i(x0ihx
 i(x9
-`'}P
 Tjkh8
 xqx1~
 y+xk
@@ -23970,6 +23956,7 @@ Cy	!
 Cy_	
 J%@y
 TNy)x)
+aX|0
 H@y	
 `@y.
 H@y	
@@ -23978,7 +23965,6 @@ Rif@
 5h&I)
 &H)6}
 =hb@
-`u|P
 Thr@
 4vJ@
 TxJ@
@@ -23987,21 +23973,16 @@ B)!|@
 J)bR@
 J)dR@
 5hf@
-H)|P
-@(|0
-`$|P
+@2|P
+h"|P
 hB[9
 hB[9
 hjt8
 +@)L	
 OB)20
-4s6r
-6h6r0
-)=rP
- 7rp
+)8rP
 4hN@
 kB#Xzh
-@aqP
 !SzH
 TiB@
 r)|)
@@ -24012,56 +23993,55 @@ S	Xi
 (6)y
 06)y
 @6)y
-@|qp
-`|q0
+ ~q0
 	k`p
 ?!@q
 !@q	
-Bwqp
-THYhP
-yixJ	
-T(UhP
-yixJ	
-ThVh
-yixJ	
-THPh
-yixJ	
-ApqP
-ThRh
+"uqp
 yixJ	
 yixJ	
 yixJ	
-T(HhP
 yixJ	
-!sqp
+boq0
 yixJ	
-ThGhP
+yixJ	
+T(Kh
+yixJ	
+yixJ	
+yixJ	
 yixJ	
 	k@L
 	kAZ
 $qaX
+TAfqp
 	kAW
-Agqp
-AiqP
-!jqp
-!oqP
-Apq0
-!rqp
-!Gqp
-!Hqp
-R@9*oq
-f@9kcq0
-LcqP
-!cq0
-!5qP
-A:qP
-afq0
-b@9jXq
+5!Xqp
+afqP
+!gqP
+Ahqp
+Aiq0
+alqp
+!nqP
+apqP
+Aqq0
+arq0
+Afq0
+"Zqp
+ADq0
+AGqP
+B^qP
+a9qP
+B5q0
+f@9LWq
+Acqp
+kdq0
 baq0
-BLqp
-f@9K
-f@9+Iq
-!vqp
+!XqP
+"rq0
+i?q0
+R@9+?qP
+(nq0
+4 RqP
 ))H9	
 Lii8k	
 T(Q_y
@@ -24070,12 +24050,11 @@ T(Q_y
 (Q_y
 *Q_yH
 TH'@9
-T hqp
 4	Q_y)
 	Q_y)
-= .qp
-@.qp
- /q0
+Th	q0
+ .qP
+`.q0
 Bi!}
 h&A9
 07(! 
@@ -24087,19 +24066,17 @@ T`&@
 I- ) 
 4	]@
 (a393
-@kpp
-`kpp
-@lp0
- lpp
- lpP
+ kp0
+@kpP
+@hpp
 	*J!
+@Qp0
 R)9@
 ) A9i
 @z@	@z`
+ 3p0
 /A)*
 R3yh
-@	p0
-@	pp
 	Qt9?
 (Q49
 T@yi
@@ -24117,33 +24094,36 @@ Th&@
 ThF@
 4hj@
 iw8)	
-T`zop
-Heo0
-`cop
-H_o0
-(RoP
-HLo0
+4!ho
+!Cop
+A?op
+h6oP
 R`6@
-((oP
 ?@9h
 ?@9h
+hnn0
 +ih8J	
-wTn0
 (k{8
+aknp
 7hR@9h
- anp
-`Xnp
-`_np
- ]n0
-4@Wnp
-`Ln0
+T``n0
+ _np
+ainP
+4@on0
+5`SnP
+4`bn0
+ Tn0
+44Mnp
+`LnP
+T	Qd
 +ih8J	
  @q!
-@5d\ 
- 5d\ 
+4d\ 
+4d\ 
 (!@9
 T*%@9
 T))@9	
+Ti-d
 +yhxJ	
 r	})
 h6@y
@@ -24195,78 +24175,78 @@ RjN@y
 +ih8J	
 TsB@
 4h2@
-(~m0
-Hpm0
+Hvm0
+hrm0
 4`"@
+(mm0
 4`&@
-T`im
-Hbm0
-(fmP
+Hgm0
 =i"@
 =i"@
- nmP
-@cmP
-HHm0
-h@m0
+h]mp
+ gmP
+(Lm0
+7@Rm0
+`^mP
+7`Um0
+hCm0
+H<m0
 4hB@yI
+H9m0
 4h6@
- {kP
+h6m0
+X7 GmP
 4a6@
- qkP
+h,m0
 7a6@
 4a6@
-(q}X
-`Fk0
-h$c\
-Bi}X
-Ci}X
-hA}X
- (mp
-H	mP
-5}X)
-I+}X)
-(eb\
+(&m0
+`jkP
+(t}X
+hq}X
+hh}X
+	*	&m
+(>}X
+	6}X)
++}X)
 h&N)
- (lp
-@%lp
-@jl0
-@dl0
- al0
+@ml0
+`]l0
+ Zl0
 4`"@
-`Vl0
-@Sl0
-@Il0
+@Ll0
 4`"@
-`Fl0
 2@yh2
-)L|X)
-b.lP
+ >l0
+ 1j0
+hV|X
+L|X)
+(=|X
 a\`:
-h(|X
-)&|X)
+&|X)
+I	|X)
 r	})
 R	aA
 Ri~	
-`	l0
-9!-~
+4S	lp
 +ih8J	
-i.a0
 +ih8J	
-TI,a
 +ih8J	
 @9cJ@yd
 2w9h
 T`F@
-SA\k
+a[k0
+SAOk0
+Sa[k
 bw9H
-T Zkp
 rw9T
 5sZ@
-3Ukp
-Zx+p
-Zx,p
-Zx*p
-T!+k0
+tTkp
+Zx'p
+Zx(p
+Zx&p
+(Lkp
+!*kP
 4sZ@
 4sZ@
 RhN@
@@ -24289,19 +24269,25 @@ TiF@y
 5hB@y
 cB@ydF@yeJ@yf
 H)i*I)
+(0zX
 hB@y
 5`>@
 Hj*Q
 T`>@
-	"zX)
+T`~j0
+"zX)
+ayj0
 @9KY@9
 @9K]@9
 @9ijz8
 Thj:8
 jm@9
 ThV@
+T@/j
 *Q@9
+4@+j
 )!A9
+`+j0
 5A9_
 KQ@9k
 5J!A9
@@ -24317,14 +24303,12 @@ c@9?
 K@9(
 S@9(
 6hF@
-|yX)
-(qyX
+i}yX)
 hB@y
 5`>@
 7`>@
 5`>@
-fyX)
-HcyX
+)gyX)
 C@9?
 G@9?
 ;@9?
@@ -24333,9 +24317,11 @@ G@9?
 C@9?
 (kh8
 6hF@
-I2yX)
+2yX)
+h*yX
 9h|@
-)&yX)
+&yX)
+h"yX
 hB@y
 ThF@y)Z
 #@9?
@@ -24349,27 +24335,25 @@ G@9?
 +@9?
 (kh8
 6hF@
-6!Ci0
-a?i0
-aBi0
+A>iP
+ih^0
 RKI)8
+ \^\
 iixL
 9hB@y
 ThF@y
 hB@y
 s@9h
 G@yH
-ThT^
 hB@yI
 iB@y?
 TiF@y?Y4q!
 iF@y)
-I{xX)
+{xX)
 ThV@
 4`>@
 O@y?=
 S@y?=
-hsxX
 ThF@
 A9	E
 T`>@
@@ -24381,15 +24365,15 @@ Th6@
 #A9I
 ThF@
 ThF@
-TxX)
+IUxX)
 4	!D)?
-DxX)
+iExX)
 hB@y
 ThF@y
 y`>@
-@xX)
-H=xX
-I5xX)
+	AxX)
+5xX)
+T :f
 @9)]
 @9k=
 +A9)]
@@ -24412,14 +24396,12 @@ v@9(
 4h6@
 @xibAy	
 	KjV@
-@1hP
-`/hP
+ 0hP
 iixL
 9`>@
 hB@y
 4`>@
 yhB@y
-Thq]
 iB@yH
 TiF@yH
 iB@y
@@ -24436,13 +24418,14 @@ Th6@
 ThF@
 ThF@
 ThF@
-ZwX)
+)[wX)
 hbB9
 5hfB9
-hFwX
-IBwX)
-@wX)
+BwX)
+	AwX)
+T`Ee
 {@91^
+(,wX
 `B9h
 5	dB9	
 S	dB9*}
@@ -24463,7 +24446,9 @@ Z@9)]
 b@9J]
 j@9J]
 @9	}
-A4g0
+`3g0
+@*g0
+ #gP
 Tb~@
 /@9?
 '@9?
@@ -24476,42 +24461,36 @@ Tb~@
 3@9?
 g@9?
 6hF@
-	PvX)
+PvX)
 <hF@y	B
 D@y	B
 4( @9
 )@@9)		
-(9vX
-I8vX)
-)1vX)
-('vX
+8vX)
+1vX)
 '@9?
 +@9?
 /@9?
 6hF@
-)	vX)
+	vX)
 Tx#@y
 !N`C
 y(	@9
 78	 7K
 !N`C
-G@9@5fp
-@.f0
-`/fP
- *fp
+ 9fp
+@7fp
 &@yk
 @yj>
-duX)
-H_uX
+HjuX
+)euX)
 4t>@
-VuX)
-HTuX
+IWuX)
 B@9	
 }	SJ
 &@)#
-.uX)
-h(uX
-%uX)
+)/uX)
+)&uX)
 `B@y
 iF@y
 4t6@
@@ -24525,9 +24504,11 @@ TIA@
 	E@y
 hB@y
 ThF@y
+bsep
 _8Ki(8
 vC9?
 yixJ	
+	*,TZP
 yixJ	
 4 ;@
 4 ;@
@@ -24550,29 +24531,25 @@ y*!@9)
 mh*@
 3AxI6
 QBxh?
-5(U@
-*A@y_
-T)E@yj
+5	U@
 4h*@
 Y\`J
 5(U@
-*A@y_
-T)E@yj
+)A@y
 4h*@
-Q)pdp
-@Zdp
-`Xdp
+Jodp
+ Zdp
 A@9h
 5	E@y
 E@y)
 	E@y
+a\dp
 *	L!
 =Byh
-wsX)
+)ysX)
 T@hA
 5!@!
-	osX)
-	FYP
+psX)
 *ihx_
 iijx?
 @yj}
@@ -24580,8 +24557,8 @@ iijx?
 5<qa
 T	(@
 hB@y
+T)xt
 {@y	m
-T, Y
 ii8J	
 @9(	
 kh8?
@@ -24609,21 +24586,20 @@ N!T?
 X\!D
 R	4@
 j{8_
- Ecp
-hrrX
+@Acp
 #@9(
 	k@9
 +@9?
 	o@9
 /@9?
 6hF@
-\rX)
-HUrX
+i^rX)
 @@yaF@y
-hMXX
-OrX)
-i5rX)
-H2rX
+IQrX)
+(;rX
+H3X0
+a/bP
+6rX)
 ThF@
 ThF@
 q@	@z
@@ -24631,7 +24607,7 @@ q@	@z
 ?@9?
 <`>@
 ThF@
-@y%'
+@y)'
 hB@yiF@y?
 RhV@
 b@9K
@@ -24642,10 +24618,9 @@ R?i38
 jh8)	
 b@9	
 b@9	
-@sbp
+T wb0
 6hF@
 <h>@
- jb0
 J@IKJ=
 SIAI
 )=	S	
@@ -24656,16 +24631,19 @@ SIAI
 )=	S	
 i@HK)=
 S(AH
+T`bbp
+h\b0
 Th*@
 4hJ@
 h2Dx
-	|qX)
+}qX)
 4h6@
 ivA9
+ThiW0
 ii8J	
 :@9?
 :@9h
-*cqXJ
+dqXJ
 @9(%
 :@9?
 4h6@
@@ -24681,26 +24659,23 @@ jy8_
 jy8h
 r@9X
 N@9\
-7qX)
-I/qX)
-T([r
-Th!W
-ThWr
-H	qX
-T`{X
+H;qX
+i9qX)
+0qX)
+Ta{X
 .ih8
 I*8*ih8_
-R8*{
+R8+{
 ii8J	
 @y	B
 @s^P
-)|pX)
-HypX
-qpX)
+)}pX)
+HzpX
+rpX)
 47Sa0
 aNa0
-H_pX
-ZpX)
+H`pX
+[pX)
 +ih8J	
 Ts*@
 Ts*@
@@ -24710,7 +24685,7 @@ V@90
 		B)?	
 Th"@
 i68%
-	:pX)
+	;pX)
 Q`Zu
 Ts*@
  ee0
@@ -24730,13 +24705,14 @@ T	L@
 Ts*@
 a89@
 Ts*@
-h!oX
+h"oX
+(	oX
 @9	}
 )h*@
-5`Ly
+5`My
 (a:9
-RU,p
-h0yX
+RU-p
+h1yX
 RH+@
 yXKyi
 Ti&@
@@ -24762,17 +24738,17 @@ T`F@
 4sr@
 Rh")
 ijxj
-HuxX
+HvxX
 4tJA
-KfxXlyi
+KgxXlyi
 4hBAy
 ThFAy
 h{c0
 4hrAy
 ThvAy
 (lc0
-7xXT
-3xX?
+8xXT
+4xX?
 T	L@
 xX*y`
 Rj&@
@@ -24784,12 +24760,12 @@ R	_
 3i(8
 T(  
 /H  
-vmX)
-	mmX)
-(hmX
+wmX)
+	nmX)
+(imX
 ThZ@
 aBAybFAy
-iYmX)
+iZmX)
 	**<p
 	b\0
 )kx8
@@ -24856,7 +24832,7 @@ i"	9)
 ir	9 
 @ka0
 5@`ap
-tkX)
+ukX)
  eYP
 R	}	
 	@z;
@@ -24866,23 +24842,23 @@ R	}
 Lii8k	
 Ti!T
 SJ T
-H!kX
-`zqX
+H"kX
+`{qX
 pXly
 pXNy
-`bqX
+`cqX
 +ih8J	
-3zpX
-vpX"
-VtpX
+3{pX
+wpX"
+VupX
+!YpX
 !XpX
-!WpX
-aUpX
-aLpX
+aVpX
+aMpX
  (`P
-3pXDs
-A)pX
-A"pX
+4pXDs
+A*pX
+A#pX
 pXNr
 &A))}@
 &A))}@
@@ -24895,38 +24871,60 @@ oX-n
 4LC)
 -  #
 T` !
-aSoX
-aKoX
-QoXHl
-aQoX
-aWoX
-XoX	
-	RoX
-)\oX
-HQoX
-iQoX
+aToX
+aLoX
+RoXHl
+aRoX
+aXoX
+YoX	
+	SoX
+)]oX
+HRoX
+iRoX
 j{hx)	
 [QOP
 nXBi
 nXWh
 nX>h
-vEoX
+vFoX
 nXWg
 nXSf
-!xnX
-YnXb
-ajnX
-7Wc^
-X[^p
-8Z^0
-xP^P
-8M^P
-xD^0
-8C^0
-x<^p
-X;^0
-x0^0
-x/^0
+!ynX
+ZnXb
+aknX
+7wc^p
+`a^p
+`^^p
+`[^p
+`X^p
+`U^p
+8Y^p
+8X^P
+`R^p
+8W^p
+`O^p
+`L^p
+`I^p
+`F^p
+xN^p
+xM^0
+`C^p
+`@^p
+`=^p
+`:^p
+`7^p
+XB^P
+`4^p
+8A^P
+`1^p
+`.^p
+`+^p
+X:^P
+89^p
+`(^p
+87^P
+`%^p
+`"^p
 Th?@
 RI}	
 B)w#@
@@ -24936,14 +24934,16 @@ B)w#@
 *A)+
 *@)?
 *A)+
-#}]P
+ ~]P
+c}]0
 *@)?
 *A)+
 *@)?
 *A)+
-Co]0
+ o]P
 *@)?
 *A)+
+ d]P
 L,@)k}@
 TM{j
 Mkj8
@@ -24963,26 +24963,23 @@ Th&A
 bwU0
 7h.@
 Th:@
-IYfX)
+IZfX)
 D-b*@
 F-b:@
-BfX)
+CfX)
 	kaH
 @;O\
 oXhv
-wL\p
-WL\p
-7I\p
-WH\0
-7D\0
+wI\P
+7G\p
+7F\0
 WE\0
-wD\P
-7@\0
 	k))
 SI}	
 Tv^A
- {[p
+`{[P
 L,@)k}@
+T 6\p
 A-k])
 jh8)	
 T(/@
@@ -24990,7 +24987,6 @@ T(/@
 R`ju
 4h:@
 4hJ4
-[v[p
 7s^A
 4hf@
 KbBB
@@ -25004,29 +25000,29 @@ KbzB
 Th7@
 T9?@
 )h.@
-"p[P
 T(?@
- f[0
 Th6@
 4hN@
 T	uM
 TIsM
 T	rM
 T)pM
-edX)
+fdX)
  xS0
-`R[0
-4aR[
+aS[p
+4AS[0
 !n*p
 @C-$
 @G-!
+!D[0
+4 N[P
  DRP
+a?[P
 Th2@
 T`BA
+H&[0
 @&RP
-!"[p
 !~Sp
-5@8[p
 !^aR@
 !^aR@
 !^aN@
@@ -25034,22 +25030,22 @@ T`BA
 'A)?
 +ih8J	
 TM_T
-(uZP
 	k %
 	k #
 T(!@
-AfZp
+!gZ0
+*a`Z
 O@=!
 K@=B
 7`N@
-HXZp
-hWZP
 5`5Q
 4`F@
-h)Zp
+h&Z0
+( Z0
 4`N@
 7`N@
-(	Zp
+H	Zp
+(	ZP
 4`N@
 7`N@
 .@)k}@
@@ -25057,27 +25053,23 @@ Tt"I
 7`N@
 T@!+
 @{PP
-hsYP
 !^c8$
+4 vYP
  lPP
+4 oYP
  ePP
 T`NA
 T`NB
 4a"	
 7h"	
-4`XY
-(NYP
-hGYP
-4`MY
-(CYP
 =	xB
 Tab	
 <hb	
+4`BYP
 `8PP
-4@>Y
-H0YP
-H*YP
+4`.YP
 `$PP
+4@#YP
 -&)"
 T` !
 T` !
@@ -25087,35 +25079,35 @@ R )
 -@( 
 -#(#
 ,D($
-yaX)
+zaX)
+4`uXP
 `kOP
-ItaX)
-qaX)
+IuaX)
+raX)
 H-D($
-(`aX
-4 ^X
-i]aX)
+(aaX
+i^aX)
 @QOP
-)ZaX)
-iWaX)
-QaX)
+)[aX)
+iXaX)
+T@pX
+heX0
+RaX)
 ^h2B
 L-c(&
 GI-p(0
 -!82
+HXXP
 `2OP
-h,XP
-5aX)
+6aX)
 4HG@
+3aX)
 2aX)
-T KXP
-1aX)
-HKXP
-H>Xp
-HJX0
+hJXP
+T(IXp
+IIXp
  "OP
-)+aX)
-ThFXP
+),aX)
 -   
 T(  
 TH  
@@ -25139,14 +25131,13 @@ T`NA
 `{NP
 	)@)?
 (EF\
-ie`X)
+if`X)
 2@)	
 2@)	
 S)}@
 R(}@
 @iv|@
 @i{|@
-  W0
 T`&@
 Lyixk	
 +$A)j
@@ -25165,7 +25156,7 @@ bib8
 `i`8!|
 * A)I
 E@9l
-J9iXk}@
+J:iXk}@
 /@@i
 *n~I
 im81
@@ -25192,7 +25183,7 @@ E*k}@
 *NnI
 * A)I
 E@9l
-#iXk}@
+$iXk}@
 /@@i
 im81
 @y :J
@@ -25404,7 +25395,7 @@ Iii8
 *<A)
 -8@ik}@
 in8J	
-@9Lzg
+@9L{g
 @9Yyl
 @9Yyl
 7kl8
@@ -25412,7 +25403,7 @@ in8J
 jj8[|
 &kf8
 jj8P|
-x&Xg
+x&Yg
 .kn8
 jj8L|
 +$A)
@@ -25527,7 +25518,7 @@ ik8)
 @9tyv
 @9jyn
 @9myi
-@9IXf
+@9IYf
 @98yg
 @98yg
 :kb8>
@@ -25587,7 +25578,7 @@ E@9k
 ip8Q}
 i`8C}
 E@9k
-S$peX
+S$qeX
 rS|@
 ht8u}
 RG|@
@@ -25595,7 +25586,7 @@ hgxt:J
 tht8u&E
 uhu8s
 shs8T
-c`eX
+caeX
 rG|@
 hgxt:J
 tht8u&E
@@ -25668,7 +25659,7 @@ iu8V
 hv8t
 ht8U
 nE@9
-@9Esd
+@9Etd
 iu8V
 hv8t
 ht8U}
@@ -25706,7 +25697,7 @@ iv8W
 7jw8
 hu8V}
 qE@9
-@9&"d
+@9&#d
 jx8y
 9hy8
 hw8Z}
@@ -25789,7 +25780,7 @@ hz8w
 wjw8
 whw8
 ht8u
-@9Ftb
+@9Fub
 whw8
 ht8u}
 hy8V
@@ -25807,7 +25798,7 @@ hu8v
 7jw8
 xhx85
 hu8v}
-@9'Db
+@9'Eb
 jx89
 9hy8
 hz8w
@@ -25883,7 +25874,7 @@ hs8v}
 @9`Xq
 @9cXb
 ghg8s
-@9coa
+@9cpa
 @9`Xq
 @9cXb
 ghg8s}
@@ -25895,7 +25886,7 @@ ht8w}
 @9J!
 @9)%
 @9)!
-@9#Ta
+@9#Ua
 @9`Xq
 @9cXb
 ghg8s
@@ -25975,7 +25966,7 @@ myjx
 @9k!
 .ijx
 *(i*x
-@91y`
+@91z`
 @ikx
 @90zn
 @9B$
@@ -25997,7 +25988,7 @@ S)~
 *Hi+
 	E@9?
 mij8
-@9mX`
+@9mY`
 @91&
 1hq8
 @9s&
@@ -26038,8 +26029,6 @@ iq8!
 #j/8
 #j/x
 _Xhv
-`[M0
-@QMP
 @i6}
 L,@iK}
 K1@-M9A-
@@ -26058,7 +26047,6 @@ Ti~@
 Tj~@
 +3@)i
 E@9)}
-aVLp
 HuDp
 !qD0
 5P@96T@98X@94\@9
@@ -26083,7 +26071,7 @@ K0?@)Q
 <NZ+
  h1xQ?
  h1x
-5TX)
+6TX)
 '@)(/@)
 O+@)
 *@)L
@@ -26091,13 +26079,13 @@ S,~#
 Tk@i3
 c@i	
 Lyixk	
-`JKp
-Th@Kp
+T(AK
 Zk|x
 |kz8
 @9!$
 ia8n
 ia8q
+@94 ]
 @9!$
 ia8n
  hn8
@@ -26137,50 +26125,52 @@ i.8P
 @90$
 @9p&
 @9p&
-h_SX
-)*\Xh&
-.SX)
-hy]X
-Hx]X
-(w]X
-hp]X
-Ho]X
-(n]X
-hg]X
-Hf]X
-(e]X
-h^]X
-H]]X
-(\]X
-A Kp
-!#K0
-hU]X
-HT]X
-(S]X
-a(K0
-A,KP
-hL]X
-HK]X
-(J]X
-a6K0
-a8Kp
-hC]X
-a9KP
-HB]X
-(A]X
-!BK0
-ABKp
+h`SX
+)+\Xh&
+a	KP
+/SX)
+hz]X
+Hy]X
+(x]X
+hq]X
+Hp]X
+(o]X
+A	KP
+hh]X
+Hg]X
+(f]X
+h_]X
+H^]X
+(]]X
+!"Kp
+hV]X
+!%K0
+HU]X
+A&KP
+(T]X
+hM]X
+A/K0
+HL]X
+(K]X
+!3K0
+A4KP
+a5Kp
+hD]X
+HC]X
+(B]X
+!?Kp
+!@KP
 R+|<
-h-]X
-H+]X
-ArJ0
-zpIp
+h.]X
+H,]X
+a{Ip
 &A))}@
+`jIP
 *@)?
-`WI0
-U\X`NC
-6\X`*C
-4@#I
+@OIP
+`LIP
+V\X`NC
+7\X`*C
 jyhx)	
 Iz))
 \X`NC
@@ -26189,14 +26179,13 @@ Iz))
 RKy)
 [X`*C
 ;\`A
-(P[X
-a+HP
-([X`NC
+a8HP
+(Q[X
+)[X`NC
 Ti6T
 [Xw 
-)	[X
 R*y(
-ZX`*C
+[X`*C
 ZX`*C
 ZX`NC
 T?y(
@@ -26205,27 +26194,29 @@ T	)@
 T	-@
 ZX OC
 ZX`NC
-/PX)
-AxG0
-({ZX`2C
+0PX)
+@xGp
+(|ZX`2C
 T`RC
 T`:T
 T`zC
 7`BT
 T`BT
 T`FT
-HgZX`2C
-hfZX`2C
-\ZX`2C
-h[ZX`2C
-QZX`
-HMZX
+HhZX`2C
+hgZX`2C
+]ZX`2C
+h\ZX`2C
+RZX`
+AiGp
+HNZX
+A[Hp
 H9H	
 )aH9
 )aH9
 )aH9
 )aH9
-6`BHp
+6 CH
 )aH9
 )aH9
 )aH9
@@ -26249,32 +26240,31 @@ H9H
 )aH9)
 )aH9
 ii8n!
-hWXX
-(qOX
-|`OX
-;`OX
-VOX)
+hXXX
+(rOX
+|aOXV
+;aOX
+WOX)
 !$=0
-hDOX
+hEOX
 Lih8
 mim8M
 mil8L
 `6=P
-i?OX)
-I>OX)
-h<OX
+i@OX)
+I?OX)
+h=OX
 S,%@8
-	6OX)
-vnYX
+	7OX)
+voYX
 (a	9
-(XYX
-@rGP
+(YYX
 Jh8?)
 Jh8?5
 j(8 'A
-:YX(
+;YX(
+!IGp
 `t<P
-H&Gp
  s<P
  k<P
 @X<P
@@ -26286,14 +26276,18 @@ Lii8k
 Ts:@
 Ts:@
 4tj@
-hmF0
+hwFP
+HtFP
+(qFP
 4hn@
 T`j@
-BXX(
-S=XX
+CXX(
+HcFP
+S>XX
 R+hh8k
 @!KJ
 +hh8J
+ JF0
 TsE@
 TsE@
 Ts%@xs>
@@ -26303,11 +26297,11 @@ Tu	@9t
 9sB@Q5JS*5
 9sB@Q5JS*5
 jh8)	
-((VX
-'VX(
-'VXH
-h'VXh
-H!VX
+()VX
+(VX(
+(VXH
+h(VXh
+H"VX
 *!@9+
 *!@9)
 ! k 
@@ -26318,30 +26312,32 @@ _x_! k
 @y)(
 )	@9
 *	@9J
-)yLX)
+)zLX)
 ju8I
 jk8L	
-iPLX)
+iQLX)
 Lil8
 Lil8
-=LX)
+>LX)
 HN;0
 hH;0
 Aq<0
-4:#N
+4:$N
 HW;0
 HP;0
 HI;0
- ~Dp
-4`zD
-@zDp
+`zDp
+(zDp
+4@xD
+4@rD
 h&@)*
-4 WDP
-aKX)
-@RDp
-4 RDp
-aQDP
- $TXJ|
+HcD0
+(\D0
+bKX)
+4AQD0
+4@JD0
+ %TXJ|
+4@BD
 @69P
 4`"@
 !-:P
@@ -26355,147 +26351,148 @@ A)J-
 *(|`
 +B)J}@
 7\	@
-9UX(
- UXR
+:UX(
+!UXR
 )@)I}	
-aNPX
-ApPX
-AlPXpt
-kPXjt
-AjPX
-HYJX
-!ePX7t
+aOPX
+AqPX
+AmPXpt
+lPXjt
+AkPX
+HZJX
+!fPX7t
 PX=t
 PX9t
-cPX$t
-{bPX(
-a_PX
-!^PX
-a]PX
-GJX)
-ARPX
-	6JX)
-H3JX
-i,JX)
-ADPX
+dPX$t
+{cPX(
+a`PX
+!_PX
+a^PX
+7@cC
+HJX)
+ASPX
+	7JX)
+H4JX
+i-JX)
+AEPX
 PXkr
-!0PX
--PXVr
-)PX3r
+!1PX
+.PXVr
+*PX3r
+c)PX
 c(PX
 c'PX
-c&PX
-h	JX
+! PX
 PXrq
 PXdq
 07l6
 	!A9I
 OXVp
-@9PX
+@:PX
 OXho
-OXDmL
+OXDnL
 PXQn
-OXbiL
-OXBiL
-zyIX 
-hxIX
-vIX@
+OXbjL
+OXBjL
+zzIX 
+hyIX
+wIX@
 h#R9h
 OX'm
-H`IX
-tCOX
-OX".L
-!iOX
-A|OX8l
-{OX2l
-AwOX
-!9OX
-!uOX
-A-OX
-aiOX
-!eOXuk
-dOXok
-h)@)k%A)T
-AbOX
-^OX;k
-AYBp
-!YBp
-AZOX
-h2IX
-%IX)
-A@OX
-wGOX
-OXQj
-AEOX
-COXWj
-aCOX
-AOXAj
-!?OX
-a7OX
+HaIX
+tDOX
+OX"/L
+!jOX
+A}OX8l
+|OX2l
+AxOX
+!:OX
+!vOX
 A.OX
-!*OX
-a+OX
-a%OX
+ajOX
+!fOXuk
+eOXok
+h)@)k%A)T
+AcOX
+_OX;k
+A[OX
+h3IX
+&IX)
+AAOX
+wHOX
+OXQj
+AFOX
+DOXWj
+aDOX
+BOXAj
+!@OX
+a8OX
+A/OX
+!+OX
+a,OX
+a&OX
 +ih8J	
-(qOX
+(rOX
 `<5\
-XOXYh
-`HOXZ
+YOXYh
+`IOXZ
 NXtg
 NXEg
-"}HX
+"~HX
 NX^d
 NX.d
-LHX)
-(MHX
-(JHX
-AHX)
-XNXb
+MHX)
+(NHX
+(KHX
+BHX)
+4`cAP
+YNXb
 NXzb
-aWNX
+aXNX
 NXrb
-QNXRb
-!LNX7b
-AHNX
+RNXRb
+!MNX7b
+AINX
 *id4
 +ih8J	
-!ENX
-!DNX@
-A@NX
-?NX 
-a?NX
-W<NX
+!FNX
+!ENX@
+AANX
+@NX 
+a@NX
+W=NX
 !^@( 
 !^A(!
-u1NX
-0NX&a
-a/NX 
+u2NX
+1NX&a
+a0NX 
 !^a"@
 !^A(!
 Ta&@
 !^ 9 
 .C)H
-a NX
+a!NX
+! NX
 NXz`
 NXu`
 MX4`
 MX.`
- ENX
+ FNX
 +ih8J	
 MXH_
 7H!`
 N(!`
-4!NX
+4"NX
 NXU^
 MX[]
 MX)]
-WoGX
-HmGX
+WpGX
+HnGX
 3\h	
 MXk\
-`]GXu\
-`[GX
-(HGX
+`^GXu\
+`\GX
+(IGX
 )	 @
 R*Y6
 RlY6
@@ -26505,19 +26502,19 @@ RlY6
 RiY,
 R*Y6
 R	[6
-@r@0
-9oMX
+9pMX
 R(yh
-4@P=0
-#GX)
-AEMXvZ
-A]MX
-^MX_Z
-`^@P
-6LMX
+`l@p
+ m@p
+$GX)
+AFMXvZ
+A^MX
+_MX_Z
+@b@0
+6MMX
 Th:C
-a(MX
-"MXyX
+a)MX
+#MXyX
 ^(  
 !^  "
 JA@9
@@ -26528,20 +26525,21 @@ MX`V
 h&B)
 LXxV
 Ri.C
-(mLX
-!SLX
+(nLX
+!TLX
 LXlS
 LXIS
 LX<S
-azLX
-a[LX
-axLX
-uLX"
+a{LX
+a\LX
+ayLX
+vLX"
 4`G@
--LX`
+.LX`
 Rij(8
 `j(8
-@yLX
+@zLX
+cLLX
 cKLX
 cJLX
 cILX
@@ -26557,12 +26555,11 @@ c@LX
 c?LX
 c>LX
 c=LX
-c<LX
-A7LX
-a6LX
+A8LX
+a7LX
 jh8H
-!,LXYP
-)LXCP
+!-LXYP
+*LXCP
 KX7P
 KX"P
 `j(8
@@ -26573,7 +26570,7 @@ jh8)
 *	h(
 hh8h
 KX,O
-`)LX
+`*LX
 hh8h
 **J}@
 ?@9?
@@ -26584,42 +26581,43 @@ KXeM
 5{*@
 &A9(
 KXjL
-zKX]L
+{KX]L
 KXWL
-AwKX@L
+AxKX@L
 KX:L
-a|KX/L
+a}KX/L
 Rij(8
-AsKX
-aqKX
-!qKX
+AtKX
+arKX
+!rKX
 q 	@z
-7EX)
+8EX)
 T`>@
 G-H  
 T`	b
-AuKX
+AvKX
 q 	@z
-a?KXGJ
-7KX>J
-A=KX
+a@KXGJ
+8KX>J
+A>KX
 "A9h
-agKX
-!bKX
-S^KX
-!)KX
+ahKX
+!cKX
+S_KX
+!*KX
 R	h(8
-pKX"
-UoKX
-!"KX]I
-A%KX
-!=KX
-v4KX
+qKX"
+UpKX
+!#KX]I
+T KX
+A&KX
+!>KX
+v5KX
 jh8(
-`WKX
+`XKX
 hjh8h
-`KKX
-)KX"
+`LKX
+*KX"
 JXDG
 Rij(8
 ij(8
@@ -26628,96 +26626,97 @@ JXBF
 Rij(8
 Rij(8
 JXoD
-yTDX 
-WtJX
+yUDX 
+WuJX
 JXMD
-}JX:D
-|JX)D
+~JX:D
+}JX)D
 ijh8?
 Tuj(8
-!iJX
-A^JXxC
-3JX@C
-^JX:C
-akJX
+!jJX
+A_JXxC
+4JX@C
+_JX:C
+alJX
 j(8w
 j(87
-aFJX
-![JX
-!OJX
-azJX
-zJX~B
-!CJXeB
+aGJX
+!\JX
+!PJX
+a{JX
+{JX~B
+!DJXeB
 jh8i
 j(8v
-a>JX?B
-apJX/B
-pJX,B
-AjJX
-AgJX
-ADJX
-AcJX
-!aJX
+a?JX?B
+aqJX/B
+qJX,B
+AkJX
+AhJX
+AEJX
+AdJX
+!bJX
 5)Ab
 a[0\
 !^ ) 
 /@m@
-ajJXeA
-a5JXKA
+akJXeA
+a6JXKA
 T`  
-aGJX
-a@JX
+aHJX
+aAJX
 IX`@
-*JXB
-!*JX
-,JXi
++JXB
+!+JX
+-JXi
 JX(>
-!pIX
+!qIX
 IX2=
-AxIX
+AyIX
 &A9H
-AIXD<
-:wIX
+BIXD<
+:xIX
 Td)h
-AmIX
-!mIX
+AnIX
+!nIX
 IXn;
-!&IXg;
-(:CX
-4kIX
+!'IXg;
+(;CX
+4lIX
 T!(c
 p~@!i
-I&CX)
-!vIX
-7YIX
-aqIXc:
-qIX"
+I'CX)
+!wIX
+7ZIX
+arIXc:
+rIX"
 &A9(
-aUIX
-}IX$:
+aVIX
+~IX$:
 IX{9
-w%IX
-!%IX
-AQIXb
-]IXR9
-APIX
+w&IX
+!&IX
+ARIXb
+^IXR9
+AQIX
 #A)*
 T!8b
-WIXj
-8IXb
-ADIX
-a0IX
-A>IX
+XIXn
+9IXb
+AEIX
+a1IX
+A?IX
 h&E)
 HX>8
 h&F)
-a/IX
+a0IX
 HXz7
 IXt7
-A$IX
-a#IX
+A%IX
+a$IX
 *A9H
-A"IX
+A#IX
+ )<P
 IX!7
 "A9h
 HXe6
@@ -26726,36 +26725,35 @@ HX96
 HXU5
 HX!5
 #D)	
-}HX74
+~HX74
 HXI3
-APHX
+AQHX
 HX93
-aDHX
-!WHX
-!mHXA2
-a6HX
-oHXv
-AmHX"
-SMHX!2
-aeHX
-\bHX
-eHXa1
+aEHX
+!XHX
+!nHXA2
+a7HX
+pHXv
+AnHX"
+SNHX!2
+afHX
+\cHX
+fHXa1
 HXb1
- mHX
-#HX>1
-A\HX
-ZHXB
-!YHX
-aTHX
- U;0
+ nHX
+$HX>1
+A]HX
+[HXB
+!ZHX
+aUHX
+AR;0
 @*.\
- F;0
-bA;p
-T@@;P
-`0;P
+AA;0
 Ri.C
- ';0
-! ;P
+a@90
+7,;P
+5 ,;P
+`!;p
 	A@9?
 	E@9?
 KE@9
@@ -28371,16 +28369,16 @@ Kii8
 D@9_
 xgxk	
 hu8k	
-@9gR9
+@9gS9
 zif8
 |if8K
 kif8&
-@9GN9
+@9GO9
 zif8
 |if8K
 kif8&
 jk8+
-@9'I9
+@9'J9
 zif8
 |if8K
 kif8&
@@ -28402,20 +28400,20 @@ gka8s
 @9k!
 @9! 
 hu8k	
-@9s29
+@9s39
 zif8
 @9kzk
 |if8K
 @9kzk
 kif8&
-@9S.9
+@9S/9
 zif8
 @9kzk
 |if8K
 @9kzk
 kif8&
 jk8+
-@93)9
+@93*9
 zif8
 @9kzk
 |if8K
@@ -29220,46 +29218,46 @@ w@y?
 Bi;i
 KE@8
 	A@9?!
+un%P
 ThNA
+`f%p
 j58hNA
-@[%0
-(R%p
- G%P
-`?%P
-B=%0
+a]%P
+aS%P
+@D%0
+ =%p
 	)E)UA	*
 T	-@
-ta%p
-!5%p
-Ag%p
-AK%P
-!@%0
-!=%P
-`q%p
- q%P
-@J%P
-`H%0
- K%P
-`O%P
-@R%0
- T%p
-`\%p
- ^%0
- a%P
-`b%p
+Ttb%0
+4b%0
+aa%0
+Ab%0
+Ac%0
+!d%p
+aj%p
+ar%p
+@s%p
+`r%P
+ r%p
+@M%P
+ Q%p
+ X%0
+@Y%p
+`Z%P
+``%p
+`d%p
 T	-@
 Rh:C
 4(!@
-AT%p
-(<+X
+(=+X
 Th:C
-)6+X)
-	5+X)
-3+X)
-I-+X)
+)7+X)
+	6+X)
+4+X)
+I.+X)
 Rh:C
 4h:C
-H%+X
+H&+X
 RKY4
 RKY4
 RKY4
@@ -29295,9 +29293,6 @@ kE@9I%
 Q:|@
 Q:|@
 4(|@
-@v$p
-`}$p
- o$0
 +yhxJ	
 <qa"
 <@qa
@@ -29306,9 +29301,8 @@ Q:|@
 T@AG
 T@AK
 Lii8k	
-SjM,
-T)J,
-(#$p
+SjN,
+T)K,
 B@9*
 N9+a
 0+!N6T#O
@@ -29376,8 +29370,7 @@ i180
 @91&
 @91"
 C@9)C@9
-ig)X)
-(\ P
+ih)X)
 4@))
 .<@)
 O@A)
@@ -29390,13 +29383,14 @@ K1~
 K1~@
 -@  
 -(  
-h\#P
 -@  
+hU#p
 - "$
 4 ""
+HL#P
+(L#0
 -@8 
-(A#P
-h@#0
+HA#p
 N "$
 N "'
 	A@9?!
@@ -29404,7 +29398,7 @@ E@9h
 #B)?
 #B))}@
 #B))}@
-Q	0+
+Q	1+
 #B))
 F@9_
 F@9?
@@ -29425,7 +29419,7 @@ hu8W
 hs8S
 @9c$
 4kt8
-@9)x1
+@9)y1
 @9%Yd
 @96Yu
 K3F@
@@ -29486,7 +29480,7 @@ Wiw8
 @9'D@
 @9'D@
 @9%D@
-hP@9l|0
+hP@9l}0
 i`@9jT@9
 kd@9mX@9
 mh@9
@@ -29504,12 +29498,10 @@ kd@9mX@9
 mh@9
 @94D@
 Viv8w
-ThX!
-`U!p
 4)E@9?
-T@T!P
-T`R!p
+T S!
 h&B)
+T@Q!P
 T?A@qJ
 T_A@q
 /K)m}
@@ -29521,14 +29513,14 @@ Nc(a
 Nc(a
 /c(!
 cE)x
+`:!0
 &A))}@
 mE@9k
-`3!p
+`4!p
 didx
 did8
 _AIk
 T`'!P
-`&!p
 tV	)
 T	@@9
 7iZ@
@@ -29552,7 +29544,6 @@ TJE@9_
 	E@9?
 	E@9?
 TbC@Q
-Hl p
 	A@9?
 E@9{
 Rkij8kk)8
@@ -29565,11 +29556,11 @@ oynx/
 Tjy.x
 :E@9i
 4`"A
-!%X)
+"%X)
 4h"A9h
 hZB)
 N@9,
-`M/X	
+`N/X	
 	)C)!
 	)C)!
 C)i&@
@@ -29614,13 +29605,13 @@ h"A9
 5i6@
 T`>@
 4h&@
-h1.X
+h2.X
 4`r@
-..X@
- ,.X@
-H*.X
-i&.XI
-H$.X
+/.X@
+ -.X@
+H+.X
+i'.XI
+H%.X
 AUkA
 Tun@
 ATkA
@@ -29650,8 +29641,8 @@ Rh*@
 4hr@
 4`r@
 7`r@
-Hy-X
-j-Xh
+Hz-X
+k-Xh
 4h*A9
 (*_|Ik@
 T($@
@@ -29663,7 +29654,7 @@ T($@
 4h&A9
 ThJ@
 ThJ@
-H9-X
+H:-X
  A9h
 U-@ !
 <h&@
@@ -29676,14 +29667,12 @@ Lii8k
 4h"A9
 4zk|
 4h.A9H
-07 z
-Hn,X
-`f,X
+Ho,X
+`g,X
 .A9H
- 7 m
-`^,X
-@W,X
-(O,X
+`_,X
+@X,X
+(P,X
 6!E@
 #Bic*Cih|
 +ih8J	
@@ -30105,6 +30094,9 @@ S?A@q
 3_A@q
 @y)}
 R?A@q
+0. X
+p- X
+P- X
 0- X
 p, X
 P, X
@@ -32038,7 +32030,7 @@ Can't create render targets, GL_EXT_framebuffer_object not available
 Render targets not supported by OpenGL
 Texture format %s not supported by OpenGL
 opengl.texture
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/SDL3/src/render/opengl/SDL_render_gl.c
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/external/SDL3/src/render/opengl/SDL_render_gl.c
 GL_CreateTexture
 glGenTextures()
 SDL.texture.opengl.texture
@@ -32300,7 +32292,7 @@ void main()
     gl_FragColor = vec4(rgb, 1.0) * v_color;
 opengles2
 GL_EXT_blend_minmax
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/SDL3/src/render/opengles2/SDL_render_gles2.c
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/external/SDL3/src/render/opengles2/SDL_render_gles2.c
 GLES2_CreateRenderer
 glActiveTexture
 Couldn't load GLES2 function %s: %s
@@ -32479,7 +32471,7 @@ Software renderer doesn't have an output surface
 Cannot create surface
 viewport != ((void*)0)
 SetDrawState
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/external/SDL3/src/render/software/SDL_render_sw.c
+/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/external/SDL3/src/render/software/SDL_render_sw.c
 Tried to read outside of surface bounds
 triangle area overflow
 integer overflow (%s = %lld)
@@ -37501,129 +37493,136 @@ radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
 9k]E
-"@?D
-s"Ma
-KB\(Uf]
-3!Ju
-rsFb5
-ZJI;
-~Z.f
-2f>8V
-xI'2
-LXBMK
-8w}m
-)*u/-F
-90eH
-FQ1C
--ma"
-6?%5
-\Fmtv
-*rED
-{n2)
-S.$~<
-?6oHle
-e90|
-kG*1
-hN,8
-;wI5
-Red*
-Le l
-5T,(
- DF@{
-h8c\
-vl#,*^
-bQF}0
-+WH	
-<\SK
-n%-6
-Mo"*]
-uX@$
-CP1J
-/fwx
-'Jv'
-S8(B:K
-	j@R$
-"\|T/
-Ohc;
-tt	S*
-Gn/F
-8:iV!
-&S5N
-)Uf{
-5 :e
-5?8/+	
-|Vg]
-,hqW
-}H;V
-MVa>
-*iF0
-y]ki
-_	 f
-_<bv
-Q0j-
-ojLk
-HfJ[O
-ak$uf
-!'R/
-_W9.
-b j{
-/o\_
-N0o:U
-G*K>
-D0Cs
-&o1l
-gl&S&
-Okof
-7UJQ
-)ysm
-/7\+
-bv0Yu
-<E_3
-Kx0xo
-ue#L
-@[;!n
-$cDfU
-QYbL|HsG
-X]?h
->pka
-J}#l]G03`
-4)Io
-EcEQ
-ST ^I
-WpYQA
-fTGR
-gMOJ
-	ZA_x
-X}\+c
-gAwJ
-ON<xe
-_/kh
-wL^)
-/G}2
-EFBt
-IjeZ
-2fFu_
-!$(u
-E.fZV
-uc*MHs
-RU#+
-5jJ'LZ
-%=WA
-+^\G
-z=Th/
-Z5KhYD#
-/$_z
-+ y(
-uWL$
-h76u
-XR=Vw
-QC=;
-gv*6
-&d_a=8u
+Ot-FX
+6xOi
+Xmj:{h
+f_Y'
+,-?D
+0RP4
+rpggS
+,S|&
+?R\IL
+U2zzm
+w[&I
+tPNi
+!^s3
+P1io
+9[(3
+d/>h
+\Yr:L+
+$, |M%
+bi^^%
+rJ:!
+L8y}
+1\Nm
+WDVqv
+7(0p
+I)7F
+>xKx
+q'l{BQl[
+<3d1
+"5>bm
+H_To
+NnB!
+i%#l
++Vqsf
+zZ2h7>D
+Uj$ih)
+oyXhM18
+?NvF_
+='Q=
+HCKA
+*h{sN
+k$Z%
+^Qt$
+(W}(
+&?-ML_Np
+Y*-o
+E0UXsG#/F
+fEDC
+1tq"V
+ 0g,
+&E;	
+N46m
+%n1<
+EO	9r	
+n6xU
+DHD#M
+z||1
+NJ-9	
+L|kH/c
+mznt7
+5?ZD
+V%"7
+rwaZ
+gH}1
+|%!XC
+8/4-X
+mNk6U
+:1$})
+!)?W]
+T$)qu
+uwx&$
+bRVU
+|(t;E
+|&Zqw
+Fb_%
+@-8=5Zi M
+O-mc
+Ez7S+
+V6s<5Io
+c(iE
+s+jt
+tp:]
+qh78
+tvIT;Q3
+W$"T
+Yl#ADTm
+6AxcbT
+Dt>z,
+yWzG
+<O[7
+}dg$
+LeiU
+HW]ia
+PrY/H
+rx#'R
+tR_#1
+$KSwB
+p fZQ
+[;]M]
+ [0d#
+J;{E
+.S!P
+5IG<
+YL8F8^
+2rOmg
+I\t^&
+\y6X
+k&jl
+^mrU
+;Pv6
+Kz$G
+C@5UQg7
+IwpRV
+	KM:GU
+A,2	W
+=C#t
+-dIx
+[|ww:
+5kEO
+^0c0
+. e:
+:\arixz
+RNiO
+s/%l
+	v99
+7S{a
 @9f\
 P=?g
-1ZF]
-q@@-z?'y
+M:N\RY
+6GE:a
+	{d,
 +sh	o
 #x`p
 s9"E
@@ -37684,8 +37683,12 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240618223639Z0/
+240620001351Z0/
+'	[	
+6.O"z"
 1/0-
+'	[	
+6.O"z"
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -37693,42 +37696,39 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		LYA+taIoulw61f7lPnEVxpJGHy8=
+		Xs3FcVUPJwlbCRL4H3wcNi5PIno=
 		</data>
 	</array>
 </dict>
 </plist>
-g[v4c
-`l^8Q
-n/ZP
-#7]h
-fhjP=
-ZT/{p&
-w3R0&
-X~H|
-9J-W
-20240618223839Z0
+!{lL
+DW4_2
+2$7><
+PBP|
+p!:/`
+20240620001351Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240530204516Z
-240711204515Z0B1
-Timestamp Signer NWK11
+240530203058Z
+240711203057Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-[92qNd%
-eO@B
-4VokT
+ {]g
+t0@j;
++G(E
+-T*K[@H.
+Mljyx
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-u34<
-ZRAW`O[
-#;a=i
-SVA7L
-qTD\
-h;=u
+@PM#
+kEHv
+m	/]
+4C@-(
+0bZ?\
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -37767,11 +37767,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240618223839Z0#
-Cvh{
-HDKHP#e
- tS8?
-:O^wL
-DZr!
-Sz|w>
-cU58
+240620001351Z0#
+	-F#0+
+|M80k
+!`_wj
+<XrK
