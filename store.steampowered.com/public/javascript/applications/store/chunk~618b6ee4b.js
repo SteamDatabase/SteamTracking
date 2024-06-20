@@ -21567,36 +21567,40 @@
       }
       function ro(e) {
         const { content: t, videoPlay: a, onVideoEnd: r } = e,
-          i = { sURL: t.media_source, sFormat: `video/${t.video_type}` },
-          { bVisible: o, ref: s } = (0, na.kc)(),
-          l = (0, n.useRef)(),
-          c = (0, n.useRef)();
+          { bVisible: i, ref: o } = (0, na.kc)(),
+          s = (0, n.useRef)(),
+          l = (0, n.useRef)();
+        (0, n.useEffect)(() => {
+          if (!s.current) return;
+          i && a ? s.current.play() : s.current.pause();
+          const e = () => {
+            r(), l.current && l.current(), (l.current = null);
+          };
+          l.current ||
+            (s.current.addEventListener("ended", e),
+            (l.current = () => {
+              s.current.removeEventListener("ended", r);
+            }));
+        }, [i, a, r]),
+          (0, n.useEffect)(() => () => l.current && l.current(), []);
+        const c = [];
         return (
-          (0, n.useEffect)(() => {
-            if (!l.current) return;
-            o && a ? l.current.play() : l.current.pause();
-            const e = () => {
-              r(), c.current && c.current(), (c.current = null);
-            };
-            c.current ||
-              (l.current.addEventListener("ended", e),
-              (c.current = () => {
-                l.current.removeEventListener("ended", r);
-              }));
-          }, [o, a, r]),
-          (0, n.useEffect)(() => () => c.current && c.current(), []),
+          t.video_webm_src &&
+            c.push({ sURL: t.video_webm_src, sFormat: "video/webm" }),
+          t.video_mp4_src &&
+            c.push({ sURL: t.video_mp4_src, sFormat: "video/mp4" }),
           n.createElement(
             "div",
             {
               className: (0, S.Z)(to().VideoPlayerContainer, a && to().Focused),
-              ref: s,
+              ref: o,
             },
             n.createElement(Na.Y, {
-              video: { sPoster: t.video_poster_image, rgVideoSources: [i] },
+              video: { sPoster: t.video_poster_image, rgVideoSources: c },
               bAutoPlay: !1,
               bControls: !1,
               bLoop: !1,
-              ref: l,
+              ref: s,
               bMuted: !0,
             }),
           )

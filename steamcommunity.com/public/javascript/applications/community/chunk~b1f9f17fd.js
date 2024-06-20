@@ -27821,36 +27821,40 @@
       }
       function Mo(e) {
         const { content: t, videoPlay: a, onVideoEnd: i } = e,
-          o = { sURL: t.media_source, sFormat: `video/${t.video_type}` },
-          { bVisible: r, ref: l } = (0, Rt.kc)(),
-          s = (0, n.useRef)(),
-          c = (0, n.useRef)();
+          { bVisible: o, ref: r } = (0, Rt.kc)(),
+          l = (0, n.useRef)(),
+          s = (0, n.useRef)();
+        (0, n.useEffect)(() => {
+          if (!l.current) return;
+          o && a ? l.current.play() : l.current.pause();
+          const e = () => {
+            i(), s.current && s.current(), (s.current = null);
+          };
+          s.current ||
+            (l.current.addEventListener("ended", e),
+            (s.current = () => {
+              l.current.removeEventListener("ended", i);
+            }));
+        }, [o, a, i]),
+          (0, n.useEffect)(() => () => s.current && s.current(), []);
+        const c = [];
         return (
-          (0, n.useEffect)(() => {
-            if (!s.current) return;
-            r && a ? s.current.play() : s.current.pause();
-            const e = () => {
-              i(), c.current && c.current(), (c.current = null);
-            };
-            c.current ||
-              (s.current.addEventListener("ended", e),
-              (c.current = () => {
-                s.current.removeEventListener("ended", i);
-              }));
-          }, [r, a, i]),
-          (0, n.useEffect)(() => () => c.current && c.current(), []),
+          t.video_webm_src &&
+            c.push({ sURL: t.video_webm_src, sFormat: "video/webm" }),
+          t.video_mp4_src &&
+            c.push({ sURL: t.video_mp4_src, sFormat: "video/mp4" }),
           n.createElement(
             "div",
             {
               className: (0, S.Z)(Bo().VideoPlayerContainer, a && Bo().Focused),
-              ref: l,
+              ref: r,
             },
             n.createElement(ha.Y, {
-              video: { sPoster: t.video_poster_image, rgVideoSources: [o] },
+              video: { sPoster: t.video_poster_image, rgVideoSources: c },
               bAutoPlay: !1,
               bControls: !1,
               bLoop: !1,
-              ref: s,
+              ref: l,
               bMuted: !0,
             }),
           )
@@ -51993,13 +51997,7 @@
             t.media_layout ||
               (t.media_layout = {
                 layout_type: Ne.YH.SingleMedia,
-                media_content: [
-                  {
-                    media_source: "",
-                    media_type: null,
-                    localized_media_desc: [],
-                  },
-                ],
+                media_content: [{ media_type: null, localized_media_desc: [] }],
               });
           }, [t]),
           u.createElement(
@@ -52061,25 +52059,21 @@
                 (e === Ne.YH.DoubleMedia || e === Ne.YH.QuadMedia) &&
                   t.media_layout.media_content.length < 2 &&
                   t.media_layout.media_content.push({
-                    media_source: "",
                     media_type: null,
                     localized_media_desc: [],
                   }),
                 e === Ne.YH.QuadMedia && t.media_layout.media_content.length < 3
                   ? (t.media_layout.media_content.push({
-                      media_source: "",
                       media_type: null,
                       localized_media_desc: [],
                     }),
                     t.media_layout.media_content.push({
-                      media_source: "",
                       media_type: null,
                       localized_media_desc: [],
                     }))
                   : e === Ne.YH.QuadMedia &&
                     t.media_layout.media_content.length < 4 &&
                     t.media_layout.media_content.push({
-                      media_source: "",
                       media_type: null,
                       localized_media_desc: [],
                     }),
@@ -52173,19 +52167,19 @@
           r = (0, d.SZ)(() => R.U.Get().GetCurEditLanguage()),
           l = (0, u.useCallback)(
             (e, t) => {
-              (o[t].media_source = e), n(), a();
+              (o[t].media_type = e), n(), a();
             },
             [a, n, o],
           ),
           s = (0, u.useCallback)(
             (e, t) => {
-              (o[t].media_type = e), n(), a();
+              (o[t].video_webm_src = e), n(), a();
             },
             [a, n, o],
           ),
           c = (0, u.useCallback)(
             (e, t) => {
-              (o[t].video_type = e), n(), a();
+              (o[t].video_mp4_src = e), n(), a();
             },
             [a, n, o],
           ),
@@ -52197,12 +52191,18 @@
           ),
           g = (0, u.useCallback)(
             (e, t) => {
+              (o[t].image_source = e), n(), a();
+            },
+            [a, n, o],
+          ),
+          h = (0, u.useCallback)(
+            (e, t) => {
               (o[t].localized_media_desc[r] = e), n(), a();
             },
             [a, r, n, o],
           ),
-          h = (0, u.useCallback)((e) => o[e].localized_media_desc[r], [r, o]),
-          v = [
+          v = (0, u.useCallback)((e) => o[e].localized_media_desc[r], [r, o]),
+          S = [
             {
               data: "image",
               label: (0, p.Xx)("#Sale_Section_Media_Layout_ContentTypeImage"),
@@ -52210,20 +52210,6 @@
             {
               data: "video",
               label: (0, p.Xx)("#Sale_Section_Media_Layout_ContentTypeVideo"),
-            },
-          ],
-          S = [
-            {
-              data: "webm",
-              label: (0, p.Xx)(
-                "#Sale_Section_Media_Layout_ContentVideoOptionWebm",
-              ),
-            },
-            {
-              data: "mp4",
-              label: (0, p.Xx)(
-                "#Sale_Section_Media_Layout_ContentVideoOptionMP4",
-              ),
             },
           ];
         return o
@@ -52250,26 +52236,34 @@
                           t + 1,
                         ),
                       ),
-                      u.createElement(m.II, {
-                        label: (0, p.Xx)(
-                          "#Sale_Section_Media_Layout_ContentSource",
-                        ),
-                        onChange: (e) => l(e.target.value, t),
-                        value: e.media_source,
-                        placeholder: "",
-                      }),
                       u.createElement(m.ry, {
                         label: (0, p.Xx)(
                           "#Sale_Section_Media_Layout_ContentType",
                         ),
-                        rgOptions: v,
+                        rgOptions: S,
                         selectedOption: e.media_type,
-                        onChange: (e) => s(e.data, t),
+                        onChange: (e) => l(e.data, t),
                       }),
                       "video" === e.media_type &&
                         u.createElement(
                           u.Fragment,
                           null,
+                          u.createElement(m.II, {
+                            label: (0, p.Xx)(
+                              "#Sale_Section_Media_Layout_ContentVideoOptionWebm",
+                            ),
+                            onChange: (e) => s(e.target.value, t),
+                            value: e.video_webm_src,
+                            placeholder: "",
+                          }),
+                          u.createElement(m.II, {
+                            label: (0, p.Xx)(
+                              "#Sale_Section_Media_Layout_ContentVideoOptionMP4",
+                            ),
+                            onChange: (e) => c(e.target.value, t),
+                            value: e.video_mp4_src,
+                            placeholder: "",
+                          }),
                           u.createElement(m.II, {
                             label: (0, p.Xx)(
                               "#Sale_Section_Media_Layout_ContentVideoPoster",
@@ -52278,22 +52272,23 @@
                             value: e.video_poster_image,
                             placeholder: "",
                           }),
-                          u.createElement(m.ry, {
-                            label: (0, p.Xx)(
-                              "#Sale_Section_Media_Layout_ContentVideoOptions",
-                            ),
-                            rgOptions: S,
-                            selectedOption: e.video_type,
-                            onChange: (e) => c(e.data, t),
-                          }),
                         ),
+                      "image" === e.media_type &&
+                        u.createElement(m.II, {
+                          label: (0, p.Xx)(
+                            "#Sale_Section_Media_Layout_ContentImageSource",
+                          ),
+                          onChange: (e) => g(e.target.value, t),
+                          value: e.image_source,
+                          placeholder: "",
+                        }),
                       u.createElement(Ce.R, {
                         strPlaceholder: (0, p.Xx)(
                           "#Sale_Section_Media_Layout_ContentDescription",
                         ),
-                        fnGetCurText: () => h(t),
-                        fnOnTextChange: (e) => g(e.currentTarget.value, t),
-                        fnSetText: (e) => g(e, t),
+                        fnGetCurText: () => v(t),
+                        fnOnTextChange: (e) => h(e.currentTarget.value, t),
+                        fnSetText: (e) => h(e, t),
                         bSupportHTMLImport: !0,
                       }),
                     ),
