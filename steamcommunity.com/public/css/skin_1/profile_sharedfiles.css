@@ -559,13 +559,18 @@ a.ScreenshotManagementButtonInactive, a.ScreenshotManagementButtonInactive:hover
 	margin-left: 25px;
 }
 
-#confirmBatchModal, #noSelectedShotsModal, #changeVisibilityModal, #privacyFailedModal, #confirmUnlinkAccountModal {
+#confirmBatchModal, #noSelectedShotsModal, #changeVisibilityModal, #privacyFailedModal, #confirmUnlinkAccountModal, #showVideoPrivacyModal {
 	position:absolute;
 	width:456px;
 	padding:10px;
 	z-index:1000;
 	background-color:#3a3a3a;
 	text-align:left;
+}
+
+.video_footer_ctn {
+	display: flex;
+	justify-content: space-between;
 }
 
 

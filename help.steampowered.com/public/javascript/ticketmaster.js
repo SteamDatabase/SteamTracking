@@ -2334,6 +2334,7 @@ var PreapprovalQueue = {
 			.done( function( data )
 			{
 				ShowAlertDialog( 'Pre-approval', 'Finished submitting all pre-approvals.  Any submitted tickets have been resolved.' );
+				PreapprovalQueue.ClearCachedApprovals();
 			}).always( function()
 			{
 				$WaitDialog.Dismiss();
