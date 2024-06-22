@@ -1,4 +1,4 @@
-var CLSTAMP = "8986434";
+var CLSTAMP = "8992627";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -1619,9 +1619,9 @@ var CLSTAMP = "8986434";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jun 19 2024 : 17:04:38",
-                BUILD_TIME_UTC: "Jun 20 2024 : 00:04:38",
-                BUILD_RTIME_UTC: 1718841878,
+                BUILD_TIME_LOCAL: "Jun 21 2024 : 15:43:46",
+                BUILD_TIME_UTC: "Jun 21 2024 : 22:43:46",
+                BUILD_RTIME_UTC: 1719009826,
               }.MOBILE_BUILD && "addEventListener" in window)
             ) {
               window.addEventListener("beforeunload", (e) => {
@@ -7064,7 +7064,16 @@ var CLSTAMP = "8986434";
                 C.current && document.activeElement == C.current,
             }),
           );
-          const p = u(m.current, () => C.current.ownerDocument.defaultView),
+          const p = u(m.current, () => {
+              var e, t;
+              return null !==
+                (t =
+                  null === (e = C.current) || void 0 === e
+                    ? void 0
+                    : e.ownerDocument.defaultView) && void 0 !== t
+                ? t
+                : void 0;
+            }),
             g = i.useCallback(
               (e) => {
                 var t, n;
@@ -45387,9 +45396,9 @@ var CLSTAMP = "8986434";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jun 19 2024 : 17:04:38",
-                    BUILD_TIME_UTC: "Jun 20 2024 : 00:04:38",
-                    BUILD_RTIME_UTC: 1718841878,
+                    BUILD_TIME_LOCAL: "Jun 21 2024 : 15:43:46",
+                    BUILD_TIME_UTC: "Jun 21 2024 : 22:43:46",
+                    BUILD_RTIME_UTC: 1719009826,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -45960,7 +45969,7 @@ var CLSTAMP = "8986434";
       {
         27: "02d37250737fbf3fa2d3",
         33: "fcd9d2fcec49882c784e",
-        58: "c6062d7de50e0588cde1",
+        58: "abff57fe9528475f5e00",
         131: "9f4b6f1179ba243d40c6",
         146: "17821e34d2b46c438397",
         200: "8968dbea347c5c74109b",
