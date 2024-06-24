@@ -32104,7 +32104,7 @@
         h = n.n(_),
         g = n(61553),
         v = n(28017),
-        E = n(69633),
+        E = n(30452),
         S = n(23665),
         D = n(71741),
         f = n.n(D);
@@ -32858,7 +32858,7 @@
         L = n.n(x),
         B = n(59850),
         O = n.n(B),
-        M = n(69633),
+        M = n(30452),
         F = n(65255);
       function U(e) {
         var t, n, o;
@@ -33589,9 +33589,9 @@
         return `${i.De.BASE_URL_SHARED_CDN}store_item_assets/optin/${e}/${t}/${n}`;
       }
     },
-    69633: (e, t, n) => {
+    30452: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { OptInRoutes: () => Ur, default: () => Xr });
+      n.r(t), n.d(t, { OptInRoutes: () => Xr, default: () => Wr });
       var a = n(760),
         i = n(69406),
         l = n(86236),
@@ -34611,7 +34611,7 @@
               o.createElement(
                 s.rU,
                 {
-                  to: Ur.OptinAdminEdit(d.pageid),
+                  to: Xr.OptinAdminEdit(d.pageid),
                   className: (0, S.Z)(_().Button, _().Primary),
                 },
                 "Edit Opt-In Definition",
@@ -34623,7 +34623,7 @@
                     href:
                       f.De.PARTNER_BASE_URL +
                       "optin" +
-                      Ur.OptInAppReview(d.pageid),
+                      Xr.OptInAppReview(d.pageid),
                     className: (0, S.Z)(_().Button),
                     target: "_blank",
                   },
@@ -34633,7 +34633,7 @@
                 o.createElement(
                   s.rU,
                   {
-                    to: Ur.OptinAdminAnalysis(d.pageid),
+                    to: Xr.OptinAdminAnalysis(d.pageid),
                     className: (0, S.Z)(_().Button, _().Primary),
                   },
                   "Post OptIn Stats",
@@ -46377,7 +46377,7 @@
                 ? Hi
                 : Vi,
             t.change_release_description,
-            t.suggestsions,
+            t.suggestions,
           ]);
         return o.createElement(
           o.Fragment,
@@ -46872,7 +46872,7 @@
               { className: ue().BasicButtonSize },
               o.createElement(
                 s.rU,
-                { to: Ur.OptinAdminDashboard() },
+                { to: Xr.OptinAdminDashboard() },
                 "Dashboard",
               ),
             ),
@@ -48375,7 +48375,7 @@
           o.createElement(Rn.NL, {
             message: (e) =>
               !l.On.Get().BIsDirty() ||
-              e.pathname != Ur.OptinAdminDashboard() ||
+              e.pathname != Xr.OptinAdminDashboard() ||
               (0, G.Xx)("#Generel_Discard_Warning"),
           });
       class Il {
@@ -51302,7 +51302,76 @@
             });
       }
       var Fr = n(91398);
-      const Ur = {
+      function Ur(e) {
+        const { pageid: t } = e;
+        return o.createElement(
+          "div",
+          null,
+          o.createElement("h3", null, "Survey Results ", t),
+          o.createElement(Hr, { pageid: t }),
+        );
+      }
+      function Hr(e) {
+        const t = (function () {
+          const [e] = (0, o.useState)(() =>
+            (0, Li.kQ)("optin_survey_results", "application_config"),
+          );
+          return e;
+        })();
+        return o.createElement(
+          "table",
+          null,
+          o.createElement(
+            "thead",
+            null,
+            o.createElement(
+              "tr",
+              null,
+              o.createElement("th", null, "#"),
+              o.createElement("th", null, "Appid"),
+              o.createElement("th", null, "AccountID"),
+              o.createElement("th", null, "Satisfaction"),
+              o.createElement("th", null, "Notes"),
+              o.createElement("th", null, "Team Size"),
+              o.createElement("th", null, "Meet Expectations?"),
+              o.createElement("th", null, "Notes"),
+              o.createElement("th", null, "Change Release Plan"),
+              o.createElement("th", null, "Notes"),
+              o.createElement("th", null, "Suggestions"),
+            ),
+          ),
+          o.createElement(
+            "tbody",
+            null,
+            t.map((e, t) =>
+              o.createElement(Vr, {
+                result: e,
+                index: t,
+                key: "survey_" + e.accountid + "_" + e.appid,
+              }),
+            ),
+          ),
+        );
+      }
+      function Vr(e) {
+        const { result: t, index: n } = e;
+        return o.createElement(
+          "tr",
+          null,
+          o.createElement("th", null, n + 1),
+          o.createElement("th", null, t.appid),
+          o.createElement("th", null, t.accountid),
+          o.createElement("th", null, t.satisfaction),
+          o.createElement("th", null, t.satisfiction_description),
+          o.createElement("th", null, t.team_size),
+          o.createElement("th", null, t.meet_expectations ? "yes" : "no"),
+          o.createElement("th", null, t.expectation_explanation),
+          o.createElement("th", null, t.change_release_plans ? "yes" : "no"),
+          o.createElement("th", null, t.change_release_description),
+          o.createElement("th", null, t.suggestions),
+        );
+      }
+      const Xr = {
           OptinAdminDashboard: () => "/admin/",
           OptinAdminEdit: (e) => `/admin/edit/${e}`,
           OptinAdminAnalysis: (e) => `/admin/analysis/${e}`,
@@ -51314,12 +51383,13 @@
           OptInAppReview: (e) => `/appreview/${e}`,
           OptInAppReviewDashboard: () => "/appreview_dashboard",
           OptInAppSurvey: (e) => `/survey/${e}`,
+          OptInSurveyResults: (e) => `/surveyresults/${e}`,
         },
-        Hr = "sale_";
-      function Vr(e) {
-        return (null == e ? void 0 : e.startsWith(Hr)) ? e : Hr + e;
+        jr = "sale_";
+      function qr(e) {
+        return (null == e ? void 0 : e.startsWith(jr)) ? e : jr + e;
       }
-      function Xr(e) {
+      function Wr(e) {
         return (0, kl.N)()
           ? o.createElement(
               s.VK,
@@ -51341,12 +51411,12 @@
                 }),
                 o.createElement(Rn.AW, {
                   exact: !0,
-                  path: Ur.OptinAdminDashboard(),
+                  path: Xr.OptinAdminDashboard(),
                   component: Q,
                 }),
                 o.createElement(Rn.AW, {
                   exact: !0,
-                  path: Ur.OptinAdminEdit(":pageid"),
+                  path: Xr.OptinAdminEdit(":pageid"),
                   render: (e) =>
                     o.createElement(
                       wr.F,
@@ -51356,7 +51426,7 @@
                 }),
                 o.createElement(Rn.AW, {
                   exact: !0,
-                  path: Ur.OptinAdminAnalysis(":pageid"),
+                  path: Xr.OptinAdminAnalysis(":pageid"),
                   render: (e) =>
                     o.createElement(
                       wr.F,
@@ -51366,7 +51436,7 @@
                 }),
                 o.createElement(Rn.AW, {
                   exact: !0,
-                  path: Ur.OptinAdminDemoAnalysis(":pageid"),
+                  path: Xr.OptinAdminDemoAnalysis(":pageid"),
                   render: (e) =>
                     o.createElement(
                       wr.i,
@@ -51376,49 +51446,56 @@
                 }),
                 o.createElement(Rn.AW, {
                   exact: !0,
-                  path: Ur.OptinAdminSupport(":appid"),
+                  path: Xr.OptinAdminSupport(":appid"),
                   render: (e) =>
                     o.createElement(Yi, {
                       appid: Number.parseInt(e.match.params.appid),
                     }),
                 }),
                 o.createElement(Rn.AW, {
-                  path: Ur.OptInApp(":partialpageid", ":appid"),
+                  path: Xr.OptInApp(":partialpageid", ":appid"),
                   render: (e) =>
                     o.createElement(yl, {
                       appid: e.match.params.appid,
-                      pageid: Vr(e.match.params.partialpageid),
+                      pageid: qr(e.match.params.partialpageid),
                     }),
                 }),
                 o.createElement(Rn.AW, {
-                  path: Ur.OptInAppReviewDashboard(),
+                  path: Xr.OptInAppReviewDashboard(),
                   component: Lr,
                 }),
                 o.createElement(Rn.AW, {
-                  path: Ur.OptInAppReview(":pageid"),
+                  path: Xr.OptInAppReview(":pageid"),
                   render: (e) =>
                     o.createElement(jl, { pageid: e.match.params.pageid }),
                 }),
                 o.createElement(Rn.AW, {
-                  path: Ur.OptInAppAppeal(":partialpageid", ":appid"),
+                  path: Xr.OptInAppAppeal(":partialpageid", ":appid"),
                   render: (e) =>
                     o.createElement(rr, {
                       appid: Number.parseInt(e.match.params.appid),
-                      pageid: Vr(e.match.params.partialpageid),
+                      pageid: qr(e.match.params.partialpageid),
                     }),
                 }),
                 o.createElement(Rn.AW, {
-                  path: Ur.OptInAppSurvey(":partialpageid"),
+                  path: Xr.OptInAppSurvey(":partialpageid"),
                   render: (e) =>
                     o.createElement(Mi, {
                       pageid: e.match.params.partialpageid,
                     }),
                 }),
                 o.createElement(Rn.AW, {
-                  path: Ur.OptInPartnerDashboard(":partialpageid"),
+                  path: Xr.OptInSurveyResults(":partialpageid"),
+                  render: (e) =>
+                    o.createElement(Ur, {
+                      pageid: e.match.params.partialpageid,
+                    }),
+                }),
+                o.createElement(Rn.AW, {
+                  path: Xr.OptInPartnerDashboard(":partialpageid"),
                   render: (e) =>
                     o.createElement(gr, {
-                      pageid: Vr(e.match.params.partialpageid),
+                      pageid: qr(e.match.params.partialpageid),
                     }),
                 }),
                 o.createElement(Rn.AW, { component: i.R }),
