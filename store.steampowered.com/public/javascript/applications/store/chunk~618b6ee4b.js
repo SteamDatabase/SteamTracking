@@ -21542,7 +21542,8 @@
       function no(e) {
         const { contents: t, language: a } = e,
           [r, i] = (0, n.useState)(0),
-          o = (0, Mt.e0)();
+          o = (0, Mt.e0)(),
+          s = A.LJ.GetELanguageFallback(a);
         return n.createElement(
           "div",
           { className: to().QuadLayout },
@@ -21556,7 +21557,8 @@
                 onVideoEnd: () => i((t + 1) % 4),
               }),
               n.createElement(Pt.d, {
-                text: e.localized_media_desc[a],
+                text:
+                  e.localized_media_desc[a] || e.localized_media_desc[s] || "",
                 partnerEventStore: kt.j1,
                 showErrorInfo: o,
                 languageOverride: a,

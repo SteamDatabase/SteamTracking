@@ -12417,7 +12417,7 @@
               S && !b && !Boolean(n.jsondata.content_hub_restricted_width),
             ),
             L = i
-              ? A && l
+              ? A && l && l.BIsBackgroundImageEnabled()
                 ? fe.f.EPreviewMode_EditBackground
                 : fe.f.EPreviewMode_Enabled
               : fe.f.EPreviewMode_Disabled;

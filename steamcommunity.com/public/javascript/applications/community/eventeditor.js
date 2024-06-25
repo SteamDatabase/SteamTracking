@@ -3360,15 +3360,15 @@ License: MIT
                           "media_layout" == t.section_type &&
                             (null === (f = t.media_layout.media_content) ||
                               void 0 === f ||
-                              f.forEach((l) => {
-                                const r = l.localized_media_desc;
+                              f.forEach((l, r) => {
+                                const s = l.localized_media_desc;
                                 if (
-                                  n === Te + t.unique_id + "_" + C &&
-                                  (o || (r && Boolean(I.LZ.Get(r, a))))
+                                  n === Te + t.unique_id + "_" + r &&
+                                  (o || (s && Boolean(I.LZ.Get(s, a))))
                                 ) {
-                                  I.LZ.Get(r, a) !== o &&
+                                  I.LZ.Get(s, a) !== o &&
                                     ((l.localized_media_desc = I.LZ.Set(
-                                      r || [],
+                                      s || [],
                                       a,
                                       o,
                                     )),
