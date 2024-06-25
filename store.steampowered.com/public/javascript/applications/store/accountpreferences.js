@@ -338,10 +338,10 @@
         "./zh-tw.js": 79204,
       };
       function r(e) {
-        var t = i(e);
+        var t = a(e);
         return n(t);
       }
-      function i(e) {
+      function a(e) {
         if (!n.o(s, e)) {
           var t = new Error("Cannot find module '" + e + "'");
           throw ((t.code = "MODULE_NOT_FOUND"), t);
@@ -351,44 +351,38 @@
       (r.keys = function () {
         return Object.keys(s);
       }),
-        (r.resolve = i),
+        (r.resolve = a),
         (e.exports = r),
         (r.id = 95126);
     },
     13043: (e, t, n) => {
       "use strict";
-      n.d(t, { p: () => m });
-      var s = n(85556),
-        r = n(47427),
-        i = n(82493),
+      n.d(t, { p: () => l });
+      var s = n(47427),
+        r = n(82493),
         a = n(4030),
-        c = n(20417),
-        o = n(37563),
-        l = n(35643);
-      function m(e) {
-        const { children: t, navTreeRef: n } = e,
-          m = (0, s._T)(e, ["children", "navTreeRef"]),
-          _ = r.useRef(),
-          d = (0, c.BE)(_, n),
-          u = (0, o.id)(),
-          f = window.__virtual_keyboard_client;
-        if (u) {
+        i = n(20417),
+        c = n(37563),
+        o = n(35643);
+      function l(e) {
+        const { children: t, navTreeRef: n, ...l } = e,
+          m = s.useRef(),
+          _ = (0, i.BE)(m, n),
+          d = (0, c.id)(),
+          u = window.__virtual_keyboard_client;
+        if (d) {
           const e = window.__nav_tree_root;
-          return r.createElement(
-            i.Fe,
-            Object.assign({}, m, {
-              navTreeRef: d,
-              secondary: !0,
-              parentEmbeddedNavTree: e,
-            }),
-            r.createElement(
-              l.o5,
-              { factory: f },
-              r.createElement(a.O, null, t),
+          return s.createElement(
+            r.Fe,
+            { ...l, navTreeRef: _, secondary: !0, parentEmbeddedNavTree: e },
+            s.createElement(
+              o.o5,
+              { factory: u },
+              s.createElement(a.O, null, t),
             ),
           );
         }
-        return r.createElement(r.Fragment, null, t);
+        return s.createElement(s.Fragment, null, t);
       }
     },
     64936: (e, t, n) => {
@@ -396,17 +390,17 @@
       n.d(t, { JW: () => m, kl: () => u, rw: () => p, zD: () => f });
       var s = n(85556),
         r = n(54842),
-        i = n(37485),
-        a = n.n(i),
+        a = n(37485),
+        i = n.n(a),
         c = n(47427),
         o = (n(29480), n(37563));
       class l {
         constructor() {
-          (this.bOpenEventLandingPage = !1),
-            (this.bIncludeFeaturedAsGameSource = !0),
-            (this.nOverrideDateNow = void 0),
-            (0, r.rC)(this);
+          (0, r.rC)(this);
         }
+        bOpenEventLandingPage = !1;
+        bIncludeFeaturedAsGameSource = !0;
+        nOverrideDateNow = void 0;
         get bRequireAllEventsLoadedInTimeBlock() {
           return !1;
         }
@@ -440,7 +434,7 @@
             ("dev" == o.De.WEB_UNIVERSE || "beta" == o.De.WEB_UNIVERSE)
           ) {
             const e = t.get("t");
-            let n = /^\d+$/.test(e) ? a().unix(Number.parseInt(e)) : a()(e);
+            let n = /^\d+$/.test(e) ? i().unix(Number.parseInt(e)) : i()(e);
             (this.nOverrideDateNow = Math.floor(n.unix())),
               console.log(
                 "CEventCalendarDevFeatures overriding partner event time: " +
@@ -457,8 +451,7 @@
       const _ = new Date(),
         d = Math.floor(_.getTime() / 1e3);
       function u() {
-        var e;
-        return null !== (e = m.nOverrideDateNow) && void 0 !== e ? e : d;
+        return m.nOverrideDateNow ?? d;
       }
       function f() {
         return c.useMemo(() => u(), []);
@@ -470,17 +463,17 @@
     24827: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Ai: () => g,
+        Ai: () => E,
         H6: () => h,
         Kj: () => f,
-        Zg: () => v,
-        uv: () => E,
+        Zg: () => g,
+        uv: () => v,
         w$: () => p,
       });
       var s = n(85556),
         r = n(47427),
-        i = n(59728),
-        a = n(31846),
+        a = n(59728),
+        i = n(31846),
         c = n(27605),
         o = n(13129),
         l = n(46984),
@@ -491,15 +484,15 @@
       function f(e) {
         const t = u.tz.guess(),
           n = u.unix(e).tz(t),
-          s = (0, a.CE)();
+          s = (0, i.CE)();
         return s && n.locale(s), n.format("LT");
       }
       function p(e, t) {
         const n = u.tz.guess(),
           s = u.unix(e).tz(n),
-          i = (0, a.CE)();
+          a = (0, i.CE)();
         return (
-          i && s.locale(i),
+          a && s.locale(a),
           r.createElement(
             r.Fragment,
             null,
@@ -520,18 +513,16 @@
               dateAndTime: t,
               bSingleLine: n,
               bOnlyTime: s,
-              bOnlyDate: i,
+              bOnlyDate: a,
             } = e,
             c = !s && Boolean(t),
-            o = !i && Boolean(t),
-            l = c && (0, a.$1)(t),
-            m = e.stylesmodule
-              ? Object.assign(Object.assign({}, _()), e.stylesmodule)
-              : _();
+            o = !a && Boolean(t),
+            l = c && (0, i.$1)(t),
+            m = e.stylesmodule ? { ..._(), ...e.stylesmodule } : _();
           return n
             ? r.createElement(
                 "span",
-                { className: s || i ? m.DateAndTimeInline : m.DateAndTime },
+                { className: s || a ? m.DateAndTimeInline : m.DateAndTime },
                 c && l,
                 c && o ? r.createElement("span", null, " ") : void 0,
                 Boolean(t && o) && p(t, o),
@@ -554,7 +545,7 @@
                 ),
               );
         }),
-        v = (e) => {
+        g = (e) => {
           const t = r.createElement(
             "div",
             { className: e.stylesmodule.DateToolTip },
@@ -565,7 +556,7 @@
             }),
           );
           return r.createElement(
-            i.HP,
+            a.HP,
             {
               toolTipContent: t,
               direction: "top",
@@ -575,11 +566,11 @@
             e.children,
           );
         };
-      let g = class extends r.Component {
+      let E = class extends r.Component {
         render() {
           const { startDateAndTime: e, endDateAndTime: t } = this.props,
             n = this.props.stylesmodule
-              ? Object.assign(Object.assign({}, _()), this.props.stylesmodule)
+              ? { ..._(), ...this.props.stylesmodule }
               : _();
           let s =
             this.props.bHideEndTime ||
@@ -592,11 +583,11 @@
               r.createElement(
                 "span",
                 { className: n.RightSideTitles },
-                (0, a.Xx)("#EventDisplay_TimeRange"),
+                (0, i.Xx)("#EventDisplay_TimeRange"),
               ),
-              (0, a.Xx)("#EventDisplay_TimeDisplayNone"),
+              (0, i.Xx)("#EventDisplay_TimeDisplayNone"),
             );
-          let i = d.JW.GetTimeNowWithOverride();
+          let a = d.JW.GetTimeNowWithOverride();
           if (s)
             return r.createElement(
               "div",
@@ -604,8 +595,8 @@
               r.createElement(
                 "div",
                 { className: n.RightSideTitles },
-                (0, a.Xx)(
-                  e < i
+                (0, i.Xx)(
+                  e < a
                     ? "#EventDisplay_TimeInPast"
                     : "#EventDisplay_TimeUpcoming",
                 ),
@@ -613,7 +604,7 @@
               ),
               r.createElement(h, { stylesmodule: n, dateAndTime: e }),
             );
-          let c = e <= i && i <= t;
+          let c = e <= a && a <= t;
           const m = (0, l.yK)(new Date(1e3 * e), new Date(1e3 * t));
           return r.createElement(
             "div",
@@ -624,10 +615,10 @@
               r.createElement(
                 "span",
                 { className: n.RightSideTitles },
-                (0, a.Xx)(
-                  e >= i
+                (0, i.Xx)(
+                  e >= a
                     ? "#EventDisplay_TimeBeginsOn"
-                    : t >= i
+                    : t >= a
                       ? "#EventDisplay_TimeBeginsOn_Past"
                       : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
                 ),
@@ -644,8 +635,8 @@
               r.createElement(
                 "span",
                 { className: n.RightSideTitles },
-                (0, a.Xx)(
-                  t < i
+                (0, i.Xx)(
+                  t < a
                     ? "#EventDisplay_TimeEndsOn_Past"
                     : "#EventDisplay_TimeEndsOn",
                 ),
@@ -669,14 +660,14 @@
                       n.ActiveEventCallOut,
                     ),
                   },
-                  (0, a.Xx)("#Time_Now"),
+                  (0, i.Xx)("#Time_Now"),
                 ),
               ),
           );
         }
       };
-      g = (0, s.gn)([c.Pi], g);
-      let E = class extends r.Component {
+      E = (0, s.gn)([c.Pi], E);
+      let v = class extends r.Component {
         render() {
           const {
               startDateAndTime: e,
@@ -684,7 +675,7 @@
               bHideEndTime: n,
             } = this.props,
             s = this.props.stylesmodule
-              ? Object.assign(Object.assign({}, _()), this.props.stylesmodule)
+              ? { ..._(), ...this.props.stylesmodule }
               : _();
           if (null == e || 0 == e)
             return r.createElement(
@@ -693,25 +684,25 @@
               r.createElement(
                 "span",
                 { className: s.RightSideTitles },
-                (0, a.Xx)("#EventDisplay_TimeRange"),
+                (0, i.Xx)("#EventDisplay_TimeRange"),
               ),
-              (0, a.Xx)("#EventDisplay_TimeDisplayNone"),
+              (0, i.Xx)("#EventDisplay_TimeDisplayNone"),
             );
-          const i = d.JW.GetTimeNowWithOverrideAsDate(),
+          const a = d.JW.GetTimeNowWithOverrideAsDate(),
             c = d.JW.GetTimeNowWithOverride(),
-            o = (0, l.U8)(new Date(1e3 * e), i),
+            o = (0, l.U8)(new Date(1e3 * e), a),
             m = r.createElement(
               "div",
               { className: s.ShortDateAndTime },
-              (0, a.$1)(e, o),
+              (0, i.$1)(e, o),
             );
           let u = r.createElement(
-            v,
+            g,
             { rtFullDate: e, stylesmodule: s },
             r.createElement(
               "div",
               { className: s.RightSideTitles },
-              (0, a.Xx)(
+              (0, i.Xx)(
                 e < c
                   ? "#EventDisplay_TimeInPast"
                   : "#EventDisplay_TimeUpcoming",
@@ -723,12 +714,12 @@
             (c < e &&
               e < c + l._H.PerWeek &&
               (u = r.createElement(
-                v,
+                g,
                 { rtFullDate: e, stylesmodule: s },
                 r.createElement(
                   "div",
                   { className: s.RightSideTitles },
-                  (0, a.kQ)(
+                  (0, i.kQ)(
                     "#EventDisplay_EventUpcoming_WithDateAndTime",
                     m,
                     r.createElement(
@@ -746,34 +737,34 @@
           const f = e <= c && c <= t;
           f &&
             (u = r.createElement(
-              v,
+              g,
               { rtFullDate: e, className: s.ActiveEvent, stylesmodule: s },
               r.createElement(
                 "span",
                 { className: s.ActiveEventCallOut },
-                (0, a.Xx)("#Time_Now"),
+                (0, i.Xx)("#Time_Now"),
               ),
             ));
           let h = null;
-          const g = f ? t - c : t - e;
-          if (g <= l._H.PerDay) {
+          const E = f ? t - c : t - e;
+          if (E <= l._H.PerDay) {
             const e = r.createElement(
               "div",
               { className: s.ShortDateAndTime },
-              (0, a.yW)(g, !0),
+              (0, i.yW)(E, !0),
             );
             h =
               t < c
                 ? r.createElement(
                     "div",
                     { className: s.RightSideTitles },
-                    (0, a.Xx)("#EventDisplay_TimeEndsOn_Ran"),
+                    (0, i.Xx)("#EventDisplay_TimeEndsOn_Ran"),
                     e,
                   )
                 : r.createElement(
                     "div",
                     { className: s.RightSideTitles },
-                    (0, a.kQ)(
+                    (0, i.kQ)(
                       f
                         ? "#EventDisplay_TimeLeft"
                         : "#EventDisplay_RunsForDuration",
@@ -781,14 +772,14 @@
                     ),
                   );
           } else {
-            const e = i.getFullYear() == new Date(1e3 * t).getFullYear();
+            const e = a.getFullYear() == new Date(1e3 * t).getFullYear();
             h = r.createElement(
               r.Fragment,
               null,
               r.createElement(
                 "div",
                 { className: s.RightSideTitles },
-                (0, a.Xx)(
+                (0, i.Xx)(
                   t < c
                     ? "#EventDisplay_TimeEndsOn_Past"
                     : "#EventDisplay_TimeEndsOn",
@@ -797,26 +788,26 @@
               r.createElement(
                 "div",
                 { className: s.ShortDateAndTime },
-                (0, a.$1)(t, e),
+                (0, i.$1)(t, e),
               ),
             );
           }
-          const E = r.createElement(v, { rtFullDate: t, stylesmodule: s }, h);
-          return r.createElement("div", { className: s.ShortDateRange }, u, E);
+          const v = r.createElement(g, { rtFullDate: t, stylesmodule: s }, h);
+          return r.createElement("div", { className: s.ShortDateRange }, u, v);
         }
       };
-      E = (0, s.gn)([c.Pi], E);
+      v = (0, s.gn)([c.Pi], v);
     },
     29480: (e, t, n) => {
       "use strict";
-      n.d(t, { T: () => a });
+      n.d(t, { T: () => i });
       var s = n(80751),
         r = n.n(s),
-        i = n(47427);
-      function a(e) {
-        const t = i.useRef(r().CancelToken.source());
+        a = n(47427);
+      function i(e) {
+        const t = a.useRef(r().CancelToken.source());
         return (
-          i.useEffect(() => {
+          a.useEffect(() => {
             const n = t.current;
             return () => n.cancel(e ? `${e}: unmounting` : "unmounting");
           }, [e]),
@@ -826,19 +817,19 @@
     },
     479: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { AccountPreferencesRoutes: () => V, default: () => K });
+      n.r(t), n.d(t, { AccountPreferencesRoutes: () => Q, default: () => V });
       var s = n(47427),
         r = n(8285),
-        i = n(85556),
-        a = n(54842),
+        a = n(85556),
+        i = n(54842),
         c = (n(16649), n(37563)),
         o = n(80751),
         l = n.n(o),
         m = n(31846);
       class _ {
+        m_Preferences = void 0;
         constructor(e) {
-          (this.m_Preferences = void 0),
-            (0, a.rC)(this),
+          (0, i.rC)(this),
             (this.m_Preferences = e),
             (this.m_Preferences.content_customization &&
               !Array.isArray(this.m_Preferences.content_customization)) ||
@@ -949,44 +940,30 @@
         ProcessToggle() {
           (this.m_Preferences.preference_state = 3), this.PostCookieSettings();
         }
-        PostCookieSettings() {
-          var e, t;
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const n = c.De.STORE_BASE_URL + "account/ajaxsetcookiepreferences",
-              s = new FormData();
-            s.set("sessionid", c.De.SESSIONID),
-              s.append("cookiepreferences", JSON.stringify(this.m_Preferences));
-            try {
-              let r = yield l().post(n, s, { withCredentials: !0 });
-              if (
-                200 != r.status ||
-                1 !=
-                  (null === (e = null == r ? void 0 : r.data) || void 0 === e
-                    ? void 0
-                    : e.success)
-              )
-                window.ShowAlertDialog(
-                  (0, m.Xx)("#CookiePref_Error"),
-                  (0, m.Xx)("#CookiePref_ErrorNotSaved"),
-                );
-              else if (
-                1 ==
-                (null === (t = null == r ? void 0 : r.data) || void 0 === t
-                  ? void 0
-                  : t.success)
-              ) {
-                0;
-                const { transfer_urls: e, transfer_params: t } = r.data;
-                e && t && this.TransferCookiePreferencesToSites(e, t);
-              }
-            } catch (e) {
-              0,
-                window.ShowAlertDialog(
-                  (0, m.Xx)("#CookiePref_Error"),
-                  (0, m.Xx)("#CookiePref_ErrorNotSaved"),
-                );
+        async PostCookieSettings() {
+          const e = c.De.STORE_BASE_URL + "account/ajaxsetcookiepreferences",
+            t = new FormData();
+          t.set("sessionid", c.De.SESSIONID),
+            t.append("cookiepreferences", JSON.stringify(this.m_Preferences));
+          try {
+            let n = await l().post(e, t, { withCredentials: !0 });
+            if (200 != n.status || 1 != n?.data?.success)
+              window.ShowAlertDialog(
+                (0, m.Xx)("#CookiePref_Error"),
+                (0, m.Xx)("#CookiePref_ErrorNotSaved"),
+              );
+            else if (1 == n?.data?.success) {
+              0;
+              const { transfer_urls: e, transfer_params: t } = n.data;
+              e && t && this.TransferCookiePreferencesToSites(e, t);
             }
-          });
+          } catch (e) {
+            0,
+              window.ShowAlertDialog(
+                (0, m.Xx)("#CookiePref_Error"),
+                (0, m.Xx)("#CookiePref_ErrorNotSaved"),
+              );
+          }
         }
         TransferCookiePreferencesToSites(e, t) {
           const n = new FormData();
@@ -994,15 +971,15 @@
           for (const t of e) l().post(t, n);
         }
       }
-      (0, i.gn)([a.LO], _.prototype, "m_Preferences", void 0);
+      (0, a.gn)([i.LO], _.prototype, "m_Preferences", void 0);
       var d = n(27605),
         u = n(1485),
         f = n(3934),
         p = n(13129),
         h = n(91618),
-        v = n(41130),
-        g = n(13043),
-        E = n(82493);
+        g = n(41130),
+        E = n(13043),
+        v = n(82493);
       let y;
       const k = (0, d.Pi)(() => {
           let e = (function () {
@@ -1012,7 +989,7 @@
             }
             return y;
           })();
-          const t = (0, v.L)(),
+          const t = (0, g.L)(),
             n = (0, s.useCallback)(() => {
               e.SetPreferenceState(1);
             }, [e]),
@@ -1020,7 +997,7 @@
               e.SetPreferenceState(2);
             }, [e]);
           return s.createElement(
-            g.p,
+            E.p,
             { navID: "StoreCookiesSettings", NavigationManager: t },
             s.createElement(
               "div",
@@ -1043,7 +1020,7 @@
                 h.s,
                 { "flow-children": "row", className: f.ButtonGroup },
                 s.createElement(
-                  E.Ks,
+                  v.Ks,
                   {
                     className: (0, p.Z)(
                       f.AllButton,
@@ -1054,7 +1031,7 @@
                   (0, m.Xx)("#CookiePref_RejectAll"),
                 ),
                 s.createElement(
-                  E.Ks,
+                  v.Ks,
                   {
                     className: (0, p.Z)(
                       f.AllButton,
@@ -1298,7 +1275,7 @@
             r = (0, s.useCallback)(() => {
               t.ToggleVimeo();
             }, [t]),
-            i = (0, s.useCallback)(() => {
+            a = (0, s.useCallback)(() => {
               t.ToggleSketchfab();
             }, [t]);
           return s.createElement(
@@ -1347,7 +1324,7 @@
                 ),
               }),
               s.createElement(u.gE, {
-                onChange: i,
+                onChange: a,
                 label: (0, m.Xx)("#CookiePref_Sketchfab_Title"),
                 checked: t.GetSketchfab(),
                 description: (0, m.kQ)(
@@ -1393,11 +1370,10 @@
           );
         });
       class S {
+        m_Preferences = void 0;
+        m_bUpdating = !1;
         constructor(e) {
-          (this.m_Preferences = void 0),
-            (this.m_bUpdating = !1),
-            (0, a.rC)(this),
-            (this.m_Preferences = e);
+          (0, i.rC)(this), (this.m_Preferences = e);
         }
         GetPreferences() {
           return this.m_Preferences;
@@ -1418,43 +1394,32 @@
             }
           n && this.PostNotificationSettings(), (this.m_bUpdating = !1);
         }
-        PostNotificationSettings() {
-          var e, t;
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const n =
-                c.De.STORE_BASE_URL + "account/ajaxsetnotificationsettings",
-              s = new FormData();
-            s.set("sessionid", c.De.SESSIONID),
-              s.append(
-                "notificationpreferences",
-                JSON.stringify(this.m_Preferences),
+        async PostNotificationSettings() {
+          const e = c.De.STORE_BASE_URL + "account/ajaxsetnotificationsettings",
+            t = new FormData();
+          t.set("sessionid", c.De.SESSIONID),
+            t.append(
+              "notificationpreferences",
+              JSON.stringify(this.m_Preferences),
+            );
+          try {
+            let n = await l().post(e, t, { withCredentials: !0 });
+            (200 == n.status && 1 == n?.data?.success) ||
+              window.ShowAlertDialog(
+                (0, m.Xx)("#NotificationPref_Error"),
+                (0, m.Xx)("#NotificationPref_ErrorNotSaved"),
               );
-            try {
-              let r = yield l().post(n, s, { withCredentials: !0 });
-              200 != r.status ||
-              1 !=
-                (null === (e = null == r ? void 0 : r.data) || void 0 === e
-                  ? void 0
-                  : e.success)
-                ? window.ShowAlertDialog(
-                    (0, m.Xx)("#NotificationPref_Error"),
-                    (0, m.Xx)("#NotificationPref_ErrorNotSaved"),
-                  )
-                : null === (t = null == r ? void 0 : r.data) ||
-                  void 0 === t ||
-                  t.success;
-            } catch (e) {
-              0,
-                window.ShowAlertDialog(
-                  (0, m.Xx)("#NotificationPref_Error"),
-                  (0, m.Xx)("#NotificationPref_ErrorNotSaved"),
-                );
-            }
-          });
+          } catch (e) {
+            0,
+              window.ShowAlertDialog(
+                (0, m.Xx)("#NotificationPref_Error"),
+                (0, m.Xx)("#NotificationPref_ErrorNotSaved"),
+              );
+          }
         }
       }
-      (0, i.gn)([a.LO], S.prototype, "m_Preferences", void 0),
-        (0, i.gn)([a.LO], S.prototype, "m_bUpdating", void 0);
+      (0, a.gn)([i.LO], S.prototype, "m_Preferences", void 0),
+        (0, a.gn)([i.LO], S.prototype, "m_bUpdating", void 0);
       var j = n(28890),
         b = n(58538);
       let C;
@@ -1467,12 +1432,12 @@
       }
       const A = (0, d.Pi)(() => {
           let e = x();
-          const t = (0, v.L)();
+          const t = (0, g.L)();
           let n = [];
           for (const t of e.GetPreferences())
             n.push(s.createElement(w, { preferenceSetting: t }));
           return s.createElement(
-            g.p,
+            E.p,
             { navID: "StoreNotificationSettings", NavigationManager: t },
             s.createElement(
               "div",
@@ -1520,10 +1485,10 @@
           const r = (0, s.useCallback)(() => {
               n.ToggleTargetPreference(1, t);
             }, [t, n]),
-            i = (0, s.useCallback)(() => {
+            a = (0, s.useCallback)(() => {
               n.ToggleTargetPreference(8, t);
             }, [t, n]),
-            a = (0, s.useCallback)(() => {
+            i = (0, s.useCallback)(() => {
               n.ToggleTargetPreference(2, t);
             }, [t, n]),
             [c, o] = (0, s.useState)(!1),
@@ -1532,11 +1497,11 @@
             d = 2 == (2 & t.notification_targets),
             f = 8 == (8 & t.notification_targets),
             h =
-              ((v = t.notification_type),
-              (0, m.Qw)("#SteamNotificationTypeDesc_" + v)
-                ? (0, m.Xx)("#SteamNotificationTypeDesc_" + v)
+              ((g = t.notification_type),
+              (0, m.Qw)("#SteamNotificationTypeDesc_" + g)
+                ? (0, m.Xx)("#SteamNotificationTypeDesc_" + g)
                 : null);
-          var v;
+          var g;
           return h
             ? s.createElement(
                 "div",
@@ -1577,7 +1542,7 @@
                       label: (0, m.Xx)("#NotificationSettings_SendToast"),
                       disabled: l || !_,
                       checked: f,
-                      onChange: i,
+                      onChange: a,
                     }),
                     s.createElement(u.ji, {
                       label: (0, m.Xx)(
@@ -1585,19 +1550,21 @@
                       ),
                       disabled: l || !_,
                       checked: d,
-                      onChange: a,
+                      onChange: i,
                     }),
                   ),
               )
             : null;
         });
-      var X = n(56480),
-        z = n(70839);
+      var z = n(56480),
+        X = n(70839);
       class O {
+        m_rgDevices = [];
+        m_rgRecentDevices = [];
+        m_strKBArticleURL;
+        static s_AuthorizedDevicesStore;
         constructor() {
-          (this.m_rgDevices = []),
-            (this.m_rgRecentDevices = []),
-            (0, a.rC)(this);
+          (0, i.rC)(this);
         }
         static Get() {
           return (
@@ -1628,8 +1595,8 @@
           return this.m_strKBArticleURL;
         }
       }
-      (0, i.gn)([a.LO], O.prototype, "m_rgDevices", void 0),
-        (0, i.gn)([a.LO], O.prototype, "m_rgRecentDevices", void 0);
+      (0, a.gn)([i.LO], O.prototype, "m_rgDevices", void 0),
+        (0, a.gn)([i.LO], O.prototype, "m_rgRecentDevices", void 0);
       var G,
         R = n(24827),
         L = n(62613);
@@ -1654,21 +1621,21 @@
       var I = n(12251);
       const B = (0, d.Pi)(() => {
         let e = O.Get();
-        const t = (0, v.L)();
+        const t = (0, g.L)();
         let n = [];
         for (const t of e.GetRecentDevices())
-          n.push(s.createElement(H, { device: t, key: t.token_id }));
+          n.push(s.createElement(U, { device: t, key: t.token_id }));
         let r = [];
         for (const t of e.GetDevices())
-          r.push(s.createElement(H, { device: t, key: t.token_id }));
+          r.push(s.createElement(U, { device: t, key: t.token_id }));
         return s.createElement(
-          g.p,
+          E.p,
           { navID: "StoreAuthorizedDevices", NavigationManager: t },
           s.createElement(
             "div",
             {
               className: (0, p.Z)(
-                z.AuthorizedDeviceHeader,
+                X.AuthorizedDeviceHeader,
                 "account_header_line noicon",
               ),
             },
@@ -1683,7 +1650,7 @@
             { className: "account_settings_container" },
             s.createElement(
               "p",
-              { className: z.SectionDescription },
+              { className: X.SectionDescription },
               (0, m.kQ)(
                 "#accountpreferences_authorized_devices_description",
                 s.createElement(
@@ -1704,10 +1671,10 @@
             ),
             s.createElement(
               "div",
-              { className: z.AuthorizedDeviceGroup },
+              { className: X.AuthorizedDeviceGroup },
               s.createElement(
                 "div",
-                { className: z.AuthorizedDevicesRecentHeader },
+                { className: X.AuthorizedDevicesRecentHeader },
                 (0, m.Xx)(
                   "#accountpreferences_authorized_devices_recent_heading",
                 ),
@@ -1715,7 +1682,7 @@
               n,
               s.createElement(
                 "div",
-                { className: z.AuthorizedDevicesRecentHeader },
+                { className: X.AuthorizedDevicesRecentHeader },
                 (0, m.Xx)(
                   "#accountpreferences_authorized_devices_other_heading",
                 ),
@@ -1725,36 +1692,36 @@
           ),
         );
       });
-      function H(e) {
+      function U(e) {
         const { device: t } = e,
           [n, r] = (0, s.useState)(!1);
-        let i = (function (e) {
+        let a = (function (e) {
           return 2 == e.platform_type ? "" : e.token_description;
         })(t);
         return (
-          i.length && (i = " - " + i),
+          a.length && (a = " - " + a),
           s.createElement(
             "div",
-            { className: z.DeviceContainer, key: "123_" + t.token_id },
+            { className: X.DeviceContainer, key: "123_" + t.token_id },
             s.createElement(
               "div",
-              { className: z.DeviceHeaderRow },
+              { className: X.DeviceHeaderRow },
               s.createElement(
                 "div",
-                { className: z.DeviceName },
+                { className: X.DeviceName },
                 s.createElement(M, { device: t }),
                 s.createElement(W, { device: t }),
-                i,
+                a,
               ),
               s.createElement(
                 "div",
-                { className: z.DetailToggle },
+                { className: X.DetailToggle },
                 s.createElement(
                   u.Yz,
                   {
                     className: (0, p.Z)({
-                      [z.DetailsToggle]: !0,
-                      [z.Selected]: n,
+                      [X.DetailsToggle]: !0,
+                      [X.Selected]: n,
                     }),
                     onClick: () => r(!n),
                   },
@@ -1762,37 +1729,32 @@
                 ),
               ),
             ),
-            s.createElement(U, { device: t }),
+            s.createElement(H, { device: t }),
             n && s.createElement(F, { device: t }),
           )
         );
       }
-      function U(e) {
-        var t, n;
-        const { device: r } = e;
-        let i = (function (e) {
-          var t;
-          const n =
-            null !== (t = e.last_seen) && void 0 !== t ? t : e.first_seen;
-          return n && n.city && n.country
-            ? n.city + ", " + n.country
+      function H(e) {
+        const { device: t } = e;
+        let n = (function (e) {
+          const t = e.last_seen ?? e.first_seen;
+          return t && t.city && t.country
+            ? t.city + ", " + t.country
             : (0, m.Xx)("#accountpreferences_authorized_devices_loc_unknown");
-        })(r);
+        })(t);
         return s.createElement(
           "div",
-          { className: z.LastSeenRow },
-          !!i && s.createElement("div", null, i, " "),
-          !!i &&
-            !!(null === (t = r.last_seen) || void 0 === t ? void 0 : t.time) &&
-            s.createElement(Y, null),
-          !!(null === (n = r.last_seen) || void 0 === n ? void 0 : n.time) &&
+          { className: X.LastSeenRow },
+          !!n && s.createElement("div", null, n, " "),
+          !!n && !!t.last_seen?.time && s.createElement(Y, null),
+          !!t.last_seen?.time &&
             s.createElement(
               "div",
               null,
               (0, m.Xx)(
                 "#accountpreferences_authorized_devices_last_seen_title",
               ),
-              s.createElement(R.H6, { dateAndTime: r.last_seen.time }),
+              s.createElement(R.H6, { dateAndTime: t.last_seen.time }),
             ),
         );
       }
@@ -1800,7 +1762,7 @@
         const { device: t } = e;
         return s.createElement(
           "div",
-          { className: z.AuthorizedDeviceDetails },
+          { className: X.AuthorizedDeviceDetails },
           (0, m.Xx)(
             (function (e, t) {
               if (2 == e) return "#authorized_devices_default_qr";
@@ -1879,7 +1841,7 @@
         }
       }
       function Y() {
-        return s.createElement("div", { className: z.Separator }, "|");
+        return s.createElement("div", { className: X.Separator }, "|");
       }
       const Z = s.lazy(() =>
           Promise.all([
@@ -1901,27 +1863,22 @@
             n.e(5800),
           ]).then(n.bind(n, 94896)),
         ),
-        Q = { FamilyManagement: () => "/familymanagement" },
-        V = Object.assign(
-          Object.assign(
-            {
-              CookieSettings: () => "/cookiepreferences",
-              NotificationSettings: () => "/notificationsettings",
-            },
-            Q,
-          ),
-          { AuthorizedDevices: () => "/authorizeddevices" },
-        ),
-        K = (e) => {
+        Q = {
+          CookieSettings: () => "/cookiepreferences",
+          NotificationSettings: () => "/notificationsettings",
+          ...{ FamilyManagement: () => "/familymanagement" },
+          AuthorizedDevices: () => "/authorizeddevices",
+        },
+        V = (e) => {
           const t = e.match.url,
-            n = V;
+            n = Q;
           return s.createElement(
             r.rs,
             null,
             s.createElement(r.AW, {
               path: `${t}${n.CookieSettings()}`,
               render: () =>
-                s.createElement(X.d, {
+                s.createElement(z.d, {
                   config: {
                     "cookie-preferences": () => s.createElement(k, null),
                   },
@@ -1930,7 +1887,7 @@
             s.createElement(r.AW, {
               path: `${t}${n.NotificationSettings()}`,
               render: () =>
-                s.createElement(X.d, {
+                s.createElement(z.d, {
                   config: {
                     "notification-settings": () => s.createElement(A, null),
                   },
@@ -1939,7 +1896,7 @@
             s.createElement(r.AW, {
               path: `${t}${n.FamilyManagement()}`,
               render: () =>
-                s.createElement(X.d, {
+                s.createElement(z.d, {
                   config: {
                     "family-management": () => s.createElement(Z, null),
                   },
@@ -1948,7 +1905,7 @@
             s.createElement(r.AW, {
               path: `${t}${n.AuthorizedDevices()}`,
               render: () =>
-                s.createElement(X.d, {
+                s.createElement(z.d, {
                   config: {
                     "authorized-devices": () => s.createElement(B, null),
                   },

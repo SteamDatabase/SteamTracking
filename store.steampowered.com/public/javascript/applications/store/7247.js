@@ -108,10 +108,10 @@
       function y(t, i) {
         return t & i;
       }
-      function v(t, i) {
+      function T(t, i) {
         return t | i;
       }
-      function T(t, i) {
+      function v(t, i) {
         return t ^ i;
       }
       function g(t, i) {
@@ -133,11 +133,11 @@
         for (var i = 0; 0 != t; ) (t &= t - 1), ++i;
         return i;
       }
-      function S() {}
-      function B(t) {
+      function w() {}
+      function S(t) {
         return t;
       }
-      function w(t) {
+      function B(t) {
         (this.r2 = s()),
           (this.q3 = s()),
           e.ONE.dlShiftTo(2 * t.t, this.r2),
@@ -346,9 +346,9 @@
               var m = c * (1 << this.F1) + (p > 1 ? h[p - 2] >> this.F2 : 0),
                 d = this.FV / m,
                 y = (1 << this.F1) / m,
-                v = 1 << this.F2,
-                T = r.t,
-                g = T - p,
+                T = 1 << this.F2,
+                v = r.t,
+                g = v - p,
                 b = null == i ? s() : i;
               for (
                 h.dlShiftTo(g, b),
@@ -361,11 +361,11 @@
                 h[h.t++] = 0;
               for (; --g >= 0; ) {
                 var D =
-                  r[--T] == c
+                  r[--v] == c
                     ? this.DM
-                    : Math.floor(r[T] * d + (r[T - 1] + v) * y);
-                if ((r[T] += h.am(0, D, r, g, 0, p)) < D)
-                  for (h.dlShiftTo(g, b), r.subTo(b, r); r[T] < --D; )
+                    : Math.floor(r[v] * d + (r[v - 1] + T) * y);
+                if ((r[v] += h.am(0, D, r, g, 0, p)) < D)
+                  for (h.dlShiftTo(g, b), r.subTo(b, r); r[v] < --D; )
                     r.subTo(b, r);
               }
               null != i && (r.drShiftTo(p, i), u != a && e.ZERO.subTo(i, i)),
@@ -478,24 +478,24 @@
         }),
         (e.ZERO = c(0)),
         (e.ONE = c(1)),
-        (S.prototype.convert = B),
-        (S.prototype.revert = B),
-        (S.prototype.mulTo = function (t, i, r) {
+        (w.prototype.convert = S),
+        (w.prototype.revert = S),
+        (w.prototype.mulTo = function (t, i, r) {
           t.multiplyTo(i, r);
         }),
-        (S.prototype.sqrTo = function (t, i) {
+        (w.prototype.sqrTo = function (t, i) {
           t.squareTo(i);
         }),
-        (w.prototype.convert = function (t) {
+        (B.prototype.convert = function (t) {
           if (t.s < 0 || t.t > 2 * this.m.t) return t.mod(this.m);
           if (t.compareTo(this.m) < 0) return t;
           var i = s();
           return t.copyTo(i), this.reduce(i), i;
         }),
-        (w.prototype.revert = function (t) {
+        (B.prototype.revert = function (t) {
           return t;
         }),
-        (w.prototype.reduce = function (t) {
+        (B.prototype.reduce = function (t) {
           for (
             t.drShiftTo(this.m.t - 1, this.r2),
               t.t > this.m.t + 1 && ((t.t = this.m.t + 1), t.clamp()),
@@ -508,10 +508,10 @@
           for (t.subTo(this.r2, t); t.compareTo(this.m) >= 0; )
             t.subTo(this.m, t);
         }),
-        (w.prototype.mulTo = function (t, i, r) {
+        (B.prototype.mulTo = function (t, i, r) {
           t.multiplyTo(i, r), this.reduce(r);
         }),
-        (w.prototype.sqrTo = function (t, i) {
+        (B.prototype.sqrTo = function (t, i) {
           t.squareTo(i), this.reduce(i);
         });
       var A = [
@@ -570,7 +570,7 @@
               for (
                 this.fromNumber(t, r),
                   this.testBit(t - 1) ||
-                    this.bitwiseTo(e.ONE.shiftLeft(t - 1), v, this),
+                    this.bitwiseTo(e.ONE.shiftLeft(t - 1), T, this),
                   this.isEven() && this.dAddOffset(1, 0);
                 !this.isProbablePrime(i);
 
@@ -747,11 +747,11 @@
         }),
         (e.prototype.or = function (t) {
           var i = s();
-          return this.bitwiseTo(t, v, i), i;
+          return this.bitwiseTo(t, T, i), i;
         }),
         (e.prototype.xor = function (t) {
           var i = s();
-          return this.bitwiseTo(t, T, i), i;
+          return this.bitwiseTo(t, v, i), i;
         }),
         (e.prototype.andNot = function (t) {
           var i = s();
@@ -786,13 +786,13 @@
             : 0 != (this[i] & (1 << t % this.DB));
         }),
         (e.prototype.setBit = function (t) {
-          return this.changeBit(t, v);
+          return this.changeBit(t, T);
         }),
         (e.prototype.clearBit = function (t) {
           return this.changeBit(t, g);
         }),
         (e.prototype.flipBit = function (t) {
-          return this.changeBit(t, T);
+          return this.changeBit(t, v);
         }),
         (e.prototype.add = function (t) {
           var i = s();
@@ -826,7 +826,7 @@
             n = c(1);
           if (e <= 0) return n;
           (r = e < 18 ? 1 : e < 48 ? 3 : e < 144 ? 4 : e < 768 ? 5 : 6),
-            (o = e < 8 ? new m(i) : i.isEven() ? new w(i) : new d(i));
+            (o = e < 8 ? new m(i) : i.isEven() ? new B(i) : new d(i));
           var h = new Array(),
             u = 3,
             a = r - 1,
@@ -837,34 +837,34 @@
               (h[u] = s()), o.mulTo(p, h[u - 2], h[u]), (u += 2);
           }
           var y,
-            v,
-            T = t.t - 1,
+            T,
+            v = t.t - 1,
             g = !0,
             b = s();
-          for (e = l(t[T]) - 1; T >= 0; ) {
+          for (e = l(t[v]) - 1; v >= 0; ) {
             for (
               e >= a
-                ? (y = (t[T] >> (e - a)) & f)
-                : ((y = (t[T] & ((1 << (e + 1)) - 1)) << (a - e)),
-                  T > 0 && (y |= t[T - 1] >> (this.DB + e - a))),
+                ? (y = (t[v] >> (e - a)) & f)
+                : ((y = (t[v] & ((1 << (e + 1)) - 1)) << (a - e)),
+                  v > 0 && (y |= t[v - 1] >> (this.DB + e - a))),
                 u = r;
               0 == (1 & y);
 
             )
               (y >>= 1), --u;
-            if (((e -= u) < 0 && ((e += this.DB), --T), g))
+            if (((e -= u) < 0 && ((e += this.DB), --v), g))
               h[y].copyTo(n), (g = !1);
             else {
               for (; u > 1; ) o.sqrTo(n, b), o.sqrTo(b, n), (u -= 2);
-              u > 0 ? o.sqrTo(n, b) : ((v = n), (n = b), (b = v)),
+              u > 0 ? o.sqrTo(n, b) : ((T = n), (n = b), (b = T)),
                 o.mulTo(b, h[y], n);
             }
-            for (; T >= 0 && 0 == (t[T] & (1 << e)); )
+            for (; v >= 0 && 0 == (t[v] & (1 << e)); )
               o.sqrTo(n, b),
-                (v = n),
+                (T = n),
                 (n = b),
-                (b = v),
-                --e < 0 && ((e = this.DB - 1), --T);
+                (b = T),
+                --e < 0 && ((e = this.DB - 1), --v);
           }
           return o.revert(n);
         }),
@@ -910,7 +910,7 @@
                 : u;
         }),
         (e.prototype.pow = function (t) {
-          return this.exp(t, new S());
+          return this.exp(t, new w());
         }),
         (e.prototype.gcd = function (t) {
           var i = this.s < 0 ? this.negate() : this.clone(),
@@ -1055,137 +1055,122 @@
     },
     97247: (t, i, r) => {
       r.d(i, {
-        F0: () => p,
-        He: () => v,
-        IC: () => y,
-        Zb: () => a,
-        aF: () => f,
-        p1: () => m,
-        yI: () => d,
+        F0: () => f,
+        He: () => y,
+        IC: () => d,
+        Zb: () => u,
+        aF: () => a,
+        p1: () => l,
+        yI: () => m,
       });
-      var o = r(85556),
-        e = r(80751),
-        s = r.n(e),
-        n = r(68785);
-      const h = r(88765).Z,
-        u = new n.sO("Login"),
-        a = u.Info,
-        f = (u.Debug, u.Warning),
-        p = u.Error;
-      function c(t, i) {
+      var o = r(80751),
+        e = r.n(o),
+        s = r(68785);
+      const n = r(88765).Z,
+        h = new s.sO("Login"),
+        u = h.Info,
+        a = (h.Debug, h.Warning),
+        f = h.Error;
+      function p(t, i) {
         return t.endsWith("/") || (t += "/"), `${t}login/${i}/`;
       }
-      function l() {
+      function c() {
         let t = new FormData();
         return t.append("donotcache", new Date().getTime().toString()), t;
       }
-      function m(t) {
-        return (0, o.mG)(this, void 0, void 0, function* () {
-          let i = l(),
-            r = c(t, "refreshcaptcha"),
-            o = "";
-          try {
-            let t = { "Content-Type": "multipart/form-data" },
-              e = yield s().post(r, i, { headers: t });
-            if (200 != e.status) return !1;
-            o = e.data.gid;
-          } catch (t) {
-            return !1;
-          }
-          return o;
-        });
+      async function l(t) {
+        let i = c(),
+          r = p(t, "refreshcaptcha"),
+          o = "";
+        try {
+          let t = { "Content-Type": "multipart/form-data" },
+            s = await e().post(r, i, { headers: t });
+          if (200 != s.status) return !1;
+          o = s.data.gid;
+        } catch (t) {
+          return !1;
+        }
+        return o;
+      }
+      function m(t, i) {
+        return p(t, "rendercaptcha") + `?gid=${i}`;
       }
       function d(t, i) {
-        return c(t, "rendercaptcha") + `?gid=${i}`;
-      }
-      function y(t, i) {
-        let r = h.getPublicKey(i.publickey_mod, i.publickey_exp),
-          o = h.encrypt(t, r);
+        let r = n.getPublicKey(i.publickey_mod, i.publickey_exp),
+          o = n.encrypt(t, r);
         return !1 === o ? null : o;
       }
-      function v(t, i, r) {
-        return (0, o.mG)(this, void 0, void 0, function* () {
-          if (
-            ((r = Object.assign({}, r)).strUserName &&
-              (r.strUserName = r.strUserName.replace(/[^\x00-\x7F]/g, "")),
-            !r.strPassword || r.strPassword.match(/[^\x00-\x7F]/))
-          )
+      async function y(t, i, r) {
+        if (
+          ((r = Object.assign({}, r)).strUserName &&
+            (r.strUserName = r.strUserName.replace(/[^\x00-\x7F]/g, "")),
+          !r.strPassword || r.strPassword.match(/[^\x00-\x7F]/))
+        )
+          return null;
+        if (!r.strUserName) return null;
+        let o = await (async function (t, i) {
+          let r = c();
+          r.append("username", i);
+          let o,
+            s = p(t, "getrsakey");
+          try {
+            let t = { "Content-Type": "multipart/form-data" },
+              i = await e().post(s, r, { headers: t });
+            if (200 != i.status)
+              return (
+                console.log("GetRSAKey failure: "), console.log(i.status), null
+              );
+            let n = i.data;
+            if (
+              !(
+                n &&
+                n.success &&
+                n.publickey_mod &&
+                n.publickey_exp &&
+                n.timestamp
+              )
+            )
+              return console.log("GetRSAKey failure: "), console.log(n), null;
+            o = n;
+          } catch (t) {
+            return console.log("GetRSAKey exception: "), console.log(t), null;
+          }
+          return o;
+        })(t, r.strUserName);
+        if (!o) return console.error(`Failed to get RSA key from ${t}`), null;
+        let s = await (async function (t, i, r, o) {
+          const s = d(r.strPassword, o);
+          if (!s) return null;
+          let n = c();
+          n.append("password", s),
+            n.append("username", r.strUserName),
+            n.append("twofactorcode", r.strTwoFactorCode || ""),
+            n.append("emailauth", r.strEmailAuthCode || ""),
+            n.append("loginfriendlyname", ""),
+            n.append("captchagid", r.gidCaptcha || ""),
+            n.append("captcha_text", r.strCaptchaText || ""),
+            n.append("emailsteamid", r.emailSteamID || ""),
+            n.append("rsatimestamp", o.timestamp),
+            n.append("remember_login", r.bRememberLogin ? "true" : "false");
+          let h = {};
+          i &&
+            (n.append("oauth_client_id", i),
+            n.append("mobile_chat_client", "true"));
+          let u,
+            a = p(t, "dologin");
+          try {
+            h.headers = { "Content-Type": "multipart/form-data" };
+            let t = await e().post(a, n, h);
+            if (200 != t.status) return null;
+            let i = t.data;
+            if (!i) return null;
+            i.oauth && (i.oauth = JSON.parse(i.oauth)), (u = i);
+          } catch (t) {
             return null;
-          if (!r.strUserName) return null;
-          let e = yield (function (t, i) {
-            return (0, o.mG)(this, void 0, void 0, function* () {
-              let r = l();
-              r.append("username", i);
-              let o,
-                e = c(t, "getrsakey");
-              try {
-                let t = { "Content-Type": "multipart/form-data" },
-                  i = yield s().post(e, r, { headers: t });
-                if (200 != i.status)
-                  return (
-                    console.log("GetRSAKey failure: "),
-                    console.log(i.status),
-                    null
-                  );
-                let n = i.data;
-                if (
-                  !(
-                    n &&
-                    n.success &&
-                    n.publickey_mod &&
-                    n.publickey_exp &&
-                    n.timestamp
-                  )
-                )
-                  return (
-                    console.log("GetRSAKey failure: "), console.log(n), null
-                  );
-                o = n;
-              } catch (t) {
-                return (
-                  console.log("GetRSAKey exception: "), console.log(t), null
-                );
-              }
-              return o;
-            });
-          })(t, r.strUserName);
-          if (!e) return console.error(`Failed to get RSA key from ${t}`), null;
-          let n = yield (function (t, i, r, e) {
-            return (0, o.mG)(this, void 0, void 0, function* () {
-              const o = y(r.strPassword, e);
-              if (!o) return null;
-              let n = l();
-              n.append("password", o),
-                n.append("username", r.strUserName),
-                n.append("twofactorcode", r.strTwoFactorCode || ""),
-                n.append("emailauth", r.strEmailAuthCode || ""),
-                n.append("loginfriendlyname", ""),
-                n.append("captchagid", r.gidCaptcha || ""),
-                n.append("captcha_text", r.strCaptchaText || ""),
-                n.append("emailsteamid", r.emailSteamID || ""),
-                n.append("rsatimestamp", e.timestamp),
-                n.append("remember_login", r.bRememberLogin ? "true" : "false");
-              let h = {};
-              i &&
-                (n.append("oauth_client_id", i),
-                n.append("mobile_chat_client", "true"));
-              let u,
-                a = c(t, "dologin");
-              try {
-                h.headers = { "Content-Type": "multipart/form-data" };
-                let t = yield s().post(a, n, h);
-                if (200 != t.status) return null;
-                let i = t.data;
-                if (!i) return null;
-                i.oauth && (i.oauth = JSON.parse(i.oauth)), (u = i);
-              } catch (t) {
-                return null;
-              }
-              return u;
-            });
-          })(t, i, r, e);
-          return n;
-        });
+          }
+          return u;
+        })(t, i, r, o);
+        return s;
       }
     },
   },

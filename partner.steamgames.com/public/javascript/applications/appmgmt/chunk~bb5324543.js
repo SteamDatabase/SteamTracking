@@ -5,413 +5,15 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [5631],
   {
-    45944: (e, t, i) => {
-      i.d(t, { Q8: () => P });
-      var r = i(85556),
-        a = i(54842),
-        n = i(77936),
-        s = i(79545),
-        o = i(22520),
-        c = i(37563);
-      class l {
-        constructor(e) {
-          (this.m_nLastUpdated = 0),
-            (this.m_mapLanguages = a.LO.map()),
-            (this.m_fetching = null),
-            (this.m_appid = e);
-        }
-        GetAppID() {
-          return this.m_appid;
-        }
-        GetTokenList(e) {
-          return this.m_mapLanguages.has(e) ? this.m_mapLanguages.get(e) : null;
-        }
-        Localize(e, t) {
-          let i = c.De.LANGUAGE;
-          return p(
-            e,
-            this.GetTokenList(i),
-            "english" != i ? this.GetTokenList("english") : null,
-            this.m_appid,
-            t,
-          );
-        }
-        SubstituteParams(e, t) {
-          let i = c.De.LANGUAGE;
-          return u(
-            e,
-            this.GetTokenList(i),
-            "english" != i ? this.GetTokenList("english") : null,
-            this.m_appid,
-            t,
-          );
-        }
-      }
-      function p(e, t, i, r, a) {
-        if (!e.startsWith("#"))
-          return (
-            console.log(
-              "Token doesn't start with #:",
-              e,
-              "appid",
-              r,
-              "tokens",
-              t,
-            ),
-            ""
-          );
-        let n = e;
-        e = e.toLowerCase();
-        let s = "";
-        if (
-          (t && t.has(e) && (s = t.get(e)),
-          !s && i && i.has(e) && (s = i.get(e)),
-          s)
-        )
-          s = u(s, t, i, r, a);
-        else if (
-          ((t || i) &&
-            console.log(
-              "No loc found for appid",
-              r,
-              n,
-              "Tokens:",
-              t,
-              "Fallback:",
-              i,
-            ),
-          t && 1 != c.De.EUNIVERSE)
-        )
-          return e;
-        return s;
-      }
-      function u(e, t, i, r, a) {
-        let n = e.match(/{[A-za-z0-9_%#:]+}/g);
-        if (n)
-          for (let s of n) {
-            let n = p(d(s.slice(1, -1), a), t, i, r, a);
-            if (!n) return "";
-            e = e.replace(s, n);
-          }
-        return (e = d(e, a));
-      }
-      function d(e, t) {
-        let i = e.match(/%[A-Za-z0-9_:]+%/g);
-        if (i)
-          for (let r of i) {
-            let i = r.slice(1, -1).toLowerCase(),
-              a = t.get(i);
-            null == a
-              ? console.log("No rich presence found for", i)
-              : (e = e.replace(r, a));
-          }
-        return e;
-      }
-      var m = i(18015),
-        h = i(62210),
-        _ = i(45492);
-      class g {
-        constructor() {
-          (this.m_mapAppInfo = a.LO.map()),
-            (this.m_mapRichPresenceLoc = a.LO.map()),
-            (this.m_cAppInfoRequestsInFlight = 0),
-            (this.m_setPendingAppInfo = new Set()),
-            (this.m_CacheStorage = null),
-            (this.m_fnCallbackOnAppInfoLoaded = new _.pB()),
-            (0, a.rC)(this);
-        }
-        Init(e) {
-          this.m_CMInterface = e;
-        }
-        BHavePendingAppInfoRequests() {
-          return (
-            this.m_setPendingAppInfo.size > 0 ||
-            this.m_cAppInfoRequestsInFlight > 0
-          );
-        }
-        get CMInterface() {
-          return this.m_CMInterface;
-        }
-        RegisterCallbackOnLoad(e) {
-          if (!this.BHavePendingAppInfoRequests())
-            return (
-              (0, h.X)(
-                !1,
-                "Registering for callback on appinfo load, but nothing queued",
-              ),
-              void e()
-            );
-          this.m_fnCallbackOnAppInfoLoaded.Register(e);
-        }
-        IsLoadingAppID(e) {
-          return this.m_setPendingAppInfo.has(e);
-        }
-        GetAppInfo(e) {
-          if (
-            ((0, h.X)(
-              this.m_CMInterface,
-              "CAppInfoStore.GetAppInfo called before Init",
-            ),
-            !this.m_mapAppInfo.has(e))
-          ) {
-            let t = new o.Am(e);
-            this.m_mapAppInfo.set(e, t), this.QueueAppInfoRequest(e);
-          }
-          return this.m_mapAppInfo.get(e);
-        }
-        QueueAppInfoRequest(e) {
-          return e
-            ? (this.m_setPendingAppInfo.size ||
-                ((this.m_PendingAppInfoPromise = new Promise(
-                  (e) => (this.m_PendingAppInfoResolve = e),
-                )),
-                window.setTimeout(() => this.FlushPendingAppInfo(), 25)),
-              this.m_setPendingAppInfo.add(e),
-              this.m_PendingAppInfoPromise)
-            : Promise.resolve();
-        }
-        FlushPendingAppInfo() {
-          return (0, r.mG)(this, void 0, void 0, function* () {
-            const e = this.m_PendingAppInfoResolve,
-              t = Array.from(this.m_setPendingAppInfo);
-            (this.m_PendingAppInfoPromise = void 0),
-              (this.m_PendingAppInfoResolve = void 0),
-              this.m_setPendingAppInfo.clear(),
-              yield this.LoadAppInfoBatch(t),
-              null == e || e();
-          });
-        }
-        LoadAppInfoBatch(e) {
-          var t;
-          return (0, r.mG)(this, void 0, void 0, function* () {
-            this.m_cAppInfoRequestsInFlight++;
-            let i = yield this.LoadAppInfoBatchFromLocalCache(e);
-            if (i.length) {
-              console.log("Loading batch of App Info from Steam: ", i),
-                yield null === (t = this.m_CMInterface) || void 0 === t
-                  ? void 0
-                  : t.WaitUntilLoggedOn();
-              let e = s.gA.Init(m.Fi);
-              e.Body().set_language((0, n.jM)(c.De.LANGUAGE));
-              const r = 50;
-              for (; i.length > 0; ) {
-                const t = Math.min(r, i.length),
-                  a = i.slice(0, t);
-                (i = i.slice(t)), e.Body().set_appids(a);
-                const n = yield m.AE.GetApps(
-                  this.m_CMInterface.GetServiceTransport(),
-                  e,
-                );
-                1 == n.GetEResult()
-                  ? this.OnGetAppsResponse(n)
-                  : console.error(
-                      `Error when calling CommunityService.GetApps: EResult=${n.GetEResult()}, AppIDs:`,
-                      a,
-                    );
-              }
-            }
-            0 == --this.m_cAppInfoRequestsInFlight &&
-              0 == this.m_setPendingAppInfo.size &&
-              (this.m_fnCallbackOnAppInfoLoaded.Dispatch(),
-              this.m_fnCallbackOnAppInfoLoaded.ClearAllCallbacks());
-          });
-        }
-        OnGetAppsResponse(e) {
-          let t = [];
-          for (let i of e.Body().apps()) {
-            let e = this.m_mapAppInfo.get(i.appid());
-            (0, h.X)(
-              e,
-              `Got AppInfo response for unrequested AppID: ${i.appid()}`,
-            ),
-              e &&
-                ((e = new o.Am(i.appid())),
-                e.DeserializeFromMessage(i),
-                this.m_mapAppInfo.set(i.appid(), e),
-                t.push(e));
-          }
-          this.SaveAppInfoBatchToLocalCache(t);
-        }
-        OnAppOverviewChange(e) {
-          for (let t of e) {
-            const e = new o.Am(t.appid());
-            e.DeserializeFromAppOverview(t),
-              e.is_initialized && this.m_mapAppInfo.set(t.appid(), e);
-          }
-        }
-        EnsureAppInfoForAppIDs(e) {
-          return (0, r.mG)(this, void 0, void 0, function* () {
-            let t = !1;
-            return (
-              e.forEach((e) => {
-                let i = this.m_mapAppInfo.get(e);
-                i
-                  ? i.is_valid || (t = !0)
-                  : ((i = new o.Am(e)),
-                    this.m_mapAppInfo.set(e, i),
-                    this.QueueAppInfoRequest(e),
-                    (t = !0));
-              }),
-              t && void 0 !== this.m_PendingAppInfoPromise
-                ? this.m_PendingAppInfoPromise
-                : Promise.resolve()
-            );
-          });
-        }
-        SetCacheStorage(e) {
-          this.m_CacheStorage = e;
-        }
-        GetCacheKeyForAppID(e) {
-          return "APPINFO_" + e;
-        }
-        LoadAppInfoBatchFromLocalCache(e) {
-          return (0, r.mG)(this, void 0, void 0, function* () {
-            if (!this.m_CacheStorage) return e;
-            console.log("Loading batch of App Info from Local Cache: ", e);
-            const t = new Date(new Date().getTime() - 12096e5),
-              i = (e) =>
-                (0, r.mG)(this, void 0, void 0, function* () {
-                  var i;
-                  const r = yield null === (i = this.m_CacheStorage) ||
-                  void 0 === i
-                    ? void 0
-                    : i.GetObject(this.GetCacheKeyForAppID(e));
-                  if (!r) return e;
-                  let a = this.m_mapAppInfo.get(e);
-                  return (
-                    (0, h.X)(
-                      a,
-                      "Didn't find AppInfo in our map when loading from cache but it should've been there?",
-                    ),
-                    a
-                      ? ((a = new o.Am(e)),
-                        a.DeserializeFromCacheObject(r),
-                        a.is_initialized
-                          ? (this.m_mapAppInfo.set(e, a),
-                            a.time_updated_from_server < t ? e : null)
-                          : (console.warn(
-                              "Failed to deserialize cached App Info: ",
-                              e,
-                              r,
-                            ),
-                            e))
-                      : e
-                  );
-                });
-            let a = e.map((e) => i(e));
-            return (yield Promise.all(a)).filter((e) => null !== e);
-          });
-        }
-        SaveAppInfoBatchToLocalCache(e) {
-          return (0, r.mG)(this, void 0, void 0, function* () {
-            if (this.m_CacheStorage) {
-              console.log(
-                "Saving batch of App Info to Local Cache: ",
-                e.map((e) => e.appid),
-              );
-              for (const t of e) {
-                const e = t.SerializeToCacheObject();
-                e &&
-                  this.m_CacheStorage.StoreObject(
-                    this.GetCacheKeyForAppID(t.appid),
-                    e,
-                  );
-              }
-            }
-          });
-        }
-        Localize(e, t, i) {
-          const r = this.GetRichPresenceLoc(e);
-          return r
-            ? r.Localize(t, i)
-            : 1 != c.De.EUNIVERSE
-              ? (console.log(
-                  `Unable to find app localization information for app ${e} token ${t}, this may not have had a chance to load yet`,
-                ),
-                t)
-              : "";
-        }
-        GetRichPresenceLoc(e) {
-          if (this.m_mapRichPresenceLoc.has(e.toString())) {
-            let t = this.m_mapRichPresenceLoc.get(e.toString());
-            return (
-              t.m_nLastUpdated + 6e4 * o.x3 < Date.now() &&
-                this.QueueRichPresenceLocRequest(t),
-              t
-            );
-          }
-          let t = new l(e);
-          return (
-            this.m_mapRichPresenceLoc.set(e.toString(), t),
-            this.QueueRichPresenceLocRequest(t),
-            t
-          );
-        }
-        GetRichPresenceLocAsync(e) {
-          let t = this.GetRichPresenceLoc(e);
-          return t.m_nLastUpdated ? Promise.resolve(t) : t.m_fetching;
-        }
-        OnRichPresenceLocUpdate(e, t) {
-          e.m_nLastUpdated = Date.now();
-          for (let i of t) {
-            let t = i.language(),
-              r = e.m_mapLanguages.get(t);
-            r
-              ? r.clear()
-              : (e.m_mapLanguages.set(t, new Map()),
-                (r = e.m_mapLanguages.get(t)));
-            for (let e of i.tokens())
-              null == r || r.set(e.name().toLowerCase(), e.value());
-          }
-        }
-        QueueRichPresenceLocRequest(e) {
-          return (
-            e.m_fetching ||
-              ((e.m_fetching = this.m_CMInterface
-                .WaitUntilLoggedOn()
-                .then(() => {
-                  let t = s.gA.Init(m.tj);
-                  return (
-                    t.Body().set_appid(e.GetAppID()),
-                    t.Body().set_language(c.De.LANGUAGE),
-                    m.AE.GetAppRichPresenceLocalization(
-                      this.m_CMInterface.GetServiceTransport(),
-                      t,
-                    )
-                  );
-                })
-                .then(
-                  (t) => (
-                    (e.m_fetching = null),
-                    1 != t.GetEResult()
-                      ? Promise.reject()
-                      : (this.OnRichPresenceLocUpdate(
-                          e,
-                          t.Body().token_lists(),
-                        ),
-                        Promise.resolve(e))
-                  ),
-                )),
-              e.m_fetching.catch(() => {
-                e.m_fetching = null;
-              })),
-            e.m_fetching
-          );
-        }
-      }
-      (0, r.gn)([a.aD], g.prototype, "OnGetAppsResponse", null),
-        (0, r.gn)([a.aD], g.prototype, "OnRichPresenceLocUpdate", null);
-      const P = new g();
-    },
-    42411: (e, t, i) => {
-      i.d(t, { Pv: () => u, WV: () => l.W, sB: () => p });
-      var r = i(85556),
-        a = i(54842),
-        n = i(24289),
-        s = i(45944),
-        o = i(31846),
-        c = i(37563),
-        l = i(48760);
+    42411: (e, t, r) => {
+      r.d(t, { Pv: () => u, WV: () => l.W, sB: () => p });
+      var a = r(85556),
+        i = r(54842),
+        s = r(24289),
+        n = r(45944),
+        c = r(31846),
+        o = r(37563),
+        l = r(48760);
       function p(e) {
         let t = "offline";
         return (
@@ -426,34 +28,34 @@
         );
       }
       class u {
+        m_steamid;
+        m_bInitialized = !1;
+        m_ePersonaState = 0;
+        m_unGamePlayedAppID = 0;
+        m_gameid = "0";
+        m_unPersonaStateFlags = 0;
+        m_strPlayerName = "";
+        m_strAvatarHash = l.W;
+        m_strAccountName = "";
+        m_rtLastSeenOnline = 0;
+        m_strGameExtraInfo = "";
+        m_unGameServerIP = 0;
+        m_unGameServerPort = 0;
+        m_game_lobby_id = "";
+        m_bPlayerNamePending = !1;
+        m_bAvatarPending = !1;
+        m_broadcastId = void 0;
+        m_broadcastAccountId = void 0;
+        m_broadcastAppId = void 0;
+        m_broadcastViewerCount = void 0;
+        m_strBroadcastTitle = void 0;
+        m_bCommunityBanned = void 0;
+        m_mapRichPresence = i.LO.map();
+        m_bNameInitialized = !1;
+        m_bStatusInitialized = !1;
+        m_strProfileURL = void 0;
         constructor(e) {
-          (this.m_bInitialized = !1),
-            (this.m_ePersonaState = 0),
-            (this.m_unGamePlayedAppID = 0),
-            (this.m_gameid = "0"),
-            (this.m_unPersonaStateFlags = 0),
-            (this.m_strPlayerName = ""),
-            (this.m_strAvatarHash = l.W),
-            (this.m_strAccountName = ""),
-            (this.m_rtLastSeenOnline = 0),
-            (this.m_strGameExtraInfo = ""),
-            (this.m_unGameServerIP = 0),
-            (this.m_unGameServerPort = 0),
-            (this.m_game_lobby_id = ""),
-            (this.m_bPlayerNamePending = !1),
-            (this.m_bAvatarPending = !1),
-            (this.m_broadcastId = void 0),
-            (this.m_broadcastAccountId = void 0),
-            (this.m_broadcastAppId = void 0),
-            (this.m_broadcastViewerCount = void 0),
-            (this.m_strBroadcastTitle = void 0),
-            (this.m_bCommunityBanned = void 0),
-            (this.m_mapRichPresence = a.LO.map()),
-            (this.m_bNameInitialized = !1),
-            (this.m_bStatusInitialized = !1),
-            (this.m_strProfileURL = void 0),
-            (0, a.rC)(this),
-            (this.m_steamid = e);
+          (0, i.rC)(this), (this.m_steamid = e);
         }
         Reset() {
           (this.m_ePersonaState = 0),
@@ -496,14 +98,7 @@
           );
         }
         get has_joinable_game_flag() {
-          var e;
-          return (
-            0 !=
-            (2 &
-              (null !== (e = this.m_unPersonaStateFlags) && void 0 !== e
-                ? e
-                : 0))
-          );
+          return 0 != (2 & (this.m_unPersonaStateFlags ?? 0));
         }
         get connect_string() {
           return this.m_mapRichPresence.get("connect");
@@ -518,14 +113,7 @@
           return 3 == this.m_ePersonaState || 4 == this.m_ePersonaState;
         }
         HasStateFlag(e) {
-          var t;
-          return (
-            0 !=
-            ((null !== (t = this.m_unPersonaStateFlags) && void 0 !== t
-              ? t
-              : 0) &
-              e)
-          );
+          return 0 != ((this.m_unPersonaStateFlags ?? 0) & e);
         }
         get last_seen_online() {
           return this.m_rtLastSeenOnline;
@@ -540,28 +128,28 @@
           return this.m_strGameExtraInfo
             ? this.m_strGameExtraInfo
             : this.m_unGamePlayedAppID
-              ? s.Q8.GetAppInfo(this.m_unGamePlayedAppID).name
+              ? n.Q8.GetAppInfo(this.m_unGamePlayedAppID).name
               : "";
         }
         GetCurrentGameIconURL() {
           return this.m_unGamePlayedAppID
-            ? s.Q8.GetAppInfo(this.m_unGamePlayedAppID).icon_url
+            ? n.Q8.GetAppInfo(this.m_unGamePlayedAppID).icon_url
             : "";
         }
         GetCurrentGameLogoURL() {
           return this.m_unGamePlayedAppID
-            ? s.Q8.GetAppInfo(this.m_unGamePlayedAppID).logo_url
+            ? n.Q8.GetAppInfo(this.m_unGamePlayedAppID).logo_url
             : "";
         }
         GetBroadcastGameLogoURL() {
           return this.m_broadcastAppId
-            ? s.Q8.GetAppInfo(this.m_broadcastAppId).logo_url
+            ? n.Q8.GetAppInfo(this.m_broadcastAppId).logo_url
             : "";
         }
         BIsAppInfoReady() {
           return (
             !this.m_unGamePlayedAppID ||
-            s.Q8.GetAppInfo(this.m_unGamePlayedAppID).is_initialized
+            n.Q8.GetAppInfo(this.m_unGamePlayedAppID).is_initialized
           );
         }
         HasCurrentGameRichPresence() {
@@ -576,31 +164,31 @@
         }
         GetCurrentGameRichPresence() {
           if (this.HasCurrentGameRichPresence()) {
-            let e = s.Q8.GetRichPresenceLoc(this.m_unGamePlayedAppID);
+            let e = n.Q8.GetRichPresenceLoc(this.m_unGamePlayedAppID);
             if (e) {
               let t = this.m_mapRichPresence.get("steam_display");
               return e.Localize(t, this.m_mapRichPresence);
             }
           } else if (this.HasStateFlag(8))
-            return (0, o.Xx)("#PersonaStateRemotePlayTogether");
+            return (0, c.Xx)("#PersonaStateRemotePlayTogether");
           return "";
         }
         GetOfflineStatusUpdateRate() {
           if (0 == this.last_seen_online) return 3e4;
           const e = 3600;
           let t = 1e3;
-          const i = s.Q8.CMInterface.GetServerRTime32() - this.last_seen_online;
-          return (t *= i > 86400 ? e : i > 7200 ? 60 : 15), t;
+          const r = n.Q8.CMInterface.GetServerRTime32() - this.last_seen_online;
+          return (t *= r > 86400 ? e : r > 7200 ? 60 : 15), t;
         }
         GetOfflineStatusTime() {
           if (0 == this.last_seen_online)
-            return (0, o.Xx)("#PersonaStateOffline");
+            return (0, c.Xx)("#PersonaStateOffline");
           let e = this.GetOfflineStatusUpdateRate();
-          (!c.De.IN_MOBILE || e <= 60) && (0, n.zO)(e);
-          let t = s.Q8.CMInterface.GetServerRTime32() - this.last_seen_online;
+          (!o.De.IN_MOBILE || e <= 60) && (0, s.zO)(e);
+          let t = n.Q8.CMInterface.GetServerRTime32() - this.last_seen_online;
           return t < 60
-            ? (0, o.Xx)("#PersonaStateLastSeen_JustNow")
-            : (0, o.Xx)("#PersonaStateLastSeen", (0, o.yW)(t));
+            ? (0, c.Xx)("#PersonaStateLastSeen_JustNow")
+            : (0, c.Xx)("#PersonaStateLastSeen", (0, c.yW)(t));
         }
         GetLocalizedOnlineStatus() {
           switch (this.m_ePersonaState) {
@@ -608,17 +196,17 @@
             case 7:
               return this.GetOfflineStatusTime();
             case 1:
-              return (0, o.Xx)("#PersonaStateOnline");
+              return (0, c.Xx)("#PersonaStateOnline");
             case 2:
-              return (0, o.Xx)("#PersonaStateBusy");
+              return (0, c.Xx)("#PersonaStateBusy");
             case 3:
-              return (0, o.Xx)("#PersonaStateAway");
+              return (0, c.Xx)("#PersonaStateAway");
             case 4:
-              return (0, o.Xx)("#PersonaStateSnooze");
+              return (0, c.Xx)("#PersonaStateSnooze");
             case 5:
-              return (0, o.Xx)("#PersonaStateLookingToTrade");
+              return (0, c.Xx)("#PersonaStateLookingToTrade");
             case 6:
-              return (0, o.Xx)("#PersonaStateLookingToPlay");
+              return (0, c.Xx)("#PersonaStateLookingToPlay");
             default:
               return "";
           }
@@ -659,273 +247,245 @@
         get avatar_url_full() {
           return (0, l.U)(this.m_strAvatarHash, "full");
         }
-        static SortStatusComparator(e, t, i) {
+        static SortStatusComparator(e, t, r) {
           if (t.has_public_party_beacon) {
-            if (!i.has_public_party_beacon) return -1;
+            if (!r.has_public_party_beacon) return -1;
           } else {
-            if (i.has_public_party_beacon) return 1;
+            if (r.has_public_party_beacon) return 1;
             if (t.is_ingame) {
-              if (!i.is_ingame) return -1;
+              if (!r.is_ingame) return -1;
               if (!e) return 0;
               if (t.is_awayOrSnooze) {
-                if (!i.is_awayOrSnooze) return 1;
-              } else if (i.is_awayOrSnooze) return -1;
-            } else if (i.is_ingame) return 1;
+                if (!r.is_awayOrSnooze) return 1;
+              } else if (r.is_awayOrSnooze) return -1;
+            } else if (r.is_ingame) return 1;
           }
           if (t.is_online) {
-            if (!i.is_online) return -1;
-          } else if (i.is_online) return 1;
+            if (!r.is_online) return -1;
+          } else if (r.is_online) return 1;
           if (e)
             if (t.is_awayOrSnooze) {
-              if (!i.is_awayOrSnooze) return 1;
-            } else if (i.is_awayOrSnooze) return -1;
+              if (!r.is_awayOrSnooze) return 1;
+            } else if (r.is_awayOrSnooze) return -1;
           return 0;
         }
         GetCommunityProfileURL() {
           return this.m_strProfileURL
-            ? `${c.De.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
-            : `${c.De.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
+            ? `${o.De.COMMUNITY_BASE_URL}id/${this.m_strProfileURL}/`
+            : `${o.De.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
         }
       }
-      (0, r.gn)([a.LO], u.prototype, "m_bInitialized", void 0),
-        (0, r.gn)([a.LO], u.prototype, "m_ePersonaState", void 0),
-        (0, r.gn)([a.LO], u.prototype, "m_unGamePlayedAppID", void 0),
-        (0, r.gn)([a.LO], u.prototype, "m_gameid", void 0),
-        (0, r.gn)([a.LO], u.prototype, "m_unPersonaStateFlags", void 0),
-        (0, r.gn)([a.LO], u.prototype, "m_strPlayerName", void 0),
-        (0, r.gn)([a.LO], u.prototype, "m_strAvatarHash", void 0),
-        (0, r.gn)([a.LO], u.prototype, "m_strAccountName", void 0),
-        (0, r.gn)([a.LO], u.prototype, "m_rtLastSeenOnline", void 0),
-        (0, r.gn)([a.LO], u.prototype, "m_strGameExtraInfo", void 0),
-        (0, r.gn)([a.LO], u.prototype, "m_unGameServerIP", void 0),
-        (0, r.gn)([a.LO], u.prototype, "m_unGameServerPort", void 0),
-        (0, r.gn)([a.LO], u.prototype, "m_game_lobby_id", void 0),
-        (0, r.gn)([a.LO], u.prototype, "m_bPlayerNamePending", void 0),
-        (0, r.gn)([a.LO], u.prototype, "m_bAvatarPending", void 0),
-        (0, r.gn)([a.LO], u.prototype, "m_broadcastId", void 0),
-        (0, r.gn)([a.LO], u.prototype, "m_broadcastAccountId", void 0),
-        (0, r.gn)([a.LO], u.prototype, "m_broadcastAppId", void 0),
-        (0, r.gn)([a.LO], u.prototype, "m_broadcastViewerCount", void 0),
-        (0, r.gn)([a.LO], u.prototype, "m_strBroadcastTitle", void 0),
-        (0, r.gn)([a.LO], u.prototype, "m_bCommunityBanned", void 0);
+      (0, a.gn)([i.LO], u.prototype, "m_bInitialized", void 0),
+        (0, a.gn)([i.LO], u.prototype, "m_ePersonaState", void 0),
+        (0, a.gn)([i.LO], u.prototype, "m_unGamePlayedAppID", void 0),
+        (0, a.gn)([i.LO], u.prototype, "m_gameid", void 0),
+        (0, a.gn)([i.LO], u.prototype, "m_unPersonaStateFlags", void 0),
+        (0, a.gn)([i.LO], u.prototype, "m_strPlayerName", void 0),
+        (0, a.gn)([i.LO], u.prototype, "m_strAvatarHash", void 0),
+        (0, a.gn)([i.LO], u.prototype, "m_strAccountName", void 0),
+        (0, a.gn)([i.LO], u.prototype, "m_rtLastSeenOnline", void 0),
+        (0, a.gn)([i.LO], u.prototype, "m_strGameExtraInfo", void 0),
+        (0, a.gn)([i.LO], u.prototype, "m_unGameServerIP", void 0),
+        (0, a.gn)([i.LO], u.prototype, "m_unGameServerPort", void 0),
+        (0, a.gn)([i.LO], u.prototype, "m_game_lobby_id", void 0),
+        (0, a.gn)([i.LO], u.prototype, "m_bPlayerNamePending", void 0),
+        (0, a.gn)([i.LO], u.prototype, "m_bAvatarPending", void 0),
+        (0, a.gn)([i.LO], u.prototype, "m_broadcastId", void 0),
+        (0, a.gn)([i.LO], u.prototype, "m_broadcastAccountId", void 0),
+        (0, a.gn)([i.LO], u.prototype, "m_broadcastAppId", void 0),
+        (0, a.gn)([i.LO], u.prototype, "m_broadcastViewerCount", void 0),
+        (0, a.gn)([i.LO], u.prototype, "m_strBroadcastTitle", void 0),
+        (0, a.gn)([i.LO], u.prototype, "m_bCommunityBanned", void 0);
     },
-    51915: (e, t, i) => {
-      i.d(t, { IE: () => _, Qv: () => P, vP: () => g });
-      var r = i(85556),
-        a = i(73799),
-        n = i.n(a),
-        s = i(47427),
-        o = i(42718),
-        c = i(79545),
-        l = i(40057),
-        p = i(90938),
-        u = i(42411),
-        d = i(35427),
-        m = i(82182),
-        h = i(2041);
+    51915: (e, t, r) => {
+      r.d(t, { IE: () => _, Qv: () => g, vP: () => P });
+      var a = r(73799),
+        i = r.n(a),
+        s = r(47427),
+        n = r(42718),
+        c = r(79545),
+        o = r(40057),
+        l = r(90938),
+        p = r(42411),
+        u = r(35427),
+        m = r(82182),
+        d = r(2041);
       function _(e) {
-        const t = (0, l.bY)(),
-          i = s.useContext(f);
-        return (0, o.useQuery)(v(i, t, e));
-      }
-      function g(e) {
-        const t = (0, l.bY)(),
-          i = s.useContext(f);
-        return (0, o.useQueries)(e.map((e) => v(i, t, e)));
+        const t = (0, o.bY)(),
+          r = s.useContext(h);
+        return (0, n.useQuery)(f(r, t, e));
       }
       function P(e) {
-        return h.U.getQueryData(["PlayerSummary", e]);
+        const t = (0, o.bY)(),
+          r = s.useContext(h);
+        return (0, n.useQueries)(e.map((e) => f(r, t, e)));
       }
-      const f = s.createContext({
-        loadPersonaState: (e, t) =>
-          (0, r.mG)(void 0, void 0, void 0, function* () {
-            if (null == e) return null;
-            const i = yield (function (e) {
-              G ||
-                (G = new (n())(
-                  (t) =>
-                    (0, r.mG)(this, void 0, void 0, function* () {
-                      const i = c.gA.Init(m.oh);
-                      i.Body().set_steamids(
-                        t.map((e) =>
-                          d.K.InitFromAccountID(e).ConvertTo64BitString(),
-                        ),
-                      );
-                      const r = yield m.lk.GetPlayerLinkDetails(e, i);
-                      if (!r.BSuccess())
-                        throw `Failed to load player link details: ${r.GetErrorMessage()}`;
-                      const a = new Map();
-                      return (
-                        r
-                          .Body()
-                          .accounts()
-                          .forEach((e) => {
-                            var t;
-                            const i = e.toObject();
-                            a.set(
-                              new d.K(
-                                null === (t = i.public_data) || void 0 === t
-                                  ? void 0
-                                  : t.steamid,
-                              ).GetAccountID(),
-                              i,
-                            );
-                          }),
-                        t.map((e) => a.get(e))
-                      );
-                    }),
-                  { maxBatchSize: 100 },
-                ));
-              return G;
-            })(t).load(e);
-            return (function (e, t) {
-              var i, r;
-              let a = new u.Pv(e);
-              const n = null == t ? void 0 : t.public_data,
-                s = null == t ? void 0 : t.private_data;
-              (a.m_bInitialized = !!t),
-                (a.m_ePersonaState =
-                  null !== (i = null == s ? void 0 : s.persona_state) &&
-                  void 0 !== i
-                    ? i
-                    : 0),
-                (a.m_strAvatarHash = (null == n ? void 0 : n.sha_digest_avatar)
-                  ? (0, p.BH)(n.sha_digest_avatar)
-                  : u.WV),
-                (a.m_strPlayerName =
-                  null !== (r = null == n ? void 0 : n.persona_name) &&
-                  void 0 !== r
-                    ? r
-                    : e.ConvertTo64BitString()),
-                (a.m_strAccountName = null == s ? void 0 : s.account_name),
-                (null == s ? void 0 : s.persona_state_flags) &&
-                  (a.m_unPersonaStateFlags =
-                    null == s ? void 0 : s.persona_state_flags);
-              (null == s ? void 0 : s.game_id) &&
-                (a.m_gameid = null == s ? void 0 : s.game_id);
-              (null == s ? void 0 : s.game_server_ip_address) &&
-                (a.m_unGameServerIP =
-                  null == s ? void 0 : s.game_server_ip_address);
-              (null == s ? void 0 : s.lobby_steam_id) &&
-                (a.m_game_lobby_id = null == s ? void 0 : s.lobby_steam_id);
-              (null == s ? void 0 : s.game_extra_info) &&
-                (a.m_strGameExtraInfo = null == s ? void 0 : s.game_extra_info);
-              (null == n ? void 0 : n.profile_url) &&
-                (a.m_strProfileURL = n.profile_url);
-              return a;
-            })(d.K.InitFromAccountID(e), i);
-          }),
+      function g(e) {
+        return d.U.getQueryData(["PlayerSummary", e]);
+      }
+      const h = s.createContext({
+        loadPersonaState: async (e, t) => {
+          if (null == e) return null;
+          const r = await (function (e) {
+            y ||
+              (y = new (i())(
+                async (t) => {
+                  const r = c.gA.Init(m.oh);
+                  r.Body().set_steamids(
+                    t.map((e) =>
+                      u.K.InitFromAccountID(e).ConvertTo64BitString(),
+                    ),
+                  );
+                  const a = await m.lk.GetPlayerLinkDetails(e, r);
+                  if (!a.BSuccess())
+                    throw `Failed to load player link details: ${a.GetErrorMessage()}`;
+                  const i = new Map();
+                  return (
+                    a
+                      .Body()
+                      .accounts()
+                      .forEach((e) => {
+                        const t = e.toObject();
+                        i.set(
+                          new u.K(t.public_data?.steamid).GetAccountID(),
+                          t,
+                        );
+                      }),
+                    t.map((e) => i.get(e))
+                  );
+                },
+                { maxBatchSize: 100 },
+              ));
+            return y;
+          })(t).load(e);
+          return (function (e, t) {
+            let r = new p.Pv(e);
+            const a = t?.public_data,
+              i = t?.private_data;
+            (r.m_bInitialized = !!t),
+              (r.m_ePersonaState = i?.persona_state ?? 0),
+              (r.m_strAvatarHash = a?.sha_digest_avatar
+                ? (0, l.BH)(a.sha_digest_avatar)
+                : p.WV),
+              (r.m_strPlayerName = a?.persona_name ?? e.ConvertTo64BitString()),
+              (r.m_strAccountName = i?.account_name),
+              i?.persona_state_flags &&
+                (r.m_unPersonaStateFlags = i?.persona_state_flags);
+            i?.game_id && (r.m_gameid = i?.game_id);
+            i?.game_server_ip_address &&
+              (r.m_unGameServerIP = i?.game_server_ip_address);
+            i?.lobby_steam_id && (r.m_game_lobby_id = i?.lobby_steam_id);
+            i?.game_extra_info && (r.m_strGameExtraInfo = i?.game_extra_info);
+            a?.profile_url && (r.m_strProfileURL = a.profile_url);
+            return r;
+          })(u.K.InitFromAccountID(e), r);
+        },
       });
-      function v(e, t, i) {
-        const r = "string" == typeof i ? new d.K(i).GetAccountID() : i;
+      function f(e, t, r) {
+        const a = "string" == typeof r ? new u.K(r).GetAccountID() : r;
         return {
-          queryKey: ["PlayerSummary", r],
-          queryFn: () => e.loadPersonaState(r, t),
-          enabled: !!r,
+          queryKey: ["PlayerSummary", a],
+          queryFn: () => e.loadPersonaState(a, t),
+          enabled: !!a,
         };
       }
-      let G;
+      let y;
     },
-    9781: (e, t, i) => {
-      i.d(t, { N: () => u, a: () => p });
-      var r = i(85556),
-        a = i(47427),
-        n = i(77581),
-        s = i(15690),
-        o = i(29480),
-        c = i(62210),
-        l = i(37563);
-      function p(e = !1) {
-        return (0, r.mG)(this, void 0, void 0, function* () {
-          if (e && s.Z.BIsInitialized()) return;
-          const t = (0, l.kQ)(
-            "partnerbrowse_webapi_token",
-            "application_config",
-          );
-          (0, c.X)(Boolean(t), "require partnerbrowse_webapi_token");
-          const i = new n.J(l.De.WEBAPI_BASE_URL, t);
-          return (
-            ("dev" != l.De.WEB_UNIVERSE && "beta" != l.De.WEB_UNIVERSE) ||
-              console.log(
-                "DEV_DEBUG: Initializing CStoreItemCache with access token",
-                t,
-              ),
-            s.Z.Initialize(i, l.L7.is_partner_member)
-          );
-        });
+    9781: (e, t, r) => {
+      r.d(t, { N: () => p, a: () => l });
+      var a = r(47427),
+        i = r(77581),
+        s = r(15690),
+        n = r(29480),
+        c = r(62210),
+        o = r(37563);
+      async function l(e = !1) {
+        if (e && s.Z.BIsInitialized()) return;
+        const t = (0, o.kQ)("partnerbrowse_webapi_token", "application_config");
+        (0, c.X)(Boolean(t), "require partnerbrowse_webapi_token");
+        const r = new i.J(o.De.WEBAPI_BASE_URL, t);
+        return (
+          ("dev" != o.De.WEB_UNIVERSE && "beta" != o.De.WEB_UNIVERSE) ||
+            console.log(
+              "DEV_DEBUG: Initializing CStoreItemCache with access token",
+              t,
+            ),
+          s.Z.Initialize(r, o.L7.is_partner_member)
+        );
       }
-      function u() {
-        const e = (0, o.T)("usePartnerStoreBrowseAPI"),
-          [t, i] = (0, a.useState)(!1);
+      function p() {
+        const e = (0, n.T)("usePartnerStoreBrowseAPI"),
+          [t, r] = (0, a.useState)(!1);
         return (
           (0, a.useEffect)(() => {
-            p().then(() => {
-              var t;
-              (null === (t = null == e ? void 0 : e.token) || void 0 === t
-                ? void 0
-                : t.reason) || i(!0);
+            l().then(() => {
+              e?.token?.reason || r(!0);
             });
           }, []),
           t
         );
       }
     },
-    98061: (e, t, i) => {
-      i.d(t, {
-        $D: () => _,
-        AM: () => h,
-        Gd: () => m,
+    98061: (e, t, r) => {
+      r.d(t, {
+        $D: () => P,
+        AM: () => _,
+        Gd: () => d,
         MQ: () => l,
         NR: () => u,
-        ew: () => o,
-        vB: () => d,
+        ew: () => c,
+        vB: () => m,
         z: () => p,
       });
-      var r = i(47427),
-        a = i(45492),
-        n = i(20417),
-        s = i(37563);
-      const o = "pn";
-      class c {
+      var a = r(47427),
+        i = r(45492),
+        s = r(20417),
+        n = r(37563);
+      const c = "pn";
+      class o {
+        m_rgPackageIDs;
+        m_rgPackageData;
+        m_mapPackageData;
+        m_rgVisiblePackageIDs = [];
+        m_visiblePackageIDsCallbackList = new i.pB();
+        static s_Singleton;
         static Get() {
           return (
-            c.s_Singleton || ((c.s_Singleton = new c()), c.s_Singleton.Init()),
-            c.s_Singleton
+            o.s_Singleton || ((o.s_Singleton = new o()), o.s_Singleton.Init()),
+            o.s_Singleton
           );
         }
         constructor() {
-          (this.m_rgVisiblePackageIDs = []),
-            (this.m_visiblePackageIDsCallbackList = new a.pB()),
-            "dev" == s.De.WEB_UNIVERSE && (window.g_PackageGridStore = this);
+          "dev" == n.De.WEB_UNIVERSE && (window.g_PackageGridStore = this);
         }
         Init() {
-          let e = (0, s.kQ)("package_data", "application_config");
+          let e = (0, n.kQ)("package_data", "application_config");
           e
             ? ((this.m_rgPackageIDs = e.map((e) => e.packageid)),
               (this.m_rgPackageData = e),
               (this.m_mapPackageData = new Map(e.map((e) => [e.packageid, e]))))
-            : ((this.m_rgPackageIDs = (0, s.kQ)(
+            : ((this.m_rgPackageIDs = (0, n.kQ)(
                 "package_ids",
                 "application_config",
               )),
               (this.m_mapPackageData = new Map())),
-            ("dev" != s.De.WEB_UNIVERSE && "beta" != s.De.WEB_UNIVERSE) ||
+            ("dev" != n.De.WEB_UNIVERSE && "beta" != n.De.WEB_UNIVERSE) ||
               console.log(
                 "DEV_DEBUG: CPackageGridStore loading payload: ",
                 this.m_rgPackageIDs,
               ),
-            "dev" != s.De.WEB_UNIVERSE ||
+            "dev" != n.De.WEB_UNIVERSE ||
               Array.isArray(this.m_rgPackageIDs) ||
               console.error("CPackageGridStore Invalid payload");
         }
         UpdatePackageNameSearchState(e) {
           const t = e.getHeaderFilterValue("packageName"),
-            i = new URL(window.location.href);
-          t != decodeURIComponent(i.searchParams.get(o)) &&
+            r = new URL(window.location.href);
+          t != decodeURIComponent(r.searchParams.get(c)) &&
             (t
-              ? i.searchParams.set(o, encodeURIComponent(t))
-              : i.searchParams.delete(o),
-            window.history.replaceState({}, "", i.toString()));
+              ? r.searchParams.set(c, encodeURIComponent(t))
+              : r.searchParams.delete(c),
+            window.history.replaceState({}, "", r.toString()));
         }
         UpdateVisiblePackageList(e) {
           const t = e.getGroups("visible").filter((e) => e.isVisible());
@@ -944,80 +504,96 @@
         }
       }
       function l() {
-        return c.Get().m_rgPackageIDs;
+        return o.Get().m_rgPackageIDs;
       }
       function p() {
-        return c.Get().m_rgPackageIDs;
+        return o.Get().m_rgPackageIDs;
       }
       function u() {
-        return c.Get().m_rgPackageData;
+        return o.Get().m_rgPackageData;
       }
-      function d(e) {
-        let t = c.Get().m_mapPackageData.get(e);
+      function m(e) {
+        let t = o.Get().m_mapPackageData.get(e);
         return t ? t.package_name : e.toString();
       }
-      function m() {
-        return r.useCallback((e) => c.Get().UpdateVisiblePackageList(e), []);
-      }
-      function h() {
-        const [e, t] = r.useState(c.Get().m_rgVisiblePackageIDs);
-        return (0, n.Qg)(c.Get().m_visiblePackageIDsCallbackList, t), e;
+      function d() {
+        return a.useCallback((e) => o.Get().UpdateVisiblePackageList(e), []);
       }
       function _() {
-        return r.useMemo(
-          () => (0, s.kQ)("publisherid", "application_config"),
+        const [e, t] = a.useState(o.Get().m_rgVisiblePackageIDs);
+        return (0, s.Qg)(o.Get().m_visiblePackageIDsCallbackList, t), e;
+      }
+      function P() {
+        return a.useMemo(
+          () => (0, n.kQ)("publisherid", "application_config"),
           [],
         );
       }
     },
-    66263: (e, t, i) => {
-      i.d(t, {
+    66263: (e, t, r) => {
+      r.d(t, {
         $w: () => K,
-        AN: () => X,
-        FR: () => I,
-        HV: () => v,
-        HX: () => Q,
-        OB: () => T,
-        OG: () => x,
-        Ol: () => D,
-        PP: () => S,
+        AN: () => $,
+        FR: () => v,
+        HV: () => y,
+        HX: () => T,
+        OB: () => Q,
+        OG: () => F,
+        Ol: () => I,
+        PP: () => k,
         R2: () => M,
-        Rs: () => F,
-        Tj: () => b,
-        We: () => H,
-        X1: () => E,
+        Rs: () => x,
+        Tj: () => S,
+        We: () => j,
+        X1: () => w,
         _w: () => f,
-        bS: () => z,
-        dU: () => L,
-        df: () => W,
-        h3: () => R,
-        j_: () => q,
-        ju: () => B,
-        np: () => Z,
+        bS: () => W,
+        dU: () => C,
+        df: () => z,
+        h3: () => A,
+        j_: () => X,
+        ju: () => R,
+        np: () => Y,
         on: () => N,
-        ps: () => w,
-        qH: () => C,
-        rX: () => O,
-        sN: () => $,
-        tu: () => A,
-        uT: () => j,
-        xm: () => Y,
+        ps: () => B,
+        qH: () => L,
+        rX: () => E,
+        sN: () => q,
+        tu: () => O,
+        uT: () => H,
+        xm: () => Z,
         yh: () => V,
       });
-      var r = i(85556),
-        a = i(80751),
-        n = i.n(a),
-        s = i(47427),
-        o = i(54842),
-        c = i(16649),
-        l = i(45492),
-        p = i(20417),
-        u = i(45284),
-        d = i(37563),
-        m = i(98061),
-        h = i(30750),
-        _ = i(62210);
+      var a = r(85556),
+        i = r(80751),
+        s = r.n(i),
+        n = r(47427),
+        c = r(54842),
+        o = r(16649),
+        l = r(45492),
+        p = r(20417),
+        u = r(45284),
+        m = r(37563),
+        d = r(98061),
+        _ = r(30750),
+        P = r(62210);
       class g {
+        m_mapPackagePrice = new Map();
+        m_setRecurringSubscriptions = new Set();
+        m_mapPriceProposals = new Map();
+        m_mapLocalPackagePriceOverrides = new Map();
+        m_mapPriceGridCellCallbackList = new Map();
+        m_mapPackageOverridesCallbackList = new Map();
+        m_allPriceOverridesCallbackList = new l.pB();
+        m_mapOverridesPerPriceKey = new Map();
+        m_mapCurrencyData = new Map();
+        m_mapPriceKeyDescriptions = new Map();
+        m_rgKnownPriceKeys;
+        m_mapPriceGuidelines = new Map();
+        m_rgPriceLevels = [];
+        m_strDisplayPriceKey = "USD";
+        m_displayPriceKeyCallbackList = new l.pB();
+        static s_Singleton;
         static Get() {
           return (
             g.s_Singleton || ((g.s_Singleton = new g()), g.s_Singleton.Init()),
@@ -1025,28 +601,14 @@
           );
         }
         constructor() {
-          (this.m_mapPackagePrice = new Map()),
-            (this.m_setRecurringSubscriptions = new Set()),
-            (this.m_mapPriceProposals = new Map()),
-            (this.m_mapLocalPackagePriceOverrides = new Map()),
-            (this.m_mapPriceGridCellCallbackList = new Map()),
-            (this.m_mapPackageOverridesCallbackList = new Map()),
-            (this.m_allPriceOverridesCallbackList = new l.pB()),
-            (this.m_mapOverridesPerPriceKey = new Map()),
-            (this.m_mapCurrencyData = new Map()),
-            (this.m_mapPriceKeyDescriptions = new Map()),
-            (this.m_mapPriceGuidelines = new Map()),
-            (this.m_rgPriceLevels = []),
-            (this.m_strDisplayPriceKey = "USD"),
-            (this.m_displayPriceKeyCallbackList = new l.pB()),
-            (0, o.rC)(this),
-            "dev" == d.De.WEB_UNIVERSE && (window.g_PackagePricingStore = this);
+          (0, c.rC)(this),
+            "dev" == m.De.WEB_UNIVERSE && (window.g_PackagePricingStore = this);
         }
         Init() {
           const e = new Set(),
-            t = (0, d.kQ)("base_prices", "application_config");
+            t = (0, m.kQ)("base_prices", "application_config");
           if (
-            (("dev" != d.De.WEB_UNIVERSE && "beta" != d.De.WEB_UNIVERSE) ||
+            (("dev" != m.De.WEB_UNIVERSE && "beta" != m.De.WEB_UNIVERSE) ||
               console.log(
                 "DEV_DEBUG: CPackagePricingStore loading base price payload: ",
                 t,
@@ -1054,108 +616,108 @@
             t)
           )
             if (this.BIsPricePayloadValid(t))
-              for (let i in t) {
-                const r = t[i],
-                  a = parseInt(i),
-                  n = new Map();
-                this.m_mapPackagePrice.set(a, n);
-                for (let t in r) e.add(t.toUpperCase()), n.set(t, r[t]);
+              for (let r in t) {
+                const a = t[r],
+                  i = parseInt(r),
+                  s = new Map();
+                this.m_mapPackagePrice.set(i, s);
+                for (let t in a) e.add(t.toUpperCase()), s.set(t, a[t]);
               }
             else
-              "dev" == d.De.WEB_UNIVERSE &&
+              "dev" == m.De.WEB_UNIVERSE &&
                 console.error("Invalid base price payload");
-          const i = (0, d.kQ)("recurring_subs", "application_config");
+          const r = (0, m.kQ)("recurring_subs", "application_config");
           if (
-            (("dev" != d.De.WEB_UNIVERSE && "beta" != d.De.WEB_UNIVERSE) ||
+            (("dev" != m.De.WEB_UNIVERSE && "beta" != m.De.WEB_UNIVERSE) ||
               console.log(
                 "DEV_DEBUG: CPackagePricingStore loading recurring subscriptions payload: ",
-                i,
-              ),
-            i)
-          )
-            if (Array.isArray(i))
-              for (const e of i) this.m_setRecurringSubscriptions.add(e);
-            else
-              "dev" == d.De.WEB_UNIVERSE &&
-                console.error("Invalid recurring subscriptions payload");
-          const r = (0, d.kQ)("pending_proposals", "application_config");
-          if (
-            (("dev" != d.De.WEB_UNIVERSE && "beta" != d.De.WEB_UNIVERSE) ||
-              console.log(
-                "DEV_DEBUG: CPackagePricingStore loading pending price proposal payload: ",
                 r,
               ),
             r)
           )
-            if (this.BIsPendingPricePayloadValid(r))
-              for (let e in r) {
-                const t = r[e],
-                  i = parseInt(e);
-                this.m_mapPriceProposals.set(i, t);
-              }
+            if (Array.isArray(r))
+              for (const e of r) this.m_setRecurringSubscriptions.add(e);
             else
-              "dev" == d.De.WEB_UNIVERSE &&
-                console.error("Invalid pending price proposal payload");
-          const a = (0, d.kQ)("pricing_guidelines", "application_config");
+              "dev" == m.De.WEB_UNIVERSE &&
+                console.error("Invalid recurring subscriptions payload");
+          const a = (0, m.kQ)("pending_proposals", "application_config");
           if (
-            (("dev" != d.De.WEB_UNIVERSE && "beta" != d.De.WEB_UNIVERSE) ||
+            (("dev" != m.De.WEB_UNIVERSE && "beta" != m.De.WEB_UNIVERSE) ||
               console.log(
-                "DEV_DEBUG: CPackagePricingStore loading pricing guidelines payload: ",
+                "DEV_DEBUG: CPackagePricingStore loading pending price proposal payload: ",
                 a,
               ),
             a)
           )
-            if (this.BIsGuidelinesPayloadValid(a)) {
-              for (let t in a) {
-                const i = a[t],
-                  r = new Map(),
-                  n = 100 * parseInt(t.substring(3));
-                this.m_rgPriceLevels.push(n),
-                  this.m_mapPriceGuidelines.set(n, r);
-                for (let t in i)
+            if (this.BIsPendingPricePayloadValid(a))
+              for (let e in a) {
+                const t = a[e],
+                  r = parseInt(e);
+                this.m_mapPriceProposals.set(r, t);
+              }
+            else
+              "dev" == m.De.WEB_UNIVERSE &&
+                console.error("Invalid pending price proposal payload");
+          const i = (0, m.kQ)("pricing_guidelines", "application_config");
+          if (
+            (("dev" != m.De.WEB_UNIVERSE && "beta" != m.De.WEB_UNIVERSE) ||
+              console.log(
+                "DEV_DEBUG: CPackagePricingStore loading pricing guidelines payload: ",
+                i,
+              ),
+            i)
+          )
+            if (this.BIsGuidelinesPayloadValid(i)) {
+              for (let t in i) {
+                const r = i[t],
+                  a = new Map(),
+                  s = 100 * parseInt(t.substring(3));
+                this.m_rgPriceLevels.push(s),
+                  this.m_mapPriceGuidelines.set(s, a);
+                for (let t in r)
                   e.add(t.toUpperCase()),
-                    r.set(t.toUpperCase(), parseInt(i[t]));
+                    a.set(t.toUpperCase(), parseInt(r[t]));
               }
               this.m_rgPriceLevels.sort((e, t) => e - t);
             } else
-              "dev" == d.De.WEB_UNIVERSE &&
+              "dev" == m.De.WEB_UNIVERSE &&
                 console.error("Invalid pricing guidelines payload");
           this.m_rgKnownPriceKeys = Array.from(e).sort((e, t) =>
-            (0, u.eT)(y(e), y(t)),
+            (0, u.eT)(b(e), b(t)),
           );
-          const n = (0, d.kQ)("currency_data", "application_config");
+          const s = (0, m.kQ)("currency_data", "application_config");
           if (
-            (("dev" != d.De.WEB_UNIVERSE && "beta" != d.De.WEB_UNIVERSE) ||
+            (("dev" != m.De.WEB_UNIVERSE && "beta" != m.De.WEB_UNIVERSE) ||
               console.log(
                 "DEV_DEBUG: CPackagePricingStore loading currency payload: ",
-                n,
-              ),
-            n)
-          )
-            if (this.BIsCurrencyPayloadValid(n))
-              for (let e in n) {
-                const t = n[e];
-                this.m_mapCurrencyData.set(e, t);
-              }
-            else
-              "dev" == d.De.WEB_UNIVERSE &&
-                console.error("Invalid currency payload");
-          const s = (0, d.kQ)("currency_descriptions", "application_config");
-          if (
-            (("dev" != d.De.WEB_UNIVERSE && "beta" != d.De.WEB_UNIVERSE) ||
-              console.log(
-                "DEV_DEBUG: CPackagePricingStore loading currency descriptions: ",
                 s,
               ),
             s)
           )
-            if (this.BIsCurrencyDescriptionPayloadValid(s))
+            if (this.BIsCurrencyPayloadValid(s))
               for (let e in s) {
                 const t = s[e];
+                this.m_mapCurrencyData.set(e, t);
+              }
+            else
+              "dev" == m.De.WEB_UNIVERSE &&
+                console.error("Invalid currency payload");
+          const n = (0, m.kQ)("currency_descriptions", "application_config");
+          if (
+            (("dev" != m.De.WEB_UNIVERSE && "beta" != m.De.WEB_UNIVERSE) ||
+              console.log(
+                "DEV_DEBUG: CPackagePricingStore loading currency descriptions: ",
+                n,
+              ),
+            n)
+          )
+            if (this.BIsCurrencyDescriptionPayloadValid(n))
+              for (let e in n) {
+                const t = n[e];
                 this.m_mapPriceKeyDescriptions.set(e, t);
               }
             else
-              "dev" == d.De.WEB_UNIVERSE &&
+              "dev" == m.De.WEB_UNIVERSE &&
                 console.error("Invalid currency description payload");
         }
         BIsPricePayloadValid(e) {
@@ -1163,10 +725,10 @@
           if (!t || "object" != typeof t) return !1;
           for (let e in t) {
             if (isNaN(parseInt(e))) return !1;
-            const i = t[e];
-            if (!i || "object" != typeof i) return !1;
-            for (let e in i)
-              if ("string" != typeof e || "number" != typeof i[e]) return !1;
+            const r = t[e];
+            if (!r || "object" != typeof r) return !1;
+            for (let e in r)
+              if ("string" != typeof e || "number" != typeof r[e]) return !1;
           }
           return !0;
         }
@@ -1175,12 +737,12 @@
           if (!t || "object" != typeof t) return !1;
           for (let e in t) {
             if (isNaN(parseInt(e))) return !1;
-            const i = t[e];
+            const r = t[e];
             if (
-              !i ||
-              "object" != typeof i ||
-              i.packageID !== parseInt(e) ||
-              "object" != typeof i.prices
+              !r ||
+              "object" != typeof r ||
+              r.packageID !== parseInt(e) ||
+              "object" != typeof r.prices
             )
               return !1;
           }
@@ -1190,10 +752,10 @@
           const t = e;
           if (!t || "object" != typeof t) return !1;
           for (let e in t) {
-            const i = t[e];
-            if (!i || "object" != typeof i) return !1;
-            for (let e in i)
-              if ("string" != typeof e || isNaN(parseInt(i[e]))) return !1;
+            const r = t[e];
+            if (!r || "object" != typeof r) return !1;
+            for (let e in r)
+              if ("string" != typeof e || isNaN(parseInt(r[e]))) return !1;
           }
           return !0;
         }
@@ -1201,8 +763,8 @@
           const t = e;
           if (!t || "object" != typeof t) return !1;
           for (let e in t) {
-            const i = t[e];
-            if (!i || "object" != typeof i || i.strCode != e) return !1;
+            const r = t[e];
+            if (!r || "object" != typeof r || r.strCode != e) return !1;
           }
           return !0;
         }
@@ -1210,83 +772,47 @@
           const t = e;
           if (!t || "object" != typeof t) return !1;
           for (let e in t) {
-            const i = t[e];
+            const r = t[e];
             if (
-              !i ||
-              "object" != typeof i ||
-              void 0 === i.bRequired ||
-              void 0 === i.strDescription
+              !r ||
+              "object" != typeof r ||
+              void 0 === r.bRequired ||
+              void 0 === r.strDescription
             )
               return !1;
           }
           return !0;
         }
         BPriceKeyRequired(e) {
-          var t, i;
-          return (
-            null !==
-              (i =
-                null === (t = this.m_mapPriceKeyDescriptions.get(e)) ||
-                void 0 === t
-                  ? void 0
-                  : t.bRequired) &&
-            void 0 !== i &&
-            i
-          );
+          return this.m_mapPriceKeyDescriptions.get(e)?.bRequired ?? !1;
         }
         GetMinimumBasePrice(e) {
-          var t;
-          return (
-            (null === (t = this.m_mapPriceKeyDescriptions.get(e)) ||
-            void 0 === t
-              ? void 0
-              : t.nLowestBase) || 0
-          );
+          return this.m_mapPriceKeyDescriptions.get(e)?.nLowestBase || 0;
         }
         GetMinimumDiscountPrice(e) {
-          var t;
-          return (
-            (null === (t = this.m_mapPriceKeyDescriptions.get(e)) ||
-            void 0 === t
-              ? void 0
-              : t.nLowestDiscount) || 0
-          );
+          return this.m_mapPriceKeyDescriptions.get(e)?.nLowestDiscount || 0;
         }
         GetPublishedPrice(e, t) {
-          var i;
-          return null === (i = this.m_mapPackagePrice.get(e)) || void 0 === i
-            ? void 0
-            : i.get(t);
+          return this.m_mapPackagePrice.get(e)?.get(t);
         }
         GetProposedPrice(e, t) {
-          var i;
-          return null === (i = this.m_mapPriceProposals.get(e)) || void 0 === i
-            ? void 0
-            : i.prices[t];
+          return this.m_mapPriceProposals.get(e)?.prices[t];
         }
         GetSavedPrice(e, t) {
-          var i;
-          return null !== (i = this.GetProposedPrice(e, t)) && void 0 !== i
-            ? i
-            : this.GetPublishedPrice(e, t);
+          return this.GetProposedPrice(e, t) ?? this.GetPublishedPrice(e, t);
         }
         GetPrice(e, t) {
-          var i, r;
-          return null !==
-            (r =
-              null === (i = this.m_mapLocalPackagePriceOverrides.get(e)) ||
-              void 0 === i
-                ? void 0
-                : i.get(t)) && void 0 !== r
-            ? r
-            : this.GetSavedPrice(e, t);
+          return (
+            this.m_mapLocalPackagePriceOverrides.get(e)?.get(t) ??
+            this.GetSavedPrice(e, t)
+          );
         }
         GetPriceGridCellCallbackList(e, t) {
           if (!e || !t) return null;
           this.m_mapPriceGridCellCallbackList.has(e) ||
             this.m_mapPriceGridCellCallbackList.set(e, new Map());
-          const i = this.m_mapPriceGridCellCallbackList.get(e);
-          return i.has(t) || i.set(t, new l.pB()), i.get(t);
+          const r = this.m_mapPriceGridCellCallbackList.get(e);
+          return r.has(t) || r.set(t, new l.pB()), r.get(t);
         }
         GetPackageOverridesCallbackList(e) {
           if (!e) return null;
@@ -1298,34 +824,34 @@
             t
           );
         }
-        OverridePrice(e, t, i) {
-          i != this.GetPrice(e, t) &&
+        OverridePrice(e, t, r) {
+          r != this.GetPrice(e, t) &&
             (this.m_mapLocalPackagePriceOverrides.has(e) ||
               this.m_mapLocalPackagePriceOverrides.set(e, new Map()),
-            i == this.GetSavedPrice(e, t)
+            r == this.GetSavedPrice(e, t)
               ? this.m_mapLocalPackagePriceOverrides.get(e).delete(t)
-              : this.m_mapLocalPackagePriceOverrides.get(e).set(t, i),
-            this.GetPriceGridCellCallbackList(e, t).Dispatch(i),
+              : this.m_mapLocalPackagePriceOverrides.get(e).set(t, r),
+            this.GetPriceGridCellCallbackList(e, t).Dispatch(r),
             this.GetPackageOverridesCallbackList(e).Dispatch(),
             this.DispatchPriceOverridesCallbacks());
         }
-        OverridePricesForPackage(e, t, i, r) {
-          (0, _.X)(
-            t.length == i.length,
-            `price list size doesn't match ${t.length} != ${i.length}`,
+        OverridePricesForPackage(e, t, r, a) {
+          (0, P.X)(
+            t.length == r.length,
+            `price list size doesn't match ${t.length} != ${r.length}`,
           );
-          for (let r = 0; r < t.length; ++r) {
-            const a = t[r],
-              n = i[r];
+          for (let a = 0; a < t.length; ++a) {
+            const i = t[a],
+              s = r[a];
             this.m_mapLocalPackagePriceOverrides.has(e) ||
               this.m_mapLocalPackagePriceOverrides.set(e, new Map()),
-              n == this.GetSavedPrice(e, a)
-                ? this.m_mapLocalPackagePriceOverrides.get(e).delete(a)
-                : this.m_mapLocalPackagePriceOverrides.get(e).set(a, n),
-              this.GetPriceGridCellCallbackList(e, a).Dispatch(n);
+              s == this.GetSavedPrice(e, i)
+                ? this.m_mapLocalPackagePriceOverrides.get(e).delete(i)
+                : this.m_mapLocalPackagePriceOverrides.get(e).set(i, s),
+              this.GetPriceGridCellCallbackList(e, i).Dispatch(s);
           }
           this.GetPackageOverridesCallbackList(e).Dispatch(),
-            r && this.DispatchPriceOverridesCallbacks();
+            a && this.DispatchPriceOverridesCallbacks();
         }
         DispatchPriceOverridesCallbacks() {
           this.m_allPriceOverridesCallbackList.Dispatch(
@@ -1334,42 +860,36 @@
             this.UpdateOverridesPerPriceKey();
         }
         BHasLocalPriceOverrides(e) {
-          var t;
-          return (
-            (null === (t = this.m_mapLocalPackagePriceOverrides.get(e)) ||
-            void 0 === t
-              ? void 0
-              : t.size) > 0
-          );
+          return this.m_mapLocalPackagePriceOverrides.get(e)?.size > 0;
         }
         GetAllLocalPriceOverrides() {
           const e = [];
           return (
-            this.m_mapLocalPackagePriceOverrides.forEach((t, i) =>
-              t.forEach((t, r) => {
-                const a = this.GetSavedPrice(i, r);
+            this.m_mapLocalPackagePriceOverrides.forEach((t, r) =>
+              t.forEach((t, a) => {
+                const i = this.GetSavedPrice(r, a);
                 e.push({
-                  packageID: i,
-                  strPriceKey: r,
+                  packageID: r,
+                  strPriceKey: a,
                   nPriceInCents: t,
-                  nOldPriceInCents: a,
+                  nOldPriceInCents: i,
                 });
               }),
             ),
-            e.sort(P),
+            e.sort(h),
             e
           );
         }
         BHasLocalPriceOverride(e, t) {
-          let i = this.m_mapLocalPackagePriceOverrides.get(e);
-          return !!i && i.has(t);
+          let r = this.m_mapLocalPackagePriceOverrides.get(e);
+          return !!r && r.has(t);
         }
         UpdateOverridesPerPriceKey() {
           this.m_mapOverridesPerPriceKey.clear(),
             this.m_mapLocalPackagePriceOverrides.forEach((e, t) => {
               e.forEach((e, t) => {
-                let i = this.m_mapOverridesPerPriceKey.get(t);
-                i || (i = 0), i++, this.m_mapOverridesPerPriceKey.set(t, i);
+                let r = this.m_mapOverridesPerPriceKey.get(t);
+                r || (r = 0), r++, this.m_mapOverridesPerPriceKey.set(t, r);
               });
             });
         }
@@ -1377,10 +897,10 @@
           const e = this.GetAllLocalPriceOverrides();
           this.m_mapLocalPackagePriceOverrides.clear();
           let t = new Set();
-          for (const i of e) {
-            const { packageID: e, strPriceKey: r } = i;
-            this.GetPriceGridCellCallbackList(e, r).Dispatch(
-              this.GetPrice(e, r),
+          for (const r of e) {
+            const { packageID: e, strPriceKey: a } = r;
+            this.GetPriceGridCellCallbackList(e, a).Dispatch(
+              this.GetPrice(e, a),
             ),
               t.add(e);
           }
@@ -1389,270 +909,220 @@
         }
         DiscardAllLocalPriceOverridesForKey(e) {
           let t = !1,
-            i = new Set();
-          this.m_mapLocalPackagePriceOverrides.forEach((r, a) => {
+            r = new Set();
+          this.m_mapLocalPackagePriceOverrides.forEach((a, i) => {
             this.m_mapPriceKeyDescriptions.has(e) &&
               ((t = !0),
-              this.m_mapLocalPackagePriceOverrides.get(a).delete(e),
-              this.GetPriceGridCellCallbackList(a, e).Dispatch(
-                this.GetPrice(a, e),
+              this.m_mapLocalPackagePriceOverrides.get(i).delete(e),
+              this.GetPriceGridCellCallbackList(i, e).Dispatch(
+                this.GetPrice(i, e),
               ),
-              i.add(a));
+              r.add(i));
           });
-          for (const e of i) this.GetPackageOverridesCallbackList(e).Dispatch();
+          for (const e of r) this.GetPackageOverridesCallbackList(e).Dispatch();
           t && this.DispatchPriceOverridesCallbacks();
         }
         DiscardLocalPriceOverridesForPackage(e) {
-          var t;
-          null === (t = this.m_mapLocalPackagePriceOverrides.get(e)) ||
-            void 0 === t ||
-            t.forEach((t, i) => {
-              this.GetPriceGridCellCallbackList(e, i).Dispatch(
-                this.GetSavedPrice(e, i),
-              );
-            }),
+          this.m_mapLocalPackagePriceOverrides.get(e)?.forEach((t, r) => {
+            this.GetPriceGridCellCallbackList(e, r).Dispatch(
+              this.GetSavedPrice(e, r),
+            );
+          }),
             this.m_mapLocalPackagePriceOverrides.delete(e),
             this.GetPackageOverridesCallbackList(e).Dispatch(),
             this.DispatchPriceOverridesCallbacks();
         }
         BuildNewPricingProposal(e, t) {
-          const i = {
+          const r = {
             packageID: e,
             rtSubmitted: Math.floor(Date.now() / 1e3),
-            submitterID: d.L7.accountid,
+            submitterID: m.L7.accountid,
             prices: {},
             eState: 1,
             bPartnerWillPublish: t,
           };
           for (const t of this.m_rgKnownPriceKeys)
-            i.prices[t] = this.GetPrice(e, t);
-          return i;
+            r.prices[t] = this.GetPrice(e, t);
+          return r;
         }
-        SubmitProposalToServer(e, t, i) {
-          var a, s, o;
-          return (0, r.mG)(this, void 0, void 0, function* () {
-            const r = this.BuildNewPricingProposal(e, t),
-              l = JSON.stringify(r.prices),
-              p = (0, d.kQ)("publisherid", "application_config"),
-              u =
-                d.De.PARTNER_BASE_URL +
-                "pricing/ajaxsubmitproposal/" +
-                p +
-                "/" +
-                e,
-              m = new FormData();
-            m.append("sessionid", d.De.SESSIONID),
-              m.append("partner_will_publish", t ? "1" : "0"),
-              m.append("prices", l);
-            let h = null;
-            try {
-              const t = yield n().post(u, m, {
-                withCredentials: !0,
-                cancelToken: null == i ? void 0 : i.token,
-              });
-              if (
-                200 == (null == t ? void 0 : t.status) &&
-                1 ==
-                  (null === (a = t.data) || void 0 === a
-                    ? void 0
-                    : a.success) &&
-                0 != t.data.eState
-              ) {
-                if (3 == t.data.eState) {
-                  this.m_mapPriceProposals.delete(e);
-                  for (const t of this.m_rgKnownPriceKeys)
-                    this.m_mapPackagePrice.get(e).set(t, r.prices[t]);
-                } else
-                  (r.eState = t.data.eState),
-                    (r.proposalKey = t.data.proposalKey),
-                    this.m_mapPriceProposals.set(e, r);
-                return this.DiscardLocalPriceOverridesForPackage(e), t.data;
-              }
-            } catch (e) {
-              h = e;
-            }
-            const _ = (0, c.l)(h);
-            return (
-              console.error(
-                "CPackagePricingStore.SubmitProposalToServer: failed",
-                _.strErrorMsg,
-                _,
-              ),
-              null !==
-                (o =
-                  null === (s = null == h ? void 0 : h.response) || void 0 === s
-                    ? void 0
-                    : s.data) && void 0 !== o
-                ? o
-                : { success: 2 }
-            );
-          });
-        }
-        PublishApprovedProposal(e, t, i = 0) {
-          var a, s, o;
-          return (0, r.mG)(this, void 0, void 0, function* () {
-            const r = this.m_mapPriceProposals.get(e);
+        async SubmitProposalToServer(e, t, r) {
+          const a = this.BuildNewPricingProposal(e, t),
+            i = JSON.stringify(a.prices),
+            n = (0, m.kQ)("publisherid", "application_config"),
+            c =
+              m.De.PARTNER_BASE_URL +
+              "pricing/ajaxsubmitproposal/" +
+              n +
+              "/" +
+              e,
+            l = new FormData();
+          l.append("sessionid", m.De.SESSIONID),
+            l.append("partner_will_publish", t ? "1" : "0"),
+            l.append("prices", i);
+          let p = null;
+          try {
+            const t = await s().post(c, l, {
+              withCredentials: !0,
+              cancelToken: r?.token,
+            });
             if (
-              4 != (null == r ? void 0 : r.eState) ||
-              !(null == r ? void 0 : r.proposalKey)
-            )
-              return { success: 8 };
-            const l = (0, d.kQ)("publisherid", "application_config"),
-              p =
-                d.De.PARTNER_BASE_URL +
-                "pricing/ajaxpublishproposal/" +
-                l +
-                "/" +
-                e,
-              u = new FormData();
-            u.append("sessionid", d.De.SESSIONID),
-              u.append("proposal_key", r.proposalKey);
-            let m = null;
-            try {
-              const s = yield n().post(p, u, {
-                withCredentials: !0,
-                cancelToken: null == t ? void 0 : t.token,
-                timeout: i,
-              });
-              if (
-                200 == (null == s ? void 0 : s.status) &&
-                1 ==
-                  (null === (a = s.data) || void 0 === a ? void 0 : a.success)
-              ) {
+              200 == t?.status &&
+              1 == t.data?.success &&
+              0 != t.data.eState
+            ) {
+              if (3 == t.data.eState) {
                 this.m_mapPriceProposals.delete(e);
                 for (const t of this.m_rgKnownPriceKeys)
-                  this.m_mapPackagePrice.get(e).set(t, r.prices[t]),
-                    this.GetPriceGridCellCallbackList(e, t).Dispatch(
-                      this.GetSavedPrice(e, t),
-                    );
-                return (
-                  this.GetPackageOverridesCallbackList(e).Dispatch(),
-                  this.DispatchPriceOverridesCallbacks(),
-                  s.data
-                );
-              }
-            } catch (e) {
-              m = e;
+                  this.m_mapPackagePrice.get(e).set(t, a.prices[t]);
+              } else
+                (a.eState = t.data.eState),
+                  (a.proposalKey = t.data.proposalKey),
+                  this.m_mapPriceProposals.set(e, a);
+              return this.DiscardLocalPriceOverridesForPackage(e), t.data;
             }
-            const h = (0, c.l)(m);
-            return (
-              console.error(
-                "CPackagePricingStore.PublishApprovedProposal: failed",
-                h.strErrorMsg,
-                h,
-              ),
-              null !==
-                (o =
-                  null === (s = null == m ? void 0 : m.response) || void 0 === s
-                    ? void 0
-                    : s.data) && void 0 !== o
-                ? o
-                : { success: 2 }
-            );
-          });
+          } catch (e) {
+            p = e;
+          }
+          const u = (0, o.l)(p);
+          return (
+            console.error(
+              "CPackagePricingStore.SubmitProposalToServer: failed",
+              u.strErrorMsg,
+              u,
+            ),
+            p?.response?.data ?? { success: 2 }
+          );
         }
-        CancelProposal(e, t) {
-          var i, a, s;
-          return (0, r.mG)(this, void 0, void 0, function* () {
-            const r = this.m_mapPriceProposals.get(e);
-            if (!(null == r ? void 0 : r.proposalKey)) return { success: 8 };
-            const o = (0, d.kQ)("publisherid", "application_config"),
-              l =
-                d.De.PARTNER_BASE_URL +
-                "pricing/ajaxcancelproposal/" +
-                o +
-                "/" +
-                e,
-              p = new FormData();
-            p.append("sessionid", d.De.SESSIONID),
-              p.append("proposal_key", r.proposalKey);
-            let u = null;
-            try {
-              const r = yield n().post(l, p, {
-                withCredentials: !0,
-                cancelToken: null == t ? void 0 : t.token,
-              });
-              if (
-                200 == (null == r ? void 0 : r.status) &&
-                1 ==
-                  (null === (i = r.data) || void 0 === i ? void 0 : i.success)
-              ) {
-                this.m_mapPriceProposals.delete(e);
-                for (const t of this.m_rgKnownPriceKeys)
+        async PublishApprovedProposal(e, t, r = 0) {
+          const a = this.m_mapPriceProposals.get(e);
+          if (4 != a?.eState || !a?.proposalKey) return { success: 8 };
+          const i = (0, m.kQ)("publisherid", "application_config"),
+            n =
+              m.De.PARTNER_BASE_URL +
+              "pricing/ajaxpublishproposal/" +
+              i +
+              "/" +
+              e,
+            c = new FormData();
+          c.append("sessionid", m.De.SESSIONID),
+            c.append("proposal_key", a.proposalKey);
+          let l = null;
+          try {
+            const i = await s().post(n, c, {
+              withCredentials: !0,
+              cancelToken: t?.token,
+              timeout: r,
+            });
+            if (200 == i?.status && 1 == i.data?.success) {
+              this.m_mapPriceProposals.delete(e);
+              for (const t of this.m_rgKnownPriceKeys)
+                this.m_mapPackagePrice.get(e).set(t, a.prices[t]),
                   this.GetPriceGridCellCallbackList(e, t).Dispatch(
                     this.GetSavedPrice(e, t),
                   );
-                return (
-                  this.GetPackageOverridesCallbackList(e).Dispatch(),
-                  this.DispatchPriceOverridesCallbacks(),
-                  r.data
-                );
-              }
-            } catch (e) {
-              u = e;
+              return (
+                this.GetPackageOverridesCallbackList(e).Dispatch(),
+                this.DispatchPriceOverridesCallbacks(),
+                i.data
+              );
             }
-            const m = (0, c.l)(u);
-            return (
-              console.error(
-                "CPackagePricingStore.CancelProposal: failed",
-                m.strErrorMsg,
-                m,
-              ),
-              null !==
-                (s =
-                  null === (a = null == u ? void 0 : u.response) || void 0 === a
-                    ? void 0
-                    : a.data) && void 0 !== s
-                ? s
-                : { success: 2 }
-            );
-          });
+          } catch (e) {
+            l = e;
+          }
+          const p = (0, o.l)(l);
+          return (
+            console.error(
+              "CPackagePricingStore.PublishApprovedProposal: failed",
+              p.strErrorMsg,
+              p,
+            ),
+            l?.response?.data ?? { success: 2 }
+          );
+        }
+        async CancelProposal(e, t) {
+          const r = this.m_mapPriceProposals.get(e);
+          if (!r?.proposalKey) return { success: 8 };
+          const a = (0, m.kQ)("publisherid", "application_config"),
+            i =
+              m.De.PARTNER_BASE_URL +
+              "pricing/ajaxcancelproposal/" +
+              a +
+              "/" +
+              e,
+            n = new FormData();
+          n.append("sessionid", m.De.SESSIONID),
+            n.append("proposal_key", r.proposalKey);
+          let c = null;
+          try {
+            const r = await s().post(i, n, {
+              withCredentials: !0,
+              cancelToken: t?.token,
+            });
+            if (200 == r?.status && 1 == r.data?.success) {
+              this.m_mapPriceProposals.delete(e);
+              for (const t of this.m_rgKnownPriceKeys)
+                this.GetPriceGridCellCallbackList(e, t).Dispatch(
+                  this.GetSavedPrice(e, t),
+                );
+              return (
+                this.GetPackageOverridesCallbackList(e).Dispatch(),
+                this.DispatchPriceOverridesCallbacks(),
+                r.data
+              );
+            }
+          } catch (e) {
+            c = e;
+          }
+          const l = (0, o.l)(c);
+          return (
+            console.error(
+              "CPackagePricingStore.CancelProposal: failed",
+              l.strErrorMsg,
+              l,
+            ),
+            c?.response?.data ?? { success: 2 }
+          );
         }
         GetLocalOverrideCountForPriceKey(e) {
-          var t;
-          return null !== (t = this.m_mapOverridesPerPriceKey.get(e)) &&
-            void 0 !== t
-            ? t
-            : 0;
+          return this.m_mapOverridesPerPriceKey.get(e) ?? 0;
         }
         BAnyPackagePriceBelowMin(e) {
           if (!e) return !1;
           for (let t of this.m_rgKnownPriceKeys) {
-            let i = this.GetPrice(e, t);
-            if (void 0 === i) continue;
-            let { nMinPriceInCents: r, nMaxPriceInCents: a } = O(e, t);
-            if (i < r) return !0;
+            let r = this.GetPrice(e, t);
+            if (void 0 === r) continue;
+            let { nMinPriceInCents: a, nMaxPriceInCents: i } = E(e, t);
+            if (r < a) return !0;
           }
           return !1;
         }
       }
-      function P(e, t) {
+      function h(e, t) {
         if (e.strPriceKey == t.strPriceKey) {
-          const i = (0, m.vB)(e.packageID),
-            r = (0, m.vB)(t.packageID);
-          return (0, u.eT)(i, r);
+          const r = (0, d.vB)(e.packageID),
+            a = (0, d.vB)(t.packageID);
+          return (0, u.eT)(r, a);
         }
-        return (0, u.eT)(y(e.strPriceKey), y(t.strPriceKey));
+        return (0, u.eT)(b(e.strPriceKey), b(t.strPriceKey));
       }
       function f(e) {
         const t = e.split("_")[0];
         return g.Get().m_mapCurrencyData.get(t);
       }
-      function v(e, t) {
-        var i;
+      function y(e, t) {
         if (void 0 === t) return ["", "", ""];
-        const r = null !== (i = f(t)) && void 0 !== i ? i : f("USD");
+        const r = f(t) ?? f("USD");
         let a = "";
         if ("number" == typeof e) {
           let t = e.toString();
           t.length < 3 && (t = (1 == t.length ? "0" : "") + "0" + t);
           const i = t.length - 2;
           for (let e = 0; e < i; e++) {
-            const n = t.charAt(e);
-            (a += n),
+            const s = t.charAt(e);
+            (a += s),
               e < i - 1 &&
                 (i - e - 1) % 3 == 0 &&
-                "-" != n &&
+                "-" != s &&
                 (a += r.strThousandsSeparator);
           }
           r.bWholeUnitsOnly ||
@@ -1662,8 +1132,8 @@
           ? [r.strSymbol + r.strSymbolAndNumberSeparator, a, ""]
           : ["", a, r.strSymbolAndNumberSeparator + r.strSymbol];
       }
-      (0, r.gn)([o.LO], g.prototype, "m_mapOverridesPerPriceKey", void 0),
-        (0, r.gn)([o.aD], g.prototype, "UpdateOverridesPerPriceKey", null);
+      (0, a.gn)([c.LO], g.prototype, "m_mapOverridesPerPriceKey", void 0),
+        (0, a.gn)([c.aD], g.prototype, "UpdateOverridesPerPriceKey", null);
       const G = new Map([
         ["USD", "@1"],
         ["CNY", "@2"],
@@ -1675,69 +1145,69 @@
         ["KRW", "@8"],
         ["RUB", "@9"],
       ]);
-      function y(e) {
+      function b(e) {
         return G.has(e) ? G.get(e) : e.indexOf("_") > 0 ? "ZZZ" + e : e;
       }
-      function I(e, t) {
+      function v(e, t) {
         return g.Get().GetPrice(e, t);
       }
-      function b(e) {
-        const t = g.Get().m_strDisplayPriceKey;
-        return v(g.Get().GetPrice(e, t), t).join("");
-      }
       function S(e) {
-        const [t, i] = s.useState(g.Get().m_strDisplayPriceKey);
+        const t = g.Get().m_strDisplayPriceKey;
+        return y(g.Get().GetPrice(e, t), t).join("");
+      }
+      function k(e) {
+        const [t, r] = n.useState(g.Get().m_strDisplayPriceKey);
         return (
-          (0, p.Qg)(g.Get().m_displayPriceKeyCallbackList, i),
+          (0, p.Qg)(g.Get().m_displayPriceKeyCallbackList, r),
           (function (e, t) {
-            const [i, r] = s.useState(g.Get().GetPrice(e, t));
+            const [r, a] = n.useState(g.Get().GetPrice(e, t));
             return (
-              (0, p.Qg)(g.Get().GetPriceGridCellCallbackList(e, t), r),
-              s.useEffect(() => r(g.Get().GetPrice(e, t)), [e, t]),
-              v(i, t).join("")
+              (0, p.Qg)(g.Get().GetPriceGridCellCallbackList(e, t), a),
+              n.useEffect(() => a(g.Get().GetPrice(e, t)), [e, t]),
+              y(r, t).join("")
             );
           })(e, t)
         );
       }
-      function k(e, t) {
-        const i = g.Get().GetPrice(e, "USD");
-        let r = null;
+      function D(e, t) {
+        const r = g.Get().GetPrice(e, "USD");
+        let a = null;
         for (let e of g.Get().m_rgPriceLevels)
-          if (e > i) {
-            r = e;
+          if (e > r) {
+            a = e;
             break;
           }
-        if ("USD" == t || !r)
+        if ("USD" == t || !a)
           return { nSuggestedPriceInCents: null, nGuidelinesLevel: null };
-        let a = g.Get().m_mapPriceGuidelines.get(r).get(t);
-        const n = g.Get().m_mapPriceGuidelines.get(r).get("USD");
-        if (n != i) {
-          const e = i / n;
-          (r *= e), (a = Math.ceil(a * e));
+        let i = g.Get().m_mapPriceGuidelines.get(a).get(t);
+        const s = g.Get().m_mapPriceGuidelines.get(a).get("USD");
+        if (s != r) {
+          const e = r / s;
+          (a *= e), (i = Math.ceil(i * e));
         }
-        return { nSuggestedPriceInCents: a, nGuidelinesLevel: r };
+        return { nSuggestedPriceInCents: i, nGuidelinesLevel: a };
       }
-      function D() {
-        const e = (0, m.AM)();
-        return s.useCallback(
+      function I() {
+        const e = (0, d.AM)();
+        return n.useCallback(
           () =>
             (function (e) {
               let t = 0;
-              for (const i of e) {
+              for (const r of e) {
                 const e = new Array(),
-                  r = new Array(),
-                  a = g.Get().GetPrice(i, "USD");
-                if (a && !(a <= 0)) {
+                  a = new Array(),
+                  i = g.Get().GetPrice(r, "USD");
+                if (i && !(i <= 0)) {
                   for (const t of g.Get().m_rgKnownPriceKeys) {
                     if ("USD" == t) continue;
-                    const { nSuggestedPriceInCents: a, nGuidelinesLevel: n } =
-                      k(i, t);
-                    null !== n &&
-                      g.Get().GetPrice(i, t) != a &&
-                      (e.push(t), r.push(a));
+                    const { nSuggestedPriceInCents: i, nGuidelinesLevel: s } =
+                      D(r, t);
+                    null !== s &&
+                      g.Get().GetPrice(r, t) != i &&
+                      (e.push(t), a.push(i));
                   }
                   e.length > 0 &&
-                    (g.Get().OverridePricesForPackage(i, e, r), (t += 1));
+                    (g.Get().OverridePricesForPackage(r, e, a), (t += 1));
                 }
               }
               t > 0 && g.Get().DispatchPriceOverridesCallbacks();
@@ -1745,101 +1215,101 @@
           [e],
         );
       }
-      function L(e, t) {
-        const i = (0, p.NW)();
-        (0, p.Qg)(g.Get().GetPriceGridCellCallbackList(e, t), i);
-        const r = g.Get().GetPrice(e, t);
-        (0, p.Qg)(g.Get().GetPriceGridCellCallbackList(e, "USD"), i);
-        const { nSuggestedPriceInCents: a, nGuidelinesLevel: n } = k(e, t),
-          o = s.useCallback((i) => g.Get().OverridePrice(e, t, i), [e, t]),
-          c = g.Get().GetPublishedPrice(e, t),
+      function C(e, t) {
+        const r = (0, p.NW)();
+        (0, p.Qg)(g.Get().GetPriceGridCellCallbackList(e, t), r);
+        const a = g.Get().GetPrice(e, t);
+        (0, p.Qg)(g.Get().GetPriceGridCellCallbackList(e, "USD"), r);
+        const { nSuggestedPriceInCents: i, nGuidelinesLevel: s } = D(e, t),
+          c = n.useCallback((r) => g.Get().OverridePrice(e, t, r), [e, t]),
+          o = g.Get().GetPublishedPrice(e, t),
           l = g.Get().GetProposedPrice(e, t),
-          { nMinPriceInCents: u, nMaxPriceInCents: d } = O(e, t),
-          m = g.Get().GetMinimumDiscountPrice(t),
-          h = r ? Math.floor((100 * (r - m)) / r) : 90,
-          _ = h < Math.min(90, Math.floor((100 * (n - 50)) / n)) ? h : null;
-        return s.useMemo(
+          { nMinPriceInCents: u, nMaxPriceInCents: m } = E(e, t),
+          d = g.Get().GetMinimumDiscountPrice(t),
+          _ = a ? Math.floor((100 * (a - d)) / a) : 90,
+          P = _ < Math.min(90, Math.floor((100 * (s - 50)) / s)) ? _ : null;
+        return n.useMemo(
           () => ({
-            nPriceInCents: r,
+            nPriceInCents: a,
             nProposedPriceInCents: l,
-            nPublishedPriceInCents: c,
+            nPublishedPriceInCents: o,
             nMinPriceInCents: u,
-            nMaxPriceInCents: d,
-            nMaxDiscountPercentage: _,
-            nSuggestedPriceInCents: a,
-            fnSetPrice: o,
+            nMaxPriceInCents: m,
+            nMaxDiscountPercentage: P,
+            nSuggestedPriceInCents: i,
+            fnSetPrice: c,
           }),
-          [r, l, c, u, d, _, a, o],
+          [a, l, o, u, m, P, i, c],
         );
       }
-      function C(e) {
-        let [t, i] = s.useState(() => g.Get().BAnyPackagePriceBelowMin(e)),
-          r = s.useCallback(() => {
+      function L(e) {
+        let [t, r] = n.useState(() => g.Get().BAnyPackagePriceBelowMin(e)),
+          a = n.useCallback(() => {
             let t = g.Get().BAnyPackagePriceBelowMin(e);
-            i(t);
-          }, [e, i]);
-        return (0, p.Qg)(g.Get().GetPackageOverridesCallbackList(e), r), t;
+            r(t);
+          }, [e, r]);
+        return (0, p.Qg)(g.Get().GetPackageOverridesCallbackList(e), a), t;
       }
-      function A(e) {
+      function O(e) {
         return g.Get().BAnyPackagePriceBelowMin(e);
       }
-      function O(e, t) {
-        let i = g.Get();
+      function E(e, t) {
+        let r = g.Get();
         return {
-          nMinPriceInCents: i.GetMinimumBasePrice(t),
-          nMaxPriceInCents: i.m_setRecurringSubscriptions.has(e)
-            ? i.GetPublishedPrice(e, t)
+          nMinPriceInCents: r.GetMinimumBasePrice(t),
+          nMaxPriceInCents: r.m_setRecurringSubscriptions.has(e)
+            ? r.GetPublishedPrice(e, t)
             : null,
         };
       }
-      function E() {
-        return s.useCallback((e, t, i) => {
-          const r = g.Get().GetPrice(e, t);
+      function w() {
+        return n.useCallback((e, t, r) => {
+          const a = g.Get().GetPrice(e, t);
           return (
-            g.Get().OverridePrice(e, t, i),
-            r == i
+            g.Get().OverridePrice(e, t, r),
+            a == r
               ? null
               : {
                   packageID: e,
                   strPriceKey: t,
-                  nPriceInCents: i,
-                  nOldPriceInCents: r,
+                  nPriceInCents: r,
+                  nOldPriceInCents: a,
                 }
           );
         }, []);
       }
-      function w(e) {
+      function B(e) {
         return g.Get().m_mapPriceProposals.get(e);
       }
-      function R() {
+      function A() {
         return Array.from(g.Get().m_mapPriceProposals.values());
       }
-      function B(e) {
+      function R(e) {
         return g.Get().m_mapPriceProposals.get(e);
       }
       function U(e) {
         let t = !1;
-        for (const i of g.Get().m_rgKnownPriceKeys) {
-          let r = g.Get().GetPublishedPrice(e, i);
-          t = t || (0 != r && void 0 !== r);
+        for (const r of g.Get().m_rgKnownPriceKeys) {
+          let a = g.Get().GetPublishedPrice(e, r);
+          t = t || (0 != a && void 0 !== a);
         }
         return t;
       }
       function K(e) {
-        const t = w(e),
-          i = [];
-        for (const r of g.Get().m_rgKnownPriceKeys) {
-          const a = t.prices[r],
-            n = g.Get().GetPublishedPrice(e, r);
-          a != n &&
-            i.push({
+        const t = B(e),
+          r = [];
+        for (const a of g.Get().m_rgKnownPriceKeys) {
+          const i = t.prices[a],
+            s = g.Get().GetPublishedPrice(e, a);
+          i != s &&
+            r.push({
               packageID: e,
-              strPriceKey: r,
-              nPriceInCents: a,
-              nOldPriceInCents: n,
+              strPriceKey: a,
+              nPriceInCents: i,
+              nOldPriceInCents: s,
             });
         }
-        return i;
+        return r;
       }
       function N() {
         return g.Get().m_rgKnownPriceKeys;
@@ -1849,157 +1319,153 @@
         return t ? t.strDescription : "";
       }
       function V(e) {
-        return s.useCallback(() => {
+        return n.useCallback(() => {
           g.Get().DiscardAllLocalPriceOverridesForKey(e);
         }, [e]);
       }
-      function z(e) {
-        return s.useCallback(() => {
+      function W(e) {
+        return n.useCallback(() => {
           g.Get().DiscardLocalPriceOverridesForPackage(e);
         }, [e]);
       }
-      function F(e) {
-        return s.useCallback(() => {
+      function x(e) {
+        return n.useCallback(() => {
           g.Get().CancelProposal(e);
         }, [e]);
       }
-      function T() {
-        const [e, t] = s.useState(g.Get().m_strDisplayPriceKey),
-          i = g.Get().m_rgKnownPriceKeys,
-          r = s.useCallback((e) => {
+      function Q() {
+        const [e, t] = n.useState(g.Get().m_strDisplayPriceKey),
+          r = g.Get().m_rgKnownPriceKeys,
+          a = n.useCallback((e) => {
             t(e),
               (g.Get().m_strDisplayPriceKey = e),
               g.Get().m_displayPriceKeyCallbackList.Dispatch(e);
           }, []);
-        return { strPriceKey: e, rgSupportedPriceKeys: i, fnSetPriceKey: r };
+        return { strPriceKey: e, rgSupportedPriceKeys: r, fnSetPriceKey: a };
       }
-      function W(e) {
+      function z(e) {
         const t = (0, p.NW)();
         return (
           (0, p.Qg)(g.Get().m_allPriceOverridesCallbackList, t),
           g.Get().BHasLocalPriceOverrides(e)
         );
       }
-      function Q(e) {
+      function T(e) {
         return g.Get().BHasLocalPriceOverrides(e);
       }
-      function x() {
-        const [e, t] = s.useState(() => g.Get().GetAllLocalPriceOverrides());
+      function F() {
+        const [e, t] = n.useState(() => g.Get().GetAllLocalPriceOverrides());
         return (0, p.Qg)(g.Get().m_allPriceOverridesCallbackList, t), e;
       }
-      function j(e) {
-        return (0, h.SZ)(() => g.Get().GetLocalOverrideCountForPriceKey(e));
+      function H(e) {
+        return (0, _.SZ)(() => g.Get().GetLocalOverrideCountForPriceKey(e));
       }
-      function H() {
-        return s.useCallback(() => {
-          var e;
-          return (
-            (null === (e = g.Get().GetAllLocalPriceOverrides()) || void 0 === e
-              ? void 0
-              : e.length) > 0
-          );
-        }, []);
-      }
-      function q() {
-        return s.useCallback(() => g.Get().DiscardAllLocalPriceOverrides(), []);
-      }
-      function X() {
-        const e = [],
-          t = s.useRef(new Map());
-        g.Get().m_mapPriceGuidelines.forEach((i, r) => {
-          const a = i.get("USD");
-          e.push(a), t.current.set(a, r);
-        }),
-          e.sort((e, t) => e - t);
-        const i = s.useCallback((e, i) => {
-          const r = t.current.get(i);
-          g.Get()
-            .m_mapPriceGuidelines.get(r)
-            .forEach((t, i) => g.Get().OverridePrice(e, i, t));
-        }, []);
-        return { rgUSDPricesInCents: e, fnApplyGuidelines: i };
-      }
-      function $() {
-        return s.useCallback(
-          (e, t, i) => g.Get().SubmitProposalToServer(e, t, i),
+      function j() {
+        return n.useCallback(
+          () => g.Get().GetAllLocalPriceOverrides()?.length > 0,
           [],
         );
       }
-      function Z() {
-        return s.useCallback(
+      function X() {
+        return n.useCallback(() => g.Get().DiscardAllLocalPriceOverrides(), []);
+      }
+      function $() {
+        const e = [],
+          t = n.useRef(new Map());
+        g.Get().m_mapPriceGuidelines.forEach((r, a) => {
+          const i = r.get("USD");
+          e.push(i), t.current.set(i, a);
+        }),
+          e.sort((e, t) => e - t);
+        const r = n.useCallback((e, r) => {
+          const a = t.current.get(r);
+          g.Get()
+            .m_mapPriceGuidelines.get(a)
+            .forEach((t, r) => g.Get().OverridePrice(e, r, t));
+        }, []);
+        return { rgUSDPricesInCents: e, fnApplyGuidelines: r };
+      }
+      function q() {
+        return n.useCallback(
+          (e, t, r) => g.Get().SubmitProposalToServer(e, t, r),
+          [],
+        );
+      }
+      function Y() {
+        return n.useCallback(
           (e, t) => g.Get().PublishApprovedProposal(e, t, 6e4),
           [],
         );
       }
-      function Y(e) {
+      function Z(e) {
         let t = [];
-        const i = g.Get().m_rgKnownPriceKeys;
-        for (let r of e) {
-          if (U(r)) continue;
+        const r = g.Get().m_rgKnownPriceKeys;
+        for (let a of e) {
+          if (U(a)) continue;
           let e = !1;
-          for (const t of i) {
+          for (const t of r) {
             if (!g.Get().BPriceKeyRequired(t)) continue;
-            if (!g.Get().GetPrice(r, t)) {
+            if (!g.Get().GetPrice(a, t)) {
               e = !0;
               break;
             }
           }
-          e && t.push(r);
+          e && t.push(a);
         }
         return t;
       }
     },
-    42006: (e, t, i) => {
-      i.d(t, { $k: () => d, yh: () => n });
-      var r = i(50423),
-        a = i(31846);
-      function n(e, t, i, r) {
-        const n = (0, a.Xx)("#PackageGrid_MultipleBaseGamesFoundForPackage"),
-          s = (0, a.Xx)("#PackageGrid_NoBaseGameFoundForPackage"),
-          o = e == n,
+    42006: (e, t, r) => {
+      r.d(t, { $k: () => m, yh: () => s });
+      var a = r(50423),
+        i = r(31846);
+      function s(e, t, r, a) {
+        const s = (0, i.Xx)("#PackageGrid_MultipleBaseGamesFoundForPackage"),
+          n = (0, i.Xx)("#PackageGrid_NoBaseGameFoundForPackage"),
           c = e == s,
-          l = !o && !c,
-          p = t == n,
-          u = t == s,
-          d = !p && !u;
-        if (l && d) return e.localeCompare(t);
-        if (l || d) return l ? -1 : 1;
-        if (o == p && c == u) {
-          const e = i.getData().packageName,
-            t = r.getData().packageName;
+          o = e == n,
+          l = !c && !o,
+          p = t == s,
+          u = t == n,
+          m = !p && !u;
+        if (l && m) return e.localeCompare(t);
+        if (l || m) return l ? -1 : 1;
+        if (c == p && o == u) {
+          const e = r.getData().packageName,
+            t = a.getData().packageName;
           return e && t
             ? e.localeCompare(t)
             : e || t
               ? e
                 ? -1
                 : 1
-              : i.getData().packageID - r.getData().packageID;
+              : r.getData().packageID - a.getData().packageID;
         }
-        return o ? -1 : 1;
+        return c ? -1 : 1;
       }
-      const s = (e) => e.nextElementSibling,
-        o = (e) => e.previousElementSibling,
-        c = (e, t) => {
-          const i = e.getAttribute("tabulator-field"),
-            r = e.parentElement;
-          let a = r && t(r);
-          for (; i && a; ) {
-            for (const e of Array.from(a.children))
-              if (i == e.getAttribute("tabulator-field")) return e;
-            a = t(a);
+      const n = (e) => e.nextElementSibling,
+        c = (e) => e.previousElementSibling,
+        o = (e, t) => {
+          const r = e.getAttribute("tabulator-field"),
+            a = e.parentElement;
+          let i = a && t(a);
+          for (; r && i; ) {
+            for (const e of Array.from(i.children))
+              if (r == e.getAttribute("tabulator-field")) return e;
+            i = t(i);
           }
           return null;
         },
         l = new Map([
-          [38, (e) => c(e, o)],
-          [39, s],
-          [40, (e) => c(e, s)],
-          [37, o],
-          [9, (e) => c(e, s)],
-          [13, (e) => c(e, s)],
+          [38, (e) => o(e, c)],
+          [39, n],
+          [40, (e) => o(e, n)],
+          [37, c],
+          [9, (e) => o(e, n)],
+          [13, (e) => o(e, n)],
         ]);
       function p(e) {
-        return (0, r.Jk)(e, (e) => e.classList.contains("tabulator-cell"));
+        return (0, a.Jk)(e, (e) => e.classList.contains("tabulator-cell"));
       }
       function u(e) {
         const t = Array.prototype.slice.call(e.children).reverse();
@@ -2010,45 +1476,43 @@
         }
         return null;
       }
-      function d(e, t) {
-        var i;
+      function m(e, t) {
         const r = l.get(e.keyCode);
         if (!r) return;
         let a = r(p(e.currentTarget));
         for (; a; ) {
           if (
-            "none" !=
-              (null === (i = a.style) || void 0 === i ? void 0 : i.display) &&
+            "none" != a.style?.display &&
             !a.classList.contains("tabulator-frozen")
           ) {
-            const i = u(a);
-            if (i) {
-              return m(t, p(i)), i.focus(), void e.preventDefault();
+            const r = u(a);
+            if (r) {
+              return d(t, p(r)), r.focus(), void e.preventDefault();
             }
           }
           a = r(a);
         }
       }
-      function m(e, t) {
-        const i = e.columnManager.scrollLeft,
-          r = t.offsetWidth,
-          a = t.offsetLeft,
-          n = a + r,
-          s = e.columnManager.element.clientWidth,
-          o = e.columnManager.headersElement.clientWidth,
-          c = i + s;
-        if (a >= c - o && n <= c) return;
-        const l = (a + n) / 2 - (s - o / 2),
-          p = (o - r) / 4,
-          u = l + (l > i ? p : -1 * p);
+      function d(e, t) {
+        const r = e.columnManager.scrollLeft,
+          a = t.offsetWidth,
+          i = t.offsetLeft,
+          s = i + a,
+          n = e.columnManager.element.clientWidth,
+          c = e.columnManager.headersElement.clientWidth,
+          o = r + n;
+        if (i >= o - c && s <= o) return;
+        const l = (i + s) / 2 - (n - c / 2),
+          p = (c - a) / 4,
+          u = l + (l > r ? p : -1 * p);
         e.columnManager.scrollHorizontal(u), e.rowManager.scrollHorizontal(u);
       }
     },
-    37047: (e, t, i) => {
-      i.d(t, { $: () => r, _: () => a });
-      const r = "America/Los_Angeles";
-      function a(e) {
-        const t = i(98973).unix(e).tz(r);
+    37047: (e, t, r) => {
+      r.d(t, { $: () => a, _: () => i });
+      const a = "America/Los_Angeles";
+      function i(e) {
+        const t = r(98973).unix(e).tz(a);
         return (
           t.seconds(0),
           t.minutes(0),

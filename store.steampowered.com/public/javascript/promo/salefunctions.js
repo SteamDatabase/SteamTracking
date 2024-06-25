@@ -83,7 +83,7 @@ function GenerateTagBlocks( $Parent, rgTagData, rgTier1Unfiltered, rgTier2Unfilt
 		PromoteFeaturedGamesWithinList( TagData, rgTier1, rgTier2 );
 
 		let rgItemsPassingFilter = GHomepage.FilterItemsForDisplay(
-			TagData.items, 'sale', 4, 4, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
+			TagData.items, 'sale', 4, 4, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: false }
 		);
 
 		if ( rgItemsPassingFilter < 4 )
@@ -92,7 +92,7 @@ function GenerateTagBlocks( $Parent, rgTagData, rgTier1Unfiltered, rgTier2Unfilt
 		let $Ctn = $J( '<div/>', {'class': 'home_discounts_block'} );
 
 		let $TitleCtn = $J('<div/>', { 'class': 'home_title_ctn' } ).append( $J('<div/>', { 'class': 'home_title'}).html( TagData.name ) );
-		$TitleCtn.append( $J('<div/>', { 'class': 'home_line' } ) )
+		$TitleCtn.append( $J('<div/>', { 'class': 'home_section_subtitle'} ).text( TagData.recommended ? 'Recommended tag based on what you play' : 'Featured tag' ) )
 		$Ctn.append( $TitleCtn );
 
 		let $GamesCtn =  $J('<div/>', { 'class': 'home_discount_games_ctn' } );
@@ -367,10 +367,10 @@ function HomeRenderSpecialDealsCarousel( rgSpecialDealItems )
 		return;
 
 	let rgSpecialDeals = GHomepage.FilterItemsForDisplay(
-		rgSpecialDealItems, 'home', 3, 24, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
+		rgSpecialDealItems, 'home', 3, 24, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: false }
 	);
 
-	if ( rgSpecialDeals )
+	if ( rgSpecialDeals.length >= 3 )
 	{
 		GHomepage.FillPagedCapsuleCarousel( rgSpecialDeals, $SpecialDealsCarousel, function( oItem, strFeature, rgOptions, nDepth ) {
 			return SaleCap( oItem, strFeature, 'discount_block_inline', false, false, true );
@@ -391,10 +391,10 @@ function HomeRenderSteamDeckSection( rgFeaturedSteamDeckGames )
 		return;
 
 	let rgSteamDeckGames = GHomepage.FilterItemsForDisplay(
-		rgFeaturedSteamDeckGames, 'home', 3, 24, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: false }
+		rgFeaturedSteamDeckGames, 'home', 3, 24, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: false, has_discount: true }
 	);
 
-	if ( rgSteamDeckGames )
+	if ( rgSteamDeckGames.length >= 3 )
 	{
 		GHomepage.FillPagedCapsuleCarousel( rgSteamDeckGames, $SteamDeckCarousel, function( oItem, strFeature, rgOptions, nDepth ) {
 			return SaleCap( oItem, strFeature, 'discount_block_inline', false, false, true );
@@ -474,7 +474,7 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 		SaleRenderUnder10Section( rgDisplayLists.under10 );
 		$Under10Area.css('height', '' );
 	} );
-	
+
 	// process tag sections first, pulling in featured items into the tag blocks we display
 	var $TagBlock = $J('#sale_tag_categories');
 	if ( $TagBlock.length )
@@ -1344,25 +1344,30 @@ CVideoScrollController.prototype.update = function()
 	}
 };
 
-function EnableAltHeader()
+function ToggleAltHeader()
 {
 	if ( g_rgAltBackgroundSrc )
 	{
-		V_SetCookie( 'enable_alt_sale_header', 1 );
-
-		if ( window.innerWidth <= 500 )
+		if ( !V_GetCookie( 'enable_alt_sale_header' ) )
 		{
-			$J( '.page_background_holder' ).css( 'background-image', 'url(' +  g_rgAltBackgroundSrc.strPageBackgroundMobileURL + ')' );
+			V_SetCookie('enable_alt_sale_header', 1 );
+
+			if ( window.innerWidth <= 500 )
+			{
+				$J('.page_background_holder').css('background-image', 'url(' + g_rgAltBackgroundSrc.strPageBackgroundMobileURL + ')');
+			}
+			else
+			{
+				$J('.fullscreen-bg__video').attr('src', g_rgAltBackgroundSrc.strPageBackgroundWebM);
+				$J('.fullscreen-bg__video').attr('poster', g_rgAltBackgroundSrc.strPageBackgroundURL);
+				$J('.page_background_holder').css('background-image', 'url(' + g_rgAltBackgroundSrc.strPageBackgroundURL + ')');
+			}
 		}
 		else
 		{
-			$J( '.page_background_holder' ).css( 'background-image', 'url(' +  g_rgAltBackgroundSrc.strPageBackgroundURL + ')' );
+			V_SetCookie('enable_alt_sale_header', 0, -1 );
+			location.reload();
 		}
-
-		$J('.fullscreen-bg__video' ).attr('src', g_rgAltBackgroundSrc.strPageBackgroundWebM );
-		$J('.fullscreen-bg__video_mobile' ).attr('src', g_rgAltBackgroundSrc.strPageBackgroundMobileWebM );
-
-		$J( '.page_background_overlay' ).hide();
 	}
 }
 

@@ -20,19 +20,20 @@
       var s = n(65255);
       let i = { success: !0, result: 1 };
       class o {
-        constructor() {
-          (this.m_mapWaitingCallbacks = new Map()),
-            (this.m_iCallSeq = 1),
-            (this.m_bReady = !1),
-            (this.m_bClientConnectionFailed = !1),
-            (this.m_bSecurityException = !1),
-            (this.m_ClientInfo = {
-              ulVersion: "",
-              bFriendsUIEnabled: !1,
-              unAccountID: 0,
-              rgSupportedMessages: [],
-            });
-        }
+        m_mapWaitingCallbacks = new Map();
+        m_socket;
+        m_iCallSeq = 1;
+        m_bReady = !1;
+        m_bClientConnectionFailed = !1;
+        m_bSecurityException = !1;
+        m_promiseConnect;
+        m_ClientInfo = {
+          ulVersion: "",
+          bFriendsUIEnabled: !1,
+          unAccountID: 0,
+          rgSupportedMessages: [],
+        };
+        constructor() {}
         get ClientInfo() {
           return this.m_ClientInfo;
         }
@@ -133,11 +134,8 @@
         }
       }
       let c = new (class {
-        constructor() {
-          (this.m_connection = new o()),
-            (this.m_bAllowAccountMismatch = !1),
-            (this.m_mapCacheSubscribedApp = new Map());
-        }
+        m_connection = new o();
+        m_bAllowAccountMismatch = !1;
         FailureResult(e = 2) {
           let t = { success: !1, result: e };
           return (
@@ -180,6 +178,7 @@
           let t = { message: "ShowChatRoomGroupInvite", invite_code: e };
           return this.GenericEResultCall(t);
         }
+        m_mapCacheSubscribedApp = new Map();
         BIsSubscribedApp(e) {
           if (this.m_mapCacheSubscribedApp.has(e))
             return Promise.resolve(this.m_mapCacheSubscribedApp.get(e));

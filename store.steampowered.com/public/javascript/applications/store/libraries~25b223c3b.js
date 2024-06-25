@@ -47,18 +47,16 @@
     },
     20142: (e, t, o) => {
       "use strict";
-      o.d(t, { DX: () => a, LT: () => r, So: () => l });
+      o.d(t, { DX: () => s, LT: () => a, So: () => c });
       var n = o(20020),
-        s = o(47427);
-      class r {
-        constructor() {
-          this.reactNodes = [];
-        }
+        r = o(47427);
+      class a {
+        reactNodes = [];
         AppendText(e, t = !1) {
           e.length &&
             (t
               ? this.reactNodes.push(
-                  s.createElement(
+                  r.createElement(
                     "span",
                     {
                       "data-copytext": "",
@@ -77,7 +75,8 @@
           return this.reactNodes;
         }
       }
-      class a {
+      class s {
+        m_decoratedAccumulator;
         constructor(e) {
           (0, n.X)(e, "decorated accumulator cannot be null"),
             (this.m_decoratedAccumulator = e);
@@ -92,11 +91,10 @@
           return this.m_decoratedAccumulator.GetElements();
         }
       }
-      class l extends a {
+      class c extends s {
+        m_nStartCursor = 1;
         constructor(e, t, o) {
-          super(e),
-            (this.m_nStartCursor = 1),
-            (this.m_nStartCursor = void 0 !== t ? t : 1);
+          super(e), (this.m_nStartCursor = void 0 !== t ? t : 1);
         }
         AppendText(e) {
           let t = e;
@@ -107,7 +105,7 @@
             e = t.indexOf("\n")
           )
             o.push(t.substr(0, e)),
-              o.push(s.createElement("br")),
+              o.push(r.createElement("br")),
               (t = t.substr(e + 1));
           t.length && o.push(t),
             o.forEach((e) => {
@@ -118,14 +116,15 @@
     },
     31932: (e, t, o) => {
       "use strict";
-      o.d(t, { Z: () => c });
+      o.d(t, { Z: () => l });
       var n = o(77936),
-        s = o(47427),
-        r = o(20142);
-      class a {
-        constructor() {
-          (this.type = 0), (this.text = "");
-        }
+        r = o(47427),
+        a = o(20142);
+      class s {
+        type = 0;
+        text = "";
+        tag;
+        args;
         ConvertMalformedNodeToText() {
           3 == this.type
             ? (this.text = "[/" + this.text)
@@ -133,35 +132,35 @@
             (this.type = 1);
         }
       }
-      class l {
+      class c {
+        m_fnAccumulatorFactory;
+        m_dictComponents = void 0;
         constructor(e, t) {
-          (this.m_dictComponents = void 0),
-            (this.m_dictComponents = e),
-            (this.m_fnAccumulatorFactory = t);
+          (this.m_dictComponents = e), (this.m_fnAccumulatorFactory = t);
         }
         Parse(e, t, o = !1) {
           const n = (function (e, t) {
             const o = [];
-            let n = new a(),
-              s = !1,
+            let n = new s(),
               r = !1,
-              l = !1;
-            for (let a = 0; a < e.length; a++) {
-              const c = e[a];
+              a = !1,
+              c = !1;
+            for (let s = 0; s < e.length; s++) {
+              const l = e[s];
               switch (n.type) {
                 case 0:
-                  "[" == c
-                    ? ((n.type = 2), (r = !0))
-                    : ((n.type = 1), "\\" == c && t ? (s = !s) : (n.text += c));
+                  "[" == l
+                    ? ((n.type = 2), (a = !0))
+                    : ((n.type = 1), "\\" == l && t ? (r = !r) : (n.text += l));
                   break;
                 case 2:
                 case 3:
-                  if ("/" == c && r) (n.type = 3), (n.text = ""), (r = !1);
-                  else if ("[" != c || s)
-                    if ("]" != c || s)
-                      "\\" == c && t
-                        ? ((n.text += c), (s = !s), (r = !1))
-                        : ((n.text += c), (s = !1), (r = !1));
+                  if ("/" == l && a) (n.type = 3), (n.text = ""), (a = !1);
+                  else if ("[" != l || r)
+                    if ("]" != l || r)
+                      "\\" == l && t
+                        ? ((n.text += l), (r = !r), (a = !1))
+                        : ((n.text += l), (r = !1), (a = !1));
                     else {
                       const e =
                           2 == n.type &&
@@ -169,23 +168,23 @@
                         t =
                           3 == n.type &&
                           "noparse" == n.text.toLocaleLowerCase();
-                      r || (l && !t)
-                        ? (n.ConvertMalformedNodeToText(), (n.text += c))
+                      a || (c && !t)
+                        ? (n.ConvertMalformedNodeToText(), (n.text += l))
                         : e
-                          ? (l = !0)
-                          : t && (l = !1),
+                          ? (c = !0)
+                          : t && (c = !1),
                         (n = d(o, n)),
-                        (r = !1);
+                        (a = !1);
                     }
                   else
-                    n.ConvertMalformedNodeToText(), (n = d(o, n, 2)), (r = !0);
+                    n.ConvertMalformedNodeToText(), (n = d(o, n, 2)), (a = !0);
                   break;
                 case 1:
-                  "[" != c || s
-                    ? "\\" == c && t
-                      ? (s && (n.text += c), (s = !s))
-                      : ((n.text += c), (s = !1))
-                    : ((n = d(o, n, 2)), (r = !0));
+                  "[" != l || r
+                    ? "\\" == l && t
+                      ? (r && (n.text += l), (r = !r))
+                      : ((n.text += l), (r = !1))
+                    : ((n = d(o, n, 2)), (a = !0));
               }
             }
             0 != n.type &&
@@ -198,79 +197,65 @@
         Parse_BuildElements(e, t) {
           let o = this.m_fnAccumulatorFactory(void 0);
           const n = [],
-            s = () => (n.length < 1 ? void 0 : n[n.length - 1]),
-            r = this.m_dictComponents;
-          let a = !1,
-            l = !0;
-          const d = (e, s, d) => {
-            if (
-              e &&
-              e.node.tag === s.text &&
-              (null == r ? void 0 : r.get(e.node.tag))
-            ) {
-              const s = r.get(e.node.tag),
+            r = () => (n.length < 1 ? void 0 : n[n.length - 1]),
+            a = this.m_dictComponents;
+          let s = !1,
+            c = !0;
+          const d = (e, r, d) => {
+            if (e && e.node.tag === r.text && a?.get(e.node.tag)) {
+              const r = a.get(e.node.tag),
                 d = n.map((e) => e.node.tag),
-                c = { parentTags: d, tagname: e.node.tag, args: e.node.args },
-                i = t(s.Constructor, c, ...o.GetElements());
+                l = { parentTags: d, tagname: e.node.tag, args: e.node.args },
+                p = t(r.Constructor, l, ...o.GetElements());
               (o = e.accumulator),
-                Array.isArray(i)
-                  ? i.forEach((e) => o.AppendNode(e))
-                  : o.AppendNode(i),
-                (a = !!s.skipFollowingNewline),
-                (l = e.bWrapTextForCopying);
+                Array.isArray(p)
+                  ? p.forEach((e) => o.AppendNode(e))
+                  : o.AppendNode(p),
+                (s = !!r.skipFollowingNewline),
+                (c = e.bWrapTextForCopying);
             } else if (e) {
               const t = e.accumulator;
               t.AppendText("[" + e.node.text + "]", !1),
                 o.GetElements().forEach((e) => t.AppendNode(e)),
-                t.AppendText("[/" + s.text + "]", !1),
+                t.AppendText("[/" + r.text + "]", !1),
                 (o = t),
-                (l = e.bWrapTextForCopying);
+                (c = e.bWrapTextForCopying);
             }
           };
           for (
             e.forEach((e, t) => {
-              var c, i, p;
               if (1 == e.type) {
-                const t = a ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
-                o.AppendText(t, l), (a = !1);
+                const t = s ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
+                o.AppendText(t, c), (s = !1);
               } else if (2 == e.type) {
-                const t = null == r ? void 0 : r.get(e.tag);
+                const t = a?.get(e.tag);
                 if (t) {
-                  const i = s();
-                  if (void 0 !== i) {
-                    const t = null == r ? void 0 : r.get(i.node.tag);
+                  const l = r();
+                  if (void 0 !== l) {
+                    const t = a?.get(l.node.tag);
                     t &&
                       t.autocloses &&
-                      e.tag === i.node.tag &&
-                      d(n.pop(), i.node);
+                      e.tag === l.node.tag &&
+                      d(n.pop(), l.node);
                   }
-                  n.push({ accumulator: o, node: e, bWrapTextForCopying: l }),
+                  n.push({ accumulator: o, node: e, bWrapTextForCopying: c }),
                     (o = this.m_fnAccumulatorFactory(e)),
-                    (a = !!t.skipInternalNewline),
-                    (l =
-                      null !== (c = t.allowWrapTextForCopying) &&
-                      void 0 !== c &&
-                      c);
+                    (s = !!t.skipInternalNewline),
+                    (c = t.allowWrapTextForCopying ?? !1);
                 } else o.AppendText("[" + e.text + "]", 0 == n.length);
               } else if (3 == e.type) {
                 for (
                   ;
-                  s() &&
-                  s().node.tag !== e.text &&
-                  (null == r ? void 0 : r.get(s().node.tag)) &&
-                  (null === (i = null == r ? void 0 : r.get(s().node.tag)) ||
-                  void 0 === i
-                    ? void 0
-                    : i.autocloses);
+                  r() &&
+                  r().node.tag !== e.text &&
+                  a?.get(r().node.tag) &&
+                  a?.get(r().node.tag)?.autocloses;
 
                 ) {
                   const e = n.pop();
                   d(e, e.node);
                 }
-                if (
-                  (null === (p = s()) || void 0 === p ? void 0 : p.node.tag) ==
-                  e.text
-                ) {
+                if (r()?.node.tag == e.text) {
                   const t = n.pop();
                   d(t, e);
                 } else o.AppendText("[/" + e.text + "]", 0 == n.length);
@@ -300,63 +285,64 @@
               const t = {};
               let o = "",
                 n = "",
-                s = 0,
-                r = 0;
-              "=" == e[0] && (s = 2);
-              let a = !1;
-              for (r++; r < e.length; r++) {
-                const l = e[r];
+                r = 0,
+                a = 0;
+              "=" == e[0] && (r = 2);
+              let s = !1;
+              for (a++; a < e.length; a++) {
+                const c = e[a];
                 let d = !0,
-                  c = !1;
-                switch (s) {
+                  l = !1;
+                switch (r) {
                   case 0:
-                    if ("=" == l) return {};
-                    if (" " == l) continue;
-                    s = 1;
+                    if ("=" == c) return {};
+                    if (" " == c) continue;
+                    r = 1;
                     break;
                   case 1:
-                    ("=" != l && " " != l) ||
-                      a ||
-                      (" " == l ? ((s = 0), (c = !0)) : (s = 2), (d = !1));
+                    ("=" != c && " " != c) ||
+                      s ||
+                      (" " == c ? ((r = 0), (l = !0)) : (r = 2), (d = !1));
                     break;
                   case 2:
-                    " " == l
-                      ? ((s = 0), (d = !1), (c = !0))
-                      : '"' == l
-                        ? ((s = 4), (d = !1))
-                        : (s = 3);
+                    " " == c
+                      ? ((r = 0), (d = !1), (l = !0))
+                      : '"' == c
+                        ? ((r = 4), (d = !1))
+                        : (r = 3);
                     break;
                   case 3:
                   case 4:
-                    ((" " == l && 4 != s && !a) ||
-                      ('"' == l && 4 == s && !a)) &&
-                      ((s = 0), (d = !1), (c = !0));
+                    ((" " == c && 4 != r && !s) ||
+                      ('"' == c && 4 == r && !s)) &&
+                      ((r = 0), (d = !1), (l = !0));
                 }
                 if (d)
-                  if ("\\" != l || a)
-                    if (((a = !1), 1 == s)) o += l;
+                  if ("\\" != c || s)
+                    if (((s = !1), 1 == r)) o += c;
                     else {
-                      if (3 != s && 4 != s)
+                      if (3 != r && 4 != r)
                         throw new Error(
-                          "Not expecting to accumulate buffer in state " + s,
+                          "Not expecting to accumulate buffer in state " + r,
                         );
-                      n += l;
+                      n += c;
                     }
-                  else a = !0;
-                c && ((t[o] = n), (o = ""), (n = ""));
+                  else s = !0;
+                l && ((t[o] = n), (o = ""), (n = ""));
               }
-              0 != s && (t[o] = n);
+              0 != r && (t[o] = n);
               return t;
             })(o);
           } else (t.args = {}), (t.tag = t.text.toLocaleLowerCase());
         }
         e.push(t);
-        const n = new a();
+        const n = new s();
         return (n.type = o), n;
       }
-      class c extends l {
+      class l extends c {
+        m_renderingLanguage;
         constructor(e, t, o) {
-          super(e, null != t ? t : () => new r.LT()),
+          super(e, t ?? (() => new a.LT())),
             (this.m_renderingLanguage =
               "string" == typeof o ? (0, n.jM)(o) : o);
         }
@@ -365,24 +351,25 @@
         }
         ParseBBCode(e, t, o = !1) {
           let n = 0;
-          const r = this.Parse(
+          const a = this.Parse(
             e,
-            (e, o, ...r) =>
-              s.createElement(
+            (e, o, ...a) =>
+              r.createElement(
                 e,
-                Object.assign(Object.assign({}, o), {
+                {
+                  ...o,
                   context: t,
                   language: this.m_renderingLanguage,
                   key: "bbnode_" + n++,
-                }),
-                ...r,
+                },
+                ...a,
               ),
             o,
           );
-          return r.length > 1
-            ? s.createElement(s.Fragment, null, ...r)
-            : 1 == r.length
-              ? r[0]
+          return a.length > 1
+            ? r.createElement(r.Fragment, null, ...a)
+            : 1 == a.length
+              ? a[0]
               : null;
         }
       }

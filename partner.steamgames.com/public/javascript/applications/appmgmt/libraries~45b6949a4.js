@@ -16157,6 +16157,8 @@
             i.prototype.sale_filter || s.aR(i.M()),
             r.initialize(this, e, 0, -1, [3], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             i.sm_m ||
@@ -16213,6 +16215,8 @@
             d.prototype.sale_tagid || s.aR(d.M()),
             r.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             d.sm_m ||
@@ -16271,6 +16275,8 @@
             _.prototype.hub_type || s.aR(_.M()),
             r.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             _.sm_m ||
@@ -16341,6 +16347,8 @@
             o.prototype.name || s.aR(o.M()),
             r.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             o.sm_m ||
@@ -16406,6 +16414,8 @@
             u.prototype.filter_json || s.aR(u.M()),
             r.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             u.sm_m ||

@@ -660,7 +660,7 @@
     },
     64936: (e, t, n) => {
       "use strict";
-      n.d(t, { F_: () => m, JW: () => d, kl: () => E, zD: () => g });
+      n.d(t, { F_: () => m, JW: () => d, kl: () => E, zD: () => f });
       var r = n(85556),
         s = n(54842),
         a = n(37485),
@@ -670,11 +670,11 @@
         c = n(37563);
       class u {
         constructor() {
-          (this.bOpenEventLandingPage = !1),
-            (this.bIncludeFeaturedAsGameSource = !0),
-            (this.nOverrideDateNow = void 0),
-            (0, s.rC)(this);
+          (0, s.rC)(this);
         }
+        bOpenEventLandingPage = !1;
+        bIncludeFeaturedAsGameSource = !0;
+        nOverrideDateNow = void 0;
         get bRequireAllEventsLoadedInTimeBlock() {
           return !1;
         }
@@ -747,10 +747,9 @@
         return d.nOverrideDateNow ? d.nOverrideDateNow + (e - p) : e;
       }
       function E() {
-        var e;
-        return null !== (e = d.nOverrideDateNow) && void 0 !== e ? e : p;
+        return d.nOverrideDateNow ?? p;
       }
-      function g() {
+      function f() {
         return o.useMemo(() => E(), []);
       }
     },
@@ -818,12 +817,12 @@
     24827: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Ai: () => f,
+        Ai: () => g,
         H6: () => E,
         Kj: () => p,
-        Sw: () => _,
-        Zg: () => g,
-        uv: () => j,
+        Sw: () => j,
+        Zg: () => f,
+        uv: () => _,
         w$: () => v,
       });
       var r = n(85556),
@@ -874,9 +873,7 @@
             o = !r && Boolean(t),
             l = !a && Boolean(t),
             c = o && (0, i.$1)(t),
-            u = e.stylesmodule
-              ? Object.assign(Object.assign({}, d()), e.stylesmodule)
-              : d();
+            u = e.stylesmodule ? { ...d(), ...e.stylesmodule } : d();
           return n
             ? s.createElement(
                 "span",
@@ -903,7 +900,7 @@
                 ),
               );
         }),
-        g = (e) => {
+        f = (e) => {
           const t = s.createElement(
             "div",
             { className: e.stylesmodule.DateToolTip },
@@ -924,11 +921,11 @@
             e.children,
           );
         };
-      let f = class extends s.Component {
+      let g = class extends s.Component {
         render() {
           const { startDateAndTime: e, endDateAndTime: t } = this.props,
             n = this.props.stylesmodule
-              ? Object.assign(Object.assign({}, d()), this.props.stylesmodule)
+              ? { ...d(), ...this.props.stylesmodule }
               : d();
           let r =
             this.props.bHideEndTime ||
@@ -1024,8 +1021,8 @@
           );
         }
       };
-      f = (0, r.gn)([o.Pi], f);
-      let j = class extends s.Component {
+      g = (0, r.gn)([o.Pi], g);
+      let _ = class extends s.Component {
         render() {
           const {
               startDateAndTime: e,
@@ -1033,7 +1030,7 @@
               bHideEndTime: n,
             } = this.props,
             r = this.props.stylesmodule
-              ? Object.assign(Object.assign({}, d()), this.props.stylesmodule)
+              ? { ...d(), ...this.props.stylesmodule }
               : d();
           if (null == e || 0 == e)
             return s.createElement(
@@ -1055,7 +1052,7 @@
               (0, i.$1)(e, l),
             );
           let h = s.createElement(
-            g,
+            f,
             { rtFullDate: e, stylesmodule: r },
             s.createElement(
               "div",
@@ -1072,7 +1069,7 @@
             (o < e &&
               e < o + c._H.PerWeek &&
               (h = s.createElement(
-                g,
+                f,
                 { rtFullDate: e, stylesmodule: r },
                 s.createElement(
                   "div",
@@ -1095,7 +1092,7 @@
           const p = e <= o && o <= t;
           p &&
             (h = s.createElement(
-              g,
+              f,
               { rtFullDate: e, className: r.ActiveEvent, stylesmodule: r },
               s.createElement(
                 "span",
@@ -1104,12 +1101,12 @@
               ),
             ));
           let E = null;
-          const f = p ? t - o : t - e;
-          if (f <= c._H.PerDay) {
+          const g = p ? t - o : t - e;
+          if (g <= c._H.PerDay) {
             const e = s.createElement(
               "div",
               { className: r.ShortDateAndTime },
-              (0, i.yW)(f, !0),
+              (0, i.yW)(g, !0),
             );
             E =
               t < o
@@ -1150,11 +1147,11 @@
               ),
             );
           }
-          const j = s.createElement(g, { rtFullDate: t, stylesmodule: r }, E);
-          return s.createElement("div", { className: r.ShortDateRange }, h, j);
+          const _ = s.createElement(f, { rtFullDate: t, stylesmodule: r }, E);
+          return s.createElement("div", { className: r.ShortDateRange }, h, _);
         }
       };
-      function _(e) {
+      function j(e) {
         const {
           rtStartDate: t,
           rtEndDate: n,
@@ -1175,7 +1172,7 @@
               d = u && s.getDate() == a.getDate(),
               h = {
                 day: "numeric",
-                month: null != n ? n : "long",
+                month: n ?? "long",
                 year: o ? void 0 : "numeric",
               },
               p = s.toLocaleDateString(i.Yt.GetPreferredLocales(), h);
@@ -1183,7 +1180,7 @@
             {
               const e = {
                 day: "numeric",
-                month: u && l ? void 0 : null != n ? n : "long",
+                month: u && l ? void 0 : n ?? "long",
                 year: c ? void 0 : "numeric",
               };
               return (
@@ -1194,7 +1191,7 @@
           " ",
         );
       }
-      j = (0, r.gn)([o.Pi], j);
+      _ = (0, r.gn)([o.Pi], _);
     },
     56164: (e, t, n) => {
       "use strict";
@@ -1245,10 +1242,7 @@
         const [t, n] = i.useState(Boolean(e.bStartMinimized));
         return i.createElement(
           m,
-          Object.assign({}, e, {
-            getMinimized: () => t,
-            toggleMinimized: () => n(!t),
-          }),
+          { ...e, getMinimized: () => t, toggleMinimized: () => n(!t) },
           e.children,
         );
       }

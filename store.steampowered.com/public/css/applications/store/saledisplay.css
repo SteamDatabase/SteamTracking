@@ -33,18 +33,37 @@ html.tablet ._2kLRRV9r2tNm8qgGq1kcUM {
 }
 ._1o6sMXkSaJCfLIXV3m9wNj,
 ._2TbG9zgAuemQx8X3CTxh6A {
-  background-color: #d3d3d3;
-  border: 1px;
-  border-color: #a9a9a9;
-  margin: 5px;
-  padding: 5px;
+  background-color: #53585f;
+  margin: 6px;
+  padding: 6px;
   max-width: 250px;
+  color: #fff;
   position: absolute;
   right: 0;
   top: 120px;
+  box-shadow: 2px 2px 10px #000;
 }
 ._2TbG9zgAuemQx8X3CTxh6A {
   top: 0px;
+}
+._2TbG9zgAuemQx8X3CTxh6A ._2miTCcrK7SyAsp5m6_59dL {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 13px;
+  font-weight: 500;
+}
+._3S0dOomTlRBP50RhRahqDd {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+._3S0dOomTlRBP50RhRahqDd ._2_VcLqXIJrKwX9pVJHGoA8 {
+  flex-grow: 1;
+}
+._3S0dOomTlRBP50RhRahqDd ._1MTpmtaJl2CD-NmgO8qKFU {
+  flex-grow: 1;
+  margin-left: 30px;
 }
 ._1BEPNI1VRg_n1yO7i-sYnG,
 ._2pUkOvmrrCo5acF6P3gjVE {
@@ -1105,6 +1124,9 @@ p a:hover {
 }
 ._30w2v6caGebz3IjP05yXgs ._1AACQ0HtBUfw_EPo6LIysu {
   display: none;
+}
+._153y1J-VwAhAzefYGgW-LZ {
+  z-index: 1000;
 }
 .MrIcZ8OEyuHVV28mic2g3 {
   position: absolute;

@@ -151,7 +151,8 @@ a:hover {
 .appid_1090070 .customBrowseDesc,
 .appid_1635560 .customBrowseDesc,
 .appid_2066090 .customBrowseDesc,
-.appid_2496960 .customBrowseDesc
+.appid_2496960 .customBrowseDesc,
+.appid_3065590 .customBrowseDesc
 {
 	margin-top: 65px;
 }
@@ -163,7 +164,8 @@ a:hover {
 .appid_1090070 .customBrowseTitle,
 .appid_1635560 .customBrowseTitle,
 .appid_2066090 .customBrowseTitle,
-.appid_2496960 .customBrowseTitle
+.appid_2496960 .customBrowseTitle,
+.appid_3065590 .customBrowseTitle
 {
 	display: none;
 }

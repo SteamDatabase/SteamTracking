@@ -401,6 +401,13 @@
   margin-right: 4px;
   text-align: right;
   color: #a7afb3;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+._2JVkFc02Z_gli3Wk58ZdCn ._16vFdl_KejY4AT34jnVI-O:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
 }
 ._3XINnjVCEbWVyB05BBYltE {
   display: flex;
@@ -431,12 +438,15 @@
   display: flex;
   align-items: center;
   height: 28px;
-  padding: 0px 6px;
+  padding: 0px 0px 0px 8px;
   flex: 1;
   text-align: left;
   backdrop-filter: blur(8px);
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #a6b3c1;
 }
 ._1VxkAwTIvWU2gB-71xXUDP .wQNhOW92EGSW0_tW7f75e {
   margin-left: 29px;
@@ -445,7 +455,7 @@
   display: flex;
   flex-direction: row;
   text-align: left;
-  padding: 8px 16px 10px 0;
+  padding: 0;
   position: relative;
 }
 ._2MFv3aBQVR1hmBkGRLxdis {
@@ -453,33 +463,34 @@
 }
 ._2PfCWxjyYRpd6lTgvrlAIZ {
   flex: 1;
+  padding: 8px;
 }
 ._21CkHr7CK9bP8AjyR5MJvW {
   display: flex;
   position: relative;
   z-index: 1;
   transform-origin: left top;
-  width: 20px;
   height: 100%;
   justify-content: center;
   align-items: center;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
 }
 ._21CkHr7CK9bP8AjyR5MJvW._1En5AyFQguGHFvrW6V_e5s {
-  background: linear-gradient(133deg, #b2d764, #7a9f2d);
+  background: linear-gradient(133deg, #b2d7643b, #7a9f2d36);
 }
 ._21CkHr7CK9bP8AjyR5MJvW._25cJpdFfm1cUmPTGSnTRPy {
   background: linear-gradient(133deg, #e3df62, #bcb728);
 }
 ._21CkHr7CK9bP8AjyR5MJvW ._3BgVvQ0ke3leKWytDJD2kI,
 ._21CkHr7CK9bP8AjyR5MJvW ._3RFd47ESPVVtgpLbmNsySx {
-  transform: rotate(90deg);
+  transform: rotate(-90deg);
   position: relative;
   font-size: 1em;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
+  color: #b0d75f;
+}
+._21CkHr7CK9bP8AjyR5MJvW ._3RFd47ESPVVtgpLbmNsySx {
   color: #000;
 }
 ._3BVPhbdEe8mENSA5TF3znJ {
@@ -789,15 +800,16 @@
 ._3_yMxSFo_FV_uDWmUpaCVG {
   position: relative;
   display: grid;
-  grid-template-columns: 272px 1fr 1fr 1fr;
-  grid-template-areas: "image text text text" "image plays wishlists conversions" "survey survey survey survey";
-  gap: 6px;
+  grid-template-columns: 240px 1fr 1.5fr 1fr;
+  grid-template-areas: "image text text text" "image plays conversions wishlists" "survey survey survey survey";
+  gap: 0;
 }
 ._1nzSYFLPNZWtfiJ3JISUpZ {
   display: block;
   position: relative;
   grid-area: image;
-  width: 265px;
+  width: 224px;
+  margin-right: 16px;
   justify-content: center;
   align-items: center;
 }
@@ -809,6 +821,9 @@
 }
 ._3VEB7K-A4zr6x8UvAyuE4K {
   grid-area: text;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .i27ZA_0pHGVJkLkqXYBFs {
   font-size: 24px;
@@ -817,6 +832,7 @@
 .Qktd7uuG_8VLv2m3nzcsK {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 ._3fkqqnlhHRzeVp5gMVBrxh {
   display: flex;
@@ -836,7 +852,7 @@
   align-self: center;
   background: #505962;
   font-size: 12px;
-  margin: 4px 4px 4px 16px;
+  margin: 0 0 0 16px;
   padding: 4px 12px;
   transition:
     background-color 0.3s ease-in-out,
@@ -852,7 +868,8 @@
   background: #fff;
   justify-content: center;
   align-items: center;
-  color: #1b1e22;
+  color: #5c6d82;
+  padding: 7px 0;
 }
 ._2xhQ5R6gZi6A_ee4dFJQdI._188q7zqbiczjVV2L_2YKDc {
   grid-area: plays;
@@ -862,18 +879,28 @@
 }
 ._2xhQ5R6gZi6A_ee4dFJQdI._2nsl8MveEcxV2oZC8QJbXe {
   grid-area: conversions;
+  background: linear-gradient(90deg, white, #98aac0 20%, #98aac0 80%, white);
+  color: #fff;
+}
+._2xhQ5R6gZi6A_ee4dFJQdI._2nsl8MveEcxV2oZC8QJbXe .X-UQBnpHbbCzMbru9T2jV {
+  color: #fff;
 }
 ._56xXUFLURs5vRhJrnUZb6 {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: 600;
+  line-height: 28px;
 }
 .X-UQBnpHbbCzMbru9T2jV {
   text-align: center;
   font-size: 11px;
   color: #434953;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1em;
 }
 .MVkifzSa7pcESWfsDO669 {
   position: relative;
+  margin-top: 6px;
   grid-area: survey;
   display: flex;
   flex-direction: row;

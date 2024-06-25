@@ -30,66 +30,64 @@
     },
     79896: (e, t, n) => {
       "use strict";
-      n.d(t, { aX: () => y, gu: () => I });
+      n.d(t, { aX: () => I, gu: () => y });
       var s = n(85556),
-        r = n(47427),
-        a = n(20417),
+        a = n(47427),
+        r = n(20417),
         i = n(80751),
         o = n.n(i),
-        d = n(1485),
+        c = n(1485),
         l = n(31846),
-        c = n(13116),
-        u = n.n(c),
-        m = n(37563),
-        p = n(35427),
-        _ = n(50423),
+        d = n(13116),
+        m = n.n(d),
+        u = n(37563),
+        _ = n(35427),
+        p = n(50423),
         h = n(54842),
         g = n(48760),
         v = n(62210);
       n(16649);
       class f {
         constructor() {
-          (this.m_mapProfiles = new Map()),
-            (this.m_mapProfilesLoading = new Map()),
-            (0, h.rC)(this);
+          (0, h.rC)(this);
         }
-        LoadProfiles(e, t) {
-          return (0, s.mG)(this, void 0, void 0, function* () {
-            (0, v.X)(
-              e.length <= 500,
-              "Check LoadProfiles, requesting too many steam IDs",
-            );
-            let n = e.filter(
-              (e) =>
-                !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e),
-            );
-            if (0 == n.length) return this.m_mapProfilesLoading.get(e[0]);
-            let s = m.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
-              r = o().get(s, {
-                params: { steamids: n.join(",") },
-                withCredentials: !0,
-                cancelToken: null == t ? void 0 : t.token,
-              });
-            n.forEach((e) => this.m_mapProfilesLoading.set(e, r));
-            let a = yield r;
-            a.data &&
-              200 == a.status &&
-              a.data.forEach((e) => {
-                (e.avatar_hash = e.avatar_url),
-                  (e.avatar_url_medium = (0, g.U)(e.avatar_url, "medium")),
-                  (e.avatar_url_full = (0, g.U)(e.avatar_url, "full")),
-                  (e.avatar_url = (0, g.U)(e.avatar_url)),
-                  this.m_mapProfiles.set(e.steamid, e),
-                  this.m_mapProfilesLoading.delete(e.steamid);
-              });
-          });
+        m_mapProfiles = new Map();
+        m_mapProfilesLoading = new Map();
+        async LoadProfiles(e, t) {
+          (0, v.X)(
+            e.length <= 500,
+            "Check LoadProfiles, requesting too many steam IDs",
+          );
+          let n = e.filter(
+            (e) =>
+              !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e),
+          );
+          if (0 == n.length) return this.m_mapProfilesLoading.get(e[0]);
+          let s = u.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
+            a = o().get(s, {
+              params: { steamids: n.join(",") },
+              withCredentials: !0,
+              cancelToken: t?.token,
+            });
+          n.forEach((e) => this.m_mapProfilesLoading.set(e, a));
+          let r = await a;
+          r.data &&
+            200 == r.status &&
+            r.data.forEach((e) => {
+              (e.avatar_hash = e.avatar_url),
+                (e.avatar_url_medium = (0, g.U)(e.avatar_url, "medium")),
+                (e.avatar_url_full = (0, g.U)(e.avatar_url, "full")),
+                (e.avatar_url = (0, g.U)(e.avatar_url)),
+                this.m_mapProfiles.set(e.steamid, e),
+                this.m_mapProfilesLoading.delete(e.steamid);
+            });
         }
         GetProfile(e) {
           return this.m_mapProfiles.get(e);
         }
         GetProfileByAccountID(e) {
           return this.m_mapProfiles.get(
-            p.K.InitFromAccountID(e).ConvertTo64BitString(),
+            _.K.InitFromAccountID(e).ConvertTo64BitString(),
           );
         }
         GetProfileBySteamID(e) {
@@ -100,7 +98,7 @@
         }
         BHasProfileByAccountID(e) {
           return this.m_mapProfiles.has(
-            p.K.InitFromAccountID(e).ConvertTo64BitString(),
+            _.K.InitFromAccountID(e).ConvertTo64BitString(),
           );
         }
         BHasProfileBySteamID(e) {
@@ -112,8 +110,8 @@
         GetProfileURLBySteamID(e) {
           const t = this.GetProfileBySteamID(e);
           return t && t.profile_url
-            ? m.De.COMMUNITY_BASE_URL + "id/" + t.profile_url
-            : m.De.COMMUNITY_BASE_URL + "profiles/" + e.ConvertTo64BitString();
+            ? u.De.COMMUNITY_BASE_URL + "id/" + t.profile_url
+            : u.De.COMMUNITY_BASE_URL + "profiles/" + e.ConvertTo64BitString();
         }
         GetPersonaNameBySteamID(e) {
           const t = this.GetProfileBySteamID(e);
@@ -124,45 +122,38 @@
       const C = new f();
       var S = n(62613),
         E = n(82493);
-      class I extends r.Component {
-        constructor() {
-          super(...arguments),
-            (this.state = {
-              invite_token: "",
-              input_search: "",
-              friend_code_copied: !1,
-              invite_copied: !1,
-            });
+      class y extends a.Component {
+        state = {
+          invite_token: "",
+          input_search: "",
+          friend_code_copied: !1,
+          invite_copied: !1,
+        };
+        async componentDidMount() {
+          const e = await o().get(
+            u.De.COMMUNITY_BASE_URL + "invites/ajaxgetall",
+            { params: { sessionid: u.De.SESSIONID } },
+          );
+          if (e && e.data && e.data.tokens) {
+            const t = e.data.tokens.filter((e) => e.valid);
+            t.length
+              ? this.setState({ invite_token: t[0].invite_token })
+              : this.OnCreateInviteLink();
+          } else this.OnCreateInviteLink();
         }
-        componentDidMount() {
-          return (0, s.mG)(this, void 0, void 0, function* () {
-            const e = yield o().get(
-              m.De.COMMUNITY_BASE_URL + "invites/ajaxgetall",
-              { params: { sessionid: m.De.SESSIONID } },
-            );
-            if (e && e.data && e.data.tokens) {
-              const t = e.data.tokens.filter((e) => e.valid);
-              t.length
-                ? this.setState({ invite_token: t[0].invite_token })
-                : this.OnCreateInviteLink();
-            } else this.OnCreateInviteLink();
-          });
-        }
-        OnCreateInviteLink() {
-          return (0, s.mG)(this, void 0, void 0, function* () {
-            const e = new FormData();
-            e.append("sessionid", m.De.SESSIONID),
-              e.append("steamid_user", m.L7.steamid),
-              e.append("duration", (2592e3).toString());
-            const t = yield o().post(
-              m.De.COMMUNITY_BASE_URL + "invites/ajaxcreate",
-              e,
-            );
-            t &&
-              t.data &&
-              t.data.invite &&
-              this.setState({ invite_token: t.data.invite.invite_token });
-          });
+        async OnCreateInviteLink() {
+          const e = new FormData();
+          e.append("sessionid", u.De.SESSIONID),
+            e.append("steamid_user", u.L7.steamid),
+            e.append("duration", (2592e3).toString());
+          const t = await o().post(
+            u.De.COMMUNITY_BASE_URL + "invites/ajaxcreate",
+            e,
+          );
+          t &&
+            t.data &&
+            t.data.invite &&
+            this.setState({ invite_token: t.data.invite.invite_token });
         }
         OnCopy(e, t) {
           "friend_code" === e &&
@@ -171,24 +162,22 @@
             "invite" === e &&
               (this.setState({ invite_copied: !0 }),
               setTimeout(() => this.setState({ invite_copied: !1 }), 1e3)),
-            (0, _.Ei)(t);
+            (0, p.Ei)(t);
         }
-        OnAddFriend(e) {
-          return (0, s.mG)(this, void 0, void 0, function* () {
-            const t = new FormData();
-            t.append("sessionID", m.De.SESSIONID),
-              t.append("steamid", e),
-              t.append("accept_invite", "0");
-            try {
-              const e = yield o().post(
-                m.De.COMMUNITY_BASE_URL + "actions/AddFriendAjax",
-                t,
-              );
-              return e && e.data && 1 == e.data.success;
-            } catch (e) {
-              return !1;
-            }
-          });
+        async OnAddFriend(e) {
+          const t = new FormData();
+          t.append("sessionID", u.De.SESSIONID),
+            t.append("steamid", e),
+            t.append("accept_invite", "0");
+          try {
+            const e = await o().post(
+              u.De.COMMUNITY_BASE_URL + "actions/AddFriendAjax",
+              t,
+            );
+            return e && e.data && 1 == e.data.success;
+          } catch {
+            return !1;
+          }
         }
         OnSearchChange(e) {
           this.setState({ input_search: e.target.value });
@@ -198,53 +187,53 @@
         }
         OnSearchSubmit() {
           window.open(
-            m.De.COMMUNITY_BASE_URL +
+            u.De.COMMUNITY_BASE_URL +
               "search/users/#text=" +
               encodeURIComponent(this.state.input_search),
             "_self",
           );
         }
         render() {
-          const e = m.L7.short_url + "/" + this.state.invite_token;
-          return r.createElement(
+          const e = u.L7.short_url + "/" + this.state.invite_token;
+          return a.createElement(
             "div",
             null,
-            r.createElement(
+            a.createElement(
               "div",
-              { className: u().HeaderBlock },
+              { className: m().HeaderBlock },
               (0, l.Xx)("#ManageFriends_AddAFriend"),
             ),
-            r.createElement(
+            a.createElement(
               "div",
-              { className: u().Background },
-              r.createElement(
+              { className: m().Background },
+              a.createElement(
                 "h1",
-                { className: u().Heading },
+                { className: m().Heading },
                 (0, l.Xx)("#ManageFriends_YourFriendCode"),
               ),
-              r.createElement(
+              a.createElement(
                 "div",
-                { className: u().CopyContainer },
-                r.createElement("h1", { className: u().Text }, m.L7.accountid),
-                r.createElement(
-                  d.KM,
+                { className: m().CopyContainer },
+                a.createElement("h1", { className: m().Text }, u.L7.accountid),
+                a.createElement(
+                  c.KM,
                   {
                     autoFocus: !0,
-                    className: u().Button,
+                    className: m().Button,
                     onClick: () =>
-                      this.OnCopy("friend_code", String(m.L7.accountid)),
+                      this.OnCopy("friend_code", String(u.L7.accountid)),
                   },
                   this.state.friend_code_copied
                     ? (0, l.Xx)("#ManageFriends_Copied")
                     : (0, l.Xx)("#ManageFriends_Copy"),
                 ),
               ),
-              r.createElement(
+              a.createElement(
                 "p",
-                { className: u().Body },
+                { className: m().Body },
                 (0, l.Xx)("#ManageFriends_EnterFriendCode"),
               ),
-              r.createElement(y, {
+              a.createElement(I, {
                 onButtonClick: this.OnAddFriend,
                 buttonText: (0, l.Xx)("#ManageFriends_SendInvite"),
                 bDisableForSelf: !0,
@@ -252,33 +241,33 @@
                 bShowStatus: !0,
               }),
             ),
-            r.createElement(
+            a.createElement(
               "div",
-              { className: u().DimBackground },
-              r.createElement(
+              { className: m().DimBackground },
+              a.createElement(
                 "h1",
-                { className: u().Heading },
+                { className: m().Heading },
                 (0, l.Xx)("#ManageFriends_OrSendQuickInvite"),
               ),
-              r.createElement(
+              a.createElement(
                 "p",
-                { className: u().Body },
+                { className: m().Body },
                 (0, l.Xx)("#ManageFriends_QuickInviteDescription"),
               ),
-              r.createElement(
+              a.createElement(
                 "p",
-                { className: u().Body },
+                { className: m().Body },
                 (0, l.Xx)("#ManageFriends_QuickInviteNote"),
               ),
-              r.createElement(
+              a.createElement(
                 "div",
-                { className: u().CopyContainer },
+                { className: m().CopyContainer },
                 Boolean(this.state.invite_token) &&
-                  r.createElement("div", { className: u().Link }, e),
-                r.createElement(
-                  d.KM,
+                  a.createElement("div", { className: m().Link }, e),
+                a.createElement(
+                  c.KM,
                   {
-                    className: u().Button,
+                    className: m().Button,
                     onClick: () => this.OnCopy("invite", e),
                   },
                   this.state.invite_copied
@@ -286,25 +275,25 @@
                     : (0, l.Xx)("#ManageFriends_Copy"),
                 ),
               ),
-              r.createElement(
-                d.zx,
+              a.createElement(
+                c.zx,
                 {
-                  className: u().GenerateLinkButton,
+                  className: m().GenerateLinkButton,
                   onClick: this.OnCreateInviteLink,
                 },
                 (0, l.Xx)("#ManageFriends_CreateInviteLink"),
               ),
             ),
-            r.createElement(
+            a.createElement(
               "div",
-              { className: u().Background },
-              r.createElement(
+              { className: m().Background },
+              a.createElement(
                 "h1",
-                { className: u().Heading },
+                { className: m().Heading },
                 (0, l.Xx)("#ManageFriends_OrSearch"),
               ),
-              r.createElement("br", null),
-              r.createElement(
+              a.createElement("br", null),
+              a.createElement(
                 "div",
                 {
                   style: {
@@ -314,18 +303,18 @@
                     position: "relative",
                   },
                 },
-                r.createElement(
+                a.createElement(
                   "div",
                   { style: { width: "100%" } },
-                  r.createElement(d.II, {
-                    className: u().Input,
+                  a.createElement(c.II, {
+                    className: m().Input,
                     onKeyDown: this.OnSearchKeyDown,
                     value: this.state.input_search,
                     onChange: this.OnSearchChange,
                     placeholder: (0, l.Xx)("#ManageFriends_EnterProfileName"),
                   }),
                 ),
-                r.createElement(
+                a.createElement(
                   "div",
                   {
                     id: "searchIcon",
@@ -336,102 +325,92 @@
                     },
                     onClick: this.OnSearchSubmit,
                   },
-                  r.createElement(S.YtI, null),
+                  a.createElement(S.YtI, null),
                 ),
               ),
             ),
           );
         }
       }
-      (0, s.gn)([a.ak], I.prototype, "OnCreateInviteLink", null),
-        (0, s.gn)([a.ak], I.prototype, "OnCopy", null),
-        (0, s.gn)([a.ak], I.prototype, "OnAddFriend", null),
-        (0, s.gn)([a.ak], I.prototype, "OnSearchChange", null),
-        (0, s.gn)([a.ak], I.prototype, "OnSearchKeyDown", null),
-        (0, s.gn)([a.ak], I.prototype, "OnSearchSubmit", null);
-      class y extends r.Component {
-        constructor() {
-          super(...arguments),
-            (this.state = {
-              input_friend_code: "",
-              disable_send_invite: !1,
-              searchResult: null,
-              invite_status: "pending",
-            }),
-            (this.m_currentRequest = 0);
+      (0, s.gn)([r.ak], y.prototype, "OnCreateInviteLink", null),
+        (0, s.gn)([r.ak], y.prototype, "OnCopy", null),
+        (0, s.gn)([r.ak], y.prototype, "OnAddFriend", null),
+        (0, s.gn)([r.ak], y.prototype, "OnSearchChange", null),
+        (0, s.gn)([r.ak], y.prototype, "OnSearchKeyDown", null),
+        (0, s.gn)([r.ak], y.prototype, "OnSearchSubmit", null);
+      class I extends a.Component {
+        state = {
+          input_friend_code: "",
+          disable_send_invite: !1,
+          searchResult: null,
+          invite_status: "pending",
+        };
+        m_currentRequest = 0;
+        async OnFriendCodeChange(e) {
+          const t = e.target.value.split(",")[0];
+          this.setState({ input_friend_code: t, invite_status: "pending" }),
+            window.clearTimeout(this.m_currentRequest),
+            (this.m_currentRequest = window.setTimeout(
+              () => this.LoadProfile(t),
+              500,
+            ));
         }
-        OnFriendCodeChange(e) {
-          return (0, s.mG)(this, void 0, void 0, function* () {
-            const t = e.target.value.split(",")[0];
-            this.setState({ input_friend_code: t, invite_status: "pending" }),
-              window.clearTimeout(this.m_currentRequest),
-              (this.m_currentRequest = window.setTimeout(
-                () => this.LoadProfile(t),
-                500,
-              ));
-          });
+        async LoadProfile(e) {
+          if (e) {
+            const t = _.K.InitFromAccountID(Number(e));
+            await C.LoadProfiles([t.ConvertTo64BitString()]);
+            const n = C.GetProfile(t.ConvertTo64BitString());
+            n
+              ? this.setState({
+                  searchResult: n,
+                  disable_send_invite:
+                    u.L7.is_limited ||
+                    (this.props.bDisableForFriends && n.is_friend) ||
+                    (this.props.bDisableForSelf && n.steamid === u.L7.steamid),
+                })
+              : this.setState({ searchResult: null });
+          } else this.setState({ searchResult: null });
         }
-        LoadProfile(e) {
-          return (0, s.mG)(this, void 0, void 0, function* () {
-            if (e) {
-              const t = p.K.InitFromAccountID(Number(e));
-              yield C.LoadProfiles([t.ConvertTo64BitString()]);
-              const n = C.GetProfile(t.ConvertTo64BitString());
-              n
-                ? this.setState({
-                    searchResult: n,
-                    disable_send_invite:
-                      m.L7.is_limited ||
-                      (this.props.bDisableForFriends && n.is_friend) ||
-                      (this.props.bDisableForSelf &&
-                        n.steamid === m.L7.steamid),
-                  })
-                : this.setState({ searchResult: null });
-            } else this.setState({ searchResult: null });
-          });
-        }
-        OnActionClick(e) {
-          return (0, s.mG)(this, void 0, void 0, function* () {
-            const t = new FormData();
-            t.append("sessionID", m.De.SESSIONID),
-              t.append("steamid", e),
-              t.append("accept_invite", "0"),
-              this.setState({ disable_send_invite: !0 });
-            (yield this.props.onButtonClick(e))
-              ? (this.setState({
-                  input_friend_code: "",
-                  invite_status: "success",
-                }),
-                setTimeout(() => this.setState({ searchResult: null }), 3e3))
-              : this.setState({
-                  invite_status: "failure",
-                  disable_send_invite: !1,
-                });
-          });
+        async OnActionClick(e) {
+          const t = new FormData();
+          t.append("sessionID", u.De.SESSIONID),
+            t.append("steamid", e),
+            t.append("accept_invite", "0"),
+            this.setState({ disable_send_invite: !0 });
+          (await this.props.onButtonClick(e))
+            ? (this.setState({
+                input_friend_code: "",
+                invite_status: "success",
+              }),
+              setTimeout(() => this.setState({ searchResult: null }), 3e3))
+            : this.setState({
+                invite_status: "failure",
+                disable_send_invite: !1,
+              });
         }
         render() {
-          return r.createElement(
+          return a.createElement(
             "div",
-            { className: u().FriendCodeSelector },
-            r.createElement(d.II, {
-              className: u().Input,
+            { className: m().FriendCodeSelector },
+            a.createElement(c.II, {
+              className: m().Input,
               value: this.state.input_friend_code,
               onChange: this.OnFriendCodeChange,
               placeholder: (0, l.Xx)(
                 "#ManageFriends_EnterFriendCodePlaceholder",
               ),
             }),
-            r.createElement(
+            a.createElement(
               k,
               {
                 searchResult: this.state.searchResult,
                 invite_status: this.state.invite_status,
                 bShowStatus: this.props.bShowStatus,
               },
-              r.createElement(
-                d.KM,
+              a.createElement(
+                c.KM,
                 {
-                  className: u().SendInviteButton,
+                  className: m().SendInviteButton,
                   onClick: () =>
                     this.OnActionClick(this.state.searchResult.steamid),
                   disabled: this.state.disable_send_invite,
@@ -442,82 +421,82 @@
           );
         }
       }
-      (0, s.gn)([a.ak], y.prototype, "OnFriendCodeChange", null),
-        (0, s.gn)([a.ak], y.prototype, "LoadProfile", null),
-        (0, s.gn)([a.ak], y.prototype, "OnActionClick", null);
+      (0, s.gn)([r.ak], I.prototype, "OnFriendCodeChange", null),
+        (0, s.gn)([r.ak], I.prototype, "LoadProfile", null),
+        (0, s.gn)([r.ak], I.prototype, "OnActionClick", null);
       const k = (e) => {
         const {
             searchResult: t,
             invite_status: n,
             bShowStatus: s,
-            children: a,
+            children: r,
           } = e,
-          i = (0, m.id)();
+          i = (0, u.id)();
         return Boolean(t)
-          ? r.createElement(
+          ? a.createElement(
               "div",
-              { className: u().ProfileCard },
-              r.createElement(
+              { className: m().ProfileCard },
+              a.createElement(
                 "div",
-                { className: u().UserContainer },
-                r.createElement(
+                { className: m().UserContainer },
+                a.createElement(
                   "div",
-                  { className: u().Image },
-                  r.createElement("img", {
+                  { className: m().Image },
+                  a.createElement("img", {
                     style: { width: "100%", height: "100%" },
                     src: t.avatar_url_full,
                   }),
                 ),
-                r.createElement(
+                a.createElement(
                   "div",
-                  { className: u().ProfileContent },
-                  r.createElement(
+                  { className: m().ProfileContent },
+                  a.createElement(
                     "h1",
-                    { className: u().Heading },
+                    { className: m().Heading },
                     t.persona_name,
                   ),
-                  r.createElement(
+                  a.createElement(
                     "div",
-                    { className: u().ProfileLink },
-                    r.createElement(
+                    { className: m().ProfileLink },
+                    a.createElement(
                       E.IS,
                       {
                         target: i ? void 0 : "_blank",
-                        href: m.De.COMMUNITY_BASE_URL + "profiles/" + t.steamid,
+                        href: u.De.COMMUNITY_BASE_URL + "profiles/" + t.steamid,
                       },
                       (0, l.Xx)("#ManageFriends_ProfileLink"),
                     ),
-                    r.createElement("br", null),
-                    r.createElement(
+                    a.createElement("br", null),
+                    a.createElement(
                       "span",
-                      { className: u().Body },
+                      { className: m().Body },
                       t.real_name,
-                      r.createElement("br", null),
+                      a.createElement("br", null),
                       `${t.city}${t.city ? "," : ""} ${t.state}${t.state ? "," : ""} ${t.country}`,
                     ),
                   ),
                 ),
-                a,
+                r,
               ),
-              r.createElement(
+              a.createElement(
                 "div",
-                { className: u().ProfileLink },
+                { className: m().ProfileLink },
                 t.is_friend &&
-                  r.createElement(
+                  a.createElement(
                     "div",
                     null,
                     (0, l.Xx)("#ManageFriends_IsFriend"),
                   ),
                 0 != t.friends_in_common &&
-                  r.createElement(
+                  a.createElement(
                     "div",
                     null,
-                    r.createElement(
+                    a.createElement(
                       E.IS,
                       {
                         target: i ? void 0 : "_blank",
                         href:
-                          m.De.COMMUNITY_BASE_URL +
+                          u.De.COMMUNITY_BASE_URL +
                           "profiles/" +
                           t.steamid +
                           "/friendscommon",
@@ -535,16 +514,16 @@
                   ),
                 s &&
                   "failure" === n &&
-                  r.createElement(
+                  a.createElement(
                     "div",
-                    { className: u().Failure },
+                    { className: m().Failure },
                     (0, l.Xx)("#ManageFriends_InviteFailure"),
                   ),
                 s &&
                   "success" === n &&
-                  r.createElement(
+                  a.createElement(
                     "div",
-                    { className: u().Success },
+                    { className: m().Success },
                     (0, l.Xx)("#ManageFriends_InviteSuccess", t.persona_name),
                   ),
               ),
@@ -556,10 +535,10 @@
       "use strict";
       n.d(t, { l: () => i });
       var s = n(80751),
-        r = n.n(s),
-        a = n(79545);
+        a = n.n(s),
+        r = n(79545);
       function i(e) {
-        if (r().isCancel(e))
+        if (a().isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
         if (
           void 0 !== e.response &&
@@ -612,7 +591,7 @@
               console.warn(e),
               console.groupEnd();
           else {
-            if ("object" == typeof e && e instanceof a.gA)
+            if ("object" == typeof e && e instanceof r.gA)
               return {
                 strErrorMsg: "" + e.GetErrorMessage(),
                 errorCode: e.GetEResult(),
@@ -630,11 +609,11 @@
     },
     16567: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => a });
+      n.r(t), n.d(t, { default: () => r });
       var s = n(47427),
-        r = n(79896);
-      function a() {
-        return s.createElement(r.gu, null);
+        a = n(79896);
+      function r() {
+        return s.createElement(a.gu, null);
       }
     },
   },

@@ -49,7 +49,7 @@
         return a.createElement(
           r.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          a.createElement(f, {
+          a.createElement(x, {
             redirectURL: e.redirectURL,
             guestOption: e.guestOption,
           }),
@@ -84,7 +84,7 @@
           { strTitle: (0, s.Xx)("#Login_SignInTitle") },
         );
       }
-      function f(e) {
+      function x(e) {
         const { redirectURL: t, guestOption: n } = e,
           [r] = (0, a.useState)(
             new l.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
@@ -116,171 +116,160 @@
     },
     19044: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => k });
-      var a = n(85556),
-        r = n(80751),
-        s = n.n(r),
-        i = n(37563),
-        c = n(42718);
-      function l(e) {
-        return (0, a.mG)(this, void 0, void 0, function* () {
-          let t = { accountid: e, sessionid: i.De.SESSIONID };
-          const n = (yield s().get(
-            `${i.De.STORE_BASE_URL}gamemixer/uservalues`,
-            { params: t, withCredentials: !0, timeout: 1e4 },
-          )).data;
-          if (n) return n.map(Number);
-          throw "Failed FetchUserValues";
-        });
+      n.r(t), n.d(t, { default: () => P });
+      var a = n(80751),
+        r = n.n(a),
+        s = n(37563),
+        i = n(42718);
+      async function c(e) {
+        let t = { accountid: e, sessionid: s.De.SESSIONID };
+        const n = (
+          await r().get(`${s.De.STORE_BASE_URL}gamemixer/uservalues`, {
+            params: t,
+            withCredentials: !0,
+            timeout: 1e4,
+          })
+        ).data;
+        if (n) return n.map(Number);
+        throw "Failed FetchUserValues";
+      }
+      async function l(e) {
+        let t = { appid: e, sessionid: s.De.SESSIONID };
+        const n = (
+          await r().get(`${s.De.STORE_BASE_URL}gamemixer/appvalues`, {
+            params: t,
+            withCredentials: !0,
+            timeout: 1e4,
+          })
+        ).data;
+        if (n) return n.map(Number);
+        throw "Failed FetchAppValues";
       }
       function o(e) {
-        return (0, a.mG)(this, void 0, void 0, function* () {
-          let t = { appid: e, sessionid: i.De.SESSIONID };
-          const n = (yield s().get(
-            `${i.De.STORE_BASE_URL}gamemixer/appvalues`,
-            { params: t, withCredentials: !0, timeout: 1e4 },
-          )).data;
-          if (n) return n.map(Number);
-          throw "Failed FetchAppValues";
-        });
-      }
-      function m(e) {
-        return (0, c.useQuery)(
+        return (0, i.useQuery)(
           ["GameMixerAppInfo", e],
           () =>
-            (function (e) {
-              return (0, a.mG)(this, void 0, void 0, function* () {
-                let t = { appid: e, sessionid: i.De.SESSIONID };
-                const n = (yield s().get(
-                  `${i.De.STORE_BASE_URL}gamemixer/details`,
-                  { params: t, withCredentials: !0, timeout: 1e4 },
-                )).data;
-                if (n) return n;
-                throw "Failed FetchAppInfo";
-              });
+            (async function (e) {
+              let t = { appid: e, sessionid: s.De.SESSIONID };
+              const n = (
+                await r().get(`${s.De.STORE_BASE_URL}gamemixer/details`, {
+                  params: t,
+                  withCredentials: !0,
+                  timeout: 1e4,
+                })
+              ).data;
+              if (n) return n;
+              throw "Failed FetchAppInfo";
             })(e),
           { staleTime: 1 / 0 },
         );
       }
-      var u = n(47427),
-        p = n(1485),
-        d = n(80212),
-        I = n(25006),
-        f = n(13129),
+      var m = n(47427),
+        u = n(1485),
+        p = n(80212),
+        d = n(25006),
+        I = n(13129),
         x = n(31846),
-        D = n(47643),
-        E = n(40057),
-        h = n(79545),
-        v = n(44922),
-        y = n(80998);
-      const S = (e) => {
-          var t;
-          const n = (function (e) {
-              const t = (0, E.bY)(),
+        f = n(47643),
+        D = n(40057),
+        E = n(79545),
+        y = n(44922),
+        S = n(80998);
+      const h = (e) => {
+          const t = (function (e) {
+              const t = (0, D.bY)(),
                 n = ["GameMixerSearchSuggestions", e];
-              return (0, c.useQuery)(n, {
-                queryFn: () =>
-                  (0, a.mG)(this, void 0, void 0, function* () {
-                    if (e.length < 2) return [];
-                    const a = h.gA.Init(v.yk);
-                    a.Body().set_query_name(JSON.stringify(n)),
-                      a.Body().set_search_term(e),
-                      (0, y.pA)(a),
-                      (0, y.De)(a, {
-                        include_basic_info: !0,
-                        include_assets: !0,
-                      }),
-                      (0, y.Gk)(a, {
-                        type_filters: { include_games: !0 },
-                        price_filters: { only_free_items: !1 },
-                      }),
-                      a.Body().set_max_results(10),
-                      a.Body().set_use_spellcheck(!0);
-                    let r = yield v.Ax.SearchSuggestions(t, a);
-                    return r.BSuccess()
-                      ? r
-                          .Body()
-                          .store_items()
-                          .map((e) => {
-                            const t = e.name().replace(/^The |^A |^An /i, "");
-                            return {
-                              appid: e.appid(),
-                              name: e.name(),
-                              sort_as: t,
-                              capsule_filename: e.assets().library_capsule(),
-                              img_icon_hash: e.assets().community_icon(),
-                              searchSuggestion: !0,
-                            };
-                          })
-                      : [];
-                  }),
+              return (0, i.useQuery)(n, {
+                queryFn: async () => {
+                  if (e.length < 2) return [];
+                  const a = E.gA.Init(y.yk);
+                  a.Body().set_query_name(JSON.stringify(n)),
+                    a.Body().set_search_term(e),
+                    (0, S.pA)(a),
+                    (0, S.De)(a, {
+                      include_basic_info: !0,
+                      include_assets: !0,
+                    }),
+                    (0, S.Gk)(a, {
+                      type_filters: { include_games: !0 },
+                      price_filters: { only_free_items: !1 },
+                    }),
+                    a.Body().set_max_results(10),
+                    a.Body().set_use_spellcheck(!0);
+                  let r = await y.Ax.SearchSuggestions(t, a);
+                  return r.BSuccess()
+                    ? r
+                        .Body()
+                        .store_items()
+                        .map((e) => {
+                          const t = e.name().replace(/^The |^A |^An /i, "");
+                          return {
+                            appid: e.appid(),
+                            name: e.name(),
+                            sort_as: t,
+                            capsule_filename: e.assets().library_capsule(),
+                            img_icon_hash: e.assets().community_icon(),
+                            searchSuggestion: !0,
+                          };
+                        })
+                    : [];
+                },
                 keepPreviousData: !0,
               });
             })(e.strSearch),
-            r = e.fnSetResultApps;
+            n = e.fnSetResultApps;
           return (
-            u.useEffect(() => {
-              var e;
-              r(
-                null === (e = n.data) || void 0 === e
-                  ? void 0
-                  : e.map((e) => e.appid),
-              );
-            }, [r, n.data]),
-            u.createElement(
+            m.useEffect(() => {
+              n(t.data?.map((e) => e.appid));
+            }, [n, t.data]),
+            m.createElement(
               "div",
-              { className: D.AppSelectorResults },
-              null === (t = n.data) || void 0 === t
-                ? void 0
-                : t.map((t, n) =>
-                    u.createElement(
-                      "div",
-                      {
-                        key: t.appid,
-                        className: (0, f.Z)(
-                          D.Result,
-                          n == e.nSelectedResult && D.Selected,
-                        ),
-                        onClick: () => e.fnClickApp(t.appid),
-                      },
-                      u.createElement("div", {
-                        className: D.Logo,
-                        style: {
-                          backgroundImage: `url( ${i.De.STORE_ICON_BASE_URL}${t.appid}/capsule_231x87.jpg )`,
-                        },
-                      }),
-                      u.createElement(
-                        "div",
-                        { className: D.RightSide },
-                        t.name,
-                      ),
+              { className: f.AppSelectorResults },
+              t.data?.map((t, n) =>
+                m.createElement(
+                  "div",
+                  {
+                    key: t.appid,
+                    className: (0, I.Z)(
+                      f.Result,
+                      n == e.nSelectedResult && f.Selected,
                     ),
-                  ),
+                    onClick: () => e.fnClickApp(t.appid),
+                  },
+                  m.createElement("div", {
+                    className: f.Logo,
+                    style: {
+                      backgroundImage: `url( ${s.De.STORE_ICON_BASE_URL}${t.appid}/capsule_231x87.jpg )`,
+                    },
+                  }),
+                  m.createElement("div", { className: f.RightSide }, t.name),
+                ),
+              ),
             )
           );
         },
         g = (e) => {
-          const [t, n] = u.useState(""),
-            [a, r] = u.useState(0),
-            [s, i] = u.useState(!1),
-            [c, l] = u.useState(0),
-            [o, m] = u.useState([]),
-            p = u.useRef(a);
-          u.useEffect(() => {
+          const [t, n] = m.useState(""),
+            [a, r] = m.useState(0),
+            [s, i] = m.useState(!1),
+            [c, l] = m.useState(0),
+            [o, u] = m.useState([]),
+            p = m.useRef(a);
+          m.useEffect(() => {
             p.current = a;
           }, [a]);
           const d = () => {
-              Date.now() - p.current < 300 || (l(0), m([]), i(!0));
+              Date.now() - p.current < 300 || (l(0), u([]), i(!0));
             },
-            I = (t) => {
-              e.fnSelectAppID(t), n(""), l(0), m([]), r(Date.now()), i(!1);
+            x = (t) => {
+              e.fnSelectAppID(t), n(""), l(0), u([]), r(Date.now()), i(!1);
             };
-          return u.createElement(
+          return m.createElement(
             "div",
-            { className: D.AppSelector },
-            u.createElement("input", {
+            { className: f.AppSelector },
+            m.createElement("input", {
               type: "text",
-              className: (0, f.Z)(D.ValueInput),
+              className: (0, I.Z)(f.ValueInput),
               value: t,
               onChange: (e) => {
                 var a;
@@ -297,16 +286,16 @@
                       l(Math.max(0, c - 1));
                       break;
                     case "Enter":
-                      I(o[c]);
+                      x(o[c]);
                   }
                 })(e.key),
             }),
             s &&
-              u.createElement(S, {
+              m.createElement(h, {
                 strSearch: t,
                 nSelectedResult: c,
-                fnSetResultApps: m,
-                fnClickApp: I,
+                fnSetResultApps: u,
+                fnClickApp: x,
               }),
           );
         };
@@ -315,17 +304,17 @@
         (e[(e.AppID = 0)] = "AppID"), (e[(e.AccountID = 1)] = "AccountID");
       })(A || (A = {}));
       const _ = (e) => {
-          const [t, n] = u.useState(e.mixItem.nPercent);
-          u.useEffect(() => {
+          const [t, n] = m.useState(e.mixItem.nPercent);
+          m.useEffect(() => {
             n(e.mixItem.nPercent);
           }, [e.mixItem.nPercent]);
-          const a = m(e.mixItem.nID),
+          const a = o(e.mixItem.nID),
             r = a.data ? a.data.name : "";
-          return u.createElement(
+          return m.createElement(
             "div",
-            { className: D.MixedItemControl },
-            u.createElement(p.DS, {
-              className: D.MixerSlider,
+            { className: f.MixedItemControl },
+            m.createElement(u.DS, {
+              className: f.MixerSlider,
               label: r,
               min: 1,
               max: 99,
@@ -342,10 +331,10 @@
                   });
               },
             }),
-            u.createElement(
+            m.createElement(
               "div",
               {
-                className: D.Remove,
+                className: f.Remove,
                 onClick: () => {
                   e.removeMixItem({
                     eType: e.mixItem.eType,
@@ -358,16 +347,16 @@
             ),
           );
         },
-        M = (e) => {
-          const [t, n] = u.useState(e.mixItem.nPercent);
-          u.useEffect(() => {
+        w = (e) => {
+          const [t, n] = m.useState(e.mixItem.nPercent);
+          m.useEffect(() => {
             n(e.mixItem.nPercent);
           }, [e.mixItem.nPercent]);
-          return u.createElement(
+          return m.createElement(
             "div",
-            { className: D.MixedItemControl },
-            u.createElement(p.DS, {
-              className: D.MixerSlider,
+            { className: f.MixedItemControl },
+            m.createElement(u.DS, {
+              className: f.MixerSlider,
               label: `Account ${e.mixItem.nID}`,
               min: 1,
               max: 99,
@@ -386,8 +375,8 @@
             }),
           );
         },
-        w = (e) => {
-          const [t, n] = u.useState(""),
+        M = (e) => {
+          const [t, n] = m.useState(""),
             a = (t) => {
               let n = [],
                 a = 0,
@@ -427,17 +416,17 @@
                     });
               e.setMixItems(n);
             };
-          return u.createElement(
+          return m.createElement(
             "div",
-            { className: D.MixerControls },
+            { className: f.MixerControls },
             e.arrMixItems.length > 0 &&
-              u.createElement(
+              m.createElement(
                 "div",
-                { className: D.MixedItemList },
+                { className: f.MixedItemList },
                 e.arrMixItems.map((t) => {
                   switch (t.eType) {
                     case A.AccountID:
-                      return u.createElement(M, {
+                      return m.createElement(w, {
                         key: `${t.eType}_${t.nID}`,
                         mixItem: t,
                         setMixItem: r,
@@ -445,7 +434,7 @@
                         bLocked: 1 == e.arrMixItems.length,
                       });
                     case A.AppID:
-                      return u.createElement(_, {
+                      return m.createElement(_, {
                         key: `${t.eType}_${t.nID}`,
                         mixItem: t,
                         setMixItem: r,
@@ -455,14 +444,14 @@
                   }
                 }),
               ),
-            u.createElement(
+            m.createElement(
               "div",
-              { className: D.Buttons },
-              u.createElement(
+              { className: f.Buttons },
+              m.createElement(
                 "div",
-                { className: D.AddContainer },
-                u.createElement("div", { className: D.InputLabel }, "Add App"),
-                u.createElement(g, {
+                { className: f.AddContainer },
+                m.createElement("div", { className: f.InputLabel }, "Add App"),
+                m.createElement(g, {
                   fnSelectAppID: (t) =>
                     ((t) => {
                       if (0 == t) return;
@@ -479,17 +468,17 @@
                     })(t),
                 }),
               ),
-              u.createElement(
+              m.createElement(
                 "div",
-                { className: D.AddContainer },
-                u.createElement(
+                { className: f.AddContainer },
+                m.createElement(
                   "div",
-                  { className: D.InputLabel },
+                  { className: f.InputLabel },
                   "Add AccountID",
                 ),
-                u.createElement("input", {
+                m.createElement("input", {
                   type: "text",
-                  className: (0, f.Z)(D.ValueInput),
+                  className: (0, I.Z)(f.ValueInput),
                   value: t,
                   onChange: (e) => n(e.target.value),
                   onKeyDown: (a) =>
@@ -512,12 +501,12 @@
                     })(a.key),
                 }),
               ),
-              u.createElement(P, {
+              m.createElement(T, {
                 nValue: e.nPopularity,
                 setValue: e.setPopularity,
                 strName: "Popularity",
               }),
-              u.createElement(P, {
+              m.createElement(T, {
                 nValue: e.nFocus,
                 setValue: e.setFocus,
                 strName: "Focus",
@@ -525,91 +514,92 @@
             ),
           );
         },
-        N = (e) => {
-          const t = m(e.nAppID);
+        v = (e) => {
+          const t = o(e.nAppID);
           if (!t.data || "Uninitialized" == t.data.name) return null;
-          return u.createElement(
+          return m.createElement(
             "a",
             {
-              className: D.MixedResultApp,
-              href: `${i.De.STORE_BASE_URL}app/${e.nAppID}`,
+              className: f.MixedResultApp,
+              href: `${s.De.STORE_BASE_URL}app/${e.nAppID}`,
               onMouseEnter: () => {},
               onMouseLeave: () => {},
             },
-            u.createElement("div", {
-              className: D.Logo,
+            m.createElement("div", {
+              className: f.Logo,
               style: {
-                backgroundImage: `url( ${i.De.STORE_ICON_BASE_URL}${e.nAppID}/header.jpg )`,
+                backgroundImage: `url( ${s.De.STORE_ICON_BASE_URL}${e.nAppID}/header.jpg )`,
               },
             }),
-            u.createElement(
+            m.createElement(
               "div",
-              { className: D.RightSide },
-              u.createElement("div", { className: D.AppName }, t.data.name),
-              u.createElement(
+              { className: f.RightSide },
+              m.createElement("div", { className: f.AppName }, t.data.name),
+              m.createElement(
                 "div",
-                { className: D.Distance },
+                { className: f.Distance },
                 Number(e.fDistance).toFixed(2),
               ),
             ),
           );
         },
-        T = (e) => {
-          const [t, n] = u.useState([]),
-            [r, c] = u.useState([]);
+        N = (e) => {
+          const [t, n] = m.useState([]),
+            [a, i] = m.useState([]);
           return (
-            u.useEffect(() => {
-              (0, a.mG)(void 0, void 0, void 0, function* () {
+            m.useEffect(() => {
+              (async () => {
                 let t = [];
                 for (const n of e.arrMixItems)
                   switch (n.eType) {
                     case A.AppID:
-                      t.push(o(n.nID));
+                      t.push(l(n.nID));
                       break;
                     case A.AccountID:
-                      t.push(l(n.nID));
+                      t.push(c(n.nID));
                   }
-                n(yield Promise.all(t));
-              });
+                n(await Promise.all(t));
+              })();
             }, [e.arrMixItems]),
-            u.useEffect(() => {
-              (0, a.mG)(void 0, void 0, void 0, function* () {
+            m.useEffect(() => {
+              (async () => {
                 if (0 == t.length) return;
                 let n = new Array(t[0].length).fill(0);
                 for (let a = 0; a < t.length; a++)
                   for (let r = 0; r < t[a].length; r++)
                     a < e.arrMixItems.length &&
                       (n[r] += (t[a][r] * e.arrMixItems[a].nPercent) / 100);
-                c(
-                  yield (function (e, t, n) {
-                    return (0, a.mG)(this, void 0, void 0, function* () {
-                      let a = {
-                        values: e.join(","),
-                        popularity: t,
-                        focus: n,
-                        sessionid: i.De.SESSIONID,
-                      };
-                      const r = (yield s().get(
-                        `${i.De.STORE_BASE_URL}gamemixer/nearest`,
-                        { params: a, withCredentials: !0, timeout: 1e4 },
-                      )).data;
-                      if (r)
-                        return r.map((e) => ({
-                          nAppID: e.value,
-                          fDistance: e.distance,
-                        }));
-                      throw "Failed FetchNearestToValues";
-                    });
+                i(
+                  await (async function (e, t, n) {
+                    let a = {
+                      values: e.join(","),
+                      popularity: t,
+                      focus: n,
+                      sessionid: s.De.SESSIONID,
+                    };
+                    const i = (
+                      await r().get(`${s.De.STORE_BASE_URL}gamemixer/nearest`, {
+                        params: a,
+                        withCredentials: !0,
+                        timeout: 1e4,
+                      })
+                    ).data;
+                    if (i)
+                      return i.map((e) => ({
+                        nAppID: e.value,
+                        fDistance: e.distance,
+                      }));
+                    throw "Failed FetchNearestToValues";
                   })(n, e.nPopularity, e.nFocus),
                 );
-              });
+              })();
             }, [t, e.nPopularity, e.arrMixItems, e.nFocus]),
-            u.createElement(
+            m.createElement(
               "div",
-              { className: D.MixerResults },
-              (null == r ? void 0 : r.length) > 0 &&
-                r.map((e) =>
-                  u.createElement(N, {
+              { className: f.MixerResults },
+              a?.length > 0 &&
+                a.map((e) =>
+                  m.createElement(v, {
                     key: e.nAppID,
                     nAppID: e.nAppID,
                     fDistance: e.fDistance,
@@ -618,14 +608,14 @@
             )
           );
         },
-        P = (e) => {
-          const [t, n] = u.useState(e.nValue);
+        T = (e) => {
+          const [t, n] = m.useState(e.nValue);
           return (
-            u.useEffect(() => {
+            m.useEffect(() => {
               n(e.nValue);
             }, [e.nValue]),
-            u.createElement(p.DS, {
-              className: (0, f.Z)(D.MixerSlider, D.PopularitySlider),
+            m.createElement(u.DS, {
+              className: (0, I.Z)(f.MixerSlider, f.PopularitySlider),
               label: e.strName,
               min: 1,
               max: 100,
@@ -635,57 +625,57 @@
             })
           );
         },
-        k = () => {
-          const [e, t] = u.useState([]),
-            [n, a] = u.useState(1),
-            [r, s] = u.useState(1);
-          return i.L7.logged_in
-            ? u.createElement(
-                I.ZP,
+        P = () => {
+          const [e, t] = m.useState([]),
+            [n, a] = m.useState(1),
+            [r, i] = m.useState(1);
+          return s.L7.logged_in
+            ? m.createElement(
+                d.ZP,
                 {
                   controller: "gamemixer",
                   method: "default",
                   feature: "capsule",
                 },
-                u.createElement(
+                m.createElement(
                   "div",
-                  { className: D.App },
-                  u.createElement(w, {
+                  { className: f.App },
+                  m.createElement(M, {
                     arrMixItems: e,
                     setMixItems: t,
                     nPopularity: n,
                     setPopularity: a,
                     nFocus: r,
-                    setFocus: s,
+                    setFocus: i,
                   }),
-                  u.createElement(T, {
+                  m.createElement(N, {
                     arrMixItems: e,
                     nPopularity: n,
                     nFocus: r,
                   }),
                 ),
               )
-            : u.createElement(
+            : m.createElement(
                 "div",
-                { className: D.App },
-                u.createElement(
+                { className: f.App },
+                m.createElement(
                   "div",
-                  { className: D.Login },
-                  u.createElement(
+                  { className: f.Login },
+                  m.createElement(
                     "div",
-                    { className: D.Text },
+                    { className: f.Text },
                     (0, x.Xx)("#LoginText"),
                   ),
-                  u.createElement(
+                  m.createElement(
                     "div",
                     {
-                      className: (0, f.Z)(
+                      className: (0, I.Z)(
                         "btn_green_white_innerfade",
                         " btn_medium",
                       ),
-                      onClick: d.Xt,
+                      onClick: p.Xt,
                     },
-                    u.createElement("span", null, (0, x.Xx)("#LoginButton")),
+                    m.createElement("span", null, (0, x.Xx)("#LoginButton")),
                   ),
                 ),
               );

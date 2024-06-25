@@ -34,186 +34,179 @@
         SortIcon: "_2g7dImB7FKkKiEYpVTXCWb",
       };
     },
-    13043: (e, t, n) => {
+    13043: (e, t, a) => {
       "use strict";
-      n.d(t, { p: () => m });
-      var a = n(85556),
-        r = n(47427),
-        o = n(82493),
-        i = n(4030),
-        c = n(20417),
-        s = n(37563),
-        l = n(35643);
-      function m(e) {
-        const { children: t, navTreeRef: n } = e,
-          m = (0, a._T)(e, ["children", "navTreeRef"]),
-          u = r.useRef(),
-          d = (0, c.BE)(u, n),
-          p = (0, s.id)(),
-          _ = window.__virtual_keyboard_client;
-        if (p) {
+      a.d(t, { p: () => l });
+      var n = a(47427),
+        r = a(82493),
+        o = a(4030),
+        i = a(20417),
+        c = a(37563),
+        s = a(35643);
+      function l(e) {
+        const { children: t, navTreeRef: a, ...l } = e,
+          m = n.useRef(),
+          u = (0, i.BE)(m, a),
+          d = (0, c.id)(),
+          p = window.__virtual_keyboard_client;
+        if (d) {
           const e = window.__nav_tree_root;
-          return r.createElement(
-            o.Fe,
-            Object.assign({}, m, {
-              navTreeRef: d,
-              secondary: !0,
-              parentEmbeddedNavTree: e,
-            }),
-            r.createElement(
-              l.o5,
-              { factory: _ },
-              r.createElement(i.O, null, t),
+          return n.createElement(
+            r.Fe,
+            { ...l, navTreeRef: u, secondary: !0, parentEmbeddedNavTree: e },
+            n.createElement(
+              s.o5,
+              { factory: p },
+              n.createElement(o.O, null, t),
             ),
           );
         }
-        return r.createElement(r.Fragment, null, t);
+        return n.createElement(n.Fragment, null, t);
       }
     },
-    71472: (e, t, n) => {
+    71472: (e, t, a) => {
       "use strict";
-      n.d(t, { Ar: () => s, Wo: () => l, i9: () => c, ks: () => o });
-      var a = n(47427),
-        r = n(8285);
+      a.d(t, { Ar: () => s, Wo: () => l, i9: () => c, ks: () => o });
+      var n = a(47427),
+        r = a(8285);
       function o(e, t) {
-        let n;
+        let a;
         "string" == typeof e
-          ? (n = e)
+          ? (a = e)
           : "location" in e
-            ? (n = e.location.search)
-            : "search" in e && (n = e.search);
-        const a = new URLSearchParams(n.substring(1));
-        if (a.has(t)) {
-          const e = a.getAll(t);
+            ? (a = e.location.search)
+            : "search" in e && (a = e.search);
+        const n = new URLSearchParams(a.substring(1));
+        if (n.has(t)) {
+          const e = n.getAll(t);
           return e[e.length - 1];
         }
       }
       const i = (e) => null != e;
-      function c(e, t, n, a = !1) {
+      function c(e, t, a, n = !1) {
         const r = new URLSearchParams(e.location.search.substring(1));
         r.delete(t),
-          i(n) && r.append(t, n),
-          a
-            ? e.replace(`?${r.toString()}`, Object.assign({}, e.location.state))
+          i(a) && r.append(t, a),
+          n
+            ? e.replace(`?${r.toString()}`, { ...e.location.state })
             : e.push(`?${r.toString()}`);
       }
       function s(e, t) {
-        const n = (0, r.k6)(),
+        const a = (0, r.k6)(),
           s = (0, r.TH)(),
-          l = (0, a.useMemo)(() => {
-            const n = o(s.search, e);
-            return i(n)
+          l = (0, n.useMemo)(() => {
+            const a = o(s.search, e);
+            return i(a)
               ? i(t)
                 ? "boolean" == typeof t
-                  ? t.constructor("false" !== n)
-                  : t.constructor(n)
-                : n
+                  ? t.constructor("false" !== a)
+                  : t.constructor(a)
+                : a
               : t;
           }, [s.search, e, t]),
-          m = (0, a.useCallback)(
+          m = (0, n.useCallback)(
             (t) => {
-              c(n, e, i(t) ? String(t) : null);
+              c(a, e, i(t) ? String(t) : null);
             },
-            [n, e],
+            [a, e],
           );
         return [l, m];
       }
-      function l(e, t, n = !1) {
-        const a = new URLSearchParams(e.location.search.substring(1));
+      function l(e, t, a = !1) {
+        const n = new URLSearchParams(e.location.search.substring(1));
         for (const e in t)
           if (t.hasOwnProperty(e)) {
-            const n = t[e];
-            a.delete(e), i(n) && a.append(e, n);
+            const a = t[e];
+            n.delete(e), i(a) && n.append(e, a);
           }
-        n
-          ? e.replace(`?${a.toString()}`, Object.assign({}, e.location.state))
-          : e.push(`?${a.toString()}`);
+        a
+          ? e.replace(`?${n.toString()}`, { ...e.location.state })
+          : e.push(`?${n.toString()}`);
       }
     },
-    11134: (e, t, n) => {
+    11134: (e, t, a) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => E });
-      var a = n(85556),
-        r = n(47427),
-        o = n(31846),
-        i = n(75399),
-        c = n.n(i),
-        s = n(82493),
-        l = n(37563),
-        m = n(62613),
-        u = n(1485),
-        d = n(80751),
-        p = n.n(d),
-        _ = n(80886);
-      var h = n(13129),
-        S = n(34310),
-        H = n(71472),
-        f = n(8285),
-        v = n(91618),
-        b = n(13043),
-        C = n(41130);
-      function E() {
-        const e = (0, C.L)(),
-          t = (0, r.useRef)();
+      a.r(t), a.d(t, { default: () => v });
+      var n = a(47427),
+        r = a(31846),
+        o = a(75399),
+        i = a.n(o),
+        c = a(82493),
+        s = a(37563),
+        l = a(62613),
+        m = a(1485),
+        u = a(80751),
+        d = a.n(u),
+        p = a(80886);
+      var _ = a(13129),
+        h = a(34310),
+        S = a(71472),
+        H = a(8285),
+        f = a(91618),
+        C = a(13043),
+        b = a(41130);
+      function v() {
+        const e = (0, b.L)(),
+          t = (0, n.useRef)();
         return (
-          (0, r.useEffect)(() => {
+          (0, n.useEffect)(() => {
             t.current && t.current.TakeFocus();
           }, []),
-          r.createElement(
-            b.p,
+          n.createElement(
+            C.p,
             { navID: "CommunityHomeHeader", NavigationManager: e },
-            r.createElement(
-              v.s,
-              { navRef: t, className: c().CommunityHomeHeader },
-              r.createElement(
+            n.createElement(
+              f.s,
+              { navRef: t, className: i().CommunityHomeHeader },
+              n.createElement(
                 "div",
-                { className: c().CommunityHomeHeaderTitleSection },
-                r.createElement(
+                { className: i().CommunityHomeHeaderTitleSection },
+                n.createElement(
                   "div",
                   null,
-                  r.createElement(
+                  n.createElement(
                     "div",
-                    { className: c().CommunityHomeHeaderTitle },
-                    (0, o.Xx)("#Community_Home_Header_Title"),
+                    { className: i().CommunityHomeHeaderTitle },
+                    (0, r.Xx)("#Community_Home_Header_Title"),
                   ),
-                  r.createElement(
+                  n.createElement(
                     "div",
-                    { className: c().CommunityHomeHeaderSubtitle },
-                    (0, o.Xx)("#Community_Home_Header_Subtitle"),
+                    { className: i().CommunityHomeHeaderSubtitle },
+                    (0, r.Xx)("#Community_Home_Header_Subtitle"),
                   ),
                 ),
-                r.createElement(
-                  s.IS,
+                n.createElement(
+                  c.IS,
                   {
-                    className: c().AddFriendBtn,
-                    href: `${l.De.COMMUNITY_BASE_URL}search/users/`,
+                    className: i().AddFriendBtn,
+                    href: `${s.De.COMMUNITY_BASE_URL}search/users/`,
                   },
-                  (0, o.Xx)("#Community_Home_Header_AddFriend_Button"),
+                  (0, r.Xx)("#Community_Home_Header_AddFriend_Button"),
                 ),
               ),
-              r.createElement(y, null),
-              r.createElement(w, null),
+              n.createElement(E, null),
+              n.createElement(I, null),
             ),
           )
         );
       }
-      function y() {
-        const [e, t] = (0, r.useState)(""),
-          [n, i] = (0, r.useState)([]),
-          [d, h] = (0, r.useState)(!1),
-          S = (function () {
-            const e = (0, r.useMemo)(
-                () => (0, l.ip)("personalapps", "application_config") || [],
+      function E() {
+        const [e, t] = (0, n.useState)(""),
+          [a, o] = (0, n.useState)([]),
+          [u, _] = (0, n.useState)(!1),
+          h = (function () {
+            const e = (0, n.useMemo)(
+                () => (0, s.ip)("personalapps", "application_config") || [],
                 [],
               ),
-              t = (0, r.useMemo)(
-                () => (0, l.ip)("popularapps", "application_config") || [],
+              t = (0, n.useMemo)(
+                () => (0, s.ip)("popularapps", "application_config") || [],
                 [],
               ),
-              n = [...e, ...t];
-            if (n.length)
+              a = [...e, ...t];
+            if (a.length)
               return {
-                isLoading: 1 === (0, _.wZ)(n, { include_assets: !0 }),
+                isLoading: 1 === (0, p.wZ)(a, { include_assets: !0 }),
                 data: { personalAppIds: e, popularAppIds: t },
               };
             return {
@@ -221,76 +214,73 @@
               data: { personalAppIds: e, popularAppIds: t },
             };
           })();
-        if (S.isLoading) return null;
-        return r.createElement(
+        if (h.isLoading) return null;
+        return n.createElement(
           "div",
-          { className: c().CommunityHomeHeaderContent },
-          r.createElement(
-            v.s,
-            { className: c().AppHubsCtn },
-            r.createElement(g, {
-              appShortcuts: S.data.personalAppIds,
-              sectionTitle: (0, o.Xx)("#Community_Home_Header_GameHubs_ForYou"),
-              withDivider: S.data.popularAppIds.length > 0,
+          { className: i().CommunityHomeHeaderContent },
+          n.createElement(
+            f.s,
+            { className: i().AppHubsCtn },
+            n.createElement(y, {
+              appShortcuts: h.data.personalAppIds,
+              sectionTitle: (0, r.Xx)("#Community_Home_Header_GameHubs_ForYou"),
+              withDivider: h.data.popularAppIds.length > 0,
             }),
-            r.createElement(g, {
-              appShortcuts: S.data.popularAppIds,
-              sectionTitle: (0, o.Xx)(
+            n.createElement(y, {
+              appShortcuts: h.data.popularAppIds,
+              sectionTitle: (0, r.Xx)(
                 "#Community_Home_Header_GameHubs_Popular",
               ),
             }),
           ),
-          r.createElement(
-            v.s,
+          n.createElement(
+            f.s,
             {
-              onFocus: () => h(!0),
+              onFocus: () => _(!0),
               onBlur: (e) => {
-                e.currentTarget.contains(e.relatedTarget) || h(!1);
+                e.currentTarget.contains(e.relatedTarget) || _(!1);
               },
-              className: c().Search,
+              className: i().Search,
             },
-            r.createElement(
-              v.s,
-              { className: c().SearchBar },
-              r.createElement(
+            n.createElement(
+              f.s,
+              { className: i().SearchBar },
+              n.createElement(
                 "div",
-                { className: c().InputContainer },
-                r.createElement(u.II, {
-                  onChange: (e) =>
-                    (0, a.mG)(this, void 0, void 0, function* () {
-                      t(e.target.value);
-                      const n = yield (function (e) {
-                        return (0, a.mG)(this, void 0, void 0, function* () {
-                          const t = `${l.De.COMMUNITY_BASE_URL}actions/SearchApps/${e}`;
-                          return (yield p().get(t)).data;
-                        });
-                      })(e.target.value);
-                      i(n);
-                    }),
+                { className: i().InputContainer },
+                n.createElement(m.II, {
+                  onChange: async (e) => {
+                    t(e.target.value);
+                    const a = await (async function (e) {
+                      const t = `${s.De.COMMUNITY_BASE_URL}actions/SearchApps/${e}`;
+                      return (await d().get(t)).data;
+                    })(e.target.value);
+                    o(a);
+                  },
                   value: e,
-                  className: c().Input,
-                  placeholder: (0, o.Xx)(
+                  className: i().Input,
+                  placeholder: (0, r.Xx)(
                     "#Community_Home_Header_FindGame_Placeholder",
                   ),
                 }),
               ),
-              r.createElement(
+              n.createElement(
                 "div",
-                { className: c().SearchIcon },
-                r.createElement(m.YtI, null),
+                { className: i().SearchIcon },
+                n.createElement(l.YtI, null),
               ),
             ),
-            d &&
-              r.createElement(
-                v.s,
-                { className: c().SearchResultsCtn },
-                n.map((e) =>
-                  r.createElement(
-                    s.IS,
+            u &&
+              n.createElement(
+                f.s,
+                { className: i().SearchResultsCtn },
+                a.map((e) =>
+                  n.createElement(
+                    c.IS,
                     {
-                      href: `${l.De.COMMUNITY_BASE_URL}app/${e.appid}`,
+                      href: `${s.De.COMMUNITY_BASE_URL}app/${e.appid}`,
                       key: e.appid,
-                      className: c().SearchResult,
+                      className: i().SearchResult,
                     },
                     e.name,
                   ),
@@ -299,70 +289,70 @@
           ),
         );
       }
-      function g(e) {
-        const { appShortcuts: t, sectionTitle: n, withDivider: a } = e;
+      function y(e) {
+        const { appShortcuts: t, sectionTitle: a, withDivider: r } = e;
         return t && t.length
-          ? r.createElement(
+          ? n.createElement(
               "div",
-              { className: c().AppHubShortcutsCtn },
-              r.createElement("div", { className: c().AppHubTitle }, n),
-              r.createElement(
+              { className: i().AppHubShortcutsCtn },
+              n.createElement("div", { className: i().AppHubTitle }, a),
+              n.createElement(
                 "div",
                 {
                   "flow-children": "row",
-                  className: (0, h.Z)(
-                    c().AppHubShortcutLinks,
-                    a ? c().Divider : null,
+                  className: (0, _.Z)(
+                    i().AppHubShortcutLinks,
+                    r ? i().Divider : null,
                   ),
                 },
-                t.map((e, t) => r.createElement(T, { key: t, appId: e })),
+                t.map((e, t) => n.createElement(g, { key: t, appId: e })),
               ),
             )
           : null;
       }
-      function T(e) {
-        const t = S.Z.Get().GetApp(e.appId);
+      function g(e) {
+        const t = h.Z.Get().GetApp(e.appId);
         return t
-          ? r.createElement(
-              s.IS,
+          ? n.createElement(
+              c.IS,
               {
-                className: c().ShortcutLink,
-                href: `${l.De.COMMUNITY_BASE_URL}app/${e.appId}`,
+                className: i().ShortcutLink,
+                href: `${s.De.COMMUNITY_BASE_URL}app/${e.appId}`,
               },
-              r.createElement("img", {
-                className: c().ShortcutImage,
+              n.createElement("img", {
+                className: i().ShortcutImage,
                 src: t.GetAssets().GetLibraryCapsuleURL(),
               }),
             )
           : null;
       }
-      const A = "subsection",
-        I = "browsefilter";
-      function w() {
-        const e = (0, f.k6)(),
-          t = (0, H.ks)(e, A),
-          n = (0, H.ks)(e, I);
-        return r.createElement(
+      const w = "subsection",
+        A = "browsefilter";
+      function I() {
+        const e = (0, H.k6)(),
+          t = (0, S.ks)(e, w),
+          a = (0, S.ks)(e, A);
+        return n.createElement(
           "div",
           null,
-          r.createElement(N, { activeTab: t, activeSort: n }),
-          r.createElement(k, { activeTab: t, activeSort: n }),
+          n.createElement(T, { activeTab: t, activeSort: a }),
+          n.createElement(N, { activeTab: t, activeSort: a }),
         );
       }
-      function N(e) {
-        const { activeTab: t, activeSort: n } = e,
-          a = r.useRef();
-        r.useEffect(() => {
+      function T(e) {
+        const { activeTab: t, activeSort: a } = e,
+          o = n.useRef();
+        n.useEffect(() => {
           const e = document.getElementById(t);
-          if (e && (null == a ? void 0 : a.current)) {
+          if (e && o?.current) {
             const t = e.offsetLeft + e.clientWidth;
             t > window.innerWidth &&
-              a.current.scrollBy(t - window.innerWidth, 0);
+              o.current.scrollBy(t - window.innerWidth, 0);
           }
-        }, [null == a ? void 0 : a.current]);
-        return r.createElement(
-          v.s,
-          { "flow-children": "row", className: c().TabContainer, ref: a },
+        }, [o?.current]);
+        return n.createElement(
+          f.s,
+          { "flow-children": "row", className: i().TabContainer, ref: o },
           [
             { label: "#Community_Home_Header_Filter_All", id: "" },
             {
@@ -379,33 +369,33 @@
             { label: "#Community_Home_Header_Filter_News", id: "news" },
             { label: "#Community_Home_Header_Filter_Guides", id: "guides" },
             { label: "#Community_Home_Header_Filter_Reviews", id: "reviews" },
-          ].map((e, a) => {
-            const i = t ? t === e.id : 0 === a,
-              m = e.id ? `${A}=${e.id}` : "",
-              u = n ? `${I}=${n}` : "",
-              d = `${l.De.COMMUNITY_BASE_URL}${u || m ? "?" : ""}${u}${m ? "&" : ""}${m}`;
-            return r.createElement(
-              s.IS,
+          ].map((e, o) => {
+            const l = t ? t === e.id : 0 === o,
+              m = e.id ? `${w}=${e.id}` : "",
+              u = a ? `${A}=${a}` : "",
+              d = `${s.De.COMMUNITY_BASE_URL}${u || m ? "?" : ""}${u}${m ? "&" : ""}${m}`;
+            return n.createElement(
+              c.IS,
               {
                 id: e.id,
                 href: d,
                 key: e.id,
-                className: (0, h.Z)(c().Tab, i ? c().ActiveTab : null),
+                className: (0, _.Z)(i().Tab, l ? i().ActiveTab : null),
               },
-              (0, o.Xx)(e.label),
+              (0, r.Xx)(e.label),
             );
           }),
         );
       }
-      function k(e) {
-        const { activeTab: t, activeSort: n } = e;
-        return r.createElement(
-          v.s,
-          { "flow-children": "row", className: c().SortContainer },
-          r.createElement(
+      function N(e) {
+        const { activeTab: t, activeSort: a } = e;
+        return n.createElement(
+          f.s,
+          { "flow-children": "row", className: i().SortContainer },
+          n.createElement(
             "div",
-            { className: c().SortIcon },
-            r.createElement(m.iS8, null),
+            { className: i().SortIcon },
+            n.createElement(l.iS8, null),
           ),
           [
             { label: "#Community_Home_Header_BrowseFilter_Popular", id: "" },
@@ -413,19 +403,19 @@
               label: "#Community_Home_Header_BrowseFilter_Recent",
               id: "mostrecent",
             },
-          ].map((e, a) => {
-            const i = n ? n === e.id : 0 === a,
-              m = t ? `${A}=${t}` : "",
-              u = e.id ? `${I}=${e.id}` : "",
-              d = `${l.De.COMMUNITY_BASE_URL}${u || m ? "?" : ""}${u}${m ? "&" : ""}${m}`;
-            return r.createElement(
-              s.IS,
+          ].map((e, o) => {
+            const l = a ? a === e.id : 0 === o,
+              m = t ? `${w}=${t}` : "",
+              u = e.id ? `${A}=${e.id}` : "",
+              d = `${s.De.COMMUNITY_BASE_URL}${u || m ? "?" : ""}${u}${m ? "&" : ""}${m}`;
+            return n.createElement(
+              c.IS,
               {
                 href: d,
                 key: e.id,
-                className: (0, h.Z)(c().Sort, i ? c().ActiveSort : null),
+                className: (0, _.Z)(i().Sort, l ? i().ActiveSort : null),
               },
-              (0, o.Xx)(e.label),
+              (0, r.Xx)(e.label),
             );
           }),
         );

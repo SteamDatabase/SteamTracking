@@ -1348,7 +1348,7 @@
     "Sale_Events": "News and Events",
     "Sale_Events_ttip": "Allows insertion of specifically chosen Steam Events and Announcements onto the page. The users can click to open the content inline on top of the sale page.",
     "Sale_Links": "Images",
-    "Sale_Links_ttip": "Display one or more images with options to display as a carousel or grid. Optionally can provide localized images and can link images to other destiations within the store.",
+    "Sale_Links_ttip": "Display one or more images with options to display as a carousel or grid. Optionally can provide localized images and can link images to other destinations within the store.",
     "Sale_BroadcastPlayerSection": "Broadcast Player",
     "Sale_BroadcastPlayerSection_ttip": "If broadcast is enabled on this sale page, then by default the video players will appear at the top of the sale page. Using this widget, you can control where you want the broadcast player to appear within the sale page.",
     "Sale_EventDescriptionSection": "Event Description",

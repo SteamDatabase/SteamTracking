@@ -99,8 +99,8 @@
         d = r(8889),
         y = r.n(d),
         b = r(84148),
-        p = r(47430),
-        f = r(84223),
+        f = r(47430),
+        p = r(84223),
         B = r(93998),
         g = r(47094),
         w = r(72961),
@@ -355,7 +355,7 @@
                   : y()(e)
                     ? e(t)
                     : n.createElement(
-                        f.H,
+                        p.H,
                         E({}, t, {
                           type: "linear",
                           className: "recharts-pie-label-line",
@@ -416,7 +416,7 @@
                   y = e.map(function (e, t) {
                     var y = (e.startAngle + e.endAngle) / 2,
                       b = (0, F.op)(e.cx, e.cy, e.outerRadius + d, y),
-                      f = T(
+                      p = T(
                         T(T(T({}, o), e), {}, { stroke: "none" }, l),
                         {},
                         { index: t, textAnchor: c.getTextAnchor(b.x, e.cx) },
@@ -440,19 +440,19 @@
                     return (
                       m()(a) && m()(s) ? (g = "value") : m()(a) && (g = s),
                       n.createElement(
-                        p.m,
+                        f.m,
                         {
                           key: "label-"
                             .concat(e.startAngle, "-")
                             .concat(e.endAngle),
                         },
                         i && c.renderLabelLineItem(i, B),
-                        c.renderLabelItem(r, f, (0, M.F$)(e, g)),
+                        c.renderLabelItem(r, p, (0, M.F$)(e, g)),
                       )
                     );
                   });
                 return n.createElement(
-                  p.m,
+                  f.m,
                   { className: "recharts-pie-labels" },
                   y,
                 );
@@ -482,7 +482,7 @@
                       { stroke: a ? r.fill : r.stroke, tabIndex: -1 },
                     );
                   return n.createElement(
-                    p.m,
+                    f.m,
                     E(
                       {
                         ref: function (e) {
@@ -567,7 +567,7 @@
                           a.push(b), (s = b.endAngle);
                         }
                       }),
-                      n.createElement(p.m, null, e.renderSectorsStatically(a))
+                      n.createElement(f.m, null, e.renderSectorsStatically(a))
                     );
                   },
                 );
@@ -645,7 +645,7 @@
                   return null;
                 var y = (0, b.Z)("recharts-pie", a);
                 return n.createElement(
-                  p.m,
+                  f.m,
                   {
                     tabIndex: this.props.rootTabIndex,
                     className: y,
@@ -737,8 +737,8 @@
             d = a.nameKey,
             y = a.valueKey,
             b = a.tooltipType,
-            p = Math.abs(t.props.minAngle),
-            f = i.parseCoordinateOfPie(t, r),
+            f = Math.abs(t.props.minAngle),
+            p = i.parseCoordinateOfPie(t, r),
             B = i.parseDeltaAngle(o, c),
             g = Math.abs(B),
             w = u;
@@ -759,7 +759,7 @@
             v = n.filter(function (e) {
               return 0 !== (0, M.F$)(e, w, 0);
             }).length,
-            S = g - v * p - (g >= 360 ? v : v - 1) * l,
+            S = g - v * f - (g >= 360 ? v : v - 1) * l,
             O = n.reduce(function (e, t) {
               var r = (0, M.F$)(t, w, 0);
               return e + ((0, z.hj)(r) ? r : 0);
@@ -774,11 +774,11 @@
                   (r = t
                     ? _.endAngle + (0, z.uY)(B) * l * (0 !== i ? 1 : 0)
                     : o) +
-                  (0, z.uY)(B) * ((0 !== i ? p : 0) + a * S),
+                  (0, z.uY)(B) * ((0 !== i ? f : 0) + a * S),
                 u = (r + c) / 2,
-                m = (f.innerRadius + f.outerRadius) / 2,
+                m = (p.innerRadius + p.outerRadius) / 2,
                 y = [{ name: n, value: i, payload: e, dataKey: w, type: b }],
-                g = (0, F.op)(f.cx, f.cy, m, u);
+                g = (0, F.op)(p.cx, p.cy, m, u);
               return (_ = T(
                 T(
                   T(
@@ -793,7 +793,7 @@
                     },
                     e,
                   ),
-                  f,
+                  p,
                 ),
                 {},
                 {
@@ -805,7 +805,7 @@
                 },
               ));
             }));
-          return T(T({}, f), {}, { sectors: h, data: n });
+          return T(T({}, p), {}, { sectors: h, data: n });
         });
     },
     71068: (e, t, r) => {
@@ -854,7 +854,7 @@
           b.apply(this, arguments)
         );
       }
-      function p(e, t) {
+      function f(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
           var i = Object.getOwnPropertySymbols(e);
@@ -866,16 +866,16 @@
         }
         return r;
       }
-      function f(e) {
+      function p(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? p(Object(r), !0).forEach(function (t) {
+            ? f(Object(r), !0).forEach(function (t) {
                 _(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : p(Object(r)).forEach(function (t) {
+              : f(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -992,22 +992,22 @@
             })),
               Object.defineProperty(e, "prototype", { writable: !1 }),
               t && g(e, t);
-          })(p, e);
+          })(f, e);
           var t,
             r,
             n,
-            y = w(p);
-          function p() {
+            y = w(f);
+          function f() {
             return (
               (function (e, t) {
                 if (!(e instanceof t))
                   throw new TypeError("Cannot call a class as a function");
-              })(this, p),
+              })(this, f),
               y.apply(this, arguments)
             );
           }
           return (
-            (t = p),
+            (t = f),
             (n = [
               {
                 key: "renderTickItem",
@@ -1071,8 +1071,8 @@
                     n = e.radius,
                     a = e.axisLine,
                     s = e.axisLineType,
-                    l = f(
-                      f({}, (0, m.L6)(this.props)),
+                    l = p(
+                      p({}, (0, m.L6)(this.props)),
                       {},
                       { fill: "none" },
                       (0, m.L6)(a),
@@ -1109,12 +1109,12 @@
                     c = t.stroke,
                     l = (0, m.L6)(this.props),
                     d = (0, m.L6)(n),
-                    y = f(f({}, l), {}, { fill: "none" }, (0, m.L6)(a)),
+                    y = p(p({}, l), {}, { fill: "none" }, (0, m.L6)(a)),
                     B = r.map(function (t, r) {
                       var m = e.getTickLineCoord(t),
-                        B = f(
-                          f(
-                            f({ textAnchor: e.getTickTextAnchor(t) }, l),
+                        B = p(
+                          p(
+                            p({ textAnchor: e.getTickTextAnchor(t) }, l),
                             {},
                             { stroke: "none", fill: c },
                             d,
@@ -1144,7 +1144,7 @@
                             ),
                           ),
                         n &&
-                          p.renderTickItem(n, B, o ? o(t.value, r) : t.value),
+                          f.renderTickItem(n, B, o ? o(t.value, r) : t.value),
                       );
                     });
                   return i.createElement(
@@ -1174,7 +1174,7 @@
             ]) && B(t.prototype, r),
             n && B(t, n),
             Object.defineProperty(t, "prototype", { writable: !1 }),
-            p
+            f
           );
         })(i.PureComponent);
       _(M, "displayName", "PolarAngleAxis"),
@@ -1363,7 +1363,7 @@
             }),
           );
         },
-        p = function (e) {
+        f = function (e) {
           var t = e.cx,
             r = e.cy,
             n = e.radius,
@@ -1380,7 +1380,7 @@
             }),
           );
         },
-        f = function (e) {
+        p = function (e) {
           var t = e.radius,
             r = e.index,
             n = m(m({ stroke: "#ccc" }, (0, a.L6)(e)), {}, { fill: "none" });
@@ -1404,11 +1404,11 @@
                   var a = n;
                   return "circle" === r
                     ? i.createElement(
-                        p,
+                        f,
                         l({ key: a }, e, { radius: t, index: n }),
                       )
                     : i.createElement(
-                        f,
+                        p,
                         l({ key: a }, e, { radius: t, index: n }),
                       );
                 }),
@@ -1425,9 +1425,9 @@
             m = e.outerRadius,
             d = void 0 === m ? 0 : m,
             y = e.gridType,
-            p = void 0 === y ? "polygon" : y,
-            f = e.radialLines,
-            g = void 0 === f || f,
+            f = void 0 === y ? "polygon" : y,
+            p = e.radialLines,
+            g = void 0 === p || p,
             w = c(e, s);
           return d <= 0
             ? null
@@ -1442,7 +1442,7 @@
                       cy: a,
                       innerRadius: u,
                       outerRadius: d,
-                      gridType: p,
+                      gridType: f,
                       radialLines: g,
                     },
                     w,
@@ -1456,7 +1456,7 @@
                       cy: a,
                       innerRadius: u,
                       outerRadius: d,
-                      gridType: p,
+                      gridType: f,
                       radialLines: g,
                     },
                     w,
@@ -1481,8 +1481,8 @@
         d = r(47430),
         y = r(53460),
         b = r(81156),
-        p = r(94797),
-        f = ["cx", "cy", "angle", "ticks", "axisLine"],
+        f = r(94797),
+        p = ["cx", "cy", "angle", "ticks", "axisLine"],
         B = ["ticks", "tick", "angle", "tickFormatter", "stroke"];
       function g(e) {
         return (
@@ -1773,7 +1773,7 @@
                   n = e.angle,
                   a = e.ticks,
                   s = e.axisLine,
-                  o = v(e, f),
+                  o = v(e, p),
                   c = a.reduce(
                     function (e, t) {
                       return [
@@ -1786,7 +1786,7 @@
                   l = (0, y.op)(t, r, c[0], n),
                   u = (0, y.op)(t, r, c[1], n),
                   m = _(
-                    _(_({}, (0, p.L6)(o)), {}, { fill: "none" }, (0, p.L6)(s)),
+                    _(_({}, (0, f.L6)(o)), {}, { fill: "none" }, (0, f.L6)(s)),
                     {},
                     { x1: l.x, y1: l.y, x2: u.x, y2: u.y },
                   );
@@ -1808,11 +1808,11 @@
                   o = t.stroke,
                   l = v(t, B),
                   u = this.getTickTextAnchor(),
-                  m = (0, p.L6)(l),
-                  y = (0, p.L6)(n),
-                  f = r.map(function (t, r) {
+                  m = (0, f.L6)(l),
+                  y = (0, f.L6)(n),
+                  p = r.map(function (t, r) {
                     var l = e.getTickValueCoord(t),
-                      p = _(
+                      f = _(
                         _(
                           _(
                             _(
@@ -1845,13 +1845,13 @@
                         },
                         (0, b.bw)(e.props, t, r),
                       ),
-                      c.renderTickItem(n, p, s ? s(t.value, r) : t.value),
+                      c.renderTickItem(n, f, s ? s(t.value, r) : t.value),
                     );
                   });
                 return i.createElement(
                   d.m,
                   { className: "recharts-polar-radius-axis-ticks" },
-                  f,
+                  p,
                 );
               },
             },
@@ -1912,8 +1912,8 @@
         d = r.n(m),
         y = r(8889),
         b = r.n(y),
-        p = r(84148),
-        f = r(76325),
+        f = r(84148),
+        p = r(76325),
         B = r(77125),
         g = r(53460),
         w = r(70416),
@@ -2248,12 +2248,12 @@
                       a = r.map(function (e, t) {
                         var r = u && u[Math.floor(t * n)];
                         if (r) {
-                          var a = (0, f.k4)(r.x, e.x),
-                            s = (0, f.k4)(r.y, e.y);
+                          var a = (0, p.k4)(r.x, e.x),
+                            s = (0, p.k4)(r.y, e.y);
                           return O(O({}, e), {}, { x: a(i), y: s(i) });
                         }
-                        var o = (0, f.k4)(e.cx, e.x),
-                          c = (0, f.k4)(e.cy, e.y);
+                        var o = (0, p.k4)(e.cx, e.x),
+                          c = (0, p.k4)(e.cy, e.y);
                         return O(O({}, e), {}, { x: o(i), y: c(i) });
                       });
                     return e.renderPolygonStatically(a);
@@ -2284,7 +2284,7 @@
                   a = e.isAnimationActive;
                 if (t || !n || !n.length) return null;
                 var s = this.state.isAnimationFinished,
-                  o = (0, p.Z)("recharts-radar", r);
+                  o = (0, f.Z)("recharts-radar", r);
                 return i.createElement(
                   v.m,
                   { className: o },
@@ -2327,19 +2327,19 @@
             var a = (0, w.F$)(e, r.dataKey, i),
               u = (0, w.F$)(e, n),
               b = r.scale(a) + y,
-              p = Array.isArray(u) ? c()(u) : u,
-              f = s()(p) ? void 0 : t.scale(p);
+              f = Array.isArray(u) ? c()(u) : u,
+              p = s()(f) ? void 0 : t.scale(f);
             Array.isArray(u) && u.length >= 2 && (m = !0),
               d.push(
                 O(
-                  O({}, (0, g.op)(o, l, f, b)),
+                  O({}, (0, g.op)(o, l, p, b)),
                   {},
                   {
                     name: a,
                     value: u,
                     cx: o,
                     cy: l,
-                    radius: f,
+                    radius: p,
                     angle: b,
                     payload: e,
                   },
@@ -2494,7 +2494,7 @@
           var y = (0, n.Z)("recharts-polygon", r);
           if (l && l.length) {
             var b = m.stroke && "none" !== m.stroke,
-              p = (function (e, t, r) {
+              f = (function (e, t, r) {
                 var i = d(e, r);
                 return ""
                   .concat("Z" === i.slice(-1) ? i.slice(0, -1) : i, "L")
@@ -2506,9 +2506,9 @@
               i.createElement(
                 "path",
                 o({}, (0, a.L6)(m, !0), {
-                  fill: "Z" === p.slice(-1) ? m.fill : "none",
+                  fill: "Z" === f.slice(-1) ? m.fill : "none",
                   stroke: "none",
-                  d: p,
+                  d: f,
                 }),
               ),
               b
@@ -2525,13 +2525,13 @@
                 : null,
             );
           }
-          var f = d(t, u);
+          var p = d(t, u);
           return i.createElement(
             "path",
             o({}, (0, a.L6)(m, !0), {
-              fill: "Z" === f.slice(-1) ? m.fill : "none",
+              fill: "Z" === p.slice(-1) ? m.fill : "none",
               className: y,
-              d: f,
+              d: p,
             }),
           );
         };
@@ -2558,6 +2558,8 @@
             o.prototype.total_playtime_seconds || n.aR(o.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             o.sm_m ||
@@ -2686,6 +2688,8 @@
             c.prototype.appid || n.aR(c.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             c.sm_m ||
@@ -2740,6 +2744,8 @@
             l.prototype.longest_consecutive_days || n.aR(l.M()),
             s.initialize(this, e, 0, -1, [3], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             l.sm_m ||
@@ -2804,6 +2810,8 @@
             u.prototype.overall_rank || n.aR(u.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             u.sm_m ||
@@ -2884,6 +2892,8 @@
             m.prototype.appid || n.aR(m.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             m.sm_m ||
@@ -2947,6 +2957,8 @@
             d.prototype.appid || n.aR(d.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             d.sm_m ||
@@ -3051,6 +3063,8 @@
             y.prototype.appid || n.aR(y.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             y.sm_m ||
@@ -3115,6 +3129,8 @@
             b.prototype.appid || n.aR(b.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             b.sm_m ||
@@ -3163,81 +3179,23 @@
           return "CGameRank";
         }
       }
-      class p extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            p.prototype.category || n.aR(p.M()),
-            s.initialize(this, e, 0, -1, [2], null);
-        }
-        static M() {
-          return (
-            p.sm_m ||
-              (p.sm_m = {
-                proto: p,
-                fields: {
-                  category: { n: 1, br: n.FE.readString, bw: n.Xc.writeString },
-                  rankings: { n: 2, c: b, r: !0, q: !0 },
-                },
-              }),
-            p.sm_m
-          );
-        }
-        static MBF() {
-          return p.sm_mbf || (p.sm_mbf = n.Bh(p.M())), p.sm_mbf;
-        }
-        toObject(e = !1) {
-          return p.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(p.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(p.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new p();
-          return p.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(p.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(p.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CRankingCategory";
-        }
-      }
       class f extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            f.prototype.overall_ranking || n.aR(f.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
+            f.prototype.category || n.aR(f.M()),
+            s.initialize(this, e, 0, -1, [2], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             f.sm_m ||
               (f.sm_m = {
                 proto: f,
                 fields: {
-                  overall_ranking: { n: 1, c: p },
-                  vr_ranking: { n: 2, c: p },
-                  deck_ranking: { n: 3, c: p },
-                  controller_ranking: { n: 4, c: p },
-                  linux_ranking: { n: 5, c: p },
-                  mac_ranking: { n: 6, c: p },
-                  windows_ranking: { n: 7, c: p },
+                  category: { n: 1, br: n.FE.readString, bw: n.Xc.writeString },
+                  rankings: { n: 2, c: b, r: !0, q: !0 },
                 },
               }),
             f.sm_m
@@ -3275,6 +3233,68 @@
           return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CRankingCategory";
+        }
+      }
+      class p extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            p.prototype.overall_ranking || n.aR(p.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            p.sm_m ||
+              (p.sm_m = {
+                proto: p,
+                fields: {
+                  overall_ranking: { n: 1, c: f },
+                  vr_ranking: { n: 2, c: f },
+                  deck_ranking: { n: 3, c: f },
+                  controller_ranking: { n: 4, c: f },
+                  linux_ranking: { n: 5, c: f },
+                  mac_ranking: { n: 6, c: f },
+                  windows_ranking: { n: 7, c: f },
+                },
+              }),
+            p.sm_m
+          );
+        }
+        static MBF() {
+          return p.sm_mbf || (p.sm_mbf = n.Bh(p.M())), p.sm_mbf;
+        }
+        toObject(e = !1) {
+          return p.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.TA(p.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(p.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new p();
+          return p.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(p.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(p.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CGameRankings";
         }
       }
@@ -3285,6 +3305,8 @@
             B.prototype.total_achievements || n.aR(B.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             B.sm_m ||
@@ -3353,6 +3375,8 @@
             g.prototype.stats || n.aR(g.M()),
             s.initialize(this, e, 0, -1, [1], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             g.sm_m ||
@@ -3405,6 +3429,8 @@
             w.prototype.tag_id || n.aR(w.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             w.sm_m ||
@@ -3465,6 +3491,8 @@
             h.prototype.screenshots_shared || n.aR(h.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             h.sm_m ||
@@ -3608,6 +3636,8 @@
             _.prototype.total_stats || n.aR(_.M()),
             s.initialize(this, e, 0, -1, [2, 5, 6], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             _.sm_m ||
@@ -3624,7 +3654,7 @@
                     br: n.FE.readUint32,
                     bw: n.Xc.writeUint32,
                   },
-                  game_rankings: { n: 8, c: f },
+                  game_rankings: { n: 8, c: p },
                   playtests_played: {
                     n: 9,
                     br: n.FE.readUint32,
@@ -3686,6 +3716,8 @@
             v.prototype.rtime_month || n.aR(v.M()),
             s.initialize(this, e, 0, -1, [4, 6], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             v.sm_m ||
@@ -3749,6 +3781,8 @@
             F.prototype.account_id || n.aR(F.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             F.sm_m ||
@@ -3814,6 +3848,8 @@
             z.prototype.from_dbo || n.aR(z.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             z.sm_m ||
@@ -3893,6 +3929,8 @@
             M.prototype.statid || n.aR(M.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             M.sm_m ||
@@ -3958,6 +3996,8 @@
             R.prototype.appid || n.aR(R.M()),
             s.initialize(this, e, 0, -1, [2], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             R.sm_m ||
@@ -4023,6 +4063,8 @@
             S.prototype.median_achievements || n.aR(S.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             S.sm_m ||
@@ -4091,6 +4133,8 @@
             O.prototype.new_releases || n.aR(O.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             O.sm_m ||
@@ -4164,6 +4208,8 @@
             j.prototype.steamid || n.aR(j.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             j.sm_m ||
@@ -4233,6 +4279,8 @@
             E.prototype.stats || n.aR(E.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             E.sm_m ||
@@ -4290,6 +4338,8 @@
             U.prototype.steamid || n.aR(U.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             U.sm_m ||
@@ -4354,6 +4404,8 @@
             T.prototype.privacy_state || n.aR(T.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             T.sm_m ||
@@ -4412,6 +4464,8 @@
             x.prototype.steamid || n.aR(x.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             x.sm_m ||
@@ -4471,6 +4525,8 @@
             W.prototype.privacy_state || n.aR(W.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             W.sm_m ||
@@ -4544,6 +4600,8 @@
             A.prototype.steamid || n.aR(A.M()),
             s.initialize(this, e, 0, -1, [3], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             A.sm_m ||
@@ -4612,6 +4670,8 @@
             P.prototype.game_achievements || n.aR(P.M()),
             s.initialize(this, e, 0, -1, [1], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             P.sm_m ||
@@ -4681,6 +4741,8 @@
             k.prototype.steamid || n.aR(k.M()),
             s.initialize(this, e, 0, -1, [3], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             k.sm_m ||
@@ -4748,6 +4810,8 @@
             I.prototype.apps || n.aR(I.M()),
             s.initialize(this, e, 0, -1, [1], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             I.sm_m ||
@@ -4800,6 +4864,8 @@
             X.prototype.image_url || n.aR(X.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             X.sm_m ||
@@ -4889,6 +4955,8 @@
             C.prototype.appid || n.aR(C.M()),
             s.initialize(this, e, 0, -1, [2], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             C.sm_m ||
@@ -4944,6 +5012,8 @@
             D.prototype.steamid || n.aR(D.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             D.sm_m ||
@@ -5044,6 +5114,8 @@
             L.prototype.steamid || n.aR(L.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             L.sm_m ||
@@ -5108,6 +5180,8 @@
             G.prototype.jsondata || n.aR(G.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             G.sm_m ||
@@ -5162,6 +5236,8 @@
             q.prototype.steamid || n.aR(q.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             q.sm_m ||
@@ -5226,6 +5302,8 @@
             Y.prototype.steamid || n.aR(Y.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             Y.sm_m ||
@@ -5294,6 +5372,8 @@
             K.prototype.friend_shares || n.aR(K.M()),
             s.initialize(this, e, 0, -1, [1], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             K.sm_m ||
@@ -5349,6 +5429,8 @@
             V.prototype.steamid || n.aR(V.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             V.sm_m ||
@@ -5409,6 +5491,8 @@
             Z.prototype.images || n.aR(Z.M()),
             s.initialize(this, e, 0, -1, [1], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             Z.sm_m ||
@@ -5461,6 +5545,8 @@
             $.prototype.name || n.aR($.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             $.sm_m ||
@@ -5516,6 +5602,8 @@
             H.prototype.year || n.aR(H.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             H.sm_m ||
@@ -5570,6 +5658,8 @@
             J.prototype.year || n.aR(J.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             J.sm_m ||
@@ -5655,6 +5745,8 @@
             Q.prototype.results || n.aR(Q.M()),
             s.initialize(this, e, 0, -1, [1], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             Q.sm_m ||
@@ -5707,6 +5799,8 @@
             ee.prototype.steamid || n.aR(ee.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             ee.sm_m ||
@@ -5765,6 +5859,8 @@
             te.prototype.year || n.aR(te.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             te.sm_m ||

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "8997688";
+var CLSTAMP = "8999275";
 (() => {
   "use strict";
   function e(e) {
@@ -163,10 +163,10 @@ var CLSTAMP = "8997688";
         (i.is_support = !1));
     const S = l("broadcast", _);
     S && (Object.assign(s, S), (a.broadcastConfig = !0));
-    const h = l("community", _);
-    h && (Object.assign(o, h), (a.communityConfig = !0));
-    const d = l("event", _);
-    return d && (Object.assign(c, d), (a.eventConfig = !0)), a;
+    const d = l("community", _);
+    d && (Object.assign(o, d), (a.communityConfig = !0));
+    const h = l("event", _);
+    return h && (Object.assign(c, h), (a.eventConfig = !0)), a;
   }
   function l(e, t = r) {
     return m(e, t, !0);
@@ -205,20 +205,21 @@ var CLSTAMP = "8997688";
   }
   const E = "presentation_mode";
   let S = { success: !0, result: 1 };
-  class h {
-    constructor() {
-      (this.m_mapWaitingCallbacks = new Map()),
-        (this.m_iCallSeq = 1),
-        (this.m_bReady = !1),
-        (this.m_bClientConnectionFailed = !1),
-        (this.m_bSecurityException = !1),
-        (this.m_ClientInfo = {
-          ulVersion: "",
-          bFriendsUIEnabled: !1,
-          unAccountID: 0,
-          rgSupportedMessages: [],
-        });
-    }
+  class d {
+    m_mapWaitingCallbacks = new Map();
+    m_socket;
+    m_iCallSeq = 1;
+    m_bReady = !1;
+    m_bClientConnectionFailed = !1;
+    m_bSecurityException = !1;
+    m_promiseConnect;
+    m_ClientInfo = {
+      ulVersion: "",
+      bFriendsUIEnabled: !1,
+      unAccountID: 0,
+      rgSupportedMessages: [],
+    };
+    constructor() {}
     get ClientInfo() {
       return this.m_ClientInfo;
     }
@@ -316,12 +317,9 @@ var CLSTAMP = "8997688";
       );
     }
   }
-  let d = new (class {
-    constructor() {
-      (this.m_connection = new h()),
-        (this.m_bAllowAccountMismatch = !1),
-        (this.m_mapCacheSubscribedApp = new Map());
-    }
+  let h = new (class {
+    m_connection = new d();
+    m_bAllowAccountMismatch = !1;
     FailureResult(e = 2) {
       let t = { success: !1, result: e };
       return (
@@ -362,6 +360,7 @@ var CLSTAMP = "8997688";
       let t = { message: "ShowChatRoomGroupInvite", invite_code: e };
       return this.GenericEResultCall(t);
     }
+    m_mapCacheSubscribedApp = new Map();
     BIsSubscribedApp(e) {
       if (this.m_mapCacheSubscribedApp.has(e))
         return Promise.resolve(this.m_mapCacheSubscribedApp.get(e));
@@ -399,8 +398,8 @@ var CLSTAMP = "8997688";
         .catch(() => this.FailureResult());
     }
   })();
-  (window.ClientConnectionAPI = d),
+  (window.ClientConnectionAPI = h),
     document.addEventListener("DOMContentLoaded", function () {
-      u(), (window.ClientConnectionAPI = d);
+      u(), (window.ClientConnectionAPI = h);
     });
 })();

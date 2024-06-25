@@ -77,18 +77,18 @@
         DeleteInfo: "_3EhGHfB3z9uPkO3ZTnwUVm",
       };
     },
-    97504: (e, t, n) => {
+    97504: (e, t, s) => {
       "use strict";
-      n.d(t, { A: () => P, EI: () => J, kF: () => W });
-      var s = n(85556),
-        o = n(47427),
-        a = n(35427),
-        i = n(64936),
-        r = n(16997),
-        l = n(45492),
-        d = n(20417),
-        u = n(37563);
-      const c = [
+      s.d(t, { A: () => P, EI: () => K, kF: () => W });
+      var n = s(47427),
+        a = s(35427),
+        o = s(64936),
+        r = s(85556),
+        i = s(16997),
+        l = s(45492),
+        c = s(20417),
+        u = s(37563);
+      const d = [
         "mousemove",
         "keypress",
         "scroll",
@@ -98,14 +98,15 @@
         "touchmove",
       ];
       class m {
+        m_callbackList = new l.pB();
+        m_timer = null;
+        m_bAreEventListenersRegistered = !1;
+        static s_Singleton;
         static Get() {
           return m.s_Singleton || (m.s_Singleton = new m()), m.s_Singleton;
         }
         constructor() {
-          (this.m_callbackList = new l.pB()),
-            (this.m_timer = null),
-            (this.m_bAreEventListenersRegistered = !1),
-            "dev" == u.De.WEB_UNIVERSE && (window.g_FidgetStore = this);
+          "dev" == u.De.WEB_UNIVERSE && (window.g_FidgetStore = this);
         }
         ResetFidgetTimer(e) {
           this.m_timer && window.clearTimeout(this.m_timer);
@@ -122,41 +123,42 @@
         BRegisterEventListeners() {
           if (this.m_bAreEventListenersRegistered) return !1;
           const e = window;
-          for (const t of c) e.addEventListener(t, this.ResetFidgetTimer);
+          for (const t of d) e.addEventListener(t, this.ResetFidgetTimer);
           return (this.m_bAreEventListenersRegistered = !0), !0;
         }
         BUnregisterEventListeners() {
           if (!this.m_bAreEventListenersRegistered) return !1;
           const e = window;
-          for (const t of c) e.removeEventListener(t, this.ResetFidgetTimer);
+          for (const t of d) e.removeEventListener(t, this.ResetFidgetTimer);
           return (this.m_bAreEventListenersRegistered = !1), !1;
         }
       }
       function A() {
-        o.useEffect(() => {
+        n.useEffect(() => {
           const e = m.Get().BRegisterEventListeners();
           return () => {
             e && m.Get().BUnregisterEventListeners();
           };
         }, []);
       }
-      (0, s.gn)([r.a], m.prototype, "ResetFidgetTimer", null);
-      var v = n(80751),
-        Q = n.n(v),
-        _ = n(29480),
-        p = n(16649);
-      class g {
+      (0, r.gn)([i.a], m.prototype, "ResetFidgetTimer", null);
+      var Q = s(80751),
+        _ = s.n(Q),
+        p = s(29480),
+        g = s(16649);
+      class C {
+        m_mapQAndASessions = new Map();
+        m_mapQAndAChangeCallbackList = new Map();
+        m_dashboardCallbackList = new l.pB();
+        m_mapQuestions = new Map();
+        m_mapQuestionCallbackList = new Map();
+        m_rgPendingQuestionGIDs = [];
+        static s_Singleton;
         static Get() {
-          return g.s_Singleton || (g.s_Singleton = new g()), g.s_Singleton;
+          return C.s_Singleton || (C.s_Singleton = new C()), C.s_Singleton;
         }
         constructor() {
-          (this.m_mapQAndASessions = new Map()),
-            (this.m_mapQAndAChangeCallbackList = new Map()),
-            (this.m_dashboardCallbackList = new l.pB()),
-            (this.m_mapQuestions = new Map()),
-            (this.m_mapQuestionCallbackList = new Map()),
-            (this.m_rgPendingQuestionGIDs = []),
-            "dev" == u.De.WEB_UNIVERSE && (window.g_QAndAStore = this);
+          "dev" == u.De.WEB_UNIVERSE && (window.g_QAndAStore = this);
         }
         GetQAndACallbackList(e) {
           return (
@@ -184,857 +186,603 @@
         GetQuestion(e) {
           return this.m_mapQuestions.get(e);
         }
-        LoadAllSessions(e) {
-          var t, n, o, a;
-          return (0, s.mG)(this, void 0, void 0, function* () {
-            if (!u.L7.logged_in || !u.De.SESSIONID) return 15;
-            const s =
-                u.De.COMMUNITY_BASE_URL +
-                "questions/" +
-                u.JA.VANITY_ID +
-                "/ajaxgetqandasforgroup",
-              i = {};
-            let r = null;
-            try {
-              const n = yield Q().get(s, {
-                params: i,
-                cancelToken: null == e ? void 0 : e.token,
-              });
-              if (
-                (console.log(n),
-                200 == (null == n ? void 0 : n.status) &&
-                  1 ==
-                    (null === (t = n.data) || void 0 === t
-                      ? void 0
-                      : t.success) &&
-                  n.data.qandas)
-              ) {
-                for (const e of n.data.qandas)
-                  this.m_mapQAndASessions.set(e.gidSession, e);
-                return (
-                  this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()),
-                  1
-                );
-              }
-              r = { response: n };
-            } catch (e) {
-              r = e;
+        async LoadAllSessions(e) {
+          if (!u.L7.logged_in || !u.De.SESSIONID) return 15;
+          const t =
+              u.De.COMMUNITY_BASE_URL +
+              "questions/" +
+              u.JA.VANITY_ID +
+              "/ajaxgetqandasforgroup",
+            s = {};
+          let n = null;
+          try {
+            const a = await _().get(t, { params: s, cancelToken: e?.token });
+            if (
+              (console.log(a),
+              200 == a?.status && 1 == a.data?.success && a.data.qandas)
+            ) {
+              for (const e of a.data.qandas)
+                this.m_mapQAndASessions.set(e.gidSession, e);
+              return (
+                this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()), 1
+              );
             }
-            const l = (0, p.l)(r);
-            return (
-              console.error(
-                "Could not load question and answer sessions for group",
-                l.strErrorMsg,
-                l,
-              ),
-              null !==
-                (a =
-                  null ===
-                    (o =
-                      null === (n = null == r ? void 0 : r.response) ||
-                      void 0 === n
-                        ? void 0
-                        : n.data) || void 0 === o
-                    ? void 0
-                    : o.success) && void 0 !== a
-                ? a
-                : 2
-            );
-          });
+            n = { response: a };
+          } catch (e) {
+            n = e;
+          }
+          const a = (0, g.l)(n);
+          return (
+            console.error(
+              "Could not load question and answer sessions for group",
+              a.strErrorMsg,
+              a,
+            ),
+            n?.response?.data?.success ?? 2
+          );
         }
-        CreateNewSession(e, t) {
-          var n, o, a, i;
-          return (0, s.mG)(this, void 0, void 0, function* () {
-            if (!u.L7.logged_in || !u.De.SESSIONID) return 15;
-            const s =
-                u.De.COMMUNITY_BASE_URL +
-                "questions/" +
-                u.JA.VANITY_ID +
-                "/ajaxcreateqanda",
-              r = new FormData();
-            r.append("sessionid", u.De.SESSIONID), r.append("name", e);
-            let l = null;
-            try {
-              const e = yield Q().post(s, r, {
-                withCredentials: !0,
-                cancelToken: null == t ? void 0 : t.token,
-              });
-              if (
-                200 == (null == e ? void 0 : e.status) &&
-                1 ==
-                  (null === (n = e.data) || void 0 === n
-                    ? void 0
-                    : n.success) &&
-                e.data.qanda
-              )
-                return (
-                  this.m_mapQAndASessions.set(
-                    e.data.qanda.gidSession,
-                    e.data.qanda,
-                  ),
-                  this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()),
-                  1
-                );
-              l = { response: e };
-            } catch (e) {
-              l = e;
-            }
-            const d = (0, p.l)(l);
-            return (
-              console.error("Could not create Q&A", e, d.strErrorMsg, d),
-              null !==
-                (i =
-                  null ===
-                    (a =
-                      null === (o = null == l ? void 0 : l.response) ||
-                      void 0 === o
-                        ? void 0
-                        : o.data) || void 0 === a
-                    ? void 0
-                    : a.success) && void 0 !== i
-                ? i
-                : 2
-            );
-          });
+        async CreateNewSession(e, t) {
+          if (!u.L7.logged_in || !u.De.SESSIONID) return 15;
+          const s =
+              u.De.COMMUNITY_BASE_URL +
+              "questions/" +
+              u.JA.VANITY_ID +
+              "/ajaxcreateqanda",
+            n = new FormData();
+          n.append("sessionid", u.De.SESSIONID), n.append("name", e);
+          let a = null;
+          try {
+            const e = await _().post(s, n, {
+              withCredentials: !0,
+              cancelToken: t?.token,
+            });
+            if (200 == e?.status && 1 == e.data?.success && e.data.qanda)
+              return (
+                this.m_mapQAndASessions.set(
+                  e.data.qanda.gidSession,
+                  e.data.qanda,
+                ),
+                this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()),
+                1
+              );
+            a = { response: e };
+          } catch (e) {
+            a = e;
+          }
+          const o = (0, g.l)(a);
+          return (
+            console.error("Could not create Q&A", e, o.strErrorMsg, o),
+            a?.response?.data?.success ?? 2
+          );
         }
-        RenameSession(e, t, n) {
-          var o, a, i, r;
-          return (0, s.mG)(this, void 0, void 0, function* () {
-            if (!u.L7.logged_in || !u.De.SESSIONID) return 15;
-            const s =
-                u.De.COMMUNITY_BASE_URL +
-                "questions/" +
-                u.JA.VANITY_ID +
-                "/ajaxrenameqanda/" +
-                e,
-              l = new FormData();
-            l.append("sessionid", u.De.SESSIONID), l.append("name", t);
-            let d = null;
-            try {
-              const a = yield Q().post(s, l, {
-                withCredentials: !0,
-                cancelToken: null == n ? void 0 : n.token,
-              });
-              if (
-                200 == (null == a ? void 0 : a.status) &&
-                1 ==
-                  (null === (o = a.data) || void 0 === o ? void 0 : o.success)
-              )
-                return (
-                  (this.m_mapQAndASessions.get(e).strName = t),
-                  this.GetQAndACallbackList(e).Dispatch(
-                    this.m_mapQAndASessions.get(e),
-                  ),
-                  this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()),
-                  1
-                );
-              d = { response: a };
-            } catch (e) {
-              d = e;
-            }
-            const c = (0, p.l)(d);
-            return (
-              console.error("Could not rename Q&A", e, t, c.strErrorMsg, c),
-              null !==
-                (r =
-                  null ===
-                    (i =
-                      null === (a = null == d ? void 0 : d.response) ||
-                      void 0 === a
-                        ? void 0
-                        : a.data) || void 0 === i
-                    ? void 0
-                    : i.success) && void 0 !== r
-                ? r
-                : 2
-            );
-          });
+        async RenameSession(e, t, s) {
+          if (!u.L7.logged_in || !u.De.SESSIONID) return 15;
+          const n =
+              u.De.COMMUNITY_BASE_URL +
+              "questions/" +
+              u.JA.VANITY_ID +
+              "/ajaxrenameqanda/" +
+              e,
+            a = new FormData();
+          a.append("sessionid", u.De.SESSIONID), a.append("name", t);
+          let o = null;
+          try {
+            const r = await _().post(n, a, {
+              withCredentials: !0,
+              cancelToken: s?.token,
+            });
+            if (200 == r?.status && 1 == r.data?.success)
+              return (
+                (this.m_mapQAndASessions.get(e).strName = t),
+                this.GetQAndACallbackList(e).Dispatch(
+                  this.m_mapQAndASessions.get(e),
+                ),
+                this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()),
+                1
+              );
+            o = { response: r };
+          } catch (e) {
+            o = e;
+          }
+          const r = (0, g.l)(o);
+          return (
+            console.error("Could not rename Q&A", e, t, r.strErrorMsg, r),
+            o?.response?.data?.success ?? 2
+          );
         }
-        DeleteSession(e, t) {
-          var n, o, a, i;
-          return (0, s.mG)(this, void 0, void 0, function* () {
-            if (!u.L7.logged_in || !u.De.SESSIONID) return 15;
-            const s =
-                u.De.COMMUNITY_BASE_URL +
-                "questions/" +
-                u.JA.VANITY_ID +
-                "/ajaxdeleteqanda/" +
-                e,
-              r = new FormData();
-            r.append("sessionid", u.De.SESSIONID);
-            let l = null;
-            try {
-              const o = yield Q().post(s, r, {
-                withCredentials: !0,
-                cancelToken: null == t ? void 0 : t.token,
-              });
-              if (
-                200 == (null == o ? void 0 : o.status) &&
-                1 ==
-                  (null === (n = o.data) || void 0 === n ? void 0 : n.success)
-              )
-                return (
-                  this.m_mapQAndASessions.delete(e),
-                  this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()),
-                  1
-                );
-              l = { response: o };
-            } catch (e) {
-              l = e;
-            }
-            const d = (0, p.l)(l);
-            return (
-              console.error("Could not delete Q&A", e, d.strErrorMsg, d),
-              null !==
-                (i =
-                  null ===
-                    (a =
-                      null === (o = null == l ? void 0 : l.response) ||
-                      void 0 === o
-                        ? void 0
-                        : o.data) || void 0 === a
-                    ? void 0
-                    : a.success) && void 0 !== i
-                ? i
-                : 2
-            );
-          });
+        async DeleteSession(e, t) {
+          if (!u.L7.logged_in || !u.De.SESSIONID) return 15;
+          const s =
+              u.De.COMMUNITY_BASE_URL +
+              "questions/" +
+              u.JA.VANITY_ID +
+              "/ajaxdeleteqanda/" +
+              e,
+            n = new FormData();
+          n.append("sessionid", u.De.SESSIONID);
+          let a = null;
+          try {
+            const o = await _().post(s, n, {
+              withCredentials: !0,
+              cancelToken: t?.token,
+            });
+            if (200 == o?.status && 1 == o.data?.success)
+              return (
+                this.m_mapQAndASessions.delete(e),
+                this.m_dashboardCallbackList.Dispatch(this.GetAllSessions()),
+                1
+              );
+            a = { response: o };
+          } catch (e) {
+            a = e;
+          }
+          const o = (0, g.l)(a);
+          return (
+            console.error("Could not delete Q&A", e, o.strErrorMsg, o),
+            a?.response?.data?.success ?? 2
+          );
         }
-        LoadSession(e, t, n) {
-          var o, a, i, r, l, d, c, m, A, v;
-          return (0, s.mG)(this, void 0, void 0, function* () {
-            const s =
-                u.L7.logged_in &&
-                (!this.m_mapQAndASessions.has(e) ||
-                  this.m_mapQAndASessions.get(e).bUserCanModerate ||
-                  this.m_rgPendingQuestionGIDs.length > 0 ||
-                  t)
-                  ? "/ajaxgetqandasessionforuser/"
-                  : "/ajaxgetqandasession/",
-              _ =
-                u.De.COMMUNITY_BASE_URL + "questions/" + u.JA.VANITY_ID + s + e,
-              g = {};
-            let C = null;
-            try {
-              const t = yield Q().get(_, {
-                params: g,
-                cancelToken: null == n ? void 0 : n.token,
-              });
-              if (
-                200 == (null == t ? void 0 : t.status) &&
-                1 ==
-                  (null === (o = t.data) || void 0 === o
-                    ? void 0
-                    : o.success) &&
-                t.data.qanda &&
-                t.data.questions
-              ) {
-                for (const e of t.data.questions) {
-                  const t = e.gidQuestion,
-                    n =
-                      null !==
-                        (i =
-                          null === (a = this.m_mapQuestions.get(t)) ||
-                          void 0 === a
-                            ? void 0
-                            : a.bUserUpVoted) && void 0 !== i
-                        ? i
-                        : e.bUserUpVoted,
-                    s = Object.assign(Object.assign({}, e), {
-                      bUserUpVoted: n,
-                    });
-                  this.m_mapQuestions.set(t, s),
-                    this.GetQuestionCallbackList(t).Dispatch(s);
-                }
-                const n =
-                    null !==
-                      (l =
-                        null === (r = this.m_mapQAndASessions.get(e)) ||
-                        void 0 === r
-                          ? void 0
-                          : r.bUserCanModerate) && void 0 !== l
-                      ? l
-                      : t.data.qanda.bUserCanModerate,
+        async LoadSession(e, t, s) {
+          const n =
+              u.L7.logged_in &&
+              (!this.m_mapQAndASessions.has(e) ||
+                this.m_mapQAndASessions.get(e).bUserCanModerate ||
+                this.m_rgPendingQuestionGIDs.length > 0 ||
+                t)
+                ? "/ajaxgetqandasessionforuser/"
+                : "/ajaxgetqandasession/",
+            a = u.De.COMMUNITY_BASE_URL + "questions/" + u.JA.VANITY_ID + n + e,
+            o = {};
+          let r = null;
+          try {
+            const t = await _().get(a, { params: o, cancelToken: s?.token });
+            if (
+              200 == t?.status &&
+              1 == t.data?.success &&
+              t.data.qanda &&
+              t.data.questions
+            ) {
+              for (const e of t.data.questions) {
+                const t = e.gidQuestion,
                   s =
-                    null !==
-                      (c =
-                        null === (d = this.m_mapQAndASessions.get(e)) ||
-                        void 0 === d
-                          ? void 0
-                          : d.bUserCanAskQuestions) && void 0 !== c
-                      ? c
-                      : t.data.qanda.bUserCanAskQuestions,
-                  o = Object.assign(Object.assign({}, t.data.qanda), {
-                    bUserCanModerate: n,
-                    bUserCanAskQuestions: s,
-                  });
-                return (
-                  this.m_mapQAndASessions.set(e, o),
-                  this.GetQAndACallbackList(e).Dispatch(o),
-                  this.UpdatePendingQuestionList(t.data.qanda.rgQuestionGIDs),
-                  1
-                );
+                    this.m_mapQuestions.get(t)?.bUserUpVoted ?? e.bUserUpVoted,
+                  n = { ...e, bUserUpVoted: s };
+                this.m_mapQuestions.set(t, n),
+                  this.GetQuestionCallbackList(t).Dispatch(n);
               }
-              C = { response: t };
-            } catch (e) {
-              C = e;
+              const s =
+                  this.m_mapQAndASessions.get(e)?.bUserCanModerate ??
+                  t.data.qanda.bUserCanModerate,
+                n =
+                  this.m_mapQAndASessions.get(e)?.bUserCanAskQuestions ??
+                  t.data.qanda.bUserCanAskQuestions,
+                a = {
+                  ...t.data.qanda,
+                  bUserCanModerate: s,
+                  bUserCanAskQuestions: n,
+                };
+              return (
+                this.m_mapQAndASessions.set(e, a),
+                this.GetQAndACallbackList(e).Dispatch(a),
+                this.UpdatePendingQuestionList(t.data.qanda.rgQuestionGIDs),
+                1
+              );
             }
-            const h = (0, p.l)(C);
-            return (
-              console.error("Could not load Q&A", e, h.strErrorMsg, h),
-              null !==
-                (v =
-                  null ===
-                    (A =
-                      null === (m = null == C ? void 0 : C.response) ||
-                      void 0 === m
-                        ? void 0
-                        : m.data) || void 0 === A
-                    ? void 0
-                    : A.success) && void 0 !== v
-                ? v
-                : 2
-            );
-          });
+            r = { response: t };
+          } catch (e) {
+            r = e;
+          }
+          const i = (0, g.l)(r);
+          return (
+            console.error("Could not load Q&A", e, i.strErrorMsg, i),
+            r?.response?.data?.success ?? 2
+          );
         }
         UpdatePendingQuestionList(e) {
-          var t;
-          const n = new Set();
-          for (const t of e) {
-            const e = this.m_mapQuestions.get(t);
+          const t = new Set();
+          for (const s of e) {
+            const e = this.m_mapQuestions.get(s);
             e.posterAccountID == u.L7.accountid &&
               1 == e.eState &&
-              n.add(e.gidQuestion);
+              t.add(e.gidQuestion);
           }
           if (this.m_rgPendingQuestionGIDs.length > 0) {
             const s = new Set(e);
             for (const e of this.m_rgPendingQuestionGIDs)
-              s.has(e) &&
-                1 ==
-                  (null === (t = this.m_mapQuestions.get(e)) || void 0 === t
-                    ? void 0
-                    : t.eState) &&
-                n.add(e);
+              s.has(e) && 1 == this.m_mapQuestions.get(e)?.eState && t.add(e);
           }
-          this.m_rgPendingQuestionGIDs = Array.from(n);
+          this.m_rgPendingQuestionGIDs = Array.from(t);
         }
-        AskNewQuestion(e, t, n) {
-          var o, a, i, r, l;
-          return (0, s.mG)(this, void 0, void 0, function* () {
-            if (
-              !u.L7.logged_in ||
-              !u.De.SESSIONID ||
-              !(null === (o = this.m_mapQAndASessions.get(e)) || void 0 === o
-                ? void 0
-                : o.bUserCanAskQuestions)
-            )
-              return 15;
-            const s =
-                u.De.COMMUNITY_BASE_URL +
-                "questions/" +
-                u.JA.VANITY_ID +
-                "/ajaxaskquestion/" +
-                e,
-              d = new FormData();
-            d.append("sessionid", u.De.SESSIONID), d.append("question", t);
-            let c = null;
-            try {
-              const t = yield Q().post(s, d, {
-                withCredentials: !0,
-                cancelToken: null == n ? void 0 : n.token,
-              });
-              if (
-                200 == (null == t ? void 0 : t.status) &&
-                1 ==
-                  (null === (a = t.data) || void 0 === a ? void 0 : a.success)
-              ) {
-                this.m_rgPendingQuestionGIDs.push(t.data.gidQuestion);
-                const s = !0;
-                return this.LoadSession(e, s, n), 1;
-              }
-              c = { response: t };
-            } catch (e) {
-              c = e;
+        async AskNewQuestion(e, t, s) {
+          if (
+            !u.L7.logged_in ||
+            !u.De.SESSIONID ||
+            !this.m_mapQAndASessions.get(e)?.bUserCanAskQuestions
+          )
+            return 15;
+          const n =
+              u.De.COMMUNITY_BASE_URL +
+              "questions/" +
+              u.JA.VANITY_ID +
+              "/ajaxaskquestion/" +
+              e,
+            a = new FormData();
+          a.append("sessionid", u.De.SESSIONID), a.append("question", t);
+          let o = null;
+          try {
+            const t = await _().post(n, a, {
+              withCredentials: !0,
+              cancelToken: s?.token,
+            });
+            if (200 == t?.status && 1 == t.data?.success) {
+              this.m_rgPendingQuestionGIDs.push(t.data.gidQuestion);
+              const n = !0;
+              return this.LoadSession(e, n, s), 1;
             }
-            const m = (0, p.l)(c);
-            return (
-              console.error(
-                "Could not upload question",
-                e,
-                t,
-                m.strErrorMsg,
-                m,
-              ),
-              null !==
-                (l =
-                  null ===
-                    (r =
-                      null === (i = null == c ? void 0 : c.response) ||
-                      void 0 === i
-                        ? void 0
-                        : i.data) || void 0 === r
-                    ? void 0
-                    : r.success) && void 0 !== l
-                ? l
-                : 2
-            );
-          });
+            o = { response: t };
+          } catch (e) {
+            o = e;
+          }
+          const r = (0, g.l)(o);
+          return (
+            console.error("Could not upload question", e, t, r.strErrorMsg, r),
+            o?.response?.data?.success ?? 2
+          );
         }
-        ModerateQuestion(e, t, n, o) {
-          var a, i, r, l, d;
-          return (0, s.mG)(this, void 0, void 0, function* () {
-            if (
-              !u.L7.logged_in ||
-              !u.De.SESSIONID ||
-              !(null === (a = this.m_mapQAndASessions.get(e)) || void 0 === a
-                ? void 0
-                : a.bUserCanModerate)
-            )
-              return 15;
-            if (1 != n && 3 != n) return 8;
-            if (this.m_mapQuestions.get(t).eState == n) return 1;
-            const s =
-                u.De.COMMUNITY_BASE_URL +
-                "questions/" +
-                u.JA.VANITY_ID +
-                "/ajaxmoderatequestion/" +
-                e,
-              c = new FormData();
-            c.append("sessionid", u.De.SESSIONID),
-              c.append("gidquestion", t),
-              c.append("action", 1 == n ? "show" : "hide");
-            let m = null;
-            try {
-              const t = yield Q().post(s, c, {
-                withCredentials: !0,
-                cancelToken: null == o ? void 0 : o.token,
-              });
-              if (
-                200 == (null == t ? void 0 : t.status) &&
-                1 ==
-                  (null === (i = t.data) || void 0 === i ? void 0 : i.success)
-              ) {
-                const t = !0;
-                return this.LoadSession(e, t, o), 1;
-              }
-              m = { response: t };
-            } catch (e) {
-              m = e;
+        async ModerateQuestion(e, t, s, n) {
+          if (
+            !u.L7.logged_in ||
+            !u.De.SESSIONID ||
+            !this.m_mapQAndASessions.get(e)?.bUserCanModerate
+          )
+            return 15;
+          if (1 != s && 3 != s) return 8;
+          if (this.m_mapQuestions.get(t).eState == s) return 1;
+          const a =
+              u.De.COMMUNITY_BASE_URL +
+              "questions/" +
+              u.JA.VANITY_ID +
+              "/ajaxmoderatequestion/" +
+              e,
+            o = new FormData();
+          o.append("sessionid", u.De.SESSIONID),
+            o.append("gidquestion", t),
+            o.append("action", 1 == s ? "show" : "hide");
+          let r = null;
+          try {
+            const t = await _().post(a, o, {
+              withCredentials: !0,
+              cancelToken: n?.token,
+            });
+            if (200 == t?.status && 1 == t.data?.success) {
+              const t = !0;
+              return this.LoadSession(e, t, n), 1;
             }
-            const A = (0, p.l)(m);
-            return (
-              console.error(
-                "Could not moderate question",
-                e,
-                t,
-                n,
-                A.strErrorMsg,
-                A,
-              ),
-              null !==
-                (d =
-                  null ===
-                    (l =
-                      null === (r = null == m ? void 0 : m.response) ||
-                      void 0 === r
-                        ? void 0
-                        : r.data) || void 0 === l
-                    ? void 0
-                    : l.success) && void 0 !== d
-                ? d
-                : 2
-            );
-          });
+            r = { response: t };
+          } catch (e) {
+            r = e;
+          }
+          const i = (0, g.l)(r);
+          return (
+            console.error(
+              "Could not moderate question",
+              e,
+              t,
+              s,
+              i.strErrorMsg,
+              i,
+            ),
+            r?.response?.data?.success ?? 2
+          );
         }
-        AnswerQuestion(e, t, n, o) {
-          var a, i, r, l, d;
-          return (0, s.mG)(this, void 0, void 0, function* () {
-            if (
-              !u.L7.logged_in ||
-              !u.De.SESSIONID ||
-              !(null === (a = this.m_mapQAndASessions.get(e)) || void 0 === a
-                ? void 0
-                : a.bUserCanAskQuestions)
-            )
-              return 15;
-            const s =
-                u.De.COMMUNITY_BASE_URL +
-                "questions/" +
-                u.JA.VANITY_ID +
-                "/ajaxanswerquestion/" +
-                e,
-              c = new FormData();
-            c.append("sessionid", u.De.SESSIONID),
-              c.append("gidquestion", t),
-              c.append("answer", n);
-            let m = null;
-            try {
-              const t = yield Q().post(s, c, {
-                withCredentials: !0,
-                cancelToken: null == o ? void 0 : o.token,
-              });
-              if (
-                200 == (null == t ? void 0 : t.status) &&
-                1 ==
-                  (null === (i = t.data) || void 0 === i ? void 0 : i.success)
-              ) {
-                const t = !0;
-                return this.LoadSession(e, t, o), 1;
-              }
-              m = { response: t };
-            } catch (e) {
-              m = e;
+        async AnswerQuestion(e, t, s, n) {
+          if (
+            !u.L7.logged_in ||
+            !u.De.SESSIONID ||
+            !this.m_mapQAndASessions.get(e)?.bUserCanAskQuestions
+          )
+            return 15;
+          const a =
+              u.De.COMMUNITY_BASE_URL +
+              "questions/" +
+              u.JA.VANITY_ID +
+              "/ajaxanswerquestion/" +
+              e,
+            o = new FormData();
+          o.append("sessionid", u.De.SESSIONID),
+            o.append("gidquestion", t),
+            o.append("answer", s);
+          let r = null;
+          try {
+            const t = await _().post(a, o, {
+              withCredentials: !0,
+              cancelToken: n?.token,
+            });
+            if (200 == t?.status && 1 == t.data?.success) {
+              const t = !0;
+              return this.LoadSession(e, t, n), 1;
             }
-            const A = (0, p.l)(m);
-            return (
-              console.error(
-                "Could not upload answer",
-                e,
-                t,
-                n,
-                A.strErrorMsg,
-                A,
-              ),
-              null !==
-                (d =
-                  null ===
-                    (l =
-                      null === (r = null == m ? void 0 : m.response) ||
-                      void 0 === r
-                        ? void 0
-                        : r.data) || void 0 === l
-                    ? void 0
-                    : l.success) && void 0 !== d
-                ? d
-                : 2
-            );
-          });
+            r = { response: t };
+          } catch (e) {
+            r = e;
+          }
+          const i = (0, g.l)(r);
+          return (
+            console.error("Could not upload answer", e, t, s, i.strErrorMsg, i),
+            r?.response?.data?.success ?? 2
+          );
         }
-        VoteOnQuestion(e, t, n, o) {
-          var a, i, r, l, d;
-          return (0, s.mG)(this, void 0, void 0, function* () {
-            if (
-              !u.L7.logged_in ||
-              !u.De.SESSIONID ||
-              !(null === (a = this.m_mapQAndASessions.get(e)) || void 0 === a
-                ? void 0
-                : a.bUserCanAskQuestions)
-            )
-              return 15;
-            if (n === this.m_mapQuestions.get(t).bUserUpVoted) return 1;
-            let s = this.m_mapQuestions.get(t);
-            const c = s.nVoteCount,
-              m = c + (n ? 1 : -1);
-            (s = Object.assign(Object.assign({}, s), {
-              nVoteCount: m,
-              bUserUpVoted: n,
-            })),
-              this.m_mapQuestions.set(t, s),
-              this.GetQuestionCallbackList(t).Dispatch(s);
-            const A =
-                u.De.COMMUNITY_BASE_URL +
-                "questions/" +
-                u.JA.VANITY_ID +
-                "/ajaxvoteforquestion/" +
-                e,
-              v = new FormData();
-            v.append("sessionid", u.De.SESSIONID),
-              v.append("gidquestion", t),
-              v.append("up", n ? "1" : "0");
-            let _ = null;
-            try {
-              const e = yield Q().post(A, v, {
-                withCredentials: !0,
-                cancelToken: null == o ? void 0 : o.token,
-              });
-              if (
-                200 == (null == e ? void 0 : e.status) &&
-                1 ==
-                  (null === (i = e.data) || void 0 === i ? void 0 : i.success)
-              )
-                return 1;
-              _ = { response: e };
-            } catch (e) {
-              _ = e;
-            }
-            (s = Object.assign(Object.assign({}, s), {
-              nVoteCount: c,
-              bUserUpVoted: !n,
-            })),
-              this.m_mapQuestions.set(t, s),
-              this.GetQuestionCallbackList(t).Dispatch(s);
-            const g = (0, p.l)(_);
-            return (
-              console.error("Could not upload vote", e, t, n, g.strErrorMsg, g),
-              null !==
-                (d =
-                  null ===
-                    (l =
-                      null === (r = null == _ ? void 0 : _.response) ||
-                      void 0 === r
-                        ? void 0
-                        : r.data) || void 0 === l
-                    ? void 0
-                    : l.success) && void 0 !== d
-                ? d
-                : 2
-            );
-          });
+        async VoteOnQuestion(e, t, s, n) {
+          if (
+            !u.L7.logged_in ||
+            !u.De.SESSIONID ||
+            !this.m_mapQAndASessions.get(e)?.bUserCanAskQuestions
+          )
+            return 15;
+          if (s === this.m_mapQuestions.get(t).bUserUpVoted) return 1;
+          let a = this.m_mapQuestions.get(t);
+          const o = a.nVoteCount,
+            r = o + (s ? 1 : -1);
+          (a = { ...a, nVoteCount: r, bUserUpVoted: s }),
+            this.m_mapQuestions.set(t, a),
+            this.GetQuestionCallbackList(t).Dispatch(a);
+          const i =
+              u.De.COMMUNITY_BASE_URL +
+              "questions/" +
+              u.JA.VANITY_ID +
+              "/ajaxvoteforquestion/" +
+              e,
+            l = new FormData();
+          l.append("sessionid", u.De.SESSIONID),
+            l.append("gidquestion", t),
+            l.append("up", s ? "1" : "0");
+          let c = null;
+          try {
+            const e = await _().post(i, l, {
+              withCredentials: !0,
+              cancelToken: n?.token,
+            });
+            if (200 == e?.status && 1 == e.data?.success) return 1;
+            c = { response: e };
+          } catch (e) {
+            c = e;
+          }
+          (a = { ...a, nVoteCount: o, bUserUpVoted: !s }),
+            this.m_mapQuestions.set(t, a),
+            this.GetQuestionCallbackList(t).Dispatch(a);
+          const d = (0, g.l)(c);
+          return (
+            console.error("Could not upload vote", e, t, s, d.strErrorMsg, d),
+            c?.response?.data?.success ?? 2
+          );
         }
       }
-      function C(e) {
-        const t = (0, _.T)("useQAndASession"),
-          n = o.useCallback(
-            (n) =>
-              (0, s.mG)(this, void 0, void 0, function* () {
-                var s;
-                return (
-                  (null === (s = g.Get().GetSession(e)) || void 0 === s
-                    ? void 0
-                    : s.bUserCanAskQuestions) &&
-                  (yield g.Get().AskNewQuestion(e, n, t))
-                );
-              }),
+      function S(e) {
+        const t = (0, p.T)("useQAndASession"),
+          s = n.useCallback(
+            async (s) =>
+              C.Get().GetSession(e)?.bUserCanAskQuestions &&
+              (await C.Get().AskNewQuestion(e, s, t)),
             [e, t],
           ),
-          a = o.useCallback(
-            (n, s) => {
-              var o;
-              return (
-                (null === (o = g.Get().GetSession(e)) || void 0 === o
-                  ? void 0
-                  : o.bUserCanAskQuestions) &&
-                g.Get().VoteOnQuestion(e, n, s, t)
-              );
-            },
+          a = n.useCallback(
+            (s, n) =>
+              C.Get().GetSession(e)?.bUserCanAskQuestions &&
+              C.Get().VoteOnQuestion(e, s, n, t),
             [e, t],
           ),
-          i = o.useCallback(
+          o = n.useCallback(
             (e) => {
-              var t;
-              const s = !!e,
-                o = null == e ? void 0 : e.strName,
-                i = null == e ? void 0 : e.bUserCanModerate,
-                r = null == e ? void 0 : e.bUserCanAskQuestions,
+              const t = !!e,
+                n = e?.strName,
+                o = e?.bUserCanModerate,
+                r = e?.bUserCanAskQuestions,
+                i = [],
                 l = [],
-                d = [],
-                u = [],
-                c = [];
-              for (const n of null !==
-                (t = null == e ? void 0 : e.rgQuestionGIDs) && void 0 !== t
-                ? t
-                : []) {
-                const e = g.Get().GetQuestion(n);
-                switch (null == e ? void 0 : e.eState) {
+                c = [],
+                u = [];
+              for (const t of e?.rgQuestionGIDs ?? []) {
+                const e = C.Get().GetQuestion(t);
+                switch (e?.eState) {
                   case 1:
-                    l.push(n);
+                    i.push(t);
                     break;
                   case 2:
-                    d.push(n);
+                    l.push(t);
                     break;
                   case 0:
-                    u.push(n);
+                    c.push(t);
                     break;
                   case 3:
-                    c.push(n);
+                    u.push(t);
                 }
               }
               return (
+                i.sort(
+                  (e, t) =>
+                    C.Get().GetQuestion(t).nVoteCount -
+                    C.Get().GetQuestion(e).nVoteCount,
+                ),
                 l.sort(
                   (e, t) =>
-                    g.Get().GetQuestion(t).nVoteCount -
-                    g.Get().GetQuestion(e).nVoteCount,
-                ),
-                d.sort(
-                  (e, t) =>
-                    g.Get().GetQuestion(t).rtAnswerTime -
-                    g.Get().GetQuestion(e).rtAnswerTime,
-                ),
-                u.sort(
-                  (e, t) =>
-                    g.Get().GetQuestion(t).rtPostTime -
-                    g.Get().GetQuestion(e).rtPostTime,
+                    C.Get().GetQuestion(t).rtAnswerTime -
+                    C.Get().GetQuestion(e).rtAnswerTime,
                 ),
                 c.sort(
                   (e, t) =>
-                    g.Get().GetQuestion(t).rtPostTime -
-                    g.Get().GetQuestion(e).rtPostTime,
+                    C.Get().GetQuestion(t).rtPostTime -
+                    C.Get().GetQuestion(e).rtPostTime,
+                ),
+                u.sort(
+                  (e, t) =>
+                    C.Get().GetQuestion(t).rtPostTime -
+                    C.Get().GetQuestion(e).rtPostTime,
                 ),
                 {
-                  bIsLoaded: s,
-                  strName: o,
-                  bUserCanModerate: i,
+                  bIsLoaded: t,
+                  strName: n,
+                  bUserCanModerate: o,
                   bUserCanAskQuestions: r,
-                  fnAskQuestion: n,
+                  fnAskQuestion: s,
                   fnVoteOnQuestion: a,
-                  rgModeratedQuestionGIDs: l,
-                  rgAnsweredQuestionGIDs: d,
-                  rgNewQuestionGIDs: u,
-                  rgHiddenQuestionGIDs: c,
+                  rgModeratedQuestionGIDs: i,
+                  rgAnsweredQuestionGIDs: l,
+                  rgNewQuestionGIDs: c,
+                  rgHiddenQuestionGIDs: u,
                 }
               );
             },
-            [n, a],
+            [s, a],
           ),
-          [r, l] = o.useState(() => i(g.Get().GetSession(e))),
-          u = o.useCallback((e) => l(i(e)), [i]);
+          [r, i] = n.useState(() => o(C.Get().GetSession(e))),
+          l = n.useCallback((e) => i(o(e)), [o]);
         return (
-          (0, d.Qg)(g.Get().GetQAndACallbackList(e), u),
-          o.useEffect(() => {
-            r.bIsLoaded || g.Get().LoadSession(e);
+          (0, c.Qg)(C.Get().GetQAndACallbackList(e), l),
+          n.useEffect(() => {
+            r.bIsLoaded || C.Get().LoadSession(e);
           }, [r.bIsLoaded, e]),
           r
         );
       }
-      let h = null;
-      function S(e) {
-        const t = (0, _.T)("useReloadFunction"),
-          [n, s] = o.useState(!1),
-          a = o.useCallback(() => {
-            s(!0);
-            const n = g.Get().LoadSession(e, !1, t);
-            return n.then(() => s(!1)), n;
+      let E = null;
+      function h(e) {
+        const t = (0, p.T)("useReloadFunction"),
+          [s, a] = n.useState(!1),
+          o = n.useCallback(() => {
+            a(!0);
+            const s = C.Get().LoadSession(e, !1, t);
+            return s.then(() => a(!1)), s;
           }, [e, t]),
-          i = (function (e) {
-            const t = o.useRef(null),
-              n = o.useCallback(() => {
+          r = (function (e) {
+            const t = n.useRef(null),
+              s = n.useCallback(() => {
                 t.current && (t.current(), (t.current = null));
               }, []);
             return (
-              (0, d.Qg)(m.Get().GetCallbackList(), n),
-              o.useEffect(() => () => {
+              (0, c.Qg)(m.Get().GetCallbackList(), s),
+              n.useEffect(() => () => {
                 t.current = null;
               }),
-              o.useCallback(
-                (...n) => {
+              n.useCallback(
+                (...s) => {
                   m.Get().BIsUserFidgeting()
-                    ? (t.current = () => e(...n))
-                    : ((t.current = null), e(...n));
+                    ? (t.current = () => e(...s))
+                    : ((t.current = null), e(...s));
                 },
                 [e],
               )
             );
-          })(a);
+          })(o);
         return (
-          o.useEffect(() => {
-            if (h) return () => {};
+          n.useEffect(() => {
+            if (E) return () => {};
             return (
-              (h = window.setInterval(i, 1e4)), () => window.clearInterval(h)
+              (E = window.setInterval(r, 1e4)), () => window.clearInterval(E)
             );
-          }, [i]),
-          o.useMemo(() => ({ fnReload: a, bIsReloading: n }), [a, n])
+          }, [r]),
+          n.useMemo(() => ({ fnReload: o, bIsReloading: s }), [o, s])
         );
       }
-      function E(e) {
-        const t = (0, _.T)("useQuestionModeratorActions"),
-          n = o.useCallback(
-            (n, s) => {
-              var o;
-              return (
-                (null === (o = g.Get().GetSession(e)) || void 0 === o
-                  ? void 0
-                  : o.bUserCanModerate) && g.Get().AnswerQuestion(e, n, s, t)
-              );
-            },
+      function N(e) {
+        const t = (0, p.T)("useQuestionModeratorActions"),
+          s = n.useCallback(
+            (s, n) =>
+              C.Get().GetSession(e)?.bUserCanModerate &&
+              C.Get().AnswerQuestion(e, s, n, t),
             [e, t],
           ),
-          s = o.useCallback(
-            (n, s) => {
-              var o;
-              return (
-                (null === (o = g.Get().GetSession(e)) || void 0 === o
-                  ? void 0
-                  : o.bUserCanModerate) && g.Get().ModerateQuestion(e, n, s, t)
-              );
-            },
+          a = n.useCallback(
+            (s, n) =>
+              C.Get().GetSession(e)?.bUserCanModerate &&
+              C.Get().ModerateQuestion(e, s, n, t),
             [e, t],
           );
-        return o.useMemo(
-          () => ({ fnAnswerQuestion: n, fnModerateQuestion: s }),
-          [n, s],
+        return n.useMemo(
+          () => ({ fnAnswerQuestion: s, fnModerateQuestion: a }),
+          [s, a],
         );
       }
-      var N = n(1485),
-        b = n(80212),
-        D = n(24827),
-        I = n(50898),
-        f = n(90069),
-        w = n(62613),
-        k = n(46882),
-        G = n(59728),
-        T = n(56164),
-        L = n(13129),
-        M = n(31846),
-        x = n(45284),
-        U = n(46984),
-        B = n(85007),
-        q = n.n(B),
-        V = n(51915);
+      var D = s(1485),
+        b = s(80212),
+        I = s(24827),
+        w = s(50898),
+        f = s(90069),
+        k = s(62613),
+        v = s(46882),
+        G = s(59728),
+        T = s(56164),
+        L = s(13129),
+        M = s(31846),
+        x = s(45284),
+        U = s(46984),
+        B = s(85007),
+        q = s.n(B),
+        V = s(51915);
       function P(e) {
         const t = (function () {
-          const [e, t] = o.useState(g.Get().GetAllSessions());
+          const [e, t] = n.useState(C.Get().GetAllSessions());
           return (
-            (0, d.Qg)(g.Get().GetDashboardCallbackList(), t),
-            o.useEffect(() => {
-              0 == e.length && g.Get().LoadAllSessions();
+            (0, c.Qg)(C.Get().GetDashboardCallbackList(), t),
+            n.useEffect(() => {
+              0 == e.length && C.Get().LoadAllSessions();
             }, [e.length]),
             e
           );
         })();
-        return o.createElement(
+        return n.createElement(
           "div",
           { className: q().QADashboardCtn },
-          o.createElement(y, null),
-          o.createElement(
+          n.createElement(y, null),
+          n.createElement(
             "div",
             {
               className: (0, L.Z)(q().DashboardRow, q().DashboardColumnHeaders),
             },
-            o.createElement(
+            n.createElement(
               "div",
               { className: q().QAndAName },
               (0, M.Xx)("#QAndA_Column_Name"),
             ),
-            o.createElement(
+            n.createElement(
               "div",
               { className: q().GIDSession },
               (0, M.Xx)("#QAndA_Column_GID"),
             ),
-            o.createElement(
+            n.createElement(
               "div",
               { className: q().QuestionCount },
               (0, M.Xx)("#QAndA_Column_QuestionCount"),
             ),
-            o.createElement(
+            n.createElement(
               "div",
               { className: q().QAndADeleteColumn },
               (0, M.Xx)("#QAndA_Column_DeleteButtons"),
             ),
           ),
-          t.map((e) => o.createElement(R, { key: e.gidSession, qanda: e })),
+          t.map((e) => n.createElement(X, { key: e.gidSession, qanda: e })),
         );
       }
       function y(e) {
-        const t = o.useCallback(
+        const t = n.useCallback(
           () =>
-            (0, f.x1)(o.createElement(O, null), window, {
+            (0, f.x1)(n.createElement(R, null), window, {
               strTitle: (0, M.Xx)("#QAndA_CreateQAndA_Title"),
             }),
           [],
         );
-        return o.createElement(
+        return n.createElement(
           "div",
           { className: q().DashboardHeader },
-          o.createElement(
+          n.createElement(
             "div",
             { className: q().DashboardHeaderTitle },
             (0, M.Xx)("#QAndA_Dashboard"),
           ),
-          o.createElement(
+          n.createElement(
             "div",
             { className: q().DashboardHeaderButtonCtn },
-            o.createElement(
-              N.zx,
+            n.createElement(
+              D.zx,
               { onClick: t },
               (0, M.Xx)("#QAndA_CreateQAndA_Button"),
             ),
@@ -1042,148 +790,148 @@
         );
       }
       const H = 120;
-      function O(e) {
+      function R(e) {
         const t = (function () {
-            const e = (0, _.T)("useCreateQAndAFn");
-            return o.useCallback((t) => g.Get().CreateNewSession(t, e), [e]);
+            const e = (0, p.T)("useCreateQAndAFn");
+            return n.useCallback((t) => C.Get().CreateNewSession(t, e), [e]);
           })(),
-          [n, s] = o.useState("");
-        return o.createElement(
-          I.uH,
+          [s, a] = n.useState("");
+        return n.createElement(
+          w.uH,
           {
             strTitle: (0, M.Xx)("#QAndA_CreateQAndA_Title"),
             strDescription: (0, M.Xx)("#QAndA_CreateQAndA_Instructions"),
             strOKButtonText: (0, M.Xx)("#Button_Create"),
-            onOK: () => t(n),
-            bOKDisabled: 0 == n.length,
+            onOK: () => t(s),
+            bOKDisabled: 0 == s.length,
             closeModal: e.closeModal,
             className: q().CreateQAndADialog,
           },
-          o.createElement(N.II, {
+          n.createElement(D.II, {
             type: "text",
             className: q().NameInput,
-            value: n,
+            value: s,
             placeholder: (0, M.Xx)("#QAndA_EnterNamePrompt"),
             onFocus: (e) => e.target.select(),
-            onChange: (e) => s(e.currentTarget.value),
+            onChange: (e) => a(e.currentTarget.value),
             maxLength: H,
           }),
         );
       }
-      function R(e) {
+      function X(e) {
         const { qanda: t } = e,
-          n =
+          s =
             u.De.COMMUNITY_BASE_URL +
             "questions/" +
             u.JA.VANITY_ID +
             "/view/" +
             t.gidSession,
-          s = o.useCallback(
+          a = n.useCallback(
             (e) => {
               e.stopPropagation(),
                 e.preventDefault(),
-                (0, f.x1)(o.createElement(F, { qanda: t }), window, {
+                (0, f.x1)(n.createElement(F, { qanda: t }), window, {
                   strTitle: (0, M.Xx)("#QAndA_CreateQAndA_Title"),
                 });
             },
             [t],
           );
-        return o.createElement(
+        return n.createElement(
           "a",
-          { className: q().DashboardRow, href: n },
-          o.createElement(X, { qanda: t }),
-          o.createElement("div", { className: q().GIDSession }, t.gidSession),
-          o.createElement(
+          { className: q().DashboardRow, href: s },
+          n.createElement(O, { qanda: t }),
+          n.createElement("div", { className: q().GIDSession }, t.gidSession),
+          n.createElement(
             "div",
             { className: q().QuestionCount },
             t.rgQuestionGIDs.length,
           ),
-          o.createElement(
+          n.createElement(
             "div",
             { className: q().QAndADeleteColumn },
-            o.createElement(
+            n.createElement(
               "div",
-              { className: q().DeleteButton, onClick: s },
-              o.createElement(w.rFk, null),
+              { className: q().DeleteButton, onClick: a },
+              n.createElement(k.rFk, null),
             ),
           ),
         );
       }
-      function X(e) {
+      function O(e) {
         const { qanda: t } = e,
-          [n, s] = o.useState(!1),
-          [a, i] = o.useState(t.strName),
-          r = (function () {
-            const e = (0, _.T)("useRenameQAndAFn");
-            return o.useCallback((t, n) => g.Get().RenameSession(t, n, e), [e]);
+          [s, a] = n.useState(!1),
+          [o, r] = n.useState(t.strName),
+          i = (function () {
+            const e = (0, p.T)("useRenameQAndAFn");
+            return n.useCallback((t, s) => C.Get().RenameSession(t, s, e), [e]);
           })(),
           l =
             t.strName.length > 0
               ? t.strName
-              : o.createElement(
+              : n.createElement(
                   "span",
                   { className: q().Prompt },
                   (0, M.Xx)("#QAndA_EnterNamePrompt"),
                 ),
-          d = o.createElement(
+          c = n.createElement(
             "div",
             { className: q().NameInput },
-            o.createElement(N.II, {
+            n.createElement(D.II, {
               type: "text",
               className: q().NameInput,
-              value: a,
+              value: o,
               placeholder: (0, M.Xx)("#QAndA_EnterNamePrompt"),
               onFocus: (e) => e.target.select(),
-              onChange: (e) => i(e.currentTarget.value),
+              onChange: (e) => r(e.currentTarget.value),
               maxLength: H,
             }),
-            o.createElement(
-              N.KM,
+            n.createElement(
+              D.KM,
               {
                 onClick: (e) => {
                   e.stopPropagation(),
                     e.preventDefault(),
-                    0 != (0, x.eT)(a, t.strName)
-                      ? r(t.gidSession, a).then(() => s(!1))
-                      : s(!1);
+                    0 != (0, x.eT)(o, t.strName)
+                      ? i(t.gidSession, o).then(() => a(!1))
+                      : a(!1);
                 },
                 className: q().InputButton,
               },
               (0, M.Xx)("#Button_Save"),
             ),
           );
-        return o.createElement(
+        return n.createElement(
           "div",
           {
-            className: (0, L.Z)(q().QAndAName, n && q().Editing),
+            className: (0, L.Z)(q().QAndAName, s && q().Editing),
             onClick: (e) => {
-              e.stopPropagation(), e.preventDefault(), n || s(!0);
+              e.stopPropagation(), e.preventDefault(), s || a(!0);
             },
           },
-          n ? d : l,
+          s ? c : l,
         );
       }
       function F(e) {
         const { qanda: t } = e,
-          n = (function () {
-            const e = (0, _.T)("useDeleteQAndAFn");
-            return o.useCallback((t) => g.Get().DeleteSession(t, e), [e]);
+          s = (function () {
+            const e = (0, p.T)("useDeleteQAndAFn");
+            return n.useCallback((t) => C.Get().DeleteSession(t, e), [e]);
           })();
-        return o.createElement(
-          I.uH,
+        return n.createElement(
+          w.uH,
           {
             strTitle: (0, M.Xx)("#QAndA_Column_DeleteButtons"),
             strDescription: (0, M.Xx)("#QAndA_DeleteQAndA_Instructions"),
-            onOK: () => n(t.gidSession),
+            onOK: () => s(t.gidSession),
             closeModal: e.closeModal,
             className: q().DeleteQAndADialog,
           },
-          o.createElement(
+          n.createElement(
             "div",
             { className: q().DeleteInfo },
             (0, M.Xx)("#QAndA_Column_Name") + ": " + t.strName,
           ),
-          o.createElement(
+          n.createElement(
             "div",
             { className: q().DeleteInfo },
             (0, M.Xx)("#QAndA_Column_QuestionCount") +
@@ -1195,66 +943,66 @@
       function z(e) {
         const {
             gidSession: t,
-            gidQuestion: n,
-            bUserCanModerate: s,
-            bUserCanVote: a,
-            fnVoteOnQuestion: i,
-            rtNow: r,
+            gidQuestion: s,
+            bUserCanModerate: a,
+            bUserCanVote: o,
+            fnVoteOnQuestion: r,
+            rtNow: i,
           } = e,
           [l, u] = (function (e) {
-            const [t, n] = o.useState(g.Get().GetQuestion(e));
-            (0, d.Qg)(g.Get().GetQuestionCallbackList(e), n);
-            const [s, a] = o.useState(!!t);
-            return [t, !!t || s];
-          })(n);
+            const [t, s] = n.useState(C.Get().GetQuestion(e));
+            (0, c.Qg)(C.Get().GetQuestionCallbackList(e), s);
+            const [a, o] = n.useState(!!t);
+            return [t, !!t || a];
+          })(s);
         if (!l) return null;
-        const c = r - l.rtPostTime,
-          m = c < U._H.PerDay ? (0, M.yW)(c) : (0, M.m9)(l.rtPostTime),
-          A = a ? () => i(n, !l.bUserUpVoted) : null,
-          v = a
+        const d = i - l.rtPostTime,
+          m = d < U._H.PerDay ? (0, M.yW)(d) : (0, M.m9)(l.rtPostTime),
+          A = o ? () => r(s, !l.bUserUpVoted) : null,
+          Q = o
             ? l.bUserUpVoted
               ? q().Vote_Positive
               : q().Vote_Ready
             : q().Vote_CannotVote,
-          Q = (0, L.Z)(
+          _ = (0, L.Z)(
             q().Question,
             3 == l.eState && q().Hidden,
             1 == l.eState && q().Moderated,
             0 == l.eState && q().Unmoderated,
             2 == l.eState && q().Answered,
           );
-        return o.createElement(
+        return n.createElement(
           "div",
-          { className: Q },
-          o.createElement(
+          { className: _ },
+          n.createElement(
             "div",
             { className: (0, L.Z)(q().QuestionCtn, "questionCtn") },
-            o.createElement(Y, { accountID: l.posterAccountID }),
-            o.createElement(
+            n.createElement(Z, { accountID: l.posterAccountID }),
+            n.createElement(
               "div",
               { className: q().QuestionText },
-              o.createElement(
+              n.createElement(
                 "div",
                 { className: q().QuestionAndVotes },
-                o.createElement(
+                n.createElement(
                   "div",
                   { className: q().QuestionTitle },
                   l.strQuestionText,
                 ),
-                o.createElement(
+                n.createElement(
                   G.HP,
                   {
                     toolTipContent:
-                      a &&
+                      o &&
                       (l.bUserUpVoted
                         ? (0, M.Xx)("#QAndA_VoteRemoveTooltip")
                         : (0, M.Xx)("#QAndA_VoteTooltip")),
                   },
-                  o.createElement(
+                  n.createElement(
                     "div",
-                    { className: (0, L.Z)(v, q().Votes), onClick: A },
-                    o.createElement(w.KJh, { className: q().RateIcon }),
-                    o.createElement(
+                    { className: (0, L.Z)(Q, q().Votes), onClick: A },
+                    n.createElement(k.KJh, { className: q().RateIcon }),
+                    n.createElement(
                       "div",
                       { className: q().VoteCount },
                       Number(l.nVoteCount).toLocaleString(),
@@ -1262,14 +1010,14 @@
                   ),
                 ),
               ),
-              o.createElement(
+              n.createElement(
                 "div",
                 { className: q().QuestionStats },
-                o.createElement(
+                n.createElement(
                   "div",
                   { className: q().PostTime },
-                  o.createElement(
-                    D.Zg,
+                  n.createElement(
+                    I.Zg,
                     {
                       rtFullDate: l.rtPostTime,
                       className: q().PostTime,
@@ -1281,145 +1029,141 @@
               ),
             ),
           ),
-          l.rtAnswerTime && o.createElement(j, { question: l, rtNow: r }),
-          s &&
-            o.createElement(Z, {
+          l.rtAnswerTime && n.createElement(Y, { question: l, rtNow: i }),
+          a &&
+            n.createElement(J, {
               gidSession: t,
-              gidQuestion: n,
-              eState: null == l ? void 0 : l.eState,
+              gidQuestion: s,
+              eState: l?.eState,
             }),
         );
       }
-      function j(e) {
-        const { question: t, rtNow: n } = e,
-          s = t.rtAnswerTime && n - t.rtAnswerTime,
-          a =
+      function Y(e) {
+        const { question: t, rtNow: s } = e,
+          a = t.rtAnswerTime && s - t.rtAnswerTime,
+          o =
             t.rtAnswerTime &&
-            (s < U._H.PerDay ? (0, M.yW)(s) : (0, M.m9)(t.rtAnswerTime));
+            (a < U._H.PerDay ? (0, M.yW)(a) : (0, M.m9)(t.rtAnswerTime));
         return t.strAnswerText
-          ? o.createElement(
+          ? n.createElement(
               "div",
               { className: q().Answer },
-              o.createElement(
+              n.createElement(
                 "div",
                 { className: q().AnswerTitle },
-                o.createElement(
+                n.createElement(
                   "div",
                   { className: q().AnswerCheck },
-                  o.createElement(w.mKE, { color: "#67c1f5" }),
+                  n.createElement(k.mKE, { color: "#67c1f5" }),
                 ),
                 (0, M.Xx)("#QAndA_ModeratorAnswerTitle"),
               ),
-              o.createElement(
+              n.createElement(
                 "div",
                 { className: q().AnswerText },
                 " ",
                 t.strAnswerText,
                 " ",
               ),
-              o.createElement(
+              n.createElement(
                 "div",
                 { className: q().QuestionStats },
-                o.createElement(
-                  D.Zg,
+                n.createElement(
+                  I.Zg,
                   {
                     rtFullDate: t.rtAnswerTime,
                     className: q().PostTime,
                     stylesmodule: q(),
                   },
-                  a,
+                  o,
                 ),
               ),
             )
-          : o.createElement(
+          : n.createElement(
               "div",
               { className: q().AnswerTitle },
-              o.createElement(
+              n.createElement(
                 "div",
                 { className: q().AnswerCheck },
-                o.createElement(w.mKE, { color: "#67c1f5" }),
+                n.createElement(k.mKE, { color: "#67c1f5" }),
               ),
               (0, M.Xx)("#QAndA_AlreadyAnsweredTitle"),
             );
       }
-      function Y(e) {
-        var t;
-        const n = a.K.InitFromAccountID(e.accountID).ConvertTo64BitString(),
-          { isLoading: s, data: i } = (0, V.IE)(e.accountID);
+      function Z(e) {
+        const t = a.K.InitFromAccountID(e.accountID).ConvertTo64BitString(),
+          { isLoading: s, data: o } = (0, V.IE)(e.accountID);
         return s
           ? null
-          : o.createElement(
+          : n.createElement(
               "a",
               {
-                href: i.GetCommunityProfileURL(),
+                href: o.GetCommunityProfileURL(),
                 className: q().PersonaName,
-                "data-miniprofile": "s" + n,
+                "data-miniprofile": "s" + t,
               },
-              null !== (t = null == i ? void 0 : i.m_strPlayerName) &&
-                void 0 !== t
-                ? t
-                : n,
+              o?.m_strPlayerName ?? t,
             );
       }
-      function Z(e) {
-        const { gidSession: t, gidQuestion: n, eState: s } = e,
-          { fnAnswerQuestion: a, fnModerateQuestion: i } = E(t),
-          r = 0 == s || 3 == s,
-          l = 3 != s,
-          d = 1 == s;
-        return o.createElement(
+      function J(e) {
+        const { gidSession: t, gidQuestion: s, eState: a } = e,
+          { fnAnswerQuestion: o, fnModerateQuestion: r } = N(t),
+          i = 0 == a || 3 == a,
+          l = 3 != a,
+          c = 1 == a;
+        return n.createElement(
           "div",
           { className: q().ModeratorSection },
           (0, M.Xx)("#QAndA_ModeratorLabel"),
-          o.createElement(
+          n.createElement(
             "div",
             { className: q().ToolRow },
-            o.createElement(ee, {
+            n.createElement(ee, {
               strPrompt: (0, M.Xx)("#QAndA_AnswerPrompt"),
-              fnSubmit: (e) => a(n, e),
+              fnSubmit: (e) => o(s, e),
             }),
           ),
-          o.createElement(
+          n.createElement(
             "div",
             { className: q().ToolRow },
             (0, M.Xx)("#QAndA_ModeratorOtherOptionsLabel"),
-            o.createElement(
+            n.createElement(
               G.HP,
               {
                 toolTipContent: (0, M.Xx)("#QAndA_ModerateApproveButton_ttip"),
               },
-              o.createElement(
-                N.zx,
+              n.createElement(
+                D.zx,
                 {
-                  onClick: () => i(n, 1),
+                  onClick: () => r(s, 1),
                   className: q().InputButton,
-                  disabled: !r,
+                  disabled: !i,
                 },
                 (0, M.Xx)("#QAndA_ModerateApproveButton"),
               ),
             ),
-            o.createElement(
+            n.createElement(
               G.HP,
               { toolTipContent: (0, M.Xx)("#QAndA_ModerateHideButton_ttip") },
-              o.createElement(
-                N.zx,
+              n.createElement(
+                D.zx,
                 {
-                  onClick: () => i(n, 3),
+                  onClick: () => r(s, 3),
                   className: q().InputButton,
                   disabled: !l,
                 },
                 (0, M.Xx)("#QAndA_ModerateHideButton"),
               ),
             ),
-            o.createElement(
+            n.createElement(
               G.HP,
               { toolTipContent: (0, M.Xx)("#QAndA_QuickAnswerButton_ttip") },
-              o.createElement(
-                N.zx,
+              n.createElement(
+                D.zx,
                 {
-                  onClick: () => a(n, ""),
+                  onClick: () => o(s, ""),
                   className: q().InputButton,
-                  disabled: !d,
+                  disabled: !c,
                 },
                 (0, M.Xx)("#QAndA_QuickAnswerButton"),
               ),
@@ -1427,80 +1171,79 @@
           ),
         );
       }
-      function J(e) {
+      function K(e) {
         const { gidSession: t } = e;
         A();
-        const { strName: n, bUserCanModerate: s } = C(t);
-        return o.createElement(
+        const { strName: s, bUserCanModerate: a } = S(t);
+        return n.createElement(
           "div",
           { className: q().QAFullPageView },
-          o.createElement(
+          n.createElement(
             "div",
             { className: q().QAName },
-            (0, M.Xx)("#QAndA_Header") +
-              ((null == n ? void 0 : n.length) > 0 ? ": " + n : ""),
+            (0, M.Xx)("#QAndA_Header") + (s?.length > 0 ? ": " + s : ""),
           ),
-          o.createElement(
+          n.createElement(
             "div",
             { className: q().QAColumns },
-            o.createElement(W, { gidSession: t, bHalfOfFullPage: s }),
-            s && o.createElement(K, { gidSession: t }),
+            n.createElement(W, { gidSession: t, bHalfOfFullPage: a }),
+            a && n.createElement(j, { gidSession: t }),
           ),
         );
       }
-      function K(e) {
+      function j(e) {
         const { gidSession: t } = e,
           {
-            bUserCanModerate: n,
-            rgNewQuestionGIDs: s,
-            rgHiddenQuestionGIDs: a,
-          } = C(t),
-          r = (0, i.F_)(10);
-        return n
-          ? o.createElement(
+            bUserCanModerate: s,
+            rgNewQuestionGIDs: a,
+            rgHiddenQuestionGIDs: r,
+          } = S(t),
+          i = (0, o.F_)(10);
+        return s
+          ? n.createElement(
               "div",
               {
                 className: (0, L.Z)(q().QAModeratorColumn, q().QASplitColumns),
               },
-              o.createElement(
+              n.createElement(
                 T.ug,
                 {
                   title: (0, M.Xx)("#QAndA_ModeratorViewHeader"),
                   className: q().ModeratorInstructions,
                 },
-                o.createElement(
+                n.createElement(
                   "div",
                   { className: q().QuestionList },
-                  s.map((e) =>
-                    o.createElement(z, {
+                  a.map((e) =>
+                    n.createElement(z, {
                       key: e,
                       gidSession: t,
                       gidQuestion: e,
-                      bUserCanModerate: n,
+                      bUserCanModerate: s,
                       bUserCanVote: !1,
-                      rtNow: r,
+                      rtNow: i,
                     }),
                   ),
                 ),
               ),
-              o.createElement(
+              n.createElement(
                 T.ug,
                 {
                   title: (0, M.Xx)("#QAndA_HiddenQuestionsHeader"),
                   className: q().AnsweredSectionHeader,
                   bStartMinimized: !0,
                 },
-                o.createElement(
+                n.createElement(
                   "div",
                   { className: q().QuestionList },
-                  a.map((e) =>
-                    o.createElement(z, {
+                  r.map((e) =>
+                    n.createElement(z, {
                       key: e,
                       gidSession: t,
                       gidQuestion: e,
-                      bUserCanModerate: n,
+                      bUserCanModerate: s,
                       bUserCanVote: !1,
-                      rtNow: r,
+                      rtNow: i,
                     }),
                   ),
                 ),
@@ -1509,30 +1252,30 @@
           : null;
       }
       function W(e) {
-        const { gidSession: t, bHalfOfFullPage: n } = e;
+        const { gidSession: t, bHalfOfFullPage: s } = e;
         A();
         const {
             bIsLoaded: a,
             bUserCanAskQuestions: r,
-            bUserCanModerate: l,
-            fnAskQuestion: d,
-            fnVoteOnQuestion: u,
-            rgModeratedQuestionGIDs: c,
-            rgAnsweredQuestionGIDs: m,
-            rgNewQuestionGIDs: v,
-          } = C(t),
-          { fnReload: Q, bIsReloading: _ } = S(t),
-          p = (0, i.F_)(10),
-          g = l && n,
-          { fnModerateQuestion: h } = E(t);
-        return o.createElement(
+            bUserCanModerate: i,
+            fnAskQuestion: l,
+            fnVoteOnQuestion: c,
+            rgModeratedQuestionGIDs: u,
+            rgAnsweredQuestionGIDs: d,
+            rgNewQuestionGIDs: m,
+          } = S(t),
+          { fnReload: Q, bIsReloading: _ } = h(t),
+          p = (0, o.F_)(10),
+          g = i && s,
+          { fnModerateQuestion: C } = N(t);
+        return n.createElement(
           "div",
-          { className: (0, L.Z)(q().QAMainCtn, n && q().QASplitColumns) },
-          o.createElement(
+          { className: (0, L.Z)(q().QAMainCtn, s && q().QASplitColumns) },
+          n.createElement(
             "div",
             { className: (0, L.Z)(q().QAHeader, g && q().ModerationHeader) },
-            o.createElement(
-              N.zx,
+            n.createElement(
+              D.zx,
               {
                 onClick: Q,
                 disabled: !a,
@@ -1542,32 +1285,31 @@
                   _ && q().Reloading,
                 ),
               },
-              o.createElement(
+              n.createElement(
                 "div",
                 { className: q().ReloadIcon },
-                o.createElement(w.Lao, null),
+                n.createElement(k.Lao, null),
               ),
             ),
             g
-              ? o.createElement(
-                  o.Fragment,
+              ? n.createElement(
+                  n.Fragment,
                   null,
                   (0, M.Xx)("#QAndA_ModeratorLabelHeader"),
-                  o.createElement(
+                  n.createElement(
                     G.HP,
                     {
                       toolTipContent: (0, M.Xx)(
                         "#QAndA_ModerateHideAllButton_ttip",
                       ),
                     },
-                    o.createElement(
-                      N.zx,
+                    n.createElement(
+                      D.zx,
                       {
-                        onClick: () =>
-                          (0, s.mG)(this, void 0, void 0, function* () {
-                            for (const e of [v, c, m])
-                              for (const t of e) yield h(t, 3);
-                          }),
+                        onClick: async () => {
+                          for (const e of [m, u, d])
+                            for (const t of e) await C(t, 3);
+                        },
                         className: q().InputButton,
                       },
                       (0, M.Xx)("#QAndA_ModerateHideAllButton"),
@@ -1575,60 +1317,60 @@
                   ),
                 )
               : r
-                ? o.createElement($, { fnAskQuestion: d })
-                : a && o.createElement(te, null),
+                ? n.createElement($, { fnAskQuestion: l })
+                : a && n.createElement(te, null),
           ),
-          c.length + m.length == 0
-            ? o.createElement(
+          u.length + d.length == 0
+            ? n.createElement(
                 "div",
                 { className: q().NoQuestions },
                 (0, M.Xx)("#QAndA_NoQuestionsYet"),
               )
-            : o.createElement(
+            : n.createElement(
                 "div",
                 { className: q().QuestionsCtn },
-                o.createElement(
+                n.createElement(
                   "div",
                   { className: q().InsetShadowTopCtn },
-                  o.createElement("div", { className: q().InsetShadowTop }),
+                  n.createElement("div", { className: q().InsetShadowTop }),
                 ),
-                o.createElement(
+                n.createElement(
                   "div",
                   { className: q().QuestionList },
                   a
-                    ? c.map((e) =>
-                        o.createElement(z, {
+                    ? u.map((e) =>
+                        n.createElement(z, {
                           key: e,
                           gidSession: t,
                           gidQuestion: e,
                           bUserCanModerate: g,
                           bUserCanVote: r,
-                          fnVoteOnQuestion: u,
+                          fnVoteOnQuestion: c,
                           rtNow: p,
                         }),
                       )
-                    : o.createElement(k.V, { position: "center" }),
+                    : n.createElement(v.V, { position: "center" }),
                 ),
-                m.length > 0 &&
-                  o.createElement(
-                    o.Fragment,
+                d.length > 0 &&
+                  n.createElement(
+                    n.Fragment,
                     null,
-                    o.createElement(
+                    n.createElement(
                       "div",
                       { className: q().AnsweredSectionHeader },
                       (0, M.Xx)("#QAndA_AnsweredQuestionsHeader"),
                     ),
-                    o.createElement(
+                    n.createElement(
                       "div",
                       { className: q().QuestionList },
-                      m.map((e) =>
-                        o.createElement(z, {
+                      d.map((e) =>
+                        n.createElement(z, {
                           key: e,
                           gidSession: t,
                           gidQuestion: e,
                           bUserCanModerate: g,
                           bUserCanVote: r,
-                          fnVoteOnQuestion: u,
+                          fnVoteOnQuestion: c,
                           rtNow: p,
                         }),
                       ),
@@ -1638,33 +1380,32 @@
         );
       }
       function $(e) {
-        const [t, n] = o.useState(!1),
-          a = (0, _.T)("QuestionBox");
-        return o.createElement(
-          o.Fragment,
+        const [t, s] = n.useState(!1),
+          a = (0, p.T)("QuestionBox");
+        return n.createElement(
+          n.Fragment,
           null,
-          o.createElement(
+          n.createElement(
             "div",
             { className: q().Description },
             (0, M.Xx)("#QAndA_HeaderDescription"),
           ),
-          o.createElement(ee, {
+          n.createElement(ee, {
             strPrompt: (0, M.Xx)("#QAndA_QuestionPrompt"),
-            fnSubmit: (t) =>
-              (0, s.mG)(this, void 0, void 0, function* () {
-                const s = yield e.fnAskQuestion(t);
-                return (
-                  1 != s ||
-                    a.token.reason ||
-                    (n(!0),
-                    window.setTimeout(() => {
-                      a.token.reason || n(!1);
-                    }, 1e3)),
-                  s
-                );
-              }),
+            fnSubmit: async (t) => {
+              const n = await e.fnAskQuestion(t);
+              return (
+                1 != n ||
+                  a.token.reason ||
+                  (s(!0),
+                  window.setTimeout(() => {
+                    a.token.reason || s(!1);
+                  }, 1e3)),
+                n
+              );
+            },
           }),
-          o.createElement(
+          n.createElement(
             "div",
             { className: (0, L.Z)(q().QuestionACK, t && q().Visible) },
             (0, M.Xx)("#QAndA_QuestionWasPosted"),
@@ -1672,39 +1413,38 @@
         );
       }
       function ee(e) {
-        const { strPrompt: t, fnSubmit: n } = e,
-          [a, i] = o.useState(""),
-          [r, l] = o.useState(!1);
-        return o.createElement(
-          o.Fragment,
+        const { strPrompt: t, fnSubmit: s } = e,
+          [a, o] = n.useState(""),
+          [r, i] = n.useState(!1);
+        return n.createElement(
+          n.Fragment,
           null,
-          o.createElement(
+          n.createElement(
             "div",
             { className: q().InputCtn },
-            o.createElement(N.II, {
+            n.createElement(D.II, {
               type: "text",
               placeholder: t,
               maxLength: 512,
               value: a,
-              onChange: (e) => i(e.target.value),
+              onChange: (e) => o(e.target.value),
             }),
-            o.createElement(
+            n.createElement(
               "div",
               { className: q().ButtonCtn },
               r &&
-                o.createElement(
+                n.createElement(
                   "div",
                   { className: q().SaveSpinner },
-                  o.createElement(k.V, { size: "small", position: "center" }),
+                  n.createElement(v.V, { size: "small", position: "center" }),
                 ),
-              o.createElement(
-                N.zx,
+              n.createElement(
+                D.zx,
                 {
-                  onClick: () =>
-                    (0, s.mG)(this, void 0, void 0, function* () {
-                      l(!0);
-                      1 == (yield n(a)) && i(""), l(!1);
-                    }),
+                  onClick: async () => {
+                    i(!0);
+                    1 == (await s(a)) && o(""), i(!1);
+                  },
                   disabled: r || !a,
                   className: q().InputButton,
                 },
@@ -1715,17 +1455,17 @@
         );
       }
       function te(e) {
-        return o.createElement(
+        return n.createElement(
           "div",
           { className: q().Description },
-          o.createElement(
+          n.createElement(
             "div",
             { className: q().LogInPrompt },
             (0, M.Xx)("#QAndA_LogInPrompt"),
           ),
           !u.L7.logged_in &&
-            o.createElement(
-              N.zx,
+            n.createElement(
+              D.zx,
               {
                 onClick: b.Xt,
                 className: (0, L.Z)(q().SignInButton, q().InputButton),

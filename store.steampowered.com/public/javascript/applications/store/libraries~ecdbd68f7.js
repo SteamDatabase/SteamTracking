@@ -5,7 +5,7 @@
   [5024],
   {
     67005: (e, r, t) => {
-      t.d(r, { du: () => u, gi: () => y, iR: () => l });
+      t.d(r, { du: () => c, gi: () => f, iR: () => l });
       var i = t(10059),
         n = t(39087),
         a = t(79545),
@@ -18,6 +18,8 @@
             l.prototype.language || n.aR(l.M()),
             o.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             l.sm_m ||
@@ -76,18 +78,20 @@
           return "CSteamEngine_UpdateTextFilterDictionary_Notification";
         }
       }
-      class u extends o {
+      class c extends o {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            u.prototype.language || n.aR(u.M()),
+            c.prototype.language || n.aR(c.M()),
             o.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
-            u.sm_m ||
-              (u.sm_m = {
-                proto: u,
+            c.sm_m ||
+              (c.sm_m = {
+                proto: c,
                 fields: {
                   language: {
                     n: 1,
@@ -98,64 +102,6 @@
                   type: {
                     n: 2,
                     q: !0,
-                    br: n.FE.readString,
-                    bw: n.Xc.writeString,
-                  },
-                },
-              }),
-            u.sm_m
-          );
-        }
-        static MBF() {
-          return u.sm_mbf || (u.sm_mbf = n.Bh(u.M())), u.sm_mbf;
-        }
-        toObject(e = !1) {
-          return u.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return n.TA(u.M(), e, r);
-        }
-        static fromObject(e) {
-          return n.aD(u.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new i.BinaryReader(e),
-            t = new u();
-          return u.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return n.F(u.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return u.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          n.l2(u.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return u.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSteamEngine_GetTextFilterDictionary_Request";
-        }
-      }
-      class c extends o {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            c.prototype.dictionary || n.aR(c.M()),
-            o.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            c.sm_m ||
-              (c.sm_m = {
-                proto: c,
-                fields: {
-                  dictionary: {
-                    n: 1,
                     br: n.FE.readString,
                     bw: n.Xc.writeString,
                   },
@@ -196,6 +142,66 @@
           return c.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CSteamEngine_GetTextFilterDictionary_Request";
+        }
+      }
+      class u extends o {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            u.prototype.dictionary || n.aR(u.M()),
+            o.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            u.sm_m ||
+              (u.sm_m = {
+                proto: u,
+                fields: {
+                  dictionary: {
+                    n: 1,
+                    br: n.FE.readString,
+                    bw: n.Xc.writeString,
+                  },
+                },
+              }),
+            u.sm_m
+          );
+        }
+        static MBF() {
+          return u.sm_mbf || (u.sm_mbf = n.Bh(u.M())), u.sm_mbf;
+        }
+        toObject(e = !1) {
+          return u.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return n.TA(u.M(), e, r);
+        }
+        static fromObject(e) {
+          return n.aD(u.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new u();
+          return u.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return n.F(u.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return u.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          n.l2(u.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return u.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CSteamEngine_GetTextFilterDictionary_Response";
         }
       }
@@ -206,6 +212,8 @@
             m.prototype.language || n.aR(m.M()),
             o.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             m.sm_m ||
@@ -271,6 +279,8 @@
             d.prototype.pid || n.aR(d.M()),
             o.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             d.sm_m ||
@@ -325,6 +335,8 @@
             g.prototype.gameid || n.aR(g.M()),
             o.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             g.sm_m ||
@@ -376,7 +388,7 @@
           return "CSteamEngine_GetGameIDForPID_Response";
         }
       }
-      var y;
+      var f;
       !(function (e) {
         (e.UpdateTextFilterDictionaryHandler = {
           name: "SteamEngine.UpdateTextFilterDictionary#1",
@@ -419,8 +431,8 @@
           }),
           (e.GetTextFilterDictionaryHandler = {
             name: "SteamEngine.GetTextFilterDictionary#1",
-            request: u,
-            response: c,
+            request: c,
+            response: u,
           }),
           (e.GetTextFilterDictionary = function (e, r) {
             return null == (r = r || (0, s.SM)().GetDefaultTransport())
@@ -432,8 +444,8 @@
                 })
               : r.SendMsg(
                   "SteamEngine.GetTextFilterDictionary#1",
-                  (0, a.MD)(u, e),
-                  c,
+                  (0, a.MD)(c, e),
+                  u,
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
@@ -447,8 +459,8 @@
                 })
               : r.SendMsg(
                   "SteamEngine.GetTextFilterDictionary#1",
-                  (0, a.MD)(u, e),
-                  c,
+                  (0, a.MD)(c, e),
+                  u,
                   { ePrivilege: 1, eClientExecutionSite: 2 },
                 );
           }),
@@ -522,7 +534,7 @@
                   eClientExecutionSite: 2,
                 });
           });
-      })(y || (y = {}));
+      })(f || (f = {}));
     },
   },
 ]);

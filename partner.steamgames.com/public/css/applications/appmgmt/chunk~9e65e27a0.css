@@ -257,6 +257,36 @@
   font-size: 14px;
   line-height: 20px;
 }
+._2SV_emIfYqd0FE4cPJTbfF .I3P4egf0HS1dH4Qr3vAoV {
+  color: #0e141b;
+}
+._2SV_emIfYqd0FE4cPJTbfF ._39K5gSyYSvElXia1c4nZ0v {
+  color: #fff;
+}
+._2e0FqbLmhlb64J5-4lLSSS .I3P4egf0HS1dH4Qr3vAoV {
+  color: #fff;
+}
+._2e0FqbLmhlb64J5-4lLSSS ._39K5gSyYSvElXia1c4nZ0v {
+  color: #0e141b;
+}
+._2Q-494zOM44tLzSjdRMtdS {
+  color: #fff;
+}
+._3sifyV5fpgllCyioV_lnwf {
+  width: auto;
+  height: 16px;
+}
+._3-w0RfsV9P9mAjMsKeXGkY {
+  width: auto;
+  height: 22px;
+}
+._3jE5H2qSvKRcJXGS8CwctO {
+  width: auto;
+  height: 36px;
+}
+._2sFpIRxSZYFPum-eB7PsGE._3sifyV5fpgllCyioV_lnwf {
+  margin-right: 20px;
+}
 .ekp1EXwYO9Twun35dC3NQ {
   flex-grow: 1;
   flex-basis: 0;
@@ -479,36 +509,6 @@ div._1MvXz1iI0KQnsVVZnYxeN7 {
 }
 .Dh7u9Cf15BsXWnbAAp0Aa {
   font-size: 13px;
-}
-._2SV_emIfYqd0FE4cPJTbfF .I3P4egf0HS1dH4Qr3vAoV {
-  color: #0e141b;
-}
-._2SV_emIfYqd0FE4cPJTbfF ._39K5gSyYSvElXia1c4nZ0v {
-  color: #fff;
-}
-._2e0FqbLmhlb64J5-4lLSSS .I3P4egf0HS1dH4Qr3vAoV {
-  color: #fff;
-}
-._2e0FqbLmhlb64J5-4lLSSS ._39K5gSyYSvElXia1c4nZ0v {
-  color: #0e141b;
-}
-._2Q-494zOM44tLzSjdRMtdS {
-  color: #fff;
-}
-._3sifyV5fpgllCyioV_lnwf {
-  width: auto;
-  height: 16px;
-}
-._3-w0RfsV9P9mAjMsKeXGkY {
-  width: auto;
-  height: 22px;
-}
-._3jE5H2qSvKRcJXGS8CwctO {
-  width: auto;
-  height: 36px;
-}
-._2sFpIRxSZYFPum-eB7PsGE._3sifyV5fpgllCyioV_lnwf {
-  margin-right: 20px;
 }
 .UlvFkP8Oew4a6VTHCvLNH {
   display: flex;
@@ -3978,11 +3978,10 @@ html.responsive.touch .ContentHubSalePage {
   }
 }
 ._2NfLqUpH_h0Ba0jlv9M9ZE {
-  padding: 16px;
+  padding: 16px 16px 36px 16px;
   max-width: 940px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
   box-sizing: border-box;
   position: relative;
   z-index: 2;
@@ -4112,12 +4111,16 @@ html.responsive.touch .ContentHubSalePage {
 .carousel ._1q54WG8IS0osM0NiCQ5-qi {
   height: 100%;
 }
+._2DvtlNOC4JyhMu779biqym {
+  min-width: 258px;
+}
 ._3m73yQ_SBicQQme171Kca2 {
   min-width: 258px;
 }
 .ItemCount_4 ._3m73yQ_SBicQQme171Kca2 {
   min-width: unset !important;
 }
+.items_in_row_5 ._3m73yQ_SBicQQme171Kca2,
 .ItemCount_5 ._3m73yQ_SBicQQme171Kca2 {
   min-width: unset !important;
 }
@@ -4650,6 +4653,9 @@ html.tablet
   color: #000;
   background-color: #fff;
   border-radius: 0px;
+}
+._1vWb-PPJIdCrShIUNfM2eH {
+  position: relative;
 }
 .vIfbIJKPB31RMs_uxkngz {
   background-color: hotpink;

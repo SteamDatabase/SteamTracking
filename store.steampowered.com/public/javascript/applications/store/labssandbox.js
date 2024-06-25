@@ -121,8 +121,8 @@
             include_trailers: S,
             include_ratings: E,
             include_tag_count: C,
-            include_reviews: v,
-            include_basic_info: y,
+            include_reviews: y,
+            include_basic_info: v,
             include_supported_languages: b,
             include_full_description: L,
             include_included_items: I,
@@ -140,8 +140,8 @@
               include_trailers: S,
               include_ratings: E,
               include_tag_count: C,
-              include_reviews: v,
-              include_basic_info: y,
+              include_reviews: y,
+              include_basic_info: v,
               include_supported_languages: b,
               include_full_description: L,
               include_included_items: I,
@@ -158,15 +158,11 @@
                 l.Z.Get()
                   .QueueStoreItemRequest(e, t, a)
                   .then((t) => {
-                    (null == r ? void 0 : r.token.reason) ||
-                      o.current !== e ||
-                      d(1 == t),
-                      c();
+                    r?.token.reason || o.current !== e || d(1 == t), c();
                   })),
-              () =>
-                null == r ? void 0 : r.cancel("useStoreItemCache: unmounting")
+              () => r?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, s, m, h, u, _, g, f, S, E, C, v, y, b, L, I, N, A, c]),
+          }, [e, t, s, m, h, u, _, g, f, S, E, C, y, v, b, L, I, N, A, c]),
           !e)
         )
           return [null, 2];
@@ -191,19 +187,16 @@
           [c, m] = p(i, a);
         return (
           (0, r.useEffect)(() => {
-            var e;
             if (
-              1 == (null == s ? void 0 : s.GetStoreItemType()) &&
-              !(null === (e = s.GetAssets()) || void 0 === e
-                ? void 0
-                : e.GetHeaderURL()) &&
-              1 == (null == s ? void 0 : s.GetIncludedAppIDs().length)
+              1 == s?.GetStoreItemType() &&
+              !s.GetAssets()?.GetHeaderURL() &&
+              1 == s?.GetIncludedAppIDs().length
             ) {
               const e = s.GetIncludedAppIDs()[0];
               l(e);
             }
           }, [s]),
-          i && (null == c ? void 0 : c.BIsVisible()) ? [c, m] : [s, n]
+          i && c?.BIsVisible() ? [c, m] : [s, n]
         );
       }
       function h(e, t, a, s) {
@@ -221,8 +214,8 @@
             include_basic_info: S,
             include_supported_languages: E,
             include_full_description: C,
-            include_included_items: v,
-            include_assets_without_overrides: y,
+            include_included_items: y,
+            include_assets_without_overrides: v,
             apply_user_filters: b,
           } = a;
         if (
@@ -241,8 +234,8 @@
                 include_basic_info: S,
                 include_supported_languages: E,
                 include_full_description: C,
-                include_included_items: v,
-                include_assets_without_overrides: y,
+                include_included_items: y,
+                include_assets_without_overrides: v,
                 apply_user_filters: b,
               },
               s = e.filter(
@@ -261,7 +254,7 @@
               }),
               () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, s, o, p, c, m, d, h, u, _, g, f, S, E, C, v, y, b]),
+          }, [e, t, s, o, p, c, m, d, h, u, _, g, f, S, E, C, y, v, b]),
           !e)
         )
           return 2;
@@ -308,8 +301,9 @@
         c = a(80751),
         m = a.n(c);
       class d {
+        rgModelNames = [];
         constructor() {
-          (this.rgModelNames = []), (0, o.rC)(this);
+          (0, o.rC)(this);
         }
         Init() {
           r.Q8.Init(new i.J(l.De.WEBAPI_BASE_URL, l.L7.webapi_token));
@@ -324,76 +318,71 @@
               }
             });
         }
-        ComputePathBetweenApps(e, t, a, s, r, i, l) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            const o = Math.acos(a);
-            let p = new u(
-                (e) =>
-                  (0, n.mG)(this, void 0, void 0, function* () {
-                    let t = yield this.GetNeighbors(e),
-                      a = [];
-                    for (let e = 0; e < t.length; e++) {
-                      const n = t[e];
-                      if (
-                        (!s || a.length > s) &&
-                        (n.cost > o || (r && a.length >= r))
-                      )
-                        break;
-                      a.push(n);
-                    }
-                    return a;
-                  }),
-                this.EstimateCosts,
-                (e, t) => e == t,
-                l,
-              ),
-              c = yield p.FindPath(e, t, i || 10);
-            if (c.path) {
-              let e = [],
-                t = 0;
-              for (let a = 0; a < c.path.length; a++) {
-                const s = c.path[a],
-                  n = s.cost - t;
-                (t = s.cost),
-                  e.push({ appid: s.node, similarity: Math.cos(n) });
-              }
-              return e;
+        async ComputePathBetweenApps(e, t, a, s, n, r, i) {
+          const l = Math.acos(a);
+          let o = new u(
+              async (e) => {
+                let t = await this.GetNeighbors(e),
+                  a = [];
+                for (let e = 0; e < t.length; e++) {
+                  const r = t[e];
+                  if (
+                    (!s || a.length > s) &&
+                    (r.cost > l || (n && a.length >= n))
+                  )
+                    break;
+                  a.push(r);
+                }
+                return a;
+              },
+              this.EstimateCosts,
+              (e, t) => e == t,
+              i,
+            ),
+            p = await o.FindPath(e, t, r || 10);
+          if (p.path) {
+            let e = [],
+              t = 0;
+            for (let a = 0; a < p.path.length; a++) {
+              const s = p.path[a],
+                n = s.cost - t;
+              (t = s.cost), e.push({ appid: s.node, similarity: Math.cos(n) });
             }
-            throw new Error("Unable to compute path.");
-          });
+            return e;
+          }
+          throw new Error("Unable to compute path.");
         }
-        GetNeighbors(e) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            const t = `${l.De.STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${e}`;
-            let a = yield m().get(t),
-              s = [];
-            if (a.data && a.data.appid == e)
-              for (let e = 0; e < a.data.similar_appids.length; e++)
-                s.push({
-                  node: a.data.similar_appids[e],
-                  cost: Math.acos(a.data.similarity_scores[e]),
-                });
-            return s;
-          });
+        async GetNeighbors(e) {
+          const t = `${l.De.STORE_BASE_URL}labs/ajaxgetsimilarapps?appid=${e}`;
+          let a = await m().get(t),
+            s = [];
+          if (a.data && a.data.appid == e)
+            for (let e = 0; e < a.data.similar_appids.length; e++)
+              s.push({
+                node: a.data.similar_appids[e],
+                cost: Math.acos(a.data.similarity_scores[e]),
+              });
+          return s;
         }
-        EstimateCosts(e, t) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            const a = `${l.De.STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${t}&${e.map((e) => "appid[]=" + e.toString()).join("&")}`;
-            let s = yield m().get(a);
-            if (s.data && s.data.similarity_scores)
-              return s.data.similarity_scores.map((e) =>
-                Math.acos(parseFloat(e)),
-              );
-            throw new Error("Unable to fetch cost estimates");
-          });
+        async EstimateCosts(e, t) {
+          const a = `${l.De.STORE_BASE_URL}labs/ajaxgetappsimilarities?appidtarget=${t}&${e.map((e) => "appid[]=" + e.toString()).join("&")}`;
+          let s = await m().get(a);
+          if (s.data && s.data.similarity_scores)
+            return s.data.similarity_scores.map((e) =>
+              Math.acos(parseFloat(e)),
+            );
+          throw new Error("Unable to fetch cost estimates");
         }
       }
       (0, n.gn)([o.LO], d.prototype, "rgModelNames", void 0),
         (0, n.gn)([p.ak], d.prototype, "GetNeighbors", null),
         (0, n.gn)([p.ak], d.prototype, "EstimateCosts", null);
       class h {
+        m_fnCompare;
+        m_Heap = [];
+        m_Length = 0;
         constructor(e) {
-          (this.m_Heap = []), (this.m_Length = 0), (this.m_fnCompare = e);
+          this.m_fnCompare = e;
         }
         get length() {
           return this.m_Length;
@@ -464,75 +453,77 @@
         }
       }
       class u {
+        m_fnGetNeighbors;
+        m_fnEstimateCosts;
+        m_fnEquality;
+        m_fnIterationCallback;
         constructor(e, t, a, s) {
           (this.m_fnGetNeighbors = e),
             (this.m_fnEstimateCosts = t),
             (this.m_fnEquality = a),
             (this.m_fnIterationCallback = s);
         }
-        FindPath(e, t, a) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            let s = new h((e, t) => e.cost - t.cost),
-              n = new Set();
-            s.Push({ node: e, cost: 0 });
-            let r = new Map(),
-              i = new Map(),
-              l = new Map(),
-              o = (yield this.m_fnEstimateCosts([e], t))[0];
-            r.set(e, o), i.set(e, 0);
-            let p = 0;
-            for (; s.length > 0 && p < a; ) {
-              let e = s.Pop();
-              if (this.m_fnEquality(e.node, t)) {
-                let t = [],
-                  a = e.node;
-                for (; l.has(a); ) t.push(a), (a = l.get(a));
-                let s = [];
-                for (let e = t.length - 1; e >= 0; e--)
-                  s.push({ node: t[e], cost: i.get(t[e]) });
-                return { path: s };
-              }
-              n.add(e.node);
-              let a = yield this.m_fnGetNeighbors(e.node);
-              if (a.length > 0) {
-                let o = yield this.m_fnEstimateCosts(
-                  a.map((e) => e.node),
-                  t,
+        async FindPath(e, t, a) {
+          let s = new h((e, t) => e.cost - t.cost),
+            n = new Set();
+          s.Push({ node: e, cost: 0 });
+          let r = new Map(),
+            i = new Map(),
+            l = new Map(),
+            o = (await this.m_fnEstimateCosts([e], t))[0];
+          r.set(e, o), i.set(e, 0);
+          let p = 0;
+          for (; s.length > 0 && p < a; ) {
+            let e = s.Pop();
+            if (this.m_fnEquality(e.node, t)) {
+              let t = [],
+                a = e.node;
+              for (; l.has(a); ) t.push(a), (a = l.get(a));
+              let s = [];
+              for (let e = t.length - 1; e >= 0; e--)
+                s.push({ node: t[e], cost: i.get(t[e]) });
+              return { path: s };
+            }
+            n.add(e.node);
+            let a = await this.m_fnGetNeighbors(e.node);
+            if (a.length > 0) {
+              let o = await this.m_fnEstimateCosts(
+                a.map((e) => e.node),
+                t,
+              );
+              if (o.length != a.length)
+                return (
+                  console.warn(
+                    "Failed to fetch expected number of cost estimates. Failing pathfinding.",
+                  ),
+                  {}
                 );
-                if (o.length != a.length)
-                  return (
-                    console.warn(
-                      "Failed to fetch expected number of cost estimates. Failing pathfinding.",
-                    ),
-                    {}
-                  );
-                let p = i.get(e.node);
-                for (let t = 0; t < a.length; t++) {
-                  const c = a[t];
-                  let m = p + c.cost;
-                  if (
-                    (!i.has(c.node) || m < i.get(c.node)) &&
-                    (l.set(c.node, e.node),
-                    i.set(c.node, m),
-                    r.set(c.node, c.cost + o[t]),
-                    !n.has(c.node))
-                  ) {
-                    const e = c.cost + o[t];
-                    let a = s.FindElement((e) => e.node == c.node);
-                    a
-                      ? a.element.cost > e &&
-                        s.LowerPriorityOfElement(a.index, {
-                          node: c.node,
-                          cost: e,
-                        })
-                      : s.Push({ node: c.node, cost: e });
-                  }
+              let p = i.get(e.node);
+              for (let t = 0; t < a.length; t++) {
+                const c = a[t];
+                let m = p + c.cost;
+                if (
+                  (!i.has(c.node) || m < i.get(c.node)) &&
+                  (l.set(c.node, e.node),
+                  i.set(c.node, m),
+                  r.set(c.node, c.cost + o[t]),
+                  !n.has(c.node))
+                ) {
+                  const e = c.cost + o[t];
+                  let a = s.FindElement((e) => e.node == c.node);
+                  a
+                    ? a.element.cost > e &&
+                      s.LowerPriorityOfElement(a.index, {
+                        node: c.node,
+                        cost: e,
+                      })
+                    : s.Push({ node: c.node, cost: e });
                 }
               }
-              p++, this.m_fnIterationCallback && this.m_fnIterationCallback();
             }
-            throw new Error("No path found.");
-          });
+            p++, this.m_fnIterationCallback && this.m_fnIterationCallback();
+          }
+          throw new Error("No path found.");
         }
       }
       const _ = new d();
@@ -542,20 +533,20 @@
         S = a(8285),
         E = a(6240),
         C = a(1485),
-        v = a(38071),
-        y = a(27605),
+        y = a(38071),
+        v = a(27605),
         b = a(13129);
       class L extends g.Component {
+        state = {
+          appid: 0,
+          appinfo: null,
+          mode: "display",
+          strSearch: "",
+          rgSuggestions: [],
+        };
+        m_currentRequest = 0;
         constructor(e) {
           super(e),
-            (this.state = {
-              appid: 0,
-              appinfo: null,
-              mode: "display",
-              strSearch: "",
-              rgSuggestions: [],
-            }),
-            (this.m_currentRequest = 0),
             this.props.appidInitial &&
               (r.Q8.EnsureAppInfoForAppIDs([this.props.appidInitial]).then(
                 () => {
@@ -571,66 +562,50 @@
         OnDisplayClicked() {
           this.setState({ mode: "select" });
         }
-        UpdateAppSuggestions(e) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            const t = e.target.value && e.target.value.trim();
-            (null == t ? void 0 : t.length)
-              ? (window.clearTimeout(this.m_currentRequest),
-                (this.m_currentRequest = window.setTimeout(
-                  () =>
-                    (0, n.mG)(this, void 0, void 0, function* () {
-                      var e;
-                      const a = {
-                          cc: l.De.COUNTRY,
-                          l: l.De.LANGUAGE,
-                          realm: v.IN.k_ESteamRealmGlobal,
-                          origin: self.origin,
-                          f: "jsonfull",
-                          term: t.replace(" ", "+"),
-                          require_type: "game",
-                          excluded_tags: [],
-                          excluded_content_descriptors: [],
+        async UpdateAppSuggestions(e) {
+          const t = e.target.value && e.target.value.trim();
+          t?.length
+            ? (window.clearTimeout(this.m_currentRequest),
+              (this.m_currentRequest = window.setTimeout(async () => {
+                const e = {
+                    cc: l.De.COUNTRY,
+                    l: l.De.LANGUAGE,
+                    realm: y.IN.k_ESteamRealmGlobal,
+                    origin: self.origin,
+                    f: "jsonfull",
+                    term: t.replace(" ", "+"),
+                    require_type: "game",
+                    excluded_tags: [],
+                    excluded_content_descriptors: [],
+                  },
+                  a = `${l.De.STORE_BASE_URL}search/suggest`,
+                  s = await m().get(a, { params: e, withCredentials: !0 });
+                let n;
+                (n = s?.data?.length
+                  ? s.data.map((e) =>
+                      g.createElement(
+                        "div",
+                        {
+                          className: E.Suggestion,
+                          key: `suggestion-${e.id}`,
+                          onClickCapture: () =>
+                            this.SetSelectedApp(parseInt(e.id)),
                         },
-                        s = `${l.De.STORE_BASE_URL}search/suggest`,
-                        n = yield m().get(s, {
-                          params: a,
-                          withCredentials: !0,
-                        });
-                      let r;
-                      (r = (
-                        null === (e = null == n ? void 0 : n.data) ||
-                        void 0 === e
-                          ? void 0
-                          : e.length
-                      )
-                        ? n.data.map((e) =>
-                            g.createElement(
-                              "div",
-                              {
-                                className: E.Suggestion,
-                                key: `suggestion-${e.id}`,
-                                onClickCapture: () =>
-                                  this.SetSelectedApp(parseInt(e.id)),
-                              },
-                              g.createElement("img", {
-                                src: e.img,
-                                className: E.LogoImage,
-                              }),
-                              g.createElement(
-                                "div",
-                                { className: E.AppName },
-                                e.name +
-                                  (this.props.showAppIds ? ` (${e.id})` : ""),
-                              ),
-                            ),
-                          )
-                        : []),
-                        this.setState({ strSearch: t, rgSuggestions: r });
-                    }),
-                  250,
-                )))
-              : this.setState({ strSearch: "", rgSuggestions: null });
-          });
+                        g.createElement("img", {
+                          src: e.img,
+                          className: E.LogoImage,
+                        }),
+                        g.createElement(
+                          "div",
+                          { className: E.AppName },
+                          e.name + (this.props.showAppIds ? ` (${e.id})` : ""),
+                        ),
+                      ),
+                    )
+                  : []),
+                  this.setState({ strSearch: t, rgSuggestions: n });
+              }, 250)))
+            : this.setState({ strSearch: "", rgSuggestions: null });
         }
         SetSelectedApp(e) {
           e && 0 != e
@@ -649,13 +624,9 @@
           27 == e.keyCode && this.setState({ mode: "display" });
         }
         render() {
-          var e, t;
-          const a =
-            null !== (e = this.props.classOverride) && void 0 !== e
-              ? e
-              : E.AppSelector;
-          let s = null;
-          const n = g.createElement(C.II, {
+          const e = this.props.classOverride ?? E.AppSelector;
+          let t = null;
+          const a = g.createElement(C.II, {
             type: "text",
             onChange: this.UpdateAppSuggestions,
           });
@@ -663,10 +634,8 @@
             const e = this.state.appinfo
               ? this.state.appinfo.name +
                 (this.props.showAppIds ? ` (${this.state.appid})` : "")
-              : null !== (t = this.props.strPrompt) && void 0 !== t
-                ? t
-                : "Select game";
-            s = g.createElement(
+              : this.props.strPrompt ?? "Select game";
+            t = g.createElement(
               "div",
               { className: E.AppDisplay },
               this.state.appinfo &&
@@ -678,10 +647,10 @@
             );
           } else if ("select" == this.state.mode) {
             const e = this.state.strSearch.length > 0;
-            s = g.createElement(
+            t = g.createElement(
               "div",
               { className: E.AppSelect },
-              n,
+              a,
               e &&
                 g.createElement(
                   "div",
@@ -693,11 +662,11 @@
           return g.createElement(
             "div",
             {
-              className: a,
+              className: e,
               onClick: this.OnDisplayClicked,
               onKeyUpCapture: this.OnKeyUp,
             },
-            s,
+            t,
           );
         }
       }
@@ -745,12 +714,9 @@
         }
       }
       class N extends g.Component {
-        constructor() {
-          super(...arguments),
-            (this.state = {}),
-            (this.ref_app_a = g.createRef()),
-            (this.ref_app_b = g.createRef());
-        }
+        state = {};
+        ref_app_a = g.createRef();
+        ref_app_b = g.createRef();
         componentDidMount() {
           this.OnAppSelected();
         }
@@ -802,13 +768,13 @@
       }
       (0, n.gn)([p.ak], N.prototype, "OnAppSelected", null);
       let A = class extends g.Component {
+        selected_app = 0;
+        similar_apps = [];
+        similarity_scores = [];
+        similarity_model = "default";
+        app_selector_ref = g.createRef();
         constructor(e) {
           super(e),
-            (this.selected_app = 0),
-            (this.similar_apps = []),
-            (this.similarity_scores = []),
-            (this.similarity_model = "default"),
-            (this.app_selector_ref = g.createRef()),
             (0, o.rC)(this),
             e.default_app && this.SetSelectedApp(e.default_app);
         }
@@ -897,12 +863,12 @@
         (0, n.gn)([p.ak], A.prototype, "OnSelectedApp", null),
         (0, n.gn)([p.ak], A.prototype, "SetSelectedApp", null),
         (0, n.gn)([p.ak], A.prototype, "OnModelChanged", null),
-        (A = (0, n.gn)([y.Pi], A));
+        (A = (0, n.gn)([v.Pi], A));
       let O = class extends g.Component {
+        selected_app = void 0;
+        selected_operator = void 0;
         constructor(e) {
           super(e),
-            (this.selected_app = void 0),
-            (this.selected_operator = void 0),
             (0, o.rC)(this),
             (this.selected_app = e.app),
             (this.selected_operator = e.operator);
@@ -948,16 +914,15 @@
         (0, n.gn)([o.LO], O.prototype, "selected_operator", void 0),
         (0, n.gn)([p.ak], O.prototype, "OnSelectedApp", null),
         (0, n.gn)([p.ak], O.prototype, "OnSelectedOperator", null),
-        (O = (0, n.gn)([y.Pi], O));
-      let P = class extends g.Component {
+        (O = (0, n.gn)([v.Pi], O));
+      let w = class extends g.Component {
+        operands = [];
+        similarity_model = "default";
+        similar_apps = [];
+        similarity_scores = [];
+        operand_refs;
         constructor(e) {
-          super(e),
-            (this.operands = []),
-            (this.similarity_model = "default"),
-            (this.similar_apps = []),
-            (this.similarity_scores = []),
-            (0, o.rC)(this),
-            (this.operand_refs = []);
+          super(e), (0, o.rC)(this), (this.operand_refs = []);
           for (let t = 0; t < e.max_operands; t++)
             this.operand_refs.push(g.createRef());
         }
@@ -1078,24 +1043,23 @@
           );
         }
       };
-      (0, n.gn)([o.LO], P.prototype, "operands", void 0),
-        (0, n.gn)([o.LO], P.prototype, "similarity_model", void 0),
-        (0, n.gn)([o.LO], P.prototype, "similar_apps", void 0),
-        (0, n.gn)([o.LO], P.prototype, "similarity_scores", void 0),
-        (0, n.gn)([p.ak], P.prototype, "OnModelChanged", null),
-        (0, n.gn)([p.ak], P.prototype, "OnAddOperand", null),
-        (0, n.gn)([p.ak], P.prototype, "OnOperandChanged", null),
-        (P = (0, n.gn)([y.Pi], P));
-      let w = class extends g.Component {
+      (0, n.gn)([o.LO], w.prototype, "operands", void 0),
+        (0, n.gn)([o.LO], w.prototype, "similarity_model", void 0),
+        (0, n.gn)([o.LO], w.prototype, "similar_apps", void 0),
+        (0, n.gn)([o.LO], w.prototype, "similarity_scores", void 0),
+        (0, n.gn)([p.ak], w.prototype, "OnModelChanged", null),
+        (0, n.gn)([p.ak], w.prototype, "OnAddOperand", null),
+        (0, n.gn)([p.ak], w.prototype, "OnOperandChanged", null),
+        (w = (0, n.gn)([v.Pi], w));
+      let P = class extends g.Component {
         constructor(e) {
-          super(e),
-            (this.app_start = 0),
-            (this.app_end = 0),
-            (this.in_progress = !1),
-            (this.progress_iteration = 0),
-            (this.found_path = void 0),
-            (0, o.rC)(this);
+          super(e), (0, o.rC)(this);
         }
+        app_start = 0;
+        app_end = 0;
+        in_progress = !1;
+        progress_iteration = 0;
+        found_path = void 0;
         IterationCallback() {
           this.progress_iteration++;
         }
@@ -1212,29 +1176,30 @@
           g.createElement(N, null),
           g.createElement("div", { className: E.Spacer }),
           g.createElement("h1", null, "Mixer"),
-          g.createElement(P, { max_similar: 10, max_operands: 6 }),
+          g.createElement(w, { max_similar: 10, max_operands: 6 }),
           g.createElement("div", { className: E.Spacer }),
           g.createElement("h1", null, "Pathfinder"),
-          g.createElement(w, null),
+          g.createElement(P, null),
         );
       }
-      (0, n.gn)([o.LO], w.prototype, "app_start", void 0),
-        (0, n.gn)([o.LO], w.prototype, "app_end", void 0),
-        (0, n.gn)([o.LO], w.prototype, "in_progress", void 0),
-        (0, n.gn)([o.LO], w.prototype, "progress_iteration", void 0),
-        (0, n.gn)([o.LO], w.prototype, "found_path", void 0),
-        (0, n.gn)([p.ak], w.prototype, "IterationCallback", null),
-        (0, n.gn)([p.ak], w.prototype, "Pathfind", null),
-        (0, n.gn)([p.ak], w.prototype, "OnSelectedStartApp", null),
-        (0, n.gn)([p.ak], w.prototype, "OnSelectedEndApp", null),
-        (w = (0, n.gn)([y.Pi], w));
+      (0, n.gn)([o.LO], P.prototype, "app_start", void 0),
+        (0, n.gn)([o.LO], P.prototype, "app_end", void 0),
+        (0, n.gn)([o.LO], P.prototype, "in_progress", void 0),
+        (0, n.gn)([o.LO], P.prototype, "progress_iteration", void 0),
+        (0, n.gn)([o.LO], P.prototype, "found_path", void 0),
+        (0, n.gn)([p.ak], P.prototype, "IterationCallback", null),
+        (0, n.gn)([p.ak], P.prototype, "Pathfind", null),
+        (0, n.gn)([p.ak], P.prototype, "OnSelectedStartApp", null),
+        (0, n.gn)([p.ak], P.prototype, "OnSelectedEndApp", null),
+        (P = (0, n.gn)([v.Pi], P));
       var R = a(35427),
-        G = a(45492),
-        x = a(79545),
+        x = a(45492),
+        G = a(79545),
         F = a(37038),
         M = a(80998),
         U = a(15690);
       class T {
+        m_SteamInterface;
         constructor(e) {
           this.m_SteamInterface = e;
         }
@@ -1243,9 +1208,10 @@
         }
       }
       class D {
+        m_callbacksLoaded = new x.pB();
+        m_rgClusters;
         constructor(e, t, a, s, n) {
-          this.m_callbacksLoaded = new G.pB();
-          const r = x.gA.Init(F.JA);
+          const r = G.gA.Init(F.JA);
           (0, M.pA)(r),
             n && (0, M.De)(r, n),
             r.Body().set_steamid(t || l.L7.steamid),
@@ -1288,9 +1254,9 @@
       }
       var B = a(46882),
         H = a(31846),
-        j = a(78788),
-        q = a(80886),
-        z = a(58112),
+        q = a(78788),
+        z = a(80886),
+        j = a(58112),
         Q = a(10162);
       function X(e) {
         const { SteamInterface: t } = e,
@@ -1377,7 +1343,7 @@
           null,
           g.createElement(
             C.uT,
-            { className: j.ClusterConfig },
+            { className: q.ClusterConfig },
             g.createElement(C.II, {
               label: "SteamID",
               type: "text",
@@ -1423,21 +1389,21 @@
           [r, i] = g.useState(!1),
           l = g.useCallback(() => i(!0), [i]);
         return g.createElement(
-          z.h,
+          j.h,
           { onEnter: l },
           g.createElement(
             "div",
-            { className: j.PlaytimeCluster },
+            { className: q.PlaytimeCluster },
             g.createElement(
               "div",
-              { className: j.ClusterInfo },
+              { className: q.ClusterInfo },
               g.createElement("h1", null, "Cluster ", t.nClusterID),
               g.createElement(
                 Q.SV,
                 null,
                 g.createElement(
                   "div",
-                  { className: j.Overview },
+                  { className: q.Overview },
                   g.createElement(
                     "div",
                     null,
@@ -1491,7 +1457,7 @@
             ),
             g.createElement(
               "div",
-              { className: j.ClusterMembers },
+              { className: q.ClusterMembers },
               g.createElement("h3", null, "Similar titles:"),
               g.createElement(
                 Q.SV,
@@ -1524,11 +1490,11 @@
       const K = {};
       function Y(e) {
         const { appid: t } = e,
-          [a] = (0, q.vs)(t, K);
+          [a] = (0, z.vs)(t, K);
         return a
           ? g.createElement(
               "a",
-              { className: j.PlayedGame, href: a.GetStorePageURL() },
+              { className: q.PlayedGame, href: a.GetStorePageURL() },
               a.GetName(),
             )
           : null;
@@ -1537,7 +1503,7 @@
         const { item: t } = e;
         return g.createElement(
           "a",
-          { className: j.SimilarTitle, href: t.GetStorePageURL() },
+          { className: q.SimilarTitle, href: t.GetStorePageURL() },
           g.createElement("img", {
             src: t.GetAssets().GetSmallCapsuleURL(),
             loading: "lazy",
@@ -1562,18 +1528,18 @@
           (e[(e.None = 0)] = "None"), (e[(e.InvalidCode = 1)] = "InvalidCode");
         })(ie || (ie = {}));
       class le {
+        m_strBaseURL = "";
+        m_strOAuthClientID = "";
+        m_fnLoginComplete = null;
+        m_bRequestInFlight = !1;
+        m_userFields = void 0;
+        m_eCurrentStep = re.AccountName;
+        m_strErrorMessage = "";
+        m_strEmailDomain = "";
+        m_strCaptchaURL = "";
+        m_eSteamGuardCodeError = ie.None;
         constructor(e, t) {
-          (this.m_strBaseURL = ""),
-            (this.m_strOAuthClientID = ""),
-            (this.m_fnLoginComplete = null),
-            (this.m_bRequestInFlight = !1),
-            (this.m_userFields = void 0),
-            (this.m_eCurrentStep = re.AccountName),
-            (this.m_strErrorMessage = ""),
-            (this.m_strEmailDomain = ""),
-            (this.m_strCaptchaURL = ""),
-            (this.m_eSteamGuardCodeError = ie.None),
-            (0, o.rC)(this),
+          (0, o.rC)(this),
             (this.m_strBaseURL = e),
             (this.m_strOAuthClientID = t),
             (this.m_userFields = {
@@ -1650,20 +1616,18 @@
         GetCaptchaURL() {
           return this.m_strCaptchaURL;
         }
-        DoLogin() {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            if (this.m_bRequestInFlight) return;
-            (0, o.z)(() => {
-              (this.m_bRequestInFlight = !0), (this.m_strErrorMessage = "");
-            });
-            let e = yield (0, se.He)(
-              this.m_strBaseURL,
-              this.m_strOAuthClientID,
-              this.m_userFields,
-            );
-            (0, o.z)(() => {
-              (this.m_bRequestInFlight = !1), this.UpdateLoginResult(e);
-            });
+        async DoLogin() {
+          if (this.m_bRequestInFlight) return;
+          (0, o.z)(() => {
+            (this.m_bRequestInFlight = !0), (this.m_strErrorMessage = "");
+          });
+          let e = await (0, se.He)(
+            this.m_strBaseURL,
+            this.m_strOAuthClientID,
+            this.m_userFields,
+          );
+          (0, o.z)(() => {
+            (this.m_bRequestInFlight = !1), this.UpdateLoginResult(e);
           });
         }
         UpdateLoginResult(e) {
@@ -1720,11 +1684,9 @@
                           window.location.href))
                       : console.log("Unhandled login error");
         }
-        RefreshCaptcha() {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            let e = yield (0, se.p1)(this.m_strBaseURL);
-            e ? this.UpdateCaptchaURL(e) : console.log("Failed to get captcha");
-          });
+        async RefreshCaptcha() {
+          let e = await (0, se.p1)(this.m_strBaseURL);
+          e ? this.UpdateCaptchaURL(e) : console.log("Failed to get captcha");
         }
         UpdateCaptchaURL(e) {
           (this.m_userFields.gidCaptcha = e),
@@ -1743,6 +1705,7 @@
         (0, n.gn)([ne.a], le.prototype, "DoLogin", null),
         (0, n.gn)([o.aD.bound], le.prototype, "UpdateCaptchaURL", null);
       let oe = class extends g.Component {
+        m_manager;
         constructor(e) {
           super(e),
             (this.m_manager = new le(this.props.baseURL)),
@@ -1755,15 +1718,18 @@
           this.m_manager.Shutdown();
         }
         render() {
-          let e = this.props,
-            { baseURL: t, onLoginComplete: a, className: s } = e,
-            r = (0, n._T)(e, ["baseURL", "onLoginComplete", "className"]),
-            i = (0, b.Z)(ae().LoginDialog, s),
-            l = this.m_manager.GetCurrentStep(),
-            o = this.m_manager.GetErrorMessage();
+          let {
+              baseURL: e,
+              onLoginComplete: t,
+              className: a,
+              ...s
+            } = this.props,
+            n = (0, b.Z)(ae().LoginDialog, a),
+            r = this.m_manager.GetCurrentStep(),
+            i = this.m_manager.GetErrorMessage();
           return g.createElement(
             "div",
-            Object.assign({ className: i }, r),
+            { className: n, ...s },
             g.createElement(
               "div",
               { className: ae().LoginPanelBackground },
@@ -1772,23 +1738,23 @@
             g.createElement(
               "div",
               { className: ae().LoginPanelContent },
-              o && g.createElement(pe, { text: o }),
-              l == re.AccountName &&
+              i && g.createElement(pe, { text: i }),
+              r == re.AccountName &&
                 g.createElement(ce, {
                   manager: this.m_manager,
                   autoFocus: this.props.autoFocus,
                 }),
-              l == re.TwoFactorCode &&
+              r == re.TwoFactorCode &&
                 g.createElement(de, {
                   manager: this.m_manager,
                   authtype: re.TwoFactorCode,
                 }),
-              l == re.EmailCode &&
+              r == re.EmailCode &&
                 g.createElement(de, {
                   manager: this.m_manager,
                   authtype: re.EmailCode,
                 }),
-              l == re.Complete &&
+              r == re.Complete &&
                 g.createElement(
                   "div",
                   { className: ae().LoginComplete },
@@ -1801,7 +1767,7 @@
       function pe(e) {
         return g.createElement("div", { className: ae().ErrorMessage }, e.text);
       }
-      oe = (0, n.gn)([y.Pi], oe);
+      oe = (0, n.gn)([v.Pi], oe);
       let ce = class extends g.Component {
         constructor(e) {
           super(e), (this.state = { nNameSize: 0, nPassSize: 0 });
@@ -1928,7 +1894,7 @@
         (0, n.gn)([p.ak], ce.prototype, "OnChangeName", null),
         (0, n.gn)([p.ak], ce.prototype, "OnChangePassword", null),
         (0, n.gn)([p.ak], ce.prototype, "OnChangeRememberPass", null),
-        (ce = (0, n.gn)([y.Pi], ce));
+        (ce = (0, n.gn)([v.Pi], ce));
       let me = class extends g.Component {
         OnCaptchaText(e) {
           this.props.manager.SetCaptchaText(e.target.value);
@@ -1987,7 +1953,7 @@
       };
       (0, n.gn)([p.ak], me.prototype, "OnCaptchaText", null),
         (0, n.gn)([p.ak], me.prototype, "RefreshCaptcha", null),
-        (me = (0, n.gn)([y.Pi], me));
+        (me = (0, n.gn)([v.Pi], me));
       let de = class extends g.Component {
         OnSubmit(e) {
           e.preventDefault(), this.props.manager.DoLogin();
@@ -2078,7 +2044,7 @@
       };
       (0, n.gn)([p.ak], de.prototype, "OnSubmit", null),
         (0, n.gn)([p.ak], de.prototype, "OnChangeAuthCode", null),
-        (de = (0, n.gn)([y.Pi], de));
+        (de = (0, n.gn)([v.Pi], de));
       var he = a(40057);
       const ue = [
         {
@@ -2153,7 +2119,7 @@
                       path: `${s.Z.LabsSandbox()}/${e.path}`,
                       render: (t) =>
                         !e.requires_login || n
-                          ? e.render(Object.assign(Object.assign({}, t), i))
+                          ? e.render({ ...t, ...i })
                           : g.createElement(ge, null),
                     }),
                   ),

@@ -60,7 +60,7 @@
     },
     70548: (e, t, a) => {
       "use strict";
-      a.d(t, { r: () => P, o: () => Q });
+      a.d(t, { r: () => C, o: () => P });
       var n = a(85556),
         r = a(47427),
         s = a(27605),
@@ -75,33 +75,30 @@
           return A().hoverParent;
         }
         render() {
-          const e = this.props,
-            { persona: t, animating: a, className: s, size: i, dim: o } = e,
-            l = (0, n._T)(e, [
-              "persona",
-              "animating",
-              "className",
-              "size",
-              "dim",
-            ]);
-          let c = "";
+          const {
+            persona: e,
+            animating: t,
+            className: a,
+            size: n,
+            dim: s,
+            ...i
+          } = this.props;
+          let o = "";
           return (
-            "medium" == i ? (c = A().Medium) : "large" == i && (c = A().Large),
+            "medium" == n ? (o = A().Medium) : "large" == n && (o = A().Large),
             r.createElement(
               "div",
-              Object.assign(
-                {
-                  className: (0, m.Z)(
-                    A().SnoozeContainer,
-                    t.online_state,
-                    s,
-                    a && A().animating,
-                    c,
-                    o && A().Dim,
-                  ),
-                },
-                l,
-              ),
+              {
+                className: (0, m.Z)(
+                  A().SnoozeContainer,
+                  e.online_state,
+                  a,
+                  t && A().animating,
+                  o,
+                  s && A().Dim,
+                ),
+                ...i,
+              },
               r.createElement(
                 "div",
                 { "data-text": "Z", className: (0, m.Z)(A().SnoozeZ, A().Z1) },
@@ -123,75 +120,68 @@
       };
       u = (0, n.gn)([s.Pi], u);
       var p = a(62613),
-        d = a(26358),
-        g = a.n(d),
+        g = a(26358),
+        d = a.n(g),
         h = a(7686);
       const B = (0, s.Pi)((e) => {
-        const { persona: t, className: a } = e,
-          s = (0, n._T)(e, ["persona", "className"]);
+        const { persona: t, className: a, ...n } = e;
         if (!t) return null;
         if (!t.is_online) return null;
-        const o = t.HasStateFlag(512),
-          c = t.HasStateFlag(2048),
-          A = !c && t.HasStateFlag(1024);
+        const s = t.HasStateFlag(512),
+          o = t.HasStateFlag(2048),
+          c = !o && t.HasStateFlag(1024);
         return r.createElement(
           r.Fragment,
           null,
+          s &&
+            r.createElement(
+              "div",
+              {
+                className: (0, m.Z)(
+                  a,
+                  d().PersonaStatusIcon,
+                  d().MobilePhoneIcon,
+                  (0, l.sB)(t),
+                ),
+                title: (0, i.Xx)("#Platform_Hint_Mobile"),
+                ...n,
+              },
+              r.createElement(h.Mr, null),
+            ),
           o &&
             r.createElement(
               "div",
-              Object.assign(
-                {
-                  className: (0, m.Z)(
-                    a,
-                    g().PersonaStatusIcon,
-                    g().MobilePhoneIcon,
-                    (0, l.sB)(t),
-                  ),
-                  title: (0, i.Xx)("#Platform_Hint_Mobile"),
-                },
-                s,
-              ),
-              r.createElement(h.Mr, null),
+              {
+                className: (0, m.Z)(
+                  a,
+                  d().PersonaStatusIcon,
+                  d().VRIcon,
+                  (0, l.sB)(t),
+                ),
+                title: (0, i.Xx)("#Platform_Hint_VR"),
+                ...n,
+              },
+              r.createElement(p.VR, null),
             ),
           c &&
             r.createElement(
               "div",
-              Object.assign(
-                {
-                  className: (0, m.Z)(
-                    a,
-                    g().PersonaStatusIcon,
-                    g().VRIcon,
-                    (0, l.sB)(t),
-                  ),
-                  title: (0, i.Xx)("#Platform_Hint_VR"),
-                },
-                s,
-              ),
-              r.createElement(p.VR, null),
-            ),
-          A &&
-            r.createElement(
-              "div",
-              Object.assign(
-                {
-                  className: (0, m.Z)(
-                    a,
-                    g().PersonaStatusIcon,
-                    g().BigPictureIcon,
-                    (0, l.sB)(t),
-                  ),
-                  title: (0, i.Xx)("#Platform_Hint_BigPicture"),
-                },
-                s,
-              ),
+              {
+                className: (0, m.Z)(
+                  a,
+                  d().PersonaStatusIcon,
+                  d().BigPictureIcon,
+                  (0, l.sB)(t),
+                ),
+                title: (0, i.Xx)("#Platform_Hint_BigPicture"),
+                ...n,
+              },
               r.createElement(p.Ucz, null),
             ),
         );
       });
       var E = a(32633),
-        v = a.n(E),
+        Q = a.n(E),
         N = a(37563);
       function S(e) {
         return r.createElement(
@@ -199,127 +189,103 @@
           null,
           r.createElement(
             "span",
-            { className: v().partyBeaconJoin },
+            { className: Q().partyBeaconJoin },
             (0, i.Xx)("#User_WantsToPlay"),
           ),
           " – ",
           e.persona.GetCurrentGameName(),
         );
       }
-      let Q = class extends r.Component {
+      let P = class extends r.Component {
         render() {
-          const e = this.props,
-            {
-              className: t,
-              onContextMenu: a,
-              persona: s,
-              eFriendRelationship: c,
-              bIsSelf: A,
-              bParenthesizeNicknames: d,
-              strNickname: g,
-              bCompactView: h,
-              bHideGameName: E,
-              bHideEnhancedRichPresenceLabel: Q,
-              bHideSnooze: P,
-              bHideStatus: b,
-              renderStatus: f,
-              renderRichPresence: C,
-              bHidePersona: y,
-              bDNDSet: I,
-              bHasPartyBeacon: _,
-              bHasGamePrivacy: D,
-              bNoMask: k,
-            } = e,
-            F = (0, n._T)(e, [
-              "className",
-              "onContextMenu",
-              "persona",
-              "eFriendRelationship",
-              "bIsSelf",
-              "bParenthesizeNicknames",
-              "strNickname",
-              "bCompactView",
-              "bHideGameName",
-              "bHideEnhancedRichPresenceLabel",
-              "bHideSnooze",
-              "bHideStatus",
-              "renderStatus",
-              "renderRichPresence",
-              "bHidePersona",
-              "bDNDSet",
-              "bHasPartyBeacon",
-              "bHasGamePrivacy",
-              "bNoMask",
-            ]);
-          let Z = null,
-            H = null,
-            M = null,
-            T = [
-              t,
-              v().personaNameAndStatusLabel,
-              (0, l.sB)(s),
-              h && v().compactView,
-              k && v().NoMask,
+          const {
+            className: e,
+            onContextMenu: t,
+            persona: a,
+            eFriendRelationship: n,
+            bIsSelf: s,
+            bParenthesizeNicknames: c,
+            strNickname: A,
+            bCompactView: g,
+            bHideGameName: d,
+            bHideEnhancedRichPresenceLabel: h,
+            bHideSnooze: E,
+            bHideStatus: P,
+            renderStatus: C,
+            renderRichPresence: f,
+            bHidePersona: v,
+            bDNDSet: I,
+            bHasPartyBeacon: y,
+            bHasGamePrivacy: D,
+            bNoMask: Z,
+            ..._
+          } = this.props;
+          let k = null,
+            F = null,
+            b = null,
+            M = [
+              e,
+              Q().personaNameAndStatusLabel,
+              (0, l.sB)(a),
+              g && Q().compactView,
+              Z && Q().NoMask,
             ];
-          _ || s.has_public_party_beacon
-            ? (H = r.createElement(S, { persona: s }))
-            : (0, o.fk)(c)
-              ? ((H = (0, i.Xx)("#PersonaStateBlocked")), T.push(v().blocked))
-              : s.is_ingame
-                ? ((H =
-                    !s.is_in_nonsteam_game || A || (0, o.my)(c)
-                      ? s.GetCurrentGameName()
+          y || a.has_public_party_beacon
+            ? (F = r.createElement(S, { persona: a }))
+            : (0, o.fk)(n)
+              ? ((F = (0, i.Xx)("#PersonaStateBlocked")), M.push(Q().blocked))
+              : a.is_ingame
+                ? ((F =
+                    !a.is_in_nonsteam_game || s || (0, o.my)(n)
+                      ? a.GetCurrentGameName()
                       : (0, i.Xx)("#PersonaStateInNonSteamGame")),
-                  A || y
-                    ? A &&
-                      s.is_awayOrSnooze &&
-                      (M = (0, i.Xx)("#PersonaStateAway"))
-                    : (M = s.GetCurrentGameRichPresence()))
-                : s.m_broadcastAccountId &&
-                  (H = (0, i.Xx)("#PersonaStateWatchingBroadcast")),
-            H || (H = s.GetLocalizedOnlineStatus()),
-            f && (H = f());
-          let R = !y && !P;
-          !1 === P && (R = !0),
-            s.is_awayOrSnooze && R && (Z = r.createElement(u, { persona: s }));
-          let G = null;
-          a
-            ? (G = r.createElement(
+                  s || v
+                    ? s &&
+                      a.is_awayOrSnooze &&
+                      (b = (0, i.Xx)("#PersonaStateAway"))
+                    : (b = a.GetCurrentGameRichPresence()))
+                : a.m_broadcastAccountId &&
+                  (F = (0, i.Xx)("#PersonaStateWatchingBroadcast")),
+            F || (F = a.GetLocalizedOnlineStatus()),
+            C && (F = C());
+          let w = !v && !E;
+          !1 === E && (w = !0),
+            a.is_awayOrSnooze && w && (k = r.createElement(u, { persona: a }));
+          let H = null;
+          t
+            ? (H = r.createElement(
                 "div",
-                { className: "ContextMenuButton", onClick: a },
+                { className: "ContextMenuButton", onClick: t },
                 r.createElement(p.$gZ, null),
               ))
-            : T.push(v().noContextMenu),
-            y && T.push(v().hidePersona),
-            C && (M = C()),
-            (!E && M) || T.push(v().twoLine);
-          const U = !s.is_ingame && !b,
-            w = !Q && M,
-            K = H && (!E || !w),
-            L = (0, o.hz)(N.De.LAUNCHER_TYPE);
-          let j = g && !d,
-            J = j ? g : s.m_strPlayerName,
-            O = !y && (K || U) && w;
+            : M.push(Q().noContextMenu),
+            v && M.push(Q().hidePersona),
+            f && (b = f()),
+            (!d && b) || M.push(Q().twoLine);
+          const R = !a.is_ingame && !P,
+            U = !h && b,
+            T = F && (!d || !U),
+            G = (0, o.hz)(N.De.LAUNCHER_TYPE);
+          let K = A && !c,
+            J = K ? A : a.m_strPlayerName,
+            L = !v && (T || R) && U;
           return r.createElement(
             "div",
-            Object.assign({}, F, {
-              className: (0, m.Z)(...T),
-              onContextMenu: a,
-            }),
+            { ..._, className: (0, m.Z)(...M), onContextMenu: t },
             r.createElement(
               "div",
-              { className: (0, m.Z)(v().statusAndName, O && v().threeLines) },
+              { className: (0, m.Z)(Q().statusAndName, L && Q().threeLines) },
               r.createElement(
                 "div",
-                { className: v().playerName },
+                { className: Q().playerName },
                 J || " ",
-                d &&
-                  g &&
+                c &&
+                  A &&
                   r.createElement(
                     "span",
-                    { className: v().playerNickname },
+                    { className: Q().playerNickname },
                     "(",
-                    g,
+                    A,
                     ")",
                   ),
               ),
@@ -327,46 +293,46 @@
                 r.createElement(
                   "div",
                   {
-                    className: v().DNDContainer,
+                    className: Q().DNDContainer,
                     title: (0, i.Xx)("#User_ToggleDoNotDisturb"),
                   },
                   r.createElement(p.YVR, null),
                 ),
-              j &&
+              K &&
                 r.createElement(
                   "span",
                   {
-                    className: v().playerNicknameBracket,
+                    className: Q().playerNicknameBracket,
                     title: (0, i.Xx)("#isNickname"),
                   },
                   " *",
                 ),
-              r.createElement(B, { persona: s }),
-              Z,
-              (s.m_bPlayerNamePending || s.m_bAvatarPending) &&
-                L &&
+              r.createElement(B, { persona: a }),
+              k,
+              (a.m_bPlayerNamePending || a.m_bAvatarPending) &&
+                G &&
                 r.createElement(
                   "div",
                   {
-                    className: v().PendingPersona,
+                    className: Q().PendingPersona,
                     title: (0, i.Xx)("#SteamChina_PendingPersonaName"),
                   },
                   r.createElement(p.SUY, null),
                 ),
-              G,
+              H,
             ),
-            !y &&
+            !v &&
               r.createElement(
                 "div",
-                { className: v().richPresenceContainer },
-                (K || U) &&
+                { className: Q().richPresenceContainer },
+                (T || R) &&
                   r.createElement(
                     "div",
                     {
                       className: (0, m.Z)(
-                        v().gameName,
-                        O && v().threeLines,
-                        v().richPresenceLabel,
+                        Q().gameName,
+                        L && Q().threeLines,
+                        Q().richPresenceLabel,
                         "no-drag",
                       ),
                     },
@@ -374,55 +340,49 @@
                       r.createElement(
                         "div",
                         {
-                          className: v().gameIsPrivateIcon,
+                          className: Q().gameIsPrivateIcon,
                           title: (0, i.Xx)("#User_GameInfoHidden"),
                         },
                         r.createElement(p._GE, null),
                       ),
-                    H,
+                    F,
                   ),
-                w &&
+                U &&
                   r.createElement(
                     "div",
-                    { className: (0, m.Z)(v().richPresenceLabel, "no-drag") },
-                    M,
+                    { className: (0, m.Z)(Q().richPresenceLabel, "no-drag") },
+                    b,
                     " ",
                   ),
               ),
           );
         }
       };
-      Q = (0, n.gn)([s.Pi], Q);
-      const P = (0, s.Pi)((e) => {
+      P = (0, n.gn)([s.Pi], P);
+      const C = (0, s.Pi)((e) => {
         const {
-            persona: t,
-            bParenthesizeNicknames: a,
-            strNickname: s,
-            bIgnorePersonaStatus: i,
-            className: o,
-          } = e,
-          c = (0, n._T)(e, [
-            "persona",
-            "bParenthesizeNicknames",
-            "strNickname",
-            "bIgnorePersonaStatus",
-            "className",
-          ]);
-        let A = s && !a ? s : t.m_strPlayerName;
+          persona: t,
+          bParenthesizeNicknames: a,
+          strNickname: n,
+          bIgnorePersonaStatus: s,
+          className: i,
+          ...o
+        } = e;
+        let c = n && !a ? n : t.m_strPlayerName;
         return r.createElement(
           "span",
-          Object.assign({}, c, { className: (0, m.Z)(o, !i && (0, l.sB)(t)) }),
+          { ...o, className: (0, m.Z)(i, !s && (0, l.sB)(t)) },
           r.createElement(
             "span",
-            { className: v().playerName },
-            A || " ",
+            { className: Q().playerName },
+            c || " ",
             a &&
-              s &&
+              n &&
               r.createElement(
                 "span",
-                { className: v().playerNickname },
+                { className: Q().playerNickname },
                 "(",
-                s,
+                n,
                 ")",
               ),
           ),
@@ -431,7 +391,7 @@
     },
     38605: (e, t, a) => {
       "use strict";
-      a.d(t, { o: () => g, _1: () => E, DY: () => B, vV: () => h });
+      a.d(t, { o: () => d, _1: () => E, DY: () => B, vV: () => h });
       var n = a(85556),
         r = a(47427),
         s = a(27605),
@@ -446,25 +406,18 @@
           "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
       var u = a(5167),
         p = a.n(u),
-        d = a(20020);
-      const g = r.memo(function (e) {
+        g = a(20020);
+      const d = r.memo(function (e) {
         const {
             strAvatarURL: t,
             size: a = "Medium",
-            className: s,
-            statusStyle: i,
-            statusPosition: l,
-            children: u,
+            className: n,
+            statusStyle: s,
+            statusPosition: i,
+            children: l,
+            ...u
           } = e,
-          g = (0, n._T)(e, [
-            "strAvatarURL",
-            "size",
-            "className",
-            "statusStyle",
-            "statusPosition",
-            "children",
-          ]),
-          h = r.useMemo(() => {
+          d = r.useMemo(() => {
             const e = [];
             return (
               t && e.push(t),
@@ -482,7 +435,7 @@
                     case "FillArea":
                       return A;
                     default:
-                      return (0, d.Z)(e, `Unhandled size ${e}`), c;
+                      return (0, g.Z)(e, `Unhandled size ${e}`), c;
                   }
                 })(a),
               ),
@@ -491,90 +444,74 @@
           }, [t, a]);
         return r.createElement(
           "div",
-          Object.assign(
-            {
-              className: (0, o.Z)(
-                p().avatarHolder,
-                "avatarHolder",
-                "no-drag",
-                a,
-                s,
-              ),
-            },
-            g,
-          ),
+          {
+            className: (0, o.Z)(
+              p().avatarHolder,
+              "avatarHolder",
+              "no-drag",
+              a,
+              n,
+            ),
+            ...u,
+          },
           r.createElement("div", {
-            className: (0, o.Z)(p().avatarStatus, "avatarStatus", l),
-            style: i,
+            className: (0, o.Z)(p().avatarStatus, "avatarStatus", i),
+            style: s,
           }),
           r.createElement(m.j, {
             className: (0, o.Z)(p().avatar, "avatar"),
-            rgSources: h,
+            rgSources: d,
             draggable: !1,
           }),
-          u,
+          l,
         );
       });
       let h = class extends r.Component {
         render() {
-          const e = this.props,
-            {
-              persona: t,
-              size: a = "Medium",
-              animatedAvatar: s,
-              className: m,
-            } = e,
-            c = (0, n._T)(e, [
-              "persona",
-              "size",
-              "animatedAvatar",
-              "className",
-            ]);
-          let A = "";
+          const {
+            persona: e,
+            size: t = "Medium",
+            animatedAvatar: a,
+            className: n,
+            ...s
+          } = this.props;
+          let m = "";
           return (
-            s && s.image_small && 0 != s.image_small.length
-              ? (A = l.De.MEDIA_CDN_COMMUNITY_URL + "images/" + s.image_small)
-              : t &&
-                ((A = t.avatar_url_medium),
-                "Small" == a || "X-Small" == a
-                  ? (A = t.avatar_url)
-                  : ("Large" != a && "X-Large" != a && "FillArea" != a) ||
-                    (A = t.avatar_url_full)),
-            r.createElement(
-              g,
-              Object.assign(
-                {
-                  strAvatarURL: A,
-                  size: a,
-                  className: (0, o.Z)((0, i.sB)(t), m),
-                },
-                c,
-              ),
-            )
+            a && a.image_small && 0 != a.image_small.length
+              ? (m = l.De.MEDIA_CDN_COMMUNITY_URL + "images/" + a.image_small)
+              : e &&
+                ((m = e.avatar_url_medium),
+                "Small" == t || "X-Small" == t
+                  ? (m = e.avatar_url)
+                  : ("Large" != t && "X-Large" != t && "FillArea" != t) ||
+                    (m = e.avatar_url_full)),
+            r.createElement(d, {
+              strAvatarURL: m,
+              size: t,
+              className: (0, o.Z)((0, i.sB)(e), n),
+              ...s,
+            })
           );
         }
       };
       h = (0, n.gn)([s.Pi], h);
       const B = (0, s.Pi)((e) => {
-        const { profileItem: t, className: a, bDisableAnimation: s } = e,
-          i = (0, n._T)(e, ["profileItem", "className", "bDisableAnimation"]);
+        const { profileItem: t, className: a, bDisableAnimation: n, ...s } = e;
         if (!t || !t.image_small || 0 == t.image_small.length) return null;
-        let m = s ? t.image_large : t.image_small;
+        let i = n ? t.image_large : t.image_small;
         return (
-          m || (m = t.image_small),
-          m.startsWith("https://") ||
-            (m = l.De.MEDIA_CDN_COMMUNITY_URL + "images/" + m),
+          i || (i = t.image_small),
+          i.startsWith("https://") ||
+            (i = l.De.MEDIA_CDN_COMMUNITY_URL + "images/" + i),
           r.createElement(
             "div",
-            Object.assign(
-              { className: (0, o.Z)(p().avatarFrame, a, "avatarFrame") },
-              i,
-            ),
-            r.createElement("img", { className: p().avatarFrameImg, src: m }),
+            { className: (0, o.Z)(p().avatarFrame, a, "avatarFrame"), ...s },
+            r.createElement("img", { className: p().avatarFrameImg, src: i }),
           )
         );
       });
       let E = class extends r.Component {
+        m_timer;
         constructor(e) {
           super(e),
             (this.state = { bAnimate: "None" != this.props.loopDuration }),
@@ -628,29 +565,19 @@
                 : this.state.bAnimate && this.SetupAnimationTimer());
         }
         render() {
-          let e = this.props,
-            {
-              loopDuration: t,
-              animatedAvatar: a,
-              avatarFrame: s,
-              children: i,
-              style: o,
-              bLimitProfileFrameAnimationTime: l,
-              bParentHovered: m,
-            } = e,
-            c = (0, n._T)(e, [
-              "loopDuration",
-              "animatedAvatar",
-              "avatarFrame",
-              "children",
-              "style",
-              "bLimitProfileFrameAnimationTime",
-              "bParentHovered",
-            ]);
+          let {
+            loopDuration: e,
+            animatedAvatar: t,
+            avatarFrame: a,
+            children: n,
+            style: s,
+            bLimitProfileFrameAnimationTime: i,
+            bParentHovered: o,
+            ...l
+          } = this.props;
           return (
-            c.onClick &&
-              (o = Object.assign(Object.assign({}, o), { cursor: "pointer" })),
-            this.state.bAnimate || (a = null),
+            l.onClick && (s = { ...s, cursor: "pointer" }),
+            this.state.bAnimate || (t = null),
             r.createElement(
               "div",
               {
@@ -662,11 +589,11 @@
               },
               r.createElement(
                 h,
-                Object.assign({ animatedAvatar: a }, c),
-                i,
+                { animatedAvatar: t, ...l },
+                n,
                 r.createElement(B, {
-                  profileItem: s,
-                  bDisableAnimation: l && !this.state.bAnimate,
+                  profileItem: a,
+                  bDisableAnimation: i && !this.state.bAnimate,
                 }),
               ),
             )
@@ -677,155 +604,129 @@
     },
     88619: (e, t, a) => {
       "use strict";
-      a.d(t, { N5: () => h, co: () => p, hg: () => u, m6: () => v });
-      var n = a(85556),
-        r = a(53923),
-        s = a(40057),
-        i = a(42718),
-        o = a(79545),
-        l = a(35427),
-        m = a(3172),
-        c = a(82182),
-        A = a(51915);
-      function u(e) {
-        const t = (0, s.bY)(),
-          a = (0, r.M)(),
-          o = (0, A.E8)(),
-          m = (0, i.useQueryClient)();
-        let c = Object.assign({ loadNicknames: !1, loadFavorites: !1 }, e);
-        return (0, i.useQuery)(
-          ["FriendsList", a, c],
-          () =>
-            (0, n.mG)(this, void 0, void 0, function* () {
-              const e = m.fetchQuery(d(t, a)),
-                r = c.loadNicknames ? m.fetchQuery(g(t, a)) : void 0,
-                s = c.loadFavorites ? m.fetchQuery(B(t, a)) : void 0,
-                i = yield e,
-                u = new Map(
-                  i.map((e) => [e, m.fetchQuery((0, A.Zx)(o, t, e))]),
-                );
-              let p;
-              if (r) {
-                const e = (yield r).nicknames;
-                p = new Map(e.map((e) => [e.accountid, e.nickname]));
-              }
-              const h = new Set(yield null != s ? s : Promise.resolve([]));
-              return (yield Promise.all(
-                i.map((e) =>
-                  (0, n.mG)(this, void 0, void 0, function* () {
-                    const t = new l.K(e).GetAccountID(),
-                      a = { accountid: t, persona: yield u.get(e) };
-                    return (
-                      h.has(t) && (a.is_favorite = !0),
-                      p && p.has(t) && (a.nickname = p.get(t)),
-                      a
-                    );
-                  }),
-                ),
-              )).filter((e) => !!e.persona);
-            }),
+      a.d(t, { N5: () => d, co: () => u, hg: () => A, m6: () => E });
+      var n = a(53923),
+        r = a(40057),
+        s = a(42718),
+        i = a(79545),
+        o = a(35427),
+        l = a(3172),
+        m = a(82182),
+        c = a(51915);
+      function A(e) {
+        const t = (0, r.bY)(),
+          a = (0, n.M)(),
+          i = (0, c.E8)(),
+          l = (0, s.useQueryClient)();
+        let m = { loadNicknames: !1, loadFavorites: !1, ...e };
+        return (0, s.useQuery)(
+          ["FriendsList", a, m],
+          async () => {
+            const e = l.fetchQuery(p(t, a)),
+              n = m.loadNicknames ? l.fetchQuery(g(t, a)) : void 0,
+              r = m.loadFavorites ? l.fetchQuery(h(t, a)) : void 0,
+              s = await e,
+              A = new Map(s.map((e) => [e, l.fetchQuery((0, c.Zx)(i, t, e))]));
+            let u;
+            if (n) {
+              const e = (await n).nicknames;
+              u = new Map(e.map((e) => [e.accountid, e.nickname]));
+            }
+            const d = new Set(await (r ?? Promise.resolve([])));
+            return (
+              await Promise.all(
+                s.map(async (e) => {
+                  const t = new o.K(e).GetAccountID(),
+                    a = { accountid: t, persona: await A.get(e) };
+                  return (
+                    d.has(t) && (a.is_favorite = !0),
+                    u && u.has(t) && (a.nickname = u.get(t)),
+                    a
+                  );
+                }),
+              )
+            ).filter((e) => !!e.persona);
+          },
           { staleTime: 12e4 },
         );
       }
-      function p() {
-        const e = (0, s.bY)(),
-          t = (0, r.M)();
-        return (0, i.useQuery)(d(e, t));
+      function u() {
+        const e = (0, r.bY)(),
+          t = (0, n.M)();
+        return (0, s.useQuery)(p(e, t));
       }
-      function d(e, t) {
+      function p(e, t) {
         return {
           queryKey: ["GetFriendsList", t],
-          queryFn: () =>
-            (0, n.mG)(this, void 0, void 0, function* () {
-              var t, a;
-              const n = o.gA.Init(m.Fi);
-              return null ===
-                (a =
-                  null ===
-                    (t = (yield m.qW.GetFriendsList(e, n))
-                      .Body()
-                      .friendslist()) || void 0 === t
-                    ? void 0
-                    : t.friends()) || void 0 === a
-                ? void 0
-                : a
-                    .filter((e) => {
-                      const t = new l.K(e.ulfriendid());
-                      return (
-                        (3 == e.efriendrelationship() ||
-                          6 == e.efriendrelationship()) &&
-                        t.BIsIndividualAccount()
-                      );
-                    })
-                    .map((e) => e.ulfriendid());
-            }),
+          queryFn: async () => {
+            const t = i.gA.Init(l.Fi),
+              a = await l.qW.GetFriendsList(e, t);
+            return a
+              .Body()
+              .friendslist()
+              ?.friends()
+              ?.filter((e) => {
+                const t = new o.K(e.ulfriendid());
+                return (
+                  (3 == e.efriendrelationship() ||
+                    6 == e.efriendrelationship()) &&
+                  t.BIsIndividualAccount()
+                );
+              })
+              .map((e) => e.ulfriendid());
+          },
         };
       }
       function g(e, t) {
         return {
           queryKey: ["GetFriendNicknameList", t],
-          queryFn: () =>
-            (0, n.mG)(this, void 0, void 0, function* () {
-              const t = o.gA.Init(c.bM);
-              return (yield c.lk.GetNicknameList(e, t)).Body().toObject();
-            }),
+          queryFn: async () => {
+            const t = i.gA.Init(m.bM);
+            return (await m.lk.GetNicknameList(e, t)).Body().toObject();
+          },
         };
       }
-      function h(e = {}) {
+      function d(e = {}) {
         return (function (e = {}) {
-          const t = (0, s.bY)(),
-            a = (0, r.M)();
-          return (0, i.useQuery)(Object.assign(Object.assign({}, g(t, a)), e));
-        })(
-          Object.assign(Object.assign({}, e), {
-            select: (e) =>
-              new Map(e.nicknames.map((e) => [e.accountid, e.nickname])),
-          }),
-        );
-      }
-      function B(e, t) {
-        return {
-          queryKey: ["GetFriendFavorites", t],
-          queryFn: () =>
-            (0, n.mG)(this, void 0, void 0, function* () {
-              var t;
-              const a = o.gA.Init(m.Zi);
-              return null ===
-                (t = (yield m.qW.GetFavorites(e, a))
-                  .Body()
-                  .toObject().favorites) || void 0 === t
-                ? void 0
-                : t.filter((e) => e.accountid).map((e) => e.accountid);
-            }),
-        };
-      }
-      function E(e, t) {
-        return (0, n.mG)(this, void 0, void 0, function* () {
-          const a = o.gA.Init(c.$_);
-          a.Body().set_appid(t);
-          const n = yield c.lk.GetFriendsGameplayInfo(e, a);
-          return (
-            n.BSuccess() ||
-              console.warn(`Failed to get gameplay info: ${n.GetEResult()}`),
-            n.Body().toObject()
-          );
+          const t = (0, r.bY)(),
+            a = (0, n.M)();
+          return (0, s.useQuery)({ ...g(t, a), ...e });
+        })({
+          ...e,
+          select: (e) =>
+            new Map(e.nicknames.map((e) => [e.accountid, e.nickname])),
         });
       }
-      function v(e, t = {}) {
-        const a = (0, s.bY)(),
-          o = (0, r.M)();
-        return (0, i.useQuery)(
-          Object.assign(
-            {
-              queryKey: `GameplayInfo_${o}_${e}`,
-              queryFn: () =>
-                (0, n.mG)(this, void 0, void 0, function* () {
-                  return yield E(a, e);
-                }),
-            },
-            t,
-          ),
+      function h(e, t) {
+        return {
+          queryKey: ["GetFriendFavorites", t],
+          queryFn: async () => {
+            const t = i.gA.Init(l.Zi),
+              a = (await l.qW.GetFavorites(e, t)).Body().toObject();
+            return a.favorites
+              ?.filter((e) => e.accountid)
+              .map((e) => e.accountid);
+          },
+        };
+      }
+      async function B(e, t) {
+        const a = i.gA.Init(m.$_);
+        a.Body().set_appid(t);
+        const n = await m.lk.GetFriendsGameplayInfo(e, a);
+        return (
+          n.BSuccess() ||
+            console.warn(`Failed to get gameplay info: ${n.GetEResult()}`),
+          n.Body().toObject()
         );
+      }
+      function E(e, t = {}) {
+        const a = (0, r.bY)(),
+          i = (0, n.M)();
+        return (0, s.useQuery)({
+          queryKey: `GameplayInfo_${i}_${e}`,
+          queryFn: async () => await B(a, e),
+          ...t,
+        });
       }
     },
     7686: (e, t, a) => {
@@ -856,10 +757,9 @@
         r = a(47427),
         s = a(20417);
       class i extends r.Component {
+        m_refImage = r.createRef();
         constructor(e) {
-          super(e),
-            (this.m_refImage = r.createRef()),
-            (this.state = { nImage: 0 });
+          super(e), (this.state = { nImage: 0 });
         }
         componentDidUpdate(e) {
           JSON.stringify(this.props.rgSources) != JSON.stringify(e.rgSources) &&
@@ -899,17 +799,19 @@
             t < this.props.rgSources.length && this.setState({ nImage: t });
         }
         render() {
-          const e = this.props,
-            { rgSources: t, onIncrementalError: a, onError: s } = e,
-            i = (0, n._T)(e, ["rgSources", "onIncrementalError", "onError"]),
-            o = this.src;
-          return r.createElement(
-            "img",
-            Object.assign({ ref: this.m_refImage }, i, {
-              src: o,
-              onError: this.OnImageError,
-            }),
-          );
+          const {
+              rgSources: e,
+              onIncrementalError: t,
+              onError: a,
+              ...n
+            } = this.props,
+            s = this.src;
+          return r.createElement("img", {
+            ref: this.m_refImage,
+            ...n,
+            src: s,
+            onError: this.OnImageError,
+          });
         }
       }
       (0, n.gn)([s.ak], i.prototype, "OnImageError", null);

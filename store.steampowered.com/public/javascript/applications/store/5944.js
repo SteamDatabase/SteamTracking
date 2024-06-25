@@ -6,18 +6,19 @@
   {
     45944: (e, t, n) => {
       n.d(t, { Q8: () => A });
-      var i = n(85556),
-        o = n(54842),
-        s = n(77936),
-        p = n(79545),
-        a = n(22520),
+      var o = n(85556),
+        s = n(54842),
+        i = n(77936),
+        a = n(79545),
+        p = n(22520),
         r = n(37563);
       class c {
+        m_nLastUpdated = 0;
+        m_mapLanguages = s.LO.map();
+        m_appid;
+        m_fetching = null;
         constructor(e) {
-          (this.m_nLastUpdated = 0),
-            (this.m_mapLanguages = o.LO.map()),
-            (this.m_fetching = null),
-            (this.m_appid = e);
+          this.m_appid = e;
         }
         GetAppID() {
           return this.m_appid;
@@ -46,34 +47,34 @@
           );
         }
       }
-      function h(e, t, n, i, o) {
+      function h(e, t, n, o, s) {
         if (!e.startsWith("#"))
           return (
             console.log(
               "Token doesn't start with #:",
               e,
               "appid",
-              i,
+              o,
               "tokens",
               t,
             ),
             ""
           );
-        let s = e;
+        let i = e;
         e = e.toLowerCase();
-        let p = "";
+        let a = "";
         if (
-          (t && t.has(e) && (p = t.get(e)),
-          !p && n && n.has(e) && (p = n.get(e)),
-          p)
+          (t && t.has(e) && (a = t.get(e)),
+          !a && n && n.has(e) && (a = n.get(e)),
+          a)
         )
-          p = l(p, t, n, i, o);
+          a = l(a, t, n, o, s);
         else if (
           ((t || n) &&
             console.log(
               "No loc found for appid",
+              o,
               i,
-              s,
               "Tokens:",
               t,
               "Fallback:",
@@ -82,42 +83,45 @@
           t && 1 != r.De.EUNIVERSE)
         )
           return e;
-        return p;
+        return a;
       }
-      function l(e, t, n, i, o) {
-        let s = e.match(/{[A-za-z0-9_%#:]+}/g);
-        if (s)
-          for (let p of s) {
-            let s = h(m(p.slice(1, -1), o), t, n, i, o);
-            if (!s) return "";
-            e = e.replace(p, s);
+      function l(e, t, n, o, s) {
+        let i = e.match(/{[A-za-z0-9_%#:]+}/g);
+        if (i)
+          for (let a of i) {
+            let i = h(m(a.slice(1, -1), s), t, n, o, s);
+            if (!i) return "";
+            e = e.replace(a, i);
           }
-        return (e = m(e, o));
+        return (e = m(e, s));
       }
       function m(e, t) {
         let n = e.match(/%[A-Za-z0-9_:]+%/g);
         if (n)
-          for (let i of n) {
-            let n = i.slice(1, -1).toLowerCase(),
-              o = t.get(n);
-            null == o
+          for (let o of n) {
+            let n = o.slice(1, -1).toLowerCase(),
+              s = t.get(n);
+            null == s
               ? console.log("No rich presence found for", n)
-              : (e = e.replace(i, o));
+              : (e = e.replace(o, s));
           }
         return e;
       }
       var f = n(18015),
-        d = n(62210),
+        g = n(62210),
         u = n(45492);
-      class g {
+      class d {
+        m_CMInterface;
+        m_mapAppInfo = s.LO.map();
+        m_mapRichPresenceLoc = s.LO.map();
+        m_cAppInfoRequestsInFlight = 0;
+        m_setPendingAppInfo = new Set();
+        m_PendingAppInfoPromise;
+        m_PendingAppInfoResolve;
+        m_CacheStorage = null;
+        m_fnCallbackOnAppInfoLoaded = new u.pB();
         constructor() {
-          (this.m_mapAppInfo = o.LO.map()),
-            (this.m_mapRichPresenceLoc = o.LO.map()),
-            (this.m_cAppInfoRequestsInFlight = 0),
-            (this.m_setPendingAppInfo = new Set()),
-            (this.m_CacheStorage = null),
-            (this.m_fnCallbackOnAppInfoLoaded = new u.pB()),
-            (0, o.rC)(this);
+          (0, s.rC)(this);
         }
         Init(e) {
           this.m_CMInterface = e;
@@ -134,7 +138,7 @@
         RegisterCallbackOnLoad(e) {
           if (!this.BHavePendingAppInfoRequests())
             return (
-              (0, d.X)(
+              (0, g.X)(
                 !1,
                 "Registering for callback on appinfo load, but nothing queued",
               ),
@@ -147,13 +151,13 @@
         }
         GetAppInfo(e) {
           if (
-            ((0, d.X)(
+            ((0, g.X)(
               this.m_CMInterface,
               "CAppInfoStore.GetAppInfo called before Init",
             ),
             !this.m_mapAppInfo.has(e))
           ) {
-            let t = new a.Am(e);
+            let t = new p.Am(e);
             this.m_mapAppInfo.set(e, t), this.QueueAppInfoRequest(e);
           }
           return this.m_mapAppInfo.get(e);
@@ -169,62 +173,55 @@
               this.m_PendingAppInfoPromise)
             : Promise.resolve();
         }
-        FlushPendingAppInfo() {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            const e = this.m_PendingAppInfoResolve,
-              t = Array.from(this.m_setPendingAppInfo);
-            (this.m_PendingAppInfoPromise = void 0),
-              (this.m_PendingAppInfoResolve = void 0),
-              this.m_setPendingAppInfo.clear(),
-              yield this.LoadAppInfoBatch(t),
-              null == e || e();
-          });
+        async FlushPendingAppInfo() {
+          const e = this.m_PendingAppInfoResolve,
+            t = Array.from(this.m_setPendingAppInfo);
+          (this.m_PendingAppInfoPromise = void 0),
+            (this.m_PendingAppInfoResolve = void 0),
+            this.m_setPendingAppInfo.clear(),
+            await this.LoadAppInfoBatch(t),
+            e?.();
         }
-        LoadAppInfoBatch(e) {
-          var t;
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            this.m_cAppInfoRequestsInFlight++;
-            let n = yield this.LoadAppInfoBatchFromLocalCache(e);
-            if (n.length) {
-              console.log("Loading batch of App Info from Steam: ", n),
-                yield null === (t = this.m_CMInterface) || void 0 === t
-                  ? void 0
-                  : t.WaitUntilLoggedOn();
-              let e = p.gA.Init(f.Fi);
-              e.Body().set_language((0, s.jM)(r.De.LANGUAGE));
-              const i = 50;
-              for (; n.length > 0; ) {
-                const t = Math.min(i, n.length),
-                  o = n.slice(0, t);
-                (n = n.slice(t)), e.Body().set_appids(o);
-                const s = yield f.AE.GetApps(
-                  this.m_CMInterface.GetServiceTransport(),
-                  e,
-                );
-                1 == s.GetEResult()
-                  ? this.OnGetAppsResponse(s)
-                  : console.error(
-                      `Error when calling CommunityService.GetApps: EResult=${s.GetEResult()}, AppIDs:`,
-                      o,
-                    );
-              }
+        async LoadAppInfoBatch(e) {
+          this.m_cAppInfoRequestsInFlight++;
+          let t = await this.LoadAppInfoBatchFromLocalCache(e);
+          if (t.length) {
+            console.log("Loading batch of App Info from Steam: ", t),
+              await this.m_CMInterface?.WaitUntilLoggedOn();
+            let e = a.gA.Init(f.Fi);
+            e.Body().set_language((0, i.jM)(r.De.LANGUAGE));
+            const n = 50;
+            for (; t.length > 0; ) {
+              const o = Math.min(n, t.length),
+                s = t.slice(0, o);
+              (t = t.slice(o)), e.Body().set_appids(s);
+              const i = await f.AE.GetApps(
+                this.m_CMInterface.GetServiceTransport(),
+                e,
+              );
+              1 == i.GetEResult()
+                ? this.OnGetAppsResponse(i)
+                : console.error(
+                    `Error when calling CommunityService.GetApps: EResult=${i.GetEResult()}, AppIDs:`,
+                    s,
+                  );
             }
-            0 == --this.m_cAppInfoRequestsInFlight &&
-              0 == this.m_setPendingAppInfo.size &&
-              (this.m_fnCallbackOnAppInfoLoaded.Dispatch(),
-              this.m_fnCallbackOnAppInfoLoaded.ClearAllCallbacks());
-          });
+          }
+          0 == --this.m_cAppInfoRequestsInFlight &&
+            0 == this.m_setPendingAppInfo.size &&
+            (this.m_fnCallbackOnAppInfoLoaded.Dispatch(),
+            this.m_fnCallbackOnAppInfoLoaded.ClearAllCallbacks());
         }
         OnGetAppsResponse(e) {
           let t = [];
           for (let n of e.Body().apps()) {
             let e = this.m_mapAppInfo.get(n.appid());
-            (0, d.X)(
+            (0, g.X)(
               e,
               `Got AppInfo response for unrequested AppID: ${n.appid()}`,
             ),
               e &&
-                ((e = new a.Am(n.appid())),
+                ((e = new p.Am(n.appid())),
                 e.DeserializeFromMessage(n),
                 this.m_mapAppInfo.set(n.appid(), e),
                 t.push(e));
@@ -233,29 +230,27 @@
         }
         OnAppOverviewChange(e) {
           for (let t of e) {
-            const e = new a.Am(t.appid());
+            const e = new p.Am(t.appid());
             e.DeserializeFromAppOverview(t),
               e.is_initialized && this.m_mapAppInfo.set(t.appid(), e);
           }
         }
-        EnsureAppInfoForAppIDs(e) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            let t = !1;
-            return (
-              e.forEach((e) => {
-                let n = this.m_mapAppInfo.get(e);
-                n
-                  ? n.is_valid || (t = !0)
-                  : ((n = new a.Am(e)),
-                    this.m_mapAppInfo.set(e, n),
-                    this.QueueAppInfoRequest(e),
-                    (t = !0));
-              }),
-              t && void 0 !== this.m_PendingAppInfoPromise
-                ? this.m_PendingAppInfoPromise
-                : Promise.resolve()
-            );
-          });
+        async EnsureAppInfoForAppIDs(e) {
+          let t = !1;
+          return (
+            e.forEach((e) => {
+              let n = this.m_mapAppInfo.get(e);
+              n
+                ? n.is_valid || (t = !0)
+                : ((n = new p.Am(e)),
+                  this.m_mapAppInfo.set(e, n),
+                  this.QueueAppInfoRequest(e),
+                  (t = !0));
+            }),
+            t && void 0 !== this.m_PendingAppInfoPromise
+              ? this.m_PendingAppInfoPromise
+              : Promise.resolve()
+          );
         }
         SetCacheStorage(e) {
           this.m_CacheStorage = e;
@@ -263,66 +258,59 @@
         GetCacheKeyForAppID(e) {
           return "APPINFO_" + e;
         }
-        LoadAppInfoBatchFromLocalCache(e) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            if (!this.m_CacheStorage) return e;
-            console.log("Loading batch of App Info from Local Cache: ", e);
-            const t = new Date(new Date().getTime() - 12096e5),
-              n = (e) =>
-                (0, i.mG)(this, void 0, void 0, function* () {
-                  var n;
-                  const i = yield null === (n = this.m_CacheStorage) ||
-                  void 0 === n
-                    ? void 0
-                    : n.GetObject(this.GetCacheKeyForAppID(e));
-                  if (!i) return e;
-                  let o = this.m_mapAppInfo.get(e);
-                  return (
-                    (0, d.X)(
-                      o,
-                      "Didn't find AppInfo in our map when loading from cache but it should've been there?",
-                    ),
-                    o
-                      ? ((o = new a.Am(e)),
-                        o.DeserializeFromCacheObject(i),
-                        o.is_initialized
-                          ? (this.m_mapAppInfo.set(e, o),
-                            o.time_updated_from_server < t ? e : null)
-                          : (console.warn(
-                              "Failed to deserialize cached App Info: ",
-                              e,
-                              i,
-                            ),
-                            e))
-                      : e
-                  );
-                });
-            let o = e.map((e) => n(e));
-            return (yield Promise.all(o)).filter((e) => null !== e);
-          });
-        }
-        SaveAppInfoBatchToLocalCache(e) {
-          return (0, i.mG)(this, void 0, void 0, function* () {
-            if (this.m_CacheStorage) {
-              console.log(
-                "Saving batch of App Info to Local Cache: ",
-                e.map((e) => e.appid),
+        async LoadAppInfoBatchFromLocalCache(e) {
+          if (!this.m_CacheStorage) return e;
+          console.log("Loading batch of App Info from Local Cache: ", e);
+          const t = new Date(new Date().getTime() - 12096e5),
+            n = async (e) => {
+              const n = await this.m_CacheStorage?.GetObject(
+                this.GetCacheKeyForAppID(e),
               );
-              for (const t of e) {
-                const e = t.SerializeToCacheObject();
-                e &&
-                  this.m_CacheStorage.StoreObject(
-                    this.GetCacheKeyForAppID(t.appid),
-                    e,
-                  );
-              }
+              if (!n) return e;
+              let o = this.m_mapAppInfo.get(e);
+              return (
+                (0, g.X)(
+                  o,
+                  "Didn't find AppInfo in our map when loading from cache but it should've been there?",
+                ),
+                o
+                  ? ((o = new p.Am(e)),
+                    o.DeserializeFromCacheObject(n),
+                    o.is_initialized
+                      ? (this.m_mapAppInfo.set(e, o),
+                        o.time_updated_from_server < t ? e : null)
+                      : (console.warn(
+                          "Failed to deserialize cached App Info: ",
+                          e,
+                          n,
+                        ),
+                        e))
+                  : e
+              );
+            };
+          let o = e.map((e) => n(e));
+          return (await Promise.all(o)).filter((e) => null !== e);
+        }
+        async SaveAppInfoBatchToLocalCache(e) {
+          if (this.m_CacheStorage) {
+            console.log(
+              "Saving batch of App Info to Local Cache: ",
+              e.map((e) => e.appid),
+            );
+            for (const t of e) {
+              const e = t.SerializeToCacheObject();
+              e &&
+                this.m_CacheStorage.StoreObject(
+                  this.GetCacheKeyForAppID(t.appid),
+                  e,
+                );
             }
-          });
+          }
         }
         Localize(e, t, n) {
-          const i = this.GetRichPresenceLoc(e);
-          return i
-            ? i.Localize(t, n)
+          const o = this.GetRichPresenceLoc(e);
+          return o
+            ? o.Localize(t, n)
             : 1 != r.De.EUNIVERSE
               ? (console.log(
                   `Unable to find app localization information for app ${e} token ${t}, this may not have had a chance to load yet`,
@@ -334,7 +322,7 @@
           if (this.m_mapRichPresenceLoc.has(e.toString())) {
             let t = this.m_mapRichPresenceLoc.get(e.toString());
             return (
-              t.m_nLastUpdated + 6e4 * a.x3 < Date.now() &&
+              t.m_nLastUpdated + 6e4 * p.x3 < Date.now() &&
                 this.QueueRichPresenceLocRequest(t),
               t
             );
@@ -354,13 +342,12 @@
           e.m_nLastUpdated = Date.now();
           for (let n of t) {
             let t = n.language(),
-              i = e.m_mapLanguages.get(t);
-            i
-              ? i.clear()
+              o = e.m_mapLanguages.get(t);
+            o
+              ? o.clear()
               : (e.m_mapLanguages.set(t, new Map()),
-                (i = e.m_mapLanguages.get(t)));
-            for (let e of n.tokens())
-              null == i || i.set(e.name().toLowerCase(), e.value());
+                (o = e.m_mapLanguages.get(t)));
+            for (let e of n.tokens()) o?.set(e.name().toLowerCase(), e.value());
           }
         }
         QueueRichPresenceLocRequest(e) {
@@ -369,7 +356,7 @@
               ((e.m_fetching = this.m_CMInterface
                 .WaitUntilLoggedOn()
                 .then(() => {
-                  let t = p.gA.Init(f.tj);
+                  let t = a.gA.Init(f.tj);
                   return (
                     t.Body().set_appid(e.GetAppID()),
                     t.Body().set_language(r.De.LANGUAGE),
@@ -398,9 +385,9 @@
           );
         }
       }
-      (0, i.gn)([o.aD], g.prototype, "OnGetAppsResponse", null),
-        (0, i.gn)([o.aD], g.prototype, "OnRichPresenceLocUpdate", null);
-      const A = new g();
+      (0, o.gn)([s.aD], d.prototype, "OnGetAppsResponse", null),
+        (0, o.gn)([s.aD], d.prototype, "OnRichPresenceLocUpdate", null);
+      const A = new d();
     },
   },
 ]);

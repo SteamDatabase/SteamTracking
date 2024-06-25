@@ -252,8 +252,10 @@
         return new a(t.bbcode_dictionary, t.pm_schema).ParseBBCode(e);
       }
       class s {
+        m_nodes = [];
+        m_schema;
         constructor(e) {
-          (this.m_nodes = []), (this.m_schema = e);
+          this.m_schema = e;
         }
         AppendText(e, t) {
           let n = 0;
@@ -277,14 +279,15 @@
           (!("convertContentToAttr" in e) ||
             !e.convertContentToAttr ||
             (r && r[e.convertContentToAttr]) ||
-            ((r = Object.assign(Object.assign({}, r || {}), {
+            ((r = {
+              ...(r || {}),
               [e.convertContentToAttr]:
                 ((o = n),
                 o
                   .filter((e) => e.isText)
                   .map((e) => e.text)
                   .join()),
-            })),
+            }),
             (n = [])),
           "node" in e)
         ) {
@@ -297,6 +300,7 @@
         return n.map((t) => t.mark([...t.marks, e.mark.create(r)]));
       }
       class a extends r.AX {
+        m_schema;
         constructor(e, t) {
           super(e, () => new s(t)), (this.m_schema = t);
         }
@@ -326,10 +330,12 @@
       }
     },
     85314: (e, t, n) => {
-      n.d(t, { F: () => o });
-      var r = n(85556),
-        i = n(23126);
-      class o {
+      n.d(t, { F: () => i });
+      var r = n(23126);
+      class i {
+        m_ProseMirrorSchema;
+        m_mapBBCodeDictionary = new Map();
+        m_PMToBBCodeConfig = { mapNodes: new Map(), mapMarks: new Map() };
         get pm_schema() {
           return this.m_ProseMirrorSchema;
         }
@@ -340,11 +346,6 @@
           return this.m_PMToBBCodeConfig;
         }
         constructor(e) {
-          (this.m_mapBBCodeDictionary = new Map()),
-            (this.m_PMToBBCodeConfig = {
-              mapNodes: new Map(),
-              mapMarks: new Map(),
-            });
           const t = {
               doc: { content: "block+" },
               text: { group: "inline" },
@@ -358,83 +359,62 @@
               },
             },
             n = new Map(),
-            o = new Map();
-          for (const i in e.nodes) {
-            const o = e.nodes[i],
-              { bbCode: s } = o,
-              l = (0, r._T)(o, ["bbCode"]);
-            (t[i] = l), n.set(i, s);
+            i = new Map();
+          for (const r in e.nodes) {
+            const { bbCode: i, ...o } = e.nodes[r];
+            (t[r] = o), n.set(r, i);
           }
-          const s = {};
+          const o = {};
           for (const t in e.marks) {
-            const n = e.marks[t],
-              { bbCode: i } = n,
-              l = (0, r._T)(n, ["bbCode"]);
-            (s[t] = l), o.set(t, i);
+            const { bbCode: n, ...r } = e.marks[t];
+            (o[t] = r), i.set(t, n);
           }
-          (this.m_ProseMirrorSchema = new i.V_({ nodes: t, marks: s })),
+          (this.m_ProseMirrorSchema = new r.V_({ nodes: t, marks: o })),
             n.forEach((t, n) => {
-              var i;
-              const o = this.m_ProseMirrorSchema.nodes[n],
-                s = e.nodes[n],
-                l = Array.isArray(t) ? t : [t];
-              let a;
-              "list_item+" == s.content
-                ? (a = this.m_ProseMirrorSchema.nodes.list_item)
-                : -1 !=
-                    (null === (i = s.content) || void 0 === i
-                      ? void 0
-                      : i.indexOf("paragraph")) &&
-                  (a = this.m_ProseMirrorSchema.nodes.paragraph),
-                l.forEach((e) => {
-                  var {
-                      tag: t,
-                      BBArgsToAttrs: n,
-                      AttrsToBBArgs: i,
-                      convertContentToAttr: s,
-                    } = e,
-                    l = (0, r._T)(e, [
-                      "tag",
-                      "BBArgsToAttrs",
-                      "AttrsToBBArgs",
-                      "convertContentToAttr",
-                    ]);
-                  this.m_mapBBCodeDictionary.set(
-                    t,
-                    Object.assign(
-                      {
-                        Constructor: {
-                          node: o,
-                          BBArgsToAttrs: n,
-                          convertContentToAttr: s,
-                          acceptNode: a,
-                        },
-                        skipFollowingNewline: !0,
+              const r = this.m_ProseMirrorSchema.nodes[n],
+                i = e.nodes[n],
+                o = Array.isArray(t) ? t : [t];
+              let s;
+              "list_item+" == i.content
+                ? (s = this.m_ProseMirrorSchema.nodes.list_item)
+                : -1 != i.content?.indexOf("paragraph") &&
+                  (s = this.m_ProseMirrorSchema.nodes.paragraph),
+                o.forEach(
+                  ({
+                    tag: e,
+                    BBArgsToAttrs: t,
+                    AttrsToBBArgs: n,
+                    convertContentToAttr: i,
+                    ...o
+                  }) => {
+                    this.m_mapBBCodeDictionary.set(e, {
+                      Constructor: {
+                        node: r,
+                        BBArgsToAttrs: t,
+                        convertContentToAttr: i,
+                        acceptNode: s,
                       },
-                      l,
-                    ),
-                  );
-                });
-              const { tag: c, AttrsToBBArgs: h } = l[0];
-              this.m_PMToBBCodeConfig.mapNodes.set(o, {
-                tag: c,
-                AttrsToBBArgs: h,
+                      skipFollowingNewline: !0,
+                      ...o,
+                    });
+                  },
+                );
+              const { tag: l, AttrsToBBArgs: a } = o[0];
+              this.m_PMToBBCodeConfig.mapNodes.set(r, {
+                tag: l,
+                AttrsToBBArgs: a,
               });
             }),
-            o.forEach((e, t) => {
+            i.forEach((e, t) => {
               const n = this.m_ProseMirrorSchema.marks[t],
-                { tag: i, BBArgsToAttrs: o, AttrsToBBArgs: s } = e,
-                l = (0, r._T)(e, ["tag", "BBArgsToAttrs", "AttrsToBBArgs"]);
-              this.m_mapBBCodeDictionary.set(
-                i,
-                Object.assign(
-                  { Constructor: { mark: n, BBArgsToAttrs: o } },
-                  l,
-                ),
-              ),
+                { tag: r, BBArgsToAttrs: i, AttrsToBBArgs: o, ...s } = e;
+              this.m_mapBBCodeDictionary.set(r, {
+                Constructor: { mark: n, BBArgsToAttrs: i },
+                ...s,
+              }),
                 this.m_PMToBBCodeConfig.mapMarks.set(n, {
-                  tag: i,
-                  AttrsToBBArgs: s,
+                  tag: r,
+                  AttrsToBBArgs: o,
                 });
             });
         }
@@ -445,11 +425,10 @@
       var r = n(96394),
         i = n(4005);
       function o(e, t, n) {
-        var o;
-        const s = (0, r.m8)(),
-          l = null === (o = s.spec.key) || void 0 === o ? void 0 : o.get(n),
-          a = [...n.plugins.filter((e) => e != l), s];
-        return i.yy.create({ schema: t, doc: e, plugins: a });
+        const o = (0, r.m8)(),
+          s = o.spec.key?.get(n),
+          l = [...n.plugins.filter((e) => e != s), o];
+        return i.yy.create({ schema: t, doc: e, plugins: l });
       }
     },
     32300: (e, t, n) => {
@@ -813,23 +792,26 @@
               convertContentToAttr: "src",
             },
           },
-          bullet_list: Object.assign(Object.assign({}, o.iI), {
+          bullet_list: {
+            ...o.iI,
             content: "list_item+",
             group: "block",
             toDOM: l("ul", i().List),
             bbCode: { tag: "list" },
-          }),
-          ordered_list: Object.assign(Object.assign({}, o.dq), {
+          },
+          ordered_list: {
+            ...o.dq,
             content: "list_item+",
             group: "block",
             toDOM: l("ol", i().OrderedList),
             bbCode: { tag: "olist" },
-          }),
-          list_item: Object.assign(Object.assign({}, o.qb), {
+          },
+          list_item: {
+            ...o.qb,
             content: "paragraph block*",
             toDOM: l("li", i().ListItem),
             bbCode: { tag: "*", autocloses: !0 },
-          }),
+          },
           code_block: {
             content: "inline*",
             marks: "",
@@ -946,7 +928,7 @@
                       o += (0, r.lW)(t, e || {});
                     }
                   }
-                return [o, null != s ? s : t];
+                return [o, s ?? t];
               })(t, o, n.marks, c)),
               n.type.isText
                 ? (c += (0, r.bU)(n.text || ""))
@@ -1042,7 +1024,7 @@
       function h(e, t, n) {
         const r = { left: t, top: n },
           o = e.posAtCoords(r);
-        if (null == o ? void 0 : o.pos) {
+        if (o?.pos) {
           const t = e.state.doc.resolve(o.pos);
           e.dispatch(e.state.tr.setSelection(i.Bs.near(t)));
         }
@@ -1067,6 +1049,8 @@
             l.prototype.id || i.aR(l.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             l.sm_m ||
@@ -1145,6 +1129,8 @@
             a.prototype.appid || i.aR(a.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             a.sm_m ||
@@ -1214,6 +1200,8 @@
             c.prototype.notes || i.aR(c.M()),
             s.initialize(this, e, 0, -1, [1], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             c.sm_m ||
@@ -1266,6 +1254,8 @@
             h.prototype.appid || i.aR(h.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             h.sm_m ||
@@ -1334,6 +1324,8 @@
             d.prototype.note_id || i.aR(d.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             d.sm_m ||
@@ -1388,6 +1380,8 @@
             p.prototype.appid || i.aR(p.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             p.sm_m ||
@@ -1523,6 +1517,8 @@
             m.prototype.games_with_notes || i.aR(m.M()),
             s.initialize(this, e, 0, -1, [1], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             m.sm_m ||
@@ -1575,6 +1571,8 @@
             g.prototype.appid || i.aR(g.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             g.sm_m ||
@@ -4010,7 +4008,7 @@
           n.next && n.err("Unexpected trailing text");
           let i = (function (e) {
             let t = Object.create(null);
-            return n(j(e, 0));
+            return n(q(e, 0));
             function n(r) {
               let i = [];
               r.forEach((t) => {
@@ -4019,7 +4017,7 @@
                   let r;
                   for (let e = 0; e < i.length; e++)
                     i[e][0] == t && (r = i[e][1]);
-                  j(e, n).forEach((e) => {
+                  q(e, n).forEach((e) => {
                     r || i.push([t, (r = [])]), -1 == r.indexOf(e) && r.push(e);
                   });
                 });
@@ -4306,7 +4304,7 @@
       function W(e, t) {
         return t - e;
       }
-      function j(e, t) {
+      function q(e, t) {
         let n = [];
         return (
           (function t(r) {
@@ -4321,7 +4319,7 @@
           n.sort(W)
         );
       }
-      function q(e) {
+      function j(e) {
         let t = Object.create(null);
         for (let n in e) {
           let r = e[n];
@@ -4357,7 +4355,7 @@
             (this.markSet = null),
             (this.groups = n.group ? n.group.split(" ") : []),
             (this.attrs = H(n.attrs)),
-            (this.defaultAttrs = q(this.attrs)),
+            (this.defaultAttrs = j(this.attrs)),
             (this.contentMatch = null),
             (this.inlineContent = null),
             (this.isBlock = !(n.inline || "text" == e)),
@@ -4477,7 +4475,7 @@
             (this.spec = r),
             (this.attrs = H(r.attrs)),
             (this.excluded = null);
-          let i = q(this.attrs);
+          let i = j(this.attrs);
           this.instance = i ? new d(this, i) : null;
         }
         create(e = null) {
@@ -6347,7 +6345,7 @@
         nd: () => x,
         nj: () => T,
         vs: () => a,
-        wx: () => j,
+        wx: () => q,
       });
       var r = n(23126);
       const i = Math.pow(2, 16);
@@ -7548,7 +7546,7 @@
       }),
         ((W.prototype = Object.create(Error.prototype)).constructor = W),
         (W.prototype.name = "TransformError");
-      class j {
+      class q {
         constructor(e) {
           (this.doc = e),
             (this.steps = []),
@@ -8174,8 +8172,8 @@
             r.scrollLeft != o && (r.scrollLeft = o);
         }
       }
-      let j = null;
-      function q(e, t) {
+      let q = null;
+      function j(e, t) {
         let n,
           r,
           i,
@@ -8251,7 +8249,7 @@
               })(n, r)
             : !n || (s && 1 == n.nodeType)
               ? { node: e, offset: l }
-              : q(n, r)
+              : j(n, r)
         );
       }
       function L(e, t) {
@@ -8391,7 +8389,7 @@
         }
         null == s &&
           (s = (function (e, t, n) {
-            let { node: r, offset: i } = q(t, n),
+            let { node: r, offset: i } = j(t, n),
               o = -1;
             if (1 == r.nodeType && !r.firstChild) {
               let e = r.getBoundingClientRect();
@@ -10190,13 +10188,13 @@
       function We(e) {
         return 3 == e.nodeType ? e.nodeValue.length : e.childNodes.length;
       }
-      function je(e, t) {
+      function qe(e, t) {
         let n = e.pmViewDesc;
         return (
           n && 0 == n.size && (t < 0 || e.nextSibling || "BR" != e.nodeName)
         );
       }
-      function qe(e, t) {
+      function je(e, t) {
         return t < 0
           ? (function (e) {
               let t = e.domSelectionRange(),
@@ -10209,14 +10207,14 @@
               C &&
                 1 == n.nodeType &&
                 r < We(n) &&
-                je(n.childNodes[r], -1) &&
+                qe(n.childNodes[r], -1) &&
                 (l = !0);
               for (;;)
                 if (r > 0) {
                   if (1 != n.nodeType) break;
                   {
                     let e = n.childNodes[r - 1];
-                    if (je(e, -1)) (i = n), (o = --r);
+                    if (qe(e, -1)) (i = n), (o = --r);
                     else {
                       if (3 != e.nodeType) break;
                       (n = e), (r = n.nodeValue.length);
@@ -10226,7 +10224,7 @@
                   if (Le(n)) break;
                   {
                     let t = n.previousSibling;
-                    for (; t && je(t, -1); )
+                    for (; t && qe(t, -1); )
                       (i = n.parentNode), (o = s(t)), (t = t.previousSibling);
                     if (t) (n = t), (r = We(n));
                     else {
@@ -10248,13 +10246,13 @@
               for (;;)
                 if (r < l) {
                   if (1 != n.nodeType) break;
-                  if (!je(n.childNodes[r], 1)) break;
+                  if (!qe(n.childNodes[r], 1)) break;
                   (i = n), (o = ++r);
                 } else {
                   if (Le(n)) break;
                   {
                     let t = n.nextSibling;
-                    for (; t && je(t, 1); )
+                    for (; t && qe(t, 1); )
                       (i = t.parentNode), (o = s(t) + 1), (t = t.nextSibling);
                     if (t) (n = t), (r = 0), (l = We(n));
                     else {
@@ -10377,22 +10375,22 @@
               t
             );
           })(t);
-        if (8 == n || (A && 72 == n && "c" == r)) return Ke(e, -1) || qe(e, -1);
+        if (8 == n || (A && 72 == n && "c" == r)) return Ke(e, -1) || je(e, -1);
         if ((46 == n && !t.shiftKey) || (A && 68 == n && "c" == r))
-          return Ke(e, 1) || qe(e, 1);
+          return Ke(e, 1) || je(e, 1);
         if (13 == n || 27 == n) return !0;
         if (37 == n || (A && 66 == n && "c" == r)) {
           let t =
             37 == n ? ("ltr" == Je(e, e.state.selection.from) ? -1 : 1) : -1;
-          return Ve(e, t, r) || qe(e, t);
+          return Ve(e, t, r) || je(e, t);
         }
         if (39 == n || (A && 70 == n && "c" == r)) {
           let t =
             39 == n ? ("ltr" == Je(e, e.state.selection.from) ? 1 : -1) : 1;
-          return Ve(e, t, r) || qe(e, t);
+          return Ve(e, t, r) || je(e, t);
         }
         return 38 == n || (A && 80 == n && "c" == r)
-          ? Ye(e, -1, r) || qe(e, -1)
+          ? Ye(e, -1, r) || je(e, -1)
           : 40 == n || (A && 78 == n && "c" == r)
             ? (function (e) {
                 if (!D || e.state.selection.$head.parentOffset > 0) return !1;
@@ -10410,7 +10408,7 @@
                 return !1;
               })(e) ||
               Ye(e, 1, r) ||
-              qe(e, 1)
+              je(e, 1)
             : r == (A ? "m" : "c") &&
               (66 == n || 73 == n || 89 == n || 90 == n);
       }
@@ -11470,7 +11468,7 @@
       class Pt {
         constructor(e, t) {
           (this.toDOM = e),
-            (this.spec = t || jt),
+            (this.spec = t || qt),
             (this.side = this.spec.side || 0);
         }
         map(e, t, n, r) {
@@ -11497,7 +11495,7 @@
       }
       class _t {
         constructor(e, t) {
-          (this.attrs = e), (this.spec = t || jt);
+          (this.attrs = e), (this.spec = t || qt);
         }
         map(e, t, n, r) {
           let i = e.map(t.from + r, this.spec.inclusiveStart ? -1 : 1) - n,
@@ -11522,7 +11520,7 @@
       }
       class $t {
         constructor(e, t) {
-          (this.attrs = e), (this.spec = t || jt);
+          (this.attrs = e), (this.spec = t || qt);
         }
         map(e, t, n, r) {
           let i = e.mapResult(t.from + r, 1);
@@ -11586,13 +11584,13 @@
         }
       }
       const Wt = [],
-        jt = {};
-      class qt {
+        qt = {};
+      class jt {
         constructor(e, t) {
           (this.local = e.length ? e : Wt), (this.children = t.length ? t : Wt);
         }
         static create(e, t) {
-          return t.length ? Ut(t, e, 0, jt) : Lt;
+          return t.length ? Ut(t, e, 0, qt) : Lt;
         }
         find(e, t, n) {
           let r = [];
@@ -11617,7 +11615,7 @@
         map(e, t, n) {
           return this == Lt || 0 == e.maps.length
             ? this
-            : this.mapInner(e, t, 0, 0, n || jt);
+            : this.mapInner(e, t, 0, 0, n || qt);
         }
         mapInner(e, t, n, r, i) {
           let o;
@@ -11701,16 +11699,16 @@
                     );
                   }
                 }
-                return new qt(t.sort(Gt), l);
+                return new jt(t.sort(Gt), l);
               })(this.children, o || [], e, t, n, r, i)
             : o
-              ? new qt(o.sort(Gt), Wt)
+              ? new jt(o.sort(Gt), Wt)
               : Lt;
         }
         add(e, t) {
           return t.length
             ? this == Lt
-              ? qt.create(e, t)
+              ? jt.create(e, t)
               : this.addInner(e, t, 0)
             : this;
         }
@@ -11725,14 +11723,14 @@
                 i += 3;
               r[i] == o
                 ? (r[i + 2] = r[i + 2].addInner(e, s, l + 1))
-                : r.splice(i, 0, o, o + e.nodeSize, Ut(s, e, l + 1, jt)),
+                : r.splice(i, 0, o, o + e.nodeSize, Ut(s, e, l + 1, qt)),
                 (i += 3);
             }
           });
           let o = Jt(i ? Kt(t) : t, -n);
           for (let t = 0; t < o.length; t++)
             o[t].type.valid(e, o[t]) || o.splice(t--, 1);
-          return new qt(
+          return new jt(
             o.length ? this.local.concat(o).sort(Gt) : this.local,
             r || this.children,
           );
@@ -11767,12 +11765,12 @@
           return n == this.children && r == this.local
             ? this
             : r.length || n.length
-              ? new qt(r, n)
+              ? new jt(r, n)
               : Lt;
         }
         forChild(e, t) {
           if (this == Lt) return this;
-          if (t.isLeaf) return qt.empty;
+          if (t.isLeaf) return jt.empty;
           let n, r;
           for (let t = 0; t < this.children.length; t += 3)
             if (this.children[t] >= e) {
@@ -11790,7 +11788,7 @@
             }
           }
           if (r) {
-            let e = new qt(r.sort(Gt), Wt);
+            let e = new jt(r.sort(Gt), Wt);
             return n ? new Ht([e, n]) : e;
           }
           return n || Lt;
@@ -11798,7 +11796,7 @@
         eq(e) {
           if (this == e) return !0;
           if (
-            !(e instanceof qt) ||
+            !(e instanceof jt) ||
             this.local.length != e.local.length ||
             this.children.length != e.children.length
           )
@@ -11826,18 +11824,18 @@
           return t;
         }
       }
-      (qt.empty = new qt([], [])), (qt.removeOverlap = Xt);
-      const Lt = qt.empty;
+      (jt.empty = new jt([], [])), (jt.removeOverlap = Xt);
+      const Lt = jt.empty;
       class Ht {
         constructor(e) {
           this.members = e;
         }
         map(e, t) {
-          const n = this.members.map((n) => n.map(e, t, jt));
+          const n = this.members.map((n) => n.map(e, t, qt));
           return Ht.from(n);
         }
         forChild(e, t) {
-          if (t.isLeaf) return qt.empty;
+          if (t.isLeaf) return jt.empty;
           let n = [];
           for (let r = 0; r < this.members.length; r++) {
             let i = this.members[r].forChild(e, t);
@@ -11874,10 +11872,10 @@
               return e[0];
             default:
               return new Ht(
-                e.every((e) => e instanceof qt)
+                e.every((e) => e instanceof jt)
                   ? e
                   : e.reduce(
-                      (e, t) => e.concat(t instanceof qt ? t : t.members),
+                      (e, t) => e.concat(t instanceof jt ? t : t.members),
                       [],
                     ),
               );
@@ -11924,7 +11922,7 @@
         for (let e = 0; e < s.length; e++)
           s[e].type.valid(t, s[e]) ||
             (r.onRemove && r.onRemove(s[e].spec), s.splice(e--, 1));
-        return s.length || i.length ? new qt(s, i) : Lt;
+        return s.length || i.length ? new jt(s, i) : Lt;
       }
       function Gt(e, t) {
         return e.from - t.from || e.to - t.to;
@@ -11963,7 +11961,7 @@
             r && r != Lt && t.push(r);
           }),
           e.cursorWrapper &&
-            t.push(qt.create(e.state.doc, [e.cursorWrapper.deco])),
+            t.push(jt.create(e.state.doc, [e.cursorWrapper.deco])),
           Ht.from(t)
         );
       }
@@ -12896,18 +12894,18 @@
             this.editable &&
               (function (e) {
                 if (e.setActive) return e.setActive();
-                if (j) return e.focus(j);
+                if (q) return e.focus(q);
                 let t = V(e);
                 e.focus(
-                  null == j
+                  null == q
                     ? {
                         get preventScroll() {
-                          return (j = { preventScroll: !0 }), !0;
+                          return (q = { preventScroll: !0 }), !0;
                         },
                       }
                     : void 0,
                 ),
-                  j || ((j = !1), W(t, 0));
+                  q || ((q = !1), W(t, 0));
               })(this.dom),
             Te(this),
             this.domObserver.start();

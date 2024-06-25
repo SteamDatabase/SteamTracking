@@ -330,7 +330,7 @@
     },
     64936: (e, t, s) => {
       "use strict";
-      s.d(t, { JW: () => u, kl: () => p, rw: () => v, zD: () => d });
+      s.d(t, { JW: () => c, kl: () => p, rw: () => v, zD: () => d });
       var n = s(85556),
         r = s(54842),
         a = s(37485),
@@ -339,11 +339,11 @@
         l = (s(29480), s(37563));
       class j {
         constructor() {
-          (this.bOpenEventLandingPage = !1),
-            (this.bIncludeFeaturedAsGameSource = !0),
-            (this.nOverrideDateNow = void 0),
-            (0, r.rC)(this);
+          (0, r.rC)(this);
         }
+        bOpenEventLandingPage = !1;
+        bIncludeFeaturedAsGameSource = !0;
+        nOverrideDateNow = void 0;
         get bRequireAllEventsLoadedInTimeBlock() {
           return !1;
         }
@@ -389,19 +389,18 @@
         }
       }
       (0, n.gn)([r.LO], j.prototype, "nOverrideDateNow", void 0);
-      const u = new j();
-      window.g_EventCalendarDevFeatures = u;
-      const c = new Date(),
-        m = Math.floor(c.getTime() / 1e3);
+      const c = new j();
+      window.g_EventCalendarDevFeatures = c;
+      const u = new Date(),
+        m = Math.floor(u.getTime() / 1e3);
       function p() {
-        var e;
-        return null !== (e = u.nOverrideDateNow) && void 0 !== e ? e : m;
+        return c.nOverrideDateNow ?? m;
       }
       function d() {
         return i.useMemo(() => p(), []);
       }
       function v() {
-        return i.useMemo(() => u.GetTimeNowWithOverrideAsDate(), []);
+        return i.useMemo(() => c.GetTimeNowWithOverrideAsDate(), []);
       }
     },
     40833: (e, t, s) => {
@@ -414,8 +413,8 @@
         i = s(3783),
         l = s(31421),
         j = s(77151),
-        u = s(86437),
-        c = s(80886),
+        c = s(86437),
+        u = s(80886),
         m = s(90366),
         p = s(85305),
         d = s(85884),
@@ -428,9 +427,9 @@
         y = s(83502),
         k = s(34913),
         w = s(22446),
-        O = s(25006),
-        D = s(13129),
-        _ = s(31846),
+        D = s(25006),
+        _ = s(13129),
+        O = s(31846),
         C = s(13499),
         I = s(37563);
       const P = "capsule_index_";
@@ -446,25 +445,23 @@
             onlyOneDiscountPct: E,
           } = e,
           [y, w] = n.useState(!1),
-          [C] = (0, c.jk)(t.id, (0, u.TM)(t.type), r.bk),
-          [z] = (0, c.vs)(s && (null == C ? void 0 : C.GetParentAppID()), r.bk),
-          S = (0, O.bJ)(),
+          [C] = (0, u.jk)(t.id, (0, c.TM)(t.type), r.bk),
+          [z] = (0, u.vs)(s && C?.GetParentAppID(), r.bk),
+          S = (0, D.bJ)(),
           T = (0, I.id)();
         if (!C) return null;
         const N = Boolean(z),
-          H = n.createElement(
-            A,
-            Object.assign({}, e, {
-              info: t,
-              bIsHovered: y,
-              bHasParentAppToDisplay: N,
-              onlyOneDiscountPct: E,
-            }),
-          );
+          H = n.createElement(A, {
+            ...e,
+            info: t,
+            bIsHovered: y,
+            bHasParentAppToDisplay: N,
+            onlyOneDiscountPct: E,
+          });
         return n.createElement(
           o.s,
           {
-            className: (0, D.Z)({
+            className: (0, _.Z)({
               [b().OuterCapsuleContainer]: !0,
               [P + d]: 0 == d,
             }),
@@ -498,17 +495,17 @@
           N &&
             n.createElement(
               a.Ks,
-              Object.assign(
-                { className: b().CapsuleParentInfo },
-                (0, f.h)(z, S, T, e.strExtraParams),
-              ),
+              {
+                className: b().CapsuleParentInfo,
+                ...(0, f.h)(z, S, T, e.strExtraParams),
+              },
               n.createElement(
                 g.zw,
                 { appid: z.GetAppID() },
                 n.createElement(
                   "div",
                   { className: b().ParentType },
-                  (0, _.Xx)(
+                  (0, O.Xx)(
                     11 == C.GetAppType()
                       ? "#SalePage_ParentApp_SoundTrack"
                       : "#SalePage_ParentApp_DLC",
@@ -521,81 +518,68 @@
                     id: z.GetAppID(),
                     strExtraParams: e.strExtraParams,
                   },
-                  n.createElement(
-                    "img",
-                    Object.assign(
-                      {
-                        loading: "lazy",
-                        className: m.AppCapsuleImage,
-                        alt: z.GetName(),
-                        src: z.GetAssets().GetSmallCapsuleURL(),
-                      },
-                      (0, r.fn)(),
-                    ),
-                  ),
+                  n.createElement("img", {
+                    loading: "lazy",
+                    className: m.AppCapsuleImage,
+                    alt: z.GetName(),
+                    src: z.GetAssets().GetSmallCapsuleURL(),
+                    ...(0, r.fn)(),
+                  }),
                 ),
               ),
             ),
         );
       }
       function A(e) {
-        var t;
         const {
-            info: s,
-            bHidePriceIfOwned: r,
-            bHideStatusBanners: o,
-            strExtraParams: i,
-            imageType: m,
-            bHasParentAppToDisplay: p,
-            bUseSubscriptionLayout: v,
-            elElementToAppendToHover: b,
-            bHidePrice: f,
-            bHidePlatforms: k,
-            creatorAccountID: D,
+            info: t,
+            bHidePriceIfOwned: s,
+            bHideStatusBanners: r,
+            strExtraParams: o,
+            imageType: i,
+            bHasParentAppToDisplay: m,
+            bUseSubscriptionLayout: p,
+            elElementToAppendToHover: v,
+            bHidePrice: b,
+            bHidePlatforms: f,
+            creatorAccountID: k,
             bIsHovered: _,
-            onlyOneDiscountPct: I,
+            onlyOneDiscountPct: O,
           } = e,
-          [P] = (0, c.jk)(s.id, (0, u.TM)(s.type), { include_platforms: !0 }),
-          z = (0, O.bJ)(),
+          [I] = (0, u.jk)(t.id, (0, c.TM)(t.type), { include_platforms: !0 }),
+          P = (0, D.bJ)(),
+          z =
+            ((0, g.Dt)(t.type),
+            (0, n.useMemo)(() => I?.GetIncludedAppIDsOrSelf(), [I])),
           A =
-            ((0, g.Dt)(s.type),
-            (0, n.useMemo)(
-              () => (null == P ? void 0 : P.GetIncludedAppIDsOrSelf()),
-              [P],
-            )),
-          S =
-            P &&
-            (null == P
-              ? void 0
-              : P.GetIncludedAppIDsOrSelf().every((e) =>
-                  j.jg.Get().BOwnsApp(e),
-                ));
-        if (!P) return null;
-        const T = S && !o,
-          N = (0, C.bk)((0, l.Hf)(`${P.GetStorePageURL()}${i || ""}`, z));
-        let H,
-          x = null;
-        if (v && 0 == (null == P ? void 0 : P.GetStoreItemType()))
-          x = n.createElement(y.r, { appid: P.GetAppID(), bIsMuted: _ });
-        else if (b);
+            I &&
+            I?.GetIncludedAppIDsOrSelf().every((e) => j.jg.Get().BOwnsApp(e));
+        if (!I) return null;
+        const S = A && !r,
+          T = (0, C.bk)((0, l.Hf)(`${I.GetStorePageURL()}${o || ""}`, P));
+        let N,
+          H = null;
+        if (p && 0 == I?.GetStoreItemType())
+          H = n.createElement(y.r, { appid: I.GetAppID(), bIsMuted: _ });
+        else if (v);
         else {
-          const t = S && r,
-            a = T;
-          x = n.createElement(d.Hl, {
-            info: s,
+          const r = A && s,
+            a = S;
+          H = n.createElement(d.Hl, {
+            info: t,
             bShowAsMuted: a,
-            bHidePrice: f,
-            bShowInLibraryInsteadOfPrice: t,
-            bHidePlatforms: k,
-            creatorAccountID: D,
+            bHidePrice: b,
+            bShowInLibraryInsteadOfPrice: r,
+            bHidePlatforms: f,
+            creatorAccountID: k,
             bShowName: e.bShowName,
-            onlyOneDiscountPct: I,
+            onlyOneDiscountPct: O,
           });
         }
         return (
-          "overrideNavigation" in s &&
-            (H = (e) => (
-              s.overrideNavigation(e),
+          "overrideNavigation" in t &&
+            (N = (e) => (
+              t.overrideNavigation(e),
               e.preventDefault(),
               e.stopPropagation(),
               !1
@@ -603,22 +587,19 @@
           n.createElement(
             a.IS,
             {
-              href: H ? null : N,
+              href: N ? null : T,
               style: { display: "block", cursor: "pointer" },
-              preferredFocus: p,
-              onClick: H,
+              preferredFocus: m,
+              onClick: N,
             },
-            n.createElement(E.v, { appids: A, hide_status_banners: o }),
-            n.createElement(d.a4, { imageType: m, info: s }),
+            n.createElement(E.v, { appids: z, hide_status_banners: r }),
+            n.createElement(d.a4, { imageType: i, info: t }),
             n.createElement(w.y, {
               eDeckCompatibilityCategory:
-                null === (t = null == P ? void 0 : P.GetPlatforms()) ||
-                void 0 === t
-                  ? void 0
-                  : t.steam_deck_compat_category,
+                I?.GetPlatforms()?.steam_deck_compat_category,
             }),
-            Boolean(_) && n.createElement(h.v, { appInfo: s }),
-            x,
+            Boolean(_) && n.createElement(h.v, { appInfo: t }),
+            H,
           )
         );
       }

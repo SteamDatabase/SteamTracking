@@ -158,11 +158,10 @@
         i = o(20417),
         r = o(45492);
       class a extends n.Component {
-        constructor() {
-          super(...arguments),
-            (this.m_schUpdate = new r.Ar()),
-            (this.m_bSetupComplete = !1);
-        }
+        m_elCanvas;
+        m_Context;
+        m_schUpdate = new r.Ar();
+        m_bSetupComplete = !1;
         componentDidMount() {
           0 == this.props.updateRate && this.updateCanvas();
         }
@@ -222,10 +221,9 @@
         n = o(47427),
         i = o(20417);
       class r extends n.Component {
+        m_refImage = n.createRef();
         constructor(e) {
-          super(e),
-            (this.m_refImage = n.createRef()),
-            (this.state = { nImage: 0 });
+          super(e), (this.state = { nImage: 0 });
         }
         componentDidUpdate(e) {
           JSON.stringify(this.props.rgSources) != JSON.stringify(e.rgSources) &&
@@ -265,17 +263,19 @@
             t < this.props.rgSources.length && this.setState({ nImage: t });
         }
         render() {
-          const e = this.props,
-            { rgSources: t, onIncrementalError: o, onError: i } = e,
-            r = (0, s._T)(e, ["rgSources", "onIncrementalError", "onError"]),
-            a = this.src;
-          return n.createElement(
-            "img",
-            Object.assign({ ref: this.m_refImage }, r, {
-              src: a,
-              onError: this.OnImageError,
-            }),
-          );
+          const {
+              rgSources: e,
+              onIncrementalError: t,
+              onError: o,
+              ...s
+            } = this.props,
+            i = this.src;
+          return n.createElement("img", {
+            ref: this.m_refImage,
+            ...s,
+            src: i,
+            onError: this.OnImageError,
+          });
         }
       }
       (0, s.gn)([i.ak], r.prototype, "OnImageError", null);
@@ -296,8 +296,8 @@
         l = o(27605),
         c = o(90649),
         h = o(20417),
-        g = o(28918),
-        p = o(62210),
+        p = o(28918),
+        g = o(62210),
         m = o(13129),
         d = o(54357),
         u = o(45492),
@@ -319,10 +319,9 @@
         v = { pinnedPosition: "BottomLeft", nWidthPct: 50, nHeightPct: 50 },
         I = n.createContext({ bFullscreen: !1 });
       class R extends n.Component {
+        m_refTopCapsule = n.createRef();
         constructor(e) {
-          super(e),
-            (this.m_refTopCapsule = n.createRef()),
-            (this.state = { logoPosition: void 0 });
+          super(e), (this.state = { logoPosition: void 0 });
         }
         componentDidUpdate(e) {
           (e.appid == this.props.appid && e.editMode == this.props.editMode) ||
@@ -345,22 +344,18 @@
         }
         SetPinnedPosition(e) {
           this.setState(
-            {
-              logoPosition: Object.assign(
-                Object.assign({}, this.GetLogoPosition()),
-                { pinnedPosition: e },
-              ),
-            },
+            { logoPosition: { ...this.GetLogoPosition(), pinnedPosition: e } },
             this.PostPositionChangeCallback,
           );
         }
         SetDimensions(e, t) {
           this.setState(
             {
-              logoPosition: Object.assign(
-                Object.assign({}, this.GetLogoPosition()),
-                { nWidthPct: e, nHeightPct: t },
-              ),
+              logoPosition: {
+                ...this.GetLogoPosition(),
+                nWidthPct: e,
+                nHeightPct: t,
+              },
             },
             this.PostPositionChangeCallback,
           );
@@ -377,25 +372,27 @@
             return n.createElement(
               I.Provider,
               { value: { bFullscreen: this.props.bFullscreen } },
-              n.createElement(
-                b,
-                Object.assign({ ref: this.m_refTopCapsule }, this.props),
-              ),
+              n.createElement(y, { ref: this.m_refTopCapsule, ...this.props }),
             );
-          const e = this.props,
-            { children: t, logoPosition: o, editMode: i } = e,
-            r = (0, s._T)(e, ["children", "logoPosition", "editMode"]),
-            a = this.GetLogoPosition();
+          const {
+              children: e,
+              logoPosition: t,
+              editMode: o,
+              ...s
+            } = this.props,
+            i = this.GetLogoPosition();
           return n.createElement(
             I.Provider,
             { value: { bFullscreen: this.props.bFullscreen } },
             n.createElement(
-              b,
-              Object.assign({ ref: this.m_refTopCapsule }, r, {
+              y,
+              {
+                ref: this.m_refTopCapsule,
+                ...s,
                 editMode: !0,
-                logoPosition: a,
+                logoPosition: i,
                 fnOnPositionChanged: this.OnPositionChanged,
-              }),
+              },
               n.createElement("div", {
                 className: `${L().PinBox} ${L().BottomLeft}`,
                 onClick: () => this.SetPinnedPosition("BottomLeft"),
@@ -416,7 +413,7 @@
                 onClick: () => this.SetPinnedPosition("BottomCenter"),
                 title: "Pin to Bottom Center",
               }),
-              t,
+              e,
             ),
           );
         }
@@ -424,12 +421,12 @@
       (0, s.gn)([h.ak], R.prototype, "SetDimensions", null),
         (0, s.gn)([h.ak], R.prototype, "OnPositionChanged", null),
         (0, s.gn)([h.ak], R.prototype, "PostPositionChangeCallback", null);
-      let b = class extends n.Component {
+      let y = class extends n.Component {
+        m_refBackgroundImage = n.createRef();
+        m_refLogoImage = n.createRef();
         constructor(e) {
           super(e),
-            (this.m_refBackgroundImage = n.createRef()),
-            (this.m_refLogoImage = n.createRef()),
-            (0, p.X)(
+            (0, g.X)(
               !e.editMode || e.rgLogoImages.length <= 1,
               "Can't use multiple logo images in edit mode",
             ),
@@ -501,7 +498,7 @@
               height: a,
             } = this.props,
             { bFallbackHeader: l, bHasLogoImage: h } = this.state,
-            p = (0, m.Z)(
+            g = (0, m.Z)(
               L().TopCapsule,
               s,
               !this.state.bHasHeaderImage && L().NoArt,
@@ -519,8 +516,8 @@
             },
             n.createElement(
               "div",
-              { className: p, style: d },
-              n.createElement(O, {
+              { className: g, style: d },
+              n.createElement(k, {
                 ref: this.m_refBackgroundImage,
                 bLowPerfMode: this.props.bLowPerfMode,
                 appid: this.props.appid,
@@ -532,7 +529,7 @@
               }),
               h &&
                 n.createElement(
-                  y,
+                  b,
                   {
                     key: e[0],
                     strLogoImageURL: e[0],
@@ -541,7 +538,7 @@
                     fnOnPositionChanged: t && r,
                     fullscreen: this.props.bFullscreen,
                   },
-                  n.createElement(g.j, {
+                  n.createElement(p.j, {
                     ref: this.m_refLogoImage,
                     className: (0, m.Z)(
                       L().TitleLogo,
@@ -559,16 +556,17 @@
           );
         }
       };
-      (0, s.gn)([h.ak], b.prototype, "OnHeaderError", null),
-        (0, s.gn)([h.ak], b.prototype, "OnIncrementalLogoError", null),
-        (0, s.gn)([h.ak], b.prototype, "OnLogoError", null),
-        (0, s.gn)([h.ak], b.prototype, "OnLogoLoad", null),
-        (0, s.gn)([h.ak], b.prototype, "OnLoaded", null),
-        (b = (0, s.gn)([l.Pi], b));
-      class O extends n.Component {
+      (0, s.gn)([h.ak], y.prototype, "OnHeaderError", null),
+        (0, s.gn)([h.ak], y.prototype, "OnIncrementalLogoError", null),
+        (0, s.gn)([h.ak], y.prototype, "OnLogoError", null),
+        (0, s.gn)([h.ak], y.prototype, "OnLogoLoad", null),
+        (0, s.gn)([h.ak], y.prototype, "OnLoaded", null),
+        (y = (0, s.gn)([l.Pi], y));
+      class k extends n.Component {
+        m_refBackgroundImage = n.createRef();
+        m_refCanvasBlurImage;
         constructor(e) {
           super(e),
-            (this.m_refBackgroundImage = n.createRef()),
             (this.state = {
               bBackgroundLoaded: !1,
               nBlurImageIndex: 0,
@@ -629,7 +627,7 @@
           return e && e.length > 0;
         }
         render() {
-          (0, p.X)(
+          (0, g.X)(
             !this.props.rgBlurImages ||
               this.props.rgBlurImages.length ==
                 this.props.rgHeaderImages.length,
@@ -702,7 +700,7 @@
                     "div",
                     { className: L().ImgContainer },
                     this.HasHeaderImages() &&
-                      n.createElement(g.j, {
+                      n.createElement(p.j, {
                         ref: this.m_refBackgroundImage,
                         rgSources: this.props.rgHeaderImages,
                         className: L().ImgSrc,
@@ -718,7 +716,7 @@
           );
         }
       }
-      function y(e) {
+      function b(e) {
         const {
             logoPosition: t,
             strLogoImageURL: o,
@@ -730,9 +728,9 @@
             nBottomPct: a,
             nTopPct: l,
             nLeftPct: h,
-            nRightPct: g,
-          } = k(t.pinnedPosition, t.nWidthPct, t.nHeightPct),
-          p =
+            nRightPct: p,
+          } = O(t.pinnedPosition, t.nWidthPct, t.nHeightPct),
+          g =
             (n.useContext(I),
             {
               left: `${h}%`,
@@ -750,7 +748,7 @@
             !e.editMode &&
               n.createElement(
                 "div",
-                { className: d, style: p },
+                { className: d, style: g },
                 n.createElement(
                   c.Z,
                   { timeout: S, appear: !0, in: r, classNames: B },
@@ -777,7 +775,7 @@
           ),
         );
       }
-      function k(e, t, o) {
+      function O(e, t, o) {
         let s, n, i, r;
         switch (e) {
           case "BottomLeft":
@@ -801,9 +799,9 @@
         return { nBottomPct: s, nTopPct: n, nLeftPct: i, nRightPct: r };
       }
       var T;
-      (0, s.gn)([h.ak], O.prototype, "OnIncrementalError", null),
-        (0, s.gn)([h.ak], O.prototype, "OnHeaderLoad", null),
-        (0, s.gn)([h.ak], O.prototype, "OnBlurImageFailed", null),
+      (0, s.gn)([h.ak], k.prototype, "OnIncrementalError", null),
+        (0, s.gn)([h.ak], k.prototype, "OnHeaderLoad", null),
+        (0, s.gn)([h.ak], k.prototype, "OnBlurImageFailed", null),
         (function (e) {
           (e.topleft = "Topleft"),
             (e.top = "Top"),
@@ -816,12 +814,16 @@
             (e.bottomright = "BottomRight");
         })(T || (T = {}));
       class N extends n.Component {
+        m_rectLinkRegion;
+        m_elLinkRegionBox;
+        m_nLocalOffsetXPct;
+        m_nLocalOffsetYPct;
+        m_fnMouseUp = null;
+        m_fnMouseMove = null;
+        m_listeners = new u.G_();
+        m_pinType;
         constructor(e) {
-          super(e),
-            (this.m_fnMouseUp = null),
-            (this.m_fnMouseMove = null),
-            (this.m_listeners = new u.G_()),
-            (this.state = {});
+          super(e), (this.state = {});
         }
         componentWillUnmount() {
           this.m_listeners.Unregister();
@@ -840,7 +842,7 @@
             nTopPct: a,
             nLeftPct: l,
             nRightPct: c,
-          } = k(o, s, n);
+          } = O(o, s, n);
           return {
             id: i,
             curBottomPosPct: r,
@@ -895,7 +897,7 @@
             nTopPct: t,
             nLeftPct: o,
             nRightPct: s,
-          } = k(
+          } = O(
             this.m_pinType,
             this.state.curWidthPct,
             this.state.curHeightPct,
@@ -1291,9 +1293,14 @@
       }
       var M = o(54842);
       class H {
+        m_strLibraryLogoURL;
+        m_strLibraryHeroURL;
+        m_unAppID;
+        m_strAppName;
+        m_logoPosition = void 0;
+        m_strSaveURL;
         constructor(e) {
-          (this.m_logoPosition = void 0),
-            (0, M.rC)(this),
+          (0, M.rC)(this),
             (this.m_strLibraryHeroURL = e.strLibraryHeroURL),
             (this.m_strLibraryLogoURL = e.strLibraryLogoURL),
             (this.m_unAppID = e.unAppID),
@@ -1476,9 +1483,9 @@
           ),
         );
       }
-      var j = o(23773),
-        K = o.n(j);
-      class V extends n.Component {
+      var K = o(23773),
+        V = o.n(K);
+      class X extends n.Component {
         OnHighlightRef(e) {
           e && e.scrollIntoView({ block: "center" });
         }
@@ -1489,7 +1496,7 @@
             -1 === t.indexOf(e) && (t.push(e), t.sort()),
             n.createElement(
               "div",
-              { className: K().GameList },
+              { className: V().GameList },
               t.map((t) => {
                 let o = e === t;
                 return n.createElement(
@@ -1497,8 +1504,8 @@
                   {
                     key: t,
                     className: (0, m.Z)(
-                      K().GameListEntry,
-                      o ? K().Selected : K().Uninstalled,
+                      V().GameListEntry,
+                      o ? V().Selected : V().Uninstalled,
                     ),
                     ref: o && this.OnHighlightRef,
                   },
@@ -1509,7 +1516,7 @@
           );
         }
       }
-      var X = o(31846),
+      var j = o(31846),
         q = o(37563),
         Q = o(46882),
         $ = o(1485);
@@ -1535,53 +1542,42 @@
             (e.returnValue =
               "You have unsaved changes.  Are you sure you want to close this window?"));
         }
-        OnOK() {
-          return (0, s.mG)(this, void 0, void 0, function* () {
-            if (this.state.saving) return;
-            const { LogoEditorStore: e } = this.props;
-            this.setState({ saving: !0 }, () =>
-              (0, s.mG)(this, void 0, void 0, function* () {
-                if (e.GetSaveURL()) {
-                  let t = e.GetLogoPosition();
-                  try {
-                    let o = new FormData();
-                    o.append("json", "1"),
-                      o.append("sessionid", q.De.SESSIONID),
-                      o.append(
-                        "app[assets][library_logo][logo_position][pinned_position]",
-                        t.pinnedPosition,
-                      ),
-                      o.append(
-                        "app[assets][library_logo][logo_position][width_pct]",
-                        "" + t.nWidthPct,
-                      ),
-                      o.append(
-                        "app[assets][library_logo][logo_position][height_pct]",
-                        "" + t.nHeightPct,
-                      );
-                    yield a().post(e.GetSaveURL(), o);
-                    this.setState({
-                      saving: !1,
-                      saved: !0,
-                      unsavedChanges: !1,
-                    });
-                  } catch (e) {
-                    console.error(e),
-                      alert("There was a problem saving changes"),
-                      this.setState({ saving: !1 });
-                  }
-                } else
-                  window.opener &&
-                    window.opener.postMessage(
-                      Object.assign(
-                        { appid: e.GetAppID() },
-                        (0, M.ZN)(e.GetLogoPosition()),
-                      ),
-                      "*",
-                    ),
-                    this.OnCancel();
-              }),
-            );
+        async OnOK() {
+          if (this.state.saving) return;
+          const { LogoEditorStore: e } = this.props;
+          this.setState({ saving: !0 }, async () => {
+            if (e.GetSaveURL()) {
+              let t = e.GetLogoPosition();
+              try {
+                let o = new FormData();
+                o.append("json", "1"),
+                  o.append("sessionid", q.De.SESSIONID),
+                  o.append(
+                    "app[assets][library_logo][logo_position][pinned_position]",
+                    t.pinnedPosition,
+                  ),
+                  o.append(
+                    "app[assets][library_logo][logo_position][width_pct]",
+                    "" + t.nWidthPct,
+                  ),
+                  o.append(
+                    "app[assets][library_logo][logo_position][height_pct]",
+                    "" + t.nHeightPct,
+                  );
+                await a().post(e.GetSaveURL(), o);
+                this.setState({ saving: !1, saved: !0, unsavedChanges: !1 });
+              } catch (e) {
+                console.error(e),
+                  alert("There was a problem saving changes"),
+                  this.setState({ saving: !1 });
+              }
+            } else
+              window.opener &&
+                window.opener.postMessage(
+                  { appid: e.GetAppID(), ...(0, M.ZN)(e.GetLogoPosition()) },
+                  "*",
+                ),
+                this.OnCancel();
           });
         }
         OnCancel() {
@@ -1615,7 +1611,7 @@
                       this.state.saved && w().Saved,
                     ),
                   },
-                  (0, X.Xx)("#StoreAdmin_LibraryPlacementTool_ChangesSaved"),
+                  (0, j.Xx)("#StoreAdmin_LibraryPlacementTool_ChangesSaved"),
                 ),
                 n.createElement(
                   "div",
@@ -1623,14 +1619,14 @@
                   n.createElement(
                     $.KM,
                     { onClick: this.OnOK, className: w().LogoEditorButton },
-                    (0, X.Xx)("#Button_Save"),
+                    (0, j.Xx)("#Button_Save"),
                   ),
                   n.createElement(
                     $.zx,
                     { onClick: this.OnCancel, className: w().LogoEditorButton },
                     this.state.unsavedChanges
-                      ? (0, X.Xx)("#Button_Cancel")
-                      : (0, X.Xx)("#Button_Close"),
+                      ? (0, j.Xx)("#Button_Cancel")
+                      : (0, j.Xx)("#Button_Close"),
                   ),
                 ),
               ),
@@ -1642,12 +1638,10 @@
                   className: w().SavingThrobber,
                 }),
               ),
-              n.createElement(
-                oe,
-                Object.assign({}, this.props, {
-                  fnOnPositionChanged: this.OnPositionChanged,
-                }),
-              ),
+              n.createElement(oe, {
+                ...this.props,
+                fnOnPositionChanged: this.OnPositionChanged,
+              }),
             ),
           );
         }
@@ -1673,7 +1667,7 @@
             n.createElement(
               "div",
               { className: w().LogoEditorGameListContainer },
-              n.createElement(V, { highlightedName: e.GetAppName() }),
+              n.createElement(X, { highlightedName: e.GetAppName() }),
             ),
             n.createElement("div", { className: w().ListDivider }),
             n.createElement(

@@ -10,22 +10,21 @@
       var o = e(47427),
         t = e(7222);
       function n(r) {
-        var s, e;
-        const { dataprops: n, results: a } = r;
-        let d = null;
-        if (a && a.length > 0) {
-          const r = null !== (s = n.appid) && void 0 !== s ? s : null;
+        const { dataprops: s, results: e } = r;
+        let n = null;
+        if (e && e.length > 0) {
+          const r = s.appid ?? null;
           if (r) {
-            let s = a.findIndex((s) => s.appid == r);
-            d = -1 != s ? a[s] : null;
+            let s = e.findIndex((s) => s.appid == r);
+            n = -1 != s ? e[s] : null;
           }
-          const o = null !== (e = n.search_id) && void 0 !== e ? e : null;
-          if (!d && o) {
-            let r = a.findIndex((r) => r.search_id == o);
-            d = -1 != r ? a[r] : null;
+          const o = s.search_id ?? null;
+          if (!n && o) {
+            let r = e.findIndex((r) => r.search_id == o);
+            n = -1 != r ? e[r] : null;
           }
         }
-        return d ? o.createElement(t.default, { results: d }) : null;
+        return n ? o.createElement(t.default, { results: n }) : null;
       }
     },
     16649: (r, s, e) => {

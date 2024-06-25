@@ -115,7 +115,7 @@
         return o.createElement(
           "div",
           { className: a.PreviewContainer },
-          o.createElement(C, Object.assign({ bPreview: !0 }, e)),
+          o.createElement(C, { bPreview: !0, ...e }),
         );
       }
       function u(e) {
@@ -126,7 +126,7 @@
             o.createElement(
               "div",
               { className: a.StoreSidebarContainer },
-              o.createElement(C, Object.assign({}, e)),
+              o.createElement(C, { ...e }),
             ),
         );
       }
@@ -308,7 +308,7 @@
                       : "#Store_ControllerSupport_Unknown",
                   bPersonalized: _ || C || b,
                 }),
-              o.createElement(g, Object.assign({}, e)),
+              o.createElement(g, { ...e }),
             ),
         );
       }

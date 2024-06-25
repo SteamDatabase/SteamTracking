@@ -440,125 +440,108 @@
     },
     85948: (e, t, a) => {
       "use strict";
-      a.d(t, { Fz: () => y, TQ: () => C, tE: () => b });
-      var n = a(85556),
-        r = a(80751),
-        o = a.n(r),
-        c = a(73799),
-        i = a.n(c),
-        s = a(47427),
-        l = a(42718),
-        u = a(35427),
-        m = a(16649),
+      a.d(t, { Fz: () => v, TQ: () => f, tE: () => y });
+      var n = a(80751),
+        r = a.n(n),
+        o = a(73799),
+        c = a.n(o),
+        i = a(47427),
+        s = a(42718),
+        l = a(35427),
+        u = a(16649),
         _ = a(37563),
-        d = a(79545),
+        m = a(79545),
         h = a(82182),
-        p = a(40057);
-      const f = "nicknames";
-      function C(e) {
-        const t = (0, p.bY)(),
-          { data: a, isLoading: r } = (0, l.useQuery)([f], () =>
-            (0, n.mG)(this, void 0, void 0, function* () {
-              const e = new Map();
-              if (_.L7.logged_in) {
-                const a = d.gA.Init(h.bM),
-                  n = (yield h.lk.GetNicknameList(t, a)).Body().toObject();
-                (null == n ? void 0 : n.nicknames) &&
-                  n.nicknames.length > 0 &&
-                  n.nicknames.forEach((t) => {
-                    e.set(t.accountid, t.nickname);
-                  });
-              }
-              return e;
-            }),
-          );
+        d = a(40057);
+      const p = "nicknames";
+      function f(e) {
+        const t = (0, d.bY)(),
+          { data: a, isLoading: n } = (0, s.useQuery)([p], async () => {
+            const e = new Map();
+            if (_.L7.logged_in) {
+              const a = m.gA.Init(h.bM),
+                n = (await h.lk.GetNicknameList(t, a)).Body().toObject();
+              n?.nicknames &&
+                n.nicknames.length > 0 &&
+                n.nicknames.forEach((t) => {
+                  e.set(t.accountid, t.nickname);
+                });
+            }
+            return e;
+          });
         return a ? a.get(e) : null;
       }
-      const g = new (i())(
+      const C = new (c())(
           (e) =>
-            (function (e) {
-              var t, a, r, c;
-              return (0, n.mG)(this, void 0, void 0, function* () {
-                if (!e || 0 == e.length) return [];
-                const n =
-                  "community" == (0, _.Zv)()
-                    ? _.De.COMMUNITY_BASE_URL
-                    : _.De.STORE_BASE_URL;
-                if (1 == e.length) {
-                  const r = { accountid: e[0], origin: self.origin },
-                    c = yield o().get(`${n}actions/ajaxgetavatarpersona`, {
-                      params: r,
-                    });
-                  if (
-                    !c ||
-                    200 != c.status ||
-                    1 !=
-                      (null === (t = c.data) || void 0 === t
-                        ? void 0
-                        : t.success) ||
-                    !(null === (a = c.data) || void 0 === a
-                      ? void 0
-                      : a.userinfo)
-                  )
-                    throw `Load single avatar/persona failed ${(0, m.l)(c).strErrorMsg}`;
-                  return [c.data.userinfo];
-                }
-                {
-                  const t = { accountids: e.join(","), origin: self.origin },
-                    a = yield o().get(`${n}actions/ajaxgetmultiavatarpersona`, {
-                      params: t,
-                    });
-                  if (
-                    !a ||
-                    200 != a.status ||
-                    1 !=
-                      (null === (r = a.data) || void 0 === r
-                        ? void 0
-                        : r.success) ||
-                    !(null === (c = a.data) || void 0 === c
-                      ? void 0
-                      : c.userinfos)
-                  )
-                    throw `Load single avatar/persona failed ${(0, m.l)(a).strErrorMsg}`;
-                  const i = new Map();
-                  return (
-                    a.data.userinfos.forEach((e) =>
-                      i.set(new u.K(e.steamid).GetAccountID(), e),
-                    ),
-                    e.map((e) => i.get(e))
-                  );
-                }
-              });
+            (async function (e) {
+              if (!e || 0 == e.length) return [];
+              const t =
+                "community" == (0, _.Zv)()
+                  ? _.De.COMMUNITY_BASE_URL
+                  : _.De.STORE_BASE_URL;
+              if (1 == e.length) {
+                const a = { accountid: e[0], origin: self.origin },
+                  n = await r().get(`${t}actions/ajaxgetavatarpersona`, {
+                    params: a,
+                  });
+                if (
+                  !n ||
+                  200 != n.status ||
+                  1 != n.data?.success ||
+                  !n.data?.userinfo
+                )
+                  throw `Load single avatar/persona failed ${(0, u.l)(n).strErrorMsg}`;
+                return [n.data.userinfo];
+              }
+              {
+                const a = { accountids: e.join(","), origin: self.origin },
+                  n = await r().get(`${t}actions/ajaxgetmultiavatarpersona`, {
+                    params: a,
+                  });
+                if (
+                  !n ||
+                  200 != n.status ||
+                  1 != n.data?.success ||
+                  !n.data?.userinfos
+                )
+                  throw `Load single avatar/persona failed ${(0, u.l)(n).strErrorMsg}`;
+                const o = new Map();
+                return (
+                  n.data.userinfos.forEach((e) =>
+                    o.set(new l.K(e.steamid).GetAccountID(), e),
+                  ),
+                  e.map((e) => o.get(e))
+                );
+              }
             })(e),
           { cache: !1 },
         ),
-        v = "avatarandpersonas";
-      function y(e) {
-        const { data: t, isLoading: a } = (0, l.useQuery)([v, e], () =>
-          g.load(e),
+        g = "avatarandpersonas";
+      function v(e) {
+        const { data: t, isLoading: a } = (0, s.useQuery)([g, e], () =>
+          C.load(e),
         );
         return [t, a];
       }
-      function b(e) {
-        const t = (0, l.useQueryClient)(),
-          { data: a, isLoading: n } = (0, l.useQuery)({
-            queryKey: [v, e],
-            queryFn: () => g.loadMany(e),
+      function y(e) {
+        const t = (0, s.useQueryClient)(),
+          { data: a, isLoading: n } = (0, s.useQuery)({
+            queryKey: [g, e],
+            queryFn: () => C.loadMany(e),
             onSuccess(e) {
               e.forEach((e) => {
-                const a = [v, new u.K(e.steamid).GetAccountID()];
+                const a = [g, new l.K(e.steamid).GetAccountID()];
                 t.setQueryData(a, e);
               });
             },
-            enabled: (null == e ? void 0 : e.length) > 0,
+            enabled: e?.length > 0,
           }),
-          r = (0, s.useMemo)(() => {
+          r = (0, i.useMemo)(() => {
             const e = new Array();
             return (
-              null == a ||
-                a.forEach((t) => {
-                  t instanceof Error || e.push(t);
-                }),
+              a?.forEach((t) => {
+                t instanceof Error || e.push(t);
+              }),
               e
             );
           }, [a]);
@@ -567,7 +550,7 @@
     },
     21400: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => d });
+      a.r(t), a.d(t, { default: () => h });
       var n = a(16305),
         r = a(70267),
         o = a(47427),
@@ -576,42 +559,42 @@
         s = a(31846),
         l = a(37563),
         u = a(81519),
-        m = a(37588),
-        _ = a(13129);
-      function d(e) {
-        const t = (0, m.N)(e.year),
+        _ = a(37588),
+        m = a(13129);
+      function h(e) {
+        const t = (0, _.N)(e.year),
           a = y();
         return o.createElement(
           "div",
           {
-            className: (0, _.Z)(u.MMFrame, t.MMFrame, t.MMOverride),
+            className: (0, m.Z)(u.MMFrame, t.MMFrame, t.MMOverride),
             onClick: a,
           },
           o.createElement(
             "div",
             { className: u.HeaderCtn },
             o.createElement(C, {
-              baseClass: (0, _.Z)(u.ReplayLogo, t.ReplayLogo),
-              accentClass: (0, _.Z)(u.ReplayLogoAccent, t.ReplayLogoAccent),
+              baseClass: (0, m.Z)(u.ReplayLogo, t.ReplayLogo),
+              accentClass: (0, m.Z)(u.ReplayLogoAccent, t.ReplayLogoAccent),
             }),
             o.createElement(g, { year: e.year, theme: t }),
           ),
-          o.createElement(f, { className: (0, _.Z)(u.SteamLogo, t.SteamLogo) }),
+          o.createElement(f, { className: (0, m.Z)(u.SteamLogo, t.SteamLogo) }),
           o.createElement(v, { theme: t }),
           o.createElement(
             "div",
-            { className: (0, _.Z)(u.Content, t.Content) },
-            o.createElement(h, { theme: t }),
+            { className: (0, m.Z)(u.Content, t.Content) },
+            o.createElement(d, { theme: t }),
             o.createElement(p, { theme: t }),
             o.createElement(
               "div",
-              { className: (0, _.Z)(u.Description, t.Description) },
+              { className: (0, m.Z)(u.Description, t.Description) },
               (0, s.Xx)("#YIR_MM_Generic_Desc"),
             ),
           ),
         );
       }
-      function h(e) {
+      function d(e) {
         const { theme: t } = e,
           [a] = (0, i.Fz)(l.L7.accountid);
         return a
@@ -620,7 +603,7 @@
               null,
               o.createElement(
                 "div",
-                { className: (0, _.Z)(u.Avatar, t.Avatar) },
+                { className: (0, m.Z)(u.Avatar, t.Avatar) },
                 a &&
                   a.avatar_url &&
                   o.createElement("img", {
@@ -629,10 +612,10 @@
               ),
               o.createElement(
                 "div",
-                { className: (0, _.Z)(u.DataBlock, t.DataBlock) },
+                { className: (0, m.Z)(u.DataBlock, t.DataBlock) },
                 o.createElement(
                   "div",
-                  { className: (0, _.Z)(u.PersonaName, t.PersonaName) },
+                  { className: (0, m.Z)(u.PersonaName, t.PersonaName) },
                   a ? a.persona_name : "",
                 ),
                 o.createElement(
@@ -641,7 +624,7 @@
                   (0, s.yu)(
                     "#YIR_MM_Generic_Title",
                     o.createElement("span", {
-                      className: (0, _.Z)(u.ReplayHighlight, t.ReplayHighlight),
+                      className: (0, m.Z)(u.ReplayHighlight, t.ReplayHighlight),
                     }),
                   ),
                 ),
@@ -655,7 +638,7 @@
         return o.createElement(
           c.s,
           {
-            className: (0, _.Z)(u.ViewPageButton, t.ViewPageButton),
+            className: (0, m.Z)(u.ViewPageButton, t.ViewPageButton),
             onActivate: a,
           },
           (0, s.Xx)("#YIR_MM_Generic_Action"),
@@ -664,14 +647,12 @@
       function f(e) {
         return o.createElement(
           "svg",
-          Object.assign(
-            {
-              xmlns: "http://www.w3.org/2000/svg",
-              viewBox: "0 0 476 600",
-              fill: "none",
-            },
-            e,
-          ),
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 476 600",
+            fill: "none",
+            ...e,
+          },
           o.createElement("path", {
             fill: "currentColor",
             d: "M120.149 -86.0844C-66.5487 -86.0844 -219.429 57.91 -234 240.963L-43.5621 319.782C-27.4326 308.711 -7.95244 302.318 13.0861 302.318C14.9562 302.318 16.8263 302.318 18.6964 302.474L103.396 179.608C103.396 179.062 103.396 178.438 103.396 177.892C103.396 103.985 163.551 43.7991 237.419 43.7991C311.288 43.7991 371.443 103.985 371.443 177.892C371.443 251.8 311.288 311.986 237.419 311.986C236.406 311.986 235.394 311.986 234.381 311.986L113.604 398.211C113.604 399.77 113.682 401.407 113.682 402.966C113.682 458.475 68.5656 503.614 13.0861 503.614C-35.6142 503.614 -76.2888 468.844 -85.5613 422.769L-221.766 366.325C-179.611 515.542 -42.5491 625 120.149 625C316.431 625 475.467 465.803 475.467 269.497C475.467 73.1904 316.353 -86.0844 120.149 -86.0844Z",
@@ -721,13 +702,13 @@
         const { year: t, theme: a } = e;
         return o.createElement(
           "div",
-          { className: (0, _.Z)(u.Header, a.Header) },
+          { className: (0, m.Z)(u.Header, a.Header) },
           (0, s.kQ)(
             "#YIR_MM_Header",
             o.createElement("br", null),
             o.createElement(
               "div",
-              { className: (0, _.Z)(u.YearSubtitle, a.YearSubtitle) },
+              { className: (0, m.Z)(u.YearSubtitle, a.YearSubtitle) },
               (0, s.Xx)("#date_year", t),
             ),
           ),
@@ -736,7 +717,7 @@
       function v(e) {
         return o.createElement(
           "div",
-          { className: (0, _.Z)(u.Hashtag, e.theme.Hashtag) },
+          { className: (0, m.Z)(u.Hashtag, e.theme.Hashtag) },
           (0, s.Xx)("#YIR_MM_HashTag"),
         );
       }
@@ -750,17 +731,14 @@
       a.d(t, { N: () => i });
       var n = a(47427);
       const r = { 2022: a(16173), 2023: a(61450) },
-        o = Object.values(r).reduce(
-          (e, t) => Object.assign(Object.assign({}, e), t),
-          {},
-        ),
+        o = Object.values(r).reduce((e, t) => ({ ...e, ...t }), {}),
         c = 2022;
       function i(e) {
         const [t, a] = (0, n.useState)({});
         return (
           (0, n.useEffect)(() => {
             let t = r[e];
-            t || (t = r[c]), a(Object.assign(Object.assign({}, o), t));
+            t || (t = r[c]), a({ ...o, ...t });
           }, [e]),
           t
         );

@@ -39,7 +39,7 @@
       }
     },
     46157: (e, t, i) => {
-      i.d(t, { C2: () => U, N1: () => N, tA: () => O, YW: () => I });
+      i.d(t, { C2: () => O, N1: () => N, tA: () => U, YW: () => I });
       var n = i(85556),
         s = i(80751),
         r = i.n(s),
@@ -47,8 +47,8 @@
         o = i(77936),
         m = (i(87225), i(62210)),
         d = i(45492),
-        h = i(31846),
-        l = i(45651),
+        l = i(31846),
+        h = i(45651),
         u = i(16997),
         _ = i(46984),
         p = i(37563),
@@ -167,21 +167,19 @@
         return v(e.segmentTemplate.strInitialization, e.strID, 0);
       }
       class k {
-        constructor() {
-          (this.m_strType = void 0),
-            (this.m_nMinBufferTime = 0),
-            (this.m_dtAvailabilityStartTime = null),
-            (this.m_dtPublishTime = null),
-            (this.m_nMinimumUpdatePeriod = 0),
-            (this.m_nTimeShiftBufferDepth = 0),
-            (this.m_nMediaPresentationDuration = 0),
-            (this.m_strBaseURL = ""),
-            (this.m_strStatsLink = ""),
-            (this.m_strStalledLink = ""),
-            (this.m_strEventLogLink = ""),
-            (this.m_rgPeriods = null),
-            (this.m_tsLiveContentStart = 0);
-        }
+        m_strType = void 0;
+        m_nMinBufferTime = 0;
+        m_dtAvailabilityStartTime = null;
+        m_dtPublishTime = null;
+        m_nMinimumUpdatePeriod = 0;
+        m_nTimeShiftBufferDepth = 0;
+        m_nMediaPresentationDuration = 0;
+        m_strBaseURL = "";
+        m_strStatsLink = "";
+        m_strStalledLink = "";
+        m_strEventLogLink = "";
+        m_rgPeriods = null;
+        m_tsLiveContentStart = 0;
         GetType() {
           return this.m_strType;
         }
@@ -274,7 +272,7 @@
           if (a) {
             let e = b(a, t, n);
             e && (r.segmentTemplate = e);
-          } else r.segmentTemplate = Object.assign({}, i);
+          } else r.segmentTemplate = { ...i };
           if (!r.segmentTemplate)
             return (
               (0, g.hB)("MPD - No segment template for representation"), null
@@ -374,9 +372,9 @@
           if (!d.strID || null === d.nStart)
             return (0, g.hB)("MPD - Missing Period Information."), !1;
           (this.m_rgPeriods = []), this.m_rgPeriods.push(d);
-          let h = m.getElementsByTagName("AdaptationSet");
-          for (let e = 0; e < h.length; e++) {
-            let t = h[e],
+          let l = m.getElementsByTagName("AdaptationSet");
+          for (let e = 0; e < l.length; e++) {
+            let t = l[e],
               i = y(t, "description"),
               n = y(t, "lang"),
               s = {
@@ -477,9 +475,9 @@
                 );
               o = e;
             }
-            let l = t.getElementsByTagName("Representation");
-            for (let e = 0; e < l.length; e++) {
-              let t = l[e],
+            let h = t.getElementsByTagName("Representation");
+            for (let e = 0; e < h.length; e++) {
+              let t = h[e],
                 i = this.ParseRepresentation(t, s, o, this.m_strBaseURL);
               if (!i) return !1;
               s.rgRepresentations.push(i);
@@ -568,31 +566,32 @@
           (e[(e.Remove = 2)] = "Remove");
       })(L || (L = {}));
       class F {
+        m_callbacks = null;
+        m_mpd = null;
+        m_adaptation = null;
+        m_mediaSource = null;
+        m_sourceBuffer = null;
+        m_nTrackBufferMS = 0;
+        m_representation = null;
+        m_eBufferUpdate = L.None;
+        m_rgBufferedSegments = [];
+        m_bNeedInitSegment = !0;
+        m_nNextSegment = 0;
+        m_bRemoveBufferState = !1;
+        m_bSeekInProgress = !1;
+        m_tsLastBufferRemove = 0;
+        m_schNextDownload = new d.Ar();
+        m_xhrDownload = null;
+        m_listeners = new d.G_();
+        m_rgDownloadLog = [];
+        m_nCurDownloadProgress = 0;
+        m_nCurDownloadBitrate = 0;
+        m_stats;
+        m_nNumConsecutiveDownloadGones = 0;
+        m_rgGameDataFrames = [];
+        m_statsGameData = null;
         constructor(e, t, i, n) {
-          (this.m_callbacks = null),
-            (this.m_mpd = null),
-            (this.m_adaptation = null),
-            (this.m_mediaSource = null),
-            (this.m_sourceBuffer = null),
-            (this.m_nTrackBufferMS = 0),
-            (this.m_representation = null),
-            (this.m_eBufferUpdate = L.None),
-            (this.m_rgBufferedSegments = []),
-            (this.m_bNeedInitSegment = !0),
-            (this.m_nNextSegment = 0),
-            (this.m_bRemoveBufferState = !1),
-            (this.m_bSeekInProgress = !1),
-            (this.m_tsLastBufferRemove = 0),
-            (this.m_schNextDownload = new d.Ar()),
-            (this.m_xhrDownload = null),
-            (this.m_listeners = new d.G_()),
-            (this.m_rgDownloadLog = []),
-            (this.m_nCurDownloadProgress = 0),
-            (this.m_nCurDownloadBitrate = 0),
-            (this.m_nNumConsecutiveDownloadGones = 0),
-            (this.m_rgGameDataFrames = []),
-            (this.m_statsGameData = null),
-            (this.m_callbacks = e),
+          (this.m_callbacks = e),
             (this.m_mpd = t),
             (this.m_adaptation = i),
             (this.m_stats = n);
@@ -835,120 +834,113 @@
           var n, s;
           this.DownloadSegment(this.m_representation.strID, i, e, t);
         }
-        DownloadSegment(e, t, i, s, a = performance.now()) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            (0, m.X)(
-              null === this.m_xhrDownload,
-              "Trying to download another segment while a download is already in flight",
-            ),
-              this.m_schNextDownload.Cancel();
-            const n = this.m_callbacks.GetCDNAuthURLParameter();
-            n && (i += n),
-              (0, g.hB)(`${this.GetDebugName()} Downloading: ` + i);
-            let o,
-              d = null,
-              h = performance.now(),
-              l = r().CancelToken.source();
-            try {
-              (this.m_nCurDownloadProgress = 0), (this.m_xhrDownload = l);
-              let e = {
-                cancelToken: this.m_xhrDownload.token,
-                timeout: 15e3,
-                responseType: "arraybuffer",
-                onDownloadProgress: (e) => {
-                  (this.m_nCurDownloadProgress = e.loaded / e.total),
-                    (this.m_nCurDownloadBitrate =
-                      (8 * e.loaded * 1e3) /
-                      Math.max(1, performance.now() - h));
-                },
-              };
-              this.ContainsGame() && (e.responseType = "json"),
-                (d = yield r().get(i, e));
-            } catch (e) {
-              (o = e), (d = e.response);
-            }
-            if (!this.m_xhrDownload || this.m_xhrDownload != l)
-              return void (0, g.hB)(`Throwing away cancelled download: ${i}`);
-            o &&
+        async DownloadSegment(e, t, i, n, s = performance.now()) {
+          (0, m.X)(
+            null === this.m_xhrDownload,
+            "Trying to download another segment while a download is already in flight",
+          ),
+            this.m_schNextDownload.Cancel();
+          const a = this.m_callbacks.GetCDNAuthURLParameter();
+          a && (i += a), (0, g.hB)(`${this.GetDebugName()} Downloading: ` + i);
+          let o,
+            d = null,
+            l = performance.now(),
+            h = r().CancelToken.source();
+          try {
+            (this.m_nCurDownloadProgress = 0), (this.m_xhrDownload = h);
+            let e = {
+              cancelToken: this.m_xhrDownload.token,
+              timeout: 15e3,
+              responseType: "arraybuffer",
+              onDownloadProgress: (e) => {
+                (this.m_nCurDownloadProgress = e.loaded / e.total),
+                  (this.m_nCurDownloadBitrate =
+                    (8 * e.loaded * 1e3) / Math.max(1, performance.now() - l));
+              },
+            };
+            this.ContainsGame() && (e.responseType = "json"),
+              (d = await r().get(i, e));
+          } catch (e) {
+            (o = e), (d = e.response);
+          }
+          if (!this.m_xhrDownload || this.m_xhrDownload != h)
+            return void (0, g.hB)(`Throwing away cancelled download: ${i}`);
+          o &&
+            (0, g.hB)(
+              `${this.GetDebugName()} Failed to download segment: ${i}`,
+              o,
+            );
+          let u = performance.now(),
+            _ = Math.floor(performance.now() - l),
+            p = d ? d.status : 0;
+          if (((this.m_xhrDownload = null), this.m_bSeekInProgress))
+            return (
               (0, g.hB)(
-                `${this.GetDebugName()} Failed to download segment: ${i}`,
-                o,
-              );
-            let u = performance.now(),
-              _ = Math.floor(performance.now() - h),
-              p = d ? d.status : 0;
-            if (((this.m_xhrDownload = null), this.m_bSeekInProgress))
-              return (
-                (0, g.hB)(
-                  `${this.GetDebugName()} Throwing away download due to seek: ${i}`,
-                ),
-                void this.ContinueSeek()
-              );
-            if (!d || 200 != d.status)
-              return this.ContainsGame()
-                ? void this.ScheduleNextDownload()
-                : (this.m_stats.LogSegmentDownloadFailure(
-                    _,
-                    d ? d.status : 444,
-                  ),
-                  u - a > 9e3
-                    ? ((0, g.hB)(
-                        `${this.GetDebugName()} HTTP download failed.. stopping loader: ${u - a}ms`,
+                `${this.GetDebugName()} Throwing away download due to seek: ${i}`,
+              ),
+              void this.ContinueSeek()
+            );
+          if (!d || 200 != d.status)
+            return this.ContainsGame()
+              ? void this.ScheduleNextDownload()
+              : (this.m_stats.LogSegmentDownloadFailure(_, d ? d.status : 444),
+                u - s > 9e3
+                  ? ((0, g.hB)(
+                      `${this.GetDebugName()} HTTP download failed.. stopping loader: ${u - s}ms`,
+                    ),
+                    void this.DownloadFailed())
+                  : 410 == p
+                    ? ((this.m_nNumConsecutiveDownloadGones += 1),
+                      (0, g.hB)(
+                        `${this.GetDebugName()} HTTP download gone.. informing the player: ${u - s}ms`,
                       ),
-                      void this.DownloadFailed())
-                    : 410 == p
-                      ? ((this.m_nNumConsecutiveDownloadGones += 1),
-                        (0, g.hB)(
-                          `${this.GetDebugName()} HTTP download gone.. informing the player: ${u - a}ms`,
-                        ),
-                        void this.DownloadGone())
-                      : void this.m_schNextDownload.Schedule(500, () =>
-                          this.DownloadSegment(e, t, i, s, a),
-                        ));
-            if (
-              ((this.m_nNumConsecutiveDownloadGones = 0),
-              t && (this.m_bNeedInitSegment = !1),
-              this.ContainsGame())
-            ) {
-              let e = d.data;
-              this.m_rgGameDataFrames || (this.m_rgGameDataFrames = []);
-              let t = Number.MIN_VALUE,
-                i = Number.MIN_VALUE;
-              this.m_rgGameDataFrames.length > 0 &&
-                ((t =
-                  this.m_rgGameDataFrames[this.m_rgGameDataFrames.length - 1]
-                    .pts),
-                (i =
-                  this.m_rgGameDataFrames[this.m_rgGameDataFrames.length - 1]
-                    .gdi));
-              const n = e.frame;
-              n &&
-                (n.pts && n.gamedata && n.gdi
-                  ? n.pts <= t
-                    ? (0, g.hB)("Invalid game pts")
-                    : n.gdi != i && this.m_rgGameDataFrames.push(n)
-                  : (0, g.hB)("Invalid game data")),
-                this.TrimGameDataIfNecessary(),
-                (this.m_statsGameData = {
-                  nAppID: e.appid,
-                  ulBroadcastRelayID: e.broadcastrelayid,
-                  nSegmentID: e.segmentid,
-                });
-            } else {
-              let t = new Uint8Array(d.data);
-              this.m_rgBufferedSegments.push({
-                nDurationMS: s,
-                data: t,
-                representationStrID: e,
-              }),
-                this.LogDownload(h, t.length),
-                this.UpdateBuffer(),
-                (0, g.hB)(
-                  `HTTP ${p} (${_}ms, ${Math.floor(t.length / 1e3)}k): ${i}`,
-                );
-            }
-            this.ScheduleNextDownload();
-          });
+                      void this.DownloadGone())
+                    : void this.m_schNextDownload.Schedule(500, () =>
+                        this.DownloadSegment(e, t, i, n, s),
+                      ));
+          if (
+            ((this.m_nNumConsecutiveDownloadGones = 0),
+            t && (this.m_bNeedInitSegment = !1),
+            this.ContainsGame())
+          ) {
+            let e = d.data;
+            this.m_rgGameDataFrames || (this.m_rgGameDataFrames = []);
+            let t = Number.MIN_VALUE,
+              i = Number.MIN_VALUE;
+            this.m_rgGameDataFrames.length > 0 &&
+              ((t =
+                this.m_rgGameDataFrames[this.m_rgGameDataFrames.length - 1]
+                  .pts),
+              (i =
+                this.m_rgGameDataFrames[this.m_rgGameDataFrames.length - 1]
+                  .gdi));
+            const n = e.frame;
+            n &&
+              (n.pts && n.gamedata && n.gdi
+                ? n.pts <= t
+                  ? (0, g.hB)("Invalid game pts")
+                  : n.gdi != i && this.m_rgGameDataFrames.push(n)
+                : (0, g.hB)("Invalid game data")),
+              this.TrimGameDataIfNecessary(),
+              (this.m_statsGameData = {
+                nAppID: e.appid,
+                ulBroadcastRelayID: e.broadcastrelayid,
+                nSegmentID: e.segmentid,
+              });
+          } else {
+            let t = new Uint8Array(d.data);
+            this.m_rgBufferedSegments.push({
+              nDurationMS: n,
+              data: t,
+              representationStrID: e,
+            }),
+              this.LogDownload(l, t.length),
+              this.UpdateBuffer(),
+              (0, g.hB)(
+                `HTTP ${p} (${_}ms, ${Math.floor(t.length / 1e3)}k): ${i}`,
+              );
+          }
+          this.ScheduleNextDownload();
         }
         DownloadFailed() {
           this.m_callbacks.OnSegmentDownloadFailed(this);
@@ -1120,7 +1112,7 @@
         (0, n.gn)([u.a], F.prototype, "DownloadGone", null);
       const I = 5,
         x = "auto";
-      var E, N, O;
+      var E, N, U;
       !(function (e) {
         (e[(e.HAVE_NOTHING = 0)] = "HAVE_NOTHING"),
           (e[(e.HAVE_METADATA = 1)] = "HAVE_METADATA"),
@@ -1135,45 +1127,47 @@
         (function (e) {
           (e[(e.Absolute = 0)] = "Absolute"),
             (e[(e.FromAvailableStart = 1)] = "FromAvailableStart");
-        })(O || (O = {}));
-      class U {
+        })(U || (U = {}));
+      class O {
+        m_elVideo = null;
+        m_strMPD = "";
+        m_strHLS = "";
+        m_strCDNAuthURLParameters = null;
+        m_schUpdateMPD = new d.Ar();
+        m_xhrUpdateMPD;
+        m_mpd;
+        m_bUseHLSManifest = !1;
+        m_strVideoAdaptationID = "";
+        m_strAudioAdaptationID = "";
+        m_strGameAdaptationID = "";
+        m_rgLoaders = [];
+        m_mediaSource = null;
+        m_nTrackBufferMS = 0;
+        m_nLimitFPS = 0;
+        m_bIsBuffering = !0;
+        m_seekingToTime = null;
+        m_listeners = new d.G_();
+        m_bFirstPlay = !0;
+        m_bPlaybackStarted = !1;
+        m_nTimedText = 0;
+        m_schGameDataEventTrigger = new d.Ar();
+        m_schReportPlayerTrigger = new d.Ar();
+        m_nGameDataLastFramePTS = -1;
+        m_bStatsViewVisible = !1;
+        m_schCaptureDisplayStatsTrigger = new d.Ar();
+        m_videoRepSelected = null;
+        m_nAudioRepresentationIndex = 0;
+        m_timedTextRepSelected = null;
+        m_stats = new f.vf();
+        m_bClosing = !1;
+        m_hlsTimeOffset = 0;
+        m_bUserPlayChoice = !0;
+        m_bUserLiveEdgeChoice = !0;
+        m_schFirstFrameThrottler = new d.Ar();
+        m_bookMarkAdapter = null;
+        m_schBookmarkUpdater = new d.Ar();
         constructor(e, t = !1) {
-          (this.m_elVideo = null),
-            (this.m_strMPD = ""),
-            (this.m_strHLS = ""),
-            (this.m_strCDNAuthURLParameters = null),
-            (this.m_schUpdateMPD = new d.Ar()),
-            (this.m_bUseHLSManifest = !1),
-            (this.m_strVideoAdaptationID = ""),
-            (this.m_strAudioAdaptationID = ""),
-            (this.m_strGameAdaptationID = ""),
-            (this.m_rgLoaders = []),
-            (this.m_mediaSource = null),
-            (this.m_nTrackBufferMS = 0),
-            (this.m_nLimitFPS = 0),
-            (this.m_bIsBuffering = !0),
-            (this.m_seekingToTime = null),
-            (this.m_listeners = new d.G_()),
-            (this.m_bFirstPlay = !0),
-            (this.m_bPlaybackStarted = !1),
-            (this.m_nTimedText = 0),
-            (this.m_schGameDataEventTrigger = new d.Ar()),
-            (this.m_schReportPlayerTrigger = new d.Ar()),
-            (this.m_nGameDataLastFramePTS = -1),
-            (this.m_bStatsViewVisible = !1),
-            (this.m_schCaptureDisplayStatsTrigger = new d.Ar()),
-            (this.m_videoRepSelected = null),
-            (this.m_nAudioRepresentationIndex = 0),
-            (this.m_timedTextRepSelected = null),
-            (this.m_stats = new f.vf()),
-            (this.m_bClosing = !1),
-            (this.m_hlsTimeOffset = 0),
-            (this.m_bUserPlayChoice = !0),
-            (this.m_bUserLiveEdgeChoice = !0),
-            (this.m_schFirstFrameThrottler = new d.Ar()),
-            (this.m_bookMarkAdapter = null),
-            (this.m_schBookmarkUpdater = new d.Ar()),
-            (0, a.rC)(this),
+          (0, a.rC)(this),
             (this.m_elVideo = e),
             this.m_schReportPlayerTrigger.Schedule(3e4, this.ReportPlayerStats),
             (this.m_bUseHLSManifest = t);
@@ -1187,47 +1181,45 @@
         GetMPDURL() {
           return this.m_strMPD;
         }
-        PlayMPD(e, t, i) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            (this.m_strMPD = e),
-              (this.m_strHLS = i),
-              (this.m_strCDNAuthURLParameters = t);
-            let n = yield this.DownloadMPD();
-            if (n)
-              if (((this.m_mpd = new k()), this.m_mpd.BParse(n.data, e))) {
-                if (
-                  (this.IsLiveContent() &&
-                    (this.m_mpd.GetMinimumUpdatePeriod() > 0 &&
-                      this.m_schUpdateMPD.Schedule(
-                        1e3 * this.m_mpd.GetMinimumUpdatePeriod(),
-                        this.UpdateMPD,
-                      ),
-                    this.CalcVideoStartRelativeToSystemClock(n.headers.date)),
-                  this.m_bUseHLSManifest)
-                )
-                  return (
-                    (this.m_elVideo.src = this.m_strHLS),
-                    this.m_elVideo.addEventListener("loadedmetadata", () => {
-                      (this.m_bIsBuffering = !1), this.BeginPlayback();
-                    }),
-                    void document.addEventListener(
-                      "visibilitychange",
-                      this.OnVisibilityChange,
-                    )
-                  );
-                this.BCreateLoaders()
-                  ? (this.InitVideoControl(), this.InitTimedText())
-                  : this.CloseWithError(
-                      "playbackerror",
-                      "Failed to create segment loaders",
-                    );
-              } else
-                this.CloseWithError(
-                  "playbackerror",
-                  "Failed to parse MPD file",
-                  this.m_strMPD,
+        async PlayMPD(e, t, i) {
+          (this.m_strMPD = e),
+            (this.m_strHLS = i),
+            (this.m_strCDNAuthURLParameters = t);
+          let n = await this.DownloadMPD();
+          if (n)
+            if (((this.m_mpd = new k()), this.m_mpd.BParse(n.data, e))) {
+              if (
+                (this.IsLiveContent() &&
+                  (this.m_mpd.GetMinimumUpdatePeriod() > 0 &&
+                    this.m_schUpdateMPD.Schedule(
+                      1e3 * this.m_mpd.GetMinimumUpdatePeriod(),
+                      this.UpdateMPD,
+                    ),
+                  this.CalcVideoStartRelativeToSystemClock(n.headers.date)),
+                this.m_bUseHLSManifest)
+              )
+                return (
+                  (this.m_elVideo.src = this.m_strHLS),
+                  this.m_elVideo.addEventListener("loadedmetadata", () => {
+                    (this.m_bIsBuffering = !1), this.BeginPlayback();
+                  }),
+                  void document.addEventListener(
+                    "visibilitychange",
+                    this.OnVisibilityChange,
+                  )
                 );
-          });
+              this.BCreateLoaders()
+                ? (this.InitVideoControl(), this.InitTimedText())
+                : this.CloseWithError(
+                    "playbackerror",
+                    "Failed to create segment loaders",
+                  );
+            } else
+              this.CloseWithError(
+                "playbackerror",
+                "Failed to parse MPD file",
+                this.m_strMPD,
+              );
         }
         InitTimedText() {
           let e = !0;
@@ -1237,18 +1229,18 @@
               if (
                 t.rgRepresentations.length > 0 &&
                 t.rgRepresentations[0].strClosedCaptionFile &&
-                h.is[t.strLanguage]
+                l.is[t.strLanguage]
               ) {
                 const n = document.createElement("track");
                 (n.kind = "subtitles"),
-                  (n.label = (0, h.Xx)(
-                    "#Language_" + (0, o.j_)(h.is[t.strLanguage]),
+                  (n.label = (0, l.Xx)(
+                    "#Language_" + (0, o.j_)(l.is[t.strLanguage]),
                   )),
                   (n.srclang = t.strLanguage),
                   (n.src = t.rgRepresentations[0].strClosedCaptionFile),
                   (this.m_nTimedText += 1),
                   0 != i &&
-                    h.is[t.strLanguage] == i &&
+                    l.is[t.strLanguage] == i &&
                     ((n.default = !0),
                     (this.m_timedTextRepSelected = t.rgRepresentations[0]),
                     (e = !1)),
@@ -1267,7 +1259,7 @@
           let t = null;
           for (let i = 0; i < this.m_elVideo.textTracks.length; i++) {
             const n = this.m_elVideo.textTracks[i];
-            if (h.is[n.language] == e) {
+            if (l.is[n.language] == e) {
               let e = this.GetTimeTextAdaptions(0).filter(
                 (e) => e.strLanguage == n.language,
               );
@@ -1345,63 +1337,57 @@
         IsLiveContent() {
           return !!this.m_mpd && this.m_mpd.IsLiveContent();
         }
-        DownloadMPD() {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            if (this.m_xhrUpdateMPD)
-              return (0, m.X)(!1, "Multiple MPD download requests"), null;
-            let e = performance.now();
-            for (; performance.now() - e < 3e4; ) {
-              let e = null;
-              try {
-                this.m_xhrUpdateMPD = r().CancelToken.source();
-                const t =
-                  this.m_strMPD +
-                  (this.m_strCDNAuthURLParameters
-                    ? this.m_strCDNAuthURLParameters
-                    : "");
-                e = yield r().get(t, {
-                  cancelToken: this.m_xhrUpdateMPD.token,
-                });
-              } catch (e) {}
-              if (((this.m_xhrUpdateMPD = null), this.m_bClosing)) return null;
-              if (e && 200 == e.status) return e;
-              if (e && 410 == e.status)
-                return (
-                  this.CloseWithError(
-                    "playbackerror",
-                    "Failed to download MPD: 410 Gone",
-                  ),
-                  null
-                );
-              (0, g.hB)("Failed to download, will retry: " + this.m_strMPD),
-                yield (0, _._R)(200);
-            }
-            return (0, g.hB)("Failed to download: " + this.m_strMPD), null;
-          });
+        async DownloadMPD() {
+          if (this.m_xhrUpdateMPD)
+            return (0, m.X)(!1, "Multiple MPD download requests"), null;
+          let e = performance.now();
+          for (; performance.now() - e < 3e4; ) {
+            let e = null;
+            try {
+              this.m_xhrUpdateMPD = r().CancelToken.source();
+              const t =
+                this.m_strMPD +
+                (this.m_strCDNAuthURLParameters
+                  ? this.m_strCDNAuthURLParameters
+                  : "");
+              e = await r().get(t, { cancelToken: this.m_xhrUpdateMPD.token });
+            } catch (e) {}
+            if (((this.m_xhrUpdateMPD = null), this.m_bClosing)) return null;
+            if (e && 200 == e.status) return e;
+            if (e && 410 == e.status)
+              return (
+                this.CloseWithError(
+                  "playbackerror",
+                  "Failed to download MPD: 410 Gone",
+                ),
+                null
+              );
+            (0, g.hB)("Failed to download, will retry: " + this.m_strMPD),
+              await (0, _._R)(200);
+          }
+          return (0, g.hB)("Failed to download: " + this.m_strMPD), null;
         }
-        UpdateMPD() {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            (0, g.hB)("Updating MPD in player from: " + this.m_strMPD);
-            let e = yield this.DownloadMPD();
-            e &&
-              (this.m_mpd.BUpdate(e.data)
-                ? (this.IsLiveContent() &&
-                    this.CalcVideoStartRelativeToSystemClock(e.headers.date),
-                  this.m_stats.SetAnalyticLinks(
-                    this.m_mpd.GetStatsLink(),
-                    this.m_mpd.GetStalledLink(),
-                    this.m_mpd.GetEventLink(),
-                  ),
-                  this.m_mpd.GetMinimumUpdatePeriod() > 0 &&
-                    this.m_schUpdateMPD.Schedule(
-                      1e3 * this.m_mpd.GetMinimumUpdatePeriod(),
-                      this.UpdateMPD,
-                    ))
-                : this.CloseWithError(
-                    "playbackerror",
-                    "Failed to parse on Update the MPD file",
-                  ));
-          });
+        async UpdateMPD() {
+          (0, g.hB)("Updating MPD in player from: " + this.m_strMPD);
+          let e = await this.DownloadMPD();
+          e &&
+            (this.m_mpd.BUpdate(e.data)
+              ? (this.IsLiveContent() &&
+                  this.CalcVideoStartRelativeToSystemClock(e.headers.date),
+                this.m_stats.SetAnalyticLinks(
+                  this.m_mpd.GetStatsLink(),
+                  this.m_mpd.GetStalledLink(),
+                  this.m_mpd.GetEventLink(),
+                ),
+                this.m_mpd.GetMinimumUpdatePeriod() > 0 &&
+                  this.m_schUpdateMPD.Schedule(
+                    1e3 * this.m_mpd.GetMinimumUpdatePeriod(),
+                    this.UpdateMPD,
+                  ))
+              : this.CloseWithError(
+                  "playbackerror",
+                  "Failed to parse on Update the MPD file",
+                ));
         }
         CloseWithError(e, ...t) {
           this.Close(), (0, g.hB)(...t);
@@ -1629,11 +1615,11 @@
           if (this.m_seekingToTime) {
             if (
               !this.m_bPlaybackStarted &&
-              this.m_seekingToTime.eSeekType == O.FromAvailableStart
+              this.m_seekingToTime.eSeekType == U.FromAvailableStart
             )
               return 0;
             let e =
-              this.m_seekingToTime.eSeekType == O.FromAvailableStart
+              this.m_seekingToTime.eSeekType == U.FromAvailableStart
                 ? this.GetAvailableVideoStartTime()
                 : 0;
             return this.m_seekingToTime.nTime + e;
@@ -1719,7 +1705,7 @@
             let t = Math.floor(this.m_mpd.GetDurationSinceStarted() / 1e3),
               i = this.GetBufferedLiveEdgeTime(),
               n = this.m_mpd.GetTimeShiftBufferDepth();
-            (e = n ? t - n + 10 : 0), (e = l.Lh(e, 0, i));
+            (e = n ? t - n + 10 : 0), (e = h.Lh(e, 0, i));
           } else e = this.m_mpd.GetStartTime();
           return e;
         }
@@ -1753,14 +1739,11 @@
               : this.Seek(this.GetCurrentPlayTime());
         }
         Pause() {
-          var e, t;
           (this.m_bUserLiveEdgeChoice = !1),
-            1.1 ==
-              (null === (e = this.m_elVideo) || void 0 === e
-                ? void 0
-                : e.playbackRate) && (this.m_elVideo.playbackRate = 1),
+            1.1 == this.m_elVideo?.playbackRate &&
+              (this.m_elVideo.playbackRate = 1),
             this.SetUserPlayChoice(!1),
-            null === (t = this.m_elVideo) || void 0 === t || t.pause();
+            this.m_elVideo?.pause();
         }
         GetPlaybackRate() {
           return this.m_elVideo.paused ? 0 : this.m_elVideo.playbackRate;
@@ -1998,9 +1981,9 @@
             }
             let m = r.nHeight || 0,
               d = s.nHeight || 0,
-              h = this.GetVideoPlayerHeight();
-            if (h > 0 && m > 0) {
-              if (d > H(h)) break;
+              l = this.GetVideoPlayerHeight();
+            if (l > 0 && m > 0) {
+              if (d > H(l)) break;
             }
             r = s;
           }
@@ -2021,7 +2004,7 @@
             "Missing mpd info to calculate seek time",
           );
           let t =
-            this.m_seekingToTime.eSeekType == O.FromAvailableStart
+            this.m_seekingToTime.eSeekType == U.FromAvailableStart
               ? this.GetAvailableVideoStartTime()
               : 0;
           return this.m_seekingToTime.nTime + t;
@@ -2032,14 +2015,14 @@
         SeekAndPlay(e) {
           return this.SetUserPlayChoice(!0), this.Seek(e);
         }
-        Seek(e, t = O.Absolute) {
+        Seek(e, t = U.Absolute) {
           if (!this.m_bPlaybackStarted)
             return (this.m_seekingToTime = { nTime: e, eSeekType: t }), e;
-          t == O.FromAvailableStart && (e += this.GetAvailableVideoStartTime());
+          t == U.FromAvailableStart && (e += this.GetAvailableVideoStartTime());
           let i = this.GetAvailableVideoStartTime(),
             n = this.GetBufferedLiveEdgeTime();
           const s = e;
-          (e = l.Lh(e, i, n)) != s &&
+          (e = h.Lh(e, i, n)) != s &&
             (0, g.hB)(`Seek time ${s} was clamped to the range ${i} to ${n}`),
             (this.m_bUserLiveEdgeChoice = e >= n - I);
           let r = this.m_elVideo.paused;
@@ -2048,7 +2031,7 @@
               this.m_elVideo.play();
           else {
             (this.m_bIsBuffering = !0),
-              (this.m_seekingToTime = { nTime: e, eSeekType: O.Absolute });
+              (this.m_seekingToTime = { nTime: e, eSeekType: U.Absolute });
             for (let t of this.m_rgLoaders)
               t.ContainsGame() && (e = this.GetBufferedLiveEdgeTime()),
                 t.Seek(e);
@@ -2107,7 +2090,7 @@
           this.m_elVideo.muted = e;
         }
         SetVolume(e) {
-          (e = l.Lh(e, 0, 1)), (this.m_elVideo.volume = e);
+          (e = h.Lh(e, 0, 1)), (this.m_elVideo.volume = e);
         }
         GetVolume() {
           return this.m_elVideo.volume;
@@ -2209,50 +2192,50 @@
       function H(e) {
         return e < 360 ? 480 : e < 480 ? 720 : 4320;
       }
-      (0, n.gn)([a.LO], U.prototype, "m_nTimedText", void 0),
-        (0, n.gn)([a.aD], U.prototype, "InitTimedText", null),
-        (0, n.gn)([u.a], U.prototype, "OnVisibilityChange", null),
-        (0, n.gn)([u.a], U.prototype, "UpdateMPD", null),
-        (0, n.gn)([u.a], U.prototype, "OnMediaSourceOpen", null),
-        (0, n.gn)([u.a], U.prototype, "HandleMediaSourceError", null),
-        (0, n.gn)([u.a], U.prototype, "OnMediaSourceEnded", null),
-        (0, n.gn)([u.a], U.prototype, "OnMediaSourceClose", null),
-        (0, n.gn)([u.a], U.prototype, "OnVideoWaiting", null),
-        (0, n.gn)([u.a], U.prototype, "OnVideoPause", null),
-        (0, n.gn)([u.a], U.prototype, "OnVideoResize", null),
+      (0, n.gn)([a.LO], O.prototype, "m_nTimedText", void 0),
+        (0, n.gn)([a.aD], O.prototype, "InitTimedText", null),
+        (0, n.gn)([u.a], O.prototype, "OnVisibilityChange", null),
+        (0, n.gn)([u.a], O.prototype, "UpdateMPD", null),
+        (0, n.gn)([u.a], O.prototype, "OnMediaSourceOpen", null),
+        (0, n.gn)([u.a], O.prototype, "HandleMediaSourceError", null),
+        (0, n.gn)([u.a], O.prototype, "OnMediaSourceEnded", null),
+        (0, n.gn)([u.a], O.prototype, "OnMediaSourceClose", null),
+        (0, n.gn)([u.a], O.prototype, "OnVideoWaiting", null),
+        (0, n.gn)([u.a], O.prototype, "OnVideoPause", null),
+        (0, n.gn)([u.a], O.prototype, "OnVideoResize", null),
         (0, n.gn)(
           [u.a],
-          U.prototype,
+          O.prototype,
           "OnDebugPrintEventInfoAndAvailableBuffer",
           null,
         ),
-        (0, n.gn)([u.a], U.prototype, "OnVideoError", null),
-        (0, n.gn)([u.a], U.prototype, "OnVideoCanPlay", null),
-        (0, n.gn)([u.a], U.prototype, "GetCurrentPlayTime", null),
-        (0, n.gn)([u.a], U.prototype, "OnVideoTimeUpdate", null),
+        (0, n.gn)([u.a], O.prototype, "OnVideoError", null),
+        (0, n.gn)([u.a], O.prototype, "OnVideoCanPlay", null),
+        (0, n.gn)([u.a], O.prototype, "GetCurrentPlayTime", null),
+        (0, n.gn)([u.a], O.prototype, "OnVideoTimeUpdate", null),
         (0, n.gn)(
           [u.a],
-          U.prototype,
+          O.prototype,
           "SendUpdateToBookmarkServiceIfNeeded",
           null,
         ),
-        (0, n.gn)([u.a], U.prototype, "OnPlayAction", null),
-        (0, n.gn)([u.a], U.prototype, "GetPlaybackRate", null),
-        (0, n.gn)([u.a], U.prototype, "GetCDNAuthURLParameter", null),
-        (0, n.gn)([u.a], U.prototype, "OnSegmentDownloaded", null),
-        (0, n.gn)([u.a], U.prototype, "PlayOnElement", null),
-        (0, n.gn)([u.a], U.prototype, "OnSegmentDownloadFailed", null),
-        (0, n.gn)([u.a], U.prototype, "OnSegmentDownloadGone", null),
-        (0, n.gn)([u.a], U.prototype, "OnMediaSourceError", null),
+        (0, n.gn)([u.a], O.prototype, "OnPlayAction", null),
+        (0, n.gn)([u.a], O.prototype, "GetPlaybackRate", null),
+        (0, n.gn)([u.a], O.prototype, "GetCDNAuthURLParameter", null),
+        (0, n.gn)([u.a], O.prototype, "OnSegmentDownloaded", null),
+        (0, n.gn)([u.a], O.prototype, "PlayOnElement", null),
+        (0, n.gn)([u.a], O.prototype, "OnSegmentDownloadFailed", null),
+        (0, n.gn)([u.a], O.prototype, "OnSegmentDownloadGone", null),
+        (0, n.gn)([u.a], O.prototype, "OnMediaSourceError", null),
         (0, n.gn)(
           [u.a],
-          U.prototype,
+          O.prototype,
           "VerifyFirstSegmentDownloadProgress",
           null,
         ),
-        (0, n.gn)([u.a], U.prototype, "GameDataEventTrigger", null),
-        (0, n.gn)([u.a], U.prototype, "ReportPlayerStats", null),
-        (0, n.gn)([a.aD.bound], U.prototype, "CaptureStatsForDisplay", null);
+        (0, n.gn)([u.a], O.prototype, "GameDataEventTrigger", null),
+        (0, n.gn)([u.a], O.prototype, "ReportPlayerStats", null),
+        (0, n.gn)([a.aD.bound], O.prototype, "CaptureStatsForDisplay", null);
     },
     48695: (e, t, i) => {
       i.d(t, { vf: () => S });
@@ -2263,55 +2246,93 @@
         o = i(35427),
         m = i(68324),
         d = i(37563),
-        h = i(45492),
-        l = i(31846),
+        l = i(45492),
+        h = i(31846),
         u = i(24549);
       const _ = 1e6;
       class p {
-        constructor() {
-          this.playback_speed = 1;
-        }
+        steamid;
+        host;
+        playback_position;
+        playback_speed = 1;
+        video_res;
+        audio_rate;
+        audio_ch;
+        bw_avg;
+        bw_required;
+        broadcast_accountid;
+        useragent;
+        sessionid;
+        broadcast_origin;
       }
-      class g extends p {}
-      class f extends p {}
+      class g extends p {
+        video_buffer;
+        audio_buffer;
+        seconds_delta;
+        bytes_received;
+        frames_dropped;
+        frames_decoded;
+        failed_segments;
+        bw_min;
+        bw_max;
+        seg_time_avg;
+        seg_time_min;
+        seg_time_max;
+        initial_vid_res;
+        ttff;
+        seg_duration;
+      }
+      class f extends p {
+        last_segment_response;
+        audio_stalled;
+        active_downloads;
+        vid_down_progress;
+        segment_stalled;
+        segment1_bytes;
+        segment1_time;
+        segment2_bytes;
+        segment2_time;
+        segment3_bytes;
+        segment3_time;
+      }
       class S {
+        m_steamIDBroadcast = "";
+        m_steamIDViewer = "";
+        m_broadcastID = "";
+        m_ulViewerToken = "";
+        m_strCDNAuthUrlParameters = void 0;
+        m_host = "";
+        m_strBroadcastOrigin = "";
+        m_strStatsLink = "";
+        m_strStalledLink = "";
+        m_strEventLogLink = "";
+        m_allTimeSnapshot = new c(0);
+        m_rgSnapShots = new Array(new c(0));
+        m_videoResolution = 0;
+        m_audioRate = 0;
+        m_audioChannel = 0;
+        m_frameRate = 0;
+        m_strBufferingVideoResolution = "0x0@0";
+        m_nPlaybackVideoResolution = 0;
+        m_strPlaybackVideoResolution = "0x0";
+        m_htmlVideoResolution = 0;
+        m_strHtmlVideoDisplay = "";
+        m_nAudioBandwidth = 0;
+        m_nVideoBandwidth = 0;
+        m_nBandwidthRequired = 0;
+        m_nCurBandwidthVideo = 0;
+        m_nAudioBufferedMS = 0;
+        m_nVideoBufferedMS = 0;
+        m_nActiveDownloads = 0;
+        m_nVideoDownloadProgress = 0;
+        m_videoBufferedRanges = null;
+        m_audioBufferedRanges = null;
+        m_nSegmentDurationMS = 0;
+        m_nPlaybackRate = 0;
+        m_nTimeToFirstFrameMS = -1;
+        m_fpsMonitor = new T();
         constructor() {
-          (this.m_steamIDBroadcast = ""),
-            (this.m_steamIDViewer = ""),
-            (this.m_broadcastID = ""),
-            (this.m_ulViewerToken = ""),
-            (this.m_strCDNAuthUrlParameters = void 0),
-            (this.m_host = ""),
-            (this.m_strBroadcastOrigin = ""),
-            (this.m_strStatsLink = ""),
-            (this.m_strStalledLink = ""),
-            (this.m_strEventLogLink = ""),
-            (this.m_allTimeSnapshot = new c(0)),
-            (this.m_rgSnapShots = new Array(new c(0))),
-            (this.m_videoResolution = 0),
-            (this.m_audioRate = 0),
-            (this.m_audioChannel = 0),
-            (this.m_frameRate = 0),
-            (this.m_strBufferingVideoResolution = "0x0@0"),
-            (this.m_nPlaybackVideoResolution = 0),
-            (this.m_strPlaybackVideoResolution = "0x0"),
-            (this.m_htmlVideoResolution = 0),
-            (this.m_strHtmlVideoDisplay = ""),
-            (this.m_nAudioBandwidth = 0),
-            (this.m_nVideoBandwidth = 0),
-            (this.m_nBandwidthRequired = 0),
-            (this.m_nCurBandwidthVideo = 0),
-            (this.m_nAudioBufferedMS = 0),
-            (this.m_nVideoBufferedMS = 0),
-            (this.m_nActiveDownloads = 0),
-            (this.m_nVideoDownloadProgress = 0),
-            (this.m_videoBufferedRanges = null),
-            (this.m_audioBufferedRanges = null),
-            (this.m_nSegmentDurationMS = 0),
-            (this.m_nPlaybackRate = 0),
-            (this.m_nTimeToFirstFrameMS = -1),
-            (this.m_fpsMonitor = new T()),
-            (0, s.rC)(this);
+          (0, s.rC)(this);
         }
         GetBytesReceivedToDisplay() {
           return (0, u.l)(this.m_allTimeSnapshot.m_nBytesReceived, 1);
@@ -2354,7 +2375,7 @@
             ? (0, m.zB)(this.m_videoBufferedRanges.start(e)) +
                 " - " +
                 (0, m.zB)(this.m_videoBufferedRanges.end(e))
-            : (0, l.Xx)("#DASHPlayerStats_VideoNoRangeInformation");
+            : (0, h.Xx)("#DASHPlayerStats_VideoNoRangeInformation");
         }
         GetBufferedAudioSegmentForDisplay(e) {
           return this.m_audioBufferedRanges &&
@@ -2362,7 +2383,7 @@
             ? (0, m.zB)(this.m_audioBufferedRanges.start(e)) +
                 " - " +
                 (0, m.zB)(this.m_audioBufferedRanges.end(e))
-            : (0, l.Xx)("#DASHPlayerStats_AudioNoRangeInformation");
+            : (0, h.Xx)("#DASHPlayerStats_AudioNoRangeInformation");
         }
         GetBandwidthStatsToDisplay() {
           if (this.m_rgSnapShots.length < 2)
@@ -2463,7 +2484,7 @@
         GetCurrentFPSForDisplay() {
           return this.m_fpsMonitor.BHasCurrentFPS()
             ? this.m_fpsMonitor.GetCurrentFPS().toFixed(1)
-            : (0, l.Xx)("#DASHPlayerStats_Tracking");
+            : (0, h.Xx)("#DASHPlayerStats_Tracking");
         }
         GetPlaybackRateForDisplay() {
           return this.m_nPlaybackRate.toFixed(1) + "x";
@@ -2708,21 +2729,19 @@
             this.CreateNewEmptySnapshot(t.videoHeight),
             this.SendReportToServer(n, this.m_strStatsLink);
         }
-        SendReportToServer(e, t) {
-          return (0, n.mG)(this, void 0, void 0, function* () {
-            let i = new URL(t),
-              n = new FormData();
-            for (let t of Object.keys(e)) n.append(t, e[t]);
-            n.append("l", i.searchParams.get("l")),
-              n.append("e", i.searchParams.get("e")),
-              n.append("h", i.searchParams.get("h")),
-              (0, m.hB)("CDASHStats Sending Report to Server", e),
-              a()
-                .post(t, n)
-                .catch((e) => {
-                  (0, m.hB)("Failed to upload stats: ", e);
-                });
-          });
+        async SendReportToServer(e, t) {
+          let i = new URL(t),
+            n = new FormData();
+          for (let t of Object.keys(e)) n.append(t, e[t]);
+          n.append("l", i.searchParams.get("l")),
+            n.append("e", i.searchParams.get("e")),
+            n.append("h", i.searchParams.get("h")),
+            (0, m.hB)("CDASHStats Sending Report to Server", e),
+            a()
+              .post(t, n)
+              .catch((e) => {
+                (0, m.hB)("Failed to upload stats: ", e);
+              });
         }
         CreateNewEmptySnapshot(e) {
           this.m_rgSnapShots.length >= 5 && this.m_rgSnapShots.shift(),
@@ -2772,24 +2791,23 @@
         (0, n.gn)([s.aD], S.prototype, "LogFrameInfo", null),
         (0, n.gn)([s.aD], S.prototype, "LogBufferDuration", null);
       class c {
+        m_timeMS = Date.now();
+        m_nBytesReceived = 0;
+        m_nInitialVideoResolution = 0;
+        m_nFailedSegments = 0;
+        m_nStallEvents = 0;
+        m_nEntries = 0;
+        m_nSegmentDownloadTimeTotalMS = 0;
+        m_nSegmentDownloadTimeMaxMS = 0;
+        m_nSegmentDownloadTimeMinMS = 0;
+        m_nBandwidthTotal = 0;
+        m_nBandwidthMin = 0;
+        m_nBandwidthMax = 0;
+        m_nLastSegementDownloadStatus = 200;
+        m_nFramesDecoded = 0;
+        m_nFramesDropped = 0;
         constructor(e) {
-          (this.m_timeMS = Date.now()),
-            (this.m_nBytesReceived = 0),
-            (this.m_nInitialVideoResolution = 0),
-            (this.m_nFailedSegments = 0),
-            (this.m_nStallEvents = 0),
-            (this.m_nEntries = 0),
-            (this.m_nSegmentDownloadTimeTotalMS = 0),
-            (this.m_nSegmentDownloadTimeMaxMS = 0),
-            (this.m_nSegmentDownloadTimeMinMS = 0),
-            (this.m_nBandwidthTotal = 0),
-            (this.m_nBandwidthMin = 0),
-            (this.m_nBandwidthMax = 0),
-            (this.m_nLastSegementDownloadStatus = 200),
-            (this.m_nFramesDecoded = 0),
-            (this.m_nFramesDropped = 0),
-            (0, s.rC)(this),
-            (this.m_nInitialVideoResolution = e);
+          (0, s.rC)(this), (this.m_nInitialVideoResolution = e);
         }
         GetAverageBandwidth() {
           return this.m_nBandwidthTotal / Math.max(1, this.m_nEntries);
@@ -2844,24 +2862,28 @@
         (0, n.gn)([s.LO], c.prototype, "m_nFramesDropped", void 0),
         (0, n.gn)([s.aD], c.prototype, "SegmentReceived", null);
       class D {
+        bDropReading;
+        nTotalDecodedFrames;
         reset(e, t) {
           (this.bDropReading = e), (this.nTotalDecodedFrames = t);
         }
       }
       class T {
         constructor() {
-          (this.k_nTestFrequencyMS = 1e3),
-            (this.k_nSlidingWindow = 6),
-            (this.k_nDroppedFramesThreshold = 1),
-            (this.k_nFailThreshold = 3),
-            (this.k_nIgnoreReadingAroundResizeMS = 2e3),
-            (this.m_schTracker = new h.Ar()),
-            (this.m_rgResultsWindow = []),
-            (this.m_nLastResizeMS = 0),
-            (this.m_bDroppingFrameDetected = !1),
-            (this.m_nCurrentFPS = 0),
-            (0, s.rC)(this);
+          (0, s.rC)(this);
         }
+        k_nTestFrequencyMS = 1e3;
+        k_nSlidingWindow = 6;
+        k_nDroppedFramesThreshold = 1;
+        k_nFailThreshold = 3;
+        k_nIgnoreReadingAroundResizeMS = 2e3;
+        m_schTracker = new l.Ar();
+        m_rgResultsWindow = [];
+        m_nLastResizeMS = 0;
+        m_lastFrameInfo;
+        m_bDroppingFrameDetected = !1;
+        m_nCurrentFPS = 0;
+        m_fnRequestDecoded;
         StartTracking(e) {
           this.m_schTracker.Schedule(this.k_nTestFrequencyMS, this.TakeReading),
             (this.m_fnRequestDecoded = e),
@@ -2947,39 +2969,37 @@
                 bValueIsRate: s,
                 nMinimumDigitsAfterDecimal: 0,
               }
-            : Object.assign(
-                {
-                  nDigitsAfterDecimal: 2,
-                  bUseBinary1K: !0,
-                  bValueIsInBytes: !0,
-                  bValueIsRate: !1,
-                  nMinimumDigitsAfterDecimal: 0,
-                },
-                r,
-              );
+            : {
+                nDigitsAfterDecimal: 2,
+                bUseBinary1K: !0,
+                bValueIsInBytes: !0,
+                bValueIsRate: !1,
+                nMinimumDigitsAfterDecimal: 0,
+                ...r,
+              };
         const a = r.bUseBinary1K ? 1024 : 1e3,
           o = a * a,
           m = o * a,
           d = m * a;
-        let h,
-          l = "";
+        let l,
+          h = "";
         e > d
-          ? ((h = e / d), (l = "Tera"))
+          ? ((l = e / d), (h = "Tera"))
           : e > m
-            ? ((h = e / m), (l = "Giga"))
+            ? ((l = e / m), (h = "Giga"))
             : e > o
-              ? ((h = e / o), (l = "Mega"))
+              ? ((l = e / o), (h = "Mega"))
               : e > a
-                ? ((h = e / a), (l = "Kilo"))
-                : (h = e);
+                ? ((l = e / a), (h = "Kilo"))
+                : (l = e);
         const u =
           "#" +
-          l +
+          h +
           (r.bValueIsInBytes ? "bytes" : "bits") +
           (r.bValueIsRate ? "_PerSecond" : "");
         return (0, n.Xx)(
           u,
-          h.toLocaleString(n.Yt.GetPreferredLocales(), {
+          l.toLocaleString(n.Yt.GetPreferredLocales(), {
             minimumFractionDigits: r.nMinimumDigitsAfterDecimal,
             maximumFractionDigits: r.nDigitsAfterDecimal,
           }),

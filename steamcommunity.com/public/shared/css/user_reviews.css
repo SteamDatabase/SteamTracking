@@ -186,6 +186,17 @@ select {
 	font-style: italic;
 }
 
+.review_area .categorization_section {
+	padding-top: 8px;
+}
+
+.review_area .categorization_section .categorization {
+	font-size: 12px;
+	color: #816166;
+	/* background-color: rgba( 0, 0, 0, 0.2 ); */
+	min-height: 16px;
+}
+
 #ReviewEdit {
 	margin-right: 6px;
 }

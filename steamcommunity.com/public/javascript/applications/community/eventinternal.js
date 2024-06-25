@@ -29,133 +29,128 @@
         LoadEventsButton: "_2qtK6EgvPizbxuOUs7kxeA",
       };
     },
-    18312: (e, t, n) => {
+    18312: (e, t, a) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => X });
-      var a = n(760),
-        r = n(74257),
-        o = n(85556),
-        l = n(80751),
-        i = n.n(l),
-        s = n(54842),
-        c = n(27605),
-        d = n(47427),
-        u = n(35427),
-        m = n(78910),
-        g = n(1485),
-        h = n(50898),
-        p = n(90069),
-        v = n(62613),
-        E = n(46882),
-        _ = n(50423),
-        S = n(31846),
-        f = n(16649),
-        C = n(37563),
-        I = n(19758),
-        A = n(95315),
-        M = n(58670),
-        b = n(22042),
-        D = n(10162),
-        w = n(7765),
-        L = n(45284),
-        T = n(65534);
+      a.r(t), a.d(t, { default: () => X });
+      var n = a(760),
+        r = a(74257),
+        o = a(85556),
+        l = a(80751),
+        s = a.n(l),
+        i = a(54842),
+        c = a(27605),
+        m = a(47427),
+        d = a(35427),
+        u = a(78910),
+        g = a(1485),
+        p = a(50898),
+        h = a(90069),
+        E = a(62613),
+        _ = a(46882),
+        S = a(50423),
+        f = a(31846),
+        v = a(16649),
+        C = a(37563),
+        I = a(19758),
+        A = a(95315),
+        b = a(58670),
+        M = a(22042),
+        w = a(10162),
+        D = a(7765),
+        L = a(45284),
+        T = a(65534);
       const y = (e) => {
           const {
               strLabel: t,
-              strToolTip: n,
-              fnSetCurator: a,
+              strToolTip: a,
+              fnSetCurator: n,
               bLimitToCreatorHome: r,
             } = e,
-            l = (0, d.useRef)(null),
-            s = (0, d.useRef)(null),
-            c = (0, d.useRef)(0),
-            u = (0, d.useRef)();
-          (0, d.useEffect)(
+            o = (0, m.useRef)(null),
+            l = (0, m.useRef)(null),
+            i = (0, m.useRef)(0),
+            c = (0, m.useRef)();
+          (0, m.useEffect)(
             () => () => {
-              window.clearTimeout(c.current),
-                l.current && l.current("SearchForCurator: unmounting"),
-                s.current && s.current.Hide();
+              window.clearTimeout(i.current),
+                o.current && o.current("SearchForCurator: unmounting"),
+                l.current && l.current.Hide();
             },
             [],
           );
-          const m = (0, d.useCallback)(
-            (e) =>
-              (0, o.mG)(void 0, void 0, void 0, function* () {
-                const t = e.target.value;
-                t &&
-                  0 != t.trim().length &&
-                  (window.clearTimeout(c.current),
-                  l.current && l.current("SearchForCurator: new request"),
-                  (c.current = window.setTimeout(
-                    () =>
-                      (0, o.mG)(void 0, void 0, void 0, function* () {
-                        const e = i().CancelToken.source();
-                        l.current = e.cancel;
-                        try {
-                          const n = yield M.bq.SearchCreatorHomeStore(t, r, e);
-                          if (e.token.reason) return;
-                          s.current = (0, A.yV)(
-                            d.createElement(G, { list: n, fnSetCurator: a }),
-                            u.current.element,
-                            {
-                              bOverlapHorizontal: !0,
-                              bMatchWidth: !0,
-                              bFitToWindow: !0,
-                              bDisablePopTop: !0,
-                              bNoFocusWhenShown: !0,
-                              bSkipFocusWhenReady: !0,
-                            },
-                          );
-                        } catch (t) {
-                          if (e.token.reason) return;
-                          const n = (0, f.l)(t);
-                          console.log(
-                            "SearchForCurator.SearchCreatorHomeStore error " +
-                              n.strErrorMsg,
-                            n,
-                          );
-                        }
-                      }),
-                    300,
-                  )));
-              }),
-            [a, r],
+          const d = (0, m.useCallback)(
+            async (e) => {
+              const t = e.target.value;
+              t &&
+                0 != t.trim().length &&
+                (window.clearTimeout(i.current),
+                o.current && o.current("SearchForCurator: new request"),
+                (i.current = window.setTimeout(async () => {
+                  const e = s().CancelToken.source();
+                  o.current = e.cancel;
+                  try {
+                    const a = await b.bq.SearchCreatorHomeStore(t, r, e);
+                    if (e.token.reason) return;
+                    l.current = (0, A.yV)(
+                      m.createElement(N, { list: a, fnSetCurator: n }),
+                      c.current.element,
+                      {
+                        bOverlapHorizontal: !0,
+                        bMatchWidth: !0,
+                        bFitToWindow: !0,
+                        bDisablePopTop: !0,
+                        bNoFocusWhenShown: !0,
+                        bSkipFocusWhenReady: !0,
+                      },
+                    );
+                  } catch (t) {
+                    if (e.token.reason) return;
+                    const a = (0, v.l)(t);
+                    console.log(
+                      "SearchForCurator.SearchCreatorHomeStore error " +
+                        a.strErrorMsg,
+                      a,
+                    );
+                  }
+                }, 300)));
+            },
+            [n, r],
           );
-          return d.createElement(
-            D.SV,
+          return m.createElement(
+            w.SV,
             null,
-            d.createElement(g.II, {
+            m.createElement(g.II, {
               type: "text",
               label: t,
-              onChange: m,
+              onChange: d,
               onBlur: (e) =>
-                setTimeout(() => s.current && s.current.Hide(), 200),
-              ref: u,
-              tooltip: n,
+                setTimeout(() => l.current && l.current.Hide(), 200),
+              ref: c,
+              tooltip: a,
             }),
           );
         },
-        G = (e) => {
-          const { list: t, fnSetCurator: n } = e;
-          return d.createElement(
-            b.xV,
+        N = (e) => {
+          const { list: t, fnSetCurator: a } = e;
+          return m.createElement(
+            M.xV,
             { className: T.SearchResults },
             t.map((e) =>
-              d.createElement(
-                b.Zo,
+              m.createElement(
+                M.Zo,
                 {
                   key: "curatorresult" + e.GetClanAccountID(),
-                  onSelected: () => n(e),
+                  onSelected: () => a(e),
                 },
-                d.createElement(
+                m.createElement(
                   "div",
                   { style: { display: "flex", alignItems: "center" } },
-                  d.createElement(
+                  m.createElement(
                     "div",
-                    { className: w.GameImageContainer },
-                    d.createElement("img", {
+                    { className: D.GameImageContainer },
+                    m.createElement("img", {
                       src: e.GetAvatarURLFullSize(),
-                      className: w.AvatarImage,
+                      className: D.AvatarImage,
                     }),
                   ),
                   (0, L.HA)(e.GetName()),
@@ -164,12 +159,12 @@
             ),
           );
         };
-      var N = n(43389);
-      const R = (0, c.Pi)((e) => {
+      var R = a(43389);
+      const B = (0, c.Pi)((e) => {
           const t = (function () {
-            const [e, t] = d.useState(!H.Get().BHasLoadCompleted());
+            const [e, t] = m.useState(!H.Get().BHasLoadCompleted());
             return (
-              d.useEffect(() => {
+              m.useEffect(() => {
                 H.Get().BHasLoadCompleted() ||
                   H.Get()
                     .LoadSalePageMigrationInfo()
@@ -179,131 +174,131 @@
             );
           })();
           if (!t)
-            return d.createElement(E.V, {
-              string: (0, S.Xx)("#Loading"),
+            return m.createElement(_.V, {
+              string: (0, f.Xx)("#Loading"),
               position: "center",
               size: "medium",
             });
-          const n = t.filter((e) => !e.gid_clan_event),
-            a = n.filter(
+          const a = t.filter((e) => !e.gid_clan_event),
+            n = a.filter(
               (e) =>
                 e.display_name.toLocaleLowerCase().indexOf("franchise") >= 0,
             ),
-            r = n.filter(
+            r = a.filter(
               (e) =>
                 e.display_name.toLocaleLowerCase().indexOf("franchise") < 0,
             ),
             o = t.filter((e) => Boolean(e.gid_clan_event && e.hidden)),
             l = t.filter((e) => Boolean(e.gid_clan_event && !e.hidden));
-          return d.createElement(
+          return m.createElement(
             "div",
             null,
-            d.createElement("h1", null, "Migration Sale Tool:"),
-            d.createElement(
+            m.createElement("h1", null, "Migration Sale Tool:"),
+            m.createElement(
               "p",
               null,
               "For unmigrated or migrated but unpublished pages, you can view the existing sale page using a not logged in browser (or incognito mode). You can see the new sale page being built on the store if logged in using a Valve Admin account.",
             ),
-            d.createElement(B, {
+            m.createElement(G, {
               strName: "Unmigrated Franchises",
-              records: a,
+              records: n,
             }),
-            d.createElement(B, {
+            m.createElement(G, {
               strName: "Unmigrated Generic Sale PAges",
               records: r,
               bHideByDefault: !0,
             }),
-            d.createElement(B, { strName: "Migrated but Hidden", records: o }),
-            d.createElement(B, {
+            m.createElement(G, { strName: "Migrated but Hidden", records: o }),
+            m.createElement(G, {
               strName: "Migrated and Visible",
               records: l,
               bHideByDefault: !0,
             }),
           );
         }),
-        B = (e) => {
-          const { strName: t, records: n, bHideByDefault: a } = e,
-            [r, o] = (0, d.useState)(a);
-          return d.createElement(
+        G = (e) => {
+          const { strName: t, records: a, bHideByDefault: n } = e,
+            [r, o] = (0, m.useState)(n);
+          return m.createElement(
             "div",
             { className: I.SectionContainer },
-            d.createElement(
+            m.createElement(
               "h2",
               { className: I.SectionTitle, onDoubleClick: () => o(!r) },
               t,
               " (",
-              n.length,
+              a.length,
               ")",
-              d.createElement("span", null, " "),
-              d.createElement(
+              m.createElement("span", null, " "),
+              m.createElement(
                 g.zx,
                 { onClick: () => o(!r) },
-                r ? d.createElement(v.YqJ, null) : d.createElement(v.gR, null),
+                r ? m.createElement(E.YqJ, null) : m.createElement(E.gR, null),
               ),
             ),
-            d.createElement("hr", null),
+            m.createElement("hr", null),
             Boolean(r)
-              ? d.createElement(
+              ? m.createElement(
                   g.zx,
                   { onClick: () => o(!1) },
-                  (0, S.Xx)("#Sale_ShowContents"),
+                  (0, f.Xx)("#Sale_ShowContents"),
                 )
-              : d.createElement(
-                  d.Fragment,
+              : m.createElement(
+                  m.Fragment,
                   null,
-                  n.map((e) =>
-                    d.createElement(O, { key: e.sale_page_id, record: e }),
+                  a.map((e) =>
+                    m.createElement(O, { key: e.sale_page_id, record: e }),
                   ),
                 ),
           );
         },
         O = (0, c.Pi)((e) => {
           const { record: t } = e,
-            n = (0, m.P4)(t.clan_account_id);
-          return d.createElement(
-            d.Fragment,
+            a = (0, u.P4)(t.clan_account_id);
+          return m.createElement(
+            m.Fragment,
             null,
-            d.createElement(
+            m.createElement(
               "div",
               { className: I.RecordCtn },
-              d.createElement(
+              m.createElement(
                 "div",
                 { className: I.RecordInfoCtn },
-                d.createElement(
+                m.createElement(
                   "div",
                   null,
-                  d.createElement(
+                  m.createElement(
                     "a",
                     { href: C.De.STORE_BASE_URL + "sale/" + t.vanity },
-                    d.createElement(
+                    m.createElement(
                       "b",
                       null,
                       `${t.display_name} - (${t.vanity})`,
                     ),
                   ),
                 ),
-                Boolean(n) &&
-                  d.createElement(
+                Boolean(a) &&
+                  m.createElement(
                     "div",
                     null,
-                    d.createElement(
+                    m.createElement(
                       "a",
-                      { href: n.vanity_url },
+                      { href: a.vanity_url },
                       "Sale Page part of ",
-                      n.group_name,
+                      a.group_name,
                     ),
                   ),
                 Boolean(t.gid_clan_event) &&
-                  d.createElement(
+                  m.createElement(
                     "div",
                     null,
-                    d.createElement(
+                    m.createElement(
                       "a",
                       {
                         href:
                           C.De.COMMUNITY_BASE_URL +
                           "gid/" +
-                          u.K.InitFromClanID(
+                          d.K.InitFromClanID(
                             t.clan_account_id,
                           ).ConvertTo64BitString() +
                           "/partnerevents/edit/" +
@@ -314,86 +309,86 @@
                   ),
               ),
               Boolean(!t.gid_clan_event || (t.hidden && !t.published)) &&
-                d.createElement(
+                m.createElement(
                   g.zx,
                   {
                     onClick: (e) =>
-                      (0, p.AM)(
-                        d.createElement(P, { record: t }),
-                        (0, _.RA)(e),
+                      (0, h.AM)(
+                        m.createElement(P, { record: t }),
+                        (0, S.RA)(e),
                       ),
                   },
                   "Migrate Sale Page",
                 ),
             ),
-            d.createElement("hr", null),
+            m.createElement("hr", null),
           );
         }),
         P = (e) => {
-          const { record: t, closeModal: n } = e,
-            [a, r] = (0, d.useState)(t.clan_account_id),
-            [o, l] = (0, d.useState)(!1),
-            [i, s] = (0, d.useState)(void 0),
-            [c, m] = (0, d.useState)(!1),
-            [g, p] = (0, d.useState)(t.gid_clan_event),
-            [v, _] = (0, d.useState)(null);
-          return d.createElement(
-            h.uH,
+          const { record: t, closeModal: a } = e,
+            [n, r] = (0, m.useState)(t.clan_account_id),
+            [o, l] = (0, m.useState)(!1),
+            [s, i] = (0, m.useState)(void 0),
+            [c, u] = (0, m.useState)(!1),
+            [g, h] = (0, m.useState)(t.gid_clan_event),
+            [E, S] = (0, m.useState)(null);
+          return m.createElement(
+            p.uH,
             {
               strTitle: "Migrate Sale page",
               strDescription: `Will migrate the sale page ${t.vanity} to the below clan `,
-              bOKDisabled: !a || o,
+              bOKDisabled: !n || o,
               onOK: () => {
                 l(!0),
                   H.Get()
                     .MigrateOrUpdateSalePage(
                       t.sale_page_id,
-                      a,
+                      n,
                       t.gid_clan_event,
                     )
-                    .then(([e, t, n]) => {
-                      s(e), m(t), p(n);
+                    .then(([e, t, a]) => {
+                      i(e), u(t), h(a);
                     });
               },
-              onCancel: n,
+              onCancel: a,
             },
             Boolean(t.clan_account_id)
-              ? d.createElement(
-                  d.Fragment,
+              ? m.createElement(
+                  m.Fragment,
                   null,
-                  d.createElement(
+                  m.createElement(
                     "div",
                     null,
                     "Sale page already migrated. This will update the hidden page with latest migration code",
                   ),
-                  d.createElement("div", null, "ClanID = ", t.clan_account_id),
-                  d.createElement("div", null, "GID = ", t.gid_clan_event),
+                  m.createElement("div", null, "ClanID = ", t.clan_account_id),
+                  m.createElement("div", null, "GID = ", t.gid_clan_event),
                 )
-              : d.createElement(
-                  d.Fragment,
+              : m.createElement(
+                  m.Fragment,
                   null,
-                  d.createElement(y, {
+                  m.createElement(y, {
                     bLimitToCreatorHome: !0,
                     strLabel: "Search for Creator Home to house the Sale Event",
                     strToolTip:
                       "Partner Event sales must belong to a creator home (which is a curator with games associated to it from the partner site)",
                     fnSetCurator: (e) => {
-                      r(e.GetClanAccountID()), _(e);
+                      r(e.GetClanAccountID()), S(e);
                     },
                   }),
-                  Boolean(v) && d.createElement(k, { creatorHome: v }),
+                  Boolean(E) && m.createElement(k, { creatorHome: E }),
                 ),
-            Boolean(o && !i) &&
-              d.createElement(E.V, { position: "center", size: "medium" }),
-            Boolean(i) && d.createElement("div", null, i),
+            Boolean(o && !s) &&
+              m.createElement(_.V, { position: "center", size: "medium" }),
+            Boolean(s) && m.createElement("div", null, s),
             Boolean(c) &&
-              d.createElement(
+              m.createElement(
                 "div",
                 null,
-                d.createElement(
+                m.createElement(
                   "div",
                   null,
-                  d.createElement(
+                  m.createElement(
                     "a",
                     {
                       href: C.De.STORE_BASE_URL + "sale/" + t.vanity,
@@ -402,16 +397,16 @@
                     "Sale Page",
                   ),
                 ),
-                d.createElement(
+                m.createElement(
                   "div",
                   null,
-                  d.createElement(
+                  m.createElement(
                     "a",
                     {
                       href:
                         C.De.COMMUNITY_BASE_URL +
                         "gid/" +
-                        u.K.InitFromClanID(a).ConvertTo64BitString() +
+                        d.K.InitFromClanID(n).ConvertTo64BitString() +
                         "/partnerevents/edit/" +
                         g,
                       target: "_blank",
@@ -424,39 +419,39 @@
         },
         k = (e) => {
           const { creatorHome: t } = e,
-            n = u.K.InitFromClanID(t.GetClanAccountID()),
-            a = t.GetClanAccountID();
+            a = d.K.InitFromClanID(t.GetClanAccountID()),
+            n = t.GetClanAccountID();
           return t
-            ? d.createElement(
+            ? m.createElement(
                 "div",
                 null,
-                d.createElement(
+                m.createElement(
                   "div",
                   null,
                   "ClanID = ",
-                  a,
+                  n,
                   " - SteamID ",
-                  n.ConvertTo64BitString(),
+                  a.ConvertTo64BitString(),
                 ),
-                d.createElement(
+                m.createElement(
                   "div",
                   null,
-                  d.createElement(
+                  m.createElement(
                     "a",
                     {
                       href:
                         "https://steamsupport.valvesoftware.com/clan/overview/" +
-                        n.ConvertTo64BitString(),
+                        a.ConvertTo64BitString(),
                     },
                     "Group Support Page",
                   ),
                 ),
                 Boolean(!t.BIsPartnerEventEditorEnabled()) &&
-                  d.createElement(
+                  m.createElement(
                     "div",
                     null,
                     "To use this Creator Home for the sale page migration, the process will need to enable partner event editing on the clan. This both updates the creator home but also puts a small limitation upon it.",
-                    d.createElement(
+                    m.createElement(
                       "a",
                       {
                         href: "https://confluence.valve.org/display/STEAM/Creator+home+and+Partner+Events+Beta",
@@ -465,7 +460,7 @@
                       "Read more about the state here.",
                     ),
                   ),
-                d.createElement(N.oZ, {
+                m.createElement(R.oZ, {
                   creatorID: t.GetCreatorHomeIdentifier(),
                   bHideCreatorType: !0,
                 }),
@@ -473,144 +468,129 @@
             : null;
         };
       class H {
+        m_mapSaleIDToInfo = new Map();
+        m_listSaleState = new Array();
+        m_stateLoadPromise = null;
+        m_bLoadComplete = !1;
         BHasLoadCompleted() {
           return this.m_bLoadComplete;
         }
         GetMigrationRecords() {
           return this.m_listSaleState;
         }
-        MigrateOrUpdateSalePage(e, t, n) {
-          var a, r;
-          return (0, o.mG)(this, void 0, void 0, function* () {
-            const o = this.m_mapSaleIDToInfo.get(e);
-            if (!o)
-              return [
-                "Record not found to begin the migration processing, cannot take action.: " +
-                  e,
-                !1,
-                void 0,
-              ];
-            if (o.gid_clan_event && (!o.hidden || o.published))
-              return [
-                "Sale event is already public, cannot take action.: " + e,
-                !1,
-                void 0,
-              ];
-            try {
-              const l =
-                C.De.COMMUNITY_BASE_URL + "migrate/ajaxcreateupdatesalepage";
-              let c = new URLSearchParams();
-              c.append("sessionid", C.De.SESSIONID),
-                c.append("salePageID", e),
-                c.append("clanAccountID", "" + t),
-                n && c.append("gidClanEvent", n);
-              const d = yield i().post(l, c, { withCredentials: !0 });
-              if (
-                200 == (null == d ? void 0 : d.status) &&
-                1 ==
-                  (null === (a = null == d ? void 0 : d.data) || void 0 === a
-                    ? void 0
-                    : a.success) &&
-                (null === (r = null == d ? void 0 : d.data) || void 0 === r
-                  ? void 0
-                  : r.gidClanEvent)
-              )
-                return (
-                  (0, s.z)(() => {
-                    o.gid_clan_event ||
-                      ((o.gid_clan_event = d.data.gidClanEvent),
-                      (o.clan_account_id = t),
-                      (o.hidden = !0),
-                      (o.published = !1),
-                      (o.valve_approved_sale_vanity_id = !0));
-                  }),
-                  [d.data.msg || "Success", !0, d.data.gidClanEvent]
-                );
-              {
-                const e = (0, f.l)(d);
-                return (
-                  console.error(
-                    "CMigrateSaleStore.LoadSalePageMigrationInfo: failed with " +
-                      e.strErrorMsg,
-                    e,
-                  ),
-                  [d.data.msg || "Failed", !1, void 0]
-                );
-              }
-            } catch (e) {
-              const t = (0, f.l)(e);
-              console.error(
-                "CMigrateSaleStore.MigrateOrUpdateSalePage: caught error with " +
-                  t.strErrorMsg,
-                t,
+        async MigrateOrUpdateSalePage(e, t, a) {
+          const n = this.m_mapSaleIDToInfo.get(e);
+          if (!n)
+            return [
+              "Record not found to begin the migration processing, cannot take action.: " +
+                e,
+              !1,
+              void 0,
+            ];
+          if (n.gid_clan_event && (!n.hidden || n.published))
+            return [
+              "Sale event is already public, cannot take action.: " + e,
+              !1,
+              void 0,
+            ];
+          try {
+            const r =
+              C.De.COMMUNITY_BASE_URL + "migrate/ajaxcreateupdatesalepage";
+            let o = new URLSearchParams();
+            o.append("sessionid", C.De.SESSIONID),
+              o.append("salePageID", e),
+              o.append("clanAccountID", "" + t),
+              a && o.append("gidClanEvent", a);
+            const l = await s().post(r, o, { withCredentials: !0 });
+            if (
+              200 == l?.status &&
+              1 == l?.data?.success &&
+              l?.data?.gidClanEvent
+            )
+              return (
+                (0, i.z)(() => {
+                  n.gid_clan_event ||
+                    ((n.gid_clan_event = l.data.gidClanEvent),
+                    (n.clan_account_id = t),
+                    (n.hidden = !0),
+                    (n.published = !1),
+                    (n.valve_approved_sale_vanity_id = !0));
+                }),
+                [l.data.msg || "Success", !0, l.data.gidClanEvent]
               );
-            }
-            return ["failed", !1, void 0];
-          });
-        }
-        LoadSalePageMigrationInfo() {
-          return (0, o.mG)(this, void 0, void 0, function* () {
-            return (
-              this.m_stateLoadPromise ||
-                (this.m_stateLoadPromise =
-                  this.InternalLoadSalePageMigrationInfo()),
-              this.m_stateLoadPromise
-            );
-          });
-        }
-        InternalLoadSalePageMigrationInfo() {
-          var e, t;
-          return (0, o.mG)(this, void 0, void 0, function* () {
-            try {
-              const n =
-                  C.De.COMMUNITY_BASE_URL + "migrate/ajaxgetsalepagestomigrate",
-                a = { sessionid: C.De.SESSIONID },
-                r = yield i().get(n, { params: a, withCredentials: !0 });
-              if (
-                ((this.m_bLoadComplete = !0),
-                200 == (null == r ? void 0 : r.status) &&
-                  1 ==
-                    (null === (e = null == r ? void 0 : r.data) || void 0 === e
-                      ? void 0
-                      : e.success) &&
-                  (null === (t = null == r ? void 0 : r.data) || void 0 === t
-                    ? void 0
-                    : t.data))
-              )
-                return (
-                  (0, s.z)(() => {
-                    r.data.data.forEach((e) => {
-                      this.m_mapSaleIDToInfo.set(e.sale_page_id, e),
-                        this.m_listSaleState.push(
-                          this.m_mapSaleIDToInfo.get(e.sale_page_id),
-                        );
-                    });
-                  }),
-                  console.log(
-                    "InternalLoadSalePageMigrationInfo Loaded: " +
-                      this.m_listSaleState.length,
-                  ),
-                  this.m_listSaleState
-                );
-              {
-                const e = (0, f.l)(r);
+            {
+              const e = (0, v.l)(l);
+              return (
                 console.error(
                   "CMigrateSaleStore.LoadSalePageMigrationInfo: failed with " +
                     e.strErrorMsg,
                   e,
-                );
-              }
-            } catch (e) {
-              const t = (0, f.l)(e);
-              console.error(
-                "CMigrateSaleStore.LoadSalePageMigrationInfo: caught error with " +
-                  t.strErrorMsg,
-                t,
+                ),
+                [l.data.msg || "Failed", !1, void 0]
               );
             }
-            return [];
-          });
+          } catch (e) {
+            const t = (0, v.l)(e);
+            console.error(
+              "CMigrateSaleStore.MigrateOrUpdateSalePage: caught error with " +
+                t.strErrorMsg,
+              t,
+            );
+          }
+          return ["failed", !1, void 0];
         }
+        async LoadSalePageMigrationInfo() {
+          return (
+            this.m_stateLoadPromise ||
+              (this.m_stateLoadPromise =
+                this.InternalLoadSalePageMigrationInfo()),
+            this.m_stateLoadPromise
+          );
+        }
+        async InternalLoadSalePageMigrationInfo() {
+          try {
+            const e =
+                C.De.COMMUNITY_BASE_URL + "migrate/ajaxgetsalepagestomigrate",
+              t = { sessionid: C.De.SESSIONID },
+              a = await s().get(e, { params: t, withCredentials: !0 });
+            if (
+              ((this.m_bLoadComplete = !0),
+              200 == a?.status && 1 == a?.data?.success && a?.data?.data)
+            )
+              return (
+                (0, i.z)(() => {
+                  a.data.data.forEach((e) => {
+                    this.m_mapSaleIDToInfo.set(e.sale_page_id, e),
+                      this.m_listSaleState.push(
+                        this.m_mapSaleIDToInfo.get(e.sale_page_id),
+                      );
+                  });
+                }),
+                console.log(
+                  "InternalLoadSalePageMigrationInfo Loaded: " +
+                    this.m_listSaleState.length,
+                ),
+                this.m_listSaleState
+              );
+            {
+              const e = (0, v.l)(a);
+              console.error(
+                "CMigrateSaleStore.LoadSalePageMigrationInfo: failed with " +
+                  e.strErrorMsg,
+                e,
+              );
+            }
+          } catch (e) {
+            const t = (0, v.l)(e);
+            console.error(
+              "CMigrateSaleStore.LoadSalePageMigrationInfo: caught error with " +
+                t.strErrorMsg,
+              t,
+            );
+          }
+          return [];
+        }
+        static s_Singleton;
         static Get() {
           return (
             H.s_Singleton ||
@@ -621,26 +601,25 @@
           );
         }
         constructor() {
-          (this.m_mapSaleIDToInfo = new Map()),
-            (this.m_listSaleState = new Array()),
-            (this.m_stateLoadPromise = null),
-            (this.m_bLoadComplete = !1),
-            (0, s.rC)(this);
+          (0, i.rC)(this);
         }
       }
-      (0, o.gn)([s.LO], H.prototype, "m_mapSaleIDToInfo", void 0),
-        (0, o.gn)([s.LO], H.prototype, "m_listSaleState", void 0);
-      var U = n(93243),
-        x = n(42855),
-        F = n(71472);
+      (0, o.gn)([i.LO], H.prototype, "m_mapSaleIDToInfo", void 0),
+        (0, o.gn)([i.LO], H.prototype, "m_listSaleState", void 0);
+      var U = a(93243),
+        x = a(42855),
+        F = a(71472);
       class z {
         constructor() {
-          (this.m_rgApps = []),
-            (this.m_rgClanAccountIDs = []),
-            (this.m_nHighestAppOffsetRequested = 0),
-            (this.m_nHighestClanOffsetRequested = 0),
-            (0, s.rC)(this);
+          (0, i.rC)(this);
         }
+        m_rgApps = [];
+        m_rgClanAccountIDs = [];
+        m_nHighestAppOffsetRequested = 0;
+        m_nHighestClanOffsetRequested = 0;
+        m_mostRecentRequest;
+        m_startAppID;
+        static s_globalSingletonStore;
         static Get() {
           return (
             z.s_globalSingletonStore ||
@@ -650,371 +629,340 @@
           );
         }
         Init() {}
-        GetApps(e, t, n) {
-          const a = Math.max(e, this.m_nHighestAppOffsetRequested),
-            r = e + t - a;
+        GetApps(e, t, a) {
+          const n = Math.max(e, this.m_nHighestAppOffsetRequested),
+            r = e + t - n;
           return (
-            r > 0 && (this.m_mostRecentRequest = this.FetchApps(a, r, n)),
+            r > 0 && (this.m_mostRecentRequest = this.FetchApps(n, r, a)),
             this.m_rgApps.slice(e, e + t)
           );
         }
-        FetchApps(e, t, n, a) {
-          var r;
-          return (0, o.mG)(this, void 0, void 0, function* () {
-            if (this.m_startAppID && this.m_startAppID != n)
-              throw new Error(
-                "Cannot switch starting AppID from " +
-                  this.m_startAppID +
-                  " to " +
-                  n,
-              );
-            this.m_startAppID = n;
-            let o = Math.max(t, 20);
-            for (
-              this.m_nHighestAppOffsetRequested = e + o,
-                yield this.m_mostRecentRequest;
-              o > 0;
+        async FetchApps(e, t, a, n) {
+          if (this.m_startAppID && this.m_startAppID != a)
+            throw new Error(
+              "Cannot switch starting AppID from " +
+                this.m_startAppID +
+                " to " +
+                a,
+            );
+          this.m_startAppID = a;
+          let r = Math.max(t, 20);
+          for (
+            this.m_nHighestAppOffsetRequested = e + r,
+              await this.m_mostRecentRequest;
+            r > 0;
 
-            ) {
-              const t = Math.min(o, 100),
-                l = { offset: e, nBatchSize: t, start_appid: n },
-                c = C.De.COMMUNITY_BASE_URL + "migrate/ajaxgetallapps";
-              let d = null;
-              try {
-                const n = yield i().get(c, {
-                  params: l,
-                  withCredentials: !0,
-                  cancelToken: null == a ? void 0 : a.token,
-                });
-                if (
-                  1 ==
-                    (null === (r = null == n ? void 0 : n.data) || void 0 === r
-                      ? void 0
-                      : r.success) &&
-                  n.data.apps
-                ) {
-                  (0, s.z)(() => {
-                    if (e > this.m_rgApps.length)
-                      for (let t = this.m_rgApps.length; t < e; t++)
-                        this.m_rgApps[t] = null;
-                    for (let a = 0; a < t; a++)
-                      this.m_rgApps[e + a] = n.data.apps[a];
-                  }),
-                    (e += t),
-                    (o -= t);
-                  continue;
-                }
-                d = (0, f.l)(null == n ? void 0 : n.data);
-              } catch (e) {
-                d = (0, f.l)(e);
+          ) {
+            const t = Math.min(r, 100),
+              o = { offset: e, nBatchSize: t, start_appid: a },
+              l = C.De.COMMUNITY_BASE_URL + "migrate/ajaxgetallapps";
+            let c = null;
+            try {
+              const a = await s().get(l, {
+                params: o,
+                withCredentials: !0,
+                cancelToken: n?.token,
+              });
+              if (1 == a?.data?.success && a.data.apps) {
+                (0, i.z)(() => {
+                  if (e > this.m_rgApps.length)
+                    for (let t = this.m_rgApps.length; t < e; t++)
+                      this.m_rgApps[t] = null;
+                  for (let n = 0; n < t; n++)
+                    this.m_rgApps[e + n] = a.data.apps[n];
+                }),
+                  (e += t),
+                  (r -= t);
+                continue;
               }
-              throw new Error(
-                "ajax request failed with error " +
-                  d.errorCode +
-                  ':"' +
-                  d.strErrorMsg +
-                  '"',
-              );
+              c = (0, v.l)(a?.data);
+            } catch (e) {
+              c = (0, v.l)(e);
             }
-          });
+            throw new Error(
+              "ajax request failed with error " +
+                c.errorCode +
+                ':"' +
+                c.strErrorMsg +
+                '"',
+            );
+          }
         }
         GetClanAccountIDs(e, t) {
-          const n = this.m_nHighestClanOffsetRequested,
-            a = e + t - n;
+          const a = this.m_nHighestClanOffsetRequested,
+            n = e + t - a;
           return (
-            a > 0 && this.FetchClans(n, a),
+            n > 0 && this.FetchClans(a, n),
             this.m_rgClanAccountIDs.slice(e, e + t)
           );
         }
-        FetchClans(e, t, n) {
-          var a;
-          return (0, o.mG)(this, void 0, void 0, function* () {
-            this.m_nHighestClanOffsetRequested = e + t;
-            const r = { offset: e, count: t },
-              o = C.De.COMMUNITY_BASE_URL + "migrate/ajaxgetallclans";
-            let l = null;
-            try {
-              const e = yield i().get(o, {
-                params: r,
-                withCredentials: !0,
-                cancelToken: null == n ? void 0 : n.token,
-              });
-              if (
-                1 ==
-                  (null === (a = null == e ? void 0 : e.data) || void 0 === a
-                    ? void 0
-                    : a.success) &&
-                e.data.accountids
-              )
-                return void (this.m_rgClanAccountIDs =
-                  this.m_rgClanAccountIDs.concat(
-                    e.data.accountids.map(Number),
-                  ));
-              l = (0, f.l)(null == e ? void 0 : e.data);
-            } catch (e) {
-              l = (0, f.l)(e);
-            }
-            console.error(
-              "FetchClans: ajax request failed with error",
-              l.strErrorMsg,
-            );
-          });
+        async FetchClans(e, t, a) {
+          this.m_nHighestClanOffsetRequested = e + t;
+          const n = { offset: e, count: t },
+            r = C.De.COMMUNITY_BASE_URL + "migrate/ajaxgetallclans";
+          let o = null;
+          try {
+            const e = await s().get(r, {
+              params: n,
+              withCredentials: !0,
+              cancelToken: a?.token,
+            });
+            if (1 == e?.data?.success && e.data.accountids)
+              return void (this.m_rgClanAccountIDs =
+                this.m_rgClanAccountIDs.concat(e.data.accountids.map(Number)));
+            o = (0, v.l)(e?.data);
+          } catch (e) {
+            o = (0, v.l)(e);
+          }
+          console.error(
+            "FetchClans: ajax request failed with error",
+            o.strErrorMsg,
+          );
         }
       }
-      (0, o.gn)([s.LO.shallow], z.prototype, "m_rgApps", void 0),
-        (0, o.gn)([s.LO.shallow], z.prototype, "m_rgClanAccountIDs", void 0);
-      var V = n(73941),
-        Y = n(46452),
-        q = n.n(Y);
+      (0, o.gn)([i.LO.shallow], z.prototype, "m_rgApps", void 0),
+        (0, o.gn)([i.LO.shallow], z.prototype, "m_rgClanAccountIDs", void 0);
+      var V = a(73941),
+        q = a(46452),
+        Y = a.n(q);
       const W = (0, c.Pi)((e) => {
-          const [t, n] = (0, d.useState)(!0);
-          (0, d.useEffect)(() => {
-            Promise.all([x.cb.InitGlobal(), r.wk.Init()]).then(() => n(!1));
+          const [t, a] = (0, m.useState)(!0);
+          (0, m.useEffect)(() => {
+            Promise.all([x.cb.InitGlobal(), r.wk.Init()]).then(() => a(!1));
           }, []);
-          const [a, o] = (0, F.Ar)("start", 0),
-            [l, i] = (0, F.Ar)("start_appid", 0),
-            [s, c] = (0, F.Ar)("count", 10),
-            [u, m] = (0, F.Ar)("autoload", !0),
-            [g, h] = (0, F.Ar)("batch_size", 1),
-            [p, v] = (0, F.Ar)("automigrate", !1),
-            [_, S] = (0, d.useState)(!1),
-            [f, C] = (0, F.Ar)("rolling", 0),
-            [I, A] = (0, d.useState)(new Set()),
-            M = (0, d.useRef)(0),
-            b = z.Get().GetApps(a, s, l),
-            D = 0 == f ? b : b.filter((e) => !I.has(Number(e.id))).slice(0, f),
-            w = (e, t) => {
+          const [n, o] = (0, F.Ar)("start", 0),
+            [l, s] = (0, F.Ar)("start_appid", 0),
+            [i, c] = (0, F.Ar)("count", 10),
+            [d, u] = (0, F.Ar)("autoload", !0),
+            [g, p] = (0, F.Ar)("batch_size", 1),
+            [h, E] = (0, F.Ar)("automigrate", !1),
+            [S, f] = (0, m.useState)(!1),
+            [v, C] = (0, F.Ar)("rolling", 0),
+            [I, A] = (0, m.useState)(new Set()),
+            b = (0, m.useRef)(0),
+            M = z.Get().GetApps(n, i, l),
+            w = 0 == v ? M : M.filter((e) => !I.has(Number(e.id))).slice(0, v),
+            D = (e, t) => {
               I.has(e) ||
                 (console.log("completed: ", e, t),
                 I.add(e),
-                (M.current += t),
+                (b.current += t),
                 A(new Set(I)));
             };
-          return d.createElement(
+          return m.createElement(
             "div",
-            { className: q().MigrateToolCtn },
-            d.createElement(
+            { className: Y().MigrateToolCtn },
+            m.createElement(
               "div",
-              { className: q().ToolHeader },
+              { className: Y().ToolHeader },
               "Partner Events Migration Tools",
             ),
-            D.map((e) =>
-              d.createElement($, {
+            w.map((e) =>
+              m.createElement($, {
                 key: e.id,
                 app: e,
-                bAutoLoad: u,
-                bAutoMigrate: p || _,
+                bAutoLoad: d,
+                bAutoMigrate: h || S,
                 nMigrateBatchSize: g,
-                fnOnCompletion: w,
+                fnOnCompletion: D,
               }),
             ),
             t &&
-              d.createElement(E.V, {
+              m.createElement(_.V, {
                 size: "xlarge",
                 position: "center",
                 string: "initializing",
               }),
-            !b.length &&
-              d.createElement(E.V, {
+            !M.length &&
+              m.createElement(_.V, {
                 size: "xlarge",
                 position: "center",
                 string: "loading apps",
               }),
-            d.createElement(
+            m.createElement(
               "div",
               {
-                className: q().LoadEventsButton,
+                className: Y().LoadEventsButton,
                 onClick: () => {
-                  S(!1), A(new Set()), o(a + s);
+                  f(!1), A(new Set()), o(n + i);
                 },
               },
               "LOAD NEXT PAGE",
             ),
-            !p &&
-              d.createElement(
+            !h &&
+              m.createElement(
                 "div",
-                { className: q().LoadEventsButton, onClick: () => S(!0) },
+                { className: Y().LoadEventsButton, onClick: () => f(!0) },
                 "MIGRATE ALL ON PAGE",
               ),
-            d.createElement(
+            m.createElement(
               "div",
-              { className: q().StatusMessage },
+              { className: Y().StatusMessage },
               I.size +
                 " OF " +
-                b.length +
+                M.length +
                 " APPS COMPLETE. #EVENTS: " +
-                M.current,
+                b.current,
             ),
           );
         }),
         $ = (0, c.Pi)((e) => {
           const t = Number(e.app.id),
-            [n, a] = (0, d.useState)(0),
-            [l, i] = (0, d.useState)([]),
-            [s, c] = (0, d.useState)(!1),
-            u = (0, d.useRef)(new Set()),
-            m = (0, d.useRef)(0);
-          (0, d.useEffect)(() => {
-            U.sV.LoadOGGClanInfoForAppID(t).then((e) => {
-              var n;
-              return console.log(
-                "Loaded app",
-                t,
-                null == e ? void 0 : e.group_name,
-                null === (n = null == e ? void 0 : e.clanSteamID) ||
-                  void 0 === n
-                  ? void 0
-                  : n.ConvertTo64BitString(),
+            [a, n] = (0, m.useState)(0),
+            [o, l] = (0, m.useState)([]),
+            [s, i] = (0, m.useState)(!1),
+            c = (0, m.useRef)(new Set()),
+            d = (0, m.useRef)(0);
+          (0, m.useEffect)(() => {
+            U.sV
+              .LoadOGGClanInfoForAppID(t)
+              .then((e) =>
+                console.log(
+                  "Loaded app",
+                  t,
+                  e?.group_name,
+                  e?.clanSteamID?.ConvertTo64BitString(),
+                ),
               );
-            });
           }, [t]);
-          const g = U.sV.GetOGGClanInfo(t),
-            h = g ? g.group_name : e.app.name,
-            p = `${C.De.COMMUNITY_BASE_URL}games/${g ? g.vanity_url : t}/partnerevents/`,
-            v = l.length,
-            _ = n == v,
-            S = l.filter((e) => e.BIsVisibleEvent()),
-            I = S.length,
+          const u = U.sV.GetOGGClanInfo(t),
+            g = u ? u.group_name : e.app.name,
+            p = `${C.De.COMMUNITY_BASE_URL}games/${u ? u.vanity_url : t}/partnerevents/`,
+            h = o.length,
+            E = a == h,
+            S = o.filter((e) => e.BIsVisibleEvent()),
+            f = S.length,
+            I = S.filter(
+              (e) =>
+                e.bOldAnnouncement &&
+                u &&
+                u.clanAccountID != e.announcementClanSteamID.GetAccountID(),
+            ).length,
             A = S.filter(
               (e) =>
                 e.bOldAnnouncement &&
-                g &&
-                g.clanAccountID != e.announcementClanSteamID.GetAccountID(),
-            ).length,
-            M = S.filter(
-              (e) =>
-                e.bOldAnnouncement &&
-                !u.current.has(e.AnnouncementGID) &&
-                (!g ||
-                  g.clanAccountID == e.announcementClanSteamID.GetAccountID()),
+                !c.current.has(e.AnnouncementGID) &&
+                (!u ||
+                  u.clanAccountID == e.announcementClanSteamID.GetAccountID()),
             ),
-            b = M.length,
-            D = !_ && b > 0 && (null == g ? void 0 : g.clanSteamID),
-            w = () =>
-              (0, o.mG)(void 0, void 0, void 0, function* () {
-                const e = n;
-                a(n + 50), c(!0);
-                const o = yield r.wk.LoadPartnerEventsPageable(
-                  void 0,
-                  t,
-                  e,
-                  50,
-                );
-                i(l.concat(o)), c(!1);
-              });
-          (0, d.useEffect)(() => {
-            e.bAutoLoad && _ && !s && w();
+            b = A.length,
+            M = !E && b > 0 && u?.clanSteamID,
+            w = async () => {
+              const e = a;
+              n(a + 50), i(!0);
+              const s = await r.wk.LoadPartnerEventsPageable(void 0, t, e, 50);
+              l(o.concat(s)), i(!1);
+            };
+          (0, m.useEffect)(() => {
+            e.bAutoLoad && E && !s && w();
           });
-          const L = (e, t) => {
-              t ? (m.current += 1) : u.current.add(e);
+          const D = (e, t) => {
+              t ? (d.current += 1) : c.current.add(e);
             },
-            T = () =>
-              (0, o.mG)(void 0, void 0, void 0, function* () {
-                c(!0),
-                  yield (function (e, t, n, a, l) {
-                    return (0, o.mG)(this, void 0, void 0, function* () {
-                      for (const o of e.slice(0, t)) {
-                        console.log(
-                          "Migrating",
-                          n,
-                          o.AnnouncementGID,
-                          o.GetNameWithFallback(0),
-                          o,
-                        );
-                        try {
-                          const e = yield (0, V.HO)(o.AnnouncementGID, n, a);
-                          if (e) console.warn("Already migrated to event", e);
-                          else {
-                            const e = r.wk.GetEditModel();
-                            e.AddTag("auto_migrated"),
-                              e.AddTag("hide_library_overview"),
-                              e.AddTag("hide_library_detail"),
-                              yield r.wk.SaveModel(a),
-                              console.log("Successfully migrated the event!"),
-                              (o.bOldAnnouncement = !1),
-                              l(o.AnnouncementGID, !0);
-                          }
-                        } catch (e) {
-                          const t = (0, f.l)(e);
-                          console.error(
-                            "MigrateEvents: " + t.strErrorMsg.slice(0, 512),
-                            t,
-                          ),
-                            l(o.AnnouncementGID, !1);
-                        }
+            L = async () => {
+              i(!0),
+                await (async function (e, t, a, n, o) {
+                  for (const l of e.slice(0, t)) {
+                    console.log(
+                      "Migrating",
+                      a,
+                      l.AnnouncementGID,
+                      l.GetNameWithFallback(0),
+                      l,
+                    );
+                    try {
+                      const e = await (0, V.HO)(l.AnnouncementGID, a, n);
+                      if (e) console.warn("Already migrated to event", e);
+                      else {
+                        const e = r.wk.GetEditModel();
+                        e.AddTag("auto_migrated"),
+                          e.AddTag("hide_library_overview"),
+                          e.AddTag("hide_library_detail"),
+                          await r.wk.SaveModel(n),
+                          console.log("Successfully migrated the event!"),
+                          (l.bOldAnnouncement = !1),
+                          o(l.AnnouncementGID, !0);
                       }
-                    });
-                  })(M, e.nMigrateBatchSize, t, g.clanSteamID, L),
-                  c(!1);
-              });
+                    } catch (e) {
+                      const t = (0, v.l)(e);
+                      console.error(
+                        "MigrateEvents: " + t.strErrorMsg.slice(0, 512),
+                        t,
+                      ),
+                        o(l.AnnouncementGID, !1);
+                    }
+                  }
+                })(A, e.nMigrateBatchSize, t, u.clanSteamID, D),
+                i(!1);
+            };
           return (
-            (0, d.useEffect)(() => {
-              e.bAutoMigrate && D && !s && T();
+            (0, m.useEffect)(() => {
+              e.bAutoMigrate && M && !s && L();
             }),
-            (0, d.useEffect)(() => {
-              _ || D || s || e.fnOnCompletion(t, m.current);
+            (0, m.useEffect)(() => {
+              E || M || s || e.fnOnCompletion(t, d.current);
             }),
-            d.createElement(
+            m.createElement(
               "div",
-              { className: q().ClanRow },
-              d.createElement("div", { className: q().ID }, t),
-              d.createElement("a", { className: q().ClanName, href: p }, h),
-              d.createElement(
+              { className: Y().ClanRow },
+              m.createElement("div", { className: Y().ID }, t),
+              m.createElement("a", { className: Y().ClanName, href: p }, g),
+              m.createElement(
                 "div",
-                { className: q().Counts },
-                `Loaded: ${v}\tVisible: ${I}\tOld: ${b}`,
-                A > 0 &&
-                  d.createElement(
+                { className: Y().Counts },
+                `Loaded: ${h}\tVisible: ${f}\tOld: ${b}`,
+                I > 0 &&
+                  m.createElement(
                     "span",
-                    { className: q().LinkedAnnouncements },
-                    `Linked: ${A}`,
+                    { className: Y().LinkedAnnouncements },
+                    `Linked: ${I}`,
                   ),
               ),
-              _
-                ? d.createElement(
+              E
+                ? m.createElement(
                     "div",
-                    { className: q().LoadEventsButton, onClick: w },
+                    { className: Y().LoadEventsButton, onClick: w },
                     "LOAD EVENTS",
                   )
                 : s
-                  ? d.createElement(E.V, { size: "small" })
-                  : D
-                    ? d.createElement(
+                  ? m.createElement(_.V, { size: "small" })
+                  : M
+                    ? m.createElement(
                         "div",
-                        { className: q().MigrateEventsButton, onClick: T },
+                        { className: Y().MigrateEventsButton, onClick: L },
                         "MIGRATE EVENTS",
                       )
-                    : d.createElement(
+                    : m.createElement(
                         "div",
-                        { className: q().CompleteMessage },
+                        { className: Y().CompleteMessage },
                         "NOTHING TO MIGRATE",
                       ),
             )
           );
         });
-      var j = n(8285),
-        K = n(82071),
-        Z = (n(34345), n(69406));
+      var j = a(8285),
+        K = a(82071),
+        Z = (a(34345), a(69406));
       function X(e) {
-        const [t, n] = d.useState(!0);
+        const [t, a] = m.useState(!0);
         return (
-          d.useEffect(() => {
-            K.j1.Init(), Promise.all([]).then(() => n(!1));
+          m.useEffect(() => {
+            K.j1.Init(), Promise.all([]).then(() => a(!1));
           }, []),
           t
-            ? d.createElement(E.V, { position: "center", size: "medium" })
-            : d.createElement(
+            ? m.createElement(_.V, { position: "center", size: "medium" })
+            : m.createElement(
                 j.rs,
                 null,
-                d.createElement(j.AW, {
-                  path: a.wZ.MigrateSaleEvents(),
-                  component: R,
+                m.createElement(j.AW, {
+                  path: n.wZ.MigrateSaleEvents(),
+                  component: B,
                 }),
-                d.createElement(j.AW, {
-                  path: a.wZ.MigrateEvents(),
+                m.createElement(j.AW, {
+                  path: n.wZ.MigrateEvents(),
                   component: W,
                 }),
-                d.createElement(j.AW, { component: Z.R }),
+                m.createElement(j.AW, { component: Z.R }),
               )
         );
       }

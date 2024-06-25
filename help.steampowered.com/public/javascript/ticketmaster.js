@@ -2263,6 +2263,7 @@ var PreapprovalQueue = {
 		}
 
 		PreapprovalQueue.RenderQueue();
+		LoadNextPreloadedTicket( PreapprovalQueue.rgCurrentTicket[2] )
 	},
 
 	RemoveTxn: function( txnID )

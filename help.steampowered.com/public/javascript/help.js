@@ -3513,3 +3513,213 @@ function GetCurrencyCode( currencyId )
 	}
 	return 'Unknown';
 }
+
+function ClearUpdateShippingErrors()
+{
+	$J('updateShippingError').text( '' );
+	$J('updateShippingError').hide();
+}
+
+g_dlgEditShippingAddress = null;
+function ShowUpdateShippingAddressForm()
+{
+	g_dlgEditShippingAddress = ShowDialog( 'Edit Shipping Address', $J( "#updateShippingAddress" ) );
+	g_dlgEditShippingAddress.SetRemoveContentOnDismissal( false );
+
+	$J('shipping_info_confirm').hide();
+	$J('shipping_info_edit').show();
+
+	ClearUpdateShippingErrors();
+}
+
+function HideUpdateShippingAddressForm()
+{
+	if ( g_dlgEditShippingAddress )
+		g_dlgEditShippingAddress.Dismiss();
+
+	ClearUpdateShippingErrors();
+}
+
+
+function SelectShippingAddressSuggestion()
+{
+	ShippingAddressVerified( $('shipping_info_verify_update').checked );
+}
+
+function UpdateShippingAddress()
+{
+		var errorString = '';
+
+		var rgBadFields = {
+		shipping_first_name : false,
+		shipping_last_name : false,
+		shipping_address : false,
+		shipping_city : false,
+		shipping_state : false,
+		shipping_postal_code : false,
+	}
+
+	errorString = Shipping_VerifyAddressFields( rgBadFields );
+
+		if ( errorString != '' )
+	{
+		$J('updateShippingError').text( errorString );
+		$J('updateShippingError').show();
+	}
+	else
+	{
+				$J('updateShippingError').text( '' );
+		$J('updateShippingError').hide();
+		VerifyShippingAddress();
+	}
+}
+
+var g_bVerifyShippingAddressCallRunning = false;
+function VerifyShippingAddress()
+{
+		if( g_bVerifyShippingAddressCallRunning )
+		return;
+
+		g_bVerifyShippingAddressCallRunning = true;
+
+	Shipping_VerifyShippingAddress( g_sessionID, 'https://help.steampowered.com/wizard/AjaxVerifyShippingAddress',
+		{
+			onSuccess: function( result ) {
+				g_bVerifyShippingAddressCallRunning = false;
+				// Success...
+				if ( result.success == 1 )
+				{
+					OnVerifyEditShippingAddressSuccess( result );
+				}
+				else
+				{
+					OnVerifyEditShippingAddressFailure();
+				}
+			},
+			onFailure: function(){
+								g_bVerifyShippingAddressCallRunning = false;
+				OnVerifyShippingAddressFailure();
+			}
+		});
+}
+
+function OnVerifyEditShippingAddressSuccess( result )
+{
+		if ( result.eShippingAddressVerificationDetail != 0 )
+	{
+				var error_text = 'We cannot ship your order to the address that you\'ve provided.';
+		switch ( result.eShippingAddressVerificationDetail )
+		{
+			case 4:
+				error_text = 'We cannot ship to the address you\'ve provided because part of your address is missing or looks invalid.';
+				break;
+
+			case 3:
+				error_text = 'We cannot ship to the address you\'ve provided because part of your address is too long.  Your combined name and each of the address fields can only be up to 35 characters long.';
+				break;
+
+			case 1:
+			case 5:
+				error_text = 'We cannot ship your order to P.O. Box, APO, FPO, or DPO address that you\'ve provided.';
+				break;
+
+			case 6:
+				error_text = 'We cannot ship your order because the postal code you provided belongs to a region outside of the 48 continental United States.';
+				break;
+
+			case 7:
+				error_text = 'Due to the Coronavirus, carriers currently will not deliver shipments to your location.  As a result, we are unable to process your order.';
+				break;
+
+			case 2:
+				error_text = 'We cannot ship your order to the address that you\'ve provided because it contains characters that are not latin-based.';
+				break;
+		}
+
+		$J('updateShippingError').text( error_text );
+		$J('updateShippingError').show();
+	}
+	else if ( result.bValidAddress || result.bSuggestedAddressMatches )
+	{
+		ShippingAddressVerified( false );
+	}
+	else
+	{
+		Shipping_UpdateFieldsFromVerificationCall( result );
+
+		$('shipping_info_confirm').show();
+		$('shipping_info_edit').hide();
+
+				var error_text = 'We\'ve found a suggestion for your shipping address.';
+
+		$J('updateShippingError').text( error_text );
+		$J('updateShippingError').show();
+	}
+}
+
+function ShippingAddressVerified( bUseCorrected )
+{
+	if ( bUseCorrected )
+	{
+		Shipping_UpdateAddressWithCorrectedFields();
+	}
+
+	SubmitUpdateShippingAddress();
+}
+
+function OnVerifyEditShippingAddressFailure()
+{
+		var error_text = '#checkout_failed_inittransaction';
+
+	$J('updateShippingError').text( error_text );
+	$J('updateShippingError').show();
+}
+
+var g_bUpdateShippingAddress = false;
+function SubmitUpdateShippingAddress()
+{
+		if( g_bUpdateShippingAddress )
+		return;
+
+		g_bUpdateShippingAddress = true;
+
+	$J.ajax({
+		type: "POST",
+		url: "https://help.steampowered.com/wizard/AjaxUpdateShippingAddress",
+		method: 'post',
+		data: {
+			'transid': $J('transid').value,
+			'shippingfirstname': $J('shipping_first_name').value,
+			'shippinglastname': $J('shipping_last_name').value,
+			'shippingaddress': $J('shipping_address').value,
+			'shippingaddress2': $J('shipping_address_two').value,
+			'shippingcountry': $J('shipping_country').value,
+			'shippingcity': $J('shipping_city').value,
+			'shippingstate': (g_bHasBillingStates ? $J('shipping_state_select').value : $J('shipping_state_text').value),
+			'shippingpostalcode': $J('shipping_postal_code').value,
+			'shippingphone': $J('shipping_phone').value,
+			'sessionid': g_sessionID
+		}
+	}).done( function(data){
+				g_bUpdateShippingAddress = false;
+				// Success...
+				if ( data.success == 1 )
+				{
+					window.location.reload();
+				}
+				else
+				{
+					OnUpdateShippingAddressFailure();
+				}
+	}).fail( function(){
+								g_bUpdateShippingAddress = false;
+				OnUpdateShippingAddressFailure();
+	});
+}
+
+
+function OnUpdateShippingAddressFailure()
+{
+	$J('#updateShippingError').text( 'There was a problem updating your shipping address for this order.' );
+	$J('#updateShippingError').show();
+}

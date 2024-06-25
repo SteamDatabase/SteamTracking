@@ -88,10 +88,7 @@
                 n.createElement(
                   "div",
                   null,
-                  (0, g.Xx)(
-                    "#Recap_ForPartner",
-                    null == l ? void 0 : l.partner_name,
-                  ),
+                  (0, g.Xx)("#Recap_ForPartner", l?.partner_name),
                 ),
                 Boolean(0 == x.length)
                   ? n.createElement(

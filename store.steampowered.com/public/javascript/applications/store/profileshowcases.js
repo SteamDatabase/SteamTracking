@@ -11,7 +11,7 @@
     },
     17444: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { ProfileShowcasesPage: () => C, default: () => E });
+      a.r(t), a.d(t, { ProfileShowcasesPage: () => E, default: () => b });
       var s = a(85556),
         r = a(47427),
         l = a(27605),
@@ -28,31 +28,27 @@
           a.p +
           "images/applications/store/showcases_header_image.svg?v=valveisgoodatcaching",
         g = (e) =>
-          r.createElement(
-            h.oY,
-            Object.assign({}, e, {
-              onClick: (t) =>
-                (0, _.hY)(
-                  t,
-                  e.customization_type,
-                  e.current_level,
-                  e.desired_level,
-                ),
-            }),
-          ),
+          r.createElement(h.oY, {
+            ...e,
+            onClick: (t) =>
+              (0, _.hY)(
+                t,
+                e.customization_type,
+                e.current_level,
+                e.desired_level,
+              ),
+          }),
         P = (e) =>
-          r.createElement(
-            h.MB,
-            Object.assign({}, e, {
-              onClick: (t) =>
-                (0, _._J)(
-                  t,
-                  e.customization_type,
-                  e.purchased_count,
-                  e.current_level,
-                ),
-            }),
-          ),
+          r.createElement(h.MB, {
+            ...e,
+            onClick: (t) =>
+              (0, _._J)(
+                t,
+                e.customization_type,
+                e.purchased_count,
+                e.current_level,
+              ),
+          }),
         f = (e) =>
           r.createElement(
             n.xu,
@@ -111,7 +107,7 @@
             ),
           );
         },
-        b = (e) => {
+        C = (e) => {
           const {
             point_cost: t,
             purchasable_showcases: a,
@@ -157,7 +153,7 @@
             ),
           );
         };
-      let C = class extends r.Component {
+      let E = class extends r.Component {
         render() {
           let e = m.Vb.Get().GetUpgradableProfileShowcaseCost(),
             t = m.Vb.Get().GetUpgradableProfileShowcases(),
@@ -188,7 +184,7 @@
                 upgradable_showcases: t,
                 purchased_upgrades: a,
               }),
-              r.createElement(b, {
+              r.createElement(C, {
                 point_cost: s,
                 purchasable_showcases: l,
                 purchased_showcases: c,
@@ -199,8 +195,8 @@
           );
         }
       };
-      C = (0, s.gn)([l.Pi], C);
-      const E = C;
+      E = (0, s.gn)([l.Pi], E);
+      const b = E;
     },
   },
 ]);

@@ -239,6 +239,10 @@ td {
 	box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.7);
 }
 
+.documentation_bbcode .no_glow img {
+	box-shadow: unset;
+}
+
 .documentation_bbcode h2 {
 	margin-top: 20px;
 	margin-bottom: 10px;

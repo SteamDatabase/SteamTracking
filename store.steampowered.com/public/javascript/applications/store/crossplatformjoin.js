@@ -20,67 +20,67 @@
     },
     80212: (e, t, n) => {
       "use strict";
-      n.d(t, { Xt: () => E, _I: () => p, hx: () => u });
-      var i = n(47427),
+      n.d(t, { Xt: () => E, _I: () => p, hx: () => d });
+      var a = n(47427),
         s = n(90069),
-        o = n(31846),
-        r = n(37563),
-        a = n(99327),
+        r = n(31846),
+        i = n(37563),
+        o = n(99327),
         l = n(22791),
         c = n(35791),
         m = n(27438);
-      function d(e) {
-        return i.createElement(
+      function u(e) {
+        return a.createElement(
           s.e1,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          i.createElement(f, {
+          a.createElement(f, {
             redirectURL: e.redirectURL,
             guestOption: e.guestOption,
           }),
         );
       }
-      function u(e) {
+      function d(e) {
         const { redirectURL: t = window.location.href } = e;
-        return i.createElement(
+        return a.createElement(
           m.Yy,
           { active: !0 },
-          i.createElement(d, { redirectURL: t }),
+          a.createElement(u, { redirectURL: t }),
         );
       }
       function E() {
         (0, s.AM)(
-          i.createElement(d, {
+          a.createElement(u, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: (0, o.Xx)("#Login_SignInTitle") },
+          { strTitle: (0, r.Xx)("#Login_SignInTitle") },
         );
       }
       function p(e, t) {
         (0, s.AM)(
-          i.createElement(d, {
+          a.createElement(u, {
             ownerWin: window,
             redirectURL: e,
             guestOption: t,
           }),
           window,
-          { strTitle: (0, o.Xx)("#Login_SignInTitle") },
+          { strTitle: (0, r.Xx)("#Login_SignInTitle") },
         );
       }
       function f(e) {
         const { redirectURL: t, guestOption: n } = e,
-          [s] = (0, i.useState)(
-            new l.J(r.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+          [s] = (0, a.useState)(
+            new l.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [o, m] = (0, i.useState)(!1);
-        return i.createElement(
+          [r, m] = (0, a.useState)(!1);
+        return a.createElement(
           "div",
           null,
-          o
-            ? i.createElement(a.pT, null)
-            : i.createElement(
-                a.wK,
+          r
+            ? a.createElement(o.pT, null)
+            : a.createElement(
+                o.wK,
                 {
                   autoFocus: !0,
                   transport: s,
@@ -93,324 +93,296 @@
                   redirectUrl: t,
                   theme: "modal",
                 },
-                n && i.createElement(a.bU, { redirectURL: t }),
+                n && a.createElement(o.bU, { redirectURL: t }),
               ),
         );
       }
     },
     89457: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => O });
-      var i = n(47427),
+      n.r(t), n.d(t, { default: () => k });
+      var a = n(47427),
         s = n(59704),
-        o = n.n(s),
-        r = n(8285),
-        a = n(40057),
+        r = n.n(s),
+        i = n(8285),
+        o = n(40057),
         l = n(39773),
-        c = n(85556),
-        m = n(73799),
-        d = n.n(m),
+        c = n(73799),
+        m = n.n(c),
         u = n(42718),
-        E = n(79545),
-        p = n(18015),
-        f = n(65255),
-        v = n(77936);
+        d = n(79545),
+        E = n(18015),
+        p = n(65255),
+        f = n(77936);
       let _;
       const h = 864e5;
       function g(e) {
-        return `appinfo_${e}_${f.De.LANGUAGE}`;
+        return `appinfo_${e}_${p.De.LANGUAGE}`;
       }
       function w(e) {
         return Boolean(e && Date.now() - e.timeCached < h);
       }
-      function I(e) {
-        const t = (0, a.bY)(),
-          n = (0, a.y$)();
+      function v(e) {
+        const t = (0, o.bY)(),
+          n = (0, o.y$)();
         return (0, u.useQuery)(
           ["appinfo", e],
-          () =>
-            (0, c.mG)(this, void 0, void 0, function* () {
-              return (function (e, t) {
-                return (
-                  _ ||
-                    (_ = new (d())(
-                      (n) =>
-                        (0, c.mG)(this, void 0, void 0, function* () {
-                          const i = new Map();
-                          (yield Promise.all(n.map((e) => t.GetObject(g(e)))))
-                            .filter(w)
-                            .forEach(({ value: e }) => i.set(e.appid, e));
-                          const s = n.slice().filter((e) => !i.has(e));
-                          if (s.length) {
-                            const n = E.gA.Init(p.Fi);
-                            n.Body().set_language((0, v.jM)(f.De.LANGUAGE)),
-                              n.Body().set_appids(s);
-                            const o = yield p.AE.GetApps(e, n);
-                            if (1 != o.GetEResult()) throw o.GetErrorMessage();
-                            o.Body()
-                              .toObject()
-                              .apps.forEach((e) => {
-                                t.StoreObject(g(e.appid), {
-                                  timeCached: Date.now(),
-                                  value: e,
-                                }),
-                                  i.set(e.appid, e);
-                              });
-                          }
-                          return n.map((e) => i.get(e));
-                        }),
-                      { cache: !1 },
-                    )),
-                  _
-                );
-              })(t, n).load(e);
-            }),
+          async () =>
+            (function (e, t) {
+              return (
+                _ ||
+                  (_ = new (m())(
+                    async (n) => {
+                      const a = new Map();
+                      (await Promise.all(n.map((e) => t.GetObject(g(e)))))
+                        .filter(w)
+                        .forEach(({ value: e }) => a.set(e.appid, e));
+                      const s = n.slice().filter((e) => !a.has(e));
+                      if (s.length) {
+                        const n = d.gA.Init(E.Fi);
+                        n.Body().set_language((0, f.jM)(p.De.LANGUAGE)),
+                          n.Body().set_appids(s);
+                        const r = await E.AE.GetApps(e, n);
+                        if (1 != r.GetEResult()) throw r.GetErrorMessage();
+                        r.Body()
+                          .toObject()
+                          .apps.forEach((e) => {
+                            t.StoreObject(g(e.appid), {
+                              timeCached: Date.now(),
+                              value: e,
+                            }),
+                              a.set(e.appid, e);
+                          });
+                      }
+                      return n.map((e) => a.get(e));
+                    },
+                    { cache: !1 },
+                  )),
+                _
+              );
+            })(t, n).load(e),
           { staleTime: h, enabled: !!e },
         ).data;
       }
-      var L = n(53923),
-        y = (n(67573), n(83120));
-      const S = "RemoteDownload_OnlineClient";
-      function N() {
-        const e = (0, a.bY)(),
-          t = (0, L.M)();
+      var I = n(53923),
+        L = (n(67573), n(83120));
+      const y = "RemoteDownload_OnlineClient";
+      function S() {
+        const e = (0, o.bY)(),
+          t = (0, I.M)();
         return (0, u.useQuery)(
-          [S, t],
-          () =>
-            (0, c.mG)(this, void 0, void 0, function* () {
-              const t = E.gA.Init(y.II),
-                n = yield y.b5.GetAllClientLogonInfo(e, t);
-              if (1 !== n.GetEResult())
-                throw (
-                  (console.error(
-                    "Received error from GetAllClientLogonInfo",
-                    n.GetEResult(),
-                    n.Hdr().transport_error(),
-                  ),
-                  new Error(
-                    `Error from GetAllClientLogonInfo: ${n.GetEResult()}`,
-                  ))
-                );
-              const i = [];
-              for (const e of n.Body().sessions())
-                e.device_type() !== v.gg.k_EGamingDeviceType_Unknown &&
-                  i.push(e.toObject());
-              return {
-                sessions: i,
-                refetchInterval: n.Body().refetch_interval_sec() || 300,
-              };
-            }),
+          [y, t],
+          async () => {
+            const t = d.gA.Init(L.II),
+              n = await L.b5.GetAllClientLogonInfo(e, t);
+            if (1 !== n.GetEResult())
+              throw (
+                (console.error(
+                  "Received error from GetAllClientLogonInfo",
+                  n.GetEResult(),
+                  n.Hdr().transport_error(),
+                ),
+                new Error(
+                  `Error from GetAllClientLogonInfo: ${n.GetEResult()}`,
+                ))
+              );
+            const a = [];
+            for (const e of n.Body().sessions())
+              e.device_type() !== f.gg.k_EGamingDeviceType_Unknown &&
+                a.push(e.toObject());
+            return {
+              sessions: a,
+              refetchInterval: n.Body().refetch_interval_sec() || 300,
+            };
+          },
           {
             staleTime: 3e5,
-            refetchInterval: (e) =>
-              1e3 * ((null == e ? void 0 : e.refetchInterval) || 300),
+            refetchInterval: (e) => 1e3 * (e?.refetchInterval || 300),
           },
         );
       }
-      var b = n(31846),
+      var N = n(31846),
         A = n(80212),
-        G = n(1485),
+        b = n(1485),
         C = n(46882),
-        D = n(37563);
-      function R(e) {
+        G = n(37563);
+      function D(e) {
         return `?joinsessionid=${e}`;
       }
-      function U(e) {
-        return i.createElement(
-          G.zx,
+      function R(e) {
+        return a.createElement(
+          b.zx,
           {
-            className: o().JoinSessionButton,
+            className: r().JoinSessionButton,
             onClick: () =>
               (window.location.href =
-                `steam://launch/${e.steamAppId}` + R(e.sessionID)),
+                `steam://launch/${e.steamAppId}` + D(e.sessionID)),
           },
           e.children,
         );
       }
-      function B(e) {
-        var t, n, s;
-        const r = N(),
-          l = (0, a.bY)();
-        return r.isSuccess
-          ? (null ===
-              (n =
-                null === (t = r.data) || void 0 === t ? void 0 : t.sessions) ||
-            void 0 === n
-              ? void 0
-              : n.length) > 0
-            ? i.createElement(
-                i.Fragment,
+      function U(e) {
+        const t = S(),
+          n = (0, o.bY)();
+        return t.isSuccess
+          ? t.data?.sessions?.length > 0
+            ? a.createElement(
+                a.Fragment,
                 null,
-                i.createElement(
-                  G.__,
-                  { className: o().AvailableSessionsText },
+                a.createElement(
+                  b.__,
+                  { className: r().AvailableSessionsText },
                   "Available Steam Sessions:",
                 ),
-                i.createElement(
+                a.createElement(
                   "div",
-                  { className: o().SessionList },
-                  null === (s = r.data) || void 0 === s
-                    ? void 0
-                    : s.sessions.map((t) =>
-                        i.createElement(
-                          "div",
-                          { className: o().Session, key: t.client_instanceid },
-                          i.createElement(
-                            "div",
-                            { className: o().MachineName },
-                            t.machine_name,
-                          ),
-                          i.createElement(
-                            "div",
-                            { className: o().OsName },
-                            t.os_name,
-                          ),
-                          i.createElement(
-                            G.zx,
-                            {
-                              className: o().JoinSessionButton,
-                              onClick: () =>
-                                (function (e, t, n, i) {
-                                  return (0, c.mG)(
-                                    this,
-                                    void 0,
-                                    void 0,
-                                    function* () {
-                                      const s = E.gA.Init(y.Z$);
-                                      s.Body().set_appid(n),
-                                        s.Body().set_client_instanceid(t),
-                                        s.Body().set_query_params(i);
-                                      const o = yield y.b5.LaunchClientApp(
-                                        e,
-                                        s,
-                                      );
-                                      if (1 !== o.GetEResult())
-                                        throw (
-                                          (console.error(
-                                            "Received error from LaunchClientApp",
-                                            o.GetEResult(),
-                                            o.Hdr().transport_error(),
-                                          ),
-                                          new Error(
-                                            `Error from LaunchClientApp: ${o.GetEResult()}`,
-                                          ))
-                                        );
-                                    },
-                                  );
-                                })(
-                                  l,
-                                  t.client_instanceid,
-                                  e.steamAppId,
-                                  R(e.sessionID),
-                                ),
-                            },
-                            "Launch Game",
-                          ),
-                        ),
+                  { className: r().SessionList },
+                  t.data?.sessions.map((t) =>
+                    a.createElement(
+                      "div",
+                      { className: r().Session, key: t.client_instanceid },
+                      a.createElement(
+                        "div",
+                        { className: r().MachineName },
+                        t.machine_name,
                       ),
+                      a.createElement(
+                        "div",
+                        { className: r().OsName },
+                        t.os_name,
+                      ),
+                      a.createElement(
+                        b.zx,
+                        {
+                          className: r().JoinSessionButton,
+                          onClick: () =>
+                            (async function (e, t, n, a) {
+                              const s = d.gA.Init(L.Z$);
+                              s.Body().set_appid(n),
+                                s.Body().set_client_instanceid(t),
+                                s.Body().set_query_params(a);
+                              const r = await L.b5.LaunchClientApp(e, s);
+                              if (1 !== r.GetEResult())
+                                throw (
+                                  (console.error(
+                                    "Received error from LaunchClientApp",
+                                    r.GetEResult(),
+                                    r.Hdr().transport_error(),
+                                  ),
+                                  new Error(
+                                    `Error from LaunchClientApp: ${r.GetEResult()}`,
+                                  ))
+                                );
+                            })(
+                              n,
+                              t.client_instanceid,
+                              e.steamAppId,
+                              D(e.sessionID),
+                            ),
+                        },
+                        "Launch Game",
+                      ),
+                    ),
+                  ),
                 ),
               )
-            : i.createElement(
+            : a.createElement(
                 "div",
-                { className: o().Error },
+                { className: r().Error },
                 "No logged in sessions",
               )
-          : r.isFetching || r.isRefetching
-            ? i.createElement(C.V, null)
-            : i.createElement(
+          : t.isFetching || t.isRefetching
+            ? a.createElement(C.V, null)
+            : a.createElement(
                 "div",
-                { className: o().Error },
+                { className: r().Error },
                 "Error ",
-                r.error.message,
+                t.error.message,
               );
       }
-      function k(e) {
-        const t = I(e.steamAppId);
+      function B(e) {
+        const t = v(e.steamAppId);
         return t
-          ? i.createElement(
-              i.Fragment,
+          ? a.createElement(
+              a.Fragment,
               null,
-              i.createElement(
+              a.createElement(
                 "div",
-                { className: o().Header },
+                { className: r().Header },
                 "Join Game Session",
               ),
-              i.createElement(
+              a.createElement(
                 "div",
-                { className: o().Explanation },
+                { className: r().Explanation },
                 "You've been invited to join a game! Click below to launch ",
                 t.friendly_name || t.name,
                 " on Steam and start playing.",
               ),
-              i.createElement(
+              a.createElement(
                 "div",
-                { className: o().SessionInfoCtr },
-                i.createElement("iframe", { src: e.sessionLiveDataUrl }),
+                { className: r().SessionInfoCtr },
+                a.createElement("iframe", { src: e.sessionLiveDataUrl }),
               ),
-              D.De.IN_CLIENT
-                ? i.createElement(
+              G.De.IN_CLIENT
+                ? a.createElement(
                     "div",
-                    { className: o().SectionCtr },
-                    i.createElement(U, Object.assign({}, e), "Launch Game"),
+                    { className: r().SectionCtr },
+                    a.createElement(R, { ...e }, "Launch Game"),
                   )
-                : i.createElement(
-                    i.Fragment,
+                : a.createElement(
+                    a.Fragment,
                     null,
-                    i.createElement(
+                    a.createElement(
                       "div",
-                      { className: o().SectionCtr },
-                      D.L7.logged_in
-                        ? i.createElement(B, Object.assign({}, e))
-                        : i.createElement(
-                            i.Fragment,
+                      { className: r().SectionCtr },
+                      G.L7.logged_in
+                        ? a.createElement(U, { ...e })
+                        : a.createElement(
+                            a.Fragment,
                             null,
-                            i.createElement(
-                              G.__,
+                            a.createElement(
+                              b.__,
                               null,
                               "Login to join on another device",
                             ),
-                            i.createElement(
-                              G.zx,
+                            a.createElement(
+                              b.zx,
                               { onClick: A.Xt },
-                              (0, b.Xx)("#Login_SignIn"),
+                              (0, N.Xx)("#Login_SignIn"),
                             ),
                           ),
                     ),
-                    !D.De.IN_MOBILE &&
-                      !D.De.IN_MOBILE_WEBVIEW &&
-                      i.createElement(
+                    !G.De.IN_MOBILE &&
+                      !G.De.IN_MOBILE_WEBVIEW &&
+                      a.createElement(
                         "div",
-                        { className: o().SectionCtr },
-                        i.createElement(G.__, null, "Or launch on this PC"),
-                        i.createElement(
-                          U,
-                          Object.assign({}, e),
-                          "Launch Game Here",
-                        ),
+                        { className: r().SectionCtr },
+                        a.createElement(b.__, null, "Or launch on this PC"),
+                        a.createElement(R, { ...e }, "Launch Game Here"),
                       ),
                   ),
             )
-          : i.createElement(C.V, null);
+          : a.createElement(C.V, null);
       }
-      function O() {
-        const e = (0, D.kQ)("multiplayersession_join", "application_config"),
-          t = new URLSearchParams((0, r.TH)().search).get("jws"),
+      function k() {
+        const e = (0, G.kQ)("multiplayersession_join", "application_config"),
+          t = new URLSearchParams((0, i.TH)().search).get("jws"),
           { header: n, body: s } = (0, l.Xl)(t) || { header: {}, body: {} };
-        let { steamAppId: a } = s;
+        let { steamAppId: o } = s;
         const c = s[e.jws_sessionid_key],
           m = s[e.jws_livedata_url_key];
         return (
-          "string" == typeof a && (a = parseInt(a)),
-          i.createElement(
+          "string" == typeof o && (o = parseInt(o)),
+          a.createElement(
             "div",
-            { className: o().JoinApp },
-            a && m && m
-              ? i.createElement(k, {
-                  steamAppId: a,
+            { className: r().JoinApp },
+            o && m && m
+              ? a.createElement(B, {
+                  steamAppId: o,
                   sessionLiveDataUrl: m,
                   sessionID: c,
                 })
-              : i.createElement("div", null, "Invalid session link"),
+              : a.createElement("div", null, "Invalid session link"),
             " ",
           )
         );
