@@ -2672,13 +2672,6 @@
                   curator_clan_id: this.clanSteamID.GetAccountID(),
                 }),
               ),
-            t &&
-              i.push(
-                Object.assign(Object.assign({}, s), {
-                  section_type: "footer_curator_recommendations",
-                  unique_id: V + 11,
-                }),
-              ),
             n &&
               i.push(
                 Object.assign(Object.assign({}, s), {

@@ -230,6 +230,9 @@
         ColorOptions: "_1MTpmtaJl2CD-NmgO8qKFU",
       };
     },
+    47164: (e) => {
+      e.exports = { TabCtn: "_153y1J-VwAhAzefYGgW-LZ" };
+    },
     61931: (e) => {
       e.exports = {
         StoreSalePriceWidget: "_2ykYV0XLHGzQm5j_ASVvKN",
@@ -11220,7 +11223,7 @@
     },
     91602: (e, t, a) => {
       "use strict";
-      a.d(t, { o: () => fe, W: () => Ie });
+      a.d(t, { o: () => De, W: () => Ge });
       var n = a(77936),
         i = a(30750),
         o = a(47427),
@@ -12102,7 +12105,9 @@
         }
         return null;
       }
-      function pe(e) {
+      var pe = a(47164),
+        ge = a.n(pe);
+      function he(e) {
         const {
             backgroundImageEditModel: t,
             imgGroupDerivedMapping: a,
@@ -12116,7 +12121,7 @@
           ]);
         return o.createElement(
           "div",
-          { className: ae().CtnEditor },
+          { className: (0, I.Z)(ae().CtnEditor, ge().TabCtn) },
           o.createElement(
             u.SV,
             null,
@@ -12149,7 +12154,7 @@
           ),
         );
       }
-      function ge(e, t, a) {
+      function ve(e, t, a) {
         var n;
         const i = new Map(),
           o = new Map(),
@@ -12282,19 +12287,19 @@
           nFirstTabSectionIDWithoutGroup: s,
         };
       }
-      var he = a(37138),
-        ve = a(83143),
-        Se = a.n(ve);
-      function Ee(e) {
+      var Se = a(37138),
+        Ee = a(83143),
+        be = a.n(Ee);
+      function ye(e) {
         const { event: t, language: a, url: n } = e;
         return o.createElement("div", {
-          className: Se().SaleBackgroundOverlay,
+          className: be().SaleBackgroundOverlay,
           style: { backgroundImage: `url('${n}')` },
         });
       }
-      var be = a(53299),
-        ye = a(34468);
-      function fe(e) {
+      var fe = a(53299),
+        Ce = a(34468);
+      function De(e) {
         var t;
         const {
             promotionName: a,
@@ -12413,9 +12418,9 @@
             ),
             L = i
               ? A && l
-                ? be.f.EPreviewMode_EditBackground
-                : be.f.EPreviewMode_Enabled
-              : be.f.EPreviewMode_Disabled;
+                ? fe.f.EPreviewMode_EditBackground
+                : fe.f.EPreviewMode_Enabled
+              : fe.f.EPreviewMode_Disabled;
           return o.createElement(
             u.SV,
             null,
@@ -12428,7 +12433,7 @@
                 o.createElement(
                   x,
                   { event: n, language: r, bIsPreview: i },
-                  f && o.createElement(Ee, { event: n, language: r, url: C }),
+                  f && o.createElement(ye, { event: n, language: r, url: C }),
                   Boolean(l) &&
                     o.createElement(oe, {
                       backgroundImageEditModel: l,
@@ -12449,11 +12454,11 @@
                       style: { marginTop: `${h || 0}px` },
                     },
                     o.createElement(N, { eventModel: n, language: r }),
-                    o.createElement(Ie, {
+                    o.createElement(Ge, {
                       rgPresenters: n.jsondata.sale_presenters,
                     }),
                     o.createElement(G, { event: n, broadcastEmbedContext: e }),
-                    o.createElement(Ce, {
+                    o.createElement(Te, {
                       ePreviewMode: L,
                       event: n,
                       backgroundImageEditModel: l,
@@ -12486,7 +12491,7 @@
           }),
         );
       }
-      const Ce = (0, r.EN)(function (e) {
+      const Te = (0, r.EN)(function (e) {
         const {
             event: t,
             language: a,
@@ -12514,12 +12519,12 @@
               }),
             );
           },
-          { data: C } = (0, he.k)(),
+          { data: C } = (0, Se.k)(),
           [D, T] = (0, m.Ar)("controller", (0, s.Pi)(C)),
           [G, k] = (0, i.SZ)(() => {
             const e = t.GetSaleSectionIncludingFooterSections();
             return [
-              ge(
+              ve(
                 t.jsondata.sale_background_img_groups,
                 e,
                 null == _ ? void 0 : _.GetActiveTabUniqueID(),
@@ -12543,7 +12548,7 @@
                 t.GetContentHubTag(),
               ),
             C = g && !b && !Boolean(t.jsondata.content_hub_restricted_width);
-          let k = (0, be.K)(n, d, t, a);
+          let k = (0, fe.K)(n, d, t, a);
           if (void 0 === k) return;
           if (k);
           else if ((0, B.fA)(n) && !w.L7.logged_in)
@@ -12568,7 +12573,7 @@
                   )) &&
               x.push({ activeTab: _, elements: [] }),
               (k = o.createElement(
-                ye.C,
+                Ce.C,
                 Object.assign({}, e, {
                   section: n,
                   activeTab: t,
@@ -12586,7 +12591,7 @@
             u.SV,
             { key: "SaleSectionIndex_" + n.unique_id + "_" + i },
             o.createElement(
-              De,
+              Ie,
               {
                 visibility_by_door_index_state:
                   n.visibility_by_door_index_state,
@@ -12607,11 +12612,11 @@
                         expanded: C,
                         [n.single_item_style || ""]: !0,
                         [y().SaleSectionBackgroundImageGroupEdit]:
-                          d == be.f.EPreviewMode_EditBackground,
+                          d == fe.f.EPreviewMode_EditBackground,
                       }),
                     },
                     k,
-                    Boolean(d == be.f.EPreviewMode_EditBackground) &&
+                    Boolean(d == fe.f.EPreviewMode_EditBackground) &&
                       o.createElement(_e, {
                         nSectionUniqueID: n.unique_id || i,
                         nTabID:
@@ -12623,7 +12628,7 @@
                 : o.createElement(
                     o.Fragment,
                     null,
-                    Boolean(d == be.f.EPreviewMode_EditBackground)
+                    Boolean(d == fe.f.EPreviewMode_EditBackground)
                       ? o.createElement(
                           "div",
                           {
@@ -12631,7 +12636,7 @@
                             className: y().SaleSectionBackgroundImageGroupEdit,
                           },
                           k,
-                          o.createElement(pe, {
+                          o.createElement(he, {
                             backgroundImageEditModel: p,
                             nTabID:
                               x[x.length - 1].activeTab.GetActiveTabUniqueID(),
@@ -12678,7 +12683,7 @@
           M,
         );
       });
-      function De(e) {
+      function Ie(e) {
         const {
           visibility_by_door_index_state: t,
           door_index_visibility: a,
@@ -12686,13 +12691,13 @@
         } = e;
         return t
           ? o.createElement(
-              Te,
+              we,
               { visibility_by_door_index_state: t, door_index_visibility: a },
               n,
             )
           : o.createElement(o.Fragment, null, n);
       }
-      function Te(e) {
+      function we(e) {
         const {
             visibility_by_door_index_state: t,
             door_index_visibility: a,
@@ -12704,7 +12709,7 @@
           ? null
           : o.createElement(o.Fragment, null, n);
       }
-      function Ie(e) {
+      function Ge(e) {
         const { rgPresenters: t } = e;
         if (!t || 0 == t.length) return null;
         const a = (0, n.jM)(w.De.LANGUAGE);
@@ -12719,7 +12724,7 @@
               },
               (0, g.kQ)(
                 "#SalePresented_By",
-                o.createElement(we, { presentor: t[0], lang: a }),
+                o.createElement(ke, { presentor: t[0], lang: a }),
               ),
             )
           : o.createElement(
@@ -12738,15 +12743,15 @@
                     o.createElement(
                       o.Fragment,
                       { key: e.url },
-                      o.createElement(we, { presentor: e, lang: a }),
+                      o.createElement(ke, { presentor: e, lang: a }),
                       Boolean(t.length > 2) && ", ",
                     ),
                   ),
-                o.createElement(we, { presentor: t[t.length - 1], lang: a }),
+                o.createElement(ke, { presentor: t[t.length - 1], lang: a }),
               ),
             );
       }
-      function we(e) {
+      function ke(e) {
         const { presentor: t, lang: a } = e;
         return o.createElement(
           U.ns,
@@ -15501,7 +15506,9 @@
         const o = y(t, n, a, n.clanSteamID.GetAccountID(), e);
         if (o) return o;
         let r = (0, h.Xx)("#Sale_Section_Header", i + 1);
-        const l = "#Sale_Section_Type_" + t.section_type,
+        const l =
+            "#Sale_Section_Type_" +
+            ((null == t ? void 0 : t.section_type) || "unknowntype"),
           s = (0, h.Xx)(l);
         return s !== l ? `${r} (${s})` : null;
       }
@@ -54032,6 +54039,11 @@
                 tooltip: (0, _.Xx)("#Sale_SectionType_EventSchedule_ttip"),
               },
               {
+                label: (0, _.Xx)("#Sale_DiscoveryQueue"),
+                data: "discoveryqueue",
+                tooltip: (0, _.Xx)("#Sale_DiscoveryQueue_ttip"),
+              },
+              {
                 label: (0, _.Xx)("#Sale_TabButtons"),
                 data: "tab_buttons",
                 tooltip: (0, _.Xx)("#Sale_TabButtons_ttip"),
@@ -54052,11 +54064,6 @@
               label:
                 "(VO) " + (0, _.Xx)("#Sale_VOInternalSection_SaleItemBrowser"),
               data: "sale_item_browser",
-            }),
-            n.push({
-              label: "(VO) " + (0, _.Xx)("#Sale_DiscoveryQueue"),
-              data: "discoveryqueue",
-              tooltip: (0, _.Xx)("#Sale_DiscoveryQueue_ttip"),
             }),
             n.push({
               label: "(VO) " + (0, _.Xx)("#Sale_Section_Media_Layout_Header"),
