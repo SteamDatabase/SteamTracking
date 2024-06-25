@@ -1180,24 +1180,26 @@
       "use strict";
       n.d(t, {
         HG: () => o,
-        H_: () => s,
-        LJ: () => d,
-        Pi: () => u,
-        Zh: () => c,
-        _: () => l,
-        bF: () => p,
+        H_: () => l,
+        LJ: () => u,
+        Pi: () => p,
+        Zh: () => m,
+        _: () => c,
+        bF: () => h,
+        kl: () => s,
         ml: () => a,
-        zs: () => m,
+        zs: () => d,
       });
       var r = n(86878),
         i = n(47427);
       const o = "0px 0px 100% 0px",
         a = "tab",
-        s = 940;
-      function l() {
-        return window.innerWidth >= s;
+        s = "SaleSection_",
+        l = 940;
+      function c() {
+        return window.innerWidth >= l;
       }
-      function c(e = s) {
+      function m(e = l) {
         return (
           (function () {
             const [e, t] = (0, i.useState)(window.innerWidth);
@@ -1216,8 +1218,8 @@
           })() >= e
         );
       }
-      function m(e) {
-        const t = c(s),
+      function d(e) {
+        const t = m(l),
           n = (0, r.fD)(e);
         return t
           ? { nMaxCapsulesPerRow: n.nMaxItemsPerRow, bScreenIsWide: t }
@@ -1232,16 +1234,16 @@
               bScreenIsWide: t,
             };
       }
-      function d(e) {
+      function u(e) {
         const t = (0, r.fD)(e);
-        return l()
+        return c()
           ? t.nMaxItemsPerRow
           : Math.min(
               Math.max(Math.floor(window.innerWidth / t.nItemMinimumWidth), 1),
               t.nMaxItemsPerRow,
             );
       }
-      function u(e) {
+      function p(e) {
         switch (e) {
           case 32:
             return 28;
@@ -1255,7 +1257,7 @@
             return;
         }
       }
-      function p(e) {
+      function h(e) {
         switch (e) {
           case 28:
             return 32;

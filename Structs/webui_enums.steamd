@@ -797,6 +797,13 @@ enum EPosition
 	k_EPositionBottomRight = 3;
 }
 
+enum EPreviewMode
+{
+	EPreviewMode_Disabled = 1;
+	EPreviewMode_Enabled = 2;
+	EPreviewMode_EditBackground = 3;
+}
+
 enum EPurchaseNoticeType
 {
 	EPurchaseNoticeType_ControllerRequired = 0;
