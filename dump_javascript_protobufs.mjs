@@ -983,6 +983,8 @@ function TraverseModule(ast) {
 				node.left.type === Syntax.MemberExpression &&
 				node.right.type === Syntax.ObjectExpression &&
 				node.right.properties.length === 2 &&
+				node.right.properties[0].type === Syntax.Property &&
+				node.right.properties[1].type === Syntax.Property &&
 				node.right.properties[0].key.name === "name" &&
 				node.right.properties[1].key.name === "request"
 			) {
