@@ -68,7 +68,8 @@ function IsBaseUrlExpression(node) {
 }
 
 function IsUrlVariable(name) {
-	return name.toUpperCase().endsWith("URL");
+	const n = name.toUpperCase();
+	return n.endsWith("URL") || n.endsWith("CDN");
 }
 
 function IsSafeName(name) {
