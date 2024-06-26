@@ -1,5 +1,10 @@
 ${AUDIO_URL}international2020/${}.wav
 ${AUDIO_URL}international2022/${}.wav
+${BASE_URL_SHARED_CDN}app_config/timeline/${}_markers.svg
+${BASE_URL_SHARED_CDN}social_sharing/
+${BASE_URL_SHARED_CDN}store_item_assets/assetportal/preview//${}/${}/${}
+${BASE_URL_SHARED_CDN}store_item_assets/mm/${}/${}/${path}${}
+${BASE_URL_SHARED_CDN}store_item_assets/optin/${}/${}/${}
 ${BASE_URL}${patch_website}
 ${BASE_URL}${}
 ${BASE_URL}${}/checkforshortfilmownership/
