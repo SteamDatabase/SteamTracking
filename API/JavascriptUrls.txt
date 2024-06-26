@@ -1103,7 +1103,6 @@ ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?bundleid=${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?partneridlist=${partnerid}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?rt_feature_start=${}&rt_feature_end=${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?saleclaneventgid=${}&saleclanaccountid=${}
-${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=${}${}&count=${}${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=${}&count=${}${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=0&count=50${}
 ${PARTNER_BASE_URL}promotion/marketingmessages/ajaxgetsnrmetrics

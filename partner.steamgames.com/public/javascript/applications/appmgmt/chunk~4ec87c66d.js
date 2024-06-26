@@ -66754,21 +66754,13 @@
               strQueryPlan: H,
             }),
           ),
-          l.createElement(Ci, {
-            nApps: U.length,
-            nTotalApps: a.length,
-            strQueryParams: H,
-          }),
+          l.createElement(Ci, { nDisplayedApps: U.length, strQueryParams: H }),
           l.createElement(ki, {
             rgCandidateApps: F,
             rgAppIDs: U,
             oFeaturingMaps: n,
           }),
-          l.createElement(Ci, {
-            nApps: U.length,
-            nTotalApps: a.length,
-            strQueryParams: H,
-          }),
+          l.createElement(Ci, { nDisplayedApps: U.length, strQueryParams: H }),
         );
       }
       function bi(e) {
@@ -66862,24 +66854,54 @@
         );
       }
       function Ci(e) {
-        const { nApps: t, nTotalApps: a, strQueryParams: n } = e,
-          [i] = (0, se.Ar)("start", 0),
-          [r] = (0, se.Ar)("count", 50),
-          [s] = (0, l.useState)(() =>
-            (0, Le.kQ)("result_range", "application_config"),
+        const { nDisplayedApps: t, strQueryParams: a } = e,
+          [n] = (0, se.Ar)("start", 1),
+          [i] = (0, se.Ar)("count", 50),
+          [r] = (0, l.useState)(
+            () => Boolean((0, Le.kQ)("rank_range", "application_config")) || !1,
           ),
-          o = (function () {
-            const [e] = (0, l.useState)(
-              () =>
-                Boolean((0, Le.kQ)("paged_results", "application_config")) ||
-                !1,
-            );
-            return e;
-          })();
+          [s] = (0, l.useState)(() =>
+            (0, Le.kQ)("rank_range_size", "application_config"),
+          ),
+          [o] = (0, l.useState)(() =>
+            (0, Le.kQ)("total_apps", "application_config"),
+          ),
+          c = r || o > i,
+          m = !!r || n + i - 1 < o,
+          d = r ? n + s : n + i;
+        let u = null;
+        if (r)
+          u = l.createElement(
+            "div",
+            null,
+            "Showing ",
+            t,
+            " Apps between Long Term Sales rank ",
+            n,
+            " to ",
+            n + (s - 1),
+            ".",
+          );
+        else if (c) {
+          const e = m ? n + (i - 1) : o;
+          u = l.createElement(
+            "div",
+            null,
+            "Showing ",
+            t,
+            " Apps between ",
+            n,
+            " to ",
+            e,
+            " of ",
+            o,
+            " total",
+          );
+        } else u = l.createElement("div", null, "Showing ", t, " Apps of ", o);
         return l.createElement(
           "div",
           { className: ni().PagingRow },
-          Boolean(o) &&
+          Boolean(c) &&
             l.createElement(
               l.Fragment,
               null,
@@ -66887,38 +66909,23 @@
                 "a",
                 {
                   href:
-                    i > 0
-                      ? `${la.De.PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=${Jt.Lh(i - r, 0, Number.MAX_SAFE_INTEGER)}&count=${r}${n}`
+                    n > 0
+                      ? `${la.De.PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=${Jt.Lh(n - i, 0, Number.MAX_SAFE_INTEGER)}&count=${i}${a}`
                       : "#",
                 },
-                l.createElement(b.zx, { disabled: i <= 0 }, "<", " Prev Page"),
+                l.createElement(b.zx, { disabled: n <= 1 }, "<", " Prev Page"),
               ),
               l.createElement(
                 "a",
                 {
-                  href: `${la.De.PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=${i + s}&count=${r}${n}`,
+                  href: m
+                    ? `${la.De.PARTNER_BASE_URL}promotion/invitationplanner/dashboard?start=${d}&count=${i}${a}`
+                    : "#",
                 },
-                l.createElement(b.zx, null, "Next Page ", ">"),
+                l.createElement(b.zx, { disabled: !m }, "Next Page ", ">"),
               ),
             ),
-          l.createElement(
-            "div",
-            null,
-            "Showing ",
-            t,
-            " Apps",
-            Boolean(o) &&
-              l.createElement(
-                "span",
-                null,
-                " between ",
-                i,
-                " to ",
-                i + s,
-                " of Long Term Sales rank.",
-                " ",
-              ),
-          ),
+          u,
         );
       }
       function ki(e) {
