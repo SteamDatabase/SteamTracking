@@ -2048,8 +2048,16 @@ function PreloadTicket( strTicketRef )
 			{
 				NextPrev.SetPagePreload( strTicketRef, data );
 				console.log( 'Preloaded: ' + strTicketRef );
-				$J("#ticket_queue").find("[data-ticket='" + strTicketRef + "']").removeClass( 'disabled' );
-				$J("#ticket_queue").find("[data-ticket='" + strTicketRef + "']").text( data.account_name );
+				if ( data.request_type != 100 )
+				{
+					$J("#ticket_queue").find("[data-ticket='" + strTicketRef + "']").remove();
+					RemoveRequest( strTicketRef );
+				}
+				else
+				{
+					$J("#ticket_queue").find("[data-ticket='" + strTicketRef + "']").removeClass( 'disabled' );
+					$J("#ticket_queue").find("[data-ticket='" + strTicketRef + "']").text( data.account_name );
+				}
 			});
 	}
 }
@@ -2099,6 +2107,16 @@ var NextPrev = {
 	{
 		sessionStorage.removeItem( NextPrev.s_strKey );
 		PreapprovalQueue.ClearCachedApprovals(); // we piggy back since this there is an implicit backwards connection from the preapproval queue to us
+	},
+
+	RemoveRequest: function( strTicketRef )
+	{
+		var vecHelpRequests = NextPrev.GetHelpRequests();
+		var i = vecHelpRequests.indexOf( strTicketRef );
+		if ( i > -1 )
+			vecHelpRequests.splice( i, 1 );
+
+		NextPrev.SetHelpRequests( vecHelpRequests );
 	},
 
 	EnableKeyboardNav: function( bEnable )
@@ -2238,9 +2256,9 @@ var PreapprovalQueue = {
 
 	ClearCachedApprovals: function()
 	{
-		sessionStorage.removeItem( NextPrev.s_strKey + '_approvals' );
-		sessionStorage.removeItem( NextPrev.s_strKey + '_denials' );
-		sessionStorage.removeItem( NextPrev.s_strKey + '_hijacks' );
+		sessionStorage.removeItem( PreapprovalQueue.strSessionKey + '_approvals' );
+		sessionStorage.removeItem( PreapprovalQueue.strSessionKey + '_denials' );
+		sessionStorage.removeItem( PreapprovalQueue.strSessionKey + '_hijacks' );
 	},
 
 	HandleTxn: function( bApprove, txnID, accountID, strTicketRef, bHijacked = false )
