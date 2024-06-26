@@ -4513,7 +4513,7 @@
         m = a(37563),
         u = a(64936),
         _ = a(54797);
-      const p = 9,
+      const p = 7,
         g = -1;
       class h {
         m_userData;
@@ -4707,15 +4707,16 @@
             null
           );
         }
-        async CloseAllDoors() {
-          let e = m.De.STORE_BASE_URL + "saleaction/ajaxclosealldoor";
-          const t = new FormData();
-          t.append("sessionid", m.De.SESSIONID);
-          let a = null;
+        async CloseAllDoors(e) {
+          let t = m.De.STORE_BASE_URL + "saleaction/ajaxclosealldoor";
+          const a = new FormData();
+          a.append("sessionid", m.De.SESSIONID),
+            a.append("clan_accountid", "" + e);
+          let n = null;
           try {
-            let n = await r().post(e, t, { withCredentials: !0 });
-            if (200 == n.status && 1 == n?.data?.success) {
-              console.log("CDoorStore - closed " + n.data.count);
+            let e = await r().post(t, a, { withCredentials: !0 });
+            if (200 == e.status && 1 == e?.data?.success) {
+              console.log("CDoorStore - closed " + e.data.count);
               for (let e = 0; e < p; ++e)
                 (this.m_userData[e].opened = !1),
                   this.GetDoorStateChangeCallback(e).Dispatch(
@@ -4723,14 +4724,14 @@
                   );
               return this.RecomputeState(), !0;
             }
-            a = (0, l.l)(n);
+            n = (0, l.l)(e);
           } catch (e) {
-            a = (0, l.l)(e);
+            n = (0, l.l)(e);
           }
           return (
             console.error(
-              "CDoorStore.CloseAllDoors failed: " + a?.strErrorMsg,
-              a,
+              "CDoorStore.CloseAllDoors failed: " + n?.strErrorMsg,
+              n,
             ),
             null
           );
@@ -6651,33 +6652,26 @@
         return s.createElement(
           s.Fragment,
           null,
-          Boolean("public" != A.De.WEB_UNIVERSE) &&
-            s.createElement(
-              "a",
-              {
-                className: (0, w.Z)(
-                  T.Button,
-                  R.AdminButton,
-                  T.ValveOnlyBackground,
-                ),
-                onClick: (e) => {
-                  (0, I.AM)(
-                    s.createElement(x.uH, {
-                      strTitle: (0, k.Xx)("#Dialog_AreYouSure"),
-                      strDescription: "Reload page after you hit OK",
-                      onOK: () => N.Zb.Get().CloseAllDoors(),
-                    }),
-                    (0, G.RA)(e),
-                  );
-                },
+          s.createElement(
+            "a",
+            {
+              className: (0, w.Z)(T.Button, R.AdminButton),
+              onClick: (e) => {
+                (0, I.AM)(
+                  s.createElement(x.uH, {
+                    strTitle: (0, k.Xx)("#Dialog_AreYouSure"),
+                    strDescription:
+                      "Reload page after you hit OK; will not grant virtual reward items a second itme",
+                    onOK: () => N.Zb.Get().CloseAllDoors(A.JA.CLANACCOUNTID),
+                  }),
+                  (0, G.RA)(e),
+                );
               },
-              "(VO) Reset All Doors",
-            ),
+            },
+            "Reset All Doors",
+          ),
           s.createElement(y.ry, {
-            strDropDownClassName: (0, w.Z)(
-              T.DropDownScroll,
-              T.ValveOnlyBackground,
-            ),
+            strDropDownClassName: (0, w.Z)(T.DropDownScroll),
             rgOptions: o,
             selectedOption: i,
             label: "Minigame States:",
@@ -11688,6 +11682,7 @@
                       navKey: C,
                       id: C,
                       className: (0, I.Z)({
+                        [b().SaleSectionCtn]: !0,
                         SaleSectionCtn: !0,
                         [n.section_type]: !0,
                         [n.internal_section_data?.internal_type || ""]: !0,
@@ -11715,7 +11710,10 @@
                           "div",
                           {
                             id: C,
-                            className: b().SaleSectionBackgroundImageGroupEdit,
+                            className: (0, I.Z)(
+                              b().SaleSectionCtn,
+                              b().SaleSectionBackgroundImageGroupEdit,
+                            ),
                           },
                           y,
                           r.createElement(ge, {

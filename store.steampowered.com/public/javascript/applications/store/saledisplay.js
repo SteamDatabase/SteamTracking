@@ -655,33 +655,26 @@
         return o.createElement(
           o.Fragment,
           null,
-          Boolean("public" != G.De.WEB_UNIVERSE) &&
-            o.createElement(
-              "a",
-              {
-                className: (0, R.Z)(
-                  U.Button,
-                  Z.AdminButton,
-                  U.ValveOnlyBackground,
-                ),
-                onClick: (e) => {
-                  (0, O.AM)(
-                    o.createElement(C.uH, {
-                      strTitle: (0, D.Xx)("#Dialog_AreYouSure"),
-                      strDescription: "Reload page after you hit OK",
-                      onOK: () => H.Zb.Get().CloseAllDoors(),
-                    }),
-                    (0, P.RA)(e),
-                  );
-                },
+          o.createElement(
+            "a",
+            {
+              className: (0, R.Z)(U.Button, Z.AdminButton),
+              onClick: (e) => {
+                (0, O.AM)(
+                  o.createElement(C.uH, {
+                    strTitle: (0, D.Xx)("#Dialog_AreYouSure"),
+                    strDescription:
+                      "Reload page after you hit OK; will not grant virtual reward items a second itme",
+                    onOK: () => H.Zb.Get().CloseAllDoors(G.JA.CLANACCOUNTID),
+                  }),
+                  (0, P.RA)(e),
+                );
               },
-              "(VO) Reset All Doors",
-            ),
+            },
+            "Reset All Doors",
+          ),
           o.createElement(I.ry, {
-            strDropDownClassName: (0, R.Z)(
-              U.DropDownScroll,
-              U.ValveOnlyBackground,
-            ),
+            strDropDownClassName: (0, R.Z)(U.DropDownScroll),
             rgOptions: i,
             selectedOption: l,
             label: "Minigame States:",
@@ -4853,6 +4846,7 @@
                       navKey: b,
                       id: b,
                       className: (0, B.Z)({
+                        [A().SaleSectionCtn]: !0,
                         SaleSectionCtn: !0,
                         [l.section_type]: !0,
                         [l.internal_section_data?.internal_type || ""]: !0,
@@ -4880,7 +4874,10 @@
                           "div",
                           {
                             id: b,
-                            className: A().SaleSectionBackgroundImageGroupEdit,
+                            className: (0, B.Z)(
+                              A().SaleSectionCtn,
+                              A().SaleSectionBackgroundImageGroupEdit,
+                            ),
                           },
                           S,
                           n.createElement(Rt, {

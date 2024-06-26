@@ -3273,7 +3273,7 @@
         u = a(37563),
         d = a(64936),
         _ = a(54797);
-      const p = 9,
+      const p = 7,
         g = -1;
       class h {
         m_userData;
@@ -3467,15 +3467,16 @@
             null
           );
         }
-        async CloseAllDoors() {
-          let e = u.De.STORE_BASE_URL + "saleaction/ajaxclosealldoor";
-          const t = new FormData();
-          t.append("sessionid", u.De.SESSIONID);
-          let a = null;
+        async CloseAllDoors(e) {
+          let t = u.De.STORE_BASE_URL + "saleaction/ajaxclosealldoor";
+          const a = new FormData();
+          a.append("sessionid", u.De.SESSIONID),
+            a.append("clan_accountid", "" + e);
+          let n = null;
           try {
-            let n = await s().post(e, t, { withCredentials: !0 });
-            if (200 == n.status && 1 == n?.data?.success) {
-              console.log("CDoorStore - closed " + n.data.count);
+            let e = await s().post(t, a, { withCredentials: !0 });
+            if (200 == e.status && 1 == e?.data?.success) {
+              console.log("CDoorStore - closed " + e.data.count);
               for (let e = 0; e < p; ++e)
                 (this.m_userData[e].opened = !1),
                   this.GetDoorStateChangeCallback(e).Dispatch(
@@ -3483,14 +3484,14 @@
                   );
               return this.RecomputeState(), !0;
             }
-            a = (0, l.l)(n);
+            n = (0, l.l)(e);
           } catch (e) {
-            a = (0, l.l)(e);
+            n = (0, l.l)(e);
           }
           return (
             console.error(
-              "CDoorStore.CloseAllDoors failed: " + a?.strErrorMsg,
-              a,
+              "CDoorStore.CloseAllDoors failed: " + n?.strErrorMsg,
+              n,
             ),
             null
           );
@@ -16371,35 +16372,36 @@
           s = (0, Ot.e0)(),
           o = A.LJ.GetELanguageFallback(r),
           i = (0, v.id)(),
-          [u, d] = (0, se.SZ)(() => [
+          [u, d, _] = (0, se.SZ)(() => [
             Boolean(a.quiz?.track_with_cozy_cottage_doors),
             a.quiz?.quiz_type,
+            a.quiz?.hide_question_type_label,
           ]),
-          [_, g] = (0, n.useState)(
+          [g, S] = (0, n.useState)(
             u && sa.Zb.Get().BIsAnyDoorOpened()
               ? sa.Zb.Get().GetLargestDoorOpenIndex() + 1
               : 0,
           ),
-          [S, y] = (0, n.useState)(0),
-          C = n.useRef(),
-          b = (0, se.SZ)(() => Pa.A.Get().GetLargestAnswerQuestion());
+          [y, C] = (0, n.useState)(0),
+          b = n.useRef(),
+          D = (0, se.SZ)(() => Pa.A.Get().GetLargestAnswerQuestion());
         (0, n.useEffect)(() => {
-          b > _ && s ? g(b) : s && 0 == b && _ > 1 && (y(S + 1), g(0));
-        }, [b, s, _, S]);
-        const D = (0, n.useCallback)(
+          D > g && s ? S(D) : s && 0 == D && g > 1 && (C(y + 1), S(0));
+        }, [D, s, g, y]);
+        const I = (0, n.useCallback)(
           (e, t) => {
             u && sa.Zb.Get().OpenDoor(e - 1),
-              g(e),
+              S(e),
               0 == e
-                ? (y(S + 1),
+                ? (C(y + 1),
                   Pa.A.Get().ClearAnswersAndCategories(),
-                  C?.current?.scrollIntoView({
+                  b?.current?.scrollIntoView({
                     behavior: "smooth",
                     block: "center",
                   }))
                 : Pa.A.Get().SetAnswer(e - 1, t);
           },
-          [u, S],
+          [u, y],
         );
         (0, n.useEffect)(() => {
           u &&
@@ -16408,19 +16410,19 @@
               .LoadDoorData()
               .then(() => {
                 sa.Zb.Get().BIsAnyDoorOpened() &&
-                  g(sa.Zb.Get().GetLargestDoorOpenIndex() + 1);
+                  S(sa.Zb.Get().GetLargestDoorOpenIndex() + 1);
               });
         }, [u]);
-        const I =
+        const w =
             a.localized_description?.length > 0
               ? a.localized_description[r] || a.localized_description[o] || ""
               : void 0,
-          w =
+          L =
             a.text_section_contents?.length > 0
               ? a.text_section_contents[r] || a.text_section_contents[o] || ""
               : void 0,
-          L = (0, se.SZ)(() => a.quiz?.incremental_reveal),
-          G = (0, n.useMemo)(() => {
+          G = (0, se.SZ)(() => a.quiz?.incremental_reveal),
+          N = (0, n.useMemo)(() => {
             const e = a.quiz?.questions || [];
             if (!v.L7.logged_in && e?.length > 0) return [e[0]];
             if ("branching" == d) {
@@ -16439,24 +16441,24 @@
                 t
               );
             }
-            return L ? e.slice(0, _ + 1) : e;
-          }, [L, _, d, a.quiz?.questions]),
-          N =
-            L &&
+            return G ? e.slice(0, g + 1) : e;
+          }, [G, g, d, a.quiz?.questions]),
+          k =
+            G &&
             Boolean(a.quiz?.last_revealed_footer_img_url) &&
-            (Boolean(w)
-              ? _ < a.quiz?.questions?.length
-              : _ + 1 < a.quiz?.questions?.length),
-          k = (0, n.useMemo)(
+            (Boolean(L)
+              ? g < a.quiz?.questions?.length
+              : g + 1 < a.quiz?.questions?.length),
+          T = (0, n.useMemo)(
             () =>
-              N
+              k
                 ? (0, Ea.et)((0, Ba.pd)(a.quiz.last_revealed_footer_img_url))
                 : null,
-            [N, a.quiz?.last_revealed_footer_img_url],
+            [k, a.quiz?.last_revealed_footer_img_url],
           ),
-          T =
-            w &&
-            (_ >= a.quiz?.questions?.length ||
+          B =
+            L &&
+            (g >= a.quiz?.questions?.length ||
               ("branching" == d && Pa.A.Get().BHasTerminalAnswerChosen()));
         return n.createElement(
           h.ZP,
@@ -16474,20 +16476,20 @@
               style: (0, c.V)(a, t, i),
             },
             n.createElement(U.AO, { section: a, event: t, language: r }),
-            Boolean(I) &&
+            Boolean(w) &&
               n.createElement(
                 "div",
                 { className: Va.description },
                 n.createElement(Bt.d, {
-                  text: I,
+                  text: w,
                   partnerEventStore: Nt.j1,
                   showErrorInfo: s,
                   event: t,
                   languageOverride: r,
                 }),
               ),
-            n.createElement("div", { ref: C }),
-            G.map((e, o) =>
+            n.createElement("div", { ref: b }),
+            N.map((e, o) =>
               n.createElement(ja, {
                 key: e.unique_id,
                 iQuestionIndex: o,
@@ -16497,18 +16499,19 @@
                 event: t,
                 defaultWrongAnswerVideo: a.quiz?.associated_video,
                 bTrackWithCozyCottageDoors: u,
-                fnCorrectlyAnswered: D,
+                fnCorrectlyAnswered: I,
                 quiz_type: d,
-                nResetIndex: S,
+                nResetIndex: y,
                 randomize_answer_order: a.quiz?.randomize_answer_order,
+                bHideQuestionLabel: _,
               }),
             ),
-            N &&
+            k &&
               n.createElement("img", {
                 className: Va.RevealFooterImage,
-                src: k,
+                src: T,
               }),
-            Boolean(T) &&
+            Boolean(B) &&
               n.createElement(
                 n.Fragment,
                 null,
@@ -16516,7 +16519,7 @@
                   "div",
                   { className: Va.description2 },
                   n.createElement(Bt.d, {
-                    text: w,
+                    text: L,
                     partnerEventStore: Nt.j1,
                     showErrorInfo: s,
                     event: t,
@@ -16528,7 +16531,7 @@
                   bPreviewMode: s,
                   event: t,
                   language: r,
-                  fnCorrectlyAnswered: D,
+                  fnCorrectlyAnswered: I,
                 }),
               ),
           ),
@@ -16542,33 +16545,35 @@
             event: s,
             iQuestionIndex: o,
             quiz_type: i,
+            bHideQuestionLabel: l,
           } = e,
-          l = A.LJ.GetELanguageFallback(a),
-          c =
+          c = A.LJ.GetELanguageFallback(a),
+          u =
             t.localized_question?.length > 0
-              ? t.localized_question[a] || t.localized_question[l] || ""
+              ? t.localized_question[a] || t.localized_question[c] || ""
               : void 0,
-          [u, d] = (0, se.SZ)(() => [
+          [d, _] = (0, se.SZ)(() => [
             t.background_gradient_bottom,
             t.background_gradient_top,
           ]),
-          _ = `linear-gradient(0deg, ${u || "transparent"} 0%, ${d || "transparent"} 100%)`;
+          p = `linear-gradient(0deg, ${d || "transparent"} 0%, ${_ || "transparent"} 100%)`;
         return n.createElement(
           "div",
           {
             className: (0, f.Z)(Va.questionCtn, "questionCtn"),
-            style: { background: _ },
+            style: { background: p },
           },
-          n.createElement(
-            _e.__,
-            null,
-            (0, A.Xx)(
-              "scenario" == i
-                ? "#SalePage_Quiz_Scenario"
-                : "#SalePage_Question",
-              (o + 1).toLocaleString(),
+          Boolean(!l) &&
+            n.createElement(
+              _e.__,
+              null,
+              (0, A.Xx)(
+                "scenario" == i
+                  ? "#SalePage_Quiz_Scenario"
+                  : "#SalePage_Question",
+                (o + 1).toLocaleString(),
+              ),
             ),
-          ),
           n.createElement(qa, {
             videoDef: t.associated_video,
             bAutoPlay: !1,
@@ -16578,7 +16583,7 @@
             "div",
             { className: (0, f.Z)("questions") },
             n.createElement(Bt.d, {
-              text: c,
+              text: u,
               partnerEventStore: Nt.j1,
               showErrorInfo: r,
               event: s,

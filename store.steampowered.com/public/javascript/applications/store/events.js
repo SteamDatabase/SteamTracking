@@ -769,33 +769,26 @@
         return l.createElement(
           l.Fragment,
           null,
-          Boolean("public" != B.De.WEB_UNIVERSE) &&
-            l.createElement(
-              "a",
-              {
-                className: (0, R.Z)(
-                  H.Button,
-                  W.AdminButton,
-                  H.ValveOnlyBackground,
-                ),
-                onClick: (e) => {
-                  (0, M.AM)(
-                    l.createElement(f.uH, {
-                      strTitle: (0, I.Xx)("#Dialog_AreYouSure"),
-                      strDescription: "Reload page after you hit OK",
-                      onOK: () => X.Zb.Get().CloseAllDoors(),
-                    }),
-                    (0, O.RA)(e),
-                  );
-                },
+          l.createElement(
+            "a",
+            {
+              className: (0, R.Z)(H.Button, W.AdminButton),
+              onClick: (e) => {
+                (0, M.AM)(
+                  l.createElement(f.uH, {
+                    strTitle: (0, I.Xx)("#Dialog_AreYouSure"),
+                    strDescription:
+                      "Reload page after you hit OK; will not grant virtual reward items a second itme",
+                    onOK: () => X.Zb.Get().CloseAllDoors(B.JA.CLANACCOUNTID),
+                  }),
+                  (0, O.RA)(e),
+                );
               },
-              "(VO) Reset All Doors",
-            ),
+            },
+            "Reset All Doors",
+          ),
           l.createElement(C.ry, {
-            strDropDownClassName: (0, R.Z)(
-              H.DropDownScroll,
-              H.ValveOnlyBackground,
-            ),
+            strDropDownClassName: (0, R.Z)(H.DropDownScroll),
             rgOptions: o,
             selectedOption: r,
             label: "Minigame States:",

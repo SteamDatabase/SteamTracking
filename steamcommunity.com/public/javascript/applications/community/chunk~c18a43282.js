@@ -248,6 +248,7 @@
         "duration-app-launch": "800ms",
         SaleSection: "_2NfLqUpH_h0Ba0jlv9M9ZE",
         CarouselDisplay: "_3ez1rppRxfu1tsVkwYGRYe",
+        SaleSectionCtn: "hN0lwt-eJ6DkW6ODVl2RU",
         SaleHeaderContainer: "ETZ4zYI1zEIby6hvjC8ca",
         SaleViewAll: "_38YHbeqrTEwLshd93lsDEY",
         SaleSectionLoginPrompt: "_3JoLJUDAQg4oKQuxk_SQy1",
