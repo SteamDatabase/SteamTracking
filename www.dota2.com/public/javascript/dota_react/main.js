@@ -3509,7 +3509,9 @@
         ButtonRow: "jzYZJJkQAozf5fmZ0MJqJ",
         PrizeDesc: "_41nAkLFMsXmfYr27O5Io4",
         GuidelinesSection: "_3HrYcc8HslMlPsrMqGUqZp",
+        GuidelinesHeader: "_225SAs9OdTBzLIaYV9LhjD",
         GuidelinesTitle: "_3Zwjnm4-mXivN2EKF5UzIb",
+        GuidelinesSubTitle: "_2Ab1QC0oGogQ3K0FyoPvv4",
         GuidelinesList: "_2qJS9ajgaYSpZ8WMfi2l7m",
         EndRow: "_3ipnVVsq6coaZcbZ0FSiW1",
         EndRowImage: "_1TVQkSWoU8eoFcMbHvOFOq",
@@ -35230,11 +35232,10 @@
                         muted: !0,
                         loop: !1,
                         playsInline: !0,
-                        poster: `${n.Y.IMG_URL}shortfilmcontest2022/clapper_fallback_2022.png`,
                       },
                       s.createElement("source", {
                         type: "video/webm",
-                        src: `${n.Y.VIDEO_URL}shortfilmcontest2023/clapper_2023.webm`,
+                        src: `${n.Y.VIDEO_URL}shortfilmcontest2024/clapper_2024.webm`,
                       }),
                     ),
                     s.createElement(
@@ -35310,7 +35311,7 @@
                   s.createElement(
                     "div",
                     { className: vs().Introduction },
-                    (0, v.Jr)("#filmcontest23_intro"),
+                    (0, v.Jr)("#filmcontest24_intro"),
                   ),
                   s.createElement(
                     "div",
@@ -35372,11 +35373,6 @@
                       ),
                     ),
                   ),
-                  s.createElement(
-                    "div",
-                    { className: vs().PrizeDesc },
-                    (0, v.Jr)("#filmcontest23_prize_desc"),
-                  ),
                 ),
               ),
               s.createElement(
@@ -35394,7 +35390,7 @@
                     className: vs().PreviousWinnerVideo,
                     width: "30%",
                     height: "300px",
-                    src: "https://www.youtube.com/embed/_kAubTZUVEo",
+                    src: "https://www.youtube.com/embed/ELyf2AYq8Zg",
                     title: "YouTube video player",
                     frameBorder: "0",
                     allow:
@@ -35405,7 +35401,7 @@
                     className: vs().PreviousWinnerVideo,
                     width: "30%",
                     height: "300px",
-                    src: "https://www.youtube.com/embed/A4vbIbEaeDg",
+                    src: "https://www.youtube.com/embed/qtVOAtCAkPU",
                     title: "YouTube video player",
                     frameBorder: "0",
                     allow:
@@ -35416,7 +35412,7 @@
                     className: vs().PreviousWinnerVideo,
                     width: "30%",
                     height: "300px",
-                    src: "https://www.youtube.com/embed/6PLMAD5efmQ",
+                    src: "https://www.youtube.com/embed/7GxMmEMSjTg",
                     title: "YouTube video player",
                     frameBorder: "0",
                     allow:
@@ -35435,8 +35431,36 @@
                   { className: vs().Quote },
                   s.createElement(
                     "div",
+                    { className: vs().GuidelinesHeader },
+                    (0, v.Jr)("#filmcontest_rulesofentry"),
+                  ),
+                  s.createElement(
+                    "div",
                     { className: vs().GuidelinesTitle },
-                    (0, v.Jr)("#filmcontest_guidelines"),
+                    (0, v.Jr)("#filmcontest_eligibility"),
+                  ),
+                  s.createElement(
+                    "div",
+                    { className: vs().GuidelinesList },
+                    s.createElement(
+                      "ul",
+                      null,
+                      s.createElement(
+                        "li",
+                        null,
+                        (0, v.Jr)("#filmcontest_eligibility_desc"),
+                      ),
+                    ),
+                  ),
+                  s.createElement(
+                    "div",
+                    { className: vs().GuidelinesTitle },
+                    (0, v.Jr)("#filmcontest_entry"),
+                  ),
+                  s.createElement(
+                    "div",
+                    { className: vs().GuidelinesSubTitle },
+                    (0, v.Jr)("#filmcontest_entry_subtitle"),
                   ),
                   s.createElement(
                     "div",
@@ -35467,44 +35491,126 @@
                       s.createElement(
                         "li",
                         null,
-                        (0, v.Jr)("#filmcontest23_guidelines_5"),
+                        (0, v.Jr)("#filmcontest24_guidelines_5"),
                       ),
                       s.createElement(
                         "li",
                         null,
-                        (0, v.Jr)("#filmcontest23_guidelines_6"),
+                        (0, v.Jr)("#filmcontest24_guidelines_6"),
                       ),
                       s.createElement(
                         "li",
                         null,
-                        (0, v.Jr)("#filmcontest23_guidelines_12"),
+                        (0, v.Jr)("#filmcontest24_guidelines_7"),
                       ),
                       s.createElement(
                         "li",
                         null,
-                        (0, v.Jr)("#filmcontest_guidelines_7"),
+                        (0, v.Jr)("#filmcontest24_guidelines_8"),
                       ),
                       s.createElement(
                         "li",
                         null,
-                        (0, v.Jr)("#filmcontest_guidelines_8"),
+                        (0, v.Jr)("#filmcontest24_guidelines_9"),
                       ),
                       s.createElement(
                         "li",
                         null,
-                        (0, v.Jr)("#filmcontest_guidelines_9"),
+                        (0, v.Jr)("#filmcontest24_guidelines_10"),
                       ),
                       s.createElement(
                         "li",
                         null,
-                        (0, v.Jr)("#filmcontest_guidelines_10"),
+                        (0, v.Jr)("#filmcontest24_guidelines_11"),
                       ),
                       s.createElement(
                         "li",
                         null,
-                        (0, v.Jr)("#filmcontest_guidelines_11"),
+                        (0, v.Jr)("#filmcontest24_guidelines_12"),
                       ),
                     ),
+                  ),
+                  s.createElement(
+                    "div",
+                    { className: vs().GuidelinesTitle },
+                    (0, v.Jr)("#filmcontest_winners"),
+                  ),
+                  s.createElement(
+                    "div",
+                    { className: vs().GuidelinesList },
+                    s.createElement(
+                      "ul",
+                      null,
+                      s.createElement(
+                        "li",
+                        null,
+                        (0, v.Jr)("#filmcontest24_winners_desc"),
+                      ),
+                    ),
+                  ),
+                  s.createElement(
+                    "div",
+                    { className: vs().GuidelinesTitle },
+                    (0, v.Jr)("#filmcontest_prizes"),
+                  ),
+                  s.createElement(
+                    "div",
+                    { className: vs().GuidelinesList },
+                    s.createElement(
+                      "ul",
+                      null,
+                      s.createElement(
+                        "li",
+                        null,
+                        (0, v.Jr)("#filmcontest24_prizes_desc_1"),
+                      ),
+                      s.createElement(
+                        "li",
+                        null,
+                        (0, v.Jr)("#filmcontest24_prizes_desc_2"),
+                      ),
+                    ),
+                  ),
+                  s.createElement(
+                    "div",
+                    { className: vs().GuidelinesTitle },
+                    (0, v.Jr)("#filmcontest_release"),
+                  ),
+                  s.createElement(
+                    "div",
+                    { className: vs().GuidelinesList },
+                    s.createElement(
+                      "ul",
+                      null,
+                      s.createElement(
+                        "li",
+                        null,
+                        (0, v.Jr)("#filmcontest_release_desc"),
+                      ),
+                    ),
+                  ),
+                  s.createElement(
+                    "div",
+                    { className: vs().GuidelinesTitle },
+                    (0, v.Jr)("#filmcontest_general"),
+                  ),
+                  s.createElement(
+                    "div",
+                    { className: vs().GuidelinesList },
+                    s.createElement(
+                      "ul",
+                      null,
+                      s.createElement(
+                        "li",
+                        null,
+                        (0, v.Jr)("#filmcontest_general_desc"),
+                      ),
+                    ),
+                  ),
+                  s.createElement(
+                    "div",
+                    { className: vs().GuidelinesList },
+                    (0, v.Jr)("#filmcontest_sponsored_desc"),
                   ),
                 ),
               ),
@@ -35514,7 +35620,7 @@
                 s.createElement(
                   "div",
                   { className: vs().EndRowText },
-                  (0, v.Jr)("#filmcontest23_intro"),
+                  (0, v.Jr)("#filmcontest24_intro"),
                   0 == n.Y.ACCOUNT_ID &&
                     s.createElement(
                       "a",
@@ -35554,7 +35660,7 @@
                 ),
                 s.createElement("img", {
                   className: vs().EndRowImage,
-                  src: `${n.Y.IMG_URL}shortfilmcontest2023/clapper_2023.png`,
+                  src: `${n.Y.IMG_URL}shortfilmcontest2024/clapper_2024.png`,
                 }),
               ),
               s.createElement(I.U, null),
@@ -35566,7 +35672,7 @@
                   shouldShow: this.state.bPopupVisible,
                   showFunc: (e) => this.handleClick(e),
                 },
-                (0, v.Jr)("#filmcontest_tos_2021"),
+                (0, v.Jr)("#filmcontest_tos_2024"),
                 s.createElement(
                   "div",
                   {
