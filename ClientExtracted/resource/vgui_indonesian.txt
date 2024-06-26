@@ -9,6 +9,7 @@
 "TextEntry_SelectAll"		"Pilih semua"
 "TextEntry_CopyAllToClipboard"	"Salin semua teks ke clipboard"
 "FileOpenDialog_Open"		"Buka"
+"FileOpenDialog_Save"		"Simpan"
 "FileOpenDialog_Cancel"		"Batal"
 "FileOpenDialog_Look_in"	"Cari di:"
 "FileOpenDialog_File_Name"	"Nama file:"

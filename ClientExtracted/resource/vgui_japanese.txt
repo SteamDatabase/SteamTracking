@@ -9,6 +9,7 @@
 "TextEntry_SelectAll"		"すべて選択"
 "TextEntry_CopyAllToClipboard"	"すべてをクリップボードにコピー"
 "FileOpenDialog_Open"		"開く"
+"FileOpenDialog_Save"		"保存"
 "FileOpenDialog_Cancel"		"キャンセル"
 "FileOpenDialog_Look_in"	"場所："
 "FileOpenDialog_File_Name"	"ファイル名："

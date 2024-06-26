@@ -4,14 +4,16 @@ __TEXT
 @(
 __text
 __TEXT
+@l
+@l
 __stubs
 __TEXT
+B["
+B["
 __stub_helper
 __TEXT
 __cstring
 __TEXT
-Pu"
-Pu"
 __gcc_except_tab__TEXT
 __const
 __TEXT
@@ -54,6 +56,7 @@ __bss
 __DATA
 __common
 __DATA
+Y1
 H
 __LINKEDIT
 @1
@@ -62,8 +65,8 @@ __LINKEDIT
 @loader_path/friendsui.dylib
 "
 @1
-(#
-(%
+0#
+8%
 P
 
 *
@@ -97,7 +100,7 @@ h
 &
 pH
 )
-0(2
+@(2
 22CJSCallbackFunc_HTMLJS
 15CJSCallbackFunc
 11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
@@ -212,9 +215,9 @@ P
 44CClientNotificationStreamingClientConnection
 34CClientNotificationPlaytimeWarning
 37CClientNotificationGameRecordingError
-33CClientNotificationClipDownloaded
 37CClientNotificationGameRecordingStart
 36CClientNotificationGameRecordingStop
+47CClientNotificationGameRecordingUserMarkerAdded
 x
 (
 $
@@ -528,7 +531,6 @@ P
 46CControllerConfigMsg_ControllerActiveConfigMsg
 20CControllerConfigMsg
 14IHTMLResponses
-16CHTMLProtoBufMsgI12CMsgSetFocusE
 16CHTMLProtoBufMsgI20CMsgJSRegisterMethodE
 NSt3__117bad_function_callE
 16CHTMLProtoBufMsgI16CMsgOpenDevToolsE
@@ -537,11 +539,12 @@ NSt3__117bad_function_callE
 16CHTMLProtoBufMsgI26CMsgFileLoadDialogResponseE
 16CHTMLProtoBufMsgI20CMsgJSDialogResponseE
 16CHTMLProtoBufMsgI21CMsgExecuteJavaScriptE
-16CHTMLProtoBufMsgI15CMsgBrowserSizeE
 16CHTMLProtoBufMsgI30CMsgSetLocalFileRequestMappingE
+16CHTMLProtoBufMsgI13CMsgMouseMoveE
 16CHTMLProtoBufMsgI13CMsgMouseDownE
 16CHTMLProtoBufMsgI11CMsgMouseUpE
-16CHTMLProtoBufMsgI14CMsgMouseWheelE
+16CHTMLProtoBufMsgI11CMsgKeyDownE
+16CHTMLProtoBufMsgI9CMsgKeyUpE
 16CHTMLProtoBufMsgI11CMsgKeyCharE
 20CBroadcastController
 13IUIController
@@ -902,7 +905,6 @@ N6google8protobuf23SourceCodeInfo_LocationE
 N6google8protobuf14SourceCodeInfoE
 N6google8protobuf28GeneratedCodeInfo_AnnotationE
 N6google8protobuf17GeneratedCodeInfoE
-NSt3__121__basic_string_commonILb1EEE
 N6google8protobuf14DynamicMessageE
 N6google8protobuf21DynamicMessageFactoryE
 N6google8protobuf8internal29DescriptorPoolExtensionFinderE
@@ -1430,7 +1432,7 @@ P
 18CMsgInspectElement
 13CMsgDisableF5
 17CMsgStartDownload
-16CMsgSetTopWindow
+26CMsgSetWindowStackingOrder
 41CMsgBrowserViewPostMessageToParentRequest
 18CMsgBlockedRequest
 23CMsgBrowserFocusChanged
@@ -1441,8 +1443,7 @@ P
 16CMsgPopupCreated
 27CMsgSetVRKeyboardVisibility
 20CMsgRestartJSContext
-N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
-N6google8protobuf8internal16InternalMetadata13ContainerBaseE
+NSt3__121__basic_string_commonILb1EEE
 N4vgui19AnimatingImagePanelE
 10CUtlVectorIPN4vgui6IImageE10CUtlMemoryIS2_EE
 10CUtlMemoryIPN4vgui6IImageEE
@@ -1610,12 +1611,12 @@ N4vgui4HTML12CHTMLFindBarE
 16CHTMLProtoBufMsgI13CMsgGoForwardE
 16CHTMLProtoBufMsgI13CMsgWasHiddenE
 16CHTMLProtoBufMsgI17CMsgMouseDblClickE
-16CHTMLProtoBufMsgI11CMsgKeyDownE
-16CHTMLProtoBufMsgI9CMsgKeyUpE
+16CHTMLProtoBufMsgI14CMsgMouseWheelE
 16CHTMLProtoBufMsgI21CMsgImeSetCompositionE
 16CHTMLProtoBufMsgI17CMsgImeCommitTextE
 16CHTMLProtoBufMsgI24CMsgImeCancelCompositionE
-16CHTMLProtoBufMsgI13CMsgMouseMoveE
+16CHTMLProtoBufMsgI15CMsgBrowserSizeE
+16CHTMLProtoBufMsgI12CMsgSetFocusE
 16CHTMLProtoBufMsgI14CMsgMouseLeaveE
 16CHTMLProtoBufMsgI28CMsgHandleContextMenuCommandE
 16CHTMLProtoBufMsgI14CMsgViewSourceE
@@ -2321,6 +2322,8 @@ H
 15CMsgKeyValueSet
 50UserContentDescriptorPreferences_ContentDescriptor
 32UserContentDescriptorPreferences
+N6google8protobuf8internal16InternalMetadata9ContainerINS0_15UnknownFieldSetEEE
+N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 x
 0
 H
@@ -2363,21 +2366,21 @@ X
 none
 -friendsui
 -nofriendsui
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/friendsuihelpers.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/friendsuihelpers.cpp
 IsARM() || GetCPUInformation().m_bSSE2
 GetBootstrapperVersion
 IVRSteamPrivate_023
 resolve
 reject
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/refcount.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
 m_iRefs >= 0 && m_iRefs < 0x0ffffff
 m_iRefs > 0 && m_iRefs < 0x1000000
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/smartptr.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/smartptr.h
 m_pObj == NULL
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlmemory.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
 nGrowSize >= 0
 m_nAllocationCount >= 0
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 num > 0
 0
@@ -2395,7 +2398,7 @@ result
 message
 reply
 m_vecFuncs
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/html_jstypes.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/html_jstypes.cpp
 Duplicate property %s in object
 ulValue < ((uint64)1 << 53)
 %lld
@@ -2410,7 +2413,7 @@ PNG load warning %s
 [S_API FAIL] SteamAPI_Init() failed; ipcserver init failed .
 [S_API FAIL] SteamAPI_Init() failed; ipcserver GetSteamPath failed.
 CLIENTENGINE_INTERFACE_VERSION005
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/steam/client_api.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steam/client_api.cpp
 ClientAPI_Init: InternalAPI_Init_Internal failed.
 ClientAPI_Init: Cannot create pipe.  Steam not running?
 ClientAPI_Init(GlobalInstance): GetIClientRemotePlay returned NULL.
@@ -2463,13 +2466,14 @@ ClientAPI_Init(GlobalInstance): GetIClientControllerSerialized returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSharedConnection returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientShader returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientCompat returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientTimeline returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkingUtils returned NULL.
 CParentalCache::OnParentalLockChangeBegin
 steammessages_clientnotificationtypes.proto
 steammessages_remoteplay.proto
 item
 :
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
 !pszString || pszString[nChars] == '\0'
 Menu
 MenuButton
@@ -2477,7 +2481,7 @@ ToggleButton
 Button
 Label
 Panel
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utldict.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
 CUtlDict
 m_Elements
 m_Tree
@@ -2490,7 +2494,7 @@ Pass the hostname, will generate dev site domains like store.{hostname}.steam.de
 /
 http://
 https://
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/urlhelper.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/urlhelper.cpp
 eRet != k_ESteamRealmUnknown
 HOME
 https://cdn.beta.steampowered.com/steamcommunity/beta/
@@ -2518,13 +2522,13 @@ width
 height
 %s requires %d arguments; only %d given
 %s call had invalid argument (arg %d): %s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/bitstring.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 bitNum >= 0 && bitNum < this->Size()
 num >= 0
 clientui_overlay_fps
 60
 map
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utllinkedlist.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
 m_TotalElements != InvalidIndex()
 %s overflow!
 IsValidIndex(elem)
@@ -2560,7 +2564,7 @@ featuresEnabled
 feature
 bEnabled
 m_vecSettingsChangedCallbacks
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 IsText()
 bNotifications_ShowIngame
 Notifications_ShowIngame
@@ -2599,7 +2603,7 @@ bKeyboardEnabled
 bMouseEnabled
 bControllerEnabled
 RemotePlayTogetherVolume
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/remoteplaycontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/remoteplaycontroller.cpp
 pCallback->m_gameID == m_ActiveGameID
 m_vecActiveSessions
 m_vecControllerSlots
@@ -2754,7 +2758,7 @@ Screenshots.GetTotalDiskSpaceUsage
 Screenshots.GetLocalScreenshotPath
 Failed: IO failure
 Failed: invalid callback parameter
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/sharedconnectioncontroller.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/sharedconnectioncontroller.cpp
 pConnection->m_mapWaitingCalls.IsValidIndex( iMap )
 Remote call failed
 eUniverse
@@ -2774,7 +2778,7 @@ CSharedConnectionController::OnMessageReady
 CSharedConnectionController::OnServersConnected
 CSharedConnectionController::OnServersDisconnected
 CSharedConnectionController::OnPostLogonState
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamUI/sharedconnectioncontroller.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/sharedconnectioncontroller.h
 m_eConnectedUniverse > k_EUniverseInvalid && m_eConnectedUniverse < k_EUniverseMax
 SharedConnection.AllocateSharedConnection
 SharedConnection.RegisterOnLogonInfoChanged
@@ -2786,7 +2790,7 @@ SharedConnection.SendMsg
 SharedConnection.SendMsgAndAwaitResponse
 SharedConnection.SendMsgAndAwaitBinaryResponse
 SharedConnection.Close
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
@@ -2840,7 +2844,7 @@ Steam_FreeLastCallback
 Steam_GetAPICallResult
 VGuiModuleTracker001
 FriendsUIInterfaceV001
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/friendsUI/friendsUI.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/friendsUI/friendsUI.cpp
 CFriendsUIModule::Initialize: ClientAPI_Init() returned false.
 FriendsUI
 CFriendsUIModule::Initialize: VGuiControls_Init() returned false.
@@ -2863,7 +2867,7 @@ g_FriendsUIModule
 CUtlSymbol::ValidateGlobals
 developer
 -silent
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/friendsUI/friendswebchat.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/friendsUI/friendswebchat.cpp
 Unsupported friends ui mode
 steamid
 tag
@@ -3935,7 +3939,7 @@ libpng warning: %s
 None
 htmlmessages.proto
 CUIProtoBufMsg::SerializeCrossProc
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/html/htmlprotobuf.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/html/htmlprotobuf.cpp
 unSize < 128 * 1024 * 1024
 eCmd > 0 && eCmd < eHTMLCommands_None
 pBuffer->TellPut() == 0
@@ -3990,7 +3994,7 @@ SetFont
 SetTexture
 SetString
 Couldn't parse script sequence '%s': expected <anim command>, found '%s'
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/AnimationController.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/AnimationController.cpp
 panel != NULL
 AnimationController
 m_Sequences
@@ -4005,7 +4009,7 @@ vgui::CPanelAnimationDictionary
 m_AnimationMaps
 m_AnimationMaps[ iAnimationMap ].map->entries
 m_PanelAnimationMapPool
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlsymbol.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
 pPool->m_SpaceUsed < 0xFFFF
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 CUtlSymbolTable
@@ -4019,10 +4023,10 @@ filtered
 , string image, string imagecolor, alignment imageAlignment, int preserveAspectRatio, int filtered
 BitmapImagePanel
 CBuildFactoryHelper:  Factory for '%s' already exists!!!!
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/BuildFactoryHelper.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/BuildFactoryHelper.cpp
 func
 className
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/BuildGroup.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/BuildGroup.cpp
 m_pkvSettings
 [%s] applying key '%s', has changed from '%s' to '%s'
 controlKeys
@@ -4063,7 +4067,7 @@ ComboBoxButton
 TextEntry
 ActivateItem
 CIMEPanel
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/controls.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/controls.cpp
 s_pFileSystemInterface
 en_US.UTF-8
 VGUI_ivgui007
@@ -4071,7 +4075,7 @@ VGUI_Panel010
 VGUI_Surface039
 VGUI_NotificationManager002
 VGUI_Scheme010
-VGUI_System010
+VGUI_System011
 VGUI_Input005
 VGUI_Localize003
 VFileSystem014
@@ -4081,7 +4085,7 @@ OK
 Divider
 ControlFactory
 PanelPtr
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/EditablePanel.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/EditablePanel.cpp
 m_nSuppressDialogVariablesMessages >= 1
 ListPanel
 EditablePanel::PerformLayout()
@@ -4104,6 +4108,7 @@ m_vecLayoutCmds[i].m_vecControls
 m_sParserWarning
 m_mapGroupsVisible
 LoadDefaultControlSettings
+OnOpen
 FileOpenDialog
 FullPathEdit
 FileList
@@ -4126,9 +4131,9 @@ FileTypeLabel
 #FileOpenDialog_File_type
 FolderIcon
 resource/FileOpenDialog.res
-OnOpen
 OnFolderUp
 OnNewFolder
+%s_%s
 PopulateFileList
 PopulateDriveList
 resource/icon_folder
@@ -4136,6 +4141,7 @@ resource/icon_folderup
 resource/icon_newfolder
 resource/icon_file
 resource/icon_folder_selected
+last_directory
 #FileOpenDialog_NewFolder_InputTitle
 #FileOpenDialog_NewFolderPrompt
 #FileOpenDialog_NewFolder_DefaultName
@@ -4144,7 +4150,7 @@ Cancel
 filter
 filterinfo
 %s %s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/FileOpenDialog.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/FileOpenDialog.cpp
 Couldn't format time value %llu
 *.*
 curFilter[0] == '*' && curFilter[1] == '.'
@@ -4193,7 +4199,7 @@ frame_close
 CloseFrameButtonPressed
 frame_menu
 BgColor
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/Frame.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/Frame.cpp
 Frame::SetTitle - vgui::localize not initialized
 BaseControls
 FrameTitleBar.SmallFont
@@ -4258,7 +4264,7 @@ m_Samples
 m_RangeList
 resource/webkit.css
 SKIN
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/HTML.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/HTML.cpp
 Failed creating HTML browser %s: %s
 <unnamed>
 <no url>
@@ -4415,7 +4421,7 @@ Disables new faster overlay HTML path (or enables if on a branch it's not on by 
 -html-perf-monitor
 Draws html perf data
 CHTMLFindBar
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/html/htmlpaintbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/html/htmlpaintbuffer.h
 m_nLockedIdx >= 0
 m_nLockedIdx == -1
 iNewReadIndex != 3
@@ -4458,7 +4464,7 @@ PopupHTML
 vgui::HTML
 m_Images
 ImagePanel
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/ImagePanel.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/ImagePanel.cpp
 fillcolor
 gradientStart
 gradientEnd
@@ -4483,6 +4489,7 @@ m_sGradientStart
 m_sGradientEnd
 candidate
 IMECandidatesMenu
+showhotkey
 IMECandidateSelected
 IMECandidate
 ImeCompositionString
@@ -4500,7 +4507,7 @@ LabelBright
 Label::Paint()
 GetText
 text
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/Label.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/Label.cpp
 _imageDar.IsValidIndex( index )
 Default
 labelText
@@ -4539,7 +4546,7 @@ VertScrollBar
 ListImage
 ListPanelInterior
 ColumnSelectButton
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/ListPanel.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/ListPanel.cpp
 minWidth <= width
 maxWidth >= width
 Check
@@ -4619,13 +4626,13 @@ ListPanelCheckBox::OnThink()
 different KV data types in a single list column
 ListPanelCollapserBase::OnAppearanceChanged()
 ListViewPanel
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/ListViewPanel.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/ListViewPanel.cpp
 font
 ListViewItemSelected
 ListPanel.BgColor
 ListViewItem
 ListPanel.TextBgColor
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/Menu.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/Menu.cpp
 m_SeparatorPanels.Count() == 0
 m_MenuItems.IsValidIndex(itemID)
 child
@@ -4633,7 +4640,6 @@ startItem >= 0
 MenuItemSelected
 MenuScrollBar
 KeyModeSet
-itemNum >= 0
 MenuItemHighlight
 itemID
 row != -1
@@ -4653,7 +4659,7 @@ ScrollBarSliderMoved
 CloseMenu
 CursorEnteredMenuItem
 CursorExitedMenuItem
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/vgui_controls/MenuItem.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vgui_controls/MenuItem.h
 m_bCheckable
 m_pkv
 (unsigned)elem <= (unsigned)m_Size
@@ -4679,7 +4685,7 @@ VPanel
 showDownArrow
 , int showDownArrow
 MenuItem
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/MenuItem.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/MenuItem.cpp
 !(cascadeMenu && checkable)
 rightarrow
 Menu.TextInset
@@ -4694,7 +4700,7 @@ MessageBoxText
 Close
 MessageBox.ButtonHeight
 Frame
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/Panel.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/Panel.cpp
 -dev
 OnScreenSizeChanged
 oldwide
@@ -4888,7 +4894,7 @@ CPanelKeyBindingMapDictionary
 m_MessageMaps[ iMessageMap ].map->defaultkeys
 m_MessageMaps[ iMessageMap ].map->boundkeys
 m_PanelKeyBindingMapPool
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlhandletable.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlhandletable.h
 nIndex < ( unsigned int )m_list.Count()
 ProgressBar
 progress
@@ -4911,7 +4917,7 @@ ScrollBar
 RichText.InsetX
 RichText.InsetY
 RichText::DrawString
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/RichText.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/RichText.cpp
 startIndex < m_TextStream.Count()
 RichText::OnThink()
 RichText::RecalculateLineBreaks
@@ -4977,7 +4983,7 @@ SliderHoriz
 TextEntry.IMEBGColor
 TextEntry.IMEFGColor
 TextKillFocus
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/TextEntry.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/TextEntry.cpp
 TextEntry field is much too large: %d characters, %f pixels wanted, %d pixels available
 #TextEntry_Cut
 #TextEntry_Paste
@@ -5029,7 +5035,7 @@ resource/icon_clear_field
 TextEntryClearButton
 (elem == Count()) || IsValidIndex(elem)
 TextImage::Paint()
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/TextImage.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/TextImage.cpp
 echar >= schar
 wordStartIndex > m_LineBreaks[ m_LineBreaks.Count() - 1 ]
 wordStartIndex >= _utext
@@ -5054,7 +5060,7 @@ TooltipHTML
 TreeNode
 TreeImage
 TreeNodeText
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/TreeView.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/TreeView.cpp
 m_pTreeView->IsLabelEditingAllowed()
 original
 changed
@@ -5088,7 +5094,7 @@ m_pkvData
 m_pChildren
 m_List
 CTreeViewListControl
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/controls/TreeViewListControl.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/controls/TreeViewListControl.cpp
 m_vecJumpWChars
 URLLabel
 URLText
@@ -5102,14 +5108,14 @@ VGUI Controls Global
 ToolWindow::s_ToolWindows
 g_ButtonSoundNames
 BuildGroup::ValidateGlobals
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/bitstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
 resizeNumBits >= 0
 !m_pInt
 GetInts()
 CVariableBitStringBase
 {}()'
 {}()':
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/convar.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/convar.cpp
 pName
 Convars
 m_vecCallbacks.Count() == 0 || !callback
@@ -5133,7 +5139,7 @@ Key( i )
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
 .
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 V_RemoveDotSlashes failed for "%s".
 *
 rb
@@ -5150,14 +5156,14 @@ m_mapFileWatchData.Key( i )
 CPathString
 .dylib
 %s/%s%s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/interface.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 .cpl
 %s%s
 g_VecLoadedModules
 g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
 ReadToken overflow
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/KeyValues.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
 filesystem
 You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
 "
@@ -5213,6 +5219,17 @@ RecursiveLoadFromBuffer:  got NULL key
 RecursiveLoadFromBuffer:  got } in key
 RecursiveLoadFromBuffer:  got conditional between key and value
 KeyValues::ReadAsBinary() stack depth > 100
+KeyValues::ReadAsBinary - Set name
+KeyValues::ReadAsBinary - TYPE_NONE
+KeyValues::ReadAsBinary - TYPE_STRING
+KeyValues::ReadAsBinary - TYPE_WSTRING
+KeyValues::ReadAsBinary - TYPE_INT
+KeyValues::ReadAsBinary - TYPE_UINT64
+KeyValues::ReadAsBinary - TYPE_INT64
+KeyValues::ReadAsBinary - TYPE_FLOAT
+KeyValues::ReadAsBinary - TYPE_COLOR
+KeyValues::ReadAsBinary - TYPE_PTR
+KeyValues::ReadAsBinary - TYPE_BINARY_STRING
 KeyValues
 NULL
 m_errorIndex>=0
@@ -5232,14 +5249,14 @@ KeyValues Error: %s in file %s [offset: %d]
 context.m_vecStack.Count() <= 1
 %.18g
 Memory leak: mempool blocks left in memory: %d
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/mempool.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/mempool.cpp
 CMemoryPool::AddNewBlob: mode == GROW_NONE
 blobSize <= nMaxBlobSize
 pBlob
 CMemoryPool::Alloc: ran out of memory
 k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 CMemoryPool
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 nSize != 0
 CUtlBuffer::GetStringFast: binary buffers only
@@ -5257,10 +5274,10 @@ r
 a
 ?
 '
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 CUtlString::VAppendFormat
 CUtlString::ReplaceInternal
@@ -5274,10 +5291,10 @@ nMinCapacity <= k_nMaxStringSize
 len > 0 || HasError()
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlsymbol.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_bAllowStaticSymbolTable
 s_pSymbolTable
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_textencode.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
 CCrypto::Base64Encode: insufficient output buffer for encoding, needed %d got %d
 CCrypto::Base64Encode
 NULL output buffer with non-zero size passed to Base64Encode
@@ -5286,13 +5303,13 @@ CCrypto::Base64Encode: insufficient output buffer (up to n*4/3+5 bytes required,
 CCrypto::Base64Decode
 NULL output buffer with non-zero size passed to Base64Decode
 CCrypto::Base64Decode: insufficient output buffer (up to n*3/4+2 bytes required)
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/parentalinterpreter.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/parentalinterpreter.cpp
 m_protoSettings.ParseFromArray( ( char * )pBuffer->Base() + pBuffer->TellGet(), nBytesProto )
 steamclient.dylib
 Ctrl
 Alt
 Shift
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/commonkeycode.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/commonkeycode.cpp
 KEY_NONE
 KEY_0
 KEY_1
@@ -5521,7 +5538,7 @@ Scroll Lock Toggle
 ( pDesc->macKeyCode & 0xff ) == 0xff || s_pVirtualKeyToKeyCode[pDesc->macKeyCode] == 0 || pDesc->keyCode == KEY_LSHIFT || pDesc->macKeyCode == 1 || pDesc->keyCode == KEY_LALT || pDesc->keyCode == KEY_LCONTROL || pDesc->keyCode == KEY_PAD_ENTER
 s_pKeyCodeToVirtualKey[keyMap[i].keyCode] == 0
 enums.proto
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/filesystem_helpers.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/filesystem_helpers.cpp
 LoadFileIntoBuffer: NULL parameters
 generic
 publish
@@ -5571,7 +5588,7 @@ html
 @bEnableSpewThrottle
 1
 @bEnableLogTearOff
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/logger.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/logger.cpp
 ThreadInMainThread()
 pch[cub - 1] != '\0' && pch[cub] == '\0'
 1 == ret
@@ -5590,20 +5607,18 @@ m_bitsMigratedBuckets
 @nSpewThrottleUnconditionalResumeMs
 5000
 @nSpewThrottleNagFrequencyMs
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/steamid.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/steamid.cpp
 steamIDChat.GetEAccountType() == k_EAccountTypeChat
 k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 steammessages_base.proto
 steammessages_parental_objects.proto
-g[#
-[#
+"
 0
-f0
+r0
+p0
+z!
+'!
 !
-!
-'
-'
-'
 
 @
 @
@@ -5611,14 +5626,13 @@ f0
 
 x
 
-&
-%
-I-
 =
 @
 =
-($
-6$
+-
+-
+L$
+0
 p
 0
 p
@@ -5627,6 +5641,9 @@ p
 0
 $
 $
+$
+$
+$
 p
 0
 p
@@ -5637,12 +5654,14 @@ p
 0
 p
 0
+#
 0
 Ic]
+"
 |
 p
 0
-a!
+h!
 0
 0
 AT=
@@ -5684,14 +5703,16 @@ IcE
 IcE
 @
 @
+3
 V
 =
 =
 !
 @
 @
+$
 &
-J"
+S"
 @
 M9e
 @
@@ -5755,12 +5776,10 @@ j
 j
 j
 j
-D
-&
 0
 j
 j
-0
+W
 j
 j
 j
@@ -5772,9 +5791,6 @@ j
 j
 j
 j
-,
-
-
 
 j
 j
@@ -5861,6 +5877,7 @@ j
 j
 j
 E
+o
 j
 j
 j
@@ -5948,8 +5965,8 @@ j
 j
 j
 j
+a
 =
-
 @
 @
 @
@@ -5992,7 +6009,7 @@ j
 j
 .
 d
-=
+
 =
 =
 @

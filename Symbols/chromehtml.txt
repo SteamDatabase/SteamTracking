@@ -82,6 +82,7 @@
  SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
  SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
  SteamVProf::CVProfile::MarkFrame(char const*)
+ StringAfterPrefixCaseSensitive
  T CreateInterface
  TSListBase_Init
  TSListBase_Pop
@@ -118,7 +119,6 @@
  V_snprintf
  V_strncat_length
  V_strncpy
- V_strnicmp
  V_vsnprintf
  V_vsnprintfRet
  WeakRandomInt
@@ -264,7 +264,6 @@
  strchr
  strcmp
  strlen
- strncmp
  strncpy
  strstr
  strtod

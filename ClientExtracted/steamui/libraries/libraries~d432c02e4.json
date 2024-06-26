@@ -562,6 +562,8 @@
     "bbcode_image_tooltip_link": "在新視窗中開啟圖片",
     "bbcode_image_tooltip_link_giphy": "在新視窗中開啟 GIF 動畫圖",
     "bbcode_video_tooltip_link": "在新視窗中開啟影片",
+    "bbcode_video_pause": "暫停",
+    "bbcode_video_play": "播放",
     "bbcode_image_link_giphy": "/GIPHY %1$s",
     "bbcode_image_popout": "圖片彈出視窗",
     "bbcode_image_tooltip_collapse": "隱藏聊天內的圖片",

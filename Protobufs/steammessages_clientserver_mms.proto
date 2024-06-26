@@ -27,6 +27,7 @@ message CMsgClientMMSCreateLobby {
 	optional bytes metadata = 7;
 	optional string persona_name_owner = 8;
 	optional .CMsgIPAddress public_ip = 9;
+	optional string network_ping_location = 10;
 }
 
 message CMsgClientMMSCreateLobbyResponse {
@@ -39,6 +40,8 @@ message CMsgClientMMSJoinLobby {
 	optional uint32 app_id = 1;
 	optional fixed64 steam_id_lobby = 2;
 	optional string persona_name = 3;
+	optional string network_ping_location = 4;
+	optional uint32 cell_id = 5;
 }
 
 message CMsgClientMMSJoinLobbyResponse {
@@ -84,6 +87,7 @@ message CMsgClientMMSGetLobbyList {
 	optional uint32 deprecated_public_ip = 5;
 	repeated .CMsgClientMMSGetLobbyList.Filter filters = 6;
 	optional .CMsgIPAddress public_ip = 7;
+	optional string network_ping_location = 8;
 }
 
 message CMsgClientMMSGetLobbyListResponse {
@@ -111,6 +115,7 @@ message CMsgClientMMSSetLobbyData {
 	optional int32 lobby_type = 5;
 	optional int32 lobby_flags = 6;
 	optional bytes metadata = 7;
+	optional string network_ping_location = 8;
 }
 
 message CMsgClientMMSSetLobbyDataResponse {
@@ -129,6 +134,7 @@ message CMsgClientMMSLobbyData {
 		optional fixed64 steam_id = 1;
 		optional string persona_name = 2;
 		optional bytes metadata = 3;
+		optional string ping_data = 4;
 	}
 
 	optional uint32 app_id = 1;
@@ -183,6 +189,7 @@ message CMsgClientMMSSetLobbyGameServer {
 	optional uint32 game_server_port = 4;
 	optional fixed64 game_server_steam_id = 5;
 	optional .CMsgIPAddress game_server_ip = 6;
+	optional string network_ping_location = 7;
 }
 
 message CMsgClientMMSLobbyGameServerSet {

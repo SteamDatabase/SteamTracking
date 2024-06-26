@@ -562,6 +562,8 @@
     "bbcode_image_tooltip_link": "Deschide imaginea într-o fereastră nouă",
     "bbcode_image_tooltip_link_giphy": "Deschide giphyul într-o fereastră nouă",
     "bbcode_video_tooltip_link": "Deschide videoclipul într-o fereastră nouă",
+    "bbcode_video_pause": "Întrerupe",
+    "bbcode_video_play": "Joacă",
     "bbcode_image_link_giphy": "/GIPHY %1$s",
     "bbcode_image_popout": "Imagine în fereatră nouă",
     "bbcode_image_tooltip_collapse": "Ascunde imaginea în chat",

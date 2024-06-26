@@ -68,7 +68,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/gameoverlayrenderer.dylib
-_keg
 /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
@@ -97,12 +96,11 @@ j$QP
 @^_]
 ,^_[]
 QWRP
-xL5tM
+xD5tH
+;FLw]1
 ^_[]
-9JLu
-tM9H
-^_[]
-tU9A
+9JDu
+tF9A
 ^_[]
 ^_[]
 WRPVQ
@@ -282,6 +280,9 @@ u8QRW1
 WVjQ
 ^_[]
 PPPWQ
+^_[]
+^_[]
+^_[]
 ^_[]
 ^_[]
 ^_[]
@@ -541,7 +542,7 @@ SteamOverlayGameId
 Detected hot-key via base input, now requesting overlay %s
 disable
 enable
-Detected screenshot hot-key via base input
+base input
 ESC press detected, requesting overlay disable
 SteamGameStream_%u_mem
 SteamGameStream_%u_mutex
@@ -1097,6 +1098,9 @@ unlock
 											texture2d<float> overlay [[ texture( 0 ) ]] )
 		return overlay.sample( updateSampler, inVertex.texCoords );
 CBaseOverlayRenderer
+Taking screenshot via %s, %u milliseconds since last one was triggered. (skipdebounce=%s)
+Detected Movie hot-key via %s
+Detected marker hot-key via %s
 Waiting on shared FD for texture %d: received an outdated FD for texture %d instead, skipping.
 Waiting on shared FD for texture %d: peer is too far ahead and sending FD for texture %d.
 Mismatched chrome paint texture width/height!
@@ -1105,6 +1109,7 @@ Mismatched chrome paint texture width/height!
 Corrupt render stream (getting cmd)... %s
 in saved stream
 in external stream
+render stream
 Corrupt render stream: k_ESendTextToGame
 Corrupt render stream: k_ESendTextToGame string
 Corrupt render stream: k_EDrawTexturedRect
@@ -1605,7 +1610,7 @@ aYY*
 Bvvv
 XJ\Z
 :>6|
-:F	s
+:>	s
 ,0"&
 GB,0"
 L d\8
@@ -1613,7 +1618,7 @@ L d\8
 lFRn
 035(I&R5&...
 "*."
-d80	<
+d<0	<
 Q0W[8 
 _BOverlayNeedsPresent
 _IsOverlayEnabled
@@ -1857,26 +1862,28 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-n!$^-
-u,zQ
-GL/m
-'GbG
-}BJ$
-lg"S|
-W5Ec
-:c[P
-m(n(
-woch
-#j;r~
-f9ThX
-g	AN}
-puJ#$,`
-f3z{
-,3oF
-wN.Vh
-UK>Y>.
-.?'8
- r.\k
+!y/I
+!*A@
+YbrX
+jI%$
+$`E4
+%^gp
++q@3
+^`:N
+GQ3S
+)'<D
+'F-<
+':,4
+7} \>
+yN`!
+OkXS
+Y0&B
+xkC3
+|JPI
+(OG8
+l ph
+-K3'
+`!{p
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -1934,10 +1941,9 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240624191709Z0/
-#)5Y
+240626153650Z0/
+=~0<
 1/0-
-#)5Y
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1945,41 +1951,35 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		sCMpNVn2UbXX7jnVbaQ9S8EtDqU=
+		rd/Qut9CjAdQLF3wxxl8crZVzf8=
 		</data>
 	</array>
 </dict>
 </plist>
-Pk3P
-=*n}5
-w=RL
-|=Mm
-G$5`r
-SpZQ
-=[Jxk
-20240624191730Z0
+>yl|q*u
+<~tq
+20240626153650Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240530203058Z
-240711203057Z0B1
-Timestamp Signer NWK21
+240530204516Z
+240711204515Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
- {]g
-t0@j;
-+G(E
--T*K[@H.
-Mljyx
+[92qNd%
+eO@B
+4VokT
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-@PM#
-kEHv
-m	/]
-4C@-(
-0bZ?\
+u34<
+ZRAW`O[
+#;a=i
+SVA7L
+qTD\
+h;=u
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -2018,9 +2018,14 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240624191730Z0#
-y&x&;E
-t0&[
+240626153650Z0#
+Cvh{
+HDKHP#e
+#kW e
+eA@i
+)j@ 
+NBm,
+qGo`V
 __TEXT
 __text
 __TEXT
@@ -2112,16 +2117,14 @@ L9 t
 L98t
 [A\A]A^A_]
 AWAVSH
-tkE1
-5u^A
-|5tTI
-saE1
+A;G|
+tgE1
+5uZA
+t5tPI
+A;G|waE1
 [A^A_]
-9w|u
-AVSH
-tT9H
-[A^]
-tU9p
+9wtu
+tF9A
 [A^]
 AWAVSPA
 [A^A_]
@@ -2315,7 +2318,6 @@ H[A\A]A^A_]
 AWAVAUATSH
 D9` 
 D9c ~
-Y%9{
 [A\A]A^A_]
 P A9
 [A\A]A^A_]
@@ -2350,7 +2352,7 @@ AWAVAUATSH
 H9^ 
 t$H9Y w
 D9A4u
-(%#b
+Y%+d
 [A\A]A^A_]
 AWAVAUATSH
 8[A\A]A^A_]
@@ -2462,9 +2464,16 @@ AWAVAUATSH
 [A\A]A^A_]
 AVSI
 [A^]
+AWAVAUATSPI
+[A\A]A^A_]
+AVSH
+[A^]
+AVSH
+[A^]
 AWAVAUATSPH
 [A\A]A^A_]
 AVSH
+H9=5
 [A^]
 AWAVATSH
 L9x 
@@ -2553,7 +2562,7 @@ AWAVATSH
 L$HI
 H92u
 0[A\A^A_]
-H9=te
+H9=`f
 AWAVSPI
 [A^A_]
 AWAVSP
@@ -2581,7 +2590,6 @@ AWAVATSH
 0[A\A^A_]
 0[A\A^A_]
 AWAVSPD
-L954Q
 [A^A_]
 [A^A_]
 AWAVATS
@@ -2866,7 +2874,7 @@ UAWAVATSH
 }%E1
 H;D$
 [A\A^A_]
-D95w
+D95G
 UAWAVAUATSH
 D$`H
 D$8H
@@ -2911,7 +2919,7 @@ SteamOverlayGameId
 Detected hot-key via base input, now requesting overlay %s
 disable
 enable
-Detected screenshot hot-key via base input
+base input
 ESC press detected, requesting overlay disable
 SteamGameStream_%u_mem
 SteamGameStream_%u_mutex
@@ -3242,6 +3250,9 @@ Steam Screenshot Sync
 											texture2d<float> overlay [[ texture( 0 ) ]] )
 		return overlay.sample( updateSampler, inVertex.texCoords );
 CBaseOverlayRenderer
+Taking screenshot via %s, %u milliseconds since last one was triggered. (skipdebounce=%s)
+Detected Movie hot-key via %s
+Detected marker hot-key via %s
 Waiting on shared FD for texture %d: received an outdated FD for texture %d instead, skipping.
 Waiting on shared FD for texture %d: peer is too far ahead and sending FD for texture %d.
 Mismatched chrome paint texture width/height!
@@ -3250,6 +3261,7 @@ Mismatched chrome paint texture width/height!
 Corrupt render stream (getting cmd)... %s
 in saved stream
 in external stream
+render stream
 Corrupt render stream: k_ESendTextToGame
 Corrupt render stream: k_ESendTextToGame string
 Corrupt render stream: k_EDrawTexturedRect
@@ -3759,7 +3771,7 @@ zPLR
 zPLR
 zPLR
 zPLR
-! RI`
+! RDp(`
 ASAXAXA`
 A^A[A^A\A`
 RBRB
@@ -4304,26 +4316,27 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-*\<`
-^'v{5
-t=9aX
-?t=	
-<Py|
-Iv$>
-e?i:
-MN~a+?$
-+Ngr
-CCA7#
-rE`>y,
-76e7@L
-!;VNE2
-W'm 
-<y{+x&
-9u9OF
-k/b3
-P',f
-!'UE
-@_*V.
+Qu*6N
+c&v>
+U6(E
+okmHp
+::5k
+],R-]4
+K Fn5^
+i]:_
+#"8_s
+nm&|
+	+:k
+	S{/
+$cve
+Bz0y
+pGLbwc
+4$LH
+J8vz
+G\3)#=
+AL"l7
+53H>
+mu@L
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -4381,7 +4394,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240624191709Z0/
+240626153650Z0/
 1/0-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -4390,14 +4403,14 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		KF0GoDLRexkg12BO/M4F55UH5rE=
+		QurDdL800vt3ssbpkXkuuMshUWs=
 		</data>
 	</array>
 </dict>
 </plist>
-25O6
-F^"m|
-20240624191730Z0
+v]g-
+eY51g
+20240626153650Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -4457,12 +4470,14 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240624191730Z0#
-`s9H
+240626153650Z0#
 Cvh{
 HDKHP#e
-{z C
->SDq
+bf]X
+RvGg
+)^nr
+e:S	
+JF]/0
 __TEXT
 __text
 __TEXT
@@ -4538,7 +4553,10 @@ __LINKEDIT
 /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
 /usr/lib/libobjc.A.dylib
 h"@9
-Th~@
+Ti~@
+A9h3
+Thv@
+Ti~@
 T($@y
 (a@9
 5(	@
@@ -4555,7 +4573,7 @@ ia@9i
 	a@9Ia
 ia@9i
 	a@9Ia
-@9*V
+@9jb
 h&B)
 	@z`
 56P@
@@ -4573,9 +4591,10 @@ $E9H
 &E9h
 h&A)
 (	29
+4Wq	0
 jh8)	
-B)R(
 29|;	
+S@9wC
  @9H
 h"@9h
 Th*@
@@ -4587,17 +4606,17 @@ XcZ@
 h&@9
 hvB9
 hrB9
-C9a"C9b&C9c*C9~B
+C9a"C9b&C9c*C9
 aBA9
+E)JB
 h&D)
+qKk	
 9h6@
 h"@9
 h"@9
 yh:@
-`>	0
 Th#@
 -D@!
-@d	0
 4h&A
 X`RA
 T*!@
@@ -4624,17 +4643,20 @@ X`*B
 X`6B
 TiBA
 T`.A
-A	X 
+R	X 
 7hBD9(
-Y1	X
--	XX
+YB	X
+>	XX
 i*\)(
 Am 8`
 4h&])
 h&])
 #V)h
+),	X)
 4h.@
 4b.@
+X +	
+X`+	
 hbC9
 NH `
 m@)h
@@ -4649,8 +4671,6 @@ nA8!
 "A9h
 &A9h
 &A9(
-Iz`*@z
-	K?Y
 /"E@
 !~"8"
 T( @
@@ -4659,14 +4679,18 @@ T( @
 {ixJ	
 T`2@
 T	!@
-Z)@;
-\)@:
+	k*G
+	k!:
+Z) B
+\) A
 T`2@
 T`2@
 T`2@
 #C9h
+A9HF
+Ay`&
 T`2@
-DqHL
+Ay`"
 +ih8J	
 CC9`
 T`2@
@@ -4676,6 +4700,8 @@ T`2@
 #A)j:@
 T	|	
 Ci<}
+R`q	
+D9h&@
 	)E9i
 9h.@
 Th&@
@@ -4683,15 +4709,13 @@ Th&@
 J%E9
 9`&@
 4h&@
+ G	X
+AE	X
 T`2@
 4a2@
 T*SA
-Qh9(
 TleA
-hbD9
-4h"A
-hbD9
-hbD9h
+4h:A
 !IzH
 5F9h
 T`jt
@@ -4725,7 +4749,7 @@ SteamOverlayGameId
 Detected hot-key via base input, now requesting overlay %s
 disable
 enable
-Detected screenshot hot-key via base input
+base input
 ESC press detected, requesting overlay disable
 SteamGameStream_%u_mem
 SteamGameStream_%u_mutex
@@ -5056,6 +5080,9 @@ Steam Screenshot Sync
 											texture2d<float> overlay [[ texture( 0 ) ]] )
 		return overlay.sample( updateSampler, inVertex.texCoords );
 CBaseOverlayRenderer
+Taking screenshot via %s, %u milliseconds since last one was triggered. (skipdebounce=%s)
+Detected Movie hot-key via %s
+Detected marker hot-key via %s
 Waiting on shared FD for texture %d: received an outdated FD for texture %d instead, skipping.
 Waiting on shared FD for texture %d: peer is too far ahead and sending FD for texture %d.
 Mismatched chrome paint texture width/height!
@@ -5064,6 +5091,7 @@ Mismatched chrome paint texture width/height!
 Corrupt render stream (getting cmd)... %s
 in saved stream
 in external stream
+render stream
 Corrupt render stream: k_ESendTextToGame
 Corrupt render stream: k_ESendTextToGame string
 Corrupt render stream: k_EDrawTexturedRect
@@ -5755,6 +5783,7 @@ ValveHookScreenshots
 dBOverlayNeedsPresent
 jIsOverlayEnabled
 (LDHH
+hD$P
 4448
 HH88$
 4<H$<
@@ -6013,27 +6042,21 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-ND]'
-ng?z
-BjRt8
-5\x+[
-M1f+
-f]3W
-Telc:
-V[t_/
-Y,BVd
-h tD
-m=Jnax}
-]}P	
-!xR=%P
-.IlF
-+e] 
-@+b 
-$4Y	
-kl]K
-%,)_(e^
-S)Or.>
-r{1l
+_P*r
+9(U}:^S[
+h7xK
+)gG\
+l:;x
+=AJv
+A3_G
+,492
+P$t(
+p!)T	u
+ZBNG
+VYC#2
+{pDO
+%0H=?
+D6lG$
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -6091,10 +6114,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240624191709Z0/
-R/:0<
+240626153650Z0/
 1/0-
-R/:0
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -6102,16 +6123,17 @@ R/:0
 	<key>cdhashes</key>
 	<array>
 		<data>
-		punwK0Pkp8KKzajmRZDTUEnjEkA=
+		XsP0+hE2kJNsEn9uybtvwBtpPZ4=
 		</data>
 	</array>
 </dict>
 </plist>
-' dBJ
-7i)#
-E]_#
-lSq=
-20240624191730Z0
+!DjW
+6n5I
+n-RCA
+z<l_
+gJE:j
+20240626153650Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -6171,8 +6193,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240624191730Z0#
+240626153650Z0#
 Cvh{
 HDKHP#e
-&D8._M
-?='Z
+	S2i
+cn0m

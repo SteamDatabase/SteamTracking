@@ -26,6 +26,15 @@ enum EClipShareMethod {
 	k_EClipShareMethod_CreateLink = 6;
 }
 
+enum EClipRangeMethod {
+	k_EClipRangeMethod_CreateClipButton = 1;
+	k_EClipRangeMethod_Highlight = 2;
+	k_EClipRangeMethod_BeginEndButtons = 3;
+	k_EClipRangeMethod_ContextMenu = 4;
+	k_EClipRangeMethod_Drag = 5;
+	k_EClipRangeMethod_EntireClip = 6;
+}
+
 message CClientMetrics_AppInterfaceCreation {
 	optional string raw_version = 1;
 	optional string requested_interface_type = 2;
@@ -196,6 +205,20 @@ message CClientMetrics_ClipShare_Notification {
 	optional fixed64 gameid = 5;
 }
 
+message CClientMetrics_ClipRange_Notification {
+	message RelativeRangeEdge {
+		optional .EClipRangeMethod original_range_method = 1 [default = k_EClipRangeMethod_CreateClipButton];
+		optional .EClipRangeMethod latest_range_method = 2 [default = k_EClipRangeMethod_CreateClipButton];
+		optional int32 delta_ms = 3;
+	}
+
+	optional .EClipRangeMethod original_range_method = 1 [default = k_EClipRangeMethod_CreateClipButton];
+	optional .CClientMetrics_ClipRange_Notification.RelativeRangeEdge start = 2;
+	optional .CClientMetrics_ClipRange_Notification.RelativeRangeEdge end = 3;
+	optional float seconds = 4;
+	optional fixed64 gameid = 5;
+}
+
 message CClientMetrics_EndGameRecording_Notification {
 	optional .EGameRecordingType recording_type = 1 [default = k_EGameRecordingType_Unknown];
 	optional float seconds = 2;
@@ -216,5 +239,6 @@ service ClientMetrics {
 	rpc ClientDownloadResponseCodeCounts (.CClientMetrics_ContentDownloadResponse_Counts_Notification) returns (.NoResponse);
 	rpc ReportClientArgs (.CClientMetrics_ReportClientArgs_Notification) returns (.NoResponse);
 	rpc ReportClipShare (.CClientMetrics_ClipShare_Notification) returns (.NoResponse);
+	rpc ReportClipRange (.CClientMetrics_ClipRange_Notification) returns (.NoResponse);
 	rpc ReportEndGameRecording (.CClientMetrics_EndGameRecording_Notification) returns (.NoResponse);
 }

@@ -562,6 +562,8 @@
     "bbcode_image_tooltip_link": "Άνοιγμα εικόνας σε νέο παράθυρο",
     "bbcode_image_tooltip_link_giphy": "Άνοιγμα giphy σε νέο παράθυρο",
     "bbcode_video_tooltip_link": "Άνοιγμα βίντεο σε νέο παράθυρο",
+    "bbcode_video_pause": "Παύση",
+    "bbcode_video_play": "Εκκίνηση",
     "bbcode_image_link_giphy": "/GIPHY %1$s",
     "bbcode_image_popout": "Παράθυρο εικόνας",
     "bbcode_image_tooltip_collapse": "Απόκρυψη εικόνας στη συνομιλία",

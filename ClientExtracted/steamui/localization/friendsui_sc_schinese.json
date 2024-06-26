@@ -55,18 +55,5 @@
     "InviteLanding_OpenInSteam_Help": "我们尝试在蒸汽平台客户端打开邀请链接。您的浏览器也许会提示您允许启动蒸汽平台客户端。",
     "Search_NonFriend02": "在蒸汽平台上添加好友的最佳方式是使用%1$s。",
     "InviteLanding_AccountMismatch": "我们检测到，您正在运行的蒸汽平台客户端的登录帐户，与您要登录此网页版所使用的帐户不一致。",
-    "GiveFeedbackToSteam_Desc": "向蒸汽平台提供%1$s",
-    "changeLog_SubTitle": "以下为蒸汽平台好友与聊天最近进行的变更",
-    "changeLog_UpdateItem08": "修复了非蒸汽平台游戏好友在好友列表中分组时出现的多个问题。",
-    "changeLog_UpdateItem29": "添加了为蒸汽平台语音聊天选择不同音频输出设备的能力。",
-    "changeLog_UpdateItem34_Note": "目前的修复只针对蒸汽平台客户端使用；针对在 Chrome 中使用的修复则需要在 Chrome 将来更新后才能推出。",
-    "changeLog_UpdateItem36": "此前，用尽内存的聊天窗口会导致所有聊天窗口黑屏，直至蒸汽平台重启。对此问题进行了修复。",
-    "changeLog_UpdateItem48": "由于连接原因与蒸汽平台连接中断时，您仍然可以在聊天选项卡间切换并滚动查看聊天历史记录。在与蒸汽平台重建连接前，其他交互无法使用。",
-    "changeLog_UpdateItem64": "修复了涉及蒸汽平台启动时恢复聊天窗口的多个问题。",
-    "changeLog_UpdateItem71": "蒸汽平台聊天已变更为从新专用域加载。%1$s许多聊天用户界面将因此重置为默认设置，如打开聊天窗口、聊天室成员列表折叠，以及语音设置。这是更新时发生的一次性重置，对此带来的不便我们深表歉意。感谢您积极参与测试。",
-    "changeLog_UpdateItem73": "修复了聊天中嵌入的部分蒸汽平台商店文字格式问题。",
-    "changeLog_UpdateItem76": "添加了 /store 命令，能迅速发送蒸汽平台商店游戏链接。",
-    "changeLog_UpdateItem77": "%1$s 与 %2$s 版蒸汽平台聊天手机应用现已推出！",
-    "changeLog_UpdateExtraInfo01": "我们为新聊天功能发布一个更新。作为此新聊天更新的一部分，当您的计算机处于空闲状态时，您的客户端将自动收到好友与聊天用户界面的更新，您也可以在客户端内的蒸汽平台菜单中选择“查看蒸汽平台客户端更新”进行更新。这些更新不需要蒸汽平台完全重启，而只是在您的客户端运行时实时应用于好友/聊天功能。",
-    "changeLog_GenericUpdateTitle": "蒸汽平台好友与聊天更新"
+    "GiveFeedbackToSteam_Desc": "向蒸汽平台提供%1$s"
 }

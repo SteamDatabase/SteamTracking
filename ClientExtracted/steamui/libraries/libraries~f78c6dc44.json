@@ -562,6 +562,8 @@
     "bbcode_image_tooltip_link": "Otevřít v novém okně",
     "bbcode_image_tooltip_link_giphy": "Otevřít v novém okně (Giphy)",
     "bbcode_video_tooltip_link": "Otevřít v novém okně",
+    "bbcode_video_pause": "Pozastavit",
+    "bbcode_video_play": "Přehrát",
     "bbcode_image_link_giphy": "/GIPHY %1$s",
     "bbcode_image_popout": "Vyskakovací obrázek",
     "bbcode_image_tooltip_collapse": "Skrýt obrázek z konverzace",

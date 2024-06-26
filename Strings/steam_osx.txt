@@ -11,12 +11,10 @@ __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
-$35
-$35
+D55
+D55
 __const
 __TEXT
-~6
-~6
 __objc_methname
 __TEXT
 T
@@ -48,13 +46,15 @@ __DATA
 __objc_selrefs
 __DATA
 __objc_classrefs__DATA
+&C
+&C
 __objc_superrefs__DATA
-'C
-'C
 __objc_ivar
 __DATA
 __objc_data
 __DATA
+'C
+'C
 __data
 __DATA
 __thread_vars
@@ -69,6 +69,7 @@ __bss
 __DATA
 __common
 __DATA
+_H
 H
 __LINKEDIT
 @I
@@ -120,52 +121,52 @@ h
 (kD
 8?
 )
-x:
+{:
 0
-)
-t:
 H
-F:
 0
 @
 @
-H
-=
+q4
+*
+*
+*
 @
 @
 @
 @
 $
+k
 Hi
-}5
 Hi
 Hi
 Ic]
-t)
-i9
+4
+4
+IG
+s(
+)
+)
 
 %
+<
+<
+$)
 )
 )
 '
 '
 '
+'
+(
 
 5
-+=
-2
-t2
-u@
-8
-%'
+_8
+(
+(
 
 0
 2
-2
-2
-8
-8
-8
 0
 0
 AT=
@@ -176,7 +177,9 @@ AT=
 D
 @
 @
-k7
+3
+r7
+W1
 @
 Hc
 Hc
@@ -211,6 +214,10 @@ IcE
 1
 1
 1
+1
+1
+1
+7
 NSt3__117bad_function_callE
 15CBaseFileSystem
 11IFileSystem
@@ -2086,13 +2093,14 @@ Could not find version in file %s
 Could not get version from file %s
 Could not get CFBundleVersion
 Unknown
-com.valvesoftware.steam.ipctool
-ipcserver restart: expected: %d, got: %d
-pid %d != %d, clearing client_port = %d, server_port = %d
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlvector.h
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlmemory.h
-0
+.app
+pid %d != %d, re-initing before send; client_port = %d, server_port = %d
+StopJob
+pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
 0123456789.
+*
+%s/%s
 -fs_log
 Log file system accesses
 -fs_target
@@ -2138,7 +2146,7 @@ echo ERROR: must set fs_target=targetpath (ie. "set fs_target=u:\destdir")!
 ---FS:  %s %s
 open
 ---FS:  close %s %p %i
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/filesystem/BaseFileSystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/filesystem/BaseFileSystem.cpp
 Tried to close unknown file pointer %p
 ---FS:  read %s %llu %p
 Tried to read %llu bytes from unknown file pointer %p
@@ -2235,10 +2243,10 @@ m_OpenedFileHandles
 m_FileNames
 nGrowSize >= 0
 m_nAllocationCount >= 0
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/dbg.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/dbg.h
 static_cast<_in>( ret ) == i
 ( i < 0 ) == ( ret < 0 )
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlsymbol.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
 pPool->m_SpaceUsed < 0xFFFF
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 (unsigned)elem <= (unsigned)m_Size
@@ -2250,7 +2258,7 @@ m_Tree
 CUtlSymbolTable
 m_StringPools
 m_Lookup
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/filesystem/filesystem_stdio/filesystem_stdio.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/filesystem/filesystem_stdio/filesystem_stdio.cpp
 !m_bMounted
 !strchr(filename, '\n') && !strchr(filename, '\r')
 CFileSystem_Stdio
@@ -2259,19 +2267,16 @@ Filesystem
 g_FileSystem_Stdio
 g_PathIDTable
 CUtlSymbol::ValidateGlobals
-.
 MAIN
 public/steambootstrapper_%language%.txt
 locvars
 appname
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamexe/bootstraputils.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/bootstraputils.cpp
 ( eUniverse != k_EUniverseInvalid && eRealm != k_ESteamRealmUnknown ) || bLatchedUniverse
 /logs
 .forceupdate
 -steamchina
 -singleapp
-Library/Application Support/Steam
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/clientdirectories.h
 SteamUniverse
 SteamRealm
 SteamBootstrapper_GetEUniverse: %p
@@ -2301,7 +2306,7 @@ IsClientUpdateOutOfDiskSpace: %p
 -windowed
 -failsystemcheck
 -master_ipc_name_override
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamexe/main.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/main.cpp
 %s: waitid failed: '%s'
 CheckForZombies
 IsZombieProcess
@@ -2331,6 +2336,7 @@ sleep 1; open -n
 --args
 -psn_
 posix_spawn failed: '%s'
+!m_data.HasError()
 failed to set max open descriptors to %u
 -ifrunning
 Plat_GetExecutablePath returned false
@@ -2383,10 +2389,11 @@ Documents/Steam%s Content
 -no-cef-sandbox
 -cef-disable-sandbox
 -cef-disable-seccomp-sandbox
+-cef-disable-gpu-sandbox
 -cef-disable-gpu
 -cef-force-gpu
 -cef-force-accessibility
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlrbtree.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
 IsValidIndex( elem )
 _IsValidIndex( elem, unNodeSize, pMemBase )
 _IsValidIndex( y, unNodeSize, pMemBase )
@@ -2406,17 +2413,16 @@ ThrottleInterval
 /com.valvesoftware.steamclean
 .plist
 com.valvesoftware.steamclean
-Label
 steamclean
+Program
 ProgramArguments
-RunAtLoad
 launchctl remove %s%s &>/dev/null
 public
 steamclean_
 /steamclean
 launchctl load "
 " &>/dev/null
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamexe/steamglobalinstance.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/steamglobalinstance.cpp
 !s_pSteamGlobalInstance
 %s -shutdown-restart-type
 -foreground
@@ -2430,9 +2436,9 @@ ReadCommandsFromPipe
 %s: pending command too large, truncating
 ReLaunchCmdLine
 ClientLauncherType
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlqueue.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
-Startup - updater built Jun 24 2024 12:21:51
+Startup - updater built Jun 26 2024 08:39:12
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2444,6 +2450,7 @@ media.st.dl.eccdnx.com
 cdn.beta.steampowered.com
 Using the following download hosts for %s, Realm %s
 %d. http%s://%s, %s, Realm '%s', weight was %d, source = '%s'
+s
 -download
 -silent
 -noverifyfiles
@@ -2464,7 +2471,7 @@ Changing client beta flag from '%s' (beta file) to '%s' (command-line override)
 Loading cached metrics from disk (%s)
 Failed to load cached metrics from disk
 Manifest download: send request
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamexe/steamupdater.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/steamupdater.cpp
 m_PendingMainThreadHTTPHandle
 Steam requires that '%s' be on a case-insensitive filesystem.
 /SteamApps
@@ -2706,24 +2713,24 @@ so
 sh
 bin/
 bin\
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/refcount.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/refcount.h
 m_iRefs > 0 && m_iRefs < 0x1000000
 count >= 0
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/bitstring.h
+num >= 0
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
 bitNum >= 0 && bitNum < this->Size()
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlhashmap.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
 CUtlHashMap::RemoveAt - Invalid index
 CUtlHashMap::RemoveAt - couldn't find bucket for item
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/smartptr.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/smartptr.h
 m_pObj == NULL
 m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_WindowTitle
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-%lld
-Jun 24 2024
-12:21:53
+Jun 26 2024
+08:39:12
 crashhandler004
 steam
 Steam Executable Crash
@@ -2743,9 +2750,8 @@ embedded.provisionprofile
 _CodeSignature/CodeDirectory
 _CodeSignature/CodeSignature
 _CodeSignature/CodeRequirements
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamexe/updateui_carbon.mm
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui_carbon.mm
 unsupported fileop_t in VerifyAndUpdateBundleStructure
-%s/%s
 installer/steam.dmg
 /Volumes/XXXXXXXX
 yes | /usr/bin/hdiutil attach
@@ -2774,7 +2780,6 @@ Contents/MacOS/steamapps
 Detected bootstrapper requiring update but could not find valid path to bootstrapper.
 %s/%s.old
 .%d
-.app
 /usr/bin/tar -xf "%s" -C "%s"
 Possible user data left after bootstrapper update. Moved to %s.
 Successfully updated bootstrapper at %s
@@ -2803,23 +2808,26 @@ Cancel
 #SteamBootstrapper_OK
 OK
 SteamBootstrapper_OK
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlstring.h
-Program
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
+!pszString || pszString[nChars] == '\0'
+Label
+com.valvesoftware.steam.ipctool
 LimitLoadToSessionType
 Background
 KeepAlive
+RunAtLoad
 OnDemand
 MachServices
-pid %d != %d, re-initing before send; client_port = %d, server_port = %d
-StopJob
-pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
-!m_data.HasError()
+ipcserver restart: expected: %d, got: %d
+pid %d != %d, clearing client_port = %d, server_port = %d
+Library/Application Support/Steam
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/clientdirectories.h
 Unable to get home directory
 China
 %s/%s%s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/steamexe/updateui.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-12:21:47
+08:39:10
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -2840,7 +2848,7 @@ wb
 "lang"{"Language" "English""Tokens"{
 }}
 reloading localization file %s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vgui2/src/LocalizedStringTable.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/LocalizedStringTable.cpp
 s_pTable
 Bad format string in CLocalizeStringTable::ConstructString
 !("CLocalizedStringTable::ConstructString - Found a %s# escape sequence who's index was more than the number of args.")
@@ -10533,9 +10541,9 @@ SERVER_TRAFFIC_SECRET_0
 EXPORTER_SECRET
 ssl/tls_srp.c
 NULL
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/filesystem_helpers.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/filesystem_helpers.cpp
 LoadFileIntoBuffer: NULL parameters
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/commandline.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/commandline.cpp
 (int)(intp)m_hParam != -1
 m_bInitialized
 Parameter file '%s' not found, skipping...
@@ -10552,7 +10560,7 @@ m_vecParms
 m_vecParms[i]
 m_listCommandLineOption
 Not continuing coroutine due to g_bPreventCoroutineContinue, %s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/coroutine.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/coroutine.cpp
 GCoroutineMgr().IsValidCoroutine(hCoroutine)
 Coroutine_IsActive()
 (main)
@@ -10561,7 +10569,7 @@ m_cubSavedStack < k_cubMaxCoroutineStackSize
 m_pStackHigh
 m_pSavedStack
 m_VecCoroutineStack.Count() > 1
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/debugstatssystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/debugstatssystem.cpp
 String pool bytes used %u, max %u, %u pools
 Total number of strings %u, longest string size %u, avg size %u
 Total of %u buckets with %u hash collisions
@@ -10570,12 +10578,12 @@ Bucket size : count
 nTotal number of strings %u, longest string size %u, avg size %u
 Leaked KeyValues (%u):
 %s (%u)
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/keyvaluessystem.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/keyvaluessystem.cpp
 size < INT_MAX
 CKeyValuesSystem::AddStringToPool: key name too long (%u chars)
 CKeyValuesSystem::AddStringToPool: out of memory
 CKeyValuesSystem::AddStringToPool: running out of memory (%u bytes left)
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/osversion.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
 Invalid macOS version %d.%d.%d
 PS3
 web
@@ -10594,7 +10602,7 @@ CGLCreateContext
 CGLDestroyContext
 CGLGetParameter
 defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
 dest != NULL
 src != NULL
 count == 0 || s1 != NULL
@@ -10616,11 +10624,12 @@ pDest != NULL
 pFormat != NULL
 bufferLen == 0 || pDest != NULL
 destCapacity != 0
+.
 bytes
 GB
-MB
 KB
 %i%s
+%lld
 outsize >= ( inputbytes * 2 ) + 1
 0123456789abcdef
 outsize >= 1
@@ -10661,19 +10670,19 @@ parms.Count() == 0
 =&;
 str != NULL
 prefix != NULL
-!pszString || pszString[nChars] == '\0'
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlbuffer.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
 nBytes
-num >= 0
+0
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
 num > 0
 %u
 %llu
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utldict.h
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/vstdlib/strtools_unicode.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools_unicode.cpp
 invalid input pointer
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/bitstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
 resizeNumBits >= 0
 !m_pInt
 GetInts()
@@ -10681,7 +10690,7 @@ CVariableBitStringBase
 \\
 null
 object
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/convar.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/convar.cpp
 pName
 m_vecCallbacks.Count() == 0 || !callback
 m_pParent == this
@@ -10699,7 +10708,7 @@ m_strConvertedDefaultValue
 m_vecCallbacks
 Bad expression token: %c at %d in %s
 Bad expression token: %c %c
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/fileio.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s
 flock %s %s failed. errno = %d
 LOCK_EX
@@ -10737,7 +10746,7 @@ CFileWriter::Close
 LoadFileRangeIntoBuffer_Internal
 cbActual < (uint32)nBufSizeWithTerminator
 CFileWriterThread
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/tslist.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/tslist.h
 m_Count == 0
 pNode && pNode->Next == QueueEnd()
 m_queueItemsPending
@@ -10754,7 +10763,7 @@ pFile
 cubData < FIO_MAX_IO_BYTES
 pFile->m_hFileDest != INVALID_OSFILEHANDLE
 m_vecRegisteredWriters.HasElement( pFile )
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utllinkedlist.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
 m_TotalElements != InvalidIndex()
 %s overflow!
 IsInList(before)
@@ -10762,7 +10771,7 @@ Invalid index %u
 Element( i )
 CPathString
 .dylib
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/interface.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 .cpl
 g_VecLoadedModules
@@ -10772,7 +10781,7 @@ g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
 ]:%u
 port
 ReadToken overflow
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/KeyValues.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
 "
 {
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
@@ -10824,14 +10833,14 @@ KeyValues Error: %s in file %s [offset: %d]
 (*
 *),
 Memory leak: mempool blocks left in memory: %d
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/mempool.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/mempool.cpp
 CMemoryPool::AddNewBlob: mode == GROW_NONE
 blobSize <= nMaxBlobSize
 pBlob
 CMemoryPool::Alloc: ran out of memory
 k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 k_nMemPoolMagic_InUse == *(( (int *) pMem) - 1)
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/netadr.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/netadr.cpp
 loopback
 %i.%i.%i.%i
 %i.%i.%i.%i:%i
@@ -10841,10 +10850,10 @@ pvecAddressesOut != nullptr || pSingleOutput != nullptr
 about to perform blocking dns call from the main thread.  consider refactoring.
 BResolveHostString - unexpected DNS lookup flag '%d'
 NSURLVolumeAvailableCapacityForImportantUsageKey
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/osxhelpers_tier1.mm
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/osxhelpers_tier1.mm
 GetFileSystemFreeSpaceForPath failure for %s
 "
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlbuffer.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 nSize != 0
 CUtlBuffer::GetStringFast: binary buffers only
@@ -10864,14 +10873,14 @@ a
 '
 %.18g
 numElements >= 0
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlmemory.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlqueue.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlqueue.cpp
 IsPowerOfTwo( nNewCapacity )
 nPreSplit > 0 && nPreSplit + nPostSplit == nCount
 ( m_iHead & nNewCapacityMask ) == nNewCapacity - nPreSplit
 CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlstring.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
 CUtlString::VFormat
 CUtlString::VAppendFormat
 Assertion failed: length > k_cchMaxString
@@ -10884,7 +10893,7 @@ nMinCapacity <= k_nMaxStringSize
 len > 0 || HasError()
 Error State on string being set.
 CUtlStringBuilder::Data::MoveToHeap
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier1/utlsymbol.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_bAllowStaticSymbolTable
 s_pSymbolTable
 %s %i %s
@@ -10898,10 +10907,9 @@ Unable to determine CPU Frequency. Try defining CPU_MHZ.
 %s
 %s (%d) :
 Exiting on SPEW_ABORT
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/dbg.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/dbg.cpp
 pGroupName
 strlen( pGroupName ) < MAX_GROUP_NAME_LENGTH
-*
 IsSpewActive
 Fatal Assertion Failed:
 -noassert
@@ -10910,7 +10918,7 @@ Fatal assert; application exiting
 Fatal assert
 _ExitOnFatalAssert
 Failed to capture callstack
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memblockhdr.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
 ppFrames[iFrame] != NULL
 Assertion Failed: stack%2d: %s (%d): %s
 Stack:%2d    %s (%d): %s
@@ -10918,7 +10926,7 @@ Assertion Failed: stack%2d: %s
 Stack%2d: %s
 Assertion Failed: stack%2d: 0x%llX
 Stack%2d: 0x%llX
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/memstd.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
 ((size_t)(m_nLogicalBytesAllocated) % 8) == 0
 No tracked allocs currently in use. Total %d
 Tracked allocs currently in use. %d Total %d
@@ -10929,9 +10937,9 @@ DumpMemTrackingStats %d %d
 OUT OF MEMORY
 (iub & (m_nSizeWithStack-1)) == 0
 pAllocTracker->m_uSentinel == 0xaa110ced
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/memblockhdr.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
 pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/minidump.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
 Someone called SetWritingMinidump without holding the minidump lock.
 Someone called ClearWritingMinidump without holding the minidump lock.
 !g_pCrashMemoryReserve
@@ -10945,7 +10953,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-12:16:39
+08:36:34
 Jan
 Feb
 Mar
@@ -10969,12 +10977,12 @@ CatchAndWriteContext_t::Set w/o a function pointer!
 GAMESCOPE_WAYLAND_DISPLAY
 com.valvesoftware.steam
 /dev/urandom
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/platform_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/platform_posix.cpp
 s_dev_urandom_fd >= 0
 urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
 MainThrd
 pthread_setname_np
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/threadtools.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
 Thread synchronization object is unuseable
 Attempting to create a named event with a null name
 Semaphore name (%s) is longer than POSIX can handle, truncating.
@@ -11003,19 +11011,19 @@ Only thread can stop self: Use a higher-level protocol
 Probably deadlock or failure waiting for thread to initialize.
 CTSListBase: Misaligned list
 %d.%d.%d.%d:%d
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/validator.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
 CValidator : too many memory nodes to store, try again with a higher threshold value
 NULL != m_pValObjectCur
-s
 console
 steamui.dylib
 GiB
 MiB
+MB
 KiB
 %%.%if%s
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/valobject.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
 NULL == pValObjectPrev->m_pValObjectNext
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/tier0/vprof.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
 !g_VProfile
 pszName
 Avg Time/Frame (ms)
@@ -11074,13 +11082,13 @@ m_pBudgetGroups
 eGroup < VPROF_BUDGETGROUP_MAX
 No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
 WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier0/vprof.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
 m_nRecursions > 0
 m_pszName
 allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_25519_donna.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_25519_donna.cpp
 Key not initialized, cannot verify signature
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_aescbc_openssl.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_aescbc_openssl.cpp
 pubEncryptedData
 pubPlaintextData
 pcubPlaintextData
@@ -11095,7 +11103,7 @@ pcubEncryptedData
 *pcubEncryptedData
 cubEncryptedData >= cubTotalOutput
 nDecrypted == cubEncryptedData - k_nSymmetricBlockSize
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_digest_openssl.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_digest_openssl.cpp
 CCrypto::GenerateSHA1Digest
 pOutDigest
 SHA1_Init( &c )
@@ -11107,13 +11115,13 @@ cubData > 0
 pubKey
 cubKey > 0
 pOutputDigest
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_rsa_openssl.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_rsa_openssl.cpp
 CCrypto::RSAEncrypt
 cubPlaintextData > 0
 Invalid RSA modulus: %d bytes wide
 CCrypto::RSAEncrypt: insufficient output buffer for encryption, needed %d got %d
 RSA encryption failed
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/crypto_textencode.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/crypto_textencode.cpp
 CCrypto::HexDecode
 pchData
 pDecodedData
@@ -11128,7 +11136,7 @@ CCrypto::Base64Encode: insufficient output buffer (up to n*4/3+5 bytes required,
 CCrypto::Base64Decode
 NULL output buffer with non-zero size passed to Base64Decode
 CCrypto::Base64Decode: insufficient output buffer (up to n*3/4+2 bytes required)
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/keypair.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/keypair.cpp
 Key type %d doesn't know how to load from buffer
 ssh-ed25519 %nAAAA%*s%n
 PRIVATE KEY
@@ -11145,7 +11153,7 @@ NIL
 %04u-%02u-%02u
 %04u%02u%02u%02u%02u%02u
 %04u-%02u-%02u %02u:%02u:%02u
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/stat.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/stat.cpp
 CStatT<T>::Update: called on class that was not initialized.
 m_iSampleBucketCurrent < m_cSampleBuckets
 m_iSampleBucketLast < m_cSampleBuckets
@@ -11167,14 +11175,14 @@ ClientInfo
 valid_until
 ip_country_code
 -
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/clientupdatehostscache.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/clientupdatehostscache.cpp
 pkvServerResponse
 pkvHosts
 pkvRealms
 country_codes
 weight
 base_url
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlconsistenthash.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlconsistenthash.h
 nWeight > 0
 ( m_nTotalWeights+nWeight) > m_nTotalWeights
 0 == m_vecChoices.Count()
@@ -11196,12 +11204,12 @@ UnbufferedSend
 PostRecv
 SocketFail
 SocketAlreadyClosed
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/completionportmanager.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/completionportmanager.cpp
 DispatchCompletedItem
 DispatchCompletedItem - error
 ulResult != 0
 CCompletionPortManager::IOCPWorkerThread: got 100 consecutive errors, last error %d (%s), IOCP thread aborting and exiting
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/completionportmanager_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/completionportmanager_posix.cpp
 g_CompletionPortManager.BStarted()
 Assoc.nFd == handle
 ( Assoc.nFlags & ( k_nAssocProcessing | k_nAssocFinalizing ) ) == 0 && Assoc.pPending == NULL
@@ -11217,7 +11225,7 @@ Finalization timeout waiting for processing of %d to complete
 Pipe write failed
 CompletePendingIo
 Unhandled pending I/O type %d
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/cookiecontainer.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/cookiecontainer.cpp
 Unexpected result from V_SplitString()
 secure
 httponly
@@ -11237,7 +11245,7 @@ m_strValue
 m_strDomain
 m_strPath
 enums_clientserver.proto
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/enum_names.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp
 Missing String for %s (%d). If this comes from user data or could be valid, provide a default to avoid asserting.
 EResult
 EUniverse
@@ -11541,7 +11549,7 @@ unspecified
 cloud
 @bEnableFrameFuncOverageWarnings
 This turns on the spew in SPEW_MISC at level 4, still need to adjust spew levels to see it.
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/framefunction.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/framefunction.cpp
 eFrameType < k_EFrameTypeMax
 pchName
 V_strlen( pchName ) < V_ARRAYSIZE( m_rgchName )
@@ -11555,7 +11563,7 @@ CFrameFunctionMgr::BRun - SingleFunc
 CFrameFunctionMgr::BRun - OverageWarning
 CFrameFunctionMgr::BRun - DeletePass
 )
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/gid.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/gid.cpp
 GID Sys ID overflow
 Duplicate rack initialization of GID system
 SysID zero not supported for rack boxes
@@ -11602,7 +11610,7 @@ metrics
 html
 Invalid spew group
 RequestHeaders
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/http.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/http.cpp
 Authorization
 CHTTPRequest::RetrieveURLEncodedData
 m_pkvRequestHeaders
@@ -11654,7 +11662,7 @@ Transfer-Encoding
 Range
 Set-Cookie
 localhost
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/httpclient.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpclient.cpp
 Request host %s with relative URL %s appears invalid
 CHTTPUtil::BStatusCodeIsRedirect( eRedirectStatusCode )
 https://
@@ -11807,13 +11815,13 @@ m_pListWaitingRequestsForAddress
 m_pTreeWaitingConnections
 m_pTreeInUseConnections
 <local>
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/httpclientmgr.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpclientmgr.cpp
 m_vecpHTTPClients.FindAndFastRemove( pHTTPClient )
 m_vecpHTTPClients
 m_strProxyOverride
 Aborting stale HTTP request on connection (%p, stream: %d) due to absolute timeout: %s - %X
 Aborting stale HTTP request on connection (%p, stream: %d) due to network activity timeout: %s - %X
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/httpclient_internal.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpclient_internal.cpp
 Hit destructor inside a HTTP2 callback from nghttp2 - not safe
 HTTP Connection (%p) (connection handle %X) destructing! - Dispatching pending request (%p)
 Closing HTTP 1.x connection hard (%p) due to timeout while request active: %s - %X
@@ -12086,7 +12094,7 @@ Failed writing http cache file to disk
 (uint32)m_pHTTPRequestCache->m_listCacheFileLRU.Count() == (uint32)m_pHTTPRequestCache->m_mapCacheFiles.Count()
 CWorkItemHTTPClientRequest
 CWorkItemHTTPClientRequest::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/httpclient_internal.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/httpclient_internal.h
 m_BodyDataBuffer
 m_bufLeftOverHTTP2BodyDataChunk
 m_strCacheDirectory
@@ -12097,7 +12105,7 @@ m_FileIOThreadPool
 m_pCachedResponseData
 m_pOriginatingRequestHandle
 m_strFilename
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/iopollinghelpers_osx.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/iopollinghelpers_osx.cpp
 Unexpected thread race for CIOPollingHelper construction
 nStateFlags != 0
 m_watchTable.InvalidIndex() == m_watchTable.Find( socket )
@@ -12115,7 +12123,7 @@ m_vecIPFilterRangesV6
 500
 @nJobNetSendsInsaneThreshold
 15000
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/job.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/job.cpp
 undefined
 this != g_pJobCur
 Long interyield runtime -  %u jobs ran over interyield threshold and spew was rate limited since last output
@@ -12143,19 +12151,19 @@ generic context
 @cMinimumJobTimeoutsToCheckPerFrame
 100
 @bEnableNetworkJobsOwnStartList
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/jobmgr.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/jobmgr.cpp
 m_MapJob.InvalidIndex() != iJob || !bShouldExist
 BRouteWorkItemCompleted called for a job that could not be found!
 Job yielding despite declaring a Do Not Yield block at %s
 name
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/utlpriorityqueue.h
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/keyvaluesignature.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlpriorityqueue.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/keyvaluesignature.cpp
 nSubkeys == 0
 unexpected type %d in KeyValues being signed
 @bEnableSpewThrottle
 1
 @bEnableLogTearOff
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/logger.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/logger.cpp
 pLogInstance == sm_pLogInstance
 sm_cRef > 0
 sm_bShuttingDown
@@ -12204,7 +12212,7 @@ Persistent Logfiles created which have no cleanup limit specified!
 CLogInstance::EmitEventNow
 Last Message Repeated %d times.%s
 eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/public/tier1/netadr.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/netadr.h
 CIPAndPort::GetIPv4 called on IPv6 address
 k_EMsgClientVoiceCallPreAuthorize
 k_EMsgClientVoiceCallPreAuthorizeResponse
@@ -12339,6 +12347,8 @@ k_EMsgClientPICSProductInfoRequest
 k_EMsgClientPICSProductInfoResponse
 k_EMsgClientPICSAccessTokenRequest
 k_EMsgClientPICSAccessTokenResponse
+k_EMsgClientPICSPrivateBetaRequest
+k_EMsgClientPICSPrivateBetaResponse
 k_EMsgClientUpdateGuestPassesList
 k_EMsgClientInviteUserToClan
 k_EMsgClientAcknowledgeClanInvite
@@ -12663,7 +12673,7 @@ k_EMsgClientSiteLicenseGetAvailableSeatsResponse
 k_EMsgClientSiteLicenseGetContentCacheInfo
 k_EMsgClientSiteLicenseGetContentCacheInfoResponse
 m_vecMetrics
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/metrics/metrics.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/metrics/metrics.cpp
 CMetricsPayload::RecordMetric
 m_pMetricsPayload
 Not accumulating differing metrics types: %d and %d
@@ -12685,7 +12695,7 @@ null operation
 FCVAR_NEVER_AS_STRING
 m_p
 @bMsgErrorDump
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/msg.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msg.cpp
 EMsg %d registered multiple times.
 EMsg_IsValid( pOldMsgInfo->eMsg )
 *pOldMsgInfo->pchMsgName
@@ -12696,7 +12706,7 @@ Sent message: %s - %u bytes
 GetMessageFlags
 Bad packet received: EMsg would be %u, next 12 bytes: %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X %02X
 Bad packet received: EMsg would be %u
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netpacket_legacy_struct.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netpacket_legacy_struct.h
 CClientStructNetPacket->GetHdrIP() not valid.
 CClientStructNetPacket->GetRealm() not valid.
 CClientStructNetPacket->GetGCRouting() not valid.
@@ -12724,7 +12734,7 @@ Default initial allocation size for PB arena
 @nProtobufArenaMaxBlockSize
 524288
 Max block allocation size for PB arena
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/msgprotobuf.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msgprotobuf.cpp
 Unparseable protobuf message arrived, emsg=%u, size=%u
 CProtoBufNetPacket::RebuildPacketIfNeeded (needed)
 unOldBodySize >= 0
@@ -12740,7 +12750,7 @@ m_pHeader->ip_v6().length() == 16
 @nSpewThrottleUnconditionalResumeMs
 5000
 @nSpewThrottleNagFrequencyMs
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/net.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/net.cpp
 pFrameFunctionMgr
 CNet Encrypt
 CNet Resolver
@@ -12787,9 +12797,9 @@ iSetNonBlockResult == 0
 pvCallback != NULL
 !pvCallbackCur
 pvCallbackUDPCur || pvCallbackTCPCur
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/job.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/job.h
 g_pJobCur != NULL
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/cumulativetimer.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/cumulativetimer.h
 IsRunning()
 CNetConnectionImmediateDisconnectWorkItem
 CNetConnectionImmediateDisconnectWorkItem::ThreadProcess
@@ -12798,7 +12808,7 @@ CNetConnectionDestroyWorkItem::ThreadProcess
 m_vecHashBuckets
 m_memNodes
 m_bitsMigratedBuckets
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netconnection.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netconnection.cpp
 m_hSocket == INVALID_SOCKET
 Must pass a INetSSLConnectionCallback if using SSL
 Cannot use netfilter based encryption with SSL, setup SSL based encryption in your INetSSLConnectionCallback
@@ -12827,8 +12837,8 @@ CNetConnectionAsyncDisconnectWorkItem
 CNetConnectionAsyncDisconnectWorkItem::ThreadProcess
 CNetConnectionOnDisconnectWorkItem
 CNetConnectionOnDisconnectWorkItem::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netconnection.h
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/scheduledfunction.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netconnection.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.h
 m_Func
 m_pSSLConnection
 m_bufSSLRecv
@@ -12839,7 +12849,7 @@ m_pListQueuedSSLRecvsPostHandshake
 4000
 @cNetEncryptionHandshakeWorkMax_HighPri
 8000
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netfilter.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netfilter.cpp
 m_pNetConnection
 m_pNetConnection->m_pConnectionCallback != this
 NULL == m_pConnectionCallbackOrig
@@ -12867,10 +12877,10 @@ CWorkItemNetFilterEncrypt
 CWorkItemNetFilterEncrypt::ThreadProcess
 CWorkItemNetFilterOnDisconnect
 CWorkItemNetFilterOnDisconnect::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netfilter.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netfilter.h
 CWorkItemNetEncryptionHandshakeEncrypt
 CWorkItemNetEncryptionHandshakeEncrypt::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/netpacket.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/netpacket.cpp
 m_cRef == 0
 cubData
 CNetPacket::AddRef - Copy
@@ -12895,7 +12905,7 @@ ECONNREFUSED
 ENOPROTOOPT
 ECONNRESET
 [no name available]
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/opensslconnection.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/opensslconnection.cpp
 nBytes2 == m_data.NumAllocated()
 m_data
 commonName
@@ -13028,9 +13038,9 @@ VALVE_CRYPTO_dbg_realloc
 VALVE_CRYPTO_dbg_free
 COpenSSLContext
 COpenSSLConnection
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/opensslwrapper.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/opensslwrapper.cpp
 OpenSSL random number system reports not enough entropy
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/platform_sockets_posix.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/platform_sockets_posix.cpp
 nDataLen not supported in %s
 AsyncSocketAcceptExComplete
 pCompletion->type == IOTYPE_ACCEPT && pCompletion->ulResult == 0 && pCompletion->SocketAcceptEx.hNewSocket != INVALID_SOCKET
@@ -13045,7 +13055,7 @@ AsyncSocketReadFrom
 SteamBootstrapper_GetEUniverse
 /registry.vdf
 Registry
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/registry.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/registry.cpp
 Failed loading registry KV.
 Could not read existing registry file.
 Overwriting on-disk registry with newly created registry.
@@ -13060,7 +13070,7 @@ HKLM32
 HKEY_LOCAL_MACHINE_WOW64_64
 HKLM64
 CBaseScheduledFunction
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/scheduledfunction.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/scheduledfunction.cpp
 Attempt to schedule '%s' %lldusec in the past
 CScheduledFunctionMgr::BFrameFuncRun
 pBaseScheduledFunction->GetDeadlineTime().LTime() >= m_lTimeNextDeadline
@@ -13085,7 +13095,7 @@ a1701b6f442cc2b43c9fcce2907e9c78bb14b3650bc5a7b226d06b65f591b1f6
 b052ddf9b939bbdddc88ecbd5b97a923f1b56c8dc80d085f759886a42004cd15
 604f4e35defcfe7fbfa4722f73dcadc0b86cf3d5d48f8d7da5f8b64db62ac7d1
 steammessages_base.proto
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/string_misc.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/string_misc.cpp
 @net_loopback
 @net_backlog_time_allowed_sec
 8
@@ -13096,7 +13106,7 @@ steammessages_base.proto
 client/TCPConnection/SentBytes
 client/TCPConnection/RecvBytes
 IStreamParser::BIsValidMsgType() old packet header from out-of-date Steam build, discarding packet and closing connection
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/tcpconnection.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/tcpconnection.cpp
 cubData >= 8
 IStreamParser::BIsValidMsgType() invalid packet header (1st 8 bytes: 0x%02X%02X%02X%02X%02X%02X%02X%02X, %d bytes recv'd so far) discarding packet and closing connection
 IStreamParser::BIsValidMsgType() too-large cbMessageSize in message header (%u bytes, %d bytes recv'd so far) discarding packet and closing connection
@@ -13204,7 +13214,7 @@ CWSASendThread -- Sleep
 DisconnectPlatformSocket
 ClosePlatformSocket
 TCP disconnect
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/tcphost.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/tcphost.cpp
 IOTYPE_ACCEPT == pCompletionData->type
 @EnableUDPHistory
 @cUDPSendRetries
@@ -13212,7 +13222,7 @@ IOTYPE_ACCEPT == pCompletionData->type
 50
 @nClientCMUDPPingTimeoutUseGoodEnoughMS
 250
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/udpconnection.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/udpconnection.cpp
 CUDPConnection not initialized, was GlobalInit called?
 CUDPConnection::InternalGetUDPConnection called without calling CUDPConnection::GlobalInit first
 cubData <= k_nMaxDatagramSize
@@ -13281,15 +13291,15 @@ CUDPConnectionRouter::UDPRecvPkt
 CUDPConnectionRouter: received fatal UDP error %d (%s)
 m_sFailureInfo
 m_vecConnectPingResults
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/udpconnection.h
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/msgbase.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/udpconnection.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/msgbase.h
 CMsgBase_t : packet too small (EMsg %u)
 CMsgBase_t : packet too small
 client/UDPSocket/SentBytes
 client/UDPSocket/RecvBytes
 client/UDPSocket/SentPacket
 client/UDPSocket/RecvPacket
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/udpsocket.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/udpsocket.cpp
 bUseIOCP
 INVALID_SOCKET != hSocket
 CWSARecvFrom (UDP) --ioctl(FIONREAD
@@ -13307,7 +13317,7 @@ CWSARecvFrom (UDP) -- Priming Pump
 CWSARecvFrom (UDP) -- while completion data
 UDPSocket: ThreadedFunc_RecvUDP got error %d (%s) from socket %d, (invalid) hSocketOwner %d, we're not receiving on this socket now!
 CWebSocketConnection::GlobalInit()
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/websocket.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/websocket.cpp
 Must initialize with CWebSocketConnection::GlobalInit before accepting connections
 eConnectionMode == k_EConnectionModeClient
 pConnectionCallback == pWebSocketConnection
@@ -13335,9 +13345,9 @@ m_bufMultiFragment
 258EAFA5-E914-47DA-95CA-C5AB0DC85B11
 CWebSocketConnectionDelayedCloseConnectionWorkItem
 CWebSocketConnectionDelayedCloseConnectionWorkItem::ThreadProcess
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/websocket.h
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/websocket.h
 CWorkThread -- Sleep
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/workthreadpool.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/workthreadpool.cpp
 pszThreadName != NULL
 CWorkThreadPool::~CWorkThreadPool(): Thread pool %s shutdown incorrectly.
 0 == m_WorkThreads.Count()
@@ -13375,59 +13385,58 @@ m_StatExecutionTime
 m_StatWaitTime
 m_cCurrentDepth > 0
 out of memory
-/opt/buildbot/buildworker/steam_rel_client_hotfix_osx/build/src/common/zip_helpers.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/zip_helpers.cpp
 n <= (size_t)INT_MAX
 file_ofs == pFile->GetBytesWritten()
 
 
 0
-:B>
-x:
+{:
 0
-)
-t:
 H
-F:
 0
 @
 @
-H
-=
+q4
+*
+*
+*
 @
 @
 @
 @
 $
+k
 Hi
-}5
 Hi
 Hi
 Ic]
-t)
-i9
+4
+4
+IG
+s(
+)
+)
 
 %
+<
+<
+$)
 )
 )
 '
 '
 '
+'
+(
 
 5
-+=
-2
-t2
-u@
-8
-%'
+_8
+(
+(
 
 0
 2
-2
-2
-8
-8
-8
 0
 0
 AT=
@@ -13438,7 +13447,9 @@ AT=
 D
 @
 @
-k7
+3
+r7
+W1
 @
 Hc
 Hc
@@ -13473,54 +13484,53 @@ IcE
 1
 1
 1
-x6
+1
+1
+1
+7
 V
 !6
 0
-6
+0
+0
 0
 =
-8
-/
-/
-/
-/
+=/
 /
 =
-O7
-Y9
+5
++.
 .
-.
-.
+@"
 !
 @
-3
-@
-&
 -
-L6
-_1
-%1
+;
+@
+7
+&
+,
+,
+G+
+Y1
++
 1
 1
 1
-1
-1
-1
-**
+5
+*
 *
 0
-0
-0
-0
-~)
-d)
+w)
+8
+8
+8
 @
 M9e
-)
 @
 @
 /
+=3
 /
 /
 /
@@ -13543,7 +13553,6 @@ M9e
 ?
 
 *
-*
 AESNI-CBC+SHA1 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
@@ -13554,16 +13563,14 @@ AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 `
 `
 @
-q-
+t-
 j
 j
-S/
 Pj
 ARj
 j
-c&
-1
 0
+1
 1
 1
 0
@@ -13574,13 +13581,10 @@ M)u
 =
 @
 =
-
-
 =
 %
 =
 Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@openssl.org>
-$
 pppp
 pp
 ,,
@@ -13870,7 +13874,6 @@ OO
 expand 32-byte k
 ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
-4
 =
 @
 
@@ -13878,30 +13881,36 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 0
-
-
-
-*
+.
+,
 H=
 Ic]
 j
 j
 j
 j
+x)
 j
 j
 
-b!
+e$
 t$I;M
-$'
+n'
+S'
+)
+)
+'
+"
 "
 e
 W
 ,7~5d
-#*
 H
 0
+c#
 
+"
+"
 
 
 
@@ -13912,16 +13921,13 @@ H
 
 
 Hc
-H;5LM(
-L)5KG(
-U
+L)5+Q(
+L95 M(
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
 @8
 `$
-U$
-f'
 %
 %
 #
@@ -14206,6 +14212,7 @@ H=
 0
 0
 0
+
 0
 H=
 0
@@ -14215,11 +14222,6 @@ Hi
 E
 0
 0
-_
--
-
-
-
 
 
 
@@ -14238,15 +14240,16 @@ _
 Hc
 0
 0
+/
 @
 @
 0
 &
 @
 @
-9
-G
 @
+
+
 =h2
 P
 P

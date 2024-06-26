@@ -562,6 +562,8 @@
     "bbcode_image_tooltip_link": "Öppna bild i nytt fönster",
     "bbcode_image_tooltip_link_giphy": "Öppna giphy i nytt fönster",
     "bbcode_video_tooltip_link": "Öppna video i nytt fönster",
+    "bbcode_video_pause": "Pausa",
+    "bbcode_video_play": "Spela",
     "bbcode_image_link_giphy": "/GIPHY %1$s",
     "bbcode_image_popout": "Popout-bild",
     "bbcode_image_tooltip_collapse": "Dölj bild i chatt",

@@ -1,0 +1,15 @@
+﻿"XBoxOne"
+{
+	"origin_xboxone_trigger_l_click"				"Trigger Kiri (Tekan Penuh)"
+	"origin_xboxone_trigger_r_click"				"Trigger Kanan (Tekan Penuh)"
+	"origin_xboxone_stick_l_move"					"Stik Kiri (Gerakan)"
+	"origin_xboxone_stick_l_dpad_n"					"Stik Kiri (Atas)"
+	"origin_xboxone_stick_l_dpad_s"					"Stik Kiri (Bawah)"
+	"origin_xboxone_stick_l_dpad_w"					"Stik Kiri (Kiri)"
+	"origin_xboxone_stick_l_dpad_e"					"Stik Kiri (Kanan)"
+	"origin_xboxone_stick_r_move"					"Stik Kanan (Gerakan)"
+	"origin_xboxone_stick_r_dpad_n"					"Stik Kanan (Atas)"
+	"origin_xboxone_stick_r_dpad_s"					"Stik Kanan (Bawah)"
+	"origin_xboxone_stick_r_dpad_w"					"Stik Kanan (Kiri)"
+	"origin_xboxone_stick_r_dpad_e"					"Stik Kanan (Kanan)"
+	}

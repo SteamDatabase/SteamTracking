@@ -62,8 +62,8 @@
 
 "Friends_FriendList_CurrentGame"	"PARTIDA ACTUAL"
 "Friends_FriendList_InGame"		"EN UNA PARTIDA"
-"Friends_FriendList_Online"		"CONECTADO"
-"Friends_FriendList_Offline"		"DESCONECTADO"
+"Friends_FriendList_Online"		"EN LÍNEA"
+"Friends_FriendList_Offline"		"SIN CONEXIÓN"
 
 "Friends_SendInstantMessage"		"Enviar mensaje..."
 "Friends_Ignore"			"Bloquear toda comunicación..."
@@ -654,7 +654,7 @@
 "friends_voice_usedbygame"			"El micrófono está siendo usado por el juego"
 
 "friends_group_tag_as"			"Etiquetar como..."
-"friends_group_edit_categories" 	"Añade etiquetas a tus amigos para encontrarlos rápidamente. Los amigos con etiquetas aparecerán juntos en tu lista de amigos."
+"friends_group_edit_categories" 	"Agrega etiquetas a tus amigos para encontrarlos rápidamente. Los amigos con etiquetas aparecerán juntos en tu lista de amigos."
 "friends_group_addtag"			"AÑADIR ETIQUETA"
 "friends_group_edittags_title"		"%friend% - Etiquetas"
 
@@ -666,7 +666,7 @@
 "friends_itemsreceived_info"	"Tienes %items% nuevos artículos en tu inventario"
 "friends_setnickname"			"Agregar alias"
 "friends_setnickname_title"		"Amigos: %friend%"
-"friends_setnickname_info"		"Añade un alias persistente a este jugador para seguirle la pista."
+"friends_setnickname_info"		"Agrega un alias persistente a este jugador para seguirle la pista."
 "friends_managefriends"			"Administrar amigos"
 "Friends_WebStatus_Tooltip"		"En línea desde un navegador web"
 "Friends_MobileStatus_Tooltip"	"En línea desde un dispositivo móvil"

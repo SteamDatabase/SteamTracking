@@ -270,7 +270,6 @@ message CMsgSystemPerfLimits {
 	optional int32 display_external_refresh_manual_hz_min = 19;
 	optional int32 display_external_refresh_manual_hz_max = 20;
 	repeated int32 fps_limit_options_external = 21;
-	optional bool is_tearing_supported = 22;
 	optional bool is_vrr_supported = 23;
 	optional bool is_dynamic_refresh_rate_in_steam_supported = 24;
 	optional bool is_split_scaling_and_filtering_supported = 25;

@@ -1556,7 +1556,7 @@ Precisarás de encerrar a sessão do OSX para que as mudanças tenham efeito."
 
 "Steam_Legal_UnreleasedProduct"	"* Este é um produto ainda não lançado, que será disponibilizado aquando do seu lançamento.  A data de lançamento deste produto é incerta e os compradores não devem contar com qualquer data prevista."
 "Steam_Legal_TimeToShipGoods"	"**  Aguarde 6-8 semanas para a entrega dos artigos de merchandising incluídos no pacote do Half-Life 2 gold."
-"Steam_Legal_SSACheckbox"	"Concordo que o Acordo de Subscrição do Steam e os termos da oferta aqui descrita sejam aplicados a esta compra."
+"Steam_Legal_SSACheckbox"	"Concordo que o Acordo de Subscrição Steam e os termos da oferta aqui descrita sejam aplicados a esta compra."
 "Steam_Legal_SSANext"	"Concordo"
 "Steam_Legal_SSADisagree"	"Discordo"
 "SteamUI_HardwarePromoWizard_Title" "Registar oferta promocional"
@@ -4824,6 +4824,9 @@ Faz um novo amigo no Steam, enviando um presente a alguém que conheças."
 
 "SteamUI_RunningConflictingSoftware" "Conflito de software detetado"
 "SteamUI_RunningIncompatibleTcpService" "Uma versão incompatível de %incompatdll% (relacionada com\n%incompatname%) foi detetada no processo do Steam.\n\nSugerimos atualizar ou desinstalar este software caso aconteçam\nbloqueios ou problemas de rede durante a utilização do Steam ou jogos."
+
+"SteamUI_RunningBannedSoftware" "Software que modifica o comportamento do Steam"
+"SteamUI_RunningBannedSoftwareDesc" "O Steam detetou %incompatname%, um programa de terceiros que pode modificar o Steam para contornar verificações de segurança ou posse.\nSabe‑se que este programa causa falhas críticas do Steam, viola o Acordo de Subscrição Steam e infringe a propriedade intelectual de\ncriadores de DLCs. A utilização deste programa pode resultar em banimentos ou bloqueios de contas.\n\nDesinstala‑o para executares o Steam."
 
 "Steam_XboxDriverInstall_Title"		"Instalação do driver da Xbox"
 "Steam_XboxDriverInstall_Success"	"O driver foi atualizado com sucesso e estará ativo após reiniciares o computador."

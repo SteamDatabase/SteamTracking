@@ -1,0 +1,67 @@
+import "enums.proto";
+import "steammessages_base.proto";
+import "webuimessages_base.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = true;
+
+message CGameRecordingFile {
+	repeated .CGameRecordingTimelineMetadata timelines = 1;
+	repeated .CGameRecordingPostGameSummary postgame_events = 2;
+	repeated string temporary_clips = 3;
+}
+
+message CGameRecordingClipFile {
+	repeated .CGameRecordingTimelineMetadata timelines = 1;
+	optional uint64 first_timeline_start_offset_ms = 2;
+	optional uint32 date_recorded = 3;
+	optional uint64 game_id = 4;
+	optional fixed64 published_file_id = 5;
+	optional uint64 size_in_bytes = 6;
+	optional string name = 7;
+	optional bool temporary = 8;
+	optional string original_device = 9;
+	optional uint32 original_gaming_device_type = 10;
+	optional uint32 date_downloaded = 11;
+	optional uint32 thumbnail_width = 12;
+	optional uint32 thumbnail_height = 13;
+}
+
+message CGameRecordingTimelineMetadata {
+	message Recording {
+		optional string recording_id = 1;
+		optional uint64 start_offset_ms = 2;
+		optional uint64 duration_ms = 3;
+		optional .EGameRecordingType recording_type = 4 [default = k_EGameRecordingType_Unknown];
+		optional bool delete_on_cleanup = 5;
+		optional uint64 video_manager_clip_id = 6;
+		optional uint64 video_manager_video_id = 7;
+		optional string cdn_manifest_url = 8;
+		optional uint64 file_size = 9;
+		optional uint64 recording_zero_timeline_offset_ms = 10;
+	}
+
+	optional string timeline_id = 1;
+	optional uint64 game_id = 2;
+	optional uint32 date_recorded = 3;
+	optional uint64 duration_ms = 4;
+	repeated .CGameRecordingTimelineMetadata.Recording recordings = 5;
+}
+
+message CGameRecordingPostGameSummary {
+	optional uint64 game_id = 1;
+	repeated .CGameRecordingTimelineEvent events = 2;
+}
+
+message CGameRecordingTimelineEvent {
+	optional uint64 game_id = 1;
+	optional uint32 rt_created = 2;
+	optional int32 possible_clip = 3;
+	optional string timeline_id = 4;
+	optional uint64 entry_id = 5;
+	optional uint64 timeline_offset_ms = 6;
+	optional uint64 duration_ms = 7;
+	optional string marker_icon = 8;
+	optional string marker_title = 9;
+	optional bool user_marker = 10;
+}

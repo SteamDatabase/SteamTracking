@@ -9,6 +9,7 @@
 "TextEntry_SelectAll"		"Επιλογή όλων"
 "TextEntry_CopyAllToClipboard"	"Αντιγραφή όλου του κειμένου"
 "FileOpenDialog_Open"		"Άνοιγμα"
+"FileOpenDialog_Save"		"Αποθήκευση"
 "FileOpenDialog_Cancel"		"ΑΚΥΡΩΣΗ"
 "FileOpenDialog_Look_in"	"Αναζήτηση σε:"
 "FileOpenDialog_File_Name"	"Όνομα αρχείου:"
@@ -65,7 +66,7 @@
 "IME_0804"			"Κινεζικά (ΛΔΚ)"
 "IME_0409"			"Αγγλικά (Ηνωμένων Πολιτειών)"
 "IME_0411"			"Ιαπωνικά"
-"IME_0412"			"Κορεάτικα"
+"IME_0412"			"Κορεατικά"
 "IME_0419"			"Ρωσικά"
 "IME_041e"			"Ταϊλανδικά"
 

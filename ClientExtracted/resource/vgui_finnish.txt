@@ -9,6 +9,7 @@
 "TextEntry_SelectAll"		"Valitse kaikki"
 "TextEntry_CopyAllToClipboard"	"Kopioi koko teksti leikepöydälle"
 "FileOpenDialog_Open"		"Avaa"
+"FileOpenDialog_Save"		"Tallenna"
 "FileOpenDialog_Cancel"		"Peruuta"
 "FileOpenDialog_Look_in"	"Etsi kohteesta:"
 "FileOpenDialog_File_Name"	"Tiedoston nimi:"

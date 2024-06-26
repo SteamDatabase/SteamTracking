@@ -1,0 +1,84 @@
+import "google/protobuf/any.proto";
+import "google/protobuf/source_context.proto";
+
+package google.protobuf;
+
+option go_package = "google.golang.org/protobuf/types/known/typepb";
+option java_package = "com.google.protobuf";
+option java_outer_classname = "TypeProto";
+option java_multiple_files = true;
+
+enum Syntax {
+	SYNTAX_PROTO2 = 0;
+	SYNTAX_PROTO3 = 1;
+}
+
+message Type {
+	optional string name = 1;
+	repeated .google.protobuf.Field fields = 2;
+	repeated string oneofs = 3;
+	repeated .google.protobuf.Option options = 4;
+	optional .google.protobuf.SourceContext source_context = 5;
+	optional .google.protobuf.Syntax syntax = 6 [default = SYNTAX_PROTO2];
+}
+
+message Field {
+	enum Kind {
+		TYPE_UNKNOWN = 0;
+		TYPE_DOUBLE = 1;
+		TYPE_FLOAT = 2;
+		TYPE_INT64 = 3;
+		TYPE_UINT64 = 4;
+		TYPE_INT32 = 5;
+		TYPE_FIXED64 = 6;
+		TYPE_FIXED32 = 7;
+		TYPE_BOOL = 8;
+		TYPE_STRING = 9;
+		TYPE_GROUP = 10;
+		TYPE_MESSAGE = 11;
+		TYPE_BYTES = 12;
+		TYPE_UINT32 = 13;
+		TYPE_ENUM = 14;
+		TYPE_SFIXED32 = 15;
+		TYPE_SFIXED64 = 16;
+		TYPE_SINT32 = 17;
+		TYPE_SINT64 = 18;
+	}
+
+	enum Cardinality {
+		CARDINALITY_UNKNOWN = 0;
+		CARDINALITY_OPTIONAL = 1;
+		CARDINALITY_REQUIRED = 2;
+		CARDINALITY_REPEATED = 3;
+	}
+
+	optional .google.protobuf.Field.Kind kind = 1 [default = TYPE_UNKNOWN];
+	optional .google.protobuf.Field.Cardinality cardinality = 2 [default = CARDINALITY_UNKNOWN];
+	optional int32 number = 3;
+	optional string name = 4;
+	optional string type_url = 6;
+	optional int32 oneof_index = 7;
+	optional bool packed = 8;
+	repeated .google.protobuf.Option options = 9;
+	optional string json_name = 10;
+	optional string default_value = 11;
+}
+
+message Enum {
+	optional string name = 1;
+	repeated .google.protobuf.EnumValue enumvalue = 2;
+	repeated .google.protobuf.Option options = 3;
+	optional .google.protobuf.SourceContext source_context = 4;
+	optional .google.protobuf.Syntax syntax = 5 [default = SYNTAX_PROTO2];
+}
+
+message EnumValue {
+	optional string name = 1;
+	optional int32 number = 2;
+	repeated .google.protobuf.Option options = 3;
+}
+
+message Option {
+	optional string name = 1;
+	optional .google.protobuf.Any value = 2;
+}

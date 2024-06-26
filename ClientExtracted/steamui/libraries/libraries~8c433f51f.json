@@ -562,6 +562,8 @@
     "bbcode_image_tooltip_link": "在新窗口中打开图片",
     "bbcode_image_tooltip_link_giphy": "在新窗口中打开 giphy",
     "bbcode_video_tooltip_link": "在新窗口中打开视频",
+    "bbcode_video_pause": "暂停",
+    "bbcode_video_play": "播放",
     "bbcode_image_link_giphy": "/GIPHY %1$s",
     "bbcode_image_popout": "图片弹出窗口",
     "bbcode_image_tooltip_collapse": "在聊天中隐藏图片",

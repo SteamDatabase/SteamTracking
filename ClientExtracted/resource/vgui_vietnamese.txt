@@ -9,6 +9,7 @@
 "TextEntry_SelectAll"		"Chọn tất cả"
 "TextEntry_CopyAllToClipboard"	"Sao chép toàn bộ vào khay nhớ tạm"
 "FileOpenDialog_Open"		"Mở"
+"FileOpenDialog_Save"		"Lưu"
 "FileOpenDialog_Cancel"		"Hủy"
 "FileOpenDialog_Look_in"	"Tìm:"
 "FileOpenDialog_File_Name"	"Tên file:"

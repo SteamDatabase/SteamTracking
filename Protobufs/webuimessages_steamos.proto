@@ -59,6 +59,8 @@ message CSteamOSManager_ApplyMandatoryUpdate_Response {
 }
 
 message CSteamOSManager_FactoryReset_Request {
+	optional bool reset_os = 1;
+	optional bool reset_user_data = 2;
 }
 
 message CSteamOSManager_FactoryReset_Response {

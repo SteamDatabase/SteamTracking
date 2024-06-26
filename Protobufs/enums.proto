@@ -143,6 +143,12 @@ enum EColorGamutLabelSet {
 	k_ColorGamutLabelSet_Native_sRGB_Boosted = 2;
 }
 
+enum EWindowStackingOrder {
+	k_EWindowStackingOrder_Invalid = 0;
+	k_EWindowStackingOrder_Top = 1;
+	k_EWindowStackingOrder_Bottom = 2;
+}
+
 enum EBluetoothDeviceType {
 	k_BluetoothDeviceType_Invalid = 0;
 	k_BluetoothDeviceType_Unknown = 1;
@@ -369,8 +375,10 @@ enum EOSBranch {
 	k_EOSBranch_ReleaseCandidate = 2;
 	k_EOSBranch_Beta = 3;
 	k_EOSBranch_BetaCandidate = 4;
-	k_EOSBranch_Main = 5;
-	k_EOSBranch_Staging = 6;
+	k_EOSBranch_Preview = 5;
+	k_EOSBranch_PreviewCandidate = 6;
+	k_EOSBranch_Main = 7;
+	k_EOSBranch_Staging = 8;
 }
 
 enum ECommunityItemClass {
@@ -435,6 +443,18 @@ enum ENewSteamAnnouncementState {
 	k_ENewSteamAnnouncementState_AllRead = 1;
 	k_ENewSteamAnnouncementState_NewAnnouncement = 2;
 	k_ENewSteamAnnouncementState_FeaturedAnnouncement = 3;
+}
+
+enum EForumType {
+	k_EForumType_Invalid = 0;
+	k_EForumType_General = 1;
+	k_EForumType_ReportedPosts = 2;
+	k_EForumType_Workshop = 3;
+	k_EForumType_PublishedFile = 4;
+	k_EForumType_Trading = 5;
+	k_EForumType_PlayTest = 6;
+	k_EForumType_Event = 7;
+	k_EForumType_Max = 8;
 }
 
 enum ECommentThreadType {
@@ -529,4 +549,26 @@ enum EProtoAppType {
 	k_EAppTypeBeta = 65536;
 	k_EAppTypeShortcut = 1073741824;
 	k_EAppTypeDepotOnly = -2147483648;
+}
+
+enum EWindowsUpdateInstallationImpact {
+	k_EWindowsUpdateInstallationImpact_Unknown = -1;
+	k_EWindowsUpdateInstallationImpact_Normal = 0;
+	k_EWindowsUpdateInstallationImpact_Minor = 1;
+	k_EWindowsUpdateInstallationImpact_ExclusiveHandling = 2;
+}
+
+enum EWindowsUpdateRebootBehavior {
+	k_EWindowsUpdateRebootBehavior_Unknown = -1;
+	k_EWindowsUpdateRebootBehavior_NeverNeedsReboot = 0;
+	k_EWindowsUpdateRebootBehavior_AlwaysNeedsReboot = 1;
+	k_EWindowsUpdateRebootBehavior_MightNeedReboot = 2;
+}
+
+enum EExternalSaleEventType {
+	k_EExternalSaleEventType_Unknown = 0;
+	k_EExternalSaleEventType_Publisher = 1;
+	k_EExternalSaleEventType_Showcase = 2;
+	k_EExternalSaleEventType_Region = 3;
+	k_EExternalSaleEventType_Theme = 4;
 }

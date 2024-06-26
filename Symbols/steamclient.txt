@@ -280,6 +280,7 @@
  SteamVProf::CVProfile::ExitScope()
  SteamVProf::CVProfile::MarkFrame(char const*)
  StringAfterPrefix
+ StringAfterPrefixCaseSensitive
  StringFindSuffix
  T Breakpad_SteamMiniDumpInit
  T Breakpad_SteamSetAppID

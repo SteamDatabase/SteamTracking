@@ -1334,6 +1334,8 @@ enum EMsg {
 	k_EMsgClientPICSProductInfoResponse = 8904;
 	k_EMsgClientPICSAccessTokenRequest = 8905;
 	k_EMsgClientPICSAccessTokenResponse = 8906;
+	k_EMsgClientPICSPrivateBetaRequest = 8907;
+	k_EMsgClientPICSPrivateBetaResponse = 8908;
 	k_EMsgWorkerProcess = 9000;
 	k_EMsgWorkerProcessPingRequest = 9000;
 	k_EMsgWorkerProcessPingResponse = 9001;
@@ -1510,4 +1512,5 @@ enum ECodecUsageReason {
 	k_ECodecUsageReasonRemotePlay = 1;
 	k_ECodecUsageReasonBroadcasting = 2;
 	k_ECodecUsageReasonGameVideo = 3;
+	k_ECodecUsageReasonGameRecording = 4;
 }

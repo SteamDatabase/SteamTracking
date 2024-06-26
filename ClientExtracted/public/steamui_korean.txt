@@ -14,7 +14,7 @@
 "SteamUI_YourAnswer" "귀하의 응답"
 "WelcomeToSteamCreateAccount" "새 계정 만들기"
 "WelcomeToSteamLogin" "기존 계정으로 로그인"
-"SteamUI_AccountNameInfo" "메일 주소를 입력하세요. 비밀번호를 잊은 경우,\n이 메일 주소를 통해 본인 확인이 가능합니다."
+"SteamUI_AccountNameInfo" "이메일 주소를 입력하세요. 비밀번호를 잊은 경우,\n해당 이메일 주소를 통해 본인 인증이 가능합니다."
 "SteamUI_WelcomeNameInfo" "프로필 이름을 입력하세요. 프로필 이름은\nSteam에서 자신의 이름으로 사용됩니다.\n원한다면 실명을 넣으셔도 됩니다."
 "SteamUI_WelcomeNameOptional" "(선택 사항)"
 
@@ -150,7 +150,7 @@
 "SteamUI_CreateAccount_Response"	"Steam에서 몇 분 이내에 인증 코드가 포함된 \n답변 메일을 보낼 것입니다."
 "SteamUI_CreateAccount_SentTo"	"다음 주소로 확인 메일 발송됨:"
 "SteamUI_CreateAccount_EnterCodeAgain"	"코드를 다시 입력하거나 다른 메일 주소를 제공하려면 \n'뒤로'를 클릭하세요."
-"SteamUI_CreateAccount_DoesNotMatch"	"이 코드는 Steam이 보유한 코드와 일치하지 않습니다.\n메일 메시지를 참조하고 코드를 정확하게 입력했는지 \n확인하세요. \n제목이 \"Steam account - Please verify your email address\"인 \n메일에 코드가 포함되어 \n발송되었습니다. 메일 주소를 확인해 주세요. 코드는 8문자로 구성되어 있습니다."
+"SteamUI_CreateAccount_DoesNotMatch"	"이 코드는 Steam이 보유한 코드와 일치하지 않습니다.\n이메일 메시지를 확인하여 코드를 정확하게 입력했는지 \n확인하세요. 제목이 'Steam 계정 - Steam에서 이메일 주소를 인증해 주세요.'인 \n이메일에 코드가 포함되어 발송되었습니다.\n이메일 주소를 확인해 주세요. 코드는 8자로 구성되어 있습니다."
 
 "SteamUI_SteamProgress_Title"	"Steam - 처리 중"
 "SteamUI_CreatingAccount"	"계정을 만드는 중..."
@@ -345,7 +345,7 @@
 "SteamUI_WelcomeCreatingAccountEnterName" "계정 이름과 비밀번호를 입력하세요.\n비밀번호는 최소 8자 이상이어야 하며, 다른 사람들이 추측하기 어려운 것이어야 합니다."
 "SteamUI_WelcomeCreatingAccountPassword"	"비밀번호"
 "SteamUI_WelcomeCreatingAccountRetypePassword"	"비밀번호 재입력"
-"SteamUI_WelcomeCreatingAccountVerifyEmailFailed"	"확인 메일을 요청할 수 없습니다."
+"SteamUI_WelcomeCreatingAccountVerifyEmailFailed"	"인증 이메일을 요청할 수 없습니다."
 
 "SteamUI_SubscribeWizard_Title"			"가입"
 
@@ -633,9 +633,9 @@
 
 "Steam_ChangeContactEmailLabel"		"연락 이메일:"
 "Steam_ChangeContactEmail"			"연락 메일 주소 변경..."
-"Steam_VerifyContactEmaill"			"메일 주소 확인..."
+"Steam_VerifyContactEmaill"			"이메일 주소 인증..."
 "Steam_EmailAddressUnverified"		"선택 안 함"
-"Steam_VerifyContactEmail_Working"	"확인 메일 발송 중..."
+"Steam_VerifyContactEmail_Working"	"인증 이메일 발송 중..."
 
 "Steam_NagValidateEmailYourAddress" 	"메일 주소가"
 
@@ -647,7 +647,7 @@
 "Steam_ChangeContactEmailWizard_Changed" "연락 메일 주소가 변경되었습니다."
 "Steam_ChangeContactEmailWizard_Contact" "이 새 주소는 향후 구매를 확인하고 Steam 계정에 대한 접근을 관리하는 데 사용됩니다."
 "Steam_ChangeContactEmailWizard_NotChangedYet" "새로 입력한 메일 주소로 확인 코드를 보내기 위해 Steam 서버에 접속 중..."
-"Steam_ChangeContactEmailWizard_WaitingForVerify" "새 이메일 주소로 발송된 메일에 있는 링크를 누르면 연락 메일 주소 변경이 완료됩니다."
+"Steam_ChangeContactEmailWizard_WaitingForVerify" "새 이메일 주소로 발송된 이메일에 있는 링크를 누르면 연락 이메일 주소 변경이 완료됩니다."
 "Steam_WeMaySMSYou" "이 변경 사항을 확인하기 위해 Steam에서 귀하의 전화번호로 문자 메세지를 보낼 수 있습니다."
 "Steam_ChangeEmail_MissingSMSCode" "귀하의 계정에 등록된 전화번호로 문자 메세지가 발송되었습니다. 문자 메세지에 포함된 이메일 변경 코드를 입력하세요."
 
@@ -713,7 +713,7 @@
 "Steam_PurchaseEmail_ValidationCode" "인증 코드"
 "Steam_PurchaseEmail_Confirmation" "다음 주소로 확인 메일 발송됨:"
 "Steam_PurchaseEmail_Response" "Steam에서 몇 분 이내에 인증 코드가 포함된 \n답변 메일을 보낼 것입니다.\n\n이 코드를 복사하고 아래 칸에 붙여넣으십시오."
-"Steam_PurchaseEmail_BadCode" "이 코드는 Steam이 보유한 코드와 일치하지 않습니다. \n코드를 정확하게 입력했는지 \n확인하세요. 제목이 \"Steam account - Please \nverify your email address\"인 메일에 코드가 포함되어 발송되었습니다. \n메일 주소를 확인해 주세요. 코드는 8문자로 구성되어 있습니다. \n\n코드를 다시 입력하거나 다른 메일 주소를 \n입력하려면 '뒤로'를 클릭하세요."
+"Steam_PurchaseEmail_BadCode" "이 코드는 Steam이 보유한 코드와 일치하지 않습니다. \n코드를 정확하게 입력했는지 확인하세요. \n제목이 'Steam 계정 - Steam에서 이메일 주소를 인증해 주세요.'인\n이메일에 코드가 포함되어 발송되었습니다. \n이메일 주소를 인증해 주세요. 코드는 8자로 구성되어 있습니다. \n\n코드를 다시 입력하거나 다른 이메일 주소를 \n입력하려면 '뒤로'를 클릭하세요."
 "Steam_PurchaseEmail_Code" "입력된 인증 코드"
 
 "Steam_Logout_Exit" 	"종료 및 로그아웃"
@@ -1526,7 +1526,7 @@
 
 "Steam_CloudLabel"					"Steam Cloud"
 "Steam_CloudInfo"					"Steam Cloud는 여러 컴퓨터에서 동일한 제품 사용 환경을 제공하기 위해 정보를 저장합니다."
-"Steam_EnableCloud"					"지원하는 애플리케이션에 대해 Steam Cloud 동기화 사용"
+"Steam_EnableCloud"					"지원하는 애플리케이션에 대해 Steam Cloud 동기화를 사용합니다."
 "Steam_EnableCloudForApp"			"%game%에 대해 Steam Cloud 동기화 사용"
 "Steam_EnableCloudScreenshots"		"스크린샷을 찍으면 게임 종료 후 스크린샷 업로더 열기"
 "Steam_CloudUsage"					"%used% 사용 중 / %available% 사용 가능"
@@ -2525,7 +2525,7 @@
 "Steam_RightClick_DeleteShortcut"		"바로 가기 삭제"
 "Steam_minigamescolumn_shortcuts"		"바로 가기"
 
-"Steam_menu_AddShortcut"			"라이브러리에 비 Steam 게임 추가"
+"Steam_menu_AddShortcut"			"라이브러리에 Steam 외부 게임 추가"
 
 "steam_desktop"			"데스크톱"
 "steam_startmenu"			"시작 메뉴"
@@ -3232,7 +3232,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_LabelPrevClickAndBuy" "이전에 Steam에서 구매하실 때 다음 ClickandBuy 계정을 사용하셨습니다."
 "Steam_PrevCBAccountNum" "%accountnum%"
 
-"Steam_AddNonSteamGame"		"비 Steam 게임 추가"
+"Steam_AddNonSteamGame"		"Steam 외부 게임 추가"
 "Steam_ViewCDKey"			"CD 키 보기"
 
 "Steam_SendGuestPass_Title$type=gift"		"선물 보내기"
@@ -3497,15 +3497,15 @@ Windows에 관리자로 로그인해야 합니다.
 "SteamUI_ValveSurvey_Summary_SteamHDUsedMB"	"Steam 하드 디스크 사용량:  %s1MB"
 "SteamUI_ValveSurvey_GatheringSystemInformation"	"시스템 정보 수집 중..."
 
-"SteamUI_ValidateEmailDescriptionAlt" "이메일 주소가 확인되지 않았습니다.\n'다음'을 눌러서 이메일 주소를 확인하세요.\n확인된 이메일 주소로 Steam 계정 인증에 관련된 사항을 바꾸려 할 때 확인 메일을 보냅니다. 따라서 오직 귀하만 비밀 질문 또는 비밀번호를 변경할 수 있게 됩니다."
-"SteamUI_ValidateEmailDescription" "Steam 메일 주소를 확인하려면 '다음'을 클릭하세요.\n확인된 주소는 Steam 계정 증명에 대한 모든 변경 사항을 확인하는 데 사용됩니다. 따라서, 여러분 자신만이 비밀 질문 또는 비밀번호를 변경할 수 있습니다."
+"SteamUI_ValidateEmailDescriptionAlt" "이메일 주소가 인증되지 않았습니다.\n'다음'을 눌러서 이메일 주소를 인증하세요.\n인증된 이메일 주소는 Steam 계정 로그인 정보와 관련된 변경 사항을 확인하는 데 사용되므로 오직 본인만이 비밀 질문 또는 비밀번호를 변경할 수 있습니다."
+"SteamUI_ValidateEmailDescription" "Steam 이메일 주소를 인증하려면 '다음'을 클릭하세요.\n인증된 주소는 Steam 계정 로그인 정보와 관련된 변경 사항을 확인하는 데 사용되므로 오직 본인만이 비밀 질문 또는 비밀번호를 변경할 수 있습니다."
 "SteamUI_ValidateEmailSent" "다음 주소로 메시지가 발송됨: %s1.\n메일을 확인하고 메일에 포함된 링크를 클릭하여 Steam에서 사용할 메일 주소 확인을 완료합니다."
 "SteamUI_ValidateEmailNotReceived" "메시지를 받지 못하셨나요?"
 "SteamUI_VisitSteamSupport" "Steam 고객지원에 문의하기"
 "SteamUI_ValidateEmailWorking" "Steam 서버에 접속하여 메일을 발송합니다."
-"SteamUI_VerifyEmail_Title" "메일 확인"
+"SteamUI_VerifyEmail_Title" "이메일 인증"
 "SteamUI_VerifyEmail_Verified" " | 인증됨 "
-"SteamUI_VerifyEmail_Unverified" " | 확인되지 않음"
+"SteamUI_VerifyEmail_Unverified" " | 인증되지 않음 "
 
 "SteamUI_ManageSecurityButton" "Steam Guard 계정 보안 관리"
 "SteamUI_ManageSecurity_Title" "Steam Guard 관리"
@@ -3756,7 +3756,7 @@ Windows에 관리자로 로그인해야 합니다.
 "steam_downloads_locked"	"이 제품에 대한 모든 라이선스가 사용 중입니다."
 
 "steam_client_add_game" "게임 추가"
-"steam_addgame_addshortcut"	"비 Steam 게임 추가"
+"steam_addgame_addshortcut"	"Steam 외부 게임 추가"
 "steam_addgame_activate"	"Steam에 제품 등록..."
 "steam_addgame_browse"		"Steam 상점에서 게임 찾아보기"
 
@@ -4508,7 +4508,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Music_Playlist_Details_Menu_PlayNext" "다음 곡 재생"
 "Music_Playlist_Details_Menu_AddToQueue" "대기열에 추가"
 "Music_Playlist_Details_Menu_Rename" "이름 바꾸기"
-"Music_Playlist_Details_Menu_Duplicate" "재생 목록 복사하기"
+"Music_Playlist_Details_Menu_Duplicate" "재생 목록 복사"
 "Music_Playlist_Details_Menu_Delete" "삭제"
 "Music_Playlist_Details_Menu_DeleteAll" "재생 목록에서 모두 삭제"
 "Music_Playlist_Details_Menu_Move" "이동"
@@ -4719,7 +4719,7 @@ Windows에 관리자로 로그인해야 합니다.
 "SteamUI_UpdateControllerFirmware_Required_Title" "새로운 컨트롤러 펌웨어 사용 가능"
 "SteamUI_UpdateControllerFirmware_Required" "귀하의 Steam Controller에 새 펌웨어가 있습니다. Big Picture 모드로 전환하여 업데이트를 시작하세요."
 "SteamUI_UpdateControllerMigration_Title"	"컨트롤러 마이그레이션을 다시 해야 합니다."
-"SteamUI_UpdateControllerMigration"			"컨트롤러 마이그레이션 과정에서 비 Steam 게임과 관련된 문제를 수정했습니다. 컨트롤러 구성을 다시 마이그레이션하려면 Big Picture 모드로 전환해 주세요."
+"SteamUI_UpdateControllerMigration"			"컨트롤러 마이그레이션 과정에서 Steam 외부 게임과 관련된 문제를 수정했습니다. 컨트롤러 구성을 다시 마이그레이션하려면 Big Picture 모드로 전환해 주세요."
 
 "Steam_Screenshots_ViewAll" "전체 스크린샷 보기"
 "Steam_Screenshots_ViewRecent" "최근 찍은 스크린샷 출처"
@@ -4834,6 +4834,9 @@ Windows에 관리자로 로그인해야 합니다.
 
 "SteamUI_RunningConflictingSoftware" "충돌하는 소프트웨어 발견됨"
 "SteamUI_RunningIncompatibleTcpService" "Steam 프로세스 안에서 호환되지 않는\n%incompatdll% 버전이 발견되었습니다.(%incompatname%와/과 관련)\n\nSteam 또는 게임을 실행하는데 크래시 또는 네트워크 느림 형상을\n경험하고 계시면 이 소프트웨어를 업데이트하시던가 삭제하시는 것을 추천합니다."
+
+"SteamUI_RunningBannedSoftware" "Steam 동작을 수정하는 소프트웨어"
+"SteamUI_RunningBannedSoftwareDesc" "Steam에서 보안 또는 소유권 확인을 우회할 목적으로 Steam을 수정할 수 있는 타사 소프트웨어(%incompatname% )를 감지했습니다.\n이 소프트웨어는 Steam에서 충돌을 일으키고 Steam 이용 약관을 위반하며 DLC 제작자의 지적 재산권을 침해하는 것으로 알려져 있습니다.\n이 소프트웨어를 사용하면 계정이 차단되거나 잠금 처리될 수 있습니다.\n\nSteam을 실행하려면 제거해 주시기 바랍니다."
 
 "Steam_XboxDriverInstall_Title"		"Xbox 드라이버 설치"
 "Steam_XboxDriverInstall_Success"	"드라이버를 성공적으로 업데이트했습니다. 컴퓨터를 다시 시작하면 활성화됩니다."

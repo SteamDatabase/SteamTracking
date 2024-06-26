@@ -562,6 +562,8 @@
     "bbcode_image_tooltip_link": "Apri l'immagine in una nuova finestra",
     "bbcode_image_tooltip_link_giphy": "Apri Giphy in una nuova finestra",
     "bbcode_video_tooltip_link": "Apri il video in una nuova finestra",
+    "bbcode_video_pause": "Pausa",
+    "bbcode_video_play": "Gioca",
     "bbcode_image_link_giphy": "/GIPHY %1$s",
     "bbcode_image_popout": "Nuova finestra immagine",
     "bbcode_image_tooltip_collapse": "Nascondi l'immagine nella chat",

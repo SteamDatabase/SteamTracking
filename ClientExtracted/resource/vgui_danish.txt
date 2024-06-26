@@ -9,6 +9,7 @@
 "TextEntry_SelectAll"		"Marker alt"
 "TextEntry_CopyAllToClipboard"	"Kopier al tekst til udklipsholderen"
 "FileOpenDialog_Open"		"Åbn"
+"FileOpenDialog_Save"		"Gem"
 "FileOpenDialog_Cancel"		"Annuller"
 "FileOpenDialog_Look_in"	"Se i:"
 "FileOpenDialog_File_Name"	"Filnavn:"

@@ -4388,7 +4388,7 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 "SteamUI_StreamLaunch_TransportUnavailable"	"Al momento non è possibile trasmettere all'esterno della casa, riprova più tardi."
 
 "Steam_OtherSessionPlaying_Title" "Errore - Steam"
-"Steam_OtherSessionPlaying_Text" "Stai già eseguendo \"%existing_app%\" da un altro computer.\nAvviare \"%launching_app%\" da qui comporterà la disconnessione dell'altra sessione di Steam."
+"Steam_OtherSessionPlaying_Text" "Stai già eseguendo \"%existing_app%\" da un altro dispositivo.\nAvviare \"%launching_app%\" da qui comporterà la disconnessione dell'altra sessione di Steam."
 
 "Steam_SystemRequirementWarning_Title" "Avviso sulle prestazioni"
 "Steam_SystemRequirementWarning_Text" "Il tuo sistema non soddisfa i requisiti minimi di sistema consigliati per %game%."
@@ -4833,6 +4833,9 @@ Fatti un nuovo amico su Steam inviando un dono via e-mail a qualcuno che conosci
 
 "SteamUI_RunningConflictingSoftware" "Rilevato software in conflitto"
 "SteamUI_RunningIncompatibleTcpService" "Una versione incompatibile di %incompatdll% (in riferimento a %incompatname%)\nè stata rilevata all'interno del processo di Steam.\n\nTi consigliamo di aggiornare o disinstallare questo software se hai problemi di crash o rallentamenti della rete mentre Steam o un gioco singolo è in esecuzione."
+
+"SteamUI_RunningBannedSoftware" "Software che modifica il comportamento di Steam"
+"SteamUI_RunningBannedSoftwareDesc" "Steam ha rilevato la presenza di %incompatname%, un software di terze parti che può modificare Steam allo scopo di aggirare i controlli di sicurezza o di proprietà.\nÈ noto che questo software causa l'arresto anomalo di Steam, viola le nostre Condizioni di utilizzo e la proprietà intellettuale dei produttori di DLC. L'uso di\nquesto software potrebbe comportare il blocco o il ban dell'account.\n\nDisinstallalo per avviare Steam."
 
 "Steam_XboxDriverInstall_Title"		"Installazione driver Xbox"
 "Steam_XboxDriverInstall_Success"	"Il driver è stato aggiornato con successo e sarà attivo al riavvio del computer."

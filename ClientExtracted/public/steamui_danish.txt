@@ -4829,6 +4829,9 @@ Få en ny ven på Steam ved at e-maile en gave til én, du kender."
 "SteamUI_RunningConflictingSoftware" "Softwarekonflikt fundet"
 "SteamUI_RunningIncompatibleTcpService" "En inkompatible version af %incompatdll% (relateret til %incompatname%)\ner blevet fundet i Steam-processen.\n\nVi foreslår at du opdaterer eller afinstallerer denne software, hvis du oplever nedbrud\neller at netværket bliver langsomt, når du kører Steam eller individuelle spil."
 
+"SteamUI_RunningBannedSoftware" "Software, som modificerer Steams adfærd"
+"SteamUI_RunningBannedSoftwareDesc" "Steam har registreret %incompatname%, som er en tredjepartssoftware, der modificerer Steam med henblik på at omgå sikkerheds- eller ejerskabskontroller.\nSoftwaren er kendt for at få Steam til at crashe, være i strid med Steam-abonnentaftalen og krænke ophavsretten til DLC. Brug af\ndenne software kan resultere i VAC-udelukkelser eller kontolåsning.\n\nAfinstaller softwaren for at køre Steam."
+
 "Steam_XboxDriverInstall_Title"		"Installation af Xbox-driver"
 "Steam_XboxDriverInstall_Success"	"Driveren er blevet opdateret og bliver aktiv, når du har genstartet din computer."
 "Steam_XboxDriverInstall_ServiceFailure"	"Driveropdateringen mislykkedes. Kører du Steam som en almindelig bruger, og har Steam-tjenesten de seneste opdateringer?"

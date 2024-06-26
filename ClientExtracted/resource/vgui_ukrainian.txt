@@ -9,6 +9,7 @@
 "TextEntry_SelectAll"		"Виділити все"
 "TextEntry_CopyAllToClipboard"	"Копіювати весь текст до буфера обміну"
 "FileOpenDialog_Open"		"Відкрити"
+"FileOpenDialog_Save"		"Зберегти"
 "FileOpenDialog_Cancel"		"Скасувати"
 "FileOpenDialog_Look_in"	"Шукати в:"
 "FileOpenDialog_File_Name"	"Назва файлу:"

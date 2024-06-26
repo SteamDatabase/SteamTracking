@@ -794,6 +794,7 @@ message CChatRoom_IncomingChatMessage_Notification {
 	optional .ServerMessage server_message = 8;
 	optional string message_no_bbcode = 9;
 	optional string chat_name = 10;
+	optional string notification_key = 11;
 }
 
 message CChatRoom_ChatMessageModified_Notification {

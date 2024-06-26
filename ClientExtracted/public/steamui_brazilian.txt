@@ -4829,6 +4829,9 @@ a partir de agora, você vai precisar deles pra ter acesso aos seus jogos e outr
 "SteamUI_RunningConflictingSoftware" "Software conflitante detectado"
 "SteamUI_RunningIncompatibleTcpService" "Uma versão incompatível de %incompatdll% (relacionado a %incompatname%)\nfoi detectada dentro do processo Steam.\n\nSugerimos que atualize ou desinstale esse software caso esteja enfrentando erros\nou lentidão na rede enquanto usa o Steam ou jogos."
 
+"SteamUI_RunningBannedSoftware" "Softwares que modificam o comportamento do Steam"
+"SteamUI_RunningBannedSoftwareDesc" "O Steam detectou o software \"%incompatname%\", criado por terceiros e que pode modificar o Steam para burlar as verificações de segurança ou titularidade.\nEsse software causa travamentos no Steam, além de violar o Acordo de Assinatura do Steam e a propriedade intelectual dos criadores de conteúdos adicionais.\nO seu uso pode resultar no banimento ou trancamento da conta.\n\nDesinstale-o para rodar o Steam."
+
 "Steam_XboxDriverInstall_Title"		"Instalação do driver de Xbox"
 "Steam_XboxDriverInstall_Success"	"Driver atualizado com sucesso e será ativado após reiniciar o computador."
 "Steam_XboxDriverInstall_ServiceFailure"	"Falha ao atualizar o driver. O Steam está rodando sem privilégios de administrador e o serviço do Steam está rodando e atualizado?"

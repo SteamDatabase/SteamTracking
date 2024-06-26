@@ -142,8 +142,11 @@
  T V_IsValidUChar32
  T V_IsValidURLCharacter
  T V_JoinNumbers
+ T V_JoinNumbers(char, CUtlVector<int, CUtlMemory<int> > const&)
  T V_JoinNumbersUint
+ T V_JoinNumbersUint(char, CUtlVector<unsigned int, CUtlMemory<unsigned int> > const&)
  T V_JoinNumbersUint64
+ T V_JoinNumbersUint64(char, CUtlVector<unsigned long long, CUtlMemory<unsigned long long> > const&)
  T V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString> > const&, char const*)
  T V_LevenshteinDistance
  T V_MakeAbsolutePath

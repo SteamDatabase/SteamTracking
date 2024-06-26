@@ -30,6 +30,7 @@
  D typeinfo for std::__1::basic_ostringstream<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D typeinfo for std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >
  D typeinfo for std::__1::basic_stringbuf<char, std::__1::char_traits<char>, std::__1::allocator<char> >
+ EnsureValidBoolValue
  Error
  FSEventStreamCreate
  FSEventStreamInvalidate
@@ -353,7 +354,6 @@
  strcmp
  strcpy
  strlen
- strncmp
  strncpy
  strrchr
  strstr

@@ -562,6 +562,8 @@
     "bbcode_image_tooltip_link": "Kép megnyitása új ablakban",
     "bbcode_image_tooltip_link_giphy": "giphy megnyitása új ablakban",
     "bbcode_video_tooltip_link": "Videó megnyitása új ablakban",
+    "bbcode_video_pause": "Szünet",
+    "bbcode_video_play": "Leját­szás",
     "bbcode_image_link_giphy": "/GIPHY %1$s",
     "bbcode_image_popout": "Kép új ablakban",
     "bbcode_image_tooltip_collapse": "Kép elrejtése a csevegésben",

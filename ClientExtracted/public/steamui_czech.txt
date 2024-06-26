@@ -4838,6 +4838,9 @@ Udělejte si nového přítele tím, že svému známému pošlete e-mailem dár
 "SteamUI_RunningConflictingSoftware" "Byl zjištěn konfliktní software"
 "SteamUI_RunningIncompatibleTcpService" "V procesu klienta služby Steam byla zjištěna nekompatibilní verze \nknihovny %incompatdll% (související se softwarem %incompatname%). \n\nPokud se při používání klienta služby Steam nebo hraní her \npotýkáte s pády nebo chybami připojení, doporučujeme aktualizovat či odinstalovat tento software."
 
+"SteamUI_RunningBannedSoftware" "Software upravující chování klienta služby Steam"
+"SteamUI_RunningBannedSoftwareDesc" "Byla zjištěna přítomnost programu %incompatname%, což je software třetí strany, který může za účelem obejití kontrol zabezpečení nebo vlastnictví\nupravovat klienta služby Steam. Tento software způsobuje pády klienta, není v souladu se Smlouvou o užívání služby Steam a porušuje práva\nduševního vlastnictví tvůrců DLC. Použití tohoto softwaru může vyústit v ban nebo uzamčení účtu.\n\nNež spustíte klienta služby Steam, tento software odinstalujte."
+
 "Steam_XboxDriverInstall_Title"		"Instalace rozšíření ovladačů Xbox"
 "Steam_XboxDriverInstall_Success"	"Rozšíření bylo úspěšně aktualizováno a bude aktivní po restartu počítače."
 "Steam_XboxDriverInstall_ServiceFailure"	"Aktualizace rozšíření se nezdařila. Instalace rozšíření se nezdařila. Je spuštěn aktualizovaný klient služby Steam a jste v něm přihlášeni?"

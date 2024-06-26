@@ -562,6 +562,8 @@
     "bbcode_image_tooltip_link": "Åbn billede i nyt vindue",
     "bbcode_image_tooltip_link_giphy": "Åbn giphy i et nyt vindue",
     "bbcode_video_tooltip_link": "Åbn video i et nyt vindue",
+    "bbcode_video_pause": "Pause",
+    "bbcode_video_play": "Spil",
     "bbcode_image_link_giphy": "/GIPHY %1$s",
     "bbcode_image_popout": "Pop ud-billede",
     "bbcode_image_tooltip_collapse": "Skjul billede i chat",

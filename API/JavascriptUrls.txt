@@ -226,6 +226,7 @@ ${COMMUNITY_BASE_URL}groups/${VANITY_ID}
 ${COMMUNITY_BASE_URL}groups/${vanity_url}/eventcomments/${forumTopicGID}
 ${COMMUNITY_BASE_URL}groups/${}/ajaxgetvanityandclanid/
 ${COMMUNITY_BASE_URL}groups/SteamClientBeta/discussions/3/
+${COMMUNITY_BASE_URL}groups/SteamClientBeta/discussions/5/
 ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/14/
 ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/15/
 ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/17/
@@ -327,6 +328,8 @@ ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${url}
 ${COMMUNITY_BASE_URL}sharedfiles/filedetails/?id=${}
 ${COMMUNITY_BASE_URL}stats/${appid}/achievements/
 ${COMMUNITY_BASE_URL}stats/${appid}/leaderboards/
+${COMMUNITY_BASE_URL}tempcloud/beginfileupload/
+${COMMUNITY_BASE_URL}tempcloud/commitfileupload/
 ${COMMUNITY_BASE_URL}textfilter/ajaxgetcommunitypreferences
 ${COMMUNITY_BASE_URL}textfilter/ajaxgetfriendslist
 ${COMMUNITY_BASE_URL}textfilter/ajaxgettextfiltercustomwords
@@ -389,6 +392,7 @@ ${HELP_BASE_URL}en/ticketmaster/ticket/${help_requestid}
 ${HELP_BASE_URL}en/wizard/HelpRequest/${}
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=919
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=933
+${HELP_BASE_URL}faqs/view/${k_strGRFAQ}
 ${HELP_BASE_URL}faqs/view/${url_code}
 ${HELP_BASE_URL}faqs/view/054C-3167-DD7F-49D4
 ${HELP_BASE_URL}faqs/view/0689-74B8-92AC-10F2
@@ -1351,6 +1355,7 @@ ${STORE_BASE_URL}forgeyourfate
 ${STORE_BASE_URL}forgeyourfate${_ ? "#badge" : "#next"}
 ${STORE_BASE_URL}franchise/${m_strVanity}/
 ${STORE_BASE_URL}friends/recommendgame
+${STORE_BASE_URL}fwlink?id=gamerecordingintro
 ${STORE_BASE_URL}gamemixer/appvalues
 ${STORE_BASE_URL}gamemixer/details
 ${STORE_BASE_URL}gamemixer/nearest
@@ -1514,7 +1519,6 @@ ${STORE_ICON_BASE_URL}/${appid}/${}
 ${STORE_URL}app/${DOTA_APP_ID}/Dota_2/
 ${STORE_URL}app/570/Dota_2/
 ${URL}${URL}
-${URL}${_ ? _ : _}
 ${URL}${}
 ${VIDEO_URL}${strContentDir}/immortals/${}${_ ? "_gold" : ""}.jpg
 ${VIDEO_URL}${strContentDir}/immortals/${}${_ ? "_gold" : ""}.mp4
@@ -3149,14 +3153,17 @@ steam://open/library/view/tools
 steam://open/media
 steam://open/minigameslist
 steam://open/newforyou
+steam://open/recording/${}
 steam://open/runtimeinfo
 steam://open/screenshots
 steam://open/screenshots${}
+steam://open/screenshots/${appid}
 steam://open/servers
 steam://open/settings
 steam://open/settings/audio
 steam://open/settings/customization
 steam://open/settings/friends
+steam://open/settings/ingame
 steam://open/settings/voice
 steam://open/systeminfo
 steam://open/systemreport

@@ -9,6 +9,7 @@
 "TextEntry_SelectAll"		"Tümünü seç"
 "TextEntry_CopyAllToClipboard"	"Tüm metni panoya kopyala"
 "FileOpenDialog_Open"		"Aç"
+"FileOpenDialog_Save"		"Kaydet"
 "FileOpenDialog_Cancel"		"İptal"
 "FileOpenDialog_Look_in"	"Göz at:"
 "FileOpenDialog_File_Name"	"Dosya adı:"

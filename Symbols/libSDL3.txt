@@ -455,11 +455,11 @@
  T SDL_GamepadSensorEnabled
  T SDL_GetAssertionHandler
  T SDL_GetAssertionReport
- T SDL_GetAudioCaptureDevices
  T SDL_GetAudioDeviceFormat
  T SDL_GetAudioDeviceName
  T SDL_GetAudioDriver
- T SDL_GetAudioOutputDevices
+ T SDL_GetAudioPlaybackDevices
+ T SDL_GetAudioRecordingDevices
  T SDL_GetAudioStreamAvailable
  T SDL_GetAudioStreamData
  T SDL_GetAudioStreamDevice
@@ -1231,6 +1231,9 @@
  T SDL_powf
  T SDL_qsort
  T SDL_qsort_r
+ T SDL_rand_bits
+ T SDL_rand_float
+ T SDL_rand_n
  T SDL_realloc
  T SDL_round
  T SDL_roundf
@@ -1242,6 +1245,7 @@
  T SDL_snprintf
  T SDL_sqrt
  T SDL_sqrtf
+ T SDL_srand
  T SDL_sscanf
  T SDL_strcasecmp
  T SDL_strcasestr

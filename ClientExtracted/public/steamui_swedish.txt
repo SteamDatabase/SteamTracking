@@ -4838,6 +4838,9 @@ Ange en kategori för det här spelet så kan du hitta det snabbare och sortera 
 "SteamUI_RunningConflictingSoftware" "Konflikt med programvara upptäckt"
 "SteamUI_RunningIncompatibleTcpService" "En inkompatibel version av %incompatdll% (relaterad till %incompatname%)\nhar upptäckts i Steam.\n\nVi föreslår att du uppdaterar eller avinstallerar detta program om du upplever krascher\neller långsamt nätverk är du kör Steam eller spel."
 
+"SteamUI_RunningBannedSoftware" "Programvara som ändrar Steams beteende"
+"SteamUI_RunningBannedSoftwareDesc" "Steam upptäckte %incompatname%, vilket är ett tredjepartsprogram som kan modifiera Steam i syfte att kringgå säkerhets- och ägandekontroller.\nDenna programvara är känd för att krascha Steam, bryta mot Steams abonnentavtal och göra intrång på DLC-utvecklares immateriella rättigheter. Användning av \nprogramvaran kan resultera i avstängningar eller kontolåsning.\n\nAvinstallera den för att kunna köra Steam."
+
 "Steam_XboxDriverInstall_Title"		"Installation av Xbox-drivrutin"
 "Steam_XboxDriverInstall_Success"	"Drivrutinen har uppdaterats och aktiveras när du startar om datorn."
 "Steam_XboxDriverInstall_ServiceFailure"	"Kunde inte uppdatera drivrutinen. Kör du Steam som en vanlig användare? Är Steam-tjänsten igång och uppdaterad?"

@@ -262,7 +262,7 @@
 "Friends_Chat_ActionResultCloseFailed"	"ล้มเหลวในการพยายามปิดแช็ต %chat% \n%action_result%"
 
 
-"Friends_Chat_ActionResultError"						"ข้อผิดพลาดที่ไม่รู้จัก"
+"Friends_Chat_ActionResultError"						"ข้อผิดพลาดที่ไม่ทราบสาเหตุ"
 "Friends_Chat_ActionResultNotPermitted"				"คุณไม่มีสิทธิ์ในการดำเนินการนี้"
 "Friends_Chat_ActionResultNotAllowedOnClanMember"     "ดำเนินการนี้กับสำหรับสมาชิกแคลนไม่ได้ ยกเว้นคุณมีระดับสูงกว่า"
 "Friends_Chat_ActionResultNotAllowedOnBannedUser"     "ดำเนินการนี้กับสมาชิกที่ถูกแบนไม่ได้"
@@ -776,7 +776,7 @@
 "Broadcast_RecordingError_URL_Razer" "https: //support.steampowered.com/kb_article.php?ref=1874-QRUJ-3541#2"
 
 "Broadcast_UploadError_Notification" "การอัปโหลดสตรีมถูกหยุด (%reason%)"
-"Broadcast_Upload_Result_0"  "ข้อผิดพลาดที่ไม่รู้จัก"
+"Broadcast_Upload_Result_0"  "ข้อผิดพลาดที่ไม่ทราบสาเหตุ"
 "Broadcast_Upload_Result_1"  "ตกลง"
 "Broadcast_Upload_Result_2"  "ล้มเหลวในการกำหนดค่า"
 "Broadcast_Upload_Result_3"  "ล้มเหลวเกี่ยวกับเฟรม"

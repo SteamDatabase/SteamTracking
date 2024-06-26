@@ -328,7 +328,7 @@ enum EControllerTypeFlags
 	k_EControllerTypeFlags_MobileTouchController = 16384;
 	k_EControllerTypeFlags_PS5EdgeController = 32768;
 	k_EControllerTypeFlags_HoriController = 65536;
-	k_EControllerTypeFlags_AllControllers = 131071;
+	k_EControllerTypeFlags_AllControllers = 262143;
 	k_EControllerTypeFlags_AllSteamControllers = 7;
 	k_EControllerTypeFlags_AllPlaystationControllers = 32824;
 	k_EControllerTypeFlags_AllXBoxControllers = 448;
@@ -338,9 +338,9 @@ enum EControllerTypeFlags
 	k_EControllerTypeFlags_Gyro = 127543;
 	k_EControllerTypeFlags_Trackpad = 49207;
 	k_EControllerTypeFlags_CenterTrackpad = 49200;
-	k_EControllerTypeFlags_RightJoystick = 126972;
-	k_EControllerTypeFlags_DPad = 126972;
-	k_EControllerTypeFlags_Triggers = 126975;
+	k_EControllerTypeFlags_RightJoystick = 258044;
+	k_EControllerTypeFlags_DPad = 258044;
+	k_EControllerTypeFlags_Triggers = 258047;
 	k_EControllerTypeFlags_HapticSupport = 7;
 }
 

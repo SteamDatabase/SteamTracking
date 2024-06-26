@@ -676,7 +676,7 @@
 "SteamUI_CreateAccount_DifferentNames" "Haz clic en 'Atrás' para probar con otro nombre\no selecciona uno de los que te sugerimos y haz clic en 'Siguiente'."
 "SteamUI_CreateAccount_SuggestedNames" "Nombres de cuenta sugeridos:"
 "SteamUI_CreateAccount_Names" "Nombres"
-"Steam_ForgottenPassword_MarketRestriction" "Aviso: Si restableces tu contraseña, no podrás intercambiar o utilizar el Mercado de la Comunidad temporalmente."
+"Steam_ForgottenPassword_MarketRestriction" "Aviso: Si restableces tu contraseña, no podrás intercambiar o utilizar el mercado de la comunidad temporalmente."
 "Steam_ForgottenPassword_FAQ" "Ver las preguntas frecuentes sobre restricciones en el intercambio y en el mercado"
 "Steam_ForgottenPassword_VerificationCode" "Código de verificación"
 
@@ -1864,7 +1864,7 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "Steam_CloudFile_SyncState_Unknown"	"Desconocido"
 
 "Steam_PublishFile_Title"						"Compartir archivo con la Comunidad: %filename%"
-"Steam_PublishFile_Description"			"¿Compartir este archivo con la Comunidad Steam?"
+"Steam_PublishFile_Description"			"¿Compartir este archivo con la comunidad de Steam?"
 "Steam_PublishFile_TitleLabel"			"Título:"
 "Steam_PublishFile_DescriptionLabel"	"Descripción:"
 "Steam_PublishFile_VisibilityLabel"	"Visibilidad:"
@@ -1873,12 +1873,12 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "Steam_PublishFile_Visibility_Public"	"Pública"
 "Steam_PublishFile_TargetAppLabel" "Publicar para:"
 "Steam_PublishFile_ConfirmButton"		"Publicar"
-"Steam_PublishFile_Success_VisibilityPrivate"		"¡Enhorabuena! Has publicado tu archivo en la nube. Puedes compartir el enlace con quien quieras, pero no será visible para el resto de la Comunidad Steam."
+"Steam_PublishFile_Success_VisibilityPrivate"		"¡Enhorabuena! Has publicado tu archivo en la nube. Puedes compartir el enlace con quien quieras, pero no será visible para el resto de la comunidad de Steam."
 "Steam_PublishFile_Success_VisibilityFriendsOnly"		"¡Enhorabuena! Has compartido tu archivo con tus amigos y aquellos a los que les has hecho llegar el enlace."
-"Steam_PublishFile_Success_VisibilityPublic"		"¡Enhorabuena! Has compartido tu archivo con el resto de la Comunidad Steam."
+"Steam_PublishFile_Success_VisibilityPublic"		"¡Enhorabuena! Has compartido tu archivo con el resto de la comunidad de Steam."
 "Steam_PublishFile_Success"		"Por favor, ten en cuenta que tu archivo ha sido publicado en este preciso instante. Cualquier cambio que realices a partir de ahora y que quieras compartir deberá ser publicado de nuevo. Si usas el mismo título, cualquiera que acceda a este archivo obtendrá automáticamente la versión más reciente publicada."
-"Steam_PublishFile_Progress"  "Publicando el archivo en la Comunidad Steam..."
-"Steam_PublishFile_Failed"		"Ha habido un problema al publicar tu archivo en la Comunidad Steam. Por favor, inténtalo de nuevo más tarde."
+"Steam_PublishFile_Progress"  "Publicando el archivo en la comunidad de Steam..."
+"Steam_PublishFile_Failed"		"Ha habido un problema al publicar tu archivo en la comunidad de Steam. Por favor, inténtalo de nuevo más tarde."
 "Steam_PublishFile_Failed_DuplicateName"	"Ya hay un archivo con el título que has especificado. Por favor, escoge otro título o marca 'sobrescribir' en las opciones de publicación."
 "Steam_PublishFile_Failed_AccessDenied"		"Debes poseer este programa para poder publicar archivos para él. Por favor, adquiere este producto antes de intentar publicar un archivo."
 "Steam_PublishFile_Failed_SyncError"	"Se ha producido un error de sincronización al actualizar tu archivo con Steam Cloud. Puede que tengas que resolver los conflictos entre tu copia local y la copia almacenada en Steam Cloud antes de intentar publicar el archivo de nuevo."
@@ -2841,7 +2841,7 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 
 "Steam_SendGuestPass_InvitingFriendHeadline$type=guestpass" "Enviando pase de invitado..."
 "Steam_SendGuestPass_InvitingFriend$type=guestpass"	"Se está enviando tu pase de invitado a %search%.\nEspera..."
-"Steam_SendGuestPass_NoFriends"			"Todavía no tienes amigos de la Comunidad Steam.
+"Steam_SendGuestPass_NoFriends"			"Todavía no tienes amigos de la comunidad de Steam.
 Crea uno enviando un regalo por correo electrónico a alguien que conozcas."
 
 "Steam_GuestPassAccept_TitleOK$type=guestpass"	"Pase de invitado listo"
@@ -3279,7 +3279,7 @@ La beta ya ha acabado: reinicia Steam para volver a la versión actual."
 "Steam_GuestPassRedeemed_TextRevoked$type=gift"	"El amigo que te envió el regalo lo ha cancelado y ha enviado un nuevo código de activación. Si este nuevo código te lo ha enviado a ti, recibirás otro correo electrónico con el mismo."
 
 "Steam_SendGuestPass_RefreshingList"	"Actualizando la lista..."
-"Steam_SendGuestPass_AllFriendsOwnProduct"	"Todos tus amigos de la Comunidad Steam ya tienen este producto.
+"Steam_SendGuestPass_AllFriendsOwnProduct"	"Todos tus amigos de la comunidad de Steam ya tienen este producto.
 Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien que conozcas."
 
 "Steam_GuestPass_GiftSection"	"REGALOS"
@@ -3536,7 +3536,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "SteamUI_ManageSecurity_InfoLabel3" "Steam enviará un mensaje a tu dirección de correo electrónico de contacto la primera vez que intentes acceder a tu cuenta de Steam desde un equipo o un navegador desconocidos. Este mensaje incluirá un código de acceso especial que necesitarás para poder acceder a tu cuenta de Steam."
 "SteamUI_ManageSecurity_NothingRadio" "Mantén mi cuenta protegida por Steam Guard"
 "SteamUI_ManageSecurity_UnlockRadio" "Desactivar Steam Guard (No recomendado)"
-"SteamUI_ManageSecurity_UnlockWarning" "Aviso: el intercambio de Steam y el Mercado de la Comunidad Steam permanecerán como no disponibles mientras Steam Guard esté desactivado y seguirán estando de este modo hasta 15 días después de la reactivación de Steam Guard."
+"SteamUI_ManageSecurity_UnlockWarning" "Aviso: el intercambio de Steam y el mercado de la comunidad de Steam permanecerán como no disponibles mientras Steam Guard esté desactivado y seguirán estando de este modo hasta 15 días después de la reactivación de Steam Guard."
 
 "SteamUI_ManageSecurity_RemoveOtherComputersButton" "Desautorizar todos los demás equipos ahora"
 
@@ -3840,7 +3840,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "Steam_Rental_Body_Activated"	"El periodo de visualización del alquiler de %gamename% ha sido activado. Tienes hasta el %expiration% para terminar de verlo."
 
 "steam_community_files"		"Workshop"
-"steam_community_files_info"		"Crea, descubre y juega con contenido creado por la Comunidad Steam."
+"steam_community_files_info"		"Crea, descubre y juega con contenido creado por la comunidad de Steam."
 "steam_community_files_info_error"		"Conexión a los servidores de Steam Workshop no disponible."
 "steam_community_files_view_all"		"Explorar Workshop"
 "steam_paginationtext"	"Mostrando %start%-%end% de %total%"
@@ -3859,12 +3859,12 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "steam_welcomeaction_comingsoon" "%gamename% estará disponible en breve."
 "steam_welcomeaction_platformwrong" "%gamename% no está disponible en tu plataforma actual."
 
-"steam_welcomemessage_nofriends$apptype=game" "Para encontrar a otros usuarios que jueguen a %gamename%, únete a <a href=steam://url/CommunityGroupSearch/%encodedsearch%>un grupo de la Comunidad Steam que esté relacionado</a>. Para ver los títulos a los que juegan tus amigos, <a href=steam://friends/add/>añádelos</a> a tu lista de amigos de Steam."
-"steam_welcomemessage_nofriends$apptype=application" "Para encontrar a otros usuarios que utilicen %gamename%, únete a <a href=steam://url/CommunityGroupSearch/%encodedsearch%>un grupo de la Comunidad Steam que esté relacionado</a>. Para ver las aplicaciones que utilizan tus amigos, <a href=steam://friends/add/>añádelos</a> a tu lista de amigos de Steam."
-"steam_welcomemessage_nofriends$apptype=tool"   "Para encontrar a otros usuarios que utilicen %gamename%, únete a <a href=steam://url/CommunityGroupSearch/%encodedsearch%>un grupo de la Comunidad Steam que esté relacionado</a>. Para ver las herramientas que utilizan tus amigos, <a href=steam://friends/add/>añádelos</a> a tu lista de amigos de Steam."
-"steam_welcomemessage_nofriends$apptype=video"  "Para encontrar a otros usuarios que vean %gamename%, únete a <a href=steam://url/CommunityGroupSearch/%encodedsearch%>un grupo de la Comunidad Steam que esté relacionado</a>. Para ver los vídeos que miran tus amigos, <a href=steam://friends/add/>añádelos</a> a tu lista de amigos de Steam."
-"steam_welcomemessage_nofriends$apptype=demo"   "Para encontrar a otros usuarios que jueguen a %gamename%, únete a <a href=steam://url/CommunityGroupSearch/%encodedsearch%>un grupo de la Comunidad Steam que esté relacionado</a>. Para ver las demos a las que juegan tus amigos, <a href=steam://friends/add/>añádelos</a> a tu lista de amigos de Steam."
-"steam_welcomemessage_nofriends$apptype"        "Para encontrar a otros usuarios que tengan %gamename%, únete a <a href=steam://url/CommunityGroupSearch/%encodedsearch%>un grupo de la Comunidad Steam que esté relacionado</a>. Para ver a qué demos están jugando tus amigos, <a href=steam://friends/add/>añádelos</a> a tu lista de amigos de Steam."
+"steam_welcomemessage_nofriends$apptype=game" "Para encontrar a otros usuarios que jueguen a %gamename%, únete a <a href=steam://url/CommunityGroupSearch/%encodedsearch%>un grupo de la comunidad de Steam que esté relacionado</a>. Para ver los títulos a los que juegan tus amigos, <a href=steam://friends/add/>añádelos</a> a tu lista de amigos de Steam."
+"steam_welcomemessage_nofriends$apptype=application" "Para encontrar a otros usuarios que utilicen %gamename%, únete a <a href=steam://url/CommunityGroupSearch/%encodedsearch%>un grupo de la comunidad de Steam que esté relacionado</a>. Para ver las aplicaciones que utilizan tus amigos, <a href=steam://friends/add/>añádelos</a> a tu lista de amigos de Steam."
+"steam_welcomemessage_nofriends$apptype=tool"   "Para encontrar a otros usuarios que utilicen %gamename%, únete a <a href=steam://url/CommunityGroupSearch/%encodedsearch%>un grupo de la comunidad de Steam que esté relacionado</a>. Para ver las herramientas que utilizan tus amigos, <a href=steam://friends/add/>añádelos</a> a tu lista de amigos de Steam."
+"steam_welcomemessage_nofriends$apptype=video"  "Para encontrar a otros usuarios que vean %gamename%, únete a <a href=steam://url/CommunityGroupSearch/%encodedsearch%>un grupo de la comunidad de Steam que esté relacionado</a>. Para ver los vídeos que miran tus amigos, <a href=steam://friends/add/>añádelos</a> a tu lista de amigos de Steam."
+"steam_welcomemessage_nofriends$apptype=demo"   "Para encontrar a otros usuarios que jueguen a %gamename%, únete a <a href=steam://url/CommunityGroupSearch/%encodedsearch%>un grupo de la comunidad de Steam que esté relacionado</a>. Para ver las demos a las que juegan tus amigos, <a href=steam://friends/add/>añádelos</a> a tu lista de amigos de Steam."
+"steam_welcomemessage_nofriends$apptype"        "Para encontrar a otros usuarios que tengan %gamename%, únete a <a href=steam://url/CommunityGroupSearch/%encodedsearch%>un grupo de la comunidad de Steam que esté relacionado</a>. Para ver a qué demos están jugando tus amigos, <a href=steam://friends/add/>añádelos</a> a tu lista de amigos de Steam."
 
 "steam_welcomemessage_help$apptype=game"	"Si necesitas asistencia técnica para este juego, consulta los <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>foros de %gamename% en Steam</a> o visita el <a href=http://support.steampowered.com/>Soporte de Steam</a>."
 "steam_welcomemessage_help$apptype=application"	"Si necesitas asistencia técnica para esta aplicación, consulta los <a href=http://storefront.steampowered.com/v/forums.php?AppId=%appid%>foros de %gamename% en Steam</a> o visita el <a href=http://support.steampowered.com/>Soporte de Steam</a>."
@@ -3912,7 +3912,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "steam_menu_friends_add" "Añadir a un amigo..."
 "steam_menu_friends_settings" "Ver parámetros"
 "steam_menu_friends_players" "Jugadores"
-"friends_searchOnline"	"Buscar miembros de la Comunidad Steam"
+"friends_searchOnline"	"Buscar miembros de la comunidad de Steam"
 "steam_send_guestpass"		"Enviar pase de invitado"
 "steam_stats"		"Estadísticas"
 "steam_links"			"Enlaces"
@@ -4002,7 +4002,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "steam_ClosedBeta_Message" "Esta versión de Steam está actualmente en beta cerrada.\nInicia sesión con una cuenta inscrita para continuar."
 
 "Overlay_GlobalSettingDisabled_Title" 	"Error"
-"Overlay_GlobalSettingDisabled_Body"	"Has desactivado la Comunidad Steam En el Juego en tus opciones generales de Steam.\n\n Si deseas modificar la opción juego a juego, tendrás que reactivarla primero en las opciones generales."
+"Overlay_GlobalSettingDisabled_Body"	"Has desactivado la comunidad de Steam En el Juego en tus opciones generales de Steam.\n\n Si deseas modificar la opción juego a juego, tendrás que reactivarla primero en las opciones generales."
 
 "steam_voice_unknowncodec"	"Códec de voz desconocido utilizado en el otro extremo - colgando. Deben de estar usando una versión más nueva del cliente de Steam."
 "steam_voice_datacorrupted"	"Datos de voz no válidos recibidos desde el interlocutor remoto - colgando."
@@ -4574,7 +4574,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 
 "Steam_Settings_StreamingTitle" "Remote Play"
 
-"Steam_Settings_Streaming_Description" "Retransmite juegos entre este ordenador y otros dispositivos. Para conectarte, inicia sesión en esta cuenta de Steam en otro ordenador o elige «Otro ordenador» en tu Steam Link."
+"Steam_Settings_Streaming_Description" "Transmite juegos entre este ordenador y otros dispositivos. Para conectarte, inicia sesión en esta cuenta de Steam en otro ordenador o elige «Otro ordenador» en tu Steam Link."
 "Steam_Settings_Streaming_DeviceName" "NOMBRE DEL DISPOSITIVO"
 "Steam_Settings_Streaming_Status" "ESTADO"
 "Steam_Settings_Streaming_EnableStreaming" "Activar Remote Play"
@@ -4737,7 +4737,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "Steam_Screenshots_ViewOnline" "Ver online"
 "Steam_Screenshots_Caption" "«%imagecaption%»"
 "Steam_Screenshots_UploadQuota" "Tamaño de la carga: %imagesize%, espacio restante: %storagesize%"
-"Steam_Screenshots_UploadProgress" "Subiendo captura a la Comunidad Steam..."
+"Steam_Screenshots_UploadProgress" "Subiendo captura a la comunidad de Steam..."
 
 
 "VR_Error_Title"				"Error al iniciar SteamVR"
@@ -4828,6 +4828,9 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 
 "SteamUI_RunningConflictingSoftware" "Se ha detectado software conflictivo"
 "SteamUI_RunningIncompatibleTcpService" "Se ha detectado una versión incompatible de %incompatdll% (relacionada\ncon %incompatname%) dentro del proceso de Steam.\n\nTe sugerimos que actualices o desinstales este software si sufres bloqueos\no reducciones en la velocidad de red mientras ejecutas Steam o algún juego."
+
+"SteamUI_RunningBannedSoftware" "Software que modifica el comportamiento de Steam"
+"SteamUI_RunningBannedSoftwareDesc" "Steam detectó %incompatname%, un software de terceros capaz de modificarlo para eludir los controles de seguridad o propiedad.\nEste software hace que Steam se cuelgue, incumple el Acuerdo de Suscriptor a Steam e infringe la propiedad intelectual de los creadores de DLC. Su uso\npodría resultar en un bloqueo de la cuenta.\n\nPor favor, desinstálalo para ejecutar Steam."
 
 "Steam_XboxDriverInstall_Title"		"Instalación del controlador para Xbox"
 "Steam_XboxDriverInstall_Success"	"El controlador se actualizó correctamente y estará activo después de que reinicies tu ordenador."

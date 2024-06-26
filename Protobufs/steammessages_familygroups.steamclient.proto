@@ -138,6 +138,7 @@ message FamilyGroupPendingInviteForUser {
 	optional uint64 family_groupid = 1;
 	optional .EFamilyGroupRole role = 2 [default = k_EFamilyGroupRole_None];
 	optional fixed64 inviter_steamid = 3;
+	optional bool awaiting_2fa = 4;
 }
 
 message CFamilyGroups_GetFamilyGroupForUser_Response {
@@ -357,6 +358,7 @@ message CFamilyGroups_GetSharedLibraryApps_Response {
 		optional uint32 rt_last_played = 12;
 		optional uint32 rt_playtime = 13;
 		optional .EProtoAppType app_type = 14 [default = k_EAppTypeGame];
+		repeated uint32 content_descriptors = 15;
 	}
 
 	repeated .CFamilyGroups_GetSharedLibraryApps_Response.SharedApp apps = 1;

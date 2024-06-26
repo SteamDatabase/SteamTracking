@@ -1,0 +1,459 @@
+import "enums.proto";
+import "steammessages_base.proto";
+import "webuimessages_base.proto";
+import "webuimessages_gamerecordingfiles.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = true;
+
+enum ETimelineEntryType {
+	k_ETimelineEntryType_Invalid = 0;
+	k_ETimelineEntryType_GameMode = 1;
+	k_ETimelineEntryType_Event = 2;
+	k_ETimelineEntryType_StateDescription = 3;
+	k_ETimelineEntryType_Achievement = 4;
+	k_ETimelineEntryType_UserMarker = 5;
+	k_ETimelineEntryType_Screenshot = 6;
+	k_ETimelineEntryType_Error = 7;
+}
+
+enum ETimelineChangeNotificationType {
+	k_ETimelineChangeNotificationType_Started = 1;
+	k_ETimelineChangeNotificationType_Stopped = 2;
+	k_ETimelineChangeNotificationType_Deleted = 3;
+	k_ETimelineChangeNotificationType_RecordingStarted = 4;
+	k_ETimelineChangeNotificationType_RecordingStopped = 5;
+	k_ETimelineChangeNotificationType_RecordingUpdated = 6;
+}
+
+enum ERecordingSessionChangeNotificationType {
+	k_ERecordingSessionChangeNotificationType_Started = 1;
+	k_ERecordingSessionChangeNotificationType_Stopped = 2;
+	k_ERecordingSessionChangeNotificationType_Deleted = 3;
+	k_ERecordingSessionChangeNotificationType_Updated = 4;
+}
+
+enum EDiskSpaceType {
+	k_eDiskSpaceType_Recording = 0;
+	k_eDiskSpaceType_Clip = 1;
+}
+
+enum EThumbnailTimePrecision {
+	k_ePrecise = 0;
+	k_eLoose = 1;
+}
+
+message CGameRecording_GetActiveTimelineApps_Request {
+}
+
+message CGameRecording_GetActiveTimelineApps_Response {
+	message App {
+		optional uint64 game_id = 1;
+		optional uint32 most_recent_start_time = 2;
+		optional .EGameRecordingType recording_type = 3 [default = k_EGameRecordingType_Unknown];
+		optional double video_duration_seconds = 4;
+		optional double timeline_duration_seconds = 5;
+		optional bool is_active = 6;
+		optional uint64 file_size = 7;
+	}
+
+	repeated .CGameRecording_GetActiveTimelineApps_Response.App apps = 1;
+}
+
+message CGameRecording_GetTimelinesForApp_Request {
+	optional uint64 game_id = 1;
+}
+
+message CGameRecording_GetTimelinesForApp_Response {
+	repeated .CGameRecordingTimelineMetadata timelines = 1;
+}
+
+message CGameRecording_GetTimelinesForClip_Request {
+	optional string clip_id = 1;
+}
+
+message CGameRecording_GetTimelinesForClip_Response {
+	optional uint64 game_id = 1;
+	repeated .CGameRecordingTimelineMetadata timelines = 2;
+	optional uint64 first_timeline_start_offset_ms = 3;
+}
+
+message CGameRecording_GetEnoughDiskSpace_Request {
+}
+
+message CGameRecording_GetEnoughDiskSpace_Response {
+	optional bool enough_space = 1;
+}
+
+message CGameRecording_GetAvailableDiskSpace_Request {
+}
+
+message CGameRecording_GetAvailableDiskSpace_Response {
+	optional double size = 1;
+}
+
+message CGameRecording_TimelineChanged_Notification {
+	optional .ETimelineChangeNotificationType notification_type = 1 [default = k_ETimelineChangeNotificationType_Started];
+	optional string timeline_id = 2;
+	optional uint64 game_id = 3;
+	optional uint32 start_time = 4;
+	optional uint64 duration_ms = 5;
+}
+
+message CGameRecording_RecordingSessionChanged_Notification {
+	optional .ERecordingSessionChangeNotificationType notification_type = 1 [default = k_ERecordingSessionChangeNotificationType_Started];
+	optional string timeline_id = 2;
+	optional uint64 game_id = 4;
+	optional string session_id = 5;
+	optional uint64 start_offset = 6;
+	optional uint64 duration_ms = 7;
+	optional .EGameRecordingType recording_type = 8 [default = k_EGameRecordingType_Unknown];
+}
+
+message CTimelineEntry {
+	optional string timeline_id = 1;
+	optional uint64 entry_id = 2;
+	optional uint64 time = 3;
+	optional .ETimelineEntryType type = 4 [default = k_ETimelineEntryType_Invalid];
+	optional int32 game_mode = 5;
+	optional string range_id = 6;
+	optional string range_title = 7;
+	optional uint64 range_duration = 8;
+	optional int32 range_possible_clip = 9;
+	optional string timestamp_title = 10;
+	optional string marker_icon = 11;
+	optional string marker_title = 12;
+	optional string marker_description = 13;
+	optional int32 marker_priority = 14;
+	optional uint32 screenshot_handle = 15;
+	optional string achievement_name = 16;
+}
+
+message CGameRecording_TimelineEntryChanged_Notification {
+	optional .CTimelineEntry entry = 1;
+}
+
+message CGameRecording_LowDiskSpace_Notification {
+}
+
+message CGameRecording_PostGameHighlightsChanged_Notification {
+	optional uint64 game_id = 1;
+}
+
+message CGameRecording_ClipSummary {
+	optional string clip_id = 1;
+	optional uint64 game_id = 2;
+	optional uint64 duration_ms = 3;
+	optional uint32 date_recorded = 4;
+	optional string start_timeline_id = 5;
+	optional uint64 start_offset_ms = 6;
+	optional uint64 published_file_id = 7;
+	optional uint64 file_size = 8;
+	optional string name = 9;
+	optional uint32 date_clipped = 10;
+	optional bool temporary = 11;
+	optional string original_device = 12;
+	optional uint32 original_gaming_device_type = 13;
+	optional uint32 date_downloaded = 14;
+	optional string thumbnail_url = 15;
+	optional uint32 thumbnail_width = 16;
+	optional uint32 thumbnail_height = 17;
+}
+
+message CGameRecording_SaveClip_Request {
+	message Position {
+		optional string timeline_id = 1;
+		optional uint64 offset_ms = 2;
+	}
+
+	optional uint64 game_id = 1;
+	optional .CGameRecording_SaveClip_Request.Position start = 2;
+	optional .CGameRecording_SaveClip_Request.Position end = 3;
+	optional string name = 4;
+	optional string src_clip_id = 5;
+	optional bool temporary = 6;
+}
+
+message CGameRecording_SaveClip_Response {
+	optional .CGameRecording_ClipSummary summary = 1;
+}
+
+message CGameRecording_DeleteClip_Request {
+	optional string clip_id = 1;
+}
+
+message CGameRecording_DeleteClip_Response {
+}
+
+message CGameRecording_ExportClip_Settings {
+	optional int32 bitrate_kbps = 1;
+	optional int32 width = 2;
+	optional int32 height = 3;
+	optional int32 frames_per_second = 4;
+}
+
+message CGameRecording_ExportClip_Request {
+	optional string clip_id = 1;
+	optional string export_mp4_path = 2;
+	optional .CGameRecording_ExportClip_Settings settings = 3;
+}
+
+message CGameRecording_ExportClip_Response {
+}
+
+message CGameRecording_UploadClipToSteam_Request {
+	optional string clip_id = 1;
+	optional string title = 2;
+	optional string desc = 3;
+	optional int32 visibility = 4;
+}
+
+message CGameRecording_UploadClipToSteam_Response {
+	optional .CGameRecording_ClipSummary summary = 1;
+}
+
+message CGameRecording_ZipClip_Request {
+	optional string clip_id = 1;
+}
+
+message CGameRecording_ZipClip_Response {
+	optional string zip_path = 1;
+}
+
+message CGameRecording_GetClips_Request {
+	optional uint64 game_id = 1;
+	optional uint32 created_after = 2;
+	optional bool include_temporary = 3;
+}
+
+message CGameRecording_GetClips_Response {
+	repeated .CGameRecording_ClipSummary clip = 1;
+}
+
+message CGameRecording_GetAndTrimPostGameHighlights_Request {
+	optional uint64 game_id = 1;
+	optional uint32 created_after = 2;
+}
+
+message CGameRecording_GetAndTrimPostGameHighlights_Response {
+	repeated .CGameRecordingTimelineEvent events = 1;
+}
+
+message CGameRecording_UserAddTimelineEntry_Request {
+	optional uint64 game_id = 1;
+	optional .CTimelineEntry entry = 2;
+	optional string clip_id = 3;
+}
+
+message CGameRecording_UserAddTimelineEntry_Response {
+	optional uint64 entry_id = 1;
+}
+
+message CGameRecording_UserUpdateTimelineEntry_Request {
+	optional uint64 game_id = 1;
+	optional .CTimelineEntry entry = 2;
+	optional string clip_id = 3;
+}
+
+message CGameRecording_UserUpdateTimelineEntry_Response {
+}
+
+message CGameRecording_UserRemoveTimelineEntry_Request {
+	optional uint64 game_id = 1;
+	optional string timeline_id = 2;
+	optional uint64 entry_id = 3;
+	optional string clip_id = 4;
+}
+
+message CGameRecording_UserRemoveTimelineEntry_Response {
+}
+
+message CGameRecording_ManuallyDeleteRecordingsForApps_Request {
+	repeated uint64 game_ids = 1;
+}
+
+message CGameRecording_ManuallyDeleteRecordingsForApps_Response {
+}
+
+message CGameRecording_GetTotalDiskSpaceUsage_Request {
+	optional string folder_path = 1;
+	optional .EDiskSpaceType type = 2 [default = k_eDiskSpaceType_Recording];
+}
+
+message CGameRecording_GetTotalDiskSpaceUsage_Response {
+	optional uint64 size = 1;
+}
+
+message CGameRecording_GetThumbnails_Request {
+	optional string recording_id = 1;
+	optional string clip_id = 3;
+	optional string timeline_id = 7;
+	repeated int64 start_offset_us = 4;
+	optional uint32 major_axis = 5 [default = 512];
+	optional .EThumbnailTimePrecision time_precision = 6 [default = k_ePrecise];
+}
+
+message CGameRecording_GetThumbnails_Response {
+	message Thumbnail {
+		optional bytes image_data = 1;
+		optional uint32 width = 2;
+		optional uint32 height = 3;
+	}
+
+	repeated .CGameRecording_GetThumbnails_Response.Thumbnail thumbnails = 1;
+}
+
+message CGameRecording_StartRecording_Request {
+	optional uint64 game_id = 1;
+}
+
+message CGameRecording_StartRecording_Response {
+}
+
+message CGameRecording_StopRecording_Request {
+	optional uint64 game_id = 1;
+}
+
+message CGameRecording_StopRecording_Response {
+	optional .CGameRecording_ClipSummary summary = 1;
+}
+
+message CGameRecording_GetRecordingSize_Request {
+	optional uint64 game_id = 1;
+}
+
+message CGameRecording_GetRecordingSize_Response {
+	optional uint64 file_size = 1;
+}
+
+message CGameRecording_CleanupBackgroundRecordings_Request {
+}
+
+message CGameRecording_CleanupBackgroundRecordings_Response {
+}
+
+message CGameRecording_GetPlatformCapabilities_Request {
+}
+
+message CGameRecording_GetPlatformCapabilities_Response {
+	optional bool per_process_audio_capture = 1;
+}
+
+message CGameRecording_ClipCreated_Notification {
+	optional .CGameRecording_ClipSummary summary = 1;
+}
+
+message CGameRecording_ClipDeleted_Notification {
+	optional string clip_id = 1;
+	optional uint64 game_id = 2;
+}
+
+message CGameRecording_ExportProgress_Notification {
+	optional float progress = 1;
+	optional string clip_id = 2;
+	optional int32 eresult = 3;
+}
+
+message CGameRecording_UploadProgress_Notification {
+	optional float progress = 1;
+	optional string clip_id = 2;
+	optional int32 eresult = 3;
+}
+
+message CGameRecording_SwitchBackgroundRecordingGame_Request {
+	optional uint64 game_id = 1;
+}
+
+message CGameRecording_SwitchBackgroundRecordingGame_Response {
+}
+
+message CGameRecordingDebug_AddTimelineHighlightMarker_Request {
+	optional uint32 appid = 1;
+	optional string icon = 2;
+	optional string title = 3;
+	optional string desc = 4;
+}
+
+message CGameRecordingDebug_AddTimelineHighlightMarker_Response {
+}
+
+message CGameRecordingDebug_AddTimelineTimestamp_Request {
+	optional uint32 appid = 1;
+	optional string title = 2;
+}
+
+message CGameRecordingDebug_AddTimelineTimestamp_Response {
+}
+
+message CGameRecordingDebug_AddTimelineRangeStart_Request {
+	optional uint32 appid = 1;
+	optional string id = 2;
+	optional string title = 3;
+}
+
+message CGameRecordingDebug_AddTimelineRangeStart_Response {
+}
+
+message CGameRecordingDebug_AddTimelineRangeEnd_Request {
+	optional uint32 appid = 1;
+	optional string id = 2;
+}
+
+message CGameRecordingDebug_AddTimelineRangeEnd_Response {
+}
+
+message CGameRecordingDebug_SetTimelineGameMode_Request {
+	optional uint32 appid = 1;
+	optional uint32 mode = 2;
+}
+
+message CGameRecordingDebug_SetTimelineGameMode_Response {
+}
+
+service GameRecording {
+	option (webui_service_execution_site) = k_EClientExecutionSiteSteamUI;
+
+	rpc GetActiveTimelineApps (.CGameRecording_GetActiveTimelineApps_Request) returns (.CGameRecording_GetActiveTimelineApps_Response);
+	rpc GetTimelinesForApp (.CGameRecording_GetTimelinesForApp_Request) returns (.CGameRecording_GetTimelinesForApp_Response);
+	rpc GetTimelinesForClip (.CGameRecording_GetTimelinesForClip_Request) returns (.CGameRecording_GetTimelinesForClip_Response);
+	rpc GetEnoughDiskSpace (.CGameRecording_GetEnoughDiskSpace_Request) returns (.CGameRecording_GetEnoughDiskSpace_Response);
+	rpc GetAvailableDiskSpace (.CGameRecording_GetAvailableDiskSpace_Request) returns (.CGameRecording_GetAvailableDiskSpace_Response);
+	rpc SaveClip (.CGameRecording_SaveClip_Request) returns (.CGameRecording_SaveClip_Response);
+	rpc DeleteClip (.CGameRecording_DeleteClip_Request) returns (.CGameRecording_DeleteClip_Response);
+	rpc GetClips (.CGameRecording_GetClips_Request) returns (.CGameRecording_GetClips_Response);
+	rpc UploadClipToSteam (.CGameRecording_UploadClipToSteam_Request) returns (.CGameRecording_UploadClipToSteam_Response);
+	rpc ExportClip (.CGameRecording_ExportClip_Request) returns (.CGameRecording_ExportClip_Response);
+	rpc ZipClip (.CGameRecording_ZipClip_Request) returns (.CGameRecording_ZipClip_Response);
+	rpc StartRecording (.CGameRecording_StartRecording_Request) returns (.CGameRecording_StartRecording_Response);
+	rpc StopRecording (.CGameRecording_StopRecording_Request) returns (.CGameRecording_StopRecording_Response);
+	rpc GetBackgroundRecordingFileSize (.CGameRecording_GetRecordingSize_Request) returns (.CGameRecording_GetRecordingSize_Response);
+	rpc CleanupBackgroundRecordings (.CGameRecording_CleanupBackgroundRecordings_Request) returns (.CGameRecording_CleanupBackgroundRecordings_Response);
+	rpc GetAndTrimPostGameHighlights (.CGameRecording_GetAndTrimPostGameHighlights_Request) returns (.CGameRecording_GetAndTrimPostGameHighlights_Response);
+	rpc GetThumbnails (.CGameRecording_GetThumbnails_Request) returns (.CGameRecording_GetThumbnails_Response);
+	rpc GetPlatformCapabilities (.CGameRecording_GetPlatformCapabilities_Request) returns (.CGameRecording_GetPlatformCapabilities_Response);
+	rpc NotifyTimelineChanged (.CGameRecording_TimelineChanged_Notification) returns (.WebUINoResponse);
+	rpc NotifyRecordingSessionChanged (.CGameRecording_RecordingSessionChanged_Notification) returns (.WebUINoResponse);
+	rpc NotifyTimelineEntryChanged (.CGameRecording_TimelineEntryChanged_Notification) returns (.WebUINoResponse);
+	rpc NotifyClipCreated (.CGameRecording_ClipCreated_Notification) returns (.WebUINoResponse);
+	rpc NotifyClipDeleted (.CGameRecording_ClipDeleted_Notification) returns (.WebUINoResponse);
+	rpc NotifyExportProgress (.CGameRecording_ExportProgress_Notification) returns (.WebUINoResponse);
+	rpc NotifyUploadProgress (.CGameRecording_UploadProgress_Notification) returns (.WebUINoResponse);
+	rpc NotifyLowDiskSpace (.CGameRecording_LowDiskSpace_Notification) returns (.WebUINoResponse);
+	rpc NotifyPostGameHighlightsChanged (.CGameRecording_PostGameHighlightsChanged_Notification) returns (.WebUINoResponse);
+	rpc UserAddTimelineEntry (.CGameRecording_UserAddTimelineEntry_Request) returns (.CGameRecording_UserAddTimelineEntry_Response);
+	rpc UserUpdateTimelineEntry (.CGameRecording_UserUpdateTimelineEntry_Request) returns (.CGameRecording_UserUpdateTimelineEntry_Response);
+	rpc UserRemoveTimelineEntry (.CGameRecording_UserRemoveTimelineEntry_Request) returns (.CGameRecording_UserRemoveTimelineEntry_Response);
+	rpc ManuallyDeleteRecordingsForApps (.CGameRecording_ManuallyDeleteRecordingsForApps_Request) returns (.CGameRecording_ManuallyDeleteRecordingsForApps_Response);
+	rpc GetTotalDiskSpaceUsage (.CGameRecording_GetTotalDiskSpaceUsage_Request) returns (.CGameRecording_GetTotalDiskSpaceUsage_Response);
+	rpc SwitchBackgroundRecordingGame (.CGameRecording_SwitchBackgroundRecordingGame_Request) returns (.CGameRecording_SwitchBackgroundRecordingGame_Response);
+}
+
+service GameRecordingDebug {
+	option (webui_service_execution_site) = k_EClientExecutionSiteSteamUI;
+
+	rpc AddTimelineHighlightMarker (.CGameRecordingDebug_AddTimelineHighlightMarker_Request) returns (.CGameRecordingDebug_AddTimelineHighlightMarker_Response);
+	rpc AddTimelineTimestamp (.CGameRecordingDebug_AddTimelineTimestamp_Request) returns (.CGameRecordingDebug_AddTimelineTimestamp_Response);
+	rpc AddTimelineRangeStart (.CGameRecordingDebug_AddTimelineRangeStart_Request) returns (.CGameRecordingDebug_AddTimelineRangeStart_Response);
+	rpc AddTimelineRangeEnd (.CGameRecordingDebug_AddTimelineRangeEnd_Request) returns (.CGameRecordingDebug_AddTimelineRangeEnd_Response);
+	rpc SetTimelineGameMode (.CGameRecordingDebug_SetTimelineGameMode_Request) returns (.CGameRecordingDebug_SetTimelineGameMode_Response);
+}

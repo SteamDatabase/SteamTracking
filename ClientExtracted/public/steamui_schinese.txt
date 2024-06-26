@@ -427,7 +427,7 @@
 "Steam_Status_OfflineMode"					"离线模式"
 "Steam_Status_NoConnection"					"无连接"
 "Steam_Status_OneItemDownloading" 	"正在下载 "
-"Steam_Status_OneItemTransferring" 	"正在转移 "
+"Steam_Status_OneItemTransferring" 	"正在传输 "
 "Steam_Status_DownloadsPaused" 	"下载已暂停 "
 "Steam_Status_OneItemPaused" 				"1 个项目位于队列中 "
 "Steam_Status_OneItemComplete"			"已完成 1 个项目 "
@@ -436,7 +436,7 @@
 "Steam_Status_ItemsComplete"	"已完成 %numcompl% / %numtotal% 个项目 "
 "Steam_Status_DownloadsTitle"		"下载"
 "Steam_Status_GoToDownloadsPage"		"管理"
-"Steam_Status_PeerContentServer"		"正在托管网络转移"
+"Steam_Status_PeerContentServer"		"正在托管网络传输"
 
 "Steam_Time_ShowMostRecent"			"显示最新的"
 "Steam_Time_5Minutes"				"5 分钟"
@@ -1515,12 +1515,12 @@
 "Steam_ThrottleDownloadsWhileStreamingDetails"	"如果勾选此选项，Steam 会限制下载速度，以保持 Steam 远程畅玩的高质量体验。"
 "Steam_DownloadRatesInBits"			"以 bit/s 的形式显示下载速率"
 
-"Steam_PeerContentTitle"			"通过本地网络转移游戏文件"
-"Steam_PeerContentInfo"			"此功能允许从您本地网络上的其他 PC 转移游戏文件，从而减少下载游戏时的互联网流量。您还可以允许其他用户从这台 PC 转移游戏。"
-"Steam_PeerContentOff"			"关闭 - 不允许任何转移"
-"Steam_PeerContentSameUser"		"只允许转入我的设备"
-"Steam_PeerContentFriends"		"允许转入我 Steam 好友的设备"
-"Steam_PeerContentAnyUser"		"允许转入任何用户"
+"Steam_PeerContentTitle"			"通过本地网络传输游戏文件"
+"Steam_PeerContentInfo"			"此功能允许从您本地网络上的其他 PC 传输游戏文件，从而减少下载游戏时的互联网流量。您还可以允许其他用户从这台 PC 传输游戏。"
+"Steam_PeerContentOff"			"关闭 - 不允许任何传输"
+"Steam_PeerContentSameUser"		"只允许传输至我的设备"
+"Steam_PeerContentFriends"		"允许传输至我 Steam 好友的设备"
+"Steam_PeerContentAnyUser"		"允许传输至任何用户"
 
 "Steam_CloudLabel"					"Steam 云"
 "Steam_CloudInfo"					"Steam 云会储存您的信息，以便您在不同的计算机也能享受到一致的产品体验。"
@@ -4830,6 +4830,9 @@ Mac OS X 版本升级至 10.7 或更高版本。"
 
 "SteamUI_RunningConflictingSoftware" "检测到冲突软件"
 "SteamUI_RunningIncompatibleTcpService" "在 Steam 进程中检测到 %incompatdll% （与 %incompatname% 相关）\n 的不兼容版本。\n\n 如果您在运行 Steam 或单个游戏时，遭遇崩溃或网络速度缓慢，我们建议更新或卸载此软件。"
+
+"SteamUI_RunningBannedSoftware" "修改 Steam 行为的软件"
+"SteamUI_RunningBannedSoftwareDesc" "Steam 检测到 %incompatname% 正在运行，这是第三方软件，可能会修改 Steam 以绕过安全性或所有权检查。\n已知此软件会导致 Steam 崩溃、违反《Steam 订户协议》，并侵犯 DLC 制作者的知识产权。\n使用此软件可能会导致封禁或帐户锁定。\n\n请将其卸载，以运行 Steam。"
 
 "Steam_XboxDriverInstall_Title"		"Xbox 驱动程序安装"
 "Steam_XboxDriverInstall_Success"	"驱动程序已成功更新，将会在重启计算机后激活。"

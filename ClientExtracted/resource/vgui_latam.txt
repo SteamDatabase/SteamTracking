@@ -9,6 +9,7 @@
 "TextEntry_SelectAll"		"Seleccionar todo"
 "TextEntry_CopyAllToClipboard"	"Copiar todo el texto al portapapeles"
 "FileOpenDialog_Open"		"Abrir"
+"FileOpenDialog_Save"		"Guardar"
 "FileOpenDialog_Cancel"		"Cancelar"
 "FileOpenDialog_Look_in"	"Buscar en:"
 "FileOpenDialog_File_Name"	"Nombre de archivo:"

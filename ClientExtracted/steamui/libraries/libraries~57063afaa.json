@@ -562,6 +562,8 @@
     "bbcode_image_tooltip_link": "Görüntüyü yeni pencerede aç",
     "bbcode_image_tooltip_link_giphy": "Giphy'yi yeni pencerede aç",
     "bbcode_video_tooltip_link": "Video'yu yeni pencerede aç",
+    "bbcode_video_pause": "Duraklat",
+    "bbcode_video_play": "Oynat",
     "bbcode_image_link_giphy": "/GIPHY %1$s",
     "bbcode_image_popout": "Açılır Görsel",
     "bbcode_image_tooltip_collapse": "Görüntüyü sohbette gizle",

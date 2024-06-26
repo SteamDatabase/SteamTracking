@@ -9,6 +9,7 @@
 "TextEntry_SelectAll"		"Seleziona tutto"
 "TextEntry_CopyAllToClipboard"	"Copia tutto il testo negli appunti"
 "FileOpenDialog_Open"		"Apri"
+"FileOpenDialog_Save"		"Salva"
 "FileOpenDialog_Cancel"		"Annulla"
 "FileOpenDialog_Look_in"	"Cerca in:"
 "FileOpenDialog_File_Name"	"Nome file:"

@@ -562,6 +562,8 @@
     "bbcode_image_tooltip_link": "Відкрити зображення в новому вікні",
     "bbcode_image_tooltip_link_giphy": "Відкрити зображення у новому вікні",
     "bbcode_video_tooltip_link": "Відкрити відео в новому вікні",
+    "bbcode_video_pause": "Призупинити",
+    "bbcode_video_play": "Відтворити",
     "bbcode_image_link_giphy": "/GIPHY %1$s",
     "bbcode_image_popout": "Спливне зображення",
     "bbcode_image_tooltip_collapse": "Приховати зображення в чаті",

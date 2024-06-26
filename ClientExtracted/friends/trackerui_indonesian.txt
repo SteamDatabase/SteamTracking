@@ -550,7 +550,7 @@
 "controller_apple"									"Kontroler Apple"
 "controller_android"								"Kontroler Android"
 "controller_switch_pro"								"Kontroler Nintendo Switch Pro"
-"controller_switch_joycon_pair"						"JoyCon Nintendo Switch"
+"controller_switch_joycon_pair"						"Joy-Con Nintendo Switch"
 "controller_mobile_touch"							"Kontroler Steam Link Touch"
 
 "Friends_ScreenshotNotification_Info" "Screenshot disimpan"

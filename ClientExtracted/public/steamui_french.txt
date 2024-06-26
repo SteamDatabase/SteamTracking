@@ -4835,6 +4835,9 @@ Ajoutez un nouveau contact Steam en envoyant un cadeau à une de vos connaissanc
 "SteamUI_RunningConflictingSoftware" "Logiciel conflictuel détecté"
 "SteamUI_RunningIncompatibleTcpService" "Une version incompatible de %incompatdll% (associée au programme %incompatname%)\na été détectée dans le processus Steam.\n\nIl est recommandé de mettre à jour ou de désinstaller ce programme si vous constatez des crashs\nou un ralentissement sur le réseau lorsque vous utilisez Steam ou des jeux Steam."
 
+"SteamUI_RunningBannedSoftware" "Logiciel modifiant le comportement de Steam"
+"SteamUI_RunningBannedSoftwareDesc" "Steam a détecté %incompatname%, un logiciel tiers qui peut modifier Steam pour contourner les vérifications de sécurité ou de propriété.\nCe logiciel entraine des problèmes de fonctionnement de Steam, enfreint l'Accord de souscription Steam et compromet les droits à la propriété intellectuelle des sociétés créant des DLC.\nL'utilisation de ce logiciel risque de provoquer des bannissements et des blocages de comptes.\n\nVeuillez le désinstaller avant d'exécuter Steam."
+
 "Steam_XboxDriverInstall_Title"		"Installation du pilote Xbox"
 "Steam_XboxDriverInstall_Success"	"Le pilote a bien été mis à jour. Redémarrez votre ordinateur pour l'activer."
 "Steam_XboxDriverInstall_ServiceFailure"	"Échec de la mise à jour du pilote. Vérifiez que Steam est lancé depuis un compte qui dispose des autorisations nécessaires. Vérifiez également que le service Steam est en cours d'exécution et mis à jour."

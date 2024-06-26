@@ -9,6 +9,7 @@
 "TextEntry_SelectAll"		"Selectează tot"
 "TextEntry_CopyAllToClipboard"	"Copiază textul în memoria temporară"
 "FileOpenDialog_Open"		"Deschide"
+"FileOpenDialog_Save"		"Salvează"
 "FileOpenDialog_Cancel"		"Anulează"
 "FileOpenDialog_Look_in"	"Caută în:"
 "FileOpenDialog_File_Name"	"Nume fișier:"

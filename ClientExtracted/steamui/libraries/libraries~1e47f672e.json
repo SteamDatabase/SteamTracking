@@ -562,6 +562,8 @@
     "bbcode_image_tooltip_link": "Avaa kuva uudessa ikkunassa",
     "bbcode_image_tooltip_link_giphy": "Avaa kuva uudessa ikkunassa",
     "bbcode_video_tooltip_link": "Avaa video uudessa ikkunassa",
+    "bbcode_video_pause": "Keskeytä",
+    "bbcode_video_play": "Toista",
     "bbcode_image_link_giphy": "/GIPHY %1$s",
     "bbcode_image_popout": "Kuvaponnahdusikkuna",
     "bbcode_image_tooltip_collapse": "Piilota kuva chatissa",

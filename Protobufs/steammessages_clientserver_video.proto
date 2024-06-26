@@ -1,0 +1,57 @@
+import "steammessages_base.proto";
+
+option optimize_for = SPEED;
+option cc_generic_services = false;
+
+message CMsgVideoGameRecordingRepresentation {
+	optional string representation_name = 2;
+	optional uint32 horizontal_resolution = 3;
+	optional uint32 vertical_resolution = 4;
+	optional double frame_rate = 5;
+	optional uint32 bandwidth = 6;
+	optional uint32 audio_sample_rate = 7;
+	optional string frame_rate_string = 8;
+	optional string codec = 9;
+	optional uint32 audio_channel_config = 10;
+	repeated .CVideo_GameRecordingSegmentInfo segment_info = 11;
+}
+
+message CMsgVideoGameRecordingComponent {
+	optional string component_name = 1;
+	optional uint32 contents = 2;
+	optional uint32 segment_size = 3;
+	optional string file_type = 4;
+	repeated .CMsgVideoGameRecordingRepresentation representations = 5;
+}
+
+message CMsgVideoGameRecordingDef {
+	optional uint64 steamid = 1;
+	optional uint32 app_id = 2;
+	optional uint32 num_segments = 3;
+	optional uint32 length_milliseconds = 4;
+	optional uint32 segment_duration_timescale = 5;
+	optional uint32 segment_duration = 6;
+	repeated .CMsgVideoGameRecordingComponent components = 7;
+	optional uint32 start_time_ms = 8;
+	optional uint32 start_offset_in_timeline_ms = 9;
+}
+
+message CVideo_GameRecordingSegmentInfo {
+	optional uint32 segment_number = 1;
+	optional uint64 segment_size_bytes = 2;
+	optional string component_name = 3;
+	optional string representation_name = 4;
+}
+
+message CVideo_GameRecordingSegmentUploadInfo {
+	message HTTPHeaders {
+		optional string name = 1;
+		optional string value = 2;
+	}
+
+	optional .CVideo_GameRecordingSegmentInfo segment_info = 1;
+	optional string url_host = 2;
+	optional string url_path = 3;
+	optional bool use_https = 4;
+	repeated .CVideo_GameRecordingSegmentUploadInfo.HTTPHeaders request_headers = 5;
+}

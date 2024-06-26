@@ -9,6 +9,7 @@
 "TextEntry_SelectAll"		"Vybrat vše"
 "TextEntry_CopyAllToClipboard"	"Zkopírovat všechen text do schránky"
 "FileOpenDialog_Open"		"Otevřít"
+"FileOpenDialog_Save"		"Uložit"
 "FileOpenDialog_Cancel"		"Zrušit"
 "FileOpenDialog_Look_in"	"Oblast hledání:"
 "FileOpenDialog_File_Name"	"Název souboru:"

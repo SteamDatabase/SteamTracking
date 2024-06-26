@@ -84,7 +84,7 @@
 "Steam_PreorderCompleteInfo" "Ευχαριστούμε! Η προαγορά του %s1 ολοκληρώθηκε. \n\nΘα έχετε τη δυνατότητα να παίξετε το παιχνίδι μόλις γίνει επίσημα διαθέσιμο!"
 "Steam_SubscribeFailedInfo"	"Η αγορά σας δεν ολοκληρώθηκε. Τα στοιχεία της πιστωτικής \nκάρτας που μας δώσατε δεν έγιναν δεκτά.\n\nΈνα μήνυμα ηλεκτρονικής αλληλογραφίας έχει σταλθεί σε εσάς με περισσότερες \nλεπτομέριες. Εάν επιθυμείτε να δώσετε διαφορετικά \nστοιχεία πιστωτικής κάρτας, προσπαθήστε να επαναλάβετε την αγορά."
 
-"Steam_ErrorPasswordNotSet" "Το συνθηματικό σας δεν εισήχθη επιτυχώς.\nΕίτε απαντήσατε λάθος στη μυστική ερώτηση, είτε ο συγκεκριμένος λογαριασμός δεν υπάρχει."
+"Steam_ErrorPasswordNotSet" "Το συνθηματικό σας δεν ορίστηκε.\nΕίτε απαντήσατε λάθος στη μυστική ερώτηση, είτε ο συγκεκριμένος λογαριασμός δεν υπάρχει."
 "Steam_ErrorPasswordTooShort" "Το νέο σας συνθηματικό πρέπει να έχει τουλάχιστον 8 χαρακτήρες."
 "Steam_ErrorPasswordsDontMatch" "Τα συνθηματικά που εισαγάγατε δεν ταυτίζονται.\nΕισαγάγετε το ίδιο συνθηματικό σε κάθε πεδίο."
 "Steam_ErrorCantStartGame" "Αυτό το παιχνίδι προσωρινά δεν είναι διαθέσιμο.\nΔοκιμάστε ξανά αργότερα."
@@ -350,9 +350,9 @@
 "SteamUI_Subscriptions_Price_Hdr"		"ΤΙΜΗ"
 "SteamUI_Subscriptions_AvailableSubs_Hdr"	"ΔΙΑΘΕΣΙΜΕΣ ΣΥΝΔΡΟΜΕΣ"
 "SteamUI_Subscriptions_SubscriptionTo"		"Steam - Συνδρομή σε %s1"
-"SteamUI_Subscriptions_Successful"		"Γίνατε επιτυχώς συνδρομητής στο %s1."
+"SteamUI_Subscriptions_Successful"		"Γίνατε συνδρομητής στο %s1."
 "SteamUI_Subscriptions_UnsubscribeFrom"		"Steam - Κατάργηση συνδρομής από το %s1"
-"SteamUI_Subscriptions_UnSub_Successful"	"Καταργήσατε επιτυχώς τη συνδρομή σας από το %s1."
+"SteamUI_Subscriptions_UnSub_Successful"	"Καταργήσατε τη συνδρομή σας από το %s1."
 "SteamUI_Subscriptions_Error_Title"		"Steam - Σφάλμα"
 
 "SteamUI_WelcomeToSteam_Title"		"Steam"
@@ -583,7 +583,7 @@
 
 "Steam_PleaseVisitSupportPage"		"Για περισσότερη βοήθεια ή υποστήριξη προϊόντος, επισκεφθείτε:"
 "Steam_SteamPoweredURL"			"http://www.steampowered.com"
-"Steam_PurchaseCDKeySuccess"		"Συγχαρητήρια! Το δικό σας αντιγραφό του %subscription% έχει ενεργοποιηθεί επιτυχώς με τον λογαριασμό %account%.\n\nΓια να παίξετε το %game%, θα πρέπει να συνδεθείτε στο Steam με αυτό τον λογαριασμό."
+"Steam_PurchaseCDKeySuccess"		"Συγχαρητήρια! Το δικό σας αντιγραφό του %subscription% έχει ενεργοποιηθεί με τον λογαριασμό %account%.\n\nΓια να παίξετε το %game%, θα πρέπει να συνδεθείτε στο Steam με αυτό τον λογαριασμό."
 "Steam_PurchaseAccount"			"%account%"
 
 "Steam_PurchaseCDKeyIncomplete"		"Εξαιτίας μεγάλης ζήτησης για το %subscription% η συνδρομή σας δεν μπόρεσε να ενεργοποιηθεί αυτή τη στιγμή. Θα σας επιτραπεί να παίξετε το %game% μόλις η συναλλαγή σας ολοκληρωθεί."
@@ -786,7 +786,7 @@
 "SteamUI_Italian"			"Ιταλικά"
 "SteamUI_German"			"Γερμανικά"
 "SteamUI_Greek"				"Ελληνικά"
-"SteamUI_Korean"			"Κορεάτικα"
+"SteamUI_Korean"			"Κορεατικά"
 "SteamUI_Simplified_Chinese"	"Απλοποιημένα κινεζικά"
 "SteamUI_Traditional_Chinese"	"Παραδοσιακά κινεζικά"
 "SteamUI_Russian"		"Ρωσικά"
@@ -815,7 +815,7 @@
 "SteamUI_Selection_Italian"			"Italiano (Ιταλικά)"
 "SteamUI_Selection_German"			"Deutsch (Γερμανικά)"
 "SteamUI_Selection_Greek"			"Ελληνικά (Greek)"
-"SteamUI_Selection_Korean"			"한국어 (Κορεάτικα)"
+"SteamUI_Selection_Korean"			"한국어 (Κορεατικά)"
 "SteamUI_Selection_Simplified_Chinese"	"简体中文 (Απλοποιημένα κινεζικά)"
 "SteamUI_Selection_Traditional_Chinese"	"繁體中文 (Παραδοσιακά κινεζικά)"
 "SteamUI_Selection_Russian"		"Русский (Ρώσικα)"
@@ -1093,7 +1093,7 @@
 "SteamUI_ValveSurvey_Summary_NoIP"		"Χωρίς διεύθυνση IP"
 "SteamUI_ValveSurvey_Summary_NetworkSpeed"	"Ταχύτητα δικτύου: %s1"
 "SteamUI_ValveSurvey_Summary_UploadFailed"	"Αποτυχία μεταφόρτωσης"
-"SteamUI_ValveSurvey_Summary_UploadFailedText"	"Δεν ήταν δυνατό να ληφθούν επιτυχώς οι πληροφορίες σας. Δοκιμάστε ξανά αργότερα."
+"SteamUI_ValveSurvey_Summary_UploadFailedText"	"Δεν ήταν δυνατό να ληφθούν οι πληροφορίες σας. Δοκιμάστε ξανά αργότερα."
 "SteamUI_ValveSurvey_Summary_UploadProgress"	"Πρόοδος μεταφόρτωσης:"
 "SteamUI_ValveSurvey_Summary_NoCSERServers"	"Αδυναμία εύρεσης διακομιστή αναφοράς στατιστικών αυτή τη στιγμή. Δοκιμάστε ξανά αργότερα."
 
@@ -1200,7 +1200,7 @@
 "Steam_TroubleshooterURL_CDKey" "https://support.steampowered.com/kb/1968-HKLX-7538/"
 
 "Steam_SubscriptionSuccess_CDKey_Headline" "Ενεργοποιήθηκε!"
-"Steam_SubscriptionSuccess_CDKey" "Ο κωδικός προϊόντος σας ενεργοποιήθηκε επιτυχώς. Το προϊόν ή τα προϊόντα παρακάτω είναι πλέον μόνιμα συνδεδεμένα με τον λογαριασμό Steam σας. Θα πρέπει να συνδεθείτε σε αυτό τον λογαριασμό για να αποκτήσετε πρόσβαση στα αντικείμενα που μόλις ενεργοποιήσατε στο Steam.\n\nΕκτυπώστε μια απόδειξη αυτής της συναλλαγής για να θυμάστε τον λογαριασμό σας για μελλοντική χρήση."
+"Steam_SubscriptionSuccess_CDKey" "Ο κωδικός προϊόντος σας ενεργοποιήθηκε. Το προϊόν ή τα προϊόντα παρακάτω είναι πλέον μόνιμα συνδεδεμένα με τον λογαριασμό Steam σας. Θα πρέπει να συνδεθείτε σε αυτό τον λογαριασμό για να αποκτήσετε πρόσβαση στα αντικείμενα που μόλις ενεργοποιήσατε στο Steam.\n\nΕκτυπώστε μια απόδειξη αυτής της συναλλαγής για να θυμάστε τον λογαριασμό σας για μελλοντική χρήση."
 
 "Steam_SubscriptionSuccess_ComingSoonOnly" "Ο κωδικός ενεργοποίησης του προϊόντος ενεργοποιήθηκε. Αυτό το περιεχόμενο θα γίνει διαθέσιμο όταν το παιχνίδι κυκλοφορήσει στο Steam. Αυτό το περιεχόμενο πλέον σχετίζεται μόνιμα με τον λογαριασμό Steam σας. Θα πρέπει να συνδεθείτε σε αυτόν τον λογαριασμό για να αποκτήσετε πρόσβαση στα αντικείμενα που μόλις ενεργοποιήσατε στο Steam."
 
@@ -1221,15 +1221,15 @@
 "Steam_SubscriptionCancelled_CDKey_MustLoginPS3" "Ο κωδικός προϊόντος που εισαγάγατε απαιτεί να παίξετε πρώτα το %gamename% στο PlayStation®3 πριν μπορέσετε να τον χρησιμοποιήσετε.\n\n- Εκκινήστε το %gamename% στο PlayStation®3 σας\n\n- Συνδέστε τον λογαριασμό Steam σας με τον λογαριασμό PlayStation®3 Network σας\n\n- Συνδεθείτε στο Steam ενώ παίζετε το %gamename% στο PlayStation®3\n\n- Χρησιμοποιήστε αυτό τον κωδικό προϊόντος στο Steam"
 
 "Steam_SubscriptionSuccess_Headline" "Ευχαριστούμε - Η συναλλαγή σας ολοκληρώθηκε"
-"Steam_SubscriptionSuccess$purchasetype=regular" "Η συνδρομή σας στο %subscription% έχει ολοκληρωθεί επιτυχώς. Η συνδρομή σας είναι εγγεγραμμένη σε αυτό τον λογαριασμό Steam: %accountname%. Μελλοντικά, θα πρέπει να συνδεθείτε σε αυτό τον λογαριασμό για να αποκτήσετε πρόσβαση στα παιχνίδια σας. Σας ευχαριστούμε για την παραγγελία σας!"
+"Steam_SubscriptionSuccess$purchasetype=regular" "Η συνδρομή σας στο %subscription% έχει ολοκληρωθεί. Η συνδρομή σας είναι εγγεγραμμένη σε αυτό τον λογαριασμό Steam: %accountname%. Μελλοντικά, θα πρέπει να συνδεθείτε σε αυτό τον λογαριασμό για να αποκτήσετε πρόσβαση στα παιχνίδια σας. Σας ευχαριστούμε για την παραγγελία σας!"
 "Steam_SubscriptionSuccess$purchasetype=gift" "Το δώρο σας του %subscription% έχει σταλθεί στον χρήστη %giftee%. Σας ευχαριστούμε για την παραγγελία σας!"
-"Steam_SubscriptionSuccess$purchasetype=unknown" "Η αγορά σας του %subscription% έχει ολοκληρωθεί επιτυχώς. Σας ευχαριστούμε για την παραγγελία σας!"
+"Steam_SubscriptionSuccess$purchasetype=unknown" "Η αγορά σας του %subscription% έχει ολοκληρωθεί. Σας ευχαριστούμε για την παραγγελία σας!"
 
 "Steam_SubscriptionCancelled_PaymentCardDeclined_Headline" "Πιστωτική κάρτα απορρίφθηκε"
 "Steam_SubscriptionCancelled_PaymentCardDeclined" "Η συνδρομή σας στο %subscription% δεν ολοκληρώθηκε. Οι πληροφορίες πιστωτικής κάρτας σας απορρίφθηκαν από την εταιρεία πιστωτικής κάρτας σας.\n\nΣημειώστε ότι σε μερικές περιπτώσεις, η εταιρεία πιστωτικής κάρτας σας μπορεί να θέσει ένα «πάγωμα» στα χρήματα του λογαριασμού σας, αλλά δε θα χρεωθείτε. Αφού επιθεωρήσετε τις παρακάτω πληροφορίες, αν νομίζετε πως η πιστωτική σας κάρτα απορρίφθηκε από κάποιο σφάλμα, προσπαθήστε την αγορά σας ξανά."
 
 "Steam_SubscriptionSuccess_Preorder_Headline" "Παραγγελία ολοκληρώθηκε - κάρτα δε χρεώθηκε ακόμα"
-"Steam_SubscriptionSuccess_Preorder" "Η προπαραγγελία του %subscription% έχει ολοκληρωθεί επιτυχώς.\nΗ πληρωμή σας δεν θα διεκπεραιωθεί μέχρι το παιχνίδι να κυκλοφορήσει επίσημα. Θα παραλάβετε μια πλήρη απόδειξη όταν η κάρτα σας επεξεργαστεί. Ευχαριστούμε για την παραγγελία σας!"
+"Steam_SubscriptionSuccess_Preorder" "Η προπαραγγελία του %subscription% έχει ολοκληρωθεί.\nΗ πληρωμή σας δεν θα διεκπεραιωθεί μέχρι το παιχνίδι να κυκλοφορήσει επίσημα. Θα παραλάβετε μια πλήρη απόδειξη όταν η κάρτα σας επεξεργαστεί. Ευχαριστούμε για την παραγγελία σας!"
 
 "Steam_Subscription_Preorder_CcardSuccess_Headline" "Η προπαραγγελία σας έχει διεκπεραιωθεί"
 "Steam_Subscription_Preorder_CcardSuccess" "Πρόσφατα προπαραγγείλατε το %subscription%. Το παιχνίδι έχει κυκλοφορήσει επίσημα, επομένως η πιστωτική σας κάρτα έχει επεξεργαστεί και χρεωθεί. Ευχαριστούμε για την παραγγελία σας!"
@@ -1278,7 +1278,7 @@
 "Steam_HardwarePromoInstallDirextX_URL" "http://www.microsoft.com/windows/directx/"
 
 "Steam_SubscriptionSuccess_HardwarePromo_Headline" "Εγγραφή επιτυχής"
-"Steam_SubscriptionSuccess_HardwarePromo" "Η εξαργύρωση του %subscription% ολοκληρώθηκε επιτυχώς. Η συνδρομή σας είναι εγγεγραμμένη σε αυτό τον λογαριασμό Steam: %accountname%. Μελλοντικά, θα πρέπει να συνδεθείτε σε αυτό τον λογαριασμό για να αποκτήσετε πρόσβαση στα παιχνίδια σας."
+"Steam_SubscriptionSuccess_HardwarePromo" "Η εξαργύρωση του %subscription% ολοκληρώθηκε. Η συνδρομή σας είναι εγγεγραμμένη σε αυτό τον λογαριασμό Steam: %accountname%. Μελλοντικά, θα πρέπει να συνδεθείτε σε αυτό τον λογαριασμό για να αποκτήσετε πρόσβαση στα παιχνίδια σας."
 "Steam_SubscriptionSuccess_HardwarePromo2" "Θα μπορείτε να αποκτήσετε πρόσβαση στα παιχνίδια που περιέχονται σε αυτή τη προσφορά από οποιονδήποτε υπολογιστή, εφόσον συνδέεστε στον λογαριασμό Steam «%accountname%»."
 
 "Steam_PreorderCancelled_Headline" "Προπαραγγελία ακυρώθηκε"
@@ -1530,7 +1530,7 @@
 "Start_Server_FSMount_Error_Title"	"Αποκλειστικός διακομιστής - Σφάλμα αρχείων συστήματος"
 "Start_Server_FSMount_Error" 		"Αποτυχία φόρτωσης αρχείων συστήματος Steam."
 
-"Steam_Subscription_Success_WithShipping$purchasetype=regular"	"Η συνδρομή σας για το %subscription% ολοκληρώθηκε επιτυχώς.\n\nΜπορείτε να παίξετε οποιοδήποτε από τα παιχνίδια που κυκλοφορούν αυτή τη στιγμή επιλέγοντάς τα στη συλλογή παιχνιδιών του Steam σας. Επιπλέον, θα λάβατε ένα μήνυμα επιβεβαίωσης στο ηλεκτρονικό σας ταχυδρομείο μόλις τα εμπορεύματα της παραγγελίας σας αποσταλούν. Ευχαριστούμε για την παραγγελία σας!"
+"Steam_Subscription_Success_WithShipping$purchasetype=regular"	"Η συνδρομή σας για το %subscription% ολοκληρώθηκε.\n\nΜπορείτε να παίξετε οποιοδήποτε από τα παιχνίδια που κυκλοφορούν αυτή τη στιγμή επιλέγοντάς τα στη συλλογή παιχνιδιών του Steam σας. Επιπλέον, θα λάβατε ένα μήνυμα επιβεβαίωσης στο ηλεκτρονικό σας ταχυδρομείο μόλις τα εμπορεύματα της παραγγελίας σας αποσταλούν. Ευχαριστούμε για την παραγγελία σας!"
 "Steam_Subscription_Success_WithShipping$purchasetype=gift"	"Το δώρο σας του %subscription% έχει αποσταλεί στον χρήστη %giftee%. Θα λάβατε ένα μήνυμα επιβεβαίωσης στο ηλεκτρονικό σας ταχυδρομείο μόλις τα εμπορεύματα της παραγγελίας σας αποσταλούν. Ευχαριστούμε για την παραγγελία σας!"
 "Steam_Subscription_Success_WithShipping$purchasetype=unknown"	"Η αγορά του %subscription% ολοκληρώθηκε. Θα λάβατε ένα μήνυμα επιβεβαίωσης στο ηλεκτρονικό σας ταχυδρομείο μόλις τα εμπορεύματα της παραγγελίας σας αποσταλούν. Ευχαριστούμε για την παραγγελία σας!"
 "Steam_Subscription_Success_WithShipping_Headline"	"Ευχαριστούμε - Η συναλλαγή σας ολοκληρώθηκε."
@@ -2210,7 +2210,7 @@
 "Steam_ValidatingSteamCaches_Label$appType=tool"	"Περιμένετε όσο το Steam επαληθεύει τα αρχεία εργαλείου."
 "Steam_ValidatingSteamCaches_Label$appType"         "Περιμένετε όσο το Steam επαληθεύει τα αρχεία περιεχομένου."
 
-"Steam_ValidationResults_NoFailures"	"Όλα τα αρχεία επικυρώθηκαν επιτυχώς."
+"Steam_ValidationResults_NoFailures"	"Όλα τα αρχεία επικυρώθηκαν."
 "Steam_ValidationResults_OneFailure"	"1 αρχείο απέτυχε να επικυρωθεί και θα ληφθεί ξανά."
 "Steam_ValidationResults_Failures"		"%num% αρχεία απέτυχαν να επικυρωθούν και θα ληφθούν ξανά ."
 
@@ -2828,10 +2828,10 @@
 
 "Steam_SendGuestPass_Title$type=guestpass"		"Αποστολή πάσου επισκέπτη"
 
-"Steam_SendGuestPass_InvitationSentHeadline$type=guestpass" "Πάσο επισκέπτη στάλθηκε επιτυχώς!"
+"Steam_SendGuestPass_InvitationSentHeadline$type=guestpass" "Πάσο επισκέπτη στάλθηκε!"
 "Steam_SendGuestPass_InvitationSent$type=guestpass"	"Στάλθηκε μια πρόσκληση στον χρήστη %search% για να εξαργυρώσει το πάσο επισκέπτη σας για το %package%.\n\nΠαρακολουθήστε τη λίστα φίλων σας και σύντομα θα δείτε το φίλο σας να παίζει."
 
-"Steam_SendGuestPass_DefaultInviteErrorHeadline$type=guestpass"	"Το πάσο επισκέπτη δεν στάλθηκε επιτυχώς"
+"Steam_SendGuestPass_DefaultInviteErrorHeadline$type=guestpass"	"Το πάσο επισκέπτη δεν στάλθηκε"
 "Steam_SendGuestPass_DefaultInviteError$type=guestpass"	"Συγγνώμη, παρουσιάστηκε πρόβλημα κατά την αποστολή του πάσου επισκέπτη στον χρήστη %search%."
 "Steam_SendGuestPass_AccountLockedError$type=guestpass"	"Ο λογαριασμός σας είναι κλειδωμένος και δεν μπορεί να στείλει ή να δεχτεί πάσο επισκεπτών."
 
@@ -3185,15 +3185,15 @@
 "Steam_ChooseGameLanguage"	"Επιλέξτε τη γλώσσα που θέλετε να παίξετε σε αυτό το παιχνίδι:"
 "Steam_GameProperties_LanguageTab" "ΓΛΩΣΣΑ"
 
-"Steam_GameProperties_BetasTab" "ΔΟΚΙΜΑΣΤΙΚΕΣ ΕΚΔΟΣΕΙΣ"
-"Steam_ChooseGameBeta"	"Επιλέξτε τη δοκιμαστική έκδοση που θα θέλατε να συμμετάσχετε:"
+"Steam_GameProperties_BetasTab" "ΕΚΔΟΣΕΙΣ ΒΗΤΑ"
+"Steam_ChooseGameBeta"	"Επιλέξτε την έκδοση βήτα που θα θέλατε να συμμετάσχετε:"
 "Steam_ContentBetaUnlockPrivate" "Εισαγωγή κωδικού πρόσβασης σε κλειστό beta:"
 "Steam_ContentBetaCheckPassword"	"ΥΠΟΒΟΛΗ"
 "Steam_ContentBetaResultsPasswordSuccessful"	"Ο κωδικός πρόσβασης είναι σωστός. Το «%betaname%» είναι πλέον διαθέσιμο."
 "Steam_ContentBetaResultsPasswordUnsuccessful"	"Λανθασμένος κωδικός πρόσβασης."
-"Steam_ContentBetaOK"	"Αποκτήσατε επιτυχώς πρόσβαση στα περιεχόμενα της δοκιμαστικής έκδοσης του «%betaname%»."
+"Steam_ContentBetaOK"	"Αποκτήσατε πρόσβαση στα περιεχόμενα της δοκιμαστικής έκδοσης του «%betaname%»."
 "Steam_ContentBetaProblem"	"Παρουσιάστηκε πρόβλημα κατά τη σύνδεση στα περιεχόμενα της δοκιμαστικής έκδοσης του «%betaname%»."
-"Steam_ContentBetaOptOutOK"	"Αποχωρήσατε επιτυχώς από τη δοκιμαστική έκδοση."
+"Steam_ContentBetaOptOutOK"	"Αποχωρήσατε από τη δοκιμαστική έκδοση."
 "Steam_ContentBetaOptOutProblem"	"Παρουσιάστηκε πρόβλημα κατά την αποχώρηση από τη δοκιμαστική έκδοση."
 
 "Steam_Settings_NotifyMeWithSteamInstantMessages"	"Ειδοποίηση σχετικά με προσθήκες ή αλλαγές στα παιχνίδια μου, νέες ενημερώσεις και επερχόμενες κυκλοφορίες."
@@ -3230,10 +3230,10 @@
 
 "Steam_SendGuestPass_Title$type=gift"		"Αποστολή δώρου"
 
-"Steam_SendGuestPass_InvitationSentHeadline$type=gift" "Δώρο στάλθηκε επιτυχώς!"
+"Steam_SendGuestPass_InvitationSentHeadline$type=gift" "Το δώρο στάλθηκε!"
 "Steam_SendGuestPass_InvitationSent$type=gift"	"Στάλθηκε μια πρόσκληση στον χρήστη %search% για να εξαργυρώσει το δώρο σας για το %package%.\n\nΠαρακολουθήστε τη λίστα φίλων σας και σύντομα θα δείτε το φίλο σας να παίζει."
 
-"Steam_SendGuestPass_DefaultInviteErrorHeadline$type=gift"	"Το δώρο δεν στάλθηκε επιτυχώς"
+"Steam_SendGuestPass_DefaultInviteErrorHeadline$type=gift"	"Το δώρο δεν στάλθηκε"
 "Steam_SendGuestPass_DefaultInviteError$type=gift"	"Συγγνώμη, παρουσιάστηκε πρόβλημα κατά την αποστολή του δώρου στον χρήστη %search%."
 
 "Steam_SendGuestPass_AccountLockedError$type=gift"	"Ο λογαριασμός σας είναι κλειδωμένος και δεν μπορεί να στείλει ή να δεχτεί δώρα."
@@ -3387,11 +3387,11 @@
 "Steam_SubscriptionCancelled_PaymentCardDeclined_AVSFailureCart"				"Η συνδρομή σας στα ακόλουθα αντικείμενα δεν ολοκληρώθηκε. Οι πληροφορίες πιστωτικής κάρτας σας απορρίφθηκαν από την εταιρεία πιστωτικής κάρτας σας λόγω εισαγωγής λανθασμένης διεύθυνσης.\n\nΣημειώστε ότι σε μερικές περιπτώσεις, η εταιρεία πιστωτικής κάρτας σας μπορεί να θέσει ένα «πάγωμα» στα χρήματα του λογαριασμού σας, αλλά δε θα χρεωθείτε. Αφού διορθώσετε όποια λάθη παρουσιάζονται στις παρακάτω πληροφορίες, προσπαθήστε την αγορά σας ξανά."
 "Steam_SubscriptionCancelled_PaymentCardDeclined_InsufficientFundsCart"		"Η συνδρομή σας στα ακόλουθα αντικείμενα δεν ολοκληρώθηκε. Οι πληροφορίες πιστωτικής κάρτας σας απορρίφθηκαν από την εταιρεία πιστωτικής κάρτας σας λόγω ανεπαρκών χρημάτων σε αυτόν το λογαριασμό.\n\nΣημειώστε ότι σε μερικές περιπτώσεις, η εταιρεία πιστωτικής κάρτας σας μπορεί να θέσει ένα «πάγωμα» στα χρήματα του λογαριασμού σας, αλλά δε θα χρεωθείτε."
 "Steam_Subscription_Preorder_PreProcessCart" "Η προπαραγγελία σας έχει διεκπεραιωθεί, και το παιχνίδι θα κυκλοφορήσει επίσημα σύντομα.Η πληρωμή σας έχει ολοκληρωθεί.\n\nΘα σας ειδοποιήσουμε όταν το παιχνίδι είναι διαθέσιμο για παίξιμο. Ευχαριστούμε για την παραγγελία σας!"
-"Steam_SubscriptionSuccessCart$purchasetype=regular" "Η συνδρομή σας στα ακόλουθα αντικείμενα ολοκληρώθηκε επιτυχώς. Η συνδρομή σας είναι εγγεγραμμένη σε αυτόν το λογαριασμό Steam: %accountname%. Μελλοντικά, θα πρέπει να συνδεθείτε σε αυτόν το λογαριασμό για να αποκτήσετε πρόσβαση στα παιχνίδια σας. Σας ευχαριστούμε για την παραγγελία σας!"
+"Steam_SubscriptionSuccessCart$purchasetype=regular" "Η συνδρομή σας στα ακόλουθα αντικείμενα ολοκληρώθηκε. Η συνδρομή σας είναι εγγεγραμμένη σε αυτόν το λογαριασμό Steam: %accountname%. Μελλοντικά, θα πρέπει να συνδεθείτε σε αυτόν το λογαριασμό για να αποκτήσετε πρόσβαση στα παιχνίδια σας. Σας ευχαριστούμε για την παραγγελία σας!"
 "Steam_SubscriptionSuccessCart$purchasetype=gift" "Τα ακόλουθα αντικείμενα στάλθηκαν ως δώρα στον χρήστη %giftee%. Σας ευχαριστούμε για την παραγγελία σας!"
-"Steam_SubscriptionSuccessCart$purchasetype=unknown" "Η αγορά των παρακάτω αντικειμένων ολοκληρώθηκε επιτυχώς. Σας ευχαριστούμε για την παραγγελία σας!"
+"Steam_SubscriptionSuccessCart$purchasetype=unknown" "Η αγορά των παρακάτω αντικειμένων ολοκληρώθηκε. Σας ευχαριστούμε για την παραγγελία σας!"
 "Steam_Subscription_Preorder_CcardSuccessCart" "Πρόσφατα προπαραγγείλατε τα ακόλουθα αντικείμενα. Αυτά τα αντικείμενα έχουν κυκλοφορήσει επίσημα, επομένως η πιστωτική σας κάρτα έχει επεξεργαστεί και χρεωθεί. Ευχαριστούμε για την παραγγελία σας!"
-"Steam_Subscription_Success_WithShippingCart$purchasetype=regular"	"Η συνδρομή σας στα ακόλουθα αντικείμενα ολοκληρώθηκε επιτυχώς.\n\nΜπορείτε να παίξετε οποιοδήποτε από τα παιχνίδια που κυκλοφορούν αυτή τη στιγμή επιλέγοντάς τα από τη συλλογή παιχνιδιών του Steam σας. Επιπλέον, θα λάβατε ένα μήνυμα επιβεβαίωσης στο ηλεκτρονικό σας ταχυδρομείο μόλις τα εμπορεύματα της παραγγελίας σας αποσταλούν. Ευχαριστούμε για την παραγγελία σας!"
+"Steam_Subscription_Success_WithShippingCart$purchasetype=regular"	"Η συνδρομή σας στα ακόλουθα αντικείμενα ολοκληρώθηκε.\n\nΜπορείτε να παίξετε οποιοδήποτε από τα παιχνίδια που κυκλοφορούν αυτή τη στιγμή επιλέγοντάς τα από τη συλλογή παιχνιδιών του Steam σας. Επιπλέον, θα λάβατε ένα μήνυμα επιβεβαίωσης στο ηλεκτρονικό σας ταχυδρομείο μόλις τα εμπορεύματα της παραγγελίας σας αποσταλούν. Ευχαριστούμε για την παραγγελία σας!"
 "Steam_Subscription_Success_WithShippingCart$purchasetype=gift"	"Τα ακόλουθα αντικείμενα έχουν σταλεί ως δώρα στον %giftee%. Θα λάβατε ένα μήνυμα επιβεβαίωσης στο ηλεκτρονικό σας ταχυδρομείο μόλις τα εμπορεύματα της παραγγελίας σας αποσταλούν. Ευχαριστούμε για την παραγγελία σας!"
 "Steam_Subscription_Success_WithShippingCart$purchasetype=unknown"	"Η αγορά των ακόλουθων αντικειμένων ολοκληρώθηκε. Θα λάβατε ένα μήνυμα επιβεβαίωσης στο ηλεκτρονικό σας ταχυδρομείο μόλις τα εμπορεύματα της παραγγελίας σας αποσταλούν. Ευχαριστούμε για την παραγγελία σας!"
 "Steam_SubscriptionCancelled_PaymentCardUseLimitHit_InfoCart" 	"Η συναλλαγή δεν ολοκληρώθηκε επειδή η παρακάτω πιστωτική κάρτα χρησιμοποιήθηκε πάρα πολλές φορές στο Steam.\n\nΑυτή η πολιτική υπάρχει για την προστασία των πελατών μας από απάτη πιστωτικής κάρτας. Θα διώξουμε την απάτη κατά γράμμα του νόμου."
@@ -4828,8 +4828,11 @@
 "SteamUI_RunningConflictingSoftware" "Εντοπίστηκε ασύμβατο λογισμικό"
 "SteamUI_RunningIncompatibleTcpService" "Μια μη συμβατή έκδοση του %incompatdll% (που σχετίζεται με το %incompatname%)\nεντοπίστηκε εντός της διεργασίας Steam.\n\nΠροτείνουμε να ενημερώσετε ή να απεγκαταστήσετε αυτό το λογισμικό εάν αντιμετωπίζετε απροσδόκητους τερματισμούς\nή επιβράδυνση του δικτύου όταν εκτελείτε το Steam ή μεμονωμένα παιχνίδια."
 
+"SteamUI_RunningBannedSoftware" "Λογισμικό που τροποποιεί τη συμπεριφορά του Steam"
+"SteamUI_RunningBannedSoftwareDesc" "Το Steam ανίχνευσε το %incompatname%, το οποίο είναι λογισμικό τρίτων που ενδέχεται να τροποποιήσει το Steam, ώστε να παρακάμψει\nτην ασφάλεια ή τους ελέγχους ιδιοκτησίας. Είναι γνωστό ότι αυτό το λογισμικό μπορεί να τερματίσει απρόσμενα το Steam και να παραβιάσει\nτο Συμφωνητικό Συνδρομητή Steam και την πνευματική ιδιοκτησία των δημιουργών DLC. Η χρήση αυτού του λογισμικού μπορεί να οδηγήσει\nσε αποκλεισμό ή κλείδωμα λογαριασμού.\n\nΑπεγκαταστήστε το για να εκτελέσετε το Steam."
+
 "Steam_XboxDriverInstall_Title"		"Εγκατάσταση οδηγού Xbox"
-"Steam_XboxDriverInstall_Success"	"Επιτυχία ενημέρωσης οδηγού. Θα ενεργοποιηθεί μετά από επανεκκίνηση του υπολογιστή σας."
+"Steam_XboxDriverInstall_Success"	"Ο οδηγός ενημερώθηκε. Θα ενεργοποιηθεί μετά από επανεκκίνηση του υπολογιστή σας."
 "Steam_XboxDriverInstall_ServiceFailure"	"Αποτυχία ενημέρωσης οδηγού. Εκτελείτε το Steam ως κανονικός χρήστης; Εκτελείται και είναι ενημερωμένη η υπηρεσία Steam;"
 "Steam_XboxDriverInstall_Failure"	"Αποτυχία ενημέρωσης οδηγού (σφάλμα = %error%)"
 

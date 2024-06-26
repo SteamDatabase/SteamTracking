@@ -4831,6 +4831,9 @@ Mac OS X 10.7 或是更高的版本。"
 "SteamUI_RunningConflictingSoftware" "偵測到衝突軟體"
 "SteamUI_RunningIncompatibleTcpService" "在 Steam 處理程序中偵測到\n%incompatdll%（與 %incompatname% 有關）的不相容版本。\n\n如執行 Steam 或個別遊戲時遇到當機或網路遲緩的問題，\n我們建議您更新或移除此軟體。"
 
+"SteamUI_RunningBannedSoftware" "修改 Steam 行為的軟體"
+"SteamUI_RunningBannedSoftwareDesc" "Steam 偵測到「%incompatname%」，此為第三方軟體，可能會修改 Steam 以避開安全性或所有權檢查。\n已知此軟體會造成 Steam 當機、違反 Steam 訂戶協議並侵​​犯 DLC 製作者的智慧財產權。\n使用此軟體可能會導致帳戶禁用或封鎖。\n\n請先解除安裝該軟體，才可繼續執行 Steam。"
+
 "Steam_XboxDriverInstall_Title"		"Xbox 驅動程式安裝"
 "Steam_XboxDriverInstall_Success"	"驅動程式更新成功，並會在您重新啟動電腦後執行。"
 "Steam_XboxDriverInstall_ServiceFailure"	"驅動程式更新失敗。是否正以一般使用者身份執行 Steam，且 Steam 服務正在執行並為最新版本？"

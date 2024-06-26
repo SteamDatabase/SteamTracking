@@ -86,6 +86,7 @@
  T DeclareCurrentThreadIsMainThread
  T DoNewAssertDialog
  T EnableCrashingOnCrashes
+ T EnsureValidBoolValue
  T Error
  T FreeCrashMemoryReserve
  T GetAvailableRAM
@@ -113,6 +114,7 @@
  T IsLogActive
  T IsSpewActive
  T IsStackTrackingFiltered
+ T IsValidBoolValue
  T Log
  T MiniDumpUnlock
  T Msg
@@ -167,6 +169,7 @@
  T RealPrintCallStack
  T RealPrintRawCallStack
  T ReleaseThreadHandle
+ T RunTypeValidationTests
  T SecureRandomBytes
  T SetAssertDumpStack
  T SetAssertFailedNotifyFunc

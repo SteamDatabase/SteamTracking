@@ -9,6 +9,7 @@
 "TextEntry_SelectAll"		"Velg alle"
 "TextEntry_CopyAllToClipboard"	"Kopier all tekst til utklippstavlen"
 "FileOpenDialog_Open"		"Åpne"
+"FileOpenDialog_Save"		"Lagre"
 "FileOpenDialog_Cancel"		"Avbryt"
 "FileOpenDialog_Look_in"	"Søk i:"
 "FileOpenDialog_File_Name"	"Filnavn:"

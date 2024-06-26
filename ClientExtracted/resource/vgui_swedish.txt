@@ -9,6 +9,7 @@
 "TextEntry_SelectAll"		"Markera allt"
 "TextEntry_CopyAllToClipboard"	"Kopiera alla text till Urklipp"
 "FileOpenDialog_Open"		"Öppna"
+"FileOpenDialog_Save"		"Spara"
 "FileOpenDialog_Cancel"		"Avbryt"
 "FileOpenDialog_Look_in"	"Sök i:"
 "FileOpenDialog_File_Name"	"Filnamn:"

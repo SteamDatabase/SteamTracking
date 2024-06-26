@@ -80,6 +80,15 @@ message CTransportValidation_NotifyCount_Notification {
 	optional int32 num = 1;
 }
 
+message CTransportValidation_RequestInvalidBool_Request {
+}
+
+message CTransportValidation_RequestInvalidBool_Response {
+	optional int32 before = 1;
+	optional bool output = 2;
+	optional int32 after = 3;
+}
+
 message CTransportValidationClient_AddNumbers_Request {
 	repeated int32 numbers = 1;
 }
@@ -102,6 +111,7 @@ service TransportValidation {
 	rpc CountOrderedBytes (.CTransportValidation_CountOrderedBytes_Request) returns (.CTransportValidation_CountOrderedBytes_Response);
 	rpc ThreadedCount (.CTransportValidation_ThreadedCount_Request) returns (.CTransportValidation_ThreadedCount_Response);
 	rpc NotifyCount (.CTransportValidation_NotifyCount_Notification) returns (.WebUINoResponse);
+	rpc RequestInvalidBool (.CTransportValidation_RequestInvalidBool_Request) returns (.CTransportValidation_RequestInvalidBool_Response);
 }
 
 service TransportValidationClient {

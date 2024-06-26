@@ -991,8 +991,9 @@ message CMsgStartDownload {
 	optional string url = 2;
 }
 
-message CMsgSetTopWindow {
+message CMsgSetWindowStackingOrder {
 	optional uint32 browser_handle = 1;
+	optional uint32 estackingorder = 2;
 }
 
 message CMsgBrowserViewPostMessageToParentRequest {

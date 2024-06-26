@@ -4834,6 +4834,9 @@ Luo ja valitse luokkia tälle pelille alla, minkä jälkeen voit kokoelman Näyt
 "SteamUI_RunningConflictingSoftware" "Ohjelmistoristiriita havaittu"
 "SteamUI_RunningIncompatibleTcpService" "Steamin prosessissa on tunnistettu yhteensopimaton\n%incompatdll% -versio (liittyy ohjelmaan %incompatname%).\n\nSuosittelemme päivittämään tämän ohjelman tai poistamaan sen asennuksen,\njos Steam tai yksittäiset pelit kaatuvat tai koet verkkoyhteyden hidastumista niitä käyttäessäsi."
 
+"SteamUI_RunningBannedSoftware" "Steamin toimintaan vaikuttava ohjelmisto"
+"SteamUI_RunningBannedSoftwareDesc" "Steam on havainnut kolmannen osapuolen ohjelmiston nimeltä %incompatname%. Sitä saatetaan käyttää Steamin turvallisuusominaisuuksien tai omistajuuden tarkistuksen ohittamiseen.\nOhjelmisto tunnetusti aiheuttaa Steamin kaatumisia ja rikkoo Steamin tilaajasopimusta ja lisämateriaalin luojien tekijänoikeuksia. Ohjelmiston\nkäyttö voi johtaa kieltoihin tai tilin lukitukseen.\n\nPoista kyseisen ohjelmiston asennus ennen kuin käytät Steamiä."
+
 "Steam_XboxDriverInstall_Title"		"Xbox-ajurin asennus"
 "Steam_XboxDriverInstall_Success"	"Ajurin päivitys valmis. Se otetaan käyttöön, kun tietokone on käynnistetty uudelleen."
 "Steam_XboxDriverInstall_ServiceFailure"	"Ajurin päivitys epäonnistui. Käytätkö Steamiä normaalina käyttäjänä? Onko Steam-palvelu käytössä ja ajan tasalla?"

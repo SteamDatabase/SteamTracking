@@ -9,6 +9,7 @@
 "TextEntry_SelectAll"		"Alles selecteren"
 "TextEntry_CopyAllToClipboard"	"Alle tekst naar het klembord kopiëren"
 "FileOpenDialog_Open"		"Openen"
+"FileOpenDialog_Save"		"Opslaan"
 "FileOpenDialog_Cancel"		"Annuleren"
 "FileOpenDialog_Look_in"	"Bladeren in:"
 "FileOpenDialog_File_Name"	"Bestandsnaam:"

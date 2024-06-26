@@ -1249,7 +1249,7 @@ Công đoạn này nên hoàn thành dưới một phút."
 "Steam_Subscription_Preorder_Timeout" "Yêu cầu đặt trước %subscription% của bạn chưa hoàn thành, bởi vì Steam đang bận xử lý giao dịch.\n\nChúng tôi sẽ quay lại cùng với kết quả chuyển khoản của bạn ngay khi chúng tôi có thể xử lý nó."
 
 "Steam_SubscriptionCancelled_Cancelled_Headline" "Việc đăng ký bị hủy"
-"Steam_SubscriptionCancelled_Cancelled"	"Việc đăng ký %subscription% của bạn đã bị hủy. Việc hủy này có thể do chính từ yêu cầu của chủ tài khoản Steam, hoặc đến từ Valve theo điều khoản người đăng ký Steam."
+"Steam_SubscriptionCancelled_Cancelled"	"Việc đăng ký %subscription% của bạn đã bị hủy. Việc hủy này có thể do chính từ yêu cầu của chủ tài khoản Steam, hoặc đến từ Valve theo Thỏa thuận người đăng ký Steam."
 
 "Steam_SubscriptionCancelled_ServerFailed_Headline" "Máy chủ Steam hiện đang quá bận."
 "Steam_SubscriptionCancelled_ServerFailed" "Việc đăng ký %subscription% của bạn chưa hoàn thành. Các máy chủ Steam hiện đang quá bận để xử lý yêu cầu của bạn. \n\nChúng tôi xin lỗi vì sự bất tiện này. Xin vui lòng thử lại giao dịch của bạn sau vài giờ nữa."
@@ -1557,11 +1557,11 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_SteamSubscriberAgreement"	    "Thỏa thuận người đăng ký Steam"
 "Steam_SteamSubscriberAgreement_china"	"Thỏa thuận giấy phép Steam China"
 "Steam_ComplianceRequired_Title"	"Steam - Cảnh báo"
-"Steam_ComplianceRequired_Info"		"Bạn phải đồng ý với điều khoản người đăng ký Steam để tiếp tục"
+"Steam_ComplianceRequired_Info"		"Bạn phải đồng ý với Thỏa thuận người đăng ký Steam để tiếp tục"
 
 "Steam_Legal_UnreleasedProduct"	"* Đây là một sản phẩm chưa phát hành và có sẵn cho người mua ngay khi phát hành. Ngày phát hành cho sản phẩm này chưa được ấn định và người mua không nên dựa vào bất kỳ ngày phát hành ước tính nào."
 "Steam_Legal_TimeToShipGoods"	"** Vui lòng cho phép khoảng từ 6-8 tuần để vận chuyển các mặt hàng đi kèm với Half-Life 2 gold package."
-"Steam_Legal_SSACheckbox"	"Tôi đồng ý với điều khoản người đăng ký Steam và điều kiện của ưu đãi đã mô tả ở đây sẽ áp dụng cho lần mua hàng này."
+"Steam_Legal_SSACheckbox"	"Tôi đồng ý với Thỏa thuận người đăng ký Steam và điều kiện của ưu đãi đã mô tả ở đây sẽ áp dụng cho lần mua hàng này."
 "Steam_Legal_SSANext"	"Tôi đồng ý"
 "Steam_Legal_SSADisagree"	"Tôi không đồng ý"
 "SteamUI_HardwarePromoWizard_Title" "Đăng ký sản phẩm khuyến mại"
@@ -1680,7 +1680,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "SteamUI_NetworkTroubleshootingTips_URL"	"https://support.steampowered.com/kb_article.php?ref=1456-EUDN-2493"
 
 
-"SteamUI_SSA_Agree"				"Xin vui lòng đọc toàn bộ điều khoản này. Bạn phải đồng ý với mọi điều khoản trong điều khoản người đăng ký Steam để tiếp tục."
+"SteamUI_SSA_Agree"				"Xin vui lòng đọc toàn bộ điều khoản này. Bạn phải đồng ý với mọi điều khoản trong Thỏa thuận người đăng ký Steam để tiếp tục."
 "SteamUI_SSA_CybercafeAgree"		"Tôi là người đã được cấp phép điều hành Cybercafe và tôi đồng ý với những quy định trên"
 "SteamUI_SSA_ActivateProduct"		"Để đăng ký sản phẩm của bạn trên Steam và thêm nó vào thư viện, vui lòng nhập mã sản phẩm phân phối đi kèm với CD/DVD của nhà bán lẻ hoặc mã sản phẩm Steam tại đây. Nhấp \"Tiếp\" để tiếp tục."
 "SteamUI_ActivateProductLockedDown"		"Tài khoản của bạn đã tự khoá hoặc bị khoá bởi đội hỗ trợ Steam. Bạn không thể kích hoạt bất cứ vật phẩm mới nào trên tài khoản này cho tới khi vấn đề được giải quyết."
@@ -1976,7 +1976,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "ServerBrowser_AppNotFound" "Không thể kết nối tới máy chủ,\n mã số ứng dụng (app id) được máy chủ ghi nhận không hợp lệ."
 "ServerBrowser_NotInitialized" "Steam chưa được khởi chạy. Xin vui lòng thử lại"
 
-"SteamUI_SSAUpdatedInfo"	"Điều khoản người đăng ký Steam đã được cập nhật vào lúc %SSA_date%. Qua việc sử dụng Steam và trò chơi Steam, bạn đang khẳng định rằng mình đã đọc và đồng ý với những thay đổi trên."
+"SteamUI_SSAUpdatedInfo"	"Thỏa thuận người đăng ký Steam đã được cập nhật vào lúc %SSA_date%. Qua việc sử dụng Steam và trò chơi Steam, bạn đang khẳng định rằng mình đã đọc và đồng ý với những thay đổi trên."
 "Steam_SSAUpdated_Link"	"Nhấp vào đây để xem các điều khoản cập nhật mới."
 
 "Steam_Settings_Title"		"Thiết lập"
@@ -3192,7 +3192,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_GameProperties_LanguageTab" "Ngôn ngữ"
 
 "Steam_GameProperties_BetasTab" "Beta"
-"Steam_ChooseGameBeta"	"Chọn beta bạn mà muốn tham gia:"
+"Steam_ChooseGameBeta"	"Chọn bản beta bạn muốn tham gia:"
 "Steam_ContentBetaUnlockPrivate" "Nhập mã truy cập beta để mở khóa beta riêng tư:"
 "Steam_ContentBetaCheckPassword"	"Kiểm tra mã"
 "Steam_ContentBetaResultsPasswordSuccessful"	"Mã truy cập chính xác, beta kín \"%betaname%\" giờ đã sẵn sàng."
@@ -4041,7 +4041,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "steam_also_delete_from_cloud" "Xóa luôn khỏi Steam Cloud"
 "steam_screenshots_error_info" "Đã có lỗi xảy ra khi tải lên %ScreenshotsErrors% ảnh chụp màn hình. Steam Cloud có thể tạm thời không sẵn sàng."
 "steam_screenshots_error_accountban" "Bạn không được phép tải lên nội dung trong trung tâm này do tài khoản đang chịu một lệnh cấm có hiệu lực."
-"steam_screenshots_limited_user" "Tài khoản của bạn hiện bị giới hạn do bạn chưa chi ít nhất $5 USD trên Steam. Khi bị giới hạn, bạn không thể đăng công khai ảnh chụp."
+"steam_screenshots_limited_user" "Tài khoản của bạn hiện bị giới hạn do chưa chi tiêu ít nhất 5 USD trên Steam. Khi bị giới hạn, bạn không thể đăng công khai ảnh chụp."
 "steam_are_you_sure_delete_screenshot" "Ban có chắc là muốn xóa vĩnh viễn ảnh chụp màn hình này khỏi ổ cứng của mình không?"
 "steam_are_you_sure_delete_screenshots" "Bạn có chắc là muốn xóa %delete_screenshot_count% ảnh chụp màn hình này từ ổ cứng của bạn không?"
 "steam_screenshotdelete_title" "Xóa ảnh chụp"
@@ -4810,7 +4810,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_Browser_Disabled_NoBrowser" "Trình duyệt Steam bị vô hiệu hóa do có \"-no-browser\" trong dòng lệnh Steam."
 "Steam_Browser_Disabled_KB" "Xem bài viết hỗ trợ này để biết thêm thông tin"
 "Steam_Browser_Disabled_KB_URL" "https://support.steampowered.com/kb_article.php?ref=4090-RTKZ-4347"
-"Steam_ViewSSAInBrowser" "Bạn phải đọc và đồng ý với điều khoản người đăng ký Steam.\n<a href=\"%url%\">Nhấp vào đây</a> để mở thỏa thuận bằng trình duyệt của bạn. Quay lại cửa sổ này để tiếp tục."
+"Steam_ViewSSAInBrowser" "Bạn phải đọc và đồng ý với Thỏa thuận người đăng ký Steam.\n<a href=\"%url%\">Nhấp vào đây</a> để mở thỏa thuận bằng trình duyệt của bạn. Quay lại cửa sổ này để tiếp tục."
 
 "Steam_VR2DGameWarning_Title" "Cảnh báo"
 "Steam_VR2DGameWarning_Desc" "%launching_app% sẽ khởi động vào trong môi trường của VR HMD cũng như trên máy tính của bạn.\nHiệu suất có thể không chấp nhận được trong chế độ này. Để trò chơi chỉ chạy trên máy tính của bạn, vui lòng thoát SteamVR trước khi khởi động nó."
@@ -4833,6 +4833,9 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 
 "SteamUI_RunningConflictingSoftware" "Phát hiện phần mềm gây mâu thuẫn"
 "SteamUI_RunningIncompatibleTcpService" "Phiên bản không tương thích của %incompatdll% (thuộc về %incompatname%)\nđã được tìm thấy trong ứng dụng Steam.\n\nChúng tôi khuyên bạn nên cập nhật hoặc gỡ bỏ phần mềm này nếu bạn cảm thấy\nphần mềm tự động đóng hoặc kết nối bị chậm khi dùng Steam hoặc mở các trò chơi."
+
+"SteamUI_RunningBannedSoftware" "Phần mềm thay đổi hành vi Steam"
+"SteamUI_RunningBannedSoftwareDesc" "Steam đã phát hiện %incompatname%, phần mềm bên thứ ba có khả năng sửa đổi Steam với mục đích vượt qua kiểm tra bảo mật hoặc quyền sở hữu.\nPhần mềm này được biết có thể ngắt đột ngột Steam, vi phạm Thỏa thuận người đăng ký Steam, và vi phạm quyền sở hữu trí tuệ của người tạo DLC.\nHành vi sử dụng phần mềm này có thể dẫn tới lệnh cấm hoặc khóa tài khoản.\n\nVui lòng gỡ bỏ để có thể sử dụng Steam."
 
 "Steam_XboxDriverInstall_Title"		"Cài đặt driver Xbox"
 "Steam_XboxDriverInstall_Success"	"Cập nhật driver thành công, và sẽ kích hoạt sau khi bạn khởi động lại máy tính."

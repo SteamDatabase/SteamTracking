@@ -54,7 +54,7 @@
 "Friends_InGame"		"게임 중"
 "Friends_InApp"			"사용 중"
 "Friends_InMod"			"모드 중"
-"Friends_InShortcut"		"비 Steam 게임 중"
+"Friends_InShortcut"		"Steam 외부 게임 중"
 "Friends_Blocked"		"차단됨"
 
 "Friends_AddFriend"		"친구 추가"

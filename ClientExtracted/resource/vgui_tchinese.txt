@@ -9,6 +9,7 @@
 "TextEntry_SelectAll"		"全選"
 "TextEntry_CopyAllToClipboard"	"複製所有文字至剪貼簿"
 "FileOpenDialog_Open"		"開啟"
+"FileOpenDialog_Save"		"儲存"
 "FileOpenDialog_Cancel"		"取消"
 "FileOpenDialog_Look_in"	"尋找範圍："
 "FileOpenDialog_File_Name"	"檔案名稱："

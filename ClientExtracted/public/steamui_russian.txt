@@ -1459,7 +1459,7 @@
 
 "SteamUI_DriverUpdateURL" "http://www.steampowered.com/Steam/Messages/driver_update/index.php"
 "SteamUI_DriverUnsupportedURL" "http://www.steampowered.com/Steam/Messages/minimum_req/index.php"
-"SteamUI_UnknownDriverURL" "http://store.steampowered.com/privacy_agreement/russian/"
+"SteamUI_UnknownDriverURL" "http://store.steampowered.com/privacy_agreement/"
 
 "SteamUI_Syscheck_Success_Title" "Тест на соответствие системным требованиям пройден"
 "SteamUI_Syscheck_Success" "Данный компьютер соответствует минимальным системным требованиям «%game%»."
@@ -1682,7 +1682,7 @@
 "SteamUI_ActivateProductLockedDown"		"Аккаунт заблокирован вами или поддержкой Steam. Вы не сможете активировать продукты, пока блокировку не снимут."
 "SteamUI_ActivateProduct_ViewSupportMessage" "Показать уведомления от поддержки Steam"
 
-"SteamUI_PPA_Agree"				"Пожалуйста, полностью прочтите это соглашение. Вы должны согласиться с условиями политики конфиденциальности Valve, чтобы продолжить."
+"SteamUI_PPA_Agree"				"Пожалуйста, полностью прочтите это соглашение. Вы должны согласиться с его условиями, чтобы продолжить."
 "Steam_ClickToPrint"			"Нажмите здесь для печати"
 
 
@@ -4826,6 +4826,9 @@
 
 "SteamUI_RunningConflictingSoftware" "Обнаружены конфликтующие программы"
 "SteamUI_RunningIncompatibleTcpService" "В процессе Steam обнаружена несовместимая версия\nфайла %incompatdll% (связанного с %incompatname%).\n\nРекомендуем обновить или удалить эту программу,\nесли при запущенном клиенте Steam или в играх\nпроисходят сбои или замедляется работа сети."
+
+"SteamUI_RunningBannedSoftware" "Программное обеспечение, влияющее на работу Steam"
+"SteamUI_RunningBannedSoftwareDesc" "Обнаружено стороннее ПО «%incompatname%», которое может влиять на работу Steam с целью обхода проверок владения и безопасности.\nИзвестно, что это ПО вызывает сбои в работе клиента и нарушает условия соглашения подписчика Steam, а также права интеллектуальной собственности создателей дополнительного контента.\nИспользование этого ПО может привести к блокировке аккаунта.\n\nУдалите это приложение, чтобы запустить Steam."
 
 "Steam_XboxDriverInstall_Title"		"Установка драйвера Xbox"
 "Steam_XboxDriverInstall_Success"	"Драйвер обновлён и начнёт работать после перезагрузки компьютера."

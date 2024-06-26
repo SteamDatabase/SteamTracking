@@ -1,4 +1,4 @@
-var CLSTAMP = "8995138";
+var CLSTAMP = "9000862";
 /* Third-party software licenses can be found at licenses.txt */ (self.webpackChunksteamui =
   self.webpackChunksteamui || []).push([
   [9394],
@@ -1259,41 +1259,38 @@ var CLSTAMP = "8995138";
     24782: (e, t) => {
       "use strict";
       (t.b$ = function (e) {
-        for (
-          var t,
-            r = s(e),
-            i = r[0],
-            a = r[1],
-            l = new o(
-              (function (e, t, r) {
-                return (3 * (t + r)) / 4 - r;
-              })(0, i, a),
-            ),
-            u = 0,
-            c = a > 0 ? i - 4 : i,
-            g = 0;
-          g < c;
-          g += 4
-        )
+        var t,
+          r,
+          i = s(e),
+          a = i[0],
+          l = i[1],
+          u = new o(
+            (function (e, t, r) {
+              return (3 * (t + r)) / 4 - r;
+            })(0, a, l),
+          ),
+          c = 0,
+          g = l > 0 ? a - 4 : a;
+        for (r = 0; r < g; r += 4)
           (t =
-            (n[e.charCodeAt(g)] << 18) |
-            (n[e.charCodeAt(g + 1)] << 12) |
-            (n[e.charCodeAt(g + 2)] << 6) |
-            n[e.charCodeAt(g + 3)]),
-            (l[u++] = (t >> 16) & 255),
-            (l[u++] = (t >> 8) & 255),
-            (l[u++] = 255 & t);
-        2 === a &&
-          ((t = (n[e.charCodeAt(g)] << 2) | (n[e.charCodeAt(g + 1)] >> 4)),
-          (l[u++] = 255 & t));
-        1 === a &&
+            (n[e.charCodeAt(r)] << 18) |
+            (n[e.charCodeAt(r + 1)] << 12) |
+            (n[e.charCodeAt(r + 2)] << 6) |
+            n[e.charCodeAt(r + 3)]),
+            (u[c++] = (t >> 16) & 255),
+            (u[c++] = (t >> 8) & 255),
+            (u[c++] = 255 & t);
+        2 === l &&
+          ((t = (n[e.charCodeAt(r)] << 2) | (n[e.charCodeAt(r + 1)] >> 4)),
+          (u[c++] = 255 & t));
+        1 === l &&
           ((t =
-            (n[e.charCodeAt(g)] << 10) |
-            (n[e.charCodeAt(g + 1)] << 4) |
-            (n[e.charCodeAt(g + 2)] >> 2)),
-          (l[u++] = (t >> 8) & 255),
-          (l[u++] = 255 & t));
-        return l;
+            (n[e.charCodeAt(r)] << 10) |
+            (n[e.charCodeAt(r + 1)] << 4) |
+            (n[e.charCodeAt(r + 2)] >> 2)),
+          (u[c++] = (t >> 8) & 255),
+          (u[c++] = 255 & t));
+        return u;
       }),
         (t.JQ = function (e) {
           for (
@@ -21193,48 +21190,43 @@ var CLSTAMP = "8995138";
       "use strict";
       e.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
     },
-    37410: (e) => {
+    39350: (e) => {
       "use strict";
       function t(e, t) {
         return Object.prototype.hasOwnProperty.call(e, t);
       }
-      e.exports = function (e, n, o, i) {
-        (n = n || "&"), (o = o || "=");
-        var a = {};
-        if ("string" != typeof e || 0 === e.length) return a;
-        var s = /\+/g;
-        e = e.split(n);
-        var l = 1e3;
-        i && "number" == typeof i.maxKeys && (l = i.maxKeys);
-        var u = e.length;
-        l > 0 && u > l && (u = l);
-        for (var c = 0; c < u; ++c) {
-          var g,
+      e.exports = function (e, r, n, o) {
+        (r = r || "&"), (n = n || "=");
+        var i = {};
+        if ("string" != typeof e || 0 === e.length) return i;
+        var a = /\+/g;
+        e = e.split(r);
+        var s = 1e3;
+        o && "number" == typeof o.maxKeys && (s = o.maxKeys);
+        var l = e.length;
+        s > 0 && l > s && (l = s);
+        for (var u = 0; u < l; ++u) {
+          var c,
+            g,
             d,
             p,
-            f,
-            h = e[c].replace(s, "%20"),
-            _ = h.indexOf(o);
-          _ >= 0
-            ? ((g = h.substr(0, _)), (d = h.substr(_ + 1)))
-            : ((g = h), (d = "")),
+            f = e[u].replace(a, "%20"),
+            h = f.indexOf(n);
+          h >= 0
+            ? ((c = f.substr(0, h)), (g = f.substr(h + 1)))
+            : ((c = f), (g = "")),
+            (d = decodeURIComponent(c)),
             (p = decodeURIComponent(g)),
-            (f = decodeURIComponent(d)),
-            t(a, p)
-              ? r(a[p])
-                ? a[p].push(f)
-                : (a[p] = [a[p], f])
-              : (a[p] = f);
+            t(i, d)
+              ? Array.isArray(i[d])
+                ? i[d].push(p)
+                : (i[d] = [i[d], p])
+              : (i[d] = p);
         }
-        return a;
+        return i;
       };
-      var r =
-        Array.isArray ||
-        function (e) {
-          return "[object Array]" === Object.prototype.toString.call(e);
-        };
     },
-    89871: (e) => {
+    94104: (e) => {
       "use strict";
       var t = function (e) {
         switch (typeof e) {
@@ -21248,47 +21240,34 @@ var CLSTAMP = "8995138";
             return "";
         }
       };
-      e.exports = function (e, i, a, s) {
+      e.exports = function (e, r, n, o) {
         return (
-          (i = i || "&"),
-          (a = a || "="),
+          (r = r || "&"),
+          (n = n || "="),
           null === e && (e = void 0),
           "object" == typeof e
-            ? n(o(e), function (o) {
-                var s = encodeURIComponent(t(o)) + a;
-                return r(e[o])
-                  ? n(e[o], function (e) {
-                      return s + encodeURIComponent(t(e));
-                    }).join(i)
-                  : s + encodeURIComponent(t(e[o]));
-              }).join(i)
-            : s
-              ? encodeURIComponent(t(s)) + a + encodeURIComponent(t(e))
+            ? Object.keys(e)
+                .map(function (o) {
+                  var i = encodeURIComponent(t(o)) + n;
+                  return Array.isArray(e[o])
+                    ? e[o]
+                        .map(function (e) {
+                          return i + encodeURIComponent(t(e));
+                        })
+                        .join(r)
+                    : i + encodeURIComponent(t(e[o]));
+                })
+                .filter(Boolean)
+                .join(r)
+            : o
+              ? encodeURIComponent(t(o)) + n + encodeURIComponent(t(e))
               : ""
         );
       };
-      var r =
-        Array.isArray ||
-        function (e) {
-          return "[object Array]" === Object.prototype.toString.call(e);
-        };
-      function n(e, t) {
-        if (e.map) return e.map(t);
-        for (var r = [], n = 0; n < e.length; n++) r.push(t(e[n], n));
-        return r;
-      }
-      var o =
-        Object.keys ||
-        function (e) {
-          var t = [];
-          for (var r in e)
-            Object.prototype.hasOwnProperty.call(e, r) && t.push(r);
-          return t;
-        };
     },
-    80287: (e, t, r) => {
+    48966: (e, t, r) => {
       "use strict";
-      (t.decode = t.parse = r(37410)), (t.encode = t.stringify = r(89871));
+      (t.decode = t.parse = r(39350)), (t.encode = t.stringify = r(94104));
     },
     43577: (e, t, r) => {
       "use strict";
@@ -34480,17 +34459,17 @@ var CLSTAMP = "8995138";
         n.k_EAccountFlagAdmin,
         n.k_EAccountFlagSupervisor;
       var o = r(63083),
-        i = r(72080);
+        i = r(37939);
       class a {
+        m_ulSteamID = i.Z.UZERO;
         constructor(e = 0, t, r, n) {
-          (this.m_ulSteamID = i.Z.UZERO),
-            e instanceof a
-              ? (this.m_ulSteamID = e.m_ulSteamID)
-              : "string" == typeof e
-                ? (this.m_ulSteamID = i.Z.fromString(e, !0))
-                : t && r && void 0 !== n
-                  ? this.SetFromComponents(e, n, r, t)
-                  : (this.m_ulSteamID = e ? i.Z.fromNumber(e, !0) : i.Z.UZERO);
+          e instanceof a
+            ? (this.m_ulSteamID = e.m_ulSteamID)
+            : "string" == typeof e
+              ? (this.m_ulSteamID = i.Z.fromString(e, !0))
+              : t && r && void 0 !== n
+                ? this.SetFromComponents(e, n, r, t)
+                : (this.m_ulSteamID = e ? i.Z.fromNumber(e, !0) : i.Z.UZERO);
         }
         static InitFromAccountID(e, t) {
           return new a(Number(e), t, 1, o.QS);
@@ -34667,9 +34646,7 @@ var CLSTAMP = "8995138";
             (e[(e.k_ESteamRealmChina = 2)] = "k_ESteamRealmChina");
         })(n || (n = {}));
       class i {
-        constructor() {
-          this.m_rgHandles = [];
-        }
+        m_rgHandles = [];
         Add(e) {
           e && this.m_rgHandles.push(e);
         }
@@ -36307,6 +36284,126 @@ var CLSTAMP = "8995138";
             (e[(e.Notification_Destroyed = 603)] = "Notification_Destroyed");
         })(l || (l = {}));
     },
+    66035: (e, t, r) => {
+      "use strict";
+      function n(e, t = 0) {
+        if (e?.length > 1) {
+          let r = t > 0 ? Math.min(t, e.length) : e.length;
+          for (; 0 !== r; ) {
+            const t = Math.floor(Math.random() * r);
+            r -= 1;
+            const n = e[r];
+            (e[r] = e[t]), (e[t] = n);
+          }
+        }
+      }
+      function o(e, t, r) {
+        t < 0 ||
+          r < 0 ||
+          (r >= e.length && (e[r] = void 0), e.splice(r, 0, e.splice(t, 1)[0]));
+      }
+      function i(e, t) {
+        if (!e && !t) return !0;
+        if (!e || !t) return !1;
+        if (e.length != t.length) return !1;
+        for (let r = 0; r < e.length; r++) if (e[r] !== t[r]) return !1;
+        return !0;
+      }
+      function a(e, t) {
+        return s(e, (e) => t == e);
+      }
+      function s(e, t) {
+        const r = e.findIndex(t);
+        return r >= 0 && (e.splice(r, 1), !0);
+      }
+      function l(e, t) {
+        return e.reduce((e, r, n, o) => e + (t(r, n, o) ? 1 : 0), 0);
+      }
+      function u(e, t) {
+        return e.filter((e) => t !== e);
+      }
+      function c(e, t) {
+        let r = 0,
+          n = e.length - 1;
+        for (; r <= n; ) {
+          const o = Math.floor((r + n) / 2),
+            i = t(e[o]);
+          if (i > 0) r = o + 1;
+          else if (i < 0) n = o - 1;
+          else {
+            if (n == o) return o;
+            if (o == r) return n > o && t(e[o + 1]) < 0 ? o : o + 1;
+            r = o;
+          }
+        }
+        return n;
+      }
+      function g(e, t, r) {
+        const n = c(e, (e) => r(t, e));
+        e.splice(n + 1, 0, t);
+      }
+      function d(e, t) {
+        let r = 0,
+          n = 0;
+        for (; r < e.length; ) {
+          const o = e[r];
+          t(o, r, e) && (e[n++] = o), r++;
+        }
+        return (e.length = n), e;
+      }
+      function p(e, t, r) {
+        return (
+          e ||
+            console.error(
+              "array should be defined for us to fill in the missing indexes",
+            ),
+          e.length < t ? e.concat(Array(t - e.length).fill(r)) : e
+        );
+      }
+      function f(e) {
+        const t = new Set();
+        return e.forEach((e) => t.add(e)), Array.from(t);
+      }
+      r.d(t, {
+        DG: () => g,
+        LG: () => p,
+        LQ: () => n,
+        Qf: () => s,
+        W: () => l,
+        Zf: () => a,
+        de: () => u,
+        eO: () => d,
+        hV: () => o,
+        kp: () => f,
+        sL: () => c,
+        wc: () => i,
+      });
+    },
+    76167: (e, t, r) => {
+      "use strict";
+      r.d(t, { p: () => o });
+      var n = r(66035);
+      class o {
+        m_vecCallbacks = [];
+        Register(e) {
+          this.m_vecCallbacks.push(e);
+          return {
+            Unregister: () => {
+              n.Zf(this.m_vecCallbacks, e);
+            },
+          };
+        }
+        Dispatch(...e) {
+          for (const t of Array.from(this.m_vecCallbacks)) t(...e);
+        }
+        ClearAllCallbacks() {
+          this.m_vecCallbacks = [];
+        }
+        CountRegistered() {
+          return this.m_vecCallbacks.length;
+        }
+      }
+    },
     20352: (e, t, r) => {
       "use strict";
       r.d(t, { MD: () => l, gA: () => s, lq: () => a });
@@ -36315,12 +36412,19 @@ var CLSTAMP = "8995138";
         i = r(88619);
       r(12944);
       class a {
+        static sm_ErrorReportingStore;
         static InstallErrorReportingStore(e) {
           this.sm_ErrorReportingStore = e;
         }
         static InitHeaderFromPacket(e) {
           return new a(void 0, e);
         }
+        m_eMsg;
+        m_bValid;
+        m_netPacket;
+        m_cubHeader;
+        m_header;
+        m_body;
         constructor(e, t, r, i, a, s) {
           if (i)
             (this.m_eMsg = i.m_eMsg),
@@ -36676,6 +36780,8 @@ var CLSTAMP = "8995138";
             a.prototype.v4 || o.aR(a.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             a.sm_m ||
@@ -36731,6 +36837,8 @@ var CLSTAMP = "8995138";
             s.prototype.dst_gcid_queue || o.aR(s.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             s.sm_m ||
@@ -36794,6 +36902,8 @@ var CLSTAMP = "8995138";
             l.prototype.steamid || o.aR(l.M()),
             i.initialize(this, e, 0, -1, [27, 41], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             l.sm_m ||
@@ -37012,6 +37122,8 @@ var CLSTAMP = "8995138";
             u.prototype.size_unzipped || o.aR(u.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             u.sm_m ||
@@ -37075,6 +37187,8 @@ var CLSTAMP = "8995138";
             c.prototype.appid || o.aR(c.M()),
             i.initialize(this, e, 0, -1, [17], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             c.sm_m ||
@@ -37182,6 +37296,8 @@ var CLSTAMP = "8995138";
             g.prototype.clanid || o.aR(g.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             g.sm_m ||
@@ -37273,6 +37389,8 @@ var CLSTAMP = "8995138";
             d.prototype.rtime_before || o.aR(d.M()),
             i.initialize(this, e, 0, -1, [4], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             d.sm_m ||
@@ -37342,6 +37460,8 @@ var CLSTAMP = "8995138";
             p.prototype.packageid || o.aR(p.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             p.sm_m ||
@@ -37441,6 +37561,8 @@ var CLSTAMP = "8995138";
             f.prototype.content_descriptors_to_exclude || o.aR(f.M()),
             i.initialize(this, e, 0, -1, [1], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             f.sm_m ||
@@ -37495,6 +37617,8 @@ var CLSTAMP = "8995138";
             h.prototype.content_descriptorid || o.aR(h.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             h.sm_m ||
@@ -37583,6 +37707,8 @@ var CLSTAMP = "8995138";
             a.prototype.bincremental || o.aR(a.M()),
             i.initialize(this, e, 0, -1, [2], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             a.sm_m ||
@@ -37653,6 +37779,8 @@ var CLSTAMP = "8995138";
             s.prototype.ulfriendid || o.aR(s.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             s.sm_m ||
@@ -37716,6 +37844,8 @@ var CLSTAMP = "8995138";
             l.prototype.persona_state_requested || o.aR(l.M()),
             i.initialize(this, e, 0, -1, [2], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             l.sm_m ||
@@ -37782,6 +37912,8 @@ var CLSTAMP = "8995138";
             u.prototype.persona_state || o.aR(u.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             u.sm_m ||
@@ -37876,6 +38008,8 @@ var CLSTAMP = "8995138";
             c.prototype.status_flags || o.aR(c.M()),
             i.initialize(this, e, 0, -1, [2], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             c.sm_m ||
@@ -37935,6 +38069,8 @@ var CLSTAMP = "8995138";
             g.prototype.friendid || o.aR(g.M()),
             i.initialize(this, e, 0, -1, [71], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             g.sm_m ||
@@ -38135,6 +38271,8 @@ var CLSTAMP = "8995138";
             d.prototype.ogg_app_id || o.aR(d.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             d.sm_m ||
@@ -38198,6 +38336,8 @@ var CLSTAMP = "8995138";
             p.prototype.key || o.aR(p.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             p.sm_m ||
@@ -38253,6 +38393,8 @@ var CLSTAMP = "8995138";
             f.prototype.steamid || o.aR(f.M()),
             i.initialize(this, e, 0, -1, [3], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             f.sm_m ||
@@ -38324,6 +38466,8 @@ var CLSTAMP = "8995138";
             h.prototype.eresult || o.aR(h.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             h.sm_m ||
@@ -38379,6 +38523,8 @@ var CLSTAMP = "8995138";
             _.prototype.steamid || o.aR(_.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             _.sm_m ||
@@ -38438,6 +38584,8 @@ var CLSTAMP = "8995138";
             m.prototype.eresult || o.aR(m.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             m.sm_m ||
@@ -38492,6 +38640,8 @@ var CLSTAMP = "8995138";
             y.prototype.groupid || o.aR(y.M()),
             i.initialize(this, e, 0, -1, [3, 4], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             y.sm_m ||
@@ -38567,6 +38717,8 @@ var CLSTAMP = "8995138";
             b.prototype.eresult || o.aR(b.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             b.sm_m ||
@@ -38621,6 +38773,8 @@ var CLSTAMP = "8995138";
             v.prototype.groupid || o.aR(v.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             v.sm_m ||
@@ -38680,6 +38834,8 @@ var CLSTAMP = "8995138";
             S.prototype.eresult || o.aR(S.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             S.sm_m ||
@@ -38734,6 +38890,8 @@ var CLSTAMP = "8995138";
             E.prototype.groupid || o.aR(E.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             E.sm_m ||
@@ -38793,6 +38951,8 @@ var CLSTAMP = "8995138";
             w.prototype.eresult || o.aR(w.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             w.sm_m ||
@@ -38882,6 +39042,8 @@ var CLSTAMP = "8995138";
             R.prototype.emoticons || o.aR(R.M()),
             i.initialize(this, e, 0, -1, [1, 2, 3], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             R.sm_m ||
@@ -38938,6 +39100,8 @@ var CLSTAMP = "8995138";
             A.prototype.name || o.aR(A.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             A.sm_m ||
@@ -39009,6 +39173,8 @@ var CLSTAMP = "8995138";
             I.prototype.name || o.aR(I.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             I.sm_m ||
@@ -39080,6 +39246,8 @@ var CLSTAMP = "8995138";
             C.prototype.name || o.aR(C.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             C.sm_m ||
@@ -39158,6 +39326,8 @@ var CLSTAMP = "8995138";
             s.prototype.send_reply || o.aR(s.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             s.sm_m ||
@@ -39212,6 +39382,8 @@ var CLSTAMP = "8995138";
             l.prototype.client_request_timestamp || o.aR(l.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             l.sm_m ||
@@ -39270,6 +39442,8 @@ var CLSTAMP = "8995138";
             u.prototype.client_request_timestamp || o.aR(u.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             u.sm_m ||
@@ -39333,6 +39507,8 @@ var CLSTAMP = "8995138";
             c.prototype.version || o.aR(c.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             c.sm_m ||
@@ -39395,6 +39571,8 @@ var CLSTAMP = "8995138";
             g.prototype.protocol_version || o.aR(g.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             g.sm_m ||
@@ -39715,6 +39893,8 @@ var CLSTAMP = "8995138";
             d.prototype.eresult || o.aR(d.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             d.sm_m ||
@@ -39896,6 +40076,8 @@ var CLSTAMP = "8995138";
             p.prototype.eresult || o.aR(p.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             p.sm_m ||
@@ -39955,6 +40137,8 @@ var CLSTAMP = "8995138";
             f.prototype.persona_name || o.aR(f.M()),
             a.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             f.sm_m ||
@@ -40078,6 +40262,8 @@ var CLSTAMP = "8995138";
             a.prototype.steam_id_dest || o.aR(a.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             a.sm_m ||
@@ -40151,6 +40337,8 @@ var CLSTAMP = "8995138";
             s.prototype.server_types_available || o.aR(s.M()),
             i.initialize(this, e, 0, -1, [1], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             s.sm_m ||
@@ -40210,6 +40398,8 @@ var CLSTAMP = "8995138";
             l.prototype.server || o.aR(l.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             l.sm_m ||
@@ -40265,6 +40455,8 @@ var CLSTAMP = "8995138";
             u.prototype.id_count || o.aR(u.M()),
             i.initialize(this, e, 0, -1, [2], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             u.sm_m ||
@@ -40320,6 +40512,8 @@ var CLSTAMP = "8995138";
             c.prototype.steamid || o.aR(c.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             c.sm_m ||
@@ -40378,6 +40572,8 @@ var CLSTAMP = "8995138";
             g.prototype.responses || o.aR(g.M()),
             i.initialize(this, e, 0, -1, [2], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             g.sm_m ||
@@ -40430,6 +40626,8 @@ var CLSTAMP = "8995138";
             d.prototype.eresult || o.aR(d.M()),
             i.initialize(this, e, 0, -1, [3], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             d.sm_m ||
@@ -40495,6 +40693,8 @@ var CLSTAMP = "8995138";
             p.prototype.name_since || o.aR(p.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             p.sm_m ||
@@ -40554,6 +40754,8 @@ var CLSTAMP = "8995138";
             f.prototype.steamid_clan || o.aR(f.M()),
             i.initialize(this, e, 0, -1, [6, 7], null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             f.sm_m ||
@@ -40626,6 +40828,8 @@ var CLSTAMP = "8995138";
             h.prototype.clan_name || o.aR(h.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             h.sm_m ||
@@ -40685,6 +40889,8 @@ var CLSTAMP = "8995138";
             _.prototype.members || o.aR(_.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             _.sm_m ||
@@ -40747,6 +40953,8 @@ var CLSTAMP = "8995138";
             m.prototype.gid || o.aR(m.M()),
             i.initialize(this, e, 0, -1, void 0, null);
         }
+        static sm_m;
+        static sm_mbf;
         static M() {
           return (
             m.sm_m ||
@@ -40815,6 +41023,12 @@ var CLSTAMP = "8995138";
       "use strict";
       r.d(t, { $x: () => a, At: () => n, BH: () => i });
       class n {
+        m_nOffset;
+        m_nLength;
+        m_viewPacket;
+        m_rgubPacket;
+        m_iGet;
+        m_iPut;
         constructor(e, t = 0, r) {
           (this.m_nOffset = t || 0),
             e instanceof Uint8Array || e instanceof DataView
@@ -40918,13 +41132,12 @@ var CLSTAMP = "8995138";
       r.d(t, { Z: () => o });
       var n = r(27378);
       function o(e) {
-        var t;
-        const [r, o] = (0, n.useState)(!0);
+        const [t, r] = (0, n.useState)(!0);
         return (
           (0, n.useEffect)(() => {
-            o(!0);
+            r(!0);
           }, []),
-          r ? e.children : null !== (t = e.fallback) && void 0 !== t ? t : null
+          t ? e.children : e.fallback ?? null
         );
       }
     },
@@ -41062,90 +41275,7 @@ var CLSTAMP = "8995138";
       }
       r.d(t, { Z: () => n });
     },
-    92215: (e, t, r) => {
-      "use strict";
-      r.d(t, { Z: () => i });
-      var n = !0,
-        o = "Invariant failed";
-      function i(e, t) {
-        if (!e) {
-          if (n) throw new Error(o);
-          var r = "function" == typeof t ? t() : t,
-            i = r ? "".concat(o, ": ").concat(r) : o;
-          throw new Error(i);
-        }
-      }
-    },
-    85556: (e, t, r) => {
-      "use strict";
-      r.d(t, { _T: () => n, gn: () => o, mG: () => i });
-      function n(e, t) {
-        var r = {};
-        for (var n in e)
-          Object.prototype.hasOwnProperty.call(e, n) &&
-            t.indexOf(n) < 0 &&
-            (r[n] = e[n]);
-        if (null != e && "function" == typeof Object.getOwnPropertySymbols) {
-          var o = 0;
-          for (n = Object.getOwnPropertySymbols(e); o < n.length; o++)
-            t.indexOf(n[o]) < 0 &&
-              Object.prototype.propertyIsEnumerable.call(e, n[o]) &&
-              (r[n[o]] = e[n[o]]);
-        }
-        return r;
-      }
-      function o(e, t, r, n) {
-        var o,
-          i = arguments.length,
-          a =
-            i < 3
-              ? t
-              : null === n
-                ? (n = Object.getOwnPropertyDescriptor(t, r))
-                : n;
-        if ("object" == typeof Reflect && "function" == typeof Reflect.decorate)
-          a = Reflect.decorate(e, t, r, n);
-        else
-          for (var s = e.length - 1; s >= 0; s--)
-            (o = e[s]) &&
-              (a = (i < 3 ? o(a) : i > 3 ? o(t, r, a) : o(t, r)) || a);
-        return i > 3 && a && Object.defineProperty(t, r, a), a;
-      }
-      function i(e, t, r, n) {
-        return new (r || (r = Promise))(function (o, i) {
-          function a(e) {
-            try {
-              l(n.next(e));
-            } catch (e) {
-              i(e);
-            }
-          }
-          function s(e) {
-            try {
-              l(n.throw(e));
-            } catch (e) {
-              i(e);
-            }
-          }
-          function l(e) {
-            var t;
-            e.done
-              ? o(e.value)
-              : ((t = e.value),
-                t instanceof r
-                  ? t
-                  : new r(function (e) {
-                      e(t);
-                    })).then(a, s);
-          }
-          l((n = n.apply(e, t || [])).next());
-        });
-      }
-      Object.create;
-      Object.create;
-      "function" == typeof SuppressedError && SuppressedError;
-    },
-    72080: (e, t, r) => {
+    37939: (e, t, r) => {
       "use strict";
       r.d(t, { Z: () => C });
       var n = null;
@@ -41734,6 +41864,44 @@ var CLSTAMP = "8995138";
           );
         });
       const C = o;
+    },
+    92215: (e, t, r) => {
+      "use strict";
+      r.d(t, { Z: () => i });
+      var n = !0,
+        o = "Invariant failed";
+      function i(e, t) {
+        if (!e) {
+          if (n) throw new Error(o);
+          var r = "function" == typeof t ? t() : t,
+            i = r ? "".concat(o, ": ").concat(r) : o;
+          throw new Error(i);
+        }
+      }
+    },
+    85556: (e, t, r) => {
+      "use strict";
+      r.d(t, { gn: () => n });
+      function n(e, t, r, n) {
+        var o,
+          i = arguments.length,
+          a =
+            i < 3
+              ? t
+              : null === n
+                ? (n = Object.getOwnPropertyDescriptor(t, r))
+                : n;
+        if ("object" == typeof Reflect && "function" == typeof Reflect.decorate)
+          a = Reflect.decorate(e, t, r, n);
+        else
+          for (var s = e.length - 1; s >= 0; s--)
+            (o = e[s]) &&
+              (a = (i < 3 ? o(a) : i > 3 ? o(t, r, a) : o(t, r)) || a);
+        return i > 3 && a && Object.defineProperty(t, r, a), a;
+      }
+      Object.create;
+      Object.create;
+      "function" == typeof SuppressedError && SuppressedError;
     },
   },
 ]);

@@ -28,4 +28,5 @@
 	"origin_xbox360_shoulder_r"						"Botão superior direito"
 	"origin_xbox360_button_start"					"Botão Start"
 	"origin_xbox360_button_back"					"Botão Back"
-	}
+	"origin_xbox360_button_dpad_move"				"Movimento do direcional"
+}

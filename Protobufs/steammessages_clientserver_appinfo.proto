@@ -129,3 +129,15 @@ message CMsgClientPICSAccessTokenResponse {
 	repeated .CMsgClientPICSAccessTokenResponse.AppToken app_access_tokens = 3;
 	repeated uint32 app_denied_tokens = 4;
 }
+
+message CMsgClientPICSPrivateBetaRequest {
+	optional uint32 appid = 1;
+	optional uint64 access_token = 2;
+	optional string beta_name = 3;
+	optional bytes password_hash = 4;
+}
+
+message CMsgClientPICSPrivateBetaResponse {
+	optional int32 eresult = 1 [default = 2];
+	optional bytes depot_section = 2;
+}

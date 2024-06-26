@@ -9,6 +9,7 @@
 "TextEntry_SelectAll"		"Избиране на всичко"
 "TextEntry_CopyAllToClipboard"	"Копиране на целия текст в клипборда"
 "FileOpenDialog_Open"		"Отваряне"
+"FileOpenDialog_Save"		"Запазване"
 "FileOpenDialog_Cancel"		"Отказ"
 "FileOpenDialog_Look_in"	"Преглед в:"
 "FileOpenDialog_File_Name"	"Име на файла:"

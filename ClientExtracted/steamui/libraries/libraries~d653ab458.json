@@ -562,6 +562,8 @@
     "bbcode_image_tooltip_link": "เปิดภาพในหน้าต่างใหม่",
     "bbcode_image_tooltip_link_giphy": "เปิด Giphy ในหน้าต่างใหม่",
     "bbcode_video_tooltip_link": "เปิดวิดีโอในหน้าต่างใหม่",
+    "bbcode_video_pause": "หยุดชั่วคราว",
+    "bbcode_video_play": "เล่น",
     "bbcode_image_link_giphy": "/GIPHY %1$s",
     "bbcode_image_popout": "ป็อปเอาท์ภาพ",
     "bbcode_image_tooltip_collapse": "ซ่อนภาพในแช็ต",

@@ -9,6 +9,7 @@
 "TextEntry_SelectAll"		"Összes kijelölése"
 "TextEntry_CopyAllToClipboard"	"Minden szöveg másolása a vágólapra"
 "FileOpenDialog_Open"		"Megnyitás"
+"FileOpenDialog_Save"		"Mentés"
 "FileOpenDialog_Cancel"		"Mégse"
 "FileOpenDialog_Look_in"	"Tallózás:"
 "FileOpenDialog_File_Name"	"Fájlnév:"

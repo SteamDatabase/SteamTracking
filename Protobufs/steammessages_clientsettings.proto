@@ -46,6 +46,12 @@ enum EGRMode {
 	k_EGRMode_Manual = 2;
 }
 
+enum EGRAudio {
+	k_EGRAudio_Game = 0;
+	k_EGRAudio_System = 1;
+	k_EGRAudio_Select = 2;
+}
+
 message CMsgHotkey {
 	optional uint32 key_code = 1;
 	optional bool alt_key = 2;
@@ -190,6 +196,7 @@ message CMsgClientSettings {
 	optional int32 g_background_br = 18210 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool g_background_a_s = 18211 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional .EGRMode g_background_mode = 18212 [default = k_EGRMode_Never, (setting_store) = k_EClientSettingStore_CustomFunc];
+	optional .EGRAudio g_background_audio = 18213 [default = k_EGRAudio_Game, (setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool show_timestamps_in_console = 20000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Developer\\ShowTimestampsInConsole"];
 	optional bool force_oobe = 20001 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\ForceOOBE"];
 	optional int32 override_browser_composer_mode = 20002 [(setting_store) = k_EClientSettingStore_CustomFunc];
@@ -205,6 +212,7 @@ message CMsgClientSettings {
 	optional bool gamescope_use_game_refresh_rate_in_steam = 21006 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Developer/DynamicRefreshRateInSteam", (setting_default_bool) = true];
 	optional bool gamescope_disable_mura_correction = 21007 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/MuraCorrectionDisabled", (setting_default_bool) = false];
 	optional bool gamescope_include_steamui_in_screenshots = 21008 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/IncludeSteamUIInScreenshots", (setting_default_bool) = true];
+	optional bool gamescope_allow_tearing = 21009 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/AllowTearing", (setting_default_bool) = false, (setting_profile_mode) = k_ESettingProfileMode_PerGame];
 	optional int32 steamos_status_led_brightness = 22000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamOS/StatusLEDBrightness", (setting_default_int) = 100];
 	optional bool steamos_tdp_limit_enabled = 22001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/TDPLimitEnabled", (setting_default_bool) = false, (setting_profile_mode) = k_ESettingProfileMode_PerGame];
 	optional int32 steamos_tdp_limit = 22002 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/TDPLimit", (setting_default_int) = 0, (setting_profile_mode) = k_ESettingProfileMode_PerGame];

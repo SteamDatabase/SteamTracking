@@ -93,4 +93,7 @@
 	"origin_SteamDeck_Gyro_Pitch"				"Gyro Pitch"
 	"origin_SteamDeck_Gyro_Yaw"					"Gyro Yaw"
 	"origin_SteamDeck_Gyro_Roll"				"Gyro Roll"
+
+	"origin_horipad_m1"							"M1 Button"
+	"origin_horipad_m2"							"M2 Button"
 }

@@ -9,6 +9,7 @@
 "TextEntry_SelectAll"		"Alles auswählen"
 "TextEntry_CopyAllToClipboard"	"Gesamten Text in die Zwischenablage kopieren"
 "FileOpenDialog_Open"		"Öffnen"
+"FileOpenDialog_Save"		"Speichern"
 "FileOpenDialog_Cancel"		"Abbrechen"
 "FileOpenDialog_Look_in"	"Suchen in:"
 "FileOpenDialog_File_Name"	"Dateiname:"

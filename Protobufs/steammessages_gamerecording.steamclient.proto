@@ -1,0 +1,102 @@
+import "steammessages_base.proto";
+import "steammessages_unified_base.steamclient.proto";
+import "steammessages_clientserver_video.proto";
+
+option cc_generic_services = true;
+
+message CVideoManagerClipID {
+	optional fixed64 video_manager_clip_id = 1;
+	optional fixed64 video_manager_video_id = 2;
+	optional fixed64 server_timeline_id = 3;
+	optional string manifest_url = 4;
+	optional uint32 duration_ms = 5;
+	optional uint32 start_offset_ms = 6;
+}
+
+message CGameRecordingClip {
+	optional fixed64 clip_id = 1;
+	optional uint64 gameid = 2;
+	optional uint32 date_recorded = 4;
+	optional uint64 total_file_size_bytes = 7;
+	repeated .CVideoManagerClipID video_ids = 9;
+	optional fixed64 owner_steamid = 10;
+	optional bool upload_complete = 11;
+	optional uint32 duration_ms = 12;
+}
+
+message CGameRecording_CreateShareClip_Request {
+	optional .CGameRecordingClip clip = 2;
+	repeated .CMsgVideoGameRecordingDef video_def = 3;
+}
+
+message CGameRecording_CreateShareClip_Response {
+	optional .CGameRecordingClip clip = 1;
+}
+
+message CGameRecording_DeleteSharedClip_Request {
+	optional fixed64 clip_id = 2;
+}
+
+message CGameRecording_DeleteSharedClip_Response {
+}
+
+message CGameRecording_GetSingleSharedClip_Request {
+	optional fixed64 clip_id = 2;
+}
+
+message CGameRecording_GetSingleSharedClip_Response {
+	optional .CGameRecordingClip clip = 1;
+}
+
+message CVideo_BeginGameRecordingSegmentsUpload_Request {
+	optional uint64 recording_id = 1;
+	optional string component_name = 2;
+	optional string representation_name = 3;
+	repeated .CVideo_GameRecordingSegmentInfo segments_to_store = 4;
+}
+
+message CVideo_BeginGameRecordingSegmentsUpload_Response {
+	repeated .CVideo_GameRecordingSegmentUploadInfo segments_needed = 1;
+	optional bool call_again = 2;
+}
+
+message CVideo_CommitGameRecordingSegmentsUpload_Request {
+	optional uint64 recording_id = 1;
+	optional string component_name = 2;
+	optional string representation_name = 3;
+	optional uint32 first_segment_number = 4;
+	optional uint32 num_segments = 5;
+	optional uint32 upload_result = 6;
+}
+
+message CVideo_CommitGameRecordingSegmentsUpload_Response {
+}
+
+message CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Request {
+	optional uint64 recording_id = 1;
+}
+
+message CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Response {
+	repeated .CVideo_GameRecordingSegmentUploadInfo segments_needed = 1;
+}
+
+message CVideo_GameRecordingCommitSegmentUploads_Request {
+	optional uint64 recording_id = 1;
+	repeated .CVideo_GameRecordingSegmentInfo segments_uploaded = 2;
+}
+
+message CVideo_GameRecordingCommitSegmentUploads_Response {
+}
+
+service GameRecordingClip {
+	rpc CreateShareClip (.CGameRecording_CreateShareClip_Request) returns (.CGameRecording_CreateShareClip_Response);
+	rpc DeleteSharedClip (.CGameRecording_DeleteSharedClip_Request) returns (.CGameRecording_DeleteSharedClip_Response);
+	rpc GetSingleSharedClip (.CGameRecording_GetSingleSharedClip_Request) returns (.CGameRecording_GetSingleSharedClip_Response);
+}
+
+service VideoClip {
+	rpc BeginGameRecordingSegmentsUpload (.CVideo_BeginGameRecordingSegmentsUpload_Request) returns (.CVideo_BeginGameRecordingSegmentsUpload_Response);
+	rpc CommitGameRecordingSegmentsUpload (.CVideo_CommitGameRecordingSegmentsUpload_Request) returns (.CVideo_CommitGameRecordingSegmentsUpload_Response);
+	rpc GetNextBatchOfSegmentsToUpload (.CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Request) returns (.CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Response);
+	rpc CommitSegmentUploads (.CVideo_GameRecordingCommitSegmentUploads_Request) returns (.CVideo_GameRecordingCommitSegmentUploads_Response);
+}

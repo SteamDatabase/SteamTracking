@@ -117,6 +117,7 @@ message CRemoteClient_TaskList_Notification {
 message CRemoteClient_MarkTaskComplete_Request {
 	optional fixed64 remote_client_id = 1;
 	optional fixed64 task_id = 2;
+	optional string content_id = 3;
 }
 
 message CRemoteClient_MarkTaskComplete_Response {

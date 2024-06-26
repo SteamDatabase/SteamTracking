@@ -4835,6 +4835,9 @@ Betaが終了しました。Steamを再起動し、現在のバージョンに�
 "SteamUI_RunningConflictingSoftware" "競合するソフトウェアを検出しました"
 "SteamUI_RunningIncompatibleTcpService" "Steam プロセス内で %incompatdll% (%incompatname% 関連) \nの互換性のないバージョンを検出しました。Steam または個々のゲームの\n実行中にクラッシュやネットワークの遅延が発生した場合は、\nこのソフトウェアを更新またはアンインストールすることをお勧めします。"
 
+"SteamUI_RunningBannedSoftware" "Steamの動作を変更するソフトウェア"
+"SteamUI_RunningBannedSoftwareDesc" "Steamは、セキュリティまたは所有権のチェックを回避するためにSteamに変更を加える可能性があるサードパーティー製ソフトウェア「%incompatname%」を検出しました。\nこのソフトウェアは、Steamをクラッシュさせ、Steam利用規約に違反し、DLC制作者の知的財産を侵害することが知られています。\nこのソフトウェアを使用すると、アカウントの禁止またはロックにつながる可能性があります。\n\nSteamを実行するには、このソフトウェアをアンインストールしてください。"
+
 "Steam_XboxDriverInstall_Title"		"Xboxドライバーインストール"
 "Steam_XboxDriverInstall_Success"	"ドライバーが正常に更新されました。コンピューターを再起動すると有効になります。"
 "Steam_XboxDriverInstall_ServiceFailure"	"ドライバーの更新に失敗しました。最新のSteamを通常のユーザーとして実行中ですか？"

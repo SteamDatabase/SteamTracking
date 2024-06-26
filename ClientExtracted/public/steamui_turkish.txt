@@ -4837,6 +4837,9 @@ Bu oyun için bir kategori ayarlamanız, o oyunu çabuk bulmanıza ve Kütüphan
 "SteamUI_RunningConflictingSoftware" "Çakışan Yazılım Algılandı"
 "SteamUI_RunningIncompatibleTcpService" "%incompatdll% öğesinin (%incompatname% ile ilişkilidir) uyumsuz bir sürümü \nSteam işleminde tespit edildi.\n\nSteam veya oyun çalışırken çökme veya ağ bağlantısı yavaşlaması yaşadığınız\nbu yazılımı güncelleştirmenizi veya kaldırmanızı tavsiye ediyoruz."
 
+"SteamUI_RunningBannedSoftware" "Steam'in Davranışını Değiştiren Yazılım"
+"SteamUI_RunningBannedSoftwareDesc" "Steam, güvenlik veya sahiplik kontrollerini aşmak amacıyla Steam'i değiştirebilen %incompatname% adlı bir üçüncü taraf yazılımı tespit etti.\nBu yazılımın Steam'in çökmesine neden olduğu, Steam Abonelik Sözleşmesi'ni ihlâl ettiği ve DLC üreticilerinin fikrî mülkiyet haklarını ihlâl ettiği bilinmektedir. Bu yazılımın\nkullanılması hesabın kilitlenmesine veya yasaklanmasına neden olabilir.\n\nSteam'i çalıştırabilmek için lütfen bu yazılımı kaldırın."
+
 "Steam_XboxDriverInstall_Title"		"Xbox Sürücü Yükleme"
 "Steam_XboxDriverInstall_Success"	"Sürücü başarıyla güncellendi, bilgisayarınızı yeniden başlattığınızda etkinleşecek."
 "Steam_XboxDriverInstall_ServiceFailure"	"Sürücü güncellemesi başarısız oldu. Steam normal kullanıcı hesabıyla açık ve Steam hizmeti çalışır durumda ve güncel mi?"

@@ -3181,8 +3181,8 @@ Acum beta s-a încheiat - te rugăm restartează Steam pentru a te reîntoarce l
 "Steam_ChooseGameLanguage"	"Alege limba în care vrei să joci:"
 "Steam_GameProperties_LanguageTab" "Limbă"
 
-"Steam_GameProperties_BetasTab" "Beta"
-"Steam_ChooseGameBeta"	"Alege testul beta la care vrei să participi:"
+"Steam_GameProperties_BetasTab" "Versiuni beta"
+"Steam_ChooseGameBeta"	"Selectează versiunea beta la care dorești să participi:"
 "Steam_ContentBetaUnlockPrivate" "Introdu un cod de acces pentru a primi acces la versiuni beta exclusive:"
 "Steam_ContentBetaCheckPassword"	"Verificare cod"
 "Steam_ContentBetaResultsPasswordSuccessful"	"Codul de acces este corect, versiunea beta '%betaname%' este acum disponibilă."
@@ -4824,6 +4824,9 @@ Artiști"
 
 "SteamUI_RunningConflictingSoftware" "A fost detectat un software care cauzează un conflict"
 "SteamUI_RunningIncompatibleTcpService" "O versiune incompatibilă a %incompatdll% (în legătură cu %incompatname%)\na fost detectată în procesul Steam.\n\nSugerăm să actualizezi sau să dezinstalezi acest software dacă ai parte de căderi\nsau încetiniri ale rețelei în timp ce rulezi Steam sau jocuri individuale."
+
+"SteamUI_RunningBannedSoftware" "Software care modifică comportamentul Steam"
+"SteamUI_RunningBannedSoftwareDesc" "Steam a detectat %incompatname%, care este un software terț care poate modifica Steam pentru a ocoli verificările de securitate sau de proprietate.\nSe știe că acest software poate produce căderi ale clientului Steam, încalcă Acordul pentru abonații Steam și încalcă proprietatea intelectuală a creatorilor de DLC-uri. Utilizarea\nacestui software poate duce la interdicții sau blocări ale contului.\n\nTe rugăm să îl dezinstalezi pentru a rula Steam."
 
 "Steam_XboxDriverInstall_Title"		"Instalarea driverului Xbox"
 "Steam_XboxDriverInstall_Success"	"Driverul a fost actualizat cu succes și va fi activ după repornirea calculatorului."

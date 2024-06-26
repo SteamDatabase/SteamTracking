@@ -562,6 +562,8 @@
     "bbcode_image_tooltip_link": "画像を新しいウィンドウで開く",
     "bbcode_image_tooltip_link_giphy": "新しいウィンドウで Giphy を開く",
     "bbcode_video_tooltip_link": "動画を新しいウィンドウで開く",
+    "bbcode_video_pause": "一時停止",
+    "bbcode_video_play": "再生",
     "bbcode_image_link_giphy": "/GIPHY %1$s",
     "bbcode_image_popout": "画像ポップアウト",
     "bbcode_image_tooltip_collapse": "チャットで画像を表示しない",

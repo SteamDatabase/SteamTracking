@@ -4810,6 +4810,9 @@ kell Mac OS X 10.7 vagy magasabb verzióra."
 "SteamUI_RunningConflictingSoftware" "Ütköző szoftver észlelve"
 "SteamUI_RunningIncompatibleTcpService" "A(z) %incompatdll% (ami a(z) %incompatname% része)\nösszeférhetetlen változatát észleltük a Steam folyamatban.\n\nAjánljuk a szoftver frissítését vagy eltávolítását, ha összeomlásokat vagy\nhálózati lassulást tapasztalsz a Steam vagy egyes játékok futtatása közben."
 
+"SteamUI_RunningBannedSoftware" "A Steam viselkedését módosító szoftver"
+"SteamUI_RunningBannedSoftwareDesc" "A Steam a(z) %incompatname% külső szoftvert észlelte, ami módosíthatja a Steamet biztonsági vagy birtoklási ellenőrzések megkerülésének céljából.\nE szoftverről tudjuk, hogy a Steam összeomlását okozza, megszegi a Steam felhasználási feltételeket és sérti a DLC-készítők szellemi tulajdonjogát.\nE szoftver használata kitiltást vagy fiókzárolást eredményezhet.\n\nKérjük, távolítsd el a Steam futtatásához."
+
 "Steam_XboxDriverInstall_Title"		"Xbox illesztőprogram telepítése"
 "Steam_XboxDriverInstall_Success"	"Az illesztőprogram sikeresen frissült, és a számítógéped újraindítása után aktív lesz."
 "Steam_XboxDriverInstall_ServiceFailure"	"Az illesztőprogram frissítése sikertelen. A Steam normál felhasználóként van futtatva, és a Steam szolgáltatás fut és frissítve van?"

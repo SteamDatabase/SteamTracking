@@ -451,6 +451,7 @@
  T DivideRow_16_Any_AVX2
  T DivideRow_16_C
  T EConvertMPDToMP4
+ T EGetFrameFromMPD
  T EGetFramesFromVideo
  T FixedDiv1_C
  T FixedDiv1_X86

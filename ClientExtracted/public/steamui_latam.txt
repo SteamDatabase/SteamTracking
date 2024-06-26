@@ -4829,6 +4829,9 @@ Haz nuevos amigos en Steam enviando un regalo por email a alguien que conozcas."
 "SteamUI_RunningConflictingSoftware" "Se ha detectado software conflictivo"
 "SteamUI_RunningIncompatibleTcpService" "Se ha detectado una versión incompatible de %incompatdll% (relacionada\ncon %incompatname%) dentro del proceso de Steam.\n\nTe sugerimos que actualices o desinstales este software si sufres bloqueos\no reducciones en la velocidad de red mientras ejecutas Steam o algún juego."
 
+"SteamUI_RunningBannedSoftware" "Software que modifica el comportamiento de Steam"
+"SteamUI_RunningBannedSoftwareDesc" "Steam detectó %incompatname%, un software de terceros capaz de modificarlo para eludir los controles de seguridad o propiedad.\nEste software hace que Steam se cuelgue, incumpla el Acuerdo de Suscriptor a Steam e infrinja la propiedad intelectual de los creadores de DLC. Su uso\npodría resultar en un bloqueo de la cuenta.\n\nDesinstálalo para ejecutar Steam."
+
 "Steam_XboxDriverInstall_Title"		"Instalación del controlador para Xbox"
 "Steam_XboxDriverInstall_Success"	"El controlador se actualizó correctamente y estará activo después de reiniciar tu equipo."
 "Steam_XboxDriverInstall_ServiceFailure"	"La actualización del controlador falló. ¿Estás ejecutando Steam como usuario normal y el servicio de Steam está actualizado y funcionando?"

@@ -562,6 +562,8 @@
     "bbcode_image_tooltip_link": "Open image in new window",
     "bbcode_image_tooltip_link_giphy": "Open giphy in new window",
     "bbcode_video_tooltip_link": "Open video in new window",
+    "bbcode_video_pause": "Pause",
+    "bbcode_video_play": "Play",
     "bbcode_image_link_giphy": "/GIPHY %1$s",
     "bbcode_image_popout": "Image Popout",
     "bbcode_image_tooltip_collapse": "Hide image in chat",

@@ -39,528 +39,445 @@
     97896: (e) => {
       e.exports = { GameNotesPopup: "_3hIt9g_59KauEV2uSNK6Ct" };
     },
-    72453: (e, t, n) => {
+    9603: (e, t, n) => {
       "use strict";
-      n.d(t, { X: () => De });
+      n.d(t, { X: () => ke });
       var o = n(27378),
-        r = n(47228),
-        a = n(39459),
+        a = n(47228),
+        r = n(39459),
         l = n(98571),
-        s = n(62923),
+        c = n(62923),
         i = n(62914),
-        c = n(79509),
-        u = n(52833),
-        d = n(70732),
-        m = n(55751),
-        p = n(35864),
-        g = n.n(p),
-        f = n(35484);
-      function b(e, t) {
-        return () => [e, { class: t }, 0];
-      }
-      const h = {
-          doc: { content: "block+" },
-          text: { group: "inline" },
-          paragraph: {
-            content: "inline*",
-            group: "block",
-            parseDOM: [{ tag: "p" }],
-            toDOM: b("p", (0, f.Z)("pm_paragraph", g().Paragraph)),
-          },
-          heading: {
-            attrs: { level: { default: 1 } },
-            content: "inline*",
-            group: "block",
-            defining: !0,
-            parseDOM: [
-              { tag: "h1", attrs: { level: 1 } },
-              { tag: "h2", attrs: { level: 2 } },
-              { tag: "h3", attrs: { level: 3 } },
-              { tag: "h4", attrs: { level: 4 } },
-              { tag: "h5", attrs: { level: 5 } },
-            ],
-            toDOM: (e) => [
-              "h" + e.attrs.level,
-              {
-                class:
-                  `BB_Header${e.attrs.level} ` + g()[`Header${e.attrs.level}`],
-              },
-              0,
-            ],
-          },
-          image: {
-            inline: !0,
-            attrs: {
-              src: {},
-              alt: { default: null },
-              title: { default: null },
-            },
-            group: "inline",
-            draggable: !0,
-            parseDOM: [
-              {
-                tag: "img[src]",
-                getAttrs: (e) => ({
-                  src: e.getAttribute("src"),
-                  title: e.getAttribute("title"),
-                  alt: e.getAttribute("alt"),
-                }),
-              },
-            ],
-            toDOM(e) {
-              const { src: t, alt: n, title: o } = e.attrs;
-              return ["img", { src: t, alt: n, title: o, class: g().Image }];
-            },
-          },
-          hard_break: {
-            inline: !0,
-            group: "inline",
-            selectable: !1,
-            parseDOM: [{ tag: "br" }],
-            toDOM: () => ["br"],
-          },
-          bullet_list: Object.assign(Object.assign({}, m.iI), {
-            content: "list_item+",
-            group: "block",
-            toDOM: b("ul", g().List),
-          }),
-          ordered_list: Object.assign(Object.assign({}, m.dq), {
-            content: "list_item+",
-            group: "block",
-            toDOM: b("ol", g().OrderedList),
-          }),
-          list_item: Object.assign(Object.assign({}, m.qb), {
-            content: "paragraph block*",
-            toDOM: b("li", g().ListItem),
-          }),
-          code_block: {
-            content: "inline*",
-            marks: "",
-            group: "block",
-            code: !0,
-            defining: !0,
-            parseDOM: [{ tag: "pre", preserveWhitespace: "full" }],
-            toDOM: () => [
-              "pre",
-              { class: g().CodeBlock },
-              ["code", { class: g().Code }, 0],
-            ],
-          },
-        },
-        E = {
-          strong: {
-            parseDOM: [
-              { tag: "strong" },
-              {
-                tag: "b",
-                getAttrs: (e) => "normal" != e.style.fontWeight && null,
-              },
-              {
-                style: "font-weight=400",
-                clearMark: (e) => "strong" == e.type.name,
-              },
-              {
-                style: "font-weight",
-                getAttrs: (e) => /^(bold(er)?|[5-9]\d{2,})$/.test(e) && null,
-              },
-            ],
-            toDOM: b("b", (0, f.Z)("BB_Bold", g().Bold)),
-          },
-          italic: {
-            parseDOM: [
-              { tag: "i" },
-              { tag: "em" },
-              { style: "font-style=italic" },
-              {
-                style: "font-style=normal",
-                clearMark: (e) => "em" == e.type.name,
-              },
-            ],
-            toDOM: b("i", (0, f.Z)("BB_Italic", g().Italic)),
-          },
-          underline: {
-            parseDOM: [{ tag: "u" }, { style: "text-decoration=underline" }],
-            toDOM: b("u", (0, f.Z)("BB_Underline", g().Underline)),
-          },
-          strike: {
-            parseDOM: [{ style: "text-decoration=line-through" }],
-            toDOM: b("span", (0, f.Z)("BB_Strike", g().Strike)),
-          },
-          code: {
-            parseDOM: [{ tag: "code" }],
-            toDOM: b("code", (0, f.Z)("BB_Code", g().Code)),
-          },
-          link: {
-            attrs: { href: {}, title: { default: null } },
-            inclusive: !1,
-            parseDOM: [
-              {
-                tag: "a[href]",
-                getAttrs: (e) => ({
-                  href: e.getAttribute("href"),
-                  title: e.getAttribute("title"),
-                }),
-              },
-            ],
-            toDOM(e) {
-              let { href: t, title: n } = e.attrs;
-              return ["a", { href: t, title: n }, 0];
-            },
-          },
-        },
-        k = new d.V_({ nodes: h, marks: E });
-      function T(e) {
-        return { tag: `h${e.level}` };
-      }
-      const v = new Map([
-        [
-          "p",
-          {
-            Constructor: { node: k.nodes.paragraph },
-            autocloses: !0,
-            skipFollowingNewline: !0,
-          },
-        ],
-        [
-          "h1",
-          {
-            Constructor: {
-              node: k.nodes.heading,
-              BBArgsToAttrs: () => ({ level: 1 }),
-              AttrsToBBArgs: T,
-            },
-            skipFollowingNewline: !0,
-          },
-        ],
-        [
-          "h2",
-          {
-            Constructor: {
-              node: k.nodes.heading,
-              BBArgsToAttrs: () => ({ level: 2 }),
-              AttrsToBBArgs: T,
-            },
-            skipFollowingNewline: !0,
-          },
-        ],
-        [
-          "h3",
-          {
-            Constructor: {
-              node: k.nodes.heading,
-              BBArgsToAttrs: () => ({ level: 3 }),
-              AttrsToBBArgs: T,
-            },
-            skipFollowingNewline: !0,
-          },
-        ],
-        [
-          "h4",
-          {
-            Constructor: {
-              node: k.nodes.heading,
-              BBArgsToAttrs: () => ({ level: 4 }),
-              AttrsToBBArgs: T,
-            },
-            skipFollowingNewline: !0,
-          },
-        ],
-        [
-          "h5",
-          {
-            Constructor: {
-              node: k.nodes.heading,
-              BBArgsToAttrs: () => ({ level: 5 }),
-              AttrsToBBArgs: T,
-            },
-            skipFollowingNewline: !0,
-          },
-        ],
-        ["b", { Constructor: { mark: k.marks.strong } }],
-        ["i", { Constructor: { mark: k.marks.italic } }],
-        ["u", { Constructor: { mark: k.marks.underline } }],
-        ["strike", { Constructor: { mark: k.marks.strike } }],
-        [
-          "url",
-          {
-            Constructor: {
-              mark: k.marks.link,
-              BBArgsToAttrs: (e) => ({ href: e[""] }),
-              AttrsToBBArgs: (e) => ({ args: { "": e.href } }),
-            },
-          },
-        ],
-        [
-          "list",
-          {
-            Constructor: { node: k.nodes.bullet_list },
-            skipFollowingNewline: !0,
-          },
-        ],
-        [
-          "olist",
-          {
-            Constructor: { node: k.nodes.ordered_list },
-            skipFollowingNewline: !0,
-          },
-        ],
-        [
-          "*",
-          {
-            Constructor: { node: k.nodes.list_item },
-            skipFollowingNewline: !0,
-            autocloses: !0,
-          },
-        ],
-        [
-          "code",
-          {
-            Constructor: { node: k.nodes.code_block },
-            skipFollowingNewline: !0,
-          },
-        ],
-        ["c", { Constructor: { mark: k.marks.code } }],
-        [
-          "img",
-          {
-            Constructor: {
-              node: k.nodes.image,
-              BBArgsToAttrs: (e) => ({ src: e.src }),
-              AttrsToBBArgs: (e) => ({ args: { src: e.src } }),
-            },
-          },
-        ],
-      ]);
-      class _ {
-        constructor() {
-          this.m_nodes = [];
-        }
-        AppendText(e, t) {
-          let n = 0;
-          for (let t = e.indexOf("\n", n); -1 !== t; t = e.indexOf("\n", n))
-            n != t && this.m_nodes.push(k.text(e.substring(n, t))),
-              this.m_nodes.push(k.nodes.hard_break.create()),
-              (n = t + 1);
-          n < e.length && this.m_nodes.push(k.text(e.substring(n)));
-        }
-        AppendNode(e) {
-          Array.isArray(e) ? this.m_nodes.push(...e) : this.m_nodes.push(e);
-        }
-        GetElements() {
-          return this.m_nodes;
-        }
-      }
-      function C(e, t, ...n) {
-        const o = e.BBArgsToAttrs ? e.BBArgsToAttrs(t.args) : void 0;
-        return "node" in e
-          ? e.node.create(o, n)
-          : n.map((t) => t.mark([...t.marks, e.mark.create(o)]));
-      }
-      class B extends u.AX {
-        constructor(e) {
-          super(e, () => new _());
-        }
-        ParseBBCode(e) {
-          const t = this.Parse(e, C, !0);
-          return k.topNodeType.create(
-            {},
-            (function (e) {
-              let t = [],
-                n = [];
-              for (const o of e)
-                if (o.isText) n.push(o);
-                else {
-                  const e = o.type == k.nodes.hard_break;
-                  n.length
-                    ? (t.push(k.nodes.paragraph.create({}, n)),
-                      (n = []),
-                      e || t.push(o))
-                    : e
-                      ? t.push(k.nodes.paragraph.create())
-                      : t.push(o);
-                }
-              return t;
-            })(t),
+        s = n(79509),
+        m = n(54979),
+        u = n(15463),
+        d = n(82789),
+        p = n(29860),
+        E = n(40650),
+        f = n(92926),
+        b = n(78138),
+        g = n(70732),
+        h = n(2286),
+        T = n(52824),
+        _ = n(81257),
+        k = n(29853),
+        v = n(86064),
+        C = n(64452);
+      function N() {
+        const [e, t] = o.useState(),
+          [n, a] = o.useState(),
+          [r, l] = o.useState(),
+          c = o.useMemo(
+            () =>
+              new d.Sy({
+                props: {
+                  handleDOMEvents: {
+                    mouseover: (e, n) => {
+                      const o = n.target;
+                      if ((0, k.GB)(o) && "A" == o.nodeName) {
+                        const e = o.getBoundingClientRect();
+                        t(e.left + e.width / 2), a(e.bottom + 2), l(o);
+                      } else l(void 0);
+                      return !1;
+                    },
+                    mouseleave: (e, t) => (l(void 0), !1),
+                  },
+                },
+              }),
+            [],
           );
-        }
-      }
-      var N = n(56815),
-        x = n(9891);
-      function w(e, t = v) {
-        const n = { mapMarks: new Map(), mapNodes: new Map() };
-        return (
-          t.forEach((e, t) => {
-            "node" in e.Constructor
-              ? n.mapNodes.set(e.Constructor.node, {
-                  tag: t,
-                  AttrsToBBArgs: e.Constructor.AttrsToBBArgs,
-                })
-              : n.mapMarks.set(e.Constructor.mark, {
-                  tag: t,
-                  AttrsToBBArgs: e.Constructor.AttrsToBBArgs,
-                });
-          }),
-          A(n, e)
+        if (((0, f.U$)(c), !r)) return null;
+        const i = r.getAttribute("href");
+        return o.createElement(
+          x,
+          { top: n, left: e },
+          o.createElement("div", { className: C.Link }, i),
+          o.createElement(
+            "div",
+            { className: C.LinkHelp },
+            (0, v.Xx)("#UserGameNotes_ClickToOpenLink"),
+          ),
         );
       }
-      function A(e, t) {
-        let n = t.marks,
-          o = "";
-        const r = e.mapNodes.get(t.type),
-          { tag: a, args: l } = F(r, t.attrs);
-        return (
-          a && (o += (0, u.lW)(a, l)),
-          t.content.forEach((t) => {
-            ([o, n] = y(e, n, t.marks, o)),
-              ([o, n] = (function (e, t, n, o) {
-                let r;
-                for (const a of n)
-                  if (-1 === t.indexOf(a)) {
-                    r || (r = t.slice());
-                    const n = e.mapMarks.get(a.type);
-                    r.push(a);
-                    const { args: l, tag: s } = F(n, a.attrs);
-                    o += (0, u.lW)(s, l || {});
-                  }
-                return [o, null != r ? r : t];
-              })(e, n, t.marks, o)),
-              t.type.isText
-                ? (o += (0, u.bU)(t.text))
-                : t.type == k.nodes.hard_break
-                  ? (o += "\n")
-                  : (o += A(e, t));
-          }),
-          ([o] = y(e, n, [], o)),
-          a && (o += (0, u.Ec)(a)),
-          o
+      function x(e) {
+        const { top: t, left: n, children: a } = e,
+          [r, l] = o.useState(0),
+          c = o.useRef();
+        o.useLayoutEffect(() => {
+          l(c.current.getBoundingClientRect().width);
+        }, [t, n, a]);
+        const i = { top: `${t}px`, left: `${Math.max(n - r / 2, 12)}px` };
+        return o.createElement(
+          "div",
+          { className: C.Hover, style: i, ref: c },
+          a,
         );
       }
-      function y(e, t, n, o) {
-        const r = [];
-        for (const e of t) -1 === n.indexOf(e) && r.push(e);
-        if (!r.length) return [o, t];
-        const a = t.slice();
-        for (
-          ;
-          r.length && ((0, x.X)(a.length, "no marks left to close"), a.length);
-
-        ) {
-          const t = a.pop(),
-            n = e.mapMarks.get(t.type),
-            { tag: l } = F(n, t.attrs);
-          (o += (0, u.Ec)(l)), N.Zf(r, t);
-        }
-        return [o, a];
-      }
-      function F(e, t) {
-        let n,
-          o = {};
-        return (
-          e &&
-            (e.AttrsToBBArgs && ({ tag: n, args: o } = e.AttrsToBBArgs(t)),
-            n || (n = e.tag),
-            o || (o = {})),
-          { tag: n, args: o }
+      var w = n(16195),
+        P = n(35484),
+        F = n(50947),
+        y = n(82997),
+        H = n(85164),
+        B = n(94950);
+      function S(e) {
+        const {
+            schemaConfig: t,
+            bbcode: n,
+            className: a,
+            onUpdate: r,
+            refView: l,
+            onClickURL: c,
+            bSpellcheckEnabled: i = !0,
+            panelProps: s,
+            children: m,
+          } = e,
+          [k, C] = o.useState(),
+          x = o.useRef(),
+          w = o.useRef();
+        w.current = c || L;
+        const S = o.useCallback(
+          (e) => {
+            if (!e) return void x.current?.destroy();
+            const n = x.current;
+            n && n.destroy(),
+              (x.current = new u.tk(e, {
+                state: n?.state ?? d.yy.create({ schema: t.pm_schema }),
+                handleClickOn: (...e) =>
+                  (function (e, t, n, o, a, r, l, c) {
+                    if (c && (l.ctrlKey || 1 == l.button)) {
+                      const n = a
+                        .resolve(o - r)
+                        .marks()
+                        .find((t) => t.type == e.marks.link);
+                      if (n)
+                        return t(n.attrs.href, l.view), l.preventDefault(), !0;
+                    }
+                    return !1;
+                  })(t.pm_schema, w.current, ...e),
+                clipboardTextParser: (...e) =>
+                  (function (e, t, n, o, a) {
+                    let r,
+                      l = [];
+                    for (; (r = t.match(y.H7)); )
+                      r.index > 0 && l.push(e.text(t.substring(0, r.index))),
+                        l.push(
+                          e.text(r[0], [
+                            e.marks.link.create({ href: (0, y.Pm)(r[0]) }),
+                          ]),
+                        ),
+                        (t = t.substring(r.index + r[0].length));
+                    t.length && l.push(e.text(t));
+                    return new g.p2(g.HY.from(l), n.start(), n.end());
+                  })(t.pm_schema, ...e),
+              })),
+              C(x.current),
+              n || x.current.focus();
+          },
+          [t],
         );
-      }
-      var O = n(85556),
-        D = n(38321),
-        P = n(24589),
-        M = n(99659),
-        S = n(65109);
-      function H(e, t) {
         o.useEffect(() => {
-          if (e && t && !e.isDestroyed)
-            return (
-              (function (e, t) {
-                const n = e.state;
-                if (!e.state.plugins.includes(t)) {
-                  const o = [...e.state.plugins, t];
-                  e.updateState(n.reconfigure({ plugins: o }));
-                }
-              })(e, t),
-              () =>
-                (function (e, t) {
-                  if (!e.isDestroyed) {
-                    const n = e.state,
-                      o = n.plugins.filter((e) => e !== t);
-                    e.updateState(n.reconfigure({ plugins: o }));
+          k && k.updateState((0, p.B)((0, E.B)(n, t), t.pm_schema, k.state));
+        }, [t, n, k]),
+          (0, F.LY)(l, k);
+        const {
+            refDiv: D,
+            onActivate: X,
+            onGamepadDirection: G,
+          } = (function (e) {
+            const t = (0, H.qt)(),
+              n = o.useRef(),
+              a = o.useCallback(
+                (e) => {
+                  (0, _.LP)(e, t.IN_VR);
+                },
+                [t.IN_VR],
+              ),
+              r = (0, _.CJ)(
+                { onTextEntered: a },
+                () => n.current?.ownerDocument.defaultView,
+              ),
+              l = o.useCallback(() => {
+                r.ShowVirtualKeyboard();
+                let t = e.current?.hasFocus();
+                if (!t) {
+                  e.current?.focus();
+                  let t = e.current.dom.childNodes;
+                  for (let o = 0; o < t.length; ++o) {
+                    let a = t[o],
+                      r = a.offsetTop;
+                    if (void 0 !== r && r >= n.current.scrollTop) {
+                      let t = a.getBoundingClientRect();
+                      (0, b.VM)(e.current, t.left, t.top);
+                      break;
+                    }
                   }
-                })(e, t)
-            );
-        }, [e, t]);
+                }
+              }, [r, e]),
+              c = o.useCallback((e) => e.currentTarget == e.target, []),
+              i = (0, T.pj)(n, null, null, c);
+            return { refDiv: n, onActivate: l, onGamepadDirection: i };
+          })(x),
+          I = (0, F.BE)(D, S);
+        return o.createElement(
+          f.xh,
+          { view: k },
+          o.createElement(h.s, {
+            key: `editordiv_${i}`,
+            className: (0, P.Z)(a, B.Container),
+            ref: I,
+            spellCheck: i,
+            focusable: !0,
+            onActivate: X,
+            onOKActionDescription: (0, v.Xx)("#UserGameNotes_Edit"),
+            onGamepadDirection: G,
+            ...s,
+          }),
+          o.createElement(f.l8, { onUpdate: r, schema: t.pm_schema }),
+          o.createElement(N, null),
+          m,
+        );
       }
       function L(e, t) {
-        let { from: n, $from: o, to: r, empty: a } = e.selection;
-        return a
-          ? !!t.isInSet(e.storedMarks || o.marks())
-          : e.doc.rangeHasMark(n, r, t);
+        (0, w.b8)(t, e);
       }
-      function I(e, t, n) {
-        let { $from: o, to: r, node: a } = e.selection;
-        return !a && r <= o.end() && (a = o.parent), !!a && a.hasMarkup(t, n);
+      var D = n(94256),
+        X = n(12041),
+        G = n(93868),
+        I = n(95579);
+      const A = { nodes: { ...G.Pp.nodes }, marks: { ...G.Pp.marks } },
+        U = new I.F(A);
+      var O = n(47739);
+      const R = "/images/image_error.svg";
+      function M(e) {
+        const { uploadImage: t, nodeType: n, nMaxImageSize: a = Z } = e;
+        return (
+          (0, f.U$)(
+            o.useMemo(
+              () =>
+                new d.Sy({
+                  key: new d.H$(`PMUploadImage_${n.name}`),
+                  props: {
+                    transformPasted: (...e) =>
+                      (function (e, t, n, o) {
+                        let a = !1;
+                        if (
+                          (n.content.descendants((n, o) => {
+                            n.type == e && n.attrs.src.length > t && (a = !0);
+                          }),
+                          a)
+                        ) {
+                          let t = [
+                            e.create({
+                              src: R,
+                              title: (0, v.Xx)("#UserGameNotes_ImageTooLarge"),
+                            }),
+                          ];
+                          return new g.p2(g.HY.from(t), 0, 0);
+                        }
+                        return n;
+                      })(n, a, ...e),
+                    handlePaste: (e, o, a) => {
+                      const r = [];
+                      a.content.descendants((e) => {
+                        e.type == n &&
+                          e.attrs.src.startsWith("data:image") &&
+                          r.push(e.attrs.src);
+                      }),
+                        r.length > 0 &&
+                          setTimeout(() => {
+                            !(async function (e, t, n) {
+                              for (const o of e) {
+                                const e = await fetch(o),
+                                  a = await e.blob(),
+                                  r = (0, O.L4)(await a.arrayBuffer());
+                                W(
+                                  o,
+                                  await n(e.headers.get("Content-Type"), r),
+                                  t,
+                                );
+                              }
+                            })(r, e, t);
+                          }, 100);
+                    },
+                  },
+                }),
+              [t, a, n],
+            ),
+          ),
+          null
+        );
       }
-      function X(e, t, n = {}) {
-        return new S.VK(e, (e, o, r, a) => {
-          const l = n instanceof Function ? n(o) : n,
-            s = e.tr;
-          if (o[1]) {
-            const e = r + o[0].indexOf(o[1]),
-              t = e + o[1].length;
-            t < a && s.delete(t, a),
-              e > r && s.delete(r, e),
-              (a = r + o[1].length);
+      function W(e, t, n) {
+        n.state.doc.descendants((o, a) => {
+          if ("image" === o.type.name && o.attrs.src === e) {
+            const e = n.state.tr.setNodeAttribute(a, "src", t);
+            n.dispatch(e);
           }
-          return s.addMark(r, a, t.create(l)), s.removeStoredMark(t), s;
         });
       }
-      var G = n(86064),
-        R = n(50947),
-        U = n(94950);
-      function Z(e) {
-        const { children: t } = e,
-          { callbacks: n, view: r } = Y(),
-          [a, l] = o.useState(() => L(r.state, k.marks.link)),
-          i = o.useCallback((e) => l(L(e.state, k.marks.link)), []);
-        (0, R.Qg)(n, i);
-        const [u, d, m] = (0, R.X9)();
+      const Z = 1048576;
+      var V = n(99659),
+        z = n(71218),
+        K = n(55751),
+        q = n(38321),
+        $ = n(40885);
+      const Y = () => o.useContext(Q);
+      function j(e) {
+        const { view: t, refUpdateToolbar: n, children: a } = e,
+          r = o.useRef();
+        r.current || (r.current = new $.pB()),
+          o.useEffect(
+            () => (
+              (0, F.k$)(n, () => r.current.Dispatch(t)),
+              () => (0, F.k$)(n, void 0)
+            ),
+            [t, n],
+          );
+        const l = o.useMemo(() => ({ callbacks: r.current, view: t }), [t]);
+        return t ? o.createElement(Q.Provider, { value: l }, a) : null;
+      }
+      const Q = o.createContext(void 0);
+      function J() {
+        return o.createElement("div", { className: B.Gap });
+      }
+      function ee() {
+        return o.createElement("div", { className: B.Spacer });
+      }
+      function te(e) {
+        return o.createElement(
+          h.s,
+          { className: (0, P.Z)(B.ToolbarRow), "flow-children": "row" },
+          e.children,
+        );
+      }
+      function ne(e) {
+        const { nodeType: t, title: n, attrs: a, children: r } = e,
+          { callbacks: l, view: c } = Y(),
+          [i, s] = o.useState(() => (0, b.pp)(c.state, t, a)),
+          m = o.useCallback((e) => s((0, b.pp)(e.state, t, a)), [t, a]);
+        (0, F.Qg)(l, m);
+        const u = o.useMemo(() => q.uJ(t, a), [a, t]);
+        return o.createElement(re, {
+          command: u,
+          title: n,
+          toggled: i,
+          children: r,
+        });
+      }
+      function oe(e) {
+        const { mark: t, title: n, children: a } = e,
+          { callbacks: r, view: l } = Y(),
+          [c, i] = o.useState(() => (0, b.MW)(l.state, t)),
+          s = o.useCallback((e) => i((0, b.MW)(e.state, t)), [t]);
+        (0, F.Qg)(r, s);
+        const m = o.useMemo(() => q.w9(t), [t]);
+        return o.createElement(re, {
+          command: m,
+          title: n,
+          toggled: c,
+          children: a,
+        });
+      }
+      function ae(e) {
+        const { fnEnabledCheck: t, ...n } = e,
+          { callbacks: a, view: r } = Y(),
+          [l, c] = o.useState(() => t(r)),
+          i = o.useCallback((e) => c(t(e)), [t]);
+        return (0, F.Qg)(a, i), o.createElement(re, { ...n, disabled: !l });
+      }
+      function re(e) {
+        const {
+            command: t,
+            toggled: n,
+            title: a,
+            disabled: r,
+            children: l,
+          } = e,
+          { view: i } = Y();
+        return o.createElement(
+          c.zx,
+          {
+            className: (0, P.Z)(B.CommandButton, n && B.Toggled),
+            title: a,
+            onMouseDown: (e) => {
+              e.preventDefault(), t(i.state, i.dispatch, i);
+            },
+            disabled: !0 === r,
+            focusable: !r,
+          },
+          l,
+        );
+      }
+      function le(e) {
+        const {
+          onClick: t,
+          toggled: n,
+          title: a,
+          disabled: r,
+          children: l,
+        } = e;
+        return o.createElement(
+          c.zx,
+          {
+            className: (0, P.Z)(B.CommandButton, n && B.Toggled),
+            title: a,
+            onMouseDown: (e) => {
+              e.preventDefault(), t();
+            },
+            disabled: !0 === r,
+          },
+          l,
+        );
+      }
+      function ce(e) {
+        const { schema: t, children: n } = e,
+          { callbacks: a, view: r } = Y(),
+          [l, i] = o.useState(() => (0, b.MW)(r.state, t.marks.link)),
+          m = o.useCallback((e) => i((0, b.MW)(e.state, t.marks.link)), [t]);
+        (0, F.Qg)(a, m);
+        const [u, d, p] = (0, F.X9)();
         return o.createElement(
           o.Fragment,
           null,
           o.createElement(
-            c.Yy,
+            s.Yy,
             { active: u },
-            o.createElement(W, { active: u, closeModal: m, view: r }),
+            o.createElement(ie, {
+              schema: t,
+              active: u,
+              closeModal: p,
+              view: r,
+            }),
           ),
           o.createElement(
-            s.zx,
+            c.zx,
             {
-              className: (0, f.Z)(U.CommandButton, a && U.Toggled),
+              className: (0, P.Z)(B.CommandButton, l && B.Toggled),
               onMouseDown: (e) => {
                 e.preventDefault(), d();
               },
-              title: (0, G.Xx)("#FormattingToolbar_InsertLink"),
+              title: (0, v.Xx)("#FormattingToolbar_InsertLink"),
             },
-            t,
+            n,
           ),
         );
       }
-      const W = o.memo(function (e) {
-        const { active: t, closeModal: n, view: r } = e,
-          [a, l] = o.useState(""),
-          [i, u] = o.useState(""),
+      const ie = o.memo(function (e) {
+        const { schema: t, active: n, closeModal: a, view: r } = e,
+          [l, i] = o.useState(""),
+          [m, u] = o.useState(""),
           d = o.useRef(),
-          m = o.useRef();
+          p = o.useRef();
         return (
           o.useLayoutEffect(() => {
-            if (t) {
+            if (n) {
               let e = "";
               r.state.selection.empty ||
                 (e = r.state.doc.cut(
                   r.state.selection.from,
                   r.state.selection.to,
                 ).textContent),
-                l(e),
+                i(e),
                 e.startsWith("http")
                   ? (u(e),
                     d.current.Focus(),
@@ -569,854 +486,460 @@
                     }, 0))
                   : 0 == e.length
                     ? d.current.Focus()
-                    : m.current.Focus();
+                    : p.current.Focus();
             }
-          }, [t, r]),
+          }, [n, r]),
           o.createElement(
-            c.uH,
+            s.uH,
             {
               onOK: () => {
                 r.dispatch(
                   r.state.tr.replaceRangeWith(
                     r.state.selection.from,
                     r.state.selection.to,
-                    k.text(a || i, [k.marks.link.create({ href: i })]),
+                    t.text(l || m, [t.marks.link.create({ href: m })]),
                   ),
                 ),
                   r.focus(),
-                  n();
+                  a();
               },
-              closeModal: n,
-              strTitle: (0, G.Xx)("#FormattingToolbar_InsertLink"),
-              strOKButtonText: (0, G.Xx)("#FormattingToolbar_InsertLink"),
-              bOKDisabled: 0 == i.length,
+              closeModal: a,
+              strTitle: (0, v.Xx)("#FormattingToolbar_InsertLink"),
+              strOKButtonText: (0, v.Xx)("#FormattingToolbar_InsertLink"),
+              bOKDisabled: 0 == m.length,
             },
-            o.createElement(s.II, {
+            o.createElement(c.II, {
               ref: d,
-              value: a,
-              onChange: (e) => l(e.currentTarget.value),
-              label: (0, G.Xx)("#FormattingToolbar_LinkText"),
+              value: l,
+              onChange: (e) => i(e.currentTarget.value),
+              label: (0, v.Xx)("#FormattingToolbar_LinkText"),
             }),
-            o.createElement(s.II, {
-              ref: m,
-              value: i,
+            o.createElement(c.II, {
+              ref: p,
+              value: m,
               onChange: (e) => u(e.currentTarget.value),
-              label: (0, G.Xx)("#FormattingToolbar_LinkAddress"),
+              label: (0, v.Xx)("#FormattingToolbar_LinkAddress"),
             }),
           )
         );
       });
-      var K = n(40885),
-        V = n(94256),
-        $ = n(46048),
-        j = n(2286);
-      function z(e) {
-        const {
-            view: t,
-            refUpdateToolbar: n,
-            className: r,
-            bSpellcheckEnabled: a,
-            setSpellcheckEnabled: l,
-          } = e,
-          [c, u] = (0, $.i4)("FormattingToolbar_Expanded", !1),
-          [d] = o.useState(() => new K.pB());
-        o.useEffect(
-          () => ((0, R.k$)(n, () => d.Dispatch(t)), () => (0, R.k$)(n, void 0)),
-          [d, t, n],
-        );
-        const p = o.useMemo(() => ({ callbacks: d, view: t }), [d, t]);
-        return t
-          ? o.createElement(
-              q.Provider,
-              { value: p },
-              o.createElement(
-                "div",
-                { className: (0, f.Z)(U.Toolbar, r) },
-                o.createElement(
-                  J,
-                  null,
-                  o.createElement(
-                    V.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_Undo",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      te,
-                      {
-                        title: (0, G.Xx)("#FormattingToolbar_Undo"),
-                        command: P.Yw,
-                        fnEnabledCheck: re,
-                      },
-                      o.createElement(i.Undo, null),
-                    ),
-                  ),
-                  o.createElement(
-                    V.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_Redo",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      te,
-                      {
-                        title: (0, G.Xx)("#FormattingToolbar_Redo"),
-                        command: P.KX,
-                        fnEnabledCheck: ae,
-                      },
-                      o.createElement(i.Redo, null),
-                    ),
-                  ),
-                  o.createElement("div", { className: U.Gap }),
-                  o.createElement(
-                    V.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_Bold",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      ee,
-                      {
-                        title: (0, G.Xx)("#FormattingToolbar_Bold"),
-                        mark: k.marks.strong,
-                      },
-                      o.createElement(i.TextBold, null),
-                    ),
-                  ),
-                  o.createElement(
-                    V.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_Italic",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      ee,
-                      {
-                        title: (0, G.Xx)("#FormattingToolbar_Italic"),
-                        mark: k.marks.italic,
-                      },
-                      o.createElement(i.TextItalic, null),
-                    ),
-                  ),
-                  o.createElement(
-                    V.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_Underline",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      ee,
-                      {
-                        title: (0, G.Xx)("#FormattingToolbar_Underline"),
-                        mark: k.marks.underline,
-                      },
-                      o.createElement(i.TextUnderline, null),
-                    ),
-                  ),
-                  o.createElement(
-                    V.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_Strike",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      ee,
-                      {
-                        title: (0, G.Xx)("#FormattingToolbar_Strike"),
-                        mark: k.marks.strike,
-                      },
-                      o.createElement(i.TextStrikethrough, null),
-                    ),
-                  ),
-                  o.createElement(
-                    V.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_InlineCode",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      ee,
-                      {
-                        title: (0, G.Xx)("#FormattingToolbar_InlineCode"),
-                        mark: k.marks.code,
-                      },
-                      o.createElement(i.TextCode, null),
-                    ),
-                  ),
-                  o.createElement("div", { className: U.Spacer }),
-                  o.createElement(
-                    V.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_ExpandOptions",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      s.zx,
-                      {
-                        className: (0, f.Z)(
-                          U.CommandButton,
-                          U.ExpandButton,
-                          c && U.Toggled,
-                        ),
-                        onClick: () => u(!c),
-                      },
-                      o.createElement(i.Chevron, null),
-                    ),
-                  ),
-                ),
-                o.createElement(
-                  J,
-                  { visible: c },
-                  o.createElement(
-                    V.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_Paragraph",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      Q,
-                      {
-                        nodeType: k.nodes.paragraph,
-                        title: (0, G.Xx)("#FormattingToolbar_Paragraph"),
-                      },
-                      o.createElement(i.TextParagraph, null),
-                    ),
-                  ),
-                  o.createElement(
-                    V.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_HeadingLevel1",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      Q,
-                      {
-                        nodeType: k.nodes.heading,
-                        attrs: { level: 1 },
-                        title: (0, G.Xx)("#FormattingToolbar_HeadingLevelN", 1),
-                      },
-                      o.createElement(i.TextH1, null),
-                    ),
-                  ),
-                  o.createElement(
-                    V.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_HeadingLevel2",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      Q,
-                      {
-                        nodeType: k.nodes.heading,
-                        attrs: { level: 2 },
-                        title: (0, G.Xx)("#FormattingToolbar_HeadingLevelN", 2),
-                      },
-                      o.createElement(i.TextH2, null),
-                    ),
-                  ),
-                  o.createElement(
-                    V.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_HeadingLevel3",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      Q,
-                      {
-                        nodeType: k.nodes.heading,
-                        attrs: { level: 3 },
-                        title: (0, G.Xx)("#FormattingToolbar_HeadingLevelN", 3),
-                      },
-                      o.createElement(i.TextH3, null),
-                    ),
-                  ),
-                  o.createElement(
-                    V.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_HeadingLevel4",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      Q,
-                      {
-                        nodeType: k.nodes.heading,
-                        attrs: { level: 4 },
-                        title: (0, G.Xx)("#FormattingToolbar_HeadingLevelN", 4),
-                      },
-                      o.createElement(i.TextH4, null),
-                    ),
-                  ),
-                  o.createElement(
-                    V.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_HeadingLevel5",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      Q,
-                      {
-                        nodeType: k.nodes.heading,
-                        attrs: { level: 5 },
-                        title: (0, G.Xx)("#FormattingToolbar_HeadingLevelN", 5),
-                      },
-                      o.createElement(i.TextH5, null),
-                    ),
-                  ),
-                  o.createElement(
-                    V.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_CodeBlock",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      Q,
-                      {
-                        nodeType: k.nodes.code_block,
-                        title: (0, G.Xx)("#FormattingToolbar_CodeBlock"),
-                      },
-                      o.createElement(i.TextCodeBlock, null),
-                    ),
-                  ),
-                  o.createElement("div", { className: U.Gap }),
-                  o.createElement(
-                    V.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_BulletedList",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      ne,
-                      {
-                        title: (0, G.Xx)("#FormattingToolbar_BulletedList"),
-                        command: (0, m.KI)(k.nodes.bullet_list),
-                      },
-                      o.createElement(i.TextBullets, null),
-                    ),
-                  ),
-                  o.createElement(
-                    V.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_IndentList",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      ne,
-                      {
-                        title: (0, G.Xx)("#FormattingToolbar_IndentList"),
-                        command: (0, m.IB)(k.nodes.list_item),
-                      },
-                      o.createElement(i.TextIndent, null),
-                    ),
-                  ),
-                  o.createElement(
-                    V.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_OutdentList",
-                      direction: "bottom",
-                    },
-                    o.createElement(
-                      ne,
-                      {
-                        title: (0, G.Xx)("#FormattingToolbar_OutdentList"),
-                        command: (0, m.bw)(k.nodes.list_item),
-                      },
-                      o.createElement(i.TextOutdent, null),
-                    ),
-                  ),
-                  o.createElement("div", { className: U.Gap }),
-                  o.createElement(
-                    V.HP,
-                    {
-                      toolTipContent: "#FormattingToolbar_InsertLink",
-                      direction: "bottom",
-                    },
-                    o.createElement(Z, null, o.createElement(i.TextLink, null)),
-                  ),
-                  o.createElement("div", { className: U.Spacer }),
-                  l &&
-                    o.createElement(
-                      V.HP,
-                      {
-                        toolTipContent: a
-                          ? "#FormattingToolbar_DisableSpellcheck"
-                          : "#FormattingToolbar_EnableSpellcheck",
-                        direction: "bottom",
-                      },
-                      o.createElement(
-                        oe,
-                        { toggled: a, onClick: () => l(!a) },
-                        o.createElement(i.SpellCheck, null),
-                      ),
-                    ),
-                ),
-              ),
-            )
-          : null;
-      }
-      const q = o.createContext(void 0),
-        Y = () => o.useContext(q);
-      function J(e) {
-        return o.createElement(
-          M.G,
-          { visible: e.visible },
-          o.createElement(
-            j.s,
-            { className: (0, f.Z)(U.ToolbarRow), "flow-children": "row" },
-            e.children,
-          ),
-        );
-      }
-      function Q(e) {
-        const { nodeType: t, title: n, attrs: r, children: a } = e,
-          { callbacks: l, view: s } = Y(),
-          [i, c] = o.useState(() => I(s.state, t, r)),
-          u = o.useCallback((e) => c(I(e.state, t, r)), [t, r]);
-        (0, R.Qg)(l, u);
-        const d = o.useMemo(() => (0, D.uJ)(t, r), [r, t]);
-        return o.createElement(ne, {
-          command: d,
-          title: n,
-          toggled: i,
-          children: a,
-        });
-      }
-      function ee(e) {
-        const { mark: t, title: n, children: r } = e,
-          { callbacks: a, view: l } = Y(),
-          [s, i] = o.useState(() => L(l.state, t)),
-          c = o.useCallback((e) => i(L(e.state, t)), [t]);
-        (0, R.Qg)(a, c);
-        const u = o.useMemo(() => (0, D.w9)(t), [t]);
-        return o.createElement(ne, {
-          command: u,
-          title: n,
-          toggled: s,
-          children: r,
-        });
-      }
-      function te(e) {
-        const { fnEnabledCheck: t } = e,
-          n = (0, O._T)(e, ["fnEnabledCheck"]),
-          { callbacks: r, view: a } = Y(),
-          [l, s] = o.useState(() => t(a)),
-          i = o.useCallback((e) => s(t(e)), [t]);
-        return (
-          (0, R.Qg)(r, i),
-          o.createElement(ne, Object.assign({}, n, { disabled: !l }))
-        );
-      }
-      function ne(e) {
-        const {
-            command: t,
-            toggled: n,
-            title: r,
-            disabled: a,
-            children: l,
-          } = e,
-          { view: i } = Y();
-        return o.createElement(
-          s.zx,
-          {
-            className: (0, f.Z)(U.CommandButton, n && U.Toggled),
-            title: r,
-            onMouseDown: (e) => {
-              e.preventDefault(), t(i.state, i.dispatch, i);
-            },
-            disabled: !0 === a,
-            focusable: !a,
-          },
-          l,
-        );
-      }
-      function oe(e) {
-        const {
-          onClick: t,
-          toggled: n,
-          title: r,
-          disabled: a,
-          children: l,
-        } = e;
-        return o.createElement(
-          s.zx,
-          {
-            className: (0, f.Z)(U.CommandButton, n && U.Toggled),
-            title: r,
-            onMouseDown: (e) => {
-              e.preventDefault(), t();
-            },
-            disabled: !0 === a,
-          },
-          l,
-        );
-      }
-      function re(e) {
-        return (0, P.of)(e.state) > 0;
-      }
-      function ae(e) {
-        return (0, P.AH)(e.state) > 0;
-      }
-      var le = n(23507),
-        se = n(82789),
-        ie = n(15463),
-        ce = n(81257),
-        ue = n(29853),
-        de = n(64452);
-      function me(e) {
-        const { view: t } = e,
-          [n, r] = o.useState(),
-          [a, l] = o.useState(),
-          [s, i] = o.useState(),
-          c = o.useCallback((e, t) => {
-            const n = t.target;
-            if ((0, ue.GB)(n) && "A" == n.nodeName) {
-              const e = n.getBoundingClientRect();
-              r(e.left + e.width / 2), l(e.bottom + 2), i(n);
-            } else i(void 0);
-            return !1;
-          }, []),
-          u = o.useCallback((e, t) => (i(void 0), !1), []);
-        if (
-          (H(
-            t,
-            o.useMemo(
-              () =>
-                new se.Sy({
-                  props: { handleDOMEvents: { mouseover: c, mouseleave: u } },
-                }),
-              [c, u],
-            ),
-          ),
-          !s)
-        )
-          return null;
-        const d = s.getAttribute("href");
-        return o.createElement(
-          pe,
-          { top: a, left: n },
-          o.createElement("div", { className: de.Link }, d),
-          o.createElement(
-            "div",
-            { className: de.LinkHelp },
-            (0, G.Xx)("#UserGameNotes_ClickToOpenLink"),
-          ),
-        );
-      }
-      function pe(e) {
-        const { top: t, left: n, children: r } = e,
-          [a, l] = o.useState(0),
-          s = o.useRef();
-        o.useLayoutEffect(() => {
-          l(s.current.getBoundingClientRect().width);
-        }, [t, n, r]);
-        const i = { top: `${t}px`, left: `${Math.max(n - a / 2, 12)}px` };
-        return o.createElement(
-          "div",
-          { className: de.Hover, style: i, ref: s },
-          r,
-        );
-      }
-      const ge = (0, D.QF)(
-          D.uo,
-          (e, t) => (
-            t &&
-              t(
-                e.tr
-                  .replaceSelectionWith(k.nodes.hard_break.create())
-                  .scrollIntoView(),
-              ),
-            !0
-          ),
-        ),
-        fe = (0, le.h)({
-          "Mod-z": P.Yw,
-          "Mod-y": P.KX,
-          Backspace: S.dU,
-          "Mod-Enter": ge,
-          "Shift-Enter": ge,
-          "Mod-b": (0, D.w9)(k.marks.strong),
-          "Mod-i": (0, D.w9)(k.marks.italic),
-          Enter: (0, m.s6)(k.nodes.list_item),
-          "Mod-[": (0, m.IB)(k.nodes.list_item),
-          "Mod-]": (0, m.bw)(k.nodes.list_item),
-          "Shift-Ctrl-1": (0, D.uJ)(k.nodes.heading, { level: 1 }),
-          "Shift-Ctrl-2": (0, D.uJ)(k.nodes.heading, { level: 2 }),
-          "Shift-Ctrl-3": (0, D.uJ)(k.nodes.heading, { level: 3 }),
-          "Shift-Ctrl-0": (0, D.uJ)(k.nodes.paragraph),
-        });
-      var be = n(16195),
-        he = n(82997),
-        Ee = n(47739);
-      function ke(e) {
-        const { view: t, uploadImage: n } = e;
-        return (
-          H(
-            t,
-            new se.Sy({
-              props: {
-                handlePaste: (e, t, o) => {
-                  const r = [];
-                  o.content.descendants((e) => {
-                    "image" === e.type.name &&
-                      e.attrs.src.startsWith("data:image") &&
-                      r.push(e.attrs.src);
-                  }),
-                    r.length > 0 &&
-                      setTimeout(() => {
-                        !(function (e, t, n) {
-                          (0, O.mG)(this, void 0, void 0, function* () {
-                            for (const o of e) {
-                              const e = yield fetch(o),
-                                r = yield e.blob(),
-                                a = (0, Ee.L4)(yield r.arrayBuffer());
-                              Te(
-                                o,
-                                yield n(e.headers.get("Content-Type"), a),
-                                t,
-                              );
-                            }
-                          });
-                        })(r, e, n);
-                      }, 100);
-                },
-              },
-            }),
-          ),
-          null
-        );
-      }
-      function Te(e, t, n) {
-        n.state.doc.descendants((o, r) => {
-          if ("image" === o.type.name && o.attrs.src === e) {
-            const e = n.state.tr.setNodeAttribute(r, "src", t);
-            n.dispatch(e);
-          }
-        });
-      }
-      const ve = "/images/image_error.svg";
-      var _e = n(52824),
-        Ce = n(85164);
-      function Be(e) {
-        const {
-            bbcode: t,
-            className: n,
-            onUpdate: r,
-            refView: a,
-            onClickURL: l,
-            bSpellcheckEnabled: s = !0,
-            panelProps: i,
-          } = e,
-          c = o.useRef();
-        c.current = r;
-        const u = (0, Ce.qt)(),
-          [d, m] = o.useState(),
-          p = o.useRef(),
-          g = o.useRef();
-        g.current = l || Ne;
-        const b = o.useCallback((e) => {
-          var t, n;
-          if (!e)
-            return void (
-              null === (t = p.current) ||
-              void 0 === t ||
-              t.destroy()
-            );
-          const o = p.current;
-          o && o.destroy(),
-            (p.current = new ie.tk(e, {
-              state:
-                null !== (n = null == o ? void 0 : o.state) && void 0 !== n
-                  ? n
-                  : se.yy.create({ schema: k }),
-              handleClickOn: (...e) =>
-                (function (e, t, n, o, r, a, l) {
-                  if (l && (a.ctrlKey || 1 == a.button)) {
-                    const t = o
-                      .resolve(n - r)
-                      .marks()
-                      .find((e) => e.type == k.marks.link);
-                    if (t)
-                      return e(t.attrs.href, a.view), a.preventDefault(), !0;
-                  }
-                  return !1;
-                })(g.current, ...e),
-              clipboardTextParser: we,
-              transformPasted: ye,
-            })),
-            m(p.current),
-            o || p.current.focus();
-        }, []);
-        o.useLayoutEffect(() => {
-          const e = (function (e, t = v) {
-            return new B(t).ParseBBCode(e);
-          })(t);
-          p.current.updateState(
-            (function (e, t) {
-              const n = new se.Sy({ view: (e) => ({ update: t }) });
-              return se.yy.create({
-                schema: k,
-                doc: e,
-                plugins: [(0, P.m8)(), fe, (0, le.h)(D.YR), n, xe()],
-              });
-            })(e, (...e) => c.current && c.current(...e)),
-          );
-        }, [t]),
-          (0, R.LY)(a, d);
-        const h = o.useRef(),
-          E = o.useCallback(
-            (e) => {
-              (0, ce.LP)(e, u.IN_VR);
-            },
-            [u.IN_VR],
-          ),
-          T = o.useCallback(() => {}, []),
-          _ = (0, ce.CJ)({ onTextEntered: E, onKeyboardNavOut: T }, () => {
-            var e;
-            return null === (e = h.current) || void 0 === e
-              ? void 0
-              : e.ownerDocument.defaultView;
-          }),
-          C = o.useCallback(() => {
-            var e, t;
-            if (
-              (_.ShowVirtualKeyboard(),
-              !(null === (e = p.current) || void 0 === e
-                ? void 0
-                : e.hasFocus()))
-            ) {
-              null === (t = p.current) || void 0 === t || t.focus();
-              let e = p.current.dom.childNodes;
-              for (let t = 0; t < e.length; ++t) {
-                let n = e[t],
-                  o = n.offsetTop;
-                if (void 0 !== o && o >= h.current.scrollTop) {
-                  let e = n.getBoundingClientRect(),
-                    t = { left: e.left, top: e.top },
-                    o = p.current.posAtCoords(t);
-                  if (null == o ? void 0 : o.pos) {
-                    let e = p.current.state.doc.resolve(o.pos);
-                    p.current.dispatch(
-                      p.current.state.tr.setSelection(se.Bs.near(e)),
-                    );
-                  }
-                  break;
-                }
-              }
-            }
-          }, [_]),
-          N = (0, R.BE)(h, b),
-          x = o.useCallback((e) => e.currentTarget == e.target, []),
-          w = (0, _e.pj)(h, null, null, x);
+      function se() {
         return o.createElement(
           o.Fragment,
           null,
           o.createElement(
-            j.s,
-            Object.assign(
+            D.HP,
+            { toolTipContent: "#FormattingToolbar_Undo", direction: "bottom" },
+            o.createElement(
+              ae,
               {
-                key: `editordiv_${s}`,
-                className: (0, f.Z)(n, U.Container),
-                ref: N,
-                spellCheck: s,
-                focusable: !0,
-                onActivate: C,
-                onOKActionDescription: (0, G.Xx)("#UserGameNotes_Edit"),
-                onGamepadDirection: w,
+                title: (0, v.Xx)("#FormattingToolbar_Undo"),
+                command: z.Yw,
+                fnEnabledCheck: me,
               },
-              i,
+              o.createElement(i.Undo, null),
             ),
           ),
-          o.createElement(me, { view: p.current }),
-          e.uploadImage &&
-            o.createElement(ke, { view: d, uploadImage: e.uploadImage }),
+          o.createElement(
+            D.HP,
+            { toolTipContent: "#FormattingToolbar_Redo", direction: "bottom" },
+            o.createElement(
+              ae,
+              {
+                title: (0, v.Xx)("#FormattingToolbar_Redo"),
+                command: z.KX,
+                fnEnabledCheck: ue,
+              },
+              o.createElement(i.Redo, null),
+            ),
+          ),
         );
       }
-      function Ne(e, t) {
-        (0, be.b8)(t, e);
+      function me(e) {
+        return z.of(e.state) > 0;
       }
-      function xe() {
-        return (0, S.Hw)({
-          rules: [
-            (0, S.S0)(
-              /^(\d+)\.\s$/,
-              k.nodes.ordered_list,
-              (e) => ({ order: parseInt(e[1]) }),
-              (e, t) => t.childCount + t.attrs.order == parseInt(e[1]),
-            ),
-            (0, S.S0)(/^\s*([-+*])\s$/, k.nodes.bullet_list),
-            X(/\*([^*]+)\*/, k.marks.strong),
-            X(/_([^_]+)_/, k.marks.italic),
-            X(/~([^~]+)~/, k.marks.strike),
-            X(/`([^`]+)`/, k.marks.code),
-            (0, S.zK)(/^```$/, k.nodes.code_block),
-            (0, S.zK)(/^(#{1,5})\s$/, k.nodes.heading, (e) => ({
-              level: e[1].length,
-            })),
-          ],
-        });
+      function ue(e) {
+        return z.AH(e.state) > 0;
       }
-      function we(e, t, n, o) {
-        let r,
-          a = [];
-        for (; (r = e.match(he.H7)); )
-          r.index > 0 && a.push(k.text(e.substring(0, r.index))),
-            a.push(
-              k.text(r[0], [k.marks.link.create({ href: (0, he.Pm)(r[0]) })]),
+      function de(e) {
+        const { schema: t } = e;
+        return o.createElement(
+          o.Fragment,
+          null,
+          o.createElement(
+            D.HP,
+            { toolTipContent: "#FormattingToolbar_Bold", direction: "bottom" },
+            o.createElement(
+              oe,
+              {
+                title: (0, v.Xx)("#FormattingToolbar_Bold"),
+                mark: t.marks.strong,
+              },
+              o.createElement(i.TextBold, null),
             ),
-            (e = e.substring(r.index + r[0].length));
-        return (
-          e.length && a.push(k.text(e)),
-          new d.p2(d.HY.from(a), t.start(), t.end())
+          ),
+          o.createElement(
+            D.HP,
+            {
+              toolTipContent: "#FormattingToolbar_Italic",
+              direction: "bottom",
+            },
+            o.createElement(
+              oe,
+              {
+                title: (0, v.Xx)("#FormattingToolbar_Italic"),
+                mark: t.marks.italic,
+              },
+              o.createElement(i.TextItalic, null),
+            ),
+          ),
+          o.createElement(
+            D.HP,
+            {
+              toolTipContent: "#FormattingToolbar_Underline",
+              direction: "bottom",
+            },
+            o.createElement(
+              oe,
+              {
+                title: (0, v.Xx)("#FormattingToolbar_Underline"),
+                mark: t.marks.underline,
+              },
+              o.createElement(i.TextUnderline, null),
+            ),
+          ),
+          o.createElement(
+            D.HP,
+            {
+              toolTipContent: "#FormattingToolbar_Strike",
+              direction: "bottom",
+            },
+            o.createElement(
+              oe,
+              {
+                title: (0, v.Xx)("#FormattingToolbar_Strike"),
+                mark: t.marks.strike,
+              },
+              o.createElement(i.TextStrikethrough, null),
+            ),
+          ),
+          o.createElement(
+            D.HP,
+            {
+              toolTipContent: "#FormattingToolbar_InlineCode",
+              direction: "bottom",
+            },
+            o.createElement(
+              oe,
+              {
+                title: (0, v.Xx)("#FormattingToolbar_InlineCode"),
+                mark: t.marks.code,
+              },
+              o.createElement(i.TextCode, null),
+            ),
+          ),
         );
       }
-      const Ae = 52428800;
-      function ye(e, t) {
-        let n = !1;
-        if (
-          (e.content.descendants((e, t) => {
-            "image" === e.type.name && e.attrs.src.length > Ae && (n = !0);
-          }),
-          n)
-        ) {
-          let e = [
-            k.nodes.image.create({
-              src: ve,
-              title: (0, G.Xx)("#UserGameNotes_ImageTooLarge"),
-            }),
-          ];
-          return new d.p2(d.HY.from(e), 0, 0);
-        }
-        return e;
+      function pe(e) {
+        const { schema: t } = e;
+        return o.createElement(
+          D.HP,
+          {
+            toolTipContent: "#FormattingToolbar_Paragraph",
+            direction: "bottom",
+          },
+          o.createElement(
+            ne,
+            {
+              nodeType: t.nodes.paragraph,
+              title: (0, v.Xx)("#FormattingToolbar_Paragraph"),
+            },
+            o.createElement(i.TextParagraph, null),
+          ),
+        );
       }
-      var Fe = n(12041);
-      const Oe = 15;
-      function De(e) {
+      function Ee(e) {
+        const { schema: t, levels: n } = e;
+        return o.createElement(
+          o.Fragment,
+          null,
+          o.createElement(
+            D.HP,
+            {
+              toolTipContent: "#FormattingToolbar_HeadingLevel1",
+              direction: "bottom",
+            },
+            o.createElement(
+              ne,
+              {
+                nodeType: t.nodes.heading,
+                attrs: { level: 1 },
+                title: (0, v.Xx)("#FormattingToolbar_HeadingLevelN", 1),
+              },
+              o.createElement(i.TextH1, null),
+            ),
+          ),
+          n >= 2 &&
+            o.createElement(
+              D.HP,
+              {
+                toolTipContent: "#FormattingToolbar_HeadingLevel2",
+                direction: "bottom",
+              },
+              o.createElement(
+                ne,
+                {
+                  nodeType: t.nodes.heading,
+                  attrs: { level: 2 },
+                  title: (0, v.Xx)("#FormattingToolbar_HeadingLevelN", 2),
+                },
+                o.createElement(i.TextH2, null),
+              ),
+            ),
+          n >= 3 &&
+            o.createElement(
+              D.HP,
+              {
+                toolTipContent: "#FormattingToolbar_HeadingLevel3",
+                direction: "bottom",
+              },
+              o.createElement(
+                ne,
+                {
+                  nodeType: t.nodes.heading,
+                  attrs: { level: 3 },
+                  title: (0, v.Xx)("#FormattingToolbar_HeadingLevelN", 3),
+                },
+                o.createElement(i.TextH3, null),
+              ),
+            ),
+          n >= 4 &&
+            o.createElement(
+              D.HP,
+              {
+                toolTipContent: "#FormattingToolbar_HeadingLevel4",
+                direction: "bottom",
+              },
+              o.createElement(
+                ne,
+                {
+                  nodeType: t.nodes.heading,
+                  attrs: { level: 4 },
+                  title: (0, v.Xx)("#FormattingToolbar_HeadingLevelN", 4),
+                },
+                o.createElement(i.TextH4, null),
+              ),
+            ),
+          n >= 5 &&
+            o.createElement(
+              D.HP,
+              {
+                toolTipContent: "#FormattingToolbar_HeadingLevel5",
+                direction: "bottom",
+              },
+              o.createElement(
+                ne,
+                {
+                  nodeType: t.nodes.heading,
+                  attrs: { level: 5 },
+                  title: (0, v.Xx)("#FormattingToolbar_HeadingLevelN", 5),
+                },
+                o.createElement(i.TextH5, null),
+              ),
+            ),
+        );
+      }
+      function fe(e) {
+        const { schema: t } = e;
+        return o.createElement(
+          o.Fragment,
+          null,
+          o.createElement(
+            D.HP,
+            {
+              toolTipContent: "#FormattingToolbar_BulletedList",
+              direction: "bottom",
+            },
+            o.createElement(
+              re,
+              {
+                title: (0, v.Xx)("#FormattingToolbar_BulletedList"),
+                command: K.KI(t.nodes.bullet_list),
+              },
+              o.createElement(i.TextBullets, null),
+            ),
+          ),
+          o.createElement(
+            D.HP,
+            {
+              toolTipContent: "#FormattingToolbar_IndentList",
+              direction: "bottom",
+            },
+            o.createElement(
+              re,
+              {
+                title: (0, v.Xx)("#FormattingToolbar_IndentList"),
+                command: K.IB(t.nodes.list_item),
+              },
+              o.createElement(i.TextIndent, null),
+            ),
+          ),
+          o.createElement(
+            D.HP,
+            {
+              toolTipContent: "#FormattingToolbar_OutdentList",
+              direction: "bottom",
+            },
+            o.createElement(
+              re,
+              {
+                title: (0, v.Xx)("#FormattingToolbar_OutdentList"),
+                command: K.bw(t.nodes.list_item),
+              },
+              o.createElement(i.TextOutdent, null),
+            ),
+          ),
+        );
+      }
+      function be(e) {
+        const { schema: t } = e;
+        return o.createElement(
+          D.HP,
+          {
+            toolTipContent: "#FormattingToolbar_InsertLink",
+            direction: "bottom",
+          },
+          o.createElement(ce, { schema: t }, o.createElement(i.TextLink, null)),
+        );
+      }
+      function ge(e) {
+        const { bSpellcheckEnabled: t, setSpellcheckEnabled: n } = e;
+        return o.createElement(
+          D.HP,
+          {
+            toolTipContent: t
+              ? "#FormattingToolbar_DisableSpellcheck"
+              : "#FormattingToolbar_EnableSpellcheck",
+            direction: "bottom",
+          },
+          o.createElement(
+            le,
+            { toggled: t, onClick: () => n(!t) },
+            o.createElement(i.SpellCheck, null),
+          ),
+        );
+      }
+      var he = n(46048);
+      function Te(e) {
+        const {
+            schema: t,
+            view: n,
+            refUpdateToolbar: a,
+            className: r,
+            bSpellcheckEnabled: l,
+            setSpellcheckEnabled: s,
+          } = e,
+          [m, u] = (0, he.i4)("FormattingToolbar_Expanded", !1);
+        return o.createElement(
+          j,
+          { refUpdateToolbar: a, view: n },
+          o.createElement(
+            "div",
+            { className: (0, P.Z)(B.Toolbar, r) },
+            o.createElement(
+              te,
+              null,
+              o.createElement(se, null),
+              o.createElement(J, null),
+              o.createElement(de, { schema: t }),
+              o.createElement(ee, null),
+              o.createElement(
+                D.HP,
+                {
+                  toolTipContent: "#FormattingToolbar_ExpandOptions",
+                  direction: "bottom",
+                },
+                o.createElement(
+                  c.zx,
+                  {
+                    className: (0, P.Z)(
+                      B.CommandButton,
+                      B.ExpandButton,
+                      m && B.Toggled,
+                    ),
+                    onClick: () => u(!m),
+                  },
+                  o.createElement(i.Chevron, null),
+                ),
+              ),
+            ),
+            o.createElement(
+              V.G,
+              { visible: m },
+              o.createElement(
+                te,
+                null,
+                o.createElement(pe, { schema: t }),
+                o.createElement(Ee, { schema: t, levels: 5 }),
+                o.createElement(
+                  D.HP,
+                  {
+                    toolTipContent: "#FormattingToolbar_CodeBlock",
+                    direction: "bottom",
+                  },
+                  o.createElement(
+                    ne,
+                    {
+                      nodeType: t.nodes.code_block,
+                      title: (0, v.Xx)("#FormattingToolbar_CodeBlock"),
+                    },
+                    o.createElement(i.TextCodeBlock, null),
+                  ),
+                ),
+                o.createElement(J, null),
+                o.createElement(fe, { schema: t }),
+                o.createElement(J, null),
+                o.createElement(be, { schema: t }),
+                o.createElement(ee, null),
+                s &&
+                  o.createElement(ge, {
+                    bSpellcheckEnabled: l,
+                    setSpellcheckEnabled: s,
+                  }),
+              ),
+            ),
+          ),
+        );
+      }
+      const _e = 15;
+      function ke(e) {
         const { note: t } = e,
-          [n, s] = o.useState(!1),
-          [i, c] = o.useState(),
+          [n, c] = o.useState(!1),
+          [i, s] = o.useState(),
           u = o.useRef(),
           d = o.useRef(),
-          m = o.useRef(t.content),
-          p = o.useRef(!1),
-          g = (0, a.NJ)(),
-          f = (0, a.ZW)(),
-          b = (0, a.Am)(),
-          h = (0, r.RE)(t.appid),
-          E = (0, Ce.id)();
-        m.current == t.content || p.current || (m.current = t.content);
-        const k = m.current,
-          T = (0, r.eD)(),
-          v = o.useCallback((e, t) => {
+          p = o.useRef(t.content),
+          E = o.useRef(!1),
+          f = (0, r.NJ)(),
+          b = (0, r.ZW)(),
+          g = (0, r.Am)(),
+          h = (0, a.RE)(t.appid),
+          T = (0, H.id)();
+        p.current == t.content || E.current || (p.current = t.content);
+        const _ = p.current,
+          k = (0, a.eD)(),
+          C = o.useCallback((e, t) => {
             u.current && u.current(),
               t.doc &&
                 t.doc != e.state.doc &&
-                (p.current ||
-                  ((p.current = !0),
+                (E.current ||
+                  ((E.current = !0),
                   l.q.ReportTrackedAction("/GameNotes/NoteModified")),
                 (d.current = () => ({
-                  title: He(e.state.doc),
-                  bbcode: w(e.state.doc),
+                  title: xe(e.state.doc),
+                  bbcode: (0, m.d)(e.state.doc, U),
                 })),
-                s(!0));
+                c(!0));
           }, []);
         o.useEffect(() => {
           if (!n) return;
@@ -1424,112 +947,120 @@
           const o = () => {
               if (e) {
                 const { title: n, bbcode: o } = e();
-                (t.not_persisted && !(null == o ? void 0 : o.length)) ||
-                  T.mutate({ note: t, title: n, bbcode: o }),
-                  s(!1);
+                (t.not_persisted && !o?.length) ||
+                  k.mutate({ note: t, title: n, bbcode: o }),
+                  c(!1);
               }
               (e = void 0), (d.current = void 0);
             },
-            r = window.setTimeout(o, 1e3 * Oe);
+            a = window.setTimeout(o, 1e3 * _e);
           return () => {
-            window.clearTimeout(r), o();
+            window.clearTimeout(a), o();
           };
-        }, [T, n, t]);
-        const _ = (0, a.eE)(),
-          C = (0, r.CN)(t, _),
-          B = {
-            onSecondaryButton: () => C.mutate(),
-            onSecondaryActionDescription: (0, G.Xx)(
+        }, [k, n, t]);
+        const N = (0, r.eE)(),
+          x = (0, a.CN)(t, N),
+          w = {
+            onSecondaryButton: () => x.mutate(),
+            onSecondaryActionDescription: (0, v.Xx)(
               "#UserGameNotes_DeleteNote",
             ),
           };
         return o.createElement(
           "div",
-          { className: Fe.NoteEditorArea },
-          !E &&
-            o.createElement(z, {
+          { className: X.NoteEditorArea },
+          !T &&
+            o.createElement(Te, {
+              schema: U.pm_schema,
               view: i,
               refUpdateToolbar: u,
-              className: Fe.Toolbar,
-              bSpellcheckEnabled: f,
-              setSpellcheckEnabled: b,
+              className: X.Toolbar,
+              bSpellcheckEnabled: b,
+              setSpellcheckEnabled: g,
             }),
-          o.createElement(Be, {
-            className: Fe.EditorInput,
-            bbcode: k,
-            onUpdate: v,
-            refView: c,
-            onClickURL: g,
-            bSpellcheckEnabled: f,
-            uploadImage: h,
-            panelProps: B,
-          }),
-          !E && o.createElement(Pe, { note: t, bDirty: n }),
+          o.createElement(
+            S,
+            {
+              schemaConfig: U,
+              className: X.EditorInput,
+              bbcode: _,
+              onUpdate: C,
+              refView: s,
+              onClickURL: f,
+              bSpellcheckEnabled: b,
+              panelProps: w,
+            },
+            o.createElement(M, {
+              uploadImage: h,
+              nodeType: U.pm_schema.nodes.image,
+            }),
+          ),
+          !T && o.createElement(ve, { note: t, bDirty: n }),
         );
       }
-      function Pe(e) {
+      function ve(e) {
         const { note: t, bDirty: n } = e,
-          [l, c, u] = (0, R.X9)(!1),
-          d = (0, a.j_)(),
-          m = (0, a.eE)(),
-          p = (0, r.CN)(t, m),
-          g = o.useCallback(() => {
-            !n && t.not_persisted ? p.mutate() : c();
-          }, [n, t, p, c]);
+          [l, s, m] = (0, F.X9)(!1),
+          u = (0, r.j_)(),
+          d = (0, r.eE)(),
+          p = (0, a.CN)(t, d),
+          E = o.useCallback(() => {
+            !n && t.not_persisted ? p.mutate() : s();
+          }, [n, t, p, s]);
         return o.createElement(
           "div",
-          { className: Fe.NoteActions },
-          l && o.createElement(Se, { note: t, closeModal: u, deleteNote: p }),
+          { className: X.NoteActions },
+          l && o.createElement(Ne, { note: t, closeModal: m, deleteNote: p }),
           o.createElement(
-            V.HP,
+            D.HP,
             { toolTipContent: "#UserGameNotes_DeleteNote", direction: "top" },
             o.createElement(
-              s.zx,
-              { onClick: g },
+              c.zx,
+              { onClick: E },
               o.createElement(i.Trash, null),
             ),
           ),
-          d && o.createElement(Me, { bDirty: n }),
+          u && o.createElement(Ce, { bDirty: n }),
         );
       }
-      function Me(e) {
+      function Ce(e) {
         const { bDirty: t } = e,
-          n = (0, a.eE)();
+          n = (0, r.eE)();
         return t
           ? o.createElement(
-              s.KM,
-              { onClick: () => n(), className: Fe.CloseWindowButton },
-              (0, G.Xx)("#Button_SaveAndClose"),
+              c.KM,
+              { onClick: () => n(), className: X.CloseWindowButton },
+              (0, v.Xx)("#Button_SaveAndClose"),
             )
           : o.createElement(
-              s.zx,
-              { onClick: () => n(), className: Fe.CloseWindowButton },
-              (0, G.Xx)("#Button_Close"),
+              c.zx,
+              { onClick: () => n(), className: X.CloseWindowButton },
+              (0, v.Xx)("#Button_Close"),
             );
       }
-      function Se(e) {
-        const { note: t, closeModal: n, deleteNote: r } = e;
+      function Ne(e) {
+        const { note: t, closeModal: n, deleteNote: a } = e;
         return o.createElement(
-          c.Yy,
+          s.Yy,
           { active: !0 },
-          o.createElement(c.uH, {
-            strTitle: (0, G.Xx)("#UserGameNotes_DeleteNote"),
-            strDescription: (0, G.Xx)("#UserGameNotes_PromptDelete"),
-            onOK: () => r.mutate(),
-            bOKDisabled: r.isLoading,
-            strOKButtonText: (0, G.Xx)("#Button_Delete"),
+          o.createElement(s.uH, {
+            strTitle: (0, v.Xx)("#UserGameNotes_DeleteNote"),
+            strDescription: (0, v.Xx)("#UserGameNotes_PromptDelete"),
+            onOK: () => a.mutate(),
+            bOKDisabled: a.isLoading,
+            strOKButtonText: (0, v.Xx)("#Button_Delete"),
             closeModal: n,
           }),
         );
       }
-      function He(e) {
+      function xe(e) {
         let t = "";
         for (let n = 0; n < e.content.childCount; n++) {
           const o = e.content.child(n);
           if (o.isText) t += o.text;
           else {
             if (((t = t.trim()), t.length > 4)) return t;
-            if (((t = He(o)), t.length > 4)) return t;
+            if (((t = xe(o)), t.length > 4)) return t;
           }
         }
         return t.trim();
@@ -1539,21 +1070,21 @@
       "use strict";
       n.r(t), n.d(t, { default: () => b });
       var o = n(44611),
-        r = n(58428),
-        a = n(7996),
+        a = n(58428),
+        r = n(7996),
         l = n(27378),
-        s = n(3620),
+        c = n(3620),
         i = n(66101),
-        c = n(91971),
-        u = n(47228),
-        d = n(72453),
-        m = n(62923),
+        s = n(91971),
+        m = n(47228),
+        u = n(9603),
+        d = n(62923),
         p = n(79509),
-        g = n(86064),
+        E = n(86064),
         f = n(97896);
       function b(e) {
         const { popup: t } = e,
-          [n, r] = l.useState();
+          [n, a] = l.useState();
         return (
           l.useEffect(() => {
             if (n)
@@ -1562,13 +1093,13 @@
               );
           }, [t, n]),
           void 0 === t.noteid
-            ? l.createElement(k, { popup: t, refPopup: r })
-            : l.createElement(h, { popup: t, refPopup: r })
+            ? l.createElement(T, { popup: t, refPopup: a })
+            : l.createElement(g, { popup: t, refPopup: a })
         );
       }
-      function h(e) {
+      function g(e) {
         const { popup: t, refPopup: n } = e,
-          o = (0, g.Xx)("#GameNotes_NoteForGame", t.display_name);
+          o = (0, E.Xx)("#GameNotes_NoteForGame", t.display_name);
         return l.createElement(
           i.F,
           { body_class: f.GameNotesPopup },
@@ -1584,11 +1115,11 @@
               refPopup: n,
               className: "TODO",
             },
-            l.createElement(m.h4, null, o),
+            l.createElement(d.h4, null, o),
             l.createElement(
-              r.T,
+              a.T,
               { mode: "single", closePopup: () => t.close() },
-              l.createElement(E, {
+              l.createElement(h, {
                 noteParent: t.noteParent,
                 noteid: t.noteid,
               }),
@@ -1596,15 +1127,15 @@
           ),
         );
       }
-      function E(e) {
+      function h(e) {
         const { noteParent: t, noteid: n } = e,
-          { data: o } = (0, u._N)(t, n);
-        return o ? l.createElement(d.X, { note: o }) : null;
+          { data: o } = (0, m._N)(t, n);
+        return o ? l.createElement(u.X, { note: o }) : null;
       }
-      function k(e) {
+      function T(e) {
         const { popup: t, refPopup: n } = e,
           o = t.noteParent,
-          i = l.useMemo(() => [(0, c.q)(o)], [o]);
+          i = l.useMemo(() => [(0, s.q)(o)], [o]);
         return l.createElement(
           p.tb,
           {
@@ -1618,12 +1149,12 @@
             className: "TODO",
           },
           l.createElement(
-            s.VA,
+            c.VA,
             { initialEntries: i },
             l.createElement(
-              r.T,
+              a.T,
               { mode: "page", closePopup: () => t.close() },
-              l.createElement(a.default, { noteParent: o }),
+              l.createElement(r.default, { noteParent: o }),
             ),
           ),
         );
@@ -1633,214 +1164,203 @@
       "use strict";
       n.r(t), n.d(t, { default: () => I });
       var o = n(27378),
-        r = n(3620),
-        a = n(91971),
+        a = n(3620),
+        r = n(91971),
         l = n(47228),
-        s = n(72453),
+        c = n(9603),
         i = n(62923),
-        c = n(35484),
-        u = n(86064),
-        d = n(46048),
-        m = n(12041),
+        s = n(35484),
+        m = n(86064),
+        u = n(46048),
+        d = n(12041),
         p = n(39459),
-        g = n(62914),
+        E = n(62914),
         f = n(94256),
         b = n(85164);
-      function h() {
-        const e = (0, r.$B)(),
+      function g() {
+        const e = (0, a.$B)(),
           t = (0, l.PC)(
             "appid" in e.params && Number(e.params.appid),
             "shortcut_name" in e.params && e.params.shortcut_name,
           );
         let n = e.params.noteid;
-        const a = (0, r.k6)(),
-          s = (0, l.ES)(t),
-          { data: c, isLoading: u } = (0, l.HB)(t);
-        let d;
-        c && n && (d = c.find((e) => e.id === n)),
+        const r = (0, a.k6)(),
+          c = (0, l.ES)(t),
+          { data: s, isLoading: m } = (0, l.HB)(t);
+        let u;
+        s && n && (u = s.find((e) => e.id === n)),
           o.useLayoutEffect(() => {
-            !c ||
-              (n && c.find((e) => e.id === n)) ||
-              (c.length > 0 && c[0].id ? k(a, t, c[0].id) : k(a, t, s()));
-          }, [a, t, n, c, s]);
+            !s ||
+              (n && s.find((e) => e.id === n)) ||
+              (s.length > 0 && s[0].id ? T(r, t, s[0].id) : T(r, t, c()));
+          }, [r, t, n, s, c]);
         const p = o.createElement(
           f.HP,
           { toolTipContent: "#UserGameNotes_NewNote", direction: "top" },
           o.createElement(
             i.zx,
             {
-              className: m.NewNoteButton,
+              className: d.NewNoteButton,
               onClick: () => {
-                const e = s();
-                k(a, t, e);
+                const e = c();
+                T(r, t, e);
               },
             },
-            o.createElement(g.TextNewNote, null),
+            o.createElement(E.TextNewNote, null),
           ),
         );
-        return c
-          ? o.createElement(E, {
+        return s
+          ? o.createElement(h, {
               noteParent: t,
-              notes: c,
-              activeNoteID: null == d ? void 0 : d.id,
+              notes: s,
+              activeNoteID: u?.id,
               actions: p,
             })
           : null;
       }
-      function E(e) {
-        const { noteParent: t, notes: n, activeNoteID: a, actions: l } = e,
-          [g, f] = (0, d.i4)("NotesListCollapsed", !1),
-          h = (0, p.V5)(),
-          E = (0, b.id)(),
-          T = n.map((e) => {
-            var t;
-            return {
-              title:
-                (null === (t = e.title) || void 0 === t ? void 0 : t.length) > 0
-                  ? e.title
-                  : (0, u.Xx)("#UserGameNotes_Untitled"),
-              identifier: e.id,
-              content: o.createElement(s.X, { note: e }),
-              pageClassName: m.NotePage,
-              hideTitle: !0,
-            };
-          }),
-          v = (0, r.k6)(),
-          _ = o.useCallback((e) => k(v, t, e), [v, t]);
+      function h(e) {
+        const { noteParent: t, notes: n, activeNoteID: r, actions: l } = e,
+          [E, f] = (0, u.i4)("NotesListCollapsed", !1),
+          g = (0, p.V5)(),
+          h = (0, b.id)(),
+          _ = n.map((e) => ({
+            title:
+              e.title?.length > 0
+                ? e.title
+                : (0, m.Xx)("#UserGameNotes_Untitled"),
+            identifier: e.id,
+            content: o.createElement(c.X, { note: e }),
+            pageClassName: d.NotePage,
+            hideTitle: !0,
+          })),
+          k = (0, a.k6)(),
+          v = o.useCallback((e) => T(k, t, e), [k, t]);
         return o.createElement(i.TI, {
-          title: (0, u.Xx)("#UserGameNotes_NotesList"),
-          pages: T,
-          className: (0, c.Z)(m.NotesPagedSettings, h && m.PinnedView),
-          page: a,
-          onPageRequested: _,
+          title: (0, m.Xx)("#UserGameNotes_NotesList"),
+          pages: _,
+          className: (0, s.Z)(d.NotesPagedSettings, g && d.PinnedView),
+          page: r,
+          onPageRequested: v,
           bottomControls: l,
-          hideList: g,
-          toggleHideList: h || E ? void 0 : () => f(!g),
+          hideList: E,
+          toggleHideList: g || h ? void 0 : () => f(!E),
         });
       }
-      function k(e, t, n) {
+      function T(e, t, n) {
         let o;
         (o =
           "appid" in t
-            ? a.O.AppNotes(t.appid, n)
-            : a.O.ShortcutNotes(t.shortcut, n)),
+            ? r.O.AppNotes(t.appid, n)
+            : r.O.ShortcutNotes(t.shortcut, n)),
           e.replace(o, e.location.state);
       }
-      var T = n(4289),
-        v = n(85556),
-        _ = n(20879),
-        C = n.n(_),
-        B = n(56552),
+      var _ = n(4289),
+        k = n(20879),
+        v = n.n(k),
+        C = n(56552),
         N = n(20352),
         x = n(42324),
         w = n(34656),
-        A = n(72467),
-        y = n(63083);
-      let F;
-      const O = 864e5;
-      function D(e) {
-        return `appinfo_${e}_${A.De.LANGUAGE}`;
+        P = n(72467),
+        F = n(63083);
+      let y;
+      const H = 864e5;
+      function B(e) {
+        return `appinfo_${e}_${P.De.LANGUAGE}`;
       }
-      function P(e) {
-        return Boolean(e && Date.now() - e.timeCached < O);
+      function S(e) {
+        return Boolean(e && Date.now() - e.timeCached < H);
       }
-      function M(e) {
+      function L(e) {
         const t = (0, w.bY)(),
           n = (0, w.y$)();
-        return (0, B.useQuery)(
+        return (0, C.useQuery)(
           ["appinfo", e],
-          () =>
-            (0, v.mG)(this, void 0, void 0, function* () {
-              return (function (e, t) {
-                return (
-                  F ||
-                    (F = new (C())(
-                      (n) =>
-                        (0, v.mG)(this, void 0, void 0, function* () {
-                          const o = new Map();
-                          (yield Promise.all(n.map((e) => t.GetObject(D(e)))))
-                            .filter(P)
-                            .forEach(({ value: e }) => o.set(e.appid, e));
-                          const r = n.slice().filter((e) => !o.has(e));
-                          if (r.length) {
-                            const n = N.gA.Init(x.Fi);
-                            n.Body().set_language((0, y.jM)(A.De.LANGUAGE)),
-                              n.Body().set_appids(r);
-                            const a = yield x.AE.GetApps(e, n);
-                            if (1 != a.GetEResult()) throw a.GetErrorMessage();
-                            a.Body()
-                              .toObject()
-                              .apps.forEach((e) => {
-                                t.StoreObject(D(e.appid), {
-                                  timeCached: Date.now(),
-                                  value: e,
-                                }),
-                                  o.set(e.appid, e);
-                              });
-                          }
-                          return n.map((e) => o.get(e));
-                        }),
-                      { cache: !1 },
-                    )),
-                  F
-                );
-              })(t, n).load(e);
-            }),
-          { staleTime: O, enabled: !!e },
+          async () =>
+            (function (e, t) {
+              return (
+                y ||
+                  (y = new (v())(
+                    async (n) => {
+                      const o = new Map();
+                      (await Promise.all(n.map((e) => t.GetObject(B(e)))))
+                        .filter(S)
+                        .forEach(({ value: e }) => o.set(e.appid, e));
+                      const a = n.slice().filter((e) => !o.has(e));
+                      if (a.length) {
+                        const n = N.gA.Init(x.Fi);
+                        n.Body().set_language((0, F.jM)(P.De.LANGUAGE)),
+                          n.Body().set_appids(a);
+                        const r = await x.AE.GetApps(e, n);
+                        if (1 != r.GetEResult()) throw r.GetErrorMessage();
+                        r.Body()
+                          .toObject()
+                          .apps.forEach((e) => {
+                            t.StoreObject(B(e.appid), {
+                              timeCached: Date.now(),
+                              value: e,
+                            }),
+                              o.set(e.appid, e);
+                          });
+                      }
+                      return n.map((e) => o.get(e));
+                    },
+                    { cache: !1 },
+                  )),
+                y
+              );
+            })(t, n).load(e),
+          { staleTime: H, enabled: !!e },
         ).data;
       }
-      var S = n(27258);
-      function H() {
+      var D = n(27258);
+      function X() {
         const { data: e, isLoading: t } = (0, l.i5)();
         return t
-          ? o.createElement(S.V, { msDelayAppear: 300 })
+          ? o.createElement(D.V, { msDelayAppear: 300 })
           : o.createElement(
               "div",
               null,
               o.createElement(
                 "h1",
                 null,
-                (0, u.Xx)("#UserGameNotes_NotesList"),
+                (0, m.Xx)("#UserGameNotes_NotesList"),
               ),
               o.createElement(
                 "ul",
                 null,
-                e.map((e) => o.createElement(L, { key: e.appid, game: e })),
+                e.map((e) => o.createElement(G, { key: e.appid, game: e })),
               ),
             );
       }
-      function L(e) {
+      function G(e) {
         const { game: t } = e,
-          n = M(t.appid);
+          n = L(t.appid);
         return o.createElement(
           "li",
           null,
-          o.createElement(
-            T.rU,
-            { to: a.O.AppNotes(t.appid) },
-            null == n ? void 0 : n.name,
-          ),
+          o.createElement(_.rU, { to: r.O.AppNotes(t.appid) }, n?.name),
         );
       }
       function I(e) {
         return o.createElement(
-          r.rs,
+          a.rs,
           null,
-          o.createElement(r.AW, { path: a.O.List() }, o.createElement(H, null)),
+          o.createElement(a.AW, { path: r.O.List() }, o.createElement(X, null)),
           o.createElement(
-            r.AW,
-            { path: a.O.AppNotes(":appid", ":noteid?") },
-            o.createElement(h, null),
+            a.AW,
+            { path: r.O.AppNotes(":appid", ":noteid?") },
+            o.createElement(g, null),
           ),
           o.createElement(
-            r.AW,
-            { path: a.O.ShortcutNotes(":shortcut_name", ":noteid?") },
-            o.createElement(h, null),
+            a.AW,
+            { path: r.O.ShortcutNotes(":shortcut_name", ":noteid?") },
+            o.createElement(g, null),
           ),
           o.createElement(
-            r.AW,
+            a.AW,
             null,
-            o.createElement(r.l_, { to: `${(0, a.q)(e.noteParent)}` }),
+            o.createElement(a.l_, { to: `${(0, r.q)(e.noteParent)}` }),
           ),
         );
       }

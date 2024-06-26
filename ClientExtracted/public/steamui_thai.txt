@@ -2229,7 +2229,7 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "SteamUI_CantRunMediaDueToMediaPlayerNotInstalledOSX"   "ไม่สามารถเริ่ม %game% เนื่องจากไม่ได้ติดตั้ง Windows Media Components สำหรับ QuickTime \nโปรดติดตั้งเวอร์ชันล่าสุดของ Windows Media Components สำหรับ QuickTime จาก: "
 "SteamUI_WindowsMediaPlayerInstallURLOSX"	"http: //www.microsoft.com/windows/windowsmedia/player/wmcomponents.mspx"
 
-"Steam_UnknownErrorLaunchingMedia"		"ตรวจพบข้อผิดพลาดที่ไม่รู้จักในการเริ่มเปิดมีเดีย"
+"Steam_UnknownErrorLaunchingMedia"		"ตรวจพบข้อผิดพลาดที่ไม่ทราบสาเหตุในการเริ่มเปิดมีเดีย"
 
 "Steam_HiDefPack_Title"				"Half-Life HiDef Pack - Steam"
 "Steam_HiDefPack_Installed"			"Half-Life HiDef Pack เปิดใช้งานแล้ว\nเริ่ม Half-Life ทันทีหรือไม่"
@@ -4160,7 +4160,7 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 "steam_shader_depots" "%name% - เนื้อหาแบบแคชเชดเดอร์ล่วงหน้า"
 
 "Steam_AppUpdateError_0"		"ไม่พบข้อผิดพลาด"
-"Steam_AppUpdateError_1"		"ข้อผิดพลาดที่ไม่รู้จัก"
+"Steam_AppUpdateError_1"		"ข้อผิดพลาดที่ไม่ทราบสาเหตุ"
 "Steam_AppUpdateError_2"		"การอัปเดตถูกหยุดชั่วคราว"
 "Steam_AppUpdateError_3"		"การอัปเดตถูกยกเลิก"
 "Steam_AppUpdateError_4"		"การอัปเดตถูกระงับ"
@@ -4831,6 +4831,9 @@ Steam ให้คลิกขวาที่ไอคอนนี้"
 
 "SteamUI_RunningConflictingSoftware" "ตรวจพบซอฟต์แวร์ที่ทำงานขัดแย้งกัน"
 "SteamUI_RunningIncompatibleTcpService" "เวอร์ชันที่เข้ากันไม่ได้ของ %incompatdll% (เกี่ยวข้องกับ %incompatname%) \nได้ถูกตรวจพบภายในโปรเซส Steam \n\nเราแนะนำให้อัปเดตหรือถอนการติดตั้งซอฟต์แวร์นี้ หากคุณประสบปัญหา \nเกีี่ยวกับการแครชหรือเครือข่ายช้าลงขณะกำลังใช้งาน Steam หรือขณะเล่นเกมอื่น ๆ"
+
+"SteamUI_RunningBannedSoftware" "ซอฟต์แวร์ที่ปรับเปลี่ยนหน้าที่การทำงานของ Steam"
+"SteamUI_RunningBannedSoftwareDesc" "Steam ตรวจพบ %incompatname% ซึ่งเป็นซอฟต์แวร์จากบริษัทภายนอกที่อาจปรับเปลี่ยน Steam เพื่อจุดประสงค์ที่จะเลี่ยงการตรวจสอบด้านการรักษาความปลอดภัยหรือความเป็นเจ้าของ\nเป็นที่ทราบกันว่าซอฟต์แวร์นี้ทำให้ Steam เกิดการแครช รวมทั้งละเมิดข้อตกลงการสมัครสมาชิกของ Steam และทรัพย์สินทางปัญญาของผู้สร้างเนื้อหาดาวน์โหลด การใช้\nซอฟต์แวร์นี้อาจส่งผลให้เกิดการแบนหรือการล็อคบัญชี\n\nโปรดถอนการติดตั้งเพื่อใช้งาน Steam"
 
 "Steam_XboxDriverInstall_Title"		"การติดตั้งไดรเวอร์ของ Xbox"
 "Steam_XboxDriverInstall_Success"	"ไดรเวอร์ได้รับการอัปเดตสำเร็จเรียบร้อยแล้ว และจะใช้งานได้หลังจากที่คุณรีสตาร์ทเครื่องคอมพิวเตอร์ของคุณ"

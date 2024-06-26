@@ -562,6 +562,8 @@
     "bbcode_image_tooltip_link": "Buka gambar di jendela baru",
     "bbcode_image_tooltip_link_giphy": "Buka giphy di jendela baru",
     "bbcode_video_tooltip_link": "Buka video di jendela baru",
+    "bbcode_video_pause": "Jeda",
+    "bbcode_video_play": "Putar",
     "bbcode_image_link_giphy": "/GIPHY %1$s",
     "bbcode_image_popout": "Gambar Popout",
     "bbcode_image_tooltip_collapse": "Sembunyikan gambar dalam obrolan",

@@ -1,6 +1,8 @@
 __TEXT
 __text
 __TEXT
+pt
+pt
 __stubs
 __TEXT
 __stub_helper
@@ -10,7 +12,6 @@ __TEXT
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
-|$
 __objc_methname
 __TEXT
 __unwind_info
@@ -266,6 +267,7 @@ ClientAPI_Init(GlobalInstance): GetIClientControllerSerialized returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientSharedConnection returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientShader returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientCompat returned NULL.
+ClientAPI_Init(GlobalInstance): GetIClientTimeline returned NULL.
 ClientAPI_Init(GlobalInstance): GetIClientNetworkingUtils returned NULL.
 -quicklogin
 Set the base used to construct quick login URLs
@@ -780,6 +782,7 @@ description
 visibility
 previewfile
 contentfolder
+kvtags
 changenote
 Preparing update...
 Preparing content...
@@ -949,6 +952,17 @@ RecursiveLoadFromBuffer:  got NULL key
 RecursiveLoadFromBuffer:  got } in key
 RecursiveLoadFromBuffer:  got conditional between key and value
 KeyValues::ReadAsBinary() stack depth > 100
+KeyValues::ReadAsBinary - Set name
+KeyValues::ReadAsBinary - TYPE_NONE
+KeyValues::ReadAsBinary - TYPE_STRING
+KeyValues::ReadAsBinary - TYPE_WSTRING
+KeyValues::ReadAsBinary - TYPE_INT
+KeyValues::ReadAsBinary - TYPE_UINT64
+KeyValues::ReadAsBinary - TYPE_INT64
+KeyValues::ReadAsBinary - TYPE_FLOAT
+KeyValues::ReadAsBinary - TYPE_COLOR
+KeyValues::ReadAsBinary - TYPE_PTR
+KeyValues::ReadAsBinary - TYPE_BINARY_STRING
 NULL
 m_errorIndex>=0
 stackLevel >= 0 && stackLevel < m_errorIndex
@@ -1533,7 +1547,6 @@ E
 @
 0
 0
-6
 j
 @
 @

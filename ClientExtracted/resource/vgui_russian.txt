@@ -9,6 +9,7 @@
 "TextEntry_SelectAll"		"Выделить всё"
 "TextEntry_CopyAllToClipboard"	"Скопировать всё"
 "FileOpenDialog_Open"		"Открыть"
+"FileOpenDialog_Save"		"Сохранить"
 "FileOpenDialog_Cancel"		"Отмена"
 "FileOpenDialog_Look_in"	"Искать в:"
 "FileOpenDialog_File_Name"	"Имя файла:"
