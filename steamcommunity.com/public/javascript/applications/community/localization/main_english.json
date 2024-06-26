@@ -1712,6 +1712,7 @@
     "Sale_Section_Quiz_Desc": "Create one or more localized questions and answers. Each question or answer can have a video associated with it.",
     "Sale_Section_Quiz_Incr_Reveal": "Incrementally reveal the next questions as previous questions are answered.",
     "Sale_Section_Quiz_Reveal_Footer": "Optional footer image displayed at the bottom of the questions when there are more questions to reveal.",
+    "Sale_Section_Quiz_Hide_Question_Labels": "Hide Question Labels?",
     "Sale_Section_Quiz_RandomizeAnswers": "Randomize the order of the answers for each question.",
     "Sale_Section_Quiz_AddQuestion": "Add New Question",
     "Sale_Section_Quiz_AddAnswer": "Add New Answer",
