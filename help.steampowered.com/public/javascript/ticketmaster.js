@@ -2051,7 +2051,7 @@ function PreloadTicket( strTicketRef )
 				if ( data.request_type != 100 )
 				{
 					$J("#ticket_queue").find("[data-ticket='" + strTicketRef + "']").remove();
-					RemoveRequest( strTicketRef );
+					NextPrev.RemoveRequest( strTicketRef );
 				}
 				else
 				{
