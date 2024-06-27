@@ -3891,9 +3891,6 @@ html.responsive.touch .ContentHubSalePage {
 .carousel ._1q54WG8IS0osM0NiCQ5-qi {
   height: 100%;
 }
-._2DvtlNOC4JyhMu779biqym {
-  min-width: 258px;
-}
 ._3m73yQ_SBicQQme171Kca2 {
   min-width: 258px;
 }
@@ -3901,8 +3898,7 @@ html.responsive.touch .ContentHubSalePage {
   min-width: unset !important;
 }
 .items_in_row_5 ._3m73yQ_SBicQQme171Kca2,
-.ItemCount_5 ._3m73yQ_SBicQQme171Kca2,
-.ItemCount_5 ._2DvtlNOC4JyhMu779biqym {
+.ItemCount_5 ._3m73yQ_SBicQQme171Kca2 {
   min-width: unset !important;
 }
 .ScrollSnapCarousel > ._3m73yQ_SBicQQme171Kca2 {

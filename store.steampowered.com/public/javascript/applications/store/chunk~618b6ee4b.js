@@ -8589,9 +8589,7 @@
                           const d =
                             s.unique_id + "_" + r + "_" + e.type + "_" + e.id;
                           if ("fullrow" !== a) {
-                            let o = u
-                              ? C().CarouselSalePageCapsule
-                              : C().CarouselSalePageSingleCapsule;
+                            let o = (0, g.Z)(u && C().CarouselSalePageCapsule);
                             const i = "tall" === a ? "library" : "header";
                             return n.createElement(
                               "div",
@@ -24034,8 +24032,9 @@
       function Ao(e) {
         const { contents: t, language: a } = e,
           [r, s] = (0, n.useState)(0),
-          o = (0, Ot.e0)(),
-          i = A.LJ.GetELanguageFallback(a);
+          o = (0, n.useRef)([!1, !1, !1, !1]),
+          i = (0, Ot.e0)(),
+          l = A.LJ.GetELanguageFallback(a);
         return n.createElement(
           "div",
           { className: Io().QuadLayout },
@@ -24045,14 +24044,20 @@
               { key: `media_${t}` },
               n.createElement(Lo, {
                 content: e,
-                videoPlay: r === t,
-                onVideoEnd: () => s((t + 1) % 4),
+                IsTargetVideo: r === t,
+                onVisiblityChange: (e) => {
+                  o.current[t] = e;
+                },
+                index: t,
+                iNextVideo: (t + 1) % 4,
+                setTargetVideo: s,
+                refIsVideoVisible: o,
               }),
               n.createElement(Bt.d, {
                 text:
-                  e.localized_media_desc[a] || e.localized_media_desc[i] || "",
+                  e.localized_media_desc[a] || e.localized_media_desc[l] || "",
                 partnerEventStore: Nt.j1,
-                showErrorInfo: o,
+                showErrorInfo: i,
                 languageOverride: a,
               }),
             ),
@@ -24060,41 +24065,66 @@
         );
       }
       function Lo(e) {
-        const { content: t, videoPlay: a, onVideoEnd: r } = e,
-          { bVisible: s, ref: o } = (0, ma.kc)(),
-          i = (0, n.useRef)(),
-          l = (0, n.useRef)();
+        const {
+            content: t,
+            IsTargetVideo: a,
+            onVisiblityChange: r,
+            refIsVideoVisible: s,
+            index: o,
+            iNextVideo: i,
+            setTargetVideo: l,
+          } = e,
+          { bVisible: c, ref: m } = (0, ma.kc)(),
+          u = (0, n.useRef)(),
+          d = (0, n.useRef)();
         (0, n.useEffect)(() => {
-          if (!i.current) return;
-          s && a ? i.current.play() : i.current.pause();
-          const e = () => {
-            r(), l.current && l.current(), (l.current = null);
-          };
-          l.current ||
-            (i.current.addEventListener("ended", e),
-            (l.current = () => {
-              i.current.removeEventListener("ended", r);
-            }));
-        }, [s, a, r]),
-          (0, n.useEffect)(() => () => l.current && l.current(), []);
-        const c = [];
+          r(c);
+        }, [c, r]),
+          (0, n.useEffect)(() => {
+            if (!u.current) return;
+            const e = () => {
+              s.current[i]
+                ? (l(i),
+                  u.current.pause(),
+                  d.current && d.current(),
+                  (d.current = null))
+                : ((u.current.currentTime = 0), u.current.play());
+            };
+            c && a
+              ? (u.current.play(),
+                d.current ||
+                  (u.current.addEventListener("ended", e),
+                  (d.current = () => {
+                    u.current.removeEventListener("ended", e);
+                  })))
+              : (u.current.pause(),
+                d.current && d.current(),
+                (d.current = null),
+                !c && a && s.current[i] && l(i));
+          }, [c, a, s, i, l]),
+          (0, n.useEffect)(() => () => d.current && d.current(), []);
+        const _ = (0, n.useCallback)(() => {
+            l(o);
+          }, [o, l]),
+          p = [];
         return (
           t.video_webm_src &&
-            c.push({ sURL: t.video_webm_src, sFormat: "video/webm" }),
+            p.push({ sURL: t.video_webm_src, sFormat: "video/webm" }),
           t.video_mp4_src &&
-            c.push({ sURL: t.video_mp4_src, sFormat: "video/mp4" }),
+            p.push({ sURL: t.video_mp4_src, sFormat: "video/mp4" }),
           n.createElement(
             "div",
             {
               className: (0, f.Z)(Io().VideoPlayerContainer, a && Io().Focused),
-              ref: o,
+              ref: m,
+              onClick: _,
             },
             n.createElement(Ha.Y, {
-              video: { sPoster: t.video_poster_image, rgVideoSources: c },
+              video: { sPoster: t.video_poster_image, rgVideoSources: p },
               bAutoPlay: !1,
               bControls: !1,
               bLoop: !1,
-              ref: i,
+              ref: u,
               bMuted: !0,
             }),
           )

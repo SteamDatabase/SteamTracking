@@ -57,7 +57,7 @@
     },
     4654: (e, t, l) => {
       "use strict";
-      l.d(t, { ck: () => C, sC: () => m });
+      l.d(t, { W8: () => p, ck: () => C, sC: () => m });
       var r = l(47427),
         n = l(13129),
         o = l(62613),
@@ -71,8 +71,7 @@
         return e || (c.De.ON_DECK && t);
       }
       const m = (e) => {
-          const t = ((l = e.category), u[l] || o.z5E);
-          var l;
+          const t = p(e.category);
           return r.createElement(
             "div",
             { className: (0, n.Z)(a.SteamDeckCompatInfo, e.className) },
@@ -81,6 +80,9 @@
           );
         },
         u = { 1: o.vyu, 2: o.KKY, 3: o.YVI, 0: o.z5E };
+      function p(e) {
+        return u[e] || o.z5E;
+      }
     },
     59449: (e, t, l) => {
       "use strict";

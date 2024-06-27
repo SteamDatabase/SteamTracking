@@ -219,7 +219,6 @@
         CarouselCapsuleBordered: "_320kqKreAHVEbfNdSnVhN0",
         CarouselCapsuleAnimated: "_3NNM0Qztw6n3Oto75U4XBa",
         AppSummaryWidgetCtn: "_1q54WG8IS0osM0NiCQ5-qi",
-        CarouselSalePageSingleCapsule: "_2DvtlNOC4JyhMu779biqym",
         CarouselSalePageCapsule: "_3m73yQ_SBicQQme171Kca2",
         SaleBroadcastCtn: "kBxKMzZ89k-1LGkE7DMgw",
         PresenterDisclaimer: "_2DKMLJv58E_KLRCSddu8_9",

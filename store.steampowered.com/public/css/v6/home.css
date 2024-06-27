@@ -5303,6 +5303,10 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
     html.responsive .curator_content {
         width: 100%;
     }
+
+	html.responsive .content_hub_carousel_ctn .content_hub_capsule_ctn {
+		max-width: 226px;
+	}
 }
 
 @media screen and (max-width: 700px)

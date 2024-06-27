@@ -2895,6 +2895,7 @@ https://store.steampowered.com/app/${appid}?snr=${g_SNR}
 https://store.steampowered.com/app/${unAppID}/
 https://store.steampowered.com/app/${unAppID}/${url_name}/
 https://store.steampowered.com/app/1046930/Dota_Underlords/
+https://store.steampowered.com/app/1675200/Steam_Deck/?utm_source=steamdeckcharts
 https://store.steampowered.com/app/570/Dota_2/
 https://store.steampowered.com/app/730/CounterStrike_2/
 https://store.steampowered.com/appreport/${nAppId}/report/

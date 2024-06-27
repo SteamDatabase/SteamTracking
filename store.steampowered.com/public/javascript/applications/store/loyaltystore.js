@@ -3176,7 +3176,7 @@
           return this.m_config;
         }
         GetCurrentSeasonalAppID() {
-          return 2750340;
+          return 3027110;
         }
         async GetLoyaltyRewardsSummary() {
           if (!this.BIsLoggedIn()) return;
@@ -4549,7 +4549,7 @@
                 },
               ]),
             N = [];
-          N.push(n(2855140)), N.push(n(2818550));
+          N.push(n(2861690)), N.push(n(2855140));
           const S = [],
             D = [N, M];
           for (let e = 0; e < Math.max(D[0].length, D[1].length); e++)

@@ -5366,7 +5366,7 @@ License: MIT
         Nt = a(80366),
         Bt = a(32144),
         Lt = a(45167),
-        Rt = a(91602);
+        Rt = a(83591);
       let Ot = class extends d.Component {
         m_clanSteamID = new p.K(G.JA.CLANSTEAMID);
         componentDidMount() {

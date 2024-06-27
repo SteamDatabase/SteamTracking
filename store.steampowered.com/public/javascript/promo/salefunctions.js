@@ -471,8 +471,7 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 
 	var $Under10Area = $J('#sale_under10_area');
 	new CScrollOffsetWatcher( $Under10Area, function() {
-		SaleRenderUnder10Section( rgDisplayLists.under10 );
-		$Under10Area.css('height', '' );
+		SaleRenderUnder10Section( $Under10Area, rgDisplayLists.under10 );
 	} );
 
 	// process tag sections first, pulling in featured items into the tag blocks we display
@@ -823,7 +822,9 @@ function SaleTagBlock( $Parent, rgPersonalizedTagData )
 	var rgTagData = rgPersonalizedTagData.TagData;
 	var rgItemsPassingFilter = rgPersonalizedTagData.rgItemsPassingFilter;
 
-	if ( rgItemsPassingFilter.length <= 0 ) {
+	if ( rgItemsPassingFilter.length <= 0 )
+	{
+		$Parent.hide();
         return;
     }
 
@@ -1125,7 +1126,7 @@ function BuildFranchiseCap( FranchiseData, bAlternate )
 	return FranchiseData ? FranchiseData[field] : null;
 }
 
-function SaleRenderUnder10Section( rgUnder10 )
+function SaleRenderUnder10Section( $Parent, rgUnder10 )
 {
 	var rgUnder10Filtered = GHomepage.FilterItemsForDisplay(
 		rgUnder10, 'sale', 4, 8, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
@@ -1135,7 +1136,7 @@ function SaleRenderUnder10Section( rgUnder10 )
 
 	let $Under10Ctn = $J('#10off_tier' );
 
-	if ( $Under10Ctn.length && rgUnder10Filtered.length == 8 )
+	if ( $Under10Ctn.length && rgUnder10Filtered.length >= 4 )
 	{
 		let rgCaps = [];
 		for( let i = 0; i < rgUnder10Filtered.length; i++ )
@@ -1145,6 +1146,11 @@ function SaleRenderUnder10Section( rgUnder10 )
 		$Under10Ctn.append( rgCaps );
 		GDynamicStore.MarkAppDisplayed( rgUnder10Filtered );
 		BindSaleCapAutoSizeEvents( $Under10Ctn );
+		$Parent.css('height', '' );
+	}
+	else
+	{
+		$Parent.hide();
 	}
 }
 
@@ -1350,7 +1356,7 @@ function ToggleAltHeader()
 	{
 		if ( !V_GetCookie( 'enable_alt_sale_header' ) )
 		{
-			V_SetCookie('enable_alt_sale_header', 1 );
+			V_SetCookie('enable_alt_sale_header', 1, 14 );
 
 			if ( window.innerWidth <= 500 )
 			{
@@ -1361,6 +1367,7 @@ function ToggleAltHeader()
 				$J('.fullscreen-bg__video').attr('src', g_rgAltBackgroundSrc.strPageBackgroundWebM);
 				$J('.fullscreen-bg__video').attr('poster', g_rgAltBackgroundSrc.strPageBackgroundURL);
 				$J('.page_background_holder').css('background-image', 'url(' + g_rgAltBackgroundSrc.strPageBackgroundURL + ')');
+				$J('.fullscreen-bg__video').get( 0 ).play();
 			}
 		}
 		else

@@ -2923,6 +2923,7 @@
     "RemotePlay_StoreFunctionalityBlocked_Title": "Store Not Available",
     "RemotePlay_StoreFunctionalityBlocked_Description": "Access to the store is unavailable while running through this Steam Link client.",
     "Tour_TipCount": "Tip: %1$s of %2$s",
+    "ImagePickerLoc_DismissWarning": "You have one or more images not yet uploaded.",
     "Hardware_ShippingEstimate_Range": "%1$s-%2$s Business Days",
     "OverlayButtonHeader_Timeline": "Game Recording",
     "ChatEntry_UploadLastClip": "Upload last clip",

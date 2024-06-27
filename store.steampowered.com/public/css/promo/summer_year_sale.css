@@ -1183,15 +1183,14 @@ body.v6 .page_content_ctn {
 }
 
 .see_more_link {
+	display: flex;
+	justify-content: right;
+	flex-wrap: wrap;
+	gap: 5px;
     color: rgb(255, 255, 255);
 	text-align: right;
 	margin-top: 10px;
 	font-size: 14px;
-}
-
-.see_more_link a > span {
-	font-size: 14px;
-	padding: 3px 15px;
 }
 
 a:hover {
@@ -1929,7 +1928,6 @@ p.home_subtitle_ctn a {
     }
     body.responsive_page .home_title {
         line-height: 26px;
-		padding: .5em;
     }
 
 	body.responsive_page .home_title_ctn,
@@ -1937,6 +1935,7 @@ p.home_subtitle_ctn a {
         font-size: 20px;
         padding: .5em;
 		justify-content: center;
+		flex-wrap: wrap;
 	}
 
 	html.responsive .home_tag_category_title, html.responsive .home_tag_category_title * {
@@ -2548,10 +2547,6 @@ body.v6 .sale_capsule .discount_block_inline
 
     html.responsive .summer_bottom_text {
         font-size: 14px;
-    }
-
-	html.responsive .home_deck_title_ctn {
-		display: block;
     }
 
 	html.responsive body.v6.sale_summer2024 .home_sticker_ctn.mobile {
