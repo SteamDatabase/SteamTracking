@@ -1129,7 +1129,7 @@ function BuildFranchiseCap( FranchiseData, bAlternate )
 function SaleRenderUnder10Section( $Parent, rgUnder10 )
 {
 	var rgUnder10Filtered = GHomepage.FilterItemsForDisplay(
-		rgUnder10, 'sale', 4, 8, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true }
+		rgUnder10, 'sale', 4, 8, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, has_discount: true }
 	);
 
 	TryPopulateSaleItems( rgUnder10Filtered, rgUnder10, 4, 8 );

@@ -8833,7 +8833,8 @@
         } = e;
         a.carousel_rows > 1 &&
           (r ||
-            (a.capsules_per_row_array.length > 0 &&
+            (!a.smart_section &&
+              a.capsules_per_row_array.length > 0 &&
               a.capsules_per_row_array[0] >= a.capsules.length)) &&
           (a.carousel_rows = 1);
         const i = F(a, e.capsules, e.links, e.events, e.itemdefs, e.rewards);
