@@ -26395,8 +26395,9 @@
       function as(e) {
         const { contents: t, language: a } = e,
           [i, r] = (0, n.useState)(0),
-          s = (0, St.e0)(),
-          o = w.LJ.GetELanguageFallback(a);
+          s = (0, n.useRef)([!1, !1, !1, !1]),
+          o = (0, St.e0)(),
+          l = w.LJ.GetELanguageFallback(a);
         return n.createElement(
           "div",
           { className: es().QuadLayout },
@@ -26406,14 +26407,20 @@
               { key: `media_${t}` },
               n.createElement(ns, {
                 content: e,
-                videoPlay: i === t,
-                onVideoEnd: () => r((t + 1) % 4),
+                IsTargetVideo: i === t,
+                onVisiblityChange: (e) => {
+                  s.current[t] = e;
+                },
+                index: t,
+                iNextVideo: (t + 1) % 4,
+                setTargetVideo: r,
+                refIsVideoVisible: s,
               }),
               n.createElement(dt.d, {
                 text:
-                  e.localized_media_desc[a] || e.localized_media_desc[o] || "",
+                  e.localized_media_desc[a] || e.localized_media_desc[l] || "",
                 partnerEventStore: ot.j1,
-                showErrorInfo: s,
+                showErrorInfo: o,
                 languageOverride: a,
               }),
             ),
@@ -26421,41 +26428,66 @@
         );
       }
       function ns(e) {
-        const { content: t, videoPlay: a, onVideoEnd: i } = e,
-          { bVisible: r, ref: s } = (0, jt.kc)(),
-          o = (0, n.useRef)(),
-          l = (0, n.useRef)();
+        const {
+            content: t,
+            IsTargetVideo: a,
+            onVisiblityChange: i,
+            refIsVideoVisible: r,
+            index: s,
+            iNextVideo: o,
+            setTargetVideo: l,
+          } = e,
+          { bVisible: c, ref: d } = (0, jt.kc)(),
+          m = (0, n.useRef)(),
+          u = (0, n.useRef)();
         (0, n.useEffect)(() => {
-          if (!o.current) return;
-          r && a ? o.current.play() : o.current.pause();
-          const e = () => {
-            i(), l.current && l.current(), (l.current = null);
-          };
-          l.current ||
-            (o.current.addEventListener("ended", e),
-            (l.current = () => {
-              o.current.removeEventListener("ended", i);
-            }));
-        }, [r, a, i]),
-          (0, n.useEffect)(() => () => l.current && l.current(), []);
-        const c = [];
+          i(c);
+        }, [c, i]),
+          (0, n.useEffect)(() => {
+            if (!m.current) return;
+            const e = () => {
+              r.current[o]
+                ? (l(o),
+                  m.current.pause(),
+                  u.current && u.current(),
+                  (u.current = null))
+                : ((m.current.currentTime = 0), m.current.play());
+            };
+            c && a
+              ? (m.current.play(),
+                u.current ||
+                  (m.current.addEventListener("ended", e),
+                  (u.current = () => {
+                    m.current.removeEventListener("ended", e);
+                  })))
+              : (m.current.pause(),
+                u.current && u.current(),
+                (u.current = null),
+                !c && a && r.current[o] && l(o));
+          }, [c, a, r, o, l]),
+          (0, n.useEffect)(() => () => u.current && u.current(), []);
+        const _ = (0, n.useCallback)(() => {
+            l(s);
+          }, [s, l]),
+          p = [];
         return (
           t.video_webm_src &&
-            c.push({ sURL: t.video_webm_src, sFormat: "video/webm" }),
+            p.push({ sURL: t.video_webm_src, sFormat: "video/webm" }),
           t.video_mp4_src &&
-            c.push({ sURL: t.video_mp4_src, sFormat: "video/mp4" }),
+            p.push({ sURL: t.video_mp4_src, sFormat: "video/mp4" }),
           n.createElement(
             "div",
             {
               className: (0, E.Z)(es().VideoPlayerContainer, a && es().Focused),
-              ref: s,
+              ref: d,
+              onClick: _,
             },
             n.createElement(Ca.Y, {
-              video: { sPoster: t.video_poster_image, rgVideoSources: c },
+              video: { sPoster: t.video_poster_image, rgVideoSources: p },
               bAutoPlay: !1,
               bControls: !1,
               bLoop: !1,
-              ref: o,
+              ref: m,
               bMuted: !0,
             }),
           )
