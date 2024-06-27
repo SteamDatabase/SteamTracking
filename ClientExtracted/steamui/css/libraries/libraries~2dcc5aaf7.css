@@ -40124,6 +40124,7 @@ body.VR {
   gap: 10px;
   align-items: center;
   flex: 1;
+  min-width: fit-content;
 }
 .TimelineAndControls.Tiny .S4YqOs3UHI5AKsi94Fr3k ._135NHDIgOTQ58g_64PvPpF,
 .TimelineAndControls.Small .S4YqOs3UHI5AKsi94Fr3k ._135NHDIgOTQ58g_64PvPpF {

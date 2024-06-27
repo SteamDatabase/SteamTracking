@@ -4,14 +4,12 @@ __TEXT
 @(
 __text
 __TEXT
-@l
-@l
 __stubs
 __TEXT
-B["
-B["
 __stub_helper
 __TEXT
+xb"
+xb"
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
@@ -5613,26 +5611,33 @@ k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 steammessages_base.proto
 steammessages_parental_objects.proto
 "
+"
 0
-r0
-p0
-z!
-'!
-!
+s0
+q0
+n0
+Z'
+(
+&!
+$'
 
 @
 @
 
-
-x
 
+
+&
+&
+x
+&
 =
 @
 =
 -
--
+H$
 L$
 0
+n,
 p
 0
 p
@@ -5640,10 +5645,6 @@ p
 p
 0
 $
-$
-$
-$
-$
 p
 0
 p
@@ -5654,14 +5655,11 @@ p
 0
 p
 0
-#
 0
 Ic]
-"
 |
 p
 0
-h!
 0
 0
 AT=
@@ -5672,6 +5670,7 @@ AT=
 D
 @
 @
+!
 @
 Hc
 Hc
@@ -5703,7 +5702,6 @@ IcE
 IcE
 @
 @
-3
 V
 =
 =
@@ -5712,7 +5710,7 @@ V
 @
 $
 &
-S"
+F$
 @
 M9e
 @
@@ -5764,6 +5762,7 @@ B
 @
 @
 @
+O
 d
 A+M
 j
@@ -5779,7 +5778,9 @@ j
 0
 j
 j
-W
+~
+R
+M
 j
 j
 j
@@ -5815,9 +5816,17 @@ d
 d
 0
 A+]
+
+
+
+
+
+
+
 =
 =
 @
+
 j
 j
 j
@@ -5865,6 +5874,8 @@ j
 %
 
 
+I
+
 
 j
 j
@@ -5877,7 +5888,6 @@ j
 j
 j
 E
-o
 j
 j
 j
@@ -5965,7 +5975,6 @@ j
 j
 j
 j
-a
 =
 @
 @
@@ -5987,6 +5996,7 @@ a
 @
 @
 @
+B
 j
 j
 j

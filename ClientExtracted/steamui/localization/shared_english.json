@@ -3207,6 +3207,7 @@
     "GamepadOverlay_GameRecording_ToggleRecordingExplainer": "Shortcut chord to start/stop recording while in game:",
     "GamepadOverlay_GameRecording_AddMarkerExplainer": "Shortcut chord to drop a timeline marker %1$s:",
     "GamepadOverlay_GameRecording_RecordingStateExplainer": "Currently recording all gameplay footage",
+    "GamepadOverlay_GameRecording_NotRecordingExplainer": "Game recording is currently disabled",
     "QuickAccess_Tab_GameRecording_BackgroundRecordingSetting": "Game recording",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle": "Game recording",
     "QuickAccess_Tab_GameRecording_ManualRecordingToggle_Explainer": "(Record this game session)",
