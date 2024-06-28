@@ -6569,7 +6569,7 @@ div.ShortWindow
     color: #fff;
   }
 }
-._6zcMsloKVA3_bv5nQ0OQE {
+._6zcMsloKVA3_bv5nQ0OQE._6zcMsloKVA3_bv5nQ0OQE {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -6587,10 +6587,10 @@ div.ShortWindow
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
 }
-.gpfocuswithin ~ ._6zcMsloKVA3_bv5nQ0OQE,
-:hover ~ ._6zcMsloKVA3_bv5nQ0OQE,
-:hover > ._6zcMsloKVA3_bv5nQ0OQE,
-._6zcMsloKVA3_bv5nQ0OQE.zGgdqX8zY8kE6S_8ENeM9 {
+.gpfocuswithin ~ ._6zcMsloKVA3_bv5nQ0OQE._6zcMsloKVA3_bv5nQ0OQE,
+:hover ~ ._6zcMsloKVA3_bv5nQ0OQE._6zcMsloKVA3_bv5nQ0OQE,
+:hover > ._6zcMsloKVA3_bv5nQ0OQE._6zcMsloKVA3_bv5nQ0OQE,
+._6zcMsloKVA3_bv5nQ0OQE._6zcMsloKVA3_bv5nQ0OQE.zGgdqX8zY8kE6S_8ENeM9 {
   opacity: 1;
 }
 .Vl8Ft_SzabXluAKbqE-vN {

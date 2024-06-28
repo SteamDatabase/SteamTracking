@@ -301,6 +301,7 @@ enum EUpdaterState {
 	k_EUpdaterState_Applying = 5;
 	k_EUpdaterState_ClientRestartPending = 6;
 	k_EUpdaterState_SystemRestartPending = 7;
+	k_EUpdaterState_RollBack = 8;
 }
 
 enum EStorageBlockContentType {

@@ -11,8 +11,8 @@ __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
-D55
-D55
+455
+455
 __const
 __TEXT
 __objc_methname
@@ -127,7 +127,6 @@ H
 0
 @
 @
-q4
 *
 *
 *
@@ -164,9 +163,9 @@ $)
 _8
 (
 (
+>2
 
 0
-2
 0
 0
 AT=
@@ -179,7 +178,6 @@ D
 @
 3
 r7
-W1
 @
 Hc
 Hc
@@ -2438,7 +2436,7 @@ ReLaunchCmdLine
 ClientLauncherType
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
-Startup - updater built Jun 26 2024 18:36:43
+Startup - updater built Jun 27 2024 16:28:56
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2729,8 +2727,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Jun 26 2024
-18:36:44
+Jun 27 2024
+16:28:56
 crashhandler004
 steam
 Steam Executable Crash
@@ -2827,7 +2825,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-18:36:41
+16:28:54
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10953,7 +10951,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-18:34:06
+16:26:20
 Jan
 Feb
 Mar
@@ -13397,7 +13395,6 @@ H
 0
 @
 @
-q4
 *
 *
 *
@@ -13434,9 +13431,9 @@ $)
 _8
 (
 (
+>2
 
 0
-2
 0
 0
 AT=
@@ -13449,7 +13446,6 @@ D
 @
 3
 r7
-W1
 @
 Hc
 Hc
@@ -13489,17 +13485,17 @@ IcE
 1
 7
 V
+#0
 !6
 0
 0
 0
 0
 =
-=/
+_/
 /
 =
 5
-+.
 .
 @"
 !
@@ -13511,7 +13507,6 @@ V
 &
 ,
 ,
-G+
 Y1
 +
 1
@@ -13521,7 +13516,7 @@ Y1
 *
 *
 0
-w)
+j)
 8
 8
 8
@@ -13548,6 +13543,7 @@ M9e
 ?
 ?
 :
+c(
 ?
 ?
 ?
@@ -14212,6 +14208,7 @@ H=
 0
 0
 0
+@
 
 0
 H=
@@ -14247,6 +14244,7 @@ Hc
 &
 @
 @
+f
 @
 
 
@@ -14268,6 +14266,7 @@ P
 =a
 0
 Hi
+^
 $
 $
 $
