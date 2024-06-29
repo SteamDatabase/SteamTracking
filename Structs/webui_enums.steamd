@@ -2245,13 +2245,6 @@ enum UnnamedEnum4cc6d63ba18ecebd
 	AnonymousLogin = 6;
 }
 
-enum UnnamedEnum4da6e256f9442d62
-{
-	HALF_WIDTH = 1;
-	LARGE = 2;
-	FULLSCREEN = 3;
-}
-
 enum UnnamedEnum511f114323ab4358
 {
 	NotPresent = 0;

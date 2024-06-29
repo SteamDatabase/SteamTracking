@@ -1886,7 +1886,6 @@ ${webm_url}${}
 ${wiki_doc_url}${}
 ${wizard_url}
 ${wizard_url}Home
-${}\n\n${COMMUNITY_BASE_URL}/sharedfiles/filedetails/?id=${}
 http://
 http://${}
 http://cdn.steamcommunity.com//economy/emoticon/:cooldown:
@@ -3156,7 +3155,6 @@ steam://open/newforyou
 steam://open/recording/${}
 steam://open/runtimeinfo
 steam://open/screenshots
-steam://open/screenshots${}
 steam://open/screenshots/${appid}
 steam://open/servers
 steam://open/settings

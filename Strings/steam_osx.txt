@@ -11,8 +11,8 @@ __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
-455
-455
+T55
+T55
 __const
 __TEXT
 __objc_methname
@@ -123,6 +123,7 @@ h
 )
 {:
 0
+)
 H
 0
 @
@@ -130,10 +131,16 @@ H
 *
 *
 *
+?4
+94
 @
 @
 @
 @
+)
+)
+)
+)
 $
 k
 Hi
@@ -143,29 +150,38 @@ Ic]
 4
 4
 IG
-s(
+4
+(
 )
+(
 )
+(
 
 %
 <
 <
-$)
 )
 )
+)
 '
 '
 '
 '
+3
 (
 
 5
+6(
+p2
 _8
+,'
 (
 (
->2
+Q2
 
 0
+2
+2
 0
 0
 AT=
@@ -209,7 +225,6 @@ IcE
 IcE
 @
 @
-1
 1
 1
 1
@@ -2436,7 +2451,7 @@ ReLaunchCmdLine
 ClientLauncherType
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
-Startup - updater built Jun 27 2024 16:28:56
+Startup - updater built Jun 28 2024 16:23:52
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2727,8 +2742,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Jun 27 2024
-16:28:56
+Jun 28 2024
+16:23:54
 crashhandler004
 steam
 Steam Executable Crash
@@ -2825,7 +2840,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-16:28:54
+16:23:48
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10951,7 +10966,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-16:26:20
+16:20:25
 Jan
 Feb
 Mar
@@ -13391,6 +13406,7 @@ file_ofs == pFile->GetBytesWritten()
 0
 {:
 0
+)
 H
 0
 @
@@ -13398,10 +13414,16 @@ H
 *
 *
 *
+?4
+94
 @
 @
 @
 @
+)
+)
+)
+)
 $
 k
 Hi
@@ -13411,29 +13433,38 @@ Ic]
 4
 4
 IG
-s(
+4
+(
 )
+(
 )
+(
 
 %
 <
 <
-$)
 )
 )
+)
 '
 '
 '
 '
+3
 (
 
 5
+6(
+p2
 _8
+,'
 (
 (
->2
+Q2
 
 0
+2
+2
 0
 0
 AT=
@@ -13482,23 +13513,18 @@ IcE
 1
 1
 1
-1
 7
 V
-#0
 !6
 0
 0
 0
-0
 =
-_/
 /
 =
 5
-.
-@"
 !
+]-
 @
 -
 ;
@@ -13513,10 +13539,10 @@ Y1
 1
 1
 5
+<*
 *
 *
 0
-j)
 8
 8
 8
@@ -13543,7 +13569,7 @@ M9e
 ?
 ?
 :
-c(
+l(
 ?
 ?
 ?
@@ -14165,7 +14191,6 @@ to=
 @
 @
 @
-Ic]
 0
 (
 0
@@ -14185,6 +14210,7 @@ H=
 =
 @
 =*.*
+Ic]
 @
 @
 @
@@ -14208,12 +14234,12 @@ H=
 0
 0
 0
-@
 
 0
 H=
 0
 &
+=
 0
 Hi
 E
@@ -14236,15 +14262,15 @@ E
 0
 Hc
 0
+e
 0
-/
 @
 @
 0
 &
 @
 @
-f
+1
 @
 
 
@@ -14266,7 +14292,8 @@ P
 =a
 0
 Hi
-^
+y
+]
 $
 $
 $
