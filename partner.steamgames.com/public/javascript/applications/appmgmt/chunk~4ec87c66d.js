@@ -24675,8 +24675,10 @@
             strPromotionPlanID: l,
             bRequireSalePage: s,
             eRequireSalePageType: o,
+            bRequireMarketingBanner: c,
+            bRequireSpotlightBanner: m,
           } = e;
-          let c = null;
+          let u = null;
           try {
             const e = new FormData();
             e.append("sessionid", g.De.SESSIONID),
@@ -24687,15 +24689,17 @@
               l && e.append("strPromotionPlanID", "" + l),
               s && e.append("bRequireSalePage", "" + s),
               o && e.append("eRequireSalePageType", "" + o),
+              m && e.append("bRequireSpotlightBanner", "" + m),
+              c && e.append("bRequireMarketingBanner", "" + c),
               e.append("nPromoType", "" + i),
               e.append("rtExpireTime", "" + t);
-            const m = g.De.PARTNER_BASE_URL + "dailydeals/ajaxinviteapptopromo",
-              u = await r().post(m, e, { withCredentials: !0 });
-            if (200 == u?.status) {
-              if (1 == u.data?.success && u.data.inviteid) {
+            const p = g.De.PARTNER_BASE_URL + "dailydeals/ajaxinviteapptopromo",
+              _ = await r().post(p, e, { withCredentials: !0 });
+            if (200 == _?.status) {
+              if (1 == _.data?.success && _.data.inviteid) {
                 let e = h.QU();
                 const i = {
-                  inviteid: u.data.inviteid,
+                  inviteid: _.data.inviteid,
                   invite_account: g.L7.accountid,
                   appid: n.appid,
                   packageid: n.packageid,
@@ -24704,20 +24708,20 @@
                   rtinvitetime: e,
                   rtexpiretime: t,
                 };
-                this.m_mapInvites.set(u.data.inviteid, i),
+                this.m_mapInvites.set(_.data.inviteid, i),
                   this.m_inviteAddRemoveCallback.Dispatch(i);
               }
-              return u.data?.success;
+              return _.data?.success;
             }
-            c = (0, d.l)(u);
+            u = (0, d.l)(_);
           } catch (e) {
-            c = (0, d.l)(e);
+            u = (0, d.l)(e);
           }
           return (
             console.error(
               "CPromotionInviteStore.CreatePromoInvite failed: " +
-                c?.strErrorMsg,
-              c,
+                u?.strErrorMsg,
+              u,
             ),
             2
           );
@@ -49344,6 +49348,8 @@
                   rtExpireTime: o,
                   nPartnerID: t.GetPartnerID(),
                   strPromotionPlanID: t.GetID(),
+                  bRequireMarketingBanner: s.BIsMarketingMessageArtRequest(),
+                  bRequireSpotlightBanner: s.BIsSpotlightArtRequest(),
                 };
                 i.fnSetLoading(!0),
                   n(e)
@@ -68948,7 +68954,7 @@
           [ee, te] = m.useState(void 0),
           [ae, ne] = m.useState(0),
           { fnCreateDiscountEvent: ie } = (0, r.z8)(),
-          [re, le] = m.useState(!0),
+          [re, le] = m.useState("assetrequest" != E),
           [se, oe] = (0, m.useState)(!0),
           [ce, me] = (0, m.useState)(!0),
           [de, ue] = (0, m.useState)(!1),
@@ -69172,7 +69178,12 @@
                   ),
                 ),
               m.createElement(p.__, null, "Choose Promotion Type:"),
-              m.createElement(B, { type: E, setType: L }),
+              m.createElement(B, {
+                type: E,
+                setType: (e) => {
+                  "assetrequest" == e && le(!1), L(e);
+                },
+              }),
               m.createElement(p.II, {
                 type: "text",
                 label: "Promotion Name",
@@ -69247,7 +69258,7 @@
                             label: "Create discount event",
                             checked: re && 0 != ae,
                             onChange: le,
-                            disabled: 0 == ae,
+                            disabled: 0 == ae || "assetrequest" == E,
                             tooltip:
                               "Uncheck the box to skip creating the discount event. You can create a discount event separately and associate with the daily deal. The discount event being present will let us find the package discount associated with the daily deal.",
                           }),

@@ -620,8 +620,8 @@
         return JSON.stringify({
           discount_event: {
             name: t,
-            publisherids: a.join(","),
-            appids: s.join(","),
+            publisherids: a?.join(","),
+            appids: s?.join(","),
             description: n,
             event: g,
             collision_type: "proximity",
