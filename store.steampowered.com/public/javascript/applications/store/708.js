@@ -64,11 +64,8 @@
         m_dateSaleStart = new Date("2024-06-27T17:00:00Z");
         m_dateSaleEnd = new Date("2024-07-11T17:00:00Z");
         BIsSaleActive() {
-          const e = Date.now();
-          return Boolean(
-            e >= this.m_dateSaleStart.getTime() &&
-              e < this.m_dateSaleEnd.getTime(),
-          );
+          Date.now();
+          return !1;
         }
         async GetNumTradingCardsEarned() {
           this.LazyInitTransport();

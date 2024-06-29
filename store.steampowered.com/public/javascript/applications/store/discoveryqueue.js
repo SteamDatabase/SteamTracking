@@ -425,11 +425,8 @@
         m_dateSaleStart = new Date("2024-06-27T17:00:00Z");
         m_dateSaleEnd = new Date("2024-07-11T17:00:00Z");
         BIsSaleActive() {
-          const e = Date.now();
-          return Boolean(
-            e >= this.m_dateSaleStart.getTime() &&
-              e < this.m_dateSaleEnd.getTime(),
-          );
+          Date.now();
+          return !1;
         }
         async GetNumTradingCardsEarned() {
           this.LazyInitTransport();
@@ -589,13 +586,13 @@
           s = (0, j.g)(),
           [g] = (0, c.Ar)("inqueue", "0"),
           [p, b] = (0, n.useState)(!1),
-          [E, D] = (0, n.useState)(!1),
+          [D, E] = (0, n.useState)(!1),
           [f] = (0, l.vs)(t, { include_assets: !0 }),
           w = (0, i.L)(),
           y = n.useRef();
         n.useEffect(() => y.current?.Activate(!0), []);
         const k = (0, v.id)(),
-          { eStoreDiscoveryQueueType: S, storePageFilter: A } =
+          { eStoreDiscoveryQueueType: A, storePageFilter: S } =
             n.useMemo(() => {
               if (g?.length > 0) {
                 const e = g.split("_"),
@@ -609,14 +606,14 @@
               return { eStoreDiscoveryQueueType: 0, storePageFilter: void 0 };
             }, [g]),
           N = n.useCallback(() => {
-            D(!0);
+            E(!0);
           }, []),
           _ = n.useCallback(() => {
             b(!0);
           }, []),
-          T = (0, o.ZP)(S, A);
+          R = (0, o.ZP)(A, S);
         return s && f
-          ? E
+          ? D
             ? null
             : n.createElement(
                 r.p,
@@ -645,7 +642,7 @@
                     "div",
                     { onClick: _, className: h().WidgetText },
                     (0, m.Xx)("#DiscoveryQueue_ResumeWizard"),
-                    T?.length > 0 && ": " + T,
+                    R?.length > 0 && ": " + R,
                   ),
                   !k &&
                     n.createElement(
@@ -658,8 +655,8 @@
                       includeAppID: t,
                       bWizardVisible: p,
                       fnCloseModal: () => b(!1),
-                      eStoreDiscoveryQueueType: S,
-                      storePageFilter: A,
+                      eStoreDiscoveryQueueType: A,
+                      storePageFilter: S,
                     }),
                 ),
               )
