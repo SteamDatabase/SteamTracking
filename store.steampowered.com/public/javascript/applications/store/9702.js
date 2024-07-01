@@ -410,23 +410,23 @@
     45137: (e, t, n) => {
       "use strict";
       n.d(t, {
-        AL: () => V,
-        G1: () => R,
-        IW: () => G,
-        WR: () => T,
-        bn: () => Z,
-        bz: () => A,
-        dW: () => M,
-        fn: () => b,
+        AL: () => Z,
+        G1: () => k,
+        IW: () => x,
+        WR: () => w,
+        bn: () => X,
+        bz: () => G,
+        dW: () => F,
+        fn: () => T,
         g1: () => u.g1,
-        i2: () => x,
-        n$: () => Y,
-        nt: () => W,
-        tI: () => k,
-        tM: () => U,
-        td: () => X,
-        wN: () => j,
-        z5: () => B,
+        i2: () => b,
+        n$: () => j,
+        nt: () => U,
+        tI: () => A,
+        tM: () => V,
+        td: () => O,
+        wN: () => W,
+        z5: () => M,
       });
       var a = n(77936),
         r = n(79545),
@@ -446,17 +446,16 @@
         h = n(92686),
         C = n(22520),
         I = n(77151),
-        y = n(89373),
-        v = n(15690),
-        S = n(80886),
-        L = n(2324),
-        N = n(31846),
-        D = n(65255),
-        w = n(82756);
-      function T() {
-        return (0, w.ip)("cart_config", "application_config");
+        y = n(15690),
+        v = n(80886),
+        S = n(2324),
+        L = n(31846),
+        N = n(65255),
+        D = n(82756);
+      function w() {
+        return (0, D.ip)("cart_config", "application_config");
       }
-      function b(e) {
+      function T(e) {
         const t = (0, E.bY)(),
           n = (0, g.useQueryClient)(),
           a = (0, p.tv)();
@@ -466,7 +465,7 @@
               if ((0, m.jp)(t)) {
                 const t = r.gA.Init(i.CQ);
                 t.Body().set_line_item_id(n),
-                  t.Body().set_user_country(D.L7.country_code);
+                  t.Body().set_user_country(N.L7.country_code);
                 const a = await i.Wr.RemoveItemFromCart(e, t);
                 return I.jg.Get().InvalidateCache(), a.Body().toObject();
               }
@@ -485,7 +484,7 @@
           },
         );
       }
-      function x() {
+      function b() {
         const e = (0, E.bY)(),
           t = (0, g.useQueryClient)(),
           n = (0, p.tv)();
@@ -520,15 +519,15 @@
           },
         );
       }
-      function G() {
+      function x() {
         const e = (0, p.tv)();
         return !(0, m._H)(e) && !(0, m.s$)(e);
       }
-      function A() {
+      function G() {
         const e = (0, p.tv)();
         return (0, m.s$)(e);
       }
-      function k(e, t, n) {
+      function A(e, t, n) {
         const a = (0, p.tv)(),
           r = (0, E.bY)(),
           i = (0, g.useQueryClient)();
@@ -543,7 +542,7 @@
           },
         });
       }
-      function R(e) {
+      function k(e) {
         const t = (0, p.tv)(),
           n = (0, E.bY)(),
           a = (0, g.useQueryClient)(),
@@ -553,7 +552,7 @@
             (async function (e, t, n, a, o) {
               const l = r.gA.Init(i.xr);
               l.Body().set_line_item_id(t),
-                l.Body().set_user_country(D.L7.country_code),
+                l.Body().set_user_country(N.L7.country_code),
                 a && l.Body().set_gift_info(s.nI.fromObject(a)),
                 n && l.Body().set_flags(i.A1.fromObject(n)),
                 o && l.Body().set_apply_gidcoupon(o);
@@ -591,16 +590,16 @@
           },
         });
       }
-      function P() {
+      function R() {
         const e = new c.WJ();
         return (
-          e.set_country_code(D.L7.country_code),
-          e.set_language(D.De.LANGUAGE),
-          e.set_steam_realm(D.De.EREALM),
+          e.set_country_code(N.L7.country_code),
+          e.set_language(N.De.LANGUAGE),
+          e.set_steam_realm(N.De.EREALM),
           e
         );
       }
-      function F() {
+      function P() {
         const e = (0, E.bY)(),
           t = (0, p.tv)(),
           [n] = (0, _.pf)();
@@ -613,7 +612,7 @@
                 ? (a.Body().set_gidshoppingcart(t.gid),
                   n && a.Body().set_gift_info(s.nI.fromObject(n)))
                 : (0, m.s$)(t) && a.Body().set_gidreplayoftransid(t.gid),
-                a.Body().set_context(P()),
+                a.Body().set_context(R()),
                 a.Body().data_request().set_include_basic_info(!0),
                 a.Body().data_request().set_include_release(!0);
               const i = await o.ZY.ValidateCart(e, a);
@@ -625,11 +624,11 @@
                 i.Body().toObject()
               );
             })(e, t, n),
-          { staleTime: 1 / 0, enabled: D.L7.logged_in || !(0, m.jp)(t) },
+          { staleTime: 1 / 0, enabled: N.L7.logged_in || !(0, m.jp)(t) },
         );
       }
-      function M() {
-        const { data: e } = F();
+      function F() {
+        const { data: e } = P();
         return f.useMemo(() => {
           let t = new Map(),
             n = new Map(),
@@ -649,7 +648,7 @@
                     (e.errors?.duplicate_appids_in_cart?.length &&
                       t.push({
                         purchase_state: 1,
-                        notice_text: (0, N.Xx)(
+                        notice_text: (0, L.Xx)(
                           "#Cart_Error_DuplicateApps_LineItem",
                         ),
                         appids: e.errors.duplicate_appids_in_cart,
@@ -659,19 +658,19 @@
                     if (e.errors?.has_existing_billing_agreement)
                       t.push({
                         purchase_state: 15,
-                        notice_text: (0, N.Xx)(
+                        notice_text: (0, L.Xx)(
                           "#Cart_Error_ExistingBillingAgreement",
                         ),
                       });
                     else {
                       const a = (e.store_item?.included_appids.length ?? 0) > 1;
-                      let r = (0, N.Xx)(
+                      let r = (0, L.Xx)(
                         n
                           ? "#Cart_Error_AlreadyOwned_GiftLineItem_Game"
                           : "#Cart_Error_AlreadyOwned_LineItem_Game",
                       );
                       a &&
-                        (r = (0, N.Xx)(
+                        (r = (0, L.Xx)(
                           n
                             ? "#Cart_Error_AlreadyOwned_GiftLineItem"
                             : "#Cart_Error_AlreadyOwned_LineItem",
@@ -686,42 +685,42 @@
                     e.errors?.unavailable_in_country &&
                       t.push({
                         purchase_state: 8,
-                        notice_text: (0, N.Xx)(
+                        notice_text: (0, L.Xx)(
                           "#Cart_Error_UnavailableCountry_LineItem",
                         ),
                       }),
                     e.errors?.coupon_exclusive_promo &&
                       t.push({
                         purchase_state: 13,
-                        notice_text: (0, N.Xx)(
+                        notice_text: (0, L.Xx)(
                           "#Cart_Error_CouponIsExclusivePromo",
                         ),
                       }),
                     e.errors?.invalid_coupon &&
                       t.push({
                         purchase_state: 11,
-                        notice_text: (0, N.Xx)("#Cart_Error_CouponIsInvalid"),
+                        notice_text: (0, L.Xx)("#Cart_Error_CouponIsInvalid"),
                       }),
                     e.errors?.invalid_coupon_for_item &&
                       t.push({
                         purchase_state: 12,
-                        notice_text: (0, N.Xx)(
+                        notice_text: (0, L.Xx)(
                           "#Cart_Error_CouponIsInvalidForItem",
                         ),
                       }),
                     e.errors?.too_many_in_cart &&
                       t.push({
                         purchase_state: 14,
-                        notice_text: (0, N.Xx)("#Cart_Error_TooManyInCart"),
+                        notice_text: (0, L.Xx)("#Cart_Error_TooManyInCart"),
                       }),
                     e.errors?.missing_must_own_appids &&
                       t.push({
                         purchase_state: 16,
                         notice_text: n
-                          ? (0, N.Xx)(
+                          ? (0, L.Xx)(
                               "#Cart_Error_MissingMustOwnApps_GiftLineItem",
                             )
-                          : (0, N.Xx)(
+                          : (0, L.Xx)(
                               "#Cart_Error_MissingMustOwnApps_LineItem",
                             ),
                         appids: Array.from(
@@ -731,7 +730,7 @@
                     e.warnings?.appids_in_mastersub?.length &&
                       t.push({
                         purchase_state: 4,
-                        notice_text: (0, N.Xx)(
+                        notice_text: (0, L.Xx)(
                           "#Cart_Error_MasterSubscription_LineItem",
                         ),
                         appids: e.warnings.appids_in_mastersub.map(
@@ -741,7 +740,7 @@
                     e.warnings?.owned_appids?.length &&
                       t.push({
                         purchase_state: 3,
-                        notice_text: (0, N.Xx)(
+                        notice_text: (0, L.Xx)(
                           "#Cart_Warning_AlreadyOwned_LineItem",
                         ),
                         appids: e.warnings.owned_appids,
@@ -749,7 +748,7 @@
                     e.warnings?.owned_appids_extra_copy?.length &&
                       t.push({
                         purchase_state: 9,
-                        notice_text: (0, N.Xx)(
+                        notice_text: (0, L.Xx)(
                           "#Cart_Warning_ExtraCopies_LineItem",
                         ),
                         appids: e.warnings.owned_appids_extra_copy,
@@ -757,14 +756,14 @@
                     e.warnings?.price_has_changed &&
                       t.push({
                         purchase_state: 10,
-                        notice_text: (0, N.Xx)(
+                        notice_text: (0, L.Xx)(
                           "#Cart_Warning_PriceChange_LineItem",
                         ),
                       }),
                     e.warnings?.non_refundable &&
                       t.push({
                         purchase_state: 5,
-                        notice_text: (0, N.Xx)(
+                        notice_text: (0, L.Xx)(
                           "#Cart_Warning_NoRefund_LineItem",
                         ),
                       }),
@@ -774,36 +773,36 @@
               );
               let n = !!e.gift_info?.accountid_giftee;
               e.errors?.duplicate_appids_in_cart?.length &&
-                i(1, (0, N.Xx)("#Cart_Error_DuplicateApps_FootNote")),
+                i(1, (0, L.Xx)("#Cart_Error_DuplicateApps_FootNote")),
                 e.errors?.owned_appids?.length &&
                   (e.errors?.has_existing_billing_agreement
                     ? i(
                         15,
-                        (0, N.Xx)(
+                        (0, L.Xx)(
                           "#Cart_Error_ExistingBillingAgreement_FootNote",
                         ),
                       )
                     : i(
                         2,
-                        (0, N.Xx)(
+                        (0, L.Xx)(
                           n
                             ? "#Cart_Error_AlreadyOwned_GiftFootNote"
                             : "#Cart_Error_AlreadyOwned_FootNote",
                         ),
                       )),
                 e.errors?.unavailable_in_country &&
-                  i(8, (0, N.Xx)("#Cart_Error_UnavailableCountry_FootNote")),
+                  i(8, (0, L.Xx)("#Cart_Error_UnavailableCountry_FootNote")),
                 e.errors?.missing_must_own_appids &&
                   i(
                     16,
                     n
-                      ? (0, N.Xx)("#Cart_Error_MissingMustOwnApps_FootNoteGift")
-                      : (0, N.Xx)("#Cart_Error_MissingMustOwnApps_FootNote"),
+                      ? (0, L.Xx)("#Cart_Error_MissingMustOwnApps_FootNoteGift")
+                      : (0, L.Xx)("#Cart_Error_MissingMustOwnApps_FootNote"),
                   ),
                 e.warnings?.appids_in_mastersub?.length &&
-                  i(4, (0, N.Xx)("#Cart_Error_MasterSubscription_FootNote")),
+                  i(4, (0, L.Xx)("#Cart_Error_MasterSubscription_FootNote")),
                 e.warnings?.price_has_changed &&
-                  t.set(10, (0, N.Xx)("#Cart_Warning_PriceChange_FootNote"));
+                  t.set(10, (0, L.Xx)("#Cart_Warning_PriceChange_FootNote"));
             }),
             {
               mapLineItemToNotices: a,
@@ -813,12 +812,12 @@
           );
         }, [e]);
       }
-      function B(e) {
+      function M(e) {
         const { mapLineItemToNotices: t, mapValidateNoticesToFootnote: n } =
-          M();
+          F();
         return [t.get(e) || [], n];
       }
-      function O(e, t) {
+      function B(e, t) {
         let n = "#Package";
         const a = e.GetSelfPurchaseOption(),
           r = a?.recurrence_info;
@@ -838,7 +837,7 @@
             6: "Month",
             7: "Year",
           }[r.renewal_time_unit];
-        return (0, N.Xx)(
+        return (0, L.Xx)(
           o,
           i.formatted_final_price,
           a.formatted_final_price,
@@ -846,14 +845,14 @@
           i.discount_pct,
         );
       }
-      function X() {
+      function O() {
         const e = (0, u.g1)(),
-          t = F(),
+          t = P(),
           { bOnlyHardware: n, query: a } = (function (e) {
             const t = (0, E.bY)(),
               n = e.map(({ packageid: e }) => e).filter(Boolean),
-              a = 3 === (0, S.dY)(n, {}),
-              i = v.Z.Get(),
+              a = 3 === (0, v.dY)(n, {}),
+              i = y.Z.Get(),
               o = a
                 ? n.filter(
                     (e) =>
@@ -867,7 +866,7 @@
                 ["cart", "validateHardware", o],
                 async () => {
                   const e = r.gA.Init(c.lj);
-                  e.Body().set_context(P()), e.Body().set_packageid(o);
+                  e.Body().set_context(R()), e.Body().set_packageid(o);
                   const n = await c.VJ.GetHardwareItems(t, e);
                   return (
                     n.BSuccess() ||
@@ -884,9 +883,9 @@
                             {
                               strNotice:
                                 ((n = t),
-                                (0, N.Xx)(
+                                (0, L.Xx)(
                                   "#Cart_ShippingEstimate_DeliveryDate",
-                                  (0, L.B)(n),
+                                  (0, S.B)(n),
                                 )),
                             },
                           ]),
@@ -902,8 +901,8 @@
           })(e.data?.line_items || []),
           i = (function (e) {
             const t = e.map(({ packageid: e }) => e).filter(Boolean),
-              n = 3 === (0, S.dY)(t, {}),
-              a = v.Z.Get(),
+              n = 3 === (0, v.dY)(t, {}),
+              a = y.Z.Get(),
               r = n
                 ? t.filter(
                     (e) =>
@@ -918,14 +917,14 @@
                   a.GetPackage(e).GetSelfPurchaseOption().recurrence_info
                     .packageid,
               ),
-              o = (0, S.dY)(i, {});
+              o = (0, v.dY)(i, {});
             return n && 3 === o && 0 !== r.length
               ? r.reduce((e, t) => {
                   const n = a.GetPackage(t);
                   return (
                     (e[t] = [
                       {
-                        strNotice: O(
+                        strNotice: B(
                           n,
                           a.GetPackage(
                             n.GetSelfPurchaseOption().recurrence_info.packageid,
@@ -964,14 +963,14 @@
           bOnlyHardware: n,
         };
       }
-      function Z() {
+      function X() {
         const e = (0, E.bY)();
         return (0, g.useQuery)(
           ["shopping_cart", "relevant_coupons"],
           async () => {
             const t = await (async function (e) {
               const t = r.gA.Init(i.r$);
-              t.Body().set_language((0, a.jM)(D.De.LANGUAGE));
+              t.Body().set_language((0, a.jM)(N.De.LANGUAGE));
               const n = await i.Wr.GetRelevantCoupons(e, t);
               return n.BIsValid()
                 ? n.Body().toObject()
@@ -982,15 +981,15 @@
               {},
             );
           },
-          { enabled: D.L7.logged_in, placeholderData: () => ({}) },
+          { enabled: N.L7.logged_in, placeholderData: () => ({}) },
         );
       }
-      function V() {
+      function Z() {
         return (0, g.useQuery)(
           ["shopping_cart", "sale_drop_progress"],
           async () => {
             const e = await fetch(
-                `${D.De.STORE_BASE_URL}cart/ajaxsaledropprogress`,
+                `${N.De.STORE_BASE_URL}cart/ajaxsaledropprogress`,
               ),
               t = await e.json();
             return (
@@ -999,13 +998,13 @@
               t
             );
           },
-          { enabled: D.L7.logged_in && y.C.Get().BIsSaleActive() },
+          { enabled: N.L7.logged_in },
         );
       }
-      function U() {
+      function V() {
         const e = (0, p.tv)(),
           [t] = (0, _.pf)(),
-          n = `${D.De.STORE_CHECKOUT_BASE_URL}checkout/`;
+          n = `${N.De.STORE_CHECKOUT_BASE_URL}checkout/`;
         if ((0, m.jp)(e)) return `${n}?accountcart=1`;
         if ((0, m.s$)(e)) return `${n}?gidreplay=${e.gid}`;
         {
@@ -1021,19 +1020,19 @@
           );
         }
       }
-      function W() {
+      function U() {
         const e = (0, p.tv)();
         return (0, m._H)(e) ? e.requestID : null;
       }
-      function j() {
+      function W() {
         const e = (0, p.tv)(),
           t = (0, h.Rs)(),
           n = (0, u.g1)(),
           a = t.isSuccess && 2 == t.data.role(),
           r = n.data?.line_items || [],
           i = r.map(({ packageid: e }) => e).filter(Boolean),
-          o = 3 === (0, S.dY)(i, {}),
-          s = v.Z.Get(),
+          o = 3 === (0, v.dY)(i, {}),
+          s = y.Z.Get(),
           l = o
             ? i.filter(
                 (e) =>
@@ -1052,7 +1051,7 @@
           ) && 0 === l.length
         );
       }
-      function Y() {
+      function j() {
         const e = (0, p.tv)(),
           t = (0, h.Rs)();
         return t.isSuccess && 1 == t.data.role() && (0, m._H)(e);

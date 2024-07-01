@@ -1452,45 +1452,47 @@
             S(e), C("none");
           }, []),
           k = o.useCallback(() => {
-            s
-              ? d
-                ? (C("submitting"),
-                  S(null),
-                  (async function (e) {
-                    const {
-                        unAppID: t,
-                        rtReleaseDate: r,
-                        strComingSoonDisplay: n,
-                      } = e,
-                      a = `${b.De.PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${t}`,
-                      o = new FormData();
-                    o.append("sessionid", b.De.SESSIONID),
-                      o.append("release_date", r.toString()),
-                      o.append("coming_soon_display", n);
-                    const l = await m().post(a, o);
-                    if (!l.data || 1 != l.data.success)
-                      throw (0, i.Xx)(
-                        "#Error_Description",
-                        l.data?.success,
-                        l.data?.error_message || "unknown",
-                      );
-                  })({ unAppID: t, rtReleaseDate: s, strComingSoonDisplay: d })
-                    .then(() => {
-                      C("refreshing"), c(s, d);
-                    })
-                    .catch((e) => {
-                      P(e);
-                    }))
-                : P(
-                    (0, i.Xx)(
-                      "#App_Landing_ReleaseDate_Error_ComingSoonDisplay",
-                    ),
-                  )
-              : P((0, i.Xx)("#App_Landing_ReleaseDate_Error_NoDate"));
-          }, [t, s, d, c, P]);
+            if (s)
+              if (d) {
+                C("submitting"), S(null);
+                (async function (e) {
+                  const {
+                      unAppID: t,
+                      rtReleaseDate: r,
+                      strComingSoonDisplay: n,
+                    } = e,
+                    a = `${b.De.PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${t}`,
+                    o = new FormData();
+                  o.append("sessionid", b.De.SESSIONID),
+                    r && o.append("release_date", r.toString());
+                  o.append("coming_soon_display", n);
+                  const l = await m().post(a, o);
+                  if (!l.data || 1 != l.data.success)
+                    throw (0, i.Xx)(
+                      "#Error_Description",
+                      l.data?.success,
+                      l.data?.error_message || "unknown",
+                    );
+                })({
+                  unAppID: t,
+                  rtReleaseDate: r ? s : null,
+                  strComingSoonDisplay: d,
+                })
+                  .then(() => {
+                    C("refreshing"), c(s, d);
+                  })
+                  .catch((e) => {
+                    P(e);
+                  });
+              } else
+                P(
+                  (0, i.Xx)("#App_Landing_ReleaseDate_Error_ComingSoonDisplay"),
+                );
+            else P((0, i.Xx)("#App_Landing_ReleaseDate_Error_NoDate"));
+          }, [t, s, d, r, c, P]);
         return (
           o.useLayoutEffect(() => {
-            l(r && "none" == _ ? () => k : null);
+            l("none" == _ ? () => k : null);
           }, [k, r, _, l]),
           o.createElement(
             o.Fragment,
