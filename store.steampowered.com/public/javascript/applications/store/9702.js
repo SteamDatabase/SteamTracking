@@ -3368,9 +3368,9 @@
       "use strict";
       n.r(t),
         n.d(t, {
-          BaseCartPage: () => re,
-          default: () => te,
-          useInitCartLocalization: () => ie,
+          BaseCartPage: () => ae,
+          default: () => ee,
+          useInitCartLocalization: () => re,
         });
       var a = n(47427),
         r = n(91585),
@@ -3604,16 +3604,14 @@
           n,
         );
       }
-      var X = n(89373),
-        Z = n(68824),
-        V = n(38071),
-        U = n(88909);
-      function W(e) {
+      var X = n(68824),
+        Z = n(38071),
+        V = n(88909);
+      function U(e) {
         const { cart: t } = e,
-          n = X.C.Get().BIsSaleActive(),
-          r = (function (e) {
+          n = (function (e) {
             const t = (0, p.AL)();
-            if (!e || !t.isSuccess) return null;
+            if (!e || !t.isSuccess || !t.data?.sale_name) return null;
             const n = new Set();
             let a = 0;
             for (const t of e.cart_items) {
@@ -3639,99 +3637,105 @@
               strSaleName: r,
             };
           })(t);
-        if (!t || !l.L7.logged_in || !n || !r || (0, V.e7)(l.De.EREALM))
+        if (
+          !t ||
+          !l.L7.logged_in ||
+          !n ||
+          (0, Z.e7)(l.De.EREALM) ||
+          !n.strSaleName
+        )
           return null;
         const {
-            cEarned: i,
-            pctProgress: o,
-            rgPrepurchaseApps: c,
-            strFormattedSpendPerDrop: m,
-            strSaleName: u,
-          } = r,
-          d = i > 0,
-          _ = a.createElement(
+            cEarned: r,
+            pctProgress: i,
+            rgPrepurchaseApps: o,
+            strFormattedSpendPerDrop: c,
+            strSaleName: m,
+          } = n,
+          u = r > 0,
+          d = a.createElement(
             "div",
-            { className: U.Explanation },
-            (0, s.Xx)("#Cart_SaleCardDrops_Explanation", u),
+            { className: V.Explanation },
+            (0, s.Xx)("#Cart_SaleCardDrops_Explanation", m),
           );
         return a.createElement(
-          Z.r,
-          { className: U.TradingCardContainer },
-          d &&
+          X.r,
+          { className: V.TradingCardContainer },
+          u &&
             a.createElement(
               "div",
-              { className: U.EarnedMessage },
-              (0, s.kb)("#Cart_SaleCardDrops_EarnedMessage", i, u),
+              { className: V.EarnedMessage },
+              (0, s.kb)("#Cart_SaleCardDrops_EarnedMessage", r, m),
             ),
-          !d && _,
+          !u && d,
           a.createElement(
             "div",
-            { className: U.ProgressSection },
+            { className: V.ProgressSection },
             a.createElement(
               "div",
               null,
               (0, s.Xx)("#Cart_SaleCardDrops_ProgressLabel"),
             ),
-            a.createElement(j, { value: o }),
+            a.createElement(W, { value: i }),
             a.createElement(
               "div",
-              { className: U.Right },
+              { className: V.Right },
               "(",
-              (0, s.Xx)("#Cart_SaleCardDrops_CardCost", m),
+              (0, s.Xx)("#Cart_SaleCardDrops_CardCost", c),
               ")",
             ),
           ),
-          d && _,
-          c.length > 0 &&
+          u && d,
+          o.length > 0 &&
             a.createElement(
               "div",
-              { className: U.IneligbleList },
+              { className: V.IneligbleList },
               a.createElement(
                 "p",
                 null,
-                (0, s.Xx)("#Cart_SaleCardDrops_PrepurchaseIneligible", u),
+                (0, s.Xx)("#Cart_SaleCardDrops_PrepurchaseIneligible", m),
               ),
               a.createElement(
                 "ul",
                 null,
-                c.map((e) => a.createElement("li", { key: e }, e)),
+                o.map((e) => a.createElement("li", { key: e }, e)),
               ),
             ),
         );
       }
-      function j(e) {
+      function W(e) {
         const { value: t } = e,
           n = Math.min(100, Math.max(0, t));
         return a.createElement(
           "div",
-          { className: U.ProgressRail },
+          { className: V.ProgressRail },
           a.createElement("div", {
-            className: U.Progress,
+            className: V.Progress,
             style: { width: `${n}%` },
           }),
         );
       }
-      var Y = n(23154),
-        H = n(1485),
-        Q = n(13043),
-        q = n(74606),
-        z = n(41130);
-      function J(e) {
+      var j = n(23154),
+        Y = n(1485),
+        H = n(13043),
+        Q = n(74606),
+        q = n(41130);
+      function z(e) {
         const { children: t, name: n = "GamepadWebRoot" } = e,
-          r = (0, z.L)();
+          r = (0, q.L)();
         return a.createElement(
-          Q.p,
+          H.p,
           { NavigationManager: r, navID: n },
-          a.createElement(q.g, null, t),
+          a.createElement(Q.g, null, t),
         );
       }
-      var K = n(82493),
-        $ = n(8285),
-        ee = n(80212);
-      function te(e) {
-        const t = ie(),
+      var J = n(82493),
+        K = n(8285),
+        $ = n(80212);
+      function ee(e) {
+        const t = re(),
           n = (function () {
-            const e = (0, $.TH)();
+            const e = (0, K.TH)();
             return (0, a.useMemo)(() => {
               let t = new URLSearchParams(e.search);
               if (t.get("gidreplay"))
@@ -3745,12 +3749,12 @@
           (0, f.oA)(),
           t
             ? "replay" == n.type
-              ? a.createElement(ae, { cartID: n })
-              : a.createElement(ne, { cartID: n, ...e })
+              ? a.createElement(ne, { cartID: n })
+              : a.createElement(te, { cartID: n, ...e })
             : a.createElement(c.V, { position: "center" })
         );
       }
-      function ne(e) {
+      function te(e) {
         const { cartID: t, initialStep: n = "initial" } = e,
           [r, i] = a.useState(n),
           o = (function (e) {
@@ -3758,7 +3762,7 @@
             return (0, s.Xx)("#Cart_YourShoppingCart");
           })(r);
         return a.createElement(
-          re,
+          ae,
           { cartID: t, title: o, step: r, onStepChange: i },
           ({ cart: e, validatedCart: t }) =>
             a.createElement(
@@ -3767,7 +3771,7 @@
               a.createElement(
                 h.SV,
                 null,
-                a.createElement(se, {
+                a.createElement(oe, {
                   isCartEmpty: !e || 0 === e.line_items.length,
                   cart: t,
                 }),
@@ -3780,11 +3784,11 @@
             ),
         );
       }
-      function ae(e) {
+      function ne(e) {
         const { cartID: t } = e;
         return l.L7.logged_in
           ? a.createElement(
-              re,
+              ae,
               {
                 cartID: t,
                 title: (0, s.Xx)("#Cart_Replay_SavedCart"),
@@ -3793,14 +3797,14 @@
               },
               () =>
                 a.createElement(
-                  Z.r,
+                  X.r,
                   null,
                   (0, s.Xx)("#Cart_Replay_Instructions", 72),
                 ),
             )
-          : a.createElement(ee.hx, null);
+          : a.createElement($.hx, null);
       }
-      function re(e) {
+      function ae(e) {
         const {
             children: t,
             cartID: n,
@@ -3824,7 +3828,7 @@
             return null;
           })(c);
         return a.createElement(
-          J,
+          z,
           null,
           a.createElement(
             d.ZP,
@@ -3832,7 +3836,7 @@
             a.createElement(
               u.IF,
               { cartID: n, step: c, setStep: m, ...p },
-              a.createElement(oe, null),
+              a.createElement(ie, null),
               a.createElement(
                 "div",
                 { className: i().ShoppingCartPage },
@@ -3865,7 +3869,7 @@
           ),
         );
       }
-      function ie() {
+      function re() {
         const [e, t] = a.useState(!1);
         return (
           a.useEffect(() => {
@@ -3874,7 +3878,7 @@
           e
         );
       }
-      function oe(e) {
+      function ie(e) {
         const t = (function () {
           const e = a.useRef(""),
             t = (0, p.g1)(),
@@ -3915,15 +3919,15 @@
           style: t ? { backgroundImage: `url("${t}")` } : null,
         });
       }
-      function se(e) {
+      function oe(e) {
         const { isCartEmpty: t, cart: n } = e,
           r = (0, p.i2)();
-        if (t) return a.createElement(le, null);
+        if (t) return a.createElement(se, null);
         return a.createElement(
           a.Fragment,
           null,
-          a.createElement(le, null),
-          a.createElement(W, { cart: n }),
+          a.createElement(se, null),
+          a.createElement(U, { cart: n }),
           a.createElement(
             C.s,
             { "flow-children": "row", className: i().CartFooter },
@@ -3931,7 +3935,7 @@
               "div",
               null,
               a.createElement(
-                H.zx,
+                Y.zx,
                 {
                   onClick: () => (window.location.href = l.De.STORE_BASE_URL),
                   className: i().Button,
@@ -3940,17 +3944,17 @@
               ),
             ),
             a.createElement(
-              Y.Qj,
+              j.Qj,
               { onClick: () => r.mutate() },
               (0, s.Xx)("#Cart_RemoveAll"),
             ),
           ),
         );
       }
-      function le() {
+      function se() {
         return l.De.IN_MOBILE_WEBVIEW
           ? a.createElement(
-              Z.r,
+              X.r,
               { className: i().BetaNotice },
               a.createElement(
                 "div",
@@ -4007,7 +4011,7 @@
                 { className: i().Text },
                 (0, s.yu)(
                   "#Cart_GenericBetaNotice",
-                  a.createElement(K.IS, {
+                  a.createElement(J.IS, {
                     href: "https://steamcommunity.com/groups/SteamClientBeta/discussions/3/4038104598693698820/",
                   }),
                 ),

@@ -13,7 +13,7 @@
         Y: "_1FD7rgQVEqkzjDjzYa-1BC",
       };
     },
-    95126: (e, t, s) => {
+    95126: (e, s, t) => {
       var n = {
         "./af": 75436,
         "./af.js": 75436,
@@ -291,13 +291,13 @@
         "./zh-tw.js": 79204,
       };
       function r(e) {
-        var t = a(e);
-        return s(t);
+        var s = a(e);
+        return t(s);
       }
       function a(e) {
-        if (!s.o(n, e)) {
-          var t = new Error("Cannot find module '" + e + "'");
-          throw ((t.code = "MODULE_NOT_FOUND"), t);
+        if (!t.o(n, e)) {
+          var s = new Error("Cannot find module '" + e + "'");
+          throw ((s.code = "MODULE_NOT_FOUND"), s);
         }
         return n[e];
       }
@@ -308,46 +308,46 @@
         (e.exports = r),
         (r.id = 95126);
     },
-    13043: (e, t, s) => {
+    13043: (e, s, t) => {
       "use strict";
-      s.d(t, { p: () => c });
-      var n = s(47427),
-        r = s(82493),
-        a = s(4030),
-        i = s(20417),
-        o = s(37563),
-        l = s(35643);
-      function c(e) {
-        const { children: t, navTreeRef: s, ...c } = e,
+      t.d(s, { p: () => l });
+      var n = t(47427),
+        r = t(82493),
+        a = t(4030),
+        i = t(20417),
+        o = t(37563),
+        c = t(35643);
+      function l(e) {
+        const { children: s, navTreeRef: t, ...l } = e,
           u = n.useRef(),
-          d = (0, i.BE)(u, s),
-          j = (0, o.id)(),
+          j = (0, i.BE)(u, t),
+          d = (0, o.id)(),
           m = window.__virtual_keyboard_client;
-        if (j) {
+        if (d) {
           const e = window.__nav_tree_root;
           return n.createElement(
             r.Fe,
-            { ...c, navTreeRef: d, secondary: !0, parentEmbeddedNavTree: e },
+            { ...l, navTreeRef: j, secondary: !0, parentEmbeddedNavTree: e },
             n.createElement(
-              l.o5,
+              c.o5,
               { factory: m },
-              n.createElement(a.O, null, t),
+              n.createElement(a.O, null, s),
             ),
           );
         }
-        return n.createElement(n.Fragment, null, t);
+        return n.createElement(n.Fragment, null, s);
       }
     },
-    64936: (e, t, s) => {
+    64936: (e, s, t) => {
       "use strict";
-      s.d(t, { JW: () => u, kl: () => m, rw: () => h, zD: () => g });
-      var n = s(85556),
-        r = s(54842),
-        a = s(37485),
-        i = s.n(a),
-        o = s(47427),
-        l = (s(29480), s(37563));
-      class c {
+      t.d(s, { JW: () => u, kl: () => m, rw: () => h, zD: () => g });
+      var n = t(85556),
+        r = t(54842),
+        a = t(37485),
+        i = t.n(a),
+        o = t(47427),
+        c = (t(29480), t(37563));
+      class l {
         constructor() {
           (0, r.rC)(this);
         }
@@ -358,10 +358,10 @@
           return !1;
         }
         get bIsFollowingEnabled() {
-          return !(0, l.h4)();
+          return !(0, c.h4)();
         }
         get bIsCuratorsEnabled() {
-          return !(0, l.h4)();
+          return !(0, c.h4)();
         }
         get bIncludeCurators() {
           return !0;
@@ -381,30 +381,30 @@
         }
         ParseDevOverrides(e) {
           if (!e || 0 == e.length) return;
-          const t = new URLSearchParams("?" == e[0] ? e.substring(1) : e);
+          const s = new URLSearchParams("?" == e[0] ? e.substring(1) : e);
           if (
-            t.has("t") &&
-            ("dev" == l.De.WEB_UNIVERSE || "beta" == l.De.WEB_UNIVERSE)
+            s.has("t") &&
+            ("dev" == c.De.WEB_UNIVERSE || "beta" == c.De.WEB_UNIVERSE)
           ) {
-            const e = t.get("t");
-            let s = /^\d+$/.test(e) ? i().unix(Number.parseInt(e)) : i()(e);
-            (this.nOverrideDateNow = Math.floor(s.unix())),
+            const e = s.get("t");
+            let t = /^\d+$/.test(e) ? i().unix(Number.parseInt(e)) : i()(e);
+            (this.nOverrideDateNow = Math.floor(t.unix())),
               console.log(
                 "CEventCalendarDevFeatures overriding partner event time: " +
                   this.nOverrideDateNow +
                   " " +
-                  s.format(),
+                  t.format(),
               );
           }
         }
       }
-      (0, n.gn)([r.LO], c.prototype, "nOverrideDateNow", void 0);
-      const u = new c();
+      (0, n.gn)([r.LO], l.prototype, "nOverrideDateNow", void 0);
+      const u = new l();
       window.g_EventCalendarDevFeatures = u;
-      const d = new Date(),
-        j = Math.floor(d.getTime() / 1e3);
+      const j = new Date(),
+        d = Math.floor(j.getTime() / 1e3);
       function m() {
-        return u.nOverrideDateNow ?? j;
+        return u.nOverrideDateNow ?? d;
       }
       function g() {
         return o.useMemo(() => m(), []);
@@ -413,213 +413,152 @@
         return o.useMemo(() => u.GetTimeNowWithOverrideAsDate(), []);
       }
     },
-    89373: (e, t, s) => {
+    71472: (e, s, t) => {
       "use strict";
-      s.d(t, { C: () => o });
-      var n = s(79545),
-        r = s(22791),
-        a = s(13557),
-        i = s(37563);
-      class o {
-        m_transport = void 0;
-        m_dateSaleStart = new Date("2024-06-27T17:00:00Z");
-        m_dateSaleEnd = new Date("2024-07-11T17:00:00Z");
-        BIsSaleActive() {
-          Date.now();
-          return !1;
-        }
-        async GetNumTradingCardsEarned() {
-          this.LazyInitTransport();
-          const e = { earned_today: 0, earned_lifetime: 0, eresult: 2 },
-            t = Date.now(),
-            s =
-              864e5 * Math.floor((t - this.m_dateSaleStart.getTime()) / 864e5) +
-              this.m_dateSaleStart.getTime(),
-            r = n.gA.Init(a.GZ);
-          let i = await a.Ts.GetNumTradingCardsEarned(this.m_transport, r),
-            o = i.GetEResult();
-          return 1 !== o
-            ? ((e.eresult = o), e)
-            : ((e.earned_lifetime = i.Body().num_trading_cards()),
-              r.Body().set_timestamp_start(s / 1e3),
-              (i = await a.Ts.GetNumTradingCardsEarned(this.m_transport, r)),
-              (o = i.GetEResult()),
-              1 != o
-                ? ((e.eresult = o), e)
-                : ((e.earned_today = i.Body().num_trading_cards()),
-                  (e.eresult = 1),
-                  e));
-        }
-        static s_Singleton;
-        static Get() {
-          return (
-            o.s_Singleton ||
-              ((o.s_Singleton = new o()),
-              "dev" == i.De.WEB_UNIVERSE &&
-                (window.g_SeasonalSaleStore = o.s_Singleton)),
-            o.s_Singleton
-          );
-        }
-        LazyInitTransport() {
-          if (!this.m_transport) {
-            const e = (0, i.kQ)("loyalty_webapi_token", "application_config");
-            "string" == typeof e
-              ? (this.m_transport = new r.J(
-                  i.De.WEBAPI_BASE_URL,
-                  e,
-                ).GetServiceTransport())
-              : console.error("CSeasonalSaleStore failed to load webapi token");
-          }
-        }
-        constructor() {}
-      }
-    },
-    71472: (e, t, s) => {
-      "use strict";
-      s.d(t, {
-        Ar: () => c,
+      t.d(s, {
+        Ar: () => l,
         Wo: () => u,
         i9: () => o,
         ks: () => a,
-        nQ: () => l,
-        ni: () => d,
+        nQ: () => c,
+        ni: () => j,
       });
-      var n = s(47427),
-        r = s(8285);
-      function a(e, t) {
-        let s;
+      var n = t(47427),
+        r = t(8285);
+      function a(e, s) {
+        let t;
         "string" == typeof e
-          ? (s = e)
+          ? (t = e)
           : "location" in e
-            ? (s = e.location.search)
-            : "search" in e && (s = e.search);
-        const n = new URLSearchParams(s.substring(1));
-        if (n.has(t)) {
-          const e = n.getAll(t);
+            ? (t = e.location.search)
+            : "search" in e && (t = e.search);
+        const n = new URLSearchParams(t.substring(1));
+        if (n.has(s)) {
+          const e = n.getAll(s);
           return e[e.length - 1];
         }
       }
       const i = (e) => null != e;
-      function o(e, t, s, n = !1) {
+      function o(e, s, t, n = !1) {
         const r = new URLSearchParams(e.location.search.substring(1));
-        r.delete(t),
-          i(s) && r.append(t, s),
+        r.delete(s),
+          i(t) && r.append(s, t),
           n
             ? e.replace(`?${r.toString()}`, { ...e.location.state })
             : e.push(`?${r.toString()}`);
       }
-      function l(e, t, s) {
-        o(e, t, s, !0);
+      function c(e, s, t) {
+        o(e, s, t, !0);
       }
-      function c(e, t) {
-        const s = (0, r.k6)(),
-          l = (0, r.TH)(),
-          c = (0, n.useMemo)(() => {
-            const s = a(l.search, e);
-            return i(s)
-              ? i(t)
-                ? "boolean" == typeof t
-                  ? t.constructor("false" !== s)
-                  : t.constructor(s)
-                : s
-              : t;
-          }, [l.search, e, t]),
+      function l(e, s) {
+        const t = (0, r.k6)(),
+          c = (0, r.TH)(),
+          l = (0, n.useMemo)(() => {
+            const t = a(c.search, e);
+            return i(t)
+              ? i(s)
+                ? "boolean" == typeof s
+                  ? s.constructor("false" !== t)
+                  : s.constructor(t)
+                : t
+              : s;
+          }, [c.search, e, s]),
           u = (0, n.useCallback)(
-            (t) => {
-              o(s, e, i(t) ? String(t) : null);
+            (s) => {
+              o(t, e, i(s) ? String(s) : null);
             },
-            [s, e],
+            [t, e],
           );
-        return [c, u];
+        return [l, u];
       }
-      function u(e, t, s = !1) {
+      function u(e, s, t = !1) {
         const n = new URLSearchParams(e.location.search.substring(1));
-        for (const e in t)
-          if (t.hasOwnProperty(e)) {
-            const s = t[e];
-            n.delete(e), i(s) && n.append(e, s);
+        for (const e in s)
+          if (s.hasOwnProperty(e)) {
+            const t = s[e];
+            n.delete(e), i(t) && n.append(e, t);
           }
-        s
+        t
           ? e.replace(`?${n.toString()}`, { ...e.location.state })
           : e.push(`?${n.toString()}`);
       }
-      function d(e, t) {
-        u(e, t, !0);
+      function j(e, s) {
+        u(e, s, !0);
       }
     },
-    29480: (e, t, s) => {
+    29480: (e, s, t) => {
       "use strict";
-      s.d(t, { T: () => i });
-      var n = s(80751),
-        r = s.n(n),
-        a = s(47427);
+      t.d(s, { T: () => i });
+      var n = t(80751),
+        r = t.n(n),
+        a = t(47427);
       function i(e) {
-        const t = a.useRef(r().CancelToken.source());
+        const s = a.useRef(r().CancelToken.source());
         return (
           a.useEffect(() => {
-            const s = t.current;
-            return () => s.cancel(e ? `${e}: unmounting` : "unmounting");
+            const t = s.current;
+            return () => t.cancel(e ? `${e}: unmounting` : "unmounting");
           }, [e]),
-          t.current
+          s.current
         );
       }
     },
-    86445: (e, t, s) => {
+    86445: (e, s, t) => {
       "use strict";
-      s.r(t), s.d(t, { default: () => p });
-      var n = s(47427),
-        r = s(13043),
-        a = s(91618),
-        i = s(41130),
-        o = s(74840),
-        l = s(80886),
-        c = s(71472),
-        u = s(62613),
-        d = s(3613),
-        j = s(40735),
-        m = s(31846),
-        g = s(54423),
-        h = s.n(g),
-        v = s(37563);
-      function p(e) {
-        const { appID: t } = e,
-          s = (0, j.g)(),
-          [g] = (0, c.Ar)("inqueue", "0"),
-          [p, b] = (0, n.useState)(!1),
-          [D, E] = (0, n.useState)(!1),
-          [f] = (0, l.vs)(t, { include_assets: !0 }),
-          w = (0, i.L)(),
-          y = n.useRef();
-        n.useEffect(() => y.current?.Activate(!0), []);
-        const k = (0, v.id)(),
-          { eStoreDiscoveryQueueType: A, storePageFilter: S } =
+      t.r(s), t.d(s, { default: () => b });
+      var n = t(47427),
+        r = t(13043),
+        a = t(91618),
+        i = t(41130),
+        o = t(74840),
+        c = t(80886),
+        l = t(71472),
+        u = t(62613),
+        j = t(2704),
+        d = t(40735),
+        m = t(31846),
+        g = t(54423),
+        h = t.n(g),
+        v = t(37563);
+      function b(e) {
+        const { appID: s } = e,
+          t = (0, d.g)(),
+          [g] = (0, l.Ar)("inqueue", "0"),
+          [b, D] = (0, n.useState)(!1),
+          [p, E] = (0, n.useState)(!1),
+          [f] = (0, c.vs)(s, { include_assets: !0 }),
+          k = (0, i.L)(),
+          A = n.useRef();
+        n.useEffect(() => A.current?.Activate(!0), []);
+        const w = (0, v.id)(),
+          { eStoreDiscoveryQueueType: y, storePageFilter: N } =
             n.useMemo(() => {
               if (g?.length > 0) {
                 const e = g.split("_"),
-                  t = Number(e[0]);
-                let s;
+                  s = Number(e[0]);
+                let t;
                 return (
-                  e.length > 1 && (s = (0, o.M_)(e[1])),
-                  { eStoreDiscoveryQueueType: t, storePageFilter: s }
+                  e.length > 1 && (t = (0, o.M_)(e[1])),
+                  { eStoreDiscoveryQueueType: s, storePageFilter: t }
                 );
               }
               return { eStoreDiscoveryQueueType: 0, storePageFilter: void 0 };
             }, [g]),
-          N = n.useCallback(() => {
+          R = n.useCallback(() => {
             E(!0);
           }, []),
-          _ = n.useCallback(() => {
-            b(!0);
+          z = n.useCallback(() => {
+            D(!0);
           }, []),
-          R = (0, o.ZP)(A, S);
-        return s && f
-          ? D
+          S = (0, o.ZP)(y, N);
+        return t && f
+          ? p
             ? null
             : n.createElement(
                 r.p,
                 {
-                  NavigationManager: w,
-                  navTreeRef: y,
+                  NavigationManager: k,
+                  navTreeRef: A,
                   navID: "DiscoveryQueueAppWidget",
                 },
                 n.createElement(
@@ -627,8 +566,8 @@
                   {
                     focusable: !0,
                     className: h().DiscoveryQueueWidgetCtn,
-                    onSecondaryButton: N,
-                    onOKButton: _,
+                    onSecondaryButton: R,
+                    onOKButton: z,
                     onOKActionDescription: (0, m.Xx)(
                       "#DiscoveryQueue_ResumeWizard",
                     ),
@@ -640,50 +579,50 @@
                   }),
                   n.createElement(
                     "div",
-                    { onClick: _, className: h().WidgetText },
+                    { onClick: z, className: h().WidgetText },
                     (0, m.Xx)("#DiscoveryQueue_ResumeWizard"),
-                    R?.length > 0 && ": " + R,
+                    S?.length > 0 && ": " + S,
                   ),
-                  !k &&
+                  !w &&
                     n.createElement(
                       "div",
-                      { className: h().CloseButton, onClick: N },
+                      { className: h().CloseButton, onClick: R },
                       n.createElement(u.X, null),
                     ),
-                  p &&
-                    n.createElement(d.MS, {
-                      includeAppID: t,
-                      bWizardVisible: p,
-                      fnCloseModal: () => b(!1),
-                      eStoreDiscoveryQueueType: A,
-                      storePageFilter: S,
+                  b &&
+                    n.createElement(j.MS, {
+                      includeAppID: s,
+                      bWizardVisible: b,
+                      fnCloseModal: () => D(!1),
+                      eStoreDiscoveryQueueType: y,
+                      storePageFilter: N,
                     }),
                 ),
               )
           : null;
       }
     },
-    78862: (e, t, s) => {
+    78862: (e, s, t) => {
       "use strict";
-      s.r(t), s.d(t, { default: () => d });
-      var n = s(47427),
-        r = s(31846),
-        a = s(3613),
-        i = s(40735),
-        o = s(91618),
-        l = s(37563),
-        c = s(27438),
-        u = s(90069);
-      function d(e) {
-        const t = (0, i.g)(),
-          [s, d] = (0, n.useState)(!1),
-          j = n.useCallback(() => {
-            l.L7.logged_in
-              ? d(!0)
+      t.r(s), t.d(s, { default: () => j });
+      var n = t(47427),
+        r = t(31846),
+        a = t(2704),
+        i = t(40735),
+        o = t(91618),
+        c = t(37563),
+        l = t(27438),
+        u = t(90069);
+      function j(e) {
+        const s = (0, i.g)(),
+          [t, j] = (0, n.useState)(!1),
+          d = n.useCallback(() => {
+            c.L7.logged_in
+              ? j(!0)
               : (0, u.AM)(
-                  n.createElement(c.JX, {
+                  n.createElement(l.JX, {
                     onOK: () => {
-                      window.location.href = `${l.De.STORE_BASE_URL}login?redir=${encodeURIComponent(document.location.href)}`;
+                      window.location.href = `${c.De.STORE_BASE_URL}login?redir=${encodeURIComponent(document.location.href)}`;
                     },
                     strOKButtonText: (0, r.Xx)(
                       "#DiscoveryQueue_Error_Login_Title",
@@ -694,19 +633,19 @@
                   window,
                 );
           }, []);
-        return t
+        return s
           ? n.createElement(
               o.s,
               null,
               n.createElement(
                 "a",
-                { onClick: j, className: "experiment-button" },
+                { onClick: d, className: "experiment-button" },
                 (0, r.Xx)("#DiscoveryQueue_OpenWizard"),
               ),
-              s &&
+              t &&
                 n.createElement(a.MS, {
-                  bWizardVisible: s,
-                  fnCloseModal: () => d(!1),
+                  bWizardVisible: t,
+                  fnCloseModal: () => j(!1),
                   eStoreDiscoveryQueueType: 0,
                 }),
             )
@@ -717,9 +656,9 @@
             );
       }
     },
-    89272: (e, t, s) => {
+    89272: (e, s, t) => {
       "use strict";
-      s.d(t, { Z: () => n });
+      t.d(s, { Z: () => n });
       const n =
         "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QUQ5NEMwOTYzRDc4MTFFQUExREZEODRBMDBCNjdENTEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QUQ5NEMwOTczRDc4MTFFQUExREZEODRBMDBCNjdENTEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBRDk0QzA5NDNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBRDk0QzA5NTNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Po/TXacAAABMSURBVHjaYvz//z8DNQHjyDMQDICGJgDx3f/kA5DeBJhh8f+pB+JBXr4DNFeZSp69CzLwP7UjZdTAkWAgVdMh1XMK1fPyCCwPAQIMAKf/Y+3dveJlAAAAAElFTkSuQmCC";
     },
