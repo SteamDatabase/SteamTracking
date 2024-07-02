@@ -12210,7 +12210,7 @@
     },
     92936: (e, t, a) => {
       "use strict";
-      a.d(t, { _U: () => Ee, YK: () => ge, AO: () => Se });
+      a.d(t, { _U: () => Ee, YK: () => ge, AO: () => ve });
       var n = a(27605),
         i = a(47427),
         r = a(35427),
@@ -13774,7 +13774,28 @@
         }
         return d;
       }
-      const Se = (0, n.Pi)((e) => {
+      function Se(e, t, a) {
+        const n = (function (e, t) {
+          if (
+            "items" === e.section_type &&
+            "personalized_carousel" == e.smart_section_type
+          ) {
+            const a = ce.Get().GetTagNameForSaleSection(e, t);
+            return a
+              ? (0, B.Xx)("#Sale_PersonalizedCarousel_Section_subtitle", a)
+              : null;
+          }
+          return null;
+        })(e, t);
+        if (null !== n) return n && n.startsWith("#") ? (0, B.Xx)(n) : n;
+        return (
+          B.LZ.GetWithFallback(e.localized_subtitle, a) ||
+          (e.default_subtitle && "#Sale_default_subtitle" !== e.default_subtitle
+            ? (0, B.Xx)(e.default_subtitle)
+            : "")
+        );
+      }
+      const ve = (0, n.Pi)((e) => {
         const {
             section: t,
             event: a,
@@ -13786,22 +13807,12 @@
           o = (0, me.SY)(),
           c = l || Ee(t, a, n, a.clanSteamID.GetAccountID(), o.eLocation);
         if (!c) return null;
-        const m =
-          s ||
-          (function (e, t) {
-            return (
-              B.LZ.GetWithFallback(e.localized_subtitle, t) ||
-              (e.default_subtitle &&
-              "#Sale_default_subtitle" !== e.default_subtitle
-                ? (0, B.Xx)(e.default_subtitle)
-                : "")
-            );
-          })(t, n);
+        const m = s || Se(t, a, n);
         let d = i.createElement(
             "div",
             {
               className: (0, O.Z)(ue().SaleSectionHeader, "SaleSectionHeader"),
-              style: ve(t, a, n),
+              style: De(t, a, n),
             },
             c,
           ),
@@ -13813,7 +13824,7 @@
                 ue().SaleSectionSubtitle,
                 "SaleSectionSubtitle",
               ),
-              style: De(t, a, n),
+              style: fe(t, a, n),
             },
             m,
           );
@@ -13871,9 +13882,9 @@
           ),
         );
       });
-      function ve(e, t, a) {
+      function De(e, t, a) {
         return {
-          fontFamily: fe(t.jsondata.sale_font, a),
+          fontFamily: ye(t.jsondata.sale_font, a),
           fontWeight: t.jsondata.sale_font_weight,
           fontSize: `${t.jsondata.sale_section_font_size}px`,
           textTransform: t.jsondata.sale_section_disable_capitalize
@@ -13882,9 +13893,9 @@
           color: e.label_color,
         };
       }
-      function De(e, t, a) {
+      function fe(e, t, a) {
         return {
-          fontFamily: fe(t.jsondata.sale_font, a),
+          fontFamily: ye(t.jsondata.sale_font, a),
           fontWeight: 300,
           fontSize: `${t.jsondata.sale_section_font_size && t.jsondata.sale_section_font_size - 3}px`,
           letterSpacing: 0,
@@ -13896,7 +13907,7 @@
           opacity: "50%",
         };
       }
-      function fe(e, t) {
+      function ye(e, t) {
         return (
           (e = e || ""),
           12 === t

@@ -10755,13 +10755,13 @@
     34535: (e, t, a) => {
       "use strict";
       a.d(t, {
-        AO: () => y,
-        F3: () => b,
-        Rj: () => w,
-        TD: () => C,
+        AO: () => C,
+        F3: () => D,
+        Rj: () => A,
+        TD: () => b,
         YK: () => v,
         _U: () => E,
-        iM: () => I,
+        iM: () => w,
       });
       var n = a(27605),
         r = a(47427),
@@ -10799,7 +10799,7 @@
                 return "#Sale_default_label_RecommendedForYou";
               case "personalized_carousel":
                 if (a) {
-                  const { nSectionIndex: a, nNumSections: n } = C(e, t);
+                  const { nSectionIndex: a, nNumSections: n } = b(e, t);
                   return (0, h.Xx)(
                     "#Sale_PersonalizedCarousel_Section_Editor_title",
                     a + 1,
@@ -10843,7 +10843,28 @@
         }
         return d;
       }
-      const y = (0, n.Pi)((e) => {
+      function y(e, t, a) {
+        const n = (function (e, t) {
+          if (
+            "items" === e.section_type &&
+            "personalized_carousel" == e.smart_section_type
+          ) {
+            const a = l.W.Get().GetTagNameForSaleSection(e, t);
+            return a
+              ? (0, h.Xx)("#Sale_PersonalizedCarousel_Section_subtitle", a)
+              : null;
+          }
+          return null;
+        })(e, t);
+        if (null !== n) return n && n.startsWith("#") ? (0, h.Xx)(n) : n;
+        return (
+          h.LZ.GetWithFallback(e.localized_subtitle, a) ||
+          (e.default_subtitle && "#Sale_default_subtitle" !== e.default_subtitle
+            ? (0, h.Xx)(e.default_subtitle)
+            : "")
+        );
+      }
+      const C = (0, n.Pi)((e) => {
         const {
             section: t,
             event: a,
@@ -10855,26 +10876,16 @@
           l = (0, c.SY)(),
           m = o || E(t, a, n, a.clanSteamID.GetAccountID(), l.eLocation);
         if (!m) return null;
-        const v =
-          i ||
-          (function (e, t) {
-            return (
-              h.LZ.GetWithFallback(e.localized_subtitle, t) ||
-              (e.default_subtitle &&
-              "#Sale_default_subtitle" !== e.default_subtitle
-                ? (0, h.Xx)(e.default_subtitle)
-                : "")
-            );
-          })(t, n);
-        let y = r.createElement(
+        const v = i || y(t, a, n);
+        let C = r.createElement(
             "div",
             {
               className: (0, g.Z)(u().SaleSectionHeader, "SaleSectionHeader"),
-              style: b(t, a, n),
+              style: D(t, a, n),
             },
             m,
           ),
-          C = r.createElement(
+          b = r.createElement(
             "div",
             {
               className: (0, g.Z)(
@@ -10882,19 +10893,19 @@
                 u().SaleSectionSubtitle,
                 "SaleSectionSubtitle",
               ),
-              style: D(t, a, n),
+              style: I(t, a, n),
             },
             v,
           );
-        const I = e.link || t.label_link;
-        let w = null;
+        const w = e.link || t.label_link;
+        let A = null;
         if (
-          I &&
-          ((y = r.createElement(_.K, { url: I }, y)),
+          w &&
+          ((C = r.createElement(_.K, { url: w }, C)),
           "browseall" === t.label_link_style)
         ) {
           const e = (0, h.Xx)("#Sale_SectionLink_BrowseAll");
-          w = r.createElement(
+          A = r.createElement(
             _.K,
             {
               className: (0, g.Z)(
@@ -10912,8 +10923,8 @@
           r.createElement(
             "div",
             { className: f.SectionTitleInnerCtn },
-            y,
-            Boolean(v) && C,
+            C,
+            Boolean(v) && b,
           ),
           r.createElement(
             "div",
@@ -10936,11 +10947,11 @@
                   ),
                 ),
               ),
-            w,
+            A,
           ),
         );
       });
-      function C(e, t) {
+      function b(e, t) {
         const a = t
           .GetSaleSections()
           .filter(
@@ -10952,9 +10963,9 @@
         const n = a.findIndex((t) => t.unique_id == e.unique_id);
         return { nNumSections: a.length, nSectionIndex: n };
       }
-      function b(e, t, a) {
+      function D(e, t, a) {
         return {
-          fontFamily: I(t.jsondata.sale_font, a),
+          fontFamily: w(t.jsondata.sale_font, a),
           fontWeight: t.jsondata.sale_font_weight,
           fontSize: `${t.jsondata.sale_section_font_size}px`,
           textTransform: t.jsondata.sale_section_disable_capitalize
@@ -10963,9 +10974,9 @@
           color: e.label_color,
         };
       }
-      function D(e, t, a) {
+      function I(e, t, a) {
         return {
-          fontFamily: I(t.jsondata.sale_font, a),
+          fontFamily: w(t.jsondata.sale_font, a),
           fontWeight: 300,
           fontSize: `${t.jsondata.sale_section_font_size && t.jsondata.sale_section_font_size - 3}px`,
           letterSpacing: 0,
@@ -10977,7 +10988,7 @@
           opacity: "50%",
         };
       }
-      function I(e, t) {
+      function w(e, t) {
         return (
           (e = e || ""),
           12 === t
@@ -11002,7 +11013,7 @@
                         : e
         );
       }
-      function w(e, t, a, n, r) {
+      function A(e, t, a, n, r) {
         const s = E(t, n, a, n.clanSteamID.GetAccountID(), e);
         if (s) return s;
         let o = (0, h.Xx)("#Sale_Section_Header", r + 1);

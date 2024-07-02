@@ -690,6 +690,7 @@
     "FamilyGame_Excluded_TimedTrial": "Timed trial games cannot be shared",
     "FamilyGame_Excluded_LicenseInactive": "This game's license is inactive",
     "FamilyGame_Excluded_Unknown": "This game is not available for Family Sharing",
+    "FamilyGame_Excluded_PrivateLicense": "This game is in a package with a game you marked as Private",
     "FamilyGame_PlayGame": "Play Game",
     "FamilyGame_OpenAppDetails": "View in Library",
     "FamilyGame_ViewStore": "Go to Store Page",

@@ -10474,7 +10474,8 @@ License: MIT
           );
         };
       function Qn(e) {
-        const t = l.wk.GetEditModel();
+        const t = l.wk.GetEditModel(),
+          a = (0, Ea.SY)();
         return d.createElement(
           "div",
           { className: Gn.BottomBarControls },
@@ -10521,7 +10522,10 @@ License: MIT
                 {
                   onClick: (e) =>
                     (0, C.AM)(
-                      d.createElement(Yn, { editModel: t }),
+                      d.createElement(Yn, {
+                        editModel: t,
+                        partnerEventEditorContext: a,
+                      }),
                       (0, j.RA)(e),
                     ),
                 },
@@ -10547,63 +10551,67 @@ License: MIT
         );
       }
       function Yn(e) {
-        const { editModel: t, closeModal: a } = e,
-          n = (0, Qt.SZ)(() => t.GetSaleSections()),
-          [l, i] = d.useState(null);
-        d.useEffect(() => (i([...n]), () => i(null)), [n]);
-        const o = (0, G.id)(),
-          r = (0, Ea.vt)();
+        const { editModel: t, closeModal: a, partnerEventEditorContext: n } = e,
+          l = (0, Qt.SZ)(() => t.GetSaleSections()),
+          [i, o] = d.useState(null);
+        d.useEffect(() => (o([...l]), () => o(null)), [l]);
+        const r = (0, G.id)(),
+          s = (0, Ea.vt)();
         return d.createElement(
-          f.uH,
-          {
-            strTitle: (0, T.Xx)("#Sale_ReorderSections"),
-            onOK: () => {
-              (t.GetEventModel().jsondata.sale_sections = l),
-                t.SetDirty(H.jB.jsondata_sales),
-                i(null);
+          Ea.DF.Provider,
+          { value: n },
+          d.createElement(
+            f.uH,
+            {
+              strTitle: (0, T.Xx)("#Sale_ReorderSections"),
+              onOK: () => {
+                (t.GetEventModel().jsondata.sale_sections = i),
+                  t.SetDirty(H.jB.jsondata_sales),
+                  o(null);
+              },
+              onCancel: () => o(null),
+              closeModal: a,
             },
-            onCancel: () => i(null),
-            closeModal: a,
-          },
-          Boolean(l)
-            ? d.createElement(
-                "div",
-                { className: Gn.ReorderSectionCtn },
-                d.createElement(
+            Boolean(i)
+              ? d.createElement(
                   "div",
-                  { className: Gn.SectionList },
-                  d.createElement(ga.R, {
-                    items: l,
-                    onMove: (e, t) => {
-                      let a = [...l];
-                      (0, Nn.hV)(a, e, t), i(a);
-                    },
-                    render: (e) => {
-                      const a = t.GetSaleSections().findIndex((t) => e === t),
-                        n = {
-                          ...(0, va.OC)(e, t.GetEventModel(), o),
-                          color: e.label_color,
-                        };
-                      return d.createElement(
-                        "div",
-                        { className: Gn.SectionTitle, style: n },
-                        d.createElement(ha.GU, {
-                          saleSection: e,
-                          editLanguage: t.GetCurEditLanguage(),
-                          eventModel: t.GetEventModel(),
-                          index: a,
-                          inEditor: r,
-                        }),
-                      );
-                    },
-                  }),
-                ),
-              )
-            : d.createElement(y.V, {
-                string: (0, T.Xx)("#Loading"),
-                size: "medium",
-                position: "center",
-              }),
+                  { className: Gn.ReorderSectionCtn },
+                  d.createElement(
+                    "div",
+                    { className: Gn.SectionList },
+                    d.createElement(ga.R, {
+                      items: i,
+                      onMove: (e, t) => {
+                        let a = [...i];
+                        (0, Nn.hV)(a, e, t), o(a);
+                      },
+                      render: (e) => {
+                        const a = t.GetSaleSections().findIndex((t) => e === t),
+                          n = {
+                            ...(0, va.OC)(e, t.GetEventModel(), r),
+                            color: e.label_color,
+                          };
+                        return d.createElement(
+                          "div",
+                          { className: Gn.SectionTitle, style: n },
+                          d.createElement(ha.GU, {
+                            saleSection: e,
+                            editLanguage: t.GetCurEditLanguage(),
+                            eventModel: t.GetEventModel(),
+                            index: a,
+                            inEditor: s,
+                          }),
+                        );
+                      },
+                    }),
+                  ),
+                )
+              : d.createElement(y.V, {
+                  string: (0, T.Xx)("#Loading"),
+                  size: "medium",
+                  position: "center",
+                }),
+          ),
         );
       }
       const $n = d.lazy(() => a.e(3663).then(a.bind(a, 84357)));
