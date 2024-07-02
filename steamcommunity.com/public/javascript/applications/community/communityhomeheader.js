@@ -344,12 +344,12 @@
           o = n.useRef();
         n.useEffect(() => {
           const e = document.getElementById(t);
-          if (e && o?.current) {
+          if (e && (null == o ? void 0 : o.current)) {
             const t = e.offsetLeft + e.clientWidth;
             t > window.innerWidth &&
               o.current.scrollBy(t - window.innerWidth, 0);
           }
-        }, [o?.current]);
+        }, [null == o ? void 0 : o.current]);
         return n.createElement(
           f.s,
           { "flow-children": "row", className: i().TabContainer, ref: o },

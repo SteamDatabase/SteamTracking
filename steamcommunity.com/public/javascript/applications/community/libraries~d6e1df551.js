@@ -47,12 +47,11 @@
     },
     20787: (e, t, o) => {
       "use strict";
-      o.d(t, { Ec: () => c, lW: () => r, bU: () => l, AX: () => a });
+      o.d(t, { Ec: () => l, lW: () => r, bU: () => i, AX: () => a });
       class n {
-        type = 0;
-        text = "";
-        tag;
-        args;
+        constructor() {
+          (this.type = 0), (this.text = "");
+        }
         ConvertMalformedNodeToText() {
           3 == this.type
             ? (this.text = "[/" + this.text)
@@ -61,10 +60,10 @@
         }
       }
       class a {
-        m_fnAccumulatorFactory;
-        m_dictComponents = void 0;
         constructor(e, t) {
-          (this.m_dictComponents = e), (this.m_fnAccumulatorFactory = t);
+          (this.m_dictComponents = void 0),
+            (this.m_dictComponents = e),
+            (this.m_fnAccumulatorFactory = t);
         }
         Parse(e, t, o = !1) {
           const a = (function (e, t) {
@@ -72,23 +71,23 @@
             let a = new n(),
               r = !1,
               s = !1,
-              c = !1;
+              l = !1;
             for (let n = 0; n < e.length; n++) {
-              const l = e[n];
+              const i = e[n];
               switch (a.type) {
                 case 0:
-                  "[" == l
+                  "[" == i
                     ? ((a.type = 2), (s = !0))
-                    : ((a.type = 1), "\\" == l && t ? (r = !r) : (a.text += l));
+                    : ((a.type = 1), "\\" == i && t ? (r = !r) : (a.text += i));
                   break;
                 case 2:
                 case 3:
-                  if ("/" == l && s) (a.type = 3), (a.text = ""), (s = !1);
-                  else if ("[" != l || r)
-                    if ("]" != l || r)
-                      "\\" == l && t
-                        ? ((a.text += l), (r = !r), (s = !1))
-                        : ((a.text += l), (r = !1), (s = !1));
+                  if ("/" == i && s) (a.type = 3), (a.text = ""), (s = !1);
+                  else if ("[" != i || r)
+                    if ("]" != i || r)
+                      "\\" == i && t
+                        ? ((a.text += i), (r = !r), (s = !1))
+                        : ((a.text += i), (r = !1), (s = !1));
                     else {
                       const e =
                           2 == a.type &&
@@ -96,23 +95,23 @@
                         t =
                           3 == a.type &&
                           "noparse" == a.text.toLocaleLowerCase();
-                      s || (c && !t)
-                        ? (a.ConvertMalformedNodeToText(), (a.text += l))
+                      s || (l && !t)
+                        ? (a.ConvertMalformedNodeToText(), (a.text += i))
                         : e
-                          ? (c = !0)
-                          : t && (c = !1),
-                        (a = i(o, a)),
+                          ? (l = !0)
+                          : t && (l = !1),
+                        (a = c(o, a)),
                         (s = !1);
                     }
                   else
-                    a.ConvertMalformedNodeToText(), (a = i(o, a, 2)), (s = !0);
+                    a.ConvertMalformedNodeToText(), (a = c(o, a, 2)), (s = !0);
                   break;
                 case 1:
-                  "[" != l || r
-                    ? "\\" == l && t
-                      ? (r && (a.text += l), (r = !r))
-                      : ((a.text += l), (r = !1))
-                    : ((a = i(o, a, 2)), (s = !0));
+                  "[" != i || r
+                    ? "\\" == i && t
+                      ? (r && (a.text += i), (r = !r))
+                      : ((a.text += i), (r = !1))
+                    : ((a = c(o, a, 2)), (s = !0));
               }
             }
             0 != a.type &&
@@ -128,64 +127,78 @@
             a = () => (n.length < 1 ? void 0 : n[n.length - 1]),
             r = this.m_dictComponents;
           let s = !1,
-            c = !0;
-          const l = (e, a, l) => {
-            if (e && e.node.tag === a.text && r?.get(e.node.tag)) {
+            l = !0;
+          const i = (e, a, i) => {
+            if (
+              e &&
+              e.node.tag === a.text &&
+              (null == r ? void 0 : r.get(e.node.tag))
+            ) {
               const a = r.get(e.node.tag),
-                l = n.map((e) => e.node.tag),
-                i = { parentTags: l, tagname: e.node.tag, args: e.node.args },
-                p = t(a.Constructor, i, ...o.GetElements());
+                i = n.map((e) => e.node.tag),
+                c = { parentTags: i, tagname: e.node.tag, args: e.node.args },
+                d = t(a.Constructor, c, ...o.GetElements());
               (o = e.accumulator),
-                Array.isArray(p)
-                  ? p.forEach((e) => o.AppendNode(e))
-                  : o.AppendNode(p),
+                Array.isArray(d)
+                  ? d.forEach((e) => o.AppendNode(e))
+                  : o.AppendNode(d),
                 (s = !!a.skipFollowingNewline),
-                (c = e.bWrapTextForCopying);
+                (l = e.bWrapTextForCopying);
             } else if (e) {
               const t = e.accumulator;
               t.AppendText("[" + e.node.text + "]", !1),
                 o.GetElements().forEach((e) => t.AppendNode(e)),
                 t.AppendText("[/" + a.text + "]", !1),
                 (o = t),
-                (c = e.bWrapTextForCopying);
+                (l = e.bWrapTextForCopying);
             }
           };
           for (
             e.forEach((e, t) => {
+              var c, d, p;
               if (1 == e.type) {
                 const t = s ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
-                o.AppendText(t, c), (s = !1);
+                o.AppendText(t, l), (s = !1);
               } else if (2 == e.type) {
-                const t = r?.get(e.tag);
+                const t = null == r ? void 0 : r.get(e.tag);
                 if (t) {
-                  const i = a();
-                  if (void 0 !== i) {
-                    const t = r?.get(i.node.tag);
+                  const d = a();
+                  if (void 0 !== d) {
+                    const t = null == r ? void 0 : r.get(d.node.tag);
                     t &&
                       t.autocloses &&
-                      e.tag === i.node.tag &&
-                      l(n.pop(), i.node);
+                      e.tag === d.node.tag &&
+                      i(n.pop(), d.node);
                   }
-                  n.push({ accumulator: o, node: e, bWrapTextForCopying: c }),
+                  n.push({ accumulator: o, node: e, bWrapTextForCopying: l }),
                     (o = this.m_fnAccumulatorFactory(e)),
                     (s = !!t.skipInternalNewline),
-                    (c = t.allowWrapTextForCopying ?? !1);
+                    (l =
+                      null !== (c = t.allowWrapTextForCopying) &&
+                      void 0 !== c &&
+                      c);
                 } else o.AppendText("[" + e.text + "]", 0 == n.length);
               } else if (3 == e.type) {
                 for (
                   ;
                   a() &&
                   a().node.tag !== e.text &&
-                  r?.get(a().node.tag) &&
-                  r?.get(a().node.tag)?.autocloses;
+                  (null == r ? void 0 : r.get(a().node.tag)) &&
+                  (null === (d = null == r ? void 0 : r.get(a().node.tag)) ||
+                  void 0 === d
+                    ? void 0
+                    : d.autocloses);
 
                 ) {
                   const e = n.pop();
-                  l(e, e.node);
+                  i(e, e.node);
                 }
-                if (a()?.node.tag == e.text) {
+                if (
+                  (null === (p = a()) || void 0 === p ? void 0 : p.node.tag) ==
+                  e.text
+                ) {
                   const t = n.pop();
-                  l(t, e);
+                  i(t, e);
                 } else o.AppendText("[/" + e.text + "]", 0 == n.length);
               }
             });
@@ -203,7 +216,7 @@
       }
       function r(e, t) {
         let o = "[" + e;
-        t?.[""] && (o += `=${s(t[""])}`);
+        (null == t ? void 0 : t[""]) && (o += `=${s(t[""])}`);
         for (const e in t)
           "" !== e &&
             (o += ` ${((n = e), n.replace(/(\\| |\])/g, "\\$1"))}=${s(t[e])}`);
@@ -213,13 +226,13 @@
       function s(e) {
         return `"${e.replace(/(\\|"|\])/g, "\\$1")}"`;
       }
-      function c(e) {
+      function l(e) {
         return `[/${e}]`;
       }
-      function l(e) {
+      function i(e) {
         return e.replace(/(\\|\[)/g, "\\$1");
       }
-      function i(e, t, o = 0) {
+      function c(e, t, o = 0) {
         if (2 == t.type) {
           let e = t.text.indexOf("=");
           const o = t.text.indexOf(" ");
@@ -236,45 +249,45 @@
               "=" == e[0] && (a = 2);
               let s = !1;
               for (r++; r < e.length; r++) {
-                const c = e[r];
-                let l = !0,
-                  i = !1;
+                const l = e[r];
+                let i = !0,
+                  c = !1;
                 switch (a) {
                   case 0:
-                    if ("=" == c) return {};
-                    if (" " == c) continue;
+                    if ("=" == l) return {};
+                    if (" " == l) continue;
                     a = 1;
                     break;
                   case 1:
-                    ("=" != c && " " != c) ||
+                    ("=" != l && " " != l) ||
                       s ||
-                      (" " == c ? ((a = 0), (i = !0)) : (a = 2), (l = !1));
+                      (" " == l ? ((a = 0), (c = !0)) : (a = 2), (i = !1));
                     break;
                   case 2:
-                    " " == c
-                      ? ((a = 0), (l = !1), (i = !0))
-                      : '"' == c
-                        ? ((a = 4), (l = !1))
+                    " " == l
+                      ? ((a = 0), (i = !1), (c = !0))
+                      : '"' == l
+                        ? ((a = 4), (i = !1))
                         : (a = 3);
                     break;
                   case 3:
                   case 4:
-                    ((" " == c && 4 != a && !s) ||
-                      ('"' == c && 4 == a && !s)) &&
-                      ((a = 0), (l = !1), (i = !0));
+                    ((" " == l && 4 != a && !s) ||
+                      ('"' == l && 4 == a && !s)) &&
+                      ((a = 0), (i = !1), (c = !0));
                 }
-                if (l)
-                  if ("\\" != c || s)
-                    if (((s = !1), 1 == a)) o += c;
+                if (i)
+                  if ("\\" != l || s)
+                    if (((s = !1), 1 == a)) o += l;
                     else {
                       if (3 != a && 4 != a)
                         throw new Error(
                           "Not expecting to accumulate buffer in state " + a,
                         );
-                      n += c;
+                      n += l;
                     }
                   else s = !0;
-                i && ((t[o] = n), (o = ""), (n = ""));
+                c && ((t[o] = n), (o = ""), (n = ""));
               }
               0 != a && (t[o] = n);
               return t;

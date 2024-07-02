@@ -670,11 +670,11 @@
         c = n(37563);
       class u {
         constructor() {
-          (0, s.rC)(this);
+          (this.bOpenEventLandingPage = !1),
+            (this.bIncludeFeaturedAsGameSource = !0),
+            (this.nOverrideDateNow = void 0),
+            (0, s.rC)(this);
         }
-        bOpenEventLandingPage = !1;
-        bIncludeFeaturedAsGameSource = !0;
-        nOverrideDateNow = void 0;
         get bRequireAllEventsLoadedInTimeBlock() {
           return !1;
         }
@@ -747,7 +747,8 @@
         return d.nOverrideDateNow ? d.nOverrideDateNow + (e - p) : e;
       }
       function E() {
-        return d.nOverrideDateNow ?? p;
+        var e;
+        return null !== (e = d.nOverrideDateNow) && void 0 !== e ? e : p;
       }
       function f() {
         return o.useMemo(() => E(), []);
@@ -1172,7 +1173,7 @@
               d = u && s.getDate() == a.getDate(),
               h = {
                 day: "numeric",
-                month: n ?? "long",
+                month: null != n ? n : "long",
                 year: o ? void 0 : "numeric",
               },
               p = s.toLocaleDateString(i.Yt.GetPreferredLocales(), h);
@@ -1180,7 +1181,7 @@
             {
               const e = {
                 day: "numeric",
-                month: u && l ? void 0 : n ?? "long",
+                month: u && l ? void 0 : null != n ? n : "long",
                 year: c ? void 0 : "numeric",
               };
               return (

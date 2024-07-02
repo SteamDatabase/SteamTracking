@@ -49,10 +49,13 @@
         b = n(31846),
         G = n(54842);
       let f = class extends o.Component {
-        state = {
-          bShowModal: !1,
-          bLoadedLandingState: this.props.bPreventDismiss,
-        };
+        constructor() {
+          super(...arguments),
+            (this.state = {
+              bShowModal: !1,
+              bLoadedLandingState: this.props.bPreventDismiss,
+            });
+        }
         componentDidMount() {
           this.props.bPreventDismiss
             ? this.LoadAppAndFirstEvent()
@@ -61,37 +64,41 @@
               });
         }
         async LoadAppAndFirstEvent() {
-          const e = (0, E.kQ)(
+          var e;
+          const t = (0, E.kQ)(
             "eventinfinitescrolllanding",
             "application_config",
           );
-          let t;
-          e && "string" == typeof e && (t = e);
-          const n = window.location.href.startsWith(
+          let n;
+          t && "string" == typeof t && (n = t);
+          const a = window.location.href.startsWith(
               E.De.COMMUNITY_BASE_URL + "groups",
             ),
-            a = n
+            o = a
               ? await D.sV.LoadOGGClanInfoForGroupVanity(
                   this.props.match.params.appid_or_vanity_str,
                 )
               : await D.sV.LoadOGGClanInfoForIdentifier(
                   this.props.match.params.appid_or_vanity_str,
                 );
-          if ((console.log("output: ", (0, G.ZN)(a), n), a))
-            if (a.partner_events_enabled) {
-              const e = await p.j1.LoadAdjacentPartnerEventsByAnnouncement(
-                t,
-                a.clanSteamID,
-                a.appid,
+          if ((console.log("output: ", (0, G.ZN)(o), a), o))
+            if (o.partner_events_enabled) {
+              const t = await p.j1.LoadAdjacentPartnerEventsByAnnouncement(
+                n,
+                o.clanSteamID,
+                o.appid,
                 3,
                 3,
               );
               this.setState({
                 bLoadedLandingState: !1,
                 bShowModal: !0,
-                appid: a.appid,
-                clanSteamID: a.clanSteamID,
-                announcementGID: e?.[0]?.AnnouncementGID,
+                appid: o.appid,
+                clanSteamID: o.clanSteamID,
+                announcementGID:
+                  null === (e = null == t ? void 0 : t[0]) || void 0 === e
+                    ? void 0
+                    : e.AnnouncementGID,
               });
             } else this.setState({ bLoadedLandingState: !1 });
           else
@@ -132,17 +139,16 @@
         B = n(62613),
         y = n(92242);
       class U extends o.Component {
-        static contextType = E.E_;
-        state = {
-          events: null,
-          bShowModal: !1,
-          modalInitialEvent: null,
-          bPreLoaded: !1,
-          announcementGIDList: [],
-          last_update_event: null,
-        };
         constructor(e) {
-          super(e);
+          super(e),
+            (this.state = {
+              events: null,
+              bShowModal: !1,
+              modalInitialEvent: null,
+              bPreLoaded: !1,
+              announcementGIDList: [],
+              last_update_event: null,
+            });
           const t = (0, M.b)("EventWebRowEmbed");
           this.ValidateStoreDefault(t) &&
             ((this.state.bPreLoaded = t.bPreLoaded),
@@ -222,42 +228,53 @@
           this.setState({ bShowModal: !1, modalInitialEvent: null });
         }
         BHasLastUpdateEvent() {
-          return Boolean(this.state.last_update_event?.rtime);
+          var e;
+          return Boolean(
+            null === (e = this.state.last_update_event) || void 0 === e
+              ? void 0
+              : e.rtime,
+          );
         }
         BShouldShowLastUpdateEvent() {
           const { last_update_event: e, events: t } = this.state;
           return (
-            !(!this.BHasLastUpdateEvent() || !e?.announcement_gid) && !t?.length
+            !(
+              !this.BHasLastUpdateEvent() ||
+              !(null == e ? void 0 : e.announcement_gid)
+            ) && !(null == t ? void 0 : t.length)
           );
         }
         render() {
-          const e = this.state.events;
-          if (!e)
+          var e, t, n;
+          const a = this.state.events;
+          if (!a)
             return o.createElement(
               "div",
               { className: h().FlexCenter },
               o.createElement(L.V, { size: "medium", position: "center" }),
             );
-          const t = window.screen.width <= 500 ? 1 : 2,
-            n = Boolean(e?.length),
-            a = this.BHasLastUpdateEvent(),
-            s = this.BShouldShowLastUpdateEvent()
+          const s = window.screen.width <= 500 ? 1 : 2,
+            i = Boolean(null == a ? void 0 : a.length),
+            r = this.BHasLastUpdateEvent(),
+            l = this.BShouldShowLastUpdateEvent()
               ? this.state.last_update_event.announcement_gid
               : void 0,
-            { strClassName: i } = this.props;
+            { strClassName: c } = this.props;
           return o.createElement(
             k.Ks,
-            { className: i },
+            { className: c },
             this.state.bShowModal &&
               o.createElement(P, {
                 ...this.props,
                 announcementGID:
                   this.state.announcementGID ||
-                  this.state.modalInitialEvent?.AnnouncementGID,
+                  (null === (e = this.state.modalInitialEvent) || void 0 === e
+                    ? void 0
+                    : e.AnnouncementGID),
                 eventModel: this.state.modalInitialEvent,
                 closeModal: this.CloseModal,
               }),
-            n &&
+            i &&
               o.createElement(
                 "div",
                 null,
@@ -266,7 +283,9 @@
                   null,
                   (0, b.Xx)("#EventBrowse_RecentEvents"),
                 ),
-                !this.context?.IN_GAMEPADUI &&
+                !(null === (t = this.context) || void 0 === t
+                  ? void 0
+                  : t.IN_GAMEPADUI) &&
                   o.createElement(
                     "div",
                     { className: y.SectionButtonCtn },
@@ -275,14 +294,14 @@
                           k.Ks,
                           {
                             className: y.SectionButton,
-                            onClick: () => this.ShowModal(e[0]),
+                            onClick: () => this.ShowModal(a[0]),
                           },
                           (0, b.Xx)("#EventBrowse_MoreEventsBtn"),
                         )
                       : o.createElement(
                           m.JW,
                           {
-                            eventModel: e[0],
+                            eventModel: a[0],
                             route: m.Ue.k_eViewWebSiteHub,
                             className: y.SectionButton,
                           },
@@ -292,28 +311,34 @@
                 o.createElement(
                   "div",
                   { className: y.EventsSummariesCtn },
-                  e.slice(0, t).map((t) => {
-                    const n =
-                      1 === e.length && window.screen.width > 500 ? A.KE : A.T4;
-                    return o.createElement(n, {
-                      key: t.GID,
-                      event: t,
-                      onClick: (e) => {
-                        this.ShowModal(t),
-                          e.stopPropagation(),
-                          e.preventDefault();
+                  a.slice(0, s).map((e) => {
+                    const t =
+                      1 === a.length && window.screen.width > 500 ? A.KE : A.T4;
+                    return o.createElement(t, {
+                      key: e.GID,
+                      event: e,
+                      onClick: (t) => {
+                        this.ShowModal(e),
+                          t.stopPropagation(),
+                          t.preventDefault();
                       },
                     });
                   }),
                 ),
               ),
-            Boolean(a && s) &&
+            Boolean(r && l) &&
               o.createElement(x, {
                 nUpdateTime: this.state.last_update_event.rtime,
-                announcementGID: s,
+                announcementGID: l,
                 onClick: this.ShowLatestUpdateModal,
               }),
-            Boolean(a && !s && !this.context?.IN_GAMEPADUI) &&
+            Boolean(
+              r &&
+                !l &&
+                !(null === (n = this.context) || void 0 === n
+                  ? void 0
+                  : n.IN_GAMEPADUI),
+            ) &&
               o.createElement(N, {
                 nUpdateTime: this.state.last_update_event.rtime,
                 onClick: this.ShowLatestUpdateModal,
@@ -365,7 +390,7 @@
         const { nUpdateTime: t, announcementGID: n, onClick: a } = e,
           s = n ? p.j1.GetClanEventFromAnnouncementGID(n) : null,
           i = (e) => {
-            a?.(), e.stopPropagation(), e.preventDefault();
+            null == a || a(), e.stopPropagation(), e.preventDefault();
           };
         return o.createElement(
           "div",
@@ -396,7 +421,8 @@
             ),
         );
       }
-      (0, _.gn)([I.ak], U.prototype, "ShowModal", null),
+      (U.contextType = E.E_),
+        (0, _.gn)([I.ak], U.prototype, "ShowModal", null),
         (0, _.gn)([I.ak], U.prototype, "ShowLatestUpdateModal", null),
         (0, _.gn)([I.ak], U.prototype, "CloseModal", null);
       var W = n(74257),

@@ -39,26 +39,26 @@
         r = n(47427),
         s = n(53923),
         l = n(75683),
-        c = n(40057),
-        a = n(95315),
+        a = n(40057),
+        c = n(95315),
         m = n(85082),
         u = n(58538),
         d = n(62613),
         f = n(13129),
         _ = n(31846),
-        p = n(65255),
-        N = n(10162),
-        h = n(88234),
-        E = n.n(h),
-        v = n(76742),
+        v = n(65255),
+        p = n(10162),
+        N = n(88234),
+        h = n.n(N),
+        E = n(76742),
         y = n(44500);
       const g = new m.tL(),
-        b = (0, N.AP)(function (e) {
+        b = (0, p.AP)(function (e) {
           const { bResponsiveHeader: t, notifications: n } = e;
           r.useEffect(() => {
             n && !g.m_bLoaded && g.ProcessNewNotificationPayload(n);
           }, [n]);
-          const o = (0, c.bY)();
+          const o = (0, a.bY)();
           (0, r.useEffect)(() => {
             g.setTransport(o),
               (window.RefreshSteamNotifications = () =>
@@ -67,8 +67,8 @@
                   try {
                     t = await (0, m.gQ)(
                       e,
-                      p.L7.steamid,
-                      (0, i.jM)(p.De.LANGUAGE),
+                      v.L7.steamid,
+                      (0, i.jM)(v.De.LANGUAGE),
                       void 0,
                       !1,
                       !1,
@@ -100,7 +100,7 @@
           t = (0, s.M)(),
           { data: n } = (0, l.X1)(t),
           i = (0, l.T8)(),
-          o = n?.settings;
+          o = null == n ? void 0 : n.settings;
         return e.notifications.filter(
           (e) => !(0, m.pH)(e.type, o, i) && !(0, m.sA)(e.item),
         );
@@ -109,10 +109,10 @@
         const { nTotalUnviewed: t } = e,
           n = r.useRef(null),
           i = L(),
-          [o, s] = r.useState(E().AnimateBell);
+          [o, s] = r.useState(h().AnimateBell);
         r.useEffect(() => {
           n.current ||
-            ((n.current = (0, a.yV)(
+            ((n.current = (0, c.yV)(
               r.createElement(U, { popupRef: n }),
               document.getElementById("green_envelope_menu_root"),
               {
@@ -128,7 +128,10 @@
         }, []);
         const l = r.useCallback(
           (e) => {
-            !e && n.current?.visible && n.current.Hide();
+            var t;
+            !e &&
+              (null === (t = n.current) || void 0 === t ? void 0 : t.visible) &&
+              n.current.Hide();
           },
           [n],
         );
@@ -139,46 +142,67 @@
             "div",
             {
               onClick: () => {
-                if (!n.current?.visible) {
-                  n.current?.Show();
+                var e, t;
+                if (
+                  !(null === (e = n.current) || void 0 === e
+                    ? void 0
+                    : e.visible)
+                ) {
+                  null === (t = n.current) || void 0 === t || t.Show();
                   -1 != i.findIndex((e) => !e.item.viewed) &&
                     g.MarkAllItemsViewed();
                 }
               },
               id: "green_envelope_menu_root",
               className: (0, f.Z)(
-                E().NotificationsButton,
-                t ? E().Green : E().Grey,
+                h().NotificationsButton,
+                t ? h().Green : h().Grey,
                 o,
               ),
             },
-            r.createElement(u.Tx5, { className: E().SVGNotifications }),
+            r.createElement(u.Tx5, { className: h().SVGNotifications }),
           ),
         );
       }
       const U = (e) => {
-          const { popupRef: t } = e,
-            n = r.useRef(null),
-            [i, o] = r.useState(!1);
+          var t;
+          const { popupRef: n } = e,
+            i = r.useRef(null),
+            [o, s] = r.useState(!1);
           r.useEffect(() => {
-            o(
-              null != n.current &&
-                n.current?.scrollHeight > n.current?.clientHeight,
+            var e, t;
+            s(
+              null != i.current &&
+                (null === (e = i.current) || void 0 === e
+                  ? void 0
+                  : e.scrollHeight) >
+                  (null === (t = i.current) || void 0 === t
+                    ? void 0
+                    : t.clientHeight),
             );
-          }, [n.current?.scrollHeight, i]);
-          const s = i ? void 0 : E().MenuScrollbarHidden;
+          }, [
+            null === (t = i.current) || void 0 === t ? void 0 : t.scrollHeight,
+            o,
+          ]);
+          const l = o ? void 0 : h().MenuScrollbarHidden;
           return r.createElement(
             "div",
             {
-              className: E().NotificationsMenu,
-              onClick: () => t?.current?.Hide(),
+              className: h().NotificationsMenu,
+              onClick: () => {
+                var e;
+                return null === (e = null == n ? void 0 : n.current) ||
+                  void 0 === e
+                  ? void 0
+                  : e.Hide();
+              },
             },
             r.createElement(B, null),
             r.createElement(
               "div",
               {
-                className: (0, f.Z)(E().NotificationsMenuScrollable, s),
-                ref: n,
+                className: (0, f.Z)(h().NotificationsMenuScrollable, l),
+                ref: i,
               },
               r.createElement(S, null),
               r.createElement(I, null),
@@ -187,13 +211,13 @@
           );
         },
         B = () => {
-          const e = `${p.De.COMMUNITY_BASE_URL}profiles/${p.L7.steamid}/notifications`;
+          const e = `${v.De.COMMUNITY_BASE_URL}profiles/${v.L7.steamid}/notifications`;
           return r.createElement(
             "div",
-            { className: (0, f.Z)(E().NotificationHeader) },
+            { className: (0, f.Z)(h().NotificationHeader) },
             r.createElement(
               "div",
-              { className: E().AllNotificationsTitle },
+              { className: h().AllNotificationsTitle },
               (0, _.Xx)("#NotificationsMenu_Title"),
             ),
             r.createElement(
@@ -201,20 +225,20 @@
               { href: e },
               r.createElement(
                 "div",
-                { className: E().AllNotificationsButton },
+                { className: h().AllNotificationsButton },
                 (0, _.Xx)("#NotificationsMenu_ViewAll"),
               ),
             ),
           );
         },
         w = () => {
-          const e = `${p.De.COMMUNITY_BASE_URL}profiles/${p.L7.steamid}/notifications`;
+          const e = `${v.De.COMMUNITY_BASE_URL}profiles/${v.L7.steamid}/notifications`;
           return r.createElement(
             "div",
             {
               className: (0, f.Z)(
-                E().NotificationHeader,
-                E().ResponsiveViewAll,
+                h().NotificationHeader,
+                h().ResponsiveViewAll,
               ),
             },
             r.createElement(
@@ -222,7 +246,7 @@
               { href: e },
               r.createElement(
                 "div",
-                { className: E().AllNotificationsButton },
+                { className: h().AllNotificationsButton },
                 (0, _.Xx)("#NotificationsMenu_ViewAll"),
               ),
             ),
@@ -241,9 +265,9 @@
           ? null
           : r.createElement(
               "div",
-              { className: E().NotificationsMenuEntriesContainer },
+              { className: h().NotificationsMenuEntriesContainer },
               e.map((e, t) =>
-                r.createElement(v.RW, {
+                r.createElement(E.RW, {
                   key: t,
                   rollup: e,
                   onNotificationClick: k,
@@ -256,7 +280,7 @@
       const A = [
         {
           fnUrl: () =>
-            `${p.De.COMMUNITY_BASE_URL}profiles/${p.L7.steamid}/inventory/#pending_gifts`,
+            `${v.De.COMMUNITY_BASE_URL}profiles/${v.L7.steamid}/inventory/#pending_gifts`,
           countItem: "pending_gifts",
           icon: d.ncs,
           strLocToken: "#Notification_NewGiftsPinned_Body",
@@ -264,7 +288,7 @@
         },
         {
           fnUrl: () =>
-            `${p.De.COMMUNITY_BASE_URL}profiles/${p.L7.steamid}/home/invites`,
+            `${v.De.COMMUNITY_BASE_URL}profiles/${v.L7.steamid}/home/invites`,
           countItem: "pending_invites",
           icon: d.yBp,
           strLocToken: "#Notification_FriendInvitePinned_Body",
@@ -272,7 +296,7 @@
         },
         {
           fnUrl: () =>
-            `${p.De.COMMUNITY_BASE_URL}profiles/${p.L7.steamid}/notifications#comments`,
+            `${v.De.COMMUNITY_BASE_URL}profiles/${v.L7.steamid}/notifications#comments`,
           countItem: "comments",
           icon: d.svY,
           strLocToken: "#Notification_NewCommentPinned_Body",
@@ -280,7 +304,7 @@
         },
         {
           fnUrl: () =>
-            `${p.De.COMMUNITY_BASE_URL}profiles/${p.L7.steamid}/inventory`,
+            `${v.De.COMMUNITY_BASE_URL}profiles/${v.L7.steamid}/inventory`,
           countItem: "inventory_items",
           icon: d.F8F,
           strLocToken: "#Notification_NewItemAnnouncementPinned_Body",
@@ -288,7 +312,7 @@
         },
         {
           fnUrl: () =>
-            `${p.De.COMMUNITY_BASE_URL}profiles/${p.L7.steamid}/tradeoffers`,
+            `${v.De.COMMUNITY_BASE_URL}profiles/${v.L7.steamid}/tradeoffers`,
           countItem: "trade_offers",
           icon: d.hoX,
           strLocToken: "#Notification_NewTradeOffersPinned_Body",
@@ -296,27 +320,27 @@
         },
         {
           fnUrl: () =>
-            `${p.De.COMMUNITY_BASE_URL}profiles/${p.L7.steamid}/gamenotifications`,
+            `${v.De.COMMUNITY_BASE_URL}profiles/${v.L7.steamid}/gamenotifications`,
           countItem: "async_game_updates",
           icon: d.ydL,
           strLocToken: "#Notification_NewAsyncGamePinned_Body",
         },
         {
-          fnUrl: () => `${p.De.COMMUNITY_BASE_URL}my/moderatormessages`,
+          fnUrl: () => `${v.De.COMMUNITY_BASE_URL}my/moderatormessages`,
           countItem: "moderator_messages",
           icon: u.dqu,
           strLocToken: "#Notification_NewModeratorMessagePinned_Body",
           feature: 2,
         },
         {
-          fnUrl: () => `${p.De.HELP_BASE_URL}wizard/HelpRequests`,
+          fnUrl: () => `${v.De.HELP_BASE_URL}wizard/HelpRequests`,
           countItem: "help_request_replies",
           icon: d.t6e,
           strLocToken: "#Notification_NewHelpRequestRepliesPinned_Body",
         },
         {
           fnUrl: () =>
-            `${p.De.STORE_BASE_URL}account/familymanagement/join?ft=${p.L7.steamid}`,
+            `${v.De.STORE_BASE_URL}account/familymanagement/join?ft=${v.L7.steamid}`,
           countItem: "family_invites",
           icon: d.ui7,
           strLocToken: "#Notification_FamilyInvitePinned_Body",
@@ -328,7 +352,7 @@
           r.Fragment,
           null,
           A.map((t) =>
-            r.createElement(v.sz, {
+            r.createElement(E.sz, {
               key: t.countItem,
               url: t.fnUrl(),
               count: e.summary[t.countItem],
@@ -342,15 +366,15 @@
       function C() {
         return r.createElement(
           "div",
-          { className: E().EmptyNotificationsCtn },
+          { className: h().EmptyNotificationsCtn },
           r.createElement(
             "div",
-            { className: E().EmptyNotificationsTitle },
+            { className: h().EmptyNotificationsTitle },
             (0, _.Xx)("#NotificationsList_EmptyTitle_New"),
           ),
           r.createElement(
             "div",
-            { className: E().EmptyNotificationsBody },
+            { className: h().EmptyNotificationsBody },
             (0, _.Xx)("#NotificationsList_EmptyBody"),
           ),
         );
@@ -365,13 +389,16 @@
         r = n(50423),
         s = n(20417);
       class l extends o.Component {
+        constructor() {
+          super(...arguments),
+            (this.m_observer = null),
+            (this.m_refElement = o.createRef()),
+            (this.m_elTracked = null),
+            (this.m_bPreviouslyIntersecting = !1);
+        }
         static GetScrollableClassname() {
           return "vt-scrollable";
         }
-        m_observer = null;
-        m_refElement = o.createRef();
-        m_elTracked = null;
-        m_bPreviouslyIntersecting = !1;
         BTriggerOnce() {
           return "once" == (this.props.trigger || "once");
         }

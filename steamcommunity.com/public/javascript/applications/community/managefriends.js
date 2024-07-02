@@ -28,48 +28,48 @@
         SendInviteButton: "_3Izq1wTe9iIDhovEOVfYji",
       };
     },
-    79896: (e, t, n) => {
+    79896: (e, t, s) => {
       "use strict";
-      n.d(t, { aX: () => I, gu: () => y });
-      var s = n(85556),
-        a = n(47427),
-        r = n(20417),
-        i = n(80751),
-        o = n.n(i),
-        c = n(1485),
-        l = n(31846),
-        d = n(13116),
-        m = n.n(d),
-        u = n(37563),
-        _ = n(35427),
-        p = n(50423),
-        h = n(54842),
-        g = n(48760),
-        v = n(62210);
-      n(16649);
+      s.d(t, { aX: () => I, gu: () => y });
+      var n = s(85556),
+        a = s(47427),
+        r = s(20417),
+        i = s(80751),
+        o = s.n(i),
+        c = s(1485),
+        l = s(31846),
+        d = s(13116),
+        m = s.n(d),
+        u = s(37563),
+        p = s(35427),
+        _ = s(50423),
+        h = s(54842),
+        g = s(48760),
+        v = s(62210);
+      s(16649);
       class f {
         constructor() {
-          (0, h.rC)(this);
+          (this.m_mapProfiles = new Map()),
+            (this.m_mapProfilesLoading = new Map()),
+            (0, h.rC)(this);
         }
-        m_mapProfiles = new Map();
-        m_mapProfilesLoading = new Map();
         async LoadProfiles(e, t) {
           (0, v.X)(
             e.length <= 500,
             "Check LoadProfiles, requesting too many steam IDs",
           );
-          let n = e.filter(
+          let s = e.filter(
             (e) =>
               !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e),
           );
-          if (0 == n.length) return this.m_mapProfilesLoading.get(e[0]);
-          let s = u.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
-            a = o().get(s, {
-              params: { steamids: n.join(",") },
+          if (0 == s.length) return this.m_mapProfilesLoading.get(e[0]);
+          let n = u.De.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
+            a = o().get(n, {
+              params: { steamids: s.join(",") },
               withCredentials: !0,
-              cancelToken: t?.token,
+              cancelToken: null == t ? void 0 : t.token,
             });
-          n.forEach((e) => this.m_mapProfilesLoading.set(e, a));
+          s.forEach((e) => this.m_mapProfilesLoading.set(e, a));
           let r = await a;
           r.data &&
             200 == r.status &&
@@ -87,7 +87,7 @@
         }
         GetProfileByAccountID(e) {
           return this.m_mapProfiles.get(
-            _.K.InitFromAccountID(e).ConvertTo64BitString(),
+            p.K.InitFromAccountID(e).ConvertTo64BitString(),
           );
         }
         GetProfileBySteamID(e) {
@@ -98,7 +98,7 @@
         }
         BHasProfileByAccountID(e) {
           return this.m_mapProfiles.has(
-            _.K.InitFromAccountID(e).ConvertTo64BitString(),
+            p.K.InitFromAccountID(e).ConvertTo64BitString(),
           );
         }
         BHasProfileBySteamID(e) {
@@ -118,17 +118,20 @@
           return t && t.persona_name ? t.persona_name : "";
         }
       }
-      (0, s.gn)([h.LO], f.prototype, "m_mapProfiles", void 0);
+      (0, n.gn)([h.LO], f.prototype, "m_mapProfiles", void 0);
       const C = new f();
-      var S = n(62613),
-        E = n(82493);
+      var S = s(62613),
+        E = s(82493);
       class y extends a.Component {
-        state = {
-          invite_token: "",
-          input_search: "",
-          friend_code_copied: !1,
-          invite_copied: !1,
-        };
+        constructor() {
+          super(...arguments),
+            (this.state = {
+              invite_token: "",
+              input_search: "",
+              friend_code_copied: !1,
+              invite_copied: !1,
+            });
+        }
         async componentDidMount() {
           const e = await o().get(
             u.De.COMMUNITY_BASE_URL + "invites/ajaxgetall",
@@ -162,7 +165,7 @@
             "invite" === e &&
               (this.setState({ invite_copied: !0 }),
               setTimeout(() => this.setState({ invite_copied: !1 }), 1e3)),
-            (0, p.Ei)(t);
+            (0, _.Ei)(t);
         }
         async OnAddFriend(e) {
           const t = new FormData();
@@ -332,20 +335,23 @@
           );
         }
       }
-      (0, s.gn)([r.ak], y.prototype, "OnCreateInviteLink", null),
-        (0, s.gn)([r.ak], y.prototype, "OnCopy", null),
-        (0, s.gn)([r.ak], y.prototype, "OnAddFriend", null),
-        (0, s.gn)([r.ak], y.prototype, "OnSearchChange", null),
-        (0, s.gn)([r.ak], y.prototype, "OnSearchKeyDown", null),
-        (0, s.gn)([r.ak], y.prototype, "OnSearchSubmit", null);
+      (0, n.gn)([r.ak], y.prototype, "OnCreateInviteLink", null),
+        (0, n.gn)([r.ak], y.prototype, "OnCopy", null),
+        (0, n.gn)([r.ak], y.prototype, "OnAddFriend", null),
+        (0, n.gn)([r.ak], y.prototype, "OnSearchChange", null),
+        (0, n.gn)([r.ak], y.prototype, "OnSearchKeyDown", null),
+        (0, n.gn)([r.ak], y.prototype, "OnSearchSubmit", null);
       class I extends a.Component {
-        state = {
-          input_friend_code: "",
-          disable_send_invite: !1,
-          searchResult: null,
-          invite_status: "pending",
-        };
-        m_currentRequest = 0;
+        constructor() {
+          super(...arguments),
+            (this.state = {
+              input_friend_code: "",
+              disable_send_invite: !1,
+              searchResult: null,
+              invite_status: "pending",
+            }),
+            (this.m_currentRequest = 0);
+        }
         async OnFriendCodeChange(e) {
           const t = e.target.value.split(",")[0];
           this.setState({ input_friend_code: t, invite_status: "pending" }),
@@ -357,16 +363,16 @@
         }
         async LoadProfile(e) {
           if (e) {
-            const t = _.K.InitFromAccountID(Number(e));
+            const t = p.K.InitFromAccountID(Number(e));
             await C.LoadProfiles([t.ConvertTo64BitString()]);
-            const n = C.GetProfile(t.ConvertTo64BitString());
-            n
+            const s = C.GetProfile(t.ConvertTo64BitString());
+            s
               ? this.setState({
-                  searchResult: n,
+                  searchResult: s,
                   disable_send_invite:
                     u.L7.is_limited ||
-                    (this.props.bDisableForFriends && n.is_friend) ||
-                    (this.props.bDisableForSelf && n.steamid === u.L7.steamid),
+                    (this.props.bDisableForFriends && s.is_friend) ||
+                    (this.props.bDisableForSelf && s.steamid === u.L7.steamid),
                 })
               : this.setState({ searchResult: null });
           } else this.setState({ searchResult: null });
@@ -421,14 +427,14 @@
           );
         }
       }
-      (0, s.gn)([r.ak], I.prototype, "OnFriendCodeChange", null),
-        (0, s.gn)([r.ak], I.prototype, "LoadProfile", null),
-        (0, s.gn)([r.ak], I.prototype, "OnActionClick", null);
+      (0, n.gn)([r.ak], I.prototype, "OnFriendCodeChange", null),
+        (0, n.gn)([r.ak], I.prototype, "LoadProfile", null),
+        (0, n.gn)([r.ak], I.prototype, "OnActionClick", null);
       const k = (e) => {
         const {
             searchResult: t,
-            invite_status: n,
-            bShowStatus: s,
+            invite_status: s,
+            bShowStatus: n,
             children: r,
           } = e,
           i = (0, u.id)();
@@ -512,15 +518,15 @@
                           ),
                     ),
                   ),
-                s &&
-                  "failure" === n &&
+                n &&
+                  "failure" === s &&
                   a.createElement(
                     "div",
                     { className: m().Failure },
                     (0, l.Xx)("#ManageFriends_InviteFailure"),
                   ),
-                s &&
-                  "success" === n &&
+                n &&
+                  "success" === s &&
                   a.createElement(
                     "div",
                     { className: m().Success },
@@ -531,12 +537,12 @@
           : null;
       };
     },
-    16649: (e, t, n) => {
+    16649: (e, t, s) => {
       "use strict";
-      n.d(t, { l: () => i });
-      var s = n(80751),
-        a = n.n(s),
-        r = n(79545);
+      s.d(t, { l: () => i });
+      var n = s(80751),
+        a = s.n(n),
+        r = s(79545);
       function i(e) {
         if (a().isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
@@ -607,13 +613,13 @@
           : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
       }
     },
-    16567: (e, t, n) => {
+    16567: (e, t, s) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => r });
-      var s = n(47427),
-        a = n(79896);
+      s.r(t), s.d(t, { default: () => r });
+      var n = s(47427),
+        a = s(79896);
       function r() {
-        return s.createElement(a.gu, null);
+        return n.createElement(a.gu, null);
       }
     },
   },

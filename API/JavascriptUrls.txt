@@ -389,7 +389,7 @@ ${COMMUNITY_URL}oauth/login?client_id=${CLIENT_ID}&response_type=token&state=fil
 ${HELP_BASE_URL}
 ${HELP_BASE_URL}${}/
 ${HELP_BASE_URL}en/ticketmaster/ticket/${help_requestid}
-${HELP_BASE_URL}en/wizard/HelpRequest/${}
+${HELP_BASE_URL}en/wizard/HelpRequest/${_ ? _ : _}
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=919
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=933
 ${HELP_BASE_URL}faqs/view/${k_strGRFAQ}
@@ -1251,6 +1251,7 @@ ${STORE_BASE_URL}api/${_ ? "addtowishlist" : "removefromwishlist"}
 ${STORE_BASE_URL}api/appdetails
 ${STORE_BASE_URL}api/appdetails?appids=${}&cc=${}&language=${LANGUAGE}&filters=basic,price_overview,developers,release_date,content_descriptors
 ${STORE_BASE_URL}api/appdetails?appids=${}&cc=${}&language=${LANGUAGE}&filters=basic,price_overview,developers,screenshots,movies,release_date,content_descriptors&client=${IN_CLIENT}&origin=${}
+${STORE_BASE_URL}app/${_ ? _ : _}
 ${STORE_BASE_URL}app/${appid}
 ${STORE_BASE_URL}app/${appid}/#app_reviews_hash
 ${STORE_BASE_URL}app/${id}
@@ -1800,7 +1801,7 @@ ${imgUrl}
 ${input_artwork_url}${}
 ${internal_asset_url}${}
 ${internal_wiki_url}${}
-${last_revealed_footer_img_url}${}
+${last_revealed_footer_img_url}${_ ? _ : _}
 ${linkURL}${id}${ownerAppend}/?${linkAppend}
 ${linkURL}${nextid}${prevAppend}/?${linkAppend}
 ${linkURL}${previd}${nextAppend}/?${linkAppend}
@@ -1830,7 +1831,7 @@ ${m_strBaseURL}userecoverycode/
 ${m_strRSSFeedURL}${}
 ${m_strRedirectURL}
 ${m_strWebAPIBaseURL}I${}Service/${}/v${}
-${mp4_url}${}
+${mp4_url}${_ ? _ : _}
 ${override_url}${}
 ${page_url}${m_sCurrentPage}
 ${page_url}?activetab=${id}
@@ -1882,7 +1883,7 @@ ${url}?filter=${filter}
 ${url}overview
 ${url}post/${steamidOwner}/${gidFeature}
 ${url}symbolicate
-${webm_url}${}
+${webm_url}${_ ? _ : _}
 ${wiki_doc_url}${}
 ${wizard_url}
 ${wizard_url}Home

@@ -13,12 +13,11 @@
         p = n(22520),
         r = n(37563);
       class c {
-        m_nLastUpdated = 0;
-        m_mapLanguages = s.LO.map();
-        m_appid;
-        m_fetching = null;
         constructor(e) {
-          this.m_appid = e;
+          (this.m_nLastUpdated = 0),
+            (this.m_mapLanguages = s.LO.map()),
+            (this.m_fetching = null),
+            (this.m_appid = e);
         }
         GetAppID() {
           return this.m_appid;
@@ -111,17 +110,14 @@
         u = n(62210),
         g = n(45492);
       class d {
-        m_CMInterface;
-        m_mapAppInfo = s.LO.map();
-        m_mapRichPresenceLoc = s.LO.map();
-        m_cAppInfoRequestsInFlight = 0;
-        m_setPendingAppInfo = new Set();
-        m_PendingAppInfoPromise;
-        m_PendingAppInfoResolve;
-        m_CacheStorage = null;
-        m_fnCallbackOnAppInfoLoaded = new g.pB();
         constructor() {
-          (0, s.rC)(this);
+          (this.m_mapAppInfo = s.LO.map()),
+            (this.m_mapRichPresenceLoc = s.LO.map()),
+            (this.m_cAppInfoRequestsInFlight = 0),
+            (this.m_setPendingAppInfo = new Set()),
+            (this.m_CacheStorage = null),
+            (this.m_fnCallbackOnAppInfoLoaded = new g.pB()),
+            (0, s.rC)(this);
         }
         Init(e) {
           this.m_CMInterface = e;
@@ -180,21 +176,24 @@
             (this.m_PendingAppInfoResolve = void 0),
             this.m_setPendingAppInfo.clear(),
             await this.LoadAppInfoBatch(t),
-            e?.();
+            null == e || e();
         }
         async LoadAppInfoBatch(e) {
+          var t;
           this.m_cAppInfoRequestsInFlight++;
-          let t = await this.LoadAppInfoBatchFromLocalCache(e);
-          if (t.length) {
-            console.log("Loading batch of App Info from Steam: ", t),
-              await this.m_CMInterface?.WaitUntilLoggedOn();
+          let n = await this.LoadAppInfoBatchFromLocalCache(e);
+          if (n.length) {
+            console.log("Loading batch of App Info from Steam: ", n),
+              await (null === (t = this.m_CMInterface) || void 0 === t
+                ? void 0
+                : t.WaitUntilLoggedOn());
             let e = a.gA.Init(f.Fi);
             e.Body().set_language((0, i.jM)(r.De.LANGUAGE));
-            const n = 50;
-            for (; t.length > 0; ) {
-              const o = Math.min(n, t.length),
-                s = t.slice(0, o);
-              (t = t.slice(o)), e.Body().set_appids(s);
+            const o = 50;
+            for (; n.length > 0; ) {
+              const t = Math.min(o, n.length),
+                s = n.slice(0, t);
+              (n = n.slice(t)), e.Body().set_appids(s);
               const i = await f.AE.GetApps(
                 this.m_CMInterface.GetServiceTransport(),
                 e,
@@ -263,26 +262,28 @@
           console.log("Loading batch of App Info from Local Cache: ", e);
           const t = new Date(new Date().getTime() - 12096e5),
             n = async (e) => {
-              const n = await this.m_CacheStorage?.GetObject(
-                this.GetCacheKeyForAppID(e),
-              );
-              if (!n) return e;
-              let o = this.m_mapAppInfo.get(e);
+              var n;
+              const o = await (null === (n = this.m_CacheStorage) ||
+              void 0 === n
+                ? void 0
+                : n.GetObject(this.GetCacheKeyForAppID(e)));
+              if (!o) return e;
+              let s = this.m_mapAppInfo.get(e);
               return (
                 (0, u.X)(
-                  o,
+                  s,
                   "Didn't find AppInfo in our map when loading from cache but it should've been there?",
                 ),
-                o
-                  ? ((o = new p.Am(e)),
-                    o.DeserializeFromCacheObject(n),
-                    o.is_initialized
-                      ? (this.m_mapAppInfo.set(e, o),
-                        o.time_updated_from_server < t ? e : null)
+                s
+                  ? ((s = new p.Am(e)),
+                    s.DeserializeFromCacheObject(o),
+                    s.is_initialized
+                      ? (this.m_mapAppInfo.set(e, s),
+                        s.time_updated_from_server < t ? e : null)
                       : (console.warn(
                           "Failed to deserialize cached App Info: ",
                           e,
-                          n,
+                          o,
                         ),
                         e))
                   : e
@@ -347,7 +348,8 @@
               ? o.clear()
               : (e.m_mapLanguages.set(t, new Map()),
                 (o = e.m_mapLanguages.get(t)));
-            for (let e of n.tokens()) o?.set(e.name().toLowerCase(), e.value());
+            for (let e of n.tokens())
+              null == o || o.set(e.name().toLowerCase(), e.value());
           }
         }
         QueueRichPresenceLocRequest(e) {

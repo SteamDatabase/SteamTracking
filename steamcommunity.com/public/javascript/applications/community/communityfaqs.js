@@ -212,29 +212,37 @@
             "img",
             {
               Constructor: function (e) {
-                const { showErrorInfo: t } = e.context;
-                let a = e?.children?.toString();
+                var t, a;
+                const { showErrorInfo: i } = e.context;
+                let r =
+                  null === (t = null == e ? void 0 : e.children) || void 0 === t
+                    ? void 0
+                    : t.toString();
                 if (
-                  (null == a || null == a || 0 == a.length) &&
-                  ((a = e?.args?.[""]), null == a || null == a || 0 == a.length)
+                  (null == r || null == r || 0 == r.length) &&
+                  ((r =
+                    null === (a = null == e ? void 0 : e.args) || void 0 === a
+                      ? void 0
+                      : a[""]),
+                  null == r || null == r || 0 == r.length)
                 )
                   return "";
-                const i = (0, h.vZ)(a, e.language);
-                return "string" == typeof i
-                  ? ((a = i),
-                    t
+                const l = (0, h.vZ)(r, e.language);
+                return "string" == typeof l
+                  ? ((r = l),
+                    i
                       ? o.createElement(s.e, {
                           className: m().FAQImage,
-                          src: a,
+                          src: r,
                         })
-                      : ((a = a.replace("http://", "https://")),
+                      : ((r = r.replace("http://", "https://")),
                         o.createElement("img", {
                           className: m().FAQImage,
-                          src: a,
+                          src: r,
                         })))
                   : o.createElement(n.j, {
                       className: m().FAQImage,
-                      rgSources: i,
+                      rgSources: l,
                     });
               },
               autocloses: !1,
@@ -308,11 +316,9 @@
         u = a(16649),
         m = a(37563);
       class f {
-        m_summary;
-        m_mapStoredDrafts;
-        m_mapLocalUpdates = new Map();
         constructor(e, t) {
-          (0, r.rC)(this),
+          (this.m_mapLocalUpdates = new Map()),
+            (0, r.rC)(this),
             (this.m_summary = e),
             (this.m_mapStoredDrafts = t),
             (this.m_mapLocalUpdates = new Map());
@@ -328,104 +334,161 @@
           );
         }
         async SaveDrafts() {
+          var e, t, a, o;
           (0, h.X)(
-            Boolean(this.m_summary?.faq_id),
+            Boolean(
+              null === (e = this.m_summary) || void 0 === e ? void 0 : e.faq_id,
+            ),
             "Attempting to save when we lack a FaqID in the summary object",
           );
-          let e = 1,
-            t = new Array();
-          for (let a = 0; a < 31; ++a)
+          let i = 1,
+            s = new Array();
+          for (let e = 0; e < 31; ++e)
             if (
-              (this.m_mapLocalUpdates.get(a).strTitle &&
-                this.m_mapLocalUpdates.get(a).strTitle !==
-                  this.m_mapStoredDrafts.get(a)?.title) ||
-              (this.m_mapLocalUpdates.get(a).strContent &&
-                this.m_mapLocalUpdates.get(a).strContent !==
-                  this.m_mapStoredDrafts.get(a)?.content)
+              (this.m_mapLocalUpdates.get(e).strTitle &&
+                this.m_mapLocalUpdates.get(e).strTitle !==
+                  (null === (t = this.m_mapStoredDrafts.get(e)) || void 0 === t
+                    ? void 0
+                    : t.title)) ||
+              (this.m_mapLocalUpdates.get(e).strContent &&
+                this.m_mapLocalUpdates.get(e).strContent !==
+                  (null === (a = this.m_mapStoredDrafts.get(e)) || void 0 === a
+                    ? void 0
+                    : a.content))
             ) {
-              const o = this.GetDraftTitle(a),
-                i = this.GetDraftContent(a),
-                s = b.Get().UpdateDraft(this.m_summary?.faq_id, a, o, i);
-              s
-                .then((t) => {
-                  1 == t.eResult
+              const t = this.GetDraftTitle(e),
+                a = this.GetDraftContent(e),
+                n = b
+                  .Get()
+                  .UpdateDraft(
+                    null === (o = this.m_summary) || void 0 === o
+                      ? void 0
+                      : o.faq_id,
+                    e,
+                    t,
+                    a,
+                  );
+              n
+                .then((o) => {
+                  1 == o.eResult
                     ? (0, r.z)(() => {
-                        this.m_mapStoredDrafts.has(a) ||
-                          this.m_mapStoredDrafts.set(a, {}),
-                          (this.m_mapStoredDrafts.get(a).title = o),
-                          (this.m_mapStoredDrafts.get(a).content = i),
-                          (this.m_mapStoredDrafts.get(a).timestamp =
-                            t.rtUpdateTime),
-                          (this.m_mapStoredDrafts.get(a).author_account_id =
+                        this.m_mapStoredDrafts.has(e) ||
+                          this.m_mapStoredDrafts.set(e, {}),
+                          (this.m_mapStoredDrafts.get(e).title = t),
+                          (this.m_mapStoredDrafts.get(e).content = a),
+                          (this.m_mapStoredDrafts.get(e).timestamp =
+                            o.rtUpdateTime),
+                          (this.m_mapStoredDrafts.get(e).author_account_id =
                             m.L7.accountid.toString()),
-                          (this.m_mapLocalUpdates.get(a).strTitle = null),
-                          (this.m_mapLocalUpdates.get(a).strContent = null);
-                        let e = !1;
-                        this.m_summary.per_language_info.forEach((o) => {
-                          a == o.language &&
-                            ((e = !0),
-                            (o.last_update_timestamp = Math.max(
-                              o.last_update_timestamp,
-                              t.rtUpdateTime,
+                          (this.m_mapLocalUpdates.get(e).strTitle = null),
+                          (this.m_mapLocalUpdates.get(e).strContent = null);
+                        let i = !1;
+                        this.m_summary.per_language_info.forEach((t) => {
+                          e == t.language &&
+                            ((i = !0),
+                            (t.last_update_timestamp = Math.max(
+                              t.last_update_timestamp,
+                              o.rtUpdateTime,
                             )));
                         }),
-                          e ||
+                          i ||
                             this.m_summary.per_language_info.push({
-                              language: a,
-                              last_update_timestamp: t.rtUpdateTime,
+                              language: e,
+                              last_update_timestamp: o.rtUpdateTime,
                             });
                       })
-                    : 1 == e &&
+                    : 1 == i &&
                       (console.error(
-                        "FAQModel.SaveDraft: Response not ok " + t.eResult,
-                        t,
+                        "FAQModel.SaveDraft: Response not ok " + o.eResult,
+                        o,
                       ),
-                      (e = t.eResult));
+                      (i = o.eResult));
                 })
-                .catch((t) => {
+                .catch((e) => {
                   console.error(
-                    "FAQModel.SaveDrafts: Hit error " + (0, u.l)(t).strErrorMsg,
+                    "FAQModel.SaveDrafts: Hit error " + (0, u.l)(e).strErrorMsg,
                   ),
-                    1 == e && (e = 2);
+                    1 == i && (i = 2);
                 }),
-                t.push(s);
+                s.push(n);
             }
-          return await Promise.all(t), e;
+          return await Promise.all(s), i;
         }
         GetFAQInternalName() {
-          return this.m_summary?.internal_name;
+          var e;
+          return null === (e = this.m_summary) || void 0 === e
+            ? void 0
+            : e.internal_name;
         }
         GetDraftTitle(e) {
+          var t;
           return null !== this.m_mapLocalUpdates.get(e).strTitle &&
             void 0 !== this.m_mapLocalUpdates.get(e).strTitle
             ? this.m_mapLocalUpdates.get(e).strTitle
-            : this.m_mapStoredDrafts.get(e)?.title;
+            : null === (t = this.m_mapStoredDrafts.get(e)) || void 0 === t
+              ? void 0
+              : t.title;
         }
         GetDraftContent(e) {
+          var t;
           return null !== this.m_mapLocalUpdates.get(e).strContent &&
             void 0 !== this.m_mapLocalUpdates.get(e).strContent
             ? this.m_mapLocalUpdates.get(e).strContent
-            : this.m_mapStoredDrafts.get(e)?.content;
+            : null === (t = this.m_mapStoredDrafts.get(e)) || void 0 === t
+              ? void 0
+              : t.content;
         }
         GetDraftTitleWithFallback(e, t = d.IN.k_ESteamRealmGlobal) {
-          const a = t == d.IN.k_ESteamRealmChina ? 6 : 0;
-          return (
-            this.m_mapLocalUpdates.get(e).strTitle ??
-            this.m_mapLocalUpdates.get(a).strTitle ??
-            this.m_mapStoredDrafts.get(e)?.title ??
-            this.m_mapStoredDrafts.get(a)?.title ??
-            ""
-          );
+          var a, o, i, s, n, r;
+          const l = t == d.IN.k_ESteamRealmChina ? 6 : 0;
+          return null !==
+            (r =
+              null !==
+                (s =
+                  null !==
+                    (o =
+                      null !== (a = this.m_mapLocalUpdates.get(e).strTitle) &&
+                      void 0 !== a
+                        ? a
+                        : this.m_mapLocalUpdates.get(l).strTitle) &&
+                  void 0 !== o
+                    ? o
+                    : null === (i = this.m_mapStoredDrafts.get(e)) ||
+                        void 0 === i
+                      ? void 0
+                      : i.title) && void 0 !== s
+                ? s
+                : null === (n = this.m_mapStoredDrafts.get(l)) || void 0 === n
+                  ? void 0
+                  : n.title) && void 0 !== r
+            ? r
+            : "";
         }
         GetDraftContentWithFallback(e, t = d.IN.k_ESteamRealmGlobal) {
-          const a = t == d.IN.k_ESteamRealmChina ? 6 : 0;
-          return (
-            this.m_mapLocalUpdates.get(e).strContent ??
-            this.m_mapLocalUpdates.get(a).strContent ??
-            this.m_mapStoredDrafts.get(e)?.content ??
-            this.m_mapStoredDrafts.get(a)?.content ??
-            ""
-          );
+          var a, o, i, s, n, r;
+          const l = t == d.IN.k_ESteamRealmChina ? 6 : 0;
+          return null !==
+            (r =
+              null !==
+                (s =
+                  null !==
+                    (o =
+                      null !== (a = this.m_mapLocalUpdates.get(e).strContent) &&
+                      void 0 !== a
+                        ? a
+                        : this.m_mapLocalUpdates.get(l).strContent) &&
+                  void 0 !== o
+                    ? o
+                    : null === (i = this.m_mapStoredDrafts.get(e)) ||
+                        void 0 === i
+                      ? void 0
+                      : i.content) && void 0 !== s
+                ? s
+                : null === (n = this.m_mapStoredDrafts.get(l)) || void 0 === n
+                  ? void 0
+                  : n.content) && void 0 !== r
+            ? r
+            : "";
         }
         GetLastSavedDraftVersion(e) {
           return this.m_mapStoredDrafts.get(e);
@@ -434,12 +497,20 @@
           return Boolean(this.GetDraftContent(e) || this.GetDraftTitle(e));
         }
         SetDraftTitle(e, t) {
-          t === this.m_mapStoredDrafts.get(e)?.title
+          var a;
+          t ===
+          (null === (a = this.m_mapStoredDrafts.get(e)) || void 0 === a
+            ? void 0
+            : a.title)
             ? (this.m_mapLocalUpdates.get(e).strTitle = null)
             : (this.m_mapLocalUpdates.get(e).strTitle = t);
         }
         SetDraftContent(e, t) {
-          t === this.m_mapStoredDrafts.get(e)?.content
+          var a;
+          t ===
+          (null === (a = this.m_mapStoredDrafts.get(e)) || void 0 === a
+            ? void 0
+            : a.content)
             ? (this.m_mapLocalUpdates.get(e).strContent = null)
             : (this.m_mapLocalUpdates.get(e).strContent = t);
         }
@@ -466,7 +537,14 @@
           );
         }
         GetLastTimeLanguageUpdated(e) {
-          return this.GetLastSavedDraftVersion(e)?.timestamp ?? 0;
+          var t, a;
+          return null !==
+            (a =
+              null === (t = this.GetLastSavedDraftVersion(e)) || void 0 === t
+                ? void 0
+                : t.timestamp) && void 0 !== a
+            ? a
+            : 0;
         }
         GetFAQID() {
           return this.m_summary.faq_id;
@@ -481,12 +559,6 @@
       var g = a(77581),
         y = a(10309);
       class b {
-        m_mapFAQSummaries = new Map();
-        m_mapFAQPublishedContent = new Map();
-        m_mapFAQDrafts = new Map();
-        m_bHasFAQEdit = !1;
-        m_steamInterface = null;
-        static s_Singleton;
         static Get() {
           return b.s_Singleton || (b.s_Singleton = new b()), b.s_Singleton;
         }
@@ -494,14 +566,19 @@
           b.Get().m_steamInterface = e;
         }
         constructor() {
-          (0, r.rC)(this),
+          (this.m_mapFAQSummaries = new Map()),
+            (this.m_mapFAQPublishedContent = new Map()),
+            (this.m_mapFAQDrafts = new Map()),
+            (this.m_bHasFAQEdit = !1),
+            (this.m_steamInterface = null),
+            (0, r.rC)(this),
             "dev" == m.De.WEB_UNIVERSE && (window.g_FAQStore = this),
             m.De.IN_STEAMUI ||
               (this.ReadInitialPayload(), this.SetUpWebAPIInterface());
         }
         SetUpWebAPIInterface() {
           const e = (0, m.kQ)("faqstore", "application_config"),
-            t = e?.webapi_token;
+            t = null == e ? void 0 : e.webapi_token;
           this.m_steamInterface = new g.J(m.De.WEBAPI_BASE_URL, t);
         }
         ReadInitialPayload() {
@@ -514,8 +591,8 @@
             if (e.faqs)
               for (const t in e.faqs) {
                 const a = e.faqs[t];
-                a?.faq_id == t &&
-                  void 0 !== a?.language &&
+                (null == a ? void 0 : a.faq_id) == t &&
+                  void 0 !== (null == a ? void 0 : a.language) &&
                   (this.m_mapFAQPublishedContent.has(t) ||
                     this.m_mapFAQPublishedContent.set(t, new Map()),
                   this.m_mapFAQPublishedContent.get(t).set(a.language, a));
@@ -523,7 +600,7 @@
             if (e.alldrafts)
               for (const t in e.alldrafts) {
                 const a = e.alldrafts[t];
-                if (!a?.summary || !a.draft) continue;
+                if (!(null == a ? void 0 : a.summary) || !a.draft) continue;
                 this.m_mapFAQSummaries.set(t, a.summary);
                 const o = new Map();
                 for (const e of a.draft) o.set(e.language, e);
@@ -673,11 +750,6 @@
           }
           return a;
         }
-        static sm_mapFallbackLanguages = new Map([
-          [5, 27],
-          [27, 5],
-          [29, 6],
-        ]);
         GetFAQPublishedContent(e, t) {
           const a = this.m_mapFAQPublishedContent.get(e);
           if (!a) return null;
@@ -787,16 +859,19 @@
                   this.m_mapFAQPublishedContent.has(e) ||
                     this.m_mapFAQPublishedContent.set(e, new Map()),
                     a.per_language_info.forEach((a) => {
-                      const o = a.language;
-                      if (t.indexOf(o) >= 0) {
+                      var o;
+                      const s = a.language;
+                      if (t.indexOf(s) >= 0) {
                         a.last_publish_timestamp = Math.max(
                           a.last_publish_timestamp,
                           i.Body().last_publish_timestamp(),
                         );
-                        const t = this.m_mapFAQDrafts
-                          .get(e)
-                          ?.GetLastSavedDraftVersion(o);
-                        this.m_mapFAQPublishedContent.get(e).set(o, t);
+                        const t =
+                          null === (o = this.m_mapFAQDrafts.get(e)) ||
+                          void 0 === o
+                            ? void 0
+                            : o.GetLastSavedDraftVersion(s);
+                        this.m_mapFAQPublishedContent.get(e).set(s, t);
                       }
                     });
                 });
@@ -826,9 +901,20 @@
             ).GetEResult()),
               1 === o
                 ? (0, r.z)(() => {
-                    this.m_mapFAQSummaries.get(e)?.internal_name &&
+                    var a, o, i;
+                    (null === (a = this.m_mapFAQSummaries.get(e)) ||
+                    void 0 === a
+                      ? void 0
+                      : a.internal_name) &&
                       (this.m_mapFAQSummaries.get(e).internal_name = t),
-                      this.m_mapFAQDrafts.get(e)?.GetSummary()?.internal_name &&
+                      (null ===
+                        (i =
+                          null === (o = this.m_mapFAQDrafts.get(e)) ||
+                          void 0 === o
+                            ? void 0
+                            : o.GetSummary()) || void 0 === i
+                        ? void 0
+                        : i.internal_name) &&
                         (this.m_mapFAQDrafts.get(e).GetSummary().internal_name =
                           t);
                   })
@@ -846,10 +932,16 @@
           return Array.from(this.m_mapFAQDrafts.values());
         }
         RemoveAllDirtyDrafts() {
-          const e = this.GetLoadedDraftObjs()
-            ?.filter((e) => e.BNeedsSaving())
-            ?.map((e) => e.GetFAQID());
-          e?.forEach((e) => this.m_mapFAQDrafts.delete(e));
+          var e, t;
+          const a =
+            null ===
+              (t =
+                null === (e = this.GetLoadedDraftObjs()) || void 0 === e
+                  ? void 0
+                  : e.filter((e) => e.BNeedsSaving())) || void 0 === t
+              ? void 0
+              : t.map((e) => e.GetFAQID());
+          null == a || a.forEach((e) => this.m_mapFAQDrafts.delete(e));
         }
         BHasFAQEdit() {
           return this.m_bHasFAQEdit;
@@ -864,24 +956,31 @@
           await s().get(t);
         }
         async ImportNonEnglishDraftsFromCrowdin(e, t, a) {
-          const o =
+          var o, i;
+          const n =
               m.De.COMMUNITY_BASE_URL +
               "faqs/" +
               m.JA.VANITY_ID +
               "/ajaxpullfromcrowdin/" +
               S(e),
-            i = new FormData();
-          i.append("sessionid", m.De.SESSIONID),
-            i.append("languages", t.join(","));
-          let n = null;
+            r = new FormData();
+          r.append("sessionid", m.De.SESSIONID),
+            r.append("languages", t.join(","));
+          let l = null;
           try {
-            const t = await s().post(o, i, {
+            const t = await s().post(n, r, {
               withCredentials: !0,
-              cancelToken: a?.token,
+              cancelToken: null == a ? void 0 : a.token,
             });
-            if (200 == t?.status && 1 == t.data?.success) {
+            if (
+              200 == (null == t ? void 0 : t.status) &&
+              1 == (null === (o = t.data) || void 0 === o ? void 0 : o.success)
+            ) {
               const a = t.data.updated,
-                o = a?.[e] ?? [];
+                o =
+                  null !== (i = null == a ? void 0 : a[e]) && void 0 !== i
+                    ? i
+                    : [];
               return (
                 o.length > 0 &&
                   (this.m_mapFAQSummaries.has(e) ||
@@ -891,13 +990,13 @@
                 o
               );
             }
-            n = { response: t };
+            l = { response: t };
           } catch (e) {
-            n = e;
+            l = e;
           }
-          const r = (0, u.l)(n);
+          const p = (0, u.l)(l);
           return (
-            console.error("Could not import from crowdin", e, r.strErrorMsg, r),
+            console.error("Could not import from crowdin", e, p.strErrorMsg, p),
             []
           );
         }
@@ -911,20 +1010,30 @@
         GetNonEnglishDraftsToPublish(e) {
           return this.m_mapFAQSummaries
             .get(e)
-            .per_language_info.filter(
-              (e) =>
+            .per_language_info.filter((e) => {
+              var t;
+              return (
                 0 != e.language &&
-                e.last_update_timestamp > (e.last_publish_timestamp ?? 0),
-            )
+                e.last_update_timestamp >
+                  (null !== (t = e.last_publish_timestamp) && void 0 !== t
+                    ? t
+                    : 0)
+              );
+            })
             .map((e) => e.language);
         }
       }
-      (0, o.gn)([r.LO], b.prototype, "m_mapFAQSummaries", void 0),
+      (b.sm_mapFallbackLanguages = new Map([
+        [5, 27],
+        [27, 5],
+        [29, 6],
+      ])),
+        (0, o.gn)([r.LO], b.prototype, "m_mapFAQSummaries", void 0),
         (0, o.gn)([r.aD], b.prototype, "RemoveAllDirtyDrafts", null);
       const w = /^[0-9a-fA-F]+$/;
       function v(e) {
-        const t = e?.replace(/-/g, "");
-        if (16 != t?.length || !w.test(t)) return null;
+        const t = null == e ? void 0 : e.replace(/-/g, "");
+        if (16 != (null == t ? void 0 : t.length) || !w.test(t)) return null;
         return n.Z.fromString(t, !0, 16).toString();
       }
       function S(e) {
@@ -8155,13 +8264,17 @@
               })();
             }, []),
             s.useEffect(() => {
-              const e = new Map();
-              for (const a of t)
-                if (a.json_data) {
-                  const t = JSON.parse(a.json_data)?.legacyDeskProInfo;
-                  t?.id && e.set(t.id, a);
+              var e;
+              const a = new Map();
+              for (const o of t)
+                if (o.json_data) {
+                  const t =
+                    null === (e = JSON.parse(o.json_data)) || void 0 === e
+                      ? void 0
+                      : e.legacyDeskProInfo;
+                  (null == t ? void 0 : t.id) && a.set(t.id, o);
                 }
-              r(e);
+              r(a);
             }, [t]),
             s.useEffect(() => {
               if (o && 0 != n.size)
@@ -8217,86 +8330,137 @@
       const S =
         /\[(exlude_realm|expand|img|th|td|tr|table|section|h1|h2|h3|h4|h5|h6|url|b\]|u\]|i\]|list|olist|\*\]|code|hr|previewyoutube|video)/gim;
       async function k(e, t) {
-        const a = new Array(31),
-          o = await p.xP.Get().LoadFAQDraftContent(e),
-          i = o?.GetLastSavedDraftVersion(0)?.content?.match(S)?.length ?? 0,
-          d = o?.GetLastSavedDraftVersion(0)?.title ?? "unknown";
+        var a, o, i, d, h, c, u, m, f, g;
+        const y = new Array(31),
+          b = await p.xP.Get().LoadFAQDraftContent(e),
+          w =
+            null !==
+              (d =
+                null ===
+                  (i =
+                    null ===
+                      (o =
+                        null ===
+                          (a =
+                            null == b
+                              ? void 0
+                              : b.GetLastSavedDraftVersion(0)) || void 0 === a
+                          ? void 0
+                          : a.content) || void 0 === o
+                      ? void 0
+                      : o.match(S)) || void 0 === i
+                  ? void 0
+                  : i.length) && void 0 !== d
+              ? d
+              : 0,
+          v =
+            null !==
+              (c =
+                null ===
+                  (h = null == b ? void 0 : b.GetLastSavedDraftVersion(0)) ||
+                void 0 === h
+                  ? void 0
+                  : h.title) && void 0 !== c
+              ? c
+              : "unknown";
         for (let e = 0; e < 31; e++) {
-          const t = o?.GetLastSavedDraftVersion(e);
-          if (t?.content) {
-            const o = t.content,
-              p = n.renderToString(s.createElement(r.R, { text: o })),
-              h = p.match(S)?.length ?? 0,
-              c = o.match(S)?.length ?? 0,
-              u = i > 0 ? c / i : 0 == c ? 1 : 0;
-            0 == h && u > 0.95 && u < 1.05
-              ? (a[e] = "good")
-              : h > 0
-                ? (console.log((0, l.j_)(e), d, h, "unrendered"),
-                  (a[e] = "badimport"))
-                : u > 0.6 && u < 1.5
-                  ? (console.log((0, l.j_)(e), d, "tag ratio:", u),
-                    (a[e] = "suspicious"))
-                  : (console.log((0, l.j_)(e), d, "tag ratio (BAD):", u),
-                    (a[e] = "bad"));
-          } else a[e] = "missing";
+          const t = null == b ? void 0 : b.GetLastSavedDraftVersion(e);
+          if (null == t ? void 0 : t.content) {
+            const a = t.content,
+              o =
+                null !==
+                  (m =
+                    null ===
+                      (u = n
+                        .renderToString(s.createElement(r.R, { text: a }))
+                        .match(S)) || void 0 === u
+                      ? void 0
+                      : u.length) && void 0 !== m
+                  ? m
+                  : 0,
+              i =
+                null !==
+                  (g =
+                    null === (f = a.match(S)) || void 0 === f
+                      ? void 0
+                      : f.length) && void 0 !== g
+                  ? g
+                  : 0,
+              p = w > 0 ? i / w : 0 == i ? 1 : 0;
+            0 == o && p > 0.95 && p < 1.05
+              ? (y[e] = "good")
+              : o > 0
+                ? (console.log((0, l.j_)(e), v, o, "unrendered"),
+                  (y[e] = "badimport"))
+                : p > 0.6 && p < 1.5
+                  ? (console.log((0, l.j_)(e), v, "tag ratio:", p),
+                    (y[e] = "suspicious"))
+                  : (console.log((0, l.j_)(e), v, "tag ratio (BAD):", p),
+                    (y[e] = "bad"));
+          } else y[e] = "missing";
         }
-        return t(a), !0;
+        return t(y), !0;
       }
       const x = (e) => {
+        var t;
         const {
-            legacyInfo: t,
-            matchingSummary: a,
-            rgLocalizedFAQs: i,
-            rgLocFlags: n,
+            legacyInfo: a,
+            matchingSummary: i,
+            rgLocalizedFAQs: n,
+            rgLocFlags: r,
           } = e,
-          r =
-            a?.faq_id &&
-            c.De.COMMUNITY_BASE_URL.substr(
-              0,
-              c.De.COMMUNITY_BASE_URL.length - 1,
-            ) + m(o.k_eCommunityPreview, a.faq_id),
-          d = new Array(32);
+          d =
+            (null == i || i.faq_id,
+            (null == i ? void 0 : i.faq_id) &&
+              c.De.COMMUNITY_BASE_URL.substr(
+                0,
+                c.De.COMMUNITY_BASE_URL.length - 1,
+              ) + m(o.k_eCommunityPreview, i.faq_id)),
+          h = new Array(32);
         for (let e = 0; e < 31; e++) {
-          const t = (e < i?.length ?? 0) && i[e],
-            a = (0, f.Z)(
+          const a =
+              (null !== (t = e < (null == n ? void 0 : n.length)) &&
+              void 0 !== t
+                ? t
+                : 0) && n[e],
+            o = (0, f.Z)(
               b().ShortCode,
-              !t && b().Missing,
-              "good" == n?.[e] && b().Good,
-              "missing" == n?.[e] && b().Missing,
-              "suspicious" == n?.[e] && b().Suspicious,
-              "bad" == n?.[e] && b().Bad,
-              "badimport" == n?.[e] && b().BadImport,
+              !a && b().Missing,
+              "good" == (null == r ? void 0 : r[e]) && b().Good,
+              "missing" == (null == r ? void 0 : r[e]) && b().Missing,
+              "suspicious" == (null == r ? void 0 : r[e]) && b().Suspicious,
+              "bad" == (null == r ? void 0 : r[e]) && b().Bad,
+              "badimport" == (null == r ? void 0 : r[e]) && b().BadImport,
             );
-          d[I[e]] = s.createElement(
+          h[I[e]] = s.createElement(
             "a",
-            { key: "loc-" + e, className: a, href: r + "?l=" + (0, l.j_)(e) },
+            { key: "loc-" + e, className: o, href: d + "?l=" + (0, l.j_)(e) },
             (0, l.dt)(e),
           );
         }
         return s.createElement(
           "div",
           { className: b().FAQRow },
-          s.createElement("div", { className: b().ID }, t.id),
+          s.createElement("div", { className: b().ID }, a.id),
           s.createElement(
             "a",
             {
               href:
                 "https://support.steampowered.com/kb_article.php?ref=" +
-                t.strRef,
+                a.strRef,
               className: b().Ref,
             },
-            t.strRef,
+            a.strRef,
           ),
-          s.createElement("div", { className: b().Text }, t.strTitle),
-          !!a?.faq_id &&
+          s.createElement("div", { className: b().Text }, a.strTitle),
+          !!(null == i ? void 0 : i.faq_id) &&
             s.createElement(
               "a",
-              { className: b().Ref, href: r },
+              { className: b().Ref, href: d },
               " ",
-              (0, p.hS)(a.faq_id),
+              (0, p.hS)(i.faq_id),
             ),
-          d,
+          h,
         );
       };
       const I = [
@@ -8472,20 +8636,27 @@
                       s.createElement(H.Gp, {
                         fnGetLocData: () =>
                           (function (e, t) {
-                            let a = new B.C();
-                            for (let o = 0; o < 31; ++o)
-                              (e.BHasSomeTextForLanguage(o) || 0 == t) &&
-                                (a.SetLocalization(
+                            var a, o;
+                            let i = new B.C();
+                            for (let s = 0; s < 31; ++s)
+                              (e.BHasSomeTextForLanguage(s) || 0 == t) &&
+                                (i.SetLocalization(
                                   X,
-                                  o,
-                                  e.GetDraftTitle(o) ?? "",
+                                  s,
+                                  null !== (a = e.GetDraftTitle(s)) &&
+                                    void 0 !== a
+                                    ? a
+                                    : "",
                                 ),
-                                a.SetLocalization(
+                                i.SetLocalization(
                                   Q,
-                                  o,
-                                  e.GetDraftContent(o) ?? "",
+                                  s,
+                                  null !== (o = e.GetDraftContent(s)) &&
+                                    void 0 !== o
+                                    ? o
+                                    : "",
                                 ));
-                            return a;
+                            return i;
                           })(t, a),
                         bShowXML: !0,
                         bShowCSV: !0,
@@ -8564,46 +8735,51 @@
             s.createElement(
               "div",
               { className: j.ChecklistRows },
-              r ??
-                s.createElement(
-                  "div",
-                  null,
-                  (0, q.Xx)("#FAQCrowdin_NoDraftFound"),
-                ),
+              null != r
+                ? r
+                : s.createElement(
+                    "div",
+                    null,
+                    (0, q.Xx)("#FAQCrowdin_NoDraftFound"),
+                  ),
             ),
           );
         },
         oe = (e) => {
-          const { draft: t, eLang: a, bInitialState: o, fnOnChecked: i } = e,
-            n = t.GetLastSavedDraftVersion(a),
-            r = n
-              ? N.K.InitFromAccountID(Number.parseInt(n.author_account_id))
+          var t;
+          const { draft: a, eLang: o, bInitialState: i, fnOnChecked: n } = e,
+            r = a.GetLastSavedDraftVersion(o),
+            p = r
+              ? N.K.InitFromAccountID(Number.parseInt(r.author_account_id))
               : null,
-            { data: p } = (0, Y.IE)(r.GetAccountID()),
-            d = n
+            { data: d } = (0, Y.IE)(p.GetAccountID()),
+            h = r
               ? (0, q.Xx)(
                   "#FAQCrowdin_SavedAtTimeByAuthor",
-                  (0, q.$1)(n.timestamp) +
+                  (0, q.$1)(r.timestamp) +
                     " @ " +
-                    (0, U.Sc)(n.timestamp, { bForce24HourClock: !1 }),
-                  p?.m_strPlayerName ?? n.author_account_id,
+                    (0, U.Sc)(r.timestamp, { bForce24HourClock: !1 }),
+                  null !== (t = null == d ? void 0 : d.m_strPlayerName) &&
+                    void 0 !== t
+                    ? t
+                    : r.author_account_id,
                 )
               : (0, q.Xx)("#FAQCrowdin_NoDraftFound"),
-            h = s.createElement(
+            c = s.createElement(
               "div",
               { className: j.LanguageCheckboxLabel },
               s.createElement(
                 "div",
                 { className: j.Language },
-                (0, q.Xx)("#Language_" + (0, l.j_)(a)),
+                (0, q.Xx)("#Language_" + (0, l.j_)(o)),
               ),
-              s.createElement("div", { className: j.Timestamp }, d),
+              s.createElement("div", { className: j.Timestamp }, h),
             );
           return s.createElement(_.ji, {
             className: j.LanguageCheckbox,
-            label: h,
-            checked: o,
-            onChange: (e) => i(e, a),
+            label: c,
+            checked: i,
+            onChange: (e) => n(e, o),
           });
         };
       function ie(e) {
@@ -8694,7 +8870,7 @@
                     for (let e = 0; e < f.current.length; e++) {
                       const a = t[e],
                         o = f.current[e];
-                      if (o?.length > 0) {
+                      if ((null == o ? void 0 : o.length) > 0) {
                         i(e);
                         const t = await p.xP
                           .Get()
@@ -8815,7 +8991,7 @@
             n = t
               .map((e) => {
                 const t = e.per_language_info.find((e) => 0 == e.language),
-                  a = t?.last_update_timestamp || 0,
+                  a = (null == t ? void 0 : t.last_update_timestamp) || 0,
                   o = Array.from(
                     e.per_language_info.filter(
                       (e) => 0 != e.language && e.last_update_timestamp >= a,
@@ -9104,13 +9280,23 @@
         Se = (e) =>
           s.createElement(d.NL, {
             message: (e) => {
-              const t = p.xP.Get().GetLoadedDraftObjs();
+              var t, a;
+              const o = p.xP.Get().GetLoadedDraftObjs();
               return (
-                !Boolean(t?.filter((e) => e.BNeedsSaving())?.length > 0) ||
+                !Boolean(
+                  (null ===
+                    (t =
+                      null == o ? void 0 : o.filter((e) => e.BNeedsSaving())) ||
+                  void 0 === t
+                    ? void 0
+                    : t.length) > 0,
+                ) ||
                 (e.pathname != Mt.DashboardFAQ(c.JA.VANITY_ID) &&
-                  !e.pathname?.startsWith(
-                    Mt.ViewFAQ(c.JA.VANITY_ID, "").slice(0, -1),
-                  )) ||
+                  !(null === (a = e.pathname) || void 0 === a
+                    ? void 0
+                    : a.startsWith(
+                        Mt.ViewFAQ(c.JA.VANITY_ID, "").slice(0, -1),
+                      ))) ||
                 (0, q.Xx)("#EventEditor_UnsavedChanges")
               );
             },
@@ -9258,44 +9444,49 @@
           );
         }),
         Me = (e) => {
-          const { draft: t } = e,
-            a = () => e.closeModal && e.closeModal(),
-            [o, i] = s.useState(!1),
-            [n, r] = s.useState(void 0),
-            [l, d] = s.useState(void 0),
-            [h, c] = (0, p.EH)(t.GetFAQID()),
-            [u, m] = s.useState(new Array());
-          let f = null;
-          if (c)
-            if (o)
-              f = s.createElement(P.V, {
+          var t;
+          const { draft: a } = e,
+            o = () => e.closeModal && e.closeModal(),
+            [i, n] = s.useState(!1),
+            [r, l] = s.useState(void 0),
+            [d, h] = s.useState(void 0),
+            [c, u] = (0, p.EH)(a.GetFAQID()),
+            [m, f] = s.useState(new Array());
+          let y = null;
+          if (u)
+            if (i)
+              y = s.createElement(P.V, {
                 position: "center",
                 size: "medium",
                 string: (0, q.Xx)("#FAQPublish_Publishing"),
               });
-            else if (n)
-              f = s.createElement(
+            else if (r)
+              y = s.createElement(
                 "div",
                 null,
                 (0, q.Xx)("#FAQPublish_Success"),
               );
-            else if (l)
-              f = s.createElement(
+            else if (d)
+              y = s.createElement(
                 "div",
                 null,
                 (0, q.Xx)(
                   "#Error_Description",
-                  l,
+                  d,
                   (0, q.Xx)("#Error_GenericFailureDescription"),
                 ),
               );
-            else if (h) {
-              const e = h.per_language_info
-                ?.filter(
-                  (e) => e.last_publish_timestamp < e.last_update_timestamp,
-                )
-                .map((e) => e.language);
-              f = s.createElement(
+            else if (c) {
+              const e =
+                null === (t = c.per_language_info) || void 0 === t
+                  ? void 0
+                  : t
+                      .filter(
+                        (e) =>
+                          e.last_publish_timestamp < e.last_update_timestamp,
+                      )
+                      .map((e) => e.language);
+              y = s.createElement(
                 s.Fragment,
                 null,
                 s.createElement("div", null, (0, q.Xx)("#FAQPublish_Desc")),
@@ -9303,20 +9494,20 @@
                 s.createElement("div", null, (0, q.Xx)("#FAQPublish_Desc2")),
                 s.createElement("br", null),
                 s.createElement(ae, {
-                  draft: t,
+                  draft: a,
                   rgAllLanguages: e,
-                  rgLanguagesSelected: u,
-                  fnSelectLanguages: m,
+                  rgLanguagesSelected: m,
+                  fnSelectLanguages: f,
                 }),
               );
             } else
-              f = s.createElement(
+              y = s.createElement(
                 "div",
                 null,
                 (0, q.Xx)("#FAQPublish_LoadError"),
               );
           else
-            f = s.createElement(P.V, {
+            y = s.createElement(P.V, {
               size: "small",
               position: "center",
               string: (0, q.Xx)("#FAQPublish_PublishWait"),
@@ -9326,29 +9517,29 @@
             null,
             s.createElement(
               A.e1,
-              { onEscKeypress: a },
+              { onEscKeypress: o },
               s.createElement(
                 _.VY,
                 { className: j.LanguageListDialog },
                 s.createElement(_.h4, null, (0, q.Xx)("#FAQPublish_Publish")),
-                s.createElement(_.uT, null, s.createElement(_.Ac, null, f)),
+                s.createElement(_.uT, null, s.createElement(_.Ac, null, y)),
                 s.createElement(
                   _.$_,
                   null,
                   s.createElement(_.o9, {
-                    onCancel: a,
-                    bOKDisabled: Boolean(o || n || l || 0 == u.length),
+                    onCancel: o,
+                    bOKDisabled: Boolean(i || r || d || 0 == m.length),
                     strOKText: (0, q.Xx)("#FAQPublish_Publish"),
-                    strCancelText: Boolean(o || n || l)
+                    strCancelText: Boolean(i || r || d)
                       ? (0, q.Xx)("#Button_OK")
                       : void 0,
                     onOK: async () => {
-                      i(!0),
+                      n(!0),
                         p.xP
                           .Get()
-                          .PublishDraftByLanguage(t.GetFAQID(), u)
+                          .PublishDraftByLanguage(a.GetFAQID(), m)
                           .then((e) => {
-                            1 == e && r(!0), d(e);
+                            1 == e && l(!0), h(e);
                           })
                           .catch((e) => {
                             const t = (0, g.l)(e);
@@ -9356,9 +9547,9 @@
                               "FAQPublishDialog: hit error: " + t.strErrorMsg,
                               t,
                             ),
-                              d(2);
+                              h(2);
                           })
-                          .finally(() => i(!1));
+                          .finally(() => n(!1));
                     },
                   }),
                 ),
@@ -9489,26 +9680,45 @@
         };
       var Fe = a(40548);
       const We = (0, i.Pi)((e) => {
-          const { draft: t, eLanguage: a } = e,
-            o = t.GetFAQID(),
-            [i, n] = (0, p.EH)(o);
-          if (!n) return null;
-          const r = i?.per_language_info?.find(
-              (e) => 0 == e.language,
-            )?.last_update_timestamp,
-            l = i?.per_language_info?.some(
-              (e) => e.last_publish_timestamp < e.last_update_timestamp,
-            ),
-            d = i?.per_language_info
-              ?.slice()
-              .sort((e, t) => ee[e.language] - ee[t.language])
-              ?.map((e) =>
-                s.createElement(Re, {
-                  key: e.language,
-                  info: e,
-                  rtEnglishUpdateTime: r,
-                }),
-              );
+          var t, a, o, i, n;
+          const { draft: r, eLanguage: l } = e,
+            d = r.GetFAQID(),
+            [h, c] = (0, p.EH)(d);
+          if (!c) return null;
+          const u =
+              null ===
+                (a =
+                  null === (t = null == h ? void 0 : h.per_language_info) ||
+                  void 0 === t
+                    ? void 0
+                    : t.find((e) => 0 == e.language)) || void 0 === a
+                ? void 0
+                : a.last_update_timestamp,
+            m =
+              null === (o = null == h ? void 0 : h.per_language_info) ||
+              void 0 === o
+                ? void 0
+                : o.some(
+                    (e) => e.last_publish_timestamp < e.last_update_timestamp,
+                  ),
+            g =
+              null ===
+                (n =
+                  null === (i = null == h ? void 0 : h.per_language_info) ||
+                  void 0 === i
+                    ? void 0
+                    : i
+                        .slice()
+                        .sort((e, t) => ee[e.language] - ee[t.language])) ||
+              void 0 === n
+                ? void 0
+                : n.map((e) =>
+                    s.createElement(Re, {
+                      key: e.language,
+                      info: e,
+                      rtEnglishUpdateTime: u,
+                    }),
+                  );
           return s.createElement(
             _e.SV,
             null,
@@ -9536,7 +9746,7 @@
                       (0, q.Xx)("#FAQDashboard_VisibleInGlobalRealmLabel"),
                       " ",
                       s.createElement(we, {
-                        bIsVisible: i.visible_in_global_realm,
+                        bIsVisible: h.visible_in_global_realm,
                       }),
                     ),
                     s.createElement(
@@ -9545,19 +9755,19 @@
                       (0, q.Xx)("#FAQDashboard_VisibleInChinaRealmLabel"),
                       " ",
                       s.createElement(we, {
-                        bIsVisible: i.visible_in_china_realm,
+                        bIsVisible: h.visible_in_china_realm,
                       }),
                     ),
                     s.createElement(
                       "div",
                       { className: Fe.StatusBtnCtn },
-                      s.createElement(Ee, { draft: t }),
+                      s.createElement(Ee, { draft: r }),
                     ),
                   ),
                   s.createElement(
                     "div",
                     { className: Fe.PublishCtn },
-                    l
+                    m
                       ? s.createElement(
                           "div",
                           { className: Fe.PublishStatus },
@@ -9571,7 +9781,7 @@
                     s.createElement(
                       "div",
                       { className: Fe.PublishBtn },
-                      s.createElement(qe, { draft: t, bDisabled: !l }),
+                      s.createElement(qe, { draft: r, bDisabled: !m }),
                     ),
                   ),
                 ),
@@ -9593,7 +9803,7 @@
                     { className: Fe.SectionDescription },
                     (0, q.Xx)("#FAQDashboard_LocalizationSectionDesc"),
                   ),
-                  s.createElement($, { draft: t, eLanguage: a }),
+                  s.createElement($, { draft: r, eLanguage: l }),
                 ),
                 s.createElement(
                   "div",
@@ -9603,7 +9813,7 @@
                     { className: Fe.SectionDescription },
                     (0, q.Xx)("#EventEditor_Loc_CrowdinIntegration_Desc"),
                   ),
-                  s.createElement(K, { draft: t }),
+                  s.createElement(K, { draft: r }),
                 ),
               ),
               s.createElement(
@@ -9636,13 +9846,13 @@
                       ),
                     ),
                   ),
-                  s.createElement("tbody", null, d),
+                  s.createElement("tbody", null, g),
                 ),
               ),
               s.createElement(
                 "div",
                 { className: Fe.Section },
-                s.createElement(Pe, { draft: t }),
+                s.createElement(Pe, { draft: r }),
               ),
             ),
           );
@@ -9948,7 +10158,7 @@
                 i.visible_in_global_realm) ||
                 (c.De.EREALM == Ne.IN.k_ESteamRealmChina &&
                   i.visible_in_china_realm)) &&
-              !!r?.last_publish_timestamp;
+              !!(null == r ? void 0 : r.last_publish_timestamp);
           return s.createElement(
             _e.SV,
             null,
@@ -10051,7 +10261,7 @@
                 appid: void 0,
                 clanSteamID: t,
                 imageInsertCallBack: (e, t) =>
-                  o.current && (0, ke.G)(o?.current, e, t),
+                  o.current && (0, ke.G)(null == o ? void 0 : o.current, e, t),
                 fnSetImageURL: () => {},
                 rgRealmList: a.GetIncludedRealmList(),
                 fnLangHasData: a.BHasSomeTextForLanguage,
@@ -10122,11 +10332,23 @@
             n = (0, d.TH)();
           return (
             s.useEffect(() => {
-              const e = n?.hash?.substr("#" === n?.hash?.substr(0, 1) ? 1 : 0);
-              e &&
-                document
-                  .getElementById(e)
-                  ?.scrollIntoView({ block: "start", behavior: "smooth" });
+              var e, t, a;
+              const o =
+                null === (e = null == n ? void 0 : n.hash) || void 0 === e
+                  ? void 0
+                  : e.substr(
+                      "#" ===
+                        (null === (t = null == n ? void 0 : n.hash) ||
+                        void 0 === t
+                          ? void 0
+                          : t.substr(0, 1))
+                        ? 1
+                        : 0,
+                    );
+              o &&
+                (null === (a = document.getElementById(o)) ||
+                  void 0 === a ||
+                  a.scrollIntoView({ block: "start", behavior: "smooth" }));
             }, [n]),
             s.createElement(
               "div",
@@ -10177,43 +10399,52 @@
       const ft = new (pt())(
           (e) =>
             (async function (e) {
+              var t, a, o, i;
               if (!e || 0 == e.length) return [];
-              const t =
+              const s =
                 "community" == (0, c.Zv)()
                   ? c.De.COMMUNITY_BASE_URL
                   : c.De.STORE_BASE_URL;
               if (1 == e.length) {
-                const a = { accountid: e[0], origin: self.origin },
-                  o = await rt().get(`${t}actions/ajaxgetavatarpersona`, {
-                    params: a,
+                const o = { accountid: e[0], origin: self.origin },
+                  i = await rt().get(`${s}actions/ajaxgetavatarpersona`, {
+                    params: o,
                   });
                 if (
-                  !o ||
-                  200 != o.status ||
-                  1 != o.data?.success ||
-                  !o.data?.userinfo
+                  !i ||
+                  200 != i.status ||
+                  1 !=
+                    (null === (t = i.data) || void 0 === t
+                      ? void 0
+                      : t.success) ||
+                  !(null === (a = i.data) || void 0 === a ? void 0 : a.userinfo)
                 )
-                  throw `Load single avatar/persona failed ${(0, g.l)(o).strErrorMsg}`;
-                return [o.data.userinfo];
+                  throw `Load single avatar/persona failed ${(0, g.l)(i).strErrorMsg}`;
+                return [i.data.userinfo];
               }
               {
-                const a = { accountids: e.join(","), origin: self.origin },
-                  o = await rt().get(`${t}actions/ajaxgetmultiavatarpersona`, {
-                    params: a,
+                const t = { accountids: e.join(","), origin: self.origin },
+                  a = await rt().get(`${s}actions/ajaxgetmultiavatarpersona`, {
+                    params: t,
                   });
                 if (
-                  !o ||
-                  200 != o.status ||
-                  1 != o.data?.success ||
-                  !o.data?.userinfos
+                  !a ||
+                  200 != a.status ||
+                  1 !=
+                    (null === (o = a.data) || void 0 === o
+                      ? void 0
+                      : o.success) ||
+                  !(null === (i = a.data) || void 0 === i
+                    ? void 0
+                    : i.userinfos)
                 )
-                  throw `Load single avatar/persona failed ${(0, g.l)(o).strErrorMsg}`;
-                const i = new Map();
+                  throw `Load single avatar/persona failed ${(0, g.l)(a).strErrorMsg}`;
+                const n = new Map();
                 return (
-                  o.data.userinfos.forEach((e) =>
-                    i.set(new N.K(e.steamid).GetAccountID(), e),
+                  a.data.userinfos.forEach((e) =>
+                    n.set(new N.K(e.steamid).GetAccountID(), e),
                   ),
-                  e.map((e) => i.get(e))
+                  e.map((e) => n.get(e))
                 );
               }
             })(e),
@@ -10236,7 +10467,7 @@
                 if (c.L7.logged_in) {
                   const a = ht.gA.Init(ct.bM),
                     o = (await ct.lk.GetNicknameList(t, a)).Body().toObject();
-                  o?.nicknames &&
+                  (null == o ? void 0 : o.nicknames) &&
                     o.nicknames.length > 0 &&
                     o.nicknames.forEach((t) => {
                       e.set(t.accountid, t.nickname);
@@ -10292,7 +10523,7 @@
                   { className: wt.InfoRow },
                   (0, q.kQ)(
                     "#FAQViewer_Admin_LastUpdate",
-                    a?.author_account_id
+                    (null == a ? void 0 : a.author_account_id)
                       ? s.createElement(bt, {
                           accountID: Number.parseInt(a.author_account_id),
                         })
@@ -10456,10 +10687,12 @@
               );
         },
         Ct = (e) => {
-          const t =
+          var t;
+          const a =
             c.De.COMMUNITY_BASE_URL +
             (c.JA.APPID
-              ? "app/" + (c.JA.VANITY_ID ?? c.JA.APPID)
+              ? "app/" +
+                (null !== (t = c.JA.VANITY_ID) && void 0 !== t ? t : c.JA.APPID)
               : "gid/" + c.JA.CLANSTEAMID);
           return s.createElement(
             "div",
@@ -10467,7 +10700,7 @@
             s.createElement("div", { className: _t().ErrorMsg }, e.strError),
             s.createElement(
               "a",
-              { className: _t().EscapeLink, href: t },
+              { className: _t().EscapeLink, href: a },
               (0, q.Xx)("#FAQViewer_GoToHomepage"),
             ),
           );

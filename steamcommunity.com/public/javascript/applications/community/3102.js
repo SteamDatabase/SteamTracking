@@ -27,26 +27,23 @@
       const _ = "23B7-49AD-4A28-9590";
       class y {
         constructor() {
-          (0, s.rC)(this);
+          (this.m_rgAppsWithTimelines = []),
+            (this.m_mapTimelineLoaders = new Map()),
+            (this.m_mapClipLoaders = new Map()),
+            (this.m_mapSharedClipLoaders = new Map()),
+            (this.m_mapActiveTimelines = new Map()),
+            (this.m_mapManualRecordingCallbacks = new Map()),
+            (this.m_bLoadingClips = !0),
+            (this.m_bLoadingAppsWithTimelines = !0),
+            (this.m_bClipLoadingTriggered = !1),
+            (this.m_clips = new Map()),
+            (this.m_clipsGroupByGame = new Map()),
+            (this.m_clipExportProgress = new Map()),
+            (this.m_currentlyExportingClip = null),
+            (this.m_recordingState = null),
+            (this.m_bEnoughDiskSpace = !1),
+            (0, s.rC)(this);
         }
-        m_rgAppsWithTimelines = [];
-        m_mapTimelineLoaders = new Map();
-        m_mapClipLoaders = new Map();
-        m_mapSharedClipLoaders = new Map();
-        m_mapActiveTimelines = new Map();
-        m_mapManualRecordingCallbacks = new Map();
-        m_fnGetAchievementInfo;
-        m_strLastClipID;
-        m_transport;
-        m_bLoadingClips = !0;
-        m_bLoadingAppsWithTimelines = !0;
-        m_bClipLoadingTriggered = !1;
-        m_clips = new Map();
-        m_clipsGroupByGame = new Map();
-        m_clipExportProgress = new Map();
-        m_currentlyExportingClip = null;
-        m_recordingState = null;
-        m_bEnoughDiskSpace = !1;
         async Init(e, t) {
           (this.m_transport = e),
             (this.m_fnGetAchievementInfo = t),
@@ -156,26 +153,31 @@
           return 1;
         }
         OnRecordingSessionChanged(e) {
-          const t = e.Body().toObject(),
-            i = t.game_id,
-            r = t.notification_type;
+          var t;
+          const i = e.Body().toObject(),
+            r = i.game_id,
+            s = i.notification_type;
           switch (
-            (this.m_mapManualRecordingCallbacks.has(i) &&
-              this.m_mapManualRecordingCallbacks.get(i)(t),
-            r)
+            (this.m_mapManualRecordingCallbacks.has(r) &&
+              this.m_mapManualRecordingCallbacks.get(r)(i),
+            s)
           ) {
             case 1: {
-              const e = this.m_rgAppsWithTimelines.find(
-                (e) => e.game_id == i,
-              )?.recording_type;
-              this.m_recordingState = { m_gameID: i, m_eRecordingType: e };
+              const e =
+                null ===
+                  (t = this.m_rgAppsWithTimelines.find(
+                    (e) => e.game_id == r,
+                  )) || void 0 === t
+                  ? void 0
+                  : t.recording_type;
+              this.m_recordingState = { m_gameID: r, m_eRecordingType: e };
               break;
             }
             case 2:
               this.m_recordingState = null;
           }
-          let s = this.m_mapTimelineLoaders.get(i);
-          return s ? (s.loader.RecordingSessionChanged(t), 1) : 1;
+          let n = this.m_mapTimelineLoaders.get(r);
+          return n ? (n.loader.RecordingSessionChanged(i), 1) : 1;
         }
         OnTimelineEntryChanged(e) {
           const { entry: t } = e.Body().toObject(),
@@ -400,16 +402,19 @@
           return this.m_bLoadingAppsWithTimelines;
         }
         GetClipIDs(e) {
+          var t;
           if ((this.LazyLoadClips(), e)) {
-            const t = new m.N1(g.b7.k_EGameIDTypeApp, e, 0);
+            const i = new m.N1(g.b7.k_EGameIDTypeApp, e, 0);
             return (
-              this.m_clipsGroupByGame
-                .get(t.ConvertTo64BitString())
-                ?.map((e) => e.clip_id) || []
+              (null ===
+                (t = this.m_clipsGroupByGame.get(i.ConvertTo64BitString())) ||
+              void 0 === t
+                ? void 0
+                : t.map((e) => e.clip_id)) || []
             );
           }
-          const t = [];
-          return this.m_clips.forEach((e) => t.push(e.clip_id)), t;
+          const i = [];
+          return this.m_clips.forEach((e) => i.push(e.clip_id)), i;
         }
         GetClipSummary(e) {
           return (
@@ -530,7 +535,10 @@
             .thumbnails();
         }
         GetAchivementInfo(e, t) {
-          return this.m_fnGetAchievementInfo?.(e, t);
+          var i;
+          return null === (i = this.m_fnGetAchievementInfo) || void 0 === i
+            ? void 0
+            : i.call(this, e, t);
         }
         GetLastClip() {
           if (this.m_strLastClipID)

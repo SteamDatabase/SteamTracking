@@ -60056,6 +60056,855 @@ a {
 .__react_component_tooltip.show {
   opacity: 1 !important;
 }
+._1Pmfc2s6LJ0Ty3o7qNjS4L {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+._3KcofopDj_Ydg_GnrrJu__ {
+  mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to left,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/radiance.eot");
+  src:
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/radiance.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/radiance.woff")
+      format("woff"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/radiance.ttf")
+      format("truetype"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/radiance.svg#ywftsvg")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/radiance-bold.eot");
+  src:
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/radiance-bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/radiance-bold.woff")
+      format("woff"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/radiance-bold.ttf")
+      format("truetype"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/radiance-bold.svg#ywftsvg")
+      format("svg");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Radiance";
+  src: url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot");
+  src:
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/radiance-semibold.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/radiance-semibold.woff")
+      format("woff"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/radiance-semibold.ttf")
+      format("truetype"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/radiance-semibold.svg#ywftsvg")
+      format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot");
+  src:
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/goudytrajan-regular-pro-webfont.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot");
+  src:
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/goudytrajan-bold-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Goudy Trajan";
+  src: url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot");
+  src:
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.woff")
+      format("woff"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/goudytrajan-medium-pro-webfont.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src:
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/notosans-regular.woff")
+      format("woff"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/notosans-regular.ttf")
+      format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src:
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/notosans-semibold.woff")
+      format("woff"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/notosans-semibold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src:
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/notosans-bold.woff")
+      format("woff"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/notosans-bold.ttf")
+      format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src:
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.woff")
+      format("woff"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/averiaseriflibre-regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Averia Serif Libre";
+  src:
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.woff")
+      format("woff"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/averiaseriflibre-italic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/Reaver-Regular.woff")
+      format("woff"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/Reaver-Regular.ttf")
+      format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/Reaver-Light.woff")
+      format("woff"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Light.ttf")
+      format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/Reaver-SemiBold.woff")
+      format("woff"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/Reaver-Regular-SemiBold.ttf")
+      format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/Reaver-Bold.woff")
+      format("woff"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Bold.ttf")
+      format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Reaver";
+  src:
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/Reaver-Black.woff")
+      format("woff"),
+    url("https://cdn.akamai.steamstatic.com/apps/dota2/fonts/Reaver-Regular-Black.ttf")
+      format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+._4TmdMOSgEwvSavUCIarEq {
+  border: 3px solid #ffffff50;
+  padding: 15px 25px;
+  margin: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  transition-duration: 0.2s;
+}
+._4TmdMOSgEwvSavUCIarEq:hover {
+  border: 3px solid #ff6046;
+  transform: translateY(-2px);
+  color: #ff6046;
+}
+._4TmdMOSgEwvSavUCIarEq ._3QTuNN7g-ywo_bhWakQyiV {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+._4TmdMOSgEwvSavUCIarEq ._2FBWh8_HC85bpqwColbf9d {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+._4TmdMOSgEwvSavUCIarEq ._2FBWh8_HC85bpqwColbf9d._1addoD4TSX1J6SFq21PQbq {
+  background-image: url("https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/icon-play.svg");
+}
+._4TmdMOSgEwvSavUCIarEq ._2jsQ8zBKOlODXXyuBMhR2c {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("https://cdn.akamai.steamstatic.com/apps/dota2/images/dota_react/icons/steam_icon.svg");
+}
+._2KDBBStFWXp_jAxRiJFCTE,
+._3k7DxRAs3fo6Ew_rKhsjCo {
+  background-color: #36363e;
+  color: #ddd;
+  max-width: 250px;
+  border: 1px solid #2d2d33;
+  border-radius: 3px;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  line-height: 20px;
+  padding: 6px 10px;
+  z-index: 99999;
+}
+._3k7DxRAs3fo6Ew_rKhsjCo {
+  max-width: none;
+}
+.ReactVirtualized__Table__headerRow {
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ReactVirtualized__Table__row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ReactVirtualized__Table__headerTruncatedText {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.ReactVirtualized__Table__headerColumn {
+  margin-right: 5px;
+  min-width: 0px;
+}
+.ReactVirtualized__Table__rowColumn {
+  margin-right: 5px;
+  min-width: 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ReactVirtualized__Table__headerColumn:first-of-type {
+  margin-left: 5px;
+}
+.ReactVirtualized__Table__rowColumn:first-of-type {
+  margin-left: 5px;
+}
+.ReactVirtualized__Table__sortableHeaderColumn {
+  cursor: pointer;
+}
+.ReactVirtualized__Table__sortableHeaderIconContainer {
+  display: flex;
+  align-items: center;
+}
+.ReactVirtualized__Table__sortableHeaderIcon {
+  flex: 0 0 24px;
+  height: 1em;
+  width: 1em;
+  fill: currentColor;
+}
+._9Q-Qwknepefiuo2rjgCrD {
+  width: 100%;
+  min-width: 320px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+._9Q-Qwknepefiuo2rjgCrD ._33l2B3Gr2WXnLClm6tlXTt {
+  width: 100%;
+  min-height: 700px;
+  margin: 0;
+  padding: 40px 100px 40px 100px;
+  background-color: #0a1010;
+  background-image: url("https://cdn.akamai.steamstatic.com/apps/dota2/images/generic/bg_notile.jpg");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
+}
+._9Q-Qwknepefiuo2rjgCrD ._33l2B3Gr2WXnLClm6tlXTt ._3MmDFa181HANt5Iis0ywlB {
+  margin: 40px auto;
+  width: 1000px;
+  min-height: 216px;
+  position: relative;
+  line-height: 19px;
+  background: #0f1418;
+  border: 1px solid #303030;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  color: #d2d2d2;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+._9Q-Qwknepefiuo2rjgCrD
+  ._33l2B3Gr2WXnLClm6tlXTt
+  ._3MmDFa181HANt5Iis0ywlB
+  ._2zuRH0bkYjVALxlOGGh0oV {
+  width: 850px;
+  margin: auto;
+  padding-bottom: 20px;
+  text-align: left;
+  color: #768a89;
+  font-size: 18px;
+  line-height: normal;
+}
+._9Q-Qwknepefiuo2rjgCrD
+  ._33l2B3Gr2WXnLClm6tlXTt
+  ._3MmDFa181HANt5Iis0ywlB
+  ._2zuRH0bkYjVALxlOGGh0oV
+  .WWZZs00veTJiPSmr_AO0l {
+  width: 150px;
+  margin-bottom: 40px;
+}
+._9Q-Qwknepefiuo2rjgCrD
+  ._33l2B3Gr2WXnLClm6tlXTt
+  ._3MmDFa181HANt5Iis0ywlB
+  ._2zuRH0bkYjVALxlOGGh0oV
+  ._3M9LPVPzylTPEzvnA-_HJJ {
+  font-size: 24px;
+}
+._9Q-Qwknepefiuo2rjgCrD
+  ._33l2B3Gr2WXnLClm6tlXTt
+  ._3MmDFa181HANt5Iis0ywlB
+  ._2zuRH0bkYjVALxlOGGh0oV
+  ._294TlbwxoddzeO6QVx29X2 {
+  background-color: #383b3e;
+  width: 850px;
+  height: 2px;
+  box-shadow: 0px 1px 1px #000;
+  margin: 15px auto;
+}
+._9Q-Qwknepefiuo2rjgCrD
+  ._33l2B3Gr2WXnLClm6tlXTt
+  ._3MmDFa181HANt5Iis0ywlB
+  ._2zuRH0bkYjVALxlOGGh0oV
+  ._2PSCpuTWoZmr6N4TwW01pS {
+  color: #ccc;
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+._9Q-Qwknepefiuo2rjgCrD
+  ._33l2B3Gr2WXnLClm6tlXTt
+  ._3MmDFa181HANt5Iis0ywlB
+  ._2zuRH0bkYjVALxlOGGh0oV
+  ._3hxYxgk0n2Xj4NtZGSV5sb {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  position: relative;
+}
+._9Q-Qwknepefiuo2rjgCrD
+  ._33l2B3Gr2WXnLClm6tlXTt
+  ._3MmDFa181HANt5Iis0ywlB
+  ._2zuRH0bkYjVALxlOGGh0oV
+  ._3hxYxgk0n2Xj4NtZGSV5sb
+  ._2bcCEdQOZbyFbUONir4T25 {
+  width: 415px;
+  margin-right: 20px;
+}
+._9Q-Qwknepefiuo2rjgCrD
+  ._33l2B3Gr2WXnLClm6tlXTt
+  ._3MmDFa181HANt5Iis0ywlB
+  ._2zuRH0bkYjVALxlOGGh0oV
+  ._3hxYxgk0n2Xj4NtZGSV5sb
+  .NZLwgSbauWtV9TugM5mhz {
+  position: absolute;
+  top: -50px;
+  right: 51%;
+  width: 10%;
+}
+._9Q-Qwknepefiuo2rjgCrD
+  ._33l2B3Gr2WXnLClm6tlXTt
+  ._3MmDFa181HANt5Iis0ywlB
+  ._2zuRH0bkYjVALxlOGGh0oV
+  ._3hxYxgk0n2Xj4NtZGSV5sb
+  .aW38voIQC7rl_P3ugsLiV {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  width: 10%;
+}
+._9Q-Qwknepefiuo2rjgCrD
+  ._33l2B3Gr2WXnLClm6tlXTt
+  ._3MmDFa181HANt5Iis0ywlB
+  ._2zuRH0bkYjVALxlOGGh0oV
+  ._1BCq92fDDqQZjRyWNrId_t {
+  margin-bottom: 5px;
+}
+._9Q-Qwknepefiuo2rjgCrD
+  ._33l2B3Gr2WXnLClm6tlXTt
+  ._3MmDFa181HANt5Iis0ywlB
+  ._2zuRH0bkYjVALxlOGGh0oV
+  ._1v_p4nLIM1vP8lkXPqYN7M {
+  display: flex;
+  flex-direction: row;
+}
+._9Q-Qwknepefiuo2rjgCrD
+  ._33l2B3Gr2WXnLClm6tlXTt
+  ._3MmDFa181HANt5Iis0ywlB
+  ._2zuRH0bkYjVALxlOGGh0oV
+  ._1v_p4nLIM1vP8lkXPqYN7M
+  .sxa4lcZFVqZY3dWj75DPo {
+  width: 270px;
+  margin-right: 20px;
+}
+._9Q-Qwknepefiuo2rjgCrD
+  ._33l2B3Gr2WXnLClm6tlXTt
+  ._3MmDFa181HANt5Iis0ywlB
+  ._2zuRH0bkYjVALxlOGGh0oV
+  ._1v_p4nLIM1vP8lkXPqYN7M
+  .sxa4lcZFVqZY3dWj75DPo
+  ._8WYqvMvmpv4Ovhxr7DVgj {
+  width: 100%;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+._9Q-Qwknepefiuo2rjgCrD
+  ._33l2B3Gr2WXnLClm6tlXTt
+  ._3MmDFa181HANt5Iis0ywlB
+  ._2zuRH0bkYjVALxlOGGh0oV
+  ._1v_p4nLIM1vP8lkXPqYN7M
+  ._1_0DfZhOPZbxAkCwSl4xG3 {
+  width: 270px;
+}
+._9Q-Qwknepefiuo2rjgCrD
+  ._33l2B3Gr2WXnLClm6tlXTt
+  ._3MmDFa181HANt5Iis0ywlB
+  ._2zuRH0bkYjVALxlOGGh0oV
+  ._1v_p4nLIM1vP8lkXPqYN7M
+  ._1_0DfZhOPZbxAkCwSl4xG3
+  ._8WYqvMvmpv4Ovhxr7DVgj {
+  width: 100%;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+._9Q-Qwknepefiuo2rjgCrD
+  ._33l2B3Gr2WXnLClm6tlXTt
+  ._3MmDFa181HANt5Iis0ywlB
+  ._2zuRH0bkYjVALxlOGGh0oV
+  ._1Bz68eHcfIzRXyfsj2XYGg {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+._9Q-Qwknepefiuo2rjgCrD
+  ._33l2B3Gr2WXnLClm6tlXTt
+  ._3MmDFa181HANt5Iis0ywlB
+  ._2zuRH0bkYjVALxlOGGh0oV
+  ._1Bz68eHcfIzRXyfsj2XYGg
+  ._1gkn3g4iTE0xfz4BTvDMYH {
+  width: 32%;
+}
+._9Q-Qwknepefiuo2rjgCrD
+  ._33l2B3Gr2WXnLClm6tlXTt
+  ._3MmDFa181HANt5Iis0ywlB
+  ._2zuRH0bkYjVALxlOGGh0oV
+  ._1Bz68eHcfIzRXyfsj2XYGg
+  ._1gkn3g4iTE0xfz4BTvDMYH
+  input[type="checkbox"] {
+  display: none;
+}
+._9Q-Qwknepefiuo2rjgCrD
+  ._33l2B3Gr2WXnLClm6tlXTt
+  ._3MmDFa181HANt5Iis0ywlB
+  ._2zuRH0bkYjVALxlOGGh0oV
+  ._1Bz68eHcfIzRXyfsj2XYGg
+  ._1gkn3g4iTE0xfz4BTvDMYH
+  img {
+  transition: transform 0.25s ease;
+  width: 100%;
+  border-radius: 4px;
+}
+._9Q-Qwknepefiuo2rjgCrD
+  ._33l2B3Gr2WXnLClm6tlXTt
+  ._3MmDFa181HANt5Iis0ywlB
+  ._2zuRH0bkYjVALxlOGGh0oV
+  ._1Bz68eHcfIzRXyfsj2XYGg
+  ._21RmTkYCP4HhzYjVAexAJM {
+  width: 55%;
+  margin: auto auto auto 10px;
+}
+._9Q-Qwknepefiuo2rjgCrD
+  ._33l2B3Gr2WXnLClm6tlXTt
+  ._3MmDFa181HANt5Iis0ywlB
+  ._2zuRH0bkYjVALxlOGGh0oV
+  ._1Bz68eHcfIzRXyfsj2XYGg
+  ._21RmTkYCP4HhzYjVAexAJM
+  ._2AxipE00bDUfJSyNS1xRdl {
+  color: #b8c8c5;
+  font-weight: 700;
+  margin-bottom: -5px;
+}
+._9Q-Qwknepefiuo2rjgCrD
+  ._33l2B3Gr2WXnLClm6tlXTt
+  ._3MmDFa181HANt5Iis0ywlB
+  ._2zuRH0bkYjVALxlOGGh0oV
+  ._1Bz68eHcfIzRXyfsj2XYGg
+  ._21RmTkYCP4HhzYjVAexAJM
+  ._1qezvNZozNA57hV6v0hPVA {
+  margin-left: 5px;
+  line-height: 24px;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Radiance", "Noto Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.Bold {
+  font-weight: bold;
+}
+.Spoiler {
+  background-color: #000 !important;
+  color: #000 !important;
+}
+.Spoiler:hover {
+  color: #fff !important;
+}
+.Strike {
+  text-decoration: line-through;
+}
+[data-aos="fade-zoom-in"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: scale(0);
+}
+[data-aos="fade-zoom-in"] &.aos-animate {
+  opacity: 1;
+  transform: scale(1);
+}
+[data-aos="fade-slide-right"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(-40%);
+}
+[data-aos="fade-slide-right"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-left"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateX(40%);
+}
+[data-aos="fade-slide-left"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-up"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(40%);
+}
+[data-aos="fade-slide-up"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="fade-slide-down"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  transform: translateY(-40%);
+}
+[data-aos="fade-slide-down"] &.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+[data-aos="rotate"] {
+  transition-property: transform;
+  transform: rotateZ(0deg);
+}
+[data-aos="rotate"] &[data-aos-rotate-bottom] {
+  transform-origin: bottom center;
+}
+[data-aos="rotate"] &[data-aos-rotate="10"].aos-animate {
+  transform: rotateZ(10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="20"].aos-animate {
+  transform: rotateZ(20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="30"].aos-animate {
+  transform: rotateZ(30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="40"].aos-animate {
+  transform: rotateZ(40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="50"].aos-animate {
+  transform: rotateZ(50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="60"].aos-animate {
+  transform: rotateZ(60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="70"].aos-animate {
+  transform: rotateZ(70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="80"].aos-animate {
+  transform: rotateZ(80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="90"].aos-animate {
+  transform: rotateZ(90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="100"].aos-animate {
+  transform: rotateZ(100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="110"].aos-animate {
+  transform: rotateZ(110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="120"].aos-animate {
+  transform: rotateZ(120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="130"].aos-animate {
+  transform: rotateZ(130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="140"].aos-animate {
+  transform: rotateZ(140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="150"].aos-animate {
+  transform: rotateZ(150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="160"].aos-animate {
+  transform: rotateZ(160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="170"].aos-animate {
+  transform: rotateZ(170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="180"].aos-animate {
+  transform: rotateZ(180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="190"].aos-animate {
+  transform: rotateZ(190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="200"].aos-animate {
+  transform: rotateZ(200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="210"].aos-animate {
+  transform: rotateZ(210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="220"].aos-animate {
+  transform: rotateZ(220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="230"].aos-animate {
+  transform: rotateZ(230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="240"].aos-animate {
+  transform: rotateZ(240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="250"].aos-animate {
+  transform: rotateZ(250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="260"].aos-animate {
+  transform: rotateZ(260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="270"].aos-animate {
+  transform: rotateZ(270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="280"].aos-animate {
+  transform: rotateZ(280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="290"].aos-animate {
+  transform: rotateZ(290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="300"].aos-animate {
+  transform: rotateZ(300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="310"].aos-animate {
+  transform: rotateZ(310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="320"].aos-animate {
+  transform: rotateZ(320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="330"].aos-animate {
+  transform: rotateZ(330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="340"].aos-animate {
+  transform: rotateZ(340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="350"].aos-animate {
+  transform: rotateZ(350deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-10"].aos-animate {
+  transform: rotateZ(-10deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-20"].aos-animate {
+  transform: rotateZ(-20deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-30"].aos-animate {
+  transform: rotateZ(-30deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-40"].aos-animate {
+  transform: rotateZ(-40deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-50"].aos-animate {
+  transform: rotateZ(-50deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-60"].aos-animate {
+  transform: rotateZ(-60deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-70"].aos-animate {
+  transform: rotateZ(-70deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-80"].aos-animate {
+  transform: rotateZ(-80deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-90"].aos-animate {
+  transform: rotateZ(-90deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-100"].aos-animate {
+  transform: rotateZ(-100deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-110"].aos-animate {
+  transform: rotateZ(-110deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-120"].aos-animate {
+  transform: rotateZ(-120deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-130"].aos-animate {
+  transform: rotateZ(-130deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-140"].aos-animate {
+  transform: rotateZ(-140deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-150"].aos-animate {
+  transform: rotateZ(-150deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-160"].aos-animate {
+  transform: rotateZ(-160deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-170"].aos-animate {
+  transform: rotateZ(-170deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-180"].aos-animate {
+  transform: rotateZ(-180deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-190"].aos-animate {
+  transform: rotateZ(-190deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-200"].aos-animate {
+  transform: rotateZ(-200deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-210"].aos-animate {
+  transform: rotateZ(-210deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-220"].aos-animate {
+  transform: rotateZ(-220deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-230"].aos-animate {
+  transform: rotateZ(-230deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-240"].aos-animate {
+  transform: rotateZ(-240deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-250"].aos-animate {
+  transform: rotateZ(-250deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-260"].aos-animate {
+  transform: rotateZ(-260deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-270"].aos-animate {
+  transform: rotateZ(-270deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-280"].aos-animate {
+  transform: rotateZ(-280deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-290"].aos-animate {
+  transform: rotateZ(-290deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-300"].aos-animate {
+  transform: rotateZ(-300deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-310"].aos-animate {
+  transform: rotateZ(-310deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-320"].aos-animate {
+  transform: rotateZ(-320deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-330"].aos-animate {
+  transform: rotateZ(-330deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-340"].aos-animate {
+  transform: rotateZ(-340deg);
+}
+[data-aos="rotate"] &[data-aos-rotate="-350"].aos-animate {
+  transform: rotateZ(-350deg);
+}
+.carousel__slide-focus-ring {
+  outline: none !important;
+}
+.carousel__dot:focus {
+  outline: none !important;
+}
+.__react_component_tooltip.show {
+  opacity: 1 !important;
+}
 ._2CbrmLa-i_wdPfVaoHPmsl {
   text-transform: uppercase;
   letter-spacing: 1px;

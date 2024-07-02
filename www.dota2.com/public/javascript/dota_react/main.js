@@ -3563,6 +3563,41 @@
         Bold: "_2uu5DOZr2m-lq4A1B16xRR",
       };
     },
+    90656: (e) => {
+      e.exports = {
+        Tooltip: "_1Pmfc2s6LJ0Ty3o7qNjS4L",
+        CarouselFade: "_3KcofopDj_Ydg_GnrrJu__",
+        StandardButton: "_4TmdMOSgEwvSavUCIarEq",
+        ButtonText: "_3QTuNN7g-ywo_bhWakQyiV",
+        Icon: "_2FBWh8_HC85bpqwColbf9d",
+        Play: "_1addoD4TSX1J6SFq21PQbq",
+        SteamLogo: "_2jsQ8zBKOlODXXyuBMhR2c",
+        ToolTip: "_2KDBBStFWXp_jAxRiJFCTE",
+        PlayerReportTooltip: "_3k7DxRAs3fo6Ew_rKhsjCo",
+        VoiceLineGuidelines: "_9Q-Qwknepefiuo2rjgCrD",
+        Background: "_33l2B3Gr2WXnLClm6tlXTt",
+        ContentFrame: "_3MmDFa181HANt5Iis0ywlB",
+        Page: "_2zuRH0bkYjVALxlOGGh0oV",
+        DPCLogo: "WWZZs00veTJiPSmr_AO0l",
+        Header: "_3M9LPVPzylTPEzvnA-_HJJ",
+        SmoothLine: "_294TlbwxoddzeO6QVx29X2",
+        Subheader: "_2PSCpuTWoZmr6N4TwW01pS",
+        ExamplesRow: "_3hxYxgk0n2Xj4NtZGSV5sb",
+        ExamplesImage: "_2bcCEdQOZbyFbUONir4T25",
+        CheckMarkLeft: "NZLwgSbauWtV9TugM5mhz",
+        CheckMarkRight: "aW38voIQC7rl_P3ugsLiV",
+        ExamplesDescription: "_1BCq92fDDqQZjRyWNrId_t",
+        PortraitCreationRules: "_1v_p4nLIM1vP8lkXPqYN7M",
+        PortraitRulesContainer: "sxa4lcZFVqZY3dWj75DPo",
+        PortraitRulesImage: "_8WYqvMvmpv4Ovhxr7DVgj",
+        PortraitRulesContainerLast: "_1_0DfZhOPZbxAkCwSl4xG3",
+        PortraitGuidelineContainer: "_1Bz68eHcfIzRXyfsj2XYGg",
+        ClickZoom: "_1gkn3g4iTE0xfz4BTvDMYH",
+        GuidelinesDetails: "_21RmTkYCP4HhzYjVAexAJM",
+        GuidelinesHeader: "_2AxipE00bDUfJSyNS1xRdl",
+        GuidelinesBulletText: "_1qezvNZozNA57hV6v0hPVA",
+      };
+    },
     74915: (e) => {
       e.exports = {
         Bold: "YFA7ugmq3kVdHH5kWHMPt",
@@ -5716,9 +5751,9 @@
         e && Object.assign(n, e);
       }
     },
-    46792: (e, t, a) => {
+    4572: (e, t, a) => {
       "use strict";
-      a.d(t, { P: () => Vs });
+      a.d(t, { P: () => Xs });
       var r = a(22970),
         n = a(98142),
         i = a(6279),
@@ -6648,7 +6683,7 @@
               "div",
               {
                 onClick: () =>
-                  Vs.PurchaseOnSteamStore(c, 1, window.location.href),
+                  Xs.PurchaseOnSteamStore(c, 1, window.location.href),
                 className: (0, E.Z)(
                   g().TextStyleButton,
                   g().TextColorWhite,
@@ -6742,7 +6777,7 @@
           this.setState({ nImmortalTreasureSelected: e });
         }
         render() {
-          const e = Vs.getPrizePool();
+          const e = Xs.getPrizePool();
           return s.createElement(
             "div",
             { className: g().BattlepassPage },
@@ -12165,10 +12200,10 @@
                       Pe().CapsuleDiscount,
                     ),
                   },
-                  Vs.GetBPDiscount(36, l) &&
+                  Xs.GetBPDiscount(36, l) &&
                     (0, v.Jr)(
                       "#battlepass_purchase_discount",
-                      Vs.GetBPDiscount(36, l),
+                      Xs.GetBPDiscount(36, l),
                       o,
                     ),
                 ),
@@ -12176,7 +12211,7 @@
                   "div",
                   {
                     onClick: () =>
-                      Vs.PurchaseOnSteamStore(l, 1, window.location.href),
+                      Xs.PurchaseOnSteamStore(l, 1, window.location.href),
                     className: (0, E.Z)(
                       Pe().TextStyleButton,
                       Pe().TextColorWhite,
@@ -12189,7 +12224,7 @@
                   },
                   (0, v.Jr)(
                     "#battlepass_purchase_label",
-                    "undefined" !== Vs.GetBPPrice(l) ? Vs.GetBPPrice(l) : "",
+                    "undefined" !== Xs.GetBPPrice(l) ? Xs.GetBPPrice(l) : "",
                   ),
                 ),
               ),
@@ -12265,7 +12300,7 @@
                 "div",
                 {
                   onClick: () =>
-                    Vs.PurchaseOnSteamStore(l, 1, window.location.href),
+                    Xs.PurchaseOnSteamStore(l, 1, window.location.href),
                   className: (0, E.Z)(
                     Pe().TextStyleButton,
                     Pe().TextColorWhite,
@@ -12278,7 +12313,7 @@
                 },
                 (0, v.Jr)(
                   "#battlepass_purchase_label",
-                  "undefined" !== Vs.GetBPPrice(l) ? Vs.GetBPPrice(l) : "",
+                  "undefined" !== Xs.GetBPPrice(l) ? Xs.GetBPPrice(l) : "",
                 ),
               ),
             ),
@@ -12653,7 +12688,7 @@
           super(e);
         }
         render() {
-          const e = Vs.getPrizePool(),
+          const e = Xs.getPrizePool(),
             t = De(xe);
           return s.createElement(
             "div",
@@ -33052,13 +33087,119 @@
             ),
             s.createElement(I.U, null),
           );
-      var ns = a(3904),
+      var ns = a(90656),
         is = a.n(ns);
-      const ss = (0, m.Pi)((e) =>
+      const ss = () =>
+        s.createElement(
+          "div",
+          { className: is().VoiceLineGuidelines },
+          s.createElement(Me.j, { bOverlapping: !1 }),
+          s.createElement(
+            R.ql,
+            null,
+            s.createElement(
+              "title",
+              null,
+              (0, v.Jr)("#voiceline_guidelines_title"),
+            ),
+          ),
+          s.createElement(Mt.Z, null),
+          s.createElement(
+            "div",
+            { className: is().Background },
+            s.createElement(
+              "div",
+              { className: is().ContentFrame },
+              s.createElement(
+                "div",
+                { className: is().Page },
+                s.createElement("img", {
+                  src: `${n.Y.IMG_URL}dpc/dpc_logo.png`,
+                  className: is().DPCLogo,
+                }),
+                s.createElement(
+                  "div",
+                  { className: is().Header },
+                  (0, v.Jr)("#voiceline_guidelines_top_header"),
+                ),
+                s.createElement("div", { className: is().SmoothLine }),
+                s.createElement(
+                  "ul",
+                  null,
+                  s.createElement(
+                    "li",
+                    null,
+                    (0, v.Jr)("#voiceline_guidelines_bullet_1"),
+                  ),
+                  s.createElement(
+                    "li",
+                    null,
+                    (0, v.Jr)("#voiceline_guidelines_bullet_2"),
+                  ),
+                  s.createElement(
+                    "li",
+                    null,
+                    (0, v.Jr)("#voiceline_guidelines_bullet_3"),
+                  ),
+                  s.createElement(
+                    "li",
+                    null,
+                    (0, v.Jr)("#voiceline_guidelines_bullet_4"),
+                  ),
+                  s.createElement(
+                    "li",
+                    null,
+                    (0, v.Jr)("#voiceline_guidelines_bullet_5"),
+                  ),
+                  s.createElement(
+                    "li",
+                    null,
+                    (0, v.Jr)("#voiceline_guidelines_bullet_6"),
+                  ),
+                  s.createElement(
+                    "li",
+                    null,
+                    (0, v.Jr)("#voiceline_guidelines_bullet_7"),
+                  ),
+                  s.createElement(
+                    "li",
+                    null,
+                    (0, v.Jr)("#voiceline_guidelines_bullet_8"),
+                  ),
+                  s.createElement(
+                    "li",
+                    null,
+                    (0, v.Jr)("#voiceline_guidelines_bullet_9"),
+                  ),
+                  s.createElement(
+                    "li",
+                    null,
+                    (0, v.Jr)("#voiceline_guidelines_bullet_10"),
+                  ),
+                  s.createElement(
+                    "li",
+                    null,
+                    (0, v.Jr)("#voiceline_guidelines_bullet_11"),
+                  ),
+                  s.createElement(
+                    "li",
+                    null,
+                    (0, v.Jr)("#voiceline_guidelines_bullet_12"),
+                  ),
+                ),
+                s.createElement("div", { className: is().SmoothLine }),
+              ),
+            ),
+          ),
+          s.createElement(I.U, null),
+        );
+      var os = a(3904),
+        ls = a.n(os);
+      const cs = (0, m.Pi)((e) =>
         s.createElement(
           "div",
           {
-            className: is().ControllerFAQPage,
+            className: ls().ControllerFAQPage,
             style: {
               backgroundImage: `url( ${n.Y.IMG_URL}backgrounds/slate_bg_01.jpg )`,
             },
@@ -33070,85 +33211,85 @@
             s.createElement("title", null, (0, v.Jr)("#controller_faq_title")),
           ),
           s.createElement("div", {
-            className: is().HeaderImage,
+            className: ls().HeaderImage,
             style: {
               backgroundImage: `url( ${n.Y.IMG_URL}labyrinth/assistant_controller.jpg )`,
             },
           }),
           s.createElement(
             "div",
-            { className: is().Body },
+            { className: ls().Body },
             s.createElement(
               "div",
-              { className: is().TopHeader },
+              { className: ls().TopHeader },
               (0, v.Jr)("#controller_faq_title"),
             ),
             s.createElement(
               "div",
-              { className: is().TopBody },
+              { className: ls().TopBody },
               (0, v.Jr)("#controller_faq_body"),
             ),
             s.createElement(
               "div",
-              { className: is().FAQ },
+              { className: ls().FAQ },
               s.createElement(
                 "div",
-                { className: is().FAQQuestion },
+                { className: ls().FAQQuestion },
                 (0, v.Jr)("#controller_faq_q_1"),
               ),
               s.createElement(
                 "div",
-                { className: is().FAQAnswer },
+                { className: ls().FAQAnswer },
                 (0, v.Jr)("#controller_faq_a_1"),
               ),
               s.createElement(
                 "div",
-                { className: is().FAQQuestion },
+                { className: ls().FAQQuestion },
                 (0, v.Jr)("#controller_faq_q_2"),
               ),
               s.createElement(
                 "div",
-                { className: is().FAQAnswer },
+                { className: ls().FAQAnswer },
                 (0, v.Jr)("#controller_faq_a_2"),
               ),
               s.createElement(
                 "div",
-                { className: is().FAQQuestion },
+                { className: ls().FAQQuestion },
                 (0, v.Jr)("#controller_faq_q_3"),
               ),
               s.createElement(
                 "div",
-                { className: is().FAQAnswer },
+                { className: ls().FAQAnswer },
                 (0, v.Jr)("#controller_faq_a_3"),
               ),
               s.createElement(
                 "div",
-                { className: is().FAQQuestion },
+                { className: ls().FAQQuestion },
                 (0, v.Jr)("#controller_faq_q_4"),
               ),
               s.createElement(
                 "div",
-                { className: is().FAQAnswer },
+                { className: ls().FAQAnswer },
                 (0, v.Jr)("#controller_faq_a_4"),
               ),
               s.createElement(
                 "div",
-                { className: is().FAQQuestion },
+                { className: ls().FAQQuestion },
                 (0, v.Jr)("#controller_faq_q_5"),
               ),
               s.createElement(
                 "div",
-                { className: is().FAQAnswer },
+                { className: ls().FAQAnswer },
                 (0, v.Jr)("#controller_faq_a_5"),
               ),
               s.createElement(
                 "div",
-                { className: is().FAQQuestion },
+                { className: ls().FAQQuestion },
                 (0, v.Jr)("#controller_faq_q_6"),
               ),
               s.createElement(
                 "div",
-                { className: is().FAQAnswer },
+                { className: ls().FAQAnswer },
                 (0, v.Jr)("#controller_faq_a_6"),
               ),
             ),
@@ -33156,14 +33297,14 @@
           s.createElement(I.U, null),
         ),
       );
-      var os = a(83566),
-        ls = a.n(os);
-      class cs extends s.Component {
+      var ms = a(83566),
+        ds = a.n(ms);
+      class us extends s.Component {
         render() {
           return s.createElement(
             "div",
             {
-              className: ls().PastUpdates,
+              className: ds().PastUpdates,
               style: {
                 backgroundImage: `url( ${n.Y.IMG_URL}backgrounds/greyfade.jpg )`,
               },
@@ -33180,21 +33321,21 @@
             ),
             s.createElement(
               "div",
-              { className: ls().HeaderSection },
+              { className: ds().HeaderSection },
               s.createElement(
                 "div",
-                { className: ls().Headline },
+                { className: ds().Headline },
                 (0, v.Jr)("#header_previous_updates"),
               ),
             ),
             s.createElement(
               "div",
-              { className: ls().UpdatesContainer },
+              { className: ds().UpdatesContainer },
               s.createElement(
                 "a",
                 { href: "https://www.dota2.com/primalbeast", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/primalbeast_social.jpg )`,
                   },
@@ -33206,7 +33347,7 @@
                 "a",
                 { href: "https://www.dota2.com/labyrinth", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/labyrinth_social.jpg )`,
                   },
@@ -33218,7 +33359,7 @@
                 "a",
                 { href: "https://www.dota2.com/marci", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/marci_social.jpg )`,
                   },
@@ -33230,7 +33371,7 @@
                 "a",
                 { href: "https://www.dota2.com/nemestice", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/nemestice_social.jpg )`,
                   },
@@ -33242,7 +33383,7 @@
                 "a",
                 { href: "https://www.dota2.com/dawnbreaker", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/dawnbreaker_social.jpg )`,
                   },
@@ -33254,7 +33395,7 @@
                 "a",
                 { href: "https://www.dota2.com/mistwoods", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/hoodwink_social.jpg )`,
                   },
@@ -33266,7 +33407,7 @@
                 "a",
                 { href: "https://www.dota2.com/diretide", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/diretide_twitter.png )`,
                   },
@@ -33278,7 +33419,7 @@
                 "a",
                 { href: "https://www.dota2.com/risinggale", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/wr_social.png )`,
                   },
@@ -33290,7 +33431,7 @@
                 "a",
                 { href: "https://www.dota2.com/aghanim", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/aghs_share.png )`,
                   },
@@ -33305,7 +33446,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/am_social.png )`,
                   },
@@ -33320,7 +33461,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/qop_twitter.png )`,
                   },
@@ -33335,7 +33476,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/wk_social.jpg )`,
                   },
@@ -33350,7 +33491,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/ti10_social.jpg )`,
                   },
@@ -33365,7 +33506,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/flockheart_img.jpg )`,
                   },
@@ -33377,7 +33518,7 @@
                 "a",
                 { href: "https://www.dota2.com/outlanders", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/outlanders_social.jpg )`,
                   },
@@ -33392,7 +33533,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/acolyte_social.jpg )`,
                   },
@@ -33404,7 +33545,7 @@
                 "a",
                 { href: "https://www.dota2.com/planetfall", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/planetfall_social.jpg )`,
                   },
@@ -33419,7 +33560,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/ti9_social.jpg )`,
                   },
@@ -33431,7 +33572,7 @@
                 "a",
                 { href: "https://www.dota2.com/mars", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/mars_social.jpg )`,
                   },
@@ -33443,7 +33584,7 @@
                 "a",
                 { href: "http://www.dota2.com/frosthaven", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/frosthaven_social.jpg )`,
                   },
@@ -33455,7 +33596,7 @@
                 "a",
                 { href: "https://www.dota2.com/720", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/720_social.jpg )`,
                   },
@@ -33467,7 +33608,7 @@
                 "a",
                 { href: "https://www.dota2.com/grimstroke", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/grimstroke_social.jpg )`,
                   },
@@ -33482,7 +33623,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/ti8_social.jpg )`,
                   },
@@ -33497,7 +33638,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/pudge_social.jpg )`,
                   },
@@ -33509,7 +33650,7 @@
                 "a",
                 { href: "http://www.dota2.com/plus", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/plus_social.jpg )`,
                   },
@@ -33524,7 +33665,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/duelingfates_social.jpg )`,
                   },
@@ -33539,7 +33680,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/ti7_social.jpg )`,
                   },
@@ -33554,7 +33695,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/bladeform_social.jpg )`,
                   },
@@ -33566,7 +33707,7 @@
                 "a",
                 { href: "http://www.dota2.com/700", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/700_social.jpg )`,
                   },
@@ -33578,7 +33719,7 @@
                 "a",
                 { href: "http://www.dota2.com/darkrift", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/darkrift_social.jpg )`,
                   },
@@ -33593,7 +33734,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/ti6_social.jpg )`,
                   },
@@ -33608,7 +33749,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/shanghai_social.jpg )`,
                   },
@@ -33620,7 +33761,7 @@
                 "a",
                 { href: "http://www.dota2.com/winter2016", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/winterbp_social.jpg )`,
                   },
@@ -33635,7 +33776,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/balance_social.jpg )`,
                   },
@@ -33647,7 +33788,7 @@
                 "a",
                 { href: "http://www.dota2.com/reborn", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/reborn_social.jpg )`,
                   },
@@ -33662,7 +33803,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/ti5_social.jpg )`,
                   },
@@ -33677,7 +33818,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/compendium_social.jpg )`,
                   },
@@ -33692,7 +33833,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/newbloom2015_social.jpg )`,
                   },
@@ -33707,7 +33848,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/snows_social.jpg )`,
                   },
@@ -33719,7 +33860,7 @@
                 "a",
                 { href: "http://www.dota2.com/oracle/day2", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/oracle_social.jpg )`,
                   },
@@ -33734,7 +33875,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/rekindling_social.jpg )`,
                   },
@@ -33746,7 +33887,7 @@
                 "a",
                 { href: "http://www.dota2.com/techies/", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/techies_social.jpg )`,
                   },
@@ -33761,7 +33902,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/ti4_social.jpg )`,
                   },
@@ -33776,7 +33917,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/cleaning_social.jpg )`,
                   },
@@ -33791,7 +33932,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/newbloom2014_social.jpg )`,
                   },
@@ -33803,7 +33944,7 @@
                 "a",
                 { href: "http://www.dota2.com/wraithnight/", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/wraith_social.jpg )`,
                   },
@@ -33818,7 +33959,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/spirits_social.jpg )`,
                   },
@@ -33830,7 +33971,7 @@
                 "a",
                 { href: "http://www.dota2.com/firstblood/", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/firstblood_social.jpg )`,
                   },
@@ -33845,7 +33986,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/beta_social.jpg )`,
                   },
@@ -33860,7 +34001,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/ti3_social.jpg )`,
                   },
@@ -33872,7 +34013,7 @@
                 "a",
                 { href: "http://www.dota2.com/greeviling/", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/greevling_social.jpg )`,
                   },
@@ -33887,7 +34028,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/diretide2012_social.jpg )`,
                   },
@@ -33902,7 +34043,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/aegis_social.jpg )`,
                   },
@@ -33914,7 +34055,7 @@
                 "a",
                 { href: "http://www.dota2.com/spoilsofwar/", target: "_blank" },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/spoils_social.jpg )`,
                   },
@@ -33929,7 +34070,7 @@
                   target: "_blank",
                 },
                 s.createElement("div", {
-                  className: ls().UpdateBlock,
+                  className: ds().UpdateBlock,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}/pastupdates/heroes_social.jpg )`,
                   },
@@ -33942,11 +34083,11 @@
           );
         }
       }
-      var ms = a(95974),
-        ds = a(15330),
-        us = a.n(ds),
-        _s = a(87214);
-      const ps = ({ index: e, video: t, name: a, onSlideIn: r }) => {
+      var _s = a(95974),
+        ps = a(15330),
+        hs = a.n(ps),
+        gs = a(87214);
+      const Es = ({ index: e, video: t, name: a, onSlideIn: r }) => {
           const i = (0, s.useContext)(w.ro),
             o = (0, s.useRef)(),
             l =
@@ -33966,17 +34107,17 @@
             }, [i, e, a, r]),
             s.createElement(
               "div",
-              { className: us().SlideContainer },
+              { className: hs().SlideContainer },
               l
                 ? s.createElement("img", {
-                    className: us().TreasureVideo,
+                    className: hs().TreasureVideo,
                     src: `${n.Y.VIDEO_URL}/augupdate23/${t}.png`,
                   })
                 : s.createElement(
                     "video",
                     {
                       ref: o,
-                      className: us().TreasureVideo,
+                      className: hs().TreasureVideo,
                       autoPlay: !0,
                       preload: "auto",
                       muted: !0,
@@ -33992,66 +34133,66 @@
             )
           );
         },
-        hs = (e) => {
+        vs = (e) => {
           const [t, a] = s.useState(1),
             r = e.comparisons.length - 1;
           return s.createElement(
             "div",
-            { className: us().ComparisonSelector },
+            { className: hs().ComparisonSelector },
             s.createElement(
               "div",
-              { className: us().ComparisonOptions },
+              { className: hs().ComparisonOptions },
               e.comparisons.map((e, a) =>
                 s.createElement(
                   "div",
                   {
                     key: `ComparisonOption_${a}`,
                     className: (0, E.Z)(
-                      us().SliderInset,
-                      t != a && us().Hidden,
+                      hs().SliderInset,
+                      t != a && hs().Hidden,
                     ),
                   },
                   s.createElement(
                     "div",
-                    { className: us().SliderColumn },
+                    { className: hs().SliderColumn },
                     s.createElement(
                       "div",
-                      { className: us().SliderText },
+                      { className: hs().SliderText },
                       s.createElement(
                         "div",
-                        { className: us().MapTitle },
+                        { className: hs().MapTitle },
                         (0, v.Jr)(e.title),
                       ),
                       s.createElement(
                         "div",
-                        { className: us().MapBody },
+                        { className: hs().MapBody },
                         (0, v.Jr)(e.subtitle),
                       ),
                     ),
-                    s.createElement(_s.vx, {
+                    s.createElement(gs.vx, {
                       itemOne: s.createElement("img", {
                         src: `${n.Y.IMG_URL}${e.img_before}`,
-                        className: us().SliderImageSpecs,
+                        className: hs().SliderImageSpecs,
                       }),
                       itemTwo: s.createElement("img", {
                         src: `${n.Y.IMG_URL}${e.img_after}`,
-                        className: us().SliderImageSpecs,
+                        className: hs().SliderImageSpecs,
                       }),
                     }),
                     s.createElement(
                       "div",
-                      { className: us().BeforeAfter },
+                      { className: hs().BeforeAfter },
                       s.createElement(
                         "div",
-                        { className: us().Before },
+                        { className: hs().Before },
                         (0, v.Jr)("#aug23_maprendering_before"),
                       ),
                       s.createElement("div", {
-                        className: us().BeforeAfterLine,
+                        className: hs().BeforeAfterLine,
                       }),
                       s.createElement(
                         "div",
-                        { className: us().After },
+                        { className: hs().After },
                         (0, v.Jr)("#aug23_maprendering_after"),
                       ),
                     ),
@@ -34061,15 +34202,15 @@
             ),
             s.createElement(
               "div",
-              { className: us().ComparisonSelectors },
+              { className: hs().ComparisonSelectors },
               e.comparisons.map((e, n) =>
                 s.createElement(
                   "div",
                   {
                     key: `ComparisonSelector_${n}`,
                     className: (0, E.Z)(
-                      n === r ? us().LionOption : us().ComparisonOption,
-                      t == n && us().Selected,
+                      n === r ? hs().LionOption : hs().ComparisonOption,
+                      t == n && hs().Selected,
                     ),
                     onClick: () => a(n),
                   },
@@ -34079,12 +34220,12 @@
             ),
           );
         },
-        gs = (0, m.Pi)(() => {
+        fs = (0, m.Pi)(() => {
           const [e, t] = s.useState("#aug23_cc_treasure_name3");
-          Vs.getPatchNotes("7.34", n.Y.LANGUAGE);
+          Xs.getPatchNotes("7.34", n.Y.LANGUAGE);
           return s.createElement(
             "div",
-            { className: us().Aug2023Page },
+            { className: hs().Aug2023Page },
             s.createElement(
               R.ql,
               null,
@@ -34094,31 +34235,31 @@
             s.createElement(Mt.Z, null),
             s.createElement(
               "div",
-              { className: us().HeaderContainer },
+              { className: hs().HeaderContainer },
               s.createElement(
                 "div",
                 {
-                  className: us().HeaderInset,
+                  className: hs().HeaderInset,
                   style: {
                     backgroundImage: `url( ${n.Y.IMG_URL}augupdate23/loadout_armory_2023_web_header_cropped.jpg )`,
                   },
                 },
                 s.createElement(
                   "div",
-                  { className: us().HeaderText },
+                  { className: hs().HeaderText },
                   s.createElement(
                     "div",
-                    { className: us().MainTitle },
+                    { className: hs().MainTitle },
                     (0, v.Jr)("#aug23_title_main"),
                   ),
                   s.createElement(
                     "div",
-                    { className: us().Tagline },
+                    { className: hs().Tagline },
                     (0, v.Jr)("#aug23_title_sub_bottom"),
                   ),
                   s.createElement(
                     "div",
-                    { className: us().SubTagline },
+                    { className: hs().SubTagline },
                     (0, v.Jr)("#aug23_title_sub_top"),
                   ),
                 ),
@@ -34133,127 +34274,127 @@
             s.createElement(
               "div",
               {
-                className: us().Container,
+                className: hs().Container,
                 style: {
                   backgroundImage: `url( ${n.Y.IMG_URL}augupdate23/repeater_grey_alt.jpg )`,
                 },
               },
               s.createElement(
                 "div",
-                { className: us().Inset },
+                { className: hs().Inset },
                 s.createElement(
                   "div",
-                  { className: us().SingleRow },
+                  { className: hs().SingleRow },
                   s.createElement(
                     "div",
-                    { className: us().XLText },
+                    { className: hs().XLText },
                     s.createElement(
                       "div",
-                      { className: us().XLTitle },
+                      { className: hs().XLTitle },
                       (0, v.Jr)("#aug23_armory_title"),
                     ),
-                    s.createElement("div", { className: us().HorizDivider }),
+                    s.createElement("div", { className: hs().HorizDivider }),
                     s.createElement(
                       "div",
-                      { className: us().XLSubtitle },
+                      { className: hs().XLSubtitle },
                       (0, v.Jr)("#aug23_armory_title_sub"),
                     ),
                     s.createElement(
                       "div",
-                      { className: us().XLBody },
+                      { className: hs().XLBody },
                       (0, v.Jr)("#aug23_armory_body"),
                     ),
                   ),
                   s.createElement(
                     "div",
                     {
-                      className: us().XLImage,
+                      className: hs().XLImage,
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     s.createElement("img", {
                       src: `${n.Y.IMG_URL}augupdate23/browse_armory.png`,
-                      className: us().XLImageSpecs,
+                      className: hs().XLImageSpecs,
                     }),
                   ),
                   s.createElement(
                     "div",
-                    { className: us().LText },
+                    { className: hs().LText },
                     s.createElement(
                       "div",
-                      { className: us().LTitle },
+                      { className: hs().LTitle },
                       (0, v.Jr)("#aug23_armory_browse_title"),
                     ),
                     s.createElement(
                       "div",
-                      { className: us().LBody },
+                      { className: hs().LBody },
                       (0, v.Jr)("#aug23_armory_browse_body"),
                     ),
                   ),
                 ),
                 s.createElement(
                   "div",
-                  { className: us().RowColumn },
+                  { className: hs().RowColumn },
                   s.createElement(
                     "div",
                     {
-                      className: us().Row,
+                      className: hs().Row,
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     s.createElement(
                       "div",
-                      { className: us().MText },
+                      { className: hs().MText },
                       s.createElement(
                         "div",
-                        { className: us().MTitle },
+                        { className: hs().MTitle },
                         (0, v.Jr)("#aug23_armory_paperdoll_title"),
                       ),
                       s.createElement(
                         "div",
-                        { className: us().MBody },
+                        { className: hs().MBody },
                         (0, v.Jr)("#aug23_armory_paperdoll_body"),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: us().RowImage },
+                      { className: hs().RowImage },
                       s.createElement("img", {
                         src: `${n.Y.IMG_URL}augupdate23/armory_item_combos.png`,
-                        className: us().RowImageSpecs,
+                        className: hs().RowImageSpecs,
                       }),
                     ),
                   ),
                   s.createElement(
                     "div",
                     {
-                      className: us().Row,
+                      className: hs().Row,
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     s.createElement(
                       "div",
-                      { className: us().MText },
+                      { className: hs().MText },
                       s.createElement(
                         "div",
-                        { className: us().MTitle },
+                        { className: hs().MTitle },
                         (0, v.Jr)("#aug23_armory_global_title"),
                       ),
                       s.createElement(
                         "div",
-                        { className: us().MBody },
+                        { className: hs().MBody },
                         (0, v.Jr)("#aug23_armory_global_body"),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: us().RowImage },
+                      { className: hs().RowImage },
                       s.createElement("img", {
                         src: `${n.Y.IMG_URL}augupdate23/global_armory_items.png`,
-                        className: us().RowImageSpecs,
+                        className: hs().RowImageSpecs,
                       }),
                     ),
                   ),
@@ -34261,85 +34402,85 @@
                 s.createElement(
                   "div",
                   {
-                    className: us().GridRow,
+                    className: hs().GridRow,
                     "data-aos": "fade-up",
                     "data-aos-delay": "200",
                     "data-aos-duration": "2000",
                   },
                   s.createElement(
                     "div",
-                    { className: us().GridColumn },
+                    { className: hs().GridColumn },
                     s.createElement(
                       "div",
-                      { className: us().GridImage },
+                      { className: hs().GridImage },
                       s.createElement("img", {
                         src: `${n.Y.IMG_URL}augupdate23/armory_item_highlight.png`,
-                        className: us().GridImageSpecs,
+                        className: hs().GridImageSpecs,
                       }),
                     ),
                     s.createElement(
                       "div",
-                      { className: us().GridText },
+                      { className: hs().GridText },
                       s.createElement(
                         "div",
-                        { className: us().MTitle },
+                        { className: hs().MTitle },
                         (0, v.Jr)("#aug23_armory_highlight_title"),
                       ),
                       s.createElement(
                         "div",
-                        { className: us().MBody },
+                        { className: hs().MBody },
                         (0, v.Jr)("#aug23_armory_highlight_body"),
                       ),
                     ),
                   ),
                   s.createElement(
                     "div",
-                    { className: us().GridColumn },
+                    { className: hs().GridColumn },
                     s.createElement(
                       "div",
-                      { className: us().GridImage },
+                      { className: hs().GridImage },
                       s.createElement("img", {
                         src: `${n.Y.IMG_URL}augupdate23/armory_stack_duplicates.png`,
-                        className: us().GridImageSpecs,
+                        className: hs().GridImageSpecs,
                       }),
                     ),
                     s.createElement(
                       "div",
-                      { className: us().GridText },
+                      { className: hs().GridText },
                       s.createElement(
                         "div",
-                        { className: us().MTitle },
+                        { className: hs().MTitle },
                         (0, v.Jr)("#aug23_armory_stack_title"),
                       ),
                       s.createElement(
                         "div",
-                        { className: us().MBody },
+                        { className: hs().MBody },
                         (0, v.Jr)("#aug23_armory_stack_body"),
                       ),
                     ),
                   ),
                   s.createElement(
                     "div",
-                    { className: us().GridColumn },
+                    { className: hs().GridColumn },
                     s.createElement(
                       "div",
-                      { className: us().GridImage },
+                      { className: hs().GridImage },
                       s.createElement("img", {
                         src: `${n.Y.IMG_URL}augupdate23/armory_sort_market_value.png`,
-                        className: us().GridImageSpecs,
+                        className: hs().GridImageSpecs,
                       }),
                     ),
                     s.createElement(
                       "div",
-                      { className: us().GridText },
+                      { className: hs().GridText },
                       s.createElement(
                         "div",
-                        { className: us().MTitle },
+                        { className: hs().MTitle },
                         (0, v.Jr)("#aug23_armory_sort_title"),
                       ),
                       s.createElement(
                         "div",
-                        { className: us().MBody },
+                        { className: hs().MBody },
                         (0, v.Jr)("#aug23_armory_sort_body"),
                       ),
                     ),
@@ -34349,45 +34490,45 @@
             ),
             s.createElement(
               "div",
-              { className: us().ContainerCarousel },
+              { className: hs().ContainerCarousel },
               s.createElement(
                 "div",
-                { className: us().Inset },
+                { className: hs().Inset },
                 s.createElement(
                   "div",
-                  { className: us().CCText },
+                  { className: hs().CCText },
                   s.createElement(
                     "div",
-                    { className: us().CCTitle },
+                    { className: hs().CCTitle },
                     (0, v.Jr)("#aug23_cc_title"),
                   ),
-                  s.createElement("div", { className: us().HorizDivider }),
+                  s.createElement("div", { className: hs().HorizDivider }),
                   s.createElement(
                     "div",
-                    { className: us().CCSubtitle },
+                    { className: hs().CCSubtitle },
                     (0, v.Jr)("#aug23_cc_sub"),
                   ),
                   s.createElement(
                     "div",
-                    { className: us().CCBody },
+                    { className: hs().CCBody },
                     (0, v.Jr)("#aug23_cc_body"),
                   ),
                   s.createElement(
                     "div",
                     {
                       onClick: () =>
-                        Vs.PurchaseOnSteamStore(24613, 1, window.location.href),
+                        Xs.PurchaseOnSteamStore(24613, 1, window.location.href),
                       className: (0, E.Z)(
-                        us().CCBtn,
-                        us().TextStyleButton,
-                        us().TextColorWhite,
-                        us().CapsulePurchaseButton,
+                        hs().CCBtn,
+                        hs().TextStyleButton,
+                        hs().TextColorWhite,
+                        hs().CapsulePurchaseButton,
                       ),
                     },
                     (0, v.Jr)(
                       "#aug23_cc_btn",
-                      "undefined" !== Vs.GetBPPrice(24613)
-                        ? Vs.GetBPPrice(24613)
+                      "undefined" !== Xs.GetBPPrice(24613)
+                        ? Xs.GetBPPrice(24613)
                         : "",
                     ),
                   ),
@@ -34396,7 +34537,7 @@
               s.createElement(
                 w.sj,
                 {
-                  className: us().TreasureCarousel,
+                  className: hs().TreasureCarousel,
                   naturalSlideWidth: 540,
                   naturalSlideHeight: 960,
                   totalSlides: 16,
@@ -34407,16 +34548,16 @@
                 },
                 s.createElement(
                   w.iR,
-                  { className: us().TreasureSlider },
+                  { className: hs().TreasureSlider },
                   s.createElement(
                     w.Mi,
                     {
                       index: 0,
-                      className: us().TreasureSlide,
-                      innerClassName: us().TreasureInnerSlide,
-                      classNameHidden: us().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    s.createElement(ps, {
+                    s.createElement(Es, {
                       index: 0,
                       video: "cc_abaddon",
                       name: "#aug23_cc_treasure_name1",
@@ -34429,11 +34570,11 @@
                     w.Mi,
                     {
                       index: 1,
-                      className: us().TreasureSlide,
-                      innerClassName: us().TreasureInnerSlide,
-                      classNameHidden: us().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    s.createElement(ps, {
+                    s.createElement(Es, {
                       index: 1,
                       video: "cc_alchemist",
                       name: "#aug23_cc_treasure_name2",
@@ -34446,11 +34587,11 @@
                     w.Mi,
                     {
                       index: 2,
-                      className: us().TreasureSlide,
-                      innerClassName: us().TreasureInnerSlide,
-                      classNameHidden: us().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    s.createElement(ps, {
+                    s.createElement(Es, {
                       index: 2,
                       video: "cc_antimage",
                       name: "#aug23_cc_treasure_name3",
@@ -34463,11 +34604,11 @@
                     w.Mi,
                     {
                       index: 3,
-                      className: us().TreasureSlide,
-                      innerClassName: us().TreasureInnerSlide,
-                      classNameHidden: us().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    s.createElement(ps, {
+                    s.createElement(Es, {
                       index: 3,
                       video: "cc_dawnbreaker",
                       name: "#aug23_cc_treasure_name4",
@@ -34480,11 +34621,11 @@
                     w.Mi,
                     {
                       index: 4,
-                      className: us().TreasureSlide,
-                      innerClassName: us().TreasureInnerSlide,
-                      classNameHidden: us().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    s.createElement(ps, {
+                    s.createElement(Es, {
                       index: 4,
                       video: "cc_dazzle",
                       name: "#aug23_cc_treasure_name5",
@@ -34497,11 +34638,11 @@
                     w.Mi,
                     {
                       index: 5,
-                      className: us().TreasureSlide,
-                      innerClassName: us().TreasureInnerSlide,
-                      classNameHidden: us().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    s.createElement(ps, {
+                    s.createElement(Es, {
                       index: 5,
                       video: "cc_death_prophet",
                       name: "#aug23_cc_treasure_name6",
@@ -34514,11 +34655,11 @@
                     w.Mi,
                     {
                       index: 6,
-                      className: us().TreasureSlide,
-                      innerClassName: us().TreasureInnerSlide,
-                      classNameHidden: us().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    s.createElement(ps, {
+                    s.createElement(Es, {
                       index: 6,
                       video: "cc_hoodwink",
                       name: "#aug23_cc_treasure_name7",
@@ -34531,11 +34672,11 @@
                     w.Mi,
                     {
                       index: 7,
-                      className: us().TreasureSlide,
-                      innerClassName: us().TreasureInnerSlide,
-                      classNameHidden: us().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    s.createElement(ps, {
+                    s.createElement(Es, {
                       index: 7,
                       video: "cc_jakiro",
                       name: "#aug23_cc_treasure_name8",
@@ -34548,11 +34689,11 @@
                     w.Mi,
                     {
                       index: 8,
-                      className: us().TreasureSlide,
-                      innerClassName: us().TreasureInnerSlide,
-                      classNameHidden: us().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    s.createElement(ps, {
+                    s.createElement(Es, {
                       index: 8,
                       video: "cc_kunkka",
                       name: "#aug23_cc_treasure_name9",
@@ -34565,11 +34706,11 @@
                     w.Mi,
                     {
                       index: 9,
-                      className: us().TreasureSlide,
-                      innerClassName: us().TreasureInnerSlide,
-                      classNameHidden: us().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    s.createElement(ps, {
+                    s.createElement(Es, {
                       index: 9,
                       video: "cc_legion_commander",
                       name: "#aug23_cc_treasure_name10",
@@ -34582,11 +34723,11 @@
                     w.Mi,
                     {
                       index: 10,
-                      className: us().TreasureSlide,
-                      innerClassName: us().TreasureInnerSlide,
-                      classNameHidden: us().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    s.createElement(ps, {
+                    s.createElement(Es, {
                       index: 10,
                       video: "cc_marci",
                       name: "#aug23_cc_treasure_name11",
@@ -34599,11 +34740,11 @@
                     w.Mi,
                     {
                       index: 11,
-                      className: us().TreasureSlide,
-                      innerClassName: us().TreasureInnerSlide,
-                      classNameHidden: us().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    s.createElement(ps, {
+                    s.createElement(Es, {
                       index: 11,
                       video: "cc_primal_beast",
                       name: "#aug23_cc_treasure_name12",
@@ -34616,11 +34757,11 @@
                     w.Mi,
                     {
                       index: 12,
-                      className: us().TreasureSlide,
-                      innerClassName: us().TreasureInnerSlide,
-                      classNameHidden: us().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    s.createElement(ps, {
+                    s.createElement(Es, {
                       index: 12,
                       video: "cc_snapfire",
                       name: "#aug23_cc_treasure_name13",
@@ -34633,11 +34774,11 @@
                     w.Mi,
                     {
                       index: 13,
-                      className: us().TreasureSlide,
-                      innerClassName: us().TreasureInnerSlide,
-                      classNameHidden: us().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    s.createElement(ps, {
+                    s.createElement(Es, {
                       index: 13,
                       video: "cc_spectre",
                       name: "#aug23_cc_treasure_name14",
@@ -34650,11 +34791,11 @@
                     w.Mi,
                     {
                       index: 14,
-                      className: us().TreasureSlide,
-                      innerClassName: us().TreasureInnerSlide,
-                      classNameHidden: us().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    s.createElement(ps, {
+                    s.createElement(Es, {
                       index: 14,
                       video: "cc_storm_spirit",
                       name: "#aug23_cc_treasure_name15",
@@ -34667,11 +34808,11 @@
                     w.Mi,
                     {
                       index: 15,
-                      className: us().TreasureSlide,
-                      innerClassName: us().TreasureInnerSlide,
-                      classNameHidden: us().TreasureSlideHidden,
+                      className: hs().TreasureSlide,
+                      innerClassName: hs().TreasureInnerSlide,
+                      classNameHidden: hs().TreasureSlideHidden,
                     },
-                    s.createElement(ps, {
+                    s.createElement(Es, {
                       index: 15,
                       video: "cc_wraith_king",
                       name: "#aug23_cc_treasure_name16",
@@ -34683,100 +34824,100 @@
                 ),
                 s.createElement(
                   "div",
-                  { className: us().TreasureName },
+                  { className: hs().TreasureName },
                   (0, v.Jr)(e),
                 ),
                 s.createElement(
                   "div",
-                  { className: us().CarouselDots },
+                  { className: hs().CarouselDots },
                   s.createElement(
                     w.jp,
-                    { className: us().TreasureBack },
+                    { className: hs().TreasureBack },
                     s.createElement("div", null),
                   ),
                   s.createElement(
                     w.oT,
-                    { className: us().TreasureSelector, slide: 0 },
+                    { className: hs().TreasureSelector, slide: 0 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
                     w.oT,
-                    { className: us().TreasureSelector, slide: 1 },
+                    { className: hs().TreasureSelector, slide: 1 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
                     w.oT,
-                    { className: us().TreasureSelector, slide: 2 },
+                    { className: hs().TreasureSelector, slide: 2 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
                     w.oT,
-                    { className: us().TreasureSelector, slide: 3 },
+                    { className: hs().TreasureSelector, slide: 3 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
                     w.oT,
-                    { className: us().TreasureSelector, slide: 4 },
+                    { className: hs().TreasureSelector, slide: 4 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
                     w.oT,
-                    { className: us().TreasureSelector, slide: 5 },
+                    { className: hs().TreasureSelector, slide: 5 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
                     w.oT,
-                    { className: us().TreasureSelector, slide: 6 },
+                    { className: hs().TreasureSelector, slide: 6 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
                     w.oT,
-                    { className: us().TreasureSelector, slide: 7 },
+                    { className: hs().TreasureSelector, slide: 7 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
                     w.oT,
-                    { className: us().TreasureSelector, slide: 8 },
+                    { className: hs().TreasureSelector, slide: 8 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
                     w.oT,
-                    { className: us().TreasureSelector, slide: 9 },
+                    { className: hs().TreasureSelector, slide: 9 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
                     w.oT,
-                    { className: us().TreasureSelector, slide: 10 },
+                    { className: hs().TreasureSelector, slide: 10 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
                     w.oT,
-                    { className: us().TreasureSelector, slide: 11 },
+                    { className: hs().TreasureSelector, slide: 11 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
                     w.oT,
-                    { className: us().TreasureSelector, slide: 12 },
+                    { className: hs().TreasureSelector, slide: 12 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
                     w.oT,
-                    { className: us().TreasureSelector, slide: 13 },
+                    { className: hs().TreasureSelector, slide: 13 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
                     w.oT,
-                    { className: us().TreasureSelector, slide: 14 },
+                    { className: hs().TreasureSelector, slide: 14 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
                     w.oT,
-                    { className: us().TreasureSelector, slide: 15 },
+                    { className: hs().TreasureSelector, slide: 15 },
                     s.createElement("div", null),
                   ),
                   s.createElement(
                     w.P1,
-                    { className: us().TreasureNext },
+                    { className: hs().TreasureNext },
                     s.createElement("div", null),
                   ),
                 ),
@@ -34785,212 +34926,212 @@
             s.createElement(
               "div",
               {
-                className: us().Container,
+                className: hs().Container,
                 style: {
                   backgroundImage: `url( ${n.Y.IMG_URL}augupdate23/repeater_grey_alt.jpg )`,
                 },
               },
               s.createElement(
                 "div",
-                { className: us().Inset },
+                { className: hs().Inset },
                 s.createElement(
                   "div",
-                  { className: us().SingleRow },
+                  { className: hs().SingleRow },
                   s.createElement(
                     "div",
-                    { className: us().XLText },
+                    { className: hs().XLText },
                     s.createElement(
                       "div",
-                      { className: us().XLTitle },
+                      { className: hs().XLTitle },
                       (0, v.Jr)("#aug23_playerbehavior_title"),
                     ),
-                    s.createElement("div", { className: us().HorizDivider }),
+                    s.createElement("div", { className: hs().HorizDivider }),
                     s.createElement(
                       "div",
-                      { className: us().XLSubtitle },
+                      { className: hs().XLSubtitle },
                       (0, v.Jr)("#aug23_playerbehavior_subtitle"),
                     ),
                     s.createElement(
                       "div",
-                      { className: us().XLBody },
+                      { className: hs().XLBody },
                       (0, v.Jr)("#aug23_playerbehavior_body"),
                     ),
                   ),
                 ),
                 s.createElement(
                   "div",
-                  { className: us().RowColumn },
+                  { className: hs().RowColumn },
                   s.createElement(
                     "div",
                     {
-                      className: (0, E.Z)(us().Row, us().Flip),
+                      className: (0, E.Z)(hs().Row, hs().Flip),
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     s.createElement(
                       "div",
-                      { className: us().MText },
+                      { className: hs().MText },
                       s.createElement(
                         "div",
-                        { className: us().MTitle },
+                        { className: hs().MTitle },
                         (0, v.Jr)("#aug23_playerbehavior_matchmaking_title"),
                       ),
                       s.createElement(
                         "div",
-                        { className: us().MBody },
+                        { className: hs().MBody },
                         (0, v.Jr)("#aug23_playerbehavior_matchmaking_body"),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: us().RowImage },
+                      { className: hs().RowImage },
                       s.createElement("img", {
                         src: `${n.Y.IMG_URL}augupdate23/behavior_matchmaking.png`,
-                        className: us().RowImageSpecs,
+                        className: hs().RowImageSpecs,
                       }),
                     ),
                   ),
                   s.createElement(
                     "div",
                     {
-                      className: us().Row,
+                      className: hs().Row,
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     s.createElement(
                       "div",
-                      { className: us().MText },
+                      { className: hs().MText },
                       s.createElement(
                         "div",
-                        { className: us().MTitle },
+                        { className: hs().MTitle },
                         (0, v.Jr)("#aug23_playerbehavior_reporting_title"),
                       ),
                       s.createElement(
                         "div",
-                        { className: us().MBody },
+                        { className: hs().MBody },
                         (0, v.Jr)("#aug23_playerbehavior_reporting_body"),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: us().RowImage },
+                      { className: hs().RowImage },
                       s.createElement("img", {
                         src: `${n.Y.IMG_URL}augupdate23/behavior_reporting.png`,
-                        className: us().RowImageSpecs,
+                        className: hs().RowImageSpecs,
                       }),
                     ),
                   ),
                   s.createElement(
                     "div",
                     {
-                      className: (0, E.Z)(us().Row, us().Flip),
+                      className: (0, E.Z)(hs().Row, hs().Flip),
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     s.createElement(
                       "div",
-                      { className: us().MText },
+                      { className: hs().MText },
                       s.createElement(
                         "div",
-                        { className: us().MTitle },
+                        { className: hs().MTitle },
                         (0, v.Jr)("#aug23_playerbehavior_goodreport_title"),
                       ),
                       s.createElement(
                         "div",
-                        { className: us().MBody },
+                        { className: hs().MBody },
                         (0, v.Jr)("#aug23_playerbehavior_goodreport_body"),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: us().RowImage },
+                      { className: hs().RowImage },
                       s.createElement("img", {
                         src: `${n.Y.IMG_URL}augupdate23/behavior_good_reports.png`,
-                        className: us().RowImageSpecs,
+                        className: hs().RowImageSpecs,
                       }),
                     ),
                   ),
                   s.createElement(
                     "div",
                     {
-                      className: us().Row,
+                      className: hs().Row,
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     s.createElement(
                       "div",
-                      { className: us().MText },
+                      { className: hs().MText },
                       s.createElement(
                         "div",
-                        { className: us().MTitle },
+                        { className: hs().MTitle },
                         (0, v.Jr)("#aug23_playerbehavior_chat_title"),
                       ),
                       s.createElement(
                         "div",
-                        { className: us().MBody },
+                        { className: hs().MBody },
                         (0, v.Jr)("#aug23_playerbehavior_chat_body"),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: us().RowImage },
+                      { className: hs().RowImage },
                       s.createElement("img", {
                         src: `${n.Y.IMG_URL}augupdate23/behavior_toxic_chat.png`,
-                        className: us().RowImageSpecs,
+                        className: hs().RowImageSpecs,
                       }),
                     ),
                   ),
                   s.createElement(
                     "div",
                     {
-                      className: (0, E.Z)(us().Row, us().Flip),
+                      className: (0, E.Z)(hs().Row, hs().Flip),
                       "data-aos": "fade-up",
                       "data-aos-delay": "200",
                       "data-aos-duration": "2000",
                     },
                     s.createElement(
                       "div",
-                      { className: us().MText },
+                      { className: hs().MText },
                       s.createElement(
                         "div",
-                        { className: us().MTitle },
+                        { className: hs().MTitle },
                         (0, v.Jr)("#aug23_playerbehavior_scores_title"),
                       ),
                       s.createElement(
                         "div",
-                        { className: us().MBody },
+                        { className: hs().MBody },
                         (0, v.Jr)("#aug23_playerbehavior_scores_body"),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: us().RowImage },
+                      { className: hs().RowImage },
                       s.createElement("img", {
                         src: `${n.Y.IMG_URL}augupdate23/summary_behavior.png`,
-                        className: us().RowImageSpecs,
+                        className: hs().RowImageSpecs,
                       }),
                     ),
                   ),
                 ),
                 s.createElement(
                   "div",
-                  { className: us().SingleRow },
+                  { className: hs().SingleRow },
                   s.createElement(
                     "div",
-                    { className: us().XLText },
+                    { className: hs().XLText },
                     s.createElement(
                       "div",
-                      { className: us().XLTitle },
+                      { className: hs().XLTitle },
                       (0, v.Jr)("#aug23_playerbehavior_forward_title"),
                     ),
-                    s.createElement("div", { className: us().HorizDivider }),
+                    s.createElement("div", { className: hs().HorizDivider }),
                     s.createElement(
                       "div",
-                      { className: us().XLBody },
+                      { className: hs().XLBody },
                       (0, v.Jr)("#aug23_playerbehavior_forward_body"),
                     ),
                   ),
@@ -35000,29 +35141,29 @@
             s.createElement(
               "div",
               {
-                className: us().Container,
+                className: hs().Container,
                 style: {
                   backgroundImage: `url( ${n.Y.IMG_URL}augupdate23/repeater_grey_alt.jpg )`,
                 },
               },
               s.createElement(
                 "div",
-                { className: us().Inset },
+                { className: hs().Inset },
                 s.createElement(
                   "div",
-                  { className: us().SingleRow },
+                  { className: hs().SingleRow },
                   s.createElement(
                     "div",
-                    { className: us().XLText },
+                    { className: hs().XLText },
                     s.createElement(
                       "div",
-                      { className: us().XLTitle },
+                      { className: hs().XLTitle },
                       (0, v.Jr)("#aug23_maprendering_title"),
                     ),
-                    s.createElement("div", { className: us().HorizDivider }),
+                    s.createElement("div", { className: hs().HorizDivider }),
                     s.createElement(
                       "div",
-                      { className: us().XLBody },
+                      { className: hs().XLBody },
                       (0, v.Jr)("#aug23_maprendering_body"),
                     ),
                   ),
@@ -35030,8 +35171,8 @@
               ),
               s.createElement(
                 "div",
-                { className: us().SliderContainer },
-                s.createElement(hs, {
+                { className: hs().SliderContainer },
+                s.createElement(vs, {
                   comparisons: [
                     {
                       title: "#aug23_maprendering_particles_title",
@@ -35062,51 +35203,51 @@
               ),
               s.createElement(
                 "div",
-                { className: us().SingleSliderContainer },
+                { className: hs().SingleSliderContainer },
                 s.createElement(
                   "div",
-                  { className: us().SingleSliderInset },
+                  { className: hs().SingleSliderInset },
                   s.createElement(
                     "div",
-                    { className: us().SingleSliderColumn },
+                    { className: hs().SingleSliderColumn },
                     s.createElement(
                       "div",
-                      { className: us().SingleSliderText },
+                      { className: hs().SingleSliderText },
                       s.createElement(
                         "div",
-                        { className: us().SingleMapTitle },
+                        { className: hs().SingleMapTitle },
                         (0, v.Jr)("#aug23_maprendering_final_title"),
                       ),
                       s.createElement(
                         "div",
-                        { className: us().SingleMapBody },
+                        { className: hs().SingleMapBody },
                         (0, v.Jr)("#aug23_maprendering_final_body"),
                       ),
                     ),
-                    s.createElement(_s.vx, {
+                    s.createElement(gs.vx, {
                       itemOne: s.createElement("img", {
                         src: `${n.Y.IMG_URL}augupdate23/FinalMapBefore.jpg`,
-                        className: us().SingleSliderImageSpecs,
+                        className: hs().SingleSliderImageSpecs,
                       }),
                       itemTwo: s.createElement("img", {
                         src: `${n.Y.IMG_URL}augupdate23/FinalMapAfter.jpg`,
-                        className: us().SingleSliderImageSpecs,
+                        className: hs().SingleSliderImageSpecs,
                       }),
                     }),
                     s.createElement(
                       "div",
-                      { className: us().SingleBeforeAfter },
+                      { className: hs().SingleBeforeAfter },
                       s.createElement(
                         "div",
-                        { className: us().Before },
+                        { className: hs().Before },
                         (0, v.Jr)("#aug23_maprendering_before"),
                       ),
                       s.createElement("div", {
-                        className: us().SingleBeforeAfterLine,
+                        className: hs().SingleBeforeAfterLine,
                       }),
                       s.createElement(
                         "div",
-                        { className: us().After },
+                        { className: hs().After },
                         (0, v.Jr)("#aug23_maprendering_after"),
                       ),
                     ),
@@ -35117,14 +35258,14 @@
             s.createElement(I.U, null),
           );
         });
-      var Es = a(85314),
-        vs = a.n(Es);
-      const fs = () =>
+      var bs = a(85314),
+        ys = a.n(bs);
+      const Ss = () =>
           s.createElement("div", {
-            className: vs().RightArrow,
+            className: ys().RightArrow,
             style: { backgroundImage: `url( ${n.Y.IMG_URL}/arrow_left.png )` },
           }),
-        bs = ({
+        Ts = ({
           shouldShow: e,
           showFunc: t,
           className: a,
@@ -35135,31 +35276,31 @@
             "div",
             {
               className: (0, E.Z)(
-                vs().PopupPanelContainer,
-                e && vs().ShowPopupPanel,
+                ys().PopupPanelContainer,
+                e && ys().ShowPopupPanel,
               ),
               onClick: () => t(!1),
             },
             s.createElement(
               "div",
               {
-                className: (0, E.Z)(vs().PopupPanel, a),
+                className: (0, E.Z)(ys().PopupPanel, a),
                 onClick: (e) => e.stopPropagation(),
               },
               r &&
                 s.createElement(
                   "div",
-                  { className: vs().CloseButton, onClick: () => t(!1) },
+                  { className: ys().CloseButton, onClick: () => t(!1) },
                   s.createElement("img", { src: `${n.Y.IMG_URL}close.png` }),
                 ),
               i,
             ),
           );
-      class ys extends s.Component {
+      class Is extends s.Component {
         constructor(e) {
           super(e),
             (this.handleClick = (e) => {
-              if (Vs.getShortFilmOwnership()) {
+              if (Xs.getShortFilmOwnership()) {
                 const e =
                   n.Y.BASE_URL +
                   c._.shortfilm() +
@@ -35168,14 +35309,14 @@
               } else this.setState({ bPopupVisible: e });
             }),
             (this.handleAccepted = () => {
-              Vs.grantShortFilmAppIDOwnership();
+              Xs.grantShortFilmAppIDOwnership();
               const e =
                 n.Y.BASE_URL +
                 c._.shortfilm() +
                 "/redirecttosteamcommunityshortfilm/";
               history.pushState("", "", e), history.go();
             }),
-            (this.BGetOwnsApp = () => Vs.getShortFilmOwnership()),
+            (this.BGetOwnsApp = () => Xs.getShortFilmOwnership()),
             (this.state = { bPopupVisible: !1 });
         }
         render() {
@@ -35183,7 +35324,7 @@
             this.BGetOwnsApp(),
             s.createElement(
               "div",
-              { className: vs().HomePage },
+              { className: ys().HomePage },
               s.createElement(Me.j, { bOverlapping: !0 }),
               s.createElement(
                 R.ql,
@@ -35192,14 +35333,14 @@
               ),
               s.createElement(
                 "div",
-                { className: vs().HeaderSection },
+                { className: ys().HeaderSection },
                 s.createElement(
                   "div",
-                  { className: vs().BackgroundVideoContainer },
+                  { className: ys().BackgroundVideoContainer },
                   s.createElement(
                     "video",
                     {
-                      className: vs().BackgroundVideo,
+                      className: ys().BackgroundVideo,
                       autoPlay: !0,
                       preload: "auto",
                       muted: !0,
@@ -35219,14 +35360,14 @@
                 ),
                 s.createElement(
                   "div",
-                  { className: vs().TitleContainer },
+                  { className: ys().TitleContainer },
                   s.createElement(
                     "div",
-                    { className: vs().TopRow },
+                    { className: ys().TopRow },
                     s.createElement(
                       "video",
                       {
-                        className: vs().HeroLogo,
+                        className: ys().HeroLogo,
                         autoPlay: !0,
                         preload: "auto",
                         muted: !0,
@@ -35240,10 +35381,10 @@
                     ),
                     s.createElement(
                       "div",
-                      { className: vs().ButtonRow },
+                      { className: ys().ButtonRow },
                       s.createElement(
                         "div",
-                        { className: vs().CommunityDesc },
+                        { className: ys().CommunityDesc },
                         (0, v.Jr)("#filmcontest_submit_label"),
                       ),
                       0 == n.Y.ACCOUNT_ID &&
@@ -35256,17 +35397,17 @@
                             "div",
                             {
                               className: (0, E.Z)(
-                                vs().FilmButton,
-                                vs().SteamButton,
+                                ys().FilmButton,
+                                ys().SteamButton,
                               ),
                             },
                             s.createElement(
                               "div",
-                              { className: vs().ButtonText },
+                              { className: ys().ButtonText },
                               (0, v.Jr)("#filmcontest_login_steam"),
                             ),
                             s.createElement("div", {
-                              className: vs().SteamLogo,
+                              className: ys().SteamLogo,
                             }),
                           ),
                         ),
@@ -35276,20 +35417,20 @@
                           {
                             onClick: () => this.handleClick(!0),
                             className: (0, E.Z)(
-                              vs().FilmButton,
-                              vs().SteamButton,
+                              ys().FilmButton,
+                              ys().SteamButton,
                             ),
                           },
                           s.createElement(
                             "div",
-                            { className: vs().ButtonText },
+                            { className: ys().ButtonText },
                             (0, v.Jr)("#filmcontest_button_submit"),
                           ),
-                          s.createElement(fs, null),
+                          s.createElement(Ss, null),
                         ),
                       s.createElement(
                         "div",
-                        { className: vs().CommunityDesc },
+                        { className: ys().CommunityDesc },
                         (0, v.Jr)("#filmcontest_community"),
                       ),
                       s.createElement(
@@ -35297,78 +35438,78 @@
                         { href: "https://steamcommunity.com/dota2shortfilm/" },
                         s.createElement(
                           "div",
-                          { className: vs().FilmButton },
+                          { className: ys().FilmButton },
                           s.createElement(
                             "div",
-                            { className: vs().ButtonText },
+                            { className: ys().ButtonText },
                             (0, v.Jr)("#filmcontest_submissions"),
                           ),
-                          s.createElement(fs, null),
+                          s.createElement(Ss, null),
                         ),
                       ),
                     ),
                   ),
                   s.createElement(
                     "div",
-                    { className: vs().Introduction },
+                    { className: ys().Introduction },
                     (0, v.Jr)("#filmcontest24_intro"),
                   ),
                   s.createElement(
                     "div",
-                    { className: vs().Prizes },
+                    { className: ys().Prizes },
                     s.createElement(
                       "div",
-                      { className: (0, E.Z)(vs().Prize, vs().Prize1) },
+                      { className: (0, E.Z)(ys().Prize, ys().Prize1) },
                       s.createElement(
                         "div",
-                        { className: vs().PrizeAmount },
+                        { className: ys().PrizeAmount },
                         (0, v.Jr)("#filmcontest_prize1_amount"),
                       ),
                       s.createElement(
                         "div",
-                        { className: vs().PrizeLabel },
+                        { className: ys().PrizeLabel },
                         (0, v.Jr)("#filmcontest_prize1_label"),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: (0, E.Z)(vs().Prize, vs().Prize2) },
+                      { className: (0, E.Z)(ys().Prize, ys().Prize2) },
                       s.createElement(
                         "div",
-                        { className: vs().PrizeAmount },
+                        { className: ys().PrizeAmount },
                         (0, v.Jr)("#filmcontest_prize2_amount"),
                       ),
                       s.createElement(
                         "div",
-                        { className: vs().PrizeLabel },
+                        { className: ys().PrizeLabel },
                         (0, v.Jr)("#filmcontest_prize2_label"),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: (0, E.Z)(vs().Prize, vs().Prize3) },
+                      { className: (0, E.Z)(ys().Prize, ys().Prize3) },
                       s.createElement(
                         "div",
-                        { className: vs().PrizeAmount },
+                        { className: ys().PrizeAmount },
                         (0, v.Jr)("#filmcontest_prize3_amount"),
                       ),
                       s.createElement(
                         "div",
-                        { className: vs().PrizeLabel },
+                        { className: ys().PrizeLabel },
                         (0, v.Jr)("#filmcontest_prize3_label"),
                       ),
                     ),
                     s.createElement(
                       "div",
-                      { className: (0, E.Z)(vs().Prize, vs().Prize4) },
+                      { className: (0, E.Z)(ys().Prize, ys().Prize4) },
                       s.createElement(
                         "div",
-                        { className: vs().PrizeAmount },
+                        { className: ys().PrizeAmount },
                         (0, v.Jr)("#filmcontest_prize4_amount"),
                       ),
                       s.createElement(
                         "div",
-                        { className: vs().PrizeLabel },
+                        { className: ys().PrizeLabel },
                         (0, v.Jr)("#filmcontest_prize4_label"),
                       ),
                     ),
@@ -35377,17 +35518,17 @@
               ),
               s.createElement(
                 "div",
-                { className: vs().WallpaperSection },
+                { className: ys().WallpaperSection },
                 s.createElement(
                   "div",
-                  { className: vs().WallpaperTitle },
+                  { className: ys().WallpaperTitle },
                   (0, v.Jr)("#filmcontest_previous_winners"),
                 ),
                 s.createElement(
                   "div",
-                  { className: vs().Wallpapers },
+                  { className: ys().Wallpapers },
                   s.createElement("iframe", {
-                    className: vs().PreviousWinnerVideo,
+                    className: ys().PreviousWinnerVideo,
                     width: "30%",
                     height: "300px",
                     src: "https://www.youtube.com/embed/ELyf2AYq8Zg",
@@ -35398,7 +35539,7 @@
                     allowFullScreen: !0,
                   }),
                   s.createElement("iframe", {
-                    className: vs().PreviousWinnerVideo,
+                    className: ys().PreviousWinnerVideo,
                     width: "30%",
                     height: "300px",
                     src: "https://www.youtube.com/embed/qtVOAtCAkPU",
@@ -35409,7 +35550,7 @@
                     allowFullScreen: !0,
                   }),
                   s.createElement("iframe", {
-                    className: vs().PreviousWinnerVideo,
+                    className: ys().PreviousWinnerVideo,
                     width: "30%",
                     height: "300px",
                     src: "https://www.youtube.com/embed/7GxMmEMSjTg",
@@ -35423,25 +35564,25 @@
               ),
               s.createElement(
                 "div",
-                { className: vs().GuidelinesSection },
-                s.createElement("div", { className: vs().Divider }),
-                s.createElement("div", { className: vs().DividerBottom }),
+                { className: ys().GuidelinesSection },
+                s.createElement("div", { className: ys().Divider }),
+                s.createElement("div", { className: ys().DividerBottom }),
                 s.createElement(
                   "div",
-                  { className: vs().Quote },
+                  { className: ys().Quote },
                   s.createElement(
                     "div",
-                    { className: vs().GuidelinesHeader },
+                    { className: ys().GuidelinesHeader },
                     (0, v.Jr)("#filmcontest_rulesofentry"),
                   ),
                   s.createElement(
                     "div",
-                    { className: vs().GuidelinesTitle },
+                    { className: ys().GuidelinesTitle },
                     (0, v.Jr)("#filmcontest_eligibility"),
                   ),
                   s.createElement(
                     "div",
-                    { className: vs().GuidelinesList },
+                    { className: ys().GuidelinesList },
                     s.createElement(
                       "ul",
                       null,
@@ -35454,17 +35595,17 @@
                   ),
                   s.createElement(
                     "div",
-                    { className: vs().GuidelinesTitle },
+                    { className: ys().GuidelinesTitle },
                     (0, v.Jr)("#filmcontest_entry"),
                   ),
                   s.createElement(
                     "div",
-                    { className: vs().GuidelinesSubTitle },
+                    { className: ys().GuidelinesSubTitle },
                     (0, v.Jr)("#filmcontest_entry_subtitle"),
                   ),
                   s.createElement(
                     "div",
-                    { className: vs().GuidelinesList },
+                    { className: ys().GuidelinesList },
                     s.createElement(
                       "ul",
                       null,
@@ -35532,12 +35673,12 @@
                   ),
                   s.createElement(
                     "div",
-                    { className: vs().GuidelinesTitle },
+                    { className: ys().GuidelinesTitle },
                     (0, v.Jr)("#filmcontest_winners"),
                   ),
                   s.createElement(
                     "div",
-                    { className: vs().GuidelinesList },
+                    { className: ys().GuidelinesList },
                     s.createElement(
                       "ul",
                       null,
@@ -35550,12 +35691,12 @@
                   ),
                   s.createElement(
                     "div",
-                    { className: vs().GuidelinesTitle },
+                    { className: ys().GuidelinesTitle },
                     (0, v.Jr)("#filmcontest_prizes"),
                   ),
                   s.createElement(
                     "div",
-                    { className: vs().GuidelinesList },
+                    { className: ys().GuidelinesList },
                     s.createElement(
                       "ul",
                       null,
@@ -35573,12 +35714,12 @@
                   ),
                   s.createElement(
                     "div",
-                    { className: vs().GuidelinesTitle },
+                    { className: ys().GuidelinesTitle },
                     (0, v.Jr)("#filmcontest_release"),
                   ),
                   s.createElement(
                     "div",
-                    { className: vs().GuidelinesList },
+                    { className: ys().GuidelinesList },
                     s.createElement(
                       "ul",
                       null,
@@ -35591,12 +35732,12 @@
                   ),
                   s.createElement(
                     "div",
-                    { className: vs().GuidelinesTitle },
+                    { className: ys().GuidelinesTitle },
                     (0, v.Jr)("#filmcontest_general"),
                   ),
                   s.createElement(
                     "div",
-                    { className: vs().GuidelinesList },
+                    { className: ys().GuidelinesList },
                     s.createElement(
                       "ul",
                       null,
@@ -35609,17 +35750,17 @@
                   ),
                   s.createElement(
                     "div",
-                    { className: vs().GuidelinesList },
+                    { className: ys().GuidelinesList },
                     (0, v.Jr)("#filmcontest_sponsored_desc"),
                   ),
                 ),
               ),
               s.createElement(
                 "div",
-                { className: vs().EndRow },
+                { className: ys().EndRow },
                 s.createElement(
                   "div",
-                  { className: vs().EndRowText },
+                  { className: ys().EndRowText },
                   (0, v.Jr)("#filmcontest24_intro"),
                   0 == n.Y.ACCOUNT_ID &&
                     s.createElement(
@@ -35631,16 +35772,16 @@
                         "div",
                         {
                           className: (0, E.Z)(
-                            vs().FilmButton,
-                            vs().SteamButton,
+                            ys().FilmButton,
+                            ys().SteamButton,
                           ),
                         },
                         s.createElement(
                           "div",
-                          { className: vs().ButtonText },
+                          { className: ys().ButtonText },
                           (0, v.Jr)("#filmcontest_login_steam"),
                         ),
-                        s.createElement("div", { className: vs().SteamLogo }),
+                        s.createElement("div", { className: ys().SteamLogo }),
                       ),
                     ),
                   0 != n.Y.ACCOUNT_ID &&
@@ -35648,26 +35789,26 @@
                       "div",
                       {
                         onClick: () => this.handleClick(!0),
-                        className: (0, E.Z)(vs().FilmButton, vs().SteamButton),
+                        className: (0, E.Z)(ys().FilmButton, ys().SteamButton),
                       },
                       s.createElement(
                         "div",
-                        { className: vs().ButtonText },
+                        { className: ys().ButtonText },
                         (0, v.Jr)("#filmcontest_button_submit"),
                       ),
-                      s.createElement(fs, null),
+                      s.createElement(Ss, null),
                     ),
                 ),
                 s.createElement("img", {
-                  className: vs().EndRowImage,
+                  className: ys().EndRowImage,
                   src: `${n.Y.IMG_URL}shortfilmcontest2024/clapper_2024.png`,
                 }),
               ),
               s.createElement(I.U, null),
               s.createElement(
-                bs,
+                Ts,
                 {
-                  className: vs().ShortFilmPopup,
+                  className: ys().ShortFilmPopup,
                   hasCloseButton: !0,
                   shouldShow: this.state.bPopupVisible,
                   showFunc: (e) => this.handleClick(e),
@@ -35677,7 +35818,7 @@
                   "div",
                   {
                     onClick: () => this.handleAccepted(),
-                    className: (0, E.Z)(vs().FilmButton, vs().SteamButton),
+                    className: (0, E.Z)(ys().FilmButton, ys().SteamButton),
                   },
                   (0, v.Jr)("#filmcontest_i_agree"),
                 ),
@@ -35687,30 +35828,30 @@
           );
         }
       }
-      var Ss = a(6256);
-      let Ts = s.lazy(() => a.e(2402).then(a.bind(a, 62402))),
-        Is = s.lazy(() =>
+      var Cs = a(6256);
+      let Ns = s.lazy(() => a.e(2402).then(a.bind(a, 62402))),
+        ws = s.lazy(() =>
           Promise.all([a.e(4268), a.e(3657)]).then(a.bind(a, 33657)),
         ),
-        Cs = s.lazy(() => a.e(646).then(a.bind(a, 50646))),
-        Ns = s.lazy(() =>
+        Bs = s.lazy(() => a.e(646).then(a.bind(a, 50646))),
+        Rs = s.lazy(() =>
           Promise.all([a.e(4268), a.e(2686)]).then(a.bind(a, 2686)),
         ),
-        ws = s.lazy(() => a.e(8046).then(a.bind(a, 38046))),
-        Bs = s.lazy(() => a.e(1141).then(a.bind(a, 31141))),
-        Rs = s.lazy(() => a.e(767).then(a.bind(a, 30767))),
-        Ds = s.lazy(() => a.e(9254).then(a.bind(a, 39254))),
-        Ls = s.lazy(() => a.e(5804).then(a.bind(a, 5804))),
-        As = s.lazy(() => a.e(1511).then(a.bind(a, 31511))),
-        Ms = s.lazy(() => a.e(6896).then(a.bind(a, 66896))),
-        Gs = s.lazy(() => a.e(6880).then(a.bind(a, 6880))),
-        Ps = s.lazy(() =>
+        Ds = s.lazy(() => a.e(8046).then(a.bind(a, 38046))),
+        Ls = s.lazy(() => a.e(1141).then(a.bind(a, 31141))),
+        As = s.lazy(() => a.e(767).then(a.bind(a, 30767))),
+        Ms = s.lazy(() => a.e(9254).then(a.bind(a, 39254))),
+        Gs = s.lazy(() => a.e(5804).then(a.bind(a, 5804))),
+        Ps = s.lazy(() => a.e(1511).then(a.bind(a, 31511))),
+        ks = s.lazy(() => a.e(6896).then(a.bind(a, 66896))),
+        Fs = s.lazy(() => a.e(6880).then(a.bind(a, 6880))),
+        Os = s.lazy(() =>
           Promise.all([a.e(4039), a.e(1510)]).then(a.bind(a, 12680)),
         ),
-        ks = s.lazy(() =>
+        xs = s.lazy(() =>
           Promise.all([a.e(4039), a.e(1510)]).then(a.bind(a, 73322)),
         ),
-        Fs = class extends s.Component {
+        Us = class extends s.Component {
           componentDidMount() {
             l().init({
               disable: !1,
@@ -35738,7 +35879,7 @@
                 R.B6,
                 null,
                 s.createElement(
-                  Ss.Y0,
+                  Cs.Y0,
                   null,
                   s.createElement(
                     d.VK,
@@ -35790,6 +35931,10 @@
                           component: rs,
                         }),
                         s.createElement(Ia, {
+                          path: c._.voicelineguidelines(),
+                          component: ss,
+                        }),
+                        s.createElement(Ia, {
                           path: c._.hero(":id"),
                           component: Ii.q,
                         }),
@@ -35799,11 +35944,11 @@
                         }),
                         s.createElement(Ia, {
                           path: c._.pastupdates(),
-                          component: cs,
+                          component: us,
                         }),
                         s.createElement(Ia, {
                           path: c._.controllerfaq(),
-                          component: ss,
+                          component: cs,
                         }),
                         s.createElement(Ia, {
                           path: c._.dpc_event_root(":strEvent?"),
@@ -35811,27 +35956,27 @@
                         }),
                         s.createElement(Ia, {
                           path: c._.patchnotes(":version?"),
-                          component: ms.Fq,
+                          component: _s.Fq,
                         }),
                         s.createElement(Ia, {
                           path: c._.dawnbreaker(),
-                          component: Ts,
-                        }),
-                        s.createElement(Ia, {
-                          path: c._.marci(),
-                          component: Cs,
-                        }),
-                        s.createElement(Ia, {
-                          path: c._.labyrinth(),
                           component: Ns,
                         }),
                         s.createElement(Ia, {
+                          path: c._.marci(),
+                          component: Bs,
+                        }),
+                        s.createElement(Ia, {
+                          path: c._.labyrinth(),
+                          component: Rs,
+                        }),
+                        s.createElement(Ia, {
                           path: c._.shortfilm(),
-                          component: ys,
+                          component: Is,
                         }),
                         s.createElement(Ia, {
                           path: c._.nemestice(),
-                          component: Is,
+                          component: ws,
                         }),
                         s.createElement(Ia, {
                           path: c._.springcleaning(),
@@ -35839,52 +35984,52 @@
                         }),
                         s.createElement(Ia, {
                           path: c._.primalbeast(),
-                          component: ws,
-                        }),
-                        s.createElement(Ia, {
-                          path: c._.battlereport(),
-                          component: Bs,
-                        }),
-                        s.createElement(Ia, {
-                          path: c._.muerta(),
-                          component: Rs,
-                        }),
-                        s.createElement(Ia, {
-                          path: c._.new_frontiers(),
                           component: Ds,
                         }),
                         s.createElement(Ia, {
-                          path: c._.summer2023update(),
-                          component: gs,
-                        }),
-                        s.createElement(Ia, {
-                          path: c._.international2023(),
+                          path: c._.battlereport(),
                           component: Ls,
                         }),
                         s.createElement(Ia, {
-                          path: c._.international2023alt(),
-                          component: Ls,
-                        }),
-                        s.createElement(Ia, {
-                          path: c._.winter2023(),
+                          path: c._.muerta(),
                           component: As,
                         }),
                         s.createElement(Ia, {
-                          path: c._.crownfall_comic(),
+                          path: c._.new_frontiers(),
                           component: Ms,
+                        }),
+                        s.createElement(Ia, {
+                          path: c._.summer2023update(),
+                          component: fs,
+                        }),
+                        s.createElement(Ia, {
+                          path: c._.international2023(),
+                          component: Gs,
+                        }),
+                        s.createElement(Ia, {
+                          path: c._.international2023alt(),
+                          component: Gs,
+                        }),
+                        s.createElement(Ia, {
+                          path: c._.winter2023(),
+                          component: Ps,
+                        }),
+                        s.createElement(Ia, {
+                          path: c._.crownfall_comic(),
+                          component: ks,
                         }),
                         !1,
                         s.createElement(Ia, {
                           path: c._.crownfall(),
-                          component: Gs,
+                          component: Fs,
                         }),
                         s.createElement(Ia, {
                           path: c._.teamdetails(":id"),
-                          component: Ps,
+                          component: Os,
                         }),
                         s.createElement(Ia, {
                           path: c._.personadetails(":id"),
-                          component: ks,
+                          component: xs,
                         }),
                         s.createElement(Ia, {
                           path: c._.other(":page"),
@@ -35899,23 +36044,23 @@
             );
           }
         };
-      Fs = (0, r.gn)([m.Pi], Fs);
-      const Os = Fs;
-      var xs = a(99247),
-        Us = a(82696),
-        zs = a(53729),
-        Hs = a(92029);
-      class Ws {
+      Us = (0, r.gn)([m.Pi], Us);
+      const zs = Us;
+      var Hs = a(99247),
+        Ws = a(82696),
+        js = a(53729),
+        Vs = a(92029);
+      class Ys {
         constructor() {
-          (this.m_asyncPrizePool = new Us.L()),
-            (this.m_asyncPatchNotesListData = new Us.L()),
-            (this.m_asyncPatchNotesData = new Us.r()),
-            (this.m_asyncBPPrice = new Us.r()),
-            (this.m_asyncBPDiscount = new Us.r()),
+          (this.m_asyncPrizePool = new Ws.L()),
+            (this.m_asyncPatchNotesListData = new Ws.L()),
+            (this.m_asyncPatchNotesData = new Ws.r()),
+            (this.m_asyncBPPrice = new Ws.r()),
+            (this.m_asyncBPDiscount = new Ws.r()),
             (this.m_nSelectedAbilityIndex = 0),
-            (this.m_asyncShortFilmOwnership = new Us.L()),
+            (this.m_asyncShortFilmOwnership = new Ws.L()),
             (this.m_BBCodeDictionary = new Map([
-              ...Array.from(Hs.Be.entries()),
+              ...Array.from(Vs.Be.entries()),
               ["color", { Constructor: v.H, autocloses: !1 }],
               ["block", { Constructor: v.qH, autocloses: !1 }],
               ["spoiler", { Constructor: v.b4, autocloses: !1 }],
@@ -35928,16 +36073,16 @@
               ["img", { Constructor: v.cW, autocloses: !1 }],
               ["div", { Constructor: v.B9, autocloses: !1 }],
             ])),
-            (this.BBCodeAccumulator = (e) => new zs.So(new zs.LT(), 0)),
+            (this.BBCodeAccumulator = (e) => new js.So(new js.LT(), 0)),
             (this.m_BBCodeParser = new wt.Z6(
               this.m_BBCodeDictionary,
               this.BBCodeAccumulator,
             )),
-            (0, xs.rC)(this);
+            (0, Hs.rC)(this);
         }
         Init() {
           i.s(document.getElementById("dota_react_root")).render(
-            s.createElement(Os, { app: this }),
+            s.createElement(zs, { app: this }),
           );
         }
         getPrizePool() {
@@ -35995,7 +36140,7 @@
             Hi()
               .get(c._.react("getbpprices"), { params: { item_defs: a } })
               .then((t) => {
-                (0, xs.z)(() => {
+                (0, Hs.z)(() => {
                   const a = Object.entries(null == t ? void 0 : t.data);
                   if (a.length == e.length)
                     for (const [e, t] of a)
@@ -36048,7 +36193,7 @@
                 params: { event_id: e, itemdefs: r },
               })
               .then((e) => {
-                (0, xs.z)(() => {
+                (0, Hs.z)(() => {
                   const a = Object.entries(null == e ? void 0 : e.data);
                   if (a.length == t.length)
                     for (const [e, t] of a)
@@ -36127,14 +36272,14 @@
           });
         }
       }
-      (0, r.gn)([xs.LO], Ws.prototype, "m_nSelectedAbilityIndex", void 0);
-      var js = a(9090);
+      (0, r.gn)([Hs.LO], Ys.prototype, "m_nSelectedAbilityIndex", void 0);
+      var Js = a(9090);
       a(23946);
       new Map();
       a(72471);
-      let Vs = new Ws();
-      (0, xs.jQ)({ enforceActions: "never" });
-      const Ys = [
+      let Xs = new Ys();
+      (0, Hs.jQ)({ enforceActions: "never" });
+      const Zs = [
         "main",
         "springcleaning22",
         "juneupdate22",
@@ -36147,13 +36292,13 @@
       ];
       document.addEventListener("DOMContentLoaded", function () {
         return (0, r.mG)(this, void 0, void 0, function* () {
-          (0, js.Ek)("application_config"),
+          (0, Js.Ek)("application_config"),
             (0, n.R)(),
             yield (function (e) {
               return (0, r.mG)(this, void 0, void 0, function* () {
                 const t = yield Promise.all([
                   a(56576)(`./shared_${e}.json`),
-                  ...Ys.map((t) => a(3245)(`./${t}_${e}.json`)),
+                  ...Zs.map((t) => a(3245)(`./${t}_${e}.json`)),
                 ]);
                 let r = {};
                 for (const e of t) r = Object.assign(Object.assign({}, r), e);
@@ -36162,7 +36307,7 @@
                 else {
                   const e = yield Promise.all([
                     a(56576)(`./shared_${n}.json`),
-                    ...Ys.map((e) => a(3245)(`./${e}_${n}.json`)),
+                    ...Zs.map((e) => a(3245)(`./${e}_${n}.json`)),
                   ]);
                   let i = {};
                   for (const t of e) i = Object.assign(Object.assign({}, i), t);
@@ -36170,7 +36315,7 @@
                 }
               });
             })(n.Y.LANGUAGE),
-            Vs.Init();
+            Xs.Init();
         });
       });
     },
@@ -37638,6 +37783,7 @@
         battlepass_international2022: () => "/battlepass2022",
         autographguidelines: () => "/autographguidelines",
         portraitguidelines: () => "/portraitguidelines",
+        voicelineguidelines: () => "/voicelineguidelines",
         proregistration_requestforproposal: () =>
           "/proregistration/requestforproposal",
         proregistration_autographs: () => "/proregistration/autographupload",
@@ -38356,7 +38502,7 @@
       }
       (0, s.gn)([o.ak], l.prototype, "OnImageError", null);
       var c = a(52472),
-        m = a(46792),
+        m = a(4572),
         d = a(92029);
       function u(e) {
         return n.createElement(
@@ -39525,7 +39671,7 @@
         o = a(84652),
         l = a.n(o),
         c = a(5062),
-        m = a(46792),
+        m = a(4572),
         d = a(80846),
         u = a(79735),
         _ = a(2580),
@@ -41452,7 +41598,7 @@
         o = a(65577),
         l = a.n(o),
         c = a(5062),
-        m = a(46792),
+        m = a(4572),
         d = a(80846),
         u = a(79735),
         _ = a(2580),
@@ -88044,7 +88190,7 @@
   },
   (e) => {
     e.O(0, [3250], () => {
-      return (t = 46792), e((e.s = t));
+      return (t = 4572), e((e.s = t));
       var t;
     });
     e.O();

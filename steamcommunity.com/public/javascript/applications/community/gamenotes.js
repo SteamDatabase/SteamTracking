@@ -50,14 +50,14 @@
       const i = new l.sO("ReactUsageReporting").Debug,
         m = 1e3 * c._H.PerMinute;
       class u {
-        m_strProduct;
-        m_strVersion;
-        m_transport = null;
-        m_mapRoutes = new Map();
-        m_mapComponents = new Map();
-        m_mapActions = new Map();
-        m_reportCount = 0;
-        m_bInitialized = !1;
+        constructor() {
+          (this.m_transport = null),
+            (this.m_mapRoutes = new Map()),
+            (this.m_mapComponents = new Map()),
+            (this.m_mapActions = new Map()),
+            (this.m_reportCount = 0),
+            (this.m_bInitialized = !1);
+        }
         Init(e, t, n) {
           (this.m_bInitialized = !0),
             (this.m_strProduct = e),
@@ -130,8 +130,8 @@
         a = n(8285);
       const r = {
         List: () => "/notes/list",
-        AppNotes: (e, t) => `/notes/app/${e}/${t ?? ""}`,
-        ShortcutNotes: (e, t) => `/notes/shortcut/${e}/${t ?? ""}`,
+        AppNotes: (e, t) => `/notes/app/${e}/${null != t ? t : ""}`,
+        ShortcutNotes: (e, t) => `/notes/shortcut/${e}/${null != t ? t : ""}`,
       };
       var l = n(28017),
         c = n(42718);
@@ -216,8 +216,8 @@
           [e, t],
         );
       }
-      var T = n(73799),
-        v = n.n(T),
+      var v = n(73799),
+        T = n.n(v),
         k = n(79545),
         C = n(18015),
         N = n(40057),
@@ -240,7 +240,7 @@
             (function (e, t) {
               return (
                 S ||
-                  (S = new (v())(
+                  (S = new (T())(
                     async (n) => {
                       const o = new Map();
                       (await Promise.all(n.map((e) => t.GetObject(B(e)))))
@@ -273,8 +273,8 @@
           { staleTime: x, enabled: !!e },
         ).data;
       }
-      var I = n(46882);
-      function D() {
+      var D = n(46882);
+      function G() {
         const { data: e, isLoading: t } = (function () {
           const e = p();
           return (0, c.useQuery)(["GameNotes", "GamesWithNotes"], () =>
@@ -282,7 +282,7 @@
           );
         })();
         return t
-          ? o.createElement(I.V, { msDelayAppear: 300 })
+          ? o.createElement(D.V, { msDelayAppear: 300 })
           : o.createElement(
               "div",
               null,
@@ -294,17 +294,21 @@
               o.createElement(
                 "ul",
                 null,
-                e.map((e) => o.createElement(G, { key: e.appid, game: e })),
+                e.map((e) => o.createElement(I, { key: e.appid, game: e })),
               ),
             );
       }
-      function G(e) {
+      function I(e) {
         const { game: t } = e,
           n = P(t.appid);
         return o.createElement(
           "li",
           null,
-          o.createElement(l.rU, { to: r.AppNotes(t.appid) }, n?.name),
+          o.createElement(
+            l.rU,
+            { to: r.AppNotes(t.appid) },
+            null == n ? void 0 : n.name,
+          ),
         );
       }
       var L = n(42695),
@@ -316,8 +320,8 @@
         X = n(4005),
         O = n(28147),
         $ = n(6673),
-        V = n(32300),
-        W = n(93109),
+        W = n(32300),
+        V = n(93109),
         z = n(23126),
         Z = n(91618),
         Q = n(13974),
@@ -347,7 +351,7 @@
               }),
             [],
           );
-        if (((0, V.U$)(c), !r)) return null;
+        if (((0, W.U$)(c), !r)) return null;
         const s = r.getAttribute("href");
         return o.createElement(
           J,
@@ -398,11 +402,20 @@
         f.current = c || ce;
         const E = o.useCallback(
           (e) => {
-            if (!e) return void p.current?.destroy();
-            const n = p.current;
-            n && n.destroy(),
+            var n, o;
+            if (!e)
+              return void (
+                null === (n = p.current) ||
+                void 0 === n ||
+                n.destroy()
+              );
+            const a = p.current;
+            a && a.destroy(),
               (p.current = new M.tk(e, {
-                state: n?.state ?? X.yy.create({ schema: t.pm_schema }),
+                state:
+                  null !== (o = null == a ? void 0 : a.state) && void 0 !== o
+                    ? o
+                    : X.yy.create({ schema: t.pm_schema }),
                 handleClickOn: (...e) =>
                   (function (e, t, n, o, a, r, l, c) {
                     if (c && (l.ctrlKey || 1 == l.button)) {
@@ -432,7 +445,7 @@
                   })(t.pm_schema, ...e),
               })),
               d(p.current),
-              n || p.current.focus();
+              a || p.current.focus();
           },
           [t],
         );
@@ -453,22 +466,28 @@
                 },
                 [t.IN_VR],
               ),
-              r = (0, q.CJ)(
-                { onTextEntered: a },
-                () => n.current?.ownerDocument.defaultView,
-              ),
+              r = (0, q.CJ)({ onTextEntered: a }, () => {
+                var e;
+                return null === (e = n.current) || void 0 === e
+                  ? void 0
+                  : e.ownerDocument.defaultView;
+              }),
               l = o.useCallback(() => {
-                r.ShowVirtualKeyboard();
-                let t = e.current?.hasFocus();
-                if (!t) {
-                  e.current?.focus();
+                var t, o;
+                if (
+                  (r.ShowVirtualKeyboard(),
+                  !(null === (t = e.current) || void 0 === t
+                    ? void 0
+                    : t.hasFocus()))
+                ) {
+                  null === (o = e.current) || void 0 === o || o.focus();
                   let t = e.current.dom.childNodes;
                   for (let o = 0; o < t.length; ++o) {
                     let a = t[o],
                       r = a.offsetTop;
                     if (void 0 !== r && r >= n.current.scrollTop) {
                       let t = a.getBoundingClientRect();
-                      (0, W.VM)(e.current, t.left, t.top);
+                      (0, V.VM)(e.current, t.left, t.top);
                       break;
                     }
                   }
@@ -478,14 +497,14 @@
               s = (0, Q.pj)(n, null, null, c);
             return { refDiv: n, onActivate: l, onGamepadDirection: s };
           })(p),
-          T = (0, ne.BE)(b, E);
+          v = (0, ne.BE)(b, E);
         return o.createElement(
-          V.xh,
+          W.xh,
           { view: u },
           o.createElement(Z.s, {
             key: `editordiv_${s}`,
             className: (0, te.Z)(a, re.Container),
-            ref: T,
+            ref: v,
             spellCheck: s,
             focusable: !0,
             onActivate: g,
@@ -493,7 +512,7 @@
             onGamepadDirection: _,
             ...i,
           }),
-          o.createElement(V.l8, { onUpdate: r, schema: t.pm_schema }),
+          o.createElement(W.l8, { onUpdate: r, schema: t.pm_schema }),
           o.createElement(j, null),
           m,
         );
@@ -514,7 +533,7 @@
       function Ee(e) {
         const { uploadImage: t, nodeType: n, nMaxImageSize: a = ge } = e;
         return (
-          (0, V.U$)(
+          (0, W.U$)(
             o.useMemo(
               () =>
                 new X.Sy({
@@ -580,7 +599,7 @@
       }
       const ge = 1048576;
       var _e = n(42287);
-      function Te(e) {
+      function ve(e) {
         const {
             visible: t = !0,
             className: n,
@@ -636,7 +655,7 @@
           ? o.createElement("div", { className: n, ref: m, style: s }, c)
           : null;
       }
-      var ve = n(96394),
+      var Te = n(96394),
         ke = n(2761),
         Ce = n(23612),
         Ne = n(45492);
@@ -672,39 +691,39 @@
       function Pe(e) {
         const { nodeType: t, title: n, attrs: a, children: r } = e,
           { callbacks: l, view: c } = ye(),
-          [s, i] = o.useState(() => (0, W.pp)(c.state, t, a)),
-          m = o.useCallback((e) => i((0, W.pp)(e.state, t, a)), [t, a]);
+          [s, i] = o.useState(() => (0, V.pp)(c.state, t, a)),
+          m = o.useCallback((e) => i((0, V.pp)(e.state, t, a)), [t, a]);
         (0, ne.Qg)(l, m);
         const u = o.useMemo(() => Ce.uJ(t, a), [a, t]);
-        return o.createElement(Ge, {
+        return o.createElement(Ie, {
           command: u,
           title: n,
           toggled: s,
           children: r,
         });
       }
-      function Ie(e) {
+      function De(e) {
         const { mark: t, title: n, children: a } = e,
           { callbacks: r, view: l } = ye(),
-          [c, s] = o.useState(() => (0, W.MW)(l.state, t)),
-          i = o.useCallback((e) => s((0, W.MW)(e.state, t)), [t]);
+          [c, s] = o.useState(() => (0, V.MW)(l.state, t)),
+          i = o.useCallback((e) => s((0, V.MW)(e.state, t)), [t]);
         (0, ne.Qg)(r, i);
         const m = o.useMemo(() => Ce.w9(t), [t]);
-        return o.createElement(Ge, {
+        return o.createElement(Ie, {
           command: m,
           title: n,
           toggled: c,
           children: a,
         });
       }
-      function De(e) {
+      function Ge(e) {
         const { fnEnabledCheck: t, ...n } = e,
           { callbacks: a, view: r } = ye(),
           [l, c] = o.useState(() => t(r)),
           s = o.useCallback((e) => c(t(e)), [t]);
-        return (0, ne.Qg)(a, s), o.createElement(Ge, { ...n, disabled: !l });
+        return (0, ne.Qg)(a, s), o.createElement(Ie, { ...n, disabled: !l });
       }
-      function Ge(e) {
+      function Ie(e) {
         const {
             command: t,
             toggled: n,
@@ -751,8 +770,8 @@
       function Re(e) {
         const { schema: t, children: n } = e,
           { callbacks: a, view: r } = ye(),
-          [l, c] = o.useState(() => (0, W.MW)(r.state, t.marks.link)),
-          s = o.useCallback((e) => c((0, W.MW)(e.state, t.marks.link)), [t]);
+          [l, c] = o.useState(() => (0, V.MW)(r.state, t.marks.link)),
+          s = o.useCallback((e) => c((0, V.MW)(e.state, t.marks.link)), [t]);
         (0, ne.Qg)(a, s);
         const [i, m, u] = (0, ne.X9)();
         return o.createElement(
@@ -850,10 +869,10 @@
             se.HP,
             { toolTipContent: "#FormattingToolbar_Undo", direction: "bottom" },
             o.createElement(
-              De,
+              Ge,
               {
                 title: (0, h.Xx)("#FormattingToolbar_Undo"),
-                command: ve.Yw,
+                command: Te.Yw,
                 fnEnabledCheck: Ue,
               },
               o.createElement(H.DeA, null),
@@ -863,10 +882,10 @@
             se.HP,
             { toolTipContent: "#FormattingToolbar_Redo", direction: "bottom" },
             o.createElement(
-              De,
+              Ge,
               {
                 title: (0, h.Xx)("#FormattingToolbar_Redo"),
-                command: ve.KX,
+                command: Te.KX,
                 fnEnabledCheck: Me,
               },
               o.createElement(H.Jwt, null),
@@ -875,10 +894,10 @@
         );
       }
       function Ue(e) {
-        return ve.of(e.state) > 0;
+        return Te.of(e.state) > 0;
       }
       function Me(e) {
-        return ve.AH(e.state) > 0;
+        return Te.AH(e.state) > 0;
       }
       function Xe(e) {
         const { schema: t } = e;
@@ -889,7 +908,7 @@
             se.HP,
             { toolTipContent: "#FormattingToolbar_Bold", direction: "bottom" },
             o.createElement(
-              Ie,
+              De,
               {
                 title: (0, h.Xx)("#FormattingToolbar_Bold"),
                 mark: t.marks.strong,
@@ -904,7 +923,7 @@
               direction: "bottom",
             },
             o.createElement(
-              Ie,
+              De,
               {
                 title: (0, h.Xx)("#FormattingToolbar_Italic"),
                 mark: t.marks.italic,
@@ -919,7 +938,7 @@
               direction: "bottom",
             },
             o.createElement(
-              Ie,
+              De,
               {
                 title: (0, h.Xx)("#FormattingToolbar_Underline"),
                 mark: t.marks.underline,
@@ -934,7 +953,7 @@
               direction: "bottom",
             },
             o.createElement(
-              Ie,
+              De,
               {
                 title: (0, h.Xx)("#FormattingToolbar_Strike"),
                 mark: t.marks.strike,
@@ -949,7 +968,7 @@
               direction: "bottom",
             },
             o.createElement(
-              Ie,
+              De,
               {
                 title: (0, h.Xx)("#FormattingToolbar_InlineCode"),
                 mark: t.marks.code,
@@ -1068,7 +1087,7 @@
             ),
         );
       }
-      function Ve(e) {
+      function We(e) {
         const { schema: t } = e;
         return o.createElement(
           o.Fragment,
@@ -1080,7 +1099,7 @@
               direction: "bottom",
             },
             o.createElement(
-              Ge,
+              Ie,
               {
                 title: (0, h.Xx)("#FormattingToolbar_BulletedList"),
                 command: ke.KI(t.nodes.bullet_list),
@@ -1095,7 +1114,7 @@
               direction: "bottom",
             },
             o.createElement(
-              Ge,
+              Ie,
               {
                 title: (0, h.Xx)("#FormattingToolbar_IndentList"),
                 command: ke.IB(t.nodes.list_item),
@@ -1110,7 +1129,7 @@
               direction: "bottom",
             },
             o.createElement(
-              Ge,
+              Ie,
               {
                 title: (0, h.Xx)("#FormattingToolbar_OutdentList"),
                 command: ke.bw(t.nodes.list_item),
@@ -1120,7 +1139,7 @@
           ),
         );
       }
-      function We(e) {
+      function Ve(e) {
         const { schema: t } = e;
         return o.createElement(
           se.HP,
@@ -1193,7 +1212,7 @@
               ),
             ),
             o.createElement(
-              Te,
+              ve,
               { visible: s },
               o.createElement(
                 Fe,
@@ -1216,9 +1235,9 @@
                   ),
                 ),
                 o.createElement(xe, null),
-                o.createElement(Ve, { schema: t }),
-                o.createElement(xe, null),
                 o.createElement(We, { schema: t }),
+                o.createElement(xe, null),
+                o.createElement(Ve, { schema: t }),
                 o.createElement(Be, null),
                 c &&
                   o.createElement(ze, {
@@ -1240,9 +1259,13 @@
           f = o.useRef(t.content),
           E = o.useRef(!1),
           _ = o.useContext(m).onClickURL,
-          T = o.useContext(m).bSpellcheckEnabled ?? !0,
-          v = o.useContext(m).setSpellcheckEnabled,
-          k = (function (e) {
+          v =
+            null === (T = o.useContext(m).bSpellcheckEnabled) ||
+            void 0 === T ||
+            T;
+        var T;
+        const k = o.useContext(m).setSpellcheckEnabled,
+          C = (function (e) {
             const t = p();
             return o.useCallback(
               async (n, o) => {
@@ -1253,10 +1276,10 @@
               [t, e],
             );
           })(t.appid),
-          C = (0, ae.id)();
+          N = (0, ae.id)();
         f.current == t.content || E.current || (f.current = t.content);
-        const N = f.current,
-          y = (function () {
+        const y = f.current,
+          w = (function () {
             const e = (0, c.useQueryClient)(),
               t = p();
             return (0, c.useMutation)(
@@ -1283,7 +1306,7 @@
               },
             );
           })(),
-          w = o.useCallback((e, t) => {
+          S = o.useCallback((e, t) => {
             s.current && s.current(),
               t.doc &&
                 t.doc != e.state.doc &&
@@ -1302,8 +1325,8 @@
           const o = () => {
               if (e) {
                 const { title: n, bbcode: o } = e();
-                (t.not_persisted && !o?.length) ||
-                  y.mutate({ note: t, title: n, bbcode: o }),
+                (t.not_persisted && !(null == o ? void 0 : o.length)) ||
+                  w.mutate({ note: t, title: n, bbcode: o }),
                   a(!1);
               }
               (e = void 0), (u.current = void 0);
@@ -1312,11 +1335,11 @@
           return () => {
             window.clearTimeout(r), o();
           };
-        }, [y, n, t]);
-        const S = d(),
-          x = b(t, S),
-          B = {
-            onSecondaryButton: () => x.mutate(),
+        }, [w, n, t]);
+        const x = d(),
+          B = b(t, x),
+          F = {
+            onSecondaryButton: () => B.mutate(),
             onSecondaryActionDescription: (0, h.Xx)(
               "#UserGameNotes_DeleteNote",
             ),
@@ -1324,33 +1347,33 @@
         return o.createElement(
           "div",
           { className: ie.NoteEditorArea },
-          !C &&
+          !N &&
             o.createElement(Qe, {
               schema: pe.pm_schema,
               view: r,
               refUpdateToolbar: s,
               className: ie.Toolbar,
-              bSpellcheckEnabled: T,
-              setSpellcheckEnabled: v,
+              bSpellcheckEnabled: v,
+              setSpellcheckEnabled: k,
             }),
           o.createElement(
             le,
             {
               schemaConfig: pe,
               className: ie.EditorInput,
-              bbcode: N,
-              onUpdate: w,
+              bbcode: y,
+              onUpdate: S,
               refView: l,
               onClickURL: _,
-              bSpellcheckEnabled: T,
-              panelProps: B,
+              bSpellcheckEnabled: v,
+              panelProps: F,
             },
             o.createElement(Ee, {
-              uploadImage: k,
+              uploadImage: C,
               nodeType: pe.pm_schema.nodes.image,
             }),
           ),
-          !C && o.createElement(Ke, { note: t, bDirty: n }),
+          !N && o.createElement(Ke, { note: t, bDirty: n }),
         );
       }
       function Ke(e) {
@@ -1460,7 +1483,7 @@
           ? o.createElement(nt, {
               noteParent: t,
               notes: s,
-              activeNoteID: m?.id,
+              activeNoteID: null == m ? void 0 : m.id,
               actions: u,
             })
           : null;
@@ -1470,16 +1493,19 @@
           [c, s] = (0, Ze.i4)("NotesListCollapsed", !1),
           i = o.useContext(m).bPinnedView,
           u = (0, ae.id)(),
-          d = n.map((e) => ({
-            title:
-              e.title?.length > 0
-                ? e.title
-                : (0, h.Xx)("#UserGameNotes_Untitled"),
-            identifier: e.id,
-            content: o.createElement(Ye, { note: e }),
-            pageClassName: ie.NotePage,
-            hideTitle: !0,
-          })),
+          d = n.map((e) => {
+            var t;
+            return {
+              title:
+                (null === (t = e.title) || void 0 === t ? void 0 : t.length) > 0
+                  ? e.title
+                  : (0, h.Xx)("#UserGameNotes_Untitled"),
+              identifier: e.id,
+              content: o.createElement(Ye, { note: e }),
+              pageClassName: ie.NotePage,
+              hideTitle: !0,
+            };
+          }),
           p = (0, a.k6)(),
           f = o.useCallback((e) => ot(p, t, e), [p, t]);
         return o.createElement(R.TI, {
@@ -1503,7 +1529,6 @@
       }
       var at = n(61578);
       class rt {
-        m_SteamInterface;
         constructor(e) {
           this.m_SteamInterface = e;
         }
@@ -1562,7 +1587,6 @@
             ? e.Body().set_appid(t.appid)
             : e.Body().set_shortcut_name(t.shortcut);
         }
-        static sm_lastNoteID = 0;
         NewNote(e, t) {
           let n = {};
           return (
@@ -1592,7 +1616,7 @@
           o.createElement(
             a.rs,
             null,
-            o.createElement(a.AW, { path: r.List() }, o.createElement(D, null)),
+            o.createElement(a.AW, { path: r.List() }, o.createElement(G, null)),
             o.createElement(
               a.AW,
               { path: r.AppNotes(":appid", ":noteid?") },
@@ -1606,6 +1630,7 @@
           ),
         );
       }
+      rt.sm_lastNoteID = 0;
     },
   },
 ]);

@@ -22,10 +22,10 @@
         i = n(82071);
       class c {
         constructor() {
-          (0, r.rC)(this);
+          (this.m_mapBroadcasterSteamIDToEvents = new Map()),
+            (this.m_mapBroadcasterSteamIDData = new Map()),
+            (0, r.rC)(this);
         }
-        m_mapBroadcasterSteamIDToEvents = new Map();
-        m_mapBroadcasterSteamIDData = new Map();
         static GetBBCodeParam(e, t, n = "") {
           const a = new RegExp(`\\W${t}\\W*=\\W*\\"(.*?)\\"`, "gmi").exec(e);
           return a ? a[1] : n;
@@ -67,11 +67,16 @@
           return n;
         }
         static ParseEventModelAppReferences(e, t) {
-          const n = e.GetDescriptionWithFallback(t),
-            a = c.ParseEventAppReferencesFromText(n);
-          if (e.jsondata?.referenced_appids)
-            for (const t of e.jsondata.referenced_appids) a.add(t);
-          return a;
+          var n;
+          const a = e.GetDescriptionWithFallback(t),
+            r = c.ParseEventAppReferencesFromText(a);
+          if (
+            null === (n = e.jsondata) || void 0 === n
+              ? void 0
+              : n.referenced_appids
+          )
+            for (const t of e.jsondata.referenced_appids) r.add(t);
+          return r;
         }
         async BuildBroadcasterSteamIDToActiveEventMap(e) {
           const t = o.JW.GetTimeNowWithOverride(),
@@ -147,10 +152,18 @@
             this.UpdateCachedDataFromEvents(n, t);
         }
         GetPresenterMapForBroadcasterSteamID(e) {
-          return this.m_mapBroadcasterSteamIDData.get(e)?.m_mapPresenters;
+          var t;
+          return null === (t = this.m_mapBroadcasterSteamIDData.get(e)) ||
+            void 0 === t
+            ? void 0
+            : t.m_mapPresenters;
         }
         GetAppIDListForBroadcasterSteamID(e) {
-          return this.m_mapBroadcasterSteamIDData.get(e)?.m_rgAppIDs;
+          var t;
+          return null === (t = this.m_mapBroadcasterSteamIDData.get(e)) ||
+            void 0 === t
+            ? void 0
+            : t.m_rgAppIDs;
         }
       }
       (0, a.gn)([r.LO], c.prototype, "m_mapBroadcasterSteamIDData", void 0);
@@ -178,7 +191,6 @@
           if (1 != o.data.success) throw o.data;
           return this.RemoveGIDFromList(e, i.Vv + t), o.data;
         }
-        static sm_Instance;
         static Get() {
           return (
             c.sm_Instance || ((c.sm_Instance = new c()), c.sm_Instance.Init()),
@@ -189,7 +201,7 @@
     },
     25386: (e, t, n) => {
       "use strict";
-      n.d(t, { h: () => f });
+      n.d(t, { h: () => v });
       var a = n(85556),
         r = n(27605),
         s = n(47427),
@@ -199,12 +211,12 @@
         m = n(54384),
         l = n(90069),
         d = n(20417),
-        p = n(22723),
-        u = n(50898);
+        u = n(22723),
+        p = n(50898);
       function h(e) {
         const { event: t, closeModal: n } = e;
         return s.createElement(
-          u.Pv,
+          p.Pv,
           { navID: "SinglePartnerEventRoot", closeModal: n },
           s.createElement(m.m$, {
             initialEvent: t,
@@ -216,11 +228,13 @@
           }),
         );
       }
-      function f(e, t) {
+      function v(e, t) {
         (0, l.AM)(s.createElement(h, { event: e }), t);
       }
-      let v = class extends s.Component {
-        m_refFocus = s.createRef();
+      let f = class extends s.Component {
+        constructor() {
+          super(...arguments), (this.m_refFocus = s.createRef());
+        }
         componentDidMount() {
           this.props.fnClose &&
             (document.addEventListener("keydown", this.escFunction, !1),
@@ -243,7 +257,7 @@
             "div",
             {
               ref: this.m_refFocus,
-              className: p.Main,
+              className: u.Main,
               onClick: this.OnBackgroundClick,
             },
             s.createElement(m.Xy, {
@@ -258,9 +272,9 @@
           );
         }
       };
-      (0, a.gn)([d.ak], v.prototype, "escFunction", null),
-        (0, a.gn)([d.ak], v.prototype, "OnBackgroundClick", null),
-        (v = (0, a.gn)([r.Pi], v));
+      (0, a.gn)([d.ak], f.prototype, "escFunction", null),
+        (0, a.gn)([d.ak], f.prototype, "OnBackgroundClick", null),
+        (f = (0, a.gn)([r.Pi], f));
     },
     18919: (e, t, n) => {
       "use strict";
@@ -272,10 +286,14 @@
         i = n(30851),
         c = n(73229);
       class m {
-        m_bHasBeenTracked = !1;
-        m_fnSubmit = null;
+        constructor() {
+          (this.m_bHasBeenTracked = !1), (this.m_fnSubmit = null);
+        }
       }
       const l = new (class {
+          constructor() {
+            (this.m_nImpressionDelayMS = 500), (this.m_mapEvents = new Map());
+          }
           ShouldTrack(e) {
             if (e.bOldAnnouncement) return !1;
             const t = this.m_mapEvents.get(e.GID);
@@ -306,8 +324,6 @@
               n.m_fnSubmit.Cancel(),
               (n.m_fnSubmit = null));
           }
-          m_nImpressionDelayMS = 500;
-          m_mapEvents = new Map();
         })(),
         d = (e) => {
           const { event: t } = e;
@@ -381,7 +397,7 @@
     },
     56164: (e, t, n) => {
       "use strict";
-      n.d(t, { bC: () => f, fU: () => h, mY: () => p, ug: () => u });
+      n.d(t, { bC: () => v, fU: () => h, mY: () => u, ug: () => p });
       var a = n(1485),
         r = n(31846),
         s = n(62613),
@@ -391,7 +407,7 @@
         m = n(10162),
         l = n(27605),
         d = n(11209);
-      const p = (0, l.Pi)((e) =>
+      const u = (0, l.Pi)((e) =>
         o.createElement(
           o.Fragment,
           null,
@@ -414,7 +430,7 @@
                 ),
               },
               e.title,
-              Boolean(e.tooltip) && o.createElement(f, { tooltip: e.tooltip }),
+              Boolean(e.tooltip) && o.createElement(v, { tooltip: e.tooltip }),
             ),
             o.createElement(h, {
               bIsMinimized: e.getMinimized(),
@@ -424,10 +440,10 @@
           !e.getMinimized() && o.createElement(m.SV, null, e.children),
         ),
       );
-      function u(e) {
+      function p(e) {
         const [t, n] = o.useState(Boolean(e.bStartMinimized));
         return o.createElement(
-          p,
+          u,
           { ...e, getMinimized: () => t, toggleMinimized: () => n(!t) },
           e.children,
         );
@@ -443,7 +459,7 @@
             : o.createElement(s.gR, null),
         );
       }
-      function f(e) {
+      function v(e) {
         return o.createElement(
           "span",
           {

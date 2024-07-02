@@ -5,11 +5,11 @@
   [9173],
   {
     15619: (e, t, r) => {
-      r.d(t, { V: () => F, l: () => y });
+      r.d(t, { V: () => F, l: () => T });
       var i = r(85556),
         n = r(80751),
-        a = r.n(n),
-        s = r(50060),
+        s = r.n(n),
+        a = r(50060),
         o = r(54842),
         l = r(77936),
         d = r(79545),
@@ -24,27 +24,27 @@
       function S() {
         return h.De.IN_MOBILE ? h.rI : (0, h.Kc)();
       }
-      const T = "(1)";
-      class y {
-        m_WebUIServiceTransport;
-        m_unAccountID;
-        m_Transport = null;
-        m_Storage = null;
-        m_TextFilterPreferences = { eTextFilterSetting: 3, bIgnoreFriends: !1 };
-        m_TextFilterWords;
-        m_mapPlayerCache = new Map();
-        m_strBannedWords = "";
-        m_strProfanityWords = "";
-        m_strCleanWords = "";
-        m_strBannedPattern = "";
-        m_strCleanPattern = "";
-        m_regexBannedWords = null;
-        m_regexCleanWords = null;
-        m_bShownFilterTip = !1;
-        m_bInitialized = !1;
-        m_DataAccess;
+      const y = "(1)";
+      class T {
         constructor(e) {
-          (0, o.rC)(this);
+          (this.m_Transport = null),
+            (this.m_Storage = null),
+            (this.m_TextFilterPreferences = {
+              eTextFilterSetting: 3,
+              bIgnoreFriends: !1,
+            }),
+            (this.m_mapPlayerCache = new Map()),
+            (this.m_strBannedWords = ""),
+            (this.m_strProfanityWords = ""),
+            (this.m_strCleanWords = ""),
+            (this.m_strBannedPattern = ""),
+            (this.m_strCleanPattern = ""),
+            (this.m_regexBannedWords = null),
+            (this.m_regexCleanWords = null),
+            (this.m_bShownFilterTip = !1),
+            (this.m_bInitialized = !1),
+            (this.m_nLoadLanguagesRetryTimeout = void 0),
+            (0, o.rC)(this);
           let t = new c.n8();
           (this.m_TextFilterPreferences = {
             eTextFilterSetting: t.text_filter_setting(),
@@ -131,17 +131,17 @@
         }
         ObfuscateString(e) {
           try {
-            const t = new TextEncoder().encode(T + e);
-            return s.JQ(t);
+            const t = new TextEncoder().encode(y + e);
+            return a.JQ(t);
           } catch (e) {
             return "";
           }
         }
         DeobfuscateString(e) {
           try {
-            const t = s.b$(e);
+            const t = a.b$(e);
             let r = new TextDecoder().decode(t);
-            return r.startsWith(T)
+            return r.startsWith(y)
               ? ((r = r.slice(3)), r)
               : (console.log(
                   "DeobfuscateString given invalid base64 data, ignoring: " + e,
@@ -213,7 +213,7 @@
                   .preferences();
               } else {
                 let t = { sessionid: h.De.SESSIONID, origin: S() };
-                const r = await a().get(
+                const r = await s().get(
                   h.De.COMMUNITY_BASE_URL +
                     "textfilter/ajaxgetcommunitypreferences",
                   { params: t, withCredentials: !0 },
@@ -236,7 +236,7 @@
                     .words();
                 } else {
                   let e = { sessionid: h.De.SESSIONID, origin: S() };
-                  const r = await a().get(
+                  const r = await s().get(
                     h.De.COMMUNITY_BASE_URL +
                       "textfilter/ajaxgettextfiltercustomwords",
                     { params: e, withCredentials: !0 },
@@ -248,18 +248,21 @@
           }
         }
         UpdateCommunityPreferences(e) {
-          let t = !1;
+          var t;
+          let r = !1;
           e.text_filter_setting() !==
-            this.m_TextFilterPreferences?.eTextFilterSetting &&
+            (null === (t = this.m_TextFilterPreferences) || void 0 === t
+              ? void 0
+              : t.eTextFilterSetting) &&
             ((this.m_TextFilterPreferences.eTextFilterSetting =
               e.text_filter_setting()),
-            (t = !0)),
+            (r = !0)),
             e.text_filter_ignore_friends() !==
               this.m_TextFilterPreferences.bIgnoreFriends &&
               ((this.m_TextFilterPreferences.bIgnoreFriends =
                 e.text_filter_ignore_friends()),
-              (t = !0)),
-            t && this.SaveTextFilterPreferences();
+              (r = !0)),
+            r && this.SaveTextFilterPreferences();
         }
         get TextFilterPreferences() {
           return this.m_TextFilterPreferences;
@@ -267,7 +270,6 @@
         UpdateTextFilterWords(e) {
           (this.m_TextFilterWords = e), this.SaveTextFilterWords();
         }
-        m_nLoadLanguagesRetryTimeout = void 0;
         async LoadLanguages(e = 15) {
           (this.m_strBannedWords = ""),
             (this.m_strProfanityWords = ""),
@@ -322,18 +324,18 @@
           if (!r) {
             t = `${h.De.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=banned&language=${e}&v=1&origin=${S()}`;
             {
-              const e = await a().get(t);
+              const e = await s().get(t);
               this.m_strBannedWords += e.data;
             }
             t = `${h.De.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=profanity&language=${e}&v=1&origin=${S()}`;
             {
-              const e = await a().get(t);
+              const e = await s().get(t);
               this.m_strProfanityWords += e.data;
             }
           }
           t = `${h.De.COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=clean_public&language=${e}&v=1&origin=${S()}`;
           {
-            const e = await a().get(t);
+            const e = await s().get(t);
             this.m_strCleanWords += e.data;
           }
         }
@@ -457,29 +459,36 @@
         if (!p) {
           const e = new Set();
           let t = { sessionid: h.De.SESSIONID, origin: S() };
-          a()
+          s()
             .get(h.De.COMMUNITY_BASE_URL + "textfilter/ajaxgetfriendslist", {
               params: t,
               withCredentials: !0,
             })
             .then((t) => {
-              for (const r of t.data.friendslist?.friends ?? [])
-                (0, l.my)(r.efriendrelationship) &&
-                  e.add(new g.K(r.ulfriendid).GetAccountID());
+              var r, i;
+              for (const n of null !==
+                (i =
+                  null === (r = t.data.friendslist) || void 0 === r
+                    ? void 0
+                    : r.friends) && void 0 !== i
+                ? i
+                : [])
+                (0, l.my)(n.efriendrelationship) &&
+                  e.add(new g.K(n.ulfriendid).GetAccountID());
             }),
             (p = (t) => e.has(t));
         }
         return p;
       }
-      (0, i.gn)([o.LO], y.prototype, "m_TextFilterPreferences", void 0),
-        (0, i.gn)([o.LO], y.prototype, "m_mapPlayerCache", void 0),
-        (0, i.gn)([o.LO], y.prototype, "m_regexBannedWords", void 0),
-        (0, i.gn)([o.LO], y.prototype, "m_regexCleanWords", void 0),
-        (0, i.gn)([o.LO], y.prototype, "m_bInitialized", void 0),
-        (0, i.gn)([o.aD], y.prototype, "Init", null),
-        (0, i.gn)([x.a], y.prototype, "OnTextFilterDictionaryChanged", null),
-        (0, i.gn)([o.aD], y.prototype, "UpdateCommunityPreferences", null),
-        (0, i.gn)([o.aD], y.prototype, "BRebuildFilter", null);
+      (0, i.gn)([o.LO], T.prototype, "m_TextFilterPreferences", void 0),
+        (0, i.gn)([o.LO], T.prototype, "m_mapPlayerCache", void 0),
+        (0, i.gn)([o.LO], T.prototype, "m_regexBannedWords", void 0),
+        (0, i.gn)([o.LO], T.prototype, "m_regexCleanWords", void 0),
+        (0, i.gn)([o.LO], T.prototype, "m_bInitialized", void 0),
+        (0, i.gn)([o.aD], T.prototype, "Init", null),
+        (0, i.gn)([x.a], T.prototype, "OnTextFilterDictionaryChanged", null),
+        (0, i.gn)([o.aD], T.prototype, "UpdateCommunityPreferences", null),
+        (0, i.gn)([o.aD], T.prototype, "BRebuildFilter", null);
     },
   },
 ]);

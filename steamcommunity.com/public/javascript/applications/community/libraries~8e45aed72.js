@@ -7,29 +7,27 @@
     10309: (e, r, t) => {
       t.d(r, {
         $H: () => B,
-        F2: () => _,
-        Go: () => z,
+        F2: () => g,
+        Go: () => _,
         KF: () => x,
         SU: () => S,
         dp: () => j,
         hU: () => O,
-        jV: () => u,
+        jV: () => m,
         sL: () => b,
-        tv: () => g,
+        tv: () => f,
       });
       var i = t(10059),
         a = t(39087),
-        s = t(79545);
-      const n = i.Message;
-      class l extends n {
+        n = t(79545);
+      const s = i.Message;
+      class l extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             l.prototype.faq_id || a.aR(l.M()),
-            n.initialize(this, e, 0, -1, [6], null);
+            s.initialize(this, e, 0, -1, [6], null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             l.sm_m ||
@@ -103,15 +101,13 @@
           return "CClanFAQSummary";
         }
       }
-      class c extends n {
+      class c extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             c.prototype.language || a.aR(c.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             c.sm_m ||
@@ -169,20 +165,18 @@
           return "CClanFAQSummary_CLanguageInfo";
         }
       }
-      class m extends n {
+      class u extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            m.prototype.faq_id || a.aR(m.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            u.prototype.faq_id || a.aR(u.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
-            m.sm_m ||
-              (m.sm_m = {
-                proto: m,
+            u.sm_m ||
+              (u.sm_m = {
+                proto: u,
                 fields: {
                   faq_id: {
                     n: 1,
@@ -208,76 +202,6 @@
                     bw: a.Xc.writeUint64String,
                   },
                   url_code: { n: 8, br: a.FE.readString, bw: a.Xc.writeString },
-                },
-              }),
-            m.sm_m
-          );
-        }
-        static MBF() {
-          return m.sm_mbf || (m.sm_mbf = a.Bh(m.M())), m.sm_mbf;
-        }
-        toObject(e = !1) {
-          return m.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return a.TA(m.M(), e, r);
-        }
-        static fromObject(e) {
-          return a.aD(m.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new i.BinaryReader(e),
-            t = new m();
-          return m.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return a.F(m.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return m.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          a.l2(m.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return m.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CClanFAQContent";
-        }
-      }
-      class u extends n {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            u.prototype.steamid || a.aR(u.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            u.sm_m ||
-              (u.sm_m = {
-                proto: u,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: a.FE.readUint64String,
-                    bw: a.Xc.writeUint64String,
-                  },
-                  internal_name: {
-                    n: 2,
-                    br: a.FE.readString,
-                    bw: a.Xc.writeString,
-                  },
-                  json_data: {
-                    n: 3,
-                    br: a.FE.readString,
-                    bw: a.Xc.writeString,
-                  },
                 },
               }),
             u.sm_m
@@ -315,18 +239,84 @@
           return u.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CClanFAQContent";
+        }
+      }
+      class m extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            m.prototype.steamid || a.aR(m.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            m.sm_m ||
+              (m.sm_m = {
+                proto: m,
+                fields: {
+                  steamid: {
+                    n: 1,
+                    br: a.FE.readUint64String,
+                    bw: a.Xc.writeUint64String,
+                  },
+                  internal_name: {
+                    n: 2,
+                    br: a.FE.readString,
+                    bw: a.Xc.writeString,
+                  },
+                  json_data: {
+                    n: 3,
+                    br: a.FE.readString,
+                    bw: a.Xc.writeString,
+                  },
+                },
+              }),
+            m.sm_m
+          );
+        }
+        static MBF() {
+          return m.sm_mbf || (m.sm_mbf = a.Bh(m.M())), m.sm_mbf;
+        }
+        toObject(e = !1) {
+          return m.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return a.TA(m.M(), e, r);
+        }
+        static fromObject(e) {
+          return a.aD(m.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new m();
+          return m.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return a.F(m.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return m.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          a.l2(m.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return m.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CClanFAQS_Create_Request";
         }
       }
-      class o extends n {
+      class o extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             o.prototype.faq_id || a.aR(o.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             o.sm_m ||
@@ -378,15 +368,13 @@
           return "CClanFAQS_Create_Response";
         }
       }
-      class B extends n {
+      class B extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             B.prototype.steamid || a.aR(B.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             B.sm_m ||
@@ -443,10 +431,10 @@
           return "CClanFAQS_Delete_Request";
         }
       }
-      class d extends n {
+      class d extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), n.initialize(this, e, 0, -1, void 0, null);
+          super(), s.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return d.toObject(e, this);
@@ -478,15 +466,13 @@
           return "CClanFAQS_Delete_Response";
         }
       }
-      class b extends n {
+      class b extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             b.prototype.steamid || a.aR(b.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             b.sm_m ||
@@ -548,10 +534,10 @@
           return "CClanFAQS_UpdateInternalName_Request";
         }
       }
-      class y extends n {
+      class y extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), n.initialize(this, e, 0, -1, void 0, null);
+          super(), s.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return y.toObject(e, this);
@@ -583,120 +569,13 @@
           return "CClanFAQS_UpdateInternalName_Response";
         }
       }
-      class _ extends n {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            _.prototype.steamid || a.aR(_.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: a.FE.readUint64String,
-                    bw: a.Xc.writeUint64String,
-                  },
-                  faq_id: {
-                    n: 2,
-                    br: a.FE.readUint64String,
-                    bw: a.Xc.writeUint64String,
-                  },
-                  json_data: {
-                    n: 3,
-                    br: a.FE.readString,
-                    bw: a.Xc.writeString,
-                  },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = a.Bh(_.M())), _.sm_mbf;
-        }
-        toObject(e = !1) {
-          return _.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return a.TA(_.M(), e, r);
-        }
-        static fromObject(e) {
-          return a.aD(_.M(), e);
-        }
-        static deserializeBinary(e) {
-          let r = new i.BinaryReader(e),
-            t = new _();
-          return _.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return a.F(_.MBF(), e, r);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {
-          a.l2(_.M(), e, r);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CClanFAQS_UpdateJsonData_Request";
-        }
-      }
-      class f extends n {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), n.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return f.toObject(e, this);
-        }
-        static toObject(e, r) {
-          return e ? { $jspbMessageInstance: r } : {};
-        }
-        static fromObject(e) {
-          return new f();
-        }
-        static deserializeBinary(e) {
-          let r = new i.BinaryReader(e),
-            t = new f();
-          return f.deserializeBinaryFromReader(t, r);
-        }
-        static deserializeBinaryFromReader(e, r) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return f.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, r) {}
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CClanFAQS_UpdateJsonData_Response";
-        }
-      }
-      class g extends n {
+      class g extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             g.prototype.steamid || a.aR(g.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             g.sm_m ||
@@ -713,15 +592,10 @@
                     br: a.FE.readUint64String,
                     bw: a.Xc.writeUint64String,
                   },
-                  visible_in_global_realm: {
+                  json_data: {
                     n: 3,
-                    br: a.FE.readBool,
-                    bw: a.Xc.writeBool,
-                  },
-                  visible_in_china_realm: {
-                    n: 4,
-                    br: a.FE.readBool,
-                    bw: a.Xc.writeBool,
+                    br: a.FE.readString,
+                    bw: a.Xc.writeString,
                   },
                 },
               }),
@@ -760,13 +634,13 @@
           return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CClanFAQS_SetVisibility_Request";
+          return "CClanFAQS_UpdateJsonData_Request";
         }
       }
-      class F extends n {
+      class F extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), n.initialize(this, e, 0, -1, void 0, null);
+          super(), s.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return F.toObject(e, this);
@@ -795,23 +669,129 @@
           return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CClanFAQS_SetVisibility_Response";
+          return "CClanFAQS_UpdateJsonData_Response";
         }
       }
-      class z extends n {
+      class f extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            z.prototype.steamid || a.aR(z.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            f.prototype.steamid || a.aR(f.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
-            z.sm_m ||
-              (z.sm_m = {
-                proto: z,
+            f.sm_m ||
+              (f.sm_m = {
+                proto: f,
+                fields: {
+                  steamid: {
+                    n: 1,
+                    br: a.FE.readUint64String,
+                    bw: a.Xc.writeUint64String,
+                  },
+                  faq_id: {
+                    n: 2,
+                    br: a.FE.readUint64String,
+                    bw: a.Xc.writeUint64String,
+                  },
+                  visible_in_global_realm: {
+                    n: 3,
+                    br: a.FE.readBool,
+                    bw: a.Xc.writeBool,
+                  },
+                  visible_in_china_realm: {
+                    n: 4,
+                    br: a.FE.readBool,
+                    bw: a.Xc.writeBool,
+                  },
+                },
+              }),
+            f.sm_m
+          );
+        }
+        static MBF() {
+          return f.sm_mbf || (f.sm_mbf = a.Bh(f.M())), f.sm_mbf;
+        }
+        toObject(e = !1) {
+          return f.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return a.TA(f.M(), e, r);
+        }
+        static fromObject(e) {
+          return a.aD(f.M(), e);
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new f();
+          return f.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return a.F(f.MBF(), e, r);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return f.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {
+          a.l2(f.M(), e, r);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CClanFAQS_SetVisibility_Request";
+        }
+      }
+      class z extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), s.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return z.toObject(e, this);
+        }
+        static toObject(e, r) {
+          return e ? { $jspbMessageInstance: r } : {};
+        }
+        static fromObject(e) {
+          return new z();
+        }
+        static deserializeBinary(e) {
+          let r = new i.BinaryReader(e),
+            t = new z();
+          return z.deserializeBinaryFromReader(t, r);
+        }
+        static deserializeBinaryFromReader(e, r) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, r) {}
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CClanFAQS_SetVisibility_Response";
+        }
+      }
+      class _ extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            _.prototype.steamid || a.aR(_.M()),
+            s.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
                 fields: {
                   steamid: {
                     n: 1,
@@ -828,53 +808,51 @@
                   title: { n: 5, br: a.FE.readString, bw: a.Xc.writeString },
                 },
               }),
-            z.sm_m
+            _.sm_m
           );
         }
         static MBF() {
-          return z.sm_mbf || (z.sm_mbf = a.Bh(z.M())), z.sm_mbf;
+          return _.sm_mbf || (_.sm_mbf = a.Bh(_.M())), _.sm_mbf;
         }
         toObject(e = !1) {
-          return z.toObject(e, this);
+          return _.toObject(e, this);
         }
         static toObject(e, r) {
-          return a.TA(z.M(), e, r);
+          return a.TA(_.M(), e, r);
         }
         static fromObject(e) {
-          return a.aD(z.M(), e);
+          return a.aD(_.M(), e);
         }
         static deserializeBinary(e) {
           let r = new i.BinaryReader(e),
-            t = new z();
-          return z.deserializeBinaryFromReader(t, r);
+            t = new _();
+          return _.deserializeBinaryFromReader(t, r);
         }
         static deserializeBinaryFromReader(e, r) {
-          return a.F(z.MBF(), e, r);
+          return a.F(_.MBF(), e, r);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, r) {
-          a.l2(z.M(), e, r);
+          a.l2(_.M(), e, r);
         }
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CClanFAQS_UpdateDraft_Request";
         }
       }
-      class w extends n {
+      class w extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             w.prototype.last_update_timestamp || a.aR(w.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             w.sm_m ||
@@ -926,15 +904,13 @@
           return "CClanFAQS_UpdateDraft_Response";
         }
       }
-      class S extends n {
+      class S extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             S.prototype.steamid || a.aR(S.M()),
-            n.initialize(this, e, 0, -1, [3], null);
+            s.initialize(this, e, 0, -1, [3], null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             S.sm_m ||
@@ -999,15 +975,13 @@
           return "CClanFAQS_PublishDraft_Request";
         }
       }
-      class M extends n {
+      class M extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             M.prototype.last_publish_timestamp || a.aR(M.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             M.sm_m ||
@@ -1059,15 +1033,13 @@
           return "CClanFAQS_PublishDraft_Response";
         }
       }
-      class R extends n {
+      class R extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             R.prototype.steamid || a.aR(R.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             R.sm_m ||
@@ -1125,18 +1097,16 @@
           return "CClanFAQS_PreviewDraft_Request";
         }
       }
-      class p extends n {
+      class p extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             p.prototype.faq || a.aR(p.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
-            p.sm_m || (p.sm_m = { proto: p, fields: { faq: { n: 1, c: m } } }),
+            p.sm_m || (p.sm_m = { proto: p, fields: { faq: { n: 1, c: u } } }),
             p.sm_m
           );
         }
@@ -1175,15 +1145,13 @@
           return "CClanFAQS_PreviewDraft_Response";
         }
       }
-      class h extends n {
+      class h extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             h.prototype.faq_id || a.aR(h.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             h.sm_m ||
@@ -1236,22 +1204,20 @@
           return "CClanFAQS_GetFAQ_Request";
         }
       }
-      class W extends n {
+      class W extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             W.prototype.faq || a.aR(W.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             W.sm_m ||
               (W.sm_m = {
                 proto: W,
                 fields: {
-                  faq: { n: 1, c: m },
+                  faq: { n: 1, c: u },
                   faq_exists: {
                     n: 2,
                     d: !1,
@@ -1298,15 +1264,13 @@
           return "CClanFAQS_GetFAQ_Response";
         }
       }
-      class j extends n {
+      class j extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             j.prototype.steamid || a.aR(j.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             j.sm_m ||
@@ -1369,18 +1333,16 @@
           return "CClanFAQS_GetFAQVersion_Request";
         }
       }
-      class C extends n {
+      class C extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             C.prototype.faq || a.aR(C.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
-            C.sm_m || (C.sm_m = { proto: C, fields: { faq: { n: 1, c: m } } }),
+            C.sm_m || (C.sm_m = { proto: C, fields: { faq: { n: 1, c: u } } }),
             C.sm_m
           );
         }
@@ -1419,15 +1381,13 @@
           return "CClanFAQS_GetFAQVersion_Response";
         }
       }
-      class O extends n {
+      class O extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             O.prototype.steamid || a.aR(O.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             O.sm_m ||
@@ -1484,15 +1444,13 @@
           return "CClanFAQS_GetAllDrafts_Request";
         }
       }
-      class T extends n {
+      class T extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             T.prototype.summary || a.aR(T.M()),
-            n.initialize(this, e, 0, -1, [2], null);
+            s.initialize(this, e, 0, -1, [2], null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             T.sm_m ||
@@ -1500,7 +1458,7 @@
                 proto: T,
                 fields: {
                   summary: { n: 1, c: l },
-                  draft: { n: 2, c: m, r: !0, q: !0 },
+                  draft: { n: 2, c: u, r: !0, q: !0 },
                 },
               }),
             T.sm_m
@@ -1541,15 +1499,13 @@
           return "CClanFAQS_GetAllDrafts_Response";
         }
       }
-      class v extends n {
+      class v extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             v.prototype.steamid || a.aR(v.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             v.sm_m ||
@@ -1601,15 +1557,13 @@
           return "CClanFAQS_GetAllFAQsForClan_Request";
         }
       }
-      class A extends n {
+      class A extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             A.prototype.faq || a.aR(A.M()),
-            n.initialize(this, e, 0, -1, [1], null);
+            s.initialize(this, e, 0, -1, [1], null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             A.sm_m ||
@@ -1655,15 +1609,13 @@
           return "CClanFAQS_GetAllFAQsForClan_Response";
         }
       }
-      class U extends n {
+      class U extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             U.prototype.steamid || a.aR(U.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             U.sm_m ||
@@ -1720,21 +1672,19 @@
           return "CClanFAQS_GetAllLatestVersionPublishedFAQS_Request";
         }
       }
-      class I extends n {
+      class I extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             I.prototype.faqs || a.aR(I.M()),
-            n.initialize(this, e, 0, -1, [1], null);
+            s.initialize(this, e, 0, -1, [1], null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             I.sm_m ||
               (I.sm_m = {
                 proto: I,
-                fields: { faqs: { n: 1, c: m, r: !0, q: !0 } },
+                fields: { faqs: { n: 1, c: u, r: !0, q: !0 } },
               }),
             I.sm_m
           );
@@ -1774,15 +1724,13 @@
           return "CClanFAQS_GetAllLatestVersionPublishedFAQS_Response";
         }
       }
-      class E extends n {
+      class E extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             E.prototype.steamid || a.aR(E.M()),
-            n.initialize(this, e, 0, -1, void 0, null);
+            s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             E.sm_m ||
@@ -1834,10 +1782,10 @@
           return "CClanFAQS_CheckFAQPermissions_Request";
         }
       }
-      class Q extends n {
+      class Q extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), n.initialize(this, e, 0, -1, void 0, null);
+          super(), s.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return Q.toObject(e, this);
@@ -1869,15 +1817,13 @@
           return "CClanFAQS_CheckFAQPermissions_Response";
         }
       }
-      class X extends n {
+      class X extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             X.prototype.search_text || a.aR(X.M()),
-            n.initialize(this, e, 0, -1, [2, 5], null);
+            s.initialize(this, e, 0, -1, [2, 5], null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             X.sm_m ||
@@ -1947,15 +1893,13 @@
           return "CClanFAQS_SearchFAQs_Request";
         }
       }
-      class D extends n {
+      class D extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             D.prototype.faqs || a.aR(D.M()),
-            n.initialize(this, e, 0, -1, [1], null);
+            s.initialize(this, e, 0, -1, [1], null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             D.sm_m ||
@@ -2013,15 +1957,13 @@
           return "CClanFAQS_SearchFAQs_Response";
         }
       }
-      class q extends n {
+      class q extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             q.prototype.articleid || a.aR(q.M()),
-            n.initialize(this, e, 0, -1, [6], null);
+            s.initialize(this, e, 0, -1, [6], null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             q.sm_m ||
@@ -2091,69 +2033,69 @@
       var x;
       !(function (e) {
         (e.Create = function (e, r) {
-          return e.SendMsg("ClanFAQS.Create#1", (0, s.MD)(u, r), o, {
+          return e.SendMsg("ClanFAQS.Create#1", (0, n.MD)(m, r), o, {
             ePrivilege: 1,
           });
         }),
           (e.Delete = function (e, r) {
-            return e.SendMsg("ClanFAQS.Delete#1", (0, s.MD)(B, r), d, {
+            return e.SendMsg("ClanFAQS.Delete#1", (0, n.MD)(B, r), d, {
               ePrivilege: 1,
             });
           }),
           (e.UpdateInternalName = function (e, r) {
             return e.SendMsg(
               "ClanFAQS.UpdateInternalName#1",
-              (0, s.MD)(b, r),
+              (0, n.MD)(b, r),
               y,
               { ePrivilege: 1 },
             );
           }),
           (e.UpdateJsonData = function (e, r) {
-            return e.SendMsg("ClanFAQS.UpdateJsonData#1", (0, s.MD)(_, r), f, {
+            return e.SendMsg("ClanFAQS.UpdateJsonData#1", (0, n.MD)(g, r), F, {
               ePrivilege: 1,
             });
           }),
           (e.SetVisibility = function (e, r) {
-            return e.SendMsg("ClanFAQS.SetVisibility#1", (0, s.MD)(g, r), F, {
+            return e.SendMsg("ClanFAQS.SetVisibility#1", (0, n.MD)(f, r), z, {
               ePrivilege: 1,
             });
           }),
           (e.UpdateDraft = function (e, r) {
-            return e.SendMsg("ClanFAQS.UpdateDraft#1", (0, s.MD)(z, r), w, {
+            return e.SendMsg("ClanFAQS.UpdateDraft#1", (0, n.MD)(_, r), w, {
               ePrivilege: 1,
             });
           }),
           (e.PublishDraft = function (e, r) {
-            return e.SendMsg("ClanFAQS.PublishDraft#1", (0, s.MD)(S, r), M, {
+            return e.SendMsg("ClanFAQS.PublishDraft#1", (0, n.MD)(S, r), M, {
               ePrivilege: 1,
             });
           }),
           (e.PreviewDraft = function (e, r) {
-            return e.SendMsg("ClanFAQS.PreviewDraft#1", (0, s.MD)(R, r), p, {
+            return e.SendMsg("ClanFAQS.PreviewDraft#1", (0, n.MD)(R, r), p, {
               ePrivilege: 1,
             });
           }),
           (e.GetFAQ = function (e, r) {
-            return e.SendMsg("ClanFAQS.GetFAQ#1", (0, s.MD)(h, r), W, {
+            return e.SendMsg("ClanFAQS.GetFAQ#1", (0, n.MD)(h, r), W, {
               bConstMethod: !0,
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,
             });
           }),
           (e.GetFAQVersion = function (e, r) {
-            return e.SendMsg("ClanFAQS.GetFAQVersion#1", (0, s.MD)(j, r), C, {
+            return e.SendMsg("ClanFAQS.GetFAQVersion#1", (0, n.MD)(j, r), C, {
               ePrivilege: 1,
             });
           }),
           (e.GetAllDrafts = function (e, r) {
-            return e.SendMsg("ClanFAQS.GetAllDrafts#1", (0, s.MD)(O, r), T, {
+            return e.SendMsg("ClanFAQS.GetAllDrafts#1", (0, n.MD)(O, r), T, {
               ePrivilege: 1,
             });
           }),
           (e.GetAllFAQsForClan = function (e, r) {
             return e.SendMsg(
               "ClanFAQS.GetAllFAQsForClan#1",
-              (0, s.MD)(v, r),
+              (0, n.MD)(v, r),
               A,
               { ePrivilege: 1 },
             );
@@ -2161,7 +2103,7 @@
           (e.GetAllLatestVersionPublishedFAQS = function (e, r) {
             return e.SendMsg(
               "ClanFAQS.GetAllLatestVersionPublishedFAQS#1",
-              (0, s.MD)(U, r),
+              (0, n.MD)(U, r),
               I,
               { ePrivilege: 1 },
             );
@@ -2169,13 +2111,13 @@
           (e.CheckFAQPermissions = function (e, r) {
             return e.SendMsg(
               "ClanFAQS.CheckFAQPermissions#1",
-              (0, s.MD)(E, r),
+              (0, n.MD)(E, r),
               Q,
               { ePrivilege: 1 },
             );
           }),
           (e.SearchFAQs = function (e, r) {
-            return e.SendMsg("ClanFAQS.SearchFAQs#1", (0, s.MD)(X, r), D, {
+            return e.SendMsg("ClanFAQS.SearchFAQs#1", (0, n.MD)(X, r), D, {
               bConstMethod: !0,
               ePrivilege: 0,
               eWebAPIKeyRequirement: 1,

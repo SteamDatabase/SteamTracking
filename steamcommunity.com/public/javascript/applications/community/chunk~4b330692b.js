@@ -63,22 +63,20 @@
         c = a(91618),
         d = a(47144),
         m = a(77581),
-        u = a(7587),
-        h = a(54842),
+        h = a(7587),
+        u = a(54842),
         g = a(79545),
         C = a(37563),
         p = a(88016);
       class E {
-        m_transport;
-        m_lPointsAvailable = null;
-        m_bPointsBalanceLoadedOrInFlight = !1;
-        m_mapReactionConfiguration = new Map();
-        m_bReactionConfigurationLoadedOrInFlight = !1;
-        m_eTargetType;
-        m_targetID;
-        m_mapExistingReactions = new Map();
         constructor(e) {
-          (0, h.rC)(this), (this.m_transport = e);
+          (this.m_lPointsAvailable = null),
+            (this.m_bPointsBalanceLoadedOrInFlight = !1),
+            (this.m_mapReactionConfiguration = new Map()),
+            (this.m_bReactionConfigurationLoadedOrInFlight = !1),
+            (this.m_mapExistingReactions = new Map()),
+            (0, u.rC)(this),
+            (this.m_transport = e);
         }
         BIsLoggedIn() {
           return C.L7.logged_in;
@@ -120,7 +118,7 @@
           e.SetBodyFields({ steamid: C.L7.steamid });
           let t = await p.pQ.GetSummary(this.m_transport, e);
           1 == t.GetEResult()
-            ? (this.m_lPointsAvailable = u.Z.fromString(
+            ? (this.m_lPointsAvailable = h.Z.fromString(
                 t.Body().summary().points(),
               ))
             : console.error(
@@ -167,14 +165,14 @@
           );
         }
       }
-      (0, n.gn)([h.LO.ref], E.prototype, "m_lPointsAvailable", void 0),
+      (0, n.gn)([u.LO.ref], E.prototype, "m_lPointsAvailable", void 0),
         (0, n.gn)(
-          [h.LO.deep],
+          [u.LO.deep],
           E.prototype,
           "m_mapReactionConfiguration",
           void 0,
         ),
-        (0, n.gn)([h.LO.deep], E.prototype, "m_mapExistingReactions", void 0);
+        (0, n.gn)([u.LO.deep], E.prototype, "m_mapExistingReactions", void 0);
       var w = a(1485),
         y = a(50898),
         f = a(62613),
@@ -227,8 +225,8 @@
                       ],
                       d = i * (n <= 1e3 ? 1 : n / 1e3) * (t == x.Gold ? 2 : 1),
                       m = (Math.random() - 0.5) * n,
-                      u = (Math.random() - 0.5) * n,
-                      h = [u, m + u],
+                      h = (Math.random() - 0.5) * n,
+                      u = [h, m + h],
                       g = N(t),
                       C = S(t);
                     a.push({
@@ -237,7 +235,7 @@
                       rotationRatioX: e,
                       rotationRatioZ: s,
                       yRange: c,
-                      xRange: h,
+                      xRange: u,
                       scale: d,
                       colorHue: g,
                       filter: C,
@@ -313,7 +311,7 @@
           borderWidth: 1,
           borderColor: "black",
         },
-        I = ({ eType: e }) => {
+        B = ({ eType: e }) => {
           x.Gold, x.LNY2020;
           const [t, a] = (function () {
             const [e, t] = (0, o.useState)(null),
@@ -333,12 +331,12 @@
             case x.LNY2020:
               n = r.map((e, t) =>
                 t % 2
-                  ? o.createElement(B, { key: t, style: e })
+                  ? o.createElement(I, { key: t, style: e })
                   : o.createElement(O, { key: t, style: e }),
               );
               break;
             case x.Default:
-              n = r.map((e, t) => o.createElement(B, { key: t, style: e }));
+              n = r.map((e, t) => o.createElement(I, { key: t, style: e }));
           }
           return o.createElement(
             "div",
@@ -361,7 +359,7 @@
             ),
           );
         },
-        B = ({ style: e }) =>
+        I = ({ style: e }) =>
           o.createElement(A.q.div, { style: { ...T, ...e } }),
         k = ({ style: e }) => {
           const [t] = (0, o.useState)(Math.floor(Math.random() * Z.length)),
@@ -676,12 +674,7 @@
       }
       (0, n.gn)([R.ak], j.prototype, "handleMouseOver", null),
         (0, n.gn)([R.ak], j.prototype, "handleMouseOut", null);
-      let Y = class extends o.Component {
-        static {
-          q = this;
-        }
-        static s_LoyaltyAwardModalStore;
-        static defaultProps = { targetType: 1 };
+      let Y = (q = class extends o.Component {
         constructor(e) {
           super(e),
             (window.fnLoyalty_ShowAwardModal = (t, a, n, r, l) => {
@@ -774,14 +767,10 @@
             initialSelectedReaction: s,
           });
         }
-      };
-      Y = q = (0, n.gn)([s.Pi], Y);
+      });
+      (Y.defaultProps = { targetType: 1 }), (Y = q = (0, n.gn)([s.Pi], Y));
       const J = Y;
-      let W = class extends o.Component {
-        static {
-          $ = this;
-        }
-        static s_LoyaltyAwardModalStore = null;
+      let W = ($ = class extends o.Component {
         static Initialize(e) {
           null === this.s_LoyaltyAwardModalStore &&
             (this.s_LoyaltyAwardModalStore = new E(e.GetServiceTransport()));
@@ -814,8 +803,8 @@
             initialSelectedReaction: r,
           });
         }
-      };
-      W = $ = (0, n.gn)([s.Pi], W);
+      });
+      (W.s_LoyaltyAwardModalStore = null), (W = $ = (0, n.gn)([s.Pi], W));
       let K = class extends o.Component {
         constructor(e) {
           super(e),
@@ -844,8 +833,8 @@
             { selectedReaction: l, ePhase: s, celebrate: c } = this.state;
           if (!e) return null;
           const m = n.GetExistingReactions(),
-            u = n.GetAwardConfigurations(),
-            h = n.GetUserPointBalance(),
+            h = n.GetAwardConfigurations(),
+            u = n.GetUserPointBalance(),
             g = (function (e, t, a) {
               let n = [];
               return (
@@ -864,8 +853,8 @@
                 }),
                 n
               );
-            })(u, t, a),
-            p = 0 === l ? null : u.get(l),
+            })(h, t, a),
+            p = 0 === l ? null : h.get(l),
             E = p ? p.points_cost : 0,
             f = p ? p.points_transferred : 0;
           let v,
@@ -890,7 +879,7 @@
             case Q.SELECTING:
               {
                 const e = 0 === l || m.get(l),
-                  t = !h || h.greaterThanOrEqual(E),
+                  t = !u || u.greaterThanOrEqual(E),
                   a = o.createElement(
                     w.KM,
                     {
@@ -935,7 +924,7 @@
                         key: e,
                         reaction: e,
                         selected: e === l && !m.get(e),
-                        cost: u.get(e).points_cost,
+                        cost: h.get(e).points_cost,
                         alreadyAwarded: m.get(e),
                         onClick: () => {
                           m.get(e) ||
@@ -958,7 +947,7 @@
                             { key: "msg", className: X.NotEnoughPoints },
                             (0, _.Xx)(
                               "#GrantAward_CantAfford",
-                              h.negate().add(E).toNumber().toLocaleString(),
+                              u.negate().add(E).toNumber().toLocaleString(),
                             ),
                           ),
                           o.createElement(
@@ -1179,7 +1168,7 @@
             o.createElement(
               y.Pv,
               { navID: "GrantAward", closeModal: r },
-              c && o.createElement(I, { eType: x.Default }),
+              c && o.createElement(B, { eType: x.Default }),
               v,
             ),
           );

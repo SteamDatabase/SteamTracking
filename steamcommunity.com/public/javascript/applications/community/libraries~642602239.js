@@ -102,17 +102,17 @@
           constructor: { value: e, writable: !0, configurable: !0 },
         })),
           Object.defineProperty(e, "prototype", { writable: !1 }),
-          t && h(e, t);
+          t && m(e, t);
       }
-      function m(e) {
-        return (m = Object.setPrototypeOf
+      function h(e) {
+        return (h = Object.setPrototypeOf
           ? Object.getPrototypeOf.bind()
           : function (e) {
               return e.__proto__ || Object.getPrototypeOf(e);
             })(e);
       }
-      function h(e, t) {
-        return (h = Object.setPrototypeOf
+      function m(e, t) {
+        return (m = Object.setPrototypeOf
           ? Object.setPrototypeOf.bind()
           : function (e, t) {
               return (e.__proto__ = t), e;
@@ -167,9 +167,9 @@
         })();
         return function () {
           var r,
-            i = m(e);
+            i = h(e);
           if (t) {
-            var n = m(this).constructor;
+            var n = h(this).constructor;
             r = Reflect.construct(i, arguments, n);
           } else r = i.apply(this, arguments);
           return (function (e, t) {
@@ -225,8 +225,8 @@
         return e((t = { exports: {} }), t.exports), t.exports;
       }
       function v() {}
-      function _() {}
-      function w(e) {
+      function w() {}
+      function _(e) {
         return e
           .map(function (e) {
             return !1 === e ? null : e;
@@ -403,7 +403,7 @@
           r
         );
       }
-      _.resetWarningCache = v;
+      w.resetWarningCache = v;
       var P = y(function (e) {
           e.exports = (function () {
             function e(e, t, r, i, n, a) {
@@ -438,7 +438,7 @@
               oneOfType: t,
               shape: t,
               exact: t,
-              checkPropTypes: _,
+              checkPropTypes: w,
               resetWarningCache: v,
             };
             return (r.PropTypes = r), r;
@@ -542,7 +542,7 @@
                         e.visibleSlides,
                         e.infinite),
                       a = p(e, U),
-                      s = w([A, "carousel__back-button", r]),
+                      s = _([A, "carousel__back-button", r]),
                       l = t.setDisabled(
                         this.props.disabled,
                         this.props.currentSlide,
@@ -1025,7 +1025,7 @@
                           e.infinite,
                           e.isIntrinsicHeight,
                           p(e, ee)),
-                        n = w(["carousel", this.props.className]);
+                        n = _(["carousel", this.props.className]);
                       return i.createElement(
                         t,
                         u({ className: n }, r),
@@ -1149,7 +1149,7 @@
                       r = e.currentSlide,
                       n = e.disabled,
                       a = (e.onClick, e.totalSlides, p(e, ue)),
-                      s = w([ce, "carousel__first-button", t]),
+                      s = _([ce, "carousel__first-button", t]),
                       l = null !== n ? n : 0 === r;
                     return i.createElement(
                       "button",
@@ -1186,12 +1186,12 @@
             onClick: null,
           }),
           re),
-        me =
+        he =
           (j(de, function (e) {
             return { currentSlide: e.currentSlide, totalSlides: e.totalSlides };
           }),
           "buttonNext___2mOCa"),
-        he = [
+        me = [
           "carouselStore",
           "className",
           "currentSlide",
@@ -1249,9 +1249,9 @@
                         s = (e.onClick, e.step, e.totalSlides),
                         l = e.visibleSlides,
                         o = e.infinite,
-                        c = p(e, he),
-                        d = w([me, "carousel__next-button", r]),
-                        m = t.setDisabled(a, n, l, s, o);
+                        c = p(e, me),
+                        d = _([he, "carousel__next-button", r]),
+                        h = t.setDisabled(a, n, l, s, o);
                       return i.createElement(
                         "button",
                         u(
@@ -1260,7 +1260,7 @@
                             "aria-label": "next",
                             className: d,
                             onClick: this.handleOnClick,
-                            disabled: m,
+                            disabled: h,
                           },
                           c,
                         ),
@@ -1357,7 +1357,7 @@
                       a = (e.onClick, e.totalSlides),
                       s = e.visibleSlides,
                       l = p(e, fe),
-                      o = w([Se, "carousel__last-button", t]),
+                      o = _([Se, "carousel__last-button", t]),
                       c = null !== n ? n : r >= a - s;
                     return i.createElement(
                       "button",
@@ -1413,7 +1413,7 @@
           "isPlaying",
           "onClick",
         ],
-        _e =
+        we =
           ((ae = (function (e) {
             function t(e) {
               var i;
@@ -1448,7 +1448,7 @@
                       n = e.className,
                       a = e.isPlaying,
                       s = (e.onClick, p(e, ve)),
-                      l = w([ye, "carousel__play-button", n]);
+                      l = _([ye, "carousel__play-button", n]);
                     return i.createElement(
                       "button",
                       u(
@@ -1487,8 +1487,8 @@
             onClick: null,
           }),
           ae),
-        we =
-          (j(_e, function (e) {
+        _e =
+          (j(we, function (e) {
             return { isPlaying: e.isPlaying };
           }),
           { dot: "dot___3c3SI" }),
@@ -1549,10 +1549,10 @@
                       o = p(e, Be),
                       c = s >= r && s < r + l,
                       d = "boolean" == typeof a ? a : c,
-                      m = "boolean" == typeof n ? n : !0 === c,
-                      h = w([
-                        we.dot,
-                        d && we.dotSelected,
+                      h = "boolean" == typeof n ? n : !0 === c,
+                      m = _([
+                        _e.dot,
+                        d && _e.dotSelected,
                         "carousel__dot",
                         "carousel__dot--".concat(s),
                         d && "carousel__dot--selected",
@@ -1565,8 +1565,8 @@
                           "aria-label": "slide dot",
                           type: "button",
                           onClick: this.handleOnClick,
-                          className: h,
-                          disabled: m,
+                          className: m,
+                          disabled: h,
                         },
                         o,
                       ),
@@ -1644,14 +1644,14 @@
                     }
                     for (var c = [], u = 0; u < r; u += 1) {
                       var d = s ? u === t : u >= t && u < t + n,
-                        m = u >= r - n ? r - n : u;
+                        h = u >= r - n ? r - n : u;
                       c.push(
                         i.createElement(
                           Oe,
-                          { key: u, slide: m, selected: d, disabled: !!a && d },
+                          { key: u, slide: h, selected: d, disabled: !!a && d },
                           i.createElement(
                             "span",
-                            { className: w["carousel__dot-group-dot"] },
+                            { className: _["carousel__dot-group-dot"] },
                             this.props.dotNumbers && u + 1,
                           ),
                         ),
@@ -1675,7 +1675,7 @@
                         e.showAsSelectedForCurrentSlideOnly,
                         e.renderDots,
                         p(e, Ee)),
-                      a = w([ke.DotGroup, "carousel__dot-group", r]);
+                      a = _([ke.DotGroup, "carousel__dot-group", r]);
                     return i.createElement(
                       "div",
                       u({ className: a }, n),
@@ -1846,7 +1846,7 @@
                   key: "renderLoading",
                   value: function (e) {
                     var t = this.tempTag(),
-                      r = w([
+                      r = _([
                         Re.image,
                         Re.imageLoading,
                         "carousel__image",
@@ -1866,7 +1866,7 @@
                   key: "renderError",
                   value: function (e) {
                     var t = this.tempTag(),
-                      r = w([
+                      r = _([
                         Re.image,
                         Re.imageError,
                         "carousel__image",
@@ -1888,7 +1888,7 @@
                     var t = this.props,
                       r = t.style,
                       n = t.tag,
-                      a = w([
+                      a = _([
                         Re.image,
                         "carousel__image",
                         this.props.isBgImage &&
@@ -2021,7 +2021,7 @@
                       var e = this.props,
                         t = e.className,
                         r = p(e, Ae),
-                        n = w([We, "carousel__spinner", t]);
+                        n = _([We, "carousel__spinner", t]);
                       return i.createElement("div", u({ className: n }, r));
                     },
                   },
@@ -2191,14 +2191,14 @@
                           u.distance = t.distanceBetweenTwoTouches(a({}, u));
                           var d = t.midpointBetweenTwoTouches(a({}, u));
                           (u.cx = d.x), (u.cy = d.y);
-                          var m = O(
+                          var h = O(
                               W({
                                 min: 0,
                                 max: 100,
                                 x: ((u.cx - n.left) / n.width) * 100,
                               }),
                             ),
-                            h = O(
+                            m = O(
                               W({
                                 min: 0,
                                 max: 100,
@@ -2216,8 +2216,8 @@
                             return {
                               isZooming: 1 !== p(e),
                               scale: p(e),
-                              x: m,
-                              y: h,
+                              x: h,
+                              y: m,
                             };
                           });
                         }
@@ -2244,7 +2244,7 @@
                         return i.createElement(
                           "div",
                           {
-                            className: w([
+                            className: _([
                               Xe.imageLoadingSpinnerContainer,
                               "carousel__image-loading-spinner-container",
                             ]),
@@ -2269,10 +2269,10 @@
                         o = (e.isPinchZoomEnabled, e.spinner, e.src),
                         c = e.srcZoomed,
                         d = e.tag,
-                        m = p(e, qe),
-                        h = w([Xe.container, a]),
-                        b = w([Xe.image, "carousel__zoom-image", s]),
-                        S = w([
+                        h = p(e, qe),
+                        m = _([Xe.container, a]),
+                        b = _([Xe.image, "carousel__zoom-image", s]),
+                        S = _([
                           Xe.overlay,
                           "carousel__zoom-image-overlay",
                           this.state.isHovering && Xe.hover,
@@ -2295,7 +2295,7 @@
                           ))),
                         i.createElement(
                           d,
-                          u({ className: h }, m),
+                          u({ className: m }, h),
                           i.createElement(
                             xe,
                             u(
@@ -2490,32 +2490,32 @@
                       o = t.innerTag,
                       c = t.naturalSlideHeight,
                       d = t.naturalSlideWidth,
-                      m = (t.onBlur, t.onFocus, t.orientation),
-                      h = t.slideSize,
+                      h = (t.onBlur, t.onFocus, t.orientation),
+                      m = t.slideSize,
                       b = t.style,
                       S = t.tabIndex,
                       f = t.tag,
                       g = t.totalSlides,
                       y = (t.visibleSlides, t.isIntrinsicHeight),
                       v = p(t, Ve),
-                      _ = {};
-                    "horizontal" === m
-                      ? ((_.width = O(h)),
-                        (_.paddingBottom = O((100 * c) / (d * g))))
-                      : ((_.width = O(100)),
-                        (_.paddingBottom = O((100 * c) / d)));
+                      w = {};
+                    "horizontal" === h
+                      ? ((w.width = O(m)),
+                        (w.paddingBottom = O((100 * c) / (d * g))))
+                      : ((w.width = O(100)),
+                        (w.paddingBottom = O((100 * c) / d)));
                     var B = {};
                     y &&
-                      ("horizontal" === m
-                        ? (_.height = "unset")
-                        : (_.width = "unset"),
-                      (_.paddingBottom = "unset"),
+                      ("horizontal" === h
+                        ? (w.height = "unset")
+                        : (w.width = "unset"),
+                      (w.paddingBottom = "unset"),
                       (B.position = "unset"));
-                    var M = u({}, _, b),
+                    var M = u({}, w, b),
                       k = this.isVisible(),
-                      T = w([
+                      T = _([
                         He.slide,
-                        "horizontal" === m && He.slideHorizontal,
+                        "horizontal" === h && He.slideHorizontal,
                         "carousel__slide",
                         this.state.focused && "carousel__slide--focused",
                         k && s,
@@ -2524,7 +2524,7 @@
                         !k && "carousel__slide--hidden",
                         n,
                       ]),
-                      E = w([He.slideInner, "carousel__inner-slide", l]),
+                      E = _([He.slideInner, "carousel__inner-slide", l]),
                       C = this.isVisible() ? 0 : -1,
                       R = "number" == typeof S ? S : C;
                     return i.createElement(
@@ -3258,7 +3258,7 @@
                           i.createElement(
                             "div",
                             {
-                              className: w([
+                              className: _([
                                 Ge.masterSpinnerContainer,
                                 "carousel__master-spinner-container",
                               ]),
@@ -3282,7 +3282,7 @@
                         o = t.classNameTrayWrap,
                         c = t.currentSlide,
                         d = t.disableAnimation,
-                        m =
+                        h =
                           (t.disableKeyboard,
                           t.dragEnabled,
                           t.hasMasterSpinner,
@@ -3293,7 +3293,7 @@
                           t.masterSpinnerFinished,
                           t.moveThreshold,
                           t.naturalSlideHeight),
-                        h = t.naturalSlideWidth,
+                        m = t.naturalSlideWidth,
                         b = (t.onMasterSpinner, t.orientation),
                         S =
                           (t.playDirection,
@@ -3303,7 +3303,7 @@
                         g = (t.spinner, t.style),
                         y = t.tabIndex,
                         v = (t.totalSlides, t.touchEnabled, t.trayProps),
-                        _ = t.trayTag,
+                        w = t.trayTag,
                         B = t.visibleSlides,
                         M = t.isIntrinsicHeight,
                         k = p(t, Ke),
@@ -3311,7 +3311,7 @@
                         E = {};
                       "vertical" === b &&
                         ((E.height = 0),
-                        (E.paddingBottom = O((100 * m * B) / h)),
+                        (E.paddingBottom = O((100 * h * B) / m)),
                         (E.width = O(100)));
                       var C = {},
                         R = O(S * c * -1);
@@ -3331,7 +3331,7 @@
                               .concat(R, ") translateX(")
                               .concat(this.state.deltaX, "px)")),
                             (C.flexDirection = "row"));
-                      var z = w([
+                      var z = _([
                           "vertical" === b
                             ? Ge.verticalSlider
                             : Ge.horizontalSlider,
@@ -3341,7 +3341,7 @@
                             : "carousel__slider--horizontal",
                           a,
                         ]),
-                        F = w([
+                        F = _([
                           Ge.sliderTrayWrap,
                           "carousel__slider-tray-wrapper",
                           "vertical" === b
@@ -3352,7 +3352,7 @@
                             : "carousel__slider-tray-wrap--horizontal",
                           o,
                         ]),
-                        j = w([
+                        j = _([
                           Ge.sliderTray,
                           s || Ge.sliderAnimation,
                           "carousel__slider-tray",
@@ -3406,7 +3406,7 @@
                           "div",
                           { className: F, style: E },
                           i.createElement(
-                            _,
+                            w,
                             u(
                               {
                                 ref: this.getSliderRef,
@@ -3566,7 +3566,9 @@
       var i = r(20020),
         n = r(47427);
       class a {
-        reactNodes = [];
+        constructor() {
+          this.reactNodes = [];
+        }
         AppendText(e, t = !1) {
           e.length &&
             (t
@@ -3591,7 +3593,6 @@
         }
       }
       class s {
-        m_decoratedAccumulator;
         constructor(e) {
           (0, i.X)(e, "decorated accumulator cannot be null"),
             (this.m_decoratedAccumulator = e);
@@ -3607,9 +3608,10 @@
         }
       }
       class l extends s {
-        m_nStartCursor = 1;
         constructor(e, t, r) {
-          super(e), (this.m_nStartCursor = void 0 !== t ? t : 1);
+          super(e),
+            (this.m_nStartCursor = 1),
+            (this.m_nStartCursor = void 0 !== t ? t : 1);
         }
         AppendText(e) {
           let t = e;
@@ -3636,9 +3638,8 @@
         a = r(20142),
         s = r(20787);
       class l extends s.AX {
-        m_renderingLanguage;
         constructor(e, t, r) {
-          super(e, t ?? (() => new a.LT())),
+          super(e, null != t ? t : () => new a.LT()),
             (this.m_renderingLanguage =
               "string" == typeof r ? (0, i.jM)(r) : r);
         }
@@ -3677,7 +3678,7 @@
         Ts: () => M,
         o0: () => u,
         ou: () => l,
-        vS: () => w,
+        vS: () => _,
         yg: () => b,
       });
       var i = r(10059),
@@ -3694,8 +3695,6 @@
             o.prototype.communityitemid || n.aR(o.M()),
             s.initialize(this, e, 0, -1, [5], null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             o.sm_m ||
@@ -3773,8 +3772,6 @@
             c.prototype.attributeid || n.aR(c.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             c.sm_m ||
@@ -3838,8 +3835,6 @@
             u.prototype.filter_appids || n.aR(u.M()),
             s.initialize(this, e, 0, -1, [1], null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             u.sm_m ||
@@ -3901,8 +3896,6 @@
             d.prototype.items || n.aR(d.M()),
             s.initialize(this, e, 0, -1, [1], null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             d.sm_m ||
@@ -3948,20 +3941,18 @@
           return "CQuest_GetCommunityInventory_Response";
         }
       }
-      class m extends s {
+      class h extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            m.prototype.appid || n.aR(m.M()),
+            h.prototype.appid || n.aR(h.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
-            m.sm_m ||
-              (m.sm_m = {
-                proto: m,
+            h.sm_m ||
+              (h.sm_m = {
+                proto: h,
                 fields: {
                   appid: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
                   item_type: {
@@ -3981,60 +3972,6 @@
                     bw: n.Xc.writeBool,
                   },
                 },
-              }),
-            m.sm_m
-          );
-        }
-        static MBF() {
-          return m.sm_mbf || (m.sm_mbf = n.Bh(m.M())), m.sm_mbf;
-        }
-        toObject(e = !1) {
-          return m.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(m.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(m.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new m();
-          return m.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(m.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return m.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(m.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return m.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CQuest_GetCommunityItemDefinitions_Request";
-        }
-      }
-      class h extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            h.prototype.item_definitions || n.aR(h.M()),
-            s.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            h.sm_m ||
-              (h.sm_m = {
-                proto: h,
-                fields: { item_definitions: { n: 1, c: p, r: !0, q: !0 } },
               }),
             h.sm_m
           );
@@ -4071,6 +4008,58 @@
           return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CQuest_GetCommunityItemDefinitions_Request";
+        }
+      }
+      class m extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            m.prototype.item_definitions || n.aR(m.M()),
+            s.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            m.sm_m ||
+              (m.sm_m = {
+                proto: m,
+                fields: { item_definitions: { n: 1, c: p, r: !0, q: !0 } },
+              }),
+            m.sm_m
+          );
+        }
+        static MBF() {
+          return m.sm_mbf || (m.sm_mbf = n.Bh(m.M())), m.sm_mbf;
+        }
+        toObject(e = !1) {
+          return m.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.TA(m.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(m.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new m();
+          return m.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(m.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return m.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(m.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return m.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CQuest_GetCommunityItemDefinitions_Response";
         }
       }
@@ -4081,8 +4070,6 @@
             p.prototype.item_type || n.aR(p.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             p.sm_m ||
@@ -4234,8 +4221,6 @@
             b.prototype.appid || n.aR(b.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             b.sm_m ||
@@ -4331,8 +4316,6 @@
             f.prototype.timestamp_start || n.aR(f.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             f.sm_m ||
@@ -4398,8 +4381,6 @@
             g.prototype.num_trading_cards || n.aR(g.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             g.sm_m ||
@@ -4458,8 +4439,6 @@
             y.prototype.eventid || n.aR(y.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             y.sm_m ||
@@ -4519,8 +4498,6 @@
             v.prototype.eventid || n.aR(v.M()),
             s.initialize(this, e, 0, -1, void 0, null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             v.sm_m ||
@@ -4631,79 +4608,19 @@
           return "CVirtualItemRewardDefinition";
         }
       }
-      class _ extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            _.prototype.rewards || n.aR(_.M()),
-            s.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: { rewards: { n: 1, c: v, r: !0, q: !0 } },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = n.Bh(_.M())), _.sm_mbf;
-        }
-        toObject(e = !1) {
-          return _.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(_.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(_.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new _();
-          return _.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(_.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(_.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CQuest_VirtualItemRewardDefinition_Response";
-        }
-      }
       class w extends s {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            w.prototype.eventid || n.aR(w.M()),
-            s.initialize(this, e, 0, -1, [2], null);
+            w.prototype.rewards || n.aR(w.M()),
+            s.initialize(this, e, 0, -1, [1], null);
         }
-        static sm_m;
-        static sm_mbf;
         static M() {
           return (
             w.sm_m ||
               (w.sm_m = {
                 proto: w,
-                fields: {
-                  eventid: { n: 1, br: n.FE.readEnum, bw: n.Xc.writeEnum },
-                  itemsdefs: { n: 2, c: v, r: !0, q: !0 },
-                  action: { n: 3, br: n.FE.readEnum, bw: n.Xc.writeEnum },
-                },
+                fields: { rewards: { n: 1, c: v, r: !0, q: !0 } },
               }),
             w.sm_m
           );
@@ -4738,6 +4655,62 @@
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CQuest_VirtualItemRewardDefinition_Response";
+        }
+      }
+      class _ extends s {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            _.prototype.eventid || n.aR(_.M()),
+            s.initialize(this, e, 0, -1, [2], null);
+        }
+        static M() {
+          return (
+            _.sm_m ||
+              (_.sm_m = {
+                proto: _,
+                fields: {
+                  eventid: { n: 1, br: n.FE.readEnum, bw: n.Xc.writeEnum },
+                  itemsdefs: { n: 2, c: v, r: !0, q: !0 },
+                  action: { n: 3, br: n.FE.readEnum, bw: n.Xc.writeEnum },
+                },
+              }),
+            _.sm_m
+          );
+        }
+        static MBF() {
+          return _.sm_mbf || (_.sm_mbf = n.Bh(_.M())), _.sm_mbf;
+        }
+        toObject(e = !1) {
+          return _.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.TA(_.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.aD(_.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new _();
+          return _.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.F(_.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.l2(_.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CQuest_SetVirtualItemRewardDefinition_Request";
@@ -4791,8 +4764,8 @@
           (e.GetCommunityItemDefinitions = function (e, t) {
             return e.SendMsg(
               "Quest.GetCommunityItemDefinitions#1",
-              (0, a.MD)(m, t),
-              h,
+              (0, a.MD)(h, t),
+              m,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 4 },
             );
           }),
@@ -4816,14 +4789,14 @@
             return e.SendMsg(
               "Quest.GetVirtualItemRewardDefinition#1",
               (0, a.MD)(y, t),
-              _,
+              w,
               { bConstMethod: !0, ePrivilege: 4 },
             );
           }),
           (e.SetVirtualItemRewardDefinition = function (e, t) {
             return e.SendMsg(
               "Quest.SetVirtualItemRewardDefinition#1",
-              (0, a.MD)(w, t),
+              (0, a.MD)(_, t),
               B,
               { ePrivilege: 4 },
             );

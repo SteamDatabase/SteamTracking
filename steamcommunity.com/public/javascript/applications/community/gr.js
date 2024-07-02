@@ -73,7 +73,6 @@
         i = r(22520),
         l = r(62210);
       class C {
-        m_ulGameID;
         constructor(e, t, r) {
           if ("string" == typeof e) this.m_ulGameID = n.Z.fromString(e, !0);
           else {
@@ -150,12 +149,12 @@
         s = r(30750);
       class a {
         constructor() {
-          (0, C.rC)(this);
+          (this.m_mapAppMarkerLoadingPromises = new Map()),
+            (this.m_mapAppMarkers = new Map()),
+            (this.m_mapURLForApp = new Map()),
+            (this.m_fnTimelineURLGenerator = void 0),
+            (0, C.rC)(this);
         }
-        m_mapAppMarkerLoadingPromises = new Map();
-        m_mapAppMarkers = new Map();
-        m_mapURLForApp = new Map();
-        m_fnTimelineURLGenerator = void 0;
         BIsLoaded(e) {
           return this.m_mapAppMarkers.has(e);
         }
@@ -165,15 +164,22 @@
           if (n) return n.get(t) || void 0;
         }
         GetGameMarkerSVGById(e, t) {
-          const r = this.m_fnTimelineURLGenerator
+          var r, n;
+          const o = this.m_fnTimelineURLGenerator
             ? this.m_fnTimelineURLGenerator(e)
             : d(e);
           return (
-            this.m_mapURLForApp.get(e) != r &&
+            this.m_mapURLForApp.get(e) != o &&
               setTimeout(() => {
-                this.LoadAppPublicMarkers(e, r);
+                this.LoadAppPublicMarkers(e, o);
               }, 0),
-            this.m_mapAppMarkers.get(e)?.get(t)?.svg
+            null ===
+              (n =
+                null === (r = this.m_mapAppMarkers.get(e)) || void 0 === r
+                  ? void 0
+                  : r.get(t)) || void 0 === n
+              ? void 0
+              : n.svg
           );
         }
         GetAllUseableMarkerID(e, t) {
@@ -204,11 +210,16 @@
                 "defs",
               )[0];
             Array.from(s.children).forEach((e) => {
-              const t = (0, l.iv)(
-                  e.attributes.getNamedItem("steam-timeline-color")?.value,
+              var t;
+              const n = (0, l.iv)(
+                  null ===
+                    (t = e.attributes.getNamedItem("steam-timeline-color")) ||
+                    void 0 === t
+                    ? void 0
+                    : t.value,
                 ),
-                n = e;
-              r.set(e.id, { color: t, svg: n });
+                o = e;
+              r.set(e.id, { color: n, svg: o });
             });
           } catch (e) {}
           this.m_mapAppMarkerLoadingPromises.delete(e),
@@ -221,7 +232,6 @@
         GetTimelineMarkerURLFunction() {
           return this.m_fnTimelineURLGenerator;
         }
-        static s_Singleton;
         static Get() {
           return (
             a.s_Singleton ||
@@ -301,9 +311,8 @@
         i = r(30750),
         l = r(37563);
       class C {
-        m_markerStore = null;
         constructor() {
-          (0, o.rC)(this);
+          (this.m_markerStore = null), (0, o.rC)(this);
         }
         Init(e) {
           this.m_markerStore = e;
@@ -311,7 +320,6 @@
         GetMarkerStore() {
           return this.m_markerStore;
         }
-        static s_Singleton;
         static Get() {
           return (
             C.s_Singleton ||
@@ -394,7 +402,9 @@
       })(C || (C = {}));
       const u = c(C).map((e) => C[e]);
       class m {
-        m_mapSteamTimelineMarkers = new Map();
+        constructor() {
+          this.m_mapSteamTimelineMarkers = new Map();
+        }
         GetMarkerByID(e) {
           const t = e.toLowerCase().startsWith(l)
             ? e.slice(l.length).toLowerCase()
@@ -411,7 +421,6 @@
             (e) => l + e,
           );
         }
-        static s_Singleton;
         static Get() {
           return (
             m.s_Singleton ||
@@ -423,7 +432,7 @@
           );
         }
         AddMarker(e, t, r) {
-          const n = r ?? C.White;
+          const n = null != r ? r : C.White;
           this.m_mapSteamTimelineMarkers.set(e, { func: t, color: n });
           for (const r of u) {
             const n = `${e}_${C[r]}`.toLowerCase();
@@ -505,14 +514,14 @@
       const a = new l.sO("ReactUsageReporting").Debug,
         c = 1e3 * C._H.PerMinute;
       class u {
-        m_strProduct;
-        m_strVersion;
-        m_transport = null;
-        m_mapRoutes = new Map();
-        m_mapComponents = new Map();
-        m_mapActions = new Map();
-        m_reportCount = 0;
-        m_bInitialized = !1;
+        constructor() {
+          (this.m_transport = null),
+            (this.m_mapRoutes = new Map()),
+            (this.m_mapComponents = new Map()),
+            (this.m_mapActions = new Map()),
+            (this.m_reportCount = 0),
+            (this.m_bInitialized = !1);
+        }
         Init(e, t, r) {
           (this.m_bInitialized = !0),
             (this.m_strProduct = e),
@@ -681,8 +690,8 @@
     77556: (e, t, r) => {
       "use strict";
       r.d(t, {
-        AP: () => M,
-        B7: () => v,
+        AP: () => v,
+        B7: () => M,
         Be: () => F,
         Bu: () => d,
         CJ: () => B,
@@ -700,7 +709,7 @@
         MC: () => m,
         Mr: () => K,
         OQ: () => D,
-        Q0: () => k,
+        Q0: () => S,
         Qm: () => h,
         TU: () => o,
         Ux: () => A,
@@ -725,7 +734,7 @@
         kI: () => a,
         n5: () => b,
         rZ: () => c,
-        rp: () => S,
+        rp: () => k,
         sO: () => T,
         u4: () => V,
         v3: () => q,
@@ -1053,7 +1062,7 @@
           }),
         );
       }
-      function M(e) {
+      function v(e) {
         return n.createElement(
           "svg",
           {
@@ -1070,7 +1079,7 @@
           }),
         );
       }
-      function v(e) {
+      function M(e) {
         return n.createElement(
           "svg",
           {
@@ -1161,7 +1170,7 @@
           }),
         );
       }
-      function S(e) {
+      function k(e) {
         return n.createElement(
           "svg",
           {
@@ -1178,7 +1187,7 @@
           }),
         );
       }
-      function k(e) {
+      function S(e) {
         return n.createElement(
           "svg",
           {
@@ -1696,12 +1705,11 @@
         l = r(54842),
         C = r(30750);
       class s {
-        m_tours = {};
-        m_strActiveTour = "";
-        m_storage;
-        m_bReady = !1;
         constructor() {
-          (0, l.rC)(this);
+          (this.m_tours = {}),
+            (this.m_strActiveTour = ""),
+            (this.m_bReady = !1),
+            (0, l.rC)(this);
         }
         async Init(e) {
           if (this.m_storage) return;
@@ -1724,7 +1732,12 @@
           return !this.m_bReady || (this.m_tours[e] && this.m_tours[e].bSeen);
         }
         GetTrackedStops(e) {
-          return this.m_tours[e]?.stops || {};
+          var t;
+          return (
+            (null === (t = this.m_tours[e]) || void 0 === t
+              ? void 0
+              : t.stops) || {}
+          );
         }
         ActivateTour(e) {
           this.m_strActiveTour &&

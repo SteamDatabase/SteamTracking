@@ -17,14 +17,14 @@
         p = e(58670);
       class u {
         constructor() {
-          (0, i.rC)(this);
+          (this.m_mapAppIDToClanInfo = new Map()),
+            (this.m_mapVanityToClanInfo = new Map()),
+            (this.m_mapClanAccountIDToClanInfo = new Map()),
+            (this.m_mapPromisesLoading = new Map()),
+            (this.m_rgQueuedEventsClanIDs = new Array()),
+            (this.m_bLoadedFromConfig = !1),
+            (0, i.rC)(this);
         }
-        m_mapAppIDToClanInfo = new Map();
-        m_mapVanityToClanInfo = new Map();
-        m_mapClanAccountIDToClanInfo = new Map();
-        m_mapPromisesLoading = new Map();
-        m_rgQueuedEventsClanIDs = new Array();
-        m_bLoadedFromConfig = !1;
         Init() {
           this.LazyInit();
         }
@@ -134,10 +134,14 @@
         async LoadOGGClanInfoForIdentifier(t) {
           if (
             (this.LazyInit(),
-            this.m_mapVanityToClanInfo.has(t?.toLocaleLowerCase()))
+            this.m_mapVanityToClanInfo.has(
+              null == t ? void 0 : t.toLocaleLowerCase(),
+            ))
           )
-            return this.m_mapVanityToClanInfo.get(t?.toLocaleLowerCase());
-          let a = "storevanity_" + t?.toLocaleLowerCase();
+            return this.m_mapVanityToClanInfo.get(
+              null == t ? void 0 : t.toLocaleLowerCase(),
+            );
+          let a = "storevanity_" + (null == t ? void 0 : t.toLocaleLowerCase());
           return (
             this.m_mapPromisesLoading.has(a) ||
               this.m_mapPromisesLoading.set(
@@ -153,22 +157,28 @@
           let e = await r().get(a, { params: this.GetRequestParam() });
           return (
             this.InternalSetupValue(e.data),
-            this.m_mapVanityToClanInfo.get(t?.toLocaleLowerCase())
+            this.m_mapVanityToClanInfo.get(
+              null == t ? void 0 : t.toLocaleLowerCase(),
+            )
           );
         }
         async LoadOGGClanInfoForGroupVanity(t) {
           if (
             (this.LazyInit(),
-            this.m_mapVanityToClanInfo.has(t?.toLocaleLowerCase()))
+            this.m_mapVanityToClanInfo.has(
+              null == t ? void 0 : t.toLocaleLowerCase(),
+            ))
           )
-            return this.m_mapVanityToClanInfo.get(t?.toLocaleLowerCase());
+            return this.m_mapVanityToClanInfo.get(
+              null == t ? void 0 : t.toLocaleLowerCase(),
+            );
           let a = "community_name_" + t;
           return (
             this.m_mapPromisesLoading.has(a) ||
               this.m_mapPromisesLoading.set(
                 a,
                 this.InternalLoadOGGClanInfoForGroupVanity(
-                  t?.toLocaleLowerCase(),
+                  null == t ? void 0 : t.toLocaleLowerCase(),
                 ),
               ),
             this.m_mapPromisesLoading.get(a)
@@ -183,7 +193,9 @@
           let e = await r().get(a, { params: this.GetRequestParam() });
           return (
             this.InternalSetupValue(e.data),
-            this.m_mapVanityToClanInfo.get(t?.toLocaleLowerCase())
+            this.m_mapVanityToClanInfo.get(
+              null == t ? void 0 : t.toLocaleLowerCase(),
+            )
           );
         }
         async LoadClanInfoForClanSteamID(t) {
@@ -220,7 +232,9 @@
         }
         GetOGGClanInfo(t) {
           return "string" == typeof t
-            ? this.m_mapVanityToClanInfo.get(t?.toLocaleLowerCase())
+            ? this.m_mapVanityToClanInfo.get(
+                null == t ? void 0 : t.toLocaleLowerCase(),
+              )
             : this.m_mapAppIDToClanInfo.get(t);
         }
         GetClanSteamIDForAppID(t) {
@@ -322,23 +336,23 @@
         l = e(47427),
         m = e(37563);
       class c {
-        m_clanSteamID;
-        m_appidList = new Array();
-        m_socialList = new Array();
-        m_strName = "";
-        m_strAvatarURLFullSize = "";
-        m_strTagLineLoc = "";
-        m_nFollowers = 0;
-        m_strVanity = "";
-        m_webLink = void 0;
-        m_promise;
-        m_bIsLoaded = !1;
-        m_bIsHidden = !1;
-        m_clanAccountFlags = 0;
         constructor(t) {
-          (0, s.rC)(this), (this.m_clanSteamID = t);
+          (this.m_appidList = new Array()),
+            (this.m_socialList = new Array()),
+            (this.m_strName = ""),
+            (this.m_strAvatarURLFullSize = ""),
+            (this.m_strTagLineLoc = ""),
+            (this.m_nFollowers = 0),
+            (this.m_strVanity = ""),
+            (this.m_webLink = void 0),
+            (this.m_bIsLoaded = !1),
+            (this.m_bIsHidden = !1),
+            (this.m_clanAccountFlags = 0),
+            (0, s.rC)(this),
+            (this.m_clanSteamID = t);
         }
         Initialize(t) {
+          var a;
           (this.m_strName = t.name || ""),
             (this.m_strAvatarURLFullSize =
               t.avatar_url_full_size ||
@@ -349,7 +363,8 @@
             (this.m_strVanity = t.vanity || void 0),
             (this.m_webLink = t.weblink),
             (this.m_bIsHidden = t.hidden || !1),
-            (this.m_clanAccountFlags = t.clan_account_flags ?? 0),
+            (this.m_clanAccountFlags =
+              null !== (a = t.clan_account_flags) && void 0 !== a ? a : 0),
             t.appids && t.appids.forEach((t) => this.m_appidList.push(t)),
             (this.m_bIsLoaded = !0);
         }
@@ -469,11 +484,11 @@
       var p = e(35427);
       class u {
         constructor() {
-          (0, s.rC)(this);
+          (this.m_mapClanToCreatorHome = new Map()),
+            (this.m_mapAppToCreatorIDList = new Map()),
+            (this.m_bLoadedFromConfig = !1),
+            (0, s.rC)(this);
         }
-        m_mapClanToCreatorHome = new Map();
-        m_mapAppToCreatorIDList = new Map();
-        m_bLoadedFromConfig = !1;
         LazyInit() {
           if (!this.m_bLoadedFromConfig) {
             let t = (0, m.kQ)("creatorhome", "application_config");
@@ -614,19 +629,29 @@
         (0, n.gn)([s.aD], u.prototype, "LazyInit", null);
       const _ = new u();
       function I(t) {
-        const a = p.K.InitFromClanID(t),
-          [e, n] = l.useState(_.GetCreatorHome(a)),
-          r = (0, o.T)("useCreatorHome");
+        var a;
+        const e = p.K.InitFromClanID(t),
+          [n, r] = l.useState(_.GetCreatorHome(e)),
+          i = (0, o.T)("useCreatorHome");
         return (
           l.useEffect(() => {
             const a = p.K.InitFromClanID(t);
             _.BHasCreatorHomeLoaded(a)
-              ? e || n(_.GetCreatorHome(a))
+              ? n || r(_.GetCreatorHome(a))
               : _.LoadCreatorHome(a).then(() => {
-                  r?.token?.reason || n(_.GetCreatorHome(a));
+                  var t;
+                  (null === (t = null == i ? void 0 : i.token) || void 0 === t
+                    ? void 0
+                    : t.reason) || r(_.GetCreatorHome(a));
                 });
-          }, [r?.token?.reason, t, e]),
-          e
+          }, [
+            null === (a = null == i ? void 0 : i.token) || void 0 === a
+              ? void 0
+              : a.reason,
+            t,
+            n,
+          ]),
+          n
         );
       }
       window.g_CreatorHomeStore = _;
