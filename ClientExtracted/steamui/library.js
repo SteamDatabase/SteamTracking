@@ -1,4 +1,4 @@
-var CLSTAMP = "9015255";
+var CLSTAMP = "9015621";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -1575,9 +1575,9 @@ var CLSTAMP = "9015255";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jul 2 2024 : 15:36:51",
-                BUILD_TIME_UTC: "Jul 2 2024 : 22:36:51",
-                BUILD_RTIME_UTC: 1719959811,
+                BUILD_TIME_LOCAL: "Jul 2 2024 : 17:35:52",
+                BUILD_TIME_UTC: "Jul 3 2024 : 00:35:52",
+                BUILD_RTIME_UTC: 1719966952,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -42268,7 +42268,8 @@ var CLSTAMP = "9015255";
         const i =
           /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\\s"<>\[\],.ː:])?)/;
         function l(e) {
-          if (!e) return console.error("Cannot GetHostname on empty URL"), "";
+          if (void 0 === e)
+            return console.error("Cannot GetHostname on empty URL"), "";
           let t = new RegExp(
               "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",
               "im",
@@ -42872,9 +42873,9 @@ var CLSTAMP = "9015255";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jul 2 2024 : 15:36:51",
-                    BUILD_TIME_UTC: "Jul 2 2024 : 22:36:51",
-                    BUILD_RTIME_UTC: 1719959811,
+                    BUILD_TIME_LOCAL: "Jul 2 2024 : 17:35:52",
+                    BUILD_TIME_UTC: "Jul 3 2024 : 00:35:52",
+                    BUILD_RTIME_UTC: 1719966952,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -43432,7 +43433,7 @@ var CLSTAMP = "9015255";
       {
         27: "5ea8d4eec5244129b23f",
         33: "a50d346c01618ed6509b",
-        58: "08e03e4c6aad636afdc2",
+        58: "ea58549eafaeace3dcf3",
         131: "984ebbc4a9ae77cd26b3",
         146: "857562619512f1748a9f",
         200: "3eabe6a1df41389ba6dc",
