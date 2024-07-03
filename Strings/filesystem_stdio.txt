@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-F
-F
+0F
+0F
 __stubs
 __TEXT
 __stub_helper
@@ -284,10 +284,7 @@ s_pSymbolTable
 0
 @
 @
-o
-O
--
--
+G
 =
 @
 =

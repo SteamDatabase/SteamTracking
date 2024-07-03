@@ -1,4 +1,4 @@
-var CLSTAMP = "9009469";
+var CLSTAMP = "9015255";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -1575,9 +1575,9 @@ var CLSTAMP = "9009469";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jun 28 2024 : 16:20:43",
-                BUILD_TIME_UTC: "Jun 28 2024 : 23:20:43",
-                BUILD_RTIME_UTC: 1719616843,
+                BUILD_TIME_LOCAL: "Jul 2 2024 : 15:36:51",
+                BUILD_TIME_UTC: "Jul 2 2024 : 22:36:51",
+                BUILD_RTIME_UTC: 1719959811,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -8502,14 +8502,14 @@ var CLSTAMP = "9009469";
                 let r = this.m_mapServiceMethodHandlers.get(n);
                 if (r) {
                   this.DEBUG_LogMessageDispatch(e, r[0]);
-                  for (let n of r)
+                  for (let o of r)
                     try {
-                      n.invoke(e, t);
+                      o.invoke(e, t);
                     } catch (e) {
                       e instanceof Error && this.m_ErrorReportingStore
                         ? this.m_ErrorReportingStore.ReportError(e)
                         : console.error(
-                            "MessageHandlers failed to dispatch message to handler: ",
+                            `MessageHandlers failed to dispatch message to handler (${n}): `,
                             e,
                           );
                     }
@@ -33140,6 +33140,7 @@ var CLSTAMP = "9009469";
           NBO: () => O,
           NN7: () => F,
           NP6: () => ge,
+          OFs: () => on,
           OWX: () => Zt,
           Oth: () => jt,
           P9w: () => De,
@@ -33192,7 +33193,7 @@ var CLSTAMP = "9009469";
           gR: () => Ee,
           ge: () => ce,
           gf_: () => Vt,
-          gt0: () => on,
+          gt0: () => ln,
           h9: () => L,
           hLd: () => Re,
           hUE: () => mt,
@@ -38396,6 +38397,27 @@ var CLSTAMP = "9009469";
               fill: "currentColor",
               fillRule: "evenodd",
               clipRule: "evenodd",
+              d: "M24.7412 4H11.2592V9.18512H24.7412V4ZM4 32H32L31.9999 9.3106L27.8525 5.16322L27.8508 12.2969H8.14738V4H4V32ZM25.4742 28.6735H10.5239V16.8117H25.4742L25.4756 22.7426L25.4742 28.6735Z",
+            }),
+            r.createElement("path", {
+              fill: "currentColor",
+              d: "M13.6357 25.5617V19.9235H22.3646V25.5617H13.6357Z",
+            }),
+          );
+        }
+        function ln(e) {
+          return r.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ...e,
+            },
+            r.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
               d: "M2 8V4H15L17 8H2ZM34 12H2V32H34V12Z",
             }),
           );
@@ -42246,6 +42268,7 @@ var CLSTAMP = "9009469";
         const i =
           /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\\s"<>\[\],.ː:])?)/;
         function l(e) {
+          if (!e) return console.error("Cannot GetHostname on empty URL"), "";
           let t = new RegExp(
               "^(steam://openurl(_external)?/)?((f|ht)tps?://)?([^@/?#]*@)?([^/#?]+)",
               "im",
@@ -42849,9 +42872,9 @@ var CLSTAMP = "9009469";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jun 28 2024 : 16:20:43",
-                    BUILD_TIME_UTC: "Jun 28 2024 : 23:20:43",
-                    BUILD_RTIME_UTC: 1719616843,
+                    BUILD_TIME_LOCAL: "Jul 2 2024 : 15:36:51",
+                    BUILD_TIME_UTC: "Jul 2 2024 : 22:36:51",
+                    BUILD_RTIME_UTC: 1719959811,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -43409,7 +43432,7 @@ var CLSTAMP = "9009469";
       {
         27: "5ea8d4eec5244129b23f",
         33: "a50d346c01618ed6509b",
-        58: "69db8262b2354f195b4f",
+        58: "08e03e4c6aad636afdc2",
         131: "984ebbc4a9ae77cd26b3",
         146: "857562619512f1748a9f",
         200: "3eabe6a1df41389ba6dc",
@@ -43528,7 +43551,7 @@ var CLSTAMP = "9009469";
         8282: "ffc7cbefbd67dae9db65",
         8319: "9748f4cffbf93f672c76",
         8433: "449d8781dcd3e31775c1",
-        8467: "d3f53031fc1351574337",
+        8467: "6220bb99be58e694bcb2",
         8490: "4f5e92f12a76168d940b",
         8778: "ddf842a44add4bbb0c02",
         8805: "96dededf31d3e4093537",

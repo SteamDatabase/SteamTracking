@@ -11,8 +11,8 @@ __TEXT
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
-T55
-T55
+D55
+D55
 __const
 __TEXT
 __objc_methname
@@ -123,24 +123,18 @@ h
 )
 {:
 0
-)
 H
+f*
 0
 @
 @
+q4
 *
 *
-*
-?4
-94
 @
 @
 @
 @
-)
-)
-)
-)
 $
 k
 Hi
@@ -150,12 +144,11 @@ Ic]
 4
 4
 IG
-4
-(
++
+s(
 )
-(
 )
-(
+0)
 
 %
 <
@@ -167,20 +160,16 @@ IG
 '
 '
 '
-3
 (
 
 5
-6(
-p2
+T(
+M(
 _8
-,'
 (
-(
-Q2
+](
 
 0
-2
 2
 0
 0
@@ -194,6 +183,7 @@ D
 @
 3
 r7
+W1
 @
 Hc
 Hc
@@ -225,6 +215,7 @@ IcE
 IcE
 @
 @
+1
 1
 1
 1
@@ -2451,7 +2442,7 @@ ReLaunchCmdLine
 ClientLauncherType
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
-Startup - updater built Jun 28 2024 16:23:52
+Startup - updater built Jul  2 2024 15:38:54
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2742,8 +2733,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Jun 28 2024
-16:23:54
+Jul  2 2024
+15:38:55
 crashhandler004
 steam
 Steam Executable Crash
@@ -2840,7 +2831,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-16:23:48
+15:38:53
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10966,7 +10957,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-16:20:25
+15:36:26
 Jan
 Feb
 Mar
@@ -13406,24 +13397,18 @@ file_ofs == pFile->GetBytesWritten()
 0
 {:
 0
-)
 H
+f*
 0
 @
 @
+q4
 *
 *
-*
-?4
-94
 @
 @
 @
 @
-)
-)
-)
-)
 $
 k
 Hi
@@ -13433,12 +13418,11 @@ Ic]
 4
 4
 IG
-4
-(
++
+s(
 )
-(
 )
-(
+0)
 
 %
 <
@@ -13450,20 +13434,16 @@ IG
 '
 '
 '
-3
 (
 
 5
-6(
-p2
+T(
+M(
 _8
-,'
 (
-(
-Q2
+](
 
 0
-2
 2
 0
 0
@@ -13477,6 +13457,7 @@ D
 @
 3
 r7
+W1
 @
 Hc
 Hc
@@ -13508,6 +13489,7 @@ IcE
 IcE
 @
 @
+1
 1
 1
 1
@@ -13519,12 +13501,16 @@ V
 0
 0
 0
+0
 =
+=/
 /
 =
 5
++.
+.
+@"
 !
-]-
 @
 -
 ;
@@ -13533,16 +13519,17 @@ V
 &
 ,
 ,
+G+
 Y1
 +
 1
 1
 1
 5
-<*
 *
 *
 0
+w)
 8
 8
 8
@@ -13569,7 +13556,6 @@ M9e
 ?
 ?
 :
-l(
 ?
 ?
 ?
@@ -14191,6 +14177,7 @@ to=
 @
 @
 @
+Ic]
 0
 (
 0
@@ -14210,7 +14197,6 @@ H=
 =
 @
 =*.*
-Ic]
 @
 @
 @
@@ -14234,12 +14220,12 @@ Ic]
 0
 0
 0
+-
 
 0
 H=
 0
 &
-=
 0
 Hi
 E
@@ -14262,7 +14248,7 @@ E
 0
 Hc
 0
-e
+v
 0
 @
 @
@@ -14270,7 +14256,6 @@ e
 &
 @
 @
-1
 @
 
 
@@ -14293,7 +14278,6 @@ P
 0
 Hi
 y
-]
 $
 $
 $

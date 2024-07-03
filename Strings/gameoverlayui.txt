@@ -4,23 +4,23 @@ __TEXT
 #
 __text
 __TEXT
-r
-r
 __stubs
 __TEXT
 __stub_helper
 __TEXT
 __cstring
 __TEXT
+__gcc_except_tab__TEXT
 __const
 __TEXT
 __objc_methname
 __TEXT
+P,"
+P,"
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
 (
-__gcc_except_tab__TEXT
 __unwind_info
 __TEXT
 __eh_frame
@@ -90,6 +90,7 @@ __LINKEDIT
 P
 Y
 Z
+@.
 
 *
 8
@@ -7852,8 +7853,8 @@ Steam pid that launched us
 VGUI_Application_001
 OK
 Cancel
-Jun 28 2024
-16:24:08
+Jul  2 2024
+15:39:05
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -10935,7 +10936,6 @@ Dec
 -
 -
 -
--
 0
 Ic]
 -
@@ -10946,6 +10946,10 @@ Ic]
 -
 -
 -
+-
+-
+-
+-
 
 
 
@@ -10955,6 +10959,7 @@ Ic]
 
 0
 @
+"
 "
 "
 E9u
@@ -10982,6 +10987,7 @@ j
 j
 j
 d
+5!
 0
 0
 AT=
@@ -10994,7 +11000,6 @@ D
 @
 !
 !
-P!
 @
 Hc
 Hc
@@ -11143,7 +11148,6 @@ G
 @
 >
 0
-&
 p
 =
 0
@@ -11188,7 +11192,6 @@ j
 j
 j
 A+M
-s
 j
 j
 j
@@ -11196,7 +11199,6 @@ j
 j
 j
 j
-I
 j
 j
 j
@@ -11223,6 +11225,7 @@ j
 j
 j
 j
+.
 
 j
 j
@@ -11247,7 +11250,6 @@ d
 d
 0
 A+]
-B
 =
 =
 @
@@ -11478,12 +11480,14 @@ j
 d
 k
 d
+Hc
 
 =
 @
 =*.*
 =
 @
+Ic]
 @
 @
 0
@@ -11495,13 +11499,12 @@ d
 @
 @
 @
-0
-r
-0
-0
 0
 0
 0
 0
 E
-Ic]
+0
+0
+0
+E
