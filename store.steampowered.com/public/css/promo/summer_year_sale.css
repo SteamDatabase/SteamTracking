@@ -600,11 +600,11 @@ body.v6.sale_summer2024 .sale_capsule_carousel .carousel_items > * {
 /* FOR HOMEPAGE SECTIONS WITH A BACKGROUND */
 .home_pagecontent_ctn .ctn_background .home_section_title {
 	padding: 12px 24px 0 24px;
-	margin-bottom: 0;
 }
 
 .home_pagecontent_ctn .ctn_background .home_section_button {
-	padding: 12px 24px 12px 24px;
+	padding: 0 24px;
+	margin: 0;
 }
 
 .home_pagecontent_ctn .ctn_background .home_section_subtitle {
@@ -895,8 +895,19 @@ body.v6 .discount_block {}
     "subtitle button";
 }
 
+@media screen and (max-width: 800px )
+{
+	.title_grid {
+		grid-template-areas:
+			"title title"
+			"subtitle button";
+	}
+}
+
 .title_grid .home_section_title {
 	grid-area: title;
+	text-align: left;
+	margin: 0;
 }
 
 .title_grid .home_section_subtitle {
@@ -1862,7 +1873,15 @@ p.home_subtitle_ctn a {
         width: auto;
     }
 
-    .page_background_holder_mobile {
+	html.responsive .hero_capsule:hover .hero_data, html.responsive .hero_capsule:hover .hover_screenshots {
+		display: none;
+	}
+
+	html.responsive .home_deck_title_ctn {
+		justify-content: center;
+	}
+
+	.page_background_holder_mobile {
 		display: none;
 		width: 100%;
 		height: 86vw;
@@ -1934,7 +1953,6 @@ p.home_subtitle_ctn a {
     body.responsive_page .home_section_title {
         font-size: 20px;
         padding: .5em;
-		justify-content: center;
 		flex-wrap: wrap;
 	}
 
@@ -2523,11 +2541,10 @@ body.v6 .sale_capsule .discount_block_inline
 }
 
 /* at 500 wide, fix price layout for long currencies within most capsules */
-@media screen and (max-width: 500px )
-{
-    html.responsive div.mobile_video_set .fullscreen-bg__video_mobile {
-        height: 70vw !important;
-    }
+@media screen and (max-width: 500px ) {
+	html.responsive div.mobile_video_set .fullscreen-bg__video_mobile {
+		height: 70vw !important;
+	}
 
 	body.responsive_page .home_page_body_ctn .home_page_takeover_sizer {
 		height: 55vw;
@@ -2537,17 +2554,17 @@ body.v6 .sale_capsule .discount_block_inline
 		width: 16vw;
 	}
 
-    body .responsive_page_frame .summer_encore_ctn {
-        display: none;
-    }
+	body .responsive_page_frame .summer_encore_ctn {
+		display: none;
+	}
 
     html.responsive body.v6.sale_summer2024 .fullscreen-bg {
                                     align-items: flex-start;
                                 }
 
-    html.responsive .summer_bottom_text {
-        font-size: 14px;
-    }
+	html.responsive .summer_bottom_text {
+		font-size: 14px;
+	}
 
 	html.responsive body.v6.sale_summer2024 .home_sticker_ctn.mobile {
 		display: block;
@@ -2562,28 +2579,30 @@ body.v6 .sale_capsule .discount_block_inline
 
 
 	html.responsive body.v6.sale_summer2024 .home_sticker_ctn.desktop, html.responsive body.v6.sale_summer2024 .home_deck_banner.desktop {
-		display: none;
+	display: none;
+}
+
+	body.currency_wide .discount_pct {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 
-    body.currency_wide .discount_pct {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    body.currency_wide .sale_capsule .discount_block_inline,
-    body.currency_wide .hero_capsule .discount_block_inline {
-        flex-direction: row;
-        display: flex;
-    }
-    body.currency_wide .sale_capsule .discount_block_inline .discount_prices,
-    body.currency_wide .hero_capsule .discount_block_inline .discount_prices
-    {
-        display: flex;
-        flex-direction: column;
-    }
-    body.v6 .franchise_discount_tag {
-        display: none;
-    }
+	body.currency_wide .sale_capsule .discount_block_inline,
+	body.currency_wide .hero_capsule .discount_block_inline {
+		flex-direction: row;
+		display: flex;
+	}
+
+	body.currency_wide .sale_capsule .discount_block_inline .discount_prices,
+	body.currency_wide .hero_capsule .discount_block_inline .discount_prices {
+		display: flex;
+		flex-direction: column;
+	}
+
+	body.v6 .franchise_discount_tag {
+		display: none;
+	}
 
 	html.responsive .split_banner_ctn .summer_banner_ctn.home_sticker_ctn {
 		min-height: 115px;
@@ -2594,9 +2613,28 @@ body.v6 .sale_capsule .discount_block_inline
 	}
 
 	html.responsive .sale_capsule_carousel .sale_capsule {
-		width: 200px;
+		width: 300px;
 	}
 
+	html.responsive .sale_capsule:hover .sale_capsule_image_hover {
+		opacity: 0;
+	}
+
+	html.responsive .sale_capsule_image_ctn:hover {
+		transform: none;
+	}
+
+	html.responsive .hero_capsule:hover .hero_discount {
+		bottom: 0;
+	}
+
+	html.responsive .hero_capsule:hover img.hero_capsule_img {
+		opacity: 1;
+	}
+
+	html.responsive .home_pagecontent_ctn .ctn_background .carousel_container.paging_capsules {
+		padding: 0 0 0 16px;
+	}
 }
 
 .sale_capsule_image_ctn

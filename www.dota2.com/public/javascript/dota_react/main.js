@@ -33018,10 +33018,6 @@
                 s.createElement(
                   "div",
                   { className: Qi().Page },
-                  s.createElement("img", {
-                    src: `${n.Y.IMG_URL}dpc/dpc_logo.png`,
-                    className: Qi().DPCLogo,
-                  }),
                   s.createElement(
                     "div",
                     { className: Qi().Header },

@@ -273,11 +273,13 @@ function HomeSaleFilterHeroes( $Parent, rgHeroItems )
 	var $HeroItemCtn = $Parent.find('.carousel_items' );
 
 	
-	var rgFilteredHeroes = GHomepage.FilterItemsForDisplay( rgHeroItems, 'home', 3, 42, Settings );
+	let rgPriorityHeros = SortItemListByPriorityList( rgHeroItems.splice( 0, 9 ), 'tier1' )
+	let rgMergedHeroItems = GHomepage.MergeLists( rgPriorityHeros, false,  SortItemListByPriorityList( rgHeroItems, 'tier1' ), false );
+	let rgFilteredHeroes = GHomepage.FilterItemsForDisplay( rgMergedHeroItems, 'home', 3, 24, Settings );
 
-	
 	GDynamicStore.MarkItemsAsDisplayed( rgFilteredHeroes );
 
+	
 	// generate carousel based on sorted and filtered hero capsules
 	GHomepage.FillPagedCapsuleCarousel( rgFilteredHeroes, $Parent.find('.carousel_container'), function( oItem, strFeature, rgOptions ) { return fnRenderHeroCapsule( oItem ); }, 'sale-hero', 3 );
 
@@ -285,7 +287,7 @@ function HomeSaleFilterHeroes( $Parent, rgHeroItems )
 		ModifyLinkSNR( $J(this), function( snr ) { return GStoreItemData.rgNavParams['sale_heroes_priority'] } );
 	});
 
-	$J('.hero_capsule').on( 'mouseenter vgp_onfocus touchstart', function() {
+	$J('.hero_capsule').on( 'mouseenter vgp_onfocus', function() {
 		$J(this).find('.hero_screenshot_load').each( function() { $J(this).css( 'backgroundImage', $J(this).data('background') ); } );
 	} );
 
@@ -418,7 +420,7 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 	}
 	else
 	{
-		HomeSaleFilterHeroes( $J('.hero_parent_ctn'), SortItemListByPriorityList( rgDisplayLists.heros, 'tier1' ) );
+		HomeSaleFilterHeroes( $J('.hero_parent_ctn'), rgDisplayLists.heros );
 	}
 
 	HomeRenderSpecialDealsCarousel( rgDisplayLists.special_deals );
@@ -675,6 +677,9 @@ function SaleCap( item, strFeatureContext, strDiscountClass, bUseSmallCap, bPref
 function AddMicrotrailer( $CapCtn, microtrailer )
 {
 	if ( !microtrailer )
+		return;
+
+	if ( window.UseTouchFriendlyMode() && !window.UseTabletScreenMode() )
 		return;
 
 	$CapCtn.addClass( 'with_microtrailer' );
