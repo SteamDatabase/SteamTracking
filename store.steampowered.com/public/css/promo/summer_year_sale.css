@@ -2633,7 +2633,7 @@ body.v6 .sale_capsule .discount_block_inline
 	}
 
 	html.responsive .home_pagecontent_ctn .ctn_background .carousel_container.paging_capsules {
-		padding: 0 0 0 16px;
+		padding: 0 0 12px 16px;
 	}
 }
 

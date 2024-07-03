@@ -288,15 +288,24 @@ function HomeSaleFilterHeroes( $Parent, rgHeroItems )
 	});
 
 	$J('.hero_capsule').on( 'mouseenter vgp_onfocus', function() {
+		if ( window.UseTouchFriendlyMode() && !window.UseTabletScreenMode() )
+			return;
+
 		$J(this).find('.hero_screenshot_load').each( function() { $J(this).css( 'backgroundImage', $J(this).data('background') ); } );
 	} );
 
 	$J('.hero_capsule:not(.valveindex)').on( 'mouseenter vgp_onfocus', function() {
+		if ( window.UseTouchFriendlyMode() && !window.UseTabletScreenMode() )
+			return;
+
 		if ( $J(this).find('video.hero_video').length )
 			$J(this).find('video.hero_video')[0].play();
 	} );
 
 	$J('.hero_capsule:not(.valveindex)').on( 'mouseleave vgp_onblur', function() {
+		if ( window.UseTouchFriendlyMode() && !window.UseTabletScreenMode() )
+			return;
+
 		if ( $J(this).find('video.hero_video').length )
 			$J(this).find('video.hero_video')[0].pause();
 	} );
@@ -425,18 +434,16 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 
 	HomeRenderSpecialDealsCarousel( rgDisplayLists.special_deals );
 
-	var rgAllTier1Items = GHomepage.MergeLists( rgDisplayLists.sale_tier1, false, rgDisplayLists.sale_tier1_fallback, false );
-
+	let rgPriorityTier1Items = SortItemListByPriorityList( rgDisplayLists.sale_tier1.slice( 0, 50 ), 'tier1' );
 	var rgTier1 = GHomepage.FilterItemsForDisplay(
-		SortItemListByPriorityList( rgAllTier1Items, 'tier1' ), 'home', k_nTier1ItemsMin, k_nTier1ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
+		rgPriorityTier1Items, 'home', k_nTier1ItemsMin, k_nTier1ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
 	);
 
 	GDynamicStore.MarkAppDisplayed( rgTier1 );
 
-	var rgAllTier2Items = GHomepage.MergeLists( rgDisplayLists.sale_tier2, false, rgDisplayLists.sale_tier2_fallback, false );
-
+	let rgPriorityTier2Items = SortItemListByPriorityList( rgDisplayLists.sale_tier2.slice( 0, 50 ), 'tier2' );
 	var rgTier2 = GHomepage.FilterItemsForDisplay(
-		SortItemListByPriorityList( rgAllTier2Items, 'tier2' ), 'home', k_nTier2ItemsMin, k_nTier2ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
+		rgPriorityTier2Items, 'home', k_nTier2ItemsMin, k_nTier2ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
 	);
 
 	GDynamicStore.MarkAppDisplayed( rgTier2 );
