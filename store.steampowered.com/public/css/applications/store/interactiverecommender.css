@@ -575,6 +575,7 @@ a:link {
   transition-property: margin-left;
   transition-duration: 0.1s;
   transition-timing-function: ease-in-out;
+  overflow-x: hidden;
 }
 @media screen and (max-width: 777px) {
   ._3opuXcswH86T3In6Whwlow ._1IvHpJUVsEh41ky41jMICF ._27p3svIY0rPcF-36Z3TUeB {

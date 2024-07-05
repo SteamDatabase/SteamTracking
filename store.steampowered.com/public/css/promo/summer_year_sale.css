@@ -2687,6 +2687,7 @@ body.v6 .sale_capsule .discount_block_inline
     }
     html.responsive .salerow3 .sale_capsule:nth-child(3) {
         width: 100%;
+		margin-top: 12px;
     }
 }
 

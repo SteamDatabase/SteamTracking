@@ -1148,6 +1148,7 @@ function SaleRenderUnder10Section( $Parent, rgUnder10 )
 
 	let $Under10Ctn = $J('#10off_tier' );
 
+	rgUnder10Filtered.splice( rgUnder10Filtered.length - ( rgUnder10Filtered.length % 4 ) );
 	if ( $Under10Ctn.length && rgUnder10Filtered.length >= 4 )
 	{
 		let rgCaps = [];
@@ -1158,7 +1159,7 @@ function SaleRenderUnder10Section( $Parent, rgUnder10 )
 		$Under10Ctn.append( rgCaps );
 		GDynamicStore.MarkAppDisplayed( rgUnder10Filtered );
 		BindSaleCapAutoSizeEvents( $Under10Ctn );
-		$Parent.css('height', '' );
+		$Parent.css('min-height', '' );
 	}
 	else
 	{
