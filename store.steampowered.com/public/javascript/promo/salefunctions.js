@@ -96,7 +96,7 @@ function GenerateTagBlocks( $Parent, rgTagData, rgTier1Unfiltered, rgTier2Unfilt
 		$Ctn.append( $TitleCtn );
 
 		let $GamesCtn =  $J('<div/>', { 'class': 'home_discount_games_ctn' } );
-		SaleRenderTwoByTwo( $GamesCtn, rgItemsPassingFilter, 'sale_tag_bucket' );
+		SaleRenderTwoByTwo( $GamesCtn, rgItemsPassingFilter, 'sale_tag_bucket_top' );
 		$Ctn.append( $GamesCtn );
 
 		let $SeeMore = $J('<div/>', { 'class': 'see_more_link' } );
@@ -273,9 +273,19 @@ function HomeSaleFilterHeroes( $Parent, rgHeroItems )
 	var $HeroItemCtn = $Parent.find('.carousel_items' );
 
 	
-	let rgPriorityHeros = SortItemListByPriorityList( rgHeroItems.splice( 0, 9 ), 'tier1' )
-	let rgMergedHeroItems = GHomepage.MergeLists( rgPriorityHeros, false,  SortItemListByPriorityList( rgHeroItems, 'tier1' ), false );
-	let rgFilteredHeroes = GHomepage.FilterItemsForDisplay( rgMergedHeroItems, 'home', 3, 24, Settings );
+	let rgHeros = GHomepage.FilterItemsForDisplay( rgHeroItems, 'home', 3, 24, Settings );
+	let rgPriorityHeroOptions = rgHeros.slice( 0, Math.min( rgHeros.length, 6 ) );
+	let rgPrioritizedHeros = SortItemListByPriorityList( rgPriorityHeroOptions, 'tier1' );
+
+	
+	rgHeros.filter( ( appid ) => { return appid === rgPrioritizedHeros.shift(); } );
+	let rgFilteredHeroes = GHomepage.MergeLists( rgPrioritizedHeros.shift(), false, rgHeros, false );
+	let rgFirstRowHeros = rgFilteredHeroes.splice( 0, Math.min( rgHeros.length, 3 ) );
+
+	
+	v_shuffle( rgFirstRowHeros );
+
+	rgFilteredHeroes = GHomepage.MergeLists( rgFirstRowHeros, false, rgFilteredHeroes, false );
 
 	GDynamicStore.MarkItemsAsDisplayed( rgFilteredHeroes );
 
@@ -434,29 +444,21 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 
 	HomeRenderSpecialDealsCarousel( rgDisplayLists.special_deals );
 
+	// process tag sections first, pulling in featured items into the tag blocks we display
+	var $TagBlock = $J('#sale_tag_categories');
+	if ( $TagBlock.length )
+	{
+		new CScrollOffsetWatcher( $TagBlock, function() {
+			GenerateTagBlocks( $TagBlock, rgTagData, rgDisplayLists.sale_tier1, rgDisplayLists.sale_tier2 );
+		});
+	}
+
 	let rgPriorityTier1Items = SortItemListByPriorityList( rgDisplayLists.sale_tier1.slice( 0, 50 ), 'tier1' );
 	var rgTier1 = GHomepage.FilterItemsForDisplay(
 		rgPriorityTier1Items, 'home', k_nTier1ItemsMin, k_nTier1ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
 	);
 
 	GDynamicStore.MarkAppDisplayed( rgTier1 );
-
-	let rgPriorityTier2Items = SortItemListByPriorityList( rgDisplayLists.sale_tier2.slice( 0, 50 ), 'tier2' );
-	var rgTier2 = GHomepage.FilterItemsForDisplay(
-		rgPriorityTier2Items, 'home', k_nTier2ItemsMin, k_nTier2ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
-	);
-
-	GDynamicStore.MarkAppDisplayed( rgTier2 );
-
-	HomeSaleBlock( rgTier1, $J('#tier1_target' ), 'sale_dailydeals_priority' );
-
-	var $FranchiseBlock = $J('#franchise_target' );
-	new CScrollOffsetWatcher( $FranchiseBlock, function() {
-		SaleFranchiseBlock( $FranchiseBlock, rgFranchiseData );
-	});
-
-	var $Tier2 = $J('#tier2_target' );
-	new CScrollOffsetWatcher( $Tier2, function() { HomeSaleBlock( rgTier2, $Tier2, 'sale_dailydeals_t2_priority'  ); } );
 
 	var $UserArea = $J('#home_sale_account_ctn');
 	if ( $UserArea.length )
@@ -478,19 +480,27 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 		}
 	}
 
+	let rgPriorityTier2Items = SortItemListByPriorityList( rgDisplayLists.sale_tier2.slice( 0, 50 ), 'tier2' );
+	var rgTier2 = GHomepage.FilterItemsForDisplay(
+		rgPriorityTier2Items, 'home', k_nTier2ItemsMin, k_nTier2ItemsMax, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: true }
+	);
+
+	GDynamicStore.MarkAppDisplayed( rgTier2 );
+
+	HomeSaleBlock( rgTier1, $J('#tier1_target' ), 'sale_dailydeals_priority' );
+
 	var $Under10Area = $J('#sale_under10_area');
 	new CScrollOffsetWatcher( $Under10Area, function() {
 		SaleRenderUnder10Section( $Under10Area, rgDisplayLists.under10 );
 	} );
 
-	// process tag sections first, pulling in featured items into the tag blocks we display
-	var $TagBlock = $J('#sale_tag_categories');
-	if ( $TagBlock.length )
-	{
-		new CScrollOffsetWatcher( $TagBlock, function() {
-			GenerateTagBlocks( $TagBlock, rgTagData, rgDisplayLists.sale_tier1, rgDisplayLists.sale_tier2 );
-		});
-	}
+	var $FranchiseBlock = $J('#franchise_target' );
+	new CScrollOffsetWatcher( $FranchiseBlock, function() {
+		SaleFranchiseBlock( $FranchiseBlock, rgFranchiseData );
+	});
+
+	var $Tier2 = $J('#tier2_target' );
+	new CScrollOffsetWatcher( $Tier2, function() { HomeSaleBlock( rgTier2, $Tier2, 'sale_dailydeals_t2_priority'  ); } );
 
 	// filter dupes from tab lists
 	GDynamicStorePage.FilterCapsules( 16, 16, $J( '#popular_new_releases_content .tab_content_items' ).children('.sale_capsule'), $J( '#popular_new_releases_content' ), { only_current_platform: true, games_already_in_library: false, localized: true, enforce_minimum: true } );
