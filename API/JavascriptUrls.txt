@@ -388,7 +388,7 @@ ${COMMUNITY_URL}oauth/login?client_id=${CLIENT_ID}&response_type=token&state=${}
 ${COMMUNITY_URL}oauth/login?client_id=${CLIENT_ID}&response_type=token&state=filmcontest/
 ${HELP_BASE_URL}
 ${HELP_BASE_URL}${}/
-${HELP_BASE_URL}en/ticketmaster/ticket/${help_requestid}
+${HELP_BASE_URL}en/ticketmaster/ticket/${}
 ${HELP_BASE_URL}en/wizard/HelpRequest/${_ ? _ : _}
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=919
 ${HELP_BASE_URL}en/wizard/HelpWithPublishing?issueid=933

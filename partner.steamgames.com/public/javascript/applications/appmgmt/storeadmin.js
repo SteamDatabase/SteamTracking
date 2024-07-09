@@ -3994,12 +3994,13 @@
           o.createElement(
             "a",
             {
-              href: `${fe.De.HELP_BASE_URL}en/ticketmaster/ticket/${t.help_requestid}`,
+              href: `${fe.De.HELP_BASE_URL}en/ticketmaster/ticket/${((r = t.reference_code), r.startsWith("HT") && 14 === r.length ? `${r.slice(0, 2)}-${r.slice(2, 6)}-${r.slice(6, 10)}-${r.slice(10)}` : r)}`,
               target: "_blank",
             },
             "Open Ticket",
           ),
         );
+        var r;
       }
       function Et(e) {
         const {
