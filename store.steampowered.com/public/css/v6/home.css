@@ -3946,31 +3946,25 @@ background: -webkit-linear-gradient( 134deg, #e8f5fc 5%,#cce9f9 95%);
 	box-shadow: 0 0 12px #66c0f4;
 }
 
-/* .home_hardware_banner {
-    display: none;
-} */
+.home_deck_title_img {
+	width: 12px;
+	vertical-align: text-top;
+	margin-right: 6px;
+}
 
- /* @media screen and (max-width: 1224px) { */
+.home_hardware_banner {
+	display: flex;
+	justify-content: space-between;
+}
 
-	.home_hardware_banner {
-		display: flex;
-		justify-content: space-between;
-	}
+.home_hardware_banner > a {
+	display: block;
+}
 
-	.home_hardware_banner > a {
-		display: block;
-	}
-
-	/* .home_hardware_banner > a:hover {
-		box-shadow: 0 0 12px #66c0f4;
-	} */
-
-	.home_hardware_banner img {
-		max-width: 100%;
-		height: auto;
-	}
-
-/* } */
+.home_hardware_banner img {
+	max-width: 100%;
+	height: auto;
+}
 
 
 @media screen and (max-width: 500px ) {

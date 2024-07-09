@@ -324,6 +324,7 @@ GHomepage = {
 		GHomepage.oDisplayLists.under10 = GHomepage.oDisplayListsRaw.under10 || [];
 		GHomepage.oDisplayLists.top_vr = v_shuffle( GHomepage.oDisplayListsRaw.top_vr || [] );
 		GHomepage.oDisplayLists.top_new_releases = v_shuffle( GHomepage.oDisplayListsRaw.top_new_releases || [] );
+		GHomepage.oDisplayLists.top_played_deck = v_shuffle( GHomepage.oDisplayListsRaw.top_played_deck || [] );
 
 		GHomepage.oDisplayLists.popular_new_on_steam = GHomepage.oDisplayLists.popular_new || [];
 
@@ -353,6 +354,10 @@ GHomepage = {
 
 		try {
 			GHomepage.RenderContentHubCarousel();
+		} catch ( e ) { OnHomepageException( e ); }
+
+		try {
+			GHomepage.RenderSteamDeckCarousel();
 		} catch ( e ) { OnHomepageException( e ); }
 
 		// Logged in
@@ -1510,6 +1515,28 @@ GHomepage = {
 				return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, oItem.bundleid, rgOptions, nDepth );
 			},	'top_new_releases', 4
 		);
+	},
+
+	RenderSteamDeckCarousel: function()
+	{
+		let $SteamDeckCarousel = $J( '#featured_steam_deck_games' );
+		const k_nMinItemsInCarousel = 4;
+
+		if ( !$SteamDeckCarousel.length || !GHomepage.oDisplayLists.top_played_deck.length )
+			return;
+
+		let rgSteamDeckGames = GHomepage.FilterItemsForDisplay(
+			GHomepage.oDisplayLists.top_played_deck, 'home', k_nMinItemsInCarousel, 24, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: false }
+		);
+
+		if ( rgSteamDeckGames.length >= k_nMinItemsInCarousel )
+		{
+			GHomepage.FillPagedCapsuleCarousel( rgSteamDeckGames, $SteamDeckCarousel, function( oItem, strFeature, rgOptions, nDepth ) {
+				return GHomepage.BuildHomePageGenericCap(strFeature, oItem.appid, oItem.packageid, oItem.bundleid, rgOptions, nDepth );
+			}, 'sale_deck_mostplayed', k_nMinItemsInCarousel );
+
+			GDynamicStore.MarkAppDisplayed( rgSteamDeckGames, k_nMinItemsInCarousel );
+		}
 	},
 
 	RenderContentHubCarousel: function()
