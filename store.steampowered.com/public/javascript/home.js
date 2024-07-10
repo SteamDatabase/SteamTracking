@@ -18,6 +18,8 @@ GHomepage = {
 	oDisplayListsRaw: {},
 	oDisplayLists: {},
 
+	oCustomUserDisplayLists: {},
+
 	oFeaturedMainCapItems: {},
 
 	rgRecommendedGames: [],
@@ -213,6 +215,7 @@ GHomepage = {
 			GHomepage.nLastIRSettingsUpdate = rgParams.nLastIRSettingsUpdate || 0;
 			GHomepage.rgIRIncludedTags = rgParams.rgIRIncludedTags || [];
 			GHomepage.rgIRExcludedTags = rgParams.rgIRExcludedTags || [];
+			GHomepage.oCustomUserDisplayLists = rgParams.oCustomUserDisplayLists || {};
 	} catch( e ) { OnHomepageException(e); }
 
 		GHomepage.bUserDataReady = true;

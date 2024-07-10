@@ -449,7 +449,9 @@ function HomeRenderFeaturedItems( rgDisplayLists, rgTagData, rgFranchiseData, rg
 	if ( $TagBlock.length )
 	{
 		new CScrollOffsetWatcher( $TagBlock, function() {
-			GenerateTagBlocks( $TagBlock, rgTagData, rgDisplayLists.sale_tier1, rgDisplayLists.sale_tier2 );
+			let rgUserTagData = ( GHomepage.oCustomUserDisplayLists && GHomepage.oCustomUserDisplayLists.rgAccountTagDataJSON ) || [];
+
+			GenerateTagBlocks( $TagBlock, rgUserTagData.concat( rgTagData ), rgDisplayLists.sale_tier1, rgDisplayLists.sale_tier2 );
 		});
 	}
 

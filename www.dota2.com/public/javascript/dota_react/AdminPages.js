@@ -1,9 +1,64 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkdota_react = self.webpackChunkdota_react || []).push([
-  [1510],
+  [7084],
   {
-    90515: (e) => {
+    2466: (e) => {
+      e.exports = {
+        Tooltip: "_2IHKq8kE2FKkIkQ0uN1hI1",
+        CarouselFade: "_2jFWoHmtCDVmk-GJRBpunm",
+        StandardButton: "_3Vzjmf1OlnazpL0kLEaBk2",
+        ButtonText: "_1zE9KyknOxmGylbt0gT6G1",
+        Icon: "_2kUnsdlfHyidOkvHNRy-G5",
+        Play: "_3xQLJ4b-cm8IeXAoDPbn6R",
+        SteamLogo: "_1hoZQVEfsnXavdsZP34vJD",
+        ToolTip: "_3fIQnpYc0eNl9uXKBoSJam",
+        PlayerReportTooltip: "_13XzPZYgyQ52l8UHzh0EmH",
+        Facet: "_2479It67QW-Bm9uy6i44cg",
+        FacetColorRed1: "_1VQ6_XxRXOarkHNtIZR9Bw",
+        IconBackground: "_1TCapxSkSTXMjsDbZYrPuo",
+        FacetColorRed2: "_2npcwVYfERdNcBWrDZoEz0",
+        FacetColorRed0: "_2jAmS6ZJIahLUzOlKrjWpM",
+        BackgroundTexture: "Kt1MTBk5kBd4aK5CFW2BS",
+        Background: "_3MfMXew7MDkO4ZAyjocp4l",
+        FacetColorYellow1: "_28IIDyezxLgxIAUErmcPAh",
+        FacetColorYellow2: "_3jB4IMyM4FBN4ivpEPzbJd",
+        FacetColorYellow3: "_1Gjyr8DdaSBz6_43VEAz0d",
+        FacetColorYellow0: "_2dBam2Tl57qfOfNvHZ6ChQ",
+        FacetColorGreen1: "_1-qGJ84BFxu0lBHUhb5BAi",
+        FacetColorGreen2: "_3sEfw4qhYeKQzhX1UOb60Z",
+        FacetColorGreen3: "_21o76udrdevLEWmI0ZuSCT",
+        FacetColorGreen4: "_3833UsaWsxduGGxeTuMWAC",
+        FacetColorGreen0: "_1c3NTvD5wY1eRXjzD8RPIe",
+        FacetColorBlue1: "_3O35_r4wm4_s7r6H_YdPCz",
+        FacetColorBlue2: "_3ejomd-TsjxlHuJOx2FYyf",
+        FacetColorBlue3: "_2HyBDMaS-B2ekmE3PItFMK",
+        FacetColorBlue0: "_3gfEwvDy5HqyL6VGHoMRVO",
+        FacetColorPurple1: "_1EmAB8GlcjfA1QEcuCJi6K",
+        FacetColorPurple2: "GNCP-xxNt9O4-ierkeGcM",
+        FacetColorPurple0: "YXBKkoBCp4eQx9gFE-4GS",
+        FacetColorGray0: "_2TRWZ2SI7jmu1RmANk84kq",
+        FacetColorGray1: "_2Z0PK6Dt5jIErUliJ1Nmcb",
+        FacetColorGray2: "_3wy1a1XvwtnmSkyJ_Uog4B",
+        FacetColorGray3: "_3CwxQRU26KizreV1hodszw",
+        DotaPlusTesterPage: "_3WgovHBiMUxsTea3MjGVj_",
+        Content: "_3bNeyifasCN57MFYhqx6ZU",
+        HeroOption: "_2v0i2xJP4V-2Qpo3cyY1Nj",
+        Portrait: "_3i4UGSnvERSFqSVToiROro",
+        Name: "_1CHIkGehGqx3Ju9lDCMSL3",
+        HeroPickerPopup: "_5HnIRB-JgFF82A3YeaDuq",
+        Title: "_3WFGlJosY89AeFD-YAn6gJ",
+        Grid: "_21gyki0jzxuKwN4H10o8X9",
+        HeroSelector: "_3fmy45UdjacZi73yO3E_uF",
+        Separator: "vvXhWtkA9z6wjvMnq8Cfh",
+        HeroList: "AyejJ-aIiriywCHAZOeUo",
+        Allies: "_3Xuun95YKZ1YruK-b9hYEf",
+        Enemies: "_3FpjjT_dv_gp1luKSDDZhK",
+        MiscInfo: "_2PVHaq0Abzd8Vpp7ZSpR6X",
+        Option: "_2AFRQzgnX-YsecNy9XrxzY",
+      };
+    },
+    40753: (e) => {
       e.exports = {
         Tooltip: "_3OELhBBscklv2IMdg5oomz",
         CarouselFade: "_31I4llS_Lyhj5ATIkhm9Qt",
@@ -75,7 +130,7 @@
         TextUppercase: "_1zyxlvXRinV7kmTGr27_gu",
       };
     },
-    68410: (e) => {
+    9784: (e) => {
       e.exports = {
         Tooltip: "_31hC1zqg_cK9fp6BCtDEz",
         CarouselFade: "_2UcOFVBSgdG55jLKpxirAG",
@@ -110,218 +165,506 @@
         SmoothLine: "_3YaqJMKcvdAXYfVRX2W8PY",
       };
     },
-    73322: (e, t, a) => {
+    77671: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => ge });
-      var n = a(22970),
-        l = a(61674),
-        r = a.n(l),
-        o = a(15905),
-        i = a(66204),
-        c = a(62175),
-        m = a(88787),
+      a.r(t), a.d(t, { default: () => p });
+      var n = a(7552),
+        r = a(89506),
+        l = a(21384),
+        o = a(47202),
+        c = a(36305),
+        m = a(2466),
         s = a.n(m),
-        d = a(18788),
-        u = a(21347),
-        E = a(88575),
-        p = a(55816),
-        y = a(10345),
-        _ = a(55758),
-        g = a(80480),
-        v = a(74903),
-        f = a(56566),
-        A = a(98142),
-        h = a(5062),
-        k = a(31444),
-        T = a(37196),
-        N = a(79735),
-        R = a(73806),
-        D = a(81823),
-        O = a(95068);
-      function I(e) {
+        i = a(33706),
+        d = a(27866);
+      const u = (e) => {
+          const [t, a] = (0, n.useState)(""),
+            l = (0, i.wB)();
+          if (l.isLoading)
+            return n.createElement(
+              "div",
+              { className: s().HeroPicker },
+              n.createElement("div", { className: s().Loading }, "Loading..."),
+            );
+          if (!l.data) return null;
+          const o = l.data;
+          return n.createElement(
+            "div",
+            { className: s().HeroPickerPopup },
+            n.createElement("div", { className: s().Title }, "Select Hero"),
+            n.createElement(
+              "div",
+              { className: s().Grid },
+              o.heroes.map((t) =>
+                n.createElement(
+                  "div",
+                  {
+                    key: t.id,
+                    className: s().HeroSelector,
+                    onClick: (a) => {
+                      e.fnSetSelectedHero(t.id), a.stopPropagation();
+                    },
+                  },
+                  n.createElement("div", {
+                    className: s().Portrait,
+                    style: {
+                      backgroundImage: `url( ${r.r.IMG_URL}heroes/${t.name.replace("npc_dota_hero_", "")}.png`,
+                    },
+                  }),
+                  n.createElement(
+                    "div",
+                    { className: s().Name },
+                    (0, d.Wn)(t.name_loc),
+                  ),
+                ),
+              ),
+            ),
+          );
+        },
+        E = (e) => {
+          const [t, a] = n.useState(0),
+            [o, c] = n.useState(0),
+            [m, E] = n.useState(!1),
+            p = (0, i.lm)(t),
+            y = (0, i.qK)(t),
+            _ = p.data,
+            g = y.data,
+            f = g ? g.facets[o] : void 0;
+          let A = "";
+          switch (f?.color) {
+            case 0:
+              A = "Red";
+              break;
+            case 1:
+              A = "Yellow";
+              break;
+            case 2:
+              A = "Green";
+              break;
+            case 3:
+              A = "Blue";
+              break;
+            case 4:
+              A = "Purple";
+              break;
+            case 5:
+              A = "Gray";
+          }
+          return (
+            g && console.log(g),
+            n.createElement(
+              "div",
+              { className: s().HeroOption },
+              n.createElement("div", {
+                className: s().Portrait,
+                style: {
+                  backgroundImage: `url( ${r.r.IMG_URL}heroes/${_?.name.replace("npc_dota_hero_", "")}.png`,
+                },
+                onClick: () => E(!0),
+              }),
+              n.createElement(
+                "div",
+                {
+                  className: (0, l.A)(
+                    s().Facet,
+                    s()[`FacetColor${A}${f?.gradient_id}`],
+                  ),
+                  onClick: () => c(g ? (o + 1) % g?.facets.length : 0),
+                },
+                n.createElement(
+                  "div",
+                  { className: s().BackgroundTexture },
+                  g?.facets[o].title_loc,
+                ),
+              ),
+              n.createElement(
+                "div",
+                { className: s().Name },
+                e.bShowName ? (0, d.Wn)(_?.name_loc) : e.strLabel,
+              ),
+              m &&
+                n.createElement(u, {
+                  fnSetSelectedHero: (t) => {
+                    a(t), c(0), E(!1), e.fnSetSelectedHero(t);
+                  },
+                }),
+            )
+          );
+        },
+        p = () => {
+          const [e, t] = n.useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]),
+            [a, r] = n.useState(0),
+            [l, m] = n.useState(0),
+            [i, d] = n.useState(0),
+            [u, p] = n.useState([0, 0, 0, 0]),
+            [y, _] = n.useState([0, 0, 0, 0]),
+            [g, f] = n.useState([0, 0, 0, 0, 0]),
+            [A, k] = n.useState([0, 0, 0, 0, 0]),
+            [h, N] = n.useState("2000"),
+            [T, R] = n.useState(22),
+            v = (e, t, a, n) => {
+              let r = [...t];
+              (r[a] = n), e(r);
+            };
+          return (
+            console.log(u),
+            n.createElement(
+              "div",
+              { className: s().DotaPlusTesterPage },
+              n.createElement(o.A, { bOverlapping: !1 }),
+              n.createElement(
+                "div",
+                { className: s().Content },
+                n.createElement(
+                  "div",
+                  { className: s().HeroList },
+                  n.createElement(
+                    "div",
+                    { className: s().YourHero },
+                    n.createElement(E, {
+                      strLabel: "Your Hero",
+                      fnSetSelectedHero: (e) => r(e),
+                      fnSetSelectedFacet: (e) => m(e),
+                    }),
+                  ),
+                  n.createElement(
+                    "div",
+                    { className: s().Allies },
+                    n.createElement(E, {
+                      strLabel: "Ally #1",
+                      fnSetSelectedHero: (e) => v(p, u, 0, e),
+                      fnSetSelectedFacet: (e) => v(_, y, 0, e),
+                    }),
+                    n.createElement(E, {
+                      strLabel: "Ally #2",
+                      fnSetSelectedHero: (e) => v(p, u, 1, e),
+                      fnSetSelectedFacet: (e) => v(_, y, 1, e),
+                    }),
+                    n.createElement(E, {
+                      strLabel: "Ally #3",
+                      fnSetSelectedHero: (e) => v(p, u, 2, e),
+                      fnSetSelectedFacet: (e) => v(_, y, 2, e),
+                    }),
+                    n.createElement(E, {
+                      strLabel: "Ally #4",
+                      fnSetSelectedHero: (e) => v(p, u, 3, e),
+                      fnSetSelectedFacet: (e) => v(_, y, 3, e),
+                    }),
+                  ),
+                  n.createElement(
+                    "div",
+                    { className: s().Enemies },
+                    n.createElement(E, {
+                      strLabel: "Enemy #1",
+                      fnSetSelectedHero: (e) => v(f, g, 0, e),
+                      fnSetSelectedFacet: (e) => v(k, A, 0, e),
+                    }),
+                    n.createElement(E, {
+                      strLabel: "Enemy #2",
+                      fnSetSelectedHero: (e) => v(f, g, 1, e),
+                      fnSetSelectedFacet: (e) => v(k, A, 1, e),
+                    }),
+                    n.createElement(E, {
+                      strLabel: "Enemy #3",
+                      fnSetSelectedHero: (e) => v(f, g, 2, e),
+                      fnSetSelectedFacet: (e) => v(k, A, 2, e),
+                    }),
+                    n.createElement(E, {
+                      strLabel: "Enemy #4",
+                      fnSetSelectedHero: (e) => v(f, g, 3, e),
+                      fnSetSelectedFacet: (e) => v(k, A, 3, e),
+                    }),
+                    n.createElement(E, {
+                      strLabel: "Enemy #5",
+                      fnSetSelectedHero: (e) => v(f, g, 3, e),
+                      fnSetSelectedFacet: (e) => v(k, A, 4, e),
+                    }),
+                  ),
+                ),
+                n.createElement("div", { className: s().Separator }),
+                n.createElement(
+                  "div",
+                  { className: s().MiscInfo },
+                  n.createElement(
+                    "div",
+                    { className: s().Option },
+                    n.createElement("div", { className: s().Name }, "Position"),
+                    n.createElement(
+                      "select",
+                      {
+                        className: s().PositionSelector,
+                        value: i,
+                        onChange: (e) => d(parseInt(e.target.value)),
+                      },
+                      n.createElement("option", { value: 1 }, "Safe"),
+                      n.createElement("option", { value: 2 }, "Off"),
+                      n.createElement("option", { value: 4 }, "Mid"),
+                      n.createElement("option", { value: 8 }, "Support"),
+                      n.createElement("option", { value: 16 }, "Hard Support"),
+                    ),
+                  ),
+                  n.createElement(
+                    "div",
+                    { className: s().Option },
+                    n.createElement(
+                      "div",
+                      { className: s().Name },
+                      "Game Mode",
+                    ),
+                    n.createElement(
+                      "select",
+                      {
+                        className: s().GameModeSelector,
+                        value: T,
+                        onChange: (e) => R(parseInt(e.target.value)),
+                      },
+                      n.createElement("option", { value: 22 }, "All Draft"),
+                      n.createElement("option", { value: 1 }, "All Pick"),
+                      n.createElement("option", { value: 23 }, "Turbo"),
+                      n.createElement("option", { value: 2 }, "Captains Mode"),
+                      n.createElement(
+                        "option",
+                        { value: 16 },
+                        "Captains Draft",
+                      ),
+                      n.createElement("option", { value: 4 }, "Single Draft"),
+                      n.createElement("option", { value: 13 }, "Hero Pool"),
+                    ),
+                  ),
+                  n.createElement(
+                    "div",
+                    { className: s().Option },
+                    n.createElement(
+                      "div",
+                      { className: s().Name },
+                      "Average MMR",
+                    ),
+                    n.createElement("input", {
+                      type: "text",
+                      className: s().AverageMMRInput,
+                      value: h,
+                      onChange: (e) => N(e.target.value),
+                    }),
+                  ),
+                ),
+                n.createElement("div", { className: s().Separator }),
+              ),
+              n.createElement(c.K, null),
+            )
+          );
+        };
+    },
+    54302: (e, t, a) => {
+      "use strict";
+      a.r(t), a.d(t, { default: () => _e });
+      var n = a(75749),
+        r = a.n(n),
+        l = a(88351),
+        o = a(7552),
+        c = a(83640),
+        m = a(73681),
+        s = a.n(m),
+        i = a(57225),
+        d = a(94434),
+        u = a(33143),
+        E = a(81404),
+        p = a(26195),
+        y = a(20196),
+        _ = a(56529),
+        g = a(42643),
+        f = a(92513),
+        A = a(89506),
+        k = a(21384),
+        h = a(47202),
+        N = a(36305),
+        T = a(55651),
+        R = a(33706),
+        v = a(89145),
+        S = a(94610);
+      function F(e) {
         return 570 === e ? "public" : "beta";
       }
-      function C(e) {
+      function D(e) {
         switch (e) {
-          case D.rK.DOTA_GAMEMODE_NONE:
+          case v.Fk.DOTA_GAMEMODE_NONE:
             return "-";
-          case D.rK.DOTA_GAMEMODE_AP:
+          case v.Fk.DOTA_GAMEMODE_AP:
             return "AP";
-          case D.rK.DOTA_GAMEMODE_CM:
+          case v.Fk.DOTA_GAMEMODE_CM:
             return "CM";
-          case D.rK.DOTA_GAMEMODE_RD:
+          case v.Fk.DOTA_GAMEMODE_RD:
             return "RD";
-          case D.rK.DOTA_GAMEMODE_SD:
+          case v.Fk.DOTA_GAMEMODE_SD:
             return "SD";
-          case D.rK.DOTA_GAMEMODE_AR:
+          case v.Fk.DOTA_GAMEMODE_AR:
             return "AR";
-          case D.rK.DOTA_GAMEMODE_INTRO:
+          case v.Fk.DOTA_GAMEMODE_INTRO:
             return "INTRO";
-          case D.rK.DOTA_GAMEMODE_HW:
+          case v.Fk.DOTA_GAMEMODE_HW:
             return "OCT31";
-          case D.rK.DOTA_GAMEMODE_REVERSE_CM:
+          case v.Fk.DOTA_GAMEMODE_REVERSE_CM:
             return "Rev CM";
-          case D.rK.DOTA_GAMEMODE_XMAS:
+          case v.Fk.DOTA_GAMEMODE_XMAS:
             return "XMAS";
-          case D.rK.DOTA_GAMEMODE_TUTORIAL:
+          case v.Fk.DOTA_GAMEMODE_TUTORIAL:
             return "Tutorial";
-          case D.rK.DOTA_GAMEMODE_MO:
+          case v.Fk.DOTA_GAMEMODE_MO:
             return "MID";
-          case D.rK.DOTA_GAMEMODE_LP:
+          case v.Fk.DOTA_GAMEMODE_LP:
             return "LP";
-          case D.rK.DOTA_GAMEMODE_POOL1:
+          case v.Fk.DOTA_GAMEMODE_POOL1:
             return "Pool1";
-          case D.rK.DOTA_GAMEMODE_FH:
+          case v.Fk.DOTA_GAMEMODE_FH:
             return "FH";
-          case D.rK.DOTA_GAMEMODE_CUSTOM:
+          case v.Fk.DOTA_GAMEMODE_CUSTOM:
             return "CUSTOM";
-          case D.rK.DOTA_GAMEMODE_CD:
+          case v.Fk.DOTA_GAMEMODE_CD:
             return "CD";
-          case D.rK.DOTA_GAMEMODE_BD:
+          case v.Fk.DOTA_GAMEMODE_BD:
             return "BD";
-          case D.rK.DOTA_GAMEMODE_ABILITY_DRAFT:
+          case v.Fk.DOTA_GAMEMODE_ABILITY_DRAFT:
             return "AD";
-          case D.rK.DOTA_GAMEMODE_EVENT:
+          case v.Fk.DOTA_GAMEMODE_EVENT:
             return "EVENT";
-          case D.rK.DOTA_GAMEMODE_ARDM:
+          case v.Fk.DOTA_GAMEMODE_ARDM:
             return "ARDM";
-          case D.rK.DOTA_GAMEMODE_1V1MID:
+          case v.Fk.DOTA_GAMEMODE_1V1MID:
             return "1v1";
-          case D.rK.DOTA_GAMEMODE_ALL_DRAFT:
+          case v.Fk.DOTA_GAMEMODE_ALL_DRAFT:
             return "AP";
-          case D.rK.DOTA_GAMEMODE_TURBO:
+          case v.Fk.DOTA_GAMEMODE_TURBO:
             return "TURBO";
-          case D.rK.DOTA_GAMEMODE_MUTATION:
+          case v.Fk.DOTA_GAMEMODE_MUTATION:
             return "MUT";
-          case D.rK.DOTA_GAMEMODE_COACHES_CHALLENGE:
+          case v.Fk.DOTA_GAMEMODE_COACHES_CHALLENGE:
             return "COACH";
           default:
             return "Unknown";
         }
       }
-      function S(e) {
+      function O(e) {
         switch (e) {
-          case D.Eq.CASUAL_MATCH:
+          case v.AP.CASUAL_MATCH:
             return "Unranked";
-          case D.Eq.PRACTICE:
+          case v.AP.PRACTICE:
             return "Practice";
-          case D.Eq.COOP_BOT_MATCH:
+          case v.AP.COOP_BOT_MATCH:
             return "Co-op Bot";
-          case D.Eq.COMPETITIVE_MATCH:
+          case v.AP.COMPETITIVE_MATCH:
             return "Ranked";
-          case D.Eq.WEEKEND_TOURNEY:
+          case v.AP.WEEKEND_TOURNEY:
             return "Battle Cup";
-          case D.Eq.LOCAL_BOT_MATCH:
+          case v.AP.LOCAL_BOT_MATCH:
             return "Local Bot";
-          case D.Eq.SPECTATOR:
+          case v.AP.SPECTATOR:
             return "Spectator";
-          case D.Eq.EVENT_MATCH:
+          case v.AP.EVENT_MATCH:
             return "Event";
-          case D.Eq.NEW_PLAYER_POOL:
+          case v.AP.NEW_PLAYER_POOL:
             return "New Player Pool";
-          case D.Eq.FEATURED_GAMEMODE:
+          case v.AP.FEATURED_GAMEMODE:
             return "Featured Gamemode";
           default:
             return "";
         }
       }
-      function F(e) {
+      function I(e) {
         switch (e) {
-          case D.cu.RADIANT_VICTORY:
+          case v.rM.RADIANT_VICTORY:
             return "Radiant Victory";
-          case D.cu.DIRE_VICTORY:
+          case v.rM.DIRE_VICTORY:
             return "Dire Victory";
-          case D.cu.NOTSCORED_POOR_NETWORK:
+          case v.rM.NOTSCORED_POOR_NETWORK:
             return "Net";
-          case D.cu.NOTSCORED_LEAVER:
+          case v.rM.NOTSCORED_LEAVER:
             return "Lvr";
-          case D.cu.NOTSCORED_SERVER_CRASH:
+          case v.rM.NOTSCORED_SERVER_CRASH:
             return "Crsh";
-          case D.cu.NOTSCORED_NEVER_STARTED:
+          case v.rM.NOTSCORED_NEVER_STARTED:
             return "No start";
-          case D.cu.NOTSCORED_CANCELED:
+          case v.rM.NOTSCORED_CANCELED:
             return "Cancel";
-          case D.cu.NOTSCORED_SUSPICIOUS:
+          case v.rM.NOTSCORED_SUSPICIOUS:
             return "Suspicious";
           default:
             return "-";
         }
       }
+      function C(e) {
+        switch (e) {
+          case v.GR.RANK_ELIGIBLE:
+            return "Rank Eligible";
+          case v.GR.BATTLECUP:
+            return "Battlecup";
+          case v.GR.BAN_WARNING:
+            return "Ban Warning";
+          case v.GR.RETURNING_PLAYER:
+            return "Returning Player";
+          case v.GR.COMMS_DISRUPTIVE:
+            return "Comms Disruptive";
+          default:
+            return "Unknown";
+        }
+      }
       function b(e) {
         switch (e) {
-          case D.PW.RANK_ELIGIBLE:
-            return "Rank Eligible";
-          case D.PW.BATTLECUP:
-            return "Battlecup";
-          case D.PW.BAN_WARNING:
-            return "Ban Warning";
-          case D.PW.RETURNING_PLAYER:
-            return "Returning Player";
-          case D.PW.COMMS_DISRUPTIVE:
-            return "Comms Disruptive";
+          case v.V7.VERY_LIKELY:
+            return "Very Likely";
+          case v.V7.SOMEWHAT_LIKELY:
+            return "Somewhat Likely";
+          case v.V7.UNCLEAR:
+            return "Unclear";
+          case v.V7.SOMEWHAT_UNLIKELY:
+            return "Somewhat Unlikely";
+          case v.V7.VERY_UNLIKELY:
+            return "Very Unlikely";
           default:
             return "Unknown";
         }
       }
       function M(e) {
         switch (e) {
-          case D.n4.VERY_LIKELY:
-            return "Very Likely";
-          case D.n4.SOMEWHAT_LIKELY:
-            return "Somewhat Likely";
-          case D.n4.UNCLEAR:
-            return "Unclear";
-          case D.n4.SOMEWHAT_UNLIKELY:
-            return "Somewhat Unlikely";
-          case D.n4.VERY_UNLIKELY:
-            return "Very Unlikely";
+          case v.TK.DOTA_ACCESS_TOURNAMENT_ADMIN:
+            return "Tournament Admin";
+          case v.TK.DOTA_ACCESS_TOURNAMENT_BROADCASTER:
+            return "Tournament Broadcaster";
           default:
             return "Unknown";
         }
       }
       function L(e) {
         switch (e) {
-          case D._W.DOTA_ACCESS_TOURNAMENT_ADMIN:
-            return "Tournament Admin";
-          case D._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER:
-            return "Tournament Broadcaster";
-          default:
-            return "Unknown";
-        }
-      }
-      function w(e) {
-        switch (e) {
-          case D.xd.CORE:
+          case v.Ov.CORE:
             return "Core";
-          case D.xd.SUPPORT:
+          case v.Ov.SUPPORT:
             return "Support";
-          case D.xd.OFFLANE:
+          case v.Ov.OFFLANE:
             return "Offlane";
-          case D.xd.MID:
+          case v.Ov.MID:
             return "Mid";
           default:
             return "Unknown";
         }
       }
-      var $ = a(88036),
-        G = a(90515),
+      var w = a(92225),
+        G = a(40753),
         P = a.n(G);
-      const U = "red",
-        Y = "orange",
-        K = "goldenrod",
-        B = "#adff2f",
-        x = "darkgray",
-        H = "forestgreen",
-        W = "crimson",
+      const $ = "red",
+        U = "orange",
+        B = "goldenrod",
+        H = "#adff2f",
+        K = "darkgray",
+        x = "forestgreen",
+        Y = "crimson",
         V = "#fa002e",
-        j = "#82ca9d",
-        q = "#888fd8",
+        W = "#82ca9d",
+        j = "#888fd8",
         J = "#3389ae",
-        Z = "#FFBB28",
-        X = "#FF8042",
-        z = (e) => {
+        X = "#FFBB28",
+        z = "#FF8042",
+        Q = (e) => {
           let t = "";
-          const a = `${A.Y.CDN_URL}/apps/dota2/images/`;
+          const a = `${A.r.CDN_URL}/apps/dota2/images/`;
           return (
             2 == e && (t = `${a}player_reports/button_report_text_on.png`),
             3 == e && (t = `${a}player_reports/button_report_voice_on.png`),
@@ -333,7 +676,7 @@
             t
           );
         },
-        Q = (e) => {
+        Z = (e) => {
           let t = "";
           return (
             2 == e && (t = "Text abuse"),
@@ -345,51 +688,47 @@
             t
           );
         },
-        ee = [
+        q = [
           { key: "accountid", displayName: "Account ID" },
           {
             key: "guilds",
             secondaryKey: "dotaguildurl",
             displayName: "Guild",
             formatFunction: (e = {}, t = "") => {
-              var a, n;
-              const l = `${t}${null === (a = null == e ? void 0 : e.guild) || void 0 === a ? void 0 : a.guild_id}`,
-                r =
-                  (null === (n = null == e ? void 0 : e.guild) || void 0 === n
-                    ? void 0
-                    : n.guild_name) || "";
-              return r && t
-                ? i.createElement(
-                    i.Fragment,
+              const a = `${t}${e?.guild?.guild_id}`,
+                n = e?.guild?.guild_name || "";
+              return n && t
+                ? o.createElement(
+                    o.Fragment,
                     null,
-                    i.createElement(
+                    o.createElement(
                       "a",
-                      { href: l, target: "_blank", rel: "noopener" },
-                      r,
+                      { href: a, target: "_blank", rel: "noopener" },
+                      n,
                     ),
                   )
-                : i.createElement("span", { style: { color: x } }, "No Guild");
+                : o.createElement("span", { style: { color: K } }, "No Guild");
             },
           },
         ],
-        te = [
+        ee = [
           {
             key: "comprank",
             secondaryKey: "comprankuncertainty",
             tertiaryKey: "compranktier",
             displayName: "Ranked",
             formatFunction: (e, t, a = 0) =>
-              i.createElement(
-                i.Fragment,
+              o.createElement(
+                o.Fragment,
                 null,
-                i.createElement("span", { className: P().RankNumber }, `${e}`),
-                i.createElement(
+                o.createElement("span", { className: P().RankNumber }, `${e}`),
+                o.createElement(
                   "span",
                   { className: P().RankedUncertainty },
                   `+/- ${t}`,
-                  i.createElement("img", {
+                  o.createElement("img", {
                     className: P().RankedBadgeIcon,
-                    src: `${A.Y.CDN_URL}/apps/dota2/images/small_ranks/ranked_icons_emoticon_${Math.floor(a / 10)}.png`,
+                    src: `${A.r.CDN_URL}/apps/dota2/images/small_ranks/ranked_icons_emoticon_${Math.floor(a / 10)}.png`,
                   }),
                 ),
               ),
@@ -399,15 +738,15 @@
             secondaryKey: "rankuncertainty",
             displayName: "Unranked",
             formatFunction: (e, t) =>
-              i.createElement(
-                i.Fragment,
+              o.createElement(
+                o.Fragment,
                 null,
-                i.createElement("span", { className: P().RankNumber }, `${e}`),
-                i.createElement("span", null, `+/- ${t}`),
+                o.createElement("span", { className: P().RankNumber }, `${e}`),
+                o.createElement("span", null, `+/- ${t}`),
               ),
           },
         ],
-        ae = [
+        te = [
           {
             key: "accountflags",
             displayName: "Account Flags",
@@ -416,34 +755,34 @@
               let a = [];
               return (
                 0 == e && a.push("None"),
-                (e & D.PW.RANK_ELIGIBLE) > 0 &&
-                  a.push(`${b(D.PW.RANK_ELIGIBLE)}${t}`),
-                (e & D.PW.BATTLECUP) > 0 && a.push(`${b(D.PW.BATTLECUP)}${t}`),
-                (e & D.PW.BAN_WARNING) > 0 &&
+                (e & v.GR.RANK_ELIGIBLE) > 0 &&
+                  a.push(`${C(v.GR.RANK_ELIGIBLE)}${t}`),
+                (e & v.GR.BATTLECUP) > 0 && a.push(`${C(v.GR.BATTLECUP)}${t}`),
+                (e & v.GR.BAN_WARNING) > 0 &&
                   a.push(
-                    i.createElement(
+                    o.createElement(
                       "span",
-                      { style: { color: U } },
-                      `${b(D.PW.BAN_WARNING)}${t}`,
+                      { style: { color: $ } },
+                      `${C(v.GR.BAN_WARNING)}${t}`,
                     ),
                   ),
-                (e & D.PW.RETURNING_PLAYER) > 0 &&
+                (e & v.GR.RETURNING_PLAYER) > 0 &&
                   a.push(
-                    i.createElement(
+                    o.createElement(
                       "span",
-                      { style: { color: K } },
-                      `${b(D.PW.RETURNING_PLAYER)}${t}`,
+                      { style: { color: B } },
+                      `${C(v.GR.RETURNING_PLAYER)}${t}`,
                     ),
                   ),
-                (e & D.PW.COMMS_DISRUPTIVE) > 0 &&
+                (e & v.GR.COMMS_DISRUPTIVE) > 0 &&
                   a.push(
-                    i.createElement(
+                    o.createElement(
                       "span",
-                      { style: { color: U } },
-                      `${b(D.PW.COMMS_DISRUPTIVE)}${t}`,
+                      { style: { color: $ } },
+                      `${C(v.GR.COMMS_DISRUPTIVE)}${t}`,
                     ),
                   ),
-                i.createElement("div", null, a)
+                o.createElement("div", null, a)
               );
             },
           },
@@ -453,29 +792,29 @@
             tertiaryKey: "trustscore",
             displayName: "Behav, Comms, Trust",
             formatFunction: (e = 8e3, t = -1, a = -1) => {
-              let n = B;
+              let n = H;
               e < 0
-                ? (n = B)
+                ? (n = H)
                 : e <= 2e3
-                  ? (n = U)
+                  ? (n = $)
                   : e <= 4e3
-                    ? (n = Y)
-                    : e <= 6e3 && (n = K);
-              let l = B;
+                    ? (n = U)
+                    : e <= 6e3 && (n = B);
+              let r = H;
               return (
                 t < 0
-                  ? (l = B)
+                  ? (r = H)
                   : t <= 2e3
-                    ? (l = U)
+                    ? (r = $)
                     : t <= 4e3
-                      ? (l = Y)
-                      : t <= 6e3 && (l = K),
-                i.createElement(
+                      ? (r = U)
+                      : t <= 6e3 && (r = B),
+                o.createElement(
                   "div",
                   null,
-                  i.createElement("span", { style: { color: n } }, `${e}, `),
-                  i.createElement("span", { style: { color: l } }, `${t}, `),
-                  i.createElement("span", { style: { color: B } }, `${a}`),
+                  o.createElement("span", { style: { color: n } }, `${e}, `),
+                  o.createElement("span", { style: { color: r } }, `${t}, `),
+                  o.createElement("span", { style: { color: H } }, `${a}`),
                 )
               );
             },
@@ -485,10 +824,10 @@
             displayName: "Steam Account 64",
             formatFunction: (e) =>
               e
-                ? i.createElement(
-                    i.Fragment,
+                ? o.createElement(
+                    o.Fragment,
                     null,
-                    i.createElement(
+                    o.createElement(
                       "a",
                       { href: e, target: "_blank", rel: "noopener" },
                       e.split("/").pop(),
@@ -501,38 +840,26 @@
             secondaryKey: "steamsupporthwidbaseurl",
             displayName: "Most Recent HWID",
             formatFunction: (e = {}, t) => {
-              var a, n, l;
               if (
                 !Object.keys(e).length ||
                 !e.matches ||
                 !Object.keys(e.matches).length
               )
                 return "";
-              let r = "";
+              let a = "";
               for (let t = Object.keys(e.matches).length - 1; t >= 0; t--)
-                if (
-                  null ===
-                    (n =
-                      null === (a = e.matches[t]) || void 0 === a
-                        ? void 0
-                        : a.searchdata) || void 0 === n
-                    ? void 0
-                    : n.hwid
-                ) {
-                  r =
-                    null === (l = e.matches[t]) || void 0 === l
-                      ? void 0
-                      : l.searchdata.hwid;
+                if (e.matches[t]?.searchdata?.hwid) {
+                  a = e.matches[t]?.searchdata.hwid;
                   break;
                 }
-              return r
-                ? i.createElement(
-                    i.Fragment,
+              return a
+                ? o.createElement(
+                    o.Fragment,
                     null,
-                    i.createElement(
+                    o.createElement(
                       "a",
-                      { href: `${t}${r}`, target: "_blank", rel: "noopener" },
-                      r,
+                      { href: `${t}${a}`, target: "_blank", rel: "noopener" },
+                      a,
                     ),
                   )
                 : "";
@@ -543,10 +870,10 @@
             displayName: "Persona V1",
             formatFunction: (e) =>
               e
-                ? i.createElement(
-                    i.Fragment,
+                ? o.createElement(
+                    o.Fragment,
                     null,
-                    i.createElement(
+                    o.createElement(
                       "a",
                       { href: e, target: "_blank", rel: "noopener" },
                       "Persona V1",
@@ -555,44 +882,44 @@
                 : "",
           },
         ],
-        ne = [
+        ae = [
           {
             key: "smurfcategory",
             displayName: "Smurf Category",
             formatFunction: (e) => {
               switch (e) {
-                case D.n4.VERY_LIKELY:
-                  return i.createElement(
+                case v.V7.VERY_LIKELY:
+                  return o.createElement(
+                    "span",
+                    { style: { color: $ } },
+                    b(v.V7.VERY_LIKELY),
+                  );
+                case v.V7.SOMEWHAT_LIKELY:
+                  return o.createElement(
                     "span",
                     { style: { color: U } },
-                    M(D.n4.VERY_LIKELY),
+                    b(v.V7.SOMEWHAT_LIKELY),
                   );
-                case D.n4.SOMEWHAT_LIKELY:
-                  return i.createElement(
+                case v.V7.UNCLEAR:
+                  return o.createElement(
                     "span",
-                    { style: { color: Y } },
-                    M(D.n4.SOMEWHAT_LIKELY),
+                    { style: { color: B } },
+                    b(v.V7.UNCLEAR),
                   );
-                case D.n4.UNCLEAR:
-                  return i.createElement(
-                    "span",
-                    { style: { color: K } },
-                    M(D.n4.UNCLEAR),
-                  );
-                case D.n4.SOMEWHAT_UNLIKELY:
-                  return i.createElement(
+                case v.V7.SOMEWHAT_UNLIKELY:
+                  return o.createElement(
                     "span",
                     { style: {} },
-                    M(D.n4.SOMEWHAT_UNLIKELY),
+                    b(v.V7.SOMEWHAT_UNLIKELY),
                   );
-                case D.n4.VERY_UNLIKELY:
-                  return i.createElement(
+                case v.V7.VERY_UNLIKELY:
+                  return o.createElement(
                     "span",
                     { style: {} },
-                    M(D.n4.VERY_UNLIKELY),
+                    b(v.V7.VERY_UNLIKELY),
                   );
                 default:
-                  return i.createElement("span", null, M(D.n4.INVALID));
+                  return o.createElement("span", null, b(v.V7.INVALID));
               }
             },
           },
@@ -600,13 +927,13 @@
             key: "plussubscriber",
             displayName: "Plus Subscriber",
             formatFunction: (e = 0) =>
-              e ? i.createElement("div", { style: { color: B } }, "YES") : "NO",
+              e ? o.createElement("div", { style: { color: H } }, "YES") : "NO",
           },
           {
             key: "wins",
             secondaryKey: "losses",
             displayName: "Total Games Played",
-            formatFunction: (e, t) => i.createElement("div", null, e + t || 0),
+            formatFunction: (e, t) => o.createElement("div", null, e + t || 0),
           },
           {
             key: "wins",
@@ -614,22 +941,22 @@
             displayName: "Win Rate",
             formatFunction: (e, t) => {
               const a = e + t || 0;
-              if (!a) return i.createElement("div", null, "");
+              if (!a) return o.createElement("div", null, "");
               const n = Math.round((e / a) * 1e4) / 100;
-              let l = "none";
+              let r = "none";
               return (
-                n >= 70 || n <= 30 ? (l = Y) : (n >= 60 || n <= 40) && (l = K),
-                i.createElement(
-                  i.Fragment,
+                n >= 70 || n <= 30 ? (r = U) : (n >= 60 || n <= 40) && (r = B),
+                o.createElement(
+                  o.Fragment,
                   null,
-                  i.createElement(
+                  o.createElement(
                     "span",
                     { className: P().MarginRightSmall },
-                    i.createElement("span", { style: { color: H } }, `${e}`),
-                    i.createElement("span", null, " - "),
-                    i.createElement("span", { style: { color: W } }, `${t}`),
+                    o.createElement("span", { style: { color: x } }, `${e}`),
+                    o.createElement("span", null, " - "),
+                    o.createElement("span", { style: { color: Y } }, `${t}`),
                   ),
-                  i.createElement("span", { style: { color: l } }, `(${n}%)`),
+                  o.createElement("span", { style: { color: r } }, `(${n}%)`),
                 )
               );
             },
@@ -640,22 +967,22 @@
             displayName: "Win Rate (Recent)",
             formatFunction: (e, t) => {
               const a = e + t || 0;
-              if (!a) return i.createElement("div", null, "");
+              if (!a) return o.createElement("div", null, "");
               const n = Math.round((e / a) * 1e4) / 100;
-              let l = "none";
+              let r = "none";
               return (
-                n >= 70 || n <= 30 ? (l = Y) : (n >= 60 || n <= 40) && (l = K),
-                i.createElement(
-                  i.Fragment,
+                n >= 70 || n <= 30 ? (r = U) : (n >= 60 || n <= 40) && (r = B),
+                o.createElement(
+                  o.Fragment,
                   null,
-                  i.createElement(
+                  o.createElement(
                     "span",
                     { className: P().MarginRightSmall },
-                    i.createElement("span", { style: { color: H } }, `${e}`),
-                    i.createElement("span", null, " - "),
-                    i.createElement("span", { style: { color: W } }, `${t}`),
+                    o.createElement("span", { style: { color: x } }, `${e}`),
+                    o.createElement("span", null, " - "),
+                    o.createElement("span", { style: { color: Y } }, `${t}`),
                   ),
-                  i.createElement("span", { style: { color: l } }, `(${n}%)`),
+                  o.createElement("span", { style: { color: r } }, `(${n}%)`),
                 )
               );
             },
@@ -670,10 +997,10 @@
                 (t = ((t >> 4) + t) & 252645135),
                 (t = ((t >> 8) + t) & 16711935),
                 (t = ((t >> 16) + t) & 65535);
-              let a = B;
+              let a = H;
               return (
-                t > 20 ? (a = U) : t > 10 ? (a = Y) : t > 5 && (a = K),
-                i.createElement(
+                t > 20 ? (a = $) : t > 10 ? (a = U) : t > 5 && (a = B),
+                o.createElement(
                   "span",
                   { style: { color: a } },
                   `${t} / 32 games`,
@@ -682,7 +1009,7 @@
             },
           },
         ],
-        le = [
+        ne = [
           {
             key: "details",
             displayName: " ",
@@ -691,48 +1018,48 @@
               for (let a in e) {
                 const n = Object.entries(e[a]).reverse();
                 n.sort((e, t) => (e[1] > t[1] ? -1 : 1));
-                const l = n.length
+                const r = n.length
                   ? n.reduce((e, t) => e + Number(t[1]), 0)
                   : 0;
-                if (l)
+                if (r)
                   for (let e = 0; e < Math.min(n.length, 2); e++) {
-                    const r =
+                    const l =
                         !!n[e][0] && /<\/?[a-z][\s\S]*>/i.test("" + n[e][0]),
-                      o = "string" == typeof n[e][0] ? n[e][0] : "";
+                      c = "string" == typeof n[e][0] ? n[e][0] : "";
                     t.push(
-                      i.createElement(
-                        i.Fragment,
+                      o.createElement(
+                        o.Fragment,
                         { key: `${a}-${e}` },
-                        i.createElement(
+                        o.createElement(
                           "div",
                           { className: P().TextCapitalize },
                           `${0 == e ? a.replace(/_/g, " ") : ""}`,
                         ),
-                        r &&
-                          i.createElement("div", {
-                            dangerouslySetInnerHTML: { __html: o },
+                        l &&
+                          o.createElement("div", {
+                            dangerouslySetInnerHTML: { __html: c },
                           }),
-                        !r && i.createElement("div", null, `${n[e][0]}`),
-                        i.createElement(
+                        !l && o.createElement("div", null, `${n[e][0]}`),
+                        o.createElement(
                           "div",
-                          { style: { color: x } },
-                          `(${n[e][1]} / ${l})`,
+                          { style: { color: K } },
+                          `(${n[e][1]} / ${r})`,
                         ),
                       ),
                     );
                   }
                 else
                   t.push(
-                    i.createElement(
-                      i.Fragment,
+                    o.createElement(
+                      o.Fragment,
                       { key: a },
-                      i.createElement(
+                      o.createElement(
                         "div",
                         { className: P().TextCapitalize },
                         a.replace(/_/g, " "),
                       ),
-                      i.createElement("div", null),
-                      i.createElement("div", null),
+                      o.createElement("div", null),
+                      o.createElement("div", null),
                     ),
                   );
               }
@@ -746,10 +1073,10 @@
             displayName: "Reports",
             formatFunction: (e) =>
               e
-                ? i.createElement(
-                    i.Fragment,
+                ? o.createElement(
+                    o.Fragment,
                     null,
-                    i.createElement(
+                    o.createElement(
                       "a",
                       { href: e, target: "_blank", rel: "noopener" },
                       "Reports",
@@ -762,10 +1089,10 @@
             displayName: "Associates",
             formatFunction: (e) =>
               e
-                ? i.createElement(
-                    i.Fragment,
+                ? o.createElement(
+                    o.Fragment,
                     null,
-                    i.createElement(
+                    o.createElement(
                       "a",
                       { href: e, target: "_blank", rel: "noopener" },
                       "Associates",
@@ -774,25 +1101,25 @@
                 : "",
           },
         ],
-        oe = [
+        le = [
           {
             key: "beta_access_flags",
-            displayName: L(D._W.DOTA_ACCESS_TOURNAMENT_ADMIN),
+            displayName: M(v.TK.DOTA_ACCESS_TOURNAMENT_ADMIN),
             formatFunction: (e = 0) =>
-              e & D._W.DOTA_ACCESS_TOURNAMENT_ADMIN
-                ? i.createElement("div", { style: { color: B } }, "YES")
+              e & v.TK.DOTA_ACCESS_TOURNAMENT_ADMIN
+                ? o.createElement("div", { style: { color: H } }, "YES")
                 : "NO",
           },
           {
             key: "beta_access_flags",
-            displayName: L(D._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER),
+            displayName: M(v.TK.DOTA_ACCESS_TOURNAMENT_BROADCASTER),
             formatFunction: (e = 0) =>
-              e & D._W.DOTA_ACCESS_TOURNAMENT_BROADCASTER
-                ? i.createElement("div", { style: { color: B } }, "YES")
+              e & v.TK.DOTA_ACCESS_TOURNAMENT_BROADCASTER
+                ? o.createElement("div", { style: { color: H } }, "YES")
                 : "NO",
           },
         ],
-        ie = [
+        oe = [
           {
             key: "vac",
             displayName: " ",
@@ -801,15 +1128,15 @@
               for (let a in e) {
                 const n = e[a];
                 t.push(
-                  i.createElement(
-                    i.Fragment,
+                  o.createElement(
+                    o.Fragment,
                     { key: a },
-                    i.createElement(
+                    o.createElement(
                       "div",
                       { className: P().TextCapitalize },
                       `VAC ${a.replace(/_/g, " ")}`,
                     ),
-                    i.createElement("div", null, n),
+                    o.createElement("div", null, n),
                   ),
                 );
               }
@@ -825,14 +1152,14 @@
             displayName: "Role",
             formatFunction: (e = 0) => {
               switch (e) {
-                case D.xd.CORE:
-                  return w(D.xd.CORE);
-                case D.xd.SUPPORT:
-                  return w(D.xd.SUPPORT);
-                case D.xd.OFFLANE:
-                  return w(D.xd.OFFLANE);
-                case D.xd.MID:
-                  return w(D.xd.MID);
+                case v.Ov.CORE:
+                  return L(v.Ov.CORE);
+                case v.Ov.SUPPORT:
+                  return L(v.Ov.SUPPORT);
+                case v.Ov.OFFLANE:
+                  return L(v.Ov.OFFLANE);
+                case v.Ov.MID:
+                  return L(v.Ov.MID);
                 default:
                   return "Unknown";
               }
@@ -845,10 +1172,10 @@
             formatFunction: (e = 0, t = "") => {
               if (!e || !t) return "";
               const a = `${t}${e}`;
-              return i.createElement(
-                i.Fragment,
+              return o.createElement(
+                o.Fragment,
                 null,
-                i.createElement(
+                o.createElement(
                   "a",
                   { href: a, target: "_blank", rel: "noopener" },
                   e,
@@ -860,7 +1187,7 @@
             key: "country",
             displayName: "Country",
             formatFunction: (e) =>
-              i.createElement("span", { className: P().TextUppercase }, e),
+              o.createElement("span", { className: P().TextUppercase }, e),
           },
           { key: "sponsor", displayName: "Sponsor" },
           {
@@ -882,29 +1209,29 @@
             formatFunction: (e = {}, t = "") => {
               const a = [];
               for (let n in e) {
-                const l = e[n],
-                  r = l.team_id,
-                  o = `${t}${r}`,
-                  c = l.team_name,
-                  m = l.team_tag;
+                const r = e[n],
+                  l = r.team_id,
+                  c = `${t}${l}`,
+                  m = r.team_name,
+                  s = r.team_tag;
                 a.push(
-                  i.createElement(
-                    i.Fragment,
-                    { key: r },
-                    i.createElement(
+                  o.createElement(
+                    o.Fragment,
+                    { key: l },
+                    o.createElement(
                       "div",
                       null,
-                      `${c} `,
-                      i.createElement(
+                      `${m} `,
+                      o.createElement(
                         "span",
-                        { style: { color: x } },
-                        `[${m}]`,
+                        { style: { color: K } },
+                        `[${s}]`,
                       ),
                     ),
-                    i.createElement(
+                    o.createElement(
                       "a",
-                      { href: o, target: "_blank", rel: "noopener" },
-                      r,
+                      { href: c, target: "_blank", rel: "noopener" },
+                      l,
                     ),
                   ),
                 );
@@ -918,128 +1245,123 @@
             key: "eventpoints",
             displayName: " ",
             formatFunction: (e = {}) => {
-              var t, a;
-              const n = null == e ? void 0 : e.result,
-                l = (null == n ? void 0 : n.points) || [],
-                r = [];
-              for (let n of l) {
-                const l = n.event_id,
-                  o =
-                    null === (t = e[l]) || void 0 === t ? void 0 : t.event_name,
-                  c =
-                    (null === (a = e[l]) || void 0 === a
-                      ? void 0
-                      : a.points_per_level) || 1e3,
-                  m = Math.floor(n.event_points / c);
-                r.unshift(
-                  i.createElement(
-                    i.Fragment,
-                    { key: o },
-                    i.createElement("div", null, o),
-                    i.createElement("div", null, m),
+              const t = e?.result,
+                a = t?.points || [],
+                n = [];
+              for (let t of a) {
+                const a = t.event_id,
+                  r = e[a]?.event_name,
+                  l = e[a]?.points_per_level || 1e3,
+                  c = Math.floor(t.event_points / l);
+                n.unshift(
+                  o.createElement(
+                    o.Fragment,
+                    { key: r },
+                    o.createElement("div", null, r),
+                    o.createElement("div", null, c),
                   ),
                 );
               }
-              return r;
+              return n;
             },
           },
         ],
-        de = () =>
-          i.createElement(
-            i.Fragment,
+        ie = () =>
+          o.createElement(
+            o.Fragment,
             null,
-            i.createElement("span", { style: { color: Y } }, "YES"),
-            i.createElement("span", null, " (check V1 Link for details)"),
+            o.createElement("span", { style: { color: U } }, "YES"),
+            o.createElement("span", null, " (check V1 Link for details)"),
           ),
-        ue = [
+        de = [
           {
             key: "exploiter_data",
             displayName: "Exploiter Warnings?",
-            formatFunction: de,
+            formatFunction: ie,
           },
           {
             key: "smurf_data",
             displayName: "Smurf Warnings?",
-            formatFunction: de,
+            formatFunction: ie,
           },
           {
             key: "cheater_data",
             displayName: "Cheater Warnings?",
-            formatFunction: de,
+            formatFunction: ie,
           },
           {
             key: "booster_data",
             displayName: "Booster Warnings?",
-            formatFunction: de,
+            formatFunction: ie,
           },
           {
             key: "known_mmr_exploiter",
             displayName: "Known Hacker / Exploiter?",
-            formatFunction: de,
+            formatFunction: ie,
           },
           {
             key: "delayedbans",
             displayName: "Delayed Bans?",
-            formatFunction: de,
+            formatFunction: ie,
           },
         ],
-        Ee = (e) =>
-          i.createElement(
-            i.Fragment,
+        ue = (e) =>
+          o.createElement(
+            o.Fragment,
             null,
-            i.createElement(
+            o.createElement(
               "span",
-              { style: { color: U } },
+              { style: { color: $ } },
               s()(1e3 * e).format("MMMM Do YYYY, h:mm:ss a"),
             ),
           ),
-        pe = [
+        Ee = [
           {
             key: "matchdisableduntil",
             displayName: "MM Disabled Until",
-            formatFunction: Ee,
+            formatFunction: ue,
           },
           {
             key: "rankeddisableduntil",
             displayName: "Ranked Disabled Until",
-            formatFunction: Ee,
+            formatFunction: ue,
           },
           {
             key: "preventvoiceuntil",
             displayName: "Voice Disabled Until",
-            formatFunction: Ee,
+            formatFunction: ue,
           },
           {
             key: "preventpublictextchatuntil",
             displayName: "Public Text Chat Disabled Until",
-            formatFunction: Ee,
+            formatFunction: ue,
           },
         ],
-        ye = (e) => {
+        pe = (e) => {
           if (!e || !e.length) return "(No Bans)";
           e = e.slice(0, 5);
           return e.map((e) => {
             const t = "Admin Permanent" == e.bantype;
-            return i.createElement(
+            return o.createElement(
               "tr",
               {
                 key: `${e.bantype} - ${e.starttime}`,
-                style: { color: t ? U : "" },
+                style: { color: t ? $ : "" },
               },
-              i.createElement("td", null, e.bantype),
-              i.createElement(
+              o.createElement("td", null, e.bantype),
+              o.createElement(
                 "td",
                 null,
                 s()(1e3 * e.starttime).format("MMMM Do YYYY, h:mm:ss a"),
               ),
-              i.createElement(
+              o.createElement(
                 "td",
                 null,
                 s()(1e3 * (e.starttime + e.duration)).format(
                   "MMMM Do YYYY, h:mm:ss a",
                 ),
               ),
-              i.createElement(
+              o.createElement(
                 "td",
                 null,
                 t
@@ -1054,146 +1376,136 @@
                           : `${s().duration(a, "seconds").asDays()} days`
                     : "",
               ),
-              i.createElement("td", null, e.admin ? "ADMIN" : "Automated"),
-              i.createElement("td", null, e.comment),
+              o.createElement("td", null, e.admin ? "ADMIN" : "Automated"),
+              o.createElement("td", null, e.comment),
             );
             var a;
           });
         },
-        _e = (e) => {
-          var t, a, l, m, b, M, L;
-          const w = (0, o.UO)(),
-            G = null == w ? void 0 : w.id,
-            [B, de] = (0, i.useState)(null),
-            [Ee, _e] = (0, i.useState)(null),
-            [ge, ve] = (0, i.useState)(null),
-            [fe, Ae] = (0, i.useState)(null),
-            [he, ke] = (0, i.useState)(!1),
-            [Te, Ne] = (0, i.useState)(!1),
-            [Re, De] = (0, i.useState)(!1),
-            [Oe, Ie] = (0, i.useState)(!1),
-            [Ce, Se] = (0, i.useState)(!0),
-            [Fe, be] = (0, i.useState)(!0),
-            [Me, Le] = (0, i.useState)(!1),
-            [we, $e] = (0, i.useState)(!0),
-            [Ge, Pe] = (0, i.useState)(!0),
-            [Ue, Ye] = (0, i.useState)(!1),
-            Ke = R.L.Get().getHeroList(),
-            Be = R.L.Get().getItemList();
-          (0, i.useEffect)(() => {
+        ye = (e) => {
+          const t = (0, l.g)(),
+            a = t?.id,
+            [n, m] = (0, o.useState)(null),
+            [C, b] = (0, o.useState)(null),
+            [M, L] = (0, o.useState)(null),
+            [G, H] = (0, o.useState)(null),
+            [ie, ue] = (0, o.useState)(!1),
+            [ye, _e] = (0, o.useState)(!1),
+            [ge, fe] = (0, o.useState)(!1),
+            [Ae, ke] = (0, o.useState)(!1),
+            [he, Ne] = (0, o.useState)(!0),
+            [Te, Re] = (0, o.useState)(!0),
+            [ve, Se] = (0, o.useState)(!1),
+            [Fe, De] = (0, o.useState)(!0),
+            [Oe, Ie] = (0, o.useState)(!0),
+            [Ce, be] = (0, o.useState)(!1),
+            Me = R.B5.Get().getHeroList(),
+            Le = R.B5.Get().getItemList();
+          (0, o.useEffect)(() => {
             try {
-              !(function () {
-                var e;
-                (0, n.mG)(this, void 0, void 0, function* () {
-                  if (!A.Y.DOTA_APP_ID || !G) return;
-                  Ie(!1), De(!1), ke(!1), Ne(!1);
-                  const t = {
-                    appid: A.Y.DOTA_APP_ID,
-                    u: I(A.Y.DOTA_APP_ID),
-                    account_id: G,
-                  };
+              !(async function () {
+                if (!A.r.DOTA_APP_ID || !a) return;
+                ke(!1), fe(!1), ue(!1), _e(!1);
+                const e = {
+                  appid: A.r.DOTA_APP_ID,
+                  u: F(A.r.DOTA_APP_ID),
+                  account_id: a,
+                };
+                try {
+                  const t = await r().get(
+                      A.r.BASE_URL + "persona/showplayerreact/",
+                      { params: e },
+                    ),
+                    a = t?.data;
+                  if (!a?.persona || !a?.persona?.accountid)
+                    throw new Error(
+                      "GC could not find account details for this account",
+                    );
                   try {
-                    const a = yield r().get(
-                        A.Y.BASE_URL + "persona/showplayerreact/",
-                        { params: t },
-                      ),
-                      n = null == a ? void 0 : a.data;
+                    a &&
+                      a.persona &&
+                      a.persona.elodatajson &&
+                      b(JSON.parse(a.persona.elodatajson).aggregate);
+                  } catch (e) {}
+                  try {
                     if (
-                      !(null == n ? void 0 : n.persona) ||
-                      !(null === (e = null == n ? void 0 : n.persona) ||
-                      void 0 === e
-                        ? void 0
-                        : e.accountid)
-                    )
-                      throw new Error(
-                        "GC could not find account details for this account",
-                      );
-                    try {
-                      n &&
-                        n.persona &&
-                        n.persona.elodatajson &&
-                        _e(JSON.parse(n.persona.elodatajson).aggregate);
-                    } catch (e) {}
-                    try {
-                      if (
-                        n &&
-                        n.persona &&
-                        n.persona.history &&
-                        n.persona.history.matches &&
-                        Object.keys(n.persona.history.matches).length
-                      ) {
-                        const e = Object.values(
-                          n.persona.history.matches,
-                        ).reverse();
-                        ve(e), Ae(e);
-                      }
-                    } catch (e) {
-                      Ne(!0);
+                      a &&
+                      a.persona &&
+                      a.persona.history &&
+                      a.persona.history.matches &&
+                      Object.keys(a.persona.history.matches).length
+                    ) {
+                      const e = Object.values(
+                        a.persona.history.matches,
+                      ).reverse();
+                      L(e), H(e);
                     }
-                    a && a.data && de(n);
                   } catch (e) {
-                    console.log("Error fetching individual persona info."),
-                      Ie(!0);
+                    _e(!0);
                   }
-                  De(!0), ke(!0);
-                });
+                  t && t.data && m(a);
+                } catch (e) {
+                  console.log("Error fetching individual persona info."),
+                    ke(!0);
+                }
+                fe(!0), ue(!0);
               })();
             } catch (e) {
               console.log("Could not fetch persona info.");
             }
-          }, [G]),
-            (0, i.useEffect)(() => {
-              if (!ge) return;
-              let e = ge.slice();
+          }, [a]),
+            (0, o.useEffect)(() => {
+              if (!M) return;
+              let e = M.slice();
               (e = e.filter(
                 (e) =>
-                  !(!Fe && e.lobbytype == D.Eq.CASUAL_MATCH) &&
-                  !(!Ce && e.lobbytype == D.Eq.COMPETITIVE_MATCH) &&
+                  !(!Te && e.lobbytype == v.AP.CASUAL_MATCH) &&
+                  !(!he && e.lobbytype == v.AP.COMPETITIVE_MATCH) &&
                   !(
-                    !Me &&
+                    !ve &&
                     ![
-                      D.Eq.CASUAL_MATCH,
-                      D.Eq.COMPETITIVE_MATCH,
-                      D.Eq.WEEKEND_TOURNEY,
-                      D.Eq.FEATURED_GAMEMODE,
+                      v.AP.CASUAL_MATCH,
+                      v.AP.COMPETITIVE_MATCH,
+                      v.AP.WEEKEND_TOURNEY,
+                      v.AP.FEATURED_GAMEMODE,
                     ].includes(e.lobbytype)
                   ) &&
-                  !(!we && e.rankwassolo) &&
-                  !(!Ge && !e.rankwassolo),
+                  !(!Fe && e.rankwassolo) &&
+                  !(!Oe && !e.rankwassolo),
               )),
-                Ae(e);
-            }, [ge, Ce, Fe, Me, we, Ge]);
-          let xe = null;
+                H(e);
+            }, [M, he, Te, ve, Fe, Oe]);
+          let we = null;
           if (
-            (G
-              ? Re && he
-                ? Re && Oe
-                  ? (xe = `Error loading persona information for account ID ${G}. Double check universe & account ID (or try refreshing).`)
-                  : he &&
-                    Te &&
-                    (xe = `Error loading match history for account ID ${G}.`)
-                : (xe = `Loading account ID ${G}...`)
-              : (xe = "Must pass in an account ID."),
-            xe)
+            (a
+              ? ge && ie
+                ? ge && Ae
+                  ? (we = `Error loading persona information for account ID ${a}. Double check universe & account ID (or try refreshing).`)
+                  : ie &&
+                    ye &&
+                    (we = `Error loading match history for account ID ${a}.`)
+                : (we = `Loading account ID ${a}...`)
+              : (we = "Must pass in an account ID."),
+            we)
           )
-            return i.createElement(
+            return o.createElement(
               "div",
               { className: P().PersonaDetails },
-              i.createElement(k.j, { bOverlapping: !1 }),
-              i.createElement(
-                c.ql,
+              o.createElement(h.A, { bOverlapping: !1 }),
+              o.createElement(
+                c.mg,
                 null,
-                i.createElement("title", null, "Dota 2 - Persona Details"),
+                o.createElement("title", null, "Dota 2 - Persona Details"),
               ),
-              i.createElement(O.Z, null),
-              i.createElement(
+              o.createElement(S.A, null),
+              o.createElement(
                 "div",
                 { className: P().ContentFrame },
-                i.createElement("h2", { className: P().Header }, xe),
+                o.createElement("h2", { className: P().Header }, we),
               ),
-              i.createElement(T.U, null),
+              o.createElement(N.K, null),
             );
-          const He = [
+          const Ge = [
             {
               dataKey: "date",
               label: "Match Date",
@@ -1207,11 +1519,11 @@
               widthRelative: 10,
               cellRenderer: (e) =>
                 ((e, t, a = "") =>
-                  i.createElement(
+                  o.createElement(
                     "a",
                     {
                       key: e,
-                      href: `${A.Y.BASE_URL}matches/match/${e}?u=${I(A.Y.DOTA_APP_ID)}&appid=${A.Y.DOTA_APP_ID}&highlight=${t}`,
+                      href: `${A.r.BASE_URL}matches/match/${e}?u=${F(A.r.DOTA_APP_ID)}&appid=${A.r.DOTA_APP_ID}&highlight=${t}`,
                     },
                     a || e,
                   ))(e.cellData, e.columnData.strAccountId),
@@ -1221,24 +1533,17 @@
               label: "Hero",
               widthRelative: 5,
               cellRenderer: (e) => {
-                var t;
-                const a =
-                    null == Ke
-                      ? void 0
-                      : Ke.heroes.find((t) => t.id == e.cellData),
-                  n =
-                    null === (t = null == a ? void 0 : a.name) || void 0 === t
-                      ? void 0
-                      : t.replace("npc_dota_hero_", "");
-                return n
-                  ? i.createElement("img", {
+                const t = Me?.heroes.find((t) => t.id == e.cellData),
+                  a = t?.name?.replace("npc_dota_hero_", "");
+                return a
+                  ? o.createElement("img", {
                       className: P().HeroImage,
-                      src: `${A.Y.IMG_URL}heroes/wide/${n}.png`,
+                      src: `${A.r.IMG_URL}heroes/wide/${a}.png`,
                       alt: e.cellData,
                     })
-                  : i.createElement("img", {
+                  : o.createElement("img", {
                       className: P().HeroImage,
-                      src: `${A.Y.IMG_URL}heroes/wide/unknown.png`,
+                      src: `${A.r.IMG_URL}heroes/wide/unknown.png`,
                     });
               },
             },
@@ -1247,71 +1552,59 @@
               label: "Outcome",
               widthRelative: 7,
               cellRenderer: (e) => {
-                var t, a, n;
-                if (
-                  (null === (t = e.rowData) || void 0 === t
-                    ? void 0
-                    : t.lobbytype) == D.Eq.PRACTICE
-                )
-                  return i.createElement(
+                if (e.rowData?.lobbytype == v.AP.PRACTICE)
+                  return o.createElement(
                     "span",
                     { style: { color: J } },
-                    S(D.Eq.PRACTICE),
+                    O(v.AP.PRACTICE),
                   );
-                let l = e.cellData;
-                if ((l in D.cu || (l = 0), l <= 0)) return F(D.cu.UNKNOWN);
-                const r =
-                  (null === (a = null == e ? void 0 : e.rowData) || void 0 === a
-                    ? void 0
-                    : a.teamnumber) + 2;
-                if (r < 2 || r > 3) return F(D.cu.UNKNOWN);
-                if (l < 2 || l > 3) {
+                let t = e.cellData;
+                if ((t in v.rM || (t = 0), t <= 0)) return I(v.rM.UNKNOWN);
+                const a = e?.rowData?.teamnumber + 2;
+                if (a < 2 || a > 3) return I(v.rM.UNKNOWN);
+                if (t < 2 || t > 3) {
                   const t = e.cellData;
-                  return t in D.cu
-                    ? i.createElement("span", { style: { color: Y } }, F(t))
-                    : F(D.cu.UNKNOWN);
+                  return t in v.rM
+                    ? o.createElement("span", { style: { color: U } }, I(t))
+                    : I(v.rM.UNKNOWN);
                 }
                 {
-                  const t = r == l,
-                    a = [],
-                    o =
-                      null === (n = null == e ? void 0 : e.rowData) ||
-                      void 0 === n
-                        ? void 0
-                        : n.rankchange;
-                  let c = t ? (o >= 35 ? "#68c529" : H) : o <= -35 ? V : W;
+                  const n = a == t,
+                    r = [],
+                    l = e?.rowData?.rankchange;
+                  let c = n ? (l >= 35 ? "#68c529" : x) : l <= -35 ? V : Y;
                   return (
-                    a.push(
-                      i.createElement(
+                    r.push(
+                      o.createElement(
                         "span",
                         { key: "W-L", style: { color: c } },
-                        t ? "W" : "L",
+                        n ? "W" : "L",
                       ),
                     ),
-                    t
-                      ? a.push(
-                          i.createElement(
+                    n
+                      ? r.push(
+                          o.createElement(
                             "span",
                             { key: "rankChange", style: { color: c } },
-                            ` (+${o})`,
+                            ` (+${l})`,
                           ),
                         )
-                      : o < 0
-                        ? a.push(
-                            i.createElement(
+                      : l < 0
+                        ? r.push(
+                            o.createElement(
                               "span",
                               { key: "rankChange", style: { color: c } },
-                              ` (${o})`,
+                              ` (${l})`,
                             ),
                           )
-                        : a.push(
-                            i.createElement(
+                        : r.push(
+                            o.createElement(
                               "span",
                               { key: "rankChange", style: { color: c } },
-                              ` (-${o})`,
+                              ` (-${l})`,
                             ),
                           ),
-                    a
+                    r
                   );
                 }
               },
@@ -1330,8 +1623,8 @@
                 const t = e.cellData || 0;
                 let a = "";
                 return (
-                  t >= 300 ? (a = U) : t >= 175 ? (a = Y) : t >= 100 && (a = K),
-                  i.createElement(
+                  t >= 300 ? (a = $) : t >= 175 ? (a = U) : t >= 100 && (a = B),
+                  o.createElement(
                     "span",
                     { key: "op", style: { color: a } },
                     `${t}`,
@@ -1363,55 +1656,55 @@
               widthRelative: 8,
               cellRenderer: (e) => {
                 let t = isNaN(e.cellData) ? e.rowData.lobbytype : e.cellData;
-                t in D.Eq || (t = -1);
+                t in v.AP || (t = -1);
                 let a = J;
                 return (
-                  t == D.Eq.CASUAL_MATCH
-                    ? (a = j)
-                    : t == D.Eq.COMPETITIVE_MATCH && (a = q),
-                  i.createElement("span", { style: { color: a } }, S(t))
+                  t == v.AP.CASUAL_MATCH
+                    ? (a = W)
+                    : t == v.AP.COMPETITIVE_MATCH && (a = j),
+                  o.createElement("span", { style: { color: a } }, O(t))
                 );
               },
               headerRenderer: (e) =>
-                i.createElement(
-                  i.Fragment,
+                o.createElement(
+                  o.Fragment,
                   null,
-                  i.createElement(
+                  o.createElement(
                     "div",
                     { className: P().CheckBox },
-                    i.createElement("input", {
+                    o.createElement("input", {
                       type: "checkbox",
                       name: "ranked",
                       id: "ranked",
-                      onChange: () => Se(!Ce),
-                      checked: Ce,
+                      onChange: () => Ne(!he),
+                      checked: he,
                     }),
-                    i.createElement(
+                    o.createElement(
                       "label",
                       { htmlFor: "ranked" },
-                      i.createElement(
+                      o.createElement(
                         "span",
-                        { style: { color: q } },
+                        { style: { color: j } },
                         "Ranked",
                       ),
                     ),
                   ),
-                  i.createElement(
+                  o.createElement(
                     "div",
                     { className: P().CheckBox },
-                    i.createElement("input", {
+                    o.createElement("input", {
                       type: "checkbox",
                       name: "unranked",
                       id: "unranked",
-                      onChange: () => be(!Fe),
-                      checked: Fe,
+                      onChange: () => Re(!Te),
+                      checked: Te,
                     }),
-                    i.createElement(
+                    o.createElement(
                       "label",
                       { htmlFor: "unranked" },
-                      i.createElement(
+                      o.createElement(
                         "span",
-                        { style: { color: j } },
+                        { style: { color: W } },
                         "Unranked",
                       ),
                     ),
@@ -1422,49 +1715,44 @@
               dataKey: "rankwassolo",
               label: "Solo/Party (this label isn't used, check headerRenderer)",
               widthRelative: 6,
-              cellRenderer: (e) => {
-                var t;
-                return e.cellData &&
-                  (null === (t = null == e ? void 0 : e.rowData) || void 0 === t
-                    ? void 0
-                    : t.lobbytype) != D.Eq.WEEKEND_TOURNEY
-                  ? i.createElement("span", { style: { color: X } }, "Solo")
-                  : i.createElement("span", { style: { color: Z } }, "Party");
-              },
+              cellRenderer: (e) =>
+                e.cellData && e?.rowData?.lobbytype != v.AP.WEEKEND_TOURNEY
+                  ? o.createElement("span", { style: { color: z } }, "Solo")
+                  : o.createElement("span", { style: { color: X } }, "Party"),
               headerRenderer: (e) =>
-                i.createElement(
-                  i.Fragment,
+                o.createElement(
+                  o.Fragment,
                   null,
-                  i.createElement(
+                  o.createElement(
                     "div",
                     { className: P().CheckBox },
-                    i.createElement("input", {
+                    o.createElement("input", {
                       type: "checkbox",
                       name: "solo",
                       id: "solo",
-                      onChange: () => $e(!we),
-                      checked: we,
+                      onChange: () => De(!Fe),
+                      checked: Fe,
                     }),
-                    i.createElement(
+                    o.createElement(
                       "label",
                       { htmlFor: "solo" },
-                      i.createElement("span", { style: { color: X } }, "Solo"),
+                      o.createElement("span", { style: { color: z } }, "Solo"),
                     ),
                   ),
-                  i.createElement(
+                  o.createElement(
                     "div",
                     { className: P().CheckBox },
-                    i.createElement("input", {
+                    o.createElement("input", {
                       type: "checkbox",
                       name: "party",
                       id: "party",
-                      onChange: () => Pe(!Ge),
-                      checked: Ge,
+                      onChange: () => Ie(!Oe),
+                      checked: Oe,
                     }),
-                    i.createElement(
+                    o.createElement(
                       "label",
                       { htmlFor: "party" },
-                      i.createElement("span", { style: { color: Z } }, "Party"),
+                      o.createElement("span", { style: { color: X } }, "Party"),
                     ),
                   ),
                 ),
@@ -1474,66 +1762,39 @@
               label: "Mode",
               widthRelative: 6,
               cellRenderer: (e) => {
-                var t, a;
-                if (
-                  null ===
-                    (a =
-                      null === (t = null == e ? void 0 : e.rowData) ||
-                      void 0 === t
-                        ? void 0
-                        : t.searchdata) || void 0 === a
-                    ? void 0
-                    : a.partylowpri
-                )
-                  return i.createElement(
+                if (e?.rowData?.searchdata?.partylowpri)
+                  return o.createElement(
                     "span",
                     { style: { color: V } },
                     "SD (LP)",
                   );
-                const n = `DOTA_GAMEMODE_${e.cellData}`;
-                return n in D.rK ? C(D.rK[n]) : C(D.rK.DOTA_GAMEMODE_NONE);
+                const t = `DOTA_GAMEMODE_${e.cellData}`;
+                return t in v.Fk ? D(v.Fk[t]) : D(v.Fk.DOTA_GAMEMODE_NONE);
               },
             },
             {
               dataKey: "kills",
               label: "K/D/A",
               widthRelative: 7,
-              cellRenderer: (e) => {
-                var t, a, n, l;
-                return isNaN(e.cellData) ||
-                  isNaN(
-                    null === (t = null == e ? void 0 : e.rowData) ||
-                      void 0 === t
-                      ? void 0
-                      : t.deaths,
-                  ) ||
-                  isNaN(
-                    null === (a = null == e ? void 0 : e.rowData) ||
-                      void 0 === a
-                      ? void 0
-                      : a.assists,
-                  )
+              cellRenderer: (e) =>
+                isNaN(e.cellData) ||
+                isNaN(e?.rowData?.deaths) ||
+                isNaN(e?.rowData?.assists)
                   ? " - / - / - "
-                  : `${e.cellData}/${null === (n = null == e ? void 0 : e.rowData) || void 0 === n ? void 0 : n.deaths}/${null === (l = null == e ? void 0 : e.rowData) || void 0 === l ? void 0 : l.assists}`;
-              },
+                  : `${e.cellData}/${e?.rowData?.deaths}/${e?.rowData?.assists}`,
             },
             {
               dataKey: "goldspent",
               label: "NW",
               widthRelative: 6,
               cellRenderer: (e) => {
-                var t;
-                let a =
-                  e.cellData +
-                  (null === (t = null == e ? void 0 : e.rowData) || void 0 === t
-                    ? void 0
-                    : t.gold);
+                let t = e.cellData + e?.rowData?.gold;
                 return (
-                  isNaN(a) && (a = "-"),
-                  i.createElement(
+                  isNaN(t) && (t = "-"),
+                  o.createElement(
                     "span",
                     { style: { color: "darkgoldenrod" } },
-                    `${a}`,
+                    `${t}`,
                   )
                 );
               },
@@ -1545,26 +1806,21 @@
               cellRenderer: (e) => {
                 const t = [];
                 for (let a = 0; a < 6; a++) {
-                  const n =
-                    null == Be
-                      ? void 0
-                      : Be.itemabilities.find(
-                          (t) =>
-                            t.id ==
-                            (null == e ? void 0 : e.rowData[`item${a}`]),
-                        );
-                  let l = null == n ? void 0 : n.name.replace("item_", "");
-                  (n && l) || (l = "emptyitembg"),
+                  const n = Le?.itemabilities.find(
+                    (t) => t.id == e?.rowData[`item${a}`],
+                  );
+                  let r = n?.name.replace("item_", "");
+                  (n && r) || (r = "emptyitembg"),
                     t.push(
-                      i.createElement("img", {
+                      o.createElement("img", {
                         key: `${e.rowIndex}_item${a}`,
                         className: P().ItemIcon,
-                        src: `${A.Y.IMG_URL}items/${l}.png`,
+                        src: `${A.r.IMG_URL}items/${r}.png`,
                         alt: e.cellData,
                       }),
                     );
                 }
-                return i.createElement(
+                return o.createElement(
                   "div",
                   { className: P().ItemContainer },
                   t,
@@ -1598,106 +1854,74 @@
               label: "Reports / Notes",
               widthRelative: 22,
               cellRenderer: (e) => {
-                var t, a, n, l, r, o, c;
-                const m = Object.values(e.cellData || []),
-                  d = Object.values(
-                    (null === (t = null == e ? void 0 : e.rowData) ||
-                    void 0 === t
-                      ? void 0
-                      : t.leaver) || [],
-                  ),
-                  u = Object.values(
-                    (null === (a = null == e ? void 0 : e.rowData) ||
-                    void 0 === a
-                      ? void 0
-                      : a.detections) || [],
-                  ),
-                  E = Object.values(
-                    (null === (n = null == e ? void 0 : e.rowData) ||
-                    void 0 === n
-                      ? void 0
-                      : n.lowpribans) || [],
-                  ),
-                  p =
-                    null === (l = null == e ? void 0 : e.rowData) ||
-                    void 0 === l
-                      ? void 0
-                      : l.hwidchange,
-                  y =
-                    null === (r = null == e ? void 0 : e.rowData) ||
-                    void 0 === r
-                      ? void 0
-                      : r.hwidchangelink,
-                  _ =
-                    null === (o = null == e ? void 0 : e.rowData) ||
-                    void 0 === o
-                      ? void 0
-                      : o.geolocchange,
-                  g =
-                    null === (c = null == e ? void 0 : e.rowData) ||
-                    void 0 === c
-                      ? void 0
-                      : c.languagechange,
-                  v = [],
-                  f = [];
-                for (const e of m) f.push(e);
-                const A = [];
+                const t = Object.values(e.cellData || []),
+                  a = Object.values(e?.rowData?.leaver || []),
+                  n = Object.values(e?.rowData?.detections || []),
+                  r = Object.values(e?.rowData?.lowpribans || []),
+                  l = e?.rowData?.hwidchange,
+                  c = e?.rowData?.hwidchangelink,
+                  m = e?.rowData?.geolocchange,
+                  i = e?.rowData?.languagechange,
+                  d = [],
+                  u = [];
+                for (const e of t) u.push(e);
+                const E = [];
                 if (
-                  (d.length &&
-                    A.push(
-                      i.createElement(
-                        $.HP,
+                  (a.length &&
+                    E.push(
+                      o.createElement(
+                        w.he,
                         {
                           key: "leaverTooltip",
-                          toolTipContent: i.createElement(
+                          toolTipContent: o.createElement(
                             "table",
                             { style: { borderSpacing: "5px" } },
-                            i.createElement(
+                            o.createElement(
                               "thead",
                               null,
-                              i.createElement(
+                              o.createElement(
                                 "tr",
                                 null,
-                                i.createElement(
+                                o.createElement(
                                   "th",
                                   { align: "left" },
                                   "Date",
                                 ),
-                                i.createElement(
+                                o.createElement(
                                   "th",
                                   { align: "left" },
                                   "Leaver Status",
                                 ),
-                                i.createElement(
+                                o.createElement(
                                   "th",
                                   { align: "left" },
                                   "State Flags",
                                 ),
-                                i.createElement(
+                                o.createElement(
                                   "th",
                                   { align: "left" },
                                   "Game State",
                                 ),
-                                i.createElement(
+                                o.createElement(
                                   "th",
                                   { align: "left" },
                                   "Lobby State",
                                 ),
-                                i.createElement(
+                                o.createElement(
                                   "th",
                                   { align: "left" },
                                   "Actions",
                                 ),
                               ),
                             ),
-                            i.createElement(
+                            o.createElement(
                               "tbody",
                               null,
-                              d.map((e) =>
-                                i.createElement(
+                              a.map((e) =>
+                                o.createElement(
                                   "tr",
                                   { key: `${e.time}` },
-                                  i.createElement(
+                                  o.createElement(
                                     "td",
                                     null,
                                     e.time
@@ -1706,12 +1930,12 @@
                                         )
                                       : "-",
                                   ),
-                                  i.createElement(
+                                  o.createElement(
                                     "td",
                                     null,
                                     e.leaverstatusname,
                                   ),
-                                  i.createElement(
+                                  o.createElement(
                                     "td",
                                     null,
                                     e.flagnames &&
@@ -1719,9 +1943,9 @@
                                       ? Object.values(e.flagnames).join(", ")
                                       : "-",
                                   ),
-                                  i.createElement("td", null, e.gamestatename),
-                                  i.createElement("td", null, e.lobbystatename),
-                                  i.createElement(
+                                  o.createElement("td", null, e.gamestatename),
+                                  o.createElement("td", null, e.lobbystatename),
+                                  o.createElement(
                                     "td",
                                     null,
                                     e.actionnames &&
@@ -1738,67 +1962,67 @@
                           nAllowOffscreenPx: 1200,
                           strTooltipClassname: P().PlayerReportTooltip,
                         },
-                        i.createElement(
+                        o.createElement(
                           "span",
                           { style: { color: V } },
                           "[Lvr] ",
                         ),
                       ),
                     ),
-                  v.length &&
-                    A.push(
-                      i.createElement(
-                        $.HP,
+                  d.length &&
+                    E.push(
+                      o.createElement(
+                        w.he,
                         {
                           key: "commendTooltip",
-                          toolTipContent: i.createElement(
+                          toolTipContent: o.createElement(
                             "table",
                             { style: { borderSpacing: "12px" } },
-                            i.createElement(
+                            o.createElement(
                               "thead",
                               null,
-                              i.createElement(
+                              o.createElement(
                                 "tr",
                                 null,
-                                i.createElement("th", { align: "left" }),
-                                i.createElement(
+                                o.createElement("th", { align: "left" }),
+                                o.createElement(
                                   "th",
                                   { align: "left" },
                                   "Commend",
                                 ),
-                                i.createElement(
+                                o.createElement(
                                   "th",
                                   { align: "left" },
                                   "Player",
                                 ),
-                                i.createElement(
+                                o.createElement(
                                   "th",
                                   { align: "left" },
                                   "Comment",
                                 ),
                               ),
                             ),
-                            i.createElement(
+                            o.createElement(
                               "tbody",
                               null,
-                              v.map((e) => {
-                                const t = z(e.reportreason),
-                                  a = Q(e.reportreason);
-                                return i.createElement(
+                              d.map((e) => {
+                                const t = Q(e.reportreason),
+                                  a = Z(e.reportreason);
+                                return o.createElement(
                                   "tr",
                                   { key: `${e.reporteraccountid}` },
-                                  i.createElement(
+                                  o.createElement(
                                     "td",
                                     null,
-                                    t && i.createElement("img", { src: t }),
+                                    t && o.createElement("img", { src: t }),
                                   ),
-                                  i.createElement("td", null, a),
-                                  i.createElement(
+                                  o.createElement("td", null, a),
+                                  o.createElement(
                                     "td",
                                     null,
                                     e.reporteraccountid,
                                   ),
-                                  i.createElement("td", null, e.comment || ""),
+                                  o.createElement("td", null, e.comment || ""),
                                 );
                               }),
                             ),
@@ -1808,149 +2032,143 @@
                           nAllowOffscreenPx: 1200,
                           strTooltipClassname: P().PlayerReportTooltip,
                         },
-                        i.createElement(
+                        o.createElement(
                           "span",
-                          { key: "playerCommends", style: { color: H } },
-                          `[${v.length}] `,
+                          { key: "playerCommends", style: { color: x } },
+                          `[${d.length}] `,
                         ),
                       ),
                     ),
-                  f.length)
+                  u.length)
                 ) {
-                  f.sort((e, t) => e.reporteraccountid - t.reporteraccountid);
-                  const e = [
-                      ...new Set(
-                        f.map((e) =>
-                          null == e ? void 0 : e.reporteraccountid,
-                        ),
-                      ),
-                    ],
+                  u.sort((e, t) => e.reporteraccountid - t.reporteraccountid);
+                  const e = [...new Set(u.map((e) => e?.reporteraccountid))],
                     t = [];
                   let a = 0;
-                  for (let e of f) {
-                    const n = z(e.reportreason),
-                      l = Q(e.reportreason);
+                  for (let e of u) {
+                    const n = Q(e.reportreason),
+                      r = Z(e.reportreason);
                     a &&
                       a != e.reporteraccountid &&
                       t.push(
-                        i.createElement(
+                        o.createElement(
                           "tr",
                           { key: `${a}-separator` },
-                          i.createElement(
+                          o.createElement(
                             "td",
                             { colSpan: 3 },
-                            i.createElement("hr", null),
+                            o.createElement("hr", null),
                           ),
                         ),
                       ),
                       t.push(
-                        i.createElement(
+                        o.createElement(
                           "tr",
                           { key: `${e.reporteraccountid}-${e.reportreason}` },
-                          i.createElement(
+                          o.createElement(
                             "td",
                             null,
-                            n && i.createElement("img", { src: n }),
+                            n && o.createElement("img", { src: n }),
                           ),
-                          i.createElement("td", null, l),
-                          i.createElement("td", null, e.reporteraccountid),
+                          o.createElement("td", null, r),
+                          o.createElement("td", null, e.reporteraccountid),
                         ),
                       ),
                       (a = e.reporteraccountid);
                   }
-                  A.push(
-                    i.createElement(
-                      $.HP,
+                  E.push(
+                    o.createElement(
+                      w.he,
                       {
                         key: "reportTooltip",
-                        toolTipContent: i.createElement(
+                        toolTipContent: o.createElement(
                           "table",
                           { style: { borderSpacing: "12px" } },
-                          i.createElement(
+                          o.createElement(
                             "thead",
                             null,
-                            i.createElement(
+                            o.createElement(
                               "tr",
                               null,
-                              i.createElement("th", { align: "left" }),
-                              i.createElement(
+                              o.createElement("th", { align: "left" }),
+                              o.createElement(
                                 "th",
                                 { align: "left" },
                                 "Reason",
                               ),
-                              i.createElement(
+                              o.createElement(
                                 "th",
                                 { align: "left" },
                                 "Reporter",
                               ),
                             ),
                           ),
-                          i.createElement("tbody", null, t),
+                          o.createElement("tbody", null, t),
                         ),
                         direction: "left",
                         nBodyAlignment: 1,
                         nAllowOffscreenPx: 1200,
                         strTooltipClassname: P().PlayerReportTooltip,
                       },
-                      i.createElement(
+                      o.createElement(
                         "span",
-                        { key: "playerReports", style: { color: U } },
+                        { key: "playerReports", style: { color: $ } },
                         `[${e.length}]`,
                       ),
                     ),
                   );
                 }
                 return (
-                  u.length &&
-                    A.push(
-                      i.createElement(
-                        $.HP,
+                  n.length &&
+                    E.push(
+                      o.createElement(
+                        w.he,
                         {
                           key: "detectionsTooltip",
-                          toolTipContent: i.createElement(
+                          toolTipContent: o.createElement(
                             "table",
                             { style: { borderSpacing: "12px" } },
-                            i.createElement(
+                            o.createElement(
                               "thead",
                               null,
-                              i.createElement(
+                              o.createElement(
                                 "tr",
                                 null,
-                                i.createElement(
+                                o.createElement(
                                   "th",
                                   { align: "left" },
                                   "Suspicion (Enum)",
                                 ),
-                                i.createElement(
+                                o.createElement(
                                   "th",
                                   { align: "left" },
                                   "Game Time",
                                 ),
-                                i.createElement(
+                                o.createElement(
                                   "th",
                                   { align: "left" },
                                   "Data 1",
                                 ),
-                                i.createElement(
+                                o.createElement(
                                   "th",
                                   { align: "left" },
                                   "Data 2",
                                 ),
                               ),
                             ),
-                            i.createElement(
+                            o.createElement(
                               "tbody",
                               null,
-                              u.map((e, t) =>
-                                i.createElement(
+                              n.map((e, t) =>
+                                o.createElement(
                                   "tr",
                                   { key: `${e.matchid}-${t}` },
-                                  i.createElement(
+                                  o.createElement(
                                     "td",
                                     null,
                                     `${e.suspicionname} (${e.suspicion})`,
                                   ),
-                                  i.createElement(
+                                  o.createElement(
                                     "td",
                                     null,
                                     s()
@@ -1961,8 +2179,8 @@
                                       )
                                       .format("mm:ss"),
                                   ),
-                                  i.createElement("td", null, e.data1 || ""),
-                                  i.createElement("td", null, e.data2 || ""),
+                                  o.createElement("td", null, e.data1 || ""),
+                                  o.createElement("td", null, e.data2 || ""),
                                 ),
                               ),
                             ),
@@ -1972,53 +2190,53 @@
                           nAllowOffscreenPx: 1200,
                           strTooltipClassname: P().PlayerReportTooltip,
                         },
-                        i.createElement(
+                        o.createElement(
                           "span",
-                          { key: "playerReports", style: { color: U } },
+                          { key: "playerReports", style: { color: $ } },
                           "[SUS]",
                         ),
                       ),
                     ),
-                  E.length &&
-                    A.push(
-                      i.createElement(
-                        $.HP,
+                  r.length &&
+                    E.push(
+                      o.createElement(
+                        w.he,
                         {
                           key: "lowPriTooltip",
-                          toolTipContent: i.createElement(
+                          toolTipContent: o.createElement(
                             "table",
                             { style: { borderSpacing: "12px" } },
-                            i.createElement(
+                            o.createElement(
                               "thead",
                               null,
-                              i.createElement(
+                              o.createElement(
                                 "tr",
                                 null,
-                                i.createElement(
+                                o.createElement(
                                   "th",
                                   { align: "left" },
                                   "Ban Type",
                                 ),
-                                i.createElement(
+                                o.createElement(
                                   "th",
                                   { align: "left" },
                                   "Games",
                                 ),
                               ),
                             ),
-                            i.createElement(
+                            o.createElement(
                               "tbody",
                               null,
-                              E.map((e, t) =>
-                                i.createElement(
+                              r.map((e, t) =>
+                                o.createElement(
                                   "tr",
                                   { key: `lp-${t}` },
-                                  i.createElement(
+                                  o.createElement(
                                     "td",
                                     null,
                                     e.bantypename || "",
                                   ),
-                                  i.createElement(
+                                  o.createElement(
                                     "td",
                                     null,
                                     e.penaltylowprigamesapplied || "0",
@@ -2032,115 +2250,108 @@
                           nAllowOffscreenPx: 1200,
                           strTooltipClassname: P().PlayerReportTooltip,
                         },
-                        i.createElement(
+                        o.createElement(
                           "span",
-                          { key: "playerReports", style: { color: U } },
+                          { key: "playerReports", style: { color: $ } },
                           "[LP]",
                         ),
                       ),
                     ),
-                  g &&
-                    A.push(
-                      i.createElement(
-                        $.HP,
+                  i &&
+                    E.push(
+                      o.createElement(
+                        w.he,
                         {
                           key: "langchange",
-                          toolTipContent: g,
+                          toolTipContent: i,
                           direction: "left",
                           nBodyAlignment: 1,
                           nAllowOffscreenPx: 1200,
                           strTooltipClassname: P().PlayerReportTooltip,
                         },
-                        i.createElement(
+                        o.createElement(
                           "span",
-                          { key: "langChange", style: { color: Y } },
-                          `[${g.slice(-2)}]`,
+                          { key: "langChange", style: { color: U } },
+                          `[${i.slice(-2)}]`,
                         ),
                       ),
                     ),
-                  _ &&
-                    A.push(
-                      i.createElement(
-                        $.HP,
+                  m &&
+                    E.push(
+                      o.createElement(
+                        w.he,
                         {
                           key: "geochange",
-                          toolTipContent: _,
+                          toolTipContent: m,
                           direction: "left",
                           nBodyAlignment: 1,
                           nAllowOffscreenPx: 1200,
                           strTooltipClassname: P().PlayerReportTooltip,
                         },
-                        i.createElement(
+                        o.createElement(
                           "span",
-                          { key: "geoChange", style: { color: Y } },
+                          { key: "geoChange", style: { color: U } },
                           "[GEO]",
                         ),
                       ),
                     ),
-                  p &&
-                    A.push(
-                      i.createElement(
-                        $.HP,
+                  l &&
+                    E.push(
+                      o.createElement(
+                        w.he,
                         {
                           key: "hwchange",
-                          toolTipContent: p,
+                          toolTipContent: l,
                           direction: "left",
                           nBodyAlignment: 1,
                           nAllowOffscreenPx: 1200,
                           strTooltipClassname: P().PlayerReportTooltip,
                         },
-                        i.createElement(
+                        o.createElement(
                           "span",
-                          { key: "hwidChange", style: { color: Y } },
+                          { key: "hwidChange", style: { color: U } },
                           "[HW]",
                         ),
                       ),
                     ),
-                  y &&
-                    A.push(
-                      i.createElement("div", {
+                  c &&
+                    E.push(
+                      o.createElement("div", {
                         key: "hwidChange",
-                        dangerouslySetInnerHTML: { __html: y },
+                        dangerouslySetInnerHTML: { __html: c },
                       }),
                     ),
-                  0 == A.length
+                  0 == E.length
                     ? ""
-                    : i.createElement(
+                    : o.createElement(
                         "div",
                         { className: P().ReportRowElement },
-                        A,
+                        E,
                       )
                 );
               },
             },
           ];
-          let We = !0;
-          for (let e of ue)
-            if (
-              (null == B ? void 0 : B.persona) &&
-              (null == B ? void 0 : B.persona[e.key])
-            ) {
-              We = !1;
+          let Pe = !0;
+          for (let e of de)
+            if (n?.persona && n?.persona[e.key]) {
+              Pe = !1;
               break;
             }
-          let Ve = !1;
-          for (let e of pe)
+          let $e = !1;
+          for (let e of Ee)
             if (
-              (null == B ? void 0 : B.persona) &&
-              (null == B ? void 0 : B.persona[e.key]) &&
-              s()(1e3 * (null == B ? void 0 : B.persona[e.key])).isAfter()
+              n?.persona &&
+              n?.persona[e.key] &&
+              s()(1e3 * n?.persona[e.key]).isAfter()
             ) {
-              Ve = !0;
+              $e = !0;
               break;
             }
-          let je = 0,
-            qe = !1;
-          if (
-            null === (t = null == B ? void 0 : B.persona) || void 0 === t
-              ? void 0
-              : t.banhistory
-          )
-            for (let e of B.persona.banhistory) {
+          let Ue = 0,
+            Be = !1;
+          if (n?.persona?.banhistory)
+            for (let e of n.persona.banhistory) {
               const t = e.comment || "";
               if (
                 /Smurf/.test(t) &&
@@ -2149,7 +2360,7 @@
                 t.match(/.*(?:\D|^)(\d+)/)
               ) {
                 const e = t.match(/.*(?:\D|^)(\d+)/);
-                e && e.length && (je = e[1]);
+                e && e.length && (Ue = e[1]);
               } else if (
                 /Streamer/i.test(t) &&
                 /Main/.test(t) &&
@@ -2157,61 +2368,58 @@
                 t.match(/.*(?:\D|^)(\d+)/)
               ) {
                 const e = t.match(/.*(?:\D|^)(\d+)/);
-                e && e.length && ((je = e[1]), (qe = !0));
+                e && e.length && ((Ue = e[1]), (Be = !0));
               }
             }
-          const Je =
-            (null === (a = null == B ? void 0 : B.persona) || void 0 === a
-              ? void 0
-              : a.personaname) || "";
-          return i.createElement(
+          const He = n?.persona?.personaname || "";
+          return o.createElement(
             "div",
             { className: P().PersonaDetails },
-            i.createElement(k.j, { bOverlapping: !1 }),
-            i.createElement(
-              c.ql,
+            o.createElement(h.A, { bOverlapping: !1 }),
+            o.createElement(
+              c.mg,
               null,
-              i.createElement(
+              o.createElement(
                 "title",
                 null,
-                "Dota 2 Player" + (Je ? " - " + Je : ""),
+                "Dota 2 Player" + (He ? " - " + He : ""),
               ),
             ),
-            i.createElement(O.Z, null),
-            i.createElement("br", null),
-            i.createElement(
+            o.createElement(S.A, null),
+            o.createElement("br", null),
+            o.createElement(
               "div",
               { className: P().ContentFrame },
-              i.createElement(
+              o.createElement(
                 "div",
                 { className: P().TopContent },
-                i.createElement(
+                o.createElement(
                   "div",
                   { className: P().TopContentLeft },
-                  i.createElement(
+                  o.createElement(
                     "h1",
-                    { className: (0, h.Z)(P().Header, P().HeaderFixedHeight) },
-                    `${Je}`,
+                    { className: (0, k.A)(P().Header, P().HeaderFixedHeight) },
+                    `${He}`,
                   ),
-                  i.createElement(
+                  o.createElement(
                     "div",
                     { className: P().GeneralInfoGrid },
-                    ee.map((e) =>
-                      i.createElement(
-                        i.Fragment,
+                    q.map((e) =>
+                      o.createElement(
+                        o.Fragment,
                         { key: `${e.key}-${e.displayName}-generalInfo-row` },
-                        i.createElement("div", null, e.displayName || e.key),
-                        i.createElement(
+                        o.createElement("div", null, e.displayName || e.key),
+                        o.createElement(
                           "div",
                           null,
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == B ? void 0 : B.persona[e.key],
-                                null == B ? void 0 : B.persona[e.secondaryKey],
+                                n?.persona[e.key],
+                                n?.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
-                                (null == B ? void 0 : B.persona[e.key]) || "",
+                                n?.persona[e.key] || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -2219,26 +2427,26 @@
                       ),
                     ),
                   ),
-                  i.createElement(
+                  o.createElement(
                     "div",
                     { className: P().RankInfoGrid },
-                    te.map((e) =>
-                      i.createElement(
-                        i.Fragment,
+                    ee.map((e) =>
+                      o.createElement(
+                        o.Fragment,
                         { key: `${e.key}-${e.displayName}-rankInfo-row` },
-                        i.createElement("div", null, e.displayName || e.key),
-                        i.createElement(
+                        o.createElement("div", null, e.displayName || e.key),
+                        o.createElement(
                           "div",
                           null,
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == B ? void 0 : B.persona[e.key],
-                                null == B ? void 0 : B.persona[e.secondaryKey],
-                                null == B ? void 0 : B.persona[e.tertiaryKey],
+                                n?.persona[e.key],
+                                n?.persona[e.secondaryKey],
+                                n?.persona[e.tertiaryKey],
                               )
                             : JSON.stringify(
-                                (null == B ? void 0 : B.persona[e.key]) || "",
+                                n?.persona[e.key] || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -2246,26 +2454,26 @@
                       ),
                     ),
                   ),
-                  i.createElement(
+                  o.createElement(
                     "div",
                     { className: P().SupportInfoTopGrid },
-                    ae.map((e) =>
-                      i.createElement(
-                        i.Fragment,
+                    te.map((e) =>
+                      o.createElement(
+                        o.Fragment,
                         { key: `${e.key}-${e.displayName}-supportInfo-row` },
-                        i.createElement("div", null, e.displayName || e.key),
-                        i.createElement(
+                        o.createElement("div", null, e.displayName || e.key),
+                        o.createElement(
                           "div",
                           null,
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == B ? void 0 : B.persona[e.key],
-                                null == B ? void 0 : B.persona[e.secondaryKey],
-                                null == B ? void 0 : B.persona[e.tertiaryKey],
+                                n?.persona[e.key],
+                                n?.persona[e.secondaryKey],
+                                n?.persona[e.tertiaryKey],
                               )
                             : JSON.stringify(
-                                (null == B ? void 0 : B.persona[e.key]) || "",
+                                n?.persona[e.key] || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -2273,25 +2481,25 @@
                       ),
                     ),
                   ),
-                  i.createElement(
+                  o.createElement(
                     "div",
                     { className: P().SmurfInfoGrid },
-                    ne.map((e) =>
-                      i.createElement(
-                        i.Fragment,
+                    ae.map((e) =>
+                      o.createElement(
+                        o.Fragment,
                         { key: `${e.key}-${e.displayName}-smurfInfo-row` },
-                        i.createElement("div", null, e.displayName || e.key),
-                        i.createElement(
+                        o.createElement("div", null, e.displayName || e.key),
+                        o.createElement(
                           "div",
                           null,
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == B ? void 0 : B.persona[e.key],
-                                null == B ? void 0 : B.persona[e.secondaryKey],
+                                n?.persona[e.key],
+                                n?.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
-                                (null == B ? void 0 : B.persona[e.key]) || "",
+                                n?.persona[e.key] || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -2299,30 +2507,30 @@
                       ),
                     ),
                   ),
-                  i.createElement("div", { className: P().SmoothLine }),
-                  i.createElement(
+                  o.createElement("div", { className: P().SmoothLine }),
+                  o.createElement(
                     "h2",
                     { className: P().Header },
                     "Recent (Last 32 games)",
                   ),
-                  i.createElement(
+                  o.createElement(
                     "div",
                     { className: P().DetailedInfoOuterGrid },
-                    le.map((e) =>
-                      i.createElement(
-                        i.Fragment,
+                    ne.map((e) =>
+                      o.createElement(
+                        o.Fragment,
                         { key: `${e.key}-${e.displayName}-vacInfo-row` },
-                        i.createElement(
+                        o.createElement(
                           "div",
                           { className: P().DetailedInfoInnerGrid },
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == B ? void 0 : B.persona[e.key],
-                                null == B ? void 0 : B.persona[e.secondaryKey],
+                                n?.persona[e.key],
+                                n?.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
-                                (null == B ? void 0 : B.persona[e.key]) || "",
+                                n?.persona[e.key] || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -2331,69 +2539,69 @@
                     ),
                   ),
                 ),
-                i.createElement(
+                o.createElement(
                   "div",
                   { className: P().TopContentRight },
-                  i.createElement(
+                  o.createElement(
                     "div",
                     { className: P().ChartContainer },
-                    Ee &&
-                      i.createElement(
+                    C &&
+                      o.createElement(
                         "div",
                         { className: P().ChartTitle },
-                        `Last ${Ee.length} games`,
+                        `Last ${C.length} games`,
                       ),
-                    i.createElement(
-                      d.h,
+                    o.createElement(
+                      i.u,
                       { width: "99%", aspect: 1.9 },
-                      i.createElement(
-                        u.w,
+                      o.createElement(
+                        d.b,
                         {
-                          data: Ee,
+                          data: C,
                           margin: { top: 5, right: 30, left: 20, bottom: 5 },
                         },
-                        i.createElement(E.q, {
+                        o.createElement(u.d, {
                           strokeDasharray: "12 8",
                           stroke: "#424242",
                           fillOpacity: 0.2,
                         }),
-                        i.createElement(p.K, {
+                        o.createElement(E.W, {
                           stroke: "#808080",
                           dataKey: "time",
                           type: "number",
                           tickFormatter: (e) => s()(1e3 * e).format("MM/DD/YY"),
                           domain: ["dataMin - 86400", "dataMax + 43200"],
                         }),
-                        i.createElement(y.B, {
+                        o.createElement(p.h, {
                           stroke: "#808080",
                           domain: ["auto", "auto"],
                         }),
-                        i.createElement(_.u, {
+                        o.createElement(y.m, {
                           cursor: !1,
                           labelFormatter: (e) =>
                             s()(1e3 * Number(e)).format("MM/DD/YY HH:mm:ss"),
                           contentStyle: { backgroundColor: "#0c1414" },
                         }),
-                        i.createElement(g.D, {
+                        o.createElement(_.s, {
                           layout: "vertical",
                           verticalAlign: "middle",
                           align: "right",
                           wrapperStyle: { paddingLeft: "10px" },
                         }),
-                        i.createElement(v.x, {
+                        o.createElement(g.N, {
                           type: "monotone",
                           dataKey: "ranked",
                           name: "Ranked",
-                          dot: { fill: q, strokeWidth: 1, r: 3 },
+                          dot: { fill: j, strokeWidth: 1, r: 3 },
                           stroke: "#888fd8",
                           strokeWidth: 2,
                           connectNulls: !0,
                         }),
-                        i.createElement(v.x, {
+                        o.createElement(g.N, {
                           type: "monotone",
                           dataKey: "casual",
                           name: "Unranked",
-                          dot: { fill: j, strokeWidth: 1, r: 3 },
+                          dot: { fill: W, strokeWidth: 1, r: 3 },
                           stroke: "#82ca9d",
                           strokeWidth: 2,
                           connectNulls: !0,
@@ -2403,77 +2611,77 @@
                   ),
                 ),
               ),
-              i.createElement("br", null),
-              i.createElement("div", { className: P().SmoothLine }),
-              i.createElement(
+              o.createElement("br", null),
+              o.createElement("div", { className: P().SmoothLine }),
+              o.createElement(
                 "div",
                 {
-                  className: (0, h.Z)(
+                  className: (0, k.A)(
                     P().SupportGrid,
-                    Ue && P().SupportGridHidden,
+                    Ce && P().SupportGridHidden,
                   ),
                 },
-                i.createElement(
+                o.createElement(
                   "div",
-                  { className: P().SupportColumn, onClick: () => Ye(!0) },
-                  i.createElement(
+                  { className: P().SupportColumn, onClick: () => be(!0) },
+                  o.createElement(
                     "h2",
                     {
-                      className: (0, h.Z)(
+                      className: (0, k.A)(
                         P().HeaderNoMargin,
                         P().HeaderClickable,
                       ),
                     },
                     "Support, Bans, & Other Info",
-                    i.createElement("img", {
-                      className: (0, h.Z)(P().ArrowIcon, P().ArrowIconRight),
-                      src: `${A.Y.IMG_URL}arrow_solid_right.png`,
+                    o.createElement("img", {
+                      className: (0, k.A)(P().ArrowIcon, P().ArrowIconRight),
+                      src: `${A.r.IMG_URL}arrow_solid_right.png`,
                     }),
                   ),
                 ),
               ),
-              i.createElement(
+              o.createElement(
                 "div",
                 {
-                  className: (0, h.Z)(
+                  className: (0, k.A)(
                     P().SupportGrid,
-                    !Ue && P().SupportGridHidden,
+                    !Ce && P().SupportGridHidden,
                   ),
                 },
-                i.createElement(
+                o.createElement(
                   "div",
                   { className: P().SupportColumn },
-                  i.createElement(
+                  o.createElement(
                     "h2",
                     {
-                      className: (0, h.Z)(P().Header, P().HeaderClickable),
-                      onClick: () => Ye(!1),
+                      className: (0, k.A)(P().Header, P().HeaderClickable),
+                      onClick: () => be(!1),
                     },
                     "Support, Bans, & Other Info",
-                    i.createElement("img", {
-                      className: (0, h.Z)(P().ArrowIcon, P().ArrowIconDown),
-                      src: `${A.Y.IMG_URL}arrow_over.png`,
+                    o.createElement("img", {
+                      className: (0, k.A)(P().ArrowIcon, P().ArrowIconDown),
+                      src: `${A.r.IMG_URL}arrow_over.png`,
                     }),
                   ),
-                  i.createElement(
+                  o.createElement(
                     "div",
                     { className: P().SupportInfoGrid },
                     re.map((e) =>
-                      i.createElement(
-                        i.Fragment,
+                      o.createElement(
+                        o.Fragment,
                         { key: `${e.key}-${e.displayName}-supportInfo-row` },
-                        i.createElement("div", null, e.displayName || e.key),
-                        i.createElement(
+                        o.createElement("div", null, e.displayName || e.key),
+                        o.createElement(
                           "div",
                           null,
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == B ? void 0 : B.persona[e.key],
-                                null == B ? void 0 : B.persona[e.secondaryKey],
+                                n?.persona[e.key],
+                                n?.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
-                                (null == B ? void 0 : B.persona[e.key]) || "",
+                                n?.persona[e.key] || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -2481,28 +2689,28 @@
                       ),
                     ),
                   ),
-                  i.createElement("br", null),
-                  i.createElement(
+                  o.createElement("br", null),
+                  o.createElement(
                     "div",
                     { className: P().AccessFlagsGrid },
-                    oe.map((e) =>
-                      i.createElement(
-                        i.Fragment,
+                    le.map((e) =>
+                      o.createElement(
+                        o.Fragment,
                         {
                           key: `${e.key}-${e.displayName}-accountFlagGenericInfo-row`,
                         },
-                        i.createElement("div", null, e.displayName || e.key),
-                        i.createElement(
+                        o.createElement("div", null, e.displayName || e.key),
+                        o.createElement(
                           "div",
                           null,
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == B ? void 0 : B.persona[e.key],
-                                null == B ? void 0 : B.persona[e.secondaryKey],
+                                n?.persona[e.key],
+                                n?.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
-                                (null == B ? void 0 : B.persona[e.key]) || "",
+                                n?.persona[e.key] || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -2510,30 +2718,28 @@
                       ),
                     ),
                   ),
-                  !We && i.createElement("br", null),
-                  i.createElement(
+                  !Pe && o.createElement("br", null),
+                  o.createElement(
                     "div",
                     { className: P().WarningsGrid },
-                    ue.map((e) =>
-                      i.createElement(
-                        i.Fragment,
+                    de.map((e) =>
+                      o.createElement(
+                        o.Fragment,
                         { key: `${e.key}-${e.displayName}-warningsInfo-row` },
-                        !!(null == B ? void 0 : B.persona[e.key]) &&
-                          i.createElement("div", null, e.displayName || e.key),
-                        !!(null == B ? void 0 : B.persona[e.key]) &&
-                          i.createElement(
+                        !!n?.persona[e.key] &&
+                          o.createElement("div", null, e.displayName || e.key),
+                        !!n?.persona[e.key] &&
+                          o.createElement(
                             "div",
                             null,
                             e.formatFunction
                               ? e.formatFunction.call(
                                   null,
-                                  null == B ? void 0 : B.persona[e.key],
-                                  null == B
-                                    ? void 0
-                                    : B.persona[e.secondaryKey],
+                                  n?.persona[e.key],
+                                  n?.persona[e.secondaryKey],
                                 )
                               : JSON.stringify(
-                                  (null == B ? void 0 : B.persona[e.key]) || "",
+                                  n?.persona[e.key] || "",
                                   null,
                                   2,
                                 ).replace(/['"]+/g, ""),
@@ -2541,82 +2747,76 @@
                       ),
                     ),
                   ),
-                  i.createElement("br", null),
-                  i.createElement(
+                  o.createElement("br", null),
+                  o.createElement(
                     "div",
                     { className: P().BansGrid },
-                    pe.map((e) =>
-                      i.createElement(
-                        i.Fragment,
+                    Ee.map((e) =>
+                      o.createElement(
+                        o.Fragment,
                         { key: `${e.key}-${e.displayName}-bansInfo-row` },
-                        !!(null == B ? void 0 : B.persona[e.key]) &&
-                          s()(
-                            1e3 * (null == B ? void 0 : B.persona[e.key]),
-                          ).isAfter() &&
-                          i.createElement("div", null, e.displayName || e.key),
-                        !!(null == B ? void 0 : B.persona[e.key]) &&
-                          s()(
-                            1e3 * (null == B ? void 0 : B.persona[e.key]),
-                          ).isAfter() &&
-                          i.createElement(
+                        !!n?.persona[e.key] &&
+                          s()(1e3 * n?.persona[e.key]).isAfter() &&
+                          o.createElement("div", null, e.displayName || e.key),
+                        !!n?.persona[e.key] &&
+                          s()(1e3 * n?.persona[e.key]).isAfter() &&
+                          o.createElement(
                             "div",
                             null,
                             e.formatFunction
                               ? e.formatFunction.call(
                                   null,
-                                  null == B ? void 0 : B.persona[e.key],
-                                  null == B
-                                    ? void 0
-                                    : B.persona[e.secondaryKey],
+                                  n?.persona[e.key],
+                                  n?.persona[e.secondaryKey],
                                 )
                               : JSON.stringify(
-                                  (null == B ? void 0 : B.persona[e.key]) || "",
+                                  n?.persona[e.key] || "",
                                   null,
                                   2,
                                 ).replace(/['"]+/g, ""),
                           ),
                       ),
                     ),
-                    je > 0 &&
-                      i.createElement(
-                        i.Fragment,
+                    Ue > 0 &&
+                      o.createElement(
+                        o.Fragment,
                         null,
-                        !qe && i.createElement("div", null, "Main Account"),
-                        qe && i.createElement("div", null, "Streamer"),
-                        i.createElement(
+                        !Be && o.createElement("div", null, "Main Account"),
+                        Be && o.createElement("div", null, "Streamer"),
+                        o.createElement(
                           "div",
                           null,
-                          i.createElement(
+                          o.createElement(
                             "a",
                             {
                               target: "_blank",
                               rel: "noopener noreferrer",
-                              href: `${A.Y.BASE_URL}${N._.personadetails(je).substr(1)}`,
+                              href: `${A.r.BASE_URL}${T.J.personadetails(Ue).substr(1)}`,
                             },
-                            je,
+                            Ue,
                           ),
                         ),
                       ),
                   ),
-                  i.createElement("br", null),
-                  i.createElement(
+                  o.createElement("br", null),
+                  o.createElement(
                     "div",
                     { className: P().VacInfoOuterGrid },
-                    ie.map((e) =>
-                      i.createElement(
-                        i.Fragment,
+                    oe.map((e) =>
+                      o.createElement(
+                        o.Fragment,
                         { key: `${e.key}-${e.displayName}-vacInfo-row` },
-                        i.createElement(
+                        o.createElement(
                           "div",
                           { className: P().VacInfoOuterGrid },
                           e.formatFunction
                             ? e.formatFunction.call(
                                 null,
-                                null == B ? void 0 : B.persona[e.key],
-                                null == B ? void 0 : B.persona[e.secondaryKey],
+                                n?.persona[e.key],
+                                n?.persona[e.secondaryKey],
                               )
                             : JSON.stringify(
-                                (null == B ? void 0 : B.persona[e.key]) || "",
+                                n?.persona[e.key] || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -2625,142 +2825,114 @@
                     ),
                   ),
                 ),
-                i.createElement(
+                o.createElement(
                   "div",
                   { className: P().OfficialInfoColumn },
-                  i.createElement(
+                  o.createElement(
                     "h2",
                     { className: P().Header },
                     "Official Profile",
                   ),
-                  i.createElement(
+                  o.createElement(
                     "div",
                     { className: P().OfficialProfileOuterGrid },
-                    (null === (l = null == B ? void 0 : B.persona) ||
-                    void 0 === l
-                      ? void 0
-                      : l.official_profile) &&
-                      ce.map((e) => {
-                        var t, a;
-                        return i.createElement(
-                          i.Fragment,
+                    n?.persona?.official_profile &&
+                      ce.map((e) =>
+                        o.createElement(
+                          o.Fragment,
                           {
                             key: `${e.key}-${e.displayName}-officialProfileInfo-row`,
                           },
-                          i.createElement("div", null, e.displayName || e.key),
-                          i.createElement(
+                          o.createElement("div", null, e.displayName || e.key),
+                          o.createElement(
                             "div",
                             { className: P().OfficialProfileInnerGrid },
                             e.formatFunction
                               ? e.formatFunction.call(
                                   null,
-                                  null ===
-                                    (t = null == B ? void 0 : B.persona) ||
-                                    void 0 === t
-                                    ? void 0
-                                    : t.official_profile[e.key],
-                                  null == B
-                                    ? void 0
-                                    : B.persona[e.secondaryKey],
+                                  n?.persona?.official_profile[e.key],
+                                  n?.persona[e.secondaryKey],
                                 )
                               : JSON.stringify(
-                                  (null ===
-                                    (a = null == B ? void 0 : B.persona) ||
-                                  void 0 === a
-                                    ? void 0
-                                    : a.official_profile[e.key]) || "",
+                                  n?.persona?.official_profile[e.key] || "",
                                   null,
                                   2,
                                 ).replace(/['"]+/g, ""),
                           ),
-                        );
-                      }),
-                    !(null === (m = null == B ? void 0 : B.persona) ||
-                    void 0 === m
-                      ? void 0
-                      : m.official_profile) &&
-                      i.createElement(
-                        i.Fragment,
+                        ),
+                      ),
+                    !n?.persona?.official_profile &&
+                      o.createElement(
+                        o.Fragment,
                         null,
-                        i.createElement(
+                        o.createElement(
                           "span",
-                          { style: { color: x } },
+                          { style: { color: K } },
                           "(None)",
                         ),
                       ),
                   ),
-                  i.createElement(
+                  o.createElement(
                     "div",
                     { className: P().TeamsInfoInfoOuterGrid },
-                    i.createElement("br", null),
-                    i.createElement("h2", { className: P().Header }, "Teams"),
-                    (null === (b = null == B ? void 0 : B.persona) ||
-                    void 0 === b
-                      ? void 0
-                      : b.teams) &&
+                    o.createElement("br", null),
+                    o.createElement("h2", { className: P().Header }, "Teams"),
+                    n?.persona?.teams &&
                       me.map((e) =>
-                        i.createElement(
-                          i.Fragment,
+                        o.createElement(
+                          o.Fragment,
                           { key: `${e.key}-${e.displayName}-teamsInfo-row` },
-                          i.createElement(
+                          o.createElement(
                             "div",
                             { className: P().TeamsInfoInnerGrid },
                             e.formatFunction
                               ? e.formatFunction.call(
                                   null,
-                                  null == B ? void 0 : B.persona[e.key],
-                                  null == B
-                                    ? void 0
-                                    : B.persona[e.secondaryKey],
+                                  n?.persona[e.key],
+                                  n?.persona[e.secondaryKey],
                                 )
                               : JSON.stringify(
-                                  (null == B ? void 0 : B.persona[e.key]) || "",
+                                  n?.persona[e.key] || "",
                                   null,
                                   2,
                                 ).replace(/['"]+/g, ""),
                           ),
                         ),
                       ),
-                    !(null === (M = null == B ? void 0 : B.persona) ||
-                    void 0 === M
-                      ? void 0
-                      : M.teams) &&
-                      i.createElement(
-                        i.Fragment,
+                    !n?.persona?.teams &&
+                      o.createElement(
+                        o.Fragment,
                         null,
-                        i.createElement(
+                        o.createElement(
                           "span",
-                          { style: { color: x } },
+                          { style: { color: K } },
                           "(None)",
                         ),
                       ),
                   ),
                 ),
-                i.createElement(
+                o.createElement(
                   "div",
                   { className: P().EventColumn },
-                  i.createElement(
+                  o.createElement(
                     "h2",
                     { className: P().Header },
                     "Event Information",
                   ),
-                  i.createElement(
+                  o.createElement(
                     "div",
                     { className: P().EventInfoOuterGrid },
                     se.map((e) =>
-                      i.createElement(
-                        i.Fragment,
+                      o.createElement(
+                        o.Fragment,
                         { key: `${e.key}-${e.displayName}-eventInfo-row` },
-                        i.createElement(
+                        o.createElement(
                           "div",
                           { className: P().EventInfoInnerGrid },
                           e.formatFunction
-                            ? e.formatFunction.call(
-                                null,
-                                null == B ? void 0 : B.persona[e.key],
-                              )
+                            ? e.formatFunction.call(null, n?.persona[e.key])
                             : JSON.stringify(
-                                (null == B ? void 0 : B.persona[e.key]) || "",
+                                n?.persona[e.key] || "",
                                 null,
                                 2,
                               ).replace(/['"]+/g, ""),
@@ -2770,68 +2942,68 @@
                   ),
                 ),
               ),
-              i.createElement(
+              o.createElement(
                 "div",
-                { className: (0, h.Z)(!Ue && P().SupportGridHidden) },
-                i.createElement("div", { className: P().SmoothLine }),
-                i.createElement(
+                { className: (0, k.A)(!Ce && P().SupportGridHidden) },
+                o.createElement("div", { className: P().SmoothLine }),
+                o.createElement(
                   "table",
                   { className: P().BanHistoryTable },
-                  i.createElement(
+                  o.createElement(
                     "thead",
                     null,
-                    i.createElement(
+                    o.createElement(
                       "tr",
                       null,
-                      i.createElement(
+                      o.createElement(
                         "th",
                         { align: "left" },
-                        i.createElement(
+                        o.createElement(
                           "h3",
                           { className: P().HeaderNoMargin },
                           "Ban Type",
                         ),
                       ),
-                      i.createElement(
+                      o.createElement(
                         "th",
                         { align: "left" },
-                        i.createElement(
+                        o.createElement(
                           "h3",
                           { className: P().HeaderNoMargin },
                           "Ban Start",
                         ),
                       ),
-                      i.createElement(
+                      o.createElement(
                         "th",
                         { align: "left" },
-                        i.createElement(
+                        o.createElement(
                           "h3",
                           { className: P().HeaderNoMargin },
                           "Ban End",
                         ),
                       ),
-                      i.createElement(
+                      o.createElement(
                         "th",
                         { align: "left" },
-                        i.createElement(
+                        o.createElement(
                           "h3",
                           { className: P().HeaderNoMargin },
                           "Duration",
                         ),
                       ),
-                      i.createElement(
+                      o.createElement(
                         "th",
                         { align: "left" },
-                        i.createElement(
+                        o.createElement(
                           "h3",
                           { className: P().HeaderNoMargin },
                           "Admin",
                         ),
                       ),
-                      i.createElement(
+                      o.createElement(
                         "th",
                         { align: "left" },
-                        i.createElement(
+                        o.createElement(
                           "h3",
                           { className: P().HeaderNoMargin },
                           "Comment",
@@ -2839,60 +3011,55 @@
                       ),
                     ),
                   ),
-                  i.createElement(
+                  o.createElement(
                     "tbody",
                     null,
-                    i.createElement("tr", null, i.createElement("td", null)),
-                    ye(
-                      null === (L = null == B ? void 0 : B.persona) ||
-                        void 0 === L
-                        ? void 0
-                        : L.banhistory,
-                    ),
+                    o.createElement("tr", null, o.createElement("td", null)),
+                    pe(n?.persona?.banhistory),
                   ),
                 ),
               ),
-              i.createElement("div", { className: P().SmoothLine }),
-              ge &&
-                ge.length &&
-                i.createElement(
+              o.createElement("div", { className: P().SmoothLine }),
+              M &&
+                M.length &&
+                o.createElement(
                   "div",
                   { className: P().OtherModesCheckBox },
-                  i.createElement("input", {
+                  o.createElement("input", {
                     type: "checkbox",
                     name: "othermode",
                     id: "othermode",
-                    onChange: () => Le(!Me),
-                    checked: Me,
+                    onChange: () => Se(!ve),
+                    checked: ve,
                   }),
-                  i.createElement(
+                  o.createElement(
                     "label",
                     { htmlFor: "othermode" },
-                    i.createElement(
+                    o.createElement(
                       "span",
                       null,
                       "Include custom games, practice games, and uncommon game modes",
                     ),
                   ),
                 ),
-              i.createElement(
+              o.createElement(
                 "div",
                 { className: P().MatchHistoryOuterContainer },
-                i.createElement(
+                o.createElement(
                   "div",
                   { className: P().MatchHistoryInnerContainer },
-                  ge &&
-                    ge.length &&
-                    i.createElement(f.qj, null, ({ width: e, height: t }) =>
-                      i.createElement(
-                        f.iA,
+                  M &&
+                    M.length &&
+                    o.createElement(f.t$, null, ({ width: e, height: t }) =>
+                      o.createElement(
+                        f.XI,
                         {
                           headerHeight: 70,
                           height: t,
                           width: e,
                           rowHeight: 33.33,
-                          rowCount: fe.length,
-                          rowGetter: ({ index: e }) => fe[e],
+                          rowCount: G.length,
+                          rowGetter: ({ index: e }) => G[e],
                           rowClassName: ({ index: e }) =>
                             -1 != e
                               ? e % 2
@@ -2901,63 +3068,62 @@
                               : "",
                           overscanRowCount: 50,
                           noRowsRenderer: () =>
-                            i.createElement(
+                            o.createElement(
                               "h3",
                               null,
                               "No Matches Found. Toggle the checkbox at the bottom of the page for custom games and other modes.",
                             ),
                         },
-                        He.map((t) =>
-                          i.createElement(f.sg, {
+                        Ge.map((t) =>
+                          o.createElement(f.VP, {
                             key: t.dataKey,
                             label: t.label,
                             dataKey: t.dataKey,
                             width: e * t.widthRelative,
                             cellRenderer: t.cellRenderer,
-                            columnData: { strAccountId: G },
+                            columnData: { strAccountId: a },
                             headerRenderer: t.headerRenderer,
                           }),
                         ),
                       ),
                     ),
-                  (!ge || !ge.length) &&
-                    i.createElement("div", null, "No matches"),
+                  (!M || !M.length) &&
+                    o.createElement("div", null, "No matches"),
                 ),
               ),
             ),
-            i.createElement(T.U, null),
+            o.createElement(N.K, null),
           );
         };
-      class ge extends i.Component {
+      class _e extends o.Component {
         render() {
-          return i.createElement(_e, null);
+          return o.createElement(ye, null);
         }
       }
     },
-    12680: (e, t, a) => {
+    4533: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => b });
-      var n = a(22970),
-        l = a(61674),
-        r = a.n(l),
-        o = a(98142),
-        i = a(15905),
-        c = a(66204),
-        m = a(62175),
-        s = a(5062),
-        d = a(31444),
-        u = a(37196),
-        E = a(79735),
-        p = a(95068),
-        y = a(68410),
-        _ = a.n(y);
-      const g = "public",
-        v = 5e3,
+      a.r(t), a.d(t, { default: () => C });
+      var n = a(75749),
+        r = a.n(n),
+        l = a(89506),
+        o = a(88351),
+        c = a(7552),
+        m = a(83640),
+        s = a(21384),
+        i = a(47202),
+        d = a(36305),
+        u = a(55651),
+        E = a(94610),
+        p = a(9784),
+        y = a.n(p);
+      const _ = "public",
+        g = 5e3,
         f = (e) =>
           c.createElement(
             "a",
             {
-              href: `${o.Y.BASE_URL}personadetails/${e}?u=${g}&appid=${o.Y.DOTA_APP_ID}`,
+              href: `${l.r.BASE_URL}personadetails/${e}?u=${_}&appid=${l.r.DOTA_APP_ID}`,
             },
             e,
           );
@@ -2982,7 +3148,7 @@
           (e[(e.kTRAA_ValveUpdateTeamName = 16)] = "kTRAA_ValveUpdateTeamName"),
           (e[(e.kTRAA_Penalty20 = 20)] = "kTRAA_Penalty20");
       })(A || (A = {}));
-      const h = {
+      const k = {
           0: "kTRAA_RegisterTeam",
           1: "kTRAA_InvitePlayer",
           2: "kTRAA_RemovePlayer",
@@ -3002,7 +3168,7 @@
           16: "kTRAA_ValveUpdateTeamName",
           20: "kTRAA_Penalty20",
         },
-        k = [
+        h = [
           {
             enum: A.kTRAA_RegisterTeam,
             formatFunction: () =>
@@ -3161,7 +3327,7 @@
             formatFunction: () => "20% point penalty.",
           },
         ],
-        T = [
+        N = [
           {
             key: "pro",
             displayName: "Pro?",
@@ -3198,7 +3364,7 @@
             formatFunction: (e = "") => e.toUpperCase(),
           },
         ],
-        N = [
+        T = [
           {
             key: "account_id",
             displayName: "Account ID",
@@ -3223,11 +3389,10 @@
               c.createElement(
                 "div",
                 {
-                  className: _().Link,
-                  onClick: () =>
-                    (0, n.mG)(void 0, void 0, void 0, function* () {
-                      yield r().get(`${e}`), setTimeout(() => t(), 1e3);
-                    }),
+                  className: y().Link,
+                  onClick: async () => {
+                    await r().get(`${e}`), setTimeout(() => t(), 1e3);
+                  },
                 },
                 "KICK",
               ),
@@ -3240,11 +3405,10 @@
               c.createElement(
                 "div",
                 {
-                  className: _().Link,
-                  onClick: () =>
-                    (0, n.mG)(void 0, void 0, void 0, function* () {
-                      yield r().get(`${e}`), setTimeout(() => t(), 1e3);
-                    }),
+                  className: y().Link,
+                  onClick: async () => {
+                    await r().get(`${e}`), setTimeout(() => t(), 1e3);
+                  },
                 },
                 "MAKE ADMIN",
               ),
@@ -3258,7 +3422,7 @@
           },
           { key: "manager_email", displayName: "Manager Email" },
         ],
-        D = [
+        v = [
           {
             key: "color_primary",
             displayName: "Color (Primary)",
@@ -3271,7 +3435,7 @@
                     "div",
                     null,
                     c.createElement("span", {
-                      className: _().ColorBox,
+                      className: y().ColorBox,
                       style: { backgroundColor: e },
                     }),
                     " ",
@@ -3291,7 +3455,7 @@
                     "div",
                     null,
                     c.createElement("span", {
-                      className: _().ColorBox,
+                      className: y().ColorBox,
                       style: { backgroundColor: e },
                     }),
                     " ",
@@ -3310,19 +3474,19 @@
                   t &&
                   c.createElement(
                     "div",
-                    { className: _().DPCLogoContainer },
+                    { className: y().DPCLogoContainer },
                     c.createElement("img", {
                       onError: ({ currentTarget: e }) => {
                         (e.onerror = null),
-                          (e.src = `${o.Y.IMG_URL}teams_override/team_unknown_web.png`);
+                          (e.src = `${l.r.IMG_URL}teams_override/team_unknown_web.png`);
                       },
-                      src: `${o.Y.CDN_URL}apps/dota2/teamlogos/${t}.png`,
+                      src: `${l.r.CDN_URL}apps/dota2/teamlogos/${t}.png`,
                     }),
                   ),
               ),
           },
         ],
-        O = [
+        S = [
           {
             key: "ugc_logo_url",
             displayName: "Logo",
@@ -3332,7 +3496,7 @@
                 null,
                 c.createElement(
                   "div",
-                  { className: _().URLLogoContainer },
+                  { className: y().URLLogoContainer },
                   e && c.createElement("img", { src: e }),
                 ),
               ),
@@ -3346,7 +3510,7 @@
                 null,
                 c.createElement(
                   "div",
-                  { className: _().URLLogoContainer },
+                  { className: y().URLLogoContainer },
                   e && c.createElement("img", { src: e }),
                 ),
               ),
@@ -3360,7 +3524,7 @@
                 null,
                 c.createElement(
                   "div",
-                  { className: _().URLLogoContainer },
+                  { className: y().URLLogoContainer },
                   e && c.createElement("img", { src: e }),
                 ),
               ),
@@ -3374,13 +3538,13 @@
                 null,
                 c.createElement(
                   "div",
-                  { className: _().URLLogoContainer },
+                  { className: y().URLLogoContainer },
                   e && c.createElement("img", { src: e }),
                 ),
               ),
           },
         ],
-        I = [
+        F = [
           {
             key: "account_id",
             displayName: "Account ID",
@@ -3395,16 +3559,16 @@
           {
             key: "action",
             displayName: "Action Enum",
-            formatFunction: (e) => `${h[e]} (${e})`,
+            formatFunction: (e) => `${k[e]} (${e})`,
           },
           {
             key: "action",
             displayName: "Audit Action",
             formatFunction: (e, t = "", a = "") =>
-              k.find((t) => t.enum === e).formatFunction.call(null, t, a),
+              h.find((t) => t.enum === e).formatFunction.call(null, t, a),
           },
         ],
-        C = [
+        D = [
           { key: "workshop_account_id", displayName: "Workshop Account ID" },
           {
             key: "comment",
@@ -3428,7 +3592,7 @@
               e ? new Date(1e3 * e).toLocaleString() : "",
           },
         ],
-        S = [
+        O = [
           { key: "series_id", displayName: "Series ID" },
           {
             key: "scheduled_time",
@@ -3470,7 +3634,7 @@
                 ((a = e),
                 c.createElement(
                   "a",
-                  { href: `${o.Y.BASE_URL}${E._.teamdetails(a).substr(1)}` },
+                  { href: `${l.r.BASE_URL}${u.J.teamdetails(a).substr(1)}` },
                   a,
                 )),
                 " )",
@@ -3492,7 +3656,7 @@
                         "a",
                         {
                           key: t,
-                          href: `${o.Y.BASE_URL}matches/match/${t}?u=${g}&appid=${o.Y.DOTA_APP_ID}`,
+                          href: `${l.r.BASE_URL}matches/match/${t}?u=${_}&appid=${l.r.DOTA_APP_ID}`,
                         },
                         t,
                       )),
@@ -3510,137 +3674,104 @@
             },
           },
         ],
-        F = (e) => {
-          const t = (0, i.UO)().id,
-            [a, l] = (0, c.useState)([]),
-            [E, y] = (0, c.useState)(!1),
-            [f, h] = (0, c.useState)(!1),
-            [k, F] = (0, c.useState)({}),
-            [b, M] = (0, c.useState)(!1),
-            [L, w] = (0, c.useState)(!1),
-            [$, G] = (0, c.useState)({}),
-            [P, U] = (0, c.useState)([]),
-            [Y, K] = (0, c.useState)(!0),
-            [B, x] = (0, c.useState)([]);
-          function H() {
-            var e, t;
-            return (0, n.mG)(this, void 0, void 0, function* () {
-              if (
-                !o.Y.DOTA_APP_ID ||
-                !o.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD
-              )
-                return;
-              const a = {
-                  appid: o.Y.DOTA_APP_ID,
-                  registration_period:
-                    o.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
-                },
-                n = yield r().get(
-                  o.Y.BASE_URL + "webapi/IDOTA2Teams/GetRegisteredTeams/v001",
-                  { params: a },
-                ),
-                i =
-                  (null ===
-                    (t =
-                      null === (e = null == n ? void 0 : n.data) || void 0 === e
-                        ? void 0
-                        : e.result) || void 0 === t
-                    ? void 0
-                    : t.teams) || [];
-              i.length && l(i), y(!0);
-            });
+        I = (e) => {
+          const t = (0, o.g)().id,
+            [a, n] = (0, c.useState)([]),
+            [u, p] = (0, c.useState)(!1),
+            [f, k] = (0, c.useState)(!1),
+            [h, I] = (0, c.useState)({}),
+            [C, b] = (0, c.useState)(!1),
+            [M, L] = (0, c.useState)(!1),
+            [w, G] = (0, c.useState)({}),
+            [P, $] = (0, c.useState)([]),
+            [U, B] = (0, c.useState)(!0),
+            [H, K] = (0, c.useState)([]);
+          async function x() {
+            if (
+              !l.r.DOTA_APP_ID ||
+              !l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD
+            )
+              return;
+            const e = {
+                appid: l.r.DOTA_APP_ID,
+                registration_period:
+                  l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
+              },
+              t = await r().get(
+                l.r.BASE_URL + "webapi/IDOTA2Teams/GetRegisteredTeams/v001",
+                { params: e },
+              ),
+              a = t?.data?.result?.teams || [];
+            a.length && n(a), p(!0);
           }
-          function W() {
-            return (0, n.mG)(this, void 0, void 0, function* () {
-              if (
-                !o.Y.DOTA_APP_ID ||
-                !o.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD ||
-                !t
-              )
-                return;
-              const e = { appid: o.Y.DOTA_APP_ID, u: g, team_id: t },
-                a = yield r().get(
-                  o.Y.BASE_URL + "webapi/IDOTA2Teams/GetSingleTeamInfo/v001",
-                  { params: e },
-                ),
-                l = null == a ? void 0 : a.data,
-                i = l.members || [];
-              try {
-                const e = yield r().get(
-                  o.Y.BASE_URL + "teams/getugcfilelinks/",
-                  { params: { team_id: t } },
+          async function Y() {
+            if (
+              !l.r.DOTA_APP_ID ||
+              !l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD ||
+              !t
+            )
+              return;
+            const e = { appid: l.r.DOTA_APP_ID, u: _, team_id: t },
+              a = await r().get(
+                l.r.BASE_URL + "webapi/IDOTA2Teams/GetSingleTeamInfo/v001",
+                { params: e },
+              ),
+              n = a?.data,
+              o = n.members || [];
+            try {
+              const e = await r().get(l.r.BASE_URL + "teams/getugcfilelinks/", {
+                params: { team_id: t },
+              });
+              e.data && Object.assign(n, e.data),
+                await Promise.all(
+                  o.map(async (e, t) => {
+                    const a = await r().get(
+                      l.r.BASE_URL + "webapi/IDOTA2Fantasy/GetPlayerInfo/v0001",
+                      { params: { account_id: e.account_id } },
+                    );
+                    (o[t].is_pro = !!a?.data?.is_pro),
+                      (o[t].name = a?.data?.name || "");
+                    const n = await r().get(
+                      l.r.BASE_URL + "teams/getpersonaname/",
+                      { params: { account_id: e.account_id } },
+                    );
+                    o[t].persona_name = n?.data || "";
+                  }),
                 );
-                e.data && Object.assign(l, e.data),
-                  yield Promise.all(
-                    i.map((e, t) =>
-                      (0, n.mG)(this, void 0, void 0, function* () {
-                        var a, n;
-                        const l = yield r().get(
-                          o.Y.BASE_URL +
-                            "webapi/IDOTA2Fantasy/GetPlayerInfo/v0001",
-                          { params: { account_id: e.account_id } },
-                        );
-                        (i[t].is_pro = !!(null ===
-                          (a = null == l ? void 0 : l.data) || void 0 === a
-                          ? void 0
-                          : a.is_pro)),
-                          (i[t].name =
-                            (null === (n = null == l ? void 0 : l.data) ||
-                            void 0 === n
-                              ? void 0
-                              : n.name) || "");
-                        const c = yield r().get(
-                          o.Y.BASE_URL + "teams/getpersonaname/",
-                          { params: { account_id: e.account_id } },
-                        );
-                        i[t].persona_name = (null == c ? void 0 : c.data) || "";
-                      }),
-                    ),
-                  );
-                const a = (e, t) =>
-                  e.is_pro && !t.is_pro
-                    ? -1
-                    : !e.is_pro && t.is_pro
-                      ? 1
-                      : e.admin && !t.admin
-                        ? -1
-                        : (!e.admin && t.admin) ||
-                            (null == e ? void 0 : e.pro_name.toLowerCase()) >
-                              (null == t ? void 0 : t.pro_name.toLowerCase())
-                          ? 1
-                          : (null == e ? void 0 : e.pro_name.toLowerCase()) <
-                              (null == t ? void 0 : t.pro_name.toLowerCase())
-                            ? -1
-                            : 0;
-                i.sort(a);
-              } catch (e) {
-                console.log("Error fetching individual player info.");
-              }
-              a && a.data && F(l), M(!0);
-            });
+              const a = (e, t) =>
+                e.is_pro && !t.is_pro
+                  ? -1
+                  : !e.is_pro && t.is_pro
+                    ? 1
+                    : e.admin && !t.admin
+                      ? -1
+                      : (!e.admin && t.admin) ||
+                          e?.pro_name.toLowerCase() > t?.pro_name.toLowerCase()
+                        ? 1
+                        : e?.pro_name.toLowerCase() < t?.pro_name.toLowerCase()
+                          ? -1
+                          : 0;
+              o.sort(a);
+            } catch (e) {
+              console.log("Error fetching individual player info.");
+            }
+            a && a.data && I(n), b(!0);
           }
           (0, c.useEffect)(() => {
             try {
-              !(function () {
-                var e;
-                (0, n.mG)(this, void 0, void 0, function* () {
-                  if (!o.Y.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON) return;
-                  const a = { season: o.Y.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON },
-                    n = yield r().get(
-                      o.Y.BASE_URL +
-                        "webapi/IDOTA2Teams/GetFanContentStatus/v0001",
-                      { params: a },
-                    ),
-                    l =
-                      (null === (e = null == n ? void 0 : n.data) ||
-                      void 0 === e
-                        ? void 0
-                        : e.team_status_list) || [];
-                  if (l.length && t) {
-                    const e = l.find((e) => e.team_id.toString() == t);
-                    e && G(e);
-                  }
-                });
+              !(async function () {
+                if (!l.r.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON) return;
+                const e = { season: l.r.DOTA_TEAM_FAN_UPLOAD_CONTENT_SEASON },
+                  a = await r().get(
+                    l.r.BASE_URL +
+                      "webapi/IDOTA2Teams/GetFanContentStatus/v0001",
+                    { params: e },
+                  ),
+                  n = a?.data?.team_status_list || [];
+                if (n.length && t) {
+                  const e = n.find((e) => e.team_id.toString() == t);
+                  e && G(e);
+                }
               })();
             } catch (e) {
               console.log("Could not fetch fan content status.");
@@ -3648,74 +3779,69 @@
           }, [t]),
             (0, c.useEffect)(() => {
               try {
-                H();
+                x();
               } catch (e) {
-                console.log("Could not fetch registered teams."), h(!0);
+                console.log("Could not fetch registered teams."), k(!0);
               }
             }, []),
             (0, c.useEffect)(() => {
               try {
-                W();
+                Y();
               } catch (e) {
-                console.log("Could not fetch single team info."), w(!0);
+                console.log("Could not fetch single team info."), L(!0);
               }
             }, [t]),
             (0, c.useEffect)(() => {
               try {
-                !(function () {
-                  (0, n.mG)(this, void 0, void 0, function* () {
-                    if (
-                      !o.Y.DOTA_APP_ID ||
-                      !o.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD ||
-                      !t
-                    )
-                      return;
-                    const e = {
-                        team_id: t,
-                        registration_period:
-                          o.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
-                      },
-                      a = yield r().get(
-                        o.Y.BASE_URL +
-                          "webapi/IDOTA2Teams/GetTeamAuditInformation/v001",
-                        { params: e },
-                      ),
-                      l = null == a ? void 0 : a.data,
-                      i = (null == l ? void 0 : l.actions) || [];
-                    yield Promise.all(
-                      i.map((e) =>
-                        (0, n.mG)(this, void 0, void 0, function* () {
-                          if (
-                            e.action === A.kTRAA_TransferTeamAdmin &&
-                            e.account_id
-                          ) {
-                            const t = yield r().get(
-                              o.Y.BASE_URL + "teams/getpersonaname/",
-                              { params: { account_id: e.account_id } },
-                            );
-                            e.target_manager_name =
-                              (null == t ? void 0 : t.data) || "";
-                          }
-                        }),
-                      ),
+                !(async function () {
+                  if (
+                    !l.r.DOTA_APP_ID ||
+                    !l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD ||
+                    !t
+                  )
+                    return;
+                  const e = {
+                      team_id: t,
+                      registration_period:
+                        l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
+                    },
+                    a = await r().get(
+                      l.r.BASE_URL +
+                        "webapi/IDOTA2Teams/GetTeamAuditInformation/v001",
+                      { params: e },
                     ),
-                      a && a.data && l.actions && x(l.actions);
-                  });
+                    n = a?.data,
+                    o = n?.actions || [];
+                  await Promise.all(
+                    o.map(async (e) => {
+                      if (
+                        e.action === A.kTRAA_TransferTeamAdmin &&
+                        e.account_id
+                      ) {
+                        const t = await r().get(
+                          l.r.BASE_URL + "teams/getpersonaname/",
+                          { params: { account_id: e.account_id } },
+                        );
+                        e.target_manager_name = t?.data || "";
+                      }
+                    }),
+                  ),
+                    a && a.data && n.actions && K(n.actions);
                 })();
               } catch (e) {
-                console.log("Could not fetch single team info."), w(!0);
+                console.log("Could not fetch single team info."), L(!0);
               }
             }, [t]),
             (0, c.useEffect)(() => {
               let e;
               try {
-                e = JSON.parse(o.Y.DPC_DATA).events;
+                e = JSON.parse(l.r.DPC_DATA).events;
               } catch (e) {}
               if (!e) return;
               e = e.filter(
                 (e) =>
                   e.registration_period ===
-                  o.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
+                  l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
               );
               let a = [];
               for (let t of e) {
@@ -3726,112 +3852,106 @@
                 (a = a.filter((e, t, a) => a.indexOf(e) == t)),
                 a.length > 50 && (a = a.slice(a.length - 50));
               try {
-                !(function () {
-                  (0, n.mG)(this, void 0, void 0, function* () {
-                    if (!a.length) return;
-                    const e = { league_ids: a.join(",") },
-                      n = yield r().get(
-                        o.Y.BASE_URL +
-                          "webapi/IDOTA2League/GetLeaguesData/v001",
-                        { params: e },
-                      ),
-                      l = null == n ? void 0 : n.data,
-                      i = null == l ? void 0 : l.leagues,
-                      c = [];
-                    for (let e of i)
-                      for (let a of e.node_groups)
-                        for (let n of a.node_groups)
-                          for (let a of n.nodes)
-                            a.team_id_1 &&
-                              a.team_id_2 &&
-                              (a.team_id_1 == t || a.team_id_2 == t) &&
-                              ((a.league_name =
-                                e.info.name + ` (${e.info.league_id})`),
-                              a.team_id_1 == t
-                                ? ((a.opponent_team_id = a.team_id_2),
-                                  a.team_1_wins > a.team_2_wins
-                                    ? (a.outcome = "Win")
-                                    : a.team_1_wins === a.team_2_wins
-                                      ? (a.outcome = "Tie")
-                                      : (a.outcome = "Loss"),
-                                  (a.score = `${a.team_1_wins} - ${a.team_2_wins}`))
-                                : ((a.opponent_team_id = a.team_id_1),
-                                  a.team_2_wins > a.team_1_wins
-                                    ? (a.outcome = "Win")
-                                    : a.team_2_wins === a.team_1_wins
-                                      ? (a.outcome = "Tie")
-                                      : (a.outcome = "Loss"),
-                                  (a.score = `${a.team_2_wins} - ${a.team_1_wins}`)),
-                              0 === a.team_1_wins &&
-                                0 === a.team_2_wins &&
-                                a.scheduled_time &&
-                                new Date().getTime() < 1e3 * a.scheduled_time &&
-                                (a.outcome = "Upcoming"),
-                              c.push(a));
-                    var m;
-                    c.sort((e, t) =>
-                      e.scheduled_time > t.scheduled_time
-                        ? -1
-                        : e.scheduled_time < t.scheduled_time
-                          ? 1
-                          : 0,
+                !(async function () {
+                  if (!a.length) return;
+                  const e = { league_ids: a.join(",") },
+                    n = await r().get(
+                      l.r.BASE_URL + "webapi/IDOTA2League/GetLeaguesData/v001",
+                      { params: e },
                     ),
-                      c.length &&
-                        U(
-                          ((m = "league_name"),
-                          c.reduce(
-                            (e, t) =>
-                              Object.assign(Object.assign({}, e), {
-                                [t[m]]: [...(e[t[m]] || []), t],
-                              }),
-                            {},
-                          )),
-                        );
-                  });
+                    o = n?.data,
+                    c = o?.leagues,
+                    m = [];
+                  for (let e of c)
+                    for (let a of e.node_groups)
+                      for (let n of a.node_groups)
+                        for (let a of n.nodes)
+                          a.team_id_1 &&
+                            a.team_id_2 &&
+                            (a.team_id_1 == t || a.team_id_2 == t) &&
+                            ((a.league_name =
+                              e.info.name + ` (${e.info.league_id})`),
+                            a.team_id_1 == t
+                              ? ((a.opponent_team_id = a.team_id_2),
+                                a.team_1_wins > a.team_2_wins
+                                  ? (a.outcome = "Win")
+                                  : a.team_1_wins === a.team_2_wins
+                                    ? (a.outcome = "Tie")
+                                    : (a.outcome = "Loss"),
+                                (a.score = `${a.team_1_wins} - ${a.team_2_wins}`))
+                              : ((a.opponent_team_id = a.team_id_1),
+                                a.team_2_wins > a.team_1_wins
+                                  ? (a.outcome = "Win")
+                                  : a.team_2_wins === a.team_1_wins
+                                    ? (a.outcome = "Tie")
+                                    : (a.outcome = "Loss"),
+                                (a.score = `${a.team_2_wins} - ${a.team_1_wins}`)),
+                            0 === a.team_1_wins &&
+                              0 === a.team_2_wins &&
+                              a.scheduled_time &&
+                              new Date().getTime() < 1e3 * a.scheduled_time &&
+                              (a.outcome = "Upcoming"),
+                            m.push(a));
+                  var s;
+                  m.sort((e, t) =>
+                    e.scheduled_time > t.scheduled_time
+                      ? -1
+                      : e.scheduled_time < t.scheduled_time
+                        ? 1
+                        : 0,
+                  ),
+                    m.length &&
+                      $(
+                        ((s = "league_name"),
+                        m.reduce(
+                          (e, t) => ({ ...e, [t[s]]: [...(e[t[s]] || []), t] }),
+                          {},
+                        )),
+                      );
                 })();
               } catch (e) {
                 console.log("Could not fetch leagues data.");
               }
             }, [t]);
           const V = a.find((e) => e.team_id == t) || {};
-          let j;
+          let W;
           if (
-            ((E && b) || (j = c.createElement("div", null, "Loading...")),
-            E &&
+            ((u && C) || (W = c.createElement("div", null, "Loading...")),
+            u &&
               (0 == a.length || f) &&
-              (j = c.createElement(
+              (W = c.createElement(
                 "div",
                 null,
                 "Error loading registered teams...",
               )),
-            b &&
-              (0 == Object.keys(k).length || L) &&
-              (j = c.createElement(
+            C &&
+              (0 == Object.keys(h).length || M) &&
+              (W = c.createElement(
                 "div",
                 null,
                 `Error loading single team info for teamId ${t} `,
               )),
-            j)
+            W)
           )
             return c.createElement(
               "div",
-              { className: _().TeamDetails },
-              c.createElement(d.j, { bOverlapping: !1 }),
+              { className: y().TeamDetails },
+              c.createElement(i.A, { bOverlapping: !1 }),
               c.createElement(
-                m.ql,
+                m.mg,
                 null,
                 c.createElement("title", null, "Dota 2 - Team Details"),
               ),
-              c.createElement(p.Z, null),
-              c.createElement("div", { className: _().ContentFrame }, j),
-              c.createElement(u.U, null),
+              c.createElement(E.A, null),
+              c.createElement("div", { className: y().ContentFrame }, W),
+              c.createElement(d.K, null),
             );
-          const q = k.members || [];
-          q.forEach((e) => {
-            (e.kick_link = `${o.Y.BASE_URL}webapi/IDOTA2Teams/RemoveTeamMember/v0001?u=${g}&appid=${o.Y.DOTA_APP_ID}&team_id=${t}&account_id=${e.account_id}`),
+          const j = h.members || [];
+          j.forEach((e) => {
+            (e.kick_link = `${l.r.BASE_URL}webapi/IDOTA2Teams/RemoveTeamMember/v0001?u=${_}&appid=${l.r.DOTA_APP_ID}&team_id=${t}&account_id=${e.account_id}`),
               (e.make_admin_link = e.admin
                 ? ""
-                : `${o.Y.BASE_URL}webapi/IDOTA2Teams/SetTeamAdmin/v0001?u=${g}&appid=${o.Y.DOTA_APP_ID}&team_id=${t}&account_id=${e.account_id}`);
+                : `${l.r.BASE_URL}webapi/IDOTA2Teams/SetTeamAdmin/v0001?u=${_}&appid=${l.r.DOTA_APP_ID}&team_id=${t}&account_id=${e.account_id}`);
           });
           const J = (e) => {
             const t = a.find((t) => t.team_id == e);
@@ -3839,26 +3959,26 @@
           };
           return c.createElement(
             "div",
-            { className: _().TeamDetails },
-            c.createElement(d.j, { bOverlapping: !1 }),
+            { className: y().TeamDetails },
+            c.createElement(i.A, { bOverlapping: !1 }),
             c.createElement(
-              m.ql,
+              m.mg,
               null,
               c.createElement("title", null, "Dota 2 - Team Details"),
             ),
-            c.createElement(p.Z, null),
+            c.createElement(E.A, null),
             c.createElement(
               "div",
-              { className: _().ContentFrame },
+              { className: y().ContentFrame },
               c.createElement(
                 "h1",
-                { className: _().Header },
-                `Team Details for ${null == k ? void 0 : k.name} (${k.team_id})`,
+                { className: y().Header },
+                `Team Details for ${h?.name} (${h.team_id})`,
               ),
               c.createElement(
                 "div",
-                { className: _().MiscInfoGrid },
-                T.map((e) =>
+                { className: y().MiscInfoGrid },
+                N.map((e) =>
                   c.createElement(
                     c.Fragment,
                     { key: `${e.key}-misc-row` },
@@ -3867,68 +3987,67 @@
                       "div",
                       null,
                       e.formatFunction
-                        ? e.formatFunction.call(null, k[e.key])
-                        : JSON.stringify(k[e.key] || "", null, 2).replace(
+                        ? e.formatFunction.call(null, h[e.key])
+                        : JSON.stringify(h[e.key] || "", null, 2).replace(
                             /['"]+/g,
                             "",
                           ),
                     ),
                   ),
                 ),
-                !Y &&
+                !U &&
                   c.createElement(
                     c.Fragment,
                     null,
                     c.createElement(
                       "div",
-                      { className: _().Link, onClick: () => K(!0) },
+                      { className: y().Link, onClick: () => B(!0) },
                       "Update Info / Add Member",
                     ),
                     c.createElement("div", null),
                   ),
               ),
-              Y &&
+              U &&
                 c.createElement(
                   c.Fragment,
                   null,
-                  c.createElement("div", { className: _().SmoothLine }),
+                  c.createElement("div", { className: y().SmoothLine }),
                   c.createElement(
                     ({ strTeamId: e }) => {
                       const [t, a] = (0, c.useState)(""),
-                        [l, i] = (0, c.useState)(""),
+                        [n, o] = (0, c.useState)(""),
                         [m, s] = (0, c.useState)(""),
-                        [d, u] = (0, c.useState)(!1);
+                        [i, d] = (0, c.useState)(!1);
                       return c.createElement(
                         "form",
                         {
-                          onSubmit: (a) =>
-                            (0, n.mG)(void 0, void 0, void 0, function* () {
-                              if ((a.preventDefault(), !t && !l && !m)) return;
-                              u(!0);
-                              const n = {
-                                team_id: e,
-                                team_name: t,
-                                team_tag: l,
-                                team_abbreviation: m,
-                              };
-                              yield r().get(
-                                `${o.Y.BASE_URL}webapi/IDOTA2Teams/EditTeamName/v0001`,
-                                { params: n },
-                              );
-                              W(), setTimeout(() => u(!1), v);
-                            }),
+                          onSubmit: async (a) => {
+                            if ((a.preventDefault(), !t && !n && !m)) return;
+                            d(!0);
+                            const o = {
+                              team_id: e,
+                              team_name: t,
+                              team_tag: n,
+                              team_abbreviation: m,
+                            };
+                            await r().get(
+                              `${l.r.BASE_URL}webapi/IDOTA2Teams/EditTeamName/v0001`,
+                              { params: o },
+                            );
+                            Y(), setTimeout(() => d(!1), g);
+                          },
                         },
                         c.createElement(
                           "h2",
-                          { className: _().Header },
+                          { className: y().Header },
                           "Update Team Information",
                         ),
                         c.createElement(
                           "div",
-                          { className: _().EditInfoGrid },
+                          { className: y().EditInfoGrid },
                           c.createElement("div", null, "Team Name"),
                           c.createElement("input", {
-                            className: _().MediumTextField,
+                            className: y().MediumTextField,
                             type: "text",
                             name: "teamName",
                             maxLength: 32,
@@ -3936,15 +4055,15 @@
                           }),
                           c.createElement("div", null, "Tag"),
                           c.createElement("input", {
-                            className: _().SmallTextField,
+                            className: y().SmallTextField,
                             type: "text",
                             name: "teamTag",
                             maxLength: 8,
-                            onChange: (e) => i(e.target.value),
+                            onChange: (e) => o(e.target.value),
                           }),
                           c.createElement("div", null, "Abbreviation"),
                           c.createElement("input", {
-                            className: _().SmallTextField,
+                            className: y().SmallTextField,
                             type: "text",
                             name: "teamAbbreviation",
                             maxLength: 4,
@@ -3955,8 +4074,8 @@
                             null,
                             c.createElement(
                               "button",
-                              { className: _().SubmitButton, disabled: d },
-                              d ? "Updating..." : "Update",
+                              { className: y().SubmitButton, disabled: i },
+                              i ? "Updating..." : "Update",
                             ),
                           ),
                         ),
@@ -3964,37 +4083,36 @@
                     },
                     { strTeamId: t },
                   ),
-                  c.createElement("div", { className: _().SmoothLine }),
+                  c.createElement("div", { className: y().SmoothLine }),
                   c.createElement(
                     ({ strTeamId: e }) => {
                       const [t, a] = (0, c.useState)(""),
-                        [l, i] = (0, c.useState)(!1);
+                        [n, o] = (0, c.useState)(!1);
                       return c.createElement(
                         "form",
                         {
-                          onSubmit: (a) =>
-                            (0, n.mG)(void 0, void 0, void 0, function* () {
-                              if ((a.preventDefault(), !t)) return;
-                              i(!0);
-                              const n = { team_id: e, account_id: t };
-                              yield r().get(
-                                `${o.Y.BASE_URL}webapi/IDOTA2Teams/AddTeamMember/v0001`,
-                                { params: n },
-                              );
-                              W(), setTimeout(() => i(!1), v);
-                            }),
+                          onSubmit: async (a) => {
+                            if ((a.preventDefault(), !t)) return;
+                            o(!0);
+                            const n = { team_id: e, account_id: t };
+                            await r().get(
+                              `${l.r.BASE_URL}webapi/IDOTA2Teams/AddTeamMember/v0001`,
+                              { params: n },
+                            );
+                            Y(), setTimeout(() => o(!1), g);
+                          },
                         },
                         c.createElement(
                           "h2",
-                          { className: _().Header },
+                          { className: y().Header },
                           "Add Team Member",
                         ),
                         c.createElement(
                           "div",
-                          { className: _().EditInfoGrid },
+                          { className: y().EditInfoGrid },
                           c.createElement("div", null, "Account ID"),
                           c.createElement("input", {
-                            className: _().MediumTextField,
+                            className: y().MediumTextField,
                             type: "text",
                             name: "accountId",
                             maxLength: 20,
@@ -4005,8 +4123,8 @@
                             null,
                             c.createElement(
                               "button",
-                              { className: _().SubmitButton, disabled: l },
-                              l ? "Adding..." : "Add Account",
+                              { className: y().SubmitButton, disabled: n },
+                              n ? "Adding..." : "Add Account",
                             ),
                           ),
                         ),
@@ -4015,20 +4133,20 @@
                     { strTeamId: t },
                   ),
                 ),
-              c.createElement("div", { className: _().SmoothLine }),
-              c.createElement("h2", { className: _().Header }, "Members"),
+              c.createElement("div", { className: y().SmoothLine }),
+              c.createElement("h2", { className: y().Header }, "Members"),
               c.createElement(
                 "div",
                 {
-                  className: _().MembersGrid,
+                  className: y().MembersGrid,
                   style: {
-                    gridTemplateColumns: `250px repeat(${N.length - 1}, auto)`,
+                    gridTemplateColumns: `250px repeat(${T.length - 1}, auto)`,
                   },
                 },
                 c.createElement(
                   c.Fragment,
                   null,
-                  N.map((e) =>
+                  T.map((e) =>
                     c.createElement(
                       "div",
                       { key: `${e.key}-members-grid-header}` },
@@ -4039,14 +4157,14 @@
                 c.createElement(
                   c.Fragment,
                   null,
-                  !!q.length &&
-                    q.map((e) =>
-                      N.map((t) =>
+                  !!j.length &&
+                    j.map((e) =>
+                      T.map((t) =>
                         c.createElement(
                           "div",
                           { key: `${t.key}-member-row-${e.account_id}` },
                           t.formatFunction
-                            ? t.formatFunction.call(null, e[t.key], W)
+                            ? t.formatFunction.call(null, e[t.key], Y)
                             : JSON.stringify(e[t.key] || "", null, 2).replace(
                                 /['"]+/g,
                                 "",
@@ -4054,14 +4172,14 @@
                         ),
                       ),
                     ),
-                  !q.length && c.createElement("div", null, "No team members."),
+                  !j.length && c.createElement("div", null, "No team members."),
                 ),
               ),
               c.createElement("br", null),
               c.createElement(
                 "div",
                 {
-                  className: _().ManagerGrid,
+                  className: y().ManagerGrid,
                   style: {
                     gridTemplateColumns: `250px repeat(${R.length - 1}, auto)`,
                   },
@@ -4099,47 +4217,46 @@
                   !R.length && c.createElement("div", null, "No manager."),
                 ),
               ),
-              Y &&
+              U &&
                 c.createElement(
                   c.Fragment,
                   null,
-                  c.createElement("div", { className: _().SmoothLine }),
+                  c.createElement("div", { className: y().SmoothLine }),
                   c.createElement(
                     ({ strTeamId: e }) => {
                       const [t, a] = (0, c.useState)(""),
-                        [l, i] = (0, c.useState)(""),
+                        [n, o] = (0, c.useState)(""),
                         [m, s] = (0, c.useState)(!1);
                       return c.createElement(
                         "form",
                         {
-                          onSubmit: (e) =>
-                            (0, n.mG)(void 0, void 0, void 0, function* () {
-                              if ((e.preventDefault(), !t || !l)) return;
-                              s(!0);
-                              const a = {
-                                admin_account_id: parseInt(t),
-                                admin_email: l,
-                                registration_period:
-                                  o.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
-                              };
-                              yield r().post(
-                                `${o.Y.BASE_URL}webapi/IDOTA2Teams/UpdateRegisteredTeamData/v0001?u=${g}&appid=${o.Y.DOTA_APP_ID}`,
-                                { params: a },
-                              );
-                              H(), setTimeout(() => s(!1), v);
-                            }),
+                          onSubmit: async (e) => {
+                            if ((e.preventDefault(), !t || !n)) return;
+                            s(!0);
+                            const a = {
+                              admin_account_id: parseInt(t),
+                              admin_email: n,
+                              registration_period:
+                                l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD,
+                            };
+                            await r().post(
+                              `${l.r.BASE_URL}webapi/IDOTA2Teams/UpdateRegisteredTeamData/v0001?u=${_}&appid=${l.r.DOTA_APP_ID}`,
+                              { params: a },
+                            );
+                            x(), setTimeout(() => s(!1), g);
+                          },
                         },
                         c.createElement(
                           "h2",
-                          { className: _().Header },
+                          { className: y().Header },
                           "Update Manager Email",
                         ),
                         c.createElement(
                           "div",
-                          { className: _().EditInfoGrid },
+                          { className: y().EditInfoGrid },
                           c.createElement("div", null, "Manager Account ID"),
                           c.createElement("input", {
-                            className: _().MediumTextField,
+                            className: y().MediumTextField,
                             type: "text",
                             name: "adminAccountId",
                             maxLength: 20,
@@ -4147,18 +4264,18 @@
                           }),
                           c.createElement("div", null, "Manager Email"),
                           c.createElement("input", {
-                            className: _().MediumTextField,
+                            className: y().MediumTextField,
                             type: "email",
                             name: "adminEmail",
                             maxLength: 255,
-                            onChange: (e) => i(e.target.value),
+                            onChange: (e) => o(e.target.value),
                           }),
                           c.createElement(
                             "div",
                             null,
                             c.createElement(
                               "button",
-                              { className: _().SubmitButton, disabled: m },
+                              { className: y().SubmitButton, disabled: m },
                               m ? "Updating..." : "Update Manager Email",
                             ),
                           ),
@@ -4168,16 +4285,16 @@
                     { strTeamId: t },
                   ),
                 ),
-              c.createElement("div", { className: _().SmoothLine }),
+              c.createElement("div", { className: y().SmoothLine }),
               c.createElement(
                 "h2",
-                { className: _().Header },
+                { className: y().Header },
                 "Logos & Colors",
               ),
               c.createElement(
                 "div",
-                { className: _().LogoAndColorsGrid },
-                D.map((e) =>
+                { className: y().LogoAndColorsGrid },
+                v.map((e) =>
                   c.createElement(
                     c.Fragment,
                     { key: `${e.key}-logo-colors-row` },
@@ -4186,8 +4303,8 @@
                       "div",
                       null,
                       e.formatFunction
-                        ? e.formatFunction.call(null, k[e.key], k.team_id)
-                        : JSON.stringify(k[e.key] || "", null, 2).replace(
+                        ? e.formatFunction.call(null, h[e.key], h.team_id)
+                        : JSON.stringify(h[e.key] || "", null, 2).replace(
                             /['"]+/g,
                             "",
                           ),
@@ -4199,13 +4316,13 @@
               c.createElement(
                 "div",
                 {
-                  className: _().UGCLogosGrid,
-                  style: { gridTemplateColumns: `repeat(${O.length}, auto)` },
+                  className: y().UGCLogosGrid,
+                  style: { gridTemplateColumns: `repeat(${S.length}, auto)` },
                 },
                 c.createElement(
                   c.Fragment,
                   null,
-                  O.map((e) =>
+                  S.map((e) =>
                     c.createElement(
                       "div",
                       { key: `${e.key}-ugc-grid-header}` },
@@ -4216,13 +4333,13 @@
                 c.createElement(
                   c.Fragment,
                   null,
-                  O.map((e) =>
+                  S.map((e) =>
                     c.createElement(
                       "div",
                       { key: `${e.key}-ugc-logo` },
                       e.formatFunction
-                        ? e.formatFunction.call(null, k[e.key])
-                        : JSON.stringify(k[e.key] || "", null, 2).replace(
+                        ? e.formatFunction.call(null, h[e.key])
+                        : JSON.stringify(h[e.key] || "", null, 2).replace(
                             /['"]+/g,
                             "",
                           ),
@@ -4230,22 +4347,22 @@
                   ),
                 ),
               ),
-              c.createElement("div", { className: _().SmoothLine }),
+              c.createElement("div", { className: y().SmoothLine }),
               c.createElement(
                 "h2",
-                { className: _().Header },
+                { className: y().Header },
                 "Audit Action History",
               ),
               c.createElement(
                 "div",
                 {
-                  className: _().AuditActionsGrid,
-                  style: { gridTemplateColumns: `repeat(${I.length}, auto)` },
+                  className: y().AuditActionsGrid,
+                  style: { gridTemplateColumns: `repeat(${F.length}, auto)` },
                 },
                 c.createElement(
                   c.Fragment,
                   null,
-                  I.map((e) =>
+                  F.map((e) =>
                     c.createElement(
                       "div",
                       {
@@ -4258,9 +4375,9 @@
                 c.createElement(
                   c.Fragment,
                   null,
-                  !!B.length &&
-                    B.map((e) =>
-                      I.map((t) =>
+                  !!H.length &&
+                    H.map((e) =>
+                      F.map((t) =>
                         c.createElement(
                           "div",
                           { key: `${t.key}-${t.displayName}-${e.timestamp}` },
@@ -4278,20 +4395,20 @@
                         ),
                       ),
                     ),
-                  !B.length &&
+                  !H.length &&
                     c.createElement("div", null, "No audit actions."),
                 ),
               ),
-              c.createElement("div", { className: _().SmoothLine }),
+              c.createElement("div", { className: y().SmoothLine }),
               c.createElement(
                 "h2",
-                { className: _().Header },
+                { className: y().Header },
                 "Supporters Club / Workshop Status",
               ),
               c.createElement(
                 "div",
-                { className: _().WorkshopStatusGrid },
-                C.map((e) =>
+                { className: y().WorkshopStatusGrid },
+                D.map((e) =>
                   c.createElement(
                     c.Fragment,
                     { key: `${e.key}-workshop-status-row` },
@@ -4300,8 +4417,8 @@
                       "div",
                       null,
                       e.formatFunction
-                        ? e.formatFunction.call(null, $[e.key])
-                        : JSON.stringify($[e.key] || "", null, 2).replace(
+                        ? e.formatFunction.call(null, w[e.key])
+                        : JSON.stringify(w[e.key] || "", null, 2).replace(
                             /['"]+/g,
                             "",
                           ),
@@ -4309,17 +4426,17 @@
                   ),
                 ),
               ),
-              c.createElement("div", { className: _().SmoothLine }),
+              c.createElement("div", { className: y().SmoothLine }),
               c.createElement(
                 "h2",
-                { className: (0, s.Z)(_().Header, _().SeasonMatchHeader) },
-                `Season ${o.Y.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD} Matches`,
+                { className: (0, s.A)(y().Header, y().SeasonMatchHeader) },
+                `Season ${l.r.DOTA_LEAGUE_CURRENT_REGISTRATION_PERIOD} Matches`,
               ),
               c.createElement(
                 "div",
                 {
-                  className: _().MatchesGrid,
-                  style: { gridTemplateColumns: `repeat(${S.length}, auto)` },
+                  className: y().MatchesGrid,
+                  style: { gridTemplateColumns: `repeat(${O.length}, auto)` },
                 },
                 c.createElement(
                   c.Fragment,
@@ -4333,13 +4450,13 @@
                             "h3",
                             {
                               key: `league-name-row-${a}`,
-                              style: { gridColumn: `span ${S.length}` },
+                              style: { gridColumn: `span ${O.length}` },
                             },
                             c.createElement("b", null, t),
                           ),
                         ),
                           e.push(
-                            S.map((e) =>
+                            O.map((e) =>
                               c.createElement(
                                 "div",
                                 {
@@ -4355,7 +4472,7 @@
                           );
                         for (let a of P[t])
                           e.push(
-                            S.map((e) =>
+                            O.map((e) =>
                               c.createElement(
                                 "div",
                                 {
@@ -4390,12 +4507,12 @@
               ),
               c.createElement("br", null),
             ),
-            c.createElement(u.U, null),
+            c.createElement(d.K, null),
           );
         };
-      class b extends c.Component {
+      class C extends c.Component {
         render() {
-          return c.createElement(F, null);
+          return c.createElement(I, null);
         }
       }
     },

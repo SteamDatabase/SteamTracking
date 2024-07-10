@@ -383,7 +383,7 @@ ${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=profanity&language=$
 ${COMMUNITY_CDN_URL}textfilter/gettextfilterdictionary?type=profanity&language=${}&v=1&origin=${}
 ${COMMUNITY_URL}app/${DOTA_APP_ID}/guides
 ${COMMUNITY_URL}app/570/guides
-${COMMUNITY_URL}broadcast/watchnew/${_ ? _ : _}?origin=https://${}&enablechat=0&enablevideo=1&iframe=1
+${COMMUNITY_URL}broadcast/watchnew/${}?origin=https://${}&enablechat=0&enablevideo=1&iframe=1
 ${COMMUNITY_URL}oauth/login?client_id=${CLIENT_ID}&response_type=token&state=${}
 ${COMMUNITY_URL}oauth/login?client_id=${CLIENT_ID}&response_type=token&state=filmcontest/
 ${HELP_BASE_URL}
@@ -3408,7 +3408,6 @@ url( ${IMG_URL}international2022/reward_montage/ti11_small_mmrtokens.png )
 url( ${IMG_URL}international2022/reward_montage/ti11_small_themedtreasure.png )
 url( ${IMG_URL}international2022/reward_montage/ti11_small_trust.png )
 url( ${IMG_URL}international2022/wards.png )
-url( ${IMG_URL}items/${_ ? _ : _}.png )
 url( ${IMG_URL}items/${}.png )
 url( ${IMG_URL}labyrinth/assistant_controller.jpg )
 url( ${IMG_URL}springcleaning22/featured.jpg )
