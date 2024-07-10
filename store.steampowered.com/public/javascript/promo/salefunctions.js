@@ -86,7 +86,7 @@ function GenerateTagBlocks( $Parent, rgTagData, rgTier1Unfiltered, rgTier2Unfilt
 			TagData.items, 'sale', 4, 4, { games_already_in_library: false, localized: true, displayed_elsewhere: false, only_current_platform: true, enforce_minimum: false }
 		);
 
-		if ( rgItemsPassingFilter < 4 )
+		if ( rgItemsPassingFilter.length !== 4 )
 			continue;
 
 		let $Ctn = $J( '<div/>', {'class': 'home_discounts_block'} );
