@@ -1,9 +1,9 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [8691],
+  [4922],
   {
-    89868: function (t) {
+    44217: function (t) {
       /*!
        * Cropper.js v1.6.1
        * https://fengyuanchen.github.io/cropperjs

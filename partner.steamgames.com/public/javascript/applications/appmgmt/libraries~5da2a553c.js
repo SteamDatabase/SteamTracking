@@ -2,9 +2,9 @@
  ****/
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [3655],
+  [2785],
   {
-    21807: function (e, t, o) {
+    36378: function (e, t, o) {
       /*!
        * @overview es6-promise - a tiny implementation of Promises/A+.
        * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
@@ -451,7 +451,7 @@
         );
       })();
     },
-    25307: function (e, t) {
+    40323: function (e, t) {
       var o, i, n;
       /* @license
 Papa Parse
@@ -1583,7 +1583,7 @@ License: MIT
         void 0 === (n = "function" == typeof o ? o.apply(t, i) : o) ||
           (e.exports = n);
     },
-    22086: (e) => {
+    44573: (e) => {
       e.exports = (function (e) {
         var t = {};
         function o(i) {
@@ -2209,7 +2209,7 @@ License: MIT
         },
       ]);
     },
-    76470: function (e, t, o) {
+    47594: function (e, t, o) {
       "use strict";
       var i =
           (this && this.__awaiter) ||
@@ -2338,8 +2338,8 @@ License: MIT
             }
           };
       (t.__esModule = !0), (t.propsToOptions = void 0);
-      var r = o(21807),
-        s = o(42287),
+      var r = o(36378),
+        s = o(72739),
         a = function () {};
       function l(e, t) {
         return new r.Promise(function (o, i) {
@@ -2477,7 +2477,7 @@ License: MIT
         });
       };
     },
-    15602: function (e, t, o) {
+    98616: function (e, t, o) {
       "use strict";
       var i,
         n =
@@ -2656,12 +2656,12 @@ License: MIT
             }
           };
       t.__esModule = !0;
-      var l = o(47427),
-        u = o(42287),
-        c = o(22086),
-        d = o(76470),
-        h = o(4532),
-        p = o(59072),
+      var l = o(90626),
+        u = o(72739),
+        c = o(44573),
+        d = o(47594),
+        h = o(35060),
+        p = o(50996),
         m = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
@@ -2769,7 +2769,7 @@ License: MIT
         })(l.Component);
       t.default = m;
     },
-    85405: function (e, t, o) {
+    85646: function (e, t, o) {
       "use strict";
       var i,
         n =
@@ -2955,12 +2955,12 @@ License: MIT
             return e;
           };
       t.__esModule = !0;
-      var u = o(47427),
-        c = o(42287),
-        d = o(22086),
-        h = o(76470),
-        p = o(4532),
-        m = o(59072),
+      var u = o(90626),
+        c = o(72739),
+        d = o(44573),
+        h = o(47594),
+        p = o(35060),
+        m = o(50996),
         f = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
@@ -3108,7 +3108,7 @@ License: MIT
         })(u.Component);
       t.default = f;
     },
-    99244: function (e, t, o) {
+    23242: function (e, t, o) {
       "use strict";
       var i,
         n,
@@ -3146,11 +3146,11 @@ License: MIT
                   : ((o.prototype = t.prototype), new o()));
           });
       t.__esModule = !0;
-      var s = o(47427),
-        a = o(85405),
-        l = o(28930),
-        u = o(20023),
-        c = o(19106);
+      var s = o(90626),
+        a = o(85646),
+        l = o(37875),
+        u = o(4448),
+        c = o(68349);
       var d = [
           { title: "Name", field: "name", width: 150 },
           {
@@ -3178,7 +3178,7 @@ License: MIT
             field: "custom",
             hozAlign: "center",
             editor: "input",
-            formatter: o(4532).reactFormatter(
+            formatter: o(35060).reactFormatter(
               s.createElement(function (e) {
                 var t = e.cell._cell.row.data,
                   o = e.cell._cell.value || "Edit | Show";
@@ -3470,12 +3470,12 @@ License: MIT
         })(s.Component);
       t.default = f;
     },
-    4532: (e, t, o) => {
+    35060: (e, t, o) => {
       "use strict";
       (t.__esModule = !0),
         (t.reactFormatter = t.isSameObject = t.isSameArray = t.clone = void 0);
-      var i = o(47427),
-        n = o(42287);
+      var i = o(90626),
+        n = o(72739);
       function r(e) {
         var t = 0;
         return function (o, i) {
@@ -3520,7 +3520,7 @@ License: MIT
           };
         });
     },
-    28930: function (e, t, o) {
+    37875: function (e, t, o) {
       "use strict";
       var i,
         n =
@@ -3557,9 +3557,9 @@ License: MIT
                   : ((o.prototype = t.prototype), new o()));
           });
       t.__esModule = !0;
-      var r = o(47427),
-        s = o(42287),
-        a = o(99021),
+      var r = o(90626),
+        s = o(72739),
+        a = o(2834),
         l = "YYYY-MM-DD",
         u = {
           width: "100%",
@@ -3658,7 +3658,7 @@ License: MIT
         );
       };
     },
-    99021: (e, t) => {
+    2834: (e, t) => {
       "use strict";
       (t.__esModule = !0),
         (t.setGlobalDateMasks =
@@ -4066,7 +4066,7 @@ License: MIT
           setGlobalDateMasks: D,
         });
     },
-    20023: function (e, t, o) {
+    4448: function (e, t, o) {
       "use strict";
       var i,
         n =
@@ -4103,10 +4103,10 @@ License: MIT
                   : ((o.prototype = t.prototype), new o()));
           });
       t.__esModule = !0;
-      var r = o(47427),
-        s = o(42287),
-        a = o(4532),
-        l = o(8050),
+      var r = o(90626),
+        s = o(72739),
+        a = o(35060),
+        l = o(2465),
         u = (function (e) {
           function t() {
             var t = (null !== e && e.apply(this, arguments)) || this;
@@ -4214,11 +4214,11 @@ License: MIT
         );
       };
     },
-    19106: (e, t, o) => {
+    68349: (e, t, o) => {
       "use strict";
       t.__esModule = !0;
-      var i = o(47427),
-        n = o(42287);
+      var i = o(90626),
+        n = o(72739);
       t.default = function (e, t, o) {
         var r = t.style || "",
           s = e.getValue() || [],
@@ -4249,7 +4249,7 @@ License: MIT
         );
       };
     },
-    6683: function (e, t, o) {
+    66297: function (e, t, o) {
       "use strict";
       var i =
         (this && this.__createBinding) ||
@@ -4272,14 +4272,14 @@ License: MIT
           t.React15Tabulator =
           t.ReactTabulator =
             void 0),
-        i(t, o(85405), "default", "ReactTabulator"),
-        i(t, o(15602), "default", "React15Tabulator"),
-        i(t, o(99244), "default", "ReactTabulatorExample"),
-        i(t, o(4532), "reactFormatter");
+        i(t, o(85646), "default", "ReactTabulator"),
+        i(t, o(98616), "default", "React15Tabulator"),
+        i(t, o(23242), "default", "ReactTabulatorExample"),
+        i(t, o(35060), "reactFormatter");
     },
-    83397: (e, t, o) => {
+    53255: (e, t, o) => {
       "use strict";
-      var i = o(47427),
+      var i = o(90626),
         n = {
           position: "absolute",
           width: 0,
@@ -4376,13 +4376,13 @@ License: MIT
         })(i.Component);
       e.exports = s;
     },
-    8050: (e, t, o) => {
+    2465: (e, t, o) => {
       "use strict";
-      var i = o(47427),
-        n = o(25816),
-        r = o(12740),
-        s = o(83397),
-        a = o(90945),
+      var i = o(90626),
+        n = o(61410),
+        r = o(60299),
+        s = o(53255),
+        a = o(33602),
         l = 13,
         u = 9,
         c = 8,
@@ -4633,9 +4633,9 @@ License: MIT
         }),
         (e.exports = m);
     },
-    90945: (e, t, o) => {
+    33602: (e, t, o) => {
       "use strict";
-      var i = o(47427);
+      var i = o(90626);
       function n(e) {
         return e.replace(/[-\\^$*+?.()|[\]{}]/g, "\\$&");
       }
@@ -4744,9 +4744,9 @@ License: MIT
       })(i.Component);
       e.exports = a;
     },
-    12740: (e, t, o) => {
+    60299: (e, t, o) => {
       "use strict";
-      var i = o(47427);
+      var i = o(90626);
       e.exports = function (e) {
         return i.createElement(
           "button",
@@ -4764,7 +4764,7 @@ License: MIT
         );
       };
     },
-    59072: (t, o, n) => {
+    50996: (t, o, n) => {
       "use strict";
       n.r(o), n.d(o, { default: () => oe });
       var r =

@@ -1,23 +1,23 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [4118],
+  [8843],
   {
-    89484: (e) => {
+    97824: (e) => {
       e.exports = {
-        OpenInBannerContainer: "_3YOPN-YurHpxmijm6fw0W2",
-        OpenInBannerContent: "_2gX86rIwUFoOU9D_YtfPsQ",
-        ValveOnly: "_279gTwJyCp3f0wCT_04PZ1",
-        BannerMessage: "_2_QgZ0KdLRqOboc7dL93zp",
-        BannerTitle: "_30HH7x_RyDoPF55R4ezfS3",
-        BannerButtonContainer: "U5d0i5qNqrLVUrEBeVc1I",
-        BannerButton: "_2EVpuvZsHbK9GiVjknSF77",
+        OpenInBannerContainer: "_1EQpm6hAsghyCST7W04m-E",
+        OpenInBannerContent: "_13oFTFTjvz0YaOVnWZxyqr",
+        ValveOnly: "_3jg5qxP4_hiZYa6-GJDCOp",
+        BannerMessage: "_1HSa8QK0U-qQCGObG6XYFT",
+        BannerTitle: "_3Xfc_DOo4BUZBmxkSRmD6y",
+        BannerButtonContainer: "_1lwkSayKFi-9WCDd6pq5bV",
+        BannerButton: "_1jso7z80FWGn42k1HP0_cf",
       };
     },
-    43390: (e, t, n) => {
+    62381: (e, t, n) => {
       "use strict";
-      n.d(t, { F: () => c });
-      var s = n(65255);
+      n.d(t, { W: () => c });
+      var s = n(30470);
       let i = { success: !0, result: 1 };
       class o {
         m_mapWaitingCallbacks = new Map();
@@ -62,8 +62,8 @@
           if (!this.m_socket || this.m_socket.readyState != WebSocket.OPEN)
             return !1;
           let n = Object.assign({}, e, {
-            universe: s.De.EUNIVERSE,
-            accountid: s.L7.accountid,
+            universe: s.TS.EUNIVERSE,
+            accountid: s.iA.accountid,
           });
           void 0 !== t && (n.sequenceid = t);
           try {
@@ -198,8 +198,8 @@
         }
         BClientAccountMatches() {
           return (
-            !s.L7.logged_in ||
-            s.L7.accountid == this.m_connection.ClientInfo.unAccountID
+            !s.iA.logged_in ||
+            s.iA.accountid == this.m_connection.ClientInfo.unAccountID
           );
         }
         GenericEResultCall(e) {
@@ -219,40 +219,40 @@
       })();
       window.ClientConnectionAPI = c;
     },
-    74479: (e, t, n) => {
+    71009: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { OpenInDesktopClient: () => u, default: () => m });
-      var s = n(47427),
-        i = n(65255),
-        o = n(10162),
-        c = n(43390),
-        r = n(89484),
-        a = n(46009),
-        l = n(31846);
-      const u = (0, o.AP)(function (e) {
+      var s = n(90626),
+        i = n(30470),
+        o = n(84811),
+        c = n(62381),
+        r = n(97824),
+        a = n(2627),
+        l = n(61859);
+      const u = (0, o.Nr)(function (e) {
           const [t, n] = s.useState(22);
           s.useEffect(() => {
-            i.De.IN_CLIENT ||
-              i.De.IN_MOBILE ||
-              i.De.IN_MOBILE_WEBVIEW ||
-              c.F.BClientConnected().then((e) => {
+            i.TS.IN_CLIENT ||
+              i.TS.IN_MOBILE ||
+              i.TS.IN_MOBILE_WEBVIEW ||
+              c.W.BClientConnected().then((e) => {
                 e.success &&
                 2 != e.result &&
-                c.F.BClientSupportsMessage("OpenSteamURL")
+                c.W.BClientSupportsMessage("OpenSteamURL")
                   ? n(1)
                   : n(2);
               });
           }, []);
           const o = s.useCallback(() => {
             let e = "steam://openurl/";
-            const n = (0, a.bG)("browserid");
+            const n = (0, a.VY)("browserid");
             if (n) {
               const t = new URL(window.location.href),
                 s = new URLSearchParams(t.search);
               s.set("utm_bid", n),
                 (e += t.origin + t.pathname + "?" + s.toString() + t.hash);
             } else e += window.location.href;
-            1 == t ? c.F.OpenSteamURL(e) : (window.location.href = e);
+            1 == t ? c.W.OpenSteamURL(e) : (window.location.href = e);
           }, [t]);
           return s.createElement(
             "div",
@@ -266,7 +266,7 @@
                 s.createElement(
                   "div",
                   { onClick: o, className: r.BannerButton },
-                  (0, l.Xx)("#OpenInDesktopAppBanner_OpenAppButton"),
+                  (0, l.we)("#OpenInDesktopAppBanner_OpenAppButton"),
                 ),
               ),
               s.createElement(
@@ -278,10 +278,10 @@
                   s.createElement(
                     "b",
                     null,
-                    (0, l.Xx)("#OpenInDesktopAppBanner_NotSignedIn"),
+                    (0, l.we)("#OpenInDesktopAppBanner_NotSignedIn"),
                   ),
                   s.createElement("br", null),
-                  (0, l.Xx)("#OpenInDesktopAppBanner_Body"),
+                  (0, l.we)("#OpenInDesktopAppBanner_Body"),
                 ),
               ),
             ),

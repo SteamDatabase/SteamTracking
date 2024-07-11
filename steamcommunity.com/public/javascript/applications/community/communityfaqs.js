@@ -1,49 +1,9 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [3499],
+  [3781],
   {
-    21571: (e) => {
-      e.exports = {
-        FAQContainer: "_1BWX4M92aix2fGQpo8Tef9",
-        Section: "NWJUHKxCjy6Vt-eCIimPI",
-        Note: "_1Er-4Hxpk4pCaLFH-pfsWw",
-        Important: "_2LRZHyh5oSKIVVSSbFEj-b",
-        Warning: "_3G4C2HQXXHXqyz5TmBAYM3",
-        FAQImage: "_1sKwBm5oDNIVb9z5t0QrRY",
-      };
-    },
-    57855: (e) => {
-      e.exports = {
-        FAQViewPage: "_2c-ZvYlsjPPXuJ8mGCrm4b",
-        SupportTitle: "_3nR_5zDV4zAPIvvU0KiN0I",
-        Columns: "_3t30O2QxkGP9fvRLRDGswB",
-        LeftCol: "_36C-iYFaWFiKRonTzh-HmN",
-        TopColorBar: "_3Ar5ozxp1bt4rjNjuhvn3F",
-        RightCol: "_2J5wYxXT7alqRbrLNH1mix",
-        SectionCtn: "_19tG9inhMAZq_51s-qI90w",
-        FAQTopicCtn: "_2sb3tLnzLRwrqh0PNdD2lF",
-        FAQTitle: "_2Q7dvhXOWECTr3tzB35qET",
-        FAQContent: "NOvHUNQANYp-AIJstDhAd",
-      };
-    },
-    29111: (e) => {
-      e.exports = { InfoRow: "_2IuXfoahgTxwZfYpytNkLa" };
-    },
-    14579: (e) => {
-      e.exports = {
-        Section: "_2GXm0D-ofulQO2nXUm0yTS",
-        CommunityHelp: "_1aSK_wN2h0Z8aHistspBZE",
-        NeedHelp: "_16-27M8ldt_ry9tBV515Wo",
-        LeftCol: "yNuYOxp91ACay7sBLPubB",
-        TopicHeader: "_38Q4pJr92P3dYRozQfTEvR",
-        CenterButtonCtn: "aAZulHjD2jQ42SL5OKaWU",
-      };
-    },
-    47955: (e) => {
-      e.exports = { SmallAvatar: "_2cCH3yNLHHafG87E2uIfR-" };
-    },
-    96680: (e) => {
+    91348: (e) => {
       e.exports = {
         ImportToolCtn: "TQZnshq2Qsd3viDy4sJLF",
         ToolHeader: "vr371b5v4qQyt77GOrmDG",
@@ -61,7 +21,7 @@
         ImportFAQsButton: "_2CwpZpTd8NeCUka4WwfT9l",
       };
     },
-    54057: (e) => {
+    11259: (e) => {
       e.exports = {
         FAQDashboardPage: "_59oO6wefB3rQ2vFht_b50",
         FAQDashboard: "tIxuPSrF_izJyj_xSBAu",
@@ -88,7 +48,7 @@
         EntryInternalName: "_1sL5ykMb1b1-WfHxwf8L1K",
       };
     },
-    68048: (e) => {
+    63280: (e) => {
       e.exports = {
         FAQEditPage: "_2QALaQ13bEoS_oLFjL1prx",
         FAQMenuCtn: "_1DISv1JGZ0pxbGtYHeBsJU",
@@ -105,7 +65,7 @@
         EscapeLink: "_3tlrRmfmxrdkbJRk48aZDb",
       };
     },
-    26461: (e) => {
+    93084: (e) => {
       e.exports = {
         LanguageListDialog: "vp5PFufZdDer7tZRg3jrX",
         ChecklistHeader: "_1VzmzM94XEt-kbk5N0Xcwm",
@@ -125,7 +85,7 @@
         UrlCode: "MxoxU6nWqZvCxgOlJxTvE",
       };
     },
-    40548: (e) => {
+    35707: (e) => {
       e.exports = {
         LeftMenu: "_1txmemUH3rosQe71mZfr0q",
         Section: "_2j-hhYTlI8Ntg1JrTWINdL",
@@ -143,13 +103,13 @@
         FaqStatusTable: "pCBfTw19y3z1htRCTD7Sk",
       };
     },
-    26334: (e) => {
+    3063: (e) => {
       e.exports = {
         Never: "_8rlUGGeBnYbuZpSoMtPGY",
         Warning: "pZM2L30-1FOU9cbzqy1AQ",
       };
     },
-    59565: (e) => {
+    66444: (e) => {
       e.exports = {
         FAQUnPublished: "erZyIOjQA9q0Wv28vQPiN",
         FAQPublished: "_13Wz0jEDJuyCYIYT-3Nk8X",
@@ -157,943 +117,56 @@
         EditorInternalName: "_3A9ciQBxaVrGEWI6kD4zod",
       };
     },
-    10368: (e) => {
+    25651: (e) => {
       e.exports = {
         ErrorCtn: "_2Dpwh3MWbH9ND0PlNK8G7M",
         ErrorMsg: "_2dTNxR8PrLvqBwSUnhUVh5",
         EscapeLink: "_19BjjT3X_AZgLiL1pFYCDG",
       };
     },
-    19941: (e, t, a) => {
-      "use strict";
-      a.d(t, { R: () => g });
-      var o = a(47427),
-        i = a(38071),
-        s = a(31659),
-        n = a(28918),
-        r = a(13129),
-        l = a(37563),
-        p = a(92309),
-        d = a(20142),
-        h = a(29525),
-        c = a(58635),
-        u = a(21571),
-        m = a.n(u);
-      const f = new Map([
-          ...Array.from(h.Be.entries()),
-          ...Array.from(h.YY.entries()),
-          [
-            "section",
-            {
-              Constructor: function (e) {
-                let t = (0, h.im)(e.args, "id");
-                t &&
-                  "string" == typeof t &&
-                  t.length > 0 &&
-                  "#" === t[0] &&
-                  (t = t.substring(1));
-                const a = (0, h.im)(e.args, "style"),
-                  i = (0, r.Z)(
-                    m().Section,
-                    "note" == a && m().Note,
-                    "important" == a && m().Important,
-                    "warning" == a && m().Warning,
-                  );
-                return o.createElement(
-                  "div",
-                  { id: t || void 0, className: i },
-                  e.children,
-                );
-              },
-              autocloses: !1,
-            },
-          ],
-          [
-            "img",
-            {
-              Constructor: function (e) {
-                var t, a;
-                const { showErrorInfo: i } = e.context;
-                let r =
-                  null === (t = null == e ? void 0 : e.children) || void 0 === t
-                    ? void 0
-                    : t.toString();
-                if (
-                  (null == r || null == r || 0 == r.length) &&
-                  ((r =
-                    null === (a = null == e ? void 0 : e.args) || void 0 === a
-                      ? void 0
-                      : a[""]),
-                  null == r || null == r || 0 == r.length)
-                )
-                  return "";
-                const l = (0, h.vZ)(r, e.language);
-                return "string" == typeof l
-                  ? ((r = l),
-                    i
-                      ? o.createElement(s.e, {
-                          className: m().FAQImage,
-                          src: r,
-                        })
-                      : ((r = r.replace("http://", "https://")),
-                        o.createElement("img", {
-                          className: m().FAQImage,
-                          src: r,
-                        })))
-                  : o.createElement(n.j, {
-                      className: m().FAQImage,
-                      rgSources: l,
-                    });
-              },
-              autocloses: !1,
-            },
-          ],
-          [
-            "exclude_realm",
-            {
-              Constructor: function (e) {
-                const t = (0, h.im)(e.args);
-                return ("global" == t &&
-                  l.De.EREALM == i.IN.k_ESteamRealmGlobal) ||
-                  ("china" == t && (0, l.h4)())
-                  ? null
-                  : o.createElement(o.Fragment, null, e.children);
-              },
-              autocloses: !1,
-            },
-          ],
-        ]),
-        g = (e) => {
-          const { text: t, bShowErrorInfo: a } = e,
-            i = o.useCallback(
-              (e) =>
-                new c.Ax(
-                  new c.qL(
-                    new d.So(new d.LT(), 0),
-                    e,
-                    [
-                      {
-                        urlRegExp: /youtu.be|youtube.com/i,
-                        fnBBComponent: h.V2,
-                      },
-                    ],
-                    {},
-                  ),
-                  e,
-                ),
-              [],
-            ),
-            s = o.useRef(new p.Z(f, i, l.De.LANGUAGE));
-          return o.createElement(
-            "div",
-            { className: m().FAQContainer },
-            s.current.ParseBBCode(t, { showErrorInfo: a }),
-          );
-        };
+    28735: (e) => {
+      e.exports = {
+        FAQViewPage: "Ya530FSNxJ-2gfv0qDZYH",
+        SupportTitle: "_2BcDfuiFQ7l7yWM5Sa57S0",
+        Columns: "HGDD29L4B7rnyrKITC09v",
+        LeftCol: "o2y9UpxW9WmUMsLua3flf",
+        TopColorBar: "_2n5PMCTXeqy_BxVZeg6Avp",
+        RightCol: "_2Ta3cow-y-8kUgXcCrCP97",
+        SectionCtn: "_2wa31Vkjhr311VBcF_ynDO",
+        FAQTopicCtn: "_38QJomTcPqyUVRdLpfVjGA",
+        FAQTitle: "_3aInU3KIhHHBWOSOjNvcVa",
+        FAQContent: "_2dSVnHyS9mTV4jJctbYCcy",
+      };
     },
-    70811: (e, t, a) => {
-      "use strict";
-      a.d(t, {
-        xP: () => b,
-        hS: () => S,
-        cJ: () => v,
-        wl: () => x,
-        SP: () => _,
-        EH: () => I,
-        Ky: () => A,
-        NV: () => k,
-      });
-      var o = a(85556),
-        i = a(80751),
-        s = a.n(i),
-        n = a(7587),
-        r = a(54842),
-        l = a(47427),
-        p = a(79545),
-        d = a(38071),
-        h = a(62210),
-        c = a(16997),
-        u = a(16649),
-        m = a(37563);
-      class f {
-        constructor(e, t) {
-          (this.m_mapLocalUpdates = new Map()),
-            (0, r.rC)(this),
-            (this.m_summary = e),
-            (this.m_mapStoredDrafts = t),
-            (this.m_mapLocalUpdates = new Map());
-          for (let e = 0; e < 31; e++) this.m_mapLocalUpdates.set(e, {});
-        }
-        BNeedsSaving(e) {
-          if (void 0 !== e) {
-            const t = this.m_mapLocalUpdates.get(e);
-            return !!t.strTitle || !!t.strContent;
-          }
-          return Array.from(this.m_mapLocalUpdates.values()).some(
-            (e) => !!e.strTitle || !!e.strContent,
-          );
-        }
-        async SaveDrafts() {
-          var e, t, a, o;
-          (0, h.X)(
-            Boolean(
-              null === (e = this.m_summary) || void 0 === e ? void 0 : e.faq_id,
-            ),
-            "Attempting to save when we lack a FaqID in the summary object",
-          );
-          let i = 1,
-            s = new Array();
-          for (let e = 0; e < 31; ++e)
-            if (
-              (this.m_mapLocalUpdates.get(e).strTitle &&
-                this.m_mapLocalUpdates.get(e).strTitle !==
-                  (null === (t = this.m_mapStoredDrafts.get(e)) || void 0 === t
-                    ? void 0
-                    : t.title)) ||
-              (this.m_mapLocalUpdates.get(e).strContent &&
-                this.m_mapLocalUpdates.get(e).strContent !==
-                  (null === (a = this.m_mapStoredDrafts.get(e)) || void 0 === a
-                    ? void 0
-                    : a.content))
-            ) {
-              const t = this.GetDraftTitle(e),
-                a = this.GetDraftContent(e),
-                n = b
-                  .Get()
-                  .UpdateDraft(
-                    null === (o = this.m_summary) || void 0 === o
-                      ? void 0
-                      : o.faq_id,
-                    e,
-                    t,
-                    a,
-                  );
-              n
-                .then((o) => {
-                  1 == o.eResult
-                    ? (0, r.z)(() => {
-                        this.m_mapStoredDrafts.has(e) ||
-                          this.m_mapStoredDrafts.set(e, {}),
-                          (this.m_mapStoredDrafts.get(e).title = t),
-                          (this.m_mapStoredDrafts.get(e).content = a),
-                          (this.m_mapStoredDrafts.get(e).timestamp =
-                            o.rtUpdateTime),
-                          (this.m_mapStoredDrafts.get(e).author_account_id =
-                            m.L7.accountid.toString()),
-                          (this.m_mapLocalUpdates.get(e).strTitle = null),
-                          (this.m_mapLocalUpdates.get(e).strContent = null);
-                        let i = !1;
-                        this.m_summary.per_language_info.forEach((t) => {
-                          e == t.language &&
-                            ((i = !0),
-                            (t.last_update_timestamp = Math.max(
-                              t.last_update_timestamp,
-                              o.rtUpdateTime,
-                            )));
-                        }),
-                          i ||
-                            this.m_summary.per_language_info.push({
-                              language: e,
-                              last_update_timestamp: o.rtUpdateTime,
-                            });
-                      })
-                    : 1 == i &&
-                      (console.error(
-                        "FAQModel.SaveDraft: Response not ok " + o.eResult,
-                        o,
-                      ),
-                      (i = o.eResult));
-                })
-                .catch((e) => {
-                  console.error(
-                    "FAQModel.SaveDrafts: Hit error " + (0, u.l)(e).strErrorMsg,
-                  ),
-                    1 == i && (i = 2);
-                }),
-                s.push(n);
-            }
-          return await Promise.all(s), i;
-        }
-        GetFAQInternalName() {
-          var e;
-          return null === (e = this.m_summary) || void 0 === e
-            ? void 0
-            : e.internal_name;
-        }
-        GetDraftTitle(e) {
-          var t;
-          return null !== this.m_mapLocalUpdates.get(e).strTitle &&
-            void 0 !== this.m_mapLocalUpdates.get(e).strTitle
-            ? this.m_mapLocalUpdates.get(e).strTitle
-            : null === (t = this.m_mapStoredDrafts.get(e)) || void 0 === t
-              ? void 0
-              : t.title;
-        }
-        GetDraftContent(e) {
-          var t;
-          return null !== this.m_mapLocalUpdates.get(e).strContent &&
-            void 0 !== this.m_mapLocalUpdates.get(e).strContent
-            ? this.m_mapLocalUpdates.get(e).strContent
-            : null === (t = this.m_mapStoredDrafts.get(e)) || void 0 === t
-              ? void 0
-              : t.content;
-        }
-        GetDraftTitleWithFallback(e, t = d.IN.k_ESteamRealmGlobal) {
-          var a, o, i, s, n, r;
-          const l = t == d.IN.k_ESteamRealmChina ? 6 : 0;
-          return null !==
-            (r =
-              null !==
-                (s =
-                  null !==
-                    (o =
-                      null !== (a = this.m_mapLocalUpdates.get(e).strTitle) &&
-                      void 0 !== a
-                        ? a
-                        : this.m_mapLocalUpdates.get(l).strTitle) &&
-                  void 0 !== o
-                    ? o
-                    : null === (i = this.m_mapStoredDrafts.get(e)) ||
-                        void 0 === i
-                      ? void 0
-                      : i.title) && void 0 !== s
-                ? s
-                : null === (n = this.m_mapStoredDrafts.get(l)) || void 0 === n
-                  ? void 0
-                  : n.title) && void 0 !== r
-            ? r
-            : "";
-        }
-        GetDraftContentWithFallback(e, t = d.IN.k_ESteamRealmGlobal) {
-          var a, o, i, s, n, r;
-          const l = t == d.IN.k_ESteamRealmChina ? 6 : 0;
-          return null !==
-            (r =
-              null !==
-                (s =
-                  null !==
-                    (o =
-                      null !== (a = this.m_mapLocalUpdates.get(e).strContent) &&
-                      void 0 !== a
-                        ? a
-                        : this.m_mapLocalUpdates.get(l).strContent) &&
-                  void 0 !== o
-                    ? o
-                    : null === (i = this.m_mapStoredDrafts.get(e)) ||
-                        void 0 === i
-                      ? void 0
-                      : i.content) && void 0 !== s
-                ? s
-                : null === (n = this.m_mapStoredDrafts.get(l)) || void 0 === n
-                  ? void 0
-                  : n.content) && void 0 !== r
-            ? r
-            : "";
-        }
-        GetLastSavedDraftVersion(e) {
-          return this.m_mapStoredDrafts.get(e);
-        }
-        BHasSomeTextForLanguage(e) {
-          return Boolean(this.GetDraftContent(e) || this.GetDraftTitle(e));
-        }
-        SetDraftTitle(e, t) {
-          var a;
-          t ===
-          (null === (a = this.m_mapStoredDrafts.get(e)) || void 0 === a
-            ? void 0
-            : a.title)
-            ? (this.m_mapLocalUpdates.get(e).strTitle = null)
-            : (this.m_mapLocalUpdates.get(e).strTitle = t);
-        }
-        SetDraftContent(e, t) {
-          var a;
-          t ===
-          (null === (a = this.m_mapStoredDrafts.get(e)) || void 0 === a
-            ? void 0
-            : a.content)
-            ? (this.m_mapLocalUpdates.get(e).strContent = null)
-            : (this.m_mapLocalUpdates.get(e).strContent = t);
-        }
-        GetIncludedRealmList() {
-          const e = new Array();
-          return (
-            this.m_summary.visible_in_global_realm &&
-              e.push(d.IN.k_ESteamRealmGlobal),
-            this.m_summary.visible_in_global_realm &&
-              e.push(d.IN.k_ESteamRealmChina),
-            0 == e.length && e.push(d.IN.k_ESteamRealmGlobal),
-            (0, h.X)(
-              e.length > 0,
-              `FAQ ${this.m_summary.faq_id} is currently configured so that no realms are valid for display.`,
-            ),
-            e
-          );
-        }
-        BHasPublished() {
-          return Boolean(
-            this.m_summary.per_language_info.some(
-              (e) => !!e.last_publish_timestamp,
-            ),
-          );
-        }
-        GetLastTimeLanguageUpdated(e) {
-          var t, a;
-          return null !==
-            (a =
-              null === (t = this.GetLastSavedDraftVersion(e)) || void 0 === t
-                ? void 0
-                : t.timestamp) && void 0 !== a
-            ? a
-            : 0;
-        }
-        GetFAQID() {
-          return this.m_summary.faq_id;
-        }
-        GetSummary() {
-          return this.m_summary;
-        }
-      }
-      (0, o.gn)([r.LO], f.prototype, "m_mapLocalUpdates", void 0),
-        (0, o.gn)([c.a], f.prototype, "BHasSomeTextForLanguage", null),
-        (0, o.gn)([c.a], f.prototype, "GetLastTimeLanguageUpdated", null);
-      var g = a(77581),
-        y = a(10309);
-      class b {
-        static Get() {
-          return b.s_Singleton || (b.s_Singleton = new b()), b.s_Singleton;
-        }
-        static Init(e) {
-          b.Get().m_steamInterface = e;
-        }
-        constructor() {
-          (this.m_mapFAQSummaries = new Map()),
-            (this.m_mapFAQPublishedContent = new Map()),
-            (this.m_mapFAQDrafts = new Map()),
-            (this.m_bHasFAQEdit = !1),
-            (this.m_steamInterface = null),
-            (0, r.rC)(this),
-            "dev" == m.De.WEB_UNIVERSE && (window.g_FAQStore = this),
-            m.De.IN_STEAMUI ||
-              (this.ReadInitialPayload(), this.SetUpWebAPIInterface());
-        }
-        SetUpWebAPIInterface() {
-          const e = (0, m.kQ)("faqstore", "application_config"),
-            t = null == e ? void 0 : e.webapi_token;
-          this.m_steamInterface = new g.J(m.De.WEBAPI_BASE_URL, t);
-        }
-        ReadInitialPayload() {
-          const e = (0, m.kQ)("faqstore", "application_config");
-          if (
-            (("dev" != m.De.WEB_UNIVERSE && "beta" != m.De.WEB_UNIVERSE) ||
-              console.log("DEV_DEBUG: CFAQStore loading payload: ", e),
-            this.BIsConfigValid(e))
-          ) {
-            if (e.faqs)
-              for (const t in e.faqs) {
-                const a = e.faqs[t];
-                (null == a ? void 0 : a.faq_id) == t &&
-                  void 0 !== (null == a ? void 0 : a.language) &&
-                  (this.m_mapFAQPublishedContent.has(t) ||
-                    this.m_mapFAQPublishedContent.set(t, new Map()),
-                  this.m_mapFAQPublishedContent.get(t).set(a.language, a));
-              }
-            if (e.alldrafts)
-              for (const t in e.alldrafts) {
-                const a = e.alldrafts[t];
-                if (!(null == a ? void 0 : a.summary) || !a.draft) continue;
-                this.m_mapFAQSummaries.set(t, a.summary);
-                const o = new Map();
-                for (const e of a.draft) o.set(e.language, e);
-                this.m_mapFAQDrafts.set(
-                  t,
-                  new f(this.m_mapFAQSummaries.get(t), o),
-                );
-              }
-            if (e.allfaqs)
-              for (const t of e.allfaqs)
-                t.faq_id &&
-                  (this.m_mapFAQSummaries.has(t.faq_id) ||
-                    this.m_mapFAQSummaries.set(t.faq_id, t));
-            this.m_bHasFAQEdit = Boolean(e.has_faq_edit);
-          } else
-            "dev" == m.De.WEB_UNIVERSE &&
-              console.error("CFAQStore Invalid payload");
-        }
-        BIsConfigValid(e) {
-          const t = e;
-          return !!(
-            (t && t.faqs && "object" == typeof t.faqs) ||
-            (t.alldrafts && "object" == typeof t.alldrafts) ||
-            (t.allfaqs && Array.isArray(t.allfaqs))
-          );
-        }
-        async CreateFAQ(e) {
-          const t = p.gA.Init(y.jV);
-          t.Body().set_steamid(m.JA.CLANSTEAMID), t.Body().set_internal_name(e);
-          let a,
-            o = 2;
-          try {
-            const i = await y.KF.Create(
-              this.m_steamInterface.GetServiceTransport(),
-              t,
-            );
-            if (((o = i.GetEResult()), 1 == o)) {
-              a = i.Body().faq_id();
-              const t = { faq_id: a, internal_name: e };
-              this.m_mapFAQSummaries.set(a, t);
-            } else
-              console.error("FAQStore.CreateFAQ: Create request failed:", o);
-          } catch (e) {
-            const t = (0, u.l)(e);
-            console.error(
-              "FAQStore.CreateFAQ: caught error " + t.strErrorMsg,
-              t,
-            );
-          }
-          return { eResult: o, strFaqId: a };
-        }
-        async UpdateDraft(e, t, a, o) {
-          const i = p.gA.Init(y.Go);
-          i.Body().set_steamid(m.JA.CLANSTEAMID),
-            i.Body().set_faq_id(e),
-            i.Body().set_language(t),
-            i.Body().set_content(o),
-            i.Body().set_title(a);
-          let s = 2,
-            n = 0;
-          try {
-            const e = await y.KF.UpdateDraft(
-              this.m_steamInterface.GetServiceTransport(),
-              i,
-            );
-            (s = e.GetEResult()),
-              1 != s
-                ? console.error("FAQStore.UpdateDraft request failed:", s)
-                : (n = e.Body().last_update_timestamp());
-          } catch (e) {
-            const t = (0, u.l)(e);
-            console.error(
-              "FAQStore.UpdateDraft: caught error " + t.strErrorMsg,
-              t,
-            );
-          }
-          return { eResult: s, rtUpdateTime: n };
-        }
-        async UpdateJsonData(e, t) {
-          const a = JSON.stringify(t),
-            o = p.gA.Init(y.F2);
-          o.Body().set_steamid(m.JA.CLANSTEAMID),
-            o.Body().set_faq_id(e),
-            o.Body().set_json_data(a);
-          let i = 2;
-          try {
-            (i = (
-              await y.KF.UpdateJsonData(
-                this.m_steamInterface.GetServiceTransport(),
-                o,
-              )
-            ).GetEResult()),
-              1 != i
-                ? console.error("FAQStore.UpdateJsonData request failed:", i)
-                : (this.m_mapFAQSummaries.get(e).json_data = a);
-          } catch (e) {
-            const t = (0, u.l)(e);
-            console.error(
-              "FAQStore.UpdateJsonData: caught error " + t.strErrorMsg,
-              t,
-            );
-          }
-          return i;
-        }
-        async GetFAQVersion(e, t, a) {
-          const o = p.gA.Init(y.dp);
-          o.Body().set_steamid(m.JA.CLANSTEAMID),
-            o.Body().set_faq_id(e),
-            o.Body().set_version(t),
-            o.Body().set_language(a);
-          try {
-            const e = await y.KF.GetFAQVersion(
-                this.m_steamInterface.GetServiceTransport(),
-                o,
-              ),
-              t = e.GetEResult();
-            if (1 == t) return e.Body().faq().toObject();
-            console.error("FAQStore.GetFAQVersion request failed:", t);
-          } catch (e) {
-            const t = (0, u.l)(e);
-            console.error(
-              "FAQStore.GetFAQVersion: caught error " + t.strErrorMsg,
-              t,
-            );
-          }
-          return null;
-        }
-        async DeleteFAQ(e) {
-          const t = p.gA.Init(y.$H);
-          t.Body().set_steamid(m.JA.CLANSTEAMID), t.Body().set_faq_id(e);
-          let a = 2;
-          try {
-            (a = (
-              await y.KF.Delete(this.m_steamInterface.GetServiceTransport(), t)
-            ).GetEResult()),
-              1 != a
-                ? console.error("FAQStore.DeleteFAQ request failed:", a)
-                : (this.m_mapFAQDrafts.delete(e),
-                  this.m_mapFAQPublishedContent.delete(e),
-                  this.m_mapFAQSummaries.delete(e));
-          } catch (e) {
-            const t = (0, u.l)(e);
-            console.error(
-              "FAQStore.DeleteFAQ: caught error " + t.strErrorMsg,
-              t,
-            );
-          }
-          return a;
-        }
-        GetFAQPublishedContent(e, t) {
-          const a = this.m_mapFAQPublishedContent.get(e);
-          if (!a) return null;
-          let o = a.get(t);
-          return (
-            !o &&
-              b.sm_mapFallbackLanguages.has(t) &&
-              (o = a.get(b.sm_mapFallbackLanguages.get(t))),
-            o || 0 == t || (0, m.h4)() || (o = a.get(0)),
-            o
-          );
-        }
-        GetFAQDraftContent(e) {
-          return this.m_mapFAQDrafts.get(e);
-        }
-        GetAllFAQSummaries() {
-          return Array.from(this.m_mapFAQSummaries.values());
-        }
-        GetFAQArticleSummary(e) {
-          return this.m_mapFAQSummaries.get(e) || {};
-        }
-        async LoadFAQDraftContent(e) {
-          if (this.m_mapFAQDrafts.has(e)) return this.m_mapFAQDrafts.get(e);
-          const t = p.gA.Init(y.hU);
-          t.Body().set_steamid(m.JA.CLANSTEAMID), t.Body().set_faq_id(e);
-          let a = 2;
-          try {
-            const o = await y.KF.GetAllDrafts(
-              this.m_steamInterface.GetServiceTransport(),
-              t,
-            );
-            if (((a = o.GetEResult()), 1 != a))
-              return (
-                console.error(
-                  "FaqStore.LoadFAQDraftContent request failed:",
-                  a,
-                ),
-                null
-              );
-            {
-              const t = o.Body().summary().toObject();
-              this.m_mapFAQSummaries.set(e, t);
-              const a = new Map();
-              o.Body()
-                .draft()
-                .forEach((e) => a.set(e.language(), e.toObject()));
-              const i = new f(this.m_mapFAQSummaries.get(e), a);
-              return this.m_mapFAQDrafts.set(e, i), i;
-            }
-          } catch (e) {
-            const t = (0, u.l)(e);
-            console.error(
-              "FaqStore.LoadFAQDraftContent: exception " + t.strErrorMsg,
-              t,
-            );
-          }
-          return null;
-        }
-        async UpdateVisibility(e, t, a) {
-          const o = p.gA.Init(y.tv);
-          o.Body().set_steamid(m.JA.CLANSTEAMID),
-            o.Body().set_faq_id(e),
-            o.Body().set_visible_in_global_realm(t),
-            o.Body().set_visible_in_china_realm(a);
-          let i = 2;
-          try {
-            if (
-              ((i = (
-                await y.KF.SetVisibility(
-                  this.m_steamInterface.GetServiceTransport(),
-                  o,
-                )
-              ).GetEResult()),
-              1 === i)
-            ) {
-              const o = this.m_mapFAQSummaries.get(e);
-              o &&
-                ((o.visible_in_global_realm = t),
-                (o.visible_in_china_realm = a),
-                this.m_mapFAQSummaries.set(e, o));
-            } else console.error("FaqStore.UpdateVisibility: Failed " + i);
-          } catch (e) {
-            const t = (0, u.l)(e);
-            console.error(
-              "FaqStore.UpdateVisibility: exception " + t.strErrorMsg,
-              t,
-            );
-          }
-          return i;
-        }
-        async PublishDraftByLanguage(e, t) {
-          if (!t || 0 == t.length) return 1;
-          const a = p.gA.Init(y.SU);
-          a.Body().set_steamid(m.JA.CLANSTEAMID),
-            a.Body().set_faq_id(e),
-            t.forEach((e) => a.Body().add_language(e));
-          let o = 2;
-          try {
-            const i = await y.KF.PublishDraft(
-              this.m_steamInterface.GetServiceTransport(),
-              a,
-            );
-            if (((o = i.GetEResult()), 1 === o)) {
-              const a = this.m_mapFAQSummaries.get(e);
-              a &&
-                (0, r.z)(() => {
-                  this.m_mapFAQPublishedContent.has(e) ||
-                    this.m_mapFAQPublishedContent.set(e, new Map()),
-                    a.per_language_info.forEach((a) => {
-                      var o;
-                      const s = a.language;
-                      if (t.indexOf(s) >= 0) {
-                        a.last_publish_timestamp = Math.max(
-                          a.last_publish_timestamp,
-                          i.Body().last_publish_timestamp(),
-                        );
-                        const t =
-                          null === (o = this.m_mapFAQDrafts.get(e)) ||
-                          void 0 === o
-                            ? void 0
-                            : o.GetLastSavedDraftVersion(s);
-                        this.m_mapFAQPublishedContent.get(e).set(s, t);
-                      }
-                    });
-                });
-            } else
-              console.error("FaqStore.PublishDraftByLanguage: Failed " + o);
-          } catch (e) {
-            const t = (0, u.l)(e);
-            console.error(
-              "FaqStore.PublishDraftByLanguage: exception " + t.strErrorMsg,
-              t,
-            );
-          }
-          return o;
-        }
-        async UpdateInternalName(e, t) {
-          const a = p.gA.Init(y.sL);
-          a.Body().set_steamid(m.JA.CLANSTEAMID),
-            a.Body().set_faq_id(e),
-            a.Body().set_internal_name(t);
-          let o = 2;
-          try {
-            (o = (
-              await y.KF.UpdateInternalName(
-                this.m_steamInterface.GetServiceTransport(),
-                a,
-              )
-            ).GetEResult()),
-              1 === o
-                ? (0, r.z)(() => {
-                    var a, o, i;
-                    (null === (a = this.m_mapFAQSummaries.get(e)) ||
-                    void 0 === a
-                      ? void 0
-                      : a.internal_name) &&
-                      (this.m_mapFAQSummaries.get(e).internal_name = t),
-                      (null ===
-                        (i =
-                          null === (o = this.m_mapFAQDrafts.get(e)) ||
-                          void 0 === o
-                            ? void 0
-                            : o.GetSummary()) || void 0 === i
-                        ? void 0
-                        : i.internal_name) &&
-                        (this.m_mapFAQDrafts.get(e).GetSummary().internal_name =
-                          t);
-                  })
-                : console.error("FaqStore.UpdateInternalName: Failed " + o);
-          } catch (e) {
-            const t = (0, u.l)(e);
-            console.error(
-              "FaqStore.UpdateInternalName: exception " + t.strErrorMsg,
-              t,
-            );
-          }
-          return o;
-        }
-        GetLoadedDraftObjs() {
-          return Array.from(this.m_mapFAQDrafts.values());
-        }
-        RemoveAllDirtyDrafts() {
-          var e, t;
-          const a =
-            null ===
-              (t =
-                null === (e = this.GetLoadedDraftObjs()) || void 0 === e
-                  ? void 0
-                  : e.filter((e) => e.BNeedsSaving())) || void 0 === t
-              ? void 0
-              : t.map((e) => e.GetFAQID());
-          null == a || a.forEach((e) => this.m_mapFAQDrafts.delete(e));
-        }
-        BHasFAQEdit() {
-          return this.m_bHasFAQEdit;
-        }
-        async ExportEnglishDraftToCrowdin(e) {
-          const t =
-            m.De.COMMUNITY_BASE_URL +
-            "faqs/" +
-            m.JA.VANITY_ID +
-            "/ajaxpushtocrowdin/" +
-            S(e);
-          await s().get(t);
-        }
-        async ImportNonEnglishDraftsFromCrowdin(e, t, a) {
-          var o, i;
-          const n =
-              m.De.COMMUNITY_BASE_URL +
-              "faqs/" +
-              m.JA.VANITY_ID +
-              "/ajaxpullfromcrowdin/" +
-              S(e),
-            r = new FormData();
-          r.append("sessionid", m.De.SESSIONID),
-            r.append("languages", t.join(","));
-          let l = null;
-          try {
-            const t = await s().post(n, r, {
-              withCredentials: !0,
-              cancelToken: null == a ? void 0 : a.token,
-            });
-            if (
-              200 == (null == t ? void 0 : t.status) &&
-              1 == (null === (o = t.data) || void 0 === o ? void 0 : o.success)
-            ) {
-              const a = t.data.updated,
-                o =
-                  null !== (i = null == a ? void 0 : a[e]) && void 0 !== i
-                    ? i
-                    : [];
-              return (
-                o.length > 0 &&
-                  (this.m_mapFAQSummaries.has(e) ||
-                    this.m_mapFAQDrafts.has(e)) &&
-                  (this.m_mapFAQDrafts.delete(e),
-                  await this.LoadFAQDraftContent(e)),
-                o
-              );
-            }
-            l = { response: t };
-          } catch (e) {
-            l = e;
-          }
-          const p = (0, u.l)(l);
-          return (
-            console.error("Could not import from crowdin", e, p.strErrorMsg, p),
-            []
-          );
-        }
-        BHasLiveEnglishVersion(e) {
-          return this.m_mapFAQSummaries
-            .get(e)
-            .per_language_info.some(
-              (e) => 0 == e.language && e.last_publish_timestamp > 0,
-            );
-        }
-        GetNonEnglishDraftsToPublish(e) {
-          return this.m_mapFAQSummaries
-            .get(e)
-            .per_language_info.filter((e) => {
-              var t;
-              return (
-                0 != e.language &&
-                e.last_update_timestamp >
-                  (null !== (t = e.last_publish_timestamp) && void 0 !== t
-                    ? t
-                    : 0)
-              );
-            })
-            .map((e) => e.language);
-        }
-      }
-      (b.sm_mapFallbackLanguages = new Map([
-        [5, 27],
-        [27, 5],
-        [29, 6],
-      ])),
-        (0, o.gn)([r.LO], b.prototype, "m_mapFAQSummaries", void 0),
-        (0, o.gn)([r.aD], b.prototype, "RemoveAllDirtyDrafts", null);
-      const w = /^[0-9a-fA-F]+$/;
-      function v(e) {
-        const t = null == e ? void 0 : e.replace(/-/g, "");
-        if (16 != (null == t ? void 0 : t.length) || !w.test(t)) return null;
-        return n.Z.fromString(t, !0, 16).toString();
-      }
-      function S(e) {
-        const t = ("0000000000000000" + n.Z.fromString(e, !0, 10).toString(16))
-          .slice(-16)
-          .toUpperCase();
-        return `${t.slice(0, 4)}-${t.slice(4, 8)}-${t.slice(8, 12)}-${t.slice(12, 16)}`;
-      }
-      function k(e, t) {
-        return [e && b.Get().GetFAQPublishedContent(e, t), !0];
-      }
-      function x(e) {
-        const [t, a] = l.useState(b.Get().GetFAQDraftContent(e)),
-          [o, i] = l.useState(!!t);
-        return (
-          (0, l.useEffect)(() => {
-            b.Get()
-              .LoadFAQDraftContent(e)
-              .then((e) => a(e))
-              .finally(() => i(!0));
-          }, [e]),
-          [t, o]
-        );
-      }
-      function I(e) {
-        return [b.Get().GetFAQArticleSummary(e), !0];
-      }
-      function _() {
-        const e = b.Get().GetAllFAQSummaries();
-        return l.useRef([e, !0]).current;
-      }
-      function A(e, t, a) {
-        const [o, i] = l.useState(null),
-          [s, n] = l.useState(!1);
-        return (
-          (0, l.useEffect)(() => {
-            b.Get().BHasFAQEdit() &&
-              b
-                .Get()
-                .GetFAQVersion(e, t, a)
-                .then((e) => i(e))
-                .finally(() => n(!0));
-          }, [e, t, a]),
-          [o, s]
-        );
-      }
+    20572: (e) => {
+      e.exports = { InfoRow: "_3AG-7BbBE7Sw0efJrEb417" };
     },
-    85857: (e, t, a) => {
+    66891: (e) => {
+      e.exports = {
+        Section: "_3S-XzUnd8sYIE7sDuLmpPo",
+        CommunityHelp: "_2TGFIDdCmMB614_-hieBc7",
+        NeedHelp: "_1DywXfNVrbQvDpTJXgd18z",
+        LeftCol: "_3gfCnqvp6FV0m9PqL9XMq",
+        TopicHeader: "_3X6huZLPQI8y6LirxSv4Gy",
+        CenterButtonCtn: "_3sZ58WE85Tqs8Bv8g-quYc",
+      };
+    },
+    15736: (e) => {
+      e.exports = { SmallAvatar: "_2cuu0nLVc4medg6FpU6PQl" };
+    },
+    30436: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { FAQRoutes: () => Mt, default: () => Et });
+      a.r(t), a.d(t, { FAQRoutes: () => Mt, default: () => zt });
       var o,
-        i = a(27605),
-        s = a(47427),
-        n = a(19178),
-        r = a(19941),
-        l = a(77936),
-        p = a(70811),
-        d = a(8285),
-        h = a(28017),
-        c = a(37563);
+        i = a(75844),
+        s = a(90626),
+        n = a(67998),
+        r = a(17909),
+        l = a(22837),
+        p = a(54137),
+        d = a(92757),
+        h = a(17083),
+        c = a(78327);
       !(function (e) {
         (e.k_eView = "view"),
           (e.k_eCommunityView = "communityview"),
@@ -1105,43 +178,43 @@
         const { route: t, faqid: a } = e,
           o = m(t, a);
         return e.bForceRedirect
-          ? s.createElement(d.l_, { push: !0, to: o })
+          ? s.createElement(d.rd, { push: !0, to: o })
           : e.bForceAnchor
             ? s.createElement(
                 "a",
                 {
-                  href: c.De.COMMUNITY_BASE_URL.slice(0, -1) + o,
+                  href: c.TS.COMMUNITY_BASE_URL.slice(0, -1) + o,
                   className: e.className,
                 },
                 e.children,
               )
             : s.createElement(
-                h.rU,
+                h.N_,
                 { to: o, className: e.className },
                 e.children,
               );
       };
       function m(e, t) {
-        let a = "/faqs/" + c.JA.VANITY_ID + "/";
+        let a = "/faqs/" + c.UF.VANITY_ID + "/";
         switch (e) {
           case o.k_eView:
           case o.k_eCommunityView:
-            a += "view/" + (0, p.hS)(t);
+            a += "view/" + (0, p.Wj)(t);
             break;
           case o.k_eCommunityEdit:
-            a += "edit/" + (0, p.hS)(t);
+            a += "edit/" + (0, p.Wj)(t);
             break;
           case o.k_eCommunityDashboard:
             a += "dashboard";
             break;
           case o.k_eCommunityPreview:
-            a += "preview/" + (0, p.hS)(t);
+            a += "preview/" + (0, p.Wj)(t);
         }
         return a;
       }
-      var f = a(13129),
-        g = a(16649),
-        y = a(96680),
+      var f = a(52038),
+        g = a(68797),
+        y = a(91348),
         b = a.n(y);
       const w = [
           [
@@ -8217,8 +7290,8 @@
             "",
           ],
         ],
-        v = (0, i.Pi)((e) => {
-          const [t, a] = (0, p.SP)(),
+        v = (0, i.PA)((e) => {
+          const [t, a] = (0, p.cf)(),
             [o, i] = s.useState(null),
             [n, r] = s.useState(new Map()),
             [l, d] = s.useState(new Map()),
@@ -8332,7 +7405,7 @@
       async function k(e, t) {
         var a, o, i, d, h, c, u, m, f, g;
         const y = new Array(31),
-          b = await p.xP.Get().LoadFAQDraftContent(e),
+          b = await p.pN.Get().LoadFAQDraftContent(e),
           w =
             null !==
               (d =
@@ -8372,7 +7445,7 @@
                   (m =
                     null ===
                       (u = n
-                        .renderToString(s.createElement(r.R, { text: a }))
+                        .renderToString(s.createElement(r.u, { text: a }))
                         .match(S)) || void 0 === u
                       ? void 0
                       : u.length) && void 0 !== m
@@ -8390,12 +7463,12 @@
             0 == o && p > 0.95 && p < 1.05
               ? (y[e] = "good")
               : o > 0
-                ? (console.log((0, l.j_)(e), v, o, "unrendered"),
+                ? (console.log((0, l.Lg)(e), v, o, "unrendered"),
                   (y[e] = "badimport"))
                 : p > 0.6 && p < 1.5
-                  ? (console.log((0, l.j_)(e), v, "tag ratio:", p),
+                  ? (console.log((0, l.Lg)(e), v, "tag ratio:", p),
                     (y[e] = "suspicious"))
-                  : (console.log((0, l.j_)(e), v, "tag ratio (BAD):", p),
+                  : (console.log((0, l.Lg)(e), v, "tag ratio (BAD):", p),
                     (y[e] = "bad"));
           } else y[e] = "missing";
         }
@@ -8412,9 +7485,9 @@
           d =
             (null == i || i.faq_id,
             (null == i ? void 0 : i.faq_id) &&
-              c.De.COMMUNITY_BASE_URL.substr(
+              c.TS.COMMUNITY_BASE_URL.substr(
                 0,
-                c.De.COMMUNITY_BASE_URL.length - 1,
+                c.TS.COMMUNITY_BASE_URL.length - 1,
               ) + m(o.k_eCommunityPreview, i.faq_id)),
           h = new Array(32);
         for (let e = 0; e < 31; e++) {
@@ -8423,7 +7496,7 @@
               void 0 !== t
                 ? t
                 : 0) && n[e],
-            o = (0, f.Z)(
+            o = (0, f.A)(
               b().ShortCode,
               !a && b().Missing,
               "good" == (null == r ? void 0 : r[e]) && b().Good,
@@ -8434,8 +7507,8 @@
             );
           h[I[e]] = s.createElement(
             "a",
-            { key: "loc-" + e, className: o, href: d + "?l=" + (0, l.j_)(e) },
-            (0, l.dt)(e),
+            { key: "loc-" + e, className: o, href: d + "?l=" + (0, l.Lg)(e) },
+            (0, l.ww)(e),
           );
         }
         return s.createElement(
@@ -8458,7 +7531,7 @@
               "a",
               { className: b().Ref, href: d },
               " ",
-              (0, p.hS)(i.faq_id),
+              (0, p.Wj)(i.faq_id),
             ),
           h,
         );
@@ -8467,46 +7540,46 @@
         0, 9, 8, 12, 14, 21, 2, 3, 20, 24, 13, 17, 16, 5, 6, 7, 15, 23, 11, 4,
         19, 25, 18, 1, 10, 28, 26, 22, 27, 29,
       ];
-      var _ = a(1485),
-        A = a(50898),
-        C = a(90069),
-        T = a(62613),
-        P = a(46882),
-        D = a(59728),
-        q = a(31846),
-        M = a(45284),
-        E = a(54057),
-        z = a.n(E),
-        F = a(54842),
-        W = a(74736),
-        R = a.n(W),
-        N = a(35427),
-        O = a(71741),
-        L = a.n(O),
-        H = a(84996),
-        V = a(29480),
-        G = a(50423),
-        U = a(12251),
-        B = a(45070),
-        j = a(26461),
-        Y = a(51915);
+      var _ = a(7068),
+        A = a(21273),
+        C = a(738),
+        T = a(12155),
+        P = a(22797),
+        D = a(32754),
+        q = a(61859),
+        M = a(41338),
+        z = a(11259),
+        E = a.n(z),
+        W = a(14947),
+        F = a(37739),
+        O = a.n(F),
+        N = a(17720),
+        R = a(95695),
+        L = a.n(R),
+        H = a(25228),
+        V = a(4434),
+        G = a(56011),
+        U = a(91675),
+        B = a(87669),
+        j = a(93084),
+        Y = a(41471);
       const X = "title",
         Q = "content";
       const $ = (e) => {
           const { draft: t, eLanguage: a } = e;
           return s.createElement(
             "div",
-            { className: O.FlexRowContainer },
+            { className: R.FlexRowContainer },
             s.createElement(Z, { draft: t, eLanguage: a }),
-            s.createElement(H.Q0, {
-              strToolTip: (0, q.Xx)("#FAQEditor_Loc_Import_ttip"),
-              strLabel: (0, q.Xx)("#EventEditor_Loc_Import_Short"),
+            s.createElement(H.t3, {
+              strToolTip: (0, q.we)("#FAQEditor_Loc_Import_ttip"),
+              strLabel: (0, q.we)("#EventEditor_Loc_Import_Short"),
               fnOnImportLocData: (e, a) =>
                 (function (e, t, a) {
                   const o = new Set(),
                     i = t.GetSortedTokenList();
                   return (
-                    (0, F.z)(() => {
+                    (0, W.h5)(() => {
                       a.forEach((a) => {
                         let s = !1;
                         i.forEach((o) => {
@@ -8535,32 +7608,32 @@
           const { draft: t } = e;
           return s.createElement(
             "div",
-            { className: O.FlexRowContainer },
+            { className: R.FlexRowContainer },
             s.createElement(
               "div",
               {
-                className: O.EditPreviewButton,
+                className: R.EditPreviewButton,
                 onClick: (e) => {
-                  (0, C.AM)(
+                  (0, C.pg)(
                     s.createElement(J, { direction: "export", draft: t }, " "),
-                    (0, G.RA)(e),
+                    (0, G.uX)(e),
                   );
                 },
               },
-              (0, q.Xx)("#EventEditor_Loc_Export_Short"),
+              (0, q.we)("#EventEditor_Loc_Export_Short"),
             ),
             s.createElement(
               "div",
               {
-                className: O.EditPreviewButton,
+                className: R.EditPreviewButton,
                 onClick: (e) => {
-                  (0, C.AM)(
+                  (0, C.pg)(
                     s.createElement(J, { direction: "import", draft: t }, " "),
-                    (0, G.RA)(e),
+                    (0, G.uX)(e),
                   );
                 },
               },
-              (0, q.Xx)("#EventEditor_Loc_Import_Short"),
+              (0, q.we)("#EventEditor_Loc_Import_Short"),
             ),
           );
         },
@@ -8570,12 +7643,12 @@
             [r, l] = s.useState(new Array()),
             d =
               (i || r.length,
-              (0, q.Xx)(
+              (0, q.we)(
                 "import" == a
                   ? "#EventEditor_Loc_CrowdinIntegration_ImportTitle"
                   : "#EventEditor_Loc_CrowdinIntegration_ExportTitle",
               )),
-            h = (0, q.Xx)(
+            h = (0, q.we)(
               "import" == a
                 ? "#EventEditor_Loc_Import_Crowdin_Confirm"
                 : "#EventEditor_Loc_Export_Crowdin_Confirm",
@@ -8590,7 +7663,7 @@
                   })
                 : null;
           return s.createElement(
-            A.uH,
+            A.o0,
             {
               className: j.LanguageListDialog,
               closeModal: t,
@@ -8600,10 +7673,10 @@
                 n(!0);
                 try {
                   "import" == a
-                    ? await p.xP
+                    ? await p.pN
                         .Get()
                         .ImportNonEnglishDraftsFromCrowdin(o.GetFAQID(), r)
-                    : await p.xP
+                    : await p.pN
                         .Get()
                         .ExportEnglishDraftToCrowdin(o.GetFAQID());
                 } catch (e) {
@@ -8613,31 +7686,31 @@
               },
               bOKDisabled: i,
             },
-            i ? s.createElement(P.V, { position: "center" }) : c,
+            i ? s.createElement(P.t, { position: "center" }) : c,
           );
         },
         Z = (e) => {
           const { draft: t, eLanguage: a } = e;
           return s.createElement(
-            D.HP,
-            { toolTipContent: (0, q.Xx)("#FAQEditor_Loc_Export_ttip") },
+            D.he,
+            { toolTipContent: (0, q.we)("#FAQEditor_Loc_Export_ttip") },
             s.createElement(
               "div",
               {
-                className: O.EditPreviewButton,
+                className: R.EditPreviewButton,
                 onClick: (e) => {
-                  (0, C.AM)(
+                  (0, C.pg)(
                     s.createElement(
-                      A.uH,
+                      A.o0,
                       {
-                        strTitle: (0, q.Xx)("#EventEditor_Loc_Export"),
+                        strTitle: (0, q.we)("#EventEditor_Loc_Export"),
                         bAlertDialog: !0,
                       },
-                      s.createElement(H.Gp, {
+                      s.createElement(H.Yg, {
                         fnGetLocData: () =>
                           (function (e, t) {
                             var a, o;
-                            let i = new B.C();
+                            let i = new B.G();
                             for (let s = 0; s < 31; ++s)
                               (e.BHasSomeTextForLanguage(s) || 0 == t) &&
                                 (i.SetLocalization(
@@ -8664,11 +7737,11 @@
                         lang: a,
                       }),
                     ),
-                    (0, G.RA)(e),
+                    (0, G.uX)(e),
                   );
                 },
               },
-              (0, q.Xx)("#EventEditor_Loc_Export_Short"),
+              (0, q.we)("#EventEditor_Loc_Export_Short"),
             ),
           );
         },
@@ -8717,17 +7790,17 @@
               s.createElement(
                 "div",
                 { className: j.Language },
-                (0, q.Xx)("#FAQCrowdin_LanguageHeader"),
+                (0, q.we)("#FAQCrowdin_LanguageHeader"),
               ),
               s.createElement(
                 "div",
                 { className: j.Timestamp },
-                (0, q.Xx)("#FAQCrowdin_DraftTimestampHeader"),
+                (0, q.we)("#FAQCrowdin_DraftTimestampHeader"),
               ),
             ),
-            s.createElement(_.ji, {
+            s.createElement(_.Yh, {
               className: j.CheckAll,
-              label: (0, q.Xx)("#FAQCrowdin_SelectAllCheckboxes"),
+              label: (0, q.we)("#FAQCrowdin_SelectAllCheckboxes"),
               onChange: (e) => {
                 i(e ? a.slice() : []);
               },
@@ -8740,7 +7813,7 @@
                 : s.createElement(
                     "div",
                     null,
-                    (0, q.Xx)("#FAQCrowdin_NoDraftFound"),
+                    (0, q.we)("#FAQCrowdin_NoDraftFound"),
                   ),
             ),
           );
@@ -8750,32 +7823,32 @@
           const { draft: a, eLang: o, bInitialState: i, fnOnChecked: n } = e,
             r = a.GetLastSavedDraftVersion(o),
             p = r
-              ? N.K.InitFromAccountID(Number.parseInt(r.author_account_id))
+              ? N.b.InitFromAccountID(Number.parseInt(r.author_account_id))
               : null,
-            { data: d } = (0, Y.IE)(p.GetAccountID()),
+            { data: d } = (0, Y.js)(p.GetAccountID()),
             h = r
-              ? (0, q.Xx)(
+              ? (0, q.we)(
                   "#FAQCrowdin_SavedAtTimeByAuthor",
-                  (0, q.$1)(r.timestamp) +
+                  (0, q.TW)(r.timestamp) +
                     " @ " +
-                    (0, U.Sc)(r.timestamp, { bForce24HourClock: !1 }),
+                    (0, U.KC)(r.timestamp, { bForce24HourClock: !1 }),
                   null !== (t = null == d ? void 0 : d.m_strPlayerName) &&
                     void 0 !== t
                     ? t
                     : r.author_account_id,
                 )
-              : (0, q.Xx)("#FAQCrowdin_NoDraftFound"),
+              : (0, q.we)("#FAQCrowdin_NoDraftFound"),
             c = s.createElement(
               "div",
               { className: j.LanguageCheckboxLabel },
               s.createElement(
                 "div",
                 { className: j.Language },
-                (0, q.Xx)("#Language_" + (0, l.j_)(o)),
+                (0, q.we)("#Language_" + (0, l.Lg)(o)),
               ),
               s.createElement("div", { className: j.Timestamp }, h),
             );
-          return s.createElement(_.ji, {
+          return s.createElement(_.Yh, {
             className: j.LanguageCheckbox,
             label: c,
             checked: i,
@@ -8783,59 +7856,59 @@
           });
         };
       function ie(e) {
-        const [t, a] = (0, p.SP)(),
+        const [t, a] = (0, p.cf)(),
           [o, i] = s.useState(0),
           [n, r] = s.useState(!1),
           [d, h] = s.useState(!1),
           [c, u] = s.useState(null),
-          m = (0, V.T)("CrowdinImportDialog"),
+          m = (0, V.m)("CrowdinImportDialog"),
           f = s.useRef([]);
         if (c)
-          return s.createElement(A.uH, {
-            strTitle: (0, q.Xx)("#FAQDashboard_CrowdinToolTitle"),
+          return s.createElement(A.o0, {
+            strTitle: (0, q.we)("#FAQDashboard_CrowdinToolTitle"),
             strDescription: c,
             bAlertDialog: !0,
             bDestructiveWarning: !0,
             closeModal: e.closeModal,
           });
         if (d)
-          return s.createElement(A.uH, {
-            strTitle: (0, q.Xx)("#FAQDashboard_CrowdinToolTitle"),
-            strDescription: (0, q.Xx)("#FAQDashboard_PublishComplete"),
+          return s.createElement(A.o0, {
+            strTitle: (0, q.we)("#FAQDashboard_CrowdinToolTitle"),
+            strDescription: (0, q.we)("#FAQDashboard_PublishComplete"),
             bAlertDialog: !0,
             closeModal: e.closeModal,
           });
         const g = (100 * (o + 0.5)) / t.length,
           y = t[o].internal_name;
         return s.createElement(
-          A.RG,
+          A.eV,
           { ...e, onCancel: () => m.cancel("CrowdinImportDialog cancelled") },
           s.createElement(
-            _.h4,
+            _.Y9,
             null,
-            (0, q.Xx)("#FAQDashboard_CrowdinToolTitle"),
+            (0, q.we)("#FAQDashboard_CrowdinToolTitle"),
           ),
           s.createElement(
-            _.uT,
+            _.nB,
             null,
             s.createElement(
-              _.Ac,
+              _.a3,
               null,
-              (0, q.Xx)(
+              (0, q.we)(
                 "#FAQDashboard_CrowdinToolInstructionsWithCount",
                 t.length,
               ),
               s.createElement(
                 "div",
                 { className: j.Warning },
-                (0, q.Xx)("#FAQDashboard_CrowdinToolWarning"),
+                (0, q.we)("#FAQDashboard_CrowdinToolWarning"),
               ),
             ),
             s.createElement(
-              _.Ac,
+              _.a3,
               null,
               s.createElement(
-                _.zx,
+                _.$n,
                 {
                   onClick: async () => {
                     r(!0);
@@ -8847,20 +7920,20 @@
                       for (let e = 0; e < te.length; e += s) {
                         const t = te.slice(e, e + s);
                         o.push(
-                          p.xP
+                          p.pN
                             .Get()
                             .ImportNonEnglishDraftsFromCrowdin(a.faq_id, t, m),
                         );
                       }
                       await Promise.all(o),
-                        p.xP.Get().BHasLiveEnglishVersion(a.faq_id)
-                          ? ((f.current[e] = p.xP
+                        p.pN.Get().BHasLiveEnglishVersion(a.faq_id)
+                          ? ((f.current[e] = p.pN
                               .Get()
                               .GetNonEnglishDraftsToPublish(a.faq_id)),
                             console.log(
                               "Going to publish FAQ",
                               a.faq_id,
-                              f.current[e].map((e) => (0, l.j_)(e)),
+                              f.current[e].map((e) => (0, l.Lg)(e)),
                             ))
                           : console.log(
                               "No live english version for:",
@@ -8872,13 +7945,13 @@
                         o = f.current[e];
                       if ((null == o ? void 0 : o.length) > 0) {
                         i(e);
-                        const t = await p.xP
+                        const t = await p.pN
                           .Get()
                           .PublishDraftByLanguage(a.faq_id, o);
                         if (m.token.reason) return;
                         if (1 != t)
                           return void u(
-                            (0, q.Xx)("#FAQDashboard_PublishFailed"),
+                            (0, q.we)("#FAQDashboard_PublishFailed"),
                           );
                       }
                     }
@@ -8886,7 +7959,7 @@
                   },
                   disabled: n,
                 },
-                (0, q.Xx)("#FAQDashboard_UpdateAllFAQsButton"),
+                (0, q.we)("#FAQDashboard_UpdateAllFAQsButton"),
               ),
               n && s.createElement(se, { nProgressPct: g, strCurrentLabel: y }),
               f.current.length > 0 &&
@@ -8913,25 +7986,25 @@
           s.createElement(
             "div",
             { className: j.CurrentFAQ },
-            (0, q.Xx)("#FAQDashboard_CrowdinToolProgress", a),
+            (0, q.we)("#FAQDashboard_CrowdinToolProgress", a),
           ),
         );
       }
       function ne(e) {
         const { rgUpdatedLanguagesForAllFAQs: t } = e,
-          [a, o] = (0, p.SP)();
+          [a, o] = (0, p.cf)();
         return s.createElement(
           "div",
           { className: j.ImportResults },
           s.createElement(
             "div",
             { className: j.ImportResultLabel },
-            (0, q.Xx)("#FAQDashboard_CrowdinToolResultsLabel"),
+            (0, q.we)("#FAQDashboard_CrowdinToolResultsLabel"),
           ),
           t.map((e, t) => {
             const o = a[t];
             if (0 == e.length) return null;
-            const i = e.map((e) => (0, l.dt)(e)).join(",");
+            const i = e.map((e) => (0, l.ww)(e)).join(",");
             return s.createElement(
               "div",
               { key: o.faq_id },
@@ -8939,20 +8012,20 @@
                 "div",
                 { className: j.ImportResult },
                 s.createElement(
-                  D.HP,
+                  D.he,
                   {
                     toolTipContent: o.internal_name,
-                    strTooltipClassname: R().HoverAboveModal,
+                    strTooltipClassname: O().HoverAboveModal,
                     nAllowOffscreenPx: 4e4,
                     className: j.UrlCode,
                   },
                   o.url_code + ": ",
                 ),
                 s.createElement(
-                  D.HP,
+                  D.he,
                   {
                     toolTipContent: i,
-                    strTooltipClassname: R().HoverAboveModal,
+                    strTooltipClassname: O().HoverAboveModal,
                     nAllowOffscreenPx: 4e4,
                     direction: "left",
                     className: j.LanguageList,
@@ -8964,10 +8037,10 @@
           }),
         );
       }
-      var re = a(24827),
-        le = a(81602),
+      var re = a(76684),
+        le = a(55351),
         pe = a.n(le),
-        de = a(26334),
+        de = a(3063),
         he = a.n(de);
       const ce = (e) => {
           const { rtTimestamp: t, bShowAsWarning: a } = e;
@@ -8975,18 +8048,18 @@
             return s.createElement(
               "div",
               { className: he().Never },
-              (0, q.Xx)("#FAQDashboard_TimeNever"),
+              (0, q.we)("#FAQDashboard_TimeNever"),
             );
           const o = Date.now() / 1e3 - t,
-            i = o < 86400 ? (0, q.yW)(o, !1, !0) : (0, q.vX)(t);
+            i = o < 86400 ? (0, q.Hq)(o, !1, !0) : (0, q.$z)(t);
           return s.createElement(
-            re.Zg,
+            re.gS,
             { className: a && he().Warning, rtFullDate: t, stylesmodule: pe() },
             i,
           );
         },
-        ue = (0, i.Pi)((e) => {
-          const [t, a] = (0, p.SP)(),
+        ue = (0, i.PA)((e) => {
+          const [t, a] = (0, p.cf)(),
             [o, i] = s.useState(1),
             n = t
               .map((e) => {
@@ -9025,17 +8098,17 @@
                   e.visible_in_china_realm,
                 ];
               })
-              .sort((e, t) => (1 == o ? (0, M.tN)(e[1], t[1]) : t[o] - e[o]));
+              .sort((e, t) => (1 == o ? (0, M.lY)(e[1], t[1]) : t[o] - e[o]));
           return (
             (0, s.useEffect)(() => {
-              p.xP.Get().RemoveAllDirtyDrafts();
+              p.pN.Get().RemoveAllDirtyDrafts();
             }, []),
             s.createElement(
               "div",
-              { className: z().FAQDashboardPage },
+              { className: E().FAQDashboardPage },
               s.createElement(
                 "div",
-                { className: z().FAQDashboard },
+                { className: E().FAQDashboard },
                 s.createElement(me, null),
                 s.createElement(ge, {
                   eCurrentSortColumn: o,
@@ -9044,12 +8117,12 @@
                 0 == t.length &&
                   s.createElement(
                     "div",
-                    { className: z().ErrorMsg },
-                    (0, q.Xx)("#FAQDashboard_Empty"),
+                    { className: E().ErrorMsg },
+                    (0, q.we)("#FAQDashboard_Empty"),
                   ),
                 n.map((e) => s.createElement(ve, { key: e[0], rgColumns: e })),
                 !a &&
-                  s.createElement(P.V, { position: "center", size: "xlarge" }),
+                  s.createElement(P.t, { position: "center", size: "xlarge" }),
               ),
             )
           );
@@ -9057,40 +8130,40 @@
         me = (e) => {
           const t = s.useCallback(
               () =>
-                (0, C.x1)(s.createElement(fe, null), window, {
-                  strTitle: (0, q.Xx)("#FAQDashboard_CreateFAQButton"),
+                (0, C.mK)(s.createElement(fe, null), window, {
+                  strTitle: (0, q.we)("#FAQDashboard_CreateFAQButton"),
                 }),
               [],
             ),
             a = s.useCallback(
               () =>
-                (0, C.x1)(
+                (0, C.mK)(
                   s.createElement(ie, { bDisableBackgroundDismiss: !0 }),
                   window,
-                  { strTitle: (0, q.Xx)("#FAQDashboard_CrowdinToolTitle") },
+                  { strTitle: (0, q.we)("#FAQDashboard_CrowdinToolTitle") },
                 ),
               [],
             );
           return s.createElement(
             "div",
-            { className: z().DashboardHeader },
+            { className: E().DashboardHeader },
             s.createElement(
               "div",
-              { className: z().DashboardHeaderTitle },
-              (0, q.Xx)("#FAQDashboard_Header"),
+              { className: E().DashboardHeaderTitle },
+              (0, q.we)("#FAQDashboard_Header"),
             ),
             s.createElement(
               "div",
-              { className: z().DashboardHeaderButtonCtn },
+              { className: E().DashboardHeaderButtonCtn },
               s.createElement(
-                _.zx,
+                _.$n,
                 { onClick: a },
-                (0, q.Xx)("#FAQDashboard_CrowdinToolButton"),
+                (0, q.we)("#FAQDashboard_CrowdinToolButton"),
               ),
               s.createElement(
-                _.KM,
+                _.jn,
                 { onClick: t },
-                (0, q.Xx)("#FAQDashboard_CreateFAQButton"),
+                (0, q.we)("#FAQDashboard_CreateFAQButton"),
               ),
             ),
           );
@@ -9098,32 +8171,32 @@
         fe = (e) => {
           const [t, a] = s.useState("");
           return s.createElement(
-            A.uH,
+            A.o0,
             {
               onOK: () => {
-                p.xP.Get().CreateFAQ(t);
+                p.pN.Get().CreateFAQ(t);
               },
               bOKDisabled: 0 == t.length,
               closeModal: e.closeModal,
-              className: z().CreateFAQDialog,
+              className: E().CreateFAQDialog,
             },
             s.createElement(
-              _.h4,
+              _.Y9,
               null,
-              (0, q.Xx)("#FAQDashboard_CreateFAQButton"),
+              (0, q.we)("#FAQDashboard_CreateFAQButton"),
             ),
             s.createElement(
-              _.uT,
+              _.nB,
               null,
               s.createElement(
-                _.Ac,
+                _.a3,
                 null,
-                (0, q.Xx)("#FAQDashboard_CreateFAQInstructions"),
+                (0, q.we)("#FAQDashboard_CreateFAQInstructions"),
                 s.createElement("input", {
                   type: "text",
-                  className: z().NameInput,
+                  className: E().NameInput,
                   value: t,
-                  placeholder: (0, q.Xx)("#FAQDashboard_NamePlaceHolder"),
+                  placeholder: (0, q.we)("#FAQDashboard_NamePlaceHolder"),
                   onFocus: (e) => e.target.select(),
                   onChange: (e) => a(e.currentTarget.value),
                   maxLength: 120,
@@ -9135,7 +8208,7 @@
         ge = (e) =>
           s.createElement(
             "div",
-            { className: z().DashboardListHeaderRow },
+            { className: E().DashboardListHeaderRow },
             s.createElement(ye, {
               strLabelLocToken: "#FAQDashboard_NameColumn",
               bIsNameColumn: !0,
@@ -9186,25 +8259,25 @@
               eCurrentSortColumn: i,
               SetSortColumn: n,
             } = e,
-            r = (0, f.Z)(
-              z().EntryColumn,
-              z().ClickableHeader,
-              a ? z().NameCol : z().DataCol,
-              i == o && z().Selected,
+            r = (0, f.A)(
+              E().EntryColumn,
+              E().ClickableHeader,
+              a ? E().NameCol : E().DataCol,
+              i == o && E().Selected,
             );
           return s.createElement(
-            D.HP,
+            D.he,
             {
-              toolTipContent: (0, q.Xx)(t + "_ttip"),
+              toolTipContent: (0, q.we)(t + "_ttip"),
               direction: "top",
               className: r,
               onClick: () => n(o),
             },
-            (0, q.Xx)(t),
+            (0, q.we)(t),
             s.createElement(
               "div",
-              { className: z().DownArrow },
-              s.createElement(T.$gZ, null),
+              { className: E().DownArrow },
+              s.createElement(T.GB9, null),
             ),
           );
         },
@@ -9212,7 +8285,7 @@
           const { nCount: t, nTotal: a, nGoal: o } = e;
           return s.createElement(
             "div",
-            { className: t == o ? z().GoodCount : z().BadCount },
+            { className: t == o ? E().GoodCount : E().BadCount },
             t + " / " + a,
           );
         },
@@ -9220,8 +8293,8 @@
           const { bIsVisible: t } = e;
           return s.createElement(
             "div",
-            { className: t ? z().Visible : z().Hidden },
-            (0, q.Xx)(t ? "#FAQDashboard_Visible" : "#FAQDashboard_Invisible"),
+            { className: t ? E().Visible : E().Hidden },
+            (0, q.we)(t ? "#FAQDashboard_Visible" : "#FAQDashboard_Invisible"),
           );
         },
         ve = (e) => {
@@ -9233,55 +8306,55 @@
             {
               route: o.k_eCommunityEdit,
               faqid: t,
-              className: z().DashboardEntry,
+              className: E().DashboardEntry,
             },
             s.createElement(
               "div",
-              { className: (0, f.Z)(z().EntryColumn, z().NameCol) },
-              s.createElement("div", { className: z().EntryInternalName }, a),
+              { className: (0, f.A)(E().EntryColumn, E().NameCol) },
+              s.createElement("div", { className: E().EntryInternalName }, a),
             ),
             s.createElement(
               "div",
-              { className: (0, f.Z)(z().EntryColumn, z().DataCol) },
+              { className: (0, f.A)(E().EntryColumn, E().DataCol) },
               s.createElement(ce, { rtTimestamp: i }),
             ),
             s.createElement(
               "div",
-              { className: (0, f.Z)(z().EntryColumn, z().DataCol) },
+              { className: (0, f.A)(E().EntryColumn, E().DataCol) },
               s.createElement(be, { nCount: n, nTotal: m, nGoal: m }),
             ),
             s.createElement(
               "div",
-              { className: (0, f.Z)(z().EntryColumn, z().DataCol) },
+              { className: (0, f.A)(E().EntryColumn, E().DataCol) },
               s.createElement(be, { nCount: r, nTotal: m, nGoal: 0 }),
             ),
             s.createElement(
               "div",
-              { className: (0, f.Z)(z().EntryColumn, z().DataCol) },
+              { className: (0, f.A)(E().EntryColumn, E().DataCol) },
               s.createElement(be, { nCount: l, nTotal: c, nGoal: c }),
             ),
             s.createElement(
               "div",
-              { className: (0, f.Z)(z().EntryColumn, z().DataCol) },
+              { className: (0, f.A)(E().EntryColumn, E().DataCol) },
               s.createElement(be, { nCount: p, nTotal: c, nGoal: 0 }),
             ),
             s.createElement(
               "div",
-              { className: (0, f.Z)(z().EntryColumn, z().DataCol) },
+              { className: (0, f.A)(E().EntryColumn, E().DataCol) },
               s.createElement(we, { bIsVisible: d }),
             ),
             s.createElement(
               "div",
-              { className: (0, f.Z)(z().EntryColumn, z().DataCol) },
+              { className: (0, f.A)(E().EntryColumn, E().DataCol) },
               s.createElement(we, { bIsVisible: h }),
             ),
           );
         },
         Se = (e) =>
-          s.createElement(d.NL, {
+          s.createElement(d.XG, {
             message: (e) => {
               var t, a;
-              const o = p.xP.Get().GetLoadedDraftObjs();
+              const o = p.pN.Get().GetLoadedDraftObjs();
               return (
                 !Boolean(
                   (null ===
@@ -9291,39 +8364,39 @@
                     ? void 0
                     : t.length) > 0,
                 ) ||
-                (e.pathname != Mt.DashboardFAQ(c.JA.VANITY_ID) &&
+                (e.pathname != Mt.DashboardFAQ(c.UF.VANITY_ID) &&
                   !(null === (a = e.pathname) || void 0 === a
                     ? void 0
                     : a.startsWith(
-                        Mt.ViewFAQ(c.JA.VANITY_ID, "").slice(0, -1),
+                        Mt.ViewFAQ(c.UF.VANITY_ID, "").slice(0, -1),
                       ))) ||
-                (0, q.Xx)("#EventEditor_UnsavedChanges")
+                (0, q.we)("#EventEditor_UnsavedChanges")
               );
             },
           });
-      var ke = a(25667),
-        xe = a(65650),
-        Ie = a(87972),
-        _e = a(10162),
-        Ae = a(13319),
-        Ce = a(68048),
+      var ke = a(81047),
+        xe = a(63556),
+        Ie = a(50842),
+        _e = a(84811),
+        Ae = a(70238),
+        Ce = a(63280),
         Te = a.n(Ce);
       const Pe = (e) =>
           s.createElement(
-            D.HP,
-            { toolTipContent: (0, q.Xx)("#FAQEditor_DeleteAction_ttip") },
+            D.he,
+            { toolTipContent: (0, q.we)("#FAQEditor_DeleteAction_ttip") },
             s.createElement(
               "div",
               {
-                className: (0, f.Z)(O.EditPreviewButton, O.Delete),
+                className: (0, f.A)(R.EditPreviewButton, R.Delete),
                 onClick: (t) => {
-                  (0, C.AM)(
+                  (0, C.pg)(
                     s.createElement(De, { draft: e.draft }),
-                    (0, G.RA)(t),
+                    (0, G.uX)(t),
                   );
                 },
               },
-              (0, q.Xx)("#FAQEditor_DeleteAction"),
+              (0, q.we)("#FAQEditor_DeleteAction"),
             ),
           ),
         De = (e) => {
@@ -9334,68 +8407,68 @@
           let d = s.createElement(
             "div",
             null,
-            (0, q.Xx)("#FAQEditor_DeleteDesc"),
+            (0, q.we)("#FAQEditor_DeleteDesc"),
           );
           return (
             i
-              ? (d = s.createElement(P.V, {
+              ? (d = s.createElement(P.t, {
                   position: "center",
                   size: "medium",
-                  string: (0, q.Xx)("#FAQEditor_DeletingInProgress"),
+                  string: (0, q.we)("#FAQEditor_DeletingInProgress"),
                 }))
               : r &&
                 (d = s.createElement(
                   "div",
                   null,
-                  (0, q.Xx)(
+                  (0, q.we)(
                     "Error_Description",
                     r,
-                    (0, q.Xx)("#Error_GenericFailureDescription"),
+                    (0, q.we)("#Error_GenericFailureDescription"),
                   ),
                 )),
             s.createElement(
-              _e.SV,
+              _e.tH,
               null,
               s.createElement(
-                A.e1,
+                A.x_,
                 { onEscKeypress: a },
                 s.createElement(
-                  _.VY,
+                  _.UC,
                   null,
                   s.createElement(
-                    _.h4,
+                    _.Y9,
                     null,
-                    (0, q.Xx)("#FAQEditor_DeleteAction"),
+                    (0, q.we)("#FAQEditor_DeleteAction"),
                   ),
-                  s.createElement(_.uT, null, s.createElement(_.Ac, null, d)),
+                  s.createElement(_.nB, null, s.createElement(_.a3, null, d)),
                   s.createElement(
-                    _.$_,
+                    _.wi,
                     null,
-                    s.createElement(_.o9, {
+                    s.createElement(_.CB, {
                       onCancel: a,
                       bOKDisabled: Boolean(i || r),
-                      strOKText: (0, q.Xx)("#FAQEditor_DeleteAction"),
+                      strOKText: (0, q.we)("#FAQEditor_DeleteAction"),
                       strCancelText: Boolean(i || r)
-                        ? (0, q.Xx)("#Button_OK")
+                        ? (0, q.we)("#Button_OK")
                         : void 0,
                       onOK: async () => {
                         n(!0),
-                          p.xP
+                          p.pN
                             .Get()
                             .DeleteFAQ(t.GetFAQID())
                             .then((e) => {
                               if (1 == e) {
                                 const e =
-                                  c.De.COMMUNITY_BASE_URL.substr(
+                                  c.TS.COMMUNITY_BASE_URL.substr(
                                     0,
-                                    c.De.COMMUNITY_BASE_URL.length - 1,
+                                    c.TS.COMMUNITY_BASE_URL.length - 1,
                                   ) + m(o.k_eCommunityDashboard);
                                 window.location.href = e;
                               }
                               l(e);
                             })
                             .catch((e) => {
-                              const t = (0, g.l)(e);
+                              const t = (0, g.H)(e);
                               console.error(
                                 "FAQDeleteDialog: hit error: " + t.strErrorMsg,
                                 t,
@@ -9411,35 +8484,35 @@
             )
           );
         },
-        qe = (0, i.Pi)((e) => {
+        qe = (0, i.PA)((e) => {
           const { draft: t, bDisabled: a } = e,
             o = t.BNeedsSaving();
           return s.createElement(
-            D.HP,
+            D.he,
             {
-              toolTipContent: (0, q.Xx)(
+              toolTipContent: (0, q.we)(
                 o ? "#FAQPublish_SaveRequire_ttip" : "#FAQPublish_Publish_ttip",
               ),
             },
             s.createElement(
               "div",
               {
-                className: (0, f.Z)(O.EditPreviewButton, a && O.Disabled),
+                className: (0, f.A)(R.EditPreviewButton, a && R.Disabled),
                 onClick: (t) => {
                   a ||
-                    (0, C.AM)(
+                    (0, C.pg)(
                       o
-                        ? s.createElement(A.JX, {
-                            strDescription: (0, q.Xx)(
+                        ? s.createElement(A.KG, {
+                            strDescription: (0, q.we)(
                               "#FAQPublish_SaveRequire_ttip",
                             ),
                           })
                         : s.createElement(Me, { draft: e.draft }),
-                      (0, G.RA)(t),
+                      (0, G.uX)(t),
                     );
                 },
               },
-              (0, q.Xx)("#FAQPublish_Publish"),
+              (0, q.we)("#FAQPublish_Publish"),
             ),
           );
         }),
@@ -9450,30 +8523,30 @@
             [i, n] = s.useState(!1),
             [r, l] = s.useState(void 0),
             [d, h] = s.useState(void 0),
-            [c, u] = (0, p.EH)(a.GetFAQID()),
+            [c, u] = (0, p.g5)(a.GetFAQID()),
             [m, f] = s.useState(new Array());
           let y = null;
           if (u)
             if (i)
-              y = s.createElement(P.V, {
+              y = s.createElement(P.t, {
                 position: "center",
                 size: "medium",
-                string: (0, q.Xx)("#FAQPublish_Publishing"),
+                string: (0, q.we)("#FAQPublish_Publishing"),
               });
             else if (r)
               y = s.createElement(
                 "div",
                 null,
-                (0, q.Xx)("#FAQPublish_Success"),
+                (0, q.we)("#FAQPublish_Success"),
               );
             else if (d)
               y = s.createElement(
                 "div",
                 null,
-                (0, q.Xx)(
+                (0, q.we)(
                   "#Error_Description",
                   d,
-                  (0, q.Xx)("#Error_GenericFailureDescription"),
+                  (0, q.we)("#Error_GenericFailureDescription"),
                 ),
               );
             else if (c) {
@@ -9489,9 +8562,9 @@
               y = s.createElement(
                 s.Fragment,
                 null,
-                s.createElement("div", null, (0, q.Xx)("#FAQPublish_Desc")),
+                s.createElement("div", null, (0, q.we)("#FAQPublish_Desc")),
                 s.createElement("br", null),
-                s.createElement("div", null, (0, q.Xx)("#FAQPublish_Desc2")),
+                s.createElement("div", null, (0, q.we)("#FAQPublish_Desc2")),
                 s.createElement("br", null),
                 s.createElement(ae, {
                   draft: a,
@@ -9504,45 +8577,45 @@
               y = s.createElement(
                 "div",
                 null,
-                (0, q.Xx)("#FAQPublish_LoadError"),
+                (0, q.we)("#FAQPublish_LoadError"),
               );
           else
-            y = s.createElement(P.V, {
+            y = s.createElement(P.t, {
               size: "small",
               position: "center",
-              string: (0, q.Xx)("#FAQPublish_PublishWait"),
+              string: (0, q.we)("#FAQPublish_PublishWait"),
             });
           return s.createElement(
-            _e.SV,
+            _e.tH,
             null,
             s.createElement(
-              A.e1,
+              A.x_,
               { onEscKeypress: o },
               s.createElement(
-                _.VY,
+                _.UC,
                 { className: j.LanguageListDialog },
-                s.createElement(_.h4, null, (0, q.Xx)("#FAQPublish_Publish")),
-                s.createElement(_.uT, null, s.createElement(_.Ac, null, y)),
+                s.createElement(_.Y9, null, (0, q.we)("#FAQPublish_Publish")),
+                s.createElement(_.nB, null, s.createElement(_.a3, null, y)),
                 s.createElement(
-                  _.$_,
+                  _.wi,
                   null,
-                  s.createElement(_.o9, {
+                  s.createElement(_.CB, {
                     onCancel: o,
                     bOKDisabled: Boolean(i || r || d || 0 == m.length),
-                    strOKText: (0, q.Xx)("#FAQPublish_Publish"),
+                    strOKText: (0, q.we)("#FAQPublish_Publish"),
                     strCancelText: Boolean(i || r || d)
-                      ? (0, q.Xx)("#Button_OK")
+                      ? (0, q.we)("#Button_OK")
                       : void 0,
                     onOK: async () => {
                       n(!0),
-                        p.xP
+                        p.pN
                           .Get()
                           .PublishDraftByLanguage(a.GetFAQID(), m)
                           .then((e) => {
                             1 == e && l(!0), h(e);
                           })
                           .catch((e) => {
-                            const t = (0, g.l)(e);
+                            const t = (0, g.H)(e);
                             console.error(
                               "FAQPublishDialog: hit error: " + t.strErrorMsg,
                               t,
@@ -9557,31 +8630,31 @@
             ),
           );
         },
-        Ee = (e) =>
+        ze = (e) =>
           s.createElement(
-            D.HP,
-            { toolTipContent: (0, q.Xx)("#FAQEditor_ChangeVisible_ttip") },
+            D.he,
+            { toolTipContent: (0, q.we)("#FAQEditor_ChangeVisible_ttip") },
             s.createElement(
               "div",
               {
-                className: O.EditPreviewButton,
+                className: R.EditPreviewButton,
                 onClick: (t) => {
-                  (0, C.AM)(
-                    s.createElement(ze, { draft: e.draft }),
-                    (0, G.RA)(t),
+                  (0, C.pg)(
+                    s.createElement(Ee, { draft: e.draft }),
+                    (0, G.uX)(t),
                   );
                 },
               },
-              (0, q.Xx)("#FAQEditor_EditVisible"),
+              (0, q.we)("#FAQEditor_EditVisible"),
             ),
           ),
-        ze = (e) => {
+        Ee = (e) => {
           const { draft: t } = e,
             a = () => e.closeModal && e.closeModal(),
             [o, i] = s.useState(!1),
             [n, r] = s.useState(void 0),
             [l, d] = s.useState(void 0),
-            h = p.xP.Get().GetFAQArticleSummary(t.GetFAQID()),
+            h = p.pN.Get().GetFAQArticleSummary(t.GetFAQID()),
             [c, u] = s.useState(h.visible_in_global_realm),
             [m, f] = s.useState(h.visible_in_china_realm);
           let y = s.createElement(
@@ -9590,78 +8663,78 @@
             s.createElement(
               "div",
               null,
-              (0, q.Xx)("#FAQEditor_ChangeVisible_Desc"),
+              (0, q.we)("#FAQEditor_ChangeVisible_Desc"),
             ),
-            s.createElement(_.ji, {
-              label: (0, q.Xx)("#FAQEditor_VisibleInGlobal"),
+            s.createElement(_.Yh, {
+              label: (0, q.we)("#FAQEditor_VisibleInGlobal"),
               checked: c,
               onChange: (e) => u(e),
             }),
-            s.createElement(_.ji, {
-              label: (0, q.Xx)("#FAQEditor_VisibleInChina"),
+            s.createElement(_.Yh, {
+              label: (0, q.we)("#FAQEditor_VisibleInChina"),
               checked: m,
-              tooltip: (0, q.Xx)("#FAQEditor_VisibleInChina_ttip"),
+              tooltip: (0, q.we)("#FAQEditor_VisibleInChina_ttip"),
               onChange: (e) => f(e),
             }),
           );
           return (
             o
-              ? (y = s.createElement(P.V, {
+              ? (y = s.createElement(P.t, {
                   position: "center",
                   size: "medium",
-                  string: (0, q.Xx)("#FAQEditor_ChangeVisible_InProgress"),
+                  string: (0, q.we)("#FAQEditor_ChangeVisible_InProgress"),
                 }))
               : n
                 ? (y = s.createElement(
                     "div",
                     null,
-                    (0, q.Xx)("#FAQEditor_ChangeVisible_Success"),
+                    (0, q.we)("#FAQEditor_ChangeVisible_Success"),
                   ))
                 : l &&
                   (y = s.createElement(
                     "div",
                     null,
-                    (0, q.Xx)(
+                    (0, q.we)(
                       "Error_Description",
                       l,
-                      (0, q.Xx)("#Error_GenericFailureDescription"),
+                      (0, q.we)("#Error_GenericFailureDescription"),
                     ),
                   )),
             s.createElement(
-              _e.SV,
+              _e.tH,
               null,
               s.createElement(
-                A.e1,
+                A.x_,
                 { onEscKeypress: a },
                 s.createElement(
-                  _.VY,
+                  _.UC,
                   null,
                   s.createElement(
-                    _.h4,
+                    _.Y9,
                     null,
-                    (0, q.Xx)("#FAQEditor_ChangeVisible"),
+                    (0, q.we)("#FAQEditor_ChangeVisible"),
                   ),
-                  s.createElement(_.uT, null, s.createElement(_.Ac, null, y)),
+                  s.createElement(_.nB, null, s.createElement(_.a3, null, y)),
                   s.createElement(
-                    _.$_,
+                    _.wi,
                     null,
-                    s.createElement(_.o9, {
+                    s.createElement(_.CB, {
                       onCancel: a,
                       bOKDisabled: Boolean(o || n || l),
-                      strOKText: (0, q.Xx)("#FAQEditor_ChangeVisible"),
+                      strOKText: (0, q.we)("#FAQEditor_ChangeVisible"),
                       strCancelText: Boolean(o || n || l)
-                        ? (0, q.Xx)("#Button_OK")
+                        ? (0, q.we)("#Button_OK")
                         : void 0,
                       onOK: async () => {
                         i(!0),
-                          p.xP
+                          p.pN
                             .Get()
                             .UpdateVisibility(t.GetFAQID(), c, m)
                             .then((e) => {
                               1 == e && r(!0), d(e);
                             })
                             .catch((e) => {
-                              const t = (0, g.l)(e);
+                              const t = (0, g.H)(e);
                               console.error(
                                 "FAQChangeVisibilityDialog: hit error: " +
                                   t.strErrorMsg,
@@ -9678,12 +8751,12 @@
             )
           );
         };
-      var Fe = a(40548);
-      const We = (0, i.Pi)((e) => {
+      var We = a(35707);
+      const Fe = (0, i.PA)((e) => {
           var t, a, o, i, n;
           const { draft: r, eLanguage: l } = e,
             d = r.GetFAQID(),
-            [h, c] = (0, p.EH)(d);
+            [h, c] = (0, p.g5)(d);
           if (!c) return null;
           const u =
               null ===
@@ -9713,37 +8786,37 @@
               void 0 === n
                 ? void 0
                 : n.map((e) =>
-                    s.createElement(Re, {
+                    s.createElement(Oe, {
                       key: e.language,
                       info: e,
                       rtEnglishUpdateTime: u,
                     }),
                   );
           return s.createElement(
-            _e.SV,
+            _e.tH,
             null,
             s.createElement(
               "div",
-              { className: Fe.LeftMenu },
+              { className: We.LeftMenu },
               s.createElement(
                 "div",
-                { className: Fe.Section },
+                { className: We.Section },
                 s.createElement(
                   "div",
-                  { className: Fe.SectionTitle },
-                  (0, q.Xx)("#FAQDashboard_VisibilityColumn"),
+                  { className: We.SectionTitle },
+                  (0, q.we)("#FAQDashboard_VisibilityColumn"),
                   " ",
                 ),
                 s.createElement(
                   "div",
-                  { className: Fe.SectionContents },
+                  { className: We.SectionContents },
                   s.createElement(
                     "div",
-                    { className: Fe.VisibilityCtn },
+                    { className: We.VisibilityCtn },
                     s.createElement(
                       "div",
-                      { className: (0, f.Z)(Fe.StatusRow, Fe.Global) },
-                      (0, q.Xx)("#FAQDashboard_VisibleInGlobalRealmLabel"),
+                      { className: (0, f.A)(We.StatusRow, We.Global) },
+                      (0, q.we)("#FAQDashboard_VisibleInGlobalRealmLabel"),
                       " ",
                       s.createElement(we, {
                         bIsVisible: h.visible_in_global_realm,
@@ -9751,8 +8824,8 @@
                     ),
                     s.createElement(
                       "div",
-                      { className: (0, f.Z)(Fe.StatusRow, Fe.China) },
-                      (0, q.Xx)("#FAQDashboard_VisibleInChinaRealmLabel"),
+                      { className: (0, f.A)(We.StatusRow, We.China) },
+                      (0, q.we)("#FAQDashboard_VisibleInChinaRealmLabel"),
                       " ",
                       s.createElement(we, {
                         bIsVisible: h.visible_in_china_realm,
@@ -9760,27 +8833,27 @@
                     ),
                     s.createElement(
                       "div",
-                      { className: Fe.StatusBtnCtn },
-                      s.createElement(Ee, { draft: r }),
+                      { className: We.StatusBtnCtn },
+                      s.createElement(ze, { draft: r }),
                     ),
                   ),
                   s.createElement(
                     "div",
-                    { className: Fe.PublishCtn },
+                    { className: We.PublishCtn },
                     m
                       ? s.createElement(
                           "div",
-                          { className: Fe.PublishStatus },
-                          (0, q.Xx)("#FAQStatus_DraftVersionsDesc"),
+                          { className: We.PublishStatus },
+                          (0, q.we)("#FAQStatus_DraftVersionsDesc"),
                         )
                       : s.createElement(
                           "div",
-                          { className: Fe.PublishStatus },
-                          (0, q.Xx)("#FAQStatus_NothingToPublish"),
+                          { className: We.PublishStatus },
+                          (0, q.we)("#FAQStatus_NothingToPublish"),
                         ),
                     s.createElement(
                       "div",
-                      { className: Fe.PublishBtn },
+                      { className: We.PublishBtn },
                       s.createElement(qe, { draft: r, bDisabled: !m }),
                     ),
                   ),
@@ -9788,61 +8861,61 @@
               ),
               s.createElement(
                 "div",
-                { className: Fe.Section },
+                { className: We.Section },
                 s.createElement(
                   "div",
-                  { className: Fe.SectionTitle },
-                  (0, q.Xx)("#FAQDashboard_LocalizationSection"),
+                  { className: We.SectionTitle },
+                  (0, q.we)("#FAQDashboard_LocalizationSection"),
                   " ",
                 ),
                 s.createElement(
                   "div",
-                  { className: Fe.SectionContents },
+                  { className: We.SectionContents },
                   s.createElement(
                     "div",
-                    { className: Fe.SectionDescription },
-                    (0, q.Xx)("#FAQDashboard_LocalizationSectionDesc"),
+                    { className: We.SectionDescription },
+                    (0, q.we)("#FAQDashboard_LocalizationSectionDesc"),
                   ),
                   s.createElement($, { draft: r, eLanguage: l }),
                 ),
                 s.createElement(
                   "div",
-                  { className: Fe.SectionContents },
+                  { className: We.SectionContents },
                   s.createElement(
                     "div",
-                    { className: Fe.SectionDescription },
-                    (0, q.Xx)("#EventEditor_Loc_CrowdinIntegration_Desc"),
+                    { className: We.SectionDescription },
+                    (0, q.we)("#EventEditor_Loc_CrowdinIntegration_Desc"),
                   ),
                   s.createElement(K, { draft: r }),
                 ),
               ),
               s.createElement(
                 "div",
-                { className: Fe.Section },
+                { className: We.Section },
                 s.createElement(
                   "div",
-                  { className: Fe.SectionTitle },
-                  (0, q.Xx)("#FAQStatus_LocalizedVersionStatusHeader"),
+                  { className: We.SectionTitle },
+                  (0, q.we)("#FAQStatus_LocalizedVersionStatusHeader"),
                 ),
                 s.createElement(
                   "table",
-                  { className: Fe.FaqStatusTable },
+                  { className: We.FaqStatusTable },
                   s.createElement(
                     "thead",
                     null,
                     s.createElement(
                       "tr",
                       null,
-                      s.createElement("th", null, (0, q.Xx)("#LanguageTitle")),
+                      s.createElement("th", null, (0, q.we)("#LanguageTitle")),
                       s.createElement(
                         "th",
                         null,
-                        (0, q.Xx)("#FAQStatus_LastUpdated"),
+                        (0, q.we)("#FAQStatus_LastUpdated"),
                       ),
                       s.createElement(
                         "th",
                         null,
-                        (0, q.Xx)("#FAQStatus_LastPublished"),
+                        (0, q.we)("#FAQStatus_LastPublished"),
                       ),
                     ),
                   ),
@@ -9851,13 +8924,13 @@
               ),
               s.createElement(
                 "div",
-                { className: Fe.Section },
+                { className: We.Section },
                 s.createElement(Pe, { draft: r }),
               ),
             ),
           );
         }),
-        Re = (0, i.Pi)((e) => {
+        Oe = (0, i.PA)((e) => {
           const { info: t, rtEnglishUpdateTime: a } = e,
             o = !!a && a > t.last_update_timestamp,
             i = t.last_update_timestamp > t.last_publish_timestamp;
@@ -9867,7 +8940,7 @@
             s.createElement(
               "td",
               null,
-              (0, q.Xx)("#Language_" + (0, l.j_)(t.language)),
+              (0, q.we)("#Language_" + (0, l.Lg)(t.language)),
             ),
             s.createElement(
               "td",
@@ -9887,13 +8960,13 @@
             ),
           );
         });
-      var Ne = a(38071),
-        Oe = a(27910),
-        Le = a(77650),
-        He = a(36738),
-        Ve = a(57028),
-        Ge = a(22227);
-      const Ue = (0, i.Pi)((e) => {
+      var Ne = a(2160),
+        Re = a(1909),
+        Le = a(26759),
+        He = a(54736),
+        Ve = a(59461),
+        Ge = a(51520);
+      const Ue = (0, i.PA)((e) => {
           const { draft: t } = e,
             a = t.BNeedsSaving();
           return s.createElement(
@@ -9901,17 +8974,17 @@
             {
               className: "btn_green_steamui btn_medium",
               onClick: (t) =>
-                (0, C.AM)(
+                (0, C.pg)(
                   s.createElement(Be, { draft: e.draft }),
-                  (0, G.RA)(t),
+                  (0, G.uX)(t),
                 ),
             },
             s.createElement(
               "span",
               null,
               !a &&
-                s.createElement("img", { className: Ge.SavedImage, src: Ve.Z }),
-              (0, q.Xx)(a ? "#Button_Save" : "#Button_Saved"),
+                s.createElement("img", { className: Ge.SavedImage, src: Ve.A }),
+              (0, q.we)(a ? "#Button_Save" : "#Button_Saved"),
             ),
           );
         }),
@@ -9930,7 +9003,7 @@
                   r(2),
                     console.log(
                       "FAQSaveProgressDialog hit exception " +
-                        (0, g.l)(e).strErrorMsg,
+                        (0, g.H)(e).strErrorMsg,
                     );
                 } finally {
                   i(!1);
@@ -9938,17 +9011,17 @@
               })();
             }, [t]),
             s.createElement(
-              A.RG,
+              A.eV,
               { bAllowFullSize: !0, onCancel: a, closeModal: a },
               s.createElement(
-                _.h4,
+                _.Y9,
                 null,
                 o
-                  ? s.createElement("div", null, (0, q.Xx)("#FAQSave_Saving"))
+                  ? s.createElement("div", null, (0, q.we)("#FAQSave_Saving"))
                   : s.createElement(
                       "div",
                       null,
-                      (0, q.Xx)(
+                      (0, q.we)(
                         Boolean(1 == n)
                           ? "#FAQSave_SaveSuccess"
                           : "#FAQSave_Error",
@@ -9957,10 +9030,10 @@
                     ),
               ),
               s.createElement(
-                _.uT,
+                _.nB,
                 null,
                 o
-                  ? s.createElement(P.V, { size: "medium", position: "center" })
+                  ? s.createElement(P.t, { size: "medium", position: "center" })
                   : s.createElement(
                       "div",
                       null,
@@ -9968,44 +9041,44 @@
                         ? s.createElement(
                             "div",
                             null,
-                            (0, q.Xx)("#FAQSave_SaveSuccess_desc"),
+                            (0, q.we)("#FAQSave_SaveSuccess_desc"),
                           )
                         : s.createElement(
                             "div",
                             null,
-                            (0, q.Xx)(
+                            (0, q.we)(
                               "#Error_Description",
                               n,
-                              (0, q.Xx)("#Error_GenericFailureDescription"),
+                              (0, q.we)("#Error_GenericFailureDescription"),
                             ),
                           ),
                     ),
               ),
               s.createElement(
-                _.$_,
+                _.wi,
                 null,
                 !o &&
                   s.createElement(
-                    _.KM,
+                    _.jn,
                     { onClick: a },
-                    (0, q.Xx)("#Button_OK"),
+                    (0, q.we)("#Button_OK"),
                   ),
               ),
             )
           );
         };
-      var je = a(59565),
+      var je = a(66444),
         Ye = a.n(je);
-      const Xe = (0, i.Pi)((e) => {
+      const Xe = (0, i.PA)((e) => {
           const { draft: t, bPreview: a } = e,
             i = t.BHasPublished();
           return s.createElement(
-            _e.SV,
+            _e.tH,
             null,
             s.createElement(
               "div",
               {
-                className: (0, f.Z)({
+                className: (0, f.A)({
                   [He.EventEditorTopBarContainer]: !0,
                   [He.EventUnPublished]: !a && !i,
                   [He.EventPublished]: !a && i,
@@ -10019,7 +9092,7 @@
                   faqid: t.GetFAQID(),
                   className: L().EditPreviewButton,
                 },
-                (0, q.Xx)(
+                (0, q.we)(
                   a ? "#FAQEditor_EditFAQ" : "#EventDisplay_EventsDashBtn",
                 ),
               ),
@@ -10029,7 +9102,7 @@
                 s.createElement(
                   "div",
                   { className: Ye().EditorInternalNameLabel },
-                  (0, q.Xx)(
+                  (0, q.we)(
                     a
                       ? "#FAQEditor_InternalName_Preview"
                       : "#FAQEditor_InternalName",
@@ -10040,11 +9113,11 @@
                   { className: Ye().EditorInternalName },
                   t.GetFAQInternalName(),
                   s.createElement("img", {
-                    src: Le.Z,
+                    src: Le.A,
                     onClick: (e) =>
-                      (0, C.AM)(
+                      (0, C.pg)(
                         s.createElement(Qe, { draft: t }),
-                        (0, G.RA)(e),
+                        (0, G.uX)(e),
                       ),
                   }),
                 ),
@@ -10052,13 +9125,13 @@
               s.createElement(
                 "div",
                 { className: L().EventOptions },
-                s.createElement(Oe.uW, {
-                  selectedLang: xe.U.Get().GetCurEditLanguage(),
-                  fnOnLanguageChanged: xe.U.Get().SetCurEditLanguage,
+                s.createElement(Re.Ng, {
+                  selectedLang: xe.O.Get().GetCurEditLanguage(),
+                  fnOnLanguageChanged: xe.O.Get().SetCurEditLanguage,
                   fnLangHasData: t.BHasSomeTextForLanguage,
                   fnIsLangSupported: (e) => !0,
                   fnLastUpdateRTime: t.GetLastTimeLanguageUpdated,
-                  realms: [Ne.IN.k_ESteamRealmGlobal, Ne.IN.k_ESteamRealmChina],
+                  realms: [Ne.TU.k_ESteamRealmGlobal, Ne.TU.k_ESteamRealmChina],
                 }),
                 !a &&
                   s.createElement(
@@ -10068,7 +9141,7 @@
                       faqid: t.GetFAQID(),
                       className: L().EditPreviewButton,
                     },
-                    (0, q.Xx)("#Button_Preview"),
+                    (0, q.we)("#Button_Preview"),
                   ),
               ),
             ),
@@ -10081,33 +9154,33 @@
             [l, d] = s.useState(1),
             [h, c] = s.useState(!1);
           return s.createElement(
-            A.RG,
+            A.eV,
             { bAllowFullSize: !0, onCancel: t, closeModal: t },
             s.createElement(
-              _.h4,
+              _.Y9,
               null,
-              (0, q.Xx)("#FAQEditor_ChangeInternalName"),
+              (0, q.we)("#FAQEditor_ChangeInternalName"),
             ),
             s.createElement(
-              _.uT,
+              _.nB,
               null,
               s.createElement(
                 "div",
                 null,
-                (0, q.Xx)("#FAQEditor_ChangeInternalName_desc"),
+                (0, q.we)("#FAQEditor_ChangeInternalName_desc"),
               ),
               s.createElement("input", {
                 type: "text",
                 value: o,
-                placeholder: (0, q.Xx)("#FAQEditor_ChangeInternalName"),
+                placeholder: (0, q.we)("#FAQEditor_ChangeInternalName"),
                 onFocus: (e) => e.target.select(),
                 onChange: (e) => i(e.currentTarget.value),
                 maxLength: 240,
                 disabled: n,
               }),
               Boolean(n && !h) &&
-                s.createElement(P.V, {
-                  string: (0, q.Xx)("#Updating"),
+                s.createElement(P.t, {
+                  string: (0, q.we)("#Updating"),
                   position: "center",
                   size: "medium",
                 }),
@@ -10116,26 +9189,26 @@
                   "span",
                   null,
                   1 == l
-                    ? (0, q.Xx)("#EventDisplay_Share_Success")
-                    : (0, q.Xx)(
+                    ? (0, q.we)("#EventDisplay_Share_Success")
+                    : (0, q.we)(
                         "#Error_Description",
                         l,
-                        (0, q.Xx)("#Error_GenericFailureDescription"),
+                        (0, q.we)("#Error_GenericFailureDescription"),
                       ),
                 ),
             ),
             s.createElement(
-              _.$_,
+              _.wi,
               null,
-              s.createElement(_.o9, {
+              s.createElement(_.CB, {
                 bOKDisabled: 0 == o.trim().length || n,
                 onCancel: t,
                 strCancelText: h
-                  ? (0, q.Xx)("#Button_Close")
-                  : (0, q.Xx)("#Button_Cancel"),
+                  ? (0, q.we)("#Button_Close")
+                  : (0, q.we)("#Button_Cancel"),
                 onOK: async () => {
                   r(!0),
-                    p.xP
+                    p.pN
                       .Get()
                       .UpdateInternalName(a.GetFAQID(), o)
                       .then((e) => d(e))
@@ -10147,24 +9220,24 @@
             ),
           );
         },
-        $e = (0, i.Pi)((e) => {
+        $e = (0, i.PA)((e) => {
           const { draft: t, eLanguage: a } = e,
             o = t.GetFAQID(),
-            [i, n] = (0, p.EH)(o),
+            [i, n] = (0, p.g5)(o),
             r = n && i.per_language_info.find((e) => e.language == a),
             l =
               n &&
-              ((c.De.EREALM == Ne.IN.k_ESteamRealmGlobal &&
+              ((c.TS.EREALM == Ne.TU.k_ESteamRealmGlobal &&
                 i.visible_in_global_realm) ||
-                (c.De.EREALM == Ne.IN.k_ESteamRealmChina &&
+                (c.TS.EREALM == Ne.TU.k_ESteamRealmChina &&
                   i.visible_in_china_realm)) &&
               !!(null == r ? void 0 : r.last_publish_timestamp);
           return s.createElement(
-            _e.SV,
+            _e.tH,
             null,
             s.createElement(
               "div",
-              { className: (0, f.Z)(L().SaveBackground) },
+              { className: (0, f.A)(L().SaveBackground) },
               s.createElement(
                 "div",
                 {
@@ -10178,30 +9251,30 @@
                     { className: L().EditPreviewButton },
                     s.createElement(
                       "a",
-                      { href: c.De.HELP_BASE_URL + "faqs/view/" + i.url_code },
-                      (0, q.Xx)("#FAQEditir_ViewLiveFAQ"),
+                      { href: c.TS.HELP_BASE_URL + "faqs/view/" + i.url_code },
+                      (0, q.we)("#FAQEditir_ViewLiveFAQ"),
                     ),
                   ),
               ),
             ),
           );
         });
-      var Ke = a(82071);
-      const Je = (0, i.Pi)((e) => {
+      var Ke = a(91254);
+      const Je = (0, i.PA)((e) => {
           const { faqid: t } = e,
-            [a, o] = (0, p.wl)(t),
+            [a, o] = (0, p.z5)(t),
             i = s.useRef();
           if (!o)
-            return s.createElement(P.V, {
+            return s.createElement(P.t, {
               position: "center",
               size: "xlarge",
-              string: (0, q.Xx)("#Loading"),
+              string: (0, q.we)("#Loading"),
             });
           if (!a)
             return s.createElement(at, {
-              strError: (0, q.Xx)("#FAQEditor_NoFAQFound"),
+              strError: (0, q.we)("#FAQEditor_NoFAQFound"),
             });
-          const n = xe.U.Get().GetCurEditLanguage();
+          const n = xe.O.Get().GetCurEditLanguage();
           return s.createElement(
             "div",
             null,
@@ -10212,7 +9285,7 @@
               s.createElement(
                 "div",
                 { className: Te().FAQMenuCtn },
-                s.createElement(We, { draft: a, eLanguage: n }),
+                s.createElement(Fe, { draft: a, eLanguage: n }),
               ),
               s.createElement(
                 "div",
@@ -10225,7 +9298,7 @@
                     { className: L().Columns },
                     s.createElement(
                       "div",
-                      { className: (0, f.Z)(L().LeftCol) },
+                      { className: (0, f.A)(L().LeftCol) },
                       s.createElement(et, { draft: a, eLanguage: n }),
                       s.createElement(tt, {
                         bbcodeEditorRef: i,
@@ -10246,32 +9319,32 @@
           );
         }),
         Ze = (e) => {
-          if (!Boolean(c.JA.CAN_UPLOAD_IMAGES)) return null;
-          const t = new N.K(c.JA.CLANSTEAMID),
+          if (!Boolean(c.UF.CAN_UPLOAD_IMAGES)) return null;
+          const t = new N.b(c.UF.CLANSTEAMID),
             { draft: a, bbcodeEditorRef: o } = e;
           return s.createElement(
-            _e.SV,
+            _e.tH,
             null,
             s.createElement(
               "div",
               { className: e.className },
-              s.createElement("div", null, (0, q.Xx)("#FAQEditor_ImageTitle")),
-              s.createElement(Ae.M, {
+              s.createElement("div", null, (0, q.we)("#FAQEditor_ImageTitle")),
+              s.createElement(Ae.G, {
                 bShowLightBox: !0,
                 appid: void 0,
                 clanSteamID: t,
                 imageInsertCallBack: (e, t) =>
-                  o.current && (0, ke.G)(null == o ? void 0 : o.current, e, t),
+                  o.current && (0, ke.f)(null == o ? void 0 : o.current, e, t),
                 fnSetImageURL: () => {},
                 rgRealmList: a.GetIncludedRealmList(),
                 fnLangHasData: a.BHasSomeTextForLanguage,
                 fnGetImageHash: () => null,
-                partnerEventStore: Ke.j1,
+                partnerEventStore: Ke.O3,
               }),
             ),
           );
         },
-        et = (0, i.Pi)((e) => {
+        et = (0, i.PA)((e) => {
           const { draft: t, eLanguage: a } = e;
           return s.createElement(
             "div",
@@ -10279,20 +9352,20 @@
             s.createElement(
               "div",
               { className: Te().EditorLabel },
-              (0, q.Xx)("#FAQEditor_TitleLabel"),
+              (0, q.we)("#FAQEditor_TitleLabel"),
             ),
             s.createElement("input", {
               type: "text",
               className: Te().EditorTitleFieldInput,
               value: t.GetDraftTitle(a) || "",
-              placeholder: (0, q.Xx)("#FAQEditor_TitlePlaceHolder"),
+              placeholder: (0, q.we)("#FAQEditor_TitlePlaceHolder"),
               onFocus: (e) => e.target.select(),
               onChange: (e) => t.SetDraftTitle(a, e.currentTarget.value),
               maxLength: 120,
             }),
           );
         }),
-        tt = (0, i.Pi)((e) => {
+        tt = (0, i.PA)((e) => {
           const { draft: t, eLanguage: a, bbcodeEditorRef: o } = e;
           return s.createElement(
             "div",
@@ -10300,15 +9373,15 @@
             s.createElement(
               "div",
               { className: Te().EditorLabel },
-              (0, q.Xx)("#FAQEditor_ContentLabel"),
+              (0, q.we)("#FAQEditor_ContentLabel"),
             ),
-            s.createElement(Ie.R, {
+            s.createElement(Ie.I, {
               ref: o,
               fnGetCurText: () => t.GetDraftContent(a) || "",
               fnOnTextChange: (e) =>
                 t.SetDraftContent(a, e.currentTarget.value),
               fnSetText: (e) => t.SetDraftContent(a, e),
-              strPlaceholder: (0, q.Xx)("#FAQEditor_ContentPlaceHolder"),
+              strPlaceholder: (0, q.we)("#FAQEditor_ContentPlaceHolder"),
               bSupportHTMLImport: !0,
               showFormatHelp: "PartnerEvents",
               classNameForTextArea: Te().EditorPaneTextArea,
@@ -10323,13 +9396,13 @@
             s.createElement(
               u,
               { route: o.k_eCommunityDashboard, className: Te().EscapeLink },
-              (0, q.Xx)("#FAQEditor_GoToDashboard"),
+              (0, q.we)("#FAQEditor_GoToDashboard"),
             ),
           );
-      var ot = a(57855);
+      var ot = a(28735);
       const it = (e) => {
           const { title: t, content: a, bIsPreview: o, elSideBars: i } = e,
-            n = (0, d.TH)();
+            n = (0, d.zy)();
           return (
             s.useEffect(() => {
               var e, t, a;
@@ -10352,18 +9425,18 @@
             }, [n]),
             s.createElement(
               "div",
-              { className: (0, f.Z)(ot.FAQViewPage, c.De.LANGUAGE) },
+              { className: (0, f.A)(ot.FAQViewPage, c.TS.LANGUAGE) },
               s.createElement(
                 "a",
-                { className: ot.SupportTitle, href: `${c.De.HELP_BASE_URL}` },
-                (0, q.Xx)("#FAQViewer_SteamSupport"),
+                { className: ot.SupportTitle, href: `${c.TS.HELP_BASE_URL}` },
+                (0, q.we)("#FAQViewer_SteamSupport"),
               ),
               s.createElement(
                 "div",
                 { className: ot.Columns },
                 s.createElement(
                   "div",
-                  { className: (0, f.Z)(ot.LeftCol) },
+                  { className: (0, f.A)(ot.LeftCol) },
                   s.createElement("div", { className: ot.TopColorBar }),
                   s.createElement(
                     "div",
@@ -10372,7 +9445,7 @@
                     s.createElement(
                       "div",
                       { className: ot.FAQContent },
-                      s.createElement(r.R, { text: a, bShowErrorInfo: o }),
+                      s.createElement(r.u, { text: a, bShowErrorInfo: o }),
                     ),
                   ),
                 ),
@@ -10387,14 +9460,14 @@
         },
         st = (e) =>
           s.createElement("div", { className: ot.FAQViewPage }, e.children);
-      var nt = a(80751),
+      var nt = a(41735),
         rt = a.n(nt),
-        lt = a(73799),
+        lt = a(58632),
         pt = a.n(lt),
-        dt = a(42718),
-        ht = a(79545),
-        ct = a(82182),
-        ut = a(40057);
+        dt = a(31380),
+        ht = a(56545),
+        ct = a(37735),
+        ut = a(78205);
       const mt = "nicknames";
       const ft = new (pt())(
           (e) =>
@@ -10402,9 +9475,9 @@
               var t, a, o, i;
               if (!e || 0 == e.length) return [];
               const s =
-                "community" == (0, c.Zv)()
-                  ? c.De.COMMUNITY_BASE_URL
-                  : c.De.STORE_BASE_URL;
+                "community" == (0, c.yK)()
+                  ? c.TS.COMMUNITY_BASE_URL
+                  : c.TS.STORE_BASE_URL;
               if (1 == e.length) {
                 const o = { accountid: e[0], origin: self.origin },
                   i = await rt().get(`${s}actions/ajaxgetavatarpersona`, {
@@ -10419,7 +9492,7 @@
                       : t.success) ||
                   !(null === (a = i.data) || void 0 === a ? void 0 : a.userinfo)
                 )
-                  throw `Load single avatar/persona failed ${(0, g.l)(i).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${(0, g.H)(i).strErrorMsg}`;
                 return [i.data.userinfo];
               }
               {
@@ -10438,11 +9511,11 @@
                     ? void 0
                     : i.userinfos)
                 )
-                  throw `Load single avatar/persona failed ${(0, g.l)(a).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${(0, g.H)(a).strErrorMsg}`;
                 const n = new Map();
                 return (
                   a.data.userinfos.forEach((e) =>
-                    n.set(new N.K(e.steamid).GetAccountID(), e),
+                    n.set(new N.b(e.steamid).GetAccountID(), e),
                   ),
                   e.map((e) => n.get(e))
                 );
@@ -10451,7 +9524,7 @@
           { cache: !1 },
         ),
         gt = "avatarandpersonas";
-      var yt = a(47955);
+      var yt = a(15736);
       function bt(e) {
         const { accountID: t, bHideWhenNotAvailable: a, bHideName: o } = e,
           [i] = (function (e) {
@@ -10461,12 +9534,12 @@
             return [t, a];
           })(t),
           n = (function (e) {
-            const t = (0, ut.bY)(),
+            const t = (0, ut.KV)(),
               { data: a, isLoading: o } = (0, dt.useQuery)([mt], async () => {
                 const e = new Map();
-                if (c.L7.logged_in) {
-                  const a = ht.gA.Init(ct.bM),
-                    o = (await ct.lk.GetNicknameList(t, a)).Body().toObject();
+                if (c.iA.logged_in) {
+                  const a = ht.w.Init(ct.dN),
+                    o = (await ct.xt.GetNicknameList(t, a)).Body().toObject();
                   (null == o ? void 0 : o.nicknames) &&
                     o.nicknames.length > 0 &&
                     o.nicknames.forEach((t) => {
@@ -10477,7 +9550,7 @@
               });
             return a ? a.get(e) : null;
           })(t),
-          r = s.useMemo(() => N.K.InitFromAccountID(t), [t]);
+          r = s.useMemo(() => N.b.InitFromAccountID(t), [t]);
         return s.createElement(
           s.Fragment,
           null,
@@ -10504,36 +9577,36 @@
               ),
         );
       }
-      var wt = a(29111),
-        vt = a(14579);
+      var wt = a(20572),
+        vt = a(66891);
       const St = (e) => {
           const { faqContent: t } = e,
-            [a, i] = (0, p.Ky)(t.faq_id, t.version, t.language);
-          return p.xP.Get().BHasFAQEdit()
+            [a, i] = (0, p.W)(t.faq_id, t.version, t.language);
+          return p.pN.Get().BHasFAQEdit()
             ? s.createElement(
                 "div",
-                { className: (0, f.Z)(vt.Section, O.ValveOnlyBackground) },
+                { className: (0, f.A)(vt.Section, R.ValveOnlyBackground) },
                 s.createElement(
                   "div",
                   { className: vt.TopicHeader },
-                  (0, q.Xx)("#FAQViewer_AdminLinks"),
+                  (0, q.we)("#FAQViewer_AdminLinks"),
                 ),
                 s.createElement(
                   "div",
                   { className: wt.InfoRow },
-                  (0, q.kQ)(
+                  (0, q.PP)(
                     "#FAQViewer_Admin_LastUpdate",
                     (null == a ? void 0 : a.author_account_id)
                       ? s.createElement(bt, {
                           accountID: Number.parseInt(a.author_account_id),
                         })
-                      : (0, q.Xx)("#FAQViewer_UnknownUser"),
+                      : (0, q.we)("#FAQViewer_UnknownUser"),
                     s.createElement(
                       "span",
                       null,
-                      (0, q.$1)(t.timestamp) +
+                      (0, q.TW)(t.timestamp) +
                         "@" +
-                        (0, U.Sc)(t.timestamp, { bForce24HourClock: !1 }),
+                        (0, U.KC)(t.timestamp, { bForce24HourClock: !1 }),
                     ),
                   ),
                 ),
@@ -10545,14 +9618,14 @@
                     route: o.k_eCommunityEdit,
                     bForceAnchor: !0,
                   },
-                  (0, q.Xx)("#FAQViewer_GotoEditor"),
+                  (0, q.we)("#FAQViewer_GotoEditor"),
                 ),
               )
             : null;
         },
         kt = (e) => {
           const { faqContent: t } = e,
-            [a, o] = (0, p.wl)(t.faq_id);
+            [a, o] = (0, p.z5)(t.faq_id);
           if (
             !a ||
             !o ||
@@ -10563,7 +9636,7 @@
           return s.createElement(
             "div",
             { className: wt.InfoRow },
-            (0, q.kQ)(
+            (0, q.PP)(
               "#FAQViewer_DraftNewer",
               s.createElement(bt, {
                 accountID: Number.parseInt(i.author_account_id),
@@ -10571,9 +9644,9 @@
               s.createElement(
                 "span",
                 null,
-                (0, q.$1)(i.timestamp) +
+                (0, q.TW)(i.timestamp) +
                   "@" +
-                  (0, U.Sc)(i.timestamp, { bForce24HourClock: !1 }),
+                  (0, U.KC)(i.timestamp, { bForce24HourClock: !1 }),
               ),
             ),
           );
@@ -10584,11 +9657,11 @@
             null,
             s.createElement(
               "div",
-              { className: (0, f.Z)(vt.Section, vt.NeedHelp) },
+              { className: (0, f.A)(vt.Section, vt.NeedHelp) },
               s.createElement(
                 "div",
                 { className: vt.LeftCol },
-                s.createElement(T.WWB, null),
+                s.createElement(T._VW, null),
               ),
               s.createElement(
                 "div",
@@ -10596,12 +9669,12 @@
                 s.createElement(
                   "div",
                   { className: vt.TopicHeader },
-                  (0, q.Xx)("#FAQViewer_SideBar_ProblemWithSteam_Title"),
+                  (0, q.we)("#FAQViewer_SideBar_ProblemWithSteam_Title"),
                 ),
                 s.createElement(
                   "div",
                   null,
-                  (0, q.Xx)("#FAQViewer_SideBar_ProblemWithSteam_Desc"),
+                  (0, q.we)("#FAQViewer_SideBar_ProblemWithSteam_Desc"),
                 ),
                 s.createElement(
                   "div",
@@ -10609,22 +9682,22 @@
                   s.createElement(
                     "a",
                     {
-                      href: c.De.HELP_BASE_URL,
-                      className: O.EditPreviewButton,
+                      href: c.TS.HELP_BASE_URL,
+                      className: R.EditPreviewButton,
                     },
-                    (0, q.Xx)("#FAQViewer_SideBar_ProblemWithSteam_Link"),
+                    (0, q.we)("#FAQViewer_SideBar_ProblemWithSteam_Link"),
                   ),
                 ),
               ),
             ),
-            !(0, c.h4)() &&
+            !(0, c.Y2)() &&
               s.createElement(
                 "div",
-                { className: (0, f.Z)(vt.Section, vt.CommunityHelp) },
+                { className: (0, f.A)(vt.Section, vt.CommunityHelp) },
                 s.createElement(
                   "div",
                   { className: vt.LeftCol },
-                  s.createElement(T.IWH, null),
+                  s.createElement(T.ROZ, null),
                 ),
                 s.createElement(
                   "div",
@@ -10632,12 +9705,12 @@
                   s.createElement(
                     "div",
                     { className: vt.TopicHeader },
-                    (0, q.Xx)("#FAQViewer_SideBar_CommunityHelp_Title"),
+                    (0, q.we)("#FAQViewer_SideBar_CommunityHelp_Title"),
                   ),
                   s.createElement(
                     "div",
                     null,
-                    (0, q.Xx)("#FAQViewer_SideBar_CommunityHelp_Desc"),
+                    (0, q.we)("#FAQViewer_SideBar_CommunityHelp_Desc"),
                   ),
                   s.createElement(
                     "div",
@@ -10645,20 +9718,20 @@
                     s.createElement(
                       "a",
                       {
-                        href: c.De.COMMUNITY_BASE_URL + "discussions",
-                        className: O.EditPreviewButton,
+                        href: c.TS.COMMUNITY_BASE_URL + "discussions",
+                        className: R.EditPreviewButton,
                       },
-                      (0, q.Xx)("#FAQViewer_SideBar_CommunityHelp_Link"),
+                      (0, q.we)("#FAQViewer_SideBar_CommunityHelp_Link"),
                     ),
                   ),
                 ),
               ),
           );
-      var It = a(10368),
+      var It = a(25651),
         _t = a.n(It);
       const At = (e) => {
           const { faqid: t } = e,
-            [a, o] = (0, p.NV)(t, (0, l.jM)(c.De.LANGUAGE));
+            [a, o] = (0, p.Kv)(t, (0, l.sf)(c.TS.LANGUAGE));
           return o
             ? a
               ? s.createElement(it, {
@@ -10673,27 +9746,27 @@
                   st,
                   null,
                   s.createElement(Ct, {
-                    strError: (0, q.Xx)("#FAQViewer_NoFAQFound"),
+                    strError: (0, q.we)("#FAQViewer_NoFAQFound"),
                   }),
                 )
             : s.createElement(
                 st,
                 null,
-                s.createElement(P.V, {
+                s.createElement(P.t, {
                   position: "center",
                   size: "xlarge",
-                  string: (0, q.Xx)("#Loading"),
+                  string: (0, q.we)("#Loading"),
                 }),
               );
         },
         Ct = (e) => {
           var t;
           const a =
-            c.De.COMMUNITY_BASE_URL +
-            (c.JA.APPID
+            c.TS.COMMUNITY_BASE_URL +
+            (c.UF.APPID
               ? "app/" +
-                (null !== (t = c.JA.VANITY_ID) && void 0 !== t ? t : c.JA.APPID)
-              : "gid/" + c.JA.CLANSTEAMID);
+                (null !== (t = c.UF.VANITY_ID) && void 0 !== t ? t : c.UF.APPID)
+              : "gid/" + c.UF.CLANSTEAMID);
           return s.createElement(
             "div",
             { className: _t().ErrorCtn },
@@ -10701,14 +9774,14 @@
             s.createElement(
               "a",
               { className: _t().EscapeLink, href: a },
-              (0, q.Xx)("#FAQViewer_GoToHomepage"),
+              (0, q.we)("#FAQViewer_GoToHomepage"),
             ),
           );
         },
-        Tt = (0, i.Pi)((e) => {
+        Tt = (0, i.PA)((e) => {
           const { faqid: t } = e,
-            [a, o] = (0, p.wl)(t),
-            i = xe.U.Get().GetCurEditLanguage();
+            [a, o] = (0, p.z5)(t),
+            i = xe.O.Get().GetCurEditLanguage();
           return o
             ? a
               ? s.createElement(
@@ -10716,8 +9789,8 @@
                   null,
                   s.createElement(Xe, { draft: a, bPreview: !0 }),
                   s.createElement(it, {
-                    title: a.GetDraftTitleWithFallback(i, c.De.EREALM),
-                    content: a.GetDraftContentWithFallback(i, c.De.EREALM),
+                    title: a.GetDraftTitleWithFallback(i, c.TS.EREALM),
+                    content: a.GetDraftContentWithFallback(i, c.TS.EREALM),
                   }),
                   s.createElement($e, { draft: a, eLanguage: i }),
                 )
@@ -10725,22 +9798,22 @@
                   st,
                   null,
                   s.createElement(Ct, {
-                    strError: (0, q.Xx)("#FAQViewer_NoFAQFound"),
+                    strError: (0, q.we)("#FAQViewer_NoFAQFound"),
                   }),
                 )
             : s.createElement(
                 st,
                 null,
-                s.createElement(P.V, {
+                s.createElement(P.t, {
                   position: "center",
                   size: "xlarge",
-                  string: (0, q.Xx)("#Loading"),
+                  string: (0, q.we)("#Loading"),
                 }),
               );
         });
-      var Pt = a(42855),
-        Dt = a(56480),
-        qt = a(69406);
+      var Pt = a(60746),
+        Dt = a(6813),
+        qt = a(97058);
       const Mt = {
           ViewFAQ: (e, t) => `/faqs/${e}/view/${t}*`,
           EditFAQ: (e, t) => `/faqs/${e}/edit/${t}*`,
@@ -10748,52 +9821,52 @@
           PreviewFAQ: (e, t) => `/faqs/${e}/preview/${t}*`,
           ImportTool: (e) => `/faqs/${e}/import`,
         },
-        Et = (0, i.Pi)((e) => {
+        zt = (0, i.PA)((e) => {
           const [t, a] = s.useState(!0);
           return (
             s.useEffect(() => {
               (async () => {
-                await Pt.cb.InitGlobal(), a(!1);
+                await Pt.KN.InitGlobal(), a(!1);
               })();
             }, []),
             t
-              ? s.createElement(P.V, {
+              ? s.createElement(P.t, {
                   position: "center",
                   size: "medium",
-                  string: (0, q.Xx)("#Loading"),
+                  string: (0, q.we)("#Loading"),
                 })
               : s.createElement(
                   s.Fragment,
                   null,
                   s.createElement(Se, null),
                   s.createElement(
-                    d.rs,
+                    d.dO,
                     null,
-                    s.createElement(d.AW, {
+                    s.createElement(d.qh, {
                       path: Mt.ViewFAQ(":vanity_str", ":faqid"),
                       render: (e) =>
-                        s.createElement(Dt.d, {
+                        s.createElement(Dt.X, {
                           config: {
                             "faqs-root": () => {
                               const { faqid: t } = e.match.params,
-                                a = (0, p.cJ)(t);
+                                a = (0, p.CJ)(t);
                               return s.createElement(At, { faqid: a });
                             },
                           },
                         }),
                     }),
-                    s.createElement(d.AW, {
+                    s.createElement(d.qh, {
                       path: Mt.EditFAQ(":vanity_str", ":faqid"),
                       render: (e) =>
-                        s.createElement(Dt.d, {
+                        s.createElement(Dt.X, {
                           config: {
                             "faqs-root": () => {
                               const { faqid: t } = e.match.params;
                               if (t) {
-                                const e = (0, p.cJ)(t);
+                                const e = (0, p.CJ)(t);
                                 return e
                                   ? s.createElement(Je, { faqid: e })
-                                  : s.createElement(d.l_, {
+                                  : s.createElement(d.rd, {
                                       push: !0,
                                       to: m(o.k_eCommunityDashboard),
                                     });
@@ -10803,33 +9876,33 @@
                           },
                         }),
                     }),
-                    s.createElement(d.AW, {
+                    s.createElement(d.qh, {
                       path: Mt.DashboardFAQ(":vanity_str"),
                       render: (e) =>
-                        s.createElement(Dt.d, {
+                        s.createElement(Dt.X, {
                           config: {
                             "faqs-root": () => s.createElement(ue, null),
                           },
                         }),
                     }),
-                    s.createElement(d.AW, {
+                    s.createElement(d.qh, {
                       path: Mt.PreviewFAQ(":vanity_str", ":faqid"),
                       render: (e) =>
-                        s.createElement(Dt.d, {
+                        s.createElement(Dt.X, {
                           config: {
                             "faqs-root": () => {
                               const { faqid: t } = e.match.params,
-                                a = (0, p.cJ)(t);
+                                a = (0, p.CJ)(t);
                               return s.createElement(Tt, { faqid: a });
                             },
                           },
                         }),
                     }),
-                    s.createElement(d.AW, {
+                    s.createElement(d.qh, {
                       path: Mt.ImportTool(":vanity_str"),
                       component: v,
                     }),
-                    s.createElement(d.AW, { component: qt.R }),
+                    s.createElement(d.qh, { component: qt.a }),
                   ),
                 )
           );

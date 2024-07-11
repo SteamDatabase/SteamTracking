@@ -2,12 +2,12 @@
  ****/
 "use strict";
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [7280, 3375],
+  [8987, 5894],
   {
-    79798: (e, r, u) => {
+    35649: (e, r, u) => {
       u.r(r), u.d(r, { default: () => o });
-      var s = u(47427),
-        a = u(76957);
+      var s = u(90626),
+        a = u(13164);
       function o(e) {
         const { familyGroupID: r } = e;
         return s.createElement(a.PurchaseRequestSimpleInfoPage, {

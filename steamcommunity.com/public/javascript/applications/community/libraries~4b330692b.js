@@ -1,19 +1,19 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [6148],
+  [5633],
   {
-    42363: (e, t, r) => {
+    65546: (e, t, r) => {
       "use strict";
       function n(e) {
         return e && "object" == typeof e && "default" in e ? e.default : e;
       }
-      var i = n(r(31628)),
-        a = n(r(67377)),
-        o = r(47427),
+      var i = n(r(72378)),
+        a = n(r(37501)),
+        o = r(90626),
         u = n(o),
-        s = n(r(7207)),
-        l = n(r(93637)),
+        s = n(r(31613)),
+        l = n(r(25387)),
         c = {
           arr: Array.isArray,
           obj: function (e) {
@@ -245,19 +245,19 @@
       function O(e) {
         V = e;
       }
-      var E,
-        C = function () {
+      var C,
+        E = function () {
           return Date.now();
         };
       function S(e) {
-        E = e;
+        C = e;
       }
       var P,
-        q,
-        F = function (e) {
+        F,
+        M = function (e) {
           return e.current;
         };
-      function M(e) {
+      function q(e) {
         P = e;
       }
       var R = Object.freeze({
@@ -283,30 +283,30 @@
           },
           injectStringInterpolator: O,
           get now() {
-            return C;
+            return E;
           },
           injectNow: function (e) {
-            C = e;
+            E = e;
           },
           get defaultElement() {
-            return E;
+            return C;
           },
           injectDefaultElement: S,
           get animatedApi() {
-            return F;
+            return M;
           },
           injectAnimatedApi: function (e) {
-            F = e;
+            M = e;
           },
           get createAnimatedStyle() {
             return P;
           },
-          injectCreateAnimatedStyle: M,
+          injectCreateAnimatedStyle: q,
           get manualFrameloop() {
-            return q;
+            return F;
           },
           injectManualFrameloop: function (e) {
-            q = e;
+            F = e;
           },
         }),
         T = (function (e) {
@@ -326,7 +326,7 @@
         I = new Set(),
         z = function e() {
           if (!_) return !1;
-          var t = C(),
+          var t = E(),
             r = I,
             n = Array.isArray(r),
             i = 0;
@@ -406,7 +406,7 @@
             o.props.onFrame && o.props.onFrame(o.values),
               u || (I.delete(o), o.stop(!0));
           }
-          return I.size ? (q ? q() : A(e)) : (_ = !1), _;
+          return I.size ? (F ? F() : A(e)) : (_ = !1), _;
         };
       function L(e, t, r) {
         if ("function" == typeof e) return e;
@@ -671,7 +671,7 @@
                   this.props.onStart && this.props.onStart(),
                   (t = this),
                   I.has(t) || I.add(t),
-                  _ || ((_ = !0), A(q || z));
+                  _ || ((_ = !0), A(F || z));
               return this;
             }),
             (t.stop = function (e) {
@@ -780,24 +780,24 @@
                     w && (x = w.animations[n].parent);
                     var j,
                       O = u.parent,
-                      E = u.interpolation,
+                      C = u.interpolation,
                       S = p(w ? x.getPayload() : x),
                       P = o;
                     b && (P = V({ range: [0, 1], output: [o, o] })(1));
-                    var q,
-                      F = E && E.getValue(),
-                      M =
+                    var F,
+                      M = C && C.getValue(),
+                      q =
                         !c.und(O) &&
                         u.animatedValues.some(function (e) {
                           return !e.done;
                         }),
-                      R = !c.equ(P, F),
+                      R = !c.equ(P, M),
                       T = !c.equ(P, u.previous),
                       _ = !c.equ(A, u.config);
                     if (m || (T && R) || _) {
                       var I;
-                      if (s || f) O = E = u.parent || new W(k);
-                      else if (g) O = E = u.parent || new D(k);
+                      if (s || f) O = C = u.parent || new W(k);
+                      else if (g) O = C = u.parent || new D(k);
                       else if (b) {
                         var z =
                           u.interpolation &&
@@ -808,9 +808,9 @@
                             : (O = new W(0));
                         var L = { output: [z, o] };
                         u.interpolation
-                          ? ((E = u.interpolation),
+                          ? ((C = u.interpolation),
                             u.interpolation.updateConfig(L))
-                          : (E = O.interpolate(L));
+                          : (C = O.interpolate(L));
                       }
                       return (
                         (S = p(w ? x.getPayload() : x)),
@@ -820,9 +820,9 @@
                         j.forEach(function (e) {
                           (e.startPosition = e.value),
                             (e.lastPosition = e.value),
-                            (e.lastVelocity = M ? e.lastVelocity : void 0),
-                            (e.lastTime = M ? e.lastTime : void 0),
-                            (e.startTime = C()),
+                            (e.lastVelocity = q ? e.lastVelocity : void 0),
+                            (e.lastTime = q ? e.lastTime : void 0),
+                            (e.startTime = E()),
                             (e.done = !1),
                             e.animatedStyles.clear();
                         }),
@@ -833,7 +833,7 @@
                           (((I = {})[n] = i({}, u, {
                             name: n,
                             parent: O,
-                            interpolation: E,
+                            interpolation: C,
                             animatedValues: j,
                             toValues: S,
                             previous: P,
@@ -860,13 +860,13 @@
                       ? e
                       : (b &&
                           (O.setValue(1, !1),
-                          E.updateConfig({ output: [P, P] })),
+                          C.updateConfig({ output: [P, P] })),
                         (O.done = !0),
                         (t.hasChanged = !0),
                         i(
                           {},
                           e,
-                          (((q = {})[n] = i({}, e[n], { previous: P })), q),
+                          (((F = {})[n] = i({}, e[n], { previous: P })), F),
                         ));
                   },
                   this.animations,
@@ -1391,7 +1391,7 @@
         );
       }, Ve);
       var Oe = {};
-      M(function (e) {
+      q(function (e) {
         return new ee(e);
       }),
         S("div"),
@@ -1474,10 +1474,10 @@
             return e;
           },
         );
-      var Ee,
-        Ce,
+      var Ce,
+        Ee,
         Se =
-          ((Ee = function (e) {
+          ((Ce = function (e) {
             return o.forwardRef(function (t, r) {
               var n = f(),
                 s = o.useRef(!0),
@@ -1499,7 +1499,7 @@
                 };
               }, []),
                 o.useImperativeHandle(r, function () {
-                  return F(d, s, n);
+                  return M(d, s, n);
                 }),
                 p(t);
               var h,
@@ -1524,12 +1524,12 @@
               return u.createElement(e, i({}, v, { ref: y }));
             });
           }),
-          void 0 === (Ce = !1) && (Ce = !0),
+          void 0 === (Ee = !1) && (Ee = !0),
           function (e) {
             return (c.arr(e) ? e : Object.keys(e)).reduce(function (e, t) {
-              var r = Ce ? t[0].toLowerCase() + t.substring(1) : t;
-              return (e[r] = Ee(r)), e;
-            }, Ee);
+              var r = Ee ? t[0].toLowerCase() + t.substring(1) : t;
+              return (e[r] = Ce(r)), e;
+            }, Ce);
           }),
         Pe = Se([
           "a",
@@ -1666,8 +1666,8 @@
           "text",
           "tspan",
         ]);
-      (t.q = Pe),
-        (t.q_ = function (e) {
+      (t.CS = Pe),
+        (t.zh = function (e) {
           var t = c.fun(e),
             r = H(1, t ? e : [e]),
             n = r[0],
@@ -1676,7 +1676,7 @@
           return t ? [n[0], i, a] : n;
         });
     },
-    93637: (e) => {
+    25387: (e) => {
       (e.exports = function (e) {
         if (void 0 === e)
           throw new ReferenceError(
@@ -1687,7 +1687,7 @@
         (e.exports.__esModule = !0),
         (e.exports.default = e.exports);
     },
-    31628: (e) => {
+    72378: (e) => {
       function t() {
         return (
           (e.exports = t =
@@ -1711,8 +1711,8 @@
         (e.exports.__esModule = !0),
         (e.exports.default = e.exports);
     },
-    7207: (e, t, r) => {
-      var n = r(1764);
+    31613: (e, t, r) => {
+      var n = r(93732);
       (e.exports = function (e, t) {
         (e.prototype = Object.create(t.prototype)),
           (e.prototype.constructor = e),
@@ -1721,7 +1721,7 @@
         (e.exports.__esModule = !0),
         (e.exports.default = e.exports);
     },
-    67377: (e) => {
+    37501: (e) => {
       (e.exports = function (e, t) {
         if (null == e) return {};
         var r,
@@ -1735,7 +1735,7 @@
         (e.exports.__esModule = !0),
         (e.exports.default = e.exports);
     },
-    1764: (e) => {
+    93732: (e) => {
       function t(r, n) {
         return (
           (e.exports = t =

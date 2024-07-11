@@ -2,20 +2,20 @@
  ****/
 "use strict";
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [4601],
+  [8396],
   {
-    87699: (e, t, a) => {
-      a.d(t, { C: () => c, R: () => m });
-      var r = a(85556),
-        s = a(54842),
-        n = a(35427),
-        o = a(64936),
-        i = a(82071);
-      class m {
+    60727: (e, t, a) => {
+      a.d(t, { l: () => c, m: () => i });
+      var r = a(34629),
+        s = a(14947),
+        n = a(17720),
+        o = a(44165),
+        m = a(91254);
+      class i {
         constructor() {
           (this.m_mapBroadcasterSteamIDToEvents = new Map()),
             (this.m_mapBroadcasterSteamIDData = new Map()),
-            (0, s.rC)(this);
+            (0, s.Gn)(this);
         }
         static GetBBCodeParam(e, t, a = "") {
           const r = new RegExp(`\\W${t}\\W*=\\W*\\"(.*?)\\"`, "gmi").exec(e);
@@ -29,13 +29,13 @@
             if (null === r) break;
             const s = r[1],
               o = r[2],
-              i = m.GetBBCodeParam(s, "steamid"),
+              m = i.GetBBCodeParam(s, "steamid"),
               c = {
-                steamID: i ? new n.K(i) : void 0,
-                name: m.GetBBCodeParam(s, "name"),
-                title: m.GetBBCodeParam(s, "title"),
-                company: m.GetBBCodeParam(s, "company"),
-                photo: m.GetBBCodeParam(s, "photo"),
+                steamID: m ? new n.b(m) : void 0,
+                name: i.GetBBCodeParam(s, "name"),
+                title: i.GetBBCodeParam(s, "title"),
+                company: i.GetBBCodeParam(s, "company"),
+                photo: i.GetBBCodeParam(s, "photo"),
                 bio: o,
               };
             a.push(c);
@@ -44,7 +44,7 @@
         }
         static ParseEventModelPresenters(e, t) {
           const a = e.GetDescriptionWithFallback(t);
-          return m.ParseCalendarEventPresentersFromText(a);
+          return i.ParseCalendarEventPresentersFromText(a);
         }
         static ParseEventAppReferencesFromText(e) {
           const t = /\/\/store\.steampowered\.com\/app\/(\d+)/gi,
@@ -60,7 +60,7 @@
         static ParseEventModelAppReferences(e, t) {
           var a;
           const r = e.GetDescriptionWithFallback(t),
-            s = m.ParseEventAppReferencesFromText(r);
+            s = i.ParseEventAppReferencesFromText(r);
           if (
             null === (a = e.jsondata) || void 0 === a
               ? void 0
@@ -70,24 +70,24 @@
           return s;
         }
         async BuildBroadcasterSteamIDToActiveEventMap(e) {
-          const t = o.JW.GetTimeNowWithOverride(),
+          const t = o.HD.GetTimeNowWithOverride(),
             a = e.GetCalendarItemsInTimeRange(t - 3600, t);
           for (const e of a.rgCalendarItems)
-            i.j1.QueueLoadPartnerEvent(e.clanid, e.unique_id);
+            m.O3.QueueLoadPartnerEvent(e.clanid, e.unique_id);
           const r = a.rgCalendarItems.map((e) =>
-              i.j1.LoadPartnerEventFromClanEventGIDAndClanSteamID(
-                n.K.InitFromClanID(e.clanid),
+              m.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                n.b.InitFromClanID(e.clanid),
                 e.unique_id,
                 0,
               ),
             ),
             s = await Promise.all(r),
-            m = new Map();
+            i = new Map();
           for (const e of s)
             if (e && !(e.endTime && e.endTime < t))
               for (const t of e.GetBroadcastWhitelistAsSteamIDs())
-                m.has(t) ? m.get(t).push(e) : m.set(t, [e]);
-          return m;
+                i.has(t) ? i.get(t).push(e) : i.set(t, [e]);
+          return i;
         }
         IsBroadcasterAlreadyBound(e, t) {
           const a = this.m_mapBroadcasterSteamIDToEvents.get(e),
@@ -100,7 +100,7 @@
           let a = new Map();
           for (const r of e) {
             if (!r) continue;
-            const e = m.ParseEventModelPresenters(r, t);
+            const e = i.ParseEventModelPresenters(r, t);
             for (const t of e)
               t.steamID && a.set(t.steamID.ConvertTo64BitString(), t);
           }
@@ -119,7 +119,7 @@
         static BuildAppIDRefsForEventList(e, t) {
           const a = new Set();
           for (const r of e) {
-            m.ParseEventModelAppReferences(r, t).forEach((e) => a.add(e));
+            i.ParseEventModelAppReferences(r, t).forEach((e) => a.add(e));
           }
           return Array.from(a);
         }
@@ -127,8 +127,8 @@
           e.forEach((e, a) => {
             if (this.IsBroadcasterAlreadyBound(a, e)) return;
             const r = {
-              m_mapPresenters: m.BuildSteamIDToPresenterMapFromEventList(e, t),
-              m_rgAppIDs: m.BuildAppIDRefsForEventList(e, t),
+              m_mapPresenters: i.BuildSteamIDToPresenterMapFromEventList(e, t),
+              m_rgAppIDs: i.BuildAppIDRefsForEventList(e, t),
             };
             this.m_mapBroadcasterSteamIDData.set(a, r),
               this.m_mapBroadcasterSteamIDToEvents.set(
@@ -157,8 +157,8 @@
             : t.m_rgAppIDs;
         }
       }
-      (0, r.gn)([s.LO], m.prototype, "m_mapBroadcasterSteamIDData", void 0);
-      const c = new m();
+      (0, r.Cg)([s.sH], i.prototype, "m_mapBroadcasterSteamIDData", void 0);
+      const c = new i();
     },
   },
 ]);

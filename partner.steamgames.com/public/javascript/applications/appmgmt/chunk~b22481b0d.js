@@ -2,122 +2,122 @@
  ****/
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [3334],
+  [9255],
   {
-    22593: (e) => {
+    35111: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
-        BannerContainer: "_2b4ehY-W6zKuz_RcJb_bFS",
-        BannerHeader: "_1IgJ0p8H9jPJgPosle6xdl",
-        BannerContentDesktop: "_2qr1fNbf66KPlKVUK9DPxU",
-        BannerContent: "_1B2KFfSCeANfYXihoXz87_",
-        LearnMore: "_1VhpnbFYLe10F8k2MVp3eU",
-        DeveloperBlockLinkDesktop: "_3OZo0-lBqXXl_Q3-LziNYZ",
-        CategoryIcon: "_2yDLeYzL4M39ePif4Ul1Yt",
-        LearnMoreCtn: "EEiwnhVESZ3uAla6gxdWx",
-        LearnMorePC: "_3OSxYULWzrAMAy-23ME-9A",
-        DialogHeader: "_1L5OrJt5Qmz72xonU9kKTD",
-        DialogTitle: "_2FOcPhc2gnErLhxGlQncbM",
-        AppTitleCategory: "_2VgfBN70pLZljMun7XnnWG",
-        CompatibilityDetailsStillLearning: "_1UgyrmTFb1T9F8H51kik4_",
-        CompatibilityDetailsContainerDesktop: "_24aj-c7_9H2LMUYLu8QEM3",
-        CompatibilityDetailsContainer: "_1eAfSXEODH2zKNDDbUn6r0",
-        CompatibilityDetailsInterior_NoScroll: "_2MFHaDHNKij7paYeA1qHOl",
-        CompatibilityDetailsInterior_Scroll: "_3E4i98om4rbI6sTqxbpDpW",
-        CompatibilityDetailsRow: "i-kKrKZVSgnseMWG_XxVw",
-        CompatibilityDetailRatingSummary: "_1dRcOfzoJ-cl7DcDBnuC8w",
-        Verified: "_2NlWspdb3o2jG8uqIpSX2P",
-        Playable: "_3b8fs4YCVuY88p9lYr6R9n",
-        Unsupported: "_34NkCNjIGkKCte3fX0wnRY",
-        CompatibilityDetailRatingDescription: "_2HWJLa1cVWBiFNz3loij",
-        CompatibilityDetailsSeparator: "_1GQvTe7N-bhSS62k81jYE1",
-        CompatibilityDetailsResultIcon: "_256fLpALMl5YHFGBANHEhU",
-        CompatabilityDetailsNoteContainer: "c1yG_FhoHVjWX9Ra5ZQQN",
-        CompatibilityNotes: "_336YAKjWURkatkWeI8exDf",
-        CompatibilityDetailsNoteRow: "_2BejwemJWjg_YdRiboYb34",
-        DeveloperBlogYButton: "_1pC8tdJs_ppbeIZKK-PQ3x",
-        Divider: "_3Ewxr4rKzhC1rcpCJrChFg",
-        DeveloperComments_Anchor: "_2xqA7_YYWeGOEvIz4v6DSI",
-        DeveloperComments_Icon: "_2JTRYQHyc7L6jjyuphKo60",
-        DeveloperComments_LinkNoIcon: "_2aB9HGm37I5Nil9Ox3Ghyd",
-        DeveloperComments_LinkIcon: "_1cm6kVu4NqfeEsRAY6HzJO",
+        BannerContainer: "_29jK3MyNRDW7PAcrm59l_O",
+        BannerHeader: "_3yxJH3baj7mwTTYzBIyi_Z",
+        BannerContentDesktop: "Cek1s5Ixk2xYmkqjjESD0",
+        BannerContent: "_2dGPTYWTKq3CirJwPXKw2b",
+        LearnMore: "_2gXzKgnqPNSUzBWEYvQ4OP",
+        DeveloperBlockLinkDesktop: "_1lpfU0ZtNKyd69pGItpBIh",
+        CategoryIcon: "_3qF711tcWJEMKEv_r_S2tz",
+        LearnMoreCtn: "_2IcEuX6gnbktAOaz9t0dTB",
+        LearnMorePC: "CrSPfZhq2070MqXIkkryS",
+        DialogHeader: "ZEuE1Cb-TDw4-XHl51qc4",
+        DialogTitle: "_2WJTd3a8tzPCkIBmvfBD79",
+        AppTitleCategory: "_23sFZwpTqnM3Ameqew-ZuX",
+        CompatibilityDetailsStillLearning: "_1WWwtz2-hqx1OnhlEOCTLl",
+        CompatibilityDetailsContainerDesktop: "_2ADsvLBScO2pMzUxFUg-_g",
+        CompatibilityDetailsContainer: "_1-O8t3AxzpNsipTPfHVktW",
+        CompatibilityDetailsInterior_NoScroll: "_3oQPVwTgG0CmSxwl3e1cI4",
+        CompatibilityDetailsInterior_Scroll: "_2uCLczcyA7K90OppYPMeBA",
+        CompatibilityDetailsRow: "_32fPpbyivR63XHk0qiRv5n",
+        CompatibilityDetailRatingSummary: "mJGYScROtrnXBuQ-LU507",
+        Verified: "ewmg-iZH8r2ghippaDEbq",
+        Playable: "_1n8vatQzJB_Xptbs8lnm9n",
+        Unsupported: "_2Q0ld2nJ3334gwZJ4LVzPW",
+        CompatibilityDetailRatingDescription: "_3456EX4aC94XtIz6d_Qhsl",
+        CompatibilityDetailsSeparator: "_2mwbdnqm9Lk1-Bzs8FIdCU",
+        CompatibilityDetailsResultIcon: "-L3Xub7NtXchyErJuHnKk",
+        CompatabilityDetailsNoteContainer: "_6_vookxUbQB-_K6ZSHoOs",
+        CompatibilityNotes: "_1aoamIeDfCjdgyuxLvC71m",
+        CompatibilityDetailsNoteRow: "_1Wu_jj1kk9n3WIoga3RL_J",
+        DeveloperBlogYButton: "_3avWDmRhG0NCncSbd3Wsz5",
+        Divider: "_1ikdMiUUJQCzu5m-OgP8az",
+        DeveloperComments_Anchor: "_JTh9okiXkhbwI3pLwToq",
+        DeveloperComments_Icon: "_2R6eCuptMWK0ZkTe0GeqEi",
+        DeveloperComments_LinkNoIcon: "_1zjwW1q8ccnB76k2rPv9oM",
+        DeveloperComments_LinkIcon: "_3OZNUKYm6BQ2AVO-NCNw2t",
       };
     },
-    97672: (e) => {
+    28285: (e) => {
       e.exports = {
-        Dark: "_2SV_emIfYqd0FE4cPJTbfF",
-        Background: "I3P4egf0HS1dH4Qr3vAoV",
-        Foreground: "_39K5gSyYSvElXia1c4nZ0v",
-        Light: "_2e0FqbLmhlb64J5-4lLSSS",
-        Knockout: "_2Q-494zOM44tLzSjdRMtdS",
-        SizeSmall: "_3sifyV5fpgllCyioV_lnwf",
-        SizeMedium: "_3-w0RfsV9P9mAjMsKeXGkY",
-        SizeLarge: "_3jE5H2qSvKRcJXGS8CwctO",
-        ChordSummary: "_2sFpIRxSZYFPum-eB7PsGE",
+        Dark: "_2UAf_T9P3-2l5Rr-IlNksx",
+        Background: "yjs9mmsKYDARPUPSoBFw3",
+        Foreground: "JgT6ZW65muFgrXnrRrXyD",
+        Light: "_1LgIo8fAGnrgqGzZ7rU_9D",
+        Knockout: "_3BGwJlJ63TcWND8KK0xjaH",
+        SizeSmall: "_1Zc5j2ll9yRxA_ZKHEYhw2",
+        SizeMedium: "_12wgofPV3GgsAWFUJhpSz2",
+        SizeLarge: "_3E-9rilOaYgJAzNjrYPRYE",
+        ChordSummary: "_2NB_hM-9uJkdXPKC3tdS7-",
       };
     },
-    4654: (e, t, l) => {
+    91822: (e, t, l) => {
       "use strict";
-      l.d(t, { sC: () => c });
-      var r = l(47427),
-        n = l(13129),
-        o = l(62613),
-        a = l(45691);
-      l(31846), l(37563);
+      l.d(t, { $o: () => c });
+      var r = l(90626),
+        n = l(52038),
+        o = l(12155),
+        a = l(57866);
+      l(61859), l(78327);
       r.createContext({ bShowCompatInfo: !1 });
       const c = (e) => {
-          const t = ((l = e.category), i[l] || o.z5E);
+          const t = ((l = e.category), i[l] || o.WX$);
           var l;
           return r.createElement(
             "div",
-            { className: (0, n.Z)(a.SteamDeckCompatInfo, e.className) },
-            r.createElement(o.j7C, null),
+            { className: (0, n.A)(a.SteamDeckCompatInfo, e.className) },
+            r.createElement(o.lRD, null),
             r.createElement(t, { className: a.SteamDeckCompatIcon }),
           );
         },
-        i = { 1: o.vyu, 2: o.KKY, 3: o.YVI, 0: o.z5E };
+        i = { 1: o.jIP, 2: o.aVR, 3: o.o5Q, 0: o.WX$ };
     },
-    81874: (e, t, l) => {
+    20713: (e, t, l) => {
       "use strict";
-      l.d(t, { FX: () => r });
+      l.d(t, { g4: () => r });
       var r,
-        n = l(85556),
-        o = l(15633),
-        a = l(68785),
-        c = l(20417);
+        n = l(34629),
+        o = l(16628),
+        a = l(60778),
+        c = l(56093);
       function i(e) {
         switch (e) {
-          case o.eV.OK:
+          case o.pR.OK:
             return r.A;
-          case o.eV.CANCEL:
+          case o.pR.CANCEL:
             return r.B;
-          case o.eV.SECONDARY:
+          case o.pR.SECONDARY:
             return r.X;
-          case o.eV.OPTIONS:
+          case o.pR.OPTIONS:
             return r.Y;
-          case o.eV.DIR_LEFT:
+          case o.pR.DIR_LEFT:
             return r.Left;
-          case o.eV.DIR_RIGHT:
+          case o.pR.DIR_RIGHT:
             return r.Right;
-          case o.eV.DIR_UP:
+          case o.pR.DIR_UP:
             return r.Up;
-          case o.eV.DIR_DOWN:
+          case o.pR.DIR_DOWN:
             return r.Down;
-          case o.eV.STEAM_GUIDE:
+          case o.pR.STEAM_GUIDE:
             return r.HomeMenu;
-          case o.eV.STEAM_QUICK_MENU:
+          case o.pR.STEAM_QUICK_MENU:
             return r.QuickMenu;
-          case o.eV.SELECT:
+          case o.pR.SELECT:
             return r.Select;
-          case o.eV.START:
+          case o.pR.START:
             return r.Start;
-          case o.eV.BUMPER_LEFT:
+          case o.pR.BUMPER_LEFT:
             return r.LeftBumper;
-          case o.eV.BUMPER_RIGHT:
+          case o.pR.BUMPER_RIGHT:
             return r.RightBumper;
-          case o.eV.TRIGGER_LEFT:
+          case o.pR.TRIGGER_LEFT:
             return r.LeftTrigger;
-          case o.eV.TRIGGER_RIGHT:
+          case o.pR.TRIGGER_RIGHT:
             return r.RightTrigger;
           default:
             return null;
@@ -158,7 +158,7 @@
         m_defaultActions = new Map();
         m_actionSubscriptions = new Map();
         m_actionDescriptionChangedCallbackRegistrations = [];
-        static Log = new a.sO("ActionDescription").Debug;
+        static Log = new a.wd("ActionDescription").Debug;
         InitContext(e) {
           return e.FocusChangedCallbacks.Register(this.OnFocusNavigationChanged)
             .Unregister;
@@ -185,7 +185,7 @@
                 this.m_actionDescriptionChangedCallbackRegistrations.push(
                   t.ActionDescriptionChangedCallbackList.Register(() => e()),
                 );
-            } else this.SetActionDescriptionsFromMap({ [o.eV.OK]: null });
+            } else this.SetActionDescriptionsFromMap({ [o.pR.OK]: null });
         }
         GetActionDescription(e) {
           let t;
@@ -267,23 +267,23 @@
           };
         }
       }
-      (0, n.gn)([c.ak], s.prototype, "OnFocusNavigationChanged", null),
-        (0, n.gn)([c.ak], s.prototype, "SetActionDescriptionsFromMap", null);
+      (0, n.Cg)([c.oI], s.prototype, "OnFocusNavigationChanged", null),
+        (0, n.Cg)([c.oI], s.prototype, "SetActionDescriptionsFromMap", null);
     },
-    16907: (e, t, l) => {
+    54906: (e, t, l) => {
       "use strict";
-      l.d(t, { Rd: () => R, _R: () => Z, Ws: () => N });
-      var r = l(47427),
-        n = l(82493),
-        o = (l(4030), l(91618)),
-        a = (l(20922), l(4654)),
-        c = l(85556),
-        i = l(80751),
+      l.d(t, { Ez: () => Z, UN: () => b, Q8: () => R });
+      var r = l(90626),
+        n = l(71513),
+        o = (l(93007), l(32381)),
+        a = (l(83087), l(91822)),
+        c = l(34629),
+        i = l(41735),
         s = l.n(i),
-        C = l(16649),
-        m = l(45492),
-        u = l(20417),
-        p = l(37563);
+        C = l(68797),
+        m = l(51240),
+        u = l(56093),
+        p = l(78327);
       class d {
         m_mapAppResults = new Map();
         m_mapAppCallbackList = new Map();
@@ -297,7 +297,7 @@
         GetCallbackForAppList(e) {
           return (
             this.m_mapAppCallbackList.has(e) ||
-              this.m_mapAppCallbackList.set(e, new m.pB()),
+              this.m_mapAppCallbackList.set(e, new m.lu()),
             this.m_mapAppCallbackList.get(e)
           );
         }
@@ -319,16 +319,16 @@
         async InternalLoadAppCompatability(e) {
           let t = null;
           try {
-            const l = { nAppID: e, l: p.De.LANGUAGE, cc: p.De.COUNTRY };
+            const l = { nAppID: e, l: p.TS.LANGUAGE, cc: p.TS.COUNTRY };
             let r =
-              p.De.STORE_BASE_URL +
+              p.TS.STORE_BASE_URL +
               "saleaction/ajaxgetdeckappcompatibilityreport";
             const n = await s().get(r, { params: l, withCredentials: !0 });
             if (200 == n?.status && 1 == n.data?.success && n.data?.results)
               return this.AddCompatabilityResult(n.data.results), !0;
-            t = (0, C.l)(n);
+            t = (0, C.H)(n);
           } catch (e) {
-            t = (0, C.l)(e);
+            t = (0, C.H)(e);
           }
           return (
             console.error(
@@ -344,17 +344,17 @@
           return (
             d.s_Singleton ||
               ((d.s_Singleton = new d()),
-              ("dev" != p.De.WEB_UNIVERSE && "beta" != p.De.WEB_UNIVERSE) ||
+              ("dev" != p.TS.WEB_UNIVERSE && "beta" != p.TS.WEB_UNIVERSE) ||
                 (window.g_DeckVerifiedDetailStores = d.s_Singleton)),
             d.s_Singleton
           );
         }
         constructor() {
           if (document.getElementById("application_config")) {
-            let e = (0, p.kQ)("deckcompatibility", "application_config");
+            let e = (0, p.Tc)("deckcompatibility", "application_config");
             d.ValidateCompatabilityResult(e) &&
               (this.AddCompatabilityResult(e),
-              "dev" == p.De.WEB_UNIVERSE &&
+              "dev" == p.TS.WEB_UNIVERSE &&
                 console.log(
                   "CDeckCompatibilityDetailsStore compatability loaded: ",
                   e,
@@ -371,53 +371,53 @@
           );
         }
       }
-      (0, c.gn)([u.ak], d.prototype, "LoadAppCompabitilityResult", null);
-      var g = l(1485),
-        H = l(77178),
-        f = l(62613),
-        w = l(7222),
-        L = l(46882),
-        h = l(13129),
-        V = l(50423),
-        E = l(31846),
-        v = l(45284),
-        k = l(22593),
+      (0, c.Cg)([u.oI], d.prototype, "LoadAppCompabitilityResult", null);
+      var g = l(7068),
+        H = l(20929),
+        f = l(12155),
+        w = l(78116),
+        h = l(22797),
+        L = l(52038),
+        E = l(56011),
+        v = l(61859),
+        V = l(41338),
+        k = l(35111),
         M = l.n(k),
-        _ = l(90069);
-      function N(e) {
+        N = l(738);
+      function R(e) {
         const { storeItem: t } = e;
         if (0 !== t.GetStoreItemType()) return null;
         const l = t.GetPlatforms()?.steam_deck_compat_category || 0;
         return r.createElement(
           "div",
-          { className: (0, h.Z)(M().LearnMoreCtn, "LearnMoreCtn") },
-          r.createElement(a.sC, { category: l }),
+          { className: (0, L.A)(M().LearnMoreCtn, "LearnMoreCtn") },
+          r.createElement(a.$o, { category: l }),
           r.createElement(
-            n.IS,
+            n.Ii,
             {
               onClick: (e) => {
                 var l, n;
                 e.preventDefault(),
                   e.stopPropagation(),
-                  (l = (0, V.RA)(e)),
+                  (l = (0, E.uX)(e)),
                   (n = t.GetAppID()),
-                  (0, _.AM)(r.createElement(b, { nAppID: n }), l);
+                  (0, N.pg)(r.createElement(_, { nAppID: n }), l);
               },
             },
             r.createElement(
               "span",
               { className: M().LearnMorePC },
-              (0, E.Xx)("#SteamDeckVerified_Store_CompatSectionHeader_Desktop"),
+              (0, v.we)("#SteamDeckVerified_Store_CompatSectionHeader_Desktop"),
             ),
           ),
         );
       }
-      function b(e) {
+      function _(e) {
         const { nAppID: t, closeModal: l } = e,
           n = (function (e) {
             const [t, l] = r.useState(d.Get().GetCompatabilityResultForApp(e));
             return (
-              (0, u.Qg)(d.Get().GetCallbackForAppList(e), l),
+              (0, u.hL)(d.Get().GetCallbackForAppList(e), l),
               r.useEffect(() => {
                 d.Get().BHasCompatabilityResultForApp(e) ||
                   d
@@ -429,54 +429,54 @@
             );
           })(t);
         return r.createElement(
-          H.RG,
+          H.eV,
           {
             modalClassName: "DeckVerifiedModalDialog",
             closeModal: l,
             onCancel: l,
           },
           r.createElement(
-            g.uT,
+            g.nB,
             null,
             r.createElement(
-              o.s,
+              o.Z,
               { focusable: !1, "flow-children": "column" },
               Boolean(n)
                 ? r.createElement(w.default, { results: n })
-                : r.createElement(L.V, {
+                : r.createElement(h.t, {
                     size: "medium",
                     position: "center",
-                    string: (0, E.Xx)("#Loading"),
+                    string: (0, v.we)("#Loading"),
                   }),
             ),
           ),
         );
       }
-      function R(e) {
+      function Z(e) {
         const { category: t } = e;
         switch (t) {
           case 3:
-            return r.createElement(f.YVI, { className: M().CategoryIcon });
+            return r.createElement(f.o5Q, { className: M().CategoryIcon });
           case 2:
-            return r.createElement(f.KKY, { className: M().CategoryIcon });
+            return r.createElement(f.aVR, { className: M().CategoryIcon });
           case 1:
-            return r.createElement(f.vyu, { className: M().CategoryIcon });
+            return r.createElement(f.jIP, { className: M().CategoryIcon });
           case 0:
-            return r.createElement(f.z5E, { className: M().CategoryIcon });
+            return r.createElement(f.WX$, { className: M().CategoryIcon });
         }
       }
-      function Z(e) {
+      function b(e) {
         const { category: t, appName: l, descriptionToken: n } = e;
         if (0 == t)
           return r.createElement(
             "div",
             { className: M().CompatibilityDetailRatingSummary },
             l
-              ? (0, E.kQ)(
+              ? (0, v.PP)(
                   "#SteamDeckVerified_DescriptionHeader_Unknown_WithAppName",
-                  r.createElement("b", null, (0, v.HA)(l)),
+                  r.createElement("b", null, (0, V.EK)(l)),
                 )
-              : (0, E.Xx)("#SteamDeckVerified_DescriptionHeader_Unknown"),
+              : (0, v.we)("#SteamDeckVerified_DescriptionHeader_Unknown"),
           );
         let o = "",
           a = null;
@@ -493,27 +493,27 @@
             (o = "#SteamDeckVerified_DescriptionHeader_Unsupported"),
               (a = M().Unsupported);
         }
-        const c = r.createElement("span", { className: a }, (0, E.Xx)(x(t))),
+        const c = r.createElement("span", { className: a }, (0, v.we)(y(t))),
           i = r.createElement(
             "span",
             { className: M().CompatibilityDetailRatingSummary },
-            (0, E.Xx)(n || o),
+            (0, v.we)(n || o),
           ),
           s = l
-            ? (0, E.kQ)(
+            ? (0, v.PP)(
                 "#SteamDeckVerified_DescriptionHeader_WithAppName",
-                r.createElement("b", null, (0, v.HA)(l)),
+                r.createElement("b", null, (0, V.EK)(l)),
                 c,
                 i,
               )
-            : (0, E.kQ)("#SteamDeckVerified_DescriptionHeader", c, i);
+            : (0, v.PP)("#SteamDeckVerified_DescriptionHeader", c, i);
         return r.createElement(
           "div",
           { className: M().CompatibilityDetailRatingSummary },
           s,
         );
       }
-      function x(e) {
+      function y(e) {
         switch (e) {
           case 3:
             return "#SteamDeckVerified_Category_Verified";
@@ -526,16 +526,16 @@
         }
       }
     },
-    46157: (e, t, l) => {
+    44986: (e, t, l) => {
       "use strict";
-      l.d(t, { VC: () => u, yV: () => r });
+      l.d(t, { $m: () => u, wt: () => r });
       var r,
         n,
-        o = l(47427),
-        a = l(81874),
-        c = l(97672),
+        o = l(90626),
+        a = l(20713),
+        c = l(28285),
         i = l.n(c),
-        s = l(13129);
+        s = l(52038);
       function C(e) {
         switch (e) {
           case n.Small:
@@ -561,71 +561,71 @@
         }
       }
       function u(e) {
-        const t = (0, s.Z)(
+        const t = (0, s.A)(
             null != e.size ? C(e.size) : C(n.Medium),
             null != e.type ? m(e.type) : m(r.Light),
             e.additionalClassName,
           ),
           l = e.type == r.Knockout;
         switch (e.button) {
-          case a.FX.A:
+          case a.g4.A:
             return o.createElement(p, { bIsKnockout: l, className: t });
-          case a.FX.B:
+          case a.g4.B:
             return o.createElement(d, { bIsKnockout: l, className: t });
-          case a.FX.X:
+          case a.g4.X:
             return o.createElement(g, { bIsKnockout: l, className: t });
-          case a.FX.Y:
+          case a.g4.Y:
             return o.createElement(H, { bIsKnockout: l, className: t });
-          case a.FX.Left:
-            return o.createElement(L, { bIsKnockout: l, className: t });
-          case a.FX.Right:
+          case a.g4.Left:
             return o.createElement(h, { bIsKnockout: l, className: t });
-          case a.FX.Up:
+          case a.g4.Right:
+            return o.createElement(L, { bIsKnockout: l, className: t });
+          case a.g4.Up:
             return o.createElement(f, { bIsKnockout: l, className: t });
-          case a.FX.Down:
+          case a.g4.Down:
             return o.createElement(w, { bIsKnockout: l, className: t });
-          case a.FX.HomeMenu:
-            return o.createElement(V, { bIsKnockout: l, className: t });
-          case a.FX.QuickMenu:
+          case a.g4.HomeMenu:
             return o.createElement(E, { bIsKnockout: l, className: t });
-          case a.FX.Select:
+          case a.g4.QuickMenu:
             return o.createElement(v, { bIsKnockout: l, className: t });
-          case a.FX.Start:
+          case a.g4.Select:
+            return o.createElement(V, { bIsKnockout: l, className: t });
+          case a.g4.Start:
             return o.createElement(k, { bIsKnockout: l, className: t });
-          case a.FX.LeftBumper:
+          case a.g4.LeftBumper:
             return o.createElement(M, { bIsKnockout: l, className: t });
-          case a.FX.RightBumper:
-            return o.createElement(_, { bIsKnockout: l, className: t });
-          case a.FX.LeftTrigger:
+          case a.g4.RightBumper:
             return o.createElement(N, { bIsKnockout: l, className: t });
-          case a.FX.RightTrigger:
-            return o.createElement(b, { bIsKnockout: l, className: t });
-          case a.FX.LeftStick:
-            return o.createElement(y, { bIsKnockout: l, className: t });
-          case a.FX.RightStick:
-            return o.createElement(x, { bIsKnockout: l, className: t });
-          case a.FX.LeftStickClick:
+          case a.g4.LeftTrigger:
             return o.createElement(R, { bIsKnockout: l, className: t });
-          case a.FX.RightStickClick:
+          case a.g4.RightTrigger:
+            return o.createElement(_, { bIsKnockout: l, className: t });
+          case a.g4.LeftStick:
+            return o.createElement(x, { bIsKnockout: l, className: t });
+          case a.g4.RightStick:
+            return o.createElement(y, { bIsKnockout: l, className: t });
+          case a.g4.LeftStickClick:
             return o.createElement(Z, { bIsKnockout: l, className: t });
-          case a.FX.LeftTrackpad:
-            return o.createElement(F, { bIsKnockout: l, className: t });
-          case a.FX.RightTrackpad:
-            return o.createElement(K, { bIsKnockout: l, className: t });
-          case a.FX.LeftTrackpadClick:
+          case a.g4.RightStickClick:
+            return o.createElement(b, { bIsKnockout: l, className: t });
+          case a.g4.LeftTrackpad:
             return o.createElement(A, { bIsKnockout: l, className: t });
-          case a.FX.RightTrackpadClick:
-            return o.createElement(X, { bIsKnockout: l, className: t });
-          case a.FX.RearLeftUpper:
-            return o.createElement(D, { bIsKnockout: l, className: t });
-          case a.FX.RearRightUpper:
-            return o.createElement(S, { bIsKnockout: l, className: t });
-          case a.FX.RearLeftLower:
-            return o.createElement(B, { bIsKnockout: l, className: t });
-          case a.FX.RearRightLower:
-            return o.createElement(I, { bIsKnockout: l, className: t });
-          default:
+          case a.g4.RightTrackpad:
+            return o.createElement(F, { bIsKnockout: l, className: t });
+          case a.g4.LeftTrackpadClick:
+            return o.createElement(K, { bIsKnockout: l, className: t });
+          case a.g4.RightTrackpadClick:
             return o.createElement(T, { bIsKnockout: l, className: t });
+          case a.g4.RearLeftUpper:
+            return o.createElement(B, { bIsKnockout: l, className: t });
+          case a.g4.RearRightUpper:
+            return o.createElement(I, { bIsKnockout: l, className: t });
+          case a.g4.RearLeftLower:
+            return o.createElement(D, { bIsKnockout: l, className: t });
+          case a.g4.RearRightLower:
+            return o.createElement(S, { bIsKnockout: l, className: t });
+          default:
+            return o.createElement(U, { bIsKnockout: l, className: t });
         }
       }
       function p({ bIsKnockout: e, ...t }) {
@@ -862,7 +862,7 @@
               }),
             );
       }
-      function L({ bIsKnockout: e, ...t }) {
+      function h({ bIsKnockout: e, ...t }) {
         return e
           ? o.createElement(
               "svg",
@@ -901,7 +901,7 @@
               }),
             );
       }
-      function h({ bIsKnockout: e, ...t }) {
+      function L({ bIsKnockout: e, ...t }) {
         return e
           ? o.createElement(
               "svg",
@@ -940,7 +940,7 @@
               }),
             );
       }
-      function V({ bIsKnockout: e, ...t }) {
+      function E({ bIsKnockout: e, ...t }) {
         return e
           ? o.createElement(
               "svg",
@@ -997,7 +997,7 @@
               }),
             );
       }
-      function E({ bIsKnockout: e, ...t }) {
+      function v({ bIsKnockout: e, ...t }) {
         return e
           ? o.createElement(
               "svg",
@@ -1050,7 +1050,7 @@
               }),
             );
       }
-      function v({ bIsKnockout: e, ...t }) {
+      function V({ bIsKnockout: e, ...t }) {
         return e
           ? o.createElement(
               "svg",
@@ -1194,7 +1194,7 @@
               }),
             );
       }
-      function _({ bIsKnockout: e, ...t }) {
+      function N({ bIsKnockout: e, ...t }) {
         return e
           ? o.createElement(
               "svg",
@@ -1236,7 +1236,7 @@
               }),
             );
       }
-      function N({ bIsKnockout: e, ...t }) {
+      function R({ bIsKnockout: e, ...t }) {
         return e
           ? o.createElement(
               "svg",
@@ -1278,7 +1278,7 @@
               }),
             );
       }
-      function b({ bIsKnockout: e, ...t }) {
+      function _({ bIsKnockout: e, ...t }) {
         return e
           ? o.createElement(
               "svg",
@@ -1320,7 +1320,7 @@
               }),
             );
       }
-      function R({ bIsKnockout: e, ...t }) {
+      function Z({ bIsKnockout: e, ...t }) {
         return e
           ? o.createElement(
               "svg",
@@ -1383,7 +1383,7 @@
               }),
             );
       }
-      function Z({ bIsKnockout: e, ...t }) {
+      function b({ bIsKnockout: e, ...t }) {
         return e
           ? o.createElement(
               "svg",
@@ -1446,7 +1446,7 @@
               }),
             );
       }
-      function x({ bIsKnockout: e, ...t }) {
+      function y({ bIsKnockout: e, ...t }) {
         return e
           ? o.createElement(
               "svg",
@@ -1495,7 +1495,7 @@
               }),
             );
       }
-      function y({ bIsKnockout: e, ...t }) {
+      function x({ bIsKnockout: e, ...t }) {
         return e
           ? o.createElement(
               "svg",
@@ -1544,7 +1544,7 @@
               }),
             );
       }
-      function D({ bIsKnockout: e, ...t }) {
+      function B({ bIsKnockout: e, ...t }) {
         return e
           ? o.createElement(
               "svg",
@@ -1586,7 +1586,7 @@
               }),
             );
       }
-      function B({ bIsKnockout: e, ...t }) {
+      function D({ bIsKnockout: e, ...t }) {
         return e
           ? o.createElement(
               "svg",
@@ -1628,7 +1628,7 @@
               }),
             );
       }
-      function S({ bIsKnockout: e, ...t }) {
+      function I({ bIsKnockout: e, ...t }) {
         return e
           ? o.createElement(
               "svg",
@@ -1670,7 +1670,7 @@
               }),
             );
       }
-      function I({ bIsKnockout: e, ...t }) {
+      function S({ bIsKnockout: e, ...t }) {
         return e
           ? o.createElement(
               "svg",
@@ -1712,7 +1712,7 @@
               }),
             );
       }
-      function F({ bIsKnockout: e, ...t }) {
+      function A({ bIsKnockout: e, ...t }) {
         return e
           ? o.createElement(
               "svg",
@@ -1749,7 +1749,7 @@
               }),
             );
       }
-      function A({ bIsKnockout: e, ...t }) {
+      function K({ bIsKnockout: e, ...t }) {
         return e
           ? o.createElement(
               "svg",
@@ -1795,7 +1795,7 @@
               }),
             );
       }
-      function K({ bIsKnockout: e, ...t }) {
+      function F({ bIsKnockout: e, ...t }) {
         return e
           ? o.createElement(
               "svg",
@@ -1832,7 +1832,7 @@
               }),
             );
       }
-      function X({ bIsKnockout: e, ...t }) {
+      function T({ bIsKnockout: e, ...t }) {
         return e
           ? o.createElement(
               "svg",
@@ -1878,7 +1878,7 @@
               }),
             );
       }
-      function T({ bIsKnockout: e, ...t }) {
+      function U({ bIsKnockout: e, ...t }) {
         return e
           ? o.createElement(
               "svg",
@@ -1928,20 +1928,20 @@
             (e[(e.Large = 2)] = "Large");
         })(n || (n = {}));
     },
-    7222: (e, t, l) => {
+    78116: (e, t, l) => {
       "use strict";
       l.r(t), l.d(t, { default: () => d });
-      var r = l(47427),
-        n = l(31846),
-        o = l(37563),
-        a = l(91618),
-        c = l(22593),
+      var r = l(90626),
+        n = l(61859),
+        o = l(78327),
+        a = l(32381),
+        c = l(35111),
         i = l.n(c),
-        s = l(47144),
-        C = l(62613),
-        m = l(46157),
-        u = l(81874),
-        p = l(16907);
+        s = l(92022),
+        C = l(12155),
+        m = l(44986),
+        u = l(20713),
+        p = l(54906);
       function d(e) {
         const {
             results: t,
@@ -1953,7 +1953,7 @@
           [u, d] = r.useState(!1),
           f = r.useCallback(() => u, [u]),
           w = r.useRef(),
-          L = (0, o.id)();
+          h = (0, o.Qn)();
         if (
           (r.useEffect(() => {
             d(w?.current?.scrollHeight > w?.current?.clientHeight);
@@ -1961,27 +1961,27 @@
           !t)
         )
           return null;
-        const h = () => {
+        const L = () => {
           m ? m() : (window.location.href = t.steam_deck_blog_url);
         };
-        let V = c ?? {},
-          E = null;
+        let E = c ?? {},
+          v = null;
         t.steam_deck_blog_url &&
-          ((V.onOptionsActionDescription = (0, n.Xx)(
+          ((E.onOptionsActionDescription = (0, n.we)(
             "#SteamDeckVerified_ViewDeveloperPost",
           )),
-          (V.onOptionsButton = h),
-          (E = r.createElement(g, { blogURL: t.steam_deck_blog_url })));
-        const v =
+          (E.onOptionsButton = L),
+          (v = r.createElement(g, { blogURL: t.steam_deck_blog_url })));
+        const V =
           -1 !== t.resolved_items?.findIndex((e) => 1 == e.display_type);
         return t.resolved_items?.length
           ? r.createElement(
-              a.s,
+              a.Z,
               {
-                className: L
+                className: h
                   ? i().CompatibilityDetailsContainer
                   : i().CompatibilityDetailsContainerDesktop,
-                ...V,
+                ...E,
               },
               r.createElement(
                 "div",
@@ -1992,27 +1992,27 @@
                   r.createElement(
                     "div",
                     { className: i().DialogTitle },
-                    (0, n.Xx)(
+                    (0, n.we)(
                       "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
                     ),
                   ),
                   r.createElement(
                     "div",
                     { className: i().AppTitleCategory },
-                    r.createElement(p.Rd, { category: t.resolved_category }),
+                    r.createElement(p.Ez, { category: t.resolved_category }),
                   ),
                 ),
-                r.createElement(p._R, {
+                r.createElement(p.UN, {
                   category: t.resolved_category,
                   appName: l,
                 }),
               ),
-              E,
+              v,
               r.createElement("div", {
                 className: i().CompatibilityDetailsSeparator,
               }),
               r.createElement(
-                s.TN,
+                s.Qg,
                 {
                   ref: w,
                   className: f()
@@ -2020,7 +2020,7 @@
                     : i().CompatibilityDetailsInterior_NoScroll,
                 },
                 r.createElement(
-                  a.s,
+                  a.Z,
                   {
                     autoFocus: C,
                     focusableIfNoChildren: C || f(),
@@ -2036,10 +2036,10 @@
                           className: i().CompatibilityDetailsRow,
                         },
                         r.createElement(H, { displaytype: e.display_type }),
-                        r.createElement("span", null, (0, n.Xx)(e.loc_token)),
+                        r.createElement("span", null, (0, n.we)(e.loc_token)),
                       ),
                     ),
-                  v &&
+                  V &&
                     r.createElement(
                       "div",
                       { className: i().CompatibilityNotes },
@@ -2055,7 +2055,7 @@
                             r.createElement(
                               "span",
                               null,
-                              (0, n.Xx)(e.loc_token),
+                              (0, n.we)(e.loc_token),
                             ),
                           ),
                         ),
@@ -2064,13 +2064,13 @@
               ),
             )
           : r.createElement(
-              a.s,
+              a.Z,
               {
                 autoFocus: C,
                 focusableIfNoChildren: C,
                 noFocusRing: !0,
                 className: i().CompatibilityDetailsContainer,
-                ...V,
+                ...E,
               },
               r.createElement(
                 "div",
@@ -2081,52 +2081,52 @@
                   r.createElement(
                     "div",
                     { className: i().DialogTitle },
-                    (0, n.Xx)(
+                    (0, n.we)(
                       "#SteamDeckVerified_Store_CompatSectionHeader_GamepadUI",
                     ),
                   ),
                   r.createElement(
                     "div",
                     { className: i().AppTitleCategory },
-                    r.createElement(p.Rd, { category: t.resolved_category }),
+                    r.createElement(p.Ez, { category: t.resolved_category }),
                   ),
                 ),
-                r.createElement(p._R, {
+                r.createElement(p.UN, {
                   category: t.resolved_category,
                   appName: l,
                 }),
-                E,
+                v,
               ),
             );
       }
       function g(e) {
         const { blogURL: t } = e,
-          l = (0, o.id)();
+          l = (0, o.Qn)();
         return t
           ? l
             ? r.createElement(
                 "div",
                 { className: i().CompatibilityDetailRatingSummary },
-                (0, n.Xx)("#SteamDeckVerified_DescriptionHeader_DeveloperBlog"),
+                (0, n.we)("#SteamDeckVerified_DescriptionHeader_DeveloperBlog"),
                 r.createElement(
                   "div",
                   { className: i().DeveloperBlogYButton },
-                  r.createElement(m.VC, {
-                    button: u.FX.Y,
-                    type: m.yV.Knockout,
+                  r.createElement(m.$m, {
+                    button: u.g4.Y,
+                    type: m.wt.Knockout,
                   }),
                 ),
               )
             : r.createElement(
                 "div",
                 { className: i().CompatibilityDetailRatingSummary },
-                (0, n.Xx)(
+                (0, n.we)(
                   "#SteamDeckVerified_DescriptionHeader_DeveloperBlog_Desktop",
                 ),
                 r.createElement(
                   "a",
                   { href: t, className: i().DeveloperBlockLinkDesktop },
-                  (0, n.Xx)("#SteamDeckVerified_ViewDeveloperPost"),
+                  (0, n.we)("#SteamDeckVerified_ViewDeveloperPost"),
                 ),
               )
           : null;
@@ -2135,24 +2135,24 @@
         const { displaytype: t } = e;
         switch (t) {
           case 4:
-            return r.createElement(C.YVI, {
+            return r.createElement(C.o5Q, {
               className: i().CompatibilityDetailsResultIcon,
             });
           case 3:
-            return r.createElement(C.KKY, {
+            return r.createElement(C.aVR, {
               className: i().CompatibilityDetailsResultIcon,
             });
           case 2:
-            return r.createElement(C.vyu, {
+            return r.createElement(C.jIP, {
               className: i().CompatibilityDetailsResultIcon,
             });
           case 0:
-            return r.createElement(C.z5E, {
+            return r.createElement(C.WX$, {
               className: i().CompatibilityDetailsResultIcon,
             });
           case 1:
             return (
-              "dev" == o.De.WEB_UNIVERSE &&
+              "dev" == o.TS.WEB_UNIVERSE &&
                 console.error(
                   "deck verified banner shouldn't try to display the information display type for appid",
                 ),

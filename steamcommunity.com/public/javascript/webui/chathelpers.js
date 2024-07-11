@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9015129";
+var CLSTAMP = "9034709";
 (() => {
   var e,
     t,
@@ -8,39 +8,39 @@ var CLSTAMP = "9015129";
     s,
     i,
     r = {
-      3119: (e, t, n) => {
+      9437: (e, t, n) => {
         var s = {
-          "./friendsui_arabic.json": [58480, 6992],
-          "./friendsui_brazilian.json": [33109, 2862],
-          "./friendsui_bulgarian.json": [5242, 8518],
-          "./friendsui_czech.json": [98399, 4448],
-          "./friendsui_danish.json": [34581, 9775],
-          "./friendsui_dutch.json": [27904, 7575],
-          "./friendsui_english.json": [67927, 8247],
-          "./friendsui_finnish.json": [63907, 4596],
-          "./friendsui_french.json": [49877, 3500],
-          "./friendsui_german.json": [90262, 4989],
-          "./friendsui_greek.json": [84583, 1471],
-          "./friendsui_hungarian.json": [85581, 5802],
-          "./friendsui_indonesian.json": [37371, 6646],
-          "./friendsui_italian.json": [31577, 8815],
-          "./friendsui_japanese.json": [86521, 6727],
-          "./friendsui_koreana.json": [73827, 6986],
-          "./friendsui_latam.json": [13236, 7651],
-          "./friendsui_norwegian.json": [19181, 4716],
-          "./friendsui_polish.json": [3751, 699],
-          "./friendsui_portuguese.json": [21520, 4264],
-          "./friendsui_romanian.json": [98235, 3182],
-          "./friendsui_russian.json": [99942, 2913],
-          "./friendsui_sc_schinese.json": [64522, 3140],
-          "./friendsui_schinese.json": [19456, 7706],
-          "./friendsui_spanish.json": [12011, 3471],
-          "./friendsui_swedish.json": [66100, 9818],
-          "./friendsui_tchinese.json": [74628, 7340],
-          "./friendsui_thai.json": [88902, 9263],
-          "./friendsui_turkish.json": [95797, 5632],
-          "./friendsui_ukrainian.json": [83292, 2822],
-          "./friendsui_vietnamese.json": [39248, 1635],
+          "./friendsui_arabic.json": [83784, 6518],
+          "./friendsui_brazilian.json": [18522, 4154],
+          "./friendsui_bulgarian.json": [96737, 6385],
+          "./friendsui_czech.json": [60347, 7487],
+          "./friendsui_danish.json": [78365, 4787],
+          "./friendsui_dutch.json": [46350, 4302],
+          "./friendsui_english.json": [30188, 3016],
+          "./friendsui_finnish.json": [47487, 8759],
+          "./friendsui_french.json": [25572, 8194],
+          "./friendsui_german.json": [43898, 5480],
+          "./friendsui_greek.json": [90192, 4488],
+          "./friendsui_hungarian.json": [5365, 5341],
+          "./friendsui_indonesian.json": [49588, 762],
+          "./friendsui_italian.json": [68740, 3232],
+          "./friendsui_japanese.json": [611, 3485],
+          "./friendsui_koreana.json": [33731, 6971],
+          "./friendsui_latam.json": [923, 1499],
+          "./friendsui_norwegian.json": [80148, 4776],
+          "./friendsui_polish.json": [92357, 6127],
+          "./friendsui_portuguese.json": [77505, 3415],
+          "./friendsui_romanian.json": [31807, 7861],
+          "./friendsui_russian.json": [30757, 2945],
+          "./friendsui_sc_schinese.json": [69423, 43],
+          "./friendsui_schinese.json": [5184, 9746],
+          "./friendsui_spanish.json": [86700, 9808],
+          "./friendsui_swedish.json": [41005, 6609],
+          "./friendsui_tchinese.json": [50195, 8766],
+          "./friendsui_thai.json": [47194, 6888],
+          "./friendsui_turkish.json": [37468, 3e3],
+          "./friendsui_ukrainian.json": [6922, 4434],
+          "./friendsui_vietnamese.json": [53179, 3789],
         };
         function i(e) {
           if (!n.o(s, e))
@@ -52,41 +52,41 @@ var CLSTAMP = "9015129";
             i = t[0];
           return n.e(t[1]).then(() => n.t(i, 19));
         }
-        (i.keys = () => Object.keys(s)), (i.id = 3119), (e.exports = i);
+        (i.keys = () => Object.keys(s)), (i.id = 9437), (e.exports = i);
       },
-      9014: (e, t, n) => {
+      48516: (e, t, n) => {
         var s = {
-          "./friendsui_arabic.json": [58480, 6992],
-          "./friendsui_brazilian.json": [33109, 2862],
-          "./friendsui_bulgarian.json": [5242, 8518],
-          "./friendsui_czech.json": [98399, 4448],
-          "./friendsui_danish.json": [34581, 9775],
-          "./friendsui_dutch.json": [27904, 7575],
-          "./friendsui_english.json": [67927, 8247],
-          "./friendsui_finnish.json": [63907, 4596],
-          "./friendsui_french.json": [49877, 3500],
-          "./friendsui_german.json": [90262, 4989],
-          "./friendsui_greek.json": [84583, 1471],
-          "./friendsui_hungarian.json": [85581, 5802],
-          "./friendsui_indonesian.json": [37371, 6646],
-          "./friendsui_italian.json": [31577, 8815],
-          "./friendsui_japanese.json": [86521, 6727],
-          "./friendsui_koreana.json": [73827, 6986],
-          "./friendsui_latam.json": [13236, 7651],
-          "./friendsui_norwegian.json": [19181, 4716],
-          "./friendsui_polish.json": [3751, 699],
-          "./friendsui_portuguese.json": [21520, 4264],
-          "./friendsui_romanian.json": [98235, 3182],
-          "./friendsui_russian.json": [99942, 2913],
-          "./friendsui_sc_schinese.json": [64522, 3140],
-          "./friendsui_schinese.json": [19456, 7706],
-          "./friendsui_spanish.json": [12011, 3471],
-          "./friendsui_swedish.json": [66100, 9818],
-          "./friendsui_tchinese.json": [74628, 7340],
-          "./friendsui_thai.json": [88902, 9263],
-          "./friendsui_turkish.json": [95797, 5632],
-          "./friendsui_ukrainian.json": [83292, 2822],
-          "./friendsui_vietnamese.json": [39248, 1635],
+          "./friendsui_arabic.json": [83784, 6518],
+          "./friendsui_brazilian.json": [18522, 4154],
+          "./friendsui_bulgarian.json": [96737, 6385],
+          "./friendsui_czech.json": [60347, 7487],
+          "./friendsui_danish.json": [78365, 4787],
+          "./friendsui_dutch.json": [46350, 4302],
+          "./friendsui_english.json": [30188, 3016],
+          "./friendsui_finnish.json": [47487, 8759],
+          "./friendsui_french.json": [25572, 8194],
+          "./friendsui_german.json": [43898, 5480],
+          "./friendsui_greek.json": [90192, 4488],
+          "./friendsui_hungarian.json": [5365, 5341],
+          "./friendsui_indonesian.json": [49588, 762],
+          "./friendsui_italian.json": [68740, 3232],
+          "./friendsui_japanese.json": [611, 3485],
+          "./friendsui_koreana.json": [33731, 6971],
+          "./friendsui_latam.json": [923, 1499],
+          "./friendsui_norwegian.json": [80148, 4776],
+          "./friendsui_polish.json": [92357, 6127],
+          "./friendsui_portuguese.json": [77505, 3415],
+          "./friendsui_romanian.json": [31807, 7861],
+          "./friendsui_russian.json": [30757, 2945],
+          "./friendsui_sc_schinese.json": [69423, 43],
+          "./friendsui_schinese.json": [5184, 9746],
+          "./friendsui_spanish.json": [86700, 9808],
+          "./friendsui_swedish.json": [41005, 6609],
+          "./friendsui_tchinese.json": [50195, 8766],
+          "./friendsui_thai.json": [47194, 6888],
+          "./friendsui_turkish.json": [37468, 3e3],
+          "./friendsui_ukrainian.json": [6922, 4434],
+          "./friendsui_vietnamese.json": [53179, 3789],
         };
         function i(e) {
           if (!n.o(s, e))
@@ -98,13 +98,13 @@ var CLSTAMP = "9015129";
             i = t[0];
           return n.e(t[1]).then(() => n.t(i, 19));
         }
-        (i.keys = () => Object.keys(s)), (i.id = 9014), (e.exports = i);
+        (i.keys = () => Object.keys(s)), (i.id = 48516), (e.exports = i);
       },
-      61513: (e, t, n) => {
+      52282: (e, t, n) => {
         "use strict";
-        n(67319);
-        var s = n(27378),
-          i = n(37634);
+        n(56929);
+        var s = n(63696),
+          i = n(7470);
         function r(e) {
           if (!a() || !window.document.cookie) return null;
           const t = document.cookie.match("(^|; )" + e + "=([^;]*)");
@@ -306,8 +306,8 @@ var CLSTAMP = "9015129";
           },
           E = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
         s.createContext({});
-        let S = { success: !0, result: 1 };
-        class I {
+        let I = { success: !0, result: 1 };
+        class S {
           m_connection = new k();
           m_bAllowAccountMismatch = !1;
           FailureResult(e = 2) {
@@ -328,7 +328,7 @@ var CLSTAMP = "9015129";
           }
           BClientConnected() {
             return this.m_connection.Connect().then(
-              () => S,
+              () => I,
               () => this.FailureResult(),
             );
           }
@@ -385,7 +385,7 @@ var CLSTAMP = "9015129";
                   ? this.m_connection
                       .SendMsgAndAwaitResponse(e)
                       .then((e) =>
-                        1 === e.success ? S : this.FailureResult(e.success),
+                        1 === e.success ? I : this.FailureResult(e.success),
                       )
                   : { success: !1, result: 19, account_mismatch: !0 },
               )
@@ -506,9 +506,9 @@ var CLSTAMP = "9015129";
             );
           }
         }
-        let C = new I();
+        let C = new S();
         window.ClientConnectionAPI = C;
-        n(14206), n(19744);
+        n(83957), n(22386);
         new Map();
         const b = 2147483647;
         function v(e, t = 0) {
@@ -580,7 +580,7 @@ var CLSTAMP = "9015129";
               return t;
           }
         }
-        var T, y, A, j, L, R, M, P, N, w, O, G, U, D, F, B, W;
+        var T, A, y, j, R, L, M, P, N, w, G, O, U, D, F, B, W;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -610,7 +610,7 @@ var CLSTAMP = "9015129";
                 "k_ENetFakeLocalSystemState_NoInternet"),
               (e[(e.k_ENetFakeLocalSystemState_NoSteam = 5)] =
                 "k_ENetFakeLocalSystemState_NoSteam");
-          })(y || (y = {})),
+          })(A || (A = {})),
           (function (e) {
             (e[(e.k_ESuspendResumeProgressState_Invalid = 0)] =
               "k_ESuspendResumeProgressState_Invalid"),
@@ -624,7 +624,7 @@ var CLSTAMP = "9015129";
                 "k_ESuspendResumeProgressState_WaitingForApp"),
               (e[(e.k_ESuspendResumeProgressState_Working = 5)] =
                 "k_ESuspendResumeProgressState_Working");
-          })(A || (A = {})),
+          })(y || (y = {})),
           (function (e) {
             (e[(e.k_EFloatingGamepadTextInputModeModeSingleLine = 0)] =
               "k_EFloatingGamepadTextInputModeModeSingleLine"),
@@ -644,7 +644,7 @@ var CLSTAMP = "9015129";
                 "k_EAppUpdateContentType_Shader"),
               (e[(e.k_EAppUpdateContentType_Max = 3)] =
                 "k_EAppUpdateContentType_Max");
-          })(L || (L = {})),
+          })(R || (R = {})),
           (function (e) {
             (e[(e.k_EOverlayToStoreFlag_None = 0)] =
               "k_EOverlayToStoreFlag_None"),
@@ -652,7 +652,7 @@ var CLSTAMP = "9015129";
                 "k_EOverlayToStoreFlag_AddToCart"),
               (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
                 "k_EOverlayToStoreFlag_AddToCartAndShow");
-          })(R || (R = {})),
+          })(L || (L = {})),
           (function (e) {
             (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
               "k_EActivateGameOverlayToWebPageMode_Default"),
@@ -716,14 +716,14 @@ var CLSTAMP = "9015129";
                 "k_ERaiseGameWindowResult_Success"),
               (e[(e.k_ERaiseGameWindowResult_Failure = 3)] =
                 "k_ERaiseGameWindowResult_Failure");
-          })(O || (O = {})),
+          })(G || (G = {})),
           (function (e) {
             (e[(e.k_EPositionInvalid = -1)] = "k_EPositionInvalid"),
               (e[(e.k_EPositionTopLeft = 0)] = "k_EPositionTopLeft"),
               (e[(e.k_EPositionTopRight = 1)] = "k_EPositionTopRight"),
               (e[(e.k_EPositionBottomLeft = 2)] = "k_EPositionBottomLeft"),
               (e[(e.k_EPositionBottomRight = 3)] = "k_EPositionBottomRight");
-          })(G || (G = {})),
+          })(O || (O = {})),
           (function (e) {
             (e[(e.k_EAppReleaseState_Unknown = 0)] =
               "k_EAppReleaseState_Unknown"),
@@ -1017,11 +1017,11 @@ var CLSTAMP = "9015129";
           }
         }
         function Y(e, ...t) {
-          let n = Z.LocalizeString(e);
+          let n = X.LocalizeString(e);
           return void 0 === n ? e : J(n, ...t);
         }
         function q(e, ...t) {
-          let n = Z.LocalizeString(e);
+          let n = X.LocalizeString(e);
           if (void 0 === n) return e;
           let i,
             r = [],
@@ -1045,7 +1045,7 @@ var CLSTAMP = "9015129";
                 return e;
               }));
         }
-        const Z = new K();
+        const X = new K();
         function Q(e, t, ...n) {
           try {
             console.assert
@@ -1055,9 +1055,9 @@ var CLSTAMP = "9015129";
               : e || console.warn(t, ...n);
           } catch (e) {}
         }
-        window.LocalizationManager = Z;
-        var X = n(79588),
-          ee = n(50649);
+        window.LocalizationManager = X;
+        var Z = n(89193),
+          ee = n(41230);
         class te {
           m_strInviteCode;
           m_bReady = !1;
@@ -1069,7 +1069,7 @@ var CLSTAMP = "9015129";
           m_bIsBanned;
           m_rtKickExpires;
           constructor(e) {
-            (0, X.rC)(this), (this.m_strInviteCode = e);
+            (0, Z.Gn)(this), (this.m_strInviteCode = e);
           }
           BIsReady() {
             return this.m_bReady;
@@ -1126,22 +1126,22 @@ var CLSTAMP = "9015129";
               (this.m_bReady = !0);
           }
         }
-        x([X.LO], te.prototype, "m_bReady", void 0),
-          x([X.aD], te.prototype, "InitInvalid", null),
-          x([X.aD], te.prototype, "InitDirectInvite", null);
-        var ne = n(37939);
+        x([Z.sH], te.prototype, "m_bReady", void 0),
+          x([Z.XI], te.prototype, "InitInvalid", null),
+          x([Z.XI], te.prototype, "InitDirectInvite", null);
+        var ne = n(37976);
         class se {
           m_ulSteamID;
           constructor(e = 0, t, n, s) {
             e instanceof se
               ? (this.m_ulSteamID = e.m_ulSteamID)
               : "string" == typeof e
-                ? (this.m_ulSteamID = ne.Z.fromString(e, !0))
+                ? (this.m_ulSteamID = ne.A.fromString(e, !0))
                 : t && n && void 0 !== s
                   ? this.SetFromComponents(e ?? 0, s, n, t)
                   : (this.m_ulSteamID = e
-                      ? ne.Z.fromNumber(e, !0)
-                      : ne.Z.UZERO);
+                      ? ne.A.fromNumber(e, !0)
+                      : ne.A.UZERO);
           }
           static InitFromAccountID(e) {
             return new se(Number(e), h.EUNIVERSE, 1, 1);
@@ -1261,7 +1261,7 @@ var CLSTAMP = "9015129";
             return 7 == this.GetAccountType();
           }
           SetAccountID(e) {
-            this.m_ulSteamID = new ne.Z(
+            this.m_ulSteamID = new ne.A(
               e,
               this.m_ulSteamID.getHighBitsUnsigned(),
               !0,
@@ -1294,13 +1294,13 @@ var CLSTAMP = "9015129";
           SetFromComponents(e, t, n, s) {
             let i = ((255 & s) << 24) + ((15 & n) << 20) + (1048575 & t),
               r = 4294967295 & e;
-            this.m_ulSteamID = new ne.Z(r, i, !0);
+            this.m_ulSteamID = new ne.A(r, i, !0);
           }
         }
-        var ie = n(82989);
+        var ie = n(6660);
         class re extends te {
           constructor(e) {
-            super(e), (0, X.rC)(this);
+            super(e), (0, Z.Gn)(this);
           }
           BIsExpired() {
             return ae.sm_rtTimeCur >= this.m_rtTimeExpires;
@@ -1319,7 +1319,7 @@ var CLSTAMP = "9015129";
               (this.m_bReady = !0);
           }
         }
-        x([X.aD], re.prototype, "InitFromPHPInviteLinkInfo", null);
+        x([Z.XI], re.prototype, "InitFromPHPInviteLinkInfo", null);
         class ae {
           m_bConnectingToClient = !1;
           m_connectResult = void 0;
@@ -1327,7 +1327,7 @@ var CLSTAMP = "9015129";
           m_htmlPreRendered;
           static sm_rtTimeCur;
           constructor(e) {
-            (0, X.rC)(this),
+            (0, Z.Gn)(this),
               (this.m_invite = new re(e.strInviteCode)),
               e.Invite
                 ? this.m_invite.InitFromPHPInviteLinkInfo(e.Invite)
@@ -1396,7 +1396,7 @@ var CLSTAMP = "9015129";
               ((this.m_bConnectingToClient = !0),
               C.ShowChatRoomGroupInvite(this.m_invite.GetInviteCode()).then(
                 (e) => {
-                  (0, X.z)(() => {
+                  (0, Z.h5)(() => {
                     (this.m_bConnectingToClient = !1),
                       (this.m_connectResult = e),
                       console.log(e);
@@ -1405,8 +1405,8 @@ var CLSTAMP = "9015129";
               ));
           }
         }
-        x([X.LO], ae.prototype, "m_bConnectingToClient", void 0),
-          x([X.LO], ae.prototype, "m_connectResult", void 0);
+        x([Z.sH], ae.prototype, "m_bConnectingToClient", void 0),
+          x([Z.sH], ae.prototype, "m_connectResult", void 0);
         let oe = class extends s.Component {
           render() {
             return s.createElement(
@@ -1418,10 +1418,10 @@ var CLSTAMP = "9015129";
             );
           }
         };
-        oe = x([ee.Pi], oe);
+        oe = x([ee.PA], oe);
         let ce = class extends s.Component {
           constructor(e) {
-            super(e), (0, X.rC)(this);
+            super(e), (0, Z.Gn)(this);
           }
           m_bTriedToLaunchSteam = !1;
           LaunchWebChat() {
@@ -1578,11 +1578,11 @@ var CLSTAMP = "9015129";
             );
           }
         };
-        x([X.LO], ce.prototype, "m_bTriedToLaunchSteam", void 0),
+        x([Z.sH], ce.prototype, "m_bTriedToLaunchSteam", void 0),
           x([H], ce.prototype, "LaunchWebChat", null),
           x([H], ce.prototype, "OpenInSteamIgnoreAccount", null),
           x([H], ce.prototype, "LaunchSteamClient", null),
-          (ce = x([ee.Pi], ce));
+          (ce = x([ee.PA], ce));
         class le extends s.Component {
           render() {
             return s.createElement(
@@ -1629,7 +1629,7 @@ var CLSTAMP = "9015129";
           );
         }
         window.AssertMsg = Q;
-        let ue = new I();
+        let ue = new S();
         function de(e) {
           let t;
           try {
@@ -1637,7 +1637,7 @@ var CLSTAMP = "9015129";
           } catch (e) {}
           ae.sm_rtTimeCur = t.rtTimeCur;
           let n = new ae(t);
-          i.s(e).render(s.createElement(oe, { controller: n }));
+          i.H(e).render(s.createElement(oe, { controller: n }));
         }
         (window.ClientConnectionAPI = ue),
           document.addEventListener("DOMContentLoaded", async function () {
@@ -1646,12 +1646,12 @@ var CLSTAMP = "9015129";
                 const t = K.GetLanguageFallback(e),
                   s = e === t,
                   [i, r, a, o] = await Promise.all([
-                    n(41171)(`./shared_${e}.json`),
-                    n(3119)(`./friendsui_${e}.json`),
-                    s ? {} : n(91090)(`./shared_${t}.json`),
-                    s ? {} : n(9014)(`./friendsui_${t}.json`),
+                    n(80820)(`./shared_${e}.json`),
+                    n(9437)(`./friendsui_${e}.json`),
+                    s ? {} : n(42619)(`./shared_${t}.json`),
+                    s ? {} : n(48516)(`./friendsui_${t}.json`),
                   ]);
-                Z.AddTokens({ ...i, ...r }, { ...a, ...o });
+                X.AddTokens({ ...i, ...r }, { ...a, ...o });
               })(h.LANGUAGE),
               (function () {
                 let e = document.querySelectorAll(".ChatReactRoot");
@@ -1665,7 +1665,7 @@ var CLSTAMP = "9015129";
               })();
           });
       },
-      67319: (e, t, n) => {
+      56929: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -1675,39 +1675,39 @@ var CLSTAMP = "9015129";
           123 !== Array.from(new Set([123]))[0] &&
             console.error("Should not include prototypejs.");
       },
-      41171: (e, t, n) => {
+      80820: (e, t, n) => {
         var s = {
-          "./shared_arabic.json": [78501, 2431],
-          "./shared_brazilian.json": [55106, 8385],
-          "./shared_bulgarian.json": [34469, 1313],
-          "./shared_czech.json": [93182, 4189],
-          "./shared_danish.json": [87113, 9753],
-          "./shared_dutch.json": [80737, 5925],
-          "./shared_english.json": [48751, 7975],
-          "./shared_finnish.json": [7817, 3557],
-          "./shared_french.json": [50731, 3112],
-          "./shared_german.json": [54811, 6007],
-          "./shared_greek.json": [90175, 4297],
-          "./shared_hungarian.json": [49628, 5948],
-          "./shared_indonesian.json": [46741, 8754],
-          "./shared_italian.json": [90116, 5933],
-          "./shared_japanese.json": [15055, 2844],
-          "./shared_koreana.json": [82062, 6542],
-          "./shared_latam.json": [97679, 2443],
-          "./shared_norwegian.json": [33469, 4108],
-          "./shared_polish.json": [13255, 3252],
-          "./shared_portuguese.json": [77294, 5849],
-          "./shared_romanian.json": [3850, 4823],
-          "./shared_russian.json": [76440, 9062],
-          "./shared_sc_schinese.json": [16386, 2029],
-          "./shared_schinese.json": [65933, 2537],
-          "./shared_spanish.json": [2712, 6492],
-          "./shared_swedish.json": [85835, 5625],
-          "./shared_tchinese.json": [85918, 7602],
-          "./shared_thai.json": [63269, 1162],
-          "./shared_turkish.json": [27810, 5438],
-          "./shared_ukrainian.json": [32110, 7781],
-          "./shared_vietnamese.json": [59201, 4964],
+          "./shared_arabic.json": [23287, 3710],
+          "./shared_brazilian.json": [1451, 6562],
+          "./shared_bulgarian.json": [99908, 1449],
+          "./shared_czech.json": [84066, 7591],
+          "./shared_danish.json": [59414, 6523],
+          "./shared_dutch.json": [35211, 5110],
+          "./shared_english.json": [80809, 2256],
+          "./shared_finnish.json": [19950, 6031],
+          "./shared_french.json": [80879, 5018],
+          "./shared_german.json": [80165, 6208],
+          "./shared_greek.json": [8721, 9712],
+          "./shared_hungarian.json": [66712, 6165],
+          "./shared_indonesian.json": [80515, 8306],
+          "./shared_italian.json": [3617, 3912],
+          "./shared_japanese.json": [13448, 1973],
+          "./shared_koreana.json": [13578, 7539],
+          "./shared_latam.json": [85570, 2435],
+          "./shared_norwegian.json": [48237, 2320],
+          "./shared_polish.json": [79530, 8967],
+          "./shared_portuguese.json": [76682, 6239],
+          "./shared_romanian.json": [50692, 2749],
+          "./shared_russian.json": [60868, 8025],
+          "./shared_sc_schinese.json": [86078, 9027],
+          "./shared_schinese.json": [66231, 7786],
+          "./shared_spanish.json": [99185, 2632],
+          "./shared_swedish.json": [59456, 1225],
+          "./shared_tchinese.json": [99260, 5241],
+          "./shared_thai.json": [9801, 976],
+          "./shared_turkish.json": [5169, 9152],
+          "./shared_ukrainian.json": [34363, 2954],
+          "./shared_vietnamese.json": [73912, 6149],
         };
         function i(e) {
           if (!n.o(s, e))
@@ -1719,41 +1719,41 @@ var CLSTAMP = "9015129";
             i = t[0];
           return n.e(t[1]).then(() => n.t(i, 19));
         }
-        (i.keys = () => Object.keys(s)), (i.id = 41171), (e.exports = i);
+        (i.keys = () => Object.keys(s)), (i.id = 80820), (e.exports = i);
       },
-      91090: (e, t, n) => {
+      42619: (e, t, n) => {
         var s = {
-          "./shared_arabic.json": [78501, 2431],
-          "./shared_brazilian.json": [55106, 8385],
-          "./shared_bulgarian.json": [34469, 1313],
-          "./shared_czech.json": [93182, 4189],
-          "./shared_danish.json": [87113, 9753],
-          "./shared_dutch.json": [80737, 5925],
-          "./shared_english.json": [48751, 7975],
-          "./shared_finnish.json": [7817, 3557],
-          "./shared_french.json": [50731, 3112],
-          "./shared_german.json": [54811, 6007],
-          "./shared_greek.json": [90175, 4297],
-          "./shared_hungarian.json": [49628, 5948],
-          "./shared_indonesian.json": [46741, 8754],
-          "./shared_italian.json": [90116, 5933],
-          "./shared_japanese.json": [15055, 2844],
-          "./shared_koreana.json": [82062, 6542],
-          "./shared_latam.json": [97679, 2443],
-          "./shared_norwegian.json": [33469, 4108],
-          "./shared_polish.json": [13255, 3252],
-          "./shared_portuguese.json": [77294, 5849],
-          "./shared_romanian.json": [3850, 4823],
-          "./shared_russian.json": [76440, 9062],
-          "./shared_sc_schinese.json": [16386, 2029],
-          "./shared_schinese.json": [65933, 2537],
-          "./shared_spanish.json": [2712, 6492],
-          "./shared_swedish.json": [85835, 5625],
-          "./shared_tchinese.json": [85918, 7602],
-          "./shared_thai.json": [63269, 1162],
-          "./shared_turkish.json": [27810, 5438],
-          "./shared_ukrainian.json": [32110, 7781],
-          "./shared_vietnamese.json": [59201, 4964],
+          "./shared_arabic.json": [23287, 3710],
+          "./shared_brazilian.json": [1451, 6562],
+          "./shared_bulgarian.json": [99908, 1449],
+          "./shared_czech.json": [84066, 7591],
+          "./shared_danish.json": [59414, 6523],
+          "./shared_dutch.json": [35211, 5110],
+          "./shared_english.json": [80809, 2256],
+          "./shared_finnish.json": [19950, 6031],
+          "./shared_french.json": [80879, 5018],
+          "./shared_german.json": [80165, 6208],
+          "./shared_greek.json": [8721, 9712],
+          "./shared_hungarian.json": [66712, 6165],
+          "./shared_indonesian.json": [80515, 8306],
+          "./shared_italian.json": [3617, 3912],
+          "./shared_japanese.json": [13448, 1973],
+          "./shared_koreana.json": [13578, 7539],
+          "./shared_latam.json": [85570, 2435],
+          "./shared_norwegian.json": [48237, 2320],
+          "./shared_polish.json": [79530, 8967],
+          "./shared_portuguese.json": [76682, 6239],
+          "./shared_romanian.json": [50692, 2749],
+          "./shared_russian.json": [60868, 8025],
+          "./shared_sc_schinese.json": [86078, 9027],
+          "./shared_schinese.json": [66231, 7786],
+          "./shared_spanish.json": [99185, 2632],
+          "./shared_swedish.json": [59456, 1225],
+          "./shared_tchinese.json": [99260, 5241],
+          "./shared_thai.json": [9801, 976],
+          "./shared_turkish.json": [5169, 9152],
+          "./shared_ukrainian.json": [34363, 2954],
+          "./shared_vietnamese.json": [73912, 6149],
         };
         function i(e) {
           if (!n.o(s, e))
@@ -1765,7 +1765,7 @@ var CLSTAMP = "9015129";
             i = t[0];
           return n.e(t[1]).then(() => n.t(i, 19));
         }
-        (i.keys = () => Object.keys(s)), (i.id = 91090), (e.exports = i);
+        (i.keys = () => Object.keys(s)), (i.id = 42619), (e.exports = i);
       },
     },
     a = {};
@@ -1831,133 +1831,133 @@ var CLSTAMP = "9015129";
     (o.u = (e) =>
       "javascript/webui/" +
       {
-        699: "friendsui_polish-json",
-        1162: "shared_thai-json",
-        1313: "shared_bulgarian-json",
-        1471: "friendsui_greek-json",
-        1635: "friendsui_vietnamese-json",
-        2029: "shared_sc_schinese-json",
-        2431: "shared_arabic-json",
-        2443: "shared_latam-json",
-        2537: "shared_schinese-json",
-        2822: "friendsui_ukrainian-json",
-        2844: "shared_japanese-json",
-        2862: "friendsui_brazilian-json",
-        2913: "friendsui_russian-json",
-        3112: "shared_french-json",
-        3140: "friendsui_sc_schinese-json",
-        3182: "friendsui_romanian-json",
-        3252: "shared_polish-json",
-        3471: "friendsui_spanish-json",
-        3500: "friendsui_french-json",
-        3557: "shared_finnish-json",
-        4108: "shared_norwegian-json",
-        4189: "shared_czech-json",
-        4264: "friendsui_portuguese-json",
-        4297: "shared_greek-json",
-        4448: "friendsui_czech-json",
-        4596: "friendsui_finnish-json",
-        4716: "friendsui_norwegian-json",
-        4823: "shared_romanian-json",
-        4964: "shared_vietnamese-json",
-        4989: "friendsui_german-json",
-        5438: "shared_turkish-json",
-        5625: "shared_swedish-json",
-        5632: "friendsui_turkish-json",
-        5802: "friendsui_hungarian-json",
-        5849: "shared_portuguese-json",
-        5925: "shared_dutch-json",
-        5933: "shared_italian-json",
-        5948: "shared_hungarian-json",
-        6007: "shared_german-json",
-        6492: "shared_spanish-json",
-        6542: "shared_koreana-json",
-        6646: "friendsui_indonesian-json",
-        6727: "friendsui_japanese-json",
-        6986: "friendsui_koreana-json",
-        6992: "friendsui_arabic-json",
-        7340: "friendsui_tchinese-json",
-        7575: "friendsui_dutch-json",
-        7602: "shared_tchinese-json",
-        7651: "friendsui_latam-json",
-        7706: "friendsui_schinese-json",
-        7781: "shared_ukrainian-json",
-        7975: "shared_english-json",
-        8247: "friendsui_english-json",
-        8385: "shared_brazilian-json",
-        8518: "friendsui_bulgarian-json",
-        8754: "shared_indonesian-json",
-        8815: "friendsui_italian-json",
-        9062: "shared_russian-json",
-        9263: "friendsui_thai-json",
-        9753: "shared_danish-json",
-        9775: "friendsui_danish-json",
-        9818: "friendsui_swedish-json",
+        43: "friendsui_sc_schinese-json",
+        762: "friendsui_indonesian-json",
+        976: "shared_thai-json",
+        1225: "shared_swedish-json",
+        1449: "shared_bulgarian-json",
+        1499: "friendsui_latam-json",
+        1973: "shared_japanese-json",
+        2256: "shared_english-json",
+        2320: "shared_norwegian-json",
+        2435: "shared_latam-json",
+        2632: "shared_spanish-json",
+        2749: "shared_romanian-json",
+        2945: "friendsui_russian-json",
+        2954: "shared_ukrainian-json",
+        3e3: "friendsui_turkish-json",
+        3016: "friendsui_english-json",
+        3232: "friendsui_italian-json",
+        3415: "friendsui_portuguese-json",
+        3485: "friendsui_japanese-json",
+        3710: "shared_arabic-json",
+        3789: "friendsui_vietnamese-json",
+        3912: "shared_italian-json",
+        4154: "friendsui_brazilian-json",
+        4302: "friendsui_dutch-json",
+        4434: "friendsui_ukrainian-json",
+        4488: "friendsui_greek-json",
+        4776: "friendsui_norwegian-json",
+        4787: "friendsui_danish-json",
+        5018: "shared_french-json",
+        5110: "shared_dutch-json",
+        5241: "shared_tchinese-json",
+        5341: "friendsui_hungarian-json",
+        5480: "friendsui_german-json",
+        6031: "shared_finnish-json",
+        6127: "friendsui_polish-json",
+        6149: "shared_vietnamese-json",
+        6165: "shared_hungarian-json",
+        6208: "shared_german-json",
+        6239: "shared_portuguese-json",
+        6385: "friendsui_bulgarian-json",
+        6518: "friendsui_arabic-json",
+        6523: "shared_danish-json",
+        6562: "shared_brazilian-json",
+        6609: "friendsui_swedish-json",
+        6888: "friendsui_thai-json",
+        6971: "friendsui_koreana-json",
+        7487: "friendsui_czech-json",
+        7539: "shared_koreana-json",
+        7591: "shared_czech-json",
+        7786: "shared_schinese-json",
+        7861: "friendsui_romanian-json",
+        8025: "shared_russian-json",
+        8194: "friendsui_french-json",
+        8306: "shared_indonesian-json",
+        8759: "friendsui_finnish-json",
+        8766: "friendsui_tchinese-json",
+        8967: "shared_polish-json",
+        9027: "shared_sc_schinese-json",
+        9152: "shared_turkish-json",
+        9712: "shared_greek-json",
+        9746: "friendsui_schinese-json",
+        9808: "friendsui_spanish-json",
       }[e] +
       ".js?contenthash=" +
       {
-        699: "8e9ceb2113e948cb959f",
-        1162: "dbc00ee6dd346a101917",
-        1313: "7f41591a6a1f94ffe00d",
-        1471: "8ac1a0ed538f8399ef47",
-        1635: "5b160e7449652b470d3b",
-        2029: "cfd12dc5ad70fd2b953d",
-        2431: "453484513ab5e66f8413",
-        2443: "2f5354426a1effcb9e0f",
-        2537: "83dc7e244a6c4c1a7207",
-        2822: "4be313065258cea7dcfe",
-        2844: "f9c86cc16b5a5bcd22a3",
-        2862: "2705458b5717d6985bb9",
-        2913: "9cf78e95b217a4e4494d",
-        3112: "72bf298c62f7c6adde09",
-        3140: "5c45b26b856f964d3c01",
-        3182: "e9e86d98e6631220b2a1",
-        3252: "3057382fbdf0fbb53acf",
-        3471: "42cc7cf6544f86425d1a",
-        3500: "f238176cda7148db5e2c",
-        3557: "e5ec46d1893571a9a222",
-        4108: "ac9494d5212809c3537c",
-        4189: "bc1c33164b93a0ea5bf5",
-        4264: "1832606acbdc62736a93",
-        4297: "b516d935c7d5363f5da5",
-        4448: "4aff1d6e7c0d3448a5ff",
-        4596: "3b126ab823cd2edf9c32",
-        4716: "ebb28410edb072f7f1b9",
-        4823: "9516320ee9f1c93990ed",
-        4964: "942b0977d721ed42cae7",
-        4989: "4c458551efceaa0f205a",
-        5438: "36e021e0bd837c931a74",
-        5625: "e39704212cfe1ee94909",
-        5632: "45943e5cc0fb2a3a2f0c",
-        5802: "9b807a832b8d069770aa",
-        5849: "9c0fff75974f278387c0",
-        5925: "dd3b26c8f408277491f8",
-        5933: "92d5bc948749593ebd5d",
-        5948: "7bec72dcf102eb6d7944",
-        6007: "79220fc90a66d07cdb9a",
-        6492: "662f49dae2c2c9639e4e",
-        6542: "2e14031fca0793ce50d5",
-        6646: "e3fbfb988b1be70b7043",
-        6727: "e32de86fa467effca5ff",
-        6986: "cbb8f15bd5bf6cfeed4b",
-        6992: "5aca62e8d2baaf5ced56",
-        7340: "afbe060849148c41a1c1",
-        7575: "1f27a35f5021cbf32401",
-        7602: "08872c2894f17a815c72",
-        7651: "8c7615c21a500e5e6965",
-        7706: "b23658f1f6495bc3b7bd",
-        7781: "14b069c9da96e3ca48a3",
-        7975: "db10858e6f6a5a74f871",
-        8247: "3575713174f238da5c8b",
-        8385: "6cd3f29d51de3da048a5",
-        8518: "c3d01bd8e61c3f8e499c",
-        8754: "b39011f9221a4739b522",
-        8815: "6c46a4de038eda4c6c6f",
-        9062: "ea1b8598a8014d57be4e",
-        9263: "d429f2b224f40a927fa4",
-        9753: "2b5af024d86f9dbc78a2",
-        9775: "48af292024ac8f719378",
-        9818: "db6dadc3090966211194",
+        43: "2d1569711644a97b27c9",
+        762: "066345646f5e8b519167",
+        976: "67f0af5716da3b44f255",
+        1225: "daca7bf7645b172ef72a",
+        1449: "5ad0b28445f905a11eb3",
+        1499: "5636b97f527b135012b9",
+        1973: "7695520644676ab08031",
+        2256: "66e65c52b66a84627fe1",
+        2320: "9fad3de96590c21c9a31",
+        2435: "3ab087396e4928231eb7",
+        2632: "95d31e8fbb5303a16343",
+        2749: "ebeffb1f21f866aef5aa",
+        2945: "44cc4710175a345b1801",
+        2954: "1437f1028e2ba8093021",
+        3e3: "cb8a246287934c217f88",
+        3016: "d99c3bd2163ac04502dc",
+        3232: "5ce15774acc40090fc7c",
+        3415: "bad4afc8e28d0b386369",
+        3485: "8742fe73b494292e5ae4",
+        3710: "357f6ded3ff9007f8dcb",
+        3789: "ceb13430e99f9fe1c4ef",
+        3912: "2dd34ec65e9d431dd7e7",
+        4154: "c36c58b18fd109275b97",
+        4302: "ce622a0001025055ddcd",
+        4434: "6d0555a3f7e8899cf641",
+        4488: "ec2fbeb55016ff01a354",
+        4776: "867ed852cadc9b93c91e",
+        4787: "f0b08b29e1e104b3ad11",
+        5018: "451e07543219ef1452cc",
+        5110: "0182744704b202ec87bc",
+        5241: "e091f9130479b07cff74",
+        5341: "5dc9bdf7b4a0be871f30",
+        5480: "0bc79d524aa4bc65359e",
+        6031: "703e47477ac3d084b69f",
+        6127: "9396540b93c596cdfc4e",
+        6149: "35edf4cb3d26b0d886ad",
+        6165: "a445f2e813fa6cd3bcae",
+        6208: "830ce74fec3c7a096010",
+        6239: "8e249584b9f4d5aa9479",
+        6385: "288c49b66664a8cf9858",
+        6518: "8cd538c22d2143bbefe7",
+        6523: "29d1a7d47f4cd790ecb6",
+        6562: "e846f3bf2657917aae24",
+        6609: "88fac1d99602337cdea8",
+        6888: "55eec2653d6e0da46540",
+        6971: "093a25b87b2d7aefe259",
+        7487: "897b42fd38185505f27e",
+        7539: "a9c47063b360bd6a76a6",
+        7591: "eaaf1f72aa39c95cd4d6",
+        7786: "ca98413e3172b404951d",
+        7861: "3fefcb460ce838c1fb3b",
+        8025: "5d445c67b18a4f1b499b",
+        8194: "4952f65ff4b3bdc047b1",
+        8306: "989317e3bcedaa007012",
+        8759: "290998e9c4115646ab6c",
+        8766: "f77cbee031073d282357",
+        8967: "2a3f24f56d4fa35a1774",
+        9027: "fc582ad702a3d61f8cbd",
+        9152: "90fc3585eb9a19bd5d05",
+        9712: "47ed4270cd8454b06270",
+        9746: "fd5c190b1dab017e15ac",
+        9808: "a182f3fd3c428b7ee3f6",
       }[e]),
     (o.miniCssF = (e) => {}),
     (o.g = (function () {
@@ -2025,14 +2025,16 @@ var CLSTAMP = "9015129";
         Object.defineProperty(e, "__esModule", { value: !0 });
     }),
     (o.nmd = (e) => ((e.paths = []), e.children || (e.children = []), e)),
-    (o.j = 1856),
+    (o.j = 7612),
     (() => {
       var e;
       o.g.importScripts && (e = o.g.location + "");
       var t = o.g.document;
       if (!e && t && (t.currentScript && (e = t.currentScript.src), !e)) {
         var n = t.getElementsByTagName("script");
-        if (n.length) for (var s = n.length - 1; s > -1 && !e; ) e = n[s--].src;
+        if (n.length)
+          for (var s = n.length - 1; s > -1 && (!e || !/^http(s?):/.test(e)); )
+            e = n[s--].src;
       }
       if (!e)
         throw new Error(
@@ -2045,7 +2047,7 @@ var CLSTAMP = "9015129";
         (o.p = e + "../../");
     })(),
     (() => {
-      var e = { 1856: 0 };
+      var e = { 7612: 0 };
       (o.f.j = (t, n) => {
         var s = o.o(e, t) ? e[t] : void 0;
         if (0 !== s)
@@ -2092,6 +2094,6 @@ var CLSTAMP = "9015129";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [5968], () => o(61513));
+  var c = o.O(void 0, [1068], () => o(52282));
   c = o.O(c);
 })();

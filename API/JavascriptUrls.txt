@@ -974,6 +974,7 @@ ${PARTNER_BASE_URL}doc/features/timeline
 ${PARTNER_BASE_URL}doc/gettingstarted/managing_users
 ${PARTNER_BASE_URL}doc/marketing/discounts
 ${PARTNER_BASE_URL}doc/marketing/discounts#limits
+${PARTNER_BASE_URL}doc/marketing/discounts/${_ ? "midweek" : "weekend"}
 ${PARTNER_BASE_URL}doc/marketing/discounts/dailydeal
 ${PARTNER_BASE_URL}doc/marketing/discounts/dailydeal/
 ${PARTNER_BASE_URL}doc/marketing/discounts/seasonalsales
@@ -1050,6 +1051,7 @@ ${PARTNER_BASE_URL}optin/salepreview/${}/20
 ${PARTNER_BASE_URL}optin/survey/${opt_in_id}/${}
 ${PARTNER_BASE_URL}optin/survey/${}/${}
 ${PARTNER_BASE_URL}optin/survey/${}/220
+${PARTNER_BASE_URL}optin/surveyresults/${}
 ${PARTNER_BASE_URL}packages/approvepricing
 ${PARTNER_BASE_URL}packages/createoreditdiscount/${packageID}
 ${PARTNER_BASE_URL}packages/discounts/${packageID}
@@ -1085,6 +1087,7 @@ ${PARTNER_BASE_URL}promotion/dailydeals/dashboard
 ${PARTNER_BASE_URL}promotion/dailydeals/dashboard/${partner_id}
 ${PARTNER_BASE_URL}promotion/dailydeals/edit/${gid}
 ${PARTNER_BASE_URL}promotion/dailydeals/invite/${gid}
+${PARTNER_BASE_URL}promotion/dailydeals/invite/${}
 ${PARTNER_BASE_URL}promotion/discountevents/dashboard
 ${PARTNER_BASE_URL}promotion/discountevents/edit/${}
 ${PARTNER_BASE_URL}promotion/discounts${}?de=${discount_event_id}&dd=1
@@ -1097,6 +1100,8 @@ ${PARTNER_BASE_URL}promotion/discounts/dashboard/
 ${PARTNER_BASE_URL}promotion/discounts/dashboard/${}?de=${}
 ${PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${discount_event_id}
 ${PARTNER_BASE_URL}promotion/discounts/dashboard/?de=${}
+${PARTNER_BASE_URL}promotion/invitation/ajaxinviteapptopromo
+${PARTNER_BASE_URL}promotion/invitation/landing/${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?appidlist=${}
 ${PARTNER_BASE_URL}promotion/invitationplanner/dashboard?bundleid=${}

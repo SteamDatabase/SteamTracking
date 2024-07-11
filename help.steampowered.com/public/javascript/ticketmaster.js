@@ -2078,6 +2078,7 @@ function LoadPreloadedTicket( strTicketRef )
 	{
 		$J("#ticket_details_container").html( NextPrev.GetPagePreload( strTicketRef ) );
 		history.replaceState( {}, '', 'https://help.steampowered.com/ticketmaster/ticket/' + strTicketRef );
+		$J(".purchase_tooltip").remove();
 	}
 }
 

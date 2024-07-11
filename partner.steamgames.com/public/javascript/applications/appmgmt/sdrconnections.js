@@ -2,9 +2,9 @@
  ****/
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [4935],
+  [5027],
   {
-    79308: (e) => {
+    97712: (e) => {
       e.exports = {
         SDRConnectionsAppCtn: "_3Vqm_VeN4ssp-Plt0sq9f-",
         SDRConnectionsAppTitle: "_1VJcGIkGXCYh0gu5XTfN8F",
@@ -54,101 +54,25 @@
         ClientIPInfo: "_1IW5oJMNg9Ki_RFXk2SgqJ",
       };
     },
-    16649: (e, t, a) => {
-      "use strict";
-      a.d(t, { l: () => l });
-      var n = a(80751),
-        r = a.n(n),
-        s = a(79545);
-      function l(e) {
-        if (r().isCancel(e))
-          return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
-        if (
-          void 0 !== e.response &&
-          e.response.data &&
-          "object" == typeof e.response.data
-        ) {
-          if ("msg" in e.response.data)
-            return {
-              strErrorMsg: e.response.data.msg,
-              errorCode: e.response.data.success,
-            };
-          if ("err_msg" in e.response.data)
-            return {
-              strErrorMsg: e.response.data.err_msg,
-              errorCode: e.response.data.success,
-            };
-          if ("message" in e.response.data)
-            return {
-              strErrorMsg: e.response.data.message,
-              errorCode: e.response.data.success,
-            };
-          if ("success" in e.response.data)
-            return {
-              strErrorMsg: "error code: " + e.response.data.success,
-              errorCode: e.response.data.success,
-            };
-        } else if ("object" == typeof e.data) {
-          if ("msg" in e.data)
-            return { strErrorMsg: e.data.msg, errorCode: e.data.success };
-          if ("err_msg" in e.data)
-            return { strErrorMsg: e.data.err_msg, errorCode: e.data.success };
-          if ("message" in e.data)
-            return { strErrorMsg: e.data.message, errorCode: e.data.success };
-          if ("success" in e.data)
-            return {
-              strErrorMsg: "error code: " + e.data.success,
-              errorCode: e.data.success,
-            };
-        } else {
-          if (void 0 !== e.success && void 0 !== e.msg)
-            return { strErrorMsg: e.msg, errorCode: e.success };
-          if (void 0 !== e.success && void 0 !== e.message)
-            return { strErrorMsg: e.message, errorCode: e.success };
-          if (void 0 !== e.success && void 0 !== e.err_msg)
-            return { strErrorMsg: e.err_msg, errorCode: e.success };
-          if ("string" == typeof e && e.length > 1024)
-            console.groupCollapsed(
-              "GetMsgAndErrorCodeFromResponse cannot parse: ",
-            ),
-              console.warn(e),
-              console.groupEnd();
-          else {
-            if ("object" == typeof e && e instanceof s.gA)
-              return {
-                strErrorMsg: "" + e.GetErrorMessage(),
-                errorCode: e.GetEResult(),
-              };
-            console.warn("GetMsgAndErrorCodeFromResponse cannot parse: ", e);
-          }
-        }
-        return "object" == typeof e && "status" in e
-          ? {
-              strErrorMsg: "Unknown Error: " + e + "\nStatus Code:" + e.status,
-              errorCode: 2,
-            }
-          : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
-      }
-    },
-    21452: (e, t, a) => {
+    26193: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => F });
-      var n = a(80751),
+      var n = a(41735),
         r = a.n(n),
-        s = a(47427),
-        l = a(13129),
-        c = a(8285),
-        o = a(1485),
-        i = a(10162),
-        m = a(16649),
-        d = a(37563),
-        u = a(79308),
-        p = a(46882),
-        E = a(12251);
+        s = a(90626),
+        l = a(52038),
+        c = a(92757),
+        o = a(7068),
+        i = a(84811),
+        m = a(68797),
+        d = a(78327),
+        u = a(97712),
+        p = a(22797),
+        E = a(91675);
       function _(e) {
         return s.createElement(
           "span",
-          { className: (0, l.Z)(u.GenericLabeledItem, e.className) },
+          { className: (0, l.A)(u.GenericLabeledItem, e.className) },
           s.createElement(
             "span",
             { className: u.CxnGenericDataLabel },
@@ -176,7 +100,7 @@
               ),
             ));
         else if (t.steam_persona) {
-          const e = d.De.COMMUNITY_BASE_URL + "/profiles/" + t.id;
+          const e = d.TS.COMMUNITY_BASE_URL + "/profiles/" + t.id;
           r = s.createElement(
             s.Fragment,
             null,
@@ -198,7 +122,7 @@
         return s.createElement(
           "div",
           {
-            className: (0, l.Z)(
+            className: (0, l.A)(
               u.ConnectionClientInfo,
               t.data_center && u.HostIsGameserver,
             ),
@@ -257,7 +181,7 @@
           }
         return [t, a];
       }
-      function v(e) {
+      function h(e) {
         let t = 1e30;
         if (e && e.quality_pctile)
           for (const a in e.quality_pctile) {
@@ -269,7 +193,7 @@
           }
         return t;
       }
-      function h(e, t, a) {
+      function v(e, t, a) {
         const n = a > 0 ? t / a : 0,
           r = (100 * n).toFixed(1) + "%";
         return s.createElement(
@@ -291,7 +215,7 @@
       function N(e, t) {
         if (!(t > 0)) return null;
         let a = [];
-        for (let n = 0; n < e.length; ++n) a.push(h(e[n][0], e[n][1], t));
+        for (let n = 0; n < e.length; ++n) a.push(v(e[n][0], e[n][1], t));
         return s.createElement(
           "table",
           { className: u.Histogram },
@@ -362,7 +286,7 @@
                   return s.createElement(
                     "div",
                     {
-                      className: (0, l.Z)(
+                      className: (0, l.A)(
                         u.FlowPacketCounts,
                         u.FlowStatsSection,
                       ),
@@ -513,7 +437,7 @@
                             t + 1 >= e.length || (t + 1 >= l && 0 == o)
                               ? S(c) + "+"
                               : c + "-" + S(e[t + 1][0])),
-                          a.push(h(s, o, n));
+                          a.push(v(s, o, n));
                       }
                       t = s.createElement(
                         "table",
@@ -638,7 +562,7 @@
                 { label: "Relay POP" },
                 t.client.relay_cluster,
               ),
-              s.createElement(_, { label: "Active" }, (0, E.jA)(t.active_time)),
+              s.createElement(_, { label: "Active" }, (0, E.R2)(t.active_time)),
             ),
             n,
             r,
@@ -666,7 +590,7 @@
         let d = null,
           p = null,
           g = null,
-          h = null,
+          v = null,
           N = null,
           y = null,
           S = null,
@@ -698,7 +622,7 @@
                 second: "2-digit",
                 timeZoneName: "short",
               }),
-              c = (0, E.jA)(m.duration);
+              c = (0, E.R2)(m.duration);
             d = s.createElement(
               "span",
               { className: u.CxnTimeAndDuration },
@@ -739,7 +663,7 @@
             e.sort();
             let a = [];
             for (let n of e) a.push(s.createElement(_, { label: n }, t.app[n]));
-            h = s.createElement(
+            v = s.createElement(
               "div",
               { className: u.AppFieldsCtr },
               s.createElement(
@@ -763,8 +687,8 @@
                 : Math.floor((i + m) / 2 + 0.5) + "ms";
             N = s.createElement(_, { label: "Ping" }, e);
           }
-          const d = v(r),
-            p = v(l),
+          const d = h(r),
+            p = h(l),
             E = Math.min(d, p);
           if (
             (E >= 0 &&
@@ -846,10 +770,10 @@
               N,
               y,
               g,
-              h,
+              v,
               p,
             ),
-            s.createElement(o.ji, {
+            s.createElement(o.Yh, {
               className: u.ExpandDetailsCheckbox,
               label: "Details",
               checked: c,
@@ -867,17 +791,17 @@
         );
       }
       function F(e) {
-        const t = (0, c.k6)(),
+        const t = (0, c.W6)(),
           a = e.appId,
           [n, E] = s.useState(!1),
           [_, f] = s.useState(""),
           [g, C] = s.useState(void 0),
-          [v, h] = s.useState(""),
+          [h, v] = s.useState(""),
           [N, y] = s.useState(""),
           [S, b] = s.useState(""),
           [k, F] = s.useState(0),
           [P, x] = s.useState(""),
-          [I, D] = s.useState("");
+          [R, T] = s.useState("");
         s.useEffect(() => {
           let e = new URLSearchParams(t.location.search);
           const n = e.get("client_id") || "",
@@ -885,10 +809,10 @@
             l = e.get("kind") || "",
             c = e.get("app_name1") || "",
             o = e.get("app_value1") || "";
-          if ((h(n), y(s), b(l), x(c), D(o), !e.toString() && 0 == k)) return;
+          if ((v(n), y(s), b(l), x(c), T(o), !e.toString() && 0 == k)) return;
           E(!0), f(""), a > 0 && e.set("appid", "" + a);
           const i =
-            d.De.PARTNER_BASE_URL + "sdr/ajaxsessionsearch?" + e.toString();
+            d.TS.PARTNER_BASE_URL + "sdr/ajaxsessionsearch?" + e.toString();
           (async () => {
             try {
               const e = await r().get(i);
@@ -902,7 +826,7 @@
                   ),
                   f(e?.data?.success + " msg: " + e?.data?.msg));
             } catch (e) {
-              const t = (0, m.l)(e);
+              const t = (0, m.H)(e);
               console.error(
                 "sdrsessionsearch: OnPerformSearch " + t.strErrorMsg,
                 t,
@@ -912,7 +836,7 @@
             E(!1);
           })();
         }, [a, t.location, k]);
-        let R = null;
+        let D = null;
         if (void 0 !== g) {
           let e = [];
           for (const t of g) {
@@ -920,7 +844,7 @@
               (t.client.id || "") + "-" + (t.client.connection_id || "");
             e.push(s.createElement(w, { key: a, cxn: t }));
           }
-          R = s.createElement(
+          D = s.createElement(
             "div",
             { className: u.SearchResultsCtr },
             s.createElement(
@@ -933,10 +857,10 @@
             e,
           );
         }
-        const T = "ded" == S ? "Gameserver" : "Peer",
+        const I = "ded" == S ? "Gameserver" : "Peer",
           M = !1;
         return s.createElement(
-          i.SV,
+          i.tH,
           null,
           s.createElement(
             "div",
@@ -957,7 +881,7 @@
               s.createElement(
                 "div",
                 {
-                  className: (0, l.Z)(
+                  className: (0, l.A)(
                     "DialogInputLabelGroup",
                     u.ConnectionKindGroup,
                   ),
@@ -968,63 +892,63 @@
                   "Connection kind",
                 ),
                 s.createElement(
-                  o.SY,
+                  o.zW,
                   { value: S, onChange: (e) => b(e) },
-                  s.createElement(o.EU, { value: "" }, "Any"),
-                  s.createElement(o.EU, { value: "ded" }, "Dedicated server"),
-                  s.createElement(o.EU, { value: "p2p" }, "Peer-to-Peer"),
+                  s.createElement(o.a, { value: "" }, "Any"),
+                  s.createElement(o.a, { value: "ded" }, "Dedicated server"),
+                  s.createElement(o.a, { value: "p2p" }, "Peer-to-Peer"),
                 ),
               ),
               s.createElement(
                 "div",
                 { className: u.AppFieldPair },
-                s.createElement(o.II, {
+                s.createElement(o.pd, {
                   type: "text",
-                  value: v,
+                  value: h,
                   disabled: M,
                   label: "Client",
-                  onChange: (e) => h(e.currentTarget.value),
+                  onChange: (e) => v(e.currentTarget.value),
                 }),
-                s.createElement(o.II, {
+                s.createElement(o.pd, {
                   type: "text",
                   value: N,
                   disabled: M,
-                  label: T,
+                  label: I,
                   onChange: (e) => y(e.currentTarget.value),
                 }),
               ),
               s.createElement(
                 "div",
                 { className: u.AppFieldPair },
-                s.createElement(o.II, {
+                s.createElement(o.pd, {
                   type: "text",
                   value: P,
                   disabled: M,
                   label: "App field name 1",
                   onChange: (e) => x(e.currentTarget.value),
                 }),
-                s.createElement(o.II, {
+                s.createElement(o.pd, {
                   type: "text",
-                  value: I,
+                  value: R,
                   disabled: M,
                   label: "App field value 1",
-                  onChange: (e) => D(e.currentTarget.value),
+                  onChange: (e) => T(e.currentTarget.value),
                 }),
               ),
               s.createElement(
                 "div",
                 { className: u.SubmitButtonCtn },
                 s.createElement(
-                  o.KM,
+                  o.jn,
                   {
                     onClick: () => {
                       let e = new URLSearchParams();
-                      v && e.set("client_id", v),
+                      h && e.set("client_id", h),
                         N && e.set("peer_id", N),
                         S && e.set("kind", S),
                         P &&
-                          I &&
-                          (e.set("app_name1", P), e.set("app_value1", I));
+                          R &&
+                          (e.set("app_name1", P), e.set("app_value1", R));
                       let a = { ...t.location };
                       (a.search = e.toString()),
                         a != t.location && t.push(a),
@@ -1036,10 +960,86 @@
                 ),
               ),
             ),
-            n && s.createElement(p.V, null),
-            R,
+            n && s.createElement(p.t, null),
+            D,
           ),
         );
+      }
+    },
+    68797: (e, t, a) => {
+      "use strict";
+      a.d(t, { H: () => l });
+      var n = a(41735),
+        r = a.n(n),
+        s = a(56545);
+      function l(e) {
+        if (r().isCancel(e))
+          return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
+        if (
+          void 0 !== e.response &&
+          e.response.data &&
+          "object" == typeof e.response.data
+        ) {
+          if ("msg" in e.response.data)
+            return {
+              strErrorMsg: e.response.data.msg,
+              errorCode: e.response.data.success,
+            };
+          if ("err_msg" in e.response.data)
+            return {
+              strErrorMsg: e.response.data.err_msg,
+              errorCode: e.response.data.success,
+            };
+          if ("message" in e.response.data)
+            return {
+              strErrorMsg: e.response.data.message,
+              errorCode: e.response.data.success,
+            };
+          if ("success" in e.response.data)
+            return {
+              strErrorMsg: "error code: " + e.response.data.success,
+              errorCode: e.response.data.success,
+            };
+        } else if ("object" == typeof e.data) {
+          if ("msg" in e.data)
+            return { strErrorMsg: e.data.msg, errorCode: e.data.success };
+          if ("err_msg" in e.data)
+            return { strErrorMsg: e.data.err_msg, errorCode: e.data.success };
+          if ("message" in e.data)
+            return { strErrorMsg: e.data.message, errorCode: e.data.success };
+          if ("success" in e.data)
+            return {
+              strErrorMsg: "error code: " + e.data.success,
+              errorCode: e.data.success,
+            };
+        } else {
+          if (void 0 !== e.success && void 0 !== e.msg)
+            return { strErrorMsg: e.msg, errorCode: e.success };
+          if (void 0 !== e.success && void 0 !== e.message)
+            return { strErrorMsg: e.message, errorCode: e.success };
+          if (void 0 !== e.success && void 0 !== e.err_msg)
+            return { strErrorMsg: e.err_msg, errorCode: e.success };
+          if ("string" == typeof e && e.length > 1024)
+            console.groupCollapsed(
+              "GetMsgAndErrorCodeFromResponse cannot parse: ",
+            ),
+              console.warn(e),
+              console.groupEnd();
+          else {
+            if ("object" == typeof e && e instanceof s.w)
+              return {
+                strErrorMsg: "" + e.GetErrorMessage(),
+                errorCode: e.GetEResult(),
+              };
+            console.warn("GetMsgAndErrorCodeFromResponse cannot parse: ", e);
+          }
+        }
+        return "object" == typeof e && "status" in e
+          ? {
+              strErrorMsg: "Unknown Error: " + e + "\nStatus Code:" + e.status,
+              errorCode: 2,
+            }
+          : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
       }
     },
   },

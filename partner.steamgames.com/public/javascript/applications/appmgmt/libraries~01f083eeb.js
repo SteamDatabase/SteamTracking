@@ -2,9 +2,9 @@
  ****/
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [768],
+  [2946],
   {
-    43344: (e, t, n) => {
+    69917: (e, t, n) => {
       e.exports = (function (e) {
         var t = {};
         function n(r) {
@@ -63,13 +63,13 @@
         );
       })([
         function (e, t) {
-          e.exports = n(47427);
+          e.exports = n(90626);
         },
         function (e, t) {
-          e.exports = n(37485);
+          e.exports = n(19367);
         },
         function (e, t) {
-          e.exports = n(42287);
+          e.exports = n(72739);
         },
         function (e, t, n) {
           e.exports = n(5)();

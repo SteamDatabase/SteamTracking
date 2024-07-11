@@ -1,9 +1,9 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [2329],
+  [5278],
   {
-    3524: (e) => {
+    4111: (e) => {
       e.exports = {
         AvatarCrop: "UVQKcPi5M7xfkxGQGiesv",
         AvatarCropBound: "t4p1Ec6lMuoroo13jMEgH",
@@ -11,16 +11,16 @@
         AvatarLoading: "_2HcWfCd15FR0zxzO3g4QQ9",
       };
     },
-    98682: (e, t, a) => {
+    66884: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => m });
-      var r = a(47427),
-        n = a(89868),
+      var r = a(90626),
+        n = a(44217),
         o = a.n(n),
-        c = a(50423),
-        i = a(31846),
-        s = a(75371),
-        l = a(3524);
+        c = a(56011),
+        i = a(61859),
+        s = a(35471),
+        l = a(4111);
       const u = 184,
         d = 5,
         g = 1048576,
@@ -43,7 +43,7 @@
                       behavior: "smooth",
                       block: "center",
                     }),
-                  f(n.current, e).then(() => {
+                  h(n.current, e).then(() => {
                     a(!1),
                       (i.current = new (o())(n.current, {
                         viewMode: 1,
@@ -77,7 +77,7 @@
                 isLoading: t,
                 imageRef: n,
                 loaderRef: c,
-                getBlob: () => h(i.current, n.current),
+                getBlob: () => f(i.current, n.current),
               }
             );
           })(e.imageData);
@@ -97,15 +97,15 @@
                     className: l.AvatarLoading,
                     style: { display: a ? "" : "none" },
                   },
-                  (0, i.Xx)("#Loading"),
+                  (0, i.we)("#Loading"),
                 ),
               ),
             )
           );
         });
-      async function f(e, t) {
+      async function h(e, t) {
         const a = new Image(),
-          r = (0, c.f4)(a, "load");
+          r = (0, c.A2)(a, "load");
         (a.src = URL.createObjectURL(t)), await r;
         const n = document.createElement("canvas");
         (n.width = a.width), (n.height = a.height);
@@ -115,10 +115,10 @@
           o.fill(),
           o.drawImage(a, 0, 0),
           URL.revokeObjectURL(a.src);
-        const i = (0, c.f4)(e, "load");
+        const i = (0, c.A2)(e, "load");
         (e.src = URL.createObjectURL(await w(n))), await i;
       }
-      async function h(e, t) {
+      async function f(e, t) {
         const a = e.getData();
         let r = d;
         for (;;) {

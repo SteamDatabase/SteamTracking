@@ -195,7 +195,8 @@ enum EBrowserType
 	EBrowserType_OffScreen_GameOverlay = 9;
 	EBrowserType_OffScreen_GameOverlay_SharedTexture = 10;
 	EBrowserType_Offscreen_FriendsUI = 11;
-	EBrowserType_MAX = 12;
+	EBrowserType_Offscreen_SteamUI = 12;
+	EBrowserType_OpenVROverlay_Subview = 13;
 }
 
 enum EButton

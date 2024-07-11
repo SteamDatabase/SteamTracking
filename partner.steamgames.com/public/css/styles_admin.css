@@ -354,7 +354,9 @@ textarea.gray {
 }
 
 /* need more room for the external link labels */
-#external_links .formlabel {
+#external_links .formlabel,
+#social_links .formlabel,
+#compat_links .formlabel {
 	min-width: 15em;
 }
 

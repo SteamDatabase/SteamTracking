@@ -1,51 +1,51 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [3143],
+  [8680],
   {
-    71923: (e, t, r) => {
-      e.exports = r(11773);
+    90540: (e, t, r) => {
+      e.exports = r(54722);
     },
-    11773: (e) => {
+    54722: (e) => {
       e.exports = function (e) {
         return e && e.length ? e[0] : void 0;
       };
     },
-    55353: (e, t, r) => {
-      var i = r(17425),
-        n = r(6515),
-        a = r(60647);
+    42529: (e, t, r) => {
+      var n = r(16869),
+        i = r(31517),
+        o = r(12507);
       e.exports = function (e, t) {
-        return e && e.length ? i(e, a(t, 2), n) : void 0;
+        return e && e.length ? n(e, o(t, 2), i) : void 0;
       };
     },
-    74310: (e, t, r) => {
-      var i = r(17425),
-        n = r(60647),
-        a = r(66983);
+    11027: (e, t, r) => {
+      var n = r(16869),
+        i = r(12507),
+        o = r(40106);
       e.exports = function (e, t) {
-        return e && e.length ? i(e, n(t, 2), a) : void 0;
+        return e && e.length ? n(e, i(t, 2), o) : void 0;
       };
     },
-    74436: (e, t, r) => {
+    91843: (e, t, r) => {
       "use strict";
-      r.d(t, { u: () => c });
-      var i = r(6256),
-        n = r(71068),
-        a = r(63501),
-        s = r(53460),
-        o = r(6104),
-        c = (0, i.z)({
+      r.d(t, { r: () => s });
+      var n = r(58920),
+        i = r(79191),
+        o = r(66490),
+        a = r(50322),
+        c = r(9495),
+        s = (0, n.gu)({
           chartName: "PieChart",
-          GraphicalChild: o.b,
+          GraphicalChild: c.F,
           validateTooltipEventTypes: ["item"],
           defaultTooltipEventType: "item",
           legendContent: "children",
           axisComponents: [
-            { axisType: "angleAxis", AxisComp: n.I },
-            { axisType: "radiusAxis", AxisComp: a.S },
+            { axisType: "angleAxis", AxisComp: i.r },
+            { axisType: "radiusAxis", AxisComp: o.E },
           ],
-          formatAxisMap: s.t9,
+          formatAxisMap: a.pr,
           defaultProps: {
             layout: "centric",
             startAngle: 0,
@@ -57,22 +57,22 @@
           },
         });
     },
-    588: (e, t, r) => {
+    55709: (e, t, r) => {
       "use strict";
-      r.d(t, { H: () => c });
-      var i = r(6256),
-        n = r(50524),
-        a = r(71068),
-        s = r(63501),
-        o = r(53460),
-        c = (0, i.z)({
+      r.d(t, { V: () => s });
+      var n = r(58920),
+        i = r(70365),
+        o = r(79191),
+        a = r(66490),
+        c = r(50322),
+        s = (0, n.gu)({
           chartName: "RadarChart",
-          GraphicalChild: n.F,
+          GraphicalChild: i.V,
           axisComponents: [
-            { axisType: "angleAxis", AxisComp: a.I },
-            { axisType: "radiusAxis", AxisComp: s.S },
+            { axisType: "angleAxis", AxisComp: o.r },
+            { axisType: "radiusAxis", AxisComp: a.E },
           ],
-          formatAxisMap: o.t9,
+          formatAxisMap: c.pr,
           defaultProps: {
             layout: "centric",
             startAngle: 90,
@@ -84,38 +84,38 @@
           },
         });
     },
-    6104: (e, t, r) => {
+    9495: (e, t, r) => {
       "use strict";
-      r.d(t, { b: () => C });
-      var i,
-        n = r(47427),
-        a = r(15819),
-        s = r(18310),
-        o = r.n(s),
-        c = r(49198),
-        l = r.n(c),
-        u = r(38716),
-        m = r.n(u),
-        d = r(8889),
-        y = r.n(d),
-        b = r(84148),
-        f = r(47430),
-        p = r(84223),
-        B = r(93998),
-        g = r(47094),
-        w = r(72961),
-        h = r(85674),
-        _ = r(94797),
-        v = r(77125),
-        F = r(53460),
-        z = r(76325),
-        M = r(70416),
-        R = r(90481),
-        S = r(81156),
-        O = r(37350);
-      function j(e) {
+      r.d(t, { F: () => Z });
+      var n,
+        i = r(90626),
+        o = r(85882),
+        a = r(52686),
+        c = r.n(a),
+        s = r(58782),
+        l = r.n(s),
+        u = r(64609),
+        p = r.n(u),
+        f = r(3316),
+        y = r.n(f),
+        d = r(90018),
+        m = r(49891),
+        v = r(68428),
+        h = r(9675),
+        b = r(39864),
+        g = r(94816),
+        O = r(49404),
+        A = r(50247),
+        x = r(1036),
+        j = r(50322),
+        P = r(91038),
+        k = r(89998),
+        E = r(97380),
+        w = r(62426),
+        S = r(17798);
+      function R(e) {
         return (
-          (j =
+          (R =
             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
@@ -128,46 +128,46 @@
                     ? "symbol"
                     : typeof e;
                 }),
-          j(e)
+          R(e)
         );
       }
-      function E() {
+      function T() {
         return (
-          (E = Object.assign
+          (T = Object.assign
             ? Object.assign.bind()
             : function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                   var r = arguments[t];
-                  for (var i in r)
-                    Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
+                  for (var n in r)
+                    Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n]);
                 }
                 return e;
               }),
-          E.apply(this, arguments)
+          T.apply(this, arguments)
         );
       }
-      function U(e, t) {
+      function I(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var i = Object.getOwnPropertySymbols(e);
+          var n = Object.getOwnPropertySymbols(e);
           t &&
-            (i = i.filter(function (t) {
+            (n = n.filter(function (t) {
               return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            r.push.apply(r, i);
+            r.push.apply(r, n);
         }
         return r;
       }
-      function T(e) {
+      function D(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? U(Object(r), !0).forEach(function (t) {
-                I(e, t, r[t]);
+            ? I(Object(r), !0).forEach(function (t) {
+                J(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : U(Object(r)).forEach(function (t) {
+              : I(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -177,26 +177,26 @@
         }
         return e;
       }
-      function x(e, t) {
+      function N(e, t) {
         for (var r = 0; r < t.length; r++) {
-          var i = t[r];
-          (i.enumerable = i.enumerable || !1),
-            (i.configurable = !0),
-            "value" in i && (i.writable = !0),
-            Object.defineProperty(e, X(i.key), i);
+          var n = t[r];
+          (n.enumerable = n.enumerable || !1),
+            (n.configurable = !0),
+            "value" in n && (n.writable = !0),
+            Object.defineProperty(e, M(n.key), n);
         }
       }
-      function W(e, t) {
+      function L(e, t) {
         return (
-          (W = Object.setPrototypeOf
+          (L = Object.setPrototypeOf
             ? Object.setPrototypeOf.bind()
             : function (e, t) {
                 return (e.__proto__ = t), e;
               }),
-          W(e, t)
+          L(e, t)
         );
       }
-      function A(e) {
+      function C(e) {
         var t = (function () {
           if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
           if (Reflect.construct.sham) return !1;
@@ -214,41 +214,41 @@
         })();
         return function () {
           var r,
-            i = k(e);
+            n = _(e);
           if (t) {
-            var n = k(this).constructor;
-            r = Reflect.construct(i, arguments, n);
-          } else r = i.apply(this, arguments);
+            var i = _(this).constructor;
+            r = Reflect.construct(n, arguments, i);
+          } else r = n.apply(this, arguments);
           return (function (e, t) {
-            if (t && ("object" === j(t) || "function" == typeof t)) return t;
+            if (t && ("object" === R(t) || "function" == typeof t)) return t;
             if (void 0 !== t)
               throw new TypeError(
                 "Derived constructors may only return object or undefined",
               );
-            return P(e);
+            return F(e);
           })(this, r);
         };
       }
-      function P(e) {
+      function F(e) {
         if (void 0 === e)
           throw new ReferenceError(
             "this hasn't been initialised - super() hasn't been called",
           );
         return e;
       }
-      function k(e) {
+      function _(e) {
         return (
-          (k = Object.setPrototypeOf
+          (_ = Object.setPrototypeOf
             ? Object.getPrototypeOf.bind()
             : function (e) {
                 return e.__proto__ || Object.getPrototypeOf(e);
               }),
-          k(e)
+          _(e)
         );
       }
-      function I(e, t, r) {
+      function J(e, t, r) {
         return (
-          (t = X(t)) in e
+          (t = M(t)) in e
             ? Object.defineProperty(e, t, {
                 value: r,
                 enumerable: !0,
@@ -259,20 +259,20 @@
           e
         );
       }
-      function X(e) {
+      function M(e) {
         var t = (function (e, t) {
-          if ("object" !== j(e) || null === e) return e;
+          if ("object" !== R(e) || null === e) return e;
           var r = e[Symbol.toPrimitive];
           if (void 0 !== r) {
-            var i = r.call(e, t || "default");
-            if ("object" !== j(i)) return i;
+            var n = r.call(e, t || "default");
+            if ("object" !== R(n)) return n;
             throw new TypeError("@@toPrimitive must return a primitive value.");
           }
           return ("string" === t ? String : Number)(e);
         })(e, "string");
-        return "symbol" === j(t) ? t : String(t);
+        return "symbol" === R(t) ? t : String(t);
       }
-      var C = (function (e) {
+      var Z = (function (e) {
         !(function (e, t) {
           if ("function" != typeof t && null !== t)
             throw new TypeError(
@@ -282,27 +282,27 @@
             constructor: { value: e, writable: !0, configurable: !0 },
           })),
             Object.defineProperty(e, "prototype", { writable: !1 }),
-            t && W(e, t);
-        })(c, e);
+            t && L(e, t);
+        })(s, e);
         var t,
           r,
-          i,
-          s = A(c);
-        function c(e) {
+          n,
+          a = C(s);
+        function s(e) {
           var t;
           return (
             (function (e, t) {
               if (!(e instanceof t))
                 throw new TypeError("Cannot call a class as a function");
-            })(this, c),
-            I(P((t = s.call(this, e))), "pieRef", null),
-            I(P(t), "sectorRefs", []),
-            I(P(t), "id", (0, z.EL)("recharts-pie-")),
-            I(P(t), "handleAnimationEnd", function () {
+            })(this, s),
+            J(F((t = a.call(this, e))), "pieRef", null),
+            J(F(t), "sectorRefs", []),
+            J(F(t), "id", (0, P.NF)("recharts-pie-")),
+            J(F(t), "handleAnimationEnd", function () {
               var e = t.props.onAnimationEnd;
               t.setState({ isAnimationFinished: !0 }), y()(e) && e();
             }),
-            I(P(t), "handleAnimationStart", function () {
+            J(F(t), "handleAnimationStart", function () {
               var e = t.props.onAnimationStart;
               t.setState({ isAnimationFinished: !1 }), y()(e) && e();
             }),
@@ -316,8 +316,8 @@
           );
         }
         return (
-          (t = c),
-          (i = [
+          (t = s),
+          (n = [
             {
               key: "getDerivedStateFromProps",
               value: function (e, t) {
@@ -350,13 +350,13 @@
             {
               key: "renderLabelLineItem",
               value: function (e, t) {
-                return n.isValidElement(e)
-                  ? n.cloneElement(e, t)
+                return i.isValidElement(e)
+                  ? i.cloneElement(e, t)
                   : y()(e)
                     ? e(t)
-                    : n.createElement(
-                        p.H,
-                        E({}, t, {
+                    : i.createElement(
+                        v.I,
+                        T({}, t, {
                           type: "linear",
                           className: "recharts-pie-label-line",
                         }),
@@ -366,17 +366,17 @@
             {
               key: "renderLabelItem",
               value: function (e, t, r) {
-                if (n.isValidElement(e)) return n.cloneElement(e, t);
-                var i = r;
-                return y()(e) && ((i = e(t)), n.isValidElement(i))
-                  ? i
-                  : n.createElement(
-                      B.x,
-                      E({}, t, {
+                if (i.isValidElement(e)) return i.cloneElement(e, t);
+                var n = r;
+                return y()(e) && ((n = e(t)), i.isValidElement(n))
+                  ? n
+                  : i.createElement(
+                      h.E,
+                      T({}, t, {
                         alignmentBaseline: "middle",
                         className: "recharts-pie-label-text",
                       }),
-                      i,
+                      n,
                     );
               },
             },
@@ -406,25 +406,25 @@
                   return null;
                 var t = this.props,
                   r = t.label,
-                  i = t.labelLine,
-                  a = t.dataKey,
-                  s = t.valueKey,
-                  o = (0, _.L6)(this.props),
-                  l = (0, _.L6)(r),
-                  u = (0, _.L6)(i),
-                  d = (r && r.offsetRadius) || 20,
+                  n = t.labelLine,
+                  o = t.dataKey,
+                  a = t.valueKey,
+                  c = (0, A.J9)(this.props),
+                  l = (0, A.J9)(r),
+                  u = (0, A.J9)(n),
+                  f = (r && r.offsetRadius) || 20,
                   y = e.map(function (e, t) {
                     var y = (e.startAngle + e.endAngle) / 2,
-                      b = (0, F.op)(e.cx, e.cy, e.outerRadius + d, y),
-                      p = T(
-                        T(T(T({}, o), e), {}, { stroke: "none" }, l),
+                      d = (0, j.IZ)(e.cx, e.cy, e.outerRadius + f, y),
+                      v = D(
+                        D(D(D({}, c), e), {}, { stroke: "none" }, l),
                         {},
-                        { index: t, textAnchor: c.getTextAnchor(b.x, e.cx) },
-                        b,
+                        { index: t, textAnchor: s.getTextAnchor(d.x, e.cx) },
+                        d,
                       ),
-                      B = T(
-                        T(
-                          T(T({}, o), e),
+                      h = D(
+                        D(
+                          D(D({}, c), e),
                           {},
                           { fill: "none", stroke: e.fill },
                           u,
@@ -432,27 +432,27 @@
                         {},
                         {
                           index: t,
-                          points: [(0, F.op)(e.cx, e.cy, e.outerRadius, y), b],
+                          points: [(0, j.IZ)(e.cx, e.cy, e.outerRadius, y), d],
                           key: "line",
                         },
                       ),
-                      g = a;
+                      b = o;
                     return (
-                      m()(a) && m()(s) ? (g = "value") : m()(a) && (g = s),
-                      n.createElement(
-                        f.m,
+                      p()(o) && p()(a) ? (b = "value") : p()(o) && (b = a),
+                      i.createElement(
+                        m.W,
                         {
                           key: "label-"
                             .concat(e.startAngle, "-")
                             .concat(e.endAngle),
                         },
-                        i && c.renderLabelLineItem(i, B),
-                        c.renderLabelItem(r, p, (0, M.F$)(e, g)),
+                        n && s.renderLabelLineItem(n, h),
+                        s.renderLabelItem(r, v, (0, k.kr)(e, b)),
                       )
                     );
                   });
-                return n.createElement(
-                  f.m,
+                return i.createElement(
+                  m.W,
                   { className: "recharts-pie-labels" },
                   y,
                 );
@@ -463,27 +463,27 @@
               value: function (e) {
                 var t = this,
                   r = this.props,
-                  i = r.activeShape,
-                  a = r.blendStroke,
-                  s = r.inactiveShape;
-                return e.map(function (r, o) {
+                  n = r.activeShape,
+                  o = r.blendStroke,
+                  a = r.inactiveShape;
+                return e.map(function (r, c) {
                   if (
                     0 === (null == r ? void 0 : r.startAngle) &&
                     0 === (null == r ? void 0 : r.endAngle) &&
                     1 !== e.length
                   )
                     return null;
-                  var c = t.isActiveIndex(o),
-                    l = s && t.hasActiveIndex() ? s : null,
-                    u = c ? i : l,
-                    m = T(
-                      T({}, r),
+                  var s = t.isActiveIndex(c),
+                    l = a && t.hasActiveIndex() ? a : null,
+                    u = s ? n : l,
+                    p = D(
+                      D({}, r),
                       {},
-                      { stroke: a ? r.fill : r.stroke, tabIndex: -1 },
+                      { stroke: o ? r.fill : r.stroke, tabIndex: -1 },
                     );
-                  return n.createElement(
-                    f.m,
-                    E(
+                  return i.createElement(
+                    m.W,
+                    T(
                       {
                         ref: function (e) {
                           e &&
@@ -493,7 +493,7 @@
                         tabIndex: -1,
                         className: "recharts-pie-sector",
                       },
-                      (0, S.bw)(t.props, r, o),
+                      (0, w.XC)(t.props, r, c),
                       {
                         key: "sector-"
                           .concat(null == r ? void 0 : r.startAngle, "-")
@@ -501,9 +501,9 @@
                           .concat(r.midAngle),
                       },
                     ),
-                    n.createElement(
-                      O.bn,
-                      E({ option: u, isActive: c, shapeType: "sector" }, m),
+                    i.createElement(
+                      S.yp,
+                      T({ option: u, isActive: s, shapeType: "sector" }, p),
                     ),
                   );
                 });
@@ -515,20 +515,20 @@
                 var e = this,
                   t = this.props,
                   r = t.sectors,
-                  i = t.isAnimationActive,
-                  s = t.animationBegin,
-                  c = t.animationDuration,
+                  n = t.isAnimationActive,
+                  a = t.animationBegin,
+                  s = t.animationDuration,
                   l = t.animationEasing,
                   u = t.animationId,
-                  m = this.state,
-                  d = m.prevSectors,
-                  y = m.prevIsAnimationActive;
-                return n.createElement(
-                  a.ZP,
+                  p = this.state,
+                  f = p.prevSectors,
+                  y = p.prevIsAnimationActive;
+                return i.createElement(
+                  o.Ay,
                   {
-                    begin: s,
-                    duration: c,
-                    isActive: i,
+                    begin: a,
+                    duration: s,
+                    isActive: n,
                     easing: l,
                     from: { t: 0 },
                     to: { t: 1 },
@@ -537,37 +537,37 @@
                     onAnimationEnd: this.handleAnimationEnd,
                   },
                   function (t) {
-                    var i = t.t,
-                      a = [],
-                      s = (r && r[0]).startAngle;
+                    var n = t.t,
+                      o = [],
+                      a = (r && r[0]).startAngle;
                     return (
                       r.forEach(function (e, t) {
-                        var r = d && d[t],
-                          n = t > 0 ? o()(e, "paddingAngle", 0) : 0;
+                        var r = f && f[t],
+                          i = t > 0 ? c()(e, "paddingAngle", 0) : 0;
                         if (r) {
-                          var c = (0, z.k4)(
+                          var s = (0, P.Dj)(
                               r.endAngle - r.startAngle,
                               e.endAngle - e.startAngle,
                             ),
-                            l = T(
-                              T({}, e),
+                            l = D(
+                              D({}, e),
                               {},
-                              { startAngle: s + n, endAngle: s + c(i) + n },
+                              { startAngle: a + i, endAngle: a + s(n) + i },
                             );
-                          a.push(l), (s = l.endAngle);
+                          o.push(l), (a = l.endAngle);
                         } else {
                           var u = e.endAngle,
-                            m = e.startAngle,
-                            y = (0, z.k4)(0, u - m)(i),
-                            b = T(
-                              T({}, e),
+                            p = e.startAngle,
+                            y = (0, P.Dj)(0, u - p)(n),
+                            d = D(
+                              D({}, e),
                               {},
-                              { startAngle: s + n, endAngle: s + y + n },
+                              { startAngle: a + i, endAngle: a + y + i },
                             );
-                          a.push(b), (s = b.endAngle);
+                          o.push(d), (a = d.endAngle);
                         }
                       }),
-                      n.createElement(f.m, null, e.renderSectorsStatically(a))
+                      i.createElement(m.W, null, e.renderSectorsStatically(o))
                     );
                   },
                 );
@@ -586,12 +586,12 @@
                           t.setState({ sectorToFocus: r });
                         break;
                       case "ArrowRight":
-                        var i =
+                        var n =
                           --t.state.sectorToFocus < 0
                             ? t.sectorRefs.length - 1
                             : t.state.sectorToFocus % t.sectorRefs.length;
-                        t.sectorRefs[i].focus(),
-                          t.setState({ sectorToFocus: i });
+                        t.sectorRefs[n].focus(),
+                          t.setState({ sectorToFocus: n });
                         break;
                       case "Escape":
                         t.sectorRefs[t.state.sectorToFocus].blur(),
@@ -606,8 +606,8 @@
                 var e = this.props,
                   t = e.sectors,
                   r = e.isAnimationActive,
-                  i = this.state.prevSectors;
-                return !(r && t && t.length) || (i && l()(i, t))
+                  n = this.state.prevSectors;
+                return !(r && t && t.length) || (n && l()(n, t))
                   ? this.renderSectorsStatically(t)
                   : this.renderSectorsWithAnimation();
               },
@@ -624,28 +624,28 @@
                 var e = this,
                   t = this.props,
                   r = t.hide,
-                  i = t.sectors,
-                  a = t.className,
-                  s = t.label,
-                  o = t.cx,
-                  c = t.cy,
+                  n = t.sectors,
+                  o = t.className,
+                  a = t.label,
+                  c = t.cx,
+                  s = t.cy,
                   l = t.innerRadius,
                   u = t.outerRadius,
-                  m = t.isAnimationActive,
-                  d = this.state.isAnimationFinished;
+                  p = t.isAnimationActive,
+                  f = this.state.isAnimationFinished;
                 if (
                   r ||
-                  !i ||
-                  !i.length ||
-                  !(0, z.hj)(o) ||
-                  !(0, z.hj)(c) ||
-                  !(0, z.hj)(l) ||
-                  !(0, z.hj)(u)
+                  !n ||
+                  !n.length ||
+                  !(0, P.Et)(c) ||
+                  !(0, P.Et)(s) ||
+                  !(0, P.Et)(l) ||
+                  !(0, P.Et)(u)
                 )
                   return null;
-                var y = (0, b.Z)("recharts-pie", a);
-                return n.createElement(
-                  f.m,
+                var y = (0, d.A)("recharts-pie", o);
+                return i.createElement(
+                  m.W,
                   {
                     tabIndex: this.props.rootTabIndex,
                     className: y,
@@ -654,21 +654,21 @@
                     },
                   },
                   this.renderSectors(),
-                  s && this.renderLabels(i),
-                  g._.renderCallByParent(this.props, null, !1),
-                  (!m || d) && w.e.renderCallByParent(this.props, i, !1),
+                  a && this.renderLabels(n),
+                  b.J.renderCallByParent(this.props, null, !1),
+                  (!p || f) && g.Z.renderCallByParent(this.props, n, !1),
                 );
               },
             },
-          ]) && x(t.prototype, r),
-          i && x(t, i),
+          ]) && N(t.prototype, r),
+          n && N(t, n),
           Object.defineProperty(t, "prototype", { writable: !1 }),
-          c
+          s
         );
-      })(n.PureComponent);
-      (i = C),
-        I(C, "displayName", "Pie"),
-        I(C, "defaultProps", {
+      })(i.PureComponent);
+      (n = Z),
+        J(Z, "displayName", "Pie"),
+        J(Z, "defaultProps", {
           stroke: "#fff",
           fill: "#808080",
           legendType: "rect",
@@ -682,7 +682,7 @@
           labelLine: !0,
           hide: !1,
           minAngle: 0,
-          isAnimationActive: !v.x.isSsr,
+          isAnimationActive: !x.m.isSsr,
           animationBegin: 400,
           animationDuration: 1500,
           animationEasing: "ease",
@@ -690,137 +690,137 @@
           blendStroke: !1,
           rootTabIndex: 0,
         }),
-        I(C, "parseDeltaAngle", function (e, t) {
-          return (0, z.uY)(t - e) * Math.min(Math.abs(t - e), 360);
+        J(Z, "parseDeltaAngle", function (e, t) {
+          return (0, P.sA)(t - e) * Math.min(Math.abs(t - e), 360);
         }),
-        I(C, "getRealPieData", function (e) {
+        J(Z, "getRealPieData", function (e) {
           var t = e.props,
             r = t.data,
-            i = t.children,
-            n = (0, _.L6)(e.props),
-            a = (0, _.NN)(i, h.b);
+            n = t.children,
+            i = (0, A.J9)(e.props),
+            o = (0, A.aS)(n, O.f);
           return r && r.length
             ? r.map(function (e, t) {
-                return T(T(T({ payload: e }, n), e), a && a[t] && a[t].props);
+                return D(D(D({ payload: e }, i), e), o && o[t] && o[t].props);
               })
-            : a && a.length
-              ? a.map(function (e) {
-                  return T(T({}, n), e.props);
+            : o && o.length
+              ? o.map(function (e) {
+                  return D(D({}, i), e.props);
                 })
               : [];
         }),
-        I(C, "parseCoordinateOfPie", function (e, t) {
+        J(Z, "parseCoordinateOfPie", function (e, t) {
           var r = t.top,
-            i = t.left,
-            n = t.width,
-            a = t.height,
-            s = (0, F.$4)(n, a);
+            n = t.left,
+            i = t.width,
+            o = t.height,
+            a = (0, j.lY)(i, o);
           return {
-            cx: i + (0, z.h1)(e.props.cx, n, n / 2),
-            cy: r + (0, z.h1)(e.props.cy, a, a / 2),
-            innerRadius: (0, z.h1)(e.props.innerRadius, s, 0),
-            outerRadius: (0, z.h1)(e.props.outerRadius, s, 0.8 * s),
-            maxRadius: e.props.maxRadius || Math.sqrt(n * n + a * a) / 2,
+            cx: n + (0, P.F4)(e.props.cx, i, i / 2),
+            cy: r + (0, P.F4)(e.props.cy, o, o / 2),
+            innerRadius: (0, P.F4)(e.props.innerRadius, a, 0),
+            outerRadius: (0, P.F4)(e.props.outerRadius, a, 0.8 * a),
+            maxRadius: e.props.maxRadius || Math.sqrt(i * i + o * o) / 2,
           };
         }),
-        I(C, "getComposedData", function (e) {
+        J(Z, "getComposedData", function (e) {
           var t = e.item,
             r = e.offset,
-            n = i.getRealPieData(t);
-          if (!n || !n.length) return null;
-          var a = t.props,
-            s = a.cornerRadius,
-            o = a.startAngle,
-            c = a.endAngle,
-            l = a.paddingAngle,
-            u = a.dataKey,
-            d = a.nameKey,
-            y = a.valueKey,
-            b = a.tooltipType,
-            f = Math.abs(t.props.minAngle),
-            p = i.parseCoordinateOfPie(t, r),
-            B = i.parseDeltaAngle(o, c),
-            g = Math.abs(B),
-            w = u;
-          m()(u) && m()(y)
-            ? ((0, R.Z)(
+            i = n.getRealPieData(t);
+          if (!i || !i.length) return null;
+          var o = t.props,
+            a = o.cornerRadius,
+            c = o.startAngle,
+            s = o.endAngle,
+            l = o.paddingAngle,
+            u = o.dataKey,
+            f = o.nameKey,
+            y = o.valueKey,
+            d = o.tooltipType,
+            m = Math.abs(t.props.minAngle),
+            v = n.parseCoordinateOfPie(t, r),
+            h = n.parseDeltaAngle(c, s),
+            b = Math.abs(h),
+            g = u;
+          p()(u) && p()(y)
+            ? ((0, E.R)(
                 !1,
                 'Use "dataKey" to specify the value of pie,\n      the props "valueKey" will be deprecated in 1.1.0',
               ),
-              (w = "value"))
-            : m()(u) &&
-              ((0, R.Z)(
+              (g = "value"))
+            : p()(u) &&
+              ((0, E.R)(
                 !1,
                 'Use "dataKey" to specify the value of pie,\n      the props "valueKey" will be deprecated in 1.1.0',
               ),
-              (w = y));
-          var h,
-            _,
-            v = n.filter(function (e) {
-              return 0 !== (0, M.F$)(e, w, 0);
+              (g = y));
+          var O,
+            A,
+            x = i.filter(function (e) {
+              return 0 !== (0, k.kr)(e, g, 0);
             }).length,
-            S = g - v * f - (g >= 360 ? v : v - 1) * l,
-            O = n.reduce(function (e, t) {
-              var r = (0, M.F$)(t, w, 0);
-              return e + ((0, z.hj)(r) ? r : 0);
+            w = b - x * m - (b >= 360 ? x : x - 1) * l,
+            S = i.reduce(function (e, t) {
+              var r = (0, k.kr)(t, g, 0);
+              return e + ((0, P.Et)(r) ? r : 0);
             }, 0);
-          O > 0 &&
-            (h = n.map(function (e, t) {
+          S > 0 &&
+            (O = i.map(function (e, t) {
               var r,
-                i = (0, M.F$)(e, w, 0),
-                n = (0, M.F$)(e, d, t),
-                a = ((0, z.hj)(i) ? i : 0) / O,
-                c =
+                n = (0, k.kr)(e, g, 0),
+                i = (0, k.kr)(e, f, t),
+                o = ((0, P.Et)(n) ? n : 0) / S,
+                s =
                   (r = t
-                    ? _.endAngle + (0, z.uY)(B) * l * (0 !== i ? 1 : 0)
-                    : o) +
-                  (0, z.uY)(B) * ((0 !== i ? f : 0) + a * S),
-                u = (r + c) / 2,
-                m = (p.innerRadius + p.outerRadius) / 2,
-                y = [{ name: n, value: i, payload: e, dataKey: w, type: b }],
-                g = (0, F.op)(p.cx, p.cy, m, u);
-              return (_ = T(
-                T(
-                  T(
+                    ? A.endAngle + (0, P.sA)(h) * l * (0 !== n ? 1 : 0)
+                    : c) +
+                  (0, P.sA)(h) * ((0 !== n ? m : 0) + o * w),
+                u = (r + s) / 2,
+                p = (v.innerRadius + v.outerRadius) / 2,
+                y = [{ name: i, value: n, payload: e, dataKey: g, type: d }],
+                b = (0, j.IZ)(v.cx, v.cy, p, u);
+              return (A = D(
+                D(
+                  D(
                     {
-                      percent: a,
-                      cornerRadius: s,
-                      name: n,
+                      percent: o,
+                      cornerRadius: a,
+                      name: i,
                       tooltipPayload: y,
                       midAngle: u,
-                      middleRadius: m,
-                      tooltipPosition: g,
+                      middleRadius: p,
+                      tooltipPosition: b,
                     },
                     e,
                   ),
-                  p,
+                  v,
                 ),
                 {},
                 {
-                  value: (0, M.F$)(e, w),
+                  value: (0, k.kr)(e, g),
                   startAngle: r,
-                  endAngle: c,
+                  endAngle: s,
                   payload: e,
-                  paddingAngle: (0, z.uY)(B) * l,
+                  paddingAngle: (0, P.sA)(h) * l,
                 },
               ));
             }));
-          return T(T({}, p), {}, { sectors: h, data: n });
+          return D(D({}, v), {}, { sectors: O, data: i });
         });
     },
-    71068: (e, t, r) => {
+    79191: (e, t, r) => {
       "use strict";
-      r.d(t, { I: () => M });
-      var i = r(47427),
-        n = r(8889),
-        a = r.n(n),
-        s = r(47430),
-        o = r(14166),
-        c = r(89291),
-        l = r(93998),
-        u = r(81156),
-        m = r(94797),
-        d = r(53460);
+      r.d(t, { r: () => k });
+      var n = r(90626),
+        i = r(3316),
+        o = r.n(i),
+        a = r(49891),
+        c = r(17891),
+        s = r(82422),
+        l = r(9675),
+        u = r(62426),
+        p = r(50247),
+        f = r(50322);
       function y(e) {
         return (
           (y =
@@ -839,43 +839,43 @@
           y(e)
         );
       }
-      function b() {
+      function d() {
         return (
-          (b = Object.assign
+          (d = Object.assign
             ? Object.assign.bind()
             : function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                   var r = arguments[t];
-                  for (var i in r)
-                    Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
+                  for (var n in r)
+                    Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n]);
                 }
                 return e;
               }),
-          b.apply(this, arguments)
+          d.apply(this, arguments)
         );
       }
-      function f(e, t) {
+      function m(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var i = Object.getOwnPropertySymbols(e);
+          var n = Object.getOwnPropertySymbols(e);
           t &&
-            (i = i.filter(function (t) {
+            (n = n.filter(function (t) {
               return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            r.push.apply(r, i);
+            r.push.apply(r, n);
         }
         return r;
       }
-      function p(e) {
+      function v(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? f(Object(r), !0).forEach(function (t) {
-                _(e, t, r[t]);
+            ? m(Object(r), !0).forEach(function (t) {
+                A(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : f(Object(r)).forEach(function (t) {
+              : m(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -885,26 +885,26 @@
         }
         return e;
       }
-      function B(e, t) {
+      function h(e, t) {
         for (var r = 0; r < t.length; r++) {
-          var i = t[r];
-          (i.enumerable = i.enumerable || !1),
-            (i.configurable = !0),
-            "value" in i && (i.writable = !0),
-            Object.defineProperty(e, v(i.key), i);
+          var n = t[r];
+          (n.enumerable = n.enumerable || !1),
+            (n.configurable = !0),
+            "value" in n && (n.writable = !0),
+            Object.defineProperty(e, x(n.key), n);
         }
       }
-      function g(e, t) {
+      function b(e, t) {
         return (
-          (g = Object.setPrototypeOf
+          (b = Object.setPrototypeOf
             ? Object.setPrototypeOf.bind()
             : function (e, t) {
                 return (e.__proto__ = t), e;
               }),
-          g(e, t)
+          b(e, t)
         );
       }
-      function w(e) {
+      function g(e) {
         var t = (function () {
           if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
           if (Reflect.construct.sham) return !1;
@@ -922,11 +922,11 @@
         })();
         return function () {
           var r,
-            i = h(e);
+            n = O(e);
           if (t) {
-            var n = h(this).constructor;
-            r = Reflect.construct(i, arguments, n);
-          } else r = i.apply(this, arguments);
+            var i = O(this).constructor;
+            r = Reflect.construct(n, arguments, i);
+          } else r = n.apply(this, arguments);
           return (function (e, t) {
             if (t && ("object" === y(t) || "function" == typeof t)) return t;
             if (void 0 !== t)
@@ -943,19 +943,19 @@
           })(this, r);
         };
       }
-      function h(e) {
+      function O(e) {
         return (
-          (h = Object.setPrototypeOf
+          (O = Object.setPrototypeOf
             ? Object.getPrototypeOf.bind()
             : function (e) {
                 return e.__proto__ || Object.getPrototypeOf(e);
               }),
-          h(e)
+          O(e)
         );
       }
-      function _(e, t, r) {
+      function A(e, t, r) {
         return (
-          (t = v(t)) in e
+          (t = x(t)) in e
             ? Object.defineProperty(e, t, {
                 value: r,
                 enumerable: !0,
@@ -966,22 +966,22 @@
           e
         );
       }
-      function v(e) {
+      function x(e) {
         var t = (function (e, t) {
           if ("object" !== y(e) || null === e) return e;
           var r = e[Symbol.toPrimitive];
           if (void 0 !== r) {
-            var i = r.call(e, t || "default");
-            if ("object" !== y(i)) return i;
+            var n = r.call(e, t || "default");
+            if ("object" !== y(n)) return n;
             throw new TypeError("@@toPrimitive must return a primitive value.");
           }
           return ("string" === t ? String : Number)(e);
         })(e, "string");
         return "symbol" === y(t) ? t : String(t);
       }
-      var F = Math.PI / 180,
-        z = 1e-5,
-        M = (function (e) {
+      var j = Math.PI / 180,
+        P = 1e-5,
+        k = (function (e) {
           !(function (e, t) {
             if ("function" != typeof t && null !== t)
               throw new TypeError(
@@ -991,34 +991,34 @@
               constructor: { value: e, writable: !0, configurable: !0 },
             })),
               Object.defineProperty(e, "prototype", { writable: !1 }),
-              t && g(e, t);
-          })(f, e);
+              t && b(e, t);
+          })(m, e);
           var t,
             r,
-            n,
-            y = w(f);
-          function f() {
+            i,
+            y = g(m);
+          function m() {
             return (
               (function (e, t) {
                 if (!(e instanceof t))
                   throw new TypeError("Cannot call a class as a function");
-              })(this, f),
+              })(this, m),
               y.apply(this, arguments)
             );
           }
           return (
-            (t = f),
-            (n = [
+            (t = m),
+            (i = [
               {
                 key: "renderTickItem",
                 value: function (e, t, r) {
-                  return i.isValidElement(e)
-                    ? i.cloneElement(e, t)
-                    : a()(e)
+                  return n.isValidElement(e)
+                    ? n.cloneElement(e, t)
+                    : o()(e)
                       ? e(t)
-                      : i.createElement(
-                          l.x,
-                          b({}, t, {
+                      : n.createElement(
+                          l.E,
+                          d({}, t, {
                             className: "recharts-polar-angle-axis-tick-value",
                           }),
                           r,
@@ -1032,30 +1032,30 @@
                 value: function (e) {
                   var t = this.props,
                     r = t.cx,
-                    i = t.cy,
-                    n = t.radius,
-                    a = t.orientation,
-                    s = t.tickSize || 8,
-                    o = (0, d.op)(r, i, n, e.coordinate),
-                    c = (0, d.op)(
+                    n = t.cy,
+                    i = t.radius,
+                    o = t.orientation,
+                    a = t.tickSize || 8,
+                    c = (0, f.IZ)(r, n, i, e.coordinate),
+                    s = (0, f.IZ)(
                       r,
-                      i,
-                      n + ("inner" === a ? -1 : 1) * s,
+                      n,
+                      i + ("inner" === o ? -1 : 1) * a,
                       e.coordinate,
                     );
-                  return { x1: o.x, y1: o.y, x2: c.x, y2: c.y };
+                  return { x1: c.x, y1: c.y, x2: s.x, y2: s.y };
                 },
               },
               {
                 key: "getTickTextAnchor",
                 value: function (e) {
                   var t = this.props.orientation,
-                    r = Math.cos(-e.coordinate * F);
-                  return r > z
+                    r = Math.cos(-e.coordinate * j);
+                  return r > P
                     ? "outer" === t
                       ? "start"
                       : "end"
-                    : r < -z
+                    : r < -P
                       ? "outer" === t
                         ? "end"
                         : "start"
@@ -1068,30 +1068,30 @@
                   var e = this.props,
                     t = e.cx,
                     r = e.cy,
-                    n = e.radius,
-                    a = e.axisLine,
-                    s = e.axisLineType,
-                    l = p(
-                      p({}, (0, m.L6)(this.props)),
+                    i = e.radius,
+                    o = e.axisLine,
+                    a = e.axisLineType,
+                    l = v(
+                      v({}, (0, p.J9)(this.props)),
                       {},
                       { fill: "none" },
-                      (0, m.L6)(a),
+                      (0, p.J9)(o),
                     );
-                  if ("circle" === s)
-                    return i.createElement(
-                      o.o,
-                      b({ className: "recharts-polar-angle-axis-line" }, l, {
+                  if ("circle" === a)
+                    return n.createElement(
+                      c.c,
+                      d({ className: "recharts-polar-angle-axis-line" }, l, {
                         cx: t,
                         cy: r,
-                        r: n,
+                        r: i,
                       }),
                     );
                   var u = this.props.ticks.map(function (e) {
-                    return (0, d.op)(t, r, n, e.coordinate);
+                    return (0, f.IZ)(t, r, i, e.coordinate);
                   });
-                  return i.createElement(
-                    c.m,
-                    b({ className: "recharts-polar-angle-axis-line" }, l, {
+                  return n.createElement(
+                    s.t,
+                    d({ className: "recharts-polar-angle-axis-line" }, l, {
                       points: u,
                     }),
                   );
@@ -1103,54 +1103,54 @@
                   var e = this,
                     t = this.props,
                     r = t.ticks,
-                    n = t.tick,
-                    a = t.tickLine,
-                    o = t.tickFormatter,
-                    c = t.stroke,
-                    l = (0, m.L6)(this.props),
-                    d = (0, m.L6)(n),
-                    y = p(p({}, l), {}, { fill: "none" }, (0, m.L6)(a)),
-                    B = r.map(function (t, r) {
-                      var m = e.getTickLineCoord(t),
-                        B = p(
-                          p(
-                            p({ textAnchor: e.getTickTextAnchor(t) }, l),
+                    i = t.tick,
+                    o = t.tickLine,
+                    c = t.tickFormatter,
+                    s = t.stroke,
+                    l = (0, p.J9)(this.props),
+                    f = (0, p.J9)(i),
+                    y = v(v({}, l), {}, { fill: "none" }, (0, p.J9)(o)),
+                    h = r.map(function (t, r) {
+                      var p = e.getTickLineCoord(t),
+                        h = v(
+                          v(
+                            v({ textAnchor: e.getTickTextAnchor(t) }, l),
                             {},
-                            { stroke: "none", fill: c },
-                            d,
+                            { stroke: "none", fill: s },
+                            f,
                           ),
                           {},
-                          { index: r, payload: t, x: m.x2, y: m.y2 },
+                          { index: r, payload: t, x: p.x2, y: p.y2 },
                         );
-                      return i.createElement(
-                        s.m,
-                        b(
+                      return n.createElement(
+                        a.W,
+                        d(
                           {
                             className: "recharts-polar-angle-axis-tick",
                             key: "tick-".concat(t.coordinate),
                           },
-                          (0, u.bw)(e.props, t, r),
+                          (0, u.XC)(e.props, t, r),
                         ),
-                        a &&
-                          i.createElement(
+                        o &&
+                          n.createElement(
                             "line",
-                            b(
+                            d(
                               {
                                 className:
                                   "recharts-polar-angle-axis-tick-line",
                               },
                               y,
-                              m,
+                              p,
                             ),
                           ),
-                        n &&
-                          f.renderTickItem(n, B, o ? o(t.value, r) : t.value),
+                        i &&
+                          m.renderTickItem(i, h, c ? c(t.value, r) : t.value),
                       );
                     });
-                  return i.createElement(
-                    s.m,
+                  return n.createElement(
+                    a.W,
                     { className: "recharts-polar-angle-axis-ticks" },
-                    B,
+                    h,
                   );
                 },
               },
@@ -1160,26 +1160,26 @@
                   var e = this.props,
                     t = e.ticks,
                     r = e.radius,
-                    n = e.axisLine;
+                    i = e.axisLine;
                   return r <= 0 || !t || !t.length
                     ? null
-                    : i.createElement(
-                        s.m,
+                    : n.createElement(
+                        a.W,
                         { className: "recharts-polar-angle-axis" },
-                        n && this.renderAxisLine(),
+                        i && this.renderAxisLine(),
                         this.renderTicks(),
                       );
                 },
               },
-            ]) && B(t.prototype, r),
-            n && B(t, n),
+            ]) && h(t.prototype, r),
+            i && h(t, i),
             Object.defineProperty(t, "prototype", { writable: !1 }),
-            f
+            m
           );
-        })(i.PureComponent);
-      _(M, "displayName", "PolarAngleAxis"),
-        _(M, "axisType", "angleAxis"),
-        _(M, "defaultProps", {
+        })(n.PureComponent);
+      A(k, "displayName", "PolarAngleAxis"),
+        A(k, "axisType", "angleAxis"),
+        A(k, "defaultProps", {
           type: "category",
           angleAxisId: 0,
           scale: "auto",
@@ -1194,13 +1194,13 @@
           allowDuplicatedCategory: !0,
         });
     },
-    1039: (e, t, r) => {
+    19693: (e, t, r) => {
       "use strict";
-      r.d(t, { n: () => g });
-      var i = r(47427),
-        n = r(53460),
-        a = r(94797),
-        s = [
+      r.d(t, { z: () => b });
+      var n = r(90626),
+        i = r(50322),
+        o = r(50247),
+        a = [
           "cx",
           "cy",
           "innerRadius",
@@ -1208,9 +1208,9 @@
           "gridType",
           "radialLines",
         ];
-      function o(e) {
+      function c(e) {
         return (
-          (o =
+          (c =
             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
@@ -1223,32 +1223,32 @@
                     ? "symbol"
                     : typeof e;
                 }),
-          o(e)
+          c(e)
         );
       }
-      function c(e, t) {
+      function s(e, t) {
         if (null == e) return {};
         var r,
-          i,
-          n = (function (e, t) {
+          n,
+          i = (function (e, t) {
             if (null == e) return {};
             var r,
-              i,
-              n = {},
-              a = Object.keys(e);
-            for (i = 0; i < a.length; i++)
-              (r = a[i]), t.indexOf(r) >= 0 || (n[r] = e[r]);
-            return n;
+              n,
+              i = {},
+              o = Object.keys(e);
+            for (n = 0; n < o.length; n++)
+              (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+            return i;
           })(e, t);
         if (Object.getOwnPropertySymbols) {
-          var a = Object.getOwnPropertySymbols(e);
-          for (i = 0; i < a.length; i++)
-            (r = a[i]),
+          var o = Object.getOwnPropertySymbols(e);
+          for (n = 0; n < o.length; n++)
+            (r = o[n]),
               t.indexOf(r) >= 0 ||
                 (Object.prototype.propertyIsEnumerable.call(e, r) &&
-                  (n[r] = e[r]));
+                  (i[r] = e[r]));
         }
-        return n;
+        return i;
       }
       function l() {
         return (
@@ -1257,8 +1257,8 @@
             : function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                   var r = arguments[t];
-                  for (var i in r)
-                    Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
+                  for (var n in r)
+                    Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n]);
                 }
                 return e;
               }),
@@ -1268,21 +1268,21 @@
       function u(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var i = Object.getOwnPropertySymbols(e);
+          var n = Object.getOwnPropertySymbols(e);
           t &&
-            (i = i.filter(function (t) {
+            (n = n.filter(function (t) {
               return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            r.push.apply(r, i);
+            r.push.apply(r, n);
         }
         return r;
       }
-      function m(e) {
+      function p(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
             ? u(Object(r), !0).forEach(function (t) {
-                d(e, t, r[t]);
+                f(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -1296,22 +1296,22 @@
         }
         return e;
       }
-      function d(e, t, r) {
+      function f(e, t, r) {
         return (
           (t = (function (e) {
             var t = (function (e, t) {
-              if ("object" !== o(e) || null === e) return e;
+              if ("object" !== c(e) || null === e) return e;
               var r = e[Symbol.toPrimitive];
               if (void 0 !== r) {
-                var i = r.call(e, t || "default");
-                if ("object" !== o(i)) return i;
+                var n = r.call(e, t || "default");
+                if ("object" !== c(n)) return n;
                 throw new TypeError(
                   "@@toPrimitive must return a primitive value.",
                 );
               }
               return ("string" === t ? String : Number)(e);
             })(e, "string");
-            return "symbol" === o(t) ? t : String(t);
+            return "symbol" === c(t) ? t : String(t);
           })(t)) in e
             ? Object.defineProperty(e, t, {
                 value: r,
@@ -1323,170 +1323,170 @@
           e
         );
       }
-      var y = function (e, t, r, i) {
-          var a = "";
+      var y = function (e, t, r, n) {
+          var o = "";
           return (
-            i.forEach(function (i, s) {
-              var o = (0, n.op)(t, r, e, i);
-              a += s
-                ? "L ".concat(o.x, ",").concat(o.y)
-                : "M ".concat(o.x, ",").concat(o.y);
+            n.forEach(function (n, a) {
+              var c = (0, i.IZ)(t, r, e, n);
+              o += a
+                ? "L ".concat(c.x, ",").concat(c.y)
+                : "M ".concat(c.x, ",").concat(c.y);
             }),
-            (a += "Z")
+            (o += "Z")
           );
         },
-        b = function (e) {
+        d = function (e) {
           var t = e.cx,
             r = e.cy,
-            s = e.innerRadius,
-            o = e.outerRadius,
-            c = e.polarAngles,
+            a = e.innerRadius,
+            c = e.outerRadius,
+            s = e.polarAngles,
             u = e.radialLines;
-          if (!c || !c.length || !u) return null;
-          var d = m({ stroke: "#ccc" }, (0, a.L6)(e));
-          return i.createElement(
+          if (!s || !s.length || !u) return null;
+          var f = p({ stroke: "#ccc" }, (0, o.J9)(e));
+          return n.createElement(
             "g",
             { className: "recharts-polar-grid-angle" },
-            c.map(function (e) {
-              var a = (0, n.op)(t, r, s, e),
-                c = (0, n.op)(t, r, o, e);
-              return i.createElement(
+            s.map(function (e) {
+              var o = (0, i.IZ)(t, r, a, e),
+                s = (0, i.IZ)(t, r, c, e);
+              return n.createElement(
                 "line",
-                l({}, d, {
+                l({}, f, {
                   key: "line-".concat(e),
-                  x1: a.x,
-                  y1: a.y,
-                  x2: c.x,
-                  y2: c.y,
+                  x1: o.x,
+                  y1: o.y,
+                  x2: s.x,
+                  y2: s.y,
                 }),
               );
             }),
           );
         },
-        f = function (e) {
+        m = function (e) {
           var t = e.cx,
             r = e.cy,
-            n = e.radius,
-            s = e.index,
-            o = m(m({ stroke: "#ccc" }, (0, a.L6)(e)), {}, { fill: "none" });
-          return i.createElement(
+            i = e.radius,
+            a = e.index,
+            c = p(p({ stroke: "#ccc" }, (0, o.J9)(e)), {}, { fill: "none" });
+          return n.createElement(
             "circle",
-            l({}, o, {
+            l({}, c, {
               className: "recharts-polar-grid-concentric-circle",
-              key: "circle-".concat(s),
+              key: "circle-".concat(a),
               cx: t,
               cy: r,
-              r: n,
+              r: i,
             }),
           );
         },
-        p = function (e) {
+        v = function (e) {
           var t = e.radius,
             r = e.index,
-            n = m(m({ stroke: "#ccc" }, (0, a.L6)(e)), {}, { fill: "none" });
-          return i.createElement(
+            i = p(p({ stroke: "#ccc" }, (0, o.J9)(e)), {}, { fill: "none" });
+          return n.createElement(
             "path",
-            l({}, n, {
+            l({}, i, {
               className: "recharts-polar-grid-concentric-polygon",
               key: "path-".concat(r),
               d: y(t, e.cx, e.cy, e.polarAngles),
             }),
           );
         },
-        B = function (e) {
+        h = function (e) {
           var t = e.polarRadius,
             r = e.gridType;
           return t && t.length
-            ? i.createElement(
+            ? n.createElement(
                 "g",
                 { className: "recharts-polar-grid-concentric" },
-                t.map(function (t, n) {
-                  var a = n;
+                t.map(function (t, i) {
+                  var o = i;
                   return "circle" === r
-                    ? i.createElement(
-                        f,
-                        l({ key: a }, e, { radius: t, index: n }),
+                    ? n.createElement(
+                        m,
+                        l({ key: o }, e, { radius: t, index: i }),
                       )
-                    : i.createElement(
-                        p,
-                        l({ key: a }, e, { radius: t, index: n }),
+                    : n.createElement(
+                        v,
+                        l({ key: o }, e, { radius: t, index: i }),
                       );
                 }),
               )
             : null;
         },
-        g = function (e) {
+        b = function (e) {
           var t = e.cx,
             r = void 0 === t ? 0 : t,
-            n = e.cy,
-            a = void 0 === n ? 0 : n,
-            o = e.innerRadius,
-            u = void 0 === o ? 0 : o,
-            m = e.outerRadius,
-            d = void 0 === m ? 0 : m,
+            i = e.cy,
+            o = void 0 === i ? 0 : i,
+            c = e.innerRadius,
+            u = void 0 === c ? 0 : c,
+            p = e.outerRadius,
+            f = void 0 === p ? 0 : p,
             y = e.gridType,
-            f = void 0 === y ? "polygon" : y,
-            p = e.radialLines,
-            g = void 0 === p || p,
-            w = c(e, s);
-          return d <= 0
+            m = void 0 === y ? "polygon" : y,
+            v = e.radialLines,
+            b = void 0 === v || v,
+            g = s(e, a);
+          return f <= 0
             ? null
-            : i.createElement(
+            : n.createElement(
                 "g",
                 { className: "recharts-polar-grid" },
-                i.createElement(
-                  b,
+                n.createElement(
+                  d,
                   l(
                     {
                       cx: r,
-                      cy: a,
+                      cy: o,
                       innerRadius: u,
-                      outerRadius: d,
-                      gridType: f,
-                      radialLines: g,
+                      outerRadius: f,
+                      gridType: m,
+                      radialLines: b,
                     },
-                    w,
+                    g,
                   ),
                 ),
-                i.createElement(
-                  B,
+                n.createElement(
+                  h,
                   l(
                     {
                       cx: r,
-                      cy: a,
+                      cy: o,
                       innerRadius: u,
-                      outerRadius: d,
-                      gridType: f,
-                      radialLines: g,
+                      outerRadius: f,
+                      gridType: m,
+                      radialLines: b,
                     },
-                    w,
+                    g,
                   ),
                 ),
               );
         };
-      g.displayName = "PolarGrid";
+      b.displayName = "PolarGrid";
     },
-    63501: (e, t, r) => {
+    66490: (e, t, r) => {
       "use strict";
-      r.d(t, { S: () => j });
-      var i = r(47427),
-        n = r(55353),
-        a = r.n(n),
-        s = r(74310),
-        o = r.n(s),
-        c = r(8889),
-        l = r.n(c),
-        u = r(93998),
-        m = r(47094),
-        d = r(47430),
-        y = r(53460),
-        b = r(81156),
-        f = r(94797),
-        p = ["cx", "cy", "angle", "ticks", "axisLine"],
-        B = ["ticks", "tick", "angle", "tickFormatter", "stroke"];
-      function g(e) {
+      r.d(t, { E: () => R });
+      var n = r(90626),
+        i = r(42529),
+        o = r.n(i),
+        a = r(11027),
+        c = r.n(a),
+        s = r(3316),
+        l = r.n(s),
+        u = r(9675),
+        p = r(39864),
+        f = r(49891),
+        y = r(50322),
+        d = r(62426),
+        m = r(50247),
+        v = ["cx", "cy", "angle", "ticks", "axisLine"],
+        h = ["ticks", "tick", "angle", "tickFormatter", "stroke"];
+      function b(e) {
         return (
-          (g =
+          (b =
             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
@@ -1499,46 +1499,46 @@
                     ? "symbol"
                     : typeof e;
                 }),
-          g(e)
+          b(e)
         );
       }
-      function w() {
+      function g() {
         return (
-          (w = Object.assign
+          (g = Object.assign
             ? Object.assign.bind()
             : function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                   var r = arguments[t];
-                  for (var i in r)
-                    Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
+                  for (var n in r)
+                    Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n]);
                 }
                 return e;
               }),
-          w.apply(this, arguments)
+          g.apply(this, arguments)
         );
       }
-      function h(e, t) {
+      function O(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var i = Object.getOwnPropertySymbols(e);
+          var n = Object.getOwnPropertySymbols(e);
           t &&
-            (i = i.filter(function (t) {
+            (n = n.filter(function (t) {
               return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            r.push.apply(r, i);
+            r.push.apply(r, n);
         }
         return r;
       }
-      function _(e) {
+      function A(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? h(Object(r), !0).forEach(function (t) {
-                S(e, t, r[t]);
+            ? O(Object(r), !0).forEach(function (t) {
+                w(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : h(Object(r)).forEach(function (t) {
+              : O(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -1548,50 +1548,50 @@
         }
         return e;
       }
-      function v(e, t) {
+      function x(e, t) {
         if (null == e) return {};
         var r,
-          i,
-          n = (function (e, t) {
+          n,
+          i = (function (e, t) {
             if (null == e) return {};
             var r,
-              i,
-              n = {},
-              a = Object.keys(e);
-            for (i = 0; i < a.length; i++)
-              (r = a[i]), t.indexOf(r) >= 0 || (n[r] = e[r]);
-            return n;
+              n,
+              i = {},
+              o = Object.keys(e);
+            for (n = 0; n < o.length; n++)
+              (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+            return i;
           })(e, t);
         if (Object.getOwnPropertySymbols) {
-          var a = Object.getOwnPropertySymbols(e);
-          for (i = 0; i < a.length; i++)
-            (r = a[i]),
+          var o = Object.getOwnPropertySymbols(e);
+          for (n = 0; n < o.length; n++)
+            (r = o[n]),
               t.indexOf(r) >= 0 ||
                 (Object.prototype.propertyIsEnumerable.call(e, r) &&
-                  (n[r] = e[r]));
+                  (i[r] = e[r]));
         }
-        return n;
+        return i;
       }
-      function F(e, t) {
+      function j(e, t) {
         for (var r = 0; r < t.length; r++) {
-          var i = t[r];
-          (i.enumerable = i.enumerable || !1),
-            (i.configurable = !0),
-            "value" in i && (i.writable = !0),
-            Object.defineProperty(e, O(i.key), i);
+          var n = t[r];
+          (n.enumerable = n.enumerable || !1),
+            (n.configurable = !0),
+            "value" in n && (n.writable = !0),
+            Object.defineProperty(e, S(n.key), n);
         }
       }
-      function z(e, t) {
+      function P(e, t) {
         return (
-          (z = Object.setPrototypeOf
+          (P = Object.setPrototypeOf
             ? Object.setPrototypeOf.bind()
             : function (e, t) {
                 return (e.__proto__ = t), e;
               }),
-          z(e, t)
+          P(e, t)
         );
       }
-      function M(e) {
+      function k(e) {
         var t = (function () {
           if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
           if (Reflect.construct.sham) return !1;
@@ -1609,13 +1609,13 @@
         })();
         return function () {
           var r,
-            i = R(e);
+            n = E(e);
           if (t) {
-            var n = R(this).constructor;
-            r = Reflect.construct(i, arguments, n);
-          } else r = i.apply(this, arguments);
+            var i = E(this).constructor;
+            r = Reflect.construct(n, arguments, i);
+          } else r = n.apply(this, arguments);
           return (function (e, t) {
-            if (t && ("object" === g(t) || "function" == typeof t)) return t;
+            if (t && ("object" === b(t) || "function" == typeof t)) return t;
             if (void 0 !== t)
               throw new TypeError(
                 "Derived constructors may only return object or undefined",
@@ -1630,19 +1630,19 @@
           })(this, r);
         };
       }
-      function R(e) {
+      function E(e) {
         return (
-          (R = Object.setPrototypeOf
+          (E = Object.setPrototypeOf
             ? Object.getPrototypeOf.bind()
             : function (e) {
                 return e.__proto__ || Object.getPrototypeOf(e);
               }),
-          R(e)
+          E(e)
         );
       }
-      function S(e, t, r) {
+      function w(e, t, r) {
         return (
-          (t = O(t)) in e
+          (t = S(t)) in e
             ? Object.defineProperty(e, t, {
                 value: r,
                 enumerable: !0,
@@ -1653,20 +1653,20 @@
           e
         );
       }
-      function O(e) {
+      function S(e) {
         var t = (function (e, t) {
-          if ("object" !== g(e) || null === e) return e;
+          if ("object" !== b(e) || null === e) return e;
           var r = e[Symbol.toPrimitive];
           if (void 0 !== r) {
-            var i = r.call(e, t || "default");
-            if ("object" !== g(i)) return i;
+            var n = r.call(e, t || "default");
+            if ("object" !== b(n)) return n;
             throw new TypeError("@@toPrimitive must return a primitive value.");
           }
           return ("string" === t ? String : Number)(e);
         })(e, "string");
-        return "symbol" === g(t) ? t : String(t);
+        return "symbol" === b(t) ? t : String(t);
       }
-      var j = (function (e) {
+      var R = (function (e) {
         !(function (e, t) {
           if ("function" != typeof t && null !== t)
             throw new TypeError(
@@ -1676,34 +1676,34 @@
             constructor: { value: e, writable: !0, configurable: !0 },
           })),
             Object.defineProperty(e, "prototype", { writable: !1 }),
-            t && z(e, t);
-        })(c, e);
+            t && P(e, t);
+        })(s, e);
         var t,
           r,
-          n,
-          s = M(c);
-        function c() {
+          i,
+          a = k(s);
+        function s() {
           return (
             (function (e, t) {
               if (!(e instanceof t))
                 throw new TypeError("Cannot call a class as a function");
-            })(this, c),
-            s.apply(this, arguments)
+            })(this, s),
+            a.apply(this, arguments)
           );
         }
         return (
-          (t = c),
-          (n = [
+          (t = s),
+          (i = [
             {
               key: "renderTickItem",
               value: function (e, t, r) {
-                return i.isValidElement(e)
-                  ? i.cloneElement(e, t)
+                return n.isValidElement(e)
+                  ? n.cloneElement(e, t)
                   : l()(e)
                     ? e(t)
-                    : i.createElement(
-                        u.x,
-                        w({}, t, {
+                    : n.createElement(
+                        u.E,
+                        g({}, t, {
                           className: "recharts-polar-radius-axis-tick-value",
                         }),
                         r,
@@ -1717,10 +1717,10 @@
               value: function (e) {
                 var t = e.coordinate,
                   r = this.props,
-                  i = r.angle,
-                  n = r.cx,
-                  a = r.cy;
-                return (0, y.op)(n, a, t, i);
+                  n = r.angle,
+                  i = r.cx,
+                  o = r.cy;
+                return (0, y.IZ)(i, o, t, n);
               },
             },
             {
@@ -1746,21 +1746,21 @@
                 var e = this.props,
                   t = e.cx,
                   r = e.cy,
-                  i = e.angle,
-                  n = e.ticks,
-                  s = a()(n, function (e) {
+                  n = e.angle,
+                  i = e.ticks,
+                  a = o()(i, function (e) {
                     return e.coordinate || 0;
                   });
                 return {
                   cx: t,
                   cy: r,
-                  startAngle: i,
-                  endAngle: i,
+                  startAngle: n,
+                  endAngle: n,
                   innerRadius:
-                    o()(n, function (e) {
+                    c()(i, function (e) {
                       return e.coordinate || 0;
                     }).coordinate || 0,
-                  outerRadius: s.coordinate || 0,
+                  outerRadius: a.coordinate || 0,
                 };
               },
             },
@@ -1770,11 +1770,11 @@
                 var e = this.props,
                   t = e.cx,
                   r = e.cy,
-                  n = e.angle,
-                  a = e.ticks,
-                  s = e.axisLine,
-                  o = v(e, p),
-                  c = a.reduce(
+                  i = e.angle,
+                  o = e.ticks,
+                  a = e.axisLine,
+                  c = x(e, v),
+                  s = o.reduce(
                     function (e, t) {
                       return [
                         Math.min(e[0], t.coordinate),
@@ -1783,16 +1783,16 @@
                     },
                     [1 / 0, -1 / 0],
                   ),
-                  l = (0, y.op)(t, r, c[0], n),
-                  u = (0, y.op)(t, r, c[1], n),
-                  m = _(
-                    _(_({}, (0, f.L6)(o)), {}, { fill: "none" }, (0, f.L6)(s)),
+                  l = (0, y.IZ)(t, r, s[0], i),
+                  u = (0, y.IZ)(t, r, s[1], i),
+                  p = A(
+                    A(A({}, (0, m.J9)(c)), {}, { fill: "none" }, (0, m.J9)(a)),
                     {},
                     { x1: l.x, y1: l.y, x2: u.x, y2: u.y },
                   );
-                return i.createElement(
+                return n.createElement(
                   "line",
-                  w({ className: "recharts-polar-radius-axis-line" }, m),
+                  g({ className: "recharts-polar-radius-axis-line" }, p),
                 );
               },
             },
@@ -1802,31 +1802,31 @@
                 var e = this,
                   t = this.props,
                   r = t.ticks,
-                  n = t.tick,
-                  a = t.angle,
-                  s = t.tickFormatter,
-                  o = t.stroke,
-                  l = v(t, B),
+                  i = t.tick,
+                  o = t.angle,
+                  a = t.tickFormatter,
+                  c = t.stroke,
+                  l = x(t, h),
                   u = this.getTickTextAnchor(),
-                  m = (0, f.L6)(l),
-                  y = (0, f.L6)(n),
-                  p = r.map(function (t, r) {
+                  p = (0, m.J9)(l),
+                  y = (0, m.J9)(i),
+                  v = r.map(function (t, r) {
                     var l = e.getTickValueCoord(t),
-                      f = _(
-                        _(
-                          _(
-                            _(
+                      m = A(
+                        A(
+                          A(
+                            A(
                               {
                                 textAnchor: u,
                                 transform: "rotate("
-                                  .concat(90 - a, ", ")
+                                  .concat(90 - o, ", ")
                                   .concat(l.x, ", ")
                                   .concat(l.y, ")"),
                               },
-                              m,
+                              p,
                             ),
                             {},
-                            { stroke: "none", fill: o },
+                            { stroke: "none", fill: c },
                             y,
                           ),
                           {},
@@ -1836,22 +1836,22 @@
                         {},
                         { payload: t },
                       );
-                    return i.createElement(
-                      d.m,
-                      w(
+                    return n.createElement(
+                      f.W,
+                      g(
                         {
                           className: "recharts-polar-radius-axis-tick",
                           key: "tick-".concat(t.coordinate),
                         },
-                        (0, b.bw)(e.props, t, r),
+                        (0, d.XC)(e.props, t, r),
                       ),
-                      c.renderTickItem(n, f, s ? s(t.value, r) : t.value),
+                      s.renderTickItem(i, m, a ? a(t.value, r) : t.value),
                     );
                   });
-                return i.createElement(
-                  d.m,
+                return n.createElement(
+                  f.W,
                   { className: "recharts-polar-radius-axis-ticks" },
-                  p,
+                  v,
                 );
               },
             },
@@ -1861,27 +1861,27 @@
                 var e = this.props,
                   t = e.ticks,
                   r = e.axisLine,
-                  n = e.tick;
+                  i = e.tick;
                 return t && t.length
-                  ? i.createElement(
-                      d.m,
+                  ? n.createElement(
+                      f.W,
                       { className: "recharts-polar-radius-axis" },
                       r && this.renderAxisLine(),
-                      n && this.renderTicks(),
-                      m._.renderCallByParent(this.props, this.getViewBox()),
+                      i && this.renderTicks(),
+                      p.J.renderCallByParent(this.props, this.getViewBox()),
                     )
                   : null;
               },
             },
-          ]) && F(t.prototype, r),
-          n && F(t, n),
+          ]) && j(t.prototype, r),
+          i && j(t, i),
           Object.defineProperty(t, "prototype", { writable: !1 }),
-          c
+          s
         );
-      })(i.PureComponent);
-      S(j, "displayName", "PolarRadiusAxis"),
-        S(j, "axisType", "radiusAxis"),
-        S(j, "defaultProps", {
+      })(n.PureComponent);
+      w(R, "displayName", "PolarRadiusAxis"),
+        w(R, "axisType", "radiusAxis"),
+        w(R, "defaultProps", {
           type: "number",
           radiusAxisId: 0,
           cx: 0,
@@ -1897,34 +1897,34 @@
           allowDuplicatedCategory: !0,
         });
     },
-    50524: (e, t, r) => {
+    70365: (e, t, r) => {
       "use strict";
-      r.d(t, { F: () => P });
-      var i = r(47427),
-        n = r(15819),
-        a = r(38716),
-        s = r.n(a),
-        o = r(54794),
-        c = r.n(o),
-        l = r(71923),
+      r.d(t, { V: () => F });
+      var n = r(90626),
+        i = r(85882),
+        o = r(64609),
+        a = r.n(o),
+        c = r(73912),
+        s = r.n(c),
+        l = r(90540),
         u = r.n(l),
-        m = r(49198),
-        d = r.n(m),
-        y = r(8889),
-        b = r.n(y),
-        f = r(84148),
-        p = r(76325),
-        B = r(77125),
-        g = r(53460),
-        w = r(70416),
-        h = r(89291),
-        _ = r(14166),
-        v = r(47430),
-        F = r(72961),
-        z = r(94797);
-      function M(e) {
+        p = r(58782),
+        f = r.n(p),
+        y = r(3316),
+        d = r.n(y),
+        m = r(90018),
+        v = r(91038),
+        h = r(1036),
+        b = r(50322),
+        g = r(89998),
+        O = r(82422),
+        A = r(17891),
+        x = r(49891),
+        j = r(94816),
+        P = r(50247);
+      function k(e) {
         return (
-          (M =
+          (k =
             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
@@ -1937,46 +1937,46 @@
                     ? "symbol"
                     : typeof e;
                 }),
-          M(e)
+          k(e)
         );
       }
-      function R() {
+      function E() {
         return (
-          (R = Object.assign
+          (E = Object.assign
             ? Object.assign.bind()
             : function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                   var r = arguments[t];
-                  for (var i in r)
-                    Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
+                  for (var n in r)
+                    Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n]);
                 }
                 return e;
               }),
-          R.apply(this, arguments)
+          E.apply(this, arguments)
         );
       }
-      function S(e, t) {
+      function w(e, t) {
         var r = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-          var i = Object.getOwnPropertySymbols(e);
+          var n = Object.getOwnPropertySymbols(e);
           t &&
-            (i = i.filter(function (t) {
+            (n = n.filter(function (t) {
               return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            r.push.apply(r, i);
+            r.push.apply(r, n);
         }
         return r;
       }
-      function O(e) {
+      function S(e) {
         for (var t = 1; t < arguments.length; t++) {
           var r = null != arguments[t] ? arguments[t] : {};
           t % 2
-            ? S(Object(r), !0).forEach(function (t) {
-                W(e, t, r[t]);
+            ? w(Object(r), !0).forEach(function (t) {
+                L(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : S(Object(r)).forEach(function (t) {
+              : w(Object(r)).forEach(function (t) {
                   Object.defineProperty(
                     e,
                     t,
@@ -1986,26 +1986,26 @@
         }
         return e;
       }
-      function j(e, t) {
+      function R(e, t) {
         for (var r = 0; r < t.length; r++) {
-          var i = t[r];
-          (i.enumerable = i.enumerable || !1),
-            (i.configurable = !0),
-            "value" in i && (i.writable = !0),
-            Object.defineProperty(e, A(i.key), i);
+          var n = t[r];
+          (n.enumerable = n.enumerable || !1),
+            (n.configurable = !0),
+            "value" in n && (n.writable = !0),
+            Object.defineProperty(e, C(n.key), n);
         }
       }
-      function E(e, t) {
+      function T(e, t) {
         return (
-          (E = Object.setPrototypeOf
+          (T = Object.setPrototypeOf
             ? Object.setPrototypeOf.bind()
             : function (e, t) {
                 return (e.__proto__ = t), e;
               }),
-          E(e, t)
+          T(e, t)
         );
       }
-      function U(e) {
+      function I(e) {
         var t = (function () {
           if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
           if (Reflect.construct.sham) return !1;
@@ -2023,41 +2023,41 @@
         })();
         return function () {
           var r,
-            i = x(e);
+            n = N(e);
           if (t) {
-            var n = x(this).constructor;
-            r = Reflect.construct(i, arguments, n);
-          } else r = i.apply(this, arguments);
+            var i = N(this).constructor;
+            r = Reflect.construct(n, arguments, i);
+          } else r = n.apply(this, arguments);
           return (function (e, t) {
-            if (t && ("object" === M(t) || "function" == typeof t)) return t;
+            if (t && ("object" === k(t) || "function" == typeof t)) return t;
             if (void 0 !== t)
               throw new TypeError(
                 "Derived constructors may only return object or undefined",
               );
-            return T(e);
+            return D(e);
           })(this, r);
         };
       }
-      function T(e) {
+      function D(e) {
         if (void 0 === e)
           throw new ReferenceError(
             "this hasn't been initialised - super() hasn't been called",
           );
         return e;
       }
-      function x(e) {
+      function N(e) {
         return (
-          (x = Object.setPrototypeOf
+          (N = Object.setPrototypeOf
             ? Object.getPrototypeOf.bind()
             : function (e) {
                 return e.__proto__ || Object.getPrototypeOf(e);
               }),
-          x(e)
+          N(e)
         );
       }
-      function W(e, t, r) {
+      function L(e, t, r) {
         return (
-          (t = A(t)) in e
+          (t = C(t)) in e
             ? Object.defineProperty(e, t, {
                 value: r,
                 enumerable: !0,
@@ -2068,20 +2068,20 @@
           e
         );
       }
-      function A(e) {
+      function C(e) {
         var t = (function (e, t) {
-          if ("object" !== M(e) || null === e) return e;
+          if ("object" !== k(e) || null === e) return e;
           var r = e[Symbol.toPrimitive];
           if (void 0 !== r) {
-            var i = r.call(e, t || "default");
-            if ("object" !== M(i)) return i;
+            var n = r.call(e, t || "default");
+            if ("object" !== k(n)) return n;
             throw new TypeError("@@toPrimitive must return a primitive value.");
           }
           return ("string" === t ? String : Number)(e);
         })(e, "string");
-        return "symbol" === M(t) ? t : String(t);
+        return "symbol" === k(t) ? t : String(t);
       }
-      var P = (function (e) {
+      var F = (function (e) {
         !(function (e, t) {
           if ("function" != typeof t && null !== t)
             throw new TypeError(
@@ -2091,37 +2091,37 @@
             constructor: { value: e, writable: !0, configurable: !0 },
           })),
             Object.defineProperty(e, "prototype", { writable: !1 }),
-            t && E(e, t);
-        })(o, e);
+            t && T(e, t);
+        })(c, e);
         var t,
           r,
-          a,
-          s = U(o);
-        function o() {
+          o,
+          a = I(c);
+        function c() {
           var e;
           !(function (e, t) {
             if (!(e instanceof t))
               throw new TypeError("Cannot call a class as a function");
-          })(this, o);
-          for (var t = arguments.length, r = new Array(t), i = 0; i < t; i++)
-            r[i] = arguments[i];
+          })(this, c);
+          for (var t = arguments.length, r = new Array(t), n = 0; n < t; n++)
+            r[n] = arguments[n];
           return (
-            W(T((e = s.call.apply(s, [this].concat(r)))), "state", {
+            L(D((e = a.call.apply(a, [this].concat(r)))), "state", {
               isAnimationFinished: !1,
             }),
-            W(T(e), "handleAnimationEnd", function () {
+            L(D(e), "handleAnimationEnd", function () {
               var t = e.props.onAnimationEnd;
-              e.setState({ isAnimationFinished: !0 }), b()(t) && t();
+              e.setState({ isAnimationFinished: !0 }), d()(t) && t();
             }),
-            W(T(e), "handleAnimationStart", function () {
+            L(D(e), "handleAnimationStart", function () {
               var t = e.props.onAnimationStart;
-              e.setState({ isAnimationFinished: !1 }), b()(t) && t();
+              e.setState({ isAnimationFinished: !1 }), d()(t) && t();
             }),
-            W(T(e), "handleMouseEnter", function (t) {
+            L(D(e), "handleMouseEnter", function (t) {
               var r = e.props.onMouseEnter;
               r && r(e.props, t);
             }),
-            W(T(e), "handleMouseLeave", function (t) {
+            L(D(e), "handleMouseLeave", function (t) {
               var r = e.props.onMouseLeave;
               r && r(e.props, t);
             }),
@@ -2129,8 +2129,8 @@
           );
         }
         return (
-          (t = o),
-          (a = [
+          (t = c),
+          (o = [
             {
               key: "getDerivedStateFromProps",
               value: function (e, t) {
@@ -2148,13 +2148,13 @@
             {
               key: "renderDotItem",
               value: function (e, t) {
-                return i.isValidElement(e)
-                  ? i.cloneElement(e, t)
-                  : b()(e)
+                return n.isValidElement(e)
+                  ? n.cloneElement(e, t)
+                  : d()(e)
                     ? e(t)
-                    : i.createElement(
-                        _.o,
-                        R({}, t, { className: "recharts-radar-dot" }),
+                    : n.createElement(
+                        A.c,
+                        E({}, t, { className: "recharts-radar-dot" }),
                       );
               },
             },
@@ -2165,21 +2165,21 @@
               value: function (e) {
                 var t = this.props,
                   r = t.dot,
-                  n = t.dataKey,
-                  a = (0, z.L6)(this.props),
-                  s = (0, z.L6)(r),
-                  c = e.map(function (e, t) {
-                    var i = O(
-                      O(O({ key: "dot-".concat(t), r: 3 }, a), s),
+                  i = t.dataKey,
+                  o = (0, P.J9)(this.props),
+                  a = (0, P.J9)(r),
+                  s = e.map(function (e, t) {
+                    var n = S(
+                      S(S({ key: "dot-".concat(t), r: 3 }, o), a),
                       {},
-                      { dataKey: n, cx: e.x, cy: e.y, index: t, payload: e },
+                      { dataKey: i, cx: e.x, cy: e.y, index: t, payload: e },
                     );
-                    return o.renderDotItem(r, i);
+                    return c.renderDotItem(r, n);
                   });
-                return i.createElement(
-                  v.m,
+                return n.createElement(
+                  x.W,
                   { className: "recharts-radar-dots" },
-                  c,
+                  s,
                 );
               },
             },
@@ -2188,31 +2188,31 @@
               value: function (e) {
                 var t,
                   r = this.props,
-                  n = r.shape,
-                  a = r.dot,
-                  s = r.isRange,
-                  o = r.baseLinePoints,
-                  c = r.connectNulls;
+                  i = r.shape,
+                  o = r.dot,
+                  a = r.isRange,
+                  c = r.baseLinePoints,
+                  s = r.connectNulls;
                 return (
-                  (t = i.isValidElement(n)
-                    ? i.cloneElement(n, O(O({}, this.props), {}, { points: e }))
-                    : b()(n)
-                      ? n(O(O({}, this.props), {}, { points: e }))
-                      : i.createElement(
-                          h.m,
-                          R({}, (0, z.L6)(this.props, !0), {
+                  (t = n.isValidElement(i)
+                    ? n.cloneElement(i, S(S({}, this.props), {}, { points: e }))
+                    : d()(i)
+                      ? i(S(S({}, this.props), {}, { points: e }))
+                      : n.createElement(
+                          O.t,
+                          E({}, (0, P.J9)(this.props, !0), {
                             onMouseEnter: this.handleMouseEnter,
                             onMouseLeave: this.handleMouseLeave,
                             points: e,
-                            baseLinePoints: s ? o : null,
-                            connectNulls: c,
+                            baseLinePoints: a ? c : null,
+                            connectNulls: s,
                           }),
                         )),
-                  i.createElement(
-                    v.m,
+                  n.createElement(
+                    x.W,
                     { className: "recharts-radar-polygon" },
                     t,
-                    a ? this.renderDots(e) : null,
+                    o ? this.renderDots(e) : null,
                   )
                 );
               },
@@ -2223,19 +2223,19 @@
                 var e = this,
                   t = this.props,
                   r = t.points,
-                  a = t.isAnimationActive,
-                  s = t.animationBegin,
-                  o = t.animationDuration,
-                  c = t.animationEasing,
+                  o = t.isAnimationActive,
+                  a = t.animationBegin,
+                  c = t.animationDuration,
+                  s = t.animationEasing,
                   l = t.animationId,
                   u = this.state.prevPoints;
-                return i.createElement(
-                  n.ZP,
+                return n.createElement(
+                  i.Ay,
                   {
-                    begin: s,
-                    duration: o,
-                    isActive: a,
-                    easing: c,
+                    begin: a,
+                    duration: c,
+                    isActive: o,
+                    easing: s,
                     from: { t: 0 },
                     to: { t: 1 },
                     key: "radar-".concat(l),
@@ -2243,20 +2243,20 @@
                     onAnimationStart: this.handleAnimationStart,
                   },
                   function (t) {
-                    var i = t.t,
-                      n = u && u.length / r.length,
-                      a = r.map(function (e, t) {
-                        var r = u && u[Math.floor(t * n)];
+                    var n = t.t,
+                      i = u && u.length / r.length,
+                      o = r.map(function (e, t) {
+                        var r = u && u[Math.floor(t * i)];
                         if (r) {
-                          var a = (0, p.k4)(r.x, e.x),
-                            s = (0, p.k4)(r.y, e.y);
-                          return O(O({}, e), {}, { x: a(i), y: s(i) });
+                          var o = (0, v.Dj)(r.x, e.x),
+                            a = (0, v.Dj)(r.y, e.y);
+                          return S(S({}, e), {}, { x: o(n), y: a(n) });
                         }
-                        var o = (0, p.k4)(e.cx, e.x),
-                          c = (0, p.k4)(e.cy, e.y);
-                        return O(O({}, e), {}, { x: o(i), y: c(i) });
+                        var c = (0, v.Dj)(e.cx, e.x),
+                          s = (0, v.Dj)(e.cy, e.y);
+                        return S(S({}, e), {}, { x: c(n), y: s(n) });
                       });
-                    return e.renderPolygonStatically(a);
+                    return e.renderPolygonStatically(o);
                   },
                 );
               },
@@ -2267,9 +2267,9 @@
                 var e = this.props,
                   t = e.points,
                   r = e.isAnimationActive,
-                  i = e.isRange,
-                  n = this.state.prevPoints;
-                return !(r && t && t.length) || i || (n && d()(n, t))
+                  n = e.isRange,
+                  i = this.state.prevPoints;
+                return !(r && t && t.length) || n || (i && f()(i, t))
                   ? this.renderPolygonStatically(t)
                   : this.renderPolygonWithAnimation();
               },
@@ -2280,133 +2280,133 @@
                 var e = this.props,
                   t = e.hide,
                   r = e.className,
-                  n = e.points,
-                  a = e.isAnimationActive;
-                if (t || !n || !n.length) return null;
-                var s = this.state.isAnimationFinished,
-                  o = (0, f.Z)("recharts-radar", r);
-                return i.createElement(
-                  v.m,
-                  { className: o },
+                  i = e.points,
+                  o = e.isAnimationActive;
+                if (t || !i || !i.length) return null;
+                var a = this.state.isAnimationFinished,
+                  c = (0, m.A)("recharts-radar", r);
+                return n.createElement(
+                  x.W,
+                  { className: c },
                   this.renderPolygon(),
-                  (!a || s) && F.e.renderCallByParent(this.props, n),
+                  (!o || a) && j.Z.renderCallByParent(this.props, i),
                 );
               },
             },
-          ]) && j(t.prototype, r),
-          a && j(t, a),
+          ]) && R(t.prototype, r),
+          o && R(t, o),
           Object.defineProperty(t, "prototype", { writable: !1 }),
-          o
+          c
         );
-      })(i.PureComponent);
-      W(P, "displayName", "Radar"),
-        W(P, "defaultProps", {
+      })(n.PureComponent);
+      L(F, "displayName", "Radar"),
+        L(F, "defaultProps", {
           angleAxisId: 0,
           radiusAxisId: 0,
           hide: !1,
           activeDot: !0,
           dot: !1,
           legendType: "rect",
-          isAnimationActive: !B.x.isSsr,
+          isAnimationActive: !h.m.isSsr,
           animationBegin: 0,
           animationDuration: 1500,
           animationEasing: "ease",
         }),
-        W(P, "getComposedData", function (e) {
+        L(F, "getComposedData", function (e) {
           var t = e.radiusAxis,
             r = e.angleAxis,
-            i = e.displayedData,
-            n = e.dataKey,
-            a = e.bandSize,
-            o = r.cx,
+            n = e.displayedData,
+            i = e.dataKey,
+            o = e.bandSize,
+            c = r.cx,
             l = r.cy,
-            m = !1,
-            d = [],
-            y = "number" !== r.type && null != a ? a : 0;
-          i.forEach(function (e, i) {
-            var a = (0, w.F$)(e, r.dataKey, i),
-              u = (0, w.F$)(e, n),
-              b = r.scale(a) + y,
-              f = Array.isArray(u) ? c()(u) : u,
-              p = s()(f) ? void 0 : t.scale(f);
-            Array.isArray(u) && u.length >= 2 && (m = !0),
-              d.push(
-                O(
-                  O({}, (0, g.op)(o, l, p, b)),
+            p = !1,
+            f = [],
+            y = "number" !== r.type && null != o ? o : 0;
+          n.forEach(function (e, n) {
+            var o = (0, g.kr)(e, r.dataKey, n),
+              u = (0, g.kr)(e, i),
+              d = r.scale(o) + y,
+              m = Array.isArray(u) ? s()(u) : u,
+              v = a()(m) ? void 0 : t.scale(m);
+            Array.isArray(u) && u.length >= 2 && (p = !0),
+              f.push(
+                S(
+                  S({}, (0, b.IZ)(c, l, v, d)),
                   {},
                   {
-                    name: a,
+                    name: o,
                     value: u,
-                    cx: o,
+                    cx: c,
                     cy: l,
-                    radius: p,
-                    angle: b,
+                    radius: v,
+                    angle: d,
                     payload: e,
                   },
                 ),
               );
           });
-          var b = [];
+          var d = [];
           return (
-            m &&
-              d.forEach(function (e) {
+            p &&
+              f.forEach(function (e) {
                 if (Array.isArray(e.value)) {
                   var r = u()(e.value),
-                    i = s()(r) ? void 0 : t.scale(r);
-                  b.push(
-                    O(O({}, e), {}, { radius: i }, (0, g.op)(o, l, i, e.angle)),
+                    n = a()(r) ? void 0 : t.scale(r);
+                  d.push(
+                    S(S({}, e), {}, { radius: n }, (0, b.IZ)(c, l, n, e.angle)),
                   );
-                } else b.push(e);
+                } else d.push(e);
               }),
-            { points: d, isRange: m, baseLinePoints: b }
+            { points: f, isRange: p, baseLinePoints: d }
           );
         });
     },
-    89291: (e, t, r) => {
+    82422: (e, t, r) => {
       "use strict";
-      r.d(t, { m: () => y });
-      var i = r(47427),
-        n = r(84148),
-        a = r(94797),
-        s = ["points", "className", "baseLinePoints", "connectNulls"];
-      function o() {
+      r.d(t, { t: () => y });
+      var n = r(90626),
+        i = r(90018),
+        o = r(50247),
+        a = ["points", "className", "baseLinePoints", "connectNulls"];
+      function c() {
         return (
-          (o = Object.assign
+          (c = Object.assign
             ? Object.assign.bind()
             : function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                   var r = arguments[t];
-                  for (var i in r)
-                    Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
+                  for (var n in r)
+                    Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n]);
                 }
                 return e;
               }),
-          o.apply(this, arguments)
+          c.apply(this, arguments)
         );
       }
-      function c(e, t) {
+      function s(e, t) {
         if (null == e) return {};
         var r,
-          i,
-          n = (function (e, t) {
+          n,
+          i = (function (e, t) {
             if (null == e) return {};
             var r,
-              i,
-              n = {},
-              a = Object.keys(e);
-            for (i = 0; i < a.length; i++)
-              (r = a[i]), t.indexOf(r) >= 0 || (n[r] = e[r]);
-            return n;
+              n,
+              i = {},
+              o = Object.keys(e);
+            for (n = 0; n < o.length; n++)
+              (r = o[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
+            return i;
           })(e, t);
         if (Object.getOwnPropertySymbols) {
-          var a = Object.getOwnPropertySymbols(e);
-          for (i = 0; i < a.length; i++)
-            (r = a[i]),
+          var o = Object.getOwnPropertySymbols(e);
+          for (n = 0; n < o.length; n++)
+            (r = o[n]),
               t.indexOf(r) >= 0 ||
                 (Object.prototype.propertyIsEnumerable.call(e, r) &&
-                  (n[r] = e[r]));
+                  (i[r] = e[r]));
         }
-        return n;
+        return i;
       }
       function l(e) {
         return (
@@ -2441,13 +2441,13 @@
       }
       function u(e, t) {
         (null == t || t > e.length) && (t = e.length);
-        for (var r = 0, i = new Array(t); r < t; r++) i[r] = e[r];
-        return i;
+        for (var r = 0, n = new Array(t); r < t; r++) n[r] = e[r];
+        return n;
       }
-      var m = function (e) {
+      var p = function (e) {
           return e && e.x === +e.x && e.y === +e.y;
         },
-        d = function (e, t) {
+        f = function (e, t) {
           var r = (function () {
             var e =
                 arguments.length > 0 && void 0 !== arguments[0]
@@ -2456,11 +2456,11 @@
               t = [[]];
             return (
               e.forEach(function (e) {
-                m(e)
+                p(e)
                   ? t[t.length - 1].push(e)
                   : t[t.length - 1].length > 0 && t.push([]);
               }),
-              m(e[0]) && t[t.length - 1].push(e[0]),
+              p(e[0]) && t[t.length - 1].push(e[0]),
               t[t.length - 1].length <= 0 && (t = t.slice(0, -1)),
               t
             );
@@ -2471,7 +2471,7 @@
                 return [].concat(l(e), l(t));
               }, []),
             ]);
-          var i = r
+          var n = r
             .map(function (e) {
               return e.reduce(function (e, t, r) {
                 return ""
@@ -2482,3554 +2482,59 @@
               }, "");
             })
             .join("");
-          return 1 === r.length ? "".concat(i, "Z") : i;
+          return 1 === r.length ? "".concat(n, "Z") : n;
         },
         y = function (e) {
           var t = e.points,
             r = e.className,
             l = e.baseLinePoints,
             u = e.connectNulls,
-            m = c(e, s);
+            p = s(e, a);
           if (!t || !t.length) return null;
-          var y = (0, n.Z)("recharts-polygon", r);
+          var y = (0, i.A)("recharts-polygon", r);
           if (l && l.length) {
-            var b = m.stroke && "none" !== m.stroke,
-              f = (function (e, t, r) {
-                var i = d(e, r);
+            var d = p.stroke && "none" !== p.stroke,
+              m = (function (e, t, r) {
+                var n = f(e, r);
                 return ""
-                  .concat("Z" === i.slice(-1) ? i.slice(0, -1) : i, "L")
-                  .concat(d(t.reverse(), r).slice(1));
+                  .concat("Z" === n.slice(-1) ? n.slice(0, -1) : n, "L")
+                  .concat(f(t.reverse(), r).slice(1));
               })(t, l, u);
-            return i.createElement(
+            return n.createElement(
               "g",
               { className: y },
-              i.createElement(
+              n.createElement(
                 "path",
-                o({}, (0, a.L6)(m, !0), {
-                  fill: "Z" === f.slice(-1) ? m.fill : "none",
+                c({}, (0, o.J9)(p, !0), {
+                  fill: "Z" === m.slice(-1) ? p.fill : "none",
                   stroke: "none",
-                  d: f,
+                  d: m,
                 }),
               ),
-              b
-                ? i.createElement(
+              d
+                ? n.createElement(
                     "path",
-                    o({}, (0, a.L6)(m, !0), { fill: "none", d: d(t, u) }),
+                    c({}, (0, o.J9)(p, !0), { fill: "none", d: f(t, u) }),
                   )
                 : null,
-              b
-                ? i.createElement(
+              d
+                ? n.createElement(
                     "path",
-                    o({}, (0, a.L6)(m, !0), { fill: "none", d: d(l, u) }),
+                    c({}, (0, o.J9)(p, !0), { fill: "none", d: f(l, u) }),
                   )
                 : null,
             );
           }
-          var p = d(t, u);
-          return i.createElement(
+          var v = f(t, u);
+          return n.createElement(
             "path",
-            o({}, (0, a.L6)(m, !0), {
-              fill: "Z" === p.slice(-1) ? m.fill : "none",
+            c({}, (0, o.J9)(p, !0), {
+              fill: "Z" === v.slice(-1) ? p.fill : "none",
               className: y,
-              d: p,
+              d: v,
             }),
           );
         };
-    },
-    57335: (e, t, r) => {
-      "use strict";
-      r.d(t, {
-        $V: () => re,
-        J2: () => V,
-        f5: () => q,
-        rB: () => j,
-        rj: () => k,
-        z1: () => A,
-        zm: () => U,
-      });
-      var i = r(10059),
-        n = r(39087),
-        a = r(79545);
-      const s = i.Message;
-      class o extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            o.prototype.total_playtime_seconds || n.aR(o.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            o.sm_m ||
-              (o.sm_m = {
-                proto: o,
-                fields: {
-                  total_playtime_seconds: {
-                    n: 1,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  total_sessions: {
-                    n: 20,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  vr_sessions: {
-                    n: 21,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  deck_sessions: {
-                    n: 22,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  controller_sessions: {
-                    n: 23,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  linux_sessions: {
-                    n: 24,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  macos_sessions: {
-                    n: 25,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  windows_sessions: {
-                    n: 26,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  total_playtime_percentagex100: {
-                    n: 27,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  vr_playtime_percentagex100: {
-                    n: 28,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  deck_playtime_percentagex100: {
-                    n: 29,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  controller_playtime_percentagex100: {
-                    n: 30,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  linux_playtime_percentagex100: {
-                    n: 31,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  macos_playtime_percentagex100: {
-                    n: 32,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  windows_playtime_percentagex100: {
-                    n: 33,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                },
-              }),
-            o.sm_m
-          );
-        }
-        static MBF() {
-          return o.sm_mbf || (o.sm_mbf = n.Bh(o.M())), o.sm_mbf;
-        }
-        toObject(e = !1) {
-          return o.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(o.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(o.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new o();
-          return o.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(o.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return o.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(o.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return o.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPlaytimeStats";
-        }
-      }
-      class c extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            c.prototype.appid || n.aR(c.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            c.sm_m ||
-              (c.sm_m = {
-                proto: c,
-                fields: {
-                  appid: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                },
-              }),
-            c.sm_m
-          );
-        }
-        static MBF() {
-          return c.sm_mbf || (c.sm_mbf = n.Bh(c.M())), c.sm_mbf;
-        }
-        toObject(e = !1) {
-          return c.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(c.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(c.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new c();
-          return c.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(c.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return c.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(c.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return c.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPlaytimeStreakGame";
-        }
-      }
-      class l extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            l.prototype.longest_consecutive_days || n.aR(l.M()),
-            s.initialize(this, e, 0, -1, [3], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            l.sm_m ||
-              (l.sm_m = {
-                proto: l,
-                fields: {
-                  longest_consecutive_days: {
-                    n: 1,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  rtime_start: {
-                    n: 2,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  streak_games: { n: 3, c, r: !0, q: !0 },
-                },
-              }),
-            l.sm_m
-          );
-        }
-        static MBF() {
-          return l.sm_mbf || (l.sm_mbf = n.Bh(l.M())), l.sm_mbf;
-        }
-        toObject(e = !1) {
-          return l.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(l.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(l.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new l();
-          return l.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(l.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return l.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(l.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return l.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPlaytimeStreak";
-        }
-      }
-      class u extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            u.prototype.overall_rank || n.aR(u.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            u.sm_m ||
-              (u.sm_m = {
-                proto: u,
-                fields: {
-                  overall_rank: {
-                    n: 1,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  vr_rank: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  deck_rank: {
-                    n: 3,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  controller_rank: {
-                    n: 4,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  linux_rank: {
-                    n: 5,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  mac_rank: { n: 6, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  windows_rank: {
-                    n: 7,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                },
-              }),
-            u.sm_m
-          );
-        }
-        static MBF() {
-          return u.sm_mbf || (u.sm_mbf = n.Bh(u.M())), u.sm_mbf;
-        }
-        toObject(e = !1) {
-          return u.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(u.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(u.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new u();
-          return u.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(u.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return u.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(u.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return u.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPlaytimeRanks";
-        }
-      }
-      class m extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            m.prototype.appid || n.aR(m.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            m.sm_m ||
-              (m.sm_m = {
-                proto: m,
-                fields: {
-                  appid: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  stats: { n: 2, c: o },
-                  playtime_streak: { n: 3, c: l },
-                  playtime_ranks: { n: 4, c: u },
-                  rtime_first_played: {
-                    n: 5,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  relative_game_stats: { n: 6, c: o },
-                },
-              }),
-            m.sm_m
-          );
-        }
-        static MBF() {
-          return m.sm_mbf || (m.sm_mbf = n.Bh(m.M())), m.sm_mbf;
-        }
-        toObject(e = !1) {
-          return m.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(m.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(m.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new m();
-          return m.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(m.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return m.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(m.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return m.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGamePlaytimeStats";
-        }
-      }
-      class d extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            d.prototype.appid || n.aR(d.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            d.sm_m ||
-              (d.sm_m = {
-                proto: d,
-                fields: {
-                  appid: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  new_this_year: {
-                    n: 2,
-                    br: n.FE.readBool,
-                    bw: n.Xc.writeBool,
-                  },
-                  rtime_first_played_lifetime: {
-                    n: 3,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  demo: { n: 4, br: n.FE.readBool, bw: n.Xc.writeBool },
-                  playtest: { n: 5, br: n.FE.readBool, bw: n.Xc.writeBool },
-                  played_during_early_access: {
-                    n: 6,
-                    br: n.FE.readBool,
-                    bw: n.Xc.writeBool,
-                  },
-                  played_vr: { n: 7, br: n.FE.readBool, bw: n.Xc.writeBool },
-                  played_deck: { n: 8, br: n.FE.readBool, bw: n.Xc.writeBool },
-                  played_controller: {
-                    n: 9,
-                    br: n.FE.readBool,
-                    bw: n.Xc.writeBool,
-                  },
-                  played_linux: {
-                    n: 10,
-                    br: n.FE.readBool,
-                    bw: n.Xc.writeBool,
-                  },
-                  played_mac: { n: 11, br: n.FE.readBool, bw: n.Xc.writeBool },
-                  played_windows: {
-                    n: 12,
-                    br: n.FE.readBool,
-                    bw: n.Xc.writeBool,
-                  },
-                  total_playtime_percentagex100: {
-                    n: 13,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  total_sessions: {
-                    n: 14,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  rtime_release_date: {
-                    n: 15,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                },
-              }),
-            d.sm_m
-          );
-        }
-        static MBF() {
-          return d.sm_mbf || (d.sm_mbf = n.Bh(d.M())), d.sm_mbf;
-        }
-        toObject(e = !1) {
-          return d.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(d.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(d.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new d();
-          return d.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(d.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return d.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(d.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return d.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameSummary";
-        }
-      }
-      class y extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            y.prototype.appid || n.aR(y.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            y.sm_m ||
-              (y.sm_m = {
-                proto: y,
-                fields: {
-                  appid: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  total_playtime_percentagex100: {
-                    n: 2,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  relative_playtime_percentagex100: {
-                    n: 3,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                },
-              }),
-            y.sm_m
-          );
-        }
-        static MBF() {
-          return y.sm_mbf || (y.sm_mbf = n.Bh(y.M())), y.sm_mbf;
-        }
-        toObject(e = !1) {
-          return y.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(y.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(y.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new y();
-          return y.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(y.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(y.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSimpleGameSummary";
-        }
-      }
-      class b extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            b.prototype.appid || n.aR(b.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            b.sm_m ||
-              (b.sm_m = {
-                proto: b,
-                fields: {
-                  appid: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  rank: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                },
-              }),
-            b.sm_m
-          );
-        }
-        static MBF() {
-          return b.sm_mbf || (b.sm_mbf = n.Bh(b.M())), b.sm_mbf;
-        }
-        toObject(e = !1) {
-          return b.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(b.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(b.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new b();
-          return b.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(b.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return b.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(b.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return b.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRank";
-        }
-      }
-      class f extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            f.prototype.category || n.aR(f.M()),
-            s.initialize(this, e, 0, -1, [2], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            f.sm_m ||
-              (f.sm_m = {
-                proto: f,
-                fields: {
-                  category: { n: 1, br: n.FE.readString, bw: n.Xc.writeString },
-                  rankings: { n: 2, c: b, r: !0, q: !0 },
-                },
-              }),
-            f.sm_m
-          );
-        }
-        static MBF() {
-          return f.sm_mbf || (f.sm_mbf = n.Bh(f.M())), f.sm_mbf;
-        }
-        toObject(e = !1) {
-          return f.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(f.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(f.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new f();
-          return f.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(f.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return f.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(f.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CRankingCategory";
-        }
-      }
-      class p extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            p.prototype.overall_ranking || n.aR(p.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            p.sm_m ||
-              (p.sm_m = {
-                proto: p,
-                fields: {
-                  overall_ranking: { n: 1, c: f },
-                  vr_ranking: { n: 2, c: f },
-                  deck_ranking: { n: 3, c: f },
-                  controller_ranking: { n: 4, c: f },
-                  linux_ranking: { n: 5, c: f },
-                  mac_ranking: { n: 6, c: f },
-                  windows_ranking: { n: 7, c: f },
-                },
-              }),
-            p.sm_m
-          );
-        }
-        static MBF() {
-          return p.sm_mbf || (p.sm_mbf = n.Bh(p.M())), p.sm_mbf;
-        }
-        toObject(e = !1) {
-          return p.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(p.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(p.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new p();
-          return p.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(p.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(p.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRankings";
-        }
-      }
-      class B extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            B.prototype.total_achievements || n.aR(B.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            B.sm_m ||
-              (B.sm_m = {
-                proto: B,
-                fields: {
-                  total_achievements: {
-                    n: 2,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  total_games_with_achievements: {
-                    n: 3,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  total_rare_achievements: {
-                    n: 4,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                },
-              }),
-            B.sm_m
-          );
-        }
-        static MBF() {
-          return B.sm_mbf || (B.sm_mbf = n.Bh(B.M())), B.sm_mbf;
-        }
-        toObject(e = !1) {
-          return B.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(B.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(B.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new B();
-          return B.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(B.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(B.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CUserPlaytimeSummaryStats";
-        }
-      }
-      class g extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            g.prototype.stats || n.aR(g.M()),
-            s.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            g.sm_m ||
-              (g.sm_m = {
-                proto: g,
-                fields: { stats: { n: 1, c: w, r: !0, q: !0 } },
-              }),
-            g.sm_m
-          );
-        }
-        static MBF() {
-          return g.sm_mbf || (g.sm_mbf = n.Bh(g.M())), g.sm_mbf;
-        }
-        toObject(e = !1) {
-          return g.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(g.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(g.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new g();
-          return g.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(g.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return g.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(g.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CUserTagStats";
-        }
-      }
-      class w extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            w.prototype.tag_id || n.aR(w.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            w.sm_m ||
-              (w.sm_m = {
-                proto: w,
-                fields: {
-                  tag_id: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  tag_weight: { n: 2, br: n.FE.readFloat, bw: n.Xc.writeFloat },
-                  tag_weight_pre_selection: {
-                    n: 3,
-                    br: n.FE.readFloat,
-                    bw: n.Xc.writeFloat,
-                  },
-                },
-              }),
-            w.sm_m
-          );
-        }
-        static MBF() {
-          return w.sm_mbf || (w.sm_mbf = n.Bh(w.M())), w.sm_mbf;
-        }
-        toObject(e = !1) {
-          return w.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(w.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(w.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new w();
-          return w.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(w.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return w.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(w.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CUserTagStats_Tag";
-        }
-      }
-      class h extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            h.prototype.screenshots_shared || n.aR(h.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            h.sm_m ||
-              (h.sm_m = {
-                proto: h,
-                fields: {
-                  screenshots_shared: {
-                    n: 1,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  gifts_sent: {
-                    n: 2,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  loyalty_reactions: {
-                    n: 3,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  written_reviews: {
-                    n: 4,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  guides_submitted: {
-                    n: 5,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  workshop_contributions: {
-                    n: 6,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  badges_earned: {
-                    n: 7,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  friends_added: {
-                    n: 8,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  forum_posts: {
-                    n: 9,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  workshop_subscriptions: {
-                    n: 10,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  guide_subscribers: {
-                    n: 11,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  workshop_subscribers: {
-                    n: 12,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  games_played_pct: {
-                    n: 13,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  achievements_pct: {
-                    n: 14,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  game_streak_pct: {
-                    n: 15,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  games_played_avg: {
-                    n: 16,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  achievements_avg: {
-                    n: 17,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  game_streak_avg: {
-                    n: 18,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                },
-              }),
-            h.sm_m
-          );
-        }
-        static MBF() {
-          return h.sm_mbf || (h.sm_mbf = n.Bh(h.M())), h.sm_mbf;
-        }
-        toObject(e = !1) {
-          return h.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(h.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(h.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new h();
-          return h.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(h.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return h.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(h.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CPlaytimeByNumbers";
-        }
-      }
-      class _ extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            _.prototype.total_stats || n.aR(_.M()),
-            s.initialize(this, e, 0, -1, [2, 5, 6], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            _.sm_m ||
-              (_.sm_m = {
-                proto: _,
-                fields: {
-                  total_stats: { n: 1, c: o },
-                  games: { n: 2, c: m, r: !0, q: !0 },
-                  playtime_streak: { n: 3, c: l },
-                  months: { n: 5, c: v, r: !0, q: !0 },
-                  game_summary: { n: 6, c: d, r: !0, q: !0 },
-                  demos_played: {
-                    n: 7,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  game_rankings: { n: 8, c: p },
-                  playtests_played: {
-                    n: 9,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  summary_stats: { n: 10, c: B },
-                  substantial: {
-                    n: 11,
-                    d: !0,
-                    br: n.FE.readBool,
-                    bw: n.Xc.writeBool,
-                  },
-                  tag_stats: { n: 12, c: g },
-                  by_numbers: { n: 13, c: h },
-                },
-              }),
-            _.sm_m
-          );
-        }
-        static MBF() {
-          return _.sm_mbf || (_.sm_mbf = n.Bh(_.M())), _.sm_mbf;
-        }
-        toObject(e = !1) {
-          return _.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(_.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(_.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new _();
-          return _.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(_.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return _.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(_.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CUserPlaytimeStats";
-        }
-      }
-      class v extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            v.prototype.rtime_month || n.aR(v.M()),
-            s.initialize(this, e, 0, -1, [4, 6], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            v.sm_m ||
-              (v.sm_m = {
-                proto: v,
-                fields: {
-                  rtime_month: {
-                    n: 1,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  stats: { n: 2, c: o },
-                  playtime_streak: { n: 3, c: l },
-                  appid: { n: 4, c: m, r: !0, q: !0 },
-                  relative_monthly_stats: { n: 5, c: o },
-                  game_summary: { n: 6, c: y, r: !0, q: !0 },
-                },
-              }),
-            v.sm_m
-          );
-        }
-        static MBF() {
-          return v.sm_mbf || (v.sm_mbf = n.Bh(v.M())), v.sm_mbf;
-        }
-        toObject(e = !1) {
-          return v.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(v.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(v.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new v();
-          return v.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(v.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return v.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(v.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMonthlyPlaytimeStats";
-        }
-      }
-      class F extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            F.prototype.account_id || n.aR(F.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            F.sm_m ||
-              (F.sm_m = {
-                proto: F,
-                fields: {
-                  account_id: {
-                    n: 1,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  year: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  playtime_stats: { n: 3, c: _ },
-                  privacy_state: {
-                    n: 4,
-                    br: n.FE.readEnum,
-                    bw: n.Xc.writeEnum,
-                  },
-                },
-              }),
-            F.sm_m
-          );
-        }
-        static MBF() {
-          return F.sm_mbf || (F.sm_mbf = n.Bh(F.M())), F.sm_mbf;
-        }
-        toObject(e = !1) {
-          return F.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(F.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(F.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new F();
-          return F.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(F.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(F.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CUserYearInReviewStats";
-        }
-      }
-      class z extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            z.prototype.from_dbo || n.aR(z.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            z.sm_m ||
-              (z.sm_m = {
-                proto: z,
-                fields: {
-                  from_dbo: { n: 1, br: n.FE.readBool, bw: n.Xc.writeBool },
-                  overall_time_ms: {
-                    n: 2,
-                    br: n.FE.readUint64String,
-                    bw: n.Xc.writeUint64String,
-                  },
-                  dbo_load_ms: {
-                    n: 3,
-                    br: n.FE.readUint64String,
-                    bw: n.Xc.writeUint64String,
-                  },
-                  query_execution_ms: {
-                    n: 4,
-                    br: n.FE.readUint64String,
-                    bw: n.Xc.writeUint64String,
-                  },
-                  message_population_ms: {
-                    n: 5,
-                    br: n.FE.readUint64String,
-                    bw: n.Xc.writeUint64String,
-                  },
-                  dbo_lock_load_ms: {
-                    n: 6,
-                    br: n.FE.readUint64String,
-                    bw: n.Xc.writeUint64String,
-                  },
-                },
-              }),
-            z.sm_m
-          );
-        }
-        static MBF() {
-          return z.sm_mbf || (z.sm_mbf = n.Bh(z.M())), z.sm_mbf;
-        }
-        toObject(e = !1) {
-          return z.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(z.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(z.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new z();
-          return z.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(z.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(z.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CYearInReviewPerformanceStats";
-        }
-      }
-      class M extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            M.prototype.statid || n.aR(M.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            M.sm_m ||
-              (M.sm_m = {
-                proto: M,
-                fields: {
-                  statid: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  fieldid: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  achievement_name_internal: {
-                    n: 3,
-                    br: n.FE.readString,
-                    bw: n.Xc.writeString,
-                  },
-                  rtime_unlocked: {
-                    n: 4,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                },
-              }),
-            M.sm_m
-          );
-        }
-        static MBF() {
-          return M.sm_mbf || (M.sm_mbf = n.Bh(M.M())), M.sm_mbf;
-        }
-        toObject(e = !1) {
-          return M.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(M.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(M.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new M();
-          return M.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(M.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return M.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(M.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CAchievementDetails";
-        }
-      }
-      class R extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            R.prototype.appid || n.aR(R.M()),
-            s.initialize(this, e, 0, -1, [2], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            R.sm_m ||
-              (R.sm_m = {
-                proto: R,
-                fields: {
-                  appid: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  achievements: { n: 2, c: M, r: !0, q: !0 },
-                  all_time_unlocked_achievements: {
-                    n: 3,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  unlocked_more_in_future: {
-                    n: 4,
-                    br: n.FE.readBool,
-                    bw: n.Xc.writeBool,
-                  },
-                },
-              }),
-            R.sm_m
-          );
-        }
-        static MBF() {
-          return R.sm_mbf || (R.sm_mbf = n.Bh(R.M())), R.sm_mbf;
-        }
-        toObject(e = !1) {
-          return R.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(R.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(R.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new R();
-          return R.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(R.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(R.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameAchievements";
-        }
-      }
-      class S extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            S.prototype.median_achievements || n.aR(S.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            S.sm_m ||
-              (S.sm_m = {
-                proto: S,
-                fields: {
-                  median_achievements: {
-                    n: 1,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  median_games: {
-                    n: 2,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  median_streak: {
-                    n: 3,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                },
-              }),
-            S.sm_m
-          );
-        }
-        static MBF() {
-          return S.sm_mbf || (S.sm_mbf = n.Bh(S.M())), S.sm_mbf;
-        }
-        toObject(e = !1) {
-          return S.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(S.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(S.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new S();
-          return S.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(S.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return S.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(S.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return S.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGlobalPercentiles";
-        }
-      }
-      class O extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            O.prototype.new_releases || n.aR(O.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
-                fields: {
-                  new_releases: {
-                    n: 1,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  recent_releases: {
-                    n: 2,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  classic_releases: {
-                    n: 3,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  recent_cutoff_year: {
-                    n: 4,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                },
-              }),
-            O.sm_m
-          );
-        }
-        static MBF() {
-          return O.sm_mbf || (O.sm_mbf = n.Bh(O.M())), O.sm_mbf;
-        }
-        toObject(e = !1) {
-          return O.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(O.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(O.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new O();
-          return O.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(O.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(O.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGlobalPlaytimeDistribution";
-        }
-      }
-      class j extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            j.prototype.steamid || n.aR(j.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            j.sm_m ||
-              (j.sm_m = {
-                proto: j,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
-                  },
-                  year: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  force_regenerate: {
-                    n: 3,
-                    br: n.FE.readBool,
-                    bw: n.Xc.writeBool,
-                  },
-                  access_source: {
-                    n: 4,
-                    br: n.FE.readInt32,
-                    bw: n.Xc.writeInt32,
-                  },
-                },
-              }),
-            j.sm_m
-          );
-        }
-        static MBF() {
-          return j.sm_mbf || (j.sm_mbf = n.Bh(j.M())), j.sm_mbf;
-        }
-        toObject(e = !1) {
-          return j.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(j.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(j.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new j();
-          return j.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(j.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return j.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(j.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return j.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetUserYearInReview_Request";
-        }
-      }
-      class E extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            E.prototype.stats || n.aR(E.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            E.sm_m ||
-              (E.sm_m = {
-                proto: E,
-                fields: {
-                  stats: { n: 1, c: F },
-                  performance_stats: { n: 2, c: z },
-                  percentiles: { n: 3, c: S },
-                  distribution: { n: 4, c: O },
-                },
-              }),
-            E.sm_m
-          );
-        }
-        static MBF() {
-          return E.sm_mbf || (E.sm_mbf = n.Bh(E.M())), E.sm_mbf;
-        }
-        toObject(e = !1) {
-          return E.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(E.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(E.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new E();
-          return E.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(E.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(E.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetUserYearInReview_Response";
-        }
-      }
-      class U extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            U.prototype.steamid || n.aR(U.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            U.sm_m ||
-              (U.sm_m = {
-                proto: U,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
-                  },
-                  year: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  privacy_state: {
-                    n: 3,
-                    br: n.FE.readEnum,
-                    bw: n.Xc.writeEnum,
-                  },
-                },
-              }),
-            U.sm_m
-          );
-        }
-        static MBF() {
-          return U.sm_mbf || (U.sm_mbf = n.Bh(U.M())), U.sm_mbf;
-        }
-        toObject(e = !1) {
-          return U.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(U.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(U.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new U();
-          return U.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(U.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return U.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(U.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return U.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_SetUserSharingPermissions_Request";
-        }
-      }
-      class T extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            T.prototype.privacy_state || n.aR(T.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            T.sm_m ||
-              (T.sm_m = {
-                proto: T,
-                fields: {
-                  privacy_state: {
-                    n: 1,
-                    br: n.FE.readEnum,
-                    bw: n.Xc.writeEnum,
-                  },
-                },
-              }),
-            T.sm_m
-          );
-        }
-        static MBF() {
-          return T.sm_mbf || (T.sm_mbf = n.Bh(T.M())), T.sm_mbf;
-        }
-        toObject(e = !1) {
-          return T.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(T.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(T.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new T();
-          return T.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(T.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return T.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(T.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return T.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_SetUserSharingPermissions_Response";
-        }
-      }
-      class x extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            x.prototype.steamid || n.aR(x.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            x.sm_m ||
-              (x.sm_m = {
-                proto: x,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
-                  },
-                  year: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                },
-              }),
-            x.sm_m
-          );
-        }
-        static MBF() {
-          return x.sm_mbf || (x.sm_mbf = n.Bh(x.M())), x.sm_mbf;
-        }
-        toObject(e = !1) {
-          return x.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(x.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(x.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new x();
-          return x.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(x.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return x.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(x.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetUserSharingPermissions_Request";
-        }
-      }
-      class W extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            W.prototype.privacy_state || n.aR(W.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            W.sm_m ||
-              (W.sm_m = {
-                proto: W,
-                fields: {
-                  privacy_state: {
-                    n: 1,
-                    br: n.FE.readEnum,
-                    bw: n.Xc.writeEnum,
-                  },
-                  generated_value: {
-                    n: 2,
-                    br: n.FE.readBool,
-                    bw: n.Xc.writeBool,
-                  },
-                  steamid: {
-                    n: 3,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
-                  },
-                  rt_privacy_updated: {
-                    n: 4,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                },
-              }),
-            W.sm_m
-          );
-        }
-        static MBF() {
-          return W.sm_mbf || (W.sm_mbf = n.Bh(W.M())), W.sm_mbf;
-        }
-        toObject(e = !1) {
-          return W.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(W.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(W.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new W();
-          return W.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(W.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(W.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetUserSharingPermissions_Response";
-        }
-      }
-      class A extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            A.prototype.steamid || n.aR(A.M()),
-            s.initialize(this, e, 0, -1, [3], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            A.sm_m ||
-              (A.sm_m = {
-                proto: A,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
-                  },
-                  year: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  appids: {
-                    n: 3,
-                    r: !0,
-                    q: !0,
-                    br: n.FE.readUint32,
-                    pbr: n.FE.readPackedUint32,
-                    bw: n.Xc.writeRepeatedUint32,
-                  },
-                  total_only: { n: 4, br: n.FE.readBool, bw: n.Xc.writeBool },
-                },
-              }),
-            A.sm_m
-          );
-        }
-        static MBF() {
-          return A.sm_mbf || (A.sm_mbf = n.Bh(A.M())), A.sm_mbf;
-        }
-        toObject(e = !1) {
-          return A.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(A.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(A.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new A();
-          return A.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(A.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return A.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(A.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetUserYearAchievements_Request";
-        }
-      }
-      class P extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            P.prototype.game_achievements || n.aR(P.M()),
-            s.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            P.sm_m ||
-              (P.sm_m = {
-                proto: P,
-                fields: {
-                  game_achievements: { n: 1, c: R, r: !0, q: !0 },
-                  total_achievements: {
-                    n: 2,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  total_rare_achievements: {
-                    n: 3,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  total_games_with_achievements: {
-                    n: 4,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                },
-              }),
-            P.sm_m
-          );
-        }
-        static MBF() {
-          return P.sm_mbf || (P.sm_mbf = n.Bh(P.M())), P.sm_mbf;
-        }
-        toObject(e = !1) {
-          return P.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(P.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(P.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new P();
-          return P.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(P.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return P.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(P.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return P.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetUserYearAchievements_Response";
-        }
-      }
-      class k extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            k.prototype.steamid || n.aR(k.M()),
-            s.initialize(this, e, 0, -1, [3], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            k.sm_m ||
-              (k.sm_m = {
-                proto: k,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
-                  },
-                  year: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  appids: {
-                    n: 3,
-                    r: !0,
-                    q: !0,
-                    br: n.FE.readUint32,
-                    pbr: n.FE.readPackedUint32,
-                    bw: n.Xc.writeRepeatedUint32,
-                  },
-                },
-              }),
-            k.sm_m
-          );
-        }
-        static MBF() {
-          return k.sm_mbf || (k.sm_mbf = n.Bh(k.M())), k.sm_mbf;
-        }
-        toObject(e = !1) {
-          return k.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(k.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(k.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new k();
-          return k.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(k.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return k.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(k.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return k.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetUserYearScreenshots_Request";
-        }
-      }
-      class I extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            I.prototype.apps || n.aR(I.M()),
-            s.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            I.sm_m ||
-              (I.sm_m = {
-                proto: I,
-                fields: { apps: { n: 1, c: C, r: !0, q: !0 } },
-              }),
-            I.sm_m
-          );
-        }
-        static MBF() {
-          return I.sm_mbf || (I.sm_mbf = n.Bh(I.M())), I.sm_mbf;
-        }
-        toObject(e = !1) {
-          return I.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(I.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(I.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new I();
-          return I.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(I.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(I.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetUserYearScreenshots_Response";
-        }
-      }
-      class X extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            X.prototype.image_url || n.aR(X.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            X.sm_m ||
-              (X.sm_m = {
-                proto: X,
-                fields: {
-                  image_url: {
-                    n: 1,
-                    br: n.FE.readString,
-                    bw: n.Xc.writeString,
-                  },
-                  preview_url: {
-                    n: 2,
-                    br: n.FE.readString,
-                    bw: n.Xc.writeString,
-                  },
-                  image_width: {
-                    n: 3,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  image_height: {
-                    n: 4,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  maybe_inappropriate_sex: {
-                    n: 5,
-                    br: n.FE.readBool,
-                    bw: n.Xc.writeBool,
-                  },
-                  maybe_inappropriate_violence: {
-                    n: 6,
-                    br: n.FE.readBool,
-                    bw: n.Xc.writeBool,
-                  },
-                  visibility: {
-                    n: 7,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  spoiler_tag: { n: 8, br: n.FE.readBool, bw: n.Xc.writeBool },
-                },
-              }),
-            X.sm_m
-          );
-        }
-        static MBF() {
-          return X.sm_mbf || (X.sm_mbf = n.Bh(X.M())), X.sm_mbf;
-        }
-        toObject(e = !1) {
-          return X.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(X.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(X.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new X();
-          return X.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(X.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return X.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(X.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return X.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetUserYearScreenshots_Response_Screenshot";
-        }
-      }
-      class C extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            C.prototype.appid || n.aR(C.M()),
-            s.initialize(this, e, 0, -1, [2], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            C.sm_m ||
-              (C.sm_m = {
-                proto: C,
-                fields: {
-                  appid: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  screenshots: { n: 2, c: X, r: !0, q: !0 },
-                },
-              }),
-            C.sm_m
-          );
-        }
-        static MBF() {
-          return C.sm_mbf || (C.sm_mbf = n.Bh(C.M())), C.sm_mbf;
-        }
-        toObject(e = !1) {
-          return C.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(C.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(C.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new C();
-          return C.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(C.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return C.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(C.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return C.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetUserYearScreenshots_Response_ScreenshotsByApp";
-        }
-      }
-      class D extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            D.prototype.steamid || n.aR(D.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            D.sm_m ||
-              (D.sm_m = {
-                proto: D,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
-                  },
-                  gid: {
-                    n: 2,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
-                  },
-                  type: { n: 3, br: n.FE.readEnum, bw: n.Xc.writeEnum },
-                  jsondata: { n: 4, br: n.FE.readString, bw: n.Xc.writeString },
-                },
-              }),
-            D.sm_m
-          );
-        }
-        static MBF() {
-          return D.sm_mbf || (D.sm_mbf = n.Bh(D.M())), D.sm_mbf;
-        }
-        toObject(e = !1) {
-          return D.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(D.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(D.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new D();
-          return D.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(D.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(D.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_SetUserActionData_Request";
-        }
-      }
-      class N extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), s.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return N.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new N();
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new N();
-          return N.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return N.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return N.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_SetUserActionData_Response";
-        }
-      }
-      class L extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            L.prototype.steamid || n.aR(L.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            L.sm_m ||
-              (L.sm_m = {
-                proto: L,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
-                  },
-                  gid: {
-                    n: 2,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
-                  },
-                  type: { n: 3, br: n.FE.readEnum, bw: n.Xc.writeEnum },
-                },
-              }),
-            L.sm_m
-          );
-        }
-        static MBF() {
-          return L.sm_mbf || (L.sm_mbf = n.Bh(L.M())), L.sm_mbf;
-        }
-        toObject(e = !1) {
-          return L.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(L.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(L.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new L();
-          return L.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(L.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return L.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(L.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return L.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetUserActionData_Request";
-        }
-      }
-      class G extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            G.prototype.jsondata || n.aR(G.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            G.sm_m ||
-              (G.sm_m = {
-                proto: G,
-                fields: {
-                  jsondata: { n: 1, br: n.FE.readString, bw: n.Xc.writeString },
-                },
-              }),
-            G.sm_m
-          );
-        }
-        static MBF() {
-          return G.sm_mbf || (G.sm_mbf = n.Bh(G.M())), G.sm_mbf;
-        }
-        toObject(e = !1) {
-          return G.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(G.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(G.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new G();
-          return G.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(G.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return G.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(G.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return G.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetUserActionData_Response";
-        }
-      }
-      class q extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            q.prototype.steamid || n.aR(q.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            q.sm_m ||
-              (q.sm_m = {
-                proto: q,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
-                  },
-                  year: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  return_private: {
-                    n: 3,
-                    br: n.FE.readBool,
-                    bw: n.Xc.writeBool,
-                  },
-                },
-              }),
-            q.sm_m
-          );
-        }
-        static MBF() {
-          return q.sm_mbf || (q.sm_mbf = n.Bh(q.M())), q.sm_mbf;
-        }
-        toObject(e = !1) {
-          return q.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(q.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(q.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new q();
-          return q.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(q.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return q.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(q.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return q.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetFriendsSharedYearInReview_Request";
-        }
-      }
-      class Y extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Y.prototype.steamid || n.aR(Y.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            Y.sm_m ||
-              (Y.sm_m = {
-                proto: Y,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
-                  },
-                  privacy_state: {
-                    n: 3,
-                    br: n.FE.readEnum,
-                    bw: n.Xc.writeEnum,
-                  },
-                  rt_privacy_updated: {
-                    n: 4,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                },
-              }),
-            Y.sm_m
-          );
-        }
-        static MBF() {
-          return Y.sm_mbf || (Y.sm_mbf = n.Bh(Y.M())), Y.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Y.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(Y.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(Y.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new Y();
-          return Y.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(Y.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return Y.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(Y.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return Y.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CFriendSharedYearInView";
-        }
-      }
-      class K extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            K.prototype.friend_shares || n.aR(K.M()),
-            s.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            K.sm_m ||
-              (K.sm_m = {
-                proto: K,
-                fields: {
-                  friend_shares: { n: 1, c: Y, r: !0, q: !0 },
-                  year: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                },
-              }),
-            K.sm_m
-          );
-        }
-        static MBF() {
-          return K.sm_mbf || (K.sm_mbf = n.Bh(K.M())), K.sm_mbf;
-        }
-        toObject(e = !1) {
-          return K.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(K.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(K.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new K();
-          return K.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(K.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return K.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(K.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return K.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetFriendsSharedYearInReview_Response";
-        }
-      }
-      class V extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            V.prototype.steamid || n.aR(V.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            V.sm_m ||
-              (V.sm_m = {
-                proto: V,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
-                  },
-                  year: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  language: { n: 3, br: n.FE.readString, bw: n.Xc.writeString },
-                },
-              }),
-            V.sm_m
-          );
-        }
-        static MBF() {
-          return V.sm_mbf || (V.sm_mbf = n.Bh(V.M())), V.sm_mbf;
-        }
-        toObject(e = !1) {
-          return V.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(V.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(V.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new V();
-          return V.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(V.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return V.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(V.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return V.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetUserYearInReviewShareImage_Request";
-        }
-      }
-      class Z extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Z.prototype.images || n.aR(Z.M()),
-            s.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            Z.sm_m ||
-              (Z.sm_m = {
-                proto: Z,
-                fields: { images: { n: 1, c: $, r: !0, q: !0 } },
-              }),
-            Z.sm_m
-          );
-        }
-        static MBF() {
-          return Z.sm_mbf || (Z.sm_mbf = n.Bh(Z.M())), Z.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Z.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(Z.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(Z.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new Z();
-          return Z.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(Z.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return Z.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(Z.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return Z.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetUserYearInReviewShareImage_Response";
-        }
-      }
-      class $ extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            $.prototype.name || n.aR($.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            $.sm_m ||
-              ($.sm_m = {
-                proto: $,
-                fields: {
-                  name: { n: 1, br: n.FE.readString, bw: n.Xc.writeString },
-                  url_path: { n: 2, br: n.FE.readString, bw: n.Xc.writeString },
-                },
-              }),
-            $.sm_m
-          );
-        }
-        static MBF() {
-          return $.sm_mbf || ($.sm_mbf = n.Bh($.M())), $.sm_mbf;
-        }
-        toObject(e = !1) {
-          return $.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA($.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD($.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new $();
-          return $.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F($.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return $.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2($.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return $.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetUserYearInReviewShareImage_Response_Image";
-        }
-      }
-      class H extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            H.prototype.year || n.aR(H.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            H.sm_m ||
-              (H.sm_m = {
-                proto: H,
-                fields: {
-                  year: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                },
-              }),
-            H.sm_m
-          );
-        }
-        static MBF() {
-          return H.sm_mbf || (H.sm_mbf = n.Bh(H.M())), H.sm_mbf;
-        }
-        toObject(e = !1) {
-          return H.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(H.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(H.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new H();
-          return H.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(H.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return H.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(H.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return H.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetUpdateProcessingProgress_Request";
-        }
-      }
-      class J extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            J.prototype.year || n.aR(J.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            J.sm_m ||
-              (J.sm_m = {
-                proto: J,
-                fields: {
-                  year: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  month: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  rt_processing_start: {
-                    n: 3,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  rt_queue_complete: {
-                    n: 4,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  rt_queue_emptied: {
-                    n: 5,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  rt_platform_summary: {
-                    n: 6,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  accounts_queued: {
-                    n: 7,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  largest_account_id: {
-                    n: 8,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                },
-              }),
-            J.sm_m
-          );
-        }
-        static MBF() {
-          return J.sm_mbf || (J.sm_mbf = n.Bh(J.M())), J.sm_mbf;
-        }
-        toObject(e = !1) {
-          return J.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(J.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(J.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new J();
-          return J.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(J.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return J.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(J.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return J.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMonthlyProgress";
-        }
-      }
-      class Q extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Q.prototype.results || n.aR(Q.M()),
-            s.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            Q.sm_m ||
-              (Q.sm_m = {
-                proto: Q,
-                fields: { results: { n: 1, c: J, r: !0, q: !0 } },
-              }),
-            Q.sm_m
-          );
-        }
-        static MBF() {
-          return Q.sm_mbf || (Q.sm_mbf = n.Bh(Q.M())), Q.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Q.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(Q.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(Q.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new Q();
-          return Q.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(Q.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return Q.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(Q.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return Q.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetUpdateProcessingProgress_Response";
-        }
-      }
-      class ee extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            ee.prototype.steamid || n.aR(ee.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            ee.sm_m ||
-              (ee.sm_m = {
-                proto: ee,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: n.FE.readFixed64String,
-                    bw: n.Xc.writeFixed64String,
-                  },
-                },
-              }),
-            ee.sm_m
-          );
-        }
-        static MBF() {
-          return ee.sm_mbf || (ee.sm_mbf = n.Bh(ee.M())), ee.sm_mbf;
-        }
-        toObject(e = !1) {
-          return ee.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(ee.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(ee.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new ee();
-          return ee.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(ee.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return ee.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(ee.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return ee.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetYIRCurrentMonthlySummary_Request";
-        }
-      }
-      class te extends s {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            te.prototype.year || n.aR(te.M()),
-            s.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            te.sm_m ||
-              (te.sm_m = {
-                proto: te,
-                fields: {
-                  year: { n: 1, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  month: { n: 2, br: n.FE.readUint32, bw: n.Xc.writeUint32 },
-                  games_played: {
-                    n: 4,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  top_played_appid: {
-                    n: 5,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  longest_streak_days: {
-                    n: 6,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  rt_streak_start: {
-                    n: 7,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  achievements: {
-                    n: 8,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                  screenshots: {
-                    n: 9,
-                    br: n.FE.readUint32,
-                    bw: n.Xc.writeUint32,
-                  },
-                },
-              }),
-            te.sm_m
-          );
-        }
-        static MBF() {
-          return te.sm_mbf || (te.sm_mbf = n.Bh(te.M())), te.sm_mbf;
-        }
-        toObject(e = !1) {
-          return te.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.TA(te.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.aD(te.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new te();
-          return te.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.F(te.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return te.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.l2(te.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return te.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetYIRCurrentMonthlySummary_Response";
-        }
-      }
-      var re;
-      !(function (e) {
-        (e.GetUserYearInReview = function (e, t) {
-          return e.SendMsg(
-            "SaleFeature.GetUserYearInReview#1",
-            (0, a.MD)(j, t),
-            E,
-            { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
-          );
-        }),
-          (e.GetUserSharingPermissions = function (e, t) {
-            return e.SendMsg(
-              "SaleFeature.GetUserSharingPermissions#1",
-              (0, a.MD)(x, t),
-              W,
-              { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
-            );
-          }),
-          (e.SetUserSharingPermissions = function (e, t) {
-            return e.SendMsg(
-              "SaleFeature.SetUserSharingPermissions#1",
-              (0, a.MD)(U, t),
-              T,
-              { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
-            );
-          }),
-          (e.GetUserYearAchievements = function (e, t) {
-            return e.SendMsg(
-              "SaleFeature.GetUserYearAchievements#1",
-              (0, a.MD)(A, t),
-              P,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
-            );
-          }),
-          (e.GetUserYearScreenshots = function (e, t) {
-            return e.SendMsg(
-              "SaleFeature.GetUserYearScreenshots#1",
-              (0, a.MD)(k, t),
-              I,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
-            );
-          }),
-          (e.SetUserActionData = function (e, t) {
-            return e.SendMsg(
-              "SaleFeature.SetUserActionData#1",
-              (0, a.MD)(D, t),
-              N,
-              { ePrivilege: 1, eWebAPIKeyRequirement: 2 },
-            );
-          }),
-          (e.GetUserActionData = function (e, t) {
-            return e.SendMsg(
-              "SaleFeature.GetUserActionData#1",
-              (0, a.MD)(L, t),
-              G,
-              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
-            );
-          }),
-          (e.GetFriendsSharedYearInReview = function (e, t) {
-            return e.SendMsg(
-              "SaleFeature.GetFriendsSharedYearInReview#1",
-              (0, a.MD)(q, t),
-              K,
-              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
-            );
-          }),
-          (e.GetUserYearInReviewShareImage = function (e, t) {
-            return e.SendMsg(
-              "SaleFeature.GetUserYearInReviewShareImage#1",
-              (0, a.MD)(V, t),
-              Z,
-              { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
-            );
-          }),
-          (e.GetUpdateProcessingProgress = function (e, t) {
-            return e.SendMsg(
-              "SaleFeature.GetUpdateProcessingProgress#1",
-              (0, a.MD)(H, t),
-              Q,
-              { bConstMethod: !0, ePrivilege: 4 },
-            );
-          }),
-          (e.GetYIRCurrentMonthlySummary = function (e, t) {
-            return e.SendMsg(
-              "SaleFeature.GetYIRCurrentMonthlySummary#1",
-              (0, a.MD)(ee, t),
-              te,
-              { bConstMethod: !0, ePrivilege: 1, eWebAPIKeyRequirement: 2 },
-            );
-          });
-      })(re || (re = {}));
     },
   },
 ]);

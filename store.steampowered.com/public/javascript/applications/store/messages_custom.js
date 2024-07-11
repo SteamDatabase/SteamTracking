@@ -1,9 +1,9 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [938],
+  [8287],
   {
-    81519: (e) => {
+    32077: (e) => {
       e.exports = {
         MMFrame: "kmeCX_wpui82T0Ay3SHMK",
         HeaderCtn: "_1x7ZLZe4piW-DdqVrsm5Rc",
@@ -23,7 +23,7 @@
         Description: "_3PEXENleI6xShkV5isURGX",
       };
     },
-    16173: (e) => {
+    47277: (e) => {
       e.exports = {
         new_games_color: "#3cdf6a",
         used_games_color: "#4df",
@@ -111,7 +111,7 @@
         OtherYearLink: "_3itf8y5EOGxutexNfOa8cQ",
       };
     },
-    61450: (e) => {
+    25150: (e) => {
       e.exports = {
         new_games_color: "#d67070",
         used_games_color: "#683db4",
@@ -197,7 +197,7 @@
         OtherYearLink: "_1AcAxWWu9yo7s4gOpoGGn0",
       };
     },
-    73799: (e) => {
+    58632: (e) => {
       "use strict";
       var t,
         a = (function () {
@@ -438,29 +438,29 @@
       }
       e.exports = a;
     },
-    85948: (e, t, a) => {
+    27144: (e, t, a) => {
       "use strict";
-      a.d(t, { Fz: () => v, TQ: () => f, tE: () => y });
-      var n = a(80751),
+      a.d(t, { B3: () => y, KM: () => f, KT: () => v });
+      var n = a(41735),
         r = a.n(n),
-        o = a(73799),
+        o = a(58632),
         c = a.n(o),
-        i = a(47427),
-        s = a(42718),
-        l = a(35427),
-        u = a(16649),
-        _ = a(37563),
-        m = a(79545),
-        h = a(82182),
-        d = a(40057);
+        i = a(90626),
+        s = a(31380),
+        l = a(17720),
+        u = a(68797),
+        _ = a(78327),
+        m = a(56545),
+        h = a(37735),
+        d = a(78205);
       const p = "nicknames";
       function f(e) {
-        const t = (0, d.bY)(),
+        const t = (0, d.KV)(),
           { data: a, isLoading: n } = (0, s.useQuery)([p], async () => {
             const e = new Map();
-            if (_.L7.logged_in) {
-              const a = m.gA.Init(h.bM),
-                n = (await h.lk.GetNicknameList(t, a)).Body().toObject();
+            if (_.iA.logged_in) {
+              const a = m.w.Init(h.dN),
+                n = (await h.xt.GetNicknameList(t, a)).Body().toObject();
               n?.nicknames &&
                 n.nicknames.length > 0 &&
                 n.nicknames.forEach((t) => {
@@ -476,9 +476,9 @@
             (async function (e) {
               if (!e || 0 == e.length) return [];
               const t =
-                "community" == (0, _.Zv)()
-                  ? _.De.COMMUNITY_BASE_URL
-                  : _.De.STORE_BASE_URL;
+                "community" == (0, _.yK)()
+                  ? _.TS.COMMUNITY_BASE_URL
+                  : _.TS.STORE_BASE_URL;
               if (1 == e.length) {
                 const a = { accountid: e[0], origin: self.origin },
                   n = await r().get(`${t}actions/ajaxgetavatarpersona`, {
@@ -490,7 +490,7 @@
                   1 != n.data?.success ||
                   !n.data?.userinfo
                 )
-                  throw `Load single avatar/persona failed ${(0, u.l)(n).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${(0, u.H)(n).strErrorMsg}`;
                 return [n.data.userinfo];
               }
               {
@@ -504,11 +504,11 @@
                   1 != n.data?.success ||
                   !n.data?.userinfos
                 )
-                  throw `Load single avatar/persona failed ${(0, u.l)(n).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${(0, u.H)(n).strErrorMsg}`;
                 const o = new Map();
                 return (
                   n.data.userinfos.forEach((e) =>
-                    o.set(new l.K(e.steamid).GetAccountID(), e),
+                    o.set(new l.b(e.steamid).GetAccountID(), e),
                   ),
                   e.map((e) => o.get(e))
                 );
@@ -530,7 +530,7 @@
             queryFn: () => C.loadMany(e),
             onSuccess(e) {
               e.forEach((e) => {
-                const a = [g, new l.K(e.steamid).GetAccountID()];
+                const a = [g, new l.b(e.steamid).GetAccountID()];
                 t.setQueryData(a, e);
               });
             },
@@ -548,62 +548,62 @@
         return n ? null : r;
       }
     },
-    21400: (e, t, a) => {
+    79194: (e, t, a) => {
       "use strict";
       a.r(t), a.d(t, { default: () => h });
-      var n = a(16305),
-        r = a(70267),
-        o = a(47427),
-        c = a(91618),
-        i = a(85948),
-        s = a(31846),
-        l = a(37563),
-        u = a(81519),
-        _ = a(37588),
-        m = a(13129);
+      var n = a(80620),
+        r = a(45978),
+        o = a(90626),
+        c = a(32381),
+        i = a(27144),
+        s = a(61859),
+        l = a(78327),
+        u = a(32077),
+        _ = a(37220),
+        m = a(52038);
       function h(e) {
-        const t = (0, _.N)(e.year),
+        const t = (0, _.b)(e.year),
           a = y();
         return o.createElement(
           "div",
           {
-            className: (0, m.Z)(u.MMFrame, t.MMFrame, t.MMOverride),
+            className: (0, m.A)(u.MMFrame, t.MMFrame, t.MMOverride),
             onClick: a,
           },
           o.createElement(
             "div",
             { className: u.HeaderCtn },
             o.createElement(C, {
-              baseClass: (0, m.Z)(u.ReplayLogo, t.ReplayLogo),
-              accentClass: (0, m.Z)(u.ReplayLogoAccent, t.ReplayLogoAccent),
+              baseClass: (0, m.A)(u.ReplayLogo, t.ReplayLogo),
+              accentClass: (0, m.A)(u.ReplayLogoAccent, t.ReplayLogoAccent),
             }),
             o.createElement(g, { year: e.year, theme: t }),
           ),
-          o.createElement(f, { className: (0, m.Z)(u.SteamLogo, t.SteamLogo) }),
+          o.createElement(f, { className: (0, m.A)(u.SteamLogo, t.SteamLogo) }),
           o.createElement(v, { theme: t }),
           o.createElement(
             "div",
-            { className: (0, m.Z)(u.Content, t.Content) },
+            { className: (0, m.A)(u.Content, t.Content) },
             o.createElement(d, { theme: t }),
             o.createElement(p, { theme: t }),
             o.createElement(
               "div",
-              { className: (0, m.Z)(u.Description, t.Description) },
-              (0, s.Xx)("#YIR_MM_Generic_Desc"),
+              { className: (0, m.A)(u.Description, t.Description) },
+              (0, s.we)("#YIR_MM_Generic_Desc"),
             ),
           ),
         );
       }
       function d(e) {
         const { theme: t } = e,
-          [a] = (0, i.Fz)(l.L7.accountid);
+          [a] = (0, i.KT)(l.iA.accountid);
         return a
           ? o.createElement(
               o.Fragment,
               null,
               o.createElement(
                 "div",
-                { className: (0, m.Z)(u.Avatar, t.Avatar) },
+                { className: (0, m.A)(u.Avatar, t.Avatar) },
                 a &&
                   a.avatar_url &&
                   o.createElement("img", {
@@ -612,19 +612,19 @@
               ),
               o.createElement(
                 "div",
-                { className: (0, m.Z)(u.DataBlock, t.DataBlock) },
+                { className: (0, m.A)(u.DataBlock, t.DataBlock) },
                 o.createElement(
                   "div",
-                  { className: (0, m.Z)(u.PersonaName, t.PersonaName) },
+                  { className: (0, m.A)(u.PersonaName, t.PersonaName) },
                   a ? a.persona_name : "",
                 ),
                 o.createElement(
                   "div",
                   { className: u.GenericTitleBlock },
-                  (0, s.yu)(
+                  (0, s.oW)(
                     "#YIR_MM_Generic_Title",
                     o.createElement("span", {
-                      className: (0, m.Z)(u.ReplayHighlight, t.ReplayHighlight),
+                      className: (0, m.A)(u.ReplayHighlight, t.ReplayHighlight),
                     }),
                   ),
                 ),
@@ -636,12 +636,12 @@
         const { theme: t } = e,
           a = y();
         return o.createElement(
-          c.s,
+          c.Z,
           {
-            className: (0, m.Z)(u.ViewPageButton, t.ViewPageButton),
+            className: (0, m.A)(u.ViewPageButton, t.ViewPageButton),
             onActivate: a,
           },
-          (0, s.Xx)("#YIR_MM_Generic_Action"),
+          (0, s.we)("#YIR_MM_Generic_Action"),
         );
       }
       function f(e) {
@@ -702,14 +702,14 @@
         const { year: t, theme: a } = e;
         return o.createElement(
           "div",
-          { className: (0, m.Z)(u.Header, a.Header) },
-          (0, s.kQ)(
+          { className: (0, m.A)(u.Header, a.Header) },
+          (0, s.PP)(
             "#YIR_MM_Header",
             o.createElement("br", null),
             o.createElement(
               "div",
-              { className: (0, m.Z)(u.YearSubtitle, a.YearSubtitle) },
-              (0, s.Xx)("#date_year", t),
+              { className: (0, m.A)(u.YearSubtitle, a.YearSubtitle) },
+              (0, s.we)("#date_year", t),
             ),
           ),
         );
@@ -717,20 +717,20 @@
       function v(e) {
         return o.createElement(
           "div",
-          { className: (0, m.Z)(u.Hashtag, e.theme.Hashtag) },
-          (0, s.Xx)("#YIR_MM_HashTag"),
+          { className: (0, m.A)(u.Hashtag, e.theme.Hashtag) },
+          (0, s.we)("#YIR_MM_HashTag"),
         );
       }
       function y() {
-        const e = (0, r.U)().GetTemplateVars();
-        return (0, n.pT)(e.linkurl);
+        const e = (0, r.J)().GetTemplateVars();
+        return (0, n.WN)(e.linkurl);
       }
     },
-    37588: (e, t, a) => {
+    37220: (e, t, a) => {
       "use strict";
-      a.d(t, { N: () => i });
-      var n = a(47427);
-      const r = { 2022: a(16173), 2023: a(61450) },
+      a.d(t, { b: () => i });
+      var n = a(90626);
+      const r = { 2022: a(47277), 2023: a(25150) },
         o = Object.values(r).reduce((e, t) => ({ ...e, ...t }), {}),
         c = 2022;
       function i(e) {

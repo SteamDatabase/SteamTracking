@@ -1,19 +1,329 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-"use strict";
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [2558],
+  [7121],
   {
-    80878: (e, t, o) => {
-      o.d(t, { Gg: () => h, L4: () => f });
-      var l = o(85556),
-        i = o(80751),
+    33645: (e) => {
+      e.exports = {
+        Bold: "_3cln317VYhwhE1fSeMCG48",
+        Italic: "_3TPGDj4kc0QGKvO8FJmGz8",
+        Paragraph: "_3lnqGBzYap-Z2T81XBiBUU",
+        Header1: "_2LYsFAwy8wdRJQTNJOUcsT",
+        Header2: "_6-VR2WCBCDupCcUN5INQM",
+        Header3: "_1sGnlGwCeaGUp63h4Lx-pU",
+        Header4: "_3VHY5vmO07MFpoOgTB9eOi",
+        Header5: "_1Vk-9-C_y-lBA5ucPl6t8X",
+        CenterSpan: "zCnp-VELUMybbfxOD-ze9",
+        SmallText: "WBzrd438Bd8Z3J-j_iglW",
+        Underline: "GrhFWtBdrSZP611s1UqqT",
+        Strike: "_3pK7sh9FYdigMXxcUVI4DY",
+        Spoiler: "_3kRr4bh8twnlt_7wcEFZr3",
+        Revealed: "_3g1-8c9NBcNDwW4-6x1pM6",
+        SpoilerText: "_3r66KOH_Vckmfps3XUOVrY",
+        DisabledMouseEvents: "_1O62-3Y03GsnA0709QyJ_O",
+        BlockQuote: "_3MQ0Cuf_h-nZ81xIubg8rh",
+        QuoteAuthor: "_1MzmaZcQPMRfrTHs3k0fIZ",
+        PullQuote: "_2kA0eAmv8ifh0zphoq4ntM",
+        Code: "_2ODaX8lO7DKLKke76c2Wya",
+        CodeBlock: "_1I3OP84ayrCIMuBrCrkosi",
+        List: "_3Y-LRoi5aeZ9-3ujWjXuG3",
+        OrderedList: "DojPxwyYpx3hwuPIaJPCq",
+        ListItem: "_1iXxYKOlzzXiVr02E7n2Fe",
+        HR: "-xPK0REpludHjRG8xQfih",
+        Table: "_2CAsiFd9UHbUOqzd0e7ioe",
+        NoBorder: "_1rO4D9vLxJRWz9sW4-ahSY",
+        TableRow: "_3FJk0y6E6I8nSYfCIqGP8",
+        TableData: "_1PCHOM5zSRFfeHzwDmEukB",
+        TableHeader: "_1NpENNz7rvObsTC99AQFda",
+        EqualCells: "_1CtoyG6UPAlYp7PCGLXx8L",
+        ExpandSectionBlock: "_2cmZMzZlRrszDBF97Di0cD",
+        ExpandSectionHeader: "uAvfe31kBh5TZrse069d1",
+        EmbedArrow: "_3tVf4GSoWxEOZrxL_PQ4iA",
+        ExpandSectionBody: "_33CTl_a7XYxFIng-fm4A5K",
+        ExpandSection_WithTitle: "_1dfVJUq9KmDOuhyOZ7lcXv",
+        LinkButton: "_3TN0uESBGJ-kUDPWWX2YWz",
+        Image: "_3K0NuxYUYncdQ-cNK7udMn",
+      };
+    },
+    49693: (e, t, o) => {
+      "use strict";
+      o.d(t, { op: () => r, CS: () => a, vE: () => p, Al: () => i });
+      class l {
+        constructor() {
+          (this.type = 0), (this.text = "");
+        }
+        ConvertMalformedNodeToText() {
+          3 == this.type
+            ? (this.text = "[/" + this.text)
+            : 2 == this.type && (this.text = "[" + this.text),
+            (this.type = 1);
+        }
+      }
+      class i {
+        constructor(e, t) {
+          (this.m_dictComponents = void 0),
+            (this.m_dictComponents = e),
+            (this.m_fnAccumulatorFactory = t);
+        }
+        Parse(e, t, o = !1) {
+          const i = (function (e, t) {
+            const o = [];
+            let i = new l(),
+              a = !1,
+              s = !1,
+              r = !1;
+            for (let l = 0; l < e.length; l++) {
+              const p = e[l];
+              switch (i.type) {
+                case 0:
+                  "[" == p
+                    ? ((i.type = 2), (s = !0))
+                    : ((i.type = 1), "\\" == p && t ? (a = !a) : (i.text += p));
+                  break;
+                case 2:
+                case 3:
+                  if ("/" == p && s) (i.type = 3), (i.text = ""), (s = !1);
+                  else if ("[" != p || a)
+                    if ("]" != p || a)
+                      "\\" == p && t
+                        ? ((i.text += p), (a = !a), (s = !1))
+                        : ((i.text += p), (a = !1), (s = !1));
+                    else {
+                      const e =
+                          2 == i.type &&
+                          "noparse" == i.text.toLocaleLowerCase(),
+                        t =
+                          3 == i.type &&
+                          "noparse" == i.text.toLocaleLowerCase();
+                      s || (r && !t)
+                        ? (i.ConvertMalformedNodeToText(), (i.text += p))
+                        : e
+                          ? (r = !0)
+                          : t && (r = !1),
+                        (i = n(o, i)),
+                        (s = !1);
+                    }
+                  else
+                    i.ConvertMalformedNodeToText(), (i = n(o, i, 2)), (s = !0);
+                  break;
+                case 1:
+                  "[" != p || a
+                    ? "\\" == p && t
+                      ? (a && (i.text += p), (a = !a))
+                      : ((i.text += p), (a = !1))
+                    : ((i = n(o, i, 2)), (s = !0));
+              }
+            }
+            0 != i.type &&
+              ((2 != i.type && 3 != i.type) || i.ConvertMalformedNodeToText(),
+              o.push(i));
+            return o;
+          })(e, o);
+          return this.Parse_BuildElements(i, t);
+        }
+        Parse_BuildElements(e, t) {
+          let o = this.m_fnAccumulatorFactory(void 0);
+          const l = [],
+            i = () => (l.length < 1 ? void 0 : l[l.length - 1]),
+            a = this.m_dictComponents;
+          let s = !1,
+            r = !0;
+          const p = (e, i, p) => {
+            if (
+              e &&
+              e.node.tag === i.text &&
+              (null == a ? void 0 : a.get(e.node.tag))
+            ) {
+              const i = a.get(e.node.tag),
+                p = l.map((e) => e.node.tag),
+                n = { parentTags: p, tagname: e.node.tag, args: e.node.args },
+                d = t(i.Constructor, n, ...o.GetElements());
+              (o = e.accumulator),
+                Array.isArray(d)
+                  ? d.forEach((e) => o.AppendNode(e))
+                  : o.AppendNode(d),
+                (s = !!i.skipFollowingNewline),
+                (r = e.bWrapTextForCopying);
+            } else if (e) {
+              const t = e.accumulator;
+              t.AppendText("[" + e.node.text + "]", !1),
+                o.GetElements().forEach((e) => t.AppendNode(e)),
+                t.AppendText("[/" + i.text + "]", !1),
+                (o = t),
+                (r = e.bWrapTextForCopying);
+            }
+          };
+          for (
+            e.forEach((e, t) => {
+              var n, d, h;
+              if (1 == e.type) {
+                const t = s ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
+                o.AppendText(t, r), (s = !1);
+              } else if (2 == e.type) {
+                const t = null == a ? void 0 : a.get(e.tag);
+                if (t) {
+                  const d = i();
+                  if (void 0 !== d) {
+                    const t = null == a ? void 0 : a.get(d.node.tag);
+                    t &&
+                      t.autocloses &&
+                      e.tag === d.node.tag &&
+                      p(l.pop(), d.node);
+                  }
+                  l.push({ accumulator: o, node: e, bWrapTextForCopying: r }),
+                    (o = this.m_fnAccumulatorFactory(e)),
+                    (s = !!t.skipInternalNewline),
+                    (r =
+                      null !== (n = t.allowWrapTextForCopying) &&
+                      void 0 !== n &&
+                      n);
+                } else o.AppendText("[" + e.text + "]", 0 == l.length);
+              } else if (3 == e.type) {
+                for (
+                  ;
+                  i() &&
+                  i().node.tag !== e.text &&
+                  (null == a ? void 0 : a.get(i().node.tag)) &&
+                  (null === (d = null == a ? void 0 : a.get(i().node.tag)) ||
+                  void 0 === d
+                    ? void 0
+                    : d.autocloses);
+
+                ) {
+                  const e = l.pop();
+                  p(e, e.node);
+                }
+                if (
+                  (null === (h = i()) || void 0 === h ? void 0 : h.node.tag) ==
+                  e.text
+                ) {
+                  const t = l.pop();
+                  p(t, e);
+                } else o.AppendText("[/" + e.text + "]", 0 == l.length);
+              }
+            });
+            l.length > 0;
+
+          ) {
+            const e = l.pop(),
+              t = e.accumulator;
+            t.AppendText("[" + e.node.text + "]", !1),
+              o.GetElements().forEach((e) => t.AppendNode(e)),
+              (o = t);
+          }
+          return o.GetElements();
+        }
+      }
+      function a(e, t) {
+        let o = "[" + e;
+        (null == t ? void 0 : t[""]) && (o += `=${s(t[""])}`);
+        for (const e in t)
+          "" !== e &&
+            (o += ` ${((l = e), l.replace(/(\\| |\])/g, "\\$1"))}=${s(t[e])}`);
+        var l;
+        return (o += "]"), o;
+      }
+      function s(e) {
+        return `"${e.replace(/(\\|"|\])/g, "\\$1")}"`;
+      }
+      function r(e) {
+        return `[/${e}]`;
+      }
+      function p(e) {
+        return e.replace(/(\\|\[)/g, "\\$1");
+      }
+      function n(e, t, o = 0) {
+        if (2 == t.type) {
+          let e = t.text.indexOf("=");
+          const o = t.text.indexOf(" ");
+          if ((-1 != o && (-1 == e || o < e) && (e = o), e > 0)) {
+            t.tag = t.text.substr(0, e).toLocaleLowerCase();
+            const o = t.text.substr(e);
+            t.args = (function (e) {
+              if (!e || e.length < 1) return {};
+              const t = {};
+              let o = "",
+                l = "",
+                i = 0,
+                a = 0;
+              "=" == e[0] && (i = 2);
+              let s = !1;
+              for (a++; a < e.length; a++) {
+                const r = e[a];
+                let p = !0,
+                  n = !1;
+                switch (i) {
+                  case 0:
+                    if ("=" == r) return {};
+                    if (" " == r) continue;
+                    i = 1;
+                    break;
+                  case 1:
+                    ("=" != r && " " != r) ||
+                      s ||
+                      (" " == r ? ((i = 0), (n = !0)) : (i = 2), (p = !1));
+                    break;
+                  case 2:
+                    " " == r
+                      ? ((i = 0), (p = !1), (n = !0))
+                      : '"' == r
+                        ? ((i = 4), (p = !1))
+                        : (i = 3);
+                    break;
+                  case 3:
+                  case 4:
+                    ((" " == r && 4 != i && !s) ||
+                      ('"' == r && 4 == i && !s)) &&
+                      ((i = 0), (p = !1), (n = !0));
+                }
+                if (p)
+                  if ("\\" != r || s)
+                    if (((s = !1), 1 == i)) o += r;
+                    else {
+                      if (3 != i && 4 != i)
+                        throw new Error(
+                          "Not expecting to accumulate buffer in state " + i,
+                        );
+                      l += r;
+                    }
+                  else s = !0;
+                n && ((t[o] = l), (o = ""), (l = ""));
+              }
+              0 != i && (t[o] = l);
+              return t;
+            })(o);
+          } else (t.args = {}), (t.tag = t.text.toLocaleLowerCase());
+        }
+        e.push(t);
+        const i = new l();
+        return (i.type = o), i;
+      }
+    },
+    81393: (e, t, o) => {
+      "use strict";
+      function l(e, t, ...o) {
+        console.assert
+          ? 0 == o.length
+            ? console.assert(!!e, t)
+            : console.assert(!!e, t, ...o)
+          : e || console.warn(t, ...o);
+      }
+      function i(e, t, ...o) {
+        l(!1, t, ...o);
+      }
+      o.d(t, { w: () => l, z: () => i });
+    },
+    67660: (e, t, o) => {
+      "use strict";
+      o.d(t, { i6: () => h, wI: () => f });
+      var l = o(34629),
+        i = o(41735),
         a = o.n(i),
-        s = o(54842),
-        p = o(62210),
-        r = o(31846),
-        d = o(37563);
-      class n {
+        s = o(14947),
+        r = o(44332),
+        p = o(61859),
+        n = o(78327);
+      class d {
         constructor() {
           (this.exportFn = void 0),
             (this.file = void 0),
@@ -24,20 +334,20 @@
             (this.eUploadState = 0),
             (this.uploadProgress = 0),
             (this.strErrorDescription = void 0),
-            (0, s.rC)(this);
+            (0, s.Gn)(this);
         }
       }
-      (0, l.gn)([s.LO], n.prototype, "file", void 0),
-        (0, l.gn)([s.LO], n.prototype, "dataURL", void 0),
-        (0, l.gn)([s.LO], n.prototype, "imageWidth", void 0),
-        (0, l.gn)([s.LO], n.prototype, "imageHeight", void 0),
-        (0, l.gn)([s.LO], n.prototype, "eUploadState", void 0),
-        (0, l.gn)([s.LO], n.prototype, "uploadProgress", void 0),
-        (0, l.gn)([s.LO], n.prototype, "strErrorDescription", void 0);
+      (0, l.Cg)([s.sH], d.prototype, "file", void 0),
+        (0, l.Cg)([s.sH], d.prototype, "dataURL", void 0),
+        (0, l.Cg)([s.sH], d.prototype, "imageWidth", void 0),
+        (0, l.Cg)([s.sH], d.prototype, "imageHeight", void 0),
+        (0, l.Cg)([s.sH], d.prototype, "eUploadState", void 0),
+        (0, l.Cg)([s.sH], d.prototype, "uploadProgress", void 0),
+        (0, l.Cg)([s.sH], d.prototype, "strErrorDescription", void 0);
       class h {
         constructor(e) {
-          (this.m_fileUploadProps = new n()),
-            (0, s.rC)(this),
+          (this.m_fileUploadProps = new d()),
+            (0, s.Gn)(this),
             (this.m_Callbacks = e);
         }
         get file_upload_props() {
@@ -72,7 +382,7 @@
           const { processor: a = m, info: s } = t;
           if (!e) return void this.SetFileToUpload(null);
           this.m_fileUploadProps.fileInfo = s;
-          const p =
+          const r =
             null !==
               (i =
                 null === (l = (o = this.m_Callbacks).GetFileNameOverride) ||
@@ -84,13 +394,13 @@
           if (e.size > 1024 * this.m_Callbacks.GetMaxFileSizeMB() * 1024)
             return void this.SetUploadFileError(
               4,
-              (0, r.Xx)(
+              (0, p.we)(
                 "#Chat_Settings_Error_ChatFileTooLarge_dynamic",
-                p,
+                r,
                 this.m_Callbacks.GetMaxFileSizeMB(),
               ),
             );
-          let d = e.name.split(".").pop().toLowerCase();
+          let n = e.name.split(".").pop().toLowerCase();
           if (
             -1 ==
             [
@@ -103,16 +413,16 @@
               "mp4",
               "mpeg",
               "ogv",
-            ].indexOf(d)
+            ].indexOf(n)
           )
             return void this.SetUploadFileError(
               5,
-              (0, r.Xx)("#Chat_Settings_Error_ChatFileTypeNotSupported", p),
+              (0, p.we)("#Chat_Settings_Error_ChatFileTypeNotSupported", r),
             );
-          const n = await a(e);
-          this.SetFileToUpload(n.file),
-            (this.m_fileUploadProps.imageHeight = n.height),
-            (this.m_fileUploadProps.imageWidth = n.width);
+          const d = await a(e);
+          this.SetFileToUpload(d.file),
+            (this.m_fileUploadProps.imageHeight = d.height),
+            (this.m_fileUploadProps.imageWidth = d.width);
         }
         async SetOtherFileToUpload(e, t = {}) {
           var o, l, i;
@@ -130,7 +440,7 @@
           if (e.size > 1024 * this.m_Callbacks.GetMaxFileSizeMB() * 1024)
             return void this.SetUploadFileError(
               4,
-              (0, r.Xx)(
+              (0, p.we)(
                 "#Chat_Settings_Error_ChatFileTooLarge_dynamic",
                 a,
                 this.m_Callbacks.GetMaxFileSizeMB(),
@@ -141,7 +451,7 @@
             ? this.SetFileToUpload(e)
             : this.SetUploadFileError(
                 5,
-                (0, r.Xx)("#Chat_Settings_Error_ChatFileTypeNotSupported", a),
+                (0, p.we)("#Chat_Settings_Error_ChatFileTypeNotSupported", a),
               );
         }
         SetFileToUpload(e) {
@@ -195,7 +505,7 @@
             this.m_fileUploadProps.eUploadState = 7;
             const { eResult: e, file: t } =
               await this.m_fileUploadProps.exportFn((e) => {
-                (0, s.z)(() => {
+                (0, s.h5)(() => {
                   this.m_fileUploadProps.uploadProgress = 0.5 * e;
                 });
               });
@@ -203,7 +513,7 @@
               return (
                 this.SetUploadFileError(
                   3,
-                  (0, r.Xx)("#Chat_Settings_Error_ExportFailed"),
+                  (0, p.we)("#Chat_Settings_Error_ExportFailed"),
                 ),
                 new Response()
               );
@@ -214,7 +524,7 @@
           let t = this.m_fileUploadProps.file;
           if (!t)
             throw (
-              ((0, p.X)(
+              ((0, r.w)(
                 !1,
                 "Must SetImageFileToUpload before calling BeginFileUpload",
               ),
@@ -223,8 +533,8 @@
           (this.m_fileUploadProps.eUploadState = 2),
             (this.m_fileUploadProps.uploadInfo = e);
           let o = new FormData();
-          o.append("sessionid", d.De.SESSIONID),
-            o.append("l", d.De.LANGUAGE),
+          o.append("sessionid", n.TS.SESSIONID),
+            o.append("l", n.TS.LANGUAGE),
             o.append("file_size", t.size.toString()),
             o.append("file_name", this.m_fileUploadProps.uploadFileName),
             o.append("file_sha", this.m_fileUploadProps.sha1),
@@ -247,7 +557,7 @@
             let e,
               t = await fetch(
                 this.m_Callbacks.GetBeginFileUploadURL() +
-                  `?l=${d.De.LANGUAGE}`,
+                  `?l=${n.TS.LANGUAGE}`,
                 { method: "POST", body: o, credentials: "include" },
               );
             try {
@@ -257,15 +567,15 @@
             if (!t.ok) {
               let o = null;
               throw (
-                ((0, s.z)(() => {
+                ((0, s.h5)(() => {
                   (this.m_fileUploadProps.eUploadState = 3),
                     this.LogFileUploadMessage(t),
                     (o = (null == e ? void 0 : e.message)
                       ? null == e
                         ? void 0
                         : e.message
-                      : (0, r.Xx)("#Chat_Settings_Error_ServerError")),
-                    (this.m_fileUploadProps.strErrorDescription = (0, r.Xx)(
+                      : (0, p.we)("#Chat_Settings_Error_ServerError")),
+                    (this.m_fileUploadProps.strErrorDescription = (0, p.we)(
                       "#Chat_Upload_ErrorStart",
                       o,
                     ));
@@ -279,11 +589,11 @@
               this.DoFileUpload(e.result)
             );
           } catch (e) {
-            let t = e || (0, r.Xx)("#ConnectionTrouble_FailedToConnect");
+            let t = e || (0, p.we)("#ConnectionTrouble_FailedToConnect");
             throw (
-              ((0, s.z)(() => {
+              ((0, s.h5)(() => {
                 (this.m_fileUploadProps.eUploadState = 3),
-                  (this.m_fileUploadProps.strErrorDescription = (0, r.Xx)(
+                  (this.m_fileUploadProps.strErrorDescription = (0, p.we)(
                     "#Chat_Upload_ErrorStart",
                     t,
                   ));
@@ -302,7 +612,7 @@
                 o = t ? 50 : 100,
                 l = (t ? 50 : 0) + (e.loaded / e.total) * o;
               l > this.m_fileUploadProps.uploadProgress &&
-                (0, s.z)(() => {
+                (0, s.h5)(() => {
                   this.m_fileUploadProps.uploadProgress = l;
                 });
             },
@@ -320,8 +630,8 @@
           } catch (t) {
             throw (
               (this.LogFileUploadMessage(t.response),
-              (0, s.z)(() => {
-                (this.m_fileUploadProps.strErrorDescription = (0, r.Xx)(
+              (0, s.h5)(() => {
+                (this.m_fileUploadProps.strErrorDescription = (0, p.we)(
                   "#Chat_Upload_ErrorCloud",
                 )),
                   (this.m_fileUploadProps.eUploadState = 3),
@@ -336,8 +646,8 @@
           let o = this.m_fileUploadProps.file,
             l = this.m_fileUploadProps.sha1,
             i = new FormData();
-          i.append("sessionid", d.De.SESSIONID),
-            i.append("l", d.De.LANGUAGE),
+          i.append("sessionid", n.TS.SESSIONID),
+            i.append("l", n.TS.LANGUAGE),
             i.append("file_name", this.m_fileUploadProps.uploadFileName),
             i.append("file_sha", l),
             i.append("success", e ? "1" : "0"),
@@ -376,7 +686,7 @@
             if (!e) return null;
             let l = null;
             throw (
-              ((0, s.z)(() => {
+              ((0, s.h5)(() => {
                 if (
                   (this.LogFileUploadMessage(t),
                   (this.m_fileUploadProps.uploadProgress = 0),
@@ -387,8 +697,8 @@
                   t.response.status, e && e.success;
                   l = e.message
                     ? e.message
-                    : (0, r.Xx)("#Chat_Settings_Error_ServerError");
-                } else l = (0, r.Xx)("#ConnectionTrouble_FailedToConnect");
+                    : (0, p.we)("#Chat_Settings_Error_ServerError");
+                } else l = (0, p.we)("#ConnectionTrouble_FailedToConnect");
                 (this.m_fileUploadProps.strErrorDescription = `Failed to commit upload: ${l}`),
                   this.m_onComplete && this.m_onComplete(2, o.size);
               }),
@@ -447,38 +757,38 @@
             else if (65498 == s) break;
             (o += t.getUint16(o)), (s = t.getUint16(o)), (o += 2);
           }
-          let p = e.byteLength - l;
+          let r = e.byteLength - l;
           if (
             (i.forEach((e) => {
-              p += e.offset - e.recess;
+              r += e.offset - e.recess;
             }),
-            p === e.byteLength)
+            r === e.byteLength)
           )
             return e;
-          const r = new Uint8Array(p);
+          const p = new Uint8Array(r);
           if (i.length > 0) {
             let t = 0;
             i.forEach((o) => {
               let l = o.offset - o.recess;
-              r.set(new Uint8Array(e.slice(o.recess, o.offset)), t), (t += l);
+              p.set(new Uint8Array(e.slice(o.recess, o.offset)), t), (t += l);
             }),
-              r.set(new Uint8Array(e.slice(l)), t);
+              p.set(new Uint8Array(e.slice(l)), t);
           }
-          return r.buffer;
+          return p.buffer;
         }
         return e;
       }
-      (0, l.gn)([s.aD], h.prototype, "SetUploadFileError", null),
-        (0, l.gn)([s.aD], h.prototype, "StartFileExportToUpload", null),
-        (0, l.gn)([s.aD], h.prototype, "SetImageFileToUpload", null),
-        (0, l.gn)([s.aD], h.prototype, "SetOtherFileToUpload", null),
-        (0, l.gn)([s.aD], h.prototype, "SetFileToUpload", null),
-        (0, l.gn)([s.aD], h.prototype, "RetryFileUpload", null),
-        (0, l.gn)([s.aD], h.prototype, "BeginFileUpload", null),
-        (0, l.gn)([s.aD], h.prototype, "DoFileUpload", null),
-        (0, l.gn)([s.aD], h.prototype, "CommitFileUpload", null),
-        (0, l.gn)([s.aD], h.prototype, "ClearFileUploadError", null),
-        (0, l.gn)([s.aD], h.prototype, "Reset", null);
+      (0, l.Cg)([s.XI], h.prototype, "SetUploadFileError", null),
+        (0, l.Cg)([s.XI], h.prototype, "StartFileExportToUpload", null),
+        (0, l.Cg)([s.XI], h.prototype, "SetImageFileToUpload", null),
+        (0, l.Cg)([s.XI], h.prototype, "SetOtherFileToUpload", null),
+        (0, l.Cg)([s.XI], h.prototype, "SetFileToUpload", null),
+        (0, l.Cg)([s.XI], h.prototype, "RetryFileUpload", null),
+        (0, l.Cg)([s.XI], h.prototype, "BeginFileUpload", null),
+        (0, l.Cg)([s.XI], h.prototype, "DoFileUpload", null),
+        (0, l.Cg)([s.XI], h.prototype, "CommitFileUpload", null),
+        (0, l.Cg)([s.XI], h.prototype, "ClearFileUploadError", null),
+        (0, l.Cg)([s.XI], h.prototype, "Reset", null);
     },
   },
 ]);

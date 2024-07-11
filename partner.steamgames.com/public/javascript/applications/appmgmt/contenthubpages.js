@@ -2,9 +2,9 @@
  ****/
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [5706],
+  [3025],
   {
-    25307: function (e, t) {
+    40323: function (e, t) {
       var r, i, n;
       /* @license
 Papa Parse
@@ -30,9 +30,9 @@ License: MIT
               parse: function (r, i) {
                 var o = (i = i || {}).dynamicTyping || !1;
                 if (
-                  (E(o) && ((i.dynamicTypingFunction = o), (o = {})),
+                  (b(o) && ((i.dynamicTypingFunction = o), (o = {})),
                   (i.dynamicTyping = o),
-                  (i.transform = !!E(i.transform) && i.transform),
+                  (i.transform = !!b(i.transform) && i.transform),
                   i.worker && a.WORKERS_SUPPORTED)
                 ) {
                   var u = (function () {
@@ -62,10 +62,10 @@ License: MIT
                     (u.userChunk = i.chunk),
                     (u.userComplete = i.complete),
                     (u.userError = i.error),
-                    (i.step = E(i.step)),
-                    (i.chunk = E(i.chunk)),
-                    (i.complete = E(i.complete)),
-                    (i.error = E(i.error)),
+                    (i.step = b(i.step)),
+                    (i.chunk = b(i.chunk)),
+                    (i.complete = b(i.complete)),
+                    (i.error = b(i.error)),
                     delete i.worker,
                     void u.postMessage({ input: r, config: i, workerId: u.id })
                   );
@@ -78,7 +78,7 @@ License: MIT
                         return 65279 === e.charCodeAt(0) ? e.slice(1) : e;
                       })(r)),
                       (c = i.download ? new h(i) : new d(i)))
-                    : !0 === r.readable && E(r.read) && E(r.on)
+                    : !0 === r.readable && b(r.read) && b(r.on)
                       ? (c = new l(i))
                       : ((t.File && r instanceof File) ||
                           r instanceof Object) &&
@@ -274,7 +274,7 @@ License: MIT
                     n,
                     u,
                     h = i[0];
-                  if (E(e.before)) {
+                  if (b(e.before)) {
                     var f = e.before(h.file, h.inputElem);
                     if ("object" == typeof f) {
                       if ("abort" === f.action)
@@ -283,7 +283,7 @@ License: MIT
                           (r = h.file),
                           (n = h.inputElem),
                           (u = f.reason),
-                          void (E(e.error) && e.error({ name: t }, r, n, u))
+                          void (b(e.error) && e.error({ name: t }, r, n, u))
                         );
                       if ("skip" === f.action) return void s();
                       "object" == typeof f.config &&
@@ -295,10 +295,10 @@ License: MIT
                   }
                   var d = h.instanceConfig.complete;
                   (h.instanceConfig.complete = function (e) {
-                    E(d) && d(e, h.file, h.inputElem), s();
+                    b(d) && d(e, h.file, h.inputElem), s();
                   }),
                     a.parse(h.file, h.instanceConfig);
-                } else E(e.complete) && e.complete();
+                } else b(e.complete) && e.complete();
               }
               function s() {
                 i.splice(0, 1), n();
@@ -326,7 +326,7 @@ License: MIT
                   ((this._handle.streamer = this)._config = t);
               }.call(this, e),
               (this.parseChunk = function (e, r) {
-                if (this.isFirstChunk && E(this._config.beforeFirstChunk)) {
+                if (this.isFirstChunk && b(this._config.beforeFirstChunk)) {
                   var n = this._config.beforeFirstChunk(e);
                   void 0 !== n && (e = n);
                 }
@@ -350,7 +350,7 @@ License: MIT
                       workerId: a.WORKER_ID,
                       finished: h,
                     });
-                  else if (E(this._config.chunk) && !r) {
+                  else if (b(this._config.chunk) && !r) {
                     if (
                       (this._config.chunk(o, this._handle),
                       this._handle.paused() || this._handle.aborted())
@@ -368,7 +368,7 @@ License: MIT
                       (this._completeResults.meta = o.meta)),
                     this._completed ||
                       !h ||
-                      !E(this._config.complete) ||
+                      !b(this._config.complete) ||
                       (o && o.meta.aborted) ||
                       (this._config.complete(
                         this._completeResults,
@@ -382,7 +382,7 @@ License: MIT
                 this._halted = !0;
               }),
               (this._sendError = function (e) {
-                E(this._config.error)
+                b(this._config.error)
                   ? this._config.error(e)
                   : i &&
                     this._config.error &&
@@ -597,12 +597,12 @@ License: MIT
               c = !1,
               m = [],
               _ = { data: [], errors: [], meta: {} };
-            if (E(e.step)) {
+            if (b(e.step)) {
               var y = e.step;
               e.step = function (t) {
-                if (((_ = t), w())) b();
+                if (((_ = t), w())) E();
                 else {
-                  if ((b(), 0 === _.data.length)) return;
+                  if ((E(), 0 === _.data.length)) return;
                   (f += t.data.length),
                     e.preview && f > e.preview
                       ? r.abort()
@@ -615,11 +615,11 @@ License: MIT
                 ? "" === t.join("").trim()
                 : 1 === t.length && 0 === t[0].length;
             }
-            function b() {
+            function E() {
               return (
                 _ &&
                   i &&
-                  (C(
+                  (R(
                     "Delimiter",
                     "UndetectableDelimiter",
                     "Unable to auto-detect delimiting character; defaulted to '" +
@@ -640,7 +640,7 @@ License: MIT
                         _.data.splice(0, 1);
                       } else _.data.forEach(r);
                     function r(t, r) {
-                      E(e.transformHeader) && (t = e.transformHeader(t, r)),
+                      b(e.transformHeader) && (t = e.transformHeader(t, r)),
                         m.push(t);
                     }
                   })(),
@@ -655,7 +655,7 @@ License: MIT
                         a = t[i];
                       e.header && (s = i >= m.length ? "__parsed_extra" : m[i]),
                         e.transform && (a = e.transform(a, s)),
-                        (a = R(s, a)),
+                        (a = C(s, a)),
                         "__parsed_extra" === s
                           ? ((n[s] = n[s] || []), n[s].push(a))
                           : (n[s] = a);
@@ -663,7 +663,7 @@ License: MIT
                     return (
                       e.header &&
                         (i > m.length
-                          ? C(
+                          ? R(
                               "FieldMismatch",
                               "TooManyFields",
                               "Too many fields: expected " +
@@ -673,7 +673,7 @@ License: MIT
                               d + r,
                             )
                           : i < m.length &&
-                            C(
+                            R(
                               "FieldMismatch",
                               "TooFewFields",
                               "Too few fields: expected " +
@@ -700,7 +700,7 @@ License: MIT
             function w() {
               return e.header && 0 === m.length;
             }
-            function R(t, r) {
+            function C(t, r) {
               return (
                 (i = t),
                 e.dynamicTypingFunction &&
@@ -728,7 +728,7 @@ License: MIT
               );
               var i;
             }
-            function C(e, t, r, i) {
+            function R(e, t, r, i) {
               var n = { type: e, code: t, message: r };
               void 0 !== i && (n.row = i), _.errors.push(n);
             }
@@ -750,7 +750,7 @@ License: MIT
                 (i = !1),
                 e.delimiter)
               )
-                E(e.delimiter) &&
+                b(e.delimiter) &&
                   ((e.delimiter = e.delimiter(n)),
                   (_.meta.delimiter = e.delimiter));
               else {
@@ -807,7 +807,7 @@ License: MIT
                 (t = n),
                 (r = new g(f)),
                 (_ = r.parse(t, s, o)),
-                b(),
+                E(),
                 l ? { meta: { paused: !0 } } : _ || { meta: { paused: !1 } }
               );
             }),
@@ -817,7 +817,7 @@ License: MIT
               (this.pause = function () {
                 (l = !0),
                   r.abort(),
-                  (t = E(e.chunk) ? "" : t.substring(r.getCharIndex()));
+                  (t = b(e.chunk) ? "" : t.substring(r.getCharIndex()));
               }),
               (this.resume = function () {
                 h.streamer._halted
@@ -831,7 +831,7 @@ License: MIT
                 (c = !0),
                   r.abort(),
                   (_.meta.aborted = !0),
-                  E(e.complete) && e.complete(_),
+                  b(e.complete) && e.complete(_),
                   (t = "");
               });
           }
@@ -871,113 +871,113 @@ License: MIT
                 m = r.length,
                 _ = i.length,
                 y = n.length,
-                v = E(s),
+                v = b(s),
                 k = [],
-                b = [],
+                E = [],
                 w = [],
-                R = (f = 0);
-              if (!a) return H();
+                C = (f = 0);
+              if (!a) return Q();
               if (e.header && !l) {
-                var C = a.split(i)[0].split(r),
-                  A = [],
-                  S = {},
-                  O = !1;
-                for (var x in C) {
-                  var I = C[x];
-                  E(e.transformHeader) && (I = e.transformHeader(I, x));
+                var R = a.split(i)[0].split(r),
+                  S = [],
+                  O = {},
+                  x = !1;
+                for (var A in R) {
+                  var I = R[A];
+                  b(e.transformHeader) && (I = e.transformHeader(I, A));
                   var T = I,
-                    D = S[I] || 0;
+                    D = O[I] || 0;
                   for (
-                    0 < D && ((O = !0), (T = I + "_" + D)), S[I] = D + 1;
-                    A.includes(T);
+                    0 < D && ((x = !0), (T = I + "_" + D)), O[I] = D + 1;
+                    S.includes(T);
 
                   )
                     T = T + "_" + D;
-                  A.push(T);
+                  S.push(T);
                 }
-                if (O) {
+                if (x) {
                   var L = a.split(i);
-                  (L[0] = A.join(r)), (a = L.join(i));
+                  (L[0] = S.join(r)), (a = L.join(i));
                 }
               }
               if (u || (!1 !== u && -1 === a.indexOf(t))) {
                 for (var F = a.split(i), j = 0; j < F.length; j++) {
                   if (((w = F[j]), (f += w.length), j !== F.length - 1))
                     f += i.length;
-                  else if (c) return H();
+                  else if (c) return Q();
                   if (!n || w.substring(0, y) !== n) {
                     if (v) {
-                      if (((k = []), B(w.split(r)), J(), d)) return H();
+                      if (((k = []), B(w.split(r)), J(), d)) return Q();
                     } else B(w.split(r));
-                    if (o && o <= j) return (k = k.slice(0, o)), H(!0);
+                    if (o && o <= j) return (k = k.slice(0, o)), Q(!0);
                   }
                 }
-                return H();
+                return Q();
               }
               for (
                 var z = a.indexOf(r, f),
-                  U = a.indexOf(i, f),
-                  M = new RegExp(p(h) + p(t), "g"),
-                  P = a.indexOf(t, f);
+                  M = a.indexOf(i, f),
+                  q = new RegExp(p(h) + p(t), "g"),
+                  U = a.indexOf(t, f);
                 ;
 
               )
                 if (a[f] !== t)
                   if (n && 0 === w.length && a.substring(f, f + y) === n) {
-                    if (-1 === U) return H();
-                    (f = U + _), (U = a.indexOf(i, f)), (z = a.indexOf(r, f));
-                  } else if (-1 !== z && (z < U || -1 === U))
+                    if (-1 === M) return Q();
+                    (f = M + _), (M = a.indexOf(i, f)), (z = a.indexOf(r, f));
+                  } else if (-1 !== z && (z < M || -1 === M))
                     w.push(a.substring(f, z)),
                       (f = z + m),
                       (z = a.indexOf(r, f));
                   else {
-                    if (-1 === U) break;
-                    if ((w.push(a.substring(f, U)), K(U + _), v && (J(), d)))
-                      return H();
-                    if (o && k.length >= o) return H(!0);
+                    if (-1 === M) break;
+                    if ((w.push(a.substring(f, M)), W(M + _), v && (J(), d)))
+                      return Q();
+                    if (o && k.length >= o) return Q(!0);
                   }
                 else
-                  for (P = f, f++; ; ) {
-                    if (-1 === (P = a.indexOf(t, P + 1)))
+                  for (U = f, f++; ; ) {
+                    if (-1 === (U = a.indexOf(t, U + 1)))
                       return (
                         c ||
-                          b.push({
+                          E.push({
                             type: "Quotes",
                             code: "MissingQuotes",
                             message: "Quoted field unterminated",
                             row: k.length,
                             index: f,
                           }),
-                        G()
+                        K()
                       );
-                    if (P === g - 1) return G(a.substring(f, P).replace(M, t));
-                    if (t !== h || a[P + 1] !== h) {
-                      if (t === h || 0 === P || a[P - 1] !== h) {
-                        -1 !== z && z < P + 1 && (z = a.indexOf(r, P + 1)),
-                          -1 !== U && U < P + 1 && (U = a.indexOf(i, P + 1));
-                        var N = q(-1 === U ? z : Math.min(z, U));
-                        if (a.substr(P + 1 + N, m) === r) {
-                          w.push(a.substring(f, P).replace(M, t)),
-                            a[(f = P + 1 + N + m)] !== t &&
-                              (P = a.indexOf(t, f)),
+                    if (U === g - 1) return K(a.substring(f, U).replace(q, t));
+                    if (t !== h || a[U + 1] !== h) {
+                      if (t === h || 0 === U || a[U - 1] !== h) {
+                        -1 !== z && z < U + 1 && (z = a.indexOf(r, U + 1)),
+                          -1 !== M && M < U + 1 && (M = a.indexOf(i, U + 1));
+                        var P = H(-1 === M ? z : Math.min(z, M));
+                        if (a.substr(U + 1 + P, m) === r) {
+                          w.push(a.substring(f, U).replace(q, t)),
+                            a[(f = U + 1 + P + m)] !== t &&
+                              (U = a.indexOf(t, f)),
                             (z = a.indexOf(r, f)),
-                            (U = a.indexOf(i, f));
+                            (M = a.indexOf(i, f));
                           break;
                         }
-                        var W = q(U);
-                        if (a.substring(P + 1 + W, P + 1 + W + _) === i) {
+                        var N = H(M);
+                        if (a.substring(U + 1 + N, U + 1 + N + _) === i) {
                           if (
-                            (w.push(a.substring(f, P).replace(M, t)),
-                            K(P + 1 + W + _),
+                            (w.push(a.substring(f, U).replace(q, t)),
+                            W(U + 1 + N + _),
                             (z = a.indexOf(r, f)),
-                            (P = a.indexOf(t, f)),
+                            (U = a.indexOf(t, f)),
                             v && (J(), d))
                           )
-                            return H();
-                          if (o && k.length >= o) return H(!0);
+                            return Q();
+                          if (o && k.length >= o) return Q(!0);
                           break;
                         }
-                        b.push({
+                        E.push({
                           type: "Quotes",
                           code: "InvalidQuotes",
                           message:
@@ -985,23 +985,23 @@ License: MIT
                           row: k.length,
                           index: f,
                         }),
-                          P++;
+                          U++;
                       }
-                    } else P++;
+                    } else U++;
                   }
-              return G();
+              return K();
               function B(e) {
-                k.push(e), (R = f);
+                k.push(e), (C = f);
               }
-              function q(e) {
+              function H(e) {
                 var t = 0;
                 if (-1 !== e) {
-                  var r = a.substring(P + 1, e);
+                  var r = a.substring(U + 1, e);
                   r && "" === r.trim() && (t = r.length);
                 }
                 return t;
               }
-              function G(e) {
+              function K(e) {
                 return (
                   c ||
                     (void 0 === e && (e = a.substring(f)),
@@ -1009,27 +1009,27 @@ License: MIT
                     (f = g),
                     B(w),
                     v && J()),
-                  H()
+                  Q()
                 );
               }
-              function K(e) {
-                (f = e), B(w), (w = []), (U = a.indexOf(i, f));
+              function W(e) {
+                (f = e), B(w), (w = []), (M = a.indexOf(i, f));
               }
-              function H(e) {
+              function Q(e) {
                 return {
                   data: k,
-                  errors: b,
+                  errors: E,
                   meta: {
                     delimiter: r,
                     linebreak: i,
                     aborted: d,
                     truncated: !!e,
-                    cursor: R + (l || 0),
+                    cursor: C + (l || 0),
                   },
                 };
               }
               function J() {
-                s(H()), (k = []), (b = []);
+                s(Q()), (k = []), (E = []);
               }
             }),
               (this.abort = function () {
@@ -1057,7 +1057,7 @@ License: MIT
                 pause: y,
                 resume: y,
               };
-              if (E(r.userStep)) {
+              if (b(r.userStep)) {
                 for (
                   var a = 0;
                   a < t.results.data.length &&
@@ -1074,14 +1074,14 @@ License: MIT
                 );
                 delete t.results;
               } else
-                E(r.userChunk) &&
+                b(r.userChunk) &&
                   (r.userChunk(t.results, s, t.file), delete t.results);
             }
             t.finished && !i && _(t.workerId, t.results);
           }
           function _(e, t) {
             var r = n[e];
-            E(r.userComplete) && r.userComplete(t), r.terminate(), delete n[e];
+            b(r.userComplete) && r.userComplete(t), r.terminate(), delete n[e];
           }
           function y() {
             throw new Error("Not implemented.");
@@ -1097,7 +1097,7 @@ License: MIT
               e.apply(t, arguments);
             };
           }
-          function E(e) {
+          function b(e) {
             return "function" == typeof e;
           }
           return (
@@ -1136,45 +1136,39 @@ License: MIT
         void 0 === (n = "function" == typeof r ? r.apply(t, i) : r) ||
           (e.exports = n);
     },
-    14720: (e, t, r) => {
+    80159: (e, t, r) => {
       "use strict";
       r.r(t), r.d(t, { ContentHubRoutes: () => l, default: () => c });
-      var i = r(47427),
-        n = r(69406),
-        s = r(28017),
-        a = r(8285),
-        o = r(69155),
-        u = r(31846);
+      var i = r(90626),
+        n = r(97058),
+        s = r(17083),
+        a = r(92757),
+        o = r(562),
+        u = r(61859);
       function h(e) {
-        return i.createElement(a.NL, {
-          message: (e) => !(0, o.c6)() || (0, u.Xx)("#Generel_Discard_Warning"),
+        return i.createElement(a.XG, {
+          message: (e) => !(0, o.tV)() || (0, u.we)("#Generel_Discard_Warning"),
         });
       }
-      var f = r(760),
-        d = r(89721);
+      var f = r(43527),
+        d = r(65213);
       const l = { ContentHubCategories: () => "/categories/" };
       function c(e) {
         return i.createElement(
-          s.VK,
-          { basename: (0, f.l)() + "admin/store/contenthub/" },
+          s.Kd,
+          { basename: (0, f.C)() + "admin/store/contenthub/" },
           i.createElement(h, null),
           i.createElement(
-            a.rs,
+            a.dO,
             null,
-            i.createElement(a.AW, {
+            i.createElement(a.qh, {
               path: l.ContentHubCategories(),
-              component: d.Z,
+              component: d.A,
             }),
-            i.createElement(a.AW, { component: n.R }),
+            i.createElement(a.qh, { component: n.a }),
           ),
         );
       }
-    },
-    36595: (e, t, r) => {
-      "use strict";
-      r.d(t, { Z: () => i });
-      const i =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAcJJREFUeNqkUz1PAkEQfStggjESejU0GozlGqn8SGywkYIYY0IsaLCwIBTQUN5fMLGm8S8QSWwslVAYjAlUBEJDhCgWwp3nzN6eHqIVl8zN7rx5b+dm9oRt25jlmcOMj59f10JAkPcBcXIGWdECyqYn6TfGdZ9S9d4K4gQYx4WCtJzE+G/sKJudwpQABUGnGSf5vKzX60jmctL8SYzz+iCdls1mEzuplMIsLSC4iSUh1ClUlpHIZGStVkM0GsVNqVRlIJZIyG63i1AohMdKpUrZRQqXz4j7LWA7VSiR/WRSNhsNRRgOh+i02wgGg3hrtRSZelLmI6cExs7nKJGVtTX50uupMn0+H157PUWmZpYDXLoWUFPo6MC87jivx4MBFtxOWZYS11VipNdT98DWDVsPh2XQNLFIMdc4xpg9OZ3JMdIpRowSXVKt36+yuXvGxn+N0XS+3zj0kG+JSPEi261H5FCLmN9lUyNWyZ+Qag54eA6Hbfa8j1A88g+2qrlqCkKIZdovbAG7m8D5E3B5D9xR7IPsk/u7DextABd14OrBwd6J23YFligQ0IPwXE7lbedXUAPya5yHMiLuq5j1d/4SYAAj3NATBGE4PgAAAABJRU5ErkJggg==";
     },
   },
 ]);

@@ -1,86 +1,86 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
-  [2822],
+  [2974],
   {
-    6514: (e) => {
+    20978: (e) => {
       e.exports = {
-        LoadingWrapper: "_3Z36hMlC0g5rhADc86JeV8",
-        Static: "kwzRJNhtPiQO0D4Wn0PLU",
-        none: "_2iT5lTDKhbxllUncFnJhS0",
-        bottomCircle: "_3-sjxBwrq1aRP-xn0Pwx37",
-        noString: "M4pF_ij_g5aN0m2FqZc7u",
-        Throbber: "_7MdwTzlZhzNS1NzYBn7Sk",
-        throbber_small: "_29-XTCJVnFYwvPS6oJ6liL",
-        throbber_medium: "_1yqSoIPxWwEa9VRtAQdhdy",
-        throbber_large: "_1u2tLqxQCBluyLGN_QvmRf",
-        throbber_center_wrapper: "Yi4EMhptGPt8XWnnnT_nC",
-        ThrobberText: "_1ZlvfuG4Q4e9GfTYNuNI5b",
-        blur: "_3ebLcY6yz7RZRSTq7EK5Lo",
-        ThrobberRoundLoop: "_3SEk8c3qDYTigYcVaGHzE8",
-        roundOuterOutline: "_3M8ArwlB5FKwDNDos_gbXp",
-        roundOuter: "_3H7At8KqRfv4ttYb4hHZmf",
-        roundFill: "_2FWWtb-RoV2eWwZb_2ZPr-",
-        ThrobberFillLoop: "_1-rlbGjslOZcEUwLtOMFS5",
-        topCircle: "_3znUFhu51nKns1e7TS-OBI",
-        circlePulse: "_1oQUOQrI5F662TJKj8jekS",
-        ThrobberTopCircleLoop: "_3oqZEXhIGxrXv-k0LZdnuL",
-        ThrobberBottomCircleLoop: "_3veQroNYTh9QYnoChKR3i1",
-        roundThrobber15: "_1gQteFwGxkIYjnc1R4AL_t",
-        roundThrobber14: "_3DXeREA7bfuQHY6ZAO5R7z",
-        roundThrobber13: "_5VEyIcKdWadQBWrX_4GCB",
-        roundThrobber12: "wOdFmL5yGGcFtnTeTPuAN",
-        roundThrobber11: "_3JmyzD1dUjgGEcteE8b03N",
-        roundThrobber10: "_3QwXntItGtkPzHCFTKc5On",
-        roundThrobber09: "_2Yhvqy6YdHoDKOcEV54b81",
-        roundThrobber08: "_3HcIUW0RNk5mvnktXyklQD",
-        roundThrobber07: "_2fn3JdojytIMXkgwwLUB",
-        roundThrobber06: "_2gCCIKg5sL-lL99W0oqlJ6",
-        roundThrobber05: "_1SrtWs_sS-Wy3tdC3r9KPR",
-        roundThrobber04: "_2P5xsTUWq0FH2XucpPH7p",
-        roundThrobber03: "_3zYDaDqGDHQ_1O4RQC5I9V",
-        roundThrobber02: "_2_KYJ4u1lx7hqumdoEPrUC",
-        roundThrobber01: "_3N41HATXmBYltNBZ9VLB5N",
-        ThrobberRoundLoopThickness: "_1wAwc7KLLRgbm44_3xm4ie",
-        throbber_xlarge: "_2jzZM2psF7_vBjlIDursjn",
-        throbber_xxlarge: "_1DFOT-9kxLv8eKb1pLdpgs",
-        ThrobberDelayAppear: "_34XSshkALVD06dF8SeeOq",
-        Visible: "_1ziaTBu8AaZL6yQ50_GkKQ",
-        NewThrobber: "tAKvsRBaqaemRb6OJSM0o",
+        LoadingWrapper: "_2wAKy-0ZkO_vhbiQCP9MgE",
+        Static: "_1QfwpLmLTSuiIRLDzdY_7l",
+        none: "_1F0lzP-Krz_y5P9ewZEvBD",
+        bottomCircle: "_2qjZm0dB7I6lcRkZhNTqvD",
+        noString: "_1Sy0pXVZOdWbgouFyD2zJj",
+        Throbber: "lYUEjD8Qh3GM_ZrZeLwpI",
+        throbber_small: "_2zbyh5jEDlV5HVD3iUve-k",
+        throbber_medium: "_2CphUsHNDgIWItNIzeIldY",
+        throbber_large: "_1x18vR7Qop8v8_G8qSR6CL",
+        throbber_center_wrapper: "_3IYPzqtvB2ZE7x710d5x2C",
+        ThrobberText: "_21nVi2jNuF_prxLY1mAaKK",
+        blur: "_1ctjA2yjeB21eCDj_r1mVz",
+        ThrobberRoundLoop: "_1O-cWE6nuIVO3x6-Onw0IU",
+        roundOuterOutline: "_1Vv--mA6PueyEKXXMTwljt",
+        roundOuter: "_2K0LzwjOXDopMHoqY_v_CO",
+        roundFill: "_3sQFkavAEPhliH6DiFmHRH",
+        ThrobberFillLoop: "ofdi9VLSRZ5W98WsXVHiq",
+        topCircle: "_1LZffuoDq-N25wNHckxsf",
+        circlePulse: "_1XN6ZJ1l8nVoUxp1WnOBqw",
+        ThrobberTopCircleLoop: "_1jALk36CiS_T9Pg7vBjpIQ",
+        ThrobberBottomCircleLoop: "_1KvOgdKiNE9XuSYUau3hKW",
+        roundThrobber15: "_2LGHpu_-ihfOhQwdfR3Kiy",
+        roundThrobber14: "_2FGCneH2AemMrIrZnZskw_",
+        roundThrobber13: "_1X-5j16jaQntVrZfadibyc",
+        roundThrobber12: "_1pj1Q3Ef4FdHDdl9QEtpxp",
+        roundThrobber11: "xFmZaMe5nZpoTc5PQBKn3",
+        roundThrobber10: "_3MGYowzMQ6TwbH3fu9SVjt",
+        roundThrobber09: "ktVJ42jiVhWEVV9O6z2FK",
+        roundThrobber08: "_3s_7my869lIOj-1vnqJ39y",
+        roundThrobber07: "_11MVp53Me_frOuaJfsQ4FE",
+        roundThrobber06: "_2cl-maglen-RF0YQjShgqG",
+        roundThrobber05: "_3-JE0FpIzECzeqtd5cyjGI",
+        roundThrobber04: "_1xNIKvHdzLhBldONo6yIZs",
+        roundThrobber03: "_1S17yicfcrPc11m83ydGp3",
+        roundThrobber02: "_1-oUJqmCLOoGqVJz5dgj6J",
+        roundThrobber01: "_2tXgejjqNKy6cSX1Lv7PrG",
+        ThrobberRoundLoopThickness: "_1fs4RGcMBRzbQQirDBiFoM",
+        throbber_xlarge: "_1gYeZMYKBDqNpVuw58_LCl",
+        throbber_xxlarge: "_3j-p4JOqdpaF4obGtIeAB",
+        ThrobberDelayAppear: "I3aEq3lbK7Pm8ujENvtri",
+        Visible: "_2SwSJd-DlX2dRiDGxZWHI5",
+        NewThrobber: "_1m8iQOSVziKDHiInrfskv_",
       };
     },
-    29459: (e, t, r) => {
+    42248: (e, r, t) => {
       "use strict";
-      r.d(t, { J: () => l });
-      var c = r(37563),
-        o = r(77936);
+      t.d(r, { q: () => l });
+      var c = t(78327),
+        o = t(22837);
       function l() {
-        return c.De.IN_CLIENT && (0, o.px)(c.De.LAUNCHER_TYPE);
+        return c.TS.IN_CLIENT && (0, o.DO)(c.TS.LAUNCHER_TYPE);
       }
     },
-    46882: (e, t, r) => {
+    22797: (e, r, t) => {
       "use strict";
-      r.d(t, { V: () => i });
-      var c = r(47427),
-        o = r(13129),
-        l = r(6514),
-        s = r.n(l);
-      const n =
-        r.p +
+      t.d(r, { t: () => n });
+      var c = t(90626),
+        o = t(52038),
+        l = t(20978),
+        s = t.n(l);
+      const i =
+        t.p +
         "images/applications/community/steam_spinner.png?v=valveisgoodatcaching";
-      var a = r(29459);
-      const i = c.memo(function (e) {
+      var a = t(42248);
+      const n = c.memo(function (e) {
         const {
-          className: t,
-          size: r,
+          className: r,
+          size: t,
           string: l,
-          position: i,
+          position: n,
           static: b,
           msDelayAppear: m,
         } = e;
-        let h = [s().LoadingWrapper, "SteamLogoThrobber", f(r)];
+        let h = [s().LoadingWrapper, "SteamLogoThrobber", f(t)];
         const [u, d] = c.useState(!m),
-          p = !(0, a.J)();
+          p = !(0, a.q)();
         return (
           (0, c.useEffect)(() => {
             if (u) return;
@@ -88,13 +88,13 @@
             return () => clearTimeout(e);
           }, [m, u]),
           void 0 === l && h.push(s().noString),
-          t && h.push(t),
+          r && h.push(r),
           b && h.push(s().Static),
           c.createElement(
             "div",
             {
-              className: (0, o.Z)(
-                "center" == i && s().throbber_center_wrapper,
+              className: (0, o.A)(
+                "center" == n && s().throbber_center_wrapper,
                 m && s().ThrobberDelayAppear,
                 u && s().Visible,
               ),
@@ -107,7 +107,7 @@
                 c.createElement(
                   "div",
                   { className: s().NewThrobber },
-                  c.createElement("img", { src: n }),
+                  c.createElement("img", { src: i }),
                 ),
               ),
             Boolean(l) &&
@@ -117,30 +117,30 @@
       });
       c.memo(function (e) {
         const {
-          className: t,
-          size: r,
+          className: r,
+          size: t,
           string: l,
-          position: n,
+          position: i,
           static: a,
-          msDelayAppear: i,
+          msDelayAppear: n,
         } = e;
-        let m = [s().LoadingWrapper, "SteamLogoThrobber", f(r)];
-        const [h, u] = c.useState(!i);
+        let m = [s().LoadingWrapper, "SteamLogoThrobber", f(t)];
+        const [h, u] = c.useState(!n);
         return (
           (0, c.useEffect)(() => {
             if (h) return;
-            const e = setTimeout(() => u(!0), i);
+            const e = setTimeout(() => u(!0), n);
             return () => clearTimeout(e);
-          }, [i, h]),
+          }, [n, h]),
           void 0 === l && m.push(s().noString),
-          t && m.push(t),
+          r && m.push(r),
           a && m.push(s().Static),
           c.createElement(
             "div",
             {
-              className: (0, o.Z)(
-                "center" == n && s().throbber_center_wrapper,
-                i && s().ThrobberDelayAppear,
+              className: (0, o.A)(
+                "center" == i && s().throbber_center_wrapper,
+                n && s().ThrobberDelayAppear,
                 h && s().Visible,
               ),
             },
@@ -175,16 +175,16 @@
         }
       }
       function b(e) {
-        let t = "SVGIcon_Button SVGIcon_Throbber ";
+        let r = "SVGIcon_Button SVGIcon_Throbber ";
         return (
-          e.className && (t += e.className),
+          e.className && (r += e.className),
           c.createElement(
             "svg",
             {
               version: "1.1",
               id: "base",
               xmlns: "http://www.w3.org/2000/svg",
-              className: t,
+              className: r,
               x: "0px",
               y: "0px",
               width: "256px",

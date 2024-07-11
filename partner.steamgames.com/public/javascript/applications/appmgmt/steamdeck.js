@@ -3,12 +3,12 @@
 "use strict";
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [6699],
+  [4226],
   {
-    2157: (r, s, e) => {
+    34044: (r, s, e) => {
       e.r(s), e.d(s, { default: () => n });
-      var o = e(47427),
-        t = e(7222);
+      var o = e(90626),
+        t = e(78116);
       function n(r) {
         const { dataprops: s, results: e } = r;
         let n = null;
@@ -27,11 +27,11 @@
         return n ? o.createElement(t.default, { results: n }) : null;
       }
     },
-    16649: (r, s, e) => {
-      e.d(s, { l: () => a });
-      var o = e(80751),
+    68797: (r, s, e) => {
+      e.d(s, { H: () => a });
+      var o = e(41735),
         t = e.n(o),
-        n = e(79545);
+        n = e(56545);
       function a(r) {
         if (t().isCancel(r))
           return { strErrorMsg: "Action Cancelled:" + r, errorCode: 52 };
@@ -86,7 +86,7 @@
               console.warn(r),
               console.groupEnd();
           else {
-            if ("object" == typeof r && r instanceof n.gA)
+            if ("object" == typeof r && r instanceof n.w)
               return {
                 strErrorMsg: "" + r.GetErrorMessage(),
                 errorCode: r.GetEResult(),

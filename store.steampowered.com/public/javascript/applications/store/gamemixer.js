@@ -1,9 +1,9 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [1501],
+  [3236],
   {
-    47643: (e) => {
+    34842: (e) => {
       e.exports = {
         smallentrywidth: "600px",
         optionswrapwidth: "777px",
@@ -34,22 +34,22 @@
         Selected: "_3Xj5n6rpZvxSYAZ0OZFylh",
       };
     },
-    80212: (e, t, n) => {
+    82477: (e, t, n) => {
       "use strict";
-      n.d(t, { Xt: () => d, _I: () => I, hx: () => p });
-      var a = n(47427),
-        r = n(90069),
-        s = n(31846),
-        i = n(37563),
-        c = n(99327),
-        l = n(22791),
-        o = n(35791),
-        m = n(27438);
+      n.d(t, { Cg: () => p, pZ: () => I, vg: () => d });
+      var a = n(90626),
+        r = n(738),
+        s = n(61859),
+        i = n(78327),
+        c = n(97436),
+        l = n(72034),
+        o = n(28240),
+        m = n(44325);
       function u(e) {
         return a.createElement(
-          r.e1,
+          r.x_,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          a.createElement(x, {
+          a.createElement(f, {
             redirectURL: e.redirectURL,
             guestOption: e.guestOption,
           }),
@@ -58,73 +58,73 @@
       function p(e) {
         const { redirectURL: t = window.location.href } = e;
         return a.createElement(
-          m.Yy,
+          m.EN,
           { active: !0 },
           a.createElement(u, { redirectURL: t }),
         );
       }
       function d() {
-        (0, r.AM)(
+        (0, r.pg)(
           a.createElement(u, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: (0, s.Xx)("#Login_SignInTitle") },
+          { strTitle: (0, s.we)("#Login_SignInTitle") },
         );
       }
       function I(e, t) {
-        (0, r.AM)(
+        (0, r.pg)(
           a.createElement(u, {
             ownerWin: window,
             redirectURL: e,
             guestOption: t,
           }),
           window,
-          { strTitle: (0, s.Xx)("#Login_SignInTitle") },
+          { strTitle: (0, s.we)("#Login_SignInTitle") },
         );
       }
-      function x(e) {
+      function f(e) {
         const { redirectURL: t, guestOption: n } = e,
           [r] = (0, a.useState)(
-            new l.J(i.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+            new l.D(i.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
           [s, m] = (0, a.useState)(!1);
         return a.createElement(
           "div",
           null,
           s
-            ? a.createElement(c.pT, null)
+            ? a.createElement(c.Fn, null)
             : a.createElement(
-                c.wK,
+                c.YN,
                 {
                   autoFocus: !0,
                   transport: r,
                   platform: 2,
                   onComplete: (e) => {
-                    e == o.TG.k_PrimaryDomainFail
+                    e == o.wI.k_PrimaryDomainFail
                       ? m(!0)
                       : window.location.assign(t);
                   },
                   redirectUrl: t,
                   theme: "modal",
                 },
-                n && a.createElement(c.bU, { redirectURL: t }),
+                n && a.createElement(c.Mk, { redirectURL: t }),
               ),
         );
       }
     },
-    19044: (e, t, n) => {
+    21820: (e, t, n) => {
       "use strict";
       n.r(t), n.d(t, { default: () => P });
-      var a = n(80751),
+      var a = n(41735),
         r = n.n(a),
-        s = n(37563),
-        i = n(42718);
+        s = n(78327),
+        i = n(31380);
       async function c(e) {
-        let t = { accountid: e, sessionid: s.De.SESSIONID };
+        let t = { accountid: e, sessionid: s.TS.SESSIONID };
         const n = (
-          await r().get(`${s.De.STORE_BASE_URL}gamemixer/uservalues`, {
+          await r().get(`${s.TS.STORE_BASE_URL}gamemixer/uservalues`, {
             params: t,
             withCredentials: !0,
             timeout: 1e4,
@@ -134,9 +134,9 @@
         throw "Failed FetchUserValues";
       }
       async function l(e) {
-        let t = { appid: e, sessionid: s.De.SESSIONID };
+        let t = { appid: e, sessionid: s.TS.SESSIONID };
         const n = (
-          await r().get(`${s.De.STORE_BASE_URL}gamemixer/appvalues`, {
+          await r().get(`${s.TS.STORE_BASE_URL}gamemixer/appvalues`, {
             params: t,
             withCredentials: !0,
             timeout: 1e4,
@@ -150,9 +150,9 @@
           ["GameMixerAppInfo", e],
           () =>
             (async function (e) {
-              let t = { appid: e, sessionid: s.De.SESSIONID };
+              let t = { appid: e, sessionid: s.TS.SESSIONID };
               const n = (
-                await r().get(`${s.De.STORE_BASE_URL}gamemixer/details`, {
+                await r().get(`${s.TS.STORE_BASE_URL}gamemixer/details`, {
                   params: t,
                   withCredentials: !0,
                   timeout: 1e4,
@@ -164,39 +164,39 @@
           { staleTime: 1 / 0 },
         );
       }
-      var m = n(47427),
-        u = n(1485),
-        p = n(80212),
-        d = n(25006),
-        I = n(13129),
-        x = n(31846),
-        f = n(47643),
-        D = n(40057),
-        E = n(79545),
-        y = n(44922),
-        S = n(80998);
+      var m = n(90626),
+        u = n(7068),
+        p = n(82477),
+        d = n(32630),
+        I = n(52038),
+        f = n(61859),
+        x = n(34842),
+        E = n(78205),
+        S = n(56545),
+        g = n(94601),
+        y = n(72839);
       const h = (e) => {
           const t = (function (e) {
-              const t = (0, D.bY)(),
+              const t = (0, E.KV)(),
                 n = ["GameMixerSearchSuggestions", e];
               return (0, i.useQuery)(n, {
                 queryFn: async () => {
                   if (e.length < 2) return [];
-                  const a = E.gA.Init(y.yk);
+                  const a = S.w.Init(g.pI);
                   a.Body().set_query_name(JSON.stringify(n)),
                     a.Body().set_search_term(e),
-                    (0, S.pA)(a),
-                    (0, S.De)(a, {
+                    (0, y.rV)(a),
+                    (0, y.Bn)(a, {
                       include_basic_info: !0,
                       include_assets: !0,
                     }),
-                    (0, S.Gk)(a, {
+                    (0, y.hc)(a, {
                       type_filters: { include_games: !0 },
                       price_filters: { only_free_items: !1 },
                     }),
                     a.Body().set_max_results(10),
                     a.Body().set_use_spellcheck(!0);
-                  let r = await y.Ax.SearchSuggestions(t, a);
+                  let r = await g.Fs.SearchSuggestions(t, a);
                   return r.BSuccess()
                     ? r
                         .Body()
@@ -224,31 +224,31 @@
             }, [n, t.data]),
             m.createElement(
               "div",
-              { className: f.AppSelectorResults },
+              { className: x.AppSelectorResults },
               t.data?.map((t, n) =>
                 m.createElement(
                   "div",
                   {
                     key: t.appid,
-                    className: (0, I.Z)(
-                      f.Result,
-                      n == e.nSelectedResult && f.Selected,
+                    className: (0, I.A)(
+                      x.Result,
+                      n == e.nSelectedResult && x.Selected,
                     ),
                     onClick: () => e.fnClickApp(t.appid),
                   },
                   m.createElement("div", {
-                    className: f.Logo,
+                    className: x.Logo,
                     style: {
-                      backgroundImage: `url( ${s.De.STORE_ICON_BASE_URL}${t.appid}/capsule_231x87.jpg )`,
+                      backgroundImage: `url( ${s.TS.STORE_ICON_BASE_URL}${t.appid}/capsule_231x87.jpg )`,
                     },
                   }),
-                  m.createElement("div", { className: f.RightSide }, t.name),
+                  m.createElement("div", { className: x.RightSide }, t.name),
                 ),
               ),
             )
           );
         },
-        g = (e) => {
+        A = (e) => {
           const [t, n] = m.useState(""),
             [a, r] = m.useState(0),
             [s, i] = m.useState(!1),
@@ -261,15 +261,15 @@
           const d = () => {
               Date.now() - p.current < 300 || (l(0), u([]), i(!0));
             },
-            x = (t) => {
+            f = (t) => {
               e.fnSelectAppID(t), n(""), l(0), u([]), r(Date.now()), i(!1);
             };
           return m.createElement(
             "div",
-            { className: f.AppSelector },
+            { className: x.AppSelector },
             m.createElement("input", {
               type: "text",
-              className: (0, I.Z)(f.ValueInput),
+              className: (0, I.A)(x.ValueInput),
               value: t,
               onChange: (e) => {
                 var a;
@@ -286,7 +286,7 @@
                       l(Math.max(0, c - 1));
                       break;
                     case "Enter":
-                      x(o[c]);
+                      f(o[c]);
                   }
                 })(e.key),
             }),
@@ -295,14 +295,14 @@
                 strSearch: t,
                 nSelectedResult: c,
                 fnSetResultApps: u,
-                fnClickApp: x,
+                fnClickApp: f,
               }),
           );
         };
-      var A;
+      var D;
       !(function (e) {
         (e[(e.AppID = 0)] = "AppID"), (e[(e.AccountID = 1)] = "AccountID");
-      })(A || (A = {}));
+      })(D || (D = {}));
       const _ = (e) => {
           const [t, n] = m.useState(e.mixItem.nPercent);
           m.useEffect(() => {
@@ -312,9 +312,9 @@
             r = a.data ? a.data.name : "";
           return m.createElement(
             "div",
-            { className: f.MixedItemControl },
-            m.createElement(u.DS, {
-              className: f.MixerSlider,
+            { className: x.MixedItemControl },
+            m.createElement(u.Kc, {
+              className: x.MixerSlider,
               label: r,
               min: 1,
               max: 99,
@@ -334,7 +334,7 @@
             m.createElement(
               "div",
               {
-                className: f.Remove,
+                className: x.Remove,
                 onClick: () => {
                   e.removeMixItem({
                     eType: e.mixItem.eType,
@@ -354,9 +354,9 @@
           }, [e.mixItem.nPercent]);
           return m.createElement(
             "div",
-            { className: f.MixedItemControl },
-            m.createElement(u.DS, {
-              className: f.MixerSlider,
+            { className: x.MixedItemControl },
+            m.createElement(u.Kc, {
+              className: x.MixerSlider,
               label: `Account ${e.mixItem.nID}`,
               min: 1,
               max: 99,
@@ -375,7 +375,7 @@
             }),
           );
         },
-        M = (e) => {
+        T = (e) => {
           const [t, n] = m.useState(""),
             a = (t) => {
               let n = [],
@@ -418,14 +418,14 @@
             };
           return m.createElement(
             "div",
-            { className: f.MixerControls },
+            { className: x.MixerControls },
             e.arrMixItems.length > 0 &&
               m.createElement(
                 "div",
-                { className: f.MixedItemList },
+                { className: x.MixedItemList },
                 e.arrMixItems.map((t) => {
                   switch (t.eType) {
-                    case A.AccountID:
+                    case D.AccountID:
                       return m.createElement(w, {
                         key: `${t.eType}_${t.nID}`,
                         mixItem: t,
@@ -433,7 +433,7 @@
                         removeMixItem: a,
                         bLocked: 1 == e.arrMixItems.length,
                       });
-                    case A.AppID:
+                    case D.AppID:
                       return m.createElement(_, {
                         key: `${t.eType}_${t.nID}`,
                         mixItem: t,
@@ -446,17 +446,17 @@
               ),
             m.createElement(
               "div",
-              { className: f.Buttons },
+              { className: x.Buttons },
               m.createElement(
                 "div",
-                { className: f.AddContainer },
-                m.createElement("div", { className: f.InputLabel }, "Add App"),
-                m.createElement(g, {
+                { className: x.AddContainer },
+                m.createElement("div", { className: x.InputLabel }, "Add App"),
+                m.createElement(A, {
                   fnSelectAppID: (t) =>
                     ((t) => {
                       if (0 == t) return;
                       const n = 100 / (e.arrMixItems.length + 1);
-                      let a = { eType: A.AppID, nID: t, nPercent: n },
+                      let a = { eType: D.AppID, nID: t, nPercent: n },
                         r = [];
                       for (const t of e.arrMixItems)
                         r.push({
@@ -470,15 +470,15 @@
               ),
               m.createElement(
                 "div",
-                { className: f.AddContainer },
+                { className: x.AddContainer },
                 m.createElement(
                   "div",
-                  { className: f.InputLabel },
+                  { className: x.InputLabel },
                   "Add AccountID",
                 ),
                 m.createElement("input", {
                   type: "text",
-                  className: (0, I.Z)(f.ValueInput),
+                  className: (0, I.A)(x.ValueInput),
                   value: t,
                   onChange: (e) => n(e.target.value),
                   onKeyDown: (a) =>
@@ -486,7 +486,7 @@
                       if ("Enter" != a || isNaN(Number(t))) return;
                       const r = 100 / (e.arrMixItems.length + 1);
                       let s = {
-                          eType: A.AccountID,
+                          eType: D.AccountID,
                           nID: parseInt(t),
                           nPercent: r,
                         },
@@ -501,12 +501,12 @@
                     })(a.key),
                 }),
               ),
-              m.createElement(T, {
+              m.createElement(N, {
                 nValue: e.nPopularity,
                 setValue: e.setPopularity,
                 strName: "Popularity",
               }),
-              m.createElement(T, {
+              m.createElement(N, {
                 nValue: e.nFocus,
                 setValue: e.setFocus,
                 strName: "Focus",
@@ -520,30 +520,30 @@
           return m.createElement(
             "a",
             {
-              className: f.MixedResultApp,
-              href: `${s.De.STORE_BASE_URL}app/${e.nAppID}`,
+              className: x.MixedResultApp,
+              href: `${s.TS.STORE_BASE_URL}app/${e.nAppID}`,
               onMouseEnter: () => {},
               onMouseLeave: () => {},
             },
             m.createElement("div", {
-              className: f.Logo,
+              className: x.Logo,
               style: {
-                backgroundImage: `url( ${s.De.STORE_ICON_BASE_URL}${e.nAppID}/header.jpg )`,
+                backgroundImage: `url( ${s.TS.STORE_ICON_BASE_URL}${e.nAppID}/header.jpg )`,
               },
             }),
             m.createElement(
               "div",
-              { className: f.RightSide },
-              m.createElement("div", { className: f.AppName }, t.data.name),
+              { className: x.RightSide },
+              m.createElement("div", { className: x.AppName }, t.data.name),
               m.createElement(
                 "div",
-                { className: f.Distance },
+                { className: x.Distance },
                 Number(e.fDistance).toFixed(2),
               ),
             ),
           );
         },
-        N = (e) => {
+        M = (e) => {
           const [t, n] = m.useState([]),
             [a, i] = m.useState([]);
           return (
@@ -552,10 +552,10 @@
                 let t = [];
                 for (const n of e.arrMixItems)
                   switch (n.eType) {
-                    case A.AppID:
+                    case D.AppID:
                       t.push(l(n.nID));
                       break;
-                    case A.AccountID:
+                    case D.AccountID:
                       t.push(c(n.nID));
                   }
                 n(await Promise.all(t));
@@ -575,10 +575,10 @@
                       values: e.join(","),
                       popularity: t,
                       focus: n,
-                      sessionid: s.De.SESSIONID,
+                      sessionid: s.TS.SESSIONID,
                     };
                     const i = (
-                      await r().get(`${s.De.STORE_BASE_URL}gamemixer/nearest`, {
+                      await r().get(`${s.TS.STORE_BASE_URL}gamemixer/nearest`, {
                         params: a,
                         withCredentials: !0,
                         timeout: 1e4,
@@ -596,7 +596,7 @@
             }, [t, e.nPopularity, e.arrMixItems, e.nFocus]),
             m.createElement(
               "div",
-              { className: f.MixerResults },
+              { className: x.MixerResults },
               a?.length > 0 &&
                 a.map((e) =>
                   m.createElement(v, {
@@ -608,14 +608,14 @@
             )
           );
         },
-        T = (e) => {
+        N = (e) => {
           const [t, n] = m.useState(e.nValue);
           return (
             m.useEffect(() => {
               n(e.nValue);
             }, [e.nValue]),
-            m.createElement(u.DS, {
-              className: (0, I.Z)(f.MixerSlider, f.PopularitySlider),
+            m.createElement(u.Kc, {
+              className: (0, I.A)(x.MixerSlider, x.PopularitySlider),
               label: e.strName,
               min: 1,
               max: 100,
@@ -629,9 +629,9 @@
           const [e, t] = m.useState([]),
             [n, a] = m.useState(1),
             [r, i] = m.useState(1);
-          return s.L7.logged_in
+          return s.iA.logged_in
             ? m.createElement(
-                d.ZP,
+                d.Ay,
                 {
                   controller: "gamemixer",
                   method: "default",
@@ -639,8 +639,8 @@
                 },
                 m.createElement(
                   "div",
-                  { className: f.App },
-                  m.createElement(M, {
+                  { className: x.App },
+                  m.createElement(T, {
                     arrMixItems: e,
                     setMixItems: t,
                     nPopularity: n,
@@ -648,7 +648,7 @@
                     nFocus: r,
                     setFocus: i,
                   }),
-                  m.createElement(N, {
+                  m.createElement(M, {
                     arrMixItems: e,
                     nPopularity: n,
                     nFocus: r,
@@ -657,25 +657,25 @@
               )
             : m.createElement(
                 "div",
-                { className: f.App },
+                { className: x.App },
                 m.createElement(
                   "div",
-                  { className: f.Login },
+                  { className: x.Login },
                   m.createElement(
                     "div",
-                    { className: f.Text },
-                    (0, x.Xx)("#LoginText"),
+                    { className: x.Text },
+                    (0, f.we)("#LoginText"),
                   ),
                   m.createElement(
                     "div",
                     {
-                      className: (0, I.Z)(
+                      className: (0, I.A)(
                         "btn_green_white_innerfade",
                         " btn_medium",
                       ),
-                      onClick: p.Xt,
+                      onClick: p.vg,
                     },
-                    m.createElement("span", null, (0, x.Xx)("#LoginButton")),
+                    m.createElement("span", null, (0, f.we)("#LoginButton")),
                   ),
                 ),
               );
