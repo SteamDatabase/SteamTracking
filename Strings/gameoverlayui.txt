@@ -7853,8 +7853,8 @@ Steam pid that launched us
 VGUI_Application_001
 OK
 Cancel
-Jul  2 2024
-15:39:05
+Jul 10 2024
+14:10:42
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -8028,7 +8028,6 @@ Timeout waiting on input stream for a frame
 Overlay disable requested by game
 Overlay enable requested by game
 WM_ACTIVATE received before BasePanel() knows about the game ID
-steamui/sounds/recording_highlight.wav
 Unhandled serialized input msg(%d)
 Error in the serialized input stream! clearing remaining stream, which may lose events
 Last %d input commands (most recent first):
@@ -10935,7 +10934,6 @@ Dec
 -
 -
 -
--
 0
 Ic]
 -
@@ -10962,8 +10960,10 @@ Ic]
 "
 "
 "
+j
 E9u
 j
+-,
 j
 j
 j
@@ -10987,7 +10987,6 @@ j
 j
 j
 d
-5!
 0
 0
 AT=
@@ -10998,6 +10997,7 @@ AT=
 D
 @
 @
+!
 !
 !
 @
@@ -11110,6 +11110,7 @@ B
 0
 @
 p
+!
 >
 0
 >
@@ -11192,6 +11193,8 @@ j
 j
 j
 A+M
+
+w
 j
 j
 j
@@ -11209,6 +11212,7 @@ j
 j
 j
 j
+
 
 L
 0
@@ -11348,6 +11352,7 @@ j
 j
 j
 j
+
 j
 j
 j
@@ -11480,7 +11485,6 @@ j
 d
 k
 d
-Hc
 
 =
 @

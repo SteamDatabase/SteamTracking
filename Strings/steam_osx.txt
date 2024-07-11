@@ -165,7 +165,6 @@ s(
 5
 T(
 M(
-_8
 (
 ](
 
@@ -182,8 +181,10 @@ D
 @
 @
 3
-r7
+7
 W1
+[7
+R7
 @
 Hc
 Hc
@@ -2442,15 +2443,16 @@ ReLaunchCmdLine
 ClientLauncherType
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
-Startup - updater built Jul  2 2024 15:38:54
+Startup - updater built Jul 10 2024 14:10:31
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
 Failed to load cached hosts file (%s), using defaults
-cdn.steamstatic.com
-/client/
+client-update.akamai.steamstatic.com
+/
 baked in
 media.st.dl.eccdnx.com
+/client/
 cdn.beta.steampowered.com
 Using the following download hosts for %s, Realm %s
 %d. http%s://%s, %s, Realm '%s', weight was %d, source = '%s'
@@ -2468,7 +2470,6 @@ s
 -simulatefatalerror
 Forcing a fatal error
 -overridepackageurl
-/
 %s/
 https:
 Changing client beta flag from '%s' (beta file) to '%s' (command-line override)
@@ -2733,8 +2734,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Jul  2 2024
-15:38:55
+Jul 10 2024
+14:10:32
 crashhandler004
 steam
 Steam Executable Crash
@@ -2831,7 +2832,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-15:38:53
+14:10:29
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10957,7 +10958,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-15:36:26
+14:07:03
 Jan
 Feb
 Mar
@@ -13439,7 +13440,6 @@ s(
 5
 T(
 M(
-_8
 (
 ](
 
@@ -13456,8 +13456,10 @@ D
 @
 @
 3
-r7
+7
 W1
+[7
+R7
 @
 Hc
 Hc
@@ -13497,12 +13499,12 @@ IcE
 1
 7
 V
-!6
 0
 0
 0
 0
 =
+}5
 =/
 /
 =
@@ -13512,6 +13514,7 @@ V
 @"
 !
 @
+i3
 -
 ;
 @
@@ -13519,16 +13522,17 @@ V
 &
 ,
 ,
+2
 G+
-Y1
+1
 +
-1
-1
-1
 5
+30
 *
 *
+$0
 0
+12
 w)
 8
 8
@@ -13571,7 +13575,6 @@ AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
 `
 `
 @
-t-
 j
 j
 Pj
@@ -13897,14 +13900,12 @@ j
 j
 j
 j
-x)
+})
 j
 j
 
 e$
 t$I;M
-n'
-S'
 )
 )
 '
@@ -13915,7 +13916,6 @@ W
 ,7~5d
 H
 0
-c#
 
 "
 "
@@ -13931,6 +13931,7 @@ c#
 Hc
 L)5+Q(
 L95 M(
+W
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
@@ -14248,7 +14249,7 @@ E
 0
 Hc
 0
-v
+b
 0
 @
 @
@@ -14256,7 +14257,9 @@ v
 &
 @
 @
+^
 @
+
 
 
 =h2

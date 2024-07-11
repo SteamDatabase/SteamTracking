@@ -43,6 +43,11 @@ enum EThumbnailTimePrecision {
 	k_eLoose = 1;
 }
 
+enum EThumbnailFormat {
+	k_eJPEG = 1;
+	k_eRGB = 2;
+}
+
 message CGameRecording_GetActiveTimelineApps_Request {
 }
 
@@ -131,6 +136,7 @@ message CTimelineEntry {
 
 message CGameRecording_TimelineEntryChanged_Notification {
 	optional .CTimelineEntry entry = 1;
+	optional fixed64 game_id = 2;
 }
 
 message CGameRecording_LowDiskSpace_Notification {
@@ -199,6 +205,16 @@ message CGameRecording_ExportClip_Request {
 }
 
 message CGameRecording_ExportClip_Response {
+}
+
+message CGameRecording_TakeScreenshot_Request {
+	optional fixed64 game_id = 1;
+	optional string timeline_id = 2;
+	optional uint64 timeline_offset_ms = 3;
+}
+
+message CGameRecording_TakeScreenshot_Response {
+	optional fixed64 screenshot_id = 1;
 }
 
 message CGameRecording_UploadClipToSteam_Request {
@@ -291,6 +307,7 @@ message CGameRecording_GetThumbnails_Request {
 	repeated int64 start_offset_us = 4;
 	optional uint32 major_axis = 5 [default = 512];
 	optional .EThumbnailTimePrecision time_precision = 6 [default = k_ePrecise];
+	optional .EThumbnailFormat format = 8 [default = k_eJPEG];
 }
 
 message CGameRecording_GetThumbnails_Response {
@@ -423,6 +440,7 @@ service GameRecording {
 	rpc GetClips (.CGameRecording_GetClips_Request) returns (.CGameRecording_GetClips_Response);
 	rpc UploadClipToSteam (.CGameRecording_UploadClipToSteam_Request) returns (.CGameRecording_UploadClipToSteam_Response);
 	rpc ExportClip (.CGameRecording_ExportClip_Request) returns (.CGameRecording_ExportClip_Response);
+	rpc TakeScreenshot (.CGameRecording_TakeScreenshot_Request) returns (.CGameRecording_TakeScreenshot_Response);
 	rpc ZipClip (.CGameRecording_ZipClip_Request) returns (.CGameRecording_ZipClip_Response);
 	rpc StartRecording (.CGameRecording_StartRecording_Request) returns (.CGameRecording_StartRecording_Response);
 	rpc StopRecording (.CGameRecording_StopRecording_Request) returns (.CGameRecording_StopRecording_Response);

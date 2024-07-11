@@ -456,6 +456,7 @@
  T SDL_GetAssertionHandler
  T SDL_GetAssertionReport
  T SDL_GetAudioDeviceFormat
+ T SDL_GetAudioDeviceGain
  T SDL_GetAudioDeviceName
  T SDL_GetAudioDriver
  T SDL_GetAudioPlaybackDevices
@@ -465,6 +466,7 @@
  T SDL_GetAudioStreamDevice
  T SDL_GetAudioStreamFormat
  T SDL_GetAudioStreamFrequencyRatio
+ T SDL_GetAudioStreamGain
  T SDL_GetAudioStreamProperties
  T SDL_GetAudioStreamQueued
  T SDL_GetBasePath
@@ -499,6 +501,7 @@
  T SDL_GetDefaultAssertionHandler
  T SDL_GetDefaultCursor
  T SDL_GetDefaultKeyFromScancode
+ T SDL_GetDefaultScancodeFromKey
  T SDL_GetDesktopDisplayMode
  T SDL_GetDisplayBounds
  T SDL_GetDisplayContentScale
@@ -681,6 +684,7 @@
  T SDL_GetRenderDrawColorFloat
  T SDL_GetRenderDriver
  T SDL_GetRenderLogicalPresentation
+ T SDL_GetRenderLogicalPresentationRect
  T SDL_GetRenderMetalCommandEncoder
  T SDL_GetRenderMetalLayer
  T SDL_GetRenderOutputSize
@@ -725,6 +729,7 @@
  T SDL_GetSystemRAM
  T SDL_GetSystemTheme
  T SDL_GetTLS
+ T SDL_GetTextInputArea
  T SDL_GetTextureAlphaMod
  T SDL_GetTextureAlphaModFloat
  T SDL_GetTextureBlendMode
@@ -768,6 +773,7 @@
  T SDL_GetWindowSurface
  T SDL_GetWindowSurfaceVSync
  T SDL_GetWindowTitle
+ T SDL_GetWindows
  T SDL_GlobDirectory
  T SDL_GlobStorageDirectory
  T SDL_HapticEffectSupported
@@ -924,7 +930,6 @@
  T SDL_RenderFillRects
  T SDL_RenderGeometry
  T SDL_RenderGeometryRaw
- T SDL_RenderGeometryRawFloat
  T SDL_RenderLine
  T SDL_RenderLines
  T SDL_RenderPoint
@@ -961,9 +966,11 @@
  T SDL_SendJoystickEffect
  T SDL_SendJoystickVirtualSensorData
  T SDL_SetAssertionHandler
+ T SDL_SetAudioDeviceGain
  T SDL_SetAudioPostmixCallback
  T SDL_SetAudioStreamFormat
  T SDL_SetAudioStreamFrequencyRatio
+ T SDL_SetAudioStreamGain
  T SDL_SetAudioStreamGetCallback
  T SDL_SetAudioStreamPutCallback
  T SDL_SetBooleanProperty
@@ -1014,6 +1021,7 @@
  T SDL_SetRenderTarget
  T SDL_SetRenderVSync
  T SDL_SetRenderViewport
+ T SDL_SetScancodeName
  T SDL_SetStringProperty
  T SDL_SetSurfaceAlphaMod
  T SDL_SetSurfaceBlendMode
@@ -1024,7 +1032,7 @@
  T SDL_SetSurfacePalette
  T SDL_SetSurfaceRLE
  T SDL_SetTLS
- T SDL_SetTextInputRect
+ T SDL_SetTextInputArea
  T SDL_SetTextureAlphaMod
  T SDL_SetTextureAlphaModFloat
  T SDL_SetTextureBlendMode
@@ -1040,7 +1048,6 @@
  T SDL_SetWindowFullscreenMode
  T SDL_SetWindowHitTest
  T SDL_SetWindowIcon
- T SDL_SetWindowInputFocus
  T SDL_SetWindowKeyboardGrab
  T SDL_SetWindowMaximumSize
  T SDL_SetWindowMinimumSize
@@ -1066,6 +1073,7 @@
  T SDL_SignalCondition
  T SDL_SoftStretch
  T SDL_StartTextInput
+ T SDL_StepUTF8
  T SDL_StopHapticEffect
  T SDL_StopHapticEffects
  T SDL_StopHapticRumble
@@ -1084,6 +1092,7 @@
  T SDL_TryLockRWLockForWriting
  T SDL_TryLockSpinlock
  T SDL_TryWaitSemaphore
+ T SDL_UCS4ToUTF8
  T SDL_UnbindAudioStream
  T SDL_UnbindAudioStreams
  T SDL_UnloadObject
@@ -1204,7 +1213,11 @@
  T SDL_iscntrl
  T SDL_isdigit
  T SDL_isgraph
+ T SDL_isinf
+ T SDL_isinff
  T SDL_islower
+ T SDL_isnan
+ T SDL_isnanf
  T SDL_isprint
  T SDL_ispunct
  T SDL_isspace
@@ -1231,9 +1244,12 @@
  T SDL_powf
  T SDL_qsort
  T SDL_qsort_r
+ T SDL_rand
  T SDL_rand_bits
- T SDL_rand_float
- T SDL_rand_n
+ T SDL_rand_bits_r
+ T SDL_rand_r
+ T SDL_randf
+ T SDL_randf_r
  T SDL_realloc
  T SDL_round
  T SDL_roundf

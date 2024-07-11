@@ -169,6 +169,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/modmanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/remoteplaycontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/remotesteamapp.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/screenshotcontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/serverbrowsercontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/settingscontroller.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/settingscontroller.h

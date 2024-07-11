@@ -11,6 +11,7 @@
  .objc_class_name_NSObject
  .objc_class_name_NSOpenGLContext
  .objc_class_name_NSOpenGLView
+ .objc_class_name_NSScreen
  .objc_class_name_NSString
  .objc_class_name_NSThread
  CFAllocatorAllocate
@@ -85,6 +86,7 @@
  OBJC_CLASS_$_NSObject
  OBJC_CLASS_$_NSOpenGLContext
  OBJC_CLASS_$_NSOpenGLView
+ OBJC_CLASS_$_NSScreen
  OBJC_CLASS_$_NSString
  OBJC_CLASS_$_NSThread
  OBJC_CLASS_$_RPScreenRecorder

@@ -1,15 +1,17 @@
 X
 __TEXT
-@(
-@(
+(
+(
 __text
 __TEXT
+@|
+@|
 __stubs
 __TEXT
 __stub_helper
 __TEXT
-hb"
-hb"
+(5"
+(5"
 __cstring
 __TEXT
 __gcc_except_tab__TEXT
@@ -20,14 +22,16 @@ __TEXT
 __unwind_info
 __TEXT
 __DATA
-@(
-@(
+(
+(
 __nl_symbol_ptr
 __DATA
-@(
-@(
+(
+(
 __got
 __DATA
+(
+(
 __la_symbol_ptr
 __DATA
 __mod_init_func
@@ -37,11 +41,17 @@ __DATA
 __cfstring
 __DATA
 __objc_imageinfo__DATA
+Pf0
+Pf0
 __objc_selrefs
 __DATA
+Xf0
+Xf0
 __objc_classrefs__DATA
 __data
 __DATA
+0g0
+0g0
 __thread_vars
 __DATA
 0
@@ -54,17 +64,13 @@ __bss
 __DATA
 __common
 __DATA
-Y1
 H
 __LINKEDIT
-@1
 
 8
 @loader_path/friendsui.dylib
 "
-@1
 0#
-8%
 P
 
 *
@@ -96,9 +102,7 @@ h
 8
 /usr/lib/libobjc.A.dylib
 &
-pH
 )
-@(2
 22CJSCallbackFunc_HTMLJS
 15CJSCallbackFunc
 11CRefCountedI20CRefCountServiceBaseILb1E6CRefMTEE
@@ -622,25 +626,6 @@ N21CRemotePlayController47CCallbackInternal_OnCheckStreamingDriverSupportE
 10CUtlVectorI26RemotePlayControllerSlot_t10CUtlMemoryIS0_EE
 10CUtlMemoryI26RemotePlayControllerSlot_tE
 12CAutoReleaseI15CJSCallbackFuncE
-21CScreenshotController
-20CJSMethodCallHandlerI21CScreenshotControllerJ9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI21CScreenshotControllerJii9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI21CScreenshotControllerJi9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI21CScreenshotControllerJj9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI21CScreenshotControllerJ7CGameIDj9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI21CScreenshotControllerJ7CGameIDji9CSmartPtrI18CJSCallbackPromiseEEE
-20CJSMethodCallHandlerI21CScreenshotControllerJ7CGameIDEE
-20CJSMethodCallHandlerI21CScreenshotControllerJ7CGameIDjEE
-20CJSMethodCallHandlerI21CScreenshotControllerJPKc9CSmartPtrI18CJSCallbackPromiseEEE
-NSt3__110__function6__funcIZN21CScreenshotController21UploadLocalScreenshotE7CGameIDji9CSmartPtrI18CJSCallbackPromiseEE3$_0NS_9allocatorIS7_EEFvP25ScreenshotBatchComplete_tbS6_EEE
-NSt3__110__function6__baseIFvP25ScreenshotBatchComplete_tb9CSmartPtrI18CJSCallbackPromiseEEEE
-ZN21CScreenshotController21UploadLocalScreenshotE7CGameIDji9CSmartPtrI18CJSCallbackPromiseEE3$_0
-21CAPICallResultPromiseI25ScreenshotBatchComplete_tE
-NSt3__110__function6__funcIPFvP25ScreenshotBatchComplete_tb9CSmartPtrI18CJSCallbackPromiseEENS_9allocatorIS8_EES7_EE
-PFvP25ScreenshotBatchComplete_tb9CSmartPtrI18CJSCallbackPromiseEE
-FvP25ScreenshotBatchComplete_tb9CSmartPtrI18CJSCallbackPromiseEE
-NSt3__110__function6__funcIZN21CScreenshotController21DeleteLocalScreenshotE7CGameIDj9CSmartPtrI18CJSCallbackPromiseEE3$_1NS_9allocatorIS7_EEFvP25ScreenshotBatchComplete_tbS6_EEE
-ZN21CScreenshotController21DeleteLocalScreenshotE7CGameIDj9CSmartPtrI18CJSCallbackPromiseEE3$_1
 27CSharedConnectionController
 N27CSharedConnectionController24CCallback_OnMessageReadyE
 9CCallbackI27CSharedConnectionController30SharedConnectionMessageReady_tLb0EE
@@ -2394,11 +2379,9 @@ true
 %f
 result
 message
-reply
 m_vecFuncs
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/html_jstypes.cpp
 Duplicate property %s in object
-ulValue < ((uint64)1 << 53)
 %lld
 %llu
 m_Memory
@@ -2723,39 +2706,6 @@ RemotePlay.InstallAudioDriver
 RemotePlay.GetClientID
 Element( i )
 m_pObj
-screenshots/%s
-nAppID
-strGameID
-hHandle
-nWidth
-nHeight
-nCreated
-ePrivacy
-strCaption
-bSpoilers
-strUrl
-bUploaded
-ugcHandle
-publishedFileID
-open
-m_strScreenshotFolder
-Screenshots.GetLastScreenshotTaken
-Screenshots.GetAllLocalScreenshots
-Screenshots.GetAllAppsLocalScreenshots
-Screenshots.GetAllAppsLocalScreenshotsCount
-Screenshots.GetAllAppsLocalScreenshotsRange
-Screenshots.GetNumGamesWithLocalScreenshots
-Screenshots.GetGameWithLocalScreenshots
-Screenshots.GetLocalScreenshotCount
-Screenshots.GetLocalScreenshotByHandle
-Screenshots.UploadLocalScreenshot
-Screenshots.DeleteLocalScreenshot
-Screenshots.ShowScreenshotsOnDisk
-Screenshots.ShowScreenshotInSystemViewer
-Screenshots.GetTotalDiskSpaceUsage
-Screenshots.GetLocalScreenshotPath
-Failed: IO failure
-Failed: invalid callback parameter
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamUI/sharedconnectioncontroller.cpp
 pConnection->m_mapWaitingCalls.IsValidIndex( iMap )
 Remote call failed
@@ -2920,6 +2870,7 @@ openexternalforpid/
 open/library
 openurl_external
 open_external
+open
 steam://openurlforpid/%u/%s
 bPushToMute
 vkHotKey
@@ -5610,40 +5561,51 @@ steamIDChat.GetEAccountType() == k_EAccountTypeChat
 k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 steammessages_base.proto
 steammessages_parental_objects.proto
-tT#
-"
-"
+;(#
+T(#
+`'
 0
-s0
-q0
-n0
-Z'
-(
-$'
-
-@
-@
-
+'
+'
+'
+'
+'
+'
+'
+'
+'
+!
+'
 
 
-&
-&
+@
+@
+
+
+k
 x
-&
+
+b%
+
+
 =
 @
 =
--
-H$
-L$
+$
+$
+$
+$
+$
+$
 0
-n,
+0
 p
 0
 p
 0
 p
 0
+3#
 $
 p
 0
@@ -5655,11 +5617,9 @@ p
 0
 p
 0
-0
 Ic]
-|
+U
 p
-0
 0
 0
 AT=
@@ -5710,7 +5670,7 @@ V
 @
 $
 &
-F$
+<"
 @
 M9e
 @
@@ -5777,6 +5737,8 @@ j
 0
 j
 j
+~
+z
 j
 j
 j
@@ -5812,13 +5774,6 @@ d
 d
 0
 A+]
-
-
-
-
-
-
-
 =
 =
 @
@@ -5868,8 +5823,6 @@ j
 j
 %
 
-
-I
 
 
 j
@@ -5970,6 +5923,7 @@ j
 j
 j
 j
+
 =
 @
 @
@@ -5991,7 +5945,6 @@ j
 @
 @
 @
-B
 j
 j
 j
@@ -6014,7 +5967,6 @@ j
 j
 .
 d
-
 =
 =
 @

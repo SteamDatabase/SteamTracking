@@ -164,8 +164,8 @@
         r = n(65671),
         c = n(15066),
         l = n(42816),
-        d = n(34374),
-        s = n(29151),
+        s = n(34374),
+        d = n(29151),
         m = n(19218),
         S = n(8128),
         u = n(87733),
@@ -177,19 +177,19 @@
         w = n(86064),
         v = n(35484),
         T = n(41569),
-        C = n(77486),
+        b = n(77486),
         E = n(59169),
-        b = n(32516),
-        k = n(66667),
+        C = n(32516),
+        B = n(66667),
         D = n(29609),
-        f = n(94695),
-        B = n(81639),
-        y = n(72595),
-        G = n(85164),
-        P = n(24615),
+        k = n(94695),
+        f = n(81639),
+        I = n(72595),
+        y = n(85164),
+        G = n(24615),
         A = n(94256),
-        H = n(34656),
-        I = n(92761),
+        P = n(34656),
+        H = n(92761),
         x = n(24751),
         N = n(50947);
       const M = parseInt(i.animationTransitionMS);
@@ -211,10 +211,10 @@
       function U(e) {
         const { gameID: t, timelineWidth: n } = e,
           { loader: o, fnGetManifest: r } = (0, _.sA)(t),
-          m = (0, f.Ow)(t),
-          S = (0, C.useGameRecordingSetting)(),
+          m = (0, k.Ow)(t),
+          S = (0, b.useGameRecordingSetting)(),
           u = (0, c.yL)(t),
-          g = (0, b.Q2)(),
+          g = (0, C.Q2)(),
           p = (0, a.useCallback)(
             (e) => {
               g.Media.Clip({ state: { id: e } });
@@ -223,7 +223,7 @@
           ),
           R = (0, a.useCallback)(
             (e, t) => {
-              const n = (0, k.dd)({ strGameID: e, hHandle: t });
+              const n = (0, B.dd)({ strGameID: e, hHandle: t });
               g.Media.Screenshot({ state: { id: n } });
             },
             [g],
@@ -239,12 +239,12 @@
           ),
           D = (0, T.uZ)(),
           {
-            bShowClipSavedHint: y,
-            hideClipSavedHint: P,
+            bShowClipSavedHint: I,
+            hideClipSavedHint: G,
             showClipSavedHintIfNecessary: A,
           } = (function () {
             const [e, t] = (0, a.useState)(!1),
-              n = (0, H.y$)(),
+              n = (0, P.y$)(),
               i = (0, E.pv)().DesktopOverlay,
               o = (0, a.useCallback)(async () => {
                 if (!i) return;
@@ -262,17 +262,17 @@
             };
           })(),
           N = (0, a.useCallback)(() => {
-            P(), v(t);
-          }, [t, v, P]),
-          M = (0, f.Ho)(A),
-          L = (0, B.n5)(),
+            G(), v(t);
+          }, [t, v, G]),
+          M = (0, k.Ho)(A),
+          L = (0, f.n5)(),
           U = (0, T.uZ)(),
           q = (0, a.useCallback)((e, t, n) => n && U.onConfirm(n), [U]),
           J = (0, a.useCallback)(
-            () => g.SteamWeb(G.De.HELP_BASE_URL + `faqs/view/${l.k_strGRFAQ}`),
+            () => g.SteamWeb(y.De.HELP_BASE_URL + `faqs/view/${l.k_strGRFAQ}`),
             [g],
           ),
-          Y = a.useRef();
+          Q = a.useRef();
         return a.createElement(
           h.y,
           { className: i.KeyboardCapture },
@@ -280,7 +280,7 @@
             O,
             null,
             a.createElement(
-              d.P,
+              s.P,
               {
                 onNavigateToGRSettings: () => g.Settings("GR"),
                 onSaveOrShareClipRequested: M,
@@ -292,11 +292,11 @@
                 onNavigateToFAQ: J,
               },
               a.createElement(
-                s.dF,
+                d.dF,
                 {
                   loader: o,
                   fnGetManifest: r,
-                  mode: s.tP.Overlay,
+                  mode: d.tP.Overlay,
                   recordingState: m,
                   recordingSetting: S,
                   clipSummaries: u,
@@ -305,7 +305,7 @@
                   gameID: t,
                   loader: o,
                   timelineWidth: n,
-                  ref: Y,
+                  ref: Q,
                 }),
               ),
               a.createElement(
@@ -318,17 +318,17 @@
                 { ...U.confirmationProps },
                 (0, w.Xx)("#Marker_UserMarkerAdded_Confirmation"),
               ),
-              y &&
+              I &&
                 a.createElement(
-                  I.T,
+                  H.T,
                   {
-                    target: Y.current,
+                    target: Q.current,
                     bEnablePointerEvents: !0,
                     direction: "bottom",
                     nBodyAlignment: 1,
                     className: i.ClipSavedHint,
                   },
-                  a.createElement(x.$d, { onRequestClose: P, onViewClip: N }),
+                  a.createElement(x.$d, { onRequestClose: G, onViewClip: N }),
                 ),
             ),
           ),
@@ -336,20 +336,20 @@
       }
       const W = a.forwardRef(function (e, t) {
         const { gameID: n, loader: o, timelineWidth: l } = e,
-          d = (0, c.yL)(n),
-          S = (0, C.useGameRecordingShortcuts)(),
+          s = (0, c.yL)(n),
+          S = (0, b.useGameRecordingShortcuts)(),
           u = a.useRef(),
           _ = (0, N.BE)(t, u),
-          R = (0, s.we)(),
+          R = (0, d.we)(),
           w = (0, E.pv)(),
           T = w.DesktopOverlay,
-          b = (0, g.SZ)(() => R.BPlayerInitialized()),
-          k = (0, g.SZ)(() => T.overlay_active);
+          C = (0, g.SZ)(() => R.BPlayerInitialized()),
+          B = (0, g.SZ)(() => T.overlay_active);
         a.useEffect(() => {
-          !k && b && R.GetGameRecordingVideo().Pause();
-        }, [k, R, b]);
+          !B && C && R.GetGameRecordingVideo().Pause();
+        }, [B, R, C]);
         const [D] = (0, r.HQ)("g_background_mode"),
-          [f, B] = (0, a.useState)(1 == D);
+          [k, f] = (0, a.useState)(1 == D);
         !(function (e, t) {
           a.useEffect(() => {
             const n = (0, c.Ws)(e, t);
@@ -358,39 +358,54 @@
             };
           }, [e, t]);
         })(n, (e) => {
-          1 == e.notification_type && B(!0);
+          1 == e.notification_type && f(!0);
         });
-        const G = (0, g.SZ)(() => R.GetHidePlayer());
+        const y = (0, g.SZ)(() => R.GetHidePlayer());
         a.useEffect(() => {
-          T.ChangeTimelineExpansionState(!G);
-        }, [T, G]),
+          T.ChangeTimelineExpansionState(!y);
+        }, [T, y]),
           a.useEffect(() => {
             1 === D &&
               T.SetFnChangeTimelineExpansion((e) => R.SetHidePlayer(!e));
           }, [T, R, D]);
-        const P = (0, c.B$)(),
-          { rgApps: A } = (0, c.D0)(),
+        const G = (0, c.B$)(),
+          A = (function () {
+            const [e, t] = a.useState(),
+              n = a.useCallback((e) => {
+                t(e);
+              }, []);
+            return (
+              a.useEffect(() => {
+                const e = SteamClient.Broadcast.RegisterForBroadcastStatus(n);
+                return () => e.unregister();
+              }, [n]),
+              e?.bIsBroadcasting
+            );
+          })(),
+          { rgApps: P } = (0, c.D0)(),
           H = a.useMemo(() => {
-            const e = A.find(
+            const e = P.find(
               (e) => e.is_active && e.recording_type > 1 && e.game_id !== n,
             );
             return e?.game_id;
-          }, [A, n]),
-          I = (0, y.Lm)(w?.BrowserWindow);
-        if ((0, g.SZ)(() => I < 800) || !f)
+          }, [P, n]),
+          x = (0, I.Lm)(w?.BrowserWindow);
+        if ((0, g.SZ)(() => x < 800) || !k)
           return 2 === D
-            ? a.createElement(Y, {
+            ? a.createElement(K, {
                 gameID: n,
                 bShowTimeline: !1,
-                bLowDiskSpace: P,
+                bLowDiskSpace: G,
                 otherRecordingGameID: H,
+                bIsBroadcasting: A,
               })
-            : a.createElement(K, {
+            : a.createElement(F, {
                 gameID: n,
                 otherRecordingGameID: H,
-                bLowDiskSpace: P,
+                bLowDiskSpace: G,
+                bIsBroadcasting: A,
               });
-        let x = { width: l };
+        let M = { width: l };
         return a.createElement(
           h.q,
           null,
@@ -403,7 +418,7 @@
               a.createElement(
                 "div",
                 {
-                  style: x,
+                  style: M,
                   className: (0, v.Z)(i.TimelineAndControls),
                   ref: _,
                 },
@@ -412,7 +427,7 @@
                   { className: i.Timeline },
                   a.createElement(m.$D, {
                     loader: o,
-                    clipSummaries: d,
+                    clipSummaries: s,
                     shortcuts: S,
                     refTimelineParentCtn: u,
                   }),
@@ -420,29 +435,30 @@
                 a.createElement(
                   "div",
                   { className: i.MediaButtons },
-                  a.createElement(V, { gameID: n }),
+                  a.createElement(z, { gameID: n }),
                   a.createElement(
                     "div",
                     null,
                     2 === D
-                      ? a.createElement(Y, {
+                      ? a.createElement(K, {
                           gameID: n,
-                          bShowTimeline: f,
+                          bShowTimeline: k,
                           otherRecordingGameID: H,
-                          bLowDiskSpace: P,
+                          bLowDiskSpace: G,
+                          bIsBroadcasting: A,
                         })
-                      : a.createElement(J, {
+                      : a.createElement(Y, {
                           gameID: n,
                           otherRecordingGameID: H,
-                          bLowDiskSpace: P,
-                          bShowTimeline: f,
-                          recordingMode: D,
+                          bLowDiskSpace: G,
+                          bShowTimeline: k,
+                          bIsBroadcasting: A,
                         }),
                   ),
-                  a.createElement(F, { bHidePlayer: G }),
+                  a.createElement(V, { bHidePlayer: y }),
                 ),
               ),
-              a.createElement(Q, { bHidePlayer: G }),
+              a.createElement(Z, { bHidePlayer: y }),
             ),
           ),
         );
@@ -466,15 +482,35 @@
         );
       }
       function J(e) {
+        const { bShowTimeline: t } = e,
+          n = (0, C.Q2)();
+        return a.createElement(
+          A.HP,
+          {
+            direction: "bottom",
+            toolTipContent: (0, w.Xx)(
+              "#RecordingState_ManualRec_ActiveBroadcastTooltip",
+            ),
+            className: (0, v.Z)(
+              i.RecordingIconsAndState,
+              i.OtherRecordingButton,
+              t && i.ShowTimeline,
+            ),
+            onClick: () => n.Settings("Broadcast"),
+          },
+          (0, w.Xx)("#RecordingState_ManualRec_ActiveBroadcast"),
+        );
+      }
+      function Q(e) {
         const {
           gameID: t,
           otherRecordingGameID: n,
           bLowDiskSpace: o,
           bShowTimeline: r,
           bDisableSwitching: l,
-          recordingMode: d,
+          recordingMode: s,
         } = e;
-        let s = a.useCallback(() => {
+        let d = a.useCallback(() => {
           if (l) return;
           const e = (0, c.kW)();
           e &&
@@ -487,7 +523,7 @@
           : a.createElement(
               A.HP,
               {
-                direction: "top",
+                direction: "bottom",
                 bDisabled: l,
                 toolTipContent: (0, w.Xx)(
                   "#RecordingState_BackgroundRec_SwitchRecordedGame",
@@ -497,9 +533,9 @@
                   i.OtherRecordingButton,
                   r && i.ShowTimeline,
                   l && i.DisableSwitching,
-                  2 === d ? i.ManualRecording : i.BackgroundRecording,
+                  2 === s ? i.ManualRecording : i.BackgroundRecording,
                 ),
-                onClick: s,
+                onClick: d,
               },
               a.createElement(
                 "div",
@@ -513,77 +549,100 @@
       }
       function Y(e) {
         const {
+          gameID: t,
+          bShowTimeline: n,
+          bLowDiskSpace: i,
+          bIsBroadcasting: o,
+          otherRecordingGameID: r,
+        } = e;
+        return o
+          ? a.createElement(J, { bShowTimeline: n })
+          : r
+            ? a.createElement(Q, {
+                gameID: t,
+                otherRecordingGameID: r,
+                bLowDiskSpace: i,
+                bShowTimeline: n,
+                recordingMode: 1,
+                bDisableSwitching: !0,
+              })
+            : null;
+      }
+      function K(e) {
+        const {
             gameID: t,
             bShowTimeline: n,
             bLowDiskSpace: o,
-            otherRecordingGameID: r,
+            bIsBroadcasting: r,
+            otherRecordingGameID: l,
           } = e,
-          l = (0, s.we)(),
-          [d, m] = (0, a.useState)(),
-          u = (0, E.pv)().DesktopOverlay,
-          p = o || r;
+          s = (0, d.we)(),
+          [m, u] = (0, a.useState)(),
+          p = (0, E.pv)().DesktopOverlay,
+          _ = o || l || r;
         a.useEffect(() => {
           n
-            ? u.SetFnChangeTimelineExpansion((e) => l.SetHidePlayer(!e))
-            : (u.ChangeTimelineExpansionState(!1),
-              u.SetFnChangeTimelineExpansion((e) => {
-                m(!0),
+            ? p.SetFnChangeTimelineExpansion((e) => s.SetHidePlayer(!e))
+            : (p.ChangeTimelineExpansionState(!1),
+              p.SetFnChangeTimelineExpansion((e) => {
+                u(!0),
                   window.setTimeout(() => {
-                    m(!1);
+                    u(!1);
                   }, 3e3);
               }));
-        }, [u, n, l]);
-        const [_] = (0, C.useToggleForegroundRecordingShortcut)(),
-          h = (0, g.SZ)(() => l.GetRecordingState()) === S.m8.ManualRecording,
-          { fnStartRecording: T, fnStopRecording: b } = (0, c.at)(),
-          k = (0, a.useCallback)(() => {
-            if (h)
-              b(t),
+        }, [p, n, s]);
+        const [h] = (0, b.useToggleForegroundRecordingShortcut)(),
+          T = (0, g.SZ)(() => s.GetRecordingState()) === S.m8.ManualRecording,
+          { fnStartRecording: C, fnStopRecording: B } = (0, c.at)(),
+          D = (0, a.useCallback)(() => {
+            if (T)
+              B(t),
                 R.q.ReportTrackedAction(
                   "/GameRecording/RecordingStop/ManualRecordingButton",
                 );
             else {
-              if (p) return;
+              if (_) return;
               {
-                T(t);
-                const e = l.GetLiveEdgeMS();
-                l.FocusGlobalMS(e),
+                C(t);
+                const e = s.GetLiveEdgeMS();
+                s.FocusGlobalMS(e),
                   R.q.ReportTrackedAction(
                     "/GameRecording/RecordingStart/ManualRecordingButton",
                   );
               }
             }
-          }, [p, h, b, t, T, l]);
+          }, [_, T, B, t, C, s]);
+        if (r) return a.createElement(J, { bShowTimeline: n });
         if (o) return a.createElement(q, { bShowTimeline: n });
-        if (r)
-          return a.createElement(J, {
+        if (l)
+          return a.createElement(Q, {
             gameID: t,
-            otherRecordingGameID: r,
+            otherRecordingGameID: l,
             bLowDiskSpace: o,
             bShowTimeline: n,
             recordingMode: 2,
             bDisableSwitching: !0,
           });
-        let D;
+        let k;
         return (
-          (D = h
-            ? _?.display_name
+          (k = T
+            ? h?.display_name
               ? (0, w.kQ)(
                   "#RecordingState_ManualRecStopShortName_CTA",
                   a.createElement(
                     "span",
                     { className: i.RecordingShortcut },
-                    _.display_name,
+                    h.display_name,
                   ),
                 )
               : (0, w.Xx)("#RecordingState_ManualRecStop_CTA")
-            : _?.display_name
+            : h?.display_name
               ? (0, w.kQ)(
                   "#RecordingState_ManualRecStartShortName_CTA",
                   a.createElement(
                     "span",
                     { className: i.RecordingShortcut },
-                    _.display_name,
+                    h.display_name,
                   ),
                 )
               : (0, w.Xx)("#RecordingState_ManualRecStart_CTA")),
@@ -593,55 +652,62 @@
               className: (0, v.Z)(
                 i.RecordingIconsAndState,
                 i.ManualRecording,
-                d && i.Flash,
+                m && i.Flash,
                 n && i.ShowTimeline,
-                h && i.CurrentlyRecording,
+                T && i.CurrentlyRecording,
               ),
-              onClick: k,
+              onClick: D,
             },
-            a.createElement("div", { className: i.RecordingState }, D),
+            a.createElement("div", { className: i.RecordingState }, k),
           )
         );
       }
-      function K(e) {
-        const { gameID: t, otherRecordingGameID: n, bLowDiskSpace: o } = e,
-          r = n ?? t,
-          c = (0, P.AA)("steam://open/recording/" + r);
-        let l = a.useCallback(() => {
-          o || c();
-        }, [c, o]);
-        return o
-          ? a.createElement(q, { bShowTimeline: !1 })
-          : n
-            ? a.createElement(J, {
-                gameID: t,
-                otherRecordingGameID: n,
-                bLowDiskSpace: o,
-                bShowTimeline: !1,
-                recordingMode: 1,
-              })
-            : a.createElement(
-                "div",
-                {
-                  className: (0, v.Z)(
-                    i.RecordingIconsAndState,
-                    i.BackgroundRecording,
-                  ),
-                  onClick: l,
-                },
-                a.createElement(
+      function F(e) {
+        const {
+            gameID: t,
+            otherRecordingGameID: n,
+            bLowDiskSpace: o,
+            bIsBroadcasting: r,
+          } = e,
+          c = n ?? t,
+          l = (0, G.AA)("steam://open/recording/" + c);
+        let s = a.useCallback(() => {
+          o || l();
+        }, [l, o]);
+        return r
+          ? a.createElement(J, { bShowTimeline: !1 })
+          : o
+            ? a.createElement(q, { bShowTimeline: !1 })
+            : n
+              ? a.createElement(Q, {
+                  gameID: t,
+                  otherRecordingGameID: n,
+                  bLowDiskSpace: o,
+                  bShowTimeline: !1,
+                  recordingMode: 1,
+                })
+              : a.createElement(
                   "div",
-                  { className: i.RecordingState },
-                  (0, w.kQ)(
-                    "#RecordingState_BackgroundRec_OpenRecording",
-                    a.createElement("div", { className: i.RecordingCircle }),
+                  {
+                    className: (0, v.Z)(
+                      i.RecordingIconsAndState,
+                      i.BackgroundRecording,
+                    ),
+                    onClick: s,
+                  },
+                  a.createElement(
+                    "div",
+                    { className: i.RecordingState },
+                    (0, w.kQ)(
+                      "#RecordingState_BackgroundRec_OpenRecording",
+                      a.createElement("div", { className: i.RecordingCircle }),
+                    ),
                   ),
-                ),
-              );
+                );
       }
-      function Q(e) {
+      function Z(e) {
         const { bHidePlayer: t } = e,
-          n = (0, s.we)(),
+          n = (0, d.we)(),
           o = (0, p.Kc)(),
           [r, c] = (0, a.useState)(!0);
         let l = (0, a.useCallback)(() => {
@@ -654,7 +720,7 @@
           t)
         )
           return null;
-        let d = {
+        let s = {
           appear: i.Appear,
           appearActive: i.AppearActive,
           appearDone: i.AppearDone,
@@ -664,7 +730,7 @@
         };
         return a.createElement(
           D.Z,
-          { classNames: d, in: r, timeout: M, appear: !0, onExited: l },
+          { classNames: s, in: r, timeout: M, appear: !0, onExited: l },
           a.createElement(
             "div",
             { className: i.GamePlayerContents },
@@ -672,9 +738,9 @@
           ),
         );
       }
-      function F(e) {
+      function V(e) {
         const { bHidePlayer: t } = e,
-          n = (0, s.we)();
+          n = (0, d.we)();
         let r = (0, a.useCallback)(() => {
           t
             ? (n.SetHidePlayer(!1),
@@ -692,9 +758,9 @@
           a.createElement(o.Chevron, { direction: t ? "down" : "up" }),
         );
       }
-      function V(e) {
+      function z(e) {
         const { gameID: t } = e,
-          n = (0, b.Q2)();
+          n = (0, C.Q2)();
         return a.createElement(
           "div",
           {

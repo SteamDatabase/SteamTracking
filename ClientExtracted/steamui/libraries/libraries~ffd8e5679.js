@@ -1680,7 +1680,7 @@
                   autoPlay: t != a.tP.ChatClip,
                 }),
               ),
-              i.createElement(l.k9, { loader: n }),
+              i.createElement(l.k, { loader: n }),
             ),
           ),
         );

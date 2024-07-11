@@ -1014,6 +1014,9 @@ convertRectFromLayer:
 convertRect:toView:
 convertRectToScreen:
 bounds
+screen
+NSScreen
+mainScreen
 baseObject
 newLibraryWithSource:options:error:
 MTLRenderPipelineDescriptor
@@ -1614,7 +1617,7 @@ XJ\Z
 :>	s
 ,0"&
 GB,0"
-L d\8
+%L d\8
 ?M	j
 lFRn
 035(I&R5&...
@@ -1637,6 +1640,7 @@ _ValveHookScreenshots
 .objc_class_name_NSObject
 .objc_class_name_NSOpenGLContext
 .objc_class_name_NSOpenGLView
+.objc_class_name_NSScreen
 .objc_class_name_NSString
 .objc_class_name_NSThread
 _CFAllocatorAllocate
@@ -1863,27 +1867,19 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-|~6dn
-+N{=P
-Iq((w
-	Bpz^e:e
- 0qA)aH
-S5r3UX#y
-%Lmt
-M<bS
-TVeHqDb6
-(WQB
-#"LC
-t,OP(k
-xkC3
-t9}J
-r5B}
-wT-]
-O0y'>
-KAHYO
-: #^':
-qA7%
-Ai>M
+<6Hf
+(f&bR
+%62~O
+x_cH
+*m !
+LhH:36
+Un_N
+P&hS
+7HCK
+^8np
+3$WP
+kN86/Y
+f>sp
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -1941,10 +1937,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240702223640Z0/
-1E@J
+240710210718Z0/
 1/0-
-1E@J
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -1952,18 +1946,16 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		uloTPB/XzDDXMUVASrlITJ8DrV8=
+		YrEyqu4p0F/86BisqUB8P9/4WfA=
 		</data>
 	</array>
 </dict>
 </plist>
-7x(h
-cs:gh
-uO`k
-;$&_
-	,[T^l!
-J.UN
-20240702223711Z0
+K1!g
+7bXJxU*w
+G:]e
+ 27-
+20240710210836Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2021,11 +2013,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240702223711Z0#
-BY*n<j
-7ZNp
-YYWC
-NLCJw_
+240710210836Z0#
+u8]?
+&02V
+44<T
+E"FN
 __TEXT
 __text
 __TEXT
@@ -2352,6 +2344,7 @@ AWAVAUATSH
 H9^ 
 t$H9Y w
 D9A4u
+(%3f
 [A\A]A^A_]
 AWAVAUATSH
 8[A\A]A^A_]
@@ -2408,11 +2401,12 @@ AWAVAUATSH
 x[A\A]A^A_]
 AVSI
 [A^]
-AWAVAUATSPH
-[A\A]A^A_]
-[A\A]A^A_]
 AWAVATSI
+t?L9
 [A\A^A_]
+[A\A^A_]
+AWAVSPI
+[A^A_]
 AWAVAUATSH
 )C0f
 )C f
@@ -2426,12 +2420,12 @@ AWAVAUATSH
 )F A
 [A\A]A^A_]
 AWAVAUATSH
-)T$`D
-)T$p
-)l$0D
-)T$@fA
-)\$Pf
-)D$ M
+)P`D
+)PpH
+)k0D
+)S@fA
+)[Pf
+)C M
 [A\A]A^A_]
 [A\A]A^A_]
 [A\A]A^A_]
@@ -2476,7 +2470,6 @@ AVSH
 AWAVAUATSPH
 [A\A]A^A_]
 AVSH
-H9=E
 [A^]
 AWAVATSH
 L9x 
@@ -2565,7 +2558,6 @@ AWAVATSH
 L$HI
 H92u
 0[A\A^A_]
-H9=xf
 AWAVSPI
 [A^A_]
 AWAVSP
@@ -2593,7 +2585,7 @@ AWAVATSH
 0[A\A^A_]
 0[A\A^A_]
 AWAVSPD
-L95$R
+L95dR
 [A^A_]
 [A^A_]
 AWAVATS
@@ -2878,7 +2870,6 @@ UAWAVATSH
 }%E1
 H;D$
 [A\A^A_]
-D95w
 UAWAVAUATSH
 D$`H
 D$8H
@@ -3597,6 +3588,8 @@ convertRectFromLayer:
 convertRect:toView:
 convertRectToScreen:
 bounds
+screen
+mainScreen
 baseObject
 newLibraryWithSource:options:error:
 colorAttachments
@@ -3800,6 +3793,7 @@ p`SA
 @_OBJC_CLASS_$_NSEvent
 @_OBJC_CLASS_$_NSOpenGLContext
 @_OBJC_CLASS_$_NSOpenGLView
+@_OBJC_CLASS_$_NSScreen
 @_HideCursor
 @_InitCursor
 @_ShowCursor
@@ -4140,6 +4134,7 @@ _OBJC_CLASS_$_NSNumber
 _OBJC_CLASS_$_NSObject
 _OBJC_CLASS_$_NSOpenGLContext
 _OBJC_CLASS_$_NSOpenGLView
+_OBJC_CLASS_$_NSScreen
 _OBJC_CLASS_$_NSString
 _OBJC_CLASS_$_NSThread
 _OBJC_CLASS_$_RPScreenRecorder
@@ -4321,23 +4316,27 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-kdn7
-b\UN,|)
-RxL;J
-24G5^
-^HE]
-W}f?
-C7gN
-pfu=
-SHYl
-~.!p
-&4"h
-?([^
-&:>	
-+H^\x
-AB	f
-:*_c
-mu@L
+iiH!
+2]RN
+Rtto
+)L<s
+(4)j
+-nGc
+48J='p
+'e#|
+$gp|
+G4v'
+3n~\
+fJp$[
+pk8W
+RgLN
+p}T?@vCSMha
+N;^k;
+'xQp
+@T5ZX'
+bql_Y
+]"^2P
+h]Vu
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -4395,8 +4394,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240702223640Z0/
+240710210718Z0/
+&o#C0<
 1/0-
+&o#C0
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -4404,33 +4405,33 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		lpboB5zOCdsETZlmiZxnMUa9xLA=
+		6sWUDN3/OwfQigfei7ETjtnDatM=
 		</data>
 	</array>
 </dict>
 </plist>
-X9DO
-	wwB
-20240702223711Z0
+ae-F
+^}U"
+9XXW
+20240710210836Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240627202600Z
-240808202559Z0B1
-Timestamp Signer NWK21
+240627204017Z
+240808204016Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-MPDL
-"U|%
-x]df
-9oP"zP
+wVpp
+ugRh
+1pB#	
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-\0+@
-~omI
-;g:L
+TIkd/
+%:$[
+ w#^71
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -4469,9 +4470,9 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240702223711Z0#
-^`Eb
-%~{PR
+240710210836Z0#
+?3ql2
+L`9"
 __TEXT
 __text
 __TEXT
@@ -4532,7 +4533,6 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/gameoverlayrenderer.dylib
-`rcu
 /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
 /System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
 /System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
@@ -4549,7 +4549,6 @@ __LINKEDIT
 /usr/lib/libobjc.A.dylib
 h"@9
 Ti~@
-A9H;
 Thv@
 Ti~@
 T($@y
@@ -4568,9 +4567,12 @@ ia@9i
 	a@9Ia
 ia@9i
 	a@9Ia
-@9Jj
 h&B)
 	@z`
+	Qr9
+R	Q29`
+	Qr9i
+R	Q29
 56P@
 T(O@
 ;?Ay
@@ -4585,11 +4587,10 @@ h2E9
 $E9H
 &E9h
 h&A)
-(%29
-()29
+29`+
 jh8)	
-RH+29
-'29_+29|C	
+B)1)
+29|[	
  @9H
 h"@9h
 Th*@
@@ -4599,12 +4600,14 @@ WG)uZ
 h&D)
 XcZ@
 h&@9
+E9	)
 hvB9
 hrB9
-C9a"C9b&C9c*C9
-[)CC
+C9a"C9b&C9c*C9hC
 aBA9
 h&D)
+i|	p
+J{	P
 9h6@
 h"@9
 h"@9
@@ -4618,6 +4621,7 @@ T*!@
 Ci8}
 Th>A
 ThBA
+T`,	P
 I+8k
 T	5@
 T	9@
@@ -4629,7 +4633,7 @@ BP7
 9h>A
 D9h>A
 9i>A
-T(GD
+T(SD
 X`RA
 ThBA
 X`2B
@@ -4637,31 +4641,27 @@ X`*B
 X`6B
 TiBA
 T`.A
-[	X 
+f	X 
 7hBD9(
-F	XX
+YQ	XX
 i*\)(
 Am 8`
 4h&])
 h&])
 #V)h
-4	X)
+i?	X)
 4h.@
 4b.@
-	!E9
-X 4	
-X`3	
-hbC9
+X`>	
+hbC9(
 NH `
-m@)h
 nB8!
 %N$f
 dn1ja
 QjaN
 jaNF
  haN
-nA8!
-[A):
+[A)$
 T`jv
 RA9h
 VA9h
@@ -4675,16 +4675,18 @@ T`2@
 T	!@
 	k*G
 	k!:
-Z)`C
-\)`B
+Z) E
+\) D
 T`2@
 T`2@
 T`2@
 #C9h
 A9HF
+Ay`)
 T`2@
-Ay@$
+Ay`%
 +ih8J	
+CC9`
 T`2@
 T`2@
 7`2@
@@ -4692,23 +4694,24 @@ T`2@
 #A)j:@
 T	|	
 Ci<}
-	IE9?
-qE9h&@
+R`t	
+E9h&@
+		F9i
 9h.@
 Th&@
 Th&@
 9`&@
 4h&@
-`H	X
+ J	X
+AH	X
 T`2@
 4a2@
-T*sA
 4h:A
-iM9(
+)ACy
 !IzH
+	aG9
 T`jt
 +ih8J	
-	1H9
 12CIMENullImpl
 4IIME
 :>->
@@ -5331,6 +5334,8 @@ convertRectFromLayer:
 convertRect:toView:
 convertRectToScreen:
 bounds
+screen
+mainScreen
 baseObject
 newLibraryWithSource:options:error:
 colorAttachments
@@ -5518,6 +5523,7 @@ RARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARB`=ARDp
 @_OBJC_CLASS_$_NSEvent
 @_OBJC_CLASS_$_NSOpenGLContext
 @_OBJC_CLASS_$_NSOpenGLView
+@_OBJC_CLASS_$_NSScreen
 @_HideCursor
 @_InitCursor
 @_ShowCursor
@@ -5855,6 +5861,7 @@ _OBJC_CLASS_$_NSNumber
 _OBJC_CLASS_$_NSObject
 _OBJC_CLASS_$_NSOpenGLContext
 _OBJC_CLASS_$_NSOpenGLView
+_OBJC_CLASS_$_NSScreen
 _OBJC_CLASS_$_NSString
 _OBJC_CLASS_$_NSThread
 _OBJC_CLASS_$_RPScreenRecorder
@@ -6032,20 +6039,24 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-_2Gvz
-q8t\
-o:#0
-Y;`k;
-^'R0
-*Qp$
-W67v
-wN4B
-[wD}E
- ..^#(
-#i]7fy|js
-n om
-~#<0
-D6lG$
+ &bp
+ej).t
+eD}?
+s@{9
++F"0
+\pD%8m
+6t}GgV
+$j*$
+Dv@'
+0qUQ
+-Cg~aj
+_iNq
+aZ1,
+~cl}V
+>,W	
+y|mA
+/bJi0~=O
+30t)s
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -6103,7 +6114,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240702223640Z0/
+240710210718Z0/
 1/0-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -6112,32 +6123,37 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		Iu0GWfUuiExjLfA0HSm6vrY9EPs=
+		sURvhZzJw7faXR1d6+uIBUoxzXA=
 		</data>
 	</array>
 </dict>
 </plist>
-)%5a
-20240702223711Z0
+^>q}
+Onp7
+xDVIE
+8H h_
+<t9@
+Zis^
+;rCr
+20240710210836Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240627202600Z
-240808202559Z0B1
-Timestamp Signer NWK21
+240627204017Z
+240808204016Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-MPDL
-"U|%
-x]df
-9oP"zP
+wVpp
+ugRh
+1pB#	
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-\0+@
-~omI
-;g:L
+TIkd/
+%:$[
+ w#^71
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -6176,5 +6192,5 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240702223711Z0#
-@gDG
+240710210836Z0#
+{2<c

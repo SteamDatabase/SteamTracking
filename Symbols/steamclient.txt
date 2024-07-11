@@ -435,6 +435,7 @@
  V_snprintf
  V_strcat
  V_strcmp_prefix
+ V_stricmp_prefix
  V_stristr(char const*, char const*)
  V_strlower_fast
  V_strnappend
@@ -660,6 +661,7 @@
  getsockopt
  gettimeofday
  getuid
+ getxattr
  gmtime
  h_errno
  if_nametoindex
@@ -823,6 +825,7 @@
  recvmsg
  recvmsg$UNIX2003
  remove
+ removexattr
  rename
  rmdir
  scandir$INODE64
