@@ -64087,7 +64087,7 @@
         LoyaltyArtistProfiles: () => "/points/shop/c/artistprofiles",
         ...{ LoyaltyEquippedProfile: (e) => `/points/profile/${e}` },
         ContentHubHome: () =>
-          "/:prefix(tags|category|genre|videos|weekly|vr|software|macos|linux|freetoplay|earlyaccess|pccafe|demos|specials|remoteplay_phone|remoteplay_tablet|remoteplay_tv|remoteplay_together|games|adultonly|soundtracks|greatondeck|controller|dlcforyou)",
+          "/:prefix(tags|category|genre|videos|weekly|vr|software|macos|linux|freetoplay|earlyaccess|pccafe|demos|specials|remoteplay_phone|remoteplay_tablet|remoteplay_tv|remoteplay_together|games|adultonly|soundtracks|greatondeck|controller|dlcforyou|compatlist)",
         Categories: () => "/categories/",
         SummerSale2021Story: () => "/forgeyourfate",
         MarketingMessages: () => "/marketingmessages/",
