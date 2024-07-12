@@ -52933,7 +52933,8 @@
           }
           if (
             (T.smart_section || T.sale_tag_filter) &&
-            !T.enable_faceted_browsing
+            !T.enable_faceted_browsing &&
+            l
           ) {
             l.MarkAllAppsNotVisible(T.unique_id), B.sort(l.SortKey.bind(l));
             const e = (0, m.dm)(T, y, S) || B.length;
@@ -53230,7 +53231,10 @@
         ]),
           (0, n.useEffect)(
             () => () => {
-              e.appVisibilityTracker.MarkAllAppsNotVisible(e.section.unique_id),
+              var t;
+              null === (t = e.appVisibilityTracker) ||
+                void 0 === t ||
+                t.MarkAllAppsNotVisible(e.section.unique_id),
                 e.section.dynamic_reveal &&
                   Ua.Get().DecrementSectionNeedingReveal();
             },
