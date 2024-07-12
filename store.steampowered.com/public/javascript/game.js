@@ -78,7 +78,8 @@ function CreateWidget( nAppId )
 	$J('#widget_finished').show();
 }
 
-function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid, snr )
+// appid_for_follow can be different than store_appid in cases such as when viewing a standalone demo page where we want the follow button to follow the parent app
+function InitQueueControls( store_appid, appid_for_follow, next_in_queue_appid, snr )
 {
 	var $FollowBtn = $J('.queue_control_button.queue_btn_follow .queue_btn_inactive');
 	var $UnFollowBtn = $J('.queue_control_button.queue_btn_follow .queue_btn_active');
@@ -161,7 +162,7 @@ function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid, 
 	$FollowBtn.click( function() {
 		$J.post( 'https://store.steampowered.com/explore/followgame/', {
 			sessionid: g_sessionID,
-			appid: steamworks_appid
+			appid: appid_for_follow
 		}).done( function() {
 			$FollowBtn.hide();
 			$UnFollowBtn.show();
@@ -173,7 +174,7 @@ function InitQueueControls( store_appid, steamworks_appid, next_in_queue_appid, 
 	$UnFollowBtn.click( function() {
 		$J.post( 'https://store.steampowered.com/explore/followgame/', {
 			sessionid: g_sessionID,
-			appid: steamworks_appid,
+			appid: appid_for_follow,
 			unfollow: 1
 		}).done( function() {
 			$FollowBtn.show();

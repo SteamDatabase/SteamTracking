@@ -1,17 +1,26 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9015125";
+var CLSTAMP = "9034740";
 (() => {
   "use strict";
   var e,
     t,
     n = {
-      250: (e, t, n) => {
-        n.d(t, { eV: () => i, Rr: () => r, oH: () => l });
+      978: (e, t, n) => {
+        function a(e, t) {
+          return (function (e, t) {
+            const n = e.findIndex(t);
+            return n >= 0 && (e.splice(n, 1), !0);
+          })(e, (e) => t == e);
+        }
+        n.d(t, { x9: () => a });
+      },
+      600: (e, t, n) => {
+        n.d(t, { pR: () => i, Vz: () => r, nh: () => l });
         var a,
           i,
           r,
-          s = n(663);
+          s = n(491);
         class o {
           m_ActiveInputId;
           m_ActiveInputTimeout;
@@ -128,11 +137,11 @@ var CLSTAMP = "9015125";
               (e[(e.RPAD = 6)] = "RPAD");
           })(r || (r = {}));
         class l {
-          m_OnGamepadDetectedCallbacks = new s.pB();
-          m_ButtonDownCallbacks = new s.pB();
-          m_ButtonUpCallbacks = new s.pB();
-          m_AnalogCallbacks = new s.pB();
-          m_NavigationTypeChangeCallbacks = new s.pB();
+          m_OnGamepadDetectedCallbacks = new s.lu();
+          m_ButtonDownCallbacks = new s.lu();
+          m_ButtonUpCallbacks = new s.lu();
+          m_AnalogCallbacks = new s.lu();
+          m_NavigationTypeChangeCallbacks = new s.lu();
           m_eNavigationSourceType;
           m_fLastActiveTime;
           m_nLastActiveControllerIndex = -1;
@@ -228,7 +237,7 @@ var CLSTAMP = "9015125";
           }
         }
       },
-      719: (e, t, n) => {
+      739: (e, t, n) => {
         function a(e, t) {
           return !!e && "object" == typeof e.SteamClient && t in e.SteamClient;
         }
@@ -239,9 +248,9 @@ var CLSTAMP = "9015125";
             return n && i && a(e, n) && i in e.SteamClient[n];
           })(window, e);
         }
-        n.d(t, { U5: () => i });
+        n.d(t, { Dp: () => i });
       },
-      399: (e, t, n) => {
+      617: (e, t, n) => {
         function a(e, t, n) {
           return {
             get() {
@@ -254,26 +263,26 @@ var CLSTAMP = "9015125";
             },
           };
         }
-        n.d(t, { a: () => a });
+        n.d(t, { o: () => a });
       },
-      663: (e, t, n) => {
+      491: (e, t, n) => {
         n.d(t, {
-          pB: () => s,
-          Ar: () => p,
-          Hf: () => m,
-          vq: () => c,
-          km: () => u,
+          lu: () => s,
+          LU: () => p,
+          e0: () => m,
+          Jc: () => c,
+          YX: () => u,
         });
-        var a = n(556),
-          i = n(854),
-          r = n(399);
+        var a = n(629),
+          i = n(978),
+          r = n(617);
         class s {
           m_vecCallbacks = [];
           Register(e) {
             this.m_vecCallbacks.push(e);
             return {
               Unregister: () => {
-                i.Zf(this.m_vecCallbacks, e);
+                i.x9(this.m_vecCallbacks, e);
               },
             };
           }
@@ -367,14 +376,14 @@ var CLSTAMP = "9015125";
             (this.m_fnCallback = void 0), e?.();
           }
         }
-        (0, a.gn)([r.a], p.prototype, "ScheduledInternal", null);
+        (0, a.Cg)([r.o], p.prototype, "ScheduledInternal", null);
         class m {
           m_vecCallbacks = [];
           Push(e) {
             this.m_vecCallbacks.push(e);
           }
           PushArrayRemove(e, t) {
-            this.m_vecCallbacks.push(() => i.Zf(e, t));
+            this.m_vecCallbacks.push(() => i.x9(e, t));
           }
           Unregister() {
             for (const e of this.m_vecCallbacks) e();
@@ -384,9 +393,9 @@ var CLSTAMP = "9015125";
             return this.Unregister;
           }
         }
-        (0, a.gn)([r.a], m.prototype, "Unregister", null);
+        (0, a.Cg)([r.o], m.prototype, "Unregister", null);
       },
-      92: (e, t, n) => {
+      524: (e, t, n) => {
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
           : console.error(
@@ -395,20 +404,11 @@ var CLSTAMP = "9015125";
           123 !== Array.from(new Set([123]))[0] &&
             console.error("Should not include prototypejs.");
       },
-      854: (e, t, n) => {
-        function a(e, t) {
-          return (function (e, t) {
-            const n = e.findIndex(t);
-            return n >= 0 && (e.splice(n, 1), !0);
-          })(e, (e) => t == e);
-        }
-        n.d(t, { Zf: () => a });
-      },
-      311: (e) => {
+      669: (e) => {
         e.exports = jQuery;
       },
-      556: (e, t, n) => {
-        n.d(t, { gn: () => a });
+      629: (e, t, n) => {
+        n.d(t, { Cg: () => a });
         function a(e, t, n, a) {
           var i,
             r = arguments.length,
@@ -457,11 +457,11 @@ var CLSTAMP = "9015125";
       Promise.all(Object.keys(i.f).reduce((t, n) => (i.f[n](e, t), t), []))),
     (i.u = (e) =>
       "javascript/legacy_web/" +
-      { 380: "desktop", 511: "gamepad" }[e] +
+      { 97: "desktop", 616: "gamepad" }[e] +
       ".js?contenthash=" +
-      { 380: "7ca29ccc703ee01d8da7", 511: "a9be43bd78e8ade8ad2b" }[e]),
+      { 97: "5e17b4843b72ebe3db5f", 616: "042fe31888c3eacc47f4" }[e]),
     (i.miniCssF = (e) =>
-      "css/legacy_web/gamepad.css?contenthash=be44dba8ea7ddd48708c"),
+      "css/legacy_web/gamepad.css?contenthash=6e6111865655343f0b1a"),
     (i.g = (function () {
       if ("object" == typeof globalThis) return globalThis;
       try {
@@ -526,7 +526,9 @@ var CLSTAMP = "9015125";
       var t = i.g.document;
       if (!e && t && (t.currentScript && (e = t.currentScript.src), !e)) {
         var n = t.getElementsByTagName("script");
-        if (n.length) for (var a = n.length - 1; a > -1 && !e; ) e = n[a--].src;
+        if (n.length)
+          for (var a = n.length - 1; a > -1 && (!e || !/^http(s?):/.test(e)); )
+            e = n[a--].src;
       }
       if (!e)
         throw new Error(
@@ -603,12 +605,12 @@ var CLSTAMP = "9015125";
                     : document.head.appendChild(r);
               })(e, r, null, t, n);
             }),
-          t = { 179: 0 };
+          t = { 792: 0 };
         i.f.miniCss = (n, a) => {
           t[n]
             ? a.push(t[n])
             : 0 !== t[n] &&
-              { 511: 1 }[n] &&
+              { 616: 1 }[n] &&
               a.push(
                 (t[n] = e(n).then(
                   () => {
@@ -623,7 +625,7 @@ var CLSTAMP = "9015125";
       }
     })(),
     (() => {
-      var e = { 179: 0 };
+      var e = { 792: 0 };
       i.f.j = (t, n) => {
         var a = i.o(e, t) ? e[t] : void 0;
         if (0 !== a)
@@ -666,92 +668,89 @@ var CLSTAMP = "9015125";
         },
         n = (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
-    })(),
-    (() => {
-      i(92);
-      var e = i(311),
-        t = i.n(e),
-        n = i(556),
-        a = i(250),
-        r = i(399);
-      let s = [
-        { index: 0, type: a.eV.OK, category: "action" },
-        { index: 1, type: a.eV.CANCEL, category: "action" },
-        { index: 2, type: a.eV.SECONDARY, category: "action" },
-        { index: 3, type: a.eV.OPTIONS, category: "action" },
-        { index: 4, type: a.eV.BUMPER_LEFT, category: "action" },
-        { index: 5, type: a.eV.BUMPER_RIGHT, category: "action" },
-        { index: 6, type: a.eV.TRIGGER_LEFT, category: "action" },
-        { index: 7, type: a.eV.TRIGGER_RIGHT, category: "action" },
-        { index: 8, type: a.eV.SELECT, category: "action" },
-        { index: 9, type: a.eV.START, category: "action" },
-        { index: 10, type: a.eV.LSTICK_CLICK, category: "action" },
-        { index: 11, type: a.eV.RSTICK_CLICK, category: "action" },
-        { index: 12, type: a.eV.DIR_UP, category: "navigation" },
-        { index: 13, type: a.eV.DIR_DOWN, category: "navigation" },
-        { index: 14, type: a.eV.DIR_LEFT, category: "navigation" },
-        { index: 15, type: a.eV.DIR_RIGHT, category: "navigation" },
-        { index: 16, type: a.eV.STEAM_GUIDE, category: "action" },
-        { index: 17, type: a.eV.SELECT, category: "action" },
-      ];
-      class o extends a.oH {
-        m_rgGamepadStatus = [];
-        constructor() {
-          super(),
-            this.SetSourceType(a.Rr.GAMEPAD),
-            window.addEventListener("gamepadconnected", (e) => {
-              this.m_bGamepadDetected ||
-                (this.OnGamepadDetected(), this.PollGamepads());
-            });
-        }
-        PollGamepads() {
-          let e = navigator.getGamepads(),
-            t = !1;
-          for (let n = 0; n < e.length; n++) {
-            let a = e[n];
-            if (!a) continue;
-            this.m_rgGamepadStatus[n] ||
-              (this.m_rgGamepadStatus[n] = { buttons: [] });
-            let i = this.m_rgGamepadStatus[n];
-            for (let e = 0; e < s.length; e++) {
-              let n = s[e],
-                r = n.index;
-              a.buttons[r] &&
-                (a.buttons[r].pressed
-                  ? ((t = !0),
-                    i.buttons[r] ||
-                      ((i.buttons[r] = !0), this.OnButtonDown(n.type)))
-                  : i.buttons[r] &&
-                    (this.OnButtonUp(n.type), (i.buttons[r] = !1)));
-            }
-          }
-          requestAnimationFrame(this.PollGamepads);
-        }
-      }
-      (0, n.gn)([r.a], o.prototype, "PollGamepads", null);
-      var c = i(719);
-      async function l(e) {
-        const { InitializeGamepadNavigation: t } = await i
-          .e(511)
-          .then(i.bind(i, 513));
-        t(e);
-      }
-      i.p.endsWith("shared/") || (i.p = i.p + "shared/"),
-        t()(function () {
-          !(function () {
-            const e = new o();
-            navigator.userAgent.includes("Valve Steam Gamepad")
-              ? l(e)
-              : (0, c.U5)("BrowserView.RegisterForMessageFromParent") &&
-                  (0, c.U5)("BrowserView.PostMessageToParent")
-                ? (async function () {
-                    const { InitializeForDesktop: e } = await i
-                      .e(380)
-                      .then(i.bind(i, 623));
-                    e();
-                  })()
-                : e.RegisterForGamepadDetected(() => l(e));
-          })();
-        });
     })();
+  i(524);
+  var r = i(669),
+    s = i.n(r),
+    o = i(629),
+    c = i(600),
+    l = i(617);
+  let u = [
+    { index: 0, type: c.pR.OK, category: "action" },
+    { index: 1, type: c.pR.CANCEL, category: "action" },
+    { index: 2, type: c.pR.SECONDARY, category: "action" },
+    { index: 3, type: c.pR.OPTIONS, category: "action" },
+    { index: 4, type: c.pR.BUMPER_LEFT, category: "action" },
+    { index: 5, type: c.pR.BUMPER_RIGHT, category: "action" },
+    { index: 6, type: c.pR.TRIGGER_LEFT, category: "action" },
+    { index: 7, type: c.pR.TRIGGER_RIGHT, category: "action" },
+    { index: 8, type: c.pR.SELECT, category: "action" },
+    { index: 9, type: c.pR.START, category: "action" },
+    { index: 10, type: c.pR.LSTICK_CLICK, category: "action" },
+    { index: 11, type: c.pR.RSTICK_CLICK, category: "action" },
+    { index: 12, type: c.pR.DIR_UP, category: "navigation" },
+    { index: 13, type: c.pR.DIR_DOWN, category: "navigation" },
+    { index: 14, type: c.pR.DIR_LEFT, category: "navigation" },
+    { index: 15, type: c.pR.DIR_RIGHT, category: "navigation" },
+    { index: 16, type: c.pR.STEAM_GUIDE, category: "action" },
+    { index: 17, type: c.pR.SELECT, category: "action" },
+  ];
+  class p extends c.nh {
+    m_rgGamepadStatus = [];
+    constructor() {
+      super(),
+        this.SetSourceType(c.Vz.GAMEPAD),
+        window.addEventListener("gamepadconnected", (e) => {
+          this.m_bGamepadDetected ||
+            (this.OnGamepadDetected(), this.PollGamepads());
+        });
+    }
+    PollGamepads() {
+      let e = navigator.getGamepads(),
+        t = !1;
+      for (let n = 0; n < e.length; n++) {
+        let a = e[n];
+        if (!a) continue;
+        this.m_rgGamepadStatus[n] ||
+          (this.m_rgGamepadStatus[n] = { buttons: [] });
+        let i = this.m_rgGamepadStatus[n];
+        for (let e = 0; e < u.length; e++) {
+          let n = u[e],
+            r = n.index;
+          a.buttons[r] &&
+            (a.buttons[r].pressed
+              ? ((t = !0),
+                i.buttons[r] ||
+                  ((i.buttons[r] = !0), this.OnButtonDown(n.type)))
+              : i.buttons[r] && (this.OnButtonUp(n.type), (i.buttons[r] = !1)));
+        }
+      }
+      requestAnimationFrame(this.PollGamepads);
+    }
+  }
+  (0, o.Cg)([l.o], p.prototype, "PollGamepads", null);
+  var m = i(739);
+  async function _(e) {
+    const { InitializeGamepadNavigation: t } = await i
+      .e(616)
+      .then(i.bind(i, 166));
+    t(e);
+  }
+  i.p.endsWith("shared/") || (i.p = i.p + "shared/"),
+    s()(function () {
+      !(function () {
+        const e = new p();
+        navigator.userAgent.includes("Valve Steam Gamepad")
+          ? _(e)
+          : (0, m.Dp)("BrowserView.RegisterForMessageFromParent") &&
+              (0, m.Dp)("BrowserView.PostMessageToParent")
+            ? (async function () {
+                const { InitializeForDesktop: e } = await i
+                  .e(97)
+                  .then(i.bind(i, 653));
+                e();
+              })()
+            : e.RegisterForGamepadDetected(() => _(e));
+      })();
+    });
 })();

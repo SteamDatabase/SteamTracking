@@ -1,9 +1,9 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [9682],
+  [2516],
   {
-    94261: (e) => {
+    522: (e) => {
       e.exports = {
         smallentrywidth: "600px",
         optionswrapwidth: "777px",
@@ -89,20 +89,20 @@
         OptionSuggestion: "_3VKY5fS_afLCSSA3kAp2t1",
       };
     },
-    80212: (e, t, a) => {
+    82477: (e, t, a) => {
       "use strict";
-      a.d(t, { Xt: () => u, _I: () => g, hx: () => p });
-      var s = a(47427),
-        i = a(90069),
-        n = a(31846),
-        o = a(37563),
-        l = a(99327),
-        r = a(22791),
-        d = a(35791),
-        c = a(27438);
+      a.d(t, { Cg: () => p, pZ: () => g, vg: () => u });
+      var s = a(90626),
+        i = a(738),
+        o = a(61859),
+        n = a(78327),
+        l = a(97436),
+        r = a(72034),
+        d = a(28240),
+        c = a(44325);
       function m(e) {
         return s.createElement(
-          i.e1,
+          i.x_,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
           s.createElement(h, {
             redirectURL: e.redirectURL,
@@ -113,80 +113,80 @@
       function p(e) {
         const { redirectURL: t = window.location.href } = e;
         return s.createElement(
-          c.Yy,
+          c.EN,
           { active: !0 },
           s.createElement(m, { redirectURL: t }),
         );
       }
       function u() {
-        (0, i.AM)(
+        (0, i.pg)(
           s.createElement(m, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
           window,
-          { strTitle: (0, n.Xx)("#Login_SignInTitle") },
+          { strTitle: (0, o.we)("#Login_SignInTitle") },
         );
       }
       function g(e, t) {
-        (0, i.AM)(
+        (0, i.pg)(
           s.createElement(m, {
             ownerWin: window,
             redirectURL: e,
             guestOption: t,
           }),
           window,
-          { strTitle: (0, n.Xx)("#Login_SignInTitle") },
+          { strTitle: (0, o.we)("#Login_SignInTitle") },
         );
       }
       function h(e) {
         const { redirectURL: t, guestOption: a } = e,
           [i] = (0, s.useState)(
-            new r.J(o.De.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
+            new r.D(n.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [n, c] = (0, s.useState)(!1);
+          [o, c] = (0, s.useState)(!1);
         return s.createElement(
           "div",
           null,
-          n
-            ? s.createElement(l.pT, null)
+          o
+            ? s.createElement(l.Fn, null)
             : s.createElement(
-                l.wK,
+                l.YN,
                 {
                   autoFocus: !0,
                   transport: i,
                   platform: 2,
                   onComplete: (e) => {
-                    e == d.TG.k_PrimaryDomainFail
+                    e == d.wI.k_PrimaryDomainFail
                       ? c(!0)
                       : window.location.assign(t);
                   },
                   redirectUrl: t,
                   theme: "modal",
                 },
-                a && s.createElement(l.bU, { redirectURL: t }),
+                a && s.createElement(l.Mk, { redirectURL: t }),
               ),
         );
       }
     },
-    67938: (e, t, a) => {
+    52069: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => O });
+      a.r(t), a.d(t, { default: () => V });
       var s,
-        i = a(85556),
-        n = a(37563),
-        o = a(27605),
-        l = a(54842),
-        r = a(47427),
-        d = a(95082),
-        c = a(62613),
-        m = a(13129),
-        p = a(31846),
-        u = a(20417),
-        g = a(94261),
-        h = a(93962),
+        i = a(34629),
+        o = a(78327),
+        n = a(75844),
+        l = a(14947),
+        r = a(90626),
+        d = a(5970),
+        c = a(12155),
+        m = a(52038),
+        p = a(61859),
+        u = a(56093),
+        g = a(522),
+        h = a(26649),
         _ = a.n(h),
-        E = a(80751),
+        E = a(41735),
         T = a.n(E);
       !(function (e) {
         (e[(e.Unrequested = 0)] = "Unrequested"),
@@ -197,7 +197,7 @@
       })(s || (s = {}));
       class y {
         constructor() {
-          (0, l.rC)(this);
+          (0, l.Gn)(this);
         }
         getData(e, t, a) {
           const i = this.eState == s.Pending || this.eState == s.Rerequest;
@@ -258,13 +258,13 @@
         eState = s.Unrequested;
         nExpirationTime = 0;
       }
-      (0, i.gn)([l.LO], y.prototype, "data", void 0),
-        (0, i.gn)([l.LO], y.prototype, "nExpirationTime", void 0);
-      (0, i.gn)(
-        [l.LO],
+      (0, i.Cg)([l.sH], y.prototype, "data", void 0),
+        (0, i.Cg)([l.sH], y.prototype, "nExpirationTime", void 0);
+      (0, i.Cg)(
+        [l.sH],
         class {
           constructor() {
-            (0, l.rC)(this);
+            (0, l.Gn)(this);
           }
           getAsyncDataWrapper(e) {
             let t;
@@ -336,7 +336,7 @@
           (e[(e.AddToWishlist = 2)] = "AddToWishlist"),
           (e[(e.AddToCart = 3)] = "AddToCart");
       })(S || (S = {}));
-      class R {
+      class I {
         m_fPopularityValue = void 0;
         m_fRecencyValue = void 0;
         m_rgFilterTags = [];
@@ -354,7 +354,7 @@
         m_TagNameMap = new Map();
         m_bStateUpdated;
         constructor() {
-          (0, l.rC)(this),
+          (0, l.Gn)(this),
             (this.m_fPopularityValue = window.history.state
               ? window.history.state.popularity
               : 0.25),
@@ -439,8 +439,8 @@
         }
         getResults(e, t, a, s) {
           const i = e ? "1" : "0",
-            n = t ? `${t}` : "0",
-            o = a ? "1" : "0",
+            o = t ? `${t}` : "0",
+            n = a ? "1" : "0",
             l = s ? `${s}` : "0";
           let r = "";
           const d = this.getInputApps();
@@ -455,7 +455,7 @@
               9999999,
               async () =>
                 await T().get(
-                  `${v.BASE_URL}recommender/${v.STEAM_ID}/results?sessionid=${v.SESSION_ID}&steamid=${v.STEAM_ID}&include_played=${i}&algorithm=${n}&reinference=${o}&model_version=${l}${r}`,
+                  `${v.BASE_URL}recommender/${v.STEAM_ID}/results?sessionid=${v.SESSION_ID}&steamid=${v.STEAM_ID}&include_played=${i}&algorithm=${o}&reinference=${n}&model_version=${l}${r}`,
                 ),
               (e) => (
                 e.data.recommendations.request_results.sort((e, t) =>
@@ -477,7 +477,7 @@
           return this.m_ResultDataCache.isExpired();
         }
         getRecommendations() {
-          const e = f.getResults(
+          const e = R.getResults(
             v.INCLUDE_PLAYED,
             v.ALGORITHM,
             v.REINFERENCE,
@@ -496,7 +496,7 @@
           );
         }
         getAppInfo() {
-          const e = f.getResults(
+          const e = R.getResults(
             v.INCLUDE_PLAYED,
             v.ALGORITHM,
             v.REINFERENCE,
@@ -595,7 +595,7 @@
           this.m_ResultDataCache.expireData(), (this.m_bIgnoredEdited = !1);
         }
         async onAddToWishlist(e, t) {
-          f.getAppInfo()[e].w = !0;
+          R.getAppInfo()[e].w = !0;
           let a = { sessionid: v.SESSION_ID, appid: e };
           const s = await T().post(
             `${v.BASE_URL}recommender/${v.STEAM_ID}/wishlist?snr=${v.LINK_PARAM}`,
@@ -645,45 +645,45 @@
           return this.m_bUseMicrotrailers;
         }
       }
-      (0, i.gn)([l.LO], R.prototype, "m_fPopularityValue", void 0),
-        (0, i.gn)([l.LO], R.prototype, "m_fRecencyValue", void 0),
-        (0, i.gn)([l.LO], R.prototype, "m_rgFilterTags", void 0),
-        (0, i.gn)([l.LO], R.prototype, "m_rgExcludeTags", void 0),
-        (0, i.gn)([l.LO], R.prototype, "m_fQueuedPopularityValue", void 0),
-        (0, i.gn)([l.LO], R.prototype, "m_fQueuedRecencyValue", void 0),
-        (0, i.gn)([l.LO], R.prototype, "m_bExcludeWishlisted", void 0),
-        (0, i.gn)([l.LO], R.prototype, "m_bShouldMute", void 0),
-        (0, i.gn)([l.LO], R.prototype, "m_bUseMicrotrailers", void 0),
-        (0, i.gn)([l.LO], R.prototype, "m_bIgnoredEdited", void 0),
-        (0, i.gn)([u.ak], R.prototype, "getTagHeight", null),
-        (0, i.gn)([u.ak], R.prototype, "onPopularityChanged", null),
-        (0, i.gn)([u.ak], R.prototype, "onRecencyChanged", null),
-        (0, i.gn)([u.ak], R.prototype, "onTagFilterAdd", null),
-        (0, i.gn)([u.ak], R.prototype, "onTagFilterRemove", null),
-        (0, i.gn)([u.ak], R.prototype, "onTagExcludeAdd", null),
-        (0, i.gn)([u.ak], R.prototype, "onTagExcludeRemove", null),
-        (0, i.gn)([u.ak], R.prototype, "doTagsPassFilter", null),
-        (0, i.gn)([u.ak], R.prototype, "doTagsFailExclusion", null),
-        (0, i.gn)([u.ak], R.prototype, "onExcludeWishlistedToggled", null),
-        (0, i.gn)([u.ak], R.prototype, "onToggleIgnore", null),
-        (0, i.gn)([u.ak], R.prototype, "onUpdateWithIgnored", null),
-        (0, i.gn)([u.ak], R.prototype, "onAddToWishlist", null),
-        (0, i.gn)([u.ak], R.prototype, "onGoToWishlist", null),
-        (0, i.gn)([u.ak], R.prototype, "onAddToCart", null),
-        (0, i.gn)([u.ak], R.prototype, "onMuteClicked", null),
-        (0, i.gn)([u.ak], R.prototype, "onUnMuteClicked", null),
-        (0, i.gn)([u.ak], R.prototype, "shouldMute", null),
-        (0, i.gn)([u.ak], R.prototype, "shouldUseMicrotrailers", null);
-      const f = new R();
-      window.g_InteractiveRecommender = f;
-      var I = a(80212),
-        N = a(25006);
+      (0, i.Cg)([l.sH], I.prototype, "m_fPopularityValue", void 0),
+        (0, i.Cg)([l.sH], I.prototype, "m_fRecencyValue", void 0),
+        (0, i.Cg)([l.sH], I.prototype, "m_rgFilterTags", void 0),
+        (0, i.Cg)([l.sH], I.prototype, "m_rgExcludeTags", void 0),
+        (0, i.Cg)([l.sH], I.prototype, "m_fQueuedPopularityValue", void 0),
+        (0, i.Cg)([l.sH], I.prototype, "m_fQueuedRecencyValue", void 0),
+        (0, i.Cg)([l.sH], I.prototype, "m_bExcludeWishlisted", void 0),
+        (0, i.Cg)([l.sH], I.prototype, "m_bShouldMute", void 0),
+        (0, i.Cg)([l.sH], I.prototype, "m_bUseMicrotrailers", void 0),
+        (0, i.Cg)([l.sH], I.prototype, "m_bIgnoredEdited", void 0),
+        (0, i.Cg)([u.oI], I.prototype, "getTagHeight", null),
+        (0, i.Cg)([u.oI], I.prototype, "onPopularityChanged", null),
+        (0, i.Cg)([u.oI], I.prototype, "onRecencyChanged", null),
+        (0, i.Cg)([u.oI], I.prototype, "onTagFilterAdd", null),
+        (0, i.Cg)([u.oI], I.prototype, "onTagFilterRemove", null),
+        (0, i.Cg)([u.oI], I.prototype, "onTagExcludeAdd", null),
+        (0, i.Cg)([u.oI], I.prototype, "onTagExcludeRemove", null),
+        (0, i.Cg)([u.oI], I.prototype, "doTagsPassFilter", null),
+        (0, i.Cg)([u.oI], I.prototype, "doTagsFailExclusion", null),
+        (0, i.Cg)([u.oI], I.prototype, "onExcludeWishlistedToggled", null),
+        (0, i.Cg)([u.oI], I.prototype, "onToggleIgnore", null),
+        (0, i.Cg)([u.oI], I.prototype, "onUpdateWithIgnored", null),
+        (0, i.Cg)([u.oI], I.prototype, "onAddToWishlist", null),
+        (0, i.Cg)([u.oI], I.prototype, "onGoToWishlist", null),
+        (0, i.Cg)([u.oI], I.prototype, "onAddToCart", null),
+        (0, i.Cg)([u.oI], I.prototype, "onMuteClicked", null),
+        (0, i.Cg)([u.oI], I.prototype, "onUnMuteClicked", null),
+        (0, i.Cg)([u.oI], I.prototype, "shouldMute", null),
+        (0, i.Cg)([u.oI], I.prototype, "shouldUseMicrotrailers", null);
+      const R = new I();
+      window.g_InteractiveRecommender = R;
+      var f = a(82477),
+        C = a(32630);
       !(function () {
-        let e = (0, n.kQ)("ir_config", "application_config");
-        e && (Object.assign(v, e), f.Init());
+        let e = (0, o.Tc)("ir_config", "application_config");
+        e && (Object.assign(v, e), R.Init());
       })();
-      const x = ({ accountID: e }) => {
-          const t = f.getInputApps(),
+      const w = ({ accountID: e }) => {
+          const t = R.getInputApps(),
             a = Object.keys(t).length;
           let s = 0;
           return (
@@ -708,37 +708,37 @@
                 r.createElement(
                   "div",
                   { className: g.GameCount },
-                  (0, p.Xx)("#PlaytimeList_RecentGames", a),
+                  (0, p.we)("#PlaytimeList_RecentGames", a),
                 ),
                 r.createElement(
                   "div",
                   { className: g.TotalTime },
-                  (0, p.Xx)("#PlaytimeList_HoursTotal", s),
+                  (0, p.we)("#PlaytimeList_HoursTotal", s),
                 ),
               ),
             )
           );
         },
-        w = ({ appID: e, name: t, hours: a, lastPlayed: s, ignored: i }) => {
-          const n = `${v.CDN_URL}apps/${e}/header.jpg`,
-            o = Date.now() / 1e3 - s;
+        N = ({ appID: e, name: t, hours: a, lastPlayed: s, ignored: i }) => {
+          const o = `${v.CDN_URL}apps/${e}/header.jpg`,
+            n = Date.now() / 1e3 - s;
           let l = "",
             d = "";
           return (
             s <= 86400
-              ? (d = (0, p.Xx)("#PlaytimeList_LastPlayedMax"))
-              : o > 31449600
-                ? ((l = (0, p.vX)(s)),
-                  (d = (0, p.Xx)("#PlaytimeList_LastPlayed", l)))
-                : ((l = (0, p.yW)(o)),
-                  (d = (0, p.Xx)("#PlaytimeList_LastPlayed", l))),
+              ? (d = (0, p.we)("#PlaytimeList_LastPlayedMax"))
+              : n > 31449600
+                ? ((l = (0, p.$z)(s)),
+                  (d = (0, p.we)("#PlaytimeList_LastPlayed", l)))
+                : ((l = (0, p.Hq)(n)),
+                  (d = (0, p.we)("#PlaytimeList_LastPlayed", l))),
             r.createElement(
               "div",
-              { className: (0, m.Z)(g.PlayedGame, i && g.Ignored) },
+              { className: (0, m.A)(g.PlayedGame, i && g.Ignored) },
               r.createElement(
                 "a",
                 { href: `${v.BASE_URL}app/${e}?snr=${v.LINK_PARAM}` },
-                r.createElement("img", { className: g.Logo, src: n }),
+                r.createElement("img", { className: g.Logo, src: o }),
               ),
               r.createElement(
                 "div",
@@ -746,7 +746,7 @@
                 r.createElement(
                   "div",
                   { className: g.HoursPlayed },
-                  (0, p.Xx)("#PlaytimeList_Hours", a),
+                  (0, p.we)("#PlaytimeList_Hours", a),
                 ),
                 r.createElement("div", { className: g.Title }, t),
                 r.createElement("div", { className: g.LastPlayed }, d),
@@ -754,9 +754,9 @@
                   "div",
                   {
                     className: g.IgnoreToggle,
-                    onClick: () => f.onToggleIgnore(e),
+                    onClick: () => R.onToggleIgnore(e),
                   },
-                  (0, p.Xx)(
+                  (0, p.we)(
                     i ? "#PlaytimeList_UnIgnore" : "#PlaytimeList_Ignore",
                   ),
                 ),
@@ -764,12 +764,12 @@
             )
           );
         };
-      let C = class extends r.Component {
+      let A = class extends r.Component {
         constructor(e) {
           super(e), (this.state = {});
         }
         render() {
-          const e = f.getInputApps();
+          const e = R.getInputApps();
           let t = [];
           if (!e)
             return r.createElement(
@@ -778,17 +778,17 @@
               r.createElement(
                 "div",
                 { className: g.Header },
-                (0, p.Xx)("#PlaytimeList_Header"),
+                (0, p.we)("#PlaytimeList_Header"),
               ),
               r.createElement("div", { className: g.Loading }),
             );
-          f.getAppInfo();
+          R.getAppInfo();
           const a = e.slice().sort((e, t) => t.l - e.l);
           return (
             Object.keys(a).map((e) => {
               const s = a[e];
               t.push(
-                r.createElement(w, {
+                r.createElement(N, {
                   key: "PlayedGame_" + s.a,
                   appID: s.a,
                   name: s.t,
@@ -804,27 +804,27 @@
               r.createElement(
                 "div",
                 { className: g.Header },
-                (0, p.Xx)("#PlaytimeList_Header"),
+                (0, p.we)("#PlaytimeList_Header"),
               ),
-              r.createElement(x, { accountID: this.props.accountID }),
+              r.createElement(w, { accountID: this.props.accountID }),
               r.createElement("div", { className: g.List }, t),
             )
           );
         }
       };
-      C = (0, i.gn)([o.Pi], C);
-      const L = ({
+      A = (0, i.Cg)([n.PA], A);
+      const P = ({
           titleLabel: e,
           minLabel: t,
           maxLabel: a,
           minValue: s,
           maxValue: i,
-          value: n,
-          onChange: o,
+          value: o,
+          onChange: n,
           sliderLabels: l,
         }) => {
           const d = l
-              ? Math.round((l.length - 1) * ((n - s) / (i - s)))
+              ? Math.round((l.length - 1) * ((o - s) / (i - s)))
               : void 0,
             c = l ? l[d] : "";
           return r.createElement(
@@ -842,16 +842,16 @@
               min: s,
               max: i,
               step: (i - s) / 100,
-              value: n,
-              onChange: o,
+              value: o,
+              onChange: n,
             }),
             r.createElement("div", { className: g.OptionalLabel }, c),
           );
         },
-        A = ({ className: e, titleLabel: t, checked: a, onChange: s }) =>
+        D = ({ className: e, titleLabel: t, checked: a, onChange: s }) =>
           r.createElement(
             "label",
-            { className: (0, m.Z)(g.OptionCheckbox, e && e) },
+            { className: (0, m.A)(g.OptionCheckbox, e && e) },
             r.createElement("input", {
               type: "checkbox",
               className: g.Checkbox,
@@ -860,17 +860,17 @@
             }),
             t,
           );
-      let P = class extends r.Component {
+      let L = class extends r.Component {
         selectedtags = [];
         constructor(e) {
           super(e),
-            (0, l.rC)(this),
+            (0, l.Gn)(this),
             (this.selectedtags = [...e.selectedtags]),
             (this.state = { value: "", suggestions: [] });
         }
         rgTags = [];
         componentDidMount() {
-          const e = f.getTags();
+          const e = R.getTags();
           if (e)
             for (const t of e)
               this.rgTags.push({ id: parseInt(t.tagid), name: t.name });
@@ -923,14 +923,14 @@
         }
         render() {
           const e = {
-            placeholder: (0, p.Xx)("#TagSelect"),
+            placeholder: (0, p.we)("#TagSelect"),
             value: this.state.value,
             onChange: this.onChange,
             onKeyDown: this.onKeyDown,
           };
           let t = [];
           for (const e of this.selectedtags) {
-            let a = f.m_TagNameMap.get(e);
+            let a = R.m_TagNameMap.get(e);
             t.push(
               r.createElement(
                 "div",
@@ -968,30 +968,30 @@
           );
         }
       };
-      (0, i.gn)([l.LO], P.prototype, "selectedtags", void 0),
-        (0, i.gn)([u.ak], P.prototype, "onFetchRequested", null),
-        (0, i.gn)([u.ak], P.prototype, "onClearRequested", null),
-        (0, i.gn)([u.ak], P.prototype, "onChange", null),
-        (0, i.gn)([u.ak], P.prototype, "onKeyDown", null),
-        (0, i.gn)([u.ak], P.prototype, "shouldRenderSuggestions", null),
-        (0, i.gn)([u.ak], P.prototype, "onSuggestionSelected", null),
-        (0, i.gn)([u.ak], P.prototype, "onRemoveSelectedTag", null),
-        (P = (0, i.gn)([o.Pi], P));
-      const D = (0, o.Pi)(() => {
-        const e = f.getTags();
+      (0, i.Cg)([l.sH], L.prototype, "selectedtags", void 0),
+        (0, i.Cg)([u.oI], L.prototype, "onFetchRequested", null),
+        (0, i.Cg)([u.oI], L.prototype, "onClearRequested", null),
+        (0, i.Cg)([u.oI], L.prototype, "onChange", null),
+        (0, i.Cg)([u.oI], L.prototype, "onKeyDown", null),
+        (0, i.Cg)([u.oI], L.prototype, "shouldRenderSuggestions", null),
+        (0, i.Cg)([u.oI], L.prototype, "onSuggestionSelected", null),
+        (0, i.Cg)([u.oI], L.prototype, "onRemoveSelectedTag", null),
+        (L = (0, i.Cg)([n.PA], L));
+      const x = (0, n.PA)(() => {
+        const e = R.getTags();
         let t = [];
         if (e)
           for (const a of e) t.push({ id: parseInt(a.tagid), name: a.name });
         const a = [
-          (0, p.Xx)("#FilterAge_240"),
-          (0, p.Xx)("#FilterAge_60"),
-          (0, p.Xx)("#FilterAge_36"),
-          (0, p.Xx)("#FilterAge_24"),
-          (0, p.Xx)("#FilterAge_12"),
-          (0, p.Xx)("#FilterAge_6"),
+          (0, p.we)("#FilterAge_240"),
+          (0, p.we)("#FilterAge_60"),
+          (0, p.we)("#FilterAge_36"),
+          (0, p.we)("#FilterAge_24"),
+          (0, p.we)("#FilterAge_12"),
+          (0, p.we)("#FilterAge_6"),
         ];
-        let s = f.m_rgExcludeTags,
-          i = f.m_rgFilterTags;
+        let s = R.m_rgExcludeTags,
+          i = R.m_rgFilterTags;
         return (
           console.log(`exclude_tags: ${s}`),
           console.log(`filter_tags: ${i}`),
@@ -1000,51 +1000,51 @@
             { className: g.RecommendationOptions },
             r.createElement(
               "div",
-              { className: (0, m.Z)(g.Row, g.FirstRow) },
-              r.createElement(L, {
-                minLabel: (0, p.Xx)("#Popularity_Popular"),
-                titleLabel: (0, p.Xx)("#Popularity_Title"),
-                maxLabel: (0, p.Xx)("#Popularity_Niche"),
+              { className: (0, m.A)(g.Row, g.FirstRow) },
+              r.createElement(P, {
+                minLabel: (0, p.we)("#Popularity_Popular"),
+                titleLabel: (0, p.we)("#Popularity_Title"),
+                maxLabel: (0, p.we)("#Popularity_Niche"),
                 minValue: 0,
                 maxValue: 1,
-                value: f.m_fQueuedPopularityValue,
-                onChange: f.onPopularityChanged,
+                value: R.m_fQueuedPopularityValue,
+                onChange: R.onPopularityChanged,
               }),
-              r.createElement(L, {
-                minLabel: (0, p.Xx)("#Recency_Older"),
-                titleLabel: (0, p.Xx)("#Recency_Title"),
-                maxLabel: (0, p.Xx)("#Recency_Newer"),
+              r.createElement(P, {
+                minLabel: (0, p.we)("#Recency_Older"),
+                titleLabel: (0, p.we)("#Recency_Title"),
+                maxLabel: (0, p.we)("#Recency_Newer"),
                 minValue: 0,
                 maxValue: 1,
-                value: f.m_fQueuedRecencyValue,
-                onChange: f.onRecencyChanged,
+                value: R.m_fQueuedRecencyValue,
+                onChange: R.onRecencyChanged,
                 sliderLabels: a,
               }),
             ),
             r.createElement(
               "div",
-              { className: (0, m.Z)(g.Row, g.SecondRow) },
-              r.createElement(P, {
-                title: (0, p.Xx)("#TagFilterMultiple_Title"),
+              { className: (0, m.A)(g.Row, g.SecondRow) },
+              r.createElement(L, {
+                title: (0, p.we)("#TagFilterMultiple_Title"),
                 tagoptions: t,
                 selectedtags: i,
                 key: "Filter" + i.toString(),
-                onAddTag: f.onTagFilterAdd,
-                onRemoveTag: f.onTagFilterRemove,
+                onAddTag: R.onTagFilterAdd,
+                onRemoveTag: R.onTagFilterRemove,
               }),
-              r.createElement(P, {
-                title: (0, p.Xx)("#TagExcludeMultiple_Title"),
+              r.createElement(L, {
+                title: (0, p.we)("#TagExcludeMultiple_Title"),
                 tagoptions: t,
                 selectedtags: s,
                 key: "Exclude" + s.toString(),
-                onAddTag: f.onTagExcludeAdd,
-                onRemoveTag: f.onTagExcludeRemove,
+                onAddTag: R.onTagExcludeAdd,
+                onRemoveTag: R.onTagExcludeRemove,
               }),
-              r.createElement(A, {
+              r.createElement(D, {
                 className: g.WishlistCheckbox,
-                titleLabel: (0, p.Xx)("#ExcludeWishlisted"),
-                checked: f.m_bExcludeWishlisted,
-                onChange: f.onExcludeWishlistedToggled,
+                titleLabel: (0, p.we)("#ExcludeWishlisted"),
+                checked: R.m_bExcludeWishlisted,
+                onChange: R.onExcludeWishlistedToggled,
               }),
             ),
           )
@@ -1056,7 +1056,7 @@
           super(e),
             (this.state = {
               hovered: !1,
-              wishlisted: f.getAppInfo()[e.appID].w,
+              wishlisted: R.getAppInfo()[e.appID].w,
             });
         }
         componentDidMount() {
@@ -1090,12 +1090,12 @@
         onMuteToggle(e) {
           e.preventDefault(),
             e.stopPropagation(),
-            f.shouldMute()
-              ? (f.onUnMuteClicked(),
+            R.shouldMute()
+              ? (R.onUnMuteClicked(),
                 this.m_videoRef &&
                   this.m_videoRef.current &&
                   (this.m_videoRef.current.muted = !1))
-              : (f.onMuteClicked(),
+              : (R.onMuteClicked(),
                 this.m_videoRef &&
                   this.m_videoRef.current &&
                   (this.m_videoRef.current.muted = !0));
@@ -1103,38 +1103,38 @@
         onAddToWishlist(e) {
           e.preventDefault(),
             e.stopPropagation(),
-            f.onAddToWishlist(this.props.appID, this.props.rank),
+            R.onAddToWishlist(this.props.appID, this.props.rank),
             this.setState({ wishlisted: !0 });
         }
         onGoToWishlist(e) {
-          e.preventDefault(), e.stopPropagation(), f.onGoToWishlist();
+          e.preventDefault(), e.stopPropagation(), R.onGoToWishlist();
         }
         onAddToCart(e, t) {
           e.preventDefault(),
             e.stopPropagation(),
-            f.onAddToCart(this.props.appID, t, this.props.rank);
+            R.onAddToCart(this.props.appID, t, this.props.rank);
         }
         render() {
           const { appID: e, score: t, rank: a, width: s } = this.props,
             i =
               "https://steamcdn-a.akamaihd.net/steam/apps/" + e + "/header.jpg",
-            n = f.getAppInfo()[e];
-          if (!n) return r.createElement("div", null);
-          const o = n.n,
+            o = R.getAppInfo()[e];
+          if (!o) return r.createElement("div", null);
+          const n = o.n,
             l =
-              n.r > 0
-                ? (0, p.Xx)("#Recommendation_ReleasedOn", (0, p.vX)(n.r))
+              o.r > 0
+                ? (0, p.we)("#Recommendation_ReleasedOn", (0, p.$z)(o.r))
                 : "";
           let u = [];
-          if (n.t) {
+          if (o.t) {
             let t = 0;
-            for (const a of n.t)
+            for (const a of o.t)
               if (
                 (u.push(
                   r.createElement(
                     "div",
                     { key: `${e}_${a}`, className: g.Tag },
-                    f.getTagName(a),
+                    R.getTagName(a),
                   ),
                 ),
                 t++,
@@ -1149,48 +1149,48 @@
           s < h ? ((E = 66), (T = !1)) : s < _ && ((E = 87), (T = !1));
           const y = T && this.state.hovered,
             S = Math.min(Number(t) / 100, 1e3);
-          let R = !1,
-            I = !1,
-            N = !0,
-            x = "",
+          let I = !1,
+            f = !1,
+            C = !0,
             w = "",
-            C = "",
-            L = "",
-            A = 0,
+            N = "",
+            A = "",
             P = "",
-            D = !1,
+            D = 0,
+            L = "",
+            x = !1,
             M = !0;
           if (y) {
-            const e = f.getDetails(this.props.appID);
+            const e = R.getDetails(this.props.appID);
             e &&
-              ((R = !0),
-              (I = e.discount_pct > 0),
-              (N = "0" == e.discount_price),
-              (A = e.packageid),
+              ((I = !0),
+              (f = e.discount_pct > 0),
+              (C = "0" == e.discount_price),
+              (D = e.packageid),
               "probably" ==
               document
                 .createElement("video")
                 .canPlayType('video/webm; codecs="vp8, vorbis"')
-                ? f.shouldUseMicrotrailers() && e.microtrailer_webm
-                  ? ((P = e.microtrailer_webm), (D = !0), (M = !1))
-                  : (P = e.video_webm)
-                : f.shouldUseMicrotrailers() && e.microtrailer_mp4
-                  ? ((P = e.microtrailer_mp4), (D = !0), (M = !1))
-                  : (P = e.video_mp4),
-              (x = `-${e.discount_pct}%`),
-              (w = e.base_price),
-              (C = N ? (0, p.Xx)("#FreeToPlay") : e.discount_price),
-              (L = e.description));
+                ? R.shouldUseMicrotrailers() && e.microtrailer_webm
+                  ? ((L = e.microtrailer_webm), (x = !0), (M = !1))
+                  : (L = e.video_webm)
+                : R.shouldUseMicrotrailers() && e.microtrailer_mp4
+                  ? ((L = e.microtrailer_mp4), (x = !0), (M = !1))
+                  : (L = e.video_mp4),
+              (w = `-${e.discount_pct}%`),
+              (N = e.base_price),
+              (A = C ? (0, p.we)("#FreeToPlay") : e.discount_price),
+              (P = e.description));
           }
-          const k = P && P.length > 0;
+          const U = L && L.length > 0;
           return r.createElement(
-            d.ZP,
+            d.Ay,
             { appID: e },
             r.createElement(
               b,
               {
                 href: `${v.BASE_URL}app/${e}`,
-                className: (0, m.Z)(
+                className: (0, m.A)(
                   g.RecommendationEntry,
                   "ds_flagged",
                   "ds_wishlist",
@@ -1208,56 +1208,56 @@
                   "div",
                   { className: g.LeftSection },
                   r.createElement("img", {
-                    className: (0, m.Z)(g.Logo, (!k || !y) && g.Revealed),
+                    className: (0, m.A)(g.Logo, (!U || !y) && g.Revealed),
                     src: i,
                   }),
                   r.createElement("video", {
                     ref: this.m_videoRef,
-                    className: (0, m.Z)(
+                    className: (0, m.A)(
                       "highlight_player_item",
                       "highlight_movie",
                       g.Video,
-                      k && y && g.Revealed,
+                      U && y && g.Revealed,
                     ),
                     playsInline: !0,
                     autoPlay: !0,
-                    muted: M && f.shouldMute(),
-                    src: P,
-                    loop: D,
+                    muted: M && R.shouldMute(),
+                    src: L,
+                    loop: x,
                   }),
                   M &&
                     r.createElement(
                       "div",
                       {
-                        className: (0, m.Z)(g.UnMute, k && g.Revealed),
+                        className: (0, m.A)(g.UnMute, U && g.Revealed),
                         onClick: (e) => this.onMuteToggle(e),
                       },
-                      r.createElement(c.ffh, { muted: f.shouldMute() }),
+                      r.createElement(c.fSs, { muted: R.shouldMute() }),
                     ),
                   this.state.wishlisted &&
                     r.createElement(
                       "div",
                       {
-                        className: (0, m.Z)(
+                        className: (0, m.A)(
                           "ds_flag",
                           "ds_wishlist_flag",
                           g.WishlistFlag,
                         ),
                       },
-                      (0, p.Xx)("#Recommendation_OnWishlist") + "  ",
+                      (0, p.we)("#Recommendation_OnWishlist") + "  ",
                     ),
                 ),
                 r.createElement(
                   "div",
                   { className: g.RightSection },
-                  r.createElement("div", { className: g.Name }, o),
+                  r.createElement("div", { className: g.Name }, n),
                   r.createElement(
                     "div",
                     { className: g.CenterSection },
                     r.createElement(
                       "div",
                       {
-                        className: (0, m.Z)(
+                        className: (0, m.A)(
                           g.CenterOption,
                           g.CenterDefault,
                           y && g.Hidden,
@@ -1277,23 +1277,23 @@
                     r.createElement(
                       "div",
                       {
-                        className: (0, m.Z)(
+                        className: (0, m.A)(
                           g.CenterOption,
                           g.CenterHovered,
                           !y && g.Hidden,
                         ),
                       },
-                      L,
+                      P,
                     ),
                   ),
-                  R &&
+                  I &&
                     r.createElement(
                       "div",
                       { className: g.BottomEntrySection },
                       r.createElement(
                         "div",
                         {
-                          className: (0, m.Z)(
+                          className: (0, m.A)(
                             "game_purchase_action",
                             g.PurchaseSection,
                           ),
@@ -1301,12 +1301,12 @@
                         r.createElement(
                           "div",
                           {
-                            className: (0, m.Z)(
+                            className: (0, m.A)(
                               "game_purchase_action_bg",
                               g.PurchaseBG,
                             ),
                           },
-                          I &&
+                          f &&
                             r.createElement(
                               "div",
                               {
@@ -1316,7 +1316,7 @@
                               r.createElement(
                                 "div",
                                 { className: "discount_pct" },
-                                x,
+                                w,
                               ),
                               r.createElement(
                                 "div",
@@ -1324,33 +1324,33 @@
                                 r.createElement(
                                   "div",
                                   { className: "discount_original_price" },
-                                  w,
+                                  N,
                                 ),
                                 r.createElement(
                                   "div",
                                   { className: "discount_final_price" },
-                                  C,
+                                  A,
                                 ),
                               ),
                             ),
-                          !I &&
+                          !f &&
                             r.createElement(
                               "div",
                               {
-                                className: (0, m.Z)(
+                                className: (0, m.A)(
                                   "game_purchase_price",
                                   "price",
                                   g.Price,
                                 ),
                               },
-                              C,
+                              A,
                             ),
-                          !N &&
+                          !C &&
                             r.createElement(
                               "div",
                               {
                                 className: "btn_addtocart",
-                                onClick: (e) => this.onAddToCart(e, A),
+                                onClick: (e) => this.onAddToCart(e, D),
                               },
                               r.createElement(
                                 "span",
@@ -1361,14 +1361,14 @@
                                 r.createElement(
                                   "span",
                                   null,
-                                  (0, p.Xx)("#btn_add_to_cart"),
+                                  (0, p.we)("#btn_add_to_cart"),
                                 ),
                               ),
                             ),
                         ),
                       ),
                       !this.state.wishlisted &&
-                        !N &&
+                        !C &&
                         r.createElement(
                           "div",
                           {
@@ -1382,22 +1382,22 @@
                             r.createElement(
                               "span",
                               null,
-                              (0, p.Xx)("#wishlist_add_to_wishlist"),
+                              (0, p.we)("#wishlist_add_to_wishlist"),
                             ),
                           ),
                         ),
                       this.state.wishlisted &&
-                        !N &&
+                        !C &&
                         r.createElement(
                           "div",
                           {
-                            className: (0, m.Z)(
+                            className: (0, m.A)(
                               "btnv6_blue_hoverfade btn_medium",
                               "queue_btn_active",
                               g.Wishlisted,
                               g.WishlistSection,
                             ),
-                            "data-tooltip-text": (0, p.Xx)(
+                            "data-tooltip-text": (0, p.we)(
                               "#OnWishlistTooltip",
                             ),
                             onClick: (e) => this.onGoToWishlist(e),
@@ -1408,7 +1408,7 @@
                             r.createElement("img", {
                               src: `${v.IMG_URL_BASE}/v6/ico/ico_selected.png`,
                             }),
-                            "  " + (0, p.Xx)("#OnWishlist"),
+                            "  " + (0, p.we)("#OnWishlist"),
                           ),
                         ),
                     ),
@@ -1418,43 +1418,43 @@
           );
         }
       };
-      (0, i.gn)([u.ak], M.prototype, "OnHover", null),
-        (0, i.gn)([u.ak], M.prototype, "OnUnHover", null),
-        (0, i.gn)([u.ak], M.prototype, "onMuteToggle", null),
-        (0, i.gn)([u.ak], M.prototype, "onAddToWishlist", null),
-        (0, i.gn)([u.ak], M.prototype, "onGoToWishlist", null),
-        (0, i.gn)([u.ak], M.prototype, "onAddToCart", null),
-        (M = (0, i.gn)([o.Pi], M));
+      (0, i.Cg)([u.oI], M.prototype, "OnHover", null),
+        (0, i.Cg)([u.oI], M.prototype, "OnUnHover", null),
+        (0, i.Cg)([u.oI], M.prototype, "onMuteToggle", null),
+        (0, i.Cg)([u.oI], M.prototype, "onAddToWishlist", null),
+        (0, i.Cg)([u.oI], M.prototype, "onGoToWishlist", null),
+        (0, i.Cg)([u.oI], M.prototype, "onAddToCart", null),
+        (M = (0, i.Cg)([n.PA], M));
       const b = r.forwardRef(function (e, t) {
         const { href: a, ...s } = e,
-          i = (0, N.YR)(a);
+          i = (0, C.aL)(a);
         return r.createElement("a", { ...s, ref: t, href: i });
       });
-      let k = class extends r.Component {
+      let U = class extends r.Component {
         constructor(e) {
           super(e), (this.state = { sortedRecommendedApps: [] });
         }
         render() {
           let e = [];
-          const t = f.m_fRecencyValue * (v.NUM_RECENCY_STEPS - 1 - 0.001),
+          const t = R.m_fRecencyValue * (v.NUM_RECENCY_STEPS - 1 - 0.001),
             a = Math.floor(t),
             s = a + 1,
             i = t - a,
-            n = f.m_fPopularityValue * (v.NUM_POPULARITY_STEPS - 1 - 0.001),
-            o = Math.floor(n),
-            l = o + 1,
-            d = n - o;
+            o = R.m_fPopularityValue * (v.NUM_POPULARITY_STEPS - 1 - 0.001),
+            n = Math.floor(o),
+            l = n + 1,
+            d = o - n;
           e.push({
-            index: a * v.NUM_RECENCY_STEPS + o,
+            index: a * v.NUM_RECENCY_STEPS + n,
             weight: (1 - i) * (1 - d),
           }),
-            e.push({ index: s * v.NUM_RECENCY_STEPS + o, weight: i * (1 - d) }),
+            e.push({ index: s * v.NUM_RECENCY_STEPS + n, weight: i * (1 - d) }),
             e.push({ index: a * v.NUM_RECENCY_STEPS + l, weight: (1 - i) * d }),
             e.push({ index: s * v.NUM_RECENCY_STEPS + l, weight: i * d });
           let c = new Map(),
             u = 0;
-          const h = f.getRecommendations(),
-            _ = f.getAppInfo();
+          const h = R.getRecommendations(),
+            _ = R.getAppInfo();
           let E = [];
           if (h) {
             for (const t of e) {
@@ -1468,7 +1468,7 @@
                     _[e].o ||
                     _[e].i ||
                     _[e].ti ||
-                    (_[e].w && f.m_bExcludeWishlisted)
+                    (_[e].w && R.m_bExcludeWishlisted)
                   )
                     continue;
                   const s = (c.get(e) || 0) + a.weight * t.weight;
@@ -1479,10 +1479,10 @@
             let t = [];
             c.forEach((e, a) => t.push({ appid: a, score: e })),
               (t = t.filter(
-                (e) => _[e.appid].t && f.doTagsPassFilter(_[e.appid].t),
+                (e) => _[e.appid].t && R.doTagsPassFilter(_[e.appid].t),
               )),
               (t = t.filter(
-                (e) => _[e.appid].t && !f.doTagsFailExclusion(_[e.appid].t),
+                (e) => _[e.appid].t && !R.doTagsFailExclusion(_[e.appid].t),
               )),
               (t = t.filter((e) => e.score > 0));
             let a = t.sort((e, t) => t.score - e.score);
@@ -1508,7 +1508,7 @@
                     key: "no_recommedations_due_to_filter",
                     className: g.NoRecommendationsMessage,
                   },
-                  (0, p.Xx)("#NoRecommendationsDueToFilter"),
+                  (0, p.we)("#NoRecommendationsDueToFilter"),
                 ),
               );
           } else
@@ -1524,15 +1524,15 @@
             r.createElement(
               "div",
               { className: g.Header },
-              (0, p.Xx)("#Recommendations_Header"),
+              (0, p.we)("#Recommendations_Header"),
             ),
-            r.createElement(D, null),
+            r.createElement(x, null),
             r.createElement(
               "div",
               {
-                className: (0, m.Z)(
+                className: (0, m.A)(
                   g.List,
-                  f.areResultsExpired() && g.Updating,
+                  R.areResultsExpired() && g.Updating,
                 ),
               },
               E,
@@ -1540,8 +1540,8 @@
           );
         }
       };
-      k = (0, i.gn)([o.Pi], k);
-      let U = class extends r.Component {
+      U = (0, i.Cg)([n.PA], U);
+      let O = class extends r.Component {
         state = { width: window.innerWidth };
         updateDimensions() {
           this.setState({ width: window.innerWidth });
@@ -1550,12 +1550,12 @@
           window.addEventListener("resize", this.updateDimensions);
         }
         ShowLoginDialog() {
-          (0, I.Xt)();
+          (0, f.vg)();
         }
         render() {
-          return n.L7.logged_in
+          return o.iA.logged_in
             ? r.createElement(
-                N.ZP,
+                C.Ay,
                 {
                   controller: "recommender",
                   method: "default",
@@ -1565,7 +1565,7 @@
                   "div",
                   {
                     className: g.App,
-                    style: { height: 3840 + 26 * f.getTagHeight() },
+                    style: { height: 3840 + 26 * R.getTagHeight() },
                   },
                   r.createElement(
                     "div",
@@ -1576,20 +1576,20 @@
                       r.createElement(
                         "div",
                         { className: g.Header },
-                        (0, p.Xx)("#HeaderTitle"),
+                        (0, p.we)("#HeaderTitle"),
                       ),
                       r.createElement(
                         "div",
                         { className: g.Body },
-                        (0, p.Xx)("#HeaderBody1"),
+                        (0, p.we)("#HeaderBody1"),
                       ),
                     ),
                     r.createElement(
                       "div",
                       { className: g.BottomSection },
-                      r.createElement(C, { accountID: n.L7.accountid }),
+                      r.createElement(A, { accountID: o.iA.accountid }),
                       r.createElement("div", { className: g.VerticalBar }),
-                      r.createElement(k, { width: this.state.width }),
+                      r.createElement(U, { width: this.state.width }),
                     ),
                   ),
                 ),
@@ -1603,27 +1603,27 @@
                   r.createElement(
                     "div",
                     { className: g.Text },
-                    (0, p.Xx)("#LoginText"),
+                    (0, p.we)("#LoginText"),
                   ),
                   r.createElement(
                     "div",
                     {
-                      className: (0, m.Z)(
+                      className: (0, m.A)(
                         "btn_green_white_innerfade",
                         " btn_medium",
                       ),
                       onClick: this.ShowLoginDialog,
                     },
-                    r.createElement("span", null, (0, p.Xx)("#LoginButton")),
+                    r.createElement("span", null, (0, p.we)("#LoginButton")),
                   ),
                 ),
               );
         }
       };
-      (0, i.gn)([u.ak], U.prototype, "updateDimensions", null),
-        (0, i.gn)([u.ak], U.prototype, "ShowLoginDialog", null),
-        (U = (0, i.gn)([o.Pi], U));
-      const O = U;
+      (0, i.Cg)([u.oI], O.prototype, "updateDimensions", null),
+        (0, i.Cg)([u.oI], O.prototype, "ShowLoginDialog", null),
+        (O = (0, i.Cg)([n.PA], O));
+      const V = O;
     },
   },
 ]);

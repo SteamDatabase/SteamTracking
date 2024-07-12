@@ -971,6 +971,45 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 	color: #8f98a0;
 }
 
+.game_area_purchase_game div.package_contents_capsules_ctn {
+	background: rgba(0, 0, 0, 0.5);
+	padding: 6px;
+	display: block;
+	margin-left: -6px;
+	line-height: 0;
+	position: relative;
+}
+
+.game_area_purchase_game div.package_contents_capsules {
+	overflow-x: clip;
+	white-space: nowrap;
+}
+
+.game_area_purchase_game div.package_contents_capsule {
+	position: relative;
+	display: inline-block;
+}
+
+.game_area_purchase_game div.package_contents_capsules.package_contents_collapsed::after {
+	z-index: 30;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	background: linear-gradient( to right, rgba(0, 0, 0, 0) 90%, #000 100% );
+}
+
+.game_area_purchase_game div.package_contents_collapsed.package_contents_capsules div.package_contents_capsule:not(:first-child) {
+	margin-left: -38px;
+}
+
+.game_area_purchase_game div.package_contents_collapsed.package_contents_capsules div.package_contents_capsule {
+	box-shadow: 2px 0 5px 0px #000000;
+}
+
 .game_area_purchase_game p.package_contents a,
 .game_area_offsite_purchase p.package_contents a {
 	color: #b0aeac;

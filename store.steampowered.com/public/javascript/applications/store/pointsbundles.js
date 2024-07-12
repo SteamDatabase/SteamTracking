@@ -1,9 +1,9 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [3413],
+  [8685],
   {
-    99591: (e) => {
+    26590: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         Discount: "_3f4n8BFj3ADB61_06XxXfH",
@@ -42,91 +42,91 @@
         AlreadyOwnedText: "_1E4uc1RzsRkpvfk6DwwdMp",
       };
     },
-    86638: (e, t, r) => {
+    91855: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => x });
-      var n = r(47427),
-        a = r(8285),
-        l = r(760),
-        o = r(27605),
-        c = r(48976),
-        i = r(42364),
-        s = r(78656),
-        d = r(38244),
-        m = r(31846),
-        u = r(42605),
-        _ = r(83955),
-        p = r(76471),
-        f = r(75321),
-        h = r(99591),
-        C = r(13129),
-        I = r(20376);
-      const x = (0, o.Pi)((e) => {
+      r.r(t), r.d(t, { default: () => A });
+      var n = r(90626),
+        a = r(92757),
+        l = r(43527),
+        o = r(75844),
+        c = r(60476),
+        s = r(48474),
+        i = r(59707),
+        d = r(99428),
+        m = r(61859),
+        u = r(63927),
+        _ = r(87873),
+        p = r(32150),
+        f = r(12711),
+        h = r(26590),
+        C = r(52038),
+        I = r(6519);
+      const A = (0, o.PA)((e) => {
           const { bundleid: t } = e.match.params,
             r = parseInt(t),
-            o = n.createElement(a.l_, { to: l.Z.LoyaltyStore() });
+            o = n.createElement(a.rd, { to: l.B.LoyaltyStore() });
           if (isNaN(r)) return o;
-          const [i] = c.Vb.Get().GetRewardDefinitions(r);
-          return i
-            ? 5 !== i.type && 6 !== i.type
+          const [s] = c.DZ.Get().GetRewardDefinitions(r);
+          return s
+            ? 5 !== s.type && 6 !== s.type
               ? o
-              : n.createElement(E, { bundle: i })
+              : n.createElement(B, { bundle: s })
             : null;
         }),
-        E = (0, o.Pi)((e) => {
+        B = (0, o.PA)((e) => {
           const { bundle: t } = e,
-            r = c.Vb.Get().GetBundleOfferForUser(t);
+            r = c.DZ.Get().GetBundleOfferForUser(t);
           return n.createElement(
-            i.OC,
+            s.jy,
             null,
             n.createElement(
-              d.xu,
+              d.az,
               {
                 paddingY: "xlarge",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
               },
-              n.createElement(B, { bundle: t, offer: r }),
+              n.createElement(E, { bundle: t, offer: r }),
               0 === r.point_cost
-                ? n.createElement(k, { className: h.PrimaryRedeemButton })
-                : n.createElement(s.D9, {
+                ? n.createElement(w, { className: h.PrimaryRedeemButton })
+                : n.createElement(i.gs, {
                     cost: r.point_cost,
                     discount: r.discount,
                     originalCost: r.original_point_cost,
                     className: h.PrimaryRedeemButton,
-                    onClick: (e) => (0, s.s1)(e, t),
+                    onClick: (e) => (0, i.U$)(e, t),
                   }),
-              n.createElement(b, { offer: r }),
+              n.createElement(k, { offer: r }),
             ),
           );
         }),
-        B = (0, o.Pi)(({ bundle: e, offer: t }) => {
-          const r = (0, u.h)(e),
-            a = (0, m.Xx)("#RewardBundle_OfferDescription", t.discount);
+        E = (0, o.PA)(({ bundle: e, offer: t }) => {
+          const r = (0, u.g)(e),
+            a = (0, m.we)("#RewardBundle_OfferDescription", t.discount);
           return n.createElement(
-            d.xu,
+            d.az,
             { paddingBottom: "xlarge" },
-            n.createElement(i._f, { title: r, subtitle: a }),
+            n.createElement(s.Ch, { title: r, subtitle: a }),
           );
         }),
-        k = ({ className: e }) =>
+        w = ({ className: e }) =>
           n.createElement(
             "div",
-            { className: (0, C.Z)(e, h.AlreadyOwned) },
-            n.createElement(I.Zg, { className: h.CheckmarkCircle }),
+            { className: (0, C.A)(e, h.AlreadyOwned) },
+            n.createElement(I.wK, { className: h.CheckmarkCircle }),
             n.createElement(
               "span",
               { className: h.AlreadyOwnedText },
-              (0, m.Xx)("#Redeem_BundleItemOwned"),
+              (0, m.we)("#Redeem_BundleItemOwned"),
             ),
           ),
-        b = (0, o.Pi)((e) => {
+        k = (0, o.PA)((e) => {
           const { offer: t } = e;
           return n.createElement(
-            _.iS,
-            { title: (0, m.Xx)("#RewardBundle_BundleContentsSection_Title") },
-            n.createElement(p.c, {
+            _.Gq,
+            { title: (0, m.we)("#RewardBundle_BundleContentsSection_Title") },
+            n.createElement(p.n, {
               getItems: (e, r) => ({
                 rewards: t.items.slice(e, r),
                 bLoadingMore: !1,
@@ -134,11 +134,11 @@
                 cMaxToReturn: t.items.length,
               }),
               renderItem: (e) =>
-                n.createElement(f.h_, {
+                n.createElement(f.Fo, {
                   key: e.defid,
                   definition: e,
                   purchaseable: !1,
-                  onClick: (t) => (0, s.u4)(t, e),
+                  onClick: (t) => (0, i.iZ)(t, e),
                 }),
             }),
           );

@@ -1,57 +1,57 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [2301],
+  [5004],
   {
-    67075: (e) => {
+    64399: (e) => {
       e.exports = {
         ProfileShowcaseHeaderImage: "_2tjUy9meAE2vNIP6iYBRVU",
         ShowcaseSubhead: "_2BmNvI5oqx2_EjWNkstqPt",
       };
     },
-    17444: (e, t, a) => {
+    6959: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { ProfileShowcasesPage: () => E, default: () => b });
-      var s = a(85556),
-        r = a(47427),
-        l = a(27605),
-        o = a(69247),
-        c = a(67075),
-        n = a(38244),
-        i = a(42364),
-        p = a(31846),
-        m = a(48976),
-        u = a(83955),
-        h = a(75321),
-        _ = a(78656);
+      a.r(t), a.d(t, { ProfileShowcasesPage: () => E, default: () => S });
+      var s = a(34629),
+        r = a(90626),
+        l = a(75844),
+        o = a(5108),
+        c = a(64399),
+        n = a(99428),
+        i = a(48474),
+        p = a(61859),
+        m = a(60476),
+        u = a(87873),
+        h = a(12711),
+        _ = a(59707);
       const d =
           a.p +
           "images/applications/store/showcases_header_image.svg?v=valveisgoodatcaching",
         g = (e) =>
-          r.createElement(h.oY, {
+          r.createElement(h.y7, {
             ...e,
             onClick: (t) =>
-              (0, _.hY)(
+              (0, _.Xw)(
                 t,
                 e.customization_type,
                 e.current_level,
                 e.desired_level,
               ),
           }),
-        P = (e) =>
-          r.createElement(h.MB, {
+        w = (e) =>
+          r.createElement(h.y2, {
             ...e,
             onClick: (t) =>
-              (0, _._J)(
+              (0, _.rE)(
                 t,
                 e.customization_type,
                 e.purchased_count,
                 e.current_level,
               ),
           }),
-        f = (e) =>
+        P = (e) =>
           r.createElement(
-            n.xu,
+            n.az,
             {
               display: "flex",
               flexDirection: "row",
@@ -65,7 +65,7 @@
               className: c.ProfileShowcaseHeaderImage,
             }),
           ),
-        w = (e) => {
+        f = (e) => {
           const {
             point_cost: t,
             upgradable_showcases: a,
@@ -91,17 +91,17 @@
             });
           });
           return r.createElement(
-            n.Kq,
+            n.BJ,
             {
               className: o.PageItemsContainer,
               itemClassName: o.PageItemsContainerChildren,
               spacing: "xlarge",
             },
             r.createElement(
-              u.iS,
+              u.Gq,
               {
-                title: (0, p.Xx)("#ProfileShowcases_Upgrades_Title"),
-                subtitle: (0, p.Xx)("#ProfileShowcases_Upgrades_Subtitle"),
+                title: (0, p.we)("#ProfileShowcases_Upgrades_Title"),
+                subtitle: (0, p.we)("#ProfileShowcases_Upgrades_Subtitle"),
               },
               c,
             ),
@@ -128,7 +128,7 @@
                 i.set(e.customization_type, e.level);
               });
           let m = a.map((e) =>
-            r.createElement(P, {
+            r.createElement(w, {
               key: e,
               point_cost: t,
               current_level: i.get(e),
@@ -137,17 +137,17 @@
             }),
           );
           return r.createElement(
-            n.Kq,
+            n.BJ,
             {
               className: o.PageItemsContainer,
               itemClassName: o.PageItemsContainerChildren,
               spacing: "xlarge",
             },
             r.createElement(
-              u.iS,
+              u.Gq,
               {
-                title: (0, p.Xx)("#ProfileShowcases_Slots_Title"),
-                subtitle: (0, p.Xx)("#ProfileShowcases_Slots_Subtitle"),
+                title: (0, p.we)("#ProfileShowcases_Slots_Title"),
+                subtitle: (0, p.we)("#ProfileShowcases_Slots_Subtitle"),
               },
               m,
             ),
@@ -155,17 +155,17 @@
         };
       let E = class extends r.Component {
         render() {
-          let e = m.Vb.Get().GetUpgradableProfileShowcaseCost(),
-            t = m.Vb.Get().GetUpgradableProfileShowcases(),
-            a = m.Vb.Get().GetUpgradedProfileCustomizations(),
-            s = m.Vb.Get().GetPurchasableProfileShowcaseSlotCost(),
-            l = m.Vb.Get().GetPurchasableProfileShowcaseSlots(),
-            c = m.Vb.Get().GetPurchasedProfileCustomizations();
+          let e = m.DZ.Get().GetUpgradableProfileShowcaseCost(),
+            t = m.DZ.Get().GetUpgradableProfileShowcases(),
+            a = m.DZ.Get().GetUpgradedProfileCustomizations(),
+            s = m.DZ.Get().GetPurchasableProfileShowcaseSlotCost(),
+            l = m.DZ.Get().GetPurchasableProfileShowcaseSlots(),
+            c = m.DZ.Get().GetPurchasedProfileCustomizations();
           return r.createElement(
-            i.OC,
+            i.jy,
             null,
             r.createElement(
-              n.Kq,
+              n.BJ,
               {
                 className: o.PageItemsContainer,
                 itemClassName: o.PageItemsContainerChildren,
@@ -174,12 +174,12 @@
               r.createElement(
                 "div",
                 null,
-                r.createElement(i._f, {
-                  title: (0, p.Xx)("#ShopPageTitle_ProfileShowcases"),
+                r.createElement(i.Ch, {
+                  title: (0, p.we)("#ShopPageTitle_ProfileShowcases"),
                 }),
               ),
-              r.createElement(f, null),
-              r.createElement(w, {
+              r.createElement(P, null),
+              r.createElement(f, {
                 point_cost: e,
                 upgradable_showcases: t,
                 purchased_upgrades: a,
@@ -195,8 +195,8 @@
           );
         }
       };
-      E = (0, s.gn)([l.Pi], E);
-      const b = E;
+      E = (0, s.Cg)([l.PA], E);
+      const S = E;
     },
   },
 ]);

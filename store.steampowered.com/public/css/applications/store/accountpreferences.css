@@ -136,126 +136,171 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 10px 1ex 10px 1ex;
+  padding: 10px 0px 10px 0px;
+}
+._20iEFcT5JyJPhTjbaJ0ajE ._2mir-ym1kKS06jV0W7mtUx {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px;
+  gap: 5px;
+}
+._20iEFcT5JyJPhTjbaJ0ajE ._2mir-ym1kKS06jV0W7mtUx ._35lIIoiD4gnKLmNL3H9zAo {
+  color: #fff;
+  font-weight: 500;
+  font-size: 17px;
+  margin-top: 5px;
 }
 ._173r5KvavKBUk01FwZftvC {
-  margin: 5px 0px;
-  background-color: #2b303a;
-}
-._173r5KvavKBUk01FwZftvC ._366kraIS4n5agiJpxnOSL2 {
-  position: relative;
+  margin: 1px 0px;
+  padding: 6px 10px;
+  background-color: #00000033;
   display: flex;
   flex-direction: row;
+  cursor: pointer;
+}
+._173r5KvavKBUk01FwZftvC._2eItHkwsCAtMw7E-EF_YG_ {
+  background-color: #3898ff55;
+}
+._173r5KvavKBUk01FwZftvC._2eItHkwsCAtMw7E-EF_YG_ ._3o3paJd8GOTYKXh7Rd3Br8 {
+  background-color: #1a9fff;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 2px 5px;
+  margin-left: 5px;
+  font-size: 12px;
+  font-weight: 500;
+}
+._173r5KvavKBUk01FwZftvC ._3fcDKsMFeSrukc_lptL5k6 {
+  display: flex;
+  flex-direction: column;
   padding: 10px 1ex 10px 1ex;
+  width: 100%;
+}
+._173r5KvavKBUk01FwZftvC ._3fcDKsMFeSrukc_lptL5k6 ._366kraIS4n5agiJpxnOSL2 {
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   gap: 5px;
 }
-._173r5KvavKBUk01FwZftvC ._366kraIS4n5agiJpxnOSL2 button.DialogButton {
-  justify-content: center;
+._173r5KvavKBUk01FwZftvC
+  ._3fcDKsMFeSrukc_lptL5k6
+  ._366kraIS4n5agiJpxnOSL2
+  ._2thyM-IiBuBfn44nW5anSY {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+._173r5KvavKBUk01FwZftvC
+  ._3fcDKsMFeSrukc_lptL5k6
+  ._366kraIS4n5agiJpxnOSL2
+  ._2thyM-IiBuBfn44nW5anSY
+  .e-cYNmgoRYobtL32PBDvh {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 400;
+  align-items: center;
+}
+._173r5KvavKBUk01FwZftvC
+  ._3fcDKsMFeSrukc_lptL5k6
+  ._366kraIS4n5agiJpxnOSL2
+  button.DialogButton {
   background-color: rgba(0, 0, 0, 0);
   color: #1a9fff;
-  height: 5ex;
-  width: 5ex;
+  margin: 0px;
 }
-._173r5KvavKBUk01FwZftvC ._366kraIS4n5agiJpxnOSL2 .e-cYNmgoRYobtL32PBDvh {
-  display: flex;
-  gap: 5px;
-}
-._173r5KvavKBUk01FwZftvC ._2Q1XRSo_YDuNplXJSPKtsq {
-  position: relative;
+._173r5KvavKBUk01FwZftvC
+  ._3fcDKsMFeSrukc_lptL5k6
+  ._366kraIS4n5agiJpxnOSL2
+  ._2wFj-skWKPalSQ4MHk27Wr {
   display: flex;
   flex-direction: row;
-  padding: 0px 1ex 5px 1ex;
+  text-wrap: nowrap;
 }
-._14d_WdubH0-HKHsOM_cyx7 {
-  padding: 0px 5px;
+._173r5KvavKBUk01FwZftvC
+  ._3fcDKsMFeSrukc_lptL5k6
+  ._366kraIS4n5agiJpxnOSL2
+  ._2wFj-skWKPalSQ4MHk27Wr
+  svg {
+  padding-left: 5px;
+  align-self: center;
+  height: 16px;
+  color: #ffc82c;
 }
-._35lIIoiD4gnKLmNL3H9zAo {
-  color: #fff;
-  font-weight: 500;
-  padding-top: 10px;
+._173r5KvavKBUk01FwZftvC ._2Q1XRSo_YDuNplXJSPKtsq {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+._173r5KvavKBUk01FwZftvC ._2Q1XRSo_YDuNplXJSPKtsq .CKNbt1mIaNAep7MwHG6eX {
+  color: #c6d4df;
+  font-weight: 400;
+}
+._173r5KvavKBUk01FwZftvC ._2Q1XRSo_YDuNplXJSPKtsq ._10WUgZtyhPN8XWybruXSY9 {
+  color: #ffc82c;
 }
 .Zq-YGng4xfhI7CCwSN6UF {
   display: flex;
-  flex-direction: row;
-  padding: 5px 1ex;
+  flex-direction: column;
+  padding-top: 10px;
 }
-._2-E69gxiszxb3lmuoV7yYi {
+._2h6gzZPnXmr8pFVxduqp_k {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+._2h6gzZPnXmr8pFVxduqp_k ._2-E69gxiszxb3lmuoV7yYi {
   width: 12px !important;
   height: 12px !important;
   line-height: 12px !important;
 }
-._2-E69gxiszxb3lmuoV7yYi svg {
+._2h6gzZPnXmr8pFVxduqp_k ._2-E69gxiszxb3lmuoV7yYi svg {
   transition: transform 0.2s ease-in-out;
   height: 12px;
   margin-top: 4px;
 }
-._2-E69gxiszxb3lmuoV7yYi.JQwtQncjBu_1UajTl86pS svg {
+._2h6gzZPnXmr8pFVxduqp_k ._2-E69gxiszxb3lmuoV7yYi.JQwtQncjBu_1UajTl86pS svg {
   transform: rotateZ(180deg);
   transition: transform 0.2s ease-in-out;
 }
-._1miMhQTx-6BvBZ1LsOjdgc,
-._1jG_-tTU53X85RGx_FABL2 {
+.aR0IvXuy6BAh7MauaSs5j {
   display: inline-flex;
-  white-space: nowrap;
+  gap: 5px;
+  align-items: center;
+  margin-right: 5px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 17px;
 }
-._1miMhQTx-6BvBZ1LsOjdgc span._3D4jIToP-g1jxP4iLT74dh,
-._1jG_-tTU53X85RGx_FABL2 span._3D4jIToP-g1jxP4iLT74dh {
-  margin: 0px 4px;
-  color: #6c767f;
+.aR0IvXuy6BAh7MauaSs5j ._2sNYH7uxn-CGdZCk4lGMAg {
+  height: 8px;
+  width: 8px;
+  color: #1a9fff;
 }
-._1jG_-tTU53X85RGx_FABL2 {
-  display: inline-flex;
+._3u6D3tBNr6Pd8scEAu0WHh {
+  width: 30px !important;
+  height: unset !important;
+  padding: 5px;
+  align-self: flex-start;
+  color: #fff;
+  margin-top: 2px;
 }
-._2ZcVE43ISqOFTj9Zbw3msS {
-  color: #a3cf06;
-  display: flex;
-}
-._2ZcVE43ISqOFTj9Zbw3msS ._y2DQDJ5toIRanQZFjDCx {
-  background: #a3cf06;
-  font-size: 11px;
-  color: #222;
-  padding: 0px 5px;
-  border-radius: 2px;
+._3EYcq6Ow2WM7bGuzWyQRMN {
+  margin: 5px 0px;
+  padding: 20px;
+  gap: 20px;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  position: relative;
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-right: 4px;
-  margin-top: 1px;
+  background-color: #00000033;
 }
-._3sPONDb9e2ctNJ23X97Rxx {
-  font-size: 12px;
-  font-weight: 200;
-  color: #b1b4b9;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-._3zhjahHCGX4slI7ziVhROt {
-  padding: 3px 8px;
-  border-radius: 2px;
-  background-color: #5e6068;
+._3EYcq6Ow2WM7bGuzWyQRMN button.DialogButton {
+  height: 40px;
+  padding: 0px 10px;
+  background-color: #d9412688;
+  border: 1px solid red;
   color: #fff;
-  text-transform: uppercase;
-  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.3);
+  align-self: center;
+  text-wrap: nowrap;
 }
-._4K3Bl-RZYjH0IHfPO10FC {
-  margin: 0px 4px;
-  text-transform: initial;
-  color: #868f98;
-  letter-spacing: normal;
-}
-._3sqcQTW9oCh_HBrotB1Dkw {
-  display: flex;
-}
-@media screen and (max-width: 500px) {
-  ._3sqcQTW9oCh_HBrotB1Dkw {
-    flex-direction: column;
-  }
-}
-._3sqcQTW9oCh_HBrotB1Dkw ._3sPONDb9e2ctNJ23X97Rxx {
-  display: flex;
-  flex-wrap: wrap;
+._3EYcq6Ow2WM7bGuzWyQRMN button.DialogButton:hover {
+  background-color: #d9412699 !important;
 }

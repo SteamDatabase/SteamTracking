@@ -1390,6 +1390,7 @@ ${STORE_BASE_URL}labs/trendingreviews/
 ${STORE_BASE_URL}login/?steamtv
 ${STORE_BASE_URL}login/checkdevice
 ${STORE_BASE_URL}login?redir=${}
+${STORE_BASE_URL}logout
 ${STORE_BASE_URL}lunarnewyearmarket
 ${STORE_BASE_URL}lunarnewyearmarket/ajaxgettokensummary
 ${STORE_BASE_URL}mobile
@@ -1495,6 +1496,7 @@ ${STORE_BASE_URL}tags/${}/${_ ? _ : _}
 ${STORE_BASE_URL}tags/${}/${name}
 ${STORE_BASE_URL}tags/${}/${tagid}
 ${STORE_BASE_URL}tags/${}/${}
+${STORE_BASE_URL}twofactor/manage_action
 ${STORE_BASE_URL}updated/ajaxgetmyappsraw
 ${STORE_BASE_URL}updated/ajaxrateupdate/${AnnouncementGID}
 ${STORE_BASE_URL}video/details/${}/0
