@@ -337,7 +337,7 @@
     },
     48479: (e, t, n) => {
       "use strict";
-      n.d(t, { AQ: () => d, o7: () => v, pn: () => u, qx: () => p });
+      n.d(t, { AQ: () => p, o7: () => h, pn: () => v, qx: () => u });
       var a = n(7068),
         r = n(61859),
         s = n(12155),
@@ -345,16 +345,18 @@
         i = n(52038),
         c = n(95695),
         m = n(84811),
-        l = n(64734);
-      function d(e) {
+        l = n(64734),
+        d = n(65946);
+      function p(e) {
         const {
-          title: t,
-          tooltip: n,
-          getMinimized: a,
-          toggleMinimized: r,
-          className: s,
-          children: d,
-        } = e;
+            title: t,
+            tooltip: n,
+            getMinimized: a,
+            toggleMinimized: r,
+            className: s,
+            children: p,
+          } = e,
+          u = (0, d.q3)(() => a());
         return o.createElement(
           o.Fragment,
           null,
@@ -377,22 +379,22 @@
                 ),
               },
               t,
-              Boolean(n) && o.createElement(v, { tooltip: n }),
+              Boolean(n) && o.createElement(h, { tooltip: n }),
             ),
-            o.createElement(u, { bIsMinimized: a(), fnToggleMinimize: r }),
+            o.createElement(v, { bIsMinimized: u, fnToggleMinimize: r }),
           ),
-          !a() && o.createElement(m.tH, null, d),
+          !u && o.createElement(m.tH, null, p),
         );
       }
-      function p(e) {
+      function u(e) {
         const [t, n] = o.useState(Boolean(e.bStartMinimized));
         return o.createElement(
-          d,
+          p,
           { ...e, getMinimized: () => t, toggleMinimized: () => n(!t) },
           e.children,
         );
       }
-      function u(e) {
+      function v(e) {
         const { bIsMinimized: t, fnToggleMinimize: n } = e,
           i = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
         return o.createElement(
@@ -403,7 +405,7 @@
             : o.createElement(s.Xjb, null),
         );
       }
-      function v(e) {
+      function h(e) {
         return o.createElement(
           "span",
           {
