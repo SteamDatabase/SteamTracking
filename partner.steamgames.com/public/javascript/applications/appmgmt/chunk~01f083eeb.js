@@ -36,6 +36,116 @@
         required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
       };
     },
+    27144: (e, t, i) => {
+      "use strict";
+      i.d(t, { B3: () => D, KM: () => g, KT: () => S });
+      var n = i(41735),
+        a = i.n(n),
+        s = i(58632),
+        r = i.n(s),
+        o = i(90626),
+        l = i(31380),
+        m = i(17720),
+        c = i(68797),
+        u = i(78327),
+        d = i(56545),
+        p = i(37735),
+        h = i(78205);
+      const T = "nicknames";
+      function g(e) {
+        const t = (0, h.KV)(),
+          { data: i, isLoading: n } = (0, l.useQuery)([T], async () => {
+            const e = new Map();
+            if (u.iA.logged_in) {
+              const i = d.w.Init(p.dN),
+                n = (await p.xt.GetNicknameList(t, i)).Body().toObject();
+              n?.nicknames &&
+                n.nicknames.length > 0 &&
+                n.nicknames.forEach((t) => {
+                  e.set(t.accountid, t.nickname);
+                });
+            }
+            return e;
+          });
+        return i ? i.get(e) : null;
+      }
+      const E = new (r())(
+          (e) =>
+            (async function (e) {
+              if (!e || 0 == e.length) return [];
+              const t =
+                "community" == (0, u.yK)()
+                  ? u.TS.COMMUNITY_BASE_URL
+                  : u.TS.STORE_BASE_URL;
+              if (1 == e.length) {
+                const i = { accountid: e[0], origin: self.origin },
+                  n = await a().get(`${t}actions/ajaxgetavatarpersona`, {
+                    params: i,
+                  });
+                if (
+                  !n ||
+                  200 != n.status ||
+                  1 != n.data?.success ||
+                  !n.data?.userinfo
+                )
+                  throw `Load single avatar/persona failed ${(0, c.H)(n).strErrorMsg}`;
+                return [n.data.userinfo];
+              }
+              {
+                const i = { accountids: e.join(","), origin: self.origin },
+                  n = await a().get(`${t}actions/ajaxgetmultiavatarpersona`, {
+                    params: i,
+                  });
+                if (
+                  !n ||
+                  200 != n.status ||
+                  1 != n.data?.success ||
+                  !n.data?.userinfos
+                )
+                  throw `Load single avatar/persona failed ${(0, c.H)(n).strErrorMsg}`;
+                const s = new Map();
+                return (
+                  n.data.userinfos.forEach((e) =>
+                    s.set(new m.b(e.steamid).GetAccountID(), e),
+                  ),
+                  e.map((e) => s.get(e))
+                );
+              }
+            })(e),
+          { cache: !1 },
+        ),
+        f = "avatarandpersonas";
+      function S(e) {
+        const { data: t, isLoading: i } = (0, l.useQuery)([f, e], () =>
+          E.load(e),
+        );
+        return [t, i];
+      }
+      function D(e) {
+        const t = (0, l.useQueryClient)(),
+          { data: i, isLoading: n } = (0, l.useQuery)({
+            queryKey: [f, e],
+            queryFn: () => E.loadMany(e),
+            onSuccess(e) {
+              e.forEach((e) => {
+                const i = [f, new m.b(e.steamid).GetAccountID()];
+                t.setQueryData(i, e);
+              });
+            },
+            enabled: e?.length > 0,
+          }),
+          a = (0, o.useMemo)(() => {
+            const e = new Array();
+            return (
+              i?.forEach((t) => {
+                t instanceof Error || e.push(t);
+              }),
+              e
+            );
+          }, [i]);
+        return n ? null : a;
+      }
+    },
     99637: (e, t, i) => {
       "use strict";
       i.d(t, { K: () => D });
@@ -47,8 +157,8 @@
         l = i(44894),
         m = i(44165),
         c = i(95695),
-        d = i.n(c),
-        u = i(52038),
+        u = i.n(c),
+        d = i(52038),
         p = i(61859),
         h = i(56093),
         T = i(32754),
@@ -180,7 +290,7 @@
             g = h > 0 ? new Date(1e3 * h) : null,
             f = "h:mm A";
           const D = !n && this.state.strError;
-          let v, _;
+          let v, A;
           if (e && t && e == t && t > m.HD.GetTimeNowWithOverride()) {
             let e = S().unix(t);
             (v = {
@@ -191,16 +301,16 @@
             }),
               (f = "HH:mm");
           }
-          h || !t || c || (_ = S().unix(t));
-          const A = S().tz.guess(),
-            w = S().unix(h).tz(A),
-            b = !!a && A != a && S().unix(h).tz(a);
+          h || !t || c || (A = S().unix(t));
+          const _ = S().tz.guess(),
+            w = S().unix(h).tz(_),
+            b = !!a && _ != a && S().unix(h).tz(a);
           return s.createElement(
             "div",
-            { className: (0, u.A)(E().EventTimeSection, this.props.className) },
+            { className: (0, d.A)(E().EventTimeSection, this.props.className) },
             s.createElement(
               "div",
-              { className: (0, u.A)(E().EventTimeTitle, "DialogLabel") },
+              { className: (0, d.A)(E().EventTimeTitle, "DialogLabel") },
               s.createElement(
                 T.he,
                 { toolTipContent: this.props.strDescToolTip, direction: "top" },
@@ -217,19 +327,19 @@
             ),
             s.createElement(
               "div",
-              { className: d().FlexRowContainer },
+              { className: u().FlexRowContainer },
               s.createElement(
                 "div",
-                { className: (0, u.A)(d().InputBorder, E().TimeBlock) },
+                { className: (0, d.A)(u().InputBorder, E().TimeBlock) },
                 s.createElement(o(), {
                   onChange: this.OnDateChange,
                   timeFormat: !1,
                   value: this.state.dateAsString ? this.state.dateAsString : g,
                   isValidDate: this.IsValidDate,
-                  initialValue: _,
+                  initialValue: A,
                   inputProps: {
                     placeholder: (0, p.we)("#DateTimePicker_Enter_Date"),
-                    className: (0, u.A)(
+                    className: (0, d.A)(
                       E().DateWidth,
                       "DialogInput",
                       "DialogTextInputBase",
@@ -246,7 +356,7 @@
               ),
               s.createElement(
                 "div",
-                { className: (0, u.A)(d().InputBorder, E().TimeBlock) },
+                { className: (0, d.A)(u().InputBorder, E().TimeBlock) },
                 s.createElement(o(), {
                   onChange: this.OnTimeChange,
                   dateFormat: !1,
@@ -255,7 +365,7 @@
                   value: this.state.timeAsString ? this.state.timeAsString : g,
                   inputProps: {
                     placeholder: (0, p.we)("#DateTimePicker_Enter_Time"),
-                    className: (0, u.A)(
+                    className: (0, d.A)(
                       E().TimeWidth,
                       "DialogInput",
                       "DialogTextInputBase",
@@ -302,99 +412,22 @@
         (0, n.Cg)([h.oI], D.prototype, "SetToNow", null),
         (D = (0, n.Cg)([a.PA], D));
     },
-    85890: (e, t, i) => {
+    8905: (e, t, i) => {
       "use strict";
-      i.d(t, { p: () => S });
+      i.d(t, { p: () => o });
       var n = i(90626),
         a = i(17720),
-        s = i(41735),
-        r = i.n(s),
-        o = i(58632),
-        l = i.n(o),
-        m = i(31380),
-        c = i(68797),
-        d = i(78327),
-        u = i(56545),
-        p = i(37735),
-        h = i(78205);
-      const T = "nicknames";
-      const g = new (l())(
-          (e) =>
-            (async function (e) {
-              if (!e || 0 == e.length) return [];
-              const t =
-                "community" == (0, d.yK)()
-                  ? d.TS.COMMUNITY_BASE_URL
-                  : d.TS.STORE_BASE_URL;
-              if (1 == e.length) {
-                const i = { accountid: e[0], origin: self.origin },
-                  n = await r().get(`${t}actions/ajaxgetavatarpersona`, {
-                    params: i,
-                  });
-                if (
-                  !n ||
-                  200 != n.status ||
-                  1 != n.data?.success ||
-                  !n.data?.userinfo
-                )
-                  throw `Load single avatar/persona failed ${(0, c.H)(n).strErrorMsg}`;
-                return [n.data.userinfo];
-              }
-              {
-                const i = { accountids: e.join(","), origin: self.origin },
-                  n = await r().get(`${t}actions/ajaxgetmultiavatarpersona`, {
-                    params: i,
-                  });
-                if (
-                  !n ||
-                  200 != n.status ||
-                  1 != n.data?.success ||
-                  !n.data?.userinfos
-                )
-                  throw `Load single avatar/persona failed ${(0, c.H)(n).strErrorMsg}`;
-                const s = new Map();
-                return (
-                  n.data.userinfos.forEach((e) =>
-                    s.set(new a.b(e.steamid).GetAccountID(), e),
-                  ),
-                  e.map((e) => s.get(e))
-                );
-              }
-            })(e),
-          { cache: !1 },
-        ),
-        E = "avatarandpersonas";
-      var f = i(15736);
-      function S(e) {
-        const { accountID: t, bHideWhenNotAvailable: i, bHideName: s } = e,
-          [r] = (function (e) {
-            const { data: t, isLoading: i } = (0, m.useQuery)([E, e], () =>
-              g.load(e),
-            );
-            return [t, i];
-          })(t),
-          o = (function (e) {
-            const t = (0, h.KV)(),
-              { data: i, isLoading: n } = (0, m.useQuery)([T], async () => {
-                const e = new Map();
-                if (d.iA.logged_in) {
-                  const i = u.w.Init(p.dN),
-                    n = (await p.xt.GetNicknameList(t, i)).Body().toObject();
-                  n?.nicknames &&
-                    n.nicknames.length > 0 &&
-                    n.nicknames.forEach((t) => {
-                      e.set(t.accountid, t.nickname);
-                    });
-                }
-                return e;
-              });
-            return i ? i.get(e) : null;
-          })(t),
-          l = n.useMemo(() => a.b.InitFromAccountID(t), [t]);
+        s = i(27144),
+        r = i(15736);
+      function o(e) {
+        const { accountID: t, bHideWhenNotAvailable: i, bHideName: o } = e,
+          [l] = (0, s.KT)(t),
+          m = (0, s.KM)(t),
+          c = n.useMemo(() => a.b.InitFromAccountID(t), [t]);
         return n.createElement(
           n.Fragment,
           null,
-          Boolean(!r)
+          Boolean(!l)
             ? n.createElement(
                 n.Fragment,
                 null,
@@ -404,15 +437,15 @@
                 n.Fragment,
                 null,
                 n.createElement("img", {
-                  className: f.SmallAvatar,
-                  src: r.avatar_url,
-                  "data-miniprofile": "s" + l.ConvertTo64BitString(),
+                  className: r.SmallAvatar,
+                  src: l.avatar_url,
+                  "data-miniprofile": "s" + c.ConvertTo64BitString(),
                 }),
-                Boolean(!s) &&
+                Boolean(!o) &&
                   n.createElement(
                     "span",
                     null,
-                    o ? `${o} (${r.persona_name})` : r.persona_name,
+                    m ? `${m} (${l.persona_name})` : l.persona_name,
                   ),
               ),
         );
@@ -420,7 +453,7 @@
     },
     48479: (e, t, i) => {
       "use strict";
-      i.d(t, { AQ: () => d, qx: () => u });
+      i.d(t, { AQ: () => u, qx: () => d });
       var n = i(7068),
         a = i(61859),
         s = i(12155),
@@ -429,14 +462,14 @@
         l = i(95695),
         m = i(84811),
         c = i(64734);
-      function d(e) {
+      function u(e) {
         const {
           title: t,
           tooltip: i,
           getMinimized: n,
           toggleMinimized: a,
           className: s,
-          children: d,
+          children: u,
         } = e;
         return r.createElement(
           r.Fragment,
@@ -464,13 +497,13 @@
             ),
             r.createElement(p, { bIsMinimized: n(), fnToggleMinimize: a }),
           ),
-          !n() && r.createElement(m.tH, null, d),
+          !n() && r.createElement(m.tH, null, u),
         );
       }
-      function u(e) {
+      function d(e) {
         const [t, i] = r.useState(Boolean(e.bStartMinimized));
         return r.createElement(
-          d,
+          u,
           { ...e, getMinimized: () => t, toggleMinimized: () => i(!t) },
           e.children,
         );

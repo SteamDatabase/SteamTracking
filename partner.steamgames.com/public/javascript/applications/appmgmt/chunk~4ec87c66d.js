@@ -18889,7 +18889,7 @@
     },
     97663: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { OptInRoutes: () => Al, default: () => Rl });
+      a.r(t), a.d(t, { OptInRoutes: () => Nl, default: () => Fl });
       var n = a(43527),
         r = a(97058),
         i = a(29385),
@@ -22056,7 +22056,7 @@
               l.createElement(
                 o.N_,
                 {
-                  to: Al.OptinAdminEdit(t.pageid),
+                  to: Nl.OptinAdminEdit(t.pageid),
                   className: (0, y.A)(_().Button, _().Primary),
                 },
                 "Edit Opt-In Definition",
@@ -22068,7 +22068,7 @@
                     href:
                       v.TS.PARTNER_BASE_URL +
                       "optin" +
-                      Al.OptInAppReview(t.pageid),
+                      Nl.OptInAppReview(t.pageid),
                     className: (0, y.A)(_().Button),
                     target: "_blank",
                   },
@@ -22078,7 +22078,7 @@
                 l.createElement(
                   o.N_,
                   {
-                    to: Al.OptinAdminAnalysis(t.pageid),
+                    to: Nl.OptinAdminAnalysis(t.pageid),
                     className: (0, y.A)(_().Button, _().Primary),
                   },
                   "Post OptIn Stats",
@@ -23430,7 +23430,7 @@
             )
           : null;
       };
-      var zt = a(85890);
+      var zt = a(8905);
       function xt(e) {
         const t = i.Mt.Get(),
           a = (0, st.q3)(() => i.Mt.Get().GetExternalAppReviewers());
@@ -33974,7 +33974,7 @@
               { className: Ke().BasicButtonSize },
               l.createElement(
                 o.N_,
-                { to: Al.OptinAdminDashboard() },
+                { to: Nl.OptinAdminDashboard() },
                 "Dashboard",
               ),
             ),
@@ -35458,7 +35458,7 @@
           l.createElement(pn.XG, {
             message: (e) =>
               !i.Mt.Get().BIsDirty() ||
-              e.pathname != Al.OptinAdminDashboard() ||
+              e.pathname != Nl.OptinAdminDashboard() ||
               (0, R.we)("#Generel_Discard_Warning"),
           });
       class ls {
@@ -37927,7 +37927,9 @@
                       .summary()
                       .forEach((e) => {
                         const t = e.toObject();
-                        r.set(t.opt_in_name, t);
+                        r.has(t.opt_in_name)
+                          ? r.get(t.opt_in_name).push(t)
+                          : r.set(t.opt_in_name, [t]);
                       }),
                     t.map((e) => r.get(e))
                   );
@@ -37945,7 +37947,10 @@
         };
       }
       let El;
-      function Sl(e) {
+      var Sl = a(78395),
+        yl = a(27144),
+        fl = a(29233);
+      function vl(e) {
         (0, l.useEffect)(() => {
           s.v.Get();
         }, []);
@@ -37958,7 +37963,7 @@
               contents: l.createElement(
                 d.tH,
                 null,
-                l.createElement(yl, { list: s.v.Get().GetAppReviewOptIn() }),
+                l.createElement(bl, { list: s.v.Get().GetAppReviewOptIn() }),
               ),
               onClick: n,
             },
@@ -37968,7 +37973,7 @@
               contents: l.createElement(
                 d.tH,
                 null,
-                l.createElement(yl, {
+                l.createElement(bl, {
                   list: s.v.Get().GetAppealReviewOptIn(),
                   bAppeals: !0,
                 }),
@@ -37998,11 +38003,24 @@
               null,
               "OptIn in Appeal Review are publically announced allowing Steamworks partners to appear our original decisions to not include a game in a Steam theme fest.",
             ),
+            l.createElement(
+              m.$n,
+              {
+                onClick: (e) =>
+                  (0, h.pg)(
+                    l.createElement(Il, {
+                      list: s.v.Get().GetAppealReviewOptIn(),
+                    }),
+                    (0, f.uX)(e),
+                  ),
+              },
+              "Download Appeals CSV Data",
+            ),
             l.createElement(E.V, { tabs: r, startingTab: t }),
           ),
         );
       }
-      function yl(e) {
+      function bl(e) {
         const { list: t, bReverseOrder: a, bAppeals: n } = e,
           [r, i] = (0, u.QD)("query", ""),
           s = (0, l.useMemo)(() => {
@@ -38042,11 +38060,11 @@
             placeholder: "type here...",
           }),
           s.map((e) =>
-            l.createElement(fl, { key: e.pageid, def: e, bAppeals: n }),
+            l.createElement(wl, { key: e.pageid, def: e, bAppeals: n }),
           ),
         );
       }
-      function fl(e) {
+      function wl(e) {
         const { def: t, bAppeals: a } = e,
           n = t.event_title?.english || "No Name Assigned",
           r = (0, Oe.Ym)(t.appeals_text, (0, Fe.sf)(v.TS.LANGUAGE));
@@ -38103,7 +38121,7 @@
                   "div",
                   { className: G().StatsCtn },
                   a
-                    ? l.createElement(vl, { def: t })
+                    ? l.createElement(Dl, { def: t })
                     : l.createElement(
                         "div",
                         { className: w().FeaturedApps },
@@ -38138,13 +38156,34 @@
             )
           : null;
       }
-      function vl(e) {
+      function Dl(e) {
         const { def: t } = e,
           a = (function (e) {
             const t = (0, _l.a)(),
               a = l.useContext(gl);
             return (0, U.useQuery)(hl(a, t, e));
-          })(t.pageid);
+          })(t.pageid),
+          [n, r] = (0, l.useState)(!1),
+          i = l.useMemo(() => {
+            if (a.data) {
+              let e = {
+                accepted_appeals: 0,
+                opt_in_name: t.pageid,
+                open_appeals: 0,
+                reject_appeals: 0,
+                appeal_account_id: 0,
+              };
+              return (
+                a.data.forEach((t) => {
+                  (e.accepted_appeals += t.accepted_appeals),
+                    (e.open_appeals += t.open_appeals),
+                    (e.appeal_account_id += t.appeal_account_id);
+                }),
+                e
+              );
+            }
+            return null;
+          }, [t.pageid, a.data]);
         return a && !a.isLoading && a.data
           ? a.isError || a.isLoadingError
             ? l.createElement("div", null, "Failed to load appeals summary")
@@ -38157,7 +38196,7 @@
                   l.createElement(
                     "div",
                     { className: w().BigNumber },
-                    a.data?.open_appeals,
+                    i.open_appeals.toLocaleString(),
                   ),
                   l.createElement(
                     "span",
@@ -38175,7 +38214,7 @@
                   l.createElement(
                     "div",
                     { className: w().BigNumber },
-                    a.data.accepted_appeals,
+                    i.accepted_appeals.toLocaleString(),
                   ),
                   l.createElement(
                     "span",
@@ -38192,7 +38231,7 @@
                   l.createElement(
                     "div",
                     { className: w().BigNumber },
-                    a.data.reject_appeals,
+                    i.reject_appeals.toLocaleString(),
                   ),
                   l.createElement(
                     "span",
@@ -38203,16 +38242,141 @@
                     "Rejected Appeals (?)",
                   ),
                 ),
+                Boolean(n)
+                  ? l.createElement(
+                      l.Fragment,
+                      null,
+                      a?.data
+                        .filter((e) => 0 !== e.appeal_account_id)
+                        .map((e) =>
+                          l.createElement(Cl, {
+                            key: `${e.opt_in_name}+${e.appeal_account_id}`,
+                            userStat: e,
+                          }),
+                        ),
+                    )
+                  : l.createElement(m.Yh, {
+                      label: "Show Details?",
+                      checked: n,
+                      onChange: (e) => r(e),
+                    }),
               )
           : l.createElement(A.t, {
               size: "medium",
               string: (0, R.we)("#Loading"),
             });
       }
-      var bl = a(4943),
-        wl = a(55272),
-        Dl = a(17904);
       function Cl(e) {
+        const { userStat: t } = e;
+        return l.createElement(
+          "div",
+          null,
+          l.createElement(zt.p, { accountID: t.appeal_account_id }),
+          l.createElement(
+            "div",
+            null,
+            "Accepted Appeals: ",
+            t.accepted_appeals.toLocaleString(),
+          ),
+          l.createElement(
+            "div",
+            null,
+            "Rejected Appeals: ",
+            t.reject_appeals.toLocaleString(),
+          ),
+          l.createElement(
+            "div",
+            null,
+            "Total: ",
+            (t.accepted_appeals + t.reject_appeals).toLocaleString(),
+          ),
+        );
+      }
+      function Il(e) {
+        const t = (0, c.f1)(),
+          { closeModal: a, list: n } = e,
+          [r, i] = (0, l.useState)(!0),
+          s = (function (e) {
+            const t = (0, _l.a)(),
+              a = l.useContext(gl);
+            return (0, U.useQueries)(e.map((e) => hl(a, t, e)));
+          })((0, l.useMemo)(() => n.map((e) => e.pageid), [n])),
+          o = (0, l.useMemo)(() => {
+            if (s?.some((e) => e.isLoading)) return null;
+            const e = new Set();
+            return (
+              s?.map((t) =>
+                t?.data?.forEach((t) => {
+                  0 != t.appeal_account_id && e.add(t.appeal_account_id);
+                }),
+              ),
+              Array.from(e)
+            );
+          }, [s]),
+          m = (0, yl.B3)(o),
+          d = (0, l.useMemo)(() => {
+            if (m?.length > 0) {
+              const e = [];
+              e.push([
+                "PageID",
+                "AccountID",
+                "Persona",
+                "Accepted Appeals",
+                "Rejected Appeals",
+                "Total",
+              ]);
+              const t = new Map();
+              return (
+                m.forEach((e) => t.set(new fl.b2(e.steamid).GetAccountID(), e)),
+                s
+                  .filter((e) => e.data?.length > 0)
+                  .forEach((a) =>
+                    a.data.forEach((a) => {
+                      0 != a.appeal_account_id &&
+                        e.push([
+                          a.opt_in_name,
+                          "" + a.appeal_account_id,
+                          t.get(a.appeal_account_id)?.persona_name || "",
+                          "" + a.accepted_appeals,
+                          "" + a.reject_appeals,
+                          "" + (a.accepted_appeals + a.reject_appeals),
+                        ]);
+                    }),
+                  ),
+                e
+              );
+            }
+            return null;
+          }, [m, s]);
+        return (
+          (0, l.useEffect)(() => {
+            d?.length > 0 && i(!1);
+          }, [d?.length]),
+          l.createElement(
+            Sl.o0,
+            {
+              strTitle: "Download Appeals CSV",
+              closeModal: a,
+              bOKDisabled: r,
+              onOK: () => {
+                const e = (0, R.TW)(t) + "_appeals_data.csv";
+                Ua.g.WriteCSVToFile(d, e);
+              },
+            },
+            r
+              ? l.createElement(A.t, {
+                  string: (0, R.we)("#Loading"),
+                  position: "center",
+                  size: "medium",
+                })
+              : l.createElement("div", null, "Click Confirm to Download CSV"),
+          )
+        );
+      }
+      var Bl = a(4943),
+        Tl = a(55272),
+        Al = a(17904);
+      function kl(e) {
         const { pageid: t } = e;
         return l.createElement(
           "div",
@@ -38223,17 +38387,17 @@
             "Survey Results ",
             t,
           ),
-          l.createElement(Il, { pageid: t }),
+          l.createElement(Ml, { pageid: t }),
         );
       }
-      function Il(e) {
+      function Ml(e) {
         const t = (function () {
             const [e] = (0, l.useState)(() =>
               (0, Si.Tc)("optin_survey_results", "application_config"),
             );
             return e;
           })(),
-          { rgDemoStats: a, rgAppSansPermissions: n } = (0, wl.p)(),
+          { rgDemoStats: a, rgAppSansPermissions: n } = (0, Tl.p)(),
           [r, i] = (0, l.useState)(!1),
           [s, o, c, d] = (0, l.useMemo)(() => {
             const e = a.reduce(
@@ -38287,7 +38451,7 @@
             }),
             l.createElement(
               "table",
-              { className: Dl.ResultsTable },
+              { className: Al.ResultsTable },
               l.createElement(
                 "thead",
                 null,
@@ -38379,7 +38543,7 @@
                       e.suggestions?.length > 0,
                   )
                   .map((e, t) =>
-                    l.createElement(Tl, {
+                    l.createElement(Pl, {
                       result: e,
                       index: t,
                       demoStats: d.get(e.appid),
@@ -38391,14 +38555,14 @@
           )
         );
       }
-      const Bl = {
+      const Rl = {
         include_assets: !0,
         include_release: !0,
         include_reviews: !0,
       };
-      function Tl(e) {
+      function Pl(e) {
         const { result: t, index: a, demoStats: n } = e,
-          [r] = (0, Mt.t7)(t.appid, Bl),
+          [r] = (0, Mt.t7)(t.appid, Rl),
           i = (0, l.useMemo)(() => ({ id: t.appid, type: "game" }), [t.appid]);
         return l.createElement(
           "tr",
@@ -38406,7 +38570,7 @@
           l.createElement("td", null, a + 1),
           l.createElement(
             "td",
-            { className: Dl.Img },
+            { className: Al.Img },
             l.createElement(
               ds.Qf,
               {
@@ -38417,7 +38581,7 @@
                 },
               },
               l.createElement("img", {
-                className: Dl.Img,
+                className: Al.Img,
                 src: r?.GetAssets().GetHeaderURL(),
               }),
             ),
@@ -38442,7 +38606,7 @@
           l.createElement("td", null, t.suggestions),
         );
       }
-      const Al = {
+      const Nl = {
           OptinAdminDashboard: () => "/admin/",
           OptinAdminEdit: (e) => `/admin/edit/${e}`,
           OptinAdminAnalysis: (e) => `/admin/analysis/${e}`,
@@ -38456,11 +38620,11 @@
           OptInAppSurvey: (e) => `/survey/${e}`,
           OptInSurveyResults: (e) => `/surveyresults/${e}`,
         },
-        kl = "sale_";
-      function Ml(e) {
-        return e?.startsWith(kl) ? e : kl + e;
+        Gl = "sale_";
+      function Ol(e) {
+        return e?.startsWith(Gl) ? e : Gl + e;
       }
-      function Rl(e) {
+      function Fl(e) {
         return (0, cs.d)()
           ? l.createElement(
               o.Kd,
@@ -38480,12 +38644,12 @@
                 }),
                 l.createElement(pn.qh, {
                   exact: !0,
-                  path: Al.OptinAdminDashboard(),
+                  path: Nl.OptinAdminDashboard(),
                   component: Me,
                 }),
                 l.createElement(pn.qh, {
                   exact: !0,
-                  path: Al.OptinAdminEdit(":pageid"),
+                  path: Nl.OptinAdminEdit(":pageid"),
                   render: (e) =>
                     l.createElement(
                       dl.S,
@@ -38495,7 +38659,7 @@
                 }),
                 l.createElement(pn.qh, {
                   exact: !0,
-                  path: Al.OptinAdminAnalysis(":pageid"),
+                  path: Nl.OptinAdminAnalysis(":pageid"),
                   render: (e) =>
                     l.createElement(
                       dl.S,
@@ -38505,66 +38669,66 @@
                 }),
                 l.createElement(pn.qh, {
                   exact: !0,
-                  path: Al.OptinAdminDemoAnalysis(":pageid"),
+                  path: Nl.OptinAdminDemoAnalysis(":pageid"),
                   render: (e) =>
                     l.createElement(
                       dl.A,
                       { pageid: e.match.params.pageid },
-                      l.createElement(bl.OF, { bShowOnlySummary: !1 }),
+                      l.createElement(Bl.OF, { bShowOnlySummary: !1 }),
                     ),
                 }),
                 l.createElement(pn.qh, {
                   exact: !0,
-                  path: Al.OptinAdminSupport(":appid"),
+                  path: Nl.OptinAdminSupport(":appid"),
                   render: (e) =>
                     l.createElement(Ni, {
                       appid: Number.parseInt(e.match.params.appid),
                     }),
                 }),
                 l.createElement(pn.qh, {
-                  path: Al.OptInApp(":partialpageid", ":appid"),
+                  path: Nl.OptInApp(":partialpageid", ":appid"),
                   render: (e) =>
                     l.createElement(is, {
                       appid: e.match.params.appid,
-                      pageid: Ml(e.match.params.partialpageid),
+                      pageid: Ol(e.match.params.partialpageid),
                     }),
                 }),
                 l.createElement(pn.qh, {
-                  path: Al.OptInAppReviewDashboard(),
-                  component: Sl,
+                  path: Nl.OptInAppReviewDashboard(),
+                  component: vl,
                 }),
                 l.createElement(pn.qh, {
-                  path: Al.OptInAppReview(":pageid"),
+                  path: Nl.OptInAppReview(":pageid"),
                   render: (e) =>
                     l.createElement(Bs, { pageid: e.match.params.pageid }),
                 }),
                 l.createElement(pn.qh, {
-                  path: Al.OptInAppAppeal(":partialpageid", ":appid"),
+                  path: Nl.OptInAppAppeal(":partialpageid", ":appid"),
                   render: (e) =>
                     l.createElement(Ws, {
                       appid: Number.parseInt(e.match.params.appid),
-                      pageid: Ml(e.match.params.partialpageid),
+                      pageid: Ol(e.match.params.partialpageid),
                     }),
                 }),
                 l.createElement(pn.qh, {
-                  path: Al.OptInAppSurvey(":partialpageid"),
+                  path: Nl.OptInAppSurvey(":partialpageid"),
                   render: (e) =>
                     l.createElement(vi, {
                       pageid: e.match.params.partialpageid,
                     }),
                 }),
                 l.createElement(pn.qh, {
-                  path: Al.OptInSurveyResults(":partialpageid"),
+                  path: Nl.OptInSurveyResults(":partialpageid"),
                   render: (e) =>
-                    l.createElement(Cl, {
+                    l.createElement(kl, {
                       pageid: e.match.params.partialpageid,
                     }),
                 }),
                 l.createElement(pn.qh, {
-                  path: Al.OptInPartnerDashboard(":partialpageid"),
+                  path: Nl.OptInPartnerDashboard(":partialpageid"),
                   render: (e) =>
                     l.createElement(Zs, {
-                      pageid: Ml(e.match.params.partialpageid),
+                      pageid: Ol(e.match.params.partialpageid),
                     }),
                 }),
                 l.createElement(pn.qh, { component: r.a }),
@@ -39548,7 +39712,7 @@
         A = a(55263),
         k = a(95695),
         M = a.n(k),
-        R = a(85890),
+        R = a(8905),
         P = a(12155),
         N = a(22797),
         G = a(52038),
@@ -55949,7 +56113,7 @@
         Ia = a(87129),
         Ba = a(95034),
         Ta = a(30772),
-        Aa = a(85890),
+        Aa = a(8905),
         ka = a(51272),
         Ma = a(14771),
         Ra = a(3358),
@@ -60218,7 +60382,7 @@
       var K = a(23247),
         Y = a(90207),
         J = a(14932),
-        Q = a(85890),
+        Q = a(8905),
         $ = a(14947),
         X = a(56093),
         Z = a(78327),
@@ -62042,7 +62206,7 @@
         d = a(84811),
         u = a(95695),
         p = a.n(u),
-        _ = a(85890),
+        _ = a(8905),
         g = a(4869),
         h = a(20929),
         E = a(738),
