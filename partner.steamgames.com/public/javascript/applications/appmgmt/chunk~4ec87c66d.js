@@ -8038,24 +8038,27 @@
     52625: (e, t, a) => {
       "use strict";
       a.d(t, {
-        JX: () => W,
-        dl: () => j,
-        of: () => H,
-        Dt: () => V,
-        UU: () => x,
-        a4: () => z,
-        zy: () => Y,
-        tR: () => J,
-        uW: () => X,
-        Uv: () => ne,
-        z2: () => ae,
-        Y4: () => ie,
-        W6: () => ee,
-        ZG: () => Q,
-        Yg: () => Z,
-        PI: () => te,
-        D4: () => $,
-        we: () => re,
+        JX: () => j,
+        dl: () => H,
+        of: () => V,
+        Sq: () => K,
+        Dt: () => Y,
+        o9: () => J,
+        UU: () => q,
+        a4: () => x,
+        zy: () => X,
+        tR: () => Z,
+        uW: () => ae,
+        Uv: () => le,
+        z2: () => se,
+        Y4: () => ce,
+        UJ: () => Q,
+        W6: () => re,
+        ZG: () => ee,
+        Yg: () => ne,
+        PI: () => ie,
+        D4: () => te,
+        we: () => oe,
       });
       var n = a(34629),
         r = a(90626),
@@ -8988,44 +8991,60 @@
         G = a(48996),
         O = a(94238),
         F = a(93095),
-        L = a(33543);
-      const U = new k.wd("DailyDealAdmin"),
-        z = 7,
-        x = 14,
-        q = "#DailyDeals_Blackout";
-      function W(e) {
-        return e.store_item_name == q;
+        L = a(33543),
+        U = a(38390);
+      const z = new k.wd("DailyDealAdmin"),
+        x = 7,
+        q = 14,
+        W = "#DailyDeals_Blackout";
+      function j(e) {
+        return e.store_item_name == W;
       }
-      var j, H;
-      function V(e, t) {
-        let a = H.Unknown;
+      var H, V, K;
+      function Y(e, t) {
+        let a = V.Unknown;
         const n = Date.now() / 1e3;
-        if (!e.rtime32_start_time) return H.Unknown;
-        if (e.cancelled) return H.Cancelled;
-        if (e.rtime32_start_time > n) {
-          if (e?.partner_jsondata) {
-            const t = JSON.parse(e.partner_jsondata);
-            if (
-              t &&
-              t.require_sale_page &&
-              (!t.sale_clan_account || !t.sale_clan_evcent_gid)
-            )
-              return H.InviteAccepted;
-          }
-          a = t > 0 ? H.DealReady : H.InviteAccepted;
-        } else
-          a =
-            t > 0
-              ? e.rtime32_start_time + P.Kp.PerDay < n
-                ? H.DealCompleted
-                : H.DealLive
-              : H.DealFailed;
-        return a;
+        return e.rtime32_start_time
+          ? e.cancelled
+            ? V.Cancelled
+            : ((a =
+                e.rtime32_start_time > n
+                  ? J(e) == K.NotSetUp
+                    ? V.InviteAccepted
+                    : t > 0
+                      ? V.DealReady
+                      : V.InviteAccepted
+                  : t > 0
+                    ? e.rtime32_start_time + P.Kp.PerDay < n
+                      ? V.DealCompleted
+                      : V.DealLive
+                    : V.DealFailed),
+              a)
+          : V.Unknown;
+      }
+      function J(e) {
+        if (e && e.partner_jsondata) {
+          const t = JSON.parse(e.partner_jsondata);
+          if (t && t.require_sale_page)
+            return t.sale_clan_account && t.sale_clan_event_gid
+              ? K.SetUp
+              : K.NotSetUp;
+        }
+        return K.NotRequired;
+      }
+      function Q(e) {
+        let t, a;
+        if (e && e.partner_jsondata) {
+          const n = JSON.parse(e.partner_jsondata);
+          n && ((t = n.sale_clan_account), (a = n.sale_clan_event_gid));
+        }
+        const { eventModel: n, bLoading: r } = (0, U.B9)(t, a);
+        return !r && n?.GetSaleURL();
       }
       !(function (e) {
         (e[(e.k_BlockDate = 1)] = "k_BlockDate"),
           (e[(e.k_ScheduleSlot = 2)] = "k_ScheduleSlot");
-      })(j || (j = {})),
+      })(H || (H = {})),
         (function (e) {
           (e[(e.Unknown = 0)] = "Unknown"),
             (e[(e.Cancelled = 1)] = "Cancelled"),
@@ -9036,8 +9055,13 @@
             (e[(e.DealLive = 6)] = "DealLive"),
             (e[(e.DealCompleted = 7)] = "DealCompleted"),
             (e[(e.DealFailed = 8)] = "DealFailed");
-        })(H || (H = {}));
-      class K {
+        })(V || (V = {})),
+        (function (e) {
+          (e[(e.NotRequired = 0)] = "NotRequired"),
+            (e[(e.NotSetUp = 1)] = "NotSetUp"),
+            (e[(e.SetUp = 2)] = "SetUp");
+        })(K || (K = {}));
+      class $ {
         m_mapCDailyDeals = new Map();
         m_mapCDailyDealsByDay = new Map();
         m_mapCalendarMarkupByDay = new Map();
@@ -9091,7 +9115,7 @@
         SetDailyDeal(e) {
           this.m_mapCDailyDeals.set(e.gid, e),
             this.GetCallbackForDailyDealID(e.gid).Dispatch(e),
-            U.Debug("SetDailyDeal", e);
+            z.Debug("SetDailyDeal", e);
         }
         async LoadDailyDealByID(e, t) {
           if (void 0 === e) return !1;
@@ -9126,7 +9150,7 @@
             this.m_mapCDailyDeals.set(e, null),
             this.GetCallbackForDailyDealID(e).Dispatch(null),
             a &&
-              U.Error(
+              z.Error(
                 "CDailyDealStore.LoadDailyDealByID failed: " + a.strErrorMsg,
                 a,
               ),
@@ -9229,7 +9253,7 @@
             r = (0, s.H)(e);
           }
           return (
-            U.Error(
+            z.Error(
               "CDailyDealStore.AddDailyDeal failed: " + r?.strErrorMsg,
               r,
             ),
@@ -9240,7 +9264,7 @@
           let t = null;
           try {
             let a = p.fromObject(e);
-            U.Info("Saving:" + JSON.stringify(a)),
+            z.Info("Saving:" + JSON.stringify(a)),
               this.m_mapCDailyDeals.set(e.gid, e);
             const n = d.w.Init(h);
             n.Body().set_gid(e.gid), n.Body().set_daily_deal(a);
@@ -9259,7 +9283,7 @@
             t = (0, s.H)(e);
           }
           return (
-            U.Error(
+            z.Error(
               "CDailyDealStore.SaveDailyDeal failed: " + t?.strErrorMsg,
               t,
             ),
@@ -9269,9 +9293,9 @@
         async RemoveDailyDeal(e) {
           const t = this.m_mapCDailyDeals.get(e);
           let a = null;
-          if ((U.Debug("Deleting Deal:" + JSON.stringify(t)), !t || !t.gid))
+          if ((z.Debug("Deleting Deal:" + JSON.stringify(t)), !t || !t.gid))
             return (
-              U.Error(
+              z.Error(
                 "CDailyDealStore.RemoveDailyDeal ID does not exist: " + e,
               ),
               !1
@@ -9308,7 +9332,7 @@
             a = (0, s.H)(e);
           }
           return (
-            U.Error(
+            z.Error(
               "CDailyDealStore.RemoveDailyDeal failed: " + a?.strErrorMsg,
               a,
             ),
@@ -9319,10 +9343,10 @@
           const t = this.m_mapCDailyDeals.get(e);
           let a = null;
           if (
-            (U.Debug("Canceling daily deal:" + JSON.stringify(t)), !t || !t.gid)
+            (z.Debug("Canceling daily deal:" + JSON.stringify(t)), !t || !t.gid)
           )
             return (
-              U.Error(
+              z.Error(
                 "CDailyDealStore.CancelDailyDeal ID does not exist: " + e,
               ),
               !1
@@ -9361,7 +9385,7 @@
             a = (0, s.H)(e);
           }
           return (
-            U.Error(
+            z.Error(
               "CDailyDealStore.CancelDailyDeal failed: " + a?.strErrorMsg,
               a,
             ),
@@ -9389,7 +9413,7 @@
             let r = new p();
             if (t) {
               r.set_rtime32_start_time(e),
-                r.set_store_item_name(q),
+                r.set_store_item_name(W),
                 r.set_template_json("{}"),
                 r.set_store_item_type(-1),
                 r.set_store_item_id(0),
@@ -9418,7 +9442,7 @@
             } else if (this.m_mapCDailyDealsByDay.has(e)) {
               const t = this.m_mapCDailyDealsByDay.get(e).find((e) => {
                 const t = this.m_mapCDailyDeals.get(e);
-                return t.store_item_name == q && !t.deleted;
+                return t.store_item_name == W && !t.deleted;
               });
               if (null != t) {
                 const a = this.m_mapCDailyDeals.get(t),
@@ -9454,7 +9478,7 @@
             n = (0, s.H)(e);
           }
           return (
-            U.Error(
+            z.Error(
               "CDailyDealStore.SetBlackoutDate failed: " + n?.strErrorMsg,
               n,
             ),
@@ -9464,12 +9488,12 @@
         static s_Singleton;
         static Get() {
           return (
-            K.s_Singleton ||
-              ((K.s_Singleton = new K()),
-              K.s_Singleton.Init(),
+            $.s_Singleton ||
+              (($.s_Singleton = new $()),
+              $.s_Singleton.Init(),
               "dev" == o.TS.WEB_UNIVERSE &&
-                (window.g_DailyDealStore = K.s_Singleton)),
-            K.s_Singleton
+                (window.g_DailyDealStore = $.s_Singleton)),
+            $.s_Singleton
           );
         }
         constructor() {}
@@ -9512,13 +9536,13 @@
           n.length > 0 &&
             n.forEach((e) =>
               this.HelperAddEDailyDealDisplayInfo(e, {
-                eType: j.k_ScheduleSlot,
+                eType: H.k_ScheduleSlot,
               }),
             ),
             a.length > 0 &&
               a.forEach((e) =>
                 this.HelperAddEDailyDealDisplayInfo(e.date, {
-                  eType: j.k_BlockDate,
+                  eType: H.k_BlockDate,
                   name: e.name,
                 }),
               ),
@@ -9536,12 +9560,12 @@
             ]);
         }
       }
-      function Y() {
-        const [e, t] = r.useState(K.Get().GetAllDailyDeals());
-        return (0, l.hL)(K.Get().GetCallbackForDailyDealList(), t), e;
+      function X() {
+        const [e, t] = r.useState($.Get().GetAllDailyDeals());
+        return (0, l.hL)($.Get().GetCallbackForDailyDealList(), t), e;
       }
-      function J(e, t) {
-        const a = K.Get(),
+      function Z(e, t) {
+        const a = $.Get(),
           [n, i] = r.useState(a.GetDailyDealByID(e));
         return (
           r.useEffect(() => {
@@ -9551,8 +9575,8 @@
           n
         );
       }
-      function Q(e) {
-        const t = K.Get(),
+      function ee(e) {
+        const t = $.Get(),
           [a, n] = r.useState(t.GetDailyDealStartTime(e));
         return (
           (0, l.hL)(t.GetCallbackForDailyDealID(e), () =>
@@ -9561,40 +9585,40 @@
           a
         );
       }
-      function $(e) {
-        const [t, a] = r.useState(() => K.Get().GetDailyDealByDay(e));
-        return (0, l.hL)(K.Get().GetCallbackForDailyDealByDayList(e), a), t;
-      }
-      function X() {
-        return { fnAddDailyDeal: K.Get().AddDailyDeal };
-      }
-      function Z() {
-        return {
-          fnSaveDailyDeal: K.Get().SaveDailyDeal,
-          fnRemoveDailyDeal: K.Get().RemoveDailyDeal,
-          fnCancelDailyDeal: K.Get().CancelDailyDeal,
-          fnSetDailyDealSalePage: K.Get().SetDailyDealSalePage,
-        };
-      }
-      function ee() {
-        return K.Get().SetBlackoutDate;
-      }
       function te(e) {
-        return K.Get().GetDailyDealsBySalePageVanity(e);
+        const [t, a] = r.useState(() => $.Get().GetDailyDealByDay(e));
+        return (0, l.hL)($.Get().GetCallbackForDailyDealByDayList(e), a), t;
       }
-      function ae(e) {
-        return K.Get().GetDailyDealDisplayOverridesByDay(e);
+      function ae() {
+        return { fnAddDailyDeal: $.Get().AddDailyDeal };
       }
       function ne() {
-        const [e, t] = (0, r.useState)(() => K.Get().CreateMapByStoreItem());
+        return {
+          fnSaveDailyDeal: $.Get().SaveDailyDeal,
+          fnRemoveDailyDeal: $.Get().RemoveDailyDeal,
+          fnCancelDailyDeal: $.Get().CancelDailyDeal,
+          fnSetDailyDealSalePage: $.Get().SetDailyDealSalePage,
+        };
+      }
+      function re() {
+        return $.Get().SetBlackoutDate;
+      }
+      function ie(e) {
+        return $.Get().GetDailyDealsBySalePageVanity(e);
+      }
+      function se(e) {
+        return $.Get().GetDailyDealDisplayOverridesByDay(e);
+      }
+      function le() {
+        const [e, t] = (0, r.useState)(() => $.Get().CreateMapByStoreItem());
         return (
-          (0, l.hL)(K.Get().GetCallbackForDailyDealList(), () =>
-            t(K.Get().CreateMapByStoreItem()),
+          (0, l.hL)($.Get().GetCallbackForDailyDealList(), () =>
+            t($.Get().CreateMapByStoreItem()),
           ),
           e
         );
       }
-      function re(e) {
+      function oe(e) {
         const t = (0, F.F_)(
             e.map((e) => (0 == e.store_item_type ? e.store_item_id : 0)),
           ),
@@ -9615,13 +9639,13 @@
                   ? (l = s)
                   : 2 == e.store_item_type &&
                     (l = a?.get(e.store_item_id)?.discounts ?? []),
-                n.push(se(e, l, i));
+                n.push(me(e, l, i));
             }),
             n
           );
         }, [e, t, a]);
       }
-      function ie(e) {
+      function ce(e) {
         const t = (0, O.qc)(e),
           a = (0, G.CW)(t.packageid),
           n = e.rtime32_start_time > Date.now() / 1e3,
@@ -9641,11 +9665,11 @@
                 ? (t = a)
                 : 2 == e.store_item_type &&
                   (t = s?.get(e.store_item_id)?.discounts),
-            se(e, t, l)
+            me(e, t, l)
           );
         }, [e, l, i, a, s]);
       }
-      function se(e, t, a) {
+      function me(e, t, a) {
         if (e) {
           const n = e.rtime32_start_time,
             r = e.rtime32_start_time + 82800;
@@ -9687,16 +9711,16 @@
           rgDiscounts: [],
         };
       }
-      (0, n.Cg)([l.oI], K.prototype, "SetDailyDeal", null),
-        (0, n.Cg)([l.oI], K.prototype, "LoadDailyDealByID", null),
-        (0, n.Cg)([l.oI], K.prototype, "GetDailyDealsBySalePageVanity", null),
-        (0, n.Cg)([l.oI], K.prototype, "AddDailyDeal", null),
-        (0, n.Cg)([l.oI], K.prototype, "SaveDailyDeal", null),
-        (0, n.Cg)([l.oI], K.prototype, "RemoveDailyDeal", null),
-        (0, n.Cg)([l.oI], K.prototype, "CancelDailyDeal", null),
-        (0, n.Cg)([l.oI], K.prototype, "SetDailyDealSalePage", null),
-        (0, n.Cg)([l.oI], K.prototype, "SetBlackoutDate", null),
-        (0, n.Cg)([l.oI], K.prototype, "InternalAddCDailyDeal", null);
+      (0, n.Cg)([l.oI], $.prototype, "SetDailyDeal", null),
+        (0, n.Cg)([l.oI], $.prototype, "LoadDailyDealByID", null),
+        (0, n.Cg)([l.oI], $.prototype, "GetDailyDealsBySalePageVanity", null),
+        (0, n.Cg)([l.oI], $.prototype, "AddDailyDeal", null),
+        (0, n.Cg)([l.oI], $.prototype, "SaveDailyDeal", null),
+        (0, n.Cg)([l.oI], $.prototype, "RemoveDailyDeal", null),
+        (0, n.Cg)([l.oI], $.prototype, "CancelDailyDeal", null),
+        (0, n.Cg)([l.oI], $.prototype, "SetDailyDealSalePage", null),
+        (0, n.Cg)([l.oI], $.prototype, "SetBlackoutDate", null),
+        (0, n.Cg)([l.oI], $.prototype, "InternalAddCDailyDeal", null);
     },
     92082: (e, t, a) => {
       "use strict";

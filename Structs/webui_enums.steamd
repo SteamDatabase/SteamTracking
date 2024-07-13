@@ -1635,6 +1635,13 @@ enum UnnamedEnum26b26332fa565251
 	Page_Down = 65366;
 }
 
+enum UnnamedEnum274d8518ea2b5142
+{
+	NotRequired = 0;
+	NotSetUp = 1;
+	SetUp = 2;
+}
+
 enum UnnamedEnum27cbc52f3d26b7db
 {
 	Off = 0;
