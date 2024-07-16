@@ -1138,6 +1138,7 @@ ${PARTNER_BASE_URL}promotion/spotlights/ajaxloadspotlight
 ${PARTNER_BASE_URL}promotion/spotlights/dashboard
 ${PARTNER_BASE_URL}promotion/themesales/dashboard
 ${PARTNER_BASE_URL}pub/ajaxfindpublishers
+${PARTNER_BASE_URL}pub/ajaxgetpartnerapps/${}
 ${PARTNER_BASE_URL}pub/publisher/${partner_id}
 ${PARTNER_BASE_URL}pub/publisher/${publisherid}/
 ${PARTNER_BASE_URL}pub/publisher/${}
@@ -1290,6 +1291,7 @@ ${STORE_BASE_URL}cart/purchaserequested/${}
 ${STORE_BASE_URL}category/${category}
 ${STORE_BASE_URL}category/${handle}
 ${STORE_BASE_URL}category/${}
+${STORE_BASE_URL}charts/steamdecktopplayed
 ${STORE_BASE_URL}contenthub/ajaxcheckcontenthubsalepage
 ${STORE_BASE_URL}contenthub/ajaxfilterappsbycontenthub
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubdata

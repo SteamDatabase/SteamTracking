@@ -2612,7 +2612,7 @@
     },
     16499: (e, t, n) => {
       "use strict";
-      n.d(t, { lS: () => h, j6: () => D, OT: () => g });
+      n.d(t, { lS: () => S, j6: () => g, OT: () => N });
       var a = n(65946),
         o = n(90626),
         r = n(94230),
@@ -2626,8 +2626,9 @@
         p = n(27543),
         E = n(90316),
         v = n.n(E),
-        _ = n(61336);
-      function h(e) {
+        _ = n(61336),
+        h = n(32754);
+      function S(e) {
         const { appid: t } = e,
           n = (function (e) {
             const [t, n] = (0, o.useState)(void 0),
@@ -2678,7 +2679,7 @@
                 n
                   .filter((e) => 3 != e.external_type)
                   .map((e) =>
-                    o.createElement(S, {
+                    o.createElement(D, {
                       key: "app_social_link_" + t + "_" + e.external_type,
                       social: e,
                     }),
@@ -2687,7 +2688,7 @@
             )
           : null;
       }
-      function S(e) {
+      function D(e) {
         const { social: t } = e,
           n =
             s.TS.IMG_URL +
@@ -2700,14 +2701,17 @@
           "a",
           {
             href: (0, _.NT)(t.external_url),
-            "data-tooltip-text": t.external_user_name,
             target: s.TS.IN_CLIENT ? void 0 : "_blank",
             rel: "noopener noreferrer",
           },
-          o.createElement("img", { className: v().AppSocialLink, src: n }),
+          o.createElement(
+            h.he,
+            { toolTipContent: t.external_user_name },
+            o.createElement("img", { className: v().AppSocialLink, src: n }),
+          ),
         );
       }
-      function D(e) {
+      function g(e) {
         const { event: t, nOverrideStartTime: n, nOverrideEndTime: r } = e,
           s = e.stylesmodule ? { ...v(), ...e.stylesmodule } : v(),
           [l, i, c] = (0, a.q3)(() => [
@@ -2730,7 +2734,7 @@
           }),
         );
       }
-      function g(e) {
+      function N(e) {
         const { event: t, dateRangeLayout: n = "horizontal" } = e,
           [r, s, l] = (0, a.q3)(() => [
             t.GetStartTimeAndDateUnixSeconds(),
@@ -3100,15 +3104,18 @@
                   "div",
                   {
                     className: (0, m.A)(i().Button, i().Icon, M().LinkButton),
-                    "data-tooltip-text": (0, d.we)(
-                      "#ToolTip_CopyLinkToClipboard",
-                    ),
                     title: (0, d.we)("#ToolTip_CopyLinkToClipboard"),
                   },
-                  o.createElement("img", {
-                    className: M().ClipboardIcon,
-                    src: E.A,
-                  }),
+                  o.createElement(
+                    D.he,
+                    {
+                      toolTipContent: (0, d.we)("#ToolTip_CopyLinkToClipboard"),
+                    },
+                    o.createElement("img", {
+                      className: M().ClipboardIcon,
+                      src: E.A,
+                    }),
+                  ),
                 ),
             ),
             o.createElement("div", { ref: r, className: M().ClipboardText }, n),

@@ -501,6 +501,7 @@ function ShowEditHandles( bIsCreatorHome, bIsDLCPage )
 
 		elButton.click( function(){
 			elOptions.show();
+			$container.addClass('editing_open');
 		});
 
 		elOverlay.append( elButton );
@@ -706,6 +707,7 @@ function ShowEditHandles( bIsCreatorHome, bIsDLCPage )
 			var elUpdating = $J("\r\n\t\t\t\t<div class=\"visible edit_overlay updating_section\">\r\n\t\t\t\t\t<h2 style=\"color:white;\">Saving...<\/h2>\r\n\t\t\t\t\t<img src=\"https:\/\/store.akamai.steamstatic.com\/public\/images\/login\/throbber.gif\">\r\n\t\t\t\t<\/div>" );
 			elOverlay.replaceWith( elUpdating );
 			elOptions.hide();
+			$container.removeClass('editing_open');
 
 			$J.ajax ( {
 				url: g_strCuratorAdminURL + 'ajaxupdatepagesection/',
@@ -729,6 +731,7 @@ function ShowEditHandles( bIsCreatorHome, bIsDLCPage )
 
 		elCancel.on('click', function(){
 			elOptions.hide();
+			$container.removeClass('editing_open');
 		});
 
 		elListEditButton.on('click', function(){
@@ -1235,7 +1238,7 @@ $J(function() {
 
 		g_oPagingControls.SetResponseHandler( function( response ) {
 			g_pagingData.total_count = response.total_count;
-		
+
 			GDynamicStore.DecorateDynamicItems();
 
 						if( ('bFiltering' in response) && !response.bFiltering && ('rgFacets' in response) ) {

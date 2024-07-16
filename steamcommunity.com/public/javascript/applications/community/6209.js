@@ -7,9 +7,9 @@
     76209: (e, t, i) => {
       i.r(t),
         i.d(t, {
-          CGameRecordingStore: () => u,
-          default: () => C,
-          k_strGRFAQ: () => _,
+          CGameRecordingStore: () => _,
+          default: () => y,
+          k_strGRFAQ: () => u,
         });
       var r = i(34629),
         s = i(14947),
@@ -23,8 +23,8 @@
         c = i(44332),
         g = i(30470),
         h = i(61859);
-      const _ = "23B7-49AD-4A28-9590";
-      class u {
+      const u = "23B7-49AD-4A28-9590";
+      class _ {
         constructor() {
           (this.m_rgAppsWithTimelines = []),
             (this.m_mapTimelineLoaders = new Map()),
@@ -179,8 +179,24 @@
           return o ? (o.loader.RecordingSessionChanged(i), 1) : 1;
         }
         OnTimelineEntryChanged(e) {
-          const { entry: t } = e.Body().toObject(),
-            i = this.m_mapActiveTimelines.get(t.timeline_id);
+          if (!e.Body().entry(!1))
+            return (
+              (0, c.w)(
+                !1,
+                "OnTimelineEntryChanged received an invalid protobuf",
+              ),
+              1
+            );
+          const { entry: t } = e.Body().toObject();
+          if (!t)
+            return (
+              (0, c.w)(
+                !1,
+                "OnTimelineEntryChanged received an invalid protobuf after conversion",
+              ),
+              1
+            );
+          const i = this.m_mapActiveTimelines.get(t.timeline_id);
           if (i) {
             const e = i.loader;
             if (e.BIsTimelineRunning(t.timeline_id))
@@ -196,7 +212,7 @@
                   t.marker_icon,
                   t.entry_id,
                   t.marker_priority,
-                  t.marker_title,
+                  t.range_title,
                   t.marker_description,
                   parseInt(t.range_duration),
                 ),
@@ -624,40 +640,40 @@
               );
         }
       }
-      (0, r.Cg)([s.sH.shallow], u.prototype, "m_rgAppsWithTimelines", void 0),
-        (0, r.Cg)([s.sH], u.prototype, "m_bLoadingClips", void 0),
-        (0, r.Cg)([s.sH], u.prototype, "m_bLoadingAppsWithTimelines", void 0),
-        (0, r.Cg)([s.sH], u.prototype, "m_clips", void 0),
-        (0, r.Cg)([s.sH], u.prototype, "m_clipsGroupByGame", void 0),
-        (0, r.Cg)([s.sH], u.prototype, "m_clipExportProgress", void 0),
-        (0, r.Cg)([s.sH], u.prototype, "m_currentlyExportingClip", void 0),
-        (0, r.Cg)([s.sH], u.prototype, "m_recordingState", void 0),
-        (0, r.Cg)([s.sH], u.prototype, "m_bEnoughDiskSpace", void 0),
-        (0, r.Cg)([o.oI], u.prototype, "GetTimelineLoaderForGame", null),
-        (0, r.Cg)([o.oI], u.prototype, "GetTimelineLoaderForClip", null),
-        (0, r.Cg)([o.oI], u.prototype, "GetTimelineLoaderForSharedClip", null),
-        (0, r.Cg)([o.oI], u.prototype, "OnTimelineChanged", null),
-        (0, r.Cg)([o.oI], u.prototype, "OnRecordingSessionChanged", null),
-        (0, r.Cg)([o.oI], u.prototype, "OnTimelineEntryChanged", null),
-        (0, r.Cg)([o.oI], u.prototype, "OnClipCreated", null),
-        (0, r.Cg)([o.oI], u.prototype, "UploadClip", null),
-        (0, r.Cg)([o.oI], u.prototype, "SaveClip", null),
-        (0, r.Cg)([o.oI], u.prototype, "DeleteClip", null),
-        (0, r.Cg)([o.oI], u.prototype, "ExportClip", null),
-        (0, r.Cg)([o.oI], u.prototype, "UpdateClipExportPath", null),
-        (0, r.Cg)([o.oI], u.prototype, "OnExportProgress", null),
-        (0, r.Cg)([o.oI], u.prototype, "TakeScreenshot", null),
-        (0, r.Cg)([o.oI], u.prototype, "RegisterManualRecordingCallback", null),
-        (0, r.Cg)([o.oI], u.prototype, "StartRecording", null),
-        (0, r.Cg)([o.oI], u.prototype, "StopRecording", null),
-        (0, r.Cg)([o.oI], u.prototype, "SwitchRecordedGame", null),
-        (0, r.Cg)([o.oI], u.prototype, "CreateUserTimelineMarkers", null),
-        (0, r.Cg)([o.oI], u.prototype, "UpdateUserTimelineMarkers", null),
-        (0, r.Cg)([o.oI], u.prototype, "RemoveUserTimelineMarker", null),
-        (0, r.Cg)([o.oI], u.prototype, "LoadThumbnails", null),
-        (0, r.Cg)([o.oI], u.prototype, "GetAchivementInfo", null),
-        (0, r.Cg)([o.oI], u.prototype, "OnLowDiskSpace", null);
-      const C = u;
+      (0, r.Cg)([s.sH.shallow], _.prototype, "m_rgAppsWithTimelines", void 0),
+        (0, r.Cg)([s.sH], _.prototype, "m_bLoadingClips", void 0),
+        (0, r.Cg)([s.sH], _.prototype, "m_bLoadingAppsWithTimelines", void 0),
+        (0, r.Cg)([s.sH], _.prototype, "m_clips", void 0),
+        (0, r.Cg)([s.sH], _.prototype, "m_clipsGroupByGame", void 0),
+        (0, r.Cg)([s.sH], _.prototype, "m_clipExportProgress", void 0),
+        (0, r.Cg)([s.sH], _.prototype, "m_currentlyExportingClip", void 0),
+        (0, r.Cg)([s.sH], _.prototype, "m_recordingState", void 0),
+        (0, r.Cg)([s.sH], _.prototype, "m_bEnoughDiskSpace", void 0),
+        (0, r.Cg)([o.oI], _.prototype, "GetTimelineLoaderForGame", null),
+        (0, r.Cg)([o.oI], _.prototype, "GetTimelineLoaderForClip", null),
+        (0, r.Cg)([o.oI], _.prototype, "GetTimelineLoaderForSharedClip", null),
+        (0, r.Cg)([o.oI], _.prototype, "OnTimelineChanged", null),
+        (0, r.Cg)([o.oI], _.prototype, "OnRecordingSessionChanged", null),
+        (0, r.Cg)([o.oI], _.prototype, "OnTimelineEntryChanged", null),
+        (0, r.Cg)([o.oI], _.prototype, "OnClipCreated", null),
+        (0, r.Cg)([o.oI], _.prototype, "UploadClip", null),
+        (0, r.Cg)([o.oI], _.prototype, "SaveClip", null),
+        (0, r.Cg)([o.oI], _.prototype, "DeleteClip", null),
+        (0, r.Cg)([o.oI], _.prototype, "ExportClip", null),
+        (0, r.Cg)([o.oI], _.prototype, "UpdateClipExportPath", null),
+        (0, r.Cg)([o.oI], _.prototype, "OnExportProgress", null),
+        (0, r.Cg)([o.oI], _.prototype, "TakeScreenshot", null),
+        (0, r.Cg)([o.oI], _.prototype, "RegisterManualRecordingCallback", null),
+        (0, r.Cg)([o.oI], _.prototype, "StartRecording", null),
+        (0, r.Cg)([o.oI], _.prototype, "StopRecording", null),
+        (0, r.Cg)([o.oI], _.prototype, "SwitchRecordedGame", null),
+        (0, r.Cg)([o.oI], _.prototype, "CreateUserTimelineMarkers", null),
+        (0, r.Cg)([o.oI], _.prototype, "UpdateUserTimelineMarkers", null),
+        (0, r.Cg)([o.oI], _.prototype, "RemoveUserTimelineMarker", null),
+        (0, r.Cg)([o.oI], _.prototype, "LoadThumbnails", null),
+        (0, r.Cg)([o.oI], _.prototype, "GetAchivementInfo", null),
+        (0, r.Cg)([o.oI], _.prototype, "OnLowDiskSpace", null);
+      const y = _;
     },
   },
 ]);

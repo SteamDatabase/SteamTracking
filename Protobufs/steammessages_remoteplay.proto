@@ -424,14 +424,15 @@ message CStreamingClientConfig {
 
 message CStreamingServerConfig {
 	optional bool change_desktop_resolution = 1;
-	optional bool dynamically_adjust_resolution = 2;
+	optional bool dynamically_adjust_resolution_OBSOLETE = 2;
 	optional bool enable_capture_nvfbc = 3;
-	optional bool enable_hardware_encoding_nvidia = 4;
-	optional bool enable_hardware_encoding_amd = 5;
-	optional bool enable_hardware_encoding_intel = 6;
+	optional bool enable_hardware_encoding_nvidia_OBSOLETE = 4;
+	optional bool enable_hardware_encoding_amd_OBSOLETE = 5;
+	optional bool enable_hardware_encoding_intel_OBSOLETE = 6;
 	optional int32 software_encoding_threads = 7;
 	optional bool enable_traffic_priority = 8;
 	optional .EStreamHostPlayAudioPreference host_play_audio = 9 [default = k_EStreamHostPlayAudioDefault];
+	optional bool enable_hardware_encoding = 10;
 }
 
 message CNegotiatedConfig {

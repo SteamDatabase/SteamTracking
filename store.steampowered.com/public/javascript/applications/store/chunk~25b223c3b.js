@@ -575,19 +575,19 @@
     59952: (e, t, n) => {
       "use strict";
       n.d(t, {
-        $A: () => M,
-        B8: () => D,
-        Pk: () => T,
-        Sz: () => N,
-        Tu: () => w,
-        UT: () => H,
-        W4: () => A,
-        ZS: () => I,
-        Zb: () => L,
-        _D: () => P,
-        _J: () => B,
-        ck: () => x,
-        j$: () => k,
+        $A: () => H,
+        B8: () => B,
+        Pk: () => D,
+        Sz: () => I,
+        Tu: () => b,
+        UT: () => F,
+        W4: () => P,
+        ZS: () => R,
+        Zb: () => N,
+        _D: () => k,
+        _J: () => x,
+        ck: () => O,
+        j$: () => w,
       });
       var o = n(33645),
         r = n.n(o),
@@ -608,8 +608,9 @@
         v = n(61336),
         S = n(30470),
         C = n(12611),
-        y = n(74410);
-      const A = new Map([
+        y = n(74410),
+        A = n(32754);
+      const P = new Map([
         [
           "b",
           {
@@ -636,14 +637,14 @@
             autocloses: !1,
           },
         ],
-        ["h1", { Constructor: L, autocloses: !1, skipFollowingNewline: !0 }],
-        ["h2", { Constructor: N, autocloses: !1, skipFollowingNewline: !0 }],
-        ["h3", { Constructor: I, autocloses: !1, skipFollowingNewline: !0 }],
+        ["h1", { Constructor: N, autocloses: !1, skipFollowingNewline: !0 }],
+        ["h2", { Constructor: I, autocloses: !1, skipFollowingNewline: !0 }],
+        ["h3", { Constructor: R, autocloses: !1, skipFollowingNewline: !0 }],
         [
           "h4",
           {
             Constructor: function (e) {
-              return b(e, (0, _.A)(r().Header4, "BB_Header4"));
+              return L(e, (0, _.A)(r().Header4, "BB_Header4"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -653,7 +654,7 @@
           "h5",
           {
             Constructor: function (e) {
-              return b(e, (0, _.A)(r().Header5, "BB_Header5"));
+              return L(e, (0, _.A)(r().Header5, "BB_Header5"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -663,7 +664,7 @@
           "center",
           {
             Constructor: function (e) {
-              let t = k(e.args, "id");
+              let t = w(e.args, "id");
               t &&
                 "string" == typeof t &&
                 t.length > 0 &&
@@ -685,7 +686,7 @@
           "smalltext",
           {
             Constructor: function (e) {
-              return b(e, (0, _.A)(r().SmallText, "BB_SmallText"));
+              return L(e, (0, _.A)(r().SmallText, "BB_SmallText"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -767,15 +768,15 @@
           "url",
           {
             Constructor: function (e) {
-              let t = k(e.args);
+              let t = w(e.args);
               if (!t) {
                 const n = e.children;
                 "string" == typeof n &&
                   (n.startsWith("http://") || n.startsWith("https://")) &&
                   (t = n);
               }
-              const n = "button" == k(e.args, "style") ? r().LinkButton : null;
-              let o = k(e.args, "id");
+              const n = "button" == w(e.args, "style") ? r().LinkButton : null;
+              let o = w(e.args, "id");
               o &&
                 "string" == typeof o &&
                 o.length > 0 &&
@@ -792,7 +793,7 @@
                   e.children,
                 );
               return s.createElement(
-                R,
+                T,
                 { className: n, href: t, id: o },
                 e.children,
               );
@@ -800,7 +801,7 @@
             autocloses: !1,
           },
         ],
-        ["quote", { Constructor: T, autocloses: !1 }],
+        ["quote", { Constructor: D, autocloses: !1 }],
         [
           "pullquote",
           {
@@ -840,15 +841,15 @@
             autocloses: !1,
           },
         ],
-        ["list", { Constructor: D, autocloses: !1, skipInternalNewline: !0 }],
-        ["olist", { Constructor: B, autocloses: !1, skipInternalNewline: !0 }],
-        ["*", { Constructor: x, autocloses: !0, skipInternalNewline: !0 }],
+        ["list", { Constructor: B, autocloses: !1, skipInternalNewline: !0 }],
+        ["olist", { Constructor: x, autocloses: !1, skipInternalNewline: !0 }],
+        ["*", { Constructor: O, autocloses: !0, skipInternalNewline: !0 }],
         [
           "table",
           {
             Constructor: function (e) {
-              const t = k(e.args, "noborder"),
-                n = k(e.args, "equalcells");
+              const t = w(e.args, "noborder"),
+                n = w(e.args, "equalcells");
               return s.createElement(
                 "div",
                 {
@@ -900,7 +901,7 @@
           "td",
           {
             Constructor: function (e) {
-              const t = k(e.args, "width");
+              const t = w(e.args, "width");
               return s.createElement(
                 "div",
                 {
@@ -919,9 +920,11 @@
           "expand",
           {
             Constructor: function (e) {
-              const t = Boolean(k(e.args, "expanded")),
+              const t = Boolean(w(e.args, "expanded")),
                 [n, o] = s.useState(t),
-                i = (function (e, t) {
+                i = w(e.args, "collapsed_str"),
+                a = w(e.args, "expanded_str"),
+                l = (function (e, t, n) {
                   switch (e) {
                     case "details":
                       return {
@@ -938,7 +941,7 @@
                     case "title":
                       return {
                         collapsed: t || "#Bbcode_Expand_ShowMore_Collapsed",
-                        expanded: t || "#Bbcode_Expand_ShowMore_Expanded",
+                        expanded: n || "#Bbcode_Expand_ShowMore_Expanded",
                         style: r().ExpandSection_WithTitle,
                       };
                     default:
@@ -948,20 +951,23 @@
                         style: r().ExpandSection_ShowMore,
                       };
                   }
-                })(k(e.args, "type"), k(e.args, "title"));
+                })(w(e.args, "type"), i, a);
               return s.createElement(
                 "div",
                 {
-                  className: (0, _.A)(
-                    r().ExpandSectionBlock,
-                    i.style,
-                    n ? r().ExpandSectionExpanded : r().ExpandSectionCollapsed,
-                  ),
+                  className: (0, _.A)({
+                    [r().ExpandSectionBlock]: !0,
+                    [l.style]: !0,
+                    [r().ExpandSectionExpanded]: n,
+                    [r().ExpandSectionCollapsed]: !n,
+                    BBCodeExpanded: n,
+                    BBCodeCollapsed: !n,
+                  }),
                 },
                 s.createElement(
                   "div",
                   { className: r().ExpandSectionHeader, onClick: () => o(!n) },
-                  (0, f.we)(n ? i.expanded : i.collapsed),
+                  (0, f.we)(n ? l.expanded : l.collapsed),
                   s.createElement(
                     "div",
                     { className: r().EmbedArrow },
@@ -986,7 +992,7 @@
           {
             Constructor: function (e) {
               const { event: t, showErrorInfo: n } = e.context,
-                o = k(e.args);
+                o = w(e.args);
               if (o)
                 return s.createElement(p.y, { eventGID: o, bPreviewMode: n });
               if (t) {
@@ -1002,10 +1008,10 @@
           "doclink",
           {
             Constructor: function (e) {
-              const t = k(e.args),
-                n = "button" == k(e.args, "style") ? r().LinkButton : null;
+              const t = w(e.args),
+                n = "button" == w(e.args, "style") ? r().LinkButton : null;
               return s.createElement(
-                R,
+                T,
                 { className: n, href: `${S.TS.PARTNER_BASE_URL}doc/${t}` },
                 e.children,
               );
@@ -1017,7 +1023,7 @@
           "color",
           {
             Constructor: function (e) {
-              const t = k(e.args);
+              const t = w(e.args);
               return s.createElement(
                 "span",
                 { style: { color: t } },
@@ -1044,12 +1050,12 @@
         ],
       ]);
       new Map([
-        ["looping_media", { Constructor: M, autocloses: !1 }],
-        ["video", { Constructor: H, autocloses: !1 }],
+        ["looping_media", { Constructor: H, autocloses: !1 }],
+        ["video", { Constructor: F, autocloses: !1 }],
         ["youtubeorvideo", { Constructor: y.Eo, autocloses: !1 }],
         ["previewyoutube", { Constructor: y.gH, autocloses: !1 }],
       ]);
-      function P(e, t, n = 0) {
+      function k(e, t, n = 0) {
         if (e?.startsWith(C.l)) return (0, d.v6)(e);
         if (e?.startsWith(C.e)) {
           const o = new Array(),
@@ -1068,16 +1074,16 @@
         }
         return e;
       }
-      function k(e, t) {
+      function w(e, t) {
         return void 0 === t ? e[""] : e[t];
       }
-      function w(e, t) {
+      function b(e, t) {
         return (n) => e({ ...n, className: (0, _.A)(n.className, t) });
       }
-      function b(e, t) {
-        let n = k(e.args, "id");
+      function L(e, t) {
+        let n = w(e.args, "id");
         return (
-          n || (n = k(e.args)),
+          n || (n = w(e.args)),
           n &&
             "string" == typeof n &&
             n.length > 0 &&
@@ -1090,16 +1096,16 @@
           )
         );
       }
-      function L(e) {
-        return b(e, (0, _.A)(r().Header1, "BB_Header1"));
-      }
       function N(e) {
-        return b(e, (0, _.A)(r().Header2, "BB_Header2"));
+        return L(e, (0, _.A)(r().Header1, "BB_Header1"));
       }
       function I(e) {
-        return b(e, (0, _.A)(r().Header3, "BB_Header3"));
+        return L(e, (0, _.A)(r().Header2, "BB_Header2"));
       }
-      const R = (e) => {
+      function R(e) {
+        return L(e, (0, _.A)(r().Header3, "BB_Header3"));
+      }
+      const T = (e) => {
         const { href: t, ...n } = e,
           o = (0, g.n9)();
         let r,
@@ -1120,11 +1126,11 @@
         return s.createElement(
           a.Ii,
           { ...n, href: i, rel: r },
-          s.createElement("span", { "data-tooltip-text": l }, e.children),
+          s.createElement(A.he, { toolTipContent: l }, e.children),
         );
       };
-      function T(e) {
-        const t = k(e.args, "author");
+      function D(e) {
+        const t = w(e.args, "author");
         return s.createElement(
           "blockquote",
           { className: (0, _.A)(r().BlockQuote, e.className) },
@@ -1139,22 +1145,22 @@
           e.children,
         );
       }
-      function D(e) {
+      function B(e) {
         return s.createElement(
           "ul",
           { className: (0, _.A)(r().List, "bullets") },
           e.children,
         );
       }
-      function B(e) {
+      function x(e) {
         return s.createElement(
           "ol",
           { className: r().OrderedList },
           e.children,
         );
       }
-      function x(e) {
-        let t = k(e.args, "id");
+      function O(e) {
+        let t = w(e.args, "id");
         return (
           t &&
             "string" == typeof t &&
@@ -1168,21 +1174,21 @@
           )
         );
       }
-      function O(e) {
-        let t = k(e.args, "poster");
+      function M(e) {
+        let t = w(e.args, "poster");
         t && (t = (0, v.L$)(t));
         const n = new Array();
         {
-          const t = k(e.args, "mp4");
+          const t = w(e.args, "mp4");
           t && n.push({ sURL: (0, v.L$)(t), sFormat: "video/mp4" });
-          const o = k(e.args, "webm");
+          const o = w(e.args, "webm");
           o && n.push({ sURL: (0, v.L$)(o), sFormat: "video/webm" });
         }
         const o = (0, i.sf)(S.TS.LANGUAGE),
           r = 0 != o,
           s = new Array();
         for (let t = 0; t < 31; t++) {
-          const n = k(e.args, "sub_" + (0, i.ww)(t));
+          const n = w(e.args, "sub_" + (0, i.ww)(t));
           n &&
             s.push({
               sURL: (0, v.L$)(n),
@@ -1190,7 +1196,7 @@
               sKind: "subtitles",
               bDefault: r && t == o,
             });
-          const a = k(e.args, "cap_" + (0, i.ww)(t));
+          const a = w(e.args, "cap_" + (0, i.ww)(t));
           a &&
             s.push({
               sURL: (0, v.L$)(a),
@@ -1201,8 +1207,8 @@
         }
         return { sPoster: t, rgVideoSources: n, rgVideoTracks: s };
       }
-      function M(e) {
-        const t = O(e);
+      function H(e) {
+        const t = M(e);
         return s.createElement(h.L, {
           video: t,
           bAutoPlay: !0,
@@ -1210,17 +1216,17 @@
           bLoop: !0,
         });
       }
-      function H(e) {
-        const t = O(e),
+      function F(e) {
+        const t = M(e),
           n = e.children ? e.children.toString() : void 0;
         n &&
           n.startsWith("http") &&
           t.rgVideoSources.push({ sURL: (0, v.L$)(n), sFormat: "video/webm" });
-        const o = k(e.args, "autoplay"),
+        const o = w(e.args, "autoplay"),
           r = "0" !== o && "off" !== o && "false" !== o,
-          i = k(e.args, "controls"),
+          i = w(e.args, "controls"),
           a = "0" !== i && "off" !== i && "false" !== i,
-          l = k(e.args, "loop"),
+          l = w(e.args, "loop"),
           c = "0" !== i && "off" !== i && "false" !== i;
         return s.createElement(h.L, {
           video: t,
@@ -2947,7 +2953,7 @@
     },
     283: (e, t, n) => {
       "use strict";
-      n.d(t, { A: () => f });
+      n.d(t, { A: () => v });
       var o = n(34629),
         r = n(90626),
         i = n(75844),
@@ -2960,9 +2966,10 @@
         u = n(52038),
         p = n(90024),
         h = n.n(p),
-        E = n(97232);
-      const g = 1576780700;
-      let _ = class extends r.Component {
+        E = n(97232),
+        g = n(32754);
+      const _ = 1576780700;
+      let f = class extends r.Component {
         OnEmoticonClick(e) {
           const {
             emoticonStore: t,
@@ -3009,7 +3016,7 @@
             this.BHaveUnseenEmoticons() && o)
           ) {
             let e = this.GetNewestIndicatorTime();
-            (!e || e < g) && (e = g), o("rtLastAckedNewEmoticons", e);
+            (!e || e < _) && (e = _), o("rtLastAckedNewEmoticons", e);
           }
         }
         GetNewestIndicatorTime() {
@@ -3023,7 +3030,7 @@
         BHaveUnseenEmoticons() {
           const { rtLastAckedNewEmoticons: e } = this.props;
           let t = this.GetNewestIndicatorTime();
-          return !e || e < g || (t && (!e || e < t));
+          return !e || e < _ || (t && (!e || e < t));
         }
         render() {
           const { disabled: e, className: t, ttip: n, useImg: o } = this.props;
@@ -3042,14 +3049,17 @@
                     ),
                     focusable: !0,
                   },
-                  r.createElement("img", {
-                    src: this.props.useImg,
-                    className: (0, u.A)(...i),
-                    title:
-                      this.props.title ||
-                      (0, d.we)("#ChatEntryButton_Emoticon"),
-                    "data-tooltip-text": n,
-                  }),
+                  r.createElement(
+                    g.he,
+                    { toolTipContent: n },
+                    r.createElement("img", {
+                      src: this.props.useImg,
+                      className: (0, u.A)(...i),
+                      title:
+                        this.props.title ||
+                        (0, d.we)("#ChatEntryButton_Emoticon"),
+                    }),
+                  ),
                 )
               : (i.push(h().chatSubmitButton, h().EmoticonPickerButton),
                 r.createElement(
@@ -3065,17 +3075,20 @@
                       this.props.title ||
                       (0, d.we)("#ChatEntryButton_Emoticon"),
                     disabled: e,
-                    "data-tooltip-text": n,
                   },
-                  this.props.buttonIcon || r.createElement(E.nl, null),
-                  s && r.createElement(m.iD, null),
+                  r.createElement(
+                    g.he,
+                    { toolTipContent: n },
+                    this.props.buttonIcon || r.createElement(E.nl, null),
+                    s && r.createElement(m.iD, null),
+                  ),
                 ))
           );
         }
       };
-      (0, o.Cg)([s.oI], _.prototype, "OnEmoticonClick", null),
-        (_ = (0, o.Cg)([i.PA], _));
-      const f = _;
+      (0, o.Cg)([s.oI], f.prototype, "OnEmoticonClick", null),
+        (f = (0, o.Cg)([i.PA], f));
+      const v = f;
     },
     43667: (e, t, n) => {
       "use strict";
@@ -4555,17 +4568,17 @@
       function E(e, t) {
         const n = p.tz.guess(),
           o = p.unix(e).tz(n),
-          i = (0, s.l4)();
+          a = (0, s.l4)();
         return (
-          i && o.locale(i),
+          a && o.locale(a),
           r.createElement(
             r.Fragment,
             null,
             o.format("LT"),
             t
               ? r.createElement(
-                  "span",
-                  { "data-tooltip-text": o.format("Z") + ", " + n },
+                  i.he,
+                  { toolTipContent: o.format("Z") + ", " + n },
                   " ",
                   o.zoneAbbr(),
                 )

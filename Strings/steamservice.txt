@@ -1,28 +1,33 @@
 __TEXT
+@-
+@-
 __text
 __TEXT
-p
-p
+@
+4 %
+@
 __stubs
 __TEXT
+4`%
+4`%
 __stub_helper
 __TEXT
 __gcc_except_tab__TEXT
 __const
 __TEXT
-@n&
-@n&
 __cstring
 __TEXT
-p=*
-p=*
 __objc_methname
 __TEXT
 __unwind_info
 __TEXT
 __DATA
+@-
+@-
 __nl_symbol_ptr
 __DATA
+@-
+@-
 __got
 __DATA
 __la_symbol_ptr
@@ -38,29 +43,27 @@ __objc_classrefs__DATA
 (
 __data
 __DATA
-pU
+@U
 __thread_vars
 __DATA
-`\0
 0
-`\0
 __thread_data
 __DATA
 @
 __thread_bss
 __DATA
-]0
 __bss
 __DATA
-a0
 __common
 __DATA
 H
 __LINKEDIT
+@0
 
 8
 @loader_path/steamservice.dylib
 "
+@0
 P
 
 *
@@ -87,19 +90,19 @@ h
 /usr/lib/libobjc.A.dylib
 &
 )
+U4
 0
-!
-!
 0
+%
+%
 Hi
+!
+,
+,
 Ic]
 H=
-z)
+v)
 &
-P$
-)
-%
-z"
 $
 $
 $
@@ -117,7 +120,9 @@ AT=
 D
 @
 @
-$(
+g(
+&(
+O+
 @
 Hc
 Hc
@@ -150,17 +155,23 @@ IcE
 @
 @
 ]
-+
 #
 #
-g#
+#
 V
-P"
-K"
+L"
+G"
+"
+"
+"
 "
 =
-_!
-d)
+[!
+&
+&
+!
+!
+=
 10CIPCServer
 10IIPCServer
 11CPipeWaiter
@@ -8484,15 +8495,6 @@ CKeyValuesSystem::AddStringToPool: out of memory
 CKeyValuesSystem::AddStringToPool: running out of memory (%u bytes left)
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
 Invalid macOS version %d.%d.%d
-/System/Library/Frameworks/OpenGL.framework/OpenGL
-Failed to load opengl framework!!!
-CGLSetCurrentContext
-CGLGetCurrentContext
-CGLChoosePixelFormat
-CGLDestroyPixelFormat
-CGLCreateContext
-CGLDestroyContext
-CGLGetParameter
 defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
 dest != NULL
@@ -8771,8 +8773,8 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-Jul 10 2024
-14:07:03
+Jul 16 2024
+14:07:38
 Jan
 Feb
 Mar
@@ -9378,19 +9380,19 @@ CWorkThread -- OnWorkItemCompleted - unordered
 CWorkThread -- OnWorkItemCompleted - ordered
 m_cCurrentDepth > 0
 %s%s%s
+U4
 0
-!
-!
 0
+%
+%
 Hi
+!
+,
+,
 Ic]
 H=
-z)
+v)
 &
-P$
-)
-%
-z"
 $
 $
 $
@@ -9408,7 +9410,9 @@ AT=
 D
 @
 @
-$(
+g(
+&(
+O+
 @
 Hc
 Hc
@@ -9441,35 +9445,49 @@ IcE
 @
 @
 ]
-+
 #
 #
-g#
+#
 V
-P"
-K"
+L"
+G"
+"
+"
+"
 "
 =
-_!
-d)
-!
-!
+[!
+&
+&
 !
 !
 =
-}
-6(
-M'
-:
+y
+N%
+6
 !
 @
-.)
+$
+$
 @
 &
 &
+&
+&
+&
+&"
 "
-Q!
-P$
+"
+"
+!
+!
+b
+&
+&
+&
+&
+&
+&
 @
 M9e
 @
@@ -9495,14 +9513,13 @@ AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 AES for Intel AES-NI, CRYPTOGAMS by <appro@openssl.org>
-
-,
 Pj
 ARj
 j
 0
 0
 =
+
 =
 @
 =
@@ -9807,7 +9824,6 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 0
-!
 H=
 Ic]
 j
@@ -9867,9 +9883,10 @@ SHA1 block transform for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 @
 @
-v
+r
 d
 @
+
 
 
 

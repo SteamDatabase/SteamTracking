@@ -1,21 +1,21 @@
 "use strict";
 (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
-  [8237],
+  [7653],
   {
-    98365: (e, t, a) => {
-      a.r(t), a.d(t, { default: () => Q });
-      var o = a(85556),
-        n = a(27378),
-        s = a(63278),
-        r = a(75296),
-        i = a(22435),
-        l = a(26721),
-        c = a(62923),
-        h = a(86064),
-        d = a(877),
-        m = a(50947),
-        p = a(79561),
-        g = a(56126);
+    31711: (e, t, a) => {
+      a.r(t), a.d(t, { default: () => X });
+      var o = a(34629),
+        n = a(63696),
+        s = a(18484),
+        r = a(95773),
+        i = a(50376),
+        l = a(13869),
+        c = a(28816),
+        m = a(46108),
+        h = a(69649),
+        d = a(52451),
+        p = a(53414),
+        g = a(98829);
       const u = ({ group: e, onClick: t }) => {
         const a = e.watching_broadcast_steamid;
         return n.createElement(
@@ -28,7 +28,7 @@
           n.createElement(
             "div",
             { className: "ChatRoomListGroupItem_header" },
-            n.createElement(p._P, { group: e, small: !0 }),
+            n.createElement(p.I, { group: e, small: !0 }),
             n.createElement(
               "div",
               { className: "groupNameStatusContainer" },
@@ -37,7 +37,7 @@
                 n.createElement(
                   "div",
                   { className: "chatRoomDetails" },
-                  (0, h.Xx)("#Broadcast_WatchParty_Viewers_NoneActive"),
+                  (0, m.we)("#Broadcast_WatchParty_Viewers_NoneActive"),
                 ),
             ),
           ),
@@ -54,23 +54,23 @@
           this.Close();
           const i = e && r ? [r.accountid] : [];
           !(function (e, t, a, o) {
-            (0, l.BR)(
-              n.createElement(d.KG, {
+            (0, l.HT)(
+              n.createElement(h.zw, {
                 browserContext: e,
                 bHideChatNameEntry: !1,
                 vecInvitePlayers: o,
                 chatViewToReplace: void 0,
                 creationOptions: { unBroadcastAccountId: a },
-                strTitle: (0, h.Xx)("#Broadcast_CreateWatchParty"),
+                strTitle: (0, m.we)("#Broadcast_CreateWatchParty"),
               }),
               t,
               "CreateChatDialog",
               {
-                strTitle: (0, h.Xx)("#Broadcast_CreateWatchParty"),
+                strTitle: (0, m.we)("#Broadcast_CreateWatchParty"),
                 popupWidth: 450,
                 popupHeight: 600,
               },
-              (0, s.Og)(t),
+              (0, s.h8)(t),
             );
           })(t, a || window, o, i);
         }
@@ -88,8 +88,8 @@
             o
               ? e.SetChatRoomGroupWatchingBroadcast(void 0, o)
               : e.SetChatRoomGroupWatchingBroadcast(t);
-          const s = r.Ul.UIStore.ShowAndOrActivateChatRoomGroup(a, e, !0);
-          n && r.Ul.UIStore.CloseTabByID(n),
+          const s = r.xm.UIStore.ShowAndOrActivateChatRoomGroup(a, e, !0);
+          n && r.xm.UIStore.CloseTabByID(n),
             this.props.bIsNewSteamTVDialog || s.ShowBroadcast();
         }
         Close() {
@@ -98,7 +98,7 @@
         }
         render() {
           const { closeModal: e, initialFriend: t } = this.props,
-            a = r.Ul.ChatStore.currentChatRoomGroups.filter((e) =>
+            a = r.xm.ChatStore.currentChatRoomGroups.filter((e) =>
               e.BCanIAssociateBroadcast(),
             ),
             o = t;
@@ -106,45 +106,45 @@
             "div",
             { className: "chatModalCover" },
             n.createElement(
-              l.e1,
+              l.x_,
               { onEscKeypress: e },
               n.createElement(
-                c.VY,
+                c.UC,
                 { className: "watchPartyDialog" },
                 n.createElement(
-                  c.uT,
+                  c.nB,
                   null,
                   n.createElement(
                     "div",
                     { className: "watchPartyPrompt" },
-                    (0, h.Xx)("#Broadcast_WatchPrompt"),
+                    (0, m.we)("#Broadcast_WatchPrompt"),
                   ),
                   n.createElement(
-                    c.HV,
+                    c.xz,
                     null,
                     !this.props.bIsNewSteamTVDialog &&
                       n.createElement(
-                        c.zx,
+                        c.$n,
                         {
-                          svgicon: i.pUF,
+                          svgicon: i.Gv$,
                           className: "watchHowButton",
                           onClick: this.WatchAlone,
                         },
-                        (0, h.Xx)("#Broadcast_WatchAlone"),
+                        (0, m.we)("#Broadcast_WatchAlone"),
                       ),
                     o &&
                       n.createElement(
-                        c.zx,
+                        c.$n,
                         {
                           className: "watchHowButton",
                           onClick: () => this.CreateWatchParty(!0),
                         },
-                        n.createElement(g.o2, {
+                        n.createElement(g.gv, {
                           friend: o,
                           context: null,
                           bLarge: !1,
                         }),
-                        (0, h.kQ)(
+                        (0, m.PP)(
                           "#Broadcast_WatchWith",
                           n.createElement(
                             "span",
@@ -159,9 +159,9 @@
                         n.Fragment,
                         null,
                         n.createElement(
-                          c.__,
+                          c.JU,
                           null,
-                          (0, h.Xx)("#Broadcast_WatchWithExistingWatchParty"),
+                          (0, m.we)("#Broadcast_WatchWithExistingWatchParty"),
                         ),
                         a.map((e) =>
                           n.createElement(u, {
@@ -172,45 +172,45 @@
                         ),
                       ),
                     n.createElement(
-                      c.zx,
+                      c.$n,
                       {
                         className: "watchHowButton newWatchGroup",
-                        svgicon: i.k4w,
+                        svgicon: i.u9R,
                         onClick: () => this.CreateWatchParty(!1),
                       },
-                      (0, h.Xx)("#Broadcast_LinkBroadcastToGroup_New"),
+                      (0, m.we)("#Broadcast_LinkBroadcastToGroup_New"),
                     ),
                   ),
                 ),
-                n.createElement(c.$_, null),
+                n.createElement(c.wi, null),
               ),
             ),
           );
         }
       }
-      (0, o.gn)([m.ak], C.prototype, "WatchAlone", null),
-        (0, o.gn)([m.ak], C.prototype, "Close", null);
-      var b = a(79588),
-        E = a(50649),
-        _ = a(37634),
-        D = a(36531),
-        S = a(75184),
-        f = a.n(S),
-        L = a(71111),
-        v = a(77079),
-        B = a(34656),
-        I = a(27903),
-        w = a(23719),
-        y = a(51723),
-        T = a(87998),
-        W = a(3061),
-        k = a(79509),
-        N = a(87653),
-        M = a(21180),
-        P = a(85164);
-      class U {
+      (0, o.Cg)([d.oI], C.prototype, "WatchAlone", null),
+        (0, o.Cg)([d.oI], C.prototype, "Close", null);
+      var E = a(89193),
+        b = a(41230),
+        S = a(7470),
+        I = a(56654),
+        _ = a(89454),
+        f = a.n(_),
+        w = a(21866),
+        v = a(72993),
+        B = a(61556),
+        L = a(73870),
+        D = a(17385),
+        T = a(31222),
+        y = a(23024),
+        W = a(27337),
+        M = a(42255),
+        N = a(31958),
+        P = a(75144),
+        R = a(72476);
+      class A {
         constructor() {
-          (0, b.rC)(this);
+          (0, E.Gn)(this);
         }
         m_fnLaunchChat;
         m_iTimeoutLogin = void 0;
@@ -220,12 +220,12 @@
         m_reactRoot;
         Init(e) {
           (this.m_fnLaunchChat = e),
-            (this.m_steamID = P.dk.steamid),
+            (this.m_steamID = R.GP.steamid),
             window.addEventListener("message", this.HandlePostMessage),
-            (this.m_reactRoot = _.s(
+            (this.m_reactRoot = S.H(
               document.getElementById("friendslist-container"),
             )),
-            this.m_reactRoot.render(n.createElement(R, { app: this })),
+            this.m_reactRoot.render(n.createElement(x, { app: this })),
             (this.m_iTimeoutLogin = window.setTimeout(() => {
               0 == this.m_eLogonState && (this.m_eLogonState = 1);
             }, 2500));
@@ -234,11 +234,11 @@
           this.m_reactRoot.unmount(),
             window.removeEventListener("message", this.HandlePostMessage),
             window.clearTimeout(this.m_iTimeoutLogin),
-            (0, s.yz)(P.dk.steamid),
+            (0, s.xT)(R.GP.steamid),
             this.m_fnLaunchChat();
         }
         GetLoginURL() {
-          return `${P.De.STORE_BASE_URL}login/?steamtv`;
+          return `${R.TS.STORE_BASE_URL}login/?steamtv`;
         }
         BIsPerformingLogonCheck() {
           return 0 == this.m_eLogonState || 1 == this.m_eLogonState;
@@ -263,8 +263,8 @@
         }
         HandlePostMessage(e) {
           if (
-            e.origin != this.ExtractOrigin(P.De.STORE_BASE_URL) &&
-            e.origin != this.ExtractOrigin(P.De.CHAT_BASE_URL)
+            e.origin != this.ExtractOrigin(R.TS.STORE_BASE_URL) &&
+            e.origin != this.ExtractOrigin(R.TS.CHAT_BASE_URL)
           )
             return void console.warn(
               `Ignoring message from untrusted domain "${e.origin}"`,
@@ -279,23 +279,23 @@
               return void this.LaunchChat();
         }
       }
-      (0, o.gn)([b.LO], U.prototype, "m_eLogonState", void 0),
-        (0, o.gn)([b.LO], U.prototype, "m_bLogonDialogVisisible", void 0),
-        (0, o.gn)([b.LO], U.prototype, "m_steamID", void 0),
-        (0, o.gn)([b.aD], U.prototype, "LaunchChat", null),
-        (0, o.gn)([b.aD.bound], U.prototype, "HandlePostMessage", null);
-      let R = class extends n.Component {
+      (0, o.Cg)([E.sH], A.prototype, "m_eLogonState", void 0),
+        (0, o.Cg)([E.sH], A.prototype, "m_bLogonDialogVisisible", void 0),
+        (0, o.Cg)([E.sH], A.prototype, "m_steamID", void 0),
+        (0, o.Cg)([E.XI], A.prototype, "LaunchChat", null),
+        (0, o.Cg)([E.XI.bound], A.prototype, "HandlePostMessage", null);
+      let x = class extends n.Component {
         m_broadcastInfo = null;
         constructor(e) {
           super(e),
-            (this.m_broadcastInfo = T.BroadcastWatchStore.StartInfo(
+            (this.m_broadcastInfo = y.BroadcastWatchStore.StartInfo(
               this.props.app.GetSteamIDWatched(),
             )),
             (this.state = { bChatCollapsed: !1, bTheaterMode: !1 });
         }
         componentWillUnmount() {
           this.m_broadcastInfo &&
-            (T.BroadcastWatchStore.StopInfo(this.m_broadcastInfo),
+            (y.BroadcastWatchStore.StopInfo(this.m_broadcastInfo),
             (this.m_broadcastInfo = null));
         }
         OnShowLogin() {
@@ -312,7 +312,7 @@
           let t = this.m_broadcastInfo,
             a = V();
           return n.createElement(
-            O,
+            k,
             null,
             e.BReadyToRender() &&
               n.createElement(
@@ -322,7 +322,7 @@
                     "StandalonePlayer" +
                     (this.state.bTheaterMode ? " TheaterMode" : ""),
                 },
-                n.createElement(W.m, {
+                n.createElement(W.y, {
                   className: "FullpageBroadcastBackdrop",
                   src: t.m_strThumbnailUrl,
                   draggable: !1,
@@ -337,7 +337,7 @@
                     n.createElement(
                       "div",
                       { className: "STV_Logo" },
-                      n.createElement(i.hLd, null),
+                      n.createElement(i.P7C, null),
                     ),
                     n.createElement(
                       "div",
@@ -346,63 +346,63 @@
                           "BroadcastTab_HeaderRow" +
                           (this.state.bChatCollapsed ? " ChatCollapsed" : ""),
                       },
-                      n.createElement(A, { onClick: this.OnShowLogin }),
-                      n.createElement(H, {
+                      n.createElement(O, { onClick: this.OnShowLogin }),
+                      n.createElement(U, {
                         onClick: this.ToggleChat,
                         hideIcon: this.state.bChatCollapsed,
                       }),
                     ),
                   ),
                   n.createElement(
-                    X,
+                    $,
                     {
                       steamID: e.GetSteamIDWatched(),
                       watchLocation: a,
                       bHideChat: this.state.bChatCollapsed,
                       onTheaterMode: this.ToggleTheaterMode,
                     },
-                    n.createElement(q, { app: e }),
+                    n.createElement(Q, { app: e }),
                   ),
                 ),
               ),
-            n.createElement(G, { app: e }),
+            n.createElement(H, { app: e }),
           );
         }
       };
-      function x() {
-        const e = (0, P.ip)("loyalty_webapi_token", "application_config");
-        return new y.J(P.De.WEBAPI_BASE_URL, e);
+      function G() {
+        const e = (0, R.Fd)("loyalty_webapi_token", "application_config");
+        return new T.D(R.TS.WEBAPI_BASE_URL, e);
       }
-      function O(e) {
+      function k(e) {
         const { children: t } = e,
-          a = n.useCallback(() => r.Ul?.CMInterface, []),
-          o = (0, m.kD)(n.useCallback(() => new I.Z(), [])),
-          s = (0, m.kD)(x);
+          a = n.useCallback(() => r.xm?.CMInterface, []),
+          o = (0, d.bs)(n.useCallback(() => new L.A(), [])),
+          s = (0, d.bs)(G);
         return n.createElement(
-          M.R,
+          P.s,
           null,
           n.createElement(
-            P.fI,
+            R.ss,
             null,
-            P.L7.logged_in
+            R.iA.logged_in
               ? n.createElement(
-                  B.Ub,
+                  B.VQ,
                   { useActiveCMInterface: a, useStorage: o },
                   t,
                 )
               : n.createElement(
-                  B.Ub,
+                  B.VQ,
                   { useActiveSteamInterface: s, useStorage: o },
                   t,
                 ),
           ),
         );
       }
-      (0, o.gn)([m.ak], R.prototype, "OnShowLogin", null),
-        (0, o.gn)([m.ak], R.prototype, "ToggleChat", null),
-        (0, o.gn)([m.ak], R.prototype, "ToggleTheaterMode", null),
-        (R = (0, o.gn)([E.Pi], R));
-      let G = (0, E.Pi)(({ app: e }) =>
+      (0, o.Cg)([d.oI], x.prototype, "OnShowLogin", null),
+        (0, o.Cg)([d.oI], x.prototype, "ToggleChat", null),
+        (0, o.Cg)([d.oI], x.prototype, "ToggleTheaterMode", null),
+        (x = (0, o.Cg)([b.PA], x));
+      let H = (0, b.PA)(({ app: e }) =>
         e.BIsPerformingLogonCheck()
           ? n.createElement(
               "div",
@@ -414,39 +414,39 @@
             )
           : null,
       );
-      function A(e) {
+      function O(e) {
         return n.createElement(
           "div",
           { className: "BroadcastButton WatchWithFriends", onClick: e.onClick },
-          n.createElement(i.lsH, null),
-          (0, h.Xx)("#Broadcast_WatchWithFriends"),
+          n.createElement(i.y_e, null),
+          (0, m.we)("#Broadcast_WatchWithFriends"),
         );
       }
-      function H(e) {
+      function U(e) {
         return n.createElement(
           "div",
           {
             className: "ToggleBroadcastChat",
-            title: (0, h.Xx)("#Broadcast_ToggleChat"),
+            title: (0, m.we)("#Broadcast_ToggleChat"),
             onClick: e.onClick,
           },
-          n.createElement(i.QlI, { showChat: e.hideIcon }),
+          n.createElement(i.K7s, { showChat: e.hideIcon }),
         );
       }
       function V() {
-        return P.De.STEAM_TV ? 1 : 3;
+        return R.TS.STEAM_TV ? 1 : 3;
       }
       let F = class extends n.Component {
         m_broadcastInfo = null;
         constructor(e) {
           super(e);
           let t = this.props.broadcastView.GetSteamID().ConvertTo64BitString();
-          (this.m_broadcastInfo = T.BroadcastWatchStore.StartInfo(t)),
+          (this.m_broadcastInfo = y.BroadcastWatchStore.StartInfo(t)),
             (this.state = { bChatCollapsed: !1 });
         }
         componentWillUnmount() {
           this.m_broadcastInfo &&
-            (T.BroadcastWatchStore.StopInfo(this.m_broadcastInfo),
+            (y.BroadcastWatchStore.StopInfo(this.m_broadcastInfo),
             (this.m_broadcastInfo = null));
         }
         OnWatchWithFriends() {
@@ -456,7 +456,7 @@
           this.setState({ bChatCollapsed: !this.state.bChatCollapsed });
         }
         ToggleTheaterMode() {
-          r.Ul.UIStore.SetTheaterMode(!r.Ul.UIStore.GetTheaterMode());
+          r.xm.UIStore.SetTheaterMode(!r.xm.UIStore.GetTheaterMode());
         }
         render() {
           const { broadcastView: e, popup: t, style: a } = this.props,
@@ -468,14 +468,14 @@
                 broadcastAccountId: e.GetSteamID().GetAccountID(),
                 broadcastTabId: e.GetUniqueID(),
                 initialFriend: e.m_watchPromptInitialFriend,
-                browserContext: w.D,
+                browserContext: D.m,
                 ownerWindow: t,
               })
             : null;
           return n.createElement(
             "div",
             { className: "BroadcastTab", style: a },
-            n.createElement(W.m, {
+            n.createElement(W.y, {
               className: "FullpageBroadcastBackdrop",
               src: this.m_broadcastInfo.m_strThumbnailUrl,
               draggable: !1,
@@ -494,15 +494,15 @@
                       "BroadcastTab_HeaderRow" +
                       (this.state.bChatCollapsed ? " ChatCollapsed" : ""),
                   },
-                  n.createElement(A, { onClick: this.OnWatchWithFriends }),
-                  n.createElement(H, {
+                  n.createElement(O, { onClick: this.OnWatchWithFriends }),
+                  n.createElement(U, {
                     onClick: this.ToggleChat,
                     hideIcon: this.state.bChatCollapsed,
                   }),
                 ),
               ),
               n.createElement(
-                X,
+                $,
                 {
                   steamID: o,
                   watchLocation: s,
@@ -515,33 +515,33 @@
           );
         }
       };
-      (0, o.gn)([m.ak], F.prototype, "OnWatchWithFriends", null),
-        (0, o.gn)([m.ak], F.prototype, "ToggleChat", null),
-        (0, o.gn)([m.ak], F.prototype, "ToggleTheaterMode", null),
-        (F = (0, o.gn)([E.Pi], F));
-      let X = class extends n.Component {
+      (0, o.Cg)([d.oI], F.prototype, "OnWatchWithFriends", null),
+        (0, o.Cg)([d.oI], F.prototype, "ToggleChat", null),
+        (0, o.Cg)([d.oI], F.prototype, "ToggleTheaterMode", null),
+        (F = (0, o.Cg)([b.PA], F));
+      let $ = class extends n.Component {
         m_strLocalSteamID = "";
         m_refBroadcastContainer = n.createRef();
         m_elMainContent;
         constructor(e) {
-          super(e), (0, b.rC)(this), (this.state = { info: null });
+          super(e), (0, E.Gn)(this), (this.state = { info: null });
         }
         componentDidMount() {
-          L.rr.stream["76561198208088121"] && "chinese" === P.De.LANGUAGE
+          w.td.stream["76561198208088121"] && "chinese" === R.TS.LANGUAGE
             ? this.OnLocalStreamChange("76561198208088121")
-            : L.rr.stream["76561198207552741"] &&
-              "russian" === P.De.LANGUAGE &&
+            : w.td.stream["76561198207552741"] &&
+              "russian" === R.TS.LANGUAGE &&
               this.OnLocalStreamChange("76561198207552741");
         }
         static getDerivedStateFromProps(e, t) {
           if (!t.info || t.info.m_steamIDBroadcast !== e.steamID) {
-            t.info && T.BroadcastWatchStore.StopInfo(t.info);
-            return { info: T.BroadcastWatchStore.StartInfo(e.steamID) };
+            t.info && y.BroadcastWatchStore.StopInfo(t.info);
+            return { info: y.BroadcastWatchStore.StartInfo(e.steamID) };
           }
           return null;
         }
         componentWillUnmount() {
-          this.state.info && T.BroadcastWatchStore.StopInfo(this.state.info);
+          this.state.info && y.BroadcastWatchStore.StopInfo(this.state.info);
         }
         OnLocalStreamChange(e) {
           this.m_strLocalSteamID = e;
@@ -552,20 +552,16 @@
         CalculateBroadcastSectionStyles(e) {
           if (this.props.bHideChat) return { width: "100%", height: "100%" };
           let t, a;
-          s.g_FriendsUIDesktopApp &&
-            ((t =
-              s.g_FriendsUIDesktopApp.UIDisplayPrefs
-                .nWatchPartyBroadcastHeightPercentage),
-            (a =
-              s.g_FriendsUIDesktopApp.UIDisplayPrefs
-                .nWatchPartyBroadcastWidthPercentage));
+          s.ZM &&
+            ((t = s.ZM.UIDisplayPrefs.nWatchPartyBroadcastHeightPercentage),
+            (a = s.ZM.UIDisplayPrefs.nWatchPartyBroadcastWidthPercentage));
           const o = {};
           if (e) {
             const e = t || 66;
             if (((o.height = `${e}%`), this.m_elMainContent)) {
               const { clientWidth: t, clientHeight: a } = this.m_elMainContent,
                 n = (9 / 16) * t + 50,
-                s = (0, N.Lh)(e, 1, (n / a) * 100);
+                s = (0, N.OQ)(e, 1, (n / a) * 100);
               o.height = `${s}%`;
             }
           } else
@@ -589,11 +585,8 @@
           const o = t.left,
             n = e.clientX,
             r = a.width,
-            i = (0, N.Lh)(((n - o) / r) * 100, 1, 100);
-          s.g_FriendsUIDesktopApp.SetUIDisplayPref(
-            "nWatchPartyBroadcastWidthPercentage",
-            i,
-          );
+            i = (0, N.OQ)(((n - o) / r) * 100, 1, 100);
+          s.ZM.SetUIDisplayPref("nWatchPartyBroadcastWidthPercentage", i);
         }
         UnregisterDragEvents(e) {
           e.view.removeEventListener("mousemove", this.HandleMouseMove),
@@ -607,8 +600,8 @@
             s = null;
           const i = this.CalculateBroadcastSectionStyles(!1);
           (i.flexGrow = this.props.bHideChat ? 1 : null),
-            L.rr.bValid && (s = n.createElement($, { info: L.rr }));
-          const l = new U(),
+            w.td.bValid && (s = n.createElement(z, { info: w.td }));
+          const l = new A(),
             c = n.createElement(
               "div",
               { className: "LoginDiv" },
@@ -619,12 +612,12 @@
                   className: f().ChatLoginButton,
                   href: "#",
                 },
-                (0, h.Xx)("#BroadcastChat_Login"),
+                (0, m.we)("#BroadcastChat_Login"),
               ),
-              n.createElement(q, { app: l }),
+              n.createElement(Q, { app: l }),
             ),
-            d = T.BroadcastWatchStore.GetBroadcast(a)
-              ? T.BroadcastWatchStore.GetBroadcast(a).m_ulBroadcastID
+            h = y.BroadcastWatchStore.GetBroadcast(a)
+              ? y.BroadcastWatchStore.GetBroadcast(a).m_ulBroadcastID
               : "0";
           return n.createElement(
             "div",
@@ -676,42 +669,42 @@
                   minWidth: "300px",
                 },
               },
-              n.createElement(D.c, {
-                emoticonStore: r.Ul ? r.Ul.ChatStore.EmoticonStore : null,
-                broadcastID: d,
+              n.createElement(I.I, {
+                emoticonStore: r.xm ? r.xm.ChatStore.EmoticonStore : null,
+                broadcastID: h,
                 steamID: a,
                 watchLocation: this.props.watchLocation,
                 hidden: this.props.bHideChat,
               }),
-              P.L7 && P.L7.logged_in ? null : c,
+              R.iA && R.iA.logged_in ? null : c,
             ),
           );
         }
       };
-      function $(e) {
-        let t = `url( "${P.De.CHAT_BASE_URL + e.info.offlineImage}" )`;
+      function z(e) {
+        let t = `url( "${R.TS.CHAT_BASE_URL + e.info.offlineImage}" )`;
         return n.createElement("div", {
           style: { backgroundImage: t },
           className: "BroadcastOffline",
         });
       }
-      (0, o.gn)([b.LO], X.prototype, "m_strLocalSteamID", void 0),
-        (0, o.gn)([m.ak], X.prototype, "OnLocalStreamChange", null),
-        (0, o.gn)([m.ak], X.prototype, "SetMainContentRef", null),
-        (0, o.gn)([m.ak], X.prototype, "OnGrabberMouseDown", null),
-        (0, o.gn)([m.ak], X.prototype, "HandleMouseMove", null),
-        (0, o.gn)([m.ak], X.prototype, "UnregisterDragEvents", null),
-        (X = (0, o.gn)([E.Pi], X));
-      class z extends n.Component {
+      (0, o.Cg)([E.sH], $.prototype, "m_strLocalSteamID", void 0),
+        (0, o.Cg)([d.oI], $.prototype, "OnLocalStreamChange", null),
+        (0, o.Cg)([d.oI], $.prototype, "SetMainContentRef", null),
+        (0, o.Cg)([d.oI], $.prototype, "OnGrabberMouseDown", null),
+        (0, o.Cg)([d.oI], $.prototype, "HandleMouseMove", null),
+        (0, o.Cg)([d.oI], $.prototype, "UnregisterDragEvents", null),
+        ($ = (0, o.Cg)([b.PA], $));
+      class q extends n.Component {
         Dismiss() {
           this.props.app.DismissLogonDialog();
         }
         render() {
           return n.createElement(
-            k.e1,
+            M.x_,
             { onEscKeypress: this.Dismiss },
             n.createElement(
-              c.VY,
+              c.UC,
               { className: "SteamTVLoginDialog" },
               n.createElement("iframe", {
                 className: "steamTVLogin",
@@ -721,11 +714,11 @@
           );
         }
       }
-      (0, o.gn)([m.ak], z.prototype, "Dismiss", null);
-      let q = class extends n.Component {
+      (0, o.Cg)([d.oI], q.prototype, "Dismiss", null);
+      let Q = class extends n.Component {
         render() {
           if (!this.props.app.BIsLogonDialogVisible()) return null;
-          let e = n.createElement(z, { app: this.props.app });
+          let e = n.createElement(q, { app: this.props.app });
           return n.createElement(
             "div",
             { className: "FullModalOverlay" },
@@ -740,12 +733,12 @@
           );
         }
       };
-      q = (0, o.gn)([E.Pi], q);
-      var K = a(50937);
-      let Y = class extends n.Component {
+      Q = (0, o.Cg)([b.PA], Q);
+      var Z = a(52003);
+      let K = class extends n.Component {
         render() {
           let e = this.props.broadcastView;
-          if (!(e && e instanceof K.v)) return null;
+          if (!(e && e instanceof Z.w)) return null;
           let t = {};
           return (
             this.props.isActive || (t.display = "none"),
@@ -757,14 +750,14 @@
           );
         }
       };
-      Y = (0, o.gn)([E.Pi], Y);
-      const Q = Y;
+      K = (0, o.Cg)([b.PA], K);
+      const X = K;
     },
-    73666: (e, t, a) => {
+    53694: (e, t, a) => {
       a.r(t), a.d(t, { default: () => r });
-      var o = a(27378),
-        n = a(77079),
-        s = a(16195);
+      var o = a(63696),
+        n = a(72993),
+        s = a(43397);
       const r = o.forwardRef(function (
         {
           steamID: e,
@@ -774,9 +767,9 @@
           style: i,
           onRequestClose: l,
           actions: c,
-          onTheaterMode: h,
-          onLocalStreamChange: d,
-          bVerticalBroadcastChat: m,
+          onTheaterMode: m,
+          onLocalStreamChange: h,
+          bVerticalBroadcastChat: d,
         },
         p,
       ) {
@@ -794,8 +787,8 @@
               bWebRTC: r,
               onRequestClose: l,
               actions: c,
-              onTheaterMode: h,
-              onOpenLinkInNewWindow: s.b8,
+              onTheaterMode: m,
+              onOpenLinkInNewWindow: s.EP,
             }),
             o.createElement("div", { className: "videoContainerSizer" }),
           ),
@@ -804,13 +797,12 @@
             { className: "BroadcastDetailsSection" },
             o.createElement(n.BroadcastDetails, {
               steamID: g,
-              onLocalStreamChange: d,
-              bVerticalBroadcastChat: m,
+              onLocalStreamChange: h,
+              bVerticalBroadcastChat: d,
             }),
           ),
         );
       });
     },
   },
-]);
-//# sourceMappingURL=../sourcemaps/libraries/libraries~7a27d3eeb.js.map
+]); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/broadcastapp.js.map

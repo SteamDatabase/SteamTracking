@@ -514,7 +514,6 @@ enum EMsg {
 	k_EMsgGCCmdSwitch = 2209;
 	k_EMsgAMRefreshSessions = 2210;
 	k_EMsgGCAchievementAwarded = 2212;
-	k_EMsgGCSystemMessage = 2213;
 	k_EMsgGCCmdStatus = 2216;
 	k_EMsgGCRegisterWebInterfaces_Deprecated = 2217;
 	k_EMsgGCGetAccountDetails_DEPRECATED = 2218;
@@ -766,7 +765,6 @@ enum EMsg {
 	k_EMsgAMNameChange = 4300;
 	k_EMsgAMGetNameHistory = 4301;
 	k_EMsgAMGetNameHistoryResponse = 4302;
-	k_EMsgAMUpdateProviderStatus = 4305;
 	k_EMsgAMSupportRemoveAccountSecurity = 4307;
 	k_EMsgAMIsAccountInCaptchaGracePeriod = 4308;
 	k_EMsgAMIsAccountInCaptchaGracePeriodResponse = 4309;

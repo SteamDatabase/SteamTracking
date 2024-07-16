@@ -134,8 +134,8 @@
         B = a(69300),
         P = a(23825),
         G = a(94011),
-        D = a(26296),
-        T = a(96236),
+        T = a(26296),
+        D = a(96236),
         k = a(12155),
         O = a(32754),
         x = a(6502),
@@ -608,25 +608,35 @@
                       "div",
                       { className: F().bordered_corner_container },
                       Boolean(!this.state.bExpanded) &&
-                        l.createElement("div", {
-                          className: F().broadcast_settings_icon,
-                          "data-tooltip-text": (0, L.we)(
-                            "#StoreBroadcast_Change_store_Broadcast_settings",
-                          ),
-                          onClick: () =>
-                            window.open(
-                              `${v.TS.STORE_BASE_URL}account/preferences/#store_broadcast_settings`,
+                        l.createElement(
+                          O.he,
+                          {
+                            toolTipContent: (0, L.we)(
+                              "#StoreBroadcast_Change_store_Broadcast_settings",
                             ),
-                        }),
-                      l.createElement("div", {
-                        className: this.state.bExpanded
-                          ? F().bordered_corner_expanded
-                          : F().bordered_corner_shrinked,
-                        "data-tooltip-text": (0, L.we)(
-                          "#StoreBroadcast_Hide_Tooltip",
+                          },
+                          l.createElement("div", {
+                            className: F().broadcast_settings_icon,
+                            onClick: () =>
+                              window.open(
+                                `${v.TS.STORE_BASE_URL}account/preferences/#store_broadcast_settings`,
+                              ),
+                          }),
                         ),
-                        onClick: this.ToggleBroadcastExpandShrink,
-                      }),
+                      l.createElement(
+                        O.he,
+                        {
+                          toolTipContent: (0, L.we)(
+                            "#StoreBroadcast_Hide_Tooltip",
+                          ),
+                        },
+                        l.createElement("div", {
+                          className: this.state.bExpanded
+                            ? F().bordered_corner_expanded
+                            : F().bordered_corner_shrinked,
+                          onClick: this.ToggleBroadcastExpandShrink,
+                        }),
+                      ),
                     ),
                     Boolean(e.gamedata_subtitle) &&
                       l.createElement(
@@ -962,15 +972,20 @@
                 (0, L.we)("#StoreBroadcast_Detault_popout_Title"),
               ),
           l.createElement(
-            "button",
+            O.he,
             {
-              className: F().PopOutVideoCloseButton,
-              "data-tooltip-text": (0, L.we)(
+              toolTipContent: (0, L.we)(
                 "#StoreBroadcast_close_broadcast_popup",
               ),
-              onClick: e.OnPreventPopup,
             },
-            l.createElement(k.X, null),
+            l.createElement(
+              "button",
+              {
+                className: F().PopOutVideoCloseButton,
+                onClick: e.OnPreventPopup,
+              },
+              l.createElement(k.X, null),
+            ),
           ),
         );
       });
@@ -1078,7 +1093,7 @@
             h.j,
             { type: "app", id: o },
             l.createElement(
-              T.K,
+              D.K,
               {
                 className: F().stream_icon_container,
                 onClick: () => a && a(n),
@@ -1119,7 +1134,7 @@
               className: (0, b.A)(n, F().stream_icon_hide_on_hover),
               src: t,
             }),
-            l.createElement(D.o, {
+            l.createElement(T.o, {
               className: (0, b.A)(n, F().stream_icon_show_on_hover),
               srcs: e,
             }),

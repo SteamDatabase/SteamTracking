@@ -532,7 +532,7 @@
 "Friends_SteamInputControllerConnectedNotification_Info" "所使用配置来自"
 "Friends_SteamInputControllerConfigNotification_Info" "已加载配置："
 "Friends_SteamInputControllerConfigNotification_Info2" "%config_name%"
-"Friends_SteamInputControllerConfigNotification_Info3" "在 Steam 界面中编辑"
+"Friends_SteamInputControllerConfigNotification_Info3" "在 Steam 叠加界面中编辑"
 "Library_ControllerSaveDefaultTitle" "官方配置"
 "SettingsController_AutosaveName" "个人自动保存"
 "SettingsController_SteamController" "Steam 控制器"
@@ -758,7 +758,7 @@
 "Steam_Settings_Broadcast_ShowChat_RightBottom" "右下角"
 "Steam_Settings_Broadcast_ShowChat_LeftBottom" "左下角"
 "Steam_Settings_Broadcast_Disabled_System" "Steam 直播目前不支持此操作系统。"
-"Steam_Settings_Broadcast_Disabled_Overlay" "需要启用 Steam 界面才能进行实况直播。"
+"Steam_Settings_Broadcast_Disabled_Overlay" "需要启用 Steam 叠加界面才能进行实况直播。"
 "Steam_Settings_Broadcast_Disabled_User" "您的帐户没有足够的权限进行实况直播。"
 "Steam_Settings_Broadcast_Disabled_System_Windows_Compat_Enabled" "Steam 无法在这台机器上开始直播。\n\nWindows 目前正在以 Windows 兼容模式运行 Steam，这可能会阻止直播功能的正常运行。如果这台机器是 Windows 7 或更高版本系统，请按照以下支持页面的说明移除兼容模式。"
 "Steam_Settings_Broadcast_WindowsCompatSupportURL" "https://support.steampowered.com/kb_article.php?ref=7153-AHJV-4256"
@@ -791,7 +791,7 @@
 "Broadcast_Upload_Result_12" "延时过大"
 
 "Steam_Settings_Browser"	"网页浏览器"
-"Overlay_SettingsBrowserDesc" "下列设置适用于 Steam 客户端中使用的网页浏览器和 Steam 游戏中界面。"
+"Overlay_SettingsBrowserDesc" "下列设置适用于 Steam 客户端中使用的网页浏览器和 Steam 游戏中叠加界面。"
 "Steam_SettingsBrowserDeleteAllData"	"删除网页浏览器数据"
 "Steam_SettingsBrowserDeleteAllDataMsg"	"是否删除 Steam 浏览器的所有缓存文件、Cookie 和历史记录？"
 

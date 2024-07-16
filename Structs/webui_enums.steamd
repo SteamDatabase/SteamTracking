@@ -1,3 +1,11 @@
+enum AudioPlayback
+{
+	AudioPlayback_Undefined = 0;
+	AudioPlayback_Playing = 1;
+	AudioPlayback_Paused = 2;
+	AudioPlayback_Idle = 3;
+}
+
 enum BluetoothDeviceType
 {
 	k_BluetoothDeviceType_Invalid = 0;
@@ -869,6 +877,7 @@ enum ERemoteClientLaunch
 	k_ERemoteClientLaunchCanceled = 26;
 	k_ERemoteClientLaunchInvisible = 27;
 	k_ERemoteClientLaunchRestrictedCountry = 28;
+	k_ERemoteClientLaunchUnauthorized = 29;
 }
 
 enum ES
@@ -1489,6 +1498,14 @@ enum UnnamedEnum1a595e4880050966
 	k_ESeasonRelease = 32;
 	k_ECrosspostEvent = 34;
 	k_EInGameEventGeneral = 35;
+}
+
+enum UnnamedEnum1b2e013c09afd423
+{
+	Success = 0;
+	HeaderSerializationFailure = 1;
+	PayloadSerializationFailure = 2;
+	SendFailure = 3;
 }
 
 enum UnnamedEnum1d137d7f853b05fe

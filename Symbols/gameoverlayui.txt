@@ -101,15 +101,15 @@
  SDL_DelEventWatch
  SDL_DestroyWindow
  SDL_GL_CreateContext
- SDL_GL_DeleteContext
+ SDL_GL_DestroyContext
  SDL_GL_GetProcAddress
  SDL_GL_MakeCurrent
  SDL_GL_SetAttribute
  SDL_GL_SwapWindow
  SDL_GetDisplayBounds
  SDL_GetDisplays
+ SDL_GetPointerProperty
  SDL_GetPrimaryDisplay
- SDL_GetProperty
  SDL_GetWindowFromID
  SDL_GetWindowProperties
  SDL_GetWindowSize

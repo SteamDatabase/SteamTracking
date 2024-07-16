@@ -1,5 +1,6 @@
 ﻿"SwitchController"
 {
+	"origin_none"								"없음"
 	"origin_switch_button_a"					"A 버튼"
 	"origin_switch_button_b"					"B 버튼"
 	"origin_switch_button_x"					"X 버튼"
@@ -11,11 +12,13 @@
 	"origin_switch_trigger_l_click"				"왼쪽 트리거(ZL) 끝까지 당기기"
 	"origin_switch_trigger_r_pull"				"오른쪽 트리거(ZR)"
 	"origin_switch_trigger_r_click"				"오른쪽 트리거(ZR) 끝까지 당기기"
+	"origin_switch_stick_l_move"				"왼쪽 스틱 조작"
 	"origin_switch_stick_l_click"				"왼쪽 스틱 클릭"
 	"origin_switch_stick_l_dpad_n"				"왼쪽 스틱 위로"
 	"origin_switch_stick_l_dpad_s"				"왼쪽 스틱 아래로"
 	"origin_switch_stick_l_dpad_w"				"왼쪽 스틱 왼쪽으로"
 	"origin_switch_stick_l_dpad_e"				"왼쪽 스틱 오른쪽으로"
+	"origin_switch_stick_r_move"				"오른쪽 스틱 조작"
 	"origin_switch_stick_r_click"				"오른쪽 스틱 클릭"
 	"origin_switch_stick_r_dpad_n"				"오른쪽 스틱 위로"
 	"origin_switch_stick_r_dpad_s"				"오른쪽 스틱 아래로"
@@ -25,6 +28,7 @@
 	"origin_switch_button_dpad_s"				"방향 패드 아래"
 	"origin_switch_button_dpad_w"				"방향 패드 왼쪽"
 	"origin_switch_button_dpad_e"				"방향 패드 오른쪽"
+	"origin_switch_gyro_move"					"자이로 이동"
 	"origin_switch_gyro_pitch"					"자이로 피치"
 	"origin_switch_gyro_yaw"					"자이로 요"
 	"origin_switch_gyro_roll"					"자이로 롤"
@@ -42,4 +46,5 @@
 	"origin_switch_r_gyro_pitch"				"오른쪽 Joy-Con 자이로 피치"
 	"origin_switch_r_gyro_yaw"					"오른쪽 Joy-Con 자이로 요"
 	"origin_switch_r_gyro_roll"					"오른쪽 Joy-Con 자이로 롤"
-	}
+	"origin_switch_button_dpad_move"			"방향 패드 조작"
+}

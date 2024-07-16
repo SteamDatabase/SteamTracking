@@ -129,10 +129,10 @@ message CAppOverview {
 	optional uint32 rt_custom_image_mtime = 47;
 	optional uint32 optional_parent_app_id = 48;
 	optional uint32 owner_account_id = 49;
-	optional uint32 review_score_with_bombs = 53;
-	optional uint32 review_percentage_with_bombs = 54;
-	optional uint32 review_score_without_bombs = 55;
-	optional uint32 review_percentage_without_bombs = 56;
+	optional uint32 review_score_with_bombs = 53 [default = 0];
+	optional uint32 review_percentage_with_bombs = 54 [default = 0];
+	optional uint32 review_score_without_bombs = 55 [default = 0];
+	optional uint32 review_percentage_without_bombs = 56 [default = 0];
 	optional string library_id = 57;
 	optional bool vr_only = 58;
 	optional uint32 mastersub_appid = 59;
@@ -143,8 +143,8 @@ message CAppOverview {
 	optional uint32 rt_purchased_time = 66;
 	optional string header_filename = 67;
 	optional uint32 local_cache_version = 68;
-	optional uint32 number_of_copies = 72;
-	optional uint32 steam_hw_compat_category_packed = 73;
+	optional uint32 number_of_copies = 72 [default = 1];
+	optional uint32 steam_hw_compat_category_packed = 73 [default = 0];
 }
 
 message CAppOverview_Change {

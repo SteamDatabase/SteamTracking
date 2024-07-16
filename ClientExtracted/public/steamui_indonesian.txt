@@ -4066,7 +4066,7 @@ Pilih kategori untuk game-game ini agar kamu dapat mencarinya secara cepat dan m
 
 "Steam_Login_ErrorTitle"			"Steam - Eror"
 "Steam_Login_DisabledTitle"			"Steam - Hubungi kami"
-"Steam_ErrorAccountDisabled"		"Bantuan Steam telah menangguhkan akun ini.\n\nAkun dapat ditangguhkan ketika diakses\noleh orang lain atau ada masalah dengan pembayaranmu."
+"Steam_ErrorAccountDisabled"		"Bantuan Steam telah menangguhkan akun ini.\n\nAkun dapat ditangguhkan ketika diakses\noleh orang lain atau ada masalah sengketa pembayaran."
 "Steam_Login_ContactSupport"		"Mohon hubungi Bantuan Steam untuk mengatasi masalah ini."
 "Steam_ErrorAccountIPLoginRestricted"		"Akun ini tidak dapat diakses dari lokasi ini.\n"
 

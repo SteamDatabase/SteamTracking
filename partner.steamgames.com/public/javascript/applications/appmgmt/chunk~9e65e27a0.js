@@ -2475,13 +2475,14 @@
     },
     6866: (e, t, a) => {
       "use strict";
-      a.d(t, { Pm: () => c, d$: () => d, tB: () => m });
+      a.d(t, { Pm: () => d, d$: () => u, tB: () => c });
       var n = a(90626),
         s = a(55963),
         r = a(61336),
         i = a(78327),
-        o = a(15759);
-      function l(e, t) {
+        o = a(15759),
+        l = a(32754);
+      function m(e, t) {
         return (0, o.p)(
           e,
           (function (e) {
@@ -2493,24 +2494,24 @@
           })(t),
         );
       }
-      function m(e, t) {
-        return (e = l(e, t)
+      function c(e, t) {
+        return (e = m(e, t)
           ? (i.TS.IN_CLIENT ? "steam://openurl_external/" : "") + (0, o.E)(e)
           : (0, r.NT)(e));
       }
-      function c(e, t, a) {
+      function d(e, t, a) {
         let s = e;
         return (
           s.toLowerCase().startsWith("http") || (s = "http://" + s),
-          n.createElement(d, { url: s, event: t }, a || e)
+          n.createElement(u, { url: s, event: t }, a || e)
         );
       }
-      const d = (e) => {
+      const u = (e) => {
         const { url: t, event: a, className: i } = e;
-        let l,
-          c = (0, s.VZ)(t);
-        (c = m(c, a)), (0, o.p)(c) && (l = "noopener nofollow");
-        const d =
+        let m,
+          d = (0, s.VZ)(t);
+        (d = c(d, a)), (0, o.p)(d) && (m = "noopener nofollow");
+        const u =
           "string" == typeof e.children &&
           e.children.length > 0 &&
           t &&
@@ -2519,8 +2520,8 @@
             : void 0;
         return n.createElement(
           "a",
-          { className: i, href: c, rel: l, id: e.id },
-          n.createElement("span", { "data-tooltip-text": d }, e.children),
+          { className: i, href: d, rel: m, id: e.id },
+          n.createElement(l.he, { toolTipContent: u }, e.children),
         );
       };
     },
@@ -11854,6 +11855,7 @@
             include_included_items: w,
             include_assets_without_overrides: A,
             apply_user_filters: T,
+            include_links: G,
           } = a;
         if (
           ((0, r.useEffect)(() => {
@@ -11873,6 +11875,7 @@
               include_included_items: w,
               include_assets_without_overrides: A,
               apply_user_filters: T,
+              include_links: G,
             };
             let r = null;
             return (
@@ -11888,15 +11891,15 @@
                   })),
               () => r?.cancel("useStoreItemCache: unmounting")
             );
-          }, [e, t, n, d, p, _, h, g, S, y, f, v, I, C, E, b, w, A, T, c]),
+          }, [e, t, n, d, p, _, h, g, S, y, f, v, I, C, E, b, w, A, T, G, c]),
           !e)
         )
           return [null, 2];
         if (!1 === d) return [void 0, 2];
         if (o.A.Get().BIsStoreItemMissing(e, t)) return [void 0, 2];
         if (!o.A.Get().BHasStoreItem(e, t, a)) return [void 0, 1];
-        const G = o.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
-        return G ? [G, 3] : [null, 2];
+        const D = o.A.Get().GetStoreItemWithLegacyVisibilityCheck(e, t);
+        return D ? [D, 3] : [null, 2];
       }
       function m(e, t, a) {
         return l(e, 0, t, a);
@@ -11935,6 +11938,7 @@
             include_included_items: I,
             include_assets_without_overrides: C,
             apply_user_filters: E,
+            include_links: b,
           } = a;
         if (
           ((0, r.useEffect)(() => {
@@ -11955,6 +11959,7 @@
                 include_included_items: I,
                 include_assets_without_overrides: C,
                 apply_user_filters: E,
+                include_links: b,
               },
               n = e.filter(
                 (e) =>
@@ -11972,7 +11977,7 @@
               }),
               () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [e, t, n, l, m, c, d, u, p, _, h, g, S, y, f, v, I, C, E]),
+          }, [e, t, n, l, m, c, d, u, p, _, h, g, S, y, f, v, I, C, E, b]),
           !e)
         )
           return 2;
@@ -16416,7 +16421,7 @@
     },
     30772: (e, t, a) => {
       "use strict";
-      a.d(t, { Bq: () => V, wc: () => M, wD: () => U });
+      a.d(t, { Bq: () => x, wc: () => N, wD: () => H });
       var n = a(41735),
         s = a.n(n),
         r = a(90626),
@@ -16443,8 +16448,9 @@
         A = a(68797),
         T = a(52038),
         G = a(61859),
-        D = a(78327);
-      function B(e) {
+        D = a(78327),
+        B = a(32754);
+      function k(e) {
         (0, C.pg)(
           r.createElement(
             I.KG,
@@ -16459,7 +16465,7 @@
           window,
         );
       }
-      function k(e) {
+      function L(e) {
         const [t, a] = r.useState(!1),
           [n, s] = r.useState(!S.Fm.Get().BIsLoaded()),
           i = (0, b.n9)(),
@@ -16475,69 +16481,72 @@
         }, []);
         return u || (!m && l)
           ? l
-            ? r.createElement(L, { possibleDemoAppID: o })
+            ? r.createElement(R, { possibleDemoAppID: o })
             : null
           : r.createElement(
-              "div",
-              {
-                className: (0, T.A)(_().WishList, f().FlexRowContainer, c),
-                onClick: async () => {
-                  if (D.iA.logged_in) {
-                    if (!t) {
-                      a(!0);
-                      const e = !d;
-                      try {
-                        const t = await S.Fm.Get().UpdateGameWishlist(
-                          o,
-                          e,
-                          (0, g.L3)(i),
-                        );
-                        a(!1), 1 != t.success && B((0, A.H)(t).strErrorMsg);
-                      } catch (e) {
-                        a(!1), B((0, A.H)(e).strErrorMsg);
+              B.he,
+              { toolTipContent: (0, G.we)("#AddToWishlist_ttip") },
+              r.createElement(
+                "div",
+                {
+                  className: (0, T.A)(_().WishList, f().FlexRowContainer, c),
+                  onClick: async () => {
+                    if (D.iA.logged_in) {
+                      if (!t) {
+                        a(!0);
+                        const e = !d;
+                        try {
+                          const t = await S.Fm.Get().UpdateGameWishlist(
+                            o,
+                            e,
+                            (0, g.L3)(i),
+                          );
+                          a(!1), 1 != t.success && k((0, A.H)(t).strErrorMsg);
+                        } catch (e) {
+                          a(!1), k((0, A.H)(e).strErrorMsg);
+                        }
                       }
-                    }
-                  } else (0, v.vg)();
+                    } else (0, v.vg)();
+                  },
                 },
-                "data-tooltip-text": (0, G.we)("#AddToWishlist_ttip"),
-              },
-              r.createElement(
-                "span",
-                null,
-                (n || t) && r.createElement(w.t, { size: "small" }),
-              ),
-              !t && d && r.createElement(E.Jlk, null),
-              r.createElement(
-                "span",
-                null,
-                (0, G.we)(
-                  t
-                    ? "#Updating"
-                    : n
-                      ? "#Loading"
-                      : d
-                        ? "#Wishlisted_short"
-                        : "#AddToWishlist_short",
+                r.createElement(
+                  "span",
+                  null,
+                  (n || t) && r.createElement(w.t, { size: "small" }),
+                ),
+                !t && d && r.createElement(E.Jlk, null),
+                r.createElement(
+                  "span",
+                  null,
+                  (0, G.we)(
+                    t
+                      ? "#Updating"
+                      : n
+                        ? "#Loading"
+                        : d
+                          ? "#Wishlisted_short"
+                          : "#AddToWishlist_short",
+                  ),
                 ),
               ),
             );
       }
-      function L(e) {
+      function R(e) {
         const { possibleDemoAppID: t, className: a } = e,
           [n] = (0, m.t7)(t, {});
         return (1 == n?.GetAppType() || 12 == n?.GetAppType()) &&
           n?.GetParentAppID() > 0
-          ? r.createElement(R, {
+          ? r.createElement(F, {
               parentAppID: n?.GetParentAppID(),
               className: a,
             })
           : null;
       }
-      function R(e) {
+      function F(e) {
         const { parentAppID: t, className: a } = e,
           [n] = (0, m.t7)(t, { include_release: !0 });
         return n
-          ? r.createElement(k, {
+          ? r.createElement(L, {
               appid: t,
               bIsComingSoon: n.BIsComingSoon(),
               bIsFree: n.BIsFree(),
@@ -16545,9 +16554,9 @@
             })
           : null;
       }
-      var F = a(44165),
-        P = a(14771);
-      function U(e) {
+      var P = a(44165),
+        U = a(14771);
+      function H(e) {
         const {
             info: t,
             bShowDemoButton: a,
@@ -16588,7 +16597,7 @@
                   "div",
                   { className: _().StoreSalePriceActionWidgetContainer },
                   Boolean(!g && (0, i.f)(t.type)) &&
-                    r.createElement(k, {
+                    r.createElement(L, {
                       appid: t.id,
                       bIsFree: v.BIsFree(),
                       bIsComingSoon: v.BIsComingSoon(),
@@ -16599,19 +16608,19 @@
                   Boolean(!h) &&
                     1 !== v?.GetAppType() &&
                     (Boolean(n && !v.BIsFree())
-                      ? r.createElement(H, { fnOnPurchaseOptionsClick: p })
+                      ? r.createElement(M, { fnOnPurchaseOptionsClick: p })
                       : r.createElement(d.h, {
                           info: t,
                           className: "CartBtn",
                         })),
-                  Boolean(!h) && r.createElement(M, { info: t }),
+                  Boolean(!h) && r.createElement(N, { info: t }),
                   Boolean(S) && r.createElement(c.Q8, { storeItem: v }),
                 ),
               )
             : null
         );
       }
-      function H(e) {
+      function M(e) {
         return r.createElement(
           "div",
           { className: _().Action, onClick: e.fnOnPurchaseOptionsClick },
@@ -16622,19 +16631,19 @@
           ),
         );
       }
-      function M(e) {
+      function N(e) {
         const { info: t, ...a } = e,
           n = (0, r.useRef)({ include_release: !0 }),
           [s] = (0, m.G6)(t?.id, (0, l.SW)(t?.type), n.current);
-        return r.createElement(O, { ...a, storeItem: s });
+        return r.createElement(V, { ...a, storeItem: s });
       }
-      const N = 7;
-      function O(e) {
+      const O = 7;
+      function V(e) {
         const { bSingleLineMode: t, storeItem: a, onlyOneDiscountPct: n } = e,
-          s = (0, F.f1)();
+          s = (0, P.f1)();
         if (!a) return null;
         const i =
-            !a.BIsComingSoon() && a.GetReleaseDateRTime() + N * P.Kp.PerDay > s,
+            !a.BIsComingSoon() && a.GetReleaseDateRTime() + O * U.Kp.PerDay > s,
           o = (0, T.A)(
             _().StoreSalePriceWidgetContainer,
             t && _().SingleLineMode,
@@ -16703,7 +16712,7 @@
           d = a.GetBestPurchasePriceFormatted();
         return (
           n && m > 0 && (c = 0),
-          r.createElement(V, {
+          r.createElement(x, {
             bSingleLineMode: t,
             nBaseDiscountPercentage: c,
             nDiscountPercentage: m,
@@ -16717,7 +16726,7 @@
           })
         );
       }
-      function V(e) {
+      function x(e) {
         const {
             bSingleLineMode: t,
             nDiscountPercentage: a,

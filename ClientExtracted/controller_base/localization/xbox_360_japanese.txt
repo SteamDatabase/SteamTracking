@@ -28,4 +28,5 @@
 	"origin_xbox360_shoulder_r"						"RB ボタン"
 	"origin_xbox360_button_start"					"START ボタン"
 	"origin_xbox360_button_back"					"BACK ボタン"
-	}
+	"origin_xbox360_button_dpad_move"				"方向パッドの動作"
+}

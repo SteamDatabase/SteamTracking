@@ -1,8 +1,8 @@
 __TEXT
 __text
 __TEXT
-pt
-pt
+`p
+`p
 __stubs
 __TEXT
 __stub_helper
@@ -29,7 +29,6 @@ __mod_init_func
 __DATA
 __const
 __DATA
-'
 __objc_imageinfo__DATA
 __objc_selrefs
 __DATA
@@ -108,7 +107,6 @@ N10CSteamUser29CCallbackInternal_OnLoggedOffE
 N10CSteamUser32CCallbackInternal_OnLogonFailureE
 13CCallbackImplILi8EE
 N10CSteamUser34CCallbackInternal_OnPostLogonStateE
-13CCallbackImplILi10EE
 N10CSteamUser41CCallbackInternal_OnSteamGuardFileCreatedE
 N10CSteamUser43CCallbackInternal_OnPeerContentServerChangeE
 10CUtlString
@@ -276,6 +274,8 @@ Use local dev websites
 -devsiteshost
 Pass the hostname, will generate dev site domains like store.{hostname}.steam.dev
 /
+/usr/bin/open
+HOME
 local
 help
 %s/
@@ -389,11 +389,19 @@ CSteamUser::OnSteamLogon
 CSteamUser::OnLoggedOff
 CSteamUser::OnLogonFailure
 CSteamUser::OnPostLogonState
+Warning: Login token expires at %s
+If using cached credentials, this may indicate your client cannot renew its token.
+This can occur if steamcmd cannot write the machine auth token to its config.vdf.
 CSteamUser::OnSteamGuardFileCreated
 CSteamUser::OnPeerContentServerChange
 Peer Content Server uploading AppID %u to "%s"
 m_strAccountName
-Logging in user '%s' to Steam %s...
+Logging in using cached credentials.
+Cached credentials not found.
+Proceeding with login using username/password.
+Logging in using username/password.
+Steam Guard code provided.
+Logging in user '%s' %s to Steam %s...
 This computer has not been authenticated for your account using Steam Guard.Please check your email for the message from Steam, and enter the Steam Guard code from that message.You can also enter this code at any time using 'set_steam_guard_code' at the console.Steam Guard code:
 Enter the current code from your Steam Guard Mobile Authenticator appTwo-factor code:
 FAILED (%s)
@@ -632,9 +640,7 @@ FAILED (%u)
 +quit
 Running as Site License provider
 -attachui
-../siteserverui/linux64/siteserverui
-Failed to launch GUI
-Could not find GUI file
+http://localhost:27100/siteserver/
 You must login to Steam for the Site License functionality to work.
 Steam>
 -nodebug
@@ -887,7 +893,6 @@ pNode && pNode->Next == QueueEnd()
 m_queueItemsPending
 m_vecRegisteredWriters
 static_cast<Node_t*>(pNode)->elem
-m_Memory
 %s.async%u.tmp
 Invalid FileWriterItem_t
 m_buffer
@@ -907,6 +912,7 @@ CPathString
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 .cpl
 %s%s
+m_Memory
 0123456789abcdef
 %%%d
 ]:%u
@@ -1574,5 +1580,4 @@ Ic]
 0
 0
 0
-"
 

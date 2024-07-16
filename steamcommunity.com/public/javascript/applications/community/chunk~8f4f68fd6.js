@@ -9039,6 +9039,7 @@
               ),
               strMachineName: u.machine_name,
               rtExpiration: u.expiration,
+              thumbnailURL: u.thumbnail_url,
             };
           default:
             return (

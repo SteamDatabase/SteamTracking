@@ -1423,36 +1423,38 @@
               n.createElement(I.Gj3, null),
             ),
           ),
-          n.createElement(
-            Ce.he,
-            {
-              toolTipContent: "#FormattingToolbar_Strike",
-              direction: "bottom",
-            },
+          "strike" in t.marks &&
             n.createElement(
-              Qe,
+              Ce.he,
               {
-                title: (0, g.we)("#FormattingToolbar_Strike"),
-                mark: t.marks.strike,
+                toolTipContent: "#FormattingToolbar_Strike",
+                direction: "bottom",
               },
-              n.createElement(I.tI4, null),
+              n.createElement(
+                Qe,
+                {
+                  title: (0, g.we)("#FormattingToolbar_Strike"),
+                  mark: t.marks.strike,
+                },
+                n.createElement(I.tI4, null),
+              ),
             ),
-          ),
-          n.createElement(
-            Ce.he,
-            {
-              toolTipContent: "#FormattingToolbar_InlineCode",
-              direction: "bottom",
-            },
+          "code" in t.marks &&
             n.createElement(
-              Qe,
+              Ce.he,
               {
-                title: (0, g.we)("#FormattingToolbar_InlineCode"),
-                mark: t.marks.code,
+                toolTipContent: "#FormattingToolbar_InlineCode",
+                direction: "bottom",
               },
-              n.createElement(I.bmT, null),
+              n.createElement(
+                Qe,
+                {
+                  title: (0, g.we)("#FormattingToolbar_InlineCode"),
+                  mark: t.marks.code,
+                },
+                n.createElement(I.bmT, null),
+              ),
             ),
-          ),
         );
       }
       function it(e) {

@@ -866,6 +866,7 @@ message CMsgDraggableRegionsChanged {
 		optional int32 width = 3;
 		optional int32 height = 4;
 		optional bool draggable = 5;
+		optional bool transparent = 6;
 	}
 
 	optional uint32 browser_handle = 1;

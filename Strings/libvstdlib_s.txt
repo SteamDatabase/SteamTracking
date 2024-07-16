@@ -40,7 +40,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libvstdlib_s.dylib
-&{7U
+u17$
 @loader_path/libtier0_s.dylib
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
@@ -221,7 +221,7 @@ z 9z,u
 ^_[]
 WPRQ
 ^_[]
-\^_[]
+^_[]
 ^_[]
 AQaq
 ^_[]
@@ -823,15 +823,6 @@ windows
 macos
 linux
 android
-/System/Library/Frameworks/OpenGL.framework/OpenGL
-Failed to load opengl framework!!!
-CGLSetCurrentContext
-CGLGetCurrentContext
-CGLChoosePixelFormat
-CGLDestroyPixelFormat
-CGLCreateContext
-CGLDestroyContext
-CGLGetParameter
 NSProcessInfo
 processInfo
 operatingSystemVersion
@@ -1474,7 +1465,7 @@ e"d" #!#
 10CUtlMemoryIN11CUtlHashMapIPKcb24CDefCaselessStringEquals25HashFunctorStringCaselessS2_E6Node_tEE
 19CVStdLibDLLValidate
 9IValidate
-`*D`MBp
+`*D`JAp
 SBRAp
 RARAp
 RARARA`
@@ -1563,9 +1554,6 @@ VARAp
 @_atoi
 @_chdir
 @_close$UNIX2003
-@_dlclose
-@_dlopen
-@_dlsym
 @_fcntl$UNIX2003
 @_fgets
 @_flock
@@ -2223,9 +2211,6 @@ ___toupper
 _atoi
 _chdir
 _close$UNIX2003
-_dlclose
-_dlopen
-_dlsym
 _fcntl$UNIX2003
 _fgets
 _flock
@@ -2280,30 +2265,26 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-|e];'
-,HwA"z
-s\8m
-	1wW
-KZ`3/
-B?!i
-r%hx
-W"O'Q
-/1d$9}FG<
-o6mF4
-T`fC
-G!JC
-7h(dO7
-te8kx!/
-FCOe
-(nk?
- m l
-=2Pj
-=M2.
-]r{"
-3[lg
-B^\y
-mD-m
-kyX'
+acnu
+jo,X
+(F!B)
+qy)NW3o
+M~Iq
+nw_T
+imm[
+`zUR<
+[J#l
+)8#`q
+UVff
+JYj&
+Od)y
+"mf]\_Jl
+Fjwt!
+WOqx
+nCly
+Zu8eD
+2} b
+Zv]R
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -2361,8 +2342,10 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240710210747Z0/
+240716210819Z0/
+ ;f%
 1/0-
+ ;f%
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -2370,16 +2353,16 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		woDG+kXEgQ9cA4M1ltXG1INLT4M=
+		O2Yl3xneKBiRXhzxE4OMMdererU=
 		</data>
 	</array>
 </dict>
 </plist>
-$Y\|
-zPwGW
-4z&LK
-F%3,o
-20240710210905Z0
+2Qfr
+\=d\P}
+Su(a
+3J{=K
+20240716210819Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
@@ -2437,11 +2420,8 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240710210905Z0#
-B&o0+
-{.w%
->A~|
->by"k
+240716210819Z0#
+.iNf
 __TEXT
 __text
 __TEXT
@@ -2481,6 +2461,7 @@ __common
 __DATA
 __LINKEDIT
 @loader_path/libvstdlib_s.dylib
+!=pV
 @loader_path/libtier0_s.dylib
 /usr/lib/libiconv.2.dylib
 /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
@@ -2882,8 +2863,6 @@ AVSH
 [A^]
 AVSH
 [A^]
-AWAVAUATSH
-H[A\A]A^A_]
 AVSH
 [A^]
 es	H
@@ -3711,15 +3690,6 @@ windows
 macos
 linux
 android
-/System/Library/Frameworks/OpenGL.framework/OpenGL
-Failed to load opengl framework!!!
-CGLSetCurrentContext
-CGLGetCurrentContext
-CGLChoosePixelFormat
-CGLDestroyPixelFormat
-CGLCreateContext
-CGLDestroyContext
-CGLGetParameter
 defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/parseurl.cpp
 pchURL != NULL
@@ -4391,7 +4361,7 @@ length
 processInfo
 operatingSystemVersion
 respondsToSelector:
-!X`*D`JBp
+!X`*D`GAp
 SBRAp
 RARAp
 RARARA`
@@ -4485,9 +4455,6 @@ p(VARAp
 @_atoi
 @_chdir
 @_close
-@_dlclose
-@_dlopen
-@_dlsym
 @_fcntl
 @_fgets
 @_flock
@@ -5136,9 +5103,6 @@ ___toupper
 _atoi
 _chdir
 _close
-_dlclose
-_dlopen
-_dlsym
 _fcntl
 _fgets
 _flock
@@ -5192,29 +5156,23 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-i!VW-d6
-QZ#V
-Y4xvCq
-<VTNWe
-l]<	 
-4r7<t
-]b6+
-R%hV
-,v*?_
-h*,	
-#W8T
-yy%K
-G]Cv
-^ @|
-b`yM
-@LE=
-m7Av
-;	K<&
-"p/=
-Z= k
-+u&|>
-a(-g
-U+I8b
++?%{K
+?>vL}
+om=v
+=ux*
+9G#9NJ
+V;KX
+_m:[
+GbDO:
+67au
+F;;@
+_6\Z
+3&aWl
+!.AY
+k4RH
+t-j	,
+@,xrx
+	w}Y,
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -5272,10 +5230,8 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240710210747Z0/
-09h\
+240716210819Z0/
 1/0-
-09h\
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -5283,31 +5239,37 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		tAn9Ptwp2quwpVVQbuePhwreMDk=
+		pTOigwPi3eq+1ATeCKdfKsHBg88=
 		</data>
 	</array>
 </dict>
 </plist>
-Dh&Q
-20240710210905Z0
+2@"0
+X|VY3^
+==pR
+b8ni
+BK6z
+:~#@
+20240716210819Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240627204017Z
-240808204016Z0B1
-Timestamp Signer NWK11
+240627202600Z
+240808202559Z0B1
+Timestamp Signer NWK21
 Apple Inc.1
-wVpp
-ugRh
-1pB#	
+MPDL
+"U|%
+x]df
+9oP"zP
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-TIkd/
-%:$[
- w#^71
+\0+@
+~omI
+;g:L
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -5346,10 +5308,11 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240710210905Z0#
-y!M5
-%3O7
-hX7w
+240716210819Z0#
+/:0mI^
+MKRf
+DHUTS
+`	/30Y%
 __TEXT
 __text
 __TEXT
@@ -5402,10 +5365,10 @@ __LINKEDIT
 /usr/lib/libobjc.A.dylib
 TH|@
 R*|@
-	A{9
-R	A;9
-	E{9
-R	E;9 
+	Az9
+R	A:9@
+	Ez9
+R	E:9`
 TK	@
 R)|@
 IEI*(}
@@ -5439,7 +5402,6 @@ h^@9
 j98v
 j48u
 h.@y
-6`&D
 R* *
 Tn}@
 @9(2
@@ -5482,12 +5444,8 @@ RH#
 RH!	
 RK}@
 Rh!	
-	Es9
-R	E39
-6`oF
-(I39
-*As9
-R*A39
+*Ar9
+R*A29
 T	]	
 ii8J	
 ii8J	
@@ -5495,36 +5453,33 @@ yixJ
 +yhxJ	
 ii8J	
 #A)h&
-6 +B
 @9M!
 @9M!
 TH! 
-R3 3
-	Qw9
-R	Q79
-	Yw9I
-R	Y79
-	Uw9I
-R	U79
-	]w9I
-R	]79
-cS	P
-Thgw95
-7ug79
-",	0
-B*	P
+69 6
+	>	P
+Th'v95
+7u'69
+B)	0
+T %	
+b'	P
 K"}@
 @9A@
 @94@
 Thjv8H
 Thjw8
- x	p
+T@}	0
+ |	0
+T v	0
+`n	0
+@m	0
+by	p
+"u	p
 h(8*
+"q	0
 h(8l
-*o	0
-)o	P
-*m	P
-	l	P
+Je	p
+"`	P
 7.},
 mJh8
 ?i78
@@ -5590,15 +5545,14 @@ qj08
 mj08-
 R(}@
 /@9)
-g	X)
+i]	X)
 <!(a
-^	X)
-i\	X)
+iT	X)
+	R	X)
 <!(a
-iS	X)
+	I	X)
 T(|@
 @ya|@
-h2	X
 T	|@
 ji8_
 @@qj
@@ -5628,9 +5582,7 @@ q )Wz
 q )Wz
 )Zzh
 (ihx
- 6@m
- 6``
- 6 T
+ 6`J
 j&A)
 ?A@q
 ?A@q
@@ -5952,15 +5904,6 @@ windows
 macos
 linux
 android
-/System/Library/Frameworks/OpenGL.framework/OpenGL
-Failed to load opengl framework!!!
-CGLSetCurrentContext
-CGLGetCurrentContext
-CGLChoosePixelFormat
-CGLDestroyPixelFormat
-CGLCreateContext
-CGLDestroyContext
-CGLGetParameter
 defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/parseurl.cpp
 pchURL != NULL
@@ -6636,7 +6579,7 @@ RAWAp
 RA]Ap
 \AVAp
 p VARAp
-`*D`X0
+`*D`U0
 @__ZN16SteamThreadTools12CThreadMutexD1Ev
 @_g_VProfProfilesRunningCount
 @_g_VProfile
@@ -6720,9 +6663,6 @@ p VARAp
 @_bzero
 @_chdir
 @_close
-@_dlclose
-@_dlopen
-@_dlsym
 @_fcntl
 @_fgets
 @_flock
@@ -7368,9 +7308,6 @@ _atoi
 _bzero
 _chdir
 _close
-_dlclose
-_dlopen
-_dlsym
 _fcntl
 _fgets
 _flock
@@ -7424,34 +7361,29 @@ dyld_stub_binder
 radr://5614542
 com.valvesoftware.steam
 MXGJJ98X76
-W_0j
-i-(h
-0Jk>
-9dFK
-+;~U
-6jk~
-^M%8
-^du1
-9<_F
-8X1\
-?%^-r3s
-L:4Vpw
-+J?G
-	2ls
-RQ6V%
-0!Q]
-H~Fph}
-V?Sr
-gJcN
-0/[>
-c3dq
-;0T.
-NrTtg
-2=ej6c
-P0|b
-N_SV
-+LM9e
-'EJO5 YP
+\zh-
+5Pav
+B}*=
+	NOY
+S{K"
+g`qq
+~|b[
+P5RN
+vHLB
+3)yt
+u]yU
+k|Ga
+,@Uoz
+sI.a
+PK*B
+2g`BI
+<--0
+~@c$
+*C\)y9
+A@='
+)c0Nv0G
+G$OOu
+	evF
 subject.OU
 MXGJJ98X76
 Apple Inc.1&0$
@@ -7509,7 +7441,7 @@ o(D-U
 $Developer ID Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240710210747Z0/
+240716210819Z0/
 1/0-
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -7518,32 +7450,33 @@ Apple Inc.1
 	<key>cdhashes</key>
 	<array>
 		<data>
-		hBkuDkyqAMe4bgaKK4NztXuvFGU=
+		P8fAUEIs6sG1GUokC+6b6RNo2LQ=
 		</data>
 	</array>
 </dict>
 </plist>
-b3{^
-20240710210905Z0
+qF<k
+sYA7X
+7Wd8
+20240716210819Z0
 0|100.
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240627202600Z
-240808202559Z0B1
-Timestamp Signer NWK21
+240627204017Z
+240808204016Z0B1
+Timestamp Signer NWK11
 Apple Inc.1
-MPDL
-"U|%
-x]df
-9oP"zP
+wVpp
+ugRh
+1pB#	
 http://www.apple.com/appleca0
 Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
 ,0*0(
 "http://crl.apple.com/timestamp.crl0
-\0+@
-~omI
-;g:L
+TIkd/
+%:$[
+ w#^71
 }LWc
 Apple Inc.1&0$
 Apple Certification Authority1
@@ -7582,7 +7515,7 @@ uu!1
 'Apple Timestamp Certification Authority1&0$
 Apple Certification Authority1
 Apple Inc.1
-240710210905Z0#
-@zT8H
-Ui>At
-8Z.l
+240716210819Z0#
+KnR3|
+sTGG
+H;0'

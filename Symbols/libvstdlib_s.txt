@@ -333,9 +333,6 @@
  chdir
  close
  close$UNIX2003
- dlclose
- dlopen
- dlsym
  dyld_stub_binder
  fcntl
  fcntl$UNIX2003

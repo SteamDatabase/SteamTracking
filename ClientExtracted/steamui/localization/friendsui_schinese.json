@@ -1187,9 +1187,9 @@
     "AssociatedApp_ViewOnStore": "在商店中查看",
     "changeLog_WhatsNew": "新功能",
     "changeLog_UpdateItem54": "修复了播放某些类型的 mp4 文件时出现的崩溃问题。",
-    "changeLog_UpdateItem55": "修复了在 macOS 上的界面里使用新聊天时选项卡切换快捷方式出现的问题。",
+    "changeLog_UpdateItem55": "修复了在 macOS 上的叠加界面里使用新聊天时选项卡切换快捷方式出现的问题。",
     "changeLog_UpdateItem56": "现在，在 Windows 上的好友列表和聊天窗口与显示器边缘对齐。",
-    "changeLog_UpdateItem57": "修复了好友和聊天窗口在 Linux 及 macOS 上的游戏内界面中不显示的问题。",
+    "changeLog_UpdateItem57": "修复了好友和聊天窗口在 Linux 及 macOS 上的游戏内叠加界面中不显示的问题。",
     "BBCode_Loading": "正在载入",
     "BBCode_Failed": "载入失败",
     "broadcastDetails_Playing": "正在播放"

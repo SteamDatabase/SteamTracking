@@ -3,7 +3,7 @@
 { 
 "SteamBootstrapper_UpdatingSteam"				"%appname% 업데이트 중..."
 "SteamBootstrapper_ElevationPrompt"			"실행 전에 먼저 %appname% 자기 자신을 업데이트해야 합니다."
-"SteamBootstrapper_ReadOnlyInstallOSX"		"%appname% 설치 폴더에 쓰기 작업을 할 수 없습니다. 혹시 디스크 이미지에서 실행 중인 것은 아닌지 확인해보십시오."
+"SteamBootstrapper_ReadOnlyInstallOSX"		"%appname% 설치 폴더에 쓰기 작업을 할 수 없습니다. 혹시 디스크 이미지에서 실행 중인 것은 아닌지 확인해보세요."
 "SteamBootstrapper_RunFromDiskImageOSX"		"실행하기 전에 %appname%을 응용프로그램 폴더 안으로 드래그 하세요."
 "SteamBootstrapper_ReadOnlyInstall"			"%appname% 설치 폴더에 쓰기 작업을 할 수 없습니다."
 "SteamBootstrapper_InstallDirNotASCII"			"%appname%은 알파벳 외의 문자가 포함된 폴더에서는 실행할 수 없습니다. %appname%을 기본 폴더에 재설치하세요."

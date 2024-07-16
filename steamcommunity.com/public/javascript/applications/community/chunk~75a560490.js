@@ -211,12 +211,12 @@
         m = n(27658),
         l = n(738),
         d = n(56093),
-        p = n(19332),
-        u = n(21273);
+        u = n(19332),
+        p = n(21273);
       function v(e) {
         const { event: t, closeModal: n } = e;
         return s.createElement(
-          u.Qs,
+          p.Qs,
           { navID: "SinglePartnerEventRoot", closeModal: n },
           s.createElement(m.AD, {
             initialEvent: t,
@@ -257,7 +257,7 @@
             "div",
             {
               ref: this.m_refFocus,
-              className: p.Main,
+              className: u.Main,
               onClick: this.OnBackgroundClick,
             },
             s.createElement(m.He, {
@@ -337,7 +337,7 @@
     },
     48479: (e, t, n) => {
       "use strict";
-      n.d(t, { AQ: () => p, o7: () => h, pn: () => v, qx: () => u });
+      n.d(t, { AQ: () => p, pn: () => h, qx: () => v });
       var a = n(7068),
         r = n(61859),
         s = n(12155),
@@ -346,7 +346,8 @@
         c = n(95695),
         m = n(84811),
         l = n(64734),
-        d = n(65946);
+        d = n(65946),
+        u = n(26408);
       function p(e) {
         const {
             title: t,
@@ -356,7 +357,7 @@
             className: s,
             children: p,
           } = e,
-          u = (0, d.q3)(() => a());
+          v = (0, d.q3)(() => a());
         return o.createElement(
           o.Fragment,
           null,
@@ -379,14 +380,14 @@
                 ),
               },
               t,
-              Boolean(n) && o.createElement(h, { tooltip: n }),
+              Boolean(n) && o.createElement(u.o, { tooltip: n }),
             ),
-            o.createElement(v, { bIsMinimized: u, fnToggleMinimize: r }),
+            o.createElement(h, { bIsMinimized: v, fnToggleMinimize: r }),
           ),
-          !u && o.createElement(m.tH, null, p),
+          !v && o.createElement(m.tH, null, p),
         );
       }
-      function u(e) {
+      function v(e) {
         const [t, n] = o.useState(Boolean(e.bStartMinimized));
         return o.createElement(
           p,
@@ -394,7 +395,7 @@
           e.children,
         );
       }
-      function v(e) {
+      function h(e) {
         const { bIsMinimized: t, fnToggleMinimize: n } = e,
           i = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
         return o.createElement(
@@ -403,17 +404,6 @@
           e.bIsMinimized
             ? o.createElement(s.hz4, null)
             : o.createElement(s.Xjb, null),
-        );
-      }
-      function h(e) {
-        return o.createElement(
-          "span",
-          {
-            "data-tooltip-text": e.tooltip,
-            className: (0, i.A)(c.HelperTooltip, "HelperTooltip"),
-          },
-          " ",
-          o.createElement(s._VW, null),
         );
       }
     },

@@ -1103,7 +1103,7 @@
     },
     36148: (e, t, r) => {
       "use strict";
-      r.d(t, { RZ: () => x, Jo: () => U, Vz: () => W, $d: () => P });
+      r.d(t, { RZ: () => x, Jo: () => j, Vz: () => W, $d: () => P });
       var n = r(56545),
         i = (r(37735), r(80613)),
         a = r(89068);
@@ -2573,30 +2573,30 @@
             });
         })(D || (D = {}));
       var O = r(31380),
-        N = r(78205),
-        L = r(30470),
+        L = r(78205),
+        N = r(30470),
         F = r(24484);
       r(30894), r(41735), r(90626), r(58222);
       const x = 2640290;
       let k;
-      function j() {
+      function U() {
         return (
           k || (k = (0, F.Fd)("steam_awards_config", "application_config")), k
         );
       }
-      function U(e) {
-        const t = (0, N.KV)();
+      function j(e) {
+        const t = (0, L.KV)();
         return (0, O.useQuery)(
           `SteamAwardDefs_${e}`,
           async () => {
             const r = n.w.Init(u);
-            r.Body().set_sale_appid(e), r.Body().set_language(L.TS.LANGUAGE);
+            r.Body().set_sale_appid(e), r.Body().set_language(N.TS.LANGUAGE);
             return (await R.GetVoteDefinitions(t, r)).Body().toObject();
           },
           {
             initialData: () => {
               var e;
-              return null === (e = j()) || void 0 === e
+              return null === (e = U()) || void 0 === e
                 ? void 0
                 : e.definitions;
             },
@@ -2605,9 +2605,9 @@
         );
       }
       function G() {
-        const e = (0, N.KV)();
+        const e = (0, L.KV)();
         return (0, O.useQuery)(
-          `SteamAwardNominations_${L.iA.accountid}`,
+          `SteamAwardNominations_${N.iA.accountid}`,
           async () => {
             var t;
             const r = n.w.Init(y);
@@ -2622,13 +2622,13 @@
               var e, t;
               return null ===
                 (t =
-                  null === (e = j()) || void 0 === e
+                  null === (e = U()) || void 0 === e
                     ? void 0
                     : e.user_nominations) || void 0 === t
                 ? void 0
                 : t.nominations;
             },
-            enabled: L.iA.logged_in,
+            enabled: N.iA.logged_in,
           },
         );
       }
@@ -2646,7 +2646,7 @@
             };
       }
       function P(e, t, r, i) {
-        const a = (0, N.KV)(),
+        const a = (0, L.KV)(),
           s = (0, O.useQueryClient)();
         return (0, O.useMutation)(
           async () =>
@@ -2667,7 +2667,7 @@
               1 == e
                 ? (function (e, t) {
                     e.setQueryData(
-                      `SteamAwardNominations_${L.iA.accountid}`,
+                      `SteamAwardNominations_${N.iA.accountid}`,
                       t,
                     );
                   })(s, t.nominations)
@@ -2682,7 +2682,7 @@
     },
     50842: (e, t, r) => {
       "use strict";
-      r.d(t, { I: () => de });
+      r.d(t, { I: () => pe });
       var n = r(34629),
         i = r(41735),
         a = r.n(i),
@@ -3199,13 +3199,13 @@
         (0, n.Cg)([h.oI], D.prototype, "GetTextAreaRef", null),
         (0, n.Cg)([h.oI], D.prototype, "GetTextAreaCurrent", null);
       var O = r(7068),
-        N = r(283),
-        L = r(95695),
-        F = r.n(L),
+        L = r(283),
+        N = r(95695),
+        F = r.n(N),
         x = r(21273),
         k = r(738),
-        j = r(41609),
-        U = r.n(j),
+        U = r(41609),
+        j = r.n(U),
         G = r(56011),
         W = r(78327);
       var P = r(26505),
@@ -3474,8 +3474,9 @@
       (le.s_formattingHelp = new Map()), (le = se = (0, n.Cg)([s.PA], le));
       var ce,
         me = r(12611),
-        ue = r(74410);
-      let de = class extends o.Component {
+        ue = r(74410),
+        de = r(26408);
+      let pe = class extends o.Component {
         constructor(e) {
           super(e),
             (this.descAutoTextAreaRef = o.createRef()),
@@ -3495,7 +3496,7 @@
           e && e.target.select();
         }
         InsertText(e) {
-          pe.replaceSelection(this.GetTextAreaRef().current, e);
+          ge.replaceSelection(this.GetTextAreaRef().current, e);
         }
         OnTextAreaDropListener(e) {
           if (
@@ -3508,7 +3509,7 @@
               let e = (0, d.mJ)();
               if (t.startsWith(e)) {
                 let r = "[img]" + me.l + "/" + t.substr(e.length) + "[/img]";
-                pe.replaceSelection(this.GetTextAreaRef().current, r);
+                ge.replaceSelection(this.GetTextAreaRef().current, r);
               }
             }
           }
@@ -3522,7 +3523,7 @@
           return o.createElement(
             o.Fragment,
             null,
-            o.createElement(ge, {
+            o.createElement(he, {
               pathToImages:
                 W.TS.COMMUNITY_CDN_URL + "public/images/sharedfiles/guides/",
               fnTextareaRef: this.GetTextAreaRef,
@@ -3569,12 +3570,12 @@
           );
         }
       };
-      (0, n.Cg)([h.oI], de.prototype, "ClanImageDragListener", null),
-        (0, n.Cg)([h.oI], de.prototype, "onFocus", null),
-        (0, n.Cg)([h.oI], de.prototype, "OnTextAreaDropListener", null),
-        (0, n.Cg)([h.oI], de.prototype, "GetTextAreaRef", null),
-        (de = (0, n.Cg)([s.PA], de));
-      class pe {
+      (0, n.Cg)([h.oI], pe.prototype, "ClanImageDragListener", null),
+        (0, n.Cg)([h.oI], pe.prototype, "onFocus", null),
+        (0, n.Cg)([h.oI], pe.prototype, "OnTextAreaDropListener", null),
+        (0, n.Cg)([h.oI], pe.prototype, "GetTextAreaRef", null),
+        (pe = (0, n.Cg)([s.PA], pe));
+      class ge {
         static BIsFireFox() {
           return Boolean(
             new RegExp(/Firefox\/([0-9\.]+)(?:\s|$)/i).exec(
@@ -3585,7 +3586,7 @@
         static replaceSelection(e, t) {
           let r = e.selectionStart;
           e.focus(),
-            pe.InsertTextAtSelect(t, e),
+            ge.InsertTextAtSelect(t, e),
             e.setSelectionRange(r, r + t.length);
         }
         static getSelectedString(e) {
@@ -3595,63 +3596,63 @@
           );
         }
         static wrapBBCode(e, t, r) {
-          let n = pe.getSelectedString(r),
+          let n = ge.getSelectedString(r),
             i = "";
           (i =
             0 == n.indexOf(e) && n.lastIndexOf(t) == n.length - t.length
               ? n.substr(e.length, n.length - e.length - t.length)
               : e + n + t),
-            pe.replaceSelection(r, i);
+            ge.replaceSelection(r, i);
         }
         static append(e, t) {
           t &&
             (t.focus(),
             t.setSelectionRange(t.value.length, t.value.length),
-            pe.InsertTextAtSelect(e, t));
+            ge.InsertTextAtSelect(e, t));
         }
         static overwrite(e, t) {
           t &&
             (t.focus(),
             document.execCommand("selectAll", !1, e),
-            pe.BIsFireFox()
+            ge.BIsFireFox()
               ? (t.value = "")
               : document.execCommand("delete", !1),
-            pe.InsertTextAtSelect(e, t));
+            ge.InsertTextAtSelect(e, t));
         }
         static InsertTextAtSelect(e, t) {
-          pe.BIsFireFox() && t.setRangeText
+          ge.BIsFireFox() && t.setRangeText
             ? t.setRangeText(e)
             : document.execCommand("insertText", !1, e);
         }
       }
-      let ge = class extends o.Component {
+      let he = class extends o.Component {
         constructor() {
           super(...arguments), (this.m_linkPopupRef = o.createRef());
         }
         onBold() {
-          pe.wrapBBCode("[b]", "[/b]", this.props.fnTextareaRef().current);
+          ge.wrapBBCode("[b]", "[/b]", this.props.fnTextareaRef().current);
         }
         onItalics() {
-          pe.wrapBBCode("[i]", "[/i]", this.props.fnTextareaRef().current);
+          ge.wrapBBCode("[i]", "[/i]", this.props.fnTextareaRef().current);
         }
         onUnderline() {
-          pe.wrapBBCode("[u]", "[/u]", this.props.fnTextareaRef().current);
+          ge.wrapBBCode("[u]", "[/u]", this.props.fnTextareaRef().current);
         }
         onStrikeThrough() {
-          pe.wrapBBCode(
+          ge.wrapBBCode(
             "[strike]",
             "[/strike]",
             this.props.fnTextareaRef().current,
           );
         }
         onHeader() {
-          pe.wrapBBCode("[h1]", "[/h1]", this.props.fnTextareaRef().current);
+          ge.wrapBBCode("[h1]", "[/h1]", this.props.fnTextareaRef().current);
         }
         onHeader2() {
-          pe.wrapBBCode("[h2]", "[/h2]", this.props.fnTextareaRef().current);
+          ge.wrapBBCode("[h2]", "[/h2]", this.props.fnTextareaRef().current);
         }
         onHeader3() {
-          pe.wrapBBCode("[h3]", "[/h3]", this.props.fnTextareaRef().current);
+          ge.wrapBBCode("[h3]", "[/h3]", this.props.fnTextareaRef().current);
         }
         onUnorderedList() {
           this.handleList("list");
@@ -3664,23 +3665,23 @@
             r = "[" + e + "]\n",
             n = "[/" + e + "]";
           if (t.selectionStart == t.selectionEnd)
-            pe.wrapBBCode(r + "[*]", "\n" + n, t);
+            ge.wrapBBCode(r + "[*]", "\n" + n, t);
           else {
             let e =
               r +
-              pe
+              ge
                 .getSelectedString(t)
                 .split("\n")
                 .map((e) => (e.match(/\*+\s/) ? "[*]" : "[*] ") + e)
                 .join("\n") +
               "\n" +
               n;
-            pe.replaceSelection(t, e);
+            ge.replaceSelection(t, e);
           }
         }
         OnAddLink(e) {
           (0, k.HT)(
-            o.createElement(_e, { textareaRef: this.props.fnTextareaRef() }),
+            o.createElement(Be, { textareaRef: this.props.fnTextareaRef() }),
             (0, G.uX)(e),
           );
         }
@@ -3694,7 +3695,7 @@
         OnConvertHTMLToBBCodeDialog(e) {
           const t = (0, G.uX)(e);
           (0, k.HT)(
-            o.createElement(we, {
+            o.createElement(be, {
               ownerWindow: t,
               textareaRef: this.props.fnTextareaRef(),
             }),
@@ -3704,7 +3705,7 @@
         OnOpenYoutubeDialog(e) {
           let t = W.TS.IMG_URL + "applications/community/";
           (0, k.HT)(
-            o.createElement(he, {
+            o.createElement(Se, {
               textareaRef: this.props.fnTextareaRef(),
               pathToImages: t,
             }),
@@ -3713,13 +3714,13 @@
         }
         OnOpenImageDialog(e) {
           (0, k.HT)(
-            o.createElement(Se, { textareaRef: this.props.fnTextareaRef() }),
+            o.createElement(ye, { textareaRef: this.props.fnTextareaRef() }),
             (0, G.uX)(e),
           );
         }
         OnOpenSpeakerDialog(e) {
           (0, k.pg)(
-            o.createElement(Be, {
+            o.createElement(ve, {
               clanSteamID: this.props.clanSteamID,
               textareaRef: this.props.fnTextareaRef(),
             }),
@@ -3728,7 +3729,7 @@
         }
         OnEmoticonSelected(e, t = !1) {
           let r = `ː${e}ː`;
-          pe.replaceSelection(this.props.fnTextareaRef().current, r),
+          ge.replaceSelection(this.props.fnTextareaRef().current, r),
             this.props.fnTextareaRef().current.focus();
         }
         BSupports(e) {
@@ -3747,21 +3748,24 @@
               (i = t
                 ? o.createElement(
                     "span",
-                    {
-                      className: (0, w.A)("ttip", Z().ActionGetHelp),
-                      "data-tooltip-text": (0, A.we)(
-                        "#EventEditor_FormattingHelp_GetHelpLink",
-                      ),
-                    },
+                    { className: (0, w.A)("ttip", Z().ActionGetHelp) },
                     o.createElement(
-                      "a",
+                      K.he,
                       {
-                        href: le.GetHelpURL(this.props.showFormatHelp, !1),
-                        target: W.TS.IN_CLIENT ? void 0 : "_blank",
+                        toolTipContent: (0, A.we)(
+                          "#EventEditor_FormattingHelp_GetHelpLink",
+                        ),
                       },
-                      o.createElement("img", { src: n + "/action_help.png" }),
-                      " ",
-                      (0, A.we)("#EventEditor_FormattingHelp_GetHelpLink"),
+                      o.createElement(
+                        "a",
+                        {
+                          href: le.GetHelpURL(this.props.showFormatHelp, !1),
+                          target: W.TS.IN_CLIENT ? void 0 : "_blank",
+                        },
+                        o.createElement("img", { src: n + "/action_help.png" }),
+                        " ",
+                        (0, A.we)("#EventEditor_FormattingHelp_GetHelpLink"),
+                      ),
                     ),
                   )
                 : o.createElement(
@@ -3769,207 +3773,135 @@
                     {
                       onClick: this.ShowHelpDialog,
                       className: (0, w.A)("ttip", Z().ActionGetHelp),
-                      "data-tooltip-text": (0, A.we)(
-                        "#EventEditor_FormattingHelp_GetHelpLink",
-                      ),
                     },
-                    o.createElement("img", { src: n + "/action_help.png" }),
-                    " ",
-                    (0, A.we)("#EventEditor_FormattingHelp_GetHelpLink"),
+                    o.createElement(
+                      K.he,
+                      {
+                        toolTipContent: (0, A.we)(
+                          "#EventEditor_FormattingHelp_GetHelpLink",
+                        ),
+                      },
+                      o.createElement("img", { src: n + "/action_help.png" }),
+                      " ",
+                      (0, A.we)("#EventEditor_FormattingHelp_GetHelpLink"),
+                    ),
                   )),
             o.createElement(
               "div",
               { className: Z().TextEditorToolBarContainer },
               this.BSupports("b") &&
-                o.createElement(
-                  "span",
-                  {
-                    onClick: this.onBold,
-                    className: "ttip",
-                    "data-tooltip-text": (0, A.we)("#Editor_Bold"),
-                  },
-                  o.createElement("img", {
-                    src: this.props.pathToImages + "/format_bold.png",
-                  }),
-                ),
+                o.createElement(_e, {
+                  onClick: this.onBold,
+                  tooltip: (0, A.we)("#Editor_Bold"),
+                  imgURL: this.props.pathToImages + "/format_bold.png",
+                }),
               this.BSupports("u") &&
-                o.createElement(
-                  "span",
-                  {
-                    onClick: this.onUnderline,
-                    className: "ttip",
-                    "data-tooltip-text": (0, A.we)("#Editor_Underline"),
-                  },
-                  o.createElement("img", {
-                    src: this.props.pathToImages + "/format_underline.png",
-                  }),
-                ),
+                o.createElement(_e, {
+                  onClick: this.onUnderline,
+                  tooltip: (0, A.we)("#Editor_Underline"),
+                  imgURL: this.props.pathToImages + "/format_underline.png",
+                }),
               this.BSupports("i") &&
-                o.createElement(
-                  "span",
-                  {
-                    onClick: this.onItalics,
-                    className: "ttip",
-                    "data-tooltip-text": (0, A.we)("#Editor_Italics"),
-                  },
-                  o.createElement("img", {
-                    src: this.props.pathToImages + "/format_italic.png",
-                  }),
-                ),
+                o.createElement(_e, {
+                  onClick: this.onItalics,
+                  tooltip: (0, A.we)("#Editor_Italics"),
+                  imgURL: this.props.pathToImages + "/format_italic.png",
+                }),
               this.BSupports("strike") &&
-                o.createElement(
-                  "span",
-                  {
-                    onClick: this.onStrikeThrough,
-                    className: "ttip",
-                    "data-tooltip-text": (0, A.we)("#Editor_StrikeThrough"),
-                  },
-                  o.createElement("img", {
-                    src: this.props.pathToImages + "/format_strike.png",
-                  }),
-                ),
+                o.createElement(_e, {
+                  onClick: this.onStrikeThrough,
+                  tooltip: (0, A.we)("#Editor_StrikeThrough"),
+                  imgURL: this.props.pathToImages + "/format_strike.png",
+                }),
               Boolean(this.BSupports("url") && !t) &&
-                o.createElement(
-                  "span",
-                  {
-                    onClick: this.OnAddLink,
-                    className: "ttip",
-                    "data-tooltip-text": (0, A.we)("#Editor_Link"),
-                  },
-                  o.createElement("img", {
-                    src: this.props.pathToImages + "/format_link.png",
-                  }),
-                ),
+                o.createElement(_e, {
+                  onClick: this.OnAddLink,
+                  tooltip: (0, A.we)("#Editor_Link"),
+                  imgURL: this.props.pathToImages + "/format_link.png",
+                }),
               this.BSupports("list") &&
-                o.createElement(
-                  "span",
-                  {
-                    onClick: this.onUnorderedList,
-                    className: "ttip",
-                    "data-tooltip-text": (0, A.we)("#Editor_Unordered"),
-                  },
-                  o.createElement("img", {
-                    src: this.props.pathToImages + "/format_bullet.png",
-                  }),
-                ),
+                o.createElement(_e, {
+                  onClick: this.onUnorderedList,
+                  tooltip: (0, A.we)("#Editor_Unordered"),
+                  imgURL: this.props.pathToImages + "/format_bullet.png",
+                }),
               this.BSupports("olist") &&
-                o.createElement(
-                  "span",
-                  {
-                    onClick: this.onOrderedList,
-                    className: "ttip",
-                    "data-tooltip-text": (0, A.we)("#Editor_Ordered"),
-                  },
-                  o.createElement("img", {
-                    src: this.props.pathToImages + "/format_numbered.png",
-                  }),
-                ),
+                o.createElement(_e, {
+                  onClick: this.onOrderedList,
+                  tooltip: (0, A.we)("#Editor_Ordered"),
+                  imgURL: this.props.pathToImages + "/format_numbered.png",
+                }),
               this.BSupports("h1") &&
-                o.createElement(
-                  "span",
-                  {
-                    onClick: this.onHeader,
-                    className: "ttip",
-                    "data-tooltip-text": (0, A.we)("#Editor_Header"),
-                  },
-                  o.createElement("img", {
-                    src: this.props.pathToImages + "/format_header1.png",
-                  }),
-                ),
+                o.createElement(_e, {
+                  onClick: this.onHeader,
+                  tooltip: (0, A.we)("#Editor_Header"),
+                  imgURL: this.props.pathToImages + "/format_header1.png",
+                }),
               this.BSupports("h2") &&
-                o.createElement(
-                  "span",
-                  {
-                    onClick: this.onHeader2,
-                    className: "ttip",
-                    "data-tooltip-text": (0, A.we)("#Editor_Header2"),
-                  },
-                  o.createElement("img", {
-                    src: this.props.pathToImages + "/format_header2.png",
-                  }),
-                ),
+                o.createElement(_e, {
+                  onClick: this.onHeader2,
+                  tooltip: (0, A.we)("#Editor_Header2"),
+                  imgURL: this.props.pathToImages + "/format_header2.png",
+                }),
               this.BSupports("h3") &&
-                o.createElement(
-                  "span",
-                  {
-                    onClick: this.onHeader3,
-                    className: "ttip",
-                    "data-tooltip-text": (0, A.we)("#Editor_Header3"),
-                  },
-                  o.createElement("img", {
-                    src: this.props.pathToImages + "/format_header3.png",
-                  }),
-                ),
+                o.createElement(_e, {
+                  onClick: this.onHeader3,
+                  tooltip: (0, A.we)("#Editor_Header3"),
+                  imgURL: this.props.pathToImages + "/format_header3.png",
+                }),
               this.BSupports("previewyoutube") &&
-                o.createElement(
-                  "span",
-                  {
-                    onClick: this.OnOpenYoutubeDialog,
-                    "data-tooltip-text": (0, A.we)(
-                      "#EventEditor_InsertYouTube",
-                    ),
-                  },
-                  o.createElement("img", {
-                    src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkYyNjlFOEM1MjJEMzExRTJCNTVBQkZGOUQyOTI0ODU5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkYyNjlFOEM2MjJEMzExRTJCNTVBQkZGOUQyOTI0ODU5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjI2OUU4QzMyMkQzMTFFMkI1NUFCRkY5RDI5MjQ4NTkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjI2OUU4QzQyMkQzMTFFMkI1NUFCRkY5RDI5MjQ4NTkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4IrEPeAAABJ0lEQVR42mL8//8/AzmABUScEOZJI1HfLBaoppmk2sh4Ql/r/69HD0jSxCanwMD07eVzhl9ADgz/ZmJikMjOY2CUlEIRR8YgPYzbBLhQQoeJl4/B7uY9hv9//jC8XLWc4UFfD8OPZ08xbGX6CSSQ8XdgKH/79o3h+69fDHwBwQy6ew8ySOYXMfxiZERRx/ILPTqA/K9fv8K5f4EG3Pn5i+EfSB2SWpaf6G6A2vgP6NSrWzYz3J8zk0Hk9SsGVka0ePzLxs7w9ydC+3+gpn29PQzv9uxiEHz7mkEY6ESQPb+QHMbMwcHAwiotw/Dj3h2E6L+/DIyrljKIgCMLGMoMmCmLQ0qagdnh66fn/xgYfP+B9BCJv79/lw5KcrPISKqzGMlN5AABBgBSmY83jVsiQAAAAABJRU5ErkJggg==",
-                  }),
-                ),
+                o.createElement(_e, {
+                  onClick: this.OnOpenYoutubeDialog,
+                  tooltip: (0, A.we)("#EventEditor_InsertYouTube"),
+                  imgURL:
+                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkYyNjlFOEM1MjJEMzExRTJCNTVBQkZGOUQyOTI0ODU5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkYyNjlFOEM2MjJEMzExRTJCNTVBQkZGOUQyOTI0ODU5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjI2OUU4QzMyMkQzMTFFMkI1NUFCRkY5RDI5MjQ4NTkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjI2OUU4QzQyMkQzMTFFMkI1NUFCRkY5RDI5MjQ4NTkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4IrEPeAAABJ0lEQVR42mL8//8/AzmABUScEOZJI1HfLBaoppmk2sh4Ql/r/69HD0jSxCanwMD07eVzhl9ADgz/ZmJikMjOY2CUlEIRR8YgPYzbBLhQQoeJl4/B7uY9hv9//jC8XLWc4UFfD8OPZ08xbGX6CSSQ8XdgKH/79o3h+69fDHwBwQy6ew8ySOYXMfxiZERRx/ILPTqA/K9fv8K5f4EG3Pn5i+EfSB2SWpaf6G6A2vgP6NSrWzYz3J8zk0Hk9SsGVka0ePzLxs7w9ydC+3+gpn29PQzv9uxiEHz7mkEY6ESQPb+QHMbMwcHAwiotw/Dj3h2E6L+/DIyrljKIgCMLGMoMmCmLQ0qagdnh66fn/xgYfP+B9BCJv79/lw5KcrPISKqzGMlN5AABBgBSmY83jVsiQAAAAABJRU5ErkJggg==",
+                }),
               o.createElement(
                 "span",
-                {
-                  className: "ttip",
-                  "data-tooltip-text": (0, A.we)("#Editor_Emoticon"),
-                },
+                { className: "ttip" },
                 this.props.emoticonStore &&
-                  o.createElement(N.A, {
-                    title: " ",
-                    className: (0, w.A)(Z().EmoteOuter),
-                    disabled: !1,
-                    OnEmoticonSelected: this.OnEmoticonSelected,
-                    rtLastAckedNewEmoticons: Number.MAX_VALUE,
-                    emoticonStore: this.props.emoticonStore,
-                    emoticonHoverStore: g.s,
-                    useImg: this.props.pathToImages + "/format_emote.png",
-                    contextOptions: {
-                      bOverlapHorizontal: !0,
-                      bDisablePopTop: !0,
-                    },
-                  }),
+                  o.createElement(
+                    K.he,
+                    { toolTipContent: (0, A.we)("#Editor_Emoticon") },
+                    o.createElement(L.A, {
+                      title: " ",
+                      className: (0, w.A)(Z().EmoteOuter),
+                      disabled: !1,
+                      OnEmoticonSelected: this.OnEmoticonSelected,
+                      rtLastAckedNewEmoticons: Number.MAX_VALUE,
+                      emoticonStore: this.props.emoticonStore,
+                      emoticonHoverStore: g.s,
+                      useImg: this.props.pathToImages + "/format_emote.png",
+                      contextOptions: {
+                        bOverlapHorizontal: !0,
+                        bDisablePopTop: !0,
+                      },
+                    }),
+                  ),
               ),
               Boolean(this.BSupports("img") && !t) &&
-                o.createElement(
-                  "span",
-                  {
-                    onClick: this.OnOpenImageDialog,
-                    "data-tooltip-text": (0, A.we)("#EventEditor_InsertImage"),
-                  },
-                  o.createElement("img", {
-                    src: this.props.pathToImages + "/insert_img.png",
-                  }),
-                ),
+                o.createElement(_e, {
+                  onClick: this.OnOpenImageDialog,
+                  tooltip: (0, A.we)("#EventEditor_InsertImage"),
+                  imgURL: this.props.pathToImages + "/insert_img.png",
+                }),
               Boolean(
                 W.iA.is_support &&
                   this.props.clanSteamID &&
                   this.BSupports("speaker"),
               ) &&
-                o.createElement(
-                  "span",
-                  {
-                    onClick: this.OnOpenSpeakerDialog,
-                    "data-tooltip-text": (0, A.we)("#EventEditor_AddSpeaker"),
-                  },
-                  o.createElement("img", {
-                    src: this.props.pathToImages + "/insert_img.png",
-                  }),
-                ),
+                o.createElement(_e, {
+                  onClick: this.OnOpenSpeakerDialog,
+                  tooltip: (0, A.we)("#EventEditor_AddSpeaker"),
+                  imgURL: this.props.pathToImages + "/insert_img.png",
+                }),
               Boolean(r && !t) &&
                 o.createElement(
-                  "span",
+                  _e,
                   {
                     onClick: this.OnConvertHTMLToBBCodeDialog,
                     className: Z().ActionImportHTML,
-                    "data-tooltip-text": (0, A.we)(
-                      "#EventEditor_ImportFromHTML_ttip",
-                    ),
+                    tooltip: (0, A.we)("#EventEditor_ImportFromHTML_ttip"),
                   },
                   (0, A.we)("#EventEditor_ImportHTML"),
                 ),
@@ -3978,24 +3910,36 @@
           );
         }
       };
-      (0, n.Cg)([h.oI], ge.prototype, "onBold", null),
-        (0, n.Cg)([h.oI], ge.prototype, "onItalics", null),
-        (0, n.Cg)([h.oI], ge.prototype, "onUnderline", null),
-        (0, n.Cg)([h.oI], ge.prototype, "onStrikeThrough", null),
-        (0, n.Cg)([h.oI], ge.prototype, "onHeader", null),
-        (0, n.Cg)([h.oI], ge.prototype, "onHeader2", null),
-        (0, n.Cg)([h.oI], ge.prototype, "onHeader3", null),
-        (0, n.Cg)([h.oI], ge.prototype, "onUnorderedList", null),
-        (0, n.Cg)([h.oI], ge.prototype, "onOrderedList", null),
-        (0, n.Cg)([h.oI], ge.prototype, "OnAddLink", null),
-        (0, n.Cg)([h.oI], ge.prototype, "ShowHelpDialog", null),
-        (0, n.Cg)([h.oI], ge.prototype, "OnConvertHTMLToBBCodeDialog", null),
-        (0, n.Cg)([h.oI], ge.prototype, "OnOpenYoutubeDialog", null),
-        (0, n.Cg)([h.oI], ge.prototype, "OnOpenImageDialog", null),
-        (0, n.Cg)([h.oI], ge.prototype, "OnOpenSpeakerDialog", null),
-        (0, n.Cg)([h.oI], ge.prototype, "OnEmoticonSelected", null),
-        (ge = (0, n.Cg)([s.PA], ge));
-      let he = class extends o.Component {
+      function _e(e) {
+        return o.createElement(
+          "span",
+          { onClick: e.onClick, className: e.className },
+          o.createElement(
+            K.he,
+            { toolTipContent: e.tooltip, className: "ttip" },
+            Boolean(e.imgURL) && o.createElement("img", { src: e.imgURL }),
+            e.children,
+          ),
+        );
+      }
+      (0, n.Cg)([h.oI], he.prototype, "onBold", null),
+        (0, n.Cg)([h.oI], he.prototype, "onItalics", null),
+        (0, n.Cg)([h.oI], he.prototype, "onUnderline", null),
+        (0, n.Cg)([h.oI], he.prototype, "onStrikeThrough", null),
+        (0, n.Cg)([h.oI], he.prototype, "onHeader", null),
+        (0, n.Cg)([h.oI], he.prototype, "onHeader2", null),
+        (0, n.Cg)([h.oI], he.prototype, "onHeader3", null),
+        (0, n.Cg)([h.oI], he.prototype, "onUnorderedList", null),
+        (0, n.Cg)([h.oI], he.prototype, "onOrderedList", null),
+        (0, n.Cg)([h.oI], he.prototype, "OnAddLink", null),
+        (0, n.Cg)([h.oI], he.prototype, "ShowHelpDialog", null),
+        (0, n.Cg)([h.oI], he.prototype, "OnConvertHTMLToBBCodeDialog", null),
+        (0, n.Cg)([h.oI], he.prototype, "OnOpenYoutubeDialog", null),
+        (0, n.Cg)([h.oI], he.prototype, "OnOpenImageDialog", null),
+        (0, n.Cg)([h.oI], he.prototype, "OnOpenSpeakerDialog", null),
+        (0, n.Cg)([h.oI], he.prototype, "OnEmoticonSelected", null),
+        (he = (0, n.Cg)([s.PA], he));
+      let Se = class extends o.Component {
         constructor() {
           super(...arguments),
             (this.state = { youtubeInput: "", alignment: ue.V2.left });
@@ -4009,7 +3953,7 @@
                 "https://www.youtube.com/watch?v=" +
                 e.strVideoID +
                 (e.nStartSeconds ? "&t=" + e.nStartSeconds : "");
-              pe.wrapBBCode(t, "", this.props.textareaRef.current);
+              ge.wrapBBCode(t, "", this.props.textareaRef.current);
             } else {
               let t =
                 "[previewyoutube=" +
@@ -4017,7 +3961,7 @@
                 ";" +
                 this.state.alignment +
                 "]";
-              pe.wrapBBCode(
+              ge.wrapBBCode(
                 t,
                 "[/previewyoutube]",
                 this.props.textareaRef.current,
@@ -4194,22 +4138,22 @@
           );
         }
       };
-      (0, n.Cg)([h.oI], he.prototype, "OnYoutubeInsertLink", null),
-        (0, n.Cg)([h.oI], he.prototype, "OnUrlChange", null),
-        (0, n.Cg)([h.oI], he.prototype, "OnLeftSelected", null),
-        (0, n.Cg)([h.oI], he.prototype, "OnRightSelected", null),
-        (0, n.Cg)([h.oI], he.prototype, "OnFullSelected", null),
-        (0, n.Cg)([h.oI], he.prototype, "OnSummarySelected", null),
-        (0, n.Cg)([h.oI], he.prototype, "OnOuterDivClickPassDown", null),
-        (he = (0, n.Cg)([s.PA], he));
-      let _e = (ce = class extends o.Component {
+      (0, n.Cg)([h.oI], Se.prototype, "OnYoutubeInsertLink", null),
+        (0, n.Cg)([h.oI], Se.prototype, "OnUrlChange", null),
+        (0, n.Cg)([h.oI], Se.prototype, "OnLeftSelected", null),
+        (0, n.Cg)([h.oI], Se.prototype, "OnRightSelected", null),
+        (0, n.Cg)([h.oI], Se.prototype, "OnFullSelected", null),
+        (0, n.Cg)([h.oI], Se.prototype, "OnSummarySelected", null),
+        (0, n.Cg)([h.oI], Se.prototype, "OnOuterDivClickPassDown", null),
+        (Se = (0, n.Cg)([s.PA], Se));
+      let Be = (ce = class extends o.Component {
         constructor() {
           super(...arguments), (this.state = { textToDisplay: "", strURL: "" });
         }
         LoadFromTextArea() {
           const { textareaRef: e } = this.props;
           if (e && e.current) {
-            let t = pe.getSelectedString(e.current),
+            let t = ge.getSelectedString(e.current),
               r = ce.m_regExp.exec(t);
             r
               ? this.setState({ strURL: r[1], textToDisplay: r[2] })
@@ -4228,7 +4172,7 @@
         onInsertLink() {
           const { strURL: e, textToDisplay: t } = this.state;
           let r = "[url=" + e + "]" + t + "[/url]";
-          pe.replaceSelection(this.props.textareaRef.current, r);
+          ge.replaceSelection(this.props.textareaRef.current, r);
         }
         render() {
           return o.createElement(
@@ -4295,12 +4239,12 @@
           );
         }
       });
-      (_e.m_regExp = new RegExp(/\[url=([^\]]*)\]([^\[\]]+)\[\/url\]/i)),
-        (0, n.Cg)([h.oI], _e.prototype, "onLinkTitleUpdate", null),
-        (0, n.Cg)([h.oI], _e.prototype, "onLinkURLUpdate", null),
-        (0, n.Cg)([h.oI], _e.prototype, "onInsertLink", null),
-        (_e = ce = (0, n.Cg)([s.PA], _e));
-      let Se = class extends o.Component {
+      (Be.m_regExp = new RegExp(/\[url=([^\]]*)\]([^\[\]]+)\[\/url\]/i)),
+        (0, n.Cg)([h.oI], Be.prototype, "onLinkTitleUpdate", null),
+        (0, n.Cg)([h.oI], Be.prototype, "onLinkURLUpdate", null),
+        (0, n.Cg)([h.oI], Be.prototype, "onInsertLink", null),
+        (Be = ce = (0, n.Cg)([s.PA], Be));
+      let ye = class extends o.Component {
         constructor() {
           super(...arguments), (this.state = { imgURL: "", anchorURL: "" });
         }
@@ -4314,7 +4258,7 @@
           e && e.length > 0 && ((r += "[url=" + e + "]"), (n = "[/url]" + n)),
             (r += "[img]" + t),
             (n = "[/img]" + n),
-            pe.wrapBBCode(r, n, this.props.textareaRef.current);
+            ge.wrapBBCode(r, n, this.props.textareaRef.current);
         }
         OnImageURLChange(e) {
           this.state.imgURL != e.target.value &&
@@ -4402,11 +4346,11 @@
           );
         }
       };
-      (0, n.Cg)([h.oI], Se.prototype, "OnImageInsert", null),
-        (0, n.Cg)([h.oI], Se.prototype, "OnImageURLChange", null),
-        (0, n.Cg)([h.oI], Se.prototype, "OnAnchorURLChange", null),
-        (Se = (0, n.Cg)([s.PA], Se));
-      const Be = (e) => {
+      (0, n.Cg)([h.oI], ye.prototype, "OnImageInsert", null),
+        (0, n.Cg)([h.oI], ye.prototype, "OnImageURLChange", null),
+        (0, n.Cg)([h.oI], ye.prototype, "OnAnchorURLChange", null),
+        (ye = (0, n.Cg)([s.PA], ye));
+      const ve = (e) => {
         const [t, r] = o.useState(""),
           [n, i] = o.useState(""),
           [a, s] = o.useState(""),
@@ -4437,7 +4381,7 @@
               }
               h && (r += ` steamid="${h.ConvertTo64BitString()}"`),
                 (r += `]${l}[/speaker]`),
-                pe.replaceSelection(e.textareaRef.current, r);
+                ge.replaceSelection(e.textareaRef.current, r);
             },
             className: Z().BBCodeEditorInputStyles,
           },
@@ -4520,7 +4464,7 @@
                   {
                     onClick: (e) =>
                       (0, c.lX)(
-                        o.createElement(ye, { friends: S, setSteamID: _ }),
+                        o.createElement(we, { friends: S, setSteamID: _ }),
                         e,
                       ),
                   },
@@ -4587,17 +4531,17 @@
           ),
         );
       };
-      function ye(e) {
+      function we(e) {
         const { friends: t, setSteamID: r } = e;
         return o.createElement(
           "div",
           { className: Z().DropDownScroll },
           t.map((e) =>
-            o.createElement(ve, { key: e, steamid: e, setSteamID: r }),
+            o.createElement(Me, { key: e, steamid: e, setSteamID: r }),
           ),
         );
       }
-      function ve(e) {
+      function Me(e) {
         const { steamid: t, setSteamID: r } = e,
           { data: n } = (0, H.js)(t);
         return o.createElement(
@@ -4608,14 +4552,14 @@
             { style: { display: "flex", alignItems: "center" } },
             n &&
               o.createElement("img", {
-                className: U().WhitelistAvatar,
+                className: j().WhitelistAvatar,
                 src: n.avatar_url,
               }),
             null == n ? void 0 : n.m_strPlayerName,
           ),
         );
       }
-      let we = class extends o.Component {
+      let be = class extends o.Component {
         constructor(e) {
           super(e),
             (this.m_isMounted = !1),
@@ -4655,8 +4599,8 @@
               .then((e) => {
                 this.m_isMounted &&
                   (this.m_bAppend
-                    ? pe.append(e, this.props.textareaRef.current)
-                    : pe.overwrite(e, this.props.textareaRef.current),
+                    ? ge.append(e, this.props.textareaRef.current)
+                    : ge.overwrite(e, this.props.textareaRef.current),
                   this.setState({ bConverting: !1, bFinishedConverting: !0 }));
               })
               .catch((e) => {
@@ -4780,16 +4724,11 @@
                             (0, A.we)(
                               "#EventEditor_ImportFromHTML_PreserveNewlines",
                             ),
-                            o.createElement(
-                              "span",
-                              {
-                                className: "ttip",
-                                "data-tooltip-text": (0, A.we)(
-                                  "#EventEditor_ImportFromHTML_PreserveNewlines_Hint",
-                                ),
-                              },
-                              "(?)",
-                            ),
+                            o.createElement(de.o, {
+                              tooltip: (0, A.we)(
+                                "#EventEditor_ImportFromHTML_PreserveNewlines_Hint",
+                              ),
+                            }),
                           ),
                         ),
                         o.createElement(
@@ -4815,11 +4754,11 @@
                 );
         }
       };
-      (0, n.Cg)([h.oI], we.prototype, "OnConvertAndOverriteHTML", null),
-        (0, n.Cg)([h.oI], we.prototype, "OnConvertAndAppendHTML", null),
-        (0, n.Cg)([h.oI], we.prototype, "OnCheckboxChange", null),
-        (0, n.Cg)([h.oI], we.prototype, "OnTextAreaChange", null),
-        (we = (0, n.Cg)([s.PA], we));
+      (0, n.Cg)([h.oI], be.prototype, "OnConvertAndOverriteHTML", null),
+        (0, n.Cg)([h.oI], be.prototype, "OnConvertAndAppendHTML", null),
+        (0, n.Cg)([h.oI], be.prototype, "OnCheckboxChange", null),
+        (0, n.Cg)([h.oI], be.prototype, "OnTextAreaChange", null),
+        (be = (0, n.Cg)([s.PA], be));
     },
     27658: (e, t, r) => {
       "use strict";
@@ -4935,7 +4874,7 @@
             f.TS.COUNTRY +
             "&l=" +
             f.TS.LANGUAGE,
-          N = s.createElement("img", { className: C().AppBannerLogo, src: n });
+          L = s.createElement("img", { className: C().AppBannerLogo, src: n });
         return s.createElement(
           "div",
           { className: C().AppBannerCtn },
@@ -4958,7 +4897,7 @@
                         style: { minWidth: "320px" },
                       },
                     },
-                    N,
+                    L,
                   )
                 : s.createElement(
                     A.u,
@@ -4967,12 +4906,12 @@
                       id: a,
                       hoverClassName: C().AppBannerLogoCtn,
                     },
-                    N,
+                    L,
                   )
               : s.createElement(
                   "div",
                   { className: C().AppBannerLogoCtn },
-                  N,
+                  L,
                   " ",
                 ),
             s.createElement(
@@ -5064,13 +5003,13 @@
       });
       var D = r(42011),
         O = r(53418),
-        N = r(64940),
-        L = r(90316),
-        F = r.n(L),
+        L = r(64940),
+        N = r(90316),
+        F = r.n(N),
         x = r(20784),
         k = r(95695),
-        j = r.n(k),
-        U = r(3088),
+        U = r.n(k),
+        j = r(3088),
         G = r(22797),
         W = r(51272),
         P = r(69381),
@@ -5541,8 +5480,8 @@
             );
             R = t ? t.group_name : "";
           }
-          const L = d.HD.GetTimeNowWithOverride(),
-            k = 28 !== z && L < e.GetStartTimeAndDateUnixSeconds() && !_;
+          const N = d.HD.GetTimeNowWithOverride(),
+            k = 28 !== z && N < e.GetStartTimeAndDateUnixSeconds() && !_;
           return s.createElement(
             Z.aq,
             null,
@@ -5559,13 +5498,13 @@
               },
               12 != z &&
                 !A &&
-                s.createElement(U.c, {
+                s.createElement(j.c, {
                   className: (0, w.A)(F().EventCoverImageBackground),
                   rgSources: E,
                   onIncrementalError: (e, t, r) => p && p(t),
                 }),
               E.length > 0 &&
-                s.createElement(U.c, {
+                s.createElement(j.c, {
                   className: F().EventBackgroundBlur,
                   rgSources: E,
                   onIncrementalError: (e, t, r) => p && p(t),
@@ -5664,9 +5603,9 @@
                   ),
                 ),
               e.BHasTag("steam_award_nomination_request") &&
-                s.createElement(N.ig, { event: e, lang: B }),
+                s.createElement(L.ig, { event: e, lang: B }),
               e.BHasTag("steam_award_vote_request") &&
-                s.createElement(N.bL, {
+                s.createElement(L.bL, {
                   appID: e.appid,
                   bIsEventActionEnabled: e.BIsEventActionEnabled(),
                   voteCategories: e.GetSteamAwardNomineeCategories(),
@@ -5688,7 +5627,7 @@
                     partnerEventStore: r,
                     event: e,
                   }),
-                  s.createElement("span", { className: j().Clear }),
+                  s.createElement("span", { className: U().Clear }),
                 ),
                 s.createElement(Q._, { event: this.props.event }),
                 Boolean(e.jsondata.read_more_link) &&
@@ -5698,7 +5637,7 @@
                     s.createElement(
                       W.uU,
                       {
-                        className: (0, w.A)(j().Button),
+                        className: (0, w.A)(U().Button),
                         href: e.jsondata.read_more_link,
                       },
                       (0, M.we)("#EventEmail_Button_ClickForMoreDetails"),
@@ -5712,7 +5651,7 @@
                     s.createElement(
                       "a",
                       {
-                        className: (0, w.A)(j().Button, "LinkButton"),
+                        className: (0, w.A)(U().Button, "LinkButton"),
                         href: (0, b.k2)(e.GetSaleURL()),
                       },
                       (0, M.we)("#Event_Button_VisitSalePage"),
@@ -6015,7 +5954,7 @@
     },
     42011: (e, t, r) => {
       "use strict";
-      r.d(t, { W: () => j, F: () => G });
+      r.d(t, { W: () => U, F: () => G });
       var n = r(34629),
         i = r(90626),
         a = r(75844),
@@ -6363,12 +6302,12 @@
           )
         );
       });
-      var N = r(32381),
-        L = r(71513),
+      var L = r(32381),
+        N = r(71513),
         F = r(82227),
         x = r(61985),
         k = r(3919);
-      function j(e, t) {
+      function U(e, t) {
         if (!t.BIsUserLoggedIn())
           return (
             s.TS.IN_CLIENT
@@ -6393,7 +6332,7 @@
           ((0, u.pg)(i.createElement(f.g, null), window), !1)
         );
       }
-      function U(e) {
+      function j(e) {
         let t;
         return !0 === e ? (t = "up") : !1 === e && (t = "down"), t;
       }
@@ -6406,7 +6345,7 @@
           super(e), (this.m_cancelSignal = y().CancelToken.source());
           const t = w.KN.Get().BHasMyVote(e.eventModel);
           let r;
-          t && (r = U(w.KN.Get().GetPreviouslyLoadedVote(e.eventModel))),
+          t && (r = j(w.KN.Get().GetPreviouslyLoadedVote(e.eventModel))),
             (this.state = { bLoadedVote: !!t, myVote: r });
         }
         async HandleRefreshMyVotingInformation() {
@@ -6415,7 +6354,7 @@
             (w.KN.Get()
               .LoadMyVote(e, this.m_cancelSignal)
               .then((e) => {
-                let t = U(e);
+                let t = j(e);
                 this.setState({ myVote: t, bLoadedVote: !0 });
               })
               .catch((e) => {
@@ -6447,7 +6386,7 @@
         }
         Vote(e) {
           const { eventModel: t } = this.props;
-          j(t, w.KN.Get()) &&
+          U(t, w.KN.Get()) &&
             this.state.myVote != e &&
             null != e &&
             this.state.bLoadedVote &&
@@ -6510,7 +6449,7 @@
             a = (0, s.Y2)(),
             l = s.iA.logged_in && T.Get().BCanRepostPartnerEvent();
           return i.createElement(
-            N.Z,
+            L.Z,
             { className: h().Container, "flow-children": "row", focusable: !1 },
             i.createElement(
               "div",
@@ -6525,7 +6464,7 @@
                   (0, F.Dq)(t),
                 ),
                 i.createElement(
-                  N.Z,
+                  L.Z,
                   {
                     focusable: !0,
                     className: (0, p.A)(
@@ -6549,7 +6488,7 @@
                   ),
                 ),
                 i.createElement(
-                  N.Z,
+                  L.Z,
                   {
                     focusable: !0,
                     className: (0, p.A)(
@@ -6579,7 +6518,7 @@
                   "div",
                   { className: h().VoteContainer },
                   i.createElement(
-                    N.Z,
+                    L.Z,
                     {
                       focusable: !0,
                       className: (0, p.A)(
@@ -6601,7 +6540,7 @@
               { className: h().ShareContainer },
               !this.props.bInGamepadUI &&
                 i.createElement(
-                  N.Z,
+                  L.Z,
                   {
                     focusable: !0,
                     className: (0, p.A)(
@@ -6635,7 +6574,7 @@
           ),
           r &&
             i.createElement(
-              L.Ii,
+              N.Ii,
               { href: (0, C.k2)(r) },
               i.createElement(
                 "div",
@@ -6656,7 +6595,7 @@
             ),
           !r &&
             i.createElement(
-              N.Z,
+              L.Z,
               {
                 focusable: !0,
                 onActivate: n,
@@ -6948,7 +6887,7 @@
     },
     64940: (e, t, r) => {
       "use strict";
-      r.d(t, { bL: () => k, ig: () => N });
+      r.d(t, { bL: () => k, ig: () => L });
       var n = r(34629),
         i = r(41735),
         a = r.n(i),
@@ -7040,7 +6979,7 @@
         return null;
       }
       const O = { include_assets: !0 };
-      function N(e) {
+      function L(e) {
         var t, r;
         const { event: n, lang: i, previewMode: a } = e,
           [s] = (0, o.q3)(() => [n.GetSteamAwardCategory()]),
@@ -7153,14 +7092,14 @@
               ),
             ),
           ),
-          c.createElement(L, {
+          c.createElement(N, {
             event: n,
             nominationEventDetails: d,
             currentNomination: g,
           }),
         );
       }
-      function L(e) {
+      function N(e) {
         var t;
         const { event: r, nominationEventDetails: n, currentNomination: i } = e,
           [a, s] = (0, o.q3)(() => [r.GetSteamAwardCategory(), r.appid]),
@@ -7638,7 +7577,7 @@
     },
     20784: (e, t, r) => {
       "use strict";
-      r.d(t, { lS: () => J, j6: () => $, OT: () => ee });
+      r.d(t, { lS: () => X, j6: () => ee, OT: () => te });
       var n = r(65946),
         i = r(90626),
         a = r(80613),
@@ -9091,7 +9030,7 @@
             O.sm_m ||
               (O.sm_m = {
                 proto: O,
-                fields: { external_accounts: { n: 1, c: N, r: !0, q: !0 } },
+                fields: { external_accounts: { n: 1, c: L, r: !0, q: !0 } },
               }),
             O.sm_m
           );
@@ -9131,18 +9070,18 @@
           return "CAccountLinking_GetLinkedAccountInfo_Response";
         }
       }
-      class N extends l {
+      class L extends l {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            N.prototype.external_type || s.Sg(N.M()),
+            L.prototype.external_type || s.Sg(L.M()),
             l.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            N.sm_m ||
-              (N.sm_m = {
-                proto: N,
+            L.sm_m ||
+              (L.sm_m = {
+                proto: L,
                 fields: {
                   external_type: {
                     n: 1,
@@ -9175,71 +9114,6 @@
                     bw: s.gp.writeString,
                   },
                   is_valid: { n: 7, br: s.qM.readBool, bw: s.gp.writeBool },
-                },
-              }),
-            N.sm_m
-          );
-        }
-        static MBF() {
-          return N.sm_mbf || (N.sm_mbf = s.w0(N.M())), N.sm_mbf;
-        }
-        toObject(e = !1) {
-          return N.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return s.BT(N.M(), e, t);
-        }
-        static fromObject(e) {
-          return s.Uq(N.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new a.BinaryReader(e),
-            r = new N();
-          return N.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return s.zj(N.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new a.BinaryWriter();
-          return N.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          s.i0(N.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new a.BinaryWriter();
-          return N.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CAccountLinking_GetLinkedAccountInfo_Response_CExternalAccountTuple_Response";
-        }
-      }
-      class L extends l {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            L.prototype.steamid || s.Sg(L.M()),
-            l.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            L.sm_m ||
-              (L.sm_m = {
-                proto: L,
-                fields: {
-                  steamid: {
-                    n: 1,
-                    br: s.qM.readFixed64String,
-                    bw: s.gp.writeFixed64String,
-                  },
-                  client_token: {
-                    n: 2,
-                    br: s.qM.readBytes,
-                    bw: s.gp.writeBytes,
-                  },
-                  expiry: { n: 3, br: s.qM.readUint32, bw: s.gp.writeUint32 },
-                  deviceid: { n: 4, br: s.qM.readUint32, bw: s.gp.writeUint32 },
                 },
               }),
             L.sm_m
@@ -9277,6 +9151,71 @@
           return L.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
+          return "CAccountLinking_GetLinkedAccountInfo_Response_CExternalAccountTuple_Response";
+        }
+      }
+      class N extends l {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            N.prototype.steamid || s.Sg(N.M()),
+            l.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            N.sm_m ||
+              (N.sm_m = {
+                proto: N,
+                fields: {
+                  steamid: {
+                    n: 1,
+                    br: s.qM.readFixed64String,
+                    bw: s.gp.writeFixed64String,
+                  },
+                  client_token: {
+                    n: 2,
+                    br: s.qM.readBytes,
+                    bw: s.gp.writeBytes,
+                  },
+                  expiry: { n: 3, br: s.qM.readUint32, bw: s.gp.writeUint32 },
+                  deviceid: { n: 4, br: s.qM.readUint32, bw: s.gp.writeUint32 },
+                },
+              }),
+            N.sm_m
+          );
+        }
+        static MBF() {
+          return N.sm_mbf || (N.sm_mbf = s.w0(N.M())), N.sm_mbf;
+        }
+        toObject(e = !1) {
+          return N.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return s.BT(N.M(), e, t);
+        }
+        static fromObject(e) {
+          return s.Uq(N.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new a.BinaryReader(e),
+            r = new N();
+          return N.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return s.zj(N.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new a.BinaryWriter();
+          return N.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          s.i0(N.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new a.BinaryWriter();
+          return N.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
           return "CEmbeddedClient_Token";
         }
       }
@@ -9294,7 +9233,7 @@
                 proto: F,
                 fields: {
                   result: { n: 1, br: s.qM.readUint32, bw: s.gp.writeUint32 },
-                  token: { n: 2, c: L },
+                  token: { n: 2, c: N },
                 },
               }),
             F.sm_m
@@ -9400,7 +9339,7 @@
           return "CEmbeddedClient_AuthorizeCurrentDevice_Request";
         }
       }
-      var k, j, U;
+      var k, U, j;
       !(function (e) {
         (e.GetAvailableValveDiscountPromotions = function (e, t) {
           return e.SendMsg(
@@ -9500,7 +9439,7 @@
               { bConstMethod: !0, ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           };
-        })(j || (j = {})),
+        })(U || (U = {})),
         (function (e) {
           e.AuthorizeCurrentDevice = function (e, t) {
             return e.SendMsg(
@@ -9510,7 +9449,7 @@
               { ePrivilege: 1 },
             );
           };
-        })(U || (U = {}));
+        })(j || (j = {}));
       var G = r(78327),
         W = r(96059);
       var P = r(95695),
@@ -9520,8 +9459,9 @@
         Y = r(27543),
         K = r(90316),
         Q = r.n(K),
-        Z = r(61336);
-      function J(e) {
+        Z = r(61336),
+        J = r(32754);
+      function X(e) {
         const { appid: t } = e,
           r = (function (e) {
             const [t, r] = (0, i.useState)(void 0),
@@ -9535,8 +9475,7 @@
                   n.Body().set_account_type(3),
                     n.Body().set_account_id("" + e),
                     n.Body().set_return_access_token(!1),
-                    j
-                      .GetLinkedAccountInfo(t.GetServiceTransport(), n)
+                    U.GetLinkedAccountInfo(t.GetServiceTransport(), n)
                       .then((e) => {
                         var t;
                         return r(
@@ -9573,7 +9512,7 @@
                 r
                   .filter((e) => 3 != e.external_type)
                   .map((e) =>
-                    i.createElement(X, {
+                    i.createElement($, {
                       key: "app_social_link_" + t + "_" + e.external_type,
                       social: e,
                     }),
@@ -9582,7 +9521,7 @@
             )
           : null;
       }
-      function X(e) {
+      function $(e) {
         const { social: t } = e,
           r =
             G.TS.IMG_URL +
@@ -9595,14 +9534,17 @@
           "a",
           {
             href: (0, Z.NT)(t.external_url),
-            "data-tooltip-text": t.external_user_name,
             target: G.TS.IN_CLIENT ? void 0 : "_blank",
             rel: "noopener noreferrer",
           },
-          i.createElement("img", { className: Q().AppSocialLink, src: r }),
+          i.createElement(
+            J.he,
+            { toolTipContent: t.external_user_name },
+            i.createElement("img", { className: Q().AppSocialLink, src: r }),
+          ),
         );
       }
-      function $(e) {
+      function ee(e) {
         const { event: t, nOverrideStartTime: r, nOverrideEndTime: a } = e,
           s = e.stylesmodule ? { ...Q(), ...e.stylesmodule } : Q(),
           [o, l, c] = (0, n.q3)(() => [
@@ -9625,7 +9567,7 @@
           }),
         );
       }
-      function ee(e) {
+      function te(e) {
         const { event: t, dateRangeLayout: r = "horizontal" } = e,
           [a, s, o] = (0, n.q3)(() => [
             t.GetStartTimeAndDateUnixSeconds(),
@@ -9826,12 +9768,12 @@
         R = r(37735),
         D = r(50842),
         O = r(68797),
-        N = r(22797),
-        L = r(53418),
+        L = r(22797),
+        N = r(53418),
         F = r(86244),
         x = r.n(F),
         k = r(41471);
-      const j = (0, C.PA)((e) => {
+      const U = (0, C.PA)((e) => {
         const { appid: t, eventLink: r } = e,
           n = i.useRef(null),
           { data: a } = (0, k.js)(p.iA.steamid),
@@ -9933,7 +9875,7 @@
                   "div",
                   { className: x().Container },
                   0 == (null == g ? void 0 : g.length)
-                    ? i.createElement(N.t, { position: "center" })
+                    ? i.createElement(L.t, { position: "center" })
                     : i.createElement("div", null, g),
                   Boolean(_) &&
                     i.createElement(
@@ -10003,7 +9945,7 @@
                   i.createElement(
                     "div",
                     { className: x().ShareLink },
-                    i.createElement(L.f, {
+                    i.createElement(N.f, {
                       text: r,
                       partnerEventStore: e.partnerEventStore,
                     }),
@@ -10012,7 +9954,7 @@
               ),
             );
       });
-      var U = r(7068);
+      var j = r(7068);
       class G extends i.Component {
         constructor() {
           super(...arguments),
@@ -10050,7 +9992,7 @@
                 onOK: () => (0, c.vg)(),
               })
             : this.state.bShareOnSteamDialog
-              ? i.createElement(j, {
+              ? i.createElement(U, {
                   eventLink: e,
                   appid: r,
                   emoticonStore: a,
@@ -10104,7 +10046,7 @@
                   "div",
                   { className: M().ShareLanguagePicker },
                   i.createElement(
-                    U.JU,
+                    j.JU,
                     { className: M().LanguageLabel },
                     (0, u.we)("#EventDisplay_Share_LanguageLabel"),
                   ),
@@ -10252,15 +10194,18 @@
                   "div",
                   {
                     className: (0, m.A)(l().Button, l().Icon, M().LinkButton),
-                    "data-tooltip-text": (0, u.we)(
-                      "#ToolTip_CopyLinkToClipboard",
-                    ),
                     title: (0, u.we)("#ToolTip_CopyLinkToClipboard"),
                   },
-                  i.createElement("img", {
-                    className: M().ClipboardIcon,
-                    src: g.A,
-                  }),
+                  i.createElement(
+                    y.he,
+                    {
+                      toolTipContent: (0, u.we)("#ToolTip_CopyLinkToClipboard"),
+                    },
+                    i.createElement("img", {
+                      className: M().ClipboardIcon,
+                      src: g.A,
+                    }),
+                  ),
                 ),
             ),
             i.createElement("div", { ref: a, className: M().ClipboardText }, r),

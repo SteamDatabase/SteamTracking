@@ -10,9 +10,9 @@ __stubs
 __TEXT
 __stub_helper
 __TEXT
+`#5
+`#5
 __gcc_except_tab__TEXT
-D55
-D55
 __const
 __TEXT
 __objc_methname
@@ -69,7 +69,6 @@ __bss
 __DATA
 __common
 __DATA
-_H
 H
 __LINKEDIT
 @I
@@ -121,38 +120,29 @@ h
 (kD
 8?
 )
-{:
 0
+)
 H
-f*
 0
 @
 @
-q4
 *
 *
+*
 @
 @
 @
 @
+K*
 $
 k
 Hi
 Hi
 Hi
 Ic]
-4
-4
-IG
-+
-s(
-)
-)
-0)
+;<
 
 %
-<
-<
 )
 )
 )
@@ -160,16 +150,24 @@ s(
 '
 '
 '
-(
+9)
+9
 
 5
-T(
-M(
 (
-](
+(
+(
+(
+(
+8
 
+X&
 0
 2
+2
+8
+8
+8
 0
 0
 AT=
@@ -180,11 +178,8 @@ AT=
 D
 @
 @
-3
-7
-W1
-[7
-R7
+h1
+w7
 @
 Hc
 Hc
@@ -218,11 +213,6 @@ IcE
 @
 1
 1
-1
-1
-1
-1
-7
 NSt3__117bad_function_callE
 15CBaseFileSystem
 11IFileSystem
@@ -2443,7 +2433,7 @@ ReLaunchCmdLine
 ClientLauncherType
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlqueue.h
 IsValidIndex( idx )
-Startup - updater built Jul 10 2024 14:10:31
+Startup - updater built Jul 16 2024 14:11:03
 Startup - Steam Client launched with: %s
 Shutdown
 no hosts found
@@ -2734,8 +2724,8 @@ m_iRefs >= 0 && m_iRefs < 0x0ffffff
 #SteamBootstrapper_UpdatingSteam
 Updating Steam...
 Tahoma
-Jul 10 2024
-14:10:32
+Jul 16 2024
+14:11:04
 crashhandler004
 steam
 Steam Executable Crash
@@ -2832,7 +2822,7 @@ China
 %s/%s%s
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/steamexe/updateui.h
 ThreadInMainThread()
-14:10:29
+14:11:02
 [%3d%%] %s
 [----] %s
 [%3d%%] !!! Fatal Error: %s
@@ -10597,15 +10587,6 @@ macos
 linux
 android
 ios
-/System/Library/Frameworks/OpenGL.framework/OpenGL
-Failed to load opengl framework!!!
-CGLSetCurrentContext
-CGLGetCurrentContext
-CGLChoosePixelFormat
-CGLDestroyPixelFormat
-CGLCreateContext
-CGLDestroyContext
-CGLGetParameter
 defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
 dest != NULL
@@ -10958,7 +10939,7 @@ steamwebhelper
 Steam Helper
 cefwebhelper
 1.0
-14:07:03
+14:07:38
 Jan
 Feb
 Mar
@@ -13396,38 +13377,30 @@ file_ofs == pFile->GetBytesWritten()
 
 
 0
-{:
+@>>
 0
+)
 H
-f*
 0
 @
 @
-q4
 *
 *
+*
 @
 @
 @
 @
+K*
 $
 k
 Hi
 Hi
 Hi
 Ic]
-4
-4
-IG
-+
-s(
-)
-)
-0)
+;<
 
 %
-<
-<
 )
 )
 )
@@ -13435,16 +13408,24 @@ s(
 '
 '
 '
-(
+9)
+9
 
 5
-T(
-M(
 (
-](
+(
+(
+(
+(
+8
 
+X&
 0
 2
+2
+8
+8
+8
 0
 0
 AT=
@@ -13455,11 +13436,8 @@ AT=
 D
 @
 @
-3
-7
-W1
-[7
-R7
+h1
+w7
 @
 Hc
 Hc
@@ -13493,61 +13471,58 @@ IcE
 @
 1
 1
-1
-1
-1
-1
-7
+y0
 V
 0
-0
-0
+6
 0
 =
-}5
-=/
+u/
+8
+1/
+/
+/
+/
 /
 =
-5
-+.
 .
-@"
+.
+.
+.
 !
 @
-i3
--
 ;
+3
 @
 7
 &
-,
-,
-2
-G+
-1
+K?
+-
+#+
+b1
 +
+1
+1
+1
+1
+1
 5
-30
 *
-*
-$0
 0
-12
-w)
-8
-8
-8
+0
+0
+0
+2
 @
 M9e
+)
 @
 @
 /
+=/
 =3
 /
 /
-/
-/
-/
 ?
 ?
 ?
@@ -13558,12 +13533,14 @@ M9e
 ?
 ?
 ?
+o(
 ?
 :
 ?
 ?
 ?
 
+*
 *
 AESNI-CBC+SHA1 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
 AESNI-CBC+SHA256 stitch for x86_64, CRYPTOGAMS by <appro@openssl.org>
@@ -13580,6 +13557,7 @@ j
 Pj
 ARj
 j
+/
 0
 1
 1
@@ -13588,6 +13566,7 @@ j
 IcU
 E;e
 M)u
+M,
 =
 =
 @
@@ -13596,6 +13575,7 @@ M)u
 %
 =
 Montgomery Multiplication with scatter/gather for x86_64, CRYPTOGAMS by <appro@openssl.org>
+$
 pppp
 pp
 ,,
@@ -13887,38 +13867,38 @@ ChaCha20 for x86_64, CRYPTOGAMS by <appro@openssl.org>
 @
 =
 @
+@)
+0*
+.*
 
 @
 @
 @
 0
-.
 ,
+,
+.
 H=
 Ic]
 j
 j
 j
 j
-})
 j
 j
+;)
 
-e$
 t$I;M
-)
-)
-'
-"
 "
 e
 W
 ,7~5d
 H
 0
+"
+"
+"
 
-"
-"
 
 
 
@@ -13929,9 +13909,10 @@ H
 
 
 Hc
-L)5+Q(
-L95 M(
-W
+!
+a
+]
+]
 AES-NI GCM module for x86_64, CRYPTOGAMS by <appro@openssl.org>
 %
 @
@@ -14220,8 +14201,9 @@ H=
 0
 0
 0
+I
 0
--
+7
 
 0
 H=
@@ -14230,6 +14212,8 @@ H=
 0
 Hi
 E
+#
+"
 0
 0
 
@@ -14249,16 +14233,18 @@ E
 0
 Hc
 0
-b
+u
 0
+w
+/
 @
 @
 0
 &
 @
 @
-^
 @
+
 
 
 

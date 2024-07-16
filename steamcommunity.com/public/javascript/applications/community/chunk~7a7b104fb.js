@@ -129,7 +129,7 @@
     },
     39606: (e, t, r) => {
       "use strict";
-      r.d(t, { I: () => N });
+      r.d(t, { I: () => E });
       var i = r(34629),
         a = r(14947),
         s = r(75844),
@@ -171,13 +171,14 @@
         F = r(63508),
         I = r.n(F),
         W = r(29268),
-        O = r(4299);
-      const j = new RegExp("ː([^ː]*)ː", "g"),
-        q = new RegExp(
+        O = r(4299),
+        j = r(32754);
+      const q = new RegExp("ː([^ː]*)ː", "g"),
+        U = new RegExp(
           "^https?://(?:[^/?#]+?\\.)?(?:valvesoftware|steamcommunity|steampowered)\\.com(?:/?#|$)",
           "i",
         );
-      const U = (e) => {
+      const x = (e) => {
           const { userType: t, msg: r, presenterInfo: i } = e;
           if ("presenter" === t)
             return o.createElement(
@@ -228,14 +229,14 @@
             );
           }
         },
-        x = (e) => {
+        N = (e) => {
           switch (e.userType) {
             case "presenter":
               return o.createElement(
-                "span",
+                j.he,
                 {
                   className: I().RoleFlairContainer,
-                  "data-tooltip-text": (0, C.we)(
+                  toolTipContent: (0, C.we)(
                     "#BroadcastChat_Role_Presenter_ttip",
                   ),
                 },
@@ -243,10 +244,10 @@
               );
             case "moderator":
               return o.createElement(
-                "span",
+                j.he,
                 {
                   className: I().RoleFlairContainer,
-                  "data-tooltip-text": (0, C.we)(
+                  toolTipContent: (0, C.we)(
                     "#BroadcastChat_Role_Moderatorr_ttip",
                   ),
                 },
@@ -254,10 +255,10 @@
               );
             case "broadcaster":
               return o.createElement(
-                "span",
+                j.he,
                 {
                   className: I().RoleFlairContainer,
-                  "data-tooltip-text": (0, C.we)(
+                  toolTipContent: (0, C.we)(
                     "#BroadcastChat_Role_Broadcaster_ttip",
                   ),
                 },
@@ -267,7 +268,7 @@
               return null;
           }
         };
-      let N = class extends o.Component {
+      let E = class extends o.Component {
         constructor(e) {
           super(e),
             (this.m_chat = null),
@@ -312,12 +313,12 @@
           }
         }
         IsTrustedDomain(e) {
-          return !!e.match(q);
+          return !!e.match(U);
         }
         AddLinksEmoticons(e, t) {
-          let r = j;
+          let r = q;
           t && (r = this.m_chat.GetUserEmoticons());
-          let i = e.split(j);
+          let i = e.split(q);
           const a = [];
           for (let e = 0; e < i.length; e += 1)
             e % 2 == 1
@@ -567,7 +568,7 @@
               className: this.GetTypeClassName(e),
               onContextMenu: (t) => this.OnContextMenu(t, e),
             },
-            e.type === O.X8.Chat && o.createElement(x, { userType: a }),
+            e.type === O.X8.Chat && o.createElement(N, { userType: a }),
             e.flair &&
               o.createElement(
                 "span",
@@ -575,7 +576,7 @@
                 this.AddLinksEmoticons(e.flair, !1),
               ),
             e.type === O.X8.Chat &&
-              o.createElement(U, { userType: a, msg: e, presenterInfo: i }),
+              o.createElement(x, { userType: a, msg: e, presenterInfo: i }),
             e.type === O.X8.Chat &&
               this.m_chat.GetBroadcastSteamID() === e.steamid &&
               o.createElement(
@@ -627,7 +628,7 @@
             o.createElement(W.P, { latestAnnouncement: n }),
             r &&
               !!this.m_chat &&
-              o.createElement(E, {
+              o.createElement(D, {
                 oChat: this.m_chat,
                 emoticonStore: this.props.emoticonStore,
                 bPartnerMemberOnlyChat: t,
@@ -648,7 +649,7 @@
             o.createElement(f, null),
             !r &&
               !!this.m_chat &&
-              o.createElement(E, {
+              o.createElement(D, {
                 oChat: this.m_chat,
                 emoticonStore: this.props.emoticonStore,
                 bPartnerMemberOnlyChat: t,
@@ -656,7 +657,7 @@
           );
         }
       };
-      function E(e) {
+      function D(e) {
         const { oChat: t, emoticonStore: r, bPartnerMemberOnlyChat: i } = e;
         return !i ||
           ((null === T.iA || void 0 === T.iA ? void 0 : T.iA.logged_in) &&
@@ -664,11 +665,11 @@
               ? void 0
               : T.iA.is_partner_member))
           ? (null === T.iA || void 0 === T.iA ? void 0 : T.iA.logged_in)
-            ? o.createElement(D, { oChat: t, emoticonStore: r })
+            ? o.createElement(P, { oChat: t, emoticonStore: r })
             : null
-          : o.createElement(G, null);
+          : o.createElement(V, null);
       }
-      function D(e) {
+      function P(e) {
         const { oChat: t, emoticonStore: r } = e,
           [i, a] = o.useState(""),
           s = o.useRef(),
@@ -709,7 +710,7 @@
                 ref: s,
               }),
               l &&
-                o.createElement(k, {
+                o.createElement(G, {
                   nSeconds: t.m_nRateLimitSeconds,
                   bRateLimited: t.m_bRateLimited,
                 }),
@@ -742,13 +743,13 @@
                   emoticonStore: r,
                   emoticonHoverStore: m.s,
                 }),
-                o.createElement(P, { ...e, textInputRef: s }),
+                o.createElement(k, { ...e, textInputRef: s }),
               ),
             ),
           ),
         );
       }
-      function P(e) {
+      function k(e) {
         var t;
         const { oChat: r, emoticonStore: i, textInputRef: a } = e;
         return r.m_strFlairGroupID &&
@@ -772,13 +773,13 @@
             })
           : null;
       }
-      (0, i.Cg)([a.sH], N.prototype, "m_chat", void 0),
-        (0, i.Cg)([v.oI], N.prototype, "StartChat", null),
-        (0, i.Cg)([v.oI], N.prototype, "HandleScroll", null),
-        (0, i.Cg)([v.oI], N.prototype, "OnContextMenu", null),
-        (0, i.Cg)([v.oI], N.prototype, "RenderUserChatLine", null),
-        (N = (0, i.Cg)([s.PA], N));
-      class k extends o.Component {
+      (0, i.Cg)([a.sH], E.prototype, "m_chat", void 0),
+        (0, i.Cg)([v.oI], E.prototype, "StartChat", null),
+        (0, i.Cg)([v.oI], E.prototype, "HandleScroll", null),
+        (0, i.Cg)([v.oI], E.prototype, "OnContextMenu", null),
+        (0, i.Cg)([v.oI], E.prototype, "RenderUserChatLine", null),
+        (E = (0, i.Cg)([s.PA], E));
+      class G extends o.Component {
         render() {
           return o.createElement(
             "div",
@@ -802,7 +803,7 @@
           );
         }
       }
-      function G(e) {
+      function V(e) {
         return o.createElement(
           "div",
           { className: I().Description },

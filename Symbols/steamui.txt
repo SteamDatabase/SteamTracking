@@ -474,7 +474,7 @@
  SDL_DisableScreenSaver
  SDL_EnableScreenSaver
  SDL_GL_CreateContext
- SDL_GL_DeleteContext
+ SDL_GL_DestroyContext
  SDL_GL_GetCurrentContext
  SDL_GL_GetProcAddress
  SDL_GL_MakeCurrent
@@ -491,31 +491,31 @@
  SDL_GetDisplayBounds
  SDL_GetDisplays
  SDL_GetError
- SDL_GetGamepadInstanceGUID
- SDL_GetGamepadInstanceMapping
- SDL_GetGamepadInstanceType
+ SDL_GetGamepadGUIDForID
  SDL_GetGamepadMappingForGUID
+ SDL_GetGamepadMappingForID
  SDL_GetGamepadStringForAxis
  SDL_GetGamepadStringForButton
+ SDL_GetGamepadTypeForID
  SDL_GetGamepads
  SDL_GetGlobalMouseState
  SDL_GetHint
  SDL_GetJoystickAxisInitialState
  SDL_GetJoystickGUID
+ SDL_GetJoystickGUIDForID
  SDL_GetJoystickGUIDFromString
  SDL_GetJoystickGUIDInfo
  SDL_GetJoystickGUIDString
- SDL_GetJoystickInstanceGUID
- SDL_GetJoystickInstanceName
- SDL_GetJoystickInstanceType
+ SDL_GetJoystickNameForID
  SDL_GetJoystickProduct
+ SDL_GetJoystickTypeForID
  SDL_GetJoystickVendor
  SDL_GetJoysticks
  SDL_GetLogOutputFunction
  SDL_GetNumJoystickAxes
  SDL_GetPlatform
+ SDL_GetPointerProperty
  SDL_GetPrimaryDisplay
- SDL_GetProperty
  SDL_GetRectIntersection
  SDL_GetRectUnion
  SDL_GetRevision

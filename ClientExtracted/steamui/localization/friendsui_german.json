@@ -565,7 +565,7 @@
     "bbcode_video_pause": "Pausieren",
     "bbcode_video_play": "Abspielen",
     "bbcode_image_link_giphy": "/GIPHY %1$s",
-    "bbcode_image_popout": "Bild-Popout",
+    "bbcode_image_popout": "Bild-Pop-out",
     "bbcode_image_tooltip_collapse": "Bild im Chat ausblenden",
     "bbcode_video_tooltip_collapse": "Video im Chat ausblenden",
     "bbcode_image_tooltip_uncollapse": "Bild im Chat einblenden",

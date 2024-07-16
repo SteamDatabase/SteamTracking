@@ -6,7 +6,6 @@
  CValidator::IsClaimed(void const*) const
  CValidator::Pop()
  CValidator::Push(char const*, void*, char const*)
- CreateSimpleProcess
  D typeinfo for std::__1::bad_function_call
  Error
  GetOSType
@@ -20,7 +19,6 @@
  Plat_CommandLineParamExists
  Plat_FloatTime
  Plat_GetExecutablePath
- Plat_GetExecutablePathUTF8
  Plat_IsChromeOS
  Plat_MSTime
  Plat_RelativeTicks
@@ -73,7 +71,6 @@
  TSQueueBase_UnsafeDummy
  TSQueueBase_UnsafePeek
  TSQueue_PopIntoFreeList
- ThreadCloseProcess
  ThreadGetCurrentId
  ThreadGetCurrentProcessId
  ThreadInMainThread
@@ -82,9 +79,10 @@
  ThreadInterlockedExchange
  ThreadInterlockedExchangeAdd
  ThreadInterlockedIncrement
+ ThreadShellExecute
  ThreadSleep
- ThreadTerminateProcessCode
  VProfInternalEnterScopeCurrentThread
+ V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
  V_ExtractFileExtension
  V_ExtractFilePath
  V_FileBase
@@ -175,6 +173,7 @@
  g_VProfProfilesRunningCount
  g_pMemAllocSteam
  getcwd
+ getenv
  getpid
  kill
  launch_data_alloc

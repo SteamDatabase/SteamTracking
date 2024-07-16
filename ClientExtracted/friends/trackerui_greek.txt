@@ -733,6 +733,7 @@
 "Steam_Settings_Broadcast_480p" "854x480 (480p)"
 "Steam_Settings_Broadcast_360p" "640x360 (360p)"
 "Steam_Settings_Broadcast_IncludeDesktop" "Καταγραφή βίντεο από όλες τις εφαρμογές σε αυτό το μηχάνημα"
+"Steam_Settings_Broadcast_RecordSystemAudio" "Ηχογράφηση από όλες τις εφαρμογές σε αυτόν τον υπολογιστή"
 "Steam_Settings_Broadcast_RecordMic" "Εγγραφή του μικροφώνου μου"
 "Steam_Settings_Broadcast_ConfigMic" "Διαμόρφωση μικροφώνου"
 "Steam_Settings_Broadcast_EnableHardwareSupport" "Ενεργοποίηση υποστήριξης υλισμικού *"

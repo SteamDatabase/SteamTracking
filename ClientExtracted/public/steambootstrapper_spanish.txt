@@ -28,7 +28,7 @@
 "SteamBootstrapper_UpdateInstalling"			"Instalando actualización..."
 "SteamBootstrapper_InstallVerify"				"Verificando instalación..."
 "SteamBootstrapper_DownloadComplete"			"Descarga completa."
-"SteamBootstrapper_PercentComplete"			"%percent%%% completado"
+"SteamBootstrapper_PercentComplete"			"%percent% %% completado"
 "SteamBootstrapper_NoNetwork"					"%appname% debe estar conectado para actualizarse. Confirma tu conexión de red e inténtalo de nuevo."
 "SteamBootstrapper_FailedMkdir"				"No se ha podido crear el directorio %dirname%, se obtuvo el error %errno%"
 "SteamBootstrapper_NotWriteable"				"No se puede escribir en el directorio %dirname%."

@@ -96,7 +96,7 @@
 "Friends_SearchingForFriend"				"%search% 검색 중..."
 "Friends_FriendHasBeenAddedToYourListUnderName" "%search% 님이 '%friend%' 이름으로 친구 목록에 추가되었습니다."
 "Friends_FriendHasBeenAddedToYourList"		"%friend% 님이 친구 목록에 추가되었습니다."
-"Friends_UnableToFindFriendByThatName"		"%search% 이름으로 찾을 수 없습니다. 다시 검색해 보려면 '뒤로'를 누르십시오."
+"Friends_UnableToFindFriendByThatName"		"%search% 이름으로 찾을 수 없습니다. 다시 검색해 보려면 '뒤로'를 누르세요."
 "Friends_CannotAddSelfToList"				"자신을 친구 목록에 추가할 수 없습니다."
 "Friends_CannotAddFriendWhoIsAlreadyInList" "%search% 님이 '%friend%' 이름으로 이미 친구 목록에 있습니다."
 
@@ -471,7 +471,7 @@
 
 "Friends_ChatURLWarning_Title"		"경고: Steam 웹사이트가 아님"
 "Friends_ChatURLWarning_Info"			"참고: 클릭한 URL은 공식 Steam 웹사이트가 아닙니다."
-"Friends_ChatURLWarning_Info2"		"이 웹사이트에서 사용자 이름이나 비밀번호를 요구할 경우 입력하지 마십시오. Steam 계정과 모든 게임을 잃을 수 있습니다!"
+"Friends_ChatURLWarning_Info2"		"이 웹사이트에서 사용자 이름이나 비밀번호를 요구할 경우 입력하지 마세요. Steam 계정과 모든 게임을 잃을 수 있습니다!"
 "Friends_ChatURLWarning_Continue"		"예, 웹 페이지를 계속합니다."
 "Friends_ChatURLWarning_DontAskAgainCheck"	"이 메시지를 다시 표시하지 않습니다."
 
@@ -488,7 +488,7 @@
 "Friends_BlockCommunicationWarning_DontAskAgainCheck"	"이 메시지를 다시 표시하지 않습니다."
 "Friends_BlockCommunicationWarning_Block"	"플레이어 차단"
 "Friends_BlockCommunicationWArning_Cancel"	"취소"
-"Friends_BlockCommunicationResult"	"%username%님을 차단하였습니다!\n\n해당 유저의 차단을 해제하기 위해서는 Steam 커뮤니티 내의 차단된 유저 목록을 보십시오."
+"Friends_BlockCommunicationResult"	"%username%님을 차단하였습니다!\n\n해당 유저의 차단을 해제하기 위해서는 Steam 커뮤니티 내의 차단된 유저 목록을 보세요."
 "Friends_BlockCommunicationResultUnblock"	"%username%님의 차단이 해제되었습니다!\n\nSteam 커뮤니티에서 차단 목록을 보실 수 있습니다."
 "Friends_BlockCommunicationResult_YourBlockedList"	"내 차단 목록 보기"
 "Friends_DefaultBlockCommunicationError" 			"%username%님을 차단하는 도중 오류가 발생했습니다."
@@ -553,7 +553,7 @@
 "controller_mobile_touch"							"Steam Link Touch 컨트롤러"
 
 "Friends_ScreenshotNotification_Info" "스크린샷 저장됨"
-"Friends_ScreenshotNotification_Info_Multiple" "%screenshots%장의 스크린샷이 저장되었습니다"
+"Friends_ScreenshotNotification_Info_Multiple" "스크린샷 %screenshots%장이 저장되었습니다."
 "Friends_ScreenshotErrorNotification_Info" "스크린샷 저장 오류"
 
 "Limited_OpenChat"	"채팅 열기"
@@ -654,7 +654,7 @@
 "friends_voice_usedbygame"			"게임 내에서 마이크를 사용 중"
 
 "friends_group_tag_as"			"태그 달기..."
-"friends_group_edit_categories" 	"이 친구에게 태그를 달아 찾기 쉽도록 하세요. 동일한 태그가 달린 친구들은 친구 목록에 함께 묶여서 보입니다."
+"friends_group_edit_categories" 	"이 친구에게 태그를 달아 찾기 쉽도록 하세요. 동일한 태그가 지정된 친구들은 친구 목록에 함께 묶여서 보입니다."
 "friends_group_addtag"			"태그 달기"
 "friends_group_edittags_title"		"%friend% - 태그"
 
@@ -698,7 +698,7 @@
 "Broadcast_FirstTime_Cancel" "취소"
 "Broadcast_FirstTime_ViewerRequest" "%gamename% 게임 플레이를 %friend%님이 보고싶어합니다."
 "Broadcast_FirstTime_CompleteText" "방송 공개 설정을 해주셔서 감사합니다."
-"Broadcast_FirstTime_Configuration" "마이크 녹음 또는 동영상 해상도 같은 추가 설정을 위해 다음 링크로 가십시오:"
+"Broadcast_FirstTime_Configuration" "마이크 녹음 또는 동영상 해상도 같은 추가 설정을 위해 다음 링크로 이동하세요."
 "Broadcast_FirstTime_ConfigurationLink" "방송 설정"
 
 "Broadcast_Chat_Show_Profile" "프로필 보기"

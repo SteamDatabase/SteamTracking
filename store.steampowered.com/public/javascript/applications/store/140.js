@@ -659,6 +659,7 @@
             include_included_items: S,
             include_assets_without_overrides: T,
             apply_user_filters: v,
+            include_links: w,
           } = a;
         if (
           ((0, r.useEffect)(() => {
@@ -678,6 +679,7 @@
               include_included_items: S,
               include_assets_without_overrides: T,
               apply_user_filters: v,
+              include_links: w,
             };
             let r = null;
             return (
@@ -693,15 +695,15 @@
                   })),
               () => r?.cancel("useStoreItemCache: unmounting")
             );
-          }, [t, e, n, m, p, d, I, h, C, f, g, L, A, y, D, G, S, T, v, u]),
+          }, [t, e, n, m, p, d, I, h, C, f, g, L, A, y, D, G, S, T, v, w, u]),
           !t)
         )
           return [null, 2];
         if (!1 === m) return [void 0, 2];
         if (s.A.Get().BIsStoreItemMissing(t, e)) return [void 0, 2];
         if (!s.A.Get().BHasStoreItem(t, e, a)) return [void 0, 1];
-        const w = s.A.Get().GetStoreItemWithLegacyVisibilityCheck(t, e);
-        return w ? [w, 3] : [null, 2];
+        const b = s.A.Get().GetStoreItemWithLegacyVisibilityCheck(t, e);
+        return b ? [b, 3] : [null, 2];
       }
       function c(t, e, a) {
         return l(t, 0, e, a);
@@ -740,6 +742,7 @@
             include_included_items: A,
             include_assets_without_overrides: y,
             apply_user_filters: D,
+            include_links: G,
           } = a;
         if (
           ((0, r.useEffect)(() => {
@@ -760,6 +763,7 @@
                 include_included_items: A,
                 include_assets_without_overrides: y,
                 apply_user_filters: D,
+                include_links: G,
               },
               n = t.filter(
                 (t) =>
@@ -777,7 +781,7 @@
               }),
               () => r.cancel("useStoreItemCacheMultiplePackages: unmounting")
             );
-          }, [t, e, n, l, c, u, m, _, p, d, I, h, C, f, g, L, A, y, D]),
+          }, [t, e, n, l, c, u, m, _, p, d, I, h, C, f, g, L, A, y, D, G]),
           !t)
         )
           return 2;

@@ -11587,6 +11587,7 @@
               nSize: parseInt(r.file_size ?? 0),
               strMachineName: r.machine_name,
               rtExpiration: r.expiration,
+              thumbnailURL: r.thumbnail_url,
             };
           default:
             return (

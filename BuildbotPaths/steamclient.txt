@@ -125,6 +125,7 @@
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/userstats.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/vr/vrmanager.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/clientdll/workshopcontentupdatejob.cpp
+/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/RateLimiter.h
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/amount.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/appownershipticket.cpp
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/appregkeystring.h

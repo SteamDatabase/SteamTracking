@@ -28,8 +28,10 @@
 	"origin_xboxone_shoulder_r"						"R ボタン"
 	"origin_xboxone_button_menu"					"メニューボタン"
 	"origin_xboxone_button_view"					"ビューボタン"
+	"origin_xboxone_button_dpad_move"				"方向パッドの動作"
 	"origin_xboxone_button_paddle_1"				"P1パドル"
 	"origin_xboxone_button_paddle_2"				"P2パドル"
 	"origin_xboxone_button_paddle_3"				"P3パドル"
 	"origin_xboxone_button_paddle_4"				"P4パドル"
-	}
+	"origin_xboxone_button_share"					"共有ボタン"
+}

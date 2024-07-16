@@ -28,6 +28,7 @@
 	"origin_xboxone_shoulder_r"						"Botão superior direito"
 	"origin_xboxone_button_menu"					"Botão Menu"
 	"origin_xboxone_button_view"					"Botão Visão"
+	"origin_xboxone_button_dpad_move"				"Movimento do direcional"
 	"origin_xboxone_button_paddle_1"				"Alavanca traseira P1"
 	"origin_xboxone_button_paddle_2"				"Alavanca traseira P2"
 	"origin_xboxone_button_paddle_3"				"Alavanca traseira P3"

@@ -352,8 +352,7 @@
  T SDL_ConvertPixels
  T SDL_ConvertPixelsAndColorspace
  T SDL_ConvertSurface
- T SDL_ConvertSurfaceFormat
- T SDL_ConvertSurfaceFormatAndColorspace
+ T SDL_ConvertSurfaceAndColorspace
  T SDL_CopyProperties
  T SDL_CreateAudioStream
  T SDL_CreateColorCursor
@@ -363,7 +362,6 @@
  T SDL_CreateHapticEffect
  T SDL_CreateMutex
  T SDL_CreatePalette
- T SDL_CreatePixelFormat
  T SDL_CreatePopupWindow
  T SDL_CreateProperties
  T SDL_CreateRWLock
@@ -374,6 +372,7 @@
  T SDL_CreateStorageDirectory
  T SDL_CreateSurface
  T SDL_CreateSurfaceFrom
+ T SDL_CreateSurfacePalette
  T SDL_CreateSystemCursor
  T SDL_CreateTLS
  T SDL_CreateTexture
@@ -397,7 +396,6 @@
  T SDL_DestroyHapticEffect
  T SDL_DestroyMutex
  T SDL_DestroyPalette
- T SDL_DestroyPixelFormat
  T SDL_DestroyProperties
  T SDL_DestroyRWLock
  T SDL_DestroyRenderer
@@ -431,7 +429,7 @@
  T SDL_FlushEvents
  T SDL_FlushRenderer
  T SDL_GL_CreateContext
- T SDL_GL_DeleteContext
+ T SDL_GL_DestroyContext
  T SDL_GL_ExtensionSupported
  T SDL_GL_GetAttribute
  T SDL_GL_GetCurrentContext
@@ -455,6 +453,7 @@
  T SDL_GamepadSensorEnabled
  T SDL_GetAssertionHandler
  T SDL_GetAssertionReport
+ T SDL_GetAudioDeviceChannelMap
  T SDL_GetAudioDeviceFormat
  T SDL_GetAudioDeviceGain
  T SDL_GetAudioDeviceName
@@ -467,21 +466,23 @@
  T SDL_GetAudioStreamFormat
  T SDL_GetAudioStreamFrequencyRatio
  T SDL_GetAudioStreamGain
+ T SDL_GetAudioStreamInputChannelMap
+ T SDL_GetAudioStreamOutputChannelMap
  T SDL_GetAudioStreamProperties
  T SDL_GetAudioStreamQueued
  T SDL_GetBasePath
  T SDL_GetBooleanProperty
  T SDL_GetCPUCacheLineSize
  T SDL_GetCPUCount
- T SDL_GetCameraDeviceName
- T SDL_GetCameraDevicePosition
- T SDL_GetCameraDeviceSupportedFormats
- T SDL_GetCameraDevices
  T SDL_GetCameraDriver
  T SDL_GetCameraFormat
- T SDL_GetCameraInstanceID
+ T SDL_GetCameraID
+ T SDL_GetCameraName
  T SDL_GetCameraPermissionState
+ T SDL_GetCameraPosition
  T SDL_GetCameraProperties
+ T SDL_GetCameraSupportedFormats
+ T SDL_GetCameras
  T SDL_GetClipboardData
  T SDL_GetClipboardText
  T SDL_GetClosestFullscreenDisplayMode
@@ -527,28 +528,26 @@
  T SDL_GetGamepadButtonLabelForType
  T SDL_GetGamepadConnectionState
  T SDL_GetGamepadFirmwareVersion
- T SDL_GetGamepadFromInstanceID
+ T SDL_GetGamepadFromID
  T SDL_GetGamepadFromPlayerIndex
- T SDL_GetGamepadInstanceGUID
- T SDL_GetGamepadInstanceID
- T SDL_GetGamepadInstanceMapping
- T SDL_GetGamepadInstanceName
- T SDL_GetGamepadInstancePath
- T SDL_GetGamepadInstancePlayerIndex
- T SDL_GetGamepadInstanceProduct
- T SDL_GetGamepadInstanceProductVersion
- T SDL_GetGamepadInstanceType
- T SDL_GetGamepadInstanceVendor
+ T SDL_GetGamepadGUIDForID
+ T SDL_GetGamepadID
  T SDL_GetGamepadJoystick
  T SDL_GetGamepadMapping
  T SDL_GetGamepadMappingForGUID
+ T SDL_GetGamepadMappingForID
  T SDL_GetGamepadMappings
  T SDL_GetGamepadName
+ T SDL_GetGamepadNameForID
  T SDL_GetGamepadPath
+ T SDL_GetGamepadPathForID
  T SDL_GetGamepadPlayerIndex
+ T SDL_GetGamepadPlayerIndexForID
  T SDL_GetGamepadPowerInfo
  T SDL_GetGamepadProduct
+ T SDL_GetGamepadProductForID
  T SDL_GetGamepadProductVersion
+ T SDL_GetGamepadProductVersionForID
  T SDL_GetGamepadProperties
  T SDL_GetGamepadSensorData
  T SDL_GetGamepadSensorDataRate
@@ -559,18 +558,20 @@
  T SDL_GetGamepadStringForType
  T SDL_GetGamepadTouchpadFinger
  T SDL_GetGamepadType
+ T SDL_GetGamepadTypeForID
  T SDL_GetGamepadTypeFromString
  T SDL_GetGamepadVendor
+ T SDL_GetGamepadVendorForID
  T SDL_GetGamepads
  T SDL_GetGlobalMouseState
  T SDL_GetGlobalProperties
  T SDL_GetGrabbedWindow
  T SDL_GetHapticEffectStatus
  T SDL_GetHapticFeatures
- T SDL_GetHapticFromInstanceID
- T SDL_GetHapticInstanceID
- T SDL_GetHapticInstanceName
+ T SDL_GetHapticFromID
+ T SDL_GetHapticID
  T SDL_GetHapticName
+ T SDL_GetHapticNameForID
  T SDL_GetHaptics
  T SDL_GetHint
  T SDL_GetHintBoolean
@@ -583,50 +584,50 @@
  T SDL_GetJoystickButton
  T SDL_GetJoystickConnectionState
  T SDL_GetJoystickFirmwareVersion
- T SDL_GetJoystickFromInstanceID
+ T SDL_GetJoystickFromID
  T SDL_GetJoystickFromPlayerIndex
  T SDL_GetJoystickGUID
+ T SDL_GetJoystickGUIDForID
  T SDL_GetJoystickGUIDFromString
  T SDL_GetJoystickGUIDInfo
  T SDL_GetJoystickGUIDString
  T SDL_GetJoystickHat
- T SDL_GetJoystickInstanceGUID
- T SDL_GetJoystickInstanceID
- T SDL_GetJoystickInstanceName
- T SDL_GetJoystickInstancePath
- T SDL_GetJoystickInstancePlayerIndex
- T SDL_GetJoystickInstanceProduct
- T SDL_GetJoystickInstanceProductVersion
- T SDL_GetJoystickInstanceType
- T SDL_GetJoystickInstanceVendor
+ T SDL_GetJoystickID
  T SDL_GetJoystickName
+ T SDL_GetJoystickNameForID
  T SDL_GetJoystickPath
+ T SDL_GetJoystickPathForID
  T SDL_GetJoystickPlayerIndex
+ T SDL_GetJoystickPlayerIndexForID
  T SDL_GetJoystickPowerInfo
  T SDL_GetJoystickProduct
+ T SDL_GetJoystickProductForID
  T SDL_GetJoystickProductVersion
+ T SDL_GetJoystickProductVersionForID
  T SDL_GetJoystickProperties
  T SDL_GetJoystickSerial
  T SDL_GetJoystickType
+ T SDL_GetJoystickTypeForID
  T SDL_GetJoystickVendor
+ T SDL_GetJoystickVendorForID
  T SDL_GetJoysticks
  T SDL_GetKeyFromName
  T SDL_GetKeyFromScancode
  T SDL_GetKeyName
  T SDL_GetKeyboardFocus
- T SDL_GetKeyboardInstanceName
+ T SDL_GetKeyboardNameForID
  T SDL_GetKeyboardState
  T SDL_GetKeyboards
  T SDL_GetLogOutputFunction
  T SDL_GetLogPriority
- T SDL_GetMasksForPixelFormatEnum
+ T SDL_GetMasksForPixelFormat
  T SDL_GetMaxHapticEffects
  T SDL_GetMaxHapticEffectsPlaying
  T SDL_GetMemoryFunctions
  T SDL_GetMice
  T SDL_GetModState
  T SDL_GetMouseFocus
- T SDL_GetMouseInstanceName
+ T SDL_GetMouseNameForID
  T SDL_GetMouseState
  T SDL_GetNaturalDisplayOrientation
  T SDL_GetNumAllocations
@@ -653,20 +654,21 @@
  T SDL_GetPens
  T SDL_GetPerformanceCounter
  T SDL_GetPerformanceFrequency
- T SDL_GetPixelFormatEnumForMasks
+ T SDL_GetPixelFormatDetails
+ T SDL_GetPixelFormatForMasks
  T SDL_GetPixelFormatName
  T SDL_GetPlatform
+ T SDL_GetPointerProperty
  T SDL_GetPowerInfo
  T SDL_GetPrefPath
  T SDL_GetPreferredLocales
  T SDL_GetPrimaryDisplay
  T SDL_GetPrimarySelectionText
- T SDL_GetProperty
  T SDL_GetPropertyType
  T SDL_GetRGB
  T SDL_GetRGBA
- T SDL_GetRealGamepadInstanceType
  T SDL_GetRealGamepadType
+ T SDL_GetRealGamepadTypeForID
  T SDL_GetRectAndLineIntersection
  T SDL_GetRectAndLineIntersectionFloat
  T SDL_GetRectEnclosingPoints
@@ -704,15 +706,15 @@
  T SDL_GetScancodeName
  T SDL_GetSemaphoreValue
  T SDL_GetSensorData
- T SDL_GetSensorFromInstanceID
- T SDL_GetSensorInstanceID
- T SDL_GetSensorInstanceName
- T SDL_GetSensorInstanceNonPortableType
- T SDL_GetSensorInstanceType
+ T SDL_GetSensorFromID
+ T SDL_GetSensorID
  T SDL_GetSensorName
+ T SDL_GetSensorNameForID
  T SDL_GetSensorNonPortableType
+ T SDL_GetSensorNonPortableTypeForID
  T SDL_GetSensorProperties
  T SDL_GetSensorType
+ T SDL_GetSensorTypeForID
  T SDL_GetSensors
  T SDL_GetSilenceValueForFormat
  T SDL_GetStorageFileSize
@@ -725,6 +727,7 @@
  T SDL_GetSurfaceColorKey
  T SDL_GetSurfaceColorMod
  T SDL_GetSurfaceColorspace
+ T SDL_GetSurfacePalette
  T SDL_GetSurfaceProperties
  T SDL_GetSystemRAM
  T SDL_GetSystemTheme
@@ -852,6 +855,8 @@
  T SDL_LogWarn
  T SDL_MapRGB
  T SDL_MapRGBA
+ T SDL_MapSurfaceRGB
+ T SDL_MapSurfaceRGBA
  T SDL_MaximizeWindow
  T SDL_MemoryBarrierAcquireFunction
  T SDL_MemoryBarrierReleaseFunction
@@ -868,7 +873,7 @@
  T SDL_OnApplicationWillTerminate
  T SDL_OpenAudioDevice
  T SDL_OpenAudioDeviceStream
- T SDL_OpenCameraDevice
+ T SDL_OpenCamera
  T SDL_OpenFileStorage
  T SDL_OpenGamepad
  T SDL_OpenHaptic
@@ -972,6 +977,8 @@
  T SDL_SetAudioStreamFrequencyRatio
  T SDL_SetAudioStreamGain
  T SDL_SetAudioStreamGetCallback
+ T SDL_SetAudioStreamInputChannelMap
+ T SDL_SetAudioStreamOutputChannelMap
  T SDL_SetAudioStreamPutCallback
  T SDL_SetBooleanProperty
  T SDL_SetClipboardData
@@ -1006,10 +1013,9 @@
  T SDL_SetModState
  T SDL_SetNumberProperty
  T SDL_SetPaletteColors
- T SDL_SetPixelFormatPalette
+ T SDL_SetPointerProperty
+ T SDL_SetPointerPropertyWithCleanup
  T SDL_SetPrimarySelectionText
- T SDL_SetProperty
- T SDL_SetPropertyWithCleanup
  T SDL_SetRelativeMouseMode
  T SDL_SetRenderClipRect
  T SDL_SetRenderColorScale
@@ -1116,6 +1122,7 @@
  T SDL_Vulkan_CreateSurface
  T SDL_Vulkan_DestroySurface
  T SDL_Vulkan_GetInstanceExtensions
+ T SDL_Vulkan_GetPresentationSupport
  T SDL_Vulkan_GetVkGetInstanceProcAddr
  T SDL_Vulkan_LoadLibrary
  T SDL_Vulkan_UnloadLibrary
@@ -1489,6 +1496,7 @@
  pthread_join
  pthread_join$UNIX2003
  pthread_key_create
+ pthread_key_delete
  pthread_mutex_destroy
  pthread_mutex_init
  pthread_mutex_lock

@@ -453,7 +453,7 @@
     },
     48479: (e, t, i) => {
       "use strict";
-      i.d(t, { AQ: () => u, qx: () => d });
+      i.d(t, { AQ: () => p, qx: () => h });
       var n = i(7068),
         a = i(61859),
         s = i(12155),
@@ -461,16 +461,19 @@
         o = i(52038),
         l = i(95695),
         m = i(84811),
-        c = i(64734);
-      function u(e) {
+        c = i(64734),
+        u = i(65946),
+        d = i(26408);
+      function p(e) {
         const {
-          title: t,
-          tooltip: i,
-          getMinimized: n,
-          toggleMinimized: a,
-          className: s,
-          children: u,
-        } = e;
+            title: t,
+            tooltip: i,
+            getMinimized: n,
+            toggleMinimized: a,
+            className: s,
+            children: p,
+          } = e,
+          h = (0, u.q3)(() => n());
         return r.createElement(
           r.Fragment,
           null,
@@ -493,22 +496,22 @@
                 ),
               },
               t,
-              Boolean(i) && r.createElement(h, { tooltip: i }),
+              Boolean(i) && r.createElement(d.o, { tooltip: i }),
             ),
-            r.createElement(p, { bIsMinimized: n(), fnToggleMinimize: a }),
+            r.createElement(T, { bIsMinimized: h, fnToggleMinimize: a }),
           ),
-          !n() && r.createElement(m.tH, null, u),
+          !h && r.createElement(m.tH, null, p),
         );
       }
-      function d(e) {
+      function h(e) {
         const [t, i] = r.useState(Boolean(e.bStartMinimized));
         return r.createElement(
-          u,
+          p,
           { ...e, getMinimized: () => t, toggleMinimized: () => i(!t) },
           e.children,
         );
       }
-      function p(e) {
+      function T(e) {
         const { bIsMinimized: t, fnToggleMinimize: i } = e,
           o = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
         return r.createElement(
@@ -517,17 +520,6 @@
           e.bIsMinimized
             ? r.createElement(s.hz4, null)
             : r.createElement(s.Xjb, null),
-        );
-      }
-      function h(e) {
-        return r.createElement(
-          "span",
-          {
-            "data-tooltip-text": e.tooltip,
-            className: (0, o.A)(l.HelperTooltip, "HelperTooltip"),
-          },
-          " ",
-          r.createElement(s._VW, null),
         );
       }
     },

@@ -1,26 +1,26 @@
 "use strict";
 (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
-  [5742],
+  [3714],
   {
-    99020: (e, n, t) => {
+    3524: (e, n, t) => {
       t.r(n), t.d(n, { default: () => w });
-      var l = t(9528),
-        a = t(90829),
-        c = t(74501),
-        r = t(27378),
-        u = t(31518),
-        o = t(25451),
-        i = t(31874),
-        m = t(90660);
+      var l = t(89748),
+        a = t(8326),
+        c = t(49566),
+        r = t(63696),
+        u = t(91435),
+        o = t(50341),
+        i = t(83857),
+        m = t(42318);
       const s = r.memo(function (e) {
         return r.createElement(
-          m.DT,
+          m.wC,
           null,
-          r.createElement(i.X, null),
-          r.createElement(o.W8, null),
+          r.createElement(i.L, null),
+          r.createElement(o.BV, null),
         );
       });
-      (0, t(79588).jQ)({ enforceActions: "never" }),
+      (0, t(89193).jK)({ enforceActions: "never" }),
         (async function () {
           !(function () {
             let e = window;
@@ -29,26 +29,25 @@
               (e.SetBackgroundInterval = window.setInterval),
               (e.SetBackgroundTimeout = window.setTimeout);
           })();
-          let e = (0, l.xz)();
+          let e = (0, l.KC)();
           await e.Init(window.cm);
         })();
       const w = function (e) {
-        const n = (0, l.gl)();
+        const n = (0, l.gK)();
         return (
-          (0, a.pJ)(1920, 1080),
+          (0, a.E4)(1920, 1080),
           r.createElement(
             r.Fragment,
             null,
             r.createElement(
-              u.Y0,
+              u.EO,
               { bOnlyPopups: !0 },
               r.createElement(s, null),
-              n && r.createElement(c.g1, { cm: e.cm }),
+              n && r.createElement(c.us, { cm: e.cm }),
             ),
           )
         );
       };
     },
   },
-]);
-//# sourceMappingURL=sourcemaps/sp.js.map
+]); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/sp.js.map

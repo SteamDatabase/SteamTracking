@@ -1778,6 +1778,7 @@
  avcodec_flush_buffers
  avcodec_free_context
  avcodec_open2
+ avcodec_parameters_from_context
  avcodec_parameters_to_context
  avcodec_receive_frame
  avcodec_send_packet

@@ -1,42 +1,42 @@
 (self.webpackChunksteamui = self.webpackChunksteamui || []).push([
-  [6109],
+  [9129],
   {
-    68277: (e) => {
+    91645: (e) => {
       e.exports = {
-        IconContainer: "_6TbQgZuwNMr5374_y7IIT",
-        ButtonContainer: "kaquAx4n5hv2_VCVYmDId",
-        InfoContainer: "_2ydoRKFVIxw7ZQ2k73pC27",
-        IconImg: "_2xJ_LSjLIQ-XLrZqZiOK0o",
-        ReactionCount: "_22PNg3cCBQ6SytI8Vz6pyT",
-        IconList: "_1NEGw6cerEqhcblDvEalvd",
+        IconContainer: "_6f_B5nDywKxTeX2mN82H",
+        ButtonContainer: "_1ShXayKQrFaUxECMORaNmM",
+        InfoContainer: "_20mER4KVFt1wYBaOFlnjvL",
+        IconImg: "RP1UpBcTVectpTel7p6iH",
+        ReactionCount: "_18GX_0BWySenzVNaYO4IsZ",
+        IconList: "_2cI0LExX5UtjoTq7F6CTwY",
       };
     },
-    31149: (e, t, n) => {
+    3909: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { AwardIcon: () => u, AwardIconList: () => l });
-      var o = n(27378),
-        r = n(91055),
-        c = n(94256),
-        a = n(68277),
-        s = n.n(a),
-        i = n(86064),
-        p = n(35484);
-      class u extends o.PureComponent {
+      n.r(t), n.d(t, { AwardIcon: () => m, AwardIconList: () => l });
+      var o = n(63696),
+        a = n(28017),
+        r = n(98995),
+        c = n(91645),
+        s = n.n(c),
+        i = n(46108),
+        p = n(90765);
+      class m extends o.PureComponent {
         render() {
-          const e = (0, i.kb)(
+          const e = (0, i.Yp)(
             "#RewardsReaction_Tooltip",
             this.props.reaction.count || 0,
-            (0, r.C)(this.props.reaction.reaction_type),
+            (0, a.h)(this.props.reaction.reaction_type),
           );
           return o.createElement(
-            c.HP,
+            r.he,
             {
-              className: (0, p.Z)(s().InfoContainer, s().IconContainer),
+              className: (0, p.A)(s().InfoContainer, s().IconContainer),
               toolTipContent: e,
             },
             o.createElement("img", {
               className: s().IconImg,
-              src: (0, r.w)(this.props.reaction.reaction_type, !1),
+              src: (0, a.e)(this.props.reaction.reaction_type, !1),
             }),
             this.props.reaction.count &&
               o.createElement(
@@ -51,11 +51,10 @@
         render() {
           let e = [];
           for (const t of this.props.reactions)
-            e.push(o.createElement(u, { key: t.reaction_type, reaction: t }));
+            e.push(o.createElement(m, { key: t.reaction_type, reaction: t }));
           return o.createElement("div", { className: s().IconList }, e);
         }
       }
     },
   },
-]);
-//# sourceMappingURL=sourcemaps/awardicon.js.map
+]); //# sourceMappingURL=file:///home/buildbot/buildslave/npm-coordinator-rel-steamui/build/client/steamui/sourcemaps/awardicon.js.map

@@ -121,13 +121,11 @@ message CTimelineEntry {
 	optional uint64 time = 3;
 	optional .ETimelineEntryType type = 4 [default = k_ETimelineEntryType_Invalid];
 	optional int32 game_mode = 5;
-	optional string range_id = 6;
 	optional string range_title = 7;
 	optional uint64 range_duration = 8;
 	optional int32 range_possible_clip = 9;
 	optional string timestamp_title = 10;
 	optional string marker_icon = 11;
-	optional string marker_title = 12;
 	optional string marker_description = 13;
 	optional int32 marker_priority = 14;
 	optional uint32 screenshot_handle = 15;

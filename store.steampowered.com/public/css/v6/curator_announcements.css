@@ -91,6 +91,14 @@ body.v6 h2.announcement_top_title{
     z-index: 2;
     position: relative;
 }
+.creator_announcement_browse_adjustment:last-child {
+	z-index: 1;
+}
+
+.creator_announcement_browse_adjustment .page_content {
+	position: relative;
+	z-index: 3;
+}
 
 @media screen and (max-width: 1400px) {
 	html .creator_announcement_adjustment.not(.background_header_ctn) {

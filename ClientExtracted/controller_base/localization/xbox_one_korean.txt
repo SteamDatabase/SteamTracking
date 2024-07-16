@@ -28,8 +28,10 @@
 	"origin_xboxone_shoulder_r"						"오른쪽 범퍼"
 	"origin_xboxone_button_menu"					"메뉴 버튼"
 	"origin_xboxone_button_view"					"보기 버튼"
+	"origin_xboxone_button_dpad_move"				"방향 패드 조작"
 	"origin_xboxone_button_paddle_1"				"P1 패들"
 	"origin_xboxone_button_paddle_2"				"P2 패들"
 	"origin_xboxone_button_paddle_3"				"P3 패들"
 	"origin_xboxone_button_paddle_4"				"P4 패들"
-	}
+	"origin_xboxone_button_share"					"공유 버튼"
+}

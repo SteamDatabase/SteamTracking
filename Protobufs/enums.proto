@@ -572,4 +572,5 @@ enum EExternalSaleEventType {
 	k_EExternalSaleEventType_Showcase = 2;
 	k_EExternalSaleEventType_Region = 3;
 	k_EExternalSaleEventType_Theme = 4;
+	k_EExternalSaleEventType_Franchise = 5;
 }

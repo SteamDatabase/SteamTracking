@@ -321,7 +321,7 @@
 "SteamUI_GamePropertiesContent_Updating"	"Actualizando, %s1"
 "SteamUI_GamePropertiesContent_ReadyToPlay"	"Listo para iniciar"
 "SteamUI_GamePropertiesContent_Launching"	"Iniciando..."
-"SteamUI_GamePropertiesContent_CacheAcquired"	"%cache_usage%%%"
+"SteamUI_GamePropertiesContent_CacheAcquired"	"%cache_usage% %%"
 "SteamUI_GamePropertiesContent_DiskUsageLabel"	"Uso del disco:"
 "SteamUI_GamePropertiesContent_DeveloperLabel"	"Desarrollador:"
 
@@ -569,7 +569,7 @@
 "Steam_ErrorCouldNotConnect" 	"No se ha podido conectar a la red de Steam.\nPuede ser debido a un problema con tu conexión a Internet o con la red de Steam. Visita www.steampowered.com para obtener más información."
 
 "steam_preload_title"			"Precargar %game%"
-"steam_preloading_title"		"Precargando %game% (%preload_amount%%% completado)"
+"steam_preloading_title"		"Precargando %game% (%preload_amount% %% completado)"
 "steam_sellpage_title"			"%subscription%"
 
 "Steam_GamesDialog_ComingSoon"	"PRÓXIMAMENTE"
@@ -1377,15 +1377,15 @@
 
 "Steam_UnableToPreload" "Los servidores de Steam están muy ocupados en estos momentos y no pueden procesar más precargas de %game%.\nVuelve a intentarlo dentro de unas horas."
 "Steam_Error_Preload_Title" "Error al precargar"
-"Steam_PreloadProgress"			"%preload_amount%%% precargado"
+"Steam_PreloadProgress"			"%preload_amount% %% precargado"
 
 "Steam_PurchaseFraudWarning" "El fraude en el uso de las tarjetas de crédito es un delito, y Valve coopera con la aplicación de la ley para actuar contra esta actividad ilegal."
 
-"Steam_CacheValidation_Title"		"Validando archivos de Steam - %progress%%% completado"
+"Steam_CacheValidation_Title"		"Validando archivos de Steam - %progress% %% completado"
 "Steam_ValidatingSteamCaches"		"Validando archivos de %cache_name% (%cache_number% de %cache_total%)"
 "Steam_ValidatingSteamCaches_Label"		"Validando archivos de caché de Steam (%cache_number% de %cache_total%)"
 
-"Steam_CacheDecryption_Title"		"Descifrando archivos de Steam - %progress%%% completado"
+"Steam_CacheDecryption_Title"		"Descifrando archivos de Steam - %progress% %% completado"
 "Steam_DecryptingSteamCaches"		"Descifrando archivos de juego %cache_name%"
 "Steam_DecryptingSteamCaches_Label"	"Espera mientras Steam desbloquea los archivos del juego."
 
@@ -2269,9 +2269,9 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "Steam_P2POptions_FolderLabel"		"Carpeta de descargas Peer-to-peer (\"Freloads\"):"
 "Steam_P2POptions_UploadSpeedLabel"	"Limitar velocidad de carga a:"
 "Steam_P2POptions_SharingLabel"		"Compartir con software Peer-to-peer:"
-"Steam_P2POptions_SharingHelpText_StopImmediately"	"(Cuando se haya descargado el 100% de un archivo, se dejará de compartir inmediatamente.)"
-"Steam_P2POptions_SharingHelpText_UntilRatio"	"(Cuando se haya descargado el 100% de un archivo, se seguirá compartiendo hasta que hayas compartido el archivo una vez.)"
-"Steam_P2POptions_SharingHelpText_Manual"	"(Cuando se haya descargado el 100% de un archivo, se seguirá compartiendo hasta que lo desactives manualmente o te unas a una partida)"
+"Steam_P2POptions_SharingHelpText_StopImmediately"	"(Cuando se haya descargado el 100 % de un archivo, se dejará de compartir inmediatamente.)"
+"Steam_P2POptions_SharingHelpText_UntilRatio"	"(Cuando se haya descargado el 100 % de un archivo, se seguirá compartiendo hasta que hayas compartido el archivo una vez.)"
+"Steam_P2POptions_SharingHelpText_Manual"	"(Cuando se haya descargado el 100 % de un archivo, se seguirá compartiendo hasta que lo desactives manualmente o te unas a una partida)"
 
 "Steam_P2POptions_SharingCB_StopImmediately"	"Dejar de compartir los archivos en cuanto se descarguen por completo"
 "Steam_P2POptions_SharingCB_UntilRatio"	"Compartir los archivos hasta que la proporción de descarga/carga sea 1:1"
@@ -2292,7 +2292,7 @@ Necesitarás cerrar la sesión en OSX para que los cambios surtan efecto."
 "Steam_P2P_PausedLabel"			"En pausa: %game%"
 "Steam_P2P_DownloadLabel_Complete"	"%game%"
 "Steam_P2P_ProgressLabel"		"%percentcomplete% completado; quedan %remainingtime%"
-"Steam_P2P_ProgressLabel_Complete"	"100% completado"
+"Steam_P2P_ProgressLabel_Complete"	"100 % completado"
 "Steam_P2P_ProgressLabel_Paused"	"%percentcomplete% completado"
 "Steam_P2P_DownloadRateLabel"		"Velocidad de descarga: %dlrate% (máxima: %dlpeak%)"
 "Steam_P2P_UploadRateLabel"		"Velocidad de carga: %ulrate% (máxima: %ulpeak%)"

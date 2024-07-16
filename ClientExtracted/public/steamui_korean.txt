@@ -119,10 +119,10 @@
 "Steam_ForgottenPassword_Incorrect" "비밀번호를 변경하지 못했습니다.\n확인 코드를 잘못 입력하였거나\n새로운 비밀번호가 잘못되었습니다.\n\n'뒤로'를 클릭한 다음 다시 시도하세요. \n"
 "Steam_ForgottenPassword_Success" "비밀번호가 변경되었습니다.\n\n'마침'을 클릭하면 로그인 화면으로 돌아갑니다."
 "Steam_ForgottenPassword_SamePassword" "입력하신 비밀번호가 현재 사용 중인 비밀번호와 같습니다. 뒤로 돌아가서 다른 비밀번호를 입력하거나 비밀번호 변경을 취소하고 현재 사용 중인 비밀번호로 로그인하세요\n"
-"Steam_ForgottenPassword_EnterAuthCodeDescription" "귀하의 휴대전화에 설치된 Steam 모바일 앱의 현재 Steam Guard 인증 코드를 입력하세요."
+"Steam_ForgottenPassword_EnterAuthCodeDescription" "귀하의 휴대폰에 설치된 Steam 모바일 앱의 현재 Steam Guard 인증 코드를 입력하세요."
 "Steam_ForgottenPassword_EnterAuthCode" "Steam Guard 코드"
 "Steam_ForgottenPassword_EnterSms" "SMS 코드"
-"Steam_ForgottenPassword_EnterSmsDescription"	"귀하의 휴대전화로 SMS를 발송했습니다. 아래에 그 코드를 입력하세요."
+"Steam_ForgottenPassword_EnterSmsDescription"	"귀하의 휴대폰으로 SMS를 발송했습니다. 아래에 그 코드를 입력하세요."
 
 "Steam_ForgottenPassword_EmailCodeDescription" "방금 귀하의 계정 이메일 주소로 확인 코드가 포함된 이메일을 발송했습니다.\n\n계속 하시려면 아래에 그 코드를 입력하세요."
 "Steam_ForgottenPassword_EmailCode" "이메일 코드"
@@ -146,7 +146,7 @@
 "SteamUI_CreateAccount_ContactEmail"	"연락 메일 주소"
 "SteamUI_CreateAccount_ContactEmailConfirm"	"메일 주소 확인"
 "SteamUI_CreateAccount_ValidationCode"	"인증 코드"
-"SteamUI_CreateAccount_CopyAndPaste"	"이 코드를 복사하고 아래 칸에 붙여넣으십시오."
+"SteamUI_CreateAccount_CopyAndPaste"	"이 코드를 복사하고 아래 칸에 붙여넣으세요."
 "SteamUI_CreateAccount_Response"	"Steam에서 몇 분 이내에 인증 코드가 포함된 \n답변 메일을 보낼 것입니다."
 "SteamUI_CreateAccount_SentTo"	"다음 주소로 확인 메일 발송됨:"
 "SteamUI_CreateAccount_EnterCodeAgain"	"코드를 다시 입력하거나 다른 메일 주소를 제공하려면 \n'뒤로'를 클릭하세요."
@@ -339,7 +339,7 @@
 
 "SteamUI_WelcomeCreatingAccount_Title"		"Steam - 계정 만들기"
 "SteamUI_WelcomeCreatingAccount_Failure_Title"	"Steam - 계정 만들기 실패"
-"SteamUI_WelcomeCreatingAccount_Failed"		"계정을 만들지 못했습니다.\n'뒤로'를 클릭한 후 다시 시도하거나 '취소'를 클릭하여 끝내십시오."
+"SteamUI_WelcomeCreatingAccount_Failed"		"계정을 만들지 못했습니다.\n'뒤로'를 클릭한 후 다시 시도하거나 '취소'를 클릭하여 끝내세요."
 
 "SteamUI_WelcomeCreatingAccountAccountName"		"계정 이름"
 "SteamUI_WelcomeCreatingAccountEnterName" "계정 이름과 비밀번호를 입력하세요.\n비밀번호는 최소 8자 이상이어야 하며, 다른 사람들이 추측하기 어려운 것이어야 합니다."
@@ -599,7 +599,7 @@
 "Steam_PreLoading1Detail"		"제한 없이 게임 다운로드"
 "Steam_PreLoading2"				"2. 신용카드로 주문 절차 완료"
 "Steam_PreLoading2Detail"		"컴퓨터에 게임 콘텐츠가 모두 다운로드되면 주문을 완료할 수 있습니다."
-"Steam_PreLoading3"				"3. 출시일에 게임을 즐기십시오!"
+"Steam_PreLoading3"				"3. 출시일에 게임을 즐기세요!"
 "Steam_PreLoading3Detail"		"%game% 게임이 정식으로 출시되면 복사본의 잠금이 해제되어 바로 게임을 플레이할 수 있습니다."
 "Steam_StartPreloading"			"미리받기 시작"
 
@@ -657,7 +657,7 @@
 "Steam_ChangeCred_EmailProgress"	"Steam 서버에 접속하여 다음 계정으로 확인 메시지를 발송합니다."
 "Steam_ChangeCred_ForgotPassword"	"비밀번호를 잊어버리셨나요?"
 "Steam_ChangeCred_LostEmail"		"이메일을 사용할 수 없나요?"
-"Steam_ChangeCred_LostPhone"		"휴대전화를 사용할 수 없나요?"
+"Steam_ChangeCred_LostPhone"		"휴대폰을 사용할 수 없나요?"
 "Steam_ChangeCred_LostTwoFactor"	"Steam Guard 모바일 인증기를 사용할 수 없나요?"
 "Steam_ChangeCred_EnterCode"		"%s1 계정으로 발송된 확인 코드를 입력하세요"
 "Steam_ChangeCred_EnterTwoFactorCode"		"Steam Guard 모바일 인증기에서 코드를 입력하세요."
@@ -693,7 +693,7 @@
 
 "SteamUI_RecoverAuthenticatorEmailOrSmsChoice"		"귀하의 폰에서 Steam Guard 인증기를 제거하시려면 SMS 코드나 귀하가 계정에 인증기를 추가할 때 적어놓았던 코드('R'로 시작하며 몇 개의 숫자가 붙어있습니다)가 필요합니다."
 "SteamUI_RecoverAuthenticatorUseEmail"				"내게 이메일 코드 발송"
-"SteamUI_RecoverAuthenticatorUseSms"				"내 휴대전화에 SMS 코드 보내기"
+"SteamUI_RecoverAuthenticatorUseSms"				"내 휴대폰에 SMS 코드 보내기"
 "Steam_RecoverAuthenticator_EnterSmsDescription"	"귀하의 계정에 등록된 전화번호로 SMS를 발송했습니다. 아래에 SMS 번호를 입력하세요."
 "Steam_RecoverAuthenticator_Authorization"			"확인 코드가 담긴 메일을 귀하의 메일 주소로 보냈습니다. 코드는 'D'로 시작하며 몇 개의 숫자가 붙어있습니다. 아래에 코드를 입력하세요."
 "Steam_RecoverAuthenticator_VerificationCode"		"메일 코드"
@@ -712,7 +712,7 @@
 "Steam_PurchaseEmail_ContactEmail" "연락 메일 주소"
 "Steam_PurchaseEmail_ValidationCode" "인증 코드"
 "Steam_PurchaseEmail_Confirmation" "다음 주소로 확인 메일 발송됨:"
-"Steam_PurchaseEmail_Response" "Steam에서 몇 분 이내에 인증 코드가 포함된 \n답변 메일을 보낼 것입니다.\n\n이 코드를 복사하고 아래 칸에 붙여넣으십시오."
+"Steam_PurchaseEmail_Response" "Steam에서 몇 분 이내에 인증 코드가 포함된 \n답변 메일을 보낼 것입니다.\n\n이 코드를 복사하고 아래 칸에 붙여넣으세요."
 "Steam_PurchaseEmail_BadCode" "이 코드는 Steam이 보유한 코드와 일치하지 않습니다. \n코드를 정확하게 입력했는지 확인하세요. \n제목이 'Steam 계정 - Steam에서 이메일 주소를 인증해 주세요.'인\n이메일에 코드가 포함되어 발송되었습니다. \n이메일 주소를 인증해 주세요. 코드는 8자로 구성되어 있습니다. \n\n코드를 다시 입력하거나 다른 이메일 주소를 \n입력하려면 '뒤로'를 클릭하세요."
 "Steam_PurchaseEmail_Code" "입력된 인증 코드"
 
@@ -1149,17 +1149,17 @@
 
 "Steam_CreditCardEncrypted"	"신용카드 정보가 전송되고 처리되는 동안 암호화됩니다."
 
-"SteamUI_AccountNameInUse" "계정을 만들지 못했습니다.\n계정 이름이 이미 사용 중입니다.\n다른 계정 이름으로 다시 시도해 보십시오."
+"SteamUI_AccountNameInUse" "계정을 만들지 못했습니다.\n계정 이름이 이미 사용 중입니다.\n다른 계정 이름으로 다시 시도해 보세요."
 "Steam_ErrorValidEmailRequired" "유효한 메일 주소를 입력해야 합니다."
 "Steam_ForgottenPassword_CouldNotFindEmail" "계정을 찾을 수 없습니다.\nSteam에 로그인할 때 사용하는 계정 이름을 입력해 주세요."
-"SteamUI_CreateAccountFailedPasswordIllegal" "계정 생성에 실패하였습니다.\n입력하신 비밀번호는 안정성 요구치를 충족하지 않습니다. 다른 비밀번호로 시도해보십시오."
+"SteamUI_CreateAccountFailedPasswordIllegal" "계정 생성에 실패하였습니다.\n입력하신 비밀번호는 안정성 요구치를 충족하지 않습니다. 다른 비밀번호로 시도해보세요."
 
 "SteamUI_ChosenCreateNewAccountHeadline" "Steam 계정은 매우 중요합니다!"
 "SteamUI_ChosenCreateNewAccount" "사용자 이름과 비밀번호는 게임을 시작하기 위해 로그인할 때 필요하므로 반드시 기억하고 있어야 합니다. 사용 중인 컴퓨터에 Steam이 게임을 다운로드합니다."
 "SteamUI_ForMoreInformation" "자세한 내용은 다음 사이트를 방문해 주세요."
 
 "SteamUI_ChosenCreateMultipleHeadline" "Steam 계정에 관한 중요한 정보"
-"SteamUI_ChosenCreateDuplicate" "계정이 없는 경우에만 새 Steam 계정을 만드십시오. 이미 Steam 계정이 있는 경우 가입된 모든 게임은 해당 계정으로 로그인해야만 플레이할 수 있습니다. \n\nSteam 계정이 없는 경우 \"다음\"을 누르십시오."
+"SteamUI_ChosenCreateDuplicate" "계정이 없는 경우에만 새 Steam 계정을 만드세요. 이미 Steam 계정이 있는 경우 가입된 모든 게임은 해당 계정으로 로그인해야만 플레이할 수 있습니다. \n\nSteam 계정이 없는 경우 \"다음\"을 누르세요."
 
 "SteamUI_CCWarning_Duplicate"	"이 구매 요청을 전송하기 전에:\n\n현재 구매 요청에는 이미 전송된 구매 요청과 똑같은(또는 매우 유사한) 정보가 포함되어 있습니다. 신용카드에 문제가 없는 상태에서 거절되었다고 확신한 경우에만 구매 요청을 다시 시도하세요.\n\n중요: 해당 신용카드 업체가 구매 요청을 거부한 경우 일정 시간 동안 신용카드를 사용할 수 없게 될 수도 있습니다."
 "SteamUI_CCWarning" "Steam - 주의"
@@ -1206,7 +1206,7 @@
 "Steam_TroubleshooterURL_CDKey" "https://support.steampowered.com/kb/1968-HKLX-7538/"
 
 "Steam_SubscriptionSuccess_CDKey_Headline" "등록되었습니다!"
-"Steam_SubscriptionSuccess_CDKey" "제품 활성화 코드가 성공적으로 등록되었습니다. 하단에 기재된 제품들이 Steam 계정에 영구적으로 등록됩니다. 방금 Steam에 등록한 항목에 접근하려면 해당 계정으로 로그인해야 합니다.\n\n이후 참조할 수 있도록 거래 내역 영수증을 인쇄해 두십시오."
+"Steam_SubscriptionSuccess_CDKey" "제품 활성화 코드가 성공적으로 등록되었습니다. 하단에 기재된 제품들이 Steam 계정에 영구적으로 등록됩니다. 방금 Steam에 등록한 항목에 접근하려면 해당 계정으로 로그인해야 합니다.\n\n이후 참조할 수 있도록 거래 내역 영수증을 인쇄해 두세요."
 
 "Steam_SubscriptionSuccess_ComingSoonOnly" "귀하의 제품 코드가 성공적으로 활성화되었습니다. 이 콘텐츠는 게임이 일단 Steam에 출시되면 사용하실 수 있습니다. 이 콘텐츠는 이제 귀하의 Steam 계정에 영구히 귀속됩니다. 방금 Steam에서 활성화한 항목에 접근하시려면 이 계정으로 로그인하셔야 합니다."
 
@@ -1481,7 +1481,7 @@
 "SteamUI_MBPEnegySaverLinkText"	"여기를 클릭하여 에너지 절약 환경설정 창을 엽니다."
 
 "SteamUI_PleaseInsertRetailCDRom_Title"	"CD / DVD 필수"
-"SteamUI_PleaseInsertRetailCDRom_Info"	"드라이브에 %subscription% CD 또는 DVD를 넣으십시오."
+"SteamUI_PleaseInsertRetailCDRom_Info"	"드라이브에 %subscription% CD 또는 DVD를 넣으세요."
 
 "Steam_ErrorPurchasePending_Title"	"Steam - 구매 대기 중"
 "Steam_ErrorPurchasePending_Info"	"구매 요청을 현재 처리 중입니다. - 거래가 완료되면 바로 결과를 알려드리겠습니다.\n처리되는 동안 이 게임을 플레이할 수 없다는 점을 유의하세요."
@@ -1562,14 +1562,14 @@
 "Steam_ComplianceRequired_Title"	"Steam - 주의"
 "Steam_ComplianceRequired_Info"		"계속 진행하려면 Steam 이용 약관의 모든 조항에 동의해야 합니다."
 
-"Steam_Legal_UnreleasedProduct"	"* 본 제품은 아직 출시가 되지 않았으며, 출시가 되면 제품을 구매한 모든 분들께 제공될 것입니다. 이 제품의 출시일은 아직 확정되지 않았습니다. 따라서, 비공식적인 출처를 통한 출시 예정 날짜에 의존하지 마십시오."
+"Steam_Legal_UnreleasedProduct"	"* 본 제품은 아직 출시가 되지 않았으며, 출시가 되면 제품을 구매한 모든 분들께 제공될 것입니다. 이 제품의 출시일은 아직 확정되지 않았습니다. 따라서, 비공식적인 출처를 통한 출시 예정 날짜에 의존하지 마세요."
 "Steam_Legal_TimeToShipGoods"	"**  Half-Life 2 골드 패키지와 함께 제공되는 사은품에는 6-8주의 배송 기간이 있습니다."
 "Steam_Legal_SSACheckbox"	"Steam 이용 약관 및 여기서 설명된 묶음의 조건은 본 구매 항목에 적용된다는 것에 동의합니다."
 "Steam_Legal_SSANext"	"동의"
 "Steam_Legal_SSADisagree"	"동의하지 않음"
 "SteamUI_HardwarePromoWizard_Title" "프로모션 행사에 등록하세요."
 "Steam_HardwarePromo_Intro" "축하합니다! 행사 대상 자격을 갖추셨군요. 제공되는 혜택은 단 하나의 Steam 계정에만 사용할 수 있으며, 어느 컴퓨터에서든 Steam 계정에 로그인하기만 하면 해당 게임을 플레이할 수 있습니다."
-"Steam_Legal_HardwarePromo_Unreleased" "이 패키지의 일부는 아직 출시되지 않아 현재 플레이할 수 없습니다. 출시되면 바로 Steam을 통해 자동으로 제공됩니다. 이들 제품의 출시일은 아직 확정되지 않았으며, 다른 어떤 출시 예정일도 확실하지 않습니다. 추가 약관을 보려면 '다음'을 누르십시오."
+"Steam_Legal_HardwarePromo_Unreleased" "이 패키지의 일부는 아직 출시되지 않아 현재 플레이할 수 없습니다. 출시되면 바로 Steam을 통해 자동으로 제공됩니다. 이들 제품의 출시일은 아직 확정되지 않았으며, 다른 어떤 출시 예정일도 확실하지 않습니다. 추가 약관을 보려면 '다음'을 누르세요."
 "Steam_Working_HardwarePromo" "등록 요청..."
 "SteamUI_OEMTicketWizard_Title" "OEM 라이선스 등록"
 
@@ -1598,7 +1598,7 @@
 "Steam_ChooseBackupDirectory_Info"	"백업 파일을 만들 디렉토리를 선택하세요."
 "Steam_BackupDirectory"			"백업 위치"
 "Steam_ChangeDirectory"			"찾아보기..."
-"Steam_BackingUpFiles_Info"		"백업 아카이브를 압축하고 저장하는 동안 잠시 기다리십시오..."
+"Steam_BackingUpFiles_Info"		"백업 아카이브를 압축하고 저장하는 동안 잠시 기다려 주세요."
 "Steam_BadBackupDir_Title"		"Steam - 백업"
 "Steam_CannotBackupToRootDirectory"	"시스템 디렉토리에 백업 파일을 만들 수 없습니다."
 "Steam_CannotCreateBackupDirectory"	"선택하신 폴더는 존재하지 않으며, Steam도 해당 폴더를 생성할 수 없었습니다."
@@ -2331,8 +2331,8 @@
 
 "Steam_Install_SelectGames"		"설치할 게임을 선택하세요."
 
-"Steam_InsertNextDisk_Title"		"Steam - 다음 디스크를 넣으십시오."
-"Steam_InsertNextDisk_Info"		"%disk% 디스크를 넣으십시오."
+"Steam_InsertNextDisk_Title"		"Steam - 다음 디스크를 넣으세요."
+"Steam_InsertNextDisk_Info"		"%disk% 디스크를 넣으세요."
 
 "Steam_InstallingFromDisk"			"디스크 %disk%"
 "Steam_InstallingWithTimeRemaining"	"설치 중: %s1 남음"
@@ -2818,7 +2818,7 @@
 "Steam_GuestPasses_Title"		"선물 및 게스트 패스"
 "Steam_GuestPasses_Description"		"선물은 친구에게 줄 수 있는 풀 버전의 게임입니다.\n\n게스트 패스를 통해 일시적인 게임 시험판을 친구에게 보내 친구가 게임을 직접 경험해 볼 수 있도록 하고 온라인에서 함께 플레이할 수도 있습니다."
 "Steam_GuestPasses_NoneAvailable"	"현재 사용 가능한 선물 또는 게스트 패스가 없습니다."
-"Steam_GuestPasses_LoadingList"		"Steam이 선물 목록을 불러오는 중입니다. 잠시 기다려 주세요..."
+"Steam_GuestPasses_LoadingList"		"Steam이 선물 목록을 불러오는 중입니다. 잠시 기다려 주세요."
 "Steam_GuestPasses_Offline"		"오프라인 모드에서는 선물을 사용할 수 없습니다."
 "Steam_GuestPasses_PackageNameColumn"	"게임"
 "Steam_GuestPasses_StatusColumn"	"상태"
@@ -2848,9 +2848,9 @@
 "Steam_SendGuestPass_PendingError$type=guestpass"	"지난 24시간 이내에 %search%에게 이미 게스트 패스를 보냈습니다. 가장 최근의 시도 이후 24시간이 지나기 전에는 이 주소로 게스트 패스를 보낼 수 없습니다.\n\n다른 받는 사람을 지정하려면 '뒤로'를 클릭하세요."
 
 "Steam_SendGuestPass_InvitingFriendHeadline$type=guestpass" "게스트 패스 보내는 중..."
-"Steam_SendGuestPass_InvitingFriend$type=guestpass"	"게스트 패스를 %search%에게 보내는 중입니다.\n잠시 기다려 주세요..."
+"Steam_SendGuestPass_InvitingFriend$type=guestpass"	"게스트 패스를 %search%에게 보내는 중입니다.\n잠시 기다려 주세요."
 "Steam_SendGuestPass_NoFriends"			"아직 Steam 커뮤니티 친구가 한 명도 없습니다!
-아는 사람에게 이메일로 선물을 보내 Steam 커뮤니티 친구로 만드십시오."
+아는 사람에게 이메일로 선물을 보내 Steam 커뮤니티 친구로 만드세요."
 
 "Steam_GuestPassAccept_TitleOK$type=guestpass"	"게스트 패스 준비됨"
 "Steam_GuestPassAccept_TitleFailed$type=guestpass"	"게스트 패스 승인 실패"
@@ -3213,7 +3213,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_Root_Title" 	"Steam"
 "Steam_Root_Title_Internal" 	"Steam"
 
-"Steam_CDKeyDisplayReason" "%game%의 CD 키입니다. 애플리케이션을 시작한 후 이 키를 입력해야 합니다. 키를 기록해 두거나 '키를 클립보드로 복사' 버튼을 누르십시오."
+"Steam_CDKeyDisplayReason" "%game%의 CD 키입니다. 애플리케이션을 시작한 후 이 키를 입력해야 합니다. 키를 기록해 두거나 '키를 클립보드로 복사' 버튼을 누르세요."
 "Steam_CDKeyDisplayReasonNoCopy" "%game%의 CD 키입니다. 애플리케이션을 시작한 후 이 키를 입력해야 합니다. 키를 기록해 두면 나중에 입력할 수 있습니다."
 
 "Steam_RequestingLegacyKey" "키 요청 중..."
@@ -3252,7 +3252,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_SendGuestPass_PendingError$type=gift"	"지난 24시간 이내에 %search%에게 이미 선물을 보냈습니다. 가장 최근에 보낸 이후 24시간이 지나기 전에는 이 주소로 선물을 보낼 수 없습니다.\n\n다른 받는 사람을 지정하려면 '뒤로'를 클릭하세요."
 
 "Steam_SendGuestPass_InvitingFriendHeadline$type=gift" "선물 보내는 중..."
-"Steam_SendGuestPass_InvitingFriend$type=gift"	"선물을 %search%에게 보내는 중입니다.\n잠시 기다려 주세요..."
+"Steam_SendGuestPass_InvitingFriend$type=gift"	"선물을 %search%에게 보내는 중입니다.\n잠시 기다려 주세요."
 
 "Steam_GuestPassAccept_TitleOK$type=gift"	"선물이 준비되었습니다."
 "Steam_GuestPassAccept_TitleFailed$type=gift"	"선물 받기 실패"
@@ -3286,7 +3286,7 @@ Windows에 관리자로 로그인해야 합니다.
 
 "Steam_SendGuestPass_RefreshingList"	"목록을 새로 고치는 중..."
 "Steam_SendGuestPass_AllFriendsOwnProduct"	"모든 Steam 커뮤니티 친구가 이 제품을 갖고 있습니다.
-아는 사람에게 이메일로 선물을 보내 새 Steam 친구로 만드십시오."
+아는 사람에게 이메일로 선물을 보내 새 Steam 친구로 만드세요."
 
 "Steam_GuestPass_GiftSection"	"선물"
 "Steam_GuestPasses_GuestPassesSection"	"게스트 패스"
@@ -3467,7 +3467,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_DownloadRestrictionsLabel"	"다운로드 제한"
 
 "Steam_ServerBrowserPingRateLabel"	"서버 브라우저 핑 및 지연 시간"
-"Steam_ServerBrowserPingRateInfo"	"게임 서버를 검색하는 도중 연결 관련 문제가 발생한다면 해당 값을 낮춘 후 다시 시도해 보십시오."
+"Steam_ServerBrowserPingRateInfo"	"게임 서버를 검색하는 도중 연결 관련 문제가 발생한다면 해당 값을 낮춘 후 다시 시도해 보세요."
 "Steam_ServerBrowserPingRateDefault"	"자동(%PingsPerMin%)"
 
 "Steam_TextFilterSettingLabel"									"채팅 필터링"
@@ -3597,7 +3597,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_RecoverLocked_WrongCodeDetails" "다시 한 번 시도해보시거나, 다음 버튼을 눌러 이 컴퓨터가 Steam 계정에 접근할 수 있도록 도움을 받으세요."
 "Steam_RecoverLocked_ExpiredCodeDetails" "최근 새로 받은 메일함을 확인하고 뒤로가기 버튼을 눌러 다시 시작해 보거나, 다음 버튼을 클릭해 새로운 코드가 포함된 새 이메일을 요청하세요"
 "Steam_RecoverLocked_NoEmail" "스팸함을 확인하셨습니까?"
-"Steam_RecoverLocked_NoEmailDetails" "Steam 고객지원에서 온 메일이 안 보이시면 스팸 메일함을 확인해 보십시오."
+"Steam_RecoverLocked_NoEmailDetails" "Steam 고객지원에서 온 메일이 안 보이시면 스팸 메일함을 확인해 보세요."
 "Steam_RecoverLocked_NoEmailDetails2" "코드를 찾으셨으면 뒤로 가셔서 코드를 다시 입력 하세요, 아니면 다음을 누르시고 현재 컴퓨터로부터 귀하의 Steam 계정에 로그인할 수 있는 도움을 받으세요."
 "Steam_RecoverLocked_StartRecovery" "문제가 있으셨다니 죄송합니다 - 저희가 도와드리도록 하죠!"
 "Steam_RecoverLocked_StartRecovery2" "귀하에게 Steam 계정이 얼마나 소중한지 알고 있기 때문에, 저희는 귀하의 계정이 다른 사람에게 넘어가지 않도록 최선을 다하겠습니다."
@@ -4598,7 +4598,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_Settings_Streaming_QualityBeautiful" "미려함"
 "Steam_Settings_Streaming_AdvancedHostOptions" "고급 호스트 설정"
 "Steam_Settings_Streaming_AdvancedHostOptions_Title" "고급 호스트 설정"
-"Steam_Settings_Streaming_AdvancedHostOptions_Description" "이 컴퓨터로부터의 스트리밍 성능을 높이시려면, 게임의 해상도를 줄이시거나 다음 설정들을 조정해보십시오."
+"Steam_Settings_Streaming_AdvancedHostOptions_Description" "이 컴퓨터로부터의 스트리밍 성능을 높이시려면, 게임의 해상도를 줄이시거나 다음 설정들을 조정해보세요."
 "Steam_Settings_Streaming_AdvancedClientOptions" "고급 클라이언트 설정"
 "Steam_Settings_Streaming_AdvancedClientOptions_Title" "고급 클라이언트 설정"
 "Steam_Settings_Streaming_AdvancedClientOptions_DescriptionLocal" "이 컴퓨터에서 스트리밍 성능을 높이려면 게임의 해상도를 낮추거나 다음의 설정을 조정해보세요."
@@ -4708,9 +4708,9 @@ Windows에 관리자로 로그인해야 합니다.
 "SteamUI_UpdateControllerFirmware_Done"		"확인"
 "SteamUI_UpdateControllerFirmware_Title"	"Steam Controller 펌웨어 업데이트"
 "SteamUI_UpdateControllerFirmware_Intro"	"귀하의 Steam Controller에 설치 가능한 새 펌웨어가 있습니다. 업데이트 과정을 진행하려 합니다."
-"SteamUI_UpdateControllerFirmware_Install"	"새 펌웨어가 컨트롤러에 설치되고 있습니다.\n컨트롤러의 연결을 해제하지 마십시오."
+"SteamUI_UpdateControllerFirmware_Install"	"새 펌웨어가 컨트롤러에 설치되고 있습니다.\n컨트롤러의 연결을 해제하지 마세요."
 "SteamUI_UpdateControllerFirmware_Finished"	"귀하의 Steam Controller 펌웨어가 업데이트되었습니다."
-"SteamUI_UpdateControllerFirmware_Fallback"	"Steam이 귀하의 컨트롤러에 펌웨어를 설치하기 위해 복구 모드로 들어가야 합니다:\n\n 1) 컨트롤러에 연결된 USB 케이블을 뽑으십시오\n 2) 우측 트리거를 누른 채로 컨트롤러를 다시 연결하세요\n 3) OS가 컨트롤러의 펌웨어 업데이트 영역을 발견하여 마운트할 때까지 잠시 기다립니다(이 작업은 30초에서 60초 정도 소요될 수 있습니다).\n\n일단 위 단계가 완료되면 컨트롤러는 펌웨어 업데이트 모드로 재연결되어 다음 단계로 진행하게 됩니다."
+"SteamUI_UpdateControllerFirmware_Fallback"	"Steam에서 컨트롤러에 펌웨어를 설치하려면 복구 모드를 사용해야 합니다.\n\n 1) 컨트롤러에 연결된 USB 케이블을 뽑으세요.\n 2) 오른쪽 트리거를 누른 상태로 컨트롤러를 다시 연결하세요.\n 3) 운영 체제에서 컨트롤러의 펌웨어 업데이트 볼륨을 감지하고 마운트할 때까지 잠시 기다리세요(이 작업은 30초에서 60초 정도 소요될 수 있습니다).\n\n위 단계를 완료하고 나면 컨트롤러가 펌웨어 업데이트 모드로 다시 연결되고 다음 단계로 넘어갑니다."
 "SteamUI_UpdateControllerFirmware_Fallback_Finished" "펌웨어가 업데이트되었습니다. 다음 지시 사항을 따르세요:\n\n 1) 컨트롤러에 연결된 USB 케이블 뽑기\n 2) 아무 버튼도 누르지 말고 USB 케이블을 다시 연결\n 3) 아래의 확인을 눌러 이 진행 마법사 종료"
 "SteamUI_UpdateControllerFirmware_Disconnect"	"Steam Controller가 펌웨어 업데이트 과정 중 연결이 해제 되었습니다. 다시 연결되면 펌웨어를 업그레이드할 수 있습니다."
 "SteamUI_UpdateControllerFirmware_WiredUpdate"	"귀하의 Steam Controller에 사용 가능한 펌웨어 업데이트가 있습니다. 업데이트를 위해 한 번 유선 연결을 해야 합니다.\n준비가 됐다면, 컨트롤러를 USB로 연결하세요. 자동으로 업데이트 절차가 시작됩니다."
@@ -4797,7 +4797,7 @@ Windows에 관리자로 로그인해야 합니다.
 "Steam_VGUIVRHMDWarning_Title" "SteamVR"
 "Steam_VGUIVRHMDWarning" "Steam에서 헤드셋을 최대한 활용하려면 SteamVR을 설치한 다음, Steam을 사용해 VR을 실행하거나 종료할 때 이 버튼을 사용하세요."
 "Steam_VGUIVRHMDWarningHeader" "VR 헤드셋을 사용하고 계신가요?"
-"Steam_VGUIVRHMDOculusHelp" "SteamVR에서 Oculus Rift를 사용하기를 원한다면 <a href=\"https://support.steampowered.com/kb_article.php?ref=3180-UPHK-0900\">이러한 지침을 따르십시오</a>."
+"Steam_VGUIVRHMDOculusHelp" "SteamVR에서 Oculus Rift를 사용하기를 원한다면 <a href=\"https://support.steampowered.com/kb_article.php?ref=3180-UPHK-0900\">이러한 지침을 따르세요.</a>."
 "SteamUI_InstallSteamVR" "SteamVR 설치"
 "SteamUI_LaunchSteamVR" "SteamVR 실행하기"
 

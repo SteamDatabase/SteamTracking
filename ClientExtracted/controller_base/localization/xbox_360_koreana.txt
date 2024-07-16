@@ -28,4 +28,5 @@
 	"origin_xbox360_shoulder_r"						"오른쪽 범퍼"
 	"origin_xbox360_button_start"					"시작 버튼"
 	"origin_xbox360_button_back"					"뒤로 버튼"
-	}
+	"origin_xbox360_button_dpad_move"				"방향 패드 조작"
+}

@@ -10,7 +10,7 @@
         i.d(t, {
           CGameRecordingStore: () => u,
           default: () => C,
-          k_strGRFAQ: () => h,
+          k_strGRFAQ: () => _,
         });
       var r = i(34629),
         s = i(14947),
@@ -23,8 +23,8 @@
         m = i(29210),
         c = i(44332),
         g = i(30470),
-        _ = i(61859);
-      const h = "23B7-49AD-4A28-9590";
+        h = i(61859);
+      const _ = "23B7-49AD-4A28-9590";
       class u {
         constructor() {
           (0, s.Gn)(this);
@@ -178,8 +178,24 @@
           return s ? (s.loader.RecordingSessionChanged(t), 1) : 1;
         }
         OnTimelineEntryChanged(e) {
-          const { entry: t } = e.Body().toObject(),
-            i = this.m_mapActiveTimelines.get(t.timeline_id);
+          if (!e.Body().entry(!1))
+            return (
+              (0, c.w)(
+                !1,
+                "OnTimelineEntryChanged received an invalid protobuf",
+              ),
+              1
+            );
+          const { entry: t } = e.Body().toObject();
+          if (!t)
+            return (
+              (0, c.w)(
+                !1,
+                "OnTimelineEntryChanged received an invalid protobuf after conversion",
+              ),
+              1
+            );
+          const i = this.m_mapActiveTimelines.get(t.timeline_id);
           if (i) {
             const e = i.loader;
             if (e.BIsTimelineRunning(t.timeline_id))
@@ -195,7 +211,7 @@
                   t.marker_icon,
                   t.entry_id,
                   t.marker_priority,
-                  t.marker_title,
+                  t.range_title,
                   t.marker_description,
                   parseInt(t.range_duration),
                 ),
@@ -557,7 +573,7 @@
         }
         GetBestClipTitle(e) {
           const t = this.GetClipSummary(e);
-          return t ? t.name || (0, _.$z)(t.date_recorded) : "";
+          return t ? t.name || (0, h.$z)(t.date_recorded) : "";
         }
         ManuallyDeleteRecordingForApps(e) {
           a.xM.ManuallyDeleteRecordingsForApps({ game_ids: e });

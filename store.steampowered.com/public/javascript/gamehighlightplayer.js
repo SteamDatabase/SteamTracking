@@ -943,6 +943,13 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 				if ( $(wrapper).data( 'video-title' )?.length )
 					$('.video_title', titleBar).text( ' | ' + $(wrapper).data( 'video-title' ) );
 
+
+				if ( typeof GetUsabilityTracker !== 'undefined' )
+				{
+					GetUsabilityTracker().m_stats['Video_Supports_MSE'] =  'MediaSource' in window ? 1 : 0;
+					GetUsabilityTracker().m_stats['Video_Supports_Managed_MSE'] =  'ManagedMediaSource' in window ? 1 : 0;
+				}
+
 				updateVolume();
 			}
 

@@ -3,106 +3,6 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [5836],
   {
-    95695: (e) => {
-      e.exports = {
-        "duration-app-launch": "800ms",
-        PartnerEventFont: "LK4bXmKAknKopK864hJFM",
-        Clear: "_3UhsQfZfx8h_mvk1qQ2E7p",
-        Divider: "_3B5HO7jdTpNaectJS1a6UZ",
-        EventDefaultRowContainer: "_3WO6cZns4r39Cg__Yd-7zn",
-        EventStartPublic: "_2LU_YLKpLTGuqBMQLckmkk",
-        EventOptions: "_2r_QeL5bd04KiohE77Gq-t",
-        EventStatusContainer: "vOPSZ6WQ2uCEbtYrtUkJ5",
-        FlexColumnContainer: "_1qhLqXcizfytm6omB4ywDD",
-        FlexRowContainer: "Ke5f13IVZVzYSmQVJgVyd",
-        Centered: "qy-9mgJyhfEb8Wt0gqzaF",
-        FlexContainSpaceBetween: "_3nPGWNNLFjqXgZ6hjwUnkf",
-        FlexRowWrapSpaceBetweenContainer: "_19CjIj6mAtlIoY_7_iyOlz",
-        FlexRowWrapFlexStartContainer: "tyP_cnaOBcolou13sADst",
-        SaveBackground: "V0mbIUnoAWzmWNmnsjwlx",
-        SupportedGroupLabel: "APmJNwEEvE9w4_JVyRQ3J",
-        LanguageWithContent: "_2Cd1uISocztoq_3uIIDOXm",
-        LargeInput: "fq68IvZbR5nyI81kv1dwh",
-        InputBorder: "ObyysoLsv_KyZYdZkoC7W",
-        RadioOption: "_3iJX1gtbWR_mkLvuDCeoNd",
-        FlexGrow: "_1KvZAJk52RAyJKIXK3-wO0",
-        EventEditorTextTitleCtn: "htm7dxJtSOP0s_Mcb3Ejx",
-        doclink: "_1-bAKvDZnkuyP6Nmt66mQB",
-        EventEditorUnpaddedTextTitle: "_9hsCLz0BkV6oeIrNt7M3D",
-        EventEditorTextTitle: "_18fHxiLGI4r8_CPauC1oep",
-        EventEditorTextTitleLengthInfo: "_2nHJ1mgbC-yNBhl6tjLgmD",
-        CollapsableSectionTitle: "_2zejQIbvaMIPvk98NrTDzs",
-        SectionTitle: "_7Qc_eWjn_s3VWDe79FmEq",
-        EventSectionTitleCtn: "onqWKRp2JgmjHjFAtHUAM",
-        EventSectionTitle: "Idd_AoQMoEWIZamI72mP7",
-        EventSectionSpacer: "_1BloexLaoA9uwhXnsLWe6M",
-        EventSectionMoreBtn: "uckBibUwkj9tX_NZHf6wN",
-        EventEditorSpacerPadding: "_1RBfNW2ja0sibxeZdEEJX",
-        EventEditorVisibilityCtn: "_1nqBhG2Wx5fvxBZz_TG7B9",
-        EventEditorTextSubTitle: "_1i_pY6xNDaeC-hpFtw_bnr",
-        FloatingTitle: "_31XRtqJrtSr23BOez9F94m",
-        EventEditorEventStatus: "_2JGoLoYTtzbQVxL0l_1m3a",
-        EventHidden: "_2H6fnGkwmWVynWQb7QvxLN",
-        EventVisible: "_3Z0QrVP5ZnTQ2dk4TtNgY2",
-        EventBarBackAndTitle: "_2rTjP81ZJlRiaauPzNG7K4",
-        EventBarTitleCtn: "WfVzeWGwNKWJkHrZGYin4",
-        EventBarTitle: "_29kVXprENYbLFAtuCiS9sQ",
-        EventEditButtons: "_3nYmf7ouiiC2Fb1BBu5Gra",
-        EventStatus: "_1sOFBLpnblzmUTv7zVK5bM",
-        EventBarBack: "s3r9bZXo9Hn_LJ2KuwEdl",
-        EditPreviewButton: "_1FhZQ0qnT9Cg5iDVCM4kUM",
-        Delete: "_32kR7vbPRNV7B8ZsiduNmF",
-        Disabled: "_2wVCx2MbxsBE0UA-mTs9GA",
-        BrowseMoreButton: "_1YrclhbHAxZpfgTuGj4VeB",
-        Button: "_1ABCOz8DSrl-YJdh1xD-m0",
-        Icon: "_1dDpSuaJBGZzS41s0SPk4c",
-        Primary: "_30iplBvtu2x5qDH5gkzuvV",
-        ClearThings: "_3x_qLReSea_Uq9nqUlRsE2",
-        OnIndicator: "_1GBsBcWhLJ4t6Fr7B5Je1z",
-        OffIndicator: "w0I94_DnBuP6_sAy2jJOL",
-        IconImage: "_2RY897Hy2yhwXPKZZIMbVc",
-        RightColumnContainer: "_30-E9De2BTSA_LQAluUDUI",
-        EventPublishButton: "_3nIAe51MkJS4ZGO9CQ6xks",
-        FloatRight: "_1bzHf_n9CdWgjfVlmRX68A",
-        TTip: "_2aWukx6Wd2nw_kXZ1FP2NP",
-        ValveSupportOnly: "wC6-UDN4iQob1NcD0Rpty",
-        ArtworkAgeNotAppropriate: "_3V64ZhKy9wBGIO4DpFne9v",
-        EventDashboardHeader: "_2kZr_0HccJXPhB1ZUZ5ouf",
-        ContainerSpaceBetween: "_3gYZGtbFQRCQssXFJTFwmV",
-        EventDashboardTitles: "_1ym4r-4rlOJQoOzRprSo8l",
-        EventDashboardActions: "_2z_02l2jZf-9jcO4USrYak",
-        EventDashboardStatsCtn: "_3IptFPCOJnBgUfgUej_jIH",
-        EventDashboardAppCtn: "_2iPrKEyo2kmzykCYxURzj3",
-        maintitle: "vEk_z-3SSNZ_QNdilG5U8",
-        AppTitle: "l-Ow7jLX9GkLm9eYHQVAP",
-        subtitle: "_2mJfcOfmivoiCR4CW-GrjN",
-        ValveOnlyBackground: "JckrnbJXboKxpRp3fULfa",
-        ValveOnlyAdminBackground: "_3HVu1O7B4zeCZWaOaUWPCo",
-        Columns: "_1oVIRGhMwAB3uN9G3t8kZe",
-        LeftCol: "_3PPz-6LrUAum0x5iKTRxzc",
-        RightCol: "_25xelN-JQnAHv3pp9qVrpl",
-        DropDownScroll: "_1CewBTRfw0excEQTv17oBF",
-        DropDownScrollItem: "_3D3hCqbc4w-srLqZG9Uue1",
-        CloseButton: "gR2gSLc4AtnoUyq29Np8F",
-        CloseSectionTools: "_1d0D9Wb15dNSzABGRNMKzl",
-        HalfColumn: "_3Xmp43r8PjDuBvfl8dK6Rt",
-        tooltip_Ctn: "_3nqxIgL0a0DbPZHRZRzWsp",
-        SaleEditorSpacing: "_2ZGwd2fru49CK-m22nkFg3",
-        SaleSectionHeader: "_2WMiQ5MbP_ReyaX5DOpoUD",
-        SaleSectionSubtitle: "_2rIaWN5LbF3muB3D2A-q5k",
-        SaleSectionContainer: "_3gb3JeV_1IMaIeODzBSrP3",
-        AddSectionButton: "_2_djjQBZmuIsrDz2l04Ua7",
-        EventElementRequired: "_12rm6-FOWcy0YB458vbp5l",
-        EventElementOptional: "_1mpG6blNZY9m8bmFF-Krii",
-        HelperTooltip: "_3T6MQlLWcGQeHZhqqOz4q-",
-        PixelOffsetCtn: "_3Xk96WC-5G6sSuI0Zw2aeZ",
-        PixelOffsetRow: "_2PtWb-j9bnMM467osLZO2B",
-        PixelOffsetNote: "JjEwaxBnKLv7wm8lbhcbX",
-        PixelOffsetCallout: "f5QZTTLfNRcsOdH31-Kxv",
-        Error: "mSSEDpLo6ibX1Ed5anQD_",
-        GamepadOnlyScrollPanel: "_2NO6wzenl44Mce3akguO_",
-      };
-    },
     55351: (e) => {
       e.exports = {
         DateAndTime: "_2V6GLdiU4guy4ND3n4Usgg",
@@ -122,8 +22,8 @@
         required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
       };
     },
-    61738: (e, t, n) => {
-      var s = {
+    61738: (e, t, s) => {
+      var n = {
         "./af": 30911,
         "./af.js": 30911,
         "./ar": 63595,
@@ -401,30 +301,30 @@
       };
       function r(e) {
         var t = a(e);
-        return n(t);
+        return s(t);
       }
       function a(e) {
-        if (!n.o(s, e)) {
+        if (!s.o(n, e)) {
           var t = new Error("Cannot find module '" + e + "'");
           throw ((t.code = "MODULE_NOT_FOUND"), t);
         }
-        return s[e];
+        return n[e];
       }
       (r.keys = function () {
-        return Object.keys(s);
+        return Object.keys(n);
       }),
         (r.resolve = a),
         (e.exports = r),
         (r.id = 61738);
     },
-    45048: (e, t, n) => {
+    45048: (e, t, s) => {
       "use strict";
-      n.r(t), n.d(t, { QAndARoutes: () => l, default: () => c });
-      var s = n(28579),
-        r = n(90626),
-        a = n(92757),
-        i = n(6813),
-        o = n(97058);
+      s.r(t), s.d(t, { QAndARoutes: () => l, default: () => c });
+      var n = s(28579),
+        r = s(90626),
+        a = s(92757),
+        i = s(6813),
+        o = s(97058);
       const l = {
         Dashboard: (e) => `/questions/${e}/dashboard`,
         FullPageView: (e, t) => `/questions/${e}/view/${t}`,
@@ -440,7 +340,7 @@
                 config: {
                   "qanda-root": () => {
                     const { vanity_str: t } = e.match.params;
-                    return r.createElement(s.xh, { vanity_str: t });
+                    return r.createElement(n.xh, { vanity_str: t });
                   },
                 },
               }),
@@ -451,8 +351,8 @@
               r.createElement(i.X, {
                 config: {
                   "qanda-root": () => {
-                    const { vanity_str: t, session_gid: n } = e.match.params;
-                    return r.createElement(s.AC, { gidSession: n });
+                    const { vanity_str: t, session_gid: s } = e.match.params;
+                    return r.createElement(n.AC, { gidSession: s });
                   },
                 },
               }),
@@ -461,16 +361,16 @@
         );
       };
     },
-    44165: (e, t, n) => {
+    44165: (e, t, s) => {
       "use strict";
-      n.d(t, { HD: () => d, P_: () => u, f1: () => _, sB: () => g });
-      var s = n(34629),
-        r = n(14947),
-        a = n(19367),
-        i = n.n(a),
-        o = n(90626),
-        l = n(4434),
-        c = n(78327);
+      s.d(t, { HD: () => d, P_: () => u, f1: () => p, sB: () => v });
+      var n = s(34629),
+        r = s(14947),
+        a = s(19367),
+        i = s.n(a),
+        o = s(90626),
+        l = s(4434),
+        c = s(78327);
       class m {
         constructor() {
           (this.bOpenEventLandingPage = !1),
@@ -511,68 +411,68 @@
             ("dev" == c.TS.WEB_UNIVERSE || "beta" == c.TS.WEB_UNIVERSE)
           ) {
             const e = t.get("t");
-            let n = /^\d+$/.test(e) ? i().unix(Number.parseInt(e)) : i()(e);
-            (this.nOverrideDateNow = Math.floor(n.unix())),
+            let s = /^\d+$/.test(e) ? i().unix(Number.parseInt(e)) : i()(e);
+            (this.nOverrideDateNow = Math.floor(s.unix())),
               console.log(
                 "CEventCalendarDevFeatures overriding partner event time: " +
                   this.nOverrideDateNow +
                   " " +
-                  n.format(),
+                  s.format(),
               );
           }
         }
       }
-      (0, s.Cg)([r.sH], m.prototype, "nOverrideDateNow", void 0);
+      (0, n.Cg)([r.sH], m.prototype, "nOverrideDateNow", void 0);
       const d = new m();
       function u(e = 1) {
-        const [t, n] = o.useState(() => v()),
-          s = (0, l.m)("useTimeNowWithOverride"),
+        const [t, s] = o.useState(() => j()),
+          n = (0, l.m)("useTimeNowWithOverride"),
           r = o.useCallback(() => {
-            s.token.reason || n(v());
+            n.token.reason || s(j());
           }, []);
         return (
           o.useEffect(() => {
             const t = 1e3 * e,
-              n = t - (Date.now() % t),
-              s = window.setTimeout(r, n);
+              s = t - (Date.now() % t),
+              n = window.setTimeout(r, s);
             return () => {
-              window.clearTimeout(s);
+              window.clearTimeout(n);
             };
           }, [t, e, r]),
           t
         );
       }
       window.g_EventCalendarDevFeatures = d;
-      const E = new Date(),
-        p = Math.floor(E.getTime() / 1e3);
-      function v() {
+      const g = new Date(),
+        E = Math.floor(g.getTime() / 1e3);
+      function j() {
         const e = Math.floor(Date.now() / 1e3);
-        return d.nOverrideDateNow ? d.nOverrideDateNow + (e - p) : e;
+        return d.nOverrideDateNow ? d.nOverrideDateNow + (e - E) : e;
       }
-      function g() {
+      function v() {
         var e;
-        return null !== (e = d.nOverrideDateNow) && void 0 !== e ? e : p;
+        return null !== (e = d.nOverrideDateNow) && void 0 !== e ? e : E;
       }
-      function _() {
-        return o.useMemo(() => g(), []);
+      function p() {
+        return o.useMemo(() => v(), []);
       }
     },
-    82477: (e, t, n) => {
+    82477: (e, t, s) => {
       "use strict";
-      n.d(t, { vg: () => d });
-      var s = n(90626),
-        r = n(738),
-        a = n(61859),
-        i = n(78327),
-        o = n(97436),
-        l = n(96059),
-        c = n(28240);
-      n(21273);
+      s.d(t, { vg: () => d });
+      var n = s(90626),
+        r = s(738),
+        a = s(61859),
+        i = s(78327),
+        o = s(97436),
+        l = s(96059),
+        c = s(28240);
+      s(21273);
       function m(e) {
-        return s.createElement(
+        return n.createElement(
           r.x_,
           { onEscKeypress: e.closeModal, bDisableBackgroundDismiss: !0 },
-          s.createElement(u, {
+          n.createElement(u, {
             redirectURL: e.redirectURL,
             guestOption: e.guestOption,
           }),
@@ -580,7 +480,7 @@
       }
       function d() {
         (0, r.pg)(
-          s.createElement(m, {
+          n.createElement(m, {
             ownerWin: window,
             redirectURL: window.location.href,
           }),
@@ -589,17 +489,17 @@
         );
       }
       function u(e) {
-        const { redirectURL: t, guestOption: n } = e,
-          [r] = (0, s.useState)(
+        const { redirectURL: t, guestOption: s } = e,
+          [r] = (0, n.useState)(
             new l.D(i.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
           ),
-          [a, m] = (0, s.useState)(!1);
-        return s.createElement(
+          [a, m] = (0, n.useState)(!1);
+        return n.createElement(
           "div",
           null,
           a
-            ? s.createElement(o.Fn, null)
-            : s.createElement(
+            ? n.createElement(o.Fn, null)
+            : n.createElement(
                 o.YN,
                 {
                   autoFocus: !0,
@@ -613,78 +513,78 @@
                   redirectUrl: t,
                   theme: "modal",
                 },
-                n && s.createElement(o.Mk, { redirectURL: t }),
+                s && n.createElement(o.Mk, { redirectURL: t }),
               ),
         );
       }
     },
-    76684: (e, t, n) => {
+    76684: (e, t, s) => {
       "use strict";
-      n.d(t, {
-        K4: () => g,
-        X0: () => h,
-        gS: () => _,
-        pg: () => p,
+      s.d(t, {
+        K4: () => v,
+        X0: () => T,
+        gS: () => p,
+        pg: () => E,
         u1: () => D,
-        v9: () => j,
-        yi: () => v,
+        v9: () => h,
+        yi: () => j,
       });
-      var s = n(34629),
-        r = n(90626),
-        a = n(32754),
-        i = n(61859),
-        o = n(75844),
-        l = n(52038),
-        c = n(14771),
-        m = n(55351),
-        d = n.n(m),
-        u = n(44165);
-      const E = n(87937);
-      function p(e) {
-        const t = E.tz.guess(),
-          n = E.unix(e).tz(t),
-          s = (0, i.l4)();
-        return s && n.locale(s), n.format("LT");
+      var n = s(34629),
+        r = s(90626),
+        a = s(32754),
+        i = s(61859),
+        o = s(75844),
+        l = s(52038),
+        c = s(14771),
+        m = s(55351),
+        d = s.n(m),
+        u = s(44165);
+      const g = s(87937);
+      function E(e) {
+        const t = g.tz.guess(),
+          s = g.unix(e).tz(t),
+          n = (0, i.l4)();
+        return n && s.locale(n), s.format("LT");
       }
-      function v(e, t) {
-        const n = E.tz.guess(),
-          s = E.unix(e).tz(n),
-          a = (0, i.l4)();
+      function j(e, t) {
+        const s = g.tz.guess(),
+          n = g.unix(e).tz(s),
+          o = (0, i.l4)();
         return (
-          a && s.locale(a),
+          o && n.locale(o),
           r.createElement(
             r.Fragment,
             null,
-            s.format("LT"),
+            n.format("LT"),
             t
               ? r.createElement(
-                  "span",
-                  { "data-tooltip-text": s.format("Z") + ", " + n },
+                  a.he,
+                  { toolTipContent: n.format("Z") + ", " + s },
                   " ",
-                  s.zoneAbbr(),
+                  n.zoneAbbr(),
                 )
               : null,
           )
         );
       }
-      const g = (0, o.PA)((e) => {
+      const v = (0, o.PA)((e) => {
           const {
               dateAndTime: t,
-              bSingleLine: n,
-              bOnlyTime: s,
+              bSingleLine: s,
+              bOnlyTime: n,
               bOnlyDate: a,
             } = e,
-            o = !s && Boolean(t),
+            o = !n && Boolean(t),
             l = !a && Boolean(t),
             c = o && (0, i.TW)(t),
             m = e.stylesmodule ? { ...d(), ...e.stylesmodule } : d();
-          return n
+          return s
             ? r.createElement(
                 "span",
-                { className: s || a ? m.DateAndTimeInline : m.DateAndTime },
+                { className: n || a ? m.DateAndTimeInline : m.DateAndTime },
                 o && c,
                 o && l ? r.createElement("span", null, " ") : void 0,
-                Boolean(t && l) && v(t, l),
+                Boolean(t && l) && j(t, l),
               )
             : r.createElement(
                 "div",
@@ -700,15 +600,15 @@
                 r.createElement(
                   "div",
                   { className: m.LocalizedTime },
-                  Boolean(t && l) && v(t, l),
+                  Boolean(t && l) && j(t, l),
                 ),
               );
         }),
-        _ = (e) => {
+        p = (e) => {
           const t = r.createElement(
             "div",
             { className: e.stylesmodule.DateToolTip },
-            r.createElement(g, {
+            r.createElement(v, {
               dateAndTime: e.rtFullDate,
               bSingleLine: !0,
               stylesmodule: e.stylesmodule,
@@ -725,117 +625,16 @@
             e.children,
           );
         };
-      let j = class extends r.Component {
+      let h = class extends r.Component {
         render() {
           const { startDateAndTime: e, endDateAndTime: t } = this.props,
-            n = this.props.stylesmodule
-              ? { ...d(), ...this.props.stylesmodule }
-              : d();
-          let s =
-            this.props.bHideEndTime ||
-            null == this.props.endDateAndTime ||
-            this.props.endDateAndTime < 1;
-          if (null == e || 0 == e)
-            return r.createElement(
-              "div",
-              { className: n.DateAndTime },
-              r.createElement(
-                "span",
-                { className: n.RightSideTitles },
-                (0, i.we)("#EventDisplay_TimeRange"),
-              ),
-              (0, i.we)("#EventDisplay_TimeDisplayNone"),
-            );
-          let a = u.HD.GetTimeNowWithOverride();
-          if (s)
-            return r.createElement(
-              "div",
-              { className: n.StartDate },
-              r.createElement(
-                "div",
-                { className: n.RightSideTitles },
-                (0, i.we)(
-                  e < a
-                    ? "#EventDisplay_TimeInPast"
-                    : "#EventDisplay_TimeUpcoming",
-                ),
-                " ",
-              ),
-              r.createElement(g, { stylesmodule: n, dateAndTime: e }),
-            );
-          let o = e <= a && a <= t;
-          const m = (0, c.JD)(new Date(1e3 * e), new Date(1e3 * t));
-          return r.createElement(
-            "div",
-            { className: n.MultiDateAndTime },
-            r.createElement(
-              "div",
-              { className: n.StartDate },
-              r.createElement(
-                "span",
-                { className: n.RightSideTitles },
-                (0, i.we)(
-                  e >= a
-                    ? "#EventDisplay_TimeBeginsOn"
-                    : t >= a
-                      ? "#EventDisplay_TimeBeginsOn_Past"
-                      : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
-                ),
-              ),
-              r.createElement(g, {
-                stylesmodule: n,
-                bSingleLine: !0,
-                dateAndTime: e,
-              }),
-            ),
-            r.createElement(
-              "div",
-              { className: n.EndDate },
-              r.createElement(
-                "span",
-                { className: n.RightSideTitles },
-                (0, i.we)(
-                  t < a
-                    ? "#EventDisplay_TimeEndsOn_Past"
-                    : "#EventDisplay_TimeEndsOn",
-                ),
-              ),
-              r.createElement(g, {
-                stylesmodule: n,
-                bSingleLine: !0,
-                bOnlyTime: m,
-                dateAndTime: t,
-              }),
-            ),
-            o &&
-              r.createElement(
-                "span",
-                { className: n.ActiveEvent },
-                r.createElement(
-                  "span",
-                  {
-                    className: (0, l.A)(
-                      n.RightSideTitles,
-                      n.ActiveEventCallOut,
-                    ),
-                  },
-                  (0, i.we)("#Time_Now"),
-                ),
-              ),
-          );
-        }
-      };
-      j = (0, s.Cg)([o.PA], j);
-      let D = class extends r.Component {
-        render() {
-          const {
-              startDateAndTime: e,
-              endDateAndTime: t,
-              bHideEndTime: n,
-            } = this.props,
             s = this.props.stylesmodule
               ? { ...d(), ...this.props.stylesmodule }
               : d();
+          let n =
+            this.props.bHideEndTime ||
+            null == this.props.endDateAndTime ||
+            this.props.endDateAndTime < 1;
           if (null == e || 0 == e)
             return r.createElement(
               "div",
@@ -847,20 +646,121 @@
               ),
               (0, i.we)("#EventDisplay_TimeDisplayNone"),
             );
+          let a = u.HD.GetTimeNowWithOverride();
+          if (n)
+            return r.createElement(
+              "div",
+              { className: s.StartDate },
+              r.createElement(
+                "div",
+                { className: s.RightSideTitles },
+                (0, i.we)(
+                  e < a
+                    ? "#EventDisplay_TimeInPast"
+                    : "#EventDisplay_TimeUpcoming",
+                ),
+                " ",
+              ),
+              r.createElement(v, { stylesmodule: s, dateAndTime: e }),
+            );
+          let o = e <= a && a <= t;
+          const m = (0, c.JD)(new Date(1e3 * e), new Date(1e3 * t));
+          return r.createElement(
+            "div",
+            { className: s.MultiDateAndTime },
+            r.createElement(
+              "div",
+              { className: s.StartDate },
+              r.createElement(
+                "span",
+                { className: s.RightSideTitles },
+                (0, i.we)(
+                  e >= a
+                    ? "#EventDisplay_TimeBeginsOn"
+                    : t >= a
+                      ? "#EventDisplay_TimeBeginsOn_Past"
+                      : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
+                ),
+              ),
+              r.createElement(v, {
+                stylesmodule: s,
+                bSingleLine: !0,
+                dateAndTime: e,
+              }),
+            ),
+            r.createElement(
+              "div",
+              { className: s.EndDate },
+              r.createElement(
+                "span",
+                { className: s.RightSideTitles },
+                (0, i.we)(
+                  t < a
+                    ? "#EventDisplay_TimeEndsOn_Past"
+                    : "#EventDisplay_TimeEndsOn",
+                ),
+              ),
+              r.createElement(v, {
+                stylesmodule: s,
+                bSingleLine: !0,
+                bOnlyTime: m,
+                dateAndTime: t,
+              }),
+            ),
+            o &&
+              r.createElement(
+                "span",
+                { className: s.ActiveEvent },
+                r.createElement(
+                  "span",
+                  {
+                    className: (0, l.A)(
+                      s.RightSideTitles,
+                      s.ActiveEventCallOut,
+                    ),
+                  },
+                  (0, i.we)("#Time_Now"),
+                ),
+              ),
+          );
+        }
+      };
+      h = (0, n.Cg)([o.PA], h);
+      let D = class extends r.Component {
+        render() {
+          const {
+              startDateAndTime: e,
+              endDateAndTime: t,
+              bHideEndTime: s,
+            } = this.props,
+            n = this.props.stylesmodule
+              ? { ...d(), ...this.props.stylesmodule }
+              : d();
+          if (null == e || 0 == e)
+            return r.createElement(
+              "div",
+              { className: n.DateAndTime },
+              r.createElement(
+                "span",
+                { className: n.RightSideTitles },
+                (0, i.we)("#EventDisplay_TimeRange"),
+              ),
+              (0, i.we)("#EventDisplay_TimeDisplayNone"),
+            );
           const a = u.HD.GetTimeNowWithOverrideAsDate(),
             o = u.HD.GetTimeNowWithOverride(),
             l = (0, c.Ct)(new Date(1e3 * e), a),
             m = r.createElement(
               "div",
-              { className: s.ShortDateAndTime },
+              { className: n.ShortDateAndTime },
               (0, i.TW)(e, l),
             );
-          let E = r.createElement(
-            _,
-            { rtFullDate: e, stylesmodule: s },
+          let g = r.createElement(
+            p,
+            { rtFullDate: e, stylesmodule: n },
             r.createElement(
               "div",
-              { className: s.RightSideTitles },
+              { className: n.RightSideTitles },
               (0, i.we)(
                 e < o
                   ? "#EventDisplay_TimeInPast"
@@ -872,59 +772,59 @@
           if (
             (o < e &&
               e < o + c.Kp.PerWeek &&
-              (E = r.createElement(
-                _,
-                { rtFullDate: e, stylesmodule: s },
+              (g = r.createElement(
+                p,
+                { rtFullDate: e, stylesmodule: n },
                 r.createElement(
                   "div",
-                  { className: s.RightSideTitles },
+                  { className: n.RightSideTitles },
                   (0, i.PP)(
                     "#EventDisplay_EventUpcoming_WithDateAndTime",
                     m,
                     r.createElement(
                       "div",
-                      { className: s.ShortDateAndTime },
-                      v(e),
+                      { className: n.ShortDateAndTime },
+                      j(e),
                       " ",
                     ),
                   ),
                 ),
               )),
-            n || null == t || t < 1)
+            s || null == t || t < 1)
           )
-            return E;
-          const p = e <= o && o <= t;
-          p &&
-            (E = r.createElement(
-              _,
-              { rtFullDate: e, className: s.ActiveEvent, stylesmodule: s },
+            return g;
+          const E = e <= o && o <= t;
+          E &&
+            (g = r.createElement(
+              p,
+              { rtFullDate: e, className: n.ActiveEvent, stylesmodule: n },
               r.createElement(
                 "span",
-                { className: s.ActiveEventCallOut },
+                { className: n.ActiveEventCallOut },
                 (0, i.we)("#Time_Now"),
               ),
             ));
-          let g = null;
-          const j = p ? t - o : t - e;
-          if (j <= c.Kp.PerDay) {
+          let v = null;
+          const h = E ? t - o : t - e;
+          if (h <= c.Kp.PerDay) {
             const e = r.createElement(
               "div",
-              { className: s.ShortDateAndTime },
-              (0, i.Hq)(j, !0),
+              { className: n.ShortDateAndTime },
+              (0, i.Hq)(h, !0),
             );
-            g =
+            v =
               t < o
                 ? r.createElement(
                     "div",
-                    { className: s.RightSideTitles },
+                    { className: n.RightSideTitles },
                     (0, i.we)("#EventDisplay_TimeEndsOn_Ran"),
                     e,
                   )
                 : r.createElement(
                     "div",
-                    { className: s.RightSideTitles },
+                    { className: n.RightSideTitles },
                     (0, i.PP)(
-                      p
+                      E
                         ? "#EventDisplay_TimeLeft"
                         : "#EventDisplay_RunsForDuration",
                       e,
@@ -932,12 +832,12 @@
                   );
           } else {
             const e = a.getFullYear() == new Date(1e3 * t).getFullYear();
-            g = r.createElement(
+            v = r.createElement(
               r.Fragment,
               null,
               r.createElement(
                 "div",
-                { className: s.RightSideTitles },
+                { className: n.RightSideTitles },
                 (0, i.we)(
                   t < o
                     ? "#EventDisplay_TimeEndsOn_Past"
@@ -946,79 +846,80 @@
               ),
               r.createElement(
                 "div",
-                { className: s.ShortDateAndTime },
+                { className: n.ShortDateAndTime },
                 (0, i.TW)(t, e),
               ),
             );
           }
-          const D = r.createElement(_, { rtFullDate: t, stylesmodule: s }, g);
-          return r.createElement("div", { className: s.ShortDateRange }, E, D);
+          const D = r.createElement(p, { rtFullDate: t, stylesmodule: n }, v);
+          return r.createElement("div", { className: n.ShortDateRange }, g, D);
         }
       };
-      function h(e) {
+      function T(e) {
         const {
           rtStartDate: t,
-          rtEndDate: n,
-          strMonthFormat: s,
+          rtEndDate: s,
+          strMonthFormat: n,
           className: a,
         } = e;
         return r.createElement(
           "div",
           { className: a },
-          (function (e, t, n) {
-            const s = u.HD.GetTimeNowWithOverrideAsDate(),
+          (function (e, t, s) {
+            const n = u.HD.GetTimeNowWithOverrideAsDate(),
               r = new Date(1e3 * e),
               a = new Date(1e3 * t),
-              o = s.getFullYear() == r.getFullYear(),
-              l = s.getFullYear() == a.getFullYear(),
+              o = n.getFullYear() == r.getFullYear(),
+              l = n.getFullYear() == a.getFullYear(),
               c = r.getFullYear() == a.getFullYear(),
               m = c && r.getMonth() == a.getMonth(),
               d = m && r.getDate() == a.getDate(),
-              E = {
+              g = {
                 day: "numeric",
-                month: null != n ? n : "long",
+                month: null != s ? s : "long",
                 year: o ? void 0 : "numeric",
               },
-              p = r.toLocaleDateString(i.pf.GetPreferredLocales(), E);
-            if (d) return p;
+              E = r.toLocaleDateString(i.pf.GetPreferredLocales(), g);
+            if (d) return E;
             {
               const e = {
                 day: "numeric",
-                month: m && l ? void 0 : null != n ? n : "long",
+                month: m && l ? void 0 : null != s ? s : "long",
                 year: c ? void 0 : "numeric",
               };
               return (
-                p + " - " + a.toLocaleDateString(i.pf.GetPreferredLocales(), e)
+                E + " - " + a.toLocaleDateString(i.pf.GetPreferredLocales(), e)
               );
             }
-          })(t, n, s),
+          })(t, s, n),
           " ",
         );
       }
-      D = (0, s.Cg)([o.PA], D);
+      D = (0, n.Cg)([o.PA], D);
     },
-    48479: (e, t, n) => {
+    48479: (e, t, s) => {
       "use strict";
-      n.d(t, { AQ: () => u, o7: () => v, pn: () => p, qx: () => E });
-      var s = n(7068),
-        r = n(61859),
-        a = n(12155),
-        i = n(90626),
-        o = n(52038),
-        l = n(95695),
-        c = n(84811),
-        m = n(64734),
-        d = n(65946);
-      function u(e) {
+      s.d(t, { AQ: () => g, pn: () => j, qx: () => E });
+      var n = s(7068),
+        r = s(61859),
+        a = s(12155),
+        i = s(90626),
+        o = s(52038),
+        l = s(95695),
+        c = s(84811),
+        m = s(64734),
+        d = s(65946),
+        u = s(26408);
+      function g(e) {
         const {
             title: t,
-            tooltip: n,
-            getMinimized: s,
+            tooltip: s,
+            getMinimized: n,
             toggleMinimized: r,
             className: a,
-            children: u,
+            children: g,
           } = e,
-          E = (0, d.q3)(() => s());
+          E = (0, d.q3)(() => n());
         return i.createElement(
           i.Fragment,
           null,
@@ -1041,50 +942,39 @@
                 ),
               },
               t,
-              Boolean(n) && i.createElement(v, { tooltip: n }),
+              Boolean(s) && i.createElement(u.o, { tooltip: s }),
             ),
-            i.createElement(p, { bIsMinimized: E, fnToggleMinimize: r }),
+            i.createElement(j, { bIsMinimized: E, fnToggleMinimize: r }),
           ),
-          !E && i.createElement(c.tH, null, u),
+          !E && i.createElement(c.tH, null, g),
         );
       }
       function E(e) {
-        const [t, n] = i.useState(Boolean(e.bStartMinimized));
+        const [t, s] = i.useState(Boolean(e.bStartMinimized));
         return i.createElement(
-          u,
-          { ...e, getMinimized: () => t, toggleMinimized: () => n(!t) },
+          g,
+          { ...e, getMinimized: () => t, toggleMinimized: () => s(!t) },
           e.children,
         );
       }
-      function p(e) {
-        const { bIsMinimized: t, fnToggleMinimize: n } = e,
+      function j(e) {
+        const { bIsMinimized: t, fnToggleMinimize: s } = e,
           o = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
         return i.createElement(
-          s.$n,
-          { "data-tooltip-text": (0, r.we)(o), onClick: n },
+          n.$n,
+          { "data-tooltip-text": (0, r.we)(o), onClick: s },
           e.bIsMinimized
             ? i.createElement(a.hz4, null)
             : i.createElement(a.Xjb, null),
         );
       }
-      function v(e) {
-        return i.createElement(
-          "span",
-          {
-            "data-tooltip-text": e.tooltip,
-            className: (0, o.A)(l.HelperTooltip, "HelperTooltip"),
-          },
-          " ",
-          i.createElement(a._VW, null),
-        );
-      }
     },
-    68797: (e, t, n) => {
+    68797: (e, t, s) => {
       "use strict";
-      n.d(t, { H: () => i });
-      var s = n(41735),
-        r = n.n(s),
-        a = n(56545);
+      s.d(t, { H: () => i });
+      var n = s(41735),
+        r = s.n(n),
+        a = s(56545);
       function i(e) {
         if (r().isCancel(e))
           return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };

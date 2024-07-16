@@ -1823,7 +1823,7 @@ Bạn cần phải đăng xuất khỏi OSX để thay đổi này có hiệu l�
 "Steam_CloudSyncConflict"	"Sai lệch đồng bộ"
 "Steam_GameDownloadWaitingForComponentInUse"	"Chờ tải về"
 "Steam_VideoReady"	"Sẵn sàng để xem"
-"Steam_SiteLicenseGameUnavailable"		"Không có bản quyền nào"
+"Steam_SiteLicenseGameUnavailable"		"Không có giấy phép nào"
 
 
 "Steam_BackupRequiresFullyDownloadedGames_Title"	"Steam - Sao lưu"
@@ -3490,7 +3490,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "SteamUI_GameRequires_NTFS_Detail"	"Trò chơi bạn đang cài yêu cậu một ổ cứng với hệ thống file NTFS và\nkhông thể cài trên một hệ thống file FAT32. Để biết thêm thông tin xin vui lòng xem\nbài viết hỗ trợ ở đường dẫn bên dưới."
 "SteamUI_GameRequires_64BitOS_Detail"	"Trò chơi bạn đang cài đặt yêu cầu phiên bản Windows 64bit. Nếu bạn\nkhông có PC đạt yêu cầu, vui lòng nhấp vào bên dưới để tham khảo cách hoàn tiền."
 
-"SteamUI_SiteLicense_LockedDetail"	"Hiện không có giấy phép nào cho sản phẩm này. Vui lòng kiểm tra lại sau\nđể xem giấy phép đã có chưa hoặc báo với quản trị viên khu vực."
+"SteamUI_SiteLicense_LockedDetail"	"Hiện không có giấy phép nào cho sản phẩm này. Vui lòng kiểm tra lại sau\nđể xem có giấy phép chưa hoặc báo với quản trị viên phòng máy."
 
 "SteamUI_ValveSurvey_Summary_SteamHDUsedMB"	"Dung lượng ổ cứng dùng cho Steam: %s1 MB"
 "SteamUI_ValveSurvey_GatheringSystemInformation"	"Đang thu thập thông tin hệ thống..."
@@ -4205,7 +4205,7 @@ Cuộc thử nghiệm beta đã kết thúc - xin vui lòng khởi động lại
 "Steam_AppUpdateError_41"		"file khởi chạy yêu cầu hệ điều hành 64bit"
 "Steam_AppUpdateError_42"		"thiếu các file đã tải"
 "Steam_AppUpdateError_43"		"không đủ bộ nhớ trống cho người dùng - xin kiểm tra chỉ tiêu bộ nhớ của hệ điều hành"
-"Steam_AppUpdateError_44"		"bản quyền phòng máy đã khóa"
+"Steam_AppUpdateError_44"		"giấy phép phòng máy bị khóa"
 "Steam_AppUpdateError_45"		"chặn bởi quản lý trẻ em"
 "Steam_AppUpdateError_46"		"không thể tạo ứng dụng"
 "Steam_AppUpdateError_47"		"Phiên bản Steam lỗi thời"

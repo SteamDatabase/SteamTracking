@@ -45,7 +45,7 @@
 "Steam_Login_ErrorTitle"	"Steam - 오류"
 "Steam_Login_NeedTwoFactorTitle"	"Steam - 인증기 코드"
 "Steam_Login_TwoFactorErrorTitle"	"Steam - 잘못된 인증기 코드"
-"Steam_ErrorLoginFailed" "Steam에 로그인하지 못했습니다.\n계정이 존재하지 않거나 비밀번호가 맞지 않습니다.\n계정 이름과 비밀번호를 확인한 후 다시 시도해 보십시오."
+"Steam_ErrorLoginFailed" "Steam에 로그인하지 못했습니다.\n계정이 존재하지 않거나 비밀번호가 맞지 않습니다.\n계정 이름과 비밀번호를 확인한 후 다시 시도해 보세요."
 "Steam_Login_IncorrectPassword" "비밀번호 또는 계정 이름을 잘못 입력하셨습니다. 비밀번호와 계정 이름을 확인하시고 다시 시도해 주세요."
 "Steam_Login_RateLimited"	"귀하의 네트워크에서 짧은 시간동안 너무 많은 로그인 오류가 발생했습니다. 나중에 다시 시도해주세요."
 "Steam_Login_RememberPassword"  "비밀번호 저장"

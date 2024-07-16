@@ -56,6 +56,16 @@ enum EStoreBrowseFilterFailure {
 	k_EStoreBrowseFilterFailure_UnwantedContent = 40;
 }
 
+enum EStoreLinkType {
+	k_EStoreLinkType_None = 0;
+	k_EStoreLinkType_YouTube = 1;
+	k_EStoreLinkType_Facebook = 2;
+	k_EStoreLinkType_Twitter = 3;
+	k_EStoreLinkType_Twitch = 4;
+	k_EStoreLinkType_Discord = 5;
+	k_EStoreLinkType_MAX = 6;
+}
+
 enum EStoreCategoryType {
 	k_EStoreCategoryType_Category = 0;
 	k_EStoreCategoryType_SupportedPlayers = 1;
@@ -98,6 +108,7 @@ message StoreBrowseItemDataRequest {
 	optional .StoreBrowseItemDataRequest included_item_data_request = 14;
 	optional bool include_assets_without_overrides = 15;
 	optional bool apply_user_filters = 16;
+	optional bool include_links = 17;
 }
 
 message CStoreBrowse_GetItems_Request {
@@ -284,6 +295,11 @@ message StoreItem {
 		optional string text = 3;
 	}
 
+	message Link {
+		optional .EStoreLinkType link_type = 1 [default = k_EStoreLinkType_None];
+		optional string url = 2;
+	}
+
 	optional .EStoreItemType item_type = 1 [default = k_EStoreItemType_Invalid];
 	optional uint32 id = 2;
 	optional uint32 success = 3;
@@ -325,6 +341,7 @@ message StoreItem {
 	optional bool is_free_temporarily = 59;
 	optional .StoreItem.Assets assets_without_overrides = 60;
 	optional .StoreBrowseFilterFailure user_filter_failure = 70;
+	repeated .StoreItem.Link links = 71;
 }
 
 message StoreGameRating {

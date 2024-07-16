@@ -1038,6 +1038,11 @@ background: -webkit-linear-gradient( top, rgba(19, 24, 27, 0.5) 5%, rgba(19, 24,
 
 .page_section.editing {
 	min-height: 150px;
+	z-index: 13;
+}
+
+.page_section.editing.editing_open {
+	z-index: 14;
 }
 
 .page_section input[type=text], .page_section select, .control select {

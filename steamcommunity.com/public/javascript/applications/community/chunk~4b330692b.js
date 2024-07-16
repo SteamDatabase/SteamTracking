@@ -59,8 +59,8 @@
         l = a.n(r),
         s = a(75844),
         o = a(90626),
-        i = a(71513),
-        c = a(32381),
+        c = a(71513),
+        i = a(32381),
         d = a(92022),
         m = a(96059),
         h = a(38506),
@@ -218,12 +218,12 @@
                       l = Math.random() * e,
                       s = Math.random() * l,
                       o = 4 * (Math.random() - 0.5) * Math.PI * 20,
-                      i = Math.random() + 0.5,
-                      c = [
+                      c = Math.random() + 0.5,
+                      i = [
                         Math.random() * r - r - 20,
-                        r + 20 + Math.random() * r * i,
+                        r + 20 + Math.random() * r * c,
                       ],
-                      d = i * (n <= 1e3 ? 1 : n / 1e3) * (t == M.Gold ? 2 : 1),
+                      d = c * (n <= 1e3 ? 1 : n / 1e3) * (t == M.Gold ? 2 : 1),
                       m = (Math.random() - 0.5) * n,
                       h = (Math.random() - 0.5) * n,
                       u = [h, m + h],
@@ -234,7 +234,7 @@
                       rotationRatioY: l,
                       rotationRatioX: e,
                       rotationRatioZ: s,
-                      yRange: c,
+                      yRange: i,
                       xRange: u,
                       scale: d,
                       colorHue: g,
@@ -252,8 +252,8 @@
                       rotationRatioX: l,
                       rotationRatioZ: s,
                       yRange: o,
-                      xRange: i,
-                      scale: c,
+                      xRange: c,
+                      scale: i,
                       colorHue: d,
                       filter: m,
                     } = e;
@@ -267,7 +267,7 @@
                           a = e * n * l,
                           d = e * n * s,
                           m = e * (o[1] - o[0]) + o[0];
-                        return `translate(${e * (i[1] - i[0]) + i[0]}px, ${m}px) rotateY(${t}rad) rotateX(${a}rad) rotateZ(${d}rad) scale(${c})`;
+                        return `translate(${e * (c[1] - c[0]) + c[0]}px, ${m}px) rotateY(${t}rad) rotateX(${a}rad) rotateZ(${d}rad) scale(${i})`;
                       }),
                     };
                   })(e, a),
@@ -282,13 +282,13 @@
                         yRange: l,
                         xRange: s,
                         scale: o,
-                        colorHue: i,
-                        filter: c,
+                        colorHue: c,
+                        filter: i,
                       } = e;
                       return {
                         backgroundColor: void 0,
-                        fill: i,
-                        filter: c,
+                        fill: c,
+                        filter: i,
                         flRandom: Math.random(),
                         transform: t.interpolate((e) => {
                           const t = ((e * n) / 4) * r,
@@ -613,14 +613,14 @@
         return (0, _.we)(`#RewardsReaction_${e}`);
       }
       var $ = a(56425);
-      const z = (e) => {
+      const j = (e) => {
         const { className: t, ...a } = e;
-        return o.createElement(i.fu, {
+        return o.createElement(c.fu, {
           className: (0, L.A)(t, $.UnstyledButton),
           ...a,
         });
       };
-      var j, Y, V;
+      var z, Y, V;
       !(function (e) {
         (e[(e.LOADING = 0)] = "LOADING"),
           (e[(e.SELECTING = 1)] = "SELECTING"),
@@ -674,7 +674,7 @@
       }
       (0, n.Cg)([A.oI], Q.prototype, "handleMouseOver", null),
         (0, n.Cg)([A.oI], Q.prototype, "handleMouseOut", null);
-      let q = (j = class extends o.Component {
+      let q = (z = class extends o.Component {
         constructor(e) {
           super(e),
             (window.fnLoyalty_ShowAwardModal = (t, a, n, r, l) => {
@@ -692,8 +692,8 @@
             (this.state = { bLoading: !0 });
         }
         async Init(e) {
-          if (j.s_LoyaltyAwardModalStore) return;
-          if (e) return void (j.s_LoyaltyAwardModalStore = new E(e));
+          if (z.s_LoyaltyAwardModalStore) return;
+          if (e) return void (z.s_LoyaltyAwardModalStore = new E(e));
           const t = {
               ...(0, C.Tc)("loyaltystore", "application_config"),
               ...(await (async function () {
@@ -719,56 +719,55 @@
               })()),
             },
             a = new m.D(C.TS.WEBAPI_BASE_URL, t.webapi_token);
-          (j.s_LoyaltyAwardModalStore = new E(a.GetServiceTransport())),
+          (z.s_LoyaltyAwardModalStore = new E(a.GetServiceTransport())),
             this.setState({ bLoading: !1 });
         }
         render() {
           const {
-              bLoading: e,
-              bShowModal: t,
-              targetType: a,
-              fnSuccessFunc: n,
-              targetid: r,
-              ugcType: l,
-              initialSelectedReaction: s,
-            } = this.state,
-            i = j.s_LoyaltyAwardModalStore;
-          if (!t) return null;
-          if (e)
-            return o.createElement(
-              f.mt,
-              {
-                className: Z.GrantAwardModal,
-                active: !0,
-                onDismiss: () => this.setState({ bShowModal: !1 }),
-              },
-              o.createElement(ee, null),
-              o.createElement(ae, null),
-              o.createElement(
-                "div",
-                { className: Z.InitialLoading },
-                o.createElement(
-                  "div",
-                  { className: (0, L.A)(Z.LoadingContainer, Z.Visible) },
-                  o.createElement(re, null),
-                ),
-              ),
-            );
-          i.GetAwardConfigurations();
-          return o.createElement(K, {
-            key: r,
-            targetid: r,
-            active: t,
+            bLoading: e,
+            bShowModal: t,
             targetType: a,
+            fnSuccessFunc: n,
+            targetid: r,
             ugcType: l,
-            onDismiss: () => this.setState({ bShowModal: !1 }),
-            onSuccess: n,
-            store: j.s_LoyaltyAwardModalStore,
             initialSelectedReaction: s,
-          });
+          } = this.state;
+          return t
+            ? e
+              ? o.createElement(
+                  f.mt,
+                  {
+                    className: Z.GrantAwardModal,
+                    active: !0,
+                    onDismiss: () => this.setState({ bShowModal: !1 }),
+                  },
+                  o.createElement(ee, null),
+                  o.createElement(ae, null),
+                  o.createElement(
+                    "div",
+                    { className: Z.InitialLoading },
+                    o.createElement(
+                      "div",
+                      { className: (0, L.A)(Z.LoadingContainer, Z.Visible) },
+                      o.createElement(re, null),
+                    ),
+                  ),
+                )
+              : o.createElement(K, {
+                  key: r,
+                  targetid: r,
+                  active: t,
+                  targetType: a,
+                  ugcType: l,
+                  onDismiss: () => this.setState({ bShowModal: !1 }),
+                  onSuccess: n,
+                  store: z.s_LoyaltyAwardModalStore,
+                  initialSelectedReaction: s,
+                })
+            : null;
         }
       });
-      (q.defaultProps = { targetType: 1 }), (q = j = (0, n.Cg)([s.PA], q));
+      (q.defaultProps = { targetType: 1 }), (q = z = (0, n.Cg)([s.PA], q));
       const J = q;
       let X = (Y = class extends o.Component {
         static Initialize(e) {
@@ -780,17 +779,13 @@
         }
         render() {
           const {
-              targetType: e,
-              targetid: t,
-              bShowModal: a,
-              ugcType: n,
-              initialSelectedReaction: r,
-              onDismiss: l,
-            } = this.props,
-            s = Y.s_LoyaltyAwardModalStore;
-          if (null === s)
-            return console.log("Store not initialized yet."), null;
-          s.GetAwardConfigurations();
+            targetType: e,
+            targetid: t,
+            bShowModal: a,
+            ugcType: n,
+            initialSelectedReaction: r,
+            onDismiss: l,
+          } = this.props;
           return o.createElement(K, {
             key: t,
             targetid: t,
@@ -830,7 +825,7 @@
               store: n,
               onDismiss: r,
             } = this.props,
-            { selectedReaction: l, ePhase: s, celebrate: c } = this.state;
+            { selectedReaction: l, ePhase: s, celebrate: i } = this.state;
           if (!e) return null;
           const m = n.GetExistingReactions(),
             h = n.GetAwardConfigurations(),
@@ -876,6 +871,7 @@
               A = (0, _.we)("#GrantAwardDescription_Comment");
           }
           switch (s) {
+            case V.LOADING:
             case V.SELECTING:
               {
                 const e = 0 === l || m.get(l),
@@ -951,7 +947,7 @@
                             ),
                           ),
                           o.createElement(
-                            i.Ii,
+                            c.Ii,
                             {
                               key: "button",
                               href: `${C.TS.STORE_BASE_URL}points/howitworks`,
@@ -1168,7 +1164,7 @@
             o.createElement(
               f.Qs,
               { navID: "GrantAward", closeModal: r },
-              c && o.createElement(T, { eType: M.Default }),
+              i && o.createElement(T, { eType: M.Default }),
               v,
             ),
           );
@@ -1228,7 +1224,7 @@
               "div",
               { className: Z.Right },
               o.createElement(
-                c.Z,
+                i.Z,
                 { className: Z.Actions, "flow-children": "row" },
                 o.Children.map(t, (e) =>
                   o.createElement("div", { className: Z.Action }, e),
@@ -1266,7 +1262,7 @@
             ...l
           } = this.props;
           return o.createElement(
-            z,
+            j,
             {
               type: "button",
               onMouseEnter: this.handleMouseOver,

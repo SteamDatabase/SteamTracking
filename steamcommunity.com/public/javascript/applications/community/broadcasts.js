@@ -331,7 +331,7 @@
     },
     35261: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => pe });
+      a.r(t), a.d(t, { default: () => Ee });
       a(64641);
       var n = a(90626),
         r = a(92757),
@@ -946,12 +946,12 @@
           );
         };
       var L = a(98371),
-        x = a(1035),
-        W = a(41471),
+        W = a(1035),
+        x = a(41471),
         K = a(16971);
       const V = (e) => {
         const t = e.steamid.GetAccountID(),
-          { data: a } = (0, W.hW)(t);
+          { data: a } = (0, x.hW)(t);
         return n.createElement(
           "div",
           { className: K.AvatarCtn },
@@ -961,7 +961,7 @@
               href: a.GetCommunityProfileURL(),
               "data-miniprofile": "s" + e.steamid.ConvertTo64BitString(),
             },
-            n.createElement(x.i8, {
+            n.createElement(W.i8, {
               persona: a,
               size: e.size,
               statusPosition: "bottom",
@@ -989,8 +989,9 @@
         X = a(12155),
         z = a(51272),
         Y = a(61336),
-        Z = a(46699);
-      function $(e) {
+        Z = a(46699),
+        $ = a(32754);
+      function ee(e) {
         const { broadcasterSteamID: t } = e,
           a = t.ConvertTo64BitString(),
           [r, o] = (0, j.q3)(() => {
@@ -1027,21 +1028,21 @@
                 n.createElement(
                   "div",
                   { className: Z.GameAndViewersCtn },
-                  n.createElement(ee, { broadcasterSteamID: t }),
+                  n.createElement(te, { broadcasterSteamID: t }),
                   n.createElement(
                     "div",
                     { className: Z.ViewerCount },
                     (0, M.Yp)("#Broadcast_ViewerCount", r.toLocaleString()),
                   ),
                 ),
-                n.createElement(te, { broadcasterSteamID: t }),
+                n.createElement(ae, { broadcasterSteamID: t }),
               ),
               n.createElement(V, { steamid: t, size: "Medium", bShowName: !0 }),
             ),
           ),
         );
       }
-      const ee = (0, E.PA)((e) => {
+      const te = (0, E.PA)((e) => {
           const { broadcasterSteamID: t } = e,
             a = t.ConvertTo64BitString(),
             [r, o] = (0, j.q3)(() => {
@@ -1067,7 +1068,7 @@
               n.createElement("span", null, " - ", r),
           );
         }),
-        te = (0, E.PA)((e) => {
+        ae = (0, E.PA)((e) => {
           const { broadcasterSteamID: t } = e,
             a = t.ConvertTo64BitString();
           d.es.GetOrCreateBroadcastInfo(a);
@@ -1080,11 +1081,10 @@
               n.createElement(
                 C.$n,
                 {
-                  "data-tooltip-text": (0, M.we)("#Broadcast_User_Report_ttip"),
                   onClick: (e) => {
                     p.iA.logged_in
                       ? (0, k.pg)(
-                          n.createElement(ae, { broadcasterSteamID: t }),
+                          n.createElement(ne, { broadcasterSteamID: t }),
                           (0, P.uX)(e),
                         )
                       : (0, k.pg)(
@@ -1102,23 +1102,30 @@
                         );
                   },
                 },
-                n.createElement(X.lNU, null),
+                n.createElement(
+                  $.he,
+                  { toolTipContent: (0, M.we)("#Broadcast_User_Report_ttip") },
+                  n.createElement(X.lNU, null),
+                ),
               ),
             n.createElement(
               C.$n,
               {
-                "data-tooltip-text": (0, M.we)("#Broadcast_User_FAQ_ttip"),
                 onClick: (e) =>
                   (0, z.EP)(
                     e,
                     "https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497",
                   ),
               },
-              n.createElement(X.$$j, null),
+              n.createElement(
+                $.he,
+                { toolTipContent: (0, M.we)("#Broadcast_User_FAQ_ttip") },
+                n.createElement(X.$$j, null),
+              ),
             ),
           );
         }),
-        ae = (e) => {
+        ne = (e) => {
           const [t, a] = (0, n.useState)("");
           return n.createElement(
             N.o0,
@@ -1140,13 +1147,13 @@
             }),
           );
         };
-      var ne = a(30593),
-        re = a(22797);
-      const oe = (e) => {
+      var re = a(30593),
+        oe = a(22797);
+      const se = (e) => {
           if (!p.iA.is_support) return null;
           const t = (t, a) => {
               (0, k.pg)(
-                n.createElement(se, {
+                n.createElement(ie, {
                   broadcastSteamID: e.broadcastSteamID,
                   strAction: a,
                 }),
@@ -1158,7 +1165,7 @@
               e.broadcastSteamID.ConvertTo64BitString();
           return n.createElement(
             "div",
-            { className: (0, G.A)(ne.AdminControls, y().ValveOnlyBackground) },
+            { className: (0, G.A)(re.AdminControls, y().ValveOnlyBackground) },
             n.createElement("div", null, "(VO) Support Tools"),
             n.createElement(
               C.$n,
@@ -1175,7 +1182,7 @@
               {
                 onClick: (t) => {
                   (0, k.pg)(
-                    n.createElement(ie, { steamid: e.broadcastSteamID }),
+                    n.createElement(le, { steamid: e.broadcastSteamID }),
                     (0, P.uX)(t),
                   );
                 },
@@ -1189,7 +1196,7 @@
             ),
           );
         },
-        se = (0, E.PA)((e) => {
+        ie = (0, E.PA)((e) => {
           const { broadcastSteamID: t, strAction: a } = e,
             [r, o] = (0, n.useState)(1),
             [s, l] = (0, n.useState)(!1),
@@ -1240,7 +1247,7 @@
                         selectedOption: r,
                         onChange: (e) => o(e.data),
                       }),
-                      Boolean(s) && n.createElement(re.t, null),
+                      Boolean(s) && n.createElement(oe.t, null),
                       Boolean(c) &&
                         n.createElement(
                           "div",
@@ -1295,7 +1302,7 @@
             ),
           );
         }),
-        ie = (e) => {
+        le = (e) => {
           const [t, a] = (0, n.useState)(!1),
             [r, o] = (0, n.useState)(!1),
             [s, l] = (0, n.useState)(!1),
@@ -1331,7 +1338,7 @@
                     n.createElement(
                       "div",
                       null,
-                      Boolean(t) && n.createElement(re.t, null),
+                      Boolean(t) && n.createElement(oe.t, null),
                       Boolean(r) &&
                         n.createElement(
                           "div",
@@ -1384,7 +1391,8 @@
             ),
           );
         };
-      const le = (0, E.PA)((e) => {
+      var ce = a(26408);
+      const me = (0, E.PA)((e) => {
           const t = v.Get().GetBroadcasterSteamID(),
             a = null == t ? void 0 : t.ConvertTo64BitString(),
             r = (function () {
@@ -1459,7 +1467,7 @@
                       ),
                   ),
                   Boolean(!v.Get().BShowInIframe()) &&
-                    n.createElement(ce, {
+                    n.createElement(de, {
                       broadcasterSteamID: t,
                       broadcastInfo: l,
                     }),
@@ -1467,7 +1475,7 @@
               )
             : null;
         }),
-        ce = (0, E.PA)((e) => {
+        de = (0, E.PA)((e) => {
           const { broadcasterSteamID: t, broadcastInfo: a } = e,
             [r, o] = (0, n.useState)(null);
           return (
@@ -1482,13 +1490,13 @@
             n.createElement(
               n.Fragment,
               null,
-              n.createElement($, { broadcasterSteamID: t }),
-              n.createElement(me, { steamid: t }),
+              n.createElement(ee, { broadcasterSteamID: t }),
+              n.createElement(ue, { steamid: t }),
               Boolean(p.iA.is_support) &&
                 n.createElement(
                   "div",
                   null,
-                  n.createElement(oe, { broadcastSteamID: t }),
+                  n.createElement(se, { broadcastSteamID: t }),
                   n.createElement(
                     "div",
                     {
@@ -1540,7 +1548,7 @@
             )
           );
         }),
-        me = (0, E.PA)((e) => {
+        ue = (0, E.PA)((e) => {
           const t = (0, n.useRef)(null);
           let a = d.es.GetOrCreateBroadcastInfo(
             e.steamid.ConvertTo64BitString(),
@@ -1605,11 +1613,11 @@
                           ),
                         );
                     },
-                    "data-tooltip-text": (0, M.we)(
-                      "#Broadcast_save_title_ttip",
-                    ),
                   },
                   (0, M.we)("#Broadcast_save_changes"),
+                  n.createElement(ce.o, {
+                    tooltip: (0, M.we)("#Broadcast_save_title_ttip"),
+                  }),
                 ),
               ),
               n.createElement(
@@ -1653,16 +1661,16 @@
             ),
           );
         });
-      var de = a(60746);
-      let ue = { BroadcastWatch: (e) => `/broadcast/(watch|watchnew)/${e}` };
-      function pe(e) {
+      var pe = a(60746);
+      let ve = { BroadcastWatch: (e) => `/broadcast/(watch|watchnew)/${e}` };
+      function Ee(e) {
         const [t, a] = n.useState(!0);
         return (
           (0, n.useEffect)(() => {
-            t && de.KN.InitGlobal().then(() => a(!1));
+            t && pe.KN.InitGlobal().then(() => a(!1));
           }, [t]),
           t
-            ? n.createElement(re.t, {
+            ? n.createElement(oe.t, {
                 string: (0, M.we)("#Loading"),
                 position: "center",
                 size: "medium",
@@ -1674,9 +1682,9 @@
                   r.dO,
                   null,
                   n.createElement(r.qh, {
-                    path: ue.BroadcastWatch(":steamid_or_user_vanity"),
+                    path: ve.BroadcastWatch(":steamid_or_user_vanity"),
                     render: (e) =>
-                      n.createElement(le, {
+                      n.createElement(me, {
                         strSteamID: e.match.params.steamid_or_user_vanity,
                       }),
                   }),
@@ -2057,7 +2065,7 @@
     },
     35685: (e, t, a) => {
       "use strict";
-      a.d(t, { kH: () => x, rN: () => O, uY: () => Q, zA: () => L });
+      a.d(t, { kH: () => W, rN: () => O, uY: () => Q, zA: () => L });
       var n = a(22837),
         r = a(41735),
         o = a.n(r),
@@ -2437,7 +2445,7 @@
             ),
         );
       }
-      function x(e) {
+      function W(e) {
         const { event: t, imageURLOverride: a, onClick: r } = e,
           o = (0, n.sf)(N.TS.LANGUAGE),
           [s, c, m] = (0, i.q3)(() =>

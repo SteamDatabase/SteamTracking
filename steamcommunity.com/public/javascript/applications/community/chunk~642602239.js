@@ -1514,20 +1514,20 @@
     59952: (e, t, n) => {
       "use strict";
       n.d(t, {
-        $A: () => G,
-        B8: () => L,
-        N2: () => b,
-        Pk: () => M,
-        Sz: () => A,
-        Tu: () => N,
-        UT: () => F,
-        W4: () => w,
-        ZS: () => D,
-        Zb: () => T,
-        _D: () => I,
-        _J: () => P,
-        ck: () => U,
-        j$: () => B,
+        $A: () => F,
+        B8: () => P,
+        N2: () => I,
+        Pk: () => L,
+        Sz: () => D,
+        Tu: () => R,
+        UT: () => O,
+        W4: () => b,
+        ZS: () => k,
+        Zb: () => A,
+        _D: () => B,
+        _J: () => U,
+        ck: () => x,
+        j$: () => N,
       });
       var r = n(33645),
         i = n.n(r),
@@ -1548,8 +1548,9 @@
         S = n(61336),
         v = n(30470),
         y = n(12611),
-        C = n(74410);
-      const w = new Map([
+        C = n(74410),
+        w = n(32754);
+      const b = new Map([
           [
             "b",
             {
@@ -1576,14 +1577,14 @@
               autocloses: !1,
             },
           ],
-          ["h1", { Constructor: T, autocloses: !1, skipFollowingNewline: !0 }],
-          ["h2", { Constructor: A, autocloses: !1, skipFollowingNewline: !0 }],
-          ["h3", { Constructor: D, autocloses: !1, skipFollowingNewline: !0 }],
+          ["h1", { Constructor: A, autocloses: !1, skipFollowingNewline: !0 }],
+          ["h2", { Constructor: D, autocloses: !1, skipFollowingNewline: !0 }],
+          ["h3", { Constructor: k, autocloses: !1, skipFollowingNewline: !0 }],
           [
             "h4",
             {
               Constructor: function (e) {
-                return R(e, (0, E.A)(i().Header4, "BB_Header4"));
+                return T(e, (0, E.A)(i().Header4, "BB_Header4"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -1593,7 +1594,7 @@
             "h5",
             {
               Constructor: function (e) {
-                return R(e, (0, E.A)(i().Header5, "BB_Header5"));
+                return T(e, (0, E.A)(i().Header5, "BB_Header5"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -1603,7 +1604,7 @@
             "center",
             {
               Constructor: function (e) {
-                let t = B(e.args, "id");
+                let t = N(e.args, "id");
                 t &&
                   "string" == typeof t &&
                   t.length > 0 &&
@@ -1625,7 +1626,7 @@
             "smalltext",
             {
               Constructor: function (e) {
-                return R(e, (0, E.A)(i().SmallText, "BB_SmallText"));
+                return T(e, (0, E.A)(i().SmallText, "BB_SmallText"));
               },
               autocloses: !1,
               skipFollowingNewline: !0,
@@ -1707,7 +1708,7 @@
             "url",
             {
               Constructor: function (e) {
-                let t = B(e.args);
+                let t = N(e.args);
                 if (!t) {
                   const n = e.children;
                   "string" == typeof n &&
@@ -1715,8 +1716,8 @@
                     (t = n);
                 }
                 const n =
-                  "button" == B(e.args, "style") ? i().LinkButton : null;
-                let r = B(e.args, "id");
+                  "button" == N(e.args, "style") ? i().LinkButton : null;
+                let r = N(e.args, "id");
                 r &&
                   "string" == typeof r &&
                   r.length > 0 &&
@@ -1733,7 +1734,7 @@
                     e.children,
                   );
                 return s.createElement(
-                  k,
+                  M,
                   { className: n, href: t, id: r },
                   e.children,
                 );
@@ -1741,7 +1742,7 @@
               autocloses: !1,
             },
           ],
-          ["quote", { Constructor: M, autocloses: !1 }],
+          ["quote", { Constructor: L, autocloses: !1 }],
           [
             "pullquote",
             {
@@ -1781,18 +1782,18 @@
               autocloses: !1,
             },
           ],
-          ["list", { Constructor: L, autocloses: !1, skipInternalNewline: !0 }],
+          ["list", { Constructor: P, autocloses: !1, skipInternalNewline: !0 }],
           [
             "olist",
-            { Constructor: P, autocloses: !1, skipInternalNewline: !0 },
+            { Constructor: U, autocloses: !1, skipInternalNewline: !0 },
           ],
-          ["*", { Constructor: U, autocloses: !0, skipInternalNewline: !0 }],
+          ["*", { Constructor: x, autocloses: !0, skipInternalNewline: !0 }],
           [
             "table",
             {
               Constructor: function (e) {
-                const t = B(e.args, "noborder"),
-                  n = B(e.args, "equalcells");
+                const t = N(e.args, "noborder"),
+                  n = N(e.args, "equalcells");
                 return s.createElement(
                   "div",
                   {
@@ -1844,7 +1845,7 @@
             "td",
             {
               Constructor: function (e) {
-                const t = B(e.args, "width");
+                const t = N(e.args, "width");
                 return s.createElement(
                   "div",
                   {
@@ -1863,9 +1864,11 @@
             "expand",
             {
               Constructor: function (e) {
-                const t = Boolean(B(e.args, "expanded")),
+                const t = Boolean(N(e.args, "expanded")),
                   [n, r] = s.useState(t),
-                  a = (function (e, t) {
+                  a = N(e.args, "collapsed_str"),
+                  o = N(e.args, "expanded_str"),
+                  l = (function (e, t, n) {
                     switch (e) {
                       case "details":
                         return {
@@ -1882,7 +1885,7 @@
                       case "title":
                         return {
                           collapsed: t || "#Bbcode_Expand_ShowMore_Collapsed",
-                          expanded: t || "#Bbcode_Expand_ShowMore_Expanded",
+                          expanded: n || "#Bbcode_Expand_ShowMore_Expanded",
                           style: i().ExpandSection_WithTitle,
                         };
                       default:
@@ -1892,17 +1895,18 @@
                           style: i().ExpandSection_ShowMore,
                         };
                     }
-                  })(B(e.args, "type"), B(e.args, "title"));
+                  })(N(e.args, "type"), a, o);
                 return s.createElement(
                   "div",
                   {
-                    className: (0, E.A)(
-                      i().ExpandSectionBlock,
-                      a.style,
-                      n
-                        ? i().ExpandSectionExpanded
-                        : i().ExpandSectionCollapsed,
-                    ),
+                    className: (0, E.A)({
+                      [i().ExpandSectionBlock]: !0,
+                      [l.style]: !0,
+                      [i().ExpandSectionExpanded]: n,
+                      [i().ExpandSectionCollapsed]: !n,
+                      BBCodeExpanded: n,
+                      BBCodeCollapsed: !n,
+                    }),
                   },
                   s.createElement(
                     "div",
@@ -1910,7 +1914,7 @@
                       className: i().ExpandSectionHeader,
                       onClick: () => r(!n),
                     },
-                    (0, f.we)(n ? a.expanded : a.collapsed),
+                    (0, f.we)(n ? l.expanded : l.collapsed),
                     s.createElement(
                       "div",
                       { className: i().EmbedArrow },
@@ -1935,7 +1939,7 @@
             {
               Constructor: function (e) {
                 const { event: t, showErrorInfo: n } = e.context,
-                  r = B(e.args);
+                  r = N(e.args);
                 if (r)
                   return s.createElement(p.y, { eventGID: r, bPreviewMode: n });
                 if (t) {
@@ -1951,10 +1955,10 @@
             "doclink",
             {
               Constructor: function (e) {
-                const t = B(e.args),
-                  n = "button" == B(e.args, "style") ? i().LinkButton : null;
+                const t = N(e.args),
+                  n = "button" == N(e.args, "style") ? i().LinkButton : null;
                 return s.createElement(
-                  k,
+                  M,
                   { className: n, href: `${v.TS.PARTNER_BASE_URL}doc/${t}` },
                   e.children,
                 );
@@ -1966,7 +1970,7 @@
             "color",
             {
               Constructor: function (e) {
-                const t = B(e.args);
+                const t = N(e.args);
                 return s.createElement(
                   "span",
                   { style: { color: t } },
@@ -1992,13 +1996,13 @@
             },
           ],
         ]),
-        b = new Map([
-          ["looping_media", { Constructor: G, autocloses: !1 }],
-          ["video", { Constructor: F, autocloses: !1 }],
+        I = new Map([
+          ["looping_media", { Constructor: F, autocloses: !1 }],
+          ["video", { Constructor: O, autocloses: !1 }],
           ["youtubeorvideo", { Constructor: C.Eo, autocloses: !1 }],
           ["previewyoutube", { Constructor: C.gH, autocloses: !1 }],
         ]);
-      function I(e, t, n = 0) {
+      function B(e, t, n = 0) {
         if (null == e ? void 0 : e.startsWith(y.l)) return (0, d.v6)(e);
         if (null == e ? void 0 : e.startsWith(y.e)) {
           const r = new Array(),
@@ -2017,16 +2021,16 @@
         }
         return e;
       }
-      function B(e, t) {
+      function N(e, t) {
         return void 0 === t ? e[""] : e[t];
       }
-      function N(e, t) {
+      function R(e, t) {
         return (n) => e({ ...n, className: (0, E.A)(n.className, t) });
       }
-      function R(e, t) {
-        let n = B(e.args, "id");
+      function T(e, t) {
+        let n = N(e.args, "id");
         return (
-          n || (n = B(e.args)),
+          n || (n = N(e.args)),
           n &&
             "string" == typeof n &&
             n.length > 0 &&
@@ -2039,16 +2043,16 @@
           )
         );
       }
-      function T(e) {
-        return R(e, (0, E.A)(i().Header1, "BB_Header1"));
-      }
       function A(e) {
-        return R(e, (0, E.A)(i().Header2, "BB_Header2"));
+        return T(e, (0, E.A)(i().Header1, "BB_Header1"));
       }
       function D(e) {
-        return R(e, (0, E.A)(i().Header3, "BB_Header3"));
+        return T(e, (0, E.A)(i().Header2, "BB_Header2"));
       }
-      const k = (e) => {
+      function k(e) {
+        return T(e, (0, E.A)(i().Header3, "BB_Header3"));
+      }
+      const M = (e) => {
         const { href: t, ...n } = e,
           r = (0, _.n9)();
         let i,
@@ -2069,11 +2073,11 @@
         return s.createElement(
           o.Ii,
           { ...n, href: a, rel: i },
-          s.createElement("span", { "data-tooltip-text": l }, e.children),
+          s.createElement(w.he, { toolTipContent: l }, e.children),
         );
       };
-      function M(e) {
-        const t = B(e.args, "author");
+      function L(e) {
+        const t = N(e.args, "author");
         return s.createElement(
           "blockquote",
           { className: (0, E.A)(i().BlockQuote, e.className) },
@@ -2088,22 +2092,22 @@
           e.children,
         );
       }
-      function L(e) {
+      function P(e) {
         return s.createElement(
           "ul",
           { className: (0, E.A)(i().List, "bullets") },
           e.children,
         );
       }
-      function P(e) {
+      function U(e) {
         return s.createElement(
           "ol",
           { className: i().OrderedList },
           e.children,
         );
       }
-      function U(e) {
-        let t = B(e.args, "id");
+      function x(e) {
+        let t = N(e.args, "id");
         return (
           t &&
             "string" == typeof t &&
@@ -2117,21 +2121,21 @@
           )
         );
       }
-      function x(e) {
-        let t = B(e.args, "poster");
+      function G(e) {
+        let t = N(e.args, "poster");
         t && (t = (0, S.L$)(t));
         const n = new Array();
         {
-          const t = B(e.args, "mp4");
+          const t = N(e.args, "mp4");
           t && n.push({ sURL: (0, S.L$)(t), sFormat: "video/mp4" });
-          const r = B(e.args, "webm");
+          const r = N(e.args, "webm");
           r && n.push({ sURL: (0, S.L$)(r), sFormat: "video/webm" });
         }
         const r = (0, a.sf)(v.TS.LANGUAGE),
           i = 0 != r,
           s = new Array();
         for (let t = 0; t < 31; t++) {
-          const n = B(e.args, "sub_" + (0, a.ww)(t));
+          const n = N(e.args, "sub_" + (0, a.ww)(t));
           n &&
             s.push({
               sURL: (0, S.L$)(n),
@@ -2139,7 +2143,7 @@
               sKind: "subtitles",
               bDefault: i && t == r,
             });
-          const o = B(e.args, "cap_" + (0, a.ww)(t));
+          const o = N(e.args, "cap_" + (0, a.ww)(t));
           o &&
             s.push({
               sURL: (0, S.L$)(o),
@@ -2150,8 +2154,8 @@
         }
         return { sPoster: t, rgVideoSources: n, rgVideoTracks: s };
       }
-      function G(e) {
-        const t = x(e);
+      function F(e) {
+        const t = G(e);
         return s.createElement(h.L, {
           video: t,
           bAutoPlay: !0,
@@ -2159,17 +2163,17 @@
           bLoop: !0,
         });
       }
-      function F(e) {
-        const t = x(e),
+      function O(e) {
+        const t = G(e),
           n = e.children ? e.children.toString() : void 0;
         n &&
           n.startsWith("http") &&
           t.rgVideoSources.push({ sURL: (0, S.L$)(n), sFormat: "video/webm" });
-        const r = B(e.args, "autoplay"),
+        const r = N(e.args, "autoplay"),
           i = "0" !== r && "off" !== r && "false" !== r,
-          a = B(e.args, "controls"),
+          a = N(e.args, "controls"),
           o = "0" !== a && "off" !== a && "false" !== a,
-          l = B(e.args, "loop"),
+          l = N(e.args, "loop"),
           c = "0" !== a && "off" !== a && "false" !== a;
         return s.createElement(h.L, {
           video: t,
@@ -5370,7 +5374,7 @@
     },
     283: (e, t, n) => {
       "use strict";
-      n.d(t, { A: () => f });
+      n.d(t, { A: () => S });
       var r = n(34629),
         i = n(90626),
         a = n(75844),
@@ -5383,9 +5387,10 @@
         u = n(52038),
         p = n(90024),
         h = n.n(p),
-        g = n(97232);
-      const _ = 1576780700;
-      let E = class extends i.Component {
+        g = n(97232),
+        _ = n(32754);
+      const E = 1576780700;
+      let f = class extends i.Component {
         OnEmoticonClick(e) {
           var t;
           const {
@@ -5437,7 +5442,7 @@
             this.BHaveUnseenEmoticons() && a)
           ) {
             let e = this.GetNewestIndicatorTime();
-            (!e || e < _) && (e = _), a("rtLastAckedNewEmoticons", e);
+            (!e || e < E) && (e = E), a("rtLastAckedNewEmoticons", e);
           }
         }
         GetNewestIndicatorTime() {
@@ -5451,7 +5456,7 @@
         BHaveUnseenEmoticons() {
           const { rtLastAckedNewEmoticons: e } = this.props;
           let t = this.GetNewestIndicatorTime();
-          return !e || e < _ || (t && (!e || e < t));
+          return !e || e < E || (t && (!e || e < t));
         }
         render() {
           const { disabled: e, className: t, ttip: n, useImg: r } = this.props;
@@ -5470,14 +5475,17 @@
                     ),
                     focusable: !0,
                   },
-                  i.createElement("img", {
-                    src: this.props.useImg,
-                    className: (0, u.A)(...a),
-                    title:
-                      this.props.title ||
-                      (0, d.we)("#ChatEntryButton_Emoticon"),
-                    "data-tooltip-text": n,
-                  }),
+                  i.createElement(
+                    _.he,
+                    { toolTipContent: n },
+                    i.createElement("img", {
+                      src: this.props.useImg,
+                      className: (0, u.A)(...a),
+                      title:
+                        this.props.title ||
+                        (0, d.we)("#ChatEntryButton_Emoticon"),
+                    }),
+                  ),
                 )
               : (a.push(h().chatSubmitButton, h().EmoticonPickerButton),
                 i.createElement(
@@ -5493,17 +5501,20 @@
                       this.props.title ||
                       (0, d.we)("#ChatEntryButton_Emoticon"),
                     disabled: e,
-                    "data-tooltip-text": n,
                   },
-                  this.props.buttonIcon || i.createElement(g.nl, null),
-                  s && i.createElement(m.iD, null),
+                  i.createElement(
+                    _.he,
+                    { toolTipContent: n },
+                    this.props.buttonIcon || i.createElement(g.nl, null),
+                    s && i.createElement(m.iD, null),
+                  ),
                 ))
           );
         }
       };
-      (0, r.Cg)([s.oI], E.prototype, "OnEmoticonClick", null),
-        (E = (0, r.Cg)([a.PA], E));
-      const f = E;
+      (0, r.Cg)([s.oI], f.prototype, "OnEmoticonClick", null),
+        (f = (0, r.Cg)([a.PA], f));
+      const S = f;
     },
     53418: (e, t, n) => {
       "use strict";
@@ -8264,17 +8275,17 @@
       function g(e, t) {
         const n = p.tz.guess(),
           r = p.unix(e).tz(n),
-          a = (0, s.l4)();
+          o = (0, s.l4)();
         return (
-          a && r.locale(a),
+          o && r.locale(o),
           i.createElement(
             i.Fragment,
             null,
             r.format("LT"),
             t
               ? i.createElement(
-                  "span",
-                  { "data-tooltip-text": r.format("Z") + ", " + n },
+                  a.he,
+                  { toolTipContent: r.format("Z") + ", " + n },
                   " ",
                   r.zoneAbbr(),
                 )
