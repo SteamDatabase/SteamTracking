@@ -39205,6 +39205,10 @@
                     playsInline: !0,
                   },
                   n.createElement("source", {
+                    type: 'video/mp4; codecs="hvc1"',
+                    src: `${r.r.VIDEO_URL}heroes/renders/${t}.mov`,
+                  }),
+                  n.createElement("source", {
                     type: "video/webm",
                     src: `${r.r.VIDEO_URL}heroes/renders/${t}.webm`,
                   }),

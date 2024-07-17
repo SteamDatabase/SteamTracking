@@ -1546,6 +1546,7 @@ ${VIDEO_URL}abilities/${}/${name}.webm
 ${VIDEO_URL}abilities/${}/${}.jpg
 ${VIDEO_URL}abilities/${}/${}.mp4
 ${VIDEO_URL}abilities/${}/${}.webm
+${VIDEO_URL}heroes/renders/${}.mov
 ${VIDEO_URL}heroes/renders/${}.png
 ${VIDEO_URL}heroes/renders/${}.webm
 ${VIDEO_URL}homepage/dota_montage_02.mp4
