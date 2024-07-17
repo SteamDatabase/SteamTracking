@@ -45400,11 +45400,7 @@
           ]),
           [E, S] = (0, l.useState)(() => u - L),
           [v, b] = (0, l.useState)(() => E < r),
-          [w, D] = (0, l.useState)(() =>
-            n
-              ? "Translate to Simplified Chinese Only"
-              : "Translate to all supported language.",
-          ),
+          [w, D] = (0, l.useState)(() => (n ? "Simplified Chinese Only" : "")),
           P = (0, R.vs)();
         return P.bLoading
           ? l.createElement(R.Hh, {

@@ -39118,7 +39118,7 @@
     },
     32754: (e, t, r) => {
       "use strict";
-      r.d(t, { fS: () => _, he: () => p });
+      r.d(t, { Gq: () => h, fS: () => g, he: () => p });
       var i = r(90626),
         n = r(72739),
         a = r(71513),
@@ -39131,7 +39131,7 @@
         m = () => i.useContext(d);
       function p(e) {
         var t;
-        const { divProps: r, tooltipProps: n } = h(e);
+        const { divProps: r, tooltipProps: n } = _(e);
         return i.createElement(
           a.ml,
           {
@@ -39141,11 +39141,21 @@
               null !== (t = e.bNavStop) && void 0 !== t ? t : !!r.onClick,
             ...r,
           },
-          i.createElement(f, { ...n }),
+          i.createElement(v, { ...n }),
           e.children,
         );
       }
       function h(e) {
+        const { children: t } = e,
+          { divProps: r, tooltipProps: n } = _(e);
+        return i.createElement(
+          i.Fragment,
+          null,
+          i.cloneElement(t, { ...r, ...t.props }),
+          i.createElement(v, { ...n }),
+        );
+      }
+      function _(e) {
         const {
             toolTipContent: t,
             nDelayShowMS: r = 300,
@@ -39192,21 +39202,21 @@
           },
         };
       }
-      function _(e) {
-        const { divProps: t, tooltipProps: r, stateHandlers: n } = h(e);
+      function g(e) {
+        const { divProps: t, tooltipProps: r, stateHandlers: n } = _(e);
         return {
           divProps: t,
           stateHandlers: n,
-          tooltip: i.createElement(f, { ...r }),
+          tooltip: i.createElement(v, { ...r }),
         };
       }
-      function g(e) {
+      function f(e) {
         return i.createElement("div", {
           ...e,
           className: (0, o.A)(u().TextToolTip, e.className),
         });
       }
-      function f(e) {
+      function v(e) {
         var t;
         const {
             active: r,
@@ -39235,7 +39245,7 @@
           "function" == typeof u
             ? (_ = u())
             : "string" == typeof u &&
-              (_ = i.createElement(g, null, (0, l.we)(u))),
+              (_ = i.createElement(f, null, (0, l.we)(u))),
           _ && a
             ? n.createPortal(
                 i.createElement(s.g, { target: a, ...c }, _),

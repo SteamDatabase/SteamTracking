@@ -4349,9 +4349,13 @@
             ? (0, n.Qz)(t)
             : void 0;
         return a.createElement(
-          "a",
-          { className: s, href: m, rel: c, id: e.id },
-          a.createElement(l.he, { toolTipContent: u }, e.children),
+          l.Gq,
+          { toolTipContent: u, direction: "top" },
+          a.createElement(
+            "a",
+            { className: s, href: m, rel: c, id: e.id },
+            e.children,
+          ),
         );
       };
     },

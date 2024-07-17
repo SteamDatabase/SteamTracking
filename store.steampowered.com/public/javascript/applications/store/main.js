@@ -60763,7 +60763,7 @@
     },
     32754: (e, t, r) => {
       "use strict";
-      r.d(t, { he: () => p, t1: () => h });
+      r.d(t, { Gq: () => _, he: () => p, t1: () => f });
       var i = r(90626),
         n = r(72739),
         s = r(71513),
@@ -60775,7 +60775,7 @@
       const m = i.createContext({}),
         d = () => i.useContext(m);
       function p(e) {
-        const { divProps: t, tooltipProps: r } = _(e);
+        const { divProps: t, tooltipProps: r } = g(e);
         return i.createElement(
           s.ml,
           {
@@ -60784,11 +60784,21 @@
             focusable: e.bNavStop ?? !!t.onClick,
             ...t,
           },
-          i.createElement(f, { ...r }),
+          i.createElement(B, { ...r }),
           e.children,
         );
       }
       function _(e) {
+        const { children: t } = e,
+          { divProps: r, tooltipProps: n } = g(e);
+        return i.createElement(
+          i.Fragment,
+          null,
+          i.cloneElement(t, { ...r, ...t.props }),
+          i.createElement(B, { ...n }),
+        );
+      }
+      function g(e) {
         const {
             toolTipContent: t,
             nDelayShowMS: r = 300,
@@ -60835,20 +60845,20 @@
           },
         };
       }
-      function g(e) {
+      function h(e) {
         return i.createElement("div", {
           ...e,
           className: (0, o.A)(u().TextToolTip, e.className),
         });
       }
-      function h(e) {
+      function f(e) {
         const { className: t, ...r } = e;
         return i.createElement("div", {
           className: (0, o.A)(u().ToolTipCustom, t),
           ...r,
         });
       }
-      function f(e) {
+      function B(e) {
         const {
             active: t,
             target: r,
@@ -60876,7 +60886,7 @@
           "function" == typeof c
             ? (_ = c())
             : "string" == typeof c &&
-              (_ = i.createElement(g, null, (0, l.we)(c))),
+              (_ = i.createElement(h, null, (0, l.we)(c))),
           _ && r
             ? n.createPortal(
                 i.createElement(a.g, { target: r, ...o }, _),

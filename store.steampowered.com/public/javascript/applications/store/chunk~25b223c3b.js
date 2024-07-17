@@ -599,17 +599,17 @@
         m = n(55963),
         d = n(27666),
         u = n(71138),
-        p = n(43667),
-        h = n(93267),
-        E = n(12155),
-        g = n(32630),
-        _ = n(52038),
-        f = n(61859),
-        v = n(61336),
-        S = n(30470),
-        C = n(12611),
-        y = n(74410),
-        A = n(32754);
+        p = n(74410),
+        h = n(43667),
+        E = n(93267),
+        g = n(12155),
+        _ = n(32630),
+        f = n(32754),
+        v = n(52038),
+        S = n(61859),
+        C = n(61336),
+        y = n(30470),
+        A = n(12611);
       const P = new Map([
         [
           "b",
@@ -630,7 +630,7 @@
             Constructor: function (e) {
               return s.createElement(
                 "div",
-                { className: (0, _.A)(r().Italic, "BB_Italic") },
+                { className: (0, v.A)(r().Italic, "BB_Italic") },
                 e.children,
               );
             },
@@ -644,7 +644,7 @@
           "h4",
           {
             Constructor: function (e) {
-              return L(e, (0, _.A)(r().Header4, "BB_Header4"));
+              return L(e, (0, v.A)(r().Header4, "BB_Header4"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -654,7 +654,7 @@
           "h5",
           {
             Constructor: function (e) {
-              return L(e, (0, _.A)(r().Header5, "BB_Header5"));
+              return L(e, (0, v.A)(r().Header5, "BB_Header5"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -674,7 +674,7 @@
                 "span",
                 {
                   id: t || void 0,
-                  className: (0, _.A)(r().CenterSpan, "BB_Center"),
+                  className: (0, v.A)(r().CenterSpan, "BB_Center"),
                 },
                 e.children,
               );
@@ -686,7 +686,7 @@
           "smalltext",
           {
             Constructor: function (e) {
-              return L(e, (0, _.A)(r().SmallText, "BB_SmallText"));
+              return L(e, (0, v.A)(r().SmallText, "BB_SmallText"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -729,10 +729,10 @@
               return s.createElement(
                 l.Z,
                 {
-                  className: (0, _.A)(r().Spoiler, t && r().Revealed),
+                  className: (0, v.A)(r().Spoiler, t && r().Revealed),
                   focusable: !0,
                   onActivate: o,
-                  onOKActionDescription: (0, f.we)(
+                  onOKActionDescription: (0, S.we)(
                     t ? "#Bbcode_Spoiler_Hide" : "#Bbcode_Spoiler_Show",
                   ),
                 },
@@ -853,7 +853,7 @@
               return s.createElement(
                 "div",
                 {
-                  className: (0, _.A)(
+                  className: (0, v.A)(
                     r().Table,
                     "BB_Table",
                     t && r().NoBorder,
@@ -873,7 +873,7 @@
             Constructor: function (e) {
               return s.createElement(
                 "div",
-                { className: (0, _.A)(r().TableRow, "BB_TableRow") },
+                { className: (0, v.A)(r().TableRow, "BB_TableRow") },
                 e.children,
               );
             },
@@ -905,7 +905,7 @@
               return s.createElement(
                 "div",
                 {
-                  className: (0, _.A)(r().TableData, "BB_TableData"),
+                  className: (0, v.A)(r().TableData, "BB_TableData"),
                   style: t && { width: t },
                 },
                 e.children,
@@ -955,7 +955,7 @@
               return s.createElement(
                 "div",
                 {
-                  className: (0, _.A)({
+                  className: (0, v.A)({
                     [r().ExpandSectionBlock]: !0,
                     [l.style]: !0,
                     [r().ExpandSectionExpanded]: n,
@@ -967,11 +967,11 @@
                 s.createElement(
                   "div",
                   { className: r().ExpandSectionHeader, onClick: () => o(!n) },
-                  (0, f.we)(n ? l.expanded : l.collapsed),
+                  (0, S.we)(n ? l.expanded : l.collapsed),
                   s.createElement(
                     "div",
                     { className: r().EmbedArrow },
-                    s.createElement(E.DK4, { angle: n ? 180 : 0 }),
+                    s.createElement(g.DK4, { angle: n ? 180 : 0 }),
                   ),
                 ),
                 n &&
@@ -994,10 +994,10 @@
               const { event: t, showErrorInfo: n } = e.context,
                 o = w(e.args);
               if (o)
-                return s.createElement(p.y, { eventGID: o, bPreviewMode: n });
+                return s.createElement(h.y, { eventGID: o, bPreviewMode: n });
               if (t) {
-                const e = (0, i.sf)(S.TS.LANGUAGE);
-                return s.createElement(p.j, { eventModel: t, lang: e });
+                const e = (0, i.sf)(y.TS.LANGUAGE);
+                return s.createElement(h.j, { eventModel: t, lang: e });
               }
               return null;
             },
@@ -1012,7 +1012,7 @@
                 n = "button" == w(e.args, "style") ? r().LinkButton : null;
               return s.createElement(
                 T,
-                { className: n, href: `${S.TS.PARTNER_BASE_URL}doc/${t}` },
+                { className: n, href: `${y.TS.PARTNER_BASE_URL}doc/${t}` },
                 e.children,
               );
             },
@@ -1052,15 +1052,15 @@
       new Map([
         ["looping_media", { Constructor: H, autocloses: !1 }],
         ["video", { Constructor: F, autocloses: !1 }],
-        ["youtubeorvideo", { Constructor: y.Eo, autocloses: !1 }],
-        ["previewyoutube", { Constructor: y.gH, autocloses: !1 }],
+        ["youtubeorvideo", { Constructor: p.Eo, autocloses: !1 }],
+        ["previewyoutube", { Constructor: p.gH, autocloses: !1 }],
       ]);
       function k(e, t, n = 0) {
-        if (e?.startsWith(C.l)) return (0, d.v6)(e);
-        if (e?.startsWith(C.e)) {
+        if (e?.startsWith(A.l)) return (0, d.v6)(e);
+        if (e?.startsWith(A.e)) {
           const o = new Array(),
             r = (0, d.mJ)(),
-            s = e.substring(C.e.length + 1),
+            s = e.substring(A.e.length + 1),
             a = u.i6.GetHashFromHashAndExt(s),
             l = u.i6.GetExtensionStringFromHashAndExt(s);
           if (null != t) {
@@ -1078,7 +1078,7 @@
         return void 0 === t ? e[""] : e[t];
       }
       function b(e, t) {
-        return (n) => e({ ...n, className: (0, _.A)(n.className, t) });
+        return (n) => e({ ...n, className: (0, v.A)(n.className, t) });
       }
       function L(e, t) {
         let n = w(e.args, "id");
@@ -1091,54 +1091,54 @@
             (n = n.substring(1)),
           s.createElement(
             "div",
-            { id: n || void 0, className: (0, _.A)(t, e.className) },
+            { id: n || void 0, className: (0, v.A)(t, e.className) },
             e.children,
           )
         );
       }
       function N(e) {
-        return L(e, (0, _.A)(r().Header1, "BB_Header1"));
+        return L(e, (0, v.A)(r().Header1, "BB_Header1"));
       }
       function I(e) {
-        return L(e, (0, _.A)(r().Header2, "BB_Header2"));
+        return L(e, (0, v.A)(r().Header2, "BB_Header2"));
       }
       function R(e) {
-        return L(e, (0, _.A)(r().Header3, "BB_Header3"));
+        return L(e, (0, v.A)(r().Header3, "BB_Header3"));
       }
       const T = (e) => {
         const { href: t, ...n } = e,
-          o = (0, g.n9)();
+          o = (0, _.n9)();
         let r,
           i = (0, m.VZ)(t, o);
         (0, c.p)(i)
           ? ((i =
-              (S.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
+              (y.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
               (0, c.E)(i)),
             (r = "noopener nofollow"))
-          : (i = (0, v.NT)(i));
+          : (i = (0, C.NT)(i));
         const l =
           "string" == typeof e.children &&
           e.children.length > 0 &&
           t &&
           !t.startsWith("steam://")
-            ? (0, v.Qz)(t)
+            ? (0, C.Qz)(t)
             : void 0;
         return s.createElement(
-          a.Ii,
-          { ...n, href: i, rel: r },
-          s.createElement(A.he, { toolTipContent: l }, e.children),
+          f.Gq,
+          { toolTipContent: l, direction: "top" },
+          s.createElement(a.Ii, { ...n, href: i, rel: r }, e.children),
         );
       };
       function D(e) {
         const t = w(e.args, "author");
         return s.createElement(
           "blockquote",
-          { className: (0, _.A)(r().BlockQuote, e.className) },
+          { className: (0, v.A)(r().BlockQuote, e.className) },
           !!t &&
             s.createElement(
               "div",
               { className: r().QuoteAuthor },
-              (0, f.we)("#Bbcode_Originally_Posted_By") + " ",
+              (0, S.we)("#Bbcode_Originally_Posted_By") + " ",
               " ",
               s.createElement("b", null, t + ":"),
             ),
@@ -1148,7 +1148,7 @@
       function B(e) {
         return s.createElement(
           "ul",
-          { className: (0, _.A)(r().List, "bullets") },
+          { className: (0, v.A)(r().List, "bullets") },
           e.children,
         );
       }
@@ -1176,22 +1176,22 @@
       }
       function M(e) {
         let t = w(e.args, "poster");
-        t && (t = (0, v.L$)(t));
+        t && (t = (0, C.L$)(t));
         const n = new Array();
         {
           const t = w(e.args, "mp4");
-          t && n.push({ sURL: (0, v.L$)(t), sFormat: "video/mp4" });
+          t && n.push({ sURL: (0, C.L$)(t), sFormat: "video/mp4" });
           const o = w(e.args, "webm");
-          o && n.push({ sURL: (0, v.L$)(o), sFormat: "video/webm" });
+          o && n.push({ sURL: (0, C.L$)(o), sFormat: "video/webm" });
         }
-        const o = (0, i.sf)(S.TS.LANGUAGE),
+        const o = (0, i.sf)(y.TS.LANGUAGE),
           r = 0 != o,
           s = new Array();
         for (let t = 0; t < 31; t++) {
           const n = w(e.args, "sub_" + (0, i.ww)(t));
           n &&
             s.push({
-              sURL: (0, v.L$)(n),
+              sURL: (0, C.L$)(n),
               eLanguage: t,
               sKind: "subtitles",
               bDefault: r && t == o,
@@ -1199,7 +1199,7 @@
           const a = w(e.args, "cap_" + (0, i.ww)(t));
           a &&
             s.push({
-              sURL: (0, v.L$)(a),
+              sURL: (0, C.L$)(a),
               eLanguage: t,
               sKind: "captions",
               bDefault: r && t == o,
@@ -1209,7 +1209,7 @@
       }
       function H(e) {
         const t = M(e);
-        return s.createElement(h.L, {
+        return s.createElement(E.L, {
           video: t,
           bAutoPlay: !0,
           bControls: !1,
@@ -1221,14 +1221,14 @@
           n = e.children ? e.children.toString() : void 0;
         n &&
           n.startsWith("http") &&
-          t.rgVideoSources.push({ sURL: (0, v.L$)(n), sFormat: "video/webm" });
+          t.rgVideoSources.push({ sURL: (0, C.L$)(n), sFormat: "video/webm" });
         const o = w(e.args, "autoplay"),
           r = "0" !== o && "off" !== o && "false" !== o,
           i = w(e.args, "controls"),
           a = "0" !== i && "off" !== i && "false" !== i,
           l = w(e.args, "loop"),
           c = "0" !== i && "off" !== i && "false" !== i;
-        return s.createElement(h.L, {
+        return s.createElement(E.L, {
           video: t,
           bAutoPlay: r,
           bControls: a,
@@ -2328,7 +2328,7 @@
                       s.createElement(se, null),
                     ),
                   renderContent: () =>
-                    s.createElement(Q, {
+                    s.createElement(q, {
                       store: this.props.emoticonStore,
                       hoverStore: this.props.emoticonHoverStore,
                       onItemSelect: (e) => this.props.OnSelected(e.name, !1),
@@ -2372,7 +2372,7 @@
                       s.createElement(se, null),
                     ),
                   renderContent: () =>
-                    s.createElement(q, {
+                    s.createElement(Q, {
                       store: this.props.emoticonStore,
                       hoverStore: this.props.emoticonHoverStore,
                       onItemSelect: (e) => this.props.OnSelected(e.name, !1),
@@ -2598,7 +2598,7 @@
           });
         }
       }
-      let Q = class extends s.Component {
+      let q = class extends s.Component {
         state = { filter: "" };
         render() {
           const {
@@ -2656,8 +2656,8 @@
           );
         }
       };
-      Q = (0, o.Cg)([i.PA], Q);
-      let q = class extends s.Component {
+      q = (0, o.Cg)([i.PA], q);
+      let Q = class extends s.Component {
         state = { filter: "" };
         render() {
           const {
@@ -2691,7 +2691,7 @@
           });
         }
       };
-      q = (0, o.Cg)([i.PA], q);
+      Q = (0, o.Cg)([i.PA], Q);
       const j = (e) => {
         const { emoticon: t, emoticonHoverStore: n, large: o } = e,
           r = !t.last_used && t.time_received;

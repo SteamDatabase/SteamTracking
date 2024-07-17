@@ -3729,8 +3729,8 @@
         _t = r.n(Ct),
         Et = r(98019);
       function gt(e) {
-        const { partnerID: t } = e,
-          { data: r } = (function (e, t, r) {
+        const { partnerID: t, setTicketCount: r } = e,
+          { data: n } = (function (e, t, r) {
             return (0, E.useQuery)(["PartnerTickets", e, t, r], async () => {
               const n = { nPublisherId: e, eHelpIssue: t, eHelpRequestType: r };
               return (
@@ -3741,28 +3741,33 @@
               ).data.tickets;
             });
           })(t, 920, 55),
-          [n, a] = (0, o.useState)(2);
-        return r && 0 != r.length
-          ? o.createElement(
-              "div",
-              null,
-              o.createElement("br", null),
-              o.createElement("h3", null, "Tickets ", r.length, ":"),
-              r
-                .slice(0, n)
-                .map((e) =>
-                  o.createElement(kt, { key: e.help_requestid, helpReq: e }),
-                ),
-              Boolean(n < r.length) &&
-                o.createElement(
-                  "a",
-                  { href: "#", onClick: () => a(r.length) },
-                  "Show all ",
-                  r.length,
-                  " Tickets",
-                ),
-            )
-          : null;
+          [a, l] = (0, o.useState)(2);
+        return (
+          (0, o.useEffect)(() => {
+            n?.length > 0 && r(n?.length);
+          }, [n, r]),
+          n && 0 != n.length
+            ? o.createElement(
+                "div",
+                null,
+                o.createElement("br", null),
+                o.createElement("h3", null, "Tickets ", n.length, ":"),
+                n
+                  .slice(0, a)
+                  .map((e) =>
+                    o.createElement(kt, { key: e.help_requestid, helpReq: e }),
+                  ),
+                Boolean(a < n.length) &&
+                  o.createElement(
+                    "a",
+                    { href: "#", onClick: () => l(n.length) },
+                    "Show all ",
+                    n.length,
+                    " Tickets",
+                  ),
+              )
+            : null
+        );
       }
       function kt(e) {
         const { helpReq: t } = e;
@@ -4271,7 +4276,8 @@
             mapCurrentPrices: n,
             mapPartnerPaidByPackage: a,
           } = e,
-          [l, c] = (0, o.useState)(!1);
+          [l, c] = (0, o.useState)(!1),
+          [s, i] = (0, o.useState)(!1);
         return o.createElement(
           "div",
           { className: (0, U.A)(dt.PriceDeltaCtn) },
@@ -4338,6 +4344,13 @@
             checked: l,
             onChange: c,
           }),
+          o.createElement(g.Yh, {
+            label: "Show Prices with Open Tickets",
+            tooltip:
+              "Displays the price comparison rows for those with open tickets against them.",
+            checked: s,
+            onChange: i,
+          }),
           o.createElement(
             "div",
             { className: (0, U.A)(dt.RowCtn) },
@@ -4362,28 +4375,33 @@
                 mapCurrentPrices: n,
                 mapPartnerPaidByPackage: a,
                 bForceShowComparisonRows: l,
+                bShowWithOpenTickets: s,
               }),
             ),
           ),
         );
       }
       function Ht(e) {
-        return o.createElement(
-          "div",
-          { className: dt.ProposalCtn },
-          o.createElement(
-            "div",
-            { className: dt.RowCtn },
-            o.createElement(Pt, { ...e }),
-            o.createElement(Ot, { ...e }),
-            o.createElement($t, { ...e }),
-          ),
-          o.createElement(jt, { ...e }),
-        );
+        const { bShowWithOpenTickets: t } = e,
+          [r, n] = (0, o.useState)(0);
+        return r > 0 && !t
+          ? null
+          : o.createElement(
+              "div",
+              { className: dt.ProposalCtn },
+              o.createElement(
+                "div",
+                { className: dt.RowCtn },
+                o.createElement(Pt, { ...e }),
+                o.createElement(Ot, { ...e, setOpenTicketCount: n }),
+                o.createElement($t, { ...e }),
+              ),
+              o.createElement(jt, { ...e }),
+            );
       }
       function Ot(e) {
-        const { proposal: t } = e,
-          r = e.mapPartnerPaidByPackage.get(t.packageid)?.[0] || 0;
+        const { proposal: t, setOpenTicketCount: r } = e,
+          n = e.mapPartnerPaidByPackage.get(t.packageid)?.[0] || 0;
         return o.createElement(
           "div",
           { className: dt.FailuresCtn },
@@ -4392,7 +4410,7 @@
           o.createElement(Xt, { ...e }),
           o.createElement(zt, { ...e }),
           o.createElement(Kt, { ...e }),
-          o.createElement(gt, { partnerID: r }),
+          o.createElement(gt, { partnerID: n, setTicketCount: r }),
         );
       }
       function Kt(e) {
