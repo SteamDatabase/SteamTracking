@@ -2837,7 +2837,7 @@ function OnGetFinalPriceSuccess( result )
 						$('purchase_button_bottom_text').innerHTML = 'Continue to Smart2Pay';
 						if ( $('col_right_review_payment_tips_header_text') && $('col_right_review_payment_tips_info_text') )
 						{
-							$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for button_link_profiles_now customers';
+							$('col_right_review_payment_tips_header_text').innerHTML = 'Tips for Blik customers';
 							$('col_right_review_payment_tips_info_text').innerHTML = 'Complete your purchase through the Smart2Pay website by signing in and completing your transaction.<br/><br/>This process can take up to a several minutes.  Once payment has been confirmed, you will receive an email receipt confirming your purchase.';
 						}
 					}

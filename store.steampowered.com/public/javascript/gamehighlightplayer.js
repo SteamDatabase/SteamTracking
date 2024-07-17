@@ -88,7 +88,7 @@ function HighlightPlayer( args )
 	// sniff support
 	this.m_bSupportsWebM = BCanPlayWebm();
 	this.m_bSupportsMPEG4 = BCanPlayMPEG4();
-	
+
 	if ( typeof GetUsabilityTracker !== 'undefined' )
 	{
 		GetUsabilityTracker().m_stats['Video_Supports_MSE'] = 'MediaSource' in window ? 1 : 0;
@@ -1180,9 +1180,13 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 
 						$(videoControl).bind('loadedmetadata', function() {
 							this.currentTime = videoPosition;
-							videoControl.play();
 							$(videoControl).unbind('loadedmetadata');
+						});
+
+						$(videoControl).bind('canplay', function() {
 							requestFullscreen();
+							videoControl.play();
+							$(videoControl).unbind('canplay');
 						});
 
 						videoControl.src = $(videoControl).data('hd-src');
