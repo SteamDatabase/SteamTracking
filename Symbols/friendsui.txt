@@ -98,6 +98,7 @@
  SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
  SteamVProf::CVProfManager::StopProfilingAllThreads()
  StringAfterPrefix
+ StringFindSuffix
  T CRYPTO_memcmp
  T CreateInterface
  T OPENSSL_atomic_add
@@ -131,7 +132,6 @@
  V_IsValidURLCharacter
  V_MakeAbsolutePath
  V_RemoveDotSlashes
- V_SetExtension
  V_StripLastDir
  V_StripPrecedingAndTrailingWhitespace
  V_StripTrailingSlash

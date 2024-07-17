@@ -154,6 +154,7 @@
  SteamVProf::CVProfManager::StopProfilingAllThreads()
  SteamVProf::CVProfile::MarkFrame(char const*)
  StringAfterPrefix
+ StringFindSuffix
  T CreateInterface
  T WinAppMain
  T pcre_compile
@@ -248,7 +249,6 @@
  V_MakeAbsolutePath
  V_ParseURLQueryString
  V_RemoveDotSlashes
- V_SetExtension
  V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, bool)
  V_StripFilename
  V_StripLastDir

@@ -6,12 +6,14 @@ __text
 __TEXT
 __stubs
 __TEXT
-B-"
-B-"
+2-"
+2-"
 __stub_helper
 __TEXT
 __cstring
 __TEXT
+A"
+A"
 __gcc_except_tab__TEXT
 __const
 __TEXT
@@ -64,7 +66,7 @@ __LINKEDIT
 8
 @loader_path/friendsui.dylib
 "
-8#
+@#
 P
 
 *
@@ -5563,6 +5565,7 @@ steammessages_parental_objects.proto
 0
 "0
 0
+3
 M'
 
 @
@@ -5571,7 +5574,7 @@ M'
 
 &
 &
-)
+X
 x
 
 
@@ -5599,10 +5602,10 @@ p
 0
 p
 0
+D#
 Ic]
 "
 p
-#"
 0
 0
 AT=
@@ -5645,16 +5648,14 @@ IcE
 @
 @
 )
-)
 V
 =
 =
 !
-%
 @
 @
 &
-<"
+@"
 @
 M9e
 @
@@ -5706,6 +5707,8 @@ B
 @
 @
 @
+c
+?
 d
 A+M
 j
@@ -5733,6 +5736,9 @@ j
 j
 j
 
+Y
+X
+
 
 j
 j
@@ -5751,14 +5757,12 @@ j
 j
 j
 j
-
 
 d
 &
 d
 0
 A+]
-
 =
 =
 @
@@ -5821,6 +5825,7 @@ j
 j
 j
 E
+o
 j
 j
 j

@@ -1456,7 +1456,6 @@
  V_ParseShellCommandLine(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString> >&, int, char const**)
  V_RemoveDotSlashes
  V_ReplaceBadFilenameCharactersInPlace
- V_SetExtension
  V_SetURLParam
  V_SplitNumbersUint
  V_SplitStringInternal

@@ -946,8 +946,9 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 
 				if ( typeof GetUsabilityTracker !== 'undefined' )
 				{
-					GetUsabilityTracker().m_stats['Video_Supports_MSE'] =  'MediaSource' in window ? 1 : 0;
-					GetUsabilityTracker().m_stats['Video_Supports_Managed_MSE'] =  'ManagedMediaSource' in window ? 1 : 0;
+					GetUsabilityTracker().m_stats['Video_Supports_MSE'] = 'MediaSource' in window ? 1 : 0;
+					GetUsabilityTracker().m_stats['Video_Supports_Managed_MSE'] = 'ManagedMediaSource' in window ? 1 : 0;
+					GetUsabilityTracker().m_stats['Video_No_MSE_Support'] = !('MediaSource' in window || 'ManagedMediaSource' in window ) ? 1 : 0;
 				}
 
 				updateVolume();

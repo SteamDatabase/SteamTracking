@@ -15,8 +15,8 @@ __const
 __TEXT
 __objc_methname
 __TEXT
-P,"
-P,"
+`,"
+`,"
 __objc_classname__TEXT
 __objc_methtype
 __TEXT
@@ -7855,7 +7855,7 @@ VGUI_Application_001
 OK
 Cancel
 Jul 16 2024
-14:11:14
+16:18:10
 crashhandler004
 gameoverlayui
 /opt/buildbot/buildworker/steam_rel_client_osx/build/src/overlay/gameoverlayui/main.cpp
@@ -10936,7 +10936,6 @@ Dec
 -
 -
 -
--
 0
 Ic]
 
@@ -10951,6 +10950,7 @@ Ic]
 j
 E9u
 j
+.,
 j
 j
 j
@@ -10962,7 +10962,6 @@ j
 j
 j
 j
-F,
 j
 j
 j
@@ -11025,6 +11024,7 @@ V
 =
 !
 @
+M&
 @
 &
 @
@@ -11137,6 +11137,7 @@ G
 @
 >
 0
+,
 p
 =
 0
@@ -11168,7 +11169,6 @@ P
 @
 ?
 @
-Z
 d
 }
 
@@ -11184,14 +11184,16 @@ j
 A+M
 
 
+}
+c
 j
 j
 j
 j
+m
 j
 j
 j
-9
 j
 j
 j
@@ -11206,7 +11208,7 @@ L
 0
 j
 j
-F
+M
 j
 j
 j
@@ -11218,7 +11220,6 @@ j
 j
 j
 j
-/
 
 j
 j
@@ -11243,11 +11244,10 @@ d
 d
 0
 A+]
+z
 =
 =
 @
-
-
 
 j
 j
@@ -11312,6 +11312,7 @@ j
 
 
 
+h
 j
 j
 j
@@ -11343,7 +11344,6 @@ j
 j
 j
 j
-
 j
 j
 j
