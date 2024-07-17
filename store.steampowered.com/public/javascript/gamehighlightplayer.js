@@ -74,6 +74,14 @@ function SetGameHighlightPlayerVolume( flVolume )
 	document.cookie = 'flGameHighlightPlayerVolume=' + flVolume + '; expires=' + dateExpires.toGMTString() + ';path=/';
 }
 
+// Doing this upfront instead of within HighlightPlayer to ensure we capture information even when the app doesn't have movies
+if ( typeof GetUsabilityTracker !== 'undefined' )
+{
+	GetUsabilityTracker().m_stats['Video_Supports_MSE'] = 'MediaSource' in window ? 1 : 0;
+	GetUsabilityTracker().m_stats['Video_Supports_Managed_MSE'] = 'ManagedMediaSource' in window ? 1 : 0;
+	GetUsabilityTracker().m_stats['Video_No_MSE_Support'] = !('MediaSource' in window || 'ManagedMediaSource' in window ) ? 1 : 0;
+}
+
 function HighlightPlayer( args )
 {
 	this.m_elemPlayerArea = $JFromIDOrElement(args.elemPlayerArea);
@@ -942,14 +950,6 @@ HighlightPlayer.prototype.ShowScreenshotPopup = function( screenshotid )
 
 				if ( $(wrapper).data( 'video-title' )?.length )
 					$('.video_title', titleBar).text( ' | ' + $(wrapper).data( 'video-title' ) );
-
-
-				if ( typeof GetUsabilityTracker !== 'undefined' )
-				{
-					GetUsabilityTracker().m_stats['Video_Supports_MSE'] = 'MediaSource' in window ? 1 : 0;
-					GetUsabilityTracker().m_stats['Video_Supports_Managed_MSE'] = 'ManagedMediaSource' in window ? 1 : 0;
-					GetUsabilityTracker().m_stats['Video_No_MSE_Support'] = !('MediaSource' in window || 'ManagedMediaSource' in window ) ? 1 : 0;
-				}
 
 				updateVolume();
 			}
