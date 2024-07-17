@@ -315,7 +315,6 @@
       class u {
         m_clanSteamID;
         m_appidList = new Array();
-        m_socialList = new Array();
         m_strName = "";
         m_strAvatarURLFullSize = "";
         m_strTagLineLoc = "";
@@ -334,7 +333,6 @@
             (this.m_strAvatarURLFullSize =
               t.avatar_url_full_size ||
               "https://avatars.steamstatic.com/fef49e7fa7e1997310d705b2a6158ff8dc1cdfeb_full.jpg"),
-            t.social && t.social.forEach((t) => this.m_socialList.push(t)),
             (this.m_strTagLineLoc = t.tag_line_localized || ""),
             (this.m_nFollowers = t.followers || 0),
             (this.m_strVanity = t.vanity || void 0),
@@ -369,9 +367,6 @@
         }
         GetAppIDList() {
           return this.m_appidList;
-        }
-        GetSocialList() {
-          return this.m_socialList;
         }
         GetName() {
           return this.m_strName;
