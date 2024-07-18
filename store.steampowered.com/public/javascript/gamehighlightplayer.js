@@ -74,6 +74,50 @@ function SetGameHighlightPlayerVolume( flVolume )
 	document.cookie = 'flGameHighlightPlayerVolume=' + flVolume + '; expires=' + dateExpires.toGMTString() + ';path=/';
 }
 
+function DetectWebPSupport()
+{
+	// based off Modernizr tests
+	const basicWebpSupportTest = {
+		'uri': 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=',
+		'name': 'webp'
+	};
+	const webpFeatureTests = [{
+		'uri': 'data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==',
+		'name': 'webp_alpha'
+	}, {
+		'uri': 'data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA',
+		'name': 'webp_animation'
+	}, {
+		'uri': 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=',
+		'name': 'webp_lossless'
+	}];
+
+	function RunWebpTest( testInfo, callback )
+	{
+		const image = new Image();
+		image.onload = function()
+		{
+			// the test images are all 1px wide. if they succeeded at rendering, this will be true
+			if ( image.width === 1 )
+			{
+				GetUsabilityTracker().IncrementStat( "ImageSupport_" + testInfo.name, 1 );
+				if( callback )
+				{
+					callback();
+				}
+			}
+		}
+		image.src = testInfo.uri;
+	}
+
+	// only run the feature tests if the basic one passed
+	RunWebpTest( basicWebpSupportTest, function() {
+		webpFeatureTests.forEach( function( featureTest ) {
+			RunWebpTest( featureTest );
+		} )
+	})
+}
+
 
 function HighlightPlayer( args )
 {
@@ -95,6 +139,8 @@ function HighlightPlayer( args )
 		GetUsabilityTracker().m_stats['Video_Supports_Managed_MSE'] = 'ManagedMediaSource' in window ? 1 : 0;
 		GetUsabilityTracker().m_stats['Video_No_MSE_Support'] = !('MediaSource' in window || 'ManagedMediaSource' in window ) ? 1 : 0;
 	}
+
+	DetectWebPSupport();
 
 	this.ListenForDashBundle();
 

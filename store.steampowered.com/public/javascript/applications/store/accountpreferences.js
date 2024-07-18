@@ -1867,12 +1867,16 @@
         let c = (function (e) {
           if (2 == e.platform_type) {
             let t = new j.UAParser(e.token_description).getResult();
-            return "WebKit" == t.browser.name
-              ? t.os.name
+            return t.browser.name && t.os.name
+              ? "WebKit" == t.browser.name
+                ? t.os.name
+                : (0, m.we)(
+                    "#accountpreferences_authorized_devices_browser_on_os",
+                    t.browser.name,
+                    t.os.name,
+                  )
               : (0, m.we)(
-                  "#accountpreferences_authorized_devices_browser_on_os",
-                  t.browser.name,
-                  t.os.name,
+                  "#accountpreferences_authorized_devices_browser_unmatched",
                 );
           }
           return e.token_description;
