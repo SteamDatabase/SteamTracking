@@ -846,6 +846,7 @@
   max-height: 100%;
   height: auto;
   width: auto;
+  object-fit: contain;
 }
 .KJBbOCy-N47ZdyXKj82el {
   color: #cf980c;
