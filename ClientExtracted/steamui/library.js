@@ -1,4 +1,4 @@
-var CLSTAMP = "9042983";
+var CLSTAMP = "9051698";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -8699,9 +8699,9 @@ var CLSTAMP = "9042983";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jul 16 2024 : 14:10:18",
-                BUILD_TIME_UTC: "Jul 16 2024 : 21:10:18",
-                BUILD_RTIME_UTC: 1721164218,
+                BUILD_TIME_LOCAL: "Jul 19 2024 : 12:30:35",
+                BUILD_TIME_UTC: "Jul 19 2024 : 19:30:35",
+                BUILD_RTIME_UTC: 1721417435,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -22252,7 +22252,7 @@ var CLSTAMP = "9042983";
             AddContained: () => rt,
             AddFriend: () => ct,
             AirplaneMode: () => re,
-            AllowTearing: () => cl,
+            AllowTearing: () => Cl,
             Arrow: () => Ae,
             AsyncGameTurn: () => Nr,
             Attachment: () => It,
@@ -22315,7 +22315,7 @@ var CLSTAMP = "9042983";
             DevicesNone: () => _e,
             Digg: () => Mn,
             DirectionalButton: () => Pi,
-            DisableFrameLimit: () => sl,
+            DisableFrameLimit: () => cl,
             Discord: () => pn,
             Discussions: () => Bo,
             Display: () => fe,
@@ -22345,7 +22345,7 @@ var CLSTAMP = "9042983";
             Flags: () => Qn,
             Food: () => Kn,
             ForYou: () => rn,
-            FrankenController: () => Uo,
+            FrankenController: () => zo,
             Friends: () => B,
             Fullscreen: () => kn,
             GameHubs: () => Dr,
@@ -22353,7 +22353,7 @@ var CLSTAMP = "9042983";
             Games: () => kr,
             GenericGamepad: () => Fi,
             GenericGamepadFrontOutline: () => xi,
-            GenericStoreGamepad: () => $o,
+            GenericStoreGamepad: () => Qo,
             Gift: () => F,
             Globe: () => Rt,
             Groups: () => vt,
@@ -22365,11 +22365,11 @@ var CLSTAMP = "9042983";
             GyroYaw: () => io,
             HDR: () => Cn,
             HDRLarge: () => un,
-            HalfRateShading: () => Cl,
+            HalfRateShading: () => ul,
             HalfStar: () => A,
             Haptics: () => ni,
             HardDrive: () => at,
-            HardDriveWarning: () => gl,
+            HardDriveWarning: () => fl,
             Headphones: () => Gr,
             Heart: () => Dn,
             HeartEmpty: () => Zn,
@@ -22378,8 +22378,8 @@ var CLSTAMP = "9042983";
             HierarchyRowEnd: () => Gi,
             HierarchyRowMid: () => Wi,
             Home: () => h,
-            HoriController: () => _l,
-            HoriControllerSupportImage: () => Ml,
+            HoriController: () => Ml,
+            HoriControllerSupportImage: () => wl,
             HotbarMenu: () => Pn,
             Hyperlink: () => kt,
             IconEmpty: () => Wn,
@@ -22387,13 +22387,13 @@ var CLSTAMP = "9042983";
             Idle: () => ir,
             Image: () => jr,
             InGame: () => Fo,
-            InGameVR: () => qo,
+            InGameVR: () => Ko,
             IncomingVoiceCall: () => zr,
             Information: () => O,
             Instagram: () => fn,
             Invalid: () => St,
             Inventory: () => Sr,
-            JoinSession: () => fl,
+            JoinSession: () => _l,
             KaratDown: () => xe,
             KaratLeft: () => Ve,
             KaratRight: () => Re,
@@ -22415,7 +22415,7 @@ var CLSTAMP = "9042983";
             List: () => et,
             Lock: () => he,
             LogOut: () => Te,
-            ManualGPUClock: () => ml,
+            ManualGPUClock: () => dl,
             Maximize: () => bt,
             MediaGallery: () => fi,
             Microphone: () => U,
@@ -22439,7 +22439,7 @@ var CLSTAMP = "9042983";
             NintendoJoyConPairFrontOutline: () => Ni,
             NintendoJoyConRFrontOutline: () => Ai,
             NintendoSwitchProControllerFrontOutline: () => Zi,
-            NoController: () => ol,
+            NoController: () => ll,
             Notes: () => Io,
             Notifications: () => yn,
             Objects: () => Xn,
@@ -22450,9 +22450,9 @@ var CLSTAMP = "9042983";
             OverlayWorkshop: () => Do,
             PS3ControllerFrontOutline: () => Ii,
             PS4ControllerFrontOutline: () => Bi,
-            PS4Warning: () => nl,
+            PS4Warning: () => il,
             PS5ControllerFrontOutline: () => Di,
-            PS5Warning: () => il,
+            PS5Warning: () => ol,
             Patch: () => nr,
             Pause: () => ze,
             PendingInvites: () => Bt,
@@ -22461,14 +22461,14 @@ var CLSTAMP = "9042983";
             Play: () => je,
             PlayContained: () => qe,
             PlayTime: () => _r,
-            PlugInPS4: () => tl,
-            PlugInPS5: () => rl,
+            PlugInPS4: () => rl,
+            PlugInPS5: () => nl,
             Popout: () => Zt,
             Power: () => _,
             PrevTrack: () => Ye,
             Profile: () => S,
             PurchaseHistory: () => Lr,
-            QAMPerformance: () => Jo,
+            QAMPerformance: () => el,
             Question: () => Tt,
             RSS: () => _n,
             RadialMenu: () => Nn,
@@ -22482,11 +22482,12 @@ var CLSTAMP = "9042983";
             Refresh: () => or,
             Reload: () => lt,
             RemotePlay: () => At,
-            RemotePlayExplanation: () => al,
+            RemotePlayExplanation: () => sl,
             RemotePlayTogether: () => Wr,
             Repeat: () => $e,
             RepeatOne: () => Qe,
-            ReportAI: () => el,
+            ReportAI: () => tl,
+            ResetTimer: () => Go,
             Resize: () => Nt,
             Restore: () => Ft,
             ReviewHelp: () => pr,
@@ -22501,7 +22502,7 @@ var CLSTAMP = "9042983";
             Screenshot: () => R,
             Scroll: () => Wt,
             SdCard: () => gt,
-            SdCardWarning: () => pl,
+            SdCardWarning: () => gl,
             Search: () => b,
             SearchResultTypeLibrary: () => x,
             SearchResultTypeProfile: () => y,
@@ -22524,7 +22525,7 @@ var CLSTAMP = "9042983";
             Specials: () => on,
             SpellCheck: () => Oo,
             Spinner: () => Kt,
-            Standing: () => jo,
+            Standing: () => qo,
             Star: () => T,
             SteamAchievements: () => Zr,
             SteamControllerFrontOutline: () => yi,
@@ -22539,9 +22540,9 @@ var CLSTAMP = "9042983";
             SteamDeckTiltedOutline: () => bi,
             SteamGuard: () => yr,
             SteamInputAPISvg: () => Xi,
-            SteamInputTranslationImage: () => ll,
+            SteamInputTranslationImage: () => al,
             SteamLogo: () => Mr,
-            SteamLogoInsetLowBattery: () => Go,
+            SteamLogoInsetLowBattery: () => Uo,
             SteamNetworkIssue: () => No,
             SteamNews: () => Yt,
             SteamPal: () => Me,
@@ -22549,13 +22550,13 @@ var CLSTAMP = "9042983";
             SteamdeckUpdate: () => ei,
             Store: () => f,
             StoreNews: () => ln,
-            StoreStar: () => Qo,
+            StoreStar: () => Jo,
             Stream: () => Hi,
             Streaming: () => Le,
             Submit: () => Xt,
             Support: () => Cr,
             Symbols: () => $n,
-            TDPLimit: () => ul,
+            TDPLimit: () => ml,
             TV: () => C,
             TextBold: () => uo,
             TextBullets: () => mo,
@@ -22579,8 +22580,8 @@ var CLSTAMP = "9042983";
             ThumbsUp: () => mr,
             TimeWarning: () => pt,
             Timer: () => Wo,
-            ToggleHDR: () => hl,
-            ToggleVRR: () => dl,
+            ToggleHDR: () => pl,
+            ToggleVRR: () => hl,
             TopOfQueue: () => rr,
             TopSellers: () => Xr,
             TouchMenu: () => On,
@@ -22594,14 +22595,14 @@ var CLSTAMP = "9042983";
             Twitter: () => hn,
             Undo: () => co,
             UniversalGlyphs: () => hi,
-            UnknownRing: () => Xo,
+            UnknownRing: () => $o,
             Upcoming: () => an,
             Update: () => ti,
             User: () => tr,
             VR: () => sn,
-            VRControllerSide: () => zo,
-            VROnlyIcon: () => Ko,
-            VRSupportedIcon: () => Yo,
+            VRControllerSide: () => jo,
+            VROnlyIcon: () => Yo,
+            VRSupportedIcon: () => Xo,
             VRTheater: () => cn,
             Video: () => qr,
             VoiceRoom: () => Ur,
@@ -35760,6 +35761,37 @@ var CLSTAMP = "9042983";
           return n.createElement(
             "svg",
             {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              ...e,
+            },
+            n.createElement("path", {
+              fill: "currentColor",
+              d: "M15.3839 19.1567L20.4456 23.9377L23.0027 21.5169L19.0056 17.7388V11.5572H15.3839V19.1567Z",
+            }),
+            n.createElement("path", {
+              fill: "currentColor",
+              d: "M14.7322 7.23096C15.7748 6.90009 16.8612 6.72754 17.955 6.71906L17.9813 2.70813C16.4698 2.71739 14.9681 2.95212 13.5259 3.40457L14.7322 7.23096Z",
+            }),
+            n.createElement("path", {
+              fill: "currentColor",
+              d: "M28.7443 7.21697L31.359 4.7864L21.628 3.02008L22.6802 12.854L25.8094 9.94521C25.832 9.96775 25.8546 9.99041 25.8771 10.0132C27.2046 11.357 28.1645 13.0193 28.6649 14.8407C29.1653 16.6621 29.1894 18.5815 28.7348 20.4149C28.2802 22.2483 27.3622 23.9341 26.0688 25.3108C24.7754 26.6874 23.15 27.7087 21.3485 28.2766C19.547 28.8445 17.6298 28.9401 15.7808 28.5541C13.9317 28.1682 12.2128 27.3136 10.7889 26.0725C9.36507 24.8313 8.28395 23.2451 7.64927 21.466C7.45647 20.9325 7.30707 20.3844 7.20252 19.8269L3.26833 20.5821C3.41109 21.3407 3.61342 22.087 3.87343 22.8138C4.70483 25.149 6.10069 27.2423 7.93676 28.9075C9.77282 30.5728 11.9921 31.7582 14.3971 32.3583C16.8021 32.9584 19.3181 32.9545 21.7213 32.3471C24.1244 31.7397 26.3401 30.5475 28.1711 28.8767C30.0021 27.2059 31.3916 25.1083 32.2158 22.7707C33.0401 20.433 33.2736 17.9278 32.8956 15.4781C32.5175 13.0283 31.5397 10.7101 30.049 8.72968C29.6469 8.19547 29.2109 7.69031 28.7443 7.21697Z",
+            }),
+            n.createElement("path", {
+              fill: "currentColor",
+              d: "M9.66234 5.252L11.9137 8.57761L11.9171 8.58705C10.9959 9.18617 10.1712 9.92194 9.47134 10.7691L6.36494 8.23828C7.3099 7.08485 8.4212 6.0784 9.66234 5.252Z",
+            }),
+            n.createElement("path", {
+              fill: "currentColor",
+              d: "M4.15493 11.9751C3.58564 13.3267 3.2205 14.7555 3.07147 16.2145L7.06211 16.6311C7.17433 15.5601 7.44158 14.5111 7.85548 13.517L4.15493 11.9751Z",
+            }),
+          );
+        }
+        function Uo(e) {
+          return n.createElement(
+            "svg",
+            {
               width: "41",
               height: "42",
               viewBox: "0 0 41 42",
@@ -35784,7 +35816,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function Uo(e) {
+        function zo(e) {
           const { bGreyOutRightSide: t, ...r } = e;
           return t
             ? n.createElement(
@@ -35830,7 +35862,7 @@ var CLSTAMP = "9042983";
                 }),
               );
         }
-        function zo(e) {
+        function jo(e) {
           const { hand: t, ...r } = e;
           return "left" == t
             ? n.createElement(
@@ -35868,7 +35900,7 @@ var CLSTAMP = "9042983";
                 }),
               );
         }
-        function jo(e) {
+        function qo(e) {
           return n.createElement(
             "svg",
             {
@@ -35885,7 +35917,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function qo(e) {
+        function Ko(e) {
           return n.createElement(
             "svg",
             {
@@ -35904,7 +35936,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function Ko(e) {
+        function Yo(e) {
           return n.createElement(
             "svg",
             {
@@ -35919,7 +35951,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function Yo(e) {
+        function Xo(e) {
           const [t, r] = (0, a.l)();
           return n.createElement(
             "svg",
@@ -35966,7 +35998,7 @@ var CLSTAMP = "9042983";
             ),
           );
         }
-        function Xo(e) {
+        function $o(e) {
           return n.createElement(
             "svg",
             {
@@ -36010,7 +36042,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function $o(e) {
+        function Qo(e) {
           return n.createElement(
             "svg",
             {
@@ -36028,7 +36060,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function Qo(e) {
+        function Jo(e) {
           return n.createElement(
             "svg",
             {
@@ -36048,7 +36080,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function Jo(e) {
+        function el(e) {
           return n.createElement(
             "svg",
             {
@@ -36066,7 +36098,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function el(e) {
+        function tl(e) {
           return n.createElement(
             "svg",
             {
@@ -36089,7 +36121,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function tl(e) {
+        function rl(e) {
           return n.createElement(
             "svg",
             {
@@ -36106,7 +36138,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function rl(e) {
+        function nl(e) {
           return n.createElement(
             "svg",
             {
@@ -36149,7 +36181,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function nl(e) {
+        function il(e) {
           const [t, r] = (0, a.l)();
           return n.createElement(
             "svg",
@@ -36235,7 +36267,7 @@ var CLSTAMP = "9042983";
             ),
           );
         }
-        function il(e) {
+        function ol(e) {
           return n.createElement(
             "svg",
             {
@@ -36316,7 +36348,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function ol(e) {
+        function ll(e) {
           return n.createElement(
             "svg",
             {
@@ -36472,7 +36504,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function ll(e) {
+        function al(e) {
           const [t, r] = (0, a.l)(),
             [i, o] = (0, a.l)();
           return n.createElement(
@@ -37295,7 +37327,7 @@ var CLSTAMP = "9042983";
             ),
           );
         }
-        function al(e) {
+        function sl(e) {
           const [t, r] = (0, a.l)(),
             [i, o] = (0, a.l)();
           return n.createElement(
@@ -37541,7 +37573,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function sl(e) {
+        function cl(e) {
           return n.createElement(
             "svg",
             {
@@ -37583,7 +37615,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function cl(e) {
+        function Cl(e) {
           return n.createElement(
             "svg",
             {
@@ -37617,7 +37649,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function Cl(e) {
+        function ul(e) {
           return n.createElement(
             "svg",
             {
@@ -37751,7 +37783,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function ul(e) {
+        function ml(e) {
           return n.createElement(
             "svg",
             {
@@ -37915,7 +37947,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function ml(e) {
+        function dl(e) {
           return n.createElement(
             "svg",
             {
@@ -37944,7 +37976,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function dl(e) {
+        function hl(e) {
           return n.createElement(
             "svg",
             {
@@ -38004,7 +38036,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function hl(e) {
+        function pl(e) {
           return n.createElement(
             "svg",
             {
@@ -38088,7 +38120,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function pl(e) {
+        function gl(e) {
           return n.createElement(
             "svg",
             {
@@ -38114,7 +38146,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function gl(e) {
+        function fl(e) {
           return n.createElement(
             "svg",
             {
@@ -38144,7 +38176,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function fl(e) {
+        function _l(e) {
           return n.createElement(
             "svg",
             {
@@ -38170,7 +38202,7 @@ var CLSTAMP = "9042983";
             }),
           );
         }
-        function _l(e) {
+        function Ml(e) {
           const [t, r] = (0, a.l)(),
             [i, o] = (0, a.l)();
           return n.createElement(
@@ -38421,7 +38453,7 @@ var CLSTAMP = "9042983";
             ),
           );
         }
-        function Ml(e) {
+        function wl(e) {
           const {
               highlightViewButton: t,
               highlightOptionsButton: r,
@@ -46123,13 +46155,14 @@ var CLSTAMP = "9042983";
       98995: (e, t, r) => {
         "use strict";
         r.d(t, {
-          I2: () => L,
-          MA: () => w,
-          Vr: () => k,
+          Gq: () => g,
+          I2: () => E,
+          MA: () => L,
+          Vr: () => H,
           ep: () => d,
-          fS: () => f,
+          fS: () => _,
           he: () => h,
-          t1: () => M,
+          t1: () => w,
           zs: () => p,
         });
         var n = r(63696),
@@ -46151,7 +46184,7 @@ var CLSTAMP = "9042983";
           );
         }
         function h(e) {
-          const { divProps: t, tooltipProps: r } = g(e);
+          const { divProps: t, tooltipProps: r } = f(e);
           return n.createElement(
             o.ml,
             {
@@ -46160,20 +46193,30 @@ var CLSTAMP = "9042983";
               focusable: e.bNavStop ?? !!t.onClick,
               ...t,
             },
-            n.createElement(E, { ...r }),
+            n.createElement(v, { ...r }),
             e.children,
           );
         }
         function p(e) {
-          const { divProps: t, tooltipProps: r } = g(e);
+          const { divProps: t, tooltipProps: r } = f(e);
           return n.createElement(
             "rect",
             { ...t },
-            n.createElement(E, { ...r }),
+            n.createElement(v, { ...r }),
             e.children,
           );
         }
         function g(e) {
+          const { children: t } = e,
+            { divProps: r, tooltipProps: i } = f(e);
+          return n.createElement(
+            n.Fragment,
+            null,
+            n.cloneElement(t, { ...r, ...t.props }),
+            n.createElement(v, { ...i }),
+          );
+        }
+        function f(e) {
           const {
               toolTipContent: t,
               nDelayShowMS: r = 300,
@@ -46220,42 +46263,42 @@ var CLSTAMP = "9042983";
             },
           };
         }
-        function f(e) {
-          const { divProps: t, tooltipProps: r, stateHandlers: i } = g(e);
+        function _(e) {
+          const { divProps: t, tooltipProps: r, stateHandlers: i } = f(e);
           return {
             divProps: t,
             stateHandlers: i,
-            tooltip: n.createElement(E, { ...r }),
+            tooltip: n.createElement(v, { ...r }),
           };
         }
-        function _(e) {
+        function M(e) {
           return n.createElement("div", {
             ...e,
             className: (0, a.A)(C().TextToolTip, e.className),
           });
         }
-        function M(e) {
+        function w(e) {
           const { className: t, ...r } = e;
           return n.createElement("div", {
             className: (0, a.A)(C().ToolTipCustom, t),
             ...r,
           });
         }
-        function w(e) {
+        function L(e) {
           const { className: t, center: r, ...i } = e;
           return n.createElement("div", {
             className: (0, a.A)(C().ToolTipTitle, r ? C().Center : "", t),
             ...i,
           });
         }
-        function L(e) {
+        function E(e) {
           const { className: t, ...r } = e;
           return n.createElement("div", {
             className: (0, a.A)(C().ToolTipInsetContent, t),
             ...r,
           });
         }
-        function E(e) {
+        function v(e) {
           const {
               active: t,
               target: r,
@@ -46283,7 +46326,7 @@ var CLSTAMP = "9042983";
             "function" == typeof c
               ? (h = c())
               : "string" == typeof c &&
-                (h = n.createElement(_, null, (0, s.we)(c))),
+                (h = n.createElement(M, null, (0, s.we)(c))),
             h && r
               ? i.createPortal(
                   n.createElement(l.g, { target: r, ...a }, h),
@@ -46292,11 +46335,11 @@ var CLSTAMP = "9042983";
               : null
           );
         }
-        const v = "DEBUG_StickyHovers";
-        function k(e) {
+        const k = "DEBUG_StickyHovers";
+        function H(e) {
           e
-            ? window.sessionStorage.setItem(v, "true")
-            : window.sessionStorage.removeItem(v);
+            ? window.sessionStorage.setItem(k, "true")
+            : window.sessionStorage.removeItem(k);
         }
       },
       43397: (e, t, r) => {
@@ -50084,9 +50127,9 @@ var CLSTAMP = "9042983";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jul 16 2024 : 14:10:18",
-                    BUILD_TIME_UTC: "Jul 16 2024 : 21:10:18",
-                    BUILD_RTIME_UTC: 1721164218,
+                    BUILD_TIME_LOCAL: "Jul 19 2024 : 12:30:35",
+                    BUILD_TIME_UTC: "Jul 19 2024 : 19:30:35",
+                    BUILD_RTIME_UTC: 1721417435,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -50775,7 +50818,7 @@ var CLSTAMP = "9042983";
         9418: "60abbbd53a193959226d",
         9462: "5a8205c8e329ca7396b0",
         9711: "8dbe59401b80135811a4",
-        9858: "ade57050917176487885",
+        9858: "f31eb71a99977836d665",
         9869: "539baeeb89c0b6f17b40",
         9887: "2640eed9695e10cbb9d8",
       }[e]),

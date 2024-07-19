@@ -166,6 +166,7 @@
 				"LEFTSTICK_DOWN"		"#Action_Down"
 				"LEFTSTICK_LEFT"		"#Action_Left"
 				"LEFTSTICK_RIGHT"		"#Action_Right"
+				"LEFTSTICK_CLICK"		"#Action_LeftStickClick"
 				"LBACK"		"#Action_Shift"
 				"RBACK"		"#Action_Alt"
 				"LeftTrackpad"			"#Action_LeftTrackpad"
@@ -1060,6 +1061,19 @@
 						"settings"
 						{
 							"haptic_intensity"		"1"
+						}
+					}
+				}
+			}
+			"click"
+			{
+				"activators"
+				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"game_action Keyboard LEFTSTICK_CLICK"
 						}
 					}
 				}
