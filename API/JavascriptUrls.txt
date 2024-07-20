@@ -1115,6 +1115,7 @@ ${PARTNER_BASE_URL}promotion/marketingmessages/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}promotion/marketingmessages/dashboard
 ${PARTNER_BASE_URL}promotion/marketingmessages/edit/${gid}
 ${PARTNER_BASE_URL}promotion/marketingmessages/edit/${}
+${PARTNER_BASE_URL}promotion/marketingmessages/partnerpreview/${gid}
 ${PARTNER_BASE_URL}promotion/marketingmessages/partnerpreview/${}
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetappsalesummaries
 ${PARTNER_BASE_URL}promotion/planning/ajaxgetcategoryeditorapplist
