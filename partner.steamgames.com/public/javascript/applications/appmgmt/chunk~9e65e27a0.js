@@ -2519,9 +2519,13 @@
             ? (0, r.Qz)(t)
             : void 0;
         return n.createElement(
-          "a",
-          { className: i, href: d, rel: m, id: e.id },
-          n.createElement(l.he, { toolTipContent: u }, e.children),
+          l.Gq,
+          { toolTipContent: u, direction: "top" },
+          n.createElement(
+            "a",
+            { className: i, href: d, rel: m, id: e.id },
+            e.children,
+          ),
         );
       };
     },

@@ -26219,7 +26219,13 @@
     },
     32754: (e, t, n) => {
       "use strict";
-      n.d(t, { fS: () => _, he: () => p, t1: () => C, zQ: () => g });
+      n.d(t, {
+        Gq: () => h,
+        fS: () => g,
+        he: () => p,
+        t1: () => f,
+        zQ: () => C,
+      });
       var r = n(90626),
         i = n(72739),
         o = n(71513),
@@ -26231,7 +26237,7 @@
       const m = r.createContext({}),
         d = () => r.useContext(m);
       function p(e) {
-        const { divProps: t, tooltipProps: n } = h(e);
+        const { divProps: t, tooltipProps: n } = _(e);
         return r.createElement(
           o.ml,
           {
@@ -26240,11 +26246,21 @@
             focusable: e.bNavStop ?? !!t.onClick,
             ...t,
           },
-          r.createElement(f, { ...n }),
+          r.createElement(v, { ...n }),
           e.children,
         );
       }
       function h(e) {
+        const { children: t } = e,
+          { divProps: n, tooltipProps: i } = _(e);
+        return r.createElement(
+          r.Fragment,
+          null,
+          r.cloneElement(t, { ...n, ...t.props }),
+          r.createElement(v, { ...i }),
+        );
+      }
+      function _(e) {
         const {
             toolTipContent: t,
             nDelayShowMS: n = 300,
@@ -26291,28 +26307,28 @@
           },
         };
       }
-      function _(e) {
-        const { divProps: t, tooltipProps: n, stateHandlers: i } = h(e);
+      function g(e) {
+        const { divProps: t, tooltipProps: n, stateHandlers: i } = _(e);
         return {
           divProps: t,
           stateHandlers: i,
-          tooltip: r.createElement(f, { ...n }),
+          tooltip: r.createElement(v, { ...n }),
         };
       }
-      function g(e) {
+      function C(e) {
         return r.createElement("div", {
           ...e,
           className: (0, a.A)(u().TextToolTip, e.className),
         });
       }
-      function C(e) {
+      function f(e) {
         const { className: t, ...n } = e;
         return r.createElement("div", {
           className: (0, a.A)(u().ToolTipCustom, t),
           ...n,
         });
       }
-      function f(e) {
+      function v(e) {
         const {
             active: t,
             target: n,
@@ -26340,7 +26356,7 @@
           "function" == typeof c
             ? (h = c())
             : "string" == typeof c &&
-              (h = r.createElement(g, null, (0, l.we)(c))),
+              (h = r.createElement(C, null, (0, l.we)(c))),
           h && n
             ? i.createPortal(
                 r.createElement(s.g, { target: n, ...a }, h),

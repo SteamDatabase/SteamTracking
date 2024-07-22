@@ -84519,17 +84519,17 @@
         m = a(55963),
         d = a(27666),
         u = a(86355),
-        p = a(43667),
-        _ = a(93267),
-        g = a(12155),
-        h = a(32630),
-        E = a(52038),
-        S = a(61859),
-        y = a(61336),
-        f = a(30470),
-        v = a(12611),
-        b = a(74410),
-        w = a(32754);
+        p = a(74410),
+        _ = a(43667),
+        g = a(93267),
+        h = a(12155),
+        E = a(32630),
+        S = a(32754),
+        y = a(52038),
+        f = a(61859),
+        v = a(61336),
+        b = a(30470),
+        w = a(12611);
       const D = new Map([
         [
           "b",
@@ -84550,7 +84550,7 @@
             Constructor: function (e) {
               return s.createElement(
                 "div",
-                { className: (0, E.A)(r().Italic, "BB_Italic") },
+                { className: (0, y.A)(r().Italic, "BB_Italic") },
                 e.children,
               );
             },
@@ -84564,7 +84564,7 @@
           "h4",
           {
             Constructor: function (e) {
-              return T(e, (0, E.A)(r().Header4, "BB_Header4"));
+              return T(e, (0, y.A)(r().Header4, "BB_Header4"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -84574,7 +84574,7 @@
           "h5",
           {
             Constructor: function (e) {
-              return T(e, (0, E.A)(r().Header5, "BB_Header5"));
+              return T(e, (0, y.A)(r().Header5, "BB_Header5"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -84594,7 +84594,7 @@
                 "span",
                 {
                   id: t || void 0,
-                  className: (0, E.A)(r().CenterSpan, "BB_Center"),
+                  className: (0, y.A)(r().CenterSpan, "BB_Center"),
                 },
                 e.children,
               );
@@ -84606,7 +84606,7 @@
           "smalltext",
           {
             Constructor: function (e) {
-              return T(e, (0, E.A)(r().SmallText, "BB_SmallText"));
+              return T(e, (0, y.A)(r().SmallText, "BB_SmallText"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -84649,10 +84649,10 @@
               return s.createElement(
                 o.Z,
                 {
-                  className: (0, E.A)(r().Spoiler, t && r().Revealed),
+                  className: (0, y.A)(r().Spoiler, t && r().Revealed),
                   focusable: !0,
                   onActivate: n,
-                  onOKActionDescription: (0, S.we)(
+                  onOKActionDescription: (0, f.we)(
                     t ? "#Bbcode_Spoiler_Hide" : "#Bbcode_Spoiler_Show",
                   ),
                 },
@@ -84773,7 +84773,7 @@
               return s.createElement(
                 "div",
                 {
-                  className: (0, E.A)(
+                  className: (0, y.A)(
                     r().Table,
                     "BB_Table",
                     t && r().NoBorder,
@@ -84793,7 +84793,7 @@
             Constructor: function (e) {
               return s.createElement(
                 "div",
-                { className: (0, E.A)(r().TableRow, "BB_TableRow") },
+                { className: (0, y.A)(r().TableRow, "BB_TableRow") },
                 e.children,
               );
             },
@@ -84825,7 +84825,7 @@
               return s.createElement(
                 "div",
                 {
-                  className: (0, E.A)(r().TableData, "BB_TableData"),
+                  className: (0, y.A)(r().TableData, "BB_TableData"),
                   style: t && { width: t },
                 },
                 e.children,
@@ -84875,7 +84875,7 @@
               return s.createElement(
                 "div",
                 {
-                  className: (0, E.A)({
+                  className: (0, y.A)({
                     [r().ExpandSectionBlock]: !0,
                     [o.style]: !0,
                     [r().ExpandSectionExpanded]: a,
@@ -84887,11 +84887,11 @@
                 s.createElement(
                   "div",
                   { className: r().ExpandSectionHeader, onClick: () => n(!a) },
-                  (0, S.we)(a ? o.expanded : o.collapsed),
+                  (0, f.we)(a ? o.expanded : o.collapsed),
                   s.createElement(
                     "div",
                     { className: r().EmbedArrow },
-                    s.createElement(g.DK4, { angle: a ? 180 : 0 }),
+                    s.createElement(h.DK4, { angle: a ? 180 : 0 }),
                   ),
                 ),
                 a &&
@@ -84914,10 +84914,10 @@
               const { event: t, showErrorInfo: a } = e.context,
                 n = I(e.args);
               if (n)
-                return s.createElement(p.y, { eventGID: n, bPreviewMode: a });
+                return s.createElement(_.y, { eventGID: n, bPreviewMode: a });
               if (t) {
-                const e = (0, i.sf)(f.TS.LANGUAGE);
-                return s.createElement(p.j, { eventModel: t, lang: e });
+                const e = (0, i.sf)(b.TS.LANGUAGE);
+                return s.createElement(_.j, { eventModel: t, lang: e });
               }
               return null;
             },
@@ -84932,7 +84932,7 @@
                 a = "button" == I(e.args, "style") ? r().LinkButton : null;
               return s.createElement(
                 R,
-                { className: a, href: `${f.TS.PARTNER_BASE_URL}doc/${t}` },
+                { className: a, href: `${b.TS.PARTNER_BASE_URL}doc/${t}` },
                 e.children,
               );
             },
@@ -84972,15 +84972,15 @@
       new Map([
         ["looping_media", { Constructor: L, autocloses: !1 }],
         ["video", { Constructor: U, autocloses: !1 }],
-        ["youtubeorvideo", { Constructor: b.Eo, autocloses: !1 }],
-        ["previewyoutube", { Constructor: b.gH, autocloses: !1 }],
+        ["youtubeorvideo", { Constructor: p.Eo, autocloses: !1 }],
+        ["previewyoutube", { Constructor: p.gH, autocloses: !1 }],
       ]);
       function C(e, t, a = 0) {
-        if (e?.startsWith(v.l)) return (0, d.v6)(e);
-        if (e?.startsWith(v.e)) {
+        if (e?.startsWith(w.l)) return (0, d.v6)(e);
+        if (e?.startsWith(w.e)) {
           const n = new Array(),
             r = (0, d.mJ)(),
-            s = e.substring(v.e.length + 1),
+            s = e.substring(w.e.length + 1),
             l = u.i6.GetHashFromHashAndExt(s),
             o = u.i6.GetExtensionStringFromHashAndExt(s);
           if (null != t) {
@@ -84998,7 +84998,7 @@
         return void 0 === t ? e[""] : e[t];
       }
       function B(e, t) {
-        return (a) => e({ ...a, className: (0, E.A)(a.className, t) });
+        return (a) => e({ ...a, className: (0, y.A)(a.className, t) });
       }
       function T(e, t) {
         let a = I(e.args, "id");
@@ -85011,54 +85011,54 @@
             (a = a.substring(1)),
           s.createElement(
             "div",
-            { id: a || void 0, className: (0, E.A)(t, e.className) },
+            { id: a || void 0, className: (0, y.A)(t, e.className) },
             e.children,
           )
         );
       }
       function A(e) {
-        return T(e, (0, E.A)(r().Header1, "BB_Header1"));
+        return T(e, (0, y.A)(r().Header1, "BB_Header1"));
       }
       function k(e) {
-        return T(e, (0, E.A)(r().Header2, "BB_Header2"));
+        return T(e, (0, y.A)(r().Header2, "BB_Header2"));
       }
       function M(e) {
-        return T(e, (0, E.A)(r().Header3, "BB_Header3"));
+        return T(e, (0, y.A)(r().Header3, "BB_Header3"));
       }
       const R = (e) => {
         const { href: t, ...a } = e,
-          n = (0, h.n9)();
+          n = (0, E.n9)();
         let r,
           i = (0, m.VZ)(t, n);
         (0, c.p)(i)
           ? ((i =
-              (f.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
+              (b.TS.IN_CLIENT ? "steam://openurl_external/" : "") +
               (0, c.E)(i)),
             (r = "noopener nofollow"))
-          : (i = (0, y.NT)(i));
+          : (i = (0, v.NT)(i));
         const o =
           "string" == typeof e.children &&
           e.children.length > 0 &&
           t &&
           !t.startsWith("steam://")
-            ? (0, y.Qz)(t)
+            ? (0, v.Qz)(t)
             : void 0;
         return s.createElement(
-          l.Ii,
-          { ...a, href: i, rel: r },
-          s.createElement(w.he, { toolTipContent: o }, e.children),
+          S.Gq,
+          { toolTipContent: o, direction: "top" },
+          s.createElement(l.Ii, { ...a, href: i, rel: r }, e.children),
         );
       };
       function P(e) {
         const t = I(e.args, "author");
         return s.createElement(
           "blockquote",
-          { className: (0, E.A)(r().BlockQuote, e.className) },
+          { className: (0, y.A)(r().BlockQuote, e.className) },
           !!t &&
             s.createElement(
               "div",
               { className: r().QuoteAuthor },
-              (0, S.we)("#Bbcode_Originally_Posted_By") + " ",
+              (0, f.we)("#Bbcode_Originally_Posted_By") + " ",
               " ",
               s.createElement("b", null, t + ":"),
             ),
@@ -85068,7 +85068,7 @@
       function N(e) {
         return s.createElement(
           "ul",
-          { className: (0, E.A)(r().List, "bullets") },
+          { className: (0, y.A)(r().List, "bullets") },
           e.children,
         );
       }
@@ -85096,22 +85096,22 @@
       }
       function F(e) {
         let t = I(e.args, "poster");
-        t && (t = (0, y.L$)(t));
+        t && (t = (0, v.L$)(t));
         const a = new Array();
         {
           const t = I(e.args, "mp4");
-          t && a.push({ sURL: (0, y.L$)(t), sFormat: "video/mp4" });
+          t && a.push({ sURL: (0, v.L$)(t), sFormat: "video/mp4" });
           const n = I(e.args, "webm");
-          n && a.push({ sURL: (0, y.L$)(n), sFormat: "video/webm" });
+          n && a.push({ sURL: (0, v.L$)(n), sFormat: "video/webm" });
         }
-        const n = (0, i.sf)(f.TS.LANGUAGE),
+        const n = (0, i.sf)(b.TS.LANGUAGE),
           r = 0 != n,
           s = new Array();
         for (let t = 0; t < 31; t++) {
           const a = I(e.args, "sub_" + (0, i.ww)(t));
           a &&
             s.push({
-              sURL: (0, y.L$)(a),
+              sURL: (0, v.L$)(a),
               eLanguage: t,
               sKind: "subtitles",
               bDefault: r && t == n,
@@ -85119,7 +85119,7 @@
           const l = I(e.args, "cap_" + (0, i.ww)(t));
           l &&
             s.push({
-              sURL: (0, y.L$)(l),
+              sURL: (0, v.L$)(l),
               eLanguage: t,
               sKind: "captions",
               bDefault: r && t == n,
@@ -85129,7 +85129,7 @@
       }
       function L(e) {
         const t = F(e);
-        return s.createElement(_.L, {
+        return s.createElement(g.L, {
           video: t,
           bAutoPlay: !0,
           bControls: !1,
@@ -85141,14 +85141,14 @@
           a = e.children ? e.children.toString() : void 0;
         a &&
           a.startsWith("http") &&
-          t.rgVideoSources.push({ sURL: (0, y.L$)(a), sFormat: "video/webm" });
+          t.rgVideoSources.push({ sURL: (0, v.L$)(a), sFormat: "video/webm" });
         const n = I(e.args, "autoplay"),
           r = "0" !== n && "off" !== n && "false" !== n,
           i = I(e.args, "controls"),
           l = "0" !== i && "off" !== i && "false" !== i,
           o = I(e.args, "loop"),
           c = "0" !== i && "off" !== i && "false" !== i;
-        return s.createElement(_.L, {
+        return s.createElement(g.L, {
           video: t,
           bAutoPlay: r,
           bControls: l,
