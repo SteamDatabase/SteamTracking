@@ -50,7 +50,7 @@
         u = i(78327),
         d = i(56545),
         p = i(37735),
-        h = i(78205);
+        h = i(23809);
       const T = "nicknames";
       function g(e) {
         const t = (0, h.KV)(),

@@ -7747,7 +7747,7 @@
     },
     4796: (e, t, a) => {
       "use strict";
-      a.d(t, { TB: () => _, ac: () => p });
+      a.d(t, { TB: () => _, ac: () => p, vF: () => h });
       var n = a(34629),
         s = a(41735),
         r = a.n(s),
@@ -8041,6 +8041,15 @@
             else a(void 0), s(!1);
           }, [e]),
           [n, t]
+        );
+      }
+      function h(e) {
+        const [t, a] = (0, o.useState)(p.GetOGGClanInfo(e));
+        return (
+          (0, o.useEffect)(() => {
+            !t && e && p.LoadOGGClanInfoForAppID(e).then(a);
+          }, [t, e]),
+          t
         );
       }
       window.g_ClanStore = p;
@@ -12010,7 +12019,7 @@
       var n = a(56545),
         s = a(75487),
         r = a(31380),
-        i = a(78205),
+        i = a(23809),
         o = (a(72963), a(78327));
       function l(e = o.TS.LANGUAGE) {
         const t = (0, i.TR)(),
@@ -12889,7 +12898,7 @@
         o = () => (0, n.useContext)(i);
       var l = a(31380),
         m = a(56545),
-        c = a(78205),
+        c = a(23809),
         d = a(17690),
         u = a(80613),
         p = a(89068);

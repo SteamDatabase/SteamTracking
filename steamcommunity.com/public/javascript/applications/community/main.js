@@ -780,7 +780,7 @@
         n = r(17083),
         a = r(92757),
         s = r(92298),
-        o = r(78205),
+        o = r(23809),
         l = r(77350),
         c = r(96059),
         u = r(14932),
@@ -1272,7 +1272,7 @@
             r.e(9638),
             r.e(9870),
             r.e(5876),
-          ]).then(r.bind(r, 54076)),
+          ]).then(r.bind(r, 43186)),
         ),
         q = i.lazy(() =>
           Promise.all([r.e(8256), r.e(2092)]).then(r.bind(r, 92598)),
@@ -1308,7 +1308,7 @@
             r.e(9436),
             r.e(5801),
             r.e(3156),
-          ]).then(r.bind(r, 80907)),
+          ]).then(r.bind(r, 19389)),
         ),
         Y = () => (w.UF.IS_OGG ? "games" : "groups"),
         $ = {
@@ -2741,6 +2741,20 @@
         yY: () => n,
         zl: () => s,
       });
+    },
+    81393: (e, t, r) => {
+      "use strict";
+      function i(e, t, ...r) {
+        console.assert
+          ? 0 == r.length
+            ? console.assert(!!e, t)
+            : console.assert(!!e, t, ...r)
+          : e || console.warn(t, ...r);
+      }
+      function n(e, t, ...r) {
+        i(!1, t, ...r);
+      }
+      r.d(t, { w: () => i, z: () => n });
     },
     56545: (e, t, r) => {
       "use strict";
@@ -15237,6 +15251,58 @@
         return i;
       }
     },
+    23809: (e, t, r) => {
+      "use strict";
+      r.d(t, {
+        KV: () => c,
+        TR: () => m,
+        VQ: () => l,
+        rW: () => u,
+        rX: () => d,
+        tc: () => o,
+      });
+      var i = r(90626),
+        n = r(81393);
+      const a = i.createContext(void 0),
+        s = a.Provider,
+        o = () => {
+          const e = i.useContext(a);
+          if (!e)
+            throw new Error(
+              "called useActiveServiceTransportContext outside of ServiceTransportProvider",
+            );
+          return e;
+        };
+      function l(e) {
+        const { useStorage: t, children: r } = e;
+        let a, o;
+        if ("useActiveCMInterface" in e) o = a = e.useActiveCMInterface;
+        else {
+          if (!("useActiveSteamInterface" in e))
+            return (
+              (0, n.z)(
+                e,
+                "neither useActiveCMInterface nor useActiveSteamInterface were provided",
+              ),
+              r
+            );
+          o = e.useActiveSteamInterface;
+        }
+        const l = i.useMemo(
+          () => ({
+            useActiveSteamInterface: o,
+            useActiveCMInterface: a,
+            useStorage: t,
+          }),
+          [o, a, t],
+        );
+        return i.createElement(s, { value: l }, r);
+      }
+      const c = () => o().useActiveSteamInterface().GetServiceTransport(),
+        u = () => o().useActiveSteamInterface().GetAnonymousServiceTransport(),
+        d = () => o().useStorage(),
+        m = () => o().useActiveSteamInterface();
+    },
     29233: (e, t, r) => {
       "use strict";
       var i;
@@ -15324,7 +15390,7 @@
       });
       var i = r(31380),
         n = r(56545),
-        a = r(78205),
+        a = r(23809),
         s = r(80613),
         o = r(89068);
       const l = s.Message;
@@ -18002,54 +18068,6 @@
         });
       }
     },
-    78205: (e, t, r) => {
-      "use strict";
-      r.d(t, {
-        KV: () => c,
-        TR: () => m,
-        VQ: () => l,
-        rW: () => u,
-        rX: () => d,
-        tc: () => o,
-      });
-      var i = r(90626),
-        n = r(44332);
-      const a = i.createContext(void 0),
-        s = a.Provider,
-        o = () => {
-          const e = i.useContext(a);
-          if (!e)
-            throw new Error(
-              "called useActiveServiceTransportContext outside of ServiceTransportProvider",
-            );
-          return e;
-        };
-      function l(e) {
-        const { useStorage: t, children: r } = e;
-        let a, o;
-        "useActiveCMInterface" in e
-          ? (o = a = e.useActiveCMInterface)
-          : "useActiveSteamInterface" in e
-            ? (o = e.useActiveSteamInterface)
-            : (0, n.z)(
-                e,
-                "neither useActiveCMInterface nor useActiveSteamInterface were provided",
-              );
-        const l = i.useMemo(
-          () => ({
-            useActiveSteamInterface: o,
-            useActiveCMInterface: a,
-            useStorage: t,
-          }),
-          [o, a, t],
-        );
-        return i.createElement(s, { value: l }, r);
-      }
-      const c = () => o().useActiveSteamInterface().GetServiceTransport(),
-        u = () => o().useActiveSteamInterface().GetAnonymousServiceTransport(),
-        d = () => o().useStorage(),
-        m = () => o().useActiveSteamInterface();
-    },
     77350: (e, t, r) => {
       "use strict";
       r.d(t, { A: () => n });
@@ -18692,13 +18710,29 @@
             (this.m_messageHandlers = new m()),
             (this.m_mapServiceCallErrorCount = new Map()),
             (this.m_mapConnectionDetails = new Map()),
-            (this.m_bInitialized = !1);
+            (this.m_bInitialized = !1),
+            (this.m_nMaximumMsgSizeBytes = 1024);
         }
         static InstallErrorReportingStore(e) {
           this.sm_ErrorReportingStore = e;
         }
         BIsValid() {
           return this.m_bInitialized;
+        }
+        GetMaximumMsgSizeBytes() {
+          return this.m_nMaximumMsgSizeBytes;
+        }
+        TEST_GetMaximumMsgBodySizeBytes() {
+          return (
+            this.m_nMaximumMsgSizeBytes -
+            this.TEST_GetMsgHeaderEstimatedSizeBytes()
+          );
+        }
+        TEST_GetMsgHeaderEstimatedSizeBytes() {
+          return 128;
+        }
+        TEST_GetExcessivelyLargeBodySize() {
+          return 67108864;
         }
         ReportError(e) {
           B.Warning(e);
@@ -18712,7 +18746,13 @@
         async Init() {
           if (!b.TS.IN_CLIENT) return;
           const e = await SteamClient.WebUITransport.GetTransportInfo();
-          this.CreateConnection(1, "steamUI", e.portSteamUI, e.authKeySteamUI),
+          (this.m_nMaximumMsgSizeBytes = e.nMaximumMsgSizeBytes),
+            this.CreateConnection(
+              1,
+              "steamUI",
+              e.portSteamUI,
+              e.authKeySteamUI,
+            ),
             this.CreateConnection(
               2,
               "clientdll",
@@ -18755,48 +18795,56 @@
         SendMsg(e, t, r, i) {
           return new Promise((n, a) => {
             var s;
-            const o = i.eClientExecutionSite;
-            if (null == o || 0 == o)
+            const l = i.eClientExecutionSite;
+            if (null == l || 0 == l)
               return (
-                B.Error(`SendMsg: Invalid client execution site: ${o}`),
-                void a(`Transport SendMsg: invalid client execution site ${o}`)
+                B.Error(`SendMsg: Invalid client execution site: ${l}`),
+                void a(`Transport SendMsg: invalid client execution site ${l}`)
               );
-            const l = this.m_mapConnectionDetails.get(o);
-            if (null == l)
+            const c = this.m_mapConnectionDetails.get(l);
+            if (null == c)
               return (
                 B.Error(
-                  `SendMsg: could not find connection for execution site: ${o}`,
+                  `SendMsg: could not find connection for execution site: ${l}`,
                 ),
                 void a(
-                  `Transport SendMsg: could not find connection for execution site ${o}`,
+                  `Transport SendMsg: could not find connection for execution site ${l}`,
                 )
               );
-            const c = l.connection;
-            if (!c.BCanSendMessages()) {
+            const u = c.connection;
+            if (!u.BCanSendMessages()) {
               const t =
                 null !== (s = this.m_mapServiceCallErrorCount.get(e)) &&
                 void 0 !== s
                   ? s
                   : 1;
               this.m_mapServiceCallErrorCount.set(e, t + 1);
-              const r = `SendMsg: Attempt to send message but socket wasn't ready: ${c.name} - ${e}`;
+              const r = `SendMsg: Attempt to send message but socket wasn't ready: ${u.name} - ${e}`;
               return (
                 1 == t && this.ReportError(r),
                 B.Warning(r + ` error count: ${t}`),
                 void a("Transport SendMsg: socket not ready")
               );
             }
-            const u = this.m_iMsgSeq++;
+            const d = this.m_iMsgSeq++;
             t.SetEMsg(146),
               t.Hdr().set_target_job_name(e),
-              t.Hdr().set_jobid_source("" + u);
-            if (1 != c.SendSerializedMessage(t.Serialize()))
+              t.Hdr().set_jobid_source("" + d);
+            const m = t.Serialize();
+            if (m.byteLength >= this.m_nMaximumMsgSizeBytes) {
+              B.Error(
+                `SendMsg: message exceeds maximum size: ${m.byteLength} >= ${this.m_nMaximumMsgSizeBytes}`,
+              );
+              const e = o.w.Init(r);
+              return e.Hdr().set_eresult(2), void n(e);
+            }
+            if (1 != u.SendSerializedMessage(m))
               return (
                 B.Error("SendMsg: Failed to send message"),
                 void a("Transport SendMsg: failed to send message")
               );
-            this.m_mapPendingMethodRequests.set(u, {
-              m_iSeq: u,
+            this.m_mapPendingMethodRequests.set(d, {
+              m_iSeq: d,
               m_responseClass: r,
               m_fnCallback: n,
               m_fnError: a,
@@ -24896,7 +24944,7 @@
           return this.m_strName;
         }
         get header_image_url() {
-          return i.TS.MEDIA_CDN_URL + `steam/apps/${this.m_unAppID}/header.jpg`;
+          return i.TS.STORE_ICON_BASE_URL + `${this.m_unAppID}/header.jpg`;
         }
         get icon_url_no_default() {
           return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, o);
@@ -24906,8 +24954,7 @@
         }
         get logo_url() {
           return (
-            i.TS.MEDIA_CDN_URL +
-            `steam/apps/${this.m_unAppID}/capsule_231x87.jpg`
+            i.TS.STORE_ICON_BASE_URL + `${this.m_unAppID}/capsule_231x87.jpg`
           );
         }
         get time_updated_from_server() {
@@ -28287,27 +28334,24 @@
                 (0, b.we)("#ContextMenu_Paste"),
               ),
             ),
-          y.TS.IN_CLIENT &&
-            y.TS.DEV_MODE &&
-            (t.length > 0 &&
-              ((0, h.Dp)("Browser.OpenDevTools") ||
-                (0, h.Dp)("Browser.InspectElement")) &&
-              t.push(a.createElement(T, { key: "devtools-separator" })),
-            (0, h.Dp)("Browser.OpenDevTools") &&
-              t.push(
-                a.createElement(
-                  E,
-                  {
-                    key: "opendevtools",
-                    onSelected: () => {
-                      o.focus(), r.SteamClient.Browser.OpenDevTools();
-                    },
+          y.TS.IN_CLIENT && y.TS.DEV_MODE)
+        ) {
+          const e = [];
+          (0, h.Fj)(r, "Browser.OpenDevTools") &&
+            e.push(
+              a.createElement(
+                E,
+                {
+                  key: "opendevtools",
+                  onSelected: () => {
+                    o.focus(), r.SteamClient.Browser.OpenDevTools();
                   },
-                  "Open Dev Tools",
-                ),
+                },
+                "Open Dev Tools",
               ),
-            (0, h.Dp)("Browser.InspectElement") &&
-              t.push(
+            ),
+            (0, h.Fj)(r, "Browser.InspectElement") &&
+              e.push(
                 a.createElement(
                   E,
                   {
@@ -28319,9 +28363,12 @@
                   },
                   "Inspect Element",
                 ),
-              )),
-          t.length)
-        )
+              ),
+            e.length > 0 &&
+              (t.push(a.createElement(T, { key: "devtools-separator" })),
+              t.push(...e));
+        }
+        if (t.length)
           (0, s.lX)(a.createElement(R, null, t), e, { bRootContextMenu: !0 });
         else {
           if (e.shiftKey) return;
@@ -39597,10 +39644,7 @@
             : e || console.warn(t, ...r);
         } catch (e) {}
       }
-      function n(e, t, ...r) {
-        i(!1, t, ...r);
-      }
-      r.d(t, { w: () => i, z: () => n });
+      r.d(t, { w: () => i });
     },
     10333: (e, t, r) => {
       "use strict";
@@ -40452,8 +40496,9 @@
         _l: () => h,
         a8: () => i,
         cc: () => B,
+        dt: () => D,
         lQ: () => g,
-        qZ: () => D,
+        qZ: () => O,
         sq: () => R,
         u6: () => E,
         vl: () => M,
@@ -40835,6 +40880,40 @@
         );
       }
       function D(e, t, r) {
+        let i = e < 0;
+        const n = F((e = i ? 0 - e : e)),
+          s = n.fraction.toFixed(2).split(".")[1],
+          o = null == t || t;
+        let l = !o || "00" == s;
+        i && 0 == n.hours && 0 == n.minutes && 0 == n.seconds && l && (i = !1);
+        let c = "";
+        if (n.hours) {
+          const e = n.hours.toString(),
+            t = T(n.minutes.toString(), 2, "0"),
+            r = T(n.seconds.toString(), 2, "0"),
+            i = o
+              ? "#Duration_Abbreviation_HourMinuteSecondMillisecond"
+              : "#Duration_Abbreviation_HourMinuteSecond";
+          c = (0, a.we)(i, e, t, r, s);
+        } else if (n.minutes) {
+          const e = n.minutes.toString(),
+            t = T(n.seconds.toString(), 2, "0"),
+            r = o
+              ? "#Duration_Abbreviation_MinuteSecondMillisecond"
+              : "#Duration_Abbreviation_MinuteSecond";
+          c = (0, a.we)(r, e, t, s);
+        } else if (n.seconds) {
+          const e = n.seconds.toString(),
+            t = o
+              ? "#Duration_Abbreviation_SecondMillisecond"
+              : "#Duration_Abbreviation_Second";
+          c = (0, a.we)(t, e, s);
+        }
+        return (
+          i && (c = r ? (0, a.we)("#Duration_WrittenNegation", c) : "-" + c), c
+        );
+      }
+      function O(e, t, r) {
         let i = e < 0;
         const n = F((e = i ? 0 - e : e)),
           s = T(n.seconds.toString(), 2, "0"),
@@ -41833,7 +41912,7 @@
         );
       }
       function m(e, t) {
-        return `${i.TS.MEDIA_CDN_URL}steam/apps/${e}/${t}`;
+        return `${i.TS.STORE_ICON_BASE_URL}${e}/${t}`;
       }
       function p(e) {
         return m(e, "header.jpg");
@@ -42212,6 +42291,7 @@
         MEDIA_CDN_COMMUNITY_URL: "",
         MEDIA_CDN_URL: "",
         CLAN_CDN_ASSET_URL: "",
+        VIDEO_CDN_URL: "",
         COMMUNITY_CDN_URL: "",
         COMMUNITY_CDN_ASSET_URL: "",
         BASE_URL_SHARED_CDN: "",

@@ -842,6 +842,305 @@
       }
       (n.keys = () => Object.keys(i)), (n.id = 68042), (e.exports = n);
     },
+    79443: (e, t, r) => {
+      "use strict";
+      function i(e) {
+        return "account" === e.type;
+      }
+      function n(e) {
+        return "anonymous" === e.type;
+      }
+      function s(e) {
+        return "request" === e.type;
+      }
+      function a(e) {
+        return "replay" === e.type;
+      }
+      r.d(t, { c2: () => i, kx: () => n, sb: () => a, uU: () => s });
+    },
+    12229: (e, t, r) => {
+      "use strict";
+      r.d(t, {
+        Jn: () => S,
+        SI: () => w,
+        qS: () => M,
+        d0: () => C,
+        iw: () => y,
+        UI: () => B,
+        aU: () => b,
+      });
+      var i = r(56545),
+        n = r(3411),
+        s = r(94076),
+        a = r(71878),
+        o = r(71430),
+        l = r(79443),
+        c = r(93676),
+        u = r(24357),
+        m = r(31380),
+        d = r(23809),
+        p = r(55963),
+        _ = r(30894),
+        g = r(72839),
+        h = r(30470);
+      function f(e) {
+        return !!e;
+      }
+      function B(e) {
+        const t = (0, d.KV)(),
+          r = (0, u.j4)();
+        return (0, m.useQuery)((0, c.GO)(r), async () => C(t, r), {
+          staleTime: 18e5,
+          ...e,
+        });
+      }
+      function b(e) {
+        return B({ select: (e) => e.line_items?.length ?? 0, ...e });
+      }
+      function y(e, t, r, s, o, u) {
+        if ((0, l.c2)(r)) {
+          const l = (s || []).map((e) => ({ packageid: e }));
+          return (
+            o && l.push({ bundleid: o }),
+            (async function (e, t, r) {
+              const s = i.w.Init(n.c5);
+              if (!t || 0 === t.length)
+                return (
+                  console.error(
+                    "No valid Package or Bundle provided to add to cart",
+                  ),
+                  [8, null]
+                );
+              t.forEach((e) => {
+                const t = s.Body().add_items();
+                e.packageid
+                  ? t.set_packageid(e.packageid)
+                  : e.bundleid
+                    ? t.set_bundleid(e.bundleid)
+                    : console.error(
+                        "Neither a package nor bundle ID were provided with an item in AddItemsToAccountCart",
+                      ),
+                  e.bIsGift && t.flags().set_is_gift(!0);
+              }),
+                r && s.Body().set_navdata(a.i.fromObject((0, p.RT)(r)));
+              s.Body().set_user_country(h.iA.country_code);
+              const o = await n.t8.AddItemsToCart(e, s);
+              o.BSuccess() ||
+                console.warn(
+                  `Failed to add item to account cart: ${o.GetEResult()}`,
+                );
+              return [o.GetEResult(), o.Body().toObject()];
+            })(e, l, u).then(
+              ([e, i]) => (
+                _.Fm.Get().InvalidateCache(),
+                1 == e
+                  ? ((0, c.LN)(t, r, i.cart),
+                    {
+                      success: !0,
+                      items: i.line_item_ids,
+                      replaced_packageids: i.replaced_packages,
+                    })
+                  : 30 === e
+                    ? {
+                        success: !1,
+                        result: e,
+                        existing_billing_agreementid:
+                          i.existing_billing_agreementid,
+                        new_billing_agreement_recurring_packageid:
+                          i.new_billing_agreement_recurring_packageid,
+                      }
+                    : { success: !1, result: e }
+              ),
+            )
+          );
+        }
+        return w(e, s, o).then(([e, i]) => {
+          if ((_.Fm.Get().InvalidateCache(), e)) {
+            (0, c.LN)(t, r, M(i));
+            const e = (s || []).map((e) =>
+              i?.lineitems?.find((t) => t.package_item?.packageid === e),
+            );
+            o &&
+              e.push(i?.lineitems?.find((e) => e.bundle_item?.bundleid === o));
+            return {
+              success: !0,
+              items: e.filter(f).map((e) => e.gidlineitem),
+            };
+          }
+          return { success: !1 };
+        });
+      }
+      async function w(e, t, r, i) {
+        const n = new FormData();
+        t &&
+          (1 === t.length
+            ? n.set("subid", t[0].toString())
+            : t.forEach((e) => n.set("subid[]", e.toString()))),
+          r && n.set("bundleid", r.toString()),
+          n.set("sessionid", h.TS.SESSIONID),
+          n.set("action", "add_to_cart");
+        const s = await fetch(`${h.TS.STORE_BASE_URL}cart/addtocart`, {
+          method: "post",
+          body: n,
+        });
+        if (!s.ok) throw new Error("Failed to fetch /cart/addtocart");
+        const a = await s.json();
+        return [!!a?.success, a?.contents];
+      }
+      async function S(e, t, r, s, o) {
+        const l = i.w.Init(n.c5);
+        if (!t && !r)
+          return (
+            console.warn("No valid Package or Bundle provided to add to cart"),
+            [8, null]
+          );
+        const c = l.Body().add_items();
+        t
+          ? c.set_packageid(t)
+          : r
+            ? c.set_bundleid(r)
+            : console.error(
+                "Neither a package nor bundle ID were provided with an item in AddItemsToAccountCart",
+              ),
+          c.flags().set_is_gift(s),
+          o && l.Body().set_navdata(a.i.fromObject((0, p.RT)(o))),
+          l.Body().set_user_country(h.iA.country_code);
+        const u = await n.t8.AddItemsToCart(e, l);
+        return (
+          u.BSuccess() ||
+            console.warn(
+              `Failed to add item to account cart: ${u.GetEResult()}`,
+            ),
+          [u.GetEResult(), u.Body().toObject()]
+        );
+      }
+      async function C(e, t) {
+        if ((0, l.c2)(t)) {
+          const t = i.w.Init(n.aO);
+          t.Body().set_user_country(h.iA.country_code);
+          const r = await n.t8.GetCart(e, t);
+          return r.Body().toObject()?.cart;
+        }
+        if ((0, l.sb)(t)) {
+          const r = i.w.Init(s.vL);
+          (0, g.rV)(r), r.Body().set_gidreplayoftransid(t.gid);
+          return (function (e) {
+            const t = { subtotal: e.estimated_totals.subtotal, line_items: [] };
+            return (
+              (t.line_items = e.cart_items
+                ?.map((e) => {
+                  let t;
+                  if (e.item_id?.packageid) t = 1;
+                  else {
+                    if (!e.item_id?.bundleid) return;
+                    t = 2;
+                  }
+                  return {
+                    line_item_id: e.line_item_id,
+                    type: t,
+                    packageid: e.item_id.packageid,
+                    bundleid: e.item_id.bundleid,
+                    is_valid: !0,
+                    price_when_added: e.price_when_added,
+                    gift_info: e.gift_info,
+                    flags: { is_gift: !!e.gift_info?.accountid_giftee },
+                    gidcoupon_applied: e.coupon_applied?.gidcoupon,
+                  };
+                })
+                .filter(f)),
+              t
+            );
+          })((await s._o.ValidateCart(e, r)).Body().toObject());
+        }
+        {
+          const r = i.w.Init(o.p3);
+          r.Body().set_gidshoppingcart(t.gid);
+          return M(
+            (await o.Q2.GetShoppingCartContents(e, r)).Body().toObject()
+              .contents,
+          );
+        }
+      }
+      function M(e) {
+        const t = { line_items: [] };
+        return (
+          e?.lineitems?.length &&
+            (t.line_items = e.lineitems
+              .map((e) =>
+                e.package_item?.gidbundle
+                  ? null
+                  : (function (e) {
+                      const t = { price_when_added: {}, flags: {} };
+                      (t.line_item_id = e.gidlineitem),
+                        e.bundle_item?.bundleid
+                          ? ((t.bundleid = e.bundle_item.bundleid),
+                            (t.type = 2))
+                          : e.package_item &&
+                            ((t.packageid = e.package_item.packageid),
+                            (t.price_when_added.amount_in_cents =
+                              e.package_item.costwhenadded?.amount ?? ""),
+                            (t.price_when_added.currency_code =
+                              e.package_item.costwhenadded?.currencycode ?? 0),
+                            (t.type = 1));
+                      return t;
+                    })(e),
+              )
+              .filter(f)),
+          t
+        );
+      }
+    },
+    24357: (e, t, r) => {
+      "use strict";
+      function i(e) {
+        if (!document.cookie) return;
+        const t = document.cookie.match("(^|; )" + e.name + "=([^;]*)");
+        return t && t[2] ? decodeURIComponent(t[2]) : void 0;
+      }
+      r.d(t, { VF: () => l, h3: () => m, j4: () => u });
+      var n = r(90626),
+        s = r(30470);
+      const a = { name: "shoppingCartGID", options: o };
+      var o;
+      function l() {
+        return s.iA.logged_in
+          ? { type: "account" }
+          : { type: "anonymous", gid: i(a) };
+      }
+      const c = n.createContext({ cartID: void 0 });
+      function u() {
+        return n.useContext(c).cartID || l();
+      }
+      function m(e) {
+        const { cartID: t, children: r } = e,
+          i = n.useMemo(() => ({ cartID: t }), [t]);
+        return n.createElement(c.Provider, { value: i }, r);
+      }
+    },
+    93676: (e, t, r) => {
+      "use strict";
+      r.d(t, { Cd: () => c, GO: () => a, LN: () => u, m4: () => o });
+      var i = r(79443),
+        n = r(30470);
+      function s(e) {
+        return (0, i.c2)(e) ? e.type : e.gid;
+      }
+      function a(e) {
+        return ["shopping_cart", s(e), n.iA.accountid];
+      }
+      function o(e) {
+        return ["validate_checkout", s(e), n.iA.accountid];
+      }
+      function l(e, t) {
+        e.invalidateQueries(o(t));
+      }
+      function c(e, t) {
+        e.invalidateQueries(a(t)), l(e, t);
+      }
+      function u(e, t, r) {
+        e.setQueryData(a(t), r), l(e, t);
+      }
+    },
     2160: (e, t, r) => {
       "use strict";
       var i;
@@ -1897,6 +2196,20 @@
         x9: () => a,
         zl: () => s,
       });
+    },
+    81393: (e, t, r) => {
+      "use strict";
+      function i(e, t, ...r) {
+        console.assert
+          ? 0 == r.length
+            ? console.assert(!!e, t)
+            : console.assert(!!e, t, ...r)
+          : e || console.warn(t, ...r);
+      }
+      function n(e, t, ...r) {
+        i(!1, t, ...r);
+      }
+      r.d(t, { w: () => i, z: () => n });
     },
     56545: (e, t, r) => {
       "use strict";
@@ -22884,6 +23197,57 @@
         return i;
       }
     },
+    23809: (e, t, r) => {
+      "use strict";
+      r.d(t, {
+        KV: () => c,
+        TR: () => d,
+        VQ: () => l,
+        rW: () => u,
+        rX: () => m,
+      });
+      var i = r(90626),
+        n = r(81393);
+      const s = i.createContext(void 0),
+        a = s.Provider,
+        o = () => {
+          const e = i.useContext(s);
+          if (!e)
+            throw new Error(
+              "called useActiveServiceTransportContext outside of ServiceTransportProvider",
+            );
+          return e;
+        };
+      function l(e) {
+        const { useStorage: t, children: r } = e;
+        let s, o;
+        if ("useActiveCMInterface" in e) o = s = e.useActiveCMInterface;
+        else {
+          if (!("useActiveSteamInterface" in e))
+            return (
+              (0, n.z)(
+                e,
+                "neither useActiveCMInterface nor useActiveSteamInterface were provided",
+              ),
+              r
+            );
+          o = e.useActiveSteamInterface;
+        }
+        const l = i.useMemo(
+          () => ({
+            useActiveSteamInterface: o,
+            useActiveCMInterface: s,
+            useStorage: t,
+          }),
+          [o, s, t],
+        );
+        return i.createElement(a, { value: l }, r);
+      }
+      const c = () => o().useActiveSteamInterface().GetServiceTransport(),
+        u = () => o().useActiveSteamInterface().GetAnonymousServiceTransport(),
+        m = () => o().useStorage(),
+        d = () => o().useActiveSteamInterface();
+    },
     29233: (e, t, r) => {
       "use strict";
       var i;
@@ -26111,7 +26475,7 @@
       var i = r(31380),
         n = r(22837),
         s = r(56545),
-        a = r(78205),
+        a = r(23809),
         o = r(80613),
         l = r(89068),
         c = r(66838);
@@ -28459,53 +28823,6 @@
         });
       }
     },
-    78205: (e, t, r) => {
-      "use strict";
-      r.d(t, {
-        KV: () => c,
-        TR: () => d,
-        VQ: () => l,
-        rW: () => u,
-        rX: () => m,
-      });
-      var i = r(90626),
-        n = r(44332);
-      const s = i.createContext(void 0),
-        a = s.Provider,
-        o = () => {
-          const e = i.useContext(s);
-          if (!e)
-            throw new Error(
-              "called useActiveServiceTransportContext outside of ServiceTransportProvider",
-            );
-          return e;
-        };
-      function l(e) {
-        const { useStorage: t, children: r } = e;
-        let s, o;
-        "useActiveCMInterface" in e
-          ? (o = s = e.useActiveCMInterface)
-          : "useActiveSteamInterface" in e
-            ? (o = e.useActiveSteamInterface)
-            : (0, n.z)(
-                e,
-                "neither useActiveCMInterface nor useActiveSteamInterface were provided",
-              );
-        const l = i.useMemo(
-          () => ({
-            useActiveSteamInterface: o,
-            useActiveCMInterface: s,
-            useStorage: t,
-          }),
-          [o, s, t],
-        );
-        return i.createElement(a, { value: l }, r);
-      }
-      const c = () => o().useActiveSteamInterface().GetServiceTransport(),
-        u = () => o().useActiveSteamInterface().GetAnonymousServiceTransport(),
-        m = () => o().useStorage(),
-        d = () => o().useActiveSteamInterface();
-    },
     77350: (e, t, r) => {
       "use strict";
       r.d(t, { A: () => n });
@@ -29152,12 +29469,28 @@
         m_fnOnStatusEventHandler;
         m_fnOnReconnectErrorHandler;
         m_bInitialized = !1;
+        m_nMaximumMsgSizeBytes = 1024;
         static sm_ErrorReportingStore;
         static InstallErrorReportingStore(e) {
           this.sm_ErrorReportingStore = e;
         }
         BIsValid() {
           return this.m_bInitialized;
+        }
+        GetMaximumMsgSizeBytes() {
+          return this.m_nMaximumMsgSizeBytes;
+        }
+        TEST_GetMaximumMsgBodySizeBytes() {
+          return (
+            this.m_nMaximumMsgSizeBytes -
+            this.TEST_GetMsgHeaderEstimatedSizeBytes()
+          );
+        }
+        TEST_GetMsgHeaderEstimatedSizeBytes() {
+          return 128;
+        }
+        TEST_GetExcessivelyLargeBodySize() {
+          return 67108864;
         }
         ReportError(e) {
           C.Warning(e);
@@ -29171,7 +29504,13 @@
         async Init() {
           if (!y.TS.IN_CLIENT) return;
           const e = await SteamClient.WebUITransport.GetTransportInfo();
-          this.CreateConnection(1, "steamUI", e.portSteamUI, e.authKeySteamUI),
+          (this.m_nMaximumMsgSizeBytes = e.nMaximumMsgSizeBytes),
+            this.CreateConnection(
+              1,
+              "steamUI",
+              e.portSteamUI,
+              e.authKeySteamUI,
+            ),
             this.CreateConnection(
               2,
               "clientdll",
@@ -29219,8 +29558,8 @@
                 C.Error(`SendMsg: Invalid client execution site: ${a}`),
                 void s(`Transport SendMsg: invalid client execution site ${a}`)
               );
-            const o = this.m_mapConnectionDetails.get(a);
-            if (null == o)
+            const l = this.m_mapConnectionDetails.get(a);
+            if (null == l)
               return (
                 C.Error(
                   `SendMsg: could not find connection for execution site: ${a}`,
@@ -29229,28 +29568,36 @@
                   `Transport SendMsg: could not find connection for execution site ${a}`,
                 )
               );
-            const l = o.connection;
-            if (!l.BCanSendMessages()) {
+            const c = l.connection;
+            if (!c.BCanSendMessages()) {
               const t = this.m_mapServiceCallErrorCount.get(e) ?? 1;
               this.m_mapServiceCallErrorCount.set(e, t + 1);
-              const r = `SendMsg: Attempt to send message but socket wasn't ready: ${l.name} - ${e}`;
+              const r = `SendMsg: Attempt to send message but socket wasn't ready: ${c.name} - ${e}`;
               return (
                 1 == t && this.ReportError(r),
                 C.Warning(r + ` error count: ${t}`),
                 void s("Transport SendMsg: socket not ready")
               );
             }
-            const c = this.m_iMsgSeq++;
+            const u = this.m_iMsgSeq++;
             t.SetEMsg(146),
               t.Hdr().set_target_job_name(e),
-              t.Hdr().set_jobid_source("" + c);
-            if (1 != l.SendSerializedMessage(t.Serialize()))
+              t.Hdr().set_jobid_source("" + u);
+            const m = t.Serialize();
+            if (m.byteLength >= this.m_nMaximumMsgSizeBytes) {
+              C.Error(
+                `SendMsg: message exceeds maximum size: ${m.byteLength} >= ${this.m_nMaximumMsgSizeBytes}`,
+              );
+              const e = o.w.Init(r);
+              return e.Hdr().set_eresult(2), void n(e);
+            }
+            if (1 != c.SendSerializedMessage(m))
               return (
                 C.Error("SendMsg: Failed to send message"),
                 void s("Transport SendMsg: failed to send message")
               );
-            this.m_mapPendingMethodRequests.set(c, {
-              m_iSeq: c,
+            this.m_mapPendingMethodRequests.set(u, {
+              m_iSeq: u,
               m_responseClass: r,
               m_fnCallback: n,
               m_fnError: s,
@@ -30804,7 +31151,7 @@
         n = r(56545),
         s = r(31380),
         a = r(92298),
-        o = r(78205),
+        o = r(23809),
         l = r(80613),
         c = r(89068);
       const u = l.Message;
@@ -39839,7 +40186,7 @@
           return this.m_strName;
         }
         get header_image_url() {
-          return i.TS.MEDIA_CDN_URL + `steam/apps/${this.m_unAppID}/header.jpg`;
+          return i.TS.STORE_ICON_BASE_URL + `${this.m_unAppID}/header.jpg`;
         }
         get icon_url_no_default() {
           return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, o);
@@ -39849,8 +40196,7 @@
         }
         get logo_url() {
           return (
-            i.TS.MEDIA_CDN_URL +
-            `steam/apps/${this.m_unAppID}/capsule_231x87.jpg`
+            i.TS.STORE_ICON_BASE_URL + `${this.m_unAppID}/capsule_231x87.jpg`
           );
         }
         get time_updated_from_server() {
@@ -46980,7 +47326,11 @@
           return this.m_strLibraryHeroURL_2x;
         }
         ConstructAssetURL(e, t) {
-          return l.TS.MEDIA_CDN_URL + e.replace("${FILENAME}", t);
+          return (
+            l.TS.BASE_URL_SHARED_CDN +
+            "/store_item_assets/" +
+            e.replace("${FILENAME}", t)
+          );
         }
         GetCommunityIconURL() {
           return this.m_strCommunityIcon;
@@ -47091,7 +47441,11 @@
           );
         }
         ConstructAssetURL(e, t) {
-          return l.TS.MEDIA_CDN_URL + e.replace("${FILENAME}", t);
+          return (
+            l.TS.VIDEO_CDN_URL +
+            "/store_trailers/" +
+            e.replace("${FILENAME}", t)
+          );
         }
       }
       class g {
@@ -47108,12 +47462,12 @@
               e = i[t].ordinal() < n[r].ordinal();
             }
             if (e) {
-              const e = l.TS.MEDIA_CDN_URL + i[t].filename();
+              const e = l.TS.STORE_ICON_BASE_URL + i[t].filename();
               this.m_rgAllScreenshots.push(e),
                 this.m_rgOnlyAllAgesScreenshots.push(e),
                 (t += 1);
             } else {
-              const e = l.TS.MEDIA_CDN_URL + n[r].filename();
+              const e = l.TS.STORE_ICON_BASE_URL + n[r].filename();
               this.m_rgAllScreenshots.push(e), (r += 1);
             }
           }
@@ -49946,27 +50300,24 @@
                 (0, y.we)("#ContextMenu_Paste"),
               ),
             ),
-          S.TS.IN_CLIENT &&
-            S.TS.DEV_MODE &&
-            (t.length > 0 &&
-              ((0, _.Dp)("Browser.OpenDevTools") ||
-                (0, _.Dp)("Browser.InspectElement")) &&
-              t.push(s.createElement(z, { key: "devtools-separator" })),
-            (0, _.Dp)("Browser.OpenDevTools") &&
-              t.push(
-                s.createElement(
-                  I,
-                  {
-                    key: "opendevtools",
-                    onSelected: () => {
-                      o.focus(), r.SteamClient.Browser.OpenDevTools();
-                    },
+          S.TS.IN_CLIENT && S.TS.DEV_MODE)
+        ) {
+          const e = [];
+          (0, _.Fj)(r, "Browser.OpenDevTools") &&
+            e.push(
+              s.createElement(
+                I,
+                {
+                  key: "opendevtools",
+                  onSelected: () => {
+                    o.focus(), r.SteamClient.Browser.OpenDevTools();
                   },
-                  "Open Dev Tools",
-                ),
+                },
+                "Open Dev Tools",
               ),
-            (0, _.Dp)("Browser.InspectElement") &&
-              t.push(
+            ),
+            (0, _.Fj)(r, "Browser.InspectElement") &&
+              e.push(
                 s.createElement(
                   I,
                   {
@@ -49978,9 +50329,12 @@
                   },
                   "Inspect Element",
                 ),
-              )),
-          t.length)
-        )
+              ),
+            e.length > 0 &&
+              (t.push(s.createElement(z, { key: "devtools-separator" })),
+              t.push(...e));
+        }
+        if (t.length)
           (0, a.lX)(s.createElement(R, null, t), e, { bRootContextMenu: !0 });
         else {
           if (e.shiftKey) return;
@@ -61227,10 +61581,7 @@
             : e || console.warn(t, ...r);
         } catch (e) {}
       }
-      function n(e, t, ...r) {
-        i(!1, t, ...r);
-      }
-      r.d(t, { w: () => i, z: () => n });
+      r.d(t, { w: () => i });
     },
     68797: (e, t, r) => {
       "use strict";
@@ -63599,7 +63950,7 @@
         );
       }
       function d(e, t) {
-        return `${i.TS.MEDIA_CDN_URL}steam/apps/${e}/${t}`;
+        return `${i.TS.STORE_ICON_BASE_URL}${e}/${t}`;
       }
       function p(e) {
         return d(e, "page_bg_generated.jpg");
@@ -63962,6 +64313,7 @@
         MEDIA_CDN_COMMUNITY_URL: "",
         MEDIA_CDN_URL: "",
         CLAN_CDN_ASSET_URL: "",
+        VIDEO_CDN_URL: "",
         COMMUNITY_CDN_URL: "",
         COMMUNITY_CDN_ASSET_URL: "",
         BASE_URL_SHARED_CDN: "",
@@ -64321,7 +64673,7 @@
         p = r(92757),
         _ = r(17083),
         g = r(92298),
-        h = r(78205),
+        h = r(23809),
         f = r(77350),
         B = r(72034);
       class b extends n.Component {
@@ -65133,45 +65485,48 @@
             : null;
       }
       var ze = r(72963),
-        Ee = r(58367),
-        Fe = r(31380),
-        Oe = r(30470),
-        De = r(82227),
-        Ae = r(78887),
-        Pe = r.n(Ae);
-      function Le() {
-        const e = (0, se.aL)(Oe.TS.STORE_BASE_URL + "cart"),
-          t = (0, Ee.aU)();
+        Ee = r(79443),
+        Fe = r(12229),
+        Oe = r(24357),
+        De = r(93676),
+        Ae = r(31380),
+        Pe = r(30470),
+        Le = r(82227),
+        We = r(78887),
+        ke = r.n(We);
+      function Ue() {
+        const e = (0, se.aL)(Pe.TS.STORE_BASE_URL + "cart"),
+          t = (0, Fe.aU)();
         return t.data
           ? n.createElement(
               "div",
-              { className: Pe().ShoppingCartCountCtn },
+              { className: ke().ShoppingCartCountCtn },
               n.createElement(
                 "a",
-                { href: e, className: Pe().CartCountButton },
-                n.createElement(le.JBW, { className: Pe().ShoppingCartSVG }),
+                { href: e, className: ke().CartCountButton },
+                n.createElement(le.JBW, { className: ke().ShoppingCartSVG }),
                 " ",
-                (0, l.we)("#Cart_CountWidget", (0, De.Dq)(t.data)),
+                (0, l.we)("#Cart_CountWidget", (0, Le.Dq)(t.data)),
               ),
             )
           : null;
       }
-      function We() {
-        const e = (0, se.aL)(Oe.TS.STORE_BASE_URL + "cart"),
-          { data: t } = (0, Ee.aU)();
+      function Ne() {
+        const e = (0, se.aL)(Pe.TS.STORE_BASE_URL + "cart"),
+          { data: t } = (0, Fe.aU)();
         return t
           ? n.createElement(
               "a",
               { href: e },
               (0, l.PP)(
                 "#Cart_CountWidget",
-                n.createElement("b", null, (0, De.Dq)(t)),
+                n.createElement("b", null, (0, Le.Dq)(t)),
               ),
             )
           : null;
       }
-      function ke() {
-        const { data: e } = (0, Ee.aU)();
+      function xe() {
+        const { data: e } = (0, Fe.aU)();
         return (
           n.useEffect(() => {
             window.SetReactNativeHeaderCartItemCount &&
@@ -65181,10 +65536,7 @@
           null
         );
       }
-      var Ue = r(50438),
-        Ne = r(88736),
-        xe = r(43154),
-        je = r(5789);
+      var je = r(50438);
       const qe = n.lazy(() =>
           Promise.all([
             r.e(8970),
@@ -65200,7 +65552,7 @@
             r.e(5578),
             r.e(1006),
             r.e(1471),
-            r.e(4613),
+            r.e(5717),
             r.e(9239),
             r.e(2961),
             r.e(8567),
@@ -65223,7 +65575,7 @@
             r.e(5578),
             r.e(1006),
             r.e(1471),
-            r.e(4613),
+            r.e(5717),
             r.e(9239),
             r.e(2961),
             r.e(8567),
@@ -65239,9 +65591,9 @@
           null,
           n.createElement(ie.X, {
             config: {
-              "shoppingcart-count-widget": Le,
-              "shoppingcart-count-widget-responsive": We,
-              "shoppingcart-count-updater-reactnative": ke,
+              "shoppingcart-count-widget": Ue,
+              "shoppingcart-count-widget-responsive": Ne,
+              "shoppingcart-count-updater-reactnative": xe,
             },
           }),
           n.createElement(He, null),
@@ -65254,17 +65606,17 @@
           [l, c] = n.useState(!1),
           [u, m] = n.useState(),
           d = (0, h.KV)(),
-          p = (0, Fe.useQueryClient)(),
-          _ = (0, Ne.j4)(),
+          p = (0, Ae.useQueryClient)(),
+          _ = (0, Oe.j4)(),
           g = l || !!t || !!a;
         n.useEffect(() => {
-          !u && g && (0, Ue.U)().then(() => m(!0));
+          !u && g && (0, je.U)().then(() => m(!0));
         }, [u, g]);
         const f = n.useCallback(
           (e, t, i) => {
             const n = "number" == typeof e ? [e] : e;
             c(!0),
-              (0, Ee.iw)(d, p, _, n, t, i).then(
+              (0, Fe.iw)(d, p, _, n, t, i).then(
                 ({
                   success: e,
                   result: t,
@@ -65275,11 +65627,11 @@
                 }) => {
                   e
                     ? i.length > 1
-                      ? (window.location.href = `${Oe.TS.STORE_BASE_URL}cart`)
+                      ? (window.location.href = `${Pe.TS.STORE_BASE_URL}cart`)
                       : (r(i), s(n))
                     : 30 == t && a && a.length > 0
                       ? (window.location.href =
-                          `${Oe.TS.STORE_BASE_URL}account/subscriptions/` +
+                          `${Pe.TS.STORE_BASE_URL}account/subscriptions/` +
                           a +
                           "/" +
                           l)
@@ -65482,7 +65834,8 @@
         ),
         st = n.lazy(() => r.e(2634).then(r.bind(r, 42018))),
         at = n.lazy(() => r.e(7819).then(r.bind(r, 90428))),
-        ot = n.lazy(() =>
+        ot = n.lazy(() => r.e(3303).then(r.bind(r, 63392))),
+        lt = n.lazy(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -65496,10 +65849,10 @@
             r.e(716),
           ]).then(r.bind(r, 49271)),
         ),
-        lt = n.lazy(() =>
+        ct = n.lazy(() =>
           Promise.all([r.e(2797), r.e(582), r.e(8516)]).then(r.bind(r, 33337)),
         ),
-        ct = n.lazy(() =>
+        ut = n.lazy(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -65515,7 +65868,7 @@
             r.e(5578),
             r.e(1006),
             r.e(1471),
-            r.e(4613),
+            r.e(5717),
             r.e(5048),
             r.e(9239),
             r.e(6086),
@@ -65531,40 +65884,6 @@
             r.e(3645),
             r.e(4268),
           ]).then(r.bind(r, 97552)),
-        ),
-        ut = n.lazy(() =>
-          Promise.all([
-            r.e(8970),
-            r.e(6597),
-            r.e(7937),
-            r.e(4253),
-            r.e(2298),
-            r.e(927),
-            r.e(5422),
-            r.e(2797),
-            r.e(4717),
-            r.e(6769),
-            r.e(7403),
-            r.e(582),
-            r.e(140),
-            r.e(5578),
-            r.e(1006),
-            r.e(1471),
-            r.e(4613),
-            r.e(5048),
-            r.e(9239),
-            r.e(6086),
-            r.e(4546),
-            r.e(2961),
-            r.e(4019),
-            r.e(2573),
-            r.e(6854),
-            r.e(4657),
-            r.e(8294),
-            r.e(2828),
-            r.e(7233),
-            r.e(970),
-          ]).then(r.bind(r, 34568)),
         ),
         mt = n.lazy(() =>
           Promise.all([
@@ -65584,7 +65903,41 @@
             r.e(5578),
             r.e(1006),
             r.e(1471),
-            r.e(4613),
+            r.e(5717),
+            r.e(5048),
+            r.e(9239),
+            r.e(6086),
+            r.e(4546),
+            r.e(2961),
+            r.e(4019),
+            r.e(2573),
+            r.e(6854),
+            r.e(4657),
+            r.e(8294),
+            r.e(2828),
+            r.e(7233),
+            r.e(970),
+          ]).then(r.bind(r, 34568)),
+        ),
+        dt = n.lazy(() =>
+          Promise.all([
+            r.e(8970),
+            r.e(6597),
+            r.e(7937),
+            r.e(4253),
+            r.e(2298),
+            r.e(927),
+            r.e(5422),
+            r.e(2797),
+            r.e(4717),
+            r.e(6769),
+            r.e(7403),
+            r.e(582),
+            r.e(140),
+            r.e(5578),
+            r.e(1006),
+            r.e(1471),
+            r.e(5717),
             r.e(5048),
             r.e(9239),
             r.e(6086),
@@ -65599,41 +65952,6 @@
             r.e(7233),
             r.e(970),
           ]).then(r.bind(r, 58426)),
-        ),
-        dt = n.lazy(() =>
-          Promise.all([
-            r.e(8970),
-            r.e(6597),
-            r.e(7937),
-            r.e(4253),
-            r.e(927),
-            r.e(7276),
-            r.e(6525),
-            r.e(2797),
-            r.e(4717),
-            r.e(6769),
-            r.e(7403),
-            r.e(582),
-            r.e(140),
-            r.e(5578),
-            r.e(1006),
-            r.e(1471),
-            r.e(4613),
-            r.e(5048),
-            r.e(9239),
-            r.e(6086),
-            r.e(4546),
-            r.e(2961),
-            r.e(4019),
-            r.e(2573),
-            r.e(6854),
-            r.e(4657),
-            r.e(8294),
-            r.e(2828),
-            r.e(7233),
-            r.e(3645),
-            r.e(6855),
-          ]).then(r.bind(r, 98821)),
         ),
         pt = n.lazy(() =>
           Promise.all([
@@ -65653,7 +65971,42 @@
             r.e(5578),
             r.e(1006),
             r.e(1471),
-            r.e(4613),
+            r.e(5717),
+            r.e(5048),
+            r.e(9239),
+            r.e(6086),
+            r.e(4546),
+            r.e(2961),
+            r.e(4019),
+            r.e(2573),
+            r.e(6854),
+            r.e(4657),
+            r.e(8294),
+            r.e(2828),
+            r.e(7233),
+            r.e(3645),
+            r.e(6855),
+          ]).then(r.bind(r, 98821)),
+        ),
+        _t = n.lazy(() =>
+          Promise.all([
+            r.e(8970),
+            r.e(6597),
+            r.e(7937),
+            r.e(4253),
+            r.e(927),
+            r.e(7276),
+            r.e(6525),
+            r.e(2797),
+            r.e(4717),
+            r.e(6769),
+            r.e(7403),
+            r.e(582),
+            r.e(140),
+            r.e(5578),
+            r.e(1006),
+            r.e(1471),
+            r.e(5717),
             r.e(5048),
             r.e(9239),
             r.e(6086),
@@ -65670,7 +66023,7 @@
             r.e(6855),
           ]).then(r.bind(r, 9678)),
         ),
-        _t = n.lazy(() =>
+        gt = n.lazy(() =>
           Promise.all([
             r.e(8970),
             r.e(2797),
@@ -65678,27 +66031,6 @@
             r.e(6769),
             r.e(6966),
           ]).then(r.bind(r, 8685)),
-        ),
-        gt = n.lazy(() =>
-          Promise.all([
-            r.e(8970),
-            r.e(6597),
-            r.e(927),
-            r.e(2797),
-            r.e(4717),
-            r.e(6769),
-            r.e(7403),
-            r.e(582),
-            r.e(140),
-            r.e(5578),
-            r.e(1006),
-            r.e(1471),
-            r.e(4613),
-            r.e(5048),
-            r.e(9239),
-            r.e(4657),
-            r.e(9672),
-          ]).then(r.bind(r, 47554)),
         ),
         ht = n.lazy(() =>
           Promise.all([
@@ -65714,14 +66046,35 @@
             r.e(5578),
             r.e(1006),
             r.e(1471),
-            r.e(4613),
+            r.e(5717),
+            r.e(5048),
+            r.e(9239),
+            r.e(4657),
+            r.e(9672),
+          ]).then(r.bind(r, 47554)),
+        ),
+        ft = n.lazy(() =>
+          Promise.all([
+            r.e(8970),
+            r.e(6597),
+            r.e(927),
+            r.e(2797),
+            r.e(4717),
+            r.e(6769),
+            r.e(7403),
+            r.e(582),
+            r.e(140),
+            r.e(5578),
+            r.e(1006),
+            r.e(1471),
+            r.e(5717),
             r.e(5048),
             r.e(9239),
             r.e(4657),
             r.e(9672),
           ]).then(r.bind(r, 25054)),
         ),
-        ft = n.lazy(() =>
+        Bt = n.lazy(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -65735,7 +66088,7 @@
             r.e(5871),
           ]).then(r.bind(r, 30269)),
         ),
-        Bt = n.lazy(() =>
+        bt = n.lazy(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -65753,7 +66106,7 @@
             r.e(5578),
             r.e(1006),
             r.e(1471),
-            r.e(4613),
+            r.e(5717),
             r.e(5048),
             r.e(6086),
             r.e(4546),
@@ -65761,7 +66114,7 @@
             r.e(9297),
           ]).then(r.bind(r, 12845)),
         ),
-        bt = n.lazy(() =>
+        yt = n.lazy(() =>
           Promise.all([
             r.e(7403),
             r.e(140),
@@ -65771,13 +66124,13 @@
             r.e(976),
           ]).then(r.bind(r, 98425)),
         ),
-        yt = n.lazy(() =>
+        wt = n.lazy(() =>
           Promise.all([r.e(2797), r.e(582), r.e(8516)]).then(r.bind(r, 40759)),
         ),
-        wt = n.lazy(() =>
+        St = n.lazy(() =>
           Promise.all([r.e(2797), r.e(582), r.e(8516)]).then(r.bind(r, 67996)),
         ),
-        St = n.lazy(() =>
+        Ct = n.lazy(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -65792,7 +66145,7 @@
             r.e(5578),
             r.e(1006),
             r.e(1471),
-            r.e(4613),
+            r.e(5717),
             r.e(9239),
             r.e(2961),
             r.e(8567),
@@ -65800,7 +66153,7 @@
             r.e(2965),
           ]).then(r.bind(r, 28386)),
         ),
-        Ct = n.lazy(() =>
+        Mt = n.lazy(() =>
           Promise.all([
             r.e(8970),
             r.e(2797),
@@ -65809,30 +66162,6 @@
             r.e(7403),
             r.e(5068),
           ]).then(r.bind(r, 49893)),
-        ),
-        Mt = n.lazy(() =>
-          Promise.all([
-            r.e(8970),
-            r.e(6597),
-            r.e(7937),
-            r.e(2298),
-            r.e(2797),
-            r.e(4717),
-            r.e(6769),
-            r.e(7403),
-            r.e(582),
-            r.e(140),
-            r.e(5578),
-            r.e(1006),
-            r.e(1471),
-            r.e(4613),
-            r.e(9239),
-            r.e(2961),
-            r.e(8567),
-            r.e(9841),
-            r.e(3164),
-            r.e(8987),
-          ]).then(r.bind(r, 35649)),
         ),
         vt = n.lazy(() =>
           Promise.all([
@@ -65849,7 +66178,31 @@
             r.e(5578),
             r.e(1006),
             r.e(1471),
-            r.e(4613),
+            r.e(5717),
+            r.e(9239),
+            r.e(2961),
+            r.e(8567),
+            r.e(9841),
+            r.e(3164),
+            r.e(8987),
+          ]).then(r.bind(r, 35649)),
+        ),
+        Rt = n.lazy(() =>
+          Promise.all([
+            r.e(8970),
+            r.e(6597),
+            r.e(7937),
+            r.e(2298),
+            r.e(2797),
+            r.e(4717),
+            r.e(6769),
+            r.e(7403),
+            r.e(582),
+            r.e(140),
+            r.e(5578),
+            r.e(1006),
+            r.e(1471),
+            r.e(5717),
             r.e(9239),
             r.e(2961),
             r.e(8567),
@@ -65858,7 +66211,7 @@
             r.e(5894),
           ]).then(r.bind(r, 13164)),
         ),
-        Rt = n.lazy(() =>
+        It = n.lazy(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -65873,7 +66226,7 @@
             r.e(5578),
             r.e(1006),
             r.e(1471),
-            r.e(4613),
+            r.e(5717),
             r.e(5048),
             r.e(6086),
             r.e(4546),
@@ -65883,7 +66236,7 @@
             r.e(3027),
           ]).then(r.bind(r, 54954)),
         ),
-        It = n.lazy(() =>
+        Tt = n.lazy(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -65899,7 +66252,7 @@
             r.e(5578),
             r.e(1006),
             r.e(1471),
-            r.e(4613),
+            r.e(5717),
             r.e(5048),
             r.e(9239),
             r.e(6086),
@@ -65918,7 +66271,7 @@
             .then(r.bind(r, 69099))
             .then((e) => ({ default: e.Events })),
         ),
-        Tt = n.lazy(() =>
+        zt = n.lazy(() =>
           Promise.all([
             r.e(8970),
             r.e(6597),
@@ -65934,7 +66287,7 @@
             r.e(5578),
             r.e(1006),
             r.e(1471),
-            r.e(4613),
+            r.e(5717),
             r.e(5048),
             r.e(9239),
             r.e(6086),
@@ -65953,11 +66306,11 @@
             .then(r.bind(r, 69099))
             .then((e) => ({ default: e.DemoAndQuickPitch })),
         ),
-        zt = n.lazy(() => r.e(8843).then(r.bind(r, 71009)));
-      function Et(e) {
+        Et = n.lazy(() => r.e(8843).then(r.bind(r, 71009)));
+      function Ft(e) {
         return n.createElement(T.tH, null, n.createElement(p.qh, { ...e }));
       }
-      function Ft() {
+      function Ot() {
         return (
           (0, n.useEffect)(
             () => (
@@ -65969,7 +66322,7 @@
           null
         );
       }
-      function Ot() {
+      function Dt() {
         const [e, t] = n.useState(),
           [r, i] = n.useState(!1);
         return (
@@ -65986,13 +66339,13 @@
             r &&
               (t(r),
               (function (e) {
-                const t = (0, Ne.VF)();
-                if ((0, xe.c2)(t)) {
+                const t = (0, Oe.VF)();
+                if ((0, Ee.c2)(t)) {
                   const r = e.accountcart;
-                  r && (0, je.LN)(ze.L, t, r.cart);
-                } else if ((0, xe.kx)(t)) {
+                  r && (0, De.LN)(ze.L, t, r.cart);
+                } else if ((0, Ee.kx)(t)) {
                   const r = e.shoppingcart;
-                  r && (0, je.LN)(ze.L, t, (0, Ee.qS)(r));
+                  r && (0, De.LN)(ze.L, t, (0, Fe.qS)(r));
                 }
               })(r)),
               i(!0);
@@ -66005,16 +66358,16 @@
                   "div",
                   { className: d().App },
                   n.createElement(
-                    Lt,
+                    Wt,
                     { storeUserConfig: e },
-                    n.createElement(Wt, null),
+                    n.createElement(kt, null),
                     n.createElement(
                       n.Suspense,
-                      { fallback: n.createElement(Ft, null) },
+                      { fallback: n.createElement(Ot, null) },
                       n.createElement(
                         p.dO,
                         null,
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           exact: !0,
                           path: u.B.DiagData(),
                           render: (e) =>
@@ -66025,24 +66378,24 @@
                             }),
                         }),
                         n.createElement(
-                          Et,
+                          Ft,
                           { exact: !0, path: u.B.Login() },
                           n.createElement(ie.X, {
                             config: {
-                              login: (e) => n.createElement(_t, { ...e }),
+                              login: (e) => n.createElement(gt, { ...e }),
                             },
                           }),
                         ),
                         n.createElement(
-                          Et,
+                          Ft,
                           { exact: !0, path: u.B.OAuthLogin() },
                           n.createElement(ie.X, {
                             config: {
-                              login: (e) => n.createElement(_t, { ...e }),
+                              login: (e) => n.createElement(gt, { ...e }),
                             },
                           }),
                         ),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           exact: !0,
                           path: u.B.AppStorePage(),
                           render: (e) => {
@@ -66054,7 +66407,7 @@
                             return n.createElement(ie.X, {
                               config: {
                                 "events-row": () =>
-                                  n.createElement(It, {
+                                  n.createElement(Tt, {
                                     key: `appeventrow${t}`,
                                     appid: Number.parseInt(t),
                                   }),
@@ -66062,6 +66415,8 @@
                                   n.createElement(tt, {
                                     key: `appawardmodal${t}`,
                                   }),
+                                "deck-topplayed-banner": (e) =>
+                                  n.createElement(ot, { ...e }),
                                 "steamawardsvote-embed": () =>
                                   n.createElement(nt, {
                                     key: `steamawardsvote_${t}`,
@@ -66074,12 +66429,12 @@
                                     appid: Number.parseInt(t),
                                   }),
                                 "demo-and-quick-pitch": () =>
-                                  n.createElement(Tt, {
+                                  n.createElement(zt, {
                                     key: `appdemoquickpitch_${t}`,
                                     appID: Number.parseInt(t),
                                   }),
                                 "deck-verified-results": () =>
-                                  n.createElement(lt, {
+                                  n.createElement(ct, {
                                     appID: Number.parseInt(t),
                                     results: (0, o.Tc)(
                                       "deckcompatibility",
@@ -66093,33 +66448,33 @@
                                 "gamehighlight-trailer": (e) =>
                                   n.createElement(ve, { ...e }),
                                 "discovery-queue-app-widget": () =>
-                                  n.createElement(gt, {
+                                  n.createElement(ht, {
                                     key: `discoveryqueue${t}`,
                                     appID: Number.parseInt(t),
                                   }),
                                 "game-notice-controller-required": () =>
-                                  n.createElement(yt, {
+                                  n.createElement(wt, {
                                     appid: Number.parseInt(t),
                                     type: ne.EPurchaseNoticeType
                                       .EPurchaseNoticeType_ControllerRequired,
                                   }),
                                 "game-notice-vr-required": () =>
-                                  n.createElement(yt, {
+                                  n.createElement(wt, {
                                     type: ne.EPurchaseNoticeType
                                       .EPurchaseNoticeType_VRRequired,
                                   }),
                                 "game-notice-vr-supported": () =>
-                                  n.createElement(yt, {
+                                  n.createElement(wt, {
                                     type: ne.EPurchaseNoticeType
                                       .EPurchaseNoticeType_VRSupported,
                                   }),
                                 "store-sidebar-controller-support-info": (e) =>
-                                  n.createElement(wt, { ...e }),
+                                  n.createElement(St, { ...e }),
                               },
                             });
                           },
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           exact: !0,
                           path: u.B.SaleLandingPage(),
                           render: (e) => {
@@ -66131,7 +66486,7 @@
                             return n.createElement(ie.X, {
                               config: {
                                 "sale-display": () =>
-                                  n.createElement(dt, {
+                                  n.createElement(pt, {
                                     key: `sale_${t}`,
                                     promotionName: `sale_${t}`,
                                     language: (0, c.sf)(o.TS.LANGUAGE),
@@ -66146,24 +66501,24 @@
                             });
                           },
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           path: u.B.CuratorAdminPage(),
                           render: (e) =>
                             n.createElement(ie.X, {
                               config: {
                                 "curator-admin-rss": () =>
-                                  n.createElement(ut, null),
+                                  n.createElement(mt, null),
                               },
                             }),
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           exact: !0,
                           path: u.B.CreatorSaleLandingPage(),
                           render: (e) =>
                             n.createElement(ie.X, {
                               config: {
                                 "sale-display": () =>
-                                  n.createElement(dt, {
+                                  n.createElement(pt, {
                                     key:
                                       "salecreator_" +
                                       e.match.params.creatorPageName +
@@ -66176,7 +66531,7 @@
                               },
                             }),
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           path: [
                             u.B.RemotePlay(),
                             u.B.RemotePlayTogether(),
@@ -66186,9 +66541,9 @@
                             u.B.SubscriptionPlanLandingPage(),
                             u.B.GameRecording(),
                           ],
-                          render: (e) => n.createElement(Dt, null),
+                          render: (e) => n.createElement(At, null),
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           exact: !0,
                           path: u.B.CuratorHomePage(),
                           render: (e) =>
@@ -66208,21 +66563,21 @@
                               },
                             }),
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           exact: !0,
                           path: u.B.CuratorListPage(),
                           render: (e) =>
                             n.createElement(ie.X, {
                               config: {
                                 "list-display": () =>
-                                  n.createElement(ot, {
+                                  n.createElement(lt, {
                                     key: "curator_list",
                                     listid: e.match.params.listid,
                                   }),
                               },
                             }),
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           exact: !0,
                           path: u.B.PackageStorePage(),
                           render: (e) =>
@@ -66240,7 +66595,7 @@
                               },
                             }),
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           exact: !0,
                           path: u.B.BundleStorePage(),
                           render: (e) =>
@@ -66259,27 +66614,27 @@
                               },
                             }),
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           path: u.B.NewsHub(),
                           render: (e) =>
                             n.createElement(ie.X, {
                               config: {
                                 "event-calendar": () =>
-                                  n.createElement(ct, null),
+                                  n.createElement(ut, null),
                               },
                             }),
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           path: u.B.EventAdmin(),
                           render: (e) =>
                             n.createElement(ie.X, {
                               config: {
                                 "event-calendar": () =>
-                                  n.createElement(mt, null),
+                                  n.createElement(dt, null),
                               },
                             }),
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           exact: !0,
                           path: u.B.InteractiveRecommender(),
                           render: (e) =>
@@ -66290,11 +66645,11 @@
                             }),
                         }),
                         !1,
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           path: u.B.LabsSandbox(),
                           render: (e) => n.createElement(it, null),
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           path: u.B.SteamCharts(),
                           render: (e) =>
                             n.createElement(ie.X, {
@@ -66304,7 +66659,7 @@
                               },
                             }),
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           path: u.B.Loyalty(),
                           render: () =>
                             n.createElement(ie.X, {
@@ -66313,7 +66668,7 @@
                               },
                             }),
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           path: u.B.ContentHubHome(),
                           render: (e) => {
                             const {
@@ -66324,7 +66679,7 @@
                             return n.createElement(ie.X, {
                               config: {
                                 "sale-display": () =>
-                                  n.createElement(dt, {
+                                  n.createElement(pt, {
                                     key: "contenthub_" + t,
                                     promotionName: "contenthub_" + t,
                                     language: (0, c.sf)(o.TS.LANGUAGE),
@@ -66333,20 +66688,20 @@
                             });
                           },
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           path: u.B.Categories(),
                           render: () =>
                             n.createElement(ie.X, {
                               config: {
-                                categories: () => n.createElement(pt, null),
+                                categories: () => n.createElement(_t, null),
                               },
                             }),
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           path: u.B.AccountPreferences(),
                           render: (e) => n.createElement(st, { ...e }),
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           exact: !0,
                           path: u.B.SummerSale2021Story(),
                           render: (e) =>
@@ -66357,83 +66712,83 @@
                               },
                             }),
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           exact: !0,
                           path: u.B.LabsHome(),
                           render: (e) =>
                             n.createElement(ie.X, {
                               config: {
                                 "discovery-queue-button": () =>
-                                  n.createElement(ht, null),
+                                  n.createElement(ft, null),
                               },
                             }),
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           path: u.B.MarketingMessages(),
-                          render: (e) => n.createElement(ft, { ...e }),
-                        }),
-                        n.createElement(Et, {
-                          path: u.B.YearInReview(),
                           render: (e) => n.createElement(Bt, { ...e }),
                         }),
-                        n.createElement(Et, {
-                          path: u.B.ShoppingCartAccountCartPurchaseRequested(),
-                          render: (e) =>
-                            n.createElement(ie.X, {
-                              config: {
-                                "react-root": () =>
-                                  n.createElement(Mt, {
-                                    familyGroupID: e.match.params.familygroupid,
-                                  }),
-                              },
-                            }),
+                        n.createElement(Ft, {
+                          path: u.B.YearInReview(),
+                          render: (e) => n.createElement(bt, { ...e }),
                         }),
-                        n.createElement(Et, {
-                          path: u.B.ShoppingCartPurchaseRequest(),
+                        n.createElement(Ft, {
+                          path: u.B.ShoppingCartAccountCartPurchaseRequested(),
                           render: (e) =>
                             n.createElement(ie.X, {
                               config: {
                                 "react-root": () =>
                                   n.createElement(vt, {
                                     familyGroupID: e.match.params.familygroupid,
+                                  }),
+                              },
+                            }),
+                        }),
+                        n.createElement(Ft, {
+                          path: u.B.ShoppingCartPurchaseRequest(),
+                          render: (e) =>
+                            n.createElement(ie.X, {
+                              config: {
+                                "react-root": () =>
+                                  n.createElement(Rt, {
+                                    familyGroupID: e.match.params.familygroupid,
                                     requestID: e.match.params.requestid,
                                   }),
                               },
                             }),
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           path: u.B.ShoppingCartGifts(),
                           render: (e) =>
                             n.createElement(ie.X, {
                               config: {
                                 "react-root": () =>
-                                  n.createElement(St, { initialStep: "gifts" }),
+                                  n.createElement(Ct, { initialStep: "gifts" }),
                               },
                             }),
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           path: u.B.ShoppingCart(),
                           render: (e) =>
                             n.createElement(ie.X, {
                               config: {
-                                "react-root": () => n.createElement(St, null),
+                                "react-root": () => n.createElement(Ct, null),
                               },
                             }),
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           path: u.B.SteamAwards(),
                           render: (e) =>
                             n.createElement(ie.X, {
                               config: {
-                                "react-root": () => n.createElement(Rt, null),
+                                "react-root": () => n.createElement(It, null),
                               },
                             }),
                         }),
-                        n.createElement(Et, {
+                        n.createElement(Ft, {
                           path: u.B.JoinMultiplayerSession(),
-                          render: (e) => n.createElement(Ct, null),
+                          render: (e) => n.createElement(Mt, null),
                         }),
-                        n.createElement(Et, null, n.createElement(Te, null)),
+                        n.createElement(Ft, null, n.createElement(Te, null)),
                       ),
                     ),
                   ),
@@ -66442,13 +66797,13 @@
             : null
         );
       }
-      function Dt(e) {
+      function At(e) {
         const t = (0, p.zy)().pathname.split("/").filter(Boolean).pop(),
           r = "sale_" + (t?.split("?")[0] || "unknown");
         return n.createElement(ie.X, {
           config: {
             "sale-display": () =>
-              n.createElement(dt, {
+              n.createElement(pt, {
                 key: r,
                 promotionName: r,
                 language: (0, c.sf)(o.TS.LANGUAGE),
@@ -66456,7 +66811,7 @@
           },
         });
       }
-      function At(e) {
+      function Pt(e) {
         const { storeUserConfig: t, children: r } = e,
           i = n.useCallback(
             () => new B.D(o.TS.WEBAPI_BASE_URL, t?.webapi_token),
@@ -66478,7 +66833,7 @@
           ),
         );
       }
-      function Pt(e) {
+      function Lt(e) {
         const { storeUserConfig: t, children: r } = e,
           i = n.useRef();
         i.current || (i.current = new Xe());
@@ -66497,10 +66852,10 @@
           )
         );
       }
-      function Lt(e) {
+      function Wt(e) {
         const { storeUserConfig: t, children: r } = e;
         return n.createElement(
-          Pt,
+          Lt,
           { storeUserConfig: t },
           n.createElement(
             w.I.Provider,
@@ -66509,7 +66864,7 @@
               o.ss,
               null,
               n.createElement(
-                At,
+                Pt,
                 { storeUserConfig: t },
                 n.createElement(ze.s, null, n.createElement(K, null, r)),
               ),
@@ -66517,7 +66872,7 @@
           ),
         );
       }
-      const Wt = n.memo(function (e) {
+      const kt = n.memo(function (e) {
         return n.createElement(
           n.Fragment,
           null,
@@ -66528,7 +66883,7 @@
                 n.createElement(
                   n.Suspense,
                   { fallback: null },
-                  n.createElement(bt, {
+                  n.createElement(yt, {
                     bResponsiveHeader: !1,
                     notifications: (0, o.Tc)(
                       "steam_notifications",
@@ -66540,7 +66895,7 @@
                 n.createElement(
                   n.Suspense,
                   { fallback: null },
-                  n.createElement(bt, {
+                  n.createElement(yt, {
                     bResponsiveHeader: !0,
                     notifications: (0, o.Tc)(
                       "steam_notifications",
@@ -66558,7 +66913,7 @@
                 n.createElement(
                   n.Suspense,
                   { fallback: null },
-                  n.createElement(zt, null),
+                  n.createElement(Et, null),
                 ),
             },
           }),
@@ -66574,18 +66929,18 @@
           }),
         );
       });
-      var kt = r(81511),
-        Ut = r(56011);
+      var Ut = r(81511),
+        Nt = r(56011);
       r(52244);
       new Map();
       r(64641);
       (0, oe.jK)({ enforceActions: "never" }),
-        Ut.oQ(async function () {
+        Nt.oQ(async function () {
           (0, o.XJ)("application_config").userConfig ||
             (await (0, o.lX)(a(), o.TS.STORE_BASE_URL + "actions/", {
               userConfig: !0,
             })),
-            (0, kt.aj)().Init(
+            (0, Ut.aj)().Init(
               "Store",
               CLSTAMP,
               new B.D(o.TS.WEBAPI_BASE_URL).GetServiceTransport(),
@@ -66612,292 +66967,9 @@
             document.getElementById("application_root")
               ? i
                   .createRoot(document.getElementById("application_root"))
-                  .render(n.createElement(Ot))
+                  .render(n.createElement(Dt))
               : console.error('No "application_root" was found to target');
         });
-    },
-    43154: (e, t, r) => {
-      "use strict";
-      function i(e) {
-        return "account" === e.type;
-      }
-      function n(e) {
-        return "anonymous" === e.type;
-      }
-      function s(e) {
-        return "request" === e.type;
-      }
-      function a(e) {
-        return "replay" === e.type;
-      }
-      r.d(t, { c2: () => i, kx: () => n, sb: () => a, uU: () => s });
-    },
-    58367: (e, t, r) => {
-      "use strict";
-      r.d(t, {
-        Jn: () => C,
-        SI: () => S,
-        UI: () => b,
-        aU: () => y,
-        d0: () => M,
-        iw: () => w,
-        qS: () => v,
-      });
-      var i = r(56545),
-        n = r(3411),
-        s = r(94076),
-        a = r(71878),
-        o = r(71430),
-        l = r(41735),
-        c = r.n(l),
-        u = r(43154),
-        m = r(5789),
-        d = r(88736),
-        p = r(31380),
-        _ = r(78205),
-        g = r(55963),
-        h = r(30894),
-        f = r(72839),
-        B = r(30470);
-      function b(e) {
-        const t = (0, _.KV)(),
-          r = (0, d.j4)();
-        return (0, p.useQuery)((0, m.GO)(r), async () => M(t, r), {
-          staleTime: 18e5,
-          ...e,
-        });
-      }
-      function y(e) {
-        return b({ select: (e) => e.line_items.length, ...e });
-      }
-      function w(e, t, r, s, o, l) {
-        if ((0, u.c2)(r)) {
-          const c = (s || []).map((e) => ({ packageid: e }));
-          return (
-            o && c.push({ bundleid: o }),
-            (async function (e, t, r) {
-              const s = i.w.Init(n.c5);
-              if (!t || 0 === t.length)
-                return (
-                  console.error(
-                    "No valid Package or Bundle provided to add to cart",
-                  ),
-                  [8, null]
-                );
-              t.forEach((e) => {
-                const t = s.Body().add_items();
-                e.packageid
-                  ? t.set_packageid(e.packageid)
-                  : e.bundleid
-                    ? t.set_bundleid(e.bundleid)
-                    : console.error(
-                        "Neither a package nor bundle ID were provided with an item in AddItemsToAccountCart",
-                      ),
-                  e.bIsGift && t.flags().set_is_gift(!0);
-              }),
-                r && s.Body().set_navdata(a.i.fromObject((0, g.RT)(r)));
-              s.Body().set_user_country(B.iA.country_code);
-              const o = await n.t8.AddItemsToCart(e, s);
-              o.BSuccess() ||
-                console.warn(
-                  `Failed to add item to account cart: ${o.GetEResult()}`,
-                );
-              return [o.GetEResult(), o.Body().toObject()];
-            })(e, c, l).then(
-              ([e, i]) => (
-                h.Fm.Get().InvalidateCache(),
-                1 == e
-                  ? ((0, m.LN)(t, r, i.cart),
-                    {
-                      success: !0,
-                      items: i.line_item_ids,
-                      replaced_packageids: i.replaced_packages,
-                    })
-                  : {
-                      success: !1,
-                      result: e,
-                      existing_billing_agreementid:
-                        i.existing_billing_agreementid,
-                      new_billing_agreement_recurring_packageid:
-                        i.new_billing_agreement_recurring_packageid,
-                    }
-              ),
-            )
-          );
-        }
-        return S(e, s, o).then(([e, i]) => {
-          if ((h.Fm.Get().InvalidateCache(), e)) {
-            (0, m.LN)(t, r, v(i));
-            const e = (s || []).map((e) =>
-              i.lineitems.find((t) => t.package_item?.packageid === e),
-            );
-            o && e.push(i.lineitems.find((e) => e.bundle_item?.bundleid === o));
-            return {
-              success: !0,
-              items: e.filter(Boolean).map((e) => e.gidlineitem),
-            };
-          }
-          return { success: !1 };
-        });
-      }
-      async function S(e, t, r, i) {
-        const n = new FormData();
-        t &&
-          (1 === t.length
-            ? n.set("subid", t[0].toString())
-            : t.forEach((e) => n.set("subid[]", e.toString()))),
-          r && n.set("bundleid", r.toString()),
-          n.set("sessionid", B.TS.SESSIONID),
-          n.set("action", "add_to_cart");
-        const s = await c().post(`${B.TS.STORE_BASE_URL}cart/addtocart`, n);
-        return [!!s.data?.success, s.data?.contents];
-      }
-      async function C(e, t, r, s, o) {
-        const l = i.w.Init(n.c5);
-        if (!t && !r)
-          return (
-            console.warn("No valid Package or Bundle provided to add to cart"),
-            [8, null]
-          );
-        const c = l.Body().add_items();
-        t
-          ? c.set_packageid(t)
-          : r
-            ? c.set_bundleid(r)
-            : console.error(
-                "Neither a package nor bundle ID were provided with an item in AddItemsToAccountCart",
-              ),
-          c.flags().set_is_gift(s),
-          o && l.Body().set_navdata(a.i.fromObject((0, g.RT)(o))),
-          l.Body().set_user_country(B.iA.country_code);
-        const u = await n.t8.AddItemsToCart(e, l);
-        return (
-          u.BSuccess() ||
-            console.warn(
-              `Failed to add item to account cart: ${u.GetEResult()}`,
-            ),
-          [u.GetEResult(), u.Body().toObject()]
-        );
-      }
-      async function M(e, t) {
-        if ((0, u.c2)(t)) {
-          const t = i.w.Init(n.aO);
-          t.Body().set_user_country(B.iA.country_code);
-          const r = await n.t8.GetCart(e, t);
-          return r.Body().toObject()?.cart;
-        }
-        if ((0, u.sb)(t)) {
-          const r = i.w.Init(s.vL);
-          (0, f.rV)(r), r.Body().set_gidreplayoftransid(t.gid);
-          return (function (e) {
-            let t = { subtotal: e.estimated_totals.subtotal, line_items: [] };
-            return (
-              (t.line_items = e.cart_items
-                .map((e) => {
-                  let t;
-                  if (e.item_id.packageid) t = 1;
-                  else {
-                    if (!e.item_id.bundleid) return;
-                    t = 2;
-                  }
-                  return {
-                    line_item_id: e.line_item_id,
-                    type: t,
-                    packageid: e.item_id.packageid,
-                    bundleid: e.item_id.bundleid,
-                    is_valid: !0,
-                    price_when_added: e.price_when_added,
-                    gift_info: e.gift_info,
-                    flags: { is_gift: !!e.gift_info?.accountid_giftee },
-                    gidcoupon_applied: e.coupon_applied?.gidcoupon,
-                  };
-                })
-                .filter(Boolean)),
-              t
-            );
-          })((await s._o.ValidateCart(e, r)).Body().toObject());
-        }
-        {
-          const r = i.w.Init(o.p3);
-          r.Body().set_gidshoppingcart(t.gid);
-          return v(
-            (await o.Q2.GetShoppingCartContents(e, r)).Body().toObject()
-              .contents,
-          );
-        }
-      }
-      function v(e) {
-        let t = { line_items: [] };
-        return (
-          e?.lineitems?.length > 0 &&
-            (t.line_items = e.lineitems
-              .map((e) =>
-                e.package_item?.gidbundle
-                  ? null
-                  : (function (e) {
-                      let t = { price_when_added: {}, flags: {} };
-                      (t.line_item_id = e.gidlineitem),
-                        e.bundle_item?.bundleid
-                          ? ((t.bundleid = e.bundle_item.bundleid),
-                            (t.type = 2))
-                          : e.package_item &&
-                            ((t.packageid = e.package_item.packageid),
-                            (t.price_when_added.amount_in_cents =
-                              e.package_item.costwhenadded?.amount ?? ""),
-                            (t.price_when_added.currency_code =
-                              e.package_item.costwhenadded?.currencycode ?? 0),
-                            (t.type = 1));
-                      return t;
-                    })(e),
-              )
-              .filter(Boolean)),
-          t
-        );
-      }
-    },
-    5789: (e, t, r) => {
-      "use strict";
-      r.d(t, { Cd: () => c, GO: () => a, LN: () => u, m4: () => o });
-      var i = r(43154),
-        n = r(30470);
-      function s(e) {
-        return (0, i.c2)(e) ? e.type : e.gid;
-      }
-      function a(e) {
-        return ["shopping_cart", s(e), n.iA.accountid];
-      }
-      function o(e) {
-        return ["validate_checkout", s(e), n.iA.accountid];
-      }
-      function l(e, t) {
-        e.invalidateQueries(o(t));
-      }
-      function c(e, t) {
-        e.invalidateQueries(a(t)), l(e, t);
-      }
-      function u(e, t, r) {
-        e.setQueryData(a(t), r), l(e, t);
-      }
-    },
-    88736: (e, t, r) => {
-      "use strict";
-      r.d(t, { VF: () => a, h3: () => c, j4: () => l });
-      var i = r(90626),
-        n = r(2627),
-        s = r(30470);
-      function a() {
-        if (s.iA.logged_in) return { type: "account" };
-        return { type: "anonymous", gid: (0, n.VY)("shoppingCartGID") };
-      }
-      const o = i.createContext({ cartID: void 0 });
-      function l() {
-        return i.useContext(o).cartID || a();
-      }
-      function c(e) {
-        const { cartID: t, children: r } = e,
-          n = i.useMemo(() => ({ cartID: t }), [t]);
-        return i.createElement(o.Provider, { value: n, children: r });
-      }
     },
     50438: (e, t, r) => {
       "use strict";

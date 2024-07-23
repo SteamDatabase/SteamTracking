@@ -11921,6 +11921,13 @@ button.rbc-input::-moz-focus-inner {
   flex-grow: 1;
   width: 300px;
 }
+.R-dUfNFnRveUE4hFgt52X {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.R-dUfNFnRveUE4hFgt52X .DialogInputLabelGroup {
+  margin-bottom: unset;
+}
 ._1-2t1NI3qbO2JgWmCss7AW {
   flex-grow: 2;
   flex-basis: 0;

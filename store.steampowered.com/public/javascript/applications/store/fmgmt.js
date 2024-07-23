@@ -560,7 +560,7 @@
         u = a(78327),
         d = a(56545),
         p = a(37735),
-        _ = a(78205);
+        _ = a(23809);
       const y = "nicknames";
       function g(e) {
         const t = (0, _.KV)(),
@@ -854,7 +854,7 @@
       var n = a(56545),
         l = a(37735),
         r = a(31380),
-        s = a(78205);
+        s = a(23809);
       function i() {
         const e = (0, s.KV)();
         return (0, r.useQuery)(["communitypreferences"], async () => {
@@ -2852,7 +2852,7 @@
         rt = a(94601),
         st = a(56545),
         it = a(72839),
-        ot = a(78205),
+        ot = a(23809),
         ct = a(29482);
       function mt(e, t) {
         const a = ye()()

@@ -1,7 +1,9 @@
 ${AUDIO_URL}international2020/${}.wav
 ${AUDIO_URL}international2022/${}.wav
+${BASE_URL_SHARED_CDN}/store_item_assets/${}
 ${BASE_URL_SHARED_CDN}app_config/timeline/${}_markers.svg
 ${BASE_URL_SHARED_CDN}social_sharing/
+${BASE_URL_SHARED_CDN}store_item_assets/${asset_url_format}
 ${BASE_URL_SHARED_CDN}store_item_assets/assetportal/preview//${}/${}/${}
 ${BASE_URL_SHARED_CDN}store_item_assets/mm/${}/${}/${path}${}
 ${BASE_URL_SHARED_CDN}store_item_assets/optin/${}/${}/${}
@@ -1138,6 +1140,7 @@ ${PARTNER_BASE_URL}promotion/spotlights/ajaxcreatenewspotlight
 ${PARTNER_BASE_URL}promotion/spotlights/ajaxloadspotlight
 ${PARTNER_BASE_URL}promotion/spotlights/dashboard
 ${PARTNER_BASE_URL}promotion/themesales/dashboard
+${PARTNER_BASE_URL}promotionanalysis/ajaxgetgetpaidpublishersforapp
 ${PARTNER_BASE_URL}pub/ajaxfindpublishers
 ${PARTNER_BASE_URL}pub/ajaxgetpartnerapps/${}
 ${PARTNER_BASE_URL}pub/publisher/${partner_id}
@@ -1270,6 +1273,7 @@ ${STORE_BASE_URL}app/${}
 ${STORE_BASE_URL}app/${}/
 ${STORE_BASE_URL}app/${}/?beta=1
 ${STORE_BASE_URL}app/${}/?curator_clanid=${}
+${STORE_BASE_URL}app/${}?deckapp=${}&utm=topplayed_app_banner
 ${STORE_BASE_URL}broadcast/ajaxcheckbroadcast
 ${STORE_BASE_URL}broadcast/ajaxgetappinfoforcap
 ${STORE_BASE_URL}broadcast/ajaxgetbatchappcapsuleinfo
@@ -1521,15 +1525,17 @@ ${STORE_CDN_URL}public/shared/images/header/logo_steamchina.svg?t=962016
 ${STORE_CHECKOUT_BASE_URL}checkout/
 ${STORE_CHECKOUT_BASE_URL}checkout?purchasetype=self&cart=${}
 ${STORE_CHECKOUT_BASE_URL}parental/ajaxunlock/
-${STORE_ICON_BASE_URL}${appid}/${}
-${STORE_ICON_BASE_URL}${appid}/header.jpg
-${STORE_ICON_BASE_URL}${appid}/portrait.png
+${STORE_ICON_BASE_URL}${m_unAppID}/capsule_231x87.jpg
+${STORE_ICON_BASE_URL}${m_unAppID}/header.jpg
 ${STORE_ICON_BASE_URL}${}
+${STORE_ICON_BASE_URL}${}/${}
+${STORE_ICON_BASE_URL}${}/header.jpg
 ${STORE_ICON_BASE_URL}/${appid}/${}
 ${STORE_URL}app/${DOTA_APP_ID}/Dota_2/
 ${STORE_URL}app/570/Dota_2/
 ${URL}${URL}
 ${URL}${}
+${VIDEO_CDN_URL}/store_trailers/${}
 ${VIDEO_URL}${strContentDir}/immortals/${}${_ ? "_gold" : ""}.jpg
 ${VIDEO_URL}${strContentDir}/immortals/${}${_ ? "_gold" : ""}.mp4
 ${VIDEO_URL}${strContentDir}/immortals/${}${_ ? "_gold" : ""}.png

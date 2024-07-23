@@ -3733,7 +3733,7 @@
         o = a(84140),
         s = a(14947),
         l = a(90626),
-        c = a(78205),
+        c = a(23809),
         d = a(19471),
         u = a(23825),
         m = a(62792),
@@ -31661,7 +31661,7 @@
         s = a(72839),
         l = a(23825),
         c = a(44332),
-        d = a(78205);
+        d = a(23809);
       const u = n.createContext({}),
         m = () => n.useContext(u);
       function _(e) {
@@ -34618,13 +34618,19 @@
                     br: _.qM.readUint32,
                     bw: _.gp.writeUint32,
                   },
-                  gross_units_sold: {
+                  primary_app_id: {
                     n: 3,
+                    br: _.qM.readUint32,
+                    bw: _.gp.writeUint32,
+                  },
+                  is_dlc: { n: 4, br: _.qM.readBool, bw: _.gp.writeBool },
+                  gross_units_sold: {
+                    n: 5,
                     br: _.qM.readInt32,
                     bw: _.gp.writeInt32,
                   },
                   gross_sales_usdx100: {
-                    n: 4,
+                    n: 6,
                     br: _.qM.readInt64String,
                     bw: _.gp.writeInt64String,
                   },
@@ -35970,6 +35976,11 @@
                 fields: {
                   publisherid: {
                     n: 1,
+                    br: _.qM.readUint32,
+                    bw: _.gp.writeUint32,
+                  },
+                  rtime_start: {
+                    n: 2,
                     br: _.qM.readUint32,
                     bw: _.gp.writeUint32,
                   },
@@ -44797,7 +44808,7 @@
       "use strict";
       a.d(t, { A: () => y, j: () => b });
       var n = a(90626),
-        i = a(78205),
+        i = a(23809),
         r = a(71513),
         o = a(75933),
         s = a(6878),
@@ -61631,7 +61642,7 @@
         G = a(28819),
         M = a(41735),
         k = a.n(M),
-        N = a(78205),
+        N = a(23809),
         P = a(3734);
       class R {
         static async LoadFriendsRecommendedApp(e, t) {
@@ -64053,7 +64064,7 @@
     70809: (e, t, a) => {
       "use strict";
       a.d(t, { x: () => i });
-      a(56545), a(15161), a(58632), a(31380), a(78205), a(72839);
+      a(56545), a(15161), a(58632), a(31380), a(72839);
       var n = a(61859);
       function i(e) {
         return (0, n.we)(
@@ -64067,7 +64078,7 @@
       "use strict";
       a.d(t, { G: () => l });
       var n = a(90626),
-        i = a(78205),
+        i = a(23809),
         r = a(39199),
         o = a(30894),
         s = a(30470);

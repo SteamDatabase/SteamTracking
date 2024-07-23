@@ -9467,7 +9467,7 @@
         dt = a(31380),
         ht = a(56545),
         ct = a(37735),
-        ut = a(78205);
+        ut = a(23809);
       const mt = "nicknames";
       const ft = new (pt())(
           (e) =>

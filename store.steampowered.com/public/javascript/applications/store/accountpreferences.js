@@ -1727,7 +1727,8 @@
           n = Z(
             e
               .GetRecentDevices()
-              .find((e) => e.logged_in && e.last_seen?.time > a - 900),
+              .find((e) => e.logged_in && e.last_seen?.time > a - 900) ??
+              e.GetRecentDevices()[0],
           ).country;
         let o = [],
           c = [];
@@ -2151,7 +2152,7 @@
             i.e(5578),
             i.e(1006),
             i.e(1471),
-            i.e(4613),
+            i.e(5717),
             i.e(9239),
             i.e(8567),
             i.e(7072),

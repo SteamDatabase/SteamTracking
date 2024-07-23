@@ -3345,6 +3345,7 @@
         m_previousHighlightEntry = null;
         m_nextHighlightEntry = null;
         m_displayHighlightEntry = null;
+        m_nRelativeTimeForDisplay = void 0;
         m_rgClipOffsets = [];
         constructor(e, t, r, i, n, a, s, l) {
           (0, Ee.Gn)(this),
@@ -3609,6 +3610,12 @@
         SetDisplayHighlightEntry(e, t) {
           this.m_displayHighlightEntry = { entry: e, duration: t };
         }
+        GetRelativeTimeForDisplay() {
+          return this.m_nRelativeTimeForDisplay;
+        }
+        ClearRelativeTimeDisplay() {
+          this.m_nRelativeTimeForDisplay = void 0;
+        }
         GetClipOffsets() {
           return this.m_rgClipOffsets;
         }
@@ -3779,7 +3786,7 @@
               r && e.valMS < r.nGlobalOffsetMS
                 ? (this.UpdateGlobalPlayTime(r.nGlobalOffsetMS),
                   this.ChangePlaybackRecording(t, 0))
-                : isNaN(e.valMS) || this.SetPlaytimeFromGlobalMS(e);
+                : isNaN(e.valMS) || this.SetPlaytimeFromGlobalMS(e, !1, !0);
             } else if (this.m_eGameRecordingMode === dt.Background) {
               const e =
                 this.m_timelineLoader.GetFirstRecordingOfLastTimelineSession();
@@ -3970,20 +3977,25 @@
           (this.m_nGlobalTimelinePlaybackMS = e),
             (this.m_nGlobalTimelinePlaybackSec = Math.floor(e / 1e3));
         }
-        SetPlaytimeFromGlobalMS(e, t) {
-          (this.m_pendingStop = null), this.UpdateGlobalPlayTime(e.valMS);
-          const r =
+        SetPlaytimeFromGlobalMS(e, t, r) {
+          (this.m_pendingStop = null),
+            this.UpdateGlobalPlayTime(e.valMS),
+            r || (this.m_nRelativeTimeForDisplay = e.valMS);
+          const i =
             this.m_timelineLoader.ConvertGlobaOffsetToRecordingAndRelativeOffset(
               e.valMS,
             );
           this.ChangePlaybackRecording(
-            r?.strRecordingID,
-            r?.nRecordingOffsetMS / 1e3,
+            i?.strRecordingID,
+            i?.nRecordingOffsetMS / 1e3,
             t,
           );
         }
         ConvertGlobalOffsetToTimelineRelativeOffset(e) {
           return this.m_timelineLoader.GetTimelineOffsetFromGlobal(e, 0);
+        }
+        MakeRelativeToTimelineEndIfActive(e, t) {
+          return this.m_timelineLoader.MakeRelativeToTimelineEndIfActive(e, t);
         }
         GetTimelineDuration(e) {
           if (!this.m_timelineLoader.BInitialized()) return null;
@@ -4120,6 +4132,7 @@
         (0, g.Cg)([Ee.sH], ht.prototype, "m_previousHighlightEntry", void 0),
         (0, g.Cg)([Ee.sH], ht.prototype, "m_nextHighlightEntry", void 0),
         (0, g.Cg)([Ee.sH], ht.prototype, "m_displayHighlightEntry", void 0),
+        (0, g.Cg)([Ee.sH], ht.prototype, "m_nRelativeTimeForDisplay", void 0),
         (0, g.Cg)([Ee.sH.ref], ht.prototype, "m_rgClipOffsets", void 0),
         (0, g.Cg)([q.oI], ht.prototype, "SetVideoElement", null),
         (0, g.Cg)([q.oI], ht.prototype, "OnInvalidateRecording", null),
@@ -4771,18 +4784,11 @@
           return "end-if-active" == t &&
             i.strTimelineID &&
             this.m_loader.IsActiveTimeline(i.strTimelineID)
-            ? this.MakeRelativeToTimelineEndIfActive(
+            ? this.m_loader.MakeRelativeToTimelineEndIfActive(
                 i.strTimelineID,
                 i.nTimelineOffsetMS.valMS,
               )
             : i.nTimelineOffsetMS.valMS;
-        }
-        MakeRelativeToTimelineEndIfActive(e, t) {
-          if (!this.m_loader.IsActiveTimeline(e)) return t;
-          const r = this.m_loader.GetTimelineMetadata(e);
-          if (!r) return t;
-          let i = parseInt(r.metadata.duration_ms);
-          return Math.min(t - i, 0);
         }
         GetTimeRecorded(e) {
           const t = this.m_loader.GetTimelineMetadata(e);
@@ -6864,7 +6870,7 @@
         const a = r.GetTimelineOffsetMS(n.strTimelineID),
           s = parseInt(n.entry.time),
           l = (0, Qe.sK)(s - a),
-          o = r.MakeRelativeToTimelineEndIfActive(n.strTimelineID, l.valMS);
+          o = e.MakeRelativeToTimelineEndIfActive(n.strTimelineID, l.valMS);
         let m = "";
         if ((0, Ht.zG)(n.entry)) {
           const e = o + parseInt(n.entry.duration);
@@ -8318,7 +8324,7 @@
         });
       }
       var Ji = r(16628),
-        Ki = (r(2596), r(73860), r(72739), r(78205));
+        Ki = (r(2596), r(73860), r(72739), r(23809));
       class Yi {
         m_tours = {};
         m_strActiveTour = "";
@@ -10599,6 +10605,13 @@
         IsActiveTimeline(e) {
           return !!e && this.m_mapRunningTimelines.has(e);
         }
+        MakeRelativeToTimelineEndIfActive(e, t) {
+          if (!this.IsActiveTimeline(e)) return t;
+          const r = this.GetTimelineMetadata(e);
+          if (!r) return t;
+          let i = parseInt(r.metadata.duration_ms);
+          return Math.min(t - i, 0);
+        }
         IsActiveRecording(e) {
           for (let t of this.m_rgTimelineMetadata)
             for (let r of t.metadata.recordings)
@@ -11404,20 +11417,6 @@
       }
       (0, i.Cg)([p.sH], M.prototype, "m_bInitialized", void 0),
         (0, i.Cg)([u.o], M.prototype, "UpdateRunningTimelines", null);
-    },
-    81393: (e, t, r) => {
-      "use strict";
-      function i(e, t, ...r) {
-        console.assert
-          ? 0 == r.length
-            ? console.assert(!!e, t)
-            : console.assert(!!e, t, ...r)
-          : e || console.warn(t, ...r);
-      }
-      function n(e, t, ...r) {
-        i(!1, t, ...r);
-      }
-      r.d(t, { w: () => i, z: () => n });
     },
     53184: (e, t, r) => {
       "use strict";

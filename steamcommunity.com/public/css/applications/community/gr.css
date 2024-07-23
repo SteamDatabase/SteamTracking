@@ -406,6 +406,40 @@
   height: 32px;
   width: 32px;
 }
+.UqMNRsT0TZjlt-9HTNH-- {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
+}
+._3waN_JrfZ-gXKzfJxcuQcf {
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+  justify-content: center;
+  padding: 16px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  animation-name: _1Tmc5_ehH_tlNlyTxyfSr5;
+  animation-duration: 2000ms;
+}
+@keyframes _1Tmc5_ehH_tlNlyTxyfSr5 {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 ._3HMMNaShMT1M773fCgCd {
   min-height: 68px;
 }

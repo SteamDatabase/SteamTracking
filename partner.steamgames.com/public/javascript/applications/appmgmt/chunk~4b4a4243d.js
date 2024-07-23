@@ -116,15 +116,15 @@
     },
     32179: (t, e, a) => {
       "use strict";
-      a.d(e, { MY: () => p, UA: () => u, rN: () => m });
+      a.d(e, { MY: () => c, UA: () => u, rN: () => m });
       var n = a(34629),
         s = a(41735),
         r = a.n(s),
         o = a(90626),
         i = a(68797),
         l = a(78327),
-        c = a(10333);
-      function p() {
+        p = a(10333);
+      function c() {
         return 2 == l.TS.EUNIVERSE ? 12 : 1;
       }
       class d {
@@ -239,7 +239,7 @@
       function m() {
         return { fnFindPartnerByName: d.Get().FindPartnerByName };
       }
-      (0, n.Cg)([c.o], d.prototype, "FindPartnerByName", null);
+      (0, n.Cg)([p.o], d.prototype, "FindPartnerByName", null);
     },
     27429: (t, e, a) => {
       "use strict";
@@ -332,18 +332,18 @@
                         : t
                           ? (i = !0)
                           : e && (i = !1),
-                        (s = c(a, s)),
+                        (s = p(a, s)),
                         (o = !1);
                     }
                   else
-                    s.ConvertMalformedNodeToText(), (s = c(a, s, 2)), (o = !0);
+                    s.ConvertMalformedNodeToText(), (s = p(a, s, 2)), (o = !0);
                   break;
                 case 1:
                   "[" != l || r
                     ? "\\" == l && e
                       ? (r && (s.text += l), (r = !r))
                       : ((s.text += l), (r = !1))
-                    : ((s = c(a, s, 2)), (o = !0));
+                    : ((s = p(a, s, 2)), (o = !0));
               }
             }
             0 != s.type &&
@@ -364,12 +364,12 @@
             if (t && t.node.tag === s.text && r?.get(t.node.tag)) {
               const s = r.get(t.node.tag),
                 l = n.map((t) => t.node.tag),
-                c = { parentTags: l, tagname: t.node.tag, args: t.node.args },
-                p = e(s.Constructor, c, ...a.GetElements());
+                p = { parentTags: l, tagname: t.node.tag, args: t.node.args },
+                c = e(s.Constructor, p, ...a.GetElements());
               (a = t.accumulator),
-                Array.isArray(p)
-                  ? p.forEach((t) => a.AppendNode(t))
-                  : a.AppendNode(p),
+                Array.isArray(c)
+                  ? c.forEach((t) => a.AppendNode(t))
+                  : a.AppendNode(c),
                 (o = !!s.skipFollowingNewline),
                 (i = t.bWrapTextForCopying);
             } else if (t) {
@@ -389,13 +389,13 @@
               } else if (2 == t.type) {
                 const e = r?.get(t.tag);
                 if (e) {
-                  const c = s();
-                  if (void 0 !== c) {
-                    const e = r?.get(c.node.tag);
+                  const p = s();
+                  if (void 0 !== p) {
+                    const e = r?.get(p.node.tag);
                     e &&
                       e.autocloses &&
-                      t.tag === c.node.tag &&
-                      l(n.pop(), c.node);
+                      t.tag === p.node.tag &&
+                      l(n.pop(), p.node);
                   }
                   n.push({ accumulator: a, node: t, bWrapTextForCopying: i }),
                     (a = this.m_fnAccumulatorFactory(t)),
@@ -450,7 +450,7 @@
       function l(t) {
         return t.replace(/(\\|\[)/g, "\\$1");
       }
-      function c(t, e, a = 0) {
+      function p(t, e, a = 0) {
         if (2 == e.type) {
           let t = e.text.indexOf("=");
           const a = e.text.indexOf(" ");
@@ -469,7 +469,7 @@
               for (r++; r < t.length; r++) {
                 const i = t[r];
                 let l = !0,
-                  c = !1;
+                  p = !1;
                 switch (s) {
                   case 0:
                     if ("=" == i) return {};
@@ -479,11 +479,11 @@
                   case 1:
                     ("=" != i && " " != i) ||
                       o ||
-                      (" " == i ? ((s = 0), (c = !0)) : (s = 2), (l = !1));
+                      (" " == i ? ((s = 0), (p = !0)) : (s = 2), (l = !1));
                     break;
                   case 2:
                     " " == i
-                      ? ((s = 0), (l = !1), (c = !0))
+                      ? ((s = 0), (l = !1), (p = !0))
                       : '"' == i
                         ? ((s = 4), (l = !1))
                         : (s = 3);
@@ -492,7 +492,7 @@
                   case 4:
                     ((" " == i && 4 != s && !o) ||
                       ('"' == i && 4 == s && !o)) &&
-                      ((s = 0), (l = !1), (c = !0));
+                      ((s = 0), (l = !1), (p = !0));
                 }
                 if (l)
                   if ("\\" != i || o)
@@ -505,7 +505,7 @@
                       n += i;
                     }
                   else o = !0;
-                c && ((e[a] = n), (a = ""), (n = ""));
+                p && ((e[a] = n), (a = ""), (n = ""));
               }
               0 != s && (e[a] = n);
               return e;
@@ -516,20 +516,6 @@
         const s = new n();
         return (s.type = a), s;
       }
-    },
-    81393: (t, e, a) => {
-      "use strict";
-      function n(t, e, ...a) {
-        console.assert
-          ? 0 == a.length
-            ? console.assert(!!t, e)
-            : console.assert(!!t, e, ...a)
-          : t || console.warn(e, ...a);
-      }
-      function s(t, e, ...a) {
-        n(!1, e, ...a);
-      }
-      a.d(e, { w: () => n, z: () => s });
     },
     64046: (t, e, a) => {
       "use strict";
@@ -565,8 +551,8 @@
         o = a(61859),
         i = a(95034),
         l = a(1990),
-        c = a.n(l),
-        p = a(32754),
+        p = a.n(l),
+        c = a(32754),
         d = a(51272),
         u = a(32381);
       class m extends n.Component {
@@ -604,7 +590,7 @@
               u.Z,
               {
                 className: (0, r.A)(
-                  c().GraphicalAssetsTabs,
+                  p().GraphicalAssetsTabs,
                   this.props.classNameCtn,
                 ),
               },
@@ -613,10 +599,10 @@
                   let a = "";
                   return (
                     "success" === e.statusType
-                      ? (a = c().StatusSuccess)
+                      ? (a = p().StatusSuccess)
                       : "danger" === e.statusType
-                        ? (a = c().StatusDanger)
-                        : "caution" === e.statusType && (a = c().StatusCaution),
+                        ? (a = p().StatusDanger)
+                        : "caution" === e.statusType && (a = p().StatusCaution),
                     n.createElement(
                       d.e7,
                       {
@@ -624,7 +610,7 @@
                         condition: Boolean(e.statusToolTip || e.tooltip),
                         wrap: (t) =>
                           n.createElement(
-                            p.he,
+                            c.he,
                             { toolTipContent: e.statusToolTip || e.tooltip },
                             t,
                           ),
@@ -634,18 +620,18 @@
                         {
                           key: e.key,
                           className: (0, r.A)(
-                            `${c().GraphicalAssetsTab} ${e.key === t.key ? (0, r.A)(c().Active, "ActiveTab") : ""}`,
+                            `${p().GraphicalAssetsTab} ${e.key === t.key ? (0, r.A)(p().Active, "ActiveTab") : ""}`,
                             this.props.classNameTab,
                           ),
                           onActivate: () => this.OnTabClick(e),
                         },
                         Boolean(e.vo_warning) &&
                           n.createElement(
-                            p.he,
+                            c.he,
                             { toolTipContent: e.vo_warning },
                             n.createElement(
                               "div",
-                              { className: c().VOWarning },
+                              { className: p().VOWarning },
                               (0, o.we)("#EventEditor_VOWarning"),
                             ),
                           ),
@@ -653,7 +639,7 @@
                           n.createElement(
                             "div",
                             {
-                              className: (0, r.A)(c().GraphicalAssetStatus, a),
+                              className: (0, r.A)(p().GraphicalAssetStatus, a),
                             },
                             e.status,
                           ),

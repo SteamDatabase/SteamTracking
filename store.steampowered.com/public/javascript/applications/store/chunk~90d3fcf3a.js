@@ -2183,13 +2183,19 @@
                     br: B.qM.readUint32,
                     bw: B.gp.writeUint32,
                   },
-                  gross_units_sold: {
+                  primary_app_id: {
                     n: 3,
+                    br: B.qM.readUint32,
+                    bw: B.gp.writeUint32,
+                  },
+                  is_dlc: { n: 4, br: B.qM.readBool, bw: B.gp.writeBool },
+                  gross_units_sold: {
+                    n: 5,
                     br: B.qM.readInt32,
                     bw: B.gp.writeInt32,
                   },
                   gross_sales_usdx100: {
-                    n: 4,
+                    n: 6,
                     br: B.qM.readInt64String,
                     bw: B.gp.writeInt64String,
                   },
@@ -3575,6 +3581,11 @@
                 fields: {
                   publisherid: {
                     n: 1,
+                    br: B.qM.readUint32,
+                    bw: B.gp.writeUint32,
+                  },
+                  rtime_start: {
+                    n: 2,
                     br: B.qM.readUint32,
                     bw: B.gp.writeUint32,
                   },

@@ -1866,9 +1866,10 @@
               Constructor: function (e) {
                 const t = Boolean(N(e.args, "expanded")),
                   [n, r] = o.useState(t),
-                  a = N(e.args, "collapsed_str"),
-                  s = N(e.args, "expanded_str"),
-                  l = (function (e, t, n) {
+                  a = N(e.args, "title"),
+                  s = N(e.args, "collapsed_str"),
+                  l = N(e.args, "expanded_str"),
+                  c = (function (e, t, n, r) {
                     switch (e) {
                       case "details":
                         return {
@@ -1884,8 +1885,10 @@
                         };
                       case "title":
                         return {
-                          collapsed: t || "#Bbcode_Expand_ShowMore_Collapsed",
-                          expanded: n || "#Bbcode_Expand_ShowMore_Expanded",
+                          collapsed:
+                            t || n || "#Bbcode_Expand_ShowMore_Collapsed",
+                          expanded:
+                            t || r || "#Bbcode_Expand_ShowMore_Expanded",
                           style: i().ExpandSection_WithTitle,
                         };
                       default:
@@ -1895,13 +1898,13 @@
                           style: i().ExpandSection_ShowMore,
                         };
                     }
-                  })(N(e.args, "type"), a, s);
+                  })(N(e.args, "type"), a, s, l);
                 return o.createElement(
                   "div",
                   {
                     className: (0, S.A)({
                       [i().ExpandSectionBlock]: !0,
-                      [l.style]: !0,
+                      [c.style]: !0,
                       [i().ExpandSectionExpanded]: n,
                       [i().ExpandSectionCollapsed]: !n,
                       BBCodeExpanded: n,
@@ -1914,7 +1917,7 @@
                       className: i().ExpandSectionHeader,
                       onClick: () => r(!n),
                     },
-                    (0, v.we)(n ? l.expanded : l.collapsed),
+                    (0, v.we)(n ? c.expanded : c.collapsed),
                     o.createElement(
                       "div",
                       { className: i().EmbedArrow },

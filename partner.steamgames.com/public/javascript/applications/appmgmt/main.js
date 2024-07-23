@@ -1224,7 +1224,7 @@
           );
       var v = n(17083),
         S = n(92757),
-        w = n(78205),
+        w = n(23809),
         b = n(77350),
         E = n(96059),
         I = n(14932),
@@ -3218,6 +3218,20 @@
         x9: () => o,
         yY: () => i,
       });
+    },
+    81393: (e, t, n) => {
+      "use strict";
+      function r(e, t, ...n) {
+        console.assert
+          ? 0 == n.length
+            ? console.assert(!!e, t)
+            : console.assert(!!e, t, ...n)
+          : e || console.warn(t, ...n);
+      }
+      function i(e, t, ...n) {
+        r(!1, t, ...n);
+      }
+      n.d(t, { w: () => r, z: () => i });
     },
     56545: (e, t, n) => {
       "use strict";
@@ -6787,6 +6801,57 @@
         return r;
       }
     },
+    23809: (e, t, n) => {
+      "use strict";
+      n.d(t, {
+        KV: () => c,
+        TR: () => d,
+        VQ: () => l,
+        rW: () => u,
+        rX: () => m,
+      });
+      var r = n(90626),
+        i = n(81393);
+      const o = r.createContext(void 0),
+        s = o.Provider,
+        a = () => {
+          const e = r.useContext(o);
+          if (!e)
+            throw new Error(
+              "called useActiveServiceTransportContext outside of ServiceTransportProvider",
+            );
+          return e;
+        };
+      function l(e) {
+        const { useStorage: t, children: n } = e;
+        let o, a;
+        if ("useActiveCMInterface" in e) a = o = e.useActiveCMInterface;
+        else {
+          if (!("useActiveSteamInterface" in e))
+            return (
+              (0, i.z)(
+                e,
+                "neither useActiveCMInterface nor useActiveSteamInterface were provided",
+              ),
+              n
+            );
+          a = e.useActiveSteamInterface;
+        }
+        const l = r.useMemo(
+          () => ({
+            useActiveSteamInterface: a,
+            useActiveCMInterface: o,
+            useStorage: t,
+          }),
+          [a, o, t],
+        );
+        return r.createElement(s, { value: l }, n);
+      }
+      const c = () => a().useActiveSteamInterface().GetServiceTransport(),
+        u = () => a().useActiveSteamInterface().GetAnonymousServiceTransport(),
+        m = () => a().useStorage(),
+        d = () => a().useActiveSteamInterface();
+    },
     29233: (e, t, n) => {
       "use strict";
       var r;
@@ -7040,53 +7105,6 @@
               );
             return e.useActiveAccount();
           });
-    },
-    78205: (e, t, n) => {
-      "use strict";
-      n.d(t, {
-        KV: () => c,
-        TR: () => d,
-        VQ: () => l,
-        rW: () => u,
-        rX: () => m,
-      });
-      var r = n(90626),
-        i = n(44332);
-      const o = r.createContext(void 0),
-        s = o.Provider,
-        a = () => {
-          const e = r.useContext(o);
-          if (!e)
-            throw new Error(
-              "called useActiveServiceTransportContext outside of ServiceTransportProvider",
-            );
-          return e;
-        };
-      function l(e) {
-        const { useStorage: t, children: n } = e;
-        let o, a;
-        "useActiveCMInterface" in e
-          ? (a = o = e.useActiveCMInterface)
-          : "useActiveSteamInterface" in e
-            ? (a = e.useActiveSteamInterface)
-            : (0, i.z)(
-                e,
-                "neither useActiveCMInterface nor useActiveSteamInterface were provided",
-              );
-        const l = r.useMemo(
-          () => ({
-            useActiveSteamInterface: a,
-            useActiveCMInterface: o,
-            useStorage: t,
-          }),
-          [a, o, t],
-        );
-        return r.createElement(s, { value: l }, n);
-      }
-      const c = () => a().useActiveSteamInterface().GetServiceTransport(),
-        u = () => a().useActiveSteamInterface().GetAnonymousServiceTransport(),
-        m = () => a().useStorage(),
-        d = () => a().useActiveSteamInterface();
     },
     77350: (e, t, n) => {
       "use strict";
@@ -7734,12 +7752,28 @@
         m_fnOnStatusEventHandler;
         m_fnOnReconnectErrorHandler;
         m_bInitialized = !1;
+        m_nMaximumMsgSizeBytes = 1024;
         static sm_ErrorReportingStore;
         static InstallErrorReportingStore(e) {
           this.sm_ErrorReportingStore = e;
         }
         BIsValid() {
           return this.m_bInitialized;
+        }
+        GetMaximumMsgSizeBytes() {
+          return this.m_nMaximumMsgSizeBytes;
+        }
+        TEST_GetMaximumMsgBodySizeBytes() {
+          return (
+            this.m_nMaximumMsgSizeBytes -
+            this.TEST_GetMsgHeaderEstimatedSizeBytes()
+          );
+        }
+        TEST_GetMsgHeaderEstimatedSizeBytes() {
+          return 128;
+        }
+        TEST_GetExcessivelyLargeBodySize() {
+          return 67108864;
         }
         ReportError(e) {
           E.Warning(e);
@@ -7753,7 +7787,13 @@
         async Init() {
           if (!S.TS.IN_CLIENT) return;
           const e = await SteamClient.WebUITransport.GetTransportInfo();
-          this.CreateConnection(1, "steamUI", e.portSteamUI, e.authKeySteamUI),
+          (this.m_nMaximumMsgSizeBytes = e.nMaximumMsgSizeBytes),
+            this.CreateConnection(
+              1,
+              "steamUI",
+              e.portSteamUI,
+              e.authKeySteamUI,
+            ),
             this.CreateConnection(
               2,
               "clientdll",
@@ -7801,8 +7841,8 @@
                 E.Error(`SendMsg: Invalid client execution site: ${s}`),
                 void o(`Transport SendMsg: invalid client execution site ${s}`)
               );
-            const a = this.m_mapConnectionDetails.get(s);
-            if (null == a)
+            const l = this.m_mapConnectionDetails.get(s);
+            if (null == l)
               return (
                 E.Error(
                   `SendMsg: could not find connection for execution site: ${s}`,
@@ -7811,28 +7851,36 @@
                   `Transport SendMsg: could not find connection for execution site ${s}`,
                 )
               );
-            const l = a.connection;
-            if (!l.BCanSendMessages()) {
+            const c = l.connection;
+            if (!c.BCanSendMessages()) {
               const t = this.m_mapServiceCallErrorCount.get(e) ?? 1;
               this.m_mapServiceCallErrorCount.set(e, t + 1);
-              const n = `SendMsg: Attempt to send message but socket wasn't ready: ${l.name} - ${e}`;
+              const n = `SendMsg: Attempt to send message but socket wasn't ready: ${c.name} - ${e}`;
               return (
                 1 == t && this.ReportError(n),
                 E.Warning(n + ` error count: ${t}`),
                 void o("Transport SendMsg: socket not ready")
               );
             }
-            const c = this.m_iMsgSeq++;
+            const u = this.m_iMsgSeq++;
             t.SetEMsg(146),
               t.Hdr().set_target_job_name(e),
-              t.Hdr().set_jobid_source("" + c);
-            if (1 != l.SendSerializedMessage(t.Serialize()))
+              t.Hdr().set_jobid_source("" + u);
+            const m = t.Serialize();
+            if (m.byteLength >= this.m_nMaximumMsgSizeBytes) {
+              E.Error(
+                `SendMsg: message exceeds maximum size: ${m.byteLength} >= ${this.m_nMaximumMsgSizeBytes}`,
+              );
+              const e = a.w.Init(n);
+              return e.Hdr().set_eresult(2), void i(e);
+            }
+            if (1 != c.SendSerializedMessage(m))
               return (
                 E.Error("SendMsg: Failed to send message"),
                 void o("Transport SendMsg: failed to send message")
               );
-            this.m_mapPendingMethodRequests.set(c, {
-              m_iSeq: c,
+            this.m_mapPendingMethodRequests.set(u, {
+              m_iSeq: u,
               m_responseClass: n,
               m_fnCallback: i,
               m_fnError: o,
@@ -16305,27 +16353,24 @@
                 (0, S.we)("#ContextMenu_Paste"),
               ),
             ),
-          b.TS.IN_CLIENT &&
-            b.TS.DEV_MODE &&
-            (t.length > 0 &&
-              ((0, h.Dp)("Browser.OpenDevTools") ||
-                (0, h.Dp)("Browser.InspectElement")) &&
-              t.push(o.createElement(T, { key: "devtools-separator" })),
-            (0, h.Dp)("Browser.OpenDevTools") &&
-              t.push(
-                o.createElement(
-                  y,
-                  {
-                    key: "opendevtools",
-                    onSelected: () => {
-                      a.focus(), n.SteamClient.Browser.OpenDevTools();
-                    },
+          b.TS.IN_CLIENT && b.TS.DEV_MODE)
+        ) {
+          const e = [];
+          (0, h.Fj)(n, "Browser.OpenDevTools") &&
+            e.push(
+              o.createElement(
+                y,
+                {
+                  key: "opendevtools",
+                  onSelected: () => {
+                    a.focus(), n.SteamClient.Browser.OpenDevTools();
                   },
-                  "Open Dev Tools",
-                ),
+                },
+                "Open Dev Tools",
               ),
-            (0, h.Dp)("Browser.InspectElement") &&
-              t.push(
+            ),
+            (0, h.Fj)(n, "Browser.InspectElement") &&
+              e.push(
                 o.createElement(
                   y,
                   {
@@ -16337,9 +16382,12 @@
                   },
                   "Inspect Element",
                 ),
-              )),
-          t.length)
-        )
+              ),
+            e.length > 0 &&
+              (t.push(o.createElement(T, { key: "devtools-separator" })),
+              t.push(...e));
+        }
+        if (t.length)
           (0, s.lX)(o.createElement(R, null, t), e, { bRootContextMenu: !0 });
         else {
           if (e.shiftKey) return;
@@ -26826,10 +26874,7 @@
             : e || console.warn(t, ...n);
         } catch (e) {}
       }
-      function i(e, t, ...n) {
-        r(!1, t, ...n);
-      }
-      n.d(t, { w: () => r, z: () => i });
+      n.d(t, { w: () => r });
     },
     10333: (e, t, n) => {
       "use strict";

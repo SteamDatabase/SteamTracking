@@ -4810,7 +4810,7 @@
       var nr = r(5741),
         ar = r(75487),
         or = r(56545),
-        lr = r(78205);
+        lr = r(23809);
       function cr(e) {
         const { demoAppID: t, parentAppId: r } = e,
           [n, a] = o.useState(!1),

@@ -233,7 +233,7 @@
         m = a(78327),
         d = a(56545),
         f = a(37735),
-        E = a(78205);
+        E = a(23809);
       const p = "nicknames";
       function g(e) {
         const t = (0, E.KV)(),
@@ -335,7 +335,7 @@
       var n = a(56545),
         r = a(37735),
         s = a(31380),
-        o = a(78205);
+        o = a(23809);
       function c() {
         const e = (0, o.KV)();
         return (0, s.useQuery)(["communitypreferences"], async () => {
@@ -353,146 +353,146 @@
       "use strict";
       a.r(t),
         a.d(t, { PurchaseRequestSimpleInfoPage: () => D, default: () => w });
-      var n = a(90626),
-        r = a(91721),
-        s = a.n(r),
-        o = a(7068),
-        c = a(14860),
-        i = a(28386),
-        u = a(61859),
-        l = a(27144),
+      var n = a(12229),
+        r = a(93676),
+        s = a(41515),
+        o = a(90626),
+        c = a(31380),
+        i = a(92298),
+        u = a(14860),
+        l = a(75048),
         m = a(17720),
-        d = a(30470),
-        f = a(66372);
-      function E(e) {
+        d = a(27144),
+        f = a(7068),
+        E = a(22797),
+        p = a(61859),
+        g = a(30470),
+        y = a(66372);
+      function I(e) {
         const { familyGroupID: t } = e,
-          a = (0, c.Hs)(t),
-          r = (0, c.BO)(t),
-          s = r.data?.requests()?.length;
-        if (!s) return null;
-        const o = (0, u.Yp)("#PurchaseRequestBanner_PendingRequest", s);
-        return n.createElement(
+          a = (0, u.Hs)(t),
+          n = (0, u.BO)(t),
+          r = n.data?.requests()?.length;
+        if (!r) return null;
+        const s = (0, p.Yp)("#PurchaseRequestBanner_PendingRequest", r);
+        return o.createElement(
           "div",
-          { className: f.PurchaseRequestBanner },
-          (0, u.PP)(
+          { className: y.PurchaseRequestBanner },
+          (0, p.PP)(
             "#PurchaseRequestBanner_YouHavePendingRequestsForFamilyName",
-            n.createElement(
+            o.createElement(
               "a",
               {
                 href:
-                  d.TS.STORE_BASE_URL + "account/familymanagement?tab=requests",
+                  g.TS.STORE_BASE_URL + "account/familymanagement?tab=requests",
               },
-              o,
+              s,
             ),
-            n.createElement("span", null, a.data?.name()),
+            o.createElement("span", null, a.data?.name()),
           ),
         );
       }
-      var p = a(22797),
-        g = a(75048),
-        y = a(92298),
-        I = a(31380),
-        R = a(5789),
-        h = a(41515),
-        _ = a(58367);
+      var R = a(91721),
+        h = a.n(R),
+        _ = a(28386);
       function w(e) {
         const { familyGroupID: t, requestID: a } = e,
-          [r, s] = n.useState(),
-          o = (0, c.Qn)(t, a),
-          u = (0, i.useInitCartLocalization)(),
-          l = (0, y.L)(),
-          m = (0, I.useQueryClient)(),
-          d = o.data;
+          [l, m] = o.useState(),
+          d = (0, u.Qn)(t, a),
+          f = (0, _.useInitCartLocalization)(),
+          E = (0, i.L)(),
+          p = (0, c.useQueryClient)(),
+          g = d.data;
         return (
-          (0, n.useEffect)(() => {
-            if (d) {
+          (0, o.useEffect)(() => {
+            if (g) {
               const e = {
                   type: "request",
-                  gid: d.gidshoppingcart,
-                  requestID: d.request_id,
+                  gid: g.gidshoppingcart,
+                  requestID: g.request_id,
                 },
-                t = (0, h.Vh)();
+                t = (0, s.Vh)();
               t?.requestcartgid === e.gid &&
                 t.requestcart &&
-                (0, R.LN)(m, e, (0, _.qS)(t.requestcart)),
-                s(e);
+                (0, r.LN)(p, e, (0, n.qS)(t.requestcart)),
+                m(e);
             }
-          }, [d, m]),
-          o.isError
-            ? n.createElement(P, { familyGroupID: t })
-            : o.isLoading || !u || (d && !r)
-              ? n.createElement(q, null)
-              : d
-                ? d.is_completed
-                  ? n.createElement(v, { familyGroupID: t })
-                  : d.requester_steamid === l
-                    ? n.createElement(k, { familyGroupID: t })
-                    : n.createElement(S, { request: d, cartID: r })
-                : n.createElement(N, { familyGroupID: t })
+          }, [g, p]),
+          d.isError
+            ? o.createElement(P, { familyGroupID: t })
+            : d.isLoading || !f || (g && !l)
+              ? o.createElement(q, null)
+              : g
+                ? g.is_completed
+                  ? o.createElement(v, { familyGroupID: t })
+                  : g.requester_steamid === E
+                    ? o.createElement(k, { familyGroupID: t })
+                    : o.createElement(S, { request: g, cartID: l })
+                : o.createElement(N, { familyGroupID: t })
         );
       }
       function P(e) {
         const { familyGroupID: t } = e;
-        return n.createElement(D, {
+        return o.createElement(D, {
           familyGroupID: t,
           headerLocToken: "#PurchaseRequest_RequestErrorHeader",
         });
       }
       function q() {
-        return n.createElement(
+        return o.createElement(
           "div",
-          { className: s().PurchaseRequestInfoPage },
-          n.createElement(p.t, { size: "medium", msDelayAppear: 300 }),
+          { className: h().PurchaseRequestInfoPage },
+          o.createElement(E.t, { size: "medium", msDelayAppear: 300 }),
         );
       }
       function N(e) {
         const { familyGroupID: t } = e;
-        return n.createElement(D, {
+        return o.createElement(D, {
           familyGroupID: t,
           headerLocToken: "#PurchaseRequest_RequestNotFoundHeader",
         });
       }
       function v(e) {
         const { familyGroupID: t } = e;
-        return n.createElement(D, {
+        return o.createElement(D, {
           familyGroupID: t,
           headerLocToken: "#PurchaseRequest_RequestCompletedHeader",
         });
       }
       function k(e) {
         const { familyGroupID: t } = e;
-        return n.createElement(D, {
+        return o.createElement(D, {
           familyGroupID: t,
           headerLocToken: "#PurchaseRequest_RequestPendingHeader",
           infoLocToken: "#PurchaseRequest_RequestPendingInfo",
         });
       }
       function D(e) {
-        const { familyGroupID: t, headerLocToken: a, infoLocToken: r } = e,
-          [i, l] = n.useState(null);
-        return n.createElement(
+        const { familyGroupID: t, headerLocToken: a, infoLocToken: n } = e,
+          [r, s] = o.useState(null);
+        return o.createElement(
           "div",
-          { className: s().PurchaseRequestInfoPage },
-          n.createElement(
-            c.IN.Provider,
-            { value: { errorMessage: i, setErrorMessage: l } },
-            n.createElement("div", { className: s().Header }, (0, u.we)(a)),
-            n.createElement(g.pC, null),
-            n.createElement(E, { familyGroupID: t }),
-            !!r &&
-              n.createElement("div", { className: s().Info }, (0, u.we)(r)),
-            n.createElement(
+          { className: h().PurchaseRequestInfoPage },
+          o.createElement(
+            u.IN.Provider,
+            { value: { errorMessage: r, setErrorMessage: s } },
+            o.createElement("div", { className: h().Header }, (0, p.we)(a)),
+            o.createElement(l.pC, null),
+            o.createElement(I, { familyGroupID: t }),
+            !!n &&
+              o.createElement("div", { className: h().Info }, (0, p.we)(n)),
+            o.createElement(
               "div",
-              { className: s().ButtonContainer },
-              n.createElement(
-                o.jn,
+              { className: h().ButtonContainer },
+              o.createElement(
+                f.jn,
                 {
-                  className: s().PrimaryButton,
+                  className: h().PrimaryButton,
                   onClick: () => {
-                    window.location.assign(d.TS.STORE_BASE_URL);
+                    window.location.assign(g.TS.STORE_BASE_URL);
                   },
                 },
-                (0, u.we)("#PurchaseRequested_ReturnToStore"),
+                (0, p.we)("#PurchaseRequested_ReturnToStore"),
               ),
             ),
           ),
@@ -500,17 +500,17 @@
       }
       function S(e) {
         const { request: t, cartID: a } = e,
-          r = new m.b(t.requester_steamid).GetAccountID(),
-          [s] = (0, l.KT)(r),
-          [o, c] = n.useState({ accountid_giftee: r }),
-          d = n.useRef(() => {}).current,
-          f = (0, u.we)("#Cart_PurchaseRequestTitle", s?.persona_name);
-        return n.createElement(i.BaseCartPage, {
+          n = new m.b(t.requester_steamid).GetAccountID(),
+          [r] = (0, d.KT)(n),
+          [s, c] = o.useState({ accountid_giftee: n }),
+          i = o.useRef(() => {}).current,
+          u = (0, p.we)("#Cart_PurchaseRequestTitle", r?.persona_name);
+        return o.createElement(_.BaseCartPage, {
           cartID: a,
           step: "gifts",
-          onStepChange: d,
-          title: f,
-          cartWideGiftInfo: o,
+          onStepChange: i,
+          title: u,
+          cartWideGiftInfo: s,
           onCartWideGiftInfoChange: c,
         });
       }

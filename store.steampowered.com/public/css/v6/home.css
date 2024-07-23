@@ -3971,6 +3971,7 @@ background: -webkit-linear-gradient( 134deg, #e8f5fc 5%,#cce9f9 95%);
 
     html.responsive .steamdeck_banner_mobile {
         display: block;
+		margin-top: 10px;
         margin-bottom: 10px;
     }
 

@@ -15,7 +15,7 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_8uyqy",
       };
     },
-    959: (e, t, n) => {
+    344: (e, t, n) => {
       "use strict";
       n.d(t, { InitializeGamepadNavigation: () => gt });
       var i,
@@ -82,10 +82,10 @@
         );
       }
       var m = n(629),
-        g = n(216),
-        _ = n(7),
-        p = n(70),
-        v = n(981);
+        g = n(362),
+        _ = n(513),
+        p = n(368),
+        v = n(127);
       class f {
         m_NavigationController;
         m_postMessage;
@@ -221,14 +221,14 @@
       function S(e, t, n) {
         return null == e || isNaN(e) ? e : Math.max(t, Math.min(n, e));
       }
-      function F() {
+      function N() {
         return !!window.document;
       }
-      let N;
+      let F;
       function I() {
-        if (!F()) return N || (N = T()), N;
+        if (!N()) return F || (F = T()), F;
         let e = (function (e) {
-          if (!F() || !window.document.cookie) return null;
+          if (!N() || !window.document.cookie) return null;
           const t = document.cookie.match("(^|; )" + e + "=([^;]*)");
           return t && t[2] ? decodeURIComponent(t[2]) : null;
         })("sessionid");
@@ -248,7 +248,7 @@
         })();
         return (
           (function (e, t, n, i) {
-            if (!F()) return;
+            if (!N()) return;
             i || (i = "/");
             let o = "";
             if (void 0 !== n && n) {
@@ -277,6 +277,7 @@
         MEDIA_CDN_COMMUNITY_URL: "",
         MEDIA_CDN_URL: "",
         CLAN_CDN_ASSET_URL: "",
+        VIDEO_CDN_URL: "",
         COMMUNITY_CDN_URL: "",
         COMMUNITY_CDN_ASSET_URL: "",
         BASE_URL_SHARED_CDN: "",
@@ -493,7 +494,7 @@
             : e || console.warn(t, ...n);
         } catch (e) {}
       }
-      var O = n(385);
+      var O = n(225);
       class B {
         async GetObject(e) {
           try {
@@ -882,7 +883,7 @@
           );
         }
       }
-      var j = n(357);
+      var j = n(759);
       const J = new x("FocusNavigation").Debug,
         Q = new x("GamepadEvents").Debug;
       class q {
@@ -2137,15 +2138,15 @@
           bottom: t + e.offsetHeight,
         };
       }
-      function Fe(e, t) {
+      function Ne(e, t) {
         return "x" == t
           ? [e.left, e.right, e.right - e.left]
           : [e.top, e.bottom, e.bottom - e.top];
       }
-      function Ne(e, t, n, i) {
-        let [o, s, r] = Fe(e, i),
-          [a, c, l] = Fe(t, i),
-          [u, h] = Fe(n, i);
+      function Fe(e, t, n, i) {
+        let [o, s, r] = Ne(e, i),
+          [a, c, l] = Ne(t, i),
+          [u, h] = Ne(n, i);
         return o < a && s > c
           ? 0
           : (o < a && r <= l) || (s > c && r > l)
@@ -2227,7 +2228,7 @@
             ),
             (i && "y" != i) ||
               !R(e, "y") ||
-              ((u.top = Ne(a, n, t, "y")),
+              ((u.top = Fe(a, n, t, "y")),
               (u.top = S(u.top, -l.scrollTop, l.MaxScrollTop() - l.scrollTop)),
               o &&
                 ((u.top = Math.min(c, Math.abs(u.top)) * (u.top < 0 ? -1 : 1)),
@@ -2235,7 +2236,7 @@
               be(`- checked y: ${u.top}`)),
             (i && "x" != i) ||
               !R(e, "x") ||
-              ((u.left = Ne(a, n, t, "x")),
+              ((u.left = Fe(a, n, t, "x")),
               (u.left = S(
                 u.left,
                 -l.scrollLeft,
@@ -3648,7 +3649,7 @@
             var e;
             (function (e) {
               return "jquery" in e ? pt.has(e[0]) : pt.has(e);
-            })((e = this)) || Nt(e);
+            })((e = this)) || Ft(e);
           }),
           (function () {
             for (let e = ft.length - 1; e >= 0; e--)
@@ -3661,7 +3662,7 @@
       function St(e) {
         Rt(s()(e)), wt(s()(e));
       }
-      function Ft(e) {
+      function Nt(e) {
         const t = s()(e.Element);
         return (
           !t.data("gpFocusDisabled") &&
@@ -3671,7 +3672,7 @@
             "hidden" !== t.css("overflow"))
         );
       }
-      function Nt(e) {
+      function Ft(e) {
         const t = s()(e),
           n = It(e);
         if (n instanceof He || n == at.InReactTree)
@@ -3735,8 +3736,8 @@
             onMenuActionDescription: R,
             actionDescriptionMap: w,
             onOKButton: S,
-            onCancelButton: F,
-            onSecondaryButton: N,
+            onCancelButton: N,
+            onSecondaryButton: F,
             onOptionsButton: I,
             onMenuButton: T,
             onMoveUp: D,
@@ -3749,8 +3750,8 @@
             ...G
           } = a,
           x = qe(S),
-          k = qe(F),
-          U = qe(N),
+          k = qe(N),
+          U = qe(F),
           W = qe(I),
           V = qe(T),
           H = qe(B);
@@ -3888,7 +3889,7 @@
             ((r.m_FocusRing = je(t)),
             "static" == t.css("position") && t.css("position", "relative"));
         const z = {
-          fnCanTakeFocus: Ft,
+          fnCanTakeFocus: Nt,
           actionDescriptionMap: d({
             onOKActionDescription: f,
             onCancelActionDescription: C,
@@ -3923,7 +3924,7 @@
                 }
             }
             let n = at.NotNeeded;
-            return t ? (n = Nt(e)) : Ct(e, n), n;
+            return t ? (n = Ft(e)) : Ct(e, n), n;
           })(t);
         else if (n == at.InReactTree) return n;
         return n instanceof Ve ? n : It(t);
@@ -3957,12 +3958,12 @@
         },
       };
     },
-    981: (e, t, n) => {
+    127: (e, t, n) => {
       "use strict";
       n.d(t, { Vp: () => r, n4: () => a });
       var i = n(629),
-        o = n(216),
-        s = n(7);
+        o = n(362),
+        s = n(513);
       class r {
         m_fnCallback = void 0;
         constructor() {
@@ -4025,7 +4026,7 @@
       }
       (0, i.Cg)([o.o], a.prototype, "OnMessage", null);
     },
-    7: (e, t, n) => {
+    513: (e, t, n) => {
       "use strict";
       n.d(t, { T: () => i, h: () => o });
       const i = "GamepadInput";

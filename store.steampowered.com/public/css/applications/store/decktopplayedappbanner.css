@@ -1,0 +1,122 @@
+._28-JzhtXHYEcY9I5iFk3YP {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 100%;
+  min-height: 102px;
+  font-family: "Motiva Sans", sans-serif;
+  display: flex;
+  justify-content: end;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+  transition: border 0.3s ease;
+  border: 2px solid #2b4155;
+}
+._28-JzhtXHYEcY9I5iFk3YP:hover {
+  border: 2px solid #415a72;
+}
+.E-ox_4OryQdke1181LNoB {
+  display: inline-block;
+  margin: 0px 6px 2px 2px;
+  width: 12px;
+  height: 20px;
+  background-image: url(https://cdn.akamai.steamstatic.com/store/steamdeck/decklogo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: text-top;
+}
+.s1wKhoJ4gbSLtf27P3_EZ {
+  font-family: "Motiva Sans", Sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 0.03em;
+  font-weight: normal;
+  padding-top: 2px;
+  margin-bottom: 2px;
+}
+._34ZA0IltnucVU_mKBtcc8E {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  margin-top: 8px;
+}
+._2whUPn_CZ5_BidCN9GODA5 {
+  font-size: 21px;
+  padding: 4px 4px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-weight: 800;
+}
+.OXgVBMVdP9Ecu6IgqZ3_n {
+  font-size: 14px;
+  margin-bottom: 8px;
+  padding: 0px 5px;
+  font-weight: 500;
+}
+.OXgVBMVdP9Ecu6IgqZ3_n span {
+  font-weight: 800;
+}
+@media screen and (max-width: 500px) {
+  ._28-JzhtXHYEcY9I5iFk3YP {
+    flex-direction: column;
+  }
+  ._34ZA0IltnucVU_mKBtcc8E {
+    margin-top: 140px;
+    max-width: 95%;
+    align-self: center;
+  }
+  ._2whUPn_CZ5_BidCN9GODA5 {
+    font-size: 24px;
+  }
+  .OXgVBMVdP9Ecu6IgqZ3_n {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+.yBV0Z8rYkNE2hhalghMvt {
+  background:
+    url("https://cdn.akamai.steamstatic.com/store/steamdeck/topplayedbanners/deck_campfire_banner.png?v=1")
+      center/contain no-repeat,
+    #171128;
+  background-position: top;
+}
+.yBV0Z8rYkNE2hhalghMvt ._2whUPn_CZ5_BidCN9GODA5 {
+  color: #18183e;
+  background-color: #fff0ad;
+}
+.yBV0Z8rYkNE2hhalghMvt .OXgVBMVdP9Ecu6IgqZ3_n {
+  color: #fff0ad;
+}
+@media screen and (max-width: 500px) {
+  .yBV0Z8rYkNE2hhalghMvt {
+    background:
+      url("https://cdn.akamai.steamstatic.com/store/steamdeck/topplayedbanners/deck_campfire_banner_mobile.png?v=1")
+        center/contain no-repeat,
+      #171128;
+    background-position: top;
+  }
+}
+._34SPdiHy-XcKAe7xr1tUCM {
+  background:
+    url("https://cdn.akamai.steamstatic.com/store/steamdeck/topplayedbanners/deck_farmer_banner.png?v=1")
+      center/contain no-repeat,
+    #c5b730;
+  background-position: top;
+}
+._34SPdiHy-XcKAe7xr1tUCM ._2whUPn_CZ5_BidCN9GODA5 {
+  color: #fae9b1;
+  background-color: #453341;
+}
+._34SPdiHy-XcKAe7xr1tUCM .OXgVBMVdP9Ecu6IgqZ3_n {
+  color: #453341;
+}
+@media screen and (max-width: 500px) {
+  ._34SPdiHy-XcKAe7xr1tUCM {
+    background:
+      url("https://cdn.akamai.steamstatic.com/store/steamdeck/topplayedbanners/deck_farmer_banner_mobile.png?v=1")
+        center/contain no-repeat,
+      #c5b730;
+    background-position: top;
+  }
+}

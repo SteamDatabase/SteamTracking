@@ -179,7 +179,7 @@ CBuyOrder.prototype.Poll = function()
 			$elSuccess.show();
 
 			var $elQuantity = $J( '#buy_' + thisOrder.m_llNameId + '_qty' );
-			var nNewQtyToPurchase = $elQuantity.val() - data.quantity;
+			var nNewQtyToPurchase = $elQuantity.val() - data.quantity_remaining;
 			if ( isNaN( nNewQtyToPurchase ) || nNewQtyToPurchase < 0 )
 			{
 				nNewQtyToPurchase = 0;

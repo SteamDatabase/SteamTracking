@@ -2236,7 +2236,7 @@ GHomepage = {
 			var rgItemData = GStoreItemData.GetCapParams ( 'marketing_message', message.appid, message.packageid, null, params );
 
 			var strUrl = GStoreItemData.AddNavEventParamsToURL( message.url, 'marketing_message' )
-
+			
 			params['class'] = cssClass;
 
 			var $MessageCtn = $J ( '<a/>', params ).attr ( 'href', strUrl );

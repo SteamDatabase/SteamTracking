@@ -179,20 +179,6 @@
         FriendListInsetShadowBottom: "_2OoTJwlWvzvAysWOOEQaXS",
       };
     },
-    81393: (e, t, r) => {
-      "use strict";
-      function i(e, t, ...r) {
-        console.assert
-          ? 0 == r.length
-            ? console.assert(!!e, t)
-            : console.assert(!!e, t, ...r)
-          : e || console.warn(t, ...r);
-      }
-      function a(e, t, ...r) {
-        i(!1, t, ...r);
-      }
-      r.d(t, { w: () => i, z: () => a });
-    },
     70834: (e, t, r) => {
       "use strict";
       r.r(t),

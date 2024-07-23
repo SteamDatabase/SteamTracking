@@ -452,7 +452,7 @@
         _ = a(78327),
         m = a(56545),
         h = a(37735),
-        d = a(78205);
+        d = a(23809);
       const p = "nicknames";
       function f(e) {
         const t = (0, d.KV)(),

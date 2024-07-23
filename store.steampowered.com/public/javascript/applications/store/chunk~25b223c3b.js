@@ -922,9 +922,10 @@
             Constructor: function (e) {
               const t = Boolean(w(e.args, "expanded")),
                 [n, o] = s.useState(t),
-                i = w(e.args, "collapsed_str"),
-                a = w(e.args, "expanded_str"),
-                l = (function (e, t, n) {
+                i = w(e.args, "title"),
+                a = w(e.args, "collapsed_str"),
+                l = w(e.args, "expanded_str"),
+                c = (function (e, t, n, o) {
                   switch (e) {
                     case "details":
                       return {
@@ -940,8 +941,9 @@
                       };
                     case "title":
                       return {
-                        collapsed: t || "#Bbcode_Expand_ShowMore_Collapsed",
-                        expanded: n || "#Bbcode_Expand_ShowMore_Expanded",
+                        collapsed:
+                          t || n || "#Bbcode_Expand_ShowMore_Collapsed",
+                        expanded: t || o || "#Bbcode_Expand_ShowMore_Expanded",
                         style: r().ExpandSection_WithTitle,
                       };
                     default:
@@ -951,13 +953,13 @@
                         style: r().ExpandSection_ShowMore,
                       };
                   }
-                })(w(e.args, "type"), i, a);
+                })(w(e.args, "type"), i, a, l);
               return s.createElement(
                 "div",
                 {
                   className: (0, v.A)({
                     [r().ExpandSectionBlock]: !0,
-                    [l.style]: !0,
+                    [c.style]: !0,
                     [r().ExpandSectionExpanded]: n,
                     [r().ExpandSectionCollapsed]: !n,
                     BBCodeExpanded: n,
@@ -967,7 +969,7 @@
                 s.createElement(
                   "div",
                   { className: r().ExpandSectionHeader, onClick: () => o(!n) },
-                  (0, S.we)(n ? l.expanded : l.collapsed),
+                  (0, S.we)(n ? c.expanded : c.collapsed),
                   s.createElement(
                     "div",
                     { className: r().EmbedArrow },
