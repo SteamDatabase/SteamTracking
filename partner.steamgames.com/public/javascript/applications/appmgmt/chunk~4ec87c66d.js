@@ -66431,7 +66431,7 @@
     },
     80886: (e, t, a) => {
       "use strict";
-      a.d(t, { t4: () => Ft, Wr: () => Ut, GS: () => zt });
+      a.d(t, { t4: () => Lt, Wr: () => zt, GS: () => xt });
       var n = a(75493),
         r = a(75186),
         i = a(90626),
@@ -70484,8 +70484,9 @@
       var Pt = a(12493),
         Nt = a(88704),
         Gt = a(26408),
-        Ot = a(38964);
-      const Ft = (e) => {
+        Ot = a(38964),
+        Ft = a(3088);
+      const Lt = (e) => {
         const {
             saleDescList: t,
             bShowAppBrowse: a,
@@ -70515,7 +70516,7 @@
               i.createElement(
                 pt.K,
                 { placeholderHeight: "160px", rootMargin: "0px 0px 200px 0px" },
-                i.createElement(Ut, {
+                i.createElement(zt, {
                   saleDesc: e,
                   bShowAppBrowse: a,
                   bShowFeaturing: n,
@@ -70535,7 +70536,7 @@
               i.createElement(
                 I.tH,
                 { key: e.clanEventGID },
-                i.createElement(zt, {
+                i.createElement(xt, {
                   saleDesc: e,
                   message: (0, ne.we)("#Sale_InDraftModeHidden"),
                 }),
@@ -70543,7 +70544,7 @@
             ),
         );
       };
-      function Lt(e) {
+      function Ut(e) {
         const { saleDesc: t } = e,
           a = (0, d.Ec)(t.clanAccountID),
           n =
@@ -70587,7 +70588,7 @@
           i.createElement("div", { className: R().Footer }),
         );
       }
-      function Ut(e) {
+      function zt(e) {
         const {
             saleDesc: t,
             bShowAppBrowse: a,
@@ -70617,7 +70618,7 @@
           }, [h, t]),
           p)
         )
-          return i.createElement(Lt, {
+          return i.createElement(Ut, {
             saleDesc: t,
             bShowAppBrowse: e.bShowAppBrowse,
             bShowFeaturing: !h,
@@ -70625,7 +70626,7 @@
           });
         const y = b.O3.GetClanEventModel(t.clanEventGID);
         if (!y)
-          return i.createElement(zt, {
+          return i.createElement(xt, {
             saleDesc: t,
             message: (0, ne.we)("#Sale_InDraftModeHasApp"),
           });
@@ -70637,12 +70638,12 @@
           i.createElement(
             "div",
             { className: (0, Q.A)(R().TileContainer) },
-            i.createElement($t, {
+            i.createElement(Qt, {
               clanAccountID: t.clanAccountID,
               primaryContactName: t.strPrimaryContactName,
               primaryContactEmail: t.strPrimaryContactEmail,
             }),
-            i.createElement(Yt, {
+            i.createElement($t, {
               saleDesc: t,
               strSaleURL: y.GetSaleURL(),
               strEventName: y.GetNameWithFallback(f),
@@ -70656,9 +70657,9 @@
                 i.createElement(
                   "a",
                   { href: v, target: "_blank" },
-                  i.createElement("img", {
+                  i.createElement(Ft.c, {
                     className: (0, Q.A)(R().CapsuleImg),
-                    src: y.GetImageURLWithFallback(
+                    rgSources: y.GetImageForSizeAsArrayWithFallback(
                       "capsule",
                       f,
                       c.wI.capsule_main,
@@ -70669,7 +70670,7 @@
               i.createElement(
                 "div",
                 { className: (0, Q.A)(R().TopStatsCtn) },
-                i.createElement(Ht, {
+                i.createElement(Vt, {
                   saleDesc: t,
                   eventModel: y,
                   bShowAppBrowse: a,
@@ -70680,9 +70681,9 @@
                     i.Fragment,
                     null,
                     Boolean(y.BIsVisibleEvent() && h) &&
-                      i.createElement(xt, { eventModel: y }),
-                    Boolean(y.BIsVisibleEvent() && !h) &&
                       i.createElement(qt, { eventModel: y }),
+                    Boolean(y.BIsVisibleEvent() && !h) &&
+                      i.createElement(Wt, { eventModel: y }),
                     Boolean(!h) &&
                       i.createElement(Dt.JS, {
                         saleDesc: t,
@@ -70691,8 +70692,8 @@
                       }),
                   ),
               ),
-              i.createElement(Wt, { eventModel: y }),
-              i.createElement(jt, {
+              i.createElement(jt, { eventModel: y }),
+              i.createElement(Ht, {
                 saleDesc: t,
                 eventModel: y,
                 showWhyAmISeeingThis: u,
@@ -70704,7 +70705,7 @@
           ),
         );
       }
-      function zt(e) {
+      function xt(e) {
         const { saleDesc: t, message: a } = e,
           n = t.bFeaturedNextSeasonalSale
             ? g.TS.STORE_BASE_URL + "sale/" + t.strVanity
@@ -70716,7 +70717,7 @@
         return i.createElement(
           "div",
           { className: (0, Q.A)(R().TileContainer) },
-          i.createElement(Yt, {
+          i.createElement($t, {
             saleDesc: t,
             strSaleURL: n,
             strEventName: t.strEventName,
@@ -70727,7 +70728,7 @@
             i.createElement(
               "div",
               { className: (0, Q.A)(R().TopStatsCtn) },
-              i.createElement(Ht, {
+              i.createElement(Vt, {
                 saleDesc: t,
                 eventModel: void 0,
                 bShowAppBrowse: !0,
@@ -70738,23 +70739,23 @@
               "div",
               { className: R().NotVisibleDescription },
               i.createElement("div", { className: R().NotVisibleMessage }, a),
-              i.createElement(Qt, { saleDesc: t }),
+              i.createElement(Jt, { saleDesc: t }),
             ),
           ),
-          i.createElement($t, {
+          i.createElement(Qt, {
             clanAccountID: t.clanAccountID,
             primaryContactName: t.strPrimaryContactName,
             primaryContactEmail: t.strPrimaryContactEmail,
           }),
         );
       }
-      function xt(e) {
+      function qt(e) {
         const { eventModel: t } = e;
         return (0, d.Ec)(t.clanSteamID.GetAccountID()).can_edit
-          ? i.createElement(qt, { eventModel: t })
+          ? i.createElement(Wt, { eventModel: t })
           : null;
       }
-      function qt(e) {
+      function Wt(e) {
         const { eventModel: t } = e,
           a = t.GID,
           n = t.clanSteamID.GetAccountID(),
@@ -70791,7 +70792,7 @@
               )
         );
       }
-      function Wt(e) {
+      function jt(e) {
         const { eventModel: t } = e,
           a = t.GetSaleFeaturedAppsCount(),
           n = t.GetSaleFeaturedBundlesCount(),
@@ -70822,7 +70823,7 @@
             ),
         );
       }
-      function jt(e) {
+      function Ht(e) {
         const { saleDesc: t, eventModel: a, showWhyAmISeeingThis: r } = e,
           s = (0, n.V)(),
           l = (0, d.Ec)(a.clanSteamID.GetAccountID()),
@@ -70890,10 +70891,10 @@
               (0, ne.we)("#Sale_Link_Stats"),
             ),
           i.createElement("div", { className: R().Spacer }),
-          Boolean(s && r) && i.createElement(Qt, { saleDesc: t }),
+          Boolean(s && r) && i.createElement(Jt, { saleDesc: t }),
         );
       }
-      function Ht(e) {
+      function Vt(e) {
         const {
             saleDesc: t,
             eventModel: a,
@@ -70905,7 +70906,7 @@
           c = (0, i.useCallback)(
             (e) => {
               (0, tt.pg)(
-                i.createElement(Vt, {
+                i.createElement(Kt, {
                   nPartnerID: l,
                   eventModel: a,
                   setAppIds: o,
@@ -70947,7 +70948,7 @@
                   {
                     onClick: (e) => {
                       (0, tt.pg)(
-                        i.createElement(Kt, { eventModel: a }),
+                        i.createElement(Yt, { eventModel: a }),
                         (0, gt.uX)(e),
                       );
                     },
@@ -70959,7 +70960,7 @@
           ),
         );
       }
-      function Vt(e) {
+      function Kt(e) {
         const { closeModal: t, nPartnerID: a, eventModel: n, setAppIds: r } = e;
         return i.createElement(
           Ye.eV,
@@ -71019,7 +71020,7 @@
           ),
         );
       }
-      function Kt(e) {
+      function Yt(e) {
         const { closeModal: t, eventModel: a } = e,
           n = (0, i.useMemo)(() => Array.from(a.GetSaleFeaturedApps()), [a]),
           l = (0, r.l)(n),
@@ -71104,7 +71105,7 @@
               position: "center",
             });
       }
-      function Yt(e) {
+      function $t(e) {
         const { saleDesc: t, strSaleURL: a, strEventName: n } = e;
         return i.createElement(
           "div",
@@ -71125,7 +71126,7 @@
           ),
         );
       }
-      function $t(e) {
+      function Qt(e) {
         const {
             clanAccountID: t,
             primaryContactName: a,
@@ -71198,7 +71199,7 @@
             ),
         );
       }
-      function Qt(e) {
+      function Jt(e) {
         const { saleDesc: t } = e,
           a = i.useMemo(() => t.rgAppIds?.length, [t.rgAppIds]);
         return i.createElement(
