@@ -47462,12 +47462,18 @@
               e = i[t].ordinal() < n[r].ordinal();
             }
             if (e) {
-              const e = l.TS.STORE_ICON_BASE_URL + i[t].filename();
+              const e =
+                l.TS.BASE_URL_SHARED_CDN +
+                "/store_item_assets/" +
+                i[t].filename();
               this.m_rgAllScreenshots.push(e),
                 this.m_rgOnlyAllAgesScreenshots.push(e),
                 (t += 1);
             } else {
-              const e = l.TS.STORE_ICON_BASE_URL + n[r].filename();
+              const e =
+                l.TS.BASE_URL_SHARED_CDN +
+                "/store_item_assets/" +
+                n[r].filename();
               this.m_rgAllScreenshots.push(e), (r += 1);
             }
           }
