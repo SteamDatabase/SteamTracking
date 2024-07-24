@@ -793,6 +793,8 @@
     "StoreAdmin_Search_Placeholder_package": "Search for package by name or id",
     "StoreAdmin_Search_Placeholder_bundle": "Search for bundle by name or id",
     "StoreAdmin_Search_IncludeDLC": "Include DLC?",
+    "EventDropDown_MM_FeaturedEvent": "Featured Major Update Event",
+    "EventDropDown_MM_FeaturedEvent_ttip": "Owners of the game will be redirect to the event in their library to provide context.  We look for events associated with the base game.",
     "EventDropDown_HiddenPublish": "[Staged @ %1$s] Event Name: %2$s",
     "EventDropDown_Hidden": "[Draft] Event Name: %2$s",
     "EventDropDown_Visible": "[Started: %1$s] Event Name: %2$s",

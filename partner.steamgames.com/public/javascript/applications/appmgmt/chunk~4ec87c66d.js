@@ -48809,21 +48809,23 @@
         );
       }
       function N(e) {
-        const { type: t, setType: a } = e,
-          r = (0, l.useMemo)(() => {
+        const { label: t, type: a, setType: r, bIncludeUnset: i } = e,
+          s = (0, l.useMemo)(() => {
             const e = new Array();
             return (
               n.uu.forEach((t) => {
                 e.push({ label: (0, n.Rw)(t), data: t });
               }),
+              i && e.push({ label: "Any", data: null }),
               e
             );
-          }, []);
+          }, [i]);
         return l.createElement(m.m, {
+          label: t,
           strDropDownClassName: _().DropDownScroll,
-          rgOptions: r,
-          selectedOption: t,
-          onChange: (e) => a(e.data),
+          rgOptions: s,
+          selectedOption: a,
+          onChange: (e) => r(e.data),
         });
       }
       function G(e) {
@@ -50402,8 +50404,9 @@
             a.GetUpdateEventGID(),
           ]),
           [l] = (0, _.G6)(r?.id, (0, p.JK)(r?.item_type), n.rz),
-          o = (0, Ee.vF)(l?.GetParentAppID() || r.id),
-          d = (function (e, t) {
+          o = 12 != l?.GetAppType() ? l?.GetParentAppID() : void 0,
+          d = (0, Ee.vF)(o || r.id),
+          u = (function (e, t) {
             const a = (0, Re.a)(),
               n = (0, m.useMemo)(() => Pe.b.InitFromClanID(e), [e]),
               r = (0, Ne.useQuery)(
@@ -50440,11 +50443,11 @@
                     ),
               [r.data, r.isLoading],
             );
-          })(o?.clanAccountID, t - 2592e3),
-          u = (0, m.useMemo)(
+          })(d?.clanAccountID, t - 2592e3),
+          g = (0, m.useMemo)(
             () =>
-              d
-                ? d.map((e) => {
+              u
+                ? u.map((e) => {
                     const t = e.hidden
                       ? e.published
                         ? "#EventDropDown_HiddenPublish"
@@ -50460,11 +50463,11 @@
                     };
                   })
                 : [],
-            [d],
+            [u],
           ),
-          g = d.find((e) => e.gid == s);
-        return d
-          ? 0 == d.length
+          h = u?.find((e) => e.gid == s);
+        return u
+          ? 0 == u.length
             ? m.createElement(
                 "div",
                 { className: y.ErrorStylesWithIcon },
@@ -50473,9 +50476,9 @@
             : m.createElement(E.m, {
                 label: (0, A.we)("#EventDropDown_MM_FeaturedEvent"),
                 tooltip: (0, A.we)("#EventDropDown_MM_FeaturedEvent_ttip"),
-                selectedOption: g,
-                onChange: (e) => a.SetUpdateEvent(e.data.gid, o.clanAccountID),
-                rgOptions: u,
+                selectedOption: h,
+                onChange: (e) => a.SetUpdateEvent(e.data.gid, d.clanAccountID),
+                rgOptions: g,
               })
           : m.createElement(C.t, {
               string: (0, A.we)("#Loading"),
@@ -54883,12 +54886,12 @@
             (e[(e.k_SortByStartDate = 1)] = "k_SortByStartDate");
         })(ze || (ze = {}));
       const xe = { 2: 0, 3: 1, 1: 2 };
-      function qe(e, t, a, n) {
-        let r = (0, ne.kn)();
-        if (!r || 0 == r.length) return null;
+      function qe(e, t, a, n, r) {
+        let i = (0, ne.kn)();
+        if (!i || 0 == i.length) return null;
         if (
           (n &&
-            (r = r.filter(
+            (i = i.filter(
               (e) =>
                 e.creator_name == u.iA.account_name ||
                 e.additional_restrictions?.includes("" + u.iA.accountid),
@@ -54897,7 +54900,7 @@
         ) {
           const e = t.toLowerCase(),
             a = (0, oe.kf)(t) ? Number.parseInt(t) : void 0;
-          r = r.filter(
+          i = i.filter(
             (t) =>
               t.title.toLowerCase().includes(e) ||
               (a &&
@@ -54905,34 +54908,35 @@
                   ("" + t.associated_id).includes("" + a))),
           );
         }
-        const i = de.HD.GetTimeNowWithOverride();
+        const s = de.HD.GetTimeNowWithOverride();
         return (
-          (r = r.filter(
+          (i = i.filter(
             (t) =>
               (e == Ue.k_DisplayAll && 8 != t.type) ||
               (e == Ue.k_DisplayPublic &&
                 2 == t.visibility &&
-                t.start_date <= i &&
+                t.start_date <= s &&
                 8 != t.type) ||
               (e == Ue.k_DisplayStaged &&
                 2 == t.visibility &&
-                t.start_date > i &&
+                t.start_date > s &&
                 8 != t.type) ||
               (e == Ue.k_DisplayBeta && 1 == t.visibility && 8 != t.type) ||
               (e == Ue.k_DisplayBetaPastStart &&
                 1 == t.visibility &&
                 t.start_date &&
-                t.start_date <= i &&
+                t.start_date <= s &&
                 8 != t.type) ||
               (e == Ue.k_DisplayGift && 8 == t.type) ||
               (e == Ue.k_DisplayAprrovedForPublishing &&
                 3 == t.visibility &&
                 8 != t.type),
           )),
+          r && (i = i.filter((e) => e.type == r)),
           a == ze.k_SortByPriority
-            ? r.sort((e, t) => t.priority - e.priority)
+            ? i.sort((e, t) => t.priority - e.priority)
             : a == ze.k_SortByStartDate &&
-              r.sort((e, t) => {
+              i.sort((e, t) => {
                 if (e.visibility != t.visibility)
                   return xe[e.visibility] - xe[t.visibility];
                 const a = !e.start_date,
@@ -54945,7 +54949,7 @@
                       : -1
                     : e.start_date - t.start_date;
               }),
-          r
+          i
         );
       }
       function We(e) {
@@ -54956,8 +54960,10 @@
             fnSetSort: r,
             strSearch: i,
             fnSetSearch: l,
+            fnSetType: o,
+            type: c,
           } = e,
-          o = [
+          m = [
             { label: "Show All", data: Ue.k_DisplayAll },
             { label: "Show Visible", data: Ue.k_DisplayPublic },
             {
@@ -54972,7 +54978,7 @@
               data: Ue.k_DisplayAprrovedForPublishing,
             },
           ],
-          c = [
+          d = [
             { label: "Sort By Start Date", data: ze.k_SortByStartDate },
             { label: "Sort By Priority", data: ze.k_SortByPriority },
           ];
@@ -54984,7 +54990,7 @@
             { className: Me().VisibilityFilterCtn },
             s.createElement(w.m, {
               label: "Visibility Filter",
-              rgOptions: o,
+              rgOptions: m,
               onChange: (e) => a(e.data),
               contextMenuPositionOptions: { bMatchWidth: !0, bFitToWindow: !0 },
               selectedOption: t,
@@ -54996,13 +55002,24 @@
               { className: Me().VisibilityFilterCtn },
               s.createElement(w.m, {
                 label: "Sort",
-                rgOptions: c,
+                rgOptions: d,
                 onChange: (e) => r(e.data),
                 contextMenuPositionOptions: {
                   bMatchWidth: !0,
                   bFitToWindow: !0,
                 },
                 selectedOption: n,
+              }),
+            ),
+          Boolean(o) &&
+            s.createElement(
+              "div",
+              { className: Me().VisibilityFilterCtn },
+              s.createElement(ce.Bl, {
+                label: "Type Filter",
+                type: c,
+                setType: o,
+                bIncludeUnset: !0,
               }),
             ),
           s.createElement(
@@ -55025,8 +55042,9 @@
       function je(e) {
         const [t, a] = (0, s.useState)(Ue.k_DisplayAll),
           [n, r] = (0, s.useState)(ze.k_SortByStartDate),
-          [i, l] = (0, s.useState)(""),
-          o = qe(t, i, n);
+          [i, l] = (0, s.useState)(null),
+          [o, c] = (0, s.useState)(""),
+          m = qe(t, o, n, !1, i);
         return s.createElement(
           "div",
           null,
@@ -55035,11 +55053,13 @@
             fnSetDisplay: a,
             sort: n,
             fnSetSort: r,
-            strSearch: i,
-            fnSetSearch: l,
+            strSearch: o,
+            fnSetSearch: c,
+            fnSetType: l,
+            type: i,
           }),
           s.createElement("div", null, "Present and Future Marketing Messages"),
-          s.createElement(Ve, { rows: o }),
+          s.createElement(Ve, { rows: m }),
         );
       }
       function He(e) {
@@ -55178,7 +55198,8 @@
         const [t, a] = (0, s.useState)(Ue.k_DisplayAll),
           [n, r] = (0, s.useState)(ze.k_SortByStartDate),
           [i, l] = (0, s.useState)(""),
-          o = qe(t, i, n, !0);
+          [o, c] = (0, s.useState)(null),
+          m = qe(t, i, n, !0);
         return s.createElement(
           "div",
           null,
@@ -55189,6 +55210,8 @@
             fnSetSort: r,
             strSearch: i,
             fnSetSearch: l,
+            type: o,
+            fnSetType: c,
           }),
           s.createElement(
             "div",
@@ -55196,7 +55219,7 @@
             "These are marketing messagse that either you created or have explicitly added yourself to the watch list",
           ),
           s.createElement("br", null),
-          s.createElement(Ve, { rows: o }),
+          s.createElement(Ve, { rows: m }),
         );
       }
       var $e = a(7951),
