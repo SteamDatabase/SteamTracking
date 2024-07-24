@@ -1028,6 +1028,72 @@
         return r ? null : n;
       }
     },
+    3088: (e, t, a) => {
+      "use strict";
+      a.d(t, { c: () => s });
+      var r = a(34629),
+        n = a(90626),
+        i = a(56093);
+      class s extends n.Component {
+        m_refImage = n.createRef();
+        constructor(e) {
+          super(e), (this.state = { nImage: 0 });
+        }
+        componentDidUpdate(e) {
+          JSON.stringify(this.props.rgSources) != JSON.stringify(e.rgSources) &&
+            this.setState({ nImage: 0 });
+        }
+        get src() {
+          let e = "";
+          return (
+            this.props.rgSources &&
+              this.props.rgSources.length > this.state.nImage &&
+              (e = this.props.rgSources[this.state.nImage]),
+            e ||
+              (console.warn(
+                "MultiSourceImage created with no image src",
+                this.props,
+                this.state.nImage,
+              ),
+              (e =
+                "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
+            e
+          );
+        }
+        get imgRef() {
+          return this.m_refImage;
+        }
+        OnImageError(e) {
+          this.props.onIncrementalError &&
+            this.props.onIncrementalError(
+              e,
+              this.props.rgSources[this.state.nImage],
+              this.state.nImage,
+            );
+          let t = this.state.nImage + 1;
+          t >= this.props.rgSources.length &&
+            this.props.onError &&
+            this.props.onError(e),
+            t < this.props.rgSources.length && this.setState({ nImage: t });
+        }
+        render() {
+          const {
+              rgSources: e,
+              onIncrementalError: t,
+              onError: a,
+              ...r
+            } = this.props,
+            i = this.src;
+          return n.createElement("img", {
+            ref: this.m_refImage,
+            ...r,
+            src: i,
+            onError: this.OnImageError,
+          });
+        }
+      }
+      (0, r.Cg)([i.oI], s.prototype, "OnImageError", null);
+    },
     38135: (e, t, a) => {
       "use strict";
       a.d(t, { V: () => p });
@@ -3204,20 +3270,20 @@
           return "CSaleFeature_GetUserSharingPermissions_Response";
         }
       }
-      class j extends p {
+      class O extends p {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            j.prototype.steamid || _.Sg(j.M()),
+            O.prototype.steamid || _.Sg(O.M()),
             p.initialize(this, e, 0, -1, [3], null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            j.sm_m ||
-              (j.sm_m = {
-                proto: j,
+            O.sm_m ||
+              (O.sm_m = {
+                proto: O,
                 fields: {
                   steamid: {
                     n: 1,
@@ -3234,77 +3300,6 @@
                     bw: _.gp.writeRepeatedUint32,
                   },
                   total_only: { n: 4, br: _.qM.readBool, bw: _.gp.writeBool },
-                },
-              }),
-            j.sm_m
-          );
-        }
-        static MBF() {
-          return j.sm_mbf || (j.sm_mbf = _.w0(j.M())), j.sm_mbf;
-        }
-        toObject(e = !1) {
-          return j.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return _.BT(j.M(), e, t);
-        }
-        static fromObject(e) {
-          return _.Uq(j.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new d.BinaryReader(e),
-            a = new j();
-          return j.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return _.zj(j.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new d.BinaryWriter();
-          return j.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          _.i0(j.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new d.BinaryWriter();
-          return j.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CSaleFeature_GetUserYearAchievements_Request";
-        }
-      }
-      class O extends p {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            O.prototype.game_achievements || _.Sg(O.M()),
-            p.initialize(this, e, 0, -1, [1], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
-                fields: {
-                  game_achievements: { n: 1, c: U, r: !0, q: !0 },
-                  total_achievements: {
-                    n: 2,
-                    br: _.qM.readUint32,
-                    bw: _.gp.writeUint32,
-                  },
-                  total_rare_achievements: {
-                    n: 3,
-                    br: _.qM.readUint32,
-                    bw: _.gp.writeUint32,
-                  },
-                  total_games_with_achievements: {
-                    n: 4,
-                    br: _.qM.readUint32,
-                    bw: _.gp.writeUint32,
-                  },
                 },
               }),
             O.sm_m
@@ -3340,6 +3335,77 @@
         serializeBase64String() {
           var e = new d.BinaryWriter();
           return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CSaleFeature_GetUserYearAchievements_Request";
+        }
+      }
+      class j extends p {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            j.prototype.game_achievements || _.Sg(j.M()),
+            p.initialize(this, e, 0, -1, [1], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            j.sm_m ||
+              (j.sm_m = {
+                proto: j,
+                fields: {
+                  game_achievements: { n: 1, c: U, r: !0, q: !0 },
+                  total_achievements: {
+                    n: 2,
+                    br: _.qM.readUint32,
+                    bw: _.gp.writeUint32,
+                  },
+                  total_rare_achievements: {
+                    n: 3,
+                    br: _.qM.readUint32,
+                    bw: _.gp.writeUint32,
+                  },
+                  total_games_with_achievements: {
+                    n: 4,
+                    br: _.qM.readUint32,
+                    bw: _.gp.writeUint32,
+                  },
+                },
+              }),
+            j.sm_m
+          );
+        }
+        static MBF() {
+          return j.sm_mbf || (j.sm_mbf = _.w0(j.M())), j.sm_mbf;
+        }
+        toObject(e = !1) {
+          return j.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return _.BT(j.M(), e, t);
+        }
+        static fromObject(e) {
+          return _.Uq(j.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new d.BinaryReader(e),
+            a = new j();
+          return j.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return _.zj(j.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new d.BinaryWriter();
+          return j.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          _.i0(j.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new d.BinaryWriter();
+          return j.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CSaleFeature_GetUserYearAchievements_Response";
@@ -4579,8 +4645,8 @@
           (e.GetUserYearAchievements = function (e, t) {
             return e.SendMsg(
               "SaleFeature.GetUserYearAchievements#1",
-              (0, u.I8)(j, t),
-              O,
+              (0, u.I8)(O, t),
+              j,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
           }),
@@ -5522,10 +5588,10 @@
       function We() {
         return (0, r.useContext)(Nn).bIsUser;
       }
-      function je() {
+      function Oe() {
         return (0, r.useContext)(Nn).themeStyle;
       }
-      function Oe(e) {
+      function je(e) {
         const t = m.iA.logged_in,
           a = e?.GetContentDescriptorIDs().length > 0,
           r = We(),
@@ -5681,7 +5747,7 @@
           return Promise.all(r);
         }
         async InternalLoadUserAchievementForYear(e, t, a) {
-          const r = u.w.Init(j),
+          const r = u.w.Init(O),
             n = Se.b.InitFromAccountID(t);
           r.Body().set_appids(a),
             r.Body().set_steamid(n.ConvertTo64BitString()),
@@ -5854,7 +5920,7 @@
         const { appid: t } = e,
           [a] = (0, ut.t7)(t, ht),
           n = We();
-        let i = Oe(a);
+        let i = je(a);
         if (!a) return null;
         i = i || (!n && a.GetContentDescriptorIDs().includes(3));
         const s = a.GetOnlyAllAgesSafeScreenshots();
@@ -5996,7 +6062,7 @@
       function Nt(e) {
         const { userYearInReview: t, nYear: a } = e,
           n = t.GetPlayTimeStats().game_summary,
-          i = je(),
+          i = Oe(),
           s = (0, r.useMemo)(
             () =>
               n
@@ -6147,7 +6213,7 @@
           i = a.appid,
           [l] = (0, ut.t7)(i, Ne),
           m = (0, s.n9)(),
-          o = je();
+          o = Oe();
         if (!l || !l.BIsVisible()) return null;
         const c = (0, Et.wJ)(l?.GetStorePageURL() || "", m),
           u = l.GetAssets().GetLibraryCapsuleURL();
@@ -6200,12 +6266,12 @@
       function xt(e) {
         const { userYearInReview: t, children: a } = e;
         if (0 == t.GetPlayTimeStats().games.length)
-          return r.createElement(Ot, null, a);
+          return r.createElement(jt, null, a);
         const n =
           t.GetPlayTimeStats().games[0].stats.total_playtime_percentagex100;
         return t.GetPlayTimeStats().game_summary.length < Lt || n >= Pt
           ? r.createElement(
-              jt,
+              Ot,
               { appid: t.GetPlayTimeStats().games[0].appid },
               a,
             )
@@ -6213,7 +6279,7 @@
       }
       function Wt(e) {
         const { userYearInReview: t, children: a } = e,
-          n = je(),
+          n = Oe(),
           i = (0, r.useMemo)(
             () =>
               t
@@ -6262,13 +6328,13 @@
                 ),
                 a,
               )
-            : r.createElement(Ot, null, a)
+            : r.createElement(jt, null, a)
         );
       }
-      function jt(e) {
+      function Ot(e) {
         const { appid: t, children: a } = e,
           [n] = (0, ut.t7)(t, Ne),
-          i = je();
+          i = Oe();
         return n
           ? r.createElement(
               r.Fragment,
@@ -6290,9 +6356,9 @@
               ),
               a,
             )
-          : r.createElement(Ot, null, a);
+          : r.createElement(jt, null, a);
       }
-      function Ot(e) {
+      function jt(e) {
         return r.createElement(
           "div",
           { className: Yt().basicBackground },
@@ -6365,7 +6431,7 @@
       const ra = aa;
       var na = a(79613);
       const ia = () => {
-          const e = je();
+          const e = Oe();
           return r.createElement(
             "svg",
             {
@@ -6441,7 +6507,7 @@
           );
         },
         sa = () => {
-          const e = je();
+          const e = Oe();
           return r.createElement(
             "svg",
             {
@@ -6479,7 +6545,7 @@
           );
         },
         la = () => {
-          const e = je();
+          const e = Oe();
           return r.createElement(
             "svg",
             {
@@ -6506,7 +6572,7 @@
         };
       function ma(e) {
         const { userYearInReview: t } = e,
-          a = je();
+          a = Oe();
         return r.createElement(
           Tt,
           { className: (0, ot.A)(xe().TopHonorsSection, a.TopHonorsSection) },
@@ -6536,7 +6602,7 @@
         let { userYearInReview: t } = e;
         t.GetYear();
         const a = qe(),
-          n = je();
+          n = Oe();
         let i = t.GetPlayTimeStats().summary_stats?.total_achievements || 0,
           s = t.GetFilteredGameSummary()?.length || 0,
           l =
@@ -6647,7 +6713,7 @@
           progressIcon: n,
           userPercent: i,
         } = e;
-        const s = je();
+        const s = Oe();
         return (
           (i = pe.OQ(i, 0, 100)),
           r.createElement(
@@ -6715,7 +6781,7 @@
       function da(e) {
         const { userYearInReview: t } = e,
           a = t.GetYear(),
-          n = je(),
+          n = Oe(),
           i = n.new_games_color,
           s = n.used_games_color,
           l = n.old_games_color,
@@ -7238,7 +7304,7 @@
       function Aa(e) {
         const { friend: t, year: a } = e,
           n = new Se.b(t.steamid),
-          i = je();
+          i = Oe();
         return r.createElement(
           "a",
           {
@@ -7267,7 +7333,7 @@
           a = t.GetPlayTimeStats().total_stats,
           n = t.GetPlayTimeStats().game_summary,
           i = qe(),
-          s = je(),
+          s = Oe(),
           l = (0, r.useMemo)(() => {
             const e = new Array();
             return (
@@ -7720,11 +7786,11 @@
       var Da = a(64021),
         xa = a.n(Da),
         Wa = a(99514),
-        ja = a.n(Wa);
-      function Oa(e) {
+        Oa = a.n(Wa);
+      function ja(e) {
         const { userYearInReview: t } = e,
           a = qe(),
-          n = je(),
+          n = Oe(),
           [i, s] = r.useState(!1),
           l = r.useCallback((e) => {
             e && s(!0);
@@ -7747,14 +7813,14 @@
           {
             className: (0, ot.A)(
               pt().StreakCtn,
-              ja().StreakCtn,
-              ja().Section,
+              Oa().StreakCtn,
+              Oa().Section,
               n.Section,
             ),
           },
           r.createElement("div", {
             className: (0, ot.A)(
-              ja().LongestStreakBgImage,
+              Oa().LongestStreakBgImage,
               n.LongestStreakBgImage,
             ),
           }),
@@ -7763,17 +7829,17 @@
             { className: xe().YearInReviewContent },
             r.createElement(
               "div",
-              { className: ja().SectionTitle },
+              { className: Oa().SectionTitle },
               r.createElement(
                 Mt.J,
                 {
-                  className: ja().LongestStreakDailyCount,
+                  className: Oa().LongestStreakDailyCount,
                   onVisibilityChange: l,
                 },
                 a(
                   "#YIR_Longest_Streak_Title",
                   r.createElement(ra, {
-                    className: ja().LongestStreakNumber,
+                    className: Oa().LongestStreakNumber,
                     endValue: d.longest_consecutive_days,
                     duration: 2e3,
                     startAnimation: i,
@@ -7782,11 +7848,11 @@
               ),
               r.createElement(
                 Tt,
-                { className: ja().StreakBarCtn },
-                r.createElement("div", { className: ja().StreakSizeCtn }),
+                { className: Oa().StreakBarCtn },
+                r.createElement("div", { className: Oa().StreakSizeCtn }),
                 r.createElement("div", {
                   className: (0, ot.A)(
-                    ja().StreakSizeFullBar,
+                    Oa().StreakSizeFullBar,
                     n.StreakSizeFullBar,
                   ),
                 }),
@@ -7794,27 +7860,27 @@
                   "div",
                   {
                     className: (0, ot.A)(
-                      ja().StreakTickCtn,
-                      d.longest_consecutive_days < 40 && ja().LargerTicks,
+                      Oa().StreakTickCtn,
+                      d.longest_consecutive_days < 40 && Oa().LargerTicks,
                     ),
                   },
                   r.createElement(qa, {
                     nDays: d.longest_consecutive_days - 1,
                   }),
                 ),
-                r.createElement("div", { className: ja().StreakSizeCtn }),
+                r.createElement("div", { className: Oa().StreakSizeCtn }),
               ),
               r.createElement(
                 Tt,
-                { className: ja().StreakDates },
+                { className: Oa().StreakDates },
                 r.createElement(
                   "div",
-                  { className: ja().StreakStart },
+                  { className: Oa().StreakStart },
                   (0, Le.TW)(d.rtime_start, true),
                 ),
                 r.createElement(
                   "div",
-                  { className: ja().StreakEnd },
+                  { className: Oa().StreakEnd },
                   (0, Le.TW)(
                     d.rtime_start + 24 * d.longest_consecutive_days * 60 * 60,
                     true,
@@ -7828,22 +7894,22 @@
                 onVisibilityChange: u,
                 className: (0, ot.A)(
                   pt().LongestStreakGamesWrapper,
-                  ja().LongestStreakGamesWrapper,
+                  Oa().LongestStreakGamesWrapper,
                 ),
               },
               r.createElement(
                 "div",
                 {
                   className: (0, ot.A)(
-                    ja().CapRowTitle,
-                    o && ja().AnimateTitle,
+                    Oa().CapRowTitle,
+                    o && Oa().AnimateTitle,
                   ),
                 },
                 a("#YIR_Longest_Streak_Games", d.streak_games.length),
               ),
               r.createElement(
                 "div",
-                { className: (0, ot.A)(ja().CapRowCtn) },
+                { className: (0, ot.A)(Oa().CapRowCtn) },
                 r.createElement(
                   "div",
                   {
@@ -7876,7 +7942,7 @@
             a.push(
               r.createElement("div", {
                 key: "DrawNDivForStreakDays" + e,
-                className: ja().Tick,
+                className: Oa().Tick,
               }),
             );
           return r.createElement(r.Fragment, null, a);
@@ -7944,7 +8010,7 @@
       function ir(e) {
         const { userYearInReview: t, steamId: a, nYear: n } = e,
           i = We(),
-          s = je();
+          s = Oe();
         if (!m.iA.logged_in) return null;
         if (!i && m.iA.logged_in)
           return r.createElement(
@@ -8748,7 +8814,7 @@
             nPlaytestPlayed: l,
             nYear: o,
           } = e,
-          c = je(),
+          c = Oe(),
           u = `${m.TS.IMG_URL}yearinreview/bg_2023.svg`;
         return r.createElement(
           "div",
@@ -8877,7 +8943,7 @@
       function Er(e) {
         const { userYearInReview: t } = e,
           a = t.GetPlayTimeStats().summary_stats,
-          n = (t.GetFilteredGameSummary(), t.GetYear(), je()),
+          n = (t.GetFilteredGameSummary(), t.GetYear(), Oe()),
           i = `${m.TS.IMG_URL}yearinreview/achievement_grid_02.webp`;
         return r.createElement(
           "div",
@@ -8961,7 +9027,7 @@
             t.rtime_start + 24 * t.longest_consecutive_days * 60 * 60,
             true,
           ),
-          s = je();
+          s = Oe();
         if ("ch" === m.iA.country_code) return null;
         const l = `${m.TS.IMG_URL}yearinreview/streak_bg.jpg`;
         return r.createElement(
@@ -9046,7 +9112,7 @@
           ),
           s = `${m.TS.IMG_URL}yearinreview/keyboard.png`,
           l = `${m.TS.IMG_URL}yearinreview/controllers.png`,
-          o = je();
+          o = Oe();
         let c, u, d;
         return (
           Math.floor(t.controller_playtime_percentagex100 / 100) < 60 &&
@@ -9123,7 +9189,7 @@
           { appid: n } = t,
           [i] = (0, ut.t7)(n, Ne),
           s = Ue(0, [n]),
-          l = je();
+          l = Oe();
         if (!i) return null;
         const m = i.GetAssets()?.GetLibraryHeroURL(),
           o = Math.trunc(t.stats.total_sessions);
@@ -9201,7 +9267,7 @@
         Ur = a(39743);
       const Fr = r.memo((e) => {
           const { data: t, topMonthlyAppsAndRanks: a } = e,
-            n = je(),
+            n = Oe(),
             i = (0, r.useCallback)(
               (e, a) => (t[a]?.date ? (0, Ct.oL)(t[a].date) : ""),
               [t],
@@ -9253,7 +9319,7 @@
               ),
               r.createElement(kr.W, {
                 interval: 0,
-                tick: r.createElement(jr, null),
+                tick: r.createElement(Or, null),
                 tickFormatter: i,
               }),
             ),
@@ -9262,7 +9328,7 @@
         zr = 7;
       function Yr(e) {
         const { active: t, payload: a, hoveredBarIDRef: n } = e,
-          i = je();
+          i = Oe();
         if (t && a && a.length) {
           const e = a[0].payload.date.getMonth(),
             t = (0, Le.we)(`#YIR_MonthlyCharts_MonthNoun_${e + 1}`),
@@ -9403,7 +9469,7 @@
       }
       const Wr = r.memo((e) => {
         const { data: t, name: a, color: n } = e,
-          i = je(),
+          i = Oe(),
           s = (0, r.useCallback)(
             (e, a) => (t[a]?.date ? (0, Ct.oL)(t[a].date) : ""),
             [t],
@@ -9424,7 +9490,7 @@
               },
               allowEscapeViewBox: { x: !1, y: !0 },
               isAnimationActive: !1,
-              content: r.createElement(Or, { name: a }),
+              content: r.createElement(jr, { name: a }),
             }),
             r.createElement(Tr.d, { vertical: !1, stroke: "#a0aab6" }),
             r.createElement(Nr.h, {
@@ -9439,14 +9505,14 @@
             }),
             r.createElement(kr.W, {
               interval: 0,
-              tick: r.createElement(jr, null),
+              tick: r.createElement(Or, null),
               tickFormatter: s,
               color: "#ffffff",
             }),
           ),
         );
       });
-      function jr(e) {
+      function Or(e) {
         const { x: t, y: a, payload: n } = e,
           i = e.tickFormatter(n.value, n.index);
         return r.createElement(
@@ -9466,9 +9532,9 @@
           ),
         );
       }
-      function Or(e) {
+      function jr(e) {
         const { active: t, payload: a, name: n } = e,
-          i = je();
+          i = Oe();
         if (t && a && a.length && a[0].value) {
           const e = a[0].payload.date.getMonth(),
             t = (0, Le.we)(`#YIR_MonthlyCharts_MonthNoun_${e + 1}`),
@@ -10118,7 +10184,7 @@
           g = n % 2 ? "OddGradient" : "EvenGradient",
           y = (0, m.Qn)(),
           h = We(),
-          w = je(),
+          w = Oe(),
           B = (0, m.hf)(),
           { gameChartData: v, rank: S } = (0, r.useMemo)(
             () => a.GetChartMonthlyDataForApp(t),
@@ -10347,7 +10413,7 @@
       });
       function fn(e) {
         const { oStoreItem: t } = e,
-          a = Oe(t),
+          a = je(t),
           n = t.GetAssets()?.GetLibraryHeroURL();
         return r.createElement("div", {
           className: _t.BackgroundImage,
@@ -10356,7 +10422,7 @@
       }
       function En(e) {
         const { appid: t, userYearInReview: a, oStoreItem: n } = e,
-          i = Oe(n);
+          i = je(n);
         return r.createElement(
           r.Fragment,
           null,
@@ -10408,7 +10474,7 @@
         Cn = a(32490);
       function Rn(e) {
         const { steamId: t, year: a } = e,
-          n = je(),
+          n = Oe(),
           i =
             ((s = t),
             (l = a),
@@ -10550,7 +10616,7 @@
         const { userYearInReview: t, avatarAndPersona: a } = e,
           n = t.GetSteamID(),
           i = t.GetYear(),
-          s = je(),
+          s = Oe(),
           l = t.GetTopGamesShownAppIDs();
         !(function (e, t, a) {
           const [n, i] = (0, r.useState)($e.Get().GetManyAchievement(e, t, a));
@@ -10624,7 +10690,7 @@
             r.createElement(
               it.tH,
               null,
-              r.createElement(Oa, { userYearInReview: t }),
+              r.createElement(ja, { userYearInReview: t }),
             ),
           Boolean(p > 5) &&
             r.createElement(
@@ -10716,7 +10782,7 @@
       }
       function Un(e) {
         const { avatarAndPersona: t } = e,
-          a = je();
+          a = Oe();
         return r.createElement(
           "div",
           { className: xe().AvatarName },
@@ -10832,7 +10898,7 @@
       }
       function Pn(e) {
         let { userYearInReview: t } = e;
-        const a = je();
+        const a = Oe();
         if (!m.iA.is_support && m.iA.accountid != t.GetAccountID()) return null;
         const n = t.GetYear();
         return r.createElement(

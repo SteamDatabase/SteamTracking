@@ -3,6 +3,15 @@
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
   [2634],
   {
+    43047: (e) => {
+      e.exports = {
+        avatarHolder: "nibodjvvrm86uCfnnAn4g",
+        avatarStatus: "_3xUpb5DWXPFNcHHIcv-9pe",
+        avatar: "_3h-QRJGxnVOIExtHD1R0f2",
+        avatarFrame: "X_mJE4BYV5StDPwZhSiAu",
+        avatarFrameImg: "_3fM0F85j3aWVzr4RJM9-eu",
+      };
+    },
     61359: (e) => {
       e.exports = {
         AuthorizedDeviceHeader: "_2OcGChel9mKKDiT5UYgL8I",
@@ -59,867 +68,342 @@
         Selected: "_3yrEIJRje6XiWe9BiIGY7P",
       };
     },
-    11838: function (e, t, i) {
-      var r;
-      !(function (a, n) {
-        "use strict";
-        var o = "function",
-          s = "undefined",
-          c = "object",
-          l = "string",
-          m = "major",
-          d = "model",
-          _ = "name",
-          u = "type",
-          p = "vendor",
-          f = "version",
-          w = "architecture",
-          h = "console",
-          b = "mobile",
-          v = "tablet",
-          g = "smarttv",
-          k = "wearable",
-          y = "embedded",
-          E = "Amazon",
-          P = "Apple",
-          N = "ASUS",
-          T = "BlackBerry",
-          S = "Browser",
-          C = "Chrome",
-          D = "Firefox",
-          A = "Google",
-          x = "Huawei",
-          z = "LG",
-          G = "Microsoft",
-          R = "Motorola",
-          B = "Opera",
-          U = "Samsung",
-          I = "Sharp",
-          O = "Sony",
-          L = "Xiaomi",
-          M = "Zebra",
-          H = "Facebook",
-          q = "Chromium OS",
-          F = "Mac OS",
-          j = function (e) {
-            for (var t = {}, i = 0; i < e.length; i++)
-              t[e[i].toUpperCase()] = e[i];
-            return t;
-          },
-          Y = function (e, t) {
-            return typeof e === l && -1 !== V(t).indexOf(V(e));
-          },
-          V = function (e) {
-            return e.toLowerCase();
-          },
-          W = function (e, t) {
-            if (typeof e === l)
-              return (
-                (e = e.replace(/^\s\s*/, "")),
-                typeof t === s ? e : e.substring(0, 500)
-              );
-          },
-          K = function (e, t) {
-            for (var i, r, a, s, l, m, d = 0; d < t.length && !l; ) {
-              var _ = t[d],
-                u = t[d + 1];
-              for (i = r = 0; i < _.length && !l && _[i]; )
-                if ((l = _[i++].exec(e)))
-                  for (a = 0; a < u.length; a++)
-                    (m = l[++r]),
-                      typeof (s = u[a]) === c && s.length > 0
-                        ? 2 === s.length
-                          ? typeof s[1] == o
-                            ? (this[s[0]] = s[1].call(this, m))
-                            : (this[s[0]] = s[1])
-                          : 3 === s.length
-                            ? typeof s[1] !== o || (s[1].exec && s[1].test)
-                              ? (this[s[0]] = m ? m.replace(s[1], s[2]) : n)
-                              : (this[s[0]] = m ? s[1].call(this, m, s[2]) : n)
-                            : 4 === s.length &&
-                              (this[s[0]] = m
-                                ? s[3].call(this, m.replace(s[1], s[2]))
-                                : n)
-                        : (this[s] = m || n);
-              d += 2;
-            }
-          },
-          X = function (e, t) {
-            for (var i in t)
-              if (typeof t[i] === c && t[i].length > 0) {
-                for (var r = 0; r < t[i].length; r++)
-                  if (Y(t[i][r], e)) return "?" === i ? n : i;
-              } else if (Y(t[i], e)) return "?" === i ? n : i;
-            return e;
-          },
-          Z = {
-            ME: "4.90",
-            "NT 3.11": "NT3.51",
-            "NT 4.0": "NT4.0",
-            2e3: "NT 5.0",
-            XP: ["NT 5.1", "NT 5.2"],
-            Vista: "NT 6.0",
-            7: "NT 6.1",
-            8: "NT 6.2",
-            8.1: "NT 6.3",
-            10: ["NT 6.4", "NT 10.0"],
-            RT: "ARM",
-          },
-          J = {
-            browser: [
-              [/\b(?:crmo|crios)\/([\w\.]+)/i],
-              [f, [_, "Chrome"]],
-              [/edg(?:e|ios|a)?\/([\w\.]+)/i],
-              [f, [_, "Edge"]],
-              [
-                /(opera mini)\/([-\w\.]+)/i,
-                /(opera [mobiletab]{3,6})\b.+version\/([-\w\.]+)/i,
-                /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i,
-              ],
-              [_, f],
-              [/opios[\/ ]+([\w\.]+)/i],
-              [f, [_, B + " Mini"]],
-              [/\bop(?:rg)?x\/([\w\.]+)/i],
-              [f, [_, B + " GX"]],
-              [/\bopr\/([\w\.]+)/i],
-              [f, [_, B]],
-              [/\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i],
-              [f, [_, "Baidu"]],
-              [
-                /(kindle)\/([\w\.]+)/i,
-                /(lunascape|maxthon|netfront|jasmine|blazer)[\/ ]?([\w\.]*)/i,
-                /(avant|iemobile|slim)\s?(?:browser)?[\/ ]?([\w\.]*)/i,
-                /(?:ms|\()(ie) ([\w\.]+)/i,
-                /(flock|rockmelt|midori|epiphany|silk|skyfire|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|qq|duckduckgo)\/([-\w\.]+)/i,
-                /(heytap|ovi)browser\/([\d\.]+)/i,
-                /(weibo)__([\d\.]+)/i,
-              ],
-              [_, f],
-              [/\bddg\/([\w\.]+)/i],
-              [f, [_, "DuckDuckGo"]],
-              [/(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i],
-              [f, [_, "UC" + S]],
-              [
-                /microm.+\bqbcore\/([\w\.]+)/i,
-                /\bqbcore\/([\w\.]+).+microm/i,
-                /micromessenger\/([\w\.]+)/i,
-              ],
-              [f, [_, "WeChat"]],
-              [/konqueror\/([\w\.]+)/i],
-              [f, [_, "Konqueror"]],
-              [/trident.+rv[: ]([\w\.]{1,9})\b.+like gecko/i],
-              [f, [_, "IE"]],
-              [/ya(?:search)?browser\/([\w\.]+)/i],
-              [f, [_, "Yandex"]],
-              [/slbrowser\/([\w\.]+)/i],
-              [f, [_, "Smart Lenovo " + S]],
-              [/(avast|avg)\/([\w\.]+)/i],
-              [[_, /(.+)/, "$1 Secure " + S], f],
-              [/\bfocus\/([\w\.]+)/i],
-              [f, [_, D + " Focus"]],
-              [/\bopt\/([\w\.]+)/i],
-              [f, [_, B + " Touch"]],
-              [/coc_coc\w+\/([\w\.]+)/i],
-              [f, [_, "Coc Coc"]],
-              [/dolfin\/([\w\.]+)/i],
-              [f, [_, "Dolphin"]],
-              [/coast\/([\w\.]+)/i],
-              [f, [_, B + " Coast"]],
-              [/miuibrowser\/([\w\.]+)/i],
-              [f, [_, "MIUI " + S]],
-              [/fxios\/([-\w\.]+)/i],
-              [f, [_, D]],
-              [/\bqihu|(qi?ho?o?|360)browser/i],
-              [[_, "360 " + S]],
-              [/(oculus|sailfish|huawei|vivo)browser\/([\w\.]+)/i],
-              [[_, /(.+)/, "$1 " + S], f],
-              [/samsungbrowser\/([\w\.]+)/i],
-              [f, [_, U + " Internet"]],
-              [/(comodo_dragon)\/([\w\.]+)/i],
-              [[_, /_/g, " "], f],
-              [/metasr[\/ ]?([\d\.]+)/i],
-              [f, [_, "Sogou Explorer"]],
-              [/(sogou)mo\w+\/([\d\.]+)/i],
-              [[_, "Sogou Mobile"], f],
-              [
-                /(electron)\/([\w\.]+) safari/i,
-                /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i,
-                /m?(qqbrowser|2345Explorer)[\/ ]?([\w\.]+)/i,
-              ],
-              [_, f],
-              [/(lbbrowser)/i, /\[(linkedin)app\]/i],
-              [_],
-              [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
-              [[_, H], f],
-              [
-                /(Klarna)\/([\w\.]+)/i,
-                /(kakao(?:talk|story))[\/ ]([\w\.]+)/i,
-                /(naver)\(.*?(\d+\.[\w\.]+).*\)/i,
-                /safari (line)\/([\w\.]+)/i,
-                /\b(line)\/([\w\.]+)\/iab/i,
-                /(alipay)client\/([\w\.]+)/i,
-                /(twitter)(?:and| f.+e\/([\w\.]+))/i,
-                /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i,
-              ],
-              [_, f],
-              [/\bgsa\/([\w\.]+) .*safari\//i],
-              [f, [_, "GSA"]],
-              [/musical_ly(?:.+app_?version\/|_)([\w\.]+)/i],
-              [f, [_, "TikTok"]],
-              [/headlesschrome(?:\/([\w\.]+)| )/i],
-              [f, [_, C + " Headless"]],
-              [/ wv\).+(chrome)\/([\w\.]+)/i],
-              [[_, C + " WebView"], f],
-              [/droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i],
-              [f, [_, "Android " + S]],
-              [/(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i],
-              [_, f],
-              [/version\/([\w\.\,]+) .*mobile\/\w+ (safari)/i],
-              [f, [_, "Mobile Safari"]],
-              [/version\/([\w(\.|\,)]+) .*(mobile ?safari|safari)/i],
-              [f, _],
-              [/webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i],
-              [
-                _,
-                [
-                  f,
-                  X,
-                  {
-                    "1.0": "/8",
-                    1.2: "/1",
-                    1.3: "/3",
-                    "2.0": "/412",
-                    "2.0.2": "/416",
-                    "2.0.3": "/417",
-                    "2.0.4": "/419",
-                    "?": "/",
-                  },
-                ],
-              ],
-              [/(webkit|khtml)\/([\w\.]+)/i],
-              [_, f],
-              [/(navigator|netscape\d?)\/([-\w\.]+)/i],
-              [[_, "Netscape"], f],
-              [/mobile vr; rv:([\w\.]+)\).+firefox/i],
-              [f, [_, D + " Reality"]],
-              [
-                /ekiohf.+(flow)\/([\w\.]+)/i,
-                /(swiftfox)/i,
-                /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror|klar)[\/ ]?([\w\.\+]+)/i,
-                /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([-\w\.]+)$/i,
-                /(firefox)\/([\w\.]+)/i,
-                /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i,
-                /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|sleipnir|obigo|mosaic|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i,
-                /(links) \(([\w\.]+)/i,
-                /panasonic;(viera)/i,
-              ],
-              [_, f],
-              [/(cobalt)\/([\w\.]+)/i],
-              [_, [f, /master.|lts./, ""]],
-            ],
-            cpu: [
-              [/(?:(amd|x(?:(?:86|64)[-_])?|wow|win)64)[;\)]/i],
-              [[w, "amd64"]],
-              [/(ia32(?=;))/i],
-              [[w, V]],
-              [/((?:i[346]|x)86)[;\)]/i],
-              [[w, "ia32"]],
-              [/\b(aarch64|arm(v?8e?l?|_?64))\b/i],
-              [[w, "arm64"]],
-              [/\b(arm(?:v[67])?ht?n?[fl]p?)\b/i],
-              [[w, "armhf"]],
-              [/windows (ce|mobile); ppc;/i],
-              [[w, "arm"]],
-              [/((?:ppc|powerpc)(?:64)?)(?: mac|;|\))/i],
-              [[w, /ower/, "", V]],
-              [/(sun4\w)[;\)]/i],
-              [[w, "sparc"]],
-              [
-                /((?:avr32|ia64(?=;))|68k(?=\))|\barm(?=v(?:[1-7]|[5-7]1)l?|;|eabi)|(?=atmel )avr|(?:irix|mips|sparc)(?:64)?\b|pa-risc)/i,
-              ],
-              [[w, V]],
-            ],
-            device: [
-              [
-                /\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i,
-              ],
-              [d, [p, U], [u, v]],
-              [
-                /\b((?:s[cgp]h|gt|sm)-\w+|sc[g-]?[\d]+a?|galaxy nexus)/i,
-                /samsung[- ]([-\w]+)/i,
-                /sec-(sgh\w+)/i,
-              ],
-              [d, [p, U], [u, b]],
-              [/(?:\/|\()(ip(?:hone|od)[\w, ]*)(?:\/|;)/i],
-              [d, [p, P], [u, b]],
-              [
-                /\((ipad);[-\w\),; ]+apple/i,
-                /applecoremedia\/[\w\.]+ \((ipad)/i,
-                /\b(ipad)\d\d?,\d\d?[;\]].+ios/i,
-              ],
-              [d, [p, P], [u, v]],
-              [/(macintosh);/i],
-              [d, [p, P]],
-              [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
-              [d, [p, I], [u, b]],
-              [/\b((?:ag[rs][23]?|bah2?|sht?|btv)-a?[lw]\d{2})\b(?!.+d\/s)/i],
-              [d, [p, x], [u, v]],
-              [
-                /(?:huawei|honor)([-\w ]+)[;\)]/i,
-                /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i,
-              ],
-              [d, [p, x], [u, b]],
-              [
-                /\b(poco[\w ]+|m2\d{3}j\d\d[a-z]{2})(?: bui|\))/i,
-                /\b; (\w+) build\/hm\1/i,
-                /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i,
-                /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i,
-                /oid[^\)]+; (m?[12][0-389][01]\w{3,6}[c-y])( bui|; wv|\))/i,
-                /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max|cc)?[_ ]?(?:\d?\w?)[_ ]?(?:plus|se|lite)?)(?: bui|\))/i,
-              ],
-              [
-                [d, /_/g, " "],
-                [p, L],
-                [u, b],
-              ],
-              [
-                /oid[^\)]+; (2\d{4}(283|rpbf)[cgl])( bui|\))/i,
-                /\b(mi[-_ ]?(?:pad)(?:[\w_ ]+))(?: bui|\))/i,
-              ],
-              [
-                [d, /_/g, " "],
-                [p, L],
-                [u, v],
-              ],
-              [
-                /; (\w+) bui.+ oppo/i,
-                /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i,
-              ],
-              [d, [p, "OPPO"], [u, b]],
-              [/\b(opd2\d{3}a?) bui/i],
-              [d, [p, "OPPO"], [u, v]],
-              [/vivo (\w+)(?: bui|\))/i, /\b(v[12]\d{3}\w?[at])(?: bui|;)/i],
-              [d, [p, "Vivo"], [u, b]],
-              [/\b(rmx[1-3]\d{3})(?: bui|;|\))/i],
-              [d, [p, "Realme"], [u, b]],
-              [
-                /\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i,
-                /\bmot(?:orola)?[- ](\w*)/i,
-                /((?:moto[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i,
-              ],
-              [d, [p, R], [u, b]],
-              [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
-              [d, [p, R], [u, v]],
-              [/((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
-              [d, [p, z], [u, v]],
-              [
-                /(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i,
-                /\blg[-e;\/ ]+((?!browser|netcast|android tv)\w+)/i,
-                /\blg-?([\d\w]+) bui/i,
-              ],
-              [d, [p, z], [u, b]],
-              [
-                /(ideatab[-\w ]+)/i,
-                /lenovo ?(s[56]000[-\w]+|tab(?:[\w ]+)|yt[-\d\w]{6}|tb[-\d\w]{6})/i,
-              ],
-              [d, [p, "Lenovo"], [u, v]],
-              [/(?:maemo|nokia).*(n900|lumia \d+)/i, /nokia[-_ ]?([-\w\.]*)/i],
-              [
-                [d, /_/g, " "],
-                [p, "Nokia"],
-                [u, b],
-              ],
-              [/(pixel c)\b/i],
-              [d, [p, A], [u, v]],
-              [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
-              [d, [p, A], [u, b]],
-              [
-                /droid.+ (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i,
-              ],
-              [d, [p, O], [u, b]],
-              [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
-              [
-                [d, "Xperia Tablet"],
-                [p, O],
-                [u, v],
-              ],
-              [
-                / (kb2005|in20[12]5|be20[12][59])\b/i,
-                /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i,
-              ],
-              [d, [p, "OnePlus"], [u, b]],
-              [
-                /(alexa)webm/i,
-                /(kf[a-z]{2}wi|aeo[c-r]{2})( bui|\))/i,
-                /(kf[a-z]+)( bui|\)).+silk\//i,
-              ],
-              [d, [p, E], [u, v]],
-              [/((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i],
-              [
-                [d, /(.+)/g, "Fire Phone $1"],
-                [p, E],
-                [u, b],
-              ],
-              [/(playbook);[-\w\),; ]+(rim)/i],
-              [d, p, [u, v]],
-              [/\b((?:bb[a-f]|st[hv])100-\d)/i, /\(bb10; (\w+)/i],
-              [d, [p, T], [u, b]],
-              [
-                /(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i,
-              ],
-              [d, [p, N], [u, v]],
-              [/ (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i],
-              [d, [p, N], [u, b]],
-              [/(nexus 9)/i],
-              [d, [p, "HTC"], [u, v]],
-              [
-                /(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i,
-                /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i,
-                /(alcatel|geeksphone|nexian|panasonic(?!(?:;|\.))|sony(?!-bra))[-_ ]?([-\w]*)/i,
-              ],
-              [p, [d, /_/g, " "], [u, b]],
-              [/droid.+; ([ab][1-7]-?[0178a]\d\d?)/i],
-              [d, [p, "Acer"], [u, v]],
-              [/droid.+; (m[1-5] note) bui/i, /\bmz-([-\w]{2,})/i],
-              [d, [p, "Meizu"], [u, b]],
-              [/; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i],
-              [d, [p, "Ulefone"], [u, b]],
-              [
-                /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron|infinix|tecno)[-_ ]?([-\w]*)/i,
-                /(hp) ([\w ]+\w)/i,
-                /(asus)-?(\w+)/i,
-                /(microsoft); (lumia[\w ]+)/i,
-                /(lenovo)[-_ ]?([-\w]+)/i,
-                /(jolla)/i,
-                /(oppo) ?([\w ]+) bui/i,
-              ],
-              [p, d, [u, b]],
-              [
-                /(kobo)\s(ereader|touch)/i,
-                /(archos) (gamepad2?)/i,
-                /(hp).+(touchpad(?!.+tablet)|tablet)/i,
-                /(kindle)\/([\w\.]+)/i,
-                /(nook)[\w ]+build\/(\w+)/i,
-                /(dell) (strea[kpr\d ]*[\dko])/i,
-                /(le[- ]+pan)[- ]+(\w{1,9}) bui/i,
-                /(trinity)[- ]*(t\d{3}) bui/i,
-                /(gigaset)[- ]+(q\w{1,9}) bui/i,
-                /(vodafone) ([\w ]+)(?:\)| bui)/i,
-              ],
-              [p, d, [u, v]],
-              [/(surface duo)/i],
-              [d, [p, G], [u, v]],
-              [/droid [\d\.]+; (fp\du?)(?: b|\))/i],
-              [d, [p, "Fairphone"], [u, b]],
-              [/(u304aa)/i],
-              [d, [p, "AT&T"], [u, b]],
-              [/\bsie-(\w*)/i],
-              [d, [p, "Siemens"], [u, b]],
-              [/\b(rct\w+) b/i],
-              [d, [p, "RCA"], [u, v]],
-              [/\b(venue[\d ]{2,7}) b/i],
-              [d, [p, "Dell"], [u, v]],
-              [/\b(q(?:mv|ta)\w+) b/i],
-              [d, [p, "Verizon"], [u, v]],
-              [/\b(?:barnes[& ]+noble |bn[rt])([\w\+ ]*) b/i],
-              [d, [p, "Barnes & Noble"], [u, v]],
-              [/\b(tm\d{3}\w+) b/i],
-              [d, [p, "NuVision"], [u, v]],
-              [/\b(k88) b/i],
-              [d, [p, "ZTE"], [u, v]],
-              [/\b(nx\d{3}j) b/i],
-              [d, [p, "ZTE"], [u, b]],
-              [/\b(gen\d{3}) b.+49h/i],
-              [d, [p, "Swiss"], [u, b]],
-              [/\b(zur\d{3}) b/i],
-              [d, [p, "Swiss"], [u, v]],
-              [/\b((zeki)?tb.*\b) b/i],
-              [d, [p, "Zeki"], [u, v]],
-              [/\b([yr]\d{2}) b/i, /\b(dragon[- ]+touch |dt)(\w{5}) b/i],
-              [[p, "Dragon Touch"], d, [u, v]],
-              [/\b(ns-?\w{0,9}) b/i],
-              [d, [p, "Insignia"], [u, v]],
-              [/\b((nxa|next)-?\w{0,9}) b/i],
-              [d, [p, "NextBook"], [u, v]],
-              [/\b(xtreme\_)?(v(1[045]|2[015]|[3469]0|7[05])) b/i],
-              [[p, "Voice"], d, [u, b]],
-              [/\b(lvtel\-)?(v1[12]) b/i],
-              [[p, "LvTel"], d, [u, b]],
-              [/\b(ph-1) /i],
-              [d, [p, "Essential"], [u, b]],
-              [/\b(v(100md|700na|7011|917g).*\b) b/i],
-              [d, [p, "Envizen"], [u, v]],
-              [/\b(trio[-\w\. ]+) b/i],
-              [d, [p, "MachSpeed"], [u, v]],
-              [/\btu_(1491) b/i],
-              [d, [p, "Rotor"], [u, v]],
-              [/(shield[\w ]+) b/i],
-              [d, [p, "Nvidia"], [u, v]],
-              [/(sprint) (\w+)/i],
-              [p, d, [u, b]],
-              [/(kin\.[onetw]{3})/i],
-              [
-                [d, /\./g, " "],
-                [p, G],
-                [u, b],
-              ],
-              [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-              [d, [p, M], [u, v]],
-              [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-              [d, [p, M], [u, b]],
-              [/smart-tv.+(samsung)/i],
-              [p, [u, g]],
-              [/hbbtv.+maple;(\d+)/i],
-              [
-                [d, /^/, "SmartTV"],
-                [p, U],
-                [u, g],
-              ],
-              [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
-              [
-                [p, z],
-                [u, g],
-              ],
-              [/(apple) ?tv/i],
-              [p, [d, P + " TV"], [u, g]],
-              [/crkey/i],
-              [
-                [d, C + "cast"],
-                [p, A],
-                [u, g],
-              ],
-              [/droid.+aft(\w+)( bui|\))/i],
-              [d, [p, E], [u, g]],
-              [/\(dtv[\);].+(aquos)/i, /(aquos-tv[\w ]+)\)/i],
-              [d, [p, I], [u, g]],
-              [/(bravia[\w ]+)( bui|\))/i],
-              [d, [p, O], [u, g]],
-              [/(mitv-\w{5}) bui/i],
-              [d, [p, L], [u, g]],
-              [/Hbbtv.*(technisat) (.*);/i],
-              [p, d, [u, g]],
-              [
-                /\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i,
-                /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i,
-              ],
-              [
-                [p, W],
-                [d, W],
-                [u, g],
-              ],
-              [/\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i],
-              [[u, g]],
-              [/(ouya)/i, /(nintendo) ([wids3utch]+)/i],
-              [p, d, [u, h]],
-              [/droid.+; (shield) bui/i],
-              [d, [p, "Nvidia"], [u, h]],
-              [/(playstation [345portablevi]+)/i],
-              [d, [p, O], [u, h]],
-              [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
-              [d, [p, G], [u, h]],
-              [/((pebble))app/i],
-              [p, d, [u, k]],
-              [/(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i],
-              [d, [p, P], [u, k]],
-              [/droid.+; (glass) \d/i],
-              [d, [p, A], [u, k]],
-              [/droid.+; (wt63?0{2,3})\)/i],
-              [d, [p, M], [u, k]],
-              [/(quest( \d| pro)?)/i],
-              [d, [p, H], [u, k]],
-              [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
-              [p, [u, y]],
-              [/(aeobc)\b/i],
-              [d, [p, E], [u, y]],
-              [
-                /droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew).+? mobile safari/i,
-              ],
-              [d, [u, b]],
-              [/droid .+?; ([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i],
-              [d, [u, v]],
-              [/\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i],
-              [[u, v]],
-              [
-                /(phone|mobile(?:[;\/]| [ \w\/\.]*safari)|pda(?=.+windows ce))/i,
-              ],
-              [[u, b]],
-              [/(android[-\w\. ]{0,9});.+buil/i],
-              [d, [p, "Generic"]],
-            ],
-            engine: [
-              [/windows.+ edge\/([\w\.]+)/i],
-              [f, [_, "EdgeHTML"]],
-              [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i],
-              [f, [_, "Blink"]],
-              [
-                /(presto)\/([\w\.]+)/i,
-                /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna)\/([\w\.]+)/i,
-                /ekioh(flow)\/([\w\.]+)/i,
-                /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i,
-                /(icab)[\/ ]([23]\.[\d\.]+)/i,
-                /\b(libweb)/i,
-              ],
-              [_, f],
-              [/rv\:([\w\.]{1,9})\b.+(gecko)/i],
-              [f, _],
-            ],
-            os: [
-              [/microsoft (windows) (vista|xp)/i],
-              [_, f],
-              [/(windows (?:phone(?: os)?|mobile))[\/ ]?([\d\.\w ]*)/i],
-              [_, [f, X, Z]],
-              [
-                /windows nt 6\.2; (arm)/i,
-                /windows[\/ ]?([ntce\d\. ]+\w)(?!.+xbox)/i,
-                /(?:win(?=3|9|n)|win 9x )([nt\d\.]+)/i,
-              ],
-              [
-                [f, X, Z],
-                [_, "Windows"],
-              ],
-              [
-                /ip[honead]{2,4}\b(?:.*os ([\w]+) like mac|; opera)/i,
-                /(?:ios;fbsv\/|iphone.+ios[\/ ])([\d\.]+)/i,
-                /cfnetwork\/.+darwin/i,
-              ],
-              [
-                [f, /_/g, "."],
-                [_, "iOS"],
-              ],
-              [
-                /(mac os x) ?([\w\. ]*)/i,
-                /(macintosh|mac_powerpc\b)(?!.+haiku)/i,
-              ],
-              [
-                [_, F],
-                [f, /_/g, "."],
-              ],
-              [/droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i],
-              [f, _],
-              [
-                /(android|webos|qnx|bada|rim tablet os|maemo|meego|sailfish)[-\/ ]?([\w\.]*)/i,
-                /(blackberry)\w*\/([\w\.]*)/i,
-                /(tizen|kaios)[\/ ]([\w\.]+)/i,
-                /\((series40);/i,
-              ],
-              [_, f],
-              [/\(bb(10);/i],
-              [f, [_, T]],
-              [/(?:symbian ?os|symbos|s60(?=;)|series60)[-\/ ]?([\w\.]*)/i],
-              [f, [_, "Symbian"]],
-              [
-                /mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i,
-              ],
-              [f, [_, D + " OS"]],
-              [/web0s;.+rt(tv)/i, /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i],
-              [f, [_, "webOS"]],
-              [/watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i],
-              [f, [_, "watchOS"]],
-              [/crkey\/([\d\.]+)/i],
-              [f, [_, C + "cast"]],
-              [/(cros) [\w]+(?:\)| ([\w\.]+)\b)/i],
-              [[_, q], f],
-              [
-                /panasonic;(viera)/i,
-                /(netrange)mmh/i,
-                /(nettv)\/(\d+\.[\w\.]+)/i,
-                /(nintendo|playstation) ([wids345portablevuch]+)/i,
-                /(xbox); +xbox ([^\);]+)/i,
-                /\b(joli|palm)\b ?(?:os)?\/?([\w\.]*)/i,
-                /(mint)[\/\(\) ]?(\w*)/i,
-                /(mageia|vectorlinux)[; ]/i,
-                /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki|deepin|manjaro|elementary os|sabayon|linspire)(?: gnu\/linux)?(?: enterprise)?(?:[- ]linux)?(?:-gnu)?[-\/ ]?(?!chrom|package)([-\w\.]*)/i,
-                /(hurd|linux) ?([\w\.]*)/i,
-                /(gnu) ?([\w\.]*)/i,
-                /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i,
-                /(haiku) (\w+)/i,
-              ],
-              [_, f],
-              [/(sunos) ?([\w\.\d]*)/i],
-              [[_, "Solaris"], f],
-              [
-                /((?:open)?solaris)[-\/ ]?([\w\.]*)/i,
-                /(aix) ((\d)(?=\.|\)| )[\w\.])*/i,
-                /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux|serenityos)/i,
-                /(unix) ?([\w\.]*)/i,
-              ],
-              [_, f],
-            ],
-          },
-          $ = function (e, t) {
-            if ((typeof e === c && ((t = e), (e = n)), !(this instanceof $)))
-              return new $(e, t).getResult();
-            var i = typeof a !== s && a.navigator ? a.navigator : n,
-              r = e || (i && i.userAgent ? i.userAgent : ""),
-              h = i && i.userAgentData ? i.userAgentData : n,
-              g = t
-                ? (function (e, t) {
-                    var i = {};
-                    for (var r in e)
-                      t[r] && t[r].length % 2 == 0
-                        ? (i[r] = t[r].concat(e[r]))
-                        : (i[r] = e[r]);
-                    return i;
-                  })(J, t)
-                : J,
-              k = i && i.userAgent == r;
-            return (
-              (this.getBrowser = function () {
-                var e,
-                  t = {};
-                return (
-                  (t[_] = n),
-                  (t[f] = n),
-                  K.call(t, r, g.browser),
-                  (t[m] =
-                    typeof (e = t[f]) === l
-                      ? e.replace(/[^\d\.]/g, "").split(".")[0]
-                      : n),
-                  k &&
-                    i &&
-                    i.brave &&
-                    typeof i.brave.isBrave == o &&
-                    (t[_] = "Brave"),
-                  t
-                );
-              }),
-              (this.getCPU = function () {
-                var e = {};
-                return (e[w] = n), K.call(e, r, g.cpu), e;
-              }),
-              (this.getDevice = function () {
-                var e = {};
-                return (
-                  (e[p] = n),
-                  (e[d] = n),
-                  (e[u] = n),
-                  K.call(e, r, g.device),
-                  k && !e[u] && h && h.mobile && (e[u] = b),
-                  k &&
-                    "Macintosh" == e[d] &&
-                    i &&
-                    typeof i.standalone !== s &&
-                    i.maxTouchPoints &&
-                    i.maxTouchPoints > 2 &&
-                    ((e[d] = "iPad"), (e[u] = v)),
-                  e
-                );
-              }),
-              (this.getEngine = function () {
-                var e = {};
-                return (e[_] = n), (e[f] = n), K.call(e, r, g.engine), e;
-              }),
-              (this.getOS = function () {
-                var e = {};
-                return (
-                  (e[_] = n),
-                  (e[f] = n),
-                  K.call(e, r, g.os),
-                  k &&
-                    !e[_] &&
-                    h &&
-                    h.platform &&
-                    "Unknown" != h.platform &&
-                    (e[_] = h.platform
-                      .replace(/chrome os/i, q)
-                      .replace(/macos/i, F)),
-                  e
-                );
-              }),
-              (this.getResult = function () {
-                return {
-                  ua: this.getUA(),
-                  browser: this.getBrowser(),
-                  engine: this.getEngine(),
-                  os: this.getOS(),
-                  device: this.getDevice(),
-                  cpu: this.getCPU(),
-                };
-              }),
-              (this.getUA = function () {
-                return r;
-              }),
-              (this.setUA = function (e) {
-                return (
-                  (r = typeof e === l && e.length > 500 ? W(e, 500) : e), this
-                );
-              }),
-              this.setUA(r),
-              this
-            );
-          };
-        ($.VERSION = "1.0.38"),
-          ($.BROWSER = j([_, f, m])),
-          ($.CPU = j([w])),
-          ($.DEVICE = j([d, p, u, h, b, g, v, k, y])),
-          ($.ENGINE = $.OS = j([_, f])),
-          typeof t !== s
-            ? (e.exports && (t = e.exports = $), (t.UAParser = $))
-            : i.amdO
-              ? (r = function () {
-                  return $;
-                }.call(t, i, t, e)) === n || (e.exports = r)
-              : typeof a !== s && (a.UAParser = $);
-        var Q = typeof a !== s && (a.jQuery || a.Zepto);
-        if (Q && !Q.ua) {
-          var ee = new $();
-          (Q.ua = ee.getResult()),
-            (Q.ua.get = function () {
-              return ee.getUA();
-            }),
-            (Q.ua.set = function (e) {
-              ee.setUA(e);
-              var t = ee.getResult();
-              for (var i in t) Q.ua[i] = t[i];
-            });
-        }
-      })("object" == typeof window ? window : this);
+    86227: (e) => {
+      e.exports = {
+        PlaytestInvites: "_3XPWJM0EKr-dJ0B0NJtmjq",
+        PlaytestInvite: "_22d1cAhcNjyVeCgm3buXvn",
+        InviteInfo: "_9XX6R8HJVzwJ9jnfbIL-I",
+        TimeInvited: "_1QDTpUha3gVN27iIGSQYu3",
+        StatusCtn: "_1ItLCAR90cxfIMjbiraDqU",
+        Buttons: "_1Fh12RGmObsvcXIRY7vQYf",
+        WideButton: "wA5p2wik9ul235sZq1VJO",
+        AvatarAndPersona: "_3uUPNFsdEI9Fba-fyvnslj",
+      };
     },
-    55909: (e, t, i) => {
+    55909: (e, t, a) => {
       "use strict";
-      i.d(t, { u: () => l });
-      var r = i(90626),
-        a = i(71513),
-        n = i(93007),
-        o = i(56093),
-        s = i(78327),
-        c = i(61712);
+      a.d(t, { u: () => l });
+      var n = a(90626),
+        r = a(71513),
+        i = a(93007),
+        s = a(56093),
+        c = a(78327),
+        o = a(61712);
       function l(e) {
-        const { children: t, navTreeRef: i, ...l } = e,
-          m = r.useRef(),
-          d = (0, o.Ue)(m, i),
-          _ = (0, s.Qn)(),
-          u = window.__virtual_keyboard_client;
-        if (_) {
+        const { children: t, navTreeRef: a, ...l } = e,
+          m = n.useRef(),
+          _ = (0, s.Ue)(m, a),
+          u = (0, c.Qn)(),
+          p = window.__virtual_keyboard_client;
+        if (u) {
           const e = window.__nav_tree_root;
-          return r.createElement(
-            a.B2,
-            { ...l, navTreeRef: d, secondary: !0, parentEmbeddedNavTree: e },
-            r.createElement(
-              c.F6,
-              { factory: u },
-              r.createElement(n.q, null, t),
+          return n.createElement(
+            r.B2,
+            { ...l, navTreeRef: _, secondary: !0, parentEmbeddedNavTree: e },
+            n.createElement(
+              o.F6,
+              { factory: p },
+              n.createElement(i.q, null, t),
             ),
           );
         }
-        return r.createElement(r.Fragment, null, t);
+        return n.createElement(n.Fragment, null, t);
       }
     },
-    42018: (e, t, i) => {
+    1035: (e, t, a) => {
       "use strict";
-      i.r(t), i.d(t, { AccountPreferencesRoutes: () => ee, default: () => te });
-      var r = i(90626),
-        a = i(92757),
-        n = i(34629),
-        o = i(14947),
-        s = (i(68797), i(78327)),
-        c = i(41735),
-        l = i.n(c),
-        m = i(61859);
-      class d {
+      a.d(t, { Ul: () => f, xz: () => g, $Y: () => h, i8: () => A });
+      var n = a(34629),
+        r = a(90626),
+        i = a(75844),
+        s = a(10622),
+        c = a(52038),
+        o = a(78327),
+        l = a(3088);
+      const m =
+          "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==",
+        _ =
+          a.p +
+          "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
+      var u = a(43047),
+        p = a.n(u),
+        d = a(81393);
+      const f = r.memo(function (e) {
+        const {
+            strAvatarURL: t,
+            size: a = "Medium",
+            className: n,
+            statusStyle: i,
+            statusPosition: s,
+            children: o,
+            ...u
+          } = e,
+          f = r.useMemo(() => {
+            const e = [];
+            return (
+              t && e.push(t),
+              e.push(
+                (function (e) {
+                  switch (e) {
+                    case "X-Small":
+                    case "Small":
+                      return "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gOTAK/9sAQwADAgIDAgIDAwMDBAMDBAUIBQUEBAUKBwcGCAwKDAwLCgsLDQ4SEA0OEQ4LCxAWEBETFBUVFQwPFxgWFBgSFBUU/9sAQwEDBAQFBAUJBQUJFA0LDRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQU/8AAEQgAIAAgAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A/P4mW5nmllmeSR3LMzMSSc1a07R73V72KzsILi9u5TiOC2RpJHPoFGSarQ/ef6n+de4fAn9oaL4D+DfGX9i6Uf8AhO9XSKDT9eZY3WxiDZcBGByTkn0JCZBxQB41qeiX+iXslnqNtdWF3H9+3uo2jkX6q2CKpgy208MsUzxyI4ZWViCDmvsr9rrUdT1j9nb4T6h8RBbH4qXUs0zMsSxXJ04hivnKoAU5MPGBg7uM7q+NpvvJ9R/OgAh+8/1P867T4POI/iz4Mc6U+u7NZtG/suPbuu8TKfKG4hct93njnmuKIltp5opYXjkRyrKykEHNWbDVbvSr63vbKaezvLeRZYbi3ZkkidTlWVhyCCMgjpQB6l+1F411nx58dPFWpa5a3mnXaXP2ZNOvXVpLKNBhYflJUY5PB5JJ6k15LN95PqP51a1PWr7WtQnvtRuLm/vrhzJNc3TtJLIx6lmbJJ9zVQCW5nhiiheSR3CqqqSSc0Af/9k=";
+                    case "Medium":
+                    case "MediumLarge":
+                      return m;
+                    case "Large":
+                    case "X-Large":
+                    case "FillArea":
+                      return _;
+                    default:
+                      return (0, d.z)(e, `Unhandled size ${e}`), m;
+                  }
+                })(a),
+              ),
+              e
+            );
+          }, [t, a]);
+        return r.createElement(
+          "div",
+          {
+            className: (0, c.A)(
+              p().avatarHolder,
+              "avatarHolder",
+              "no-drag",
+              a,
+              n,
+            ),
+            ...u,
+          },
+          r.createElement("div", {
+            className: (0, c.A)(p().avatarStatus, "avatarStatus", s),
+            style: i,
+          }),
+          r.createElement(l.c, {
+            className: (0, c.A)(p().avatar, "avatar"),
+            rgSources: f,
+            draggable: !1,
+          }),
+          o,
+        );
+      });
+      let A = class extends r.Component {
+        render() {
+          const {
+            persona: e,
+            size: t = "Medium",
+            animatedAvatar: a,
+            className: n,
+            ...i
+          } = this.props;
+          let l = "";
+          return (
+            a && a.image_small && 0 != a.image_small.length
+              ? (l = o.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + a.image_small)
+              : e &&
+                ((l = e.avatar_url_medium),
+                "Small" == t || "X-Small" == t
+                  ? (l = e.avatar_url)
+                  : ("Large" != t && "X-Large" != t && "FillArea" != t) ||
+                    (l = e.avatar_url_full)),
+            r.createElement(f, {
+              strAvatarURL: l,
+              size: t,
+              className: (0, c.A)((0, s.rO)(e), n),
+              ...i,
+            })
+          );
+        }
+      };
+      A = (0, n.Cg)([i.PA], A);
+      const h = (0, i.PA)((e) => {
+        const { profileItem: t, className: a, bDisableAnimation: n, ...i } = e;
+        if (!t || !t.image_small || 0 == t.image_small.length) return null;
+        let s = n ? t.image_large : t.image_small;
+        return (
+          s || (s = t.image_small),
+          s.startsWith("https://") ||
+            (s = o.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + s),
+          r.createElement(
+            "div",
+            { className: (0, c.A)(p().avatarFrame, a, "avatarFrame"), ...i },
+            r.createElement("img", { className: p().avatarFrameImg, src: s }),
+          )
+        );
+      });
+      let g = class extends r.Component {
+        m_timer;
+        constructor(e) {
+          super(e),
+            (this.state = { bAnimate: "None" != this.props.loopDuration }),
+            (this.m_timer = 0);
+        }
+        componentDidMount() {
+          this.props.bParentHovered || this.SetupAnimationTimer();
+        }
+        SetupAnimationTimer() {
+          let e = 0;
+          switch (this.props.loopDuration) {
+            case "Short":
+              e = 2500;
+              break;
+            case "Medium":
+              e = 5e3;
+              break;
+            case "Long":
+              e = 1e4;
+          }
+          0 != e &&
+            (this.setState({ bAnimate: "None" != this.props.loopDuration }),
+            (this.m_timer = window.setTimeout(
+              () => this.setState({ bAnimate: !1 }),
+              e,
+            )));
+        }
+        StopAnimationTimer() {
+          this.m_timer &&
+            (window.clearTimeout(this.m_timer), (this.m_timer = 0));
+        }
+        onHover() {
+          this.SetupAnimationTimer();
+        }
+        componentWillUnmount() {
+          this.StopAnimationTimer();
+        }
+        componentDidUpdate(e) {
+          this.props.loopDuration != e.loopDuration &&
+            ("None" == this.props.loopDuration
+              ? (this.setState({ bAnimate: !1 }), this.StopAnimationTimer())
+              : "Infinite" == this.props.loopDuration
+                ? (this.setState({ bAnimate: !0 }), this.StopAnimationTimer())
+                : (this.setState({ bAnimate: !0 }),
+                  this.SetupAnimationTimer())),
+            this.props.bParentHovered != e.bParentHovered &&
+              (this.props.bParentHovered &&
+              "None" != this.props.loopDuration &&
+              "Infinite" != this.props.loopDuration
+                ? (this.setState({ bAnimate: !0 }), this.StopAnimationTimer())
+                : this.state.bAnimate && this.SetupAnimationTimer());
+        }
+        render() {
+          let {
+            loopDuration: e,
+            animatedAvatar: t,
+            avatarFrame: a,
+            children: n,
+            style: i,
+            bLimitProfileFrameAnimationTime: s,
+            bParentHovered: c,
+            ...o
+          } = this.props;
+          return (
+            o.onClick && (i = { ...i, cursor: "pointer" }),
+            this.state.bAnimate || (t = null),
+            r.createElement(
+              "div",
+              {
+                onMouseEnter: () =>
+                  this.setState({
+                    bAnimate: "None" != this.props.loopDuration,
+                  }),
+                onMouseLeave: () => this.SetupAnimationTimer(),
+              },
+              r.createElement(
+                A,
+                { animatedAvatar: t, ...o },
+                n,
+                r.createElement(h, {
+                  profileItem: a,
+                  bDisableAnimation: s && !this.state.bAnimate,
+                }),
+              ),
+            )
+          );
+        }
+      };
+      g = (0, n.Cg)([i.PA], g);
+    },
+    3088: (e, t, a) => {
+      "use strict";
+      a.d(t, { c: () => s });
+      var n = a(34629),
+        r = a(90626),
+        i = a(56093);
+      class s extends r.Component {
+        m_refImage = r.createRef();
+        constructor(e) {
+          super(e), (this.state = { nImage: 0 });
+        }
+        componentDidUpdate(e) {
+          JSON.stringify(this.props.rgSources) != JSON.stringify(e.rgSources) &&
+            this.setState({ nImage: 0 });
+        }
+        get src() {
+          let e = "";
+          return (
+            this.props.rgSources &&
+              this.props.rgSources.length > this.state.nImage &&
+              (e = this.props.rgSources[this.state.nImage]),
+            e ||
+              (console.warn(
+                "MultiSourceImage created with no image src",
+                this.props,
+                this.state.nImage,
+              ),
+              (e =
+                "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
+            e
+          );
+        }
+        get imgRef() {
+          return this.m_refImage;
+        }
+        OnImageError(e) {
+          this.props.onIncrementalError &&
+            this.props.onIncrementalError(
+              e,
+              this.props.rgSources[this.state.nImage],
+              this.state.nImage,
+            );
+          let t = this.state.nImage + 1;
+          t >= this.props.rgSources.length &&
+            this.props.onError &&
+            this.props.onError(e),
+            t < this.props.rgSources.length && this.setState({ nImage: t });
+        }
+        render() {
+          const {
+              rgSources: e,
+              onIncrementalError: t,
+              onError: a,
+              ...n
+            } = this.props,
+            i = this.src;
+          return r.createElement("img", {
+            ref: this.m_refImage,
+            ...n,
+            src: i,
+            onError: this.OnImageError,
+          });
+        }
+      }
+      (0, n.Cg)([i.oI], s.prototype, "OnImageError", null);
+    },
+    95306: (e, t, a) => {
+      "use strict";
+      a.r(t), a.d(t, { AccountPreferencesRoutes: () => Ne, default: () => Se });
+      var n = a(90626),
+        r = a(92757),
+        i = a(34629),
+        s = a(14947),
+        c = (a(68797), a(78327)),
+        o = a(41735),
+        l = a.n(o),
+        m = a(61859);
+      class _ {
         m_Preferences = void 0;
         constructor(e) {
-          (0, o.Gn)(this),
+          (0, s.Gn)(this),
             (this.m_Preferences = e),
             (this.m_Preferences.content_customization &&
               !Array.isArray(this.m_Preferences.content_customization)) ||
@@ -1031,20 +515,20 @@
           (this.m_Preferences.preference_state = 3), this.PostCookieSettings();
         }
         async PostCookieSettings() {
-          const e = s.TS.STORE_BASE_URL + "account/ajaxsetcookiepreferences",
+          const e = c.TS.STORE_BASE_URL + "account/ajaxsetcookiepreferences",
             t = new FormData();
-          t.set("sessionid", s.TS.SESSIONID),
+          t.set("sessionid", c.TS.SESSIONID),
             t.append("cookiepreferences", JSON.stringify(this.m_Preferences));
           try {
-            let i = await l().post(e, t, { withCredentials: !0 });
-            if (200 != i.status || 1 != i?.data?.success)
+            let a = await l().post(e, t, { withCredentials: !0 });
+            if (200 != a.status || 1 != a?.data?.success)
               window.ShowAlertDialog(
                 (0, m.we)("#CookiePref_Error"),
                 (0, m.we)("#CookiePref_ErrorNotSaved"),
               );
-            else if (1 == i?.data?.success) {
+            else if (1 == a?.data?.success) {
               0;
-              const { transfer_urls: e, transfer_params: t } = i.data;
+              const { transfer_urls: e, transfer_params: t } = a.data;
               e && t && this.TransferCookiePreferencesToSites(e, t);
             }
           } catch (e) {
@@ -1056,270 +540,270 @@
           }
         }
         TransferCookiePreferencesToSites(e, t) {
-          const i = new FormData();
-          i.set("transfer_params", t);
-          for (const t of e) l().post(t, i);
+          const a = new FormData();
+          a.set("transfer_params", t);
+          for (const t of e) l().post(t, a);
         }
       }
-      (0, n.Cg)([o.sH], d.prototype, "m_Preferences", void 0);
-      var _ = i(75844),
-        u = i(7068),
-        p = i(72518),
-        f = i(52038),
-        w = i(32381),
-        h = i(25855),
-        b = i(55909),
-        v = i(71513);
-      let g;
-      const k = (0, _.PA)(() => {
+      (0, i.Cg)([s.sH], _.prototype, "m_Preferences", void 0);
+      var u = a(75844),
+        p = a(7068),
+        d = a(72518),
+        f = a(52038),
+        A = a(32381),
+        h = a(25855),
+        g = a(55909),
+        v = a(71513);
+      let E;
+      const P = (0, u.PA)(() => {
           let e = (function () {
-            if (!g) {
-              let e = (0, s.Tc)("cookiepreferences", "application_config");
-              g = new d(e);
+            if (!E) {
+              let e = (0, c.Tc)("cookiepreferences", "application_config");
+              E = new _(e);
             }
-            return g;
+            return E;
           })();
           const t = (0, h.A)(),
-            i = (0, r.useCallback)(() => {
+            a = (0, n.useCallback)(() => {
               e.SetPreferenceState(1);
             }, [e]),
-            a = (0, r.useCallback)(() => {
+            r = (0, n.useCallback)(() => {
               e.SetPreferenceState(2);
             }, [e]);
-          return r.createElement(
-            b.u,
+          return n.createElement(
+            g.u,
             { navID: "StoreCookiesSettings", NavigationManager: t },
-            r.createElement(
+            n.createElement(
               "div",
               {
                 className: (0, f.A)(
-                  p.CookieSettingsHeader,
+                  d.CookieSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
-              r.createElement(
+              n.createElement(
                 "div",
                 null,
                 (0, m.we)("#CookiePref_OptionalCookies_Title"),
               ),
             ),
-            r.createElement(
+            n.createElement(
               "div",
               { className: "account_settings_container" },
-              r.createElement(
-                w.Z,
-                { "flow-children": "row", className: p.ButtonGroup },
-                r.createElement(
+              n.createElement(
+                A.Z,
+                { "flow-children": "row", className: d.ButtonGroup },
+                n.createElement(
                   v.ml,
                   {
                     className: (0, f.A)(
-                      p.AllButton,
-                      e.BIsRejectAll() ? p.ButtonHighlight : "",
+                      d.AllButton,
+                      e.BIsRejectAll() ? d.ButtonHighlight : "",
                     ),
-                    onClick: a,
+                    onClick: r,
                   },
                   (0, m.we)("#CookiePref_RejectAll"),
                 ),
-                r.createElement(
+                n.createElement(
                   v.ml,
                   {
                     className: (0, f.A)(
-                      p.AllButton,
-                      e.BIsAllowAll() ? p.ButtonHighlight : "",
+                      d.AllButton,
+                      e.BIsAllowAll() ? d.ButtonHighlight : "",
                     ),
-                    onClick: i,
+                    onClick: a,
                   },
                   (0, m.we)("#CookiePref_AcceptAll"),
                 ),
               ),
-              r.createElement(y, { settings: e }),
-              r.createElement(E, { settings: e }),
-              r.createElement(P, { settings: e }),
+              n.createElement(y, { settings: e }),
+              n.createElement(N, { settings: e }),
+              n.createElement(S, { settings: e }),
             ),
-            r.createElement(
+            n.createElement(
               "div",
               {
                 className: (0, f.A)(
-                  p.CookieSettingsHeader,
+                  d.CookieSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
-              r.createElement(
+              n.createElement(
                 "div",
                 null,
                 (0, m.we)("#CookiePref_TechnicallyNeccesary_Title"),
               ),
             ),
-            r.createElement(
+            n.createElement(
               "div",
               { className: "account_settings_container" },
-              r.createElement(
+              n.createElement(
                 "p",
                 null,
                 (0, m.we)("#CookiePref_TechnicallyNeccesary_Desc"),
               ),
-              r.createElement(
+              n.createElement(
                 "div",
-                { className: p.CookieGroup },
-                r.createElement(
+                { className: d.CookieGroup },
+                n.createElement(
                   "div",
-                  { className: p.NecessaryGroup },
-                  r.createElement(
+                  { className: d.NecessaryGroup },
+                  n.createElement(
                     "span",
-                    { className: p.NecessaryTitle },
+                    { className: d.NecessaryTitle },
                     (0, m.we)("#CookiePref_SessionID_Title"),
                   ),
-                  r.createElement(
+                  n.createElement(
                     "span",
-                    { className: p.NecessaryDesc },
+                    { className: d.NecessaryDesc },
                     (0, m.we)("#CookiePref_SessionID_Desc"),
                   ),
                 ),
-                r.createElement(
+                n.createElement(
                   "div",
-                  { className: p.NecessaryGroup },
-                  r.createElement(
+                  { className: d.NecessaryGroup },
+                  n.createElement(
                     "span",
-                    { className: p.NecessaryTitle },
+                    { className: d.NecessaryTitle },
                     (0, m.we)("#CookiePref_ShoppingCart_Title"),
                   ),
-                  r.createElement(
+                  n.createElement(
                     "span",
-                    { className: p.NecessaryDesc },
+                    { className: d.NecessaryDesc },
                     (0, m.we)("#CookiePref_ShoppingCart_Desc"),
                   ),
                 ),
-                r.createElement(
+                n.createElement(
                   "div",
-                  { className: p.NecessaryGroup },
-                  r.createElement(
+                  { className: d.NecessaryGroup },
+                  n.createElement(
                     "span",
-                    { className: p.NecessaryTitle },
+                    { className: d.NecessaryTitle },
                     (0, m.we)("#CookiePref_SteamCountry_Title"),
                   ),
-                  r.createElement(
+                  n.createElement(
                     "span",
-                    { className: p.NecessaryDesc },
+                    { className: d.NecessaryDesc },
                     (0, m.we)("#CookiePref_SteamCountry_Desc"),
                   ),
                 ),
-                r.createElement(
+                n.createElement(
                   "div",
-                  { className: p.NecessaryGroup },
-                  r.createElement(
+                  { className: d.NecessaryGroup },
+                  n.createElement(
                     "span",
-                    { className: p.NecessaryTitle },
+                    { className: d.NecessaryTitle },
                     (0, m.we)("#CookiePref_Timezone_Title"),
                   ),
-                  r.createElement(
+                  n.createElement(
                     "span",
-                    { className: p.NecessaryDesc },
+                    { className: d.NecessaryDesc },
                     (0, m.we)("#CookiePref_Timezone_Desc"),
                   ),
                 ),
-                r.createElement(
+                n.createElement(
                   "div",
-                  { className: p.NecessaryGroup },
-                  r.createElement(
+                  { className: d.NecessaryGroup },
+                  n.createElement(
                     "span",
-                    { className: p.NecessaryTitle },
+                    { className: d.NecessaryTitle },
                     (0, m.we)("#CookiePref_BirthTime_Title"),
                   ),
-                  r.createElement(
+                  n.createElement(
                     "span",
-                    { className: p.NecessaryDesc },
+                    { className: d.NecessaryDesc },
                     (0, m.we)("#CookiePref_BirthTime_Desc"),
                   ),
                 ),
-                r.createElement(
+                n.createElement(
                   "div",
-                  { className: p.NecessaryGroup },
-                  r.createElement(
+                  { className: d.NecessaryGroup },
+                  n.createElement(
                     "span",
-                    { className: p.NecessaryTitle },
+                    { className: d.NecessaryTitle },
                     (0, m.we)("#CookiePref_Login_Title"),
                   ),
-                  r.createElement(
+                  n.createElement(
                     "span",
-                    { className: p.NecessaryDesc },
+                    { className: d.NecessaryDesc },
                     (0, m.we)("#CookiePref_Login_Desc"),
                   ),
                 ),
-                r.createElement(
+                n.createElement(
                   "div",
-                  { className: p.NecessaryGroup },
-                  r.createElement(
+                  { className: d.NecessaryGroup },
+                  n.createElement(
                     "span",
-                    { className: p.NecessaryTitle },
+                    { className: d.NecessaryTitle },
                     (0, m.we)("#CookiePref_Language_Title"),
                   ),
-                  r.createElement(
+                  n.createElement(
                     "span",
-                    { className: p.NecessaryDesc },
+                    { className: d.NecessaryDesc },
                     (0, m.we)("#CookiePref_Language_Desc"),
                   ),
                 ),
-                r.createElement(
+                n.createElement(
                   "div",
-                  { className: p.NecessaryGroup },
-                  r.createElement(
+                  { className: d.NecessaryGroup },
+                  n.createElement(
                     "span",
-                    { className: p.NecessaryTitle },
+                    { className: d.NecessaryTitle },
                     (0, m.we)("#CookiePref_CookieSettings_Title"),
                   ),
-                  r.createElement(
+                  n.createElement(
                     "span",
-                    { className: p.NecessaryDesc },
+                    { className: d.NecessaryDesc },
                     (0, m.we)("#CookiePref_CookieSettings_Desc"),
                   ),
                 ),
               ),
             ),
-            r.createElement(
+            n.createElement(
               "div",
               {
                 className: (0, f.A)(
-                  p.CookieSettingsHeader,
+                  d.CookieSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
-              r.createElement(
+              n.createElement(
                 "div",
                 null,
                 (0, m.we)("#PrivacySettings_Marketing_Header"),
               ),
             ),
-            r.createElement(
+            n.createElement(
               "div",
               { className: "account_settings_container" },
-              r.createElement(N, { settings: e }),
+              n.createElement(k, { settings: e }),
             ),
             null,
           );
         }),
-        y = (0, _.PA)((e) => {
+        y = (0, u.PA)((e) => {
           const { settings: t } = e,
-            i = (0, r.useCallback)(() => {
+            a = (0, n.useCallback)(() => {
               t.ToggleRecentApps();
             }, [t]);
-          return r.createElement(
+          return n.createElement(
             "div",
-            { className: p.CookieGroup },
-            r.createElement(
+            { className: d.CookieGroup },
+            n.createElement(
               "div",
-              { className: p.CookieSection },
-              r.createElement(
+              { className: d.CookieSection },
+              n.createElement(
                 "h2",
                 null,
                 (0, m.we)("#CookiePref_Content_Title"),
               ),
-              r.createElement(
+              n.createElement(
                 "p",
-                { className: p.SectionDescription },
+                { className: d.SectionDescription },
                 (0, m.we)("#CookiePref_Content_Desc"),
               ),
-              r.createElement(u.RF, {
-                onChange: i,
+              n.createElement(p.RF, {
+                onChange: a,
                 label: (0, m.we)("#CookiePref_Content_ToggleTitle"),
                 checked: t.GetRecentApps(),
                 description: (0, m.we)("#CookiePref_Content_ToggleDesc"),
@@ -1327,29 +811,29 @@
             ),
           );
         }),
-        E = (0, _.PA)((e) => {
+        N = (0, u.PA)((e) => {
           const { settings: t } = e,
-            i = (0, r.useCallback)(() => {
+            a = (0, n.useCallback)(() => {
               t.ToggleImpressions();
             }, [t]);
-          return r.createElement(
+          return n.createElement(
             "div",
-            { className: p.CookieGroup },
-            r.createElement(
+            { className: d.CookieGroup },
+            n.createElement(
               "div",
-              { className: p.CookieSection },
-              r.createElement(
+              { className: d.CookieSection },
+              n.createElement(
                 "h2",
                 null,
                 (0, m.we)("#CookiePref_ValveAnalytics_Title"),
               ),
-              r.createElement(
+              n.createElement(
                 "p",
-                { className: p.SectionDescription },
+                { className: d.SectionDescription },
                 (0, m.we)("#CookiePref_ValveAnalytics_Desc"),
               ),
-              r.createElement(u.RF, {
-                onChange: i,
+              n.createElement(p.RF, {
+                onChange: a,
                 label: (0, m.we)("#CookiePref_ValveAnalytics_ToggleTitle"),
                 checked: t.GetImpressions(),
                 description: (0, m.we)("#CookiePref_ValveAnalytics_ToggleDesc"),
@@ -1357,40 +841,40 @@
             ),
           );
         }),
-        P = (0, _.PA)((e) => {
+        S = (0, u.PA)((e) => {
           const { settings: t } = e,
-            i = (0, r.useCallback)(() => {
+            a = (0, n.useCallback)(() => {
               t.ToggleYouTube();
             }, [t]),
-            a = (0, r.useCallback)(() => {
+            r = (0, n.useCallback)(() => {
               t.ToggleVimeo();
             }, [t]),
-            n = (0, r.useCallback)(() => {
+            i = (0, n.useCallback)(() => {
               t.ToggleSketchfab();
             }, [t]);
-          return r.createElement(
+          return n.createElement(
             "div",
-            { className: p.CookieGroup },
-            r.createElement(
+            { className: d.CookieGroup },
+            n.createElement(
               "div",
-              { className: p.CookieSection },
-              r.createElement(
+              { className: d.CookieSection },
+              n.createElement(
                 "h2",
                 null,
                 (0, m.we)("#CookiePref_ThirdParty_Title"),
               ),
-              r.createElement(
+              n.createElement(
                 "p",
-                { className: p.SectionDescription },
+                { className: d.SectionDescription },
                 (0, m.we)("#CookiePref_ThirdParty_Desc"),
               ),
-              r.createElement(u.RF, {
-                onChange: i,
+              n.createElement(p.RF, {
+                onChange: a,
                 label: (0, m.we)("#CookiePref_YouTube_Title"),
                 checked: t.GetYouTube(),
                 description: (0, m.PP)(
                   "#CookiePref_YouTube_Desc",
-                  r.createElement(
+                  n.createElement(
                     "a",
                     {
                       href: "https://policies.google.com/privacy",
@@ -1400,26 +884,26 @@
                   ),
                 ),
               }),
-              r.createElement(u.RF, {
-                onChange: a,
+              n.createElement(p.RF, {
+                onChange: r,
                 label: (0, m.we)("#CookiePref_Vimeo_Title"),
                 checked: t.GetVimeo(),
                 description: (0, m.PP)(
                   "#CookiePref_Vimeo_Desc",
-                  r.createElement(
+                  n.createElement(
                     "a",
                     { href: "https://vimeo.com/privacy", target: "_blank" },
                     (0, m.we)("#CookiePref_Vimeo_TogglePolicyName"),
                   ),
                 ),
               }),
-              r.createElement(u.RF, {
-                onChange: n,
+              n.createElement(p.RF, {
+                onChange: i,
                 label: (0, m.we)("#CookiePref_Sketchfab_Title"),
                 checked: t.GetSketchfab(),
                 description: (0, m.PP)(
                   "#CookiePref_Sketchfab_Desc",
-                  r.createElement(
+                  n.createElement(
                     "a",
                     { href: "https://sketchfab.com/privacy", target: "_blank" },
                     (0, m.we)("#CookiePref_Sketchfab_TogglePolicyName"),
@@ -1429,29 +913,29 @@
             ),
           );
         }),
-        N = (0, _.PA)((e) => {
+        k = (0, u.PA)((e) => {
           const { settings: t } = e,
-            i = (0, r.useCallback)(() => {
+            a = (0, n.useCallback)(() => {
               t.ToggleUTMEnabled();
             }, [t]);
-          return r.createElement(
+          return n.createElement(
             "div",
-            { className: p.CookieGroup },
-            r.createElement(
+            { className: d.CookieGroup },
+            n.createElement(
               "div",
-              { className: p.CookieSection },
-              r.createElement(
+              { className: d.CookieSection },
+              n.createElement(
                 "h2",
                 null,
                 (0, m.we)("#PrivacySettings_Marketing_Title"),
               ),
-              r.createElement(
+              n.createElement(
                 "p",
-                { className: p.SectionDescription },
+                { className: d.SectionDescription },
                 (0, m.we)("#PrivacySettings_Marketing_Desc"),
               ),
-              r.createElement(u.RF, {
-                onChange: i,
+              n.createElement(p.RF, {
+                onChange: a,
                 label: (0, m.we)("#PrivacySettings_UTM_ToggleLabel"),
                 checked: t.GetUTMEnabled(),
                 description: (0, m.we)("#PrivacySettings_UTM_ToggleDesc"),
@@ -1463,7 +947,7 @@
         m_Preferences = void 0;
         m_bUpdating = !1;
         constructor(e) {
-          (0, o.Gn)(this), (this.m_Preferences = e);
+          (0, s.Gn)(this), (this.m_Preferences = e);
         }
         GetPreferences() {
           return this.m_Preferences;
@@ -1473,28 +957,28 @@
         }
         ToggleTargetPreference(e, t) {
           this.m_bUpdating = !0;
-          let i = !1;
-          for (let r of this.m_Preferences)
-            if (t.notification_type == r.notification_type) {
-              (r.notification_targets ^= e),
-                1 != (1 & r.notification_targets) &&
-                  (r.notification_targets = 0),
-                (i = !0);
+          let a = !1;
+          for (let n of this.m_Preferences)
+            if (t.notification_type == n.notification_type) {
+              (n.notification_targets ^= e),
+                1 != (1 & n.notification_targets) &&
+                  (n.notification_targets = 0),
+                (a = !0);
               break;
             }
-          i && this.PostNotificationSettings(), (this.m_bUpdating = !1);
+          a && this.PostNotificationSettings(), (this.m_bUpdating = !1);
         }
         async PostNotificationSettings() {
-          const e = s.TS.STORE_BASE_URL + "account/ajaxsetnotificationsettings",
+          const e = c.TS.STORE_BASE_URL + "account/ajaxsetnotificationsettings",
             t = new FormData();
-          t.set("sessionid", s.TS.SESSIONID),
+          t.set("sessionid", c.TS.SESSIONID),
             t.append(
               "notificationpreferences",
               JSON.stringify(this.m_Preferences),
             );
           try {
-            let i = await l().post(e, t, { withCredentials: !0 });
-            (200 == i.status && 1 == i?.data?.success) ||
+            let a = await l().post(e, t, { withCredentials: !0 });
+            (200 == a.status && 1 == a?.data?.success) ||
               window.ShowAlertDialog(
                 (0, m.we)("#NotificationPref_Error"),
                 (0, m.we)("#NotificationPref_ErrorNotSaved"),
@@ -1508,169 +992,169 @@
           }
         }
       }
-      (0, n.Cg)([o.sH], T.prototype, "m_Preferences", void 0),
-        (0, n.Cg)([o.sH], T.prototype, "m_bUpdating", void 0);
-      var S = i(6695),
-        C = i(4869);
+      (0, i.Cg)([s.sH], T.prototype, "m_Preferences", void 0),
+        (0, i.Cg)([s.sH], T.prototype, "m_bUpdating", void 0);
+      var w = a(6695),
+        C = a(4869);
       let D;
-      function A() {
+      function B() {
         if (!D) {
-          let e = (0, s.Tc)("notificationpreferences", "application_config");
+          let e = (0, c.Tc)("notificationpreferences", "application_config");
           D = new T(e);
         }
         return D;
       }
-      const x = (0, _.PA)(() => {
-          let e = A();
+      const I = (0, u.PA)(() => {
+          let e = B();
           const t = (0, h.A)();
-          let i = [];
+          let a = [];
           for (const t of e.GetPreferences())
-            i.push(r.createElement(z, { preferenceSetting: t }));
-          return r.createElement(
-            b.u,
+            a.push(n.createElement(b, { preferenceSetting: t }));
+          return n.createElement(
+            g.u,
             { navID: "StoreNotificationSettings", NavigationManager: t },
-            r.createElement(
+            n.createElement(
               "div",
               {
                 className: (0, f.A)(
-                  S.NotificationSettingsHeader,
+                  w.NotificationSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
-              r.createElement(
+              n.createElement(
                 "div",
                 null,
                 (0, m.we)("#NotificationSettings_Title"),
               ),
             ),
-            r.createElement(
+            n.createElement(
               "div",
               { className: "account_settings_container" },
-              r.createElement(
+              n.createElement(
                 "p",
-                { className: S.SectionDescription },
+                { className: w.SectionDescription },
                 (0, m.we)("#NotificationSettings_Desc1"),
               ),
-              r.createElement(
+              n.createElement(
                 "p",
-                { className: S.SectionDescription },
+                { className: w.SectionDescription },
                 (0, m.we)("#NotificationSettings_Desc2"),
               ),
-              r.createElement(
+              n.createElement(
                 "div",
                 { className: "notification_settings_container" },
-                r.createElement(
+                n.createElement(
                   "div",
-                  { className: S.NotificationSendWhen },
+                  { className: w.NotificationSendWhen },
                   (0, m.we)("#NotificationSettings_SendMeWhen"),
                 ),
-                i,
+                a,
               ),
             ),
           );
         }),
-        z = (0, _.PA)((e) => {
+        b = (0, u.PA)((e) => {
           const { preferenceSetting: t } = e;
-          let i = A();
-          const a = (0, r.useCallback)(() => {
-              i.ToggleTargetPreference(1, t);
-            }, [t, i]),
-            n = (0, r.useCallback)(() => {
-              i.ToggleTargetPreference(8, t);
-            }, [t, i]),
-            o = (0, r.useCallback)(() => {
-              i.ToggleTargetPreference(2, t);
-            }, [t, i]),
-            [s, c] = (0, r.useState)(!1),
-            l = i.BUpdatingPreferences(),
-            d = 1 == (1 & t.notification_targets),
-            _ = 2 == (2 & t.notification_targets),
-            p = 8 == (8 & t.notification_targets),
-            w =
+          let a = B();
+          const r = (0, n.useCallback)(() => {
+              a.ToggleTargetPreference(1, t);
+            }, [t, a]),
+            i = (0, n.useCallback)(() => {
+              a.ToggleTargetPreference(8, t);
+            }, [t, a]),
+            s = (0, n.useCallback)(() => {
+              a.ToggleTargetPreference(2, t);
+            }, [t, a]),
+            [c, o] = (0, n.useState)(!1),
+            l = a.BUpdatingPreferences(),
+            _ = 1 == (1 & t.notification_targets),
+            u = 2 == (2 & t.notification_targets),
+            d = 8 == (8 & t.notification_targets),
+            A =
               ((h = t.notification_type),
               (0, m.c9)("#SteamNotificationTypeDesc_" + h)
                 ? (0, m.we)("#SteamNotificationTypeDesc_" + h)
                 : null);
           var h;
-          return w
-            ? r.createElement(
+          return A
+            ? n.createElement(
                 "div",
-                { className: S.NotificationGroup },
-                r.createElement(
+                { className: w.NotificationGroup },
+                n.createElement(
                   "div",
-                  { className: S.NotificationSection },
-                  r.createElement(u.y4, {
-                    className: S.NotificationFeedToggle,
+                  { className: w.NotificationSection },
+                  n.createElement(p.y4, {
+                    className: w.NotificationFeedToggle,
                     padding: "compact",
-                    onChange: a,
+                    onChange: r,
                     disabled: l,
                     bottomSeparator: "none",
-                    checked: d,
+                    checked: _,
                   }),
-                  r.createElement(
+                  n.createElement(
                     "p",
-                    { className: S.NotificationDescription },
-                    w,
+                    { className: w.NotificationDescription },
+                    A,
                   ),
-                  r.createElement(
-                    u.wl,
+                  n.createElement(
+                    p.wl,
                     {
                       className: (0, f.A)({
-                        [S.PrefDetailsToggle]: !0,
-                        [S.Selected]: s,
+                        [w.PrefDetailsToggle]: !0,
+                        [w.Selected]: c,
                       }),
-                      onClick: () => c(!s),
+                      onClick: () => o(!c),
                     },
-                    r.createElement(C.b8_, { direction: "down" }),
+                    n.createElement(C.b8_, { direction: "down" }),
                   ),
                 ),
-                s &&
-                  r.createElement(
+                c &&
+                  n.createElement(
                     "div",
-                    { className: S.NotificationPrefDetails },
-                    r.createElement(u.Yh, {
+                    { className: w.NotificationPrefDetails },
+                    n.createElement(p.Yh, {
                       label: (0, m.we)("#NotificationSettings_SendToast"),
-                      disabled: l || !d,
-                      checked: p,
-                      onChange: n,
+                      disabled: l || !_,
+                      checked: d,
+                      onChange: i,
                     }),
-                    r.createElement(u.Yh, {
+                    n.createElement(p.Yh, {
                       label: (0, m.we)(
                         "#NotificationSettings_PushNotification",
                       ),
-                      disabled: l || !d,
-                      checked: _,
-                      onChange: o,
+                      disabled: l || !_,
+                      checked: u,
+                      onChange: s,
                     }),
                   ),
               )
             : null;
         });
-      var G = i(6813),
-        R = i(61359);
-      class B {
+      var R = a(6813),
+        Q = a(61359);
+      class G {
         m_rgDevices = [];
         m_rgRecentDevices = [];
         m_strKBArticleURL;
         static s_AuthorizedDevicesStore;
         constructor() {
-          (0, o.Gn)(this);
+          (0, s.Gn)(this);
         }
         static Get() {
           return (
-            B.s_AuthorizedDevicesStore ||
-              ((B.s_AuthorizedDevicesStore = new B()),
-              B.s_AuthorizedDevicesStore.Init()),
-            B.s_AuthorizedDevicesStore
+            G.s_AuthorizedDevicesStore ||
+              ((G.s_AuthorizedDevicesStore = new G()),
+              G.s_AuthorizedDevicesStore.Init()),
+            G.s_AuthorizedDevicesStore
           );
         }
         Init() {
-          (this.m_rgDevices = (0, s.Tc)("devices", "application_config")),
-            (this.m_rgRecentDevices = (0, s.Tc)(
+          (this.m_rgDevices = (0, c.Tc)("devices", "application_config")),
+            (this.m_rgRecentDevices = (0, c.Tc)(
               "recent_devices",
               "application_config",
             )),
-            (this.m_strKBArticleURL = (0, s.Tc)(
+            (this.m_strKBArticleURL = (0, c.Tc)(
               "kb_article",
               "application_config",
             ));
@@ -1685,10 +1169,10 @@
           return this.m_strKBArticleURL;
         }
       }
-      (0, n.Cg)([o.sH], B.prototype, "m_rgDevices", void 0),
-        (0, n.Cg)([o.sH], B.prototype, "m_rgRecentDevices", void 0);
+      (0, i.Cg)([s.sH], G.prototype, "m_rgDevices", void 0),
+        (0, i.Cg)([s.sH], G.prototype, "m_rgRecentDevices", void 0);
       var U,
-        I = i(12155);
+        z = a(12155);
       !(function (e) {
         (e[(e.k_EPlatformTypeUnknown = 0)] = "k_EPlatformTypeUnknown"),
           (e[(e.k_EPlatformTypeWin32 = 1)] = "k_EPlatformTypeWin32"),
@@ -1707,144 +1191,144 @@
           (e[(e.k_EPlatformTypeBrowser = 13)] = "k_EPlatformTypeBrowser"),
           (e[(e.k_EPlatformTypeMax = 14)] = "k_EPlatformTypeMax");
       })(U || (U = {}));
-      var O = i(91675),
-        L = i(22837),
-        M = i(738),
-        H = i(56011),
-        q = i(14771),
-        F = i(32754),
-        j = i(11838);
-      const Y = (0, _.PA)(() => {
-        let e = B.Get();
+      var H = a(91675),
+        F = a(22837),
+        M = a(738),
+        L = a(56011),
+        K = a(14771),
+        W = a(32754),
+        J = a(11838);
+      const X = (0, u.PA)(() => {
+        let e = G.Get();
         const t = (0, h.A)(),
-          i = (function () {
-            const [e] = r.useState(() =>
-              (0, s.Tc)("requesting_token_id", "application_config"),
+          a = (function () {
+            const [e] = n.useState(() =>
+              (0, c.Tc)("requesting_token_id", "application_config"),
             );
             return e;
           })(),
-          a = Date.now() / 1e3,
-          n = Z(
+          r = Date.now() / 1e3,
+          i = x(
             e
               .GetRecentDevices()
-              .find((e) => e.logged_in && e.last_seen?.time > a - 900) ??
+              .find((e) => e.logged_in && e.last_seen?.time > r - 900) ??
               e.GetRecentDevices()[0],
           ).country;
-        let o = [],
-          c = [];
+        let s = [],
+          o = [];
         for (const t of e.GetRecentDevices()) {
-          const e = t.logged_in && t.last_seen?.time > a - 900,
-            s = r.createElement(V, {
+          const e = t.logged_in && t.last_seen?.time > r - 900,
+            c = n.createElement(j, {
               device: t,
               key: t.token_id,
               bActiveNow: e,
-              bCurrentDevice: i == t.token_id,
-              strActiveCountry: n,
+              bCurrentDevice: a == t.token_id,
+              strActiveCountry: i,
             });
-          e ? o.push(s) : c.push(s);
+          e ? s.push(c) : o.push(c);
         }
         let l = [];
         for (const t of e.GetDevices())
           l.push(
-            r.createElement(V, {
+            n.createElement(j, {
               device: t,
               key: t.token_id,
-              strActiveCountry: n,
+              strActiveCountry: i,
             }),
           );
-        return r.createElement(
-          b.u,
+        return n.createElement(
+          g.u,
           { navID: "StoreAuthorizedDevices", NavigationManager: t },
-          r.createElement(
+          n.createElement(
             "div",
             {
               className: (0, f.A)(
-                R.AuthorizedDeviceHeader,
+                Q.AuthorizedDeviceHeader,
                 "account_header_line noicon",
               ),
             },
-            r.createElement(
+            n.createElement(
               "div",
               null,
               (0, m.we)("#accountpreferences_authorized_devices_header"),
             ),
           ),
-          r.createElement(
+          n.createElement(
             "div",
             { className: "account_settings_container" },
-            r.createElement(
+            n.createElement(
               "div",
-              { className: R.SectionDescription },
+              { className: Q.SectionDescription },
               (0, m.PP)(
                 "#accountpreferences_authorized_devices_description",
-                r.createElement("p", null),
+                n.createElement("p", null),
               ),
             ),
-            r.createElement(
+            n.createElement(
               "div",
-              { className: R.AuthorizedDeviceGroup },
-              r.createElement(
+              { className: Q.AuthorizedDeviceGroup },
+              n.createElement(
                 "div",
-                { className: R.DeviceGroup },
-                r.createElement(
+                { className: Q.DeviceGroup },
+                n.createElement(
                   "div",
-                  { className: R.ActiveNow },
-                  r.createElement(I.jlt, { className: R.ActiveNowDot }),
+                  { className: Q.ActiveNow },
+                  n.createElement(z.jlt, { className: Q.ActiveNowDot }),
                   (0, m.we)("#accountpreferences_authorized_device_active_now"),
                 ),
-                o,
+                s,
               ),
-              Boolean(c.length) &&
-                r.createElement(
+              Boolean(o.length) &&
+                n.createElement(
                   "div",
-                  { className: R.DeviceGroup },
-                  r.createElement(
+                  { className: Q.DeviceGroup },
+                  n.createElement(
                     "div",
-                    { className: R.AuthorizedDevicesRecentHeader },
+                    { className: Q.AuthorizedDevicesRecentHeader },
                     (0, m.we)(
                       "#accountpreferences_authorized_devices_recent_heading",
                     ),
                   ),
-                  c,
+                  o,
                 ),
               Boolean(l.length) &&
-                r.createElement(
+                n.createElement(
                   "div",
-                  { className: R.DeviceGroup },
-                  r.createElement(
+                  { className: Q.DeviceGroup },
+                  n.createElement(
                     "div",
-                    { className: R.AuthorizedDevicesRecentHeader },
+                    { className: Q.AuthorizedDevicesRecentHeader },
                     (0, m.we)(
                       "#accountpreferences_authorized_devices_other_heading",
                     ),
                   ),
                   l,
                 ),
-              r.createElement(
+              n.createElement(
                 "div",
-                { className: R.DeviceGroup },
-                r.createElement(
+                { className: Q.DeviceGroup },
+                n.createElement(
                   "div",
-                  { className: R.AuthorizedDevicesRecentHeader },
+                  { className: Q.AuthorizedDevicesRecentHeader },
                   (0, m.we)(
                     "#accountpreferences_authorized_devices_remove_header",
                   ),
                 ),
-                r.createElement(
+                n.createElement(
                   "div",
-                  { className: R.RemoveDevicesRow },
-                  r.createElement(
+                  { className: Q.RemoveDevicesRow },
+                  n.createElement(
                     "div",
                     null,
                     (0, m.we)(
                       "#accountpreferences_authorized_devices_remove_desc",
                     ),
                   ),
-                  r.createElement(
-                    u.wl,
+                  n.createElement(
+                    p.wl,
                     {
                       onClick: (e) => {
-                        (0, M.pg)(r.createElement($, null), (0, H.uX)(e));
+                        (0, M.pg)(n.createElement(q, null), (0, L.uX)(e));
                       },
                     },
                     (0, m.we)(
@@ -1857,17 +1341,17 @@
           ),
         );
       });
-      function V(e) {
+      function j(e) {
         const {
             device: t,
-            bActiveNow: i,
-            bCurrentDevice: a,
-            strActiveCountry: n,
+            bActiveNow: a,
+            bCurrentDevice: r,
+            strActiveCountry: i,
           } = e,
-          [o, s] = (0, r.useState)(!1);
-        let c = (function (e) {
+          [s, c] = (0, n.useState)(!1);
+        let o = (function (e) {
           if (2 == e.platform_type) {
-            let t = new j.UAParser(e.token_description).getResult();
+            let t = new J.UAParser(e.token_description).getResult();
             return t.browser.name && t.os.name
               ? "WebKit" == t.browser.name
                 ? t.os.name
@@ -1882,125 +1366,125 @@
           }
           return e.token_description;
         })(t);
-        c.length && (c = ' - "' + c + '"');
-        const l = Z(t);
-        let d = null;
+        o.length && (o = ' - "' + o + '"');
+        const l = x(t);
+        let _ = null;
         return (
-          (d =
-            l.country && n && n != l.country
-              ? r.createElement(
-                  F.he,
+          (_ =
+            l.country && i && i != l.country
+              ? n.createElement(
+                  W.he,
                   {
-                    className: R.Tooltip,
+                    className: Q.Tooltip,
                     toolTipContent: (0, m.we)(
                       "#accountpreferences_authorized_devices_suspicous_tooltip",
                     ),
                     direction: "top",
                   },
-                  r.createElement(
+                  n.createElement(
                     "div",
-                    { className: R.LocationSuspicious },
+                    { className: Q.LocationSuspicious },
                     l.location,
-                    r.createElement(C.$$j, null),
+                    n.createElement(C.$$j, null),
                   ),
                 )
-              : r.createElement(
+              : n.createElement(
                   "div",
-                  { className: R.LocationNotSuspicious },
+                  { className: Q.LocationNotSuspicious },
                   l.location,
                 )),
-          r.createElement(
+          n.createElement(
             "div",
             {
-              className: (0, f.A)(R.DeviceContainer, i && R.ActiveDevice),
+              className: (0, f.A)(Q.DeviceContainer, a && Q.ActiveDevice),
               key: "id_" + t.token_id,
-              onClick: () => s(!o),
+              onClick: () => c(!s),
             },
-            r.createElement(X, { device: t }),
-            r.createElement(
+            n.createElement(Y, { device: t }),
+            n.createElement(
               "div",
-              { className: R.DeviceContent },
-              r.createElement(
+              { className: Q.DeviceContent },
+              n.createElement(
                 "div",
-                { className: R.DeviceHeaderRow },
-                r.createElement(
+                { className: Q.DeviceHeaderRow },
+                n.createElement(
                   "div",
-                  { className: R.DeviceNameContainer },
-                  r.createElement(
+                  { className: Q.DeviceNameContainer },
+                  n.createElement(
                     "div",
-                    { className: R.DeviceName },
-                    r.createElement(J, { device: t }),
-                    c,
+                    { className: Q.DeviceName },
+                    n.createElement(Z, { device: t }),
+                    o,
                   ),
-                  a &&
-                    r.createElement(
+                  r &&
+                    n.createElement(
                       "div",
-                      { className: R.ThisDevice },
+                      { className: Q.ThisDevice },
                       (0, m.we)(
                         "#accountpreferences_authorized_devices_this_device",
                       ),
                     ),
                 ),
-                r.createElement(
+                n.createElement(
                   "div",
-                  { className: R.DetailsToggleContainer },
-                  d,
-                  r.createElement(
+                  { className: Q.DetailsToggleContainer },
+                  _,
+                  n.createElement(
                     "div",
-                    { className: R.DetailsToggle },
-                    r.createElement(
-                      u.wl,
+                    { className: Q.DetailsToggle },
+                    n.createElement(
+                      p.wl,
                       {
                         className: (0, f.A)({
-                          [R.DetailsToggle]: !0,
-                          [R.Selected]: o,
+                          [Q.DetailsToggle]: !0,
+                          [Q.Selected]: s,
                         }),
                       },
-                      r.createElement(C.b8_, { direction: "down" }),
+                      n.createElement(C.b8_, { direction: "down" }),
                     ),
                   ),
                 ),
               ),
-              !i && r.createElement(W, { device: t }),
-              o && r.createElement(K, { device: t }),
+              !a && n.createElement(V, { device: t }),
+              s && n.createElement(O, { device: t }),
             ),
           )
         );
       }
-      function W(e) {
+      function V(e) {
         const { device: t } = e,
-          i =
+          a =
             t.first_seen?.time &&
-            t.first_seen.time + 2 * q.Kp.PerWeek > Date.now() / 1e3;
-        return r.createElement(
+            t.first_seen.time + 2 * K.Kp.PerWeek > Date.now() / 1e3;
+        return n.createElement(
           "div",
-          { className: R.LastSeenRow },
+          { className: Q.LastSeenRow },
           !!t.last_seen?.time &&
-            r.createElement(
+            n.createElement(
               "div",
               null,
-              r.createElement(
+              n.createElement(
                 "span",
-                { className: R.LastActive },
+                { className: Q.LastActive },
                 (0, m.we)(
                   "#accountpreferences_authorized_devices_last_seen_title",
                 ),
               ),
-              (0, O.Nm)(t.last_seen.time),
+              (0, H.Nm)(t.last_seen.time),
             ),
-          i &&
-            r.createElement(
+          a &&
+            n.createElement(
               "div",
-              { className: R.NewDevice },
+              { className: Q.NewDevice },
               (0, m.we)("#accountpreferences_authorized_devices_new_device"),
             ),
         );
       }
-      function K(e) {
+      function O(e) {
         const { device: t } = e;
-        return r.createElement(
+        return n.createElement(
           "div",
-          { className: R.AuthorizedDeviceDetails },
+          { className: Q.AuthorizedDeviceDetails },
           (0, m.we)(
             (function (e, t) {
               if (2 == e) return "#authorized_devices_default_qr";
@@ -2018,23 +1502,23 @@
                   return "#authorized_devices_default_password";
               }
             })(t.authentication_type, t.auth_type),
-            (0, m.TW)(t.first_seen.time) + " @ " + (0, O.KC)(t.first_seen.time),
+            (0, m.TW)(t.first_seen.time) + " @ " + (0, H.KC)(t.first_seen.time),
           ),
         );
       }
-      function X(e) {
+      function Y(e) {
         const { device: t } = e;
         if (2 == t.platform_type)
-          return r.createElement(C.FH7, { className: R.DeviceLogo });
+          return n.createElement(C.FH7, { className: Q.DeviceLogo });
         if (
           1 == t.platform_type &&
-          t.gaming_device_type === L.zm.k_EGamingDeviceType_SteamDeck
+          t.gaming_device_type === F.zm.k_EGamingDeviceType_SteamDeck
         )
-          return r.createElement(C.oEi, { className: R.DeviceLogo });
+          return n.createElement(C.oEi, { className: Q.DeviceLogo });
         switch (t.os_platform) {
           case U.k_EPlatformTypeWin32:
           case U.k_EPlatformTypeWin64:
-            return r.createElement(C.TV, { className: R.DeviceLogo });
+            return n.createElement(C.TV, { className: Q.DeviceLogo });
           case U.k_EPlatformTypeAndroid32:
           case U.k_EPlatformTypeAndroid64:
           case U.k_EPlatformTypeLinux32:
@@ -2042,12 +1526,12 @@
           case U.k_EPlatformTypeIOS32:
           case U.k_EPlatformTypeIOS64:
           case U.k_EPlatformTypeOSX:
-            return r.createElement(I.rfv, { className: R.DeviceLogo });
+            return n.createElement(z.rfv, { className: Q.DeviceLogo });
           default:
             return null;
         }
       }
-      function Z(e) {
+      function x(e) {
         const t = e.last_seen ?? e.first_seen;
         return t && t.city && t.country
           ? { location: t.city + ", " + t.country, country: t.country }
@@ -2058,7 +1542,7 @@
               country: "",
             };
       }
-      function J(e) {
+      function Z(e) {
         const { device: t } = e;
         switch (t.platform_type) {
           case 3:
@@ -2066,7 +1550,7 @@
               "#accountpreferences_authorized_devices_type_mobile",
             );
           case 1:
-            return t.gaming_device_type === L.zm.k_EGamingDeviceType_SteamDeck
+            return t.gaming_device_type === F.zm.k_EGamingDeviceType_SteamDeck
               ? (0, m.we)(
                   "#accountpreferences_authorized_devices_type_steamdeck",
                 )
@@ -2083,50 +1567,50 @@
             );
         }
       }
-      function $(e) {
+      function q(e) {
         const { closeModal: t } = e;
-        return r.createElement(
+        return n.createElement(
           M.x_,
           { onEscKeypress: t },
-          r.createElement(
-            u.UC,
+          n.createElement(
+            p.UC,
             null,
-            r.createElement(
-              u.Y9,
+            n.createElement(
+              p.Y9,
               null,
               (0, m.we)("#authorized_devices_deauthorize_title"),
             ),
-            r.createElement(
-              u.nB,
+            n.createElement(
+              p.nB,
               null,
-              r.createElement(
-                u.a3,
+              n.createElement(
+                p.a3,
                 null,
                 (0, m.we)("#authorized_devices_deauthorize_msg"),
               ),
-              r.createElement(
-                u.wi,
+              n.createElement(
+                p.wi,
                 null,
-                r.createElement(u.CB, {
+                n.createElement(p.CB, {
                   strOKText: (0, m.we)(
                     "#authorized_devices_deauthorize_proceed",
                   ),
                   onOK: async () => {
                     const e = new FormData();
                     e.set("action", "deauthorize"),
-                      e.set("sessionid", s.TS.SESSIONID),
+                      e.set("sessionid", c.TS.SESSIONID),
                       await l().post(
-                        s.TS.STORE_BASE_URL + "twofactor/manage_action",
+                        c.TS.STORE_BASE_URL + "twofactor/manage_action",
                         e,
                       );
                     const t = document.createElement("form");
                     (t.method = "POST"),
-                      (t.action = s.TS.STORE_BASE_URL + "logout");
-                    const i = document.createElement("input");
-                    (i.type = "hidden"),
-                      (i.name = "sessionid"),
-                      (i.value = s.TS.SESSIONID),
-                      t.appendChild(i),
+                      (t.action = c.TS.STORE_BASE_URL + "logout");
+                    const a = document.createElement("input");
+                    (a.type = "hidden"),
+                      (a.name = "sessionid"),
+                      (a.value = c.TS.SESSIONID),
+                      t.appendChild(a),
                       document.body.appendChild(t),
                       t.submit();
                   },
@@ -2137,72 +1621,319 @@
           ),
         );
       }
-      const Q = r.lazy(() =>
+      var $ = a(86227),
+        ee = a.n($),
+        te = a(56545),
+        ae = a(75487),
+        ne = a(31380),
+        re = a(23809);
+      const ie = "PlaytestInvites";
+      var se = a(1035),
+        ce = a(41471),
+        oe = a(17720),
+        le = a(55263),
+        me = a(44165),
+        _e = a(51272),
+        ue = a(84811),
+        pe = a(22797),
+        de = a(40094);
+      function fe(e) {
+        const t = (0, h.A)(),
+          a = (function () {
+            const e = (0, re.KV)();
+            return (0, ne.useQuery)([ie], async () => {
+              const t = te.w.Init(ae.rX),
+                a = await ae.BX.GetInvites(e, t);
+              if (1 != a.GetEResult())
+                throw new Error(
+                  `Error from usePlaytestInvite: ${a.GetEResult()} ${a.GetErrorMessage()}`,
+                );
+              return a.Body()?.toObject().invites ?? [];
+            });
+          })();
+        let r = [];
+        return (
+          a.isSuccess &&
+            (r = a.data
+              .filter((e) => 1 === e.status || 3 === e.status)
+              .map((e) =>
+                3 === e.status
+                  ? n.createElement(Ae, { invite: e, key: e.invite_id })
+                  : n.createElement(he, { invite: e, key: e.invite_id }),
+              )),
+          n.createElement(
+            g.u,
+            { navID: "StorePlaytestInvites", NavigationManager: t },
+            n.createElement(
+              "div",
+              { className: ee().PreferencesHeader },
+              n.createElement(
+                "div",
+                {
+                  className: (0, f.A)(
+                    ee().AccountHeader,
+                    "account_header_line noicon",
+                  ),
+                },
+                (0, m.we)("#PlaytestInvites_Title"),
+              ),
+            ),
+            n.createElement(
+              "div",
+              { className: ee().PlaytestInvites },
+              a.isLoading || r.length > 0
+                ? r
+                : (0, m.we)("#PlaytestInvites_NoInvites"),
+            ),
+          )
+        );
+      }
+      function Ae(e) {
+        const { invite: t } = e,
+          a = Pe(t.appid, t.app_name),
+          r = t.appid,
+          i = n.useCallback(
+            (e) => {
+              (0, _e.EP)((0, L.uX)(e), `steam://open/games/details/${r}`);
+            },
+            [r],
+          );
+        return n.createElement(
+          "div",
+          { className: ee().PlaytestInvite },
+          n.createElement(
+            "div",
+            { className: ee().InviteInfo },
+            n.createElement(
+              "span",
+              null,
+              (0, m.we)("#PlaytestInvites_Welcome", a),
+            ),
+          ),
+          !c.TS.IN_MOBILE_WEBVIEW &&
+            n.createElement(
+              "div",
+              { className: ee().StatusCtn },
+              n.createElement(
+                A.Z,
+                { className: ee().Buttons },
+                n.createElement(
+                  p.jn,
+                  { className: ee().WideButton, noFocusRing: !1, onClick: i },
+                  (0, m.we)("#PlaytestInvites_ViewLibrary"),
+                ),
+              ),
+            ),
+        );
+      }
+      function he(e) {
+        const { invite: t } = e,
+          a = (0, me.f1)(),
+          r = (function (e) {
+            const t = (0, re.KV)(),
+              a = (0, ne.useQueryClient)();
+            return (0, ne.useMutation)({
+              mutationFn: async (a) => {
+                const n = te.w.Init(ae.q);
+                n.Body().add_invite_ids(e),
+                  n.Body().set_status(a.bAccept ? 3 : 2);
+                const r = await ae.BX.UpdateInvites(t, n);
+                if (1 != r.GetEResult())
+                  throw {
+                    result: r.GetEResult(),
+                    message: `Error from UpdatePlaytestInvite: ${r.GetErrorMessage()} ( ${r.GetEResult()} )`,
+                  };
+              },
+              onSuccess: (t, n) => {
+                a.setQueryData([ie], (t) =>
+                  t.map(
+                    (t) => (
+                      t.invite_id === e && (t.status = n.bAccept ? 3 : 2), t
+                    ),
+                  ),
+                );
+              },
+              onError: () => {
+                a.invalidateQueries(ie);
+              },
+            });
+          })(t.invite_id),
+          i = n.useCallback(
+            (e) => {
+              r.mutate({ bAccept: e });
+            },
+            [r],
+          ),
+          s = new oe.b(t.steamid_inviter);
+        return n.createElement(
+          ue.tH,
+          null,
+          n.createElement(
+            A.Z,
+            {
+              className: ee().PlaytestInvite,
+              navEntryPreferPosition: de.iU.MAINTAIN_X,
+            },
+            n.createElement(
+              "div",
+              { className: ee().InviteInfo },
+              n.createElement(ge, {
+                steamIDInviter: s,
+                nAppID: t.appid,
+                strAppNameBackup: t.app_name,
+              }),
+              n.createElement(
+                "div",
+                { className: ee().TimeInvited },
+                (0, m.Nm)(t.time_created ?? a),
+              ),
+            ),
+            n.createElement(
+              "div",
+              { className: ee().StatusCtn },
+              r.isLoading
+                ? n.createElement(pe.t, {
+                    size: "medium",
+                    position: "center",
+                    msDelayAppear: 250,
+                  })
+                : n.createElement(
+                    "div",
+                    { className: ee().Buttons },
+                    n.createElement(
+                      p.jn,
+                      { noFocusRing: !1, onClick: () => i(!0) },
+                      (0, m.we)("#PlaytestInvites_Accept"),
+                    ),
+                    n.createElement(
+                      p.$n,
+                      { noFocusRing: !1, onClick: () => i(!1) },
+                      (0, m.we)("#PlaytestInvites_Reject"),
+                    ),
+                  ),
+            ),
+          ),
+        );
+      }
+      function ge(e) {
+        const { steamIDInviter: t, nAppID: a, strAppNameBackup: r } = e,
+          i = Pe(a, r);
+        return t.BIsValid()
+          ? n.createElement(ve, { steamIDInviter: t, strAppName: i })
+          : n.createElement(Ee, { strAppName: i });
+      }
+      function ve(e) {
+        const { steamIDInviter: t, strAppName: a } = e,
+          r = (0, ce.js)(t.ConvertTo64BitString()),
+          i = r?.data;
+        return r.isSuccess
+          ? n.createElement(
+              "div",
+              { className: ee().AvatarAndPersona },
+              n.createElement(se.i8, {
+                persona: i,
+                size: "Small",
+                statusPosition: "right",
+              }),
+              n.createElement(
+                "div",
+                null,
+                (0, m.PP)(
+                  "#PlaytestInvites_InviteDescription_FromUser",
+                  n.createElement(
+                    v.Ii,
+                    { href: i.GetCommunityProfileURL() },
+                    i?.m_strPlayerName,
+                  ),
+                  a,
+                ),
+              ),
+            )
+          : n.createElement(Ee, { strAppName: a });
+      }
+      function Ee(e) {
+        const { strAppName: t } = e;
+        return n.createElement(
+          "div",
+          null,
+          (0, m.we)("#PlaytestInvites_InviteDescription_FromApp", t),
+        );
+      }
+      function Pe(e, t) {
+        const [a, n] = (0, le.t7)(e, { include_basic_info: !0 });
+        return a && 3 == n ? a.GetName() : t;
+      }
+      const ye = n.lazy(() =>
           Promise.all([
-            i.e(8970),
-            i.e(6597),
-            i.e(2298),
-            i.e(576),
-            i.e(2797),
-            i.e(4717),
-            i.e(6769),
-            i.e(7403),
-            i.e(582),
-            i.e(140),
-            i.e(5578),
-            i.e(1006),
-            i.e(1471),
-            i.e(5717),
-            i.e(9239),
-            i.e(8567),
-            i.e(7072),
-          ]).then(i.bind(i, 42048)),
+            a.e(8970),
+            a.e(2298),
+            a.e(576),
+            a.e(4717),
+            a.e(7436),
+            a.e(582),
+            a.e(4796),
+            a.e(6049),
+            a.e(7576),
+            a.e(7368),
+            a.e(8567),
+            a.e(7072),
+          ]).then(a.bind(a, 42048)),
         ),
-        ee = {
+        Ne = {
           CookieSettings: () => "/cookiepreferences",
           NotificationSettings: () => "/notificationsettings",
           ...{ FamilyManagement: () => "/familymanagement" },
           AuthorizedDevices: () => "/authorizeddevices",
+          PlaytestInvites: () => "/playtestinvites",
         },
-        te = (e) => {
+        Se = (e) => {
           const t = e.match.url,
-            i = ee;
-          return r.createElement(
-            a.dO,
+            a = Ne;
+          return n.createElement(
+            r.dO,
             null,
-            r.createElement(a.qh, {
-              path: `${t}${i.CookieSettings()}`,
+            n.createElement(r.qh, {
+              path: `${t}${a.CookieSettings()}`,
               render: () =>
-                r.createElement(G.X, {
+                n.createElement(R.X, {
                   config: {
-                    "cookie-preferences": () => r.createElement(k, null),
+                    "cookie-preferences": () => n.createElement(P, null),
                   },
                 }),
             }),
-            r.createElement(a.qh, {
-              path: `${t}${i.NotificationSettings()}`,
+            n.createElement(r.qh, {
+              path: `${t}${a.NotificationSettings()}`,
               render: () =>
-                r.createElement(G.X, {
+                n.createElement(R.X, {
                   config: {
-                    "notification-settings": () => r.createElement(x, null),
+                    "notification-settings": () => n.createElement(I, null),
                   },
                 }),
             }),
-            r.createElement(a.qh, {
-              path: `${t}${i.FamilyManagement()}`,
+            n.createElement(r.qh, {
+              path: `${t}${a.FamilyManagement()}`,
               render: () =>
-                r.createElement(G.X, {
+                n.createElement(R.X, {
                   config: {
-                    "family-management": () => r.createElement(Q, null),
+                    "family-management": () => n.createElement(ye, null),
                   },
                 }),
             }),
-            r.createElement(a.qh, {
-              path: `${t}${i.AuthorizedDevices()}`,
+            n.createElement(r.qh, {
+              path: `${t}${a.AuthorizedDevices()}`,
               render: () =>
-                r.createElement(G.X, {
+                n.createElement(R.X, {
                   config: {
-                    "authorized-devices": () => r.createElement(Y, null),
+                    "authorized-devices": () => n.createElement(X, null),
+                  },
+                }),
+            }),
+            n.createElement(r.qh, {
+              path: `${t}${a.PlaytestInvites()}`,
+              render: () =>
+                n.createElement(R.X, {
+                  config: {
+                    "playtest-invites": () => n.createElement(fe, null),
                   },
                 }),
             }),

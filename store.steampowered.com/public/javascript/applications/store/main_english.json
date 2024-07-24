@@ -854,5 +854,13 @@
     "Steamawards_Voting_FAQ_8_Q": "Can I change my vote?",
     "Steamawards_Voting_FAQ_8_A": "Yes, you can change your vote up until January 2nd at 10am Pacific. Note that you will only get a sticker once per category.",
     "Cart_CountWidget": "Cart (%1$s)",
+    "PlaytestInvites_Title": "Playtest Invites",
+    "PlaytestInvites_Accept": "Accept",
+    "PlaytestInvites_Reject": "Reject",
+    "PlaytestInvites_InviteDescription_FromApp": "You have been invited to join the Steam Playtest for %1$s!",
+    "PlaytestInvites_InviteDescription_FromUser": "%1$s has invited you to join the Steam Playtest for %2$s!",
+    "PlaytestInvites_NoInvites": "You have no active Steam Playtest invites.",
+    "PlaytestInvites_Welcome": "Welcome to the Playtest! %1$s can now be installed from your Library.",
+    "PlaytestInvites_ViewLibrary": "View Library",
     "dummy_for_end_of_file_convenience": "dummy"
 }
