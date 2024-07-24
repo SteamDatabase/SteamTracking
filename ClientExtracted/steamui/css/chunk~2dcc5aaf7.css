@@ -5425,7 +5425,6 @@ div.ShortWindow
 }
 .z-cTLiR329QSsE3P9rkR .DialogTextInputBase {
   font-size: 16px;
-  text-transform: uppercase;
 }
 .z-cTLiR329QSsE3P9rkR .SVGIcon_DynamicCollection {
   margin-bottom: -5px;
@@ -148419,7 +148418,7 @@ img {
   font-size: 16px;
   padding: 4px 8px;
   background: rgba(0, 0, 0, 0.25);
-  text-transform: uppercase;
+  text-transform: none;
   flex: 1;
   transition-property: background;
   transition-duration: 0.16s;
