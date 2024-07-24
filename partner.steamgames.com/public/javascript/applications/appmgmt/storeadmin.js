@@ -3782,9 +3782,24 @@
                   Et.b.findIndex((e) => e.id === t.accountid) >= 0,
               }),
             },
-            "Created by: ",
-            o.createElement(Xe.p, { accountID: t.accountid }),
-            ", Created on ",
+            Et.b.findIndex((e) => e.id == t.assigned_agent_accountid) >= 0
+              ? o.createElement(
+                  o.Fragment,
+                  null,
+                  "Owned By: ",
+                  o.createElement(Xe.p, {
+                    accountID: t.assigned_agent_accountid,
+                  }),
+                  ",",
+                )
+              : o.createElement(
+                  o.Fragment,
+                  null,
+                  "Created by: ",
+                  o.createElement(Xe.p, { accountID: t.accountid }),
+                  ",",
+                ),
+            "Created on ",
             (0, i.TW)(t.time_created),
           ),
           o.createElement("br", null),
@@ -4277,7 +4292,7 @@
             mapPartnerPaidByPackage: a,
           } = e,
           [l, c] = (0, o.useState)(!1),
-          [s, i] = (0, o.useState)(!1);
+          [s, i] = (0, o.useState)(!0);
         return o.createElement(
           "div",
           { className: (0, U.A)(dt.PriceDeltaCtn) },
