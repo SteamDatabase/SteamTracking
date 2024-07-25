@@ -56920,22 +56920,28 @@
           n = Sa(),
           [r] = (0, Ba.QD)("appidlist", ""),
           [i] = (0, Ba.QD)("partneridlist", ""),
-          [l] = (0, Ba.QD)("bundleid", ""),
-          o = r?.length > 0 || i?.length > 0 || l?.length > 0,
-          [c, m] = (0, Ba.QD)("freetoplay", o),
-          [d, u] = (0, Ba.QD)("adultonly", o),
-          [p, _] = (0, Ba.QD)("earlyaccess", !0),
-          [g, h] = (0, Ba.QD)("recentorupcomingfeaturing", o),
-          [E, S] = (0, Ba.QD)("recentorupcomingrelease", o),
-          [f, v] = (0, Ba.QD)("vr_required", o),
-          [b, D] = (0, Ba.QD)("unfeatured", !1),
-          [I, B] = (0, Ba.QD)("unassigned", !1),
-          [T, A] = (0, Ba.QD)("software", !0),
-          [M, k] = (0, Ba.QD)("excludetags", ""),
-          [R, P] = (0, Ba.QD)("requiretags", ""),
-          [N, G] = (0, Ba.QD)("rt_feature_start", 0),
-          [O, F] = (0, Ba.QD)("rt_feature_end", 0),
-          L = (e, t, a, n) => {
+          [l] = (0, Ba.QD)("saleclaneventgid", ""),
+          [o] = (0, Ba.QD)("saleclanaccountid", ""),
+          [c] = (0, Ba.QD)("bundleid", ""),
+          m =
+            r?.length > 0 ||
+            i?.length > 0 ||
+            (l?.length > 0 && o?.length > 0) ||
+            c?.length > 0,
+          [d, u] = (0, Ba.QD)("freetoplay", m),
+          [p, _] = (0, Ba.QD)("adultonly", m),
+          [g, h] = (0, Ba.QD)("earlyaccess", !0),
+          [E, S] = (0, Ba.QD)("recentorupcomingfeaturing", m),
+          [f, v] = (0, Ba.QD)("recentorupcomingrelease", m),
+          [b, D] = (0, Ba.QD)("vr_required", m),
+          [I, B] = (0, Ba.QD)("unfeatured", !1),
+          [T, A] = (0, Ba.QD)("unassigned", !1),
+          [M, k] = (0, Ba.QD)("software", !0),
+          [R, P] = (0, Ba.QD)("excludetags", ""),
+          [N, G] = (0, Ba.QD)("requiretags", ""),
+          [O, F] = (0, Ba.QD)("rt_feature_start", 0),
+          [L, U] = (0, Ba.QD)("rt_feature_end", 0),
+          z = (e, t, a, n) => {
             const r = a.split(","),
               i = r.findIndex((t) => t == e.toString());
             if (t && -1 == i) {
@@ -56943,23 +56949,23 @@
               t.length > 0 && (t += ","), n(t + e);
             } else t || -1 == i || (r.splice(i, 1), n(r.toString()));
           },
-          [U, z] = (0, s.useMemo)(() => {
-            if (d && c && p && g && E && f && !b && T && !M)
+          [x, q] = (0, s.useMemo)(() => {
+            if (p && d && g && E && f && b && !I && M && !R)
               return [[...a], a.map((e) => e.appid)];
             const e = Math.floor(Date.now() / 1e3) - Ya,
               t = Math.floor(Date.now() / 1e3) - Ka,
-              r = new Set(M.split(",")),
-              i = new Set(R.split(",")),
+              r = new Set(R.split(",")),
+              i = new Set(N.split(",")),
               s = a.filter((a) => {
-                if (!d && a.content_descriptors?.includes(3)) return !1;
-                if (!c && a.freetoplay) return !1;
-                if (!p && a.earlyaccess) return !1;
+                if (!p && a.content_descriptors?.includes(3)) return !1;
+                if (!d && a.freetoplay) return !1;
+                if (!g && a.earlyaccess) return !1;
                 if (
-                  !E &&
+                  !f &&
                   Math.floor(new Date(a.release_date).getTime() / 1e3) > e
                 )
                   return !1;
-                if (!g || b) {
+                if (!E || I) {
                   const e = (function (e, t) {
                     let a = 0;
                     const n = (0, y.FT)(t.appid, 0);
@@ -56976,40 +56982,42 @@
                         }),
                         a);
                   })(n, a);
-                  if (!g && e > t) return !1;
-                  if (b && 0 != e) return !1;
+                  if (!E && e > t) return !1;
+                  if (I && 0 != e) return !1;
                 }
-                if (!f && a.vr_required) return !1;
-                if (!T && "software" == a.type) return !1;
-                if (M) {
+                if (!b && a.vr_required) return !1;
+                if (!M && "software" == a.type) return !1;
+                if (R) {
                   if (a.tagids.split(",").filter((e) => r.has(e)).length > 0)
                     return !1;
                 }
-                if (R) {
+                if (N) {
                   let e = a.tagids.split(",");
                   if (i.size != e.filter((e) => i.has(e)).length) return !1;
                 }
                 return !0;
               });
             return [s, s.map((e) => e.appid)];
-          }, [a, c, d, p, b, E, f, g, n, T, M, R]);
+          }, [a, d, p, g, I, f, b, E, n, M, R, N]);
         "dev" == Ee.TS.WEB_UNIVERSE &&
-          console.log("DEV_DEBUG: candidates apps", a, U);
-        const x =
-          (c ? "&freetoplay=true" : "") +
-          (d ? "&adultonly=true" : "") +
-          (p ? "" : "&earlyaccess=false") +
-          (g ? "&recentorupcomingfeaturing=true" : "") +
-          (E ? "&recentorupcomingrelease=true" : "") +
-          (f ? "&vr_required=true" : "") +
-          (b ? "&unfeatured=true" : "") +
+          console.log("DEV_DEBUG: candidates apps", a, x);
+        const W =
+          (d ? "&freetoplay=true" : "") +
+          (p ? "&adultonly=true" : "") +
+          (g ? "" : "&earlyaccess=false") +
+          (E ? "&recentorupcomingfeaturing=true" : "") +
+          (f ? "&recentorupcomingrelease=true" : "") +
+          (b ? "&vr_required=true" : "") +
+          (I ? "&unfeatured=true" : "") +
+          (l ? "&saleclaneventgid=" + l : "") +
+          (o ? "&saleclanaccountid=" + o : "") +
           (i ? "&partneridlist=" + i : "") +
-          (T ? "" : "&software=false") +
-          (I ? "&unassigned=true" : "") +
-          (M ? "&excludetags=" + M : "") +
-          (R ? "&requiretags=" + R : "") +
-          (l ? "&bundleid=" + l : "") +
-          (O && N ? "&rt_feature_start=" + N + "&rt_feature_end=" + O : "");
+          (M ? "" : "&software=false") +
+          (T ? "&unassigned=true" : "") +
+          (R ? "&excludetags=" + R : "") +
+          (N ? "&requiretags=" + N : "") +
+          (c ? "&bundleid=" + c : "") +
+          (L && O ? "&rt_feature_start=" + O + "&rt_feature_end=" + L : "");
         return s.createElement(
           C.tH,
           null,
@@ -57023,26 +57031,26 @@
                 label: "EA",
                 className: Ca().Filter,
                 tooltip: "Early Access games",
-                checked: p,
-                onChange: _,
+                checked: g,
+                onChange: h,
               }),
               s.createElement(w.Yh, {
                 label: "F2P",
-                className: Ca().Filter,
-                checked: c,
-                onChange: m,
-              }),
-              s.createElement(w.Yh, {
-                label: "AO",
                 className: Ca().Filter,
                 checked: d,
                 onChange: u,
               }),
               s.createElement(w.Yh, {
+                label: "AO",
+                className: Ca().Filter,
+                checked: p,
+                onChange: _,
+              }),
+              s.createElement(w.Yh, {
                 label: "VR",
                 className: Ca().Filter,
-                checked: f,
-                onChange: v,
+                checked: b,
+                onChange: D,
                 tooltip:
                   "Include games that require VR to play? Does not affect desktop games that also have VR support",
               }),
@@ -57051,38 +57059,38 @@
                 className: Ca().Filter,
                 tooltip:
                   "Include games released in the past 3 months or future?",
-                checked: E,
-                onChange: S,
+                checked: f,
+                onChange: v,
               }),
               s.createElement(w.Yh, {
                 label: "Recent/Future Featuring",
                 className: Ca().Filter,
                 tooltip:
                   "Include games featured in the future, now, or within the past 6 months?",
-                checked: g,
-                onChange: h,
+                checked: E,
+                onChange: S,
               }),
               s.createElement(w.Yh, {
                 label: "Software",
                 className: Ca().Filter,
-                checked: T,
-                onChange: A,
+                checked: M,
+                onChange: k,
                 tooltip: "Include apps that are the software type.",
               }),
               s.createElement(w.Yh, {
                 label: "Unfeatured Only",
                 className: Ca().Filter,
-                checked: b,
-                onChange: D,
+                checked: I,
+                onChange: B,
                 tooltip:
                   "Only shows game that we do not have any recorded featuring for.",
               }),
               s.createElement(w.Yh, {
                 label: "No Valve Contact Only",
                 className: Ca().Filter,
-                checked: I,
+                checked: T,
                 onChange: (e) => {
-                  B(e), window.location.reload();
+                  A(e), window.location.reload();
                 },
                 tooltip: "Only shows games that do not have a Valve contact.",
               }),
@@ -57096,9 +57104,9 @@
                 s.createElement(hn, {
                   strLabel: "Exclude Tag",
                   fnOnTagSelected: (e, t) => {
-                    L(e, t, M, k);
+                    z(e, t, R, P);
                   },
-                  strSelectedTagIDs: M,
+                  strSelectedTagIDs: R,
                 }),
               ),
               s.createElement(
@@ -57107,28 +57115,28 @@
                 s.createElement(hn, {
                   strLabel: "Require Tag",
                   fnOnTagSelected: (e, t) => {
-                    L(e, t, R, P);
+                    z(e, t, N, G);
                   },
-                  strSelectedTagIDs: R,
+                  strSelectedTagIDs: N,
                 }),
               ),
               s.createElement(Qa, null),
             ),
             s.createElement(En, {
-              rtUpcomingFeatureStart: N,
-              rtUpcomingFeatureEnd: O,
-              setUpcomingFeatureStart: G,
-              setUpcomingFeatureEnd: F,
-              strQueryPlan: x,
+              rtUpcomingFeatureStart: O,
+              rtUpcomingFeatureEnd: L,
+              setUpcomingFeatureStart: F,
+              setUpcomingFeatureEnd: U,
+              strQueryPlan: W,
             }),
           ),
-          s.createElement(Xa, { nDisplayedApps: z.length, strQueryParams: x }),
+          s.createElement(Xa, { nDisplayedApps: q.length, strQueryParams: W }),
           s.createElement(Za, {
-            rgCandidateApps: U,
-            rgAppIDs: z,
+            rgCandidateApps: x,
+            rgAppIDs: q,
             oFeaturingMaps: n,
           }),
-          s.createElement(Xa, { nDisplayedApps: z.length, strQueryParams: x }),
+          s.createElement(Xa, { nDisplayedApps: q.length, strQueryParams: W }),
         );
       }
       function Qa(e) {
