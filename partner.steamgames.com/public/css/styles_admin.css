@@ -1206,10 +1206,6 @@ a.applink {
 	color: #FFFFFF;
 }
 
-.app_Game::after {
-	content: " (Game)";
-}
-
 .app_Advertising {
 	color: #90278e;
 }
@@ -1222,40 +1218,20 @@ a.applink {
 	color: #89c53f;
 }
 
-.app_Demo::after {
-	content: " (Demo)";
-}
-
 .app_Mod {
 	color: #e1b21e;
-}
-
-.app_Mod::after {
-	content: " (Mod)";
 }
 
 .app_DLC {
 	color: #eebfef;
 }
 
-.app_DLC::after {
-	content: " (DLC)";
-}
-
 .app_Music {
 	color: #3b91aa;
 }
 
-.app_Music::after {
-	content: " (Music)";
-}
-
 .app_Beta {
 	color: #999999;
-}
-
-.app_Beta::after {
-	content: " (Beta)";
 }
 
 .app_Hidden, a.app_Hidden {
