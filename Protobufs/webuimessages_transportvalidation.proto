@@ -89,6 +89,25 @@ message CTransportValidation_RequestInvalidBool_Response {
 	optional int32 after = 3;
 }
 
+message CTransportValidation_GetLargeResponse_Request {
+	optional uint32 data_size = 1;
+}
+
+message CTransportValidation_GetLargeResponse_Response {
+	optional bytes data = 1;
+}
+
+message CTransportValidation_RequestLargeNotification_Request {
+	optional uint32 data_size = 1;
+}
+
+message CTransportValidation_RequestLargeNotification_Response {
+}
+
+message CTransportValidation_NotifyLarge_Notification {
+	optional bytes data = 1;
+}
+
 message CTransportValidationClient_AddNumbers_Request {
 	repeated int32 numbers = 1;
 }
@@ -112,6 +131,9 @@ service TransportValidation {
 	rpc ThreadedCount (.CTransportValidation_ThreadedCount_Request) returns (.CTransportValidation_ThreadedCount_Response);
 	rpc NotifyCount (.CTransportValidation_NotifyCount_Notification) returns (.WebUINoResponse);
 	rpc RequestInvalidBool (.CTransportValidation_RequestInvalidBool_Request) returns (.CTransportValidation_RequestInvalidBool_Response);
+	rpc GetLargeResponse (.CTransportValidation_GetLargeResponse_Request) returns (.CTransportValidation_GetLargeResponse_Response);
+	rpc RequestLargeNotification (.CTransportValidation_RequestLargeNotification_Request) returns (.CTransportValidation_RequestLargeNotification_Response);
+	rpc NotifyLarge (.CTransportValidation_NotifyLarge_Notification) returns (.WebUINoResponse);
 }
 
 service TransportValidationClient {

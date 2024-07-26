@@ -1740,6 +1740,7 @@
  av_frame_alloc
  av_frame_free
  av_frame_get_buffer
+ av_frame_move_ref
  av_frame_unref
  av_free
  av_free_packet

@@ -4,16 +4,16 @@ __TEXT
 (
 __text
 __TEXT
+@z
+@z
 __stubs
 __TEXT
-2-"
-2-"
+"-"
+"-"
 __stub_helper
 __TEXT
 __cstring
 __TEXT
-A"
-A"
 __gcc_except_tab__TEXT
 __const
 __TEXT
@@ -5562,11 +5562,10 @@ steamIDChat.GetEAccountType() == k_EAccountTypeChat
 k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
 steammessages_base.proto
 steammessages_parental_objects.proto
+b'
 0
-"0
-0
-3
-M'
+(
+'
 
 @
 @
@@ -5574,21 +5573,19 @@ M'
 
 &
 &
-X
 x
 
 
+%
+-
 =
 @
 =
 $
 $
 $
-0
-0
-p
-0
-p
+$
+$
 0
 p
 0
@@ -5602,10 +5599,16 @@ p
 0
 p
 0
-D#
+p
+0
+p
+0
 Ic]
 "
+"
 p
+0
+#"
 0
 0
 AT=
@@ -5648,14 +5651,16 @@ IcE
 @
 @
 )
+)
 V
 =
 =
 !
+%
 @
 @
 &
-@"
+<"
 @
 M9e
 @
@@ -5707,8 +5712,6 @@ B
 @
 @
 @
-c
-?
 d
 A+M
 j
@@ -5724,6 +5727,7 @@ j
 0
 j
 j
+N
 j
 j
 j
@@ -5735,6 +5739,7 @@ j
 j
 j
 j
+B
 
 Y
 X
