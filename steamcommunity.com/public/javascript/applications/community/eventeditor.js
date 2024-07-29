@@ -14998,7 +14998,8 @@ License: MIT
                 checked: p,
                 description: (0, D.we)("#EventEditor_Options_Workshop_Desc"),
               }),
-              Boolean(!1) && d.createElement(qi, { editModel: t }),
+              Boolean(Boolean(t.GetAppID())) &&
+                d.createElement(qi, { editModel: t }),
               d.createElement(Xi, { editModel: t }),
               d.createElement(Zi, { editModel: t }),
             ),
