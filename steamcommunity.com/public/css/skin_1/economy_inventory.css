@@ -606,30 +606,36 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 	max-width: 48%;
 }
 
-.pending_giftcard_leftcol {
-	float: left;
+.pending_gift_leftcol.pending_giftcard_leftcol {
 	width: 470px;
-	margin-right: 10px;
+	max-width: 58%;
 }
 
 .giftcard_topseller {
-	width: 460px;
-	height: 215px;
 	z-index: -1;
-	position:relative;
+
+	position:absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
 }
 
 .steamlogo_overlay {
-	position:absolute;
 	z-index: 1;
+	position:relative;
+
+	max-width: 100%;
 }
 
 .giftcard_cont {
-	max-width: 460px;
+	width: 460px;
+	max-width: 100%;
 	max-height: 215px;
 	margin: 0px;
 	line-height: 0px;
 	position: relative;
+	overflow: hidden;
 }
 
 .pending_gift_rightcol {
@@ -638,6 +644,20 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 
 .formatted_gift_amount {
 	font-size:24px;
+}
+
+.pending_wallet_gift .content.gift_controls {
+	margin-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+	html.responsive .pending_gift_leftcol.pending_giftcard_leftcol {
+		float: none;
+		width: 460px;
+		margin: 0 auto 10px auto;
+		max-width: 100%;
+	}
+
 }
 
 @media screen and (max-width: 540px)
@@ -720,6 +740,10 @@ a.recommendation_btn:hover, a.recommendation_imgbtn:hover
 .gift_controls_buttons {
 	margin-top: 24px;
 	font-size: 14px;
+}
+
+.gift_controls_buttons .btn_medium {
+	margin: 8px 4px;
 }
 
 .giftcard_note {

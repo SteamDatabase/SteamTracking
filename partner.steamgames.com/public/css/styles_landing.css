@@ -2673,6 +2673,15 @@ div#appHeaderFindSuggestions
 	color: #ffda98;
 }
 
+.warning_background {
+	background: #a74343;
+	color: white;
+	padding: 8px;
+	border-radius: 4px;
+	margin-top: 4px;
+	margin-bottom: 8px;
+}
+
 .launchDiscountBlocked {
     padding-left: 8px;
     color: orange;
@@ -2720,18 +2729,36 @@ ul.actualUL li,
 	margin-bottom: 20px;
 }
 
-.releaseProgressContainer p {
+.releaseProgressContainer p,
+.releaseProgressContainer li {
 	color: #e5e5e5;
+}
+
+.releaseProgressContainer li span {
+	color: #a1a7af;
 }
 
 .releaseProgressContainer .mainTitle {
 			font-family: "Motiva Sans", Sans-serif;
-		font-weight: 300; /* light */
+		font-weight: normal; /* normal */
 
-			color: #e5e5e5;
-	font-size: 19px;
+			color: #ffffff;
+	font-size: 21px;
 	margin: 0px 0px 10px 0px;
 	background-position-y: 1px;
+	grid-area: title;
+}
+
+.releaseProgressContainer .releaseTitleDescription {
+	grid-area: description;
+}
+
+.releaseProgressContainer .docLink {
+	grid-area: doclink;
+	width: fit-content;
+	height: fit-content;
+	justify-self: end;
+	align-self: center;
 }
 
 .releaseProgressContainer .mainTitle.release_header_china {
@@ -2741,8 +2768,8 @@ ul.actualUL li,
 }
 
 .releaseProgressContainer .title {
-	color: rgba( 255, 255, 255, 0.5);
-	font-weight: normal;
+	color: white;
+	font-weight: 500;
 	padding-bottom: 5px;
 	padding-top: 5px;
 	display: inline-block;
@@ -2780,8 +2807,19 @@ ul.actualUL li,
 	background-color: rgba(0, 0, 0, 0.3);
 }
 
+.releaseProgressTitleCtn {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto;
+	grid-template-areas:
+    "title doclink"
+    "description doclink";
+	margin-bottom: 8px;
+}
+
 .releaseStep > .content {
 	padding: 5px 10px 10px 10px;
+	flex-grow: 1;
 }
 .releaseStep > .stepState {
 	background-color: rgba( 255, 255, 255, 0.4);
@@ -2821,27 +2859,52 @@ ul.actualUL li,
 .releaseStep p.failmessage {
 	color: #dddddd;
 	white-space: pre-line;
+	border: 1px solid #757575;
+	padding: 8px;
+	border-radius: 4px;
 }
 
 .releaseStep p.failmessage > span {
 
-	color: #e24044;
+	color: #e9e90f;
+}
+
+.releaseProgressContainer .releaseStepsCtn {
+	display: flex;
+	flex-direction: row;
 }
 
 .releaseProgressContainer .releaseStep {
-	display: table-cell;
+	position: relative;
+	display: flex;
+	flex-direction: column;
 
 	width: 33.333%;
 	box-sizing: border-box;
-	background-color: grey;
 	vertical-align: top;
 	border-right: 4px solid #555e62;
 	border-left: 4px solid #555e62;
 	background-color: rgba(0, 0, 0, 0.3);
 }
 
+.releaseProgressContainer .releaseStep:first-child {
+	border-left: unset;
+}
+
 .releaseProgressContainer .releaseStep:last-child {
-	margin-right: 0;
+	border-right: unset;
+}
+
+.releaseProgressContainer .releaseStep .StatusCtn,
+.releaseProgressContainer .releaseStep .ActionCtn {
+	min-height: 40px;
+	bottom: 0;
+	padding: 10px;
+	border-top: 1px solid #555e62;
+}
+
+.releaseProgressContainer .releaseStep .StatusCtn span {
+	color: #e9e90f;
 }
 
 .landingRightCol .panel.checklist h1 {

@@ -1130,7 +1130,11 @@ function CreateStatPermissionSelect( id )
 	itemSelect = document.createElement( "select" );
 	itemSelect.style.width = "auto";
 	itemSelect.id = id + "_permission";
-	values = new Array( "Client", "GS", "Offical GS" );
+	values = new Array(
+		"Client",
+		"GS",
+		"Official GS"
+	);
 	for ( i = 0; i < values.length; i++ )
 	{
 		var option = document.createElement( "option" );

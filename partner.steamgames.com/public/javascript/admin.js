@@ -1196,10 +1196,20 @@ function OnClickShowAllAdditionalLanguages( selectId )
 
 function SetAllLanguageCheck( checked )
 {
-	$J( '.languages' ).find( '.checkboxGrid > a' ).each( function(){
-		var a = $J( this );
-		SetFancyCheckboxState( a.attr('id') , checked );
-	});
+	if ( checked )
+	{
+		$J( '.languages' ).find( '.checkboxGrid .setall a' ).each( function(){
+			var a = $J( this );
+			SetFancyCheckboxState( a.attr('id') , checked );
+		});
+	}
+	else
+	{
+		$J( '.languages' ).find( '.checkboxGrid a' ).each( function(){
+			var a = $J( this );
+			SetFancyCheckboxState( a.attr('id') , checked );
+		});
+	}
 }
 
 function OnClickAllLanguages( selectId )

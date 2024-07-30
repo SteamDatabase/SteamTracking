@@ -326,7 +326,7 @@ CreateBuyOrderDialog = {
 		$J('#market_buy_commodity_input_quantity').keyup( function() { CreateBuyOrderDialog.UpdateTotal(); } );
 		$J('#market_buyorder_dialog_purchase').click( function() { CreateBuyOrderDialog.StartPurchase(); } );
 		$J('#market_buyorder_dialog_addfunds').click( function() { CreateBuyOrderDialog.OnAddFunds(); } );
-		$J('#market_buy_commodity_input_price').blur( function() {
+				$J('#market_buy_commodity_input_price').blur( function() {
 			var sWalletCurrencyCode = GetCurrencyCode( g_rgWalletInfo['wallet_currency'] );
 			var currency = GetPriceValueAsInt( $J('#market_buy_commodity_input_price').val() );
 			$('market_buy_commodity_input_price').setValue( v_currencyformat( currency, sWalletCurrencyCode ) );
