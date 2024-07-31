@@ -46652,6 +46652,7 @@
         SetImage(e, t) {
           this.m_oSpotlight.image || (this.m_oSpotlight.image = {}),
             this.SetKVLang(this.m_oSpotlight.image, e, t),
+            (this.m_oSpotlight.asset_mtime = Math.floor(Date.now() / 1e3)),
             this.Dispatch();
         }
         ClearAllAssetObjects() {
