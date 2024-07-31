@@ -1054,6 +1054,7 @@
           })((await s._o.ValidateCart(e, r)).Body().toObject());
         }
         {
+          if (!t.gid) return;
           const r = i.w.Init(o.p3);
           r.Body().set_gidshoppingcart(t.gid);
           return M(
