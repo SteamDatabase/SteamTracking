@@ -44215,7 +44215,7 @@
                   { className: (0, T.A)(Q.DailyDealTitle, Q.Orange) },
                   m,
                 ),
-          p = s ? JSON.parse(s.partner_jsondata) : void 0,
+          p = s?.partner_jsondata ? JSON.parse(s.partner_jsondata) : void 0,
           _ = (0, ee.vv)(p?.sale_clan_event_gid),
           g = (0, u.useMemo)(() => {
             if (_) {
