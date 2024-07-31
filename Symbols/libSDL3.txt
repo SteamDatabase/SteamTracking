@@ -134,14 +134,14 @@
  CVDisplayLinkStart
  CVPixelBufferGetIOSurface
  D .objc_class_name_Cocoa_PasteboardDataProvider
- D .objc_class_name_Cocoa_WindowListener
- D .objc_class_name_SDLAppDelegate
- D .objc_class_name_SDLApplication
- D .objc_class_name_SDLMessageBoxPresenter
- D .objc_class_name_SDLOpenGLContext
- D .objc_class_name_SDLTranslatorResponder
- D .objc_class_name_SDLView
- D .objc_class_name_SDLWindow
+ D .objc_class_name_SDL3AppDelegate
+ D .objc_class_name_SDL3Application
+ D .objc_class_name_SDL3Cocoa_WindowListener
+ D .objc_class_name_SDL3MessageBoxPresenter
+ D .objc_class_name_SDL3OpenGLContext
+ D .objc_class_name_SDL3TranslatorResponder
+ D .objc_class_name_SDL3View
+ D .objc_class_name_SDL3Window
  D .objc_class_name_SDL_CocoaVideoData
  D .objc_class_name_SDL_CocoaWindowData
  FFCreateDevice
@@ -230,6 +230,7 @@
  NSFilenamesPboardType
  NSLog
  NSMouseInRect
+ NSPasteboardTypeString
  NSPointInRect
  NSRectFill
  NSSearchPathForDirectoriesInDomains
@@ -314,7 +315,6 @@
  T SDL_AddTimer
  T SDL_AddTimerNS
  T SDL_AddVulkanRenderSemaphores
- T SDL_AllocateEventMemory
  T SDL_AtomicAdd
  T SDL_AtomicCompareAndSwap
  T SDL_AtomicCompareAndSwapPointer
@@ -327,7 +327,10 @@
  T SDL_BindAudioStream
  T SDL_BindAudioStreams
  T SDL_BlitSurface
+ T SDL_BlitSurface9Grid
  T SDL_BlitSurfaceScaled
+ T SDL_BlitSurfaceTiled
+ T SDL_BlitSurfaceTiledWithScale
  T SDL_BlitSurfaceUnchecked
  T SDL_BlitSurfaceUncheckedScaled
  T SDL_BroadcastCondition
@@ -338,6 +341,7 @@
  T SDL_ClearComposition
  T SDL_ClearError
  T SDL_ClearProperty
+ T SDL_ClearSurface
  T SDL_CloseAudioDevice
  T SDL_CloseCamera
  T SDL_CloseGamepad
@@ -353,7 +357,9 @@
  T SDL_ConvertPixelsAndColorspace
  T SDL_ConvertSurface
  T SDL_ConvertSurfaceAndColorspace
+ T SDL_CopyFile
  T SDL_CopyProperties
+ T SDL_CopyStorageFile
  T SDL_CreateAudioStream
  T SDL_CreateColorCursor
  T SDL_CreateCondition
@@ -374,7 +380,6 @@
  T SDL_CreateSurfaceFrom
  T SDL_CreateSurfacePalette
  T SDL_CreateSystemCursor
- T SDL_CreateTLS
  T SDL_CreateTexture
  T SDL_CreateTextureFromSurface
  T SDL_CreateTextureWithProperties
@@ -408,11 +413,11 @@
  T SDL_DetachVirtualJoystick
  T SDL_DisableScreenSaver
  T SDL_DuplicateSurface
- T SDL_EGL_GetCurrentEGLConfig
- T SDL_EGL_GetCurrentEGLDisplay
+ T SDL_EGL_GetCurrentConfig
+ T SDL_EGL_GetCurrentDisplay
  T SDL_EGL_GetProcAddress
- T SDL_EGL_GetWindowEGLSurface
- T SDL_EGL_SetEGLAttributeCallbacks
+ T SDL_EGL_GetWindowSurface
+ T SDL_EGL_SetAttributeCallbacks
  T SDL_EnableScreenSaver
  T SDL_EnterAppMainCallbacks
  T SDL_EnumerateDirectory
@@ -443,7 +448,6 @@
  T SDL_GL_SetSwapInterval
  T SDL_GL_SwapWindow
  T SDL_GL_UnloadLibrary
- T SDL_GUIDFromString
  T SDL_GUIDToString
  T SDL_GamepadConnected
  T SDL_GamepadEventsEnabled
@@ -451,6 +455,7 @@
  T SDL_GamepadHasButton
  T SDL_GamepadHasSensor
  T SDL_GamepadSensorEnabled
+ T SDL_GetAppMetadataProperty
  T SDL_GetAssertionHandler
  T SDL_GetAssertionReport
  T SDL_GetAudioDeviceChannelMap
@@ -588,9 +593,7 @@
  T SDL_GetJoystickFromPlayerIndex
  T SDL_GetJoystickGUID
  T SDL_GetJoystickGUIDForID
- T SDL_GetJoystickGUIDFromString
  T SDL_GetJoystickGUIDInfo
- T SDL_GetJoystickGUIDString
  T SDL_GetJoystickHat
  T SDL_GetJoystickID
  T SDL_GetJoystickName
@@ -690,6 +693,7 @@
  T SDL_GetRenderMetalCommandEncoder
  T SDL_GetRenderMetalLayer
  T SDL_GetRenderOutputSize
+ T SDL_GetRenderSafeArea
  T SDL_GetRenderScale
  T SDL_GetRenderTarget
  T SDL_GetRenderVSync
@@ -771,6 +775,7 @@
  T SDL_GetWindowPixelFormat
  T SDL_GetWindowPosition
  T SDL_GetWindowProperties
+ T SDL_GetWindowSafeArea
  T SDL_GetWindowSize
  T SDL_GetWindowSizeInPixels
  T SDL_GetWindowSurface
@@ -865,11 +870,11 @@
  T SDL_Metal_GetLayer
  T SDL_MinimizeWindow
  T SDL_MixAudio
- T SDL_OnApplicationDidBecomeActive
  T SDL_OnApplicationDidEnterBackground
+ T SDL_OnApplicationDidEnterForeground
  T SDL_OnApplicationDidReceiveMemoryWarning
+ T SDL_OnApplicationWillEnterBackground
  T SDL_OnApplicationWillEnterForeground
- T SDL_OnApplicationWillResignActive
  T SDL_OnApplicationWillTerminate
  T SDL_OpenAudioDevice
  T SDL_OpenAudioDeviceStream
@@ -894,8 +899,8 @@
  T SDL_PenConnected
  T SDL_PlayHapticRumble
  T SDL_PollEvent
- T SDL_PostSemaphore
  T SDL_PremultiplyAlpha
+ T SDL_PremultiplySurfaceAlpha
  T SDL_PumpEvents
  T SDL_PushEvent
  T SDL_PutAudioStreamData
@@ -912,6 +917,7 @@
  T SDL_ReadS8
  T SDL_ReadStorageFile
  T SDL_ReadSurfacePixel
+ T SDL_ReadSurfacePixelFloat
  T SDL_ReadU16BE
  T SDL_ReadU16LE
  T SDL_ReadU32BE
@@ -944,7 +950,9 @@
  T SDL_RenderRect
  T SDL_RenderRects
  T SDL_RenderTexture
+ T SDL_RenderTexture9Grid
  T SDL_RenderTextureRotated
+ T SDL_RenderTextureTiled
  T SDL_RenderViewportSet
  T SDL_ReportAssertion
  T SDL_ResetAssertionReport
@@ -970,6 +978,8 @@
  T SDL_SendGamepadEffect
  T SDL_SendJoystickEffect
  T SDL_SendJoystickVirtualSensorData
+ T SDL_SetAppMetadata
+ T SDL_SetAppMetadataProperty
  T SDL_SetAssertionHandler
  T SDL_SetAudioDeviceGain
  T SDL_SetAudioPostmixCallback
@@ -1077,7 +1087,7 @@
  T SDL_ShowWindow
  T SDL_ShowWindowSystemMenu
  T SDL_SignalCondition
- T SDL_SoftStretch
+ T SDL_SignalSemaphore
  T SDL_StartTextInput
  T SDL_StepUTF8
  T SDL_StopHapticEffect
@@ -1085,6 +1095,7 @@
  T SDL_StopHapticRumble
  T SDL_StopTextInput
  T SDL_StorageReady
+ T SDL_StringToGUID
  T SDL_SurfaceHasColorKey
  T SDL_SurfaceHasRLE
  T SDL_SyncWindow
@@ -1146,6 +1157,8 @@
  T SDL_WriteS64LE
  T SDL_WriteS8
  T SDL_WriteStorageFile
+ T SDL_WriteSurfacePixel
+ T SDL_WriteSurfacePixelFloat
  T SDL_WriteU16BE
  T SDL_WriteU16LE
  T SDL_WriteU32BE
@@ -1304,6 +1317,7 @@
  T SDL_uitoa
  T SDL_ulltoa
  T SDL_ultoa
+ T SDL_unsetenv
  T SDL_utf8strlcpy
  T SDL_utf8strlen
  T SDL_utf8strnlen
@@ -1417,6 +1431,7 @@
  kTISPropertyUnicodeKeyLayoutData
  kUTTagClassMIMEType
  kUTTypeFileURL
+ kUTTypeUTF8PlainText
  localtime_r
  log
  log10
@@ -1568,6 +1583,8 @@
  sysctlbyname
  tan
  tanf
+ unsetenv
+ unsetenv$UNIX2003
  vsnprintf
  vsscanf
  wcscmp

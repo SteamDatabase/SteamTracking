@@ -480,6 +480,7 @@
  SDL_GL_MakeCurrent
  SDL_GL_SetAttribute
  SDL_GL_SwapWindow
+ SDL_GUIDToString
  SDL_GetAudioDeviceFormat
  SDL_GetAudioDeviceName
  SDL_GetAudioPlaybackDevices
@@ -503,9 +504,7 @@
  SDL_GetJoystickAxisInitialState
  SDL_GetJoystickGUID
  SDL_GetJoystickGUIDForID
- SDL_GetJoystickGUIDFromString
  SDL_GetJoystickGUIDInfo
- SDL_GetJoystickGUIDString
  SDL_GetJoystickNameForID
  SDL_GetJoystickProduct
  SDL_GetJoystickTypeForID
@@ -541,6 +540,7 @@
  SDL_ShowCursor
  SDL_ShowSimpleMessageBox
  SDL_ShowWindow
+ SDL_StringToGUID
  SDL_UnlockJoysticks
  SDL_WarpMouseGlobal
  SDL_WasInit

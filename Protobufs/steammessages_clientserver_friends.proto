@@ -153,6 +153,7 @@ message CMsgClientPersonaState {
 		optional bool is_community_banned = 78;
 		optional bool player_name_pending_review = 79;
 		optional bool avatar_pending_review = 80;
+		optional bool on_steam_deck = 81;
 	}
 
 	optional uint32 status_flags = 1;

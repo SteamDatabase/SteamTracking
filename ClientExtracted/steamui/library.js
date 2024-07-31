@@ -1,4 +1,4 @@
-var CLSTAMP = "9068695";
+var CLSTAMP = "9077229";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -4265,6 +4265,11 @@ var CLSTAMP = "9068695";
                     },
                     avatar_pending_review: {
                       n: 80,
+                      br: i.qM.readBool,
+                      bw: i.gp.writeBool,
+                    },
+                    on_steam_deck: {
+                      n: 81,
                       br: i.qM.readBool,
                       bw: i.gp.writeBool,
                     },
@@ -8699,9 +8704,9 @@ var CLSTAMP = "9068695";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Jul 26 2024 : 13:54:49",
-                BUILD_TIME_UTC: "Jul 26 2024 : 20:54:49",
-                BUILD_RTIME_UTC: 1722027289,
+                BUILD_TIME_LOCAL: "Jul 30 2024 : 15:44:56",
+                BUILD_TIME_UTC: "Jul 30 2024 : 22:44:56",
+                BUILD_RTIME_UTC: 1722379496,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -40247,136 +40252,138 @@ var CLSTAMP = "9068695";
       50376: (e, t, r) => {
         "use strict";
         r.d(t, {
-          $$j: () => st,
-          $4X: () => At,
-          $Qn: () => lt,
+          $$j: () => ct,
+          $4X: () => Nt,
+          $Qn: () => at,
           $rC: () => _,
           Aj0: () => Re,
           BeN: () => F,
-          Bir: () => tr,
-          CE1: () => xt,
+          Bir: () => rr,
+          CE1: () => Vt,
           CeX: () => ue,
-          Cip: () => ft,
+          Cip: () => _t,
           Cv4: () => u,
           DK4: () => w,
+          DQe: () => sr,
           Dp6: () => Oe,
           EQ9: () => k,
-          ETd: () => Yt,
+          ETd: () => Xt,
           Em3: () => Ve,
           F2T: () => fe,
-          FEq: () => et,
+          FEq: () => tt,
           FWt: () => V,
           GB9: () => M,
           GSe: () => xe,
-          Gkr: () => Ft,
+          Gkr: () => Ot,
           Gq2: () => T,
-          GrD: () => Lt,
+          GrD: () => Et,
           Gv$: () => K,
-          IFd: () => er,
+          IFd: () => tr,
           IOc: () => re,
           IrQ: () => de,
           Jlk: () => ae,
           K7s: () => Pe,
-          KKS: () => Ke,
+          KKS: () => Ye,
           KOs: () => S,
           L0X: () => pe,
           LeN: () => N,
-          MFH: () => Ct,
+          MFH: () => ut,
+          MUh: () => je,
           MvQ: () => ve,
           MxO: () => Y,
-          N8C: () => Qe,
-          NCC: () => Nt,
+          N8C: () => Je,
+          NCC: () => Ft,
           OWN: () => Z,
           OeC: () => te,
-          OiG: () => rt,
+          OiG: () => nt,
           P7C: () => Be,
-          P7r: () => $e,
+          P7r: () => Qe,
           PN3: () => I,
           PRY: () => He,
           PZP: () => R,
           Q38: () => d,
           QHH: () => le,
           QQ4: () => We,
-          QcV: () => dt,
+          QcV: () => ht,
           Qte: () => De,
           RO3: () => G,
           ROZ: () => Te,
           Rkk: () => h,
-          SYj: () => Gt,
-          UTF: () => Vt,
-          U_V: () => ct,
+          SYj: () => Ut,
+          UTF: () => Rt,
+          U_V: () => Ct,
           V5W: () => ye,
           VR: () => ze,
-          WOg: () => wt,
-          WX$: () => Kt,
-          Wy0: () => ht,
+          WOg: () => Lt,
+          WX$: () => Yt,
+          Wy0: () => pt,
           X: () => y,
           X4B: () => se,
-          XH_: () => Qt,
+          XH_: () => Jt,
           XTb: () => H,
           Xjb: () => Le,
-          Xz0: () => pt,
+          Xz0: () => gt,
           YJl: () => W,
           YNO: () => b,
-          Yb3: () => Jt,
-          YuU: () => Ye,
-          ZPc: () => Zt,
+          Yb3: () => er,
+          YuU: () => Xe,
+          ZPc: () => Tt,
           ZWw: () => Ee,
-          _2Q: () => je,
+          _2Q: () => qe,
           _V3: () => me,
-          _VW: () => Et,
-          _h6: () => kt,
-          _r0: () => Ht,
-          a3E: () => ot,
+          _VW: () => vt,
+          _h6: () => Ht,
+          _r0: () => St,
+          a3E: () => lt,
           aPd: () => B,
-          aVR: () => jt,
+          aVR: () => qt,
           aeP: () => Me,
           apU: () => Fe,
-          ari: () => Tt,
-          b8_: () => nr,
+          ari: () => At,
+          b8_: () => ir,
           bPr: () => Ge,
-          bfp: () => St,
+          bfp: () => bt,
           c_I: () => Ce,
-          d1w: () => rr,
-          dI9: () => or,
-          dJT: () => it,
-          eJJ: () => gt,
-          eNX: () => nt,
+          d1w: () => nr,
+          dI9: () => lr,
+          dJT: () => ot,
+          eJJ: () => ft,
+          eNX: () => it,
           eSy: () => L,
           eTF: () => ce,
-          f1L: () => qe,
-          f2R: () => Bt,
-          f5X: () => tt,
+          f1L: () => Ke,
+          f2R: () => Dt,
+          f5X: () => rt,
           f5w: () => j,
           fSs: () => Q,
-          faJ: () => _t,
-          ffu: () => at,
+          faJ: () => Mt,
+          ffu: () => st,
           fpT: () => P,
           gxp: () => oe,
-          gzV: () => Ot,
+          gzV: () => Pt,
           h20: () => ke,
-          h28: () => Mt,
+          h28: () => wt,
           hz4: () => we,
           i3G: () => he,
           i6V: () => Ne,
           iSZ: () => m,
-          ilR: () => vt,
+          ilR: () => kt,
           jGG: () => ne,
-          jIP: () => qt,
-          jZW: () => It,
-          jZl: () => Je,
-          jlt: () => $t,
-          kPc: () => mt,
+          jIP: () => Kt,
+          jZW: () => Bt,
+          jZl: () => et,
+          jlt: () => Qt,
+          kPc: () => dt,
           l8x: () => _e,
           lMJ: () => Se,
-          lRD: () => Ut,
+          lRD: () => zt,
           m59: () => f,
           mrd: () => D,
           nGC: () => ee,
-          o5Q: () => zt,
+          o5Q: () => jt,
           pDR: () => $,
-          qR$: () => ir,
-          qcc: () => Xe,
+          qR$: () => or,
+          qcc: () => $e,
           qzq: () => Ae,
           rfv: () => Ue,
           sED: () => x,
@@ -40385,22 +40392,22 @@ var CLSTAMP = "9068695";
           tID: () => Ie,
           tcj: () => A,
           tmR: () => v,
-          twC: () => bt,
+          twC: () => yt,
           u9R: () => J,
           uMb: () => ge,
           vRz: () => ie,
-          vdG: () => lr,
-          vjL: () => ut,
-          vrn: () => Dt,
+          vdG: () => ar,
+          vjL: () => mt,
+          vrn: () => Zt,
           wB_: () => p,
-          wVV: () => Rt,
+          wVV: () => It,
           wbc: () => g,
-          xTY: () => Xt,
+          xTY: () => $t,
           xv8: () => X,
           yFA: () => U,
           yUp: () => z,
           y_e: () => Ze,
-          ypD: () => yt,
+          ypD: () => xt,
           zD7: () => E,
           zHo: () => be,
         });
@@ -43640,15 +43647,53 @@ var CLSTAMP = "9068695";
             },
             n.createElement("path", {
               d: "M11.45 26.5H7.625L1 9H5.025L9.625 22.325L14.1 9H18.125L11.45 26.5Z",
-              fill: "white",
+              fill: "currentColor",
             }),
             n.createElement("path", {
               d: "M34.552 26.5H30.477L26.952 20.6H26.527H23.927V26.5H20.252V9H26.802C29.202 9 30.9686 9.48333 32.102 10.45C33.2353 11.4 33.802 12.7333 33.802 14.45C33.802 15.8 33.502 16.925 32.902 17.825C32.3186 18.725 31.4936 19.4083 30.427 19.875L34.552 26.5ZM23.927 12.125V17.45H26.802C27.7686 17.45 28.5186 17.2083 29.052 16.725C29.602 16.225 29.877 15.5417 29.877 14.675C29.877 13.825 29.6103 13.1917 29.077 12.775C28.5603 12.3417 27.727 12.125 26.577 12.125H23.927Z",
-              fill: "white",
+              fill: "currentColor",
             }),
           );
         }
         function je(e) {
+          return n.createElement(
+            "svg",
+            {
+              width: "36",
+              height: "36",
+              viewBox: "0 0 36 36",
+              fill: "none",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: (0, i.A)("SVGIcon_Button", "SVGIcon_VRIcon"),
+              ...e,
+            },
+            n.createElement(
+              "g",
+              { "clip-path": "url(#clip0_29_13408)" },
+              n.createElement("path", {
+                "fill-rule": "evenodd",
+                "clip-rule": "evenodd",
+                d: "M0.400879 7.38525H36.4009V29.7798H0.400879V7.38525ZM12.6345 26.2414H9.28326L3.47884 10.909H7.0053L11.0355 22.5835L14.9563 10.909H18.4827L12.6345 26.2414ZM29.3047 26.2414H32.875L29.2609 20.437C30.1954 20.0281 30.9182 19.4294 31.4294 18.6409C31.9551 17.8524 32.2179 16.8667 32.2179 15.6839C32.2179 14.1799 31.7214 13.0117 30.7285 12.1794C29.7354 11.3324 28.1877 10.909 26.0849 10.909H20.3462V26.2414H23.566V21.0722H25.844H26.2163L29.3047 26.2414ZM23.566 18.3124V13.6469H25.8878C26.8954 13.6469 27.6254 13.8368 28.0781 14.2164C28.5454 14.5815 28.7791 15.1363 28.7791 15.8811C28.7791 16.6404 28.5381 17.2391 28.0562 17.6772C27.5889 18.1006 26.9318 18.3124 26.0849 18.3124H23.566Z",
+                fill: "currentColor",
+              }),
+            ),
+            n.createElement(
+              "defs",
+              null,
+              n.createElement(
+                "clipPath",
+                { id: "clip0_29_13408" },
+                n.createElement("rect", {
+                  width: "36",
+                  height: "36",
+                  fill: "currentColor",
+                  transform: "translate(0.400879 0.825195)",
+                }),
+              ),
+            ),
+          );
+        }
+        function qe(e) {
           return n.createElement(
             "svg",
             {
@@ -43674,7 +43719,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function qe() {
+        function Ke() {
           return n.createElement(
             "svg",
             {
@@ -43693,7 +43738,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function Ke() {
+        function Ye() {
           return n.createElement(
             "svg",
             {
@@ -43712,7 +43757,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function Ye() {
+        function Xe() {
           return n.createElement(
             "svg",
             {
@@ -43731,7 +43776,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function Xe() {
+        function $e() {
           return n.createElement(
             "svg",
             {
@@ -43750,7 +43795,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function $e() {
+        function Qe() {
           return n.createElement(
             "svg",
             {
@@ -43771,7 +43816,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function Qe() {
+        function Je() {
           return n.createElement(
             "svg",
             {
@@ -43802,7 +43847,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function Je() {
+        function et() {
           return n.createElement(
             "svg",
             {
@@ -43868,7 +43913,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function et(e) {
+        function tt(e) {
           const t = (0, i.A)(
             e.className,
             "SVGIcon_Button",
@@ -43895,7 +43940,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function tt() {
+        function rt() {
           return n.createElement(
             "svg",
             {
@@ -43921,7 +43966,7 @@ var CLSTAMP = "9068695";
             ),
           );
         }
-        function rt(e) {
+        function nt(e) {
           const { fullcolor: t, ...r } = e,
             [i, o] = (0, c.l)(),
             [l, a] = (0, c.l)();
@@ -44008,7 +44053,7 @@ var CLSTAMP = "9068695";
                 }),
               );
         }
-        function nt() {
+        function it() {
           return n.createElement(
             "svg",
             {
@@ -44072,7 +44117,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function it() {
+        function ot() {
           return n.createElement(
             "svg",
             {
@@ -44091,7 +44136,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function ot(e) {
+        function lt(e) {
           const { percentComplete: t, startOffset: r } = e;
           let l = o.Fu(t, 0, 100, 800, 0),
             a = r ? r + 270 : 270;
@@ -44124,7 +44169,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function lt() {
+        function at() {
           return n.createElement(
             "svg",
             {
@@ -44151,7 +44196,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function at() {
+        function st() {
           return n.createElement(
             "svg",
             {
@@ -44189,7 +44234,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function st() {
+        function ct() {
           return n.createElement(
             "svg",
             {
@@ -44225,7 +44270,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function ct(e) {
+        function Ct(e) {
           return n.createElement(
             "svg",
             {
@@ -44255,7 +44300,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function Ct() {
+        function ut() {
           return n.createElement(
             "svg",
             {
@@ -44290,7 +44335,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function ut() {
+        function mt() {
           return n.createElement(
             "svg",
             {
@@ -44315,7 +44360,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function mt(e) {
+        function dt(e) {
           return n.createElement(
             "svg",
             {
@@ -44338,7 +44383,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function dt(e) {
+        function ht(e) {
           return n.createElement(
             "svg",
             {
@@ -44358,7 +44403,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function ht() {
+        function pt() {
           return n.createElement(
             "svg",
             {
@@ -44380,7 +44425,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function pt() {
+        function gt() {
           return n.createElement(
             "svg",
             {
@@ -44420,7 +44465,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function gt(e) {
+        function ft(e) {
           return n.createElement(
             "svg",
             {
@@ -44435,7 +44480,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function ft() {
+        function _t() {
           return n.createElement(
             "svg",
             {
@@ -44455,7 +44500,7 @@ var CLSTAMP = "9068695";
             ),
           );
         }
-        function _t() {
+        function Mt() {
           return n.createElement(
             "svg",
             {
@@ -44471,7 +44516,7 @@ var CLSTAMP = "9068695";
             n.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" }),
           );
         }
-        function Mt() {
+        function wt() {
           return n.createElement(
             "svg",
             {
@@ -44502,7 +44547,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function wt() {
+        function Lt() {
           return n.createElement(
             "svg",
             {
@@ -44521,7 +44566,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function Lt() {
+        function Et() {
           return n.createElement(
             "svg",
             {
@@ -44540,7 +44585,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function Et() {
+        function vt() {
           return n.createElement(
             "svg",
             {
@@ -44563,7 +44608,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function vt(e) {
+        function kt(e) {
           return n.createElement(
             "svg",
             {
@@ -44580,7 +44625,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function kt(e, t) {
+        function Ht(e, t) {
           return (0, s.Qn)()
             ? n.createElement(
                 "svg",
@@ -44615,7 +44660,7 @@ var CLSTAMP = "9068695";
                 }),
               );
         }
-        function Ht(e) {
+        function St(e) {
           return n.createElement(
             "svg",
             {
@@ -44634,7 +44679,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function St(e) {
+        function bt(e) {
           return n.createElement(
             "svg",
             {
@@ -44653,7 +44698,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function bt(e) {
+        function yt(e) {
           return n.createElement(
             "svg",
             {
@@ -44673,7 +44718,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function yt(e) {
+        function xt(e) {
           return n.createElement(
             "svg",
             {
@@ -44696,7 +44741,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function xt(e) {
+        function Vt(e) {
           return n.createElement(
             "svg",
             {
@@ -44719,7 +44764,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function Vt(e) {
+        function Rt(e) {
           return n.createElement(
             "svg",
             {
@@ -44756,7 +44801,7 @@ var CLSTAMP = "9068695";
             ),
           );
         }
-        function Rt(e) {
+        function It(e) {
           return n.createElement(
             "svg",
             { width: "100%", height: "100%", viewBox: "0 0 50 50" },
@@ -44783,7 +44828,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function It(e) {
+        function Bt(e) {
           return n.createElement(
             "svg",
             {
@@ -44800,7 +44845,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function Bt(e) {
+        function Dt(e) {
           const { className: t, color: r } = e;
           return n.createElement(
             "svg",
@@ -44826,7 +44871,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function Dt(e) {
+        function Zt(e) {
           const { className: t, ...r } = e,
             [i, o] = (0, c.l)(),
             [l, a] = (0, c.l)(),
@@ -45003,7 +45048,7 @@ var CLSTAMP = "9068695";
             ),
           );
         }
-        function Zt() {
+        function Tt() {
           return n.createElement(
             "svg",
             {
@@ -45034,7 +45079,7 @@ var CLSTAMP = "9068695";
             ),
           );
         }
-        function Tt(e) {
+        function At(e) {
           return n.createElement(
             "svg",
             {
@@ -45051,7 +45096,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function At() {
+        function Nt() {
           return n.createElement(
             "svg",
             {
@@ -45069,7 +45114,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function Nt() {
+        function Ft() {
           return n.createElement(
             "svg",
             {
@@ -45091,7 +45136,7 @@ var CLSTAMP = "9068695";
             ),
           );
         }
-        function Ft() {
+        function Ot() {
           return n.createElement(
             "svg",
             {
@@ -45129,7 +45174,7 @@ var CLSTAMP = "9068695";
             ),
           );
         }
-        function Ot() {
+        function Pt() {
           return n.createElement(
             "svg",
             {
@@ -45150,7 +45195,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function Pt(e) {
+        function Wt(e) {
           return n.createElement(
             "svg",
             {
@@ -45169,7 +45214,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function Wt(e) {
+        function Gt(e) {
           return n.createElement(
             "svg",
             {
@@ -45189,12 +45234,12 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function Gt(e) {
-          return (0, C.Ae)()
-            ? n.createElement(Wt, { ...e })
-            : n.createElement(Pt, { ...e });
-        }
         function Ut(e) {
+          return (0, C.Ae)()
+            ? n.createElement(Gt, { ...e })
+            : n.createElement(Wt, { ...e });
+        }
+        function zt(e) {
           const { className: t, ...r } = e;
           return n.createElement(
             "svg",
@@ -45214,7 +45259,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function zt(e) {
+        function jt(e) {
           const { className: t, ...r } = e;
           return n.createElement(
             "svg",
@@ -45237,7 +45282,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function jt(e) {
+        function qt(e) {
           const { className: t, ...r } = e;
           return n.createElement(
             "svg",
@@ -45260,7 +45305,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function qt(e) {
+        function Kt(e) {
           const { className: t, ...r } = e;
           return n.createElement(
             "svg",
@@ -45283,7 +45328,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function Kt(e) {
+        function Yt(e) {
           const { className: t, ...r } = e;
           return n.createElement(
             "svg",
@@ -45306,7 +45351,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function Yt(e) {
+        function Xt(e) {
           return n.createElement(
             "svg",
             {
@@ -45321,7 +45366,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function Xt(e) {
+        function $t(e) {
           return n.createElement(
             "svg",
             {
@@ -45337,7 +45382,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function $t(e) {
+        function Qt(e) {
           const { className: t, ...r } = e;
           return n.createElement(
             "svg",
@@ -45358,7 +45403,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function Qt(e) {
+        function Jt(e) {
           return n.createElement(
             "svg",
             {
@@ -45377,7 +45422,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function Jt(e) {
+        function er(e) {
           return n.createElement(
             "svg",
             {
@@ -45399,7 +45444,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function er(e) {
+        function tr(e) {
           return n.createElement(
             "svg",
             {
@@ -45414,7 +45459,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function tr(e) {
+        function rr(e) {
           return n.createElement(
             "svg",
             {
@@ -45437,7 +45482,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function rr(e) {
+        function nr(e) {
           return n.createElement(
             "svg",
             {
@@ -45460,7 +45505,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function nr(e) {
+        function ir(e) {
           const { direction: t, ...r } = e;
           switch (t) {
             case "up":
@@ -45521,7 +45566,7 @@ var CLSTAMP = "9068695";
               );
           }
         }
-        function ir(e) {
+        function or(e) {
           return n.createElement(
             "svg",
             {
@@ -45555,7 +45600,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function or(e) {
+        function lr(e) {
           return n.createElement(
             "svg",
             {
@@ -45576,7 +45621,7 @@ var CLSTAMP = "9068695";
             }),
           );
         }
-        function lr(e) {
+        function ar(e) {
           return n.createElement(
             "svg",
             {
@@ -45590,6 +45635,24 @@ var CLSTAMP = "9068695";
               fillRule: "evenodd",
               clipRule: "evenodd",
               d: "M2 8V4H15L17 8H2ZM34 12H2V32H34V12Z",
+            }),
+          );
+        }
+        function sr(e) {
+          const { className: t } = e;
+          return n.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              className: (0, i.A)("SVGIcon_Button", "SVGIcon_SteamDeck", t),
+              viewBox: "0 0 36 36",
+              fill: "none",
+            },
+            n.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M0 11C0 9.89543 0.895431 9 2 9H34C35.1046 9 36 9.89543 36 11V24C36 25.6569 34.6569 27 33 27H3C1.34315 27 0 25.6569 0 24V11ZM33 16C33 16.5523 32.5523 17 32 17C31.4477 17 31 16.5523 31 16C31 15.4477 31.4477 15 32 15C32.5523 15 33 15.4477 33 16ZM32 13C32.5523 13 33 12.5523 33 12C33 11.4477 32.5523 11 32 11C31.4477 11 31 11.4477 31 12C31 12.5523 31.4477 13 32 13ZM35 14C35 14.5523 34.5523 15 34 15C33.4477 15 33 14.5523 33 14C33 13.4477 33.4477 13 34 13C34.5523 13 35 13.4477 35 14ZM30 15C30.5523 15 31 14.5523 31 14C31 13.4477 30.5523 13 30 13C29.4477 13 29 13.4477 29 14C29 14.5523 29.4477 15 30 15ZM6 14C6 15.1046 5.10457 16 4 16C2.89543 16 2 15.1046 2 14C2 12.8954 2.89543 12 4 12C5.10457 12 6 12.8954 6 14ZM2.5 21C2.22386 21 2 21.2239 2 21.5V24.5C2 24.7761 2.22386 25 2.5 25H5.5C5.77614 25 6 24.7761 6 24.5V21.5C6 21.2239 5.77614 21 5.5 21H2.5ZM30 21.5C30 21.2239 30.2239 21 30.5 21H33.5C33.7761 21 34 21.2239 34 21.5V24.5C34 24.7761 33.7761 25 33.5 25H30.5C30.2239 25 30 24.7761 30 24.5V21.5ZM28 11H8V25H28V11Z",
             }),
           );
         }
@@ -50127,9 +50190,9 @@ var CLSTAMP = "9068695";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Jul 26 2024 : 13:54:49",
-                    BUILD_TIME_UTC: "Jul 26 2024 : 20:54:49",
-                    BUILD_RTIME_UTC: 1722027289,
+                    BUILD_TIME_LOCAL: "Jul 30 2024 : 15:44:56",
+                    BUILD_TIME_UTC: "Jul 30 2024 : 22:44:56",
+                    BUILD_RTIME_UTC: 1722379496,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -50723,7 +50786,7 @@ var CLSTAMP = "9068695";
         2611: "a2afb4fc0dc2e7577bc2",
         2640: "a56662d2f3935e2642dd",
         2646: "f4843dc70d811c6c3a1c",
-        2664: "65bc4fcf98b914341f98",
+        2664: "71e27a0d9d7a63fb9a50",
         2761: "b5bd623e488c1ed93119",
         2783: "88dfe30aefb9406aca98",
         2862: "64095e8be7b03caee957",
@@ -50818,7 +50881,7 @@ var CLSTAMP = "9068695";
         9418: "60abbbd53a193959226d",
         9462: "5a8205c8e329ca7396b0",
         9711: "8dbe59401b80135811a4",
-        9858: "dfa425b5f2dacbcf448c",
+        9858: "312a9a07b3bf39e75772",
         9869: "539baeeb89c0b6f17b40",
         9887: "2640eed9695e10cbb9d8",
       }[e]),
