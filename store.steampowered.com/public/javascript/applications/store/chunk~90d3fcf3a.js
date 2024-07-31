@@ -3524,6 +3524,7 @@
                 fields: {
                   appid: { n: 1, br: B.qM.readUint32, bw: B.gp.writeUint32 },
                   app_name: { n: 2, br: B.qM.readString, bw: B.gp.writeString },
+                  itemid: { n: 3, br: B.qM.readUint32, bw: B.gp.writeUint32 },
                 },
               }),
             pe.sm_m

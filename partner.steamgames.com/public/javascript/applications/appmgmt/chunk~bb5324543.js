@@ -262,7 +262,7 @@
               "dev" == m.TS.WEB_UNIVERSE &&
                 console.error("Invalid pricing guidelines payload");
           this.m_rgKnownPriceKeys = Array.from(e).sort((e, t) =>
-            (0, u.kd)(S(e), S(t)),
+            (0, u.kd)(G(e), G(t)),
           );
           const s = (0, m.Tc)("currency_data", "application_config");
           if (
@@ -682,7 +682,7 @@
             a = (0, d.ww)(t.packageID);
           return (0, u.kd)(r, a);
         }
-        return (0, u.kd)(S(e.strPriceKey), S(t.strPriceKey));
+        return (0, u.kd)(G(e.strPriceKey), G(t.strPriceKey));
       }
       function f(e) {
         const t = e.split("_")[0];
@@ -713,7 +713,7 @@
       }
       (0, a.Cg)([c.sH], g.prototype, "m_mapOverridesPerPriceKey", void 0),
         (0, a.Cg)([c.XI], g.prototype, "UpdateOverridesPerPriceKey", null);
-      const G = new Map([
+      const S = new Map([
         ["USD", "@1"],
         ["CNY", "@2"],
         ["EUR", "@3"],
@@ -724,8 +724,8 @@
         ["KRW", "@8"],
         ["RUB", "@9"],
       ]);
-      function S(e) {
-        return G.has(e) ? G.get(e) : e.indexOf("_") > 0 ? "ZZZ" + e : e;
+      function G(e) {
+        return S.has(e) ? S.get(e) : e.indexOf("_") > 0 ? "ZZZ" + e : e;
       }
       function b(e, t) {
         return g.Get().GetPrice(e, t);
@@ -1146,6 +1146,7 @@
         m_broadcastViewerCount = void 0;
         m_strBroadcastTitle = void 0;
         m_bCommunityBanned = void 0;
+        m_bOnSteamDeck = !1;
         m_mapRichPresence = i.sH.map();
         m_bNameInitialized = !1;
         m_bStatusInitialized = !1;
@@ -1166,7 +1167,8 @@
             (this.m_broadcastAccountId = void 0),
             (this.m_broadcastAppId = void 0),
             (this.m_broadcastViewerCount = void 0),
-            (this.m_strBroadcastTitle = void 0);
+            (this.m_strBroadcastTitle = void 0),
+            (this.m_bOnSteamDeck = !1);
         }
         GetAccountID() {
           return this.m_steamid.GetAccountID();
@@ -1219,6 +1221,9 @@
         }
         get is_golden() {
           return this.HasStateFlag(4);
+        }
+        IsOnSteamDeck() {
+          return this.m_bOnSteamDeck;
         }
         GetCurrentGameName() {
           return this.m_strGameExtraInfo
@@ -1391,7 +1396,8 @@
         (0, a.Cg)([i.sH], u.prototype, "m_broadcastAppId", void 0),
         (0, a.Cg)([i.sH], u.prototype, "m_broadcastViewerCount", void 0),
         (0, a.Cg)([i.sH], u.prototype, "m_strBroadcastTitle", void 0),
-        (0, a.Cg)([i.sH], u.prototype, "m_bCommunityBanned", void 0);
+        (0, a.Cg)([i.sH], u.prototype, "m_bCommunityBanned", void 0),
+        (0, a.Cg)([i.sH], u.prototype, "m_bOnSteamDeck", void 0);
     },
     41471: (e, t, r) => {
       r.d(t, { DW: () => P, js: () => _, z0: () => g });

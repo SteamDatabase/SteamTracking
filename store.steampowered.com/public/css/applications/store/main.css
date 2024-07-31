@@ -1075,7 +1075,13 @@ b {
   width: 50%;
 }
 ._3Xmp43r8PjDuBvfl8dK6Rt:first-child {
-  margin-right: 12px;
+  margin-right: 16px;
+  padding-right: 16px;
+  border-right: 1px solid #464b58;
+}
+._3Xmp43r8PjDuBvfl8dK6Rt .PKGX85T0vHviq8Tm_2GeT {
+  margin-left: 34px;
+  box-sizing: border-box;
 }
 span._3nqxIgL0a0DbPZHRZRzWsp {
   cursor: pointer;

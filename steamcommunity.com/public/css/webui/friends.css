@@ -96,15 +96,31 @@
   .personastatusicons_PersonaStatusIcon_KxAI_.personastatusicons_MobilePhoneIcon_1iRFj {
   display: block;
 }
-.personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_VR path,
+.personastatusicons_PersonaStatusIcon_KxAI_.personastatusicons_SteamDeckIcon_2oLqc {
+  margin-left: 4px;
+}
+.personastatusicons_PersonaStatusIcon_KxAI_.personastatusicons_VRIcon_368tz {
+  margin-top: -1px;
+}
+.personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_SteamDeck path,
+.personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_VRIcon path,
 .personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_MobilePhone path,
 .personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_BigPicture path {
   fill: #80aa4d;
 }
-.personastatusicons_PersonaStatusIcon_KxAI_.ingame .SVGIcon_VR path.GamepadMode,
+.personastatusicons_PersonaStatusIcon_KxAI_.ingame
+  .SVGIcon_SteamDeck
+  path.GamepadMode,
 .GamepadMode
   .personastatusicons_PersonaStatusIcon_KxAI_.ingame
-  .SVGIcon_VR
+  .SVGIcon_SteamDeck
+  path,
+.personastatusicons_PersonaStatusIcon_KxAI_.ingame
+  .SVGIcon_VRIcon
+  path.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.ingame
+  .SVGIcon_VRIcon
   path,
 .personastatusicons_PersonaStatusIcon_KxAI_.ingame
   .SVGIcon_MobilePhone
@@ -122,15 +138,25 @@
   path {
   fill: #59bf40;
 }
-.personastatusicons_PersonaStatusIcon_KxAI_.online .SVGIcon_VR path,
+.personastatusicons_PersonaStatusIcon_KxAI_.online .SVGIcon_SteamDeck path,
+.personastatusicons_PersonaStatusIcon_KxAI_.online .SVGIcon_VRIcon path,
 .personastatusicons_PersonaStatusIcon_KxAI_.online .SVGIcon_MobilePhone path,
 .personastatusicons_PersonaStatusIcon_KxAI_.online .SVGIcon_BigPicture path {
   fill: #4c91ac;
 }
-.personastatusicons_PersonaStatusIcon_KxAI_.online .SVGIcon_VR path.GamepadMode,
+.personastatusicons_PersonaStatusIcon_KxAI_.online
+  .SVGIcon_SteamDeck
+  path.GamepadMode,
 .GamepadMode
   .personastatusicons_PersonaStatusIcon_KxAI_.online
-  .SVGIcon_VR
+  .SVGIcon_SteamDeck
+  path,
+.personastatusicons_PersonaStatusIcon_KxAI_.online
+  .SVGIcon_VRIcon
+  path.GamepadMode,
+.GamepadMode
+  .personastatusicons_PersonaStatusIcon_KxAI_.online
+  .SVGIcon_VRIcon
   path,
 .personastatusicons_PersonaStatusIcon_KxAI_.online
   .SVGIcon_MobilePhone
@@ -2306,7 +2332,13 @@ b {
   width: 50%;
 }
 .partnereventshared_HalfColumn_3Xmp4:first-child {
-  margin-right: 12px;
+  margin-right: 16px;
+  padding-right: 16px;
+  border-right: 1px solid #464b58;
+}
+.partnereventshared_HalfColumn_3Xmp4 .partnereventshared_InsetOption_PKGX8 {
+  margin-left: 34px;
+  box-sizing: border-box;
 }
 span.partnereventshared_tooltip_Ctn_3nqxI {
   cursor: pointer;
@@ -18054,6 +18086,7 @@ html:not(.touch)
 .quickaccessvoicecontrolssteamdeck_VoiceChatList_3Ri6R
   .quickaccessvoicecontrolssteamdeck_FriendVoiceChatSliderContainer_ucY0N {
   width: 100%;
+  --gamepad-field-control-min-width: 180px;
 }
 .quickaccessvoicecontrolssteamdeck_VoiceChatList_3Ri6R
   .quickaccessvoicecontrolssteamdeck_FriendVoiceChatSliderContainer_ucY0N.gpfocus {

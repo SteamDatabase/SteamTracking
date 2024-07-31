@@ -2635,6 +2635,16 @@
         i = [7, 6],
         o = {
           capsule: { width: 800, height: 450, rgAcceptableTypes: s },
+          marketingmessage_art_2_eventcapsule: {
+            width: 800,
+            height: 450,
+            rgAcceptableTypes: s,
+          },
+          marketingmessage_art_eventcapsule: {
+            width: 800,
+            height: 450,
+            rgAcceptableTypes: s,
+          },
           spotlight: { width: 2108, height: 460, rgAcceptableTypes: s },
           localized_store_app_spotlight: {
             width: 1100,
@@ -3620,7 +3630,7 @@
             const n = _.A.Get().GetApp(a);
             return n
               ? n.GetAssets().GetMainCapsuleURL()
-              : f.TS.MEDIA_CDN_URL + "steam/apps/" + a + "/header.jpg";
+              : f.TS.STORE_ICON_BASE_URL + a + "/header.jpg";
           }
           return "background" == e &&
             r &&
@@ -4227,6 +4237,9 @@
             ),
             e
           );
+        }
+        BIsValidForRealm(e) {
+          return this.GetIncludedRealmList().includes(e);
         }
       }
       (0, n.Cg)([i.sH], j.prototype, "GID", void 0),

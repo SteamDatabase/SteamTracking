@@ -787,6 +787,7 @@
         CloseButton: "gR2gSLc4AtnoUyq29Np8F",
         CloseSectionTools: "_1d0D9Wb15dNSzABGRNMKzl",
         HalfColumn: "_3Xmp43r8PjDuBvfl8dK6Rt",
+        InsetOption: "PKGX85T0vHviq8Tm_2GeT",
         tooltip_Ctn: "_3nqxIgL0a0DbPZHRZRzWsp",
         SaleEditorSpacing: "_2ZGwd2fru49CK-m22nkFg3",
         SaleSectionHeader: "_2WMiQ5MbP_ReyaX5DOpoUD",
@@ -6024,6 +6025,16 @@
         ut = [1, 3],
         dt = {
           capsule: { width: 800, height: 450, rgAcceptableTypes: ut },
+          marketingmessage_art_2_eventcapsule: {
+            width: 800,
+            height: 450,
+            rgAcceptableTypes: ut,
+          },
+          marketingmessage_art_eventcapsule: {
+            width: 800,
+            height: 450,
+            rgAcceptableTypes: ut,
+          },
           spotlight: { width: 2108, height: 460, rgAcceptableTypes: ut },
           localized_store_app_spotlight: {
             width: 1100,
@@ -8893,7 +8904,7 @@
             const i = fr.A.Get().GetApp(r);
             return i
               ? i.GetAssets().GetMainCapsuleURL()
-              : a.TS.MEDIA_CDN_URL + "steam/apps/" + r + "/header.jpg";
+              : a.TS.STORE_ICON_BASE_URL + r + "/header.jpg";
           }
           return "background" == e &&
             s &&
@@ -9518,6 +9529,9 @@
             ),
             e
           );
+        }
+        BIsValidForRealm(e) {
+          return this.GetIncludedRealmList().includes(e);
         }
       }
       (0, p.Cg)([f.sH], Vr.prototype, "GID", void 0),
@@ -11674,10 +11688,9 @@
             n.format("LT"),
             t
               ? i.createElement(
-                  fi.he,
+                  fi.Gq,
                   { toolTipContent: n.format("Z") + ", " + r },
-                  " ",
-                  n.zoneAbbr(),
+                  i.createElement("span", null, " ", n.zoneAbbr()),
                 )
               : null,
           )
@@ -23586,16 +23599,6 @@
             "EBrowserType_DirectHWND_Hidden"),
           (e[(e.EBrowserType_ChildHWNDNative = 6)] =
             "EBrowserType_ChildHWNDNative"),
-          (e[(e.EBrowserType_Transparent_Toplevel = 7)] =
-            "EBrowserType_Transparent_Toplevel"),
-          (e[(e.EBrowserType_OffScreen_SharedTexture = 8)] =
-            "EBrowserType_OffScreen_SharedTexture"),
-          (e[(e.EBrowserType_OffScreen_GameOverlay = 9)] =
-            "EBrowserType_OffScreen_GameOverlay"),
-          (e[(e.EBrowserType_OffScreen_GameOverlay_SharedTexture = 10)] =
-            "EBrowserType_OffScreen_GameOverlay_SharedTexture"),
-          (e[(e.EBrowserType_Offscreen_FriendsUI = 11)] =
-            "EBrowserType_Offscreen_FriendsUI"),
           (e[(e.EBrowserType_Offscreen_SteamUI = 12)] =
             "EBrowserType_Offscreen_SteamUI"),
           (e[(e.EBrowserType_OpenVROverlay_Subview = 13)] =
@@ -43830,7 +43833,7 @@
           return this.m_strName;
         }
         get header_image_url() {
-          return i.TS.MEDIA_CDN_URL + `steam/apps/${this.m_unAppID}/header.jpg`;
+          return i.TS.STORE_ICON_BASE_URL + `${this.m_unAppID}/header.jpg`;
         }
         get icon_url_no_default() {
           return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, o);
@@ -43840,8 +43843,7 @@
         }
         get logo_url() {
           return (
-            i.TS.MEDIA_CDN_URL +
-            `steam/apps/${this.m_unAppID}/capsule_231x87.jpg`
+            i.TS.STORE_ICON_BASE_URL + `${this.m_unAppID}/capsule_231x87.jpg`
           );
         }
         get time_updated_from_server() {
@@ -53551,7 +53553,11 @@
           return this.m_strLibraryHeroURL_2x;
         }
         ConstructAssetURL(e, t) {
-          return _e.TS.MEDIA_CDN_URL + e.replace("${FILENAME}", t);
+          return (
+            _e.TS.BASE_URL_SHARED_CDN +
+            "/store_item_assets/" +
+            e.replace("${FILENAME}", t)
+          );
         }
         GetCommunityIconURL() {
           return this.m_strCommunityIcon;
@@ -53662,7 +53668,11 @@
           );
         }
         ConstructAssetURL(e, t) {
-          return _e.TS.MEDIA_CDN_URL + e.replace("${FILENAME}", t);
+          return (
+            _e.TS.VIDEO_CDN_URL +
+            "/store_trailers/" +
+            e.replace("${FILENAME}", t)
+          );
         }
       }
       class He {
@@ -53679,12 +53689,18 @@
               e = i[t].ordinal() < n[r].ordinal();
             }
             if (e) {
-              const e = _e.TS.MEDIA_CDN_URL + i[t].filename();
+              const e =
+                _e.TS.BASE_URL_SHARED_CDN +
+                "/store_item_assets/" +
+                i[t].filename();
               this.m_rgAllScreenshots.push(e),
                 this.m_rgOnlyAllAgesScreenshots.push(e),
                 (t += 1);
             } else {
-              const e = _e.TS.MEDIA_CDN_URL + n[r].filename();
+              const e =
+                _e.TS.BASE_URL_SHARED_CDN +
+                "/store_item_assets/" +
+                n[r].filename();
               this.m_rgAllScreenshots.push(e), (r += 1);
             }
           }
@@ -58739,7 +58755,9 @@
         CalculatePadding() {
           const e = getComputedStyle(this.m_refTextArea.current);
           this.m_nTextAreaPadding =
-            parseFloat(e.paddingTop) + parseFloat(e.paddingBottom);
+            "border-box" == e.boxSizing
+              ? 0
+              : parseFloat(e.paddingTop) + parseFloat(e.paddingBottom);
         }
         GetMinHeight() {
           return this.props.nMinHeight || 20;
@@ -66123,6 +66141,7 @@
         MEDIA_CDN_COMMUNITY_URL: "",
         MEDIA_CDN_URL: "",
         CLAN_CDN_ASSET_URL: "",
+        VIDEO_CDN_URL: "",
         COMMUNITY_CDN_URL: "",
         COMMUNITY_CDN_ASSET_URL: "",
         BASE_URL_SHARED_CDN: "",

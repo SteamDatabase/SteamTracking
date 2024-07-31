@@ -213,7 +213,7 @@
           (0, n.useEffect)(() => {
             (async () => {
               try {
-                if (l?.GID != t) {
+                if (l?.GID != t && t) {
                   r.O3.Init();
                   const n = s.b.InitFromClanID(e);
                   let o;

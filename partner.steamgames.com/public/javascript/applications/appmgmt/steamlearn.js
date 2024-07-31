@@ -23764,12 +23764,6 @@
             },
             {
               label: (0, c.we)(
-                "#SteamLearn_SnapshotFilter_SnapshotType_OtherProject",
-              ),
-              value: 3,
-            },
-            {
-              label: (0, c.we)(
                 "#SteamLearn_SnapshotFilter_SnapshotType_ForumSpam",
               ),
               value: 4,
@@ -23779,6 +23773,12 @@
                 "#SteamLearn_SnapshotFilter_SnapshotType_GameReview",
               ),
               value: 5,
+            },
+            {
+              label: (0, c.we)(
+                "#SteamLearn_SnapshotFilter_SnapshotType_OtherProject",
+              ),
+              value: 3,
             },
           ],
           i = [
@@ -23832,9 +23832,11 @@
           o = e.snapshot_filter().histogram().data_element_path().length > 0,
           l = 1 == e.snapshot_config().snapshot_type(),
           m = 2 == e.snapshot_config().snapshot_type(),
-          d = 3 == e.snapshot_config().snapshot_type(),
-          _ = 3 == e.snapshot_config().snapshot_schedule_type(),
-          u = 4 == e.snapshot_config().snapshot_schedule_type();
+          d = 4 == e.snapshot_config().snapshot_type(),
+          _ = 5 == e.snapshot_config().snapshot_type(),
+          u = 3 == e.snapshot_config().snapshot_type(),
+          p = 3 == e.snapshot_config().snapshot_schedule_type(),
+          g = 4 == e.snapshot_config().snapshot_schedule_type();
         return n.createElement(
           "div",
           { className: di.ProjectSnapshotFilterPage },
@@ -24094,7 +24096,7 @@
                 label: (0, c.we)(
                   "#SteamLearn_SnapshotFilter_SnapshotOther_ProjectID",
                 ),
-                hidden: !d,
+                hidden: !u,
                 fnGetInitialValue: () =>
                   e
                     .snapshot_config()
@@ -24112,7 +24114,7 @@
                 label: (0, c.we)(
                   "#SteamLearn_SnapshotFilter_SnapshotOther_PublishedVersion",
                 ),
-                hidden: !d,
+                hidden: !u,
                 fnGetInitialValue: () =>
                   e
                     .snapshot_config()
@@ -24152,7 +24154,7 @@
                 }),
                 n.createElement(kr, {
                   label: (0, c.we)("#SteamLearn_ScheduledTrain_DayOfMonth"),
-                  hidden: !u,
+                  hidden: !g,
                   fnGetInitialValue: () =>
                     e
                       .snapshot_config()
@@ -24166,7 +24168,7 @@
                 }),
                 n.createElement(Vr, {
                   label: (0, c.we)("#SteamLearn_ScheduledTrain_DayOfWeek"),
-                  hidden: !_,
+                  hidden: !p,
                   fnGetValue: () =>
                     e.snapshot_config().snapshot_schedule_day_of_week(),
                   fnSetValue: (t) =>
@@ -24174,6 +24176,30 @@
                       .snapshot_config()
                       .set_snapshot_schedule_day_of_week(parseInt(t)),
                   options: s,
+                }),
+              ),
+            (l || m || d || _) &&
+              n.createElement(
+                "div",
+                { className: di.OptionBlock },
+                n.createElement("div", { className: di.Separator }),
+                n.createElement(
+                  "div",
+                  { className: di.OptionHeader },
+                  (0, c.we)("#SteamLearn_SnapshotFilter_SnapshotJobs"),
+                ),
+                n.createElement(
+                  "div",
+                  { className: di.OptionDesc },
+                  (0, c.we)("#SteamLearn_SnapshotFilter_SnapshotJobsDesc"),
+                ),
+                n.createElement(kr, {
+                  label: (0, c.we)("#SteamLearn_SnapshotFilter_SnapshotJobs"),
+                  fnGetInitialValue: () =>
+                    e.snapshot_config().job_count()?.toString() || "200",
+                  fnValidateValue: (e) => Ya(e, 10, 600),
+                  fnSetValue: (t) =>
+                    e.snapshot_config().set_job_count(parseInt(t)),
                 }),
               ),
           ),

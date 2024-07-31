@@ -2964,6 +2964,31 @@
         );
       }
     },
+    59710: (t, e, n) => {
+      "use strict";
+      n.d(e, { A: () => o });
+      var a = n(90626),
+        s = n(66297),
+        i = n(61859);
+      function o(t) {
+        return (
+          (t.options.locale = "steam"),
+          (t.options.langs = {
+            steam: {
+              data: {
+                loading: (0, i.we)("#ReactTabulator_Loading"),
+                error: (0, i.we)("#ReactTabulator_Error"),
+              },
+              groups: {
+                item: (0, i.we)("#ReactTabulator_Item"),
+                items: (0, i.we)("#ReactTabulator_Items"),
+              },
+            },
+          }),
+          a.createElement(s.ReactTabulator, { ...t })
+        );
+      }
+    },
     7247: (t, e, n) => {
       "use strict";
       n.d(e, { Hf: () => l, i$: () => r, qP: () => i });

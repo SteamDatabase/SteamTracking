@@ -564,7 +564,7 @@
             .Body()
             .thumbnails();
         }
-        GetAchivementInfo(e, t) {
+        GetAchievementInfo(e, t) {
           return this.m_fnGetAchievementInfo?.(e, t);
         }
         GetLastClip() {
@@ -664,7 +664,7 @@
         (0, r.Cg)([o.oI], u.prototype, "UpdateUserTimelineMarkers", null),
         (0, r.Cg)([o.oI], u.prototype, "RemoveUserTimelineMarker", null),
         (0, r.Cg)([o.oI], u.prototype, "LoadThumbnails", null),
-        (0, r.Cg)([o.oI], u.prototype, "GetAchivementInfo", null),
+        (0, r.Cg)([o.oI], u.prototype, "GetAchievementInfo", null),
         (0, r.Cg)([o.oI], u.prototype, "OnLowDiskSpace", null);
       const C = u;
     },

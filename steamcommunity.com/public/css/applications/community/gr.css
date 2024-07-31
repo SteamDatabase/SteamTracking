@@ -419,25 +419,33 @@
   height: fit-content;
   width: fit-content;
   justify-content: center;
-  padding: 16px;
-  font-size: 36px;
-  font-weight: bold;
-  color: #fff;
+  margin: 8px 0px 0px 8px;
+  padding: 6px 20px 8px;
+  font-size: 32px;
+  font-weight: 800;
+  color: #dcdedf;
+  text-shadow: 0px 0px 24px #000000aa;
   animation-name: _1Tmc5_ehH_tlNlyTxyfSr5;
   animation-duration: 2000ms;
+  transition-property: background-color, opacity;
+  border-radius: 5px;
 }
 @keyframes _1Tmc5_ehH_tlNlyTxyfSr5 {
   0% {
     opacity: 0;
+    background-color: none;
   }
   25% {
     opacity: 1;
+    background: #060a0eaa;
   }
   75% {
     opacity: 1;
+    background: #060a0eaa;
   }
   100% {
     opacity: 0;
+    background-color: none;
   }
 }
 ._3HMMNaShMT1M773fCgCd {
@@ -852,7 +860,6 @@
   right: 20px;
 }
 .KxkV7ibv4HxiLzsJDo09y {
-  pointer-events: all;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -870,6 +877,7 @@
   pointer-events: none;
 }
 ._1Dg_c4LTkbyiG_03VDAsQE {
+  pointer-events: all;
   width: 22px;
   height: 22px;
   display: flex;
@@ -2008,25 +2016,11 @@
   top: 26px;
   right: 20px;
 }
-._2Xv5L_lltxB8ZxTSRFiN2m {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
 ._2ylJ735myBUxj8mYp92MQz {
   height: 20px;
   bottom: 0;
   width: 100%;
   position: absolute;
-}
-.Fuvz5-v_Jq5i_lThPIz5z {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.Fuvz5-v_Jq5i_lThPIz5z ._3Z9hkuB9-Hmn5_8M48FE01 ._3H1CUoiDPdbAQs16z1Zc5X {
-  color: #3d4450;
 }
 ._35GmRrlfGhrO_6QVFR0Wi7 {
   width: 100%;
@@ -2040,22 +2034,13 @@
   cursor: ew-resize;
 }
 ._35GmRrlfGhrO_6QVFR0Wi7 ._bKQMA7pDeFEDDAbdgdNg {
-  display: flex;
-  align-items: center;
   z-index: 2;
-  height: 100%;
 }
 ._35GmRrlfGhrO_6QVFR0Wi7 ._bKQMA7pDeFEDDAbdgdNg ._3PO0lBzzlKrUN85s6-CJmt {
   z-index: 2;
 }
 ._35GmRrlfGhrO_6QVFR0Wi7 ._bKQMA7pDeFEDDAbdgdNg ._3H1CUoiDPdbAQs16z1Zc5X {
   pointer-events: auto;
-  cursor: ew-resize;
-}
-._35GmRrlfGhrO_6QVFR0Wi7
-  ._bKQMA7pDeFEDDAbdgdNg
-  ._3H1CUoiDPdbAQs16z1Zc5X:active {
-  cursor: ew-resize;
 }
 ._35GmRrlfGhrO_6QVFR0Wi7
   ._bKQMA7pDeFEDDAbdgdNg
@@ -2075,21 +2060,17 @@
   justify-content: center;
   display: flex;
   align-items: center;
-  height: 100%;
   width: 16px;
   position: absolute;
-  pointer-events: auto;
 }
 ._3H1CUoiDPdbAQs16z1Zc5X {
   height: 24px;
-  margin-top: 4px;
   width: 16px;
   color: #ffd55f;
-  cursor: pointer;
+  cursor: ew-resize;
   display: flex;
   align-items: center;
   filter: drop-shadow(0 0 4px #000000dd);
-  transform: translateX(-50%);
   transition-property: color;
   transition-timing-function: ease-in-out;
 }
@@ -2944,25 +2925,11 @@
   top: 26px;
   right: 20px;
 }
-.CpHhu0P_1ta17R51D8A0T {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
 ._3TsJzrPgtC5rqLcR6ihpFi {
   height: 20px;
   bottom: 0;
   width: 100%;
   position: absolute;
-}
-._2VlThSurZmOvHBFT5rHwM1 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-._2VlThSurZmOvHBFT5rHwM1 ._106ZAEQ05s5XGwxAQ4k_W6 .DTarGRkLfmPhdBVfdlNIf {
-  color: #3d4450;
 }
 ._2ULjGYMNYTiUllQtzFXS11 {
   width: 100%;
@@ -2976,22 +2943,13 @@
   cursor: ew-resize;
 }
 ._2ULjGYMNYTiUllQtzFXS11 ._2uX26Fo_kmE4ZR6JmKQpp4 {
-  display: flex;
-  align-items: center;
   z-index: 2;
-  height: 100%;
 }
 ._2ULjGYMNYTiUllQtzFXS11 ._2uX26Fo_kmE4ZR6JmKQpp4 ._2C2hWRks6sMz8e9rdXj_BH {
   z-index: 2;
 }
 ._2ULjGYMNYTiUllQtzFXS11 ._2uX26Fo_kmE4ZR6JmKQpp4 .DTarGRkLfmPhdBVfdlNIf {
   pointer-events: auto;
-  cursor: ew-resize;
-}
-._2ULjGYMNYTiUllQtzFXS11
-  ._2uX26Fo_kmE4ZR6JmKQpp4
-  .DTarGRkLfmPhdBVfdlNIf:active {
-  cursor: ew-resize;
 }
 ._2ULjGYMNYTiUllQtzFXS11
   ._2uX26Fo_kmE4ZR6JmKQpp4
@@ -3011,21 +2969,17 @@
   justify-content: center;
   display: flex;
   align-items: center;
-  height: 100%;
   width: 16px;
   position: absolute;
-  pointer-events: auto;
 }
 .DTarGRkLfmPhdBVfdlNIf {
   height: 24px;
-  margin-top: 4px;
   width: 16px;
   color: #ffd55f;
-  cursor: pointer;
+  cursor: ew-resize;
   display: flex;
   align-items: center;
   filter: drop-shadow(0 0 4px #000000dd);
-  transform: translateX(-50%);
   transition-property: color;
   transition-timing-function: ease-in-out;
 }

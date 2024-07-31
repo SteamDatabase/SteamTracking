@@ -568,7 +568,7 @@
             .Body()
             .thumbnails();
         }
-        GetAchivementInfo(e, t) {
+        GetAchievementInfo(e, t) {
           var i;
           return null === (i = this.m_fnGetAchievementInfo) || void 0 === i
             ? void 0
@@ -671,7 +671,7 @@
         (0, r.Cg)([o.oI], _.prototype, "UpdateUserTimelineMarkers", null),
         (0, r.Cg)([o.oI], _.prototype, "RemoveUserTimelineMarker", null),
         (0, r.Cg)([o.oI], _.prototype, "LoadThumbnails", null),
-        (0, r.Cg)([o.oI], _.prototype, "GetAchivementInfo", null),
+        (0, r.Cg)([o.oI], _.prototype, "GetAchievementInfo", null),
         (0, r.Cg)([o.oI], _.prototype, "OnLowDiskSpace", null);
       const y = _;
     },

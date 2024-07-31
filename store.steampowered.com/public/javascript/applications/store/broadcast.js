@@ -12014,36 +12014,45 @@
           switch (e.userType) {
             case "presenter":
               return l.createElement(
-                ci.he,
+                ci.Gq,
                 {
-                  className: Yr().RoleFlairContainer,
                   toolTipContent: (0, Tr.we)(
                     "#BroadcastChat_Role_Presenter_ttip",
                   ),
                 },
-                l.createElement(Xr.NCC, null),
+                l.createElement(
+                  "span",
+                  { className: Yr().RoleFlairContainer },
+                  l.createElement(Xr.NCC, null),
+                ),
               );
             case "moderator":
               return l.createElement(
-                ci.he,
+                ci.Gq,
                 {
-                  className: Yr().RoleFlairContainer,
                   toolTipContent: (0, Tr.we)(
                     "#BroadcastChat_Role_Moderatorr_ttip",
                   ),
                 },
-                l.createElement(Xr.$4X, null),
+                l.createElement(
+                  "span",
+                  { className: Yr().RoleFlairContainer },
+                  l.createElement(Xr.$4X, null),
+                ),
               );
             case "broadcaster":
               return l.createElement(
-                ci.he,
+                ci.Gq,
                 {
-                  className: Yr().RoleFlairContainer,
                   toolTipContent: (0, Tr.we)(
                     "#BroadcastChat_Role_Broadcaster_ttip",
                   ),
                 },
-                l.createElement(Xr.Gkr, null),
+                l.createElement(
+                  "span",
+                  { className: Yr().RoleFlairContainer },
+                  l.createElement(Xr.Gkr, null),
+                ),
               );
             default:
               return null;

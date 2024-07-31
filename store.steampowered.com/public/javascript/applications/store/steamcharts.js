@@ -260,7 +260,7 @@
           (0, r.useEffect)(() => {
             (async () => {
               try {
-                if (o?.GID != t) {
+                if (o?.GID != t && t) {
                   n.O3.Init();
                   const r = l.b.InitFromClanID(e);
                   let s;

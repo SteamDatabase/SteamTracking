@@ -1295,7 +1295,7 @@
           (0, o.useEffect)(() => {
             (async () => {
               try {
-                if (a?.GID != t) {
+                if (a?.GID != t && t) {
                   r.O3.Init();
                   const o = s.b.InitFromClanID(e);
                   let i;
@@ -4579,10 +4579,9 @@
             o.format("LT"),
             t
               ? r.createElement(
-                  i.he,
+                  i.Gq,
                   { toolTipContent: o.format("Z") + ", " + n },
-                  " ",
-                  o.zoneAbbr(),
+                  r.createElement("span", null, " ", o.zoneAbbr()),
                 )
               : null,
           )

@@ -257,6 +257,8 @@
         "duration-app-launch": "800ms",
         PersonaStatusIcon: "KxAI_M9gWx3OnKSshHOs6",
         MobilePhoneIcon: "_1iRFj5lJrMqMnRb3GZYPSw",
+        SteamDeckIcon: "_2oLqcfqHHKKAK0WfzjXMg_",
+        VRIcon: "_368tz9TSOLGiG2mNMLScMz",
       };
     },
     43047: (e) => {
@@ -3123,7 +3125,7 @@
                 { className: Re.ItemPickeFilter },
                 d.createElement(pe.pd, {
                   value: n,
-                  label: "filter",
+                  label: (0, p.we)("#ItemPicker_Filter"),
                   autoFocus: !0,
                   onChange: this.OnSearchChange,
                 }),
@@ -6425,6 +6427,7 @@
             (this.m_broadcastViewerCount = void 0),
             (this.m_strBroadcastTitle = void 0),
             (this.m_bCommunityBanned = void 0),
+            (this.m_bOnSteamDeck = !1),
             (this.m_mapRichPresence = i.sH.map()),
             (this.m_bNameInitialized = !1),
             (this.m_bStatusInitialized = !1),
@@ -6445,7 +6448,8 @@
             (this.m_broadcastAccountId = void 0),
             (this.m_broadcastAppId = void 0),
             (this.m_broadcastViewerCount = void 0),
-            (this.m_strBroadcastTitle = void 0);
+            (this.m_strBroadcastTitle = void 0),
+            (this.m_bOnSteamDeck = !1);
         }
         GetAccountID() {
           return this.m_steamid.GetAccountID();
@@ -6512,6 +6516,9 @@
         }
         get is_golden() {
           return this.HasStateFlag(4);
+        }
+        IsOnSteamDeck() {
+          return this.m_bOnSteamDeck;
         }
         GetCurrentGameName() {
           return this.m_strGameExtraInfo
@@ -6684,7 +6691,8 @@
         (0, r.Cg)([i.sH], d.prototype, "m_broadcastAppId", void 0),
         (0, r.Cg)([i.sH], d.prototype, "m_broadcastViewerCount", void 0),
         (0, r.Cg)([i.sH], d.prototype, "m_strBroadcastTitle", void 0),
-        (0, r.Cg)([i.sH], d.prototype, "m_bCommunityBanned", void 0);
+        (0, r.Cg)([i.sH], d.prototype, "m_bCommunityBanned", void 0),
+        (0, r.Cg)([i.sH], d.prototype, "m_bOnSteamDeck", void 0);
     },
     51383: (e, t, a) => {
       "use strict";
@@ -6704,7 +6712,8 @@
         if (!t.is_online) return null;
         const m = t.HasStateFlag(512),
           h = t.HasStateFlag(2048),
-          u = !h && t.HasStateFlag(1024);
+          u = t.IsOnSteamDeck(),
+          p = !u && !h && t.HasStateFlag(1024);
         return r.createElement(
           r.Fragment,
           null,
@@ -6736,9 +6745,9 @@
                 title: (0, s.we)("#Platform_Hint_VR"),
                 ...i,
               },
-              r.createElement(l.VR, null),
+              r.createElement(l.MUh, null),
             ),
-          u &&
+          p &&
             r.createElement(
               "div",
               {
@@ -6752,6 +6761,21 @@
                 ...i,
               },
               r.createElement(l.bPr, null),
+            ),
+          u &&
+            r.createElement(
+              "div",
+              {
+                className: (0, o.A)(
+                  a,
+                  c().PersonaStatusIcon,
+                  c().SteamDeckIcon,
+                  (0, n.rO)(t),
+                ),
+                title: (0, s.we)("#Platform_Hint_SteamDeck"),
+                ...i,
+              },
+              r.createElement(l.DQe, null),
             ),
         );
       });

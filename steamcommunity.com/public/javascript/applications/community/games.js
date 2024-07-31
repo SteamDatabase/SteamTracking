@@ -8237,6 +8237,7 @@
                     br: s.qM.readString,
                     bw: s.gp.writeString,
                   },
+                  event_type: { n: 7, br: s.qM.readEnum, bw: s.gp.writeEnum },
                 },
               }),
             gr.sm_m

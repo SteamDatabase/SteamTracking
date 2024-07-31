@@ -13366,36 +13366,45 @@
           switch (e.userType) {
             case "presenter":
               return l.createElement(
-                qi.he,
+                qi.Gq,
                 {
-                  className: yi().RoleFlairContainer,
                   toolTipContent: (0, Rr.we)(
                     "#BroadcastChat_Role_Presenter_ttip",
                   ),
                 },
-                l.createElement(gi.NCC, null),
+                l.createElement(
+                  "span",
+                  { className: yi().RoleFlairContainer },
+                  l.createElement(gi.NCC, null),
+                ),
               );
             case "moderator":
               return l.createElement(
-                qi.he,
+                qi.Gq,
                 {
-                  className: yi().RoleFlairContainer,
                   toolTipContent: (0, Rr.we)(
                     "#BroadcastChat_Role_Moderatorr_ttip",
                   ),
                 },
-                l.createElement(gi.$4X, null),
+                l.createElement(
+                  "span",
+                  { className: yi().RoleFlairContainer },
+                  l.createElement(gi.$4X, null),
+                ),
               );
             case "broadcaster":
               return l.createElement(
-                qi.he,
+                qi.Gq,
                 {
-                  className: yi().RoleFlairContainer,
                   toolTipContent: (0, Rr.we)(
                     "#BroadcastChat_Role_Broadcaster_ttip",
                   ),
                 },
-                l.createElement(gi.Gkr, null),
+                l.createElement(
+                  "span",
+                  { className: yi().RoleFlairContainer },
+                  l.createElement(gi.Gkr, null),
+                ),
               );
             default:
               return null;

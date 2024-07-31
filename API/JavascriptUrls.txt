@@ -211,6 +211,7 @@ ${COMMUNITY_BASE_URL}gid/${}/hasclanimagefile
 ${COMMUNITY_BASE_URL}gid/${}/members/
 ${COMMUNITY_BASE_URL}gid/${}/membersManage
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/
+${COMMUNITY_BASE_URL}gid/${}/partnerevents/${}/edit
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${GID}?tab=sale
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${GID}?tab=sale#SalePageEdit_SaleBanner
 ${COMMUNITY_BASE_URL}gid/${}/partnerevents/edit/${clanEventGID}
@@ -265,6 +266,7 @@ ${COMMUNITY_BASE_URL}ogg/${}/ajaxgetappbranches
 ${COMMUNITY_BASE_URL}ogg/${}/ajaxgetappvisibilityrounds
 ${COMMUNITY_BASE_URL}ogg/${}/ajaxgetvanityandclanid/
 ${COMMUNITY_BASE_URL}ogg/${}/ajaxisvisibleinsc
+${COMMUNITY_BASE_URL}ogg/${}/partnerevents/create
 ${COMMUNITY_BASE_URL}ogg/${}/partnerevents/create/
 ${COMMUNITY_BASE_URL}ogg/${}/selectAvatar
 ${COMMUNITY_BASE_URL}parental/ajaxunlock/
@@ -972,6 +974,7 @@ ${PARTNER_BASE_URL}discounts/ajaxgetdiscountbyapp
 ${PARTNER_BASE_URL}discounts/ajaxgetdiscountbybundle
 ${PARTNER_BASE_URL}doc/${}
 ${PARTNER_BASE_URL}doc/features/playtest#4
+${PARTNER_BASE_URL}doc/features/seasonpass
 ${PARTNER_BASE_URL}doc/features/timeline
 ${PARTNER_BASE_URL}doc/gettingstarted/managing_users
 ${PARTNER_BASE_URL}doc/marketing/discounts
@@ -1075,6 +1078,7 @@ ${PARTNER_BASE_URL}promotion/assetportal/ajaxuploadpreviewassetexternal/${}?inpu
 ${PARTNER_BASE_URL}promotion/assetportal/externalrequest/${}?inputaccesskey=${input_access_key}
 ${PARTNER_BASE_URL}promotion/assetportal/localization/${id}
 ${PARTNER_BASE_URL}promotion/assetportal/localization/${planid}
+${PARTNER_BASE_URL}promotion/assetportal/request/${asset_request_id}
 ${PARTNER_BASE_URL}promotion/assetportal/request/${gid}
 ${PARTNER_BASE_URL}promotion/assetportal/request/${id}
 ${PARTNER_BASE_URL}promotion/assetportal/request/${}
@@ -1154,6 +1158,7 @@ ${PARTNER_BASE_URL}sales/ajaxcreatesalepartnerevent
 ${PARTNER_BASE_URL}sales/ajaxgetsalerank
 ${PARTNER_BASE_URL}sales/ajaxupdateclanaccountflags
 ${PARTNER_BASE_URL}sdr/ajaxsessionsearch?${}
+${PARTNER_BASE_URL}seasonpass/ajaxsavemilestone
 ${PARTNER_BASE_URL}steamml/create_problem
 ${PARTNER_BASE_URL}steamml/delete_problem
 ${PARTNER_BASE_URL}steamml/edit_problem
@@ -1273,7 +1278,7 @@ ${STORE_BASE_URL}app/${}
 ${STORE_BASE_URL}app/${}/
 ${STORE_BASE_URL}app/${}/?beta=1
 ${STORE_BASE_URL}app/${}/?curator_clanid=${}
-${STORE_BASE_URL}app/${}?deckapp=${}&utm=topplayed_app_banner
+${STORE_BASE_URL}app/${}?deckapp=${}&utm_source=topplayed_app_banner&utm_campaign=${}
 ${STORE_BASE_URL}broadcast/ajaxcheckbroadcast
 ${STORE_BASE_URL}broadcast/ajaxgetappinfoforcap
 ${STORE_BASE_URL}broadcast/ajaxgetbatchappcapsuleinfo
@@ -1407,6 +1412,7 @@ ${STORE_BASE_URL}news/
 ${STORE_BASE_URL}news/${}
 ${STORE_BASE_URL}news/${}/view/${announcement_gid}
 ${STORE_BASE_URL}news/?appids=${appid}
+${STORE_BASE_URL}news/app/${appid}?emclan=${clanSteamID}&emgid=${GID}}
 ${STORE_BASE_URL}news/app/${}/view/${}
 ${STORE_BASE_URL}news/collection/sales/
 ${STORE_BASE_URL}news/download/${}/${}/${GID}?${}

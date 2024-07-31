@@ -593,6 +593,7 @@
         CloseButton: "gR2gSLc4AtnoUyq29Np8F",
         CloseSectionTools: "_1d0D9Wb15dNSzABGRNMKzl",
         HalfColumn: "_3Xmp43r8PjDuBvfl8dK6Rt",
+        InsetOption: "PKGX85T0vHviq8Tm_2GeT",
         tooltip_Ctn: "_3nqxIgL0a0DbPZHRZRzWsp",
         SaleEditorSpacing: "_2ZGwd2fru49CK-m22nkFg3",
         SaleSectionHeader: "_2WMiQ5MbP_ReyaX5DOpoUD",
@@ -1013,6 +1014,7 @@
         AppLandingPage: (e = ":appid") => `/apps/landing/${e}`,
         AppCommunityItems: (e = ":appid") => `/apps/communityitems/${e}`,
         StoreAdminReviewPriceProposals: () => "/admin/reviewpricesubmissions/",
+        SeasonPassRouting: () => "/seasonpass",
         SDRConnections: () => "/sdr/connections/:appid(\\d+)",
         PublisherDashboard: () => "/dashboard",
         TimelineMarkerEditor: () => "/apps/timelinemarkers/:appid(\\d+)",
@@ -1254,8 +1256,8 @@
       }
       var L = n(75493),
         k = n(41735),
-        O = n.n(k),
-        N = n(31380),
+        N = n.n(k),
+        O = n(31380),
         F = n(7068),
         x = n(30470),
         P = n(24484),
@@ -1265,14 +1267,14 @@
         G = n(56011),
         W = n(71298);
       function z(e, t, n, r, i) {
-        return (0, N.useMutation)(
+        return (0, O.useMutation)(
           async () =>
             await (async function (e, t) {
               const n = new FormData();
               n.append("sessionid", x.TS.SESSIONID),
                 n.append("keys", JSON.stringify(t));
               const r = `${x.TS.PARTNER_BASE_URL}apps/requestkeys/${e}`,
-                i = await O().post(r, n);
+                i = await N().post(r, n);
               return (
                 "dev" == x.TS.WEB_UNIVERSE && console.log("RequestKeys", i),
                 i?.data?.message
@@ -1585,12 +1587,11 @@
         ),
         ae = l.lazy(() =>
           Promise.all([
-            n.e(7378),
-            n.e(2201),
+            n.e(2202),
+            n.e(2836),
             n.e(2785),
+            n.e(2890),
             n.e(4227),
-            n.e(280),
-            n.e(9747),
             n.e(5769),
             n.e(8591),
             n.e(4160),
@@ -1600,27 +1601,26 @@
         ),
         le = l.lazy(() =>
           Promise.all([
-            n.e(7378),
-            n.e(2201),
+            n.e(2202),
+            n.e(2836),
+            n.e(9116),
             n.e(6542),
             n.e(2912),
-            n.e(2946),
             n.e(9150),
             n.e(2785),
             n.e(8932),
             n.e(38),
             n.e(1084),
+            n.e(2890),
             n.e(4227),
-            n.e(280),
-            n.e(9747),
             n.e(5769),
             n.e(7499),
             n.e(8591),
+            n.e(4442),
             n.e(6132),
             n.e(2870),
             n.e(9255),
             n.e(4160),
-            n.e(6060),
             n.e(7352),
             n.e(8995),
             n.e(8758),
@@ -1630,27 +1630,26 @@
         ),
         ce = l.lazy(() =>
           Promise.all([
-            n.e(7378),
-            n.e(2201),
+            n.e(2202),
+            n.e(2836),
+            n.e(9116),
             n.e(6542),
             n.e(2912),
-            n.e(2946),
             n.e(9150),
             n.e(2785),
             n.e(8932),
             n.e(38),
             n.e(1084),
+            n.e(2890),
             n.e(4227),
-            n.e(280),
-            n.e(9747),
             n.e(5769),
             n.e(7499),
             n.e(8591),
+            n.e(4442),
             n.e(6132),
             n.e(2870),
             n.e(9255),
             n.e(4160),
-            n.e(6060),
             n.e(7352),
             n.e(8995),
             n.e(8758),
@@ -1660,27 +1659,26 @@
         ),
         ue = l.lazy(() =>
           Promise.all([
-            n.e(7378),
-            n.e(2201),
+            n.e(2202),
+            n.e(2836),
+            n.e(9116),
             n.e(6542),
             n.e(2912),
-            n.e(2946),
             n.e(9150),
             n.e(2785),
             n.e(8932),
             n.e(38),
             n.e(1084),
+            n.e(2890),
             n.e(4227),
-            n.e(280),
-            n.e(9747),
             n.e(5769),
             n.e(7499),
             n.e(8591),
+            n.e(4442),
             n.e(6132),
             n.e(2870),
             n.e(9255),
             n.e(4160),
-            n.e(6060),
             n.e(7352),
             n.e(8995),
             n.e(8758),
@@ -1690,27 +1688,26 @@
         ),
         me = l.lazy(() =>
           Promise.all([
-            n.e(7378),
-            n.e(2201),
+            n.e(2202),
+            n.e(2836),
+            n.e(9116),
             n.e(6542),
             n.e(2912),
-            n.e(2946),
             n.e(9150),
             n.e(2785),
             n.e(8932),
             n.e(38),
             n.e(1084),
+            n.e(2890),
             n.e(4227),
-            n.e(280),
-            n.e(9747),
             n.e(5769),
             n.e(7499),
             n.e(8591),
+            n.e(4442),
             n.e(6132),
             n.e(2870),
             n.e(9255),
             n.e(4160),
-            n.e(6060),
             n.e(7352),
             n.e(8995),
             n.e(8758),
@@ -1723,48 +1720,47 @@
         ),
         pe = l.lazy(() =>
           Promise.all([
-            n.e(7378),
-            n.e(2201),
+            n.e(2202),
+            n.e(2836),
+            n.e(9116),
             n.e(6542),
-            n.e(2946),
             n.e(8932),
             n.e(6995),
+            n.e(2890),
             n.e(4227),
-            n.e(280),
-            n.e(9747),
             n.e(5769),
             n.e(7499),
             n.e(8591),
+            n.e(4442),
             n.e(4160),
-            n.e(6060),
             n.e(8758),
+            n.e(867),
             n.e(2455),
-          ]).then(n.bind(n, 94030)),
+          ]).then(n.bind(n, 78869)),
         ),
         he = l.lazy(() => n.e(5027).then(n.bind(n, 26193))),
         _e = l.lazy(() =>
           Promise.all([
-            n.e(7378),
-            n.e(2201),
+            n.e(2202),
+            n.e(2836),
+            n.e(9116),
             n.e(6542),
             n.e(2912),
-            n.e(2946),
             n.e(9150),
             n.e(2785),
             n.e(8932),
             n.e(38),
             n.e(1084),
+            n.e(2890),
             n.e(4227),
-            n.e(280),
-            n.e(9747),
             n.e(5769),
             n.e(7499),
             n.e(8591),
+            n.e(4442),
             n.e(6132),
             n.e(2870),
             n.e(9255),
             n.e(4160),
-            n.e(6060),
             n.e(7352),
             n.e(8995),
             n.e(8758),
@@ -1783,27 +1779,26 @@
         ),
         Ce = l.lazy(() =>
           Promise.all([
-            n.e(7378),
-            n.e(2201),
+            n.e(2202),
+            n.e(2836),
+            n.e(9116),
             n.e(6542),
             n.e(2912),
-            n.e(2946),
             n.e(9150),
             n.e(2785),
             n.e(8932),
             n.e(38),
             n.e(1084),
+            n.e(2890),
             n.e(4227),
-            n.e(280),
-            n.e(9747),
             n.e(5769),
             n.e(7499),
             n.e(8591),
+            n.e(4442),
             n.e(6132),
             n.e(2870),
             n.e(9255),
             n.e(4160),
-            n.e(6060),
             n.e(7352),
             n.e(8995),
             n.e(8758),
@@ -1813,25 +1808,23 @@
         ),
         fe = l.lazy(() =>
           Promise.all([
-            n.e(7378),
-            n.e(2201),
+            n.e(2202),
+            n.e(2836),
+            n.e(9116),
             n.e(2912),
-            n.e(2946),
-            n.e(280),
-            n.e(9747),
+            n.e(2890),
             n.e(7499),
-            n.e(6060),
+            n.e(4442),
             n.e(4985),
           ]).then(n.bind(n, 43709)),
         ),
         ve = l.lazy(() =>
           Promise.all([
-            n.e(7378),
+            n.e(2202),
             n.e(2912),
             n.e(9150),
             n.e(38),
             n.e(4227),
-            n.e(280),
             n.e(5769),
             n.e(7499),
             n.e(6132),
@@ -1843,35 +1836,45 @@
         ),
         Se = l.lazy(() =>
           Promise.all([
-            n.e(7378),
-            n.e(2201),
+            n.e(2202),
+            n.e(2836),
+            n.e(9116),
             n.e(6542),
             n.e(2912),
-            n.e(2946),
             n.e(9150),
             n.e(2785),
             n.e(8932),
             n.e(38),
             n.e(1084),
+            n.e(2890),
             n.e(4227),
-            n.e(280),
-            n.e(9747),
             n.e(5769),
             n.e(7499),
             n.e(8591),
+            n.e(4442),
             n.e(6132),
             n.e(2870),
             n.e(9255),
             n.e(4160),
-            n.e(6060),
             n.e(7352),
             n.e(8995),
             n.e(8758),
             n.e(8350),
             n.e(5136),
           ]).then(n.bind(n, 16340)),
+        ),
+        we = l.lazy(() =>
+          Promise.all([
+            n.e(2202),
+            n.e(2836),
+            n.e(9116),
+            n.e(2890),
+            n.e(4442),
+            n.e(867),
+            n.e(5139),
+          ]).then(n.bind(n, 68606)),
         );
-      function we(e) {
+      function be(e) {
         const t = (0, p.Tc)("publisherid", "application_config");
         return l.createElement(
           p.ss,
@@ -1883,7 +1886,7 @@
               T.s,
               null,
               l.createElement(
-                Me,
+                Re,
                 null,
                 l.createElement(M.EO, null, e.children),
               ),
@@ -1891,7 +1894,7 @@
           ),
         );
       }
-      function be(e) {
+      function Ee(e) {
         let { children: t } = e,
           n = (0, B.OU)([o.B.PricingTools(), o.B.PromotionTools()]);
         return l.createElement(
@@ -1900,15 +1903,15 @@
           t,
         );
       }
-      function Ee(e) {
+      function Ie(e) {
         return l.createElement(
           v.Kd,
           { basename: (0, o.C)() },
           l.createElement(
-            we,
+            be,
             null,
             l.createElement(
-              be,
+              Ee,
               null,
               l.createElement(
                 l.Suspense,
@@ -1962,6 +1965,10 @@
                   l.createElement(S.qh, {
                     path: o.B.StoreAdminReviewPriceProposals(),
                     component: pe,
+                  }),
+                  l.createElement(S.qh, {
+                    path: o.B.SeasonPassRouting(),
+                    component: we,
                   }),
                   l.createElement(S.qh, {
                     path: o.B.SteamML(),
@@ -2125,12 +2132,12 @@
           ),
         );
       }
-      function Ie() {
+      function Me() {
         const e = (0, p.Fd)("loyalty_webapi_token", "application_config");
         return new E.D(p.TS.WEBAPI_BASE_URL, e);
       }
-      function Me(e) {
-        const t = (0, D.bs)(Ie),
+      function Re(e) {
+        const t = (0, D.bs)(Me),
           n = (0, D.bs)(l.useCallback(() => new b.A(), []));
         return l.createElement(
           w.VQ,
@@ -2138,12 +2145,12 @@
           e.children,
         );
       }
-      var Re = n(14947),
-        ye = n(44844),
-        De = n(17204),
-        Te = n(44332);
+      var ye = n(14947),
+        De = n(44844),
+        Te = n(17204),
+        Be = n(44332);
       n(5977);
-      async function Be(e) {
+      async function Ae(e) {
         const [t, r, i, o] = await Promise.all([
             n(14919)(`./shared_${e}.json`),
             n(6527)(`./marketing_${e}.json`),
@@ -2169,26 +2176,26 @@
             d.pf.AddTokens(i, l);
         }
       }
-      (0, Re.jK)({ enforceActions: "never" }),
+      (0, ye.jK)({ enforceActions: "never" }),
         document.addEventListener("DOMContentLoaded", async function () {
           document.getElementById("application_root")
             ? ((0, p.XJ)("application_config"),
-              (0, De.aj)().Init(
+              (0, Te.aj)().Init(
                 "Partner",
                 CLSTAMP,
                 new E.D(p.TS.WEBAPI_BASE_URL).GetServiceTransport(),
               ),
-              await Be(p.TS.LANGUAGE),
-              ye
-                .H(document.getElementById("application_root"))
-                .render(l.createElement(Ee, {})))
+              await Ae(p.TS.LANGUAGE),
+              De.H(document.getElementById("application_root")).render(
+                l.createElement(Ie, {}),
+              ))
             : ((0, p.XJ)(),
-              (0, De.aj)().Init(
+              (0, Te.aj)().Init(
                 "Partner",
                 CLSTAMP,
                 new E.D(p.TS.WEBAPI_BASE_URL).GetServiceTransport(),
               ),
-              await Be(p.TS.LANGUAGE),
+              await Ae(p.TS.LANGUAGE),
               (function () {
                 let e = document.querySelectorAll(".StoreAdminReactRoot");
                 for (let t = 0; t < e.length; t++) {
@@ -2204,13 +2211,13 @@
                         );
                       break;
                     default:
-                      (0, Te.w)(!1, `unknown component: "${i}"`);
+                      (0, Be.w)(!1, `unknown component: "${i}"`);
                   }
                 }
               })());
         }),
         (window.LocalizationManifestReady = function (e, t, n) {
-          (0, Te.w)("manifest" === t, `Expected manifest not "${t}"`),
+          (0, Be.w)("manifest" === t, `Expected manifest not "${t}"`),
             d.pf.InitDirect(n);
         });
     },
@@ -2721,16 +2728,6 @@
             "EBrowserType_DirectHWND_Hidden"),
           (e[(e.EBrowserType_ChildHWNDNative = 6)] =
             "EBrowserType_ChildHWNDNative"),
-          (e[(e.EBrowserType_Transparent_Toplevel = 7)] =
-            "EBrowserType_Transparent_Toplevel"),
-          (e[(e.EBrowserType_OffScreen_SharedTexture = 8)] =
-            "EBrowserType_OffScreen_SharedTexture"),
-          (e[(e.EBrowserType_OffScreen_GameOverlay = 9)] =
-            "EBrowserType_OffScreen_GameOverlay"),
-          (e[(e.EBrowserType_OffScreen_GameOverlay_SharedTexture = 10)] =
-            "EBrowserType_OffScreen_GameOverlay_SharedTexture"),
-          (e[(e.EBrowserType_Offscreen_FriendsUI = 11)] =
-            "EBrowserType_Offscreen_FriendsUI"),
           (e[(e.EBrowserType_Offscreen_SteamUI = 12)] =
             "EBrowserType_Offscreen_SteamUI"),
           (e[(e.EBrowserType_OpenVROverlay_Subview = 13)] =
@@ -6278,8 +6275,8 @@
                     br: i.qM.readEnum,
                     bw: i.gp.writeEnum,
                   },
-                  start: { n: 2, c: O },
-                  end: { n: 3, c: O },
+                  start: { n: 2, c: N },
+                  end: { n: 3, c: N },
                   seconds: { n: 4, br: i.qM.readFloat, bw: i.gp.writeFloat },
                   gameid: {
                     n: 5,
@@ -6326,20 +6323,20 @@
           return "CClientMetrics_ClipRange_Notification";
         }
       }
-      class O extends d {
+      class N extends d {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            O.prototype.original_range_method || i.Sg(O.M()),
+            N.prototype.original_range_method || i.Sg(N.M()),
             d.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
+            N.sm_m ||
+              (N.sm_m = {
+                proto: N,
                 fields: {
                   original_range_method: {
                     n: 1,
@@ -6352,77 +6349,6 @@
                     bw: i.gp.writeEnum,
                   },
                   delta_ms: { n: 3, br: i.qM.readInt32, bw: i.gp.writeInt32 },
-                },
-              }),
-            O.sm_m
-          );
-        }
-        static MBF() {
-          return O.sm_mbf || (O.sm_mbf = i.w0(O.M())), O.sm_mbf;
-        }
-        toObject(e = !1) {
-          return O.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return i.BT(O.M(), e, t);
-        }
-        static fromObject(e) {
-          return i.Uq(O.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new r.BinaryReader(e),
-            n = new O();
-          return O.deserializeBinaryFromReader(n, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return i.zj(O.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new r.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          i.i0(O.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new r.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CClientMetrics_ClipRange_Notification_RelativeRangeEdge";
-        }
-      }
-      class N extends d {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            N.prototype.recording_type || i.Sg(N.M()),
-            d.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            N.sm_m ||
-              (N.sm_m = {
-                proto: N,
-                fields: {
-                  recording_type: {
-                    n: 1,
-                    br: i.qM.readEnum,
-                    bw: i.gp.writeEnum,
-                  },
-                  seconds: { n: 2, br: i.qM.readFloat, bw: i.gp.writeFloat },
-                  bytes: {
-                    n: 3,
-                    br: i.qM.readUint64String,
-                    bw: i.gp.writeUint64String,
-                  },
-                  gameid: {
-                    n: 4,
-                    br: i.qM.readFixed64String,
-                    bw: i.gp.writeFixed64String,
-                  },
                 },
               }),
             N.sm_m
@@ -6458,6 +6384,77 @@
         serializeBase64String() {
           var e = new r.BinaryWriter();
           return N.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CClientMetrics_ClipRange_Notification_RelativeRangeEdge";
+        }
+      }
+      class O extends d {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            O.prototype.recording_type || i.Sg(O.M()),
+            d.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            O.sm_m ||
+              (O.sm_m = {
+                proto: O,
+                fields: {
+                  recording_type: {
+                    n: 1,
+                    br: i.qM.readEnum,
+                    bw: i.gp.writeEnum,
+                  },
+                  seconds: { n: 2, br: i.qM.readFloat, bw: i.gp.writeFloat },
+                  bytes: {
+                    n: 3,
+                    br: i.qM.readUint64String,
+                    bw: i.gp.writeUint64String,
+                  },
+                  gameid: {
+                    n: 4,
+                    br: i.qM.readFixed64String,
+                    bw: i.gp.writeFixed64String,
+                  },
+                },
+              }),
+            O.sm_m
+          );
+        }
+        static MBF() {
+          return O.sm_mbf || (O.sm_mbf = i.w0(O.M())), O.sm_mbf;
+        }
+        toObject(e = !1) {
+          return O.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return i.BT(O.M(), e, t);
+        }
+        static fromObject(e) {
+          return i.Uq(O.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new r.BinaryReader(e),
+            n = new O();
+          return O.deserializeBinaryFromReader(n, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return i.zj(O.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new r.BinaryWriter();
+          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          i.i0(O.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new r.BinaryWriter();
+          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CClientMetrics_EndGameRecording_Notification";
@@ -6662,7 +6659,7 @@
           (e.ReportEndGameRecording = function (e, t) {
             return e.SendNotification(
               "ClientMetrics.ReportEndGameRecording#1",
-              (0, o.I8)(N, t),
+              (0, o.I8)(O, t),
               { ePrivilege: 1 },
             );
           });
@@ -11477,7 +11474,7 @@
       n.d(t, {
         Bp: () => V,
         $C: () => P,
-        xj: () => N,
+        xj: () => O,
         iU: () => F,
         Yo: () => x,
       });
@@ -11901,8 +11898,8 @@
           ? { scrollLeft: t.scrollLeft, scrollTop: t.scrollTop }
           : { scrollLeft: e.scrollLeft, scrollTop: e.scrollTop };
       }
-      const O = new c.wd("FocusNavigationMovement").Debug;
-      var N, F, x, P;
+      const N = new c.wd("FocusNavigationMovement").Debug;
+      var O, F, x, P;
       !(function (e) {
         (e[(e.NONE = 0)] = "NONE"),
           (e[(e.COLUMN = 1)] = "COLUMN"),
@@ -11911,7 +11908,7 @@
           (e[(e.ROW_REVERSE = 4)] = "ROW_REVERSE"),
           (e[(e.GRID = 5)] = "GRID"),
           (e[(e.GEOMETRIC = 6)] = "GEOMETRIC");
-      })(N || (N = {})),
+      })(O || (O = {})),
         (function (e) {
           (e[(e.FIRST = 0)] = "FIRST"),
             (e[(e.LAST = 1)] = "LAST"),
@@ -12128,7 +12125,7 @@
             (this.m_bMounted = !1);
           const e = this.Tree.DeferredFocus.BIsQueuedFocusNode(this);
           (this.m_bFocused || e) &&
-            (O(
+            (N(
               `The focused node is unmounting, ${this.m_RetainFocusParent ? "will transfer to retain focus ancestor" : "will blur"}.`,
             ),
             e && this.Tree.DeferredFocus.RequestFocus(null),
@@ -12148,7 +12145,7 @@
           !this.m_rgNavigationHandlers.length &&
             this.m_element &&
             (this.m_rgChildren.length >= 2 ||
-              this.m_Properties?.layout != N.NONE ||
+              this.m_Properties?.layout != O.NONE ||
               this.m_Properties.onMoveUp ||
               this.m_Properties.onMoveRight ||
               this.m_Properties.onMoveDown ||
@@ -12239,7 +12236,7 @@
               const e = this.FindFocusableDescendant();
               if (e && e !== this)
                 return (
-                  O(
+                  N(
                     "Browser gave node focus but we are marked focusableIfNoChildren, transfering focus to descendant.",
                     this.m_element,
                     e.m_element,
@@ -12326,8 +12323,8 @@
               const e = this.GetLayout();
               l =
                 l >= this.m_rgChildren.length ||
-                e == N.ROW_REVERSE ||
-                e == N.COLUMN_REVERSE ||
+                e == O.ROW_REVERSE ||
+                e == O.COLUMN_REVERSE ||
                 i == F.LAST
                   ? this.m_rgChildren.length - 1
                   : 0;
@@ -12339,11 +12336,11 @@
                   (s =
                     this.m_Tree.GetLastFocusedMovementRect(o.xr[n]) ??
                     this.m_Tree.GetLastFocusedNode()?.GetBoundingRect()),
-                O(
+                N(
                   `Taking focus while preserving ${i && F[i]} preserved: ${r} movement: ${n}, node:`,
                   s || t,
                 );
-              const l = this.ComputeRelativeDirection(e, N.GRID);
+              const l = this.ComputeRelativeDirection(e, O.GRID);
               if (s || t) {
                 const i = l == P.BACKWARD ? this.m_rgChildren.length - 1 : 0;
                 a = this.FindClosestChildInNextAxiallyAlignedSet(
@@ -12397,7 +12394,7 @@
               bottom: t.innerHeight,
             });
           return (
-            O(
+            N(
               `Focusing visible child, best child match is ${n?.child?.Element?.className} - ${JSON.stringify(n?.visibility)}`,
             ),
             !!n && n.child.BTakeFocus(e)
@@ -12405,7 +12402,7 @@
         }
         GetLayout() {
           if (this.m_Properties?.layout) return this.m_Properties.layout;
-          if (this.m_rgChildren.length < 2) return N.NONE;
+          if (this.m_rgChildren.length < 2) return O.NONE;
           return (0, m.ko)(this.m_element);
         }
         OnNavigationEvent(e) {
@@ -12442,16 +12439,16 @@
           let r,
             o = this.ComputeRelativeDirection(e, n);
           if (
-            (O(
-              `Handling navigation event ${i.pR[e]} - ${N[n]} - ${P[o]}`,
+            (N(
+              `Handling navigation event ${i.pR[e]} - ${O[n]} - ${P[o]}`,
               this.m_element,
             ),
             o == P.INVALID)
           )
             return !1;
           if (this.m_Properties?.focusable && this.m_bFocused)
-            return O("Skipping navigation within focused element"), !1;
-          if ((this.EnsureChildrenSorted(!0), n == N.GRID))
+            return N("Skipping navigation within focused element"), !1;
+          if ((this.EnsureChildrenSorted(!0), n == O.GRID))
             r = this.FindNextFocusableChildInGrid(
               this.GetActiveChildIndex(),
               o,
@@ -12479,7 +12476,7 @@
                   (o.right < 0 && o.left < -i)
                 )
                   return (
-                    O(`Element too far away, scrolling ${i} on ${n} axis `),
+                    N(`Element too far away, scrolling ${i} on ${n} axis `),
                     T(r.Element, r.Element, "smooth", n, i),
                     !0
                   );
@@ -12500,10 +12497,10 @@
           return this.ComputeRelativeDirection(e, this.GetLayout());
         }
         ComputeRelativeDirection(e, t) {
-          let n = t == N.ROW_REVERSE || t == N.COLUMN_REVERSE;
+          let n = t == O.ROW_REVERSE || t == O.COLUMN_REVERSE;
           switch (t) {
-            case N.ROW:
-            case N.ROW_REVERSE:
+            case O.ROW:
+            case O.ROW_REVERSE:
               switch (e) {
                 case i.pR.DIR_LEFT:
                   return n ? P.FORWARD : P.BACKWARD;
@@ -12512,8 +12509,8 @@
                 default:
                   return P.INVALID;
               }
-            case N.COLUMN:
-            case N.COLUMN_REVERSE:
+            case O.COLUMN:
+            case O.COLUMN_REVERSE:
               switch (e) {
                 case i.pR.DIR_UP:
                   return n ? P.FORWARD : P.BACKWARD;
@@ -12522,7 +12519,7 @@
                 default:
                   return P.INVALID;
               }
-            case N.GRID:
+            case O.GRID:
               switch (e) {
                 case i.pR.DIR_LEFT:
                 case i.pR.DIR_UP:
@@ -12682,7 +12679,7 @@
                 ),
                 this.m_element?.focus({ preventScroll: !0 }))
               : this.m_Tree.BUseVirtualFocus() ||
-                O(
+                N(
                   `Didn't move focus to element as tree ${this.m_Tree.id} is not active focus tree`,
                 ),
             (function (e, t) {
@@ -13587,7 +13584,7 @@
           return this.m_strName;
         }
         get header_image_url() {
-          return r.TS.MEDIA_CDN_URL + `steam/apps/${this.m_unAppID}/header.jpg`;
+          return r.TS.STORE_ICON_BASE_URL + `${this.m_unAppID}/header.jpg`;
         }
         get icon_url_no_default() {
           return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, a);
@@ -13597,8 +13594,7 @@
         }
         get logo_url() {
           return (
-            r.TS.MEDIA_CDN_URL +
-            `steam/apps/${this.m_unAppID}/capsule_231x87.jpg`
+            r.TS.STORE_ICON_BASE_URL + `${this.m_unAppID}/capsule_231x87.jpg`
           );
         }
         get time_updated_from_server() {
@@ -15985,7 +15981,7 @@
             this.state.ready &&
             this.props.instance.visible
           ) {
-            const e = N() ? 150 : 0;
+            const e = O() ? 150 : 0;
             this.props.instance.OnCancel(e);
           }
         }
@@ -16400,10 +16396,10 @@
         (0, r.Cg)([w.oI], A.prototype, "OnBlur", null),
         (0, r.Cg)([w.oI], A.prototype, "OnKeyDown", null),
         (A = (0, r.Cg)([i.PA], A));
-      const O = "EnableContextMenuBlurDelay3";
-      function N() {
+      const N = "EnableContextMenuBlurDelay3";
+      function O() {
         return (
-          "true" === (window.localStorage && window.localStorage.getItem(O))
+          "true" === (window.localStorage && window.localStorage.getItem(N))
         );
       }
     },
@@ -16450,7 +16446,7 @@
         Yh: () => z,
         VP: () => B,
         UC: () => A,
-        U9: () => O,
+        U9: () => N,
         Mw: () => tt,
         ZU: () => Ie,
         m: () => Se,
@@ -16574,7 +16570,7 @@
           });
         }
       }
-      function O(e) {
+      function N(e) {
         const { classNameContent: t, bCenterVertically: n, ...r } = e;
         return i.createElement(
           A,
@@ -16583,7 +16579,7 @@
         );
       }
       (0, r.Cg)([u.o], k.prototype, "OnSubmit", null);
-      const N = i.forwardRef(function (e, t) {
+      const O = i.forwardRef(function (e, t) {
           const n = d(),
             { svgicon: r, ...s } = e,
             a = (0, l.A)(
@@ -16623,7 +16619,7 @@
           );
         }),
         F = i.forwardRef(function (e, t) {
-          return i.createElement(N, {
+          return i.createElement(O, {
             preferredFocus: !0,
             type: e.onClick ? "button" : "submit",
             ...e,
@@ -16637,7 +16633,7 @@
           });
         }),
         x = i.forwardRef(function (e, t) {
-          return i.createElement(N, {
+          return i.createElement(O, {
             type: "button",
             ...e,
             ref: t,
@@ -16650,7 +16646,7 @@
           });
         }),
         P = i.forwardRef(function (e, t) {
-          return i.createElement(N, {
+          return i.createElement(O, {
             type: "button",
             ...e,
             ref: t,
@@ -16663,7 +16659,7 @@
           });
         }),
         V = i.forwardRef(function (e, t) {
-          return i.createElement(N, {
+          return i.createElement(O, {
             type: "button",
             ...e,
             ref: t,
@@ -16674,7 +16670,7 @@
           });
         });
       i.forwardRef(function (e, t) {
-        return i.createElement(N, {
+        return i.createElement(O, {
           type: "button",
           ...e,
           ref: t,
@@ -18005,7 +18001,7 @@
         Ae = n(62490),
         Le = n(19719);
       const ke = new (n(60778).wd)("DragDrop").Debug;
-      class Oe extends i.Component {
+      class Ne extends i.Component {
         m_coordinator = new Fe();
         OnDrop(e, t) {
           t > e && t--, t != e && this.props.onReorder(e, t);
@@ -18044,12 +18040,12 @@
           );
         }
       }
-      function Ne(e, t, n, r) {
+      function Oe(e, t, n, r) {
         return r
           ? n && e > n.left && e < n.right && t > n.top && t < n.bottom
           : n && e >= n.left && e <= n.right && t >= n.top && t <= n.bottom;
       }
-      (0, r.Cg)([Z.oI], Oe.prototype, "OnDrop", null);
+      (0, r.Cg)([Z.oI], Ne.prototype, "OnDrop", null);
       class Fe {
         m_embeddedElement = new Be.MX("DragGhosts");
         m_rgDropRegions = [];
@@ -18196,7 +18192,7 @@
               const o = r + t,
                 s = i + n,
                 a = e.GetDragDocument().body.getBoundingClientRect();
-              if (Ne(r, i, a) && !Ne(o, s, a, !0)) {
+              if (Oe(r, i, a) && !Oe(o, s, a, !0)) {
                 const t = Le.Fu(
                     o,
                     a.left,
@@ -18553,7 +18549,7 @@
           );
         }
         BDraggableInRegion(e, t, n) {
-          return Ne(e, t, this.GetClientRect());
+          return Oe(e, t, this.GetClientRect());
         }
         GetElement() {
           return this.m_divRef.current;
@@ -18944,7 +18940,9 @@
         CalculatePadding() {
           const e = getComputedStyle(this.m_refTextArea.current);
           this.m_nTextAreaPadding =
-            parseFloat(e.paddingTop) + parseFloat(e.paddingBottom);
+            "border-box" == e.boxSizing
+              ? 0
+              : parseFloat(e.paddingTop) + parseFloat(e.paddingBottom);
         }
         GetMinHeight() {
           return this.props.nMinHeight || 20;
@@ -19038,8 +19036,8 @@
           A = "before-children" == T && !!o,
           L = "inline" == D && !!a,
           k = "below" == D && !!a,
-          O = m ?? (y ? "shift-children-below" : "keep-inline"),
-          N = !!(R.onClick || R.onActivate || R.focusable),
+          N = m ?? (y ? "shift-children-below" : "keep-inline"),
+          O = !!(R.onClick || R.onActivate || R.focusable),
           F = (null != o && B) || null != n || (L && null != a),
           x = d ?? "min",
           P = p ?? "standard",
@@ -19068,12 +19066,12 @@
         return i.createElement(
           s.Z,
           {
-            focusable: N,
+            focusable: O,
             noFocusRing: !0,
             scrollIntoViewWhenChildFocused: !0,
             onActivate: (e) => R.onClick?.(e),
             ref: t,
-            onMouseDown: N ? void 0 : K,
+            onMouseDown: O ? void 0 : K,
             ...R,
             ...z,
             navRef: q,
@@ -19085,7 +19083,7 @@
               L && st().WithChildrenInline,
               k && st().WithChildrenBelow,
               "center" == W && st().VerticalAlignCenter,
-              "shift-children-below" == O && st().InlineWrapShiftsChildrenBelow,
+              "shift-children-below" == N && st().InlineWrapShiftsChildrenBelow,
               !!r && st().WithDescription,
               "standard" == U && st().WithBottomSeparatorStandard,
               "thick" == U && st().WithBottomSeparatorThick,
@@ -19094,7 +19092,7 @@
               "standard" == P && st().ExtraPaddingOnChildrenBelow,
               "standard" == V && st().StandardPadding,
               "compact" == V && st().CompactPadding,
-              N && st().Clickable,
+              O && st().Clickable,
               H && st().HighlightOnFocus,
             ),
             style: { "--indent-level": G },
@@ -20048,8 +20046,8 @@
       var At,
         Lt = n(3812),
         kt = n.n(Lt),
-        Ot = n(16569),
-        Nt = n(80724);
+        Nt = n(16569),
+        Ot = n(80724);
       function Ft(e) {
         const {
             childrenKey: t,
@@ -20060,7 +20058,7 @@
           } = e,
           a = (0, l.A)(kt().TransitionGroup, o);
         return i.createElement(
-          Ot.A,
+          Nt.A,
           { className: a, appear: !1, enter: s, exit: s },
           i.createElement(xt, { key: t, childrenClasses: n }, r),
         );
@@ -20127,7 +20125,7 @@
         return a.current && !a.current.ownerDocument.defaultView
           ? null
           : i.createElement(
-              Nt.A,
+              Ot.A,
               {
                 nodeRef: a,
                 classNames: C,
@@ -20547,41 +20545,42 @@
     4869: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Bal: () => E,
-        CeX: () => C,
-        Epp: () => S,
-        Gj3: () => P,
-        JPq: () => M,
-        Kz1: () => G,
-        LSz: () => N,
+        Bal: () => I,
+        CeX: () => f,
+        Epp: () => w,
+        Gj3: () => V,
+        JPq: () => R,
+        Kz1: () => W,
+        LSz: () => k,
         MGO: () => u,
-        Moo: () => H,
-        UKJ: () => k,
-        VnB: () => b,
+        Moo: () => G,
+        UKJ: () => N,
+        VnB: () => E,
         YqK: () => O,
-        ZyV: () => v,
+        ZyV: () => S,
+        _V3: () => C,
         b8_: () => p,
-        bmT: () => R,
+        bmT: () => y,
         i3G: () => m,
-        iYj: () => F,
-        jRw: () => y,
-        jXA: () => A,
-        jvG: () => w,
-        kdM: () => V,
-        l4n: () => I,
+        iYj: () => x,
+        jRw: () => D,
+        jXA: () => L,
+        jvG: () => b,
+        kdM: () => U,
+        l4n: () => M,
         lMJ: () => _,
         lrM: () => h,
         nl: () => g,
         pcV: () => l,
-        qOW: () => D,
-        qzO: () => B,
-        rxV: () => f,
-        tI4: () => x,
+        qOW: () => T,
+        qzO: () => A,
+        rxV: () => v,
+        tI4: () => P,
         u49: () => d,
-        vet: () => U,
-        x7X: () => T,
+        vet: () => H,
+        x7X: () => B,
         xIk: () => a,
-        ycU: () => L,
+        ycU: () => F,
       });
       var r = n(90626),
         i = (n(51396), n(97875)),
@@ -21221,12 +21220,27 @@
             ...e,
           },
           r.createElement("path", {
-            d: "M2 6.05005V30.05H34V6.05005H2ZM8 27.05H5V23.05H8V27.05ZM8 20.05H5V16.05H8V20.05ZM8 13.05H5V9.05005H8V13.05ZM14 23.82V12.28L24 18.05L14 23.82ZM31 27.05H28V23.05H31V27.05ZM31 20.05H28V16.05H31V20.05ZM31 13.05H28V9.05005H31V13.05Z",
+            d: "M2 6.05005V30.05H34V6.05005H2ZM25 10.05C25.5933 10.05 26.1734 10.226 26.6667 10.5556C27.1601 10.8853 27.5446 11.3538 27.7716 11.902C27.9987 12.4502 28.0581 13.0534 27.9424 13.6353C27.8266 14.2173 27.5409 14.7518 27.1213 15.1714C26.7018 15.5909 26.1672 15.8766 25.5853 15.9924C25.0033 16.1082 24.4001 16.0488 23.8519 15.8217C23.3038 15.5946 22.8352 15.2101 22.5056 14.7168C22.1759 14.2234 22 13.6434 22 13.05C22 12.2544 22.3161 11.4913 22.8787 10.9287C23.4413 10.3661 24.2044 10.05 25 10.05ZM23 26.05H6L14.5 15.05L19.4 21.39L22 18.05L28.22 26.05H23Z",
             fill: "currentColor",
           }),
         );
       }
       function f(e) {
+        return r.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+          },
+          r.createElement("path", {
+            d: "M2 6.05005V30.05H34V6.05005H2ZM8 27.05H5V23.05H8V27.05ZM8 20.05H5V16.05H8V20.05ZM8 13.05H5V9.05005H8V13.05ZM14 23.82V12.28L24 18.05L14 23.82ZM31 27.05H28V23.05H31V27.05ZM31 20.05H28V16.05H31V20.05ZM31 13.05H28V9.05005H31V13.05Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function v(e) {
         return r.createElement(
           "svg",
           {
@@ -21243,7 +21257,7 @@
           }),
         );
       }
-      function v(e) {
+      function S(e) {
         return r.createElement(
           "svg",
           {
@@ -21262,7 +21276,7 @@
           }),
         );
       }
-      function S(e) {
+      function w(e) {
         return r.createElement(
           "svg",
           {
@@ -21278,7 +21292,7 @@
           }),
         );
       }
-      function w(e) {
+      function b(e) {
         return r.createElement(
           "svg",
           {
@@ -21294,7 +21308,7 @@
           }),
         );
       }
-      function b() {
+      function E() {
         return r.createElement(
           "svg",
           {
@@ -21314,7 +21328,7 @@
           ),
         );
       }
-      function E() {
+      function I() {
         return r.createElement(
           "svg",
           {
@@ -21333,7 +21347,7 @@
           ),
         );
       }
-      function I() {
+      function M() {
         return r.createElement(
           "svg",
           {
@@ -21352,7 +21366,7 @@
           ),
         );
       }
-      function M() {
+      function R() {
         return r.createElement(
           "svg",
           {
@@ -21371,7 +21385,7 @@
           ),
         );
       }
-      function R() {
+      function y() {
         return r.createElement(
           "svg",
           {
@@ -21390,7 +21404,7 @@
           ),
         );
       }
-      function y() {
+      function D() {
         return r.createElement(
           "svg",
           {
@@ -21409,7 +21423,7 @@
           ),
         );
       }
-      function D() {
+      function T() {
         return r.createElement(
           "svg",
           {
@@ -21428,7 +21442,7 @@
           ),
         );
       }
-      function T() {
+      function B() {
         return r.createElement(
           "svg",
           {
@@ -21447,7 +21461,7 @@
           ),
         );
       }
-      function B() {
+      function A() {
         return r.createElement(
           "svg",
           {
@@ -21466,7 +21480,7 @@
           ),
         );
       }
-      function A() {
+      function L() {
         return r.createElement(
           "svg",
           {
@@ -21485,7 +21499,7 @@
           ),
         );
       }
-      function L() {
+      function k() {
         const [e, t] = (0, i.l)();
         return r.createElement(
           "svg",
@@ -21526,7 +21540,7 @@
           ),
         );
       }
-      function k() {
+      function N() {
         return r.createElement(
           "svg",
           {
@@ -21564,7 +21578,7 @@
           ),
         );
       }
-      function N() {
+      function F() {
         return r.createElement(
           "svg",
           {
@@ -21593,7 +21607,7 @@
           ),
         );
       }
-      function F() {
+      function x() {
         const [e, t] = (0, i.l)();
         return r.createElement(
           "svg",
@@ -21625,7 +21639,7 @@
           ),
         );
       }
-      function x() {
+      function P() {
         const [e, t] = (0, i.l)();
         return r.createElement(
           "svg",
@@ -21659,7 +21673,7 @@
           ),
         );
       }
-      function P() {
+      function V() {
         const [e, t] = (0, i.l)();
         return r.createElement(
           "svg",
@@ -21695,7 +21709,7 @@
           ),
         );
       }
-      function V(e) {
+      function U(e) {
         const { bGreyOutRightSide: t, ...n } = e;
         return t
           ? r.createElement(
@@ -21741,7 +21755,7 @@
               }),
             );
       }
-      function U(e) {
+      function H(e) {
         return r.createElement(
           "svg",
           {
@@ -21785,7 +21799,7 @@
           }),
         );
       }
-      function H(e) {
+      function G(e) {
         return r.createElement(
           "svg",
           {
@@ -21803,7 +21817,7 @@
           }),
         );
       }
-      function G(e) {
+      function W(e) {
         return r.createElement(
           "svg",
           {
@@ -23776,73 +23790,75 @@
     12155: (e, t, n) => {
       "use strict";
       n.d(t, {
-        $$j: () => ne,
-        $4X: () => pe,
+        $$j: () => re,
+        $4X: () => he,
         Aj0: () => x,
         CeX: () => y,
         DK4: () => p,
+        DQe: () => De,
         Dp6: () => z,
-        FEq: () => J,
+        FEq: () => ee,
         GB9: () => d,
-        Gkr: () => _e,
-        GrD: () => se,
+        Gkr: () => ge,
+        GrD: () => ae,
         IrQ: () => D,
         Jlk: () => I,
-        KKS: () => Z,
-        KQV: () => Me,
-        MvQ: () => N,
-        N8C: () => Q,
-        NCC: () => he,
-        P7r: () => Y,
+        KKS: () => X,
+        KQV: () => Re,
+        MUh: () => Z,
+        MvQ: () => O,
+        N8C: () => $,
+        NCC: () => _e,
+        P7r: () => Q,
         Q38: () => u,
         Qte: () => V,
         ROZ: () => H,
-        SYj: () => fe,
+        SYj: () => ve,
         V5W: () => F,
         VR: () => K,
-        VnB: () => O,
-        WX$: () => Ee,
+        VnB: () => N,
+        WX$: () => Ie,
         X: () => f,
         X4B: () => M,
-        XH_: () => Re,
+        XH_: () => ye,
         XTb: () => g,
         Xjb: () => L,
-        Xz0: () => ie,
+        Xz0: () => oe,
         YNO: () => C,
-        ZPc: () => me,
+        ZPc: () => de,
         ZWw: () => k,
-        _VW: () => ae,
-        aVR: () => we,
+        _VW: () => le,
+        aVR: () => be,
         apU: () => W,
-        ari: () => de,
+        ari: () => pe,
         bPr: () => j,
-        bfp: () => le,
-        dJT: () => ee,
+        bfp: () => ce,
+        dJT: () => te,
         eSy: () => h,
         eTF: () => R,
         fSs: () => w,
-        faJ: () => oe,
-        ffu: () => te,
+        faJ: () => se,
+        ffu: () => ne,
         hz4: () => A,
         i3G: () => T,
         i6V: () => G,
         jGG: () => b,
-        jIP: () => be,
-        jZW: () => ue,
-        jZl: () => $,
-        kPc: () => re,
-        lRD: () => ve,
-        o5Q: () => Se,
-        qcc: () => X,
+        jIP: () => Ee,
+        jZW: () => me,
+        jZl: () => J,
+        kPc: () => ie,
+        lRD: () => Se,
+        o5Q: () => we,
+        qcc: () => Y,
         rfv: () => q,
         sED: () => v,
         tID: () => P,
         uMb: () => B,
         vRz: () => E,
         wB_: () => m,
-        wVV: () => ce,
+        wVV: () => ue,
         xv8: () => S,
-        yCC: () => Ie,
+        yCC: () => Me,
         y_e: () => U,
         zD7: () => _,
       });
@@ -24594,7 +24610,7 @@
           }),
         );
       }
-      function O() {
+      function N() {
         return r.createElement(
           "svg",
           {
@@ -24616,7 +24632,7 @@
           ),
         );
       }
-      function N() {
+      function O() {
         return r.createElement(
           "svg",
           {
@@ -24955,15 +24971,53 @@
           },
           r.createElement("path", {
             d: "M11.45 26.5H7.625L1 9H5.025L9.625 22.325L14.1 9H18.125L11.45 26.5Z",
-            fill: "white",
+            fill: "currentColor",
           }),
           r.createElement("path", {
             d: "M34.552 26.5H30.477L26.952 20.6H26.527H23.927V26.5H20.252V9H26.802C29.202 9 30.9686 9.48333 32.102 10.45C33.2353 11.4 33.802 12.7333 33.802 14.45C33.802 15.8 33.502 16.925 32.902 17.825C32.3186 18.725 31.4936 19.4083 30.427 19.875L34.552 26.5ZM23.927 12.125V17.45H26.802C27.7686 17.45 28.5186 17.2083 29.052 16.725C29.602 16.225 29.877 15.5417 29.877 14.675C29.877 13.825 29.6103 13.1917 29.077 12.775C28.5603 12.3417 27.727 12.125 26.577 12.125H23.927Z",
-            fill: "white",
+            fill: "currentColor",
           }),
         );
       }
-      function Z() {
+      function Z(e) {
+        return r.createElement(
+          "svg",
+          {
+            width: "36",
+            height: "36",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, i.A)("SVGIcon_Button", "SVGIcon_VRIcon"),
+            ...e,
+          },
+          r.createElement(
+            "g",
+            { "clip-path": "url(#clip0_29_13408)" },
+            r.createElement("path", {
+              "fill-rule": "evenodd",
+              "clip-rule": "evenodd",
+              d: "M0.400879 7.38525H36.4009V29.7798H0.400879V7.38525ZM12.6345 26.2414H9.28326L3.47884 10.909H7.0053L11.0355 22.5835L14.9563 10.909H18.4827L12.6345 26.2414ZM29.3047 26.2414H32.875L29.2609 20.437C30.1954 20.0281 30.9182 19.4294 31.4294 18.6409C31.9551 17.8524 32.2179 16.8667 32.2179 15.6839C32.2179 14.1799 31.7214 13.0117 30.7285 12.1794C29.7354 11.3324 28.1877 10.909 26.0849 10.909H20.3462V26.2414H23.566V21.0722H25.844H26.2163L29.3047 26.2414ZM23.566 18.3124V13.6469H25.8878C26.8954 13.6469 27.6254 13.8368 28.0781 14.2164C28.5454 14.5815 28.7791 15.1363 28.7791 15.8811C28.7791 16.6404 28.5381 17.2391 28.0562 17.6772C27.5889 18.1006 26.9318 18.3124 26.0849 18.3124H23.566Z",
+              fill: "currentColor",
+            }),
+          ),
+          r.createElement(
+            "defs",
+            null,
+            r.createElement(
+              "clipPath",
+              { id: "clip0_29_13408" },
+              r.createElement("rect", {
+                width: "36",
+                height: "36",
+                fill: "currentColor",
+                transform: "translate(0.400879 0.825195)",
+              }),
+            ),
+          ),
+        );
+      }
+      function X() {
         return r.createElement(
           "svg",
           {
@@ -24982,7 +25036,7 @@
           }),
         );
       }
-      function X() {
+      function Y() {
         return r.createElement(
           "svg",
           {
@@ -25001,7 +25055,7 @@
           }),
         );
       }
-      function Y() {
+      function Q() {
         return r.createElement(
           "svg",
           {
@@ -25022,7 +25076,7 @@
           }),
         );
       }
-      function Q() {
+      function $() {
         return r.createElement(
           "svg",
           {
@@ -25053,7 +25107,7 @@
           }),
         );
       }
-      function $() {
+      function J() {
         return r.createElement(
           "svg",
           {
@@ -25119,7 +25173,7 @@
           }),
         );
       }
-      function J(e) {
+      function ee(e) {
         const t = (0, i.A)(
           e.className,
           "SVGIcon_Button",
@@ -25146,7 +25200,7 @@
           }),
         );
       }
-      function ee() {
+      function te() {
         return r.createElement(
           "svg",
           {
@@ -25165,7 +25219,7 @@
           }),
         );
       }
-      function te() {
+      function ne() {
         return r.createElement(
           "svg",
           {
@@ -25203,7 +25257,7 @@
           }),
         );
       }
-      function ne() {
+      function re() {
         return r.createElement(
           "svg",
           {
@@ -25239,7 +25293,7 @@
           }),
         );
       }
-      function re(e) {
+      function ie(e) {
         return r.createElement(
           "svg",
           {
@@ -25262,7 +25316,7 @@
           }),
         );
       }
-      function ie() {
+      function oe() {
         return r.createElement(
           "svg",
           {
@@ -25302,7 +25356,7 @@
           }),
         );
       }
-      function oe() {
+      function se() {
         return r.createElement(
           "svg",
           {
@@ -25318,7 +25372,7 @@
           r.createElement("circle", { cx: "62.6", cy: "134", r: "20.6" }),
         );
       }
-      function se() {
+      function ae() {
         return r.createElement(
           "svg",
           {
@@ -25337,7 +25391,7 @@
           }),
         );
       }
-      function ae() {
+      function le() {
         return r.createElement(
           "svg",
           {
@@ -25360,7 +25414,7 @@
           }),
         );
       }
-      function le(e) {
+      function ce(e) {
         return r.createElement(
           "svg",
           {
@@ -25379,7 +25433,7 @@
           }),
         );
       }
-      function ce(e) {
+      function ue(e) {
         return r.createElement(
           "svg",
           { width: "100%", height: "100%", viewBox: "0 0 50 50" },
@@ -25406,7 +25460,7 @@
           }),
         );
       }
-      function ue(e) {
+      function me(e) {
         return r.createElement(
           "svg",
           {
@@ -25423,7 +25477,7 @@
           }),
         );
       }
-      function me() {
+      function de() {
         return r.createElement(
           "svg",
           {
@@ -25454,7 +25508,7 @@
           ),
         );
       }
-      function de(e) {
+      function pe(e) {
         return r.createElement(
           "svg",
           {
@@ -25471,7 +25525,7 @@
           }),
         );
       }
-      function pe() {
+      function he() {
         return r.createElement(
           "svg",
           {
@@ -25489,7 +25543,7 @@
           }),
         );
       }
-      function he() {
+      function _e() {
         return r.createElement(
           "svg",
           {
@@ -25511,7 +25565,7 @@
           ),
         );
       }
-      function _e() {
+      function ge() {
         return r.createElement(
           "svg",
           {
@@ -25549,7 +25603,7 @@
           ),
         );
       }
-      function ge(e) {
+      function Ce(e) {
         return r.createElement(
           "svg",
           {
@@ -25568,7 +25622,7 @@
           }),
         );
       }
-      function Ce(e) {
+      function fe(e) {
         return r.createElement(
           "svg",
           {
@@ -25588,12 +25642,12 @@
           }),
         );
       }
-      function fe(e) {
-        return (0, c.Ae)()
-          ? r.createElement(Ce, { ...e })
-          : r.createElement(ge, { ...e });
-      }
       function ve(e) {
+        return (0, c.Ae)()
+          ? r.createElement(fe, { ...e })
+          : r.createElement(Ce, { ...e });
+      }
+      function Se(e) {
         const { className: t, ...n } = e;
         return r.createElement(
           "svg",
@@ -25613,7 +25667,7 @@
           }),
         );
       }
-      function Se(e) {
+      function we(e) {
         const { className: t, ...n } = e;
         return r.createElement(
           "svg",
@@ -25636,7 +25690,7 @@
           }),
         );
       }
-      function we(e) {
+      function be(e) {
         const { className: t, ...n } = e;
         return r.createElement(
           "svg",
@@ -25659,7 +25713,7 @@
           }),
         );
       }
-      function be(e) {
+      function Ee(e) {
         const { className: t, ...n } = e;
         return r.createElement(
           "svg",
@@ -25682,7 +25736,7 @@
           }),
         );
       }
-      function Ee(e) {
+      function Ie(e) {
         const { className: t, ...n } = e;
         return r.createElement(
           "svg",
@@ -25705,7 +25759,7 @@
           }),
         );
       }
-      function Ie(e) {
+      function Me(e) {
         const { className: t, ...n } = e;
         return r.createElement(
           "svg",
@@ -25734,7 +25788,7 @@
           }),
         );
       }
-      function Me(e) {
+      function Re(e) {
         const { className: t, ...n } = e;
         return r.createElement(
           "svg",
@@ -25767,7 +25821,7 @@
           }),
         );
       }
-      function Re(e) {
+      function ye(e) {
         return r.createElement(
           "svg",
           {
@@ -25783,6 +25837,24 @@
             fillRule: "evenodd",
             clipRule: "evenodd",
             d: "M17.5133 4.65595C15.8046 6.36468 17.0366 9.2803 19.4284 9.28035C20.446 9.28035 21.0261 8.76331 21.2519 8.56209C21.2963 8.5225 21.327 8.49513 21.3447 8.48633C22.4018 7.42917 22.4024 5.71423 21.3441 4.65595C20.2817 3.59714 18.5699 3.59936 17.5133 4.65595ZM18.5553 7.44735C17.4045 6.30173 19.1522 4.54882 20.301 5.69597V5.69586C20.7836 6.18159 20.783 6.96269 20.301 7.44422C19.8189 7.92684 19.0348 7.92415 18.5553 7.44735ZM0.583974 13.873L14.455 0L24.4165 1.583L26 11.5449L12.1289 25.416C11.7368 25.805 11.2252 26 10.7156 26C10.2065 26 9.69489 25.805 9.30552 25.416L0.583974 16.6976C0.194954 16.305 0 15.7933 0 15.2843C0 14.7742 0.194948 14.2625 0.583974 13.873ZM9.26632 17.5853L8.88665 17.965C8.62416 18.2274 8.43667 18.5227 8.32418 18.8509C8.21403 19.1766 8.19645 19.5106 8.27145 19.8528C8.34879 20.1926 8.53979 20.5148 8.84446 20.8195C9.14445 21.1195 9.46318 21.307 9.80066 21.382C10.1428 21.457 10.4756 21.4382 10.7991 21.3257C11.1272 21.2132 11.4225 21.0257 11.6849 20.7633L12.0646 20.3836C12.3271 20.1211 12.5146 19.8281 12.6271 19.5047C12.7419 19.179 12.7618 18.8473 12.6868 18.5099C12.6142 18.17 12.4255 17.8478 12.1209 17.5431C11.8209 17.2431 11.4986 17.0545 11.1541 16.9771C10.8143 16.8998 10.4791 16.9162 10.1487 17.0263C9.82293 17.1365 9.5288 17.3228 9.26632 17.5853ZM9.6038 18.6821L9.98347 18.3024C10.2014 18.0845 10.4487 17.9427 10.7252 17.8771C11.0065 17.8115 11.2701 17.9017 11.5162 18.1478C11.7693 18.4009 11.8584 18.6634 11.7834 18.9352C11.7107 19.2047 11.5654 19.4485 11.3475 19.6664L10.9678 20.0461C10.7498 20.2641 10.5026 20.4082 10.226 20.4785C9.95417 20.5488 9.6952 20.4609 9.44912 20.2148C9.19601 19.9617 9.10344 19.6981 9.1714 19.4239C9.24171 19.1473 9.38584 18.9001 9.6038 18.6821ZM9.80066 9.87944L9.421 10.2591C9.15851 10.5216 8.97102 10.8169 8.85853 11.145C8.74837 11.4708 8.7308 11.8047 8.80579 12.1469C8.88313 12.4867 9.07414 12.809 9.37881 13.1136C9.6788 13.4136 9.99753 13.6011 10.335 13.6761C10.6772 13.7511 11.01 13.7324 11.3334 13.6199C11.6615 13.5074 11.9568 13.3199 12.2193 13.0574L12.599 12.6777C12.8614 12.4152 13.0489 12.1223 13.1614 11.7989C13.2763 11.4731 13.2962 11.1415 13.2212 10.804C13.1485 10.4642 12.9599 10.1419 12.6552 9.83725C12.3552 9.53727 12.033 9.34861 11.6885 9.27127C11.3486 9.19393 11.0135 9.21033 10.683 9.32048C10.3573 9.43063 10.0632 9.61695 9.80066 9.87944ZM10.1381 10.9763L10.5178 10.5966C10.7358 10.3786 10.983 10.2368 11.2596 10.1712C11.5408 10.1056 11.8045 10.1958 12.0506 10.4419C12.3037 10.695 12.3927 10.9575 12.3177 11.2294C12.2451 11.4989 12.0998 11.7426 11.8818 11.9606L11.5021 12.3403C11.2842 12.5582 11.0369 12.7023 10.7604 12.7726C10.4885 12.843 10.2295 12.7551 9.98347 12.509C9.73036 12.2559 9.63778 11.9922 9.70575 11.718C9.77606 11.4415 9.92019 11.1942 10.1381 10.9763ZM16.3675 13.7464L4.21814 15.9963L5.01966 16.7978L17.169 14.5479L16.3675 13.7464Z",
+          }),
+        );
+      }
+      function De(e) {
+        const { className: t } = e;
+        return r.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            className: (0, i.A)("SVGIcon_Button", "SVGIcon_SteamDeck", t),
+            viewBox: "0 0 36 36",
+            fill: "none",
+          },
+          r.createElement("path", {
+            fill: "currentColor",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M0 11C0 9.89543 0.895431 9 2 9H34C35.1046 9 36 9.89543 36 11V24C36 25.6569 34.6569 27 33 27H3C1.34315 27 0 25.6569 0 24V11ZM33 16C33 16.5523 32.5523 17 32 17C31.4477 17 31 16.5523 31 16C31 15.4477 31.4477 15 32 15C32.5523 15 33 15.4477 33 16ZM32 13C32.5523 13 33 12.5523 33 12C33 11.4477 32.5523 11 32 11C31.4477 11 31 11.4477 31 12C31 12.5523 31.4477 13 32 13ZM35 14C35 14.5523 34.5523 15 34 15C33.4477 15 33 14.5523 33 14C33 13.4477 33.4477 13 34 13C34.5523 13 35 13.4477 35 14ZM30 15C30.5523 15 31 14.5523 31 14C31 13.4477 30.5523 13 30 13C29.4477 13 29 13.4477 29 14C29 14.5523 29.4477 15 30 15ZM6 14C6 15.1046 5.10457 16 4 16C2.89543 16 2 15.1046 2 14C2 12.8954 2.89543 12 4 12C5.10457 12 6 12.8954 6 14ZM2.5 21C2.22386 21 2 21.2239 2 21.5V24.5C2 24.7761 2.22386 25 2.5 25H5.5C5.77614 25 6 24.7761 6 24.5V21.5C6 21.2239 5.77614 21 5.5 21H2.5ZM30 21.5C30 21.2239 30.2239 21 30.5 21H33.5C33.7761 21 34 21.2239 34 21.5V24.5C34 24.7761 33.7761 25 33.5 25H30.5C30.2239 25 30 24.7761 30 24.5V21.5ZM28 11H8V25H28V11Z",
           }),
         );
       }
@@ -29372,6 +29444,7 @@
         MEDIA_CDN_COMMUNITY_URL: "",
         MEDIA_CDN_URL: "",
         CLAN_CDN_ASSET_URL: "",
+        VIDEO_CDN_URL: "",
         COMMUNITY_CDN_URL: "",
         COMMUNITY_CDN_ASSET_URL: "",
         BASE_URL_SHARED_CDN: "",

@@ -27,26 +27,38 @@
 .BasicUI .KxAI_M9gWx3OnKSshHOs6._1iRFj5lJrMqMnRb3GZYPSw {
   display: block;
 }
-.KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_VR path,
+.KxAI_M9gWx3OnKSshHOs6._2oLqcfqHHKKAK0WfzjXMg_ {
+  margin-left: 4px;
+}
+.KxAI_M9gWx3OnKSshHOs6._368tz9TSOLGiG2mNMLScMz {
+  margin-top: -1px;
+}
+.KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_SteamDeck path,
+.KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_VRIcon path,
 .KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_MobilePhone path,
 .KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_BigPicture path {
   fill: #80aa4d;
 }
-.KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_VR path.GamepadMode,
-.GamepadMode .KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_VR path,
+.KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_SteamDeck path.GamepadMode,
+.GamepadMode .KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_SteamDeck path,
+.KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_VRIcon path.GamepadMode,
+.GamepadMode .KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_VRIcon path,
 .KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_MobilePhone path.GamepadMode,
 .GamepadMode .KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_MobilePhone path,
 .KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_BigPicture path.GamepadMode,
 .GamepadMode .KxAI_M9gWx3OnKSshHOs6.ingame .SVGIcon_BigPicture path {
   fill: #59bf40;
 }
-.KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_VR path,
+.KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_SteamDeck path,
+.KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_VRIcon path,
 .KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_MobilePhone path,
 .KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_BigPicture path {
   fill: #4c91ac;
 }
-.KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_VR path.GamepadMode,
-.GamepadMode .KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_VR path,
+.KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_SteamDeck path.GamepadMode,
+.GamepadMode .KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_SteamDeck path,
+.KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_VRIcon path.GamepadMode,
+.GamepadMode .KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_VRIcon path,
 .KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_MobilePhone path.GamepadMode,
 .GamepadMode .KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_MobilePhone path,
 .KxAI_M9gWx3OnKSshHOs6.online .SVGIcon_BigPicture path.GamepadMode,

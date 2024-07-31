@@ -363,7 +363,7 @@
     },
     44165: (e, t, s) => {
       "use strict";
-      s.d(t, { HD: () => d, P_: () => u, f1: () => p, sB: () => v });
+      s.d(t, { HD: () => d, P_: () => u, f1: () => v, sB: () => p });
       var n = s(34629),
         r = s(14947),
         a = s(19367),
@@ -449,12 +449,12 @@
         const e = Math.floor(Date.now() / 1e3);
         return d.nOverrideDateNow ? d.nOverrideDateNow + (e - E) : e;
       }
-      function v() {
+      function p() {
         var e;
         return null !== (e = d.nOverrideDateNow) && void 0 !== e ? e : E;
       }
-      function p() {
-        return o.useMemo(() => v(), []);
+      function v() {
+        return o.useMemo(() => p(), []);
       }
     },
     82477: (e, t, s) => {
@@ -521,9 +521,9 @@
     76684: (e, t, s) => {
       "use strict";
       s.d(t, {
-        K4: () => v,
+        K4: () => p,
         X0: () => T,
-        gS: () => p,
+        gS: () => v,
         pg: () => E,
         u1: () => D,
         v9: () => h,
@@ -558,16 +558,15 @@
             n.format("LT"),
             t
               ? r.createElement(
-                  a.he,
+                  a.Gq,
                   { toolTipContent: n.format("Z") + ", " + s },
-                  " ",
-                  n.zoneAbbr(),
+                  r.createElement("span", null, " ", n.zoneAbbr()),
                 )
               : null,
           )
         );
       }
-      const v = (0, o.PA)((e) => {
+      const p = (0, o.PA)((e) => {
           const {
               dateAndTime: t,
               bSingleLine: s,
@@ -604,11 +603,11 @@
                 ),
               );
         }),
-        p = (e) => {
+        v = (e) => {
           const t = r.createElement(
             "div",
             { className: e.stylesmodule.DateToolTip },
-            r.createElement(v, {
+            r.createElement(p, {
               dateAndTime: e.rtFullDate,
               bSingleLine: !0,
               stylesmodule: e.stylesmodule,
@@ -661,7 +660,7 @@
                 ),
                 " ",
               ),
-              r.createElement(v, { stylesmodule: s, dateAndTime: e }),
+              r.createElement(p, { stylesmodule: s, dateAndTime: e }),
             );
           let o = e <= a && a <= t;
           const m = (0, c.JD)(new Date(1e3 * e), new Date(1e3 * t));
@@ -682,7 +681,7 @@
                       : "#EventDisplay_TimeBeginsOn_StartAndEnd_Past",
                 ),
               ),
-              r.createElement(v, {
+              r.createElement(p, {
                 stylesmodule: s,
                 bSingleLine: !0,
                 dateAndTime: e,
@@ -700,7 +699,7 @@
                     : "#EventDisplay_TimeEndsOn",
                 ),
               ),
-              r.createElement(v, {
+              r.createElement(p, {
                 stylesmodule: s,
                 bSingleLine: !0,
                 bOnlyTime: m,
@@ -756,7 +755,7 @@
               (0, i.TW)(e, l),
             );
           let g = r.createElement(
-            p,
+            v,
             { rtFullDate: e, stylesmodule: n },
             r.createElement(
               "div",
@@ -773,7 +772,7 @@
             (o < e &&
               e < o + c.Kp.PerWeek &&
               (g = r.createElement(
-                p,
+                v,
                 { rtFullDate: e, stylesmodule: n },
                 r.createElement(
                   "div",
@@ -796,7 +795,7 @@
           const E = e <= o && o <= t;
           E &&
             (g = r.createElement(
-              p,
+              v,
               { rtFullDate: e, className: n.ActiveEvent, stylesmodule: n },
               r.createElement(
                 "span",
@@ -804,7 +803,7 @@
                 (0, i.we)("#Time_Now"),
               ),
             ));
-          let v = null;
+          let p = null;
           const h = E ? t - o : t - e;
           if (h <= c.Kp.PerDay) {
             const e = r.createElement(
@@ -812,7 +811,7 @@
               { className: n.ShortDateAndTime },
               (0, i.Hq)(h, !0),
             );
-            v =
+            p =
               t < o
                 ? r.createElement(
                     "div",
@@ -832,7 +831,7 @@
                   );
           } else {
             const e = a.getFullYear() == new Date(1e3 * t).getFullYear();
-            v = r.createElement(
+            p = r.createElement(
               r.Fragment,
               null,
               r.createElement(
@@ -851,7 +850,7 @@
               ),
             );
           }
-          const D = r.createElement(p, { rtFullDate: t, stylesmodule: n }, v);
+          const D = r.createElement(v, { rtFullDate: t, stylesmodule: n }, p);
           return r.createElement("div", { className: n.ShortDateRange }, g, D);
         }
       };

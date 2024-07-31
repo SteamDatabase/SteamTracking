@@ -47,6 +47,8 @@
         "duration-app-launch": "800ms",
         PersonaStatusIcon: "KxAI_M9gWx3OnKSshHOs6",
         MobilePhoneIcon: "_1iRFj5lJrMqMnRb3GZYPSw",
+        SteamDeckIcon: "_2oLqcfqHHKKAK0WfzjXMg_",
+        VRIcon: "_368tz9TSOLGiG2mNMLScMz",
       };
     },
     43047: (e) => {
@@ -208,7 +210,8 @@
         if (!t.is_online) return null;
         const i = t.HasStateFlag(512),
           o = t.HasStateFlag(2048),
-          m = !o && t.HasStateFlag(1024);
+          m = t.IsOnSteamDeck(),
+          p = !m && !o && t.HasStateFlag(1024);
         return r.createElement(
           r.Fragment,
           null,
@@ -240,9 +243,9 @@
                 title: (0, s.we)("#Platform_Hint_VR"),
                 ...n,
               },
-              r.createElement(d.VR, null),
+              r.createElement(d.MUh, null),
             ),
-          m &&
+          p &&
             r.createElement(
               "div",
               {
@@ -256,6 +259,21 @@
                 ...n,
               },
               r.createElement(d.bPr, null),
+            ),
+          m &&
+            r.createElement(
+              "div",
+              {
+                className: (0, c.A)(
+                  a,
+                  _().PersonaStatusIcon,
+                  _().SteamDeckIcon,
+                  (0, l.rO)(t),
+                ),
+                title: (0, s.we)("#Platform_Hint_SteamDeck"),
+                ...n,
+              },
+              r.createElement(d.DQe, null),
             ),
         );
       });
@@ -293,8 +311,8 @@
             renderStatus: v,
             renderRichPresence: P,
             bHidePersona: b,
-            bDNDSet: C,
-            bHasPartyBeacon: f,
+            bDNDSet: f,
+            bHasPartyBeacon: C,
             bHasGamePrivacy: I,
             bNoMask: y,
             ...T
@@ -309,7 +327,7 @@
               A && h().compactView,
               y && h().NoMask,
             ];
-          f || a.has_public_party_beacon
+          C || a.has_public_party_beacon
             ? (w = r.createElement(D, { persona: a }))
             : (0, o.aP)(n)
               ? ((w = (0, s.we)("#PersonaStateBlocked")), Q.push(h().blocked))
@@ -330,9 +348,9 @@
           let x = !b && !S;
           !1 === S && (x = !0),
             a.is_awayOrSnooze && x && (k = r.createElement(u, { persona: a }));
-          let R = null;
+          let M = null;
           t
-            ? (R = r.createElement(
+            ? (M = r.createElement(
                 "div",
                 { className: "ContextMenuButton", onClick: t },
                 r.createElement(d.GB9, null),
@@ -341,13 +359,13 @@
             b && Q.push(h().hidePersona),
             P && (H = P()),
             (!_ && H) || Q.push(h().twoLine);
-          const M = !a.is_ingame && !N,
+          const R = !a.is_ingame && !N,
             G = !g && H,
-            F = w && (!_ || !G),
-            O = (0, o.ID)(B.TS.LAUNCHER_TYPE);
-          let U = p && !m,
-            L = U ? p : a.m_strPlayerName,
-            K = !b && (F || M) && G;
+            O = w && (!_ || !G),
+            F = (0, o.ID)(B.TS.LAUNCHER_TYPE);
+          let L = p && !m,
+            U = L ? p : a.m_strPlayerName,
+            K = !b && (O || R) && G;
           return r.createElement(
             "div",
             { ...T, className: (0, c.A)(...Q), onContextMenu: t },
@@ -357,7 +375,7 @@
               r.createElement(
                 "div",
                 { className: h().playerName },
-                L || " ",
+                U || " ",
                 m &&
                   p &&
                   r.createElement(
@@ -368,7 +386,7 @@
                     ")",
                   ),
               ),
-              C &&
+              f &&
                 r.createElement(
                   "div",
                   {
@@ -377,7 +395,7 @@
                   },
                   r.createElement(d.Aj0, null),
                 ),
-              U &&
+              L &&
                 r.createElement(
                   "span",
                   {
@@ -389,7 +407,7 @@
               r.createElement(E, { persona: a }),
               k,
               (a.m_bPlayerNamePending || a.m_bAvatarPending) &&
-                O &&
+                F &&
                 r.createElement(
                   "div",
                   {
@@ -398,13 +416,13 @@
                   },
                   r.createElement(d.zD7, null),
                 ),
-              R,
+              M,
             ),
             !b &&
               r.createElement(
                 "div",
                 { className: h().richPresenceContainer },
-                (F || M) &&
+                (O || R) &&
                   r.createElement(
                     "div",
                     {
@@ -1204,8 +1222,8 @@
         v = a(54492),
         P = a(32630),
         b = a(52038),
-        C = a(61859),
-        f = a(61336),
+        f = a(61859),
+        C = a(61336),
         I = a(78327);
       const y = "capsule_index_";
       function T(e) {
@@ -1220,11 +1238,11 @@
             onlyOneDiscountPct: S,
           } = e,
           [D, v] = n.useState(!1),
-          [f] = (0, p.G6)(t.id, (0, m.SW)(t.type), r.Xh),
-          [T] = (0, p.t7)(a && f?.GetParentAppID(), r.Xh),
+          [C] = (0, p.G6)(t.id, (0, m.SW)(t.type), r.Xh),
+          [T] = (0, p.t7)(a && C?.GetParentAppID(), r.Xh),
           w = (0, P.n9)(),
           H = (0, I.Qn)();
-        if (!f) return null;
+        if (!C) return null;
         const Q = Boolean(T),
           x = n.createElement(k, {
             ...e,
@@ -1245,7 +1263,7 @@
           },
           n.createElement(
             B.oj,
-            { appid: f.GetAppID() },
+            { appid: C.GetAppID() },
             Boolean(E)
               ? n.createElement(n.Fragment, null, x)
               : n.createElement(
@@ -1280,8 +1298,8 @@
                 n.createElement(
                   "div",
                   { className: g().ParentType },
-                  (0, C.we)(
-                    11 == f.GetAppType()
+                  (0, f.we)(
+                    11 == C.GetAppType()
                       ? "#SalePage_ParentApp_SoundTrack"
                       : "#SalePage_ParentApp_DLC",
                   ),
@@ -1319,7 +1337,7 @@
             bHidePlatforms: h,
             creatorAccountID: N,
             bIsHovered: b,
-            onlyOneDiscountPct: C,
+            onlyOneDiscountPct: f,
           } = e,
           [I] = (0, p.G6)(t.id, (0, m.SW)(t.type), { include_platforms: !0 }),
           y = (0, P.n9)(),
@@ -1331,7 +1349,7 @@
             I?.GetIncludedAppIDsOrSelf().every((e) => c.Fm.Get().BOwnsApp(e));
         if (!I) return null;
         const w = k && !r,
-          H = (0, f.NT)((0, l.wJ)(`${I.GetStorePageURL()}${s || ""}`, y));
+          H = (0, C.NT)((0, l.wJ)(`${I.GetStorePageURL()}${s || ""}`, y));
         let Q,
           x = null;
         if (d && 0 == I?.GetStoreItemType())
@@ -1348,7 +1366,7 @@
             bHidePlatforms: h,
             creatorAccountID: N,
             bShowName: e.bShowName,
-            onlyOneDiscountPct: C,
+            onlyOneDiscountPct: f,
           });
         }
         return (

@@ -661,6 +661,7 @@
                     br: h.qM.readString,
                     bw: h.gp.writeString,
                   },
+                  event_type: { n: 7, br: h.qM.readEnum, bw: h.gp.writeEnum },
                 },
               }),
             W.sm_m

@@ -781,6 +781,16 @@
         i = [5, 4],
         r = {
           capsule: { width: 800, height: 450, rgAcceptableTypes: s },
+          marketingmessage_art_2_eventcapsule: {
+            width: 800,
+            height: 450,
+            rgAcceptableTypes: s,
+          },
+          marketingmessage_art_eventcapsule: {
+            width: 800,
+            height: 450,
+            rgAcceptableTypes: s,
+          },
           spotlight: { width: 2108, height: 460, rgAcceptableTypes: s },
           localized_store_app_spotlight: {
             width: 1100,
@@ -2530,6 +2540,9 @@
             ),
             e
           );
+        }
+        BIsValidForRealm(e) {
+          return this.GetIncludedRealmList().includes(e);
         }
       }
       (0, n.Cg)([r.sH], ce.prototype, "GID", void 0),

@@ -493,7 +493,7 @@
 .VXok7mKJpXFIBjQBLIvh- {
   position: relative;
   display: grid;
-  grid-template-columns: 192px auto auto 0fr;
+  grid-template-columns: 192px 1fr auto;
   grid-template-areas: "text text buttons" "status status buttons";
 }
 .VXok7mKJpXFIBjQBLIvh-._3pWi_px3yJX0azhLcPr_LN {
