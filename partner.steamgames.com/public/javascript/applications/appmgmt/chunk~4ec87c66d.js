@@ -11067,6 +11067,16 @@
             ),
           );
         }
+        BIsAppHeaderCapsuleRequest() {
+          return Boolean(
+            this.m_oInput.art_requests?.find((e) => "app_header_capsule" == e),
+          );
+        }
+        BIsAppMainCapsuleRequest() {
+          return Boolean(
+            this.m_oInput.art_requests?.find((e) => "app_main_capsule" == e),
+          );
+        }
         BHasAnyArtTypeReviewRequested() {
           return this.m_oInput.art_requests?.length > 0;
         }
@@ -40680,11 +40690,15 @@
       function se(e) {
         const { planIdentify: t } = e,
           a = (0, n.bE)(),
-          [s, l] = (0, r.q3)(() => [
+          [s, l, o, m] = (0, r.q3)(() => [
+            a.BIsAppHeaderCapsuleRequest(),
+            a.BIsAppMainCapsuleRequest(),
             a.BHasPreviewArtOfType("app_header_capsule"),
             a.BHasPreviewArtOfType("app_main_capsule"),
-          ]),
-          o = (s ? 1 : 0) + (l ? 1 : 0);
+          ]);
+        if (!s && !l) return null;
+        const d = (s ? 1 : 0) + (l ? 1 : 0),
+          u = (s && o ? 1 : 0) + (l && m ? 1 : 0);
         return i.createElement(
           "div",
           { className: c().AssetSection },
@@ -40692,106 +40706,112 @@
             y.qx,
             {
               className: c().TitleBar,
-              title: (0, h.we)("#AssetRequest_PromotionApp_Title", `${o}/2`),
+              title: (0, h.we)("#AssetRequest_PromotionApp_Title", `${u}/${d}`),
             },
-            i.createElement(
-              "div",
-              { className: c().SectionCtn },
+            s &&
               i.createElement(
                 "div",
-                { className: c().AssetSpecs },
+                { className: c().SectionCtn },
                 i.createElement(
                   "div",
-                  { className: c().AssetTypeCtn },
+                  { className: c().AssetSpecs },
                   i.createElement(
                     "div",
-                    { className: c().AssetTitle },
-                    (0, h.we)("#AssetRequest_ArtType_app_header_capsule"),
-                  ),
-                  i.createElement(
-                    "div",
-                    null,
-                    (0, h.we)("#AssetRequest_General_Size", 460, 215),
-                  ),
-                  i.createElement(
-                    "div",
-                    null,
-                    (0, h.we)("#AssetRequest_ArtType_app_header_capsule_Usage"),
-                  ),
-                  i.createElement(
-                    "div",
-                    null,
-                    (0, h.we)(
-                      "#AssetRequest_ArtType_app_header_capsule_Design",
+                    { className: c().AssetTypeCtn },
+                    i.createElement(
+                      "div",
+                      { className: c().AssetTitle },
+                      (0, h.we)("#AssetRequest_ArtType_app_header_capsule"),
+                    ),
+                    i.createElement(
+                      "div",
+                      null,
+                      (0, h.we)("#AssetRequest_General_Size", 460, 215),
+                    ),
+                    i.createElement(
+                      "div",
+                      null,
+                      (0, h.we)(
+                        "#AssetRequest_ArtType_app_header_capsule_Usage",
+                      ),
+                    ),
+                    i.createElement(
+                      "div",
+                      null,
+                      (0, h.we)(
+                        "#AssetRequest_ArtType_app_header_capsule_Design",
+                      ),
                     ),
                   ),
                 ),
-              ),
-              i.createElement(
-                "div",
-                { className: c().AssetUploadPreviewCtn },
                 i.createElement(
                   "div",
-                  { className: c().AssetUploadPreview },
-                  i.createElement(C, {
-                    planID: t.id,
-                    promoAssetType: "app_header_capsule",
-                  }),
-                  i.createElement(I, {
-                    planIdentify: t,
-                    promoAssetType: "app_header_capsule",
-                  }),
-                ),
-              ),
-            ),
-            i.createElement(
-              "div",
-              { className: c().SectionCtn },
-              i.createElement(
-                "div",
-                { className: c().AssetSpecs },
-                i.createElement(
-                  "div",
-                  { className: c().AssetTypeCtn },
+                  { className: c().AssetUploadPreviewCtn },
                   i.createElement(
                     "div",
-                    { className: c().AssetTitle },
-                    (0, h.we)("#AssetRequest_ArtType_app_main_capsule"),
-                  ),
-                  i.createElement(
-                    "div",
-                    null,
-                    (0, h.we)("#AssetRequest_General_Size", 616, 353),
-                  ),
-                  i.createElement(
-                    "div",
-                    null,
-                    (0, h.we)("#AssetRequest_ArtType_app_main_capsule_Usage"),
-                  ),
-                  i.createElement(
-                    "div",
-                    null,
-                    (0, h.we)("#AssetRequest_ArtType_app_main_capsule_Design"),
+                    { className: c().AssetUploadPreview },
+                    i.createElement(C, {
+                      planID: t.id,
+                      promoAssetType: "app_header_capsule",
+                    }),
+                    i.createElement(I, {
+                      planIdentify: t,
+                      promoAssetType: "app_header_capsule",
+                    }),
                   ),
                 ),
               ),
+            l &&
               i.createElement(
                 "div",
-                { className: c().AssetUploadPreviewCtn },
+                { className: c().SectionCtn },
                 i.createElement(
                   "div",
-                  { className: c().AssetUploadPreview },
-                  i.createElement(C, {
-                    planID: t.id,
-                    promoAssetType: "app_main_capsule",
-                  }),
-                  i.createElement(I, {
-                    planIdentify: t,
-                    promoAssetType: "app_main_capsule",
-                  }),
+                  { className: c().AssetSpecs },
+                  i.createElement(
+                    "div",
+                    { className: c().AssetTypeCtn },
+                    i.createElement(
+                      "div",
+                      { className: c().AssetTitle },
+                      (0, h.we)("#AssetRequest_ArtType_app_main_capsule"),
+                    ),
+                    i.createElement(
+                      "div",
+                      null,
+                      (0, h.we)("#AssetRequest_General_Size", 616, 353),
+                    ),
+                    i.createElement(
+                      "div",
+                      null,
+                      (0, h.we)("#AssetRequest_ArtType_app_main_capsule_Usage"),
+                    ),
+                    i.createElement(
+                      "div",
+                      null,
+                      (0, h.we)(
+                        "#AssetRequest_ArtType_app_main_capsule_Design",
+                      ),
+                    ),
+                  ),
+                ),
+                i.createElement(
+                  "div",
+                  { className: c().AssetUploadPreviewCtn },
+                  i.createElement(
+                    "div",
+                    { className: c().AssetUploadPreview },
+                    i.createElement(C, {
+                      planID: t.id,
+                      promoAssetType: "app_main_capsule",
+                    }),
+                    i.createElement(I, {
+                      planIdentify: t,
+                      promoAssetType: "app_main_capsule",
+                    }),
+                  ),
                 ),
               ),
-            ),
           ),
           i.createElement("br", null),
         );
