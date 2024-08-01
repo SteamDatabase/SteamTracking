@@ -2285,6 +2285,36 @@ var PreapprovalQueue = {
 		LoadNextPreloadedTicket( PreapprovalQueue.rgCurrentTicket[2] )
 	},
 
+	CopyApprovals: function()
+	{
+		PreapprovalQueue.CopyMapInternal( PreapprovalQueue.mapApprovals );
+	},
+
+	CopyDenials: function()
+	{
+		PreapprovalQueue.CopyMapInternal( PreapprovalQueue.mapDenials );
+	},
+
+	CopyHijacks: function()
+	{
+		PreapprovalQueue.CopyMapInternal( PreapprovalQueue.mapHijacks );
+	},
+
+	CopyMapInternal: function( map )
+	{
+		var sList = "";
+		var nCount = map.size;
+		map.forEach(
+			function( value )
+			{
+				sList += value[0];
+				if ( --nCount > 0 )
+					sList += ", ";
+			} );
+
+		navigator.clipboard.writeText( sList );
+	},
+
 	RemoveTxn: function( txnID )
 	{
 		PreapprovalQueue.mapApprovals.delete( txnID );
