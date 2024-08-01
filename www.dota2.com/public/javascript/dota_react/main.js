@@ -41681,11 +41681,11 @@
                           key: "ability_" + e.ability_id,
                           className: l().AbilityNote,
                         },
-                        n.createElement("div", {
+                        n.createElement("img", {
                           className: l().AbilityIcon,
-                          style: {
-                            backgroundImage: `url( ${r.r.IMG_URL}abilities/${t.name}.png )`,
-                          },
+                          onError: (e) =>
+                            (e.target.src = `${r.r.IMG_URL}icons/innate_icon.png`),
+                          src: `${r.r.IMG_URL}abilities/${t.name}.png`,
                         }),
                         n.createElement(
                           "div",
