@@ -2212,12 +2212,13 @@ var NextPrev = {
 	}
 };
 
-function InitPreapprovalQueue( txnID, accountID, strTicketRef )
+function InitPreapprovalQueue( txnID, steamID, strTicketRef, strAccountName )
 {
 	PreapprovalQueue.rgCurrentTicket.length = 0;
 	PreapprovalQueue.rgCurrentTicket.push( txnID );
-	PreapprovalQueue.rgCurrentTicket.push( accountID );
+	PreapprovalQueue.rgCurrentTicket.push( steamID );
 	PreapprovalQueue.rgCurrentTicket.push( strTicketRef );
+	PreapprovalQueue.rgCurrentTicket.push( strAccountName );
 
 	PreapprovalQueue.InitFromCachedApprovals();
 
@@ -2226,11 +2227,11 @@ function InitPreapprovalQueue( txnID, accountID, strTicketRef )
 }
 
 var PreapprovalQueue = {
-	strSessionKey: 'preapproval_cache',
-	mapApprovals: new Map(),
+	strSessionKey: 'preapproval_cache2',
+	mapApprovals: new Map(),  // map of arrays txn => [steamid, ticketref, accountname]
 	mapDenials: new Map(),
 	mapHijacks: new Map(),
-	rgCurrentTicket: [],
+	rgCurrentTicket: [], // [txnid, steamid, ticketref, accountname]
 
 	bEnableKeyNav: false,
 
@@ -2262,22 +2263,22 @@ var PreapprovalQueue = {
 		sessionStorage.removeItem( PreapprovalQueue.strSessionKey + '_hijacks' );
 	},
 
-	HandleTxn: function( bApprove, txnID, accountID, strTicketRef, bHijacked = false )
+	HandleTxn: function( bApprove, txnID, steamID, strTicketRef, strAccountName, bHijacked = false )
 	{
 		PreapprovalQueue.RemoveTxn( txnID );
 		if ( bApprove )
 		{
-			PreapprovalQueue.mapApprovals.set( txnID, [ accountID, strTicketRef ] );
+			PreapprovalQueue.mapApprovals.set( txnID, [ steamID, strTicketRef, strAccountName ] );
 		}
 		else
 		{
 			if ( bHijacked )
 			{
-				PreapprovalQueue.mapHijacks.set( txnID, [ accountID, strTicketRef ] );
+				PreapprovalQueue.mapHijacks.set( txnID, [ steamID, strTicketRef, strAccountName ] );
 			}
 			else
 			{
-				PreapprovalQueue.mapDenials.set( txnID, [ accountID, strTicketRef ] );
+				PreapprovalQueue.mapDenials.set( txnID, [ steamID, strTicketRef, strAccountName ] );
 			}
 		}
 
@@ -2309,7 +2310,7 @@ var PreapprovalQueue = {
 			{
 				sList += value[0];
 				if ( --nCount > 0 )
-					sList += ", ";
+					sList += "\n";
 			} );
 
 		navigator.clipboard.writeText( sList );
@@ -2320,6 +2321,12 @@ var PreapprovalQueue = {
 		PreapprovalQueue.mapApprovals.delete( txnID );
 		PreapprovalQueue.mapDenials.delete( txnID );
 		PreapprovalQueue.mapHijacks.delete( txnID );
+
+
+		var elTicketQueueEntry = $J("#ticket_queue").find(".ticket_queue_link");
+		elTicketQueueEntry.removeClass( 'ticket_queue_deny' );
+		elTicketQueueEntry.removeClass( 'ticket_queue_approve' );
+
 		PreapprovalQueue.RenderQueue();
 	},
 
@@ -2344,15 +2351,15 @@ var PreapprovalQueue = {
 		var key = event.key;
 		if ( key == 'a' )
 		{
-			PreapprovalQueue.HandleTxn( true, PreapprovalQueue.rgCurrentTicket[0], PreapprovalQueue.rgCurrentTicket[1], PreapprovalQueue.rgCurrentTicket[2] );
+			PreapprovalQueue.HandleTxn( true, PreapprovalQueue.rgCurrentTicket[0], PreapprovalQueue.rgCurrentTicket[1], PreapprovalQueue.rgCurrentTicket[2], PreapprovalQueue.rgCurrentTicket[3] );
 		}
 		else if ( key == 'f' )
 		{
-			PreapprovalQueue.HandleTxn( false, PreapprovalQueue.rgCurrentTicket[0], PreapprovalQueue.rgCurrentTicket[1], PreapprovalQueue.rgCurrentTicket[2] );
+			PreapprovalQueue.HandleTxn( false, PreapprovalQueue.rgCurrentTicket[0], PreapprovalQueue.rgCurrentTicket[1], PreapprovalQueue.rgCurrentTicket[2], PreapprovalQueue.rgCurrentTicket[3] );
 		}
 		else if ( key == 'h' )
 		{
-			PreapprovalQueue.HandleTxn( false, PreapprovalQueue.rgCurrentTicket[0], PreapprovalQueue.rgCurrentTicket[1], PreapprovalQueue.rgCurrentTicket[2], true );
+			PreapprovalQueue.HandleTxn( false, PreapprovalQueue.rgCurrentTicket[0], PreapprovalQueue.rgCurrentTicket[1], PreapprovalQueue.rgCurrentTicket[2], PreapprovalQueue.rgCurrentTicket[3], true );
 		}
 		else if ( key == 'u' )
 		{
@@ -2404,7 +2411,7 @@ var PreapprovalQueue = {
 
 		PreapprovalQueue.mapApprovals.forEach(
 			function( value, key ) {
-				elApprovalQueue.append( '<div data-ticket="' + value[1] + '" class=""><a href="javascript:LoadPreloadedTicket( \'' + value[1] + '\')">' + key + '</a></div>' );
+				elApprovalQueue.append( '<div data-ticket="' + value[1] + '" class=""><a href="javascript:LoadPreloadedTicket( \'' + value[1] + '\')">' + value[2] + '</a></div>' );
 				var elTicketQueueEntry = $J("#ticket_queue").find("[data-ticket='" + value[1] + "']");
 				elTicketQueueEntry.removeClass( 'ticket_queue_deny' );
 				elTicketQueueEntry.addClass( 'ticket_queue_approve' );
@@ -2412,7 +2419,7 @@ var PreapprovalQueue = {
 
 		PreapprovalQueue.mapDenials.forEach(
 			function( value, key ) {
-				elDenialQueue.append( '<div data-ticket="' + value[1] + '" class=""><a href="javascript:LoadPreloadedTicket( \'' + value[1] + '\')">' + key + '</a></div>' );
+				elDenialQueue.append( '<div data-ticket="' + value[1] + '" class=""><a href="javascript:LoadPreloadedTicket( \'' + value[1] + '\')">' + value[2] + '</a></div>' );
 				var elTicketQueueEntry = $J("#ticket_queue").find("[data-ticket='" + value[1] + "']");
 				elTicketQueueEntry.addClass( 'ticket_queue_deny' );
 				elTicketQueueEntry.removeClass( 'ticket_queue_approve' );
@@ -2420,7 +2427,7 @@ var PreapprovalQueue = {
 
 		PreapprovalQueue.mapHijacks.forEach(
 			function( value, key ) {
-				elHijackQueue.append( '<div data-ticket="' + value[1] + '" class=""><a href="javascript:LoadPreloadedTicket( \'' + value[1] + '\')">' + key + '</a></div>' );
+				elHijackQueue.append( '<div data-ticket="' + value[1] + '" class=""><a href="javascript:LoadPreloadedTicket( \'' + value[1] + '\')">' + value[2] + '</a></div>' );
 				var elTicketQueueEntry = $J("#ticket_queue").find("[data-ticket='" + value[1] + "']");
 				elTicketQueueEntry.addClass( 'ticket_queue_deny' );
 				elTicketQueueEntry.removeClass( 'ticket_queue_approve' );
