@@ -2970,8 +2970,8 @@
       var a = n(90626),
         s = n(66297),
         i = n(61859);
-      function o(t) {
-        return (
+      const o = a.forwardRef(
+        (t, e) => (
           (t.options.locale = "steam"),
           (t.options.langs = {
             steam: {
@@ -2985,9 +2985,9 @@
               },
             },
           }),
-          a.createElement(s.ReactTabulator, { ...t })
-        );
-      }
+          a.createElement(s.ReactTabulator, { ...t, ref: e })
+        ),
+      );
     },
     7247: (t, e, n) => {
       "use strict";
