@@ -1206,6 +1206,7 @@ ${ROOT_URL}/submitfeedback
 ${ROOT_URL}/updatesdata
 ${STATS_BASE_URL}${type}
 ${STATS_BASE_URL}app/details/${}/${}
+${STATS_BASE_URL}app/wishlist/${}/?dateStart=${}&dateEnd=${}
 ${STATS_BASE_URL}bundles/details/${}/${}
 ${STATS_BASE_URL}package/details/${}/${}
 ${STATS_BASE_URL}sales/details/?gid=${GID}&clanid=${}

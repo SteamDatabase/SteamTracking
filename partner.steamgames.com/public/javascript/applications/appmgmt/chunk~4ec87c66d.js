@@ -41263,7 +41263,7 @@
           i.createElement(
             ge,
             {
-              bCompleted: y,
+              bCompleted: w.trim().length > 0,
               title: (0, h.we)("#AssetRequest_Check_ContactInfo"),
               bRequired: !0,
             },
