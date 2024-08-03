@@ -7,10 +7,11 @@ const pathsToRecurse = [
 	"./help.steampowered.com/",
 	"./partner.steamgames.com/",
 	"./steamcommunity.com/",
-	"./store.steampowered.com",
-	"./checkout.steampowered.com",
-	"./www.dota2.com",
-	"./www.underlords.com",
+	"./store.steampowered.com/",
+	"./checkout.steampowered.com/",
+	"./www.dota2.com/",
+	"./www.underlords.com/",
+	"./www.counter-strike.net/",
 ];
 
 // Should this just be a recursive search for all webpack files?
@@ -29,6 +30,7 @@ const paths = [
 	"./www.dota2.com/public/javascript/applications/dpc/",
 	"./www.dota2.com/public/javascript/dota_react/",
 	"./www.underlords.com/public/javascript/",
+	"./www.counter-strike.net/public/javascript/csgo_react/",
 ];
 
 async function GetJavascriptFiles(dirName) {
