@@ -1757,6 +1757,38 @@ enum UnnamedEnum2de1caa33e895f3d
 	Deprecated = 2;
 }
 
+enum UnnamedEnum2dfea80db4b6d761
+{
+	LaunchGame = 0;
+	FriendMessage = 1;
+	ChatMention = 2;
+	ChatMessage = 3;
+	ToastMessage = 4;
+	ToastAchievement = 5;
+	ToastMisc = 6;
+	ToastMiscShort = 7;
+	FriendOnline = 8;
+	FriendInGame = 9;
+	VolSound = 10;
+	ShowModal = 11;
+	HideModal = 12;
+	IntoGameDetail = 13;
+	OutOfGameDetail = 14;
+	PagedNavigation = 15;
+	ToggleOn = 16;
+	ToggleOff = 17;
+	SliderUp = 18;
+	SliderDown = 19;
+	ChangeTabs = 20;
+	DefaultOk = 21;
+	OpenSideMenu = 22;
+	CloseSideMenu = 23;
+	BasicNav = 24;
+	FailedNav = 25;
+	Typing = 26;
+	TimerExpired = 27;
+}
+
 enum UnnamedEnum2e964de28043db37
 {
 	White = 0;
@@ -2270,6 +2302,15 @@ enum UnnamedEnum4cc6d63ba18ecebd
 	AnonymousLogin = 6;
 }
 
+enum UnnamedEnum4e31b8bca1961c12
+{
+	TOP = 0;
+	BOTTOM = 1;
+	LEFT = 2;
+	RIGHT = 3;
+	CENTER = 4;
+}
+
 enum UnnamedEnum511f114323ab4358
 {
 	NotPresent = 0;
@@ -2602,6 +2643,33 @@ enum UnnamedEnum5b8032725cc6864d
 	k_LocalizationDone = 4;
 }
 
+enum UnnamedEnum5b9e1e5238550b64
+{
+	None = 0;
+	Minimized = 1;
+	Hidden = 2;
+	TooltipHint = 4;
+	NoTaskbarIcon = 8;
+	Resizable = 16;
+	ScalePosition = 32;
+	ScaleSize = 64;
+	Maximized = 128;
+	BackgroundTransparent = 256;
+	NotFocusable = 512;
+	FullScreen = 1024;
+	Fullscreen_Exclusive = 2048;
+	ApplyBrowserScaleToDimensions = 4096;
+	AlwaysOnTop = 8192;
+	NoWindowShadow = 16384;
+	NoMinimize = 32768;
+	PopUpMenuHint = 65536;
+	IgnoreSavedSize = 131072;
+	NoRoundedCorners = 262144;
+	ForceRoundedCorners = 524288;
+	OverrideRedirect = 1048576;
+	IgnoreSteamDisplayScale = 2097152;
+}
+
 enum UnnamedEnum5e14c6d1b71a889d
 {
 	LeftTop = 0;
@@ -2748,6 +2816,198 @@ enum UnnamedEnum6bd8304631e14543
 	Info = 3;
 	Warning = 4;
 	Error = 5;
+}
+
+enum UnnamedEnum6cf2b7ae1f44a3a3
+{
+	Invalid = 0;
+	TrackingSystemName_String = 1000;
+	ModelNumber_String = 1001;
+	SerialNumber_String = 1002;
+	RenderModelName_String = 1003;
+	WillDriftInYaw_Bool = 1004;
+	ManufacturerName_String = 1005;
+	TrackingFirmwareVersion_String = 1006;
+	HardwareRevision_String = 1007;
+	AllWirelessDongleDescriptions_String = 1008;
+	ConnectedWirelessDongle_String = 1009;
+	DeviceIsWireless_Bool = 1010;
+	DeviceIsCharging_Bool = 1011;
+	DeviceBatteryPercentage_Float = 1012;
+	StatusDisplayTransform_Matrix34 = 1013;
+	Firmware_UpdateAvailable_Bool = 1014;
+	Firmware_ManualUpdate_Bool = 1015;
+	Firmware_ManualUpdateURL_String = 1016;
+	HardwareRevision_Uint64 = 1017;
+	FirmwareVersion_Uint64 = 1018;
+	FPGAVersion_Uint64 = 1019;
+	VRCVersion_Uint64 = 1020;
+	RadioVersion_Uint64 = 1021;
+	DongleVersion_Uint64 = 1022;
+	BlockServerShutdown_Bool = 1023;
+	CanUnifyCoordinateSystemWithHmd_Bool = 1024;
+	ContainsProximitySensor_Bool = 1025;
+	DeviceProvidesBatteryStatus_Bool = 1026;
+	DeviceCanPowerOff_Bool = 1027;
+	Firmware_ProgrammingTarget_String = 1028;
+	DeviceClass_Int32 = 1029;
+	HasCamera_Bool = 1030;
+	DriverVersion_String = 1031;
+	Firmware_ForceUpdateRequired_Bool = 1032;
+	ViveSystemButtonFixRequired_Bool = 1033;
+	ParentDriver_Uint64 = 1034;
+	ResourceRoot_String = 1035;
+	RegisteredDeviceType_String = 1036;
+	InputProfilePath_String = 1037;
+	NeverTracked_Bool = 1038;
+	NumCameras_Int32 = 1039;
+	CameraFrameLayout_Int32 = 1040;
+	CameraStreamFormat_Int32 = 1041;
+	AdditionalDeviceSettingsPath_String = 1042;
+	DevicePowerUsage_Float = 1052;
+	ActualTrackingSystemName_String = 1054;
+	ReportsTimeSinceVSync_Bool = 2000;
+	SecondsFromVsyncToPhotons_Float = 2001;
+	DisplayFrequency_Float = 2002;
+	UserIpdMeters_Float = 2003;
+	CurrentUniverseId_Uint64 = 2004;
+	PreviousUniverseId_Uint64 = 2005;
+	DisplayFirmwareVersion_Uint64 = 2006;
+	IsOnDesktop_Bool = 2007;
+	DisplayMCType_Int32 = 2008;
+	DisplayMCOffset_Float = 2009;
+	DisplayMCScale_Float = 2010;
+	EdidVendorID_Int32 = 2011;
+	DisplayMCImageLeft_String = 2012;
+	DisplayMCImageRight_String = 2013;
+	DisplayGCBlackClamp_Float = 2014;
+	EdidProductID_Int32 = 2015;
+	CameraToHeadTransform_Matrix34 = 2016;
+	DisplayGCType_Int32 = 2017;
+	DisplayGCOffset_Float = 2018;
+	DisplayGCScale_Float = 2019;
+	DisplayGCPrescale_Float = 2020;
+	DisplayGCImage_String = 2021;
+	LensCenterLeftU_Float = 2022;
+	LensCenterLeftV_Float = 2023;
+	LensCenterRightU_Float = 2024;
+	LensCenterRightV_Float = 2025;
+	UserHeadToEyeDepthMeters_Float = 2026;
+	CameraFirmwareVersion_Uint64 = 2027;
+	CameraFirmwareDescription_String = 2028;
+	DisplayFPGAVersion_Uint64 = 2029;
+	DisplayBootloaderVersion_Uint64 = 2030;
+	DisplayHardwareVersion_Uint64 = 2031;
+	AudioFirmwareVersion_Uint64 = 2032;
+	CameraCompatibilityMode_Int32 = 2033;
+	ScreenshotHorizontalFieldOfViewDegrees_Float = 2034;
+	ScreenshotVerticalFieldOfViewDegrees_Float = 2035;
+	DisplaySuppressed_Bool = 2036;
+	DisplayAllowNightMode_Bool = 2037;
+	DisplayMCImageWidth_Int32 = 2038;
+	DisplayMCImageHeight_Int32 = 2039;
+	DisplayMCImageNumChannels_Int32 = 2040;
+	DisplayMCImageData_Binary = 2041;
+	SecondsFromPhotonsToVblank_Float = 2042;
+	DriverDirectModeSendsVsyncEvents_Bool = 2043;
+	DisplayDebugMode_Bool = 2044;
+	GraphicsAdapterLuid_Uint64 = 2045;
+	DriverProvidedChaperonePath_String = 2048;
+	ExpectedTrackingReferenceCount_Int32 = 2049;
+	ExpectedControllerCount_Int32 = 2050;
+	NamedIconPathControllerLeftDeviceOff_String = 2051;
+	NamedIconPathControllerRightDeviceOff_String = 2052;
+	NamedIconPathTrackingReferenceDeviceOff_String = 2053;
+	DoNotApplyPrediction_Bool = 2054;
+	CameraToHeadTransforms_Matrix34_Array = 2055;
+	DistortionMeshResolution_Int32 = 2056;
+	DriverIsDrawingControllers_Bool = 2057;
+	DriverRequestsApplicationPause_Bool = 2058;
+	DriverRequestsReducedRendering_Bool = 2059;
+	MinimumIpdStepMeters_Float = 2060;
+	AudioBridgeFirmwareVersion_Uint64 = 2061;
+	ImageBridgeFirmwareVersion_Uint64 = 2062;
+	ImuToHeadTransform_Matrix34 = 2063;
+	ImuFactoryGyroBias_Vector3 = 2064;
+	ImuFactoryGyroScale_Vector3 = 2065;
+	ImuFactoryAccelerometerBias_Vector3 = 2066;
+	ImuFactoryAccelerometerScale_Vector3 = 2067;
+	ConfigurationIncludesLighthouse20Features_Bool = 2069;
+	Prop_AdditionalRadioFeatures_Uint64 = 2070;
+	Prop_CameraWhiteBalance_Vector4_Array = 2071;
+	Prop_CameraDistortionFunction_Int32_Array = 2072;
+	Prop_CameraDistortionCoefficients_Float_Array = 2073;
+	Prop_ExpectedControllerType_String = 2074;
+	HmdTrackingStyle_Int32 = 2075;
+	DriverProvidedChaperoneVisibility_Bool = 2076;
+	HmdColumnCorrectionSettingPrefix_String = 2077;
+	CameraSupportsCompatibilityModes_Bool = 2078;
+	SupportsRoomViewDepthProjection_Bool = 2079;
+	DisplayAvailableFrameRates_Float_Array = 2080;
+	DisplaySupportsRuntimeFramerateChange_Bool = 2084;
+	DisplaySupportsAnalogGain_Bool = 2085;
+	DisplayMinAnalogGain_Float = 2086;
+	DisplayMaxAnalogGain_Float = 2087;
+	DashboardScale_Float = 2091;
+	PeerButtonInfo_String = 2092;
+	IpdUIRangeMinMeters_Float = 2100;
+	IpdUIRangeMaxMeters_Float = 2101;
+	Hmd_SupportsHDCP14LegacyCompat_Bool = 2102;
+	Hmd_SupportsMicMonitoring_Bool = 2103;
+	Hmd_SupportsDisplayPortTrainingMode_Bool = 2104;
+	Hmd_SupportsRoomViewDirect_Bool = 2105;
+	Hmd_SupportsAppThrottling_Bool = 2106;
+	Hmd_SupportsGpuBusMonitoring_Bool = 2107;
+	DriverRequestedMuraCorrectionMode_Int32 = 2200;
+	DriverRequestedMuraFeather_InnerLeft_Int32 = 2201;
+	DriverRequestedMuraFeather_InnerRight_Int32 = 2202;
+	DriverRequestedMuraFeather_InnerTop_Int32 = 2203;
+	DriverRequestedMuraFeather_InnerBottom_Int32 = 2204;
+	DriverRequestedMuraFeather_OuterLeft_Int32 = 2205;
+	DriverRequestedMuraFeather_OuterRight_Int32 = 2206;
+	DriverRequestedMuraFeather_OuterTop_Int32 = 2207;
+	DriverRequestedMuraFeather_OuterBottom_Int32 = 2208;
+	Audio_SupportsDualSpeakerAndJackOutput_Bool = 2303;
+	AttachedDeviceId_String = 3000;
+	SupportedButtons_Uint64 = 3001;
+	Axis0Type_Int32 = 3002;
+	Axis1Type_Int32 = 3003;
+	Axis2Type_Int32 = 3004;
+	Axis3Type_Int32 = 3005;
+	Axis4Type_Int32 = 3006;
+	ControllerRoleHint_Int32 = 3007;
+	FieldOfViewLeftDegrees_Float = 4000;
+	FieldOfViewRightDegrees_Float = 4001;
+	FieldOfViewTopDegrees_Float = 4002;
+	FieldOfViewBottomDegrees_Float = 4003;
+	TrackingRangeMinimumMeters_Float = 4004;
+	TrackingRangeMaximumMeters_Float = 4005;
+	ModeLabel_String = 4006;
+	IconPathName_String = 5000;
+	NamedIconPathDeviceOff_String = 5001;
+	NamedIconPathDeviceSearching_String = 5002;
+	NamedIconPathDeviceSearchingAlert_String = 5003;
+	NamedIconPathDeviceReady_String = 5004;
+	NamedIconPathDeviceReadyAlert_String = 5005;
+	NamedIconPathDeviceNotReady_String = 5006;
+	NamedIconPathDeviceStandby_String = 5007;
+	NamedIconPathDeviceAlertLow_String = 5008;
+	DisplayHiddenArea_Binary_Start = 5100;
+	DisplayHiddenArea_Binary_End = 5150;
+	ParentContainer = 5151;
+	UserConfigPath_String = 6000;
+	InstallPath_String = 6001;
+	HasDisplayComponent_Bool = 6002;
+	HasControllerComponent_Bool = 6003;
+	HasCameraComponent_Bool = 6004;
+	HasDriverDirectModeComponent_Bool = 6005;
+	HasVirtualDisplayComponent_Bool = 6006;
+	HasSpatialAnchorsSupport_Bool = 6007;
+	ControllerType_String = 7000;
+	LegacyInputProfile_String = 7001;
+	VendorSpecific_Reserved_Start = 10000;
+	VendorSpecific_Reserved_End = 10999;
+	TrackedDeviceProperty_Max = 1000000;
 }
 
 enum UnnamedEnum6d0c4a4e51ce607a
