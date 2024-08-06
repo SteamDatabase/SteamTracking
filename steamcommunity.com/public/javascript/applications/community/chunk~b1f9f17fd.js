@@ -43014,13 +43014,17 @@
           };
         }, [a, e]);
         const o = (0, n.q3)(() => {
-            var e;
-            const a =
-                null === (e = t.selectedTabBackgroundDef.groups) || void 0 === e
+            var e, a;
+            const n =
+                null ===
+                  (a =
+                    null === (e = t.selectedTabBackgroundDef) || void 0 === e
+                      ? void 0
+                      : e.groups) || void 0 === a
                   ? void 0
-                  : e[0].background_id,
-              n = t.mapGroupToSections.get(a);
-            return S.get(null == n ? void 0 : n.nBackgroundGroupID);
+                  : a[0].background_id,
+              i = t.mapGroupToSections.get(n);
+            return S.get(null == i ? void 0 : i.nBackgroundGroupID);
           }),
           [s, l] = (0, i.useState)(null),
           c = i.useCallback((e, t) => {
