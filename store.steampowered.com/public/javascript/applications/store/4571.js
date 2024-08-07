@@ -711,7 +711,7 @@
         c = a(94011),
         m = a(5970),
         p = a(12155),
-        u = a(32630),
+        u = a(91674),
         d = a(51272),
         A = a(52038),
         _ = a(61859),
@@ -1023,9 +1023,9 @@
         c = a.n(l),
         m = a(12155),
         p = a(52038),
-        u = a(32630),
-        d = a(29863),
-        A = a(30261);
+        u = a(29863),
+        d = a(30261),
+        A = a(91674);
       !(function (e) {
         (e.k_eBlock = "block"),
           (e.k_eFinal = "final"),
@@ -1050,9 +1050,9 @@
           "span",
           {
             className: (0, p.A)({
-              [A.StoreSalePriceWidget]: !0,
+              [d.StoreSalePriceWidget]: !0,
               [e.className]: Boolean(e.className),
-              [A.StoreSaleReservationPrice]: t,
+              [d.StoreSaleReservationPrice]: t,
             }),
           },
           Boolean(e.discount_percent && !a) &&
@@ -1060,9 +1060,9 @@
               "span",
               {
                 className: (0, p.A)(
-                  A.StoreSaleDiscountBox,
+                  d.StoreSaleDiscountBox,
                   "StoreSaleDiscountBox",
-                  e.bDiscountFromCoupon && A.FromCoupon,
+                  e.bDiscountFromCoupon && d.FromCoupon,
                 ),
               },
               `-${e.discount_percent}%`,
@@ -1072,7 +1072,7 @@
               "div",
               {
                 className: (0, p.A)({
-                  [A.DiscountIconCtn]: !0,
+                  [d.DiscountIconCtn]: !0,
                   bbcode_price_discount: r,
                 }),
               },
@@ -1084,7 +1084,7 @@
                   "div",
                   {
                     className: (0, p.A)({
-                      [A.StoreSaleDiscountedPriceCtn]: !0,
+                      [d.StoreSaleDiscountedPriceCtn]: !0,
                       bbcode_price_ctn: r,
                     }),
                   },
@@ -1092,7 +1092,7 @@
                     "div",
                     {
                       className: (0, p.A)({
-                        [A.StoreOriginalPrice]: !0,
+                        [d.StoreOriginalPrice]: !0,
                         StoreOriginalPrice: !0,
                         bbcode_price_orig: r,
                       }),
@@ -1103,9 +1103,9 @@
                     "div",
                     {
                       className: (0, p.A)({
-                        [A.StoreSalePriceBox]: !0,
+                        [d.StoreSalePriceBox]: !0,
                         bbcode_price_box: r,
-                        [A.StoreSaleReservationPriceBox]: t,
+                        [d.StoreSaleReservationPriceBox]: t,
                         bbcode_price_final: r,
                       }),
                     },
@@ -1116,9 +1116,9 @@
                   "div",
                   {
                     className: (0, p.A)({
-                      [A.StoreSalePriceBox]: !0,
+                      [d.StoreSalePriceBox]: !0,
                       bbcode_price_box: r,
-                      [A.StoreSaleReservationPriceBox]: t,
+                      [d.StoreSaleReservationPriceBox]: t,
                       bbcode_price_final: r,
                     }),
                   },
@@ -1173,7 +1173,7 @@
         })(t, a);
         return void 0 === n
           ? null
-          : i.createElement("span", { className: A.StorePriceSavings }, n);
+          : i.createElement("span", { className: d.StorePriceSavings }, n);
       });
       function h(e) {
         const t = Number(e.args.packageid),
@@ -1183,9 +1183,9 @@
           : null;
       }
       const B = (e) => {
-        const t = (0, u.n9)(),
+        const t = (0, A.n9)(),
           a = (0, s.L3)(t);
-        return i.createElement(d.EP, {
+        return i.createElement(u.EP, {
           snr: a,
           appID: e.appid,
           classOverride: (0, p.A)(c().WishlistButtonNotTop, "WishlistButton"),
@@ -1220,7 +1220,7 @@
         D = a(47235),
         N = a(37076),
         v = a(54492),
-        P = a(32630),
+        P = a(91674),
         b = a(52038),
         f = a(61859),
         C = a(61336),

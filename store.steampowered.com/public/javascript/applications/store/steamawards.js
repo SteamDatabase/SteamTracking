@@ -263,7 +263,7 @@
     },
     54954: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => Pe });
+      a.r(t), a.d(t, { default: () => Ve });
       var n = a(43527),
         r = a(90626),
         s = a(92757),
@@ -286,8 +286,8 @@
         C = a(82477),
         h = a(22797),
         F = a(32630),
-        y = a(75933),
-        I = a(43568),
+        I = a(75933),
+        y = a(43568),
         f = a(91254),
         T = a(17720),
         Q = a(35685),
@@ -545,19 +545,19 @@
           "div",
           { ref: E, className: l().SuggestionCarousel },
           r.createElement(
-            F.Ay,
+            F.A,
             { feature: "steamawards_nominate" },
             r.createElement(
-              I.F,
+              y.F,
               {
                 gap: 12,
-                hideArrows: !(0, y.rp)(),
+                hideArrows: !(0, I.rp)(),
                 visibleElements: m,
                 useTestScrollbar: !0,
                 bLazyRenderChildren: !0,
                 hidePips: d,
                 innerClassName: l().GameCarousel,
-                screenIsWide: (0, y.rp)(),
+                screenIsWide: (0, I.rp)(),
               },
               w.map((e) =>
                 r.createElement(q, {
@@ -704,18 +704,18 @@
                 "div",
                 { ref: d, className: l().EventCarousel },
                 r.createElement(
-                  F.Ay,
+                  F.A,
                   { feature: "steamawards_event" },
                   r.createElement(
-                    I.F,
+                    y.F,
                     {
                       gap: 12,
-                      hideArrows: !(0, y.rp)(),
+                      hideArrows: !(0, I.rp)(),
                       visibleElements: o,
                       useTestScrollbar: !0,
                       bLazyRenderChildren: !0,
                       className: l().GameCarousel,
-                      screenIsWide: (0, y.rp)(),
+                      screenIsWide: (0, I.rp)(),
                     },
                     t.map((e) =>
                       r.createElement(z, {
@@ -767,7 +767,7 @@
             f.O3.Init(), k.KN.InitGlobal().then(() => n(!0));
           }, []),
           r.createElement(
-            F.Ay,
+            F.A,
             { method: "nominations" },
             r.createElement(
               m.Z,
@@ -1526,15 +1526,16 @@
         ge = a.n(Ee),
         we = a(90740),
         pe = a(60383),
-        Ae = a(84811),
-        Se = a(62490),
-        Ne = a(81511);
-      const ve = {
+        Ae = a(91674),
+        Se = a(84811),
+        Ne = a(62490),
+        ve = a(81511);
+      const Ce = {
         include_basic_info: !0,
         include_assets_without_overrides: !0,
         include_trailers: !0,
       };
-      function Ce(e) {
+      function he(e) {
         const { unSaleAppID: t } = e,
           a = (0, $.f1)(),
           n = J()("2023-12-21T10:00:00-08:00").unix(),
@@ -1544,25 +1545,25 @@
         return r.createElement(
           m.Z,
           { className: ge().VotingPageContent },
-          r.createElement(he, { bIsVotingOpen: i, bIsVotingPast: l }),
+          r.createElement(Fe, { bIsVotingOpen: i, bIsVotingPast: l }),
           r.createElement(
             "div",
             { className: ge().VotingArea },
-            r.createElement(Fe, {
+            r.createElement(Ie, {
               unSaleAppID: t,
               bIsVotingOpen: i,
               bIsVotingPast: l,
             }),
-            r.createElement(Ie, {
+            r.createElement(fe, {
               bIsVotingOpen: i,
               bIsVotingPast: l,
               unSaleAppID: t,
             }),
           ),
-          r.createElement(Re, null),
+          r.createElement(De, null),
         );
       }
-      function he(e) {
+      function Fe(e) {
         const { bIsVotingOpen: t, bIsVotingPast: a } = e;
         let n;
         return (
@@ -1635,7 +1636,7 @@
           )
         );
       }
-      function Fe(e) {
+      function Ie(e) {
         const { unSaleAppID: t, bIsVotingOpen: a, bIsVotingPast: n } = e,
           s = (0, d.Jo)(t),
           i = (0, d.a8)(t);
@@ -1698,10 +1699,10 @@
           }),
         );
       }
-      function Ie(e) {
+      function fe(e) {
         const { unSaleAppID: t, bIsVotingOpen: a, bIsVotingPast: n } = e,
           s = (0, d.Jo)(t).data.votes.map((e) =>
-            r.createElement(fe, {
+            r.createElement(Te, {
               key: e.voteid,
               bIsVotingOpen: a,
               bIsVotingPast: n,
@@ -1718,7 +1719,7 @@
           s,
         );
       }
-      function fe(e) {
+      function Te(e) {
         const {
             definition: t,
             unSaleAppID: a,
@@ -1727,7 +1728,7 @@
           } = e,
           i = (0, _.zX)(
             t.app_discounts.map((e) => e.appid),
-            ve,
+            Ce,
           ),
           l = (0, d.Mn)(a, t.voteid),
           o = r.useRef(0),
@@ -1735,8 +1736,8 @@
           [u, E] = r.useState([]),
           [p, N] = r.useState(0),
           [v, C] = r.useState(!1),
-          [F, y] = r.useState(0),
-          [I, f] = r.useState(!l && !s),
+          [F, I] = r.useState(0),
+          [y, f] = r.useState(!l && !s),
           [T, Q] = r.useState(),
           [B, k] = r.useState(669),
           R =
@@ -1775,13 +1776,13 @@
                   const a = await Promise.all(
                     t.app_discounts?.map(async (e) => {
                       const t = [e.appid, g.iA.accountid].toString(),
-                        a = await (0, Ne.sx)(t);
+                        a = await (0, ve.sx)(t);
                       return { appid: e.appid, hash: a };
                     }),
                   );
                   a.sort((e, t) => (e.hash > t.hash ? 1 : -1)),
                     (e = a.map((e) => e.appid));
-                } else (e = t.app_discounts.map((e) => e.appid)), (0, Se.fW)(e);
+                } else (e = t.app_discounts.map((e) => e.appid)), (0, Ne.fW)(e);
                 E(e), N(e[o.current]), W();
               })();
           }, [t.app_discounts, W, u]);
@@ -1795,10 +1796,10 @@
             C(e);
           }, []),
           G = r.useCallback((e) => {
-            y(e), N(e);
+            I(e), N(e);
           }, []),
           x = r.useCallback(() => {
-            y(0), N(u[o.current]);
+            I(0), N(u[o.current]);
           }, [u]);
         if (1 == i)
           return r.createElement(h.t, {
@@ -1807,7 +1808,7 @@
             msDelayAppear: 300,
           });
         const U = u?.map((e) =>
-            r.createElement(ke, {
+            r.createElement(Re, {
               key: e,
               eCategory: t.voteid,
               unSaleAppID: a,
@@ -1820,7 +1821,7 @@
             }),
           ),
           q = u?.map((e) =>
-            r.createElement(Be, {
+            r.createElement(ke, {
               key: e,
               bHoveringApp: e == F,
               unAppID: e,
@@ -1832,10 +1833,10 @@
         let X = r.createElement(r.Fragment, null, q);
         return (
           t.winner_appid && s
-            ? (X = r.createElement(Qe, { unAppID: t.winner_appid }))
-            : l && (X = r.createElement(Te, { unAppID: l })),
+            ? (X = r.createElement(Be, { unAppID: t.winner_appid }))
+            : l && (X = r.createElement(Qe, { unAppID: l })),
           r.createElement(
-            Ae.tH,
+            Se.tH,
             null,
             r.createElement(
               pe.J,
@@ -1898,8 +1899,8 @@
                     (l || s) &&
                       r.createElement(
                         w.$n,
-                        { className: ge().HideShowBtn, onClick: () => f(!I) },
-                        I
+                        { className: ge().HideShowBtn, onClick: () => f(!y) },
+                        y
                           ? (0, A.we)("#Steamawards_HideFinalists_Btn")
                           : (0, A.we)("#Steamawards_ShowFinalists_Btn"),
                       ),
@@ -1921,7 +1922,7 @@
                     timeout: 500,
                     unmountOnExit: !0,
                     mountOnEnter: !0,
-                    in: I,
+                    in: y,
                     classNames: {
                       enter: ge().Enter,
                       enterActive: ge().EnterActive,
@@ -1952,10 +1953,10 @@
           )
         );
       }
-      function Te(e) {
+      function Qe(e) {
         const { unAppID: t } = e,
-          [a] = (0, _.t7)(t, ve),
-          n = (0, F.aL)(a?.GetStorePageURL(), "nominee_capsule");
+          [a] = (0, _.t7)(t, Ce),
+          n = (0, Ae.aL)(a?.GetStorePageURL(), "nominee_capsule");
         return a
           ? r.createElement(
               r.Fragment,
@@ -1975,10 +1976,10 @@
             )
           : null;
       }
-      function Qe(e) {
+      function Be(e) {
         const { unAppID: t } = e,
-          [a] = (0, _.t7)(t, ve),
-          n = (0, F.aL)(a?.GetStorePageURL(), "winner_capsule");
+          [a] = (0, _.t7)(t, Ce),
+          n = (0, Ae.aL)(a?.GetStorePageURL(), "winner_capsule");
         return a
           ? r.createElement(
               r.Fragment,
@@ -1998,7 +1999,7 @@
             )
           : null;
       }
-      function Be(e) {
+      function ke(e) {
         const {
             unAppID: t,
             bCurrentlyActive: a,
@@ -2006,7 +2007,7 @@
             bPlayMicrotrailers: s,
             bHoveringApp: i,
           } = e,
-          [l] = (0, _.t7)(t, ve),
+          [l] = (0, _.t7)(t, Ce),
           o = r.useRef();
         return (
           r.useEffect(() => {
@@ -2038,7 +2039,7 @@
             : null
         );
       }
-      function ke(e) {
+      function Re(e) {
         const {
             unAppID: t,
             unSaleAppID: a,
@@ -2049,9 +2050,9 @@
             bIsVotingOpen: o,
             bIsCurrentVoteApp: c,
           } = e,
-          [u] = (0, _.t7)(t, ve),
+          [u] = (0, _.t7)(t, Ce),
           E = (0, d.ZB)(t, n, a),
-          g = (0, F.aL)(u?.GetStorePageURL(), "nominee_capsule"),
+          g = (0, Ae.aL)(u?.GetStorePageURL(), "nominee_capsule"),
           p = (0, d.Vz)(n),
           N = p && p.currentNomination?.appid === t,
           v = r.useCallback(() => {
@@ -2101,10 +2102,10 @@
             ),
         );
       }
-      function Re() {
+      function De() {
         const e = g.TS.HELP_BASE_URL + "faqs/view/71D3-35C2-AD96-AA3A",
           t = [
-            r.createElement(De, {
+            r.createElement(be, {
               key: "FAQ_1",
               strQuestion: (0, A.we)("#Steamawards_Voting_FAQ_1_Q"),
               strAnswer: (0, A.oW)(
@@ -2112,37 +2113,37 @@
                 r.createElement("a", { href: e }, ", "),
               ),
             }),
-            r.createElement(De, {
+            r.createElement(be, {
               key: "FAQ_2",
               strQuestion: (0, A.we)("#Steamawards_Voting_FAQ_2_Q"),
               strAnswer: (0, A.we)("#Steamawards_Voting_FAQ_2_A"),
             }),
-            r.createElement(De, {
+            r.createElement(be, {
               key: "FAQ_3",
               strQuestion: (0, A.we)("#Steamawards_Voting_FAQ_3_Q"),
               strAnswer: (0, A.we)("#Steamawards_Voting_FAQ_3_A"),
             }),
-            r.createElement(De, {
+            r.createElement(be, {
               key: "FAQ_4",
               strQuestion: (0, A.we)("#Steamawards_Voting_FAQ_7_Q"),
               strAnswer: (0, A.we)("#Steamawards_Voting_FAQ_7_A"),
             }),
-            r.createElement(De, {
+            r.createElement(be, {
               key: "FAQ_5",
               strQuestion: (0, A.we)("#Steamawards_Voting_FAQ_8_Q"),
               strAnswer: (0, A.we)("#Steamawards_Voting_FAQ_8_A"),
             }),
-            r.createElement(De, {
+            r.createElement(be, {
               key: "FAQ_6",
               strQuestion: (0, A.we)("#Steamawards_Voting_FAQ_4_Q"),
               strAnswer: (0, A.we)("#Steamawards_Voting_FAQ_4_A"),
             }),
-            r.createElement(De, {
+            r.createElement(be, {
               key: "FAQ_7",
               strQuestion: (0, A.we)("#Steamawards_Voting_FAQ_5_Q"),
               strAnswer: (0, A.we)("#Steamawards_Voting_FAQ_5_A"),
             }),
-            r.createElement(De, {
+            r.createElement(be, {
               key: "FAQ_8",
               strQuestion: (0, A.we)("#Steamawards_Voting_FAQ_6_Q"),
               strAnswer: (0, A.we)("#Steamawards_Voting_FAQ_6_A"),
@@ -2159,7 +2160,7 @@
           r.createElement("div", { className: ge().FAQCtn }, t),
         );
       }
-      function De(e) {
+      function be(e) {
         const { strQuestion: t, strAnswer: a } = e;
         return r.createElement(
           m.Z,
@@ -2168,16 +2169,16 @@
           r.createElement("div", { className: ge().FAQ_A }, a),
         );
       }
-      function be(e) {
+      function Pe(e) {
         return r.createElement(
-          F.Ay,
+          F.A,
           { method: "steamawards" },
-          r.createElement(Ce, { unSaleAppID: d.RZ }),
+          r.createElement(he, { unSaleAppID: d.RZ }),
         );
       }
-      const Pe = () =>
+      const Ve = () =>
         r.createElement(
-          F.Ay,
+          F.A,
           { controller: "steamawards" },
           r.createElement(
             s.dO,
@@ -2190,7 +2191,7 @@
             r.createElement(s.qh, {
               path: n.B.SteamAwards(),
               render: (e) =>
-                r.createElement(be, {
+                r.createElement(Pe, {
                   year: parseInt(e.match.params.year),
                   ...e,
                 }),

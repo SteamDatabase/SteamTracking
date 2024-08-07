@@ -9135,7 +9135,7 @@
     },
     16264: (e, t, r) => {
       "use strict";
-      r.d(t, { Rd: () => pe, R1: () => ye, QR: () => fe });
+      r.d(t, { Rd: () => ye, R1: () => ge, QR: () => be });
       var i = r(90626),
         n = r(22837),
         a = r(97788),
@@ -9159,41 +9159,42 @@
         _ = r.n(g),
         B = r(12155),
         f = r(32630),
-        b = r(30470),
-        w = r(41471),
-        M = r(32381),
-        S = r(52038),
-        z = r(91675),
-        h = r(14771),
-        R = r(93761),
-        v = r.n(R);
-      const F = !0;
-      function T(e) {
+        b = r(91674),
+        w = r(30470),
+        M = r(41471),
+        S = r(32381),
+        z = r(52038),
+        h = r(91675),
+        R = r(14771),
+        v = r(93761),
+        F = r.n(v);
+      const T = !0;
+      function W(e) {
         let { onActivate: t, icon: r, body: n, eUIMode: a, classNames: s } = e,
           o = t,
-          l = v().PinnedTemplate;
+          l = F().PinnedTemplate;
         return (
           7 == a
-            ? (l = v().PinnedTemplateDesktop)
-            : 3 == a && (l = v().PinnedTemplateWeb),
-          (l = (0, S.A)(l, s)),
+            ? (l = F().PinnedTemplateDesktop)
+            : 3 == a && (l = F().PinnedTemplateWeb),
+          (l = (0, z.A)(l, s)),
           i.createElement(
-            M.Z,
+            S.Z,
             { className: l, onActivate: o },
             i.createElement(
               "div",
-              { className: v().Content },
+              { className: F().Content },
               i.createElement(
                 "div",
-                { className: v().PinnedBody },
-                i.createElement("span", { className: v().Icon }, r),
+                { className: F().PinnedBody },
+                i.createElement("span", { className: F().Icon }, r),
                 n,
               ),
             ),
           )
         );
       }
-      function W(e) {
+      function j(e) {
         const {
           count: t,
           icon: r,
@@ -9206,7 +9207,7 @@
         } = e;
         if (!t && !s) return null;
         const m = (0, u.Yp)(a, t);
-        return i.createElement(T, {
+        return i.createElement(W, {
           icon: r,
           body: m,
           onActivate: n,
@@ -9215,8 +9216,8 @@
           visible: c,
         });
       }
-      var j;
-      function q(e) {
+      var q;
+      function I(e) {
         let {
           nUnread: t,
           location: r,
@@ -9225,94 +9226,94 @@
           footer: s,
           bNewIndicator: o,
         } = e;
-        const [l, c] = i.useState(a ? j.loadingActive : j.none),
+        const [l, c] = i.useState(a ? q.loadingActive : q.none),
           [m, u] = i.useState(void 0);
         i.useEffect(() => {
-          l != j.loadingActive || a
-            ? l == j.loadingComplete && a && c(j.loadingActive)
-            : c(j.loadingComplete);
+          l != q.loadingActive || a
+            ? l == q.loadingComplete && a && c(q.loadingActive)
+            : c(q.loadingComplete);
         }, [l, a]),
           i.useEffect(() => {
             let e =
-              parseInt(v().loadinganimationiterationcount) *
-              parseInt(v().loadinganimationduration) *
+              parseInt(F().loadinganimationiterationcount) *
+              parseInt(F().loadinganimationduration) *
               1e3;
-            const t = window.setTimeout(() => c(j.none), e);
+            const t = window.setTimeout(() => c(q.none), e);
             return () => window.clearTimeout(t);
           }, []),
           i.useEffect(() => {
-            t && t > 0 && m !== v().Unread && 2 != r && 1 != r
-              ? u(v().Unread)
-              : t || m != v().Unread || u(v().MarkedRead);
+            t && t > 0 && m !== F().Unread && 2 != r && 1 != r
+              ? u(F().Unread)
+              : t || m != F().Unread || u(F().MarkedRead);
           }, [t, r, m]);
         let d = e.onActivate;
         d || (d = () => console.log("Missing activate function")),
-          l == j.loadingActive && (d = void 0);
-        let p = v().StandardTemplate;
+          l == q.loadingActive && (d = void 0);
+        let p = F().StandardTemplate;
         4 == r
-          ? (p = v().AllNotificationsTemplate)
+          ? (p = F().AllNotificationsTemplate)
           : 2 == r
-            ? (p = v().DesktopToastTemplate)
-            : (7 != n && 3 != n) || (p = v().StandardTemplateDesktop);
+            ? (p = F().DesktopToastTemplate)
+            : (7 != n && 3 != n) || (p = F().StandardTemplateDesktop);
         let y = null;
-        if (l != j.none && 2 != r && 1 != r) {
-          let e = l == j.loadingComplete ? v().Hide : null;
+        if (l != q.none && 2 != r && 1 != r) {
+          let e = l == q.loadingComplete ? F().Hide : null;
           y = i.createElement(
             "div",
-            { className: (0, S.A)(v().LoadingTemplate, e) },
+            { className: (0, z.A)(F().LoadingTemplate, e) },
             i.createElement("div", {
-              className: (0, S.A)(v().StandardLogoDimensions, v().ShimmerLogo),
+              className: (0, z.A)(F().StandardLogoDimensions, F().ShimmerLogo),
             }),
             i.createElement(
               "div",
-              { className: v().Content },
+              { className: F().Content },
               i.createElement("div", {
-                className: (0, S.A)(v().Header, v().ShimmerHeader),
+                className: (0, z.A)(F().Header, F().ShimmerHeader),
               }),
               i.createElement("div", {
-                className: (0, S.A)(v().Body, v().ShimmerBody),
+                className: (0, z.A)(F().Body, F().ShimmerBody),
               }),
             ),
           );
         }
         return i.createElement(
-          M.Z,
+          S.Z,
           {
             onActivate: d,
-            className: v().StandardTemplateContainer,
+            className: F().StandardTemplateContainer,
             onOptionsButton: e.onOptionsButton,
             onOptionsActionDescription: e.onOptionsButtonDesc,
           },
           i.createElement(
             "div",
-            { className: (0, S.A)(p, m) },
+            { className: (0, z.A)(p, m) },
             i.createElement(
               "div",
-              { className: v().StandardLogoDimensions },
+              { className: F().StandardLogoDimensions },
               e.logo,
             ),
             e.personaStatus &&
               i.createElement("div", {
-                className: (0, S.A)(v().AvatarStatus, e.personaStatus),
+                className: (0, z.A)(F().AvatarStatus, e.personaStatus),
               }),
-            i.createElement("div", { className: v().Content }, e.children),
+            i.createElement("div", { className: F().Content }, e.children),
             y,
-            o && i.createElement(I, { location: r }),
+            o && i.createElement(O, { location: r }),
           ),
           s || null,
         );
       }
-      function I(e) {
+      function O(e) {
         const { location: t } = e;
-        return F && 3 == t
+        return T && 3 == t
           ? i.createElement(
               "div",
-              { className: v().NewIndicator },
+              { className: F().NewIndicator },
               i.createElement(B.jlt, null),
             )
           : null;
       }
-      function O(e) {
+      function U(e) {
         let {
           icon: t,
           title: r,
@@ -9323,67 +9324,67 @@
         const o = !!n && (3 == a || 4 == a);
         let l;
         return (
-          (l = 4 == a ? G : null != s ? s : k),
+          (l = 4 == a ? k : null != s ? s : A),
           i.createElement(
             "div",
-            { className: v().Header },
-            i.createElement(U, { icon: t }),
-            !!r && i.createElement(N, { title: r }),
+            { className: F().Header },
+            i.createElement(N, { icon: t }),
+            !!r && i.createElement(C, { title: r }),
             o && l({ timestamp: n }),
           )
         );
       }
-      function U(e) {
-        return i.createElement("div", { className: v().Icon }, e.icon);
-      }
       function N(e) {
-        return i.createElement("div", { className: v().Title }, e.title);
+        return i.createElement("div", { className: F().Icon }, e.icon);
       }
       function C(e) {
-        let t = (0, S.A)(
-          v().StandardNotificationDescription,
-          e.multiline && v().Multiline,
-        );
-        return i.createElement("div", { className: t }, e.children);
+        return i.createElement("div", { className: F().Title }, e.title);
       }
       function E(e) {
-        let t = (0, S.A)(
-          v().StandardNotificationSubText,
-          e.multiline && v().Multiline,
+        let t = (0, z.A)(
+          F().StandardNotificationDescription,
+          e.multiline && F().Multiline,
         );
         return i.createElement("div", { className: t }, e.children);
       }
       function G(e) {
-        if (void 0 === e.timestamp) return null;
-        let t = new Date(),
-          r = new Date(1e3 * e.timestamp),
-          n = (0, z.KC)(e.timestamp);
-        return (
-          (0, h.JD)(t, r) || (n = (0, z._l)(e.timestamp, !1, !1, !1) + " " + n),
-          i.createElement("div", { className: v().Timestamp }, n)
+        let t = (0, z.A)(
+          F().StandardNotificationSubText,
+          e.multiline && F().Multiline,
         );
+        return i.createElement("div", { className: t }, e.children);
       }
       function k(e) {
         if (void 0 === e.timestamp) return null;
         let t = new Date(),
           r = new Date(1e3 * e.timestamp),
-          n = (0, h.JD)(t, r)
-            ? (0, z.KC)(e.timestamp)
-            : (0, z._l)(e.timestamp, !1, !1, !1);
-        return i.createElement("div", { className: v().Timestamp }, n);
+          n = (0, h.KC)(e.timestamp);
+        return (
+          (0, R.JD)(t, r) || (n = (0, h._l)(e.timestamp, !1, !1, !1) + " " + n),
+          i.createElement("div", { className: F().Timestamp }, n)
+        );
+      }
+      function A(e) {
+        if (void 0 === e.timestamp) return null;
+        let t = new Date(),
+          r = new Date(1e3 * e.timestamp),
+          n = (0, R.JD)(t, r)
+            ? (0, h.KC)(e.timestamp)
+            : (0, h._l)(e.timestamp, !1, !1, !1);
+        return i.createElement("div", { className: F().Timestamp }, n);
       }
       !(function (e) {
         (e[(e.none = 0)] = "none"),
           (e[(e.loadingActive = 1)] = "loadingActive"),
           (e[(e.loadingComplete = 2)] = "loadingComplete");
-      })(j || (j = {}));
-      var A = r(78327);
-      function P(e) {
+      })(q || (q = {}));
+      var P = r(78327);
+      function x(e) {
         return 1 == e;
       }
-      var x = r(97786),
-        L = r.n(x);
-      function D(e) {
+      var L = r(97786),
+        D = r.n(L);
+      function H(e) {
         let {
             onActivate: t,
             onDismiss: r,
@@ -9404,36 +9405,36 @@
             );
           })(t, r);
         return i.createElement(
-          M.Z,
+          S.Z,
           {
-            className: (0, S.A)(L().ShortTemplate, !m && L().TwoLine, c),
+            className: (0, z.A)(D().ShortTemplate, !m && D().TwoLine, c),
             onActivate: u,
             onMouseDown: (e) => {
               1 == e.button && r && r();
             },
           },
-          i.createElement("div", { className: L().ShortLogoDimensions }, n),
+          i.createElement("div", { className: D().ShortLogoDimensions }, n),
           e.personaStatus &&
             i.createElement("div", {
-              className: (0, S.A)(L().AvatarStatus, l),
+              className: (0, z.A)(D().AvatarStatus, l),
             }),
           i.createElement(
             "div",
-            { className: L().Content },
+            { className: D().Content },
             i.createElement(
               "div",
-              { className: L().Header },
-              i.createElement("div", { className: L().Icon }, a),
-              i.createElement("div", { className: L().Title }, s),
+              { className: D().Header },
+              i.createElement("div", { className: D().Icon }, a),
+              i.createElement("div", { className: D().Title }, s),
             ),
-            i.createElement("div", { className: L().Body }, o),
+            i.createElement("div", { className: D().Body }, o),
           ),
         );
       }
-      var H = r(92012),
-        Q = r.n(H),
-        K = r(4796);
-      function X(e) {
+      var Q = r(92012),
+        K = r.n(Q),
+        X = r(4796);
+      function Y(e) {
         switch (e) {
           case 6:
             return i.createElement(B.ilR, null);
@@ -9443,7 +9444,7 @@
             return i.createElement(B.Qte, null);
         }
       }
-      function Y(e) {
+      function Z(e) {
         var t, r;
         let {
           fallbackLogo: n,
@@ -9467,14 +9468,14 @@
                 ? void 0
                 : s.body,
           g = (null == s ? void 0 : s.title) ? s.body : null,
-          _ = P(o),
+          _ = x(o),
           B = d && !a,
           [f, b] = i.useState(!1),
           w = () => b(!0);
         let M = null;
-        if (d) M = ne(a, n, _);
+        if (d) M = ae(a, n, _);
         else {
-          const e = _ ? Q().ShortLogoDimensions : Q().StandardLogoDimensions;
+          const e = _ ? K().ShortLogoDimensions : K().StandardLogoDimensions;
           M =
             (null == s ? void 0 : s.image) && !f
               ? i.createElement("img", {
@@ -9485,27 +9486,27 @@
               : n;
         }
         return _
-          ? i.createElement(D, { ...e, logo: M, icon: l, title: p, body: y })
+          ? i.createElement(H, { ...e, logo: M, icon: l, title: p, body: y })
           : i.createElement(
-              se,
+              oe,
               null,
               i.createElement(
-                q,
+                I,
                 { logo: M, bLoading: B, ...e },
-                i.createElement(O, {
+                i.createElement(U, {
                   icon: l,
                   title: p,
                   timestamp: c,
                   location: o,
                   fnRenderTimestamp: m,
                 }),
-                i.createElement(C, { multiline: !g }, y),
-                !!g && i.createElement(E, null, g),
-                u ? i.createElement(ae, { onHide: u }) : null,
+                i.createElement(E, { multiline: !g }, y),
+                !!g && i.createElement(G, null, g),
+                u ? i.createElement(se, { onHide: u }) : null,
               ),
             );
       }
-      function Z(e) {
+      function J(e) {
         let {
           displayName: t,
           location: r,
@@ -9514,7 +9515,7 @@
           fnRenderTimestamp: s,
           onHide: o,
         } = e;
-        const l = P(r),
+        const l = x(r),
           c = (0, u.we)("#SteamNotifications_TradeOffer_Title"),
           m = l
             ? (0, u.we)(
@@ -9528,7 +9529,7 @@
           ),
           p = !t;
         return l
-          ? i.createElement(D, {
+          ? i.createElement(H, {
               ...e,
               logo: e.logo,
               icon: e.icon,
@@ -9536,25 +9537,25 @@
               body: m,
             })
           : i.createElement(
-              se,
+              oe,
               null,
               i.createElement(
-                q,
+                I,
                 { bLoading: p, ...e },
-                i.createElement(O, {
+                i.createElement(U, {
                   icon: n,
                   title: c,
                   timestamp: a,
                   location: r,
                   fnRenderTimestamp: s,
                 }),
-                i.createElement(C, null, m),
-                i.createElement(E, null, d),
-                o ? i.createElement(ae, { onHide: o }) : null,
+                i.createElement(E, null, m),
+                i.createElement(G, null, d),
+                o ? i.createElement(se, { onHide: o }) : null,
               ),
             );
       }
-      function J(e) {
+      function $(e) {
         let {
           senderName: t,
           location: r,
@@ -9563,7 +9564,7 @@
           fnRenderTimestamp: s,
           onHide: o,
         } = e;
-        const l = P(r),
+        const l = x(r),
           c = l
             ? (0, u.we)(
                 "#Notification_GiftReceived_Body_Short",
@@ -9574,7 +9575,7 @@
           d = (0, u.we)("#Notification_GiftReceived_Title"),
           p = !t;
         return l
-          ? i.createElement(D, {
+          ? i.createElement(H, {
               ...e,
               logo: e.logo,
               icon: e.icon,
@@ -9582,25 +9583,25 @@
               body: c,
             })
           : i.createElement(
-              se,
+              oe,
               null,
               i.createElement(
-                q,
+                I,
                 { bLoading: p, ...e },
-                i.createElement(O, {
+                i.createElement(U, {
                   icon: n,
                   title: d,
                   timestamp: a,
                   location: r,
                   fnRenderTimestamp: s,
                 }),
-                i.createElement(C, { multiline: !m }, c),
-                !!m && i.createElement(E, null, m),
-                o ? i.createElement(ae, { onHide: o }) : null,
+                i.createElement(E, { multiline: !m }, c),
+                !!m && i.createElement(G, null, m),
+                o ? i.createElement(se, { onHide: o }) : null,
               ),
             );
       }
-      function $(e) {
+      function V(e) {
         let {
           requestorName: t,
           requestorAvatarURL: r,
@@ -9612,7 +9613,7 @@
           fnRenderTimestamp: c,
           onHide: m,
         } = e;
-        const d = P(s);
+        const d = x(s);
         let p = "";
         t && 2 == a.state
           ? (p = (0, u.we)(
@@ -9629,11 +9630,11 @@
         let f = n;
         if (r && !y) {
           const e = 3 == a.state && 1 != s,
-            t = d ? Q().ShortLogoDimensions : Q().StandardLogoDimensions;
+            t = d ? K().ShortLogoDimensions : K().StandardLogoDimensions;
           f = i.createElement(
-            M.Z,
+            S.Z,
             { style: { position: "relative" } },
-            e && i.createElement(B.GSe, { className: Q().FriendIndicator }),
+            e && i.createElement(B.GSe, { className: K().FriendIndicator }),
             i.createElement("img", { className: t, src: r, onError: _ }),
           );
         }
@@ -9641,7 +9642,7 @@
             t || (0, u.we)("#SteamNotifications_FriendInvite_Body_Generic"),
           w = !t;
         return d
-          ? i.createElement(D, {
+          ? i.createElement(H, {
               ...e,
               logo: f,
               icon: e.icon,
@@ -9649,25 +9650,25 @@
               body: b,
             })
           : i.createElement(
-              se,
+              oe,
               null,
               i.createElement(
-                q,
+                I,
                 { logo: f, bLoading: w, ...e },
-                i.createElement(O, {
+                i.createElement(U, {
                   icon: o,
                   title: (0, u.we)("#Notification_FriendInvite_Title"),
                   timestamp: l,
                   location: s,
                   fnRenderTimestamp: c,
                 }),
-                i.createElement(C, { multiline: !p }, b),
-                !!p && i.createElement(E, null, p),
-                m ? i.createElement(ae, { onHide: m }) : null,
+                i.createElement(E, { multiline: !p }, b),
+                !!p && i.createElement(G, null, p),
+                m ? i.createElement(se, { onHide: m }) : null,
               ),
             );
       }
-      function V(e) {
+      function ee(e) {
         var t, r;
         let {
           itemState: n,
@@ -9682,7 +9683,7 @@
         } = e;
         const [y, g] = i.useState(!1),
           _ = () => g(!0),
-          B = P(o);
+          B = x(o);
         let f = a;
         if (
           (null === (t = null == n ? void 0 : n.item_data) || void 0 === t
@@ -9690,13 +9691,13 @@
             : t.icon_url) &&
           !y
         ) {
-          let e = `${A.TS.COMMUNITY_CDN_URL}economy/image/${n.item_data.icon_url}`,
+          let e = `${P.TS.COMMUNITY_CDN_URL}economy/image/${n.item_data.icon_url}`,
             t = n.item_data.background_color
               ? "#" + n.item_data.background_color
               : null;
-          const r = B ? Q().ShortLogoDimensions : Q().StandardLogoDimensions;
+          const r = B ? K().ShortLogoDimensions : K().StandardLogoDimensions;
           f = i.createElement(
-            M.Z,
+            S.Z,
             { style: { position: "relative" } },
             i.createElement("img", {
               className: r,
@@ -9727,7 +9728,7 @@
             (w = b
               ? n.app_name
               : (0, u.we)("#Notification_Item_Single_GameName", n.app_name));
-        const S = (
+        const M = (
             null === (r = null == n ? void 0 : n.item_data) || void 0 === r
               ? void 0
               : r.name
@@ -9749,7 +9750,7 @@
                     null == n ? void 0 : n.app_name,
                   )
               : (0, u.we)("#Notification_Item_Body_Generic")),
-            i.createElement(D, {
+            i.createElement(H, {
               ...e,
               logo: f,
               icon: e.icon,
@@ -9759,25 +9760,25 @@
           );
         }
         return i.createElement(
-          se,
+          oe,
           null,
           i.createElement(
-            q,
+            I,
             { logo: f, bLoading: z, ...e },
-            i.createElement(O, {
+            i.createElement(U, {
               icon: l,
               title: (0, u.we)("#Notification_ItemAnnouncement_TitleLong"),
               timestamp: c,
               location: o,
               fnRenderTimestamp: m,
             }),
-            i.createElement(C, { multiline: !w }, S),
-            !!w && i.createElement(E, null, w),
-            p ? i.createElement(ae, { onHide: p }) : null,
+            i.createElement(E, { multiline: !w }, M),
+            !!w && i.createElement(G, null, w),
+            p ? i.createElement(se, { onHide: p }) : null,
           ),
         );
       }
-      function ee(e) {
+      function te(e) {
         let {
           fallbackLogo: t,
           app: r,
@@ -9788,8 +9789,8 @@
           fnRenderTimestamp: l,
           onHide: c,
         } = e;
-        const m = P(a),
-          d = ne(r, t, m),
+        const m = x(a),
+          d = ae(r, t, m),
           p = !r;
         let y = "";
         return (
@@ -9810,7 +9811,7 @@
                     )
                   : (0, u.we)("#SteamNotification_AsyncGame_Done")),
           m
-            ? i.createElement(D, {
+            ? i.createElement(H, {
                 ...e,
                 logo: d,
                 icon: e.icon,
@@ -9818,26 +9819,26 @@
                 body: y,
               })
             : i.createElement(
-                se,
+                oe,
                 null,
                 i.createElement(
-                  q,
+                  I,
                   { logo: d, bLoading: p, ...e },
-                  i.createElement(O, {
+                  i.createElement(U, {
                     icon: s,
                     title: (0, u.we)("#SteamNotification_AsyncGame_Title"),
                     timestamp: o,
                     location: a,
                     fnRenderTimestamp: l,
                   }),
-                  i.createElement(C, null, y),
-                  i.createElement(E, null, null == r ? void 0 : r.GetName()),
-                  c ? i.createElement(ae, { onHide: c }) : null,
+                  i.createElement(E, null, y),
+                  i.createElement(G, null, null == r ? void 0 : r.GetName()),
+                  c ? i.createElement(se, { onHide: c }) : null,
                 ),
               )
         );
       }
-      function te(e) {
+      function re(e) {
         const {
             title: t,
             body: r,
@@ -9851,10 +9852,10 @@
             onActivate: u,
             personaStatus: d,
           } = e,
-          p = P(l),
-          y = p ? Q().ShortLogoDimensions : Q().StandardLogoDimensions,
+          p = x(l),
+          y = p ? K().ShortLogoDimensions : K().StandardLogoDimensions,
           g = i.createElement(
-            M.Z,
+            S.Z,
             { style: { position: "relative" } },
             i.createElement("img", {
               className: y,
@@ -9863,7 +9864,7 @@
             }),
           );
         return p
-          ? i.createElement(D, {
+          ? i.createElement(H, {
               logo: g,
               icon: e.icon,
               title: t,
@@ -9872,24 +9873,24 @@
               personaStatus: d,
             })
           : i.createElement(
-              se,
+              oe,
               null,
               i.createElement(
-                q,
+                I,
                 { logo: g, bLoading: a, onActivate: u, personaStatus: d, ...e },
-                i.createElement(O, {
+                i.createElement(U, {
                   icon: s,
                   title: t,
                   timestamp: c,
                   location: l,
                   fnRenderTimestamp: m,
                 }),
-                i.createElement(C, { multiline: !0 }, r),
-                o ? i.createElement(ae, { onHide: o }) : null,
+                i.createElement(E, { multiline: !0 }, r),
+                o ? i.createElement(se, { onHide: o }) : null,
               ),
             );
       }
-      function re(e) {
+      function ie(e) {
         var t, r, n, a, s;
         let {
             currentUserSteamID: o,
@@ -9909,31 +9910,31 @@
             commentBody: h,
           } = e,
           R = z;
-        const v = P(g),
+        const v = x(g),
           [F, T] = i.useState(!1),
           W = () => T(!0),
-          [j, I] = (0, K.TB)(
+          [j, q] = (0, X.TB)(
             y.bclan_account
               ? null === (t = y.owner_steam_id) || void 0 === t
                 ? void 0
                 : t.GetAccountID()
               : void 0,
           ),
-          U = (0, m.hr)(y) ? c : null,
+          O = (0, m.hr)(y) ? c : null,
           N = (0, m.T4)(y) ? p : null;
         10 == y.comment_type
           ? (R =
               (null === (r = y.owner_steam_id) || void 0 === r
                 ? void 0
                 : r.ConvertTo64BitString()) == o
-                ? 4 == g && U
-                  ? (0, u.we)("#SteamNotifications_Comment_Your_Profile_By", U)
+                ? 4 == g && O
+                  ? (0, u.we)("#SteamNotifications_Comment_Your_Profile_By", O)
                   : (0, u.we)("#SteamNotifications_Comment_Your_Profile")
                 : N
-                  ? 4 == g && U
+                  ? 4 == g && O
                     ? (0, u.we)(
                         "#SteamNotifications_Comment_Player_Profile_By",
-                        U,
+                        O,
                         N,
                       )
                     : (0, u.we)("#SteamNotifications_Comment_Player_Profile", N)
@@ -9962,15 +9963,15 @@
             : !R &&
               (null === (s = y.json_data) || void 0 === s ? void 0 : s.title) &&
               (R = y.json_data.title);
-        let G = null;
-        G =
+        let C = null;
+        C =
           7 == y.comment_type && y.bis_forum && h
             ? i.createElement(
-                E,
+                G,
                 null,
                 (0, u.we)("#SteamNotifications_Comment_NewDiscussion", h),
               )
-            : i.createElement(E, null, '"', h, '"');
+            : i.createElement(G, null, '"', h, '"');
         let k = (0, u.we)("#SteamNotifications_Comment"),
           A = null;
         if (void 0 !== w && w > 1) {
@@ -9978,59 +9979,59 @@
           4 == g
             ? (A = i.createElement(
                 "div",
-                { className: Q().AllNotificationsCommentPlus },
+                { className: K().AllNotificationsCommentPlus },
                 e,
               ))
             : (k = k + " " + e);
         }
-        let x = l;
+        let P = l;
         if (!F) {
-          const e = v ? Q().ShortLogoDimensions : Q().StandardLogoDimensions;
+          const e = v ? K().ShortLogoDimensions : K().StandardLogoDimensions;
           if (d && (0, m.n8)(y)) {
             const t = y.bhas_friend && 1 != g;
-            x = i.createElement(
+            P = i.createElement(
               "div",
               { style: { position: "relative" } },
-              t && i.createElement(B.GSe, { className: Q().FriendIndicator }),
+              t && i.createElement(B.GSe, { className: K().FriendIndicator }),
               i.createElement("img", { className: e, src: d, onError: W }),
             );
           } else
-            (null == I ? void 0 : I.avatar_medium_url) &&
-              (x = i.createElement("img", {
+            (null == q ? void 0 : q.avatar_medium_url) &&
+              (P = i.createElement("img", {
                 className: e,
-                src: I.avatar_medium_url,
+                src: q.avatar_medium_url,
                 onError: W,
               }));
         }
         return v
-          ? i.createElement(D, {
+          ? i.createElement(H, {
               ...e,
-              logo: x,
+              logo: P,
               icon: e.icon,
               title: k,
               body: R,
             })
           : i.createElement(
-              se,
+              oe,
               null,
               i.createElement(
-                q,
-                { logo: x, ...e },
-                i.createElement(O, {
+                I,
+                { logo: P, ...e },
+                i.createElement(U, {
                   icon: _,
                   title: k,
                   timestamp: f,
                   location: g,
                   fnRenderTimestamp: b,
                 }),
-                i.createElement(C, null, R),
-                G,
+                i.createElement(E, null, R),
+                C,
                 A,
-                S ? i.createElement(ae, { onHide: S }) : null,
+                S ? i.createElement(se, { onHide: S }) : null,
               ),
             );
       }
-      function ie(e) {
+      function ne(e) {
         let {
           app: t,
           fallbackLogo: r,
@@ -10041,8 +10042,8 @@
           fnRenderTimestamp: l,
           onHide: c,
         } = e;
-        const m = P(a),
-          d = ne(t, r, m),
+        const m = x(a),
+          d = ae(t, r, m),
           p = n.appid && !t;
         let y = "",
           g = null;
@@ -10089,7 +10090,7 @@
                       )))
             : (y = (0, u.we)("#SteamNotifications_Wishlist_Generic")),
           m
-            ? i.createElement(D, {
+            ? i.createElement(H, {
                 ...e,
                 logo: d,
                 icon: e.icon,
@@ -10097,34 +10098,34 @@
                 body: y,
               })
             : i.createElement(
-                se,
+                oe,
                 null,
                 i.createElement(
-                  q,
+                  I,
                   { logo: d, bLoading: p, ...e },
-                  i.createElement(O, {
+                  i.createElement(U, {
                     icon: s,
                     title: (0, u.we)("#SteamNotifications_Wishlist"),
                     timestamp: o,
                     location: a,
                     fnRenderTimestamp: l,
                   }),
-                  i.createElement(C, { multiline: !g }, y),
-                  !!g && i.createElement(E, null, g),
-                  c ? i.createElement(ae, { onHide: c }) : null,
+                  i.createElement(E, { multiline: !g }, y),
+                  !!g && i.createElement(G, null, g),
+                  c ? i.createElement(se, { onHide: c }) : null,
                 ),
               )
         );
       }
-      function ne(e, t, r = !1) {
+      function ae(e, t, r = !1) {
         var n, a, s;
         const [o, l] = i.useState(!1),
           c = () => l(!0);
         return !e || o
-          ? i.createElement(M.Z, { style: { position: "relative" } }, t)
+          ? i.createElement(S.Z, { style: { position: "relative" } }, t)
           : r
             ? i.createElement(
-                M.Z,
+                S.Z,
                 { style: { position: "relative" } },
                 i.createElement("img", {
                   src:
@@ -10132,15 +10133,15 @@
                     void 0 === n
                       ? void 0
                       : n.GetCommunityIconURL(),
-                  className: Q().ShortLogoDimensions,
+                  className: K().ShortLogoDimensions,
                   onError: c,
                 }),
               )
             : i.createElement(
-                M.Z,
+                S.Z,
                 { style: { position: "relative" } },
                 i.createElement("img", {
-                  className: (0, S.A)(Q().WishlistBlurImage),
+                  className: (0, z.A)(K().WishlistBlurImage),
                   src:
                     null === (a = null == e ? void 0 : e.GetAssets()) ||
                     void 0 === a
@@ -10165,11 +10166,11 @@
                 }),
               );
       }
-      function ae(e) {
+      function se(e) {
         return i.createElement(
           "div",
           {
-            className: Q().HideButton,
+            className: K().HideButton,
             onClick: (t) => {
               e.onHide(), t.stopPropagation(), t.preventDefault();
             },
@@ -10180,33 +10181,33 @@
           i.createElement(B.zHo, null),
         );
       }
-      function se(e) {
+      function oe(e) {
         return i.createElement(
           "div",
-          { className: Q().SteamNotificationWrapper },
+          { className: K().SteamNotificationWrapper },
           e.children,
         );
       }
-      var oe = r(65946),
-        le = r(56228);
-      let ce = null,
-        me = !1;
-      function ue() {
+      var le = r(65946),
+        ce = r(56228);
+      let me = null,
+        ue = !1;
+      function de() {
         const e = (0, l.KV)(),
           t = (0, l.rX)(),
-          r = (0, oe.q3)(
+          r = (0, le.q3)(
             () =>
-              (ce || (ce = new le.s({ BIsFriend: (0, le.Q)() })), ce)
+              (me || (me = new ce.s({ BIsFriend: (0, ce.Q)() })), me)
                 .m_bInitialized,
           );
         return (
           r ||
-            me ||
-            ((me = !0), ce.Init(A.iA.accountid, e, t).finally(() => (me = !1))),
-          [r, ce]
+            ue ||
+            ((ue = !0), me.Init(P.iA.accountid, e, t).finally(() => (ue = !1))),
+          [r, me]
         );
       }
-      const de = {
+      const pe = {
         3: function (e) {
           var t, r, n;
           const {
@@ -10218,26 +10219,26 @@
             } = e,
             d = p(a),
             g = (0, s.L)(),
-            _ = b.TS.COMMUNITY_BASE_URL + a.url,
+            _ = w.TS.COMMUNITY_BASE_URL + a.url,
             f = (0, m.iO)(d)
               ? null === (t = null == d ? void 0 : d.account_steam_id) ||
                 void 0 === t
                 ? void 0
                 : t.GetAccountID()
               : null,
-            { data: M } = (0, w.js)(f),
+            { data: b } = (0, M.js)(f),
             S = (0, m.OT)(d)
               ? null === (r = null == d ? void 0 : d.owner_steam_id) ||
                 void 0 === r
                 ? void 0
                 : r.GetAccountID()
               : null,
-            { data: z } = (0, w.js)(S),
+            { data: z } = (0, M.js)(S),
             [h] = (0, y.t7)(
               null === (n = d.json_data) || void 0 === n ? void 0 : n.app_id,
               { include_assets: !0 },
             ),
-            [R, v] = ue(),
+            [R, v] = de(),
             F = R
               ? v.FilterText(d.account_steam_id.GetAccountID(), d.title)
               : "",
@@ -10252,7 +10253,7 @@
                 o(() => {}, a.item, e);
               },
             },
-            i.createElement(re, {
+            i.createElement(ie, {
               fallbackLogo: i.createElement(B.Qte, null),
               icon: i.createElement(B.MwB, null),
               onActivate: () => o(() => window.location.assign(_), a.item),
@@ -10262,8 +10263,8 @@
               data: d,
               timestamp: a.timestamp,
               nUnread: a.rgunread.length,
-              postedByAvatarURL: null == M ? void 0 : M.avatar_url_medium,
-              postedByDisplayName: null == M ? void 0 : M.m_strPlayerName,
+              postedByAvatarURL: null == b ? void 0 : b.avatar_url_medium,
+              postedByDisplayName: null == b ? void 0 : b.m_strPlayerName,
               ownerDisplayName: null == z ? void 0 : z.m_strPlayerName,
               bNewIndicator: (0, m.Rl)(a.item),
               app: h,
@@ -10293,19 +10294,19 @@
               (null === (e = l.appids) || void 0 === e ? void 0 : e.length)
             )
               return d(
-                b.TS.STORE_BASE_URL +
+                w.TS.STORE_BASE_URL +
                   `wishlist/profiles/${g}/?wng=${l.appids.toString()}#sort=discount`,
               );
             if (c) return d(c.GetStorePageURL());
             const t = l.appid ? `?appid=${l.appid}` : "";
             d(
-              b.TS.STORE_BASE_URL + `wishlist/profiles/${g}/${t}#sort=discount`,
+              w.TS.STORE_BASE_URL + `wishlist/profiles/${g}/${t}#sort=discount`,
             );
           }, [l, c, g]);
           return i.createElement(
             "a",
             { href: u, onMouseDown: (e) => r(() => {}, t.item, e) },
-            i.createElement(ie, {
+            i.createElement(ne, {
               fallbackLogo: i.createElement(B.Qte, null),
               icon: i.createElement(B.ilR, null),
               onActivate: () => r(() => window.location.assign(u), t.item),
@@ -10329,13 +10330,13 @@
               onHide: o,
             } = e,
             l = (0, s.L)(),
-            c = `${b.TS.COMMUNITY_BASE_URL}profiles/${l}/friends/pending`,
+            c = `${w.TS.COMMUNITY_BASE_URL}profiles/${l}/friends/pending`,
             u = p(t),
-            { data: d } = (0, w.js)(u.requestorID);
+            { data: d } = (0, M.js)(u.requestorID);
           return i.createElement(
             "a",
             { href: c, onMouseDown: (e) => r(() => {}, t.item, e) },
-            i.createElement($, {
+            i.createElement(V, {
               fallbackLogo: i.createElement(B.Gv$, null),
               icon: i.createElement(B.sdo, null),
               onActivate: () => r(() => window.location.assign(c), t.item),
@@ -10363,11 +10364,11 @@
             u = (0, l.KV)(),
             d = (0, m.IL)(t.item, c, u),
             y = p(t),
-            g = `${b.TS.COMMUNITY_BASE_URL}profiles/${c}/inventory`;
+            g = `${w.TS.COMMUNITY_BASE_URL}profiles/${c}/inventory`;
           return i.createElement(
             "a",
             { href: g, onMouseDown: (e) => r(() => {}, t.item, e) },
-            i.createElement(V, {
+            i.createElement(ee, {
               icon: i.createElement(B.rI_, null),
               fallbackLogo: i.createElement(B.Qte, null),
               onActivate: () => r(() => window.location.assign(g), t.item),
@@ -10391,14 +10392,14 @@
               onHide: o,
             } = e,
             l = (0, s.L)(),
-            u = `${b.TS.COMMUNITY_BASE_URL}profiles/${l}/inventory/#pending_gifts`,
+            u = `${w.TS.COMMUNITY_BASE_URL}profiles/${l}/inventory/#pending_gifts`,
             d = p(t),
             y = c.b.InitFromAccountID(d),
-            { data: g } = (0, w.js)(y.GetAccountID());
+            { data: g } = (0, M.js)(y.GetAccountID());
           return i.createElement(
             "a",
             { href: u, onMouseDown: (e) => r(() => {}, t.item, e) },
-            i.createElement(J, {
+            i.createElement($, {
               logo: i.createElement(B.Qte, null),
               icon: i.createElement(B.pD, null),
               onActivate: () => r(() => window.location.assign(u), t.item),
@@ -10422,13 +10423,13 @@
             } = e,
             l = (0, s.L)(),
             u = p(t),
-            d = `${b.TS.COMMUNITY_BASE_URL}profiles/${l}/tradeoffers`,
+            d = `${w.TS.COMMUNITY_BASE_URL}profiles/${l}/tradeoffers`,
             y = c.b.InitFromAccountID(u),
-            { data: g } = (0, w.js)(y.GetAccountID());
+            { data: g } = (0, M.js)(y.GetAccountID());
           return i.createElement(
             "a",
             { href: d, onMouseDown: (e) => r(() => {}, t.item, e) },
-            i.createElement(Z, {
+            i.createElement(J, {
               logo: i.createElement(B.Qte, null),
               icon: i.createElement(B.h20, null),
               onActivate: () => r(() => window.location.assign(d), t.item),
@@ -10450,13 +10451,13 @@
               uimode: a,
               onHide: s,
             } = e,
-            o = `${b.TS.COMMUNITY_BASE_URL}my/gamenotifications/`,
+            o = `${w.TS.COMMUNITY_BASE_URL}my/gamenotifications/`,
             l = p(t),
             [c] = (0, y.t7)(l.appid, { include_assets: !0 });
           return i.createElement(
             "a",
             { href: o, onMouseDown: (e) => r(() => {}, t.item, e) },
-            i.createElement(ee, {
+            i.createElement(te, {
               icon: i.createElement(B.Qte, null),
               fallbackLogo: i.createElement(B.wC1, null),
               onActivate: () => r(() => window.location.assign(o), t.item),
@@ -10480,13 +10481,13 @@
               uimode: s,
               onHide: o,
             } = e,
-            l = `${b.TS.STORE_BASE_URL}account/familymanagement?tab=requests`,
+            l = `${w.TS.STORE_BASE_URL}account/familymanagement?tab=requests`,
             d = p(r),
             g = c.b.InitFromAccountID(d.responder_steamid),
-            { data: _ } = (0, w.js)(g.GetAccountID()),
+            { data: _ } = (0, M.js)(g.GetAccountID()),
             f = d.package_id > 0 ? d.package_id : d.bundle_id,
-            M = d.package_id > 0 ? 1 : 2,
-            [S] = (0, y.mZ)(f, M, {}),
+            b = d.package_id > 0 ? 1 : 2,
+            [S] = (0, y.mZ)(f, b, {}),
             z = !_ || !S,
             h = (0, u.we)("#SteamNotifications_RequestedGameAddedTitle"),
             R = (0, u.we)(
@@ -10498,7 +10499,7 @@
           return i.createElement(
             "a",
             { href: l, onMouseDown: (e) => n(() => {}, r.item, e) },
-            i.createElement(te, {
+            i.createElement(re, {
               title: h,
               body: R,
               bDataLoading: z,
@@ -10515,23 +10516,23 @@
           );
         },
       };
-      function pe(e) {
+      function ye(e) {
         let t = null;
         return (
           (0, m.sR)(e)
-            ? (t = Be)
+            ? (t = fe)
             : (0, m.IC)(e)
-              ? (t = ge)
-              : de[e] && (t = de[e]),
+              ? (t = _e)
+              : pe[e] && (t = pe[e]),
           t
         );
       }
-      function ye(e) {
+      function ge(e) {
         const { rollup: t, uimode: r, location: a } = e,
-          s = pe(t.type);
+          s = ye(t.type);
         return s
           ? i.createElement(
-              f.Ay,
+              f.A,
               {
                 controller: "notification",
                 method: (0, n.fL)(r),
@@ -10541,7 +10542,7 @@
             )
           : null;
       }
-      function ge(e) {
+      function _e(e) {
         var t, r;
         const {
             rollup: n,
@@ -10582,7 +10583,7 @@
             }, [g, p]));
         var p, g;
         const _ = "number" == typeof (null == u ? void 0 : u.image),
-          [b] = (0, y.t7)(_ ? u.image : 0, { include_assets: !0 }),
+          [f] = (0, y.t7)(_ ? u.image : 0, { include_assets: !0 }),
           w =
             null ===
               (t = (0, a.p$)(n.type).replace(
@@ -10591,7 +10592,7 @@
               )) || void 0 === t
               ? void 0
               : t.toLowerCase(),
-          M = (0, f.aL)(
+          M = (0, b.aL)(
             null !== (r = null == u ? void 0 : u.link) && void 0 !== r
               ? r
               : "#",
@@ -10603,8 +10604,8 @@
             href: (null == u ? void 0 : u.link) ? M : "#",
             onMouseDown: (e) => s(() => {}, n.item, e),
           },
-          i.createElement(Y, {
-            icon: X(n.type),
+          i.createElement(Z, {
+            icon: Y(n.type),
             onActivate: () =>
               s(() => {
                 (null == u ? void 0 : u.link) && M && window.location.assign(M);
@@ -10615,13 +10616,13 @@
             data: u,
             timestamp: n.timestamp,
             nUnread: n.rgunread.length,
-            app: b,
+            app: f,
             bNewIndicator: (0, m.Rl)(n.item),
             onHide: c,
           }),
         );
       }
-      function _e(e) {
+      function Be(e) {
         var t, r;
         const {
             steamid: n,
@@ -10634,7 +10635,7 @@
             uimode: p,
             onHide: y,
           } = e,
-          { data: g } = (0, w.js)(n);
+          { data: g } = (0, M.js)(n);
         if (!o) return null;
         const _ = !g,
           f = (0, u.we)(
@@ -10654,7 +10655,7 @@
         return i.createElement(
           "a",
           { href: a, onMouseDown: (e) => c(() => {}, l.item, e) },
-          i.createElement(te, {
+          i.createElement(re, {
             title: f,
             body: b,
             bDataLoading: _,
@@ -10670,7 +10671,7 @@
           }),
         );
       }
-      function Be(e) {
+      function fe(e) {
         const t =
           ((r = e.rollup.type),
           (n = e.rollup.item.body_data),
@@ -10698,7 +10699,7 @@
         if (!t) return null;
         const { strTitleLoc: a, strBodyLoc: s, strUrl: o, steamid: l } = t;
         return l && a && s
-          ? i.createElement(_e, {
+          ? i.createElement(Be, {
               steamid: l,
               url: o,
               strTitleLoc: a,
@@ -10707,7 +10708,7 @@
             })
           : null;
       }
-      function fe(e) {
+      function be(e) {
         const { url: t, count: r, icon: n, strLocToken: a, eFeature: s } = e,
           l = (0, o.Hw)(s);
         return r
@@ -10716,7 +10717,7 @@
             : i.createElement(
                 "a",
                 { href: t, className: _().WebPinnedNotification },
-                i.createElement(W, {
+                i.createElement(j, {
                   icon: i.createElement(n, null),
                   count: r,
                   onActivate: () => window.location.assign(t),

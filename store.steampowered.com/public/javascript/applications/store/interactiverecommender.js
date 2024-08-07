@@ -171,7 +171,7 @@
     },
     52069: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => V });
+      a.r(t), a.d(t, { default: () => W });
       var s,
         i = a(34629),
         o = a(78327),
@@ -677,12 +677,13 @@
       const R = new I();
       window.g_InteractiveRecommender = R;
       var f = a(82477),
-        C = a(32630);
+        C = a(32630),
+        w = a(91674);
       !(function () {
         let e = (0, o.Tc)("ir_config", "application_config");
         e && (Object.assign(v, e), R.Init());
       })();
-      const w = ({ accountID: e }) => {
+      const N = ({ accountID: e }) => {
           const t = R.getInputApps(),
             a = Object.keys(t).length;
           let s = 0;
@@ -719,7 +720,7 @@
             )
           );
         },
-        N = ({ appID: e, name: t, hours: a, lastPlayed: s, ignored: i }) => {
+        A = ({ appID: e, name: t, hours: a, lastPlayed: s, ignored: i }) => {
           const o = `${v.CDN_URL}apps/${e}/header.jpg`,
             n = Date.now() / 1e3 - s;
           let l = "",
@@ -764,7 +765,7 @@
             )
           );
         };
-      let A = class extends r.Component {
+      let P = class extends r.Component {
         constructor(e) {
           super(e), (this.state = {});
         }
@@ -788,7 +789,7 @@
             Object.keys(a).map((e) => {
               const s = a[e];
               t.push(
-                r.createElement(N, {
+                r.createElement(A, {
                   key: "PlayedGame_" + s.a,
                   appID: s.a,
                   name: s.t,
@@ -806,14 +807,14 @@
                 { className: g.Header },
                 (0, p.we)("#PlaytimeList_Header"),
               ),
-              r.createElement(w, { accountID: this.props.accountID }),
+              r.createElement(N, { accountID: this.props.accountID }),
               r.createElement("div", { className: g.List }, t),
             )
           );
         }
       };
-      A = (0, i.Cg)([n.PA], A);
-      const P = ({
+      P = (0, i.Cg)([n.PA], P);
+      const D = ({
           titleLabel: e,
           minLabel: t,
           maxLabel: a,
@@ -848,7 +849,7 @@
             r.createElement("div", { className: g.OptionalLabel }, c),
           );
         },
-        D = ({ className: e, titleLabel: t, checked: a, onChange: s }) =>
+        L = ({ className: e, titleLabel: t, checked: a, onChange: s }) =>
           r.createElement(
             "label",
             { className: (0, m.A)(g.OptionCheckbox, e && e) },
@@ -860,7 +861,7 @@
             }),
             t,
           );
-      let L = class extends r.Component {
+      let x = class extends r.Component {
         selectedtags = [];
         constructor(e) {
           super(e),
@@ -968,16 +969,16 @@
           );
         }
       };
-      (0, i.Cg)([l.sH], L.prototype, "selectedtags", void 0),
-        (0, i.Cg)([u.oI], L.prototype, "onFetchRequested", null),
-        (0, i.Cg)([u.oI], L.prototype, "onClearRequested", null),
-        (0, i.Cg)([u.oI], L.prototype, "onChange", null),
-        (0, i.Cg)([u.oI], L.prototype, "onKeyDown", null),
-        (0, i.Cg)([u.oI], L.prototype, "shouldRenderSuggestions", null),
-        (0, i.Cg)([u.oI], L.prototype, "onSuggestionSelected", null),
-        (0, i.Cg)([u.oI], L.prototype, "onRemoveSelectedTag", null),
-        (L = (0, i.Cg)([n.PA], L));
-      const x = (0, n.PA)(() => {
+      (0, i.Cg)([l.sH], x.prototype, "selectedtags", void 0),
+        (0, i.Cg)([u.oI], x.prototype, "onFetchRequested", null),
+        (0, i.Cg)([u.oI], x.prototype, "onClearRequested", null),
+        (0, i.Cg)([u.oI], x.prototype, "onChange", null),
+        (0, i.Cg)([u.oI], x.prototype, "onKeyDown", null),
+        (0, i.Cg)([u.oI], x.prototype, "shouldRenderSuggestions", null),
+        (0, i.Cg)([u.oI], x.prototype, "onSuggestionSelected", null),
+        (0, i.Cg)([u.oI], x.prototype, "onRemoveSelectedTag", null),
+        (x = (0, i.Cg)([n.PA], x));
+      const M = (0, n.PA)(() => {
         const e = R.getTags();
         let t = [];
         if (e)
@@ -1001,7 +1002,7 @@
             r.createElement(
               "div",
               { className: (0, m.A)(g.Row, g.FirstRow) },
-              r.createElement(P, {
+              r.createElement(D, {
                 minLabel: (0, p.we)("#Popularity_Popular"),
                 titleLabel: (0, p.we)("#Popularity_Title"),
                 maxLabel: (0, p.we)("#Popularity_Niche"),
@@ -1010,7 +1011,7 @@
                 value: R.m_fQueuedPopularityValue,
                 onChange: R.onPopularityChanged,
               }),
-              r.createElement(P, {
+              r.createElement(D, {
                 minLabel: (0, p.we)("#Recency_Older"),
                 titleLabel: (0, p.we)("#Recency_Title"),
                 maxLabel: (0, p.we)("#Recency_Newer"),
@@ -1024,7 +1025,7 @@
             r.createElement(
               "div",
               { className: (0, m.A)(g.Row, g.SecondRow) },
-              r.createElement(L, {
+              r.createElement(x, {
                 title: (0, p.we)("#TagFilterMultiple_Title"),
                 tagoptions: t,
                 selectedtags: i,
@@ -1032,7 +1033,7 @@
                 onAddTag: R.onTagFilterAdd,
                 onRemoveTag: R.onTagFilterRemove,
               }),
-              r.createElement(L, {
+              r.createElement(x, {
                 title: (0, p.we)("#TagExcludeMultiple_Title"),
                 tagoptions: t,
                 selectedtags: s,
@@ -1040,7 +1041,7 @@
                 onAddTag: R.onTagExcludeAdd,
                 onRemoveTag: R.onTagExcludeRemove,
               }),
-              r.createElement(D, {
+              r.createElement(L, {
                 className: g.WishlistCheckbox,
                 titleLabel: (0, p.we)("#ExcludeWishlisted"),
                 checked: R.m_bExcludeWishlisted,
@@ -1050,7 +1051,7 @@
           )
         );
       });
-      let M = class extends r.Component {
+      let b = class extends r.Component {
         m_videoRef = r.createRef();
         constructor(e) {
           super(e),
@@ -1182,12 +1183,12 @@
               (A = C ? (0, p.we)("#FreeToPlay") : e.discount_price),
               (P = e.description));
           }
-          const U = L && L.length > 0;
+          const b = L && L.length > 0;
           return r.createElement(
             d.Ay,
             { appID: e },
             r.createElement(
-              b,
+              U,
               {
                 href: `${v.BASE_URL}app/${e}`,
                 className: (0, m.A)(
@@ -1208,7 +1209,7 @@
                   "div",
                   { className: g.LeftSection },
                   r.createElement("img", {
-                    className: (0, m.A)(g.Logo, (!U || !y) && g.Revealed),
+                    className: (0, m.A)(g.Logo, (!b || !y) && g.Revealed),
                     src: i,
                   }),
                   r.createElement("video", {
@@ -1217,7 +1218,7 @@
                       "highlight_player_item",
                       "highlight_movie",
                       g.Video,
-                      U && y && g.Revealed,
+                      b && y && g.Revealed,
                     ),
                     playsInline: !0,
                     autoPlay: !0,
@@ -1229,7 +1230,7 @@
                     r.createElement(
                       "div",
                       {
-                        className: (0, m.A)(g.UnMute, U && g.Revealed),
+                        className: (0, m.A)(g.UnMute, b && g.Revealed),
                         onClick: (e) => this.onMuteToggle(e),
                       },
                       r.createElement(c.fSs, { muted: R.shouldMute() }),
@@ -1418,19 +1419,19 @@
           );
         }
       };
-      (0, i.Cg)([u.oI], M.prototype, "OnHover", null),
-        (0, i.Cg)([u.oI], M.prototype, "OnUnHover", null),
-        (0, i.Cg)([u.oI], M.prototype, "onMuteToggle", null),
-        (0, i.Cg)([u.oI], M.prototype, "onAddToWishlist", null),
-        (0, i.Cg)([u.oI], M.prototype, "onGoToWishlist", null),
-        (0, i.Cg)([u.oI], M.prototype, "onAddToCart", null),
-        (M = (0, i.Cg)([n.PA], M));
-      const b = r.forwardRef(function (e, t) {
+      (0, i.Cg)([u.oI], b.prototype, "OnHover", null),
+        (0, i.Cg)([u.oI], b.prototype, "OnUnHover", null),
+        (0, i.Cg)([u.oI], b.prototype, "onMuteToggle", null),
+        (0, i.Cg)([u.oI], b.prototype, "onAddToWishlist", null),
+        (0, i.Cg)([u.oI], b.prototype, "onGoToWishlist", null),
+        (0, i.Cg)([u.oI], b.prototype, "onAddToCart", null),
+        (b = (0, i.Cg)([n.PA], b));
+      const U = r.forwardRef(function (e, t) {
         const { href: a, ...s } = e,
-          i = (0, C.aL)(a);
+          i = (0, w.aL)(a);
         return r.createElement("a", { ...s, ref: t, href: i });
       });
-      let U = class extends r.Component {
+      let O = class extends r.Component {
         constructor(e) {
           super(e), (this.state = { sortedRecommendedApps: [] });
         }
@@ -1492,7 +1493,7 @@
               for (let t of a) (t.rank = e), e++;
               for (const e of a)
                 E.push(
-                  r.createElement(M, {
+                  r.createElement(b, {
                     key: e.appid,
                     appID: e.appid,
                     score: e.score,
@@ -1526,7 +1527,7 @@
               { className: g.Header },
               (0, p.we)("#Recommendations_Header"),
             ),
-            r.createElement(x, null),
+            r.createElement(M, null),
             r.createElement(
               "div",
               {
@@ -1540,8 +1541,8 @@
           );
         }
       };
-      U = (0, i.Cg)([n.PA], U);
-      let O = class extends r.Component {
+      O = (0, i.Cg)([n.PA], O);
+      let V = class extends r.Component {
         state = { width: window.innerWidth };
         updateDimensions() {
           this.setState({ width: window.innerWidth });
@@ -1555,7 +1556,7 @@
         render() {
           return o.iA.logged_in
             ? r.createElement(
-                C.Ay,
+                C.A,
                 {
                   controller: "recommender",
                   method: "default",
@@ -1587,9 +1588,9 @@
                     r.createElement(
                       "div",
                       { className: g.BottomSection },
-                      r.createElement(A, { accountID: o.iA.accountid }),
+                      r.createElement(P, { accountID: o.iA.accountid }),
                       r.createElement("div", { className: g.VerticalBar }),
-                      r.createElement(U, { width: this.state.width }),
+                      r.createElement(O, { width: this.state.width }),
                     ),
                   ),
                 ),
@@ -1620,10 +1621,10 @@
               );
         }
       };
-      (0, i.Cg)([u.oI], O.prototype, "updateDimensions", null),
-        (0, i.Cg)([u.oI], O.prototype, "ShowLoginDialog", null),
-        (O = (0, i.Cg)([n.PA], O));
-      const V = O;
+      (0, i.Cg)([u.oI], V.prototype, "updateDimensions", null),
+        (0, i.Cg)([u.oI], V.prototype, "ShowLoginDialog", null),
+        (V = (0, i.Cg)([n.PA], V));
+      const W = V;
     },
   },
 ]);

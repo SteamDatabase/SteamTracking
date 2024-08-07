@@ -64,9 +64,9 @@
         s = r(90626),
         p = r(52038),
         l = r(61859),
-        m = r(32630),
-        c = r(30470),
-        o = r(88340);
+        m = r(30470),
+        c = r(88340),
+        o = r(91674);
       const i = new Map([
           [
             1245620,
@@ -219,9 +219,9 @@
         const { appid: a, appBannerDef: r, app_name: n } = e,
           i = ((y = r.strBannerType), N.get(y));
         var y;
-        const B = (0, m.aL)(
-          c.TS.STORE_BASE_URL +
-            `app/${o.wy}?deckapp=${a}&utm_source=topplayed_app_banner&utm_campaign=${a}`,
+        const B = (0, o.aL)(
+          m.TS.STORE_BASE_URL +
+            `app/${c.wy}?deckapp=${a}&utm_source=topplayed_app_banner&utm_campaign=${a}`,
           "topplayed_app_banner",
           a,
         );

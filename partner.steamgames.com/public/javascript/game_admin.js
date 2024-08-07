@@ -188,13 +188,13 @@ function InitImageTypes( type )
 	var strHeaderPath = ( type == 'Package' || type == 'Bundle' ) ? 'header_image_ratio' : 'header_image';
 	g_ImageTypes =
 	[
-		{ name: 'Header Capsule', width: 460, height: 215, path: strHeaderPath + '|header|assets|' + strHeaderPath, localized: true, overrideable: true },
-		{ name: 'Small Capsule', width: 231, height: 87, path: 'small_capsule|capsule|assets|small_capsule|image', localized: true, overrideable: true },
-		{ name: 'Main Capsule', width: 616, height: 353, path: 'main_capsule|capsule_616x353|assets|main_capsule|image', localized: true, overrideable: true },
+		{ name: 'Header Capsule', width: 460, height: 215, path: strHeaderPath + '|header|assets|' + strHeaderPath + '|image', localized: true, overrideable: true, supports2x: true },
+		{ name: 'Small Capsule', width: 231, height: 87, path: 'small_capsule|capsule|assets|small_capsule|image', localized: true, overrideable: true, supports2x: true },
+		{ name: 'Main Capsule', width: 616, height: 353, path: 'main_capsule|capsule_616x353|assets|main_capsule|image', localized: true, overrideable: true, supports2x: true },
 		{ name: 'Promo Capsule', width: 220, height: 180, path: 'promo_capsule|capsule_220x180|assets|promo_capsule|image', localized: true },
 		{ name: 'Hi Res Capsule', width: 940, height: 400, path: 'hi_res_capsule|capsule_940x400|assets|hi_res_capsule|image', localized: true },
 		{ name: 'Hi Res Alt Capsule', width: 799, height: 340, path: 'hi_res_alt_capsule|capsule_799x340|assets|hi_res_alt_capsule|image', localized: true },
-		{ name: 'Package Header', width: 707, height: 232, path: 'header_image|header|assets|header_image', localized: true },
+		{ name: 'Package Header', width: 707, height: 232, path: 'header_image|header|assets|header_image|image', localized: true, supports2x: true },
 		{ name: '(deprecated) Broadcast Left Side Panel', width: 160, height: 350, path: 'broadcast|broadcast_left_panel|assets|broadcast_left_panel|image', localized: false },
 		{ name: '(deprecated) Broadcast Right Side Panel', width: 160, height: 350, path: 'broadcast|broadcast_right_panel|assets|broadcast_right_panel|image', localized: false },
 		{ name: 'Broadcast Left Side Panel', width: 155, height: 337, path: 'broadcast|broadcast_left_panel|assets|broadcast_left_panel|image', localized: false },

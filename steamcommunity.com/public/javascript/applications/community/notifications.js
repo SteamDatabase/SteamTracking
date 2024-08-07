@@ -570,7 +570,7 @@
         const l = (0, A.Rd)(t.type);
         return l
           ? s.createElement(
-              R.Ay,
+              R.A,
               {
                 controller: "notification",
                 method: (0, c.fL)(3),

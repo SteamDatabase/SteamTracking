@@ -174,8 +174,8 @@
         E = n(23809),
         S = n(56545),
         g = n(94601),
-        y = n(72839);
-      const h = (e) => {
+        h = n(72839);
+      const y = (e) => {
           const t = (function (e) {
               const t = (0, E.KV)(),
                 n = ["GameMixerSearchSuggestions", e];
@@ -185,12 +185,12 @@
                   const a = S.w.Init(g.pI);
                   a.Body().set_query_name(JSON.stringify(n)),
                     a.Body().set_search_term(e),
-                    (0, y.rV)(a),
-                    (0, y.Bn)(a, {
+                    (0, h.rV)(a),
+                    (0, h.Bn)(a, {
                       include_basic_info: !0,
                       include_assets: !0,
                     }),
-                    (0, y.hc)(a, {
+                    (0, h.hc)(a, {
                       type_filters: { include_games: !0 },
                       price_filters: { only_free_items: !1 },
                     }),
@@ -291,7 +291,7 @@
                 })(e.key),
             }),
             s &&
-              m.createElement(h, {
+              m.createElement(y, {
                 strSearch: t,
                 nSelectedResult: c,
                 fnSetResultApps: u,
@@ -631,7 +631,7 @@
             [r, i] = m.useState(1);
           return s.iA.logged_in
             ? m.createElement(
-                d.Ay,
+                d.A,
                 {
                   controller: "gamemixer",
                   method: "default",

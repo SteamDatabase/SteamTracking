@@ -765,6 +765,7 @@ button.DialogButton {
 ._3RUIE6yCJh3p0owNjCXjiq ._1B_4D6u0CHUynhmzI2eSH9 {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   min-width: 300px;
   padding-right: 30px;
 }
@@ -858,7 +859,7 @@ button.DialogButton {
   display: flex;
   flex-direction: row;
   gap: 4px;
-  padding: 8px;
+  padding: 2px 8px;
   align-items: center;
 }
 ._3RUIE6yCJh3p0owNjCXjiq

@@ -2862,6 +2862,8 @@ ul.actualUL li,
 	border: 1px solid #757575;
 	padding: 8px;
 	border-radius: 4px;
+	overflow: hidden;
+	word-wrap: break-word;
 }
 
 .releaseStep p.failmessage > span {
@@ -3787,4 +3789,10 @@ div#webapi_panel a.webapi_key_unsecured {
 	margin-bottom: 8px;
 	font-style: italic;
 	color: #d8c300;
+}
+
+.cantEnableStandaloneDemoPageWarning {
+	margin-top: 16px;
+	font-style: italic;
+	color: #c4b852;
 }

@@ -86,7 +86,7 @@
 .personastatusicons_PersonaStatusIcon_KxAI_.personastatusicons_MobilePhoneIcon_1iRFj.GamepadMode,
 .GamepadMode
   .personastatusicons_PersonaStatusIcon_KxAI_.personastatusicons_MobilePhoneIcon_1iRFj {
-  margin-top: 0;
+  margin-top: -4px;
   margin-left: 0;
   display: flex;
   align-items: center;
@@ -2401,6 +2401,10 @@ button.Primary.partnereventshared_AddSectionButton_2_djj {
 }
 .partnereventshared_EventElementOptional_1mpG6 {
   color: #06beff;
+  font-size: 14px;
+}
+.partnereventshared_EventElementComplete_1uZCv {
+  color: #8bc53f;
   font-size: 14px;
 }
 .partnereventshared_HelperTooltip_3T6MQ {
@@ -11351,6 +11355,11 @@ a.bbcodes_LinkButton_3TN0u:hover {
 }
 .bbcodes_Image_3K0Nu {
   max-width: 100%;
+}
+.bbcodes_PreservedUnsupportedTag_3YMzB .bbcodes_Tag_3SEDw {
+  color: #999;
+  display: inline-block;
+  margin: 0 2px;
 }
 .youtubeembed_DynamicLinkBox_1IGUR {
   position: relative;

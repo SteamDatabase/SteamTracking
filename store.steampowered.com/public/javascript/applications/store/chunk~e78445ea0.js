@@ -1146,6 +1146,11 @@
                     br: v.qM.readUint32,
                     bw: v.gp.writeUint32,
                   },
+                  deck_playtime_at_review: {
+                    n: 49,
+                    br: v.qM.readInt32,
+                    bw: v.gp.writeInt32,
+                  },
                 },
               }),
             E.sm_m
@@ -2010,7 +2015,7 @@
         _ = r(94095),
         g = r(44986),
         y = r(60801),
-        f = r(32630),
+        f = r(91674),
         w = r(52038),
         b = r(61859),
         v = r(60778),
@@ -2300,7 +2305,7 @@
     },
     39505: (e, t, r) => {
       "use strict";
-      r.d(t, { jM: () => J, M: () => Y, lS: () => V });
+      r.d(t, { jM: () => $, M: () => X, lS: () => Y });
       var n = r(90626),
         i = r(73860),
         s = r(71513),
@@ -2913,13 +2918,14 @@
         z = r(64593),
         x = r(57315),
         W = r(57834),
-        q = r.n(W);
-      const P = new E.wd("DiscoveryQueueWizard").Debug,
-        j = 0,
-        H = 1,
-        Z = 1400,
-        V = "discoveryqueue2022",
-        Y = {
+        q = r.n(W),
+        P = r(91674);
+      const j = new E.wd("DiscoveryQueueWizard").Debug,
+        H = 0,
+        Z = 1,
+        V = 1400,
+        Y = "discoveryqueue2022",
+        X = {
           include_assets: !0,
           include_trailers: !0,
           include_basic_info: !0,
@@ -2927,7 +2933,7 @@
           include_release: !0,
           include_platforms: !0,
         };
-      async function X(e, t, r, n) {
+      async function K(e, t, r, n) {
         let i = [],
           s = !1;
         try {
@@ -2937,13 +2943,13 @@
           (i = [...a]),
             (s = o),
             r && -1 === i.findIndex((e) => e === r) && i.unshift(r),
-            await g.A.Get().QueueMultipleAppRequests(i, Y);
+            await g.A.Get().QueueMultipleAppRequests(i, X);
         } catch (e) {
           console.error("Failed getting discovery queue apps", e);
         }
         return { appids: i, exhausted: s };
       }
-      const K = (e) =>
+      const J = (e) =>
         h.TS.IN_STEAMUI
           ? n.createElement(a.q, null, e.children)
           : n.createElement(
@@ -2951,7 +2957,7 @@
               { navID: "DiscoveryQueueWizard" },
               e.children,
             );
-      function J(e) {
+      function $(e) {
         const {
             eStoreDiscoveryQueueType: t,
             bWizardVisible: r,
@@ -2967,16 +2973,16 @@
           [B, E] = n.useState(!0),
           [R, A] = n.useState(!1),
           [T, W] = n.useState(!1),
-          Y = n.useRef(),
-          J = (0, h.Qn)(),
-          ee = (0, i.R7)(),
-          te = ee?.ownerWindow || window,
+          P = n.useRef(),
+          X = (0, h.Qn)(),
+          $ = (0, i.R7)(),
+          te = $?.ownerWindow || window,
           re = (0, F.m)("DiscoveryQueueWizard"),
           ne = (0, y.bi)();
-        (0, O.E)("ArrowLeft", (e) => Y.current.MoveLeft(e)),
-          (0, O.E)("Left", (e) => Y.current.MoveLeft(e)),
-          (0, O.E)("ArrowRight", (e) => Y.current.MoveRight(e)),
-          (0, O.E)("Right", (e) => Y.current.MoveRight(e)),
+        (0, O.E)("ArrowLeft", (e) => P.current.MoveLeft(e)),
+          (0, O.E)("Left", (e) => P.current.MoveLeft(e)),
+          (0, O.E)("ArrowRight", (e) => P.current.MoveRight(e)),
+          (0, O.E)("Right", (e) => P.current.MoveRight(e)),
           (0, O.E)("Escape", () => a && a()),
           (0, O.E)("Esc", () => a && a());
         const ie = n.useCallback(
@@ -2990,26 +2996,26 @@
           ),
           se = (0, b.wY)(ie),
           ae = n.useMemo(() => (9 / 16) * (f - 0.3 * f), [f]),
-          oe = n.useMemo(() => Boolean(te.innerWidth < Z), [te]),
+          oe = n.useMemo(() => Boolean(te.innerWidth < V), [te]),
           le = n.useCallback(
             async (e) => {
-              let { appids: r } = await X(t, !e, e && l, m);
+              let { appids: r } = await K(t, !e, e && l, m);
               if (e && !r.length) {
-                let { appids: e } = await X(t, !0, void 0, m);
+                let { appids: e } = await K(t, !0, void 0, m);
                 r = e;
               }
               let n = d;
-              if (e) r.unshift(H);
+              if (e) r.unshift(Z);
               else {
-                const e = n.lastIndexOf(H);
+                const e = n.lastIndexOf(Z);
                 -1 !== e && n.splice(e, 1);
               }
-              r.push(j),
-                r.push(H),
+              r.push(H),
+                r.push(Z),
                 (n = n.concat(r)),
                 re?.token?.reason || p(n),
-                e || Y?.current?.MoveRight(),
-                P("Loaded new discovery queue apps: ", r);
+                e || P?.current?.MoveRight(),
+                j("Loaded new discovery queue apps: ", r);
             },
             [t, l, m, d, re?.token?.reason],
           );
@@ -3027,9 +3033,9 @@
         }, [t, le, ie, T]);
         const ce = n.useCallback(
             (e) =>
-              d[e] == j
+              d[e] == H
                 ? "Summary" + e
-                : d[e] == H
+                : d[e] == Z
                   ? "Placeholder" + e
                   : d[e].toString(),
             [d],
@@ -3037,18 +3043,18 @@
           ue = n.useCallback((e) => f, [f]),
           me = n.useCallback(
             (e) => {
-              P("Currently focused index: ", e), ne.AddImpression(d[e], V);
+              j("Currently focused index: ", e), ne.AddImpression(d[e], Y);
             },
             [ne, d],
           ),
           [de] = n.useState(new Map()),
           pe = n.useCallback(
             (r, i, s, l) => {
-              if (d[r] == j) {
+              if (d[r] == H) {
                 let o = 0;
-                for (let e = r - 1; e >= 0; e--) d[e] == j && (o += 1);
+                for (let e = r - 1; e >= 0; e--) d[e] == H && (o += 1);
                 let l = 0;
-                for (let e = r - 1; e >= 0 && d[e] !== j && d[e] !== H; e--)
+                for (let e = r - 1; e >= 0 && d[e] !== H && d[e] !== Z; e--)
                   l++;
                 return (
                   de.has(o) ||
@@ -3056,7 +3062,7 @@
                       o,
                       Q.aI.Get().GetTotalSkippedAppsForDiscoveryQueue(t, m),
                     ),
-                  n.createElement($, {
+                  n.createElement(ee, {
                     ...e,
                     key: ce(r),
                     focused: _ === r,
@@ -3070,7 +3076,7 @@
                   })
                 );
               }
-              return d[r] == H
+              return d[r] == Z
                 ? n.createElement(o.Z, {
                     focusable: !1,
                     style: { width: i, height: ae },
@@ -3092,16 +3098,16 @@
           ),
           he = n.useCallback(
             (e, t) => {
-              J || (A(e), E(t));
+              X || (A(e), E(t));
             },
-            [J],
+            [X],
           ),
-          _e = n.useCallback((e) => d[e] !== H, [d]),
+          _e = n.useCallback((e) => d[e] !== Z, [d]),
           ge = n.useCallback(
             (e, r) => {
-              P("New Focused Column: ", r, " Prev Focused Column: ", e),
-                d[e] !== H &&
-                  d[e] !== j &&
+              j("New Focused Column: ", r, " Prev Focused Column: ", e),
+                d[e] !== Z &&
+                  d[e] !== H &&
                   Q.aI.Get().SkipDiscoveryQueueItem(d[e], t, m),
                 g(r);
             },
@@ -3117,7 +3123,7 @@
                     className: (0, L.A)({
                       [q().ProgressDot]: !0,
                       [q().ProgressDotActive]: i <= e,
-                      [q().ProgressDotHidden]: d[_] === H || d[_] === j,
+                      [q().ProgressDotHidden]: d[_] === Z || d[_] === H,
                     }),
                     src: U.A,
                   }),
@@ -3129,12 +3135,12 @@
           fe = n.useMemo(() => {
             let e = 0;
             for (let t = _; t >= 0; --t)
-              if (d[t] === H || d[t] === j) {
+              if (d[t] === Z || d[t] === H) {
                 e = t;
                 break;
               }
             let t = 0;
-            for (let r = e + 1; r < d.length && d[r] !== H && d[r] !== j; ++r)
+            for (let r = e + 1; r < d.length && d[r] !== Z && d[r] !== H; ++r)
               t++;
             return [_ - e - 1, t];
           }, [_, d]),
@@ -3144,11 +3150,11 @@
               D.EN,
               { active: r },
               n.createElement(
-                K,
+                J,
                 null,
                 n.createElement(
-                  N.Ay,
-                  { feature: V },
+                  N.A,
+                  { feature: Y },
                   n.createElement(
                     o.Z,
                     {
@@ -3163,7 +3169,7 @@
                       o.Z,
                       {
                         "flow-children": "row",
-                        className: (0, L.A)(q().TopBarCtn, J && q().TopMargin),
+                        className: (0, L.A)(q().TopBarCtn, X && q().TopMargin),
                       },
                       n.createElement(
                         o.Z,
@@ -3207,7 +3213,7 @@
                       n.createElement(
                         o.Z,
                         {
-                          onClick: (e) => Y.current.MoveLeft(e),
+                          onClick: (e) => P.current.MoveLeft(e),
                           className: (0, L.A)(
                             q().QueueNavArrow,
                             q().LeftArrow,
@@ -3219,7 +3225,7 @@
                       n.createElement(M, {
                         name: S,
                         className: q().DiscoveryQueueCarousel,
-                        ref: Y,
+                        ref: P,
                         fnDoesItemTakeFocus: _e,
                         fnOnFocusedColumnChange: ge,
                         fnUpdateArrows: he,
@@ -3241,7 +3247,7 @@
                       n.createElement(
                         o.Z,
                         {
-                          onClick: (e) => Y.current.MoveRight(e),
+                          onClick: (e) => P.current.MoveRight(e),
                           className: (0, L.A)(
                             q().QueueNavArrow,
                             q().RightArrow,
@@ -3250,7 +3256,7 @@
                         },
                         n.createElement(G.l8x, { angle: 0 }),
                       ),
-                      !J &&
+                      !X &&
                         n.createElement(
                           o.Z,
                           { "flow-children": "row" },
@@ -3285,7 +3291,7 @@
             )
           : null;
       }
-      function $(e) {
+      function ee(e) {
         const {
             nItemHeight: t,
             nItemWidth: r,
@@ -3327,7 +3333,7 @@
             [f],
           ),
           [I, B] = n.useState(!1),
-          E = (0, N.n9)(),
+          E = (0, P.n9)(),
           R = (0, Q.IH)(i, d),
           A = (0, F.m)("DiscoveryQueueSummary"),
           M = n.useCallback(() => {
@@ -3475,12 +3481,12 @@
               n.Fragment,
               null,
               Boolean(_.Get().BIsSaleActive()) &&
-                n.createElement(ee, { focused: c }),
+                n.createElement(te, { focused: c }),
               Boolean(p) && p(a + 1),
             ),
         );
       }
-      function ee(e) {
+      function te(e) {
         const { focused: t } = e,
           [r, i] = n.useState(null),
           s = ((0, h.Qn)(), _.Get().BIsSaleActive() && r);
@@ -3494,7 +3500,7 @@
                 1 === e.eresult && i(e);
               });
         }, [t, r]);
-        const a = (0, N.n9)(),
+        const a = (0, P.n9)(),
           l = (0, x._)(h.TS.STORE_BASE_URL + "sale/summersaletradingcards", a);
         return s
           ? n.createElement(

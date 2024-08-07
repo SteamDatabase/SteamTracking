@@ -110,7 +110,7 @@
       }
       var f = n(37403),
         g = n(44332),
-        u = n(51240);
+        u = n(6144);
       class d {
         m_CMInterface;
         m_mapAppInfo = s.sH.map();

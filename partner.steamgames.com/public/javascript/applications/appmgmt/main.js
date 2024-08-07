@@ -602,6 +602,7 @@
         AddSectionButton: "_2_djjQBZmuIsrDz2l04Ua7",
         EventElementRequired: "_12rm6-FOWcy0YB458vbp5l",
         EventElementOptional: "_1mpG6blNZY9m8bmFF-Krii",
+        EventElementComplete: "_1uZCvmPkcgPb6hJYpF9IYU",
         HelperTooltip: "_3T6MQlLWcGQeHZhqqOz4q-",
         PixelOffsetCtn: "_3Xk96WC-5G6sSuI0Zw2aeZ",
         PixelOffsetRow: "_2PtWb-j9bnMM467osLZO2B",
@@ -1734,9 +1735,8 @@
             n.e(4442),
             n.e(4160),
             n.e(8758),
-            n.e(867),
             n.e(2455),
-          ]).then(n.bind(n, 78869)),
+          ]).then(n.bind(n, 28394)),
         ),
         he = l.lazy(() => n.e(5027).then(n.bind(n, 26193))),
         _e = l.lazy(() =>
@@ -1870,7 +1870,6 @@
             n.e(9116),
             n.e(2890),
             n.e(4442),
-            n.e(867),
             n.e(5139),
           ]).then(n.bind(n, 68606)),
         );
@@ -3229,6 +3228,31 @@
         r(!1, t, ...n);
       }
       n.d(t, { w: () => r, z: () => i });
+    },
+    91986: (e, t, n) => {
+      "use strict";
+      n.d(t, { l: () => i });
+      var r = n(62490);
+      class i {
+        m_vecCallbacks = [];
+        Register(e) {
+          this.m_vecCallbacks.push(e);
+          return {
+            Unregister: () => {
+              r.x9(this.m_vecCallbacks, e);
+            },
+          };
+        }
+        Dispatch(...e) {
+          for (const t of Array.from(this.m_vecCallbacks)) t(...e);
+        }
+        ClearAllCallbacks() {
+          this.m_vecCallbacks = [];
+        }
+        CountRegistered() {
+          return this.m_vecCallbacks.length;
+        }
+      }
     },
     56545: (e, t, n) => {
       "use strict";
@@ -8353,7 +8377,7 @@
       n.d(t, { z: () => a });
       var r = n(36614),
         i = n(44332),
-        o = n(51240),
+        o = n(6144),
         s = n(62490);
       class a {
         m_callbacksMenusChanged = new o.lu();
@@ -10453,7 +10477,7 @@
       var r,
         i,
         o,
-        s = n(51240);
+        s = n(6144);
       class a {
         m_ActiveInputId;
         m_ActiveInputTimeout;
@@ -10678,7 +10702,7 @@
         s = n(62490),
         a = n(44332),
         l = n(10333),
-        c = n(51240),
+        c = n(6144),
         u = n(56011),
         m = n(60778),
         d = n(12068),
@@ -11483,7 +11507,7 @@
         o = n(69817),
         s = n(44332),
         a = n(10333),
-        l = n(51240),
+        l = n(6144),
         c = n(60778);
       var u = n(12068),
         m = n(34605),
@@ -12736,7 +12760,7 @@
       "use strict";
       n.d(t, { t: () => u });
       var r = n(16628),
-        i = n(51240),
+        i = n(6144),
         o = n(60778),
         s = n(12068),
         a = n(40094);
@@ -13679,7 +13703,7 @@
       var r = n(34629),
         i = n(75844),
         o = n(90626),
-        s = n(51240),
+        s = n(6144),
         a = n(52038),
         l = n(56093),
         c = n(37739),
@@ -14157,7 +14181,7 @@
       "use strict";
       n.d(t, { PN: () => r, eZ: () => o });
       var r,
-        i = n(51240);
+        i = n(6144);
       !(function (e) {
         (e[(e.LaunchGame = 0)] = "LaunchGame"),
           (e[(e.FriendMessage = 1)] = "FriendMessage"),
@@ -15601,7 +15625,7 @@
       var p = n(97479),
         h = n(66703),
         _ = n(74872),
-        g = (n(20929), n(738), n(12155)),
+        g = (n(30708), n(738), n(12155)),
         C = n(52038),
         f = n(79516),
         v = n(56011),
@@ -19005,7 +19029,7 @@
         st = n.n(ot),
         at = n(78327),
         lt = n(73860),
-        ct = n(20929);
+        ct = n(30708);
       const ut = i.forwardRef(function (e, t) {
         const {
             label: n,
@@ -20251,7 +20275,7 @@
       "use strict";
       n.d(t, { Hh: () => c, vs: () => l });
       var r = n(90626),
-        i = n(20929),
+        i = n(30708),
         o = n(56330),
         s = n(61859),
         a = n(22797);
@@ -20545,42 +20569,46 @@
     4869: (e, t, n) => {
       "use strict";
       n.d(t, {
-        Bal: () => I,
-        CeX: () => f,
-        Epp: () => w,
-        Gj3: () => V,
-        JPq: () => R,
-        Kz1: () => W,
-        LSz: () => k,
+        Bal: () => D,
+        CeX: () => w,
+        Epp: () => M,
+        Gj3: () => W,
+        JPq: () => B,
+        Kz1: () => K,
+        LSz: () => x,
         MGO: () => u,
-        Moo: () => G,
-        UKJ: () => N,
-        VnB: () => E,
-        YqK: () => O,
-        ZyV: () => S,
-        _V3: () => C,
+        Moo: () => q,
+        QRo: () => _,
+        UKJ: () => P,
+        VnB: () => y,
+        YqK: () => V,
+        ZyV: () => I,
+        _V3: () => S,
         b8_: () => p,
-        bmT: () => y,
+        bmT: () => A,
+        ffu: () => g,
+        glU: () => b,
         i3G: () => m,
-        iYj: () => x,
-        jRw: () => D,
-        jXA: () => L,
-        jvG: () => b,
-        kdM: () => U,
-        l4n: () => M,
-        lMJ: () => _,
+        iYj: () => H,
+        jRw: () => L,
+        jXA: () => F,
+        jvG: () => R,
+        kdM: () => z,
+        l4n: () => T,
+        lMJ: () => C,
         lrM: () => h,
-        nl: () => g,
+        nl: () => f,
         pcV: () => l,
-        qOW: () => T,
-        qzO: () => A,
-        rxV: () => v,
-        tI4: () => P,
+        qOW: () => k,
+        qzO: () => O,
+        rxV: () => E,
+        sED: () => v,
+        tI4: () => G,
         u49: () => d,
-        vet: () => H,
-        x7X: () => B,
+        vet: () => j,
+        x7X: () => N,
         xIk: () => a,
-        ycU: () => F,
+        ycU: () => U,
       });
       var r = n(90626),
         i = (n(51396), n(97875)),
@@ -21188,12 +21216,50 @@
             ...e,
           },
           r.createElement("path", {
-            d: "M7 14H29L27 32H9L7 14ZM24 6L22 2H14L12 6H4V10H32V6H24Z",
+            d: "M24 4H4V24H8V8H24V4Z",
+            fill: "currentColor",
+          }),
+          r.createElement("path", {
+            d: "M12 12V32H32V12H12ZM28 24H24V28H20V24H16V20H20V16H24V20H28V24Z",
             fill: "currentColor",
           }),
         );
       }
       function g(e) {
+        return r.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+          },
+          r.createElement("path", {
+            d: "M28.1684 2.16431L23.5793 6.75343L29.2362 12.4103L33.8253 7.82116L28.1684 2.16431Z",
+            fill: "currentColor",
+          }),
+          r.createElement("path", {
+            d: "M20.76 9.58999L5.67 24.67L4 32L11.33 30.33L26.41 15.24L20.76 9.58999Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function C(e) {
+        return r.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 36 36",
+            fill: "none",
+            ...e,
+          },
+          r.createElement("path", {
+            d: "M7 14H29L27 32H9L7 14ZM24 6L22 2H14L12 6H4V10H32V6H24Z",
+            fill: "currentColor",
+          }),
+        );
+      }
+      function f(e) {
         return r.createElement(
           "svg",
           {
@@ -21210,7 +21276,43 @@
           }),
         );
       }
-      function C(e) {
+      function v() {
+        return r.createElement(
+          "svg",
+          {
+            version: "1.1",
+            id: "Layer_2",
+            xmlns: "http://www.w3.org/2000/svg",
+            className: "SVGIcon_Button SVGIcon_X_Line",
+            x: "0px",
+            y: "0px",
+            width: "256px",
+            height: "256px",
+            viewBox: "0 0 256 256",
+          },
+          r.createElement("line", {
+            fill: "none",
+            stroke: "#ffffff",
+            strokeWidth: "45",
+            strokeMiterlimit: "10",
+            x1: "212",
+            y1: "212",
+            x2: "44",
+            y2: "44",
+          }),
+          r.createElement("line", {
+            fill: "none",
+            stroke: "#ffffff",
+            strokeWidth: "45",
+            strokeMiterlimit: "10",
+            x1: "44",
+            y1: "212",
+            x2: "212",
+            y2: "44",
+          }),
+        );
+      }
+      function S(e) {
         return r.createElement(
           "svg",
           {
@@ -21225,7 +21327,7 @@
           }),
         );
       }
-      function f(e) {
+      function w(e) {
         return r.createElement(
           "svg",
           {
@@ -21240,7 +21342,26 @@
           }),
         );
       }
-      function v(e) {
+      function b(e) {
+        return r.createElement(
+          "svg",
+          {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 24 24",
+            fill: "none",
+            ...e,
+          },
+          r.createElement("path", {
+            fill: "currentColor",
+            d: "M3 6H21V17.9857H11.174V16.7846H19.9239V8.68161L4.08514 8.68175V9.85254H3V6Z",
+          }),
+          r.createElement("path", {
+            fill: "currentColor",
+            d: "M10.4285 10.5567V16.1991H8.54908V13.7682L4.33155 17.9887V18H3V16.6675H3.00181L7.22877 12.4375H4.79018V10.5567H10.4285Z",
+          }),
+        );
+      }
+      function E(e) {
         return r.createElement(
           "svg",
           {
@@ -21257,7 +21378,7 @@
           }),
         );
       }
-      function S(e) {
+      function I(e) {
         return r.createElement(
           "svg",
           {
@@ -21276,7 +21397,7 @@
           }),
         );
       }
-      function w(e) {
+      function M(e) {
         return r.createElement(
           "svg",
           {
@@ -21292,7 +21413,7 @@
           }),
         );
       }
-      function b(e) {
+      function R(e) {
         return r.createElement(
           "svg",
           {
@@ -21308,7 +21429,7 @@
           }),
         );
       }
-      function E() {
+      function y() {
         return r.createElement(
           "svg",
           {
@@ -21328,7 +21449,7 @@
           ),
         );
       }
-      function I() {
+      function D() {
         return r.createElement(
           "svg",
           {
@@ -21347,7 +21468,7 @@
           ),
         );
       }
-      function M() {
+      function T() {
         return r.createElement(
           "svg",
           {
@@ -21366,7 +21487,7 @@
           ),
         );
       }
-      function R() {
+      function B() {
         return r.createElement(
           "svg",
           {
@@ -21385,7 +21506,7 @@
           ),
         );
       }
-      function y() {
+      function A() {
         return r.createElement(
           "svg",
           {
@@ -21404,7 +21525,7 @@
           ),
         );
       }
-      function D() {
+      function L() {
         return r.createElement(
           "svg",
           {
@@ -21423,7 +21544,7 @@
           ),
         );
       }
-      function T() {
+      function k() {
         return r.createElement(
           "svg",
           {
@@ -21442,7 +21563,7 @@
           ),
         );
       }
-      function B() {
+      function N() {
         return r.createElement(
           "svg",
           {
@@ -21461,7 +21582,7 @@
           ),
         );
       }
-      function A() {
+      function O() {
         return r.createElement(
           "svg",
           {
@@ -21480,7 +21601,7 @@
           ),
         );
       }
-      function L() {
+      function F() {
         return r.createElement(
           "svg",
           {
@@ -21499,7 +21620,7 @@
           ),
         );
       }
-      function k() {
+      function x() {
         const [e, t] = (0, i.l)();
         return r.createElement(
           "svg",
@@ -21540,7 +21661,7 @@
           ),
         );
       }
-      function N() {
+      function P() {
         return r.createElement(
           "svg",
           {
@@ -21559,7 +21680,7 @@
           ),
         );
       }
-      function O() {
+      function V() {
         return r.createElement(
           "svg",
           {
@@ -21578,7 +21699,7 @@
           ),
         );
       }
-      function F() {
+      function U() {
         return r.createElement(
           "svg",
           {
@@ -21607,7 +21728,7 @@
           ),
         );
       }
-      function x() {
+      function H() {
         const [e, t] = (0, i.l)();
         return r.createElement(
           "svg",
@@ -21639,7 +21760,7 @@
           ),
         );
       }
-      function P() {
+      function G() {
         const [e, t] = (0, i.l)();
         return r.createElement(
           "svg",
@@ -21673,7 +21794,7 @@
           ),
         );
       }
-      function V() {
+      function W() {
         const [e, t] = (0, i.l)();
         return r.createElement(
           "svg",
@@ -21709,7 +21830,7 @@
           ),
         );
       }
-      function U(e) {
+      function z(e) {
         const { bGreyOutRightSide: t, ...n } = e;
         return t
           ? r.createElement(
@@ -21755,7 +21876,7 @@
               }),
             );
       }
-      function H(e) {
+      function j(e) {
         return r.createElement(
           "svg",
           {
@@ -21799,7 +21920,7 @@
           }),
         );
       }
-      function G(e) {
+      function q(e) {
         return r.createElement(
           "svg",
           {
@@ -21817,7 +21938,7 @@
           }),
         );
       }
-      function W(e) {
+      function K(e) {
         return r.createElement(
           "svg",
           {
@@ -21904,6 +22025,47 @@
         }
       }
       (0, r.Cg)([o.oI], a.prototype, "OnVisibilityChange", null);
+    },
+    83882: (e, t, n) => {
+      "use strict";
+      n.d(t, { mt: () => a, of: () => l });
+      var r = n(90626),
+        i = n(7068),
+        o = n(21869),
+        s = n(2654);
+      n(72739),
+        n(48902),
+        n(87129),
+        n(25118),
+        n(56093),
+        n(97348),
+        n(73860),
+        n(78327),
+        n(28460);
+      const a = ({
+        active: e,
+        onDismiss: t,
+        className: n,
+        modalClassName: a,
+        children: l,
+      }) =>
+        r.createElement(
+          o.E,
+          { active: e },
+          r.createElement(
+            s.x_,
+            { onEscKeypress: t, className: a },
+            r.createElement(i.UC, { className: n }, l),
+          ),
+        );
+      function l(e) {
+        const { className: t, children: n } = e;
+        return r.createElement(
+          o.E,
+          { active: !0 },
+          r.createElement("div", { className: t }, n),
+        );
+      }
     },
     54324: (e, t, n) => {
       "use strict";
@@ -22324,109 +22486,48 @@
         );
       });
     },
-    20929: (e, t, n) => {
+    30708: (e, t, n) => {
       "use strict";
       n.d(t, {
-        mt: () => u,
-        o0: () => y.o0,
-        eV: () => D.e,
-        KG: () => y.KG,
-        tx: () => a.tx,
-        x_: () => c.x_,
-        of: () => m,
-        Zw: () => y.Zw,
-        EN: () => l,
+        mt: () => r.mt,
+        o0: () => v.o0,
+        eV: () => S.e,
+        KG: () => v.KG,
+        tx: () => w.tx,
+        x_: () => b.x_,
+        of: () => r.of,
+        Zw: () => v.Zw,
+        EN: () => E.E,
       });
-      var r = n(90626),
-        i = n(7068),
-        o = n(72739),
-        s = n(97348),
-        a = n(76222);
-      function l(e) {
-        const { active: t, children: n } = e,
-          i = (0, s.yk)() || (0, a.tx)(window),
-          l = (0, s.oJ)(),
-          [c, u] = r.useState(null),
-          [m, d] = r.useState(!1),
-          p = r.useRef();
-        if (
-          (r.useLayoutEffect(() => {
-            if (t) {
-              const e = i.ShowPortalModal(),
-                t = e.OnElementReadyCallbacks.Register(u),
-                n = e.OnModalActiveCallbacks.Register(d);
-              return (
-                (p.current = e.key),
-                () => {
-                  u(null), d(!1), e.Close(), t.Unregister(), n.Unregister();
-                }
-              );
-            }
-          }, [i, t]),
-          !c || !t)
-        )
-          return null;
-        let h = n;
-        return (
-          l && (h = r.createElement(l, { active: m, modalKey: p.current }, n)),
-          o.createPortal(h, c)
-        );
-      }
-      var c = n(2654);
-      n(48902), n(87129), n(25118), n(56093), n(73860), n(78327), n(28460);
-      const u = ({
-        active: e,
-        onDismiss: t,
-        className: n,
-        modalClassName: o,
-        children: s,
-      }) =>
-        r.createElement(
-          l,
-          { active: e },
-          r.createElement(
-            c.x_,
-            { onEscKeypress: t, className: o },
-            r.createElement(i.UC, { className: n }, s),
-          ),
-        );
-      function m(e) {
-        const { className: t, children: n } = e;
-        return r.createElement(
-          l,
-          { active: !0 },
-          r.createElement("div", { className: t }, n),
-        );
-      }
-      n(54324), n(71513), n(93007), n(32381);
-      var d = n(34629),
-        p = n(16628),
-        h = n(10333);
-      let _ = [
-        { index: 0, type: p.pR.OK, category: "action" },
-        { index: 1, type: p.pR.CANCEL, category: "action" },
-        { index: 2, type: p.pR.SECONDARY, category: "action" },
-        { index: 3, type: p.pR.OPTIONS, category: "action" },
-        { index: 4, type: p.pR.BUMPER_LEFT, category: "action" },
-        { index: 5, type: p.pR.BUMPER_RIGHT, category: "action" },
-        { index: 6, type: p.pR.TRIGGER_LEFT, category: "action" },
-        { index: 7, type: p.pR.TRIGGER_RIGHT, category: "action" },
-        { index: 8, type: p.pR.SELECT, category: "action" },
-        { index: 9, type: p.pR.START, category: "action" },
-        { index: 10, type: p.pR.LSTICK_CLICK, category: "action" },
-        { index: 11, type: p.pR.RSTICK_CLICK, category: "action" },
-        { index: 12, type: p.pR.DIR_UP, category: "navigation" },
-        { index: 13, type: p.pR.DIR_DOWN, category: "navigation" },
-        { index: 14, type: p.pR.DIR_LEFT, category: "navigation" },
-        { index: 15, type: p.pR.DIR_RIGHT, category: "navigation" },
-        { index: 16, type: p.pR.STEAM_GUIDE, category: "action" },
-        { index: 17, type: p.pR.SELECT, category: "action" },
+      var r = n(83882),
+        i = (n(54324), n(90626), n(71513), n(93007), n(32381), n(34629)),
+        o = n(16628),
+        s = n(10333);
+      let a = [
+        { index: 0, type: o.pR.OK, category: "action" },
+        { index: 1, type: o.pR.CANCEL, category: "action" },
+        { index: 2, type: o.pR.SECONDARY, category: "action" },
+        { index: 3, type: o.pR.OPTIONS, category: "action" },
+        { index: 4, type: o.pR.BUMPER_LEFT, category: "action" },
+        { index: 5, type: o.pR.BUMPER_RIGHT, category: "action" },
+        { index: 6, type: o.pR.TRIGGER_LEFT, category: "action" },
+        { index: 7, type: o.pR.TRIGGER_RIGHT, category: "action" },
+        { index: 8, type: o.pR.SELECT, category: "action" },
+        { index: 9, type: o.pR.START, category: "action" },
+        { index: 10, type: o.pR.LSTICK_CLICK, category: "action" },
+        { index: 11, type: o.pR.RSTICK_CLICK, category: "action" },
+        { index: 12, type: o.pR.DIR_UP, category: "navigation" },
+        { index: 13, type: o.pR.DIR_DOWN, category: "navigation" },
+        { index: 14, type: o.pR.DIR_LEFT, category: "navigation" },
+        { index: 15, type: o.pR.DIR_RIGHT, category: "navigation" },
+        { index: 16, type: o.pR.STEAM_GUIDE, category: "action" },
+        { index: 17, type: o.pR.SELECT, category: "action" },
       ];
-      class g extends p.nh {
+      class l extends o.nh {
         m_rgGamepadStatus = [];
         constructor() {
           super(),
-            this.SetSourceType(p.Vz.GAMEPAD),
+            this.SetSourceType(o.Vz.GAMEPAD),
             window.addEventListener("gamepadconnected", (e) => {
               this.m_bGamepadDetected ||
                 (this.OnGamepadDetected(), this.PollGamepads());
@@ -22441,8 +22542,8 @@
             this.m_rgGamepadStatus[n] ||
               (this.m_rgGamepadStatus[n] = { buttons: [] });
             let i = this.m_rgGamepadStatus[n];
-            for (let e = 0; e < _.length; e++) {
-              let n = _[e],
+            for (let e = 0; e < a.length; e++) {
+              let n = a[e],
                 o = n.index;
               r.buttons[o] &&
                 (r.buttons[o].pressed
@@ -22456,10 +22557,10 @@
           requestAnimationFrame(this.PollGamepads);
         }
       }
-      (0, d.Cg)([h.o], g.prototype, "PollGamepads", null);
-      var C,
-        f,
-        v = n(59264);
+      (0, i.Cg)([s.o], l.prototype, "PollGamepads", null);
+      var c,
+        u,
+        m = n(59264);
       !(function (e) {
         (e[(e.k_EControllerBindingType_None = 0)] =
           "k_EControllerBindingType_None"),
@@ -22477,7 +22578,7 @@
             "k_EControllerBindingType_GameAction"),
           (e[(e.k_EControllerBindingType_ControllerAction = 7)] =
             "k_EControllerBindingType_ControllerAction");
-      })(C || (C = {})),
+      })(c || (c = {})),
         (function (e) {
           (e[(e.GAMEPAD_BUTTON_A = 0)] = "GAMEPAD_BUTTON_A"),
             (e[(e.GAMEPAD_BUTTON_B = 1)] = "GAMEPAD_BUTTON_B"),
@@ -22539,40 +22640,40 @@
             (e[(e.GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR = 49)] =
               "GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR"),
             (e[(e.GAMEPAD_ANALOG_LAST = 50)] = "GAMEPAD_ANALOG_LAST");
-        })(f || (f = {}));
-      const S = {
-          [f.GAMEPAD_BUTTON_A]: p.pR.OK,
-          [f.GAMEPAD_BUTTON_B]: p.pR.CANCEL,
-          [f.GAMEPAD_BUTTON_X]: p.pR.SECONDARY,
-          [f.GAMEPAD_BUTTON_Y]: p.pR.OPTIONS,
-          [f.GAMEPAD_BUTTON_SELECT]: p.pR.SELECT,
-          [f.GAMEPAD_BUTTON_START]: p.pR.START,
-          [f.GAMEPAD_BUTTON_LSHOULDER]: p.pR.BUMPER_LEFT,
-          [f.GAMEPAD_BUTTON_RSHOULDER]: p.pR.BUMPER_RIGHT,
-          [f.GAMEPAD_BUTTON_LTRIGGER]: p.pR.TRIGGER_LEFT,
-          [f.GAMEPAD_BUTTON_RTRIGGER]: p.pR.TRIGGER_RIGHT,
-          [f.GAMEPAD_LEFTSTICK_UP]: p.pR.DIR_UP,
-          [f.GAMEPAD_LEFTSTICK_RIGHT]: p.pR.DIR_RIGHT,
-          [f.GAMEPAD_LEFTSTICK_DOWN]: p.pR.DIR_DOWN,
-          [f.GAMEPAD_LEFTSTICK_LEFT]: p.pR.DIR_LEFT,
-          [f.GAMEPAD_LEFTSTICK_CLICK]: p.pR.LSTICK_CLICK,
-          [f.GAMEPAD_RIGHTSTICK_CLICK]: p.pR.RSTICK_CLICK,
-          [f.GAMEPAD_LEFTSTICK_TOUCH]: p.pR.LSTICK_TOUCH,
-          [f.GAMEPAD_RIGHTSTICK_TOUCH]: p.pR.RSTICK_TOUCH,
-          [f.GAMEPAD_BUTTON_LPAD_TOUCH]: p.pR.LPAD_TOUCH,
-          [f.GAMEPAD_BUTTON_LPAD_CLICKED]: p.pR.LPAD_CLICK,
-          [f.GAMEPAD_BUTTON_RPAD_TOUCH]: p.pR.RPAD_TOUCH,
-          [f.GAMEPAD_BUTTON_RPAD_CLICKED]: p.pR.RPAD_CLICK,
-          [f.GAMEPAD_BUTTON_LBACK_UPPER]: p.pR.REAR_LEFT_UPPER,
-          [f.GAMEPAD_BUTTON_LBACK]: p.pR.REAR_LEFT_LOWER,
-          [f.GAMEPAD_BUTTON_RBACK_UPPER]: p.pR.REAR_RIGHT_UPPER,
-          [f.GAMEPAD_BUTTON_RBACK]: p.pR.REAR_RIGHT_LOWER,
+        })(u || (u = {}));
+      const d = {
+          [u.GAMEPAD_BUTTON_A]: o.pR.OK,
+          [u.GAMEPAD_BUTTON_B]: o.pR.CANCEL,
+          [u.GAMEPAD_BUTTON_X]: o.pR.SECONDARY,
+          [u.GAMEPAD_BUTTON_Y]: o.pR.OPTIONS,
+          [u.GAMEPAD_BUTTON_SELECT]: o.pR.SELECT,
+          [u.GAMEPAD_BUTTON_START]: o.pR.START,
+          [u.GAMEPAD_BUTTON_LSHOULDER]: o.pR.BUMPER_LEFT,
+          [u.GAMEPAD_BUTTON_RSHOULDER]: o.pR.BUMPER_RIGHT,
+          [u.GAMEPAD_BUTTON_LTRIGGER]: o.pR.TRIGGER_LEFT,
+          [u.GAMEPAD_BUTTON_RTRIGGER]: o.pR.TRIGGER_RIGHT,
+          [u.GAMEPAD_LEFTSTICK_UP]: o.pR.DIR_UP,
+          [u.GAMEPAD_LEFTSTICK_RIGHT]: o.pR.DIR_RIGHT,
+          [u.GAMEPAD_LEFTSTICK_DOWN]: o.pR.DIR_DOWN,
+          [u.GAMEPAD_LEFTSTICK_LEFT]: o.pR.DIR_LEFT,
+          [u.GAMEPAD_LEFTSTICK_CLICK]: o.pR.LSTICK_CLICK,
+          [u.GAMEPAD_RIGHTSTICK_CLICK]: o.pR.RSTICK_CLICK,
+          [u.GAMEPAD_LEFTSTICK_TOUCH]: o.pR.LSTICK_TOUCH,
+          [u.GAMEPAD_RIGHTSTICK_TOUCH]: o.pR.RSTICK_TOUCH,
+          [u.GAMEPAD_BUTTON_LPAD_TOUCH]: o.pR.LPAD_TOUCH,
+          [u.GAMEPAD_BUTTON_LPAD_CLICKED]: o.pR.LPAD_CLICK,
+          [u.GAMEPAD_BUTTON_RPAD_TOUCH]: o.pR.RPAD_TOUCH,
+          [u.GAMEPAD_BUTTON_RPAD_CLICKED]: o.pR.RPAD_CLICK,
+          [u.GAMEPAD_BUTTON_LBACK_UPPER]: o.pR.REAR_LEFT_UPPER,
+          [u.GAMEPAD_BUTTON_LBACK]: o.pR.REAR_LEFT_LOWER,
+          [u.GAMEPAD_BUTTON_RBACK_UPPER]: o.pR.REAR_RIGHT_UPPER,
+          [u.GAMEPAD_BUTTON_RBACK]: o.pR.REAR_RIGHT_LOWER,
         },
-        w = {
-          [v.TR.SystemKey0]: p.pR.STEAM_GUIDE,
-          [v.TR.SystemKey1]: p.pR.STEAM_QUICK_MENU,
+        p = {
+          [m.TR.SystemKey0]: o.pR.STEAM_GUIDE,
+          [m.TR.SystemKey1]: o.pR.STEAM_QUICK_MENU,
         };
-      class b extends p.nh {
+      class h extends o.nh {
         m_rgControllers = new Map();
         m_hUnregisterControllerDigitalInput;
         m_hUnregisterControllerAnalogInput;
@@ -22589,21 +22690,21 @@
               SteamClient.Input?.RegisterForControllerListChanges(
                 this.OnControllerListChanged,
               )),
-            this.SetSourceType(p.Vz.GAMEPAD);
+            this.SetSourceType(o.Vz.GAMEPAD);
         }
         OnControllerListChanged(e) {
           this.m_rgControllers.forEach((t, n) => {
             if (-1 == e.findIndex((e) => e.nControllerIndex == n)) {
-              for (let e = 0; e in p.pR; e++)
+              for (let e = 0; e in o.pR; e++)
                 t.activeButtons[e] && this.OnButtonUp(e, n);
-              this.OnAnalogPad(p.pR.LPAD_TOUCH, 0, 0, n),
-                this.OnAnalogPad(p.pR.RPAD_TOUCH, 0, 0, n),
+              this.OnAnalogPad(o.pR.LPAD_TOUCH, 0, 0, n),
+                this.OnAnalogPad(o.pR.RPAD_TOUCH, 0, 0, n),
                 this.m_rgControllers.delete(n);
             }
           });
         }
         HandleSystemKeyEvents(e) {
-          const t = w[e.eKey];
+          const t = p[e.eKey];
           t && this.OnSystemButtonPress(t, e.nControllerIndex);
         }
         OnSystemButtonPress(e, t) {
@@ -22626,7 +22727,7 @@
         }
         HandleControllerInputMessages(e) {
           for (const t of e) {
-            const e = S[t.nA],
+            const e = d[t.nA],
               n = this.GetController(t.nC);
             null != e
               ? t.bS && !n.activeButtons[e]
@@ -22634,34 +22735,34 @@
                 : !t.bS &&
                   n.activeButtons[e] &&
                   ((n.activeButtons[e] = !1), this.OnButtonUp(e, t.nC))
-              : t.nA == f.GAMEPAD_ANALOG_SCROLL ||
-                (t.nA == f.GAMEPAD_ANALOG_LEFT_KEYBOARD_CURSOR
-                  ? n.activeButtons[p.pR.LPAD_TOUCH] &&
-                    this.OnAnalogPad(p.pR.LPAD_TOUCH, t.x, t.y, t.nC)
-                  : t.nA == f.GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR &&
-                    n.activeButtons[p.pR.RPAD_TOUCH] &&
-                    this.OnAnalogPad(p.pR.RPAD_TOUCH, t.x, t.y, t.nC));
+              : t.nA == u.GAMEPAD_ANALOG_SCROLL ||
+                (t.nA == u.GAMEPAD_ANALOG_LEFT_KEYBOARD_CURSOR
+                  ? n.activeButtons[o.pR.LPAD_TOUCH] &&
+                    this.OnAnalogPad(o.pR.LPAD_TOUCH, t.x, t.y, t.nC)
+                  : t.nA == u.GAMEPAD_ANALOG_RIGHT_KEYBOARD_CURSOR &&
+                    n.activeButtons[o.pR.RPAD_TOUCH] &&
+                    this.OnAnalogPad(o.pR.RPAD_TOUCH, t.x, t.y, t.nC));
           }
         }
       }
-      (0, d.Cg)([h.o], b.prototype, "OnControllerListChanged", null),
-        (0, d.Cg)([h.o], b.prototype, "HandleSystemKeyEvents", null),
-        (0, d.Cg)([h.o], b.prototype, "EnableAnalogInputMessages", null),
-        (0, d.Cg)([h.o], b.prototype, "HandleControllerInputMessages", null);
-      var E = n(56011),
-        I = n(30470);
-      class M extends p.nh {
-        m_lastButtonDown = p.pR.INVALID;
+      (0, i.Cg)([s.o], h.prototype, "OnControllerListChanged", null),
+        (0, i.Cg)([s.o], h.prototype, "HandleSystemKeyEvents", null),
+        (0, i.Cg)([s.o], h.prototype, "EnableAnalogInputMessages", null),
+        (0, i.Cg)([s.o], h.prototype, "HandleControllerInputMessages", null);
+      var _ = n(56011),
+        g = n(30470);
+      class C extends o.nh {
+        m_lastButtonDown = o.pR.INVALID;
         constructor(e) {
           super(),
-            this.SetSourceType(p.Vz.KEYBOARD),
+            this.SetSourceType(o.Vz.KEYBOARD),
             e.addEventListener("keydown", this.OnKeyDown),
             e.addEventListener("keyup", this.OnKeyUp),
             e.addEventListener("blur", this.Reset);
         }
         OnKeyDown(e) {
           const t = this.TranslateKey(e);
-          t != p.pR.INVALID &&
+          t != o.pR.INVALID &&
             (e.preventDefault(),
             t != this.m_lastButtonDown &&
               (this.Reset(),
@@ -22670,25 +22771,25 @@
         }
         OnKeyUp(e) {
           const t = this.TranslateKey(e);
-          t != p.pR.INVALID &&
+          t != o.pR.INVALID &&
             (this.OnButtonUp(t),
-            (this.m_lastButtonDown = p.pR.INVALID),
+            (this.m_lastButtonDown = o.pR.INVALID),
             e.preventDefault());
         }
         Reset() {
-          this.m_lastButtonDown != p.pR.INVALID &&
+          this.m_lastButtonDown != o.pR.INVALID &&
             (this.OnButtonUp(this.m_lastButtonDown),
-            (this.m_lastButtonDown = p.pR.INVALID));
+            (this.m_lastButtonDown = o.pR.INVALID));
         }
         GetKeycodeFromEvent(e) {
-          return "linux" === I.TS.PLATFORM && e.key.length > 1
+          return "linux" === g.TS.PLATFORM && e.key.length > 1
             ? e.key || e.code
             : e.code || e.key;
         }
         BShouldSwallowEventForTextInputWorkaround(e) {
           if (
             !(
-              E.kD(e.target) &&
+              _.kD(e.target) &&
               ("INPUT" === e.target.nodeName ||
                 "TEXTAREA" === e.target.nodeName ||
                 e.target.hasAttribute("contenteditable"))
@@ -22746,91 +22847,91 @@
             n = e.ctrlKey,
             r = e.shiftKey;
           if (this.BShouldSwallowEventForTextInputWorkaround(e))
-            return p.pR.INVALID;
+            return o.pR.INVALID;
           if (n && r)
             switch (t) {
               case "Digit4":
-                return p.pR.TRIGGER_LEFT;
+                return o.pR.TRIGGER_LEFT;
               case "Digit5":
-                return p.pR.TRIGGER_RIGHT;
+                return o.pR.TRIGGER_RIGHT;
               default:
-                return p.pR.INVALID;
+                return o.pR.INVALID;
             }
           if (n)
             switch (t) {
               case "Digit1":
-                return p.pR.STEAM_GUIDE;
+                return o.pR.STEAM_GUIDE;
               case "Digit2":
-                return p.pR.STEAM_QUICK_MENU;
+                return o.pR.STEAM_QUICK_MENU;
               case "Digit3":
               case "Digit9":
-                return p.pR.SELECT;
+                return o.pR.SELECT;
               case "Digit4":
-                return p.pR.BUMPER_LEFT;
+                return o.pR.BUMPER_LEFT;
               case "Digit5":
-                return p.pR.BUMPER_RIGHT;
+                return o.pR.BUMPER_RIGHT;
               case "Digit6":
-                return p.pR.LSTICK_CLICK;
+                return o.pR.LSTICK_CLICK;
               case "Digit7":
-                return p.pR.RSTICK_CLICK;
+                return o.pR.RSTICK_CLICK;
               case "Digit8":
-                return p.pR.OPTIONS;
+                return o.pR.OPTIONS;
               case "Digit0":
-                return p.pR.START;
+                return o.pR.START;
             }
           switch (t) {
             case "Escape":
-              return p.pR.CANCEL;
+              return o.pR.CANCEL;
             case "Enter":
-              return p.pR.OK;
+              return o.pR.OK;
             case "Backspace":
-              return p.pR.SECONDARY;
+              return o.pR.SECONDARY;
             case "ArrowUp":
-              return p.pR.DIR_UP;
+              return o.pR.DIR_UP;
             case "ArrowDown":
-              return p.pR.DIR_DOWN;
+              return o.pR.DIR_DOWN;
             case "ArrowLeft":
-              return p.pR.DIR_LEFT;
+              return o.pR.DIR_LEFT;
             case "ArrowRight":
-              return p.pR.DIR_RIGHT;
+              return o.pR.DIR_RIGHT;
           }
-          return p.pR.INVALID;
+          return o.pR.INVALID;
         }
       }
-      (0, d.Cg)([h.o], M.prototype, "OnKeyDown", null),
-        (0, d.Cg)([h.o], M.prototype, "OnKeyUp", null),
-        (0, d.Cg)([h.o], M.prototype, "Reset", null);
-      class R extends p.nh {
+      (0, i.Cg)([s.o], C.prototype, "OnKeyDown", null),
+        (0, i.Cg)([s.o], C.prototype, "OnKeyUp", null),
+        (0, i.Cg)([s.o], C.prototype, "Reset", null);
+      class f extends o.nh {
         m_nAccumulatedMouseMovement = 0;
         m_bFirstMouseUpdate = !0;
         m_nLastScreenX;
         m_nLastScreenY;
-        m_lastButtonDown = p.pR.INVALID;
+        m_lastButtonDown = o.pR.INVALID;
         constructor(e) {
           super(),
-            this.SetSourceType(p.Vz.MOUSE),
+            this.SetSourceType(o.Vz.MOUSE),
             e.addEventListener("mousedown", this.OnMouseDown),
             e.addEventListener("mouseup", this.OnMouseUp),
             e.addEventListener("mousemove", this.OnMouseMove),
             e.addEventListener("blur", this.Reset);
         }
         TranslateKey(e) {
-          return 3 === e.button ? p.pR.CANCEL : p.pR.INVALID;
+          return 3 === e.button ? o.pR.CANCEL : o.pR.INVALID;
         }
         OnMouseDown(e) {
           if (e.defaultPrevented) return;
           const t = this.TranslateKey(e);
-          t != p.pR.INVALID &&
+          t != o.pR.INVALID &&
             (e.preventDefault(),
             t != this.m_lastButtonDown &&
               (this.Reset(), this.OnButtonDown(t), (this.m_lastButtonDown = t)),
-            this.OnNavigationTypeChanged(p.Vz.MOUSE));
+            this.OnNavigationTypeChanged(o.Vz.MOUSE));
         }
         OnMouseUp(e) {
           const t = this.TranslateKey(e);
-          t != p.pR.INVALID &&
+          t != o.pR.INVALID &&
             (this.OnButtonUp(t),
-            (this.m_lastButtonDown = p.pR.INVALID),
+            (this.m_lastButtonDown = o.pR.INVALID),
             e.preventDefault());
         }
         OnMouseMove(e) {
@@ -22845,26 +22946,29 @@
               Math.abs(e.screenX - this.m_nLastScreenX) +
               Math.abs(e.screenY - this.m_nLastScreenY)),
               this.m_nAccumulatedMouseMovement > 500 &&
-                (this.Reset(), this.OnNavigationTypeChanged(p.Vz.MOUSE));
+                (this.Reset(), this.OnNavigationTypeChanged(o.Vz.MOUSE));
           }
         }
         Reset() {
           (this.m_nAccumulatedMouseMovement = 0),
             (this.m_bFirstMouseUpdate = !0),
-            this.m_lastButtonDown != p.pR.INVALID &&
+            this.m_lastButtonDown != o.pR.INVALID &&
               (this.OnButtonUp(this.m_lastButtonDown),
-              (this.m_lastButtonDown = p.pR.INVALID));
+              (this.m_lastButtonDown = o.pR.INVALID));
         }
       }
-      (0, d.Cg)([h.o], R.prototype, "TranslateKey", null),
-        (0, d.Cg)([h.o], R.prototype, "OnMouseDown", null),
-        (0, d.Cg)([h.o], R.prototype, "OnMouseUp", null),
-        (0, d.Cg)([h.o], R.prototype, "OnMouseMove", null),
-        (0, d.Cg)([h.o], R.prototype, "Reset", null);
-      n(34605);
+      (0, i.Cg)([s.o], f.prototype, "TranslateKey", null),
+        (0, i.Cg)([s.o], f.prototype, "OnMouseDown", null),
+        (0, i.Cg)([s.o], f.prototype, "OnMouseUp", null),
+        (0, i.Cg)([s.o], f.prototype, "OnMouseMove", null),
+        (0, i.Cg)([s.o], f.prototype, "Reset", null);
+      n(34605), n(78327), n(72739);
       n(88843);
-      var y = n(78395),
-        D = n(10411);
+      var v = n(78395),
+        S = n(10411),
+        w = n(76222),
+        b = n(2654),
+        E = n(21869);
     },
     4518: (e, t, n) => {
       "use strict";
@@ -22878,7 +22982,7 @@
         c = n(97348),
         u = n(25118),
         m = n(78327);
-      n(20929);
+      n(30708);
       function d(e) {
         const { Modal: t } = e,
           { name: n, modalProps: l, options: d } = t,
@@ -22987,7 +23091,7 @@
       n.d(t, { $9: () => l, _F: () => a });
       var r = n(34629),
         i = n(10333),
-        o = n(51240);
+        o = n(6144);
       class s {
         key;
         static sm_lastKey = 0;
@@ -23290,7 +23394,7 @@
       var r = n(97479),
         i = n(4518),
         o = n(44332),
-        s = n(51240),
+        s = n(6144),
         a = (n(56093), n(78025));
       n(97348);
       class l {
@@ -23581,6 +23685,44 @@
         );
       }
     },
+    21869: (e, t, n) => {
+      "use strict";
+      n.d(t, { E: () => a });
+      var r = n(90626),
+        i = n(72739),
+        o = n(97348),
+        s = n(76222);
+      function a(e) {
+        const { active: t, children: n } = e,
+          a = (0, o.yk)() || (0, s.tx)(window),
+          l = (0, o.oJ)(),
+          [c, u] = r.useState(null),
+          [m, d] = r.useState(!1),
+          p = r.useRef();
+        if (
+          (r.useLayoutEffect(() => {
+            if (t) {
+              const e = a.ShowPortalModal(),
+                t = e.OnElementReadyCallbacks.Register(u),
+                n = e.OnModalActiveCallbacks.Register(d);
+              return (
+                (p.current = e.key),
+                () => {
+                  u(null), d(!1), e.Close(), t.Unregister(), n.Unregister();
+                }
+              );
+            }
+          }, [a, t]),
+          !c || !t)
+        )
+          return null;
+        let h = n;
+        return (
+          l && (h = r.createElement(l, { active: m, modalKey: p.current }, n)),
+          i.createPortal(h, c)
+        );
+      }
+    },
     6813: (e, t, n) => {
       "use strict";
       n.d(t, { X: () => c });
@@ -23707,7 +23849,7 @@
       "use strict";
       n.d(t, { HT: () => u, mK: () => l, pg: () => c, x_: () => i.x_ });
       var r = n(90626),
-        i = n(20929),
+        i = n(30708),
         o = n(44332),
         s = n(61859),
         a = n(78327);
@@ -26964,46 +27106,27 @@
       }
       n.d(t, { o: () => r });
     },
-    51240: (e, t, n) => {
+    6144: (e, t, n) => {
       "use strict";
       n.d(t, {
-        lu: () => s,
-        LU: () => m,
-        Ji: () => d,
-        e0: () => h,
-        RR: () => p,
         Jc: () => l,
+        Ji: () => d,
+        LU: () => m,
+        RR: () => p,
         YX: () => u,
+        e0: () => h,
+        lu: () => s.l,
       });
       var r = n(34629),
         i = n(62490),
-        o = n(10333);
-      class s {
-        m_vecCallbacks = [];
-        Register(e) {
-          this.m_vecCallbacks.push(e);
-          return {
-            Unregister: () => {
-              i.x9(this.m_vecCallbacks, e);
-            },
-          };
-        }
-        Dispatch(...e) {
-          for (const t of Array.from(this.m_vecCallbacks)) t(...e);
-        }
-        ClearAllCallbacks() {
-          this.m_vecCallbacks = [];
-        }
-        CountRegistered() {
-          return this.m_vecCallbacks.length;
-        }
-      }
+        o = n(10333),
+        s = n(91986);
       class a {
         m_callbacks;
         m_currentValue;
         m_fnEquals;
         constructor(e, t) {
-          (this.m_callbacks = new s()),
+          (this.m_callbacks = new s.l()),
             (this.m_currentValue = e),
             (this.m_fnEquals = t);
         }
@@ -27500,7 +27623,7 @@
         o = n(2160),
         s = n(78327),
         a = n(62490),
-        l = n(51240),
+        l = n(6144),
         c = n(91675);
       class u {
         m_mapTokens = new Map();
@@ -28201,7 +28324,7 @@
       var r = n(34629),
         i = n(10333),
         o = n(77350),
-        s = n(51240);
+        s = n(6144);
       const a = [
         "ActionDescription",
         "Backstack",
@@ -28604,7 +28727,8 @@
         $$: () => a,
         CH: () => l,
         DF: () => C,
-        Pt: () => S,
+        OP: () => S,
+        Pt: () => w,
         Qh: () => s,
         Qi: () => p,
         _g: () => u,
@@ -28777,7 +28901,17 @@
           [e],
         );
       }
-      function S(e) {
+      function S() {
+        const [e, t] = r.useState(!1);
+        return [
+          e,
+          {
+            onMouseEnter: r.useCallback(() => t(!0), []),
+            onMouseLeave: r.useCallback(() => t(!1), []),
+          },
+        ];
+      }
+      function w(e) {
         return (0, i.QS)(
           (t) => {
             if (!t || !e) return;

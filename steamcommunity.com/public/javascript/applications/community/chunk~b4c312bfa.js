@@ -414,6 +414,11 @@
                     br: n.qM.readUint32,
                     bw: n.gp.writeUint32,
                   },
+                  deck_playtime_at_review: {
+                    n: 49,
+                    br: n.qM.readInt32,
+                    bw: n.gp.writeInt32,
+                  },
                 },
               }),
             d.sm_m

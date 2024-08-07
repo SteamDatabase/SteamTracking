@@ -3994,7 +3994,7 @@
           };
         }, [a, e]);
         const r = (0, g.q3)(() => {
-            const e = t.selectedTabBackgroundDef.groups?.[0].background_id,
+            const e = t.selectedTabBackgroundDef?.groups?.[0].background_id,
               a = t.mapGroupToSections.get(e);
             return w.get(a?.nBackgroundGroupID);
           }),
@@ -4241,7 +4241,7 @@
             E.tH,
             null,
             n.createElement(
-              Y.P3,
+              Y.P,
               null,
               n.createElement(
                 A.Cs,

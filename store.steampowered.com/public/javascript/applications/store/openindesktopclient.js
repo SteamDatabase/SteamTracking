@@ -221,15 +221,16 @@
     },
     71009: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { OpenInDesktopClient: () => u, default: () => m });
+      n.r(t), n.d(t, { OpenInDesktopClient: () => m, default: () => h });
       var s = n(90626),
         i = n(30470),
         o = n(84811),
         c = n(62381),
         r = n(97824),
-        a = n(2627),
-        l = n(61859);
-      const u = (0, o.Nr)(function (e) {
+        a = n(78327),
+        l = n(2627),
+        u = n(61859);
+      const m = (0, o.Nr)(function (e) {
           const [t, n] = s.useState(22);
           s.useEffect(() => {
             i.TS.IN_CLIENT ||
@@ -244,8 +245,8 @@
               });
           }, []);
           const o = s.useCallback(() => {
-            let e = "steam://openurl/";
-            const n = (0, a.VY)("browserid");
+            let e = `${(0, a.yl)()}//openurl/`;
+            const n = (0, l.VY)("browserid");
             if (n) {
               const t = new URL(window.location.href),
                 s = new URLSearchParams(t.search);
@@ -266,7 +267,7 @@
                 s.createElement(
                   "div",
                   { onClick: o, className: r.BannerButton },
-                  (0, l.we)("#OpenInDesktopAppBanner_OpenAppButton"),
+                  (0, u.we)("#OpenInDesktopAppBanner_OpenAppButton"),
                 ),
               ),
               s.createElement(
@@ -278,16 +279,16 @@
                   s.createElement(
                     "b",
                     null,
-                    (0, l.we)("#OpenInDesktopAppBanner_NotSignedIn"),
+                    (0, u.we)("#OpenInDesktopAppBanner_NotSignedIn"),
                   ),
                   s.createElement("br", null),
-                  (0, l.we)("#OpenInDesktopAppBanner_Body"),
+                  (0, u.we)("#OpenInDesktopAppBanner_Body"),
                 ),
               ),
             ),
           );
         }),
-        m = u;
+        h = m;
     },
   },
 ]);

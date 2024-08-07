@@ -43,6 +43,8 @@
         ExpandSection_WithTitle: "_1dfVJUq9KmDOuhyOZ7lcXv",
         LinkButton: "_3TN0uESBGJ-kUDPWWX2YWz",
         Image: "_3K0NuxYUYncdQ-cNK7udMn",
+        PreservedUnsupportedTag: "_3YMzBRWJTOo7eai1uFGV7i",
+        Tag: "_3SEDw4GZynd3ZmTQWlyOcS",
       };
     },
     49693: (e, t, o) => {

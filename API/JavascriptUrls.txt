@@ -7,6 +7,7 @@ ${BASE_URL_SHARED_CDN}store_item_assets/${asset_url_format}
 ${BASE_URL_SHARED_CDN}store_item_assets/assetportal/preview//${}/${}/${}
 ${BASE_URL_SHARED_CDN}store_item_assets/mm/${}/${}/${path}${}
 ${BASE_URL_SHARED_CDN}store_item_assets/optin/${}/${}/${}
+${BASE_URL_SHARED_CDN}store_item_assets/steam/apps/${}/${}
 ${BASE_URL}${patch_website}
 ${BASE_URL}${}
 ${BASE_URL}${}/checkforshortfilmownership/
@@ -943,6 +944,7 @@ ${PARTNER_BASE_URL}${_ ? "optin/ajaxadmincloneinvites" : "optin/ajaxadmincloneop
 ${PARTNER_BASE_URL}${}
 ${PARTNER_BASE_URL}${}${}
 ${PARTNER_BASE_URL}/admin/store/pagecreate
+${PARTNER_BASE_URL}/apps/ajaxgetassets/${}
 ${PARTNER_BASE_URL}/packages/ajaxgetpackageforapp
 ${PARTNER_BASE_URL}/promotion${}
 ${PARTNER_BASE_URL}/promotion/${}
@@ -982,6 +984,8 @@ ${PARTNER_BASE_URL}apprelease/ajaxgetreleaserequest/${}
 ${PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${}
 ${PARTNER_BASE_URL}apps/
 ${PARTNER_BASE_URL}apps/ajaxcreatenewapp/
+${PARTNER_BASE_URL}apps/ajaxpublishassets
+${PARTNER_BASE_URL}apps/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}apps/builddetails/${appid}/${}
 ${PARTNER_BASE_URL}apps/communityitems/${}
 ${PARTNER_BASE_URL}apps/demo/${}
@@ -1189,7 +1193,6 @@ ${PARTNER_BASE_URL}sales/ajaxcreatesalepartnerevent
 ${PARTNER_BASE_URL}sales/ajaxgetsalerank
 ${PARTNER_BASE_URL}sales/ajaxupdateclanaccountflags
 ${PARTNER_BASE_URL}sdr/ajaxsessionsearch?${}
-${PARTNER_BASE_URL}seasonpass/ajaxsavemilestone
 ${PARTNER_BASE_URL}steamml/create_problem
 ${PARTNER_BASE_URL}steamml/delete_problem
 ${PARTNER_BASE_URL}steamml/edit_problem

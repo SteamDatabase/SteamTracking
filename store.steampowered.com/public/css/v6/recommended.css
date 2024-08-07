@@ -2927,25 +2927,6 @@ div.graph_toggle_icon.down {
 	white-space: nowrap;
 }
 
-.user_reviews_filter_display_as {
-	float: left;
-	text-transform: uppercase;
-	font-size: 10px;
-	color: #4582a5;
-	padding: 5px 10px;
-	border-left: 1px solid #2a475e;
-}
-.user_reviews_filter_display_as select {
-	width: 100px;
-	background: #4582a5;
-	font-size: 12px;
-	border: none;
-	border-radius: 2px;
-	margin-left: 5px;
-	margin-top: 2px;
-
-}
-
 .user_reviews_steam_labs_desc > a {
 	color: #19c0d0;
 }
@@ -2964,11 +2945,17 @@ div.graph_toggle_icon.down {
 
 .user_reviews_date_range_explanation,
 .user_reviews_offtopic_activity_explanation,
-.user_reviews_playtime_filter_explanation {
+.user_reviews_playtime_filter_explanation,
+.user_reviews_display_explanation {
 	white-space: normal;
 	padding-bottom: 10px;
 	margin-bottom: 10px;
 	border-bottom: 1px solid #4582a5;
+}
+
+.user_reviews_display_uninformative {
+	padding-top: 10px;
+	border-top: 1px solid #4582a5;
 }
 
 .user_reviews_playtime_filter_explanation {

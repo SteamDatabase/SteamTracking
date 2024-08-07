@@ -170,7 +170,7 @@
         p = o(44332),
         m = o(52038),
         d = o(81363),
-        u = o(51240),
+        u = o(6144),
         P = o(20521),
         L = o.n(P),
         E = o(48077),
@@ -1607,7 +1607,7 @@
       var s = o(34629),
         n = o(90626),
         i = o(56093),
-        r = o(51240);
+        r = o(6144);
       class a extends n.Component {
         m_elCanvas;
         m_Context;

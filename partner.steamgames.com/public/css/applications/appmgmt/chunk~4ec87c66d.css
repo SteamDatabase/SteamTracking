@@ -1624,6 +1624,11 @@ a._3TN0uESBGJ-kUDPWWX2YWz:hover {
 ._3K0NuxYUYncdQ-cNK7udMn {
   max-width: 100%;
 }
+._3YMzBRWJTOo7eai1uFGV7i ._3SEDw4GZynd3ZmTQWlyOcS {
+  color: #999;
+  display: inline-block;
+  margin: 0 2px;
+}
 ._1IGURymjmwZOxJLS-9BWKA {
   position: relative;
   font-family: Helvetica, Arial, sans-serif;
@@ -3980,6 +3985,97 @@ textarea._3793xvP87t1rZYbAQDC1pG {
 div.gba9ORrJbj5gmNm9W6UUS {
   z-index: 2000;
 }
+.x1ZXiuhxzdmthc1Gn6cqH {
+  position: relative;
+  display: grid;
+  grid-template-columns: 192px 1fr auto;
+  grid-template-areas: "text text buttons" "status status buttons";
+}
+.x1ZXiuhxzdmthc1Gn6cqH._1b7b1bvhRiuhRcDQmW55h- {
+  grid-template-areas: "text text buttons" "status status status";
+}
+.x1ZXiuhxzdmthc1Gn6cqH._1hA2MT9R4XntxdhXc2g4r1 {
+  grid-template-areas: "text text text" "status status buttons";
+}
+.x1ZXiuhxzdmthc1Gn6cqH._2-lMV2nN-RNIN6b7ggfOQY {
+  grid-template-areas: "image text buttons" "status status buttons";
+}
+.x1ZXiuhxzdmthc1Gn6cqH._2-lMV2nN-RNIN6b7ggfOQY._1b7b1bvhRiuhRcDQmW55h- {
+  grid-template-areas: "image text buttons" "status status status";
+}
+.x1ZXiuhxzdmthc1Gn6cqH._2-lMV2nN-RNIN6b7ggfOQY._1hA2MT9R4XntxdhXc2g4r1 {
+  grid-template-areas: "image text text" "status status buttons";
+}
+._1Tu9TzCMyCaDCxi_LZsw7R {
+  position: absolute;
+  width: 1000px;
+  height: auto;
+  opacity: 0.4;
+  filter: blur(6px);
+  transform: scale(1.07) translateY(-28px);
+}
+._1Tu9TzCMyCaDCxi_LZsw7R._3vx7I2DbzVxsE2u0v5Ie-Y {
+  opacity: 0.15;
+}
+._1Tu9TzCMyCaDCxi_LZsw7R._3_dtCEjRpmLLNOmkclrDcC {
+  filter: blur(18px);
+}
+._2cVvcDGlKQl4ctvOXNJnbj {
+  grid-area: text;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 2px 8px 1px 0;
+  justify-content: center;
+  gap: 6px;
+}
+._2cVvcDGlKQl4ctvOXNJnbj._2-lMV2nN-RNIN6b7ggfOQY {
+  margin: 0 8px 0 14px;
+}
+.bqRJHlem6AtsG_mqGj-nl {
+  display: flex;
+  flex-direction: column;
+}
+.bqRJHlem6AtsG_mqGj-nl._3IvASkrz_KwzUlcsqeLF6b {
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 6px;
+}
+._2glFMGcTPJvp6erVA6TTr_ {
+  display: flex;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+}
+._2glFMGcTPJvp6erVA6TTr_ a {
+  text-decoration: none;
+  color: #fff;
+}
+._2glFMGcTPJvp6erVA6TTr_ a:hover {
+  opacity: 0.8;
+}
+._2glFMGcTPJvp6erVA6TTr_._1TMfa019CaA4qxnR2zVK5A {
+  font-weight: 400;
+}
+._2glFMGcTPJvp6erVA6TTr_._3RWhTDfFof9_Jj4b7oYD09 {
+  font-size: 24px;
+}
+._3vWrL53WYwNeXyPrbnViQT {
+  position: relative;
+  grid-area: image;
+  display: flex;
+  width: 192px;
+  justify-content: center;
+  align-items: center;
+}
+._3vWrL53WYwNeXyPrbnViQT img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
 ._1cDWqLckZCvIIygSvUyUUV {
   display: flex;
   align-items: center;
@@ -4002,6 +4098,15 @@ div.gba9ORrJbj5gmNm9W6UUS {
   font-size: 18px;
   font-weight: 200;
   margin-left: 4px;
+}
+._2v_h3baxh4W0DWGv-qlfWc {
+  position: relative;
+  grid-area: buttons;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-self: end;
+  justify-self: end;
 }
 ._2_96_GQOvdZPdTN3T6Chw3 {
   background: #bad1e738;
@@ -6349,7 +6454,7 @@ div.gba9ORrJbj5gmNm9W6UUS {
 }
 .KxAI_M9gWx3OnKSshHOs6._1iRFj5lJrMqMnRb3GZYPSw.GamepadMode,
 .GamepadMode .KxAI_M9gWx3OnKSshHOs6._1iRFj5lJrMqMnRb3GZYPSw {
-  margin-top: 0;
+  margin-top: -4px;
   margin-left: 0;
   display: flex;
   align-items: center;
@@ -11827,6 +11932,7 @@ button.rbc-input::-moz-focus-inner {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 4px;
   flex-grow: 1;
 }
 ._3b7O9NNMod3oErBnswOTID ._3GuhUTTDRwDbcLKO4Fnm6v,
@@ -11946,6 +12052,11 @@ button.rbc-input::-moz-focus-inner {
 .Fz3D_Ob1SfsM7NlllVW4Q {
   padding-top: 10px;
 }
+._2FWCaSAjdSHf7w_aN_jPIV {
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 0 10px;
+}
 ._15rIZw2NyMBg4Q2ApraIcz {
   display: flex;
   flex-direction: row;
@@ -11962,6 +12073,15 @@ button.rbc-input::-moz-focus-inner {
 }
 .R-dUfNFnRveUE4hFgt52X .DialogInputLabelGroup {
   margin-bottom: unset;
+}
+.eyyqHrjN-07t7Dfn0OFdF {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+}
+.eyyqHrjN-07t7Dfn0OFdF button.DialogButton {
+  height: fit-content;
 }
 ._1-2t1NI3qbO2JgWmCss7AW {
   flex-grow: 2;

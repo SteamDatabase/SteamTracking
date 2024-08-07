@@ -1432,18 +1432,18 @@
           return "CGameRecording_DeleteSharedClip_Response";
         }
       }
-      class v extends h {
+      class B extends h {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            v.prototype.clip_id || o.Sg(v.M()),
+            B.prototype.clip_id || o.Sg(B.M()),
             h.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            v.sm_m ||
-              (v.sm_m = {
-                proto: v,
+            B.sm_m ||
+              (B.sm_m = {
+                proto: B,
                 fields: {
                   clip_id: {
                     n: 2,
@@ -1452,39 +1452,39 @@
                   },
                 },
               }),
-            v.sm_m
+            B.sm_m
           );
         }
         static MBF() {
-          return v.sm_mbf || (v.sm_mbf = o.w0(v.M())), v.sm_mbf;
+          return B.sm_mbf || (B.sm_mbf = o.w0(B.M())), B.sm_mbf;
         }
         toObject(e = !1) {
-          return v.toObject(e, this);
+          return B.toObject(e, this);
         }
         static toObject(e, t) {
-          return o.BT(v.M(), e, t);
+          return o.BT(B.M(), e, t);
         }
         static fromObject(e) {
-          return o.Uq(v.M(), e);
+          return o.Uq(B.M(), e);
         }
         static deserializeBinary(e) {
           let t = new l.BinaryReader(e),
-            r = new v();
-          return v.deserializeBinaryFromReader(r, t);
+            r = new B();
+          return B.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return o.zj(v.MBF(), e, t);
+          return o.zj(B.MBF(), e, t);
         }
         serializeBinary() {
           var e = new l.BinaryWriter();
-          return v.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          o.i0(v.M(), e, t);
+          o.i0(B.M(), e, t);
         }
         serializeBase64String() {
           var e = new l.BinaryWriter();
-          return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CGameRecording_GetSingleSharedClip_Request";
@@ -1538,18 +1538,18 @@
           return "CGameRecording_GetSingleSharedClip_Response";
         }
       }
-      class B extends h {
+      class v extends h {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            B.prototype.recording_id || o.Sg(B.M()),
+            v.prototype.recording_id || o.Sg(v.M()),
             h.initialize(this, e, 0, -1, [4], null);
         }
         static M() {
           return (
-            B.sm_m ||
-              (B.sm_m = {
-                proto: B,
+            v.sm_m ||
+              (v.sm_m = {
+                proto: v,
                 fields: {
                   recording_id: {
                     n: 1,
@@ -1569,39 +1569,39 @@
                   segments_to_store: { n: 4, c: g, r: !0, q: !0 },
                 },
               }),
-            B.sm_m
+            v.sm_m
           );
         }
         static MBF() {
-          return B.sm_mbf || (B.sm_mbf = o.w0(B.M())), B.sm_mbf;
+          return v.sm_mbf || (v.sm_mbf = o.w0(v.M())), v.sm_mbf;
         }
         toObject(e = !1) {
-          return B.toObject(e, this);
+          return v.toObject(e, this);
         }
         static toObject(e, t) {
-          return o.BT(B.M(), e, t);
+          return o.BT(v.M(), e, t);
         }
         static fromObject(e) {
-          return o.Uq(B.M(), e);
+          return o.Uq(v.M(), e);
         }
         static deserializeBinary(e) {
           let t = new l.BinaryReader(e),
-            r = new B();
-          return B.deserializeBinaryFromReader(r, t);
+            r = new v();
+          return v.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return o.zj(B.MBF(), e, t);
+          return o.zj(v.MBF(), e, t);
         }
         serializeBinary() {
           var e = new l.BinaryWriter();
-          return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return v.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          o.i0(B.M(), e, t);
+          o.i0(v.M(), e, t);
         }
         serializeBase64String() {
           var e = new l.BinaryWriter();
-          return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CVideo_BeginGameRecordingSegmentsUpload_Request";
@@ -1890,18 +1890,18 @@
           return "CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Response";
         }
       }
-      class P extends h {
+      class z extends h {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            P.prototype.recording_id || o.Sg(P.M()),
+            z.prototype.recording_id || o.Sg(z.M()),
             h.initialize(this, e, 0, -1, [2], null);
         }
         static M() {
           return (
-            P.sm_m ||
-              (P.sm_m = {
-                proto: P,
+            z.sm_m ||
+              (z.sm_m = {
+                proto: z,
                 fields: {
                   recording_id: {
                     n: 1,
@@ -1911,57 +1911,20 @@
                   segments_uploaded: { n: 2, c: g, r: !0, q: !0 },
                 },
               }),
-            P.sm_m
+            z.sm_m
           );
         }
         static MBF() {
-          return P.sm_mbf || (P.sm_mbf = o.w0(P.M())), P.sm_mbf;
-        }
-        toObject(e = !1) {
-          return P.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return o.BT(P.M(), e, t);
-        }
-        static fromObject(e) {
-          return o.Uq(P.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new l.BinaryReader(e),
-            r = new P();
-          return P.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return o.zj(P.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new l.BinaryWriter();
-          return P.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          o.i0(P.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new l.BinaryWriter();
-          return P.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CVideo_GameRecordingCommitSegmentUploads_Request";
-        }
-      }
-      class z extends h {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), h.initialize(this, e, 0, -1, void 0, null);
+          return z.sm_mbf || (z.sm_mbf = o.w0(z.M())), z.sm_mbf;
         }
         toObject(e = !1) {
           return z.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return o.BT(z.M(), e, t);
         }
         static fromObject(e) {
-          return new z();
+          return o.Uq(z.M(), e);
         }
         static deserializeBinary(e) {
           let t = new l.BinaryReader(e),
@@ -1969,16 +1932,53 @@
           return z.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return o.zj(z.MBF(), e, t);
         }
         serializeBinary() {
           var e = new l.BinaryWriter();
           return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          o.i0(z.M(), e, t);
+        }
         serializeBase64String() {
           var e = new l.BinaryWriter();
           return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CVideo_GameRecordingCommitSegmentUploads_Request";
+        }
+      }
+      class P extends h {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), h.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return P.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new P();
+        }
+        static deserializeBinary(e) {
+          let t = new l.BinaryReader(e),
+            r = new P();
+          return P.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new l.BinaryWriter();
+          return P.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new l.BinaryWriter();
+          return P.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CVideo_GameRecordingCommitSegmentUploads_Response";
@@ -2005,7 +2005,7 @@
           (e.GetSingleSharedClip = function (e, t) {
             return e.SendMsg(
               "GameRecordingClip.GetSingleSharedClip#1",
-              (0, s.I8)(v, t),
+              (0, s.I8)(B, t),
               T,
               { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
             );
@@ -2015,7 +2015,7 @@
           (e.BeginGameRecordingSegmentsUpload = function (e, t) {
             return e.SendMsg(
               "VideoClip.BeginGameRecordingSegmentsUpload#1",
-              (0, s.I8)(B, t),
+              (0, s.I8)(v, t),
               w,
               { ePrivilege: 1 },
             );
@@ -2039,20 +2039,20 @@
             (e.CommitSegmentUploads = function (e, t) {
               return e.SendMsg(
                 "VideoClip.CommitSegmentUploads#1",
-                (0, s.I8)(P, t),
-                z,
+                (0, s.I8)(z, t),
+                P,
                 { ePrivilege: 1 },
               );
             });
         })(k || (k = {}));
-      var L = r(65946),
+      var W = r(65946),
         D = r(14947);
-      function W() {
+      function L() {
         return window.g_GRS;
       }
       function F() {
-        if (null != W()) {
-          const e = W();
+        if (null != L()) {
+          const e = L();
           return {
             bLoading: e.BLoadingAppsWithTimelines(),
             rgApps: e.GetAppsWithTimelinesWithVideo(),
@@ -2071,38 +2071,38 @@
         };
       }
       function x(e, t, r, i, n, a) {
-        return null != W()
-          ? W().LoadThumbnails(e, t, r, i, n, null == a || a)
+        return null != L()
+          ? L().LoadThumbnails(e, t, r, i, n, null == a || a)
           : null;
       }
       function A(e, t, r) {
-        return null != W() ? W().TakeScreenshot(e, t, r.valMS) : null;
+        return null != L() ? L().TakeScreenshot(e, t, r.valMS) : null;
       }
-      function N() {
-        return null != W()
+      function U() {
+        return null != L()
           ? {
-              fnCreateUserTimelineMarkers: W().CreateUserTimelineMarkers,
-              fnUpdateUserTimelineMarkers: W().UpdateUserTimelineMarkers,
-              fnRemoveUserTimelineMarker: W().RemoveUserTimelineMarker,
+              fnCreateUserTimelineMarkers: L().CreateUserTimelineMarkers,
+              fnUpdateUserTimelineMarkers: L().UpdateUserTimelineMarkers,
+              fnRemoveUserTimelineMarker: L().RemoveUserTimelineMarker,
             }
           : null;
       }
-      function U(e, t) {
-        return (0, L.q3)(() => {
-          if (null != W()) return W().GetAchievementInfo(e, t);
+      function j(e, t) {
+        return (0, W.q3)(() => {
+          if (null != L()) return L().GetAchievementInfo(e, t);
         });
       }
-      function j() {
-        return (0, L.q3)(() => {
-          if (null != W()) return !W().BEnoughDiskSpace();
+      function N() {
+        return (0, W.q3)(() => {
+          if (null != L()) return !L().BEnoughDiskSpace();
         });
       }
-      var V,
-        H = r(86318),
+      var H,
+        V = r(86318),
         X = r(34629),
         Z = r(56093),
-        J = r(61788),
-        Q = r(39393),
+        Q = r(61788),
+        J = r(39393),
         K = r(19719),
         Y = r(4926),
         $ = r(62490),
@@ -2112,7 +2112,7 @@
         (e[(e.None = 0)] = "None"),
           (e[(e.DownloadFailed = 1)] = "DownloadFailed"),
           (e[(e.PlaybackError = 2)] = "PlaybackError");
-      })(V || (V = {}));
+      })(H || (H = {}));
       class re {
         constructor(e) {
           (this.m_elVideo = null),
@@ -2122,7 +2122,7 @@
             (this.m_bInitailized = !1),
             (this.m_bPaused = !1),
             (this.m_bAtEnd = !1),
-            (this.m_ePlayerError = V.None),
+            (this.m_ePlayerError = H.None),
             (this.m_bUserInputNeeded = !1),
             (this.m_bMuted = !1),
             (this.m_bSeekReadyToPlay = !1),
@@ -2290,7 +2290,7 @@
             (this.m_bSeekReadyToPlay = !1),
             (this.m_eSeekType = i);
           const n = `seeking_${t}_${r.toFixed(3)}`;
-          (0, H.q_)(`CGameRecordingVideo:: perf mark ${n}`),
+          (0, V.q_)(`CGameRecordingVideo:: perf mark ${n}`),
             performance.mark(n),
             this.m_player.Seek(r, this.m_eSeekType),
             (this.m_bPaused = this.m_player.IsPaused()),
@@ -2306,7 +2306,7 @@
             (this.m_bAtEnd = !1),
             (this.m_bSeekReadyToPlay = !1),
             (this.m_bVideoElementPlaying = !1),
-            (this.m_ePlayerError = V.None),
+            (this.m_ePlayerError = H.None),
             (this.m_bUserInputNeeded = !1),
             (this.m_nPlaybackTime = 0),
             (this.m_nVideoStartTime = 0),
@@ -2333,10 +2333,10 @@
           (this.m_bVideoElementPlaying = !0),
             (this.m_bIsWaiting = !1),
             this.SetPlaybackSpeed(this.m_nPlaybackSpeed),
-            (0, H.tG)("video playing");
+            (0, V.tG)("video playing");
         }
         OnVideoPause() {
-          (this.m_bVideoElementPlaying = !1), (0, H.tG)("video paused");
+          (this.m_bVideoElementPlaying = !1), (0, V.tG)("video paused");
         }
         OnVideoTimeUpdate() {
           (this.m_nVideoStartTime = this.m_player.GetAvailableVideoStartTime()),
@@ -2349,10 +2349,10 @@
         OnVideoEnd() {
           (this.m_bVideoElementPlaying = !1),
             (this.m_bAtEnd = !0),
-            (0, H.tG)("video ended");
+            (0, V.tG)("video ended");
         }
         OnSeeking() {
-          (0, H.tG)("video on seeking"),
+          (0, V.tG)("video on seeking"),
             (this.m_bVideoElementPlaying = !1),
             this.m_nVideoDuration - this.m_nPlaybackTime < 1
               ? (this.m_bAtEnd = !0)
@@ -2363,29 +2363,29 @@
         }
         async OnDownloadFailed() {
           var e;
-          (0, H.ZI)("video download failed"),
+          (0, V.ZI)("video download failed"),
             this.m_nDownloadFailureCount < 2
               ? (await (null === (e = this.m_player) || void 0 === e
                   ? void 0
                   : e.UpdateMPD()),
                 this.m_nDownloadFailureCount++)
-              : (this.m_ePlayerError = V.DownloadFailed);
+              : (this.m_ePlayerError = H.DownloadFailed);
         }
         OnPlaybackError() {
           (this.m_bVideoElementPlaying = !1),
-            (0, H.ZI)("video playback error"),
-            (this.m_ePlayerError = V.PlaybackError);
+            (0, V.ZI)("video playback error"),
+            (this.m_ePlayerError = H.PlaybackError);
         }
         OnUserInputNeeded() {
           (this.m_bUserInputNeeded = !0),
             !this.m_bMuted &&
               this.m_elVideo.autoplay &&
-              ((0, H.fX)("Failed to autoplay video. Muting and trying again."),
+              ((0, V.fX)("Failed to autoplay video. Muting and trying again."),
               this.SetMute(!0),
               this.Play());
         }
         OnVolumeChange() {
-          (0, H.tG)("volume change");
+          (0, V.tG)("volume change");
         }
         OnVideoWaiting() {
           (this.m_bIsWaiting = !0),
@@ -2432,8 +2432,8 @@
           (this.m_bAtEnd = !1),
             (this.m_bSeekReadyToPlay = !1),
             performance.mark(t),
-            (0, H.q_)(`CGameRecordingVideo:: perf mark ${t}`),
-            (0, H.q_)(`CGameRecordingVideo::Seek to ${e}`),
+            (0, V.q_)(`CGameRecordingVideo:: perf mark ${t}`),
+            (0, V.q_)(`CGameRecordingVideo::Seek to ${e}`),
             (this.m_nPlaybackTime = e),
             this.m_player.Seek(e, this.m_eSeekType);
         }
@@ -2508,7 +2508,7 @@
       }
       function pe(e) {
         const t = Ge(),
-          r = (0, L.q3)(() => t.GetIsLiveEdge() && !t.GetHidePlayer()),
+          r = (0, W.q3)(() => t.GetIsLiveEdge() && !t.GetHidePlayer()),
           n = i.useCallback(() => {
             t.SetHidePlayer(!1), t.GetGameRecordingVideo().Play();
             const e = t.GetLiveEdgeMS();
@@ -2590,10 +2590,10 @@
         (function (e) {
           (e.Never = "Never"), (e.Always = "Always"), (e.Manual = "Manual");
         })(Me || (Me = {}));
-      const Ce = 3 * Q.kh,
-        ve = Q.kh + 1e3,
+      const Ce = 3 * J.kh,
+        Be = J.kh + 1e3,
         Te = 1e3;
-      class Be {
+      class ve {
         constructor(e, t, r, i, n, a, s, l) {
           (this.m_gameRecordingVideo = null),
             (this.m_timelineLoader = null),
@@ -2755,12 +2755,12 @@
                     try {
                       const t = `measure_${this.m_strRecordingID}_${this.m_gameRecordingVideo.GetPlaybackTime().toFixed(3)}`,
                         r = performance.measure(t, e);
-                      (0, H.q_)(
+                      (0, V.q_)(
                         `CGameRecordingVideo:: perf measure ${e} duration ${r.duration}`,
                       ),
                         r && this.m_rgSeekPerf.push(r.duration);
                     } catch (t) {
-                      (0, H.q_)(
+                      (0, V.q_)(
                         `CGameRecordingVideo:: cant measure ${e}, error: ${t}`,
                       );
                     }
@@ -2798,7 +2798,7 @@
         OnInvalidateRecording(e, t) {
           const r = this.m_fnGetManifest(t);
           this.m_gameRecordingVideo.GetMPDURL() == r &&
-            ((0, H.q_)(`Recording invalidated for ${t}. Reloading MPD`),
+            ((0, V.q_)(`Recording invalidated for ${t}. Reloading MPD`),
             this.m_gameRecordingVideo.UpdateMPD());
         }
         OnLoaderInitialized() {
@@ -2808,7 +2808,7 @@
             this.TryPlayInitialTimelineVideo();
           const e =
             ((t = this.m_timelineLoader.GetGameID()),
-            (null != W() && t && W().GetClipSummariesForGame(t)) || []);
+            (null != L() && t && L().GetClipSummariesForGame(t)) || []);
           var t;
           this.SetClipOffsets(e);
         }
@@ -3124,7 +3124,7 @@
             "Overlay" === this.m_eGameRecordingMode &&
             this.m_lastRecordingGlobalMS
           ) {
-            const e = Math.max(0, this.m_lastRecordingGlobalMS.valMS - ve);
+            const e = Math.max(0, this.m_lastRecordingGlobalMS.valMS - Be);
             return (0, Y.Sb)(e);
           }
           return (0, Y.Sb)(Math.max(0, this.GetTotalMS().valMS - 1));
@@ -3133,7 +3133,7 @@
           const t = this.GetCurrentPlaybackGlobalMS(e);
           return (
             t ||
-            ((0, H.ZI)(
+            ((0, V.ZI)(
               `failed to find offset for ${this.m_strRecordingID} at ${Math.floor(1e3 * this.m_gameRecordingVideo.GetPlaybackTime())} MS`,
             ),
             null)
@@ -3308,11 +3308,11 @@
           );
           if (i) {
             const e = this.m_timelineLoader.GetGameID(),
-              { fnCreateUserTimelineMarkers: n } = N(),
+              { fnCreateUserTimelineMarkers: n } = U(),
               a = this.m_timelineLoader.GetTimelineStartBeforeGlobalZeroMS(
                 i.strTimelineID,
               );
-            J.y.ReportTrackedAction(t);
+            Q.y.ReportTrackedAction(t);
             const s = "steam_marker",
               l = await n(e, this.GetClipID(), {
                 timeline_id: i.strTimelineID,
@@ -3333,17 +3333,17 @@
           }
         }
         async RemoveUserMarker(e, t) {
-          const { fnRemoveUserTimelineMarker: r } = N(),
+          const { fnRemoveUserTimelineMarker: r } = U(),
             i = this.m_timelineLoader.GetGameID();
           return 1 == (await r(i, this.GetClipID(), e, t))
             ? (this.m_timelineLoader.RemoveUserMarker(e, t), !0)
-            : ((0, H.tG)(
+            : ((0, V.tG)(
                 `Failed to delete user marker for timeline ${e} entry ${t}`,
               ),
               !1);
         }
         async UpdateUserMarker(e, t, r, i) {
-          const { fnUpdateUserTimelineMarkers: n } = N(),
+          const { fnUpdateUserTimelineMarkers: n } = U(),
             a = this.m_timelineLoader.GetGameID(),
             s = {
               timeline_id: e,
@@ -3404,32 +3404,32 @@
           null != e && (this.m_bControlsVisible = e);
         }
       }
-      (0, X.Cg)([D.sH], Be.prototype, "m_bHidePlayer", void 0),
-        (0, X.Cg)([D.sH], Be.prototype, "m_strRecordingID", void 0),
-        (0, X.Cg)([D.sH], Be.prototype, "m_durationMS", void 0),
-        (0, X.Cg)([D.sH], Be.prototype, "m_lastRecordingGlobalMS", void 0),
-        (0, X.Cg)([D.sH], Be.prototype, "m_nGlobalTimelinePlaybackMS", void 0),
-        (0, X.Cg)([D.sH], Be.prototype, "m_nGlobalTimelinePlaybackSec", void 0),
-        (0, X.Cg)([D.sH], Be.prototype, "m_rgSeekPerf", void 0),
-        (0, X.Cg)([D.sH], Be.prototype, "m_eRecordingState", void 0),
-        (0, X.Cg)([D.sH], Be.prototype, "m_eRecordingSetting", void 0),
-        (0, X.Cg)([D.sH], Be.prototype, "m_bGamepadMode", void 0),
-        (0, X.Cg)([D.sH], Be.prototype, "m_bControlsVisible", void 0),
-        (0, X.Cg)([D.sH], Be.prototype, "m_fnRenderGlyph", void 0),
-        (0, X.Cg)([D.sH], Be.prototype, "m_previousHighlightEntry", void 0),
-        (0, X.Cg)([D.sH], Be.prototype, "m_nextHighlightEntry", void 0),
-        (0, X.Cg)([D.sH], Be.prototype, "m_displayHighlightEntry", void 0),
-        (0, X.Cg)([D.sH], Be.prototype, "m_nRelativeTimeForDisplay", void 0),
-        (0, X.Cg)([D.sH.ref], Be.prototype, "m_rgClipOffsets", void 0),
-        (0, X.Cg)([Z.oI], Be.prototype, "SetVideoElement", null),
-        (0, X.Cg)([Z.oI], Be.prototype, "OnInvalidateRecording", null),
-        (0, X.Cg)([D.XI], Be.prototype, "OnLoaderInitialized", null),
-        (0, X.Cg)([Z.oI], Be.prototype, "OnInvalidate", null),
-        (0, X.Cg)([Z.oI], Be.prototype, "OnTimelineLoaded", null),
-        (0, X.Cg)([Z.oI], Be.prototype, "GetLiveEdgeMS", null),
-        (0, X.Cg)([Z.oI], Be.prototype, "StopPlayback", null),
-        (0, X.Cg)([Z.oI], Be.prototype, "TogglePlayPause", null),
-        (0, X.Cg)([D.XI], Be.prototype, "UpdateGlobalPlayTime", null);
+      (0, X.Cg)([D.sH], ve.prototype, "m_bHidePlayer", void 0),
+        (0, X.Cg)([D.sH], ve.prototype, "m_strRecordingID", void 0),
+        (0, X.Cg)([D.sH], ve.prototype, "m_durationMS", void 0),
+        (0, X.Cg)([D.sH], ve.prototype, "m_lastRecordingGlobalMS", void 0),
+        (0, X.Cg)([D.sH], ve.prototype, "m_nGlobalTimelinePlaybackMS", void 0),
+        (0, X.Cg)([D.sH], ve.prototype, "m_nGlobalTimelinePlaybackSec", void 0),
+        (0, X.Cg)([D.sH], ve.prototype, "m_rgSeekPerf", void 0),
+        (0, X.Cg)([D.sH], ve.prototype, "m_eRecordingState", void 0),
+        (0, X.Cg)([D.sH], ve.prototype, "m_eRecordingSetting", void 0),
+        (0, X.Cg)([D.sH], ve.prototype, "m_bGamepadMode", void 0),
+        (0, X.Cg)([D.sH], ve.prototype, "m_bControlsVisible", void 0),
+        (0, X.Cg)([D.sH], ve.prototype, "m_fnRenderGlyph", void 0),
+        (0, X.Cg)([D.sH], ve.prototype, "m_previousHighlightEntry", void 0),
+        (0, X.Cg)([D.sH], ve.prototype, "m_nextHighlightEntry", void 0),
+        (0, X.Cg)([D.sH], ve.prototype, "m_displayHighlightEntry", void 0),
+        (0, X.Cg)([D.sH], ve.prototype, "m_nRelativeTimeForDisplay", void 0),
+        (0, X.Cg)([D.sH.ref], ve.prototype, "m_rgClipOffsets", void 0),
+        (0, X.Cg)([Z.oI], ve.prototype, "SetVideoElement", null),
+        (0, X.Cg)([Z.oI], ve.prototype, "OnInvalidateRecording", null),
+        (0, X.Cg)([D.XI], ve.prototype, "OnLoaderInitialized", null),
+        (0, X.Cg)([Z.oI], ve.prototype, "OnInvalidate", null),
+        (0, X.Cg)([Z.oI], ve.prototype, "OnTimelineLoaded", null),
+        (0, X.Cg)([Z.oI], ve.prototype, "GetLiveEdgeMS", null),
+        (0, X.Cg)([Z.oI], ve.prototype, "StopPlayback", null),
+        (0, X.Cg)([Z.oI], ve.prototype, "TogglePlayPause", null),
+        (0, X.Cg)([D.XI], ve.prototype, "UpdateGlobalPlayTime", null);
       const we = i.createContext({ timelinePlaybackCoordinator: null });
       function Re(e) {
         const {
@@ -3446,7 +3446,7 @@
             playbackDefinition: d,
             clipSummaries: g,
           } = e,
-          [f] = i.useState(() => new Be(a, n, r, l, o, m, d, g));
+          [f] = i.useState(() => new ve(a, n, r, l, o, m, d, g));
         (0, i.useEffect)(() => {
           var e;
           (e = null != c ? c : ye.CGameTimelineMarkerStore.Get()),
@@ -3485,15 +3485,15 @@
       }
       var Ie = r(64919),
         Ee = r.n(Ie),
-        Pe = r(60778),
-        ze = r(4434),
+        ze = r(60778),
+        Pe = r(4434),
         Oe = r(44332),
         ke = r(30470);
-      class Le {
+      class We {
         constructor() {
           (this.k_QueueWaitUntilRequestMS = 10),
             (this.k_nMaxBatchSize = 50),
-            (this.m_nMaxCacheSize = 18e5 / Q.kh),
+            (this.m_nMaxCacheSize = 18e5 / J.kh),
             (this.m_LRUTrackerSet = new Set()),
             (this.m_mapPromises = new Map()),
             (this.m_mapThumbnailImages = new Map()),
@@ -3529,7 +3529,7 @@
         }
         GetKey(e, t, r, i, n, a, s) {
           const l = n + i;
-          return `${e}_${t}_${r}_${s ? l : l - (l % Q.kh)}_${a}_${s}`;
+          return `${e}_${t}_${r}_${s ? l : l - (l % J.kh)}_${a}_${s}`;
         }
         GetThumbnailData(e) {
           const t = this.m_mapThumbnailImages.get(e);
@@ -3569,9 +3569,9 @@
               this.QueueThumbnailRequest(e, t, r, i, n, a, s).then(() => {
                 try {
                   const e = performance.measure(`measure_${m}`, m);
-                  e && Le.Get().AddPerfMeasure(e.duration);
+                  e && We.Get().AddPerfMeasure(e.duration);
                 } catch (e) {
-                  (0, H.q_)(`CThumbnailCache:: cant measure ${m}, error: ${e}`);
+                  (0, V.q_)(`CThumbnailCache:: cant measure ${m}, error: ${e}`);
                 }
               }),
               (o = this.GetThumbnailData(l));
@@ -3670,7 +3670,7 @@
               this.SetThumbnailData(n, { data: a, bIsLoading: !1 });
             }
           } catch (t) {
-            (0, H.ZI)("Failed to load multiple request thumbnails", t);
+            (0, V.ZI)("Failed to load multiple request thumbnails", t);
             for (let t = 0; t < e.length; ++t) {
               const r = e[t],
                 i = this.GetKey(
@@ -3707,11 +3707,11 @@
               let t = e ? e[0].image_data() : null;
               return this.SetThumbnailData(l, { data: t, bIsLoading: !1 }), !0;
             }
-            (0, H.tH)(
+            (0, V.tH)(
               `ThumbnailImage: got empty jpeg ${e.length} list back ${t} @ ${i}`,
             );
           } catch (e) {
-            (0, H.ZI)(
+            (0, V.ZI)(
               `ThumbnailImage: Fail to load thumbnail ${t} @ ${i} with ${e}`,
             ),
               this.SetThumbnailData(l, { data: null, bIsLoading: !1 });
@@ -3720,23 +3720,23 @@
         }
         static Get() {
           return (
-            Le.s_Singleton ||
-              ((Le.s_Singleton = new Le()),
+            We.s_Singleton ||
+              ((We.s_Singleton = new We()),
               "dev" == ke.TS.WEB_UNIVERSE &&
-                (window.g_ThumbnailCache = Le.s_Singleton)),
-            Le.s_Singleton
+                (window.g_ThumbnailCache = We.s_Singleton)),
+            We.s_Singleton
           );
         }
       }
       function De(e, t, r, n, a, s, l) {
-        const o = (0, L.q3)(() =>
-          Le.Get().GetOrQueueThumbnail(e, r, t, n, a, s, l),
+        const o = (0, W.q3)(() =>
+          We.Get().GetOrQueueThumbnail(e, r, t, n, a, s, l),
         );
         return (function (e) {
           var t;
           const r = (0, i.useRef)(null),
             n = (0, Z.CH)(),
-            a = (0, ze.m)("useThumbnailAsURL");
+            a = (0, Pe.m)("useThumbnailAsURL");
           return (
             (0, i.useEffect)(() => {
               var t;
@@ -3765,8 +3765,8 @@
           );
         })(null == o ? void 0 : o.data);
       }
-      (0, X.Cg)([D.sH], Le.prototype, "m_mapThumbnailImages", void 0);
-      var We = r(4869);
+      (0, X.Cg)([D.sH], We.prototype, "m_mapThumbnailImages", void 0);
+      var Le = r(4869);
       const Fe = { nBeforeMS: 0, nAfterMS: 12e3 },
         qe = i.createContext({
           globalStartMS: void 0,
@@ -3792,19 +3792,19 @@
       function Ae() {
         return (0, i.useContext)(qe).globalStartMS;
       }
-      function Ne() {
+      function Ue() {
         return (0, i.useContext)(qe).globalEndMS;
       }
-      function Ue() {
+      function je() {
         return (0, i.useContext)(qe).setRange;
       }
-      function je() {
+      function Ne() {
         return (0, i.useContext)(qe).setStartMS;
       }
-      function Ve() {
+      function He() {
         return (0, i.useContext)(qe).setEndMS;
       }
-      function He() {
+      function Ve() {
         const e = (0, i.useContext)(qe);
         return {
           selectedMarker: e.selectedMarker,
@@ -3826,10 +3826,10 @@
       function Ze() {
         return (0, i.useContext)(qe).clearSelection;
       }
-      function Je() {
-        const e = Ue(),
-          t = je(),
-          r = Ve(),
+      function Qe() {
+        const e = je(),
+          t = Ne(),
+          r = He(),
           n = xe(),
           a = (0, i.useContext)(qe).selectionZoomCount,
           s = (0, i.useContext)(qe).zoomIntoSelection;
@@ -3853,7 +3853,7 @@
           [n, e, t, r, a, s],
         );
       }
-      var Qe = r(87129),
+      var Je = r(87129),
         Ke = r(88997);
       var Ye;
       !(function (e) {
@@ -3909,13 +3909,13 @@
             ));
         }
         OnTimelineLoaded(e) {
-          (0, H.q_)("OnTimelineLoaded", e);
+          (0, V.q_)("OnTimelineLoaded", e);
           this.FindTimelineOffsets(e)
             ? this.ComputeEntriesForTimeline(e)
-            : (0, H.tG)("Missing timeline offset metadata for", e);
+            : (0, V.tG)("Missing timeline offset metadata for", e);
         }
         OnInvalidate(e) {
-          (0, H.q_)("on invalidate ", e);
+          (0, V.q_)("on invalidate ", e);
           const t = this.m_loader.GetGlobalTimelineEndMS().valMS,
             r = t - this.m_durationMS,
             i = this.m_durationMS <= 0;
@@ -4594,9 +4594,9 @@
       function st() {
         const e = rt(),
           t = Ge(),
-          r = Je(),
-          n = (0, L.q3)(() => !t.ShouldModeShowClipControls()),
-          a = j(),
+          r = Qe(),
+          n = (0, W.q3)(() => !t.ShouldModeShowClipControls()),
+          a = N(),
           { onMarkerCreated: s, onNavigateToClip: l } = at();
         return i.useCallback(
           (o, m, c, u) => {
@@ -4625,13 +4625,13 @@
             onMarkerCreated: l,
             onNavigateToClip: o,
           } = e,
-          m = (0, L.q3)(() => t.GetClipsAtGlobalMS(n)),
+          m = (0, W.q3)(() => t.GetClipsAtGlobalMS(n)),
           c = mt(r);
         return i.createElement(
-          Qe.tz,
+          Je.tz,
           { refInstance: c },
           i.createElement(
-            Qe.kt,
+            Je.kt,
             {
               onSelected: (e) => {
                 t.AddUserMarkerAtGlobalMS(
@@ -4658,7 +4658,7 @@
             ),
           ),
           i.createElement(
-            Qe.kt,
+            Je.kt,
             {
               onSelected: () => {
                 const { strTimelineID: e, nTimelineOffsetMS: r } =
@@ -4679,7 +4679,7 @@
             ),
           ),
           i.createElement(
-            Qe.kt,
+            Je.kt,
             {
               onSelected: () => {
                 a(t, 4, n, void 0),
@@ -4700,7 +4700,7 @@
             ),
           ),
           i.createElement(
-            Qe.kt,
+            Je.kt,
             {
               onSelected: () => {
                 a(t, 4, void 0, n),
@@ -4722,11 +4722,11 @@
           ),
           m.length > 0 &&
             i.createElement(
-              Qe.kt,
+              Je.kt,
               {
                 onSelected: () => {
                   m.length > 0 &&
-                    (J.y.ReportTrackedAction(
+                    (Q.y.ReportTrackedAction(
                       "/GameRecording/Tooltip/ViewClip/TimelineCtxMenu",
                     ),
                     o && o(m[0].strClipID));
@@ -4747,10 +4747,10 @@
           n = (0, i.useRef)(),
           { onMarkerCreated: a } = at();
         return i.createElement(
-          Qe.tz,
+          Je.tz,
           { refInstance: n },
           i.createElement(
-            Qe.kt,
+            Je.kt,
             {
               onSelected: (e) => {
                 const r = t.GetGlobalMSPlaytime();
@@ -4774,7 +4774,7 @@
             ),
           ),
           i.createElement(
-            Qe.kt,
+            Je.kt,
             {
               onSelected: () => {
                 const e = t.GetGlobalMSPlaytime(),
@@ -4792,7 +4792,7 @@
             ),
           ),
           i.createElement(
-            Qe.kt,
+            Je.kt,
             {
               onSelected: () => {
                 const e = t.GetGlobalMSPlaytime();
@@ -4810,7 +4810,7 @@
             ),
           ),
           i.createElement(
-            Qe.kt,
+            Je.kt,
             {
               onSelected: () => {
                 const e = t.GetGlobalMSPlaytime();
@@ -4830,8 +4830,8 @@
         );
       }
       function mt(e) {
-        const t = (0, L.q3)(() => e.GetAutoScrollPauseTimeout()),
-          r = (0, L.q3)(() => e.GetVisualWindowStartPX()),
+        const t = (0, W.q3)(() => e.GetAutoScrollPauseTimeout()),
+          r = (0, W.q3)(() => e.GetVisualWindowStartPX()),
           n = (0, i.useRef)(),
           a = (0, i.useRef)();
         return (
@@ -4896,7 +4896,7 @@
       }
       function ht(e) {
         const { achievementEntry: t, strGameID: r } = e,
-          n = U(new gt.VS(r).GetAppID(), t.achievement_name);
+          n = j(new gt.VS(r).GetAppID(), t.achievement_name);
         let a, s;
         if (n) (a = "white"), (s = i.createElement("img", { src: n.iconURL }));
         else {
@@ -4931,7 +4931,7 @@
       function bt(e) {
         const { strMarkerIcon: t, strGameID: r } = e,
           n = (function (e, t) {
-            return (0, L.q3)(() =>
+            return (0, W.q3)(() =>
               Se.Get().GetMarkerStore().GetGameMarkerSVGById(e, t),
             );
           })(new gt.VS(r).GetAppID(), t);
@@ -4967,10 +4967,10 @@
       }
       var yt = r(36890),
         Ct = r.n(yt);
-      const vt = parseInt(Ct().animationDuration);
+      const Bt = parseInt(Ct().animationDuration);
       function Tt() {
         const e = Ge(),
-          t = (0, L.q3)(() => e.GetDisplayHighlightEntry()),
+          t = (0, W.q3)(() => e.GetDisplayHighlightEntry()),
           [r, n] = (0, i.useState)(null),
           a = i.useRef(0);
         return (
@@ -4986,22 +4986,22 @@
                   () => {
                     e.SetDisplayHighlightEntry(null);
                   },
-                  t.duration ? t.duration : vt,
+                  t.duration ? t.duration : Bt,
                 )),
                 () => window.clearTimeout(a.current)
               );
             n(null);
           }, [t, e]),
-          r ? i.createElement(Bt, { entry: r }) : null
+          r ? i.createElement(vt, { entry: r }) : null
         );
       }
-      function Bt(e) {
+      function vt(e) {
         const { entry: t } = e,
           r = Ge(),
-          n = (0, L.q3)(() => r.GetGameID()),
+          n = (0, W.q3)(() => r.GetGameID()),
           a = r.GetGameRecordingVideo(),
-          s = (0, L.q3)(() => r.GetRecordingID()),
-          l = (0, L.q3)(() => a.IsInitialized()),
+          s = (0, W.q3)(() => r.GetRecordingID()),
+          l = (0, W.q3)(() => a.IsInitialized()),
           o = a.GetVideoHeight(),
           m = a.GetVideoWidth(),
           c = s && l && o > 0 && m > 0 ? { height: o, width: m } : {};
@@ -5045,7 +5045,7 @@
       function wt(e) {
         var t, r;
         const { entry: n, strGameID: a } = e,
-          s = U(new gt.VS(a).GetAppID(), n.achievement_name);
+          s = j(new gt.VS(a).GetAppID(), n.achievement_name);
         return s
           ? i.createElement(Rt, {
               key: n.id,
@@ -5083,19 +5083,19 @@
       var Gt = r(71513),
         It = r(76970),
         Et = r.n(It),
-        Pt = r(91675);
-      const zt = parseInt(Et().animationDuration);
+        zt = r(91675);
+      const Pt = parseInt(Et().animationDuration);
       function Ot() {
         const e = Ge(),
           t = e.GetGameRecordingVideo(),
-          r = (0, L.q3)(() => e.GetRecordingID()),
-          n = (0, L.q3)(() => t.IsInitialized()),
+          r = (0, W.q3)(() => e.GetRecordingID()),
+          n = (0, W.q3)(() => t.IsInitialized()),
           a = t.GetVideoHeight(),
           s = t.GetVideoWidth(),
           l = r && n && a > 0 && s > 0 ? { height: a, width: s } : {},
           o = i.useRef(0),
-          m = (0, L.q3)(() => e.GetRelativeTimeForDisplay()),
-          c = (0, L.q3)(() => e.GetGameRecordingVideo().IsInitialized()),
+          m = (0, W.q3)(() => e.GetRelativeTimeForDisplay()),
+          c = (0, W.q3)(() => e.GetGameRecordingVideo().IsInitialized()),
           u = (0, i.useMemo)(() => {
             if (isNaN(m) || !c) return null;
             const t = e.ConvertGlobalOffsetToTimelineRelativeOffset(m);
@@ -5104,7 +5104,7 @@
                 t.strTimelineID,
                 t.nTimelineOffsetMS.valMS,
               );
-              return (0, Pt.dt)(r / 1e3, !1, !0);
+              return (0, zt.dt)(r / 1e3, !1, !0);
             }
             return null;
           }, [c, m, e]);
@@ -5114,7 +5114,7 @@
               return (
                 (o.current = window.setTimeout(() => {
                   e.ClearRelativeTimeDisplay();
-                }, zt)),
+                }, Pt)),
                 () => window.clearTimeout(o.current)
               );
           }, [m, e]),
@@ -5132,7 +5132,7 @@
         );
       }
       var kt = r(56011);
-      function Lt(e) {
+      function Wt(e) {
         const {
             disableSound: t,
             positionAbsolute: r = !0,
@@ -5147,16 +5147,16 @@
             (0, Z.QS)((e) => (c(e), () => m()), [c]));
         var m, c;
         const u = l.GetGameRecordingVideo(),
-          d = (0, L.q3)(() => l.GetRecordingID()),
-          g = (0, L.q3)(() => u.GetPlaybackError()),
-          f = (0, L.q3)(() => "Overlay" === l.GetRecordingMode()),
+          d = (0, W.q3)(() => l.GetRecordingID()),
+          g = (0, W.q3)(() => u.GetPlaybackError()),
+          f = (0, W.q3)(() => "Overlay" === l.GetRecordingMode()),
           p = (function () {
             const e = Ge(),
-              t = (0, L.q3)(() => e.GetGlobalMSPlaytime()),
+              t = (0, W.q3)(() => e.GetGlobalMSPlaytime()),
               { nGlobalEndMS: r, nGlobalStartMS: i } = xe(),
               n = e.GetGameRecordingVideo();
             return (
-              !((0, L.q3)(() => n.GetPlaybackError()) || !t || !i || !r) &&
+              !((0, W.q3)(() => n.GetPlaybackError()) || !t || !i || !r) &&
               t.valMS >= i.valMS &&
               t.valMS <= r.valMS
             );
@@ -5167,9 +5167,9 @@
         let b = (0, Z.Ue)(o, n);
         const M = (function () {
           const e = Ge(),
-            t = Je(),
-            r = (0, L.q3)(() => !e.ShouldModeShowClipControls()),
-            n = j(),
+            t = Qe(),
+            r = (0, W.q3)(() => !e.ShouldModeShowClipControls()),
+            n = N(),
             { onMarkerCreated: a } = at();
           return i.useCallback(
             (s, l) => {
@@ -5196,7 +5196,7 @@
             [_, M],
           ),
           C = !ke.TS.IN_STEAMUI && !!e.autoPlay;
-        let v = (0, me.A)(
+        let B = (0, me.A)(
           Ee().GameRecordingPlayer,
           _ && Ee().NoVideo,
           r && Ee().PositionAbsolute,
@@ -5208,7 +5208,7 @@
           "div",
           {
             ref: S,
-            className: v,
+            className: B,
             onClick: function () {
               d && l.TogglePlayPause();
             },
@@ -5227,7 +5227,7 @@
           }),
           i.createElement(qt, { player: u }),
           i.createElement(Dt, null),
-          i.createElement(Wt, null),
+          i.createElement(Lt, null),
           i.createElement(Ft, null),
           !d && i.createElement(xt, null),
           i.createElement(Tt, null),
@@ -5236,8 +5236,8 @@
       }
       function Dt() {
         const e = Ge(),
-          t = Pe.fi.Get().IsDebugLogEnabled("GR"),
-          r = (0, L.q3)(() => e.GetPlaybackStats());
+          t = ze.fi.Get().IsDebugLogEnabled("GR"),
+          r = (0, W.q3)(() => e.GetPlaybackStats());
         return t && r
           ? i.createElement(
               "div",
@@ -5281,14 +5281,14 @@
             )
           : null;
       }
-      function Wt() {
-        const e = Pe.fi.Get().IsDebugLogEnabled("GR"),
+      function Lt() {
+        const e = ze.fi.Get().IsDebugLogEnabled("GR"),
           t = Ge(),
           r =
-            ((0, L.q3)(() => {
+            ((0, W.q3)(() => {
               t.GetGlobalMSPlaytime();
             }),
-            Le.Get().GetPerfMeasures());
+            We.Get().GetPerfMeasures());
         return e && r
           ? i.createElement(
               "div",
@@ -5336,24 +5336,24 @@
         const e = Ge(),
           t = e.GetGameRecordingVideo(),
           r = t.GetVideoHeight(),
-          n = (0, L.q3)(() => t.BVideoElementWaiting()),
-          a = (0, L.q3)(() => t.IsPaused()),
-          s = (0, L.q3)(() => t.GetPlaybackError()),
-          l = (0, L.q3)(() => t.IsInitialized());
-        return !(0, L.q3)(() => e.GetRecordingID()) || (l && !n) || s || a
+          n = (0, W.q3)(() => t.BVideoElementWaiting()),
+          a = (0, W.q3)(() => t.IsPaused()),
+          s = (0, W.q3)(() => t.GetPlaybackError()),
+          l = (0, W.q3)(() => t.IsInitialized());
+        return !(0, W.q3)(() => e.GetRecordingID()) || (l && !n) || s || a
           ? null
           : i.createElement(
               "div",
               { className: Ee().LoadingSpinner, style: { height: r } },
-              i.createElement(We.y$y, null),
+              i.createElement(Le.y$y, null),
             );
       }
       function qt(e) {
         let { player: t } = e,
           r = "";
-        switch ((0, L.q3)(() => t.GetPlaybackError())) {
-          case V.DownloadFailed:
-          case V.PlaybackError:
+        switch ((0, W.q3)(() => t.GetPlaybackError())) {
+          case H.DownloadFailed:
+          case H.PlaybackError:
             r = "#GameRecording_PlayerError_Generic";
         }
         return r
@@ -5370,12 +5370,12 @@
       }
       function xt() {
         const e = Ge(),
-          t = (0, L.q3)(() => e.GetGamepadMode()),
+          t = (0, W.q3)(() => e.GetGamepadMode()),
           { onNavigateToClip: r, onNavigateToFAQ: n } = at(),
-          a = (0, L.q3)(() => e.GetGlobalMSPlaytime()),
+          a = (0, W.q3)(() => e.GetGlobalMSPlaytime()),
           s = e.GetClosestPreviousRecordingForGlobalMS(a),
           l = e.GetClosestNextRecordingForGlobalMS(a),
-          o = (0, L.q3)(() => e.GetClipsAtGlobalMS(a)),
+          o = (0, W.q3)(() => e.GetClipsAtGlobalMS(a)),
           m = (0, i.useCallback)(
             (t) => {
               if (s) {
@@ -5397,7 +5397,7 @@
           u = (0, i.useCallback)(
             (e) => {
               o.length > 0 &&
-                (J.y.ReportTrackedAction(
+                (Q.y.ReportTrackedAction(
                   "/GameRecording/Tooltip/ViewClip/PlayerNoContent",
                 ),
                 r(o[0].strClipID),
@@ -5496,16 +5496,16 @@
         );
       }
       var At = r(8959),
-        Nt = r(59254);
-      const Ut = [1e3, 5e3, 3e4, 6e4, 15e4, 3e5, 9e5, 18e5],
-        jt = i.memo(function (e) {
+        Ut = r(59254);
+      const jt = [1e3, 5e3, 3e4, 6e4, 15e4, 3e5, 9e5, 18e5],
+        Nt = i.memo(function (e) {
           const t = rt(),
-            r = (0, L.q3)(() => t.GetVisibleTimelines());
+            r = (0, W.q3)(() => t.GetVisibleTimelines());
           return i.createElement(
             i.Fragment,
             null,
             r.map((e) =>
-              i.createElement(Vt, {
+              i.createElement(Ht, {
                 key: e.timelineID,
                 msVisibleStart: e.msVisibleStart,
                 pxVisibleDuration: e.pxVisibleDuration,
@@ -5515,7 +5515,7 @@
             ),
           );
         }),
-        Vt = i.memo(function (e) {
+        Ht = i.memo(function (e) {
           const {
               msVisibleStart: t,
               msTimelineStart: r,
@@ -5524,10 +5524,10 @@
             } = e,
             { msTickSpacing: s, pxTickSpacing: l } = (function () {
               const e = rt(),
-                t = (0, L.q3)(() => e.GetCurrentZoomScale()),
+                t = (0, W.q3)(() => e.GetCurrentZoomScale()),
                 r = 300,
                 i = (e) => Math.abs(r - e / t),
-                n = Ut.reduce((e, t) => (i(e) - i(t) < 0 ? e : t)) / 20,
+                n = jt.reduce((e, t) => (i(e) - i(t) < 0 ? e : t)) / 20,
                 a = n / t;
               return { msTickSpacing: n, pxTickSpacing: a };
             })(),
@@ -5550,11 +5550,11 @@
                 i.Fragment,
                 null,
                 i.createElement("div", {
-                  className: Nt.TimelineBacking,
+                  className: Ut.TimelineBacking,
                   style: { transform: `translateX(${a}px)`, width: n },
                 }),
                 d.map((e) =>
-                  i.createElement(Ht, {
+                  i.createElement(Vt, {
                     key: e.key,
                     timelineRelativeIndex: e.iTimelineRelativeTick,
                     globalOffsetPX: e.offsetPX,
@@ -5563,16 +5563,16 @@
               )
             : null;
         });
-      function Ht(e) {
+      function Vt(e) {
         const { globalOffsetPX: t, timelineRelativeIndex: r } = e,
-          n = r % 20 == 0 ? Nt.Major : Nt.Minor;
+          n = r % 20 == 0 ? Ut.Major : Ut.Minor;
         return i.createElement(
           "div",
           {
-            className: Nt.TimeTick,
+            className: Ut.TimeTick,
             style: { transform: `translateX(${t}px)` },
           },
-          i.createElement("div", { className: (0, me.A)(Nt.TickLine, n) }),
+          i.createElement("div", { className: (0, me.A)(Ut.TickLine, n) }),
         );
       }
       var Xt = r(23533);
@@ -5596,8 +5596,8 @@
           return this.m_reservations.splice(r, 0, t), !0;
         }
       }
-      var Jt = r(41972),
-        Qt = r(71298),
+      var Qt = r(41972),
+        Jt = r(71298),
         Kt = r(21273),
         Yt = r(7068);
       function $t(e) {
@@ -5610,9 +5610,9 @@
           } = e,
           [l, o] = i.useState(n.title || ""),
           [m, c] = i.useState(n.description || ""),
-          u = (0, Qt.vs)();
+          u = (0, Jt.vs)();
         return u.bLoading
-          ? i.createElement(Qt.Hh, {
+          ? i.createElement(Jt.Hh, {
               state: u,
               strDialogTitle: (0, ce.we)("#Marker_Dialog"),
               closeModal: t,
@@ -5657,8 +5657,8 @@
             onNavigateToClip: o,
             onNavigateToScreenshot: m,
           } = e,
-          c = (0, L.q3)(() => r.ConvertGlobalMSToClipOrNone(n.nGlobalMS.valMS)),
-          u = (0, L.q3)(() =>
+          c = (0, W.q3)(() => r.ConvertGlobalMSToClipOrNone(n.nGlobalMS.valMS)),
+          u = (0, W.q3)(() =>
             t.ConvertGlobaOffsetToRecordingAndRelativeOffset(n.nGlobalMS.valMS),
           ),
           d = mt(r),
@@ -5676,21 +5676,21 @@
               );
             t.SetPlaytimeFromGlobalMS((0, Y.Sb)(s)),
               null == a || a(n.entry.id, n.strTimelineID, s, l),
-              J.y.ReportTrackedAction(
+              Q.y.ReportTrackedAction(
                 "/GameRecording/HighlightCtxMenu/ClipFromHighlight",
               ),
               e.stopPropagation();
           },
           f = () => {
             c &&
-              (J.y.ReportTrackedAction(
+              (Q.y.ReportTrackedAction(
                 `/GameRecording/MarkerCtxMenu/ViewClip/${n.entry.type}`,
               ),
               o && o(c.clipID));
           },
           p = (e) => {
             if (!(0, ct.N$)(n.entry)) return;
-            J.y.ReportTrackedAction(
+            Q.y.ReportTrackedAction(
               `/GameRecording/HighlightCtxMenu/Marker/Edit/${n.entry.type}`,
             );
             let r = i.createElement($t, {
@@ -5705,7 +5705,7 @@
           },
           h = (e) => {
             (0, ct.N$)(n.entry) &&
-              (J.y.ReportTrackedAction(
+              (Q.y.ReportTrackedAction(
                 `/GameRecording/HighlightCtxMenu/Marker/Delete/${n.entry.type}`,
               ),
               t.RemoveUserMarker(n.strTimelineID, n.entry.id));
@@ -5714,7 +5714,7 @@
             var e;
             (0, ct.sX)(n.entry) &&
               (null === (e = n.entry) || void 0 === e ? void 0 : e.handle) &&
-              (J.y.ReportTrackedAction(
+              (Q.y.ReportTrackedAction(
                 "/GameRecording/HighlightCtxMenu/Screenshot",
               ),
               m(r.GetGameID(), n.entry.handle));
@@ -5724,15 +5724,15 @@
           (0, ct.N$)(n.entry) &&
             S.push(
               i.createElement(
-                Qe.kt,
+                Je.kt,
                 {
                   key: "edit",
                   onSelected: p,
-                  className: Jt.HighlightContextMenuItem,
+                  className: Qt.HighlightContextMenuItem,
                 },
                 i.createElement(
                   "div",
-                  { className: (0, me.A)(Jt.MenuItem, Jt.EditMarker) },
+                  { className: (0, me.A)(Qt.MenuItem, Qt.EditMarker) },
                   i.createElement(de.ff, null),
                   (0, ce.we)("#Marker_Action_Edit"),
                 ),
@@ -5742,15 +5742,15 @@
             !l &&
             S.push(
               i.createElement(
-                Qe.kt,
+                Je.kt,
                 {
                   key: "clip",
                   onSelected: g,
-                  className: Jt.HighlightContextMenuItem,
+                  className: Qt.HighlightContextMenuItem,
                 },
                 i.createElement(
                   "div",
-                  { className: (0, me.A)(Jt.MenuItem, Jt.CreateClip) },
+                  { className: (0, me.A)(Qt.MenuItem, Qt.CreateClip) },
                   i.createElement(de.Wd, null),
                   (0, ce.we)("#TimelineDialog_ClipVideo"),
                 ),
@@ -5759,16 +5759,16 @@
           (0, ct.N$)(n.entry) &&
             S.push(
               i.createElement(
-                Qe.kt,
+                Je.kt,
                 {
                   key: "delete",
                   onSelected: h,
-                  className: Jt.HighlightContextMenuItem,
+                  className: Qt.HighlightContextMenuItem,
                 },
                 i.createElement(
                   "div",
-                  { className: (0, me.A)(Jt.MenuItem, Jt.DeleteMarker) },
-                  i.createElement(We.lMJ, null),
+                  { className: (0, me.A)(Qt.MenuItem, Qt.DeleteMarker) },
+                  i.createElement(Le.lMJ, null),
                   (0, ce.we)("#Marker_Action_Delete"),
                 ),
               ),
@@ -5776,15 +5776,15 @@
           (0, ct.sX)(n.entry) &&
             S.push(
               i.createElement(
-                Qe.kt,
+                Je.kt,
                 {
                   key: "view_screenshot",
                   onSelected: _,
-                  className: Jt.HighlightContextMenuItem,
+                  className: Qt.HighlightContextMenuItem,
                 },
                 i.createElement(
                   "div",
-                  { className: (0, me.A)(Jt.MenuItem, Jt.ViewScreenshot) },
+                  { className: (0, me.A)(Qt.MenuItem, Qt.ViewScreenshot) },
                   i.createElement(de.pw, null),
                   (0, ce.we)("#TimelineDialog_ViewScreenshot"),
                 ),
@@ -5794,21 +5794,21 @@
             f &&
             S.push(
               i.createElement(
-                Qe.kt,
+                Je.kt,
                 {
                   key: "view_clip",
                   onSelected: f,
-                  className: Jt.HighlightContextMenuItem,
+                  className: Qt.HighlightContextMenuItem,
                 },
                 i.createElement(
                   "div",
-                  { className: (0, me.A)(Jt.MenuItem, Jt.ViewClip) },
+                  { className: (0, me.A)(Qt.MenuItem, Qt.ViewClip) },
                   i.createElement(de.ai, null),
                   (0, ce.we)("#TimelineDialog_ViewClip"),
                 ),
               ),
             ),
-          S.length ? i.createElement(Qe.tz, { refInstance: d }, S) : null
+          S.length ? i.createElement(Je.tz, { refInstance: d }, S) : null
         );
       }
       const rr = 5e3,
@@ -5825,19 +5825,19 @@
             faded: m,
           } = e,
           c = r.nGlobalMS,
-          u = (0, L.q3)(() => n.ConvertGlobalMSToGlobalPXOffset(c.valMS)),
-          d = (0, L.q3)(() => {
+          u = (0, W.q3)(() => n.ConvertGlobalMSToGlobalPXOffset(c.valMS)),
+          d = (0, W.q3)(() => {
             const e = n.GetThumbnailComponent();
             return e && e !== Ye.Highlight;
           }),
           g = (function () {
             const e = rt(),
               t = Ge(),
-              { setSelectedMarker: r } = He(),
+              { setSelectedMarker: r } = Ve(),
               n = Ze(),
               { onNavigateToClip: a, onNavigateToScreenshot: s } = at(),
-              l = j(),
-              o = (0, L.q3)(() => !t.ShouldModeShowClipControls());
+              l = N(),
+              o = (0, W.q3)(() => !t.ShouldModeShowClipControls());
             return i.useCallback(
               (m, c, u) => {
                 if (o) return;
@@ -5856,7 +5856,7 @@
               [o, l, t, e, r, a, s, n],
             );
           })(),
-          { selectedMarker: f } = He(),
+          { selectedMarker: f } = Ve(),
           p =
             (null === (t = r.entry) || void 0 === t ? void 0 : t.id) ==
               (null == f ? void 0 : f.strEntryID) &&
@@ -5933,7 +5933,7 @@
               a.SetPlaytimeFromGlobalMS((0, Y.Sb)(s)),
                 a.SetDisplayHighlightEntry(r.entry),
                 e.stopPropagation(),
-                J.y.ReportTrackedAction(
+                Q.y.ReportTrackedAction(
                   `/GameRecording/Marker/Click/${r.entry.type}`,
                 );
             },
@@ -5988,7 +5988,7 @@
       }
       const lr = i.memo(function (e) {
           const t = rt(),
-            r = (0, L.q3)(() => t.GetVisibleTimelines());
+            r = (0, W.q3)(() => t.GetVisibleTimelines());
           return i.createElement(
             i.Fragment,
             null,
@@ -6012,10 +6012,10 @@
         const { timeline: t } = e,
           r = rt(),
           n = Ge(),
-          a = (0, L.q3)(() =>
+          a = (0, W.q3)(() =>
             [...(r.GetVisibleTimelineHighlights(t.timelineID) || [])].sort(mr),
           ),
-          s = (0, L.q3)(() => r.GetTimelineOffsetMS(t.timelineID)),
+          s = (0, W.q3)(() => r.GetTimelineOffsetMS(t.timelineID)),
           l = t.globalOffsetMS - s,
           o = n.GetGameID(),
           m = n.GetClipID(),
@@ -6062,7 +6062,7 @@
           ].includes(r.type)
         )
           return (
-            (0, H.q_)(
+            (0, V.q_)(
               `Unexpected timeline entry type ${r.type}, returning empty highlight marker`,
             ),
             null
@@ -6089,12 +6089,12 @@
           } = e,
           s = Ge(),
           l = (0, Y.Sb)(parseInt(r.time) + a.valMS),
-          o = (0, L.q3)(() => {
+          o = (0, W.q3)(() => {
             const e = t.ConvertGlobalMSToGlobalPXOffset(l.valMS),
               r = t.GetVirtualWindowStartPX();
             return r < e ? e : r;
           }),
-          m = (0, L.q3)(() => {
+          m = (0, W.q3)(() => {
             const e = t.ConvertGlobalMSToGlobalPXOffset(n.valMS),
               r = t.GetVirtualWindowEndPX();
             return r < e ? r : e;
@@ -6119,7 +6119,7 @@
       }
       const fr = i.memo(function (e) {
           const t = rt(),
-            r = (0, L.q3)(() => t.GetVisibleTimelines());
+            r = (0, W.q3)(() => t.GetVisibleTimelines());
           return i.createElement(
             i.Fragment,
             null,
@@ -6135,7 +6135,7 @@
               nDurationMS: n,
             } = e.timeline,
             a = rt(),
-            s = (0, L.q3)(() => {
+            s = (0, W.q3)(() => {
               const e = a.GetVisibleTimelineGameModes(t);
               return e && 0 !== e.length
                 ? e
@@ -6184,11 +6184,11 @@
           [l, o] = (0, i.useState)(),
           m = (0, i.useRef)(),
           c = rt(),
-          u = (0, L.q3)(() => c.GetScrollableWidthPX()),
-          d = (0, L.q3)(() => c.GetVisualWindowStartPX()),
-          g = (0, L.q3)(() => c.GetScrollWindowWidth()),
-          f = (0, L.q3)(() => c.GetScrollWindowOffset()),
-          p = (0, L.q3)(() => c.GetTimelineMarginWidth()),
+          u = (0, W.q3)(() => c.GetScrollableWidthPX()),
+          d = (0, W.q3)(() => c.GetVisualWindowStartPX()),
+          g = (0, W.q3)(() => c.GetScrollWindowWidth()),
+          f = (0, W.q3)(() => c.GetScrollWindowOffset()),
+          p = (0, W.q3)(() => c.GetTimelineMarginWidth()),
           h = i.useMemo(() => {
             if (m.current) {
               const e = d - f - p;
@@ -6228,7 +6228,7 @@
           C = (0, i.useCallback)((e) => {
             s(!0);
           }, []),
-          v = (0, i.useCallback)((e) => {
+          B = (0, i.useCallback)((e) => {
             s(!1);
           }, []);
         (0, i.useEffect)(() => {
@@ -6258,8 +6258,8 @@
               ref: m,
               onMouseOver: C,
               onFocus: C,
-              onMouseOut: v,
-              onBlur: v,
+              onMouseOut: B,
+              onBlur: B,
               onMouseEnter: b,
               onMouseLeave: M,
               className: _r.MouseListenerContainer,
@@ -6277,7 +6277,7 @@
       function Cr() {
         return (0, i.useContext)(Sr).bContainerFocus;
       }
-      function vr(e, t) {
+      function Br(e, t) {
         const r = (0, i.useContext)(Sr).fnRegisterMouseEvent,
           n = (0, i.useRef)(),
           a = (0, i.useCallback)(() => {
@@ -6289,12 +6289,12 @@
         (0, i.useEffect)(() => (a(), () => s()), [a, s]);
       }
       var Tr = r(5540);
-      const Br = (0, i.memo)(function (e) {
+      const vr = (0, i.memo)(function (e) {
         const t = Ge(),
-          r = (0, L.q3)(() => t.GetHidePlayer()),
+          r = (0, W.q3)(() => t.GetHidePlayer()),
           [n, a] = (0, i.useState)({ bDragActive: !1, bPausedOnDragStart: !1 }),
           s = rt(),
-          l = (0, L.q3)(() => {
+          l = (0, W.q3)(() => {
             if (
               s.GetAutoScrollPaused() ||
               s.BReachedMaxScroll() ||
@@ -6316,11 +6316,11 @@
       });
       function wr(e) {
         const { view: t, setDragActive: r } = e,
-          n = (0, L.q3)(
+          n = (0, W.q3)(
             () => t.GetVisualWindowStartPX() + t.GetScrollWindowWidth() / 2,
           );
         return i.createElement(
-          zr,
+          Pr,
           { playheadPosition: n },
           i.createElement(Ir, { setDragActive: r, bDragActive: !1 }),
         );
@@ -6328,7 +6328,7 @@
       const Rr = (0, i.memo)(function (e) {
           const { setDragActive: t } = e,
             r = rt(),
-            n = (0, L.q3)(() => r.GetScrollableWidthPX()),
+            n = (0, W.q3)(() => r.GetScrollableWidthPX()),
             a = (0, Z._g)(100),
             s = (0, i.useCallback)(
               (e) => {
@@ -6340,7 +6340,7 @@
             (0, i.useEffect)(() => r.ScrollToEnd(), [r]),
             (0, i.useEffect)(() => s(n), [n, s]),
             i.createElement(
-              zr,
+              Pr,
               { playheadPosition: n },
               i.createElement(Ir, { setDragActive: t, bDragActive: !1 }),
             )
@@ -6354,8 +6354,8 @@
             o = Mr(),
             m = (function (e, t, r, n, a) {
               const s = (0, i.useRef)(),
-                l = (0, L.q3)(() => t.GetScrollableWidthPX()),
-                o = (0, L.q3)(() => t.GetScrollWindowWidth()),
+                l = (0, W.q3)(() => t.GetScrollableWidthPX()),
+                o = (0, W.q3)(() => t.GetScrollWindowWidth()),
                 [m, c] = (0, i.useState)(0),
                 u = (0, i.useRef)(),
                 d = (0, i.useRef)(),
@@ -6465,8 +6465,8 @@
               );
               return (
                 (0, i.useEffect)(() => {
-                  const i = o * (1 - Ui),
-                    a = o * Ui;
+                  const i = o * (1 - ji),
+                    a = o * ji;
                   if (
                     (u.current &&
                       (cancelAnimationFrame(u.current),
@@ -6516,7 +6516,7 @@
                 ),
               },
               i.createElement(
-                zr,
+                Pr,
                 { className: n ? Tr.Active : void 0, playheadPosition: m },
                 i.createElement(Ir, { setDragActive: r, bDragActive: n }),
               ),
@@ -6549,7 +6549,7 @@
             r = Ge(),
             n = st(),
             a = rt(),
-            s = (0, L.q3)(() => {
+            s = (0, W.q3)(() => {
               const e = a.GetThumbnailComponent();
               return e === Ye.RangeLeft || e === Ye.RangeRight;
             }),
@@ -6597,10 +6597,10 @@
               onMouseDown: l,
               onContextMenu: o,
             },
-            i.createElement(Pr, null),
+            i.createElement(zr, null),
           );
         });
-      function Pr(e) {
+      function zr(e) {
         return i.createElement(
           "svg",
           {
@@ -6624,7 +6624,7 @@
           }),
         );
       }
-      function zr(e) {
+      function Pr(e) {
         const { className: t, playheadPosition: r, children: n } = e;
         return i.createElement(
           "div",
@@ -6637,7 +6637,7 @@
       }
       var Or = r(48419);
       const kr = parseInt(Or.thumbnailWidth),
-        Lr = i.forwardRef(function (e, t) {
+        Wr = i.forwardRef(function (e, t) {
           const {
               globalMS: r,
               children: n,
@@ -6648,8 +6648,8 @@
             o = Ge(),
             m = o.GetGameID(),
             c = o.GetClipID(),
-            u = (0, L.q3)(() => o.GetRecordingMode()),
-            d = (0, L.q3)(() =>
+            u = (0, W.q3)(() => o.GetRecordingMode()),
+            d = (0, W.q3)(() =>
               o.ConvertGlobaOffsetToRecordingAndRelativeOffset(r),
             ),
             g = (Xe(), null == d ? void 0 : d.nRecordingOffsetMS),
@@ -6716,12 +6716,12 @@
         });
       function Dr() {
         const e = rt(),
-          t = (0, L.q3)(() => e.GetGameID()),
-          r = (0, L.q3)(() => e.GetThumbnailComponent()),
-          n = (0, L.q3)(() => e.GetThumbnailEntry());
+          t = (0, W.q3)(() => e.GetGameID()),
+          r = (0, W.q3)(() => e.GetThumbnailComponent()),
+          n = (0, W.q3)(() => e.GetThumbnailEntry());
         if (!n || r !== Ye.Highlight) return null;
         if ((0, ct.xz)(n.entry))
-          return i.createElement(Wr, {
+          return i.createElement(Lr, {
             thumbnailEntry: n,
             achievementEntry: n.entry,
             strGameID: t,
@@ -6749,10 +6749,10 @@
             : null
         );
       }
-      function Wr(e) {
+      function Lr(e) {
         var t, r;
         const { strGameID: n, thumbnailEntry: a, achievementEntry: s } = e,
-          l = U(new gt.VS(n).GetAppID(), s.achievement_name);
+          l = j(new gt.VS(n).GetAppID(), s.achievement_name);
         return l
           ? i.createElement(Fr, {
               title: null !== (t = l.name) && void 0 !== t ? t : "",
@@ -6790,12 +6790,12 @@
       const qr = i.forwardRef(function (e, t) {
         const { globalPX: r, onMouseEnter: n, onMouseLeave: a } = e,
           s = rt(),
-          l = (0, L.q3)(() => s.ConvertPXOffsetToGlobalMS(r, !1)),
-          o = (0, L.q3)(() => s.GetThumbnailComponent()),
+          l = (0, W.q3)(() => s.ConvertPXOffsetToGlobalMS(r, !1)),
+          o = (0, W.q3)(() => s.GetThumbnailComponent()),
           m = Ge(),
-          c = (0, L.q3)(() => m.GetRecordingMode());
+          c = (0, W.q3)(() => m.GetRecordingMode());
         return i.createElement(
-          Lr,
+          Wr,
           {
             className: (0, me.A)(Or.ThumbnailTooltip, Or[c], Or[o]),
             globalMS: l,
@@ -6809,24 +6809,24 @@
             { className: Or.TooltipInteractionRegion },
             o === Ye.Highlight
               ? i.createElement(Ar, null)
-              : i.createElement(Nr, { globalPX: r }),
-            i.createElement(Ur, { globalMS: l }),
+              : i.createElement(Ur, { globalPX: r }),
+            i.createElement(jr, { globalMS: l }),
           ),
         );
       });
       function xr(e) {
         const { globalMS: t } = e,
           r = rt(),
-          n = (0, L.q3)(() => r.GetStateDescriptionAtGlobalMS(t));
+          n = (0, W.q3)(() => r.GetStateDescriptionAtGlobalMS(t));
         return (null == n ? void 0 : n.title)
           ? i.createElement("div", { className: Or.StateDescription }, n.title)
           : null;
       }
       function Ar() {
         const e = Ge(),
-          t = (0, L.q3)(() => e.GetRecordingMode()),
+          t = (0, W.q3)(() => e.GetRecordingMode()),
           r = rt(),
-          n = (0, L.q3)(() => r.GetThumbnailEntry());
+          n = (0, W.q3)(() => r.GetThumbnailEntry());
         if (!n) return null;
         const a = r.GetTimelineOffsetMS(n.strTimelineID),
           s = parseInt(n.entry.time),
@@ -6836,14 +6836,14 @@
         if ((0, ct.zG)(n.entry)) {
           const e = o + parseInt(n.entry.duration);
           if (o < 0) {
-            const t = (0, Pt.qZ)(Math.abs(o / 1e3), !1, !1),
-              r = (0, Pt.qZ)(Math.abs(e / 1e3), !1, !1);
+            const t = (0, zt.qZ)(Math.abs(o / 1e3), !1, !1),
+              r = (0, zt.qZ)(Math.abs(e / 1e3), !1, !1);
             m = (0, ce.we)("#Duration_WrittenNegation", t + " - " + r);
           } else {
             m =
-              (0, Pt.qZ)(o / 1e3, !1, !1) + " - " + (0, Pt.qZ)(e / 1e3, !1, !1);
+              (0, zt.qZ)(o / 1e3, !1, !1) + " - " + (0, zt.qZ)(e / 1e3, !1, !1);
           }
-        } else m = (0, Pt.qZ)(o / 1e3, !1, !0);
+        } else m = (0, zt.qZ)(o / 1e3, !1, !0);
         return i.createElement(
           "div",
           {
@@ -6852,44 +6852,44 @@
           m,
         );
       }
-      function Nr(e) {
+      function Ur(e) {
         const { globalPX: t } = e,
           r = rt(),
-          n = (0, L.q3)(() =>
+          n = (0, W.q3)(() =>
             r.ConvertPXToTimelineRelativeMS(t, "end-if-active"),
           );
         return Boolean(n)
           ? i.createElement(
               "div",
               { className: Or.TimeDisplayContainer },
-              (0, Pt.qZ)(n / 1e3, !1, !0),
+              (0, zt.qZ)(n / 1e3, !1, !0),
             )
           : null;
       }
-      function Ur(e) {
+      function jr(e) {
         const { globalMS: t } = e,
           r = rt(),
-          n = (0, L.q3)(() => r.GetGameID()),
-          a = (0, L.q3)(() => r.GetThumbnailComponent()),
-          s = (0, L.q3)(() => r.GetThumbnailEntry());
+          n = (0, W.q3)(() => r.GetGameID()),
+          a = (0, W.q3)(() => r.GetThumbnailComponent()),
+          s = (0, W.q3)(() => r.GetThumbnailEntry());
         let l = [
-          i.createElement(Jr, { key: "add_marker", globalMS: t }),
-          i.createElement(Qr, { key: "view_clip", globalMS: t }),
+          i.createElement(Qr, { key: "add_marker", globalMS: t }),
+          i.createElement(Jr, { key: "view_clip", globalMS: t }),
         ];
         return (
           a == Ye.Highlight &&
             s &&
             ((0, ct.In)(s.entry) || (0, ct.xz)(s.entry) || (0, ct.eJ)(s.entry)
               ? (l = [
-                  i.createElement(jr, {
+                  i.createElement(Nr, {
                     key: "create_marker_clip",
                     markerInfo: s,
                   }),
-                  i.createElement(Vr, { key: "view_clip", markerInfo: s }),
+                  i.createElement(Hr, { key: "view_clip", markerInfo: s }),
                 ])
               : (0, ct.sX)(s.entry)
                 ? (l = [
-                    i.createElement(jr, {
+                    i.createElement(Nr, {
                       key: "create_marker_clip",
                       markerInfo: s,
                     }),
@@ -6898,30 +6898,30 @@
                       entry: s.entry,
                       gameID: n,
                     }),
-                    i.createElement(Vr, { key: "view_clip", markerInfo: s }),
+                    i.createElement(Hr, { key: "view_clip", markerInfo: s }),
                   ])
                 : (0, ct.N$)(s.entry) &&
                   (l = [
                     i.createElement(Xr, { key: "edit_user", markerInfo: s }),
-                    i.createElement(jr, {
+                    i.createElement(Nr, {
                       key: "create_marker_clip",
                       markerInfo: s,
                     }),
-                    i.createElement(Hr, { key: "delete_user", markerInfo: s }),
-                    i.createElement(Vr, { key: "view_clip", markerInfo: s }),
+                    i.createElement(Vr, { key: "delete_user", markerInfo: s }),
+                    i.createElement(Hr, { key: "view_clip", markerInfo: s }),
                   ])),
           i.createElement("div", { className: Or.TooltipButtons }, l)
         );
       }
-      function jr(e) {
-        const { setSelectedMarker: t } = He(),
+      function Nr(e) {
+        const { setSelectedMarker: t } = Ve(),
           { markerInfo: r } = e,
           n = Ge(),
-          a = (0, L.q3)(() => n.ShouldModeShowClipControls()),
-          s = (0, L.q3)(() =>
+          a = (0, W.q3)(() => n.ShouldModeShowClipControls()),
+          s = (0, W.q3)(() =>
             n.ConvertGlobaOffsetToRecordingAndRelativeOffset(r.nGlobalMS.valMS),
           ),
-          l = j();
+          l = N();
         return (null == s ? void 0 : s.strRecordingID) && a
           ? i.createElement(
               ue.he,
@@ -6953,7 +6953,7 @@
                       );
                     n.SetPlaytimeFromGlobalMS((0, Y.Sb)(s)),
                       null == t || t(r.entry.id, r.strTimelineID, s, l),
-                      J.y.ReportTrackedAction(
+                      Q.y.ReportTrackedAction(
                         "/GameRecording/Tooltip/ClipFromHighlight",
                       ),
                       e.stopPropagation();
@@ -6964,10 +6964,10 @@
             )
           : null;
       }
-      function Vr(e) {
+      function Hr(e) {
         const { markerInfo: t } = e,
           r = rt(),
-          n = (0, L.q3)(() => r.ConvertGlobalMSToClipOrNone(t.nGlobalMS.valMS)),
+          n = (0, W.q3)(() => r.ConvertGlobalMSToClipOrNone(t.nGlobalMS.valMS)),
           { onNavigateToClip: a } = at();
         return n
           ? i.createElement(
@@ -6983,18 +6983,18 @@
                   className: (0, me.A)(Or.Button, Or.GoToClipFromMarker),
                   onClick: () => {
                     n &&
-                      (J.y.ReportTrackedAction(
+                      (Q.y.ReportTrackedAction(
                         `/GameRecording/Tooltip/ViewClip/${t.entry.type}`,
                       ),
                       a(n.clipID));
                   },
                 },
-                i.createElement(We.CeX, null),
+                i.createElement(Le.CeX, null),
               ),
             )
           : null;
       }
-      function Hr(e) {
+      function Vr(e) {
         const { markerInfo: t } = e,
           r = Ge(),
           n = rt();
@@ -7011,14 +7011,14 @@
               className: (0, me.A)(Or.Button, Or.DeleteMarker),
               onClick: (e) => {
                 (0, ct.N$)(t.entry) &&
-                  (J.y.ReportTrackedAction(
+                  (Q.y.ReportTrackedAction(
                     `/GameRecording/Marker/Delete/${t.entry.type}`,
                   ),
                   r.RemoveUserMarker(t.strTimelineID, t.entry.id),
                   n.SetThumbnailComponent(null));
               },
             },
-            i.createElement(We.lMJ, null),
+            i.createElement(Le.lMJ, null),
           ),
         );
       }
@@ -7039,7 +7039,7 @@
               className: (0, me.A)(Or.Button, Or.EditMarker),
               onClick: (e) => {
                 if (!(0, ct.N$)(t.entry)) return;
-                J.y.ReportTrackedAction(
+                Q.y.ReportTrackedAction(
                   `/GameRecording/Marker/Edit/${t.entry.type}`,
                 );
                 let a = i.createElement($t, {
@@ -7074,7 +7074,7 @@
               className: (0, me.A)(Or.Button, Or.ViewScreenshot),
               onClick: () => {
                 n &&
-                  (J.y.ReportTrackedAction("/GameRecording/Tooltip/Screenshot"),
+                  (Q.y.ReportTrackedAction("/GameRecording/Tooltip/Screenshot"),
                   a(r, n));
               },
             },
@@ -7082,7 +7082,7 @@
           ),
         );
       }
-      function Jr(e) {
+      function Qr(e) {
         const { globalMS: t } = e,
           r = Ge();
         return i.createElement(
@@ -7108,10 +7108,10 @@
           ),
         );
       }
-      function Qr(e) {
+      function Jr(e) {
         const { globalMS: t } = e,
           r = rt(),
-          n = (0, L.q3)(() => r.ConvertGlobalMSToClipOrNone(t)),
+          n = (0, W.q3)(() => r.ConvertGlobalMSToClipOrNone(t)),
           { onNavigateToClip: a } = at();
         return n
           ? i.createElement(
@@ -7126,13 +7126,13 @@
                   className: (0, me.A)(Or.Button, Or.GoToClip),
                   onClick: () => {
                     n &&
-                      (J.y.ReportTrackedAction(
+                      (Q.y.ReportTrackedAction(
                         "/GameRecording/Tooltip/ViewClip/timeline",
                       ),
                       a(n.clipID));
                   },
                 },
-                i.createElement(We.CeX, null),
+                i.createElement(Le.CeX, null),
               ),
             )
           : null;
@@ -7171,8 +7171,8 @@
               [r, n, s],
             );
           return (
-            vr("click", l),
-            vr("contextmenu", o),
+            Br("click", l),
+            Br("contextmenu", o),
             i.createElement(Yr, { globalMouseXPX: t.globalMouseXPX.valPX || 0 })
           );
         }),
@@ -7181,7 +7181,7 @@
             r = (0, i.useContext)(Sr).bInContainer,
             n = rt(),
             a = Cr(),
-            s = (0, L.q3)(() => {
+            s = (0, W.q3)(() => {
               if (n.GetThumbnailComponent()) return n.GetThumbnailPosition();
             }),
             [l, o] = (0, i.useState)(),
@@ -7213,13 +7213,13 @@
           } = e,
           a = rt(),
           s = Ge(),
-          l = (0, L.q3)(() => "Overlay" === s.GetRecordingMode()),
-          o = (0, L.q3)(() => a.ConvertPXOffsetToGlobalMS(t, !1)),
-          m = (0, L.q3)(() => a.GetTimelineParentCtnRef()),
+          l = (0, W.q3)(() => "Overlay" === s.GetRecordingMode()),
+          o = (0, W.q3)(() => a.ConvertPXOffsetToGlobalMS(t, !1)),
+          m = (0, W.q3)(() => a.GetTimelineParentCtnRef()),
           c = (0, i.useRef)(),
           u = (0, i.useRef)(),
           d = (0, i.useRef)(),
-          g = (0, L.q3)(() => a.GetThumbnailComponent()),
+          g = (0, W.q3)(() => a.GetThumbnailComponent()),
           f = Cr(),
           p = (0, ue.fS)({
             toolTipContent: i.createElement(qr, {
@@ -7271,7 +7271,7 @@
             },
             [b],
           );
-        vr(
+        Br(
           "mouseenter",
           (0, i.useCallback)(() => {
             h(!0), _(u.current);
@@ -7304,7 +7304,7 @@
         return i.createElement(
           "div",
           { ref: u, className: hr.TooltipHoverSource },
-          i.createElement(Pr, {
+          i.createElement(zr, {
             className: (0, me.A)(hr.GhostPlayhead, C && hr.Show),
           }),
           !!o && p.tooltip,
@@ -7314,9 +7314,9 @@
       const ti = 500,
         ri = (0, i.memo)(function () {
           const [e, t] = (0, i.useState)("none"),
-            r = Ue(),
+            r = je(),
             n = Ae(),
-            a = Ne();
+            a = Ue();
           return r && n && a
             ? i.createElement(
                 "div",
@@ -7333,10 +7333,10 @@
             [n, a] = (0, i.useState)(),
             [s, l] = (0, i.useState)(),
             o = Ae(),
-            m = Ne(),
+            m = Ue(),
             c = rt(),
-            u = (0, L.q3)(() => c.ConvertGlobalMSToGlobalPXOffset(o.valMS)),
-            d = (0, L.q3)(() => c.ConvertGlobalMSToGlobalPXOffset(m.valMS)),
+            u = (0, W.q3)(() => c.ConvertGlobalMSToGlobalPXOffset(o.valMS)),
+            d = (0, W.q3)(() => c.ConvertGlobalMSToGlobalPXOffset(m.valMS)),
             g = (0, i.useCallback)(
               (e) => {
                 a(e), c.SetAutoScrollPauseTimeout();
@@ -7426,8 +7426,8 @@
       });
       function si(e) {
         const { setControlState: t, setRangeControlPX: r, pxOffset: n } = e,
-          a = je(),
-          s = Ne(),
+          a = Ne(),
+          s = Ue(),
           l = rt(),
           o = Mr();
         return (
@@ -7436,8 +7436,8 @@
               o = (0, i.useRef)(!1),
               m = (0, i.useRef)(),
               c = (0, i.useRef)(),
-              u = (0, L.q3)(() => t.GetScrollableWidthPX()),
-              d = (0, L.q3)(() => t.GetScrollWindowWidth());
+              u = (0, W.q3)(() => t.GetScrollableWidthPX()),
+              d = (0, W.q3)(() => t.GetScrollWindowWidth());
             (0, i.useEffect)(
               () => () => {
                 m.current &&
@@ -7482,8 +7482,8 @@
                 (cancelAnimationFrame(m.current),
                 (m.current = null),
                 (c.current = null));
-              const i = d * (1 - Ui),
-                f = d * Ui,
+              const i = d * (1 - ji),
+                f = d * ji,
                 p = t.ConvertGlobalMSToGlobalPXOffset(r.valMS),
                 h = t.ConvertGlobalMSToScrollWindowPXOffset(r.valMS);
               if (n.valPX > p)
@@ -7538,7 +7538,7 @@
             setRangeControlPX: n,
             pxOffset: a,
           } = e,
-          s = Ne();
+          s = Ue();
         return t
           ? i.createElement(oi, {
               setControlState: r,
@@ -7554,7 +7554,7 @@
       });
       function oi(e) {
         const { setControlState: t, setRangeControlPX: r, pxOffset: n } = e,
-          a = Ve(),
+          a = He(),
           s = Ae(),
           l = rt(),
           o = Mr();
@@ -7564,8 +7564,8 @@
               o = (0, i.useRef)(!1),
               m = (0, i.useRef)(),
               c = (0, i.useRef)(),
-              u = (0, L.q3)(() => t.GetScrollableWidthPX()),
-              d = (0, L.q3)(() => t.GetScrollWindowWidth());
+              u = (0, W.q3)(() => t.GetScrollableWidthPX()),
+              d = (0, W.q3)(() => t.GetScrollWindowWidth());
             (0, i.useEffect)(
               () => () => {
                 m.current &&
@@ -7610,8 +7610,8 @@
                 (cancelAnimationFrame(m.current),
                 (m.current = null),
                 (c.current = null));
-              const i = d * (1 - Ui),
-                f = d * Ui,
+              const i = d * (1 - ji),
+                f = d * ji,
                 p = t.ConvertGlobalMSToGlobalPXOffset(r.valMS),
                 h = t.ConvertGlobalMSToScrollWindowPXOffset(r.valMS);
               if (n.valPX < p)
@@ -7669,7 +7669,7 @@
             setRangeControlPX: a,
           } = e,
           s = rt(),
-          l = (0, L.q3)(() => s.ConvertGlobalMSToGlobalPXOffset(t));
+          l = (0, W.q3)(() => s.ConvertGlobalMSToGlobalPXOffset(t));
         (0, i.useEffect)(
           () => (
             a(void 0),
@@ -7734,7 +7734,7 @@
           const { direction: t, offsetPX: r } = e,
             n = { transform: `translateX( calc( ${r}px - 50%) )` },
             a = rt(),
-            s = (0, L.q3)(() => a.GetThumbnailComponent() === Ye.Playhead);
+            s = (0, W.q3)(() => a.GetThumbnailComponent() === Ye.Playhead);
           return i.createElement(
             "div",
             { style: n, className: (0, me.A)(ei.RangeControl) },
@@ -7791,7 +7791,7 @@
       var gi = r(28361);
       const fi = i.memo(function (e) {
         const t = rt(),
-          r = (0, L.q3)(() => t.GetVisibleWindowRelativeTimelines()),
+          r = (0, W.q3)(() => t.GetVisibleWindowRelativeTimelines()),
           n = Ge().GetRecordingMode();
         let a = [],
           s = "";
@@ -7833,7 +7833,7 @@
       var hi = r(78760);
       const _i = (0, i.memo)(function (e) {
         const t = rt(),
-          r = (0, L.q3)(() => t.GetVisibleRecordings());
+          r = (0, W.q3)(() => t.GetVisibleRecordings());
         return i.createElement(
           i.Fragment,
           null,
@@ -7873,10 +7873,10 @@
         const { endPX: t } = e,
           r = Ge(),
           n = rt(),
-          a = (0, L.q3)(() => "Overlay" === r.GetRecordingMode()),
+          a = (0, W.q3)(() => "Overlay" === r.GetRecordingMode()),
           s = he(r.GetGameID()),
-          l = (0, L.q3)(() => r.GetIsLiveEdge() && !r.GetHidePlayer()),
-          o = (0, L.q3)(() => {
+          l = (0, W.q3)(() => r.GetIsLiveEdge() && !r.GetHidePlayer()),
+          o = (0, W.q3)(() => {
             const e = r.GetLiveEdgeBufferWindowStartMS();
             return n.ConvertGlobalMSToGlobalPXOffset(e.valMS);
           });
@@ -7890,7 +7890,7 @@
       var Mi = r(10564);
       const yi = (0, i.memo)(function (e) {
           const t = rt(),
-            r = (0, L.q3)(() => t.GetVisibleClips());
+            r = (0, W.q3)(() => t.GetVisibleClips());
           return i.createElement(
             i.Fragment,
             null,
@@ -7911,17 +7911,17 @@
             style: n,
           });
         });
-      var vi = r(99550);
+      var Bi = r(99550);
       const Ti = (0, i.forwardRef)(function (e, t) {
           const r = rt();
-          return (0, L.q3)(() => r.GetNumTimelines())
+          return (0, W.q3)(() => r.GetNumTimelines())
             ? i.createElement(wi, { ...e, timelineView: r, ref: t })
-            : i.createElement(Bi, { ref: t });
+            : i.createElement(vi, { ref: t });
         }),
-        Bi = (0, i.forwardRef)(function (e, t) {
+        vi = (0, i.forwardRef)(function (e, t) {
           return i.createElement("div", {
             ref: t,
-            className: (0, me.A)(vi.ScrollbarPlaceholder, e.className),
+            className: (0, me.A)(Bi.ScrollbarPlaceholder, e.className),
           });
         }),
         wi = (0, i.forwardRef)(function (e, t) {
@@ -7951,7 +7951,7 @@
             );
           return (
             (function (e, t) {
-              const r = (0, L.q3)(
+              const r = (0, W.q3)(
                 () =>
                   !t.GetAutoScrollPaused() &&
                   e.GetGameRecordingVideo().BVideoElementPlaying(),
@@ -7983,10 +7983,10 @@
               },
               i.createElement(
                 "div",
-                { className: vi.LeftControlsAndContent },
+                { className: Bi.LeftControlsAndContent },
                 i.createElement(
                   "div",
-                  { ref: u, className: (0, me.A)(vi.ContentAndGradient, a) },
+                  { ref: u, className: (0, me.A)(Bi.ContentAndGradient, a) },
                   n,
                   i.createElement(Ri, { timelineView: s }),
                 ),
@@ -7995,7 +7995,7 @@
               ),
               i.createElement(
                 "div",
-                { className: vi.ScrollbarAndSiblings },
+                { className: Bi.ScrollbarAndSiblings },
                 !r.GetGamepadMode() && i.createElement(Gi, null),
               ),
             )
@@ -8003,16 +8003,16 @@
         });
       function Ri(e) {
         const { timelineView: t } = e,
-          r = (0, L.q3)(() => t.GetVisualWindowStartPX()),
-          n = (0, L.q3)(() => t.BReachedMaxScroll());
+          r = (0, W.q3)(() => t.GetVisualWindowStartPX()),
+          n = (0, W.q3)(() => t.BReachedMaxScroll());
         return i.createElement(
           "div",
-          { className: vi.ScrollGradientCtn },
+          { className: Bi.ScrollGradientCtn },
           i.createElement("div", {
-            className: (0, me.A)(vi.FrontGradient, 0 === r && vi.HideGradient),
+            className: (0, me.A)(Bi.FrontGradient, 0 === r && Bi.HideGradient),
           }),
           i.createElement("div", {
-            className: (0, me.A)(vi.EndGradient, n && vi.HideGradient),
+            className: (0, me.A)(Bi.EndGradient, n && Bi.HideGradient),
           }),
         );
       }
@@ -8026,10 +8026,10 @@
             t({ scrollBarWidth: r.width, scrollBarXOffset: r.x });
           }, []),
           n = rt(),
-          a = (0, L.q3)(
+          a = (0, W.q3)(
             () => n.GetScrollableWidthPX() + 2 * n.GetTimelineMarginWidth(),
           ),
-          s = (0, L.q3)(() => n.GetVisualWidth()),
+          s = (0, W.q3)(() => n.GetVisualWidth()),
           l = (0, i.useMemo)(
             () => (s * e.scrollBarWidth) / a || 0,
             [s, e.scrollBarWidth, a],
@@ -8039,9 +8039,9 @@
           "div",
           {
             className: (0, me.A)(
-              vi.ScrollBarCtn,
+              Bi.ScrollBarCtn,
               Math.round(l) === Math.round(e.scrollBarWidth) &&
-                vi.HideScrollBar,
+                Bi.HideScrollBar,
             ),
             ref: o,
           },
@@ -8060,7 +8060,7 @@
           a = (function (e, t) {
             const r = (0, i.useRef)(),
               n = (0, i.useRef)(),
-              a = (0, L.q3)(() => e.GetScrollableWidthPX()),
+              a = (0, W.q3)(() => e.GetScrollableWidthPX()),
               s = (0, i.useCallback)(
                 (e) => (0, Y.OB)((a * e) / t.scrollBarWidth),
                 [t.scrollBarWidth, a],
@@ -8108,8 +8108,8 @@
               { onMouseDown: o, onMouseMove: c, onMouseUp: m, onMouseLeave: m }
             );
           })(t, r),
-          s = (0, L.q3)(() => t.GetTimelineMarginWidth()),
-          l = (0, L.q3)(() => t.GetScrollableWidthPX()),
+          s = (0, W.q3)(() => t.GetTimelineMarginWidth()),
+          l = (0, W.q3)(() => t.GetScrollableWidthPX()),
           o = (0, i.useCallback)(
             (e) => {
               const t = e + s;
@@ -8119,14 +8119,14 @@
           );
         return i.createElement(
           "div",
-          { className: vi.ScrollTrack, ...a },
+          { className: Bi.ScrollTrack, ...a },
           i.createElement(Ei, {
             timelineView: t,
             playbackCoordinator: n,
             fnConvertGlobalPXToTrackPX: o,
             scrollBarWidth: r.scrollBarWidth,
           }),
-          i.createElement(zi, {
+          i.createElement(Pi, {
             timelineView: t,
             fnConvertGlobalPXToTrackPX: o,
           }),
@@ -8139,8 +8139,8 @@
             fnConvertGlobalPXToTrackPX: n,
             scrollBarWidth: a,
           } = e,
-          s = (0, L.q3)(() => r.GetHidePlayer()),
-          l = (0, L.q3)(() => {
+          s = (0, W.q3)(() => r.GetHidePlayer()),
+          l = (0, W.q3)(() => {
             const e = r.GetGlobalMSPlaytime();
             if (e && t.BInitialized()) {
               const r = Math.floor(t.ConvertGlobalMSToGlobalPXOffset(e.valMS));
@@ -8152,17 +8152,17 @@
         return i.createElement(
           "div",
           {
-            className: vi.PlayHeadAnnotation,
+            className: Bi.PlayHeadAnnotation,
             onClick: () => {
               let e = r.GetGlobalMSPlaytime();
               s && (e = r.GetLiveEdgeMS()), t.ScrollToCenteredGlobalMS(e.valMS);
             },
             style: { transform: `translateX(${s ? a : l}px)` },
           },
-          i.createElement(Pi, null),
+          i.createElement(zi, null),
         );
       }
-      function Pi() {
+      function zi() {
         return i.createElement(
           "svg",
           {
@@ -8178,11 +8178,11 @@
           }),
         );
       }
-      function zi(e) {
+      function Pi(e) {
         const { timelineView: t, fnConvertGlobalPXToTrackPX: r } = e,
           n = Xe(),
           a = xe(),
-          s = (0, L.q3)(() => {
+          s = (0, W.q3)(() => {
             if (n && t.BInitialized()) {
               const e = Math.floor(
                   t.ConvertGlobalMSToGlobalPXOffset(a.nGlobalStartMS.valMS),
@@ -8198,7 +8198,7 @@
           });
         if (!s) return null;
         return i.createElement("div", {
-          className: vi.RangeAnnotation,
+          className: Bi.RangeAnnotation,
           onClick: () => {
             t.ScrollToCenteredGlobalMS(a.nGlobalStartMS.valMS);
           },
@@ -8222,7 +8222,7 @@
           } = (function (e, t, r, n) {
             const [a, s] = (0, i.useState)(!1),
               [l, o] = (0, i.useState)(0),
-              m = (0, L.q3)(() => {
+              m = (0, W.q3)(() => {
                 const i = n.BInitialized(),
                   a = n.GetVisualWindowStartPX();
                 return i
@@ -8281,14 +8281,14 @@
             );
           })(t, r, n, a);
         return i.createElement("div", {
-          className: (0, me.A)(vi.ScrollThumb, o && vi.Highlight),
+          className: (0, me.A)(Bi.ScrollThumb, o && Bi.Highlight),
           style: { width: n, transform: `translateX(${s}px)` },
           onMouseDown: l,
         });
       }
       var ki = r(16628);
       r(2596), r(12155), r(73860), r(72739);
-      class Li {
+      class Wi {
         constructor() {
           (this.m_tours = {}),
             (this.m_strActiveTour = ""),
@@ -8298,7 +8298,7 @@
         async Init(e) {
           if (this.m_storage) return;
           this.m_storage = e;
-          const t = await Wi(e);
+          const t = await Li(e);
           Object.keys(t || {}).forEach((e) => {
             const r = !!t[e];
             this.m_tours[e] = {
@@ -8342,22 +8342,22 @@
           return Fi(this.m_storage, e, void 0);
         }
       }
-      (0, X.Cg)([D.sH], Li.prototype, "m_tours", void 0),
-        (0, X.Cg)([D.sH], Li.prototype, "m_strActiveTour", void 0),
-        (0, X.Cg)([D.sH], Li.prototype, "m_bReady", void 0),
-        (0, X.Cg)([D.XI.bound], Li.prototype, "UpdateStop", null),
-        (0, X.Cg)([D.XI], Li.prototype, "ActivateTour", null),
-        (0, X.Cg)([D.XI], Li.prototype, "DismissTour", null);
+      (0, X.Cg)([D.sH], Wi.prototype, "m_tours", void 0),
+        (0, X.Cg)([D.sH], Wi.prototype, "m_strActiveTour", void 0),
+        (0, X.Cg)([D.sH], Wi.prototype, "m_bReady", void 0),
+        (0, X.Cg)([D.XI.bound], Wi.prototype, "UpdateStop", null),
+        (0, X.Cg)([D.XI], Wi.prototype, "ActivateTour", null),
+        (0, X.Cg)([D.XI], Wi.prototype, "DismissTour", null);
       const Di = "tour_history";
-      async function Wi(e) {
+      async function Li(e) {
         const t = await e.GetObject(Di);
         return t && "object" == typeof t ? t : {};
       }
       async function Fi(e, t, r) {
-        const i = await Wi(e);
+        const i = await Li(e);
         return e.StoreObject(Di, { ...i, [t]: r });
       }
-      const qi = new Li();
+      const qi = new Wi();
       function xi() {
         const e = (0, n.rX)();
         return (
@@ -8369,7 +8369,7 @@
       }
       function Ai(e) {
         const t = xi(),
-          { bShowTour: r, stopElems: n } = (0, L.q3)(() => ({
+          { bShowTour: r, stopElems: n } = (0, W.q3)(() => ({
             bShowTour: !t.BHasSeenTour(e),
             stopElems: t.GetTrackedStops(e),
           }));
@@ -8382,14 +8382,14 @@
           updateStop: t.UpdateStop,
         };
       }
-      function Ni(e) {
+      function Ui(e) {
         const { name: t, tour: r, options: n, children: a } = e,
           { updateStop: s } = Ai(r),
           l = (0, i.useCallback)((e) => s(r, t, n, e), [s, r, t]);
         return (0, i.cloneElement)(i.Children.only(a), { ref: l });
       }
-      const Ui = 0.08;
-      function ji(e) {
+      const ji = 0.08;
+      function Ni(e) {
         const {
             loader: t,
             className: r,
@@ -8397,7 +8397,7 @@
             refTimelineParentCtn: a,
             disableZoom: s,
           } = e,
-          l = (0, L.q3)(() => t.BInitialized()),
+          l = (0, W.q3)(() => t.BInitialized()),
           o = Ge();
         l || i.createElement("div", { className: At.LoadingTimeline });
         let m = (0, me.A)(
@@ -8417,9 +8417,9 @@
             "div",
             { className: m },
             i.createElement(Zi, null),
-            i.createElement(Ji, null),
+            i.createElement(Qi, null),
             i.createElement(
-              Ni,
+              Ui,
               {
                 tour: "recording_timeline",
                 name: "timeline",
@@ -8428,23 +8428,23 @@
               i.createElement(
                 Ti,
                 { className: At.TimelineScrollContainer, disableZoom: s },
-                i.createElement(Vi, null),
+                i.createElement(Hi, null),
               ),
             ),
           ),
         );
       }
-      const Vi = (0, i.memo)(function (e) {
+      const Hi = (0, i.memo)(function (e) {
         const t = rt();
-        return (0, L.q3)(() => t.BInitialized())
-          ? i.createElement(Hi, null)
+        return (0, W.q3)(() => t.BInitialized())
+          ? i.createElement(Vi, null)
           : null;
       });
-      function Hi() {
+      function Vi() {
         const e = rt(),
-          t = (0, L.q3)(() => e.GetScrollableWidthPX()),
-          r = (0, L.q3)(() => e.GetVisualWindowStartPX()),
-          n = (0, L.q3)(() => e.GetTimelineMarginWidth());
+          t = (0, W.q3)(() => e.GetScrollableWidthPX()),
+          r = (0, W.q3)(() => e.GetVisualWindowStartPX()),
+          n = (0, W.q3)(() => e.GetTimelineMarginWidth());
         return i.createElement(
           "div",
           {
@@ -8479,7 +8479,7 @@
           i.createElement(
             Xi,
             { id: "ticks", className: At.BackgroundTicks },
-            i.createElement(jt, null),
+            i.createElement(Nt, null),
           ),
           i.createElement(
             br,
@@ -8502,7 +8502,7 @@
             i.createElement(
               Xi,
               { id: "play_head", className: At.PlayHead },
-              i.createElement(Br, null),
+              i.createElement(vr, null),
             ),
           ),
         );
@@ -8519,17 +8519,17 @@
         const t = Ge().GetRenderGlyph();
         return t ? t(ki.pR.TRIGGER_LEFT, !1, !1, At.PositionLeft) : null;
       }
-      function Ji(e) {
+      function Qi(e) {
         const t = Ge().GetRenderGlyph();
         return t ? t(ki.pR.TRIGGER_RIGHT, !1, !1, At.PositionRight) : null;
       }
-      var Qi = r(42577);
+      var Ji = r(42577);
       function Ki(e) {
         const [t, n] = i.useState(!1);
         return (
           i.useEffect(() => {
             (async function (e, t, i) {
-              if (!W()) {
+              if (!L()) {
                 const [
                   { CGameRecordingStore: n },
                   { SetTimelineMarkerURLFunction: a },
@@ -8553,12 +8553,12 @@
           r = (function (e) {
             const t = (0, n.KV)();
             return (0, a.useQuery)(["grclip", e], async () => {
-              const r = s.w.Init(v);
+              const r = s.w.Init(B);
               r.Body().set_clip_id(e);
               const i = await O.GetSingleSharedClip(t, r);
               if (1 != i.GetEResult())
                 return (
-                  (0, H.ZI)("GetSingleSharedClip failed"),
+                  (0, V.ZI)("GetSingleSharedClip failed"),
                   void i.DEBUG_LogToConsole()
                 );
               let n,
@@ -8566,7 +8566,7 @@
                 l = [];
               if (0 == a.video_ids.length)
                 return (
-                  (0, H.ZI)("No video ids in clip", e),
+                  (0, V.ZI)("No video ids in clip", e),
                   void i.DEBUG_LogToConsole()
                 );
               for (let e of a.video_ids)
@@ -8599,7 +8599,7 @@
         const t = i.useMemo(
             () =>
               (function (e) {
-                return W().GetTimelineLoaderForSharedClip(e);
+                return L().GetTimelineLoaderForSharedClip(e);
               })(e),
             [e],
           ),
@@ -8627,13 +8627,13 @@
             { loader: r, fnGetManifest: n, mode: be.CommunityClip },
             i.createElement(
               "div",
-              { className: Qi.ClipDetails },
+              { className: Ji.ClipDetails },
               i.createElement(
                 "div",
-                { className: Qi.VideoContainer },
-                i.createElement(Lt, { positionAbsolute: !1, autoPlay: !0 }),
+                { className: Ji.VideoContainer },
+                i.createElement(Wt, { positionAbsolute: !1, autoPlay: !0 }),
               ),
-              i.createElement(ji, { loader: r }),
+              i.createElement(Ni, { loader: r }),
             ),
           ),
         );
@@ -9927,7 +9927,7 @@
     },
     53184: (e, t, r) => {
       "use strict";
-      r.d(t, { xM: () => Oe });
+      r.d(t, { xM: () => Ze });
       var i = r(80613),
         n = r(89068),
         a = r(56545),
@@ -9938,7 +9938,7 @@
         constructor(e = null) {
           super(),
             o.prototype.timeline_id || n.Sg(o.M()),
-            l.initialize(this, e, 0, -1, [5], null);
+            l.initialize(this, e, 0, -1, [5, 6], null);
         }
         static M() {
           return (
@@ -9967,6 +9967,7 @@
                     bw: n.gp.writeUint64String,
                   },
                   recordings: { n: 5, c: m, r: !0, q: !0 },
+                  phases: { n: 6, c: u, r: !0, q: !0 },
                 },
               }),
             o.sm_m
@@ -10209,20 +10210,106 @@
           return "CGameRecordingTimelineEvent";
         }
       }
-      const u = i.Message;
-      class d extends u {
+      class u extends l {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), u.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            u.prototype.title || n.Sg(u.M()),
+            l.initialize(this, e, 0, -1, [6, 7], null);
+        }
+        static M() {
+          return (
+            u.sm_m ||
+              (u.sm_m = {
+                proto: u,
+                fields: {
+                  title: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
+                  desc: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
+                  icon: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
+                  phase_id: { n: 4, br: n.qM.readString, bw: n.gp.writeString },
+                  duration_ms: {
+                    n: 5,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                  tags: { n: 6, c: d, r: !0, q: !0 },
+                  contained_tags: { n: 7, c: d, r: !0, q: !0 },
+                  background_timeline_offset: {
+                    n: 8,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                },
+              }),
+            u.sm_m
+          );
+        }
+        static MBF() {
+          return u.sm_mbf || (u.sm_mbf = n.w0(u.M())), u.sm_mbf;
+        }
+        toObject(e = !1) {
+          return u.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(u.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(u.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new u();
+          return u.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(u.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return u.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(u.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return u.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecordingPhase";
+        }
+      }
+      class d extends l {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            d.prototype.name || n.Sg(d.M()),
+            l.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            d.sm_m ||
+              (d.sm_m = {
+                proto: d,
+                fields: {
+                  name: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
+                  group: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
+                },
+              }),
+            d.sm_m
+          );
+        }
+        static MBF() {
+          return d.sm_mbf || (d.sm_mbf = n.w0(d.M())), d.sm_mbf;
         }
         toObject(e = !1) {
           return d.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return n.BT(d.M(), e, t);
         }
         static fromObject(e) {
-          return new d();
+          return n.Uq(d.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -10230,34 +10317,41 @@
           return d.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return n.zj(d.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return d.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          n.i0(d.M(), e, t);
+        }
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return d.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetActiveTimelineApps_Request";
+          return "CGameRecordingPhase_Tag";
         }
       }
-      class g extends u {
+      class g extends l {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            g.prototype.apps || n.Sg(g.M()),
-            u.initialize(this, e, 0, -1, [1], null);
+            g.prototype.name || n.Sg(g.M()),
+            l.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             g.sm_m ||
               (g.sm_m = {
                 proto: g,
-                fields: { apps: { n: 1, c: f, r: !0, q: !0 } },
+                fields: {
+                  name: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
+                  group: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
+                  icon: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
+                  priority: { n: 4, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                },
               }),
             g.sm_m
           );
@@ -10294,127 +10388,23 @@
           return g.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetActiveTimelineApps_Response";
+          return "CTimelineTag";
         }
       }
-      class f extends u {
+      const f = i.Message;
+      class p extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(),
-            f.prototype.game_id || n.Sg(f.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            f.sm_m ||
-              (f.sm_m = {
-                proto: f,
-                fields: {
-                  game_id: {
-                    n: 1,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
-                  most_recent_start_time: {
-                    n: 2,
-                    br: n.qM.readUint32,
-                    bw: n.gp.writeUint32,
-                  },
-                  recording_type: {
-                    n: 3,
-                    br: n.qM.readEnum,
-                    bw: n.gp.writeEnum,
-                  },
-                  video_duration_seconds: {
-                    n: 4,
-                    br: n.qM.readDouble,
-                    bw: n.gp.writeDouble,
-                  },
-                  timeline_duration_seconds: {
-                    n: 5,
-                    br: n.qM.readDouble,
-                    bw: n.gp.writeDouble,
-                  },
-                  is_active: { n: 6, br: n.qM.readBool, bw: n.gp.writeBool },
-                  file_size: {
-                    n: 7,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
-                },
-              }),
-            f.sm_m
-          );
-        }
-        static MBF() {
-          return f.sm_mbf || (f.sm_mbf = n.w0(f.M())), f.sm_mbf;
-        }
-        toObject(e = !1) {
-          return f.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(f.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(f.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new f();
-          return f.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(f.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return f.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(f.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return f.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_GetActiveTimelineApps_Response_App";
-        }
-      }
-      class p extends u {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            p.prototype.game_id || n.Sg(p.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            p.sm_m ||
-              (p.sm_m = {
-                proto: p,
-                fields: {
-                  game_id: {
-                    n: 1,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
-                },
-              }),
-            p.sm_m
-          );
-        }
-        static MBF() {
-          return p.sm_mbf || (p.sm_mbf = n.w0(p.M())), p.sm_mbf;
+          super(), f.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return p.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(p.M(), e, t);
+          return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return n.Uq(p.M(), e);
+          return new p();
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -10422,36 +10412,34 @@
           return p.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(p.MBF(), e, t);
+          return e;
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return p.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(p.M(), e, t);
-        }
+        static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return p.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetTimelinesForApp_Request";
+          return "CGameRecording_GetActiveTimelineApps_Request";
         }
       }
-      class h extends u {
+      class h extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            h.prototype.timelines || n.Sg(h.M()),
-            u.initialize(this, e, 0, -1, [1], null);
+            h.prototype.apps || n.Sg(h.M()),
+            f.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             h.sm_m ||
               (h.sm_m = {
                 proto: h,
-                fields: { timelines: { n: 1, c: o, r: !0, q: !0 } },
+                fields: { apps: { n: 1, c: _, r: !0, q: !0 } },
               }),
             h.sm_m
           );
@@ -10488,15 +10476,15 @@
           return h.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetTimelinesForApp_Response";
+          return "CGameRecording_GetActiveTimelineApps_Response";
         }
       }
-      class _ extends u {
+      class _ extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            _.prototype.clip_id || n.Sg(_.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            _.prototype.game_id || n.Sg(_.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -10504,7 +10492,37 @@
               (_.sm_m = {
                 proto: _,
                 fields: {
-                  clip_id: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
+                  game_id: {
+                    n: 1,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                  most_recent_start_time: {
+                    n: 2,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                  recording_type: {
+                    n: 3,
+                    br: n.qM.readEnum,
+                    bw: n.gp.writeEnum,
+                  },
+                  video_duration_seconds: {
+                    n: 4,
+                    br: n.qM.readDouble,
+                    bw: n.gp.writeDouble,
+                  },
+                  timeline_duration_seconds: {
+                    n: 5,
+                    br: n.qM.readDouble,
+                    bw: n.gp.writeDouble,
+                  },
+                  is_active: { n: 6, br: n.qM.readBool, bw: n.gp.writeBool },
+                  file_size: {
+                    n: 7,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
                 },
               }),
             _.sm_m
@@ -10542,15 +10560,15 @@
           return _.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetTimelinesForClip_Request";
+          return "CGameRecording_GetActiveTimelineApps_Response_App";
         }
       }
-      class S extends u {
+      class S extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             S.prototype.game_id || n.Sg(S.M()),
-            u.initialize(this, e, 0, -1, [2], null);
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -10560,12 +10578,6 @@
                 fields: {
                   game_id: {
                     n: 1,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
-                  timelines: { n: 2, c: o, r: !0, q: !0 },
-                  first_timeline_start_offset_ms: {
-                    n: 3,
                     br: n.qM.readUint64String,
                     bw: n.gp.writeUint64String,
                   },
@@ -10606,22 +10618,37 @@
           return S.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetTimelinesForClip_Response";
+          return "CGameRecording_GetTimelinesForApp_Request";
         }
       }
-      class b extends u {
+      class b extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), u.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            b.prototype.timelines || n.Sg(b.M()),
+            f.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            b.sm_m ||
+              (b.sm_m = {
+                proto: b,
+                fields: { timelines: { n: 1, c: o, r: !0, q: !0 } },
+              }),
+            b.sm_m
+          );
+        }
+        static MBF() {
+          return b.sm_mbf || (b.sm_mbf = n.w0(b.M())), b.sm_mbf;
         }
         toObject(e = !1) {
           return b.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return n.BT(b.M(), e, t);
         }
         static fromObject(e) {
-          return new b();
+          return n.Uq(b.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -10629,27 +10656,29 @@
           return b.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return n.zj(b.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return b.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          n.i0(b.M(), e, t);
+        }
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return b.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetEnoughDiskSpace_Request";
+          return "CGameRecording_GetTimelinesForApp_Response";
         }
       }
-      class M extends u {
+      class M extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            M.prototype.enough_space || n.Sg(M.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            M.prototype.clip_id || n.Sg(M.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -10657,7 +10686,7 @@
               (M.sm_m = {
                 proto: M,
                 fields: {
-                  enough_space: { n: 1, br: n.qM.readBool, bw: n.gp.writeBool },
+                  clip_id: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
                 },
               }),
             M.sm_m
@@ -10695,22 +10724,49 @@
           return M.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetEnoughDiskSpace_Response";
+          return "CGameRecording_GetTimelinesForClip_Request";
         }
       }
-      class y extends u {
+      class y extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), u.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            y.prototype.game_id || n.Sg(y.M()),
+            f.initialize(this, e, 0, -1, [2], null);
+        }
+        static M() {
+          return (
+            y.sm_m ||
+              (y.sm_m = {
+                proto: y,
+                fields: {
+                  game_id: {
+                    n: 1,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                  timelines: { n: 2, c: o, r: !0, q: !0 },
+                  first_timeline_start_offset_ms: {
+                    n: 3,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                },
+              }),
+            y.sm_m
+          );
+        }
+        static MBF() {
+          return y.sm_mbf || (y.sm_mbf = n.w0(y.M())), y.sm_mbf;
         }
         toObject(e = !1) {
           return y.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return n.BT(y.M(), e, t);
         }
         static fromObject(e) {
-          return new y();
+          return n.Uq(y.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -10718,27 +10774,29 @@
           return y.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return n.zj(y.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return y.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          n.i0(y.M(), e, t);
+        }
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return y.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetAvailableDiskSpace_Request";
+          return "CGameRecording_GetTimelinesForClip_Response";
         }
       }
-      class C extends u {
+      class C extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            C.prototype.size || n.Sg(C.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            C.prototype.page || n.Sg(C.M()),
+            f.initialize(this, e, 0, -1, [12], null);
         }
         static M() {
           return (
@@ -10746,7 +10804,19 @@
               (C.sm_m = {
                 proto: C,
                 fields: {
-                  size: { n: 1, br: n.qM.readDouble, bw: n.gp.writeDouble },
+                  page: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  count: { n: 2, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  filter_gameid: {
+                    n: 10,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                  filter_search_string: {
+                    n: 11,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
+                  filter_tags: { n: 12, c: B, r: !0, q: !0 },
                 },
               }),
             C.sm_m
@@ -10784,93 +10854,70 @@
           return C.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetAvailableDiskSpace_Response";
+          return "CGameRecording_QueryPhases_Request";
         }
       }
-      class v extends u {
+      class B extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            v.prototype.notification_type || n.Sg(v.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            B.prototype.group || n.Sg(B.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            v.sm_m ||
-              (v.sm_m = {
-                proto: v,
+            B.sm_m ||
+              (B.sm_m = {
+                proto: B,
                 fields: {
-                  notification_type: {
-                    n: 1,
-                    br: n.qM.readEnum,
-                    bw: n.gp.writeEnum,
-                  },
-                  timeline_id: {
-                    n: 2,
-                    br: n.qM.readString,
-                    bw: n.gp.writeString,
-                  },
-                  game_id: {
-                    n: 3,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
-                  start_time: {
-                    n: 4,
-                    br: n.qM.readUint32,
-                    bw: n.gp.writeUint32,
-                  },
-                  duration_ms: {
-                    n: 5,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
+                  group: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
+                  name: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
                 },
               }),
-            v.sm_m
+            B.sm_m
           );
         }
         static MBF() {
-          return v.sm_mbf || (v.sm_mbf = n.w0(v.M())), v.sm_mbf;
+          return B.sm_mbf || (B.sm_mbf = n.w0(B.M())), B.sm_mbf;
         }
         toObject(e = !1) {
-          return v.toObject(e, this);
+          return B.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(v.M(), e, t);
+          return n.BT(B.M(), e, t);
         }
         static fromObject(e) {
-          return n.Uq(v.M(), e);
+          return n.Uq(B.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new v();
-          return v.deserializeBinaryFromReader(r, t);
+            r = new B();
+          return B.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(v.MBF(), e, t);
+          return n.zj(B.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return v.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.i0(v.M(), e, t);
+          n.i0(B.M(), e, t);
         }
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_TimelineChanged_Notification";
+          return "CGameRecording_QueryPhases_Request_Tag";
         }
       }
-      class T extends u {
+      class T extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            T.prototype.notification_type || n.Sg(T.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            T.prototype.phases || n.Sg(T.M()),
+            f.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
@@ -10878,40 +10925,11 @@
               (T.sm_m = {
                 proto: T,
                 fields: {
-                  notification_type: {
-                    n: 1,
-                    br: n.qM.readEnum,
-                    bw: n.gp.writeEnum,
-                  },
-                  timeline_id: {
+                  phases: { n: 1, c: v, r: !0, q: !0 },
+                  total_count: {
                     n: 2,
-                    br: n.qM.readString,
-                    bw: n.gp.writeString,
-                  },
-                  game_id: {
-                    n: 4,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
-                  session_id: {
-                    n: 5,
-                    br: n.qM.readString,
-                    bw: n.gp.writeString,
-                  },
-                  start_offset: {
-                    n: 6,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
-                  duration_ms: {
-                    n: 7,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
-                  recording_type: {
-                    n: 8,
-                    br: n.qM.readEnum,
-                    bw: n.gp.writeEnum,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
                   },
                 },
               }),
@@ -10950,21 +10968,638 @@
           return T.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_RecordingSessionChanged_Notification";
+          return "CGameRecording_QueryPhases_Response";
         }
       }
-      class B extends u {
+      class v extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            B.prototype.timeline_id || n.Sg(B.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            v.prototype.game_id || n.Sg(v.M()),
+            f.initialize(this, e, 0, -1, [7, 8, 10, 13], null);
         }
         static M() {
           return (
-            B.sm_m ||
-              (B.sm_m = {
-                proto: B,
+            v.sm_m ||
+              (v.sm_m = {
+                proto: v,
+                fields: {
+                  game_id: {
+                    n: 1,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                  title: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
+                  desc: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
+                  icon: { n: 4, br: n.qM.readString, bw: n.gp.writeString },
+                  date_recorded: {
+                    n: 5,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                  duration_ms: {
+                    n: 6,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                  tags: { n: 7, c: g, r: !0, q: !0 },
+                  contained_tags: { n: 8, c: g, r: !0, q: !0 },
+                  background_recording: { n: 9, c: w },
+                  clip_ids: {
+                    n: 10,
+                    r: !0,
+                    q: !0,
+                    br: n.qM.readString,
+                    bw: n.gp.writeRepeatedString,
+                  },
+                  type: { n: 11, br: n.qM.readEnum, bw: n.gp.writeEnum },
+                  start_ms: {
+                    n: 12,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                  screenshots: {
+                    n: 13,
+                    r: !0,
+                    q: !0,
+                    br: n.qM.readUint32,
+                    pbr: n.qM.readPackedUint32,
+                    bw: n.gp.writeRepeatedUint32,
+                  },
+                },
+              }),
+            v.sm_m
+          );
+        }
+        static MBF() {
+          return v.sm_mbf || (v.sm_mbf = n.w0(v.M())), v.sm_mbf;
+        }
+        toObject(e = !1) {
+          return v.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(v.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(v.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new v();
+          return v.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(v.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return v.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(v.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return v.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_QueryPhases_Response_Phase";
+        }
+      }
+      class w extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            w.prototype.timeline_id || n.Sg(w.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            w.sm_m ||
+              (w.sm_m = {
+                proto: w,
+                fields: {
+                  timeline_id: {
+                    n: 1,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
+                  offset: {
+                    n: 2,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                  duration_ms: {
+                    n: 3,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                },
+              }),
+            w.sm_m
+          );
+        }
+        static MBF() {
+          return w.sm_mbf || (w.sm_mbf = n.w0(w.M())), w.sm_mbf;
+        }
+        toObject(e = !1) {
+          return w.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(w.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(w.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new w();
+          return w.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(w.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return w.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(w.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_QueryPhases_Response_Phase_BackgroundRecording";
+        }
+      }
+      class R extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            R.prototype.game_id || n.Sg(R.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            R.sm_m ||
+              (R.sm_m = {
+                proto: R,
+                fields: {
+                  game_id: {
+                    n: 1,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                },
+              }),
+            R.sm_m
+          );
+        }
+        static MBF() {
+          return R.sm_mbf || (R.sm_mbf = n.w0(R.M())), R.sm_mbf;
+        }
+        toObject(e = !1) {
+          return R.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(R.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(R.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new R();
+          return R.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(R.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(R.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_GetTags_Request";
+        }
+      }
+      class G extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            G.prototype.tags || n.Sg(G.M()),
+            f.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            G.sm_m ||
+              (G.sm_m = {
+                proto: G,
+                fields: { tags: { n: 1, c: g, r: !0, q: !0 } },
+              }),
+            G.sm_m
+          );
+        }
+        static MBF() {
+          return G.sm_mbf || (G.sm_mbf = n.w0(G.M())), G.sm_mbf;
+        }
+        toObject(e = !1) {
+          return G.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(G.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(G.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new G();
+          return G.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(G.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return G.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(G.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return G.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_GetTags_Response";
+        }
+      }
+      class I extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), f.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return I.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new I();
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new I();
+          return I.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_GetEnoughDiskSpace_Request";
+        }
+      }
+      class E extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            E.prototype.enough_space || n.Sg(E.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            E.sm_m ||
+              (E.sm_m = {
+                proto: E,
+                fields: {
+                  enough_space: { n: 1, br: n.qM.readBool, bw: n.gp.writeBool },
+                },
+              }),
+            E.sm_m
+          );
+        }
+        static MBF() {
+          return E.sm_mbf || (E.sm_mbf = n.w0(E.M())), E.sm_mbf;
+        }
+        toObject(e = !1) {
+          return E.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(E.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(E.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new E();
+          return E.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(E.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(E.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_GetEnoughDiskSpace_Response";
+        }
+      }
+      class z extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), f.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return z.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new z();
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new z();
+          return z.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_GetAvailableDiskSpace_Request";
+        }
+      }
+      class P extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            P.prototype.size || n.Sg(P.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            P.sm_m ||
+              (P.sm_m = {
+                proto: P,
+                fields: {
+                  size: { n: 1, br: n.qM.readDouble, bw: n.gp.writeDouble },
+                },
+              }),
+            P.sm_m
+          );
+        }
+        static MBF() {
+          return P.sm_mbf || (P.sm_mbf = n.w0(P.M())), P.sm_mbf;
+        }
+        toObject(e = !1) {
+          return P.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(P.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(P.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new P();
+          return P.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(P.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return P.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(P.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return P.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_GetAvailableDiskSpace_Response";
+        }
+      }
+      class O extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            O.prototype.notification_type || n.Sg(O.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            O.sm_m ||
+              (O.sm_m = {
+                proto: O,
+                fields: {
+                  notification_type: {
+                    n: 1,
+                    br: n.qM.readEnum,
+                    bw: n.gp.writeEnum,
+                  },
+                  timeline_id: {
+                    n: 2,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
+                  game_id: {
+                    n: 3,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                  start_time: {
+                    n: 4,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                  duration_ms: {
+                    n: 5,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                },
+              }),
+            O.sm_m
+          );
+        }
+        static MBF() {
+          return O.sm_mbf || (O.sm_mbf = n.w0(O.M())), O.sm_mbf;
+        }
+        toObject(e = !1) {
+          return O.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(O.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(O.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new O();
+          return O.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(O.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(O.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_TimelineChanged_Notification";
+        }
+      }
+      class k extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            k.prototype.notification_type || n.Sg(k.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            k.sm_m ||
+              (k.sm_m = {
+                proto: k,
+                fields: {
+                  notification_type: {
+                    n: 1,
+                    br: n.qM.readEnum,
+                    bw: n.gp.writeEnum,
+                  },
+                  timeline_id: {
+                    n: 2,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
+                  game_id: {
+                    n: 4,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                  session_id: {
+                    n: 5,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
+                  start_offset: {
+                    n: 6,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                  duration_ms: {
+                    n: 7,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                  recording_type: {
+                    n: 8,
+                    br: n.qM.readEnum,
+                    bw: n.gp.writeEnum,
+                  },
+                },
+              }),
+            k.sm_m
+          );
+        }
+        static MBF() {
+          return k.sm_mbf || (k.sm_mbf = n.w0(k.M())), k.sm_mbf;
+        }
+        toObject(e = !1) {
+          return k.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(k.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(k.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new k();
+          return k.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(k.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return k.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(k.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return k.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_RecordingSessionChanged_Notification";
+        }
+      }
+      class W extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            W.prototype.timeline_id || n.Sg(W.M()),
+            f.initialize(this, e, 0, -1, [17], null);
+        }
+        static M() {
+          return (
+            W.sm_m ||
+              (W.sm_m = {
+                proto: W,
                 fields: {
                   timeline_id: {
                     n: 1,
@@ -11028,60 +11663,66 @@
                     br: n.qM.readString,
                     bw: n.gp.writeString,
                   },
+                  tag: { n: 17, c: g, r: !0, q: !0 },
+                  phase_id: {
+                    n: 18,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
                 },
               }),
-            B.sm_m
+            W.sm_m
           );
         }
         static MBF() {
-          return B.sm_mbf || (B.sm_mbf = n.w0(B.M())), B.sm_mbf;
+          return W.sm_mbf || (W.sm_mbf = n.w0(W.M())), W.sm_mbf;
         }
         toObject(e = !1) {
-          return B.toObject(e, this);
+          return W.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(B.M(), e, t);
+          return n.BT(W.M(), e, t);
         }
         static fromObject(e) {
-          return n.Uq(B.M(), e);
+          return n.Uq(W.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new B();
-          return B.deserializeBinaryFromReader(r, t);
+            r = new W();
+          return W.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(B.MBF(), e, t);
+          return n.zj(W.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.i0(B.M(), e, t);
+          n.i0(W.M(), e, t);
         }
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CTimelineEntry";
         }
       }
-      class w extends u {
+      class D extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            w.prototype.entry || n.Sg(w.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            D.prototype.entry || n.Sg(D.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            w.sm_m ||
-              (w.sm_m = {
-                proto: w,
+            D.sm_m ||
+              (D.sm_m = {
+                proto: D,
                 fields: {
-                  entry: { n: 1, c: B },
+                  entry: { n: 1, c: W },
                   game_id: {
                     n: 2,
                     br: n.qM.readFixed64String,
@@ -11089,91 +11730,91 @@
                   },
                 },
               }),
-            w.sm_m
+            D.sm_m
           );
         }
         static MBF() {
-          return w.sm_mbf || (w.sm_mbf = n.w0(w.M())), w.sm_mbf;
+          return D.sm_mbf || (D.sm_mbf = n.w0(D.M())), D.sm_mbf;
         }
         toObject(e = !1) {
-          return w.toObject(e, this);
+          return D.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(w.M(), e, t);
+          return n.BT(D.M(), e, t);
         }
         static fromObject(e) {
-          return n.Uq(w.M(), e);
+          return n.Uq(D.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new w();
-          return w.deserializeBinaryFromReader(r, t);
+            r = new D();
+          return D.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(w.MBF(), e, t);
+          return n.zj(D.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return w.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.i0(w.M(), e, t);
+          n.i0(D.M(), e, t);
         }
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return w.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CGameRecording_TimelineEntryChanged_Notification";
         }
       }
-      class R extends u {
+      class L extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), u.initialize(this, e, 0, -1, void 0, null);
+          super(), f.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return R.toObject(e, this);
+          return L.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new R();
+          return new L();
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new R();
-          return R.deserializeBinaryFromReader(r, t);
+            r = new L();
+          return L.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return L.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return L.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CGameRecording_LowDiskSpace_Notification";
         }
       }
-      class G extends u {
+      class F extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            G.prototype.game_id || n.Sg(G.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            F.prototype.game_id || n.Sg(F.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            G.sm_m ||
-              (G.sm_m = {
-                proto: G,
+            F.sm_m ||
+              (F.sm_m = {
+                proto: F,
                 fields: {
                   game_id: {
                     n: 1,
@@ -11182,56 +11823,56 @@
                   },
                 },
               }),
-            G.sm_m
+            F.sm_m
           );
         }
         static MBF() {
-          return G.sm_mbf || (G.sm_mbf = n.w0(G.M())), G.sm_mbf;
+          return F.sm_mbf || (F.sm_mbf = n.w0(F.M())), F.sm_mbf;
         }
         toObject(e = !1) {
-          return G.toObject(e, this);
+          return F.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(G.M(), e, t);
+          return n.BT(F.M(), e, t);
         }
         static fromObject(e) {
-          return n.Uq(G.M(), e);
+          return n.Uq(F.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new G();
-          return G.deserializeBinaryFromReader(r, t);
+            r = new F();
+          return F.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(G.MBF(), e, t);
+          return n.zj(F.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return G.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.i0(G.M(), e, t);
+          n.i0(F.M(), e, t);
         }
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return G.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CGameRecording_PostGameHighlightsChanged_Notification";
         }
       }
-      class I extends u {
+      class q extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            I.prototype.clip_id || n.Sg(I.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            q.prototype.clip_id || n.Sg(q.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            I.sm_m ||
-              (I.sm_m = {
-                proto: I,
+            q.sm_m ||
+              (q.sm_m = {
+                proto: q,
                 fields: {
                   clip_id: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
                   game_id: {
@@ -11308,560 +11949,6 @@
                   },
                 },
               }),
-            I.sm_m
-          );
-        }
-        static MBF() {
-          return I.sm_mbf || (I.sm_mbf = n.w0(I.M())), I.sm_mbf;
-        }
-        toObject(e = !1) {
-          return I.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(I.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(I.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new I();
-          return I.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(I.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(I.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_ClipSummary";
-        }
-      }
-      class E extends u {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            E.prototype.game_id || n.Sg(E.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            E.sm_m ||
-              (E.sm_m = {
-                proto: E,
-                fields: {
-                  game_id: {
-                    n: 1,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
-                  start: { n: 2, c: P },
-                  end: { n: 3, c: P },
-                  name: { n: 4, br: n.qM.readString, bw: n.gp.writeString },
-                  src_clip_id: {
-                    n: 5,
-                    br: n.qM.readString,
-                    bw: n.gp.writeString,
-                  },
-                  temporary: { n: 6, br: n.qM.readBool, bw: n.gp.writeBool },
-                },
-              }),
-            E.sm_m
-          );
-        }
-        static MBF() {
-          return E.sm_mbf || (E.sm_mbf = n.w0(E.M())), E.sm_mbf;
-        }
-        toObject(e = !1) {
-          return E.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(E.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(E.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new E();
-          return E.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(E.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(E.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return E.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_SaveClip_Request";
-        }
-      }
-      class P extends u {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            P.prototype.timeline_id || n.Sg(P.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            P.sm_m ||
-              (P.sm_m = {
-                proto: P,
-                fields: {
-                  timeline_id: {
-                    n: 1,
-                    br: n.qM.readString,
-                    bw: n.gp.writeString,
-                  },
-                  offset_ms: {
-                    n: 2,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
-                },
-              }),
-            P.sm_m
-          );
-        }
-        static MBF() {
-          return P.sm_mbf || (P.sm_mbf = n.w0(P.M())), P.sm_mbf;
-        }
-        toObject(e = !1) {
-          return P.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(P.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(P.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new P();
-          return P.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(P.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return P.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(P.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return P.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_SaveClip_Request_Position";
-        }
-      }
-      class z extends u {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            z.prototype.summary || n.Sg(z.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            z.sm_m ||
-              (z.sm_m = { proto: z, fields: { summary: { n: 1, c: I } } }),
-            z.sm_m
-          );
-        }
-        static MBF() {
-          return z.sm_mbf || (z.sm_mbf = n.w0(z.M())), z.sm_mbf;
-        }
-        toObject(e = !1) {
-          return z.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(z.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(z.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new z();
-          return z.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(z.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(z.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_SaveClip_Response";
-        }
-      }
-      class O extends u {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            O.prototype.clip_id || n.Sg(O.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            O.sm_m ||
-              (O.sm_m = {
-                proto: O,
-                fields: {
-                  clip_id: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
-                },
-              }),
-            O.sm_m
-          );
-        }
-        static MBF() {
-          return O.sm_mbf || (O.sm_mbf = n.w0(O.M())), O.sm_mbf;
-        }
-        toObject(e = !1) {
-          return O.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(O.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(O.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new O();
-          return O.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(O.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(O.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return O.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_DeleteClip_Request";
-        }
-      }
-      class k extends u {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), u.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return k.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new k();
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new k();
-          return k.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return k.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return k.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_DeleteClip_Response";
-        }
-      }
-      class L extends u {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            L.prototype.bitrate_kbps || n.Sg(L.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            L.sm_m ||
-              (L.sm_m = {
-                proto: L,
-                fields: {
-                  bitrate_kbps: {
-                    n: 1,
-                    br: n.qM.readInt32,
-                    bw: n.gp.writeInt32,
-                  },
-                  width: { n: 2, br: n.qM.readInt32, bw: n.gp.writeInt32 },
-                  height: { n: 3, br: n.qM.readInt32, bw: n.gp.writeInt32 },
-                  frames_per_second: {
-                    n: 4,
-                    br: n.qM.readInt32,
-                    bw: n.gp.writeInt32,
-                  },
-                },
-              }),
-            L.sm_m
-          );
-        }
-        static MBF() {
-          return L.sm_mbf || (L.sm_mbf = n.w0(L.M())), L.sm_mbf;
-        }
-        toObject(e = !1) {
-          return L.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(L.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(L.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new L();
-          return L.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(L.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return L.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(L.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return L.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_ExportClip_Settings";
-        }
-      }
-      class D extends u {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            D.prototype.clip_id || n.Sg(D.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            D.sm_m ||
-              (D.sm_m = {
-                proto: D,
-                fields: {
-                  clip_id: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
-                  export_mp4_path: {
-                    n: 2,
-                    br: n.qM.readString,
-                    bw: n.gp.writeString,
-                  },
-                  settings: { n: 3, c: L },
-                },
-              }),
-            D.sm_m
-          );
-        }
-        static MBF() {
-          return D.sm_mbf || (D.sm_mbf = n.w0(D.M())), D.sm_mbf;
-        }
-        toObject(e = !1) {
-          return D.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(D.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(D.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new D();
-          return D.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(D.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return D.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(D.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return D.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_ExportClip_Request";
-        }
-      }
-      class W extends u {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), u.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return W.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
-        }
-        static fromObject(e) {
-          return new W();
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new W();
-          return W.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return e;
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return W.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {}
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return W.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_ExportClip_Response";
-        }
-      }
-      class F extends u {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            F.prototype.game_id || n.Sg(F.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            F.sm_m ||
-              (F.sm_m = {
-                proto: F,
-                fields: {
-                  game_id: {
-                    n: 1,
-                    br: n.qM.readFixed64String,
-                    bw: n.gp.writeFixed64String,
-                  },
-                  timeline_id: {
-                    n: 2,
-                    br: n.qM.readString,
-                    bw: n.gp.writeString,
-                  },
-                  timeline_offset_ms: {
-                    n: 3,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
-                },
-              }),
-            F.sm_m
-          );
-        }
-        static MBF() {
-          return F.sm_mbf || (F.sm_mbf = n.w0(F.M())), F.sm_mbf;
-        }
-        toObject(e = !1) {
-          return F.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(F.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(F.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new F();
-          return F.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(F.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return F.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(F.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return F.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_TakeScreenshot_Request";
-        }
-      }
-      class q extends u {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            q.prototype.screenshot_id || n.Sg(q.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            q.sm_m ||
-              (q.sm_m = {
-                proto: q,
-                fields: {
-                  screenshot_id: {
-                    n: 1,
-                    br: n.qM.readFixed64String,
-                    bw: n.gp.writeFixed64String,
-                  },
-                },
-              }),
             q.sm_m
           );
         }
@@ -11897,15 +11984,15 @@
           return q.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_TakeScreenshot_Response";
+          return "CGameRecording_ClipSummary";
         }
       }
-      class x extends u {
+      class x extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            x.prototype.clip_id || n.Sg(x.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            x.prototype.game_id || n.Sg(x.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -11913,10 +12000,20 @@
               (x.sm_m = {
                 proto: x,
                 fields: {
-                  clip_id: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
-                  title: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
-                  desc: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
-                  visibility: { n: 4, br: n.qM.readInt32, bw: n.gp.writeInt32 },
+                  game_id: {
+                    n: 1,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                  start: { n: 2, c: A },
+                  end: { n: 3, c: A },
+                  name: { n: 4, br: n.qM.readString, bw: n.gp.writeString },
+                  src_clip_id: {
+                    n: 5,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
+                  temporary: { n: 6, br: n.qM.readBool, bw: n.gp.writeBool },
                 },
               }),
             x.sm_m
@@ -11954,20 +12051,34 @@
           return x.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_UploadClipToSteam_Request";
+          return "CGameRecording_SaveClip_Request";
         }
       }
-      class A extends u {
+      class A extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            A.prototype.summary || n.Sg(A.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            A.prototype.timeline_id || n.Sg(A.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             A.sm_m ||
-              (A.sm_m = { proto: A, fields: { summary: { n: 1, c: I } } }),
+              (A.sm_m = {
+                proto: A,
+                fields: {
+                  timeline_id: {
+                    n: 1,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
+                  offset_ms: {
+                    n: 2,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                },
+              }),
             A.sm_m
           );
         }
@@ -12003,79 +12114,20 @@
           return A.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_UploadClipToSteam_Response";
+          return "CGameRecording_SaveClip_Request_Position";
         }
       }
-      class N extends u {
+      class U extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            N.prototype.clip_id || n.Sg(N.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            N.sm_m ||
-              (N.sm_m = {
-                proto: N,
-                fields: {
-                  clip_id: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
-                },
-              }),
-            N.sm_m
-          );
-        }
-        static MBF() {
-          return N.sm_mbf || (N.sm_mbf = n.w0(N.M())), N.sm_mbf;
-        }
-        toObject(e = !1) {
-          return N.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(N.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(N.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new N();
-          return N.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(N.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return N.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(N.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return N.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_ZipClip_Request";
-        }
-      }
-      class U extends u {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            U.prototype.zip_path || n.Sg(U.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            U.prototype.summary || n.Sg(U.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             U.sm_m ||
-              (U.sm_m = {
-                proto: U,
-                fields: {
-                  zip_path: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
-                },
-              }),
+              (U.sm_m = { proto: U, fields: { summary: { n: 1, c: q } } }),
             U.sm_m
           );
         }
@@ -12111,15 +12163,15 @@
           return U.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_ZipClip_Response";
+          return "CGameRecording_SaveClip_Response";
         }
       }
-      class j extends u {
+      class j extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            j.prototype.game_id || n.Sg(j.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            j.prototype.clip_id || n.Sg(j.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -12127,21 +12179,7 @@
               (j.sm_m = {
                 proto: j,
                 fields: {
-                  game_id: {
-                    n: 1,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
-                  created_after: {
-                    n: 2,
-                    br: n.qM.readUint32,
-                    bw: n.gp.writeUint32,
-                  },
-                  include_temporary: {
-                    n: 3,
-                    br: n.qM.readBool,
-                    bw: n.gp.writeBool,
-                  },
+                  clip_id: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
                 },
               }),
             j.sm_m
@@ -12179,67 +12217,50 @@
           return j.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetClips_Request";
+          return "CGameRecording_DeleteClip_Request";
         }
       }
-      class V extends u {
+      class N extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(),
-            V.prototype.clip || n.Sg(V.M()),
-            u.initialize(this, e, 0, -1, [1], null);
-        }
-        static M() {
-          return (
-            V.sm_m ||
-              (V.sm_m = {
-                proto: V,
-                fields: { clip: { n: 1, c: I, r: !0, q: !0 } },
-              }),
-            V.sm_m
-          );
-        }
-        static MBF() {
-          return V.sm_mbf || (V.sm_mbf = n.w0(V.M())), V.sm_mbf;
+          super(), f.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return V.toObject(e, this);
+          return N.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(V.M(), e, t);
+          return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return n.Uq(V.M(), e);
+          return new N();
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new V();
-          return V.deserializeBinaryFromReader(r, t);
+            r = new N();
+          return N.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(V.MBF(), e, t);
+          return e;
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return V.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return N.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(V.M(), e, t);
-        }
+        static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return V.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return N.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetClips_Response";
+          return "CGameRecording_DeleteClip_Response";
         }
       }
-      class H extends u {
+      class H extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            H.prototype.game_id || n.Sg(H.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            H.prototype.bitrate_kbps || n.Sg(H.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -12247,15 +12268,17 @@
               (H.sm_m = {
                 proto: H,
                 fields: {
-                  game_id: {
+                  bitrate_kbps: {
                     n: 1,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
+                    br: n.qM.readInt32,
+                    bw: n.gp.writeInt32,
                   },
-                  created_after: {
-                    n: 2,
-                    br: n.qM.readUint32,
-                    bw: n.gp.writeUint32,
+                  width: { n: 2, br: n.qM.readInt32, bw: n.gp.writeInt32 },
+                  height: { n: 3, br: n.qM.readInt32, bw: n.gp.writeInt32 },
+                  frames_per_second: {
+                    n: 4,
+                    br: n.qM.readInt32,
+                    bw: n.gp.writeInt32,
                   },
                 },
               }),
@@ -12294,37 +12317,82 @@
           return H.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetAndTrimPostGameHighlights_Request";
+          return "CGameRecording_ExportClip_Settings";
         }
       }
-      class X extends u {
+      class V extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            X.prototype.events || n.Sg(X.M()),
-            u.initialize(this, e, 0, -1, [1], null);
+            V.prototype.clip_id || n.Sg(V.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
-            X.sm_m ||
-              (X.sm_m = {
-                proto: X,
-                fields: { events: { n: 1, c, r: !0, q: !0 } },
+            V.sm_m ||
+              (V.sm_m = {
+                proto: V,
+                fields: {
+                  clip_id: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
+                  export_mp4_path: {
+                    n: 2,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
+                  settings: { n: 3, c: H },
+                },
               }),
-            X.sm_m
+            V.sm_m
           );
         }
         static MBF() {
-          return X.sm_mbf || (X.sm_mbf = n.w0(X.M())), X.sm_mbf;
+          return V.sm_mbf || (V.sm_mbf = n.w0(V.M())), V.sm_mbf;
+        }
+        toObject(e = !1) {
+          return V.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(V.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(V.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new V();
+          return V.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(V.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return V.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(V.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return V.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_ExportClip_Request";
+        }
+      }
+      class X extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), f.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return X.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(X.M(), e, t);
+          return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return n.Uq(X.M(), e);
+          return new X();
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -12332,29 +12400,27 @@
           return X.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(X.MBF(), e, t);
+          return e;
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return X.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(X.M(), e, t);
-        }
+        static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return X.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetAndTrimPostGameHighlights_Response";
+          return "CGameRecording_ExportClip_Response";
         }
       }
-      class Z extends u {
+      class Z extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             Z.prototype.game_id || n.Sg(Z.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -12364,11 +12430,19 @@
                 fields: {
                   game_id: {
                     n: 1,
+                    br: n.qM.readFixed64String,
+                    bw: n.gp.writeFixed64String,
+                  },
+                  timeline_id: {
+                    n: 2,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
+                  timeline_offset_ms: {
+                    n: 3,
                     br: n.qM.readUint64String,
                     bw: n.gp.writeUint64String,
                   },
-                  entry: { n: 2, c: B },
-                  clip_id: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
                 },
               }),
             Z.sm_m
@@ -12406,73 +12480,15 @@
           return Z.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_UserAddTimelineEntry_Request";
+          return "CGameRecording_TakeScreenshot_Request";
         }
       }
-      class J extends u {
+      class Q extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            J.prototype.entry_id || n.Sg(J.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            J.sm_m ||
-              (J.sm_m = {
-                proto: J,
-                fields: {
-                  entry_id: {
-                    n: 1,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
-                },
-              }),
-            J.sm_m
-          );
-        }
-        static MBF() {
-          return J.sm_mbf || (J.sm_mbf = n.w0(J.M())), J.sm_mbf;
-        }
-        toObject(e = !1) {
-          return J.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(J.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(J.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new J();
-          return J.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(J.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return J.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(J.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return J.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecording_UserAddTimelineEntry_Response";
-        }
-      }
-      class Q extends u {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Q.prototype.game_id || n.Sg(Q.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            Q.prototype.screenshot_id || n.Sg(Q.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -12480,13 +12496,11 @@
               (Q.sm_m = {
                 proto: Q,
                 fields: {
-                  game_id: {
+                  screenshot_id: {
                     n: 1,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
+                    br: n.qM.readFixed64String,
+                    bw: n.gp.writeFixed64String,
                   },
-                  entry: { n: 2, c: B },
-                  clip_id: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
                 },
               }),
             Q.sm_m
@@ -12524,22 +12538,91 @@
           return Q.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_UserUpdateTimelineEntry_Request";
+          return "CGameRecording_TakeScreenshot_Response";
         }
       }
-      class K extends u {
+      class J extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), u.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            J.prototype.clip_id || n.Sg(J.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            J.sm_m ||
+              (J.sm_m = {
+                proto: J,
+                fields: {
+                  clip_id: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
+                  title: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
+                  desc: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
+                  visibility: { n: 4, br: n.qM.readInt32, bw: n.gp.writeInt32 },
+                },
+              }),
+            J.sm_m
+          );
+        }
+        static MBF() {
+          return J.sm_mbf || (J.sm_mbf = n.w0(J.M())), J.sm_mbf;
+        }
+        toObject(e = !1) {
+          return J.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(J.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(J.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new J();
+          return J.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(J.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return J.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(J.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return J.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_UploadClipToSteam_Request";
+        }
+      }
+      class K extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            K.prototype.summary || n.Sg(K.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            K.sm_m ||
+              (K.sm_m = { proto: K, fields: { summary: { n: 1, c: q } } }),
+            K.sm_m
+          );
+        }
+        static MBF() {
+          return K.sm_mbf || (K.sm_mbf = n.w0(K.M())), K.sm_mbf;
         }
         toObject(e = !1) {
           return K.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return n.BT(K.M(), e, t);
         }
         static fromObject(e) {
-          return new K();
+          return n.Uq(K.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -12547,27 +12630,29 @@
           return K.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return n.zj(K.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return K.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          n.i0(K.M(), e, t);
+        }
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return K.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_UserUpdateTimelineEntry_Response";
+          return "CGameRecording_UploadClipToSteam_Response";
         }
       }
-      class Y extends u {
+      class Y extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Y.prototype.game_id || n.Sg(Y.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            Y.prototype.clip_id || n.Sg(Y.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -12575,22 +12660,7 @@
               (Y.sm_m = {
                 proto: Y,
                 fields: {
-                  game_id: {
-                    n: 1,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
-                  timeline_id: {
-                    n: 2,
-                    br: n.qM.readString,
-                    bw: n.gp.writeString,
-                  },
-                  entry_id: {
-                    n: 3,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
-                  clip_id: { n: 4, br: n.qM.readString, bw: n.gp.writeString },
+                  clip_id: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
                 },
               }),
             Y.sm_m
@@ -12628,22 +12698,39 @@
           return Y.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_UserRemoveTimelineEntry_Request";
+          return "CGameRecording_ZipClip_Request";
         }
       }
-      class $ extends u {
+      class $ extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), u.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            $.prototype.zip_path || n.Sg($.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            $.sm_m ||
+              ($.sm_m = {
+                proto: $,
+                fields: {
+                  zip_path: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
+                },
+              }),
+            $.sm_m
+          );
+        }
+        static MBF() {
+          return $.sm_mbf || ($.sm_mbf = n.w0($.M())), $.sm_mbf;
         }
         toObject(e = !1) {
           return $.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return n.BT($.M(), e, t);
         }
         static fromObject(e) {
-          return new $();
+          return n.Uq($.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -12651,27 +12738,29 @@
           return $.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return n.zj($.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return $.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          n.i0($.M(), e, t);
+        }
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return $.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_UserRemoveTimelineEntry_Response";
+          return "CGameRecording_ZipClip_Response";
         }
       }
-      class ee extends u {
+      class ee extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ee.prototype.game_ids || n.Sg(ee.M()),
-            u.initialize(this, e, 0, -1, [1], null);
+            ee.prototype.game_id || n.Sg(ee.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -12679,13 +12768,20 @@
               (ee.sm_m = {
                 proto: ee,
                 fields: {
-                  game_ids: {
+                  game_id: {
                     n: 1,
-                    r: !0,
-                    q: !0,
                     br: n.qM.readUint64String,
-                    pbr: n.qM.readPackedUint64String,
-                    bw: n.gp.writeRepeatedUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                  created_after: {
+                    n: 2,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                  include_temporary: {
+                    n: 3,
+                    br: n.qM.readBool,
+                    bw: n.gp.writeBool,
                   },
                 },
               }),
@@ -12724,22 +12820,37 @@
           return ee.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_ManuallyDeleteRecordingsForApps_Request";
+          return "CGameRecording_GetClips_Request";
         }
       }
-      class te extends u {
+      class te extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), u.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            te.prototype.clip || n.Sg(te.M()),
+            f.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            te.sm_m ||
+              (te.sm_m = {
+                proto: te,
+                fields: { clip: { n: 1, c: q, r: !0, q: !0 } },
+              }),
+            te.sm_m
+          );
+        }
+        static MBF() {
+          return te.sm_mbf || (te.sm_mbf = n.w0(te.M())), te.sm_mbf;
         }
         toObject(e = !1) {
           return te.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return n.BT(te.M(), e, t);
         }
         static fromObject(e) {
-          return new te();
+          return n.Uq(te.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -12747,27 +12858,29 @@
           return te.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return n.zj(te.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return te.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          n.i0(te.M(), e, t);
+        }
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return te.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_ManuallyDeleteRecordingsForApps_Response";
+          return "CGameRecording_GetClips_Response";
         }
       }
-      class re extends u {
+      class re extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            re.prototype.folder_path || n.Sg(re.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            re.prototype.game_id || n.Sg(re.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -12775,12 +12888,16 @@
               (re.sm_m = {
                 proto: re,
                 fields: {
-                  folder_path: {
+                  game_id: {
                     n: 1,
-                    br: n.qM.readString,
-                    bw: n.gp.writeString,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
                   },
-                  type: { n: 2, br: n.qM.readEnum, bw: n.gp.writeEnum },
+                  created_after: {
+                    n: 2,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
                 },
               }),
             re.sm_m
@@ -12818,28 +12935,22 @@
           return re.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetTotalDiskSpaceUsage_Request";
+          return "CGameRecording_GetAndTrimPostGameHighlights_Request";
         }
       }
-      class ie extends u {
+      class ie extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ie.prototype.size || n.Sg(ie.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            ie.prototype.events || n.Sg(ie.M()),
+            f.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             ie.sm_m ||
               (ie.sm_m = {
                 proto: ie,
-                fields: {
-                  size: {
-                    n: 1,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
-                },
+                fields: { events: { n: 1, c, r: !0, q: !0 } },
               }),
             ie.sm_m
           );
@@ -12876,15 +12987,15 @@
           return ie.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetTotalDiskSpaceUsage_Response";
+          return "CGameRecording_GetAndTrimPostGameHighlights_Response";
         }
       }
-      class ne extends u {
+      class ne extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ne.prototype.recording_id || n.Sg(ne.M()),
-            u.initialize(this, e, 0, -1, [4], null);
+            ne.prototype.game_id || n.Sg(ne.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -12892,38 +13003,13 @@
               (ne.sm_m = {
                 proto: ne,
                 fields: {
-                  recording_id: {
+                  game_id: {
                     n: 1,
-                    br: n.qM.readString,
-                    bw: n.gp.writeString,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
                   },
+                  entry: { n: 2, c: W },
                   clip_id: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
-                  timeline_id: {
-                    n: 7,
-                    br: n.qM.readString,
-                    bw: n.gp.writeString,
-                  },
-                  start_offset_us: {
-                    n: 4,
-                    r: !0,
-                    q: !0,
-                    br: n.qM.readInt64String,
-                    pbr: n.qM.readPackedInt64String,
-                    bw: n.gp.writeRepeatedInt64String,
-                  },
-                  major_axis: {
-                    n: 5,
-                    d: 512,
-                    br: n.qM.readUint32,
-                    bw: n.gp.writeUint32,
-                  },
-                  time_precision: {
-                    n: 6,
-                    d: 0,
-                    br: n.qM.readEnum,
-                    bw: n.gp.writeEnum,
-                  },
-                  format: { n: 8, d: 1, br: n.qM.readEnum, bw: n.gp.writeEnum },
                 },
               }),
             ne.sm_m
@@ -12961,22 +13047,28 @@
           return ne.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetThumbnails_Request";
+          return "CGameRecording_UserAddTimelineEntry_Request";
         }
       }
-      class ae extends u {
+      class ae extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ae.prototype.thumbnails || n.Sg(ae.M()),
-            u.initialize(this, e, 0, -1, [1], null);
+            ae.prototype.entry_id || n.Sg(ae.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             ae.sm_m ||
               (ae.sm_m = {
                 proto: ae,
-                fields: { thumbnails: { n: 1, c: se, r: !0, q: !0 } },
+                fields: {
+                  entry_id: {
+                    n: 1,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                },
               }),
             ae.sm_m
           );
@@ -13013,15 +13105,15 @@
           return ae.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetThumbnails_Response";
+          return "CGameRecording_UserAddTimelineEntry_Response";
         }
       }
-      class se extends u {
+      class se extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            se.prototype.image_data || n.Sg(se.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            se.prototype.game_id || n.Sg(se.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -13029,9 +13121,13 @@
               (se.sm_m = {
                 proto: se,
                 fields: {
-                  image_data: { n: 1, br: n.qM.readBytes, bw: n.gp.writeBytes },
-                  width: { n: 2, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                  height: { n: 3, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  game_id: {
+                    n: 1,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                  entry: { n: 2, c: W },
+                  clip_id: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
                 },
               }),
             se.sm_m
@@ -13069,43 +13165,22 @@
           return se.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetThumbnails_Response_Thumbnail";
+          return "CGameRecording_UserUpdateTimelineEntry_Request";
         }
       }
-      class le extends u {
+      class le extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(),
-            le.prototype.game_id || n.Sg(le.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            le.sm_m ||
-              (le.sm_m = {
-                proto: le,
-                fields: {
-                  game_id: {
-                    n: 1,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
-                },
-              }),
-            le.sm_m
-          );
-        }
-        static MBF() {
-          return le.sm_mbf || (le.sm_mbf = n.w0(le.M())), le.sm_mbf;
+          super(), f.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return le.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(le.M(), e, t);
+          return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return n.Uq(le.M(), e);
+          return new le();
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -13113,36 +13188,66 @@
           return le.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(le.MBF(), e, t);
+          return e;
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return le.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(le.M(), e, t);
-        }
+        static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return le.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_StartRecording_Request";
+          return "CGameRecording_UserUpdateTimelineEntry_Response";
         }
       }
-      class oe extends u {
+      class oe extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), u.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            oe.prototype.game_id || n.Sg(oe.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            oe.sm_m ||
+              (oe.sm_m = {
+                proto: oe,
+                fields: {
+                  game_id: {
+                    n: 1,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                  timeline_id: {
+                    n: 2,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
+                  entry_id: {
+                    n: 3,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                  clip_id: { n: 4, br: n.qM.readString, bw: n.gp.writeString },
+                },
+              }),
+            oe.sm_m
+          );
+        }
+        static MBF() {
+          return oe.sm_mbf || (oe.sm_mbf = n.w0(oe.M())), oe.sm_mbf;
         }
         toObject(e = !1) {
           return oe.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return n.BT(oe.M(), e, t);
         }
         static fromObject(e) {
-          return new oe();
+          return n.Uq(oe.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -13150,55 +13255,36 @@
           return oe.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return n.zj(oe.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return oe.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          n.i0(oe.M(), e, t);
+        }
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return oe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_StartRecording_Response";
+          return "CGameRecording_UserRemoveTimelineEntry_Request";
         }
       }
-      class me extends u {
+      class me extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(),
-            me.prototype.game_id || n.Sg(me.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            me.sm_m ||
-              (me.sm_m = {
-                proto: me,
-                fields: {
-                  game_id: {
-                    n: 1,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
-                },
-              }),
-            me.sm_m
-          );
-        }
-        static MBF() {
-          return me.sm_mbf || (me.sm_mbf = n.w0(me.M())), me.sm_mbf;
+          super(), f.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return me.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(me.M(), e, t);
+          return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return n.Uq(me.M(), e);
+          return new me();
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -13206,34 +13292,44 @@
           return me.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(me.MBF(), e, t);
+          return e;
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return me.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(me.M(), e, t);
-        }
+        static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return me.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_StopRecording_Request";
+          return "CGameRecording_UserRemoveTimelineEntry_Response";
         }
       }
-      class ce extends u {
+      class ce extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ce.prototype.summary || n.Sg(ce.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            ce.prototype.game_ids || n.Sg(ce.M()),
+            f.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             ce.sm_m ||
-              (ce.sm_m = { proto: ce, fields: { summary: { n: 1, c: I } } }),
+              (ce.sm_m = {
+                proto: ce,
+                fields: {
+                  game_ids: {
+                    n: 1,
+                    r: !0,
+                    q: !0,
+                    br: n.qM.readUint64String,
+                    pbr: n.qM.readPackedUint64String,
+                    bw: n.gp.writeRepeatedUint64String,
+                  },
+                },
+              }),
             ce.sm_m
           );
         }
@@ -13269,43 +13365,22 @@
           return ce.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_StopRecording_Response";
+          return "CGameRecording_ManuallyDeleteRecordingsForApps_Request";
         }
       }
-      class ue extends u {
+      class ue extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(),
-            ue.prototype.game_id || n.Sg(ue.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            ue.sm_m ||
-              (ue.sm_m = {
-                proto: ue,
-                fields: {
-                  game_id: {
-                    n: 1,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
-                },
-              }),
-            ue.sm_m
-          );
-        }
-        static MBF() {
-          return ue.sm_mbf || (ue.sm_mbf = n.w0(ue.M())), ue.sm_mbf;
+          super(), f.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return ue.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(ue.M(), e, t);
+          return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return n.Uq(ue.M(), e);
+          return new ue();
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -13313,29 +13388,27 @@
           return ue.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(ue.MBF(), e, t);
+          return e;
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return ue.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(ue.M(), e, t);
-        }
+        static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return ue.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetRecordingSize_Request";
+          return "CGameRecording_ManuallyDeleteRecordingsForApps_Response";
         }
       }
-      class de extends u {
+      class de extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            de.prototype.file_size || n.Sg(de.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            de.prototype.folder_path || n.Sg(de.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -13343,11 +13416,12 @@
               (de.sm_m = {
                 proto: de,
                 fields: {
-                  file_size: {
+                  folder_path: {
                     n: 1,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
                   },
+                  type: { n: 2, br: n.qM.readEnum, bw: n.gp.writeEnum },
                 },
               }),
             de.sm_m
@@ -13385,22 +13459,43 @@
           return de.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetRecordingSize_Response";
+          return "CGameRecording_GetTotalDiskSpaceUsage_Request";
         }
       }
-      class ge extends u {
+      class ge extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), u.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            ge.prototype.size || n.Sg(ge.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            ge.sm_m ||
+              (ge.sm_m = {
+                proto: ge,
+                fields: {
+                  size: {
+                    n: 1,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                },
+              }),
+            ge.sm_m
+          );
+        }
+        static MBF() {
+          return ge.sm_mbf || (ge.sm_mbf = n.w0(ge.M())), ge.sm_mbf;
         }
         toObject(e = !1) {
           return ge.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return n.BT(ge.M(), e, t);
         }
         static fromObject(e) {
-          return new ge();
+          return n.Uq(ge.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -13408,34 +13503,84 @@
           return ge.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return n.zj(ge.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return ge.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          n.i0(ge.M(), e, t);
+        }
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return ge.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_CleanupBackgroundRecordings_Request";
+          return "CGameRecording_GetTotalDiskSpaceUsage_Response";
         }
       }
-      class fe extends u {
+      class fe extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), u.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            fe.prototype.recording_id || n.Sg(fe.M()),
+            f.initialize(this, e, 0, -1, [4], null);
+        }
+        static M() {
+          return (
+            fe.sm_m ||
+              (fe.sm_m = {
+                proto: fe,
+                fields: {
+                  recording_id: {
+                    n: 1,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
+                  clip_id: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
+                  timeline_id: {
+                    n: 7,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
+                  start_offset_us: {
+                    n: 4,
+                    r: !0,
+                    q: !0,
+                    br: n.qM.readInt64String,
+                    pbr: n.qM.readPackedInt64String,
+                    bw: n.gp.writeRepeatedInt64String,
+                  },
+                  major_axis: {
+                    n: 5,
+                    d: 512,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
+                  time_precision: {
+                    n: 6,
+                    d: 0,
+                    br: n.qM.readEnum,
+                    bw: n.gp.writeEnum,
+                  },
+                  format: { n: 8, d: 1, br: n.qM.readEnum, bw: n.gp.writeEnum },
+                },
+              }),
+            fe.sm_m
+          );
+        }
+        static MBF() {
+          return fe.sm_mbf || (fe.sm_mbf = n.w0(fe.M())), fe.sm_mbf;
         }
         toObject(e = !1) {
           return fe.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return n.BT(fe.M(), e, t);
         }
         static fromObject(e) {
-          return new fe();
+          return n.Uq(fe.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -13443,34 +13588,51 @@
           return fe.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return n.zj(fe.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return fe.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          n.i0(fe.M(), e, t);
+        }
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return fe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_CleanupBackgroundRecordings_Response";
+          return "CGameRecording_GetThumbnails_Request";
         }
       }
-      class pe extends u {
+      class pe extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), u.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            pe.prototype.thumbnails || n.Sg(pe.M()),
+            f.initialize(this, e, 0, -1, [1], null);
+        }
+        static M() {
+          return (
+            pe.sm_m ||
+              (pe.sm_m = {
+                proto: pe,
+                fields: { thumbnails: { n: 1, c: he, r: !0, q: !0 } },
+              }),
+            pe.sm_m
+          );
+        }
+        static MBF() {
+          return pe.sm_mbf || (pe.sm_mbf = n.w0(pe.M())), pe.sm_mbf;
         }
         toObject(e = !1) {
           return pe.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return n.BT(pe.M(), e, t);
         }
         static fromObject(e) {
-          return new pe();
+          return n.Uq(pe.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -13478,27 +13640,29 @@
           return pe.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return n.zj(pe.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return pe.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          n.i0(pe.M(), e, t);
+        }
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return pe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetPlatformCapabilities_Request";
+          return "CGameRecording_GetThumbnails_Response";
         }
       }
-      class he extends u {
+      class he extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            he.prototype.per_process_audio_capture || n.Sg(he.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            he.prototype.image_data || n.Sg(he.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -13506,11 +13670,9 @@
               (he.sm_m = {
                 proto: he,
                 fields: {
-                  per_process_audio_capture: {
-                    n: 1,
-                    br: n.qM.readBool,
-                    bw: n.gp.writeBool,
-                  },
+                  image_data: { n: 1, br: n.qM.readBytes, bw: n.gp.writeBytes },
+                  width: { n: 2, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  height: { n: 3, br: n.qM.readUint32, bw: n.gp.writeUint32 },
                 },
               }),
             he.sm_m
@@ -13548,20 +13710,29 @@
           return he.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_GetPlatformCapabilities_Response";
+          return "CGameRecording_GetThumbnails_Response_Thumbnail";
         }
       }
-      class _e extends u {
+      class _e extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            _e.prototype.summary || n.Sg(_e.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            _e.prototype.game_id || n.Sg(_e.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             _e.sm_m ||
-              (_e.sm_m = { proto: _e, fields: { summary: { n: 1, c: I } } }),
+              (_e.sm_m = {
+                proto: _e,
+                fields: {
+                  game_id: {
+                    n: 1,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                },
+              }),
             _e.sm_m
           );
         }
@@ -13597,44 +13768,22 @@
           return _e.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_ClipCreated_Notification";
+          return "CGameRecording_StartRecording_Request";
         }
       }
-      class Se extends u {
+      class Se extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(),
-            Se.prototype.clip_id || n.Sg(Se.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            Se.sm_m ||
-              (Se.sm_m = {
-                proto: Se,
-                fields: {
-                  clip_id: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
-                  game_id: {
-                    n: 2,
-                    br: n.qM.readUint64String,
-                    bw: n.gp.writeUint64String,
-                  },
-                },
-              }),
-            Se.sm_m
-          );
-        }
-        static MBF() {
-          return Se.sm_mbf || (Se.sm_mbf = n.w0(Se.M())), Se.sm_mbf;
+          super(), f.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return Se.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(Se.M(), e, t);
+          return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return n.Uq(Se.M(), e);
+          return new Se();
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -13642,29 +13791,27 @@
           return Se.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(Se.MBF(), e, t);
+          return e;
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return Se.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(Se.M(), e, t);
-        }
+        static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return Se.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_ClipDeleted_Notification";
+          return "CGameRecording_StartRecording_Response";
         }
       }
-      class be extends u {
+      class be extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            be.prototype.progress || n.Sg(be.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            be.prototype.game_id || n.Sg(be.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -13672,9 +13819,11 @@
               (be.sm_m = {
                 proto: be,
                 fields: {
-                  progress: { n: 1, br: n.qM.readFloat, bw: n.gp.writeFloat },
-                  clip_id: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
-                  eresult: { n: 3, br: n.qM.readInt32, bw: n.gp.writeInt32 },
+                  game_id: {
+                    n: 1,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
                 },
               }),
             be.sm_m
@@ -13712,27 +13861,20 @@
           return be.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_ExportProgress_Notification";
+          return "CGameRecording_StopRecording_Request";
         }
       }
-      class Me extends u {
+      class Me extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Me.prototype.progress || n.Sg(Me.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            Me.prototype.summary || n.Sg(Me.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             Me.sm_m ||
-              (Me.sm_m = {
-                proto: Me,
-                fields: {
-                  progress: { n: 1, br: n.qM.readFloat, bw: n.gp.writeFloat },
-                  clip_id: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
-                  eresult: { n: 3, br: n.qM.readInt32, bw: n.gp.writeInt32 },
-                },
-              }),
+              (Me.sm_m = { proto: Me, fields: { summary: { n: 1, c: q } } }),
             Me.sm_m
           );
         }
@@ -13768,15 +13910,15 @@
           return Me.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_UploadProgress_Notification";
+          return "CGameRecording_StopRecording_Response";
         }
       }
-      class ye extends u {
+      class ye extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             ye.prototype.game_id || n.Sg(ye.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -13826,22 +13968,43 @@
           return ye.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_SwitchBackgroundRecordingGame_Request";
+          return "CGameRecording_GetRecordingSize_Request";
         }
       }
-      class Ce extends u {
+      class Ce extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), u.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            Ce.prototype.file_size || n.Sg(Ce.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            Ce.sm_m ||
+              (Ce.sm_m = {
+                proto: Ce,
+                fields: {
+                  file_size: {
+                    n: 1,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                },
+              }),
+            Ce.sm_m
+          );
+        }
+        static MBF() {
+          return Ce.sm_mbf || (Ce.sm_mbf = n.w0(Ce.M())), Ce.sm_mbf;
         }
         toObject(e = !1) {
           return Ce.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return n.BT(Ce.M(), e, t);
         }
         static fromObject(e) {
-          return new Ce();
+          return n.Uq(Ce.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -13849,82 +14012,62 @@
           return Ce.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return n.zj(Ce.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return Ce.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          n.i0(Ce.M(), e, t);
+        }
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return Ce.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecording_SwitchBackgroundRecordingGame_Response";
+          return "CGameRecording_GetRecordingSize_Response";
         }
       }
-      class ve extends u {
+      class Be extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(),
-            ve.prototype.appid || n.Sg(ve.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            ve.sm_m ||
-              (ve.sm_m = {
-                proto: ve,
-                fields: {
-                  appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                  icon: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
-                  title: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
-                  desc: { n: 4, br: n.qM.readString, bw: n.gp.writeString },
-                },
-              }),
-            ve.sm_m
-          );
-        }
-        static MBF() {
-          return ve.sm_mbf || (ve.sm_mbf = n.w0(ve.M())), ve.sm_mbf;
+          super(), f.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return ve.toObject(e, this);
+          return Be.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(ve.M(), e, t);
+          return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return n.Uq(ve.M(), e);
+          return new Be();
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new ve();
-          return ve.deserializeBinaryFromReader(r, t);
+            r = new Be();
+          return Be.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(ve.MBF(), e, t);
+          return e;
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return ve.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return Be.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(ve.M(), e, t);
-        }
+        static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return ve.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return Be.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecordingDebug_AddTimelineHighlightMarker_Request";
+          return "CGameRecording_CleanupBackgroundRecordings_Request";
         }
       }
-      class Te extends u {
+      class Te extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), u.initialize(this, e, 0, -1, void 0, null);
+          super(), f.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return Te.toObject(e, this);
@@ -13953,77 +14096,78 @@
           return Te.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecordingDebug_AddTimelineHighlightMarker_Response";
+          return "CGameRecording_CleanupBackgroundRecordings_Response";
         }
       }
-      class Be extends u {
+      class ve extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(),
-            Be.prototype.appid || n.Sg(Be.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
-        }
-        static M() {
-          return (
-            Be.sm_m ||
-              (Be.sm_m = {
-                proto: Be,
-                fields: {
-                  appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                  title: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
-                },
-              }),
-            Be.sm_m
-          );
-        }
-        static MBF() {
-          return Be.sm_mbf || (Be.sm_mbf = n.w0(Be.M())), Be.sm_mbf;
+          super(), f.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
-          return Be.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return n.BT(Be.M(), e, t);
-        }
-        static fromObject(e) {
-          return n.Uq(Be.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new i.BinaryReader(e),
-            r = new Be();
-          return Be.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return n.zj(Be.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new i.BinaryWriter();
-          return Be.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          n.i0(Be.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new i.BinaryWriter();
-          return Be.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CGameRecordingDebug_AddTimelineTimestamp_Request";
-        }
-      }
-      class we extends u {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(), u.initialize(this, e, 0, -1, void 0, null);
-        }
-        toObject(e = !1) {
-          return we.toObject(e, this);
+          return ve.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new we();
+          return new ve();
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new ve();
+          return ve.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return ve.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return ve.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_GetPlatformCapabilities_Request";
+        }
+      }
+      class we extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            we.prototype.per_process_audio_capture || n.Sg(we.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            we.sm_m ||
+              (we.sm_m = {
+                proto: we,
+                fields: {
+                  per_process_audio_capture: {
+                    n: 1,
+                    br: n.qM.readBool,
+                    bw: n.gp.writeBool,
+                  },
+                },
+              }),
+            we.sm_m
+          );
+        }
+        static MBF() {
+          return we.sm_mbf || (we.sm_mbf = n.w0(we.M())), we.sm_mbf;
+        }
+        toObject(e = !1) {
+          return we.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(we.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(we.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -14031,39 +14175,34 @@
           return we.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return n.zj(we.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return we.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          n.i0(we.M(), e, t);
+        }
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return we.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecordingDebug_AddTimelineTimestamp_Response";
+          return "CGameRecording_GetPlatformCapabilities_Response";
         }
       }
-      class Re extends u {
+      class Re extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Re.prototype.appid || n.Sg(Re.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            Re.prototype.summary || n.Sg(Re.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
             Re.sm_m ||
-              (Re.sm_m = {
-                proto: Re,
-                fields: {
-                  appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                  id: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
-                  title: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
-                },
-              }),
+              (Re.sm_m = { proto: Re, fields: { summary: { n: 1, c: q } } }),
             Re.sm_m
           );
         }
@@ -14099,22 +14238,44 @@
           return Re.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecordingDebug_AddTimelineRangeStart_Request";
+          return "CGameRecording_ClipCreated_Notification";
         }
       }
-      class Ge extends u {
+      class Ge extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), u.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            Ge.prototype.clip_id || n.Sg(Ge.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            Ge.sm_m ||
+              (Ge.sm_m = {
+                proto: Ge,
+                fields: {
+                  clip_id: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
+                  game_id: {
+                    n: 2,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                },
+              }),
+            Ge.sm_m
+          );
+        }
+        static MBF() {
+          return Ge.sm_mbf || (Ge.sm_mbf = n.w0(Ge.M())), Ge.sm_mbf;
         }
         toObject(e = !1) {
           return Ge.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return n.BT(Ge.M(), e, t);
         }
         static fromObject(e) {
-          return new Ge();
+          return n.Uq(Ge.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -14122,27 +14283,29 @@
           return Ge.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return n.zj(Ge.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return Ge.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          n.i0(Ge.M(), e, t);
+        }
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return Ge.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecordingDebug_AddTimelineRangeStart_Response";
+          return "CGameRecording_ClipDeleted_Notification";
         }
       }
-      class Ie extends u {
+      class Ie extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Ie.prototype.appid || n.Sg(Ie.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            Ie.prototype.progress || n.Sg(Ie.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
         }
         static M() {
           return (
@@ -14150,8 +14313,9 @@
               (Ie.sm_m = {
                 proto: Ie,
                 fields: {
-                  appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                  id: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
+                  progress: { n: 1, br: n.qM.readFloat, bw: n.gp.writeFloat },
+                  clip_id: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
+                  eresult: { n: 3, br: n.qM.readInt32, bw: n.gp.writeInt32 },
                 },
               }),
             Ie.sm_m
@@ -14189,22 +14353,44 @@
           return Ie.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecordingDebug_AddTimelineRangeEnd_Request";
+          return "CGameRecording_ExportProgress_Notification";
         }
       }
-      class Ee extends u {
+      class Ee extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), u.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            Ee.prototype.gameid || n.Sg(Ee.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            Ee.sm_m ||
+              (Ee.sm_m = {
+                proto: Ee,
+                fields: {
+                  gameid: {
+                    n: 1,
+                    br: n.qM.readFixed64String,
+                    bw: n.gp.writeFixed64String,
+                  },
+                  enabled: { n: 2, br: n.qM.readBool, bw: n.gp.writeBool },
+                },
+              }),
+            Ee.sm_m
+          );
+        }
+        static MBF() {
+          return Ee.sm_mbf || (Ee.sm_mbf = n.w0(Ee.M())), Ee.sm_mbf;
         }
         toObject(e = !1) {
           return Ee.toObject(e, this);
         }
         static toObject(e, t) {
-          return e ? { $jspbMessageInstance: t } : {};
+          return n.BT(Ee.M(), e, t);
         }
         static fromObject(e) {
-          return new Ee();
+          return n.Uq(Ee.M(), e);
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
@@ -14212,37 +14398,71 @@
           return Ee.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return e;
+          return n.zj(Ee.MBF(), e, t);
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
           return Ee.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
-        static serializeBinaryToWriter(e, t) {}
+        static serializeBinaryToWriter(e, t) {
+          n.i0(Ee.M(), e, t);
+        }
         serializeBase64String() {
           var e = new i.BinaryWriter();
           return Ee.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecordingDebug_AddTimelineRangeEnd_Response";
+          return "CGameRecording_PerGameSettings";
         }
       }
-      class Pe extends u {
+      class ze extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), f.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return ze.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new ze();
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new ze();
+          return ze.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return ze.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return ze.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_GetPerGameSettings_Request";
+        }
+      }
+      class Pe extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Pe.prototype.appid || n.Sg(Pe.M()),
-            u.initialize(this, e, 0, -1, void 0, null);
+            Pe.prototype.settings || n.Sg(Pe.M()),
+            f.initialize(this, e, 0, -1, [1], null);
         }
         static M() {
           return (
             Pe.sm_m ||
               (Pe.sm_m = {
                 proto: Pe,
-                fields: {
-                  appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                  mode: { n: 2, br: n.qM.readUint32, bw: n.gp.writeUint32 },
-                },
+                fields: { settings: { n: 1, c: Ee, r: !0, q: !0 } },
               }),
             Pe.sm_m
           );
@@ -14279,50 +14499,704 @@
           return Pe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
-          return "CGameRecordingDebug_SetTimelineGameMode_Request";
+          return "CGameRecording_GetPerGameSettings_Response";
         }
       }
-      class ze extends u {
+      class Oe extends f {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), u.initialize(this, e, 0, -1, void 0, null);
+          super(),
+            Oe.prototype.game_settings || n.Sg(Oe.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            Oe.sm_m ||
+              (Oe.sm_m = {
+                proto: Oe,
+                fields: { game_settings: { n: 1, c: Ee } },
+              }),
+            Oe.sm_m
+          );
+        }
+        static MBF() {
+          return Oe.sm_mbf || (Oe.sm_mbf = n.w0(Oe.M())), Oe.sm_mbf;
         }
         toObject(e = !1) {
-          return ze.toObject(e, this);
+          return Oe.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(Oe.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(Oe.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new Oe();
+          return Oe.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(Oe.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return Oe.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(Oe.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return Oe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_SetPerGameSettings_Request";
+        }
+      }
+      class ke extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), f.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return ke.toObject(e, this);
         }
         static toObject(e, t) {
           return e ? { $jspbMessageInstance: t } : {};
         }
         static fromObject(e) {
-          return new ze();
+          return new ke();
         }
         static deserializeBinary(e) {
           let t = new i.BinaryReader(e),
-            r = new ze();
-          return ze.deserializeBinaryFromReader(r, t);
+            r = new ke();
+          return ke.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
           return e;
         }
         serializeBinary() {
           var e = new i.BinaryWriter();
-          return ze.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return ke.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {}
         serializeBase64String() {
           var e = new i.BinaryWriter();
-          return ze.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return ke.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_SetPerGameSettings_Response";
+        }
+      }
+      class We extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            We.prototype.progress || n.Sg(We.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            We.sm_m ||
+              (We.sm_m = {
+                proto: We,
+                fields: {
+                  progress: { n: 1, br: n.qM.readFloat, bw: n.gp.writeFloat },
+                  clip_id: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
+                  eresult: { n: 3, br: n.qM.readInt32, bw: n.gp.writeInt32 },
+                },
+              }),
+            We.sm_m
+          );
+        }
+        static MBF() {
+          return We.sm_mbf || (We.sm_mbf = n.w0(We.M())), We.sm_mbf;
+        }
+        toObject(e = !1) {
+          return We.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(We.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(We.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new We();
+          return We.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(We.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return We.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(We.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return We.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_UploadProgress_Notification";
+        }
+      }
+      class De extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            De.prototype.game_id || n.Sg(De.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            De.sm_m ||
+              (De.sm_m = {
+                proto: De,
+                fields: {
+                  game_id: {
+                    n: 1,
+                    br: n.qM.readUint64String,
+                    bw: n.gp.writeUint64String,
+                  },
+                },
+              }),
+            De.sm_m
+          );
+        }
+        static MBF() {
+          return De.sm_mbf || (De.sm_mbf = n.w0(De.M())), De.sm_mbf;
+        }
+        toObject(e = !1) {
+          return De.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(De.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(De.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new De();
+          return De.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(De.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return De.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(De.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return De.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_SwitchBackgroundRecordingGame_Request";
+        }
+      }
+      class Le extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), f.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return Le.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new Le();
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new Le();
+          return Le.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return Le.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return Le.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecording_SwitchBackgroundRecordingGame_Response";
+        }
+      }
+      class Fe extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Fe.prototype.appid || n.Sg(Fe.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            Fe.sm_m ||
+              (Fe.sm_m = {
+                proto: Fe,
+                fields: {
+                  appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  icon: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
+                  title: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
+                  desc: { n: 4, br: n.qM.readString, bw: n.gp.writeString },
+                },
+              }),
+            Fe.sm_m
+          );
+        }
+        static MBF() {
+          return Fe.sm_mbf || (Fe.sm_mbf = n.w0(Fe.M())), Fe.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Fe.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(Fe.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(Fe.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new Fe();
+          return Fe.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(Fe.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return Fe.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(Fe.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return Fe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecordingDebug_AddTimelineHighlightMarker_Request";
+        }
+      }
+      class qe extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), f.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return qe.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new qe();
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new qe();
+          return qe.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return qe.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return qe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecordingDebug_AddTimelineHighlightMarker_Response";
+        }
+      }
+      class xe extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            xe.prototype.appid || n.Sg(xe.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            xe.sm_m ||
+              (xe.sm_m = {
+                proto: xe,
+                fields: {
+                  appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  title: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
+                },
+              }),
+            xe.sm_m
+          );
+        }
+        static MBF() {
+          return xe.sm_mbf || (xe.sm_mbf = n.w0(xe.M())), xe.sm_mbf;
+        }
+        toObject(e = !1) {
+          return xe.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(xe.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(xe.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new xe();
+          return xe.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(xe.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return xe.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(xe.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return xe.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecordingDebug_AddTimelineTimestamp_Request";
+        }
+      }
+      class Ae extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), f.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return Ae.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new Ae();
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new Ae();
+          return Ae.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return Ae.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return Ae.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecordingDebug_AddTimelineTimestamp_Response";
+        }
+      }
+      class Ue extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Ue.prototype.appid || n.Sg(Ue.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            Ue.sm_m ||
+              (Ue.sm_m = {
+                proto: Ue,
+                fields: {
+                  appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  id: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
+                  title: { n: 3, br: n.qM.readString, bw: n.gp.writeString },
+                },
+              }),
+            Ue.sm_m
+          );
+        }
+        static MBF() {
+          return Ue.sm_mbf || (Ue.sm_mbf = n.w0(Ue.M())), Ue.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Ue.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(Ue.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(Ue.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new Ue();
+          return Ue.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(Ue.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return Ue.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(Ue.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return Ue.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecordingDebug_AddTimelineRangeStart_Request";
+        }
+      }
+      class je extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), f.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return je.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new je();
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new je();
+          return je.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return je.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return je.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecordingDebug_AddTimelineRangeStart_Response";
+        }
+      }
+      class Ne extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Ne.prototype.appid || n.Sg(Ne.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            Ne.sm_m ||
+              (Ne.sm_m = {
+                proto: Ne,
+                fields: {
+                  appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  id: { n: 2, br: n.qM.readString, bw: n.gp.writeString },
+                },
+              }),
+            Ne.sm_m
+          );
+        }
+        static MBF() {
+          return Ne.sm_mbf || (Ne.sm_mbf = n.w0(Ne.M())), Ne.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Ne.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(Ne.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(Ne.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new Ne();
+          return Ne.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(Ne.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return Ne.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(Ne.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return Ne.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecordingDebug_AddTimelineRangeEnd_Request";
+        }
+      }
+      class He extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), f.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return He.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new He();
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new He();
+          return He.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return He.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return He.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecordingDebug_AddTimelineRangeEnd_Response";
+        }
+      }
+      class Ve extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Ve.prototype.appid || n.Sg(Ve.M()),
+            f.initialize(this, e, 0, -1, void 0, null);
+        }
+        static M() {
+          return (
+            Ve.sm_m ||
+              (Ve.sm_m = {
+                proto: Ve,
+                fields: {
+                  appid: { n: 1, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  mode: { n: 2, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                },
+              }),
+            Ve.sm_m
+          );
+        }
+        static MBF() {
+          return Ve.sm_mbf || (Ve.sm_mbf = n.w0(Ve.M())), Ve.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Ve.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return n.BT(Ve.M(), e, t);
+        }
+        static fromObject(e) {
+          return n.Uq(Ve.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new Ve();
+          return Ve.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return n.zj(Ve.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return Ve.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          n.i0(Ve.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return Ve.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CGameRecordingDebug_SetTimelineGameMode_Request";
+        }
+      }
+      class Xe extends f {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(), f.initialize(this, e, 0, -1, void 0, null);
+        }
+        toObject(e = !1) {
+          return Xe.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return e ? { $jspbMessageInstance: t } : {};
+        }
+        static fromObject(e) {
+          return new Xe();
+        }
+        static deserializeBinary(e) {
+          let t = new i.BinaryReader(e),
+            r = new Xe();
+          return Xe.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return e;
+        }
+        serializeBinary() {
+          var e = new i.BinaryWriter();
+          return Xe.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {}
+        serializeBase64String() {
+          var e = new i.BinaryWriter();
+          return Xe.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CGameRecordingDebug_SetTimelineGameMode_Response";
         }
       }
-      var Oe, ke;
+      var Ze, Qe;
       !(function (e) {
         (e.GetActiveTimelineAppsHandler = {
           name: "GameRecording.GetActiveTimelineApps#1",
-          request: d,
-          response: g,
+          request: p,
+          response: h,
         }),
           (e.GetActiveTimelineApps = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -14334,8 +15208,8 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetActiveTimelineApps#1",
-                  (0, a.I8)(d, e),
-                  g,
+                  (0, a.I8)(p, e),
+                  h,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -14349,15 +15223,15 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetActiveTimelineApps#1",
-                  (0, a.I8)(d, e),
-                  g,
+                  (0, a.I8)(p, e),
+                  h,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.GetTimelinesForAppHandler = {
             name: "GameRecording.GetTimelinesForApp#1",
-            request: p,
-            response: h,
+            request: S,
+            response: b,
           }),
           (e.GetTimelinesForApp = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -14369,8 +15243,8 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetTimelinesForApp#1",
-                  (0, a.I8)(p, e),
-                  h,
+                  (0, a.I8)(S, e),
+                  b,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -14384,15 +15258,15 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetTimelinesForApp#1",
-                  (0, a.I8)(p, e),
-                  h,
+                  (0, a.I8)(S, e),
+                  b,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.GetTimelinesForClipHandler = {
             name: "GameRecording.GetTimelinesForClip#1",
-            request: _,
-            response: S,
+            request: M,
+            response: y,
           }),
           (e.GetTimelinesForClip = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -14404,8 +15278,8 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetTimelinesForClip#1",
-                  (0, a.I8)(_, e),
-                  S,
+                  (0, a.I8)(M, e),
+                  y,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -14419,15 +15293,77 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetTimelinesForClip#1",
-                  (0, a.I8)(_, e),
-                  S,
+                  (0, a.I8)(M, e),
+                  y,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
+          (e.QueryPhasesHandler = {
+            name: "GameRecording.QueryPhases#1",
+            request: C,
+            response: T,
+          }),
+          (e.QueryPhases = function (e, t) {
+            return null == (t = t || (0, s.OI)().GetDefaultTransport())
+              ? new Promise((e, t) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    t("Transport Error: no transport is available for request");
+                })
+              : t.SendMsg("GameRecording.QueryPhases#1", (0, a.I8)(C, e), T, {
+                  ePrivilege: 1,
+                  eClientExecutionSite: 1,
+                });
+          }),
+          (e.SendMsgQueryPhases = function (e, t) {
+            return null == (t = t || (0, s.OI)().GetDefaultTransport())
+              ? new Promise((e, t) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    t("Transport Error: no transport is available for request");
+                })
+              : t.SendMsg("GameRecording.QueryPhases#1", (0, a.I8)(C, e), T, {
+                  ePrivilege: 1,
+                  eClientExecutionSite: 1,
+                });
+          }),
+          (e.GetTagsHandler = {
+            name: "GameRecording.GetTags#1",
+            request: R,
+            response: G,
+          }),
+          (e.GetTags = function (e, t) {
+            return null == (t = t || (0, s.OI)().GetDefaultTransport())
+              ? new Promise((e, t) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    t("Transport Error: no transport is available for request");
+                })
+              : t.SendMsg("GameRecording.GetTags#1", (0, a.I8)(R, e), G, {
+                  ePrivilege: 1,
+                  eClientExecutionSite: 1,
+                });
+          }),
+          (e.SendMsgGetTags = function (e, t) {
+            return null == (t = t || (0, s.OI)().GetDefaultTransport())
+              ? new Promise((e, t) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    t("Transport Error: no transport is available for request");
+                })
+              : t.SendMsg("GameRecording.GetTags#1", (0, a.I8)(R, e), G, {
+                  ePrivilege: 1,
+                  eClientExecutionSite: 1,
+                });
+          }),
           (e.GetEnoughDiskSpaceHandler = {
             name: "GameRecording.GetEnoughDiskSpace#1",
-            request: b,
-            response: M,
+            request: I,
+            response: E,
           }),
           (e.GetEnoughDiskSpace = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -14439,8 +15375,8 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetEnoughDiskSpace#1",
-                  (0, a.I8)(b, e),
-                  M,
+                  (0, a.I8)(I, e),
+                  E,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -14454,15 +15390,15 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetEnoughDiskSpace#1",
-                  (0, a.I8)(b, e),
-                  M,
+                  (0, a.I8)(I, e),
+                  E,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.GetAvailableDiskSpaceHandler = {
             name: "GameRecording.GetAvailableDiskSpace#1",
-            request: y,
-            response: C,
+            request: z,
+            response: P,
           }),
           (e.GetAvailableDiskSpace = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -14474,8 +15410,8 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetAvailableDiskSpace#1",
-                  (0, a.I8)(y, e),
-                  C,
+                  (0, a.I8)(z, e),
+                  P,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -14489,15 +15425,15 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetAvailableDiskSpace#1",
-                  (0, a.I8)(y, e),
-                  C,
+                  (0, a.I8)(z, e),
+                  P,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.SaveClipHandler = {
             name: "GameRecording.SaveClip#1",
-            request: E,
-            response: z,
+            request: x,
+            response: U,
           }),
           (e.SaveClip = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -14507,7 +15443,7 @@
                   ),
                     t("Transport Error: no transport is available for request");
                 })
-              : t.SendMsg("GameRecording.SaveClip#1", (0, a.I8)(E, e), z, {
+              : t.SendMsg("GameRecording.SaveClip#1", (0, a.I8)(x, e), U, {
                   ePrivilege: 1,
                   eClientExecutionSite: 1,
                 });
@@ -14520,15 +15456,15 @@
                   ),
                     t("Transport Error: no transport is available for request");
                 })
-              : t.SendMsg("GameRecording.SaveClip#1", (0, a.I8)(E, e), z, {
+              : t.SendMsg("GameRecording.SaveClip#1", (0, a.I8)(x, e), U, {
                   ePrivilege: 1,
                   eClientExecutionSite: 1,
                 });
           }),
           (e.DeleteClipHandler = {
             name: "GameRecording.DeleteClip#1",
-            request: O,
-            response: k,
+            request: j,
+            response: N,
           }),
           (e.DeleteClip = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -14538,7 +15474,7 @@
                   ),
                     t("Transport Error: no transport is available for request");
                 })
-              : t.SendMsg("GameRecording.DeleteClip#1", (0, a.I8)(O, e), k, {
+              : t.SendMsg("GameRecording.DeleteClip#1", (0, a.I8)(j, e), N, {
                   ePrivilege: 1,
                   eClientExecutionSite: 1,
                 });
@@ -14551,15 +15487,15 @@
                   ),
                     t("Transport Error: no transport is available for request");
                 })
-              : t.SendMsg("GameRecording.DeleteClip#1", (0, a.I8)(O, e), k, {
+              : t.SendMsg("GameRecording.DeleteClip#1", (0, a.I8)(j, e), N, {
                   ePrivilege: 1,
                   eClientExecutionSite: 1,
                 });
           }),
           (e.GetClipsHandler = {
             name: "GameRecording.GetClips#1",
-            request: j,
-            response: V,
+            request: ee,
+            response: te,
           }),
           (e.GetClips = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -14569,7 +15505,7 @@
                   ),
                     t("Transport Error: no transport is available for request");
                 })
-              : t.SendMsg("GameRecording.GetClips#1", (0, a.I8)(j, e), V, {
+              : t.SendMsg("GameRecording.GetClips#1", (0, a.I8)(ee, e), te, {
                   ePrivilege: 1,
                   eClientExecutionSite: 1,
                 });
@@ -14582,15 +15518,15 @@
                   ),
                     t("Transport Error: no transport is available for request");
                 })
-              : t.SendMsg("GameRecording.GetClips#1", (0, a.I8)(j, e), V, {
+              : t.SendMsg("GameRecording.GetClips#1", (0, a.I8)(ee, e), te, {
                   ePrivilege: 1,
                   eClientExecutionSite: 1,
                 });
           }),
           (e.UploadClipToSteamHandler = {
             name: "GameRecording.UploadClipToSteam#1",
-            request: x,
-            response: A,
+            request: J,
+            response: K,
           }),
           (e.UploadClipToSteam = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -14602,8 +15538,8 @@
                 })
               : t.SendMsg(
                   "GameRecording.UploadClipToSteam#1",
-                  (0, a.I8)(x, e),
-                  A,
+                  (0, a.I8)(J, e),
+                  K,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -14617,15 +15553,15 @@
                 })
               : t.SendMsg(
                   "GameRecording.UploadClipToSteam#1",
-                  (0, a.I8)(x, e),
-                  A,
+                  (0, a.I8)(J, e),
+                  K,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.ExportClipHandler = {
             name: "GameRecording.ExportClip#1",
-            request: D,
-            response: W,
+            request: V,
+            response: X,
           }),
           (e.ExportClip = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -14635,7 +15571,7 @@
                   ),
                     t("Transport Error: no transport is available for request");
                 })
-              : t.SendMsg("GameRecording.ExportClip#1", (0, a.I8)(D, e), W, {
+              : t.SendMsg("GameRecording.ExportClip#1", (0, a.I8)(V, e), X, {
                   ePrivilege: 1,
                   eClientExecutionSite: 1,
                 });
@@ -14648,15 +15584,15 @@
                   ),
                     t("Transport Error: no transport is available for request");
                 })
-              : t.SendMsg("GameRecording.ExportClip#1", (0, a.I8)(D, e), W, {
+              : t.SendMsg("GameRecording.ExportClip#1", (0, a.I8)(V, e), X, {
                   ePrivilege: 1,
                   eClientExecutionSite: 1,
                 });
           }),
           (e.TakeScreenshotHandler = {
             name: "GameRecording.TakeScreenshot#1",
-            request: F,
-            response: q,
+            request: Z,
+            response: Q,
           }),
           (e.TakeScreenshot = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -14668,8 +15604,8 @@
                 })
               : t.SendMsg(
                   "GameRecording.TakeScreenshot#1",
-                  (0, a.I8)(F, e),
-                  q,
+                  (0, a.I8)(Z, e),
+                  Q,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -14683,15 +15619,15 @@
                 })
               : t.SendMsg(
                   "GameRecording.TakeScreenshot#1",
-                  (0, a.I8)(F, e),
-                  q,
+                  (0, a.I8)(Z, e),
+                  Q,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.ZipClipHandler = {
             name: "GameRecording.ZipClip#1",
-            request: N,
-            response: U,
+            request: Y,
+            response: $,
           }),
           (e.ZipClip = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -14701,7 +15637,7 @@
                   ),
                     t("Transport Error: no transport is available for request");
                 })
-              : t.SendMsg("GameRecording.ZipClip#1", (0, a.I8)(N, e), U, {
+              : t.SendMsg("GameRecording.ZipClip#1", (0, a.I8)(Y, e), $, {
                   ePrivilege: 1,
                   eClientExecutionSite: 1,
                 });
@@ -14714,15 +15650,15 @@
                   ),
                     t("Transport Error: no transport is available for request");
                 })
-              : t.SendMsg("GameRecording.ZipClip#1", (0, a.I8)(N, e), U, {
+              : t.SendMsg("GameRecording.ZipClip#1", (0, a.I8)(Y, e), $, {
                   ePrivilege: 1,
                   eClientExecutionSite: 1,
                 });
           }),
           (e.StartRecordingHandler = {
             name: "GameRecording.StartRecording#1",
-            request: le,
-            response: oe,
+            request: _e,
+            response: Se,
           }),
           (e.StartRecording = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -14734,8 +15670,8 @@
                 })
               : t.SendMsg(
                   "GameRecording.StartRecording#1",
-                  (0, a.I8)(le, e),
-                  oe,
+                  (0, a.I8)(_e, e),
+                  Se,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -14749,15 +15685,15 @@
                 })
               : t.SendMsg(
                   "GameRecording.StartRecording#1",
-                  (0, a.I8)(le, e),
-                  oe,
+                  (0, a.I8)(_e, e),
+                  Se,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.StopRecordingHandler = {
             name: "GameRecording.StopRecording#1",
-            request: me,
-            response: ce,
+            request: be,
+            response: Me,
           }),
           (e.StopRecording = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -14769,8 +15705,8 @@
                 })
               : t.SendMsg(
                   "GameRecording.StopRecording#1",
-                  (0, a.I8)(me, e),
-                  ce,
+                  (0, a.I8)(be, e),
+                  Me,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -14784,15 +15720,15 @@
                 })
               : t.SendMsg(
                   "GameRecording.StopRecording#1",
-                  (0, a.I8)(me, e),
-                  ce,
+                  (0, a.I8)(be, e),
+                  Me,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.GetBackgroundRecordingFileSizeHandler = {
             name: "GameRecording.GetBackgroundRecordingFileSize#1",
-            request: ue,
-            response: de,
+            request: ye,
+            response: Ce,
           }),
           (e.GetBackgroundRecordingFileSize = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -14804,8 +15740,8 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetBackgroundRecordingFileSize#1",
-                  (0, a.I8)(ue, e),
-                  de,
+                  (0, a.I8)(ye, e),
+                  Ce,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -14819,15 +15755,15 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetBackgroundRecordingFileSize#1",
-                  (0, a.I8)(ue, e),
-                  de,
+                  (0, a.I8)(ye, e),
+                  Ce,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.CleanupBackgroundRecordingsHandler = {
             name: "GameRecording.CleanupBackgroundRecordings#1",
-            request: ge,
-            response: fe,
+            request: Be,
+            response: Te,
           }),
           (e.CleanupBackgroundRecordings = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -14839,8 +15775,8 @@
                 })
               : t.SendMsg(
                   "GameRecording.CleanupBackgroundRecordings#1",
-                  (0, a.I8)(ge, e),
-                  fe,
+                  (0, a.I8)(Be, e),
+                  Te,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -14854,15 +15790,15 @@
                 })
               : t.SendMsg(
                   "GameRecording.CleanupBackgroundRecordings#1",
-                  (0, a.I8)(ge, e),
-                  fe,
+                  (0, a.I8)(Be, e),
+                  Te,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.GetAndTrimPostGameHighlightsHandler = {
             name: "GameRecording.GetAndTrimPostGameHighlights#1",
-            request: H,
-            response: X,
+            request: re,
+            response: ie,
           }),
           (e.GetAndTrimPostGameHighlights = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -14874,8 +15810,8 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetAndTrimPostGameHighlights#1",
-                  (0, a.I8)(H, e),
-                  X,
+                  (0, a.I8)(re, e),
+                  ie,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -14889,15 +15825,15 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetAndTrimPostGameHighlights#1",
-                  (0, a.I8)(H, e),
-                  X,
+                  (0, a.I8)(re, e),
+                  ie,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.GetThumbnailsHandler = {
             name: "GameRecording.GetThumbnails#1",
-            request: ne,
-            response: ae,
+            request: fe,
+            response: pe,
           }),
           (e.GetThumbnails = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -14909,8 +15845,8 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetThumbnails#1",
-                  (0, a.I8)(ne, e),
-                  ae,
+                  (0, a.I8)(fe, e),
+                  pe,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -14924,15 +15860,15 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetThumbnails#1",
-                  (0, a.I8)(ne, e),
-                  ae,
+                  (0, a.I8)(fe, e),
+                  pe,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.GetPlatformCapabilitiesHandler = {
             name: "GameRecording.GetPlatformCapabilities#1",
-            request: pe,
-            response: he,
+            request: ve,
+            response: we,
           }),
           (e.GetPlatformCapabilities = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -14944,8 +15880,8 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetPlatformCapabilities#1",
-                  (0, a.I8)(pe, e),
-                  he,
+                  (0, a.I8)(ve, e),
+                  we,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -14959,14 +15895,14 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetPlatformCapabilities#1",
-                  (0, a.I8)(pe, e),
-                  he,
+                  (0, a.I8)(ve, e),
+                  we,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.NotifyTimelineChangedHandler = {
             name: "GameRecording.NotifyTimelineChanged#1",
-            request: v,
+            request: O,
           }),
           (e.RegisterForNotifyTimelineChanged = function (t, r) {
             return null == (r = r || (0, s.OI)().GetDefaultHandlerRegistry())
@@ -14987,7 +15923,7 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyTimelineChanged#1",
-                  (0, a.I8)(v, e),
+                  (0, a.I8)(O, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -14999,13 +15935,13 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyTimelineChanged#1",
-                  (0, a.I8)(v, e),
+                  (0, a.I8)(O, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.NotifyRecordingSessionChangedHandler = {
             name: "GameRecording.NotifyRecordingSessionChanged#1",
-            request: T,
+            request: k,
           }),
           (e.RegisterForNotifyRecordingSessionChanged = function (t, r) {
             return null == (r = r || (0, s.OI)().GetDefaultHandlerRegistry())
@@ -15026,7 +15962,7 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyRecordingSessionChanged#1",
-                  (0, a.I8)(T, e),
+                  (0, a.I8)(k, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -15038,13 +15974,13 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyRecordingSessionChanged#1",
-                  (0, a.I8)(T, e),
+                  (0, a.I8)(k, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.NotifyTimelineEntryChangedHandler = {
             name: "GameRecording.NotifyTimelineEntryChanged#1",
-            request: w,
+            request: D,
           }),
           (e.RegisterForNotifyTimelineEntryChanged = function (t, r) {
             return null == (r = r || (0, s.OI)().GetDefaultHandlerRegistry())
@@ -15065,7 +16001,7 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyTimelineEntryChanged#1",
-                  (0, a.I8)(w, e),
+                  (0, a.I8)(D, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -15077,13 +16013,13 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyTimelineEntryChanged#1",
-                  (0, a.I8)(w, e),
+                  (0, a.I8)(D, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.NotifyClipCreatedHandler = {
             name: "GameRecording.NotifyClipCreated#1",
-            request: _e,
+            request: Re,
           }),
           (e.RegisterForNotifyClipCreated = function (t, r) {
             return null == (r = r || (0, s.OI)().GetDefaultHandlerRegistry())
@@ -15104,7 +16040,7 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyClipCreated#1",
-                  (0, a.I8)(_e, e),
+                  (0, a.I8)(Re, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -15116,13 +16052,13 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyClipCreated#1",
-                  (0, a.I8)(_e, e),
+                  (0, a.I8)(Re, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.NotifyClipDeletedHandler = {
             name: "GameRecording.NotifyClipDeleted#1",
-            request: Se,
+            request: Ge,
           }),
           (e.RegisterForNotifyClipDeleted = function (t, r) {
             return null == (r = r || (0, s.OI)().GetDefaultHandlerRegistry())
@@ -15143,7 +16079,7 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyClipDeleted#1",
-                  (0, a.I8)(Se, e),
+                  (0, a.I8)(Ge, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -15155,13 +16091,13 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyClipDeleted#1",
-                  (0, a.I8)(Se, e),
+                  (0, a.I8)(Ge, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.NotifyExportProgressHandler = {
             name: "GameRecording.NotifyExportProgress#1",
-            request: be,
+            request: Ie,
           }),
           (e.RegisterForNotifyExportProgress = function (t, r) {
             return null == (r = r || (0, s.OI)().GetDefaultHandlerRegistry())
@@ -15182,7 +16118,7 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyExportProgress#1",
-                  (0, a.I8)(be, e),
+                  (0, a.I8)(Ie, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -15194,13 +16130,13 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyExportProgress#1",
-                  (0, a.I8)(be, e),
+                  (0, a.I8)(Ie, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.NotifyUploadProgressHandler = {
             name: "GameRecording.NotifyUploadProgress#1",
-            request: Me,
+            request: We,
           }),
           (e.RegisterForNotifyUploadProgress = function (t, r) {
             return null == (r = r || (0, s.OI)().GetDefaultHandlerRegistry())
@@ -15221,7 +16157,7 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyUploadProgress#1",
-                  (0, a.I8)(Me, e),
+                  (0, a.I8)(We, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -15233,13 +16169,13 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyUploadProgress#1",
-                  (0, a.I8)(Me, e),
+                  (0, a.I8)(We, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.NotifyLowDiskSpaceHandler = {
             name: "GameRecording.NotifyLowDiskSpace#1",
-            request: R,
+            request: L,
           }),
           (e.RegisterForNotifyLowDiskSpace = function (t, r) {
             return null == (r = r || (0, s.OI)().GetDefaultHandlerRegistry())
@@ -15260,7 +16196,7 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyLowDiskSpace#1",
-                  (0, a.I8)(R, e),
+                  (0, a.I8)(L, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -15272,13 +16208,13 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyLowDiskSpace#1",
-                  (0, a.I8)(R, e),
+                  (0, a.I8)(L, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.NotifyPostGameHighlightsChangedHandler = {
             name: "GameRecording.NotifyPostGameHighlightsChanged#1",
-            request: G,
+            request: F,
           }),
           (e.RegisterForNotifyPostGameHighlightsChanged = function (t, r) {
             return null == (r = r || (0, s.OI)().GetDefaultHandlerRegistry())
@@ -15299,7 +16235,7 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyPostGameHighlightsChanged#1",
-                  (0, a.I8)(G, e),
+                  (0, a.I8)(F, e),
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -15311,14 +16247,84 @@
                 !1)
               : t.SendNotification(
                   "GameRecording.NotifyPostGameHighlightsChanged#1",
-                  (0, a.I8)(G, e),
+                  (0, a.I8)(F, e),
+                  { ePrivilege: 1, eClientExecutionSite: 1 },
+                );
+          }),
+          (e.GetPerGameSettingsHandler = {
+            name: "GameRecording.GetPerGameSettings#1",
+            request: ze,
+            response: Pe,
+          }),
+          (e.GetPerGameSettings = function (e, t) {
+            return null == (t = t || (0, s.OI)().GetDefaultTransport())
+              ? new Promise((e, t) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    t("Transport Error: no transport is available for request");
+                })
+              : t.SendMsg(
+                  "GameRecording.GetPerGameSettings#1",
+                  (0, a.I8)(ze, e),
+                  Pe,
+                  { ePrivilege: 1, eClientExecutionSite: 1 },
+                );
+          }),
+          (e.SendMsgGetPerGameSettings = function (e, t) {
+            return null == (t = t || (0, s.OI)().GetDefaultTransport())
+              ? new Promise((e, t) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    t("Transport Error: no transport is available for request");
+                })
+              : t.SendMsg(
+                  "GameRecording.GetPerGameSettings#1",
+                  (0, a.I8)(ze, e),
+                  Pe,
+                  { ePrivilege: 1, eClientExecutionSite: 1 },
+                );
+          }),
+          (e.SetPerGameSettingsHandler = {
+            name: "GameRecording.SetPerGameSettings#1",
+            request: Oe,
+            response: ke,
+          }),
+          (e.SetPerGameSettings = function (e, t) {
+            return null == (t = t || (0, s.OI)().GetDefaultTransport())
+              ? new Promise((e, t) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    t("Transport Error: no transport is available for request");
+                })
+              : t.SendMsg(
+                  "GameRecording.SetPerGameSettings#1",
+                  (0, a.I8)(Oe, e),
+                  ke,
+                  { ePrivilege: 1, eClientExecutionSite: 1 },
+                );
+          }),
+          (e.SendMsgSetPerGameSettings = function (e, t) {
+            return null == (t = t || (0, s.OI)().GetDefaultTransport())
+              ? new Promise((e, t) => {
+                  console.error(
+                    "Transport Error: no transport is available for request",
+                  ),
+                    t("Transport Error: no transport is available for request");
+                })
+              : t.SendMsg(
+                  "GameRecording.SetPerGameSettings#1",
+                  (0, a.I8)(Oe, e),
+                  ke,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.UserAddTimelineEntryHandler = {
             name: "GameRecording.UserAddTimelineEntry#1",
-            request: Z,
-            response: J,
+            request: ne,
+            response: ae,
           }),
           (e.UserAddTimelineEntry = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -15330,8 +16336,8 @@
                 })
               : t.SendMsg(
                   "GameRecording.UserAddTimelineEntry#1",
-                  (0, a.I8)(Z, e),
-                  J,
+                  (0, a.I8)(ne, e),
+                  ae,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -15345,15 +16351,15 @@
                 })
               : t.SendMsg(
                   "GameRecording.UserAddTimelineEntry#1",
-                  (0, a.I8)(Z, e),
-                  J,
+                  (0, a.I8)(ne, e),
+                  ae,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.UserUpdateTimelineEntryHandler = {
             name: "GameRecording.UserUpdateTimelineEntry#1",
-            request: Q,
-            response: K,
+            request: se,
+            response: le,
           }),
           (e.UserUpdateTimelineEntry = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -15365,8 +16371,8 @@
                 })
               : t.SendMsg(
                   "GameRecording.UserUpdateTimelineEntry#1",
-                  (0, a.I8)(Q, e),
-                  K,
+                  (0, a.I8)(se, e),
+                  le,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -15380,15 +16386,15 @@
                 })
               : t.SendMsg(
                   "GameRecording.UserUpdateTimelineEntry#1",
-                  (0, a.I8)(Q, e),
-                  K,
+                  (0, a.I8)(se, e),
+                  le,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.UserRemoveTimelineEntryHandler = {
             name: "GameRecording.UserRemoveTimelineEntry#1",
-            request: Y,
-            response: $,
+            request: oe,
+            response: me,
           }),
           (e.UserRemoveTimelineEntry = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -15400,8 +16406,8 @@
                 })
               : t.SendMsg(
                   "GameRecording.UserRemoveTimelineEntry#1",
-                  (0, a.I8)(Y, e),
-                  $,
+                  (0, a.I8)(oe, e),
+                  me,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -15415,15 +16421,15 @@
                 })
               : t.SendMsg(
                   "GameRecording.UserRemoveTimelineEntry#1",
-                  (0, a.I8)(Y, e),
-                  $,
+                  (0, a.I8)(oe, e),
+                  me,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.ManuallyDeleteRecordingsForAppsHandler = {
             name: "GameRecording.ManuallyDeleteRecordingsForApps#1",
-            request: ee,
-            response: te,
+            request: ce,
+            response: ue,
           }),
           (e.ManuallyDeleteRecordingsForApps = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -15435,8 +16441,8 @@
                 })
               : t.SendMsg(
                   "GameRecording.ManuallyDeleteRecordingsForApps#1",
-                  (0, a.I8)(ee, e),
-                  te,
+                  (0, a.I8)(ce, e),
+                  ue,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -15450,15 +16456,15 @@
                 })
               : t.SendMsg(
                   "GameRecording.ManuallyDeleteRecordingsForApps#1",
-                  (0, a.I8)(ee, e),
-                  te,
+                  (0, a.I8)(ce, e),
+                  ue,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.GetTotalDiskSpaceUsageHandler = {
             name: "GameRecording.GetTotalDiskSpaceUsage#1",
-            request: re,
-            response: ie,
+            request: de,
+            response: ge,
           }),
           (e.GetTotalDiskSpaceUsage = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -15470,8 +16476,8 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetTotalDiskSpaceUsage#1",
-                  (0, a.I8)(re, e),
-                  ie,
+                  (0, a.I8)(de, e),
+                  ge,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -15485,15 +16491,15 @@
                 })
               : t.SendMsg(
                   "GameRecording.GetTotalDiskSpaceUsage#1",
-                  (0, a.I8)(re, e),
-                  ie,
+                  (0, a.I8)(de, e),
+                  ge,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
           (e.SwitchBackgroundRecordingGameHandler = {
             name: "GameRecording.SwitchBackgroundRecordingGame#1",
-            request: ye,
-            response: Ce,
+            request: De,
+            response: Le,
           }),
           (e.SwitchBackgroundRecordingGame = function (e, t) {
             return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -15505,8 +16511,8 @@
                 })
               : t.SendMsg(
                   "GameRecording.SwitchBackgroundRecordingGame#1",
-                  (0, a.I8)(ye, e),
-                  Ce,
+                  (0, a.I8)(De, e),
+                  Le,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           }),
@@ -15520,17 +16526,17 @@
                 })
               : t.SendMsg(
                   "GameRecording.SwitchBackgroundRecordingGame#1",
-                  (0, a.I8)(ye, e),
-                  Ce,
+                  (0, a.I8)(De, e),
+                  Le,
                   { ePrivilege: 1, eClientExecutionSite: 1 },
                 );
           });
-      })(Oe || (Oe = {})),
+      })(Ze || (Ze = {})),
         (function (e) {
           (e.AddTimelineHighlightMarkerHandler = {
             name: "GameRecordingDebug.AddTimelineHighlightMarker#1",
-            request: ve,
-            response: Te,
+            request: Fe,
+            response: qe,
           }),
             (e.AddTimelineHighlightMarker = function (e, t) {
               return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -15544,8 +16550,8 @@
                   })
                 : t.SendMsg(
                     "GameRecordingDebug.AddTimelineHighlightMarker#1",
-                    (0, a.I8)(ve, e),
-                    Te,
+                    (0, a.I8)(Fe, e),
+                    qe,
                     { ePrivilege: 1, eClientExecutionSite: 1 },
                   );
             }),
@@ -15561,15 +16567,15 @@
                   })
                 : t.SendMsg(
                     "GameRecordingDebug.AddTimelineHighlightMarker#1",
-                    (0, a.I8)(ve, e),
-                    Te,
+                    (0, a.I8)(Fe, e),
+                    qe,
                     { ePrivilege: 1, eClientExecutionSite: 1 },
                   );
             }),
             (e.AddTimelineTimestampHandler = {
               name: "GameRecordingDebug.AddTimelineTimestamp#1",
-              request: Be,
-              response: we,
+              request: xe,
+              response: Ae,
             }),
             (e.AddTimelineTimestamp = function (e, t) {
               return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -15583,8 +16589,8 @@
                   })
                 : t.SendMsg(
                     "GameRecordingDebug.AddTimelineTimestamp#1",
-                    (0, a.I8)(Be, e),
-                    we,
+                    (0, a.I8)(xe, e),
+                    Ae,
                     { ePrivilege: 1, eClientExecutionSite: 1 },
                   );
             }),
@@ -15600,15 +16606,15 @@
                   })
                 : t.SendMsg(
                     "GameRecordingDebug.AddTimelineTimestamp#1",
-                    (0, a.I8)(Be, e),
-                    we,
+                    (0, a.I8)(xe, e),
+                    Ae,
                     { ePrivilege: 1, eClientExecutionSite: 1 },
                   );
             }),
             (e.AddTimelineRangeStartHandler = {
               name: "GameRecordingDebug.AddTimelineRangeStart#1",
-              request: Re,
-              response: Ge,
+              request: Ue,
+              response: je,
             }),
             (e.AddTimelineRangeStart = function (e, t) {
               return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -15622,8 +16628,8 @@
                   })
                 : t.SendMsg(
                     "GameRecordingDebug.AddTimelineRangeStart#1",
-                    (0, a.I8)(Re, e),
-                    Ge,
+                    (0, a.I8)(Ue, e),
+                    je,
                     { ePrivilege: 1, eClientExecutionSite: 1 },
                   );
             }),
@@ -15639,15 +16645,15 @@
                   })
                 : t.SendMsg(
                     "GameRecordingDebug.AddTimelineRangeStart#1",
-                    (0, a.I8)(Re, e),
-                    Ge,
+                    (0, a.I8)(Ue, e),
+                    je,
                     { ePrivilege: 1, eClientExecutionSite: 1 },
                   );
             }),
             (e.AddTimelineRangeEndHandler = {
               name: "GameRecordingDebug.AddTimelineRangeEnd#1",
-              request: Ie,
-              response: Ee,
+              request: Ne,
+              response: He,
             }),
             (e.AddTimelineRangeEnd = function (e, t) {
               return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -15661,8 +16667,8 @@
                   })
                 : t.SendMsg(
                     "GameRecordingDebug.AddTimelineRangeEnd#1",
-                    (0, a.I8)(Ie, e),
-                    Ee,
+                    (0, a.I8)(Ne, e),
+                    He,
                     { ePrivilege: 1, eClientExecutionSite: 1 },
                   );
             }),
@@ -15678,15 +16684,15 @@
                   })
                 : t.SendMsg(
                     "GameRecordingDebug.AddTimelineRangeEnd#1",
-                    (0, a.I8)(Ie, e),
-                    Ee,
+                    (0, a.I8)(Ne, e),
+                    He,
                     { ePrivilege: 1, eClientExecutionSite: 1 },
                   );
             }),
             (e.SetTimelineGameModeHandler = {
               name: "GameRecordingDebug.SetTimelineGameMode#1",
-              request: Pe,
-              response: ze,
+              request: Ve,
+              response: Xe,
             }),
             (e.SetTimelineGameMode = function (e, t) {
               return null == (t = t || (0, s.OI)().GetDefaultTransport())
@@ -15700,8 +16706,8 @@
                   })
                 : t.SendMsg(
                     "GameRecordingDebug.SetTimelineGameMode#1",
-                    (0, a.I8)(Pe, e),
-                    ze,
+                    (0, a.I8)(Ve, e),
+                    Xe,
                     { ePrivilege: 1, eClientExecutionSite: 1 },
                   );
             }),
@@ -15717,12 +16723,12 @@
                   })
                 : t.SendMsg(
                     "GameRecordingDebug.SetTimelineGameMode#1",
-                    (0, a.I8)(Pe, e),
-                    ze,
+                    (0, a.I8)(Ve, e),
+                    Xe,
                     { ePrivilege: 1, eClientExecutionSite: 1 },
                   );
             });
-        })(ke || (ke = {}));
+        })(Qe || (Qe = {}));
     },
     29210: (e, t, r) => {
       "use strict";
@@ -16313,10 +17319,10 @@
       "use strict";
       r.d(t, {
         AY: () => u,
-        B1: () => z,
+        B1: () => P,
         FE: () => G,
-        FW: () => V,
-        Hs: () => H,
+        FW: () => H,
+        Hs: () => V,
         JB: () => O,
         KJ: () => D,
         LB: () => F,
@@ -16324,34 +17330,34 @@
         M6: () => E,
         MG: () => d,
         Mj: () => g,
-        Ml: () => v,
-        Nm: () => J,
+        Ml: () => B,
+        Nm: () => Q,
         OY: () => h,
         Od: () => Z,
         Oe: () => _,
         Oi: () => o,
         QY: () => f,
         R2: () => m,
-        Rm: () => L,
-        Ss: () => N,
+        Rm: () => W,
+        Ss: () => U,
         WO: () => R,
-        Wd: () => Q,
-        Wq: () => W,
-        X: () => j,
+        Wd: () => J,
+        Wq: () => L,
+        X: () => N,
         Xh: () => w,
         YJ: () => k,
         Z3: () => M,
         ai: () => n,
         bL: () => S,
         eT: () => a,
-        ff: () => B,
+        ff: () => v,
         gD: () => s,
         i7: () => $,
         jl: () => I,
         k8: () => x,
-        lM: () => P,
+        lM: () => z,
         lN: () => b,
-        lQ: () => U,
+        lQ: () => j,
         mr: () => T,
         pH: () => l,
         po: () => q,
@@ -16738,7 +17744,7 @@
           }),
         );
       }
-      function v(e) {
+      function B(e) {
         return i.createElement(
           "svg",
           {
@@ -16772,7 +17778,7 @@
           }),
         );
       }
-      function B(e) {
+      function v(e) {
         return i.createElement(
           "svg",
           {
@@ -16883,7 +17889,7 @@
           }),
         );
       }
-      function P(e) {
+      function z(e) {
         return i.createElement(
           "svg",
           {
@@ -16902,7 +17908,7 @@
           }),
         );
       }
-      function z(e) {
+      function P(e) {
         return i.createElement(
           "svg",
           {
@@ -16953,7 +17959,7 @@
           }),
         );
       }
-      function L(e) {
+      function W(e) {
         return i.createElement(
           "svg",
           {
@@ -16987,7 +17993,7 @@
           }),
         );
       }
-      function W(e) {
+      function L(e) {
         return i.createElement(
           "svg",
           {
@@ -17076,7 +18082,7 @@
           }),
         );
       }
-      function N(e) {
+      function U(e) {
         return i.createElement(
           "svg",
           {
@@ -17095,7 +18101,7 @@
           }),
         );
       }
-      function U(e) {
+      function j(e) {
         return i.createElement(
           "svg",
           {
@@ -17112,7 +18118,7 @@
           }),
         );
       }
-      function j(e) {
+      function N(e) {
         return i.createElement(
           "svg",
           {
@@ -17129,7 +18135,7 @@
           }),
         );
       }
-      function V(e) {
+      function H(e) {
         return i.createElement(
           "svg",
           {
@@ -17146,7 +18152,7 @@
           }),
         );
       }
-      function H(e) {
+      function V(e) {
         return i.createElement(
           "svg",
           {
@@ -17199,7 +18205,7 @@
           }),
         );
       }
-      function J(e) {
+      function Q(e) {
         let { direction: t, ...r } = e,
           n = { transform: `scaleX( ${"right" == t ? "-1" : "1"} )` };
         return i.createElement(
@@ -17254,7 +18260,7 @@
           }),
         );
       }
-      function Q(e) {
+      function J(e) {
         return i.createElement(
           "svg",
           {

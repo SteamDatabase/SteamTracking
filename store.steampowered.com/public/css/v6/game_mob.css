@@ -74,12 +74,12 @@
 	html.responsive #votingImage,
 	html.responsive #awardsTable,
 	html.responsive #awardsTable .block_title,
-	html.responsive .breadcrumbs, 
-	html.responsive .apphub_OtherSiteInfo, 
-	html.responsive .glance_tags_label, 
+	html.responsive .breadcrumbs,
+	html.responsive .apphub_OtherSiteInfo,
+	html.responsive .glance_tags_label,
 	html.responsive .wishlist_added_temp_notice,
-	html.responsive .apphub_HeaderStandardTop,  
-	html.responsive .user_reviews_summary_row .subtitle, 
+	html.responsive .apphub_HeaderStandardTop,
+	html.responsive .user_reviews_summary_row .subtitle,
 	html.responsive .user_reviews_summary_row .responsive_reviewdesc,
 	html.responsive .user_reviews_filter_score,
 	html.responsive .block.recommendation_reasons hr,
@@ -129,7 +129,7 @@
 		font-size: 14px;
 		background-image: unset;
 		padding-right: 0px;
-	} 
+	}
 
 	/* switch to a full screen width header image */
 	html.responsive .game_header_image_ctn > img {
@@ -319,7 +319,7 @@
 	}
 	html.responsive .user_reviews_summary_row {
 		font-size: 14px;
-		padding: 4px; 
+		padding: 4px;
 	}
 	html.responsive .user_reviews_summary_row .column {
 		text-overflow: unset;
@@ -510,7 +510,7 @@
 	/* reduce button font sizes */
 	html.responsive .btn_large > span, input.btn_large {
 		font-size: 16px !important;
-	} 
+	}
 	html.responsive .btn_medium > span, input.btn_medium {
 		font-size: 14px !important;
 	}
@@ -518,7 +518,7 @@
 		font-size: 12px !important;
 	}
 
-	/* Rolled up sections such as achievements, languages, points shop 
+	/* Rolled up sections such as achievements, languages, points shop
 	   and other content moved into the Links & Info section */
 	html.responsive .block a.linkbar {
 		min-height: unset;
@@ -561,7 +561,7 @@
 	}
 	html.responsive #genresAndManufacturer.details_block a {
 		padding: unset !important;
-		margin: unset !important;		
+		margin: unset !important;
 		background: unset;
 		display: unset !important;
 		line-height: unset !important;
@@ -668,7 +668,6 @@
 	html.responsive #purchaseOptionsBanner_hidden {
 		display: flex;
 	}
-	html.responsive .game_area_purchase_game h1,
 	html.responsive .game_area_offsite_purchase h1,
 	html.responsive .game_area_purchase_game a {
 		color: #b0aeac !important;
@@ -687,16 +686,16 @@
     }
 
 	/* wishlist */
-	html.responsive #add_to_wishlist_area, 
-	html.responsive #add_to_wishlist_area_success, 
+	html.responsive #add_to_wishlist_area,
+	html.responsive #add_to_wishlist_area_success,
 	html.responsive #add_to_wishlist_area_fail {
 		width: 100%;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-	}	
-	html.responsive #add_to_wishlist_area a, 
-	html.responsive #add_to_wishlist_area_success a, 
+	}
+	html.responsive #add_to_wishlist_area a,
+	html.responsive #add_to_wishlist_area_success a,
 	html.responsive #add_to_wishlist_area_fail a {
 		width: 100%;
 		text-align: center;
@@ -792,7 +791,7 @@
 		margin-top: 20px;
 	}
 
-	/* critic review block, curators */ 
+	/* critic review block, curators */
 	html.responsive .responsive_apppage_reviewblock {
 		padding-left: 0px !important;
 		background: unset !important;
@@ -815,11 +814,11 @@
 		padding: 10px;
 		height: 112px;
 	}
-	/* hide the browser provided scrollbar on safari. we already include a scrollbar */ 
+	/* hide the browser provided scrollbar on safari. we already include a scrollbar */
 	html.responsive .game_description_column .block .block_responsive_horizontal_scroll::-webkit-scrollbar {
 		display: none;
 	}
-	
+
 	/* Curators section uses the banner format on mobile and needs extra margin on top and bottom because it's by itself */
 	html.responsive #bannerCurators.responsive_banner_link {
 		margin-top: 10px;
@@ -851,7 +850,7 @@
 		padding-bottom: 10px;
 	}
 
-	/* Reviews switch to using the responsive title */ 
+	/* Reviews switch to using the responsive title */
 	html.responsive #reviews_filter_title {
 		display: none !important;
 	}
@@ -859,7 +858,7 @@
 		display: inline-block !important;
 	}
 	html.responsive #reviews_filter_title_responsive > img {
-		height: 16px; 
+		height: 16px;
 		padding-right: 7px;
 	}
 
@@ -949,7 +948,7 @@
 		background-color: #1B2838;
 	}
 
-	/* formatting for the avatar | name | products owned | number of reviews row 
+	/* formatting for the avatar | name | products owned | number of reviews row
 	   which is parented by a div with class responsive_review_leftcol_ctn */
 	html.responsive .review_box .responsive_review_leftcol_ctn .leftcol {
 		display: flex;
@@ -1118,8 +1117,8 @@
 		padding-top: 15px;
 	}
 
-	/* new section for responsive UX called Links and Info 
-	   existing content is moved here: achievements, game details, community link, ... 
+	/* new section for responsive UX called Links and Info
+	   existing content is moved here: achievements, game details, community link, ...
 	*/
 	html.responsive #appLinksAndInfoCtn {
 		padding-top: 20px;
@@ -1177,9 +1176,9 @@
 		z-index: 1100;
 	}
 	html.responsive .purchase_options_empty_space {
-		display: none; 
+		display: none;
 		flex: 1;
-		opacity: 0.7; 
+		opacity: 0.7;
 		background-color:black;
 		width: 100%;
 		touch-action: none;
