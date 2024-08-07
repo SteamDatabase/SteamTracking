@@ -169,6 +169,11 @@ body.ban_keys #landingNav > a.active {
 	margin-bottom: 8px;
 }
 
+.subarea.centeredandpadded {
+	text-align: center;
+	padding: 12px;
+}
+
 .subarea.fixedwidth {
 	width: 500px;
 }
@@ -4239,4 +4244,8 @@ table.root_path_table {
 
 select.additional_languages {
     margin-top: 12px;
+}
+select#package_included_app_list > option[disabled] {
+	color: #aaa;
+	font-style: italic;
 }

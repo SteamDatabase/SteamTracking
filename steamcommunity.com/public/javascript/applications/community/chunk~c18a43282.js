@@ -358,6 +358,15 @@
         SVG: "_3Mns5ZEBThi10kv9zwdCRr",
       };
     },
+    37999: (e) => {
+      e.exports = {
+        Loading: "_24C5lxFpKz_kHyuT-8GJKK",
+        LoadingSpinnerAmin: "_15h2OLuARlaaeboZ5TbsTx",
+        Small: "_2FPxEVbkMdVDAw1TLfl_B5",
+        Medium: "_2FfWbZHeiT3_nRXH-pI7av",
+        Large: "_30IMocjbXd0leP4E5U2Yrx",
+      };
+    },
     45387: (e) => {
       e.exports = { strMaxMobileWidth: "700px" };
     },
@@ -16948,18 +16957,18 @@
         u = r(52038),
         p = r(61859),
         _ = r(68797),
-        h = r(78327),
-        g = r(21273),
-        v = r(738),
-        y = r(22797),
-        S = r(56524),
-        f = r(86090),
-        C = r(95695),
-        w = r(82477),
-        b = r(71513);
+        h = r(21273),
+        g = r(738),
+        v = r(39700),
+        y = r(56524),
+        S = r(86090),
+        f = r(95695),
+        C = r(82477),
+        w = r(71513),
+        b = r(12155);
       const B = (0, a.PA)((e) => {
         const { closeModal: t } = e;
-        return i.createElement(g.o0, {
+        return i.createElement(h.o0, {
           strTitle: (0, p.we)(
             "#EventCalendar_GameSource_UnhideCuratorsDialog_Title",
           ),
@@ -16996,19 +17005,19 @@
               (0, l.v0)().m_visibilityStore.BIsGameSourceAllowed(
                 c.FD.k_ECurator,
               ) ||
-              (0, v.pg)(i.createElement(B, null), window)));
+              (0, g.pg)(i.createElement(B, null), window)));
       }
       function E() {
         return (
           !!m.KN.Get().BIsUserLoggedIn() ||
-          ((0, v.pg)(
-            i.createElement(g.o0, {
+          ((0, g.pg)(
+            i.createElement(h.o0, {
               strTitle: (0, p.we)("#EventDisplay_Share_NotLoggedIn"),
               strDescription: (0, p.we)(
                 "#EventDisplay_Share_NotLoggedIn_Description",
               ),
               strOKButtonText: (0, p.we)("#MobileLogin_SignIn"),
-              onOK: () => (0, w.vg)(),
+              onOK: () => (0, C.vg)(),
             }),
             window,
           ),
@@ -17021,7 +17030,7 @@
         return (
           !r ||
           !r.limited_user ||
-          ((0, v.pg)(i.createElement(f.g, null), window), !1)
+          ((0, g.pg)(i.createElement(S.g, null), window), !1)
         );
       }
       async function A(e) {
@@ -17041,28 +17050,21 @@
           } = e;
           return d.HD.bIsFollowingEnabled
             ? i.createElement(
-                b.ml,
+                w.ml,
                 {
                   className: (0, u.A)(
-                    C.Button,
-                    S.FollowButton,
+                    f.Button,
+                    y.FollowButton,
                     t,
                     n ? "Followed" : "",
                   ),
                   onClick: s,
                 },
-                a && i.createElement(y.t, { size: "small" }),
-                !a &&
-                  (n || r) &&
-                  i.createElement("img", {
-                    style: { height: "16px" },
-                    src:
-                      h.TS.STORE_CDN_URL +
-                      "public/images/v6/ico/ico_selected.png",
-                  }),
+                a && i.createElement(v.k, { size: 15 }),
+                !a && (n || r) && i.createElement(b.Jlk, null),
                 i.createElement(
                   "div",
-                  { className: S.FollowBtnText },
+                  { className: y.FollowBtnText },
                   !a &&
                     (n
                       ? (0, p.we)("#Button_Followed")
@@ -19521,7 +19523,7 @@
         _ = r(738),
         h = r(12155),
         g = r(91674),
-        v = r(22797),
+        v = r(39700),
         y = r(68797),
         S = r(52038),
         f = r(61859),
@@ -19586,11 +19588,12 @@
                     } else (0, u.vg)();
                   },
                 },
-                i.createElement(
-                  "span",
-                  null,
-                  (o || t) && i.createElement(v.t, { size: "small" }),
-                ),
+                (o || t) &&
+                  i.createElement(
+                    "span",
+                    null,
+                    i.createElement(v.k, { size: 15 }),
+                  ),
                 !t && T && i.createElement(h.Jlk, null),
                 i.createElement(
                   "span",
@@ -21647,6 +21650,34 @@
           d = o(),
           m = a.useCallback(() => t && d.AddImpression(t, c), [d, t, c]);
         return a.createElement(i.Y, { onEnter: m }, l);
+      }
+    },
+    39700: (e, t, r) => {
+      "use strict";
+      r.d(t, { k: () => s });
+      var a = r(90626),
+        i = r(52038),
+        n = r(37999);
+      function s(e) {
+        const { size: t, color: r, trackColor: s } = e,
+          o = { borderColor: s, borderLeftColor: r };
+        if ("number" == typeof t) {
+          const e = `${t}px`;
+          (o.width = e),
+            (o.height = e),
+            (o.minHeight = e),
+            (o.minWidth = e),
+            (o.borderWidth = t / 10 + "px");
+        }
+        return a.createElement("div", {
+          className: (0, i.A)(
+            n.Loading,
+            "small" == t && n.Small,
+            ("medium" == t || !t) && n.Medium,
+            "large" == t && n.Large,
+          ),
+          style: o,
+        });
       }
     },
     10224: (e, t, r) => {

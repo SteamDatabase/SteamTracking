@@ -70,7 +70,7 @@ function OnFreeGameCheck( checkbox, appid )
 	}
 }
 
-function PopulatePackageAppLists( rgIncludedItemIds )
+function PopulatePackageAppLists( rgIncludedItemIds, bDisabled )
 {
 	var elemAllApps = $('package_available_app_list');
 	var elemIncludedApps = $('package_included_app_list');
@@ -79,7 +79,11 @@ function PopulatePackageAppLists( rgIncludedItemIds )
 	{
 		var itemId = rgIncludedItemIds[i];
 		var rgItemData = g_rgReferencedItems[itemId] || {};
-		var opt = new Element('option', {value: itemId, 'class': rgItemData['cssClass'] } );
+		var attrs = {value: itemId, 'class': rgItemData['cssClass'] + ' app_list_option'};
+		if ( bDisabled ) {
+			attrs.disabled = true;
+		}
+		var opt = new Element('option', attrs );
 		opt.innerHTML = rgItemData['name'] || ( '{unknown item ' + itemId + '}' );
 		elemIncludedApps.appendChild(opt);
 	}
