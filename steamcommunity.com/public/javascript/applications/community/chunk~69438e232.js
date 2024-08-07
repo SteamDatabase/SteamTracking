@@ -356,7 +356,7 @@
       r.d(t, { Dv: () => b, Nd: () => L });
       var n = r(92298),
         a = r(23809),
-        i = r(31380),
+        i = r(20194),
         s = r(56545),
         o = r(17720),
         l = r(80613),
@@ -1059,7 +1059,7 @@
       function b() {
         const e = (0, a.KV)(),
           t = (0, n.L)();
-        return (0, i.useQuery)(D(e, t));
+        return (0, i.I)(D(e, t));
       }
       function D(e, t) {
         return {
@@ -1101,8 +1101,8 @@
       function L(e, t = {}) {
         const r = (0, a.KV)(),
           s = (0, n.L)();
-        return (0, i.useQuery)({
-          queryKey: `GameplayInfo_${s}_${e}`,
+        return (0, i.I)({
+          queryKey: [`GameplayInfo_${s}_${e}`],
           queryFn: async () => await A(r, e),
           ...t,
         });
@@ -1110,7 +1110,7 @@
     },
     36148: (e, t, r) => {
       "use strict";
-      r.d(t, { RZ: () => k, Jo: () => G, Vz: () => P, $d: () => W });
+      r.d(t, { RZ: () => U, Jo: () => P, Vz: () => H, $d: () => V });
       var n = r(56545),
         a = (r(37735), r(80613)),
         i = r(89068);
@@ -2579,43 +2579,41 @@
               );
             });
         })(N || (N = {}));
-      var O = r(31380),
-        R = r(23809),
-        z = r(30470),
-        x = r(24484);
+      var O = r(20194),
+        R = r(75233),
+        z = r(51614),
+        x = r(23809),
+        k = r(30470),
+        F = r(24484);
       r(30894), r(41735), r(90626), r(58222);
-      const k = 2640290;
-      let F;
-      function U() {
+      const U = 2640290;
+      let G;
+      function j() {
         return (
-          F || (F = (0, x.Fd)("steam_awards_config", "application_config")), F
+          G || (G = (0, F.Fd)("steam_awards_config", "application_config")), G
         );
       }
-      function G(e) {
-        const t = (0, R.KV)();
-        return (0, O.useQuery)(
-          `SteamAwardDefs_${e}`,
-          async () => {
+      function P(e) {
+        const t = (0, x.KV)();
+        return (0, O.I)({
+          queryKey: [`SteamAwardDefs_${e}`],
+          queryFn: async () => {
             const r = n.w.Init(d);
-            r.Body().set_sale_appid(e), r.Body().set_language(z.TS.LANGUAGE);
+            r.Body().set_sale_appid(e), r.Body().set_language(k.TS.LANGUAGE);
             return (await L.GetVoteDefinitions(t, r)).Body().toObject();
           },
-          {
-            initialData: () => {
-              var e;
-              return null === (e = U()) || void 0 === e
-                ? void 0
-                : e.definitions;
-            },
-            enabled: e > 0,
+          initialData: () => {
+            var e;
+            return null === (e = j()) || void 0 === e ? void 0 : e.definitions;
           },
-        );
+          enabled: e > 0,
+        });
       }
-      function j() {
-        const e = (0, R.KV)();
-        return (0, O.useQuery)(
-          `SteamAwardNominations_${z.iA.accountid}`,
-          async () => {
+      function W() {
+        const e = (0, x.KV)();
+        return (0, O.I)({
+          queryKey: [`SteamAwardNominations_${k.iA.accountid}`],
+          queryFn: async () => {
             var t;
             const r = n.w.Init(E);
             return null ===
@@ -2624,24 +2622,22 @@
               ? void 0
               : t.nominations;
           },
-          {
-            initialData: () => {
-              var e, t;
-              return null ===
-                (t =
-                  null === (e = U()) || void 0 === e
-                    ? void 0
-                    : e.user_nominations) || void 0 === t
-                ? void 0
-                : t.nominations;
-            },
-            enabled: z.iA.logged_in,
+          initialData: () => {
+            var e, t;
+            return null ===
+              (t =
+                null === (e = j()) || void 0 === e
+                  ? void 0
+                  : e.user_nominations) || void 0 === t
+              ? void 0
+              : t.nominations;
           },
-        );
+          enabled: k.iA.logged_in,
+        });
       }
-      function P(e) {
+      function H(e) {
         var t;
-        const r = j();
+        const r = W();
         return r.isLoading
           ? { bLoadingNominationForCategory: !0 }
           : {
@@ -2652,12 +2648,12 @@
               bLoadingNominationForCategory: !1,
             };
       }
-      function W(e, t, r, a) {
-        const i = (0, R.KV)(),
-          s = (0, O.useQueryClient)();
-        return (0, O.useMutation)(
-          async () =>
-            await (async function (e, t, r, a) {
+      function V(e, t, r, a) {
+        const i = (0, x.KV)(),
+          s = (0, R.jE)();
+        return (0, z.n)({
+          mutationFn: () =>
+            (async function (e, t, r, a) {
               const i = n.w.Init(w);
               i.Body().set_category_id(r),
                 i.Body().set_source(a),
@@ -2669,22 +2665,20 @@
                 [s.GetEResult(), s.Body().toObject()]
               );
             })(i, e, t, r),
-          {
-            onSuccess([e, t]) {
-              1 == e
-                ? (function (e, t) {
-                    e.setQueryData(
-                      `SteamAwardNominations_${z.iA.accountid}`,
-                      t,
-                    );
-                  })(s, t.nominations)
-                : a && a(e);
-            },
-            onError() {
-              a && a();
-            },
+          onSuccess: ([e, t]) => {
+            1 == e
+              ? (function (e, t) {
+                  e.setQueryData(
+                    [`SteamAwardNominations_${k.iA.accountid}`],
+                    t,
+                  );
+                })(s, t.nominations)
+              : a && a(e);
           },
-        );
+          onError: () => {
+            a && a();
+          },
+        });
       }
     },
     50842: (e, t, r) => {

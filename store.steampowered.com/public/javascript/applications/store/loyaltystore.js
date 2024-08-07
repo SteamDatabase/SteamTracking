@@ -4613,20 +4613,20 @@
           return "CAccountLinking_GetLinkedAccountInfo_Response_CExternalAccountTuple_Response";
         }
       }
-      class Z extends w {
+      class q extends w {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            Z.prototype.steamid || f.Sg(Z.M()),
+            q.prototype.steamid || f.Sg(q.M()),
             w.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            Z.sm_m ||
-              (Z.sm_m = {
-                proto: Z,
+            q.sm_m ||
+              (q.sm_m = {
+                proto: q,
                 fields: {
                   steamid: {
                     n: 1,
@@ -4640,63 +4640,6 @@
                   },
                   expiry: { n: 3, br: f.qM.readUint32, bw: f.gp.writeUint32 },
                   deviceid: { n: 4, br: f.qM.readUint32, bw: f.gp.writeUint32 },
-                },
-              }),
-            Z.sm_m
-          );
-        }
-        static MBF() {
-          return Z.sm_mbf || (Z.sm_mbf = f.w0(Z.M())), Z.sm_mbf;
-        }
-        toObject(e = !1) {
-          return Z.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return f.BT(Z.M(), e, t);
-        }
-        static fromObject(e) {
-          return f.Uq(Z.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new h.BinaryReader(e),
-            r = new Z();
-          return Z.deserializeBinaryFromReader(r, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return f.zj(Z.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new h.BinaryWriter();
-          return Z.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          f.i0(Z.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new h.BinaryWriter();
-          return Z.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CEmbeddedClient_Token";
-        }
-      }
-      class q extends w {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            q.prototype.result || f.Sg(q.M()),
-            w.initialize(this, e, 0, -1, void 0, null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            q.sm_m ||
-              (q.sm_m = {
-                proto: q,
-                fields: {
-                  result: { n: 1, br: f.qM.readUint32, bw: f.gp.writeUint32 },
-                  token: { n: 2, c: Z },
                 },
               }),
             q.sm_m
@@ -4732,6 +4675,63 @@
         serializeBase64String() {
           var e = new h.BinaryWriter();
           return q.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CEmbeddedClient_Token";
+        }
+      }
+      class Z extends w {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            Z.prototype.result || f.Sg(Z.M()),
+            w.initialize(this, e, 0, -1, void 0, null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            Z.sm_m ||
+              (Z.sm_m = {
+                proto: Z,
+                fields: {
+                  result: { n: 1, br: f.qM.readUint32, bw: f.gp.writeUint32 },
+                  token: { n: 2, c: q },
+                },
+              }),
+            Z.sm_m
+          );
+        }
+        static MBF() {
+          return Z.sm_mbf || (Z.sm_mbf = f.w0(Z.M())), Z.sm_mbf;
+        }
+        toObject(e = !1) {
+          return Z.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return f.BT(Z.M(), e, t);
+        }
+        static fromObject(e) {
+          return f.Uq(Z.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new h.BinaryReader(e),
+            r = new Z();
+          return Z.deserializeBinaryFromReader(r, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return f.zj(Z.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new h.BinaryWriter();
+          return Z.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          f.i0(Z.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new h.BinaryWriter();
+          return Z.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CEmbeddedClient_AuthorizeDevice_Response";
@@ -4910,7 +4910,7 @@
             return e.SendMsg(
               "EmbeddedClient.AuthorizeCurrentDevice#1",
               (0, u.I8)(V, t),
-              q,
+              Z,
               { ePrivilege: 1 },
             );
           };
@@ -9678,17 +9678,17 @@
           return H(this.m_strSaleId, this.props.effect.name, e);
         }
       }
-      function Z(e, t) {
+      function q(e, t) {
         !(function (e) {
           const t = (0, s.useRef)({ bSet: !1 });
           t.current.bSet || (t.current = { bSet: !0, value: e() }),
             t.current.value;
         })(() => setTimeout(e, t));
       }
-      const q = ({ msDelay: e, children: t }) =>
+      const Z = ({ msDelay: e, children: t }) =>
         (function (e) {
           const [t, r] = (0, s.useState)(!1);
-          return Z(() => r(!0), e), t;
+          return q(() => r(!0), e), t;
         })(e)
           ? s.createElement(s.Fragment, null, t)
           : null;
@@ -9851,7 +9851,7 @@
           (r.transformOrigin = "0 0"),
           (r.transform = `scale( ${e.scale} )`),
           s.createElement(
-            q,
+            Z,
             { msDelay: e.msDelay },
             s.createElement("div", {
               style: e.style,
@@ -9871,7 +9871,7 @@
           (r.transformOrigin = "0 0"),
           (r.transform = `scale( ${e.scale} )`),
           s.createElement(
-            q,
+            Z,
             { msDelay: e.msDelay },
             s.createElement("div", {
               style: e.style,
@@ -9891,7 +9891,7 @@
           (r.transformOrigin = "0 0"),
           (r.transform = `scale( ${e.scale / 2} )`),
           s.createElement(
-            q,
+            Z,
             { msDelay: e.msDelay },
             s.createElement("div", {
               style: e.style,
@@ -11118,7 +11118,7 @@
               ),
             );
           }));
-      class Ze extends s.Component {
+      class qe extends s.Component {
         GetDescription() {
           return "equip" == this.props.step
             ? (0, g.we)("#Redeem_Equip_Chat")
@@ -11200,7 +11200,7 @@
           );
         }
       }
-      class qe extends s.Component {
+      class Ze extends s.Component {
         GetDescription() {
           return "equip" == this.props.step
             ? (0, g.we)("#Redeem_Equip_Profile")
@@ -12506,8 +12506,8 @@
         }
       }
       const st = {
-          11: Ze,
-          3: qe,
+          11: qe,
+          3: Ze,
           4: Ve,
           13: Ye,
           14: Ke,
@@ -12992,7 +12992,7 @@
         kn: () => G,
         uc: () => H,
         y2: () => V,
-        y7: () => Z,
+        y7: () => q,
         Fo: () => U,
         sc: () => Y,
       });
@@ -13590,8 +13590,8 @@
           ...n,
         };
       }
-      const Z = (e) => i.createElement(F, { ...W(e) });
-      function q({
+      const q = (e) => i.createElement(F, { ...W(e) });
+      function Z({
         customization_type: e,
         point_cost: t,
         purchased_count: r,
@@ -13616,7 +13616,7 @@
           ...a,
         };
       }
-      const V = (e) => i.createElement(F, { ...q(e) });
+      const V = (e) => i.createElement(F, { ...Z(e) });
       class Q extends i.Component {
         state = { bLoadComplete: !1 };
         render() {
@@ -14079,18 +14079,18 @@
         U = r(30869),
         H = r(1339),
         W = r(40617),
-        Z = r(39739);
-      function q(e) {
+        q = r(39739);
+      function Z(e) {
         return Math.max(0, e.cTotalMatchingUnfiltered - e.cTotalMatching);
       }
       function V(e) {
-        const t = q(e);
+        const t = Z(e);
         return 0 === t
           ? null
           : (0, h.we)("#HiddenWithCountButton", t.toLocaleString());
       }
       function Q(e) {
-        const t = q(e);
+        const t = Z(e);
         return 0 === t
           ? null
           : i.createElement(
@@ -14289,7 +14289,7 @@
         }),
         ee = (0, c.PA)((e) => {
           const { descriptor: t, additionalFilter: r, linkedPage: n } = e,
-            a = (0, Z.h)("(min-width: 1070px)");
+            a = (0, q.h)("(min-width: 1070px)");
           if (2 !== t.type)
             return (
               console.error(
@@ -14641,7 +14641,7 @@
           r = (0, me.A)(),
           n = i.useRef();
         i.useEffect(() => n.current?.Activate(!0), []);
-        const a = (0, Z.h)("(max-width: 965px)") || s.TS.IN_GAMEPADUI;
+        const a = (0, q.h)("(max-width: 965px)") || s.TS.IN_GAMEPADUI;
         return i.createElement(
           g.Yp,
           null,
@@ -14968,9 +14968,9 @@
           );
         }),
         He = (e) => e.toString().padStart(2, "0");
-      var We = r(31380),
-        Ze = r(41735),
-        qe = r.n(Ze),
+      var We = r(20194),
+        qe = r(41735),
+        Ze = r.n(qe),
         Ve = r(91674),
         Qe = r(55963),
         Ye = r(44165);
@@ -15358,18 +15358,18 @@
         const { eventname: t } = e,
           r = (0, Ye.f1)(),
           [n, a] = i.useState(5),
-          o = (0, We.useQuery)(
-            ["EventDetails", t],
-            async () =>
+          o = (0, We.I)({
+            queryKey: ["EventDetails", t],
+            queryFn: async () =>
               (
-                await qe().get(
+                await Ze().get(
                   s.TS.STORE_BASE_URL +
                     "points/ajaxgeteventdetails?event_name=" +
                     t,
                 )
               ).data,
-            { staleTime: 1 / 0 },
-          ),
+            staleTime: 1 / 0,
+          }),
           l = (0, m.q3)(() =>
             _.DZ.Get().GetPageDescriptor({
               type: "event",
@@ -16377,7 +16377,7 @@
           i.createElement("div", { className: Lt.FaqQuestion }, e),
         Wt = ({ children: e }) =>
           i.createElement("div", { className: Lt.FaqAnswer }, e),
-        Zt = () => {
+        qt = () => {
           let e = _.DZ.Get().GetConfig().points_conversion.unit_spend,
             t = _.DZ.Get().GetConfig().points_conversion.points;
           return i.createElement(
@@ -16405,7 +16405,7 @@
             ),
           );
         };
-      var qt = r(1056),
+      var Zt = r(1056),
         Vt = r(51272);
       let Qt = class extends i.Component {
         constructor(e) {
@@ -16419,7 +16419,7 @@
                 i.createElement(
                   g.az,
                   {
-                    className: qt.PageContainer,
+                    className: Zt.PageContainer,
                     marginX: "xlarge",
                     display: "flex",
                     flexDirection: "column",
@@ -16437,7 +16437,7 @@
                         marginY: "xsmall",
                         display: "flex",
                         flexDirection: "column",
-                        className: qt.PageHeader,
+                        className: Zt.PageHeader,
                       },
                       (0, h.we)("#LunarSale2022_Rules_Header_China"),
                     ),
@@ -16447,7 +16447,7 @@
                         marginY: "xsmall",
                         display: "flex",
                         flexDirection: "column",
-                        className: qt.SectionContent,
+                        className: Zt.SectionContent,
                       },
                       (0, h.we)("#LunarSale2022_Rules_Intro_China"),
                     ),
@@ -16458,7 +16458,7 @@
                       marginY: "medium",
                       display: "flex",
                       flexDirection: "column",
-                      className: qt.Section,
+                      className: Zt.Section,
                     },
                     i.createElement(
                       g.az,
@@ -16466,7 +16466,7 @@
                         marginY: "small",
                         display: "flex",
                         flexDirection: "column",
-                        className: qt.SectionHeader,
+                        className: Zt.SectionHeader,
                       },
                       (0, h.we)("#LunarSale2022_Rules_1_Title_China"),
                     ),
@@ -16476,7 +16476,7 @@
                         marginY: "xsmall",
                         display: "flex",
                         flexDirection: "column",
-                        className: qt.SectionContent,
+                        className: Zt.SectionContent,
                       },
                       (0, h.we)("#LunarSale2022_Rules_1_Desc_China"),
                     ),
@@ -16487,7 +16487,7 @@
                       marginY: "medium",
                       display: "flex",
                       flexDirection: "column",
-                      className: qt.Section,
+                      className: Zt.Section,
                     },
                     i.createElement(
                       g.az,
@@ -16495,7 +16495,7 @@
                         marginY: "small",
                         display: "flex",
                         flexDirection: "column",
-                        className: qt.SectionHeader,
+                        className: Zt.SectionHeader,
                       },
                       (0, h.we)("#LunarSale2022_Rules_2_Title_China"),
                     ),
@@ -16505,7 +16505,7 @@
                         marginY: "xsmall",
                         display: "flex",
                         flexDirection: "column",
-                        className: qt.SectionContent,
+                        className: Zt.SectionContent,
                       },
                       (0, h.we)("#LunarSale2022_Rules_2_Desc_China"),
                     ),
@@ -16515,7 +16515,7 @@
                         marginY: "xsmall",
                         display: "flex",
                         flexDirection: "column",
-                        className: qt.SectionContent,
+                        className: Zt.SectionContent,
                       },
                       (0, h.we)("#LunarSale2022_Rules_2_Desc2_China"),
                     ),
@@ -16526,7 +16526,7 @@
                       marginY: "medium",
                       display: "flex",
                       flexDirection: "column",
-                      className: qt.Section,
+                      className: Zt.Section,
                     },
                     i.createElement(
                       g.az,
@@ -16534,7 +16534,7 @@
                         marginY: "small",
                         display: "flex",
                         flexDirection: "column",
-                        className: qt.SectionHeader,
+                        className: Zt.SectionHeader,
                       },
                       (0, h.we)("#LunarSale2022_Rules_3_Title_China"),
                     ),
@@ -16544,7 +16544,7 @@
                         marginY: "xsmall",
                         display: "flex",
                         flexDirection: "column",
-                        className: qt.SectionContent,
+                        className: Zt.SectionContent,
                       },
                       (0, h.we)("#LunarSale2022_Rules_3_Desc_China"),
                     ),
@@ -16554,7 +16554,7 @@
                         marginY: "xsmall",
                         display: "flex",
                         flexDirection: "column",
-                        className: qt.SectionContent,
+                        className: Zt.SectionContent,
                       },
                       (0, h.we)("#LunarSale2022_Rules_3_Desc2_China"),
                     ),
@@ -16565,7 +16565,7 @@
                       marginY: "medium",
                       display: "flex",
                       flexDirection: "column",
-                      className: qt.Section,
+                      className: Zt.Section,
                     },
                     i.createElement(
                       g.az,
@@ -16573,13 +16573,13 @@
                         marginY: "small",
                         display: "flex",
                         flexDirection: "column",
-                        className: qt.SectionHeader,
+                        className: Zt.SectionHeader,
                       },
                       (0, h.we)("#LunarSale2022_Rules_4_Title_China"),
                     ),
                     i.createElement(
                       g.az,
-                      { marginY: "xsmall", className: qt.SectionContent },
+                      { marginY: "xsmall", className: Zt.SectionContent },
                       (0, h.PP)(
                         "#LunarSale2022_Rules_4_Desc_China",
                         i.createElement(
@@ -16598,7 +16598,7 @@
                 i.createElement(
                   g.az,
                   {
-                    className: qt.PageContainer,
+                    className: Zt.PageContainer,
                     marginX: "xlarge",
                     display: "flex",
                     flexDirection: "column",
@@ -16616,7 +16616,7 @@
                         marginY: "xsmall",
                         display: "flex",
                         flexDirection: "column",
-                        className: qt.PageHeader,
+                        className: Zt.PageHeader,
                       },
                       (0, h.we)("#LunarSale2022_Rules_Header"),
                     ),
@@ -16626,7 +16626,7 @@
                         marginY: "xsmall",
                         display: "flex",
                         flexDirection: "column",
-                        className: qt.SectionContent,
+                        className: Zt.SectionContent,
                       },
                       (0, h.we)("#LunarSale2022_Rules_Intro"),
                     ),
@@ -16637,7 +16637,7 @@
                       marginY: "medium",
                       display: "flex",
                       flexDirection: "column",
-                      className: qt.Section,
+                      className: Zt.Section,
                     },
                     i.createElement(
                       g.az,
@@ -16645,7 +16645,7 @@
                         marginY: "small",
                         display: "flex",
                         flexDirection: "column",
-                        className: qt.SectionHeader,
+                        className: Zt.SectionHeader,
                       },
                       (0, h.we)("#LunarSale2022_Rules_1_Title"),
                     ),
@@ -16655,7 +16655,7 @@
                         marginY: "xsmall",
                         display: "flex",
                         flexDirection: "column",
-                        className: qt.SectionContent,
+                        className: Zt.SectionContent,
                       },
                       (0, h.we)("#LunarSale2022_Rules_1_Desc"),
                     ),
@@ -16666,7 +16666,7 @@
                       marginY: "medium",
                       display: "flex",
                       flexDirection: "column",
-                      className: qt.Section,
+                      className: Zt.Section,
                     },
                     i.createElement(
                       g.az,
@@ -16674,7 +16674,7 @@
                         marginY: "small",
                         display: "flex",
                         flexDirection: "column",
-                        className: qt.SectionHeader,
+                        className: Zt.SectionHeader,
                       },
                       (0, h.we)("#LunarSale2022_Rules_2_Title"),
                     ),
@@ -16684,7 +16684,7 @@
                         marginY: "xsmall",
                         display: "flex",
                         flexDirection: "column",
-                        className: qt.SectionContent,
+                        className: Zt.SectionContent,
                       },
                       (0, h.we)("#LunarSale2022_Rules_2_Desc"),
                     ),
@@ -16694,7 +16694,7 @@
                         marginY: "xsmall",
                         display: "flex",
                         flexDirection: "column",
-                        className: qt.SectionContent,
+                        className: Zt.SectionContent,
                       },
                       (0, h.we)("#LunarSale2022_Rules_2_Desc2"),
                     ),
@@ -16705,7 +16705,7 @@
                       marginY: "medium",
                       display: "flex",
                       flexDirection: "column",
-                      className: qt.Section,
+                      className: Zt.Section,
                     },
                     i.createElement(
                       g.az,
@@ -16713,7 +16713,7 @@
                         marginY: "small",
                         display: "flex",
                         flexDirection: "column",
-                        className: qt.SectionHeader,
+                        className: Zt.SectionHeader,
                       },
                       (0, h.we)("#LunarSale2022_Rules_3_Title"),
                     ),
@@ -16723,7 +16723,7 @@
                         marginY: "xsmall",
                         display: "flex",
                         flexDirection: "column",
-                        className: qt.SectionContent,
+                        className: Zt.SectionContent,
                       },
                       (0, h.we)("#LunarSale2022_Rules_3_Desc"),
                     ),
@@ -16733,7 +16733,7 @@
                         marginY: "xsmall",
                         display: "flex",
                         flexDirection: "column",
-                        className: qt.SectionContent,
+                        className: Zt.SectionContent,
                       },
                       (0, h.we)("#LunarSale2022_Rules_3_Desc2"),
                     ),
@@ -16744,7 +16744,7 @@
                       marginY: "medium",
                       display: "flex",
                       flexDirection: "column",
-                      className: qt.Section,
+                      className: Zt.Section,
                     },
                     i.createElement(
                       g.az,
@@ -16752,13 +16752,13 @@
                         marginY: "small",
                         display: "flex",
                         flexDirection: "column",
-                        className: qt.SectionHeader,
+                        className: Zt.SectionHeader,
                       },
                       (0, h.we)("#LunarSale2022_Rules_4_Title"),
                     ),
                     i.createElement(
                       g.az,
-                      { marginY: "xsmall", className: qt.SectionContent },
+                      { marginY: "xsmall", className: Zt.SectionContent },
                       (0, h.PP)(
                         "#LunarSale2022_Rules_4_Desc",
                         i.createElement(
@@ -16781,16 +16781,16 @@
       function $t(e) {
         const { steamid: t } = e,
           r = new Jt.b(t),
-          n = (0, We.useQuery)(
-            ["EquippedProfileItems", t],
-            () => _.DZ.Get().GetEquippedProfileItems(t),
-            { staleTime: 1 / 0 },
-          ),
-          a = (0, We.useQuery)(
-            ["MiniprofileData", t],
-            async () =>
+          n = (0, We.I)({
+            queryKey: ["EquippedProfileItems", t],
+            queryFn: () => _.DZ.Get().GetEquippedProfileItems(t),
+            staleTime: 1 / 0,
+          }),
+          a = (0, We.I)({
+            queryKey: ["MiniprofileData", t],
+            queryFn: async () =>
               (
-                await qe().get(
+                await Ze().get(
                   s.TS.COMMUNITY_BASE_URL +
                     "miniprofile/" +
                     r.GetAccountID() +
@@ -16798,8 +16798,8 @@
                     s.TS.STORE_BASE_URL,
                 )
               ).data,
-            { staleTime: 1 / 0 },
-          ),
+            staleTime: 1 / 0,
+          }),
           o = i.useMemo(
             () => n?.data?.active_definitions?.map((e) => e.appid),
             [n],
@@ -18114,7 +18114,7 @@
                   i.createElement(
                     n.qh,
                     { path: a.B.LoyaltyHowItWorks() },
-                    i.createElement(Zt, null),
+                    i.createElement(qt, null),
                   ),
                   i.createElement(
                     n.qh,

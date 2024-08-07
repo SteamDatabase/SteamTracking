@@ -461,8 +461,8 @@
                   " ",
                 ),
               i.createElement(X, { rgLocalPriceOverrides: n }),
-              i.createElement(J, { priceIncrease: w, nextDiscount: c.days }),
-              i.createElement(j, {
+              i.createElement(j, { priceIncrease: w, nextDiscount: c.days }),
+              i.createElement(J, {
                 value: o,
                 onChange: l,
                 nextDiscount: c.days,
@@ -494,7 +494,7 @@
           ),
         );
       }
-      function J(e) {
+      function j(e) {
         let t,
           { priceIncrease: a, nextDiscount: n } = e;
         return a
@@ -532,7 +532,7 @@
             ))
           : null;
       }
-      function j(e) {
+      function J(e) {
         let { value: t, onChange: a } = e,
           n = e.nextDiscount <= K;
         return i.createElement(
@@ -790,7 +790,7 @@
             (e[(e.OK = 2)] = "OK"),
             (e[(e.Failed = 3)] = "Failed");
         })($ || ($ = {}));
-      var te = a(31380),
+      var te = a(75233),
         ae = a(41103),
         ne = a(95034),
         re = (a(64641), a(42691), a(40441), a(59710));
@@ -933,7 +933,7 @@
               ),
             [],
           ),
-          n = (0, te.useQueryClient)(),
+          n = (0, te.jE)(),
           r = i.useMemo(
             () => ({ client: n, fnBLocalChangesExist: t, fnWarnUser: a }),
             [t, a, n],
@@ -1004,7 +1004,9 @@
               for (const i of e) {
                 if ("changed" == t) {
                   if (!(0, P.iy)(i.packageid)) continue;
-                } else if ("proposed" == t && !(0, P.RO)(i.packageid)) continue;
+                } else if ("proposed" == t) {
+                  if (!(0, P.RO)(i.packageid)) continue;
+                } else if ("all" == t && !i.released) continue;
                 if (
                   a?.bFilterToOnlyBelowMinimumPrice &&
                   !(0, P.Y5)(i.packageid)

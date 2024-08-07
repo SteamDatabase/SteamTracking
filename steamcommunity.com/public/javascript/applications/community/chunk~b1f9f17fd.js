@@ -31704,7 +31704,7 @@
       "use strict";
       a.d(t, { E2: () => _, PG: () => g });
       var n = a(90626),
-        i = a(31380),
+        i = a(20194),
         r = a(56545),
         o = a(94601),
         s = a(72839),
@@ -31742,9 +31742,9 @@
         let E = { staleTime: 36e5 };
         (null == l ? void 0 : l.reactQuery) && (E = { ...E, ...l.reactQuery });
         const y = [p, v, a, l];
-        return (0, i.useQuery)(
-          y,
-          () =>
+        return (0, i.I)({
+          queryKey: y,
+          queryFn: () =>
             (async function (e, t, a, n, i) {
               const l = r.w.Init(o.iU);
               (0, s.rV)(l), n && (0, s.Bn)(l, n);
@@ -31756,8 +31756,8 @@
                 throw `Error executing StoreQuery "${t}", EResult: ${c.GetEResult()}`;
               return new h(c, n);
             })(_, e, v, a, S),
-          E,
-        );
+          ...E,
+        });
       }
       class h {
         constructor(e, t) {
@@ -37629,7 +37629,7 @@
             );
           };
         })(ze || (ze = {}));
-      var Ue = a(31380),
+      var Ue = a(20194),
         He = a(96059),
         je = a(30470),
         We = a(24484);
@@ -37651,7 +37651,8 @@
             );
           })(),
         );
-        return (0, Ue.useQuery)(["usePromotionPlanBySalePage", t], {
+        return (0, Ue.I)({
+          queryKey: ["usePromotionPlanBySalePage", t],
           queryFn: async () => {
             const n = u.w.Init(ie),
               i = new re();
@@ -44874,7 +44875,7 @@
         m = a(26182),
         _ = a(1276),
         p = a(61859),
-        g = a(31380),
+        g = a(20194),
         h = a(92298),
         v = a(41735),
         S = a.n(v),
@@ -44955,9 +44956,9 @@
       }
       function b() {
         (0, i.KV)(), (0, h.L)();
-        return (0, g.useQuery)(
-          ["GetControllersUsed"],
-          async () => {
+        return (0, g.I)({
+          queryKey: ["GetControllersUsed"],
+          queryFn: async () => {
             var e;
             let t;
             try {
@@ -44982,8 +44983,8 @@
               t && console.error("useLastControllerUsedByPlayer failed:", t), 0
             );
           },
-          { enabled: !!u.iA.accountid },
-        );
+          enabled: !!u.iA.accountid,
+        });
       }
     },
     54847: (e, t, a) => {
@@ -50067,7 +50068,7 @@
         ct = a(68012),
         dt = a(69629),
         ut = a(26749),
-        mt = a(31380);
+        mt = a(20194);
       function _t(e) {
         return e.recommendation &&
           e.recommendation.reason === b.Xe.k_EStatusString
@@ -50170,48 +50171,51 @@
                 isLoading: t,
                 isError: a,
                 data: n,
-              } = (0, mt.useQuery)(["DLCForYou_MainCarousel", e], async () => {
-                var t, a, n;
-                if ("dlc" !== e || !E.iA.logged_in) return [];
-                const i = `${E.TS.STORE_BASE_URL}contenthub/ajaxgetdlcforyoumaincapsule`,
-                  r = {
-                    origin: self.origin,
-                    forsteamid: (0, E.Tc)(
-                      "dlcforyou_forsteamid",
-                      "application_config",
-                    ),
-                  },
-                  o = await w().get(i, { params: r, withCredentials: !0 });
-                if (200 !== o.status || 1 !== o.data.success)
-                  throw new Error(
-                    `ajaxgetdlcforyoumaincapsule failed: status == ${o.status}, eresult == ${null === (t = o.data) || void 0 === t ? void 0 : t.success}, err_msg == ${null === (a = o.data) || void 0 === a ? void 0 : a.err_msg}`,
-                  );
-                await P.Fm.Get().HintLoad();
-                const s = new Map();
-                for (const e of Object.keys(o.data.dlc_appids)) {
-                  const t = Number(e);
-                  if (P.Fm.Get().BOwnsApp(t)) {
-                    s.has(t) || s.set(t, []);
-                    for (const a of o.data.dlc_appids[e]) {
-                      const e = Number(a);
-                      P.Fm.Get().BOwnsApp(e) || s.get(t).push(e);
+              } = (0, mt.I)({
+                queryKey: ["DLCForYou_MainCarousel", e],
+                queryFn: async () => {
+                  var t, a, n;
+                  if ("dlc" !== e || !E.iA.logged_in) return [];
+                  const i = `${E.TS.STORE_BASE_URL}contenthub/ajaxgetdlcforyoumaincapsule`,
+                    r = {
+                      origin: self.origin,
+                      forsteamid: (0, E.Tc)(
+                        "dlcforyou_forsteamid",
+                        "application_config",
+                      ),
+                    },
+                    o = await w().get(i, { params: r, withCredentials: !0 });
+                  if (200 !== o.status || 1 !== o.data.success)
+                    throw new Error(
+                      `ajaxgetdlcforyoumaincapsule failed: status == ${o.status}, eresult == ${null === (t = o.data) || void 0 === t ? void 0 : t.success}, err_msg == ${null === (a = o.data) || void 0 === a ? void 0 : a.err_msg}`,
+                    );
+                  await P.Fm.Get().HintLoad();
+                  const s = new Map();
+                  for (const e of Object.keys(o.data.dlc_appids)) {
+                    const t = Number(e);
+                    if (P.Fm.Get().BOwnsApp(t)) {
+                      s.has(t) || s.set(t, []);
+                      for (const a of o.data.dlc_appids[e]) {
+                        const e = Number(a);
+                        P.Fm.Get().BOwnsApp(e) || s.get(t).push(e);
+                      }
                     }
                   }
-                }
-                const l = Array.from(s.keys()),
-                  c = [],
-                  d = [];
-                for (const e of l) c.push(0), d.push(s.get(e).length);
-                let u = 0;
-                for (let e = 0; e < l.length; ++e) u += d[e];
-                const m = [];
-                let _ = 0;
-                for (; m.length < u; )
-                  c[_] < d[_] && (m.push(s.get(l[_])[c[_]]), c[_]++),
-                    (_ = (_ + 1) % l.length);
-                return null === (n = m.slice(0, vt)) || void 0 === n
-                  ? void 0
-                  : n.map((e) => ({ item_type: "app", id: Number(e) }));
+                  const l = Array.from(s.keys()),
+                    c = [],
+                    d = [];
+                  for (const e of l) c.push(0), d.push(s.get(e).length);
+                  let u = 0;
+                  for (let e = 0; e < l.length; ++e) u += d[e];
+                  const m = [];
+                  let _ = 0;
+                  for (; m.length < u; )
+                    c[_] < d[_] && (m.push(s.get(l[_])[c[_]]), c[_]++),
+                      (_ = (_ + 1) % l.length);
+                  return null === (n = m.slice(0, vt)) || void 0 === n
+                    ? void 0
+                    : n.map((e) => ({ item_type: "app", id: Number(e) }));
+                },
               });
               return { bLoading: t, rgCapsules: a ? [] : n };
             })(t),
@@ -61481,7 +61485,7 @@
       "use strict";
       a.d(t, { v: () => H });
       var n = a(90626),
-        i = a(31380),
+        i = a(20194),
         r = a(71513),
         o = a(32381),
         s = a(1035),
@@ -61769,18 +61773,18 @@
           x = (0, z.Nd)(B),
           H = (function (e) {
             const t = (0, N.KV)();
-            return (0, i.useQuery)(
-              ["AppRelevanceStore", "FriendsRecommended", e],
-              () => R.LoadFriendsRecommendedApp(t, e),
-              { enabled: E.iA.logged_in },
-            );
+            return (0, i.I)({
+              queryKey: ["AppRelevanceStore", "FriendsRecommended", e],
+              queryFn: () => R.LoadFriendsRecommendedApp(t, e),
+              enabled: E.iA.logged_in,
+            });
           })(B),
           Q = (function (e) {
-            return (0, i.useQuery)(
-              ["AppRelevanceStore", "StoreRelevance", e],
-              () => R.LoadStoreRelevanceData(e),
-              { enabled: E.iA.logged_in },
-            );
+            return (0, i.I)({
+              queryKey: ["AppRelevanceStore", "StoreRelevance", e],
+              queryFn: () => R.LoadStoreRelevanceData(e),
+              enabled: E.iA.logged_in,
+            });
           })(B),
           Y = (function () {
             const { data: e } = (0, P.PG)("App Relevance Store Top Sellers", {
@@ -61790,9 +61794,9 @@
             });
             return e;
           })(),
-          K = (0, i.useQuery)(
-            ["SimilarPlayedAppsLoad", B],
-            () => {
+          K = (0, i.I)({
+            queryKey: ["SimilarPlayedAppsLoad", B],
+            queryFn: () => {
               var e;
               return I.A.Get().QueueMultipleAppRequests(
                 null === (e = Q.data.arrSimilarPlayedApps) || void 0 === e
@@ -61801,23 +61805,23 @@
                 { include_basic_info: !0, include_assets: !0 },
               );
             },
-            { enabled: Q.isSuccess },
-          ),
+            enabled: Q.isSuccess,
+          }),
           Z = (function (e, t) {
             const a = (0, n.useMemo)(
               () => T.Fm.Get().GetRecommendingCuratorsForApp(e) || [],
               [e],
             );
-            return (0, i.useQuery)(
-              ["RecommendingCurators", e],
-              () =>
+            return (0, i.I)({
+              queryKey: ["RecommendingCurators", e],
+              queryFn: () =>
                 Promise.all(
                   null == a
                     ? void 0
                     : a.map((e) => w.ac.LoadClanInfoForClanAccountID(e)),
                 ),
-              { enabled: !!t && a && a.length > 0 },
-            );
+              enabled: !!t && a && a.length > 0,
+            });
           })(B, k),
           $ = (0, n.useMemo)(() => {
             let e = [];
@@ -61847,17 +61851,17 @@
               e
             );
           }, [G]),
-          J = (0, i.useQuery)(
-            ["FollowedCreators", B],
-            () =>
+          J = (0, i.I)({
+            queryKey: ["FollowedCreators", B],
+            queryFn: () =>
               w.ac
                 .LoadClanInfoForClanAccountID($[0].nAccountID)
                 .then((e) => ({ clanInfo: e, type: $[0].type })),
-            { enabled: !!L && $ && $.length > 0 },
-          ),
-          ee = (0, i.useQuery)(
-            ["PlayerSummaries", B, A],
-            async () => {
+            enabled: !!L && $ && $.length > 0,
+          }),
+          ee = (0, i.I)({
+            queryKey: ["PlayerSummaries", B, A],
+            queryFn: async () => {
               var e, t, a;
               let n = [],
                 i = [],
@@ -61904,8 +61908,8 @@
                 rgOwnedFriends: r,
               };
             },
-            { enabled: H.isSuccess && x.isSuccess },
-          );
+            enabled: H.isSuccess && x.isSuccess,
+          });
         if (
           !Y ||
           K.isLoading ||
@@ -64138,7 +64142,7 @@
     70809: (e, t, a) => {
       "use strict";
       a.d(t, { x: () => i });
-      a(56545), a(15161), a(58632), a(31380), a(72839);
+      a(56545), a(15161), a(58632), a(72839);
       var n = a(61859);
       function i(e) {
         return (0, n.we)(

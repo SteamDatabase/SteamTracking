@@ -5219,7 +5219,7 @@
             );
           };
         })(Ae || (Ae = {}));
-      var Ne = r(31380),
+      var Ne = r(20194),
         Ge = r(72034),
         ke = r(30470),
         Le = r(24484);
@@ -5241,7 +5241,8 @@
             );
           })(),
         );
-        return (0, Ne.useQuery)(["usePromotionPlanBySalePage", t], {
+        return (0, Ne.I)({
+          queryKey: ["usePromotionPlanBySalePage", t],
           queryFn: async () => {
             const i = u.w.Init(ne),
               n = new ae();

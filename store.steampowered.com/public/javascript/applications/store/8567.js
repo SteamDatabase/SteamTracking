@@ -5,7 +5,7 @@
   [8567],
   {
     28567: (e, t, r) => {
-      r.d(t, { DT: () => M, Uy: () => b, Pt: () => z, bD: () => _ });
+      r.d(t, { DT: () => A, Uy: () => _, Pt: () => v, bD: () => M });
       var i = r(56545),
         a = r(80613),
         s = r(89068);
@@ -309,7 +309,7 @@
           return "CAccountPrivateApsClient_NotifyPrivateAppListChanged_Notification";
         }
       }
-      var B, d;
+      var B, y;
       !(function (e) {
         (e.ToggleAppPrivacy = function (e, t) {
           return e.SendMsg(
@@ -333,64 +333,66 @@
             name: "AccountPrivateAppsClient.NotifyPrivateAppListChanged#1",
             request: m,
           };
-        })(d || (d = {}));
-      var y = r(31380),
-        f = r(23809),
-        g = r(30470);
-      function z() {
-        const e = (0, f.KV)();
-        return (0, y.useQuery)(
-          ["AccountPrivateApps"],
-          async () => {
+        })(y || (y = {}));
+      var d = r(20194),
+        f = r(75233),
+        g = r(51614),
+        z = r(23809),
+        b = r(30470);
+      function v() {
+        const e = (0, z.KV)();
+        return (0, d.I)({
+          queryKey: ["AccountPrivateApps"],
+          queryFn: async () => {
             const t = i.w.Init(l),
               r = await B.GetPrivateAppList(e, t);
             return new Set(r.Body().private_apps(!0).appids());
           },
-          { enabled: !!g.iA.accountid },
-        );
-      }
-      function b(e) {
-        const { data: t } = z();
-        return !!g.iA.accountid && !!e && (t ? t.has(e) : void 0);
-      }
-      function v(e) {
-        e.invalidateQueries(["AccountPrivateApps"]);
+          enabled: !!b.iA.accountid,
+        });
       }
       function _(e) {
-        const t = (0, f.KV)(),
-          r = (0, y.useQueryClient)();
-        return (0, y.useMutation)({
-          mutationFn: async (r) => w(t, [e], r),
-          onSuccess: (t, i) => A(r, [e], i),
+        const { data: t } = v();
+        return !!b.iA.accountid && !!e && (t ? t.has(e) : void 0);
+      }
+      function w(e) {
+        e.invalidateQueries({ queryKey: ["AccountPrivateApps"] });
+      }
+      function M(e) {
+        const t = (0, z.KV)(),
+          r = (0, f.jE)();
+        return (0, g.n)({
+          mutationFn: async (r) => R(t, [e], r),
+          onSuccess: (t, i) => h(r, [e], i),
           onError() {
-            v(r);
+            w(r);
           },
         });
       }
-      function M() {
-        const e = (0, f.KV)(),
-          t = (0, y.useQueryClient)();
-        return (0, y.useMutation)({
+      function A() {
+        const e = (0, z.KV)(),
+          t = (0, f.jE)();
+        return (0, g.n)({
           mutationFn: async (t) => {
             const { rgAppIDs: r, bPrivate: i } = t;
-            return w(e, r, i);
+            return R(e, r, i);
           },
           onSuccess: (e, r) => {
             const { rgAppIDs: i, bPrivate: a } = r;
-            A(t, i, a);
+            h(t, i, a);
           },
           onError() {
-            v(t);
+            w(t);
           },
         });
       }
-      async function w(e, t, r) {
+      async function R(e, t, r) {
         const a = i.w.Init(o);
         a.Body().set_appids(t.slice()), a.Body().set_private(r);
         const s = await B.ToggleAppPrivacy(e, a);
         if (!s.BSuccess()) throw s.GetErrorMessage();
       }
-      function A(e, t, r) {
+      function h(e, t, r) {
         e.setQueryData(["AccountPrivateApps"], (e) => {
           if (!e) return;
           const i = new Set(e);

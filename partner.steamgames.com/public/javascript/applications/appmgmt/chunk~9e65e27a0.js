@@ -925,7 +925,7 @@
         i = a(1814),
         o = a(14947),
         l = a(90626),
-        m = a(31380),
+        m = a(20194),
         c = a(6144),
         d = a(56093),
         u = a(30470);
@@ -1142,9 +1142,9 @@
           data: t,
           isLoading: a,
           isError: n,
-        } = (0, m.useQuery)(
-          ["contenthubsummary", e.type, e.handle],
-          async () => {
+        } = (0, m.I)({
+          queryKey: ["contenthubsummary", e.type, e.handle],
+          queryFn: async () => {
             const t = {
                 contenthubcategorytype: e.type,
                 handle: e.handle,
@@ -1156,7 +1156,7 @@
               ? n.data
               : null;
           },
-        );
+        });
         return {
           rgTopApps: a || n || !t ? null : t?.top_apps,
           nTotalGames: a || n || !t ? null : t?.total_games,
@@ -1194,9 +1194,9 @@
             data: o,
             isLoading: l,
             isError: c,
-          } = (0, m.useQuery)(
-            ["useContentHubCategoryEditorFullAppList", n, s, i],
-            async () => {
+          } = (0, m.I)({
+            queryKey: ["useContentHubCategoryEditorFullAppList", n, s, i],
+            queryFn: async () => {
               const e = {
                   musthaveall: n,
                   musthaveany: s,
@@ -1209,8 +1209,8 @@
                 ? a.data
                 : null;
             },
-            { enabled: 0 != n.length || 0 != s.length || 0 != i.length },
-          );
+            enabled: 0 != n.length || 0 != s.length || 0 != i.length,
+          });
         return 0 == n.length && 0 == s.length && 0 == i.length ? y : o || null;
       }
       function v(e, t, a) {
@@ -1255,9 +1255,9 @@
               data: t,
               isLoading: a,
               isError: n,
-            } = (0, m.useQuery)(
-              ["contenthubapplist", e.type, e.handle],
-              async () => {
+            } = (0, m.I)({
+              queryKey: ["contenthubapplist", e.type, e.handle],
+              queryFn: async () => {
                 const t = {
                     contenthubcategorytype: e.type,
                     handle: e.handle,
@@ -1269,7 +1269,7 @@
                   ? n.data
                   : null;
               },
-            );
+            });
             return t?.apps || null;
           })(e),
           [a, n] = (0, l.useState)(h.Get().GetContentHubSaleSummary(e));
@@ -12099,13 +12099,13 @@
       a.d(t, { Fv: () => l, LG: () => d, MB: () => c });
       var n = a(56545),
         s = a(75487),
-        r = a(31380),
+        r = a(20194),
         i = a(23809),
         o = (a(72963), a(78327));
       function l(e = o.TS.LANGUAGE) {
         const t = (0, i.TR)(),
           a = (0, i.rX)();
-        return (0, r.useQuery)(m(t, a, e));
+        return (0, r.I)(m(t, a, e));
       }
       function m(e, t, a) {
         return {
@@ -12977,7 +12977,7 @@
         r = a(30894);
       const i = (0, n.createContext)({}),
         o = () => (0, n.useContext)(i);
-      var l = a(31380),
+      var l = a(20194),
         m = a(56545),
         c = a(23809),
         d = a(17690),
@@ -13125,9 +13125,9 @@
       const f = { high_pending_orders: !1, inventory_available: !0 };
       function v(e) {
         const t = (0, c.rW)(),
-          a = (0, l.useQuery)(
-            [e?.GetID() || d.sc, e?.GetStoreItemType() || "invalid"],
-            () =>
+          a = (0, l.I)({
+            queryKey: [e?.GetID() || d.sc, e?.GetStoreItemType() || "invalid"],
+            queryFn: () =>
               (async function (e, t) {
                 if (!e || 1 !== e.GetStoreItemType() || 10 !== e.GetAppType())
                   return f;
@@ -13147,8 +13147,8 @@
                   );
                 return n.Body().toObject();
               })(e, t),
-            { enabled: Boolean(e?.GetID() && 10 === e.GetAppType()) },
-          );
+            enabled: Boolean(e?.GetID() && 10 === e.GetAppType()),
+          });
         return a.isLoading ? null : a.data;
       }
       var I = a(62792),

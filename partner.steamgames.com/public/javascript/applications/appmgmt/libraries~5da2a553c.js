@@ -142,7 +142,7 @@
             return e;
           }
         }
-        function A(e, t, o) {
+        function H(e, t, o) {
           a(function (e) {
             var i = !1,
               n = P(
@@ -159,7 +159,7 @@
             !i && n && ((i = !0), B(e, n));
           }, e);
         }
-        function H(e, t) {
+        function A(e, t) {
           t._state === k
             ? I(e, t._result)
             : t._state === S
@@ -179,11 +179,11 @@
           o.constructor === e.constructor &&
           i === R &&
           o.constructor.resolve === M
-            ? H(e, o)
+            ? A(e, o)
             : void 0 === i
               ? I(e, o)
               : t(i)
-                ? A(e, o, i)
+                ? H(e, o, i)
                 : I(e, o);
         }
         function O(t, o) {
@@ -355,7 +355,7 @@
         function J(e) {
           return new K(this, e).promise;
         }
-        function Z(e) {
+        function Q(e) {
           var t = this;
           return i(e)
             ? new t(function (o, i) {
@@ -370,7 +370,7 @@
           var t = new this(L);
           return B(t, e), t;
         }
-        function Q() {
+        function Z() {
           throw new TypeError(
             "You must pass a resolver function as the first argument to the promise constructor",
           );
@@ -386,7 +386,7 @@
               (this._result = this._state = void 0),
               (this._subscribers = []),
               L !== t &&
-                ("function" != typeof t && Q(),
+                ("function" != typeof t && Z(),
                 this instanceof e ? G(this, t) : ee());
           }
           return (
@@ -439,7 +439,7 @@
         return (
           (te.prototype.then = R),
           (te.all = J),
-          (te.race = Z),
+          (te.race = Q),
           (te.resolve = M),
           (te.reject = $),
           (te._setScheduler = l),
@@ -1348,15 +1348,15 @@ License: MIT
                 }
               }
               if (l || (!1 !== l && -1 === s.indexOf(t))) {
-                for (var A = s.split(i), H = 0; H < A.length; H++) {
-                  if (((x = A[H]), (c += x.length), H !== A.length - 1))
+                for (var H = s.split(i), A = 0; A < H.length; A++) {
+                  if (((x = H[A]), (c += x.length), A !== H.length - 1))
                     c += i.length;
                   else if (p) return Y();
                   if (!n || x.substring(0, v) !== n) {
                     if (y) {
                       if (((w = []), V(x.split(o)), q(), d)) return Y();
                     } else V(x.split(o));
-                    if (a && a <= H) return (w = w.slice(0, a)), Y(!0);
+                    if (a && a <= A) return (w = w.slice(0, a)), Y(!0);
                   }
                 }
                 return Y();
@@ -13557,13 +13557,13 @@ License: MIT
               t > -1 ? T(t) : (!0 !== m && y.length >= m && T(0), L(e)), z();
             }
             function S(e) {
-              A(),
+              H(),
                 e || (e = b),
                 e && ((h.value = e.label), o(e.value)),
                 (d = [e.value]);
             }
             function _(e) {
-              e || A();
+              e || H();
               var t = [];
               y.forEach(function (e) {
                 t.push(e.value);
@@ -13580,9 +13580,9 @@ License: MIT
                 !1 === a.currentCell && _(!0);
             }
             function P() {
-              A(), i();
+              H(), i();
             }
-            function A() {
+            function H() {
               p.parentNode && p.parentNode.removeChild(p),
                 a.table.rowManager.element.removeEventListener("scroll", P);
             }
@@ -13603,14 +13603,14 @@ License: MIT
               (h.readOnly = 0 != this.currentCell),
               n.elementAttributes && "object" == r(n.elementAttributes))
             )
-              for (var H in n.elementAttributes)
-                "+" == H.charAt(0)
-                  ? ((H = H.slice(1)),
+              for (var A in n.elementAttributes)
+                "+" == A.charAt(0)
+                  ? ((A = A.slice(1)),
                     h.setAttribute(
-                      H,
-                      h.getAttribute(H) + n.elementAttributes["+" + H],
+                      A,
+                      h.getAttribute(A) + n.elementAttributes["+" + A],
                     ))
-                  : h.setAttribute(H, n.elementAttributes[H]);
+                  : h.setAttribute(A, n.elementAttributes[A]);
             return (
               (h.value = void 0 !== u || null === u ? u : ""),
               h.addEventListener("search", function (e) {
@@ -16204,13 +16204,13 @@ License: MIT
           return o;
         }),
         g.prototype.registerModule("frozenColumns", P);
-      var A = function (e) {
+      var H = function (e) {
         (this.table = e),
           (this.topElement = document.createElement("div")),
           (this.rows = []),
           (this.displayIndex = 0);
       };
-      (A.prototype.initialize = function () {
+      (H.prototype.initialize = function () {
         (this.rows = []),
           this.topElement.classList.add("tabulator-frozen-rows-holder"),
           this.table.columnManager
@@ -16220,16 +16220,16 @@ License: MIT
               this.table.columnManager.headersElement.nextSibling,
             );
       }),
-        (A.prototype.setDisplayIndex = function (e) {
+        (H.prototype.setDisplayIndex = function (e) {
           this.displayIndex = e;
         }),
-        (A.prototype.getDisplayIndex = function () {
+        (H.prototype.getDisplayIndex = function () {
           return this.displayIndex;
         }),
-        (A.prototype.isFrozen = function () {
+        (H.prototype.isFrozen = function () {
           return !!this.rows.length;
         }),
-        (A.prototype.getRows = function (e) {
+        (H.prototype.getRows = function (e) {
           var t = e.slice(0);
           return (
             this.rows.forEach(function (e) {
@@ -16239,7 +16239,7 @@ License: MIT
             t
           );
         }),
-        (A.prototype.freezeRow = function (e) {
+        (H.prototype.freezeRow = function (e) {
           e.modules.frozen
             ? console.warn("Freeze Error - Row is already frozen")
             : ((e.modules.frozen = !0),
@@ -16251,7 +16251,7 @@ License: MIT
               this.table.rowManager.refreshActiveData("display"),
               this.styleRows());
         }),
-        (A.prototype.unfreezeRow = function (e) {
+        (H.prototype.unfreezeRow = function (e) {
           this.rows.indexOf(e);
           e.modules.frozen
             ? ((e.modules.frozen = !1),
@@ -16261,42 +16261,42 @@ License: MIT
               this.rows.length && this.styleRows())
             : console.warn("Freeze Error - Row is already unfrozen");
         }),
-        (A.prototype.detachRow = function (e) {
+        (H.prototype.detachRow = function (e) {
           var t = this.rows.indexOf(e);
           if (t > -1) {
             var o = e.getElement();
             o.parentNode.removeChild(o), this.rows.splice(t, 1);
           }
         }),
-        (A.prototype.styleRows = function (e) {
+        (H.prototype.styleRows = function (e) {
           var t = this;
           this.rows.forEach(function (e, o) {
             t.table.rowManager.styleRow(e, o);
           });
         }),
-        g.prototype.registerModule("frozenRows", A);
-      var H = function (e) {
+        g.prototype.registerModule("frozenRows", H);
+      var A = function (e) {
         (this._group = e), (this.type = "GroupComponent");
       };
-      (H.prototype.getKey = function () {
+      (A.prototype.getKey = function () {
         return this._group.key;
       }),
-        (H.prototype.getField = function () {
+        (A.prototype.getField = function () {
           return this._group.field;
         }),
-        (H.prototype.getElement = function () {
+        (A.prototype.getElement = function () {
           return this._group.element;
         }),
-        (H.prototype.getRows = function () {
+        (A.prototype.getRows = function () {
           return this._group.getRows(!0);
         }),
-        (H.prototype.getSubGroups = function () {
+        (A.prototype.getSubGroups = function () {
           return this._group.getSubGroups(!0);
         }),
-        (H.prototype.getParentGroup = function () {
+        (A.prototype.getParentGroup = function () {
           return !!this._group.parent && this._group.parent.getComponent();
         }),
-        (H.prototype.getVisibility = function () {
+        (A.prototype.getVisibility = function () {
           return (
             console.warn(
               "getVisibility function is deprecated, you should now use the isVisible function",
@@ -16304,22 +16304,22 @@ License: MIT
             this._group.visible
           );
         }),
-        (H.prototype.isVisible = function () {
+        (A.prototype.isVisible = function () {
           return this._group.visible;
         }),
-        (H.prototype.show = function () {
+        (A.prototype.show = function () {
           this._group.show();
         }),
-        (H.prototype.hide = function () {
+        (A.prototype.hide = function () {
           this._group.hide();
         }),
-        (H.prototype.toggle = function () {
+        (A.prototype.toggle = function () {
           this._group.toggleVisibility();
         }),
-        (H.prototype._getSelf = function () {
+        (A.prototype._getSelf = function () {
           return this._group;
         }),
-        (H.prototype.getTable = function () {
+        (A.prototype.getTable = function () {
           return this._group.groupManager.table;
         });
       var F = function (e, t, o, i, n, r, s) {
@@ -16848,7 +16848,7 @@ License: MIT
         (F.prototype.clearCellHeight = function () {}),
         (F.prototype.getComponent = function () {
           return (
-            this.component || (this.component = new H(this)), this.component
+            this.component || (this.component = new A(this)), this.component
           );
         });
       var O = function (e) {
@@ -20101,7 +20101,7 @@ License: MIT
             o.addEventListener("touchend", r);
         }),
         g.prototype.registerModule("resizeRows", J);
-      var Z = function (e) {
+      var Q = function (e) {
         (this.table = e),
           (this.binding = !1),
           (this.observer = !1),
@@ -20112,7 +20112,7 @@ License: MIT
           (this.containerWidth = 0),
           (this.autoResize = !1);
       };
-      (Z.prototype.initialize = function (e) {
+      (Q.prototype.initialize = function (e) {
         var t,
           o = this,
           i = this.table;
@@ -20172,13 +20172,13 @@ License: MIT
               }),
               window.addEventListener("resize", this.binding));
       }),
-        (Z.prototype.clearBindings = function (e) {
+        (Q.prototype.clearBindings = function (e) {
           this.binding && window.removeEventListener("resize", this.binding),
             this.observer && this.observer.unobserve(this.table.element),
             this.containerObserver &&
               this.containerObserver.unobserve(this.table.element.parentNode);
         }),
-        g.prototype.registerModule("resizeTable", Z);
+        g.prototype.registerModule("resizeTable", Q);
       var $ = function (e) {
         (this.table = e),
           (this.columns = []),
@@ -20404,7 +20404,7 @@ License: MIT
           );
         }),
         g.prototype.registerModule("responsiveLayout", $);
-      var Q = function (e) {
+      var Z = function (e) {
         (this.table = e),
           (this.selecting = !1),
           (this.lastClickedRow = !1),
@@ -20412,14 +20412,14 @@ License: MIT
           (this.selectedRows = []),
           (this.headerCheckboxElement = null);
       };
-      (Q.prototype.clearSelectionData = function (e) {
+      (Z.prototype.clearSelectionData = function (e) {
         (this.selecting = !1),
           (this.lastClickedRow = !1),
           (this.selectPrev = []),
           (this.selectedRows = []),
           e || this._rowSelectionChanged();
       }),
-        (Q.prototype.initializeRow = function (e) {
+        (Z.prototype.initializeRow = function (e) {
           var t = this,
             o = e.getElement(),
             i = function e() {
@@ -20503,7 +20503,7 @@ License: MIT
               : (o.classList.add("tabulator-unselectable"),
                 o.classList.remove("tabulator-selectable"));
         }),
-        (Q.prototype.toggleRow = function (e) {
+        (Z.prototype.toggleRow = function (e) {
           this.table.options.selectableCheck.call(
             this.table,
             e.getComponent(),
@@ -20512,7 +20512,7 @@ License: MIT
               ? this._deselectRow(e)
               : this._selectRow(e));
         }),
-        (Q.prototype.selectRows = function (e) {
+        (Z.prototype.selectRows = function (e) {
           var t,
             o = this;
           switch (void 0 === e ? "undefined" : r(e)) {
@@ -20539,7 +20539,7 @@ License: MIT
                 : this._selectRow(e, !1, !0);
           }
         }),
-        (Q.prototype._selectRow = function (e, t, o) {
+        (Z.prototype._selectRow = function (e, t, o) {
           if (
             !isNaN(this.table.options.selectable) &&
             !0 !== this.table.options.selectable &&
@@ -20571,10 +20571,10 @@ License: MIT
                 "Selection Error - No such row found, ignoring selection:" + e,
               );
         }),
-        (Q.prototype.isRowSelected = function (e) {
+        (Z.prototype.isRowSelected = function (e) {
           return -1 !== this.selectedRows.indexOf(e);
         }),
-        (Q.prototype.deselectRows = function (e, t) {
+        (Z.prototype.deselectRows = function (e, t) {
           var o,
             i = this;
           if (void 0 === e) {
@@ -20589,7 +20589,7 @@ License: MIT
                 i._rowSelectionChanged(t))
               : i._deselectRow(e, t);
         }),
-        (Q.prototype._deselectRow = function (e, t) {
+        (Z.prototype._deselectRow = function (e, t) {
           var o,
             i = this,
             n = i.table.rowManager.findRow(e);
@@ -20617,7 +20617,7 @@ License: MIT
                   e,
               );
         }),
-        (Q.prototype.getSelectedData = function () {
+        (Z.prototype.getSelectedData = function () {
           var e = [];
           return (
             this.selectedRows.forEach(function (t) {
@@ -20626,7 +20626,7 @@ License: MIT
             e
           );
         }),
-        (Q.prototype.getSelectedRows = function () {
+        (Z.prototype.getSelectedRows = function () {
           var e = [];
           return (
             this.selectedRows.forEach(function (t) {
@@ -20635,7 +20635,7 @@ License: MIT
             e
           );
         }),
-        (Q.prototype._rowSelectionChanged = function (e) {
+        (Z.prototype._rowSelectionChanged = function (e) {
           this.headerCheckboxElement &&
             (0 === this.selectedRows.length
               ? ((this.headerCheckboxElement.checked = !1),
@@ -20652,14 +20652,14 @@ License: MIT
                 this.getSelectedRows(),
               );
         }),
-        (Q.prototype.registerRowSelectCheckbox = function (e, t) {
+        (Z.prototype.registerRowSelectCheckbox = function (e, t) {
           e._row.modules.select || (e._row.modules.select = {}),
             (e._row.modules.select.checkboxEl = t);
         }),
-        (Q.prototype.registerHeaderSelectCheckbox = function (e) {
+        (Z.prototype.registerHeaderSelectCheckbox = function (e) {
           this.headerCheckboxElement = e;
         }),
-        (Q.prototype.childRowSelection = function (e, t) {
+        (Z.prototype.childRowSelection = function (e, t) {
           var o = this.table.modules.dataTree.getChildren(e, !0);
           if (t) {
             var i = o,
@@ -20695,7 +20695,7 @@ License: MIT
             }
           }
         }),
-        g.prototype.registerModule("selectRow", Q);
+        g.prototype.registerModule("selectRow", Z);
       var ee = function (e) {
         (this.table = e), (this.sortList = []), (this.changed = !1);
       };
@@ -21251,6 +21251,224 @@ License: MIT
         }),
         g.prototype.registerModule("validate", te);
       const oe = g;
+    },
+    54806: (e, t, o) => {
+      "use strict";
+      o.d(t, { E: () => f });
+      var i = o(90626),
+        n = o(86709),
+        r = o(45747),
+        s = o(74500),
+        a = o(57168);
+      function l(e, t) {
+        return e.filter((e) => !t.includes(e));
+      }
+      var u = class extends s.Q {
+          #e;
+          #t;
+          #o;
+          #i;
+          #n;
+          #r;
+          #s;
+          constructor(e, t, o) {
+            super(),
+              (this.#e = e),
+              (this.#o = []),
+              (this.#i = []),
+              (this.#t = []),
+              this.setQueries(t);
+          }
+          onSubscribe() {
+            1 === this.listeners.size &&
+              this.#i.forEach((e) => {
+                e.subscribe((t) => {
+                  this.#a(e, t);
+                });
+              });
+          }
+          onUnsubscribe() {
+            this.listeners.size || this.destroy();
+          }
+          destroy() {
+            (this.listeners = new Set()),
+              this.#i.forEach((e) => {
+                e.destroy();
+              });
+          }
+          setQueries(e, t, o) {
+            (this.#o = e),
+              n.j.batch(() => {
+                const e = this.#i,
+                  t = this.#l(this.#o);
+                t.forEach((e) =>
+                  e.observer.setOptions(e.defaultedQueryOptions, o),
+                );
+                const i = t.map((e) => e.observer),
+                  n = i.map((e) => e.getCurrentResult()),
+                  r = i.some((t, o) => t !== e[o]);
+                (e.length !== i.length || r) &&
+                  ((this.#i = i),
+                  (this.#t = n),
+                  this.hasListeners() &&
+                    (l(e, i).forEach((e) => {
+                      e.destroy();
+                    }),
+                    l(i, e).forEach((e) => {
+                      e.subscribe((t) => {
+                        this.#a(e, t);
+                      });
+                    }),
+                    this.#u()));
+              });
+          }
+          getCurrentResult() {
+            return this.#t;
+          }
+          getQueries() {
+            return this.#i.map((e) => e.getCurrentQuery());
+          }
+          getObservers() {
+            return this.#i;
+          }
+          getOptimisticResult(e, t) {
+            const o = this.#l(e),
+              i = o.map((e) =>
+                e.observer.getOptimisticResult(e.defaultedQueryOptions),
+              );
+            return [
+              i,
+              (e) => this.#c(e ?? i, t),
+              () =>
+                o.map((e, t) => {
+                  const n = i[t];
+                  return e.defaultedQueryOptions.notifyOnChangeProps
+                    ? n
+                    : e.observer.trackResult(n, (e) => {
+                        o.forEach((t) => {
+                          t.observer.trackProp(e);
+                        });
+                      });
+                }),
+            ];
+          }
+          #c(e, t) {
+            return t
+              ? ((this.#n && this.#t === this.#s && t === this.#r) ||
+                  ((this.#r = t),
+                  (this.#s = this.#t),
+                  (this.#n = (0, a.BH)(this.#n, t(e)))),
+                this.#n)
+              : e;
+          }
+          #l(e) {
+            const t = this.#i,
+              o = new Map(t.map((e) => [e.options.queryHash, e])),
+              i = e.map((e) => this.#e.defaultQueryOptions(e)),
+              n = i.flatMap((e) => {
+                const t = o.get(e.queryHash);
+                return null != t
+                  ? [{ defaultedQueryOptions: e, observer: t }]
+                  : [];
+              }),
+              s = new Set(n.map((e) => e.defaultedQueryOptions.queryHash)),
+              a = i.filter((e) => !s.has(e.queryHash)),
+              l = (e) => {
+                const t = this.#e.defaultQueryOptions(e);
+                return (
+                  this.#i.find((e) => e.options.queryHash === t.queryHash) ??
+                  new r.$(this.#e, t)
+                );
+              },
+              u = a.map((e) => ({ defaultedQueryOptions: e, observer: l(e) }));
+            return n
+              .concat(u)
+              .sort(
+                (e, t) =>
+                  i.indexOf(e.defaultedQueryOptions) -
+                  i.indexOf(t.defaultedQueryOptions),
+              );
+          }
+          #a(e, t) {
+            const o = this.#i.indexOf(e);
+            -1 !== o &&
+              ((this.#t = (function (e, t, o) {
+                const i = e.slice(0);
+                return (i[t] = o), i;
+              })(this.#t, o, t)),
+              this.#u());
+          }
+          #u() {
+            n.j.batch(() => {
+              this.listeners.forEach((e) => {
+                e(this.#t);
+              });
+            });
+          }
+        },
+        c = o(75233),
+        d = o(22730),
+        h = o(43424),
+        p = o(19086),
+        m = o(44407);
+      function f({ queries: e, ...t }, o) {
+        const s = (0, c.jE)(o),
+          a = (0, d.w)(),
+          l = (0, h.h)(),
+          f = i.useMemo(
+            () =>
+              e.map((e) => {
+                const t = s.defaultQueryOptions(e);
+                return (
+                  (t._optimisticResults = a ? "isRestoring" : "optimistic"), t
+                );
+              }),
+            [e, s, a],
+          );
+        f.forEach((e) => {
+          (0, m.tu)(e), (0, p.LJ)(e, l);
+        }),
+          (0, p.wZ)(l);
+        const [g] = i.useState(() => new u(s, f, t)),
+          [b, v, y] = g.getOptimisticResult(f, t.combine);
+        i.useSyncExternalStore(
+          i.useCallback(
+            (e) => (a ? () => {} : g.subscribe(n.j.batchCalls(e))),
+            [g, a],
+          ),
+          () => g.getCurrentResult(),
+          () => g.getCurrentResult(),
+        ),
+          i.useEffect(() => {
+            g.setQueries(f, t, { listeners: !1 });
+          }, [f, t, g]);
+        const w = b.some((e, t) => (0, m.EU)(f[t], e))
+          ? b.flatMap((e, t) => {
+              const o = f[t];
+              if (o) {
+                const t = new r.$(s, o);
+                if ((0, m.EU)(o, e)) return (0, m.iL)(o, t, l);
+                (0, m.nE)(e, a) && (0, m.iL)(o, t, l);
+              }
+              return [];
+            })
+          : [];
+        if (w.length > 0) throw Promise.all(w);
+        const E = b.find((e, t) => {
+          const o = f[t];
+          return (
+            o &&
+            (0, p.$1)({
+              result: e,
+              errorResetBoundary: l,
+              throwOnError: o.throwOnError,
+              query: s.getQueryCache().get(o.queryHash),
+            })
+          );
+        });
+        if (E?.error) throw E.error;
+        return v(y());
+      }
     },
   },
 ]);

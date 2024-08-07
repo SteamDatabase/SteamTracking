@@ -1258,7 +1258,7 @@
       var L = n(75493),
         k = n(41735),
         N = n.n(k),
-        O = n(31380),
+        O = n(51614),
         F = n(7068),
         x = n(30470),
         P = n(24484),
@@ -1268,9 +1268,9 @@
         G = n(56011),
         W = n(71298);
       function z(e, t, n, r, i) {
-        return (0, O.useMutation)(
-          async () =>
-            await (async function (e, t) {
+        return (0, O.n)({
+          mutationFn: () =>
+            (async function (e, t) {
               const n = new FormData();
               n.append("sessionid", x.TS.SESSIONID),
                 n.append("keys", JSON.stringify(t));
@@ -1292,15 +1292,9 @@
                 reason: 7,
               },
             ]),
-          {
-            onSuccess(e) {
-              i(e.success, e.message);
-            },
-            onError() {
-              i(!1, (0, d.we)("#Error_Generic"));
-            },
-          },
-        );
+          onSuccess: (e) => i(e.success, e.message),
+          onError: () => i(!1, (0, d.we)("#Error_Generic")),
+        });
       }
       function j(e) {
         const t = (0, l.useMemo)(() => Number.parseInt(e.appId), [e.appId]),
@@ -1588,6 +1582,7 @@
         ),
         ae = l.lazy(() =>
           Promise.all([
+            n.e(7781),
             n.e(2202),
             n.e(2836),
             n.e(2785),
@@ -1602,6 +1597,7 @@
         ),
         le = l.lazy(() =>
           Promise.all([
+            n.e(7781),
             n.e(2202),
             n.e(2836),
             n.e(9116),
@@ -1631,6 +1627,7 @@
         ),
         ce = l.lazy(() =>
           Promise.all([
+            n.e(7781),
             n.e(2202),
             n.e(2836),
             n.e(9116),
@@ -1660,6 +1657,7 @@
         ),
         ue = l.lazy(() =>
           Promise.all([
+            n.e(7781),
             n.e(2202),
             n.e(2836),
             n.e(9116),
@@ -1689,6 +1687,7 @@
         ),
         me = l.lazy(() =>
           Promise.all([
+            n.e(7781),
             n.e(2202),
             n.e(2836),
             n.e(9116),
@@ -1717,10 +1716,13 @@
           ]).then(n.bind(n, 97663)),
         ),
         de = l.lazy(() =>
-          Promise.all([n.e(6542), n.e(5193), n.e(5933)]).then(n.bind(n, 88929)),
+          Promise.all([n.e(7781), n.e(6542), n.e(5193), n.e(5933)]).then(
+            n.bind(n, 88929),
+          ),
         ),
         pe = l.lazy(() =>
           Promise.all([
+            n.e(7781),
             n.e(2202),
             n.e(2836),
             n.e(9116),
@@ -1741,6 +1743,7 @@
         he = l.lazy(() => n.e(5027).then(n.bind(n, 26193))),
         _e = l.lazy(() =>
           Promise.all([
+            n.e(7781),
             n.e(2202),
             n.e(2836),
             n.e(9116),
@@ -1779,6 +1782,7 @@
         ),
         Ce = l.lazy(() =>
           Promise.all([
+            n.e(7781),
             n.e(2202),
             n.e(2836),
             n.e(9116),
@@ -1808,6 +1812,7 @@
         ),
         fe = l.lazy(() =>
           Promise.all([
+            n.e(7781),
             n.e(2202),
             n.e(2836),
             n.e(9116),
@@ -1820,6 +1825,7 @@
         ),
         ve = l.lazy(() =>
           Promise.all([
+            n.e(7781),
             n.e(2202),
             n.e(2912),
             n.e(9150),
@@ -1836,6 +1842,7 @@
         ),
         Se = l.lazy(() =>
           Promise.all([
+            n.e(7781),
             n.e(2202),
             n.e(2836),
             n.e(9116),
@@ -1865,6 +1872,7 @@
         ),
         we = l.lazy(() =>
           Promise.all([
+            n.e(7781),
             n.e(2202),
             n.e(2836),
             n.e(9116),
@@ -28697,29 +28705,17 @@
     },
     72963: (e, t, n) => {
       "use strict";
-      n.d(t, { L: () => s, s: () => o });
+      n.d(t, { L: () => a, s: () => s });
       var r = n(90626),
-        i = n(31380);
-      n(36602), n(84811);
-      function o(e) {
-        const t = r.useRef(s),
-          n = function (e, t, ...n) {
-            console.log(`React-Query ${e}`, t, ...n);
-          };
-        (0, i.setLogger)({
-          log: (e, ...t) => n("LOG", e, ...t),
-          warn: (e, ...t) => n("WARN", e, ...t),
-          error: (e, ...t) => n("ERROR", e, ...t),
-        });
-        let o = e.children;
-        return (
-          e.debug,
-          r.createElement(i.QueryClientProvider, { client: t.current }, o)
-        );
+        i = n(75233),
+        o = n(80097);
+      n(84811);
+      function s(e) {
+        const t = r.useRef(a);
+        let n = e.children;
+        return e.debug, r.createElement(i.Ht, { client: t.current }, n);
       }
-      const s = new i.QueryClient({
-        defaultOptions: { queries: { staleTime: 1 / 0 } },
-      });
+      const a = new o.E({ defaultOptions: { queries: { staleTime: 1 / 0 } } });
     },
     73437: (e, t, n) => {
       "use strict";

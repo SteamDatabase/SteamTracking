@@ -447,7 +447,7 @@
       "use strict";
       r.d(t, { E2: () => p, PG: () => _ });
       var n = r(90626),
-        i = r(31380),
+        i = r(20194),
         s = r(56545),
         a = r(94601),
         o = r(72839),
@@ -485,9 +485,9 @@
         let w = { staleTime: 36e5 };
         l?.reactQuery && (w = { ...w, ...l.reactQuery });
         const b = [h, y, r, l];
-        return (0, i.useQuery)(
-          b,
-          () =>
+        return (0, i.I)({
+          queryKey: b,
+          queryFn: () =>
             (async function (e, t, r, n, i) {
               const l = s.w.Init(a.iU);
               (0, o.rV)(l), n && (0, o.Bn)(l, n);
@@ -499,8 +499,8 @@
                 throw `Error executing StoreQuery "${t}", EResult: ${c.GetEResult()}`;
               return new g(c, n);
             })(p, e, y, r, f),
-          w,
-        );
+          ...w,
+        });
       }
       class g {
         m_Items;
@@ -717,7 +717,7 @@
       "use strict";
       r.d(t, { v: () => j });
       var n = r(90626),
-        i = r(31380),
+        i = r(20194),
         s = r(71513),
         a = r(32381),
         o = r(1035),
@@ -1549,11 +1549,11 @@
           );
         }
       }
-      var Q = r(22797),
+      var q = r(22797),
         z = r(57834),
-        x = r.n(z),
-        W = r(41471),
-        q = r(26505);
+        Q = r.n(z),
+        x = r(41471),
+        W = r(26505);
       const P = new f.wd("AppRelevance").Debug;
       function j(e) {
         const {
@@ -1564,21 +1564,21 @@
             bShowCuratorInfo: o,
             bShowCreatorInfo: l,
           } = e,
-          m = (0, q.Nd)(t),
+          m = (0, W.Nd)(t),
           h = (function (e) {
             const t = (0, L.KV)();
-            return (0, i.useQuery)(
-              ["AppRelevanceStore", "FriendsRecommended", e],
-              () => U.LoadFriendsRecommendedApp(t, e),
-              { enabled: O.iA.logged_in },
-            );
+            return (0, i.I)({
+              queryKey: ["AppRelevanceStore", "FriendsRecommended", e],
+              queryFn: () => U.LoadFriendsRecommendedApp(t, e),
+              enabled: O.iA.logged_in,
+            });
           })(t),
           _ = (function (e) {
-            return (0, i.useQuery)(
-              ["AppRelevanceStore", "StoreRelevance", e],
-              () => U.LoadStoreRelevanceData(e),
-              { enabled: O.iA.logged_in },
-            );
+            return (0, i.I)({
+              queryKey: ["AppRelevanceStore", "StoreRelevance", e],
+              queryFn: () => U.LoadStoreRelevanceData(e),
+              enabled: O.iA.logged_in,
+            });
           })(t),
           f = (function () {
             const { data: e } = (0, k.PG)("App Relevance Store Top Sellers", {
@@ -1588,28 +1588,28 @@
             });
             return e;
           })(),
-          w = (0, i.useQuery)(
-            ["SimilarPlayedAppsLoad", t],
-            () =>
+          w = (0, i.I)({
+            queryKey: ["SimilarPlayedAppsLoad", t],
+            queryFn: () =>
               p.A.Get().QueueMultipleAppRequests(
                 _.data.arrSimilarPlayedApps?.map((e) => e.appid),
                 { include_basic_info: !0, include_assets: !0 },
               ),
-            { enabled: _.isSuccess },
-          ),
+            enabled: _.isSuccess,
+          }),
           b = (function (e, t) {
             const r = (0, n.useMemo)(
               () => d.Fm.Get().GetRecommendingCuratorsForApp(e) || [],
               [e],
             );
-            return (0, i.useQuery)(
-              ["RecommendingCurators", e],
-              () =>
+            return (0, i.I)({
+              queryKey: ["RecommendingCurators", e],
+              queryFn: () =>
                 Promise.all(
                   r?.map((e) => u.ac.LoadClanInfoForClanAccountID(e)),
                 ),
-              { enabled: !!t && r && r.length > 0 },
-            );
+              enabled: !!t && r && r.length > 0,
+            });
           })(t, o),
           v = (0, n.useMemo)(() => {
             let e = [];
@@ -1636,17 +1636,17 @@
               e
             );
           }, [s]),
-          C = (0, i.useQuery)(
-            ["FollowedCreators", t],
-            () =>
+          C = (0, i.I)({
+            queryKey: ["FollowedCreators", t],
+            queryFn: () =>
               u.ac
                 .LoadClanInfoForClanAccountID(v[0].nAccountID)
                 .then((e) => ({ clanInfo: e, type: v[0].type })),
-            { enabled: !!l && v && v.length > 0 },
-          ),
-          S = (0, i.useQuery)(
-            ["PlayerSummaries", t, r],
-            async () => {
+            enabled: !!l && v && v.length > 0,
+          }),
+          S = (0, i.I)({
+            queryKey: ["PlayerSummaries", t, r],
+            queryFn: async () => {
               let e = [],
                 t = [],
                 n = [];
@@ -1675,8 +1675,8 @@
                 rgOwnedFriends: n,
               };
             },
-            { enabled: h.isSuccess && m.isSuccess },
-          );
+            enabled: h.isSuccess && m.isSuccess,
+          });
         if (
           !f ||
           w.isLoading ||
@@ -1687,7 +1687,7 @@
           C.isLoading ||
           S.isLoading
         )
-          return n.createElement(Q.t, { size: "medium", position: "center" });
+          return n.createElement(q.t, { size: "medium", position: "center" });
         let I = [];
         _.isSuccess &&
           _.data.arrSimilarPlayedApps &&
@@ -1736,19 +1736,19 @@
                 null,
                 n.createElement(
                   "div",
-                  { className: x().WhyRelevant },
+                  { className: Q().WhyRelevant },
                   (0, y.we)("#DiscoveryQueue_WhyRelevant"),
                 ),
                 n.createElement(
                   "div",
-                  { className: x().RelevantCtn },
+                  { className: Q().RelevantCtn },
                   R &&
                     n.createElement(
                       $,
                       { header: (0, y.we)("#DiscoveryQueue_SimilarGames") },
                       n.createElement(
                         "div",
-                        { className: x().ReleventSimilarAppsCtn },
+                        { className: Q().ReleventSimilarAppsCtn },
                         I,
                       ),
                     ),
@@ -1765,8 +1765,8 @@
                         "div",
                         {
                           className: (0, g.A)(
-                            x().ReleventSimilarAppsCtn,
-                            x().RecommendingCuratorsCtn,
+                            Q().ReleventSimilarAppsCtn,
+                            Q().RecommendingCuratorsCtn,
                           ),
                         },
                         b.data
@@ -1788,7 +1788,7 @@
                         "#DiscoveryQueue_TopSellers",
                         (B + 1).toLocaleString(),
                         n.createElement("span", {
-                          className: x().RelevantTextBold,
+                          className: Q().RelevantTextBold,
                         }),
                       ),
                     }),
@@ -1820,7 +1820,7 @@
             (!a || 0 == D) &&
               n.createElement(
                 "div",
-                { className: (0, g.A)(x().AppDescription, D && x().Divider) },
+                { className: (0, g.A)(Q().AppDescription, D && Q().Divider) },
                 s.GetShortDescription(),
               ),
           )
@@ -1846,7 +1846,7 @@
                 r,
                 n.createElement(
                   "span",
-                  { className: x().RelevantTextBold },
+                  { className: Q().RelevantTextBold },
                   t.clanInfo?.group_name,
                 ),
               ),
@@ -1868,7 +1868,7 @@
         const { lifetimePlaytime: t, storeItem: r } = e;
         return n.createElement(
           "div",
-          { className: x().SimilarAppCtn },
+          { className: Q().SimilarAppCtn },
           n.createElement(
             h.Qf,
             {
@@ -1881,7 +1881,7 @@
               },
             },
             n.createElement("img", {
-              className: x().SimilarAppImg,
+              className: Q().SimilarAppImg,
               src: r.GetAssets().GetSmallCapsuleURL(),
             }),
           ),
@@ -1898,7 +1898,7 @@
                     i,
                     r,
                     n.createElement("span", {
-                      className: x().RelevantTextBold,
+                      className: Q().RelevantTextBold,
                     }),
                   ),
                 },
@@ -1906,37 +1906,37 @@
                   t.length > 0 &&
                   n.createElement(
                     "div",
-                    { className: x().FriendAvatarsCtn },
+                    { className: Q().FriendAvatarsCtn },
                     1 == r
                       ? n.createElement(J, { steamid: t[0] })
-                      : n.createElement(K, { arrSteamIDs: t }),
+                      : n.createElement(X, { arrSteamIDs: t }),
                   ),
               )
             : n.createElement($, {
                 header: (0, y.PP)(
                   i + "_Single",
-                  n.createElement(X, { steamid: t[0] }),
+                  n.createElement(K, { steamid: t[0] }),
                 ),
               })
           : null;
       }
-      function X(e) {
+      function K(e) {
         const { steamid: t } = e,
-          { data: r } = (0, W.js)(t);
+          { data: r } = (0, x.js)(t);
         return r && r.m_bInitialized
           ? n.createElement(
               "span",
               {
                 "data-miniprofile": "s" + r.m_steamid.ConvertTo64BitString(),
-                className: x().RelevantTextBold,
+                className: Q().RelevantTextBold,
               },
               r.m_strPlayerName,
             )
           : null;
       }
-      function K(e) {
+      function X(e) {
         const { arrSteamIDs: t } = e,
-          r = (0, W.DW)(t);
+          r = (0, x.DW)(t);
         return n.createElement(
           n.Fragment,
           null,
@@ -1955,18 +1955,18 @@
       }
       function J(e) {
         const { steamid: t } = e,
-          { data: r } = (0, W.js)(t);
+          { data: r } = (0, x.js)(t);
         return r
           ? n.createElement(
               a.Z,
-              { className: x().FriendBlockCtn, "data-miniprofile": "s" + t },
+              { className: Q().FriendBlockCtn, "data-miniprofile": "s" + t },
               n.createElement(o.i8, {
                 persona: r,
                 size: "Small",
                 statusPosition: "right",
               }),
               n.createElement(l.D, {
-                className: x().PersonaStatus,
+                className: Q().PersonaStatus,
                 persona: r,
                 eFriendRelationship: 3,
                 bIsSelf: !1,
@@ -1982,16 +1982,16 @@
         const { children: t, header: r } = e;
         return n.createElement(
           "div",
-          { className: x().RelevantItem },
+          { className: Q().RelevantItem },
           n.createElement(
             "div",
-            { className: x().RelevantCheck },
+            { className: Q().RelevantCheck },
             n.createElement(_.Jlk, null),
           ),
           n.createElement(
             "div",
-            { className: x().RelevantColumn },
-            n.createElement("div", { className: x().ReleventText }, r),
+            { className: Q().RelevantColumn },
+            n.createElement("div", { className: Q().ReleventText }, r),
             t,
           ),
         );
@@ -2042,27 +2042,27 @@
             bShowMinimizedDisplay: O,
           } = e,
           [U] = (0, d.t7)(t, E.M),
-          Q = (0, c.oC)(U?.GetAppID()),
+          q = (0, c.oC)(U?.GetAppID()),
           z = (0, i.q3)(() => u.Fm.Get().BIsGameWishlisted(t)),
-          x = (0, i.q3)(() => u.Fm.Get().BIsGameIgnored(t)),
-          W = (0, p.LG)(U?.GetTagIDs()),
-          q = (0, C.Qn)(),
-          P = q,
+          Q = (0, i.q3)(() => u.Fm.Get().BIsGameIgnored(t)),
+          x = (0, p.LG)(U?.GetTagIDs()),
+          W = (0, C.Qn)(),
+          P = W,
           j = (0, f.n9)(),
           H = (0, l.er)(),
           Z = (0, a.R7)(),
           V = Z?.ownerWindow || window,
           Y = s.useMemo(() => (0, S.Bk)(k), [k]),
-          X = s.useMemo(
+          K = s.useMemo(
             () => (L ? "?inqueue=" + L + (k ? "_" + Y : "") : ""),
             [L, k, Y],
           ),
-          K = s.useCallback(() => {
-            V.location.href = (0, A._)(U.GetStorePageURL() + X, j);
-          }, [V.location, U, X, j]),
+          X = s.useCallback(() => {
+            V.location.href = (0, A._)(U.GetStorePageURL() + K, j);
+          }, [V.location, U, K, j]),
           J = s.useCallback(() => {
-            u.Fm.Get().UpdateAppIgnore(U.GetAppID(), !x);
-          }, [x, U]);
+            u.Fm.Get().UpdateAppIgnore(U.GetAppID(), !Q);
+          }, [Q, U]);
         if (
           (s.useEffect(() => {
             D("Index Focused: ", G, " Focus? ", F), F && M(G);
@@ -2091,18 +2091,18 @@
               : (0, b.we)("#DiscoveryQueue_AddToWishlist"),
             onOptionsButton: ee,
             onOKActionDescription: (0, b.we)("#DiscoveryQueue_ViewStorePage"),
-            onOKButton: K,
-            onSecondaryActionDescription: x
+            onOKButton: X,
+            onSecondaryActionDescription: Q
               ? (0, b.we)("#DiscoveryQueue_Undo")
               : (0, b.we)("#DiscoveryQueue_IgnoreLink"),
             onSecondaryButton: J,
           },
           s.createElement(
             "div",
-            { className: (0, w.A)(T().IgnoredCtn, x && T().Active) },
+            { className: (0, w.A)(T().IgnoredCtn, Q && T().Active) },
             s.createElement(
               "div",
-              { className: (0, w.A)(T().IgnoredInfo, x && T().Active) },
+              { className: (0, w.A)(T().IgnoredInfo, Q && T().Active) },
               s.createElement(
                 "div",
                 { className: T().IgnoredTitle },
@@ -2119,7 +2119,7 @@
                   className: (0, w.A)(T().QueueButton, T().UndoIgnoreButton),
                   onClick: J,
                 },
-                q &&
+                W &&
                   s.createElement(g.$m, {
                     button: I.g4.X,
                     type: g.wt.Light,
@@ -2146,7 +2146,7 @@
               key: t,
               storeItem: U,
               bCurrentlyActive: F,
-              bMainCapOnly: x,
+              bMainCapOnly: Q,
               autoplayCheckboxPosition: "top",
             }),
           ),
@@ -2178,7 +2178,7 @@
                   }),
                 ),
               ),
-              s.createElement(N, { rgTagNames: W }),
+              s.createElement(N, { rgTagNames: x }),
               s.createElement(
                 "div",
                 { className: T().AppReviews },
@@ -2198,14 +2198,14 @@
                 }),
               ),
             ),
-            !q &&
+            !W &&
               s.createElement(
                 "div",
                 { className: T().AppActionButtonsCtn },
                 s.createElement(
                   "div",
                   { className: T().AppActionJustButtonsCtn },
-                  Boolean(Q?.demo_appid) &&
+                  Boolean(q?.demo_appid) &&
                     s.createElement(B.j, {
                       info: {
                         id: U.GetAppID(),
@@ -2221,7 +2221,7 @@
                     "a",
                     {
                       className: (0, w.A)(T().QueueButton, T().Primary),
-                      href: (0, A._)(U.GetStorePageURL() + X, j),
+                      href: (0, A._)(U.GetStorePageURL() + K, j),
                     },
                     P &&
                       s.createElement(g.$m, {
@@ -2305,7 +2305,7 @@
     },
     39505: (e, t, r) => {
       "use strict";
-      r.d(t, { jM: () => $, M: () => X, lS: () => Y });
+      r.d(t, { jM: () => $, M: () => K, lS: () => Y });
       var n = r(90626),
         i = r(73860),
         s = r(71513),
@@ -2914,18 +2914,18 @@
         k = r(61859),
         O = r(44691),
         U = r(30143),
-        Q = r(39199),
+        q = r(39199),
         z = r(64593),
-        x = r(57315),
-        W = r(57834),
-        q = r.n(W),
+        Q = r(57315),
+        x = r(57834),
+        W = r.n(x),
         P = r(91674);
       const j = new E.wd("DiscoveryQueueWizard").Debug,
         H = 0,
         Z = 1,
         V = 1400,
         Y = "discoveryqueue2022",
-        X = {
+        K = {
           include_assets: !0,
           include_trailers: !0,
           include_basic_info: !0,
@@ -2933,17 +2933,17 @@
           include_release: !0,
           include_platforms: !0,
         };
-      async function K(e, t, r, n) {
+      async function X(e, t, r, n) {
         let i = [],
           s = !1;
         try {
-          const { appids: a, exhausted: o } = await Q.aI
+          const { appids: a, exhausted: o } = await q.aI
             .Get()
             .GetDiscoveryQueueAppsOfType(e, t, n);
           (i = [...a]),
             (s = o),
             r && -1 === i.findIndex((e) => e === r) && i.unshift(r),
-            await g.A.Get().QueueMultipleAppRequests(i, X);
+            await g.A.Get().QueueMultipleAppRequests(i, K);
         } catch (e) {
           console.error("Failed getting discovery queue apps", e);
         }
@@ -2972,9 +2972,9 @@
           [S, I] = n.useState("DiscoveryQueue"),
           [B, E] = n.useState(!0),
           [R, A] = n.useState(!1),
-          [T, W] = n.useState(!1),
+          [T, x] = n.useState(!1),
           P = n.useRef(),
-          X = (0, h.Qn)(),
+          K = (0, h.Qn)(),
           $ = (0, i.R7)(),
           te = $?.ownerWindow || window,
           re = (0, F.m)("DiscoveryQueueWizard"),
@@ -2999,9 +2999,9 @@
           oe = n.useMemo(() => Boolean(te.innerWidth < V), [te]),
           le = n.useCallback(
             async (e) => {
-              let { appids: r } = await K(t, !e, e && l, m);
+              let { appids: r } = await X(t, !e, e && l, m);
               if (e && !r.length) {
-                let { appids: e } = await K(t, !0, void 0, m);
+                let { appids: e } = await X(t, !0, void 0, m);
                 r = e;
               }
               let n = d;
@@ -3021,7 +3021,7 @@
           );
         n.useEffect(() => {
           T ||
-            (le(!0).then(() => W(!0)),
+            (le(!0).then(() => x(!0)),
             u.Fm.Get().HintLoad(),
             I(
               (() => {
@@ -3060,7 +3060,7 @@
                   de.has(o) ||
                     de.set(
                       o,
-                      Q.aI.Get().GetTotalSkippedAppsForDiscoveryQueue(t, m),
+                      q.aI.Get().GetTotalSkippedAppsForDiscoveryQueue(t, m),
                     ),
                   n.createElement(ee, {
                     ...e,
@@ -3080,7 +3080,7 @@
                 ? n.createElement(o.Z, {
                     focusable: !1,
                     style: { width: i, height: ae },
-                    className: (0, L.A)(q().DiscoveryQueuePlaceholder),
+                    className: (0, L.A)(W().DiscoveryQueuePlaceholder),
                   })
                 : n.createElement(z.H, {
                     bShowMinimizedDisplay: oe,
@@ -3098,9 +3098,9 @@
           ),
           he = n.useCallback(
             (e, t) => {
-              X || (A(e), E(t));
+              K || (A(e), E(t));
             },
-            [X],
+            [K],
           ),
           _e = n.useCallback((e) => d[e] !== Z, [d]),
           ge = n.useCallback(
@@ -3108,7 +3108,7 @@
               j("New Focused Column: ", r, " Prev Focused Column: ", e),
                 d[e] !== Z &&
                   d[e] !== H &&
-                  Q.aI.Get().SkipDiscoveryQueueItem(d[e], t, m),
+                  q.aI.Get().SkipDiscoveryQueueItem(d[e], t, m),
                 g(r);
             },
             [t, d, m],
@@ -3121,14 +3121,14 @@
                   n.createElement("img", {
                     key: "dot_" + i,
                     className: (0, L.A)({
-                      [q().ProgressDot]: !0,
-                      [q().ProgressDotActive]: i <= e,
-                      [q().ProgressDotHidden]: d[_] === Z || d[_] === H,
+                      [W().ProgressDot]: !0,
+                      [W().ProgressDotActive]: i <= e,
+                      [W().ProgressDotHidden]: d[_] === Z || d[_] === H,
                     }),
                     src: U.A,
                   }),
                 );
-              return n.createElement("div", { className: q().ProgressCtn }, r);
+              return n.createElement("div", { className: W().ProgressCtn }, r);
             },
             [_, d],
           ),
@@ -3144,7 +3144,7 @@
               t++;
             return [_ - e - 1, t];
           }, [_, d]),
-          we = (0, Q.WX)(t, m);
+          we = (0, q.WX)(t, m);
         return T
           ? n.createElement(
               D.EN,
@@ -3160,7 +3160,7 @@
                     {
                       autoFocus: !0,
                       focusable: !0,
-                      className: q().DiscoveryQueueCarouselCtn,
+                      className: W().DiscoveryQueueCarouselCtn,
                       navEntryPreferPosition: c.iU.LAST,
                       onCancelButton: () => a && a(),
                       onCancelActionDescription: (0, k.we)("#Button_Close"),
@@ -3169,28 +3169,28 @@
                       o.Z,
                       {
                         "flow-children": "row",
-                        className: (0, L.A)(q().TopBarCtn, X && q().TopMargin),
+                        className: (0, L.A)(W().TopBarCtn, K && W().TopMargin),
                       },
                       n.createElement(
                         o.Z,
-                        { className: q().LearnMore },
+                        { className: W().LearnMore },
                         (0, k.oW)(
                           "#DiscoveryQueue_LearnMore_Default",
                           n.createElement(s.Ii, {
-                            className: q().LearnMoreLink,
-                            href: (0, x._)(h.TS.STORE_BASE_URL + "explore"),
+                            className: W().LearnMoreLink,
+                            href: (0, Q._)(h.TS.STORE_BASE_URL + "explore"),
                           }),
                         ),
                       ),
                       n.createElement(
                         o.Z,
-                        { className: q().ControlsCtn },
+                        { className: W().ControlsCtn },
                         !1,
                         n.createElement(
                           o.Z,
                           {
                             focusable: !0,
-                            className: q().QueueButton,
+                            className: W().QueueButton,
                             onClick: a,
                             onActivate: () => a && a(),
                           },
@@ -3200,13 +3200,13 @@
                     ),
                     n.createElement(
                       "div",
-                      { ref: se, className: q().DiscoveryQueueWrapper },
+                      { ref: se, className: W().DiscoveryQueueWrapper },
                       n.createElement(
                         o.Z,
                         { "flow-children": "row" },
                         n.createElement(
                           "div",
-                          { className: q().DiscoveryQueueName },
+                          { className: W().DiscoveryQueueName },
                           we,
                         ),
                       ),
@@ -3215,16 +3215,16 @@
                         {
                           onClick: (e) => P.current.MoveLeft(e),
                           className: (0, L.A)(
-                            q().QueueNavArrow,
-                            q().LeftArrow,
-                            R && q().Enable,
+                            W().QueueNavArrow,
+                            W().LeftArrow,
+                            R && W().Enable,
                           ),
                         },
                         n.createElement(G.l8x, { angle: 180 }),
                       ),
                       n.createElement(M, {
                         name: S,
-                        className: q().DiscoveryQueueCarousel,
+                        className: W().DiscoveryQueueCarousel,
                         ref: P,
                         fnDoesItemTakeFocus: _e,
                         fnOnFocusedColumnChange: ge,
@@ -3249,14 +3249,14 @@
                         {
                           onClick: (e) => P.current.MoveRight(e),
                           className: (0, L.A)(
-                            q().QueueNavArrow,
-                            q().RightArrow,
-                            B && q().Enable,
+                            W().QueueNavArrow,
+                            W().RightArrow,
+                            B && W().Enable,
                           ),
                         },
                         n.createElement(G.l8x, { angle: 0 }),
                       ),
-                      !X &&
+                      !K &&
                         n.createElement(
                           o.Z,
                           { "flow-children": "row" },
@@ -3267,17 +3267,17 @@
                       o.Z,
                       {
                         "flow-children": "row",
-                        className: (0, L.A)(q().BotomBarCtn),
+                        className: (0, L.A)(W().BotomBarCtn),
                       },
                       n.createElement(
                         o.Z,
-                        { className: q().LabsHeader },
+                        { className: W().LabsHeader },
                         (0, k.oW)(
                           "#DiscoveryQueue_LabsHeader",
-                          n.createElement("span", { className: q().Bold }),
+                          n.createElement("span", { className: W().Bold }),
                           n.createElement(s.Ii, {
-                            className: q().LearnMoreLink,
-                            href: (0, x._)(
+                            className: W().LearnMoreLink,
+                            href: (0, Q._)(
                               h.TS.COMMUNITY_BASE_URL +
                                 "groups/SteamLabs/discussions/17/",
                             ),
@@ -3313,7 +3313,7 @@
             u.Fm.Get()
               .HintLoad()
               .then(() => {
-                Q.aI.Get().LoadSkippedApps(i, d).then(w);
+                q.aI.Get().LoadSkippedApps(i, d).then(w);
               });
         }, [v, i, d]);
         const C = n.useMemo(
@@ -3334,7 +3334,7 @@
           ),
           [I, B] = n.useState(!1),
           E = (0, P.n9)(),
-          R = (0, Q.IH)(i, d),
+          R = (0, q.IH)(i, d),
           A = (0, F.m)("DiscoveryQueueSummary"),
           M = n.useCallback(() => {
             B(!0),
@@ -3347,15 +3347,15 @@
           {
             style: y,
             className: (0, L.A)(
-              q().SummaryCtn,
-              q().DiscoveryQueueApp,
-              c && q().Focused,
+              W().SummaryCtn,
+              W().DiscoveryQueueApp,
+              c && W().Focused,
             ),
             onOptionsActionDescription: (0, k.we)(
               "#DiscoveryQueue_ViewWishlist",
             ),
             onOptionsButton: () => {
-              window.location.href = (0, x._)(
+              window.location.href = (0, Q._)(
                 h.TS.STORE_BASE_URL + "wishlist",
                 E,
               );
@@ -3367,79 +3367,79 @@
           },
           n.createElement(
             "div",
-            { className: q().SummaryContentCtn },
+            { className: W().SummaryContentCtn },
             n.createElement(
               "div",
-              { className: q().SummaryTitle },
+              { className: W().SummaryTitle },
               (0, k.we)("#DiscoveryQueue_SummaryTitle"),
             ),
             n.createElement(
               "div",
-              { className: q().YourStats },
+              { className: W().YourStats },
               (0, k.we)("#DiscoveryQueue_YourStats"),
             ),
             n.createElement(
               o.Z,
-              { "flow-children": "row", className: q().SummaryGrid },
+              { "flow-children": "row", className: W().SummaryGrid },
               n.createElement(
                 "div",
-                { className: q().GridItem },
+                { className: W().GridItem },
                 n.createElement(
                   "div",
-                  { className: q().GridTitle },
+                  { className: W().GridTitle },
                   (0, k.we)("#DiscoveryQueue_ViewedCaps"),
                 ),
                 n.createElement(
                   "div",
-                  { className: q().GridNumber },
+                  { className: W().GridNumber },
                   g.toLocaleString(),
                 ),
                 n.createElement(
                   "div",
-                  { className: q().GridSubTitle },
+                  { className: W().GridSubTitle },
                   (0, k.we)("#DiscoveryQueue_Titles"),
                 ),
               ),
               n.createElement(
                 "div",
-                { className: q().GridItem },
+                { className: W().GridItem },
                 n.createElement(
                   "div",
-                  { className: q().GridTitle },
+                  { className: W().GridTitle },
                   (0, k.we)("#DiscoveryQueue_WishlistedCaps"),
                 ),
                 n.createElement(
                   "div",
-                  { className: q().GridNumber },
+                  { className: W().GridNumber },
                   C.toLocaleString(),
                 ),
                 n.createElement(
                   "a",
                   {
-                    className: (0, L.A)(q().GridSubTitle, q().TextLink),
-                    href: (0, x._)(h.TS.STORE_BASE_URL + "wishlist", E),
+                    className: (0, L.A)(W().GridSubTitle, W().TextLink),
+                    href: (0, Q._)(h.TS.STORE_BASE_URL + "wishlist", E),
                   },
                   (0, k.we)("#DiscoveryQueue_ViewWishlist"),
                 ),
               ),
               n.createElement(
                 "div",
-                { className: q().GridItem },
+                { className: W().GridItem },
                 n.createElement(
                   "div",
-                  { className: q().GridTitle },
+                  { className: W().GridTitle },
                   (0, k.we)("#DiscoveryQueue_IgnoredCaps"),
                 ),
                 n.createElement(
                   "div",
-                  { className: q().GridNumber },
+                  { className: W().GridNumber },
                   S.toLocaleString(),
                 ),
                 n.createElement(
                   "a",
                   {
-                    className: (0, L.A)(q().GridSubTitle, q().TextLink),
-                    href: (0, x._)(
+                    className: (0, L.A)(W().GridSubTitle, W().TextLink),
+                    href: (0, Q._)(
                       h.TS.STORE_BASE_URL + "account/notinterested",
                       E,
                     ),
@@ -3451,11 +3451,11 @@
             !b &&
               n.createElement(
                 o.Z,
-                { className: q().SummaryActionButtonsCtn },
+                { className: W().SummaryActionButtonsCtn },
                 n.createElement(
                   o.Z,
                   {
-                    className: (0, L.A)(q().QueueButton, q().Wide),
+                    className: (0, L.A)(W().QueueButton, W().Wide),
                     onClick: s,
                   },
                   (0, k.we)("#ActionButtonLabelDone"),
@@ -3465,10 +3465,10 @@
                     o.Z,
                     {
                       className: (0, L.A)(
-                        I && q().Disabled,
-                        q().QueueButton,
-                        q().Primary,
-                        q().Wide,
+                        I && W().Disabled,
+                        W().QueueButton,
+                        W().Primary,
+                        W().Wide,
                       ),
                       onClick: M,
                     },
@@ -3501,28 +3501,28 @@
               });
         }, [t, r]);
         const a = (0, P.n9)(),
-          l = (0, x._)(h.TS.STORE_BASE_URL + "sale/summersaletradingcards", a);
+          l = (0, Q._)(h.TS.STORE_BASE_URL + "sale/summersaletradingcards", a);
         return s
           ? n.createElement(
               o.Z,
-              { className: q().TradingCardCtn },
+              { className: W().TradingCardCtn },
               n.createElement("img", {
-                className: q().TradingCardImage,
+                className: W().TradingCardImage,
                 src:
                   h.TS.MEDIA_CDN_URL +
                   "store/promo/summer2022/card_stack.png?v-1",
               }),
               n.createElement(
                 o.Z,
-                { className: q().TradingCardColumn },
+                { className: W().TradingCardColumn },
                 n.createElement(
                   "div",
-                  { className: q().TradingCardText },
+                  { className: W().TradingCardText },
                   (0, k.oW)(
                     r?.earned_today > 0
                       ? "#DiscoveryQueue_TradingCardsEarned_Today"
                       : "#DiscoveryQueue_TradingCards_Desc",
-                    n.createElement("a", { className: q().TextLink, href: l }),
+                    n.createElement("a", { className: W().TextLink, href: l }),
                   ),
                 ),
               ),

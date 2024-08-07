@@ -553,7 +553,7 @@
         i = n.n(s),
         o = n(14947),
         r = n(90626),
-        c = n(31380),
+        c = n(20194),
         l = n(62490),
         u = n(44332),
         p = n(68797),
@@ -1158,15 +1158,15 @@
         );
       }
       function S(t, e) {
-        const n = (0, c.useQuery)(
-          ["useAllOptInRegistrationByName", t, Boolean(e)],
-          () => _.Get().FetchOptInRegistrationForOptIn(t, e),
-          { staleTime: 36e5 },
-        );
+        const n = (0, c.I)({
+          queryKey: ["useAllOptInRegistrationByName", t, Boolean(e)],
+          queryFn: () => _.Get().FetchOptInRegistrationForOptIn(t, e),
+          staleTime: 36e5,
+        });
         return n.isLoading ? null : n.data;
       }
       function G(t) {
-        const e = (0, c.useQuery)({
+        const e = (0, c.I)({
           queryKey: ["useAllPendingReviewOptInRegistrationByName", t],
           queryFn: () => _.Get().FetchPendingReviewOptInRegistrationn(t),
           retry: !1,

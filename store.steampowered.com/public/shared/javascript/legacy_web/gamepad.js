@@ -3,7 +3,7 @@
 (self.webpackChunklegacy_web = self.webpackChunklegacy_web || []).push([
   [616],
   {
-    287: (e) => {
+    668: (e) => {
       e.exports = {
         FocusRingRoot: "focusring_FocusRingRoot_3m2Fo",
         FocusRing: "focusring_FocusRing_1sTuv",
@@ -15,13 +15,13 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_8uyqy",
       };
     },
-    197: (e, t, n) => {
+    150: (e, t, n) => {
       "use strict";
       n.d(t, { InitializeGamepadNavigation: () => gt });
       var i,
         o = n(669),
         s = n.n(o),
-        r = n(751);
+        r = n(178);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -82,10 +82,10 @@
         );
       }
       var m = n(629),
-        g = n(89),
-        _ = n(854),
-        p = n(67),
-        v = n(602);
+        g = n(0),
+        _ = n(967),
+        p = n(622),
+        v = n(893);
       class f {
         m_NavigationController;
         m_postMessage;
@@ -494,7 +494,7 @@
             : e || console.warn(t, ...n);
         } catch (e) {}
       }
-      var O = n(673);
+      var O = n(850);
       class B {
         async GetObject(e) {
           try {
@@ -883,7 +883,7 @@
           );
         }
       }
-      var j = n(10);
+      var j = n(941);
       const J = new x("FocusNavigation").Debug,
         Q = new x("GamepadEvents").Debug;
       class q {
@@ -3373,7 +3373,7 @@
         "OnMessage",
         null,
       );
-      var Ye = n(287),
+      var Ye = n(668),
         Xe = n.n(Ye);
       function je(e) {
         let t = 0;
@@ -3958,12 +3958,12 @@
         },
       };
     },
-    602: (e, t, n) => {
+    893: (e, t, n) => {
       "use strict";
       n.d(t, { Vp: () => r, n4: () => a });
       var i = n(629),
-        o = n(89),
-        s = n(854);
+        o = n(0),
+        s = n(967);
       class r {
         m_fnCallback = void 0;
         constructor() {
@@ -4026,7 +4026,7 @@
       }
       (0, i.Cg)([o.o], a.prototype, "OnMessage", null);
     },
-    854: (e, t, n) => {
+    967: (e, t, n) => {
       "use strict";
       n.d(t, { T: () => i, h: () => o });
       const i = "GamepadInput";

@@ -116,11 +116,11 @@
     },
     21820: (e, t, n) => {
       "use strict";
-      n.r(t), n.d(t, { default: () => P });
+      n.r(t), n.d(t, { default: () => R });
       var a = n(41735),
         r = n.n(a),
         s = n(78327),
-        i = n(31380);
+        i = n(20194);
       async function c(e) {
         let t = { accountid: e, sessionid: s.TS.SESSIONID };
         const n = (
@@ -146,9 +146,9 @@
         throw "Failed FetchAppValues";
       }
       function o(e) {
-        return (0, i.useQuery)(
-          ["GameMixerAppInfo", e],
-          () =>
+        return (0, i.I)({
+          queryKey: ["GameMixerAppInfo", e],
+          queryFn: () =>
             (async function (e) {
               let t = { appid: e, sessionid: s.TS.SESSIONID };
               const n = (
@@ -161,8 +161,8 @@
               if (n) return n;
               throw "Failed FetchAppInfo";
             })(e),
-          { staleTime: 1 / 0 },
-        );
+          staleTime: 1 / 0,
+        });
       }
       var m = n(90626),
         u = n(7068),
@@ -172,17 +172,19 @@
         f = n(61859),
         x = n(34842),
         E = n(23809),
-        S = n(56545),
+        S = n(57168),
+        y = n(56545),
         g = n(94601),
         h = n(72839);
-      const y = (e) => {
+      const A = (e) => {
           const t = (function (e) {
               const t = (0, E.KV)(),
                 n = ["GameMixerSearchSuggestions", e];
-              return (0, i.useQuery)(n, {
+              return (0, i.I)({
+                queryKey: n,
                 queryFn: async () => {
                   if (e.length < 2) return [];
-                  const a = S.w.Init(g.pI);
+                  const a = y.w.Init(g.pI);
                   a.Body().set_query_name(JSON.stringify(n)),
                     a.Body().set_search_term(e),
                     (0, h.rV)(a),
@@ -214,7 +216,7 @@
                         })
                     : [];
                 },
-                keepPreviousData: !0,
+                placeholderData: S.rX,
               });
             })(e.strSearch),
             n = e.fnSetResultApps;
@@ -248,7 +250,7 @@
             )
           );
         },
-        A = (e) => {
+        D = (e) => {
           const [t, n] = m.useState(""),
             [a, r] = m.useState(0),
             [s, i] = m.useState(!1),
@@ -291,7 +293,7 @@
                 })(e.key),
             }),
             s &&
-              m.createElement(y, {
+              m.createElement(A, {
                 strSearch: t,
                 nSelectedResult: c,
                 fnSetResultApps: u,
@@ -299,11 +301,11 @@
               }),
           );
         };
-      var D;
+      var _;
       !(function (e) {
         (e[(e.AppID = 0)] = "AppID"), (e[(e.AccountID = 1)] = "AccountID");
-      })(D || (D = {}));
-      const _ = (e) => {
+      })(_ || (_ = {}));
+      const w = (e) => {
           const [t, n] = m.useState(e.mixItem.nPercent);
           m.useEffect(() => {
             n(e.mixItem.nPercent);
@@ -347,7 +349,7 @@
             ),
           );
         },
-        w = (e) => {
+        T = (e) => {
           const [t, n] = m.useState(e.mixItem.nPercent);
           m.useEffect(() => {
             n(e.mixItem.nPercent);
@@ -375,7 +377,7 @@
             }),
           );
         },
-        T = (e) => {
+        v = (e) => {
           const [t, n] = m.useState(""),
             a = (t) => {
               let n = [],
@@ -425,16 +427,16 @@
                 { className: x.MixedItemList },
                 e.arrMixItems.map((t) => {
                   switch (t.eType) {
-                    case D.AccountID:
-                      return m.createElement(w, {
+                    case _.AccountID:
+                      return m.createElement(T, {
                         key: `${t.eType}_${t.nID}`,
                         mixItem: t,
                         setMixItem: r,
                         removeMixItem: a,
                         bLocked: 1 == e.arrMixItems.length,
                       });
-                    case D.AppID:
-                      return m.createElement(_, {
+                    case _.AppID:
+                      return m.createElement(w, {
                         key: `${t.eType}_${t.nID}`,
                         mixItem: t,
                         setMixItem: r,
@@ -451,12 +453,12 @@
                 "div",
                 { className: x.AddContainer },
                 m.createElement("div", { className: x.InputLabel }, "Add App"),
-                m.createElement(A, {
+                m.createElement(D, {
                   fnSelectAppID: (t) =>
                     ((t) => {
                       if (0 == t) return;
                       const n = 100 / (e.arrMixItems.length + 1);
-                      let a = { eType: D.AppID, nID: t, nPercent: n },
+                      let a = { eType: _.AppID, nID: t, nPercent: n },
                         r = [];
                       for (const t of e.arrMixItems)
                         r.push({
@@ -486,7 +488,7 @@
                       if ("Enter" != a || isNaN(Number(t))) return;
                       const r = 100 / (e.arrMixItems.length + 1);
                       let s = {
-                          eType: D.AccountID,
+                          eType: _.AccountID,
                           nID: parseInt(t),
                           nPercent: r,
                         },
@@ -501,12 +503,12 @@
                     })(a.key),
                 }),
               ),
-              m.createElement(N, {
+              m.createElement(P, {
                 nValue: e.nPopularity,
                 setValue: e.setPopularity,
                 strName: "Popularity",
               }),
-              m.createElement(N, {
+              m.createElement(P, {
                 nValue: e.nFocus,
                 setValue: e.setFocus,
                 strName: "Focus",
@@ -514,7 +516,7 @@
             ),
           );
         },
-        v = (e) => {
+        M = (e) => {
           const t = o(e.nAppID);
           if (!t.data || "Uninitialized" == t.data.name) return null;
           return m.createElement(
@@ -543,7 +545,7 @@
             ),
           );
         },
-        M = (e) => {
+        N = (e) => {
           const [t, n] = m.useState([]),
             [a, i] = m.useState([]);
           return (
@@ -552,10 +554,10 @@
                 let t = [];
                 for (const n of e.arrMixItems)
                   switch (n.eType) {
-                    case D.AppID:
+                    case _.AppID:
                       t.push(l(n.nID));
                       break;
-                    case D.AccountID:
+                    case _.AccountID:
                       t.push(c(n.nID));
                   }
                 n(await Promise.all(t));
@@ -599,7 +601,7 @@
               { className: x.MixerResults },
               a?.length > 0 &&
                 a.map((e) =>
-                  m.createElement(v, {
+                  m.createElement(M, {
                     key: e.nAppID,
                     nAppID: e.nAppID,
                     fDistance: e.fDistance,
@@ -608,7 +610,7 @@
             )
           );
         },
-        N = (e) => {
+        P = (e) => {
           const [t, n] = m.useState(e.nValue);
           return (
             m.useEffect(() => {
@@ -625,7 +627,7 @@
             })
           );
         },
-        P = () => {
+        R = () => {
           const [e, t] = m.useState([]),
             [n, a] = m.useState(1),
             [r, i] = m.useState(1);
@@ -640,7 +642,7 @@
                 m.createElement(
                   "div",
                   { className: x.App },
-                  m.createElement(T, {
+                  m.createElement(v, {
                     arrMixItems: e,
                     setMixItems: t,
                     nPopularity: n,
@@ -648,7 +650,7 @@
                     nFocus: r,
                     setFocus: i,
                   }),
-                  m.createElement(M, {
+                  m.createElement(N, {
                     arrMixItems: e,
                     nPopularity: n,
                     nFocus: r,

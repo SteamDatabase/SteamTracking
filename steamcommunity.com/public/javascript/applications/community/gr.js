@@ -617,7 +617,7 @@
         });
       var i = r(90626),
         n = r(23809),
-        a = r(31380),
+        a = r(20194),
         s = r(56545),
         l = r(80613),
         o = r(89068);
@@ -8552,34 +8552,37 @@
         const { clipID: t } = e,
           r = (function (e) {
             const t = (0, n.KV)();
-            return (0, a.useQuery)(["grclip", e], async () => {
-              const r = s.w.Init(B);
-              r.Body().set_clip_id(e);
-              const i = await O.GetSingleSharedClip(t, r);
-              if (1 != i.GetEResult())
-                return (
-                  (0, V.ZI)("GetSingleSharedClip failed"),
-                  void i.DEBUG_LogToConsole()
-                );
-              let n,
-                a = i.Body().toObject().clip,
-                l = [];
-              if (0 == a.video_ids.length)
-                return (
-                  (0, V.ZI)("No video ids in clip", e),
-                  void i.DEBUG_LogToConsole()
-                );
-              for (let e of a.video_ids)
-                (n && n.timeline_id == e.server_timeline_id) ||
-                  ((n = $i(a, e)), l.push(n)),
-                  n.recordings.push({
-                    recording_id: e.video_manager_video_id,
-                    start_offset_ms: e.start_offset_ms.toFixed(0),
-                    duration_ms: e.duration_ms.toFixed(0),
-                    recording_type: 4,
-                    cdn_manifest_url: e.manifest_url,
-                  });
-              return { clip_id: a.clip_id, game_id: a.gameid, timelines: l };
+            return (0, a.I)({
+              queryKey: ["grclip", e],
+              queryFn: async () => {
+                const r = s.w.Init(B);
+                r.Body().set_clip_id(e);
+                const i = await O.GetSingleSharedClip(t, r);
+                if (1 != i.GetEResult())
+                  return (
+                    (0, V.ZI)("GetSingleSharedClip failed"),
+                    void i.DEBUG_LogToConsole()
+                  );
+                let n,
+                  a = i.Body().toObject().clip,
+                  l = [];
+                if (0 == a.video_ids.length)
+                  return (
+                    (0, V.ZI)("No video ids in clip", e),
+                    void i.DEBUG_LogToConsole()
+                  );
+                for (let e of a.video_ids)
+                  (n && n.timeline_id == e.server_timeline_id) ||
+                    ((n = $i(a, e)), l.push(n)),
+                    n.recordings.push({
+                      recording_id: e.video_manager_video_id,
+                      start_offset_ms: e.start_offset_ms.toFixed(0),
+                      duration_ms: e.duration_ms.toFixed(0),
+                      recording_type: 4,
+                      cdn_manifest_url: e.manifest_url,
+                    });
+                return { clip_id: a.clip_id, game_id: a.gameid, timelines: l };
+              },
             });
           })(t);
         return r.data

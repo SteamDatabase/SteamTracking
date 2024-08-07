@@ -140,7 +140,7 @@
         oj: () => v,
         tn: () => L,
         v4: () => B,
-        ww: () => Q,
+        ww: () => J,
         xQ: () => D,
       });
       var a = r(34629),
@@ -976,7 +976,7 @@
           [],
         );
       }
-      function Q(e) {
+      function J(e) {
         let t = [];
         const r = g.Get().m_rgKnownPriceKeys;
         for (let a of e) {
@@ -1400,45 +1400,46 @@
         (0, a.Cg)([i.sH], u.prototype, "m_bOnSteamDeck", void 0);
     },
     41471: (e, t, r) => {
-      r.d(t, { DW: () => P, js: () => _, z0: () => g });
+      r.d(t, { DW: () => g, js: () => P, z0: () => h });
       var a = r(58632),
         i = r.n(a),
         s = r(90626),
-        n = r(31380),
-        c = r(56545),
-        o = r(23809),
-        l = r(44654),
-        p = r(88241),
-        u = r(17720),
-        m = r(37735),
-        d = r(72963);
-      function _(e) {
-        const t = (0, o.KV)(),
-          r = s.useContext(h);
-        return (0, n.useQuery)(f(r, t, e));
-      }
+        n = r(20194),
+        c = r(54806),
+        o = r(56545),
+        l = r(23809),
+        p = r(44654),
+        u = r(88241),
+        m = r(17720),
+        d = r(37735),
+        _ = r(72963);
       function P(e) {
-        const t = (0, o.KV)(),
-          r = s.useContext(h);
-        return (0, n.useQueries)(e.map((e) => f(r, t, e)));
+        const t = (0, l.KV)(),
+          r = s.useContext(f);
+        return (0, n.I)(y(r, t, e));
       }
       function g(e) {
-        return d.L.getQueryData(["PlayerSummary", e]);
+        const t = (0, l.KV)(),
+          r = s.useContext(f);
+        return (0, c.E)({ queries: e.map((e) => y(r, t, e)) });
       }
-      const h = s.createContext({
+      function h(e) {
+        return _.L.getQueryData(["PlayerSummary", e]);
+      }
+      const f = s.createContext({
         loadPersonaState: async (e, t) => {
           if (null == e) return null;
           const r = await (function (e) {
-            y ||
-              (y = new (i())(
+            S ||
+              (S = new (i())(
                 async (t) => {
-                  const r = c.w.Init(m.z2);
+                  const r = o.w.Init(d.z2);
                   r.Body().set_steamids(
                     t.map((e) =>
-                      u.b.InitFromAccountID(e).ConvertTo64BitString(),
+                      m.b.InitFromAccountID(e).ConvertTo64BitString(),
                     ),
                   );
-                  const a = await m.xt.GetPlayerLinkDetails(e, r);
+                  const a = await d.xt.GetPlayerLinkDetails(e, r);
                   if (!a.BSuccess())
                     throw `Failed to load player link details: ${a.GetErrorMessage()}`;
                   const i = new Map();
@@ -1449,7 +1450,7 @@
                       .forEach((e) => {
                         const t = e.toObject();
                         i.set(
-                          new u.b(t.public_data?.steamid).GetAccountID(),
+                          new m.b(t.public_data?.steamid).GetAccountID(),
                           t,
                         );
                       }),
@@ -1458,17 +1459,17 @@
                 },
                 { maxBatchSize: 100 },
               ));
-            return y;
+            return S;
           })(t).load(e);
           return (function (e, t) {
-            let r = new p.Z(e);
+            let r = new u.Z(e);
             const a = t?.public_data,
               i = t?.private_data;
             (r.m_bInitialized = !!t),
               (r.m_ePersonaState = i?.persona_state ?? 0),
               (r.m_strAvatarHash = a?.sha_digest_avatar
-                ? (0, l.Kx)(a.sha_digest_avatar)
-                : p.dV),
+                ? (0, p.Kx)(a.sha_digest_avatar)
+                : u.dV),
               (r.m_strPlayerName = a?.persona_name ?? e.ConvertTo64BitString()),
               (r.m_strAccountName = i?.account_name),
               i?.persona_state_flags &&
@@ -1480,18 +1481,18 @@
             i?.game_extra_info && (r.m_strGameExtraInfo = i?.game_extra_info);
             a?.profile_url && (r.m_strProfileURL = a.profile_url);
             return r;
-          })(u.b.InitFromAccountID(e), r);
+          })(m.b.InitFromAccountID(e), r);
         },
       });
-      function f(e, t, r) {
-        const a = "string" == typeof r ? new u.b(r).GetAccountID() : r;
+      function y(e, t, r) {
+        const a = "string" == typeof r ? new m.b(r).GetAccountID() : r;
         return {
           queryKey: ["PlayerSummary", a],
           queryFn: () => e.loadPersonaState(a, t),
           enabled: !!a,
         };
       }
-      let y;
+      let S;
     },
     11577: (e, t, r) => {
       r.d(t, { a: () => l, d: () => p });

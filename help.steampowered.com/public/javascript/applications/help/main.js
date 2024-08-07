@@ -1321,7 +1321,7 @@
         "./shared_french.json": [5040, 8674],
         "./shared_german.json": [4750, 6888],
         "./shared_greek.json": [9668, 8872],
-        "./shared_hungarian.json": [5233, 9053],
+        "./shared_hungarian.json": [7614, 9053],
         "./shared_indonesian.json": [200, 8522],
         "./shared_italian.json": [1864, 7696],
         "./shared_japanese.json": [7263, 1389],
@@ -1367,7 +1367,7 @@
         "./shared_french.json": [5040, 8674],
         "./shared_german.json": [4750, 6888],
         "./shared_greek.json": [9668, 8872],
-        "./shared_hungarian.json": [5233, 9053],
+        "./shared_hungarian.json": [7614, 9053],
         "./shared_indonesian.json": [200, 8522],
         "./shared_italian.json": [1864, 7696],
         "./shared_japanese.json": [7263, 1389],
@@ -22500,7 +22500,7 @@
           i.createElement("div", { className: hl.FAQViewPage }, e.children);
       var bl = r(8632),
         yl = r.n(bl),
-        Bl = r(1380),
+        Bl = r(9376),
         wl = r(7735),
         Sl = r(3809);
       const vl = "nicknames";
@@ -22554,25 +22554,29 @@
       function Il(e) {
         const { accountID: t, bHideWhenNotAvailable: r, bHideName: n } = e,
           [s] = (function (e) {
-            const { data: t, isLoading: r } = (0, Bl.useQuery)([Cl, e], () =>
-              Ml.load(e),
-            );
+            const { data: t, isLoading: r } = (0, Bl.I)({
+              queryKey: [Cl, e],
+              queryFn: () => Ml.load(e),
+            });
             return [t, r];
           })(t),
           o = (function (e) {
             const t = (0, Sl.KV)(),
-              { data: r, isLoading: i } = (0, Bl.useQuery)([vl], async () => {
-                const e = new Map();
-                if (a.iA.logged_in) {
-                  const r = b.w.Init(wl.dN),
-                    i = (await wl.xt.GetNicknameList(t, r)).Body().toObject();
-                  i?.nicknames &&
-                    i.nicknames.length > 0 &&
-                    i.nicknames.forEach((t) => {
-                      e.set(t.accountid, t.nickname);
-                    });
-                }
-                return e;
+              { data: r, isLoading: i } = (0, Bl.I)({
+                queryKey: [vl],
+                queryFn: async () => {
+                  const e = new Map();
+                  if (a.iA.logged_in) {
+                    const r = b.w.Init(wl.dN),
+                      i = (await wl.xt.GetNicknameList(t, r)).Body().toObject();
+                    i?.nicknames &&
+                      i.nicknames.length > 0 &&
+                      i.nicknames.forEach((t) => {
+                        e.set(t.accountid, t.nickname);
+                      });
+                  }
+                  return e;
+                },
               });
             return r ? r.get(e) : null;
           })(t),
@@ -65477,29 +65481,17 @@
     },
     2963: (e, t, r) => {
       "use strict";
-      r.d(t, { s: () => a });
+      r.d(t, { s: () => s });
       var i = r(626),
-        n = r(1380);
-      r(6602), r(4811);
-      function a(e) {
-        const t = i.useRef(s),
-          r = function (e, t, ...r) {
-            console.log(`React-Query ${e}`, t, ...r);
-          };
-        (0, n.setLogger)({
-          log: (e, ...t) => r("LOG", e, ...t),
-          warn: (e, ...t) => r("WARN", e, ...t),
-          error: (e, ...t) => r("ERROR", e, ...t),
-        });
-        let a = e.children;
-        return (
-          e.debug,
-          i.createElement(n.QueryClientProvider, { client: t.current }, a)
-        );
+        n = r(5233),
+        a = r(678);
+      r(4811);
+      function s(e) {
+        const t = i.useRef(o);
+        let r = e.children;
+        return e.debug, i.createElement(n.Ht, { client: t.current }, r);
       }
-      const s = new n.QueryClient({
-        defaultOptions: { queries: { staleTime: 1 / 0 } },
-      });
+      const o = new a.E({ defaultOptions: { queries: { staleTime: 1 / 0 } } });
     },
     3437: (e, t, r) => {
       "use strict";

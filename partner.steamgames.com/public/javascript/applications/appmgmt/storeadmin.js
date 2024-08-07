@@ -299,7 +299,7 @@
       r.d(t, { $: () => f });
       var n = r(41735),
         a = r.n(n),
-        o = r(31380),
+        o = r(20194),
         l = r(30470);
       var c = r(90626),
         s = r(69235),
@@ -327,7 +327,7 @@
         const { nPartnerID: t, nAppID: r } = e,
           [n, s] = (0, c.useState)(7),
           i = (function (e, t, r) {
-            const { isLoading: n, data: c } = (0, o.useQuery)({
+            const { isLoading: n, data: c } = (0, o.I)({
               queryKey: ["usePartnerFinancialDailySummary", e, t, r],
               queryFn: async () => {
                 const n = { partnerid: e, pastdays: t, appid: r },
@@ -1856,7 +1856,7 @@
     },
     28394: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => Kr });
+      r.r(t), r.d(t, { default: () => Fr });
       var n = r(90626),
         a = r(64046),
         o = r(88997);
@@ -3073,8 +3073,8 @@
           c = a + [...o, t].map((e) => `[${e}]`).join("");
         return n.createElement("input", { type: "hidden", name: c, value: l });
       });
-      var Q = r(30175),
-        j = r(48067);
+      var j = r(30175),
+        Q = r(48067);
       function $(e) {
         const { language: t, rctToolbarControls: r, value: a } = e,
           o = n.createRef();
@@ -3106,7 +3106,7 @@
             [t, r],
           );
         return n.createElement(
-          Q.Ez,
+          j.Ez,
           null,
           n.createElement(
             ee,
@@ -3138,7 +3138,7 @@
             },
             n.createElement(m.Gj3, null),
           ),
-          n.createElement(Q.XQ, null),
+          n.createElement(j.XQ, null),
           n.createElement(
             ee,
             {
@@ -3159,7 +3159,7 @@
             },
             n.createElement(m.qOW, null),
           ),
-          n.createElement(Q.XQ, null),
+          n.createElement(j.XQ, null),
           n.createElement(
             ee,
             {
@@ -3180,7 +3180,7 @@
             },
             n.createElement(m._V3, null),
           ),
-          n.createElement(Q.hK, null),
+          n.createElement(j.hK, null),
           a,
         );
       }
@@ -3192,7 +3192,7 @@
           end: o,
           children: l,
         } = e;
-        return n.createElement(Q.ff, { onClick: () => t(a, o), tooltip: r }, l);
+        return n.createElement(j.ff, { onClick: () => t(a, o), tooltip: r }, l);
       }
       function te(e) {
         const { language: t, value: r, refTextArea: a } = e,
@@ -3200,7 +3200,7 @@
           l = (0, W.gc)(r),
           s = n.useCallback(
             (e) => {
-              (0, j.cZ)(a, e?.textarea);
+              (0, Q.cZ)(a, e?.textarea);
             },
             [a],
           );
@@ -3314,7 +3314,7 @@
         pe = r(41735),
         _e = r.n(pe),
         Ce = r(70986),
-        Ee = r(31380),
+        Ee = r(20194),
         ge = r(99637),
         Se = r(22797),
         ke = r(72963),
@@ -3360,19 +3360,23 @@
             isLoading: i,
             isLoadingError: u,
           } = (function (e) {
-            return (0, Ee.useQuery)(["ReleaseRequest", e], async () => {
-              const t = await _e().get(
-                `${_.TS.PARTNER_BASE_URL}apprelease/ajaxgetreleaserequest/${e}`,
-              );
-              if ("string" == typeof t.data)
-                throw "Error loading release status";
-              return { appid: e, ...t?.data };
+            return (0, Ee.I)({
+              queryKey: ["ReleaseRequest", e],
+              queryFn: async () => {
+                const t = await _e().get(
+                  `${_.TS.PARTNER_BASE_URL}apprelease/ajaxgetreleaserequest/${e}`,
+                );
+                if ("string" == typeof t.data)
+                  throw "Error loading release status";
+                return { appid: e, ...t?.data };
+              },
             });
           })(t),
           d = "prerelease" == s?.strReleaseState,
           m = n.useCallback(
             (e, r) => {
-              ke.L.invalidateQueries(["ReleaseRequest", t]), a(e, r, d);
+              ke.L.invalidateQueries({ queryKey: ["ReleaseRequest", t] }),
+                a(e, r, d);
             },
             [t, a, d],
           );
@@ -3796,7 +3800,7 @@
         qe = r(14771);
       const Xe = 7,
         Ze = 7;
-      function Qe(e) {
+      function je(e) {
         const { demoAppID: t, parentAppId: r } = e,
           [a, o] = n.useState(!1),
           [l, s] = n.useState(void 0),
@@ -3848,7 +3852,7 @@
               ),
             ),
             E &&
-              n.createElement(je, {
+              n.createElement(Qe, {
                 demoAppID: t,
                 parentAppId: r,
                 bSendEmailsSucceeded: i,
@@ -3864,7 +3868,7 @@
           );
         }
       }
-      function je(e) {
+      function Qe(e) {
         const {
             demoAppID: t,
             parentAppId: r,
@@ -4040,7 +4044,7 @@
           n.Fragment,
           null,
           n.createElement(et.$, { nPartnerID: o, nAppID: t }),
-          "Demo" == a && n.createElement(Qe, { demoAppID: t, parentAppId: r }),
+          "Demo" == a && n.createElement(je, { demoAppID: t, parentAppId: r }),
         );
       }
       var rt = r(11577),
@@ -5035,23 +5039,32 @@
               }),
             );
       }
-      var zt = r(2897);
-      var Yt = r(56330),
-        qt = r(17720),
-        Xt = r(77428),
-        Zt = r.n(Xt),
-        Qt = r(98019);
-      function jt(e) {
+      var zt = r(2897),
+        Yt = r(75233),
+        qt = r(51614);
+      var Xt = r(56330),
+        Zt = r(17720),
+        jt = r(77428),
+        Qt = r.n(jt),
+        $t = r(98019);
+      function Jt(e) {
         const { partnerID: t, setTicketCount: r } = e,
           { data: a } = (function (e, t, r) {
-            return (0, Ee.useQuery)(["PartnerTickets", e, t, r], async () => {
-              const n = { nPublisherId: e, eHelpIssue: t, eHelpRequestType: r };
-              return (
-                await _e().get(
-                  `${O.TS.PARTNER_BASE_URL}admin/ajaxfetchsupportticketforpartner`,
-                  { params: n, withCredentials: !0 },
-                )
-              ).data.tickets;
+            return (0, Ee.I)({
+              queryKey: ["PartnerTickets", e, t, r],
+              queryFn: async () => {
+                const n = {
+                  nPublisherId: e,
+                  eHelpIssue: t,
+                  eHelpRequestType: r,
+                };
+                return (
+                  await _e().get(
+                    `${O.TS.PARTNER_BASE_URL}admin/ajaxfetchsupportticketforpartner`,
+                    { params: n, withCredentials: !0 },
+                  )
+                ).data.tickets;
+              },
             });
           })(t, 920, 55),
           [o, l] = (0, n.useState)(2);
@@ -5068,7 +5081,7 @@
                 a
                   .slice(0, o)
                   .map((e) =>
-                    n.createElement($t, { key: e.help_requestid, helpReq: e }),
+                    n.createElement(er, { key: e.help_requestid, helpReq: e }),
                   ),
                 Boolean(o < a.length) &&
                   n.createElement(
@@ -5082,7 +5095,7 @@
             : null
         );
       }
-      function $t(e) {
+      function er(e) {
         const { helpReq: t } = e;
         return n.createElement(
           "div",
@@ -5091,11 +5104,11 @@
             "div",
             {
               className: (0, d.A)({
-                [Zt().ValveAccountTicket]:
-                  Qt.b.findIndex((e) => e.id === t.accountid) >= 0,
+                [Qt().ValveAccountTicket]:
+                  $t.b.findIndex((e) => e.id === t.accountid) >= 0,
               }),
             },
-            Qt.b.findIndex((e) => e.id == t.assigned_agent_accountid) >= 0
+            $t.b.findIndex((e) => e.id == t.assigned_agent_accountid) >= 0
               ? n.createElement(
                   n.Fragment,
                   null,
@@ -5139,7 +5152,7 @@
         );
         var r;
       }
-      function Jt(e) {
+      function tr(e) {
         const {
             nAccountIDProposer: t,
             packageID: r,
@@ -5152,7 +5165,7 @@
               {
                 onClick: (e) =>
                   (0, Bt.pg)(
-                    n.createElement(er, {
+                    n.createElement(rr, {
                       nAccountIDProposer: t,
                       packageID: r,
                       partnerID: o[0],
@@ -5164,11 +5177,11 @@
             )
           : n.createElement(
               "div",
-              { className: Yt.WarningStylesBackground },
+              { className: Xt.WarningStylesBackground },
               "Warning: Package isn't associated with a partner... Cannot create ticket",
             );
       }
-      function er(e) {
+      function rr(e) {
         const {
             partnerID: t,
             packageID: r,
@@ -5178,7 +5191,7 @@
           [l] = (0, vt.UA)(t),
           [c] = (0, Rt.Gg)(r, {}),
           s = (0, n.useMemo)(
-            () => qt.b.InitFromAccountID(o).ConvertTo64BitString(),
+            () => Zt.b.InitFromAccountID(o).ConvertTo64BitString(),
             [o],
           ),
           [i, u] = (0, n.useState)(() => c?.GetAppID() || 0),
@@ -5186,8 +5199,8 @@
           [p, _] = (0, n.useState)(""),
           C = (0, It.vs)(),
           E = (function (e, t, r, n, a) {
-            const o = (0, Ee.useQueryClient)();
-            return (0, Ee.useMutation)({
+            const o = (0, Yt.jE)();
+            return (0, qt.n)({
               mutationFn: async (o) => {
                 a.fnSetLoading(!0);
                 const l = new FormData();
@@ -5216,7 +5229,7 @@
                 a.fnSetError(!0);
               },
               onSettled() {
-                o.invalidateQueries(["PartnerTickets", t, r, n]);
+                o.invalidateQueries({ queryKey: ["PartnerTickets", t, r, n] });
               },
             });
           })(s, t, 920, 55, C);
@@ -5260,7 +5273,7 @@
               }),
             );
       }
-      function tr(e) {
+      function nr(e) {
         const { proposal: t, mapPartnerPaidByPackage: r } = e,
           [a] = (0, Rt.Gg)(t.packageid, Nt),
           [o] = (0, Rt.Gg)(a?.GetIncludedAppIDsOrSelf()?.[0], Nt),
@@ -5310,18 +5323,18 @@
             n.createElement(wt.p, { accountID: t.account }),
           ),
           n.createElement(Wt, { ...e }),
-          n.createElement(Jt, {
+          n.createElement(tr, {
             nAccountIDProposer: t.account_proposer,
             packageID: t.packageid,
             mapPartnerPaidByPackage: r,
           }),
-          n.createElement(rr, {
+          n.createElement(ar, {
             packageID: t.packageid,
             mapPartnerPaidByPackage: r,
           }),
         );
       }
-      function rr(e) {
+      function ar(e) {
         const { packageID: t, mapPartnerPaidByPackage: r } = e,
           a = r.get(t);
         return a
@@ -5329,12 +5342,12 @@
               "div",
               null,
               a.map((e) =>
-                n.createElement(nr, { key: "partner" + e, partnerID: e }),
+                n.createElement(or, { key: "partner" + e, partnerID: e }),
               ),
             )
           : null;
       }
-      function nr(e) {
+      function or(e) {
         const { partnerID: t } = e,
           [r] = (0, vt.UA)(t);
         return r
@@ -5350,13 +5363,13 @@
             )
           : null;
       }
-      function ar(e) {
+      function lr(e) {
         const { amountInCents: t, className: r } = e;
         return t
-          ? n.createElement("div", { className: r }, or(t))
+          ? n.createElement("div", { className: r }, cr(t))
           : n.createElement("div", { className: r });
       }
-      function or(e) {
+      function cr(e) {
         return e
           ? (e / 100).toLocaleString(void 0, {
               minimumFractionDigits: 2,
@@ -5364,7 +5377,7 @@
             })
           : "";
       }
-      function lr(e) {
+      function sr(e) {
         return n.createElement(
           "thead",
           null,
@@ -5388,7 +5401,7 @@
           ),
         );
       }
-      function cr(e) {
+      function ir(e) {
         const { proposal: t, oGuideline: r, mapCurrentPrices: a } = e,
           o = a.get(t.packageid),
           l = t.proposed_prices.base_amounts.find(
@@ -5400,7 +5413,7 @@
           Et.map((e) => {
             const a =
               r.GetRecommendPrice(l, e) || r.GetScaledRecommendedPrice(l, e);
-            return n.createElement(sr, {
+            return n.createElement(ur, {
               key: t.packageid + "-" + e,
               eCurrencyCode: e,
               proposal: t,
@@ -5413,7 +5426,7 @@
               c =
                 r.GetRecommendPrice(l, a, e) ||
                 r.GetScaledRecommendedPrice(l, a, e);
-            return n.createElement(ir, {
+            return n.createElement(dr, {
               key: t.packageid + "-" + e,
               eCurrencyCode: a,
               eRegionCode: e,
@@ -5424,39 +5437,39 @@
           }),
         );
       }
-      function sr(e) {
+      function ur(e) {
         const { eCurrencyCode: t, curPrice: r, proposal: a, guidePrice: o } = e,
           l = a.proposed_prices.base_amounts.find(
             (e) => e.amount.currency_code == t,
           ),
           c = r?.current_costs?.base_amounts.find((e) => e.currency_code == t);
-        return n.createElement(ur, {
+        return n.createElement(mr, {
           proposed: l,
           originalAmount: c,
           guidePrice: o,
         });
       }
-      function ir(e) {
+      function dr(e) {
         const { eRegionCode: t, curPrice: r, proposal: a, guidePrice: o } = e,
           l = ht(t),
           c = a.proposed_prices.region_amounts.find((e) => e.name == l),
           s = r?.current_costs?.region_amounts.find((e) => e.region == l);
-        return n.createElement(ur, {
+        return n.createElement(mr, {
           proposed: c,
           originalAmount: s?.amount,
           guidePrice: o,
         });
       }
-      function ur(e) {
+      function mr(e) {
         const { proposed: t, originalAmount: r, guidePrice: a } = e;
         let o, l;
         if (t)
           if (a && a.price > t.amount.amount) {
             o = Tt.outofmatrixlower;
-            l = `Suggested price ${or(a.price)} - ${Math.floor(100 - (t.amount.amount / a.price) * 100)}% ▼`;
+            l = `Suggested price ${cr(a.price)} - ${Math.floor(100 - (t.amount.amount / a.price) * 100)}% ▼`;
           } else if (a && a.price < t.amount.amount) {
             o = Tt.outofmatrix;
-            l = `Suggested price ${or(a.price)} - ${Math.floor((t.amount.amount / a.price) * 100 - 100)}% ▲`;
+            l = `Suggested price ${cr(a.price)} - ${Math.floor((t.amount.amount / a.price) * 100 - 100)}% ▲`;
           } else
             r
               ? r.amount > t.amount.amount
@@ -5469,17 +5482,17 @@
           n.createElement(
             p.he,
             { toolTipContent: l },
-            n.createElement(ar, {
+            n.createElement(lr, {
               className: o,
               amountInCents: t?.amount.amount,
             }),
           ),
           Boolean(r?.amount != t?.amount.amount) &&
-            n.createElement(ar, { amountInCents: r?.amount }),
+            n.createElement(lr, { amountInCents: r?.amount }),
           Boolean(!r) && n.createElement("div", null, "--"),
         );
       }
-      function dr(e) {
+      function pr(e) {
         const {
           rgProposals: t,
           oGuideline: r,
@@ -5489,8 +5502,8 @@
         return n.createElement(
           n.Fragment,
           null,
-          n.createElement(Cr, null),
-          n.createElement(mr, { oGuideline: r }),
+          n.createElement(gr, null),
+          n.createElement(_r, { oGuideline: r }),
           n.createElement("hr", null),
           n.createElement("hr", null),
           t.map((e) =>
@@ -5498,7 +5511,7 @@
               "div",
               { key: e.packageid },
               n.createElement("hr", null),
-              n.createElement(pr, {
+              n.createElement(Cr, {
                 oGuideline: r,
                 proposal: e,
                 mapCurrentPrices: a,
@@ -5508,7 +5521,7 @@
           ),
         );
       }
-      function mr(e) {
+      function _r(e) {
         return n.createElement(
           "div",
           { className: (0, d.A)(Tt.RowCtn, Tt.CurrencyHeaderRow) },
@@ -5517,23 +5530,23 @@
             { className: Tt.PackageInfoColumn },
             "Package Info",
           ),
-          n.createElement(lr, null),
+          n.createElement(sr, null),
         );
       }
-      function pr(e) {
+      function Cr(e) {
         return n.createElement(
           n.Fragment,
           null,
           n.createElement(
             "div",
             { className: Tt.RowCtn },
-            n.createElement(tr, { ...e }),
-            n.createElement(cr, { ...e }),
+            n.createElement(nr, { ...e }),
+            n.createElement(ir, { ...e }),
           ),
-          n.createElement(_r, { ...e }),
+          n.createElement(Er, { ...e }),
         );
       }
-      function _r(e) {
+      function Er(e) {
         const { proposal: t } = e,
           r = t.proposed_prices.country_amounts;
         return r?.length > 0
@@ -5549,13 +5562,13 @@
                   "/",
                   pt(e.amount.currency_code),
                   " @ ",
-                  or(e.account),
+                  cr(e.account),
                 ),
               ),
             )
           : null;
       }
-      function Cr(e) {
+      function gr(e) {
         return n.createElement(
           At.qx,
           {
@@ -5594,10 +5607,10 @@
           ),
         );
       }
-      var Er = r(84811),
-        gr = r(38135),
-        Sr = r(95034);
-      function kr(e) {
+      var Sr = r(84811),
+        kr = r(38135),
+        Pr = r(95034);
+      function yr(e) {
         const {
             rgProposals: t,
             oGuideline: r,
@@ -5697,7 +5710,7 @@
             n.createElement(
               "div",
               { key: "delta_" + e.packageid },
-              n.createElement(Pr, {
+              n.createElement(hr, {
                 oGuideline: r,
                 proposal: e,
                 mapCurrentPrices: a,
@@ -5709,7 +5722,7 @@
           ),
         );
       }
-      function Pr(e) {
+      function hr(e) {
         const { bShowWithOpenTickets: t } = e,
           [r, a] = (0, n.useState)(0);
         return r > 0 && !t
@@ -5720,28 +5733,28 @@
               n.createElement(
                 "div",
                 { className: zt.RowCtn },
-                n.createElement(tr, { ...e }),
-                n.createElement(yr, { ...e, setOpenTicketCount: a }),
-                n.createElement(Rr, { ...e }),
+                n.createElement(nr, { ...e }),
+                n.createElement(fr, { ...e, setOpenTicketCount: a }),
+                n.createElement(Nr, { ...e }),
               ),
-              n.createElement(Nr, { ...e }),
+              n.createElement(Br, { ...e }),
             );
       }
-      function yr(e) {
+      function fr(e) {
         const { proposal: t, setOpenTicketCount: r } = e,
           a = e.mapPartnerPaidByPackage.get(t.packageid)?.[0] || 0;
         return n.createElement(
           "div",
           { className: zt.FailuresCtn },
-          n.createElement(fr, { ...e }),
-          n.createElement(br, { ...e }),
-          n.createElement(wr, { ...e }),
           n.createElement(Dr, { ...e }),
-          n.createElement(hr, { ...e }),
-          n.createElement(jt, { partnerID: a, setTicketCount: r }),
+          n.createElement(Ar, { ...e }),
+          n.createElement(Ir, { ...e }),
+          n.createElement(Tr, { ...e }),
+          n.createElement(br, { ...e }),
+          n.createElement(Jt, { partnerID: a, setTicketCount: r }),
         );
       }
-      function hr(e) {
+      function br(e) {
         const { proposal: t, mapCurrentPrices: r } = e,
           a = t.proposed_prices.base_amounts.find(
             (e) => e.amount.currency_code == ot.k_ECurrencyCodeUSD,
@@ -5759,7 +5772,7 @@
               "div",
               { className: zt.AboveAutoPublish },
               "USD Price $",
-              or(a),
+              cr(a),
               " is above $80 USD Threshold",
             ),
           Boolean(o && a > 2 * o) &&
@@ -5767,13 +5780,13 @@
               "div",
               { className: zt.AboveAutoPublish },
               "USD price $",
-              or(a),
+              cr(a),
               " is more than twice existing USD Price $",
-              or(o),
+              cr(o),
             ),
         );
       }
-      function fr(e) {
+      function Dr(e) {
         const { proposal: t } = e,
           r = (0, n.useMemo)(() => Mt(t), [t]);
         return r?.length > 0
@@ -5791,7 +5804,7 @@
             )
           : null;
       }
-      function br(e) {
+      function Ar(e) {
         const { proposal: t } = e,
           r = (0, n.useMemo)(
             () =>
@@ -5835,7 +5848,7 @@
             )
           : null;
       }
-      function Dr(e) {
+      function Tr(e) {
         const { proposal: t, oGuideline: r } = e,
           a = t.proposed_prices.base_amounts.find(
             (e) => e.amount.currency_code == ot.k_ECurrencyCodeUSD,
@@ -5849,13 +5862,13 @@
               "div",
               { className: zt.MatrixGap },
               "$",
-              or(a),
+              cr(a),
               " USD Price doesn't align with any matrix price point. Will compare proposal to scaled guideline.",
             ),
-          n.createElement(vr, { ...e, USDPriceCents: a }),
+          n.createElement(wr, { ...e, USDPriceCents: a }),
         );
       }
-      function Ar(e) {
+      function vr(e) {
         const { thresholdData: t, strDirection: r } = e;
         let a = null;
         return (
@@ -5871,17 +5884,17 @@
             n.createElement(
               "td",
               { className: (0, d.A)(zt.OriginalPrice, a) },
-              t.nOriginalPrice ? `${or(t.nOriginalPrice)}` : "--",
+              t.nOriginalPrice ? `${cr(t.nOriginalPrice)}` : "--",
             ),
             n.createElement(
               "td",
               { className: (0, d.A)(zt.ProposedPrice, a) },
-              `${or(t.nProposedPrice)}`,
+              `${cr(t.nProposedPrice)}`,
             ),
             n.createElement(
               "td",
               { className: zt.RecommendedPrice },
-              `${or(t.nGuidancePrice)}`,
+              `${cr(t.nGuidancePrice)}`,
             ),
             n.createElement(
               "td",
@@ -5891,7 +5904,7 @@
           )
         );
       }
-      function Tr(e) {
+      function Rr(e) {
         const { strGuidanceMessage: t, strDirection: r } = e;
         return n.createElement(
           "thead",
@@ -5928,7 +5941,7 @@
           ),
         );
       }
-      function vr(e) {
+      function wr(e) {
         const {
             proposal: t,
             oGuideline: r,
@@ -5940,7 +5953,7 @@
             [a, o, r, t],
           );
         if (l.length > 0 || c.length > 0) {
-          const e = or(a);
+          const e = cr(a);
           return n.createElement(
             n.Fragment,
             null,
@@ -5949,7 +5962,7 @@
                 "div",
                 { className: zt.AutoPublishCeiling },
                 "USD price $",
-                or(a),
+                cr(a),
                 " is above the auto-publish threshold of $80 USD",
               ),
             n.createElement(
@@ -5959,7 +5972,7 @@
                 n.createElement(
                   "table",
                   { className: zt.ThresholdMiniTable },
-                  n.createElement(Tr, {
+                  n.createElement(Rr, {
                     strGuidanceMessage: `${l.length} currencies above guidance threshold for USD $ ${e}`,
                     strDirection: "above",
                   }),
@@ -5967,7 +5980,7 @@
                     "tbody",
                     null,
                     l.map((e) =>
-                      n.createElement(Ar, {
+                      n.createElement(vr, {
                         key: t.packageid + "_" + e.strCurrency,
                         thresholdData: e,
                         strDirection: "▲",
@@ -5979,7 +5992,7 @@
                 n.createElement(
                   "table",
                   { className: zt.ThresholdMiniTable },
-                  n.createElement(Tr, {
+                  n.createElement(Rr, {
                     strGuidanceMessage: `${c.length} currencies below guidance threshold for USD $ ${e}`,
                     strDirection: "below",
                   }),
@@ -5987,7 +6000,7 @@
                     "tbody",
                     null,
                     c.map((e) =>
-                      n.createElement(Ar, {
+                      n.createElement(vr, {
                         key: t.packageid + "_" + e.strCurrency,
                         thresholdData: e,
                         strDirection: "▼",
@@ -6000,7 +6013,7 @@
         }
         return null;
       }
-      function Rr(e) {
+      function Nr(e) {
         const { proposal: t } = e;
         return t.proposed_prices.country_amounts?.length > 0
           ? n.createElement(
@@ -6013,7 +6026,7 @@
             )
           : null;
       }
-      function wr(e) {
+      function Ir(e) {
         const { proposal: t } = e,
           [r] = (0, Rt.Gg)(t.packageid, Nt);
         return r && Ht(r)
@@ -6025,24 +6038,24 @@
             )
           : null;
       }
-      function Nr(e) {
+      function Br(e) {
         const { bForceShowComparisonRows: t } = e,
           [r, a] = (0, n.useState)(!1);
         return r || t
           ? n.createElement(
               "div",
               { className: (0, d.A)(Tt.FullCurrencyTable) },
-              n.createElement(lr, null),
-              n.createElement(cr, { ...e }),
+              n.createElement(sr, null),
+              n.createElement(ir, { ...e }),
             )
           : n.createElement(b.Yh, {
               label: "Show Price Comparison Row",
               onChange: () => a(!0),
             });
       }
-      var Ir = r(45737),
-        Br = r.n(Ir);
-      class xr {
+      var xr = r(45737),
+        Lr = r.n(xr);
+      class Mr {
         m_mapPackageToPartners = new Map();
         GetMap() {
           return this.m_mapPackageToPartners;
@@ -6050,9 +6063,9 @@
         static s_Singleton;
         static Get() {
           return (
-            xr.s_Singleton ||
-              ((xr.s_Singleton = new xr()), xr.s_Singleton.Init()),
-            xr.s_Singleton
+            Mr.s_Singleton ||
+              ((Mr.s_Singleton = new Mr()), Mr.s_Singleton.Init()),
+            Mr.s_Singleton
           );
         }
         constructor() {}
@@ -6066,11 +6079,11 @@
           );
         }
       }
-      function Lr() {
-        const [e, t] = (0, n.useState)(() => xr.Get().GetMap());
+      function Gr() {
+        const [e, t] = (0, n.useState)(() => Mr.Get().GetMap());
         return e;
       }
-      function Mr(e) {
+      function Ur(e) {
         (0, rt.d)();
         const [t] = (0, n.useState)(
             () => (0, nt.Tc)("filter_name", "application_config") || "",
@@ -6087,17 +6100,17 @@
             return e;
           })(),
           o = at(),
-          l = Lr(),
-          [c, s] = (0, Sr.QD)("tab", "delta"),
+          l = Gr(),
+          [c, s] = (0, Pr.QD)("tab", "delta"),
           i = (e) => s(e.key),
           u = [
             {
               name: "Price Delta",
               key: "delta",
               contents: n.createElement(
-                Er.tH,
+                Sr.tH,
                 null,
-                n.createElement(kr, {
+                n.createElement(yr, {
                   rgProposals: r,
                   oGuideline: a,
                   mapCurrentPrices: o,
@@ -6110,9 +6123,9 @@
               name: "Submissions Raw Table",
               key: "raw",
               contents: n.createElement(
-                Er.tH,
+                Sr.tH,
                 null,
-                n.createElement(dr, {
+                n.createElement(pr, {
                   rgProposals: r,
                   oGuideline: a,
                   mapCurrentPrices: o,
@@ -6123,21 +6136,21 @@
             },
           ];
         return n.createElement(
-          Er.tH,
+          Sr.tH,
           null,
           n.createElement(
             "div",
-            { className: (0, d.A)(Br().AdminPageCtn, Br().WidePageCtn) },
+            { className: (0, d.A)(Lr().AdminPageCtn, Lr().WidePageCtn) },
             n.createElement("h1", null, "Package Prices Submissions Reviews"),
             n.createElement("p", null, t),
             n.createElement("hr", null),
-            n.createElement(gr.V, { tabs: u, startingTab: c }),
+            n.createElement(kr.V, { tabs: u, startingTab: c }),
           ),
         );
       }
-      var Gr = r(91702),
-        Ur = r(36225);
-      function Kr(e) {
+      var Kr = r(91702),
+        Hr = r(36225);
+      function Fr(e) {
         return n.createElement(
           Fe.dO,
           null,
@@ -6158,9 +6171,9 @@
                   "storeadmin-app-content-section": (e) =>
                     n.createElement(ce, { ...e }),
                   "storeadmin-app-extraassetslist": (e) =>
-                    n.createElement(Ur.c$, { ...e }),
+                    n.createElement(Hr.c$, { ...e }),
                   "storeadmin-season-pass-survey": (e) =>
-                    n.createElement(Gr.G, { ...e }),
+                    n.createElement(Kr.G, { ...e }),
                 },
               }),
             ),
@@ -6188,7 +6201,7 @@
           }),
           n.createElement(Fe.qh, {
             path: Le.ReviewPriceProposals(),
-            component: Mr,
+            component: Ur,
           }),
         );
       }

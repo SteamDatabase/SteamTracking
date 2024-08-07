@@ -303,42 +303,43 @@
         (0, r.Cg)([s.sH], c.prototype, "m_bOnSteamDeck", void 0);
     },
     41471: (e, t, a) => {
-      a.d(t, { DW: () => p, js: () => d, mK: () => y, tb: () => g });
+      a.d(t, { DW: () => h, js: () => p, mK: () => P, tb: () => y });
       var r = a(58632),
         s = a.n(r),
         n = a(90626),
-        i = a(31380),
-        o = a(56545),
-        _ = a(23809),
-        m = a(44654),
-        u = a(10622),
-        c = a(17720),
-        l = a(37735);
+        i = a(20194),
+        o = a(54806),
+        _ = a(56545),
+        m = a(23809),
+        u = a(44654),
+        c = a(10622),
+        l = a(17720),
+        d = a(37735);
       a(72963);
-      function d(e) {
-        const t = (0, _.KV)(),
-          a = n.useContext(h);
-        return (0, i.useQuery)(y(a, t, e));
-      }
       function p(e) {
-        const t = (0, _.KV)(),
-          a = n.useContext(h);
-        return (0, i.useQueries)(e.map((e) => y(a, t, e)));
+        const t = (0, m.KV)(),
+          a = n.useContext(g);
+        return (0, i.I)(P(a, t, e));
       }
-      const h = n.createContext({
+      function h(e) {
+        const t = (0, m.KV)(),
+          a = n.useContext(g);
+        return (0, o.E)({ queries: e.map((e) => P(a, t, e)) });
+      }
+      const g = n.createContext({
         loadPersonaState: async (e, t) => {
           if (null == e) return null;
           const a = await (function (e) {
-            P ||
-              (P = new (s())(
+            f ||
+              (f = new (s())(
                 async (t) => {
-                  const a = o.w.Init(l.z2);
+                  const a = _.w.Init(d.z2);
                   a.Body().set_steamids(
                     t.map((e) =>
-                      c.b.InitFromAccountID(e).ConvertTo64BitString(),
+                      l.b.InitFromAccountID(e).ConvertTo64BitString(),
                     ),
                   );
-                  const r = await l.xt.GetPlayerLinkDetails(e, a);
+                  const r = await d.xt.GetPlayerLinkDetails(e, a);
                   if (!r.BSuccess())
                     throw `Failed to load player link details: ${r.GetErrorMessage()}`;
                   const s = new Map();
@@ -349,7 +350,7 @@
                       .forEach((e) => {
                         const t = e.toObject();
                         s.set(
-                          new c.b(t.public_data?.steamid).GetAccountID(),
+                          new l.b(t.public_data?.steamid).GetAccountID(),
                           t,
                         );
                       }),
@@ -358,17 +359,17 @@
                 },
                 { maxBatchSize: 100 },
               ));
-            return P;
+            return f;
           })(t).load(e);
           return (function (e, t) {
-            let a = new u.Z(e);
+            let a = new c.Z(e);
             const r = t?.public_data,
               s = t?.private_data;
             (a.m_bInitialized = !!t),
               (a.m_ePersonaState = s?.persona_state ?? 0),
               (a.m_strAvatarHash = r?.sha_digest_avatar
-                ? (0, m.Kx)(r.sha_digest_avatar)
-                : u.dV),
+                ? (0, u.Kx)(r.sha_digest_avatar)
+                : c.dV),
               (a.m_strPlayerName = r?.persona_name ?? e.ConvertTo64BitString()),
               (a.m_strAccountName = s?.account_name),
               s?.persona_state_flags &&
@@ -380,21 +381,21 @@
             s?.game_extra_info && (a.m_strGameExtraInfo = s?.game_extra_info);
             r?.profile_url && (a.m_strProfileURL = r.profile_url);
             return a;
-          })(c.b.InitFromAccountID(e), a);
+          })(l.b.InitFromAccountID(e), a);
         },
       });
-      function g() {
-        return n.useContext(h);
+      function y() {
+        return n.useContext(g);
       }
-      function y(e, t, a) {
-        const r = "string" == typeof a ? new c.b(a).GetAccountID() : a;
+      function P(e, t, a) {
+        const r = "string" == typeof a ? new l.b(a).GetAccountID() : a;
         return {
           queryKey: ["PlayerSummary", r],
           queryFn: () => e.loadPersonaState(r, t),
           enabled: !!r,
         };
       }
-      let P;
+      let f;
     },
   },
 ]);

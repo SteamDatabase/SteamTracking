@@ -531,7 +531,7 @@
         }
         m_SteamInterface = null;
       }
-      var p = a(31380),
+      var p = a(20194),
         g = a(56545),
         f = a(80613),
         S = a(89068);
@@ -10288,9 +10288,9 @@
         return `SteamLearnWorkingProject_Universe${m.TS.EUNIVERSE}_Project${e}`;
       }
       function Na() {
-        return (0, p.useQuery)(
-          ["SteamLearnDataSourceList"],
-          () =>
+        return (0, p.I)({
+          queryKey: ["SteamLearnDataSourceList"],
+          queryFn: () =>
             (async function () {
               let e = g.w.Init(tt);
               const t = await na.ListDataSources(
@@ -10309,13 +10309,13 @@
                 );
               throw "Failed FetchDataSourceList";
             })(),
-          { staleTime: 1 / 0 },
-        );
+          staleTime: 1 / 0,
+        });
       }
       function wa(e) {
-        return (0, p.useQuery)(
-          [da, e],
-          () =>
+        return (0, p.I)({
+          queryKey: [da, e],
+          queryFn: () =>
             (async function (e) {
               let t = g.w.Init(rt);
               t.Body().set_data_source_id(e);
@@ -10327,8 +10327,8 @@
                 return a.Body().data_source();
               throw `Failed FetchDataSource ${e}`;
             })(e),
-          { staleTime: 1 / 0 },
-        );
+          staleTime: 1 / 0,
+        });
       }
       function va(e, t) {
         const a = wa(e);
@@ -10368,9 +10368,9 @@
         return [t, r];
       }
       function ha() {
-        return (0, p.useQuery)(
-          [_a],
-          () =>
+        return (0, p.I)({
+          queryKey: [_a],
+          queryFn: () =>
             (async function () {
               let e = g.w.Init(Je);
               const t = await na.ListProjects(u.Get().GetServiceTransport(), e);
@@ -10378,18 +10378,20 @@
                 return t.Body().projects();
               throw "Failed FetchProjectList";
             })(),
-          { staleTime: 1 / 0 },
-        );
+          staleTime: 1 / 0,
+        });
       }
       function ya(e) {
-        return (0, p.useQuery)([ua, e], async () => Ea(e), {
+        return (0, p.I)({
+          queryKey: [ua, e],
+          queryFn: async () => Ea(e),
           staleTime: 1 / 0,
         });
       }
       function Ma() {
-        return (0, p.useQuery)(
-          ["SteamLearnAccessTokens"],
-          () =>
+        return (0, p.I)({
+          queryKey: ["SteamLearnAccessTokens"],
+          queryFn: () =>
             (async function () {
               let e = g.w.Init(ut);
               e.Body().set_appid(570);
@@ -10400,13 +10402,13 @@
               if (t.BIsValid() && 1 == t.GetEResult()) return t.Body();
               throw "Failed FetchAccessTokens";
             })(),
-          { staleTime: 1 / 0 },
-        );
+          staleTime: 1 / 0,
+        });
       }
       function Ca(e, t) {
-        return (0, p.useQuery)(
-          [pa, e, t],
-          () =>
+        return (0, p.I)({
+          queryKey: [pa, e, t],
+          queryFn: () =>
             (async function (e, t) {
               let a = g.w.Init(Nt);
               a.Body().set_project_id(e), a.Body().set_published_version(t);
@@ -10417,13 +10419,13 @@
               if (r.BIsValid() && 1 == r.GetEResult()) return r.Body();
               throw `Failed FetchFetchVersions: Project ${e}`;
             })(e, t),
-          { staleTime: 1 / 0 },
-        );
+          staleTime: 1 / 0,
+        });
       }
       function Ta(e, t) {
-        return (0, p.useQuery)(
-          [ga, e, t],
-          () =>
+        return (0, p.I)({
+          queryKey: [ga, e, t],
+          queryFn: () =>
             (async function (e, t) {
               let a = g.w.Init(vt);
               a.Body().set_project_id(e), a.Body().set_published_version(t);
@@ -10434,13 +10436,13 @@
               if (r.BIsValid() && 1 == r.GetEResult()) return r.Body();
               throw `Failed FetchTrainVersions: Project ${e}`;
             })(e, t),
-          { staleTime: 1 / 0 },
-        );
+          staleTime: 1 / 0,
+        });
       }
       function za(e, t) {
-        return (0, p.useQuery)(
-          [fa, e, t],
-          () =>
+        return (0, p.I)({
+          queryKey: [fa, e, t],
+          queryFn: () =>
             (async function (e, t) {
               let a = g.w.Init(yt);
               a.Body().set_project_id(e), a.Body().set_fetch_id(t);
@@ -10451,13 +10453,13 @@
               if (r.BIsValid() && 1 == r.GetEResult()) return r.Body();
               throw `Failed FetchFetchStatus: Project ${e}`;
             })(e, t),
-          { staleTime: 1 / 0 },
-        );
+          staleTime: 1 / 0,
+        });
       }
       function La(e, t) {
-        return (0, p.useQuery)(
-          [Sa, e, t],
-          () =>
+        return (0, p.I)({
+          queryKey: [Sa, e, t],
+          queryFn: () =>
             (async function (e, t) {
               let a = g.w.Init(Tt);
               a.Body().set_project_id(e), a.Body().set_train_id(t);
@@ -10468,13 +10470,13 @@
               if (r.BIsValid() && 1 == r.GetEResult()) return r.Body();
               throw `Failed FetchTrainStatus: Project ${e}`;
             })(e, t),
-          { staleTime: 1 / 0 },
-        );
+          staleTime: 1 / 0,
+        });
       }
       function ja(e, t, a) {
-        return (0, p.useQuery)(
-          ["SteamLearnTrainLogs", e, t, a],
-          () =>
+        return (0, p.I)({
+          queryKey: ["SteamLearnTrainLogs", e, t, a],
+          queryFn: () =>
             (async function (e, t, a) {
               let r = g.w.Init(Dt);
               r.Body().set_project_id(e),
@@ -10484,13 +10486,13 @@
               if (n.BIsValid() && 1 == n.GetEResult()) return n.Body();
               throw `Failed FetchLogs: Project ${e}, Train ${a}, Fetch ${t}`;
             })(e, t, a),
-          { staleTime: 1e4 },
-        );
+          staleTime: 1e4,
+        });
       }
       function Da(e, t) {
-        return (0, p.useQuery)(
-          ["SteamLearnTrainLogEvents", e, t],
-          () =>
+        return (0, p.I)({
+          queryKey: ["SteamLearnTrainLogEvents", e, t],
+          queryFn: () =>
             (async function (e, t) {
               let a = g.w.Init(Zt);
               a.Body().set_start_timestamp(e), a.Body().set_end_timestamp(t);
@@ -10498,14 +10500,14 @@
               if (r.BIsValid() && 1 == r.GetEResult()) return r.Body();
               throw `Failed FetchLogEvents: ${e} to ${t} `;
             })(e, t),
-          { staleTime: 1 / 0 },
-        );
+          staleTime: 1 / 0,
+        });
       }
       function Ia(e, t) {
-        ia.L.invalidateQueries([fa, e, t]);
+        ia.L.invalidateQueries({ queryKey: [fa, e, t] });
       }
       function Oa(e, t) {
-        ia.L.invalidateQueries([Sa, e, t]);
+        ia.L.invalidateQueries({ queryKey: [Sa, e, t] });
       }
       async function Pa(e, t, a) {
         let r = g.w.Init(Et);
@@ -10536,7 +10538,7 @@
               [ua, r.Body().project().project_id()],
               [r.Body().project(), r.Body().project()],
             ),
-            ia.L.invalidateQueries([_a])),
+            ia.L.invalidateQueries({ queryKey: [_a] })),
           [r.Body().result(), r.Body().project().project_id()]
         );
       }
@@ -10548,15 +10550,15 @@
           r &&
             1 == r.GetEResult() &&
             (localStorage.removeItem(ba(e.project_id())),
-            ia.L.invalidateQueries([ua, e.project_id()])),
+            ia.L.invalidateQueries({ queryKey: [ua, e.project_id()] })),
           r.Body().result()
         );
       }
       function Wa(e) {
         localStorage.removeItem(ba(e)),
-          ia.L.invalidateQueries([ua, e]),
-          ia.L.removeQueries([pa, e]),
-          ia.L.removeQueries([ga, e]);
+          ia.L.invalidateQueries({ queryKey: [ua, e] }),
+          ia.L.removeQueries({ queryKey: [pa, e] }),
+          ia.L.removeQueries({ queryKey: [ga, e] });
       }
       function ka(e, t) {
         let a;
@@ -11031,7 +11033,7 @@
           }
         })(e.unpublished_config()),
           localStorage.setItem(ba(e.project_id()), e.serializeBase64String()),
-          ia.L.invalidateQueries([ua, e.project_id()]);
+          ia.L.invalidateQueries({ queryKey: [ua, e.project_id()] });
       }
       function Qa(e, t) {
         const a = (function (e) {
@@ -25337,7 +25339,9 @@
                   u.Get().GetServiceTransport(),
                   n,
                 );
-                i && 1 == i.GetEResult() && ia.L.invalidateQueries([Sa, e]),
+                i &&
+                  1 == i.GetEResult() &&
+                  ia.L.invalidateQueries({ queryKey: [Sa, e] }),
                   i.Body().result();
               })(r.project_id(), t, e, a);
             },

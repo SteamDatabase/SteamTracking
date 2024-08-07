@@ -9791,13 +9791,13 @@
       a.d(t, { Fv: () => l, LG: () => m, MB: () => d, vb: () => u });
       var n = a(56545),
         i = a(75487),
-        s = a(31380),
+        s = a(20194),
         r = a(23809),
         o = (a(72963), a(78327));
       function l(e = o.TS.LANGUAGE) {
         const t = (0, r.TR)(),
           a = (0, r.rX)();
-        return (0, s.useQuery)(c(t, a, e));
+        return (0, s.I)(c(t, a, e));
       }
       function c(e, t, a) {
         return {
@@ -10684,7 +10684,7 @@
         s = a(30894);
       const r = (0, n.createContext)({}),
         o = () => (0, n.useContext)(r);
-      var l = a(31380),
+      var l = a(20194),
         c = a(56545),
         d = a(23809),
         m = a(17690),
@@ -10832,9 +10832,9 @@
       const y = { high_pending_orders: !1, inventory_available: !0 };
       function f(e) {
         const t = (0, d.rW)(),
-          a = (0, l.useQuery)(
-            [e?.GetID() || m.sc, e?.GetStoreItemType() || "invalid"],
-            () =>
+          a = (0, l.I)({
+            queryKey: [e?.GetID() || m.sc, e?.GetStoreItemType() || "invalid"],
+            queryFn: () =>
               (async function (e, t) {
                 if (!e || 1 !== e.GetStoreItemType() || 10 !== e.GetAppType())
                   return y;
@@ -10854,8 +10854,8 @@
                   );
                 return n.Body().toObject();
               })(e, t),
-            { enabled: Boolean(e?.GetID() && 10 === e.GetAppType()) },
-          );
+            enabled: Boolean(e?.GetID() && 10 === e.GetAppType()),
+          });
         return a.isLoading ? null : a.data;
       }
       var I = a(62792),

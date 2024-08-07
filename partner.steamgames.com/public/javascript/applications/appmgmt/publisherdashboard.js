@@ -4683,7 +4683,7 @@
       }
       var Ft = a(11577),
         Lt = a(28325),
-        Gt = a(31380),
+        Gt = a(54806),
         kt = a(23809),
         zt = a(15161);
       function Ot(e) {
@@ -4860,14 +4860,14 @@
           ),
           { bIsLoading: a, rgStoreItems: r } = (function (e, t = {}) {
             const a = (0, kt.rW)(),
-              n = (0, Gt.useQueries)(
-                e.map((e) => ({
+              n = (0, Gt.E)({
+                queries: e.map((e) => ({
                   queryKey: Yt(e),
                   queryFn: async () => await Xt(a, e),
                   staleTime: 3e5,
                   ...t,
                 })),
-              );
+              });
             return {
               bIsLoading: n.some((e) => e.isLoading),
               rgStoreItems: n.map((e) => {
@@ -5035,7 +5035,7 @@
       a.d(t, { $: () => b });
       var n = a(41735),
         s = a.n(n),
-        r = a(31380),
+        r = a(20194),
         i = a(30470);
       var l = a(90626),
         o = a(69235),
@@ -5063,7 +5063,7 @@
         const { nPartnerID: t, nAppID: a } = e,
           [n, o] = (0, l.useState)(7),
           c = (function (e, t, a) {
-            const { isLoading: n, data: l } = (0, r.useQuery)({
+            const { isLoading: n, data: l } = (0, r.I)({
               queryKey: ["usePartnerFinancialDailySummary", e, t, a],
               queryFn: async () => {
                 const n = { partnerid: e, pastdays: t, appid: a },

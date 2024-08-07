@@ -317,53 +317,54 @@
         (0, r.Cg)([s.sH], l.prototype, "m_bOnSteamDeck", void 0);
     },
     41471: (e, t, a) => {
-      a.d(t, { DW: () => p, hW: () => h, js: () => d });
+      a.d(t, { DW: () => g, hW: () => p, js: () => h });
       var r = a(58632),
         s = a.n(r),
         n = a(90626),
-        i = a(31380),
-        o = a(56545),
-        _ = a(23809),
-        m = a(44654),
-        u = a(10622),
-        l = a(17720),
-        c = a(37735);
+        i = a(20194),
+        o = a(54806),
+        _ = a(56545),
+        m = a(23809),
+        u = a(44654),
+        l = a(10622),
+        c = a(17720),
+        d = a(37735);
       a(72963);
-      function d(e) {
-        const t = (0, _.KV)(),
-          a = n.useContext(g);
-        return (0, i.useQuery)(v(a, t, e));
-      }
       function h(e) {
+        const t = (0, m.KV)(),
+          a = n.useContext(v);
+        return (0, i.I)(y(a, t, e));
+      }
+      function p(e) {
         const t = n.useRef(),
-          a = d(e);
+          a = h(e);
         return a.data
           ? a
           : (t.current ||
-              (t.current = new u.Z(
-                "string" == typeof e ? new l.b(e) : l.b.InitFromAccountID(e),
+              (t.current = new l.Z(
+                "string" == typeof e ? new c.b(e) : c.b.InitFromAccountID(e),
               )),
             { ...a, data: t.current });
       }
-      function p(e) {
-        const t = (0, _.KV)(),
-          a = n.useContext(g);
-        return (0, i.useQueries)(e.map((e) => v(a, t, e)));
+      function g(e) {
+        const t = (0, m.KV)(),
+          a = n.useContext(v);
+        return (0, o.E)({ queries: e.map((e) => y(a, t, e)) });
       }
-      const g = n.createContext({
+      const v = n.createContext({
         loadPersonaState: async (e, t) => {
           if (null == e) return null;
           const a = await (function (e) {
-            y ||
-              (y = new (s())(
+            P ||
+              (P = new (s())(
                 async (t) => {
-                  const a = o.w.Init(c.z2);
+                  const a = _.w.Init(d.z2);
                   a.Body().set_steamids(
                     t.map((e) =>
-                      l.b.InitFromAccountID(e).ConvertTo64BitString(),
+                      c.b.InitFromAccountID(e).ConvertTo64BitString(),
                     ),
                   );
-                  const r = await c.xt.GetPlayerLinkDetails(e, a);
+                  const r = await d.xt.GetPlayerLinkDetails(e, a);
                   if (!r.BSuccess())
                     throw `Failed to load player link details: ${r.GetErrorMessage()}`;
                   const s = new Map();
@@ -375,7 +376,7 @@
                         var t;
                         const a = e.toObject();
                         s.set(
-                          new l.b(
+                          new c.b(
                             null === (t = a.public_data) || void 0 === t
                               ? void 0
                               : t.steamid,
@@ -388,11 +389,11 @@
                 },
                 { maxBatchSize: 100 },
               ));
-            return y;
+            return P;
           })(t).load(e);
           return (function (e, t) {
             var a, r;
-            let s = new u.Z(e);
+            let s = new l.Z(e);
             const n = null == t ? void 0 : t.public_data,
               i = null == t ? void 0 : t.private_data;
             (s.m_bInitialized = !!t),
@@ -402,8 +403,8 @@
                   ? a
                   : 0),
               (s.m_strAvatarHash = (null == n ? void 0 : n.sha_digest_avatar)
-                ? (0, m.Kx)(n.sha_digest_avatar)
-                : u.dV),
+                ? (0, u.Kx)(n.sha_digest_avatar)
+                : l.dV),
               (s.m_strPlayerName =
                 null !== (r = null == n ? void 0 : n.persona_name) &&
                 void 0 !== r
@@ -425,18 +426,18 @@
             (null == n ? void 0 : n.profile_url) &&
               (s.m_strProfileURL = n.profile_url);
             return s;
-          })(l.b.InitFromAccountID(e), a);
+          })(c.b.InitFromAccountID(e), a);
         },
       });
-      function v(e, t, a) {
-        const r = "string" == typeof a ? new l.b(a).GetAccountID() : a;
+      function y(e, t, a) {
+        const r = "string" == typeof a ? new c.b(a).GetAccountID() : a;
         return {
           queryKey: ["PlayerSummary", r],
           queryFn: () => e.loadPersonaState(r, t),
           enabled: !!r,
         };
       }
-      let y;
+      let P;
     },
   },
 ]);

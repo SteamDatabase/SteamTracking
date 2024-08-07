@@ -37,11 +37,11 @@
     75048: (e, t, a) => {
       "use strict";
       a.d(t, {
-        Pr: () => q,
+        Pr: () => P,
         co: () => N,
         iM: () => h,
         iV: () => _,
-        pC: () => P,
+        pC: () => w,
       });
       var n = a(90626),
         r = a(20803),
@@ -94,7 +94,7 @@
             ),
         );
       }
-      function w(e) {
+      function q(e) {
         const { strSteamID: t, role: a, persona: s, isSelf: o } = e,
           i = new l.b(t);
         let m = e.size || "Large";
@@ -144,7 +144,7 @@
           ),
         );
       }
-      function P(e) {
+      function w(e) {
         const t = (0, n.useContext)(m.IN);
         return t.errorMessage
           ? n.createElement(
@@ -154,7 +154,7 @@
             )
           : null;
       }
-      function q(e) {
+      function P(e) {
         const { strSteamID: t, role: a, bInvitePending: s, children: o } = e,
           u = (0, f.L)(),
           [l, E] = (0, n.useState)(!1),
@@ -183,7 +183,7 @@
             n.createElement(
               "div",
               { className: r.Left },
-              n.createElement(w, {
+              n.createElement(q, {
                 strSteamID: t,
                 role: a,
                 persona: I,
@@ -221,45 +221,49 @@
     },
     27144: (e, t, a) => {
       "use strict";
-      a.d(t, { B3: () => h, KM: () => g, KT: () => R });
+      a.d(t, { B3: () => _, KM: () => y, KT: () => h });
       var n = a(41735),
         r = a.n(n),
         s = a(58632),
         o = a.n(s),
         c = a(90626),
-        i = a(31380),
-        u = a(17720),
-        l = a(68797),
-        m = a(78327),
-        d = a(56545),
-        f = a(37735),
-        E = a(23809);
-      const p = "nicknames";
-      function g(e) {
-        const t = (0, E.KV)(),
-          { data: a, isLoading: n } = (0, i.useQuery)([p], async () => {
-            const e = new Map();
-            if (m.iA.logged_in) {
-              const a = d.w.Init(f.dN),
-                n = (await f.xt.GetNicknameList(t, a)).Body().toObject();
-              n?.nicknames &&
-                n.nicknames.length > 0 &&
-                n.nicknames.forEach((t) => {
-                  e.set(t.accountid, t.nickname);
-                });
-            }
-            return e;
+        i = a(20194),
+        u = a(75233),
+        l = a(17720),
+        m = a(68797),
+        d = a(78327),
+        f = a(56545),
+        E = a(37735),
+        p = a(23809);
+      const g = "nicknames";
+      function y(e) {
+        const t = (0, p.KV)(),
+          { data: a, isLoading: n } = (0, i.I)({
+            queryKey: [g],
+            queryFn: async () => {
+              const e = new Map();
+              if (d.iA.logged_in) {
+                const a = f.w.Init(E.dN),
+                  n = (await E.xt.GetNicknameList(t, a)).Body().toObject();
+                n?.nicknames &&
+                  n.nicknames.length > 0 &&
+                  n.nicknames.forEach((t) => {
+                    e.set(t.accountid, t.nickname);
+                  });
+              }
+              return e;
+            },
           });
         return a ? a.get(e) : null;
       }
-      const y = new (o())(
+      const I = new (o())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
               const t =
-                "community" == (0, m.yK)()
-                  ? m.TS.COMMUNITY_BASE_URL
-                  : m.TS.STORE_BASE_URL;
+                "community" == (0, d.yK)()
+                  ? d.TS.COMMUNITY_BASE_URL
+                  : d.TS.STORE_BASE_URL;
               if (1 == e.length) {
                 const a = { accountid: e[0], origin: self.origin },
                   n = await r().get(`${t}actions/ajaxgetavatarpersona`, {
@@ -271,7 +275,7 @@
                   1 != n.data?.success ||
                   !n.data?.userinfo
                 )
-                  throw `Load single avatar/persona failed ${(0, l.H)(n).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${(0, m.H)(n).strErrorMsg}`;
                 return [n.data.userinfo];
               }
               {
@@ -285,11 +289,11 @@
                   1 != n.data?.success ||
                   !n.data?.userinfos
                 )
-                  throw `Load single avatar/persona failed ${(0, l.H)(n).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${(0, m.H)(n).strErrorMsg}`;
                 const s = new Map();
                 return (
                   n.data.userinfos.forEach((e) =>
-                    s.set(new u.b(e.steamid).GetAccountID(), e),
+                    s.set(new l.b(e.steamid).GetAccountID(), e),
                   ),
                   e.map((e) => s.get(e))
                 );
@@ -297,23 +301,27 @@
             })(e),
           { cache: !1 },
         ),
-        I = "avatarandpersonas";
-      function R(e) {
-        const { data: t, isLoading: a } = (0, i.useQuery)([I, e], () =>
-          y.load(e),
-        );
+        R = "avatarandpersonas";
+      function h(e) {
+        const { data: t, isLoading: a } = (0, i.I)({
+          queryKey: [R, e],
+          queryFn: () => I.load(e),
+        });
         return [t, a];
       }
-      function h(e) {
-        const t = (0, i.useQueryClient)(),
-          { data: a, isLoading: n } = (0, i.useQuery)({
-            queryKey: [I, e],
-            queryFn: () => y.loadMany(e),
-            onSuccess(e) {
-              e.forEach((e) => {
-                const a = [I, new u.b(e.steamid).GetAccountID()];
-                t.setQueryData(a, e);
-              });
+      function _(e) {
+        const t = (0, u.jE)(),
+          { data: a, isLoading: n } = (0, i.I)({
+            queryKey: [R, e],
+            queryFn: async () => {
+              const a = await I.loadMany(e);
+              return (
+                a.forEach((e) => {
+                  const a = [R, new l.b(e.steamid).GetAccountID()];
+                  t.setQueryData(a, e);
+                }),
+                a
+              );
             },
             enabled: e?.length > 0,
           }),
@@ -334,30 +342,33 @@
       a.d(t, { T: () => c });
       var n = a(56545),
         r = a(37735),
-        s = a(31380),
+        s = a(20194),
         o = a(23809);
       function c() {
         const e = (0, o.KV)();
-        return (0, s.useQuery)(["communitypreferences"], async () => {
-          const t = n.w.Init(r.tz),
-            a = await r.xt.GetCommunityPreferences(e, t);
-          if (1 != a.GetEResult())
-            throw new Error(
-              `Error from GetCommunityPreferences: ${a.GetEResult()} ${a.GetErrorMessage()}`,
-            );
-          return a.Body();
+        return (0, s.I)({
+          queryKey: ["communitypreferences"],
+          queryFn: async () => {
+            const t = n.w.Init(r.tz),
+              a = await r.xt.GetCommunityPreferences(e, t);
+            if (1 != a.GetEResult())
+              throw new Error(
+                `Error from GetCommunityPreferences: ${a.GetEResult()} ${a.GetErrorMessage()}`,
+              );
+            return a.Body();
+          },
         });
       }
     },
     13164: (e, t, a) => {
       "use strict";
       a.r(t),
-        a.d(t, { PurchaseRequestSimpleInfoPage: () => D, default: () => w });
+        a.d(t, { PurchaseRequestSimpleInfoPage: () => D, default: () => q });
       var n = a(12229),
         r = a(93676),
         s = a(41515),
         o = a(90626),
-        c = a(31380),
+        c = a(75233),
         i = a(92298),
         u = a(14860),
         l = a(75048),
@@ -395,13 +406,13 @@
       var R = a(91721),
         h = a.n(R),
         _ = a(28386);
-      function w(e) {
+      function q(e) {
         const { familyGroupID: t, requestID: a } = e,
           [l, m] = o.useState(),
           d = (0, u.Qn)(t, a),
           f = (0, _.useInitCartLocalization)(),
           E = (0, i.L)(),
-          p = (0, c.useQueryClient)(),
+          p = (0, c.jE)(),
           g = d.data;
         return (
           (0, o.useEffect)(() => {
@@ -419,9 +430,9 @@
             }
           }, [g, p]),
           d.isError
-            ? o.createElement(P, { familyGroupID: t })
+            ? o.createElement(w, { familyGroupID: t })
             : d.isLoading || !f || (g && !l)
-              ? o.createElement(q, null)
+              ? o.createElement(P, null)
               : g
                 ? g.is_completed
                   ? o.createElement(v, { familyGroupID: t })
@@ -431,14 +442,14 @@
                 : o.createElement(N, { familyGroupID: t })
         );
       }
-      function P(e) {
+      function w(e) {
         const { familyGroupID: t } = e;
         return o.createElement(D, {
           familyGroupID: t,
           headerLocToken: "#PurchaseRequest_RequestErrorHeader",
         });
       }
-      function q() {
+      function P() {
         return o.createElement(
           "div",
           { className: h().PurchaseRequestInfoPage },

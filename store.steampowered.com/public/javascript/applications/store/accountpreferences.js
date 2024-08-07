@@ -80,62 +80,878 @@
         AvatarAndPersona: "_3uUPNFsdEI9Fba-fyvnslj",
       };
     },
-    55909: (e, t, a) => {
+    11838: function (e, t, i) {
+      var a;
+      !(function (r, n) {
+        "use strict";
+        var s = "function",
+          o = "undefined",
+          c = "object",
+          l = "string",
+          m = "major",
+          d = "model",
+          u = "name",
+          p = "type",
+          _ = "vendor",
+          f = "version",
+          h = "architecture",
+          v = "console",
+          g = "mobile",
+          w = "tablet",
+          b = "smarttv",
+          A = "wearable",
+          E = "embedded",
+          y = "Amazon",
+          k = "Apple",
+          P = "ASUS",
+          N = "BlackBerry",
+          S = "Browser",
+          T = "Chrome",
+          C = "Firefox",
+          D = "Google",
+          B = "Huawei",
+          I = "LG",
+          x = "Microsoft",
+          R = "Motorola",
+          z = "Opera",
+          U = "Samsung",
+          G = "Sharp",
+          Q = "Sony",
+          M = "Xiaomi",
+          H = "Zebra",
+          F = "Facebook",
+          L = "Chromium OS",
+          K = "Mac OS",
+          O = function (e) {
+            for (var t = {}, i = 0; i < e.length; i++)
+              t[e[i].toUpperCase()] = e[i];
+            return t;
+          },
+          j = function (e, t) {
+            return typeof e === l && -1 !== q(t).indexOf(q(e));
+          },
+          q = function (e) {
+            return e.toLowerCase();
+          },
+          W = function (e, t) {
+            if (typeof e === l)
+              return (
+                (e = e.replace(/^\s\s*/, "")),
+                typeof t === o ? e : e.substring(0, 500)
+              );
+          },
+          V = function (e, t) {
+            for (var i, a, r, o, l, m, d = 0; d < t.length && !l; ) {
+              var u = t[d],
+                p = t[d + 1];
+              for (i = a = 0; i < u.length && !l && u[i]; )
+                if ((l = u[i++].exec(e)))
+                  for (r = 0; r < p.length; r++)
+                    (m = l[++a]),
+                      typeof (o = p[r]) === c && o.length > 0
+                        ? 2 === o.length
+                          ? typeof o[1] == s
+                            ? (this[o[0]] = o[1].call(this, m))
+                            : (this[o[0]] = o[1])
+                          : 3 === o.length
+                            ? typeof o[1] !== s || (o[1].exec && o[1].test)
+                              ? (this[o[0]] = m ? m.replace(o[1], o[2]) : n)
+                              : (this[o[0]] = m ? o[1].call(this, m, o[2]) : n)
+                            : 4 === o.length &&
+                              (this[o[0]] = m
+                                ? o[3].call(this, m.replace(o[1], o[2]))
+                                : n)
+                        : (this[o] = m || n);
+              d += 2;
+            }
+          },
+          X = function (e, t) {
+            for (var i in t)
+              if (typeof t[i] === c && t[i].length > 0) {
+                for (var a = 0; a < t[i].length; a++)
+                  if (j(t[i][a], e)) return "?" === i ? n : i;
+              } else if (j(t[i], e)) return "?" === i ? n : i;
+            return e;
+          },
+          J = {
+            ME: "4.90",
+            "NT 3.11": "NT3.51",
+            "NT 4.0": "NT4.0",
+            2e3: "NT 5.0",
+            XP: ["NT 5.1", "NT 5.2"],
+            Vista: "NT 6.0",
+            7: "NT 6.1",
+            8: "NT 6.2",
+            8.1: "NT 6.3",
+            10: ["NT 6.4", "NT 10.0"],
+            RT: "ARM",
+          },
+          Y = {
+            browser: [
+              [/\b(?:crmo|crios)\/([\w\.]+)/i],
+              [f, [u, "Chrome"]],
+              [/edg(?:e|ios|a)?\/([\w\.]+)/i],
+              [f, [u, "Edge"]],
+              [
+                /(opera mini)\/([-\w\.]+)/i,
+                /(opera [mobiletab]{3,6})\b.+version\/([-\w\.]+)/i,
+                /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i,
+              ],
+              [u, f],
+              [/opios[\/ ]+([\w\.]+)/i],
+              [f, [u, z + " Mini"]],
+              [/\bop(?:rg)?x\/([\w\.]+)/i],
+              [f, [u, z + " GX"]],
+              [/\bopr\/([\w\.]+)/i],
+              [f, [u, z]],
+              [/\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i],
+              [f, [u, "Baidu"]],
+              [
+                /(kindle)\/([\w\.]+)/i,
+                /(lunascape|maxthon|netfront|jasmine|blazer)[\/ ]?([\w\.]*)/i,
+                /(avant|iemobile|slim)\s?(?:browser)?[\/ ]?([\w\.]*)/i,
+                /(?:ms|\()(ie) ([\w\.]+)/i,
+                /(flock|rockmelt|midori|epiphany|silk|skyfire|bolt|iron|vivaldi|iridium|phantomjs|bowser|quark|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|qq|duckduckgo)\/([-\w\.]+)/i,
+                /(heytap|ovi)browser\/([\d\.]+)/i,
+                /(weibo)__([\d\.]+)/i,
+              ],
+              [u, f],
+              [/\bddg\/([\w\.]+)/i],
+              [f, [u, "DuckDuckGo"]],
+              [/(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i],
+              [f, [u, "UC" + S]],
+              [
+                /microm.+\bqbcore\/([\w\.]+)/i,
+                /\bqbcore\/([\w\.]+).+microm/i,
+                /micromessenger\/([\w\.]+)/i,
+              ],
+              [f, [u, "WeChat"]],
+              [/konqueror\/([\w\.]+)/i],
+              [f, [u, "Konqueror"]],
+              [/trident.+rv[: ]([\w\.]{1,9})\b.+like gecko/i],
+              [f, [u, "IE"]],
+              [/ya(?:search)?browser\/([\w\.]+)/i],
+              [f, [u, "Yandex"]],
+              [/slbrowser\/([\w\.]+)/i],
+              [f, [u, "Smart Lenovo " + S]],
+              [/(avast|avg)\/([\w\.]+)/i],
+              [[u, /(.+)/, "$1 Secure " + S], f],
+              [/\bfocus\/([\w\.]+)/i],
+              [f, [u, C + " Focus"]],
+              [/\bopt\/([\w\.]+)/i],
+              [f, [u, z + " Touch"]],
+              [/coc_coc\w+\/([\w\.]+)/i],
+              [f, [u, "Coc Coc"]],
+              [/dolfin\/([\w\.]+)/i],
+              [f, [u, "Dolphin"]],
+              [/coast\/([\w\.]+)/i],
+              [f, [u, z + " Coast"]],
+              [/miuibrowser\/([\w\.]+)/i],
+              [f, [u, "MIUI " + S]],
+              [/fxios\/([-\w\.]+)/i],
+              [f, [u, C]],
+              [/\bqihu|(qi?ho?o?|360)browser/i],
+              [[u, "360 " + S]],
+              [/(oculus|sailfish|huawei|vivo)browser\/([\w\.]+)/i],
+              [[u, /(.+)/, "$1 " + S], f],
+              [/samsungbrowser\/([\w\.]+)/i],
+              [f, [u, U + " Internet"]],
+              [/(comodo_dragon)\/([\w\.]+)/i],
+              [[u, /_/g, " "], f],
+              [/metasr[\/ ]?([\d\.]+)/i],
+              [f, [u, "Sogou Explorer"]],
+              [/(sogou)mo\w+\/([\d\.]+)/i],
+              [[u, "Sogou Mobile"], f],
+              [
+                /(electron)\/([\w\.]+) safari/i,
+                /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i,
+                /m?(qqbrowser|2345Explorer)[\/ ]?([\w\.]+)/i,
+              ],
+              [u, f],
+              [/(lbbrowser)/i, /\[(linkedin)app\]/i],
+              [u],
+              [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
+              [[u, F], f],
+              [
+                /(Klarna)\/([\w\.]+)/i,
+                /(kakao(?:talk|story))[\/ ]([\w\.]+)/i,
+                /(naver)\(.*?(\d+\.[\w\.]+).*\)/i,
+                /safari (line)\/([\w\.]+)/i,
+                /\b(line)\/([\w\.]+)\/iab/i,
+                /(alipay)client\/([\w\.]+)/i,
+                /(twitter)(?:and| f.+e\/([\w\.]+))/i,
+                /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i,
+              ],
+              [u, f],
+              [/\bgsa\/([\w\.]+) .*safari\//i],
+              [f, [u, "GSA"]],
+              [/musical_ly(?:.+app_?version\/|_)([\w\.]+)/i],
+              [f, [u, "TikTok"]],
+              [/headlesschrome(?:\/([\w\.]+)| )/i],
+              [f, [u, T + " Headless"]],
+              [/ wv\).+(chrome)\/([\w\.]+)/i],
+              [[u, T + " WebView"], f],
+              [/droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i],
+              [f, [u, "Android " + S]],
+              [/(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i],
+              [u, f],
+              [/version\/([\w\.\,]+) .*mobile\/\w+ (safari)/i],
+              [f, [u, "Mobile Safari"]],
+              [/version\/([\w(\.|\,)]+) .*(mobile ?safari|safari)/i],
+              [f, u],
+              [/webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i],
+              [
+                u,
+                [
+                  f,
+                  X,
+                  {
+                    "1.0": "/8",
+                    1.2: "/1",
+                    1.3: "/3",
+                    "2.0": "/412",
+                    "2.0.2": "/416",
+                    "2.0.3": "/417",
+                    "2.0.4": "/419",
+                    "?": "/",
+                  },
+                ],
+              ],
+              [/(webkit|khtml)\/([\w\.]+)/i],
+              [u, f],
+              [/(navigator|netscape\d?)\/([-\w\.]+)/i],
+              [[u, "Netscape"], f],
+              [/mobile vr; rv:([\w\.]+)\).+firefox/i],
+              [f, [u, C + " Reality"]],
+              [
+                /ekiohf.+(flow)\/([\w\.]+)/i,
+                /(swiftfox)/i,
+                /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror|klar)[\/ ]?([\w\.\+]+)/i,
+                /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([-\w\.]+)$/i,
+                /(firefox)\/([\w\.]+)/i,
+                /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i,
+                /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|sleipnir|obigo|mosaic|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i,
+                /(links) \(([\w\.]+)/i,
+                /panasonic;(viera)/i,
+              ],
+              [u, f],
+              [/(cobalt)\/([\w\.]+)/i],
+              [u, [f, /master.|lts./, ""]],
+            ],
+            cpu: [
+              [/(?:(amd|x(?:(?:86|64)[-_])?|wow|win)64)[;\)]/i],
+              [[h, "amd64"]],
+              [/(ia32(?=;))/i],
+              [[h, q]],
+              [/((?:i[346]|x)86)[;\)]/i],
+              [[h, "ia32"]],
+              [/\b(aarch64|arm(v?8e?l?|_?64))\b/i],
+              [[h, "arm64"]],
+              [/\b(arm(?:v[67])?ht?n?[fl]p?)\b/i],
+              [[h, "armhf"]],
+              [/windows (ce|mobile); ppc;/i],
+              [[h, "arm"]],
+              [/((?:ppc|powerpc)(?:64)?)(?: mac|;|\))/i],
+              [[h, /ower/, "", q]],
+              [/(sun4\w)[;\)]/i],
+              [[h, "sparc"]],
+              [
+                /((?:avr32|ia64(?=;))|68k(?=\))|\barm(?=v(?:[1-7]|[5-7]1)l?|;|eabi)|(?=atmel )avr|(?:irix|mips|sparc)(?:64)?\b|pa-risc)/i,
+              ],
+              [[h, q]],
+            ],
+            device: [
+              [
+                /\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i,
+              ],
+              [d, [_, U], [p, w]],
+              [
+                /\b((?:s[cgp]h|gt|sm)-\w+|sc[g-]?[\d]+a?|galaxy nexus)/i,
+                /samsung[- ]([-\w]+)/i,
+                /sec-(sgh\w+)/i,
+              ],
+              [d, [_, U], [p, g]],
+              [/(?:\/|\()(ip(?:hone|od)[\w, ]*)(?:\/|;)/i],
+              [d, [_, k], [p, g]],
+              [
+                /\((ipad);[-\w\),; ]+apple/i,
+                /applecoremedia\/[\w\.]+ \((ipad)/i,
+                /\b(ipad)\d\d?,\d\d?[;\]].+ios/i,
+              ],
+              [d, [_, k], [p, w]],
+              [/(macintosh);/i],
+              [d, [_, k]],
+              [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
+              [d, [_, G], [p, g]],
+              [/\b((?:ag[rs][23]?|bah2?|sht?|btv)-a?[lw]\d{2})\b(?!.+d\/s)/i],
+              [d, [_, B], [p, w]],
+              [
+                /(?:huawei|honor)([-\w ]+)[;\)]/i,
+                /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i,
+              ],
+              [d, [_, B], [p, g]],
+              [
+                /\b(poco[\w ]+|m2\d{3}j\d\d[a-z]{2})(?: bui|\))/i,
+                /\b; (\w+) build\/hm\1/i,
+                /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i,
+                /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i,
+                /oid[^\)]+; (m?[12][0-389][01]\w{3,6}[c-y])( bui|; wv|\))/i,
+                /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max|cc)?[_ ]?(?:\d?\w?)[_ ]?(?:plus|se|lite)?)(?: bui|\))/i,
+              ],
+              [
+                [d, /_/g, " "],
+                [_, M],
+                [p, g],
+              ],
+              [
+                /oid[^\)]+; (2\d{4}(283|rpbf)[cgl])( bui|\))/i,
+                /\b(mi[-_ ]?(?:pad)(?:[\w_ ]+))(?: bui|\))/i,
+              ],
+              [
+                [d, /_/g, " "],
+                [_, M],
+                [p, w],
+              ],
+              [
+                /; (\w+) bui.+ oppo/i,
+                /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i,
+              ],
+              [d, [_, "OPPO"], [p, g]],
+              [/\b(opd2\d{3}a?) bui/i],
+              [d, [_, "OPPO"], [p, w]],
+              [/vivo (\w+)(?: bui|\))/i, /\b(v[12]\d{3}\w?[at])(?: bui|;)/i],
+              [d, [_, "Vivo"], [p, g]],
+              [/\b(rmx[1-3]\d{3})(?: bui|;|\))/i],
+              [d, [_, "Realme"], [p, g]],
+              [
+                /\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i,
+                /\bmot(?:orola)?[- ](\w*)/i,
+                /((?:moto[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i,
+              ],
+              [d, [_, R], [p, g]],
+              [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
+              [d, [_, R], [p, w]],
+              [/((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
+              [d, [_, I], [p, w]],
+              [
+                /(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i,
+                /\blg[-e;\/ ]+((?!browser|netcast|android tv)\w+)/i,
+                /\blg-?([\d\w]+) bui/i,
+              ],
+              [d, [_, I], [p, g]],
+              [
+                /(ideatab[-\w ]+)/i,
+                /lenovo ?(s[56]000[-\w]+|tab(?:[\w ]+)|yt[-\d\w]{6}|tb[-\d\w]{6})/i,
+              ],
+              [d, [_, "Lenovo"], [p, w]],
+              [/(?:maemo|nokia).*(n900|lumia \d+)/i, /nokia[-_ ]?([-\w\.]*)/i],
+              [
+                [d, /_/g, " "],
+                [_, "Nokia"],
+                [p, g],
+              ],
+              [/(pixel c)\b/i],
+              [d, [_, D], [p, w]],
+              [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
+              [d, [_, D], [p, g]],
+              [
+                /droid.+ (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i,
+              ],
+              [d, [_, Q], [p, g]],
+              [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
+              [
+                [d, "Xperia Tablet"],
+                [_, Q],
+                [p, w],
+              ],
+              [
+                / (kb2005|in20[12]5|be20[12][59])\b/i,
+                /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i,
+              ],
+              [d, [_, "OnePlus"], [p, g]],
+              [
+                /(alexa)webm/i,
+                /(kf[a-z]{2}wi|aeo[c-r]{2})( bui|\))/i,
+                /(kf[a-z]+)( bui|\)).+silk\//i,
+              ],
+              [d, [_, y], [p, w]],
+              [/((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i],
+              [
+                [d, /(.+)/g, "Fire Phone $1"],
+                [_, y],
+                [p, g],
+              ],
+              [/(playbook);[-\w\),; ]+(rim)/i],
+              [d, _, [p, w]],
+              [/\b((?:bb[a-f]|st[hv])100-\d)/i, /\(bb10; (\w+)/i],
+              [d, [_, N], [p, g]],
+              [
+                /(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i,
+              ],
+              [d, [_, P], [p, w]],
+              [/ (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i],
+              [d, [_, P], [p, g]],
+              [/(nexus 9)/i],
+              [d, [_, "HTC"], [p, w]],
+              [
+                /(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i,
+                /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i,
+                /(alcatel|geeksphone|nexian|panasonic(?!(?:;|\.))|sony(?!-bra))[-_ ]?([-\w]*)/i,
+              ],
+              [_, [d, /_/g, " "], [p, g]],
+              [/droid.+; ([ab][1-7]-?[0178a]\d\d?)/i],
+              [d, [_, "Acer"], [p, w]],
+              [/droid.+; (m[1-5] note) bui/i, /\bmz-([-\w]{2,})/i],
+              [d, [_, "Meizu"], [p, g]],
+              [/; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i],
+              [d, [_, "Ulefone"], [p, g]],
+              [
+                /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus|dell|meizu|motorola|polytron|infinix|tecno)[-_ ]?([-\w]*)/i,
+                /(hp) ([\w ]+\w)/i,
+                /(asus)-?(\w+)/i,
+                /(microsoft); (lumia[\w ]+)/i,
+                /(lenovo)[-_ ]?([-\w]+)/i,
+                /(jolla)/i,
+                /(oppo) ?([\w ]+) bui/i,
+              ],
+              [_, d, [p, g]],
+              [
+                /(kobo)\s(ereader|touch)/i,
+                /(archos) (gamepad2?)/i,
+                /(hp).+(touchpad(?!.+tablet)|tablet)/i,
+                /(kindle)\/([\w\.]+)/i,
+                /(nook)[\w ]+build\/(\w+)/i,
+                /(dell) (strea[kpr\d ]*[\dko])/i,
+                /(le[- ]+pan)[- ]+(\w{1,9}) bui/i,
+                /(trinity)[- ]*(t\d{3}) bui/i,
+                /(gigaset)[- ]+(q\w{1,9}) bui/i,
+                /(vodafone) ([\w ]+)(?:\)| bui)/i,
+              ],
+              [_, d, [p, w]],
+              [/(surface duo)/i],
+              [d, [_, x], [p, w]],
+              [/droid [\d\.]+; (fp\du?)(?: b|\))/i],
+              [d, [_, "Fairphone"], [p, g]],
+              [/(u304aa)/i],
+              [d, [_, "AT&T"], [p, g]],
+              [/\bsie-(\w*)/i],
+              [d, [_, "Siemens"], [p, g]],
+              [/\b(rct\w+) b/i],
+              [d, [_, "RCA"], [p, w]],
+              [/\b(venue[\d ]{2,7}) b/i],
+              [d, [_, "Dell"], [p, w]],
+              [/\b(q(?:mv|ta)\w+) b/i],
+              [d, [_, "Verizon"], [p, w]],
+              [/\b(?:barnes[& ]+noble |bn[rt])([\w\+ ]*) b/i],
+              [d, [_, "Barnes & Noble"], [p, w]],
+              [/\b(tm\d{3}\w+) b/i],
+              [d, [_, "NuVision"], [p, w]],
+              [/\b(k88) b/i],
+              [d, [_, "ZTE"], [p, w]],
+              [/\b(nx\d{3}j) b/i],
+              [d, [_, "ZTE"], [p, g]],
+              [/\b(gen\d{3}) b.+49h/i],
+              [d, [_, "Swiss"], [p, g]],
+              [/\b(zur\d{3}) b/i],
+              [d, [_, "Swiss"], [p, w]],
+              [/\b((zeki)?tb.*\b) b/i],
+              [d, [_, "Zeki"], [p, w]],
+              [/\b([yr]\d{2}) b/i, /\b(dragon[- ]+touch |dt)(\w{5}) b/i],
+              [[_, "Dragon Touch"], d, [p, w]],
+              [/\b(ns-?\w{0,9}) b/i],
+              [d, [_, "Insignia"], [p, w]],
+              [/\b((nxa|next)-?\w{0,9}) b/i],
+              [d, [_, "NextBook"], [p, w]],
+              [/\b(xtreme\_)?(v(1[045]|2[015]|[3469]0|7[05])) b/i],
+              [[_, "Voice"], d, [p, g]],
+              [/\b(lvtel\-)?(v1[12]) b/i],
+              [[_, "LvTel"], d, [p, g]],
+              [/\b(ph-1) /i],
+              [d, [_, "Essential"], [p, g]],
+              [/\b(v(100md|700na|7011|917g).*\b) b/i],
+              [d, [_, "Envizen"], [p, w]],
+              [/\b(trio[-\w\. ]+) b/i],
+              [d, [_, "MachSpeed"], [p, w]],
+              [/\btu_(1491) b/i],
+              [d, [_, "Rotor"], [p, w]],
+              [/(shield[\w ]+) b/i],
+              [d, [_, "Nvidia"], [p, w]],
+              [/(sprint) (\w+)/i],
+              [_, d, [p, g]],
+              [/(kin\.[onetw]{3})/i],
+              [
+                [d, /\./g, " "],
+                [_, x],
+                [p, g],
+              ],
+              [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
+              [d, [_, H], [p, w]],
+              [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
+              [d, [_, H], [p, g]],
+              [/smart-tv.+(samsung)/i],
+              [_, [p, b]],
+              [/hbbtv.+maple;(\d+)/i],
+              [
+                [d, /^/, "SmartTV"],
+                [_, U],
+                [p, b],
+              ],
+              [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
+              [
+                [_, I],
+                [p, b],
+              ],
+              [/(apple) ?tv/i],
+              [_, [d, k + " TV"], [p, b]],
+              [/crkey/i],
+              [
+                [d, T + "cast"],
+                [_, D],
+                [p, b],
+              ],
+              [/droid.+aft(\w+)( bui|\))/i],
+              [d, [_, y], [p, b]],
+              [/\(dtv[\);].+(aquos)/i, /(aquos-tv[\w ]+)\)/i],
+              [d, [_, G], [p, b]],
+              [/(bravia[\w ]+)( bui|\))/i],
+              [d, [_, Q], [p, b]],
+              [/(mitv-\w{5}) bui/i],
+              [d, [_, M], [p, b]],
+              [/Hbbtv.*(technisat) (.*);/i],
+              [_, d, [p, b]],
+              [
+                /\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i,
+                /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i,
+              ],
+              [
+                [_, W],
+                [d, W],
+                [p, b],
+              ],
+              [/\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i],
+              [[p, b]],
+              [/(ouya)/i, /(nintendo) ([wids3utch]+)/i],
+              [_, d, [p, v]],
+              [/droid.+; (shield) bui/i],
+              [d, [_, "Nvidia"], [p, v]],
+              [/(playstation [345portablevi]+)/i],
+              [d, [_, Q], [p, v]],
+              [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
+              [d, [_, x], [p, v]],
+              [/((pebble))app/i],
+              [_, d, [p, A]],
+              [/(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i],
+              [d, [_, k], [p, A]],
+              [/droid.+; (glass) \d/i],
+              [d, [_, D], [p, A]],
+              [/droid.+; (wt63?0{2,3})\)/i],
+              [d, [_, H], [p, A]],
+              [/(quest( \d| pro)?)/i],
+              [d, [_, F], [p, A]],
+              [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
+              [_, [p, E]],
+              [/(aeobc)\b/i],
+              [d, [_, y], [p, E]],
+              [
+                /droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew).+? mobile safari/i,
+              ],
+              [d, [p, g]],
+              [/droid .+?; ([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i],
+              [d, [p, w]],
+              [/\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i],
+              [[p, w]],
+              [
+                /(phone|mobile(?:[;\/]| [ \w\/\.]*safari)|pda(?=.+windows ce))/i,
+              ],
+              [[p, g]],
+              [/(android[-\w\. ]{0,9});.+buil/i],
+              [d, [_, "Generic"]],
+            ],
+            engine: [
+              [/windows.+ edge\/([\w\.]+)/i],
+              [f, [u, "EdgeHTML"]],
+              [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i],
+              [f, [u, "Blink"]],
+              [
+                /(presto)\/([\w\.]+)/i,
+                /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna)\/([\w\.]+)/i,
+                /ekioh(flow)\/([\w\.]+)/i,
+                /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i,
+                /(icab)[\/ ]([23]\.[\d\.]+)/i,
+                /\b(libweb)/i,
+              ],
+              [u, f],
+              [/rv\:([\w\.]{1,9})\b.+(gecko)/i],
+              [f, u],
+            ],
+            os: [
+              [/microsoft (windows) (vista|xp)/i],
+              [u, f],
+              [/(windows (?:phone(?: os)?|mobile))[\/ ]?([\d\.\w ]*)/i],
+              [u, [f, X, J]],
+              [
+                /windows nt 6\.2; (arm)/i,
+                /windows[\/ ]?([ntce\d\. ]+\w)(?!.+xbox)/i,
+                /(?:win(?=3|9|n)|win 9x )([nt\d\.]+)/i,
+              ],
+              [
+                [f, X, J],
+                [u, "Windows"],
+              ],
+              [
+                /ip[honead]{2,4}\b(?:.*os ([\w]+) like mac|; opera)/i,
+                /(?:ios;fbsv\/|iphone.+ios[\/ ])([\d\.]+)/i,
+                /cfnetwork\/.+darwin/i,
+              ],
+              [
+                [f, /_/g, "."],
+                [u, "iOS"],
+              ],
+              [
+                /(mac os x) ?([\w\. ]*)/i,
+                /(macintosh|mac_powerpc\b)(?!.+haiku)/i,
+              ],
+              [
+                [u, K],
+                [f, /_/g, "."],
+              ],
+              [/droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i],
+              [f, u],
+              [
+                /(android|webos|qnx|bada|rim tablet os|maemo|meego|sailfish)[-\/ ]?([\w\.]*)/i,
+                /(blackberry)\w*\/([\w\.]*)/i,
+                /(tizen|kaios)[\/ ]([\w\.]+)/i,
+                /\((series40);/i,
+              ],
+              [u, f],
+              [/\(bb(10);/i],
+              [f, [u, N]],
+              [/(?:symbian ?os|symbos|s60(?=;)|series60)[-\/ ]?([\w\.]*)/i],
+              [f, [u, "Symbian"]],
+              [
+                /mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i,
+              ],
+              [f, [u, C + " OS"]],
+              [/web0s;.+rt(tv)/i, /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i],
+              [f, [u, "webOS"]],
+              [/watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i],
+              [f, [u, "watchOS"]],
+              [/crkey\/([\d\.]+)/i],
+              [f, [u, T + "cast"]],
+              [/(cros) [\w]+(?:\)| ([\w\.]+)\b)/i],
+              [[u, L], f],
+              [
+                /panasonic;(viera)/i,
+                /(netrange)mmh/i,
+                /(nettv)\/(\d+\.[\w\.]+)/i,
+                /(nintendo|playstation) ([wids345portablevuch]+)/i,
+                /(xbox); +xbox ([^\);]+)/i,
+                /\b(joli|palm)\b ?(?:os)?\/?([\w\.]*)/i,
+                /(mint)[\/\(\) ]?(\w*)/i,
+                /(mageia|vectorlinux)[; ]/i,
+                /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki|deepin|manjaro|elementary os|sabayon|linspire)(?: gnu\/linux)?(?: enterprise)?(?:[- ]linux)?(?:-gnu)?[-\/ ]?(?!chrom|package)([-\w\.]*)/i,
+                /(hurd|linux) ?([\w\.]*)/i,
+                /(gnu) ?([\w\.]*)/i,
+                /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i,
+                /(haiku) (\w+)/i,
+              ],
+              [u, f],
+              [/(sunos) ?([\w\.\d]*)/i],
+              [[u, "Solaris"], f],
+              [
+                /((?:open)?solaris)[-\/ ]?([\w\.]*)/i,
+                /(aix) ((\d)(?=\.|\)| )[\w\.])*/i,
+                /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux|serenityos)/i,
+                /(unix) ?([\w\.]*)/i,
+              ],
+              [u, f],
+            ],
+          },
+          Z = function (e, t) {
+            if ((typeof e === c && ((t = e), (e = n)), !(this instanceof Z)))
+              return new Z(e, t).getResult();
+            var i = typeof r !== o && r.navigator ? r.navigator : n,
+              a = e || (i && i.userAgent ? i.userAgent : ""),
+              v = i && i.userAgentData ? i.userAgentData : n,
+              b = t
+                ? (function (e, t) {
+                    var i = {};
+                    for (var a in e)
+                      t[a] && t[a].length % 2 == 0
+                        ? (i[a] = t[a].concat(e[a]))
+                        : (i[a] = e[a]);
+                    return i;
+                  })(Y, t)
+                : Y,
+              A = i && i.userAgent == a;
+            return (
+              (this.getBrowser = function () {
+                var e,
+                  t = {};
+                return (
+                  (t[u] = n),
+                  (t[f] = n),
+                  V.call(t, a, b.browser),
+                  (t[m] =
+                    typeof (e = t[f]) === l
+                      ? e.replace(/[^\d\.]/g, "").split(".")[0]
+                      : n),
+                  A &&
+                    i &&
+                    i.brave &&
+                    typeof i.brave.isBrave == s &&
+                    (t[u] = "Brave"),
+                  t
+                );
+              }),
+              (this.getCPU = function () {
+                var e = {};
+                return (e[h] = n), V.call(e, a, b.cpu), e;
+              }),
+              (this.getDevice = function () {
+                var e = {};
+                return (
+                  (e[_] = n),
+                  (e[d] = n),
+                  (e[p] = n),
+                  V.call(e, a, b.device),
+                  A && !e[p] && v && v.mobile && (e[p] = g),
+                  A &&
+                    "Macintosh" == e[d] &&
+                    i &&
+                    typeof i.standalone !== o &&
+                    i.maxTouchPoints &&
+                    i.maxTouchPoints > 2 &&
+                    ((e[d] = "iPad"), (e[p] = w)),
+                  e
+                );
+              }),
+              (this.getEngine = function () {
+                var e = {};
+                return (e[u] = n), (e[f] = n), V.call(e, a, b.engine), e;
+              }),
+              (this.getOS = function () {
+                var e = {};
+                return (
+                  (e[u] = n),
+                  (e[f] = n),
+                  V.call(e, a, b.os),
+                  A &&
+                    !e[u] &&
+                    v &&
+                    v.platform &&
+                    "Unknown" != v.platform &&
+                    (e[u] = v.platform
+                      .replace(/chrome os/i, L)
+                      .replace(/macos/i, K)),
+                  e
+                );
+              }),
+              (this.getResult = function () {
+                return {
+                  ua: this.getUA(),
+                  browser: this.getBrowser(),
+                  engine: this.getEngine(),
+                  os: this.getOS(),
+                  device: this.getDevice(),
+                  cpu: this.getCPU(),
+                };
+              }),
+              (this.getUA = function () {
+                return a;
+              }),
+              (this.setUA = function (e) {
+                return (
+                  (a = typeof e === l && e.length > 500 ? W(e, 500) : e), this
+                );
+              }),
+              this.setUA(a),
+              this
+            );
+          };
+        (Z.VERSION = "1.0.38"),
+          (Z.BROWSER = O([u, f, m])),
+          (Z.CPU = O([h])),
+          (Z.DEVICE = O([d, _, p, v, g, b, w, A, E])),
+          (Z.ENGINE = Z.OS = O([u, f])),
+          typeof t !== o
+            ? (e.exports && (t = e.exports = Z), (t.UAParser = Z))
+            : i.amdO
+              ? (a = function () {
+                  return Z;
+                }.call(t, i, t, e)) === n || (e.exports = a)
+              : typeof r !== o && (r.UAParser = Z);
+        var $ = typeof r !== o && (r.jQuery || r.Zepto);
+        if ($ && !$.ua) {
+          var ee = new Z();
+          ($.ua = ee.getResult()),
+            ($.ua.get = function () {
+              return ee.getUA();
+            }),
+            ($.ua.set = function (e) {
+              ee.setUA(e);
+              var t = ee.getResult();
+              for (var i in t) $.ua[i] = t[i];
+            });
+        }
+      })("object" == typeof window ? window : this);
+    },
+    55909: (e, t, i) => {
       "use strict";
-      a.d(t, { u: () => l });
-      var n = a(90626),
-        r = a(71513),
-        i = a(93007),
-        s = a(56093),
-        c = a(78327),
-        o = a(61712);
+      i.d(t, { u: () => l });
+      var a = i(90626),
+        r = i(71513),
+        n = i(93007),
+        s = i(56093),
+        o = i(78327),
+        c = i(61712);
       function l(e) {
-        const { children: t, navTreeRef: a, ...l } = e,
-          m = n.useRef(),
-          _ = (0, s.Ue)(m, a),
-          u = (0, c.Qn)(),
+        const { children: t, navTreeRef: i, ...l } = e,
+          m = a.useRef(),
+          d = (0, s.Ue)(m, i),
+          u = (0, o.Qn)(),
           p = window.__virtual_keyboard_client;
         if (u) {
           const e = window.__nav_tree_root;
-          return n.createElement(
+          return a.createElement(
             r.B2,
-            { ...l, navTreeRef: _, secondary: !0, parentEmbeddedNavTree: e },
-            n.createElement(
-              o.F6,
+            { ...l, navTreeRef: d, secondary: !0, parentEmbeddedNavTree: e },
+            a.createElement(
+              c.F6,
               { factory: p },
-              n.createElement(i.q, null, t),
+              a.createElement(n.q, null, t),
             ),
           );
         }
-        return n.createElement(n.Fragment, null, t);
+        return a.createElement(a.Fragment, null, t);
       }
     },
-    1035: (e, t, a) => {
+    1035: (e, t, i) => {
       "use strict";
-      a.d(t, { Ul: () => f, xz: () => g, $Y: () => h, i8: () => A });
-      var n = a(34629),
-        r = a(90626),
-        i = a(75844),
-        s = a(10622),
-        c = a(52038),
-        o = a(78327),
-        l = a(3088);
+      i.d(t, { Ul: () => f, xz: () => g, $Y: () => v, i8: () => h });
+      var a = i(34629),
+        r = i(90626),
+        n = i(75844),
+        s = i(10622),
+        o = i(52038),
+        c = i(78327),
+        l = i(3088);
       const m =
           "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD//gA7Q1JFQVRPUjogZ2QtanBlZyB2MS4wICh1c2luZyBJSkcgSlBFRyB2NjIpLCBxdWFsaXR5ID0gODAK/9sAQwAGBAUGBQQGBgUGBwcGCAoQCgoJCQoUDg8MEBcUGBgXFBYWGh0lHxobIxwWFiAsICMmJykqKRkfLTAtKDAlKCko/9sAQwEHBwcKCAoTCgoTKBoWGigoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo/8AAEQgAQABAAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A8Inmk8+T94/3j/EfWmedJ/z0f/vo0T/6+T/eP86ZQA/zpP8Ano//AH0aPOk/56P/AN9GmVo6Loeq65M0Wj6ddXrr94QRF9v1I6fjQBR86T/no/8A30aPOk/56P8A99GtHW/Dus6GV/tjS7yyD8K00RVW+h6GsugB/nSf89H/AO+jT4JpPPj/AHj/AHh/EfWoafB/r4/94fzoAJ/9fJ/vH+dMp8/+vk/3j/OmUAXdE099W1mw06Jgsl3PHApPYswUH9a+qPF3iHSPhF4S0+003TxK0hMcEAbZvIA3SO2OvIz6k18nW88ttcRz28jxTRMHSRGKsrA5BBHQg1b1TWdT1fy/7V1G8vfLzs+0TNJtz1xknHQUAfUXw+8c6Z8UdN1HS9V0xIpUTM1s7eYkiE43KcAgg/lxg180+NtEHhzxZqmkqxdLWcojHqUPK598EV9CfBbwpF4G8J3fiLxA4trm5hEsnmceRCOQD/tHqR9B1r568a63/wAJH4r1TVghRLqYuinqE6KD74AoAxafB/r4/wDeH86ZT4P9fH/vD+dABP8A6+T/AHj/ADplPn/18n+8f50ygArt/gtpltq/xK0e2vYxJArPMUYZDFEZhn2yBXEV0/w203VNX8YWdloOoHTtQkWQx3IZl2gISeV55AI/GgD1H9pvxPdi/s/DcDGOz8pbqfHWRizBQfYbc/U+1eD12PxW0fWtE8Tpa+I9UOqXpt0cTl2bCEthctz1B/OuOoAKfB/r4/8AeH86ZT4P9fH/ALw/nQAT/wCvk/3j/OmVNPDJ58n7t/vH+E+tM8mT/nm//fJoAZV7Q9Xv9C1KLUNJuGtryMEJIoBIyCD1BHQmqnkyf883/wC+TR5Mn/PN/wDvk0AaHiHXtT8RX4vdau2u7oIIxIygHaCSBwB6msyn+TJ/zzf/AL5NHkyf883/AO+TQAynwf6+P/eH86PJk/55v/3yafBDJ58f7t/vD+E+tAH/2Q==",
-        _ =
-          a.p +
+        d =
+          i.p +
           "images/applications/store/avatar_default_full.jpg?v=valveisgoodatcaching";
-      var u = a(43047),
-        p = a.n(u),
-        d = a(81393);
+      var u = i(43047),
+        p = i.n(u),
+        _ = i(81393);
       const f = r.memo(function (e) {
         const {
             strAvatarURL: t,
-            size: a = "Medium",
-            className: n,
-            statusStyle: i,
+            size: i = "Medium",
+            className: a,
+            statusStyle: n,
             statusPosition: s,
-            children: o,
+            children: c,
             ...u
           } = e,
           f = r.useMemo(() => {
@@ -154,52 +970,52 @@
                     case "Large":
                     case "X-Large":
                     case "FillArea":
-                      return _;
+                      return d;
                     default:
-                      return (0, d.z)(e, `Unhandled size ${e}`), m;
+                      return (0, _.z)(e, `Unhandled size ${e}`), m;
                   }
-                })(a),
+                })(i),
               ),
               e
             );
-          }, [t, a]);
+          }, [t, i]);
         return r.createElement(
           "div",
           {
-            className: (0, c.A)(
+            className: (0, o.A)(
               p().avatarHolder,
               "avatarHolder",
               "no-drag",
+              i,
               a,
-              n,
             ),
             ...u,
           },
           r.createElement("div", {
-            className: (0, c.A)(p().avatarStatus, "avatarStatus", s),
-            style: i,
+            className: (0, o.A)(p().avatarStatus, "avatarStatus", s),
+            style: n,
           }),
           r.createElement(l.c, {
-            className: (0, c.A)(p().avatar, "avatar"),
+            className: (0, o.A)(p().avatar, "avatar"),
             rgSources: f,
             draggable: !1,
           }),
-          o,
+          c,
         );
       });
-      let A = class extends r.Component {
+      let h = class extends r.Component {
         render() {
           const {
             persona: e,
             size: t = "Medium",
-            animatedAvatar: a,
-            className: n,
-            ...i
+            animatedAvatar: i,
+            className: a,
+            ...n
           } = this.props;
           let l = "";
           return (
-            a && a.image_small && 0 != a.image_small.length
-              ? (l = o.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + a.image_small)
+            i && i.image_small && 0 != i.image_small.length
+              ? (l = c.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + i.image_small)
               : e &&
                 ((l = e.avatar_url_medium),
                 "Small" == t || "X-Small" == t
@@ -209,24 +1025,24 @@
             r.createElement(f, {
               strAvatarURL: l,
               size: t,
-              className: (0, c.A)((0, s.rO)(e), n),
-              ...i,
+              className: (0, o.A)((0, s.rO)(e), a),
+              ...n,
             })
           );
         }
       };
-      A = (0, n.Cg)([i.PA], A);
-      const h = (0, i.PA)((e) => {
-        const { profileItem: t, className: a, bDisableAnimation: n, ...i } = e;
+      h = (0, a.Cg)([n.PA], h);
+      const v = (0, n.PA)((e) => {
+        const { profileItem: t, className: i, bDisableAnimation: a, ...n } = e;
         if (!t || !t.image_small || 0 == t.image_small.length) return null;
-        let s = n ? t.image_large : t.image_small;
+        let s = a ? t.image_large : t.image_small;
         return (
           s || (s = t.image_small),
           s.startsWith("https://") ||
-            (s = o.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + s),
+            (s = c.TS.MEDIA_CDN_COMMUNITY_URL + "images/" + s),
           r.createElement(
             "div",
-            { className: (0, c.A)(p().avatarFrame, a, "avatarFrame"), ...i },
+            { className: (0, o.A)(p().avatarFrame, i, "avatarFrame"), ...n },
             r.createElement("img", { className: p().avatarFrameImg, src: s }),
           )
         );
@@ -289,15 +1105,15 @@
           let {
             loopDuration: e,
             animatedAvatar: t,
-            avatarFrame: a,
-            children: n,
-            style: i,
+            avatarFrame: i,
+            children: a,
+            style: n,
             bLimitProfileFrameAnimationTime: s,
-            bParentHovered: c,
-            ...o
+            bParentHovered: o,
+            ...c
           } = this.props;
           return (
-            o.onClick && (i = { ...i, cursor: "pointer" }),
+            c.onClick && (n = { ...n, cursor: "pointer" }),
             this.state.bAnimate || (t = null),
             r.createElement(
               "div",
@@ -309,11 +1125,11 @@
                 onMouseLeave: () => this.SetupAnimationTimer(),
               },
               r.createElement(
-                A,
-                { animatedAvatar: t, ...o },
-                n,
-                r.createElement(h, {
-                  profileItem: a,
+                h,
+                { animatedAvatar: t, ...c },
+                a,
+                r.createElement(v, {
+                  profileItem: i,
                   bDisableAnimation: s && !this.state.bAnimate,
                 }),
               ),
@@ -321,14 +1137,14 @@
           );
         }
       };
-      g = (0, n.Cg)([i.PA], g);
+      g = (0, a.Cg)([n.PA], g);
     },
-    3088: (e, t, a) => {
+    3088: (e, t, i) => {
       "use strict";
-      a.d(t, { c: () => s });
-      var n = a(34629),
-        r = a(90626),
-        i = a(56093);
+      i.d(t, { c: () => s });
+      var a = i(34629),
+        r = i(90626),
+        n = i(56093);
       class s extends r.Component {
         m_refImage = r.createRef();
         constructor(e) {
@@ -375,32 +1191,32 @@
           const {
               rgSources: e,
               onIncrementalError: t,
-              onError: a,
-              ...n
+              onError: i,
+              ...a
             } = this.props,
-            i = this.src;
+            n = this.src;
           return r.createElement("img", {
             ref: this.m_refImage,
-            ...n,
-            src: i,
+            ...a,
+            src: n,
             onError: this.OnImageError,
           });
         }
       }
-      (0, n.Cg)([i.oI], s.prototype, "OnImageError", null);
+      (0, a.Cg)([n.oI], s.prototype, "OnImageError", null);
     },
-    95306: (e, t, a) => {
+    95306: (e, t, i) => {
       "use strict";
-      a.r(t), a.d(t, { AccountPreferencesRoutes: () => Ne, default: () => Se });
-      var n = a(90626),
-        r = a(92757),
-        i = a(34629),
-        s = a(14947),
-        c = (a(68797), a(78327)),
-        o = a(41735),
-        l = a.n(o),
-        m = a(61859);
-      class _ {
+      i.r(t), i.d(t, { AccountPreferencesRoutes: () => Pe, default: () => Ne });
+      var a = i(90626),
+        r = i(92757),
+        n = i(34629),
+        s = i(14947),
+        o = (i(68797), i(78327)),
+        c = i(41735),
+        l = i.n(c),
+        m = i(61859);
+      class d {
         m_Preferences = void 0;
         constructor(e) {
           (0, s.Gn)(this),
@@ -515,20 +1331,20 @@
           (this.m_Preferences.preference_state = 3), this.PostCookieSettings();
         }
         async PostCookieSettings() {
-          const e = c.TS.STORE_BASE_URL + "account/ajaxsetcookiepreferences",
+          const e = o.TS.STORE_BASE_URL + "account/ajaxsetcookiepreferences",
             t = new FormData();
-          t.set("sessionid", c.TS.SESSIONID),
+          t.set("sessionid", o.TS.SESSIONID),
             t.append("cookiepreferences", JSON.stringify(this.m_Preferences));
           try {
-            let a = await l().post(e, t, { withCredentials: !0 });
-            if (200 != a.status || 1 != a?.data?.success)
+            let i = await l().post(e, t, { withCredentials: !0 });
+            if (200 != i.status || 1 != i?.data?.success)
               window.ShowAlertDialog(
                 (0, m.we)("#CookiePref_Error"),
                 (0, m.we)("#CookiePref_ErrorNotSaved"),
               );
-            else if (1 == a?.data?.success) {
+            else if (1 == i?.data?.success) {
               0;
-              const { transfer_urls: e, transfer_params: t } = a.data;
+              const { transfer_urls: e, transfer_params: t } = i.data;
               e && t && this.TransferCookiePreferencesToSites(e, t);
             }
           } catch (e) {
@@ -540,270 +1356,270 @@
           }
         }
         TransferCookiePreferencesToSites(e, t) {
-          const a = new FormData();
-          a.set("transfer_params", t);
-          for (const t of e) l().post(t, a);
+          const i = new FormData();
+          i.set("transfer_params", t);
+          for (const t of e) l().post(t, i);
         }
       }
-      (0, i.Cg)([s.sH], _.prototype, "m_Preferences", void 0);
-      var u = a(75844),
-        p = a(7068),
-        d = a(72518),
-        f = a(52038),
-        A = a(32381),
-        h = a(25855),
-        g = a(55909),
-        v = a(71513);
-      let E;
-      const P = (0, u.PA)(() => {
+      (0, n.Cg)([s.sH], d.prototype, "m_Preferences", void 0);
+      var u = i(75844),
+        p = i(7068),
+        _ = i(72518),
+        f = i(52038),
+        h = i(32381),
+        v = i(25855),
+        g = i(55909),
+        w = i(71513);
+      let b;
+      const A = (0, u.PA)(() => {
           let e = (function () {
-            if (!E) {
-              let e = (0, c.Tc)("cookiepreferences", "application_config");
-              E = new _(e);
+            if (!b) {
+              let e = (0, o.Tc)("cookiepreferences", "application_config");
+              b = new d(e);
             }
-            return E;
+            return b;
           })();
-          const t = (0, h.A)(),
-            a = (0, n.useCallback)(() => {
+          const t = (0, v.A)(),
+            i = (0, a.useCallback)(() => {
               e.SetPreferenceState(1);
             }, [e]),
-            r = (0, n.useCallback)(() => {
+            r = (0, a.useCallback)(() => {
               e.SetPreferenceState(2);
             }, [e]);
-          return n.createElement(
+          return a.createElement(
             g.u,
             { navID: "StoreCookiesSettings", NavigationManager: t },
-            n.createElement(
+            a.createElement(
               "div",
               {
                 className: (0, f.A)(
-                  d.CookieSettingsHeader,
+                  _.CookieSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
-              n.createElement(
+              a.createElement(
                 "div",
                 null,
                 (0, m.we)("#CookiePref_OptionalCookies_Title"),
               ),
             ),
-            n.createElement(
+            a.createElement(
               "div",
               { className: "account_settings_container" },
-              n.createElement(
-                A.Z,
-                { "flow-children": "row", className: d.ButtonGroup },
-                n.createElement(
-                  v.ml,
+              a.createElement(
+                h.Z,
+                { "flow-children": "row", className: _.ButtonGroup },
+                a.createElement(
+                  w.ml,
                   {
                     className: (0, f.A)(
-                      d.AllButton,
-                      e.BIsRejectAll() ? d.ButtonHighlight : "",
+                      _.AllButton,
+                      e.BIsRejectAll() ? _.ButtonHighlight : "",
                     ),
                     onClick: r,
                   },
                   (0, m.we)("#CookiePref_RejectAll"),
                 ),
-                n.createElement(
-                  v.ml,
+                a.createElement(
+                  w.ml,
                   {
                     className: (0, f.A)(
-                      d.AllButton,
-                      e.BIsAllowAll() ? d.ButtonHighlight : "",
+                      _.AllButton,
+                      e.BIsAllowAll() ? _.ButtonHighlight : "",
                     ),
-                    onClick: a,
+                    onClick: i,
                   },
                   (0, m.we)("#CookiePref_AcceptAll"),
                 ),
               ),
-              n.createElement(y, { settings: e }),
-              n.createElement(N, { settings: e }),
-              n.createElement(S, { settings: e }),
+              a.createElement(E, { settings: e }),
+              a.createElement(y, { settings: e }),
+              a.createElement(k, { settings: e }),
             ),
-            n.createElement(
+            a.createElement(
               "div",
               {
                 className: (0, f.A)(
-                  d.CookieSettingsHeader,
+                  _.CookieSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
-              n.createElement(
+              a.createElement(
                 "div",
                 null,
                 (0, m.we)("#CookiePref_TechnicallyNeccesary_Title"),
               ),
             ),
-            n.createElement(
+            a.createElement(
               "div",
               { className: "account_settings_container" },
-              n.createElement(
+              a.createElement(
                 "p",
                 null,
                 (0, m.we)("#CookiePref_TechnicallyNeccesary_Desc"),
               ),
-              n.createElement(
+              a.createElement(
                 "div",
-                { className: d.CookieGroup },
-                n.createElement(
+                { className: _.CookieGroup },
+                a.createElement(
                   "div",
-                  { className: d.NecessaryGroup },
-                  n.createElement(
+                  { className: _.NecessaryGroup },
+                  a.createElement(
                     "span",
-                    { className: d.NecessaryTitle },
+                    { className: _.NecessaryTitle },
                     (0, m.we)("#CookiePref_SessionID_Title"),
                   ),
-                  n.createElement(
+                  a.createElement(
                     "span",
-                    { className: d.NecessaryDesc },
+                    { className: _.NecessaryDesc },
                     (0, m.we)("#CookiePref_SessionID_Desc"),
                   ),
                 ),
-                n.createElement(
+                a.createElement(
                   "div",
-                  { className: d.NecessaryGroup },
-                  n.createElement(
+                  { className: _.NecessaryGroup },
+                  a.createElement(
                     "span",
-                    { className: d.NecessaryTitle },
+                    { className: _.NecessaryTitle },
                     (0, m.we)("#CookiePref_ShoppingCart_Title"),
                   ),
-                  n.createElement(
+                  a.createElement(
                     "span",
-                    { className: d.NecessaryDesc },
+                    { className: _.NecessaryDesc },
                     (0, m.we)("#CookiePref_ShoppingCart_Desc"),
                   ),
                 ),
-                n.createElement(
+                a.createElement(
                   "div",
-                  { className: d.NecessaryGroup },
-                  n.createElement(
+                  { className: _.NecessaryGroup },
+                  a.createElement(
                     "span",
-                    { className: d.NecessaryTitle },
+                    { className: _.NecessaryTitle },
                     (0, m.we)("#CookiePref_SteamCountry_Title"),
                   ),
-                  n.createElement(
+                  a.createElement(
                     "span",
-                    { className: d.NecessaryDesc },
+                    { className: _.NecessaryDesc },
                     (0, m.we)("#CookiePref_SteamCountry_Desc"),
                   ),
                 ),
-                n.createElement(
+                a.createElement(
                   "div",
-                  { className: d.NecessaryGroup },
-                  n.createElement(
+                  { className: _.NecessaryGroup },
+                  a.createElement(
                     "span",
-                    { className: d.NecessaryTitle },
+                    { className: _.NecessaryTitle },
                     (0, m.we)("#CookiePref_Timezone_Title"),
                   ),
-                  n.createElement(
+                  a.createElement(
                     "span",
-                    { className: d.NecessaryDesc },
+                    { className: _.NecessaryDesc },
                     (0, m.we)("#CookiePref_Timezone_Desc"),
                   ),
                 ),
-                n.createElement(
+                a.createElement(
                   "div",
-                  { className: d.NecessaryGroup },
-                  n.createElement(
+                  { className: _.NecessaryGroup },
+                  a.createElement(
                     "span",
-                    { className: d.NecessaryTitle },
+                    { className: _.NecessaryTitle },
                     (0, m.we)("#CookiePref_BirthTime_Title"),
                   ),
-                  n.createElement(
+                  a.createElement(
                     "span",
-                    { className: d.NecessaryDesc },
+                    { className: _.NecessaryDesc },
                     (0, m.we)("#CookiePref_BirthTime_Desc"),
                   ),
                 ),
-                n.createElement(
+                a.createElement(
                   "div",
-                  { className: d.NecessaryGroup },
-                  n.createElement(
+                  { className: _.NecessaryGroup },
+                  a.createElement(
                     "span",
-                    { className: d.NecessaryTitle },
+                    { className: _.NecessaryTitle },
                     (0, m.we)("#CookiePref_Login_Title"),
                   ),
-                  n.createElement(
+                  a.createElement(
                     "span",
-                    { className: d.NecessaryDesc },
+                    { className: _.NecessaryDesc },
                     (0, m.we)("#CookiePref_Login_Desc"),
                   ),
                 ),
-                n.createElement(
+                a.createElement(
                   "div",
-                  { className: d.NecessaryGroup },
-                  n.createElement(
+                  { className: _.NecessaryGroup },
+                  a.createElement(
                     "span",
-                    { className: d.NecessaryTitle },
+                    { className: _.NecessaryTitle },
                     (0, m.we)("#CookiePref_Language_Title"),
                   ),
-                  n.createElement(
+                  a.createElement(
                     "span",
-                    { className: d.NecessaryDesc },
+                    { className: _.NecessaryDesc },
                     (0, m.we)("#CookiePref_Language_Desc"),
                   ),
                 ),
-                n.createElement(
+                a.createElement(
                   "div",
-                  { className: d.NecessaryGroup },
-                  n.createElement(
+                  { className: _.NecessaryGroup },
+                  a.createElement(
                     "span",
-                    { className: d.NecessaryTitle },
+                    { className: _.NecessaryTitle },
                     (0, m.we)("#CookiePref_CookieSettings_Title"),
                   ),
-                  n.createElement(
+                  a.createElement(
                     "span",
-                    { className: d.NecessaryDesc },
+                    { className: _.NecessaryDesc },
                     (0, m.we)("#CookiePref_CookieSettings_Desc"),
                   ),
                 ),
               ),
             ),
-            n.createElement(
+            a.createElement(
               "div",
               {
                 className: (0, f.A)(
-                  d.CookieSettingsHeader,
+                  _.CookieSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
-              n.createElement(
+              a.createElement(
                 "div",
                 null,
                 (0, m.we)("#PrivacySettings_Marketing_Header"),
               ),
             ),
-            n.createElement(
+            a.createElement(
               "div",
               { className: "account_settings_container" },
-              n.createElement(k, { settings: e }),
+              a.createElement(P, { settings: e }),
             ),
             null,
           );
         }),
-        y = (0, u.PA)((e) => {
+        E = (0, u.PA)((e) => {
           const { settings: t } = e,
-            a = (0, n.useCallback)(() => {
+            i = (0, a.useCallback)(() => {
               t.ToggleRecentApps();
             }, [t]);
-          return n.createElement(
+          return a.createElement(
             "div",
-            { className: d.CookieGroup },
-            n.createElement(
+            { className: _.CookieGroup },
+            a.createElement(
               "div",
-              { className: d.CookieSection },
-              n.createElement(
+              { className: _.CookieSection },
+              a.createElement(
                 "h2",
                 null,
                 (0, m.we)("#CookiePref_Content_Title"),
               ),
-              n.createElement(
+              a.createElement(
                 "p",
-                { className: d.SectionDescription },
+                { className: _.SectionDescription },
                 (0, m.we)("#CookiePref_Content_Desc"),
               ),
-              n.createElement(p.RF, {
-                onChange: a,
+              a.createElement(p.RF, {
+                onChange: i,
                 label: (0, m.we)("#CookiePref_Content_ToggleTitle"),
                 checked: t.GetRecentApps(),
                 description: (0, m.we)("#CookiePref_Content_ToggleDesc"),
@@ -811,29 +1627,29 @@
             ),
           );
         }),
-        N = (0, u.PA)((e) => {
+        y = (0, u.PA)((e) => {
           const { settings: t } = e,
-            a = (0, n.useCallback)(() => {
+            i = (0, a.useCallback)(() => {
               t.ToggleImpressions();
             }, [t]);
-          return n.createElement(
+          return a.createElement(
             "div",
-            { className: d.CookieGroup },
-            n.createElement(
+            { className: _.CookieGroup },
+            a.createElement(
               "div",
-              { className: d.CookieSection },
-              n.createElement(
+              { className: _.CookieSection },
+              a.createElement(
                 "h2",
                 null,
                 (0, m.we)("#CookiePref_ValveAnalytics_Title"),
               ),
-              n.createElement(
+              a.createElement(
                 "p",
-                { className: d.SectionDescription },
+                { className: _.SectionDescription },
                 (0, m.we)("#CookiePref_ValveAnalytics_Desc"),
               ),
-              n.createElement(p.RF, {
-                onChange: a,
+              a.createElement(p.RF, {
+                onChange: i,
                 label: (0, m.we)("#CookiePref_ValveAnalytics_ToggleTitle"),
                 checked: t.GetImpressions(),
                 description: (0, m.we)("#CookiePref_ValveAnalytics_ToggleDesc"),
@@ -841,40 +1657,40 @@
             ),
           );
         }),
-        S = (0, u.PA)((e) => {
+        k = (0, u.PA)((e) => {
           const { settings: t } = e,
-            a = (0, n.useCallback)(() => {
+            i = (0, a.useCallback)(() => {
               t.ToggleYouTube();
             }, [t]),
-            r = (0, n.useCallback)(() => {
+            r = (0, a.useCallback)(() => {
               t.ToggleVimeo();
             }, [t]),
-            i = (0, n.useCallback)(() => {
+            n = (0, a.useCallback)(() => {
               t.ToggleSketchfab();
             }, [t]);
-          return n.createElement(
+          return a.createElement(
             "div",
-            { className: d.CookieGroup },
-            n.createElement(
+            { className: _.CookieGroup },
+            a.createElement(
               "div",
-              { className: d.CookieSection },
-              n.createElement(
+              { className: _.CookieSection },
+              a.createElement(
                 "h2",
                 null,
                 (0, m.we)("#CookiePref_ThirdParty_Title"),
               ),
-              n.createElement(
+              a.createElement(
                 "p",
-                { className: d.SectionDescription },
+                { className: _.SectionDescription },
                 (0, m.we)("#CookiePref_ThirdParty_Desc"),
               ),
-              n.createElement(p.RF, {
-                onChange: a,
+              a.createElement(p.RF, {
+                onChange: i,
                 label: (0, m.we)("#CookiePref_YouTube_Title"),
                 checked: t.GetYouTube(),
                 description: (0, m.PP)(
                   "#CookiePref_YouTube_Desc",
-                  n.createElement(
+                  a.createElement(
                     "a",
                     {
                       href: "https://policies.google.com/privacy",
@@ -884,26 +1700,26 @@
                   ),
                 ),
               }),
-              n.createElement(p.RF, {
+              a.createElement(p.RF, {
                 onChange: r,
                 label: (0, m.we)("#CookiePref_Vimeo_Title"),
                 checked: t.GetVimeo(),
                 description: (0, m.PP)(
                   "#CookiePref_Vimeo_Desc",
-                  n.createElement(
+                  a.createElement(
                     "a",
                     { href: "https://vimeo.com/privacy", target: "_blank" },
                     (0, m.we)("#CookiePref_Vimeo_TogglePolicyName"),
                   ),
                 ),
               }),
-              n.createElement(p.RF, {
-                onChange: i,
+              a.createElement(p.RF, {
+                onChange: n,
                 label: (0, m.we)("#CookiePref_Sketchfab_Title"),
                 checked: t.GetSketchfab(),
                 description: (0, m.PP)(
                   "#CookiePref_Sketchfab_Desc",
-                  n.createElement(
+                  a.createElement(
                     "a",
                     { href: "https://sketchfab.com/privacy", target: "_blank" },
                     (0, m.we)("#CookiePref_Sketchfab_TogglePolicyName"),
@@ -913,29 +1729,29 @@
             ),
           );
         }),
-        k = (0, u.PA)((e) => {
+        P = (0, u.PA)((e) => {
           const { settings: t } = e,
-            a = (0, n.useCallback)(() => {
+            i = (0, a.useCallback)(() => {
               t.ToggleUTMEnabled();
             }, [t]);
-          return n.createElement(
+          return a.createElement(
             "div",
-            { className: d.CookieGroup },
-            n.createElement(
+            { className: _.CookieGroup },
+            a.createElement(
               "div",
-              { className: d.CookieSection },
-              n.createElement(
+              { className: _.CookieSection },
+              a.createElement(
                 "h2",
                 null,
                 (0, m.we)("#PrivacySettings_Marketing_Title"),
               ),
-              n.createElement(
+              a.createElement(
                 "p",
-                { className: d.SectionDescription },
+                { className: _.SectionDescription },
                 (0, m.we)("#PrivacySettings_Marketing_Desc"),
               ),
-              n.createElement(p.RF, {
-                onChange: a,
+              a.createElement(p.RF, {
+                onChange: i,
                 label: (0, m.we)("#PrivacySettings_UTM_ToggleLabel"),
                 checked: t.GetUTMEnabled(),
                 description: (0, m.we)("#PrivacySettings_UTM_ToggleDesc"),
@@ -943,7 +1759,7 @@
             ),
           );
         });
-      class T {
+      class N {
         m_Preferences = void 0;
         m_bUpdating = !1;
         constructor(e) {
@@ -957,28 +1773,28 @@
         }
         ToggleTargetPreference(e, t) {
           this.m_bUpdating = !0;
-          let a = !1;
-          for (let n of this.m_Preferences)
-            if (t.notification_type == n.notification_type) {
-              (n.notification_targets ^= e),
-                1 != (1 & n.notification_targets) &&
-                  (n.notification_targets = 0),
-                (a = !0);
+          let i = !1;
+          for (let a of this.m_Preferences)
+            if (t.notification_type == a.notification_type) {
+              (a.notification_targets ^= e),
+                1 != (1 & a.notification_targets) &&
+                  (a.notification_targets = 0),
+                (i = !0);
               break;
             }
-          a && this.PostNotificationSettings(), (this.m_bUpdating = !1);
+          i && this.PostNotificationSettings(), (this.m_bUpdating = !1);
         }
         async PostNotificationSettings() {
-          const e = c.TS.STORE_BASE_URL + "account/ajaxsetnotificationsettings",
+          const e = o.TS.STORE_BASE_URL + "account/ajaxsetnotificationsettings",
             t = new FormData();
-          t.set("sessionid", c.TS.SESSIONID),
+          t.set("sessionid", o.TS.SESSIONID),
             t.append(
               "notificationpreferences",
               JSON.stringify(this.m_Preferences),
             );
           try {
-            let a = await l().post(e, t, { withCredentials: !0 });
-            (200 == a.status && 1 == a?.data?.success) ||
+            let i = await l().post(e, t, { withCredentials: !0 });
+            (200 == i.status && 1 == i?.data?.success) ||
               window.ShowAlertDialog(
                 (0, m.we)("#NotificationPref_Error"),
                 (0, m.we)("#NotificationPref_ErrorNotSaved"),
@@ -992,137 +1808,137 @@
           }
         }
       }
-      (0, i.Cg)([s.sH], T.prototype, "m_Preferences", void 0),
-        (0, i.Cg)([s.sH], T.prototype, "m_bUpdating", void 0);
-      var w = a(6695),
-        C = a(4869);
-      let D;
-      function B() {
-        if (!D) {
-          let e = (0, c.Tc)("notificationpreferences", "application_config");
-          D = new T(e);
+      (0, n.Cg)([s.sH], N.prototype, "m_Preferences", void 0),
+        (0, n.Cg)([s.sH], N.prototype, "m_bUpdating", void 0);
+      var S = i(6695),
+        T = i(4869);
+      let C;
+      function D() {
+        if (!C) {
+          let e = (0, o.Tc)("notificationpreferences", "application_config");
+          C = new N(e);
         }
-        return D;
+        return C;
       }
-      const I = (0, u.PA)(() => {
-          let e = B();
-          const t = (0, h.A)();
-          let a = [];
+      const B = (0, u.PA)(() => {
+          let e = D();
+          const t = (0, v.A)();
+          let i = [];
           for (const t of e.GetPreferences())
-            a.push(n.createElement(b, { preferenceSetting: t }));
-          return n.createElement(
+            i.push(a.createElement(I, { preferenceSetting: t }));
+          return a.createElement(
             g.u,
             { navID: "StoreNotificationSettings", NavigationManager: t },
-            n.createElement(
+            a.createElement(
               "div",
               {
                 className: (0, f.A)(
-                  w.NotificationSettingsHeader,
+                  S.NotificationSettingsHeader,
                   "account_header_line noicon",
                 ),
               },
-              n.createElement(
+              a.createElement(
                 "div",
                 null,
                 (0, m.we)("#NotificationSettings_Title"),
               ),
             ),
-            n.createElement(
+            a.createElement(
               "div",
               { className: "account_settings_container" },
-              n.createElement(
+              a.createElement(
                 "p",
-                { className: w.SectionDescription },
+                { className: S.SectionDescription },
                 (0, m.we)("#NotificationSettings_Desc1"),
               ),
-              n.createElement(
+              a.createElement(
                 "p",
-                { className: w.SectionDescription },
+                { className: S.SectionDescription },
                 (0, m.we)("#NotificationSettings_Desc2"),
               ),
-              n.createElement(
+              a.createElement(
                 "div",
                 { className: "notification_settings_container" },
-                n.createElement(
+                a.createElement(
                   "div",
-                  { className: w.NotificationSendWhen },
+                  { className: S.NotificationSendWhen },
                   (0, m.we)("#NotificationSettings_SendMeWhen"),
                 ),
-                a,
+                i,
               ),
             ),
           );
         }),
-        b = (0, u.PA)((e) => {
+        I = (0, u.PA)((e) => {
           const { preferenceSetting: t } = e;
-          let a = B();
-          const r = (0, n.useCallback)(() => {
-              a.ToggleTargetPreference(1, t);
-            }, [t, a]),
-            i = (0, n.useCallback)(() => {
-              a.ToggleTargetPreference(8, t);
-            }, [t, a]),
-            s = (0, n.useCallback)(() => {
-              a.ToggleTargetPreference(2, t);
-            }, [t, a]),
-            [c, o] = (0, n.useState)(!1),
-            l = a.BUpdatingPreferences(),
-            _ = 1 == (1 & t.notification_targets),
+          let i = D();
+          const r = (0, a.useCallback)(() => {
+              i.ToggleTargetPreference(1, t);
+            }, [t, i]),
+            n = (0, a.useCallback)(() => {
+              i.ToggleTargetPreference(8, t);
+            }, [t, i]),
+            s = (0, a.useCallback)(() => {
+              i.ToggleTargetPreference(2, t);
+            }, [t, i]),
+            [o, c] = (0, a.useState)(!1),
+            l = i.BUpdatingPreferences(),
+            d = 1 == (1 & t.notification_targets),
             u = 2 == (2 & t.notification_targets),
-            d = 8 == (8 & t.notification_targets),
-            A =
-              ((h = t.notification_type),
-              (0, m.c9)("#SteamNotificationTypeDesc_" + h)
-                ? (0, m.we)("#SteamNotificationTypeDesc_" + h)
+            _ = 8 == (8 & t.notification_targets),
+            h =
+              ((v = t.notification_type),
+              (0, m.c9)("#SteamNotificationTypeDesc_" + v)
+                ? (0, m.we)("#SteamNotificationTypeDesc_" + v)
                 : null);
-          var h;
-          return A
-            ? n.createElement(
+          var v;
+          return h
+            ? a.createElement(
                 "div",
-                { className: w.NotificationGroup },
-                n.createElement(
+                { className: S.NotificationGroup },
+                a.createElement(
                   "div",
-                  { className: w.NotificationSection },
-                  n.createElement(p.y4, {
-                    className: w.NotificationFeedToggle,
+                  { className: S.NotificationSection },
+                  a.createElement(p.y4, {
+                    className: S.NotificationFeedToggle,
                     padding: "compact",
                     onChange: r,
                     disabled: l,
                     bottomSeparator: "none",
-                    checked: _,
+                    checked: d,
                   }),
-                  n.createElement(
+                  a.createElement(
                     "p",
-                    { className: w.NotificationDescription },
-                    A,
+                    { className: S.NotificationDescription },
+                    h,
                   ),
-                  n.createElement(
+                  a.createElement(
                     p.wl,
                     {
                       className: (0, f.A)({
-                        [w.PrefDetailsToggle]: !0,
-                        [w.Selected]: c,
+                        [S.PrefDetailsToggle]: !0,
+                        [S.Selected]: o,
                       }),
-                      onClick: () => o(!c),
+                      onClick: () => c(!o),
                     },
-                    n.createElement(C.b8_, { direction: "down" }),
+                    a.createElement(T.b8_, { direction: "down" }),
                   ),
                 ),
-                c &&
-                  n.createElement(
+                o &&
+                  a.createElement(
                     "div",
-                    { className: w.NotificationPrefDetails },
-                    n.createElement(p.Yh, {
+                    { className: S.NotificationPrefDetails },
+                    a.createElement(p.Yh, {
                       label: (0, m.we)("#NotificationSettings_SendToast"),
-                      disabled: l || !_,
-                      checked: d,
-                      onChange: i,
+                      disabled: l || !d,
+                      checked: _,
+                      onChange: n,
                     }),
-                    n.createElement(p.Yh, {
+                    a.createElement(p.Yh, {
                       label: (0, m.we)(
                         "#NotificationSettings_PushNotification",
                       ),
-                      disabled: l || !_,
+                      disabled: l || !d,
                       checked: u,
                       onChange: s,
                     }),
@@ -1130,9 +1946,9 @@
               )
             : null;
         });
-      var R = a(6813),
-        Q = a(61359);
-      class G {
+      var x = i(6813),
+        R = i(61359);
+      class z {
         m_rgDevices = [];
         m_rgRecentDevices = [];
         m_strKBArticleURL;
@@ -1142,19 +1958,19 @@
         }
         static Get() {
           return (
-            G.s_AuthorizedDevicesStore ||
-              ((G.s_AuthorizedDevicesStore = new G()),
-              G.s_AuthorizedDevicesStore.Init()),
-            G.s_AuthorizedDevicesStore
+            z.s_AuthorizedDevicesStore ||
+              ((z.s_AuthorizedDevicesStore = new z()),
+              z.s_AuthorizedDevicesStore.Init()),
+            z.s_AuthorizedDevicesStore
           );
         }
         Init() {
-          (this.m_rgDevices = (0, c.Tc)("devices", "application_config")),
-            (this.m_rgRecentDevices = (0, c.Tc)(
+          (this.m_rgDevices = (0, o.Tc)("devices", "application_config")),
+            (this.m_rgRecentDevices = (0, o.Tc)(
               "recent_devices",
               "application_config",
             )),
-            (this.m_strKBArticleURL = (0, c.Tc)(
+            (this.m_strKBArticleURL = (0, o.Tc)(
               "kb_article",
               "application_config",
             ));
@@ -1169,10 +1985,10 @@
           return this.m_strKBArticleURL;
         }
       }
-      (0, i.Cg)([s.sH], G.prototype, "m_rgDevices", void 0),
-        (0, i.Cg)([s.sH], G.prototype, "m_rgRecentDevices", void 0);
+      (0, n.Cg)([s.sH], z.prototype, "m_rgDevices", void 0),
+        (0, n.Cg)([s.sH], z.prototype, "m_rgRecentDevices", void 0);
       var U,
-        z = a(12155);
+        G = i(12155);
       !(function (e) {
         (e[(e.k_EPlatformTypeUnknown = 0)] = "k_EPlatformTypeUnknown"),
           (e[(e.k_EPlatformTypeWin32 = 1)] = "k_EPlatformTypeWin32"),
@@ -1191,144 +2007,144 @@
           (e[(e.k_EPlatformTypeBrowser = 13)] = "k_EPlatformTypeBrowser"),
           (e[(e.k_EPlatformTypeMax = 14)] = "k_EPlatformTypeMax");
       })(U || (U = {}));
-      var H = a(91675),
-        F = a(22837),
-        M = a(738),
-        L = a(56011),
-        K = a(14771),
-        W = a(32754),
-        J = a(11838);
-      const X = (0, u.PA)(() => {
-        let e = G.Get();
-        const t = (0, h.A)(),
-          a = (function () {
-            const [e] = n.useState(() =>
-              (0, c.Tc)("requesting_token_id", "application_config"),
+      var Q = i(91675),
+        M = i(22837),
+        H = i(738),
+        F = i(56011),
+        L = i(14771),
+        K = i(32754),
+        O = i(11838);
+      const j = (0, u.PA)(() => {
+        let e = z.Get();
+        const t = (0, v.A)(),
+          i = (function () {
+            const [e] = a.useState(() =>
+              (0, o.Tc)("requesting_token_id", "application_config"),
             );
             return e;
           })(),
           r = Date.now() / 1e3,
-          i = x(
+          n = J(
             e
               .GetRecentDevices()
               .find((e) => e.logged_in && e.last_seen?.time > r - 900) ??
               e.GetRecentDevices()[0],
           ).country;
         let s = [],
-          o = [];
+          c = [];
         for (const t of e.GetRecentDevices()) {
           const e = t.logged_in && t.last_seen?.time > r - 900,
-            c = n.createElement(j, {
+            o = a.createElement(q, {
               device: t,
               key: t.token_id,
               bActiveNow: e,
-              bCurrentDevice: a == t.token_id,
-              strActiveCountry: i,
+              bCurrentDevice: i == t.token_id,
+              strActiveCountry: n,
             });
-          e ? s.push(c) : o.push(c);
+          e ? s.push(o) : c.push(o);
         }
         let l = [];
         for (const t of e.GetDevices())
           l.push(
-            n.createElement(j, {
+            a.createElement(q, {
               device: t,
               key: t.token_id,
-              strActiveCountry: i,
+              strActiveCountry: n,
             }),
           );
-        return n.createElement(
+        return a.createElement(
           g.u,
           { navID: "StoreAuthorizedDevices", NavigationManager: t },
-          n.createElement(
+          a.createElement(
             "div",
             {
               className: (0, f.A)(
-                Q.AuthorizedDeviceHeader,
+                R.AuthorizedDeviceHeader,
                 "account_header_line noicon",
               ),
             },
-            n.createElement(
+            a.createElement(
               "div",
               null,
               (0, m.we)("#accountpreferences_authorized_devices_header"),
             ),
           ),
-          n.createElement(
+          a.createElement(
             "div",
             { className: "account_settings_container" },
-            n.createElement(
+            a.createElement(
               "div",
-              { className: Q.SectionDescription },
+              { className: R.SectionDescription },
               (0, m.PP)(
                 "#accountpreferences_authorized_devices_description",
-                n.createElement("p", null),
+                a.createElement("p", null),
               ),
             ),
-            n.createElement(
+            a.createElement(
               "div",
-              { className: Q.AuthorizedDeviceGroup },
-              n.createElement(
+              { className: R.AuthorizedDeviceGroup },
+              a.createElement(
                 "div",
-                { className: Q.DeviceGroup },
-                n.createElement(
+                { className: R.DeviceGroup },
+                a.createElement(
                   "div",
-                  { className: Q.ActiveNow },
-                  n.createElement(z.jlt, { className: Q.ActiveNowDot }),
+                  { className: R.ActiveNow },
+                  a.createElement(G.jlt, { className: R.ActiveNowDot }),
                   (0, m.we)("#accountpreferences_authorized_device_active_now"),
                 ),
                 s,
               ),
-              Boolean(o.length) &&
-                n.createElement(
+              Boolean(c.length) &&
+                a.createElement(
                   "div",
-                  { className: Q.DeviceGroup },
-                  n.createElement(
+                  { className: R.DeviceGroup },
+                  a.createElement(
                     "div",
-                    { className: Q.AuthorizedDevicesRecentHeader },
+                    { className: R.AuthorizedDevicesRecentHeader },
                     (0, m.we)(
                       "#accountpreferences_authorized_devices_recent_heading",
                     ),
                   ),
-                  o,
+                  c,
                 ),
               Boolean(l.length) &&
-                n.createElement(
+                a.createElement(
                   "div",
-                  { className: Q.DeviceGroup },
-                  n.createElement(
+                  { className: R.DeviceGroup },
+                  a.createElement(
                     "div",
-                    { className: Q.AuthorizedDevicesRecentHeader },
+                    { className: R.AuthorizedDevicesRecentHeader },
                     (0, m.we)(
                       "#accountpreferences_authorized_devices_other_heading",
                     ),
                   ),
                   l,
                 ),
-              n.createElement(
+              a.createElement(
                 "div",
-                { className: Q.DeviceGroup },
-                n.createElement(
+                { className: R.DeviceGroup },
+                a.createElement(
                   "div",
-                  { className: Q.AuthorizedDevicesRecentHeader },
+                  { className: R.AuthorizedDevicesRecentHeader },
                   (0, m.we)(
                     "#accountpreferences_authorized_devices_remove_header",
                   ),
                 ),
-                n.createElement(
+                a.createElement(
                   "div",
-                  { className: Q.RemoveDevicesRow },
-                  n.createElement(
+                  { className: R.RemoveDevicesRow },
+                  a.createElement(
                     "div",
                     null,
                     (0, m.we)(
                       "#accountpreferences_authorized_devices_remove_desc",
                     ),
                   ),
-                  n.createElement(
+                  a.createElement(
                     p.wl,
                     {
                       onClick: (e) => {
-                        (0, M.pg)(n.createElement(q, null), (0, L.uX)(e));
+                        (0, H.pg)(a.createElement(Z, null), (0, F.uX)(e));
                       },
                     },
                     (0, m.we)(
@@ -1341,17 +2157,17 @@
           ),
         );
       });
-      function j(e) {
+      function q(e) {
         const {
             device: t,
-            bActiveNow: a,
+            bActiveNow: i,
             bCurrentDevice: r,
-            strActiveCountry: i,
+            strActiveCountry: n,
           } = e,
-          [s, c] = (0, n.useState)(!1);
-        let o = (function (e) {
+          [s, o] = (0, a.useState)(!1);
+        let c = (function (e) {
           if (2 == e.platform_type) {
-            let t = new J.UAParser(e.token_description).getResult();
+            let t = new O.UAParser(e.token_description).getResult();
             return t.browser.name && t.os.name
               ? "WebKit" == t.browser.name
                 ? t.os.name
@@ -1366,125 +2182,125 @@
           }
           return e.token_description;
         })(t);
-        o.length && (o = ' - "' + o + '"');
-        const l = x(t);
-        let _ = null;
+        c.length && (c = ' - "' + c + '"');
+        const l = J(t);
+        let d = null;
         return (
-          (_ =
-            l.country && i && i != l.country
-              ? n.createElement(
-                  W.he,
+          (d =
+            l.country && n && n != l.country
+              ? a.createElement(
+                  K.he,
                   {
-                    className: Q.Tooltip,
+                    className: R.Tooltip,
                     toolTipContent: (0, m.we)(
                       "#accountpreferences_authorized_devices_suspicous_tooltip",
                     ),
                     direction: "top",
                   },
-                  n.createElement(
+                  a.createElement(
                     "div",
-                    { className: Q.LocationSuspicious },
+                    { className: R.LocationSuspicious },
                     l.location,
-                    n.createElement(C.$$j, null),
+                    a.createElement(T.$$j, null),
                   ),
                 )
-              : n.createElement(
+              : a.createElement(
                   "div",
-                  { className: Q.LocationNotSuspicious },
+                  { className: R.LocationNotSuspicious },
                   l.location,
                 )),
-          n.createElement(
+          a.createElement(
             "div",
             {
-              className: (0, f.A)(Q.DeviceContainer, a && Q.ActiveDevice),
+              className: (0, f.A)(R.DeviceContainer, i && R.ActiveDevice),
               key: "id_" + t.token_id,
-              onClick: () => c(!s),
+              onClick: () => o(!s),
             },
-            n.createElement(Y, { device: t }),
-            n.createElement(
+            a.createElement(X, { device: t }),
+            a.createElement(
               "div",
-              { className: Q.DeviceContent },
-              n.createElement(
+              { className: R.DeviceContent },
+              a.createElement(
                 "div",
-                { className: Q.DeviceHeaderRow },
-                n.createElement(
+                { className: R.DeviceHeaderRow },
+                a.createElement(
                   "div",
-                  { className: Q.DeviceNameContainer },
-                  n.createElement(
+                  { className: R.DeviceNameContainer },
+                  a.createElement(
                     "div",
-                    { className: Q.DeviceName },
-                    n.createElement(Z, { device: t }),
-                    o,
+                    { className: R.DeviceName },
+                    a.createElement(Y, { device: t }),
+                    c,
                   ),
                   r &&
-                    n.createElement(
+                    a.createElement(
                       "div",
-                      { className: Q.ThisDevice },
+                      { className: R.ThisDevice },
                       (0, m.we)(
                         "#accountpreferences_authorized_devices_this_device",
                       ),
                     ),
                 ),
-                n.createElement(
+                a.createElement(
                   "div",
-                  { className: Q.DetailsToggleContainer },
-                  _,
-                  n.createElement(
+                  { className: R.DetailsToggleContainer },
+                  d,
+                  a.createElement(
                     "div",
-                    { className: Q.DetailsToggle },
-                    n.createElement(
+                    { className: R.DetailsToggle },
+                    a.createElement(
                       p.wl,
                       {
                         className: (0, f.A)({
-                          [Q.DetailsToggle]: !0,
-                          [Q.Selected]: s,
+                          [R.DetailsToggle]: !0,
+                          [R.Selected]: s,
                         }),
                       },
-                      n.createElement(C.b8_, { direction: "down" }),
+                      a.createElement(T.b8_, { direction: "down" }),
                     ),
                   ),
                 ),
               ),
-              !a && n.createElement(V, { device: t }),
-              s && n.createElement(O, { device: t }),
+              !i && a.createElement(W, { device: t }),
+              s && a.createElement(V, { device: t }),
             ),
           )
         );
       }
-      function V(e) {
+      function W(e) {
         const { device: t } = e,
-          a =
+          i =
             t.first_seen?.time &&
-            t.first_seen.time + 2 * K.Kp.PerWeek > Date.now() / 1e3;
-        return n.createElement(
+            t.first_seen.time + 2 * L.Kp.PerWeek > Date.now() / 1e3;
+        return a.createElement(
           "div",
-          { className: Q.LastSeenRow },
+          { className: R.LastSeenRow },
           !!t.last_seen?.time &&
-            n.createElement(
+            a.createElement(
               "div",
               null,
-              n.createElement(
+              a.createElement(
                 "span",
-                { className: Q.LastActive },
+                { className: R.LastActive },
                 (0, m.we)(
                   "#accountpreferences_authorized_devices_last_seen_title",
                 ),
               ),
-              (0, H.Nm)(t.last_seen.time),
+              (0, Q.Nm)(t.last_seen.time),
             ),
-          a &&
-            n.createElement(
+          i &&
+            a.createElement(
               "div",
-              { className: Q.NewDevice },
+              { className: R.NewDevice },
               (0, m.we)("#accountpreferences_authorized_devices_new_device"),
             ),
         );
       }
-      function O(e) {
+      function V(e) {
         const { device: t } = e;
-        return n.createElement(
+        return a.createElement(
           "div",
-          { className: Q.AuthorizedDeviceDetails },
+          { className: R.AuthorizedDeviceDetails },
           (0, m.we)(
             (function (e, t) {
               if (2 == e) return "#authorized_devices_default_qr";
@@ -1502,23 +2318,23 @@
                   return "#authorized_devices_default_password";
               }
             })(t.authentication_type, t.auth_type),
-            (0, m.TW)(t.first_seen.time) + " @ " + (0, H.KC)(t.first_seen.time),
+            (0, m.TW)(t.first_seen.time) + " @ " + (0, Q.KC)(t.first_seen.time),
           ),
         );
       }
-      function Y(e) {
+      function X(e) {
         const { device: t } = e;
         if (2 == t.platform_type)
-          return n.createElement(C.FH7, { className: Q.DeviceLogo });
+          return a.createElement(T.FH7, { className: R.DeviceLogo });
         if (
           1 == t.platform_type &&
-          t.gaming_device_type === F.zm.k_EGamingDeviceType_SteamDeck
+          t.gaming_device_type === M.zm.k_EGamingDeviceType_SteamDeck
         )
-          return n.createElement(C.oEi, { className: Q.DeviceLogo });
+          return a.createElement(T.oEi, { className: R.DeviceLogo });
         switch (t.os_platform) {
           case U.k_EPlatformTypeWin32:
           case U.k_EPlatformTypeWin64:
-            return n.createElement(C.TV, { className: Q.DeviceLogo });
+            return a.createElement(T.TV, { className: R.DeviceLogo });
           case U.k_EPlatformTypeAndroid32:
           case U.k_EPlatformTypeAndroid64:
           case U.k_EPlatformTypeLinux32:
@@ -1526,12 +2342,12 @@
           case U.k_EPlatformTypeIOS32:
           case U.k_EPlatformTypeIOS64:
           case U.k_EPlatformTypeOSX:
-            return n.createElement(z.rfv, { className: Q.DeviceLogo });
+            return a.createElement(G.rfv, { className: R.DeviceLogo });
           default:
             return null;
         }
       }
-      function x(e) {
+      function J(e) {
         const t = e.last_seen ?? e.first_seen;
         return t && t.city && t.country
           ? { location: t.city + ", " + t.country, country: t.country }
@@ -1542,7 +2358,7 @@
               country: "",
             };
       }
-      function Z(e) {
+      function Y(e) {
         const { device: t } = e;
         switch (t.platform_type) {
           case 3:
@@ -1550,7 +2366,7 @@
               "#accountpreferences_authorized_devices_type_mobile",
             );
           case 1:
-            return t.gaming_device_type === F.zm.k_EGamingDeviceType_SteamDeck
+            return t.gaming_device_type === M.zm.k_EGamingDeviceType_SteamDeck
               ? (0, m.we)(
                   "#accountpreferences_authorized_devices_type_steamdeck",
                 )
@@ -1567,50 +2383,50 @@
             );
         }
       }
-      function q(e) {
+      function Z(e) {
         const { closeModal: t } = e;
-        return n.createElement(
-          M.x_,
+        return a.createElement(
+          H.x_,
           { onEscKeypress: t },
-          n.createElement(
+          a.createElement(
             p.UC,
             null,
-            n.createElement(
+            a.createElement(
               p.Y9,
               null,
               (0, m.we)("#authorized_devices_deauthorize_title"),
             ),
-            n.createElement(
+            a.createElement(
               p.nB,
               null,
-              n.createElement(
+              a.createElement(
                 p.a3,
                 null,
                 (0, m.we)("#authorized_devices_deauthorize_msg"),
               ),
-              n.createElement(
+              a.createElement(
                 p.wi,
                 null,
-                n.createElement(p.CB, {
+                a.createElement(p.CB, {
                   strOKText: (0, m.we)(
                     "#authorized_devices_deauthorize_proceed",
                   ),
                   onOK: async () => {
                     const e = new FormData();
                     e.set("action", "deauthorize"),
-                      e.set("sessionid", c.TS.SESSIONID),
+                      e.set("sessionid", o.TS.SESSIONID),
                       await l().post(
-                        c.TS.STORE_BASE_URL + "twofactor/manage_action",
+                        o.TS.STORE_BASE_URL + "twofactor/manage_action",
                         e,
                       );
                     const t = document.createElement("form");
                     (t.method = "POST"),
-                      (t.action = c.TS.STORE_BASE_URL + "logout");
-                    const a = document.createElement("input");
-                    (a.type = "hidden"),
-                      (a.name = "sessionid"),
-                      (a.value = c.TS.SESSIONID),
-                      t.appendChild(a),
+                      (t.action = o.TS.STORE_BASE_URL + "logout");
+                    const i = document.createElement("input");
+                    (i.type = "hidden"),
+                      (i.name = "sessionid"),
+                      (i.value = o.TS.SESSIONID),
+                      t.appendChild(i),
                       document.body.appendChild(t),
                       t.submit();
                   },
@@ -1621,53 +2437,58 @@
           ),
         );
       }
-      var $ = a(86227),
-        ee = a.n($),
-        te = a(56545),
-        ae = a(75487),
-        ne = a(31380),
-        re = a(23809);
-      const ie = "PlaytestInvites";
-      var se = a(1035),
-        ce = a(41471),
-        oe = a(17720),
-        le = a(55263),
-        me = a(44165),
-        _e = a(51272),
-        ue = a(84811),
-        pe = a(22797),
-        de = a(40094);
-      function fe(e) {
-        const t = (0, h.A)(),
-          a = (function () {
-            const e = (0, re.KV)();
-            return (0, ne.useQuery)([ie], async () => {
-              const t = te.w.Init(ae.rX),
-                a = await ae.BX.GetInvites(e, t);
-              if (1 != a.GetEResult())
-                throw new Error(
-                  `Error from usePlaytestInvite: ${a.GetEResult()} ${a.GetErrorMessage()}`,
-                );
-              return a.Body()?.toObject().invites ?? [];
+      var $ = i(86227),
+        ee = i.n($),
+        te = i(56545),
+        ie = i(75487),
+        ae = i(20194),
+        re = i(75233),
+        ne = i(51614),
+        se = i(23809);
+      const oe = "PlaytestInvites";
+      var ce = i(1035),
+        le = i(41471),
+        me = i(17720),
+        de = i(55263),
+        ue = i(44165),
+        pe = i(51272),
+        _e = i(84811),
+        fe = i(22797),
+        he = i(40094);
+      function ve(e) {
+        const t = (0, v.A)(),
+          i = (function () {
+            const e = (0, se.KV)();
+            return (0, ae.I)({
+              queryKey: [oe],
+              queryFn: async () => {
+                const t = te.w.Init(ie.rX),
+                  i = await ie.BX.GetInvites(e, t);
+                if (1 != i.GetEResult())
+                  throw new Error(
+                    `Error from usePlaytestInvite: ${i.GetEResult()} ${i.GetErrorMessage()}`,
+                  );
+                return i.Body()?.toObject().invites ?? [];
+              },
             });
           })();
         let r = [];
         return (
-          a.isSuccess &&
-            (r = a.data
+          i.isSuccess &&
+            (r = i.data
               .filter((e) => 1 === e.status || 3 === e.status)
               .map((e) =>
                 3 === e.status
-                  ? n.createElement(Ae, { invite: e, key: e.invite_id })
-                  : n.createElement(he, { invite: e, key: e.invite_id }),
+                  ? a.createElement(ge, { invite: e, key: e.invite_id })
+                  : a.createElement(we, { invite: e, key: e.invite_id }),
               )),
-          n.createElement(
+          a.createElement(
             g.u,
             { navID: "StorePlaytestInvites", NavigationManager: t },
-            n.createElement(
+            a.createElement(
               "div",
               { className: ee().PreferencesHeader },
-              n.createElement(
+              a.createElement(
                 "div",
                 {
                   className: (0, f.A)(
@@ -1678,136 +2499,136 @@
                 (0, m.we)("#PlaytestInvites_Title"),
               ),
             ),
-            n.createElement(
+            a.createElement(
               "div",
               { className: ee().PlaytestInvites },
-              a.isLoading || r.length > 0
+              i.isLoading || r.length > 0
                 ? r
                 : (0, m.we)("#PlaytestInvites_NoInvites"),
             ),
           )
         );
       }
-      function Ae(e) {
+      function ge(e) {
         const { invite: t } = e,
-          a = Pe(t.appid, t.app_name),
+          i = ye(t.appid, t.app_name),
           r = t.appid,
-          i = n.useCallback(
+          n = a.useCallback(
             (e) => {
-              (0, _e.EP)((0, L.uX)(e), `steam://open/games/details/${r}`);
+              (0, pe.EP)((0, F.uX)(e), `steam://open/games/details/${r}`);
             },
             [r],
           );
-        return n.createElement(
+        return a.createElement(
           "div",
           { className: ee().PlaytestInvite },
-          n.createElement(
+          a.createElement(
             "div",
             { className: ee().InviteInfo },
-            n.createElement(
+            a.createElement(
               "span",
               null,
-              (0, m.we)("#PlaytestInvites_Welcome", a),
+              (0, m.we)("#PlaytestInvites_Welcome", i),
             ),
           ),
-          !c.TS.IN_MOBILE_WEBVIEW &&
-            n.createElement(
+          !o.TS.IN_MOBILE_WEBVIEW &&
+            a.createElement(
               "div",
               { className: ee().StatusCtn },
-              n.createElement(
-                A.Z,
+              a.createElement(
+                h.Z,
                 { className: ee().Buttons },
-                n.createElement(
+                a.createElement(
                   p.jn,
-                  { className: ee().WideButton, noFocusRing: !1, onClick: i },
+                  { className: ee().WideButton, noFocusRing: !1, onClick: n },
                   (0, m.we)("#PlaytestInvites_ViewLibrary"),
                 ),
               ),
             ),
         );
       }
-      function he(e) {
+      function we(e) {
         const { invite: t } = e,
-          a = (0, me.f1)(),
+          i = (0, ue.f1)(),
           r = (function (e) {
-            const t = (0, re.KV)(),
-              a = (0, ne.useQueryClient)();
-            return (0, ne.useMutation)({
-              mutationFn: async (a) => {
-                const n = te.w.Init(ae.q);
-                n.Body().add_invite_ids(e),
-                  n.Body().set_status(a.bAccept ? 3 : 2);
-                const r = await ae.BX.UpdateInvites(t, n);
+            const t = (0, se.KV)(),
+              i = (0, re.jE)();
+            return (0, ne.n)({
+              mutationFn: async (i) => {
+                const a = te.w.Init(ie.q);
+                a.Body().add_invite_ids(e),
+                  a.Body().set_status(i.bAccept ? 3 : 2);
+                const r = await ie.BX.UpdateInvites(t, a);
                 if (1 != r.GetEResult())
                   throw {
                     result: r.GetEResult(),
                     message: `Error from UpdatePlaytestInvite: ${r.GetErrorMessage()} ( ${r.GetEResult()} )`,
                   };
               },
-              onSuccess: (t, n) => {
-                a.setQueryData([ie], (t) =>
+              onSuccess: (t, a) => {
+                i.setQueryData([oe], (t) =>
                   t.map(
                     (t) => (
-                      t.invite_id === e && (t.status = n.bAccept ? 3 : 2), t
+                      t.invite_id === e && (t.status = a.bAccept ? 3 : 2), t
                     ),
                   ),
                 );
               },
               onError: () => {
-                a.invalidateQueries(ie);
+                i.invalidateQueries({ queryKey: [oe] });
               },
             });
           })(t.invite_id),
-          i = n.useCallback(
+          n = a.useCallback(
             (e) => {
               r.mutate({ bAccept: e });
             },
             [r],
           ),
-          s = new oe.b(t.steamid_inviter);
-        return n.createElement(
-          ue.tH,
+          s = new me.b(t.steamid_inviter);
+        return a.createElement(
+          _e.tH,
           null,
-          n.createElement(
-            A.Z,
+          a.createElement(
+            h.Z,
             {
               className: ee().PlaytestInvite,
-              navEntryPreferPosition: de.iU.MAINTAIN_X,
+              navEntryPreferPosition: he.iU.MAINTAIN_X,
             },
-            n.createElement(
+            a.createElement(
               "div",
               { className: ee().InviteInfo },
-              n.createElement(ge, {
+              a.createElement(be, {
                 steamIDInviter: s,
                 nAppID: t.appid,
                 strAppNameBackup: t.app_name,
               }),
-              n.createElement(
+              a.createElement(
                 "div",
                 { className: ee().TimeInvited },
-                (0, m.Nm)(t.time_created ?? a),
+                (0, m.Nm)(t.time_created ?? i),
               ),
             ),
-            n.createElement(
+            a.createElement(
               "div",
               { className: ee().StatusCtn },
-              r.isLoading
-                ? n.createElement(pe.t, {
+              r.isPending
+                ? a.createElement(fe.t, {
                     size: "medium",
                     position: "center",
                     msDelayAppear: 250,
                   })
-                : n.createElement(
+                : a.createElement(
                     "div",
                     { className: ee().Buttons },
-                    n.createElement(
+                    a.createElement(
                       p.jn,
-                      { noFocusRing: !1, onClick: () => i(!0) },
+                      { noFocusRing: !1, onClick: () => n(!0) },
                       (0, m.we)("#PlaytestInvites_Accept"),
                     ),
-                    n.createElement(
+                    a.createElement(
                       p.$n,
-                      { noFocusRing: !1, onClick: () => i(!1) },
+                      { noFocusRing: !1, onClick: () => n(!1) },
                       (0, m.we)("#PlaytestInvites_Reject"),
                     ),
                   ),
@@ -1815,125 +2636,125 @@
           ),
         );
       }
-      function ge(e) {
-        const { steamIDInviter: t, nAppID: a, strAppNameBackup: r } = e,
-          i = Pe(a, r);
+      function be(e) {
+        const { steamIDInviter: t, nAppID: i, strAppNameBackup: r } = e,
+          n = ye(i, r);
         return t.BIsValid()
-          ? n.createElement(ve, { steamIDInviter: t, strAppName: i })
-          : n.createElement(Ee, { strAppName: i });
+          ? a.createElement(Ae, { steamIDInviter: t, strAppName: n })
+          : a.createElement(Ee, { strAppName: n });
       }
-      function ve(e) {
-        const { steamIDInviter: t, strAppName: a } = e,
-          r = (0, ce.js)(t.ConvertTo64BitString()),
-          i = r?.data;
+      function Ae(e) {
+        const { steamIDInviter: t, strAppName: i } = e,
+          r = (0, le.js)(t.ConvertTo64BitString()),
+          n = r?.data;
         return r.isSuccess
-          ? n.createElement(
+          ? a.createElement(
               "div",
               { className: ee().AvatarAndPersona },
-              n.createElement(se.i8, {
-                persona: i,
+              a.createElement(ce.i8, {
+                persona: n,
                 size: "Small",
                 statusPosition: "right",
               }),
-              n.createElement(
+              a.createElement(
                 "div",
                 null,
                 (0, m.PP)(
                   "#PlaytestInvites_InviteDescription_FromUser",
-                  n.createElement(
-                    v.Ii,
-                    { href: i.GetCommunityProfileURL() },
-                    i?.m_strPlayerName,
+                  a.createElement(
+                    w.Ii,
+                    { href: n.GetCommunityProfileURL() },
+                    n?.m_strPlayerName,
                   ),
-                  a,
+                  i,
                 ),
               ),
             )
-          : n.createElement(Ee, { strAppName: a });
+          : a.createElement(Ee, { strAppName: i });
       }
       function Ee(e) {
         const { strAppName: t } = e;
-        return n.createElement(
+        return a.createElement(
           "div",
           null,
           (0, m.we)("#PlaytestInvites_InviteDescription_FromApp", t),
         );
       }
-      function Pe(e, t) {
-        const [a, n] = (0, le.t7)(e, { include_basic_info: !0 });
-        return a && 3 == n ? a.GetName() : t;
+      function ye(e, t) {
+        const [i, a] = (0, de.t7)(e, { include_basic_info: !0 });
+        return i && 3 == a ? i.GetName() : t;
       }
-      const ye = n.lazy(() =>
+      const ke = a.lazy(() =>
           Promise.all([
-            a.e(8970),
-            a.e(2298),
-            a.e(576),
-            a.e(4717),
-            a.e(7436),
-            a.e(582),
-            a.e(4796),
-            a.e(6049),
-            a.e(7576),
-            a.e(7368),
-            a.e(8567),
-            a.e(7072),
-          ]).then(a.bind(a, 42048)),
+            i.e(8970),
+            i.e(2298),
+            i.e(576),
+            i.e(4717),
+            i.e(7436),
+            i.e(582),
+            i.e(4796),
+            i.e(6049),
+            i.e(7576),
+            i.e(7368),
+            i.e(8567),
+            i.e(7072),
+          ]).then(i.bind(i, 42048)),
         ),
-        Ne = {
+        Pe = {
           CookieSettings: () => "/cookiepreferences",
           NotificationSettings: () => "/notificationsettings",
           ...{ FamilyManagement: () => "/familymanagement" },
           AuthorizedDevices: () => "/authorizeddevices",
           PlaytestInvites: () => "/playtestinvites",
         },
-        Se = (e) => {
+        Ne = (e) => {
           const t = e.match.url,
-            a = Ne;
-          return n.createElement(
+            i = Pe;
+          return a.createElement(
             r.dO,
             null,
-            n.createElement(r.qh, {
-              path: `${t}${a.CookieSettings()}`,
+            a.createElement(r.qh, {
+              path: `${t}${i.CookieSettings()}`,
               render: () =>
-                n.createElement(R.X, {
+                a.createElement(x.X, {
                   config: {
-                    "cookie-preferences": () => n.createElement(P, null),
+                    "cookie-preferences": () => a.createElement(A, null),
                   },
                 }),
             }),
-            n.createElement(r.qh, {
-              path: `${t}${a.NotificationSettings()}`,
+            a.createElement(r.qh, {
+              path: `${t}${i.NotificationSettings()}`,
               render: () =>
-                n.createElement(R.X, {
+                a.createElement(x.X, {
                   config: {
-                    "notification-settings": () => n.createElement(I, null),
+                    "notification-settings": () => a.createElement(B, null),
                   },
                 }),
             }),
-            n.createElement(r.qh, {
-              path: `${t}${a.FamilyManagement()}`,
+            a.createElement(r.qh, {
+              path: `${t}${i.FamilyManagement()}`,
               render: () =>
-                n.createElement(R.X, {
+                a.createElement(x.X, {
                   config: {
-                    "family-management": () => n.createElement(ye, null),
+                    "family-management": () => a.createElement(ke, null),
                   },
                 }),
             }),
-            n.createElement(r.qh, {
-              path: `${t}${a.AuthorizedDevices()}`,
+            a.createElement(r.qh, {
+              path: `${t}${i.AuthorizedDevices()}`,
               render: () =>
-                n.createElement(R.X, {
+                a.createElement(x.X, {
                   config: {
-                    "authorized-devices": () => n.createElement(X, null),
+                    "authorized-devices": () => a.createElement(j, null),
                   },
                 }),
             }),
-            n.createElement(r.qh, {
-              path: `${t}${a.PlaytestInvites()}`,
+            a.createElement(r.qh, {
+              path: `${t}${i.PlaytestInvites()}`,
               render: () =>
-                n.createElement(R.X, {
+                a.createElement(x.X, {
                   config: {
-                    "playtest-invites": () => n.createElement(fe, null),
+                    "playtest-invites": () => a.createElement(ve, null),
                   },
                 }),
             }),

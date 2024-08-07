@@ -6883,11 +6883,11 @@ License: MIT
       var ja = a(63556),
         za = a(11833),
         qa = a(71298),
-        Va = a(31380);
+        Va = a(20194);
       function Wa(e) {
-        const { data: t, isLoading: a } = (0, Va.useQuery)(
-          ["PartnerInfoList", e],
-          () =>
+        const { data: t, isLoading: a } = (0, Va.I)({
+          queryKey: ["PartnerInfoList", e],
+          queryFn: () =>
             (async function (e) {
               var t, a;
               const n = { accountid: e, origin: self.origin },
@@ -6907,7 +6907,7 @@ License: MIT
                 throw `Load single user partner info failed ${(0, I.H)(l).strErrorMsg}`;
               return l.data.partners;
             })(e),
-        );
+        });
         return a ? null : t;
       }
       function Qa(e) {
@@ -14998,8 +14998,7 @@ License: MIT
                 checked: p,
                 description: (0, D.we)("#EventEditor_Options_Workshop_Desc"),
               }),
-              Boolean(Boolean(t.GetAppID())) &&
-                d.createElement(qi, { editModel: t }),
+              Boolean(!1) && d.createElement(qi, { editModel: t }),
               d.createElement(Xi, { editModel: t }),
               d.createElement(Zi, { editModel: t }),
             ),
@@ -15010,7 +15009,7 @@ License: MIT
       function qi(e) {
         const { editModel: t } = e,
           a = (function (e) {
-            const t = (0, Va.useQuery)({
+            const t = (0, Va.I)({
               queryKey: ["demoappdetailsforbase", e],
               queryFn: async () => {
                 var t;

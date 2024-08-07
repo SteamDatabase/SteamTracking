@@ -32,45 +32,49 @@
     },
     27144: (e, t, i) => {
       "use strict";
-      i.d(t, { B3: () => S, KM: () => g, KT: () => D });
+      i.d(t, { B3: () => v, KM: () => E, KT: () => S });
       var n = i(41735),
         a = i.n(n),
         s = i(58632),
         r = i.n(s),
         o = i(90626),
-        l = i(31380),
-        m = i(17720),
-        c = i(68797),
-        u = i(78327),
-        d = i(56545),
-        p = i(37735),
-        h = i(23809);
-      const T = "nicknames";
-      function g(e) {
-        const t = (0, h.KV)(),
-          { data: i, isLoading: n } = (0, l.useQuery)([T], async () => {
-            const e = new Map();
-            if (u.iA.logged_in) {
-              const i = d.w.Init(p.dN),
-                n = (await p.xt.GetNicknameList(t, i)).Body().toObject();
-              n?.nicknames &&
-                n.nicknames.length > 0 &&
-                n.nicknames.forEach((t) => {
-                  e.set(t.accountid, t.nickname);
-                });
-            }
-            return e;
+        l = i(20194),
+        m = i(75233),
+        c = i(17720),
+        u = i(68797),
+        d = i(78327),
+        p = i(56545),
+        h = i(37735),
+        T = i(23809);
+      const g = "nicknames";
+      function E(e) {
+        const t = (0, T.KV)(),
+          { data: i, isLoading: n } = (0, l.I)({
+            queryKey: [g],
+            queryFn: async () => {
+              const e = new Map();
+              if (d.iA.logged_in) {
+                const i = p.w.Init(h.dN),
+                  n = (await h.xt.GetNicknameList(t, i)).Body().toObject();
+                n?.nicknames &&
+                  n.nicknames.length > 0 &&
+                  n.nicknames.forEach((t) => {
+                    e.set(t.accountid, t.nickname);
+                  });
+              }
+              return e;
+            },
           });
         return i ? i.get(e) : null;
       }
-      const E = new (r())(
+      const f = new (r())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
               const t =
-                "community" == (0, u.yK)()
-                  ? u.TS.COMMUNITY_BASE_URL
-                  : u.TS.STORE_BASE_URL;
+                "community" == (0, d.yK)()
+                  ? d.TS.COMMUNITY_BASE_URL
+                  : d.TS.STORE_BASE_URL;
               if (1 == e.length) {
                 const i = { accountid: e[0], origin: self.origin },
                   n = await a().get(`${t}actions/ajaxgetavatarpersona`, {
@@ -82,7 +86,7 @@
                   1 != n.data?.success ||
                   !n.data?.userinfo
                 )
-                  throw `Load single avatar/persona failed ${(0, c.H)(n).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${(0, u.H)(n).strErrorMsg}`;
                 return [n.data.userinfo];
               }
               {
@@ -96,11 +100,11 @@
                   1 != n.data?.success ||
                   !n.data?.userinfos
                 )
-                  throw `Load single avatar/persona failed ${(0, c.H)(n).strErrorMsg}`;
+                  throw `Load single avatar/persona failed ${(0, u.H)(n).strErrorMsg}`;
                 const s = new Map();
                 return (
                   n.data.userinfos.forEach((e) =>
-                    s.set(new m.b(e.steamid).GetAccountID(), e),
+                    s.set(new c.b(e.steamid).GetAccountID(), e),
                   ),
                   e.map((e) => s.get(e))
                 );
@@ -108,23 +112,27 @@
             })(e),
           { cache: !1 },
         ),
-        f = "avatarandpersonas";
-      function D(e) {
-        const { data: t, isLoading: i } = (0, l.useQuery)([f, e], () =>
-          E.load(e),
-        );
+        D = "avatarandpersonas";
+      function S(e) {
+        const { data: t, isLoading: i } = (0, l.I)({
+          queryKey: [D, e],
+          queryFn: () => f.load(e),
+        });
         return [t, i];
       }
-      function S(e) {
-        const t = (0, l.useQueryClient)(),
-          { data: i, isLoading: n } = (0, l.useQuery)({
-            queryKey: [f, e],
-            queryFn: () => E.loadMany(e),
-            onSuccess(e) {
-              e.forEach((e) => {
-                const i = [f, new m.b(e.steamid).GetAccountID()];
-                t.setQueryData(i, e);
-              });
+      function v(e) {
+        const t = (0, m.jE)(),
+          { data: i, isLoading: n } = (0, l.I)({
+            queryKey: [D, e],
+            queryFn: async () => {
+              const i = await f.loadMany(e);
+              return (
+                i.forEach((e) => {
+                  const i = [D, new c.b(e.steamid).GetAccountID()];
+                  t.setQueryData(i, e);
+                }),
+                i
+              );
             },
             enabled: e?.length > 0,
           }),
@@ -296,9 +304,9 @@
               (f = "HH:mm");
           }
           h || !t || c || (A = D().unix(t));
-          const w = D().tz.guess(),
-            y = D().unix(h).tz(w),
-            _ = !!a && w != a && D().unix(h).tz(a);
+          const y = D().tz.guess(),
+            w = D().unix(h).tz(y),
+            _ = !!a && y != a && D().unix(h).tz(a);
           return s.createElement(
             "div",
             { className: (0, d.A)(E().EventTimeSection, this.props.className) },
@@ -381,7 +389,7 @@
                   s.createElement(
                     "div",
                     { className: E().TimeZone },
-                    y.zoneAbbr(),
+                    w.zoneAbbr(),
                   ),
                   !!_ &&
                     s.createElement(

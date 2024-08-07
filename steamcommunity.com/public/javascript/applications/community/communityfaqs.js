@@ -9464,7 +9464,7 @@
         rt = a.n(nt),
         lt = a(58632),
         pt = a.n(lt),
-        dt = a(31380),
+        dt = a(20194),
         ht = a(56545),
         ct = a(37735),
         ut = a(23809);
@@ -9528,25 +9528,29 @@
       function bt(e) {
         const { accountID: t, bHideWhenNotAvailable: a, bHideName: o } = e,
           [i] = (function (e) {
-            const { data: t, isLoading: a } = (0, dt.useQuery)([gt, e], () =>
-              ft.load(e),
-            );
+            const { data: t, isLoading: a } = (0, dt.I)({
+              queryKey: [gt, e],
+              queryFn: () => ft.load(e),
+            });
             return [t, a];
           })(t),
           n = (function (e) {
             const t = (0, ut.KV)(),
-              { data: a, isLoading: o } = (0, dt.useQuery)([mt], async () => {
-                const e = new Map();
-                if (c.iA.logged_in) {
-                  const a = ht.w.Init(ct.dN),
-                    o = (await ct.xt.GetNicknameList(t, a)).Body().toObject();
-                  (null == o ? void 0 : o.nicknames) &&
-                    o.nicknames.length > 0 &&
-                    o.nicknames.forEach((t) => {
-                      e.set(t.accountid, t.nickname);
-                    });
-                }
-                return e;
+              { data: a, isLoading: o } = (0, dt.I)({
+                queryKey: [mt],
+                queryFn: async () => {
+                  const e = new Map();
+                  if (c.iA.logged_in) {
+                    const a = ht.w.Init(ct.dN),
+                      o = (await ct.xt.GetNicknameList(t, a)).Body().toObject();
+                    (null == o ? void 0 : o.nicknames) &&
+                      o.nicknames.length > 0 &&
+                      o.nicknames.forEach((t) => {
+                        e.set(t.accountid, t.nickname);
+                      });
+                  }
+                  return e;
+                },
               });
             return a ? a.get(e) : null;
           })(t),
