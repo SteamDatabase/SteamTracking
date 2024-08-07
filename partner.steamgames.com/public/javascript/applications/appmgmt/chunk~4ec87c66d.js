@@ -41989,14 +41989,15 @@
               );
           }, [a]),
           Y = T < s.a4 || T > h,
-          $ = "America/Los_Angeles",
-          Q = {
+          $ = W && Boolean(O) && Boolean(F),
+          Q = "America/Los_Angeles",
+          J = {
             weekday: "short",
             timeZoneName: "longGeneric",
             hour: "numeric",
           },
-          J = $ != Intl.DateTimeFormat().resolvedOptions().timeZone,
-          X = C
+          X = Q != Intl.DateTimeFormat().resolvedOptions().timeZone,
+          Z = C
             ? Math.floor((C.rtDiscountStart - t + E.Kp.PerHour) / E.Kp.PerDay)
             : void 0;
         return o.createElement(
@@ -42012,60 +42013,62 @@
           o.createElement(
             d.nB,
             null,
-            W
-              ? o.createElement(
+            !W &&
+              o.createElement(
+                "div",
+                null,
+                o.createElement(
                   "div",
-                  null,
-                  o.createElement(
-                    "div",
-                    { className: v.CreateSalePageFromInviteDesc },
-                    (0, g.we)(
-                      "#DailyDeals_CreateSalePageFromInvite",
-                      (0, D.$Y)(F),
+                  { className: v.Accept_StartDate },
+                  X &&
+                    o.createElement(
+                      "div",
+                      null,
+                      (0, g.TW)(t, { ...J, timeZone: Q }),
                     ),
-                  ),
-                  o.createElement(w.Z2, {
-                    deal: O,
-                    eRequireSalePageType: F,
-                    fnOnSalePageSelected: K,
-                  }),
-                )
-              : o.createElement(
-                  "div",
-                  null,
-                  o.createElement(
-                    "div",
-                    { className: v.Accept_StartDate },
-                    J &&
-                      o.createElement(
-                        "div",
-                        null,
-                        (0, g.TW)(t, { ...Q, timeZone: $ }),
-                      ),
-                    o.createElement("div", null, (0, g.TW)(t, Q)),
-                  ),
-                  o.createElement(f.cy, {
-                    id: (0, c.M9)(L),
-                    itemType: (0, c.pk)(L),
-                    bHideAdvertisingAppWarnings: !0,
-                  }),
-                  o.createElement(k, {
-                    nDiscountDays: T,
-                    fnSetDiscountDays: M,
-                    rgDiscountPackages: I,
-                    fnSetDiscountPackages: B,
-                    nStoreItemID: U,
-                    eStoreItemType: z,
-                    nMaxDiscountDays: h,
-                    nDaysUntilNextDiscount: X,
-                  }),
-                  Boolean(p.appid) &&
-                    o.createElement(f.$d, {
-                      nAppID: p.appid,
-                      oFeaturedItem: R,
-                      fnSetFeaturedItem: P,
-                    }),
+                  o.createElement("div", null, (0, g.TW)(t, J)),
                 ),
+                o.createElement(f.cy, {
+                  id: (0, c.M9)(L),
+                  itemType: (0, c.pk)(L),
+                  bHideAdvertisingAppWarnings: !0,
+                }),
+                o.createElement(k, {
+                  nDiscountDays: T,
+                  fnSetDiscountDays: M,
+                  rgDiscountPackages: I,
+                  fnSetDiscountPackages: B,
+                  nStoreItemID: U,
+                  eStoreItemType: z,
+                  nMaxDiscountDays: h,
+                  nDaysUntilNextDiscount: Z,
+                }),
+                Boolean(p.appid) &&
+                  o.createElement(f.$d, {
+                    nAppID: p.appid,
+                    oFeaturedItem: R,
+                    fnSetFeaturedItem: P,
+                  }),
+              ),
+            $ &&
+              o.createElement(
+                "div",
+                null,
+                o.createElement(
+                  "div",
+                  { className: v.CreateSalePageFromInviteDesc },
+                  (0, g.we)(
+                    "#DailyDeals_CreateSalePageFromInvite",
+                    (0, D.$Y)(F),
+                  ),
+                ),
+                o.createElement(w.Z2, {
+                  deal: O,
+                  eRequireSalePageType: F,
+                  fnOnSalePageSelected: K,
+                }),
+              ),
+            W && !$ && o.createElement("div", null, W),
           ),
           o.createElement(
             d.wi,
