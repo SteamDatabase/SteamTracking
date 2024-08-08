@@ -2650,9 +2650,11 @@
         if (!a) return null;
         let r = "#Package";
         2 === a.billing_agreement_type && (r = "#GameBillingPackage");
-        const i = t.GetSelfPurchaseOption();
-        i.formatted_final_price && i.discount_pct && (r += "WithDiscount");
-        const s =
+        const i = t.GetSelfPurchaseOption(),
+          s = i.formatted_final_price && i.discount_pct;
+        let o = n.formatted_final_price;
+        s && ((r += "WithDiscount"), (o = n.formatted_original_price));
+        const l =
           r +
           "CostIncludesSubscriptionBy" +
           {
@@ -2668,9 +2670,9 @@
           Ce,
           null,
           (0, m.we)(
-            s,
+            l,
             i.formatted_final_price,
-            n.formatted_final_price,
+            o,
             a.renewal_time_period,
             i.discount_pct,
           ),
