@@ -863,5 +863,8 @@
     "PlaytestInvites_NoInvites": "You have no active Steam Playtest invites.",
     "PlaytestInvites_Welcome": "Welcome to the Playtest! %1$s can now be installed from your Library.",
     "PlaytestInvites_ViewLibrary": "View Library",
+    "PlaytestInvites_Desc_Title": "What is a Steam Playtest?",
+    "PlaytestInvites_Desc1": "This page shows invites you have received to participate in a Steam Playtest. Playtests are used to help test games that are still in development. By accepting, the game will automatically be added to your library.",
+    "PlaytestInvites_Desc2": "Please refer to information from the developer regarding the nature of the individual playtest. Steam Playtest access does not guarantee full access to the game upon release.",
     "dummy_for_end_of_file_convenience": "dummy"
 }

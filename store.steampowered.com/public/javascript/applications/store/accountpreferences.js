@@ -78,6 +78,7 @@
         Buttons: "_1Fh12RGmObsvcXIRY7vQYf",
         WideButton: "wA5p2wik9ul235sZq1VJO",
         AvatarAndPersona: "_3uUPNFsdEI9Fba-fyvnslj",
+        Description: "_2fAxlp5l2ZkuTUe5oYvdRB",
       };
     },
     11838: function (e, t, i) {
@@ -118,8 +119,8 @@
           G = "Sharp",
           Q = "Sony",
           M = "Xiaomi",
-          H = "Zebra",
-          F = "Facebook",
+          F = "Zebra",
+          H = "Facebook",
           L = "Chromium OS",
           K = "Mac OS",
           O = function (e) {
@@ -271,7 +272,7 @@
               [/(lbbrowser)/i, /\[(linkedin)app\]/i],
               [u],
               [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
-              [[u, F], f],
+              [[u, H], f],
               [
                 /(Klarna)\/([\w\.]+)/i,
                 /(kakao(?:talk|story))[\/ ]([\w\.]+)/i,
@@ -585,9 +586,9 @@
                 [p, g],
               ],
               [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-              [d, [_, H], [p, w]],
+              [d, [_, F], [p, w]],
               [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-              [d, [_, H], [p, g]],
+              [d, [_, F], [p, g]],
               [/smart-tv.+(samsung)/i],
               [_, [p, b]],
               [/hbbtv.+maple;(\d+)/i],
@@ -645,9 +646,9 @@
               [/droid.+; (glass) \d/i],
               [d, [_, D], [p, A]],
               [/droid.+; (wt63?0{2,3})\)/i],
-              [d, [_, H], [p, A]],
-              [/(quest( \d| pro)?)/i],
               [d, [_, F], [p, A]],
+              [/(quest( \d| pro)?)/i],
+              [d, [_, H], [p, A]],
               [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
               [_, [p, E]],
               [/(aeobc)\b/i],
@@ -2009,8 +2010,8 @@
       })(U || (U = {}));
       var Q = i(91675),
         M = i(22837),
-        H = i(738),
-        F = i(56011),
+        F = i(738),
+        H = i(56011),
         L = i(14771),
         K = i(32754),
         O = i(11838);
@@ -2144,7 +2145,7 @@
                     p.wl,
                     {
                       onClick: (e) => {
-                        (0, H.pg)(a.createElement(Z, null), (0, F.uX)(e));
+                        (0, F.pg)(a.createElement(Z, null), (0, H.uX)(e));
                       },
                     },
                     (0, m.we)(
@@ -2386,7 +2387,7 @@
       function Z(e) {
         const { closeModal: t } = e;
         return a.createElement(
-          H.x_,
+          F.x_,
           { onEscKeypress: t },
           a.createElement(
             p.UC,
@@ -2487,17 +2488,8 @@
             { navID: "StorePlaytestInvites", NavigationManager: t },
             a.createElement(
               "div",
-              { className: ee().PreferencesHeader },
-              a.createElement(
-                "div",
-                {
-                  className: (0, f.A)(
-                    ee().AccountHeader,
-                    "account_header_line noicon",
-                  ),
-                },
-                (0, m.we)("#PlaytestInvites_Title"),
-              ),
+              { className: "account_header_line noicon" },
+              (0, m.we)("#PlaytestInvites_Title"),
             ),
             a.createElement(
               "div",
@@ -2505,6 +2497,25 @@
               i.isLoading || r.length > 0
                 ? r
                 : (0, m.we)("#PlaytestInvites_NoInvites"),
+            ),
+            a.createElement(
+              "div",
+              null,
+              a.createElement(
+                "h2",
+                null,
+                (0, m.we)("#PlaytestInvites_Desc_Title"),
+              ),
+              a.createElement(
+                "p",
+                { className: ee().Description },
+                (0, m.we)("#PlaytestInvites_Desc1"),
+              ),
+              a.createElement(
+                "p",
+                { className: ee().Description },
+                (0, m.we)("#PlaytestInvites_Desc2"),
+              ),
             ),
           )
         );
@@ -2515,7 +2526,7 @@
           r = t.appid,
           n = a.useCallback(
             (e) => {
-              (0, pe.EP)((0, F.uX)(e), `steam://open/games/details/${r}`);
+              (0, pe.EP)((0, H.uX)(e), `steam://open/games/details/${r}`);
             },
             [r],
           );
@@ -2567,10 +2578,8 @@
               },
               onSuccess: (t, a) => {
                 i.setQueryData([oe], (t) =>
-                  t.map(
-                    (t) => (
-                      t.invite_id === e && (t.status = a.bAccept ? 3 : 2), t
-                    ),
+                  t.map((t) =>
+                    t.invite_id === e ? { ...t, status: a.bAccept ? 3 : 2 } : t,
                   ),
                 );
               },
