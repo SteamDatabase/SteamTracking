@@ -11985,13 +11985,24 @@
       function na({ game: e, visible: t }) {
         const r = hn(),
           [i, n] = (0, Je.useState)(0),
-          { data: a } = pn({ appid: e.appid }, { enabled: t });
-        let s = [en],
-          l = [en];
-        (null == a ? void 0 : a.library_capsule) &&
-          s.unshift(ia(a, "library_capsule")),
-          (null == a ? void 0 : a.header) && l.unshift(ia(a, "header"));
-        const o = r ? s[i] === en : l[i] === en;
+          { data: a, isLoading: s } = pn({ appid: e.appid }, { enabled: t });
+        (0, Je.useEffect)(() => {
+          s || n(0);
+        }, [s]);
+        let l = [en],
+          o = [en];
+        (null == a ? void 0 : a.library_capsule)
+          ? l.unshift(ia(a, "library_capsule"))
+          : l.unshift(
+              ia(
+                { ...a, library_capsule: "library_600x900.jpg" },
+                "library_capsule",
+              ),
+            ),
+          (null == a ? void 0 : a.header)
+            ? o.unshift(ia(a, "header"))
+            : o.unshift(ia({ ...a, header: "header.jpg" }, "header"));
+        const c = r ? l[i] === en : o[i] === en;
         return Je.createElement(
           Je.Fragment,
           null,
@@ -12000,15 +12011,15 @@
             { onError: () => n((e) => e + 1) },
             Je.createElement("source", {
               media: `(max-width: ${yi.MobileBreakpoint})`,
-              srcSet: s[i],
+              srcSet: l[i],
             }),
             Je.createElement("img", {
-              src: l[i],
+              src: o[i],
               alt: e.name,
               loading: "lazy",
             }),
           ),
-          o &&
+          c &&
             Je.createElement("span", { className: _i.FallbackTitle }, e.name),
         );
       }
