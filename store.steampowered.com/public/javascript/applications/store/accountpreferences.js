@@ -73,10 +73,16 @@
         PlaytestInvites: "_3XPWJM0EKr-dJ0B0NJtmjq",
         PlaytestInvite: "_22d1cAhcNjyVeCgm3buXvn",
         InviteInfo: "_9XX6R8HJVzwJ9jnfbIL-I",
+        InviteDescription: "_3o2bwehhb6IiaAgm2UqSWZ",
         TimeInvited: "_1QDTpUha3gVN27iIGSQYu3",
         StatusCtn: "_1ItLCAR90cxfIMjbiraDqU",
         Buttons: "_1Fh12RGmObsvcXIRY7vQYf",
         WideButton: "wA5p2wik9ul235sZq1VJO",
+        AppInfoCtn: "_2ToVcjoGTH4m6cNznWft6s",
+        AppName: "_3rcHvM3XilLmqUey9RCWcR",
+        AppDetail: "_1y2mfNER5Q5t4vb_ImMa3M",
+        AppDescription: "_3O4Y1ujrXP2H7shfwIyVyr",
+        SmallCap: "_1dsys_7Sn0ty3ZFNvF8VtC",
         AvatarAndPersona: "_3uUPNFsdEI9Fba-fyvnslj",
         Description: "_2fAxlp5l2ZkuTUe5oYvdRB",
       };
@@ -110,20 +116,20 @@
           T = "Chrome",
           C = "Firefox",
           D = "Google",
-          B = "Huawei",
-          I = "LG",
+          I = "Huawei",
+          B = "LG",
           x = "Microsoft",
           R = "Motorola",
-          z = "Opera",
-          U = "Samsung",
+          U = "Opera",
+          z = "Samsung",
           G = "Sharp",
           Q = "Sony",
           M = "Xiaomi",
-          F = "Zebra",
-          H = "Facebook",
+          H = "Zebra",
+          F = "Facebook",
           L = "Chromium OS",
-          K = "Mac OS",
-          O = function (e) {
+          O = "Mac OS",
+          K = function (e) {
             for (var t = {}, i = 0; i < e.length; i++)
               t[e[i].toUpperCase()] = e[i];
             return t;
@@ -134,14 +140,14 @@
           q = function (e) {
             return e.toLowerCase();
           },
-          W = function (e, t) {
+          V = function (e, t) {
             if (typeof e === l)
               return (
                 (e = e.replace(/^\s\s*/, "")),
                 typeof t === o ? e : e.substring(0, 500)
               );
           },
-          V = function (e, t) {
+          W = function (e, t) {
             for (var i, a, r, o, l, m, d = 0; d < t.length && !l; ) {
               var u = t[d],
                 p = t[d + 1];
@@ -200,11 +206,11 @@
               ],
               [u, f],
               [/opios[\/ ]+([\w\.]+)/i],
-              [f, [u, z + " Mini"]],
+              [f, [u, U + " Mini"]],
               [/\bop(?:rg)?x\/([\w\.]+)/i],
-              [f, [u, z + " GX"]],
+              [f, [u, U + " GX"]],
               [/\bopr\/([\w\.]+)/i],
-              [f, [u, z]],
+              [f, [u, U]],
               [/\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i],
               [f, [u, "Baidu"]],
               [
@@ -240,13 +246,13 @@
               [/\bfocus\/([\w\.]+)/i],
               [f, [u, C + " Focus"]],
               [/\bopt\/([\w\.]+)/i],
-              [f, [u, z + " Touch"]],
+              [f, [u, U + " Touch"]],
               [/coc_coc\w+\/([\w\.]+)/i],
               [f, [u, "Coc Coc"]],
               [/dolfin\/([\w\.]+)/i],
               [f, [u, "Dolphin"]],
               [/coast\/([\w\.]+)/i],
-              [f, [u, z + " Coast"]],
+              [f, [u, U + " Coast"]],
               [/miuibrowser\/([\w\.]+)/i],
               [f, [u, "MIUI " + S]],
               [/fxios\/([-\w\.]+)/i],
@@ -256,7 +262,7 @@
               [/(oculus|sailfish|huawei|vivo)browser\/([\w\.]+)/i],
               [[u, /(.+)/, "$1 " + S], f],
               [/samsungbrowser\/([\w\.]+)/i],
-              [f, [u, U + " Internet"]],
+              [f, [u, z + " Internet"]],
               [/(comodo_dragon)\/([\w\.]+)/i],
               [[u, /_/g, " "], f],
               [/metasr[\/ ]?([\d\.]+)/i],
@@ -272,7 +278,7 @@
               [/(lbbrowser)/i, /\[(linkedin)app\]/i],
               [u],
               [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
-              [[u, H], f],
+              [[u, F], f],
               [
                 /(Klarna)\/([\w\.]+)/i,
                 /(kakao(?:talk|story))[\/ ]([\w\.]+)/i,
@@ -365,13 +371,13 @@
               [
                 /\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i,
               ],
-              [d, [_, U], [p, w]],
+              [d, [_, z], [p, w]],
               [
                 /\b((?:s[cgp]h|gt|sm)-\w+|sc[g-]?[\d]+a?|galaxy nexus)/i,
                 /samsung[- ]([-\w]+)/i,
                 /sec-(sgh\w+)/i,
               ],
-              [d, [_, U], [p, g]],
+              [d, [_, z], [p, g]],
               [/(?:\/|\()(ip(?:hone|od)[\w, ]*)(?:\/|;)/i],
               [d, [_, k], [p, g]],
               [
@@ -385,12 +391,12 @@
               [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
               [d, [_, G], [p, g]],
               [/\b((?:ag[rs][23]?|bah2?|sht?|btv)-a?[lw]\d{2})\b(?!.+d\/s)/i],
-              [d, [_, B], [p, w]],
+              [d, [_, I], [p, w]],
               [
                 /(?:huawei|honor)([-\w ]+)[;\)]/i,
                 /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i,
               ],
-              [d, [_, B], [p, g]],
+              [d, [_, I], [p, g]],
               [
                 /\b(poco[\w ]+|m2\d{3}j\d\d[a-z]{2})(?: bui|\))/i,
                 /\b; (\w+) build\/hm\1/i,
@@ -433,13 +439,13 @@
               [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
               [d, [_, R], [p, w]],
               [/((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
-              [d, [_, I], [p, w]],
+              [d, [_, B], [p, w]],
               [
                 /(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i,
                 /\blg[-e;\/ ]+((?!browser|netcast|android tv)\w+)/i,
                 /\blg-?([\d\w]+) bui/i,
               ],
-              [d, [_, I], [p, g]],
+              [d, [_, B], [p, g]],
               [
                 /(ideatab[-\w ]+)/i,
                 /lenovo ?(s[56]000[-\w]+|tab(?:[\w ]+)|yt[-\d\w]{6}|tb[-\d\w]{6})/i,
@@ -586,20 +592,20 @@
                 [p, g],
               ],
               [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-              [d, [_, F], [p, w]],
+              [d, [_, H], [p, w]],
               [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-              [d, [_, F], [p, g]],
+              [d, [_, H], [p, g]],
               [/smart-tv.+(samsung)/i],
               [_, [p, b]],
               [/hbbtv.+maple;(\d+)/i],
               [
                 [d, /^/, "SmartTV"],
-                [_, U],
+                [_, z],
                 [p, b],
               ],
               [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
               [
-                [_, I],
+                [_, B],
                 [p, b],
               ],
               [/(apple) ?tv/i],
@@ -625,8 +631,8 @@
                 /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i,
               ],
               [
-                [_, W],
-                [d, W],
+                [_, V],
+                [d, V],
                 [p, b],
               ],
               [/\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i],
@@ -646,9 +652,9 @@
               [/droid.+; (glass) \d/i],
               [d, [_, D], [p, A]],
               [/droid.+; (wt63?0{2,3})\)/i],
-              [d, [_, F], [p, A]],
-              [/(quest( \d| pro)?)/i],
               [d, [_, H], [p, A]],
+              [/(quest( \d| pro)?)/i],
+              [d, [_, F], [p, A]],
               [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
               [_, [p, E]],
               [/(aeobc)\b/i],
@@ -713,7 +719,7 @@
                 /(macintosh|mac_powerpc\b)(?!.+haiku)/i,
               ],
               [
-                [u, K],
+                [u, O],
                 [f, /_/g, "."],
               ],
               [/droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i],
@@ -792,7 +798,7 @@
                 return (
                   (t[u] = n),
                   (t[f] = n),
-                  V.call(t, a, b.browser),
+                  W.call(t, a, b.browser),
                   (t[m] =
                     typeof (e = t[f]) === l
                       ? e.replace(/[^\d\.]/g, "").split(".")[0]
@@ -807,7 +813,7 @@
               }),
               (this.getCPU = function () {
                 var e = {};
-                return (e[h] = n), V.call(e, a, b.cpu), e;
+                return (e[h] = n), W.call(e, a, b.cpu), e;
               }),
               (this.getDevice = function () {
                 var e = {};
@@ -815,7 +821,7 @@
                   (e[_] = n),
                   (e[d] = n),
                   (e[p] = n),
-                  V.call(e, a, b.device),
+                  W.call(e, a, b.device),
                   A && !e[p] && v && v.mobile && (e[p] = g),
                   A &&
                     "Macintosh" == e[d] &&
@@ -829,14 +835,14 @@
               }),
               (this.getEngine = function () {
                 var e = {};
-                return (e[u] = n), (e[f] = n), V.call(e, a, b.engine), e;
+                return (e[u] = n), (e[f] = n), W.call(e, a, b.engine), e;
               }),
               (this.getOS = function () {
                 var e = {};
                 return (
                   (e[u] = n),
                   (e[f] = n),
-                  V.call(e, a, b.os),
+                  W.call(e, a, b.os),
                   A &&
                     !e[u] &&
                     v &&
@@ -844,7 +850,7 @@
                     "Unknown" != v.platform &&
                     (e[u] = v.platform
                       .replace(/chrome os/i, L)
-                      .replace(/macos/i, K)),
+                      .replace(/macos/i, O)),
                   e
                 );
               }),
@@ -863,7 +869,7 @@
               }),
               (this.setUA = function (e) {
                 return (
-                  (a = typeof e === l && e.length > 500 ? W(e, 500) : e), this
+                  (a = typeof e === l && e.length > 500 ? V(e, 500) : e), this
                 );
               }),
               this.setUA(a),
@@ -871,10 +877,10 @@
             );
           };
         (Z.VERSION = "1.0.38"),
-          (Z.BROWSER = O([u, f, m])),
-          (Z.CPU = O([h])),
-          (Z.DEVICE = O([d, _, p, v, g, b, w, A, E])),
-          (Z.ENGINE = Z.OS = O([u, f])),
+          (Z.BROWSER = K([u, f, m])),
+          (Z.CPU = K([h])),
+          (Z.DEVICE = K([d, _, p, v, g, b, w, A, E])),
+          (Z.ENGINE = Z.OS = K([u, f])),
           typeof t !== o
             ? (e.exports && (t = e.exports = Z), (t.UAParser = Z))
             : i.amdO
@@ -1208,7 +1214,7 @@
     },
     95306: (e, t, i) => {
       "use strict";
-      i.r(t), i.d(t, { AccountPreferencesRoutes: () => Pe, default: () => Ne });
+      i.r(t), i.d(t, { AccountPreferencesRoutes: () => Te, default: () => Ce });
       var a = i(90626),
         r = i(92757),
         n = i(34629),
@@ -1821,12 +1827,12 @@
         }
         return C;
       }
-      const B = (0, u.PA)(() => {
+      const I = (0, u.PA)(() => {
           let e = D();
           const t = (0, v.A)();
           let i = [];
           for (const t of e.GetPreferences())
-            i.push(a.createElement(I, { preferenceSetting: t }));
+            i.push(a.createElement(B, { preferenceSetting: t }));
           return a.createElement(
             g.u,
             { navID: "StoreNotificationSettings", NavigationManager: t },
@@ -1870,7 +1876,7 @@
             ),
           );
         }),
-        I = (0, u.PA)((e) => {
+        B = (0, u.PA)((e) => {
           const { preferenceSetting: t } = e;
           let i = D();
           const r = (0, a.useCallback)(() => {
@@ -1949,7 +1955,7 @@
         });
       var x = i(6813),
         R = i(61359);
-      class z {
+      class U {
         m_rgDevices = [];
         m_rgRecentDevices = [];
         m_strKBArticleURL;
@@ -1959,10 +1965,10 @@
         }
         static Get() {
           return (
-            z.s_AuthorizedDevicesStore ||
-              ((z.s_AuthorizedDevicesStore = new z()),
-              z.s_AuthorizedDevicesStore.Init()),
-            z.s_AuthorizedDevicesStore
+            U.s_AuthorizedDevicesStore ||
+              ((U.s_AuthorizedDevicesStore = new U()),
+              U.s_AuthorizedDevicesStore.Init()),
+            U.s_AuthorizedDevicesStore
           );
         }
         Init() {
@@ -1986,9 +1992,9 @@
           return this.m_strKBArticleURL;
         }
       }
-      (0, n.Cg)([s.sH], z.prototype, "m_rgDevices", void 0),
-        (0, n.Cg)([s.sH], z.prototype, "m_rgRecentDevices", void 0);
-      var U,
+      (0, n.Cg)([s.sH], U.prototype, "m_rgDevices", void 0),
+        (0, n.Cg)([s.sH], U.prototype, "m_rgRecentDevices", void 0);
+      var z,
         G = i(12155);
       !(function (e) {
         (e[(e.k_EPlatformTypeUnknown = 0)] = "k_EPlatformTypeUnknown"),
@@ -2007,16 +2013,16 @@
             "k_EPlatformTypeEmbeddedClient"),
           (e[(e.k_EPlatformTypeBrowser = 13)] = "k_EPlatformTypeBrowser"),
           (e[(e.k_EPlatformTypeMax = 14)] = "k_EPlatformTypeMax");
-      })(U || (U = {}));
+      })(z || (z = {}));
       var Q = i(91675),
         M = i(22837),
-        F = i(738),
-        H = i(56011),
+        H = i(738),
+        F = i(56011),
         L = i(14771),
-        K = i(32754),
-        O = i(11838);
+        O = i(32754),
+        K = i(11838);
       const j = (0, u.PA)(() => {
-        let e = z.Get();
+        let e = U.Get();
         const t = (0, v.A)(),
           i = (function () {
             const [e] = a.useState(() =>
@@ -2145,7 +2151,7 @@
                     p.wl,
                     {
                       onClick: (e) => {
-                        (0, F.pg)(a.createElement(Z, null), (0, H.uX)(e));
+                        (0, H.pg)(a.createElement(Z, null), (0, F.uX)(e));
                       },
                     },
                     (0, m.we)(
@@ -2168,7 +2174,7 @@
           [s, o] = (0, a.useState)(!1);
         let c = (function (e) {
           if (2 == e.platform_type) {
-            let t = new O.UAParser(e.token_description).getResult();
+            let t = new K.UAParser(e.token_description).getResult();
             return t.browser.name && t.os.name
               ? "WebKit" == t.browser.name
                 ? t.os.name
@@ -2190,7 +2196,7 @@
           (d =
             l.country && n && n != l.country
               ? a.createElement(
-                  K.he,
+                  O.he,
                   {
                     className: R.Tooltip,
                     toolTipContent: (0, m.we)(
@@ -2262,13 +2268,13 @@
                   ),
                 ),
               ),
-              !i && a.createElement(W, { device: t }),
-              s && a.createElement(V, { device: t }),
+              !i && a.createElement(V, { device: t }),
+              s && a.createElement(W, { device: t }),
             ),
           )
         );
       }
-      function W(e) {
+      function V(e) {
         const { device: t } = e,
           i =
             t.first_seen?.time &&
@@ -2297,7 +2303,7 @@
             ),
         );
       }
-      function V(e) {
+      function W(e) {
         const { device: t } = e;
         return a.createElement(
           "div",
@@ -2333,16 +2339,16 @@
         )
           return a.createElement(T.oEi, { className: R.DeviceLogo });
         switch (t.os_platform) {
-          case U.k_EPlatformTypeWin32:
-          case U.k_EPlatformTypeWin64:
+          case z.k_EPlatformTypeWin32:
+          case z.k_EPlatformTypeWin64:
             return a.createElement(T.TV, { className: R.DeviceLogo });
-          case U.k_EPlatformTypeAndroid32:
-          case U.k_EPlatformTypeAndroid64:
-          case U.k_EPlatformTypeLinux32:
-          case U.k_EPlatformTypeLinux64:
-          case U.k_EPlatformTypeIOS32:
-          case U.k_EPlatformTypeIOS64:
-          case U.k_EPlatformTypeOSX:
+          case z.k_EPlatformTypeAndroid32:
+          case z.k_EPlatformTypeAndroid64:
+          case z.k_EPlatformTypeLinux32:
+          case z.k_EPlatformTypeLinux64:
+          case z.k_EPlatformTypeIOS32:
+          case z.k_EPlatformTypeIOS64:
+          case z.k_EPlatformTypeOSX:
             return a.createElement(G.rfv, { className: R.DeviceLogo });
           default:
             return null;
@@ -2387,7 +2393,7 @@
       function Z(e) {
         const { closeModal: t } = e;
         return a.createElement(
-          F.x_,
+          H.x_,
           { onEscKeypress: t },
           a.createElement(
             p.UC,
@@ -2455,8 +2461,10 @@
         pe = i(51272),
         _e = i(84811),
         fe = i(22797),
-        he = i(40094);
-      function ve(e) {
+        he = i(40094),
+        ve = i(61855);
+      const ge = 1422450;
+      function we(e) {
         const t = (0, v.A)(),
           i = (function () {
             const e = (0, se.KV)();
@@ -2480,8 +2488,8 @@
               .filter((e) => 1 === e.status || 3 === e.status)
               .map((e) =>
                 3 === e.status
-                  ? a.createElement(ge, { invite: e, key: e.invite_id })
-                  : a.createElement(we, { invite: e, key: e.invite_id }),
+                  ? a.createElement(be, { invite: e, key: e.invite_id })
+                  : a.createElement(Ae, { invite: e, key: e.invite_id }),
               )),
           a.createElement(
             g.u,
@@ -2520,16 +2528,17 @@
           )
         );
       }
-      function ge(e) {
+      function be(e) {
         const { invite: t } = e,
-          i = ye(t.appid, t.app_name),
-          r = t.appid,
-          n = a.useCallback(
-            (e) => {
-              (0, pe.EP)((0, H.uX)(e), `steam://open/games/details/${r}`);
-            },
-            [r],
-          );
+          i = t.appid,
+          r = Ne(t.appid);
+        let n = r?.GetName() ?? t.app_name;
+        const s = a.useCallback(
+          (e) => {
+            (0, pe.EP)((0, F.uX)(e), `steam://open/games/details/${i}`);
+          },
+          [i],
+        );
         return a.createElement(
           "div",
           { className: ee().PlaytestInvite },
@@ -2539,7 +2548,7 @@
             a.createElement(
               "span",
               null,
-              (0, m.we)("#PlaytestInvites_Welcome", i),
+              (0, m.we)("#PlaytestInvites_Welcome", n),
             ),
           ),
           !o.TS.IN_MOBILE_WEBVIEW &&
@@ -2551,17 +2560,19 @@
                 { className: ee().Buttons },
                 a.createElement(
                   p.jn,
-                  { className: ee().WideButton, noFocusRing: !1, onClick: n },
+                  { className: ee().WideButton, noFocusRing: !1, onClick: s },
                   (0, m.we)("#PlaytestInvites_ViewLibrary"),
                 ),
               ),
             ),
         );
       }
-      function we(e) {
+      function Ae(e) {
         const { invite: t } = e,
           i = (0, ue.f1)(),
-          r = (function (e) {
+          r = Ne(t.appid);
+        let n = r?.GetName() ?? t.app_name;
+        const s = (function (e) {
             const t = (0, se.KV)(),
               i = (0, re.jE)();
             return (0, ne.n)({
@@ -2588,13 +2599,13 @@
               },
             });
           })(t.invite_id),
-          n = a.useCallback(
+          o = a.useCallback(
             (e) => {
-              r.mutate({ bAccept: e });
+              s.mutate({ bAccept: e });
             },
-            [r],
+            [s],
           ),
-          s = new me.b(t.steamid_inviter);
+          c = new me.b(t.steamid_inviter);
         return a.createElement(
           _e.tH,
           null,
@@ -2607,10 +2618,11 @@
             a.createElement(
               "div",
               { className: ee().InviteInfo },
-              a.createElement(be, {
-                steamIDInviter: s,
+              a.createElement(ye, { steamIDInviter: c }),
+              a.createElement(Ee, {
+                appStoreItem: r,
+                strAppName: n,
                 nAppID: t.appid,
-                strAppNameBackup: t.app_name,
               }),
               a.createElement(
                 "div",
@@ -2621,7 +2633,7 @@
             a.createElement(
               "div",
               { className: ee().StatusCtn },
-              r.isPending
+              s.isPending
                 ? a.createElement(fe.t, {
                     size: "medium",
                     position: "center",
@@ -2632,12 +2644,12 @@
                     { className: ee().Buttons },
                     a.createElement(
                       p.jn,
-                      { noFocusRing: !1, onClick: () => n(!0) },
+                      { noFocusRing: !1, onClick: () => o(!0) },
                       (0, m.we)("#PlaytestInvites_Accept"),
                     ),
                     a.createElement(
                       p.$n,
-                      { noFocusRing: !1, onClick: () => n(!1) },
+                      { noFocusRing: !1, onClick: () => o(!1) },
                       (0, m.we)("#PlaytestInvites_Reject"),
                     ),
                   ),
@@ -2645,23 +2657,57 @@
           ),
         );
       }
-      function be(e) {
-        const { steamIDInviter: t, nAppID: i, strAppNameBackup: r } = e,
-          n = ye(i, r);
-        return t.BIsValid()
-          ? a.createElement(Ae, { steamIDInviter: t, strAppName: n })
-          : a.createElement(Ee, { strAppName: n });
+      function Ee(e) {
+        const { appStoreItem: t, strAppName: i, nAppID: r } = e;
+        let n = t?.GetDeveloperNames()?.length
+            ? t.GetDeveloperNames()[0]
+            : null,
+          s = t?.GetStorePageURL(),
+          o = a.createElement("img", {
+            className: ee().SmallCap,
+            src: t?.GetAssets().GetSmallCapsuleURL() ?? ve.A,
+          });
+        return (
+          r == ge && (n = "Valve"),
+          a.createElement(
+            "div",
+            { className: ee().AppInfoCtn },
+            s ? a.createElement(w.Ii, { href: s }, " ", o, " ") : o,
+            a.createElement(
+              "div",
+              { className: ee().AppDescription },
+              a.createElement("div", { className: ee().AppName }, i),
+              n &&
+                a.createElement(
+                  "div",
+                  { className: ee().AppDetail },
+                  (0, m.we)("#PlaytestInvites_AppDeveloper", n),
+                ),
+            ),
+          )
+        );
       }
-      function Ae(e) {
-        const { steamIDInviter: t, strAppName: i } = e,
-          r = (0, le.js)(t.ConvertTo64BitString()),
-          n = r?.data;
-        return r.isSuccess
+      function ye(e) {
+        const { steamIDInviter: t } = e;
+        return t.BIsValid()
+          ? a.createElement(ke, { steamIDInviter: t })
+          : a.createElement(Pe, null);
+      }
+      function ke(e) {
+        const { steamIDInviter: t } = e,
+          i = (0, le.js)(t.ConvertTo64BitString()),
+          r = i?.data;
+        return i.isSuccess
           ? a.createElement(
               "div",
-              { className: ee().AvatarAndPersona },
+              {
+                className: (0, f.A)(
+                  ee().AvatarAndPersona,
+                  ee().InviteDescription,
+                ),
+              },
               a.createElement(ce.i8, {
-                persona: n,
+                persona: r,
                 size: "Small",
                 statusPosition: "right",
               }),
@@ -2669,31 +2715,32 @@
                 "div",
                 null,
                 (0, m.PP)(
-                  "#PlaytestInvites_InviteDescription_FromUser",
+                  "#PlaytestInvites_InviteDescription_FromUser2",
                   a.createElement(
                     w.Ii,
-                    { href: n.GetCommunityProfileURL() },
-                    n?.m_strPlayerName,
+                    { href: r.GetCommunityProfileURL() },
+                    r?.m_strPlayerName,
                   ),
-                  i,
                 ),
               ),
             )
-          : a.createElement(Ee, { strAppName: i });
+          : a.createElement(Pe, null);
       }
-      function Ee(e) {
-        const { strAppName: t } = e;
+      function Pe(e) {
         return a.createElement(
           "div",
-          null,
-          (0, m.we)("#PlaytestInvites_InviteDescription_FromApp", t),
+          { className: ee().InviteDescription },
+          (0, m.we)("#PlaytestInvites_InviteDescription_FromApp2"),
         );
       }
-      function ye(e, t) {
-        const [i, a] = (0, de.t7)(e, { include_basic_info: !0 });
-        return i && 3 == a ? i.GetName() : t;
+      function Ne(e) {
+        const [t, i] = (0, de.t7)(e, {
+          include_basic_info: !0,
+          include_assets: !0,
+        });
+        return t && 3 == i ? t : null;
       }
-      const ke = a.lazy(() =>
+      const Se = a.lazy(() =>
           Promise.all([
             i.e(8970),
             i.e(2298),
@@ -2709,16 +2756,16 @@
             i.e(7072),
           ]).then(i.bind(i, 42048)),
         ),
-        Pe = {
+        Te = {
           CookieSettings: () => "/cookiepreferences",
           NotificationSettings: () => "/notificationsettings",
           ...{ FamilyManagement: () => "/familymanagement" },
           AuthorizedDevices: () => "/authorizeddevices",
           PlaytestInvites: () => "/playtestinvites",
         },
-        Ne = (e) => {
+        Ce = (e) => {
           const t = e.match.url,
-            i = Pe;
+            i = Te;
           return a.createElement(
             r.dO,
             null,
@@ -2736,7 +2783,7 @@
               render: () =>
                 a.createElement(x.X, {
                   config: {
-                    "notification-settings": () => a.createElement(B, null),
+                    "notification-settings": () => a.createElement(I, null),
                   },
                 }),
             }),
@@ -2745,7 +2792,7 @@
               render: () =>
                 a.createElement(x.X, {
                   config: {
-                    "family-management": () => a.createElement(ke, null),
+                    "family-management": () => a.createElement(Se, null),
                   },
                 }),
             }),
@@ -2763,7 +2810,7 @@
               render: () =>
                 a.createElement(x.X, {
                   config: {
-                    "playtest-invites": () => a.createElement(ve, null),
+                    "playtest-invites": () => a.createElement(we, null),
                   },
                 }),
             }),

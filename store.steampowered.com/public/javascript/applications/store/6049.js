@@ -11488,18 +11488,16 @@
           });
         };
     },
-    29863: (e, t, a) => {
+    26101: (e, t, a) => {
       "use strict";
-      a.d(t, { Jz: () => Z, EP: () => X, Qf: () => ne });
+      a.d(t, { EP: () => X, Jz: () => Z, Qf: () => ne });
       var n = a(14947),
         i = a(75844),
         s = a(90626),
         r = a(72739),
-        o = a(90740);
-      const l =
-        a.p +
-        "images/applications/store/defaultappheader.png?v=valveisgoodatcaching";
-      var c = a(6336),
+        o = a(90740),
+        l = a(61855),
+        c = a(6336),
         d = a(85044),
         m = a(55963),
         u = a(82415),
@@ -11631,7 +11629,7 @@
                           key: "default",
                           className: M().FullDivImage,
                           loading: "lazy",
-                          src: l,
+                          src: l.A,
                           alt: "default",
                         }),
                         nDurationMs: q,
@@ -12566,7 +12564,7 @@
         L = a(61859),
         F = a(78327),
         P = a(22797),
-        U = a(29863),
+        U = a(26101),
         M = a(18654),
         N = a.n(M),
         H = a(37076),

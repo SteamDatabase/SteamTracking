@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [398],
+  [7908],
   {
     61738: (e, t, r) => {
       var i = {
@@ -4531,6 +4531,13 @@
           t.current
         );
       }
+    },
+    61855: (e, t, r) => {
+      "use strict";
+      r.d(t, { A: () => i });
+      const i =
+        r.p +
+        "images/applications/store/defaultappheader.png?v=valveisgoodatcaching";
     },
   },
 ]);
