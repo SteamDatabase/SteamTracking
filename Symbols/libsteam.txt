@@ -89,6 +89,7 @@
  B g_bForceLocalProcessEngine
  B g_pSteam2Bridge
  B pKey
+ D BSL::HexEncode<std::string>(unsigned char const*, unsigned int, bool)::szHexDigits
  D CryptoPP::primeTable
  D CryptoPP::primeTableSize
  D Grid::CAccount::CImpl::s_AccountRecordRefreshPeriodHours
@@ -199,7 +200,6 @@
  D inflate_mask
  D pchSteamInstancePublicKey
  D std::basic_string<char, std::char_traits<char>, BSL::CAllocator<char> >::_Rep::_S_empty_rep_storage
- D std::string BSL::HexEncode<std::string>(unsigned char const*, unsigned int, bool)::szHexDigits
  D typeinfo for BSL::CException
  D typeinfo for BSL::CTime::CPackingException
  D typeinfo for BSL::CTime::CTimeToPackNegative

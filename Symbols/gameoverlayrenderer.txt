@@ -118,8 +118,16 @@
  _Unwind_SetIP
  __CFConstantStringClassReference
  __bzero
+ __chkstk_darwin
+ __cxa_allocate_exception
  __cxa_atexit
+ __cxa_begin_catch
+ __cxa_call_unexpected
+ __cxa_free_exception
+ __cxa_pure_virtual
+ __cxa_throw
  __error
+ __gxx_personality_v0
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
@@ -131,6 +139,7 @@
  atoi
  bootstrap_look_up
  bootstrap_port
+ bzero
  class_addMethod
  class_copyMethodList
  class_getClassMethod
@@ -223,6 +232,7 @@
  nanosleep
  nanosleep$UNIX2003
  objc_alloc
+ objc_alloc_init
  objc_autorelease
  objc_autoreleasePoolPop
  objc_autoreleasePoolPush
@@ -232,6 +242,10 @@
  objc_msgSend
  objc_msgSend_fpret
  objc_msgSend_stret
+ objc_opt_class
+ objc_opt_isKindOfClass
+ objc_opt_new
+ objc_opt_respondsToSelector
  objc_release
  objc_retain
  objc_setAssociatedObject
@@ -274,7 +288,9 @@
  sprintf
  sscanf
  std::__1::__vector_base_common<true>::__throw_length_error() const
+ std::length_error::~length_error()
  std::logic_error::logic_error(char const*)
+ std::terminate()
  strcat
  strcmp
  strcpy
@@ -287,9 +303,13 @@
  strstr
  strtoull
  time
+ typeinfo for std::length_error
  unlink
  usleep
  usleep$UNIX2003
  vfprintf
+ vtable for __cxxabiv1::__class_type_info
+ vtable for __cxxabiv1::__si_class_type_info
+ vtable for std::length_error
  write
  write$UNIX2003

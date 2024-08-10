@@ -36,10 +36,13 @@
  T ov_time_tell
  T ov_time_total
  __bzero
+ __chkstk_darwin
  __error
  __stack_chk_fail
  __stack_chk_guard
+ bzero
  calloc
+ d _dyld_private
  dyld_stub_binder
  fclose
  fopen

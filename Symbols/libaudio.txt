@@ -50,6 +50,7 @@
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
+ bzero
  close
  close$UNIX2003
  dlclose
@@ -61,6 +62,7 @@
  flock
  fprintf
  free
+ fstat
  fstat$INODE64
  g_VProfProfilesRunningCount
  g_pMemAllocSteam

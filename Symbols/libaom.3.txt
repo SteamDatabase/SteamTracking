@@ -6321,6 +6321,7 @@
  T time_next_buffer_is_free
  T warp_plane
  __bzero
+ __chkstk_darwin
  __stack_chk_fail
  __stack_chk_guard
  __stderrp
@@ -6367,6 +6368,7 @@
  b wedge_mask_buf
  b wedge_mask_obl
  b wedge_masks
+ bzero
  calloc
  cos
  d .compoundliteral
@@ -6426,6 +6428,7 @@
  d av1_rect_partition_nnconfig_64
  d av1_rect_partition_nnconfig_8
  d av1_simple_motion_search_prune_rect_mean
+ d av1_simple_motion_search_prune_rect_nn_config
  d av1_simple_motion_search_prune_rect_nn_config_128
  d av1_simple_motion_search_prune_rect_nn_config_16
  d av1_simple_motion_search_prune_rect_nn_config_32
@@ -6433,6 +6436,7 @@
  d av1_simple_motion_search_prune_rect_nn_config_8
  d av1_simple_motion_search_prune_rect_std
  d av1_simple_motion_search_split_mean
+ d av1_simple_motion_search_split_nn_config
  d av1_simple_motion_search_split_nn_config_128
  d av1_simple_motion_search_split_nn_config_16
  d av1_simple_motion_search_split_nn_config_32
@@ -6527,6 +6531,7 @@
  d fwd_txfm2d_func_ls
  d fwd_txfm_range_mult2_list
  d g_worker_interface
+ d get_feature_file_name.feature_file_names
  d has_bl_16x16
  d has_bl_16x32
  d has_bl_16x4
@@ -6578,6 +6583,7 @@
  d has_tr_vert_8x8
  d has_tr_vert_tables
  d highbd_txfm_all_1d_zeros_w8_arr
+ d level_fail_messages
  d loop_restoration_row_worker.copy_funs
  d lowbd_txfm_all_1d_w4_arr
  d lowbd_txfm_all_1d_w8_arr
@@ -6835,6 +6841,8 @@
  r av1_intra_mode_cnn_partition_split_thresh_hdres
  r av1_intra_mode_cnn_partition_split_thresh_lowres
  r av1_intra_mode_cnn_partition_split_thresh_midres
+ r av1_intra_tx_split_8x8_mean
+ r av1_intra_tx_split_8x8_std
  r av1_intra_tx_split_nn_bias_8x8_layer0
  r av1_intra_tx_split_nn_bias_8x8_layer1
  r av1_intra_tx_split_nn_weights_8x8_layer0
@@ -9971,6 +9979,7 @@
  t read_filter_intra_mode_info
  t read_inter_frame_mode_info
  t read_inter_segment_id
+ t read_intra_mode
  t read_mv
  t read_mv_component
  t read_obu_header
@@ -9982,12 +9991,14 @@
  t read_uncompressed_header
  t read_wiener_filter
  t realloc_segmentation_maps
+ t record_samples
  t rectangular_partition_search
  t recursive_partition
  t release_pending_output_frames
  t release_processed_frames
  t release_scaled_references
  t relu
+ t remove_short_regions
  t remux_tiles
  t reset
  t resize_context_buffers

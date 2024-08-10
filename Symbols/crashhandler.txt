@@ -30,6 +30,7 @@
  _Unwind_Resume
  __CFConstantStringClassReference
  __bzero
+ __chkstk_darwin
  __cxa_allocate_exception
  __cxa_atexit
  __cxa_begin_catch
@@ -51,12 +52,14 @@
  _dyld_get_image_name
  _exit
  _tlv_bootstrap
+ alphasort
  alphasort$INODE64
  atoi
  backtrace
  backtrace_symbols
  bootstrap_look_up
  bootstrap_port
+ bzero
  dladdr
  dlclose
  dlopen
@@ -90,6 +93,7 @@
  launch_data_new_string
  launch_msg
  lchmod
+ lstat
  lstat$INODE64
  mach_continuous_time
  mach_msg
@@ -108,8 +112,10 @@
  nanosleep
  nanosleep$UNIX2003
  objc_alloc
+ objc_alloc_init
  objc_msgSend
  objc_msgSend_stret
+ objc_opt_respondsToSelector
  objc_release
  operator delete(void*)
  operator delete[](void*)
@@ -136,6 +142,7 @@
  pthread_self
  pthread_setspecific
  realloc
+ scandir
  scandir$INODE64
  sched_yield
  setsid
@@ -143,6 +150,7 @@
  sigprocmask
  snprintf
  sscanf
+ stat
  stat$INODE64
  std::__1::__next_prime(unsigned long)
  std::__1::__vector_base_common<true>::__throw_length_error() const

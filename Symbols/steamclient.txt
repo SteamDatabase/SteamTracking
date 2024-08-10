@@ -471,6 +471,7 @@
  __CFConstantStringClassReference
  __assert_rtn
  __bzero
+ __chkstk_darwin
  __cxa_allocate_exception
  __cxa_atexit
  __cxa_bad_typeid
@@ -484,6 +485,7 @@
  __cxa_pure_virtual
  __cxa_rethrow
  __cxa_throw
+ __darwin_check_fd_set_overflow
  __divdi3
  __dynamic_cast
  __error
@@ -501,6 +503,8 @@
  __stdinp
  __stdoutp
  __strcat_chk
+ __strlcat_chk
+ __strlcpy_chk
  __tolower
  __toupper
  __udivdi3
@@ -527,6 +531,7 @@
  alcCaptureStop
  alcGetError
  alcGetIntegerv
+ alphasort
  alphasort$INODE64
  asinf
  atan
@@ -646,6 +651,7 @@
  getegid
  getenv
  geteuid
+ getfsstat
  getfsstat$INODE64
  getgid
  gethostbyname
@@ -695,6 +701,7 @@
  kill
  kill$UNIX2003
  kqueue
+ labs
  launch_data_alloc
  launch_data_dict_insert
  launch_data_free
@@ -712,6 +719,7 @@
  longjmp
  lrintf
  lseek
+ lstat
  lstat$INODE64
  mach_msg
  mach_port_allocate
@@ -746,6 +754,7 @@
  munmap$UNIX2003
  non-virtual thunk to std::__1::basic_iostream<char, std::__1::char_traits<char> >::~basic_iostream()
  objc_alloc
+ objc_alloc_init
  objc_autoreleasePoolPop
  objc_autoreleasePoolPush
  objc_enumerationMutation
@@ -753,9 +762,12 @@
  objc_msgSendSuper
  objc_msgSendSuper2
  objc_msgSend_stret
+ objc_opt_new
+ objc_opt_respondsToSelector
  objc_release
  open
  open$UNIX2003
+ opendir
  opendir$INODE64
  opendir$INODE64$UNIX2003
  operator delete(void*)
@@ -815,6 +827,7 @@
  random
  read
  read$UNIX2003
+ readdir
  readdir$INODE64
  readlink
  realloc
@@ -828,9 +841,11 @@
  removexattr
  rename
  rmdir
+ scandir
  scandir$INODE64
  sched_get_priority_max
  sched_get_priority_min
+ select
  select$1050
  select$UNIX2003
  sem_close
@@ -855,8 +870,10 @@
  shm_unlink
  shutdown
  sigaction
+ siglongjmp
  signal
  sigprocmask
+ sigsetjmp
  sin
  sinf
  sleep
@@ -875,6 +892,13 @@
  statfs$INODE64
  std::__1::__basic_string_common<true>::__throw_length_error() const
  std::__1::__call_once(unsigned long volatile&, void*, void (*)(void*))
+ std::__1::__codecvt_utf8_utf16<wchar_t>::do_always_noconv() const
+ std::__1::__codecvt_utf8_utf16<wchar_t>::do_encoding() const
+ std::__1::__codecvt_utf8_utf16<wchar_t>::do_in(__mbstate_t&, char const*, char const*, char const*&, wchar_t*, wchar_t*, wchar_t*&) const
+ std::__1::__codecvt_utf8_utf16<wchar_t>::do_length(__mbstate_t&, char const*, char const*, unsigned long) const
+ std::__1::__codecvt_utf8_utf16<wchar_t>::do_max_length() const
+ std::__1::__codecvt_utf8_utf16<wchar_t>::do_out(__mbstate_t&, wchar_t const*, wchar_t const*, wchar_t const*&, char*, char*, char*&) const
+ std::__1::__codecvt_utf8_utf16<wchar_t>::do_unshift(__mbstate_t&, char*, char*, char*&) const
  std::__1::__next_prime(unsigned long)
  std::__1::__thread_local_data()
  std::__1::__thread_struct::__thread_struct()
@@ -922,6 +946,7 @@
  std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::xsputn(wchar_t const*, int)
  std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::xsputn(wchar_t const*, long)
  std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >::~basic_streambuf()
+ std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > std::__1::operator+<char, std::__1::char_traits<char>, std::__1::allocator<char> >(char const*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__grow_by(unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(char const*, unsigned long)
  std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> >::__init(char const*, unsigned long, unsigned long)
@@ -957,6 +982,8 @@
  std::__1::cerr
  std::__1::chrono::steady_clock::now()
  std::__1::chrono::system_clock::now()
+ std::__1::codecvt<wchar_t, char, __mbstate_t>::codecvt(unsigned long)
+ std::__1::codecvt<wchar_t, char, __mbstate_t>::~codecvt()
  std::__1::condition_variable::__do_timed_wait(std::__1::unique_lock<std::__1::mutex>&, std::__1::chrono::time_point<std::__1::chrono::system_clock, std::__1::chrono::duration<long long, std::__1::ratio<1l, 1000000000l> > >)
  std::__1::condition_variable::__do_timed_wait(std::__1::unique_lock<std::__1::mutex>&, std::__1::chrono::time_point<std::__1::chrono::system_clock, std::__1::chrono::duration<long long, std::__1::ratio<1ll, 1000000000ll> > >)
  std::__1::cout
@@ -965,11 +992,16 @@
  std::__1::ios_base::clear(unsigned int)
  std::__1::ios_base::getloc() const
  std::__1::ios_base::init(void*)
+ std::__1::ios_base::~ios_base()
+ std::__1::locale::facet::__on_zero_shared()
+ std::__1::locale::locale()
  std::__1::locale::use_facet(std::__1::locale::id&) const
  std::__1::locale::~locale()
  std::__1::mutex::lock()
  std::__1::mutex::unlock()
  std::__1::mutex::~mutex()
+ std::__1::num_get<char, std::__1::istreambuf_iterator<char, std::__1::char_traits<char> > >::id
+ std::__1::num_put<char, std::__1::ostreambuf_iterator<char, std::__1::char_traits<char> > >::id
  std::__1::random_device::operator()()
  std::__1::random_device::random_device(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&)
  std::__1::random_device::~random_device()
@@ -987,6 +1019,7 @@
  std::nothrow
  std::out_of_range::~out_of_range()
  std::terminate()
+ std::uncaught_exception()
  strcasecmp
  strchr
  strcmp
@@ -1034,12 +1067,14 @@
  typeinfo for float
  typeinfo for int
  typeinfo for long long
+ typeinfo for std::__1::__codecvt_utf8_utf16<wchar_t>
  typeinfo for std::__1::basic_iostream<char, std::__1::char_traits<char> >
  typeinfo for std::__1::basic_istream<char, std::__1::char_traits<char> >
  typeinfo for std::__1::basic_ostream<char, std::__1::char_traits<char> >
  typeinfo for std::__1::basic_ostream<wchar_t, std::__1::char_traits<wchar_t> >
  typeinfo for std::__1::basic_streambuf<char, std::__1::char_traits<char> >
  typeinfo for std::__1::basic_streambuf<wchar_t, std::__1::char_traits<wchar_t> >
+ typeinfo for std::__1::ios_base
  typeinfo for std::exception
  typeinfo for std::length_error
  typeinfo for std::out_of_range
@@ -1073,6 +1108,7 @@
  vtable for __cxxabiv1::__pointer_type_info
  vtable for __cxxabiv1::__si_class_type_info
  vtable for __cxxabiv1::__vmi_class_type_info
+ vtable for std::__1::__codecvt_utf8_utf16<wchar_t>
  vtable for std::__1::basic_ios<char, std::__1::char_traits<char> >
  vtable for std::__1::ios_base
  vtable for std::length_error
@@ -1080,6 +1116,7 @@
  wcscmp
  wcslen
  wcstol
+ wmemchr
  wmemcmp
  write
  write$UNIX2003

@@ -393,6 +393,7 @@
  _Unwind_Resume
  __CFConstantStringClassReference
  __bzero
+ __chkstk_darwin
  __cxa_allocate_exception
  __cxa_atexit
  __cxa_begin_catch
@@ -420,6 +421,7 @@
  atoi
  backtrace
  backtrace_symbols
+ bzero
  chdir
  ctime_r
  daylight
@@ -525,6 +527,7 @@
  sigprocmask
  snprintf
  sscanf
+ stat
  stat$INODE64
  std::__1::__basic_string_common<true>::__throw_length_error() const
  std::__1::__next_prime(unsigned long)

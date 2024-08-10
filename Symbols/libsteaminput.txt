@@ -54,6 +54,7 @@
  _NSConcreteStackBlock
  __CFConstantStringClassReference
  __assert_rtn
+ __chkstk_darwin
  __cxa_atexit
  __stack_chk_fail
  __stack_chk_guard
@@ -75,6 +76,7 @@
  b NSMutableDictionary_class
  b NSString_class
  b NSUndoManagerProxy_targetClass
+ b _MergedGlobals
  b add_image_hook_ARC(mach_header const*, long)::patches
  b add_image_hook_autoreleasepool(mach_header const*, long)::patches
  b add_image_hook_swiftV1(mach_header const*, long)::patches
@@ -127,6 +129,7 @@
  d _OBJC_$_PROTOCOL_METHOD_TYPES___ARCLiteKeyedSubscripting__
  d __block_literal_global
  d __block_literal_global.36
+ d _dyld_private
  d demangleLock
  dispatch_block_create
  dispatch_once_f

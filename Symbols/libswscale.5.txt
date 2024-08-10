@@ -56,6 +56,7 @@
  av_pix_fmt_desc_get
  av_pix_fmt_get_chroma_sub_sample
  av_pix_fmt_swap_endianness
+ bzero
  ceil
  cos
  dyld_stub_binder

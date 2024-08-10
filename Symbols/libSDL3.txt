@@ -1350,6 +1350,7 @@
  _Unwind_Resume
  __CFConstantStringClassReference
  __bzero
+ __chkstk_darwin
  __divdi3
  __error
  __memcpy_chk
@@ -1373,6 +1374,7 @@
  atanf
  atof
  atoi
+ bzero
  calloc
  clock_get_time
  closedir
@@ -1405,6 +1407,7 @@
  free
  fseek
  fseeko
+ fstat
  fstat$INODE64
  ftell
  ftello
@@ -1460,6 +1463,7 @@
  nanosleep$UNIX2003
  nl_langinfo
  objc_alloc
+ objc_alloc_init
  objc_autoreleasePoolPop
  objc_autoreleasePoolPush
  objc_autoreleaseReturnValue
@@ -1478,6 +1482,10 @@
  objc_msgSendSuper2
  objc_msgSend_fpret
  objc_msgSend_stret
+ objc_opt_class
+ objc_opt_isKindOfClass
+ objc_opt_new
+ objc_opt_respondsToSelector
  objc_release
  objc_retain
  objc_retainAutorelease
@@ -1488,6 +1496,7 @@
  objc_sync_enter
  objc_sync_exit
  objc_unsafeClaimAutoreleasedReturnValue
+ opendir
  opendir$INODE64
  opendir$INODE64$UNIX2003
  pow
@@ -1540,6 +1549,7 @@
  pthread_setspecific
  pthread_sigmask
  pthread_sigmask$UNIX2003
+ readdir
  readdir$INODE64
  realloc
  remove
@@ -1557,6 +1567,7 @@
  sinf
  snprintf
  sscanf
+ stat
  stat$INODE64
  strchr
  strcmp

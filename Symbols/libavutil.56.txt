@@ -562,6 +562,7 @@
  T avutil_license
  T avutil_version
  __bzero
+ __chkstk_darwin
  __divdi3
  __error
  __fixunsdfdi
@@ -585,7 +586,9 @@
  atan
  atan2
  bsearch
+ bzero
  ceil
+ clock_gettime
  close
  close$UNIX2003
  cos
@@ -605,6 +608,7 @@
  fputs$UNIX2003
  free
  frexp
+ fstat
  fstat$INODE64
  getenv
  gettimeofday
@@ -616,6 +620,7 @@
  log
  log10
  lrintf
+ malloc
  memchr
  memcmp
  memcpy
@@ -654,6 +659,7 @@
  scalbn
  sin
  sinh
+ snprintf
  sscanf
  strchr
  strcmp
@@ -675,3 +681,4 @@
  tan
  tanh
  trunc
+ vsnprintf

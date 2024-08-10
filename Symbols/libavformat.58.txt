@@ -404,6 +404,7 @@
  T avpriv_register_devices
  T avpriv_set_pts_info
  __bzero
+ __chkstk_darwin
  __divdi3
  __error
  __fixunsdfdi
@@ -655,6 +656,7 @@
  bind
  bind$UNIX2003
  bsearch
+ bzero
  close
  close$UNIX2003
  closedir
@@ -669,6 +671,7 @@
  fputc
  free
  freeaddrinfo
+ fstat
  fstat$INODE64
  fwrite
  fwrite$UNIX2003
@@ -678,6 +681,9 @@
  getsockopt
  gmtime_r
  hypot
+ inflate
+ inflateEnd
+ inflateInit_
  listen
  listen$UNIX2003
  llrint
@@ -685,6 +691,7 @@
  lrint
  lrintf
  lseek
+ lstat
  lstat$INODE64
  malloc
  memchr
@@ -696,6 +703,7 @@
  mkdir
  mktime
  mktime$UNIX2003
+ opendir
  opendir$INODE64
  opendir$INODE64$UNIX2003
  poll
@@ -705,6 +713,7 @@
  pthread_once
  read
  read$UNIX2003
+ readdir
  readdir$INODE64
  recv
  recv$UNIX2003
@@ -714,6 +723,7 @@
  send$UNIX2003
  setsockopt
  shutdown
+ snprintf
  socket
  sscanf
  strchr
@@ -730,6 +740,8 @@
  strtod
  strtod$UNIX2003
  strtol
+ uncompress
  unlink
+ vsnprintf
  write
  write$UNIX2003

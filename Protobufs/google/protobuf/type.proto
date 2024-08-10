@@ -1,12 +1,16 @@
+syntax = "proto3";
 import "google/protobuf/any.proto";
 import "google/protobuf/source_context.proto";
 
 package google.protobuf;
 
+option cc_enable_arenas = true;
 option go_package = "google.golang.org/protobuf/types/known/typepb";
 option java_package = "com.google.protobuf";
 option java_outer_classname = "TypeProto";
 option java_multiple_files = true;
+option objc_class_prefix = "GPB";
+option csharp_namespace = "Google.Protobuf.WellKnownTypes";
 
 enum Syntax {
 	SYNTAX_PROTO2 = 0;

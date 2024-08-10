@@ -194,6 +194,7 @@
  aom_codec_version_str
  aom_img_alloc
  aom_img_free
+ bzero
  d _dyld_private
  d availableCodecs
  d avifColorPrimariesTables

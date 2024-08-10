@@ -45,8 +45,8 @@
  d _16c2_s_p9_0
  d _16c2_s_p9_1
  d _16c2_s_p9_2
- d _16u0(_ *, )
- d _16u0(_0 *)
+ d _16u0__p1_0
+ d _16u0__p2_0
  d _16u0__p3_0
  d _16u0__p4_0
  d _16u0__p5_0
@@ -55,8 +55,8 @@
  d _16u0__p7_0
  d _16u0__p7_1
  d _16u0__p7_2
- d _16u1(_ *, )
- d _16u1(_0 *)
+ d _16u1__p1_0
+ d _16u1__p2_0
  d _16u1__p3_0
  d _16u1__p4_0
  d _16u1__p5_0
@@ -439,8 +439,8 @@
  d _44pn1_p6_0
  d _44pn1_p6_1
  d _44pn1_p6_2
- d _44u0(_ *, )
- d _44u0(_0 *)
+ d _44u0__p1_0
+ d _44u0__p2_0
  d _44u0__p3_0
  d _44u0__p4_0
  d _44u0__p5_0
@@ -449,8 +449,8 @@
  d _44u0__p7_0
  d _44u0__p7_1
  d _44u0__p7_2
- d _44u1(_ *, )
- d _44u1(_0 *)
+ d _44u1__p1_0
+ d _44u1__p2_0
  d _44u1__p3_0
  d _44u1__p4_0
  d _44u1__p5_0
@@ -459,8 +459,8 @@
  d _44u1__p7_0
  d _44u1__p7_1
  d _44u1__p7_2
- d _44u2(_ *, )
- d _44u2(_0 *)
+ d _44u2__p1_0
+ d _44u2__p2_0
  d _44u2__p3_0
  d _44u2__p4_0
  d _44u2__p5_0
@@ -469,8 +469,8 @@
  d _44u2__p7_0
  d _44u2__p7_1
  d _44u2__p7_2
- d _44u3(_ *, )
- d _44u3(_0 *)
+ d _44u3__p1_0
+ d _44u3__p2_0
  d _44u3__p3_0
  d _44u3__p4_0
  d _44u3__p5_0
@@ -479,8 +479,8 @@
  d _44u3__p7_0
  d _44u3__p7_1
  d _44u3__p7_2
- d _44u4(_ *, )
- d _44u4(_0 *)
+ d _44u4__p1_0
+ d _44u4__p2_0
  d _44u4__p3_0
  d _44u4__p4_0
  d _44u4__p5_0
@@ -489,8 +489,8 @@
  d _44u4__p7_0
  d _44u4__p7_1
  d _44u4__p7_2
- d _44u5(_ *, )
- d _44u5(_0 *)
+ d _44u5__p1_0
+ d _44u5__p2_0
  d _44u5__p3_0
  d _44u5__p4_0
  d _44u5__p5_0
@@ -502,8 +502,8 @@
  d _44u5__p9_0
  d _44u5__p9_1
  d _44u5__p9_2
- d _44u6(_ *, )
- d _44u6(_0 *)
+ d _44u6__p1_0
+ d _44u6__p2_0
  d _44u6__p3_0
  d _44u6__p4_0
  d _44u6__p5_0
@@ -515,8 +515,8 @@
  d _44u6__p9_0
  d _44u6__p9_1
  d _44u6__p9_2
- d _44u7(_ *, )
- d _44u7(_0 *)
+ d _44u7__p1_0
+ d _44u7__p2_0
  d _44u7__p3_0
  d _44u7__p4_0
  d _44u7__p5_0
@@ -558,8 +558,8 @@
  d _44u9_p9_0
  d _44u9_p9_1
  d _44u9_p9_2
- d _44un1(_ *, )
- d _44un1(_0 *)
+ d _44un1__p1_0
+ d _44un1__p2_0
  d _44un1__p3_0
  d _44un1__p4_0
  d _44un1__p5_0
@@ -592,8 +592,8 @@
  d _8c1_s_p9_0
  d _8c1_s_p9_1
  d _8c1_s_p9_2
- d _8u0(_ *, )
- d _8u0(_0 *)
+ d _8u0__p1_0
+ d _8u0__p2_0
  d _8u0__p3_0
  d _8u0__p4_0
  d _8u0__p5_0
@@ -602,8 +602,8 @@
  d _8u0__p7_0
  d _8u0__p7_1
  d _8u0__p7_2
- d _8u1(_ *, )
- d _8u1(_0 *)
+ d _8u1__p1_0
+ d _8u1__p2_0
  d _8u1__p3_0
  d _8u1__p4_0
  d _8u1__p5_0
@@ -615,6 +615,7 @@
  d _8u1__p9_0
  d _8u1__p9_1
  d _8u1__p9_2
+ d _dyld_private
  d _floor_1024x27_books
  d _floor_128x11_books
  d _floor_128x17_books
@@ -722,6 +723,8 @@
  d _huff_book__44un1__short
  d _huff_book__8c0_s_single
  d _huff_book__8c1_s_single
+ d _huff_book__8u0__single
+ d _huff_book__8u1__single
  d _huff_book_line_1024x27_0sub0
  d _huff_book_line_1024x27_1sub0
  d _huff_book_line_1024x27_1sub1
@@ -924,8 +927,6 @@
  d _resbook_8u_0
  d _resbook_8u_1
  d setup_list
- d u0__sing::_huff_book(long,...)
- d u1__sing::_huff_book(long,...)
  d ve_setup_11_stereo
  d ve_setup_11_uncoupled
  d ve_setup_16_stereo
@@ -1050,6 +1051,8 @@
  r _huff_lengthlist__44un1__short
  r _huff_lengthlist__8c0_s_single
  r _huff_lengthlist__8c1_s_single
+ r _huff_lengthlist__8u0__single
+ r _huff_lengthlist__8u1__single
  r _huff_lengthlist_line_1024x27_0sub0
  r _huff_lengthlist_line_1024x27_1sub0
  r _huff_lengthlist_line_1024x27_1sub1
@@ -1260,8 +1263,8 @@
  r _vq_lengthlist__16c2_s_p9_0
  r _vq_lengthlist__16c2_s_p9_1
  r _vq_lengthlist__16c2_s_p9_2
- r _vq_lengthlist__16u0(_ *, )
- r _vq_lengthlist__16u0(_0 *)
+ r _vq_lengthlist__16u0__p1_0
+ r _vq_lengthlist__16u0__p2_0
  r _vq_lengthlist__16u0__p3_0
  r _vq_lengthlist__16u0__p4_0
  r _vq_lengthlist__16u0__p5_0
@@ -1270,8 +1273,8 @@
  r _vq_lengthlist__16u0__p7_0
  r _vq_lengthlist__16u0__p7_1
  r _vq_lengthlist__16u0__p7_2
- r _vq_lengthlist__16u1(_ *, )
- r _vq_lengthlist__16u1(_0 *)
+ r _vq_lengthlist__16u1__p1_0
+ r _vq_lengthlist__16u1__p2_0
  r _vq_lengthlist__16u1__p3_0
  r _vq_lengthlist__16u1__p4_0
  r _vq_lengthlist__16u1__p5_0
@@ -1654,8 +1657,8 @@
  r _vq_lengthlist__44pn1_p6_0
  r _vq_lengthlist__44pn1_p6_1
  r _vq_lengthlist__44pn1_p6_2
- r _vq_lengthlist__44u0(_ *, )
- r _vq_lengthlist__44u0(_0 *)
+ r _vq_lengthlist__44u0__p1_0
+ r _vq_lengthlist__44u0__p2_0
  r _vq_lengthlist__44u0__p3_0
  r _vq_lengthlist__44u0__p4_0
  r _vq_lengthlist__44u0__p5_0
@@ -1664,8 +1667,8 @@
  r _vq_lengthlist__44u0__p7_0
  r _vq_lengthlist__44u0__p7_1
  r _vq_lengthlist__44u0__p7_2
- r _vq_lengthlist__44u1(_ *, )
- r _vq_lengthlist__44u1(_0 *)
+ r _vq_lengthlist__44u1__p1_0
+ r _vq_lengthlist__44u1__p2_0
  r _vq_lengthlist__44u1__p3_0
  r _vq_lengthlist__44u1__p4_0
  r _vq_lengthlist__44u1__p5_0
@@ -1674,8 +1677,8 @@
  r _vq_lengthlist__44u1__p7_0
  r _vq_lengthlist__44u1__p7_1
  r _vq_lengthlist__44u1__p7_2
- r _vq_lengthlist__44u2(_ *, )
- r _vq_lengthlist__44u2(_0 *)
+ r _vq_lengthlist__44u2__p1_0
+ r _vq_lengthlist__44u2__p2_0
  r _vq_lengthlist__44u2__p3_0
  r _vq_lengthlist__44u2__p4_0
  r _vq_lengthlist__44u2__p5_0
@@ -1684,8 +1687,8 @@
  r _vq_lengthlist__44u2__p7_0
  r _vq_lengthlist__44u2__p7_1
  r _vq_lengthlist__44u2__p7_2
- r _vq_lengthlist__44u3(_ *, )
- r _vq_lengthlist__44u3(_0 *)
+ r _vq_lengthlist__44u3__p1_0
+ r _vq_lengthlist__44u3__p2_0
  r _vq_lengthlist__44u3__p3_0
  r _vq_lengthlist__44u3__p4_0
  r _vq_lengthlist__44u3__p5_0
@@ -1694,8 +1697,8 @@
  r _vq_lengthlist__44u3__p7_0
  r _vq_lengthlist__44u3__p7_1
  r _vq_lengthlist__44u3__p7_2
- r _vq_lengthlist__44u4(_ *, )
- r _vq_lengthlist__44u4(_0 *)
+ r _vq_lengthlist__44u4__p1_0
+ r _vq_lengthlist__44u4__p2_0
  r _vq_lengthlist__44u4__p3_0
  r _vq_lengthlist__44u4__p4_0
  r _vq_lengthlist__44u4__p5_0
@@ -1704,8 +1707,8 @@
  r _vq_lengthlist__44u4__p7_0
  r _vq_lengthlist__44u4__p7_1
  r _vq_lengthlist__44u4__p7_2
- r _vq_lengthlist__44u5(_ *, )
- r _vq_lengthlist__44u5(_0 *)
+ r _vq_lengthlist__44u5__p1_0
+ r _vq_lengthlist__44u5__p2_0
  r _vq_lengthlist__44u5__p3_0
  r _vq_lengthlist__44u5__p4_0
  r _vq_lengthlist__44u5__p5_0
@@ -1717,8 +1720,8 @@
  r _vq_lengthlist__44u5__p9_0
  r _vq_lengthlist__44u5__p9_1
  r _vq_lengthlist__44u5__p9_2
- r _vq_lengthlist__44u6(_ *, )
- r _vq_lengthlist__44u6(_0 *)
+ r _vq_lengthlist__44u6__p1_0
+ r _vq_lengthlist__44u6__p2_0
  r _vq_lengthlist__44u6__p3_0
  r _vq_lengthlist__44u6__p4_0
  r _vq_lengthlist__44u6__p5_0
@@ -1730,8 +1733,8 @@
  r _vq_lengthlist__44u6__p9_0
  r _vq_lengthlist__44u6__p9_1
  r _vq_lengthlist__44u6__p9_2
- r _vq_lengthlist__44u7(_ *, )
- r _vq_lengthlist__44u7(_0 *)
+ r _vq_lengthlist__44u7__p1_0
+ r _vq_lengthlist__44u7__p2_0
  r _vq_lengthlist__44u7__p3_0
  r _vq_lengthlist__44u7__p4_0
  r _vq_lengthlist__44u7__p5_0
@@ -1773,8 +1776,8 @@
  r _vq_lengthlist__44u9_p9_0
  r _vq_lengthlist__44u9_p9_1
  r _vq_lengthlist__44u9_p9_2
- r _vq_lengthlist__44un1(_ *, )
- r _vq_lengthlist__44un1(_0 *)
+ r _vq_lengthlist__44un1__p1_0
+ r _vq_lengthlist__44un1__p2_0
  r _vq_lengthlist__44un1__p3_0
  r _vq_lengthlist__44un1__p4_0
  r _vq_lengthlist__44un1__p5_0
@@ -1783,14 +1786,53 @@
  r _vq_lengthlist__44un1__p7_0
  r _vq_lengthlist__44un1__p7_1
  r _vq_lengthlist__44un1__p7_2
+ r _vq_lengthlist__8c0_s_p1_0
+ r _vq_lengthlist__8c0_s_p3_0
+ r _vq_lengthlist__8c0_s_p4_0
+ r _vq_lengthlist__8c0_s_p5_0
+ r _vq_lengthlist__8c0_s_p6_0
+ r _vq_lengthlist__8c0_s_p7_0
  r _vq_lengthlist__8c0_s_p7_1
+ r _vq_lengthlist__8c0_s_p8_0
  r _vq_lengthlist__8c0_s_p8_1
+ r _vq_lengthlist__8c0_s_p9_0
  r _vq_lengthlist__8c0_s_p9_1
  r _vq_lengthlist__8c0_s_p9_2
+ r _vq_lengthlist__8c1_s_p1_0
+ r _vq_lengthlist__8c1_s_p3_0
+ r _vq_lengthlist__8c1_s_p4_0
+ r _vq_lengthlist__8c1_s_p5_0
+ r _vq_lengthlist__8c1_s_p6_0
+ r _vq_lengthlist__8c1_s_p7_0
  r _vq_lengthlist__8c1_s_p7_1
+ r _vq_lengthlist__8c1_s_p8_0
  r _vq_lengthlist__8c1_s_p8_1
+ r _vq_lengthlist__8c1_s_p9_0
  r _vq_lengthlist__8c1_s_p9_1
  r _vq_lengthlist__8c1_s_p9_2
+ r _vq_lengthlist__8u0__p1_0
+ r _vq_lengthlist__8u0__p2_0
+ r _vq_lengthlist__8u0__p3_0
+ r _vq_lengthlist__8u0__p4_0
+ r _vq_lengthlist__8u0__p5_0
+ r _vq_lengthlist__8u0__p6_0
+ r _vq_lengthlist__8u0__p6_1
+ r _vq_lengthlist__8u0__p7_0
+ r _vq_lengthlist__8u0__p7_1
+ r _vq_lengthlist__8u0__p7_2
+ r _vq_lengthlist__8u1__p1_0
+ r _vq_lengthlist__8u1__p2_0
+ r _vq_lengthlist__8u1__p3_0
+ r _vq_lengthlist__8u1__p4_0
+ r _vq_lengthlist__8u1__p5_0
+ r _vq_lengthlist__8u1__p6_0
+ r _vq_lengthlist__8u1__p7_0
+ r _vq_lengthlist__8u1__p7_1
+ r _vq_lengthlist__8u1__p8_0
+ r _vq_lengthlist__8u1__p8_1
+ r _vq_lengthlist__8u1__p9_0
+ r _vq_lengthlist__8u1__p9_1
+ r _vq_lengthlist__8u1__p9_2
  r _vq_quantlist__16c0_s_p1_0
  r _vq_quantlist__16c0_s_p3_0
  r _vq_quantlist__16c0_s_p4_0
@@ -1830,8 +1872,8 @@
  r _vq_quantlist__16c2_s_p9_0
  r _vq_quantlist__16c2_s_p9_1
  r _vq_quantlist__16c2_s_p9_2
- r _vq_quantlist__16u0(_ *, )
- r _vq_quantlist__16u0(_0 *)
+ r _vq_quantlist__16u0__p1_0
+ r _vq_quantlist__16u0__p2_0
  r _vq_quantlist__16u0__p3_0
  r _vq_quantlist__16u0__p4_0
  r _vq_quantlist__16u0__p5_0
@@ -1840,8 +1882,8 @@
  r _vq_quantlist__16u0__p7_0
  r _vq_quantlist__16u0__p7_1
  r _vq_quantlist__16u0__p7_2
- r _vq_quantlist__16u1(_ *, )
- r _vq_quantlist__16u1(_0 *)
+ r _vq_quantlist__16u1__p1_0
+ r _vq_quantlist__16u1__p2_0
  r _vq_quantlist__16u1__p3_0
  r _vq_quantlist__16u1__p4_0
  r _vq_quantlist__16u1__p5_0
@@ -2224,8 +2266,8 @@
  r _vq_quantlist__44pn1_p6_0
  r _vq_quantlist__44pn1_p6_1
  r _vq_quantlist__44pn1_p6_2
- r _vq_quantlist__44u0(_ *, )
- r _vq_quantlist__44u0(_0 *)
+ r _vq_quantlist__44u0__p1_0
+ r _vq_quantlist__44u0__p2_0
  r _vq_quantlist__44u0__p3_0
  r _vq_quantlist__44u0__p4_0
  r _vq_quantlist__44u0__p5_0
@@ -2234,8 +2276,8 @@
  r _vq_quantlist__44u0__p7_0
  r _vq_quantlist__44u0__p7_1
  r _vq_quantlist__44u0__p7_2
- r _vq_quantlist__44u1(_ *, )
- r _vq_quantlist__44u1(_0 *)
+ r _vq_quantlist__44u1__p1_0
+ r _vq_quantlist__44u1__p2_0
  r _vq_quantlist__44u1__p3_0
  r _vq_quantlist__44u1__p4_0
  r _vq_quantlist__44u1__p5_0
@@ -2244,8 +2286,8 @@
  r _vq_quantlist__44u1__p7_0
  r _vq_quantlist__44u1__p7_1
  r _vq_quantlist__44u1__p7_2
- r _vq_quantlist__44u2(_ *, )
- r _vq_quantlist__44u2(_0 *)
+ r _vq_quantlist__44u2__p1_0
+ r _vq_quantlist__44u2__p2_0
  r _vq_quantlist__44u2__p3_0
  r _vq_quantlist__44u2__p4_0
  r _vq_quantlist__44u2__p5_0
@@ -2254,8 +2296,8 @@
  r _vq_quantlist__44u2__p7_0
  r _vq_quantlist__44u2__p7_1
  r _vq_quantlist__44u2__p7_2
- r _vq_quantlist__44u3(_ *, )
- r _vq_quantlist__44u3(_0 *)
+ r _vq_quantlist__44u3__p1_0
+ r _vq_quantlist__44u3__p2_0
  r _vq_quantlist__44u3__p3_0
  r _vq_quantlist__44u3__p4_0
  r _vq_quantlist__44u3__p5_0
@@ -2264,8 +2306,8 @@
  r _vq_quantlist__44u3__p7_0
  r _vq_quantlist__44u3__p7_1
  r _vq_quantlist__44u3__p7_2
- r _vq_quantlist__44u4(_ *, )
- r _vq_quantlist__44u4(_0 *)
+ r _vq_quantlist__44u4__p1_0
+ r _vq_quantlist__44u4__p2_0
  r _vq_quantlist__44u4__p3_0
  r _vq_quantlist__44u4__p4_0
  r _vq_quantlist__44u4__p5_0
@@ -2274,8 +2316,8 @@
  r _vq_quantlist__44u4__p7_0
  r _vq_quantlist__44u4__p7_1
  r _vq_quantlist__44u4__p7_2
- r _vq_quantlist__44u5(_ *, )
- r _vq_quantlist__44u5(_0 *)
+ r _vq_quantlist__44u5__p1_0
+ r _vq_quantlist__44u5__p2_0
  r _vq_quantlist__44u5__p3_0
  r _vq_quantlist__44u5__p4_0
  r _vq_quantlist__44u5__p5_0
@@ -2287,8 +2329,8 @@
  r _vq_quantlist__44u5__p9_0
  r _vq_quantlist__44u5__p9_1
  r _vq_quantlist__44u5__p9_2
- r _vq_quantlist__44u6(_ *, )
- r _vq_quantlist__44u6(_0 *)
+ r _vq_quantlist__44u6__p1_0
+ r _vq_quantlist__44u6__p2_0
  r _vq_quantlist__44u6__p3_0
  r _vq_quantlist__44u6__p4_0
  r _vq_quantlist__44u6__p5_0
@@ -2300,8 +2342,8 @@
  r _vq_quantlist__44u6__p9_0
  r _vq_quantlist__44u6__p9_1
  r _vq_quantlist__44u6__p9_2
- r _vq_quantlist__44u7(_ *, )
- r _vq_quantlist__44u7(_0 *)
+ r _vq_quantlist__44u7__p1_0
+ r _vq_quantlist__44u7__p2_0
  r _vq_quantlist__44u7__p3_0
  r _vq_quantlist__44u7__p4_0
  r _vq_quantlist__44u7__p5_0
@@ -2343,8 +2385,8 @@
  r _vq_quantlist__44u9_p9_0
  r _vq_quantlist__44u9_p9_1
  r _vq_quantlist__44u9_p9_2
- r _vq_quantlist__44un1(_ *, )
- r _vq_quantlist__44un1(_0 *)
+ r _vq_quantlist__44un1__p1_0
+ r _vq_quantlist__44un1__p2_0
  r _vq_quantlist__44un1__p3_0
  r _vq_quantlist__44un1__p4_0
  r _vq_quantlist__44un1__p5_0
@@ -2353,52 +2395,59 @@
  r _vq_quantlist__44un1__p7_0
  r _vq_quantlist__44un1__p7_1
  r _vq_quantlist__44un1__p7_2
+ r _vq_quantlist__8c0_s_p1_0
+ r _vq_quantlist__8c0_s_p3_0
+ r _vq_quantlist__8c0_s_p4_0
+ r _vq_quantlist__8c0_s_p5_0
+ r _vq_quantlist__8c0_s_p6_0
+ r _vq_quantlist__8c0_s_p7_0
  r _vq_quantlist__8c0_s_p7_1
+ r _vq_quantlist__8c0_s_p8_0
  r _vq_quantlist__8c0_s_p8_1
+ r _vq_quantlist__8c0_s_p9_0
  r _vq_quantlist__8c0_s_p9_1
  r _vq_quantlist__8c0_s_p9_2
+ r _vq_quantlist__8c1_s_p1_0
+ r _vq_quantlist__8c1_s_p3_0
+ r _vq_quantlist__8c1_s_p4_0
+ r _vq_quantlist__8c1_s_p5_0
+ r _vq_quantlist__8c1_s_p6_0
+ r _vq_quantlist__8c1_s_p7_0
  r _vq_quantlist__8c1_s_p7_1
+ r _vq_quantlist__8c1_s_p8_0
  r _vq_quantlist__8c1_s_p8_1
+ r _vq_quantlist__8c1_s_p9_0
  r _vq_quantlist__8c1_s_p9_1
  r _vq_quantlist__8c1_s_p9_2
+ r _vq_quantlist__8u0__p1_0
+ r _vq_quantlist__8u0__p2_0
+ r _vq_quantlist__8u0__p3_0
+ r _vq_quantlist__8u0__p4_0
+ r _vq_quantlist__8u0__p5_0
+ r _vq_quantlist__8u0__p6_0
+ r _vq_quantlist__8u0__p6_1
+ r _vq_quantlist__8u0__p7_0
+ r _vq_quantlist__8u0__p7_1
+ r _vq_quantlist__8u0__p7_2
+ r _vq_quantlist__8u1__p1_0
+ r _vq_quantlist__8u1__p2_0
+ r _vq_quantlist__8u1__p3_0
+ r _vq_quantlist__8u1__p4_0
+ r _vq_quantlist__8u1__p5_0
+ r _vq_quantlist__8u1__p6_0
+ r _vq_quantlist__8u1__p7_0
+ r _vq_quantlist__8u1__p7_1
+ r _vq_quantlist__8u1__p8_0
+ r _vq_quantlist__8u1__p8_1
+ r _vq_quantlist__8u1__p9_0
+ r _vq_quantlist__8u1__p9_1
+ r _vq_quantlist__8u1__p9_2
  r blocksize_11
  r blocksize_16_long
  r blocksize_16_short
  r blocksize_8
  r blocksize_long_44
  r blocksize_short_44
- r c0_s_p1_::_vq_lengthlist()
- r c0_s_p1_::_vq_quantlist()
- r c0_s_p3_::_vq_lengthlist()
- r c0_s_p3_::_vq_quantlist()
- r c0_s_p4_::_vq_lengthlist()
- r c0_s_p4_::_vq_quantlist()
- r c0_s_p5_::_vq_lengthlist()
- r c0_s_p5_::_vq_quantlist()
- r c0_s_p6_::_vq_lengthlist()
- r c0_s_p6_::_vq_quantlist()
- r c0_s_p7_::_vq_lengthlist()
- r c0_s_p7_::_vq_quantlist()
- r c0_s_p8_::_vq_lengthlist()
- r c0_s_p8_::_vq_quantlist()
- r c0_s_p9_::_vq_lengthlist()
- r c0_s_p9_::_vq_quantlist()
- r c1_s_p1_::_vq_lengthlist()
- r c1_s_p1_::_vq_quantlist()
- r c1_s_p3_::_vq_lengthlist()
- r c1_s_p3_::_vq_quantlist()
- r c1_s_p4_::_vq_lengthlist()
- r c1_s_p4_::_vq_quantlist()
- r c1_s_p5_::_vq_lengthlist()
- r c1_s_p5_::_vq_quantlist()
- r c1_s_p6_::_vq_lengthlist()
- r c1_s_p6_::_vq_quantlist()
- r c1_s_p7_::_vq_lengthlist()
- r c1_s_p7_::_vq_quantlist()
- r c1_s_p8_::_vq_lengthlist()
- r c1_s_p8_::_vq_quantlist()
- r c1_s_p9_::_vq_lengthlist()
- r c1_s_p9_::_vq_quantlist()
  r quality_mapping_11
  r quality_mapping_16
  r quality_mapping_44
@@ -2417,54 +2466,6 @@
  r rate_mapping_8
  r rate_mapping_8_uncoupled
  r rate_mapping_X
- r u0__p1_0::_vq_lengthlist(void)
- r u0__p1_0::_vq_quantlist(void)
- r u0__p2_0::_vq_lengthlist(void)
- r u0__p2_0::_vq_quantlist(void)
- r u0__p3_0::_vq_lengthlist(void)
- r u0__p3_0::_vq_quantlist(void)
- r u0__p4_0::_vq_lengthlist(void)
- r u0__p4_0::_vq_quantlist(void)
- r u0__p5_0::_vq_lengthlist(void)
- r u0__p5_0::_vq_quantlist(void)
- r u0__p6_0::_vq_lengthlist(void)
- r u0__p6_0::_vq_quantlist(void)
- r u0__p6_1::_vq_lengthlist(void)
- r u0__p6_1::_vq_quantlist(void)
- r u0__p7_0::_vq_lengthlist(void)
- r u0__p7_0::_vq_quantlist(void)
- r u0__p7_1::_vq_lengthlist(void)
- r u0__p7_1::_vq_quantlist(void)
- r u0__p7_2::_vq_lengthlist(void)
- r u0__p7_2::_vq_quantlist(void)
- r u0__sing::_huff_lengthlist(long,...)
- r u1__p1_0::_vq_lengthlist(void)
- r u1__p1_0::_vq_quantlist(void)
- r u1__p2_0::_vq_lengthlist(void)
- r u1__p2_0::_vq_quantlist(void)
- r u1__p3_0::_vq_lengthlist(void)
- r u1__p3_0::_vq_quantlist(void)
- r u1__p4_0::_vq_lengthlist(void)
- r u1__p4_0::_vq_quantlist(void)
- r u1__p5_0::_vq_lengthlist(void)
- r u1__p5_0::_vq_quantlist(void)
- r u1__p6_0::_vq_lengthlist(void)
- r u1__p6_0::_vq_quantlist(void)
- r u1__p7_0::_vq_lengthlist(void)
- r u1__p7_0::_vq_quantlist(void)
- r u1__p7_1::_vq_lengthlist(void)
- r u1__p7_1::_vq_quantlist(void)
- r u1__p8_0::_vq_lengthlist(void)
- r u1__p8_0::_vq_quantlist(void)
- r u1__p8_1::_vq_lengthlist(void)
- r u1__p8_1::_vq_quantlist(void)
- r u1__p9_0::_vq_lengthlist(void)
- r u1__p9_0::_vq_quantlist(void)
- r u1__p9_1::_vq_lengthlist(void)
- r u1__p9_1::_vq_quantlist(void)
- r u1__p9_2::_vq_lengthlist(void)
- r u1__p9_2::_vq_quantlist(void)
- r u1__sing::_huff_lengthlist(long,...)
  t get_setup_template
  t vorbis_encode_noisebias_setup
  t vorbis_encode_setup_setting

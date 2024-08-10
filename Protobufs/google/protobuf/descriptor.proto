@@ -1,9 +1,12 @@
 package google.protobuf;
 
 option optimize_for = SPEED;
+option cc_enable_arenas = true;
 option go_package = "google.golang.org/protobuf/types/descriptorpb";
 option java_package = "com.google.protobuf";
 option java_outer_classname = "DescriptorProtos";
+option objc_class_prefix = "GPB";
+option csharp_namespace = "Google.Protobuf.Reflection";
 
 message FileDescriptorSet {
 	repeated .google.protobuf.FileDescriptorProto file = 1;

@@ -315,6 +315,7 @@
  _DefaultRuneLocale
  _Unwind_Resume
  __bzero
+ __chkstk_darwin
  __cxa_atexit
  __cxa_begin_catch
  __cxa_guard_abort
@@ -330,6 +331,7 @@
  __tolower
  __toupper
  atoi
+ bzero
  chdir
  close
  close$UNIX2003
@@ -340,6 +342,7 @@
  flock
  fprintf
  free
+ fstat
  fstat$INODE64
  g_VProfProfilesRunningCount
  g_VProfile
@@ -355,6 +358,7 @@
  memset
  objc_msgSend
  objc_msgSend_stret
+ objc_opt_respondsToSelector
  open
  open$UNIX2003
  operator delete(void*)

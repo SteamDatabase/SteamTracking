@@ -1,9 +1,13 @@
+syntax = "proto3";
+
 package google.protobuf;
 
 option go_package = "google.golang.org/protobuf/types/known/sourcecontextpb";
 option java_package = "com.google.protobuf";
 option java_outer_classname = "SourceContextProto";
 option java_multiple_files = true;
+option objc_class_prefix = "GPB";
+option csharp_namespace = "Google.Protobuf.WellKnownTypes";
 
 message SourceContext {
 	optional string file_name = 1;

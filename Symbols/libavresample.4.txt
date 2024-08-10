@@ -51,6 +51,7 @@
  T avresample_set_matrix
  T avresample_version
  __bzero
+ __chkstk_darwin
  __divdi3
  __moddi3
  __snprintf_chk
@@ -86,6 +87,7 @@
  av_samples_fill_arrays
  av_samples_get_buffer_size
  av_samples_set_silence
+ bzero
  ceil
  cos
  dyld_stub_binder
@@ -96,4 +98,6 @@
  memcpy
  memmove
  memset
+ memset_pattern16
  sin
+ snprintf

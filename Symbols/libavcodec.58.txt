@@ -397,12 +397,14 @@
  VTDecompressionSessionWaitForAsynchronousFrames
  __CFConstantStringClassReference
  __bzero
+ __chkstk_darwin
  __divdi3
  __error
  __isfinited
  __memcpy_chk
  __memset_chk
  __moddi3
+ __powisf2
  __sincos_stret
  __sincosf_stret
  __snprintf_chk
@@ -567,6 +569,7 @@
  avpriv_slicethread_free
  avpriv_solve_lls
  bsearch
+ bzero
  calloc
  cbrt
  cbrtf
@@ -648,6 +651,7 @@
  setjmp
  sin
  sinf
+ snprintf
  sscanf
  strchr
  strcmp
@@ -658,3 +662,14 @@
  strtoul
  sysconf
  tan
+ vpx_codec_build_config
+ vpx_codec_dec_init_ver
+ vpx_codec_decode
+ vpx_codec_destroy
+ vpx_codec_error
+ vpx_codec_error_detail
+ vpx_codec_get_frame
+ vpx_codec_set_frame_buffer_functions
+ vpx_codec_version_str
+ vpx_codec_vp8_dx_algo
+ vpx_codec_vp9_dx_algo

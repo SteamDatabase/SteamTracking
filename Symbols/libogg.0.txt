@@ -71,6 +71,7 @@
  T oggpack_writeinit
  T oggpack_writetrunc
  __bzero
+ d _dyld_private
  dyld_stub_binder
  free
  malloc

@@ -116,15 +116,19 @@
  T vorbis_version_string
  T vorbis_window
  __bzero
+ __chkstk_darwin
  __sincos_stret
  __stack_chk_fail
  __stack_chk_guard
  __strcat_chk
  acos
+ acosf
  atan
+ bzero
  calloc
  ceil
  cos
+ d _dyld_private
  d vwin
  dyld_stub_binder
  exit
@@ -173,6 +177,7 @@
  rint
  rintf
  sin
+ strcat
  strcpy
  strlen
  t Laguerre_With_Deflation

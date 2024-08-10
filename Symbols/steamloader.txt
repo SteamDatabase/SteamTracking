@@ -4,6 +4,7 @@
  T CGlobalInitter::PatchPreLion()
  T _dyld_func_lookup
  T dyld_stub_binding_helper
+ T stub_entry_SteamLoader
  __stack_chk_fail
  __stack_chk_guard
  _dyld_get_image_header
