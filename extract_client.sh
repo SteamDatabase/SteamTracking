@@ -44,9 +44,10 @@ sort -k 2 -o "$DIR/ClientExtracted/ClientContentLinux.txt" "$DIR/ClientExtracted
 
 echo Dumping protobufs
 
-# https://github.com/SteamRE/SteamKit/tree/master/Resources/ProtobufDumper
-~/ProtobufDumper/ProtobufDumper linux_bins/ubuntu12_32/steamui.so "$DIR/Protobufs/" > /dev/null
-~/ProtobufDumper/ProtobufDumper linux_bins/ubuntu12_32/steamclient.so "$DIR/Protobufs/" > /dev/null
+PROTOBUF_DUMPER="$DIR/SteamKit/Resources/ProtobufDumper/ProtobufDumper/bin/Release/linux-x64/publish/ProtobufDumper"
+
+"$PROTOBUF_DUMPER" linux_bins/ubuntu12_32/steamui.so "$DIR/Protobufs/" > /dev/null
+"$PROTOBUF_DUMPER" linux_bins/ubuntu12_32/steamclient.so "$DIR/Protobufs/" > /dev/null
 
 # https://github.com/m4dEngi/steamworks_dumper
 echo Dumping structs

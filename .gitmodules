@@ -2,3 +2,7 @@
 	path = DumpStrings
 	url = https://github.com/xPaw/DumpStrings
 	shallow = true
+[submodule "SteamKit"]
+	path = SteamKit
+	url = https://github.com/SteamRE/SteamKit
+	shallow = true
