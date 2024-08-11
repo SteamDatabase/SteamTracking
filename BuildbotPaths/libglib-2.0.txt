@@ -1,2 +1,0 @@
-/Users/buildbot/buildslave/pango_osx/build/glib-2.42.0/lib32/lib
-/Users/buildbot/buildslave/pango_osx/build/glib-2.42.0/lib64/lib

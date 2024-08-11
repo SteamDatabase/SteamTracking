@@ -1,735 +1,323 @@
-__TEXT
-__text
-__TEXT
-__symbol_stub
-__TEXT
-__stub_helper
-__TEXT
-__const
-__TEXT
-__gcc_except_tab__TEXT
-__cstring
-__TEXT
-__dof_cxa_runti
-__TEXT
-__unwind_info
-__TEXT
-__eh_frame
-__TEXT
-__OBJC
-__message_refs
-__OBJC
-__cls_refs
-__OBJC
-__module_info
-__OBJC
-__cat_inst_meth
-__OBJC
-__category
-__OBJC
-__meta_class
-__OBJC
-__instance_vars
-__OBJC
-__inst_meth
-__OBJC
-__property
-__OBJC
-__class_ext
-__OBJC
-__class
-__OBJC
-__protocol
-__OBJC
-__cat_cls_meth
-__OBJC
-__symbols
-__OBJC
-__image_info
-__OBJC
-__DATA
-__nl_symbol_ptr
-__DATA
-__la_symbol_ptr
-__DATA
-__mod_init_func
-__DATA
-__const
-__DATA
-__cfstring
-__DATA
-__data
-__DATA
-__interpose
-__DATA
-__bss
-__DATA
-__common
-__DATA
-__LINKEDIT
-@loader_path/gameoverlayrenderer.dylib
-/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
-/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
-/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
-/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia
-/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface
-/System/Library/Frameworks/Carbon.framework/Versions/A/Carbon
-/System/Library/Frameworks/Metal.framework/Versions/A/Metal
-/usr/lib/libc++.1.dylib
-/usr/lib/libSystem.B.dylib
-/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
-/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
-/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
-/usr/lib/libobjc.A.dylib
-4@F1
- ^_]
-QPSV
-^_[]
-^_[]
-PPWj
-^_[]
-^_[]
-QVRPW
-,^_[]
-j$VP
-j$QP
-@^_]
-,^_[]
-QWRP
-xD5tH
-;FLw]1
-^_[]
-9JDu
-tF9A
-^_[]
-^_[]
-WRPVQ
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-F$VWS
-^_[]
-^_[]
-^_[]
-^_[]
-PPPV
-^_[]
-^_[]
-^_[]
-PQRW
-PWQS
-^_[]
-^_[]
-PQRW
-PWQV
-^_[]
-^_[]
-PQj V
-PSQW
-^_[]
-^_[]
-PQj 
-,^_[]
-jhPS
-^_[]
-,^_[]
-,^_[]
-^_[]
-^_[]
-PRWQ
-^_[]
-^_[]
-^_[]
-SQSS
-^_[]
-^_[]
-^_[]
-^_[]
-PRWQ
-^_[]
-^_[]
-PQSj
-^_[]
-PQWj
-^_[]
-PQSj
-^_[]
-P^_]
-<^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-,^_[]
-,^_[]
-VVVS
-VVVS
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-A @1
-^_[]
-VSVSP
-VSVSP
-^_[]
-VSVSQ
-VSVSQ
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-PQRV
-u19q
-u,9Q
-;A$u
-RPhg
-^_[]
-^_[]
-^_[]
-^_[]
-QQVRQQ
-t>T1
-vHh@
-QPWW
-vhh@
-PRWW
-QPRR
-<^_[]
-j@RV
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-u8RVP1
-L^_[]
-RQPS
-QPVR
-QRVW
-^_[]
-^_[]
-^_[]
-tZ9G
-^_[]
-T$(1
-L^_[]
-;U u
-E 9E
-<^_[]
-8F!u
-^_[]
-t&9q
-E89A
-^_[]
-RWVQS
-QWVPS
-SVVV
-SVVV
-L^_[]
-QPWW
-^_[]
-SWRQ
-^_[]
-j@WP
-,^_[]
-PQRW
-QRPS
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-\^_[]
-^_[]
-PWVQ
-^_[]
-^_[]
-\^_[]
-^_[]
-^_[]
-^_[]
-L^_[]
-^_[]
-^_[]
-^_[]
-tQF9
-^_[]
-u7G9}
-^_[]
-)FPf
-^_[]
-u,VP
-;E u?
-\^_[]
-)G@f
-^_[]
-QPVjP
-u8QRW1
-^_[]
-,^_[]
-^_[]
-^_[]
-9QVP
-VWjQ
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-,^_[]
-td;X
-,^_[]
-^_[]
-M 9H
-M 9H
-<^_[]
-^_[]
-PQjhW
-^_[]
-^_[]
-qL;u
-t	;p
-d$$f
-~\$ 
-d$$f
-~\$ 
-^_[]
-^_[]
-RPWV
-,^_[]
-;YHtv
-SPj@R
-QPQQ
-L^_[]
-<^_[]
-;^$s+
-;^,s
-+F =
-+F0=
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-j$RP
-j$WP
-w	C;
-j$PQ
-j$QP
-^_[]
-j$QP
-j$QP
-^_[]
-<^_[]
-^_[]
-j$WP
-0^_]
-^_[]
-^_[]
-PRVW
-j$RP
-,^_[]
-^_[]
-^_[]
-r =p
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-,^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-t7PS
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-0<	wm
-0<	v
-<_uC
-0<	w
-_u.C
-B;V 
-~0;N
-<$uN
-$[^_
-N ;N$
-0<	wS
-0<	v
-8#t 
-V ;V$
-N ;N$
-V ;V$}
-8Ju	@
-tY<EtU
-)G01
-,[^_
-<vum
-<cu^
-<[^_
-LutA
-8_u_
-W ;W$
-8_u^
-W ;W$
-8Iuk
-W ;W$}]
-<[^_
-tO<EtK
-<Lt$<Xu)A
-,[^_
-8ItB
-<u);G
->u);A
-vtab
-le ff
-VTT 
-for 
-cons
-truc
-tion
- vta
-ble 
-for 
--in-
-type
-info
- for
-type
-info
- nam
-e fof
-type
-info
- fn 
-for 
-non-
-virt
-ual 
-thun
-k to
-virt
-ual 
-thun
-k to
-cova
-rian
-t re
-turn
- thu
-nk tf
-java
- Cla
-ss ff
-guar
-d va
-riab
-le ff
-refe
-renc
-e te
-mpor
-ary 
-for 
-hidd
-en a
-lias
- for
-oper
-ator
-B	;A
-oper
-ator
-oper
-ator
-8(u=
-8>u,
-) : 
-<1ui
-fals
-true
-82u)
-<u%;C
->u%;C
-:(u_
-B	;F
- res
-tric
-B	;F
- vol
-atil
- conf
-comp
-lex 
-imag
-inarf
-,[^_
-A	<Dt
-y	Iu8
-glob
-al c
-onst
-ruct
-ors 
-keye
-d tof
-glob
-al d
-estr
-ucto
-rs k
-eyed
- to 
-CUNG
-++C	
-CUNG
-++C	
-CUNG
-++C	
-[HuJ
-,[^_
-CUNG	
-u/Hu
-CUNG
-++C	
-B4CUNG
-U$;M u$
-12CIMENullImpl
+__gmon_start__
+_ITM_deregisterTMCloneTable
+_ITM_registerTMCloneTable
+__cxa_finalize
+getenv
+strtoull
+__snprintf_chk
+memcpy
+syscall
+__errno_location
+___tls_get_addr
+__vsnprintf_chk
+pthread_self
+sendmsg
+munmap
+getpid
+getuid
+shm_unlink
+shm_open
+flock
+__fxstat
+ftruncate
+mmap
+kill
+memset
+strlen
+socket
+strncpy
+recvmsg
+__cxa_atexit
+__pthread_key_create
+strtol
+sscanf
+glDeleteTextures
+glGetIntegerv
+glBindTexture
+glTexImage2D
+glIsEnabled
+glGetBooleanv
+glEnable
+glDisable
+glPixelStorei
+glColorMask
+glViewport
+glGetError
+glDrawArrays
+glReadPixels
+glBegin
+glTexCoord2i
+glVertex2f
+glEnd
+glIsTexture
+glTexParameterf
+glDrawElements
+glColor4ub
+glTexCoord2d
+glVertex3f
+glXGetCurrentContext
+glDepthRange
+glDepthMask
+glPolygonMode
+glMatrixMode
+memcmp
+glPopClientAttrib
+glPopAttrib
+glLoadMatrixf
+glXGetProcAddress
+strstr
+glGenTextures
+glXSwapBuffers
+glClear
+dlsym
+glGetString
+malloc
+free
+glGetDoublev
+glBlendFunc
+glPushAttrib
+glPushClientAttrib
+glRenderMode
+glDisableClientState
+glShadeModel
+glPixelZoom
+glTexEnvf
+glGetFloatv
+glLoadIdentity
+glTranslatef
+glOrtho
+glScalef
+memmove
+setlocale
+fcntl
+XF86DGAQueryExtension
+XDGAQueryExtension
+pthread_mutex_lock
+gmtime_r
+strftime
+__fprintf_chk
+__vfprintf_chk
+pthread_mutex_unlock
+__sprintf_chk
+fopen
+fflush
+fwrite
+stderr
+fclose
+getrlimit
+readlink
+strrchr
+strcmp
+setrlimit
+pthread_mutex_init
+SetNotificationPosition
+SetNotificationInset
+BOverlayNeedsPresent
+IsOverlayEnabled
+pthread_mutex_destroy
+glXChooseVisual
+glXMakeCurrent
+glXCreateContext
+glXCreateWindow
+glXCreatePixmap
+glXDestroyWindow
+glXDestroyPixmap
+glXCreatePbuffer
+glXDestroyPbuffer
+glXGetProcAddressARB
+xcb_create_window_checked
+XF86DGADirectVideo
+XCloseDisplay
+XCreateSimpleWindow
+XSetErrorHandler
+xcb_create_window
+XCheckIfEvent
+XCheckMaskEvent
+XCheckTypedEvent
+XCheckTypedWindowEvent
+XCheckWindowEvent
+XIfEvent
+XMaskEvent
+XNextEvent
+XPeekEvent
+XPeekIfEvent
+XPutBackEvent
+XWindowEvent
+XPending
+XEventsQueued
+XUnmapWindow
+XMapWindow
+XInstallColormap
+XWarpPointer
+XUngrabPointer
+XUngrabKeyboard
+XGrabPointer
+XGrabKeyboard
+XChangeWindowAttributes
+XSelectInput
+XFreeCursor
+XUndefineCursor
+XDefineCursor
+XQLength
+read
+readv
+__strcat_chk
+__stpcpy_chk
+__memcpy_chk
+XOpenDisplay
+strncmp
+ioctl
+dlopen
+dlvsym
+ValveHookScreenshots
+ValveIsScreenshotsHooked
+ceilf
+sqrtf
+connect
+nanosleep
+calloc
+VulkanSteamOverlayProcessCapturedFrame
+VulkanSteamOverlayPresent
+VulkanSteamOverlayGetScaleFactors
+clock_gettime
+pthread_key_delete
+pthread_mutexattr_init
+pthread_mutexattr_settype
+abort
+fputs
+fputc
+gettext
+realloc
+pthread_once
+dl_iterate_phdr
+__stack_chk_fail
+libdl.so.2
+librt.so.1
+ld-linux.so.2
+libGL.so.1
+libm.so.6
+libpthread.so.0
+libc.so.6
+GLIBC_2.0
+GLIBC_2.2
+GLIBC_2.3
+GLIBC_2.1
+GLIBC_2.2.4
+GLIBC_2.1.3
+GLIBC_2.4
+GLIBC_2.3.4
 4IIME
+12CIMENullImpl
 :>->
-24CGameStreamBaseMemStream
-24CGameStreamGameMemStream
-N3IPC15BinarySemaphoreE
-QkkXa
-N3IPC10PosixMutexE
-N3IPC6IMutexE
-N3IPC11ISyncObjectE
-N3IPC10PosixEventE
-N3IPC6IEventE
-N3IPC17PosixSharedMemoryE
-N3IPC10ISharedMemE
-15CSavedMemStream
-10IMemStream
-16CSharedMemStream
-18COverlayGLRenderer
-o@14CMetalRenderer
-Game Metal RGB
-A20CBaseOverlayRenderer
-St12length_error
-N9__gnu_cxx24__concurrence_lock_errorE
-N9__gnu_cxx26__concurrence_unlock_errorE
-MainThrd
-pthread_setname_np
 SteamGameId
 SteamOverlayGameId
-Detected hot-key via base input, now requesting overlay %s
-disable
 enable
+disable
 base input
-ESC press detected, requesting overlay disable
-SteamGameStream_%u_mem
+Detected hot-key via base input, now requesting overlay %s\n
+ESC press detected, requesting overlay disable\n
+?SteamGameStream_%u_mem
 SteamGameStream_%u_mutex
-pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
-Fatal on Lock(): Locked the floor, couldn't release the ceiling: %s
-pid %d != %d, re-initing before send; client_port = %d, server_port = %d
-pid %d != %d, clearing client_port = %d, server_port = %d
-Fatal on Release(): Locked the ceiling, couldn't release the floor: %s
-/BSem/%x
-%s.2
-Failed to create BinarySemaphore: %s - %s
-Fatal on Lock(): Locked the floor, couldn't post the ceiling: %s
-Took lock, but old thread id != 0!!!
-Error on Release(): Not the lock owner: %s
-Fatal on Release(): errno %d: %s
-Fatal on Release(): Thread not marked as mine: %s
-/MTX/%x
-Tried to create PosixMutex but was already around: %s - %s
-Failed to create PosixMutex: %s - %s
-Failed to post that I was waiting for an event
-/Evt/%x
-%s.BinSemLock
-Failed to force create PosixEvent: %s - %s, m_pLock:%p, m_pPending:%p
-Failed to create PosixAutoResetEvent: %s - %s, m_pLock:%p, m_pPending:%p
-	errno: %d, bCreator: %s
-true
-false
-Bad Access flag on shared mem create: %s: %u
-/Shm/%x
+24CGameStreamBaseMemStream
+24CGameStreamGameMemStream
+futex robust_list not initialized by pthreads
+futex robust_list not pthreads-compatible
+Fatal error: %s\n
+IPC: recovering abandoned mutex %p\n
+IPC error: LockMgrMutex failed to acquire SysMgrMutex\n
+/u%d-Shm_%x
+Destroying a held mutex\n
+Error on Release(): Not the lock owner\n
+/u%d-ValveIPCSharedObj-Steam
 /dev/null
-com.valvesoftware.steam.ipctool
-ipcserver restart: expected: %d, got: %d
-StopJob
-Unable to write to video stream: dst not aligned!
-Unable to write to video stream: dst stride (stride=%u)!
-Failed to write screenshot to stream, clearing data!
-Not enough room in mem stream for video frame
-Video stream full!
-Video stream full.. couldn't get buffer!
+Process %d failed to shm_open %s\n
+Error %d locking shared memory file
+Error %d getting shared memory size
+Error %d growing shared object manager file.
+Requested Force create but SharedObjectMutex already created\n
+Ran out of IPC SharedObjectManager entries!\n
+Forced create but already created for SharedObjectEvent\n
+Bad Access flag on shared mem create: %s: %u\n
+N3IPC11ISyncObjectE
+N3IPC6IMutexE
+N3IPC6IEventE
+N3IPC10ISharedMemE
+N3IPC17SharedObjectMutexE
+N3IPC17SharedObjectEventE
+N3IPC17PosixSharedMemoryE
+QkkXa
+10IMemStream
+15CSavedMemStream
+Unable to write to video stream: dst not aligned!\n
+Unable to write to video stream: dst stride (stride=%u)!\n
+Failed to write screenshot to stream, clearing data!\n
+Not enough room in mem stream for video frame\n
+Video stream full.. couldn't get buffer!\n
+Video stream full!\n
+Warning: Blocking wait on mutex failed in Clear: %d\n
+Warning: CSharedMemStream::Clear failed, expected %d bytes remaining, have %d.\n
+Timed out waiting for mutex in PutInternal()\n
+m_pMutex->Wait() failed in ShMemStream::PutInternal\n
+SHMemStream header is corrupt in PutInternal()\n
+PutInternal: Not enough space for put when locked\n
+CSharedMemStream has memory already locked for put. Need to write through acquired CSharedMemStreamLockedMemory\n
+Warning: Memory was locked for put while destructing!\n
+Asked to unlock memory for write.. but wasn't locked
 %s_mutex
 %s_written
-Failed creating write event %s
 %s_avail
-Failed creating read event %s
 %s_mem
-Failed creating file mapping %s
-Failed creating view of file for %s
+Failed creating write event %s\n
+Failed creating read event %s\n
+Failed creating file mapping %s\n
+Failed creating view of file for %s\n
 Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
-Warning: Memory was locked for put while destructing!
-Warning: Blocking wait on mutex failed in Clear: %d
-Warning: CSharedMemStream::Clear failed, expected %d bytes remaining, have %d.
-CSharedMemStream has memory already locked for put. Don't write with memory locked.
-Timed out waiting for mutex in GetInternal()
-Failed to take mutex in GetInternal()
-SHMemStream header is corrupt in GetInternal()
-CSharedMemStream has memory already locked for put. Need to write through acquired CSharedMemStreamLockedMemory
-Timed out waiting for mutex in PutInternal()
-m_pMutex->Wait() failed in ShMemStream::PutInternal
-SHMemStream header is corrupt in PutInternal()
-PutInternal: Not enough space for put when locked
-Asked to unlock memory for write.. but wasn't locked
-Video memory stream writer destroyed with frame lock!
-Video memory stream frame commit without lock!
+Timed out waiting for mutex in GetInternal()\n
+Failed to take mutex in GetInternal()\n
+SHMemStream header is corrupt in GetInternal()\n
+CSharedMemStream has memory already locked for put. Don't write with memory locked.\n
+16CSharedMemStream
+Video memory stream writer destroyed with frame lock!\n
+Video memory stream frame commit without lock!\n
 StreamForOpenVR
 SteamStreamingVideo
-SteamStreamingMaximumResolution
 %dx%d
-SteamStreamingVideoDisableVSync
 SteamStreamingAllowGameVsync
-Received audio recording start message, drop flag is %d
-Received audio recording stop message
-Game Delayed OpenGL NV12
+SteamStreamingMaximumResolution
+SteamStreamingVideoDisableVSync
 Game OpenGL NV12
 Game Delayed OpenGL RGB
+Game Delayed OpenGL NV12
 Game OpenGL RGB
-COpenGLFrameCapture - missing opengl methods
-Failed to create y plane
-Failed to create uv plane
-Failed to create rgba plane
-Unsupported output format
-Invalid texture for fbo generated
-COpenGLFrameCapture::BCreateRenderData(): Couldn't set FBO configuration (%u)
-COpenGLFrameCapture::BCreateRenderData(): Couldn't create shader
+#version 150\nuniform bool bFlipRendering;\nuniform int srcWidth;\nuniform int srcHeight;\nout vec2 textCoord;\nconst vec2 screenAlignedQuad[4] = vec2[]\n(\n\tvec2(-1.0,  1.0),\n\tvec2( 1.0,  1.0),\n\tvec2(-1.0, -1.0),\n\tvec2( 1.0, -1.0)\n);\nconst vec2 textureCoords[4] = vec2[]\n(\n\tvec2( 0.0,  0.0),\n\tvec2( 1.0,  0.0),\n\tvec2( 0.0,  1.0),\n\tvec2( 1.0,  1.0)\n);\nvoid main()\n{\n   gl_Position = vec4( screenAlignedQuad[ gl_VertexID ], 0.0, 1.0);\n   if ( bFlipRendering )\n       gl_Position.y = -gl_Position.y;\n   textCoord = vec2( textureCoords[ gl_VertexID ].x * srcWidth, textureCoords[ gl_VertexID ].y * srcHeight );\n}
+uniform bool bFlipRendering;\nvoid main()\n{\n\tgl_TexCoord[0] = gl_MultiTexCoord0;\n   gl_Position = gl_Vertex;\n   if ( bFlipRendering )\n       gl_Position.y = -gl_Position.y;\n}
+COpenGLFrameCapture::BCreateRenderData(): Couldn't set FBO configuration (%u)\n
+COpenGLFrameCapture::BCreateRenderData(): Couldn't create shader\n
+#version 150\nin vec2 textCoord;\nout vec4 FragColor;\nuniform sampler2DRect tex0;\n\n// YUV coefficients \nconst vec3 Ycoeff = vec3(%f, %f, %f);\n\nvoid main()\n{\n    vec3 yuv, rgb;\n\n    // Get the color value \n    rgb = texture(tex0, textCoord).rgb;\n\n    // Calculate the YUV values \n    yuv.x = dot(rgb, Ycoeff) + %f;\n\n    // Write the YUV values \n    FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);\n}
+#extension GL_ARB_texture_rectangle : enable\nuniform sampler2DRect tex0;\n\n// YUV coefficients \nconst vec3 Ycoeff = vec3(%f, %f, %f);\n\nvoid main()\n{\n    vec3 yuv, rgb;\n\n    // Get the color value \n    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;\n\n    // Calculate the YUV values \n    yuv.x = dot(rgb, Ycoeff) + %f;\n\n    // Write the YUV values \n    gl_FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);\n}
+#version 150\nin vec2 textCoord;\nout vec4 FragColor;\nuniform sampler2DRect tex0;\n\n// YUV coefficients \nconst vec3 Ucoeff = vec3(%f, %f, %f);\nconst vec3 Vcoeff = vec3(%f, %f, %f);\n\nvoid main()\n{\n    vec3 yuv, rgb;\n\n    // Get the color value \n    rgb = texture(tex0, textCoord).rgb;\n\n    // Calculate the YUV values \n    yuv.y = dot(rgb, Ucoeff) + 0.5;\n    yuv.z = dot(rgb, Vcoeff) + 0.5;\n\n    // Write the YUV values \n    FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);\n}
+#extension GL_ARB_texture_rectangle : enable\nuniform sampler2DRect tex0;\n\n// YUV coefficients \nconst vec3 Ucoeff = vec3(%f, %f, %f);\nconst vec3 Vcoeff = vec3(%f, %f, %f);\n\nvoid main()\n{\n    vec3 yuv, rgb;\n\n    // Get the color value \n    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;\n\n    // Calculate the YUV values \n    yuv.y = dot(rgb, Ucoeff) + 0.5;\n    yuv.z = dot(rgb, Vcoeff) + 0.5;\n\n    // Write the YUV values \n    gl_FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);\n}
+#version 150\nin vec2 textCoord;\nout vec4 FragColor;\nuniform sampler2DRect tex0;\n\nvoid main()\n{\n    FragColor = vec4( texture(tex0, textCoord).rgb, 1.0);\n}
+#extension GL_ARB_texture_rectangle : enable\nuniform sampler2DRect tex0;\n\nvoid main()\n{\n    gl_FragColor = vec4( texture2DRect(tex0, gl_TexCoord[0].st).rgb, 1.0);\n}
+COpenGLFrameCapture - missing opengl methods\n
+Invalid texture for fbo generated\n
+Failed to create y plane\n
+Failed to create uv plane\n
+Failed to create rgba plane\n
+Unsupported output format\n
 bFlipRendering
 srcWidth
 srcHeight
-#extension GL_ARB_texture_rectangle : enable
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ycoeff = vec3(%f, %f, %f);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;
-    // Calculate the YUV values 
-    yuv.x = dot(rgb, Ycoeff) + %f;
-    // Write the YUV values 
-    gl_FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);
-#version 150
-in vec2 textCoord;
-out vec4 FragColor;
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ycoeff = vec3(%f, %f, %f);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture(tex0, textCoord).rgb;
-    // Calculate the YUV values 
-    yuv.x = dot(rgb, Ycoeff) + %f;
-    // Write the YUV values 
-    FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);
-#extension GL_ARB_texture_rectangle : enable
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ucoeff = vec3(%f, %f, %f);
-const vec3 Vcoeff = vec3(%f, %f, %f);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;
-    // Calculate the YUV values 
-    yuv.y = dot(rgb, Ucoeff) + 0.5;
-    yuv.z = dot(rgb, Vcoeff) + 0.5;
-    // Write the YUV values 
-    gl_FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);
-#version 150
-in vec2 textCoord;
-out vec4 FragColor;
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ucoeff = vec3(%f, %f, %f);
-const vec3 Vcoeff = vec3(%f, %f, %f);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture(tex0, textCoord).rgb;
-    // Calculate the YUV values 
-    yuv.y = dot(rgb, Ucoeff) + 0.5;
-    yuv.z = dot(rgb, Vcoeff) + 0.5;
-    // Write the YUV values 
-    FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);
-#extension GL_ARB_texture_rectangle : enable
-uniform sampler2DRect tex0;
-void main()
-    gl_FragColor = vec4( texture2DRect(tex0, gl_TexCoord[0].st).rgb, 1.0);
-#version 150
-in vec2 textCoord;
-out vec4 FragColor;
-uniform sampler2DRect tex0;
-void main()
-    FragColor = vec4( texture(tex0, textCoord).rgb, 1.0);
-uniform bool bFlipRendering;
-void main()
-	gl_TexCoord[0] = gl_MultiTexCoord0;
-   gl_Position = gl_Vertex;
-   if ( bFlipRendering )
-       gl_Position.y = -gl_Position.y;
-#version 150
-uniform bool bFlipRendering;
-uniform int srcWidth;
-uniform int srcHeight;
-out vec2 textCoord;
-const vec2 screenAlignedQuad[4] = vec2[]
-	vec2(-1.0,  1.0),
-	vec2( 1.0,  1.0),
-	vec2(-1.0, -1.0),
-	vec2( 1.0, -1.0)
-const vec2 textureCoords[4] = vec2[]
-	vec2( 0.0,  0.0),
-	vec2( 1.0,  0.0),
-	vec2( 0.0,  1.0),
-	vec2( 1.0,  1.0)
-void main()
-   gl_Position = vec4( screenAlignedQuad[ gl_VertexID ], 0.0, 1.0);
-   if ( bFlipRendering )
-       gl_Position.y = -gl_Position.y;
-   textCoord = vec2( textureCoords[ gl_VertexID ].x * srcWidth, textureCoords[ gl_VertexID ].y * srcHeight );
-/System/Library/Frameworks/OpenGL.framework/Libraries/libGL.dylib
-GLSL Fragment Shader log:
-GLSL Program log:
-Missing texture: %d which was used in DrawTexturedRect()
-Failed on texture subrect update!
-Invalid IOsurfaceID passed to OGL ValveDrawSharedHandleTexture
-Making new texture: ID %d of dimensions w %u h %u
-OSX - ERROR creating shared texture, (%d) - %s
-COverlayGLRenderer::ValveDrawSharedHandleTexture - failed to get texture from handle
+COverlayGLRenderer
+Missing texture: %d which was used in DrawTexturedRect()\n
+GLSL Fragment Shader log:\n
+GLSL Program log:\n
+Failed on texture subrect update!\n
+glXSwapBuffers
+shaders
+fixed function
+core
+compatibility
 OpenGL ES
 %d.%d
 glActiveTextureARB
@@ -784,5420 +372,624 @@ glDeleteBuffersARB
 glBufferDataARB
 glDebugMessageCallbackARB
 GLOVERLAYCOREPROFILE
-OpenGL ES version: %d.%d (%s) (overlay is not supported)
-OpenGL version: %d.%d (%s) %s (overlay will use %s)
-core
-compatibility
-shaders
-fixed function
 GL_ARB_framebuffer_object
+GL_EXT_framebuffer_object
 glGenFramebuffers
 glDeleteFramebuffers
 glFramebufferTexture2D
 glBindFramebuffer
 glBlitFramebuffer
 glCheckFramebufferStatus
-GL_EXT_framebuffer_object
+Attrib_Position
+Attrib_Color
+Attrib_TexCoord
+GLSL Vertex Shader log:\n
+GL extensions: %s\n
+GL_EXT_texture_lod_bias
+OpenGL version is >= 3.1\n
+glGetStringi
+OpenGL Enabled LOD bias\n
+Texture units detected: %d\n
 glGenFramebuffersEXT
 glDeleteFramebuffersEXT
 glFramebufferTexture2DEXT
 glBlitFramebufferEXT
 glCheckFramebufferStatusEXT
-Attrib_Position
-Attrib_Color
-Attrib_TexCoord
-Texture
-GLSL Vertex Shader log:
+OpenGL ES version: %d.%d (%s) (overlay is not supported)\n
+OpenGL version: %d.%d (%s) %s (overlay will use %s)\n
 GL_ARB_texture_non_power_of_two
-OpenGL does not support non-power-of-two textures!
-OpenGL Enabled LOD bias
-Texture units detected: %d
-windowWithWindowNumber:
-NSOpenGLContext
-currentContext
-CGLContextObj
-view
-window
-windows
-countByEnumeratingWithState:objects:count:
-contentView
-NSOpenGLView
-class
-isKindOfClass:
-openGLContext
-windowNumber
-frameRectForContentRect:
-frame
-wantsBestResolutionOpenGLSurface
-convertRectToBacking:
-Warning: Failed to determine surface dimensions
-#version 150
-in vec4 Attrib_Position;
-in vec4 Attrib_Color;
-in vec2 Attrib_TexCoord;
-out vec4 Color;
-out vec2 TexCoord;
-void main(void)
-	Color = Attrib_Color;
-	TexCoord = Attrib_TexCoord;
-	gl_Position = Attrib_Position;
-#version 150
-in vec4 Color;
-in vec2 TexCoord;
-out vec4 FragColor;
-uniform sampler2DRect Texture;
-void main(void)
-	FragColor = Color * texture(Texture, TexCoord);
-COverlayGLRenderer
-NSLock
-alloc
-init
-steammetalhook_init
-SteamMetalHook
-@8@0:4
-steamoverlay_
-stringByAppendingString:
-Hooking %s::%s for %s
-UTF8String
-Failed to hook %s::%s for %s
-NSObject
-CMetalDeviceCache
-_deviceOverride
-@"<MTLDevice>"
-_metalLibrary
-@"<MTLLibrary>"
-_textureCacheMap
-@"NSMapTable"
-_screenshotPipeline
-@"<MTLRenderPipelineState>"
-_updatePipeline
-_updatePipelineBGRA8
-_updatePipelineRGBA16Float
-deviceOverride
-setDeviceOverride:
-v12@0:4@8
-metalLibrary
-setMetalLibrary:
-textureCacheMap
-setTextureCacheMap:
-screenshotPipeline
-setScreenshotPipeline:
-updatePipeline
-setUpdatePipeline:
-updatePipelineBGRA8
-setUpdatePipelineBGRA8:
-updatePipelineRGBA16Float
-setUpdatePipelineRGBA16Float:
-T@"<MTLDevice>",&,N,V_deviceOverride
-T@"<MTLLibrary>",&,N,V_metalLibrary
-T@"NSMapTable",&,N,V_textureCacheMap
-T@"<MTLRenderPipelineState>",&,N,V_screenshotPipeline
-T@"<MTLRenderPipelineState>",&,N,V_updatePipeline
-T@"<MTLRenderPipelineState>",&,N,V_updatePipelineBGRA8
-T@"<MTLRenderPipelineState>",&,N,V_updatePipelineRGBA16Float
-NSApplication
-v12@?0@"<MTLCommandBuffer>"4@"<MTLDrawable>"8
-steamoverlay_presentDrawable:
-v20@?0@"<MTLCommandBuffer>"4@"<MTLDrawable>"8d12
-steamoverlay_presentDrawable:atTime:
-steamoverlay_presentDrawable:afterMinimumDuration:
-steamoverlay_nextDrawable
-NSDate
-timeIntervalSinceReferenceDate
-@"<MTLTexture>"8@0:4
-@"CAMetalLayer"8@0:4
-texture
-T@"<MTLTexture>",R
-layer
-T@"CAMetalLayer",R
-CAMetalDrawable
-v8@0:4
-v16@0:4d8
-MTLDrawable
-debugDescription
-c12@0:4@8
-#8@0:4
-@12@0:4:8
-@16@0:4:8@12
-@20@0:4:8@12@16
-c8@0:4
-c12@0:4#8
-c12@0:4@"Protocol"8
-c12@0:4:8
-Vv8@0:4
-I8@0:4
-^{_NSZone=}8@0:4
-@"NSString"8@0:4
-hash
-TI,R
-superclass
-T#,R
-description
-T@"NSString",R,C
-isEqual:
-self
-performSelector:
-performSelector:withObject:
-performSelector:withObject:withObject:
-isProxy
-isMemberOfClass:
-conformsToProtocol:
-respondsToSelector:
-retain
-release
-autorelease
-retainCount
-zone
-present
-presentAtTime:
-@"<MTLDrawable>"8@?0@"CAMetalLayer"4
-steamoverlay_commit
-v8@?0@"<MTLCommandBuffer>"4
-steamoverlay_addScheduledHandler:
-v12@?0@"<MTLCommandBuffer>"4@?<v@?@"<MTLCommandBuffer>">8
-newCommandQueue
-commandBuffer
-CAMetalLayer
-nextDrawable
-v12@0:4@?<v@?@"<MTLCommandBuffer>">8
-v12@0:4@"<MTLDrawable>"8
-v20@0:4@"<MTLDrawable>"8d12
-@"<MTLBlitCommandEncoder>"8@0:4
-@"<MTLRenderCommandEncoder>"12@0:4@"MTLRenderPassDescriptor"8
-@"<MTLComputeCommandEncoder>"8@0:4
-@"<MTLParallelRenderCommandEncoder>"12@0:4@"MTLRenderPassDescriptor"8
-v12@0:4@"NSString"8
-@"<MTLDevice>"8@0:4
-@"<MTLCommandQueue>"8@0:4
-d8@0:4
-@"NSError"8@0:4
-device
-T@"<MTLDevice>",R
-commandQueue
-T@"<MTLCommandQueue>",R
-retainedReferences
-Tc,R
-label
-T@"NSString",C
-kernelStartTime
-Td,R
-kernelEndTime
-GPUStartTime
-GPUEndTime
-status
-error
-T@"NSError",R
-MTLCommandBuffer
-enqueue
-commit
-addScheduledHandler:
-v12@0:4@?8
-presentDrawable:
-presentDrawable:atTime:
-v20@0:4@8d12
-waitUntilScheduled
-addCompletedHandler:
-waitUntilCompleted
-blitCommandEncoder
-renderCommandEncoderWithDescriptor:
-@12@0:4@8
-computeCommandEncoder
-parallelRenderCommandEncoderWithDescriptor:
-pushDebugGroup:
-popDebugGroup
-setLabel:
-presentDrawable:afterMinimumDuration:
-v4@?0
-isVisible
-subviews
-convertRectFromLayer:
-convertRect:toView:
-convertRectToScreen:
-bounds
-screen
-NSScreen
-mainScreen
-baseObject
-newLibraryWithSource:options:error:
-MTLRenderPipelineDescriptor
-colorAttachments
-objectAtIndexedSubscript:
-setBlendingEnabled:
-setRgbBlendOperation:
-setAlphaBlendOperation:
-setSourceRGBBlendFactor:
-setSourceAlphaBlendFactor:
-setDestinationRGBBlendFactor:
-setDestinationAlphaBlendFactor:
-steamoverlay_vs
-newFunctionWithName:
-setVertexFunction:
-steamoverlay_update_ps
-setFragmentFunction:
-setPixelFormat:
-newRenderPipelineStateWithDescriptor:error:
-steamoverlay_nocolor_ps
-NSMapTable
-initWithKeyOptions:valueOptions:capacity:
-superlayer
-convertRect:fromLayer:
-NSThread
-isMainThread
-width
-height
-CMetalRenderer::ValveDrawTexturedRect() called outside a valid MTLCommandBuffer::commit
-NSNumber
-numberWithInt:
-objectForKey:
-NSString
-Update tex %d
-stringWithFormat:
-setRenderPipelineState:
-setFragmentTexture:atIndex:
-setVertexBytes:length:atIndex:
-drawPrimitives:vertexStart:vertexCount:
-CMetalRenderer::ValveLoadOrUpdateTexture() called outside a valid MTLCommandBuffer::commit
-pixelFormat
-MTLTextureDescriptor
-texture2DDescriptorWithPixelFormat:width:height:mipmapped:
-newTextureWithDescriptor:
-setObject:forKey:
-replaceRegion:mipmapLevel:withBytes:bytesPerRow:
-numberWithUnsignedLongLong:
-CMetalRenderer::ValveDrawSharedHandleTexture() called with bad IOSurfaceID
-newTextureWithDescriptor:iosurface:plane:
-CMetalRenderer::ValveDrawSharedHandleTexture() Bad texture from IOsurfaceID
-Update tex %llu
-newTextureViewWithPixelFormat:
-MTLRenderPassDescriptor
-renderPassDescriptor
-setTexture:
-setLoadAction:
-setStoreAction:
-Steam Overlay
-endEncoding
-removeObjectForKey:
-removeAllObjects
-setUsage:
-Steam Screenshot
-Quad
-Steam Screenshot Sync
-synchronizeResource:
-getBytes:bytesPerRow:fromRegion:mipmapLevel:
-lock
-unlock
-	using namespace metal;
-	struct Vertex
-		float4 position [[position]];
-		float2 texCoords;
-		float2 _unusedPadding;
-		float4 color;
-	constexpr sampler updateSampler( coord::normalized, address::clamp_to_edge, filter::linear );
-	vertex Vertex steamoverlay_vs( constant Vertex *vertices [[ buffer(0) ]], uint vid [[ vertex_id ]] )
-		return vertices[vid];
-	fragment float4 steamoverlay_update_ps( Vertex inVertex [[ stage_in ]],
-										   texture2d<float> overlay [[ texture( 0 ) ]] )
-		return inVertex.color * overlay.sample( updateSampler, inVertex.texCoords );
-	fragment float4 steamoverlay_nocolor_ps( Vertex inVertex [[ stage_in ]],
-											texture2d<float> overlay [[ texture( 0 ) ]] )
-		return overlay.sample( updateSampler, inVertex.texCoords );
-CBaseOverlayRenderer
-Taking screenshot via %s, %u milliseconds since last one was triggered. (skipdebounce=%s)
-Detected Movie hot-key via %s
-Detected marker hot-key via %s
-Waiting on shared FD for texture %d: received an outdated FD for texture %d instead, skipping.
-Waiting on shared FD for texture %d: peer is too far ahead and sending FD for texture %d.
-Mismatched chrome paint texture width/height!
-/tmp/steam_chrome_overlay_uid%d_spid%u
-  handle %llu: m_iTextureID %d m_fdPaintBuffer %d
-Corrupt render stream (getting cmd)... %s
-in saved stream
-in external stream
-render stream
-Corrupt render stream: k_ESendTextToGame
-Corrupt render stream: k_ESendTextToGame string
-Corrupt render stream: k_EDrawTexturedRect
-Corrupt render stream: k_EDrawChromePaintBufferRect
-Corrupt render stream: k_EDeleteChromePaintBuffer
-Corrupt render stream: k_EDrawAndUpdateSharedTexture
-GameOverlayRender_SharedTex_%d_%d
-GameOverlayRender_SharedTexRead_%d_%d
-GameOverlayRender_SharedTexWrite_%d_%d
-Corrupt shared texture stream (header)
-Corrupt shared texture stream (texture data)
-Got hTexture of non NULL on shared texture draw but new shared tex update has no shared texture.
-Corrupt render stream: k_EDeleteTexture
-Corrupt render stream: k_ELoadTexture
-Warning: Texture %d is 0 bytes... bad VGUI!
-Corrupt render stream: k_ELoadTexture 3
-Texture size(%d) was != width(%u)*height(%u)*4, not loading
-Corrupt render stream: k_ESetCursor
-Corrupt render stream: k_ECreateCustomCursor
-Corrupt render stream: k_ECreateCustomCursor (custom2)
-Corrupt render stream: k_ECreateCustomCursor (custom3)
-Corrupt render stream: k_EDeleteCursor
-Corrupt render stream: k_EShowCursor
-Corrupt render stream: k_ESetHotKey
-Enabling clearing on every frame
-Corrupt render stream: k_EIMECommand
-Unsupported render command (%d) in vgui render stream
-Left render loop without EndFrame!
-Got EndFrame, but still have [%d] bytes remaining in render loop buffer
-GameOverlay_MovieStream_%u
-Created movie stream %s
-Couldn't create movie stream %s
-Deleting movie stream
-STEAM_OVERLAY_DISABLE_WAIT_FOR_CEF_FRAME
-VR_Compositor_OverlayVSync_%u
-SteamGamepadUI
-SteamDisableOverlayDPIScaling
-GameOverlayRender_PIDStream
-Starting movie recording at %dx%d
-Stopped movie recording
-Detected Plat_MSTime() wrapping
-Clearing input stream because it is about to overflow
-Disabling overlay for 20 minutes (%d seconds since last frame from ui process was seen)
-Disabling overlay for 30 seconds (%d seconds since last frame from ui process was seen)
-Disabling overlay for 10 seconds (%d seconds since last frame from ui process was seen)
-Disabling overlay for 2 seconds (%d seconds since last frame from ui process was seen)
-Failed reading frame completely
-Forcing internal overlay disable and requesting ui disable
-ValveTakeScreenshot not implemented for this surface
-allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
-Invalid Mouse Restore Mode: %d
-Enabling overlay
-Warning: Could not enable cursor visibility: %u
-STEAM_OVERLAY_FRAME_TIME_LOGGING
-STEAM_OVERLAY_LOGGING_FLUSH
-STEAM_OVERLAY_LOGGING
-/tmp/gameoverlayrenderer.%d.log
-####### Log failed to open %s ##############
-logfile opened early, s_Pid == 0 (Init has not been called yet)
-%a %b %d %H:%M:%S %Y UTC
-%s - 
-vrmonitor
-Failed to increase file count limit. Currently: %lu
-GameID = %llu, AppID = %u, OverlayGameID = %llu, PID: %u, tid %u Executable: %s
-IgnoreChildProcesses
-STEAM_OVERLAY_WINDOW_BLACKLIST
-GameOverlay_InputEventStream_%d
-GameOverlay_ScreenshotStream_%d
-GameOverlayRender_PaintCmdStream_%d
-GameOverlay_InGameRenderingCompleted_%d
-Failed creating rendering event
-GameOverlay_VGUIPaintingCompleted_%d
-Failed creating paint event
-GameOverlay_SerializedWorkQueued_%d
-Failed creating serialized work event
-GameOverlay_GameExitingEvent_%d
-Failed creating exit event
-Modules at GameOverlayRenderer.dll attach
-----------------------------
-SteamNoOverlayUIDrawing
-SteamNoOverlayUIDrawing was set
-SteamOverlayRunning_%llu
-One-time initialization: pid %d for game %llu
-pid %d != %d, skipping destruction (fork without exec?)
-@"NSEvent"8@?0@"NSEvent"4
-type
-subtype
-CGEvent
-eventWithCGEvent:
-addLocalMonitorForEventsMatchingMask:handler:
-mouseLocation
-steamhooked_set
-steamhooked_push
-steamhooked_pop
-currentCursor
-SteamOverrideNSCursor
-steamhooked_hide
-steamhooked_unhide
-push
-steamhooked_pressedMouseButtons
-steamhooked_mouseLocation
-SteamOverrideMouse
-{_NSPoint=ff}8@0:4
-steamhooked_nextEventMatchingMask:untilDate:inMode:dequeue:
-_setCurrentEvent:
-postEvent:atStart:
-SteamOverrideNextEvent
-@24@0:4I8@12@16c20
-NSView
-resetCursorRects
-steamhooked_resetCursorRects
-NSCursor
-hide
-unhide
-NSEvent
-pressedMouseButtons
-nextEventMatchingMask:untilDate:inMode:dequeue:
-arrowCursor
-IBeamCursor
-crosshairCursor
-pointingHandCursor
-operationNotAllowedCursor
-dragCopyCursor
-dragLinkCursor
-_zoomInCursor
-_zoomOutCursor
-_windowResizeNorthCursor
-resizeUpCursor
-_windowResizeSouthCursor
-resizeDownCursor
-_windowResizeWestCursor
-resizeLeftCursor
-_windowResizeEastCursor
-resizeRightCursor
-_windowResizeNorthSouthCursor
-resizeUpDownCursor
-_windowResizeEastWestCursor
-resizeLeftRightCursor
-_windowResizeNorthWestCursor
-_windowResizeNorthEastCursor
-_windowResizeSouthWestCursor
-_windowResizeSouthEastCursor
-_windowResizeNorthEastSouthWestCursor
-_windowResizeNorthWestSouthEastCursor
-St11logic_error
-_GLOBAL_
-(anonymous namespace)
-string literal
-vtable for 
-VTT for 
-construction vtable for 
--in-
-typeinfo for 
-typeinfo name for 
-typeinfo fn for 
-non-virtual thunk to 
-virtual thunk to 
-covariant return thunk to 
-java Class for 
-guard variable for 
-reference temporary for 
-hidden alias for 
-operator
-operator 
-) : (
- restrict
- volatile
- const
-complex 
-imaginary 
-std::allocator
-allocator
-std::basic_string
-basic_string
-std::string
-std::basic_string<char, std::char_traits<char>, std::allocator<char> >
-std::istream
-std::basic_istream<char, std::char_traits<char> >
-basic_istream
-std::ostream
-std::basic_ostream<char, std::char_traits<char> >
-basic_ostream
-std::iostream
-std::basic_iostream<char, std::char_traits<char> >
-basic_iostream
-delete[]
-delete
-new[]
-sizeof 
-signed char
-bool
-boolean
-char
-byte
-double
-long double
-float
-__float128
-unsigned char
-unsigned int
-unsigned
-long
-unsigned long
-__int128
-unsigned __int128
-short
-unsigned short
-void
-wchar_t
-long long
-unsigned long long
-__gnu_cxx::__concurrence_lock_error
-__gnu_cxx::__concurrence_unlock_error
-std::exception
-std::bad_exception
-St13bad_exception
-St9exception
-pure virtual method called
-N10__cxxabiv120__si_class_type_infoE
-N10__cxxabiv117__class_type_infoE
-St9type_info
-terminate called recursively
-terminate called after throwing an instance of '
-  what():  
-terminate called without an active exception
-cxa_exception_rethrow
-__cxa_rethrow
-cxa_exception_throw
-void *
-void *
-__cxa_throw
-cxa_runtime
-zPLR
-zPLR
-zPLR
-zPLR
-zPLR
-zPLR
-zPLR
-zPLR
-RBRBSARA`&ATATA`2BVBVETDRAp
-SESJRARARARARARARC`TB^BTBXB`
-BTCRCSAp
-TATATC
-YBVCRCS"
-\DRA`
-ASAXAXA`
-A^A[A^A\A`
-RCRB
-RCRBSCSASA`
-UATBTASFp
-p RBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRBRFp
-SBWATBTBYEZFZHVFRB
-R0@RCRARDp
-CRNUA
-@_CGLChoosePixelFormat
-@_CGLFlushDrawable
-@_glSwapAPPLE
-@_NSApp
-@_HideCursor
-@_InitCursor
-@_ShowCursor
-@_SetAnimatedThemeCursor
-@_SetThemeCursor
-@__DefaultRuneLocale
-@__NSConcreteGlobalBlock
-@__NSConcreteStackBlock
-@___stack_chk_guard
-@___stderrp
-@__dispatch_main_q
-@_bootstrap_port
-@_mach_task_self_
-@dyld_stub_binder
-@_CFRunLoopRun
-@_CFRunLoopRunInMode
-@___CFConstantStringClassReference
-@_CGAssociateMouseAndMouseCursorPosition
-@_CGCursorIsVisible
-@_CGDisplayHideCursor
-@_CGDisplayMoveCursorToPoint
-@_CGDisplayShowCursor
-@_CGEventCreateNextEvent
-@_CGGetLastMouseDelta
-@_CGWarpMouseCursorPosition
-@_CFAllocatorAllocate
-@_CFAllocatorDeallocate
-@_CFRelease
-@_CFRetain
-@_CFRunLoopRun
-@_CFRunLoopRunInMode
-@_CGAssociateMouseAndMouseCursorPosition
-@_CGCursorIsVisible
-@_CGDisplayBounds
-@_CGDisplayHideCursor
-@_CGDisplayIsCaptured
-@_CGDisplayMoveCursorToPoint
-@_CGDisplayPixelsHigh
-@_CGDisplayPixelsWide
-@_CGDisplayShowCursor
-@_CGEventCreate
-@_CGEventCreateKeyboardEvent
-@_CGEventCreateNextEvent
-@_CGEventGetFlags
-@_CGEventGetIntegerValueField
-@_CGEventGetLocation
-@_CGEventGetType
-@_CGEventKeyboardGetUnicodeString
-@_CGEventKeyboardSetUnicodeString
-@_CGEventPost
-@_CGEventSetFlags
-@_CGGetActiveDisplayList
-@_CGGetDisplaysWithPoint
-@_CGGetLastMouseDelta
-@_CGLChoosePixelFormat
-@_CGLErrorString
-@_CGLFlushDrawable
-@_CGLGetCurrentContext
-@_CGLGetParameter
-@_CGLGetSurface
-@_CGLIsEnabled
-@_CGLSetCurrentContext
-@_CGLTexImageIOSurface2D
-@_CGMainDisplayID
-@_CGSForceShowCursor
-@_CGSGetSurfaceBounds
-@_CGSGetWindowBounds
-@_CGWarpMouseCursorPosition
-@_IOSurfaceGetHeight
-@_IOSurfaceGetWidth
-@_IOSurfaceLookup
-@_InitCursor
-A_MTLCopyAllDevices
-A_MTLCreateSystemDefaultDevice
-@_NSClassFromString
-@_NSSelectorFromString
-@_NSStringFromSelector
-@_SetAnimatedThemeCursor
-@_SetThemeCursor
-@__Block_object_assign
-@__Block_object_dispose
-@__CGSDefaultConnection
-@__NSGetExecutablePath
-@__Unwind_DeleteException
-@__Unwind_GetDataRelBase
-@__Unwind_GetIP
-@__Unwind_GetLanguageSpecificData
-@__Unwind_GetRegionStart
-@__Unwind_GetTextRelBase
-@__Unwind_RaiseException
-@__Unwind_Resume
-@__Unwind_Resume_or_Rethrow
-@__Unwind_SetGR
-@__Unwind_SetIP
-@__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
-@__ZNSt11logic_errorC2EPKc
-@___bzero
-@___cxa_atexit
-@___error
-@___stack_chk_fail
-@___udivdi3
-@__dyld_get_image_name
-@_abort
-@_atoi
-@_bootstrap_look_up
-@_class_addMethod
-@_class_copyMethodList
-@_class_getClassMethod
-@_class_getInstanceMethod
-@_class_getName
-@_class_getSuperclass
-@_class_replaceMethod
-@_close$UNIX2003
-@_connect$UNIX2003
-@_dispatch_after
-@_dispatch_async
-@_dispatch_time
-@_dlopen
-@_dlsym
-@_dup
-@_fclose
-@_fcntl$UNIX2003
-@_fflush
-@_fopen$UNIX2003
-@_fprintf
-@_fputc
-@_fputs$UNIX2003
-@_free
-@_ftruncate
-@_fwrite$UNIX2003
-@_getenv
-@_getpid
-@_getrlimit$UNIX2003
-@_getuid
-@_glBegin
-@_glBindTexture
-@_glColorMask
-@_glDeleteTextures
-@_glDisable
-@_glDrawArrays
-@_glEnable
-@_glEnd
-@_glGetBooleanv
-@_glGetError
-@_glGetIntegerv
-@_glIsEnabled
-@_glPixelStorei
-@_glReadPixels
-@_glSwapAPPLE
-@_glTexCoord2i
-@_glTexImage2D
-@_glVertex2f
-@_glViewport
-@_gmtime_r
-@_imp_implementationWithBlock
-@_launch_data_alloc
-@_launch_data_dict_insert
-@_launch_data_free
-@_launch_data_new_string
-@_launch_msg
-@_lroundf
-@_mach_continuous_time
-@_mach_msg
-@_mach_port_allocate
-@_mach_port_deallocate
-@_mach_port_mod_refs
-@_mach_port_type
-@_mach_timebase_info
-@_malloc
-@_memcmp
-@_memcpy
-@_memset
-@_method_exchangeImplementations
-@_method_getImplementation
-@_method_getName
-@_method_getTypeEncoding
-@_mmap$UNIX2003
-@_munmap$UNIX2003
-@_nanosleep$UNIX2003
-@_objc_autoreleasePoolPop
-@_objc_autoreleasePoolPush
-@_objc_enumerationMutation
-@_objc_getAssociatedObject
-@_objc_lookUpClass
-@_objc_msgSend
-@_objc_msgSend_fpret
-@_objc_msgSend_stret
-@_objc_setAssociatedObject
-@_objc_setProperty
-@_open$UNIX2003
-@_protocol_getName
-@_pthread_getspecific
-@_pthread_key_create
-@_pthread_key_delete
-@_pthread_mach_thread_np
-@_pthread_mutex_destroy
-@_pthread_mutex_init
-@_pthread_mutex_lock
-@_pthread_mutex_unlock
-@_pthread_mutexattr_init
-@_pthread_mutexattr_settype
-@_pthread_self
-@_pthread_setspecific
-@_realloc
-@_recvmsg$UNIX2003
-@_sem_close
-@_sem_open
-@_sem_post
-@_sem_trywait
-@_sem_unlink
-@_sem_wait$UNIX2003
-@_sendmsg$UNIX2003
-@_setrlimit$UNIX2003
-@_shm_open
-@_shm_unlink
-@_snprintf
-@_socket
-@_sprintf
-@_sscanf
-@_strcat
-@_strcmp
-@_strcpy
-@_strftime$UNIX2003
-@_strlen
-@_strncpy
-@_strrchr
-@_strstr
-@_strtoull
-@_time
-@_unlink
-@_usleep$UNIX2003
-@_vfprintf
-@_write$UNIX2003
-ValveHookScreenshots
-^SetNotificationPosition
-dBOverlayNeedsPresent
-jIsOverlayEnabled
-aYY*
-Bvvv
-XJ\Z
-:>6|
-:>	s
-,0"&
-GB,0"
-%L d\8
-?M	j
-lFRn
-035(I&R5&...
-"*."
-d80	<
-Q0W[8 
-_BOverlayNeedsPresent
-_IsOverlayEnabled
-_SetNotificationPosition
-_ValveHookScreenshots
-.objc_class_name_MTLRenderPassDescriptor
-.objc_class_name_MTLRenderPipelineDescriptor
-.objc_class_name_MTLTextureDescriptor
-.objc_class_name_NSCursor
-.objc_class_name_NSDate
-.objc_class_name_NSEvent
-.objc_class_name_NSLock
-.objc_class_name_NSMapTable
-.objc_class_name_NSNumber
-.objc_class_name_NSObject
-.objc_class_name_NSOpenGLContext
-.objc_class_name_NSOpenGLView
-.objc_class_name_NSScreen
-.objc_class_name_NSString
-.objc_class_name_NSThread
-_CFAllocatorAllocate
-_CFAllocatorDeallocate
-_CFRelease
-_CFRetain
-_CFRunLoopRun
-_CFRunLoopRunInMode
-_CGAssociateMouseAndMouseCursorPosition
-_CGCursorIsVisible
-_CGDisplayBounds
-_CGDisplayHideCursor
-_CGDisplayIsCaptured
-_CGDisplayMoveCursorToPoint
-_CGDisplayPixelsHigh
-_CGDisplayPixelsWide
-_CGDisplayShowCursor
-_CGEventCreate
-_CGEventCreateKeyboardEvent
-_CGEventCreateNextEvent
-_CGEventGetFlags
-_CGEventGetIntegerValueField
-_CGEventGetLocation
-_CGEventGetType
-_CGEventKeyboardGetUnicodeString
-_CGEventKeyboardSetUnicodeString
-_CGEventPost
-_CGEventSetFlags
-_CGGetActiveDisplayList
-_CGGetDisplaysWithPoint
-_CGGetLastMouseDelta
-_CGLChoosePixelFormat
-_CGLErrorString
-_CGLFlushDrawable
-_CGLGetCurrentContext
-_CGLGetParameter
-_CGLGetSurface
-_CGLIsEnabled
-_CGLSetCurrentContext
-_CGLTexImageIOSurface2D
-_CGMainDisplayID
-_CGSForceShowCursor
-_CGSGetSurfaceBounds
-_CGSGetWindowBounds
-_CGWarpMouseCursorPosition
-_HideCursor
-_IOSurfaceGetHeight
-_IOSurfaceGetWidth
-_IOSurfaceLookup
-_InitCursor
-_MTLCopyAllDevices
-_MTLCreateSystemDefaultDevice
-_NSApp
-_NSClassFromString
-_NSSelectorFromString
-_NSStringFromSelector
-_SetAnimatedThemeCursor
-_SetThemeCursor
-_ShowCursor
-__Block_object_assign
-__Block_object_dispose
-__CGSDefaultConnection
-__DefaultRuneLocale
-__NSConcreteGlobalBlock
-__NSConcreteStackBlock
-__NSGetExecutablePath
-__Unwind_DeleteException
-__Unwind_GetDataRelBase
-__Unwind_GetIP
-__Unwind_GetLanguageSpecificData
-__Unwind_GetRegionStart
-__Unwind_GetTextRelBase
-__Unwind_RaiseException
-__Unwind_Resume
-__Unwind_Resume_or_Rethrow
-__Unwind_SetGR
-__Unwind_SetIP
-__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
-__ZNSt11logic_errorC2EPKc
-___CFConstantStringClassReference
-___bzero
-___cxa_atexit
-___error
-___stack_chk_fail
-___stack_chk_guard
-___stderrp
-___udivdi3
-__dispatch_main_q
-__dyld_get_image_name
-_abort
-_atoi
-_bootstrap_look_up
-_bootstrap_port
-_class_addMethod
-_class_copyMethodList
-_class_getClassMethod
-_class_getInstanceMethod
-_class_getName
-_class_getSuperclass
-_class_replaceMethod
-_close$UNIX2003
-_connect$UNIX2003
-_dispatch_after
-_dispatch_async
-_dispatch_time
-_dlopen
-_dlsym
-_dup
-_fclose
-_fcntl$UNIX2003
-_fflush
-_fopen$UNIX2003
-_fprintf
-_fputc
-_fputs$UNIX2003
-_free
-_ftruncate
-_fwrite$UNIX2003
-_getenv
-_getpid
-_getrlimit$UNIX2003
-_getuid
-_glBegin
-_glBindTexture
-_glColorMask
-_glDeleteTextures
-_glDisable
-_glDrawArrays
-_glEnable
-_glEnd
-_glGetBooleanv
-_glGetError
-_glGetIntegerv
-_glIsEnabled
-_glPixelStorei
-_glReadPixels
-_glSwapAPPLE
-_glTexCoord2i
-_glTexImage2D
-_glVertex2f
-_glViewport
-_gmtime_r
-_imp_implementationWithBlock
-_launch_data_alloc
-_launch_data_dict_insert
-_launch_data_free
-_launch_data_new_string
-_launch_msg
-_lroundf
-_mach_continuous_time
-_mach_msg
-_mach_port_allocate
-_mach_port_deallocate
-_mach_port_mod_refs
-_mach_port_type
-_mach_task_self_
-_mach_timebase_info
-_malloc
-_memcmp
-_memcpy
-_memset
-_method_exchangeImplementations
-_method_getImplementation
-_method_getName
-_method_getTypeEncoding
-_mmap$UNIX2003
-_munmap$UNIX2003
-_nanosleep$UNIX2003
-_objc_autoreleasePoolPop
-_objc_autoreleasePoolPush
-_objc_enumerationMutation
-_objc_getAssociatedObject
-_objc_lookUpClass
-_objc_msgSend
-_objc_msgSend_fpret
-_objc_msgSend_stret
-_objc_setAssociatedObject
-_objc_setProperty
-_open$UNIX2003
-_protocol_getName
-_pthread_getspecific
-_pthread_key_create
-_pthread_key_delete
-_pthread_mach_thread_np
-_pthread_mutex_destroy
-_pthread_mutex_init
-_pthread_mutex_lock
-_pthread_mutex_unlock
-_pthread_mutexattr_init
-_pthread_mutexattr_settype
-_pthread_self
-_pthread_setspecific
-_realloc
-_recvmsg$UNIX2003
-_sem_close
-_sem_open
-_sem_post
-_sem_trywait
-_sem_unlink
-_sem_wait$UNIX2003
-_sendmsg$UNIX2003
-_setrlimit$UNIX2003
-_shm_open
-_shm_unlink
-_snprintf
-_socket
-_sprintf
-_sscanf
-_strcat
-_strcmp
-_strcpy
-_strftime$UNIX2003
-_strlen
-_strncpy
-_strrchr
-_strstr
-_strtoull
-_time
-_unlink
-_usleep$UNIX2003
-_vfprintf
-_write$UNIX2003
-dyld_stub_binder
-radr://5614542
-com.valvesoftware.steam
-MXGJJ98X76
-<6Hf
-(f&bR
-%62~O
-x_cH
-*m !
-LhH:36
-Un_N
-P&hS
-7HCK
-^8np
-3$WP
-kN86/Y
-f>sp
-subject.OU
-MXGJJ98X76
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-120201221215Z
-270201221215Z0y1-0+
-$Developer ID Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-)xEii`k_
-1? v(m
-'0%0#
-http://crl.apple.com/root.crl0
-B9tk
-P9jDt
-#q-_
- "ror
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-060425214036Z
-350209214036Z0b1
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-, op
-https://www.apple.com/appleca/0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-=&g 
-Sj[d
-uu!0
-0y1-0+
-$Developer ID Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-210205030950Z
-260206030950Z0
-MXGJJ98X761A0?
-8Developer ID Application: Valve Corporation (MXGJJ98X76)1
-MXGJJ98X761
-Valve Corporation1
-~kk!
-3oC&
-uN`AJ
-40200
-$http://ocsp.apple.com/ocsp03-devid080
-)http://www.apple.com/certificateauthority0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-20120706000000Z0
-o(D-U
-6fQS
-:iPq
-0y1-0+
-$Developer ID Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-240730224245Z0/
-1/0-
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>cdhashes</key>
-	<array>
-		<data>
-		YrEyqu4p0F/86BisqUB8P9/4WfA=
-		</data>
-	</array>
-</dict>
-</plist>
-iz0{
-0C~e
-w sr*
-20240730224246Z0
-0|100.
-'Apple Timestamp Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-240725203516Z
-240905203515Z0B1
-Timestamp Signer NWK11
-Apple Inc.1
-+7cRO
-[wan
-LO[o~
-0RRAt#
-http://www.apple.com/appleca0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-,0*0(
-"http://crl.apple.com/timestamp.crl0
-5l4p
-C"]0
-`5I^
-sVW}
-5d=<
-Oif2+
-}LWc
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-120405120244Z
-270405120244Z0|100.
-'Apple Timestamp Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-Im] 
-(ny_~
-&By^
-t-D>
-E~4u&
-'0%0#
-http://crl.apple.com/root.crl0
-mzT_
-Bsu|QC
-:m7(
-FeoU
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-060425214036Z
-350209214036Z0b1
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-, op
-https://www.apple.com/appleca/0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-=&g 
-Sj[d
-uu!1
-0|100.
-'Apple Timestamp Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-240730224246Z0#
-mBlw
-__TEXT
-__text
-__TEXT
-__stubs
-__TEXT
-__stub_helper
-__TEXT
-__const
-__TEXT
-__gcc_except_tab__TEXT
-__cstring
-__TEXT
-__objc_methname
-__TEXT
-__objc_classname__TEXT
-__objc_methtype
-__TEXT
-__dof_cxa_runti
-__TEXT
-__unwind_info
-__TEXT
-__eh_frame
-__TEXT
-__DATA
-__nl_symbol_ptr
-__DATA
-__got
-__DATA
-__la_symbol_ptr
-__DATA
-__mod_init_func
-__DATA
-__const
-__DATA
-__cfstring
-__DATA
-__objc_classlist__DATA
-__objc_catlist
-__DATA
-__objc_protolist__DATA
-__objc_imageinfo__DATA
-__objc_const
-__DATA
-__objc_selrefs
-__DATA
-__objc_protorefs__DATA
-__objc_classrefs__DATA
-__objc_ivar
-__DATA
-__objc_data
-__DATA
-__data
-__DATA
-__interpose
-__DATA
-__bss
-__DATA
-__common
-__DATA
-__LINKEDIT
-@loader_path/gameoverlayrenderer.dylib
-/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
-/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
-/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
-/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia
-/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface
-/System/Library/Frameworks/Carbon.framework/Versions/A/Carbon
-/System/Library/Frameworks/Metal.framework/Versions/A/Metal
-/System/Library/Frameworks/ReplayKit.framework/Versions/A/ReplayKit
-/usr/lib/libc++.1.dylib
-/usr/lib/libSystem.B.dylib
-/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
-/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
-/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
-/usr/lib/libobjc.A.dylib
-AVSI
-[A^]
-[A^]
-AWAVSPH
-[A^A_]
-AWAVAUATSPH
-[A\A]A^A_]
-AWAVSH
-H9Y @
-H;X sJ
-8[A^A_]
-AWAVAUATSH
-L9 t
-L98t
-[A\A]A^A_]
-AWAVSH
-A;G|
-tgE1
-5uZA
-t5tPI
-A;G|waE1
-[A^A_]
-9wtu
-tF9A
-[A^]
-AWAVSPA
-[A^A_]
-t-UH
-AVSH
-[A^]
-t-UH
-AVSH
-[A^]
-AWAVAUATSPI
-K H9
-[A\A]A^A_]
-H91tHH
-wH91
-AWAVAUATSPI
-K H9
-[A\A]A^A_]
-AWAVAUATSPI
-[A\A]A^A_]
-AVSI
-L93t
-L97u
-[A^]
-t'H9
-AWAVAUATSPI
-[A\A]A^A_]
-AWAVSH
-[A^A_]
-AVSH
-[A^]
-AVSH
-[A^]
-AWAVAUATSPA
-[A\A]A^A_]
-AWAVAUATSH
-[A\A]A^A_]
-AWAVAUATSPA
-[A\A]A^A_]
-AWAVAUATSH
-[A\A]A^A_]
-AWAVAUATSPD
-[A\A]A^A_]
-AWAVAUATSH
-([A\A]A^A_]
-AWAVAUATSPD
-[A\A]A^A_]
-AWAVAUATSH
-8[A\A]A^A_]
-AWAVSPI
-gwMA
-[A^A_]
-AVSH
- [A^]
-AWAVATSH
-[A\A^A_]
-AWAVATSI
-[A\A^A_]
-AVSI
-[A^]
-AWAVATSI
-[A\A^A_]
-AWAVAUATSH
-[A\A]A^A_]
-AWAVAUATSH
-	H;M
-[A\A]A^A_]
-AWAVAUATSH
-[A\A]A^A_]
-AWAVAUATSPH
-[A\A]A^A_]
-tBUH
-AWAVSPA
-[A^A_]
-AWAVATSH
-[A\A^A_]
-AWAVSPI
-[A^A_]
-8#u,
-N u8I
-[A^A_]
-[A^A_]
-AWAVSP
-[A^A_]
-AVSH
-[A^]
-AVSI
-[A^]
-AWAVSH
-([A^A_]
-AWAVAUATSPM
-tXE1
-A;L$
-[A\A]A^A_]
-AVS1
-[A^]
-9w u
-AVS1
-9W$r%A
-D)s$D
-[A^]
-AWAVAUATSPA
-[A\A]A^A_]
-AWAVAUATSH
-[A\A]A^A_]
-[A\A]A^A_]
-[A\A]A^A_]
-AWAVAUATSH
-P D9
-([A\A]A^A_]
-AWAVAUATSH
-T$LA
-D$TA
-([A\A]A^A_]
-([A\A]A^A_]
-AWAVAUATSH
-t	E9
-[A\A]A^A_]
-AWAVSP
-[A^A_]
-AWAVAUATSP
-~'E9
-[A\A]A^A_]
-AWAVAUATSH
-[A\A]A^A_]
-(D)h
-AVSH
-[A^]
-AWAVATS
-[A\A^A_]
-AWAVAUATSPH
-[A\A]A^A_]
-vOA)
-AWAVSP
-[A^A_]
-AWAVAUATSH
-[A\A]A^A_]
-[A^]
-AWAVATSI
-[A\A^A_]
-AWAVATSI
-[A\A^A_]
-AVSH
-[A^]
-AWAVAUATSH
-[A\A]A^A_]
-AVSH
-C@[A^]
-AVSA
-[A^]
-AVSH
-[A^]
-AWAVAUATSH
-u7D9c(u1D9{,u+
-;C u 
-;C$u
-;C4u
-	H;M
-[A\A]A^A_]
-AWAVh
-ARPhg
-AWAVAUATSH
-8[A\A]A^A_]
-AVSH
-[A^]
-AVSH
-[A^]
-AWAVAUATSH
-AWAU
-T5hC
-L5l1
-|5dH
-|5dH
-([A\A]A^A_]
-AWAVAUATSH
-[A\A]A^A_]
-AWAVSPI
-[A^A_]
-AVSH
-[A^]
-AWAVSPH
-[A^A_]
-AWAVSPH
-[A^A_]
-AWAVSH
-[A^A_]
-[A^A_]
-AWAVAUATSH
-u8ASD
-]0AS
-H[A\A]A^A_]
-AWAVAUATSH
-D9` 
-D9c ~
-[A\A]A^A_]
-P A9
-[A\A]A^A_]
-AWAVAUATSPI
-[A\A]A^A_]
-AWAVAUATSPI
-[A\A]A^A_]
-9p ~
-AWAVSPA
-D9x 
-D9{ ~
-[A^A_]
-[A^A_]
-AWAVAUATSH
-D9r @
-D9q ~
-Hc^ H
-A;U t&I
-t$0H
-x[A\A]A^A_]
-x[A\A]A^A_]
-AWAVAUATSH
-A9^ ~
-X[A\A]A^A_]
-E8^%u	A
-AVSH
-\$ D
-@[A^]
-AWAVSPI
-[A^A_]
-AWAVAUATSH
-H9^ 
-t$H9Y w
-D9A4u
-(%3f
-[A\A]A^A_]
-AWAVAUATSH
-8[A\A]A^A_]
-AWAVATSH
-[A\A^A_]
-AWAVATS
-t	[A\A^A_]
-8[A\A^A_]
-AWAVAUATSH
-([A\A]A^A_]
-AWAVAUATSH
-t_E1
-)F0A
-)F A
-[A\A]A^A_]
-AVSH
-[A^]
-t-UH
-AVSH
-[A^]
-t-UH
-AVSH
-[A^]
-AVSI
-L93t
-L97u
-[A^]
-AWAVAUATSPI
-[A\A]A^A_]
-AWAVAUATSPI
-K H9
-[A\A]A^A_]
-AWAVSPI
-[A^A_]
-AWAVAUATSH
-x[A\A]A^A_]
-AWAVATSH
-[A\A^A_]
-AWAVAUATSH
-8[A\A]A^A_]
-AVSH
-[A^]
-AVSI
-[A^]
-AWAVAUATSH
-[A\A]A^A_]
-AVSH
-[A^]
-AVSH
-[A^]
-AWAVSPH
-[A^A_]
-AWAVAUATSH
-x[A\A]A^A_]
-AVSI
-[A^]
-AWAVATSI
-t?L9
-[A\A^A_]
-[A\A^A_]
-AWAVSPI
-[A^A_]
-AWAVAUATSH
-)C0f
-)C f
-L98t
-L9(t
-)C0f
-)C f
-[A\A]A^A_]
-AWAVAUATSH
-)F0A
-)F A
-[A\A]A^A_]
-AWAVAUATSH
-)P`D
-)PpH
-)k0D
-)S@fA
-)[Pf
-)C M
-[A\A]A^A_]
-[A\A]A^A_]
-[A\A]A^A_]
-AWAVAUATSH
-[A\A]A^A_]
-[A\A]A^A_]
-AWAVAUATSH
-)g@A
-)wPfA
-)w I
-[A\A]A^A_]
-[A\A]A^A_]
-AWAVAUATSH
-u8ARD
-U0AR
-([A\A]A^A_]
-AWAVAUATSH
-su%H
-Qu,I
-([A\A]A^A_]
-AWAVSPA
-[A^A_]
-AWAVSPA
-[A^A_]
-AWAVAUATSH
-tOE1
-Qt!I
-[A\A]A^A_]
-AWAVAUATSH
-|$HH
-[A\A]A^A_]
-AVSI
-[A^]
-AVSH
-[A^]
-AWAVAUATSPI
-[A\A]A^A_]
-AVSH
-[A^]
-AVSH
-[A^]
-AWAVAUATSPH
-[A\A]A^A_]
-AVSH
-[A^]
-AWAVATSH
-L9x 
-t{L9{ wuH
-|$(H
-[A\A^A_]
-H9Y 
-tXH9X wRH
-AWAVAUATSPI
-E;M uiI
-[A\A]A^A_]
-AWAVAUATSH
-L9h 
-M9o veL
-A9_(u
-9F u	I
-9F t
-H[A\A]A^A_]
-AWAVSH
-86u"A
-X[A^A_]
-AWAVSH
-[A^A_]
-AWAVATSH
-[A\A^A_]
-AWAVAUATSH
-o`I9
-t	;X 
-T$(D
-\$ L
-|$ D
-[A\A]A^A_]
-AVSH
- [A^]
-AVSH
-[A^]
-[A^]
-AWAVAUATSPI
-[A\A]A^A_]
-AWAVSH
-D;sXtzH
-	H;M
-X[A^A_]
-AVSA
-t	[A^]
-[A^]
-AWAVAUATSH
-Hc^ H
-u%E;u 
-h[A\A]A^A_]
-h[A\A]A^A_]
-AWAVAUATSH
-t<L9
-E;w,s*H
-P0E;w4s
-A+O(
-A+_0
-A+G8=
-wxH9
-[A\A]A^A_]
-AWAVSH
-[A^A_]
-t-UH
-AVSH
-[A^]
-t-UH
-AVSH
-[A^]
-AVSI
-L93t
-L97u
-[A^]
-AWAVAUATSPI
-K H9
-[A\A]A^A_]
-AWAVAUATSPI
-[A\A]A^A_]
-AVSH
-[A^]
-AWAVAUATSH
-w)E1
-[A\A]A^A_]
-AWAVSPD
-[A^A_]
-AWAVATSH
-L$HI
-H92u
-0[A\A^A_]
-AWAVSPI
-[A^A_]
-AWAVSP
-[A^A_]
-AWAVATSH
-0[A\A^A_]
-AWAVAUATSH
-[A\A]A^A_]
-[A^]
-AWAVSH
-[A^A_]
-AVSH
-[A^]
-AWAVSPI
-[A^A_]
-AVSH
-[A^]
-AWAVSPH
-[A^A_]
-[A^A_]
-AWAVSP
-[A^A_]
-[A^A_]
-AWAVATSH
-0[A\A^A_]
-0[A\A^A_]
-AWAVSPD
-L95dR
-[A^A_]
-[A^A_]
-AWAVATS
-[A\A^A_]
-[A\A^A_]
-AVSH
-[A^]
-AWAVAUATSH
-[A\A]A^A_]
-AWAVAUATSH
-H[A\A]A^A_]
-H[A\A]A^A_]
-AWAVAUATSPI
-[A\A]A^A_]
-[A\A]A^A_]
-[A\A]A^A_]
-AWAVATSH
-mcpluB
-[A\A^A_]
-AWAVATSL
->[A\A^A_]
-[A\A^A_]
-AWAVAUATSPI
-[A\A]A^A_]
-AWAVSPH
-[A^A_]
-[A^A_]
-AVSE1
-[A^]
-hu4H
-0<	v
-<_uP
-0<	w
-_u8H
-O(;O,}*Hc
-G@Hc
-;O,}*Hc
-wP;O,}:Hc
-AUATSH
-<$uT
-;S,}zHc
-S(;S,}8Hc
-[A\A]
-AUATSH
-[A\A]
-8*wgHc
-8*wFHc
-8*w%Hc
-:*w1Hc
-G(E1
-D;G,}2Ic
-Ku7H
-W(;W,}(Hc
-D$PI
-T$(A;T$,
-D$(H
-0<	wgI
-0<	v
-L$(A;L$,
-D$(H
-T$(A;T$,
-D$(H
-8#t.H
-D$8A;D$<
-D$0H
-D$8H
-T$(1
-A;T$,
-D$(H
-D$8A;D$<
-D$0H
-T$(1
-A;T$,
-D$(H
-T$(A;T$,
-D$(H
-T$(A;T$,
-D$(H
-T$(A;T$,
-D$(H
-T$(A;T$,
-D$(H
-T$(1
-A;T$,}/Hc
-D$(H
-D$8A;D$<}
-D$0H
-D$8H
-AVAUATSH
-tm<EtiL
-L$(A;L$,
-D$(H
-A)D$P1
-L$(A;L$,}9Hc
-D$(H
-[A\A]A^
-ATSI
-L$(A;L$,
-D$(H
-L$(A;L$,
-D$(H
-L$(A;L$,}CHc
-D$(H
-K(;K,
-K(;K,
-Lu|H
-8_ucH
-AVAUATSH
-T$(1
-A;T$,}+Hc
-D$(H
-D$8A;D$<
-D$0H
-_udH
-T$(A;T$,
-D$(H
-T$(A;T$,
-D$(H
-8_ufH
-T$(A;T$,
-D$(H
-T$(A;T$,}}Hc
-D$(H
-T$(1
-A;T$,}3Hc
-D$(H
-D$8A;D$<
-D$0H
-D$8L
-D$8A;D$<}lHc
-D$0H
-D$8L
-L$(A;L$,}1Hc
-D$(H
-[A\A]A^
-T$(A;T$,
-D$(H
-T$(A;T$,
-D$(H
-T$(A;T$,
-D$(H
-T$(A;T$,
-D$(H
-T$(A;T$,
-D$(H
-T$(A;T$,
-D$(H
-T$(A;T$,
-D$(H
-T$(A;T$,
-D$(H
-T$(A;T$,
-D$(H
-T$(A;T$,
-D$(H
-T$(A;T$,
-D$(H
-T$(A;T$,
-D$(H
-T$(A;T$,}<Hc
-D$(H
-te<EtaH
-L$(A;L$,}1Hc
-D$(H
-_u-H
-)CPH
-K(;K,}8Hc
-2wrIc
-;S,}-Hc
-AUATSH
-<Lt/<Xu5H
-K(;K,}XHc
-9Et	L
-[A\A]
-8ItSM
-K(;K,
-S(;S,
-s(;s,
-(u;I
-(u"M
-K(;K,
-S(;S,
-s(;s,
-S(;S,
-S(;S,}bHc
-K(;K,}.Hc
-_u7H
-<u-H;C
->u-H;C
-vtable fH
-VTT for H
-construcH
-tion vtaL
-ble for L
--in-H
-typeinfoL
- for
-typeinfoL
- name foL
-typeinfoL
- fn for L
-non-virtH
-ual thunH
-k to
-virtual H
-thunk to
-covarianL
-t returnL
- thunk tL
-java ClaL
-ss ff
-guard vaL
-riable fL
-referencL
-e temporH
-ary for H
-hidden aH
-lias forH
-2H;C
-2H;C
-operatorL
-2H;C
-B	H;C
-operatorL
-B	H;C
-operatorL
-8(u@H
-8>u-H
-) : 
-2u(H
-1u}H
-<1un
-fals
-trueH
-2u-H
-<u-H;C
->u-H;C
->(ubH
-2H;C
-B	H;G
- restricL
-B	H;G
- volatilL
- conf
-complex L
-imaginarL
-(t H;C
-AVAUATSI
-[A\A]A^
-AUATSH
-[A\A]
-[A\A]
-AVAUATSH
-`u6H
-k([A\A]A^
-C	<Dt
-{	Iu8I
-global cL
-onstructL
-ors keyeL
-d tof
-global dL
-estructoH
-rs keyedH
- to 
-++CCUNGH9
-++CCUNGH9BPt
-++CCUNGH9BPt	H
-ATSI
-@t;H
-AUATSH
-[A\A]
-AVAUATSH
-[A\A]A^
-AWAVAUATSH
-++CCUNGH9
-"H;]
-[A\A]A^A_
-++CCUNGH9CPt	H
-++CCUNGH
-UAWAVATSH
-}%E1
-H;D$
-[A\A^A_]
-UAWAVAUATSH
-D$`H
-D$8H
-D$0H
-D$(H
-D$ H
-H;D$
-l$ H
-T$8H
-T$0H9
-|$@1
-H;D$`u
-h[A\A]A^A_]
-12CIMENullImpl
-4IIME
-:>->
-24CGameStreamBaseMemStream
-24CGameStreamGameMemStream
-N3IPC15BinarySemaphoreE
-QkkXa
-N3IPC10PosixMutexE
-N3IPC6IMutexE
-N3IPC11ISyncObjectE
-N3IPC10PosixEventE
-N3IPC6IEventE
-N3IPC17PosixSharedMemoryE
-N3IPC10ISharedMemE
-15CSavedMemStream
-10IMemStream
-16CSharedMemStream
+OpenGL does not support non-power-of-two textures!\n
+COverlayGLRenderer::ValveDrawSharedHandleTexture - failed to get texture from handle\n
 18COverlayGLRenderer
-?14CMetalRenderer
-Game Metal RGB
-A20CBaseOverlayRenderer
-St12length_error
-N9__gnu_cxx24__concurrence_lock_errorE
-N9__gnu_cxx26__concurrence_unlock_errorE
-MainThrd
-pthread_setname_np
-SteamGameId
-SteamOverlayGameId
-Detected hot-key via base input, now requesting overlay %s
-disable
-enable
-base input
-ESC press detected, requesting overlay disable
-SteamGameStream_%u_mem
-SteamGameStream_%u_mutex
-pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
-Fatal on Lock(): Locked the floor, couldn't release the ceiling: %s
-pid %d != %d, re-initing before send; client_port = %d, server_port = %d
-pid %d != %d, clearing client_port = %d, server_port = %d
-Fatal on Release(): Locked the ceiling, couldn't release the floor: %s
-/BSem/%x
-%s.2
-Failed to create BinarySemaphore: %s - %s
-Fatal on Lock(): Locked the floor, couldn't post the ceiling: %s
-Took lock, but old thread id != 0!!!
-Error on Release(): Not the lock owner: %s
-Fatal on Release(): errno %d: %s
-Fatal on Release(): Thread not marked as mine: %s
-/MTX/%x
-Tried to create PosixMutex but was already around: %s - %s
-Failed to create PosixMutex: %s - %s
-Failed to post that I was waiting for an event
-/Evt/%x
-%s.BinSemLock
-Failed to force create PosixEvent: %s - %s, m_pLock:%p, m_pPending:%p
-Failed to create PosixAutoResetEvent: %s - %s, m_pLock:%p, m_pPending:%p
-	errno: %d, bCreator: %s
-true
-false
-Bad Access flag on shared mem create: %s: %u
-/Shm/%x
-/dev/null
-com.valvesoftware.steam.ipctool
-ipcserver restart: expected: %d, got: %d
-StopJob
-Unable to write to video stream: dst not aligned!
-Unable to write to video stream: dst stride (stride=%u)!
-Failed to write screenshot to stream, clearing data!
-Not enough room in mem stream for video frame
-Video stream full!
-Video stream full.. couldn't get buffer!
-%s_mutex
-%s_written
-Failed creating write event %s
-%s_avail
-Failed creating read event %s
-%s_mem
-Failed creating file mapping %s
-Failed creating view of file for %s
-Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
-Warning: Memory was locked for put while destructing!
-Warning: Blocking wait on mutex failed in Clear: %d
-Warning: CSharedMemStream::Clear failed, expected %d bytes remaining, have %d.
-CSharedMemStream has memory already locked for put. Don't write with memory locked.
-Timed out waiting for mutex in GetInternal()
-Failed to take mutex in GetInternal()
-SHMemStream header is corrupt in GetInternal()
-CSharedMemStream has memory already locked for put. Need to write through acquired CSharedMemStreamLockedMemory
-Timed out waiting for mutex in PutInternal()
-m_pMutex->Wait() failed in ShMemStream::PutInternal
-SHMemStream header is corrupt in PutInternal()
-PutInternal: Not enough space for put when locked
-Timed out waiting for available space in CSharedMemStream::BLockMemoryForWrite()
-Timed out waiting for lock in CSharedMemStream::BLockMemoryForWrite
-Asked to unlock memory for write.. but wasn't locked
-Video memory stream writer destroyed with frame lock!
-Video memory stream frame commit without lock!
-StreamForOpenVR
-SteamStreamingVideo
-SteamStreamingMaximumResolution
-%dx%d
-SteamStreamingVideoDisableVSync
-SteamStreamingAllowGameVsync
-Received audio recording start message, drop flag is %d
-Received audio recording stop message
-Game Delayed OpenGL NV12
-Game OpenGL NV12
-Game Delayed OpenGL RGB
-Game OpenGL RGB
-COpenGLFrameCapture - missing opengl methods
-Failed to create y plane
-Failed to create uv plane
-Failed to create rgba plane
-Unsupported output format
-Invalid texture for fbo generated
-COpenGLFrameCapture::BCreateRenderData(): Couldn't set FBO configuration (%u)
-COpenGLFrameCapture::BCreateRenderData(): Couldn't create shader
-bFlipRendering
-srcWidth
-srcHeight
-#extension GL_ARB_texture_rectangle : enable
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ycoeff = vec3(%f, %f, %f);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;
-    // Calculate the YUV values 
-    yuv.x = dot(rgb, Ycoeff) + %f;
-    // Write the YUV values 
-    gl_FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);
-#version 150
-in vec2 textCoord;
-out vec4 FragColor;
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ycoeff = vec3(%f, %f, %f);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture(tex0, textCoord).rgb;
-    // Calculate the YUV values 
-    yuv.x = dot(rgb, Ycoeff) + %f;
-    // Write the YUV values 
-    FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);
-#extension GL_ARB_texture_rectangle : enable
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ucoeff = vec3(%f, %f, %f);
-const vec3 Vcoeff = vec3(%f, %f, %f);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;
-    // Calculate the YUV values 
-    yuv.y = dot(rgb, Ucoeff) + 0.5;
-    yuv.z = dot(rgb, Vcoeff) + 0.5;
-    // Write the YUV values 
-    gl_FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);
-#version 150
-in vec2 textCoord;
-out vec4 FragColor;
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ucoeff = vec3(%f, %f, %f);
-const vec3 Vcoeff = vec3(%f, %f, %f);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture(tex0, textCoord).rgb;
-    // Calculate the YUV values 
-    yuv.y = dot(rgb, Ucoeff) + 0.5;
-    yuv.z = dot(rgb, Vcoeff) + 0.5;
-    // Write the YUV values 
-    FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);
-#extension GL_ARB_texture_rectangle : enable
-uniform sampler2DRect tex0;
-void main()
-    gl_FragColor = vec4( texture2DRect(tex0, gl_TexCoord[0].st).rgb, 1.0);
-#version 150
-in vec2 textCoord;
-out vec4 FragColor;
-uniform sampler2DRect tex0;
-void main()
-    FragColor = vec4( texture(tex0, textCoord).rgb, 1.0);
-uniform bool bFlipRendering;
-void main()
-	gl_TexCoord[0] = gl_MultiTexCoord0;
-   gl_Position = gl_Vertex;
-   if ( bFlipRendering )
-       gl_Position.y = -gl_Position.y;
-#version 150
-uniform bool bFlipRendering;
-uniform int srcWidth;
-uniform int srcHeight;
-out vec2 textCoord;
-const vec2 screenAlignedQuad[4] = vec2[]
-	vec2(-1.0,  1.0),
-	vec2( 1.0,  1.0),
-	vec2(-1.0, -1.0),
-	vec2( 1.0, -1.0)
-const vec2 textureCoords[4] = vec2[]
-	vec2( 0.0,  0.0),
-	vec2( 1.0,  0.0),
-	vec2( 0.0,  1.0),
-	vec2( 1.0,  1.0)
-void main()
-   gl_Position = vec4( screenAlignedQuad[ gl_VertexID ], 0.0, 1.0);
-   if ( bFlipRendering )
-       gl_Position.y = -gl_Position.y;
-   textCoord = vec2( textureCoords[ gl_VertexID ].x * srcWidth, textureCoords[ gl_VertexID ].y * srcHeight );
-/System/Library/Frameworks/OpenGL.framework/Libraries/libGL.dylib
-GLSL Fragment Shader log:
-GLSL Program log:
-Missing texture: %d which was used in DrawTexturedRect()
-Failed on texture subrect update!
-Invalid IOsurfaceID passed to OGL ValveDrawSharedHandleTexture
-Making new texture: ID %d of dimensions w %u h %u
-OSX - ERROR creating shared texture, (%d) - %s
-COverlayGLRenderer::ValveDrawSharedHandleTexture - failed to get texture from handle
-OpenGL ES
-%d.%d
-glActiveTextureARB
-glClientActiveTextureARB
-glActiveTexture
-glClientActiveTexture
-glCreateShader
-glShaderSource
-glCompileShader
-glGetShaderiv
-glGetShaderInfoLog
-glAttachShader
-glDeleteShader
-glCreateProgram
-glLinkProgram
-glGetProgramiv
-glGetProgramInfoLog
-glDeleteProgram
-glIsProgram
-glUseProgram
-glGetAttribLocation
-glGetUniformLocation
-glGetUniformiv
-glUniform4fv
-glUniform1i
-glUniformMatrix4fv
-glEnableVertexAttribArray
-glDisableVertexAttribArray
-glVertexAttribPointer
-glVertexAttrib4f
-glVertexAttrib4fv
-glGenBuffers
-glDeleteBuffers
-glBindBuffer
-glBufferData
-glBufferSubData
-glGenVertexArrays
-glDeleteVertexArrays
-glBindVertexArray
-glBindSampler
-glBlendFuncSeparate
-glBlendEquationSeparate
-glBindProgramPipeline
-glBindFramebufferEXT
-glDrawBuffers
-glClipControl
-glGenBuffersARB
-glBindBufferARB
-glMapBufferARB
-glUnmapBufferARB
-glDeleteBuffersARB
-glBufferDataARB
-glDebugMessageCallbackARB
-GLOVERLAYCOREPROFILE
-OpenGL ES version: %d.%d (%s) (overlay is not supported)
-OpenGL version: %d.%d (%s) %s (overlay will use %s)
-core
-compatibility
-shaders
-fixed function
-GL_ARB_framebuffer_object
-glGenFramebuffers
-glDeleteFramebuffers
-glFramebufferTexture2D
-glBindFramebuffer
-glBlitFramebuffer
-glCheckFramebufferStatus
-GL_EXT_framebuffer_object
-glGenFramebuffersEXT
-glDeleteFramebuffersEXT
-glFramebufferTexture2DEXT
-glBlitFramebufferEXT
-glCheckFramebufferStatusEXT
-Attrib_Position
-Attrib_Color
-Attrib_TexCoord
-Texture
-GLSL Vertex Shader log:
-GL_ARB_texture_non_power_of_two
-OpenGL does not support non-power-of-two textures!
-OpenGL Enabled LOD bias
-Texture units detected: %d
-Warning: Failed to determine surface dimensions
-#version 150
-in vec4 Attrib_Position;
-in vec4 Attrib_Color;
-in vec2 Attrib_TexCoord;
-out vec4 Color;
-out vec2 TexCoord;
-void main(void)
-	Color = Attrib_Color;
-	TexCoord = Attrib_TexCoord;
-	gl_Position = Attrib_Position;
-#version 150
-in vec4 Color;
-in vec2 TexCoord;
-out vec4 FragColor;
-uniform sampler2DRect Texture;
-void main(void)
-	FragColor = Color * texture(Texture, TexCoord);
-COverlayGLRenderer
-steamoverlay_
-Hooking %s::%s for %s
-Failed to hook %s::%s for %s
-NSApplication
-v24@?0@"<MTLCommandBuffer>"8@"<MTLDrawable>"16
-v32@?0@"<MTLCommandBuffer>"8@"<MTLDrawable>"16d24
-@"<MTLDrawable>"16@?0@"CAMetalLayer"8
-v16@?0@"<MTLCommandBuffer>"8
-v24@?0@"<MTLCommandBuffer>"8@?<v@?@"<MTLCommandBuffer>">16
-CAMetalLayer
-v8@?0
-steamoverlay_vs
-steamoverlay_update_ps
-steamoverlay_nocolor_ps
-CMetalRenderer::ValveDrawTexturedRect() called outside a valid MTLCommandBuffer::commit
-Update tex %d
-CMetalRenderer::ValveLoadOrUpdateTexture() called outside a valid MTLCommandBuffer::commit
-CMetalRenderer::ValveDrawSharedHandleTexture() called with bad IOSurfaceID
-CMetalRenderer::ValveDrawSharedHandleTexture() Bad texture from IOsurfaceID
-Update tex %llu
-Steam Overlay
-Steam Screenshot
-Quad
-Steam Screenshot Sync
-	using namespace metal;
-	struct Vertex
-		float4 position [[position]];
-		float2 texCoords;
-		float2 _unusedPadding;
-		float4 color;
-	constexpr sampler updateSampler( coord::normalized, address::clamp_to_edge, filter::linear );
-	vertex Vertex steamoverlay_vs( constant Vertex *vertices [[ buffer(0) ]], uint vid [[ vertex_id ]] )
-		return vertices[vid];
-	fragment float4 steamoverlay_update_ps( Vertex inVertex [[ stage_in ]],
-										   texture2d<float> overlay [[ texture( 0 ) ]] )
-		return inVertex.color * overlay.sample( updateSampler, inVertex.texCoords );
-	fragment float4 steamoverlay_nocolor_ps( Vertex inVertex [[ stage_in ]],
-											texture2d<float> overlay [[ texture( 0 ) ]] )
-		return overlay.sample( updateSampler, inVertex.texCoords );
-CBaseOverlayRenderer
-Taking screenshot via %s, %u milliseconds since last one was triggered. (skipdebounce=%s)
-Detected Movie hot-key via %s
-Detected marker hot-key via %s
-Waiting on shared FD for texture %d: received an outdated FD for texture %d instead, skipping.
-Waiting on shared FD for texture %d: peer is too far ahead and sending FD for texture %d.
-Mismatched chrome paint texture width/height!
-/tmp/steam_chrome_overlay_uid%d_spid%u
-  handle %llu: m_iTextureID %d m_fdPaintBuffer %d
-Corrupt render stream (getting cmd)... %s
-in saved stream
-in external stream
-render stream
-Corrupt render stream: k_ESendTextToGame
-Corrupt render stream: k_ESendTextToGame string
-Corrupt render stream: k_EDrawTexturedRect
-Corrupt render stream: k_EDrawChromePaintBufferRect
-Corrupt render stream: k_EDeleteChromePaintBuffer
-Corrupt render stream: k_EDrawAndUpdateSharedTexture
-GameOverlayRender_SharedTex_%d_%d
-GameOverlayRender_SharedTexRead_%d_%d
-GameOverlayRender_SharedTexWrite_%d_%d
-Corrupt shared texture stream (header)
-Corrupt shared texture stream (texture data)
-Got hTexture of non NULL on shared texture draw but new shared tex update has no shared texture.
-Corrupt render stream: k_EDeleteTexture
-Corrupt render stream: k_ELoadTexture
-Warning: Texture %d is 0 bytes... bad VGUI!
-Corrupt render stream: k_ELoadTexture 3
-Texture size(%d) was != width(%u)*height(%u)*4, not loading
-Corrupt render stream: k_ESetCursor
-Corrupt render stream: k_ECreateCustomCursor
-Corrupt render stream: k_ECreateCustomCursor (custom2)
-Corrupt render stream: k_ECreateCustomCursor (custom3)
-Corrupt render stream: k_EDeleteCursor
-Corrupt render stream: k_EShowCursor
-Corrupt render stream: k_ESetHotKey
-Enabling clearing on every frame
-Corrupt render stream: k_EIMECommand
-Unsupported render command (%d) in vgui render stream
-Left render loop without EndFrame!
-Got EndFrame, but still have [%d] bytes remaining in render loop buffer
-GameOverlay_MovieStream_%u
-Created movie stream %s
-Couldn't create movie stream %s
-Deleting movie stream
-STEAM_OVERLAY_DISABLE_WAIT_FOR_CEF_FRAME
-VR_Compositor_OverlayVSync_%u
-SteamGamepadUI
-SteamDisableOverlayDPIScaling
-GameOverlayRender_PIDStream
-Starting movie recording at %dx%d
-Stopped movie recording
-Detected Plat_MSTime() wrapping
-Clearing input stream because it is about to overflow
-Disabling overlay for 20 minutes (%d seconds since last frame from ui process was seen)
-Disabling overlay for 30 seconds (%d seconds since last frame from ui process was seen)
-Disabling overlay for 10 seconds (%d seconds since last frame from ui process was seen)
-Disabling overlay for 2 seconds (%d seconds since last frame from ui process was seen)
-Failed reading frame completely
-Forcing internal overlay disable and requesting ui disable
-ValveTakeScreenshot not implemented for this surface
-allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
-Invalid Mouse Restore Mode: %d
-Enabling overlay
-Warning: Could not enable cursor visibility: %u
+#version 150\nin vec4 Color;\nin vec2 TexCoord;\nout vec4 FragColor;\nuniform sampler2D Texture;\nvoid main(void)\n{\n\tFragColor = Color * texture(Texture, TexCoord);\n}\n
+#version 150\nin vec4 Attrib_Position;\nin vec4 Attrib_Color;\nin vec2 Attrib_TexCoord;\nout vec4 Color;\nout vec2 TexCoord;\nvoid main(void)\n{\n\tColor = Attrib_Color;\n\tTexCoord = Attrib_TexCoord;\n\tgl_Position = Attrib_Position;\n}\n
+XDefineCursor
+valid
+unknown
+Disabling overlay\n
+XWarpPointer
+XRootWindow
+XSetInputFocus
+XGrabKeyboard
+XGrabPointer
+XMapWindow
+XDestroyIC
+XCloseIM
+XFreeCursor
+XInstallColormap
+XSync
+Restore win 0x%lx cursor to 0x%lx (%s)\n
+Remapping untracked pointer grab window 0x%lx\n
+Regrabbing pointer on window %lx\n
+Enabling overlay\n
+XCreateFontCursor
+XQueryExtension
+XGetEventData
+XFreeEventData
+HasXInput2
+%s: no XQueryExtension\n
+XInputExtension
+%s: no XInputExtension\n
+ERROR: Skip infos overflow\n
+XTranslateCoordinates
+Window tracking overflow!\n
+Track %p win 0x%lx (parent 0x%lx), cursor 0x%lx (valid %d), events 0x%x, top %d\n
+  skipping tracking for nested window\n
+Destroy window 0x%lx\n
+XSelectInput
+Window 0x%lx event mask %x\n
+Window 0x%lx on display %p losing forced event mask %x\n
+Window 0x%lx on secondary display %p gets raw event mask %x\n
+Track win 0x%lx cursor 0x%lx\n
+GLX window tracking overflow!\n
+Track GLX win 0x%lx for X window 0x%lx\n
+Destroy GLX window 0x%lx\n
+XCreateGC
+XFreePixmap
+XFreeGC
+XFillRectangle
+XCreatePixmapCursor
+XFree
+XGetGeometry
+XQueryTree
+XGetInputFocus
+XQueryPointer
+XCreateIC
+XOpenIM
+XSupportsLocale
+XUngrabKeyboard
+XUngrabPointer
+XUnmapWindow
+en_US.UTF-8
+SteamOverlay
+resourceClass
+resourceName
+inputStyle
+focusWindow
+clientWindow
+Game process locale is '%s'\n
+XUninstallColormap
+  using display %p window 0x%lx key input win 0x%lx (event mask 0x%x)\n
+Need to force key focus to overlay key window 0x%lx\n
+Update size of 0x%lx to %u,%u\n
+First swap of overlay on %p 0x%lx\n
+XSendEvent
+XKeysymToKeycode
+XkbKeycodeToKeysym
+XOpenDisplay
+XCloseDisplay
+XInternAtom
+XGetWindowProperty
+Force release of key 0x%x\n
+XLookupKeysym
+XwcLookupString
+SteamOverlayUseXFilterEvent
+Key to character event translate: skipped, filtered by XFilterEvent\n
 STEAM_OVERLAY_FRAME_TIME_LOGGING
+/tmp/gameoverlayrenderer.%d.log
+####### Log failed to open %s ##############\n
+logfile opened early, s_Pid == 0 (Init has not been called yet)\n
 STEAM_OVERLAY_LOGGING_FLUSH
 STEAM_OVERLAY_LOGGING
-/tmp/gameoverlayrenderer.%d.log
-####### Log failed to open %s ##############
-logfile opened early, s_Pid == 0 (Init has not been called yet)
 %a %b %d %H:%M:%S %Y UTC
 %s - 
+/proc/self/exe
 vrmonitor
-Failed to increase file count limit. Currently: %lu
-GameID = %llu, AppID = %u, OverlayGameID = %llu, PID: %u, tid %u Executable: %s
 IgnoreChildProcesses
+Failed creating paint event\n
+Failed creating exit event\n
+----------------------------\n
+Failed to increase file count limit. Currently: %lu\n
+GameID = %llu, AppID = %u, OverlayGameID = %llu, PID: %u, tid %u Executable: %s\n
 STEAM_OVERLAY_WINDOW_BLACKLIST
 GameOverlay_InputEventStream_%d
 GameOverlay_ScreenshotStream_%d
 GameOverlayRender_PaintCmdStream_%d
 GameOverlay_InGameRenderingCompleted_%d
-Failed creating rendering event
+Failed creating rendering event\n
 GameOverlay_VGUIPaintingCompleted_%d
-Failed creating paint event
 GameOverlay_SerializedWorkQueued_%d
-Failed creating serialized work event
+Failed creating serialized work event\n
 GameOverlay_GameExitingEvent_%d
-Failed creating exit event
-Modules at GameOverlayRenderer.dll attach
-----------------------------
 SteamNoOverlayUIDrawing
-SteamNoOverlayUIDrawing was set
+SteamNoOverlayUIDrawing was set\n
+pid %d != %d, skipping destruction (fork without exec?)\n
+glXChooseVisual
+glXCreateContext
+glXMakeCurrent
+glXCreateWindow
+glXDestroyWindow
+glXCreatePixmap
+glXDestroyPixmap
+glXCreatePbuffer
+glXDestroyPbuffer
+glXGetProcAddress
+glXGetProcAddressARB
+XSetErrorHandler
+XCreateSimpleWindow
+XCheckIfEvent
+XCheckMaskEvent
+XCheckTypedEvent
+XCheckTypedWindowEvent
+XCheckWindowEvent
+XIfEvent
+XMaskEvent
+XNextEvent
+XPeekEvent
+XPeekIfEvent
+XWindowEvent
+XPutBackEvent
+XEventsQueued
+XPending
+XQLength
+XUndefineCursor
+XChangeWindowAttributes
+XF86DGAQueryExtension
+XDGAQueryExtension
+XF86DGADirectVideo
+xcb_create_window
+xcb_create_window_checked
+read
+Overlay pid %d dpy %p: An X Error occurred\n
+XGetErrorText
+XGetErrorDatabaseText
+X Error
+XError
+XlibMessage
+%s: %s\n
+Request Major code %d
+MajorCode
+XRequest
+Value 0x%x
+Value
+AtomID 0x%x
+AtomID
+ResourceID 0x%x
+ResourceID
+Error Serial #%d
+ErrorSerial
+Installed overlay error handler for process %d\n
+Opening display '%s', process %d returned %p\n
+xcb_change_property
+STEAM_GAME
+XChangeProperty
+XGrabKeyboard %p grab_window %x time %u\n
+XGrabPointer %p grab_window %x confine_to %x time %u\n
+XUngrabKeyboard %p time %u\n
+XUngrabPointer %p time %u\n
+SDL_GAMECONTROLLER_IGNORE_DEVICES
+linux64/steamclient.so
+linux32/steamclient.so
+ubuntu12_32/steamclient.so
+ubuntu12_64/steamclient.so
+dlopen
+Applying steamclient.so path workaround.\n
+GLIBC_2.0
+dlsym
+close
 SteamOverlayRunning_%llu
-One-time initialization: pid %d for game %llu
-pid %d != %d, skipping destruction (fork without exec?)
-@"NSEvent"16@?0@"NSEvent"8
-NSView
-NSCursor
-NSEvent
-GameOverlay_AudioStream_%u
-Audio pipe full
-StartRecordingAudio( %s )
-v32@?0^{opaqueCMSampleBuffer=}8q16@"NSError"24
-v16@?0@"NSError"8
-startCapture: %@
-StartRecordingAudio() only supported on macOS 11.0 and newer
-StopRecordingAudio
-St11logic_error
-_GLOBAL_
-(anonymous namespace)
-string literal
-vtable for 
-VTT for 
-construction vtable for 
--in-
-typeinfo for 
-typeinfo name for 
-typeinfo fn for 
-non-virtual thunk to 
-virtual thunk to 
-covariant return thunk to 
-java Class for 
-guard variable for 
-reference temporary for 
-hidden alias for 
-operator
-operator 
-) : (
- restrict
- volatile
- const
-complex 
-imaginary 
-std::allocator
-allocator
-std::basic_string
-basic_string
-std::string
-std::basic_string<char, std::char_traits<char>, std::allocator<char> >
-std::istream
-std::basic_istream<char, std::char_traits<char> >
-basic_istream
-std::ostream
-std::basic_ostream<char, std::char_traits<char> >
-basic_ostream
-std::iostream
-std::basic_iostream<char, std::char_traits<char> >
-basic_iostream
-delete[]
-delete
-new[]
-sizeof 
-signed char
-bool
-boolean
-char
-byte
-double
-long double
-float
-__float128
-unsigned char
-unsigned int
-unsigned
-long
-unsigned long
-__int128
-unsigned __int128
-short
-unsigned short
-void
-wchar_t
-long long
-unsigned long long
-__gnu_cxx::__concurrence_lock_error
-__gnu_cxx::__concurrence_unlock_error
-std::exception
-std::bad_exception
-St13bad_exception
-St9exception
-pure virtual method called
-N10__cxxabiv120__si_class_type_infoE
-N10__cxxabiv117__class_type_infoE
-St9type_info
-terminate called recursively
-terminate called after throwing an instance of '
-  what():  
-terminate called without an active exception
-_availability_version_check
-kCFAllocatorNull
-CFDataCreateWithBytesNoCopy
-CFPropertyListCreateWithData
-CFPropertyListCreateFromXMLData
-CFStringCreateWithCStringNoCopy
-CFDictionaryGetValue
-CFGetTypeID
-CFStringGetTypeID
-CFStringGetCString
-CFRelease
-/System/Library/CoreServices/SystemVersion.plist
-ProductVersion
-%d.%d.%d
-windowWithWindowNumber:
-currentContext
-CGLContextObj
-view
-window
-windows
-countByEnumeratingWithState:objects:count:
-contentView
-class
-isKindOfClass:
-openGLContext
-windowNumber
-frameRectForContentRect:
-frame
-wantsBestResolutionOpenGLSurface
-convertRectToBacking:
-init
-steammetalhook_init
-stringByAppendingString:
-UTF8String
-deviceOverride
-setDeviceOverride:
-metalLibrary
-setMetalLibrary:
-textureCacheMap
-setTextureCacheMap:
-screenshotPipeline
-setScreenshotPipeline:
-updatePipeline
-setUpdatePipeline:
-updatePipelineBGRA8
-setUpdatePipelineBGRA8:
-updatePipelineRGBA16Float
-setUpdatePipelineRGBA16Float:
-_deviceOverride
-_metalLibrary
-_textureCacheMap
-_screenshotPipeline
-_updatePipeline
-_updatePipelineBGRA8
-_updatePipelineRGBA16Float
-T@"<MTLDevice>",&,N,V_deviceOverride
-T@"<MTLLibrary>",&,N,V_metalLibrary
-T@"NSMapTable",&,N,V_textureCacheMap
-T@"<MTLRenderPipelineState>",&,N,V_screenshotPipeline
-T@"<MTLRenderPipelineState>",&,N,V_updatePipeline
-T@"<MTLRenderPipelineState>",&,N,V_updatePipelineBGRA8
-T@"<MTLRenderPipelineState>",&,N,V_updatePipelineRGBA16Float
-steamoverlay_presentDrawable:
-steamoverlay_presentDrawable:atTime:
-steamoverlay_presentDrawable:afterMinimumDuration:
-steamoverlay_nextDrawable
-timeIntervalSinceReferenceDate
-isEqual:
-self
-performSelector:
-performSelector:withObject:
-performSelector:withObject:withObject:
-isProxy
-isMemberOfClass:
-conformsToProtocol:
-respondsToSelector:
-retain
-release
-autorelease
-retainCount
-zone
-hash
-superclass
-description
-debugDescription
-TQ,R
-T#,R
-T@"NSString",R,C
-present
-presentAtTime:
-presentAfterMinimumDuration:
-addPresentedHandler:
-presentedTime
-drawableID
-Td,R,N
-TQ,R,N
-texture
-layer
-T@"<MTLTexture>",R
-T@"CAMetalLayer",R
-steamoverlay_commit
-steamoverlay_addScheduledHandler:
-newCommandQueue
-commandBuffer
-nextDrawable
-enqueue
-commit
-addScheduledHandler:
-presentDrawable:
-presentDrawable:atTime:
-presentDrawable:afterMinimumDuration:
-waitUntilScheduled
-addCompletedHandler:
-waitUntilCompleted
-blitCommandEncoder
-renderCommandEncoderWithDescriptor:
-computeCommandEncoderWithDescriptor:
-blitCommandEncoderWithDescriptor:
-computeCommandEncoder
-computeCommandEncoderWithDispatchType:
-encodeWaitForEvent:value:
-encodeSignalEvent:value:
-parallelRenderCommandEncoderWithDescriptor:
-resourceStateCommandEncoder
-resourceStateCommandEncoderWithDescriptor:
-accelerationStructureCommandEncoder
-pushDebugGroup:
-popDebugGroup
-device
-commandQueue
-retainedReferences
-errorOptions
-label
-setLabel:
-kernelStartTime
-kernelEndTime
-logs
-GPUStartTime
-GPUEndTime
-status
-error
-T@"<MTLDevice>",R
-T@"<MTLCommandQueue>",R
-Tc,R
-T@"NSString",C
-Td,R
-T@"<MTLLogContainer>",R
-T@"NSError",R
-isVisible
-subviews
-convertRectFromLayer:
-convertRect:toView:
-convertRectToScreen:
-bounds
-screen
-mainScreen
-baseObject
-newLibraryWithSource:options:error:
-colorAttachments
-objectAtIndexedSubscript:
-setBlendingEnabled:
-setRgbBlendOperation:
-setAlphaBlendOperation:
-setSourceRGBBlendFactor:
-setSourceAlphaBlendFactor:
-setDestinationRGBBlendFactor:
-setDestinationAlphaBlendFactor:
-newFunctionWithName:
-setVertexFunction:
-setFragmentFunction:
-setPixelFormat:
-newRenderPipelineStateWithDescriptor:error:
-initWithKeyOptions:valueOptions:capacity:
-superlayer
-convertRect:fromLayer:
-isMainThread
-width
-height
-numberWithInt:
-objectForKey:
-stringWithFormat:
-setRenderPipelineState:
-setFragmentTexture:atIndex:
-setVertexBytes:length:atIndex:
-drawPrimitives:vertexStart:vertexCount:
-pixelFormat
-texture2DDescriptorWithPixelFormat:width:height:mipmapped:
-newTextureWithDescriptor:
-setObject:forKey:
-replaceRegion:mipmapLevel:withBytes:bytesPerRow:
-numberWithUnsignedLongLong:
-newTextureWithDescriptor:iosurface:plane:
-newTextureViewWithPixelFormat:
-renderPassDescriptor
-setTexture:
-setLoadAction:
-setStoreAction:
-endEncoding
-removeObjectForKey:
-removeAllObjects
-setUsage:
-synchronizeResource:
-getBytes:bytesPerRow:fromRegion:mipmapLevel:
-lock
-unlock
-type
-subtype
-CGEvent
-eventWithCGEvent:
-addLocalMonitorForEventsMatchingMask:handler:
-mouseLocation
-steamhooked_set
-steamhooked_push
-steamhooked_pop
-currentCursor
-steamhooked_hide
-steamhooked_unhide
-push
-steamhooked_pressedMouseButtons
-steamhooked_mouseLocation
-steamhooked_nextEventMatchingMask:untilDate:inMode:dequeue:
-_setCurrentEvent:
-postEvent:atStart:
-resetCursorRects
-steamhooked_resetCursorRects
-hide
-unhide
-pressedMouseButtons
-nextEventMatchingMask:untilDate:inMode:dequeue:
-sharedRecorder
-startCaptureWithHandler:completionHandler:
-stopCaptureWithHandler:
-arrowCursor
-IBeamCursor
-crosshairCursor
-pointingHandCursor
-operationNotAllowedCursor
-dragCopyCursor
-dragLinkCursor
-_zoomInCursor
-_zoomOutCursor
-_windowResizeNorthCursor
-resizeUpCursor
-_windowResizeSouthCursor
-resizeDownCursor
-_windowResizeWestCursor
-resizeLeftCursor
-_windowResizeEastCursor
-resizeRightCursor
-_windowResizeNorthSouthCursor
-resizeUpDownCursor
-_windowResizeEastWestCursor
-resizeLeftRightCursor
-_windowResizeNorthWestCursor
-_windowResizeNorthEastCursor
-_windowResizeSouthWestCursor
-_windowResizeSouthEastCursor
-_windowResizeNorthEastSouthWestCursor
-_windowResizeNorthWestSouthEastCursor
-SteamMetalHook
-CMetalDeviceCache
-CAMetalDrawable
-MTLDrawable
-NSObject
-MTLCommandBuffer
-SteamOverrideNSCursor
-SteamOverrideMouse
-SteamOverrideNextEvent
-@16@0:8
-v24@0:8@16
-@"<MTLDevice>"
-@"<MTLLibrary>"
-@"NSMapTable"
-@"<MTLRenderPipelineState>"
-c24@0:8@16
-#16@0:8
-@24@0:8:16
-@32@0:8:16@24
-@40@0:8:16@24@32
-c16@0:8
-c24@0:8#16
-c24@0:8:16
-Vv16@0:8
-Q16@0:8
-^{_NSZone=}16@0:8
-c24@0:8@"Protocol"16
-@"NSString"16@0:8
-v16@0:8
-v24@0:8d16
-v24@0:8@?16
-d16@0:8
-v24@0:8@?<v@?@"<MTLDrawable>">16
-@"<MTLTexture>"16@0:8
-@"CAMetalLayer"16@0:8
-v32@0:8@16d24
-@24@0:8@16
-@24@0:8Q16
-v32@0:8@16Q24
-v24@0:8@?<v@?@"<MTLCommandBuffer>">16
-v24@0:8@"<MTLDrawable>"16
-v32@0:8@"<MTLDrawable>"16d24
-@"<MTLBlitCommandEncoder>"16@0:8
-@"<MTLRenderCommandEncoder>"24@0:8@"MTLRenderPassDescriptor"16
-@"<MTLComputeCommandEncoder>"24@0:8@"MTLComputePassDescriptor"16
-@"<MTLBlitCommandEncoder>"24@0:8@"MTLBlitPassDescriptor"16
-@"<MTLComputeCommandEncoder>"16@0:8
-@"<MTLComputeCommandEncoder>"24@0:8Q16
-v32@0:8@"<MTLEvent>"16Q24
-@"<MTLParallelRenderCommandEncoder>"24@0:8@"MTLRenderPassDescriptor"16
-@"<MTLResourceStateCommandEncoder>"16@0:8
-@"<MTLResourceStateCommandEncoder>"24@0:8@"MTLResourceStatePassDescriptor"16
-@"<MTLAccelerationStructureCommandEncoder>"16@0:8
-v24@0:8@"NSString"16
-@"<MTLDevice>"16@0:8
-@"<MTLCommandQueue>"16@0:8
-@"<MTLLogContainer>"16@0:8
-@"NSError"16@0:8
-{CGPoint=dd}16@0:8
-@44@0:8Q16@24@32c40
-cxa_exception_rethrow
-__cxa_rethrow
-cxa_exception_throw
-void *
-void *
-__cxa_throw
-cxa_runtime
-zPLR
-zPLR
-zPLR
-zPLR
-zPLR
-zPLR
-zPLR
-zPLR
-zPLR
-! RDp(`
-ASAXAXA`
-A^A[A^A\A`
-RBRB
-RBRBSCSASA`
-RBRCSDTDTASDp
-p RARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARF
-SBTASDTDTDTASARAZBZASASARB
-p@p0`*ASASASASASASASB^CRAp
-RARARARARARARARARARARARARARARARARARARBRB`
-RARARARARARBZAp
-RARBVAp
-RARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARB`<AVAZAREWBp `
-VDRCp
-p`SA
-@_CGLChoosePixelFormat
-@_CGLFlushDrawable
-@_glSwapAPPLE
-@_NSApp
-@_OBJC_CLASS_$_NSApplication
-@_OBJC_CLASS_$_NSCursor
-@_OBJC_CLASS_$_NSEvent
-@_OBJC_CLASS_$_NSOpenGLContext
-@_OBJC_CLASS_$_NSOpenGLView
-@_OBJC_CLASS_$_NSScreen
-@_HideCursor
-@_InitCursor
-@_ShowCursor
-A_OBJC_CLASS_$_MTLRenderPassDescriptor
-A_OBJC_CLASS_$_MTLRenderPipelineDescriptor
-A_OBJC_CLASS_$_MTLTextureDescriptor
-A_OBJC_CLASS_$_RPScreenRecorder
-@__DefaultRuneLocale
-@__NSConcreteGlobalBlock
-@__NSConcreteStackBlock
-@___stack_chk_guard
-@___stderrp
-@__dispatch_main_q
-@_bootstrap_port
-@_mach_task_self_
-@dyld_stub_binder
-@_CFRunLoopRun
-@_CFRunLoopRunInMode
-@_OBJC_CLASS_$_NSDate
-@___CFConstantStringClassReference
-@_CGAssociateMouseAndMouseCursorPosition
-@_CGCursorIsVisible
-@_CGDisplayHideCursor
-@_CGDisplayMoveCursorToPoint
-@_CGDisplayShowCursor
-@_CGGetLastMouseDelta
-@_CGWarpMouseCursorPosition
-@_OBJC_CLASS_$_NSLock
-@_OBJC_CLASS_$_NSMapTable
-@_OBJC_CLASS_$_NSNumber
-@_OBJC_CLASS_$_NSString
-@_OBJC_CLASS_$_NSThread
-@_OBJC_CLASS_$_NSObject
-@_OBJC_METACLASS_$_NSObject
-@__objc_empty_cache
-@_objc_msgSend
-@_objc_release
-@_objc_retain
-@_CFAllocatorAllocate
-@_CFAllocatorDeallocate
-@_CFRelease
-@_CFRetain
-@_CFRunLoopRun
-@_CFRunLoopRunInMode
-@_CGAssociateMouseAndMouseCursorPosition
-@_CGCursorIsVisible
-@_CGDisplayBounds
-@_CGDisplayHideCursor
-@_CGDisplayIsCaptured
-@_CGDisplayMoveCursorToPoint
-@_CGDisplayPixelsHigh
-@_CGDisplayPixelsWide
-@_CGDisplayShowCursor
-@_CGEventCreate
-@_CGEventCreateKeyboardEvent
-@_CGEventGetFlags
-@_CGEventGetIntegerValueField
-@_CGEventGetLocation
-@_CGEventGetType
-@_CGEventKeyboardGetUnicodeString
-@_CGEventKeyboardSetUnicodeString
-@_CGEventPost
-@_CGEventSetFlags
-@_CGGetActiveDisplayList
-@_CGGetDisplaysWithPoint
-@_CGGetLastMouseDelta
-@_CGLChoosePixelFormat
-@_CGLErrorString
-@_CGLFlushDrawable
-@_CGLGetCurrentContext
-@_CGLGetParameter
-@_CGLGetSurface
-@_CGLIsEnabled
-@_CGLSetCurrentContext
-@_CGLTexImageIOSurface2D
-@_CGMainDisplayID
-@_CGSForceShowCursor
-@_CGSGetSurfaceBounds
-@_CGSGetWindowBounds
-@_CGWarpMouseCursorPosition
-@_CMAudioFormatDescriptionGetStreamBasicDescription
-@_CMBlockBufferGetDataPointer
-@_CMSampleBufferGetDataBuffer
-@_CMSampleBufferGetFormatDescription
-@_IOSurfaceGetHeight
-@_IOSurfaceGetWidth
-@_IOSurfaceLookup
-@_InitCursor
-A_MTLCopyAllDevices
-A_MTLCreateSystemDefaultDevice
-@_NSClassFromString
-@_NSLog
-@_NSSelectorFromString
-@_NSStringFromSelector
-@__Block_object_assign
-@__Block_object_dispose
-@__CGSDefaultConnection
-@__NSGetExecutablePath
-@__Unwind_DeleteException
-@__Unwind_GetDataRelBase
-@__Unwind_GetIP
-@__Unwind_GetLanguageSpecificData
-@__Unwind_GetRegionStart
-@__Unwind_GetTextRelBase
-@__Unwind_RaiseException
-@__Unwind_Resume
-@__Unwind_Resume_or_Rethrow
-@__Unwind_SetGR
-@__Unwind_SetIP
-@__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
-@__ZNSt11logic_errorC2EPKc
-@___bzero
-@___cxa_atexit
-@___error
-@___stack_chk_fail
-@__dyld_get_image_name
-@_abort
-@_atoi
-@_bootstrap_look_up
-@_class_addMethod
-@_class_copyMethodList
-@_class_getClassMethod
-@_class_getInstanceMethod
-@_class_getName
-@_class_getSuperclass
-@_class_replaceMethod
-@_close
-@_connect
-@_dispatch_after
-@_dispatch_async
-A_dispatch_once_f
-@_dispatch_time
-@_dlopen
-@_dlsym
-@_dup
-@_fclose
-@_fcntl
-@_fflush
-@_fopen
-@_fprintf
-@_fputc
-@_fputs
-@_fread
-@_free
-@_fseek
-@_ftell
-@_ftruncate
-@_fwrite
-@_getenv
-@_getpid
-@_getrlimit
-@_getuid
-@_glBegin
-@_glBindTexture
-@_glColorMask
-@_glDeleteTextures
-@_glDisable
-@_glDrawArrays
-@_glEnable
-@_glEnd
-@_glGetBooleanv
-@_glGetError
-@_glGetIntegerv
-@_glIsEnabled
-@_glPixelStorei
-@_glReadPixels
-@_glSwapAPPLE
-@_glTexCoord2i
-@_glTexImage2D
-@_glVertex2f
-@_glViewport
-@_gmtime_r
-@_imp_implementationWithBlock
-@_launch_data_alloc
-@_launch_data_dict_insert
-@_launch_data_free
-@_launch_data_new_string
-@_launch_msg
-@_lround
-@_mach_continuous_time
-@_mach_msg
-@_mach_port_allocate
-@_mach_port_deallocate
-@_mach_port_mod_refs
-@_mach_port_type
-@_mach_timebase_info
-@_malloc
-@_memcmp
-@_memcpy
-@_memset
-@_method_exchangeImplementations
-@_method_getImplementation
-@_method_getName
-@_method_getTypeEncoding
-@_mmap
-@_munmap
-@_nanosleep
-@_objc_alloc
-@_objc_autorelease
-@_objc_autoreleasePoolPop
-@_objc_autoreleasePoolPush
-@_objc_enumerationMutation
-@_objc_getAssociatedObject
-@_objc_lookUpClass
-@_objc_msgSend_stret
-@_objc_setAssociatedObject
-@_objc_setProperty_nonatomic
-@_open
-@_protocol_getName
-@_pthread_getspecific
-@_pthread_key_create
-@_pthread_key_delete
-@_pthread_mach_thread_np
-@_pthread_mutex_destroy
-@_pthread_mutex_init
-@_pthread_mutex_lock
-@_pthread_mutex_unlock
-@_pthread_mutexattr_init
-@_pthread_mutexattr_settype
-@_pthread_self
-@_pthread_setspecific
-@_realloc
-@_recvmsg
-@_rewind
-@_sem_close
-@_sem_open
-@_sem_post
-@_sem_trywait
-@_sem_unlink
-@_sem_wait
-@_sendmsg
-@_setrlimit
-@_shm_open
-@_shm_unlink
-@_snprintf
-@_socket
-@_sprintf
-@_sscanf
-@_strcat
-@_strcmp
-@_strcpy
-@_strftime
-@_strlen
-@_strncmp
-@_strncpy
-@_strrchr
-@_strstr
-@_strtoull
-@_time
-@_unlink
-@_usleep
-@_vfprintf
-@_write
-ValveHookScreenshots
-^SetNotificationPosition
-dBOverlayNeedsPresent
-jIsOverlayEnabled
-G.11
-@~~~
-T:dV
->@.~
-C< 0
-n<Xn
-:"6~K
-:*z6
-_BOverlayNeedsPresent
-_IsOverlayEnabled
-_SetNotificationPosition
-_ValveHookScreenshots
-_CFAllocatorAllocate
-_CFAllocatorDeallocate
-_CFRelease
-_CFRetain
-_CFRunLoopRun
-_CFRunLoopRunInMode
-_CGAssociateMouseAndMouseCursorPosition
-_CGCursorIsVisible
-_CGDisplayBounds
-_CGDisplayHideCursor
-_CGDisplayIsCaptured
-_CGDisplayMoveCursorToPoint
-_CGDisplayPixelsHigh
-_CGDisplayPixelsWide
-_CGDisplayShowCursor
-_CGEventCreate
-_CGEventCreateKeyboardEvent
-_CGEventGetFlags
-_CGEventGetIntegerValueField
-_CGEventGetLocation
-_CGEventGetType
-_CGEventKeyboardGetUnicodeString
-_CGEventKeyboardSetUnicodeString
-_CGEventPost
-_CGEventSetFlags
-_CGGetActiveDisplayList
-_CGGetDisplaysWithPoint
-_CGGetLastMouseDelta
-_CGLChoosePixelFormat
-_CGLErrorString
-_CGLFlushDrawable
-_CGLGetCurrentContext
-_CGLGetParameter
-_CGLGetSurface
-_CGLIsEnabled
-_CGLSetCurrentContext
-_CGLTexImageIOSurface2D
-_CGMainDisplayID
-_CGSForceShowCursor
-_CGSGetSurfaceBounds
-_CGSGetWindowBounds
-_CGWarpMouseCursorPosition
-_CMAudioFormatDescriptionGetStreamBasicDescription
-_CMBlockBufferGetDataPointer
-_CMSampleBufferGetDataBuffer
-_CMSampleBufferGetFormatDescription
-_HideCursor
-_IOSurfaceGetHeight
-_IOSurfaceGetWidth
-_IOSurfaceLookup
-_InitCursor
-_MTLCopyAllDevices
-_MTLCreateSystemDefaultDevice
-_NSApp
-_NSClassFromString
-_NSLog
-_NSSelectorFromString
-_NSStringFromSelector
-_OBJC_CLASS_$_MTLRenderPassDescriptor
-_OBJC_CLASS_$_MTLRenderPipelineDescriptor
-_OBJC_CLASS_$_MTLTextureDescriptor
-_OBJC_CLASS_$_NSApplication
-_OBJC_CLASS_$_NSCursor
-_OBJC_CLASS_$_NSDate
-_OBJC_CLASS_$_NSEvent
-_OBJC_CLASS_$_NSLock
-_OBJC_CLASS_$_NSMapTable
-_OBJC_CLASS_$_NSNumber
-_OBJC_CLASS_$_NSObject
-_OBJC_CLASS_$_NSOpenGLContext
-_OBJC_CLASS_$_NSOpenGLView
-_OBJC_CLASS_$_NSScreen
-_OBJC_CLASS_$_NSString
-_OBJC_CLASS_$_NSThread
-_OBJC_CLASS_$_RPScreenRecorder
-_OBJC_METACLASS_$_NSObject
-_ShowCursor
-__Block_object_assign
-__Block_object_dispose
-__CGSDefaultConnection
-__DefaultRuneLocale
-__NSConcreteGlobalBlock
-__NSConcreteStackBlock
-__NSGetExecutablePath
-__Unwind_DeleteException
-__Unwind_GetDataRelBase
-__Unwind_GetIP
-__Unwind_GetLanguageSpecificData
-__Unwind_GetRegionStart
-__Unwind_GetTextRelBase
-__Unwind_RaiseException
-__Unwind_Resume
-__Unwind_Resume_or_Rethrow
-__Unwind_SetGR
-__Unwind_SetIP
-__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
-__ZNSt11logic_errorC2EPKc
-___CFConstantStringClassReference
-___bzero
-___cxa_atexit
-___error
-___stack_chk_fail
-___stack_chk_guard
-___stderrp
-__dispatch_main_q
-__dyld_get_image_name
-__objc_empty_cache
-_abort
-_atoi
-_bootstrap_look_up
-_bootstrap_port
-_class_addMethod
-_class_copyMethodList
-_class_getClassMethod
-_class_getInstanceMethod
-_class_getName
-_class_getSuperclass
-_class_replaceMethod
-_close
-_connect
-_dispatch_after
-_dispatch_async
-_dispatch_once_f
-_dispatch_time
-_dlopen
-_dlsym
-_dup
-_fclose
-_fcntl
-_fflush
-_fopen
-_fprintf
-_fputc
-_fputs
-_fread
-_free
-_fseek
-_ftell
-_ftruncate
-_fwrite
-_getenv
-_getpid
-_getrlimit
-_getuid
-_glBegin
-_glBindTexture
-_glColorMask
-_glDeleteTextures
-_glDisable
-_glDrawArrays
-_glEnable
-_glEnd
-_glGetBooleanv
-_glGetError
-_glGetIntegerv
-_glIsEnabled
-_glPixelStorei
-_glReadPixels
-_glSwapAPPLE
-_glTexCoord2i
-_glTexImage2D
-_glVertex2f
-_glViewport
-_gmtime_r
-_imp_implementationWithBlock
-_launch_data_alloc
-_launch_data_dict_insert
-_launch_data_free
-_launch_data_new_string
-_launch_msg
-_lround
-_mach_continuous_time
-_mach_msg
-_mach_port_allocate
-_mach_port_deallocate
-_mach_port_mod_refs
-_mach_port_type
-_mach_task_self_
-_mach_timebase_info
-_malloc
-_memcmp
-_memcpy
-_memset
-_method_exchangeImplementations
-_method_getImplementation
-_method_getName
-_method_getTypeEncoding
-_mmap
-_munmap
-_nanosleep
-_objc_alloc
-_objc_autorelease
-_objc_autoreleasePoolPop
-_objc_autoreleasePoolPush
-_objc_enumerationMutation
-_objc_getAssociatedObject
-_objc_lookUpClass
-_objc_msgSend
-_objc_msgSend_stret
-_objc_release
-_objc_retain
-_objc_setAssociatedObject
-_objc_setProperty_nonatomic
-_open
-_protocol_getName
-_pthread_getspecific
-_pthread_key_create
-_pthread_key_delete
-_pthread_mach_thread_np
-_pthread_mutex_destroy
-_pthread_mutex_init
-_pthread_mutex_lock
-_pthread_mutex_unlock
-_pthread_mutexattr_init
-_pthread_mutexattr_settype
-_pthread_self
-_pthread_setspecific
-_realloc
-_recvmsg
-_rewind
-_sem_close
-_sem_open
-_sem_post
-_sem_trywait
-_sem_unlink
-_sem_wait
-_sendmsg
-_setrlimit
-_shm_open
-_shm_unlink
-_snprintf
-_socket
-_sprintf
-_sscanf
-_strcat
-_strcmp
-_strcpy
-_strftime
-_strlen
-_strncmp
-_strncpy
-_strrchr
-_strstr
-_strtoull
-_time
-_unlink
-_usleep
-_vfprintf
-_write
-dyld_stub_binder
-radr://5614542
-com.valvesoftware.steam
-MXGJJ98X76
-iiH!
-2]RN
-Rtto
-)L<s
-(4)j
--nGc
-48J='p
-'e#|
-$gp|
-G4v'
-3n~\
-fJp$[
-pk8W
-RgLN
-p}T?@vCSMha
-N;^k;
-'xQp
-@T5ZX'
-bql_Y
-]"^2P
-h]Vu
-subject.OU
-MXGJJ98X76
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-120201221215Z
-270201221215Z0y1-0+
-$Developer ID Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-)xEii`k_
-1? v(m
-'0%0#
-http://crl.apple.com/root.crl0
-B9tk
-P9jDt
-#q-_
- "ror
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-060425214036Z
-350209214036Z0b1
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-, op
-https://www.apple.com/appleca/0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-=&g 
-Sj[d
-uu!0
-0y1-0+
-$Developer ID Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-210205030950Z
-260206030950Z0
-MXGJJ98X761A0?
-8Developer ID Application: Valve Corporation (MXGJJ98X76)1
-MXGJJ98X761
-Valve Corporation1
-~kk!
-3oC&
-uN`AJ
-40200
-$http://ocsp.apple.com/ocsp03-devid080
-)http://www.apple.com/certificateauthority0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-20120706000000Z0
-o(D-U
-6fQS
-:iPq
-0y1-0+
-$Developer ID Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-240730224246Z0/
-&o#C0<
-1/0-
-&o#C0
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>cdhashes</key>
-	<array>
-		<data>
-		6sWUDN3/OwfQigfei7ETjtnDatM=
-		</data>
-	</array>
-</dict>
-</plist>
-;W%8s
-}n"*
-M8B~NS
-`\q7
-gjKq&
-|V3B~j
-20240730224246Z0
-0|100.
-'Apple Timestamp Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-240725202057Z
-240905202056Z0B1
-Timestamp Signer NWK21
-Apple Inc.1
-yW\f
-http://www.apple.com/appleca0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-,0*0(
-"http://crl.apple.com/timestamp.crl0
-<&4Y;]@
-*.WE
-(r2ZY
-[hp_
-(qf?
-09kS
-}LWc
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-120405120244Z
-270405120244Z0|100.
-'Apple Timestamp Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-Im] 
-(ny_~
-&By^
-t-D>
-E~4u&
-'0%0#
-http://crl.apple.com/root.crl0
-mzT_
-Bsu|QC
-:m7(
-FeoU
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-060425214036Z
-350209214036Z0b1
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-, op
-https://www.apple.com/appleca/0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-=&g 
-Sj[d
-uu!1
-0|100.
-'Apple Timestamp Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-240730224246Z0#
-.)0+
-Cq~]
-|zukD
-S7"\
-__TEXT
-__text
-__TEXT
-__stubs
-__TEXT
-__stub_helper
-__TEXT
-__objc_methlist
-__TEXT
-__const
-__TEXT
-__gcc_except_tab__TEXT
-__cstring
-__TEXT
-__objc_methname
-__TEXT
-__objc_classname__TEXT
-__objc_methtype
-__TEXT
-__unwind_info
-__TEXT
-__eh_frame
-__TEXT
-__DATA_CONST
-__got
-__DATA_CONST
-__mod_init_func
-__DATA_CONST
-__const
-__DATA_CONST
-__cfstring
-__DATA_CONST
-__objc_classlist__DATA_CONST
-__objc_catlist
-__DATA_CONST
-__objc_protolist__DATA_CONST
-__objc_imageinfo__DATA_CONST
-__DATA
-__la_symbol_ptr
-__DATA
-__objc_const
-__DATA
-__objc_selrefs
-__DATA
-__objc_protorefs__DATA
-__objc_classrefs__DATA
-__objc_ivar
-__DATA
-__objc_data
-__DATA
-__data
-__DATA
-__interpose
-__DATA
-__bss
-__DATA
-__common
-__DATA
-__LINKEDIT
-@loader_path/gameoverlayrenderer.dylib
-/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
-/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
-/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
-/System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia
-/System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface
-/System/Library/Frameworks/Carbon.framework/Versions/A/Carbon
-/System/Library/Frameworks/Metal.framework/Versions/A/Metal
-/System/Library/Frameworks/ReplayKit.framework/Versions/A/ReplayKit
-/usr/lib/libc++.1.dylib
-/usr/lib/libSystem.B.dylib
-/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
-/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
-/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
-/usr/lib/libobjc.A.dylib
-h"@9
-Ti~@
-Thv@
-Ti~@
-T($@y
-(a@9
-5(	@
-RH	@
-La@9_
--`@9Ma
-Ka@9K
-la@9
-a@9j
-ja@9
-La@9
-a@9_
-ia@9i
-	a@9Ia
-ia@9i
-	a@9Ia
-h&B)
-	@z`
-	Qr9
-R	Q29`
-	Qr9i
-R	Q29
-56P@
-T(O@
-;?Ay
-@9h*
-h&E9
-4i^A
-$E9H
-.E9(
-5b2A
-Zh2E9
-h2E9
-$E9H
-&E9h
-h&A)
-29`+
-jh8)	
-B)1)
-29|[	
- @9H
-h"@9h
-Th*@
-Th.@
-Th6@
-WG)uZ
-h&D)
-XcZ@
-h&@9
-E9	)
-hvB9
-hrB9
-C9a"C9b&C9c*C9hC
-aBA9
-h&D)
-i|	p
-J{	P
-9h6@
-h"@9
-h"@9
-yh:@
-Th#@
--D@!
-4h&A
-X`RA
-T*!@
-T*!@
-Ci8}
-Th>A
-ThBA
-T`,	P
-I+8k
-T	5@
-T	9@
-S@9h6
--!(%
-X`RA
-87		)
-BP7	
-9h>A
-D9h>A
-9i>A
-T(SD
-X`RA
-ThBA
-X`2B
-X`*B
-X`6B
-TiBA
-T`.A
-f	X 
-7hBD9(
-YQ	XX
-i*\)(
-Am 8`
-4h&])
-h&])
-#V)h
-i?	X)
-4h.@
-4b.@
-X`>	
-hbC9(
-NH `
-nB8!
-%N$f
-dn1ja
-QjaN
-jaNF
- haN
-[A)$
-T`jv
-RA9h
-VA9h
-/"E@
-!~"8"
-T( @
-TYC@
-T( @
-{ixJ	
-T`2@
-T	!@
-	k*G
-	k!:
-Z) E
-\) D
-T`2@
-T`2@
-T`2@
-#C9h
-A9HF
-Ay`)
-T`2@
-Ay`%
-+ih8J	
-CC9`
-T`2@
-T`2@
-7`2@
-4tB@
-#A)j:@
-T	|	
-Ci<}
-R`t	
-E9h&@
-		F9i
-9h.@
-Th&@
-Th&@
-9`&@
-4h&@
- J	X
-AH	X
-T`2@
-4a2@
-4h:A
-)ACy
-!IzH
-	aG9
-T`jt
-+ih8J	
-12CIMENullImpl
-4IIME
-:>->
-24CGameStreamBaseMemStream
-24CGameStreamGameMemStream
-N3IPC15BinarySemaphoreE
-QkkXa
-N3IPC10PosixMutexE
-N3IPC6IMutexE
-N3IPC11ISyncObjectE
-N3IPC10PosixEventE
-N3IPC6IEventE
-N3IPC17PosixSharedMemoryE
-N3IPC10ISharedMemE
-15CSavedMemStream
-10IMemStream
-16CSharedMemStream
-?18COverlayGLRenderer
-?14CMetalRenderer
-Game Metal RGB
+GameOverlayRender_PIDStream
+One-time initialization: pid %d for game %llu\n
+CBaseOverlayRenderer
+ValveTakeScreenshot not implemented for this surface\n
+false
+true
+Taking screenshot via %s, %u milliseconds since last one was triggered. (skipdebounce=%s)\n
+Detected Movie hot-key via %s\n
+Detected marker hot-key via %s\n
+  handle %llu: m_iTextureID %d m_fdPaintBuffer %d\n
+/tmp/steam_chrome_overlay_uid%d_spid%u
+Deleting movie stream\n
+GameOverlay_MovieStream_%u
+Created movie stream %s\n
+Couldn't create movie stream %s\n
+STEAM_OVERLAY_DISABLE_WAIT_FOR_CEF_FRAME
+VR_Compositor_OverlayVSync_%u
+video frame ready, buffer ready
+video frame captured
+video capture behind
+Waiting on shared FD for texture %d: received an outdated FD for texture %d instead, skipping.\n
+Waiting on shared FD for texture %d: peer is too far ahead and sending FD for texture %d.\n
+Mismatched chrome paint texture width/height!\n
+vector::_M_realloc_insert
+in saved stream
+in external stream
+render stream
+Corrupt render stream (getting cmd)... %s\n
+Corrupt render stream: k_ESendTextToGame\n
+Corrupt render stream: k_ESendTextToGame string\n
+Corrupt render stream: k_EDrawTexturedRect\n
+Corrupt render stream: k_EDrawChromePaintBufferRect\n
+Corrupt render stream: k_EDeleteChromePaintBuffer\n
+Corrupt render stream: k_EDrawAndUpdateSharedTexture\n
+GameOverlayRender_SharedTex_%d_%d
+GameOverlayRender_SharedTexRead_%d_%d
+GameOverlayRender_SharedTexWrite_%d_%d
+Corrupt shared texture stream (header)\n
+Corrupt shared texture stream (texture data)\n
+Got hTexture of non NULL on shared texture draw but new shared tex update has no shared texture.\n
+Corrupt render stream: k_EDeleteTexture\n
+Corrupt render stream: k_ELoadTexture\n
+Warning: Texture %d is 0 bytes... bad VGUI!\n
+Corrupt render stream: k_ELoadTexture 3\n
+Texture size(%d) was != width(%u)*height(%u)*4, not loading\n
+Corrupt render stream: k_ESetCursor\n
+Corrupt render stream: k_ECreateCustomCursor\n
+Corrupt render stream: k_ECreateCustomCursor (custom2)\n
+Corrupt render stream: k_ECreateCustomCursor (custom3)\n
+Corrupt render stream: k_EDeleteCursor\n
+Corrupt render stream: k_EShowCursor\n
+Corrupt render stream: k_ESetHotKey\n
+Enabling clearing on every frame\n
+Corrupt render stream: k_EIMECommand\n
+Unsupported render command (%d) in vgui render stream\n
+Left render loop without EndFrame!\n
+Got EndFrame, but still have [%d] bytes remaining in render loop buffer\n
+Frame time: %f ms\n
+SteamGamepadUI
+SteamDisableOverlayDPIScaling
+Stopped movie recording\n
+video sleep done
+video frame behind
+Starting movie recording at %dx%d\n
+Detected Plat_MSTime() wrapping\n
+Clearing input stream because it is about to overflow\n
+Disabling overlay for 20 minutes (%d seconds since last frame from ui process was seen)\n
+Disabling overlay for 30 seconds (%d seconds since last frame from ui process was seen)\n
+Disabling overlay for 10 seconds (%d seconds since last frame from ui process was seen)\n
+Disabling overlay for 2 seconds (%d seconds since last frame from ui process was seen)\n
+Failed reading frame completely\n
+Forcing internal overlay disable and requesting ui disable\n
+video sleep until end of frame
 20CBaseOverlayRenderer
- %*/4
-MainThrd
-pthread_setname_np
-SteamGameId
-SteamOverlayGameId
-Detected hot-key via base input, now requesting overlay %s
-disable
-enable
-base input
-ESC press detected, requesting overlay disable
-SteamGameStream_%u_mem
-SteamGameStream_%u_mutex
-pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
-Fatal on Lock(): Locked the floor, couldn't release the ceiling: %s
-pid %d != %d, re-initing before send; client_port = %d, server_port = %d
-pid %d != %d, clearing client_port = %d, server_port = %d
-Fatal on Release(): Locked the ceiling, couldn't release the floor: %s
-/BSem/%x
-%s.2
-Failed to create BinarySemaphore: %s - %s
-Fatal on Lock(): Locked the floor, couldn't post the ceiling: %s
-Took lock, but old thread id != 0!!!
-Error on Release(): Not the lock owner: %s
-Fatal on Release(): errno %d: %s
-Fatal on Release(): Thread not marked as mine: %s
-/MTX/%x
-Tried to create PosixMutex but was already around: %s - %s
-Failed to create PosixMutex: %s - %s
-Failed to post that I was waiting for an event
-/Evt/%x
-%s.BinSemLock
-Failed to force create PosixEvent: %s - %s, m_pLock:%p, m_pPending:%p
-Failed to create PosixAutoResetEvent: %s - %s, m_pLock:%p, m_pPending:%p
-	errno: %d, bCreator: %s
-true
-false
-Bad Access flag on shared mem create: %s: %u
-/Shm/%x
-/dev/null
-com.valvesoftware.steam.ipctool
-ipcserver restart: expected: %d, got: %d
-StopJob
-Unable to write to video stream: dst not aligned!
-Unable to write to video stream: dst stride (stride=%u)!
-Failed to write screenshot to stream, clearing data!
-Not enough room in mem stream for video frame
-Video stream full!
-Video stream full.. couldn't get buffer!
-%s_mutex
-%s_written
-Failed creating write event %s
-%s_avail
-Failed creating read event %s
-%s_mem
-Failed creating file mapping %s
-Failed creating view of file for %s
-Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
-Warning: Memory was locked for put while destructing!
-Warning: Blocking wait on mutex failed in Clear: %d
-Warning: CSharedMemStream::Clear failed, expected %d bytes remaining, have %d.
-CSharedMemStream has memory already locked for put. Don't write with memory locked.
-Timed out waiting for mutex in GetInternal()
-Failed to take mutex in GetInternal()
-SHMemStream header is corrupt in GetInternal()
-CSharedMemStream has memory already locked for put. Need to write through acquired CSharedMemStreamLockedMemory
-Timed out waiting for mutex in PutInternal()
-m_pMutex->Wait() failed in ShMemStream::PutInternal
-SHMemStream header is corrupt in PutInternal()
-PutInternal: Not enough space for put when locked
-Timed out waiting for available space in CSharedMemStream::BLockMemoryForWrite()
-Timed out waiting for lock in CSharedMemStream::BLockMemoryForWrite
-Asked to unlock memory for write.. but wasn't locked
-Video memory stream writer destroyed with frame lock!
-Video memory stream frame commit without lock!
-StreamForOpenVR
-SteamStreamingVideo
-SteamStreamingMaximumResolution
-%dx%d
-SteamStreamingVideoDisableVSync
-SteamStreamingAllowGameVsync
-Received audio recording start message, drop flag is %d
-Received audio recording stop message
-Game Delayed OpenGL NV12
-Game OpenGL NV12
-Game Delayed OpenGL RGB
-Game OpenGL RGB
-COpenGLFrameCapture - missing opengl methods
-Failed to create y plane
-Failed to create uv plane
-Failed to create rgba plane
-Unsupported output format
-Invalid texture for fbo generated
-COpenGLFrameCapture::BCreateRenderData(): Couldn't set FBO configuration (%u)
-COpenGLFrameCapture::BCreateRenderData(): Couldn't create shader
-bFlipRendering
-srcWidth
-srcHeight
-#extension GL_ARB_texture_rectangle : enable
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ycoeff = vec3(%f, %f, %f);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;
-    // Calculate the YUV values 
-    yuv.x = dot(rgb, Ycoeff) + %f;
-    // Write the YUV values 
-    gl_FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);
-#version 150
-in vec2 textCoord;
-out vec4 FragColor;
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ycoeff = vec3(%f, %f, %f);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture(tex0, textCoord).rgb;
-    // Calculate the YUV values 
-    yuv.x = dot(rgb, Ycoeff) + %f;
-    // Write the YUV values 
-    FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);
-#extension GL_ARB_texture_rectangle : enable
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ucoeff = vec3(%f, %f, %f);
-const vec3 Vcoeff = vec3(%f, %f, %f);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;
-    // Calculate the YUV values 
-    yuv.y = dot(rgb, Ucoeff) + 0.5;
-    yuv.z = dot(rgb, Vcoeff) + 0.5;
-    // Write the YUV values 
-    gl_FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);
-#version 150
-in vec2 textCoord;
-out vec4 FragColor;
-uniform sampler2DRect tex0;
-// YUV coefficients 
-const vec3 Ucoeff = vec3(%f, %f, %f);
-const vec3 Vcoeff = vec3(%f, %f, %f);
-void main()
-    vec3 yuv, rgb;
-    // Get the color value 
-    rgb = texture(tex0, textCoord).rgb;
-    // Calculate the YUV values 
-    yuv.y = dot(rgb, Ucoeff) + 0.5;
-    yuv.z = dot(rgb, Vcoeff) + 0.5;
-    // Write the YUV values 
-    FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);
-#extension GL_ARB_texture_rectangle : enable
-uniform sampler2DRect tex0;
-void main()
-    gl_FragColor = vec4( texture2DRect(tex0, gl_TexCoord[0].st).rgb, 1.0);
-#version 150
-in vec2 textCoord;
-out vec4 FragColor;
-uniform sampler2DRect tex0;
-void main()
-    FragColor = vec4( texture(tex0, textCoord).rgb, 1.0);
-uniform bool bFlipRendering;
-void main()
-	gl_TexCoord[0] = gl_MultiTexCoord0;
-   gl_Position = gl_Vertex;
-   if ( bFlipRendering )
-       gl_Position.y = -gl_Position.y;
-#version 150
-uniform bool bFlipRendering;
-uniform int srcWidth;
-uniform int srcHeight;
-out vec2 textCoord;
-const vec2 screenAlignedQuad[4] = vec2[]
-	vec2(-1.0,  1.0),
-	vec2( 1.0,  1.0),
-	vec2(-1.0, -1.0),
-	vec2( 1.0, -1.0)
-const vec2 textureCoords[4] = vec2[]
-	vec2( 0.0,  0.0),
-	vec2( 1.0,  0.0),
-	vec2( 0.0,  1.0),
-	vec2( 1.0,  1.0)
-void main()
-   gl_Position = vec4( screenAlignedQuad[ gl_VertexID ], 0.0, 1.0);
-   if ( bFlipRendering )
-       gl_Position.y = -gl_Position.y;
-   textCoord = vec2( textureCoords[ gl_VertexID ].x * srcWidth, textureCoords[ gl_VertexID ].y * srcHeight );
-/System/Library/Frameworks/OpenGL.framework/Libraries/libGL.dylib
-GLSL Fragment Shader log:
-GLSL Program log:
-Missing texture: %d which was used in DrawTexturedRect()
-Failed on texture subrect update!
-Invalid IOsurfaceID passed to OGL ValveDrawSharedHandleTexture
-Making new texture: ID %d of dimensions w %u h %u
-OSX - ERROR creating shared texture, (%d) - %s
-COverlayGLRenderer::ValveDrawSharedHandleTexture - failed to get texture from handle
-OpenGL ES
-%d.%d
-glActiveTextureARB
-glClientActiveTextureARB
-glActiveTexture
-glClientActiveTexture
-glCreateShader
-glShaderSource
-glCompileShader
-glGetShaderiv
-glGetShaderInfoLog
-glAttachShader
-glDeleteShader
-glCreateProgram
-glLinkProgram
-glGetProgramiv
-glGetProgramInfoLog
-glDeleteProgram
-glIsProgram
-glUseProgram
-glGetAttribLocation
-glGetUniformLocation
-glGetUniformiv
-glUniform4fv
-glUniform1i
-glUniformMatrix4fv
-glEnableVertexAttribArray
-glDisableVertexAttribArray
-glVertexAttribPointer
-glVertexAttrib4f
-glVertexAttrib4fv
-glGenBuffers
-glDeleteBuffers
-glBindBuffer
-glBufferData
-glBufferSubData
-glGenVertexArrays
-glDeleteVertexArrays
-glBindVertexArray
-glBindSampler
-glBlendFuncSeparate
-glBlendEquationSeparate
-glBindProgramPipeline
-glBindFramebufferEXT
-glDrawBuffers
-glClipControl
-glGenBuffersARB
-glBindBufferARB
-glMapBufferARB
-glUnmapBufferARB
-glDeleteBuffersARB
-glBufferDataARB
-glDebugMessageCallbackARB
-GLOVERLAYCOREPROFILE
-OpenGL ES version: %d.%d (%s) (overlay is not supported)
-OpenGL version: %d.%d (%s) %s (overlay will use %s)
-core
-compatibility
-shaders
-fixed function
-GL_ARB_framebuffer_object
-glGenFramebuffers
-glDeleteFramebuffers
-glFramebufferTexture2D
-glBindFramebuffer
-glBlitFramebuffer
-glCheckFramebufferStatus
-GL_EXT_framebuffer_object
-glGenFramebuffersEXT
-glDeleteFramebuffersEXT
-glFramebufferTexture2DEXT
-glBlitFramebufferEXT
-glCheckFramebufferStatusEXT
-Attrib_Position
-Attrib_Color
-Attrib_TexCoord
-Texture
-GLSL Vertex Shader log:
-GL_ARB_texture_non_power_of_two
-OpenGL does not support non-power-of-two textures!
-OpenGL Enabled LOD bias
-Texture units detected: %d
-Warning: Failed to determine surface dimensions
-#version 150
-in vec4 Attrib_Position;
-in vec4 Attrib_Color;
-in vec2 Attrib_TexCoord;
-out vec4 Color;
-out vec2 TexCoord;
-void main(void)
-	Color = Attrib_Color;
-	TexCoord = Attrib_TexCoord;
-	gl_Position = Attrib_Position;
-#version 150
-in vec4 Color;
-in vec2 TexCoord;
-out vec4 FragColor;
-uniform sampler2DRect Texture;
-void main(void)
-	FragColor = Color * texture(Texture, TexCoord);
-COverlayGLRenderer
-steamoverlay_
-Hooking %s::%s for %s
-Failed to hook %s::%s for %s
-NSApplication
-v24@?0@"<MTLCommandBuffer>"8@"<MTLDrawable>"16
-v32@?0@"<MTLCommandBuffer>"8@"<MTLDrawable>"16d24
-@"<MTLDrawable>"16@?0@"CAMetalLayer"8
-v16@?0@"<MTLCommandBuffer>"8
-v24@?0@"<MTLCommandBuffer>"8@?<v@?@"<MTLCommandBuffer>">16
-CAMetalLayer
-v8@?0
-steamoverlay_vs
-steamoverlay_update_ps
-steamoverlay_nocolor_ps
-CMetalRenderer::ValveDrawTexturedRect() called outside a valid MTLCommandBuffer::commit
-Update tex %d
-CMetalRenderer::ValveLoadOrUpdateTexture() called outside a valid MTLCommandBuffer::commit
-CMetalRenderer::ValveDrawSharedHandleTexture() called with bad IOSurfaceID
-CMetalRenderer::ValveDrawSharedHandleTexture() Bad texture from IOsurfaceID
-Update tex %llu
-Steam Overlay
-Steam Screenshot
-Quad
-Steam Screenshot Sync
-	using namespace metal;
-	struct Vertex
-		float4 position [[position]];
-		float2 texCoords;
-		float2 _unusedPadding;
-		float4 color;
-	constexpr sampler updateSampler( coord::normalized, address::clamp_to_edge, filter::linear );
-	vertex Vertex steamoverlay_vs( constant Vertex *vertices [[ buffer(0) ]], uint vid [[ vertex_id ]] )
-		return vertices[vid];
-	fragment float4 steamoverlay_update_ps( Vertex inVertex [[ stage_in ]],
-										   texture2d<float> overlay [[ texture( 0 ) ]] )
-		return inVertex.color * overlay.sample( updateSampler, inVertex.texCoords );
-	fragment float4 steamoverlay_nocolor_ps( Vertex inVertex [[ stage_in ]],
-											texture2d<float> overlay [[ texture( 0 ) ]] )
-		return overlay.sample( updateSampler, inVertex.texCoords );
-CBaseOverlayRenderer
-Taking screenshot via %s, %u milliseconds since last one was triggered. (skipdebounce=%s)
-Detected Movie hot-key via %s
-Detected marker hot-key via %s
-Waiting on shared FD for texture %d: received an outdated FD for texture %d instead, skipping.
-Waiting on shared FD for texture %d: peer is too far ahead and sending FD for texture %d.
-Mismatched chrome paint texture width/height!
-/tmp/steam_chrome_overlay_uid%d_spid%u
-  handle %llu: m_iTextureID %d m_fdPaintBuffer %d
-Corrupt render stream (getting cmd)... %s
-in saved stream
-in external stream
-render stream
-Corrupt render stream: k_ESendTextToGame
-Corrupt render stream: k_ESendTextToGame string
-Corrupt render stream: k_EDrawTexturedRect
-Corrupt render stream: k_EDrawChromePaintBufferRect
-Corrupt render stream: k_EDeleteChromePaintBuffer
-Corrupt render stream: k_EDrawAndUpdateSharedTexture
-GameOverlayRender_SharedTex_%d_%d
-GameOverlayRender_SharedTexRead_%d_%d
-GameOverlayRender_SharedTexWrite_%d_%d
-Corrupt shared texture stream (header)
-Corrupt shared texture stream (texture data)
-Got hTexture of non NULL on shared texture draw but new shared tex update has no shared texture.
-Corrupt render stream: k_EDeleteTexture
-Corrupt render stream: k_ELoadTexture
-Warning: Texture %d is 0 bytes... bad VGUI!
-Corrupt render stream: k_ELoadTexture 3
-Texture size(%d) was != width(%u)*height(%u)*4, not loading
-Corrupt render stream: k_ESetCursor
-Corrupt render stream: k_ECreateCustomCursor
-Corrupt render stream: k_ECreateCustomCursor (custom2)
-Corrupt render stream: k_ECreateCustomCursor (custom3)
-Corrupt render stream: k_EDeleteCursor
-Corrupt render stream: k_EShowCursor
-Corrupt render stream: k_ESetHotKey
-Enabling clearing on every frame
-Corrupt render stream: k_EIMECommand
-Unsupported render command (%d) in vgui render stream
-Left render loop without EndFrame!
-Got EndFrame, but still have [%d] bytes remaining in render loop buffer
-GameOverlay_MovieStream_%u
-Created movie stream %s
-Couldn't create movie stream %s
-Deleting movie stream
-STEAM_OVERLAY_DISABLE_WAIT_FOR_CEF_FRAME
-VR_Compositor_OverlayVSync_%u
-SteamGamepadUI
-SteamDisableOverlayDPIScaling
-GameOverlayRender_PIDStream
-Starting movie recording at %dx%d
-Stopped movie recording
-Detected Plat_MSTime() wrapping
-Clearing input stream because it is about to overflow
-Disabling overlay for 20 minutes (%d seconds since last frame from ui process was seen)
-Disabling overlay for 30 seconds (%d seconds since last frame from ui process was seen)
-Disabling overlay for 10 seconds (%d seconds since last frame from ui process was seen)
-Disabling overlay for 2 seconds (%d seconds since last frame from ui process was seen)
-Failed reading frame completely
-Forcing internal overlay disable and requesting ui disable
-ValveTakeScreenshot not implemented for this surface
-allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
-Invalid Mouse Restore Mode: %d
-Enabling overlay
-Warning: Could not enable cursor visibility: %u
-STEAM_OVERLAY_FRAME_TIME_LOGGING
-STEAM_OVERLAY_LOGGING_FLUSH
-STEAM_OVERLAY_LOGGING
-/tmp/gameoverlayrenderer.%d.log
-####### Log failed to open %s ##############
-logfile opened early, s_Pid == 0 (Init has not been called yet)
-%a %b %d %H:%M:%S %Y UTC
-%s - 
-vrmonitor
-Failed to increase file count limit. Currently: %lu
-GameID = %llu, AppID = %u, OverlayGameID = %llu, PID: %u, tid %u Executable: %s
-IgnoreChildProcesses
-STEAM_OVERLAY_WINDOW_BLACKLIST
-GameOverlay_InputEventStream_%d
-GameOverlay_ScreenshotStream_%d
-GameOverlayRender_PaintCmdStream_%d
-GameOverlay_InGameRenderingCompleted_%d
-Failed creating rendering event
-GameOverlay_VGUIPaintingCompleted_%d
-Failed creating paint event
-GameOverlay_SerializedWorkQueued_%d
-Failed creating serialized work event
-GameOverlay_GameExitingEvent_%d
-Failed creating exit event
-Modules at GameOverlayRenderer.dll attach
-----------------------------
-SteamNoOverlayUIDrawing
-SteamNoOverlayUIDrawing was set
-SteamOverlayRunning_%llu
-One-time initialization: pid %d for game %llu
-pid %d != %d, skipping destruction (fork without exec?)
-@"NSEvent"16@?0@"NSEvent"8
-NSView
-NSCursor
-NSEvent
-GameOverlay_AudioStream_%u
-Audio pipe full
-StartRecordingAudio( %s )
-v32@?0^{opaqueCMSampleBuffer=}8q16@"NSError"24
-v16@?0@"NSError"8
-startCapture: %@
-StartRecordingAudio() only supported on macOS 11.0 and newer
-StopRecordingAudio
-_availability_version_check
-kCFAllocatorNull
-CFDataCreateWithBytesNoCopy
-CFPropertyListCreateWithData
-CFPropertyListCreateFromXMLData
-CFStringCreateWithCStringNoCopy
-CFDictionaryGetValue
-CFGetTypeID
-CFStringGetTypeID
-CFStringGetCString
-CFRelease
-/System/Library/CoreServices/SystemVersion.plist
-ProductVersion
-%d.%d.%d
-windowWithWindowNumber:
-currentContext
-CGLContextObj
-view
-window
-windows
-countByEnumeratingWithState:objects:count:
-contentView
-openGLContext
-windowNumber
-frameRectForContentRect:
-frame
-wantsBestResolutionOpenGLSurface
-convertRectToBacking:
-steammetalhook_init
-stringByAppendingString:
-UTF8String
-deviceOverride
-setDeviceOverride:
-metalLibrary
-setMetalLibrary:
-textureCacheMap
-setTextureCacheMap:
-screenshotPipeline
-setScreenshotPipeline:
-updatePipeline
-setUpdatePipeline:
-updatePipelineBGRA8
-setUpdatePipelineBGRA8:
-updatePipelineRGBA16Float
-setUpdatePipelineRGBA16Float:
-_deviceOverride
-_metalLibrary
-_textureCacheMap
-_screenshotPipeline
-_updatePipeline
-_updatePipelineBGRA8
-_updatePipelineRGBA16Float
-T@"<MTLDevice>",&,N,V_deviceOverride
-T@"<MTLLibrary>",&,N,V_metalLibrary
-T@"NSMapTable",&,N,V_textureCacheMap
-T@"<MTLRenderPipelineState>",&,N,V_screenshotPipeline
-T@"<MTLRenderPipelineState>",&,N,V_updatePipeline
-T@"<MTLRenderPipelineState>",&,N,V_updatePipelineBGRA8
-T@"<MTLRenderPipelineState>",&,N,V_updatePipelineRGBA16Float
-init
-steamoverlay_presentDrawable:
-steamoverlay_presentDrawable:atTime:
-steamoverlay_presentDrawable:afterMinimumDuration:
-steamoverlay_nextDrawable
-timeIntervalSinceReferenceDate
-isEqual:
-class
-self
-performSelector:
-performSelector:withObject:
-performSelector:withObject:withObject:
-isProxy
-isKindOfClass:
-isMemberOfClass:
-conformsToProtocol:
-respondsToSelector:
-retain
-release
-autorelease
-retainCount
-zone
-hash
-superclass
-description
-debugDescription
-TQ,R
-T#,R
-T@"NSString",R,C
-present
-presentAtTime:
-presentAfterMinimumDuration:
-addPresentedHandler:
-presentedTime
-drawableID
-Td,R,N
-TQ,R,N
-texture
-layer
-T@"<MTLTexture>",R
-T@"CAMetalLayer",R
-steamoverlay_commit
-steamoverlay_addScheduledHandler:
-newCommandQueue
-commandBuffer
-nextDrawable
-enqueue
-commit
-addScheduledHandler:
-presentDrawable:
-presentDrawable:atTime:
-presentDrawable:afterMinimumDuration:
-waitUntilScheduled
-addCompletedHandler:
-waitUntilCompleted
-blitCommandEncoder
-renderCommandEncoderWithDescriptor:
-computeCommandEncoderWithDescriptor:
-blitCommandEncoderWithDescriptor:
-computeCommandEncoder
-computeCommandEncoderWithDispatchType:
-encodeWaitForEvent:value:
-encodeSignalEvent:value:
-parallelRenderCommandEncoderWithDescriptor:
-resourceStateCommandEncoder
-resourceStateCommandEncoderWithDescriptor:
-accelerationStructureCommandEncoder
-pushDebugGroup:
-popDebugGroup
-device
-commandQueue
-retainedReferences
-errorOptions
-label
-setLabel:
-kernelStartTime
-kernelEndTime
-logs
-GPUStartTime
-GPUEndTime
-status
-error
-T@"<MTLDevice>",R
-T@"<MTLCommandQueue>",R
-TB,R
-T@"NSString",C
-Td,R
-T@"<MTLLogContainer>",R
-T@"NSError",R
-isVisible
-subviews
-convertRectFromLayer:
-convertRect:toView:
-convertRectToScreen:
-bounds
-screen
-mainScreen
-baseObject
-newLibraryWithSource:options:error:
-colorAttachments
-objectAtIndexedSubscript:
-setBlendingEnabled:
-setRgbBlendOperation:
-setAlphaBlendOperation:
-setSourceRGBBlendFactor:
-setSourceAlphaBlendFactor:
-setDestinationRGBBlendFactor:
-setDestinationAlphaBlendFactor:
-newFunctionWithName:
-setVertexFunction:
-setFragmentFunction:
-setPixelFormat:
-newRenderPipelineStateWithDescriptor:error:
-initWithKeyOptions:valueOptions:capacity:
-superlayer
-convertRect:fromLayer:
-isMainThread
-width
-height
-numberWithInt:
-objectForKey:
-stringWithFormat:
-setRenderPipelineState:
-setFragmentTexture:atIndex:
-setVertexBytes:length:atIndex:
-drawPrimitives:vertexStart:vertexCount:
-pixelFormat
-texture2DDescriptorWithPixelFormat:width:height:mipmapped:
-newTextureWithDescriptor:
-setObject:forKey:
-replaceRegion:mipmapLevel:withBytes:bytesPerRow:
-numberWithUnsignedLongLong:
-newTextureWithDescriptor:iosurface:plane:
-newTextureViewWithPixelFormat:
-renderPassDescriptor
-setTexture:
-setLoadAction:
-setStoreAction:
-endEncoding
-removeObjectForKey:
-removeAllObjects
-setUsage:
-synchronizeResource:
-getBytes:bytesPerRow:fromRegion:mipmapLevel:
-lock
-unlock
-type
-subtype
-CGEvent
-eventWithCGEvent:
-addLocalMonitorForEventsMatchingMask:handler:
-mouseLocation
-steamhooked_set
-steamhooked_push
-steamhooked_pop
-currentCursor
-steamhooked_hide
-steamhooked_unhide
-push
-steamhooked_pressedMouseButtons
-steamhooked_mouseLocation
-steamhooked_nextEventMatchingMask:untilDate:inMode:dequeue:
-_setCurrentEvent:
-postEvent:atStart:
-resetCursorRects
-steamhooked_resetCursorRects
-hide
-unhide
-pressedMouseButtons
-nextEventMatchingMask:untilDate:inMode:dequeue:
-sharedRecorder
-startCaptureWithHandler:completionHandler:
-stopCaptureWithHandler:
-arrowCursor
-IBeamCursor
-crosshairCursor
-pointingHandCursor
-operationNotAllowedCursor
-dragCopyCursor
-dragLinkCursor
-_zoomInCursor
-_zoomOutCursor
-_windowResizeNorthCursor
-resizeUpCursor
-_windowResizeSouthCursor
-resizeDownCursor
-_windowResizeWestCursor
-resizeLeftCursor
-_windowResizeEastCursor
-resizeRightCursor
-_windowResizeNorthSouthCursor
-resizeUpDownCursor
-_windowResizeEastWestCursor
-resizeLeftRightCursor
-_windowResizeNorthWestCursor
-_windowResizeNorthEastCursor
-_windowResizeSouthWestCursor
-_windowResizeSouthEastCursor
-_windowResizeNorthEastSouthWestCursor
-_windowResizeNorthWestSouthEastCursor
-SteamMetalHook
-CMetalDeviceCache
-CAMetalDrawable
-MTLDrawable
-NSObject
-MTLCommandBuffer
-SteamOverrideNSCursor
-SteamOverrideMouse
-SteamOverrideNextEvent
-@16@0:8
-v24@0:8@16
-@"<MTLDevice>"
-@"<MTLLibrary>"
-@"NSMapTable"
-@"<MTLRenderPipelineState>"
-B24@0:8@16
-#16@0:8
-@24@0:8:16
-@32@0:8:16@24
-@40@0:8:16@24@32
-B16@0:8
-B24@0:8#16
-B24@0:8:16
-Vv16@0:8
-Q16@0:8
-^{_NSZone=}16@0:8
-B24@0:8@"Protocol"16
-@"NSString"16@0:8
-v16@0:8
-v24@0:8d16
-v24@0:8@?16
-d16@0:8
-v24@0:8@?<v@?@"<MTLDrawable>">16
-@"<MTLTexture>"16@0:8
-@"CAMetalLayer"16@0:8
-v32@0:8@16d24
-@24@0:8@16
-@24@0:8Q16
-v32@0:8@16Q24
-v24@0:8@?<v@?@"<MTLCommandBuffer>">16
-v24@0:8@"<MTLDrawable>"16
-v32@0:8@"<MTLDrawable>"16d24
-@"<MTLBlitCommandEncoder>"16@0:8
-@"<MTLRenderCommandEncoder>"24@0:8@"MTLRenderPassDescriptor"16
-@"<MTLComputeCommandEncoder>"24@0:8@"MTLComputePassDescriptor"16
-@"<MTLBlitCommandEncoder>"24@0:8@"MTLBlitPassDescriptor"16
-@"<MTLComputeCommandEncoder>"16@0:8
-@"<MTLComputeCommandEncoder>"24@0:8Q16
-v32@0:8@"<MTLEvent>"16Q24
-@"<MTLParallelRenderCommandEncoder>"24@0:8@"MTLRenderPassDescriptor"16
-@"<MTLResourceStateCommandEncoder>"16@0:8
-@"<MTLResourceStateCommandEncoder>"24@0:8@"MTLResourceStatePassDescriptor"16
-@"<MTLAccelerationStructureCommandEncoder>"16@0:8
-v24@0:8@"NSString"16
-@"<MTLDevice>"16@0:8
-@"<MTLCommandQueue>"16@0:8
-@"<MTLLogContainer>"16@0:8
-@"NSError"16@0:8
-{CGPoint=dd}16@0:8
-@44@0:8Q16@24@32B40
-!p[A`
-RASASAp
-RAVAp
-RARAXARARAVAp
-RAYAp
-RAYARA`
-ARA`
-RBRB
-RBRBSCSBRAUBSFSCRCp
-RBRB
-Ap@p0SASASASASASASB^CRAp
-RARARARARARARARARARARARARARARARARARARBRB`
-RARARARARARBZAp
-RARBVAp
-RARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARARB`=ARDp
-@_CGLChoosePixelFormat
-@_CGLFlushDrawable
-@_glSwapAPPLE
-@_NSApp
-@_OBJC_CLASS_$_NSApplication
-@_OBJC_CLASS_$_NSCursor
-@_OBJC_CLASS_$_NSEvent
-@_OBJC_CLASS_$_NSOpenGLContext
-@_OBJC_CLASS_$_NSOpenGLView
-@_OBJC_CLASS_$_NSScreen
-@_HideCursor
-@_InitCursor
-@_ShowCursor
-A_OBJC_CLASS_$_MTLRenderPassDescriptor
-A_OBJC_CLASS_$_MTLRenderPipelineDescriptor
-A_OBJC_CLASS_$_MTLTextureDescriptor
-A_OBJC_CLASS_$_RPScreenRecorder
-@__ZNSt12length_errorD1Ev
-@__ZTISt12length_error
-@__ZTVN10__cxxabiv117__class_type_infoE
-@__ZTVN10__cxxabiv120__si_class_type_infoE
-@__ZTVSt12length_error
-@___cxa_pure_virtual
-@___gxx_personality_v0
-@__DefaultRuneLocale
-@__NSConcreteGlobalBlock
-@__NSConcreteStackBlock
-@___chkstk_darwin
-@___stack_chk_guard
-@___stderrp
-@__dispatch_main_q
-@_bootstrap_port
-@_mach_task_self_
-@dyld_stub_binder
-@_CFRunLoopRun
-@_CFRunLoopRunInMode
-@_OBJC_CLASS_$_NSDate
-@___CFConstantStringClassReference
-@_CGAssociateMouseAndMouseCursorPosition
-@_CGCursorIsVisible
-@_CGDisplayHideCursor
-@_CGDisplayMoveCursorToPoint
-@_CGDisplayShowCursor
-@_CGGetLastMouseDelta
-@_CGWarpMouseCursorPosition
-@_OBJC_CLASS_$_NSLock
-@_OBJC_CLASS_$_NSMapTable
-@_OBJC_CLASS_$_NSNumber
-@_OBJC_CLASS_$_NSString
-@_OBJC_CLASS_$_NSThread
-@_OBJC_CLASS_$_NSObject
-@_OBJC_METACLASS_$_NSObject
-@__objc_empty_cache
-@__ZTISt12length_error
-@_CFAllocatorAllocate
-@_CFAllocatorDeallocate
-@_CFRelease
-@_CFRetain
-@_CFRunLoopRun
-@_CFRunLoopRunInMode
-@_CGAssociateMouseAndMouseCursorPosition
-@_CGCursorIsVisible
-@_CGDisplayBounds
-@_CGDisplayHideCursor
-@_CGDisplayIsCaptured
-@_CGDisplayMoveCursorToPoint
-@_CGDisplayPixelsHigh
-@_CGDisplayPixelsWide
-@_CGDisplayShowCursor
-@_CGEventCreate
-@_CGEventCreateKeyboardEvent
-@_CGEventGetFlags
-@_CGEventGetIntegerValueField
-@_CGEventGetLocation
-@_CGEventGetType
-@_CGEventKeyboardGetUnicodeString
-@_CGEventKeyboardSetUnicodeString
-@_CGEventPost
-@_CGEventSetFlags
-@_CGGetActiveDisplayList
-@_CGGetDisplaysWithPoint
-@_CGGetLastMouseDelta
-@_CGLChoosePixelFormat
-@_CGLErrorString
-@_CGLFlushDrawable
-@_CGLGetCurrentContext
-@_CGLGetParameter
-@_CGLGetSurface
-@_CGLIsEnabled
-@_CGLSetCurrentContext
-@_CGLTexImageIOSurface2D
-@_CGMainDisplayID
-@_CGSForceShowCursor
-@_CGSGetSurfaceBounds
-@_CGSGetWindowBounds
-@_CGWarpMouseCursorPosition
-@_CMAudioFormatDescriptionGetStreamBasicDescription
-@_CMBlockBufferGetDataPointer
-@_CMSampleBufferGetDataBuffer
-@_CMSampleBufferGetFormatDescription
-@_IOSurfaceGetHeight
-@_IOSurfaceGetWidth
-@_IOSurfaceLookup
-@_InitCursor
-A_MTLCopyAllDevices
-A_MTLCreateSystemDefaultDevice
-@_NSClassFromString
-@_NSLog
-@_NSSelectorFromString
-@_NSStringFromSelector
-@__Block_object_assign
-@__Block_object_dispose
-@__CGSDefaultConnection
-@__NSGetExecutablePath
-@__Unwind_Resume
-@__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
-@__ZNSt11logic_errorC2EPKc
-@__ZSt9terminatev
-@___cxa_allocate_exception
-@___cxa_atexit
-@___cxa_begin_catch
-@___cxa_call_unexpected
-@___cxa_free_exception
-@___cxa_throw
-@___error
-@___stack_chk_fail
-@__dyld_get_image_name
-@_atoi
-@_bootstrap_look_up
-@_bzero
-@_class_addMethod
-@_class_copyMethodList
-@_class_getClassMethod
-@_class_getInstanceMethod
-@_class_getName
-@_class_getSuperclass
-@_class_replaceMethod
-@_close
-@_connect
-@_dispatch_after
-@_dispatch_async
-A_dispatch_once_f
-@_dispatch_time
-@_dlopen
-@_dlsym
-@_dup
-@_fclose
-@_fcntl
-@_fflush
-@_fopen
-@_fprintf
-@_fread
-@_free
-@_fseek
-@_ftell
-@_ftruncate
-@_fwrite
-@_getenv
-@_getpid
-@_getrlimit
-@_getuid
-@_glBegin
-@_glBindTexture
-@_glColorMask
-@_glDeleteTextures
-@_glDisable
-@_glDrawArrays
-@_glEnable
-@_glEnd
-@_glGetBooleanv
-@_glGetError
-@_glGetIntegerv
-@_glIsEnabled
-@_glPixelStorei
-@_glReadPixels
-@_glSwapAPPLE
-@_glTexCoord2i
-@_glTexImage2D
-@_glVertex2f
-@_glViewport
-@_gmtime_r
-@_imp_implementationWithBlock
-@_launch_data_alloc
-@_launch_data_dict_insert
-@_launch_data_free
-@_launch_data_new_string
-@_launch_msg
-@_mach_continuous_time
-@_mach_msg
-@_mach_port_allocate
-@_mach_port_deallocate
-@_mach_port_mod_refs
-@_mach_port_type
-@_mach_timebase_info
-@_malloc
-@_memcmp
-@_memcpy
-@_method_exchangeImplementations
-@_method_getImplementation
-@_method_getName
-@_method_getTypeEncoding
-@_mmap
-@_munmap
-@_nanosleep
-@_objc_alloc
-@_objc_alloc_init
-@_objc_autorelease
-@_objc_autoreleasePoolPop
-@_objc_autoreleasePoolPush
-@_objc_enumerationMutation
-@_objc_getAssociatedObject
-@_objc_lookUpClass
-@_objc_msgSend
-@_objc_opt_class
-@_objc_opt_isKindOfClass
-@_objc_opt_new
-@_objc_opt_respondsToSelector
-@_objc_release
-@_objc_retain
-@_objc_setAssociatedObject
-@_objc_setProperty_nonatomic
-@_open
-@_protocol_getName
-@_pthread_key_create
-@_pthread_key_delete
-@_pthread_mach_thread_np
-@_pthread_mutex_destroy
-@_pthread_mutex_init
-@_pthread_mutex_lock
-@_pthread_mutex_unlock
-@_pthread_mutexattr_init
-@_pthread_mutexattr_settype
-@_pthread_self
-@_recvmsg
-@_rewind
-@_sem_close
-@_sem_open
-@_sem_post
-@_sem_trywait
-@_sem_unlink
-@_sem_wait
-@_sendmsg
-@_setrlimit
-@_shm_open
-@_shm_unlink
-@_snprintf
-@_socket
-@_sprintf
-@_sscanf
-@_strcmp
-@_strftime
-@_strlen
-@_strncpy
-@_strrchr
-@_strstr
-@_strtoull
-@_time
-@_unlink
-@_usleep
-@_vfprintf
+@15CVulkanRenderer
+/sys/kernel/debug/tracing/trace_marker
+/sys/kernel/tracing/trace_marker
+%s begin_ctx=%lld
+%s end_ctx=%lld
+%s: %d
+OverlayFrameMark
+(knN
+N10__cxxabiv117__class_type_infoE
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
+std::bad_exception
+St9exception
+St13bad_exception
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv119__foreign_exceptionE
+pure virtual method called\n
+N10__cxxabiv120__si_class_type_infoE
+St9type_info
+terminate called recursively\n
+  what():  
+terminate called after throwing an instance of '
+terminate called without an active exception\n
+basic_string::_S_create
+basic_string::_S_construct null not valid
+std::bad_alloc
+St9bad_alloc
+std::bad_array_new_length
+St20bad_array_new_length
+_GLOBAL_
+(anonymous namespace)
+string literal
+auto
+decltype(auto)
+[abi:
+{default arg#
+JArray
+auto:
+VTT for 
+construction vtable for 
+-in-
+typeinfo for 
+typeinfo name for 
+typeinfo fn for 
+non-virtual thunk to 
+covariant return thunk to 
+java Class for 
+guard variable for 
+TLS init function for 
+TLS wrapper function for 
+reference temporary #
+hidden alias for 
+non-transaction clone for 
+_Sat 
+_Fract
+_Accum
+operator
+operator 
+new 
+java resource 
+decltype (
+{parm#
+this
+global constructors keyed to 
+global destructors keyed to 
+{lambda(
+{unnamed type#
+ [clone 
+ restrict
+ volatile
+ const
+ transaction_safe
+ noexcept
+ throw
+complex 
+imaginary 
+ __vector(
+(...
+...)
+std::allocator
+std::basic_string
+std::string
+std::istream
+basic_istream
+std::ostream
+basic_ostream
+std::iostream
+basic_iostream
+alignof 
+const_cast
+delete[] 
+dynamic_cast
+delete 
+operator"" 
+new[]
+reinterpret_cast
+sizeof...
+static_cast
+sizeof 
+throw 
+bool
+boolean
+byte
+long double
+float
+__float128
+unsigned char
+unsigned int
+unsigned
+unsigned long
+unsigned __int128
+unsigned short
+void
+wchar_t
+unsigned long long
+decimal32
+decimal64
+decimal128
+half
+char8_t
+char16_t
+char32_t
+decltype(nullptr)
+template parameter object for 
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_iostream<char, std::char_traits<char> >
+St11logic_error
+St12length_error
+glPopClientAttrib
+pthread_mutex_unlock@GLIBC_2.0
+__strcat_chk@GLIBC_2.3.4
+__snprintf_chk@GLIBC_2.3.4
+strstr@GLIBC_2.0
+dlopen
+pthread_mutexattr_init@GLIBC_2.0
+strcmp@GLIBC_2.0
+glBlendFunc
+__vfprintf_chk@GLIBC_2.3.4
+glDrawArrays
+pthread_mutex_destroy@GLIBC_2.0
+_ITM_deregisterTMCloneTable
+fflush@GLIBC_2.0
+close
+dup@GLIBC_2.0
+stderr@GLIBC_2.0
+dlvsym@GLIBC_2.1
+memmove@GLIBC_2.0
+free@GLIBC_2.0
+glClear
+XDGAQueryExtension
+xcb_create_window
+ValveIsScreenshotsHooked
+memcpy@GLIBC_2.0
+shm_open@GLIBC_2.2
+pthread_self@GLIBC_2.0
+XEventsQueued
+IsOverlayEnabled
+XPending
+___tls_get_addr@GLIBC_2.3
+pthread_mutex_init@GLIBC_2.0
+fclose@GLIBC_2.1
+glTexCoord2i
+memcmp@GLIBC_2.0
+XCheckWindowEvent
+glMatrixMode
+__stack_chk_fail@GLIBC_2.4
+glXGetProcAddress
+SetNotificationPosition
+getuid@GLIBC_2.0
 ValveHookScreenshots
-^SetNotificationPosition
-dBOverlayNeedsPresent
-jIsOverlayEnabled
-(LDHH
-hD$P
-4448
-HH88$
-4<H$<
-@H $
-(`4TX
-H,P|
-_BOverlayNeedsPresent
-_IsOverlayEnabled
-_SetNotificationPosition
-_ValveHookScreenshots
-_CFAllocatorAllocate
-_CFAllocatorDeallocate
-_CFRelease
-_CFRetain
-_CFRunLoopRun
-_CFRunLoopRunInMode
-_CGAssociateMouseAndMouseCursorPosition
-_CGCursorIsVisible
-_CGDisplayBounds
-_CGDisplayHideCursor
-_CGDisplayIsCaptured
-_CGDisplayMoveCursorToPoint
-_CGDisplayPixelsHigh
-_CGDisplayPixelsWide
-_CGDisplayShowCursor
-_CGEventCreate
-_CGEventCreateKeyboardEvent
-_CGEventGetFlags
-_CGEventGetIntegerValueField
-_CGEventGetLocation
-_CGEventGetType
-_CGEventKeyboardGetUnicodeString
-_CGEventKeyboardSetUnicodeString
-_CGEventPost
-_CGEventSetFlags
-_CGGetActiveDisplayList
-_CGGetDisplaysWithPoint
-_CGGetLastMouseDelta
-_CGLChoosePixelFormat
-_CGLErrorString
-_CGLFlushDrawable
-_CGLGetCurrentContext
-_CGLGetParameter
-_CGLGetSurface
-_CGLIsEnabled
-_CGLSetCurrentContext
-_CGLTexImageIOSurface2D
-_CGMainDisplayID
-_CGSForceShowCursor
-_CGSGetSurfaceBounds
-_CGSGetWindowBounds
-_CGWarpMouseCursorPosition
-_CMAudioFormatDescriptionGetStreamBasicDescription
-_CMBlockBufferGetDataPointer
-_CMSampleBufferGetDataBuffer
-_CMSampleBufferGetFormatDescription
-_HideCursor
-_IOSurfaceGetHeight
-_IOSurfaceGetWidth
-_IOSurfaceLookup
-_InitCursor
-_MTLCopyAllDevices
-_MTLCreateSystemDefaultDevice
-_NSApp
-_NSClassFromString
-_NSLog
-_NSSelectorFromString
-_NSStringFromSelector
-_OBJC_CLASS_$_MTLRenderPassDescriptor
-_OBJC_CLASS_$_MTLRenderPipelineDescriptor
-_OBJC_CLASS_$_MTLTextureDescriptor
-_OBJC_CLASS_$_NSApplication
-_OBJC_CLASS_$_NSCursor
-_OBJC_CLASS_$_NSDate
-_OBJC_CLASS_$_NSEvent
-_OBJC_CLASS_$_NSLock
-_OBJC_CLASS_$_NSMapTable
-_OBJC_CLASS_$_NSNumber
-_OBJC_CLASS_$_NSObject
-_OBJC_CLASS_$_NSOpenGLContext
-_OBJC_CLASS_$_NSOpenGLView
-_OBJC_CLASS_$_NSScreen
-_OBJC_CLASS_$_NSString
-_OBJC_CLASS_$_NSThread
-_OBJC_CLASS_$_RPScreenRecorder
-_OBJC_METACLASS_$_NSObject
-_ShowCursor
-__Block_object_assign
-__Block_object_dispose
-__CGSDefaultConnection
-__DefaultRuneLocale
-__NSConcreteGlobalBlock
-__NSConcreteStackBlock
-__NSGetExecutablePath
-__Unwind_Resume
-__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
-__ZNSt11logic_errorC2EPKc
-__ZNSt12length_errorD1Ev
-__ZSt9terminatev
-__ZTISt12length_error
-__ZTVN10__cxxabiv117__class_type_infoE
-__ZTVN10__cxxabiv120__si_class_type_infoE
-__ZTVSt12length_error
-___CFConstantStringClassReference
-___chkstk_darwin
-___cxa_allocate_exception
-___cxa_atexit
-___cxa_begin_catch
-___cxa_call_unexpected
-___cxa_free_exception
-___cxa_pure_virtual
-___cxa_throw
-___error
-___gxx_personality_v0
-___stack_chk_fail
-___stack_chk_guard
-___stderrp
-__dispatch_main_q
-__dyld_get_image_name
-__objc_empty_cache
-_atoi
-_bootstrap_look_up
-_bootstrap_port
-_bzero
-_class_addMethod
-_class_copyMethodList
-_class_getClassMethod
-_class_getInstanceMethod
-_class_getName
-_class_getSuperclass
-_class_replaceMethod
-_close
-_connect
-_dispatch_after
-_dispatch_async
-_dispatch_once_f
-_dispatch_time
-_dlopen
-_dlsym
-_dup
-_fclose
-_fcntl
-_fflush
-_fopen
-_fprintf
-_fread
-_free
-_fseek
-_ftell
-_ftruncate
-_fwrite
-_getenv
-_getpid
-_getrlimit
-_getuid
-_glBegin
-_glBindTexture
-_glColorMask
-_glDeleteTextures
-_glDisable
-_glDrawArrays
-_glEnable
-_glEnd
-_glGetBooleanv
-_glGetError
-_glGetIntegerv
-_glIsEnabled
-_glPixelStorei
-_glReadPixels
-_glSwapAPPLE
-_glTexCoord2i
-_glTexImage2D
-_glVertex2f
-_glViewport
-_gmtime_r
-_imp_implementationWithBlock
-_launch_data_alloc
-_launch_data_dict_insert
-_launch_data_free
-_launch_data_new_string
-_launch_msg
-_mach_continuous_time
-_mach_msg
-_mach_port_allocate
-_mach_port_deallocate
-_mach_port_mod_refs
-_mach_port_type
-_mach_task_self_
-_mach_timebase_info
-_malloc
-_memcmp
-_memcpy
-_method_exchangeImplementations
-_method_getImplementation
-_method_getName
-_method_getTypeEncoding
-_mmap
-_munmap
-_nanosleep
-_objc_alloc
-_objc_alloc_init
-_objc_autorelease
-_objc_autoreleasePoolPop
-_objc_autoreleasePoolPush
-_objc_enumerationMutation
-_objc_getAssociatedObject
-_objc_lookUpClass
-_objc_msgSend
-_objc_opt_class
-_objc_opt_isKindOfClass
-_objc_opt_new
-_objc_opt_respondsToSelector
-_objc_release
-_objc_retain
-_objc_setAssociatedObject
-_objc_setProperty_nonatomic
-_open
-_protocol_getName
-_pthread_key_create
-_pthread_key_delete
-_pthread_mach_thread_np
-_pthread_mutex_destroy
-_pthread_mutex_init
-_pthread_mutex_lock
-_pthread_mutex_unlock
-_pthread_mutexattr_init
-_pthread_mutexattr_settype
-_pthread_self
-_recvmsg
-_rewind
-_sem_close
-_sem_open
-_sem_post
-_sem_trywait
-_sem_unlink
-_sem_wait
-_sendmsg
-_setrlimit
-_shm_open
-_shm_unlink
-_snprintf
-_socket
-_sprintf
-_sscanf
-_strcmp
-_strftime
-_strlen
-_strncpy
-_strrchr
-_strstr
-_strtoull
-_time
-_unlink
-_usleep
-_vfprintf
-dyld_stub_binder
-radr://5614542
-com.valvesoftware.steam
-MXGJJ98X76
- &bp
-ej).t
-eD}?
-s@{9
-+F"0
-\pD%8m
-6t}GgV
-$j*$
-Dv@'
-0qUQ
--Cg~aj
-_iNq
-aZ1,
-~cl}V
->,W	
-y|mA
-/bJi0~=O
-30t)s
-subject.OU
-MXGJJ98X76
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-120201221215Z
-270201221215Z0y1-0+
-$Developer ID Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-)xEii`k_
-1? v(m
-'0%0#
-http://crl.apple.com/root.crl0
-B9tk
-P9jDt
-#q-_
- "ror
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-060425214036Z
-350209214036Z0b1
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-, op
-https://www.apple.com/appleca/0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-=&g 
-Sj[d
-uu!0
-0y1-0+
-$Developer ID Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-210205030950Z
-260206030950Z0
-MXGJJ98X761A0?
-8Developer ID Application: Valve Corporation (MXGJJ98X76)1
-MXGJJ98X761
-Valve Corporation1
-~kk!
-3oC&
-uN`AJ
-40200
-$http://ocsp.apple.com/ocsp03-devid080
-)http://www.apple.com/certificateauthority0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-20120706000000Z0
-o(D-U
-6fQS
-:iPq
-0y1-0+
-$Developer ID Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-240730224246Z0/
-1/0-
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>cdhashes</key>
-	<array>
-		<data>
-		sURvhZzJw7faXR1d6+uIBUoxzXA=
-		</data>
-	</array>
-</dict>
-</plist>
-&<fSm
-K2v"
-U|;F
-mI+1!
-20240730224246Z0
-0|100.
-'Apple Timestamp Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-240725203516Z
-240905203515Z0B1
-Timestamp Signer NWK11
-Apple Inc.1
-+7cRO
-[wan
-LO[o~
-0RRAt#
-http://www.apple.com/appleca0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-,0*0(
-"http://crl.apple.com/timestamp.crl0
-5l4p
-C"]0
-`5I^
-sVW}
-5d=<
-Oif2+
-}LWc
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-120405120244Z
-270405120244Z0|100.
-'Apple Timestamp Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-Im] 
-(ny_~
-&By^
-t-D>
-E~4u&
-'0%0#
-http://crl.apple.com/root.crl0
-mzT_
-Bsu|QC
-:m7(
-FeoU
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-060425214036Z
-350209214036Z0b1
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-, op
-https://www.apple.com/appleca/0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-=&g 
-Sj[d
-uu!1
-0|100.
-'Apple Timestamp Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-240730224246Z0#
-?CyL
-\Z:L
+glXDestroyWindow
+ceilf@GLIBC_2.0
+glTexImage2D
+glVertex3f
+getrlimit@GLIBC_2.2
+glEnable
+pthread_mutex_lock@GLIBC_2.0
+unlink@GLIBC_2.0
+XQLength
+XPeekEvent
+readlink@GLIBC_2.0
+sqrtf@GLIBC_2.0
+glGetBooleanv
+glXCreateWindow
+glPixelZoom
+ioctl@GLIBC_2.0
+XChangeWindowAttributes
+XGrabPointer
+glOrtho
+__cxa_finalize@GLIBC_2.1.3
+fwrite@GLIBC_2.0
+glIsTexture
+glEnd
+glPixelStorei
+glDisableClientState
+VulkanSteamOverlayGetScaleFactors
+glPushClientAttrib
+XWarpPointer
+getpid@GLIBC_2.0
+glTexEnvf
+__cxa_atexit@GLIBC_2.1.3
+BOverlayNeedsPresent
+pthread_key_delete@GLIBC_2.0
+glXMakeCurrent
+getenv@GLIBC_2.0
+setrlimit@GLIBC_2.2
+realloc@GLIBC_2.0
+malloc@GLIBC_2.0
+glLoadMatrixf
+__fxstat@GLIBC_2.0
+XOpenDisplay
+__memcpy_chk@GLIBC_2.3.4
+__gmon_start__
+pthread_once@GLIBC_2.0
+kill@GLIBC_2.0
+glLoadIdentity
+XF86DGADirectVideo
+gettext@GLIBC_2.0
+glScalef
+flock@GLIBC_2.0
+glGetError
+read
+strftime@GLIBC_2.0
+XUngrabPointer
+dl_iterate_phdr@GLIBC_2.2.4
+mmap@GLIBC_2.0
+glRenderMode
+XPeekIfEvent
+glXDestroyPbuffer
+strlen@GLIBC_2.0
+__stpcpy_chk@GLIBC_2.3.4
+glIsEnabled
+XSetErrorHandler
+glXDestroyPixmap
+glReadPixels
+XNextEvent
+fcntl@GLIBC_2.0
+glGetString
+fopen@GLIBC_2.1
+memset@GLIBC_2.0
+glColor4ub
+glXCreateContext
+XIfEvent
+ftruncate@GLIBC_2.0
+__errno_location@GLIBC_2.0
+glDepthMask
+strncpy@GLIBC_2.0
+syscall@GLIBC_2.0
+strtoull@GLIBC_2.0
+XSelectInput
+XF86DGAQueryExtension
+glVertex2f
+XPutBackEvent
+XUndefineCursor
+__vsnprintf_chk@GLIBC_2.3.4
+glTexCoord2d
+XDefineCursor
+XUnmapWindow
+dlsym
+XCreateSimpleWindow
+shm_unlink@GLIBC_2.2
+glTexParameterf
+munmap@GLIBC_2.0
+glXCreatePbuffer
+glColorMask
+sendmsg@GLIBC_2.0
+readv@GLIBC_2.0
+setlocale@GLIBC_2.0
+strrchr@GLIBC_2.0
+glGenTextures
+glGetDoublev
+glXChooseVisual
+fputc@GLIBC_2.0
+sscanf@GLIBC_2.0
+glPopAttrib
+glPushAttrib
+glXCreatePixmap
+XCheckTypedEvent
+gmtime_r@GLIBC_2.0
+VulkanSteamOverlayProcessCapturedFrame
+XCheckMaskEvent
+XFreeCursor
+XMapWindow
+glDeleteTextures
+recvmsg@GLIBC_2.0
+XWindowEvent
+SetNotificationInset
+glGetFloatv
+glBindTexture
+glTranslatef
+glShadeModel
+glPolygonMode
+nanosleep@GLIBC_2.0
+socket@GLIBC_2.0
+xcb_create_window_checked
+VulkanSteamOverlayPresent
+__fprintf_chk@GLIBC_2.3.4
+glDisable
+XCheckTypedWindowEvent
+clock_gettime@GLIBC_2.2
+_ITM_registerTMCloneTable
+glXGetCurrentContext
+XUngrabKeyboard
+strncmp@GLIBC_2.0
+glDepthRange
+XInstallColormap
+abort@GLIBC_2.0
+XCloseDisplay
+glGetIntegerv
+glXGetProcAddressARB
+strtol@GLIBC_2.0
+fputs@GLIBC_2.0
+glBegin
+connect@GLIBC_2.0
+glViewport
+XMaskEvent
+__pthread_key_create@GLIBC_2.0
+pthread_mutexattr_settype@GLIBC_2.1
+glXSwapBuffers
+calloc@GLIBC_2.0
+glDrawElements
+__sprintf_chk@GLIBC_2.3.4
+XCheckIfEvent
+XGrabKeyboard
+GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
+GCC: (SteamRT 4.8.4-1ubuntu15~12.04+steamrt1.2+srt2) 4.8.4
+GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3

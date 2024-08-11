@@ -164,6 +164,7 @@ message FileOptions {
 	optional string php_namespace = 41;
 	optional string php_metadata_namespace = 44;
 	optional string ruby_package = 45;
+	repeated string additional_includes = 50;
 	repeated .google.protobuf.UninterpretedOption uninterpreted_option = 999;
 
 	extensions 1000 to max;
@@ -198,6 +199,7 @@ message FieldOptions {
 	optional bool lazy = 5 [default = false];
 	optional bool deprecated = 3 [default = false];
 	optional bool weak = 10 [default = false];
+	optional string boxed_type = 20;
 	repeated .google.protobuf.UninterpretedOption uninterpreted_option = 999;
 
 	extensions 1000 to max;

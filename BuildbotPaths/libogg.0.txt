@@ -1,3 +1,0 @@
-/Users/buildbot/buildslave/libav_osx/build/libogg/src/
-/Users/buildbot/buildslave/libav_osx/build/libogg/src/.libs/bitwise.o
-/Users/buildbot/buildslave/libav_osx/build/libogg/src/.libs/framing.o

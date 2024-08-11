@@ -17,6 +17,10 @@
 *.uifont
 *.wav
 *.webm
+*.exe
+*.dll
+*.so
+*.dylib
 
 /ClientExtracted/steamcmd
 /ClientExtracted/steam_osx
@@ -26,3 +30,8 @@
 /ClientExtracted/steam/drivercheck/
 /ClientExtracted/ThirdPartyLegalNotices.doc
 /ClientExtracted/Frameworks*
+/ClientExtracted/ubuntu12_32/
+/ClientExtracted/ubuntu12_64/
+/ClientExtracted/linux32/
+/ClientExtracted/linux64/
+/ClientExtracted/siteserverui/win32/

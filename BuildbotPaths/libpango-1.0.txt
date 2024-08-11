@@ -1,4 +1,0 @@
-/Users/buildbot/buildslave/pango_osx/build/pango-1.36.8/lib32/etc/pango
-/Users/buildbot/buildslave/pango_osx/build/pango-1.36.8/lib32/lib/pango
-/Users/buildbot/buildslave/pango_osx/build/pango-1.36.8/lib64/etc/pango
-/Users/buildbot/buildslave/pango_osx/build/pango-1.36.8/lib64/lib/pango

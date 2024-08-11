@@ -13,9 +13,8 @@ cd "$DIR/.support" || exit 1
 echo Deleting existing files
 
 # Scary!
-rm -rf "$DIR"/ClientExtracted/*
-rm -rf bins/*
 rm -rf linux_bins/*
+rm -rf "$DIR"/ClientExtracted/*
 rm -f "$DIR"/BuildbotPaths/*
 rm -rf "$DIR"/Protobufs/*
 
@@ -25,23 +24,19 @@ rm -rf "$DIR"/Protobufs/*
 
 echo Extracting archives
 
-for z in archives/*.zip;
-do
-	if [[ "$z" == *"bins"* ]];
-	then
-		unzip -q -n "$z" -d bins/
-	else
-		unzip -q -o "$z" -d "$DIR/ClientExtracted/"
-	fi
-done
-
 for z in linux_archives/*.zip;
 do
 	if [[ "$z" == *"bins"* ]];
 	then
 		unzip -q -n "$z" -d linux_bins/
+	else
+		unzip -q -o "$z" -d "$DIR/ClientExtracted/"
 	fi
+
+	unzip -lv "$z" | head -n -2 | tail -n+4 | awk '{print $(NF-1),$NF}' >> "$DIR/ClientExtracted/ClientContentLinux.txt"
 done
+
+sort -k 2 -o "$DIR/ClientExtracted/ClientContentLinux.txt" "$DIR/ClientExtracted/ClientContentLinux.txt"
 
 #
 # PROTOBUF DUMP
@@ -50,8 +45,8 @@ done
 echo Dumping protobufs
 
 # https://github.com/SteamRE/SteamKit/tree/master/Resources/ProtobufDumper
-~/ProtobufDumper/ProtobufDumper bins/steamui.dylib "$DIR/Protobufs/" > /dev/null
-~/ProtobufDumper/ProtobufDumper bins/steamclient.dylib "$DIR/Protobufs/" > /dev/null
+~/ProtobufDumper/ProtobufDumper linux_bins/ubuntu12_32/steamui.so "$DIR/Protobufs/" > /dev/null
+~/ProtobufDumper/ProtobufDumper linux_bins/ubuntu12_32/steamclient.so "$DIR/Protobufs/" > /dev/null
 
 # https://github.com/m4dEngi/steamworks_dumper
 echo Dumping structs
@@ -59,28 +54,21 @@ echo Dumping structs
 #./steamworks_dumper/build/steamworks_dumper "linux_bins/ubuntu12_32/steamclient.so" "$DIR/Structs/"
 
 #
-# BUILDBOT PATHS
+# STRINGS
 #
 
-echo Dumping buildbot paths
+echo Dumping strings
 
 while IFS= read -r -d '' file
 do
 	echo "Dumping $file"
 
-	name=$(basename "$file" .dylib);
+	name=$(basename "$file" .so)
 
-	strings "$file" | grep "/buildbot/" | sed "s/^[^\/]*\//\//" | sed "s/\:[0-9]*$//" | sort -u > "$DIR/BuildbotPaths/$name.txt"
-	./macho-strings/macho-strings -binary "$file" > "$DIR/Strings/$name.txt"
+	"$DIR/DumpStrings/DumpStrings" -target elf -binary "$file" > "$DIR/Strings/$name.txt"
+done <   <(find linux_bins/ubuntu12_32/ -name '*.so' -print0)
 
-	if [ $? -ne 0 ]; then
-		strings "$file" > "$DIR/Strings/$name.txt"
-	fi
-
-	./nm-with-macho -C -p "$file" | grep -Evi "GCC_except_table|google::protobuf|steam_rel_osx_builder" | awk '{$1=""; print $0}' | sort -u > "$DIR/Symbols/$name.txt"
-done <   <(find bins/ -name '*.dylib' -print0)
-
-./macho-strings/macho-strings -binary "$DIR/ClientExtracted/steam_osx" > "$DIR/Strings/steam_osx.txt"
+"$DIR/DumpStrings/DumpStrings" -target elf -binary "$DIR/ClientExtracted/ubuntu12_32/steam" > "$DIR/Strings/steam.txt"
 
 #
 # Jump to extracted folder
@@ -109,7 +97,7 @@ ProcessClientFolder()
 		echo "Prettifying $file"
 
 		npm run prettier "$(pwd)/$file"
-	done <   <(find steamui/ clientui/ \( -name '*.js' -o -name '*.css' \) -print0)
+	done <   <(find steamui/ clientui/ siteserverui/ \( -name '*.js' -o -name '*.css' \) -print0)
 
 	#
 	# CHANGE CRAPPY ENCODINGS TO UTF-8

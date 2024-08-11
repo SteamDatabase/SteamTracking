@@ -1,0 +1,1036 @@
+__gmon_start__
+_init
+_fini
+_ITM_deregisterTMCloneTable
+_ITM_registerTMCloneTable
+__cxa_finalize
+free
+time
+___tls_get_addr
+pthread_create
+__vsnprintf_chk
+stderr
+__fprintf_chk
+vsnprintf
+strlen
+memcmp
+strtoull
+fwrite
+malloc
+realloc
+__memcpy_chk
+__sprintf_chk
+_ZTVN10__cxxabiv120__si_class_type_infoE
+__pthread_key_create
+pthread_cond_timedwait
+pthread_mutex_unlock
+pthread_mutex_lock
+strstr
+strcmp
+fopen
+fseek
+ftell
+rewind
+fread
+fclose
+fflush
+munmap
+strtoul
+fileno
+posix_fadvise
+_ZTVN10__cxxabiv117__class_type_infoE
+__errno_location
+syscall
+VK_LAYER_fossilize_GetDeviceProcAddr
+VK_LAYER_fossilize_GetInstanceProcAddr
+__cxa_atexit
+getenv
+mkdir
+__xstat
+futimens
+_ZTSN10__cxxabiv117__class_type_infoE
+_ZTIN10__cxxabiv117__class_type_infoE
+abort
+_ZTIN10__cxxabiv119__foreign_exceptionE
+_ZTIN10__cxxabiv115__forced_unwindE
+_ZTSN10__cxxabiv120__si_class_type_infoE
+_ZTIN10__cxxabiv120__si_class_type_infoE
+fputs
+fputc
+_ZTVN9__gnu_cxx24__concurrence_lock_errorE
+_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
+_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
+_ZTIN9__gnu_cxx24__concurrence_lock_errorE
+_ZTSN9__gnu_cxx24__concurrence_lock_errorE
+_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
+pthread_once
+__nl_langinfo_l
+__uselocale
+wcslen
+mbsrtowcs
+wcscmp
+iconv_open
+iconv
+iconv_close
+_ZTVN10__cxxabiv121__vmi_class_type_infoE
+pthread_cond_destroy
+pthread_cond_wait
+pthread_cond_signal
+__wctype_l
+__towupper_l
+__towlower_l
+__iswctype_l
+wctob
+btowc
+wmemcpy
+strerror
+pthread_join
+wmemset
+wmemchr
+wmemmove
+strncmp
+_ZTSN10__cxxabiv115__forced_unwindE
+_ZTSN10__cxxabiv119__foreign_exceptionE
+_ZTVN10__cxxabiv115__forced_unwindE
+_ZTVN10__cxxabiv119__foreign_exceptionE
+_ZTIN9__gnu_cxx20recursive_init_errorE
+_ZTVN9__gnu_cxx20recursive_init_errorE
+_ZTSN9__gnu_cxx20recursive_init_errorE
+_ZTSN10__cxxabiv121__vmi_class_type_infoE
+_ZTIN10__cxxabiv121__vmi_class_type_infoE
+__strtof_l
+__strtod_l
+strtold_l
+__newlocale
+__freelocale
+__duplocale
+strdup
+wcsnrtombs
+wcrtomb
+mbsnrtowcs
+mbrtowc
+__ctype_get_mb_cur_max
+__strcoll_l
+__strxfrm_l
+__wcscoll_l
+__wcsxfrm_l
+bind_textdomain_codeset
+dgettext
+__strftime_l
+__wcsftime_l
+_Z27_txnal_cow_string_D1_commitPv
+_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+_ITM_RU1
+_ZGTtnaj
+_ITM_memcpyRtWn
+_Z23_txnal_cow_string_c_strPKv
+_ITM_RU4
+_Z20_txnal_cow_string_D1Pv
+_ITM_addUserCommitAction
+_Z26_txnal_logic_error_get_msgPv
+_Z28_txnal_runtime_error_get_msgPv
+dl_iterate_phdr
+__stack_chk_fail
+librt.so.1
+ld-linux.so.2
+libpthread.so.0
+libc.so.6
+GLIBC_2.3
+GLIBC_2.0
+GLIBC_2.6
+GLIBC_2.2.4
+GLIBC_2.3.4
+GLIBC_2.1.3
+GLIBC_2.4
+GLIBC_2.1
+GLIBC_2.2
+GLIBC_2.3.2
+ (pNext->sType chain: [
+Fossilize WARN: %s\n
+Unsupported pNext found, cannot hash.
+cannot create std::vector larger than max_size()
+application
+hash
+attachment
+Pipeline layout
+Compute pipeline
+Fossilize WARN: %s handle 0x%016llx is not registered.\nIt has either not been recorded, or it failed to be recorded earlier (which is expected if application uses an extension that is not recognized by Fossilize).\n
+Pipeline library
+Raytracing pipeline
+Graphics pipeline
+Shader module
+Descriptor set layout
+Render pass
+vector::_M_default_append
+vector::_M_realloc_insert
+stageFlags
+offset
+flags
+finalLayout
+initialLayout
+format
+loadOp
+storeOp
+stencilLoadOp
+stencilStoreOp
+samples
+dependencyFlags
+dstAccessMask
+srcAccessMask
+dstStageMask
+srcStageMask
+srcSubpass
+dstSubpass
+pipelineBindPoint
+depthStencilAttachment
+resolveAttachments
+inputAttachments
+colorAttachments
+preserveAttachments
+constantID
+location
+binding
+inputRate
+stride
+blendEnable
+colorWriteMask
+alphaBlendOp
+colorBlendOp
+srcColorBlendFactor
+dstColorBlendFactor
+srcAlphaBlendFactor
+dstAlphaBlendFactor
+width
+height
+minDepth
+maxDepth
+domainOrigin
+depthClipEnable
+rasterizationStream
+blendOverlap
+srcPremultiplied
+dstPremultiplied
+conservativeRasterizationMode
+extraPrimitiveOverestimationSize
+lineRasterizationMode
+stippledLineEnable
+lineStippleFactor
+lineStipplePattern
+requiredSubgroupSize
+stencilInitialLayout
+stencilFinalLayout
+stencilLayout
+provokingVertexMode
+customBorderColor
+reductionMode
+aspectReferences
+subpass
+inputAttachmentIndex
+aspectMask
+ycbcrModel
+ycbcrRange
+components
+xChromaOffset
+yChromaOffset
+chromaFilter
+forceExplicitReconstruction
+negativeOneToOne
+robustBufferAccess2
+robustImageAccess2
+nullDescriptor
+robustImageAccess
+fragmentShadingRateEnums
+noInvocationFragmentShadingRates
+supersampleFragmentShadingRates
+pipelineFragmentShadingRate
+primitiveFragmentShadingRate
+attachmentFragmentShadingRate
+taskShader
+meshShader
+multiviewMeshShader
+meshShaderQueries
+primitiveFragmentShadingRateMeshShader
+descriptorBuffer
+descriptorBufferCaptureReplay
+descriptorBufferImageLayoutIgnored
+descriptorBufferPushDescriptors
+sType
+pNext in VkPipelineDynamicStateCreateInfo not supported.
+Cannot copy unknown pNext sType: %d.\n
+Fossilize ERROR: Cannot copy unknown pNext sType: %d.\n
+pNext in VkApplicationInfo not supported.
+Base pipeline index is out of range.\n
+Fossilize ERROR: Base pipeline index is out of range.\n
+Fossilize WARN: Cannot find sampler in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Fossilize WARN: Cannot find descriptor set layout in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Fossilize WARN: Cannot find pipeline layout in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Fossilize WARN: Cannot find shader module in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Fossilize WARN: Cannot find render pass in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Fossilize WARN: Cannot find graphics pipeline in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Fossilize WARN: Cannot find raytracing pipeline in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+Fossilize WARN: Cannot find compute pipeline in hashmap.\nObject has either not been recorded, or it was not supported by Fossilize.\n
+dataSize
+data
+mapEntries
+dynamicState
+vertexBindingDivisorCount
+vertexBindingDivisors
+divisor
+bindingFlags
+depthAttachmentFormat
+stencilAttachmentFormat
+viewMask
+colorAttachmentFormats
+attachmentCount
+colorWriteEnables
+sampleLocationsEnable
+sampleLocationsInfo
+sampleLocationsPerPixel
+sampleLocationGridSize
+sampleLocations
+discardRectangleMode
+discardRectangleCount
+discardRectangles
+fragmentSize
+combinerOps
+mutableDescriptorTypeLists
+viewMasks
+viewOffsets
+correlationMasks
+apiVersion
+robustBufferAccess
+applicationVersion
+engineVersion
+applicationName
+engineName
+pNext
+pushConstantRanges
+setLayouts
+codeSize
+varintOffset
+varintSize
+code
+Invalid varint format.\n
+compareOp
+writeMask
+reference
+compareMask
+passOp
+failOp
+depthFailOp
+%016llx
+depthResolveMode
+stencilResolveMode
+depthStencilResolveAttachment
+fragmentShadingRateAttachment
+shadingRateAttachmentTexelSize
+Unsupported pNext found, cannot hash sType.
+libraries
+bindings
+descriptorType
+descriptorCount
+immutableSamplers
+dependencies
+attachments
+subpasses
+correlatedViewMasks
+viewOffset
+basePipelineHandle
+basePipelineIndex
+stage
+name
+specializationInfo
+minFilter
+magFilter
+maxAnisotropy
+anisotropyEnable
+mipmapMode
+addressModeU
+addressModeV
+addressModeW
+borderColor
+unnormalizedCoordinates
+compareEnable
+mipLodBias
+minLod
+maxLod
+maxPipelineRayRecursionDepth
+stages
+maxPipelineRayPayloadSize
+libraryInterface
+libraryInfo
+anyHitShader
+intersectionShader
+generalShader
+closestHitShader
+type
+groups
+maxPipelineRayHitAttributeSize
+renderPass
+patchControlPoints
+tessellationState
+rasterizationSamples
+sampleShadingEnable
+minSampleShading
+alphaToOneEnable
+alphaToCoverageEnable
+sampleMask
+multisampleState
+attributes
+vertexInputState
+depthBiasConstantFactor
+depthBiasSlopeFactor
+depthBiasClamp
+depthBiasEnable
+depthClampEnable
+polygonMode
+rasterizerDiscardEnable
+frontFace
+lineWidth
+cullMode
+rasterizationState
+topology
+primitiveRestartEnable
+inputAssemblyState
+logicOp
+logicOpEnable
+blendConstants
+colorBlendState
+viewportCount
+scissorCount
+viewports
+scissors
+viewportState
+stencilTestEnable
+maxDepthBounds
+minDepthBounds
+depthBoundsTestEnable
+depthWriteEnable
+depthTestEnable
+depthCompareOp
+front
+back
+depthStencilState
+cannot create std::deque larger than max_size()
+version
+applicationInfo
+physicalDeviceFeatures
+link
+samplers
+pipelineLayouts
+renderPasses
+renderPasses2
+computePipelines
+raytracingPipelines
+graphicsPipelines
+shaderModules
+Failed to prepare database, will not dump data to database.\n
+Fossilize ERROR: Failed to prepare database, will not dump data to database.\n
+Failed to prepare on-use database, will not dump those.\n
+Fossilize ERROR: Failed to prepare on-use database, will not dump those.\n
+Failed to serialize application info.\n
+Fossilize ERROR: Failed to serialize application info.\n
+Failed to prepare module identifier database, will not dump identifiers.\n
+Fossilize ERROR: Failed to prepare module identifier database, will not dump identifiers.\n
+pNext in VkPipelineLayoutCreateInfo not supported.
+*NSt6thread11_State_implINS_8_InvokerISt5tupleIJZN9Fossilize13StateRecorder21init_recording_threadEPNS3_17DatabaseInterfaceEEUlvE_EEEEEE
+uuuuuuuubtnufruuuuuuuuuuuuuuuuuu
+0123456789ABCDEF
+00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
+vH7B
+W4vC
+9Y>)F$
+raB3G
+)c=H
+]rHa
+O8Mr
+bnMG
+.wN\f9
+[*QmU
+mr"iR
+R$N(
+>S\f}W
+-sSO\
+T%L9
+hGT.
+B}T}
+=@[V
+!a9X
+X5AHx
+%4xY
+Z~$|7
++\0I
+2a\|
+\ysK
+|M$D
+pH_r
+(:W"
+s\ax}?
+pc2g
+@BXV
+tC7Ddx
+EydV
+d6\f6
+eax~Z
+5h\r:
+ekhHD
+@iZb
+k0V(
+k*do^
+k5=\v6~
+:V!2m
+RJqn
+bzo=
+$qE}
+XqkY
+r\v_|s
+quAt
+Jugm
+~B v
+STv/N
+_w&2
+xg^Jp5|
+/L\rry=
+yMzw\n
+;\tFzo
+{zel#|67
+P/};
+c}\n=!
+[@JO
+nQ:B
+-;eU
+U1(\Q
+mSx@
+b}$l
+_\rXf
+~)p$w
+11eU%
+z^KD
+Fossilize ERROR: Not an array.\n
+Fossilize ERROR: Not a string.\n
+basic_string::_S_construct null not valid
+VendorID
+DescriptorBuffer
+Fossilize ERROR: bucketVariantDependencies must be an array.\n
+Fossilize WARN: Couldn't find variant dependency for %s, ignoring.\n
+Fossilize INFO: pApplicationName %s is blacklisted for recording. Skipping.\n
+Fossilize INFO: pEngineName %s is blacklisted for recording. Skipping.\n
+Fossilize INFO: applicationVersion %u is too low for pApplicationName %s. Skipping.\n
+Fossilize INFO: apiVersion %u is too low for pApplicationName %s. Skipping.\n
+Fossilize INFO: Skipping recording due to environment rule for: %s.\n
+Fossilize INFO: engineVersion %u is too low for pEngineName %s. Skipping.\n
+Fossilize INFO: apiVersion %u is too low for pEngineName %s. Skipping.\n
+Fossilize ERROR: Not an object.\n
+Fossilize ERROR: blacklistedEnvironments must be an object.\n
+Fossilize ERROR: blacklistEnvironment element must be object.\n
+bucketVariantFeatureDependencies
+minimumApiVersion
+minimumEngineVersion
+minimumApplicationVersion
+recordImmutableSamplers
+blacklistedEnvironments
+contains
+equals
+nonnull
+bucketVariantDependencies
+asset
+Fossilize ERROR: Not an int.\n
+blacklistedApplicationNames
+blacklistedEngineNames
+applicationFilters
+engineFilters
+FossilizeApplicationInfoFilter
+defaultBucketVariantDependencies
+defaultBucketVariantFeatureDependencies
+Fossilize ERROR: Member not found.\n
+MutableDescriptorType
+BindlessUBO
+BufferDeviceAddress
+ApplicationVersionMajor
+ApplicationVersionMinor
+ApplicationVersionPatch
+EngineVersionMajor
+EngineVersionMinor
+EngineVersionPatch
+ApplicationName
+EngineName
+DynamicRendering
+CRC mismatch!\n
+Fossilize ERROR: CRC mismatch!\n
+Fossilize WARN: Archive %s could not be prepared, skipping.\n
+.foz
+%02x.%016llx.json
+Failed to open file: %s\n
+Failed to seek in file: %s\n
+vector::reserve
+Fossilize ERROR: Failed to create directory %s.\n
+Fossilize WARN: Failed to touch last access in %s.\n
+%s: __pos (which is %zu) > this->size() (which is %zu)
+TOUCH
+basic_string::substr
+%0*x
+Failed to add blob to cache.\n
+Fossilize WARN: Failed to advise of file usage. This is not fatal, but might compromise disk performance.\n
+Fossilize WARN: Detected sliced file. Dropping entries from here.\n
+N9Fossilize17DatabaseInterfaceE
+N9Fossilize13StreamArchiveE
+N9Fossilize18ConcurrentDatabaseE
+FOSSILIZEDB
+Fossilize WARN: Failed to record YCbCr conversion, usually caused by unsupported pNext.\n
+Fossilize WARN: Failed to record render pass, usually caused by unsupported pNext.\n
+Fossilize WARN: Failed to record compute pipeline, usually caused by unsupported pNext.\n
+Fossilize WARN: Failed to capture eagerly.\n
+Failed to capture eagerly.\n
+Fossilize WARN: Failed to record shader module, usually caused by unsupported pNext.\n
+Fossilize WARN: Failed to record sampler, usually caused by unsupported pNext.\n
+Fossilize WARN: Recording graphics pipeline failed, usually caused by unsupported pNext.\n
+Fossilize WARN: Failed to record graphics pipeline, usually caused by unsupported pNext.\n
+Fossilize WARN: Failed to record pipeline layout, usually caused by unsupported pNext.\n
+Fossilize WARN: Failed to record descriptor set layout, usually caused by unsupported pNext.\n
+vkCreateInstance
+vkCreateDevice
+vkGetDeviceProcAddr
+vkDestroyDevice
+vkCreateDescriptorSetLayout
+vkCreatePipelineLayout
+vkCreateGraphicsPipelines
+vkCreateComputePipelines
+vkCreateSampler
+vkCreateShaderModule
+vkCreateRenderPass
+vkCreateRenderPass2
+vkCreateRenderPass2KHR
+vkDestroyInstance
+vkGetInstanceProcAddr
+vkCreateSamplerYcbcrConversion
+vkCreateSamplerYcbcrConversionKHR
+vkCreateRayTracingPipelinesKHR
+vkDestroyPipeline
+vkGetShaderModuleIdentifierEXT
+vkGetShaderModuleCreateInfoIdentifierEXT
+vkGetPhysicalDeviceProperties
+vkGetPhysicalDeviceProperties2
+vkGetPhysicalDeviceProperties2KHR
+FOSSILIZE_APPLICATION_INFO_FILTER_PATH
+Failed to parse ApplicationInfoFilter, letting recording go through.\n
+Fossilize ERROR: Failed to parse ApplicationInfoFilter, letting recording go through.\n
+FOSSILIZE_DUMP_SYNC
+fossilize
+STEAM_FOSSILIZE_DUMP_PATH
+FOSSILIZE_LAST_USE_TAG
+%02x
+Fossilize INFO: Overriding serialization path: "%s".\n
+STEAM_FOSSILIZE_DUMP_PATH_READ_ONLY
+FOSSILIZE_IDENTIFIER_DUMP_PATH
+Failed to record application info.\n
+Fossilize ERROR: Failed to record application info.\n
+Failed to record physical device features.\n
+Fossilize ERROR: Failed to record physical device features.\n
+\t\t\t\t\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
+\t\t\t\t\t\t\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
+ n;^
+Qkkbal
+3_L\n
+>jm\r
+Zjz\v
+i]Wb
+9a&g
+MGiI
+wn>Jj
+#.zf
++o*7
+-://
+basic_string::erase
+N10__cxxabiv117__class_type_infoE
+pure virtual method called\n
+N10__cxxabiv120__si_class_type_infoE
+St9type_info
+terminate called recursively\n
+  what():  
+terminate called after throwing an instance of '
+terminate called without an active exception\n
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+NSt6locale5facetE
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
+UTF-8
+ASCII//TRANSLIT
+ASCII
+true
+false
+St12codecvt_base
+St23__codecvt_abstract_baseIDsc11__mbstate_tE
+St7codecvtIDsc11__mbstate_tE
+St23__codecvt_abstract_baseIDic11__mbstate_tE
+St7codecvtIDic11__mbstate_tE
+St23__codecvt_abstract_baseIDsDu11__mbstate_tE
+St7codecvtIDsDu11__mbstate_tE
+St23__codecvt_abstract_baseIDiDu11__mbstate_tE
+St7codecvtIDiDu11__mbstate_tE
+St10ctype_base
+St5ctypeIcE
+St5ctypeIwE
+space
+print
+cntrl
+upper
+lower
+alpha
+punct
+xdigit
+alnum
+graph
+blank
+\v\v\v\v\r\r
+\t\rK~\n
+CH\f1
+I\r]P`
+H;!}#@i
+FoCLcx
+?basic_ios::clear
+St9basic_iosIcSt11char_traitsIcEE
+St8ios_base
+%.*Lf
+%m/%d/%y
+%H:%M
+%H:%M:%S
+St9time_base
+St10money_base
+St13messages_base
+St7collateIcE
+St8numpunctIcE
+St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St17__timepunct_cacheIcE
+St11__timepunctIcE
+St10moneypunctIcLb1EE
+St10moneypunctIcLb0EE
+St8messagesIcE
+St23__codecvt_abstract_baseIcc11__mbstate_tE
+St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St18__moneypunct_cacheIcLb0EE
+St18__moneypunct_cacheIcLb1EE
+St16__numpunct_cacheIcE
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
+St15basic_stringbufIcSt11char_traitsIcESaIcEE
+St19basic_ostringstreamIcSt11char_traitsIcESaIcEE
+St15basic_streambufIcSt11char_traitsIcEE
+basic_string::copy
+basic_string::compare
+basic_string::_S_create
+basic_string::_M_replace_aux
+basic_string::insert
+basic_string::replace
+basic_string::assign
+basic_string::append
+basic_string::resize
+basic_string::basic_string
+generic
+system
+NSt3_V214error_categoryE
+St12system_error
+*N12_GLOBAL__N_122generic_error_categoryE
+*N12_GLOBAL__N_121system_error_categoryE
+NSt6thread6_StateE
+St7collateIwE
+St21__ctype_abstract_baseIwE
+St8numpunctIwE
+St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St17__timepunct_cacheIwE
+St11__timepunctIwE
+St10moneypunctIwLb1EE
+St10moneypunctIwLb0EE
+St8messagesIwE
+St23__codecvt_abstract_baseIwc11__mbstate_tE
+St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St18__moneypunct_cacheIwLb0EE
+St18__moneypunct_cacheIwLb1EE
+St16__numpunct_cacheIwE
+std::bad_alloc
+St9bad_alloc
+std::bad_cast
+St8bad_cast
+_GLOBAL_
+(anonymous namespace)
+string literal
+auto
+decltype(auto)
+[abi:
+{default arg#
+JArray
+auto:
+VTT for 
+construction vtable for 
+-in-
+typeinfo for 
+typeinfo name for 
+typeinfo fn for 
+non-virtual thunk to 
+covariant return thunk to 
+java Class for 
+guard variable for 
+TLS init function for 
+TLS wrapper function for 
+reference temporary #
+hidden alias for 
+non-transaction clone for 
+_Sat 
+_Fract
+_Accum
+operator
+operator 
+new 
+java resource 
+decltype (
+{parm#
+this
+global constructors keyed to 
+global destructors keyed to 
+{lambda(
+{unnamed type#
+ [clone 
+ restrict
+ volatile
+ const
+ transaction_safe
+ noexcept
+ throw
+complex 
+imaginary 
+ __vector(
+(...
+...)
+std::allocator
+std::basic_string
+std::string
+std::istream
+basic_istream
+std::ostream
+basic_ostream
+std::iostream
+basic_iostream
+alignof 
+const_cast
+delete[] 
+dynamic_cast
+delete 
+operator"" 
+new[]
+reinterpret_cast
+sizeof...
+static_cast
+sizeof 
+throw 
+bool
+boolean
+byte
+long double
+float
+__float128
+unsigned char
+unsigned int
+unsigned
+unsigned long
+unsigned __int128
+unsigned short
+void
+wchar_t
+unsigned long long
+decimal32
+decimal64
+decimal128
+half
+char8_t
+char16_t
+char32_t
+decltype(nullptr)
+template parameter object for 
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_iostream<char, std::char_traits<char> >
+std::exception
+std::bad_exception
+St9exception
+St13bad_exception
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv119__foreign_exceptionE
+N9__gnu_cxx20recursive_init_errorE
+N10__cxxabiv121__vmi_class_type_infoE
+locale::facet::_S_create_c_locale name not valid
+St7codecvtIcc11__mbstate_tE
+St7codecvtIwc11__mbstate_tE
+NSt8ios_base7failureE
+-+xX0123456789abcdef0123456789ABCDEF
+-+xX0123456789abcdefABCDEF
+-0123456789
+AKST
+St11logic_error
+St12length_error
+St12out_of_range
+St13runtime_error
+Sunday
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+January
+February
+March
+April
+June
+July
+August
+September
+October
+November
+December
+std::bad_array_new_length
+St20bad_array_new_length
+pthread_mutex_unlock@GLIBC_2.0
+strstr@GLIBC_2.0
+wcrtomb@GLIBC_2.0
+mbsrtowcs@GLIBC_2.0
+posix_fadvise@GLIBC_2.2
+strcmp@GLIBC_2.0
+_ZTIN9__gnu_cxx20recursive_init_errorE
+_ITM_deregisterTMCloneTable
+_Z20_txnal_cow_string_D1Pv
+fflush@GLIBC_2.0
+stderr@GLIBC_2.0
+_ZTSN10__cxxabiv121__vmi_class_type_infoE
+_ZTSN10__cxxabiv119__foreign_exceptionE
+free@GLIBC_2.0
+__towlower_l@GLIBC_2.1
+strdup@GLIBC_2.0
+___tls_get_addr@GLIBC_2.3
+_ZTVN10__cxxabiv115__forced_unwindE
+_ITM_RU1
+fclose@GLIBC_2.1
+time@GLIBC_2.0
+pthread_cond_wait@GLIBC_2.3.2
+__nl_langinfo_l@GLIBC_2.2
+memcmp@GLIBC_2.0
+_ZTIN10__cxxabiv117__class_type_infoE
+_ZTSN9__gnu_cxx20recursive_init_errorE
+_fini
+__stack_chk_fail@GLIBC_2.4
+_ZTIN9__gnu_cxx24__concurrence_lock_errorE
+rewind@GLIBC_2.0
+_Z26_txnal_logic_error_get_msgPv
+__strxfrm_l@GLIBC_2.1
+pthread_mutex_lock@GLIBC_2.0
+_ZTSN10__cxxabiv120__si_class_type_infoE
+_ITM_addUserCommitAction
+__towupper_l@GLIBC_2.1
+fseek@GLIBC_2.0
+_ITM_memcpyRtWn
+_Z23_txnal_cow_string_c_strPKv
+_Z27_txnal_cow_string_D1_commitPv
+__cxa_finalize@GLIBC_2.1.3
+__xstat@GLIBC_2.0
+wmemcpy@GLIBC_2.0
+fwrite@GLIBC_2.0
+__ctype_get_mb_cur_max@GLIBC_2.0
+fread@GLIBC_2.0
+_ZTIN10__cxxabiv120__si_class_type_infoE
+__uselocale@GLIBC_2.3
+mbrtowc@GLIBC_2.0
+_ZTSN10__cxxabiv115__forced_unwindE
+__cxa_atexit@GLIBC_2.1.3
+pthread_cond_signal@GLIBC_2.3.2
+_ZTSN10__cxxabiv117__class_type_infoE
+wcscmp@GLIBC_2.0
+bind_textdomain_codeset@GLIBC_2.2
+__wcsxfrm_l@GLIBC_2.1
+__strcoll_l@GLIBC_2.1
+getenv@GLIBC_2.0
+realloc@GLIBC_2.0
+mbsnrtowcs@GLIBC_2.0
+malloc@GLIBC_2.0
+_ZTIN10__cxxabiv115__forced_unwindE
+__wcscoll_l@GLIBC_2.1
+__duplocale@GLIBC_2.1
+strerror@GLIBC_2.0
+__memcpy_chk@GLIBC_2.3.4
+__gmon_start__
+pthread_once@GLIBC_2.0
+open@GLIBC_2.0
+_ZGTtnaj
+__wcsftime_l@GLIBC_2.3
+strtoul@GLIBC_2.0
+dl_iterate_phdr@GLIBC_2.2.4
+_ZTIN10__cxxabiv119__foreign_exceptionE
+strlen@GLIBC_2.0
+_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
+iconv@GLIBC_2.1
+iconv_close@GLIBC_2.1
+wctob@GLIBC_2.0
+_Z28_txnal_runtime_error_get_msgPv
+_ZTIN10__cxxabiv121__vmi_class_type_infoE
+_ZTSN9__gnu_cxx24__concurrence_lock_errorE
+ftell@GLIBC_2.0
+fopen@GLIBC_2.1
+mkdir@GLIBC_2.0
+__errno_location@GLIBC_2.0
+btowc@GLIBC_2.0
+syscall@GLIBC_2.0
+strtoull@GLIBC_2.0
+fileno@GLIBC_2.0
+wcslen@GLIBC_2.0
+_ZTVN10__cxxabiv119__foreign_exceptionE
+__vsnprintf_chk@GLIBC_2.3.4
+_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+VK_LAYER_fossilize_GetDeviceProcAddr
+_ITM_RU4
+_ZTVN9__gnu_cxx24__concurrence_lock_errorE
+wcsnrtombs@GLIBC_2.0
+munmap@GLIBC_2.0
+_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
+pthread_cond_timedwait@GLIBC_2.3.2
+__newlocale@GLIBC_2.1
+wmemset@GLIBC_2.0
+_ZTVN10__cxxabiv120__si_class_type_infoE
+wmemchr@GLIBC_2.0
+pthread_cond_destroy@GLIBC_2.3.2
+fputc@GLIBC_2.0
+__strftime_l@GLIBC_2.3
+futimens@GLIBC_2.6
+pthread_join@GLIBC_2.0
+wmemmove@GLIBC_2.0
+vsnprintf@GLIBC_2.0
+__fprintf_chk@GLIBC_2.3.4
+pthread_create@GLIBC_2.1
+dgettext@GLIBC_2.0
+__freelocale@GLIBC_2.1
+_ITM_registerTMCloneTable
+__strtod_l@GLIBC_2.1
+_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
+__strtof_l@GLIBC_2.1
+__iswctype_l@GLIBC_2.1
+strncmp@GLIBC_2.0
+strtold_l@GLIBC_2.3
+VK_LAYER_fossilize_GetInstanceProcAddr
+abort@GLIBC_2.0
+_ZTVN10__cxxabiv117__class_type_infoE
+iconv_open@GLIBC_2.1
+fputs@GLIBC_2.0
+_init
+close@GLIBC_2.0
+_ZTVN9__gnu_cxx20recursive_init_errorE
+__wctype_l@GLIBC_2.1
+__pthread_key_create@GLIBC_2.0
+_ZTVN10__cxxabiv121__vmi_class_type_infoE
+__sprintf_chk@GLIBC_2.3.4
+GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
+GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3

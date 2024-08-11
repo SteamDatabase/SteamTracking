@@ -1,0 +1,4 @@
+[submodule "DumpStrings"]
+	path = DumpStrings
+	url = https://github.com/xPaw/DumpStrings
+	shallow = true

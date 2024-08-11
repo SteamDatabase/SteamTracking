@@ -35,8 +35,6 @@ if( file_exists( '/var/www/steamdb.info/Library/Bugsnag/Autoload.php' ) )
 		/** @var array<string, string> */
 		private array $ClientArchiveFolder =
 		[
-			'ClientManifest/steam_client_publicbeta_osx'      => 'archives',
-			'ClientManifest/steam_cmd_publicbeta_osx'         => 'archives',
 			'ClientManifest/steam_client_publicbeta_ubuntu12' => 'linux_archives',
 			'ClientManifest/steam_cmd_publicbeta_linux'       => 'linux_archives',
 		];

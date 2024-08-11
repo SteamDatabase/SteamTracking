@@ -1,3224 +1,1510 @@
-__TEXT
-__text
-__TEXT
-__symbol_stub
-__TEXT
-__stub_helper
-__TEXT
-__gcc_except_tab__TEXT
-__cstring
-__TEXT
-__const
-__TEXT
-__unwind_info
-__TEXT
-__OBJC
-__cls_refs
-__OBJC
-__message_refs
-__OBJC
-__module_info
-__OBJC
-__image_info
-__OBJC
-__DATA
-__nl_symbol_ptr
-__DATA
-__got
-__DATA
-__la_symbol_ptr
-__DATA
-__mod_init_func
-__DATA
-__const
-__DATA
-__cfstring
-__DATA
-__data
-__DATA
-__thread_vars
-__DATA
-__thread_bss
-__DATA
-__bss
-__DATA
-__common
-__DATA
-__LINKEDIT
-@loader_path/crashhandler.dylib
-QPG<
-/usr/lib/libiconv.2.dylib
-/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
-/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
-/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
-/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
-@loader_path/Frameworks/Breakpad.framework/Versions/A/Breakpad
-/usr/lib/libc++.1.dylib
-/usr/lib/libSystem.B.dylib
-/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
-/usr/lib/libobjc.A.dylib
-,^_[]
-<^_[]
-|^_[]
-l^_[]
-l^_[]
-^_[]
-^_[]
-7Insp
-ectof
-Insp
-ectof
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-jhPS
-^_[]
-^_[]
-^_[]
-P^_]
-<^_[]
-^_[]
-SQSS
-^_[]
-,^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-j~j P
-^_[]
-^_[]
-^_[]
-^_[]
-VRQP
-^_[]
-t3B@9
-^_[]
-^_[]
-8,3u.
-.u(8l
-;.u$8k
-^_[]
-<^_[]
-^_[]
-^_[]
-^_[]
-RQWP
-^_[]
-^_[]
-<\t	
-^_[]
-<^_[]
-u%K9
-</t,
-\^_[]
-L^_[]
-^_[]
-,^_[]
-^_[]
-<^_[]
-,^_[]
-/u;O
-<^_[]
-<^_[]
-QRPS
-^_[]
-Wj/PQRS
-^_[]
-8*.*
-^_[]
-VWQPS
-^_[]
-^_[]
-^_[]
-Pj\R
-^_[]
-Qj#P
-^_[]
- ^_]
-rq;]
-,^_[]
-^_[]
-^_[]
-^_[]
-,^_[]
-,^_[]
-QQPVj
-^_[]
-^_[]
-^_[]
-QPRRR
-QPRRR
-^_[]
-^_[]
- ^_]
-^_[]
-VRQP
-^_[]
-PRQj
-SWVP
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-t.RQPS
-RQPS
-,^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-%UUUU
-3333
-^_[]
-^_[]
-^_[]
-9{dw
-9{hr
-1RWV
-^_[]
-;Gxs	9_t
-;Oxs
-9_tw
-^_[]
-^_[]
-;Nxs
-^_[]
-;Vxs
-9~tw
-_l;_|r
-^_[]
-9{dw
-9{hr
-^_[]
-;Gxs	9_t
-;Oxs
-9_tw
-^_[]
-^_[]
-%UUUU
-3333!
-=fff
-t";]
-^_[]
-%UUUU
-3333
-%UUUU
-3333
-UUUU
-3333
-L^_[]
-9_dw
-9_hr
-^_[]
-9_dw
-9_hr
-^_[]
-^_[]
-^_[]
-QjYP
-^_[]
-^_[]
-^_[]
-UUUU
-3333
-^_[]
-%UUUU
-3333
-^_[]
-%UUUU
-3333
-^_[]
- ^_]
-%UUUU
-3333
-^_[]
-^_[]
-%UUUU
-3333
-u4;}
-,^_[]
-L^_[]
-^_[]
-,^_[]
-,^_[]
-<^_[]
-^_[]
-%UUUU
-3333
-,^_[]
-%UUUU
-3333
-^_[]
-UUUU
-3333
-^_[]
-%UUUU
-3333
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-,^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-VRQP
-L^_[]
- ^_]
-^_[]
-^_[]
-Ph@B
-^_[]
-^_[]
-xdud
-,^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-^_[]
-SWV1
-^_[]
-^_[]
-^_[]
-QPRj W
-VUUU
-\^_[]
-Qj1P
-^_[]
-<8G8t
-^_[]
-^_[]
-^_[]
-VWPS
-^_[]
-PQRWV
-^_[]
-^_[]
-,^_[]
-^_[]
-PSj	V
-^_[]
-^_[]
-^_[]
-^_[]
-Installing breakpad crash handler
-BreakpadProductDisplay
-BreakpadProduct
-BreakpadVendor
-BreakpadVersion
-BreakpadURL
-BuildID
-BreakpadReportInterval
-BreakpadSkipConfirm
-BreakpadSendAndExit
-BreakpadInspectorLocation
-BreakpadReporterExeLocation
-BreakpadMinidumpLocation
-BreakpadEmail
-BreakpadRequestComments
-BreakpadComments
-BreakpadServerType
-BreakpadInProcess
-https://crash.steampowered.com/submit
-True
-False
-Valve
-socorro
-ProductName
-Version
-Notes
-Vendor
-www.steampowered.com
-UserID
-Steam
-Add-ons
-Theme
-Platform
-Mac OS X
-SteamUniverse
-Config-*
-Uploading pending dumps
-%s/%s
-Uploaded %d pending dumps
-%lld
-SteamID:  %s, universe %s
-breakpadUtilities.dylib
-/../Frameworks/Breakpad.framework/Resources
-found breakpad via in process memory: '%s'
-found steam via cross-process IPC: '%s'
-unable to determine steam exe path, falling back to %s, crash reporting probably will not be functional!!!
-crash_report_sender.app
-NSAutoreleasePool
-alloc
-init
-NSBundle
-NSString
-stringWithCString:encoding:
-bundleWithPath:
-executablePath
-UTF8String
-release
+__gmon_start__
+_fini
+_ITM_deregisterTMCloneTable
+_ITM_registerTMCloneTable
+__cxa_finalize
+getenv
+strtol
+localtime
+stderr
+__fprintf_chk
+__vfprintf_chk
+pthread_mutex_lock
+pthread_mutex_unlock
+getpid
+strlen
+__wrap___xstat64
+__wrap_mkdir
+setenv
+__snprintf_chk
+__realpath_chk
+free
+geteuid
+__strcpy_chk
+getegid
+realloc
+malloc
+fflush
+__wrap_open
+gmtime
+asctime
+strchr
+gettimeofday
+memcmp
+vfork
+waitpid
+execv
+_exit
+__errno_location
+syscall
+__cxa_atexit
+_ZTVN10__cxxabiv117__class_type_infoE
+_ZTVN10__cxxabiv120__si_class_type_infoE
+__pthread_key_create
+CreateInterface
+Breakpad_SetSteamID
+__wrap_dlopen
+dlsym
+fwrite
+dlclose
+dlerror
+__dprintf_chk
+rewind
+strncasecmp
+fgets
+__wrap_fopen
+strcasecmp
+__vsnprintf_chk
+stdout
+fputc
+backtrace_symbols
+malloc_usable_size
+posix_memalign
+strncpy
+__printf_chk
+pthread_mutex_trylock
+strrchr
+__ctype_tolower_loc
+sscanf
+dladdr
+clock_gettime
+readlink
+uname
+fputs
+backtrace
+pthread_mutex_destroy
+pthread_key_delete
+nanosleep
+pthread_getspecific
+sched_yield
+pthread_mutexattr_init
+pthread_mutexattr_settype
+pthread_mutex_init
+sigemptyset
+sigaddset
+__wrap_opendir
+closedir
+strncat
+strerror
+__wrap_chdir
+sigaction
+__memcpy_chk
+pthread_setspecific
+_ZTIi
+strcmp
+wcslen
+vsnprintf
+strncmp
+getcwd
+strpbrk
+___tls_get_addr
+fnmatch
+__wrap_open64
+flock
+__wrap_unlink
+posix_fadvise
+__wrap___xstat
+__wrap_fopen64
+fread
+__wrap_chmod
+__wrap_utime
+__wrap_rename
+__wrap___lxstat64
+__wrap_link
+__wrap_rmdir
+__wrap_statvfs64
+readdir64
+__wrap_statfs
+fcntl
+alphasort64
+__wrap_scandir64
+__wrap_symlink
+realpath
+strdup
+faccessat
+tolower
+strcasestr
+SteamRealPath
+__wrap_freopen
+__wrap_access
+__wrap_stat
+__wrap_lstat
+__wrap_stat64
+__wrap_lstat64
+__wrap_scandir
+__wrap___lxstat
+__wrap_statvfs
+__wrap_statfs64
+__wrap_chown
+__wrap_lchown
+__wrap_mknod
+__wrap_mount
+__wrap_mkfifo
+__wrap_utimes
+__wrap_dlmopen
+__vasprintf_chk
+ftello64
+signal
+getpagesize
+getcontext
+lseek
+ftruncate
+__assert_fail
+calloc
+sysconf
+_ZTSN10__cxxabiv117__class_type_infoE
+_ZTIN10__cxxabiv117__class_type_infoE
+_ZTVN9__gnu_cxx24__concurrence_lock_errorE
+_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
+_ZTIN9__gnu_cxx24__concurrence_lock_errorE
+_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
+_ZTSN9__gnu_cxx24__concurrence_lock_errorE
+_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
+_ZTSN10__cxxabiv115__forced_unwindE
+_ZTIN10__cxxabiv115__forced_unwindE
+_ZTSN10__cxxabiv119__foreign_exceptionE
+_ZTIN10__cxxabiv119__foreign_exceptionE
+_ZTVN10__cxxabiv115__forced_unwindE
+_ZTVN10__cxxabiv119__foreign_exceptionE
+abort
+_ZTVN10__cxxabiv123__fundamental_type_infoE
+_ZTSN10__cxxabiv123__fundamental_type_infoE
+_ZTIN10__cxxabiv123__fundamental_type_infoE
+_ZTSv
+_ZTSPv
+_ZTSPKv
+_ZTSb
+_ZTSPb
+_ZTSPKb
+_ZTSw
+_ZTSPw
+_ZTSPKw
+_ZTSDu
+_ZTSPDu
+_ZTSPKDu
+_ZTSDs
+_ZTSPDs
+_ZTSPKDs
+_ZTSDi
+_ZTSPDi
+_ZTSPKDi
+_ZTSc
+_ZTSPc
+_ZTSPKc
+_ZTSa
+_ZTSPa
+_ZTSPKa
+_ZTSh
+_ZTSPh
+_ZTSPKh
+_ZTSs
+_ZTSPs
+_ZTSPKs
+_ZTSt
+_ZTSPt
+_ZTSPKt
+_ZTSi
+_ZTSPi
+_ZTSPKi
+_ZTSj
+_ZTSPj
+_ZTSPKj
+_ZTSl
+_ZTSPl
+_ZTSPKl
+_ZTSm
+_ZTSPm
+_ZTSPKm
+_ZTSx
+_ZTSPx
+_ZTSPKx
+_ZTSy
+_ZTSPy
+_ZTSPKy
+_ZTSf
+_ZTSPf
+_ZTSPKf
+_ZTSd
+_ZTSPd
+_ZTSPKd
+_ZTSe
+_ZTSPe
+_ZTSPKe
+_ZTSDf
+_ZTSPDf
+_ZTSPKDf
+_ZTSDd
+_ZTSPDd
+_ZTSPKDd
+_ZTSDe
+_ZTSPDe
+_ZTSPKDe
+_ZTSDn
+_ZTSPDn
+_ZTSPKDn
+_ZTSg
+_ZTSPg
+_ZTSPKg
+_ZTIPKg
+_ZTVN10__cxxabiv119__pointer_type_infoE
+_ZTIg
+_ZTIPg
+_ZTIPKDn
+_ZTIDn
+_ZTIPDn
+_ZTIPKDe
+_ZTIDe
+_ZTIPDe
+_ZTIPKDd
+_ZTIDd
+_ZTIPDd
+_ZTIPKDf
+_ZTIDf
+_ZTIPDf
+_ZTIPKe
+_ZTIe
+_ZTIPe
+_ZTIPKd
+_ZTId
+_ZTIPd
+_ZTIPKf
+_ZTIf
+_ZTIPf
+_ZTIPKy
+_ZTIy
+_ZTIPy
+_ZTIPKx
+_ZTIx
+_ZTIPx
+_ZTIPKm
+_ZTIm
+_ZTIPm
+_ZTIPKl
+_ZTIl
+_ZTIPl
+_ZTIPKj
+_ZTIj
+_ZTIPj
+_ZTIPKi
+_ZTIPi
+_ZTIPKt
+_ZTIt
+_ZTIPt
+_ZTIPKs
+_ZTIs
+_ZTIPs
+_ZTIPKh
+_ZTIh
+_ZTIPh
+_ZTIPKa
+_ZTIa
+_ZTIPa
+_ZTIPKc
+_ZTIc
+_ZTIPc
+_ZTIPKDi
+_ZTIDi
+_ZTIPDi
+_ZTIPKDs
+_ZTIDs
+_ZTIPDs
+_ZTIPKDu
+_ZTIDu
+_ZTIPDu
+_ZTIPKw
+_ZTIw
+_ZTIPw
+_ZTIPKb
+_ZTIb
+_ZTIPb
+_ZTIPKv
+_ZTIv
+_ZTIPv
+_ZTIN9__gnu_cxx20recursive_init_errorE
+_ZTVN9__gnu_cxx20recursive_init_errorE
+_ZTSN9__gnu_cxx20recursive_init_errorE
+_ZTSN10__cxxabiv119__pointer_type_infoE
+_ZTIN10__cxxabiv119__pointer_type_infoE
+_ZTIN10__cxxabiv117__pbase_type_infoE
+_ZTSN10__cxxabiv120__si_class_type_infoE
+_ZTIN10__cxxabiv120__si_class_type_infoE
+stdin
+pthread_once
+__nl_langinfo_l
+__uselocale
+mbsrtowcs
+wcscmp
+iconv_open
+iconv
+iconv_close
+_ZTVN10__cxxabiv121__vmi_class_type_infoE
+__wctype_l
+__towupper_l
+__towlower_l
+__iswctype_l
+wctob
+btowc
+ungetc
+fseeko64
+ungetwc
+putwc
+wmemcpy
+wmemset
+wmemchr
+wmemmove
+__sprintf_chk
+_ZTVN10__cxxabiv117__pbase_type_infoE
+_ZTIN10__cxxabiv129__pointer_to_member_type_infoE
+_ZTSN10__cxxabiv117__pbase_type_infoE
+_ZTVN10__cxxabiv129__pointer_to_member_type_infoE
+_ZTSN10__cxxabiv129__pointer_to_member_type_infoE
+_ZTSN10__cxxabiv121__vmi_class_type_infoE
+_ZTIN10__cxxabiv121__vmi_class_type_infoE
+__strtof_l
+__strtod_l
+strtold_l
+__newlocale
+__freelocale
+__duplocale
+wcsnrtombs
+wcrtomb
+mbsnrtowcs
+mbrtowc
+__ctype_get_mb_cur_max
+__strcoll_l
+__strxfrm_l
+__wcscoll_l
+__wcsxfrm_l
+bind_textdomain_codeset
+dgettext
+__strftime_l
+__wcsftime_l
+_Z27_txnal_cow_string_D1_commitPv
+_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+_ITM_RU1
+_ZGTtnaj
+_ITM_memcpyRtWn
+_Z23_txnal_cow_string_c_strPKv
+_ITM_RU4
+_Z20_txnal_cow_string_D1Pv
+_ITM_addUserCommitAction
+_Z26_txnal_logic_error_get_msgPv
+_Z28_txnal_runtime_error_get_msgPv
+dl_iterate_phdr
+__xmknod
+__stack_chk_fail
+libdl.so.2
+librt.so.1
+ld-linux.so.2
+libm.so.6
+libpthread.so.0
+libc.so.6
+GLIBC_2.2
+GLIBC_2.1
+GLIBC_2.3.4
+GLIBC_2.0
+GLIBC_2.3
+GLIBC_2.2.4
+GLIBC_2.2.3
+GLIBC_2.4
+GLIBC_2.8
+GLIBC_2.1.3
+breakpad_verbose
+%02i/%02i %02i:%02i:%02i 
+SetComment
+%s Setting comment to %s.\n
+WriteMiniDump
+%s: Skipping, no context!\n
+%s: Writing.\n
+WriteMinidump
+%s Skipping as no handler.\n
+%s Writing.\n
+Breakpad_FilterCallback
+%s Ignoring t_id != getpid()\n
+%s Calling pre minidump callback\n
+%s No pre-minidump callback registered\n
+Init
+%s: Starting.\n
+%s: Already initialized.\n
 /tmp/dumps
-%s%d
-Could not select valid crash dump directory based on %s.
-Unable to locate one or both of:
-'%s'
-'%s'
-Crash Uploading will not function.
-Beta
-Internal
-Public
-com.valvesoftware.steam.ipctool
-ipcserver restart: expected: %d, got: %d
-pid %d != %d, clearing client_port = %d, server_port = %d
-pid %d != %d, re-initing before send; client_port = %d, server_port = %d
-StopJob
-pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
+%s%02d
+/proc/self/cmdline
+/bin/steamerrorreporter
+BREAKPAD_DUMP_LOCATION
+HOME
+sdk32
+%s/.steam/%s
+%s: is not a directory - delete and recreate.\n
+%s: could not delete, skipping.\n
+%s: is not owned by us - delete and recreate.\n
+%s: insufficient permissions - delete and recreate\n
+%s: failed to create, skipping\n
+\nFATAL: Steam cannot run. Please delete some %s* directories or change their ownership to the local user.\n
+/data/src/crashhandler/breakpad_linux.cpp
+minidumps folder is set to %s\n
+Could not read /proc/self/cmdline when trying to find steamerrorreporter
+Could not find steamerrorreporter binary. Any minidumps will be uploaded in-process
 (&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-num > 0
-crashhandler001
+/data/src/public/tier1/utlvector.h
+/data/src/public/tier1/utlmemory.h
+SendCrashReport
+%s: Sending crash report.\n
+upload_file_minidump
+success = %s\n
+basic_string::erase
+response:  %s\n
+error:  %s\n
+USER
+%s/%s_log.txt
+ GMT: 
+file ''
+'', upload 
+yes: ''
+no: ''
+Unable to write failure log\n
+https://crash.steampowered.com/submit
+Uploading dump (in-process) [url '%s', proxy '%s']\n%s\n
+%s: __pos (which is %zu) > this->size() (which is %zu)
+%s Adding custom info: %s=%s.\n
+SetAppID
+%s Skipping as app ID = 0.\n
+%s Setting app ID to %u.\n
+ProductName
+uptime
+StartupTime
+CrashTime
+Failed writing minidump, nothing to upload.\n
+%s: Attempting to use error reporter path: %s\n
+ERROR: execv failed when trying to send minidump\n
+ERROR: waitpid() on child forked process failed when uploading minidump: %d\n
+ERROR: Could not run steamerrorreporter binary. Uploading minidump in-process\n
+ERROR TRYING TO vfork() TO SEND MINIDUMP\nRESORTING TO IN-PROCESS MINIDUMP\n
+%s: Attempting to send crash report in process: %s\n
+m_bInitialized
+Breakpad_MinidumpCallback
+SendExistingMinidump
+%s: Sending.\n
+Beta
+Public
+Internal
+SetSteamID
+%s Skipping as Steam ID = 0.\n
+Setting Steam ID: %llu\n
+%lld
+UserID
+SteamUniverse
+Unknown universe %d, assuming public\n
+Setting SteamUniverse: %d = %s\n
+<empty>
+%s Initializing.\n
+Version
+BuildID
+Vendor
+Valve
+www.steampowered.com
+Platform
+Linux
+breakpad_testfile
+%s Done.\n
+%s Returning as already initialized.\n
+%s: Installing breakpad exception handler for appid(%s)/version(%s)/tid(%d)\n
+InitHandler
+HTTP_PROXY
+http_proxy
+ALL_PROXY
+all_proxy
+16IBreakpadFactory
+16CBreakpadFactory
+zDcrashhandler001
 crashhandler002
 crashhandler003
 crashhandler004
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
-Invalid macOS version %d.%d.%d
-unknown
-NSProcessInfo
-processInfo
-operatingSystemVersion
-respondsToSelector:
-defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
-pStr != NULL
-pSearch != NULL
-maxLen == 0 || pDest != NULL
-pSrc != NULL
-bufferLen > 0 && bufferLen <= INT_MAX
-pDest != NULL
-pFormat != NULL
-destCapacity != 0
- bytes
-%i%s
-%%.%if%s
-ppath
-path
-V_RemoveDotSlashes failed for "%s".
-false
-maxLen <= INT_MAX
-checkLen >= 0
-argLen < 0x10000000u
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
-!pszString || pszString[nChars] == '\0'
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
-BCreateDirectory
-%s%c.temp_write_%x
-%s%c%s
-CPathString
-NSFileManager
-defaultManager
-attributesOfFileSystemForPath:error:
-valueForKey:
-unsignedLongLongValue
-NSURL
-stringWithUTF8String:
-fileURLWithPath:
-getResourceValue:forKey:error:
-boolValue
-NSArray
-arrayWithObjects:count:
-resourceValuesForKeys:error:
-objectForKeyedSubscript:
-fileSystemRepresentation
-stringWithFileSystemRepresentation:length:
-stringByExpandingTildeInPath
-stringByResolvingSymlinksInPath
-mountedVolumeURLsIncludingResourceValuesForKeys:options:
-countByEnumeratingWithState:objects:count:
-getRelationship:ofDirectoryAtURL:toItemAtURL:error:
-hasPrefix:
-length
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
-info.m_pReplacementString == 0
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
-nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
-CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
-CUtlString::VFormat
-Assertion failed: length > k_cchMaxString
-CUtlStringBuilder::InternalPrepareBuffer
-nMinCapacity > Capacity()
-nMinCapacity >= nChars
-nMinCapacity <= k_nMaxStringSize
-len > 0 || HasError()
-Error State on string being set.
-CUtlStringBuilder::Data::MoveToHeap
-%s %i %s
--nocrashdialog
--debugbreak
-%s (%d) : 
-console
-Exiting on SPEW_ABORT
+13ICrashHandler
+13CCrashHandler
+curl_easy_init
+libcurl.so
+libcurl.so.4
+libcurl.so.3
+No Error
+curl_easy_init -- failed\n
+curl_easy_setopt()\n
+curl_easy_setopt
+curl_formadd
+  %s = '%s'\n
+curl_formadd file %s\n
+curl_slist_append
+curl_easy_perform
+curl_easy_getinfo
+curl_easy_strerror
+curl_easy_cleanup()\n
+curl_easy_cleanup
+curl_formfree
+curl_slist_free_all
+done with curl\n
+libcurl-gnutls.so.4
+adding %d curl form parameters\n
+curl_easy_perform returned:  %d %s\n
+Breakpad/1.0 (Linux)
+/proc/%d/status
+TracerPid:
 IsSpewActive
-Fatal Assertion Failed: 
+%s (%d) : 
+Exiting on SPEW_ABORT\n
+console
+Fatal assert
 -noassert
 DONT_BREAK_ON_ASSERT
+_ExitOnFatalAssert\n
 Fatal assert; application exiting
-Fatal assert
-_ExitOnFatalAssert
+Fatal Assertion Failed: 
 Failed to capture callstack
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
-ppFrames[iFrame] != NULL
+Stack:%2d    %s (%d): %s\n
+Stack%2d: %s\n
+Stack%2d: 0x%llX\n
 Assertion Failed: stack%2d: %s (%d): %s
-Stack:%2d    %s (%d): %s
+/data/src/tier0/memblockhdr.cpp
 Assertion Failed: stack%2d: %s
-Stack%2d: %s
 Assertion Failed: stack%2d: 0x%llX
-Stack%2d: 0x%llX
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
-((size_t)(m_nLogicalBytesAllocated) % 8) == 0
-No tracked allocs currently in use. Total %d
-Tracked allocs currently in use. %d Total %d
-item %p sentinel corrupted. skipping.
-Busy, please retry.
-DumpMemTrackingStats %d %d 
-	%d items : %s - %s:%d
-***** OUT OF MEMORY! attempted allocation size: %zu ****
-OUT OF MEMORY
+ppFrames[iFrame] != NULL
+false
+/data/src/tier0/memstd.cpp
+No tracked allocs currently in use. Total %d\n
+Tracked allocs currently in use. %d Total %d\n
+item %p sentinel corrupted. skipping.\n
+Busy, please retry.\n
 (iub & (m_nSizeWithStack-1)) == 0
 pAllocTracker->m_uSentinel == 0xaa110ced
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
+((size_t)(m_nLogicalBytesAllocated) % 8) == 0
+***** OUT OF MEMORY! attempted allocation size: %zu ****\n
+OUT OF MEMORY
 pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
+/data/src/public/tier0/memblockhdr.h
+DumpMemTrackingStats %d %d \n
+vector::reserve
+vector::_M_realloc_insert
+\t%d items : %s - %s:%d\n
+9IMemAlloc
+12CStdMemAlloc
+Gunknown
+!g_pCrashMemoryReserve
+/data/src/tier0/minidump.cpp
+CreateInterface
+Assert( %s ):%s:%d\n
+Jul 30 2024
+%02d:%02d:%02d
+22:42:54
+%04d%02d%02d%02d%02d%02d
+Steam
+steamwebhelper
+cefwebhelper
+Steam Helper
+crashhandler.so
 Someone called SetWritingMinidump without holding the minidump lock.
 Someone called ClearWritingMinidump without holding the minidump lock.
-!g_pCrashMemoryReserve
-Assert( %s ):%s:%d
-MacOS
-Frameworks
-crashhandler.dylib
-CreateInterface
-steamwebhelper
-Steam Helper
-cefwebhelper
-Jul 30 2024
-15:42:28
-%02d:%02d:%02d
-%04d%02d%02d%02d%02d%02d
-MainThrd
-pthread_setname_np
-exec 
-/bin/sh
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
-tid(%u) pthread_key_create failed: %s
-Bad thread local: Get
+/proc/self/exe
+Illegal termination of worker thread '%s'
+/data/src/tier0/threadtools.cpp
+Deleting thread object from the thread, this is bad
+Thread cannot be joined with self
+tid(%u) pthread_key_create failed: %s\n
+Bad thread local: Get\n
 Failed to set thread local value
-Bad thread local: Set
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
-CValidator : too many memory nodes to store, try again with a higher threshold value
+Bad thread local: Set\n
+m_pValObjects != NULL
+/data/src/tier0/validator.cpp
+CValidator : too many memory nodes to store, try again with a higher threshold value\n
 NULL != m_pValObjectCur
+ bytes
  GiB
- MiB
  KiB
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
-NULL == pValObjectPrev->m_pValObjectNext
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
-!g_VProfile
-pszName
-Root
-m_pBudgetGroups == NULL
-Unaccounted
-Sleeping
-VGUI
-FileSystem
-ClientDLL
-SteamUI
-Network
-Encryption
-OverlayRendering
-OverlayInput
-GameOverlayUI
-RunCallbacks
-Logger
-Jobs/Coroutines
-ServerMain
-Streaming
-ThreadWorkItem
-TenFoot
-tier1
-m_vecNodeMemBlocks.size() == 1
-m_vecNodeMemBlocks.size() == 1 && block.m_iCurIndexToUse == 1
-m_pBudgetGroups
-eGroup < VPROF_BUDGETGROUP_MAX
-No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
-m_nRecursions > 0
-allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
-16CBreakpadFactory
-16IBreakpadFactory
-13CCrashHandler
-13ICrashHandler
-?20CUniformRandomStream
-20IUniformRandomStream
+ MiB
+%i%s
+%%.%if%s
 N(knN
+>NULL == pValObjectPrev->m_pValObjectNext
+/data/src/tier0/valobject.cpp
+m_nRecursions > 0
+/data/src/public/tier0/vprof.h
+pszName
+/data/src/tier0/vprof.cpp
+m_pBudgetGroups == NULL
+m_pBudgetGroups
+m_vecNodeMemBlocks.size() == 1 && block.m_iCurIndexToUse == 1
+m_vecNodeMemBlocks.size() == 1
+No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
+Root
+!g_VProfile
+-nocrashdialog
+-debugbreak
+%s %i %s
+/data/src/vstdlib/strtools.cpp
+src != NULL
+dest != NULL
+maxLenInBytes >= 0
+pSrc != NULL
+maxLen == 0 || pDest != NULL
+bufferLen > 0 && bufferLen <= INT_MAX
+pFormat != NULL
+bufferLen == 0 || pDest != NULL
+destCapacity != 0
+CPathString
+V_RemoveDotSlashes failed for "%s".
+/data/src/tier1/fileio.cpp
+LOCK_EX
+LOCK_SH
+flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
+flock %s %s failed. errno = %d
+unReadAheadChunkSize should be zero when using bUnbuffered = true
+unReadAheadChunkSize < INT32_MAX/2
+CFileReader::BOpenFile
+unsupported flags 0x%x passed to CFileReader::BOpenFile
+CFileReader::Read
+BIsOpen()
+cubBytesToRead < INT32_MAX
+Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
+Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
+%s%c%s
 11CPathString
-?21CUtlCStringConversion
-18CUtlCharConversion
-19CUtlNoEscConversion
-O12CStdMemAlloc
-9IMemAlloc
-Mb@?
-`&Bp
-A]Ap
-UA]Ap
-RAVAp
-RARAp
-RARAp
-RARARA`@Ap
-@__ZNSt12length_errorD1Ev
-@__ZTISt12length_error
-@__ZTVN10__cxxabiv117__class_type_infoE
-@__ZTVN10__cxxabiv120__si_class_type_infoE
-@__ZTVSt12length_error
-@__ZdaPv
-@__ZdlPv
-@__Znam
-@__Znwm
-@___gxx_personality_v0
-@___stack_chk_guard
-@___stderrp
-@___stdoutp
-@__tlv_bootstrap
-@_alphasort$INODE64
-@_bootstrap_port
-@_mach_task_self_
-@dyld_stub_binder
-@___CFConstantStringClassReference
-@_kCFAllocatorDefault
-@_kCFTypeDictionaryKeyCallBacks
-@_kCFTypeDictionaryValueCallBacks
-@__ZTISt12length_error
-@__ZdaPv
-@__ZdlPv
-@__Znam
-@__Znwm
-@_BreakpadAddUploadParameter
-@_BreakpadCreate
-@_BreakpadGenerateAndSendReport
-@_BreakpadRelease
-@_BreakpadSetComment
-@_BreakpadSetFilterCallback
-@_CFDictionaryCreate
-@_CFRelease
-@_CFStringCreateWithCString
-@__NSGetArgc
-@__NSGetArgv
-@__NSGetExecutablePath
-@__Unwind_Resume
-@__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
-@__ZNSt11logic_errorC2EPKc
-@__ZNSt3__112__next_primeEm
-@__ZSt9terminatev
-@___bzero
-@___cxa_allocate_exception
-@___cxa_atexit
-@___cxa_begin_catch
-@___cxa_end_catch
-@___cxa_free_exception
-@___cxa_guard_abort
-@___cxa_guard_acquire
-@___cxa_guard_release
-@___cxa_rethrow
-@___cxa_throw
-@___error
-@___stack_chk_fail
-@___tolower
-@___umoddi3
-@__dyld_get_image_name
-@__exit
-@_atoi
-@_backtrace
-@_backtrace_symbols
-@_bootstrap_look_up
-@_dladdr
-@_dlclose
-@_dlopen
-@_dlsym
-@_execv
-@_fclose
-@_fflush
-@_fgets
-@_fnmatch$UNIX2003
-@_fopen$UNIX2003
-@_fork
-@_fprintf
-@_fputc
-@_free
-@_fwrite$UNIX2003
-@_getcwd
-@_getenv
-@_getpid
-@_kill$UNIX2003
-@_launch_data_alloc
-@_launch_data_dict_insert
-@_launch_data_free
-@_launch_data_new_string
-@_launch_msg
-@_lchmod
-@_lstat$INODE64
-@_mach_continuous_time
-@_mach_msg
-@_mach_port_allocate
-@_mach_port_deallocate
-@_mach_port_mod_refs
-@_mach_port_type
-@_mach_timebase_info
-@_malloc
-@_malloc_size
-@_memcmp
-@_memcpy
-@_memmove
-@_mkdir
-@_nanosleep$UNIX2003
-@_objc_msgSend
-@_objc_msgSend_stret
-@_pclose
-@_popen$UNIX2003
-@_posix_memalign
-@_printf
-@_pthread_create
-@_pthread_getspecific
-@_pthread_key_create
-@_pthread_key_delete
-@_pthread_kill
-@_pthread_mach_thread_np
-@_pthread_mutex_destroy
-@_pthread_mutex_init
-@_pthread_mutex_lock
-@_pthread_mutex_trylock
-@_pthread_mutex_unlock
-@_pthread_mutexattr_init
-@_pthread_mutexattr_settype
-@_pthread_self
-@_pthread_setspecific
-@_realloc
-@_scandir$INODE64
-@_sched_yield
-@_setsid
-@_signal
-@_sigprocmask
-@_snprintf
-@_sscanf
-@_stat$INODE64
-@_strcasecmp
-@_strchr
-@_strcmp
-@_strcpy
-@_strerror$UNIX2003
-@_strlen
-@_strncasecmp
-@_strncat
-@_strncpy
-@_strrchr
-@_sysctl
-@_system$UNIX2003
-@_time
-@_unlink
-@_usleep$UNIX2003
-@_utime
-@_vasprintf
-@_vsnprintf
-@_waitpid$UNIX2003
-CreateInterface
--Breakpad_SetSteamID
-08:<
-8$$$&$$&
-TJ"0Z
-a5j)
-y	TnJ
-	w$>pj
-	Dxll
-)ya$V
-83l$i
-!	(J+
-ffR8>O
-_Breakpad_SetSteamID
-_CreateInterface
-.objc_class_name_NSArray
-.objc_class_name_NSAutoreleasePool
-.objc_class_name_NSBundle
-.objc_class_name_NSFileManager
-.objc_class_name_NSProcessInfo
-.objc_class_name_NSString
-.objc_class_name_NSURL
-_BreakpadAddUploadParameter
-_BreakpadCreate
-_BreakpadGenerateAndSendReport
-_BreakpadRelease
-_BreakpadSetComment
-_BreakpadSetFilterCallback
-_CFDictionaryCreate
-_CFRelease
-_CFStringCreateWithCString
-__NSGetArgc
-__NSGetArgv
-__NSGetExecutablePath
-__Unwind_Resume
-__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
-__ZNSt11logic_errorC2EPKc
-__ZNSt12length_errorD1Ev
-__ZNSt3__112__next_primeEm
-__ZSt9terminatev
-__ZTISt12length_error
-__ZTVN10__cxxabiv117__class_type_infoE
-__ZTVN10__cxxabiv120__si_class_type_infoE
-__ZTVSt12length_error
-__ZdaPv
-__ZdlPv
-__Znam
-__Znwm
-___CFConstantStringClassReference
-___bzero
-___cxa_allocate_exception
-___cxa_atexit
-___cxa_begin_catch
-___cxa_end_catch
-___cxa_free_exception
-___cxa_guard_abort
-___cxa_guard_acquire
-___cxa_guard_release
-___cxa_rethrow
-___cxa_throw
-___error
-___gxx_personality_v0
-___stack_chk_fail
-___stack_chk_guard
-___stderrp
-___stdoutp
-___tolower
-___umoddi3
-__dyld_get_image_name
-__exit
-__tlv_bootstrap
-_alphasort$INODE64
-_atoi
-_backtrace
-_backtrace_symbols
-_bootstrap_look_up
-_bootstrap_port
-_dladdr
-_dlclose
-_dlopen
-_dlsym
-_execv
-_fclose
-_fflush
-_fgets
-_fnmatch$UNIX2003
-_fopen$UNIX2003
-_fork
-_fprintf
-_fputc
-_free
-_fwrite$UNIX2003
-_getcwd
-_getenv
-_getpid
-_kCFAllocatorDefault
-_kCFTypeDictionaryKeyCallBacks
-_kCFTypeDictionaryValueCallBacks
-_kill$UNIX2003
-_launch_data_alloc
-_launch_data_dict_insert
-_launch_data_free
-_launch_data_new_string
-_launch_msg
-_lchmod
-_lstat$INODE64
-_mach_continuous_time
-_mach_msg
-_mach_port_allocate
-_mach_port_deallocate
-_mach_port_mod_refs
-_mach_port_type
-_mach_task_self_
-_mach_timebase_info
-_malloc
-_malloc_size
-_memcmp
-_memcpy
-_memmove
-_mkdir
-_nanosleep$UNIX2003
-_objc_msgSend
-_objc_msgSend_stret
-_pclose
-_popen$UNIX2003
-_posix_memalign
-_printf
-_pthread_create
-_pthread_getspecific
-_pthread_key_create
-_pthread_key_delete
-_pthread_kill
-_pthread_mach_thread_np
-_pthread_mutex_destroy
-_pthread_mutex_init
-_pthread_mutex_lock
-_pthread_mutex_trylock
-_pthread_mutex_unlock
-_pthread_mutexattr_init
-_pthread_mutexattr_settype
-_pthread_self
-_pthread_setspecific
-_realloc
-_scandir$INODE64
-_sched_yield
-_setsid
-_signal
-_sigprocmask
-_snprintf
-_sscanf
-_stat$INODE64
-_strcasecmp
-_strchr
-_strcmp
-_strcpy
-_strerror$UNIX2003
-_strlen
-_strncasecmp
-_strncat
-_strncpy
-_strrchr
-_sysctl
-_system$UNIX2003
-_time
-_unlink
-_usleep$UNIX2003
-_utime
-_vasprintf
-_vsnprintf
-_waitpid$UNIX2003
-dyld_stub_binder
-radr://5614542
-com.valvesoftware.steam
-MXGJJ98X76
-D-]3
-H.wm
-subject.OU
-MXGJJ98X76
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-120201221215Z
-270201221215Z0y1-0+
-$Developer ID Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-)xEii`k_
-1? v(m
-'0%0#
-http://crl.apple.com/root.crl0
-B9tk
-P9jDt
-#q-_
- "ror
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-060425214036Z
-350209214036Z0b1
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-, op
-https://www.apple.com/appleca/0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-=&g 
-Sj[d
-uu!0
-0y1-0+
-$Developer ID Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-210205030950Z
-260206030950Z0
-MXGJJ98X761A0?
-8Developer ID Application: Valve Corporation (MXGJJ98X76)1
-MXGJJ98X761
-Valve Corporation1
-~kk!
-3oC&
-uN`AJ
-40200
-$http://ocsp.apple.com/ocsp03-devid080
-)http://www.apple.com/certificateauthority0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-20120706000000Z0
-o(D-U
-6fQS
-:iPq
-0y1-0+
-$Developer ID Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-240730224259Z0/
-1/0-
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>cdhashes</key>
-	<array>
-		<data>
-		WNajMPAckoahVkRe/F6iIGLPKxU=
-		</data>
-	</array>
-</dict>
-</plist>
-x\|8
-FzyL~/
-gsPv
-#ah2M
-@kM2
-20240730224300Z0
-0|100.
-'Apple Timestamp Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-240725202057Z
-240905202056Z0B1
-Timestamp Signer NWK21
-Apple Inc.1
-yW\f
-http://www.apple.com/appleca0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-,0*0(
-"http://crl.apple.com/timestamp.crl0
-<&4Y;]@
-*.WE
-(r2ZY
-[hp_
-(qf?
-09kS
-}LWc
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-120405120244Z
-270405120244Z0|100.
-'Apple Timestamp Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-Im] 
-(ny_~
-&By^
-t-D>
-E~4u&
-'0%0#
-http://crl.apple.com/root.crl0
-mzT_
-Bsu|QC
-:m7(
-FeoU
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-060425214036Z
-350209214036Z0b1
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-, op
-https://www.apple.com/appleca/0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-=&g 
-Sj[d
-uu!1
-0|100.
-'Apple Timestamp Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-240730224300Z0#
-%C#;6
-o^baz
-bzZ;
-1m#X{
--]>V
-5o&(>
-__TEXT
-__text
-__TEXT
-__stubs
-__TEXT
-__stub_helper
-__TEXT
-__gcc_except_tab__TEXT
-__cstring
-__TEXT
-__objc_methname
-__TEXT
-__const
-__TEXT
-__unwind_info
-__TEXT
-__DATA
-__nl_symbol_ptr
-__DATA
-__got
-__DATA
-__la_symbol_ptr
-__DATA
-__mod_init_func
-__DATA
-__const
-__DATA
-__cfstring
-__DATA
-__objc_imageinfo__DATA
-__objc_selrefs
-__DATA
-__objc_classrefs__DATA
-__data
-__DATA
-__thread_vars
-__DATA
-__thread_bss
-__DATA
-__bss
-__DATA
-__common
-__DATA
-__LINKEDIT
-@loader_path/crashhandler.dylib
-/usr/lib/libiconv.2.dylib
-/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
-/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
-/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
-/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
-@loader_path/Frameworks/Breakpad.framework/Versions/A/Breakpad
-/usr/lib/libc++.1.dylib
-/usr/lib/libSystem.B.dylib
-/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
-/usr/lib/libobjc.A.dylib
-AWAVAUATSH
-8[A\A]A^A_]
-8[A\A]A^A_]
-AWAVAUATSH
-X[A\A]A^A_]
-[A^]
-AWAVAUATSH
-M9} 
-H[A\A]A^A_]
-AWAVATSH
-D$89
-P[A\A^A_]
-AWAVATSI
-C8D9
-[A\A^A_]
-AWAVSPI
-w*IcW H
-Ic_ 
-[A^A_]
-AWAVAUATSH
-/tKM
-l$HL
-InspectoJ
-InspectoH
-nder.appJ
-nder.appH
-\$XH
-|$(H
-|$(H
-t$(H
-@u$H
-[A\A]A^A_]
-AVSI
-[A^]
-AWAVSP
-IcG H9
-[A^A_]
-AWAVSP
-IcG H9
-[A^A_]
-AWAVSP
-IcG H9
-[A^A_]
-AWAVSPI
-gwMA
-[A^A_]
-AWAVAUATSH
-[A\A]A^A_]
-AWAVAUATSPH
-[A\A]A^A_]
-AWAVSH
-([A^A_]
-AWAVAUATSPM
-tXE1
-A;L$
-[A\A]A^A_]
-AWAVAUATSH
-[A\A]A^A_]
-AWAVATSH
-[A\A^A_]
-AVSH
-[A^]
-t-Hc
-[A^]
-AWAVSPH
-[A^A_]
-AVSI
-[A^]
-`@UH
-AWAVAUATSH
-([A\A]A^A_]
-AWAVAUATSH
-	H;M
-[A\A]A^A_]
-AWAVATSA
-[A\A^A_]
-AWAVATSH
-[A\A^A_]
-AVSH
-[A^]
-AWAVSPH
-[A^A_]
-AWAVAUATSPI
-[A\A]A^A_]
-	H;M
-AWAVAUATSPI
-[A\A]A^A_]
-AWAVSPI
-/u*B
-[A^A_]
-AWAVATSH
-.u"F8d0
-.u A
->.u%E8f
-[A\A^A_]
-D8#t
-D8#L
-AWAVAUATSH
-8[A\A]A^A_]
-8[A\A]A^A_]
-AVSA
-0[A^]
- u&E1
-AWAVAUATSPH
- u7E1
-[A\A]A^A_]
-AWAVAUATSPH
-[A\A]A^A_]
-AVSH
-r:H9
-[A^]
-[A^]
-6IcV
-&Icv
-[A^]
-AWAVAUATSH
-[A\A]A^A_]
-AVSH
- [A^]
-AWAVATSH
-</t+
- [A\A^A_]
-AWAVATSH
- [A\A^A_]
-AVSH
-[A^]
-AWAVSH
-([A^A_]
-AVSH
-[A^]
-AWAVATSH
-[A\A^A_]
-AWAVSH
-[A^A_]
-AWAVAUATSH
-/u<H
-([A\A]A^A_]
-AWAVSH
-[A^A_]
-AWAVAUATSH
-[A\A]A^A_]
-AVSH
-t	[A^]
-[A^]
-AWAVSH
-	H;M
-[A^A_]
-AVSH
-=*.*
-*t"H
-[A^]
-AVSH
-[A^]
-AWAVSPL
-[A^A_]
-AWAVAUATSPM
-d>$I
-A9F }
-[A\A]A^A_]
-AWAVAUATSPH
-[A\A]A^A_]
-AWAVSPH97
-[A^A_]
-AWAVSH
-[A^A_]
-	H;M
-AWAVAUATSH
-roL9
-[A\A]A^A_]
-AWAVAUATSH
-[A\A]A^A_]
-AWAVSPH
-[A^A_]
-AWAVSP
-[A^A_]
-AVSH
-[A^]
-AWAVAUATSH
-[A\A]A^A_]
-[A\A]A^A_]
-AVSH
-	H;M
-[A^]
-AVSH
-[A^]
-\t	H
-AWAVAUATSH
-[A\A]A^A_]
-	H;M
-AWAVSH
-[A^A_]
-AWAVAUATSP
-[A\A]A^A_]
-AWAVAUATSH
-[A\A]A^A_]
-	H;M
-AWAVAUATSH
-	H;M
-[A\A]A^A_]
-AWAVSPI
-t-UH
-AVSH
-[A^]
-L9J 
-D9B(@
-L;H 
-D;@(
-AWAVATSH
-[A\A^A_]
-AWAVSH
-[A^A_]
-AWAVAUATSP
-[A\A]A^A_]
-AWAVSH
-[A^A_]
-AWAVAUATSPI
-[A\A]A^A_]
-ASAR
-[A\A]A^A_]
-AWAVSPA
-[A^A_]
-[A^A_]
-AWAVATSH
-[A\A^A_]
-AWAVAUATSPL
-UUUUUUUUH!
-33333333H
-[A\A]A^A_]
-AWAVATSH
-[A\A^A_]
-AWAVSPI
-t%L9
-[A^A_]
-AWAVAUATSPH
-t6E1
-[A\A]A^A_]
-s	I9
-[A\A]A^A_]
-AWAVSPH
-[A^A_]
-[A^A_]
-AWAVATSH
-[A\A^A_]
-s	I9
-AWAVAUATSPA
-[A\A]A^A_]
-[A\A]A^A_]
-AWAVAUATSPA
-t%L9
-[A\A]A^A_]
-AWAVAUATSH
-s	L9
-[A\A]A^A_]
-[A\A]A^A_]
-AWAVSPH
-[A^A_]
-[A^A_]
-AWAVAUATSH
-McF K
-UUUUUUUUH!
-33333333H!
-u*D9G
-u$L9
-fffffff
-{0I9
-3333333
-fffffff
-(L;}
-[A\A]A^A_]
-AWAVAUATSPI
-Ict$
-UUUUUUUUH!
-33333333H
-L9K(
-UUUUUUUUH!
-33333333H
-N(H;J(t
-[A\A]A^A_]
-^G f
-UUUUUUUUH!
-33333333H
-AVSI
-t	[A^]
-[A^]
-AWAVSPI
-t%M9
-[A^A_]
-AWAVSPI
-t%M9
-[A^A_]
-AWAVAUATSH
-[A\A]A^A_]
-t-UH
-AVSH
-[A^]
-AWAVAUATSPL
-[A\A]A^A_]
-AVSH
-[A^]
-AWAVATSH
-[A\A^A_]
-AWAVAUATSPI
-[A\A]A^A_]
-AVSI
-t	[A^]
-[A^]
-AVSH
-[A^]
-AWAVSPI
-^F f
-UUUUUUUUH!
-33333333H
-[A^A_]
-[A^A_]
-AVSH
-UUUUUUUUH!
-33333333H
-[A^]
-UUUUUUUUH!
-33333333H
-AVSH
- [A^]
-AWAVSH
-UUUUUUUUH!
-33333333H
-[A^A_]
-AWAVAUATSH
-t<L9
-L$(M
-[A\A]A^A_]
-AWAVAUATSPI
-UUUUUUUUH!
-33333333H
-u0L9
-u	L9[
-[A\A]A^A_]
-AWAVSPI
-[A^A_]
-AWAVSPI
-gffffff
-[A^A_]
-AWAVAUATSH
-D$(I;V
-saL9
-(H;p8r
-T$ H
-\$(H9
-(H9w8s
-I;D$
-D$ H
-D$ A
-t$(L
-H[A\A]A^A_]
-t$(I
-T$PL
-H[A\A]A^A_]
-t$(I
-T$PI
-L$xL
-H[A\A]A^A_]
-\$PI
-t$(L
-L$xL9
-T4 A
-I;L4
-H[A\A]A^A_]
-AWAVATSH
-L$ H
-0[A\A^A_]
-AWAVAUATSH
-I;L$
-L$ H
-L$ I
-([A\A]A^A_]
-AWAVATSH
-SxL9
-H;T;
-T$(H
-@[A\A^A_]
-[A^]
-AWAVAUATSPI
-M9n(
-UUUUUUUUH!
-33333333H
-[A\A]A^A_]
-AVSI
-t	[A^]
-[A^]
-UUUUUUUUH!
-33333333H
-AWAVSPI
-^F f
-UUUUUUUUH!
-33333333H
-[A^A_]
-[A^A_]
-AVSH
-UUUUUUUUH!
-33333333H
-[A^]
-[A^]
-AVSA
-[A^]
-[A^]
-AWAVAUATSH
-([A\A]A^A_]
-([A\A]A^A_]
-AWAVATSH
-[A\A^A_]
-AWAVAUATSH
-([A\A]A^A_]
-AWAVATSH
-[A\A^A_]
-AWAVAUATSH
-SASAR
-H[A\A]A^A_]
-AWAVAUATSPH
-[A\A]A^A_]
-AVSH
-[A^]
-AWAVSPH
-[A^A_]
-AVSL
-[A^]
-AWAVSH
-xPuP
-	H;M
-8[A^A_]
-AWAVSP
-[A^A_]
-AVSI
-[A^]
-[A^]
-AVSI
-[A^]
-AWAVSPA
-[A^A_]
-[A^A_]
-[A^]
-?u 1
-4FIcF$A
-H;7u
-[A^]
-[A^]
-HcS,L
-AWAVSH
-x-Hc
-VUUUH
-X[A^A_]
-AVSM
-[A^]
-AWAVSPH
-[A^A_]
-AWAVAUATSPH
-XA8EPt
-[A\A]A^A_]
-AWAVATSI
-[A\A^A_]
-AWAVSPI
-[A^A_]
-AVSH
-[A^]
-AWAVATSE
-Cp[A\A^A_]
-AWAVATSA
-GX[A\A^A_]
-AWAVAUATSH
-H[A\A]A^A_]
-AWAVSPH
-[A^A_]
-AWAVAUATSH
-[A\A]A^A_]
-AVSH
-0[A^]
-AWAVAUATSPI
-[A\A]A^A_]
-AVSH
-[A^]
-AVSI
-[A^]
-[A^]
-AVSI
-[A^]
-H91tHH
-wH91
-t-UH
-AVSH
-[A^]
-t<UH
-AVSH
-[A^]
-AWAVSPI
-<u8H
-[A^A_]
-AWAVATSE1
-[A\A^A_]
-Installing breakpad crash handler
-BreakpadProductDisplay
-BreakpadProduct
-BreakpadVendor
-BreakpadVersion
-BreakpadURL
-BuildID
-BreakpadReportInterval
-BreakpadSkipConfirm
-BreakpadSendAndExit
-BreakpadInspectorLocation
-BreakpadReporterExeLocation
-BreakpadMinidumpLocation
-BreakpadEmail
-BreakpadRequestComments
-BreakpadComments
-BreakpadServerType
-BreakpadInProcess
-https://crash.steampowered.com/submit
-True
-False
-Valve
-socorro
-ProductName
-Version
-Notes
-Vendor
-www.steampowered.com
-UserID
-Steam
-Add-ons
-Theme
-Platform
-Mac OS X
-SteamUniverse
-Config-*
-Uploading pending dumps
-%s/%s
-Uploaded %d pending dumps
-SteamID:  %s, universe %s
-breakpadUtilities.dylib
-/../Frameworks/Breakpad.framework/Resources
-found breakpad via in process memory: '%s'
-found steam via cross-process IPC: '%s'
-unable to determine steam exe path, falling back to %s, crash reporting probably will not be functional!!!
-crash_report_sender.app
-/tmp/dumps
-%s%d
-Could not select valid crash dump directory based on %s.
-Unable to locate one or both of:
-'%s'
-'%s'
-Crash Uploading will not function.
-Beta
-Internal
-Public
-com.valvesoftware.steam.ipctool
-ipcserver restart: expected: %d, got: %d
-pid %d != %d, clearing client_port = %d, server_port = %d
-pid %d != %d, re-initing before send; client_port = %d, server_port = %d
-StopJob
-pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
-crashhandler001
-crashhandler002
-crashhandler003
-crashhandler004
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
-Invalid macOS version %d.%d.%d
-unknown
-defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
-pStr != NULL
-pSearch != NULL
-maxLen == 0 || pDest != NULL
-pSrc != NULL
-bufferLen > 0 && bufferLen <= INT_MAX
-pDest != NULL
-pFormat != NULL
-destCapacity != 0
- bytes
-%i%s
-%lld
-ppath
-V_RemoveDotSlashes failed for "%s".
-false
-maxLen <= INT_MAX
-checkLen >= 0
-argLen < 0x10000000u
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
-!pszString || pszString[nChars] == '\0'
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-num > 0
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
-BCreateDirectory
-%s%c.temp_write_%x
-%s%c%s
-CPathString
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
+%s/.steam/steam
+true
+false 
+(%zu) Descend: %s, (%s), %s\n
+\t(%zu) comparing %s with %s\n
+(%zu) readdir failed to find '%s' in '%s'\n
+DBG_PATHMATCH
+Lowered '%s' -> '%s'\n
+Breaking '%s' in '%s'\n
+Matched '%s' -> '%s'\n
+Unmatched %s\n
+m_Put >= 0
+/data/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
-nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
-CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
-CUtlString::VFormat
-Assertion failed: length > k_cchMaxString
-CUtlStringBuilder::InternalPrepareBuffer
-nMinCapacity > Capacity()
-nMinCapacity >= nChars
-nMinCapacity <= k_nMaxStringSize
-len > 0 || HasError()
-Error State on string being set.
-CUtlStringBuilder::Data::MoveToHeap
-%s %i %s
--nocrashdialog
--debugbreak
-%s (%d) : 
-Exiting on SPEW_ABORT
-IsSpewActive
-Fatal Assertion Failed: 
--noassert
-DONT_BREAK_ON_ASSERT
-Fatal assert; application exiting
-Fatal assert
-_ExitOnFatalAssert
-Failed to capture callstack
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
-ppFrames[iFrame] != NULL
-Assertion Failed: stack%2d: %s (%d): %s
-Stack:%2d    %s (%d): %s
-Assertion Failed: stack%2d: %s
-Stack%2d: %s
-Assertion Failed: stack%2d: 0x%llX
-Stack%2d: 0x%llX
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
-((size_t)(m_nLogicalBytesAllocated) % 8) == 0
-No tracked allocs currently in use. Total %d
-Tracked allocs currently in use. %d Total %d
-item %p sentinel corrupted. skipping.
-Busy, please retry.
-DumpMemTrackingStats %d %d 
-	%d items : %s - %s:%d
-***** OUT OF MEMORY! attempted allocation size: %zu ****
-OUT OF MEMORY
-(iub & (m_nSizeWithStack-1)) == 0
-pAllocTracker->m_uSentinel == 0xaa110ced
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
-pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
-Someone called SetWritingMinidump without holding the minidump lock.
-Someone called ClearWritingMinidump without holding the minidump lock.
-!g_pCrashMemoryReserve
-Assert( %s ):%s:%d
-MacOS
-Frameworks
-crashhandler.dylib
-CreateInterface
-steamwebhelper
-Steam Helper
-cefwebhelper
-Jul 30 2024
-15:42:29
-%02d:%02d:%02d
-%04d%02d%02d%02d%02d%02d
-MainThrd
-pthread_setname_np
-exec 
-/bin/sh
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
-tid(%u) pthread_key_create failed: %s
-Bad thread local: Get
-Failed to set thread local value
-Bad thread local: Set
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
-CValidator : too many memory nodes to store, try again with a higher threshold value
-NULL != m_pValObjectCur
-console
- GiB
- MiB
- KiB
-%%.%if%s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
-NULL == pValObjectPrev->m_pValObjectNext
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
-!g_VProfile
-pszName
-Root
-m_pBudgetGroups == NULL
-Unaccounted
-Sleeping
-VGUI
-FileSystem
-ClientDLL
-SteamUI
-Network
-Encryption
-OverlayRendering
-OverlayInput
-GameOverlayUI
-RunCallbacks
-Logger
-Jobs/Coroutines
-ServerMain
-Streaming
-ThreadWorkItem
-TenFoot
-tier1
-m_vecNodeMemBlocks.size() == 1
-m_vecNodeMemBlocks.size() == 1 && block.m_iCurIndexToUse == 1
-m_pBudgetGroups
-eGroup < VPROF_BUDGETGROUP_MAX
-No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
-m_nRecursions > 0
-allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
-init
-stringWithCString:encoding:
-bundleWithPath:
-executablePath
-UTF8String
-processInfo
-operatingSystemVersion
-respondsToSelector:
-defaultManager
-attributesOfFileSystemForPath:error:
-valueForKey:
-unsignedLongLongValue
-stringWithUTF8String:
-fileURLWithPath:
-getResourceValue:forKey:error:
-boolValue
-arrayWithObjects:count:
-resourceValuesForKeys:error:
-objectForKeyedSubscript:
-fileSystemRepresentation
-stringWithFileSystemRepresentation:length:
-stringByExpandingTildeInPath
-stringByResolvingSymlinksInPath
-mountedVolumeURLsIncludingResourceValuesForKeys:options:
-countByEnumeratingWithState:objects:count:
-getRelationship:ofDirectoryAtURL:toItemAtURL:error:
-path
-hasPrefix:
-length
-16CBreakpadFactory
-16IBreakpadFactory
-13CCrashHandler
-13ICrashHandler
-?20CUniformRandomStream
-20IUniformRandomStream
-N(knN
-?11CPathString
-21CUtlCStringConversion
 18CUtlCharConversion
-19CUtlNoEscConversion
-_12CStdMemAlloc
-9IMemAlloc
-Mb@?
-A]Ap
-UA]Ap
-RAVAp
-RARAp
-RARAp
-RARARA`@Ap
-@_OBJC_CLASS_$_NSAutoreleasePool
-@_OBJC_CLASS_$_NSBundle
-@_OBJC_CLASS_$_NSFileManager
-@_OBJC_CLASS_$_NSProcessInfo
-@_OBJC_CLASS_$_NSString
-@__ZNSt12length_errorD1Ev
-@__ZTISt12length_error
-@__ZTVN10__cxxabiv117__class_type_infoE
-@__ZTVN10__cxxabiv120__si_class_type_infoE
-@__ZTVSt12length_error
-@__ZdaPv
-@__ZdlPv
-@__Znam
-@__Znwm
-@___gxx_personality_v0
-@___stack_chk_guard
-@___stderrp
-@___stdoutp
-@__tlv_bootstrap
-@_alphasort$INODE64
-@_bootstrap_port
-@_mach_task_self_
-@dyld_stub_binder
-@_OBJC_CLASS_$_NSArray
-@_OBJC_CLASS_$_NSURL
-@___CFConstantStringClassReference
-@_kCFAllocatorDefault
-@_kCFTypeDictionaryKeyCallBacks
-@_kCFTypeDictionaryValueCallBacks
-@_objc_msgSend
-@_objc_release
-@__ZTISt12length_error
-@__ZdaPv
-@__ZdlPv
-@__Znam
-@__Znwm
-@_BreakpadAddUploadParameter
-@_BreakpadCreate
-@_BreakpadGenerateAndSendReport
-@_BreakpadRelease
-@_BreakpadSetComment
-@_BreakpadSetFilterCallback
-@_CFDictionaryCreate
-@_CFRelease
-@_CFStringCreateWithCString
-@__NSGetArgc
-@__NSGetArgv
-@__NSGetExecutablePath
-@__Unwind_Resume
-@__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
-@__ZNSt11logic_errorC2EPKc
-@__ZNSt3__112__next_primeEm
-@__ZSt9terminatev
-@___bzero
-@___cxa_allocate_exception
-@___cxa_atexit
-@___cxa_begin_catch
-@___cxa_end_catch
-@___cxa_free_exception
-@___cxa_guard_abort
-@___cxa_guard_acquire
-@___cxa_guard_release
-@___cxa_rethrow
-@___cxa_throw
-@___error
-@___stack_chk_fail
-@___tolower
-@__dyld_get_image_name
-@__exit
-@_atoi
-@_backtrace
-@_backtrace_symbols
-@_bootstrap_look_up
-@_dladdr
-@_dlclose
-@_dlopen
-@_dlsym
-@_execv
-@_fclose
-@_fflush
-@_fgets
-@_fnmatch
-@_fopen
-@_fork
-@_fprintf
-@_fputc
-@_free
-@_fwrite
-@_getcwd
-@_getenv
-@_getpid
-@_kill
-@_launch_data_alloc
-@_launch_data_dict_insert
-@_launch_data_free
-@_launch_data_new_string
-@_launch_msg
-@_lchmod
-@_lstat$INODE64
-@_mach_continuous_time
-@_mach_msg
-@_mach_port_allocate
-@_mach_port_deallocate
-@_mach_port_mod_refs
-@_mach_port_type
-@_mach_timebase_info
-@_malloc
-@_malloc_size
-@_memcmp
-@_memcpy
-@_memmove
-@_mkdir
-@_nanosleep
-@_objc_alloc
-@_objc_msgSend_stret
-@_pclose
-@_popen
-@_posix_memalign
-@_printf
-@_pthread_create
-@_pthread_getspecific
-@_pthread_key_create
-@_pthread_key_delete
-@_pthread_kill
-@_pthread_mach_thread_np
-@_pthread_mutex_destroy
-@_pthread_mutex_init
-@_pthread_mutex_lock
-@_pthread_mutex_trylock
-@_pthread_mutex_unlock
-@_pthread_mutexattr_init
-@_pthread_mutexattr_settype
-@_pthread_self
-@_pthread_setspecific
-@_realloc
-@_scandir$INODE64
-@_sched_yield
-@_setsid
-@_signal
-@_sigprocmask
-@_snprintf
-@_sscanf
-@_stat$INODE64
-@_strcasecmp
-@_strchr
-@_strcmp
-@_strcpy
-@_strerror
-@_strlen
-@_strncasecmp
-@_strncat
-@_strncpy
-@_strrchr
-@_sysctl
-@_system
-@_time
-@_unlink
-@_usleep
-@_utime
-@_vasprintf
-@_vsnprintf
-@_waitpid
-CreateInterface
--Breakpad_SetSteamID
-6@@D
-|MAw1
-z(4jr
-Njtt
-Bvvh
-8)g"Z
-baE2
-4Bj	
-_Breakpad_SetSteamID
-_CreateInterface
-_BreakpadAddUploadParameter
-_BreakpadCreate
-_BreakpadGenerateAndSendReport
-_BreakpadRelease
-_BreakpadSetComment
-_BreakpadSetFilterCallback
-_CFDictionaryCreate
-_CFRelease
-_CFStringCreateWithCString
-_OBJC_CLASS_$_NSArray
-_OBJC_CLASS_$_NSAutoreleasePool
-_OBJC_CLASS_$_NSBundle
-_OBJC_CLASS_$_NSFileManager
-_OBJC_CLASS_$_NSProcessInfo
-_OBJC_CLASS_$_NSString
-_OBJC_CLASS_$_NSURL
-__NSGetArgc
-__NSGetArgv
-__NSGetExecutablePath
-__Unwind_Resume
-__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
-__ZNSt11logic_errorC2EPKc
-__ZNSt12length_errorD1Ev
-__ZNSt3__112__next_primeEm
-__ZSt9terminatev
-__ZTISt12length_error
-__ZTVN10__cxxabiv117__class_type_infoE
-__ZTVN10__cxxabiv120__si_class_type_infoE
-__ZTVSt12length_error
-__ZdaPv
-__ZdlPv
-__Znam
-__Znwm
-___CFConstantStringClassReference
-___bzero
-___cxa_allocate_exception
-___cxa_atexit
-___cxa_begin_catch
-___cxa_end_catch
-___cxa_free_exception
-___cxa_guard_abort
-___cxa_guard_acquire
-___cxa_guard_release
-___cxa_rethrow
-___cxa_throw
-___error
-___gxx_personality_v0
-___stack_chk_fail
-___stack_chk_guard
-___stderrp
-___stdoutp
-___tolower
-__dyld_get_image_name
-__exit
-__tlv_bootstrap
-_alphasort$INODE64
-_atoi
-_backtrace
-_backtrace_symbols
-_bootstrap_look_up
-_bootstrap_port
-_dladdr
-_dlclose
-_dlopen
-_dlsym
-_execv
-_fclose
-_fflush
-_fgets
-_fnmatch
-_fopen
-_fork
-_fprintf
-_fputc
-_free
-_fwrite
-_getcwd
-_getenv
-_getpid
-_kCFAllocatorDefault
-_kCFTypeDictionaryKeyCallBacks
-_kCFTypeDictionaryValueCallBacks
-_kill
-_launch_data_alloc
-_launch_data_dict_insert
-_launch_data_free
-_launch_data_new_string
-_launch_msg
-_lchmod
-_lstat$INODE64
-_mach_continuous_time
-_mach_msg
-_mach_port_allocate
-_mach_port_deallocate
-_mach_port_mod_refs
-_mach_port_type
-_mach_task_self_
-_mach_timebase_info
-_malloc
-_malloc_size
-_memcmp
-_memcpy
-_memmove
-_mkdir
-_nanosleep
-_objc_alloc
-_objc_msgSend
-_objc_msgSend_stret
-_objc_release
-_pclose
-_popen
-_posix_memalign
-_printf
-_pthread_create
-_pthread_getspecific
-_pthread_key_create
-_pthread_key_delete
-_pthread_kill
-_pthread_mach_thread_np
-_pthread_mutex_destroy
-_pthread_mutex_init
-_pthread_mutex_lock
-_pthread_mutex_trylock
-_pthread_mutex_unlock
-_pthread_mutexattr_init
-_pthread_mutexattr_settype
-_pthread_self
-_pthread_setspecific
-_realloc
-_scandir$INODE64
-_sched_yield
-_setsid
-_signal
-_sigprocmask
-_snprintf
-_sscanf
-_stat$INODE64
-_strcasecmp
-_strchr
-_strcmp
-_strcpy
-_strerror
-_strlen
-_strncasecmp
-_strncat
-_strncpy
-_strrchr
-_sysctl
-_system
-_time
-_unlink
-_usleep
-_utime
-_vasprintf
-_vsnprintf
-_waitpid
-dyld_stub_binder
-radr://5614542
-com.valvesoftware.steam
-MXGJJ98X76
-H,fq
-1g`S
-`^PR/h
-R`><
-l5CJ
-Yp\c
-subject.OU
-MXGJJ98X76
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-120201221215Z
-270201221215Z0y1-0+
-$Developer ID Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-)xEii`k_
-1? v(m
-'0%0#
-http://crl.apple.com/root.crl0
-B9tk
-P9jDt
-#q-_
- "ror
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-060425214036Z
-350209214036Z0b1
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-, op
-https://www.apple.com/appleca/0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-=&g 
-Sj[d
-uu!0
-0y1-0+
-$Developer ID Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-210205030950Z
-260206030950Z0
-MXGJJ98X761A0?
-8Developer ID Application: Valve Corporation (MXGJJ98X76)1
-MXGJJ98X761
-Valve Corporation1
-~kk!
-3oC&
-uN`AJ
-40200
-$http://ocsp.apple.com/ocsp03-devid080
-)http://www.apple.com/certificateauthority0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-20120706000000Z0
-o(D-U
-6fQS
-:iPq
-0y1-0+
-$Developer ID Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-240730224259Z0/
-1/0-
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>cdhashes</key>
-	<array>
-		<data>
-		seLg7Ps+oJLW63Wb2aYYJOx5MIY=
-		</data>
-	</array>
-</dict>
-</plist>
-~n.I
-6?\8x
-20240730224300Z0
-0|100.
-'Apple Timestamp Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-240725203516Z
-240905203515Z0B1
-Timestamp Signer NWK11
-Apple Inc.1
-+7cRO
-[wan
-LO[o~
-0RRAt#
-http://www.apple.com/appleca0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-,0*0(
-"http://crl.apple.com/timestamp.crl0
-5l4p
-C"]0
-`5I^
-sVW}
-5d=<
-Oif2+
-}LWc
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-120405120244Z
-270405120244Z0|100.
-'Apple Timestamp Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-Im] 
-(ny_~
-&By^
-t-D>
-E~4u&
-'0%0#
-http://crl.apple.com/root.crl0
-mzT_
-Bsu|QC
-:m7(
-FeoU
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-060425214036Z
-350209214036Z0b1
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-, op
-https://www.apple.com/appleca/0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-=&g 
-Sj[d
-uu!1
-0|100.
-'Apple Timestamp Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-240730224300Z0#
-u;-R
-"4$=
-YWIKe
-FcQkv
-Vgk}
-__TEXT
-__text
-__TEXT
-__stubs
-__TEXT
-__stub_helper
-__TEXT
-__gcc_except_tab__TEXT
-__cstring
-__TEXT
-__objc_methname
-__TEXT
-__const
-__TEXT
-__unwind_info
-__TEXT
-__eh_frame
-__TEXT
-__DATA_CONST
-__got
-__DATA_CONST
-__mod_init_func
-__DATA_CONST
-__const
-__DATA_CONST
-__cfstring
-__DATA_CONST
-__objc_imageinfo__DATA_CONST
-__DATA
-__la_symbol_ptr
-__DATA
-__objc_selrefs
-__DATA
-__objc_classrefs__DATA
-__data
-__DATA
-__thread_vars
-__DATA
-__thread_bss
-__DATA
-__bss
-__DATA
-__common
-__DATA
-__LINKEDIT
-@loader_path/crashhandler.dylib
-/usr/lib/libiconv.2.dylib
-/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
-/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
-/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
-/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
-@loader_path/Frameworks/Breakpad.framework/Versions/A/Breakpad
-/usr/lib/libc++.1.dylib
-/usr/lib/libSystem.B.dylib
-/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
-/usr/lib/libobjc.A.dylib
-cS9@
- @9H
-THyi
-5h"@9h
-h&B)
-T`RE
-*am9
-R*a-9
-Thjv8H
-h(8*
-QiJh8?
-ij`8
-@9?q
-@8?q
-K"}@
-jh8_
-)	@9?
-Jh8?
-Ji8?
-*-@8
-hj8,
-i+8B
-8(A*
-hh8,
-`)Jzc
-Tjji8)
-j)8)
-j)8s
-h^@9
-h^@9
-j98w
-j48u
-T		@9?
-As9(
-(a@9
-5(	@
-ThZ@
-ThZ@
-TiZ@
-	K5}@
-Ti^@
-ThZ@
-ThZ@
-ThZ@
-4hJ@
-ThN@
-4hJ@
-ThN@
-80.	
-ii8J	
-<l9@
-+ih8J	
-'9@@
-T+	@
-;9 q
-@9_q
-jt8 
-	5U9i
-	9U9I
-	=U9i
-i"D)
-T`JH
-4h2@
-7.},
-hBA9
-h2@9
-0@9h
-5h2@9
-	Az 
-Installing breakpad crash handler
-BreakpadProductDisplay
-BreakpadProduct
-BreakpadVendor
-BreakpadVersion
-BreakpadURL
-BuildID
-BreakpadReportInterval
-BreakpadSkipConfirm
-BreakpadSendAndExit
-BreakpadInspectorLocation
-BreakpadReporterExeLocation
-BreakpadMinidumpLocation
-BreakpadEmail
-BreakpadRequestComments
-BreakpadComments
-BreakpadServerType
-BreakpadInProcess
-https://crash.steampowered.com/submit
-True
-False
-Valve
-socorro
-ProductName
-Version
-Notes
-Vendor
-www.steampowered.com
-UserID
-Steam
-Add-ons
-Theme
-Platform
-Mac OS X
-SteamUniverse
-Config-*
-Uploading pending dumps
-%s/%s
-Uploaded %d pending dumps
-%lld
-SteamID:  %s, universe %s
-breakpadUtilities.dylib
-/../Frameworks/Breakpad.framework/Resources
-found breakpad via in process memory: '%s'
-found steam via cross-process IPC: '%s'
-unable to determine steam exe path, falling back to %s, crash reporting probably will not be functional!!!
-Inspector
-crash_report_sender.app
-/tmp/dumps
-%s%d
-Could not select valid crash dump directory based on %s.
-Unable to locate one or both of:
-'%s'
-'%s'
-Crash Uploading will not function.
-Beta
-Internal
-Public
-com.valvesoftware.steam.ipctool
-ipcserver restart: expected: %d, got: %d
-pid %d != %d, clearing client_port = %d, server_port = %d
-pid %d != %d, re-initing before send; client_port = %d, server_port = %d
-StopJob
-pid %d != %d, skipping dealloc of client_port = %d, server_port = %d
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-num > 0
-crashhandler001
-crashhandler002
-crashhandler003
-crashhandler004
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/osversion.cpp
-Invalid macOS version %d.%d.%d
-unknown
-defaults read /System/Library/CoreServices/SystemVersion.plist ProductVersion
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vstdlib/strtools.cpp
-pStr != NULL
-pSearch != NULL
-maxLen == 0 || pDest != NULL
-pSrc != NULL
-bufferLen > 0 && bufferLen <= INT_MAX
-pDest != NULL
-pFormat != NULL
-destCapacity != 0
- bytes
-%i%s
-%%.%if%s
-ppath
-V_RemoveDotSlashes failed for "%s".
-false
-maxLen <= INT_MAX
-checkLen >= 0
-argLen < 0x10000000u
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
-!pszString || pszString[nChars] == '\0'
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
-BCreateDirectory
-%s%c.temp_write_%x
-%s%c%s
-CPathString
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
-info.m_pReplacementString == 0
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
-nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
-CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
-CUtlString::VFormat
-Assertion failed: length > k_cchMaxString
-CUtlStringBuilder::InternalPrepareBuffer
-nMinCapacity > Capacity()
-nMinCapacity >= nChars
-nMinCapacity <= k_nMaxStringSize
-len > 0 || HasError()
-Error State on string being set.
-CUtlStringBuilder::Data::MoveToHeap
-%s %i %s
--nocrashdialog
--debugbreak
-%s (%d) : 
-console
-Exiting on SPEW_ABORT
-IsSpewActive
-Fatal Assertion Failed: 
--noassert
-DONT_BREAK_ON_ASSERT
-Fatal assert; application exiting
-Fatal assert
-_ExitOnFatalAssert
-Failed to capture callstack
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memblockhdr.cpp
-ppFrames[iFrame] != NULL
-Assertion Failed: stack%2d: %s (%d): %s
-Stack:%2d    %s (%d): %s
-Assertion Failed: stack%2d: %s
-Stack%2d: %s
-Assertion Failed: stack%2d: 0x%llX
-Stack%2d: 0x%llX
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/memstd.cpp
-((size_t)(m_nLogicalBytesAllocated) % 8) == 0
-No tracked allocs currently in use. Total %d
-Tracked allocs currently in use. %d Total %d
-item %p sentinel corrupted. skipping.
-Busy, please retry.
-DumpMemTrackingStats %d %d 
-	%d items : %s - %s:%d
-***** OUT OF MEMORY! attempted allocation size: %zu ****
-OUT OF MEMORY
-(iub & (m_nSizeWithStack-1)) == 0
-pAllocTracker->m_uSentinel == 0xaa110ced
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/memblockhdr.h
-pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/minidump.cpp
-Someone called SetWritingMinidump without holding the minidump lock.
-Someone called ClearWritingMinidump without holding the minidump lock.
-!g_pCrashMemoryReserve
-Assert( %s ):%s:%d
-MacOS
-Frameworks
-crashhandler.dylib
-CreateInterface
-steamwebhelper
-Steam Helper
-cefwebhelper
-Jul 30 2024
-15:42:30
-%02d:%02d:%02d
-%04d%02d%02d%02d%02d%02d
-MainThrd
-pthread_setname_np
-exec 
-/bin/sh
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/threadtools.cpp
-tid(%u) pthread_key_create failed: %s
-Bad thread local: Get
-Failed to set thread local value
-Bad thread local: Set
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/validator.cpp
-CValidator : too many memory nodes to store, try again with a higher threshold value
-NULL != m_pValObjectCur
- GiB
- MiB
- KiB
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/valobject.cpp
-NULL == pValObjectPrev->m_pValObjectNext
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier0/vprof.cpp
-!g_VProfile
-pszName
-Root
-m_pBudgetGroups == NULL
-Unaccounted
-Sleeping
-VGUI
-FileSystem
-ClientDLL
-SteamUI
-Network
-Encryption
-OverlayRendering
-OverlayInput
-GameOverlayUI
-RunCallbacks
-Logger
-Jobs/Coroutines
-ServerMain
-Streaming
-ThreadWorkItem
-TenFoot
-tier1
-m_vecNodeMemBlocks.size() == 1
-m_vecNodeMemBlocks.size() == 1 && block.m_iCurIndexToUse == 1
-m_pBudgetGroups
-eGroup < VPROF_BUDGETGROUP_MAX
-No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier0/vprof.h
-m_nRecursions > 0
-allocator<T>::allocate(size_t n) 'n' exceeds maximum supported size
-stringWithCString:encoding:
-bundleWithPath:
-executablePath
-UTF8String
-processInfo
-operatingSystemVersion
-defaultManager
-attributesOfFileSystemForPath:error:
-valueForKey:
-unsignedLongLongValue
-stringWithUTF8String:
-fileURLWithPath:
-getResourceValue:forKey:error:
-boolValue
-arrayWithObjects:count:
-resourceValuesForKeys:error:
-objectForKeyedSubscript:
-fileSystemRepresentation
-stringWithFileSystemRepresentation:length:
-stringByExpandingTildeInPath
-stringByResolvingSymlinksInPath
-mountedVolumeURLsIncludingResourceValuesForKeys:options:
-countByEnumeratingWithState:objects:count:
-getRelationship:ofDirectoryAtURL:toItemAtURL:error:
-path
-hasPrefix:
-length
-16CBreakpadFactory
-16IBreakpadFactory
-13CCrashHandler
-13ICrashHandler
-?20CUniformRandomStream
-20IUniformRandomStream
-$tI(knN
->11CPathString
 21CUtlCStringConversion
-18CUtlCharConversion
 19CUtlNoEscConversion
-@LE12CStdMemAlloc
-9IMemAlloc
+nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
+/data/src/tier1/utlmemory.cpp
+Assertion failed: length > k_cchMaxString
+/data/src/public/tier1/utlstring.h
+/data/src/tier1/utlstring.cpp
+CUtlString::SetValue
+CUtlString::VFormat
+Assert
+!directory.empty()
+google_breakpad::MinidumpDescriptor::MinidumpDescriptor(const string&)
+./src/client/linux/handler/minidump_descriptor.h
+ExceptionHandler::WaitForContinueSignal sys_read failed:
+ExceptionHandler::SendContinueSignalToChild sys_write failed:
+ExceptionHandler::GenerateDump waitpid failed:
+ExceptionHandler::GenerateDump sys_pipe failed:
+google_breakpad::MinidumpDescriptor::MinidumpDescriptor(const google_breakpad::MinidumpDescriptor&)
+src/client/linux/handler/minidump_descriptor.cc
+void google_breakpad::MinidumpDescriptor::UpdatePath(const char*)
+mode_ == kWriteMinidumpToFile && !directory_.empty()
+google_breakpad::MinidumpDescriptor& google_breakpad::MinidumpDescriptor::operator=(const google_breakpad::MinidumpDescriptor&)
+descriptor.path_.empty()
+crash
+%s_%d%.2d%.2d%.2d%.2d%.2d_%d
+.dmp
+ucontext_
+!dumper_->IsPostMortem()
+S 0 
+-----BEGIN BREAKPAD MICRODUMP-----
+bool {anonymous}::MicrodumpWriter::DumpCrashingThread()
+src/client/linux/microdump_writer/microdump_writer.cc
+-----END BREAKPAD MICRODUMP-----
+0123456789ABCDEFbool google_breakpad::{anonymous}::ElfFileSoName(const google_breakpad::MappingInfo&, char*, size_t)
+src/client/linux/minidump_writer/linux_dumper.cc
+bool google_breakpad::LinuxDumper::ElfFileIdentifierForMapping(const google_breakpad::MappingInfo&, bool, unsigned int, uint8_t*)
+!member || mapping_id < mappings_.size()
+.dynamic
+.dynstr
+maps
+vector::_M_default_append
+auxv
+void google_breakpad::LineReader::PopLine(unsigned int)
+./src/client/linux/minidump_writer/line_reader.h
+buf_used_ >= len + 1
+N15google_breakpad11LinuxDumperE
+ ---p
+ (deleted)
+/dev/
+linux-gate.so
+task
+buf_used_ > 0
+info != __null
+Tgid:\t
+PPid:\t
+bool google_breakpad::DirectoryReader::GetNextEntry(const char**)
+./src/client/linux/minidump_writer/directory_reader.h
+virtual bool google_breakpad::LinuxPtraceDumper::GetThreadInfoByIndex(size_t, google_breakpad::ThreadInfo*)
+src/client/linux/minidump_writer/linux_ptrace_dumper.cc
+N15google_breakpad17LinuxPtraceDumperE
+{anonymous}::MinidumpWriter::MinidumpWriter(const char*, int, const google_breakpad::ExceptionHandler::CrashContext*, const MappingList&, const AppMemoryList&, google_breakpad::LinuxDumper*)
+src/client/linux/minidump_writer/minidump_writer.cc
+const char* google_breakpad::ProcCpuInfoReader::GetValueAndLen(size_t*)
+./src/client/linux/minidump_writer/proc_cpuinfo_reader.h
+bool google_breakpad::TypedMDRVA<MDType>::CopyIndex(unsigned int, MDType*) [with MDType = MDRawLinkMap32]
+./src/client/minidump_file_writer-inl.h
+bool google_breakpad::TypedMDRVA<MDType>::AllocateObjectAndArray(size_t, size_t) [with MDType = MDRawDebug32; size_t = unsigned int]
+bool google_breakpad::TypedMDRVA<MDType>::CopyIndexAfterObject(unsigned int, const void*, size_t) [with MDType = MDRawDebug32; size_t = unsigned int]
+allocation_state_ == SINGLE_OBJECT_WITH_ARRAY
+bool google_breakpad::TypedMDRVA<MDType>::AllocateObjectAndArray(size_t, size_t) [with MDType = unsigned int; size_t = unsigned int]
+bool google_breakpad::TypedMDRVA<MDType>::CopyIndexAfterObject(unsigned int, const void*, size_t) [with MDType = unsigned int; size_t = unsigned int]
+bool google_breakpad::TypedMDRVA<MDType>::CopyIndex(unsigned int, MDType*) [with MDType = MDRawDirectory]
+bool {anonymous}::MinidumpWriter::WriteFile(MDLocationDescriptor*, const char*)
+fd_ != -1 || minidump_path
+processor
+model
+stepping
+cpu family
+/proc/cpuinfo
+value_
+allocation_state_ == ARRAY
+count && length
+buffers->next == __null
+/etc/lsb-release
+environ
+fd_ == -1 || !minidump_path
+vendor_id
+bool google_breakpad::UntypedMDRVA::Allocate(size_t)
+src/client/minidump_file_writer.cc
+bool google_breakpad::MinidumpFileWriter::Open(const char*)
+void google_breakpad::MinidumpFileWriter::SetFile(int)
+bool google_breakpad::TypedMDRVA<MDType>::CopyIndexAfterObject(unsigned int, const void*, size_t) [with MDType = MDString; size_t = unsigned int]
+bool google_breakpad::MinidumpFileWriter::Copy(MDRVA, const void*, ssize_t)
+MDRVA google_breakpad::MinidumpFileWriter::Allocate(size_t)
+bool google_breakpad::MinidumpFileWriter::WriteMemory(const void*, size_t, MDMemoryDescriptor*)
+bool google_breakpad::UntypedMDRVA::Copy(MDRVA, const void*, size_t)
+pos + size <= position_ + size_
+size_ == 0
+file_ == -1
+file_ != -1
+output
+bool google_breakpad::MinidumpFileWriter::WriteStringCore(const CharType*, unsigned int, MDLocationDescriptor*) [with CharType = wchar_t]
+location
+bool google_breakpad::MinidumpFileWriter::WriteStringCore(const CharType*, unsigned int, MDLocationDescriptor*) [with CharType = char]
+bool google_breakpad::TypedMDRVA<MDType>::AllocateObjectAndArray(size_t, size_t) [with MDType = MDString; size_t = unsigned int]
+vector::_M_fill_insert
+src/common/linux/elfutils.cc
+elf_mapped_base
+section_start
+section_size
+name != __null
+sections != __null
+nsection > 0
+segment_start
+segment_size
+bool google_breakpad::FindElfSection(const void*, const char*, uint32_t, const void**, size_t*, int*)
+void google_breakpad::{anonymous}::FindElfClassSection(const char*, const char*, typename ElfClass::Word, const void**, size_t*) [with ElfClass = google_breakpad::ElfClass32; typename ElfClass::Word = unsigned int; size_t = unsigned int]
+my_strncmp(elf_base, "\177ELF", 4) == 0
+elf_header->e_ident[4] == ElfClass::kClass
+const typename ElfClass::Shdr* google_breakpad::FindElfSectionByName(const char*, typename ElfClass::Word, const typename ElfClass::Shdr*, const char*, const char*, int) [with ElfClass = google_breakpad::ElfClass32; typename ElfClass::Shdr = Elf32_Shdr; typename ElfClass::Word = unsigned int]
+./src/common/linux/elfutils-inl.h
+void google_breakpad::{anonymous}::FindElfClassSection(const char*, const char*, typename ElfClass::Word, const void**, size_t*) [with ElfClass = google_breakpad::ElfClass64; typename ElfClass::Word = unsigned int; size_t = unsigned int]
+const typename ElfClass::Shdr* google_breakpad::FindElfSectionByName(const char*, typename ElfClass::Word, const typename ElfClass::Shdr*, const char*, const char*, int) [with ElfClass = google_breakpad::ElfClass64; typename ElfClass::Shdr = Elf64_Shdr; typename ElfClass::Word = unsigned int]
+bool google_breakpad::FindElfSegment(const void*, uint32_t, const void**, size_t*, int*)
+void google_breakpad::{anonymous}::FindElfClassSegment(const char*, typename ElfClass::Word, const void**, size_t*) [with ElfClass = google_breakpad::ElfClass32; typename ElfClass::Word = unsigned int; size_t = unsigned int]
+void google_breakpad::{anonymous}::FindElfClassSegment(const char*, typename ElfClass::Word, const void**, size_t*) [with ElfClass = google_breakpad::ElfClass64; typename ElfClass::Word = unsigned int; size_t = unsigned int]
+.note.gnu.build-id
+.text
+ \t\f\n\r\t\v
+N15google_breakpad21CrashGenerationClientE
+*N15google_breakpad12_GLOBAL__N_125CrashGenerationClientImplE
+void google_breakpad::ThreadInfo::GetGeneralPurposeRegisters(void**, size_t*)
+src/client/linux/dump_writer_common/thread_info.cc
+void google_breakpad::ThreadInfo::GetFloatingPointRegisters(void**, size_t*)
+gp_regs || size
+fp_regs || size
+20IUniformRandomStream
+20CUniformRandomStream
+N10__cxxabiv117__class_type_infoE
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
+std::exception
+std::bad_exception
+St9exception
+St13bad_exception
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv119__foreign_exceptionE
+N10__cxxabiv123__fundamental_type_infoE
+PKDu
+PKDs
+PKDi
+PKDf
+PKDd
+PKDe
+PKDn
+N9__gnu_cxx20recursive_init_errorE
+N10__cxxabiv119__pointer_type_infoE
+pure virtual method called\n
+N10__cxxabiv120__si_class_type_infoE
+St9type_info
+terminate called recursively\n
+  what():  
+terminate called after throwing an instance of '
+terminate called without an active exception\n
+NSt6locale5facetE
+UTF-8
+ASCII//TRANSLIT
+ASCII
+St12codecvt_base
+St23__codecvt_abstract_baseIDsc11__mbstate_tE
+St7codecvtIDsc11__mbstate_tE
+St23__codecvt_abstract_baseIDic11__mbstate_tE
+St7codecvtIDic11__mbstate_tE
+St23__codecvt_abstract_baseIDsDu11__mbstate_tE
+St7codecvtIDsDu11__mbstate_tE
+St23__codecvt_abstract_baseIDiDu11__mbstate_tE
+St7codecvtIDiDu11__mbstate_tE
+St10ctype_base
+St5ctypeIcE
+St5ctypeIwE
+space
+print
+cntrl
+upper
+lower
+alpha
+punct
+xdigit
+alnum
+graph
+blank
+N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
+N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
+\v\v\v\v\r\r
+\t\rK~\n
+CH\f1
+I\r]P`
+H;!}#@i
+FoCLcx
+basic_ios::clear
+St9basic_iosIcSt11char_traitsIcEE
+St9basic_iosIwSt11char_traitsIwEE
+St8ios_base
+St13basic_istreamIwSt11char_traitsIwEE
+%.*Lf
+%m/%d/%y
+%H:%M
+%H:%M:%S
+St9time_base
+St10money_base
+St13messages_base
+St7collateIcE
+St8numpunctIcE
+St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St17__timepunct_cacheIcE
+St11__timepunctIcE
+St10moneypunctIcLb1EE
+St10moneypunctIcLb0EE
+St8messagesIcE
+St23__codecvt_abstract_baseIcc11__mbstate_tE
+St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St18__moneypunct_cacheIcLb0EE
+St18__moneypunct_cacheIcLb1EE
+St16__numpunct_cacheIcE
+St13basic_ostreamIwSt11char_traitsIwEE
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
+St15basic_streambufIcSt11char_traitsIcEE
+St15basic_streambufIwSt11char_traitsIwEE
+basic_string::copy
+basic_string::_S_create
+basic_string::_M_replace_aux
+basic_string::assign
+basic_string::append
+basic_string::resize
+basic_string::_S_construct null not valid
+St7collateIwE
+St21__ctype_abstract_baseIwE
+St8numpunctIwE
+St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St17__timepunct_cacheIwE
+St11__timepunctIwE
+St10moneypunctIwLb1EE
+St10moneypunctIwLb0EE
+St8messagesIwE
+St23__codecvt_abstract_baseIwc11__mbstate_tE
+St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St18__moneypunct_cacheIwLb0EE
+St18__moneypunct_cacheIwLb1EE
+St16__numpunct_cacheIwE
+std::bad_alloc
+St9bad_alloc
+std::bad_array_new_length
+St20bad_array_new_length
+std::bad_cast
+St8bad_cast
+_GLOBAL_
+(anonymous namespace)
+string literal
+auto
+decltype(auto)
+[abi:
+{default arg#
+JArray
+auto:
+VTT for 
+construction vtable for 
+-in-
+typeinfo for 
+typeinfo name for 
+typeinfo fn for 
+non-virtual thunk to 
+covariant return thunk to 
+java Class for 
+guard variable for 
+TLS init function for 
+TLS wrapper function for 
+reference temporary #
+hidden alias for 
+non-transaction clone for 
+_Sat 
+_Fract
+_Accum
+operator
+operator 
+new 
+java resource 
+decltype (
+{parm#
+this
+global constructors keyed to 
+global destructors keyed to 
+{lambda(
+{unnamed type#
+ [clone 
+ restrict
+ volatile
+ const
+ transaction_safe
+ noexcept
+ throw
+complex 
+imaginary 
+ __vector(
+(...
+...)
+std::allocator
+std::basic_string
+std::string
+std::istream
+basic_istream
+std::ostream
+basic_ostream
+std::iostream
+basic_iostream
+alignof 
+const_cast
+delete[] 
+dynamic_cast
+delete 
+operator"" 
+new[]
+reinterpret_cast
+sizeof...
+static_cast
+sizeof 
+throw 
+bool
+boolean
+byte
+long double
+float
+__float128
+unsigned char
+unsigned int
+unsigned
+unsigned long
+unsigned __int128
+unsigned short
+void
+wchar_t
+unsigned long long
+decimal32
+decimal64
+decimal128
+half
+char8_t
+char16_t
+char32_t
+decltype(nullptr)
+template parameter object for 
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_iostream<char, std::char_traits<char> >
+N10__cxxabiv117__pbase_type_infoE
+N10__cxxabiv129__pointer_to_member_type_infoE
+N10__cxxabiv121__vmi_class_type_infoE
+locale::facet::_S_create_c_locale name not valid
+St7codecvtIcc11__mbstate_tE
+St7codecvtIwc11__mbstate_tE
+NSt8ios_base7failureE
+-+xX0123456789abcdef0123456789ABCDEF
+-+xX0123456789abcdefABCDEF
+-0123456789
+AKST
+St11logic_error
+St12length_error
+St12out_of_range
+St13runtime_error
+Sunday
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+January
+February
+March
+April
+June
+July
+August
+September
+October
+November
+December
 Mb@?
-A]Ap
-UA]Ap
-RAVAp
-RARAp
-RARAp
-RARARA`@Ap
-@_OBJC_CLASS_$_NSAutoreleasePool
-@_OBJC_CLASS_$_NSBundle
-@_OBJC_CLASS_$_NSFileManager
-@_OBJC_CLASS_$_NSProcessInfo
-@_OBJC_CLASS_$_NSString
-@__ZNSt12length_errorD1Ev
-@__ZTISt12length_error
-@__ZTVN10__cxxabiv117__class_type_infoE
-@__ZTVN10__cxxabiv120__si_class_type_infoE
-@__ZTVSt12length_error
-@__ZdaPv
-@__ZdlPv
-@__Znam
-@__Znwm
-@___gxx_personality_v0
-@___chkstk_darwin
-@___stack_chk_guard
-@___stderrp
-@___stdoutp
-@__tlv_bootstrap
-@_alphasort
-@_bootstrap_port
-@_mach_task_self_
-@dyld_stub_binder
-@_OBJC_CLASS_$_NSArray
-@_OBJC_CLASS_$_NSURL
-@___CFConstantStringClassReference
-@_kCFAllocatorDefault
-@_kCFTypeDictionaryKeyCallBacks
-@_kCFTypeDictionaryValueCallBacks
-@__ZTISt12length_error
-@__ZdaPv
-@__ZdlPv
-@__Znam
-@__Znwm
-@_BreakpadAddUploadParameter
-@_BreakpadCreate
-@_BreakpadGenerateAndSendReport
-@_BreakpadRelease
-@_BreakpadSetComment
-@_BreakpadSetFilterCallback
-@_CFDictionaryCreate
-@_CFRelease
-@_CFStringCreateWithCString
-@__NSGetArgc
-@__NSGetArgv
-@__NSGetExecutablePath
-@__Unwind_Resume
-@__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
-@__ZNSt11logic_errorC2EPKc
-@__ZNSt3__112__next_primeEm
-@__ZSt9terminatev
-@___cxa_allocate_exception
-@___cxa_atexit
-@___cxa_begin_catch
-@___cxa_end_catch
-@___cxa_free_exception
-@___cxa_guard_abort
-@___cxa_guard_acquire
-@___cxa_guard_release
-@___cxa_rethrow
-@___cxa_throw
-@___error
-@___stack_chk_fail
-@___tolower
-@__dyld_get_image_name
-@__exit
-@_atoi
-@_backtrace
-@_backtrace_symbols
-@_bootstrap_look_up
-@_bzero
-@_dladdr
-@_dlclose
-@_dlopen
-@_dlsym
-@_execv
-@_fclose
-@_fflush
-@_fgets
-@_fnmatch
-@_fopen
-@_fork
-@_fprintf
-@_fputc
-@_free
-@_fwrite
-@_getcwd
-@_getenv
-@_getpid
-@_kill
-@_launch_data_alloc
-@_launch_data_dict_insert
-@_launch_data_free
-@_launch_data_new_string
-@_launch_msg
-@_lchmod
-@_lstat
-@_mach_continuous_time
-@_mach_msg
-@_mach_port_allocate
-@_mach_port_deallocate
-@_mach_port_mod_refs
-@_mach_port_type
-@_mach_timebase_info
-@_malloc
-@_malloc_size
-@_memcmp
-@_memcpy
-@_memmove
-@_mkdir
-@_nanosleep
-@_objc_alloc_init
-@_objc_msgSend
-@_objc_opt_respondsToSelector
-@_objc_release
-@_pclose
-@_popen
-@_posix_memalign
-@_printf
-@_pthread_create
-@_pthread_getspecific
-@_pthread_key_create
-@_pthread_key_delete
-@_pthread_kill
-@_pthread_mach_thread_np
-@_pthread_mutex_destroy
-@_pthread_mutex_init
-@_pthread_mutex_lock
-@_pthread_mutex_trylock
-@_pthread_mutex_unlock
-@_pthread_mutexattr_init
-@_pthread_mutexattr_settype
-@_pthread_self
-@_pthread_setspecific
-@_realloc
-@_scandir
-@_sched_yield
-@_setsid
-@_signal
-@_sigprocmask
-@_snprintf
-@_sscanf
-@_stat
-@_strcasecmp
-@_strchr
-@_strcmp
-@_strcpy
-@_strerror
-@_strlen
-@_strncasecmp
-@_strncat
-@_strncpy
-@_strrchr
-@_sysctl
-@_system
-@_time
-@_unlink
-@_usleep
-@_utime
-@_vasprintf
-@_vsnprintf
-@_waitpid
+__nl_langinfo_l@GLIBC_2.2
+getpagesize@GLIBC_2.0
+fputs@GLIBC_2.0
+_ITM_addUserCommitAction
+abort@GLIBC_2.0
+__errno_location@GLIBC_2.0
+_ITM_memcpyRtWn
+statvfs64@GLIBC_2.1
+sigemptyset@GLIBC_2.0
+pthread_once@GLIBC_2.0
+_ZTIPDi
+__wrap_opendir
+_ZTSg
+_ZTIN9__gnu_cxx20recursive_init_errorE
+_ZTIPDu
+wmemchr@GLIBC_2.0
+_Z28_txnal_runtime_error_get_msgPv
+statfs64@GLIBC_2.1
+getpid@GLIBC_2.0
+__wrap_freopen
+_ZTIPa
+mkdir@GLIBC_2.0
+strerror@GLIBC_2.0
+__cxa_atexit@GLIBC_2.1.3
+_ZTVN10__cxxabiv119__foreign_exceptionE
+_ZTIDd
+_ZTVN10__cxxabiv117__pbase_type_infoE
+sysconf@GLIBC_2.0
+memcmp@GLIBC_2.0
+_ZTSPb
+_ZTSPKa
+_ZTSw
+_ZTIPKh
+_ZTSPKe
+_ZTIPKl
+_ZTIN10__cxxabiv119__foreign_exceptionE
+_ZTIPKd
+_ZTIN10__cxxabiv115__forced_unwindE
+_ZTIg
+_ZTIPKy
+statfs@GLIBC_2.0
+getcontext@GLIBC_2.1
+_ZTSN10__cxxabiv129__pointer_to_member_type_infoE
+__ctype_get_mb_cur_max@GLIBC_2.0
+_ZTSN10__cxxabiv117__pbase_type_infoE
+__fprintf_chk@GLIBC_2.3.4
+_ZGTtnaj
+signal@GLIBC_2.0
+__wrap_symlink
+__xstat@GLIBC_2.0
+syscall@GLIBC_2.0
+_ZTIPKt
+__gmon_start__
+__lxstat@GLIBC_2.0
+_ZTSPKy
+realloc@GLIBC_2.0
+sched_yield@GLIBC_2.0
+iconv_open@GLIBC_2.1
+rewind@GLIBC_2.0
+__xstat64@GLIBC_2.2
+localtime@GLIBC_2.0
+__wrap_rename
+_ZTIPDe
+_ZTVN10__cxxabiv129__pointer_to_member_type_infoE
+__wrap_fopen
+alphasort64@GLIBC_2.2
+_ZTSPKi
+__printf_chk@GLIBC_2.3.4
+_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
+strchr@GLIBC_2.0
+vsnprintf@GLIBC_2.0
+putwc@GLIBC_2.2
+getenv@GLIBC_2.0
+__strftime_l@GLIBC_2.3
+_ZTIPy
+_fini
+calloc@GLIBC_2.0
+strncpy@GLIBC_2.0
+_ZTSDs
+_ZTIPKDd
+_ZTSPKm
+_ZTIw
+wmemmove@GLIBC_2.0
+_ZTIDi
+wcslen@GLIBC_2.0
+malloc_usable_size@GLIBC_2.0
+_ZTSPKDs
+mbsrtowcs@GLIBC_2.0
+_ITM_RU1
+_ZTIs
+pthread_key_delete@GLIBC_2.0
+dgettext@GLIBC_2.0
+_ZTIc
+dlclose@GLIBC_2.0
+_ZTSj
+_ZTSPg
+fgets@GLIBC_2.0
+rename@GLIBC_2.0
+_ZTIDu
+_ZTIPj
+fopen64@GLIBC_2.1
+_ZTSPw
+scandir@GLIBC_2.0
+_ZTIPf
+_ZTSb
+_ZTSN9__gnu_cxx20recursive_init_errorE
+strtold_l@GLIBC_2.3
+_ZTSPDd
+_ZTSPs
+_ZTSDd
+_ZTIN10__cxxabiv119__pointer_type_infoE
+__memcpy_chk@GLIBC_2.3.4
+_exit@GLIBC_2.0
+_ZTSf
+strrchr@GLIBC_2.0
+_ZTVN10__cxxabiv115__forced_unwindE
+pthread_getspecific@GLIBC_2.0
+mount@GLIBC_2.0
+dlmopen@GLIBC_2.3.4
+uname@GLIBC_2.0
+fseeko64@GLIBC_2.1
+chmod@GLIBC_2.0
+wmemcpy@GLIBC_2.0
+__assert_fail@GLIBC_2.0
 CreateInterface
--Breakpad_SetSteamID
-HXX\
-Ll(D\
-00((
-hPH,@P
-_Breakpad_SetSteamID
-_CreateInterface
-_BreakpadAddUploadParameter
-_BreakpadCreate
-_BreakpadGenerateAndSendReport
-_BreakpadRelease
-_BreakpadSetComment
-_BreakpadSetFilterCallback
-_CFDictionaryCreate
-_CFRelease
-_CFStringCreateWithCString
-_OBJC_CLASS_$_NSArray
-_OBJC_CLASS_$_NSAutoreleasePool
-_OBJC_CLASS_$_NSBundle
-_OBJC_CLASS_$_NSFileManager
-_OBJC_CLASS_$_NSProcessInfo
-_OBJC_CLASS_$_NSString
-_OBJC_CLASS_$_NSURL
-__NSGetArgc
-__NSGetArgv
-__NSGetExecutablePath
-__Unwind_Resume
-__ZNKSt3__120__vector_base_commonILb1EE20__throw_length_errorEv
-__ZNSt11logic_errorC2EPKc
-__ZNSt12length_errorD1Ev
-__ZNSt3__112__next_primeEm
-__ZSt9terminatev
-__ZTISt12length_error
-__ZTVN10__cxxabiv117__class_type_infoE
-__ZTVN10__cxxabiv120__si_class_type_infoE
-__ZTVSt12length_error
-__ZdaPv
-__ZdlPv
-__Znam
-__Znwm
-___CFConstantStringClassReference
-___chkstk_darwin
-___cxa_allocate_exception
-___cxa_atexit
-___cxa_begin_catch
-___cxa_end_catch
-___cxa_free_exception
-___cxa_guard_abort
-___cxa_guard_acquire
-___cxa_guard_release
-___cxa_rethrow
-___cxa_throw
-___error
-___gxx_personality_v0
-___stack_chk_fail
-___stack_chk_guard
-___stderrp
-___stdoutp
-___tolower
-__dyld_get_image_name
-__exit
-__tlv_bootstrap
-_alphasort
-_atoi
-_backtrace
-_backtrace_symbols
-_bootstrap_look_up
-_bootstrap_port
-_bzero
-_dladdr
-_dlclose
-_dlopen
-_dlsym
-_execv
-_fclose
-_fflush
-_fgets
-_fnmatch
-_fopen
-_fork
-_fprintf
-_fputc
-_free
-_fwrite
-_getcwd
-_getenv
-_getpid
-_kCFAllocatorDefault
-_kCFTypeDictionaryKeyCallBacks
-_kCFTypeDictionaryValueCallBacks
-_kill
-_launch_data_alloc
-_launch_data_dict_insert
-_launch_data_free
-_launch_data_new_string
-_launch_msg
-_lchmod
-_lstat
-_mach_continuous_time
-_mach_msg
-_mach_port_allocate
-_mach_port_deallocate
-_mach_port_mod_refs
-_mach_port_type
-_mach_task_self_
-_mach_timebase_info
-_malloc
-_malloc_size
-_memcmp
-_memcpy
-_memmove
-_mkdir
-_nanosleep
-_objc_alloc_init
-_objc_msgSend
-_objc_opt_respondsToSelector
-_objc_release
-_pclose
-_popen
-_posix_memalign
-_printf
-_pthread_create
-_pthread_getspecific
-_pthread_key_create
-_pthread_key_delete
-_pthread_kill
-_pthread_mach_thread_np
-_pthread_mutex_destroy
-_pthread_mutex_init
-_pthread_mutex_lock
-_pthread_mutex_trylock
-_pthread_mutex_unlock
-_pthread_mutexattr_init
-_pthread_mutexattr_settype
-_pthread_self
-_pthread_setspecific
-_realloc
-_scandir
-_sched_yield
-_setsid
-_signal
-_sigprocmask
-_snprintf
-_sscanf
-_stat
-_strcasecmp
-_strchr
-_strcmp
-_strcpy
-_strerror
-_strlen
-_strncasecmp
-_strncat
-_strncpy
-_strrchr
-_sysctl
-_system
-_time
-_unlink
-_usleep
-_utime
-_vasprintf
-_vsnprintf
-_waitpid
-dyld_stub_binder
-radr://5614542
-com.valvesoftware.steam
-MXGJJ98X76
-7B7}
-?(}j
-"{MIc
-1|qm
-s	xF
-YH|Tl
-ljlqcZ7
-g9`i
-subject.OU
-MXGJJ98X76
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-120201221215Z
-270201221215Z0y1-0+
-$Developer ID Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-)xEii`k_
-1? v(m
-'0%0#
-http://crl.apple.com/root.crl0
-B9tk
-P9jDt
-#q-_
- "ror
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-060425214036Z
-350209214036Z0b1
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-, op
-https://www.apple.com/appleca/0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-=&g 
-Sj[d
-uu!0
-0y1-0+
-$Developer ID Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-210205030950Z
-260206030950Z0
-MXGJJ98X761A0?
-8Developer ID Application: Valve Corporation (MXGJJ98X76)1
-MXGJJ98X761
-Valve Corporation1
-~kk!
-3oC&
-uN`AJ
-40200
-$http://ocsp.apple.com/ocsp03-devid080
-)http://www.apple.com/certificateauthority0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-20120706000000Z0
-o(D-U
-6fQS
-:iPq
-0y1-0+
-$Developer ID Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-240730224259Z0/
-1/0-
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>cdhashes</key>
-	<array>
-		<data>
-		aYK74ErcXehncXekCFRkI6hODVQ=
-		</data>
-	</array>
-</dict>
-</plist>
-*bq8M
-tb{r
-20240730224300Z0
-0|100.
-'Apple Timestamp Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-240725203516Z
-240905203515Z0B1
-Timestamp Signer NWK11
-Apple Inc.1
-+7cRO
-[wan
-LO[o~
-0RRAt#
-http://www.apple.com/appleca0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-,0*0(
-"http://crl.apple.com/timestamp.crl0
-5l4p
-C"]0
-`5I^
-sVW}
-5d=<
-Oif2+
-}LWc
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-120405120244Z
-270405120244Z0|100.
-'Apple Timestamp Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-Im] 
-(ny_~
-&By^
-t-D>
-E~4u&
-'0%0#
-http://crl.apple.com/root.crl0
-mzT_
-Bsu|QC
-:m7(
-FeoU
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-060425214036Z
-350209214036Z0b1
-Apple Inc.1&0$
-Apple Certification Authority1
-Apple Root CA0
-, op
-https://www.apple.com/appleca/0
-Reliance on this certificate by any party assumes acceptance of the then applicable standard terms and conditions of use, certificate policy and certification practice statements.0
-=&g 
-Sj[d
-uu!1
-0|100.
-'Apple Timestamp Certification Authority1&0$
-Apple Certification Authority1
-Apple Inc.1
-240730224300Z0#
-2n{bO
+__vsnprintf_chk@GLIBC_2.3.4
+_ZTIPb
+mbrtowc@GLIBC_2.0
+_ZTIPKDu
+__wrap_chmod
+_ZTIDe
+_ITM_deregisterTMCloneTable
+pthread_mutex_trylock@GLIBC_2.0
+_ZTSPKb
+_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
+ungetc@GLIBC_2.0
+_ZTSPKf
+__wrap_scandir64
+__wrap_stat
+_ZTIPKg
+_ZTIN10__cxxabiv121__vmi_class_type_infoE
+gettimeofday@GLIBC_2.0
+strtol@GLIBC_2.0
+_ZTSPc
+free@GLIBC_2.0
+__xmknod@GLIBC_2.0
+__lxstat64@GLIBC_2.2
+backtrace_symbols@GLIBC_2.1
+_ZTSv
+_ZTIPKc
+SteamRealPath
+_ZTIf
+mbsnrtowcs@GLIBC_2.0
+_ZTSN10__cxxabiv121__vmi_class_type_infoE
+_ZTIPKx
+__wrap_mkfifo
+__wrap_access
+access@GLIBC_2.0
+_ITM_registerTMCloneTable
+__wrap_mount
+dlsym@GLIBC_2.0
+sigaction@GLIBC_2.0
+fflush@GLIBC_2.0
+__wrap_open64
+_ZTIPKs
+_Z26_txnal_logic_error_get_msgPv
+__vfprintf_chk@GLIBC_2.3.4
+opendir@GLIBC_2.0
+statvfs@GLIBC_2.1
+symlink@GLIBC_2.0
+_ZTIPDd
+wcrtomb@GLIBC_2.0
+___tls_get_addr@GLIBC_2.3
+pthread_mutex_unlock@GLIBC_2.0
+wctob@GLIBC_2.0
+_ZTSN10__cxxabiv123__fundamental_type_infoE
+realpath@GLIBC_2.3
+vfork@GLIBC_2.0
+_ZTSPKv
+__wctype_l@GLIBC_2.1
+_ZTSN10__cxxabiv119__foreign_exceptionE
+__wcsftime_l@GLIBC_2.3
+ftello64@GLIBC_2.1
+_ZTSPKDd
+_ZTIPc
+_ZTIDn
+__wrap_mkdir
+_ZTIPv
+_ZTIPKDe
+_ZTIv
+_ZTIN10__cxxabiv129__pointer_to_member_type_infoE
+_ZTSN10__cxxabiv120__si_class_type_infoE
+_ZTSPKj
+_ZTIPKDi
+_ZTIDf
+__wrap_rmdir
+_ZTSPDu
+_ZTIj
+_ZTIPw
+readdir64@GLIBC_2.2
+stderr@GLIBC_2.0
+nanosleep@GLIBC_2.0
+_ZTIb
+__wrap_unlink
+utime@GLIBC_2.0
+execv@GLIBC_2.0
+_ZTSPh
+_ITM_RU4
+_ZTVN9__gnu_cxx20recursive_init_errorE
+strlen@GLIBC_2.0
+_ZTSPDi
+_ZTSPx
+fopen@GLIBC_2.1
+_ZTIPg
+__wrap_mknod
+_ZTSa
+pthread_mutex_destroy@GLIBC_2.0
+__towupper_l@GLIBC_2.1
+unlink@GLIBC_2.0
+iconv@GLIBC_2.1
+_ZTSPDe
+_ZTSPt
+wmemset@GLIBC_2.0
+_ZTSDe
+__wrap_statfs
+_ZTSi
+freopen@GLIBC_2.0
+_ZTIPDs
+__strxfrm_l@GLIBC_2.1
+waitpid@GLIBC_2.0
+_ZTSe
+getegid@GLIBC_2.0
+dlopen@GLIBC_2.1
+mkfifo@GLIBC_2.0
+chdir@GLIBC_2.0
+_ZTVN10__cxxabiv123__fundamental_type_infoE
+_Z23_txnal_cow_string_c_strPKv
+_ZTSPKc
+_ZTSPl
+_ZTSN10__cxxabiv117__class_type_infoE
+_ZTIPKDn
+pthread_mutex_init@GLIBC_2.0
+_ZTIPKj
+__wrap___lxstat64
+__strcpy_chk@GLIBC_2.3.4
+_ZTSPd
+_ZTSm
+_ZTIPKf
+_ZTIN10__cxxabiv123__fundamental_type_infoE
+_ZTSy
+strcasecmp@GLIBC_2.0
+_ZTIa
+__strtod_l@GLIBC_2.1
+_ZTIPKb
+clock_gettime@GLIBC_2.2
+_ZTIe
+_ZTIi
+Breakpad_SetSteamID
+_ZTIPKw
+pthread_setspecific@GLIBC_2.0
+ftruncate@GLIBC_2.0
+__wcsxfrm_l@GLIBC_2.1
+closedir@GLIBC_2.0
+__wrap_lstat
+fwrite@GLIBC_2.0
+__wrap_dlmopen
+__wrap_statvfs
+__dprintf_chk@GLIBC_2.8
+__wrap_statfs64
+_ZTSPKDu
+_ZTVN10__cxxabiv121__vmi_class_type_infoE
+__wrap___xstat
+strncat@GLIBC_2.0
+__wrap___lxstat
+_ZTSPKw
+_ZTVN10__cxxabiv117__class_type_infoE
+malloc@GLIBC_2.0
+wcscmp@GLIBC_2.0
+_ZTSPKDi
+_ZTSPKs
+pthread_mutex_lock@GLIBC_2.0
+_ZTSN9__gnu_cxx24__concurrence_lock_errorE
+_ZTIPl
+_ZTSPKDe
+_ZTIPd
+__uselocale@GLIBC_2.3
+_ZTSDu
+_ZTIPs
+chown@GLIBC_2.1
+__stack_chk_fail@GLIBC_2.4
+_ZTIy
+_ZTIPKDf
+iconv_close@GLIBC_2.1
+_ZTSPKg
+_ZTIm
+_ZTSDi
+_ZTIPx
+__freelocale@GLIBC_2.1
+fputc@GLIBC_2.0
+__wrap_dlopen
+_ZTSPm
+_ZTSPy
+_ZTSPDn
+_ZTSPi
+rmdir@GLIBC_2.0
+dlerror@GLIBC_2.0
+_ZTSl
+scandir64@GLIBC_2.2
+_ZTSPe
+__wrap_utimes
+stdin@GLIBC_2.0
+__strcoll_l@GLIBC_2.1
+strcasestr@GLIBC_2.1
+_ZTSt
+_ZTSPDf
+_ZTIDs
+_ZTIPh
+__wrap_chdir
+_ZTSd
+sigaddset@GLIBC_2.0
+__towlower_l@GLIBC_2.1
+readlink@GLIBC_2.0
+__iswctype_l@GLIBC_2.1
+backtrace@GLIBC_2.1
+strncasecmp@GLIBC_2.0
+_ZTIN10__cxxabiv117__pbase_type_infoE
+__ctype_tolower_loc@GLIBC_2.3
+__strtof_l@GLIBC_2.1
+_ZTSh
+_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
+getcwd@GLIBC_2.0
+wcsnrtombs@GLIBC_2.0
+_Z27_txnal_cow_string_D1_commitPv
+stdout@GLIBC_2.0
+asctime@GLIBC_2.0
+faccessat@GLIBC_2.4
+_ZTIPDn
+__wrap_utime
+_ZTIPKDs
+_ZTSPa
+_ZTSPKd
+_ZTSx
+fcntl@GLIBC_2.0
+flock@GLIBC_2.0
+utimes@GLIBC_2.0
+_ZTIPKi
+sscanf@GLIBC_2.0
+_ZTIPKm
+gmtime@GLIBC_2.0
+__sprintf_chk@GLIBC_2.3.4
+__duplocale@GLIBC_2.1
+_ZTIPKv
+_ZTVN10__cxxabiv119__pointer_type_infoE
+_ZTIN10__cxxabiv120__si_class_type_infoE
+fnmatch@GLIBC_2.2.3
+strncmp@GLIBC_2.0
+open64@GLIBC_2.2
+lchown@GLIBC_2.0
+__realpath_chk@GLIBC_2.4
+lseek@GLIBC_2.0
+_ZTIPKe
+_ZTIPKa
+__snprintf_chk@GLIBC_2.3.4
+posix_fadvise@GLIBC_2.2
+_ZTIh
+strpbrk@GLIBC_2.0
+_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+_ZTIN10__cxxabiv117__class_type_infoE
+__newlocale@GLIBC_2.1
+fread@GLIBC_2.0
+__pthread_key_create@GLIBC_2.0
+dl_iterate_phdr@GLIBC_2.2.4
+__wrap_lstat64
+bind_textdomain_codeset@GLIBC_2.2
+_ZTSPKt
+_ZTSPKx
+_ZTIPDf
+_ZTSN10__cxxabiv119__pointer_type_infoE
+_ZTVN9__gnu_cxx24__concurrence_lock_errorE
+__wcscoll_l@GLIBC_2.1
+pthread_mutexattr_init@GLIBC_2.0
+strdup@GLIBC_2.0
+_ZTSDn
+_ZTSPKDf
+_ZTSDf
+pthread_mutexattr_settype@GLIBC_2.1
+_Z20_txnal_cow_string_D1Pv
+posix_memalign@GLIBC_2.2
+__wrap_open
+_ZTIPt
+ungetwc@GLIBC_2.2
+_ZTSPKl
+tolower@GLIBC_2.0
+_ZTIN9__gnu_cxx24__concurrence_lock_errorE
+_ZTSPKh
+strcmp@GLIBC_2.0
+btowc@GLIBC_2.0
+_ZTIl
+__cxa_finalize@GLIBC_2.1.3
+__wrap_stat64
+__wrap___xstat64
+setenv@GLIBC_2.0
+_ZTIPm
+__wrap_link
+_ZTIx
+_ZTSPv
+_ZTSPKDn
+dladdr@GLIBC_2.0
+_ZTIt
+__wrap_statvfs64
+_ZTSPDs
+_ZTId
+_ZTSc
+_ZTSPj
+_ZTVN10__cxxabiv120__si_class_type_infoE
+__vasprintf_chk@GLIBC_2.8
+__wrap_scandir
+_ZTIPi
+_ZTSPf
+__wrap_chown
+__wrap_lchown
+_ZTSN10__cxxabiv115__forced_unwindE
+_ZTIPe
+_init
+_ZTSs
+__wrap_fopen64
+geteuid@GLIBC_2.0
+GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
+GCC: (SteamRT 9.3.0-17+steamrt1.3+srt1) 9.3.1 20210309
+GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3

@@ -1,163 +1,711 @@
-#
-__TEXT
-
-__text
-__TEXT
-__stubs
-__TEXT
-__stub_helper
-__TEXT
-__gcc_except_tab__TEXT
-__const
-__TEXT
-__objc_methname
-__TEXT
-__objc_classname__TEXT
-__objc_methtype
-__TEXT
-__cstring
-__TEXT
-__unwind_info
-__TEXT
-__DATA
-__nl_symbol_ptr
-__DATA
-__got
-__DATA
-__la_symbol_ptr
-__DATA
-__mod_init_func
-__DATA
-__const
-__DATA
-__cfstring
-__DATA
-__objc_classlist__DATA
-(
-__objc_protolist__DATA
-__objc_imageinfo__DATA
-__objc_const
-__DATA
-__objc_selrefs
-__DATA
-__objc_classrefs__DATA
-__objc_superrefs__DATA
-__objc_ivar
-__DATA
-__objc_data
-__DATA
-__data
-__DATA
-__bss
-__DATA
-x=
-__common
-__DATA
-H
-__LINKEDIT
-
-8
-@loader_path/vgui2_s.dylib
-"
-p
-P
-
-*
-8
-@loader_path/libtier0_s.dylib
-8
-@loader_path/libvstdlib_s.dylib
-0
-/usr/lib/libz.1.dylib
-h
-/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
-X
-/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
-h
-/System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
-`
-X
-/System/Library/Frameworks/Carbon.framework/Versions/A/Carbon
-X
-/System/Library/Frameworks/Cocoa.framework/Versions/A/Cocoa
-`
-/System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio
-h
-/System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox
-X
-/System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
-P
-/System/Library/Frameworks/AGL.framework/Versions/A/AGL
-`
-/System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore
-0
-/usr/lib/libc++.1.dylib
-8
-/usr/lib/libSystem.B.dylib
-X
--
-/System/Library/Frameworks/AppKit.framework/Versions/C/AppKit
-p
-8
-/System/Library/Frameworks/ApplicationServices.framework/Versions/A/ApplicationServices
-h
-/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
-h
-@
-/System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
-`
-/System/Library/Frameworks/CoreText.framework/Versions/A/CoreText
-8
-/usr/lib/libobjc.A.dylib
-&
-)
-p[
-NSt3__117bad_function_callE
-10CUtlVectorIN12CFontAmalgam10TFontRangeE10CUtlMemoryIS1_EE
-10CUtlMemoryIN12CFontAmalgam10TFontRangeEE
-10CUtlMemoryI16SFontDescriptionE
-10CUtlVectorI12CFontAmalgam10CUtlMemoryIS0_EE
-10CUtlMemoryI12CFontAmalgamE
-7CUtlMapIN12CFontManager15CFontAttributesENS0_9CFontInfoEi8CDefLessE
-10CUtlRBTreeIN7CUtlMapIN12CFontManager15CFontAttributesENS1_9CFontInfoEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIN12CFontManager15CFontAttributesENS2_9CFontInfoEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
-10CUtlVectorIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tE10CUtlMemoryIS4_EE
-10CUtlMemoryIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tEE
-10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
-10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
-7CUtlMapItN12CFontManager13CFontDataFileEi8CDefLessE
-10CUtlRBTreeIN7CUtlMapItN12CFontManager13CFontDataFileEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEtE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapItN12CFontManager13CFontDataFileEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEtE6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN8COSXFont11abc_cache_tEtPFbRKS2_S4_E25CDefRBTreeBalanceListenerItES2_E6Node_tEE
-N4vgui6BitmapE
+__gmon_start__
+_fini
+_ITM_deregisterTMCloneTable
+_ITM_registerTMCloneTable
+__cxa_finalize
+g_pMemAllocSteam
+strlen
+V_atoi
+V_atof
+getenv
+_ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+__wrap_unlink
+popen
+fgets
+pclose
+__wrap_fopen
+fread
+fclose
+__wrap_access
+V_strnicmp
+V_strncpy
+V_snprintf
+strtol
+Plat_IsSteamDeck
+__snprintf_chk
+system
+__errno_location
+stderr
+__fprintf_chk
+V_vsnprintfRet
+getuid
+_Z21V_SplitStringInternalPKcPKS0_PS0_iR10CUtlVectorI10CUtlString10CUtlMemoryIS5_EEb
+fwrite
+Error
+strerror
+strcmp
+__cxa_atexit
+_ZTVN10__cxxabiv117__class_type_infoE
+__pthread_key_create
+XGetWindowProperty
+XFree
+XCloseDisplay
+XOpenDisplay
+XInternAtom
+XDeleteProperty
+XChangeProperty
+V_strtoui64
+Warning
+XDefaultScreen
+XSendEvent
+XQueryPointer
+XRRQueryExtension
+XRRQueryVersion
+XFlush
+XCheckIfEvent
+sscanf
+XSelectInput
+pthread_mutex_lock
+pthread_mutex_unlock
+_ZN16SteamThreadTools12CThreadMutexC1Ev
+_ZN16SteamThreadTools12CThreadMutexD1Ev
+Plat_FloatTime
+XPending
+_ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
+_ZTVN10__cxxabiv120__si_class_type_infoE
+__longjmp_chk
+_setjmp
+__wrap_dlopen
+dlsym
+V_wcsncpy
+dlclose
+V_UTF16ToUTF32
+V_UTF8ToUTF32
+glXGetCurrentDisplay
+glXGetCurrentDrawable
+glXGetCurrentContext
+XDisplayWidth
+XDisplayHeight
+XDisplayWidthMM
+XDisplayHeightMM
+glXChooseVisual
+XCreateColormap
+XCreateWindow
+glXCreateContext
+glXMakeCurrent
+glGetString
+strstr
+glGetIntegerv
+glXDestroyContext
+XDestroyWindow
+XFreeColormap
+XNVCTRLQueryExtension
+XGetWindowAttributes
+XNVCTRLQueryVersion
+XNVCTRLIsNvScreen
+XNVCTRLQueryTargetAttribute
+XNVCTRLQueryTargetStringAttribute
+XNVCTRLQueryValidTargetAttributeValues
+XRRGetScreenResources
+XRRGetOutputPrimary
+XRRGetOutputInfo
+XRRGetCrtcInfo
+XRRFreeScreenResources
+sqrtf
+GetOSType
+malloc
+free
+strdup
+iswspace
+_ZN10CValidator4PushEPKcPvS1_
+_ZN10CValidator3PopEv
+g_VProfProfilesRunningCount
+CVProfile_ExitScope
+VProfInternalEnterScopeCurrentThread
+_ZN11SteamStdLib11CommandLineEv
+_ZN10CValidator11ClaimMemoryEPKv
+_ZN11SteamStdLib17CCommandLineParamC1EPKcS2_
+_ZN11SteamStdLib17CCommandLineParamD1Ev
+_ZTVN10__cxxabiv121__vmi_class_type_infoE
+memcmp
+_ZNK10CValidator9IsClaimedEPKv
+isalnum
+_Z9V_stristrPKcS0_
+KeyValuesSystemSteam
+strchr
+V_FixSlashes
+V_strlower_fast
+V_UTF32ToUTF8
+wcscmp
+wcschr
+wcslen
+V_UTF8ToUTF16
+V_UTF32ToUTF16
+strrchr
+V_UTF16ToUTF8
+Plat_CommandLineParamExists
+V_strncat
+wcscpy
+V_stricmp_filename
+V_StripExtension
+socket
+bind
+ioctl
+listen
+accept
+recvmsg
+sendmsg
+_Z20V_UnicodeCaseConvertR10CUtlVectorIw10CUtlMemoryIwEEi25EStringConvertErrorPolicy
+V_atoui64
+OSIsCompatible
+Plat_IsChromeOS
+Plat_IsGamescope
+qsort
+V_GetFileExtension
+_exit
+XGetErrorText
+XGetErrorDatabaseText
+XwcTextListToTextProperty
+XSetWMName
+XCreateFontCursor
+XDefineCursor
+XReparentWindow
+XRaiseWindow
+XLowerWindow
+XQueryTree
+FcConfigAppFontAddFile
+FcInit
+SmcSaveYourselfDone
+XUngrabPointer
+XGrabPointer
+toupper
+XSync
+XGetInputFocus
+usleep
+SmcCloseConnection
+XFreeCursor
+XCloseIM
+XFreePixmap
+__realpath_chk
+__strcpy_chk
+fork
+execl
+XwcLookupString
+XLookupKeysym
+XEventsQueued
+XPeekEvent
+XNextEvent
+XWithdrawWindow
+XUnmapWindow
+XAllocWMHints
+XSetWMHints
+XMapWindow
+XPeekIfEvent
+XMapRaised
+XSetInputFocus
+XAllocSizeHints
+XSetWMNormalHints
+XTranslateCoordinates
+XIconifyWindow
+XineramaQueryExtension
+XineramaQueryVersion
+XineramaIsActive
+XineramaQueryScreens
+XMoveResizeWindow
+XRestackWindows
+XInitThreads
+glXQueryExtension
+eventfd
+XAllocNamedColor
+XCreateBitmapFromData
+XCreatePixmapCursor
+XOpenIM
+XAutoRepeatOn
+gtk_disable_setlocale
+gtk_init
+XSetErrorHandler
+XSetIOErrorHandler
+Plat_CommandLineParamValue
+glXIsDirect
+XAllocClassHint
+XSetClassHint
+XCreateIC
+XGetICValues
+XSetTransientForHint
+XSetWMProtocols
+SmcOpenConnection
+SmcGetIceConnection
+IceConnectionNumber
+poll
+XPutBackEvent
+g_ClockSpeed
+Plat_RelativeTicks
+XFilterEvent
+g_main_context_iteration
+IceProcessMessages
+glViewport
+glMatrixMode
+glLoadIdentity
+glOrtho
+glTranslatef
+glEnable
+glTexEnvf
+glBlendFunc
+glDisable
+glRenderMode
+glDisableClientState
+glPixelStorei
+glShadeModel
+glClear
+glTexParameterf
+glIsTexture
+glBindTexture
+glTexImage2D
+glDeleteTextures
+glXSwapBuffers
+glLineWidth
+glColor4ub
+glBegin
+glVertex2f
+glEnd
+glGenTextures
+glTexSubImage2D
+glColor4fv
+glTexCoord2f
+Plat_MSTime
+XGetSelectionOwner
+XConvertSelection
+ThreadSleep
+XCheckMaskEvent
+_Z30V_EscapeShellArgumentAndAppendP17CUtlStringBuilderPKcb
+XSetSelectionOwner
+alcGetString
+ThreadImplOneTimeInit
+iswcntrl
+V_towupper32
+V_towlower32
+FT_Init_FreeType
+floor
+FcPatternCreate
+FcPatternAdd
+FcConfigSubstitute
+FcDefaultSubstitute
+FT_Done_Face
+FT_Get_Char_Index
+FT_Load_Glyph
+FT_Get_Kerning
+sqrt
+FcFontSort
+FcPatternGetString
+FcFontSetDestroy
+FcPatternDestroy
+FcPatternGetCharSet
+FcCharSetSubtract
+FcCharSetUnion
+FcCharSetDestroy
+FcFontMatch
+FcCharSetCopy
+FcCharSetFirstPage
+FcCharSetHasChar
+FcCharSetNextPage
+FT_New_Memory_Face
+FT_New_Face
+FT_Set_Pixel_Sizes
+FT_Load_Char
+_ZN10CValidator16ClaimArrayMemoryEPKv
+strtod
+_ZN16SteamThreadTools17CThreadSyncObject4WaitEj
+___tls_get_addr
+fnmatch
+V_IsAbsolutePath
+getcwd
+V_strncat_length
+V_RemoveDotSlashes
+V_FixDoubleSlashes
+_ZN16SteamThreadTools7CThreadD2Ev
+_ZN16SteamThreadTools17CThreadSyncObjectD2Ev
+__wrap_open64
+flock
+posix_fadvise
+lseek64
+__fxstat64
+fdatasync
+__wrap___xstat64
+__wrap_mkdir
+__wrap___xstat
+__wrap_fopen64
+__wrap_chmod
+Plat_localtime
+strftime
+__wrap_utime
+__wrap_rename
+__wrap___lxstat64
+V_StripFilename
+__wrap_link
+__wrap_rmdir
+WeakRandomUint32
+fflush
+__wrap_statvfs64
+V_strcat
+__memcpy_chk
+__wrap_opendir
+readdir64
+closedir
+__wrap_statfs
+fcntl
+alphasort64
+__wrap_scandir64
+__wrap_symlink
+strcasecmp
+_ZN16SteamThreadTools7CThread4JoinEj
+_ZN16SteamThreadTools7CThreadC2Ev
+_ZN16SteamThreadTools7CThread7SetNameEPKc
+_ZN16SteamThreadTools7CThread5StartEj
+V_UnqualifiedFileName
+V_MakeAbsolutePath
+_ZTIN16SteamThreadTools7CThreadE
+_ZN16SteamThreadTools7CThread4InitEv
+_ZN16SteamThreadTools7CThread6OnExitEv
+_ZNK16SteamThreadTools7CThread15IsThreadRunningEv
+_ZN16SteamThreadTools7CThread13GetThreadProcEv
+CreateInterface
+dlerror
+__wrap_dlmopen
+V_tolower
+V_binarytohex
+wcstol
+V_wcstoui64
+__swprintf_chk
+isspace
+V_strncmp
+realpath
+realloc
+faccessat
+strncasecmp
+strcasestr
+SteamRealPath
+__wrap_freopen
+strpbrk
+__wrap_open
+__wrap_stat
+__wrap_lstat
+__wrap_stat64
+__wrap_lstat64
+__wrap_scandir
+__wrap___lxstat
+__wrap_statvfs
+__wrap_statfs64
+__wrap_chown
+__wrap_lchown
+__wrap_mknod
+__wrap_mount
+__wrap_mkfifo
+__wrap_utimes
+__wrap_chdir
+__ctype_b_loc
+V_vsnprintf
+V_strnchr
+__vasprintf_chk
+ftello64
+modf
+longjmp
+frexp
+fprintf
+fputc
+abort
+gmtime
+ferror
+remove
+XextRemoveDisplay
+XextCreateExtension
+XextFindDisplay
+XextAddDisplay
+XMissingExtension
+_XGetRequest
+_XReply
+XNVCTRLQueryTargetCount
+XNVCTRLSetTargetAttribute
+XNVCTRLSetAttribute
+XNVCTRLSetTargetAttributeAndGetStatus
+XNVCTRLSetAttributeAndGetStatus
+XNVCTRLQueryAttribute
+XNVCTRLQueryTargetAttribute64
+_XEatData
+_XRead
+XNVCTRLQueryStringAttribute
+XNVCTRLSetTargetStringAttribute
+_XSend
+XNVCTRLSetStringAttribute
+XNVCTRLQueryValidTargetStringAttributeValues
+XNVCTRLQueryValidAttributeValues
+XNVCTRLQueryAttributePermissions
+XNVCTRLQueryStringAttributePermissions
+XNVCTRLQueryBinaryDataAttributePermissions
+XNVCTRLQueryStringOperationAttributePermissions
+XNVCTRLSetGvoColorConversion
+XNVCTRLQueryGvoColorConversion
+XNVCtrlSelectTargetNotify
+XNVCtrlSelectNotify
+XNVCTRLQueryTargetBinaryData
+XNVCTRLQueryBinaryData
+XNVCTRLStringOperation
+_XSetLastRequestRead
+_ZN16SteamThreadTools16CThreadFullMutexC1EbPKcbb
+V_CopyAndFixSlashes
+_ZN16SteamThreadTools16CThreadFullMutex7ReleaseEv
+_ZTIN10__cxxabiv119__foreign_exceptionE
+_ZTIN10__cxxabiv115__forced_unwindE
+syscall
+_ZTIN9__gnu_cxx20recursive_init_errorE
+_ZTVN9__gnu_cxx20recursive_init_errorE
+_ZTSN9__gnu_cxx20recursive_init_errorE
+fputs
+stdout
+stdin
+_ZTVN9__gnu_cxx24__concurrence_lock_errorE
+_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
+_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
+_ZTIN9__gnu_cxx24__concurrence_lock_errorE
+_ZTSN9__gnu_cxx24__concurrence_lock_errorE
+_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
+pthread_once
+__nl_langinfo_l
+__uselocale
+mbsrtowcs
+iconv_open
+iconv
+iconv_close
+__wctype_l
+__towupper_l
+__towlower_l
+__iswctype_l
+wctob
+btowc
+ungetc
+fseeko64
+ungetwc
+putwc
+wmemcpy
+wmemset
+wmemchr
+wmemmove
+__sprintf_chk
+_ZTSN10__cxxabiv115__forced_unwindE
+_ZTSN10__cxxabiv119__foreign_exceptionE
+_ZTVN10__cxxabiv115__forced_unwindE
+_ZTVN10__cxxabiv119__foreign_exceptionE
+__strtof_l
+__strtod_l
+strtold_l
+__newlocale
+__freelocale
+__duplocale
+wcsnrtombs
+wcrtomb
+mbsnrtowcs
+mbrtowc
+__ctype_get_mb_cur_max
+__strcoll_l
+__strxfrm_l
+__wcscoll_l
+__wcsxfrm_l
+bind_textdomain_codeset
+dgettext
+__strftime_l
+__wcsftime_l
+_Z27_txnal_cow_string_D1_commitPv
+_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+_ITM_RU1
+_ZGTtnaj
+_ITM_memcpyRtWn
+_Z23_txnal_cow_string_c_strPKv
+_ITM_RU4
+_Z20_txnal_cow_string_D1Pv
+_ITM_addUserCommitAction
+_Z26_txnal_logic_error_get_msgPv
+_Z28_txnal_runtime_error_get_msgPv
+dl_iterate_phdr
+__xmknod
+__stack_chk_fail
+libdl.so.2
+librt.so.1
+ld-linux.so.2
+libtier0_s.so
+libvstdlib_s.so
+libX11.so.6
+libXi.so.6
+libXrandr.so.2
+libXext.so.6
+libXrender.so.1
+libGL.so.1
+libfontconfig.so.1
+libfreetype.so.6
+libgtk-x11-2.0.so.0
+libglib-2.0.so.0
+libopenal.so.1
+libXinerama.so.1
+libSM.so.6
+libICE.so.6
+libXtst.so.6
+libm.so.6
+libpthread.so.0
+libc.so.6
+_edata
+__bss_start
+_end
+GLIBC_2.3
+GLIBC_2.0
+GLIBC_2.3.4
+GLIBC_2.1
+GLIBC_2.2
+GLIBC_2.8
+GLIBC_2.7
+GLIBC_2.2.4
+GLIBC_2.11
+GLIBC_2.1.3
+GLIBC_2.2.3
+GLIBC_2.4
+CreateMilesSoundAudioDevice
+CreateMilesMusicAudioDevice
+CreateMilesVoiceAudioDevice
+FreeAudioDevice
+AudioSinkList
+CAudioController::ServiceMiles
+CAudioController::SetMilesMixFragmentMilliseconds
+num > 0
+/data/src/public/tier1/utlmemory.h
+XOpenDisplay
+XCloseDisplay
+XFree
+XSendEvent
+XInternAtom
+XGetWindowProperty
+XQueryTree
+XGetInputFocus
+16IDynamicFunction
+12CDynamicFuncIPFP9_XDisplayPKcEE
+12CDynamicFuncIPFiP9_XDisplayEE
+12CDynamicFuncIPFiPvEE
+12CDynamicFuncIPFiP9_XDisplaymilP7_XEventEE
+12CDynamicFuncIPFmP9_XDisplayPKciEE
+12CDynamicFuncIPFiP9_XDisplaymmllimPmPiS2_S2_PPhEE
+12CDynamicFuncIPFiP9_XDisplaymPmS2_PS2_PjEE
+12CDynamicFuncIPFiP9_XDisplayPmPiEE
+PNG load warning %s\n
+PNG load error %s\n
+1.6.37
+SDL_GetPowerInfo
+libSDL3.so.0
+m_pModule
+/data/src/public/tier1/interface.h
+None
+SDL_InitSubSystem
+SDL_free
+SDL_GetJoysticks
+SDL_GetJoystickNameForID
+SDL_QuitSubSystem
+DISPLAY
+%x:%x.%x "%x" "%x" "%x"
+%s %s
+GL_NVX_gpu_memory_info
+GL_ATI_meminfo
+GetWin32Stats
+SDL_GetDisplayName
+SDL_GetPrimaryDisplay
+LD_LIBRARY_PATH="$SYSTEM_LD_LIBRARY_PATH" PATH="$SYSTEM_PATH" lspci -mm -n
+%s: restoring previous glx context\n
+%s: skip glxMakeCurrent to avoid mesa/xcb hang: https://gitlab.freedesktop.org/xorg/lib/libxcb/-/issues/38\n
+%s: display was not open yet, good\n
+12CDynamicFuncIPFijEE
+12CDynamicFuncIPFPKcjEE
+12CDynamicFuncIPFvjEE
+12CDynamicFuncIPFjvEE
+LoadTGA: Only type 2 and 10 targa RGB images supported\n
+Texture_LoadTGA: Only 32 or 24 bit images supported (no colormaps)\n
+XDG_CONFIG_HOME
+XDG_
+_DIR
+$HOME/
+/tmp
+vgui::Bitmap
 N4vgui6IImageE
-?
-KEY_PAD_ENTER
-KEY_BACKSPACE
+N4vgui6BitmapE
+/data/src/public/vector2d.h
+vOther.IsValid()
+?No valid page for string texture of %dx%d size
+/data/src/vgui2/src/fonttexturecache.cpp
+Invalid width or height to AllocatePageForString()
+m_rgPageLists[pagetype].IsValidIndex( pageIndex )
+/data/src/public/tier1/utlrbtree.h
+/data/src/public/tier1/utllinkedlist.h
+_IsValidIndex( y, unNodeSize, pMemBase )
+drawY >= 0
+drawY < page.tall
+IsValidIndex( elem )
+Invalid index %u
+false
+texCoords
+IsValidIndex(elem)
+%s overflow!\n
+m_TotalElements != InvalidIndex()
+14CUtlLinkedListIN17CFontTextureCache15CacheLRUEntry_tEiE
+>pContext->m_pModalSubTree
+/data/src/vgui2/src/inputbase.cpp
+(context == DEFAULT_INPUT_CONTEXT) || m_Contexts.IsValidIndex(context)
+pContext
+MouseCaptureLost
+pVPanel->IsVisible()
+CursorMoved
+xpos
+ypos
+MouseDoublePressed
+MouseReleased
+MouseScrolled
+delta
+KeyTyped
+unichar
+KeyCodeUnhandled
+(no name)
+SetMouseFocus()
+CursorExited
+CursorExitedChild
+CursorEnteredChild
+CursorEntered
+changing mouse focus from %s to %s\n
+showhotkey
+handleValue
+menuname
+shortname
+flags
+context != DEFAULT_INPUT_CONTEXT
+CInputBase::IsChildOfModalPanel
+state
+UpdateMouseFocus()
+pRoot->Client()
+KeyFocusTicked
+MouseFocusTicked
+KillFocus
+SetFocus
+CanBeDefaultButton
+result
+changing kb focus from %s (%p) to %s (%p)\n
+removing kb focus %s\n
+&context == &m_DefaultInputContext
+MousePressed
+UnhandledMouseClick
+HotKeyPressed
+modifiers
+KeyCodePressed
+KeyCodeTyped
+KeyCodeReleased
+CInputBase::InputContext_t
+m_Memory
+m_Tree
+m_Elements
+inputContext.m_KeyCodeUnhandledListeners
+inputContext.m_VecPotentialDefaultButtons
+inputContext.m_mapKeyCodeHooks
+CInputBase
+m_Contexts
+m_DefaultInputContext
+m_Contexts[i]
+g_pInputBase
+KEY_VOLUME_MUTE
+KEY_VOLUME_DOWN
 KEY_VOLUME_UP
-0
-KEY_PAD_0
-1
-KEY_PAD_1
-2
-KEY_PAD_2
-3
-KEY_PAD_3
-4
-KEY_PAD_4
-5
-KEY_PAD_5
-6
-KEY_PAD_6
-7
-KEY_PAD_7
-8
-KEY_PAD_8
-9
-KEY_PAD_9
-.
-KEY_PAD_DECIMAL, L
+KEY_MEDIA_NEXT_TRACK
 KEY_ENTER
+KEY_BACKSPACE
 KEY_TAB
 KEY_CAPSLOCK
 KEY_NUMLOCK
@@ -192,768 +740,36 @@ KEY_F6
 KEY_F7
 KEY_F8
 KEY_F9
+KEY_PAD_0
+KEY_PAD_1
+KEY_PAD_2
+KEY_PAD_3
+KEY_PAD_4
+KEY_PAD_5
+KEY_PAD_6
+KEY_PAD_7
+KEY_PAD_8
+KEY_PAD_9
+KEY_PAD_ENTER
+KEY_PAD_DECIMAL, L
 KEY_F10
 KEY_F11
 KEY_F12
-KEY_VOLUME_MUTE
-KEY_VOLUME_DOWN
-KEY_MEDIA_NEXT_TRACK
 KEY_MEDIA_PREV_TRACK
 KEY_MEDIA_STOP
 KEY_MEDIA_PLAY_PAUSE
-10CInputBase
-N4vgui14IInputInternalE
-N4vgui6IInputE
-14IBaseInterface
-16IIMEPostCallback
-14CUtlLinkedListIN10CInputBase14InputContext_tEiE
-10CUtlMemoryIN14CUtlLinkedListIN10CInputBase14InputContext_tEiE10ListElem_tEE
-10CUtlVectorIPN4vgui6VPanelE10CUtlMemoryIS2_EE
-10CUtlMemoryIPN4vgui6VPanelEE
-7CUtlMapI8HotKey_tPN4vgui6VPanelEi8CDefLessE
-10CUtlRBTreeIN7CUtlMapI8HotKey_tPN4vgui6VPanelEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI8HotKey_tPN4vgui6VPanelEi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
-9CInputOSX
-11CLayoutFile
-9CStyleSet
-16CStyleAppearance
-N4vgui11IAppearanceE
-11KeyValuesAD
-10CUtlVectorIN4vgui16layoutcmd_base_tE10CUtlMemoryIS1_EE
-10CUtlMemoryIN4vgui16layoutcmd_base_tEE
-N4vgui16layoutcmd_base_tE
-10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
-10CUtlMemoryI10CUtlStringE
-7CUtlMapIN11CLayoutFile15AppearanceKey_tE7CUtlPtrI16CStyleAppearanceEi8CDefLessE
-10CUtlRBTreeIN7CUtlMapIN11CLayoutFile15AppearanceKey_tE7CUtlPtrI16CStyleAppearanceEi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIN11CLayoutFile15AppearanceKey_tE7CUtlPtrI16CStyleAppearanceEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
-7CUtlPtrI16CStyleAppearanceE
-11CUtlHashMapI7CUtlPtrI16CStyleAppearanceEbN11CLayoutFile11StyleEqualsENS3_9StyleHashES2_E
-10CUtlVectorIN11CUtlHashMapI7CUtlPtrI16CStyleAppearanceEbN11CLayoutFile11StyleEqualsENS4_9StyleHashES3_E12HashBucket_tE10CUtlMemoryIS8_EE
-10CUtlMemoryIN11CUtlHashMapI7CUtlPtrI16CStyleAppearanceEbN11CLayoutFile11StyleEqualsENS4_9StyleHashES3_E12HashBucket_tEE
-10CUtlMemoryIN11CUtlHashMapI7CUtlPtrI16CStyleAppearanceEbN11CLayoutFile11StyleEqualsENS4_9StyleHashES3_E6Node_tEE
-10CUtlRBTreeIji8CDefLess25CDefRBTreeBalanceListenerIiEjE
-10CUtlMemoryIN10CUtlRBTreeIji8CDefLess25CDefRBTreeBalanceListenerIiEjE6Node_tEE
-10CUtlVectorI5Color10CUtlMemoryIS0_EE
-10CUtlMemoryI5ColorE
-10CUtlVectorIN16CStyleAppearance8DrawOp_tE10CUtlMemoryIS1_EE
-10CUtlMemoryIN16CStyleAppearance8DrawOp_tEE
-8CUtlDictI5Color22CDefCaselessStringLessiE
-7CUtlMapIPKc5Colori22CDefCaselessStringLessE
-10CUtlRBTreeIN7CUtlMapIPKc5Colori22CDefCaselessStringLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKc5Colori22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
-10CUtlVectorIP9CStyleSet10CUtlMemoryIS1_EE
-10CUtlMemoryIP9CStyleSetE
-7CUtlMapIjP10CUtlVectorI7style_t10CUtlMemoryIS1_EEi8CDefLessE
-10CUtlRBTreeIN7CUtlMapIjP10CUtlVectorI7style_t10CUtlMemoryIS2_EEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjP10CUtlVectorI7style_tS_IS3_EEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
-10CUtlVectorI7style_t10CUtlMemoryIS0_EE
-10CUtlMemoryI7style_tE
-7style_t
-10CUtlVectorIj10CUtlMemoryIjEE
-10CUtlMemoryIjE
-[
-u
-n
-k
-n
-o
-w
-n
-s
-t
-r
-i
-n
-g
-]
-21CLocalizedStringTable
-N4vgui9ILocalizeE
-10CUtlString
-10CUtlRBTreeIN21CLocalizedStringTable17localizedstring_tEiPFbRKS1_S3_E25CDefRBTreeBalanceListenerIiES1_E
-10CUtlMemoryIN10CUtlRBTreeIN21CLocalizedStringTable17localizedstring_tEiPFbRKS2_S4_E25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
-10CUtlVectorIc10CUtlMemoryIcEE
-10CUtlMemoryIcE
-10CUtlVectorIw10CUtlMemoryIwEE
-10CUtlMemoryIwE
-10CUtlVectorI10CUtlSymbol10CUtlMemoryIS0_EE
-10CUtlMemoryI10CUtlSymbolE
-10CUtlRBTreeIN21CLocalizedStringTable11fastvalue_tEiPFbRKS1_S3_E25CDefRBTreeBalanceListenerIiES1_E
-10CUtlMemoryIN10CUtlRBTreeIN21CLocalizedStringTable11fastvalue_tEiPFbRKS2_S4_E25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
-N4vgui12MemoryBitmapE
-C
-N4vgui20INotificationManagerE
-10CUtlMemoryIyE
-10CUtlVectorIN20CNotificationManager17NotificationPanelE10CUtlMemoryIS1_EE
-10CUtlMemoryIN20CNotificationManager17NotificationPanelEE
-0@
-0@
-0@14CSchemeManager
-N4vgui14ISchemeManagerE
-7CScheme
-N4vgui7ISchemeE
-10CUtlVectorIN7CScheme11fontalias_tE10CUtlMemoryIS1_EE
-10CUtlMemoryIN7CScheme11fontalias_tEE
-10CUtlVectorIP7CScheme10CUtlMemoryIS1_EE
-10CUtlMemoryIP7CSchemeE
-7CUtlMapIPKcPN4vgui6BitmapEi22CDefStringLessFilenameE
-10CUtlRBTreeIN7CUtlMapIPKcPN4vgui6BitmapEi22CDefStringLessFilenameE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcPN4vgui6BitmapEi22CDefStringLessFilenameE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
-7CUtlMapIPKcP11CLayoutFilei22CDefStringLessFilenameE
-10CUtlRBTreeIN7CUtlMapIPKcP11CLayoutFilei22CDefStringLessFilenameE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcP11CLayoutFilei22CDefStringLessFilenameE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
-10CUtlRBTreeIiiN14CSchemeManager12CObjLessFuncIiS0_EE25CDefRBTreeBalanceListenerIiEiE
-10CUtlMemoryIN10CUtlRBTreeIiiN14CSchemeManager12CObjLessFuncIiS1_EE25CDefRBTreeBalanceListenerIiEiE6Node_tEE
-7CUtlMapIN14CSchemeManager9FontKey_tEmi8CDefLessE
-10CUtlRBTreeIN7CUtlMapIN14CSchemeManager9FontKey_tEmi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIN14CSchemeManager9FontKey_tEmi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
-7CUtlMapIPKcbi22CDefStringLessFilenameE
-10CUtlRBTreeIN7CUtlMapIPKcbi22CDefStringLessFilenameE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcbi22CDefStringLessFilenameE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
-?
-?
-@?
-4IIME
-18CSerializedSurface
-N4vgui15IOverlaySurfaceE
-14CUtlLinkedListIN18CSerializedSurface18CustomCursorData_tEiE
-12CBaseSurface
-N4vgui8ISurfaceE
-10IAppSystem
-14CUtlLinkedListIN4vgui16TextColorRange_tEiE
-10CUtlVectorIy10CUtlMemoryIyEE
-11CUtlHashMapI10CUtlStringPN4vgui6IImageE24CDefCaselessStringEquals25HashFunctorStringCaselessS0_E
-10CUtlVectorIN11CUtlHashMapI10CUtlStringPN4vgui6IImageE24CDefCaselessStringEquals25HashFunctorStringCaselessS1_E12HashBucket_tE10CUtlMemoryIS8_EE
-10CUtlMemoryIN11CUtlHashMapI10CUtlStringPN4vgui6IImageE24CDefCaselessStringEquals25HashFunctorStringCaselessS1_E12HashBucket_tEE
-10CUtlMemoryIN11CUtlHashMapI10CUtlStringPN4vgui6IImageE24CDefCaselessStringEquals25HashFunctorStringCaselessS1_E6Node_tEE
-7CUtlMapIyPN12CBaseSurface19ChildWindowVector_tEi8CDefLessE
-10CUtlRBTreeIN7CUtlMapIyPN12CBaseSurface19ChildWindowVector_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIyPN12CBaseSurface19ChildWindowVector_tEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
-10CUtlVectorIN12CBaseSurface17ChildWindowZPos_tE10CUtlMemoryIS1_EE
-10CUtlMemoryIN12CBaseSurface17ChildWindowZPos_tEE
-10CUtlRBTreeIN4vgui7TextureEi8CDefLess25CDefRBTreeBalanceListenerIiES1_E
-10CUtlMemoryIN10CUtlRBTreeIN4vgui7TextureEi8CDefLess25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
-10CUtlVectorIN4vgui16TextColorRange_tE10CUtlMemoryIS1_EE
-10CUtlMemoryIN4vgui16TextColorRange_tEE
-10CUtlVectorIN12CBaseSurface16TraversalEntry_tE10CUtlMemoryIS1_EE
-10CUtlMemoryIN12CBaseSurface16TraversalEntry_tEE
-7CUtlMapIyss8CDefLessE
-10CUtlRBTreeIN7CUtlMapIyss8CDefLessE6Node_tEsNS2_8CKeyLessE25CDefRBTreeBalanceListenerIsEyE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIyss8CDefLessE6Node_tEsNS3_8CKeyLessE25CDefRBTreeBalanceListenerIsEyE6Node_tEE
-7CUtlMapIyN4vgui6Size_tEi8CDefLessE
-10CUtlRBTreeIN7CUtlMapIyN4vgui6Size_tEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIyN4vgui6Size_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
-14ISurfaceHelper
-C
-C
-N4vgui15CBaseOSXSurfaceI12CBaseSurfaceEE
-N4vgui7ISystemE
-zD5CVGui
-N4vgui5IVGuiE
-17CVGUI2DLLValidate
-9IValidate
-14CUtlLinkedListIN5CVGui9Context_tEiE
-14CUtlLinkedListIN4vgui13SerialPanel_tEjE
-14CUtlLinkedListI13MessageItem_tiE
-10CUtlMemoryIN14CUtlLinkedListIN4vgui13SerialPanel_tEjE10ListElem_tEE
-10CUtlVectorIPN5CVGui6Tick_tE10CUtlMemoryIS2_EE
-10CUtlMemoryIPN5CVGui6Tick_tEE
-10CUtlMemoryIN14CUtlLinkedListIN5CVGui9Context_tEiE10ListElem_tEE
-10CUtlMemoryIN14CUtlLinkedListI13MessageItem_tiE10ListElem_tEE
-17CUtlPriorityQueueI13MessageItem_tPFbRKS0_S2_E32CDefUtlPriorityQueueSetIndexFuncIS0_EE
-10CUtlVectorI13MessageItem_t10CUtlMemoryIS0_EE
-10CUtlMemoryI13MessageItem_tE
-N4vgui9VGUISetupE
-N4vgui10IVGuiSetupE
-10CUtlVectorIPFPvPKcPiE10CUtlMemoryIS5_EE
-10CUtlMemoryIPFPvPKcPiEE
-10CUtlVectorIN4vgui10IVGuiSetup15EGraphicsOptionE10CUtlMemoryIS2_EE
-10CUtlMemoryIN4vgui10IVGuiSetup15EGraphicsOptionEE
-23CVGuiSystemModuleLoader
-17IVGuiModuleLoader
-10CUtlVectorIN23CVGuiSystemModuleLoader8module_tE10CUtlMemoryIS1_EE
-10CUtlMemoryIN23CVGuiSystemModuleLoader8module_tEE
-8
-<
-:
-=
-;
->
-7
-6
-0
-0
-0
-1
-1
-1
-2
-2
-2
-3
-3
-3
-4
-4
-4
-5
-5
-5
-6
-6
-6
-7
-7
-7
-8
-8
-8
-
-9
-
-9
-9
-A
-a
-a
-B
-0
-b
-b
-
-C
-.
-c
-c
-D
-d
-d
-E
-e
-e
-F
-!
-f
-f
-G
-"
-g
-g
-H
-#
-h
-h
-I
-"
-i
-i
-J
-$
-&
-j
-j
-K
-%
-(
-k
-k
-L
-&
-%
-l
-l
-M
-2
-.
-m
-m
-N
-1
--
-n
-n
-O
-o
-o
-P
-#
-p
-p
-Q
-q
-q
-R
-r
-r
-S
-s
-s
-T
-t
-t
-U
-u
-u
-V
-/
-v
-v
-!
-W
-
-w
-w
-"
-X
--
-x
-x
-#
-Y
-y
-y
-$
-Z
-,
-z
-z
-%
-`
-R
-R
-&
-a
-O
-S
-'
-b
-P
-T
-(
-c
-Q
-U
-)
-d
-K
-V
-*
-e
-L
-W
-+
-f
-M
-X
-,
-g
-G
-Y
--
-h
-H
-[
-.
-i
-I
-\
-/
-o
-K
-0
-j
-7
-C
-1
-m
-J
-N
-2
-k
-N
-E
-3
-
-L
-4
-n
-S
-A
-5
-Q
-6
-G
-7
-!
-[
-[
-8
-]
-]
-9
-'
-)
-;
-;
-:
-(
-'
-'
-'
-;
-)
-2
-`
-`
-<
-3
-+
-,
-,
-=
-4
-/
-.
-.
->
-5
-,
-/
-/
-?
-+
-*
-\
-\
-@
--
--
-A
-
-=
-=
-B
-
-$
-
-C
-9
-1
-D
-3
-E
-0
-F
-:
-9
-G
-E
-H
-5
-I
-F
-J
--
-r
-K
-.
-u
-
-L
-$
-s
-M
-#
-w
-N
-!
-t
-O
-"
-y
-P
-R
-6
-Q
-*
-T
-S
-8
-V
-U
-W
-[
-X
-\
-Y
-]
-n
-Z
-&
-~
-[
-%
-{
-\
-(
-}
-]
-'
-|
-^
-p
-;
-z
-_
-q
-<
-x
-`
-r
-=
-c
-a
-s
->
-v
-b
-t
-?
-`
-c
-u
-@
-a
-d
-v
-A
-b
-e
-w
-B
-d
-f
-x
-C
-e
-g
-y
-D
-m
-h
-z
-W
-g
-i
-{
-X
-o
-j
-|
-d
-i
-k
-}
-e
-k
-l
-~
-f
-q
-m
-
-g
-j
-n
-h
-@
-o
-i
-O
-p
-j
-P
-q
-k
-Z
-r
-l
-s
-m
-t
-n
-u
-v
-~
-!
-@
-#
-$
-%
-^
-&
-*
-(
-)
-_
-+
-{
-}
-|
-:
-"
-<
->
-?
-13VPanelWrapper
-N4vgui6IPanelE
-0C
-0C
-0u
-&z
-UUUUUUUUUUUUUUUUUUUUUUUU
-0123456789ABCDEF
-11CPathString
-14CUtlLinkedListI10CUtlStringiE
-10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
-10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
-10CUtlMemoryI13ModuleCount_tE
-%
-f
-%
-d
-%
-l
-l
-u
-%
-l
-l
-d
-21CUtlCStringConversion
-18CUtlCharConversion
-19CUtlNoEscConversion
-12CIMENullImpl
-STEAM_APP_BUNDLE_PATH
-en_US
-HOME
-!"Unable to get home directory"
-%s/Desktop
-%s/Applications
-r
-../Info.plist
-../..
-Unknown
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlvector.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlmemory.h
-num > 0
-0
-%s/%s
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-1.6.37
-PNG load error %s
-PNG load warning %s
-LoadTGA: Only type 2 and 10 targa RGB images supported
-Texture_LoadTGA: Only 32 or 24 bit images supported (no colormaps)
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/vgui_surfacelib/FontAmalgam.cpp
-m_Fonts[i].font->IsValid()
-CFontAmalgam
-m_Fonts
-m_strName
-num >= 0
-m_Memory
-deferredFontName
-en_US.UTF-8
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/vgui_surfacelib/FontManager.cpp
-font != vgui::INVALID_FONT
-descs.Count() >= 1
-m_FontAmalgams.IsValidIndex( font )
-Marlett
-Apple Symbols
-Lucida Console
-Lucida Grande
-Tahoma
-Helvetica
-Monaco
-#Fallback
-CFontManager
-m_FontAmalgams
-m_FontAmalgams[iFont]
-m_PlatformFonts
-m_PlatformFonts[ i ]
-m_FontDataFileNames
-m_FontDataFiles
-m_FontDataFiles[ i ]
-nGrowSize >= 0
-m_nAllocationCount >= 0
-CFontInfo
-m_font
-m_descs
-name
-CFontDataFile
-!pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
-count >= 0
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlsymbol.h
-pPool->m_SpaceUsed < 0xFFFF
-Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
-CCopyableUtlVector()  - copycons
-!pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
-m_Tree
-m_Elements
-CUtlSymbolTable
-m_StringPools
-m_Lookup
-bold
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/vgui_surfacelib/osxfont.cpp
-!"Context ref not setup to allow GetStringRGBA"
-!"Unable to convert string"
-!"Unable to set layout"
-!"Unable to set matching"
-!"Unable to draw text"
-IsValid()
-failed to copy style
-COSXFont
-m_ExtendedABCWidthsCache
-ATSUCreateStyle
-ATSUCreateAndCopyStyle
-ATSUDisposeStyle
-ATSUSetAttributes
-ATSUCreateTextLayoutWithTextPtr
-ATSUDisposeTextLayout
-ATSUSetTransientFontMatching
-ATSUSetLayoutControls
-ATSUDrawText
-ATSUGetGlyphBounds
-ATSUMatchFontsToText
-ATSUGlyphGetScreenMetrics
-ATSUDirectGetLayoutDataArrayPtrFromTextLayout
-ATSUDirectReleaseLayoutDataArrayPtr
-ATSUMeasureTextImage
-ATSFontFindFromName
-ATSFontFindFromPostScriptName
-ATSFontGetHorizontalMetrics
-Helvetica Bold
-vgui::Bitmap
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vector2d.h
-vOther.IsValid()
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/fonttexturecache.cpp
-texCoords
-No valid page for string texture of %dx%d size
-Invalid width or height to AllocatePageForString()
-m_rgPageLists[pagetype].IsValidIndex( pageIndex )
-drawY >= 0
-drawY < page.tall
-false
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utllinkedlist.h
-IsValidIndex(elem)
-IsInList(before)
-m_TotalElements != InvalidIndex()
-%s overflow!
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlrbtree.h
-IsValidIndex( elem )
-_IsValidIndex( elem, unNodeSize, pMemBase )
-_IsValidIndex( y, unNodeSize, pMemBase )
-Invalid index %u
+[{KEY_LBRACKET
+]}KEY_RBRACKET
+;:KEY_SEMICOLON
+'"KEY_APOSTROPHE
+`~KEY_BACKQUOTE
+,<KEY_COMMA
+.>KEY_PERIOD
+/?KEY_SLASH
+\|KEY_BACKSLASH
+-_KEY_MINUS
+=+KEY_EQUAL, L
+  KEY_SPACE
 0)KEY_0
 1!KEY_1
 2@KEY_2
@@ -994,105 +810,51 @@ zZKEY_Z
 **KEY_PAD_MULTIPLY
 --KEY_PAD_MINUS
 ++KEY_PAD_PLUS
-[{KEY_LBRACKET
-]}KEY_RBRACKET
-;:KEY_SEMICOLON
-'"KEY_APOSTROPHE
-`~KEY_BACKQUOTE
-,<KEY_COMMA
-.>KEY_PERIOD
-/?KEY_SLASH
-\|KEY_BACKSLASH
--_KEY_MINUS
-=+KEY_EQUAL, L
-KEY_SPACE
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/inputbase.cpp
-context != DEFAULT_INPUT_CONTEXT
-(context == DEFAULT_INPUT_CONTEXT) || m_Contexts.IsValidIndex(context)
--vguifocus
+(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+/data/src/public/tier1/utlvector.h
 Print out details of which panel has keyboard focus
-KeyFocusTicked
-MouseFocusTicked
-KillFocus
-SetFocus
-changing kb focus from %s (%p) to %s (%p)
-(no name)
-CanBeDefaultButton
-result
-removing kb focus %s
-&context == &m_DefaultInputContext
-SetMouseFocus()
-CursorExited
-CursorExitedChild
-CursorEnteredChild
-CursorEntered
-changing mouse focus from %s to %s
-UpdateMouseFocus()
-pRoot->Client()
-pContext
-MouseCaptureLost
-CInputBase::IsChildOfModalPanel
-CursorMoved
-xpos
-ypos
-MousePressed
-code
-UnhandledMouseClick
-MouseDoublePressed
-MouseReleased
-MouseScrolled
-delta
-HotKeyPressed
-modifiers
-KeyCodePressed
-KeyCodeTyped
-KeyTyped
-unichar
-KeyCodeReleased
-%s
-pVPanel->IsVisible()
-KeyCodeUnhandled
-ModalSubTree
-state
-pContext->m_pModalSubTree
-active
-showhotkey
-handleValue
-menuname
-shortname
-flags
-CInputBase
-m_Contexts
-m_DefaultInputContext
-m_Contexts[i]
-CInputBase::InputContext_t
-inputContext.m_KeyCodeUnhandledListeners
-inputContext.m_VecPotentialDefaultButtons
-inputContext.m_mapKeyCodeHooks
-g_pInputBase
+-vguifocus
+14IBaseInterface
+N4vgui6IInputE
+16IIMEPostCallback
+N4vgui14IInputInternalE
+10CInputBase
+14CUtlLinkedListIN10CInputBase14InputContext_tEiE
+10CUtlVectorIPN4vgui6VPanelE10CUtlMemoryIS2_EE
+7CUtlMapI8HotKey_tPN4vgui6VPanelEi8CDefLessE
+10CUtlMemoryIN14CUtlLinkedListIN10CInputBase14InputContext_tEiE10ListElem_tEE
+10CUtlMemoryIPN4vgui6VPanelEE
+10CUtlRBTreeIN7CUtlMapI8HotKey_tPN4vgui6VPanelEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES1_E
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI8HotKey_tPN4vgui6VPanelEi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
+/data/src/vgui2/src/inputlinux.cpp
 VGUI_Input005
 VGUI_InputInternal001
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/inputosx.cpp
-CInputOSX SetCursorPos not implemented
-LayoutFile
+11CInputLinux
+/data/src/public/tier1/utlstring.h
 render
 render_bg
-style
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/layoutfile.cpp
-!style->IsDirty()
-parsing of file '%s' failed
-error loading file '%s', %s
+g_treeValidStyleKeySymbols
+m_Colors
+m_VecDrawOps
+m_VecDrawOpsBackground
 %d %d %d %d
-layout
+m_dictColors
+m_vecBaseStyleSets
+m_mapStyleLists
+m_kvSettings
+Element( i )
+m_vecParentNames
+m_pkv
+settings
+numElements >= 0
+m_pMemory
+numElements <= m_nAllocationCount
 region
-place
-[%s] unknown layout command '%s' (valid values 'region', 'place')
 start
 end-right
 end-down
 control
 controls
-overflow
 allow-horizontal
 allow-vertical
 allow-both
@@ -1101,53 +863,43 @@ scroll-vertical
 grow-horizontal
 grow-vertical
 scroll-both
-dir
-down
 right-wrap
 align
-right
-bottom
 top-center
 left-center
 bottom-right
-center
 margin
 margin-left
 margin-right
 margin-bottom
 margin-top
 spacing
-x
-y
-width
-max
-[%s] unexpected parameter for width="%s" - must be either a number, or "max"
-height
-[%s] unexpected parameter for height="%s" - must be either a number, or "max"
-include
-.res
-.layout
-styles
-colors
-file
-:hover
-:active
-:focus
-:selected
-:disabled
-:scrollbar
-:framefocus
-:empty
-unknown pseudoclass on style %s in file %s
-Unknown key '%s' set in style '%s' in file '%s'
-m_kvFile
-m_sErrors
-m_sFileName
-m_vecLayoutCmds
-m_mapStyleAppearances
-m_hashUniqueStyles
-m_StyleSet
-g_treeValidStyleKeySymbols
+[%s] unknown layout command '%s' (valid values 'region', 'place')\n
+[%s] unexpected parameter for width="%s" - must be either a number, or "max"\n
+[%s] unexpected parameter for height="%s" - must be either a number, or "max"\n
+() ,+-
+fill
+fill4
+image
+image_scale
+image_proportional
+image_tiled
+gradient
+gradient_horizontal
+dashedrect
+corner
+parse render key : Expected command token, found '%s' in '%s'\n
+parse render key : Expected '(', found '%s' in '%s'\n
+parse render key : Expected [x0 y0 x1 y1], found '%s' in '%s'\n
+parse render key : Expected [+ - ,], found '%s' in '%s'\n
+Render command has x0 and x1 reversed: '%s'\n
+Render command has y0 and y1 reversed: '%s'\n
+Render command has left edge > right edge: '%s'\n
+Render command has top edge > bottom edge: '%s'\n
+parse render key : Couldn't load image '%s' in '%s'\n
+Couldn't find color '%s' referenced in render fill comand '%s'\n
+parsing render key : Expected [, )], found '%s' in '%s'\n
+parse render key : Expected ')', found '%s' in '%s'\n
 inset
 inset-left
 inset-right
@@ -1158,26 +910,17 @@ padding-left
 padding-right
 padding-bottom
 padding-top
-Error parsing 'render' key in a style definition
-Error parsing 'render_bg' key in a style definition
-unknown color '%s' referenced by style key '%s'
 font-outerglow-color
-Label
-unknown color '%s' referenced in font-outerglow-color
 font-outerglow-offset
 font-outerglow-filter
 corner_rounding
 minimum-width
 minimum-height
 alpha
-image
 font-family
 font-style
-key 'font-style' set in style with no 'font-family' set
 font-size
-key 'font-size' set in style with no 'font-family' set
 font-weight
-key 'font-style' set in style with no 'font-weight' set
 italic
 underline
 strikeout
@@ -1191,296 +934,318 @@ additive
 uppercase
 lowercase
 outerglow
-Errors in %s:%s
-() ,+-
-fill
-fill4
-image_scale
-image_proportional
-image_tiled
-gradient
-gradient_horizontal
-dashedrect
-corner
-parse render key : Expected command token, found '%s' in '%s'
-parse render key : Expected '(', found '%s' in '%s'
-parse render key : Expected [x0 y0 x1 y1], found '%s' in '%s'
-parse render key : Expected [+ - ,], found '%s' in '%s'
-Render command has x0 and x1 reversed: '%s'
-Render command has y0 and y1 reversed: '%s'
-Render command has left edge > right edge: '%s'
-Render command has top edge > bottom edge: '%s'
-parse render key : Couldn't load image '%s' in '%s'
-Couldn't find color '%s' referenced in render fill comand '%s'
-parsing render key : Expected [, )], found '%s' in '%s'
-%d
-parse render key : Expected ')', found '%s' in '%s'
-m_Colors
-m_VecDrawOps
-m_VecDrawOpsBackground
-settings
-m_dictColors
-m_vecBaseStyleSets
-m_mapStyleLists
-m_kvSettings
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlstring.h
-font-outerglow-filtersize
-textcolor
-bgcolor
-shadowtextcolor
-selectedtextcolor
-selectedbgcolor
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/bitstring.h
+Marlett
+Errors in %s:\n%s
+Label
+unknown color '%s' referenced by style key '%s'\n
+unknown color '%s' referenced in font-outerglow-color\n
+!pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
+count >= 0
+Unknown key '%s' set in style '%s' in file '%s'\n
+/data/src/public/tier1/utldict.h
+:hover
+:active
+:focus
+:selected
+:disabled
+:scrollbar
+:framefocus
+:empty
+unknown pseudoclass on style %s in file %s\n
+.res
+.layout
+styles
+colors
+parsing of file '%s' failed\n
+error loading file '%s', %s\n
 bitNum >= 0 && bitNum < this->Size()
-m_pkv
-Element( i )
+/data/src/public/tier1/bitstring.h
+!style->IsDirty()
+/data/src/vgui2/src/layoutfile.cpp
+m_pRef->m_pT
+m_kvFile
+m_sErrors
+m_sFileName
+m_vecLayoutCmds
 m_sName
 m_sStart
 m_sEndRight
 m_sEndDown
 m_sRegionName
 m_vecControlNames
-Key( i )
-m_pRef->m_pT
+m_mapStyleAppearances
+m_hashUniqueStyles
 m_vecHashBuckets
 m_memNodes
 m_bitsMigratedBuckets
-numElements >= 0
-numElements <= m_nAllocationCount
-m_pMemory
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utldict.h
-m_vecParentNames
--ccsyntax
-Spew details about the localized strings we load
--language
-Set Steam client UI language
-VGUI_Localize003
-%language%
+m_StyleSet
+Key( i )
+10CUtlString
+N4vgui16layoutcmd_base_tE
+11KeyValuesAD
+N4vgui11IAppearanceE
+7style_t
+16CStyleAppearance
+11CLayoutFile
+9CStyleSet
+10CUtlVectorIj10CUtlMemoryIjEE
+10CUtlRBTreeIji8CDefLess25CDefRBTreeBalanceListenerIiEjE
+10CUtlVectorIP9CStyleSet10CUtlMemoryIS1_EE
+10CUtlMemoryIjE
+10CUtlMemoryIN10CUtlRBTreeIji8CDefLess25CDefRBTreeBalanceListenerIiEjE6Node_tEE
+10CUtlMemoryIP9CStyleSetE
+10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
+10CUtlVectorIN4vgui16layoutcmd_base_tE10CUtlMemoryIS1_EE
+7CUtlMapIN11CLayoutFile15AppearanceKey_tE7CUtlPtrI16CStyleAppearanceEi8CDefLessE
+11CUtlHashMapI7CUtlPtrI16CStyleAppearanceEbN11CLayoutFile11StyleEqualsENS3_9StyleHashES2_E
+10CUtlVectorI5Color10CUtlMemoryIS0_EE
+10CUtlVectorIN16CStyleAppearance8DrawOp_tE10CUtlMemoryIS1_EE
+8CUtlDictI5Color22CDefCaselessStringLessiE
+7CUtlMapIjP10CUtlVectorI7style_t10CUtlMemoryIS1_EEi8CDefLessE
+10CUtlMemoryI10CUtlStringE
+10CUtlMemoryIN4vgui16layoutcmd_base_tEE
+10CUtlRBTreeIN7CUtlMapIN11CLayoutFile15AppearanceKey_tE7CUtlPtrI16CStyleAppearanceEi8CDefLessE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+7CUtlPtrI16CStyleAppearanceE
+10CUtlVectorIN11CUtlHashMapI7CUtlPtrI16CStyleAppearanceEbN11CLayoutFile11StyleEqualsENS4_9StyleHashES3_E12HashBucket_tE10CUtlMemoryIS8_EE
+10CUtlMemoryIN11CUtlHashMapI7CUtlPtrI16CStyleAppearanceEbN11CLayoutFile11StyleEqualsENS4_9StyleHashES3_E6Node_tEE
+10CUtlMemoryI5ColorE
+10CUtlMemoryIN16CStyleAppearance8DrawOp_tEE
+7CUtlMapIPKc5Colori22CDefCaselessStringLessE
+10CUtlRBTreeIN7CUtlMapIjP10CUtlVectorI7style_t10CUtlMemoryIS2_EEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
+10CUtlVectorI7style_t10CUtlMemoryIS0_EE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIN11CLayoutFile15AppearanceKey_tE7CUtlPtrI16CStyleAppearanceEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
+10CUtlMemoryIN11CUtlHashMapI7CUtlPtrI16CStyleAppearanceEbN11CLayoutFile11StyleEqualsENS4_9StyleHashES3_E12HashBucket_tEE
+10CUtlRBTreeIN7CUtlMapIPKc5Colori22CDefCaselessStringLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjP10CUtlVectorI7style_tS_IS3_EEi8CDefLessE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
+10CUtlMemoryI7style_tE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKc5Colori22CDefCaselessStringLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
+font-outerglow-filtersize
+shadowtextcolor
+selectedtextcolor
+selectedbgcolor
+GetClientLauncherType
 sc_schinese
-schinese
 english
--all_languages
-ILocalize::AddFile() failed to load file "%s".
-_english.txt
-//
-%s
-Language
-Tokens
-}
-[english]
-%s*.txt
-%s%s
-russian
-wb
-"lang"{"Language" "English""Tokens"{
-}}
-reloading localization file %s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/LocalizedStringTable.cpp
+HKEY_CURRENT_USER\Software\Valve\Steam\Language
 s_pTable
-Bad format string in CLocalizeStringTable::ConstructString
+/data/src/vgui2/src/LocalizedStringTable.cpp
+reloading localization file %s\n
+}\r\n}\r\n
+"lang"\r\n{\r\n"Language" "English"\r\n"Tokens"\r\n{\r\n
+%s*.txt
+russian
+_english.txt
+Tokens
+[english]
+Bad format string in CLocalizeStringTable::ConstructString\n
 !("CLocalizedStringTable::ConstructString - Found a %s# escape sequence who's index was more than the number of args.")
 CLocalizedStringTable
+m_Lookup
 m_Names
 m_Values
 m_LocalizationFiles
 m_sLanguage
 m_FastValueLookup
 g_StringTable
-HKEY_CURRENT_USER\Software\Valve\Steam\Language
-GetClientLauncherType
-NULL
-Tick
+%language%
+-all_languages
+ILocalize::AddFile() failed to load file "%s".\n
+Spew details about the localized strings we load
+-ccsyntax
+Set Steam client UI language
+-language
+VGUI_Localize003
+N4vgui9ILocalizeE
+21CLocalizedStringTable
+10CUtlRBTreeIN21CLocalizedStringTable17localizedstring_tEiPFbRKS1_S3_E25CDefRBTreeBalanceListenerIiES1_E
+10CUtlVectorIc10CUtlMemoryIcEE
+10CUtlVectorIw10CUtlMemoryIwEE
+10CUtlVectorI10CUtlSymbol10CUtlMemoryIS0_EE
+10CUtlRBTreeIN21CLocalizedStringTable11fastvalue_tEiPFbRKS1_S3_E25CDefRBTreeBalanceListenerIiES1_E
+10CUtlMemoryIN10CUtlRBTreeIN21CLocalizedStringTable17localizedstring_tEiPFbRKS2_S4_E25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
+10CUtlMemoryIcE
+10CUtlMemoryIwE
+10CUtlMemoryI10CUtlSymbolE
+10CUtlMemoryIN10CUtlRBTreeIN21CLocalizedStringTable11fastvalue_tEiPFbRKS2_S4_E25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
 Notifications.PanelPosition
 Notifications.SlideDirection
 Notifications.FadeInTime
 Notifications.FadeOutTime
 Notifications.DisplayTime
 Notifications.StackSize
-Notifications.ScreenEdgePaddingHorizontal
-Notifications.ScreenEdgePaddingVertical
 TopLeft
 TopRight
 BottomLeft
 BottomRight
 Horizontal
-None
 Vertical
-SetAlpha
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/NotificationManager.cpp
-flFrameTime < panel.m_flLastEventTime + m_flFadeOutTime
-Invalid m_Position for NotificationManager!
-VGUI_NotificationManager002
+Notifications.ScreenEdgePaddingHorizontal
+Notifications.ScreenEdgePaddingVertical
 CNotificationManager
 m_vecPanelsToDelete
 m_vecPanelList
 g_NotificationManager
-VGUI_Scheme010
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/Scheme.cpp
+SetAlpha
+flFrameTime < panel.m_flLastEventTime + m_flFadeOutTime
+/data/src/vgui2/src/NotificationManager.cpp
+Invalid m_Position for NotificationManager!\n
+VGUI_NotificationManager002
+N4vgui20INotificationManagerE
+20CNotificationManager
+10CUtlVectorIN20CNotificationManager17NotificationPanelE10CUtlMemoryIS1_EE
+10CUtlMemoryIN20CNotificationManager17NotificationPanelEE
+><Unknown font>
 !"Invalid scheme requested."
-Scheme
+/data/src/vgui2/src/Scheme.cpp
+%s%s-%s
 SKIN
-GAME
-BaseSettings
-Colors
-Name
-You need to name the scheme!
-default
-CustomFontFiles
-Fonts
-yres
-%d %d
-tall
-blur
-scanlines
-weight
 %s%c%s
-reloading layout file %s
+reloading layout file %s\n
 LayoutFileChanged
 LocalizationFileChanged
-reloading menu file %s
-<Unknown font>
-%s%s-%s
-p
-no
-Couldn't find scheme color '%s'
+reloading menu file %s\n
+Couldn't find scheme color '%s'\n
 koreana
 tchinese
 japanese
 thai
-no such file
+yres
+blur
+scanlines
 CScheme
 m_FontAliases
 m_pData
 CSchemeManager
 m_Schemes
-m_Schemes[ iScheme ]
 m_dictBitmaps
-m_dictBitmaps[ iBitmap ]
+CUtlDict
+m_Schemes[ iScheme ]
 m_sDirToWatchForChanges
+m_dictBitmaps[ iBitmap ]
 m_dictLayoutFiles
-m_dictLayoutFiles[i]
 m_vecKeySymbolLists
+m_dictLayoutFiles[i]
 m_treeIKeySymbolLists
 m_DirWatcher
 m_sBaseLayoutFile
 m_mapFonts
-m_mapFonts.Key( i ).m_sFontFamily
 m_dictMenuFiles
 m_sFontOverride
 m_strLanguage
 CLayoutFile::ValidateStatics
+m_mapFonts.Key( i ).m_sFontFamily
 g_Scheme
 elem >= 0 && num >= 0 && INT_MAX - elem >= num
 elem + num <= Count()
-CUtlDict
--pid
-Pid that we should be watching for
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/SerializedSurface.cpp
-m_fdShMemFDSender >= 0
-/tmp/steam_chrome_overlay_uid%d_spid%s
-top >= 0
-m_PaintStateStack[top].m_pPanel == pPanel
-ClearSchemeSettings
-CBaseSurface::GetKernedCharSize
-Adding custom font file: %s
-Couldn't find custom font file '%s'
-Failed to load custom font file '%s'
-successfullyAdded
-DrawRenderCharFromInfo is not implemented and should not be needed in overlay
-No font for char %u
-winFont
-GetTextureForString failed
-SerializedSurface::DrawLine() not yet implemented
-SerializedSurface::DrawPolyLine() not yet implemented
-CSerializedSurface::DrawSetTextureRGBA
-Loading raw RGBA texture with invalid height/width
-res > 0
-SendSHMemFDToClient pid %d failed: %d %s
-Closing socket.
-iRet > 0
-OnChromePaintBufferClientDisconnect m_mapShMemFD has %d entries, m_mapChromePaintBufferHandleToData %d entries.
-OnChromePaintBufferClientDisconnect m_mapShMemFD pid %u, ShMemFD %d
-OnChromePaintBufferClientDisconnect m_mapChromePaintBufferHandleToData ulHandle %llu, texture ID %d
-DrawSetSubTextureRGBA called on invalid texture
-DrawSetSubTextureRGBA called on unallocated texture
-DrawSetSubTextureRGBA out of bounds (width)
-DrawSetSubTextureRGBA out of bounds (height)
-VGUI trying to serialize out of bounds of texture
-SetScreenSize from (%d, %d) to ( %d, %d )
-DialogConfigOverlay_%dx%d.vdf
-CONFIG
-SerializedSurface::RestrictPaintToSinglePanel() not yet implemented
+CustomFontFiles
+BaseSettings
+You need to name the scheme!
+default
+GAME
+VGUI_Scheme010
+N4vgui7ISchemeE
+N4vgui14ISchemeManagerE
+7CScheme
+14CSchemeManager
+10CUtlVectorIN7CScheme11fontalias_tE10CUtlMemoryIS1_EE
+10CUtlVectorIP7CScheme10CUtlMemoryIS1_EE
+10CUtlRBTreeIiiN14CSchemeManager12CObjLessFuncIiS0_EE25CDefRBTreeBalanceListenerIiEiE
+7CUtlMapIN14CSchemeManager9FontKey_tEmi8CDefLessE
+10CUtlMemoryIN7CScheme11fontalias_tEE
+10CUtlMemoryIP7CSchemeE
+7CUtlMapIPKcPN4vgui6BitmapEi22CDefStringLessFilenameE
+7CUtlMapIPKcP11CLayoutFilei22CDefStringLessFilenameE
+10CUtlMemoryIN10CUtlRBTreeIiiN14CSchemeManager12CObjLessFuncIiS1_EE25CDefRBTreeBalanceListenerIiEiE6Node_tEE
+10CUtlRBTreeIN7CUtlMapIN14CSchemeManager9FontKey_tEmi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+7CUtlMapIPKcbi22CDefStringLessFilenameE
+10CUtlRBTreeIN7CUtlMapIPKcPN4vgui6BitmapEi22CDefStringLessFilenameE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlRBTreeIN7CUtlMapIPKcP11CLayoutFilei22CDefStringLessFilenameE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIN14CSchemeManager9FontKey_tEmi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
+10CUtlRBTreeIN7CUtlMapIPKcbi22CDefStringLessFilenameE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcPN4vgui6BitmapEi22CDefStringLessFilenameE6Node_tEiNS8_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcP11CLayoutFilei22CDefStringLessFilenameE6Node_tEiNS7_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcbi22CDefStringLessFilenameE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
+Valve Steam GameOverlay
+/data/src/vgui2/src/SerializedSurface.cpp
+DrawRenderCharFromInfo is not implemented and should not be needed in overlay\n
+!"Impl me"
+/data/src/vgui2/src/surface_base.h
 OnTaskBarChanged
-SurfaceSetCursorPos needs to be implemented!
-SerializedSurface::DrawTexturedLine() not yet implemented
-SerializedSurface::DrawOutlinedCircle() not yet implemented
-SerializedSurface::DrawTexturedPolyLine() not yet implemented
-SerializedSurface::DrawTexturedSubRect() not yet implemented
-SerializedSurface::DrawTexturedPolygon() not yet implemented
-Changing resolution from (%d, %d) to (%d, %d)
+SerializedSurface::DrawLine() not yet implemented\n
+SerializedSurface::DrawPolyLine() not yet implemented\n
+SerializedSurface::RestrictPaintToSinglePanel() not yet implemented\n
+SurfaceSetCursorPos needs to be implemented!\n
+SerializedSurface::DrawTexturedLine() not yet implemented\n
+SerializedSurface::DrawOutlinedCircle() not yet implemented\n
+SerializedSurface::DrawTexturedPolyLine() not yet implemented\n
+SerializedSurface::DrawTexturedSubRect() not yet implemented\n
+SerializedSurface::DrawTexturedPolygon() not yet implemented\n
+OnChromePaintBufferClientDisconnect m_mapShMemFD has %d entries, m_mapChromePaintBufferHandleToData %d entries.\n
+OnChromePaintBufferClientDisconnect m_mapShMemFD pid %u, ShMemFD %d\n
+OnChromePaintBufferClientDisconnect m_mapChromePaintBufferHandleToData ulHandle %llu, texture ID %d\n
+CSerializedSurface::DrawSetTextureRGBA
+Loading raw RGBA texture with invalid height/width\n
+CBaseSurface::GetKernedCharSize
+VGUI trying to serialize out of bounds of texture\n
+/data/src/public/tier1/utlbuffer.h
+nBytes
+DrawSetSubTextureRGBA called on invalid texture\n
+DrawSetSubTextureRGBA called on unallocated texture\n
+DrawSetSubTextureRGBA out of bounds (width)\n
+DrawSetSubTextureRGBA out of bounds (height)\n
+ClearSchemeSettings
+Changing resolution from (%d, %d) to (%d, %d)\n
 OnScreenSizeChanged
 oldwide
 oldtall
-Valve Steam GameOverlay
-ATSFontActivateFromFileReference
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlbuffer.h
-nBytes
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/surface_base.h
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/tier1/utlhashmap.h
+SetScreenSize from (%d, %d) to ( %d, %d )\n
+DialogConfigOverlay_%dx%d.vdf
+CONFIG
+m_fdShMemFDSender >= 0
+/tmp/steam_chrome_overlay_uid%d_spid%s
+num >= 0
+Adding custom font file: %s\n
+!"Implement me!"
+successfullyAdded
+Couldn't find custom font file '%s'\n
+Failed to load custom font file '%s'\n
 CUtlHashMap::RemoveAt - Invalid index
+/data/src/public/tier1/utlhashmap.h
 CUtlHashMap::RemoveAt - couldn't find bucket for item
-ChromeHTML_Controller_003
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/surface_base.cpp
-CBaseSurface::PushMakeCurrent
-!"Warning: VPanel with no drawing context"
-font != INVALID_FONT
-pwString
-!texture->m_id2X
-vgui/
-Error: texture file '%s' does not exist or is invalid
-@2x
-bad 2x texture: %s is %dx%d, expected %dx%d
-%s.tga
-%s.png
-panel != 0
-CBaseSurface::AreAnyPopupsViewable
-CBaseSurface::InternalSolveTraverse()
-CBaseSurface::InternalThinkTraverse() dispatch
-CBaseSurface::InternalThinkTraverse()
-CBaseSurface::RecomputeTraversalOrder
-!vecTraversalCache.Count() == !nInternalDepth
-copypos == vecTraversalCache.Count()
-CBaseSurface::InternalSchemeSettingsTraverse
-CBaseSurface::PaintTraverse blocker subdivision
-CBaseSurface::PaintTraverse
-vecTraversalCache.Count() > 0 && vecTraversalCache[0].vpanel == panel
-CBaseSurface::PaintTraverse find opaque blocker
-CBaseSurface::PaintTraverse root appearance PaintBackground()
-bHasReachedStart
-CBaseSurface::PaintTraverse root appearance Paint()
-CBaseSurface::PaintTraverse PaintBackground()
-CBaseSurface::PaintTraverse Paint()
-CBaseSurface::PaintTraverse appearance PaintBackground()
-CBaseSurface::PaintTraverse recursion
-CBaseSurface::PaintTraverse appearance Paint()
-CBaseSurface::PaintTraverse PostChildPaint()
-resource\warning.wav
-CBaseSurface::GetTextSize
-GetAbsoluteWindowBounds
-m_vecTextColorRangeValues.Count()
+res > 0
+GetTextureForString failed\n
+SendSHMemFDToClient pid %d failed: %d %s\n
+Closing socket.\n
+iRet > 0
+Pid that we should be watching for
+-pid
+top >= 0
+m_PaintStateStack[top].m_pPanel == pPanel
+!pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
+No font for char %u
+winFont
+4IIME
+N4vgui15IOverlaySurfaceE
+14ISurfaceHelper
+18CSerializedSurface
+14CSerializedIME
+14CUtlLinkedListIN18CSerializedSurface18CustomCursorData_tEiE
+?ChromeHTML_Controller_003
 Valve Steam Client
-Valve Steam Client/%s
--nofasthtml
-Disables new fast child hwnd direct in vgui hwnd rendering path
--fasthtml
-Enable fast child html for any platform
+/data/src/vgui2/src/surface_base.cpp
+font != INVALID_FONT
 ReparentChildPlatformWindow - not implemented
 SetPlatformWindowVisibility - not implemented
+pwString
+Valve Steam Client/%s
+CBaseSurface::GetTextSize
+GetAbsoluteWindowBounds
+CBaseSurface::PushMakeCurrent
+!"Warning: VPanel with no drawing context"
 CBaseSurface
 _popupList
 m_FileTypeImages
 m_mapChildWindowZOrder
-(m_mapChildWindowZOrder[i])->m_pVector
 ChromeController
 m_CustomFontFileNames
 m_VGuiSurfaceTextures
@@ -1489,129 +1254,265 @@ m_vecTraversalCache
 m_mapHTMLPanels
 m_Menus
 m_VPanelScreenSizes
+(m_mapChildWindowZOrder[i])->m_pVector
+CBaseSurface::AreAnyPopupsViewable
+CBaseSurface::InternalSolveTraverse()
+CBaseSurface::InternalThinkTraverse() dispatch
+CBaseSurface::InternalThinkTraverse()
+CBaseSurface::InternalSchemeSettingsTraverse
+CBaseSurface::PaintTraverse blocker subdivision
+CBaseSurface::PaintTraverse PaintBackground()
+CBaseSurface::PaintTraverse Paint()
+CBaseSurface::PaintTraverse appearance PaintBackground()
+CBaseSurface::PaintTraverse recursion
+CBaseSurface::PaintTraverse appearance Paint()
+CBaseSurface::PaintTraverse PostChildPaint()
+resource\warning.wav
 g_pInternalSurface
 FontManager()
-!pszString || pszString[nChars] == '\0'
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/public/vgui/ISurface.h
-m_iStart <= m_iEnd
+%s.tga
+%s.png
+m_vecTextColorRangeValues.Count()
+HKEY_CURRENT_USER\Software\Valve\Steam\DPIScaling
+-compat
+-nodpiscale
 (unsigned)elem <= (unsigned)m_Size
+panel != 0
+CBaseSurface::RecomputeTraversalOrder
+!vecTraversalCache.Count() == !nInternalDepth
+copypos == vecTraversalCache.Count()
+CBaseSurface::PaintTraverse
+bHasReachedStart
+vecTraversalCache.Count() > 0 && vecTraversalCache[0].vpanel == panel
+CBaseSurface::PaintTraverse find opaque blocker
+CBaseSurface::PaintTraverse root appearance PaintBackground()
+CBaseSurface::PaintTraverse root appearance Paint()
+/data/src/public/vgui/ISurface.h
+m_iStart <= m_iEnd
 IsInList(after)
-!"Current texture not set"
-id
-wide && tall
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/surface_osx.mm
-unmarkText was called, this is unexpected
-ApplyBlurAndTransparencyToTextBitmap
-MainMenu
-Apple
-v16@?0@"NSNotification"8
-v8@?0
-com.valvesoftware.steam.ActivateWebhelper
-fsPathMakeRef: Status %ld
-$$$: Status %ld
-#steam_about
-About Steam
-#steam_menu_preferences
-Preferences...
-,
-#steam_menu_checkforupdates_osx
-Check For Updates...
-#steam_menu_services
-Services
-#steam_menu_hidesteam
-Hide Steam
-h
-#steam_menu_hideothers
-Hide Others
-#steam_menu_showall
-Show All
-#steam_menu_quitsteam
-Quit Steam
-q
-MenuItem
-steam
-steamchinabeta
-steamchina
-steambeta
-steamlink
-open
-steam://exit
+IsInList(before)
+!texture->m_id2X
+vgui/
+Error: texture file '%s' does not exist or is invalid\n
+!pszString || pszString[nChars] == '\0'
+bad 2x texture: %s is %dx%d, expected %dx%d\n
+Disables new fast child hwnd direct in vgui hwnd rendering path
+Enable fast child html for any platform
+-nofasthtml
+-fasthtml
+10IAppSystem
+N4vgui8ISurfaceE
+12CBaseSurface
+11CUtlHashMapI10CUtlStringPN4vgui6IImageE24CDefCaselessStringEquals25HashFunctorStringCaselessS0_E
+7CUtlMapIyPN12CBaseSurface19ChildWindowVector_tEi8CDefLessE
+10CUtlVectorIN12CBaseSurface17ChildWindowZPos_tE10CUtlMemoryIS1_EE
+10CUtlRBTreeIN4vgui7TextureEi8CDefLess25CDefRBTreeBalanceListenerIiES1_E
+10CUtlVectorIN4vgui16TextColorRange_tE10CUtlMemoryIS1_EE
+10CUtlVectorIN12CBaseSurface16TraversalEntry_tE10CUtlMemoryIS1_EE
+7CUtlMapIjss8CDefLessE
+7CUtlMapIjN4vgui6Size_tEi8CDefLessE
+14CUtlLinkedListIN4vgui16TextColorRange_tEiE
+10CUtlVectorIN11CUtlHashMapI10CUtlStringPN4vgui6IImageE24CDefCaselessStringEquals25HashFunctorStringCaselessS1_E12HashBucket_tE10CUtlMemoryIS8_EE
+10CUtlMemoryIN11CUtlHashMapI10CUtlStringPN4vgui6IImageE24CDefCaselessStringEquals25HashFunctorStringCaselessS1_E6Node_tEE
+10CUtlRBTreeIN7CUtlMapIyPN12CBaseSurface19ChildWindowVector_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE
+10CUtlMemoryIN12CBaseSurface17ChildWindowZPos_tEE
+10CUtlMemoryIN10CUtlRBTreeIN4vgui7TextureEi8CDefLess25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
+10CUtlMemoryIN4vgui16TextColorRange_tEE
+10CUtlMemoryIN12CBaseSurface16TraversalEntry_tEE
+10CUtlRBTreeIN7CUtlMapIjss8CDefLessE6Node_tEsNS2_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE
+10CUtlRBTreeIN7CUtlMapIjN4vgui6Size_tEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE
+10CUtlMemoryIN11CUtlHashMapI10CUtlStringPN4vgui6IImageE24CDefCaselessStringEquals25HashFunctorStringCaselessS1_E12HashBucket_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIyPN12CBaseSurface19ChildWindowVector_tEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiEyE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjss8CDefLessE6Node_tEsNS3_8CKeyLessE25CDefRBTreeBalanceListenerIsEjE6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIjN4vgui6Size_tEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEjE6Node_tEE
+333333
+?/data/src/vgui2/src/surface_linux.h
+Lost connection to the display %s;\nmost likely the X server was shut down or you killed/destroyed\nthe application.\n
+Fatal IO error %d (%s) on X server %s.\n
+Steam: An X Error occurred\n
+X Error
+XError
+XlibMessage
+%s:  %s\n
+Request Major code %d
+MajorCode
+XRequest
+Value 0x%x
+AtomID 0x%x
+AtomID
+ResourceID 0x%x
+ResourceID
+Error Serial #%d
+ErrorSerial
+xerror_handler: X failed, continuing\n
+write() failed, errno %d\n
+ForceQuit
+/data/src/vgui2/src/surface_linux.cpp
 WindowsEndSession
-com.valvesoftware.steam.ActivateWebhelperDefaultDialog
-com.valvesoftware.steam.HideWebhelper
-steam://open/about
-steam://settings
-steam://checkforupdates
-COSXSurface::DrawGradientFilledRect
-eGradientDirection == k_EGradientDirectionHorizontal
-!"Unable to find font"
-failed to apply color to copied style
-!"Unable to set layout controls"
-!"Context ref not setup to allow DrawPrintText"
-COSXSurface::DrawSetTextureExternal
-!texture->rgba && !texture->m_Image
-texture->rgba
-!"Impl COSXSurface::DrawTexturedPolygon"
-COSXSurface::DrawTexturedRect
-m_pCurrentTexture
-template <class T> CBaseOSXSurface<T>::PushMakeCurrent
-plat->m_pNSWindow == window
-IsPointInCaptureRegion
-!"Failed to create CGLayer"
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/surface_osx.h
-!"Implement me"
-DeviceChange
-com.valvesoftware.steam.ActivateSteam
-com.valvesoftware.steam.ActivateSteamDefaultDialog
-defaultdialog
-com.valvesoftware.steam.HideSteam
-template <class T> CBaseOSXSurface<T>::RunFrame - nextEvent
-template <class T> CBaseOSXSurface<T> - Viewability Check
-(%d) %@
-!"Impl template <class T> CBaseOSXSurface<T>::SetAsToolBar"
-WindowRestored
-Move
-template <class T> CBaseOSXSurface<T>::IsWithin
-resource/warning.wav
+--warning
+--error
+root
+%s/.steam/%s
+%s/steam_msg.sh
+--title
+execl failed, errno %d\n
+!"Unexpect KB message"
+BringToFront
+SetTopLevelFocus
+SetForegroundWindow
 WindowMaximized
-onOrderIn
-onOrderOut
-bounds
-contents
-sublayers
-hidden
-position
-contentsScale
-VGUI_System011
-com.apple.pasteboard.clipboard
-/usr/bin/open
-public.utf8-plain-text
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/system_posix.cpp
-dialogName && *dialogName
-%s_%d
-UserConfigData
+WindowRestored
+pPlat->m_hWindow
+CLinuxSurface::IsWithin()
+XTranslateCoordinates
+m_bInResizeMove
+XInitThreads failed!
+Unable to open display
+black
+LANG
+XOpenIM() failed, LANG = %s
+WM_PROTOCOLS
+WM_DELETE_WINDOW
+_NET_ACTIVE_WINDOW
+_NET_WORKAREA
+_NET_CURRENT_DESKTOP
+_NET_WM_STATE
+_NET_WM_STATE_MAXIMIZED_VERT
+_NET_WM_STATE_MAXIMIZED_HORZ
+_NET_WM_STATE_HIDDEN
+_NET_WM_ALLOWED_ACTIONS
+_NET_WM_ACTION_RESIZE
+_NET_WM_MOVERESIZE
+_NET_WM_WINDOW_OPACITY
+STEAM_INPUT_FOCUS
+STEAM_OVERLAY
+VALVE_SET_VISIBLE
+VALVE_BRING_TO_TOP
+GDK_SCALE
+-display-scale=
+OpenGL GLX extension not supported by display
+glXChooseVisual failed
+glXCreateContext failed
+SESSION_MANAGER
+resourceClass
+resourceName
+inputStyle
+focusWindow
+clientWindow
+filterEvents
+_MOTIF_WM_HINTS
+KWM_WIN_DECORATION
+_WIN_HINTS
+_NET_WM_ICON
+public/steam_tray_48
+_NET_WM_WINDOW_TYPE
+_NET_WM_WINDOW_TYPE_MENU
+STEAM_IGNORE_INDIRECT_RENDERING
+OpenGL GLX context is not using direct rendering, which may cause performance problems.\n\nFor more information visit https://support.steampowered.com/kb_article.php?ref=9938-EYZB-7457
+OpenGL GLX context is not using direct rendering
+Could not connect to X session manager: %s\n
+_KDE_NET_WM_WINDOW_TYPE_OVERRIDE
+libunity.so.9
+steam.desktop
+unity_launcher_entry_get_for_app_uri
+unity_launcher_entry_get_for_desktop_id
+unity_launcher_entry_get_for_desktop_file
+unity_launcher_entry_set_count
+unity_launcher_entry_set_count_visible
+unity_launcher_entry_set_progress
+unity_launcher_entry_set_progress_visible
+unity_launcher_entry_get_urgent
+unity_launcher_entry_set_urgent
+index != m_mapFontTextureCache.InvalidIndex()
+read failed, errno %d\n
+vgui2::WM_PAINT
+!"Invalid window handle"
+plat
+CloseExternal
+N4vgui13CLinuxSurfaceE
+/data/src/vgui2/src/surface_opengl.cpp
+GL_EXT_texture_filter_anisotropic
+GL_EXT_texture_lod_bias
+glIsTexture( id ) == GL_TRUE
+Impl COpenGLSurface::DrawPolyLine()\n
+glIsTexture( id )
+wide > 0
+tall > 0
+!"Attempting to upload sub texture without making texture first"
+texture->m_eTextureFormat == ISurface::eTextureFormat_RGBA
+glIsTexture( textureID ) == GL_TRUE
+wide && tall
+COpenGLSurface::DrawGradientFilledRect
+!"Current texture not set"
+texture->m_eTextureFormat == eTextureFomat
+glIsTexture( nTextureID ) == GL_TRUE
+COpenGLSurface::DrawSubTexturedRect
+COpenGLSurface::PushMakeCurrent
+m_PaintStateStack[top].m_pPanel == panel
+N4vgui14COpenGLSurfaceE
+G/usr/share/applications
 !"CSystem::CreateShortcut"
+/data/src/vgui2/src/system_posix.cpp
 !"CSystem::GetShortcutTarget"
 !"CSystem::ModifyShortcutTarget"
-/Applications
-%s/Downloads
+dialogName && *dialogName
+%s_%d
+alCaptureDevice
+SOFTWARE\Valve\Steam
 m_pUserConfigData
+%s/.local/share/applications
+!"Unable to get home directory"
+%s/Downloads
+UTF8_STRING
+CLIPBOARD
+TEXT
+TARGETS
+/usr/bin/xdg-open
+ShellExecute
+%s: system() failed, errno %d\n
+Could not set CLIPBOARD selection.\n
 g_System
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/timeutils.cpp
-maxUnitCount == 1 || maxUnitCount == 2
+VGUI_System011
+N4vgui7ISystemE
+7CSystem
+zDmaxUnitCount == 1 || maxUnitCount == 2
+/data/src/vgui2/src/timeutils.cpp
 secondsInterval >= 0
-#vgui_TimeLeft
 Remaining
+#vgui_TimeLeft
 lastProgressUpdateTime <= currentTime
 #vgui_
-VGUI_ivgui007
-Num %5u, Size %4u, Total Kb %2u, Class %s
-Total Panels %u, total size in Kb %u
--vguimessages
-set to see debug vgiui2 messages
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/vgui.cpp
 context != DEFAULT_VGUI_CONTEXT
+/data/src/vgui2/src/vgui.cpp
+\tpanel '%s' of type '%s' leaked\n
+OnAppShutdown
+m_PanelList.IsValidIndex(index)
+Tick
+command
+%s Queue dispatching( %s -- %i )\n
+%s Queue dispatching command( %s, %s -- %i )\n
+Secondary
+Delayed
+Primary
 (context == DEFAULT_VGUI_CONTEXT) || m_Contexts.IsValidIndex(context)
+!m_InDispatcher
+CVGui
+m_PanelList
+m_TickSignalVec
+m_MessageQueue
+m_SecondaryQueue
+m_DelayedMessageQueue
+m_heap
+m_MessageQueue[i]._params
+m_SecondaryQueue[i]._params
+m_pkvCurrentParams
+m_PanelList[ iPanel ].m_pPanel
+m_DelayedMessageQueue.Element(i)._params
+VGUI Globals
+VGUI
+g_VGui
+CUtlSymbol::ValidateGlobals
+params->GetName()
 INotificationManager()->RunFrame()
 surface()->RunFrame()
 system()->RunFrame()
@@ -1620,284 +1521,200 @@ input()->RunFrame()
 CVGui::DispatchMessages
 SolveTraverse
 Really too many panels, crashing
-Too many vgui panels, busiest parent %s/%s
-Too many vgui panels, NULL busiest parent
-focus
-m_PanelList.IsValidIndex(index)
-command
-%s Queue dispatching command( %s, %s -- %i )
-%s Queue dispatching( %s -- %i )
-Secondary
-Delayed
-Primary
-Delete
-params->GetName()
-!m_InDispatcher
-CVGui
-m_PanelList
-m_PanelList[ iPanel ].m_pPanel
-m_TickSignalVec
-m_MessageQueue
-m_SecondaryQueue
-m_DelayedMessageQueue
-m_MessageQueue[i]._params
-m_SecondaryQueue[i]._params
-m_DelayedMessageQueue.Element(i)._params
-m_pkvCurrentParams
+Too many vgui panels, NULL busiest parent\n
+Too many vgui panels, busiest parent %s/%s\n
+Num %5u, Size %4u, Total Kb %2u, Class %s\n
+\n Total Panels %u, total size in Kb %u \n
+VGUI_ivgui007
+-vguimessages
 IVALIDATE001
-OnAppShutdown
-m_heap
-VGUI
-VGUI Globals
-g_VGui
-CUtlSymbol::ValidateGlobals
+set to see debug vgiui2 messages
+9IValidate
+N4vgui5IVGuiE
+5CVGui
+17CVGUI2DLLValidate
+14CUtlLinkedListIN4vgui13SerialPanel_tEjE
+10CUtlVectorIPN5CVGui6Tick_tE10CUtlMemoryIS2_EE
+14CUtlLinkedListIN5CVGui9Context_tEiE
+14CUtlLinkedListI13MessageItem_tiE
+17CUtlPriorityQueueI13MessageItem_tPFbRKS0_S2_E32CDefUtlPriorityQueueSetIndexFuncIS0_EE
+10CUtlMemoryIN14CUtlLinkedListIN4vgui13SerialPanel_tEjE10ListElem_tEE
+10CUtlMemoryIPN5CVGui6Tick_tEE
+10CUtlMemoryIN14CUtlLinkedListIN5CVGui9Context_tEiE10ListElem_tEE
+10CUtlMemoryIN14CUtlLinkedListI13MessageItem_tiE10ListElem_tEE
+10CUtlVectorI13MessageItem_t10CUtlMemoryIS0_EE
+10CUtlMemoryI13MessageItem_tE
 VGUI_Surface039
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/vguisetup.cpp
-opengl vgui not supported on mac
 VGUISetup
 m_Factories
 m_GraphicsOptions
-VGUI_Setup001
 g_VGuiSetup
-VGuiModuleLoader004
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/vguisystemmoduleloader.cpp
-Platform Error: module '%s' failed to initialize
-Platform
-steam/games/PlatformMenu.vdf
-PLATFORM
-Menu
-SteamApp
-dll
-EXECUTABLE_PATH
-Platform Error: bad module '%s', not loading
-interface
-Platform Error: module version ('%s, %s) invalid, not loading
-Command
-Quit
+VGUI_Setup001
+N4vgui10IVGuiSetupE
+N4vgui9VGUISetupE
+10CUtlVectorIPFPvPKcPiE10CUtlMemoryIS5_EE
+10CUtlVectorIN4vgui10IVGuiSetup15EGraphicsOptionE10CUtlMemoryIS2_EE
+10CUtlMemoryIPFPvPKcPiEE
+10CUtlMemoryIN4vgui10IVGuiSetup15EGraphicsOptionEE
 MenuName
 < unknown >
+Command
 m_Modules
 m_pPlatformModuleData
+Platform Error: module '%s' failed to initialize\n
+/data/src/vgui2/src/vguisystemmoduleloader.cpp
+Platform
+PLATFORM
+steam/games/PlatformMenu.vdf
+Menu
+EXECUTABLE_PATH
+SteamApp
+interface
+Platform Error: bad module '%s', not loading\n
+Platform Error: module version ('%s, %s) invalid, not loading\n
+VGuiModuleLoader004
+17IVGuiModuleLoader
+23CVGuiSystemModuleLoader
+10CUtlVectorIN23CVGuiSystemModuleLoader8module_tE10CUtlMemoryIS1_EE
+10CUtlMemoryIN23CVGuiSystemModuleLoader8module_tEE
 VFileSystem014
 VGUI_Panel010
 VGUI_Application_001
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/vgui2/src/vgui_key_translation.cpp
-Keycode not in range of s_pVirtualKeyToVGUI
-pDesc->macKeyCode == -1 || s_pVirtualKeyToVGUI[ pDesc->macKeyCode ] == 0
+keyMap
+Table %s Key %d\n
+dupKeyMap
+/data/src/vgui2/src/vgui_key_translation.cpp
 s_pVGUIToVirtualKey[ keyMap[i].vguiKeyCode ] == 0
 s_pCharToVGUI[ (size_t)charForLayoutResolution ] == 0
 s_pVGUIToScanCode[ keyMap[i].vguiKeyCode ] == 0
 vgui::VPanel
 _childDar
-Application built with libpng-
-but running with
-Ignoring invalid time value
-unexpected zlib return code
-unexpected end of LZ stream
-missing LZ dictionary
-zlib IO error
-bad parameters to zlib
-damaged LZ stream
-insufficient memory
-truncated
-unsupported zlib version
-unexpected zlib return
-gamma value out of range
-duplicate
-invalid chromaticities
-internal error checking chromaticities
-sRGB
-invalid sRGB rendering intent
-inconsistent rendering intents
-duplicate sRGB information ignored
-cHRM chunk does not match sRGB
-exceeds application limits
-length does not match profile
-invalid length
-tag count too large
-invalid rendering intent
-intent outside defined range
-invalid signature
-PCS illuminant is not D50
-RGB color space not permitted on grayscale PNG
-Gray color space not permitted on RGB PNG
-invalid ICC profile color space
-invalid embedded Abstract ICC profile
-unexpected DeviceLink ICC profile class
-unexpected NamedColor ICC profile class
-unrecognized ICC profile class
-unexpected ICC PCS encoding
-ICC profile tag outside profile
-ICC profile tag start not a multiple of 4
-internal error handling cHRM coefficients
-internal error handling cHRM->XYZ
-Image width is zero in IHDR
-Invalid image width in IHDR
-Image width exceeds user limit in IHDR
-Image height is zero in IHDR
-Invalid image height in IHDR
-Image height exceeds user limit in IHDR
-Invalid bit depth in IHDR
-Invalid color type in IHDR
-Invalid color type/bit depth combination in IHDR
-Unknown interlace method in IHDR
-Unknown compression method in IHDR
-MNG features are not allowed in a PNG datastream
-Unknown filter method in IHDR
-Invalid filter method in IHDR
-Invalid IHDR data
-gamma table being rebuilt
-gamma value does not match sRGB
-gamma value does not match libpng estimate
-inconsistent chromaticities
-profile '
-':
-h:
-too short
-known incorrect sRGB profile
-out-of-date sRGB profile with no signature
-Not recognizing known sRGB profile that has been edited
-Insufficient memory for eXIf chunk data
-Invalid palette size, hIST allocation skipped
-Insufficient memory for hIST chunk data
-Invalid pCAL equation type
-Invalid pCAL parameter count
-Invalid format for pCAL parameter
-Insufficient memory for pCAL purpose
-Insufficient memory for pCAL units
-Insufficient memory for pCAL params
-Insufficient memory for pCAL parameter
-Invalid sCAL unit
-Invalid sCAL width
-Invalid sCAL height
-Memory allocation failed while processing sCAL
-Invalid palette length
-Invalid palette
-too many text chunks
-text compression mode is out of range
-text chunk: out of memory
-tRNS chunk has out-of-range samples for bit_depth
-too many sPLT chunks
-png_set_sPLT: invalid sPLT
-sPLT out of memory
-too many unknown chunks
-unknown chunk: out of memory
-png_set_unknown_chunks now expects a valid location
-invalid location in png_set_unknown_chunks
-PNG unsigned integer out of range
-Not a PNG file
-PNG file corrupted by ASCII conversion
-CRC error
-invalid window size (libpng)
-out of place
-missing IHDR
-ignored in grayscale PNG
-tRNS must be after
-hIST must be after
-bKGD must be after
-invalid values
-too many profiles
-extra compressed data
-out of memory
-bad compression method
-bad keyword
-No space in chunk cache for sPLT
-malformed sPLT chunk
-sPLT chunk has bad length
-sPLT chunk requires too much memory
-invalid with alpha channel
-invalid index
-invalid gray level
-invalid color
-incorrect byte-order specifier
-invalid parameter count
-unrecognized equation type
-invalid data
-invalid unit
-bad width format
-non-positive width
-bad height format
-non-positive height
-no space in chunk cache
-Insufficient memory to process text chunk
-unknown compression type
-Read failure in png_handle_zTXt
-bad compression info
-error in user chunk
-Saving unknown chunk:
-forcing save of an unhandled chunk; please call png_set_keep_unknown_chunks
-unhandled critical chunk
-invalid chunk type
-chunk data is too large
-internal row logic error
-internal row size calculation error
-internal row width error
-invalid user transform pixel depth
-Not enough image data
-Extra compressed data
-Too much image data
-Row has too many bytes to allocate in memory
-using zstream
-1.2.11
-zstream unclaimed
-insufficient memory to read chunk
-unknown chunk exceeds memory limits
-png_set_filler is invalid for low bit depth gray output
-png_set_filler: inappropriate color type
-Missing IHDR before IDAT
-Missing PLTE before IDAT
-Too many IDATs found
-png_read_update_info/png_start_read_image: duplicate call
-png_start_read_image/png_read_update_info: duplicate call
-Invalid attempt to read row data
-bad adaptive filter value
-sequential row overflow
-internal sequential row size calculation error
-Interlace handling should be turned on when using png_read_image
-Read palette index exceeding num_palette
-.Too many IDATs found
-..Too many IDATs found
-Call to NULL read function
-Read Error
-Can't set both read_data_fn and write_data_fn in the same structure
-libpng does not support gamma+background+rgb_to_gray
-invalid background gamma type
-Palette is NULL in indexed image
-NULL row buffer
-Uninitialized row
-png_do_rgb_to_gray found nongray pixel
-png_do_quantize returned rowbytes=0
-invalid after png_start_read_image or png_read_update_info
-png_do_encode_alpha: unexpected call
-internal error: array alloc
-internal error: array realloc
-Out of memory
-0123456789ABCDEF
-Libpng jmp_buf still allocated
-Application jmp_buf size changed
-libpng error: %s
-undefined
-libpng warning: %s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/bitstring.cpp
-resizeNumBits >= 0
-!m_pInt
+N4vgui6IPanelE
+13VPanelWrapper
+m_Fonts[i].font->IsValid()
+/data/src/vgui2/vgui_surfacelib/FontAmalgam.cpp
+CFontAmalgam
+m_Fonts
+deferredFontName
+m_strName
+10CUtlVectorIN12CFontAmalgam10TFontRangeE10CUtlMemoryIS1_EE
+10CUtlMemoryIN12CFontAmalgam10TFontRangeEE
+font != vgui::INVALID_FONT
+/data/src/vgui2/vgui_surfacelib/FontManager.cpp
+m_FontAmalgams.IsValidIndex( font )
+CUtlSymbolTable
+m_StringPools
+CFontManager
+m_FontAmalgams
+m_PlatformFonts
+m_FontAmalgams[iFont]
+m_FontDataFileNames
+m_FontDataFiles
+m_PlatformFonts[ i ]
+CFontInfo
+m_font
+m_descs
+m_FontDataFiles[ i ]
+CFontDataFile
+Unable to initalize freetype library, is it installed?
+pPool->m_SpaceUsed < 0xFFFF
+/data/src/public/tier1/utlsymbol.h
+Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
+CCopyableUtlVector()  - copycons
+descs.Count() >= 1
+10CUtlVectorI16SFontDescription10CUtlMemoryIS0_EE
+10CUtlVectorI12CFontAmalgam10CUtlMemoryIS0_EE
+7CUtlMapIN12CFontManager15CFontAttributesENS0_9CFontInfoEi8CDefLessE
+7CUtlMapItN12CFontManager13CFontDataFileEi8CDefLessE
+10CUtlMemoryI16SFontDescriptionE
+10CUtlMemoryI12CFontAmalgamE
+10CUtlRBTreeIN7CUtlMapIN12CFontManager15CFontAttributesENS1_9CFontInfoEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlVectorIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tE10CUtlMemoryIS4_EE
+10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
+10CUtlRBTreeIN7CUtlMapItN12CFontManager13CFontDataFileEi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiEtE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIN12CFontManager15CFontAttributesENS2_9CFontInfoEi8CDefLessE6Node_tEiNS6_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
+10CUtlMemoryIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tEE
+10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapItN12CFontManager13CFontDataFileEi8CDefLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiEtE6Node_tEE
+DejaVu Sans
+!"FontMatch unhandled type"
+/data/src/vgui2/vgui_surfacelib/linuxfont.cpp
+Error in FL_Load_Glyph: %x\n
+CLinuxFont
+m_ExtendedABCWidthsCache
+slant
+charset
+desc.minCodePoint >= 0 && FcCharSetHasChar(diffSet, desc.minCodePoint) && (desc.minCodePoint == curChar || !FcCharSetHasChar(diffSet, desc.minCodePoint - 1))
+desc.maxCodePoint >= 0 && FcCharSetHasChar(diffSet, desc.maxCodePoint) && (desc.maxCodePoint == curChar + 0xff || !FcCharSetHasChar(diffSet, desc.maxCodePoint + 1))
+Unable to find font named %s\n
+10CUtlRBTreeIN10CLinuxFont11abc_cache_tEtPFbRKS1_S3_E25CDefRBTreeBalanceListenerItES1_E
+10CUtlMemoryIN10CUtlRBTreeIN10CLinuxFont11abc_cache_tEtPFbRKS2_S4_E25CDefRBTreeBalanceListenerItES2_E6Node_tEE
+<333?B`
+333?333?333?333?Size() == operand.Size()
+/data/src/tier1/bitstring.cpp
 GetInts()
+resizeNumBits >= 0
 CVariableBitStringBase
 {}()'
 {}()':
+ n;^
+Qkkbal
+3_L\n
+>jm\r
+Zjz\v
+i]Wb
+9a&g
+MGiI
+wn>Jj
+#.zf
++o*7
+Z* ,\t
+H$6t
+_~6\f
+52F*
+\t#jT$
+\n=G\\vp
+^6o}
+[-&LMb#{'
+)q\n>(
+w+OQvr
+\r}!b
+R1h58
+SKyu
+)\ZEo^m/
+ru&o
+i8P/\f_
+?(3w
+wXR\r
+H*0"ZOW
+{kHw
+)T`D
+!AxU
+l!;b\tF
+:1X:
+y9*O
+kM`~
+Vc0a
+dQy/
+lDa>
+7~8A
+C-Yn
 Convars
-Bad expression token: %c at %d in %s
-Bad expression token: %c %c
-.
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/fileio.cpp
+CPathString
 V_RemoveDotSlashes failed for "%s".
-flock LOCK_SH requested but file is not opened for reading, ignoring: %s
-flock %s %s failed. errno = %d
+/data/src/tier1/fileio.cpp
+m_vecRegisteredWriters
 LOCK_EX
 LOCK_SH
-fcntl failed to set F_NOCACHE
-rb
-%lld
+flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
+flock %s %s failed. errno = %d
+BCreateDirectory
+flock LOCK_EX %s failed, errno = %d\n
+write %s failed, errno = %d\n
+fsync %s failed, errno = %d\n
+BSaveBufferToFileWithTemporary() without k_EFileIOFlushImmediately will result in data loss
+BSaveBufferToFileWithTemporary() failed to find unused file temp name
+%s.%u.tmp
 CFileReader::BOpenFile
 unsupported flags 0x%x passed to CFileReader::BOpenFile
 CFileReader::Read
@@ -1906,42 +1723,41 @@ cubBytesToRead < INT32_MAX
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
 Seeking to a position which is not sector aligned will break unbuffered io
-..
-!"Failed to CFStringCreateWithCString watcher path"
-m_listChangedFiles
 LoadFileRangeIntoBuffer_Internal
+cbToRead <= 1024 * 1024 * 1024
 cbActual < (uint32)nBufSizeWithTerminator
-CPathString
-%s/%s%s
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/interface.cpp
+m_listChangedFiles
+m_strDirectory
+m_mapFileTimes
+m_pthreadWatcher
+pWatcher != NULL
+Steam - DirWatcher
+CFileWriter::BOpenFileInternal
+11CPathString
+11CDirWatcher
+20CDirWatcherPS3Thread
+7CUtlMapI10CUtlStringxi8CDefLessE
+10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS3_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapI10CUtlStringxi8CDefLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiE10StringViewE6Node_tEE
+14CUtlLinkedListI10CUtlStringiE
+10CUtlMemoryIN14CUtlLinkedListI10CUtlStringiE10ListElem_tEE
 g_VecLoadedModules
-g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
+/data/src/tier1/interface.cpp
 CreateInterface
-ReadToken overflow
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/KeyValues.cpp
-filesystem
-You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
-"
-"
-{
-KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.
-}
-
-GetIntFromString() did not get correct peCS parameter
-GetUint64FromString() did not get correct peCS parameter
-can't convert uint64 to int32 (data loss)
-can't convert int64 to uint64 (negative number)
-%f
-%llu
-RGBA: %.2X %.2X %.2X %.2X
-$0
-$1
+g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
+%s/%s%s
+dlmopen %s failed: %s\n
+.cpl
+WORKAROUND_GdbSymbolLoadHook
+strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
+Failed to load optional module %s\n
+10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
+10CUtlMemoryI13ModuleCount_tE
 WINDOWS
 WIN32
 WIN64
 VISTA
 WIN7
-OSX
 OSX1010
 POSIX
 LINUX
@@ -1952,294 +1768,647 @@ ANDROID
 ANDROID32
 ANDROID64
 X360
-PS3
-buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
-#include
-#include is NULL
-KeyValues don't support #include anymore, file "%s"
-LoadFromBuffer: missing {   (current key: '%s')
-Error while parsing text KeyValues for resource %s
+m_errorIndex>=0
+/data/src/tier1/KeyValues.cpp
+"\t\t"
+%llu
+%lld
+%.18g
+KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
+can't convert uint64 to int32 (data loss)
+true
+can't convert int64 to uint64 (negative number)
+RGBA: %.2X %.2X %.2X %.2X
+KeyValues
+stackLevel >= 0 && stackLevel < m_errorIndex
+KeyValues Error: %s in file %s [offset: %d]\n
+*), 
+ ReadToken overflow
 pKeyValuesTextParser
 RecursiveLoadFromBuffer:  got EOF instead of keyname
 RecursiveLoadFromBuffer:  got empty keyname
 RecursiveLoadFromBuffer:  got NULL key
 RecursiveLoadFromBuffer:  got } in key
 RecursiveLoadFromBuffer:  got conditional between key and value
-KeyValues
-m_errorIndex>=0
-stackLevel >= 0 && stackLevel < m_errorIndex
-KeyValues Error: %s in file %s [offset: %d]
-,
-(*
-*),
-%.18g
-%u
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlbuffer.cpp
-info.m_pReplacementString == 0
-nSize != 0
-Expected %lld but got %lld!
-pConv && pConv->GetDelimiterLength() > 0
-nSize >= 0
+buf.GetFlags() & CUtlBuffer::TEXT_BUFFER
+KeyValues don't support #include anymore, file "%s"
+LoadFromBuffer: missing {   (current key: '%s')
+Error while parsing text KeyValues for resource %s
+#include
+#include is NULL 
+filesystem
+You should clear the KeyValues instance before calling this function or call MergeFromFile instead.
+%s/.steam/steam
+false 
+(%zu) Descend: %s, (%s), %s\n
+\t(%zu) comparing %s with %s\n
+(%zu) readdir failed to find '%s' in '%s'\n
+DBG_PATHMATCH
+Lowered '%s' -> '%s'\n
+Breaking '%s' in '%s'\n
+Matched '%s' -> '%s'\n
+Unmatched %s\n
 m_Put >= 0
+/data/src/tier1/utlbuffer.cpp
+info.m_pReplacementString == 0
+m_nAllocationCount >= 0
+nSize != 0
+nSize >= 0
 offset >= 0
 offset >= -m_Put && offset <= INT_MAX-m_Put
 offset != INT_MIN && offset <= m_nMaxPut && -offset <= INT_MAX-m_nMaxPut
-n
-t
-v
-b
-f
-a
-\
-?
-'
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlmemory.cpp
+nGrowSize >= 0
+Expected %lld but got %lld!
+pConv && pConv->GetDelimiterLength() > 0
+18CUtlCharConversion
+21CUtlCStringConversion
+19CUtlNoEscConversion
 nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
-CUtlString::SetValue
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlstring.cpp
-CUtlString::VFormat
+/data/src/tier1/utlmemory.cpp
 Assertion failed: length > k_cchMaxString
+/data/src/tier1/utlstring.cpp
+CUtlStringBuilder::Data::MoveToHeap
+CUtlString::SetValue
+CUtlString::VFormat
+Error State on string being set.
 CUtlStringBuilder::InternalPrepareBuffer
+nMinCapacity <= k_nMaxStringSize
 nMinCapacity > Capacity()
 nMinCapacity >= nChars
-nMinCapacity <= k_nMaxStringSize
-Error State on string being set.
-CUtlStringBuilder::Data::MoveToHeap
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/tier1/utlsymbol.cpp
 s_bAllowStaticSymbolTable
+/data/src/tier1/utlsymbol.cpp
 s_pSymbolTable
-%02d:%02d:%02d
-%02d/%02d/%02d
-00:00:00
-01/01/00
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/enum_names.cpp
-Missing String for %s (%d). If this comes from user data or could be valid, provide a default to avoid asserting.
-EUniverse
-Invalid
-Public
-Beta
-Internal
-Dev
+Bad expression token: %c %c\n
+Bad expression token: %c at %d in %s\n
+Potential overflow in png_zalloc()
+Too many bytes for PNG signature
+Application built with libpng-
+Unknown freer parameter in png_data_freer
+\nlibpng version 1.6.37\nCopyright (c) 2018-2019 Cosmin Truta\nCopyright (c) 1998-2002,2004,2006-2018 Glenn Randers-Pehrson\nCopyright (c) 1996-1997 Andreas Dilger\nCopyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.\n
+ libpng version 1.6.37 - April 14, 2019\n\n
+gamma value does not match sRGB
+gamma value does not match libpng estimate
+inconsistent rendering intents
+duplicate sRGB information ignored
+cHRM chunk does not match sRGB
+RGB color space not permitted on grayscale PNG
+Gray color space not permitted on RGB PNG
+invalid ICC profile color space
+invalid embedded Abstract ICC profile
+unexpected DeviceLink ICC profile class
+unexpected NamedColor ICC profile class
+unrecognized ICC profile class
+ICC profile tag outside profile
+ICC profile tag start not a multiple of 4
+out-of-date sRGB profile with no signature
+Not recognizing known sRGB profile that has been edited
+internal error handling cHRM coefficients
+internal error handling cHRM->XYZ
+Image width is too large for this architecture
+Image width exceeds user limit in IHDR
+Image height exceeds user limit in IHDR
+Invalid color type/bit depth combination in IHDR
+Unknown interlace method in IHDR
+Unknown compression method in IHDR
+MNG features are not allowed in a PNG datastream
+ASCII conversion buffer too small
+internal error checking chromaticities
+profile '
+inconsistent chromaticities
+ but running with 
+ +0000
+Ignoring invalid time value
+unexpected zlib return code
+unexpected end of LZ stream
+missing LZ dictionary
+zlib IO error
+bad parameters to zlib
+damaged LZ stream
+insufficient memory
+unsupported zlib version
+unexpected zlib return
+gamma value out of range
+duplicate
+invalid sRGB rendering intent
+sRGB
+exceeds application limits
+length does not match profile
+invalid length
+tag count too large
+invalid rendering intent
+intent outside defined range
+invalid signature
+PCS illuminant is not D50
+unexpected ICC PCS encoding
+known incorrect sRGB profile
+Image width is zero in IHDR
+Invalid image width in IHDR
+Image height is zero in IHDR
+Invalid image height in IHDR
+Invalid bit depth in IHDR
+Invalid color type in IHDR
+Unknown filter method in IHDR
+Invalid filter method in IHDR
+Invalid IHDR data
+fixed point overflow ignored
+invalid end points
+invalid chromaticities
+gamma table being rebuilt
+qdZRMHD@=;86421/.-+*)(''&%$$#""!!  
+\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+E=FZGrH
+QyReSOT5U
+YbZ6[
+]o^8_
+hxi(j
+vtw\nx
+\t \ny\n
+"p#*$
+%d&&'
+({)F*
+-a.:/
+4i5U6B738%9
+B#C0D?EQFeG|H
+N9OaP
+Y=[~\
+]\t_R`
+Bx\r9
+!W,m]
+k\fC0123456789ABCDEF
+libpng warning: %s
+undefined
+libpng error: %s
+bad longjmp: 
+0123456789ABCDEF
+0123456789ABCDEF
+Libpng jmp_buf still allocated
+Application jmp_buf size changed
+png_get_eXIf does not work; use png_get_eXIf_1
+\nF%u
+?Out of memory
+internal error: array alloc
+internal error: array realloc
+Out of Memory
+color-map index out of range
+bad encoding (internal error)
+read beyond end of data
+invalid memory read
+Missing IHDR before IDAT
+Missing PLTE before IDAT
+png_image_read: out of memory
+invalid PNG color type
+bad adaptive filter value
+sequential row overflow
+lost rgb to gray
+unexpected compose
+lost/gained channels
+unknown interlace type
+unexpected bit depth
+..Too many IDATs found
+unexpected encoding (internal error)
+background color must be supplied to remove alpha/transparency
+gray[8] color-map: too few entries
+gray[16] color-map: too few entries
+gray+alpha color-map: too few entries
+gray-alpha color-map: too few entries
+ga-alpha color-map: too few entries
+rgb[ga] color-map: too few entries
+rgb[gray] color-map: too few entries
+rgb+alpha color-map: too few entries
+rgb-alpha color-map: too few entries
+rgb color-map: too few entries
+palette color-map: too few entries
+bad data option (internal error)
+color map overflow (BAD internal error)
+bad background index (internal error)
+png_read_update_info/png_start_read_image: duplicate call
+png_start_read_image/png_read_update_info: duplicate call
+Invalid attempt to read row data
+internal sequential row size calculation error
+png_read_image: unsupported transformation
+png_image_read: alpha channel lost
+unexpected alpha swap transformation
+png_read_image: invalid transformations
+unexpected 8-bit transformation
+bad color-map processing (internal error)
+Interlace handling should be turned on when using png_read_image
+Read palette index exceeding num_palette
+Image is too high to process with png_read_png()
+png_image_read: opaque pointer not NULL
+png_image_begin_read_from_stdio: invalid argument
+png_image_begin_read_from_stdio: incorrect PNG_IMAGE_VERSION
+png_image_begin_read_from_file: invalid argument
+png_image_begin_read_from_file: incorrect PNG_IMAGE_VERSION
+png_image_begin_read_from_memory: invalid argument
+png_image_begin_read_from_memory: incorrect PNG_IMAGE_VERSION
+png_image_finish_read[color-map]: no color-map
+png_image_finish_read: image too large
+png_image_finish_read: invalid argument
+png_image_finish_read: row_stride too large
+png_image_finish_read: damaged PNG_IMAGE_VERSION
+bKGD
+cHRM
+gAMA
+iCCP
+sBIT
+sRGB
+Read Error
+Call to NULL read function
+Can't set both read_data_fn and write_data_fn in the same structure
+Can't discard critical data on CRC error
+invalid after png_start_read_image or png_read_update_info
+Application must supply a known background gamma
+output gamma out of expected range
+conflicting calls to set alpha mode and background
+invalid file gamma in png_set_gamma
+invalid screen gamma in png_set_gamma
+invalid before the PNG header has been read
+invalid error action to rgb_to_gray
+ignoring out of range rgb_to_gray coefficients
+libpng does not support gamma+background+rgb_to_gray
+Palette is NULL in indexed image
+png_do_rgb_to_gray found nongray pixel
+png_do_encode_alpha: unexpected call
+png_do_quantize returned rowbytes=0
+png_set_background
+invalid alpha mode
+gamma value
+rgb to gray green coefficient
+rgb to gray red coefficient
+invalid background gamma type
+NULL row buffer
+Uninitialized row
+ using zstream
+1.2.11
+invalid window size (libpng)
+zstream unclaimed
+extra compressed data
+Not a PNG file
+CRC error
+out of place
 invalid
-SaveBufferToFile: couldn't open file "%s" in path "%s".
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/filesystem_helpers.cpp
+missing IHDR
+ignored in grayscale PNG
+tRNS must be after
+hIST must be after
+bKGD must be after
+invalid values
+too many profiles
+bad compression method
+bad keyword
+malformed sPLT chunk
+sPLT chunk has bad length
+sPLT chunk too long
+invalid with alpha channel
+invalid index
+invalid gray level
+invalid color
+invalid parameter count
+unrecognized equation type
+invalid data
+invalid unit
+bad width format
+non-positive width
+bad height format
+non-positive height
+no space in chunk cache
+unknown compression type
+bad compression info
+error in user chunk
+Saving unknown chunk:
+unhandled critical chunk
+invalid chunk type
+chunk data is too large
+Not enough image data
+Extra compressed data
+Too much image data
+internal row logic error
+internal row width error
+PNG unsigned integer out of range
+PNG file corrupted by ASCII conversion
+unknown chunk exceeds memory limits
+No space in chunk cache for sPLT
+sPLT chunk requires too much memory
+incorrect byte-order specifier
+insufficient memory to read chunk
+Insufficient memory to process text chunk
+Read failure in png_handle_zTXt
+forcing save of an unhandled chunk; please call png_set_keep_unknown_chunks
+internal row size calculation error
+invalid user transform pixel depth
+Row has too many bytes to allocate in memory
+3333UUUU
+3333
+DDDDUUUU
+00003333
+""""
+UUUU
+\f\f\f\f
+3333
+Invalid sCAL width
+Invalid sCAL height
+cHRM Blue Y
+cHRM Blue X
+cHRM Green Y
+cHRM Green X
+cHRM Red Y
+cHRM Red X
+cHRM White Y
+cHRM White X
+cHRM Blue Z
+cHRM Green Z
+cHRM Red Z
+png_set_gAMA
+Invalid pCAL equation type
+Invalid pCAL parameter count
+Invalid sCAL unit
+Invalid sCAL width ignored
+Invalid sCAL height ignored
+Invalid palette length
+Invalid palette
+too many text chunks
+text chunk: out of memory
+too many sPLT chunks
+png_set_sPLT: invalid sPLT
+sPLT out of memory
+too many unknown chunks
+unknown chunk: out of memory
+keyword truncated
+Memory allocation failed while processing sCAL
+png_set_eXIf does not work; use png_set_eXIf_1
+Insufficient memory for eXIf chunk data
+Invalid palette size, hIST allocation skipped
+Insufficient memory for hIST chunk data
+Invalid format for pCAL parameter
+Insufficient memory for pCAL purpose
+Insufficient memory for pCAL units
+Insufficient memory for pCAL params
+Insufficient memory for pCAL parameter
+Invalid iCCP compression method
+Insufficient memory to process iCCP chunk
+Insufficient memory to process iCCP profile
+text compression mode is out of range
+Insufficient memory to store text
+tRNS chunk has out-of-range samples for bit_depth
+png_set_unknown_chunks now expects a valid location
+invalid location in png_set_unknown_chunks
+invalid unknown chunk location
+png_set_keep_unknown_chunks: invalid keep
+png_set_keep_unknown_chunks: no chunk list
+png_set_keep_unknown_chunks: too many chunks
+invalid compression buffer size
+Compression buffer size cannot be changed because it is in use
+Compression buffer size cannot be reduced below 6
+keyword "@1": bad character '0x@2'
+bKGD
+cHRM
+eXIf
+gAMA
+hIST
+iCCP
+iTXt
+oFFs
+pCAL
+pHYs
+sBIT
+sCAL
+sPLT
+sTER
+sRGB
+tEXt
+tIME
+zTXt
+png_set_filler is invalid for low bit depth gray output
+png_set_filler: inappropriate color type
+info change after png_start_read_image or png_read_update_info
+ 0@P`p
+!1AQaq
+"2BRbr
+#3CScs
+$4DTdt
+%5EUeu
+&6FVfv
+'7GWgw
+(8HXhx
+)9IYiy
+*:JZjz
++;K[k{
+,<L\l|
+-=M]m}
+.>N^n~
+/?O_o
+Write Error
+Call to NULL write function
+png_image_write_to_memory: PNG too big
+Writing zero-length unknown chunk
+png_image_write_: out of memory
+profile matches sRGB but writing iCCP instead
+Valid palette required for paletted images
+Wrote palette index exceeding num_palette
+png_write_info was never called before png_write_row
+internal write transform logic error
+png_write_image: internal call error
+no color-map for color-mapped image
+png_write_image: unsupported transformation
+Unknown row filter for method 0
+png_set_filter: UP/AVG/PAETH cannot be added after start
+Only compression windows <= 32k supported by PNG
+Only compression windows >= 256 supported by PNG
+Only compression method 8 is supported by PNG
+no rows for png_write_image to write
+PNG_TRANSFORM_STRIP_FILLER: BEFORE+AFTER not supported
+png_image_write_to_memory: invalid argument
+png_image_write_to_memory: incorrect PNG_IMAGE_VERSION
+png_image_write_to_stdio: invalid argument
+png_image_write_to_stdio: incorrect PNG_IMAGE_VERSION
+png_image_write_to_file: invalid argument
+png_image_write_to_file: incorrect PNG_IMAGE_VERSION
+No IDATs written into file
+memory image too large
+supplied row stride too small
+image row stride too large
+Unknown custom filter method
+in use by IDAT
+deflateEnd failed (ignored)
+compressed data too long
+length exceeds PNG maximum
+Invalid filter type specified
+No profile for iCCP chunk
+ICC profile too short
+iCCP: invalid keyword
+sPLT: invalid keyword
+Invalid sBIT depth specified
+tEXt: invalid keyword
+tEXt: text too long
+zTXt: invalid keyword
+iTXt: invalid keyword
+iTXt: invalid compression
+pCAL: invalid keyword
+Invalid bit depth for grayscale image
+Invalid bit depth for RGB image
+Invalid bit depth for paletted image
+Invalid bit depth for grayscale+alpha image
+Invalid bit depth for RGBA image
+Invalid image color type specified
+Invalid compression type specified
+Invalid interlace type specified
+Invalid number of colors in palette
+Ignoring request to write a PLTE chunk in grayscale PNG
+Z_OK on Z_FINISH with output space
+Invalid sRGB rendering intent specified
+ICC profile length invalid (not a multiple of 4)
+error writing ancillary chunked compressed data
+Invalid number of transparent colors specified
+Ignoring attempt to write tRNS chunk out-of-range for bit_depth
+Ignoring attempt to write 16-bit tRNS chunk when bit_depth is 8
+Can't write tRNS with an alpha channel
+Invalid background palette index
+Ignoring attempt to write 16-bit bKGD chunk when bit_depth is 8
+Ignoring attempt to write bKGD chunk out-of-range for bit_depth
+Invalid number of histogram entries specified
+zTXt: invalid compression type
+iTXt: uncompressed text too long
+Unrecognized unit type for oFFs chunk
+Unrecognized equation type for pCAL chunk
+Can't write sCAL (buffer too small)
+Unrecognized unit type for pHYs chunk
+Invalid time specified for tIME chunk
+ n;^
+Qkkbal
+3_L\n
+>jm\r
+Zjz\v
+i]Wb
+9a&g
+MGiI
+wn>Jj
+#.zf
++o*7
+Z* ,\t
+H$6t
+_~6\f
+52F*
+\t#jT$
+\n=G\\vp
+^6o}
+[-&LMb#{'
+)q\n>(
+w+OQvr
+\r}!b
+R1h58
+SKyu
+)\ZEo^m/
+ru&o
+i8P/\f_
+?(3w
+wXR\r
+H*0"ZOW
+{kHw
+)T`D
+!AxU
+l!;b\tF
+:1X:
+y9*O
+kM`~
+Vc0a
+dQy/
+lDa>
+7~8A
+C-Yn
+gqr<
+$/o|
+f-=v
+\rmj>zjZ
+l6qnk
+IiGM>nw
+1A26b
+i91k
+ewh/?y
+*5KS
+\f6~_'
+F*.f
+1wsHp
+-\n\v\G=
+M8MF
+Pe6^
+#bML"
+`F(>\nq-q
+vQO+t
+[h1R
+XsBI
+hPU3
+^oEZ_
+2%k_
+w3Xc
+[\n;g
+/P8i
+OZw3(?
+Z"0*
+fP~V
+D`T\f
+^GP~
+b;!l
+V_:X1:
+NJ2"v
+O*9y]
+fu`z
+/yQA
+&]|v
+incorrect header check
+unknown compression method
+invalid window size
+unknown header flags set
+header crc mismatch
+invalid block type
+invalid stored block lengths
+invalid code lengths set
+invalid bit length repeat
+invalid literal/lengths set
+invalid distances set
+invalid literal/length code
+invalid distance code
+invalid distance too far back
+incorrect data check
+incorrect length check
+too many length or distance symbols
+invalid code -- missing end-of-block
+ inflate 1.2.11 Copyright 1995-2017 Mark Adler 
+\t\t\n\n\v\v\f\f\f\f\r\r\r\r
+\t\t\t\t\t\t\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
+need dictionary
+stream end
+file error
+stream error
+data error
+buffer error
+incompatible version
+NV-CONTROL
+libaudio.so
+gameoverlayrenderer.so
+steamconsole.so
+clientui.so
+steamui.so
+libsteam.so
+steamclient.so
 LoadFileIntoBuffer: NULL parameters
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/language.cpp
-!"enum ELanguage order mismatched from Language_t s_LanguageNames, fix it!"
-zh_CN
-none
-English
-#SteamUI_Selection_English
-#Panorama_Selection_English
-#Panorama_Lang_English
-en
-German
-german
-#SteamUI_Selection_German
-#Panorama_Selection_German
-#Panorama_Lang_German
-de_DE
-de
-French
-french
-#SteamUI_Selection_French
-#Panorama_Selection_French
-#Panorama_Lang_French
-fr_FR
-fr
-Italian
-italian
-#SteamUI_Selection_Italian
-#Panorama_Selection_Italian
-#Panorama_Lang_Italian
-it_IT
-it
-Korean
-#SteamUI_Selection_Korean
-#Panorama_Selection_Korean
-#Panorama_Lang_Korean
-ko_KR
-ko
-Spanish
-spanish
-#SteamUI_Selection_Spanish
-#Panorama_Selection_Spanish
-#Panorama_Lang_Spanish
-es_ES
-es
-Simplified_Chinese
-#SteamUI_Selection_Simplified_Chinese
-#Panorama_Selection_Simplified_Chinese
-#Panorama_Lang_Simplified_Chinese
-zh-cn
-Traditional_Chinese
-#SteamUI_Selection_Traditional_Chinese
-#Panorama_Selection_Traditional_Chinese
-#Panorama_Lang_Traditional_Chinese
-zh_TW
-zh-tw
-Russian
-#SteamUI_Selection_Russian
-#Panorama_Selection_Russian
-#Panorama_Lang_Russian
-ru_RU
-ru
-Thai
-#SteamUI_Selection_Thai
-#Panorama_Selection_Thai
-#Panorama_Lang_Thai
-th_TH
-th
-Japanese
-#SteamUI_Selection_Japanese
-#Panorama_Selection_Japanese
-#Panorama_Lang_Japanese
-ja_JP
-ja
-Portuguese
-portuguese
-#SteamUI_Selection_Portuguese
-#Panorama_Selection_Portuguese
-#Panorama_Lang_Portuguese
-pt_PT
-pt
-Polish
-polish
-#SteamUI_Selection_Polish
-#Panorama_Selection_Polish
-#Panorama_Lang_Polish
-pl_PL
-pl
-Danish
-danish
-#SteamUI_Selection_Danish
-#Panorama_Selection_Danish
-#Panorama_Lang_Danish
-da_DK
-da
-Dutch
-dutch
-#SteamUI_Selection_Dutch
-#Panorama_Selection_Dutch
-#Panorama_Lang_Dutch
-nl_NL
-nl
-Finnish
-finnish
-#SteamUI_Selection_Finnish
-#Panorama_Selection_Finnish
-#Panorama_Lang_Finnish
-fi_FI
-fi
-Norwegian
-norwegian
-#SteamUI_Selection_Norwegian
-#Panorama_Selection_Norwegian
-#Panorama_Lang_Norwegian
-no_NO
-Swedish
-swedish
-#SteamUI_Selection_Swedish
-#Panorama_Selection_Swedish
-#Panorama_Lang_Swedish
-sv_SE
-sv
-Hungarian
-hungarian
-#SteamUI_Selection_Hungarian
-#Panorama_Selection_Hungarian
-#Panorama_Lang_Hungarian
-hu_HU
-hu
-Czech
-czech
-#SteamUI_Selection_Czech
-#Panorama_Selection_Czech
-#Panorama_Lang_Czech
-cs_CZ
-cs
-Romanian
-romanian
-#SteamUI_Selection_Romanian
-#Panorama_Selection_Romanian
-#Panorama_Lang_Romanian
-ro_RO
-ro
-Turkish
-turkish
-#SteamUI_Selection_Turkish
-#Panorama_Selection_Turkish
-#Panorama_Lang_Turkish
-tr_TR
-tr
-Brazilian
-brazilian
-#SteamUI_Selection_Brazilian
-#Panorama_Selection_Brazilian
-#Panorama_Lang_Brazilian
-pt_BR
-pt-br
-Bulgarian
-bulgarian
-#SteamUI_Selection_Bulgarian
-#Panorama_Selection_Bulgarian
-#Panorama_Lang_Bulgarian
-bg_BG
-bg
-Greek
-greek
-#SteamUI_Selection_Greek
-#Panorama_Selection_Greek
-#Panorama_Lang_Greek
-el_GR
-el
-Arabic
-arabic
-#SteamUI_Selection_Arabic
-#Panorama_Selection_Arabic
-#Panorama_Lang_Arabic
-ar_AE
-ar
-Ukrainian
-ukrainian
-#SteamUI_Selection_Ukrainian
-#Panorama_Selection_Ukrainian
-#Panorama_Lang_Ukrainian
-uk_UA
-uk
-Latam_Spanish
-latam
-#SteamUI_Selection_Latam_Spanish
-#Panorama_Selection_Latam_Spanish
-#Panorama_Lang_Latam_Spanish
-es_419
-es-419
-Vietnamese
-vietnamese
-#SteamUI_Selection_Vietnamese
-#Panorama_Selection_Vietnamese
-#Panorama_Lang_Vietnamese
-vi_VN
-vi
-SteamChina_SChinese
-Indonesian
-indonesian
-#SteamUI_Selection_Indonesian
-#Panorama_Selection_Indonesian
-#Panorama_Lang_Indonesian
-id_ID
+/data/src/common/filesystem_helpers.cpp
+SaveBufferToFile: couldn't open file "%s" in path "%s".\n
+12CIMENullImpl
+%s/Steam/registry.vdf
+%s.old
+!"Implement me"
+/data/src/common/registry.cpp
 /Steam3PosixRegistryManager
-SteamBootstrapper_GetEUniverse
-/registry.vdf
-Registry
 registry
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/registry.cpp
 Failed loading registry KV.
+Registry
 Could not read existing registry file.
-%s/%s/%s
-HKLM
+Overwriting on-disk registry with newly created registry.
+On-disk registry has changed and is marked dirty - we're about to lose data.
 HKCU
 HKCR
+HKLM
+%s/%s/%s
 Unhandled eRegKeyRoot passed into HKeyGet
 pchRegPath
 HKEY_LOCAL_MACHINE
@@ -2249,20 +2418,6 @@ HKEY_LOCAL_MACHINE_WOW64_32
 HKLM32
 HKEY_LOCAL_MACHINE_WOW64_64
 HKLM64
-Library/Application Support/Steam
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/clientdirectories.h
-Unable to get home directory
-SteamUniverse
-SteamRealm
-China
-/opt/buildbot/buildworker/steam_rel_client_osx/build/src/common/timeutils.cpp
-vars
-days
-hours
-minutes
-seconds
-YearOrMore
-Day
 Days
 Hour
 Hours
@@ -2270,85 +2425,1121 @@ Minute
 Minutes
 Second
 Seconds
+days
+hours
+minutes
+seconds
+YearOrMore
+/data/src/common/timeutils.cpp
 %sToday
 %sYesterday
 %sTomorrow
-)
-
-6
-%
-%
-2
-!
-
-
-@
-@
-@
-@
-Ic]
-0
-%
-
-A;E
-0
-@
-Ic]
-8
-`
-1
-0
-@
-`
-`
-!
-A
-`
-@
-@
-@
-@
-`
-`
-`
-`
-@
-`
-=
-@
-%
-=
-`
-@
-@
-@
-`
-=
-@
-`
-=
-@
-6
-`
-@
-|
-|
-@
-@
-
-=
-@
-&
-@
-@
-e
-N
-0
-@
-@
-@
-@
-@
-@
-0
-0
+%02d:%02d:%02d
+%02d/%02d/%02d
+00:00:00
+01/01/00
+none
+/data/src/common/language.cpp
+zh_CN
+zh-xc
+zh_XC
+Afrikaans
+afrikaans
+Albanian
+albanian
+Amharic
+amharic
+Armenian
+armenian
+Assamese
+assamese
+Azerbaijani
+azerbaijani
+Bangla
+bangla
+Basque
+basque
+Belarusian
+belarusian
+Bosnian
+bosnian
+Catalan
+catalan
+Cherokee
+cherokee
+Croatian
+croatian
+Dari
+dari
+Estonian
+estonian
+Filipino
+filipino
+Galician
+galician
+Georgian
+georgian
+Gujarati
+gujarati
+Punjabi (Gurmukhi)
+gurmukhi
+Hausa
+hausa
+Hebrew
+hebrew
+Hindi
+hindi
+Icelandic
+icelandic
+Igbo
+igbo
+indonesian
+Irish
+irish
+Kannada
+kannada
+Kazakh
+kazakh
+Khmer
+khmer
+K'iche'
+kiche
+Kinyarwanda
+kinyarwanda
+Konkani
+konkani
+Kyrgyz
+kyrgyz
+Latvian
+latvian
+Lithuanian
+lithuanian
+Luxembourgish
+luxembourgish
+Macedonian
+macedonian
+Malay
+malay
+Malayalam
+malayalam
+Maltese
+maltese
+Maori
+maori
+Marathi
+marathi
+Mongolian
+mongolian
+Nepali
+nepali
+Odia
+odia
+Persian
+persian
+Quechua
+quechua
+Scots
+scots
+Serbian
+serbian
+Punjabi (Shahmukhi)
+shahmukhi
+Sindhi
+sindhi
+Sinhala
+sinhala
+Slovak
+slovak
+Slovenian
+slovenian
+Sorani
+sorani
+Sotho
+sotho
+Swahili
+swahili
+Tajik
+tajik
+Tamil
+tamil
+Tatar
+tatar
+Telugu
+telugu
+Tigrinya
+tigrinya
+Tswana
+tswana
+Turkmen
+turkmen
+Urdu
+urdu
+Uyghur
+uyghur
+Uzbek
+uzbek
+Valencian
+valencian
+Welsh
+welsh
+Wolof
+wolof
+Xhosa
+xhosa
+Yoruba
+yoruba
+Zulu
+zulu
+#SteamUI_Selection_English
+#Panorama_Selection_English
+#Panorama_Lang_English
+en_US
+german
+#SteamUI_Selection_German
+#Panorama_Selection_German
+#Panorama_Lang_German
+de_DE
+french
+#SteamUI_Selection_French
+#Panorama_Selection_French
+#Panorama_Lang_French
+fr_FR
+italian
+#SteamUI_Selection_Italian
+#Panorama_Selection_Italian
+#Panorama_Lang_Italian
+it_IT
+#SteamUI_Selection_Korean
+#Panorama_Selection_Korean
+#Panorama_Lang_Korean
+ko_KR
+spanish
+#SteamUI_Selection_Spanish
+#Panorama_Selection_Spanish
+#Panorama_Lang_Spanish
+es_ES
+Simplified_Chinese
+zh-cn
+Traditional_Chinese
+zh_TW
+zh-tw
+#SteamUI_Selection_Russian
+#Panorama_Selection_Russian
+#Panorama_Lang_Russian
+ru_RU
+#SteamUI_Selection_Thai
+#Panorama_Selection_Thai
+#Panorama_Lang_Thai
+th_TH
+#SteamUI_Selection_Japanese
+#Panorama_Selection_Japanese
+#Panorama_Lang_Japanese
+ja_JP
+portuguese
+#SteamUI_Selection_Portuguese
+#Panorama_Lang_Portuguese
+pt_PT
+polish
+#SteamUI_Selection_Polish
+#Panorama_Selection_Polish
+#Panorama_Lang_Polish
+pl_PL
+danish
+#SteamUI_Selection_Danish
+#Panorama_Selection_Danish
+#Panorama_Lang_Danish
+da_DK
+dutch
+#SteamUI_Selection_Dutch
+#Panorama_Selection_Dutch
+#Panorama_Lang_Dutch
+nl_NL
+finnish
+#SteamUI_Selection_Finnish
+#Panorama_Selection_Finnish
+#Panorama_Lang_Finnish
+fi_FI
+norwegian
+#SteamUI_Selection_Norwegian
+#Panorama_Selection_Norwegian
+#Panorama_Lang_Norwegian
+no_NO
+swedish
+#SteamUI_Selection_Swedish
+#Panorama_Selection_Swedish
+#Panorama_Lang_Swedish
+sv_SE
+hungarian
+#SteamUI_Selection_Hungarian
+#Panorama_Selection_Hungarian
+#Panorama_Lang_Hungarian
+hu_HU
+czech
+#SteamUI_Selection_Czech
+#Panorama_Selection_Czech
+#Panorama_Lang_Czech
+cs_CZ
+romanian
+#SteamUI_Selection_Romanian
+#Panorama_Selection_Romanian
+#Panorama_Lang_Romanian
+ro_RO
+turkish
+#SteamUI_Selection_Turkish
+#Panorama_Selection_Turkish
+#Panorama_Lang_Turkish
+tr_TR
+brazilian
+#SteamUI_Selection_Brazilian
+#Panorama_Selection_Brazilian
+#Panorama_Lang_Brazilian
+pt_BR
+pt-br
+bulgarian
+#SteamUI_Selection_Bulgarian
+#Panorama_Selection_Bulgarian
+#Panorama_Lang_Bulgarian
+bg_BG
+greek
+#SteamUI_Selection_Greek
+#Panorama_Selection_Greek
+#Panorama_Lang_Greek
+el_GR
+arabic
+#SteamUI_Selection_Arabic
+#Panorama_Selection_Arabic
+#Panorama_Lang_Arabic
+ar_AE
+ukrainian
+#SteamUI_Selection_Ukrainian
+#Panorama_Selection_Ukrainian
+#Panorama_Lang_Ukrainian
+uk_UA
+latam
+#Panorama_Lang_Latam_Spanish
+es_419
+es-419
+vietnamese
+#SteamUI_Selection_Vietnamese
+#Panorama_Lang_Vietnamese
+vi_VN
+SteamChina_SChinese
+#SteamUI_Selection_Indonesian
+#Panorama_Lang_Indonesian
+id_ID
+#SteamUI_Selection_Simplified_Chinese
+#Panorama_Selection_Simplified_Chinese
+#Panorama_Lang_Simplified_Chinese
+#SteamUI_Selection_Traditional_Chinese
+#Panorama_Selection_Traditional_Chinese
+#Panorama_Lang_Traditional_Chinese
+#Panorama_Selection_Portuguese
+#SteamUI_Selection_Latam_Spanish
+#Panorama_Selection_Latam_Spanish
+#Panorama_Selection_Vietnamese
+#Panorama_Selection_Indonesian
+N9__gnu_cxx20recursive_init_errorE
+pure virtual method called\n
+terminate called recursively\n
+  what():  
+terminate called after throwing an instance of '
+terminate called without an active exception\n
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+NSt6locale5facetE
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
+UTF-8
+ASCII//TRANSLIT
+ASCII
+St12codecvt_base
+St23__codecvt_abstract_baseIDsc11__mbstate_tE
+St7codecvtIDsc11__mbstate_tE
+St23__codecvt_abstract_baseIDic11__mbstate_tE
+St7codecvtIDic11__mbstate_tE
+St23__codecvt_abstract_baseIDsDu11__mbstate_tE
+St7codecvtIDsDu11__mbstate_tE
+St23__codecvt_abstract_baseIDiDu11__mbstate_tE
+St7codecvtIDiDu11__mbstate_tE
+St10ctype_base
+St5ctypeIcE
+St5ctypeIwE
+space
+print
+cntrl
+upper
+lower
+punct
+xdigit
+alnum
+graph
+blank
+N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
+N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
+basic_ios::clear
+St9basic_iosIcSt11char_traitsIcEE
+St9basic_iosIwSt11char_traitsIwEE
+St8ios_base
+St13basic_istreamIwSt11char_traitsIwEE
+basic_string::erase
+%s: __pos (which is %zu) > this->size() (which is %zu)
+%.*Lf
+%m/%d/%y
+%H:%M
+%H:%M:%S
+St9time_base
+St10money_base
+St13messages_base
+St7collateIcE
+St8numpunctIcE
+St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St17__timepunct_cacheIcE
+St11__timepunctIcE
+St10moneypunctIcLb1EE
+St10moneypunctIcLb0EE
+St8messagesIcE
+St23__codecvt_abstract_baseIcc11__mbstate_tE
+St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St18__moneypunct_cacheIcLb0EE
+St18__moneypunct_cacheIcLb1EE
+St16__numpunct_cacheIcE
+St13basic_ostreamIwSt11char_traitsIwEE
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
+St15basic_streambufIcSt11char_traitsIcEE
+St15basic_streambufIwSt11char_traitsIwEE
+basic_string::copy
+basic_string::_S_create
+basic_string::_M_replace_aux
+basic_string::assign
+basic_string::append
+basic_string::resize
+basic_string::_S_construct null not valid
+St7collateIwE
+St21__ctype_abstract_baseIwE
+St8numpunctIwE
+St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St17__timepunct_cacheIwE
+St11__timepunctIwE
+St10moneypunctIwLb1EE
+St10moneypunctIwLb0EE
+St8messagesIwE
+St23__codecvt_abstract_baseIwc11__mbstate_tE
+St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St18__moneypunct_cacheIwLb0EE
+St18__moneypunct_cacheIwLb1EE
+St16__numpunct_cacheIwE
+std::bad_alloc
+St9bad_alloc
+std::bad_array_new_length
+St20bad_array_new_length
+std::bad_cast
+St8bad_cast
+_GLOBAL_
+(anonymous namespace)
+string literal
+auto
+decltype(auto)
+[abi:
+{default arg#
+JArray
+auto:
+VTT for 
+construction vtable for 
+-in-
+typeinfo for 
+typeinfo name for 
+typeinfo fn for 
+non-virtual thunk to 
+covariant return thunk to 
+java Class for 
+guard variable for 
+TLS init function for 
+TLS wrapper function for 
+reference temporary #
+hidden alias for 
+non-transaction clone for 
+_Sat 
+_Fract
+_Accum
+operator
+operator 
+new 
+java resource 
+decltype (
+{parm#
+this
+global constructors keyed to 
+global destructors keyed to 
+{lambda(
+{unnamed type#
+ [clone 
+ restrict
+ volatile
+ const
+ transaction_safe
+ noexcept
+ throw
+complex 
+imaginary 
+ __vector(
+(...
+...)
+std::allocator
+std::basic_string
+std::string
+std::istream
+basic_istream
+std::ostream
+basic_ostream
+std::iostream
+basic_iostream
+alignof 
+const_cast
+delete[] 
+dynamic_cast
+delete 
+operator"" 
+new[]
+reinterpret_cast
+sizeof...
+static_cast
+sizeof 
+throw 
+bool
+boolean
+byte
+long double
+float
+__float128
+unsigned char
+unsigned int
+unsigned
+unsigned long
+unsigned __int128
+unsigned short
+void
+wchar_t
+unsigned long long
+decimal32
+decimal64
+decimal128
+half
+char8_t
+char16_t
+char32_t
+decltype(nullptr)
+template parameter object for 
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_iostream<char, std::char_traits<char> >
+std::exception
+std::bad_exception
+St9exception
+St13bad_exception
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv119__foreign_exceptionE
+locale::facet::_S_create_c_locale name not valid
+vector::_M_realloc_insert
+St7codecvtIcc11__mbstate_tE
+St7codecvtIwc11__mbstate_tE
+NSt8ios_base7failureE
+-+xX0123456789abcdef0123456789ABCDEF
+-+xX0123456789abcdefABCDEF
+-0123456789
+AKST
+St11logic_error
+St12length_error
+St12out_of_range
+St13runtime_error
+Sunday
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+January
+February
+March
+April
+June
+July
+August
+September
+October
+November
+December
+english
+__wrap_statvfs64
+pclose@GLIBC_2.1
+__swprintf_chk@GLIBC_2.4
+FT_New_Memory_Face
+strtold_l@GLIBC_2.3
+XReparentWindow
+V_GetFileExtension
+chmod@GLIBC_2.0
+XConvertSelection
+fnmatch@GLIBC_2.2.3
+FcFontSetDestroy
+XNVCTRLSetTargetAttribute
+__cxa_finalize@GLIBC_2.1.3
+fread@GLIBC_2.0
+_ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+__wcsftime_l@GLIBC_2.3
+XextCreateExtension
+__wrap_dlopen
+alphasort64@GLIBC_2.2
+FT_Set_Pixel_Sizes
+XNVCTRLQueryBinaryDataAttributePermissions
+V_atof
+__duplocale@GLIBC_2.1
+_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+__wrap_mkfifo
+fork@GLIBC_2.0
+ThreadImplOneTimeInit
+ungetc@GLIBC_2.0
+__wrap_utimes
+socket@GLIBC_2.0
+__wrap_statvfs
+sscanf@GLIBC_2.0
+Plat_MSTime
+__longjmp_chk@GLIBC_2.11
+glRenderMode
+dlopen@GLIBC_2.1
+XRRGetOutputInfo
+access@GLIBC_2.0
+XAllocSizeHints
+XNVCTRLQueryGvoColorConversion
+mbsnrtowcs@GLIBC_2.0
+open64@GLIBC_2.2
+V_binarytohex
+_ZTIN9__gnu_cxx24__concurrence_lock_errorE
+__wrap_mount
+XMissingExtension
+Plat_CommandLineParamExists
+XFreeColormap
+__wrap_stat
+_ITM_memcpyRtWn
+_Z30V_EscapeShellArgumentAndAppendP17CUtlStringBuilderPKcb
+XRestackWindows
+btowc@GLIBC_2.0
+V_vsnprintfRet
+statvfs@GLIBC_2.1
+sqrtf@GLIBC_2.0
+glBegin
+mkdir@GLIBC_2.0
+FcCharSetDestroy
+_edata
+XDisplayHeight
+glClear
+FcPatternGetCharSet
+glDisable
+XRRQueryVersion
+glViewport
+XSendEvent
+strstr@GLIBC_2.0
+_Z26_txnal_logic_error_get_msgPv
+scandir@GLIBC_2.0
+_XSend
+XGetWindowProperty
+XNVCTRLQueryTargetStringAttribute
+__wrap_symlink
+__wrap_lchown
+XSetErrorHandler
+GetOSType
+V_stricmp_filename
+__freelocale@GLIBC_2.1
+FT_Load_Glyph
+strdup@GLIBC_2.0
+realpath@GLIBC_2.3
+V_MakeAbsolutePath
+strncasecmp@GLIBC_2.0
+XNVCTRLQueryAttributePermissions
+__wrap_rmdir
+__wcsxfrm_l@GLIBC_2.1
+XGrabPointer
+wmemset@GLIBC_2.0
+symlink@GLIBC_2.0
+FcDefaultSubstitute
+_ZN16SteamThreadTools12CThreadMutexC1Ev
+glTexImage2D
+SmcGetIceConnection
+XRRFreeScreenResources
+XQueryTree
+FT_Get_Kerning
+ungetwc@GLIBC_2.2
+_ITM_RU1
+XPeekEvent
+glColor4fv
+FcCharSetNextPage
+modf@GLIBC_2.0
+XSetWMHints
+fdatasync@GLIBC_2.0
+FcCharSetHasChar
+V_tolower
+__wrap_lstat
+_ZN16SteamThreadTools7CThread4InitEv
+_ZN16SteamThreadTools7CThread7SetNameEPKc
+VProfInternalEnterScopeCurrentThread
+getuid@GLIBC_2.0
+XSetWMNormalHints
+ferror@GLIBC_2.0
+__strxfrm_l@GLIBC_2.1
+__wrap_rename
+_ZN10CValidator16ClaimArrayMemoryEPKv
+_ZTVN9__gnu_cxx24__concurrence_lock_errorE
+isspace@GLIBC_2.0
+fputc@GLIBC_2.0
+_ZTIN16SteamThreadTools7CThreadE
+fgets@GLIBC_2.0
+longjmp@GLIBC_2.0
+_ZN16SteamThreadTools7CThreadC2Ev
+glPixelStorei
+FT_Load_Char
+glTexCoord2f
+fwrite@GLIBC_2.0
+XFilterEvent
+XIconifyWindow
+strcasestr@GLIBC_2.1
+dl_iterate_phdr@GLIBC_2.2.4
+_ZN16SteamThreadTools7CThread6OnExitEv
+__wrap_open64
+XRRGetOutputPrimary
+Plat_CommandLineParamValue
+_Z20_txnal_cow_string_D1Pv
+malloc@GLIBC_2.0
+__uselocale@GLIBC_2.3
+frexp@GLIBC_2.0
+gtk_disable_setlocale
+XSetWMProtocols
+XNVCTRLSetAttribute
+XCreateFontCursor
+strlen@GLIBC_2.0
+fopen64@GLIBC_2.1
+__wrap_access
+statfs64@GLIBC_2.1
+_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
+usleep@GLIBC_2.0
+_ZTVN10__cxxabiv119__foreign_exceptionE
+fprintf@GLIBC_2.0
+accept@GLIBC_2.0
+XSetClassHint
+getcwd@GLIBC_2.0
+__sprintf_chk@GLIBC_2.3.4
+__wrap_mknod
+XDefaultScreen
+glDisableClientState
+glTexParameterf
+V_strnicmp
+__snprintf_chk@GLIBC_2.3.4
+XineramaQueryScreens
+__wrap_chdir
+_Z23_txnal_cow_string_c_strPKv
+__wrap_dlmopen
+FcCharSetUnion
+IceProcessMessages
+glGetString
+XSelectInput
+V_atoui64
+Plat_RelativeTicks
+mount@GLIBC_2.0
+XCreateColormap
+__iswctype_l@GLIBC_2.1
+FcPatternGetString
+glXDestroyContext
+_ZTVN9__gnu_cxx20recursive_init_errorE
+stdout@GLIBC_2.0
+V_UTF16ToUTF8
+XNVCTRLQueryVersion
+__xstat@GLIBC_2.0
+wctob@GLIBC_2.0
+XwcTextListToTextProperty
+_exit@GLIBC_2.0
+__lxstat@GLIBC_2.0
+V_strlower_fast
+__cxa_atexit@GLIBC_2.1.3
+dlsym@GLIBC_2.0
+FcFontSort
+__ctype_get_mb_cur_max@GLIBC_2.0
+SmcCloseConnection
+FcPatternCreate
+FT_Init_FreeType
+V_snprintf
+__wrap_utime
+_ZN16SteamThreadTools7CThread4JoinEj
+XCreatePixmapCursor
+_fini
+_ZN11SteamStdLib17CCommandLineParamC1EPKcS2_
+strcmp@GLIBC_2.0
+utimes@GLIBC_2.0
+XInternAtom
+_ZN11SteamStdLib17CCommandLineParamD1Ev
+_ZTSN9__gnu_cxx20recursive_init_errorE
+toupper@GLIBC_2.0
+_ITM_addUserCommitAction
+__strftime_l@GLIBC_2.3
+Error
+__wrap_open
+V_strnchr
+XSetInputFocus
+wmemmove@GLIBC_2.0
+_ZNK10CValidator9IsClaimedEPKv
+tolower@GLIBC_2.0
+XRRQueryExtension
+glBlendFunc
+XAllocWMHints
+FT_Get_Char_Index
+__errno_location@GLIBC_2.0
+wcsnrtombs@GLIBC_2.0
+strncpy@GLIBC_2.0
+fflush@GLIBC_2.0
+_ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
+__wrap_mkdir
+bind_textdomain_codeset@GLIBC_2.2
+glXMakeCurrent
+XNVCTRLQueryValidTargetStringAttributeValues
+memcmp@GLIBC_2.0
+XWithdrawWindow
+_setjmp@GLIBC_2.0
+chown@GLIBC_2.1
+V_FixSlashes
+XInitThreads
+V_strncat_length
+V_wcstoui64
+glIsTexture
+wcscpy@GLIBC_2.0
+XChangeProperty
+__strcpy_chk@GLIBC_2.3.4
+strrchr@GLIBC_2.0
+__wrap___lxstat64
+XMoveResizeWindow
+V_towupper32
+FcConfigAppFontAddFile
+XPending
+XineramaIsActive
+XCreateIC
+dgettext@GLIBC_2.0
+getenv@GLIBC_2.0
+_ZN16SteamThreadTools7CThread13GetThreadProcEv
+OSIsCompatible
+fputs@GLIBC_2.0
+V_towlower32
+XineramaQueryExtension
+Warning
+__wrap_stat64
+iconv_open@GLIBC_2.1
+__wrap___xstat64
+_XRead
+KeyValuesSystemSteam
+isalnum@GLIBC_2.0
+glEnable
+strchr@GLIBC_2.0
+XUngrabPointer
+_Z21V_SplitStringInternalPKcPKS0_PS0_iR10CUtlVectorI10CUtlString10CUtlMemoryIS5_EEb
+rename@GLIBC_2.0
+XNVCTRLQueryBinaryData
+V_strncat
+glGetIntegerv
+XPeekIfEvent
+mbsrtowcs@GLIBC_2.0
+chdir@GLIBC_2.0
+pthread_mutex_unlock@GLIBC_2.0
+g_main_context_iteration
+SteamRealPath
+glXGetCurrentDrawable
+wcrtomb@GLIBC_2.0
+iconv@GLIBC_2.1
+iswcntrl@GLIBC_2.0
+XRRGetScreenResources
+vsnprintf@GLIBC_2.0
+wcslen@GLIBC_2.0
+floor@GLIBC_2.0
+_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
+_ZN10CValidator3PopEv
+_ZTSN10__cxxabiv119__foreign_exceptionE
+stdin@GLIBC_2.0
+XCloseIM
+posix_fadvise@GLIBC_2.2
+XPutBackEvent
+FcConfigSubstitute
+XFreeCursor
+putwc@GLIBC_2.2
+XSetSelectionOwner
+XNVCTRLSetGvoColorConversion
+ftello64@GLIBC_2.1
+__ctype_b_loc@GLIBC_2.3
+_XEatData
+iswspace@GLIBC_2.0
+_ZTIN10__cxxabiv119__foreign_exceptionE
+FcCharSetFirstPage
+XEventsQueued
+__stack_chk_fail@GLIBC_2.4
+XMapWindow
+g_pMemAllocSteam
+lseek64@GLIBC_2.2
+XNVCTRLSetTargetStringAttribute
+XQueryPointer
+XRaiseWindow
+sqrt@GLIBC_2.0
+_ZN10CValidator4PushEPKcPvS1_
+readdir64@GLIBC_2.2
+mbrtowc@GLIBC_2.0
+__wrap_opendir
+dlerror@GLIBC_2.0
+_ZTIN10__cxxabiv115__forced_unwindE
+pthread_mutex_lock@GLIBC_2.0
+XCreateBitmapFromData
+_ZN16SteamThreadTools7CThreadD2Ev
+strtol@GLIBC_2.0
+V_strncmp
+sendmsg@GLIBC_2.0
+WeakRandomUint32
+__fxstat64@GLIBC_2.2
+XextAddDisplay
+__wrap_chmod
+_ZTVN10__cxxabiv117__class_type_infoE
+glVertex2f
+utime@GLIBC_2.0
+__strcoll_l@GLIBC_2.1
+_XReply
+glXCreateContext
+XSetWMName
+eventfd@GLIBC_2.7
+glBindTexture
+free@GLIBC_2.0
+FcPatternAdd
+XAllocNamedColor
+V_UTF8ToUTF16
+_ZN16SteamThreadTools16CThreadFullMutex7ReleaseEv
+glXIsDirect
+XFree
+g_VProfProfilesRunningCount
+XRRGetCrtcInfo
+__lxstat64@GLIBC_2.2
+CreateInterface
+___tls_get_addr@GLIBC_2.3
+glLoadIdentity
+statfs@GLIBC_2.0
+V_UTF16ToUTF32
+glEnd
+strncmp@GLIBC_2.0
+XLookupKeysym
+V_strtoui64
+qsort@GLIBC_2.0
+XineramaQueryVersion
+XSetIOErrorHandler
+glDeleteTextures
+FcPatternDestroy
+V_wcsncpy
+XCheckMaskEvent
+XNVCTRLQueryAttribute
+V_atoi
+_Z20V_UnicodeCaseConvertR10CUtlVectorIw10CUtlMemoryIwEEi25EStringConvertErrorPolicy
+_ZN16SteamThreadTools12CThreadMutexD1Ev
+__newlocale@GLIBC_2.1
+strcasecmp@GLIBC_2.0
+glTexEnvf
+glMatrixMode
+_ZNK16SteamThreadTools7CThread15IsThreadRunningEv
+popen@GLIBC_2.1
+__wrap_link
+XOpenDisplay
+_ZGTtnaj
+_ZTVN10__cxxabiv120__si_class_type_infoE
+glGenTextures
+_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
+_end
+__strtod_l@GLIBC_2.1
+_Z27_txnal_cow_string_D1_commitPv
+__wctype_l@GLIBC_2.1
+V_UTF8ToUTF32
+opendir@GLIBC_2.0
+XNVCTRLSetAttributeAndGetStatus
+V_strcat
+__strtof_l@GLIBC_2.1
+XextRemoveDisplay
+g_ClockSpeed
+__wrap_scandir
+closedir@GLIBC_2.0
+XDisplayHeightMM
+XNextEvent
+__wrap_fopen
+FcInit
+XGetErrorText
+glXChooseVisual
+strerror@GLIBC_2.0
+XUnmapWindow
+__xmknod@GLIBC_2.0
+XAllocClassHint
+XNVCtrlSelectTargetNotify
+dlclose@GLIBC_2.0
+FcFontMatch
+XAutoRepeatOn
+__bss_start
+__towlower_l@GLIBC_2.1
+wcstol@GLIBC_2.0
+XNVCTRLQueryTargetAttribute
+_ZN16SteamThreadTools7CThread5StartEj
+glColor4ub
+_ZN11SteamStdLib11CommandLineEv
+XSetTransientForHint
+XFlush
+wmemcpy@GLIBC_2.0
+IceConnectionNumber
+glTranslatef
+XCreateWindow
+XNVCTRLQueryExtension
+flock@GLIBC_2.0
+execl@GLIBC_2.0
+lchown@GLIBC_2.0
+glXQueryExtension
+V_StripFilename
+_XGetRequest
+XDestroyWindow
+XLowerWindow
+XNVCTRLQueryTargetCount
+wcsncpy@GLIBC_2.0
+_ZN16SteamThreadTools17CThreadSyncObject4WaitEj
+_ITM_RU4
+XDisplayWidth
+Plat_IsSteamDeck
+XTranslateCoordinates
+faccessat@GLIBC_2.4
+__realpath_chk@GLIBC_2.4
+XNVCTRLQueryStringAttributePermissions
+XDeleteProperty
+XDisplayWidthMM
+__fprintf_chk@GLIBC_2.3.4
+syscall@GLIBC_2.0
+alcGetString
+CVProfile_ExitScope
+XNVCTRLStringOperation
+_ZTVN10__cxxabiv121__vmi_class_type_infoE
+__wcscoll_l@GLIBC_2.1
+glShadeModel
+glTexSubImage2D
+XNVCTRLQueryStringAttribute
+__towupper_l@GLIBC_2.1
+iconv_close@GLIBC_2.1
+XNVCTRLSetTargetAttributeAndGetStatus
+V_UTF32ToUTF8
+strftime@GLIBC_2.0
+remove@GLIBC_2.0
+__nl_langinfo_l@GLIBC_2.2
+XGetICValues
+__memcpy_chk@GLIBC_2.3.4
+fcntl@GLIBC_2.0
+XGetErrorDatabaseText
+wcschr@GLIBC_2.0
+V_vsnprintf
+gmtime@GLIBC_2.0
+listen@GLIBC_2.0
+glXGetCurrentDisplay
+ThreadSleep
+gtk_init
+XOpenIM
+__wrap_freopen
+Plat_FloatTime
+_XSetLastRequestRead
+XGetInputFocus
+__wrap___xstat
+XDefineCursor
+XextFindDisplay
+_ZN16SteamThreadTools16CThreadFullMutexC1EbPKcbb
+_ZTIN9__gnu_cxx20recursive_init_errorE
+FcCharSetCopy
+__wrap_statfs64
+abort@GLIBC_2.0
+V_UnqualifiedFileName
+_ITM_deregisterTMCloneTable
+strpbrk@GLIBC_2.0
+XNVCTRLQueryValidAttributeValues
+FT_New_Face
+__xstat64@GLIBC_2.2
+SmcOpenConnection
+XGetWindowAttributes
+XNVCTRLIsNvScreen
+XFreePixmap
+pthread_once@GLIBC_2.0
+dlmopen@GLIBC_2.3.4
+poll@GLIBC_2.0
+__wrap_chown
+recvmsg@GLIBC_2.0
+pow@GLIBC_2.0
+XwcLookupString
+_ZTVN10__cxxabiv115__forced_unwindE
+wmemchr@GLIBC_2.0
+_Z9V_stristrPKcS0_
+fclose@GLIBC_2.1
+glLineWidth
+V_StripExtension
+freopen@GLIBC_2.0
+XNVCTRLQueryStringOperationAttributePermissions
+glXSwapBuffers
+XNVCTRLQueryTargetAttribute64
+Plat_IsGamescope
+__vasprintf_chk@GLIBC_2.8
+mkfifo@GLIBC_2.0
+rmdir@GLIBC_2.0
+__wrap_unlink
+SmcSaveYourselfDone
+V_UTF32ToUTF16
+_ZTSN10__cxxabiv115__forced_unwindE
+statvfs64@GLIBC_2.1
+unlink@GLIBC_2.0
+ioctl@GLIBC_2.0
+__wrap_statfs
+FT_Done_Face
+Plat_localtime
+_ZN16SteamThreadTools17CThreadSyncObjectD2Ev
+__wrap___lxstat
+XNVCTRLQueryValidTargetAttributeValues
+glOrtho
+XNVCTRLSetStringAttribute
+__wrap_scandir64
+stderr@GLIBC_2.0
+__wrap_fopen64
+system@GLIBC_2.0
+V_IsAbsolutePath
+__gmon_start__
+Plat_IsChromeOS
+glXGetCurrentContext
+fseeko64@GLIBC_2.1
+XGetSelectionOwner
+_ZTSN9__gnu_cxx24__concurrence_lock_errorE
+XCloseDisplay
+XSync
+localtime@GLIBC_2.0
+_ITM_registerTMCloneTable
+XMapRaised
+_ZN10CValidator11ClaimMemoryEPKv
+wcscmp@GLIBC_2.0
+XNVCTRLQueryTargetBinaryData
+_Z28_txnal_runtime_error_get_msgPv
+scandir64@GLIBC_2.2
+__wrap_lstat64
+V_RemoveDotSlashes
+strtod@GLIBC_2.0
+FcCharSetSubtract
+V_FixDoubleSlashes
+XCheckIfEvent
+V_CopyAndFixSlashes
+XNVCtrlSelectNotify
+realloc@GLIBC_2.0
+fopen@GLIBC_2.1
+V_strncpy
+bind@GLIBC_2.0
+__pthread_key_create@GLIBC_2.0
+GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
+GCC: (crosstool-NG 1.17.0) 4.6.3
+GCC: (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
