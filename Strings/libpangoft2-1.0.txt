@@ -4706,67 +4706,67 @@ __FRAME_END__
 __JCR_END__
 __do_global_ctors_aux
 hb-font.cc
-_ZL26hb_font_get_glyph_name_nilP9hb_font_tPvjPcjS1_
-_ZL31hb_font_get_glyph_h_kerning_nilP9hb_font_tPvjjS1_
-_ZL31hb_font_get_glyph_v_kerning_nilP9hb_font_tPvjjS1_
-_ZL21hb_font_get_glyph_nilP9hb_font_tPvjjPjS1_
-_ZL31hb_font_get_glyph_h_advance_nilP9hb_font_tPvjS1_
-_ZL31hb_font_get_glyph_v_advance_nilP9hb_font_tPvjS1_
-_ZL30hb_font_get_glyph_v_origin_nilP9hb_font_tPvjPiS2_S1_
-_ZL31hb_font_get_glyph_from_name_nilP9hb_font_tPvPKciPjS1_
-_ZN9hb_font_t30get_glyph_origin_for_directionEj14hb_direction_tPiS1_.part.15
-_ZL29hb_font_get_glyph_extents_nilP9hb_font_tPvjP18hb_glyph_extents_tS1_
-_ZL35hb_font_get_glyph_contour_point_nilP9hb_font_tPvjjPiS2_S1_
-_ZL30hb_font_get_glyph_h_origin_nilP9hb_font_tPvjPiS2_S1_
-_ZL18_hb_font_funcs_nil
-_ZZ17hb_font_get_emptyE12_hb_font_nil
+hb_font_get_glyph_name_nil(hb_font_t*, void*, unsigned int, char*, unsigned int, void*)
+hb_font_get_glyph_h_kerning_nil(hb_font_t*, void*, unsigned int, unsigned int, void*)
+hb_font_get_glyph_v_kerning_nil(hb_font_t*, void*, unsigned int, unsigned int, void*)
+hb_font_get_glyph_nil(hb_font_t*, void*, unsigned int, unsigned int, unsigned int*, void*)
+hb_font_get_glyph_h_advance_nil(hb_font_t*, void*, unsigned int, void*)
+hb_font_get_glyph_v_advance_nil(hb_font_t*, void*, unsigned int, void*)
+hb_font_get_glyph_v_origin_nil(hb_font_t*, void*, unsigned int, int*, int*, void*)
+hb_font_get_glyph_from_name_nil(hb_font_t*, void*, char const*, int, unsigned int*, void*)
+hb_font_t::get_glyph_origin_for_direction(unsigned int, hb_direction_t, int*, int*) (.part.15)
+hb_font_get_glyph_extents_nil(hb_font_t*, void*, unsigned int, hb_glyph_extents_t*, void*)
+hb_font_get_glyph_contour_point_nil(hb_font_t*, void*, unsigned int, unsigned int, int*, int*, void*)
+hb_font_get_glyph_h_origin_nil(hb_font_t*, void*, unsigned int, int*, int*, void*)
+_hb_font_funcs_nil
+hb_font_get_empty::_hb_font_nil
 hb-ot-shape.cc
-_ZN9hb_font_t30get_glyph_origin_for_directionEj14hb_direction_tPiS1_.part.13
-_ZL15common_features
-_ZL19horizontal_features
+hb_font_t::get_glyph_origin_for_direction(unsigned int, hb_direction_t, int*, int*) (.part.13)
+common_features
+horizontal_features
 hb-ot-shape-complex-arabic.cc
-_ZL12nuke_joinersPK18hb_ot_shape_plan_tP9hb_font_tP11hb_buffer_t
-_ZL28arabic_fallback_plan_destroyP22arabic_fallback_plan_t
-_ZL24arabic_fallback_plan_nil
-_ZL19data_destroy_arabicPv
-_ZL16get_joining_typej29hb_unicode_general_category_t
-_ZL13joining_table
-_ZL18setup_masks_arabicPK18hb_ot_shape_plan_tP11hb_buffer_tP9hb_font_t
-_ZL18arabic_state_table
-_ZL23collect_features_arabicP21hb_ot_shape_planner_t
-_ZL15arabic_features
-_ZL21arabic_fallback_shapePK18hb_ot_shape_plan_tP9hb_font_tP11hb_buffer_t
-_ZL18data_create_arabicPK18hb_ot_shape_plan_t
-_ZZN2OT22hb_serialize_context_t10extend_minINS_7ArrayOfINS_6OffsetINS_7IntTypeItLj2EEEEES5_EEEEPT_RS8_E19__PRETTY_FUNCTION__
-_ZZN2OT22hb_serialize_context_t6extendINS_7ArrayOfINS_6OffsetINS_7IntTypeItLj2EEEEES5_EEEEPT_RS8_E19__PRETTY_FUNCTION__
-_ZZN2OT22hb_serialize_context_t10extend_minINS_6LookupEEEPT_RS3_E19__PRETTY_FUNCTION__
-_ZZN2OT22hb_serialize_context_t10extend_minINS_8CoverageEEEPT_RS3_E19__PRETTY_FUNCTION__
-_ZZN2OT22hb_serialize_context_t10extend_minINS_7IntTypeItLj2EEEEEPT_RS4_E19__PRETTY_FUNCTION__
-_ZZN2OT22hb_serialize_context_t10extend_minINS_18SingleSubstFormat2EEEPT_RS3_E19__PRETTY_FUNCTION__
-_ZZN2OT22hb_serialize_context_t10extend_minINS_18SingleSubstFormat1EEEPT_RS3_E19__PRETTY_FUNCTION__
-_ZZN2OT22hb_serialize_context_t6extendINS_7ArrayOfINS_7IntTypeItLj2EEES4_EEEEPT_RS6_E19__PRETTY_FUNCTION__
-_ZZN2OT22hb_serialize_context_t10extend_minINS_7ArrayOfINS_7IntTypeItLj2EEES4_EEEEPT_RS6_E19__PRETTY_FUNCTION__
-_ZZN2OT22hb_serialize_context_t6extendINS_13SortedArrayOfINS_7IntTypeItLj2EEES4_EEEEPT_RS6_E19__PRETTY_FUNCTION__
-_ZZN2OT22hb_serialize_context_t10extend_minINS_15CoverageFormat2EEEPT_RS3_E19__PRETTY_FUNCTION__
-_ZZN2OT22hb_serialize_context_t6extendINS_13SortedArrayOfINS_11RangeRecordENS_7IntTypeItLj2EEEEEEEPT_RS7_E19__PRETTY_FUNCTION__
-_ZZN2OT22hb_serialize_context_t10extend_minINS_15CoverageFormat1EEEPT_RS3_E19__PRETTY_FUNCTION__
-_ZZN2OT22hb_serialize_context_t10extend_minINS_20LigatureSubstFormat1EEEPT_RS3_E19__PRETTY_FUNCTION__
-_ZZN2OT22hb_serialize_context_t10extend_minINS_7ArrayOfINS_8OffsetToINS_11LigatureSetENS_7IntTypeItLj2EEEEES6_EEEEPT_RS9_E19__PRETTY_FUNCTION__
-_ZZN2OT22hb_serialize_context_t6extendINS_7ArrayOfINS_8OffsetToINS_11LigatureSetENS_7IntTypeItLj2EEEEES6_EEEEPT_RS9_E19__PRETTY_FUNCTION__
-_ZZN2OT22hb_serialize_context_t10extend_minINS_11LigatureSetEEEPT_RS3_E19__PRETTY_FUNCTION__
-_ZZN2OT22hb_serialize_context_t10extend_minINS_7ArrayOfINS_8OffsetToINS_8LigatureENS_7IntTypeItLj2EEEEES6_EEEEPT_RS9_E19__PRETTY_FUNCTION__
-_ZZN2OT22hb_serialize_context_t6extendINS_7ArrayOfINS_8OffsetToINS_8LigatureENS_7IntTypeItLj2EEEEES6_EEEEPT_RS9_E19__PRETTY_FUNCTION__
-_ZZN2OT22hb_serialize_context_t6extendINS_15HeadlessArrayOfINS_7IntTypeItLj2EEES4_EEEEPT_RS6_E19__PRETTY_FUNCTION__
-_ZZN2OT22hb_serialize_context_t10extend_minINS_15HeadlessArrayOfINS_7IntTypeItLj2EEES4_EEEEPT_RS6_E19__PRETTY_FUNCTION__
-_ZZN2OT22hb_serialize_context_t10extend_minINS_8LigatureEEEPT_RS3_E19__PRETTY_FUNCTION__
-_ZZN2OT22hb_serialize_context_t4copyINS_11SubstLookupEEEPT_vE19__PRETTY_FUNCTION__
-_ZL42arabic_fallback_synthesize_lookup_ligaturePK18hb_ot_shape_plan_tP9hb_font_t.isra.38
-_ZL14ligature_table
-_ZL40arabic_fallback_synthesize_lookup_singlePK18hb_ot_shape_plan_tP9hb_font_tj.isra.39
-_ZL13shaping_table
-_ZN2OTL9_NullPoolE
-_ZN2OTL16_NullRangeRecordE
-_ZL24arabic_fallback_features
+nuke_joiners(hb_ot_shape_plan_t const*, hb_font_t*, hb_buffer_t*)
+arabic_fallback_plan_destroy(arabic_fallback_plan_t*)
+arabic_fallback_plan_nil
+data_destroy_arabic(void*)
+get_joining_type(unsigned int, hb_unicode_general_category_t)
+joining_table
+setup_masks_arabic(hb_ot_shape_plan_t const*, hb_buffer_t*, hb_font_t*)
+arabic_state_table
+collect_features_arabic(hb_ot_shape_planner_t*)
+arabic_features
+arabic_fallback_shape(hb_ot_shape_plan_t const*, hb_font_t*, hb_buffer_t*)
+data_create_arabic(hb_ot_shape_plan_t const*)
+OT::ArrayOf<OT::Offset<OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>* OT::hb_serialize_context_t::extend_min<OT::ArrayOf<OT::Offset<OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>>(OT::ArrayOf<OT::Offset<OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>&)::__PRETTY_FUNCTION__
+OT::ArrayOf<OT::Offset<OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>* OT::hb_serialize_context_t::extend<OT::ArrayOf<OT::Offset<OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>>(OT::ArrayOf<OT::Offset<OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>&)::__PRETTY_FUNCTION__
+OT::Lookup* OT::hb_serialize_context_t::extend_min<OT::Lookup>(OT::Lookup&)::__PRETTY_FUNCTION__
+OT::Coverage* OT::hb_serialize_context_t::extend_min<OT::Coverage>(OT::Coverage&)::__PRETTY_FUNCTION__
+OT::IntType<unsigned short, 2u>* OT::hb_serialize_context_t::extend_min<OT::IntType<unsigned short, 2u>>(OT::IntType<unsigned short, 2u>&)::__PRETTY_FUNCTION__
+OT::SingleSubstFormat2* OT::hb_serialize_context_t::extend_min<OT::SingleSubstFormat2>(OT::SingleSubstFormat2&)::__PRETTY_FUNCTION__
+OT::SingleSubstFormat1* OT::hb_serialize_context_t::extend_min<OT::SingleSubstFormat1>(OT::SingleSubstFormat1&)::__PRETTY_FUNCTION__
+OT::ArrayOf<OT::IntType<unsigned short, 2u>, OT::IntType<unsigned short, 2u>>* OT::hb_serialize_context_t::extend<OT::ArrayOf<OT::IntType<unsigned short, 2u>, OT::IntType<unsigned short, 2u>>>(OT::ArrayOf<OT::IntType<unsigned short, 2u>, OT::IntType<unsigned short, 2u>>&)::__PRETTY_FUNCTION__
+OT::ArrayOf<OT::IntType<unsigned short, 2u>, OT::IntType<unsigned short, 2u>>* OT::hb_serialize_context_t::extend_min<OT::ArrayOf<OT::IntType<unsigned short, 2u>, OT::IntType<unsigned short, 2u>>>(OT::ArrayOf<OT::IntType<unsigned short, 2u>, OT::IntType<unsigned short, 2u>>&)::__PRETTY_FUNCTION__
+OT::SortedArrayOf<OT::IntType<unsigned short, 2u>, OT::IntType<unsigned short, 2u>>* OT::hb_serialize_context_t::extend<OT::SortedArrayOf<OT::IntType<unsigned short, 2u>, OT::IntType<unsigned short, 2u>>>(OT::SortedArrayOf<OT::IntType<unsigned short, 2u>, OT::IntType<unsigned short, 2u>>&)::__PRETTY_FUNCTION__
+OT::CoverageFormat2* OT::hb_serialize_context_t::extend_min<OT::CoverageFormat2>(OT::CoverageFormat2&)::__PRETTY_FUNCTION__
+OT::SortedArrayOf<OT::RangeRecord, OT::IntType<unsigned short, 2u>>* OT::hb_serialize_context_t::extend<OT::SortedArrayOf<OT::RangeRecord, OT::IntType<unsigned short, 2u>>>(OT::SortedArrayOf<OT::RangeRecord, OT::IntType<unsigned short, 2u>>&)::__PRETTY_FUNCTION__
+OT::CoverageFormat1* OT::hb_serialize_context_t::extend_min<OT::CoverageFormat1>(OT::CoverageFormat1&)::__PRETTY_FUNCTION__
+OT::LigatureSubstFormat1* OT::hb_serialize_context_t::extend_min<OT::LigatureSubstFormat1>(OT::LigatureSubstFormat1&)::__PRETTY_FUNCTION__
+OT::ArrayOf<OT::OffsetTo<OT::LigatureSet, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>* OT::hb_serialize_context_t::extend_min<OT::ArrayOf<OT::OffsetTo<OT::LigatureSet, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>>(OT::ArrayOf<OT::OffsetTo<OT::LigatureSet, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>&)::__PRETTY_FUNCTION__
+OT::ArrayOf<OT::OffsetTo<OT::LigatureSet, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>* OT::hb_serialize_context_t::extend<OT::ArrayOf<OT::OffsetTo<OT::LigatureSet, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>>(OT::ArrayOf<OT::OffsetTo<OT::LigatureSet, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>&)::__PRETTY_FUNCTION__
+OT::LigatureSet* OT::hb_serialize_context_t::extend_min<OT::LigatureSet>(OT::LigatureSet&)::__PRETTY_FUNCTION__
+OT::ArrayOf<OT::OffsetTo<OT::Ligature, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>* OT::hb_serialize_context_t::extend_min<OT::ArrayOf<OT::OffsetTo<OT::Ligature, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>>(OT::ArrayOf<OT::OffsetTo<OT::Ligature, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>&)::__PRETTY_FUNCTION__
+OT::ArrayOf<OT::OffsetTo<OT::Ligature, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>* OT::hb_serialize_context_t::extend<OT::ArrayOf<OT::OffsetTo<OT::Ligature, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>>(OT::ArrayOf<OT::OffsetTo<OT::Ligature, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>&)::__PRETTY_FUNCTION__
+OT::HeadlessArrayOf<OT::IntType<unsigned short, 2u>, OT::IntType<unsigned short, 2u>>* OT::hb_serialize_context_t::extend<OT::HeadlessArrayOf<OT::IntType<unsigned short, 2u>, OT::IntType<unsigned short, 2u>>>(OT::HeadlessArrayOf<OT::IntType<unsigned short, 2u>, OT::IntType<unsigned short, 2u>>&)::__PRETTY_FUNCTION__
+OT::HeadlessArrayOf<OT::IntType<unsigned short, 2u>, OT::IntType<unsigned short, 2u>>* OT::hb_serialize_context_t::extend_min<OT::HeadlessArrayOf<OT::IntType<unsigned short, 2u>, OT::IntType<unsigned short, 2u>>>(OT::HeadlessArrayOf<OT::IntType<unsigned short, 2u>, OT::IntType<unsigned short, 2u>>&)::__PRETTY_FUNCTION__
+OT::Ligature* OT::hb_serialize_context_t::extend_min<OT::Ligature>(OT::Ligature&)::__PRETTY_FUNCTION__
+OT::SubstLookup* OT::hb_serialize_context_t::copy<OT::SubstLookup>()::__PRETTY_FUNCTION__
+arabic_fallback_synthesize_lookup_ligature(hb_ot_shape_plan_t const*, hb_font_t*) (.isra.38)
+ligature_table
+arabic_fallback_synthesize_lookup_single(hb_ot_shape_plan_t const*, hb_font_t*, unsigned int) (.isra.39)
+shaping_table
+OT::_NullPool
+OT::_NullRangeRecord
+arabic_fallback_features
 .L18
 .L1034
 .L19
@@ -4781,35 +4781,35 @@ _ZL24arabic_fallback_features
 .L953
 .L954
 hb-ot-shape-complex-indic.cc
-_ZL15clear_syllablesPK18hb_ot_shape_plan_tP9hb_font_tP11hb_buffer_t
-_ZL18data_destroy_indicPv
-_ZL15setup_syllablesPK18hb_ot_shape_plan_tP9hb_font_tP11hb_buffer_t
-_ZL37_indic_syllable_machine_index_offsets
-_ZL33_indic_syllable_machine_key_spans
-_ZL32_indic_syllable_machine_indicies
-_ZL34_indic_syllable_machine_trans_keys
-_ZL35_indic_syllable_machine_trans_targs
-_ZL37_indic_syllable_machine_trans_actions
-_ZL33_indic_syllable_machine_eof_trans
-_ZL13compose_indicPK31hb_ot_shape_normalize_context_tjjPj
-_ZN26would_substitute_feature_t4initEPK11hb_ot_map_tjb.part.26
-_ZZNK11hb_ot_map_t17get_stage_lookupsEjjPPKNS_12lookup_map_tEPjE19__PRETTY_FUNCTION__
-_ZL22collect_features_indicP21hb_ot_shape_planner_t
-_ZL14indic_features
-_ZL18initial_reorderingPK18hb_ot_shape_plan_tP9hb_font_tP11hb_buffer_t
-_ZL16final_reorderingPK18hb_ot_shape_plan_tP9hb_font_tP11hb_buffer_t
-_ZL23override_features_indicP21hb_ot_shape_planner_t
-_ZL25final_reordering_syllablePK18hb_ot_shape_plan_tP11hb_buffer_tjj.isra.18
-_ZZL25final_reordering_syllablePK18hb_ot_shape_plan_tP11hb_buffer_tjjE19__PRETTY_FUNCTION__
-_ZL17data_create_indicPK18hb_ot_shape_plan_t
-_ZL13indic_configs
-_ZL17setup_masks_indicPK18hb_ot_shape_plan_tP11hb_buffer_tP9hb_font_t
-_ZL8ra_chars
-_ZL37initial_reordering_consonant_syllablePK18hb_ot_shape_plan_tP9hb_face_tP11hb_buffer_tjj.isra.27
-_ZZL37initial_reordering_consonant_syllablePK18hb_ot_shape_plan_tP9hb_face_tP11hb_buffer_tjjE19__PRETTY_FUNCTION__
-_ZL37initial_reordering_standalone_clusterPK18hb_ot_shape_plan_tP9hb_face_tP11hb_buffer_tjj
-_ZL27initial_reordering_syllablePK18hb_ot_shape_plan_tP9hb_face_tP11hb_buffer_tjj
-_ZL15decompose_indicPK31hb_ot_shape_normalize_context_tjPjS2_
+clear_syllables(hb_ot_shape_plan_t const*, hb_font_t*, hb_buffer_t*)
+data_destroy_indic(void*)
+setup_syllables(hb_ot_shape_plan_t const*, hb_font_t*, hb_buffer_t*)
+_indic_syllable_machine_index_offsets
+_indic_syllable_machine_key_spans
+_indic_syllable_machine_indicies
+_indic_syllable_machine_trans_keys
+_indic_syllable_machine_trans_targs
+_indic_syllable_machine_trans_actions
+_indic_syllable_machine_eof_trans
+compose_indic(hb_ot_shape_normalize_context_t const*, unsigned int, unsigned int, unsigned int*)
+would_substitute_feature_t::init(hb_ot_map_t const*, unsigned int, bool) (.part.26)
+hb_ot_map_t::get_stage_lookups(unsigned int, unsigned int, hb_ot_map_t::lookup_map_t const**, unsigned int*) const::__PRETTY_FUNCTION__
+collect_features_indic(hb_ot_shape_planner_t*)
+indic_features
+initial_reordering(hb_ot_shape_plan_t const*, hb_font_t*, hb_buffer_t*)
+final_reordering(hb_ot_shape_plan_t const*, hb_font_t*, hb_buffer_t*)
+override_features_indic(hb_ot_shape_planner_t*)
+final_reordering_syllable(hb_ot_shape_plan_t const*, hb_buffer_t*, unsigned int, unsigned int) (.isra.18)
+final_reordering_syllable(hb_ot_shape_plan_t const*, hb_buffer_t*, unsigned int, unsigned int)::__PRETTY_FUNCTION__
+data_create_indic(hb_ot_shape_plan_t const*)
+indic_configs
+setup_masks_indic(hb_ot_shape_plan_t const*, hb_buffer_t*, hb_font_t*)
+ra_chars
+initial_reordering_consonant_syllable(hb_ot_shape_plan_t const*, hb_face_t*, hb_buffer_t*, unsigned int, unsigned int) (.isra.27)
+initial_reordering_consonant_syllable(hb_ot_shape_plan_t const*, hb_face_t*, hb_buffer_t*, unsigned int, unsigned int)::__PRETTY_FUNCTION__
+initial_reordering_standalone_cluster(hb_ot_shape_plan_t const*, hb_face_t*, hb_buffer_t*, unsigned int, unsigned int)
+initial_reordering_syllable(hb_ot_shape_plan_t const*, hb_face_t*, hb_buffer_t*, unsigned int, unsigned int)
+decompose_indic(hb_ot_shape_normalize_context_t const*, unsigned int, unsigned int*, unsigned int*)
 .L123
 .L24
 .L25
@@ -4828,8 +4828,8 @@ _ZL15decompose_indicPK31hb_ot_shape_normalize_context_tjPjS2_
 .L38
 .L39
 hb-set.cc
-_ZNK8hb_set_t4nextEPj.part.6
-_ZZ16hb_set_get_emptyE11_hb_set_nil
+hb_set_t::next(unsigned int*) const (.part.6)
+hb_set_get_empty::_hb_set_nil
 truetype.c
 tt_get_kerning
 tt_face_get_location
@@ -5461,98 +5461,98 @@ basic_engine_fc_type
 script_engines
 basic_scripts
 hb-buffer.cc
-_ZL22compare_info_codepointPK15hb_glyph_info_tS1_
-_ZZN11hb_buffer_t13make_room_forEjjE19__PRETTY_FUNCTION__
-_ZZN11hb_buffer_t13shift_forwardEjE19__PRETTY_FUNCTION__
-_ZZN11hb_buffer_t18get_scratch_bufferEPjE19__PRETTY_FUNCTION__
-_ZZN11hb_buffer_t12swap_buffersEvE19__PRETTY_FUNCTION__
-_ZZN11hb_buffer_t7move_toEjE19__PRETTY_FUNCTION__
-_ZZN11hb_buffer_t24guess_segment_propertiesEvE19__PRETTY_FUNCTION__
-_ZZN11hb_buffer_t12allocate_varEjjPKcE19__PRETTY_FUNCTION__
-_ZZN11hb_buffer_t14deallocate_varEjjPKcE19__PRETTY_FUNCTION__
-_ZZN11hb_buffer_t10assert_varEjjPKcE19__PRETTY_FUNCTION__
-_ZZ19hb_buffer_get_emptyE14_hb_buffer_nil
-_ZZ17hb_buffer_add_utfILb1EhEvP11hb_buffer_tPKT0_ijiE19__PRETTY_FUNCTION__
-_ZZ17hb_buffer_add_utfILb1EtEvP11hb_buffer_tPKT0_ijiE19__PRETTY_FUNCTION__
-_ZZ17hb_buffer_add_utfILb1EjEvP11hb_buffer_tPKT0_ijiE19__PRETTY_FUNCTION__
-_ZZ17hb_buffer_add_utfILb0EjEvP11hb_buffer_tPKT0_ijiE19__PRETTY_FUNCTION__
-_ZZ26hb_buffer_normalize_glyphsE19__PRETTY_FUNCTION__
+compare_info_codepoint(hb_glyph_info_t const*, hb_glyph_info_t const*)
+hb_buffer_t::make_room_for(unsigned int, unsigned int)::__PRETTY_FUNCTION__
+hb_buffer_t::shift_forward(unsigned int)::__PRETTY_FUNCTION__
+hb_buffer_t::get_scratch_buffer(unsigned int*)::__PRETTY_FUNCTION__
+hb_buffer_t::swap_buffers()::__PRETTY_FUNCTION__
+hb_buffer_t::move_to(unsigned int)::__PRETTY_FUNCTION__
+hb_buffer_t::guess_segment_properties()::__PRETTY_FUNCTION__
+hb_buffer_t::allocate_var(unsigned int, unsigned int, char const*)::__PRETTY_FUNCTION__
+hb_buffer_t::deallocate_var(unsigned int, unsigned int, char const*)::__PRETTY_FUNCTION__
+hb_buffer_t::assert_var(unsigned int, unsigned int, char const*)::__PRETTY_FUNCTION__
+hb_buffer_get_empty::_hb_buffer_nil
+void hb_buffer_add_utf<true, unsigned char>(hb_buffer_t*, unsigned char const*, int, unsigned int, int)::__PRETTY_FUNCTION__
+void hb_buffer_add_utf<true, unsigned short>(hb_buffer_t*, unsigned short const*, int, unsigned int, int)::__PRETTY_FUNCTION__
+void hb_buffer_add_utf<true, unsigned int>(hb_buffer_t*, unsigned int const*, int, unsigned int, int)::__PRETTY_FUNCTION__
+void hb_buffer_add_utf<false, unsigned int>(hb_buffer_t*, unsigned int const*, int, unsigned int, int)::__PRETTY_FUNCTION__
+hb_buffer_normalize_glyphs::__PRETTY_FUNCTION__
 hb-common.cc
-_ZL10free_langsv
-_ZL5langs
-_ZL17direction_strings
-_ZL9canon_map
-_ZZ23hb_language_get_defaultE16default_language
+free_langs()
+langs
+direction_strings
+canon_map
+hb_language_get_default::default_language
 hb-face.cc
-_ZL33_hb_face_for_data_closure_destroyP26hb_face_for_data_closure_t
-_ZL33_hb_face_for_data_reference_tableP9hb_face_tjPv
+_hb_face_for_data_closure_destroy(hb_face_for_data_closure_t*)
+_hb_face_for_data_reference_table(hb_face_t*, unsigned int, void*)
 hb-ot-tag.cc
-_ZL28lang_compare_first_componentPKcS0_
-_ZL12ot_languages
-_ZL15ot_languages_zh
+lang_compare_first_component(char const*, char const*)
+ot_languages
+ot_languages_zh
 hb-shape.cc
-_ZL11parse_spacePPKcS0_
-_ZL10parse_charPPKcS0_c
-_ZL23free_static_shaper_listv
-_ZL18static_shaper_list
-_ZL10parse_uintPPKcS0_Pj
-_ZZ20hb_feature_to_stringE19__PRETTY_FUNCTION__
-_ZZ21hb_shape_list_shapersE15nil_shaper_list
-_ZZ13hb_shape_fullE19__PRETTY_FUNCTION__
+parse_space(char const**, char const*)
+parse_char(char const**, char const*, char)
+free_static_shaper_list()
+static_shaper_list
+parse_uint(char const**, char const*, unsigned int*)
+hb_feature_to_string::__PRETTY_FUNCTION__
+hb_shape_list_shapers::nil_shaper_list
+hb_shape_full::__PRETTY_FUNCTION__
 hb-shape-plan.cc
-_ZZ23hb_shape_plan_get_emptyE18_hb_shape_plan_nil
-_ZZ20hb_shape_plan_createE19__PRETTY_FUNCTION__
-_ZZ21hb_shape_plan_executeE19__PRETTY_FUNCTION__
+hb_shape_plan_get_empty::_hb_shape_plan_nil
+hb_shape_plan_create::__PRETTY_FUNCTION__
+hb_shape_plan_execute::__PRETTY_FUNCTION__
 hb-shaper.cc
-_ZL19free_static_shapersv
-_ZL14static_shapers
-_ZL11all_shapers
+free_static_shapers()
+static_shapers
+all_shapers
 hb-unicode.cc
-_ZL30hb_unicode_combining_class_nilP18hb_unicode_funcs_tjPv
-_ZL30hb_unicode_eastasian_width_nilP18hb_unicode_funcs_tjPv
-_ZL31hb_unicode_general_category_nilP18hb_unicode_funcs_tjPv
-_ZL24hb_unicode_mirroring_nilP18hb_unicode_funcs_tjPv
-_ZL21hb_unicode_script_nilP18hb_unicode_funcs_tjPv
-_ZL22hb_unicode_compose_nilP18hb_unicode_funcs_tjjPjPv
-_ZL24hb_unicode_decompose_nilP18hb_unicode_funcs_tjPjS1_Pv
-_ZL38hb_unicode_decompose_compatibility_nilP18hb_unicode_funcs_tjPjPv
+hb_unicode_combining_class_nil(hb_unicode_funcs_t*, unsigned int, void*)
+hb_unicode_eastasian_width_nil(hb_unicode_funcs_t*, unsigned int, void*)
+hb_unicode_general_category_nil(hb_unicode_funcs_t*, unsigned int, void*)
+hb_unicode_mirroring_nil(hb_unicode_funcs_t*, unsigned int, void*)
+hb_unicode_script_nil(hb_unicode_funcs_t*, unsigned int, void*)
+hb_unicode_compose_nil(hb_unicode_funcs_t*, unsigned int, unsigned int, unsigned int*, void*)
+hb_unicode_decompose_nil(hb_unicode_funcs_t*, unsigned int, unsigned int*, unsigned int*, void*)
+hb_unicode_decompose_compatibility_nil(hb_unicode_funcs_t*, unsigned int, unsigned int*, void*)
 hb-ot-layout.cc
-_ZN2OTL11match_glyphEjRKNS_7IntTypeItLj2EEEPKv
-_ZN2OTL24fix_cursive_minor_offsetEP19hb_glyph_position_tj14hb_direction_t
-_ZN2OTL16intersects_glyphEP8hb_set_tRKNS_7IntTypeItLj2EEEPKv
-_ZN2OTL12apply_lookupEPNS_18hb_apply_context_tEjPjjPKNS_12LookupRecordEj
-_ZL29hb_ot_shaper_face_data_ensureP9hb_face_t
-_ZL18get_gsubgpos_tableP9hb_face_tj
-_ZNK2OT6Device9get_deltaEji.part.83
-_ZNK2OT8Coverage19intersects_coverageEPK8hb_set_tj.part.92
-_ZN2OTL13collect_glyphEP8hb_set_tRKNS_7IntTypeItLj2EEEPKv
-_ZNK2OT8ClassDef9add_classEP8hb_set_tj.part.104
-_ZN2OTL13collect_classEP8hb_set_tRKNS_7IntTypeItLj2EEEPKv
-_ZN2OTL19intersects_coverageEP8hb_set_tRKNS_7IntTypeItLj2EEEPKv
-_ZNK2OT19SubstLookupSubTable8dispatchINS_20hb_closure_context_tEEENT_8return_tEPS3_j.part.205
-_ZNK2OT19SubstLookupSubTable8dispatchINS_27hb_collect_glyphs_context_tEEENT_8return_tEPS3_j.part.209
-_ZN2OTL16intersects_classEP8hb_set_tRKNS_7IntTypeItLj2EEEPKv
-_ZN2OTL12_NullLangSysE
-_ZN2OTL8_NullTagE
-_ZN2OTL10_NullIndexE
-_ZL37_hb_ot_layout_collect_lookups_lookupsP9hb_face_tjjP8hb_set_t
-_ZL38_hb_ot_layout_collect_lookups_featuresP9hb_face_tjjjPKjP8hb_set_t
-_ZL39_hb_ot_layout_collect_lookups_languagesP9hb_face_tjjPKjS2_P8hb_set_t
-_ZN2OTL11match_classEjRKNS_7IntTypeItLj2EEEPKv
-_ZN2OTL14match_coverageEjRKNS_7IntTypeItLj2EEEPKv
-_ZZN2OT18hb_apply_context_t27skipping_forward_iterator_t4nextEvE19__PRETTY_FUNCTION__
-_ZN2OTL11match_inputEPNS_18hb_apply_context_tEjPKNS_7IntTypeItLj2EEEPFbjRS4_PKvES8_PjSB_PbSB_
-_ZN2OTL20context_apply_lookupEPNS_18hb_apply_context_tEjPKNS_7IntTypeItLj2EEEjPKNS_12LookupRecordERNS_25ContextApplyLookupContextE
-_ZN2OTL15match_lookaheadEPNS_18hb_apply_context_tEjPKNS_7IntTypeItLj2EEEPFbjRS4_PKvES8_j
-_ZZN2OT18hb_apply_context_t28skipping_backward_iterator_t4prevEvE19__PRETTY_FUNCTION__
-_ZN2OTL15match_backtrackEPNS_18hb_apply_context_tEjPKNS_7IntTypeItLj2EEEPFbjRS4_PKvES8_
-_ZN2OTL26chain_context_apply_lookupEPNS_18hb_apply_context_tEjPKNS_7IntTypeItLj2EEEjS5_jS5_jPKNS_12LookupRecordERNS_30ChainContextApplyLookupContextE
-_ZNK2OT19SubstLookupSubTable8dispatchINS_24hb_would_apply_context_tEEENT_8return_tEPS3_j.part.210
-_ZN2OT11ValueFormat29sanitize_values_stride_unsafeEPNS_21hb_sanitize_context_tEPvPNS_7IntTypeItLj2EEEjj.part.196
-_ZN2OTL16collect_coverageEP8hb_set_tRKNS_7IntTypeItLj2EEEPKv
-_ZNK2OT12ChainContext8dispatchINS_27hb_collect_glyphs_context_tEEENT_8return_tEPS3_.part.208
-_Z12apply_stringI9GSUBProxyEbPN2OT18hb_apply_context_tERKNT_6LookupERK33hb_ot_layout_lookup_accelerator_t
-_ZZ12apply_stringI9GPOSProxyEbPN2OT18hb_apply_context_tERKNT_6LookupERK33hb_ot_layout_lookup_accelerator_tE19__PRETTY_FUNCTION__
+OT::match_glyph(unsigned int, OT::IntType<unsigned short, 2u> const&, void const*)
+OT::fix_cursive_minor_offset(hb_glyph_position_t*, unsigned int, hb_direction_t)
+OT::intersects_glyph(hb_set_t*, OT::IntType<unsigned short, 2u> const&, void const*)
+OT::apply_lookup(OT::hb_apply_context_t*, unsigned int, unsigned int*, unsigned int, OT::LookupRecord const*, unsigned int)
+hb_ot_shaper_face_data_ensure(hb_face_t*)
+get_gsubgpos_table(hb_face_t*, unsigned int)
+OT::Device::get_delta(unsigned int, int) const (.part.83)
+OT::Coverage::intersects_coverage(hb_set_t const*, unsigned int) const (.part.92)
+OT::collect_glyph(hb_set_t*, OT::IntType<unsigned short, 2u> const&, void const*)
+OT::ClassDef::add_class(hb_set_t*, unsigned int) const (.part.104)
+OT::collect_class(hb_set_t*, OT::IntType<unsigned short, 2u> const&, void const*)
+OT::intersects_coverage(hb_set_t*, OT::IntType<unsigned short, 2u> const&, void const*)
+OT::hb_closure_context_t::return_t OT::SubstLookupSubTable::dispatch<OT::hb_closure_context_t>(OT::hb_closure_context_t*, unsigned int) const (.part.205)
+OT::hb_collect_glyphs_context_t::return_t OT::SubstLookupSubTable::dispatch<OT::hb_collect_glyphs_context_t>(OT::hb_collect_glyphs_context_t*, unsigned int) const (.part.209)
+OT::intersects_class(hb_set_t*, OT::IntType<unsigned short, 2u> const&, void const*)
+OT::_NullLangSys
+OT::_NullTag
+OT::_NullIndex
+_hb_ot_layout_collect_lookups_lookups(hb_face_t*, unsigned int, unsigned int, hb_set_t*)
+_hb_ot_layout_collect_lookups_features(hb_face_t*, unsigned int, unsigned int, unsigned int, unsigned int const*, hb_set_t*)
+_hb_ot_layout_collect_lookups_languages(hb_face_t*, unsigned int, unsigned int, unsigned int const*, unsigned int const*, hb_set_t*)
+OT::match_class(unsigned int, OT::IntType<unsigned short, 2u> const&, void const*)
+OT::match_coverage(unsigned int, OT::IntType<unsigned short, 2u> const&, void const*)
+OT::hb_apply_context_t::skipping_forward_iterator_t::next()::__PRETTY_FUNCTION__
+OT::match_input(OT::hb_apply_context_t*, unsigned int, OT::IntType<unsigned short, 2u> const*, bool (*)(unsigned int, OT::IntType<unsigned short, 2u> const&, void const*), void const*, unsigned int*, unsigned int*, bool*, unsigned int*)
+OT::context_apply_lookup(OT::hb_apply_context_t*, unsigned int, OT::IntType<unsigned short, 2u> const*, unsigned int, OT::LookupRecord const*, OT::ContextApplyLookupContext&)
+OT::match_lookahead(OT::hb_apply_context_t*, unsigned int, OT::IntType<unsigned short, 2u> const*, bool (*)(unsigned int, OT::IntType<unsigned short, 2u> const&, void const*), void const*, unsigned int)
+OT::hb_apply_context_t::skipping_backward_iterator_t::prev()::__PRETTY_FUNCTION__
+OT::match_backtrack(OT::hb_apply_context_t*, unsigned int, OT::IntType<unsigned short, 2u> const*, bool (*)(unsigned int, OT::IntType<unsigned short, 2u> const&, void const*), void const*)
+OT::chain_context_apply_lookup(OT::hb_apply_context_t*, unsigned int, OT::IntType<unsigned short, 2u> const*, unsigned int, OT::IntType<unsigned short, 2u> const*, unsigned int, OT::IntType<unsigned short, 2u> const*, unsigned int, OT::LookupRecord const*, OT::ChainContextApplyLookupContext&)
+OT::hb_would_apply_context_t::return_t OT::SubstLookupSubTable::dispatch<OT::hb_would_apply_context_t>(OT::hb_would_apply_context_t*, unsigned int) const (.part.210)
+OT::ValueFormat::sanitize_values_stride_unsafe(OT::hb_sanitize_context_t*, void*, OT::IntType<unsigned short, 2u>*, unsigned int, unsigned int) (.part.196)
+OT::collect_coverage(hb_set_t*, OT::IntType<unsigned short, 2u> const&, void const*)
+OT::hb_collect_glyphs_context_t::return_t OT::ChainContext::dispatch<OT::hb_collect_glyphs_context_t>(OT::hb_collect_glyphs_context_t*) const (.part.208)
+bool apply_string<GSUBProxy>(OT::hb_apply_context_t*, GSUBProxy::Lookup const&, hb_ot_layout_lookup_accelerator_t const&)
+bool apply_string<GPOSProxy>(OT::hb_apply_context_t*, GPOSProxy::Lookup const&, hb_ot_layout_lookup_accelerator_t const&)::__PRETTY_FUNCTION__
 .L4867
 .L5320
 .L2931
@@ -5732,71 +5732,71 @@ _ZZ12apply_stringI9GPOSProxyEbPN2OT18hb_apply_context_tERKNT_6LookupERK33hb_ot_l
 .L5108
 hb-ot-shape-complex-default.cc
 hb-ot-shape-complex-hangul.cc
-_ZL18setup_masks_hangulPK18hb_ot_shape_plan_tP11hb_buffer_tP9hb_font_t
-_ZL18is_zero_width_charP9hb_font_tj
-_ZL19data_destroy_hangulPv
-_ZL18data_create_hangulPK18hb_ot_shape_plan_t
-_ZL15hangul_features
-_ZL24override_features_hangulP21hb_ot_shape_planner_t
-_ZL23collect_features_hangulP21hb_ot_shape_planner_t
-_ZL22preprocess_text_hangulPK18hb_ot_shape_plan_tP11hb_buffer_tP9hb_font_t
+setup_masks_hangul(hb_ot_shape_plan_t const*, hb_buffer_t*, hb_font_t*)
+is_zero_width_char(hb_font_t*, unsigned int)
+data_destroy_hangul(void*)
+data_create_hangul(hb_ot_shape_plan_t const*)
+hangul_features
+override_features_hangul(hb_ot_shape_planner_t*)
+collect_features_hangul(hb_ot_shape_planner_t*)
+preprocess_text_hangul(hb_ot_shape_plan_t const*, hb_buffer_t*, hb_font_t*)
 hb-ot-shape-complex-hebrew.cc
-_ZL14compose_hebrewPK31hb_ot_shape_normalize_context_tjjPj
-_ZZL14compose_hebrewPK31hb_ot_shape_normalize_context_tjjPjE12sDageshForms
+compose_hebrew(hb_ot_shape_normalize_context_t const*, unsigned int, unsigned int, unsigned int*)
+compose_hebrew(hb_ot_shape_normalize_context_t const*, unsigned int, unsigned int, unsigned int*)::sDageshForms
 .L10
 .L11
 .L12
 hb-ot-shape-complex-indic-table.cc
-_ZL11indic_table
+indic_table
 hb-ot-shape-complex-myanmar.cc
-_ZL25override_features_myanmarP21hb_ot_shape_planner_t
-_ZL24collect_features_myanmarP21hb_ot_shape_planner_t
-_ZL14basic_features
-_ZL14other_features
-_ZL39_myanmar_syllable_machine_index_offsets
-_ZL35_myanmar_syllable_machine_key_spans
-_ZL34_myanmar_syllable_machine_indicies
-_ZL36_myanmar_syllable_machine_trans_keys
-_ZL37_myanmar_syllable_machine_trans_targs
-_ZL39_myanmar_syllable_machine_trans_actions
-_ZL35_myanmar_syllable_machine_eof_trans
-_ZL37initial_reordering_consonant_syllablePK18hb_ot_shape_plan_tP9hb_face_tP11hb_buffer_tjj.isra.8
-_ZL27initial_reordering_syllablePK18hb_ot_shape_plan_tP9hb_face_tP11hb_buffer_tjj.isra.10
-_ZL19setup_masks_myanmarPK18hb_ot_shape_plan_tP11hb_buffer_tP9hb_font_t
+override_features_myanmar(hb_ot_shape_planner_t*)
+collect_features_myanmar(hb_ot_shape_planner_t*)
+basic_features
+other_features
+_myanmar_syllable_machine_index_offsets
+_myanmar_syllable_machine_key_spans
+_myanmar_syllable_machine_indicies
+_myanmar_syllable_machine_trans_keys
+_myanmar_syllable_machine_trans_targs
+_myanmar_syllable_machine_trans_actions
+_myanmar_syllable_machine_eof_trans
+initial_reordering_consonant_syllable(hb_ot_shape_plan_t const*, hb_face_t*, hb_buffer_t*, unsigned int, unsigned int) (.isra.8)
+initial_reordering_syllable(hb_ot_shape_plan_t const*, hb_face_t*, hb_buffer_t*, unsigned int, unsigned int) (.isra.10)
+setup_masks_myanmar(hb_ot_shape_plan_t const*, hb_buffer_t*, hb_font_t*)
 hb-ot-shape-complex-sea.cc
-_ZL21override_features_seaP21hb_ot_shape_planner_t
-_ZL20collect_features_seaP21hb_ot_shape_planner_t
-_ZL33_sea_syllable_machine_trans_targs
-_ZL35_sea_syllable_machine_trans_actions
-_ZL31_sea_syllable_machine_eof_trans
-_ZL35_sea_syllable_machine_index_offsets
-_ZL31_sea_syllable_machine_key_spans
-_ZL30_sea_syllable_machine_indicies
-_ZL32_sea_syllable_machine_trans_keys
-_ZL37initial_reordering_consonant_syllablePK18hb_ot_shape_plan_tP9hb_face_tP11hb_buffer_tjj.isra.6
-_ZL27initial_reordering_syllablePK18hb_ot_shape_plan_tP9hb_face_tP11hb_buffer_tjj.isra.8
-_ZL15setup_masks_seaPK18hb_ot_shape_plan_tP11hb_buffer_tP9hb_font_t
+override_features_sea(hb_ot_shape_planner_t*)
+collect_features_sea(hb_ot_shape_planner_t*)
+_sea_syllable_machine_trans_targs
+_sea_syllable_machine_trans_actions
+_sea_syllable_machine_eof_trans
+_sea_syllable_machine_index_offsets
+_sea_syllable_machine_key_spans
+_sea_syllable_machine_indicies
+_sea_syllable_machine_trans_keys
+initial_reordering_consonant_syllable(hb_ot_shape_plan_t const*, hb_face_t*, hb_buffer_t*, unsigned int, unsigned int) (.isra.6)
+initial_reordering_syllable(hb_ot_shape_plan_t const*, hb_face_t*, hb_buffer_t*, unsigned int, unsigned int) (.isra.8)
+setup_masks_sea(hb_ot_shape_plan_t const*, hb_buffer_t*, hb_font_t*)
 hb-ot-shape-complex-thai.cc
-_ZL14thai_pua_shapej13thai_action_tP9hb_font_t
-_ZZL14thai_pua_shapej13thai_action_tP9hb_font_tE19__PRETTY_FUNCTION__
-_ZZL14thai_pua_shapej13thai_action_tP9hb_font_tE12SDL_mappings
-_ZZL14thai_pua_shapej13thai_action_tP9hb_font_tE11RD_mappings
-_ZZL14thai_pua_shapej13thai_action_tP9hb_font_tE11SD_mappings
-_ZZL14thai_pua_shapej13thai_action_tP9hb_font_tE11SL_mappings
-_ZL20preprocess_text_thaiPK18hb_ot_shape_plan_tP11hb_buffer_tP9hb_font_t
-_ZL24thai_above_state_machine
-_ZL24thai_below_state_machine
-_ZL22thai_above_start_state
-_ZL22thai_below_start_state
+thai_pua_shape(unsigned int, thai_action_t, hb_font_t*)
+thai_pua_shape(unsigned int, thai_action_t, hb_font_t*)::__PRETTY_FUNCTION__
+thai_pua_shape(unsigned int, thai_action_t, hb_font_t*)::SDL_mappings
+thai_pua_shape(unsigned int, thai_action_t, hb_font_t*)::RD_mappings
+thai_pua_shape(unsigned int, thai_action_t, hb_font_t*)::SD_mappings
+thai_pua_shape(unsigned int, thai_action_t, hb_font_t*)::SL_mappings
+preprocess_text_thai(hb_ot_shape_plan_t const*, hb_buffer_t*, hb_font_t*)
+thai_above_state_machine
+thai_below_state_machine
+thai_above_start_state
+thai_below_start_state
 .L14
 hb-ot-shape-complex-tibetan.cc
-_ZL24collect_features_tibetanP21hb_ot_shape_planner_t
-_ZL16tibetan_features
+collect_features_tibetan(hb_ot_shape_planner_t*)
+tibetan_features
 hb-ot-shape-normalize.cc
-_ZL17decompose_unicodePK31hb_ot_shape_normalize_context_tjPjS2_
-_ZL15compose_unicodePK31hb_ot_shape_normalize_context_tjjPj
-_ZL32_hb_glyph_info_set_unicode_propsP15hb_glyph_info_tP18hb_unicode_funcs_t
-_ZL9decomposePK31hb_ot_shape_normalize_context_tbj.constprop.8
+decompose_unicode(hb_ot_shape_normalize_context_t const*, unsigned int, unsigned int*, unsigned int*)
+compose_unicode(hb_ot_shape_normalize_context_t const*, unsigned int, unsigned int, unsigned int*)
+_hb_glyph_info_set_unicode_props(hb_glyph_info_t*, hb_unicode_funcs_t*)
+decompose(hb_ot_shape_normalize_context_t const*, bool, unsigned int) (.constprop.8)
 hb-ot-shape-fallback.cc
 .L47
 .L60
@@ -5825,40 +5825,40 @@ hb-ot-shape-fallback.cc
 .L134
 hb-fallback-shape.cc
 hb-glib.cc
-_ZL39hb_glib_unicode_decompose_compatibilityP18hb_unicode_funcs_tjPjPv
-_ZL25hb_glib_unicode_decomposeP18hb_unicode_funcs_tjPjS1_Pv
-_ZL23hb_glib_unicode_composeP18hb_unicode_funcs_tjjPjPv
-_ZL25hb_glib_unicode_mirroringP18hb_unicode_funcs_tjPv
-_ZL32hb_glib_unicode_general_categoryP18hb_unicode_funcs_tjPv
-_ZL31hb_glib_unicode_eastasian_widthP18hb_unicode_funcs_tjPv
-_ZL31hb_glib_unicode_combining_classP18hb_unicode_funcs_tjPv
-_ZL22hb_glib_unicode_scriptP18hb_unicode_funcs_tjPv
-_ZZ25hb_glib_get_unicode_funcsE22_hb_glib_unicode_funcs
+hb_glib_unicode_decompose_compatibility(hb_unicode_funcs_t*, unsigned int, unsigned int*, void*)
+hb_glib_unicode_decompose(hb_unicode_funcs_t*, unsigned int, unsigned int*, unsigned int*, void*)
+hb_glib_unicode_compose(hb_unicode_funcs_t*, unsigned int, unsigned int, unsigned int*, void*)
+hb_glib_unicode_mirroring(hb_unicode_funcs_t*, unsigned int, void*)
+hb_glib_unicode_general_category(hb_unicode_funcs_t*, unsigned int, void*)
+hb_glib_unicode_eastasian_width(hb_unicode_funcs_t*, unsigned int, void*)
+hb_glib_unicode_combining_class(hb_unicode_funcs_t*, unsigned int, void*)
+hb_glib_unicode_script(hb_unicode_funcs_t*, unsigned int, void*)
+hb_glib_get_unicode_funcs::_hb_glib_unicode_funcs
 hb-ft.cc
-_ZL24hb_ft_get_glyph_h_originP9hb_font_tPvjPiS2_S1_
-_ZL25hb_ft_get_glyph_v_kerningP9hb_font_tPvjjS1_
-_ZL11_do_nothingv
-_ZL13_release_blobP11FT_FaceRec_
-_ZL15free_ft_libraryv
-_ZL10ft_library
-_ZL20hb_ft_get_glyph_nameP9hb_font_tPvjPcjS1_
-_ZL25hb_ft_get_glyph_from_nameP9hb_font_tPvPKciPjS1_
-_ZL29hb_ft_get_glyph_contour_pointP9hb_font_tPvjjPiS2_S1_
-_ZL23hb_ft_get_glyph_extentsP9hb_font_tPvjP18hb_glyph_extents_tS1_
-_ZL24hb_ft_get_glyph_v_originP9hb_font_tPvjPiS2_S1_
-_ZL25hb_ft_get_glyph_h_kerningP9hb_font_tPvjjS1_
-_ZL25hb_ft_get_glyph_v_advanceP9hb_font_tPvjS1_
-_ZL25hb_ft_get_glyph_h_advanceP9hb_font_tPvjS1_
-_ZL19hb_ft_face_finalizeP11FT_FaceRec_
-_ZL15reference_tableP9hb_face_tjPv
-_ZL15hb_ft_get_glyphP9hb_font_tPvjjPjS1_
-_ZZL21_hb_ft_get_font_funcsvE9ft_ffuncs
-_ZZ20hb_ft_font_set_funcsE19__PRETTY_FUNCTION__
+hb_ft_get_glyph_h_origin(hb_font_t*, void*, unsigned int, int*, int*, void*)
+hb_ft_get_glyph_v_kerning(hb_font_t*, void*, unsigned int, unsigned int, void*)
+_do_nothing()
+_release_blob(FT_FaceRec_*)
+free_ft_library()
+ft_library
+hb_ft_get_glyph_name(hb_font_t*, void*, unsigned int, char*, unsigned int, void*)
+hb_ft_get_glyph_from_name(hb_font_t*, void*, char const*, int, unsigned int*, void*)
+hb_ft_get_glyph_contour_point(hb_font_t*, void*, unsigned int, unsigned int, int*, int*, void*)
+hb_ft_get_glyph_extents(hb_font_t*, void*, unsigned int, hb_glyph_extents_t*, void*)
+hb_ft_get_glyph_v_origin(hb_font_t*, void*, unsigned int, int*, int*, void*)
+hb_ft_get_glyph_h_kerning(hb_font_t*, void*, unsigned int, unsigned int, void*)
+hb_ft_get_glyph_v_advance(hb_font_t*, void*, unsigned int, void*)
+hb_ft_get_glyph_h_advance(hb_font_t*, void*, unsigned int, void*)
+hb_ft_face_finalize(FT_FaceRec_*)
+reference_table(hb_face_t*, unsigned int, void*)
+hb_ft_get_glyph(hb_font_t*, void*, unsigned int, unsigned int, unsigned int*, void*)
+_hb_ft_get_font_funcs()::ft_ffuncs
+hb_ft_font_set_funcs::__PRETTY_FUNCTION__
 hb-blob.cc
-_ZL13_try_writableP9hb_blob_t
-_ZZ17hb_blob_get_emptyE12_hb_blob_nil
+_try_writable(hb_blob_t*)
+hb_blob_get_empty::_hb_blob_nil
 hb-ot-map.cc
-_ZL10table_tags
+table_tags
 fccfg.c
 FcConfigFileExists
 FcConfigDel
@@ -7088,27 +7088,27 @@ ftbitmap.c
 libgcc2.c
 atexit.c
 IA__FcPatternEqualSubset
-_ZNK2OT12ChainContext8dispatchINS_24hb_would_apply_context_tEEENT_8return_tEPS3_
+OT::hb_would_apply_context_t::return_t OT::ChainContext::dispatch<OT::hb_would_apply_context_t>(OT::hb_would_apply_context_t*) const
 FcStrContainsIgnoreBlanksAndCase
-_ZN2OT7ArrayOfINS_8OffsetToINS_9ChainRuleENS_7IntTypeItLj2EEEEES4_E8sanitizeEPNS_21hb_sanitize_context_tEPv
+OT::ArrayOf<OT::OffsetTo<OT::ChainRule, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>::sanitize(OT::hb_sanitize_context_t*, void*)
 IA__FcPatternDel
-_ZNK2OT14PairPosFormat114collect_glyphsEPNS_27hb_collect_glyphs_context_tE
+OT::PairPosFormat1::collect_glyphs(OT::hb_collect_glyphs_context_t*) const
 IA__FcPatternVaBuild
 IA__FcConfigEnableHome
 FcValueListDestroy
 IA__FcObjectSetVaBuild
 IA__FcNameConstant
-_ZN11hb_buffer_t24guess_segment_propertiesEv
+hb_buffer_t::guess_segment_properties()
 _hb_ot_shaper_face_data_create
-_ZNK2OT8Ligature5applyEPNS_18hb_apply_context_tE
-_ZN2OT7ArrayOfINS_8OffsetToINS_7RuleSetENS_7IntTypeItLj2EEEEES4_E8sanitizeEPNS_21hb_sanitize_context_tEPv
-_Z21_hb_ot_layout_destroyP14hb_ot_layout_t
+OT::Ligature::apply(OT::hb_apply_context_t*) const
+OT::ArrayOf<OT::OffsetTo<OT::RuleSet, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>::sanitize(OT::hb_sanitize_context_t*, void*)
+_hb_ot_layout_destroy(hb_ot_layout_t*)
 FcLangSetSerializeAlloc
 IA__FcConfigGetConfigFiles
 FcFreeTypePrivateToUcs4
 IA__FcPatternCreate
 IA__FcObjectSetAdd
-_ZNK2OT9ExtensionINS_14ExtensionSubstEE8dispatchINS_20hb_closure_context_tEEENT_8return_tEPS5_
+OT::hb_closure_context_t::return_t OT::Extension<OT::ExtensionSubst>::dispatch<OT::hb_closure_context_t>(OT::hb_closure_context_t*) const
 FcValueListPrintWithPosition
 FcObjectName
 FcPatternObjectDel
@@ -7117,124 +7117,124 @@ IA__FcConfigUptoDate
 FcObjectLookupOtherTypeById
 _hb_ot_complex_shaper_arabic
 IA__FcPatternAddInteger
-_ZNK2OT19ChainContextFormat37closureEPNS_20hb_closure_context_tE
-_ZN2OT7ArrayOfINS_8OffsetToINS_12ChainRuleSetENS_7IntTypeItLj2EEEEES4_E8sanitizeEPNS_21hb_sanitize_context_tEPv
+OT::ChainContextFormat3::closure(OT::hb_closure_context_t*) const
+OT::ArrayOf<OT::OffsetTo<OT::ChainRuleSet, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>::sanitize(OT::hb_sanitize_context_t*, void*)
 IA__FcConfigSetRescanInverval
 FcConfigXdgConfigHome
-_ZN2OT8OffsetToINS_12OffsetListOfINS_12AnchorMatrixEEENS_7IntTypeItLj2EEEE8sanitizeIjEEbPNS_21hb_sanitize_context_tEPvT_
+bool OT::OffsetTo<OT::OffsetListOf<OT::AnchorMatrix>, OT::IntType<unsigned short, 2u>>::sanitize<unsigned int>(OT::hb_sanitize_context_t*, void*, unsigned int)
 IA__FcValueDestroy
 _hb_ot_shaper_shape_plan_data_destroy
 IA__FcAtomicCreate
 FcValueListSerialize
-_ZNK2OT17PosLookupSubTable8dispatchINS_27hb_collect_glyphs_context_tEEENT_8return_tEPS3_j
-_ZNK2OT4GDEF14get_lig_caretsEP9hb_font_t14hb_direction_tjjPjPi
-_ZNK2OT14PairPosFormat25applyEPNS_18hb_apply_context_tE
-_ZN2OT8GSUBGPOS8sanitizeEPNS_21hb_sanitize_context_tE
+OT::hb_collect_glyphs_context_t::return_t OT::PosLookupSubTable::dispatch<OT::hb_collect_glyphs_context_t>(OT::hb_collect_glyphs_context_t*, unsigned int) const
+OT::GDEF::get_lig_carets(hb_font_t*, hb_direction_t, unsigned int, unsigned int, unsigned int*, int*) const
+OT::PairPosFormat2::apply(OT::hb_apply_context_t*) const
+OT::GSUBGPOS::sanitize(OT::hb_sanitize_context_t*)
 FcConfigAddCache
 IA__FcPatternGetCharSet
 _hb_ot_shaper_font_data_destroy
-_ZN19hb_ot_map_builder_t11add_featureEjj25hb_ot_map_feature_flags_t
-_ZNK2OT9ExtensionINS_12ExtensionPosEE8dispatchINS_18hb_apply_context_tEEENT_8return_tEPS5_
-_ZN2OT11ValueFormat22sanitize_value_devicesEPNS_21hb_sanitize_context_tEPvPNS_7IntTypeItLj2EEE
+hb_ot_map_builder_t::add_feature(unsigned int, unsigned int, hb_ot_map_feature_flags_t)
+OT::hb_apply_context_t::return_t OT::Extension<OT::ExtensionPos>::dispatch<OT::hb_apply_context_t>(OT::hb_apply_context_t*) const
+OT::ValueFormat::sanitize_value_devices(OT::hb_sanitize_context_t*, void*, OT::IntType<unsigned short, 2u>*)
 IA__FcNameRegisterConstants
-_ZNK2OT14ContextFormat25applyEPNS_18hb_apply_context_tE
-_ZN11hb_buffer_t7enlargeEj
+OT::ContextFormat2::apply(OT::hb_apply_context_t*) const
+hb_buffer_t::enlarge(unsigned int)
 IA__FcConfigSetRescanInterval
 FcPatternAppend
 FcStrSerializeAlloc
 IA__FcPatternEqual
 IA__FcPatternGetBool
 IA__FcPatternAddWeak
-_ZNK2OT20LigatureSubstFormat15applyEPNS_18hb_apply_context_tE
+OT::LigatureSubstFormat1::apply(OT::hb_apply_context_t*) const
 FcSerializeReserve
-_ZN2OT7ArrayOfINS_8OffsetToINS_8SequenceENS_7IntTypeItLj2EEEEES4_E8sanitizeEPNS_21hb_sanitize_context_tEPv
-_ZNK11hb_ot_map_t8positionEPK18hb_ot_shape_plan_tP9hb_font_tP11hb_buffer_t
+OT::ArrayOf<OT::OffsetTo<OT::Sequence, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>::sanitize(OT::hb_sanitize_context_t*, void*)
+hb_ot_map_t::position(hb_ot_shape_plan_t const*, hb_font_t*, hb_buffer_t*) const
 FcValueListDuplicate
-_ZNK2OT9ExtensionINS_12ExtensionPosEE8dispatchINS_25hb_get_coverage_context_tEEENT_8return_tEPS5_
-_ZNK2OT18MarkBasePosFormat15applyEPNS_18hb_apply_context_tE
+OT::hb_get_coverage_context_t::return_t OT::Extension<OT::ExtensionPos>::dispatch<OT::hb_get_coverage_context_t>(OT::hb_get_coverage_context_t*) const
+OT::MarkBasePosFormat1::apply(OT::hb_apply_context_t*) const
 IA__FcCharSetFirstPage
 IA__FcPatternDestroy
 FcStrContainsWord
-_ZNK2OT17MarkLigPosFormat15applyEPNS_18hb_apply_context_tE
+OT::MarkLigPosFormat1::apply(OT::hb_apply_context_t*) const
 IA__FcFreeTypeQueryFace
-_ZNK2OT19ChainContextFormat211would_applyEPNS_24hb_would_apply_context_tE
+OT::ChainContextFormat2::would_apply(OT::hb_would_apply_context_t*) const
 IA__FcStrSetDel
 IA__FcStrBasename
 FcStrBuildFilename
 FcConfigAddCacheDir
-_ZN2OT18hb_apply_context_t28skipping_backward_iterator_tC2EPS0_jjb
+OT::hb_apply_context_t::skipping_backward_iterator_t::skipping_backward_iterator_t(OT::hb_apply_context_t*, unsigned int, unsigned int, bool)
 IA__FcStrFree
-_ZNK2OT11SubstLookup8dispatchINS_27hb_collect_glyphs_context_tEEENT_8return_tEPS3_
+OT::hb_collect_glyphs_context_t::return_t OT::SubstLookup::dispatch<OT::hb_collect_glyphs_context_t>(OT::hb_collect_glyphs_context_t*) const
 FcStrHashIgnoreCase
 IA__FcBlanksAdd
 IA__FcBlanksCreate
-_ZNK2OT11SubstLookup12add_coverageI24hb_set_digest_combiner_tI27hb_set_digest_lowest_bits_tImLj4EES2_IS3_ImLj0EES3_ImLj9EEEEEEvPT_
-_ZN2OT4GPOS8sanitizeEPNS_21hb_sanitize_context_tE
-_ZN11hb_buffer_t16reverse_clustersEv
+void OT::SubstLookup::add_coverage<hb_set_digest_combiner_t<hb_set_digest_lowest_bits_t<unsigned long, 4u>, hb_set_digest_combiner_t<hb_set_digest_lowest_bits_t<unsigned long, 0u>, hb_set_digest_lowest_bits_t<unsigned long, 9u>>>>(hb_set_digest_combiner_t<hb_set_digest_lowest_bits_t<unsigned long, 4u>, hb_set_digest_combiner_t<hb_set_digest_lowest_bits_t<unsigned long, 0u>, hb_set_digest_lowest_bits_t<unsigned long, 9u>>>*) const
+OT::GPOS::sanitize(OT::hb_sanitize_context_t*)
+hb_buffer_t::reverse_clusters()
 IA__FcFreeTypeQuery
-_ZNK2OT8Coverage10intersectsEPK8hb_set_t
-_ZN2OT9ExtensionINS_14ExtensionSubstEE8sanitizeEPNS_21hb_sanitize_context_tE
+OT::Coverage::intersects(hb_set_t const*) const
+OT::Extension<OT::ExtensionSubst>::sanitize(OT::hb_sanitize_context_t*)
 FcPatternObjectGetString
 FcConfigAddBlank
 FcStrContainsIgnoreCase
 IA__FcStrListNext
 FcFreeTypeUcs4ToPrivate
-_ZNK24hb_set_digest_combiner_tI27hb_set_digest_lowest_bits_tImLj4EES_IS0_ImLj0EES0_ImLj9EEEE8may_haveEj
-_ZN2OT8OffsetToINS_12LigCaretListENS_7IntTypeItLj2EEEE8sanitizeEPNS_21hb_sanitize_context_tEPv
+hb_set_digest_combiner_t<hb_set_digest_lowest_bits_t<unsigned long, 4u>, hb_set_digest_combiner_t<hb_set_digest_lowest_bits_t<unsigned long, 0u>, hb_set_digest_lowest_bits_t<unsigned long, 9u>>>::may_have(unsigned int) const
+OT::OffsetTo<OT::LigCaretList, OT::IntType<unsigned short, 2u>>::sanitize(OT::hb_sanitize_context_t*, void*)
 FcConfigAcceptFont
 IA__FcFontSetPrint
 FcLangSetPrint
-_ZNK2OT7Context8dispatchINS_25hb_get_coverage_context_tEEENT_8return_tEPS3_
-_ZN19hb_ot_map_builder_t7compileER11hb_ot_map_t
-_ZNK11hb_ot_map_t5applyI9GPOSProxyEEvRKT_PK18hb_ot_shape_plan_tP9hb_font_tP11hb_buffer_t
+OT::hb_get_coverage_context_t::return_t OT::Context::dispatch<OT::hb_get_coverage_context_t>(OT::hb_get_coverage_context_t*) const
+hb_ot_map_builder_t::compile(hb_ot_map_t&)
+void hb_ot_map_t::apply<GPOSProxy>(GPOSProxy const&, hb_ot_shape_plan_t const*, hb_font_t*, hb_buffer_t*) const
 FcValuePrintWithPosition
-_Z41hb_ot_layout_lookup_would_substitute_fastP9hb_face_tjPKjji
+hb_ot_layout_lookup_would_substitute_fast(hb_face_t*, unsigned int, unsigned int const*, unsigned int, int)
 IA__FcNameGetConstant
 IA__FcPatternAddBool
 FcGetDefaultLang
-_ZNK2OT19SubstLookupSubTable8dispatchINS_24hb_would_apply_context_tEEENT_8return_tEPS3_j
+OT::hb_would_apply_context_t::return_t OT::SubstLookupSubTable::dispatch<OT::hb_would_apply_context_t>(OT::hb_would_apply_context_t*, unsigned int) const
 FcValueListSerializeAlloc
 IA__FcObjectSetCreate
 IA__FcPatternAddCharSet
 FcDirCacheReference
 IA__FcCharSetNextPage
-_Z29hb_ot_layout_substitute_startP9hb_font_tP11hb_buffer_t
+hb_ot_layout_substitute_start(hb_font_t*, hb_buffer_t*)
 IA__FcFontMatch
-_ZN2OT7Context8sanitizeEPNS_21hb_sanitize_context_tE
+OT::Context::sanitize(OT::hb_sanitize_context_t*)
 FcDirCacheScan
 FcPatternObjectInsertElt
 IA__FcCharSetDestroy
 FcMakeTempfile
 FcObjectLookupOtherTypeByName
 FcPatternObjectAddWithBinding
-_ZNK2OT11SubstLookup8dispatchINS_20hb_closure_context_tEEENT_8return_tEPS3_
-_ZN2OT8Coverage4Iter4initERKS0_
-_ZNK2OT21hb_sanitize_context_t11check_arrayEPKvjj
-_ZN11hb_ot_map_t11add_lookupsEP9hb_face_tjjjb
-_ZN11hb_buffer_t8add_infoERK15hb_glyph_info_t
-_ZN9hb_font_t10em_scale_yEs
-_ZN2OT9ExtensionINS_12ExtensionPosEE8sanitizeEPNS_21hb_sanitize_context_tE
+OT::hb_closure_context_t::return_t OT::SubstLookup::dispatch<OT::hb_closure_context_t>(OT::hb_closure_context_t*) const
+OT::Coverage::Iter::init(OT::Coverage const&)
+OT::hb_sanitize_context_t::check_array(void const*, unsigned int, unsigned int) const
+hb_ot_map_t::add_lookups(hb_face_t*, unsigned int, unsigned int, unsigned int, bool)
+hb_buffer_t::add_info(hb_glyph_info_t const&)
+hb_font_t::em_scale_y(short)
+OT::Extension<OT::ExtensionPos>::sanitize(OT::hb_sanitize_context_t*)
 FcDirCacheWrite
 FcDefaultFini
 FcConfigXdgDataHome
 FcStrLastSlash
 _GLOBAL_OFFSET_TABLE_
-_ZNK2OT14ContextFormat27closureEPNS_20hb_closure_context_tE
-_ZN2OT8OffsetToINS_8CoverageENS_7IntTypeItLj2EEEE8sanitizeEPNS_21hb_sanitize_context_tEPv
+OT::ContextFormat2::closure(OT::hb_closure_context_t*) const
+OT::OffsetTo<OT::Coverage, OT::IntType<unsigned short, 2u>>::sanitize(OT::hb_sanitize_context_t*, void*)
 IA__FcConfigSetCurrent
 _hb_fallback_shaper_face_data_create
-_ZN8hb_set_t3addEj
+hb_set_t::add(unsigned int)
 IA__FcFileIsDir
-_ZN2OT11MarkMarkPos8sanitizeEPNS_21hb_sanitize_context_tE
-_ZN11hb_buffer_t14merge_clustersEjj
+OT::MarkMarkPos::sanitize(OT::hb_sanitize_context_t*)
+hb_buffer_t::merge_clusters(unsigned int, unsigned int)
 FcSubstPrint
-_ZNK2OT15ClassDefFormat216intersects_classEPK8hb_set_tj
-_ZNK2OT20LigatureSubstFormat111would_applyEPNS_24hb_would_apply_context_tE
+OT::ClassDefFormat2::intersects_class(hb_set_t const*, unsigned int) const
+OT::LigatureSubstFormat1::would_apply(OT::hb_would_apply_context_t*) const
 IA__FcStrStrIgnoreCase
 FcStringHash
-_ZNK2OT19SubstLookupSubTable8dispatchINS_18hb_apply_context_tEEENT_8return_tEPS3_j
-_ZNK2OT11SubstLookup8dispatchINS_18hb_apply_context_tEEENT_8return_tEPS3_
-_ZN2OT7ArrayOfINS_8OffsetToINS_9PosLookupENS_7IntTypeItLj2EEEEES4_E8sanitizeEPNS_21hb_sanitize_context_tEPv
+OT::hb_apply_context_t::return_t OT::SubstLookupSubTable::dispatch<OT::hb_apply_context_t>(OT::hb_apply_context_t*, unsigned int) const
+OT::hb_apply_context_t::return_t OT::SubstLookup::dispatch<OT::hb_apply_context_t>(OT::hb_apply_context_t*) const
+OT::ArrayOf<OT::OffsetTo<OT::PosLookup, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>::sanitize(OT::hb_sanitize_context_t*, void*)
 IA__FcInit
 IA__FcLangNormalize
 FcCacheFini
@@ -7242,57 +7242,57 @@ IA__FcConfigSetSysRoot
 FcCharSetFreezerCreate
 FcStrBufInit
 IA__FcLangSetEqual
-_ZNK2OT8GSUBGPOS17find_script_indexEjPj
+OT::GSUBGPOS::find_script_index(unsigned int, unsigned int*) const
 _hb_fallback_shaper_shape_plan_data_destroy
 IA__FcDirCacheClean
-_ZNK2OT12ChainRuleSet7closureEPNS_20hb_closure_context_tERNS_32ChainContextClosureLookupContextE
-_ZN11hb_buffer_t9set_masksEjjjj
+OT::ChainRuleSet::closure(OT::hb_closure_context_t*, OT::ChainContextClosureLookupContext&) const
+hb_buffer_t::set_masks(unsigned int, unsigned int, unsigned int, unsigned int)
 IA__FcMatrixMultiply
 IA__FcConfigDestroy
-_ZNK2OT20LigatureSubstFormat17closureEPNS_20hb_closure_context_tE
+OT::LigatureSubstFormat1::closure(OT::hb_closure_context_t*) const
 IA__FcDirSave
 IA__FcStrListCreate
-_ZNK2OT30ReverseChainSingleSubstFormat15applyEPNS_18hb_apply_context_tE
+OT::ReverseChainSingleSubstFormat1::apply(OT::hb_apply_context_t*) const
 IA__FcCacheCreateTagFile
 IA__FcConfigGetRescanInverval
-_ZNK2OT20MultipleSubstFormat15applyEPNS_18hb_apply_context_tE
+OT::MultipleSubstFormat1::apply(OT::hb_apply_context_t*) const
 IA__FcPatternFilter
 _hb_face_nil
-_ZNK9hb_face_t9load_upemEv
+hb_face_t::load_upem() const
 FcMatrixFree
 IA__FcPatternAddLangSet
 IA__FcFreeTypeCharIndex
-_ZNK2OT19SubstLookupSubTable8dispatchINS_25hb_get_coverage_context_tEEENT_8return_tEPS3_j
-_ZN2OT7ArrayOfINS_8OffsetToINS_6LookupENS_7IntTypeItLj2EEEEES4_E8sanitizeEPNS_21hb_sanitize_context_tEPv
+OT::hb_get_coverage_context_t::return_t OT::SubstLookupSubTable::dispatch<OT::hb_get_coverage_context_t>(OT::hb_get_coverage_context_t*, unsigned int) const
+OT::ArrayOf<OT::OffsetTo<OT::Lookup, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>::sanitize(OT::hb_sanitize_context_t*, void*)
 FcValueListCreate
 FcStrUsesHome
 IA__FcNameUnregisterConstants
 _hb_ot_complex_shaper_sea
 IA__FcDirScan
-_ZNK2OT7Context8dispatchINS_27hb_collect_glyphs_context_tEEENT_8return_tEPS3_
-_Z30_hb_ot_shape_fallback_positionPK18hb_ot_shape_plan_tP9hb_font_tP11hb_buffer_t
+OT::hb_collect_glyphs_context_t::return_t OT::Context::dispatch<OT::hb_collect_glyphs_context_t>(OT::hb_collect_glyphs_context_t*) const
+_hb_ot_shape_fallback_position(hb_ot_shape_plan_t const*, hb_font_t*, hb_buffer_t*)
 FcTestPrint
-_ZN2OT4GSUB8sanitizeEPNS_21hb_sanitize_context_tE
-_ZN2OT19ChainContextFormat38sanitizeEPNS_21hb_sanitize_context_tE
-_ZNK2OT9PosLookup8dispatchINS_18hb_apply_context_tEEENT_8return_tEPS3_
+OT::GSUB::sanitize(OT::hb_sanitize_context_t*)
+OT::ChainContextFormat3::sanitize(OT::hb_sanitize_context_t*)
+OT::hb_apply_context_t::return_t OT::PosLookup::dispatch<OT::hb_apply_context_t>(OT::hb_apply_context_t*) const
 FcPatternSerializeAlloc
-_ZNK2OT11SubstLookup12get_subtableEj
-_ZN11hb_buffer_t10copy_glyphEv
+OT::SubstLookup::get_subtable(unsigned int) const
+hb_buffer_t::copy_glyph()
 FcNameUnparseValueList
-_ZNK2OT9SinglePos8dispatchINS_18hb_apply_context_tEEENT_8return_tEPS3_
-_ZN2OT18hb_apply_context_t27skipping_forward_iterator_t4nextEv
+OT::hb_apply_context_t::return_t OT::SinglePos::dispatch<OT::hb_apply_context_t>(OT::hb_apply_context_t*) const
+OT::hb_apply_context_t::skipping_forward_iterator_t::next()
 atexit
-_ZNK2OT9ExtensionINS_14ExtensionSubstEE8dispatchINS_18hb_apply_context_tEEENT_8return_tEPS5_
-_Z27hb_ot_layout_position_startP9hb_font_tP11hb_buffer_t
+OT::hb_apply_context_t::return_t OT::Extension<OT::ExtensionSubst>::dispatch<OT::hb_apply_context_t>(OT::hb_apply_context_t*) const
+hb_ot_layout_position_start(hb_font_t*, hb_buffer_t*)
 IA__FcInitReinitialize
 _hb_fallback_shaper_shape_plan_data_create
 IA__FcPatternRemove
-_ZN2OT9PosLookup18apply_recurse_funcEPNS_18hb_apply_context_tEj
-_ZN2OT14PairPosFormat28sanitizeEPNS_21hb_sanitize_context_tE
+OT::PosLookup::apply_recurse_func(OT::hb_apply_context_t*, unsigned int)
+OT::PairPosFormat2::sanitize(OT::hb_sanitize_context_t*)
 IA__FcConfigGetCache
 IA__FcStrListDone
-_ZNK2OT4GDEF17get_attach_pointsEjjPjS1_
-_ZNK2OT6Anchor10get_anchorEP9hb_font_tjPiS3_
+OT::GDEF::get_attach_points(unsigned int, unsigned int, unsigned int*, unsigned int*) const
+OT::Anchor::get_anchor(hb_font_t*, unsigned int, int*, int*) const
 IA__FcPatternGet
 ftglue_face_goto_table
 IA__FcValueEqual
@@ -7300,47 +7300,47 @@ FcFileIsFile
 IA__FcUtf16Len
 IA__FcDirCacheRescan
 FcPatternObjectListAdd
-_ZNK2OT19SubstLookupSubTable8dispatchINS_27hb_collect_glyphs_context_tEEENT_8return_tEPS3_j
+OT::hb_collect_glyphs_context_t::return_t OT::SubstLookupSubTable::dispatch<OT::hb_collect_glyphs_context_t>(OT::hb_collect_glyphs_context_t*, unsigned int) const
 IA__FcStrListFirst
-_ZNK2OT17CursivePosFormat15applyEPNS_18hb_apply_context_tE
+OT::CursivePosFormat1::apply(OT::hb_apply_context_t*) const
 FcNameUnparseEscaped
 IA__FcCharSetCopy
-_Z22_hb_ot_shape_normalizePK18hb_ot_shape_plan_tP11hb_buffer_tP9hb_font_t
+_hb_ot_shape_normalize(hb_ot_shape_plan_t const*, hb_buffer_t*, hb_font_t*)
 IA__FcNameUnregisterObjectTypes
-_ZN2OT18hb_apply_context_t28skipping_backward_iterator_t4prevEv
+OT::hb_apply_context_t::skipping_backward_iterator_t::prev()
 FcSerializePtr
 FcLangSetSerialize
-_ZN2OT10MarkLigPos8sanitizeEPNS_21hb_sanitize_context_tE
+OT::MarkLigPos::sanitize(OT::hb_sanitize_context_t*)
 IA__FcGetLangs
-_ZN11hb_buffer_t15clear_positionsEv
-_ZNK2OT18SingleSubstFormat214collect_glyphsEPNS_27hb_collect_glyphs_context_tE
+hb_buffer_t::clear_positions()
+OT::SingleSubstFormat2::collect_glyphs(OT::hb_collect_glyphs_context_t*) const
 IA__FcConfigGetBlanks
 FcNameParseLangSet
 _hb_ot_complex_shaper_default
 IA__FcLangSetUnion
-_ZNK2OT9MarkArray5applyEPNS_18hb_apply_context_tEjjRKNS_12AnchorMatrixEjj
+OT::MarkArray::apply(OT::hb_apply_context_t*, unsigned int, unsigned int, OT::AnchorMatrix const&, unsigned int, unsigned int) const
 IA__FcPatternPrint
 FcConfigAcceptFilename
 FcInitLoadOwnConfigAndFonts
 IA__FcNameParse
 IA__FcDirCacheLoadFile
-_ZNK9hb_face_t15load_num_glyphsEv
-_ZN2OT12ChainContext8sanitizeEPNS_21hb_sanitize_context_tE
+hb_face_t::load_num_glyphs() const
+OT::ChainContext::sanitize(OT::hb_sanitize_context_t*)
 _hb_ot_complex_shaper_indic
 IA__FcInitLoadConfigAndFonts
 IA__FcNameUnparse
 FcFileScanConfig
 FcPatternObjectAddInteger
-_ZNK2OT18SingleSubstFormat27closureEPNS_20hb_closure_context_tE
+OT::SingleSubstFormat2::closure(OT::hb_closure_context_t*) const
 FcStrBufDone
 FcObjectLookupOtherNameById
 FcInitLoadOwnConfig
 FcNameUnparseValue
-_ZNK2OT19ChainContextFormat27closureEPNS_20hb_closure_context_tE
+OT::ChainContextFormat2::closure(OT::hb_closure_context_t*) const
 FcValueListPrint
 FcListPatternMatchAny
-_ZN11hb_buffer_t12swap_buffersEv
-_ZN11hb_buffer_t13replace_glyphEj
+hb_buffer_t::swap_buffers()
+hb_buffer_t::replace_glyph(unsigned int)
 FcFontSetDeserialize
 IA__FcInitBringUptoDate
 FcSerializeDestroy
@@ -7349,131 +7349,131 @@ IA__FcCacheCopySet
 FcCacheObjectDereference
 IA__FcStrSetCreate
 IA__FcConfigHome
-_Z30hb_ot_layout_substitute_finishP9hb_font_tP11hb_buffer_t
+hb_ot_layout_substitute_finish(hb_font_t*, hb_buffer_t*)
 IA__FcLangSetGetLangs
-_ZNK2OT19ChainContextFormat25applyEPNS_18hb_apply_context_tE
+OT::ChainContextFormat2::apply(OT::hb_apply_context_t*) const
 ftglue_stream_pos
 FcPatternObjectAddBool
-_ZNK2OT20MarkGlyphSetsFormat16coversEjj
+OT::MarkGlyphSetsFormat1::covers(unsigned int, unsigned int) const
 IA__FcCharSetCreate
 IA__FcCharSetAddChar
-_ZNK2OT7Context8dispatchINS_20hb_closure_context_tEEENT_8return_tEPS3_
+OT::hb_closure_context_t::return_t OT::Context::dispatch<OT::hb_closure_context_t>(OT::hb_closure_context_t*) const
 FcPatternObjectGetDouble
-_ZNK2OT7RuleSet5applyEPNS_18hb_apply_context_tERNS_25ContextApplyLookupContextE
-_ZN2OT7ArrayOfINS_7IntTypeItLj2EEES2_E8sanitizeEPNS_21hb_sanitize_context_tE
-_ZN20hb_user_data_array_t3setEP18hb_user_data_key_tPvPFvS2_Ei
-_ZN11hb_buffer_t12allocate_varEjjPKc
+OT::RuleSet::apply(OT::hb_apply_context_t*, OT::ContextApplyLookupContext&) const
+OT::ArrayOf<OT::IntType<unsigned short, 2u>, OT::IntType<unsigned short, 2u>>::sanitize(OT::hb_sanitize_context_t*)
+hb_user_data_array_t::set(hb_user_data_key_t*, void*, void (*)(void*), int)
+hb_buffer_t::allocate_var(unsigned int, unsigned int, char const*)
 IA__FcCharSetCount
 IA__FcLangGetCharSet
 IA__FcLangSetHasLang
 _hb_ot_complex_shaper_hangul
 IA__FcCharSetCoverage
-_ZNK2OT12ChainRuleSet5applyEPNS_18hb_apply_context_tERNS_30ChainContextApplyLookupContextE
+OT::ChainRuleSet::apply(OT::hb_apply_context_t*, OT::ChainContextApplyLookupContext&) const
 IA__FcFini
-_ZN11hb_buffer_t14deallocate_varEjjPKc
-_ZN2OT8OffsetToINS_13FeatureParamsENS_7IntTypeItLj2EEEE8sanitizeIjEEbPNS_21hb_sanitize_context_tEPvT_
+hb_buffer_t::deallocate_var(unsigned int, unsigned int, char const*)
+bool OT::OffsetTo<OT::FeatureParams, OT::IntType<unsigned short, 2u>>::sanitize<unsigned int>(OT::hb_sanitize_context_t*, void*, unsigned int)
 IA__FcStrSetMember
-_ZN11hb_ot_map_t12lookup_map_t3cmpEPKS0_S2_
-_ZN2OT8OffsetToINS_9MarkArrayENS_7IntTypeItLj2EEEE8sanitizeEPNS_21hb_sanitize_context_tEPv
+hb_ot_map_t::lookup_map_t::cmp(hb_ot_map_t::lookup_map_t const*, hb_ot_map_t::lookup_map_t const*)
+OT::OffsetTo<OT::MarkArray, OT::IntType<unsigned short, 2u>>::sanitize(OT::hb_sanitize_context_t*, void*)
 IA__FcConfigParseAndLoad
 FcStrMatchIgnoreCaseAndDelims
-_ZN11hb_buffer_t12output_glyphEj
-_ZNK2OT9ExtensionINS_14ExtensionSubstEE8dispatchINS_25hb_get_coverage_context_tEEENT_8return_tEPS5_
+hb_buffer_t::output_glyph(unsigned int)
+OT::hb_get_coverage_context_t::return_t OT::Extension<OT::ExtensionSubst>::dispatch<OT::hb_get_coverage_context_t>(OT::hb_get_coverage_context_t*) const
 IA__FcCharSetNew
 IA__FcMatrixScale
 FcHashGetSHA256DigestFromMemory
 IA__FcConfigReference
-_ZNK2OT9ExtensionINS_14ExtensionSubstEE8dispatchINS_27hb_collect_glyphs_context_tEEENT_8return_tEPS5_
+OT::hb_collect_glyphs_context_t::return_t OT::Extension<OT::ExtensionSubst>::dispatch<OT::hb_collect_glyphs_context_t>(OT::hb_collect_glyphs_context_t*) const
 FcNameUnparseLangSet
-_ZNK2OT30ReverseChainSingleSubstFormat17closureEPNS_20hb_closure_context_tE
+OT::ReverseChainSingleSubstFormat1::closure(OT::hb_closure_context_t*) const
 FcPatternObjectAdd
 IA__FcStrDirname
-_ZN2OT9SanitizerINS_4GSUBEE8sanitizeEP9hb_blob_t
-_ZN2OT23ReverseChainSingleSubst8sanitizeEPNS_21hb_sanitize_context_tE
+OT::Sanitizer<OT::GSUB>::sanitize(hb_blob_t*)
+OT::ReverseChainSingleSubst::sanitize(OT::hb_sanitize_context_t*)
 FcNameParseCharSet
 FcObjectLookupIdByName
 __popcountsi2
 IA__FcStrCopy
-_ZN11hb_buffer_t14replace_glyphsEjjPKj
-_ZNK2OT19ChainContextFormat214collect_glyphsEPNS_27hb_collect_glyphs_context_tE
+hb_buffer_t::replace_glyphs(unsigned int, unsigned int, unsigned int const*)
+OT::ChainContextFormat2::collect_glyphs(OT::hb_collect_glyphs_context_t*) const
 IA__FcCharSetSubtractCount
-_ZN11hb_buffer_t13shift_forwardEj
-_ZN2OT8OffsetToINS_12AnchorMatrixENS_7IntTypeItLj2EEEE8sanitizeIjEEbPNS_21hb_sanitize_context_tEPvT_
-_ZNK2OT7RuleSet11would_applyEPNS_24hb_would_apply_context_tERNS_25ContextApplyLookupContextE
-_ZNK2OT7Context8dispatchINS_18hb_apply_context_tEEENT_8return_tEPS3_
+hb_buffer_t::shift_forward(unsigned int)
+bool OT::OffsetTo<OT::AnchorMatrix, OT::IntType<unsigned short, 2u>>::sanitize<unsigned int>(OT::hb_sanitize_context_t*, void*, unsigned int)
+OT::RuleSet::would_apply(OT::hb_would_apply_context_t*, OT::ContextApplyLookupContext&) const
+OT::hb_apply_context_t::return_t OT::Context::dispatch<OT::hb_apply_context_t>(OT::hb_apply_context_t*) const
 IA__FcLangSetSubtract
-_ZNK2OT8ClassDef9add_classEP8hb_set_tj
+OT::ClassDef::add_class(hb_set_t*, unsigned int) const
 IA__FcMatrixEqual
-_ZNK2OT19ChainContextFormat15applyEPNS_18hb_apply_context_tE
+OT::ChainContextFormat1::apply(OT::hb_apply_context_t*) const
 FcObjectValidType
 FcStrRegexCmpIgnoreCase
-_ZNK2OT21AlternateSubstFormat114collect_glyphsEPNS_27hb_collect_glyphs_context_tE
+OT::AlternateSubstFormat1::collect_glyphs(OT::hb_collect_glyphs_context_t*) const
 ftglue_stream_frame_enter
 IA__FcStrCmp
 IA__FcStrStr
-_ZNK2OT20LigatureSubstFormat114collect_glyphsEPNS_27hb_collect_glyphs_context_tE
-_ZN2OT11SubstLookup18apply_recurse_funcEPNS_18hb_apply_context_tEj
-_ZN2OT9SanitizerINS_4GPOSEE8sanitizeEP9hb_blob_t
-_ZN2OT11SubstLookup21dispatch_recurse_funcINS_20hb_closure_context_tEEENT_8return_tEPS3_j
+OT::LigatureSubstFormat1::collect_glyphs(OT::hb_collect_glyphs_context_t*) const
+OT::SubstLookup::apply_recurse_func(OT::hb_apply_context_t*, unsigned int)
+OT::Sanitizer<OT::GPOS>::sanitize(hb_blob_t*)
+OT::hb_closure_context_t::return_t OT::SubstLookup::dispatch_recurse_func<OT::hb_closure_context_t>(OT::hb_closure_context_t*, unsigned int)
 FcValueListPrepend
 IA__FcMatrixRotate
-_Z26_hb_ot_shape_fallback_kernPK18hb_ot_shape_plan_tP9hb_font_tP11hb_buffer_t
+_hb_ot_shape_fallback_kern(hb_ot_shape_plan_t const*, hb_font_t*, hb_buffer_t*)
 IA__FcConfigAppFontAddDir
 __dso_handle
-_ZN11hb_buffer_t18deallocate_var_allEv
+hb_buffer_t::deallocate_var_all()
 FcPatternObjectFindElt
 IA__FcPatternGetString
-_ZN2OT9MarkArray8sanitizeEPNS_21hb_sanitize_context_tE
+OT::MarkArray::sanitize(OT::hb_sanitize_context_t*)
 FcValueListAppend
-_ZN2OT8OffsetToINS_6DeviceENS_7IntTypeItLj2EEEE8sanitizeEPNS_21hb_sanitize_context_tEPv
+OT::OffsetTo<OT::Device, OT::IntType<unsigned short, 2u>>::sanitize(OT::hb_sanitize_context_t*, void*)
 IA__FcCacheNumSubdir
 FcValuePrintFile
-_ZN2OT7ArrayOfINS_8OffsetToINS_11LigatureSetENS_7IntTypeItLj2EEEEES4_E8sanitizeEPNS_21hb_sanitize_context_tEPv
+OT::ArrayOf<OT::OffsetTo<OT::LigatureSet, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>::sanitize(OT::hb_sanitize_context_t*, void*)
 IA__FcCharSetIsSubset
 IA__FcAtomicNewFile
 __DTOR_END__
 IA__FcPatternAddFTFace
 IA__FcConfigGetFontDirs
-_ZNK2OT17PosLookupSubTable8dispatchINS_18hb_apply_context_tEEENT_8return_tEPS3_j
-_ZN2OT18hb_apply_context_t28skipping_backward_iterator_tC1EPS0_jjb
-_ZNK2OT20MultipleSubstFormat17closureEPNS_20hb_closure_context_tE
+OT::hb_apply_context_t::return_t OT::PosLookupSubTable::dispatch<OT::hb_apply_context_t>(OT::hb_apply_context_t*, unsigned int) const
+OT::hb_apply_context_t::skipping_backward_iterator_t::skipping_backward_iterator_t(OT::hb_apply_context_t*, unsigned int, unsigned int, bool)
+OT::MultipleSubstFormat1::closure(OT::hb_closure_context_t*) const
 FcOpPrint
 IA__FcPatternGetDouble
-_ZN11hb_buffer_t7move_toEj
+hb_buffer_t::move_to(unsigned int)
 FcObjectFromName
 IA__FcValuePrint
-_ZNK2OT21AlternateSubstFormat17closureEPNS_20hb_closure_context_tE
+OT::AlternateSubstFormat1::closure(OT::hb_closure_context_t*) const
 FcCharSetFreeze
 FcConfigGlobAdd
-_ZN2OT24hb_would_apply_context_t8dispatchINS_19ChainContextFormat3EEEbRKT_
-_ZN2OT6Lookup9serializeEPNS_22hb_serialize_context_tEjjj
-_ZNK2OT12ChainRuleSet11would_applyEPNS_24hb_would_apply_context_tERNS_30ChainContextApplyLookupContextE
-_ZN2OT19SubstLookupSubTable8sanitizeEPNS_21hb_sanitize_context_tEj
+bool OT::hb_would_apply_context_t::dispatch<OT::ChainContextFormat3>(OT::ChainContextFormat3 const&)
+OT::Lookup::serialize(OT::hb_serialize_context_t*, unsigned int, unsigned int, unsigned int)
+OT::ChainRuleSet::would_apply(OT::hb_would_apply_context_t*, OT::ChainContextApplyLookupContext&) const
+OT::SubstLookupSubTable::sanitize(OT::hb_sanitize_context_t*, unsigned int)
 FcDirCacheCreateTagFile
-_ZN2OT11SubstLookup21dispatch_recurse_funcINS_27hb_collect_glyphs_context_tEEENT_8return_tEPS3_j
-_ZNK2OT18MarkMarkPosFormat15applyEPNS_18hb_apply_context_tE
+OT::hb_collect_glyphs_context_t::return_t OT::SubstLookup::dispatch_recurse_func<OT::hb_collect_glyphs_context_t>(OT::hb_collect_glyphs_context_t*, unsigned int)
+OT::MarkMarkPosFormat1::apply(OT::hb_apply_context_t*) const
 IA__FcFontSetAdd
 FcCharSetSerialize
-_ZN2OT7ArrayOfINS_12LookupRecordENS_7IntTypeItLj2EEEE8sanitizeEPNS_21hb_sanitize_context_tE
+OT::ArrayOf<OT::LookupRecord, OT::IntType<unsigned short, 2u>>::sanitize(OT::hb_sanitize_context_t*)
 IA__FcLangSetAdd
 FcFileIsLink
 FcPatternObjectGet
 _hb_ot_complex_shaper_hebrew
-_ZN2OT7ArrayOfINS_6RecordINS_7LangSysEEENS_7IntTypeItLj2EEEE8sanitizeEPNS_21hb_sanitize_context_tEPv
-_ZNK2OT18hb_apply_context_t13replace_glyphEj
+OT::ArrayOf<OT::Record<OT::LangSys>, OT::IntType<unsigned short, 2u>>::sanitize(OT::hb_sanitize_context_t*, void*)
+OT::hb_apply_context_t::replace_glyph(unsigned int) const
 IA__FcLangSetHash
 FcFreeTypeIsExclusiveLang
-_ZN11hb_buffer_t5resetEv
+hb_buffer_t::reset()
 IA__FcConfigAppFontAddFile
 IA__FcStrCmpIgnoreCase
-_ZN11hb_ot_map_t13feature_map_t3cmpEPKS0_S2_
-_ZNK2OT17PosLookupSubTable8dispatchINS_25hb_get_coverage_context_tEEENT_8return_tEPS3_j
-_ZNK2OT9ExtensionINS_14ExtensionSubstEE8dispatchINS_24hb_would_apply_context_tEEENT_8return_tEPS5_
+hb_ot_map_t::feature_map_t::cmp(hb_ot_map_t::feature_map_t const*, hb_ot_map_t::feature_map_t const*)
+OT::hb_get_coverage_context_t::return_t OT::PosLookupSubTable::dispatch<OT::hb_get_coverage_context_t>(OT::hb_get_coverage_context_t*, unsigned int) const
+OT::hb_would_apply_context_t::return_t OT::Extension<OT::ExtensionSubst>::dispatch<OT::hb_would_apply_context_t>(OT::hb_would_apply_context_t*) const
 FcEditDestroy
-_ZN2OT22hb_serialize_context_t4copyINS_11SubstLookupEEEPT_v
-_ZN2OT11ValueFormat29sanitize_values_stride_unsafeEPNS_21hb_sanitize_context_tEPvPNS_7IntTypeItLj2EEEjj
+OT::SubstLookup* OT::hb_serialize_context_t::copy<OT::SubstLookup>()
+OT::ValueFormat::sanitize_values_stride_unsafe(OT::hb_sanitize_context_t*, void*, OT::IntType<unsigned short, 2u>*, unsigned int, unsigned int)
 IA__FcPatternAdd
-_ZN9hb_font_t34get_glyph_contour_point_for_originEjj14hb_direction_tPiS1_
+hb_font_t::get_glyph_contour_point_for_origin(unsigned int, unsigned int, hb_direction_t, int*, int*)
 IA__FcNameRegisterObjectTypes
 IA__FcGetVersion
 IA__FcAtomicReplaceOrig
@@ -7482,10 +7482,10 @@ FcFreeTypeLangSet
 IA__FcDirCacheValid
 IA__FcConfigGetSysRoot
 FcIsFsMmapSafe
-_ZNK2OT6Script19find_lang_sys_indexEjPj
+OT::Script::find_lang_sys_index(unsigned int, unsigned int*) const
 IA__FcUtf16ToUcs4
 _hb_fallback_shaper_face_data_destroy
-_Z49_hb_ot_shape_fallback_position_recategorize_marksPK18hb_ot_shape_plan_tP9hb_font_tP11hb_buffer_t
+_hb_ot_shape_fallback_position_recategorize_marks(hb_ot_shape_plan_t const*, hb_font_t*, hb_buffer_t*)
 FcStrRegexCmp
 IA__FcConfigSubstituteWithPat
 IA__FcBlanksIsMember
@@ -7494,17 +7494,17 @@ FcCharSetFindLeafCreate
 IA__FcLangSetCopy
 IA__FcAtomicLock
 IA__FcConfigGetConfigDirs
-_ZN11hb_buffer_t18merge_out_clustersEjj
+hb_buffer_t::merge_out_clusters(unsigned int, unsigned int)
 __i686.get_pc_thunk.cx
 IA__FcUtf8ToUcs4
-_ZN2OT7ArrayOfINS_8OffsetToINS_8CoverageENS_7IntTypeIjLj4EEEEENS3_ItLj2EEEE8sanitizeEPNS_21hb_sanitize_context_tEPv
+OT::ArrayOf<OT::OffsetTo<OT::Coverage, OT::IntType<unsigned int, 4u>>, OT::IntType<unsigned short, 2u>>::sanitize(OT::hb_sanitize_context_t*, void*)
 FcOpen
-_ZN2OT17PosLookupSubTable8sanitizeEPNS_21hb_sanitize_context_tEj
+OT::PosLookupSubTable::sanitize(OT::hb_sanitize_context_t*, unsigned int)
 IA__FcMatrixCopy
 FcSerializeOffset
 IA__FcPatternGetInteger
 IA__FcAtomicOrigFile
-_ZN11hb_buffer_t10next_glyphEv
+hb_buffer_t::next_glyph()
 IA__FcPatternGetFTFace
 IA__FcDirCacheRead
 FcStrCmpIgnoreCaseAndDelims
@@ -7513,18 +7513,18 @@ IA__FcFontSetList
 FcInitDebug
 FcStat
 IA__FcGetDefaultLangs
-_ZN2OT7ArrayOfINS_6RecordINS_6ScriptEEENS_7IntTypeItLj2EEEE8sanitizeEPNS_21hb_sanitize_context_tEPv
+OT::ArrayOf<OT::Record<OT::Script>, OT::IntType<unsigned short, 2u>>::sanitize(OT::hb_sanitize_context_t*, void*)
 FcPatternObjectAddDouble
-_ZN11hb_buffer_t18get_scratch_bufferEPj
+hb_buffer_t::get_scratch_buffer(unsigned int*)
 IA__FcObjectSetDestroy
-_ZNK2OT12ChainContext8dispatchINS_25hb_get_coverage_context_tEEENT_8return_tEPS3_
+OT::hb_get_coverage_context_t::return_t OT::ChainContext::dispatch<OT::hb_get_coverage_context_t>(OT::hb_get_coverage_context_t*) const
 _hb_ot_shape
 IA__FcCharSetIntersectCount
 IA__FcConfigGetCacheDirs
-_ZNK2OT8ClassDef9get_classEj
+OT::ClassDef::get_class(unsigned int) const
 IA__FcStrCopyFilename
-_ZNK2OT11LigatureSet7closureEPNS_20hb_closure_context_tE
-_ZNK2OT8Coverage12get_coverageEj
+OT::LigatureSet::closure(OT::hb_closure_context_t*) const
+OT::Coverage::get_coverage(unsigned int) const
 IA__FcConfigFilename
 IA__FcDirCacheLoad
 FcCharSetPrint
@@ -7535,86 +7535,86 @@ FcStrBufData
 IA__FcCharSetDelChar
 _hb_unicode_funcs_nil
 FcConfigInit
-_ZN11hb_buffer_t11output_infoERK15hb_glyph_info_t
-_ZN11hb_buffer_t13make_room_forEjj
+hb_buffer_t::output_info(hb_glyph_info_t const&)
+hb_buffer_t::make_room_for(unsigned int, unsigned int)
 FcNameUnparseCharSet
 IA__FcConfigGetRescanInterval
-_ZNK2OT19ChainContextFormat314collect_glyphsEPNS_27hb_collect_glyphs_context_tE
+OT::ChainContextFormat3::collect_glyphs(OT::hb_collect_glyphs_context_t*) const
 IA__FcBlanksDestroy
 IA__FcFreeTypeCharSet
 FcMakeDirectory
 FcIsFsMtimeBroken
 FcStrGlobMatch
-_Z28hb_ot_layout_position_finishP9hb_font_tP11hb_buffer_t
+hb_ot_layout_position_finish(hb_font_t*, hb_buffer_t*)
 IA__FcPatternAddDouble
 _hb_fallback_shape
 _hb_options
-_ZNK2OT18hb_apply_context_t16_set_glyph_propsEjjbb
-_ZN2OT14PairPosFormat18sanitizeEPNS_21hb_sanitize_context_tE
+OT::hb_apply_context_t::_set_glyph_props(unsigned int, unsigned int, bool, bool) const
+OT::PairPosFormat1::sanitize(OT::hb_sanitize_context_t*)
 IA__FcStrPlus
 IA__FcAtomicDestroy
 IA__FcConfigAppFontClear
-_ZN11hb_buffer_t13reverse_rangeEjj
-_Z23hb_indic_get_categoriesj
+hb_buffer_t::reverse_range(unsigned int, unsigned int)
+hb_indic_get_categories(unsigned int)
 _hb_ot_complex_shaper_thai
 _hb_ot_complex_shaper_myanmar_old
 FcStrSetAddLangs
 IA__FcLangSetCompare
 IA__FcFontSetMatch
 FcSerializeCreate
-_ZN2OT7ArrayOfINS_8OffsetToINS_11SubstLookupENS_7IntTypeItLj2EEEEES4_E8sanitizeEPNS_21hb_sanitize_context_tEPv
+OT::ArrayOf<OT::OffsetTo<OT::SubstLookup, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>::sanitize(OT::hb_sanitize_context_t*, void*)
 IA__FcStrSetEqual
 IA__FcPatternGetLangSet
 IA__FcConfigBuildFonts
-_ZN2OT9SanitizerINS_4GDEFEE8sanitizeEP9hb_blob_t
+OT::Sanitizer<OT::GDEF>::sanitize(hb_blob_t*)
 _hb_ot_complex_shaper_tibetan
 IA__FcCharSetSubtract
 IA__FcPatternReference
 IA__FcCharSetIntersect
 IA__FcPatternHash
-_ZN2OT7ArrayOfINS_6RecordINS_7FeatureEEENS_7IntTypeItLj2EEEE8sanitizeEPNS_21hb_sanitize_context_tEPv
+OT::ArrayOf<OT::Record<OT::Feature>, OT::IntType<unsigned short, 2u>>::sanitize(OT::hb_sanitize_context_t*, void*)
 _hb_ot_shaper_shape_plan_data_create
 FcDirCacheRebuild
 _hb_ot_shaper_font_data_create
-_ZN11hb_buffer_t5clearEv
-_ZN2OT7ArrayOfINS_8OffsetToINS_8CoverageENS_7IntTypeItLj2EEEEES4_E8sanitizeEPNS_21hb_sanitize_context_tEPv
+hb_buffer_t::clear()
+OT::ArrayOf<OT::OffsetTo<OT::Coverage, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>::sanitize(OT::hb_sanitize_context_t*, void*)
 __divdi3
-_ZNK2OT8Coverage12add_coverageI8hb_set_tEEvPT_
+void OT::Coverage::add_coverage<hb_set_t>(hb_set_t*) const
 IA__FcCharSetEqual
 FcConfigAddDir
 FcConfigFini
 IA__FcPatternAddMatrix
 IA__FcDirCacheUnlink
 IA__FcStrSetAddFilename
-_ZNK2OT21AlternateSubstFormat15applyEPNS_18hb_apply_context_tE
+OT::AlternateSubstFormat1::apply(OT::hb_apply_context_t*) const
 FcCharSetSerializeAlloc
 FcGetPrgname
 FcStrCmpIgnoreBlanksAndCase
 FcEditPrint
-_ZN2OT17CursivePosFormat18sanitizeEPNS_21hb_sanitize_context_tE
-_ZN2OT11SingleSubst9serializeEPNS_22hb_serialize_context_tERNS_8SupplierINS_7IntTypeItLj2EEEEES7_j
+OT::CursivePosFormat1::sanitize(OT::hb_sanitize_context_t*)
+OT::SingleSubst::serialize(OT::hb_serialize_context_t*, OT::Supplier<OT::IntType<unsigned short, 2u>>&, OT::Supplier<OT::IntType<unsigned short, 2u>>&, unsigned int)
 FcLangSetPromote
 IA__FcUcs4ToUtf8
 FcStrBufString
 FcObjectLookupBuiltinIdByName
-_ZNK2OT20MultipleSubstFormat114collect_glyphsEPNS_27hb_collect_glyphs_context_tE
+OT::MultipleSubstFormat1::collect_glyphs(OT::hb_collect_glyphs_context_t*) const
 FcPatternObjectAddString
-_ZN19hb_ot_map_builder_t14feature_info_t3cmpEPKS0_S2_
-_ZN2OT7ArrayOfINS_8OffsetToINS0_INS_7IntTypeItLj2EEES3_EES3_EES3_E8sanitizeEPNS_21hb_sanitize_context_tEPv
+hb_ot_map_builder_t::feature_info_t::cmp(hb_ot_map_builder_t::feature_info_t const*, hb_ot_map_builder_t::feature_info_t const*)
+OT::ArrayOf<OT::OffsetTo<OT::ArrayOf<OT::IntType<unsigned short, 2u>, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>, OT::IntType<unsigned short, 2u>>::sanitize(OT::hb_sanitize_context_t*, void*)
 IA__FcStrDowncase
 _hb_ot_complex_shaper_myanmar
 _hb_fallback_shaper_font_data_destroy
 IA__FcAtomicUnlock
 FcConfigPatternsAdd
 FcConfigSetFonts
-_ZN19hb_ot_map_builder_tC1EP9hb_face_tPK23hb_segment_properties_t
+hb_ot_map_builder_t::hb_ot_map_builder_t(hb_face_t*, hb_segment_properties_t const*)
 FcStatChecksum
 FcStrSerialize
 IA__FcNameGetObjectType
-_Z16_hb_options_initv
-_ZNK2OT7RuleSet7closureEPNS_20hb_closure_context_tERNS_27ContextClosureLookupContextE
+_hb_options_init()
+OT::RuleSet::closure(OT::hb_closure_context_t*, OT::ContextClosureLookupContext&) const
 IA__FcConfigGetCurrent
-_ZN19hb_ot_map_builder_t9add_pauseEjPFvPK18hb_ot_shape_plan_tP9hb_font_tP11hb_buffer_tE
+hb_ot_map_builder_t::add_pause(unsigned int, void (*)(hb_ot_shape_plan_t const*, hb_font_t*, hb_buffer_t*))
 FcSerializeAlloc
 FcHashGetSHA256DigestFromFile
 FcStrBufDoneStatic
@@ -7624,83 +7624,83 @@ IA__FcStrSetDestroy
 FcDirCacheBuild
 FcStrBufChar
 IA__FcFreeTypeCharSetAndSpacing
-_ZN2OT4GDEF8sanitizeEPNS_21hb_sanitize_context_tE
-_ZN11hb_buffer_t12clear_outputEv
-_ZNK2OT14PairPosFormat15applyEPNS_18hb_apply_context_tE
+OT::GDEF::sanitize(OT::hb_sanitize_context_t*)
+hb_buffer_t::clear_output()
+OT::PairPosFormat1::apply(OT::hb_apply_context_t*) const
 IA__FcCharSetHasChar
-_ZNK2OT13SortedArrayOfINS_11RangeRecordENS_7IntTypeItLj2EEEE7bsearchIjEEiRKT_
+int OT::SortedArrayOf<OT::RangeRecord, OT::IntType<unsigned short, 2u>>::bsearch<unsigned int>(unsigned int const&) const
 IA__FcPatternGetMatrix
-_Z20_hb_ot_layout_createP9hb_face_t
-_ZNK2OT19SubstLookupSubTable8dispatchINS_20hb_closure_context_tEEENT_8return_tEPS3_j
+_hb_ot_layout_create(hb_face_t*)
+OT::hb_closure_context_t::return_t OT::SubstLookupSubTable::dispatch<OT::hb_closure_context_t>(OT::hb_closure_context_t*, unsigned int) const
 IA__FcFontSetSortDestroy
 FcConfigAddFontDir
 IA__FcFontSetCreate
 IA__FcLangSetContains
 FcRandom
 FcTestDestroy
-_ZNK2OT19ChainContextFormat35applyEPNS_18hb_apply_context_tE
+OT::ChainContextFormat3::apply(OT::hb_apply_context_t*) const
 IA__FcStrSetAdd
-_ZNK2OT30ReverseChainSingleSubstFormat114collect_glyphsEPNS_27hb_collect_glyphs_context_tE
+OT::ReverseChainSingleSubstFormat1::collect_glyphs(OT::hb_collect_glyphs_context_t*) const
 FcConfigXdgCacheHome
 ftglue_stream_frame_exit
 IA__FcFontSetDestroy
 IA__FcFontList
-_ZN19hb_ot_map_builder_tC2EP9hb_face_tPK23hb_segment_properties_t
-_ZNK11hb_ot_map_t15collect_lookupsEjP8hb_set_t
-_ZNK2OT19ChainContextFormat17closureEPNS_20hb_closure_context_tE
-_ZN2OT20LigatureSubstFormat19serializeEPNS_22hb_serialize_context_tERNS_8SupplierINS_7IntTypeItLj2EEEEERNS3_IjEEjS7_S9_S7_
+hb_ot_map_builder_t::hb_ot_map_builder_t(hb_face_t*, hb_segment_properties_t const*)
+hb_ot_map_t::collect_lookups(unsigned int, hb_set_t*) const
+OT::ChainContextFormat1::closure(OT::hb_closure_context_t*) const
+OT::LigatureSubstFormat1::serialize(OT::hb_serialize_context_t*, OT::Supplier<OT::IntType<unsigned short, 2u>>&, OT::Supplier<unsigned int>&, unsigned int, OT::Supplier<OT::IntType<unsigned short, 2u>>&, OT::Supplier<unsigned int>&, OT::Supplier<OT::IntType<unsigned short, 2u>>&)
 _hb_modified_combining_class
 IA__FcCharSetUnion
 IA__FcFontSetSort
 IA__FcDefaultSubstitute
 FcPatternObjectGetInteger
-_ZNK11hb_ot_map_t5applyI9GSUBProxyEEvRKT_PK18hb_ot_shape_plan_tP9hb_font_tP11hb_buffer_t
+void hb_ot_map_t::apply<GSUBProxy>(GSUBProxy const&, hb_ot_shape_plan_t const*, hb_font_t*, hb_buffer_t*) const
 IA__FcValueSave
 ftglue_stream_seek
-_ZNK2OT14ContextFormat214collect_glyphsEPNS_27hb_collect_glyphs_context_tE
-_ZN2OT8OffsetToINS_8LigGlyphENS_7IntTypeItLj2EEEE8sanitizeEPNS_21hb_sanitize_context_tEPv
+OT::ContextFormat2::collect_glyphs(OT::hb_collect_glyphs_context_t*) const
+OT::OffsetTo<OT::LigGlyph, OT::IntType<unsigned short, 2u>>::sanitize(OT::hb_sanitize_context_t*, void*)
 FcFontSetSerializeAlloc
-_ZNK11hb_ot_map_t10substituteEPK18hb_ot_shape_plan_tP9hb_font_tP11hb_buffer_t
-_ZN11hb_buffer_t3addEjj
-_ZN11hb_buffer_t10assert_varEjjPKc
-_ZN20hb_user_data_array_t3getEP18hb_user_data_key_t
+hb_ot_map_t::substitute(hb_ot_shape_plan_t const*, hb_font_t*, hb_buffer_t*) const
+hb_buffer_t::add(unsigned int, unsigned int)
+hb_buffer_t::assert_var(unsigned int, unsigned int, char const*)
+hb_user_data_array_t::get(hb_user_data_key_t*)
 IA__FcPatternBuild
-_ZNK2OT11ValueFormat11apply_valueEP9hb_font_t14hb_direction_tPKvPKNS_7IntTypeItLj2EEER19hb_glyph_position_t
+OT::ValueFormat::apply_value(hb_font_t*, hb_direction_t, void const*, OT::IntType<unsigned short, 2u> const*, hb_glyph_position_t&) const
 IA__FcLangSetDestroy
 FcPatternSerialize
-_ZNK2OT9ExtensionINS_14ExtensionSubstEE12get_subtableINS_19SubstLookupSubTableEEERKT_v
-_ZN2OT9SinglePos8sanitizeEPNS_21hb_sanitize_context_tE
+OT::SubstLookupSubTable const& OT::Extension<OT::ExtensionSubst>::get_subtable<OT::SubstLookupSubTable>() const
+OT::SinglePos::sanitize(OT::hb_sanitize_context_t*)
 FcNameBool
 FcConfigAddConfigFile
 IA__FcAtomicDeleteNew
 IA__FcCacheNumFont
-_ZN2OT8Coverage4Iter4nextEv
+OT::Coverage::Iter::next()
 FcFreeTypeGetPrivateMap
 IA__FcObjectSetBuild
-_ZN11hb_buffer_t7reverseEv
+hb_buffer_t::reverse()
 IA__FcUtf8Len
 IA__FcPatternDuplicate
-_ZNK2OT11SingleSubst8dispatchINS_18hb_apply_context_tEEENT_8return_tEPS3_
-_ZN2OT11MarkBasePos8sanitizeEPNS_21hb_sanitize_context_tE
+OT::hb_apply_context_t::return_t OT::SingleSubst::dispatch<OT::hb_apply_context_t>(OT::hb_apply_context_t*) const
+OT::MarkBasePos::sanitize(OT::hb_sanitize_context_t*)
 FcStrCanonFilename
 IA__FcFontSort
-_ZNK2OT7Context8dispatchINS_24hb_would_apply_context_tEEENT_8return_tEPS3_
-_Z30hb_ot_layout_substitute_lookupPN2OT18hb_apply_context_tERKNS_11SubstLookupERK33hb_ot_layout_lookup_accelerator_t
+OT::hb_would_apply_context_t::return_t OT::Context::dispatch<OT::hb_would_apply_context_t>(OT::hb_would_apply_context_t*) const
+hb_ot_layout_substitute_lookup(OT::hb_apply_context_t*, OT::SubstLookup const&, hb_ot_layout_lookup_accelerator_t const&)
 FcHashGetSHA256Digest
-_ZN11hb_buffer_t13remove_outputEv
+hb_buffer_t::remove_output()
 IA__FcConfigSubstitute
 IA__FcFontRenderPrepare
 IA__FcFileScan
-_ZNK2OT9ExtensionINS_14ExtensionSubstEE8get_typeEv
+OT::Extension<OT::ExtensionSubst>::get_type() const
 FcDebugVal
 IA__FcPatternAddString
-_ZNK2OT7RuleSet14collect_glyphsEPNS_27hb_collect_glyphs_context_tERNS_33ContextCollectGlyphsLookupContextE
+OT::RuleSet::collect_glyphs(OT::hb_collect_glyphs_context_t*, OT::ContextCollectGlyphsLookupContext&) const
 FcValueCanonicalize
 IA__FcDirCacheUnload
 __popcount_tab
 __i686.get_pc_thunk.bx
-_ZN2OT8OffsetToINS_8ClassDefENS_7IntTypeItLj2EEEE8sanitizeEPNS_21hb_sanitize_context_tEPv
-_ZNK2OT4GDEF15mark_set_coversEjj
+OT::OffsetTo<OT::ClassDef, OT::IntType<unsigned short, 2u>>::sanitize(OT::hb_sanitize_context_t*, void*)
+OT::GDEF::mark_set_covers(unsigned int, unsigned int) const
 FcIdentityMatrix
 _DYNAMIC
 FcStrBufDestroy
@@ -7709,8 +7709,8 @@ IA__FcLangSetDel
 FcAlignSize
 IA__FcMatrixShear
 _hb_ot_shaper_face_data_destroy
-_ZNK2OT15ClassDefFormat116intersects_classEPK8hb_set_tj
-_Z15_hb_shapers_getv
+OT::ClassDefFormat1::intersects_class(hb_set_t const*, unsigned int) const
+_hb_shapers_get()
 FcObjectGetSet
 IA__FcConfigGetFonts
 FcExprPrint

@@ -5,13 +5,13 @@ _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
 __cxa_finalize
 g_pMemAllocSteam
-_ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 malloc
 free
 localeconv
-_ZN10CValidator4PushEPKcPvS1_
-_ZN10CValidator11ClaimMemoryEPKv
-_ZN10CValidator3PopEv
+CValidator::Push(char const*, void*, char const*)
+CValidator::ClaimMemory(void const*)
+CValidator::Pop()
 V_binarytohex
 __wrap_fopen64
 ftello64
@@ -28,7 +28,7 @@ strtoll
 V_atoui64
 __cxa_atexit
 __pthread_key_create
-_ZN10CValidator16ClaimArrayMemoryEPKv
+CValidator::ClaimArrayMemory(void const*)
 V_snprintf
 V_strnicmp
 Warning
@@ -36,10 +36,10 @@ V_atof
 _DMsg
 V_strncpy
 V_strtoui64
-_Z21V_SplitStringInternalPKcPKS0_PS0_iR10CUtlVectorI10CUtlString10CUtlMemoryIS5_EEb
+V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, bool)
 strcmp
-_ZTVN10__cxxabiv117__class_type_infoE
-_ZTVN10__cxxabiv120__si_class_type_infoE
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
 V_SplitNumbers
 V_SplitNumbersUint
 ThreadInterlockedDecrement
@@ -50,10 +50,10 @@ getcwd
 V_strncat_length
 V_RemoveDotSlashes
 V_FixDoubleSlashes
-_ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
-_ZN16SteamThreadTools17CThreadSyncObjectD2Ev
-_ZN16SteamThreadTools12CThreadMutexD1Ev
-_ZN16SteamThreadTools12CThreadEvent3SetEv
+AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
+SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
+SteamThreadTools::CThreadMutex::~CThreadMutex()
+SteamThreadTools::CThreadEvent::Set()
 pthread_mutex_lock
 pthread_mutex_unlock
 Error
@@ -75,7 +75,7 @@ VProfInternalEnterScopeCurrentThread
 getenv
 __wrap___xstat
 __wrap_chmod
-_Z9V_stristrPKcS0_
+V_stristr(char const*, char const*)
 __wrap_utime
 __wrap_rename
 __wrap___lxstat64
@@ -107,8 +107,8 @@ strrchr
 __wrap_scandir64
 __wrap_symlink
 strcasecmp
-_ZN16SteamThreadTools12CThreadMutexC1Ev
-_ZN16SteamThreadTools12CThreadEventC1Eb
+SteamThreadTools::CThreadMutex::CThreadMutex()
+SteamThreadTools::CThreadEvent::CThreadEvent(bool)
 V_UnqualifiedFileName
 V_MakeAbsolutePath
 CreateInterface
@@ -169,23 +169,23 @@ StringAfterPrefix
 V_StrTrim
 V_StrTrimAsciiSpaceChar
 _strlwr
-_Z30V_EscapeShellArgumentAndAppendP17CUtlStringBuilderPKcb
-_ZN11SteamStdLib17CCommandLineParamD2Ev
-_ZN11SteamStdLib17CCommandLineParamD1Ev
+V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
+SteamStdLib::CCommandLineParam::~CCommandLineParam()
+SteamStdLib::CCommandLineParam::~CCommandLineParam()
 Plat_GetProcessArgv
-_ZN11SteamStdLib11CommandLineEv
-_ZN11SteamStdLib17CCommandLineParamC2EPKcS2_
-_ZN11SteamStdLib17CCommandLineParamC1EPKcS2_
+SteamStdLib::CommandLine()
+SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
+SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
 V_StrReplaceChar
-_Z23V_ParseShellCommandLinePKcR10CUtlVectorI10CUtlString10CUtlMemoryIS2_EEiPS0_
+V_ParseShellCommandLine(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, int, char const**)
 StringFindSuffix
-_ZN16SteamThreadTools16CThreadLocalBaseD2Ev
+SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
 Coroutine_ReleaseThreadMemory
-_ZNK16SteamThreadTools16CThreadLocalBase3GetEv
+SteamThreadTools::CThreadLocalBase::Get() const
 Coroutine_ValidateGlobals
-_ZN16SteamThreadTools16CThreadLocalBase3SetEPv
+SteamThreadTools::CThreadLocalBase::Set(void*)
 g_VProfile
-_ZN10SteamVProf9CVProfile10EnterScopeEPKc17EVProfBugdetGroupPv
+SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
 longjmp
 VProfInternalGetProfileForCurrentThread
 Coroutine_Create
@@ -194,21 +194,21 @@ Coroutine_IsActive
 Coroutine_GetCurrentlyActive
 Coroutine_YieldToMain
 _setjmp
-_ZN10SteamVProf9CVProfile9ExitScopeEv
+SteamVProf::CVProfile::ExitScope()
 Coroutine_Continue
 Coroutine_Test
 Coroutine_DebugBreak
 Coroutine_GetStackDepth
 Coroutine_IsAddressInOurStack
-_ZN16SteamThreadTools16CThreadLocalBaseC2Ev
+SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
 VStdLib_GetICVarFactory
 DebugStatsSystem
 ThreadGetCurrentId
 ThreadInterlockedAssignIf
-_ZNV16SteamThreadTools15CThreadSpinLock4LockEj
-_ZN16SteamThreadTools13CThreadRWLock12LockForWriteEv
-_ZN16SteamThreadTools13CThreadRWLock11UnlockWriteEv
-_ZN16SteamThreadTools13CThreadRWLock11WaitForReadEv
+SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
+SteamThreadTools::CThreadRWLock::LockForWrite()
+SteamThreadTools::CThreadRWLock::UnlockWrite()
+SteamThreadTools::CThreadRWLock::WaitForRead()
 GetOSDetailString
 uname
 GetNameFromOSType
@@ -222,41 +222,41 @@ GetPortableOsVersionInformation
 V_URLPartsToString
 V_strnappend
 V_URLParse
-_ZN20CUniformRandomStream7SetSeedEi
+CUniformRandomStream::SetSeed(int)
 InstallUniformRandomStream
-_ZN20CUniformRandomStreamC2Ev
-_ZTV20CUniformRandomStream
+CUniformRandomStream::CUniformRandomStream()
+vtable for CUniformRandomStream
 Plat_RelativeTicks
-_ZN20CUniformRandomStreamC1Ev
-_ZN20CUniformRandomStream20GenerateRandomNumberEv
-_ZN20CUniformRandomStream11RandomFloatEff
-_ZN20CUniformRandomStream9RandomIntEii
-_ZN20CUniformRandomStream16RandomFillMemoryEPvj
-_ZN20CUniformRandomStream10RandomCharEv
+CUniformRandomStream::CUniformRandomStream()
+CUniformRandomStream::GenerateRandomNumber()
+CUniformRandomStream::RandomFloat(float, float)
+CUniformRandomStream::RandomInt(int, int)
+CUniformRandomStream::RandomFillMemory(void*, unsigned int)
+CUniformRandomStream::RandomChar()
 WeakRandomFillMemory
 WeakRandomFloat
 WeakRandomInt
 WeakRandomChar
-_ZN21CGaussianRandomStream14AttachToStreamEP20IUniformRandomStream
+CGaussianRandomStream::AttachToStream(IUniformRandomStream*)
 WeakRandomSeed
-_ZN21CGaussianRandomStreamC2EP20IUniformRandomStream
-_ZN21CGaussianRandomStreamC1EP20IUniformRandomStream
-_ZN21CGaussianRandomStream11RandomFloatEff
+CGaussianRandomStream::CGaussianRandomStream(IUniformRandomStream*)
+CGaussianRandomStream::CGaussianRandomStream(IUniformRandomStream*)
+CGaussianRandomStream::RandomFloat(float, float)
 logf
 sqrtf
 WeakRandomGaussianFloat
-_ZTS20CUniformRandomStream
-_ZTI20CUniformRandomStream
-_ZN20CStringNormalization4FoldEPKwPwi
+typeinfo name for CUniformRandomStream
+typeinfo for CUniformRandomStream
+CStringNormalization::Fold(wchar_t const*, wchar_t*, int)
 V_wcsncpy
-_ZN20CStringNormalization15ValidateStaticsER10CValidatorPKc
-_ZN20CStringNormalization24Test_BValidateStructuresEv
-_ZN20CStringNormalization10InitializeEv
+CStringNormalization::ValidateStatics(CValidator&, char const*)
+CStringNormalization::Test_BValidateStructures()
+CStringNormalization::Initialize()
 ThreadImplOneTimeInit
-_ZN20CStringNormalization9NormalizeEbPKwPwi
+CStringNormalization::Normalize(bool, wchar_t const*, wchar_t*, int)
 V_IsMeanSpaceW
 towlower
-_ZN20CStringNormalization9NormalizeEbPKcPci
+CStringNormalization::Normalize(bool, char const*, char*, int)
 V_NormalizeUTF8
 V_stricmp_filename
 vstdlib_wcstoi64
@@ -297,7 +297,7 @@ V_MakeRelativePath
 V_TruncateAbsolutePathToDiskIdentity
 V_StrSubst
 V_StrSubstInPlace
-_Z13V_JoinStringsRK10CUtlVectorI10CUtlString10CUtlMemoryIS0_EEPKc
+V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString>> const&, char const*)
 V_IsInCommaDelimitedList
 V_GetCurrentDirectory
 V_SetCurrentDirectory
@@ -308,12 +308,12 @@ V_RemoveChar
 V_strcmp_prefix
 V_stricmp_prefix
 V_strristr
-_Z10V_atoui128PKc
+V_atoui128(char const*)
 V_FormatAndAppendV
 V_FormatAndAppendTail
-_Z35V_EscapeShellArgumentAndAppendWin32PcjPKc
-_Z35V_EscapeShellArgumentAndAppendPOSIXPcjPKc
-_Z30V_EscapeShellArgumentAndAppendPcjPKc
+V_EscapeShellArgumentAndAppendWin32(char*, unsigned int, char const*)
+V_EscapeShellArgumentAndAppendPOSIX(char*, unsigned int, char const*)
+V_EscapeShellArgumentAndAppend(char*, unsigned int, char const*)
 V_BasicHtmlEntityEncode
 V_BasicHtmlEntityEncodeBuffer
 V_EscapeStringForPHP
@@ -330,11 +330,11 @@ V_URLEncodeToUtlString
 V_URLDecode
 V_URLEncodeRaw
 V_URLDecodeRaw
-_Z21V_ConvertStringToUUIDPKc16EUUIDStringFlagsP6V_UUID
-_Z21V_ConvertStringToUUIDPKw16EUUIDStringFlagsP6V_UUID
+V_ConvertStringToUUID(char const*, EUUIDStringFlags, V_UUID*)
+V_ConvertStringToUUID(wchar_t const*, EUUIDStringFlags, V_UUID*)
 swscanf
-_Z21V_ConvertUUIDToStringPK6V_UUID16EUUIDStringFlagsPci
-_Z21V_ConvertUUIDToStringPK6V_UUID16EUUIDStringFlagsPwi
+V_ConvertUUIDToString(V_UUID const*, EUUIDStringFlags, char*, int)
+V_ConvertUUIDToString(V_UUID const*, EUUIDStringFlags, wchar_t*, int)
 V_MatchWildcardString
 V_MatchWildcardDNSName
 V_toupper
@@ -366,19 +366,19 @@ V_StripPrecedingAndTrailingWhitespace
 V_AggressiveStripPrecedingAndTrailingWhitespace
 V_StripUnprintable
 V_JoinNumbers
-_Z13V_JoinNumberscRK10CUtlVectorIi10CUtlMemoryIiEE
+V_JoinNumbers(char, CUtlVector<int, CUtlMemory<int>> const&)
 V_JoinNumbersUint
-_Z17V_JoinNumbersUintcRK10CUtlVectorIj10CUtlMemoryIjEE
+V_JoinNumbersUint(char, CUtlVector<unsigned int, CUtlMemory<unsigned int>> const&)
 V_JoinNumbersUint64
-_Z19V_JoinNumbersUint64cRK10CUtlVectorIy10CUtlMemoryIyEE
+V_JoinNumbersUint64(char, CUtlVector<unsigned long long, CUtlMemory<unsigned long long>> const&)
 V_SplitStringInternal
-_Z28V_ParseShellCommandLineWin32PKcR10CUtlVectorI10CUtlString10CUtlMemoryIS2_EEiPS0_
-_Z14V_SplitString3PKcPKS0_iR10CUtlVectorI10CUtlString10CUtlMemoryIS4_EES8_
-_Z28V_ParseShellCommandLinePOSIXPKcR10CUtlVectorI10CUtlString10CUtlMemoryIS2_EEiPS0_
+V_ParseShellCommandLineWin32(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, int, char const**)
+V_SplitString3(char const*, char const* const*, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&)
+V_ParseShellCommandLinePOSIX(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, int, char const**)
 V_StripAndPreserveHTMLCore
 V_StripAndPreserveHTML
 V_LevenshteinDistance
-_Z15V_UnicodeLengthPKc
+V_UnicodeLength(char const*)
 V_URLCracker
 V_ParseURLQueryString
 V_IsValidUChar32
@@ -387,52 +387,52 @@ V_UChar32ToUTF16Len
 V_UChar32ToUTF8
 V_UChar32ToUTF16
 V_UTF16ToUChar32
-_Z17V_UnicodeValidatePKc
-_Z17V_UnicodeValidatePKt
-_Z17V_UnicodeValidatePKw
-_Z15V_UnicodeLengthPKt
-_Z15V_UnicodeLengthPKw
-_Z16V_UnicodeAdvancePci
-_Z16V_UnicodeAdvancePti
-_Z16V_UnicodeAdvancePwi
+V_UnicodeValidate(char const*)
+V_UnicodeValidate(unsigned short const*)
+V_UnicodeValidate(wchar_t const*)
+V_UnicodeLength(unsigned short const*)
+V_UnicodeLength(wchar_t const*)
+V_UnicodeAdvance(char*, int)
+V_UnicodeAdvance(unsigned short*, int)
+V_UnicodeAdvance(wchar_t*, int)
 V_UTF8ToUTF16
 V_UTF16ToUTF8
 V_UTF32CharsToUTF16
-_Z15V_UnicodeRepairPc25EStringConvertErrorPolicy
-_Z15V_UnicodeRepairPt25EStringConvertErrorPolicy
-_Z15V_UnicodeRepairPw25EStringConvertErrorPolicy
+V_UnicodeRepair(char*, EStringConvertErrorPolicy)
+V_UnicodeRepair(unsigned short*, EStringConvertErrorPolicy)
+V_UnicodeRepair(wchar_t*, EStringConvertErrorPolicy)
 V_towupper32
 V_towlower32
 iswalnum
 iswalpha
 V_iswalpha32
-_Z20V_UnicodeCaseConvertPKcPcii25EStringConvertErrorPolicy
-_Z20V_UnicodeCaseConvertPKtPtii25EStringConvertErrorPolicy
-_Z20V_UnicodeCaseConvertPKwPwii25EStringConvertErrorPolicy
-_Z20V_UnicodeCaseConvertR17CUtlStringBuilderi25EStringConvertErrorPolicy
-_Z20V_UnicodeCaseConvertR10CUtlStringi25EStringConvertErrorPolicy
-_Z20V_UnicodeCaseConvertR10CUtlVectorIw10CUtlMemoryIwEEi25EStringConvertErrorPolicy
-_ZN9CURLUtils20FixupSeparatorSchemeER10CUtlString
-_ZN9CURLUtils15ValidateStaticsER10CValidatorPKc
-_ZN9CURLUtils5IsTLDEPKc
+V_UnicodeCaseConvert(char const*, char*, int, int, EStringConvertErrorPolicy)
+V_UnicodeCaseConvert(unsigned short const*, unsigned short*, int, int, EStringConvertErrorPolicy)
+V_UnicodeCaseConvert(wchar_t const*, wchar_t*, int, int, EStringConvertErrorPolicy)
+V_UnicodeCaseConvert(CUtlStringBuilder&, int, EStringConvertErrorPolicy)
+V_UnicodeCaseConvert(CUtlString&, int, EStringConvertErrorPolicy)
+V_UnicodeCaseConvert(CUtlVector<wchar_t, CUtlMemory<wchar_t>>&, int, EStringConvertErrorPolicy)
+CURLUtils::FixupSeparatorScheme(CUtlString&)
+CURLUtils::ValidateStatics(CValidator&, char const*)
+CURLUtils::IsTLD(char const*)
 V_IsTLD
 abort
-_ZTIN10__cxxabiv119__foreign_exceptionE
-_ZTIN10__cxxabiv115__forced_unwindE
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__forced_unwind
 syscall
-_ZTIN9__gnu_cxx20recursive_init_errorE
-_ZTVN9__gnu_cxx20recursive_init_errorE
-_ZTSN9__gnu_cxx20recursive_init_errorE
+typeinfo for __gnu_cxx::recursive_init_error
+vtable for __gnu_cxx::recursive_init_error
+typeinfo name for __gnu_cxx::recursive_init_error
 fputs
 fputc
 stdout
 stdin
-_ZTVN9__gnu_cxx24__concurrence_lock_errorE
-_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTIN9__gnu_cxx24__concurrence_lock_errorE
-_ZTSN9__gnu_cxx24__concurrence_lock_errorE
-_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
 pthread_once
 __nl_langinfo_l
 __uselocale
@@ -440,7 +440,7 @@ mbsrtowcs
 iconv_open
 iconv
 iconv_close
-_ZTVN10__cxxabiv121__vmi_class_type_infoE
+vtable for __cxxabiv1::__vmi_class_type_info
 __wctype_l
 __towupper_l
 __towlower_l
@@ -456,13 +456,13 @@ wmemset
 wmemchr
 wmemmove
 __sprintf_chk
-_ZTSN10__cxxabiv115__forced_unwindE
-_ZTSN10__cxxabiv119__foreign_exceptionE
-_ZTVN10__cxxabiv115__forced_unwindE
-_ZTVN10__cxxabiv119__foreign_exceptionE
-_ZTSN10__cxxabiv121__vmi_class_type_infoE
-_ZTIN10__cxxabiv121__vmi_class_type_infoE
-_ZTIN10__cxxabiv117__class_type_infoE
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
+typeinfo name for __cxxabiv1::__vmi_class_type_info
+typeinfo for __cxxabiv1::__vmi_class_type_info
+typeinfo for __cxxabiv1::__class_type_info
 __strtof_l
 __strtod_l
 strtold_l
@@ -482,18 +482,18 @@ bind_textdomain_codeset
 dgettext
 __strftime_l
 __wcsftime_l
-_Z27_txnal_cow_string_D1_commitPv
-_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _ITM_RU1
-_ZGTtnaj
+transaction clone for operator new[](unsigned int)
 _ITM_memcpyRtWn
-_Z23_txnal_cow_string_c_strPKv
+_txnal_cow_string_c_str(void const*)
 _ITM_RU4
-_Z20_txnal_cow_string_D1Pv
+_txnal_cow_string_D1(void*)
 _ITM_addUserCommitAction
-_Z26_txnal_logic_error_get_msgPv
-_Z28_txnal_runtime_error_get_msgPv
-_ZTSN10__cxxabiv117__class_type_infoE
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
+typeinfo name for __cxxabiv1::__class_type_info
 dl_iterate_phdr
 __xmknod
 __stack_chk_fail
@@ -1667,7 +1667,7 @@ December
 N10__cxxabiv117__class_type_infoE
 St9type_info
 __nl_langinfo_l@GLIBC_2.2
-_Z21V_ConvertUUIDToStringPK6V_UUID16EUUIDStringFlagsPwi
+V_ConvertUUIDToString(V_UUID const*, EUUIDStringFlags, wchar_t*, int)
 Coroutine_DebugBreak
 V_strncat_length_unbounded
 fputs@GLIBC_2.0
@@ -1684,26 +1684,26 @@ V_URLDecodeRaw
 CanBeginLine
 __wrap_opendir
 V_FormatAndAppendV
-_ZTIN9__gnu_cxx20recursive_init_errorE
+typeinfo for __gnu_cxx::recursive_init_error
 V_SplitNumbersUint
 V_AppendParamToURL
 BHanIdeograph
 wmemchr@GLIBC_2.0
-_Z21V_SplitStringInternalPKcPKS0_PS0_iR10CUtlVectorI10CUtlString10CUtlMemoryIS5_EEb
-_Z17V_UnicodeValidatePKw
+V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, bool)
+V_UnicodeValidate(wchar_t const*)
 V_NormalizeUTF8Old
-_Z28_txnal_runtime_error_get_msgPv
+_txnal_runtime_error_get_msg(void*)
 statfs64@GLIBC_2.1
-_ZN21CGaussianRandomStream11RandomFloatEff
+CGaussianRandomStream::RandomFloat(float, float)
 localeconv@GLIBC_2.2
 __wrap_freopen
 V_FixDoubleSlashes
 mkdir@GLIBC_2.0
 WeakRandomUint32
 __cxa_atexit@GLIBC_2.1.3
-_Z17V_UnicodeValidatePKc
+V_UnicodeValidate(char const*)
 V_iswalpha32
-_ZTVN10__cxxabiv119__foreign_exceptionE
+vtable for __cxxabiv1::__foreign_exception
 ThreadGetCurrentProcessId
 V_StripPrecedingAndTrailingWhitespaceW
 V_Windows1252CharsToUTF8
@@ -1721,30 +1721,30 @@ V_StripTrailingWhitespaceASCII
 g_VProfile
 vstdlib_wcstoi64
 wcstoll@GLIBC_2.1
-_ZTIN10__cxxabiv119__foreign_exceptionE
+typeinfo for __cxxabiv1::__foreign_exception
 V_strncmp
 V_UTF16ToUTF8
 Coroutine_Create
 V_StripTrailingSlash
-_ZTIN10__cxxabiv115__forced_unwindE
-_ZN20CStringNormalization4FoldEPKwPwi
+typeinfo for __cxxabiv1::__forced_unwind
+CStringNormalization::Fold(wchar_t const*, wchar_t*, int)
 statfs@GLIBC_2.0
 V_UTF16ToUTF32
 Plat_GetProcessArgv
-_Z20V_UnicodeCaseConvertR10CUtlVectorIw10CUtlMemoryIwEEi25EStringConvertErrorPolicy
-_Z15V_UnicodeRepairPw25EStringConvertErrorPolicy
+V_UnicodeCaseConvert(CUtlVector<wchar_t, CUtlMemory<wchar_t>>&, int, EStringConvertErrorPolicy)
+V_UnicodeRepair(wchar_t*, EStringConvertErrorPolicy)
 V_strtoi64
-_ZN20CUniformRandomStream20GenerateRandomNumberEv
+CUniformRandomStream::GenerateRandomNumber()
 __ctype_get_mb_cur_max@GLIBC_2.0
 sqrtf@GLIBC_2.0
 V_vsnprintfRet
-_ZGTtnaj
+transaction clone for operator new[](unsigned int)
 __wrap_symlink
 __xstat@GLIBC_2.0
-_ZN11SteamStdLib17CCommandLineParamC1EPKcS2_
+SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
 syscall@GLIBC_2.0
 V_JoinNumbersUint
-_ZN10CValidator3PopEv
+CValidator::Pop()
 __gmon_start__
 V_WcsSkipArticles
 __lxstat@GLIBC_2.0
@@ -1753,15 +1753,15 @@ V_ExtractFilePath
 realloc@GLIBC_2.0
 iconv_open@GLIBC_2.1
 __xstat64@GLIBC_2.2
-_ZN11SteamStdLib17CCommandLineParamC2EPKcS2_
+SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
 V_UTF32CharsToUTF8
-_Z17V_JoinNumbersUintcRK10CUtlVectorIj10CUtlMemoryIjEE
+V_JoinNumbersUint(char, CUtlVector<unsigned int, CUtlMemory<unsigned int>> const&)
 __wrap_rename
 V_StrLeft
 V_BuildSortTitle
 __wrap_fopen
-_Z16V_UnicodeAdvancePci
-_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
+V_UnicodeAdvance(char*, int)
+typeinfo for __gnu_cxx::__concurrence_unlock_error
 V_StripUnprintableW
 V_IsValidDomainNameCharacter
 V_FormatAndAppend
@@ -1791,7 +1791,7 @@ _ITM_RU1
 V_isnumeric
 V_tolower
 V_UTF32ToUTF8
-_ZN16SteamThreadTools12CThreadEvent3SetEv
+SteamThreadTools::CThreadEvent::Set()
 Coroutine_ValidateGlobals
 dgettext@GLIBC_2.0
 lseek64@GLIBC_2.2
@@ -1804,71 +1804,71 @@ scandir@GLIBC_2.0
 V_strnistr
 WeakRandomChar
 V_FixupPathName
-_ZTSN9__gnu_cxx20recursive_init_errorE
+typeinfo name for __gnu_cxx::recursive_init_error
 strtold_l@GLIBC_2.3
-_Z16V_UnicodeAdvancePwi
+V_UnicodeAdvance(wchar_t*, int)
 WeakRandomSeed
 V_JoinNumbersUint64
-_Z30V_EscapeShellArgumentAndAppendPcjPKc
-_ZN10SteamVProf9CVProfile10EnterScopeEPKc17EVProfBugdetGroupPv
-_ZN9CURLUtils5IsTLDEPKc
+V_EscapeShellArgumentAndAppend(char*, unsigned int, char const*)
+SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
+CURLUtils::IsTLD(char const*)
 strrchr@GLIBC_2.0
-_ZTVN10__cxxabiv115__forced_unwindE
+vtable for __cxxabiv1::__forced_unwind
 V_UTF8ToUTF32
 V_SplitStringInternal
 V_isbreakablewspace
 mount@GLIBC_2.0
 dlmopen@GLIBC_2.3.4
 uname@GLIBC_2.0
-_Z17V_UnicodeValidatePKt
+V_UnicodeValidate(unsigned short const*)
 V_wcsncat
 fseeko64@GLIBC_2.1
 chmod@GLIBC_2.0
 wmemcpy@GLIBC_2.0
 g_pMemAllocSteam
 CreateInterface
-_Z15V_UnicodeLengthPKc
+V_UnicodeLength(char const*)
 mbrtowc@GLIBC_2.0
 V_IsValidUChar32
-_ZN20CUniformRandomStream7SetSeedEi
+CUniformRandomStream::SetSeed(int)
 V_RemoveDotSlashes
 __wrap_chmod
 strtoll@GLIBC_2.0
 _ITM_deregisterTMCloneTable
 InstallUniformRandomStream
 Coroutine_IsActive
-_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
+vtable for __gnu_cxx::__concurrence_unlock_error
 ungetc@GLIBC_2.0
 __wrap_scandir64
 V_ExtractFileExtension
 __wrap_stat
 WeakRandomInt
-_ZTIN10__cxxabiv121__vmi_class_type_infoE
+typeinfo for __cxxabiv1::__vmi_class_type_info
 GetPlatformName
-_ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
-_Z20V_UnicodeCaseConvertPKwPwii25EStringConvertErrorPolicy
+AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
+V_UnicodeCaseConvert(wchar_t const*, wchar_t*, int, int, EStringConvertErrorPolicy)
 Is64BitOS
 __ctype_toupper_loc@GLIBC_2.3
 free@GLIBC_2.0
 strtoull@GLIBC_2.0
-_Z35V_EscapeShellArgumentAndAppendPOSIXPcjPKc
+V_EscapeShellArgumentAndAppendPOSIX(char*, unsigned int, char const*)
 __xmknod@GLIBC_2.0
 iswalpha@GLIBC_2.0
 __lxstat64@GLIBC_2.2
 CanBreakRepeated
 V_LevenshteinDistance
 V_ReplaceBadFilenameCharacters
-_ZN16SteamThreadTools17CThreadSyncObjectD2Ev
+SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 SteamRealPath
 mbsnrtowcs@GLIBC_2.0
-_ZTSN10__cxxabiv121__vmi_class_type_infoE
-_ZN9CURLUtils20FixupSeparatorSchemeER10CUtlString
+typeinfo name for __cxxabiv1::__vmi_class_type_info
+CURLUtils::FixupSeparatorScheme(CUtlString&)
 __wrap_mkfifo
 __wrap_access
 access@GLIBC_2.0
 _ITM_registerTMCloneTable
-_Z21V_ConvertUUIDToStringPK6V_UUID16EUUIDStringFlagsPci
-_ZN20CStringNormalization9NormalizeEbPKcPci
+V_ConvertUUIDToString(V_UUID const*, EUUIDStringFlags, char*, int)
+CStringNormalization::Normalize(bool, char const*, char*, int)
 __wrap_mount
 DebugStatsSystem
 GetOSDetailString
@@ -1876,9 +1876,9 @@ CanEndLine
 V_UChar32ToUTF16
 VProfInternalGetProfileForCurrentThread
 fflush@GLIBC_2.0
-_Z10V_atoui128PKc
+V_atoui128(char const*)
 __wrap_open64
-_Z26_txnal_logic_error_get_msgPv
+_txnal_logic_error_get_msg(void*)
 V_StripLastDir
 opendir@GLIBC_2.0
 statvfs@GLIBC_2.1
@@ -1895,11 +1895,11 @@ WeakRandomFloat
 realpath@GLIBC_2.3
 V_DefaultExtension
 __wctype_l@GLIBC_2.1
-_ZTSN10__cxxabiv119__foreign_exceptionE
+typeinfo name for __cxxabiv1::__foreign_exception
 __wcsftime_l@GLIBC_2.3
-_ZN10SteamVProf9CVProfile9ExitScopeEv
+SteamVProf::CVProfile::ExitScope()
 fclose@GLIBC_2.1
-_Z28V_ParseShellCommandLinePOSIXPKcR10CUtlVectorI10CUtlString10CUtlMemoryIS2_EEiPS0_
+V_ParseShellCommandLinePOSIX(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, int, char const**)
 ftello64@GLIBC_2.1
 V_hextobinary
 __wrap_mkdir
@@ -1915,17 +1915,17 @@ V_MakeRelativePath
 V_UChar32ToUTF16Len
 V_vsnwprintf
 readdir64@GLIBC_2.2
-_ZTS20CUniformRandomStream
+typeinfo name for CUniformRandomStream
 GetPlatformFromOS
 V_binarytohex
 stderr@GLIBC_2.0
-_ZN11SteamStdLib17CCommandLineParamD1Ev
+SteamStdLib::CCommandLineParam::~CCommandLineParam()
 __wrap_unlink
 V_atoui64
 utime@GLIBC_2.0
-_Z15V_UnicodeLengthPKt
+V_UnicodeLength(unsigned short const*)
 _ITM_RU4
-_ZTVN9__gnu_cxx20recursive_init_errorE
+vtable for __gnu_cxx::recursive_init_error
 Error
 V_EscapeStringForPHP
 strlen@GLIBC_2.0
@@ -1947,11 +1947,11 @@ wmemset@GLIBC_2.0
 V_StrReplaceChar
 Coroutine_Continue
 __wrap_statfs
-_Z15V_UnicodeRepairPt25EStringConvertErrorPolicy
-_ZN9CURLUtils15ValidateStaticsER10CValidatorPKc
+V_UnicodeRepair(unsigned short*, EStringConvertErrorPolicy)
+CURLUtils::ValidateStatics(CValidator&, char const*)
 freopen@GLIBC_2.0
 __strxfrm_l@GLIBC_2.1
-_ZN20CStringNormalization24Test_BValidateStructuresEv
+CStringNormalization::Test_BValidateStructures()
 V_wcstoi64
 V_AggressiveStripPrecedingAndTrailingWhitespace
 vstdlib_wcsicmp
@@ -1959,48 +1959,48 @@ dlopen@GLIBC_2.1
 V_stricmp_filename
 longjmp@GLIBC_2.0
 V_URLPartsToString
-_Z13V_JoinNumberscRK10CUtlVectorIi10CUtlMemoryIiEE
-_ZN20CUniformRandomStream16RandomFillMemoryEPvj
+V_JoinNumbers(char, CUtlVector<int, CUtlMemory<int>> const&)
+CUniformRandomStream::RandomFillMemory(void*, unsigned int)
 V_URLEncode
-_ZN10CValidator16ClaimArrayMemoryEPKv
+CValidator::ClaimArrayMemory(void const*)
 _DMsg
 V_HtmlEntityDecodeToUTF8
 V_strupper_fast
-_ZN20CStringNormalization15ValidateStaticsER10CValidatorPKc
+CStringNormalization::ValidateStatics(CValidator&, char const*)
 mkfifo@GLIBC_2.0
 chdir@GLIBC_2.0
 V_FixSlashes
 CanBreakBetween
 WeakRandomGaussianFloat
-_Z35V_EscapeShellArgumentAndAppendWin32PcjPKc
+V_EscapeShellArgumentAndAppendWin32(char*, unsigned int, char const*)
 V_IsInCommaDelimitedList
 wcsncpy@GLIBC_2.0
 WeakRandomFillMemory
-_ZN21CGaussianRandomStreamC2EP20IUniformRandomStream
+CGaussianRandomStream::CGaussianRandomStream(IUniformRandomStream*)
 V_memcpy_nocache
-_Z23_txnal_cow_string_c_strPKv
-_ZTSN10__cxxabiv117__class_type_infoE
+_txnal_cow_string_c_str(void const*)
+typeinfo name for __cxxabiv1::__class_type_info
 V_strnicmp
-_Z28V_ParseShellCommandLineWin32PKcR10CUtlVectorI10CUtlString10CUtlMemoryIS2_EEiPS0_
+V_ParseShellCommandLineWin32(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, int, char const**)
 V_GetFileExtension
-_Z19V_JoinNumbersUint64cRK10CUtlVectorIy10CUtlMemoryIyEE
+V_JoinNumbersUint64(char, CUtlVector<unsigned long long, CUtlMemory<unsigned long long>> const&)
 __wrap___lxstat64
 Coroutine_Cancel
-_Z15V_UnicodeRepairPc25EStringConvertErrorPolicy
+V_UnicodeRepair(char*, EStringConvertErrorPolicy)
 iswspace@GLIBC_2.0
 strcasecmp@GLIBC_2.0
 ThreadInterlockedExchange
 __strtod_l@GLIBC_2.1
 V_FileBase
-_ZN16SteamThreadTools16CThreadLocalBaseC2Ev
+SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
 V_UTF8ToUChar32
 V_strnlen
 V_whextobinary
-_Z20V_UnicodeCaseConvertPKtPtii25EStringConvertErrorPolicy
-_ZN20CUniformRandomStreamC1Ev
+V_UnicodeCaseConvert(unsigned short const*, unsigned short*, int, int, EStringConvertErrorPolicy)
+CUniformRandomStream::CUniformRandomStream()
 __wcsxfrm_l@GLIBC_2.1
 closedir@GLIBC_2.0
-_ZN16SteamThreadTools12CThreadEventC1Eb
+SteamThreadTools::CThreadEvent::CThreadEvent(bool)
 close@GLIBC_2.0
 V_IsSteamCloseProtocol
 __wrap_lstat
@@ -2010,7 +2010,7 @@ V_ReplaceBadFilenameCharactersInPlace
 __wrap_dlmopen
 V_MatchWildcardString
 __wrap_statvfs
-_ZN16SteamThreadTools13CThreadRWLock11WaitForReadEv
+SteamThreadTools::CThreadRWLock::WaitForRead()
 Plat_RelativeTicks
 V_wcscat
 V_UChar32ToUTF8
@@ -2019,35 +2019,35 @@ fprintf@GLIBC_2.0
 strstr@GLIBC_2.0
 V_strristr
 V_BasicHtmlEntityEncodeBuffer
-_ZTI20CUniformRandomStream
-_ZN10CValidator4PushEPKcPvS1_
-_ZTVN10__cxxabiv121__vmi_class_type_infoE
+typeinfo for CUniformRandomStream
+CValidator::Push(char const*, void*, char const*)
+vtable for __cxxabiv1::__vmi_class_type_info
 __wrap___xstat
 strncat@GLIBC_2.0
 __wrap___lxstat
 Plat_OutputDebugString
-_ZTVN10__cxxabiv117__class_type_infoE
+vtable for __cxxabiv1::__class_type_info
 malloc@GLIBC_2.0
 wcscmp@GLIBC_2.0
 _strlwr
-_ZN16SteamThreadTools13CThreadRWLock12LockForWriteEv
-_ZN16SteamThreadTools16CThreadLocalBase3SetEPv
-_ZN21CGaussianRandomStream14AttachToStreamEP20IUniformRandomStream
+SteamThreadTools::CThreadRWLock::LockForWrite()
+SteamThreadTools::CThreadLocalBase::Set(void*)
+CGaussianRandomStream::AttachToStream(IUniformRandomStream*)
 pthread_mutex_lock@GLIBC_2.0
-_ZN10CValidator11ClaimMemoryEPKv
+CValidator::ClaimMemory(void const*)
 iswalnum@GLIBC_2.0
-_ZTSN9__gnu_cxx24__concurrence_lock_errorE
+typeinfo name for __gnu_cxx::__concurrence_lock_error
 V_StripAndPreserveHTML
 V_strlower_fast
 V_snprintf
-_ZN20CUniformRandomStream9RandomIntEii
+CUniformRandomStream::RandomInt(int, int)
 __uselocale@GLIBC_2.3
 V_StripUnprintable
 chown@GLIBC_2.1
 __stack_chk_fail@GLIBC_2.4
 V_StrTrim
 iconv_close@GLIBC_2.1
-_ZN20CUniformRandomStream10RandomCharEv
+CUniformRandomStream::RandomChar()
 __freelocale@GLIBC_2.1
 fputc@GLIBC_2.0
 __wrap_dlopen
@@ -2062,51 +2062,51 @@ __wrap_utimes
 stdin@GLIBC_2.0
 __strcoll_l@GLIBC_2.1
 strcasestr@GLIBC_2.1
-_Z15V_UnicodeLengthPKw
+V_UnicodeLength(wchar_t const*)
 __wrap_chdir
 vswprintf@GLIBC_2.2
-_Z20V_UnicodeCaseConvertPKcPcii25EStringConvertErrorPolicy
+V_UnicodeCaseConvert(char const*, char*, int, int, EStringConvertErrorPolicy)
 V_IsMeanSpaceW
 __towlower_l@GLIBC_2.1
 V_AppendSlash
 __iswctype_l@GLIBC_2.1
 V_AggressiveStripPrecedingAndTrailingWhitespaceW
-_Z30V_EscapeShellArgumentAndAppendP17CUtlStringBuilderPKcb
+V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
 strncasecmp@GLIBC_2.0
 V_CP437CharsToUTF8
-_ZTV20CUniformRandomStream
+vtable for CUniformRandomStream
 V_URLCracker
 __ctype_tolower_loc@GLIBC_2.3
 __strtof_l@GLIBC_2.1
 V_BasicHtmlEntityEncode
-_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
 towlower@GLIBC_2.0
-_Z13V_JoinStringsRK10CUtlVectorI10CUtlString10CUtlMemoryIS0_EEPKc
+V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString>> const&, char const*)
 V_stricmp_prefix
 getcwd@GLIBC_2.0
 wcsnrtombs@GLIBC_2.0
 V_StripExtension
 V_GetCurrentDirectory
 vasprintf@GLIBC_2.0
-_Z27_txnal_cow_string_D1_commitPv
+_txnal_cow_string_D1_commit(void*)
 stdout@GLIBC_2.0
 V_isstrlower
-_ZN20CUniformRandomStream11RandomFloatEff
-_Z21V_ConvertStringToUUIDPKc16EUUIDStringFlagsP6V_UUID
+CUniformRandomStream::RandomFloat(float, float)
+V_ConvertStringToUUID(char const*, EUUIDStringFlags, V_UUID*)
 V_StripAndPreserveHTMLCore
 faccessat@GLIBC_2.4
 __wrap_utime
 Coroutine_GetCurrentlyActive
-_Z20V_UnicodeCaseConvertR10CUtlStringi25EStringConvertErrorPolicy
+V_UnicodeCaseConvert(CUtlString&, int, EStringConvertErrorPolicy)
 V_UTF32CharsToUTF16
-_ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 V_vsnprintf
 Coroutine_YieldToMain
 V_UTF32ToUTF16
 KeyValuesSystemSteam
 __fxstat64@GLIBC_2.2
 V_MakeFileSafeName
-_ZN20CUniformRandomStreamC2Ev
+CUniformRandomStream::CUniformRandomStream()
 V_ParseURLQueryString
 fcntl@GLIBC_2.0
 flock@GLIBC_2.0
@@ -2114,30 +2114,30 @@ V_URLDecode
 V_RemoveChar
 utimes@GLIBC_2.0
 sscanf@GLIBC_2.0
-_ZN16SteamThreadTools13CThreadRWLock11UnlockWriteEv
+SteamThreadTools::CThreadRWLock::UnlockWrite()
 VProfInternalEnterScopeCurrentThread
-_ZN20CStringNormalization10InitializeEv
+CStringNormalization::Initialize()
 __sprintf_chk@GLIBC_2.3.4
 __duplocale@GLIBC_2.1
 strncmp@GLIBC_2.0
 open64@GLIBC_2.2
 lchown@GLIBC_2.0
-_ZN11SteamStdLib17CCommandLineParamD2Ev
+SteamStdLib::CCommandLineParam::~CCommandLineParam()
 posix_fadvise@GLIBC_2.2
 strpbrk@GLIBC_2.0
 vstdlib_wcsnicmp
 V_strcmp_prefix
 ThreadGetCurrentId
 V_strtoui64
-_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 ThreadInterlockedDecrement
-_Z23V_ParseShellCommandLinePKcR10CUtlVectorI10CUtlString10CUtlMemoryIS2_EEiPS0_
-_Z16V_UnicodeAdvancePti
-_ZTIN10__cxxabiv117__class_type_infoE
+V_ParseShellCommandLine(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, int, char const**)
+V_UnicodeAdvance(unsigned short*, int)
+typeinfo for __cxxabiv1::__class_type_info
 V_SetURLParam
 __newlocale@GLIBC_2.1
-_ZN20CStringNormalization9NormalizeEbPKwPwi
-_Z20V_UnicodeCaseConvertR17CUtlStringBuilderi25EStringConvertErrorPolicy
+CStringNormalization::Normalize(bool, wchar_t const*, wchar_t*, int)
+V_UnicodeCaseConvert(CUtlStringBuilder&, int, EStringConvertErrorPolicy)
 fread@GLIBC_2.0
 __pthread_key_create@GLIBC_2.0
 dl_iterate_phdr@GLIBC_2.2.4
@@ -2146,46 +2146,46 @@ V_isvalidhex
 bind_textdomain_codeset@GLIBC_2.2
 Warning
 Coroutine_GetStackDepth
-_ZNV16SteamThreadTools15CThreadSpinLock4LockEj
+SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
 V_URLEncodeToUtlString
-_Z14V_SplitString3PKcPKS0_iR10CUtlVectorI10CUtlString10CUtlMemoryIS4_EES8_
-_ZTVN9__gnu_cxx24__concurrence_lock_errorE
+V_SplitString3(char const*, char const* const*, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&)
+vtable for __gnu_cxx::__concurrence_lock_error
 GetPlatformNameFromEPlatformType
 __wcscoll_l@GLIBC_2.1
 Coroutine_ReleaseThreadMemory
 strdup@GLIBC_2.0
-_ZN21CGaussianRandomStreamC1EP20IUniformRandomStream
+CGaussianRandomStream::CGaussianRandomStream(IUniformRandomStream*)
 V_atof
 V_UChar32ToUTF8Len
-_Z20_txnal_cow_string_D1Pv
+_txnal_cow_string_D1(void*)
 V_FormatAndAppendTail
 __wrap_open
 ungetwc@GLIBC_2.2
 tolower@GLIBC_2.0
-_ZTIN9__gnu_cxx24__concurrence_lock_errorE
+typeinfo for __gnu_cxx::__concurrence_lock_error
 strcmp@GLIBC_2.0
 btowc@GLIBC_2.0
 Coroutine_Test
 towupper@GLIBC_2.0
 __cxa_finalize@GLIBC_2.1.3
 V_isbreakablewspace32
-_Z21V_ConvertStringToUUIDPKw16EUUIDStringFlagsP6V_UUID
-_ZNK16SteamThreadTools16CThreadLocalBase3GetEv
+V_ConvertStringToUUID(wchar_t const*, EUUIDStringFlags, V_UUID*)
+SteamThreadTools::CThreadLocalBase::Get() const
 __wrap_stat64
 V_strncat
 __wrap___xstat64
-_ZN11SteamStdLib11CommandLineEv
+SteamStdLib::CommandLine()
 __wrap_link
 CVProfile_ExitScope
-_ZN16SteamThreadTools16CThreadLocalBaseD2Ev
+SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
 V_StrSlice
 V_IsAbsolutePath
 __wrap_statvfs64
 V_UTF16ToUChar32
-_ZTVN10__cxxabiv120__si_class_type_infoE
+vtable for __cxxabiv1::__si_class_type_info
 OSIsCompatible
 __wrap_scandir
-_ZN16SteamThreadTools12CThreadMutexC1Ev
+SteamThreadTools::CThreadMutex::CThreadMutex()
 V_CopyAndFixSlashes
 Coroutine_IsAddressInOurStack
 OSTypesAreCompatible
@@ -2194,11 +2194,11 @@ logf@GLIBC_2.0
 V_SetCurrentDirectory
 __wrap_chown
 __wrap_lchown
-_ZTSN10__cxxabiv115__forced_unwindE
-_Z9V_stristrPKcS0_
+typeinfo name for __cxxabiv1::__forced_unwind
+V_stristr(char const*, char const*)
 _init
 V_SplitNumbers
-_ZN16SteamThreadTools12CThreadMutexD1Ev
+SteamThreadTools::CThreadMutex::~CThreadMutex()
 ThreadInterlockedIncrement
 __wrap_fopen64
 StringAfterPrefixCaseSensitive

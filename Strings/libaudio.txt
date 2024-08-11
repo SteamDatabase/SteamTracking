@@ -11,13 +11,13 @@ alcCloseDevice
 AudioSinkList
 alcOpenDevice
 alcCreateContext
-_ZN10CValidator4PushEPKcPvS1_
-_ZNK10CValidator9IsClaimedEPKv
-_ZN10CValidator11ClaimMemoryEPKv
-_ZN10CValidator3PopEv
+CValidator::Push(char const*, void*, char const*)
+CValidator::IsClaimed(void const*) const
+CValidator::ClaimMemory(void const*)
+CValidator::Pop()
 Plat_FloatTime
 FreeAudioDevice
-_ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 SteamRealPath
 CreateMilesSoundAudioDevice
 CreateMilesMusicAudioDevice
@@ -30,7 +30,7 @@ pthread_mutex_unlock
 strcmp
 TSQueue_PopIntoFreeList
 ThreadInterlockedDecrement
-_ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
+AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 pa_threaded_mainloop_in_thread
 pa_ext_device_restore_read_formats
 pa_operation_unref
@@ -80,13 +80,13 @@ pa_context_set_sink_volume_by_index
 pa_context_set_source_mute_by_index
 pa_cvolume_init
 pa_context_set_source_volume_by_index
-_Z9V_stristrPKcS0_
+V_stristr(char const*, char const*)
 TSQueueBase_Pop
 TSQueueBase_UnsafeDummy
-_ZN16SteamThreadTools12CThreadMutexD1Ev
+SteamThreadTools::CThreadMutex::~CThreadMutex()
 TSListBase_Init
 TSQueueBase_Init
-_ZN16SteamThreadTools12CThreadMutexC1Ev
+SteamThreadTools::CThreadMutex::CThreadMutex()
 __cxa_atexit
 pa_context_get_state
 pa_context_get_sink_info_by_index
@@ -102,9 +102,9 @@ strtol
 g_VProfProfilesRunningCount
 CVProfile_ExitScope
 VProfInternalEnterScopeCurrentThread
-_ZTVN10__cxxabiv117__class_type_infoE
-_ZTVN10__cxxabiv120__si_class_type_infoE
-_ZN10CValidator16ClaimArrayMemoryEPKv
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
+CValidator::ClaimArrayMemory(void const*)
 strlen
 getenv
 __snprintf_chk
@@ -191,23 +191,23 @@ ftello64
 strncmp
 __pthread_key_create
 abort
-_ZTIN10__cxxabiv119__foreign_exceptionE
-_ZTIN10__cxxabiv115__forced_unwindE
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__forced_unwind
 syscall
-_ZTIN9__gnu_cxx20recursive_init_errorE
-_ZTVN9__gnu_cxx20recursive_init_errorE
-_ZTSN9__gnu_cxx20recursive_init_errorE
+typeinfo for __gnu_cxx::recursive_init_error
+vtable for __gnu_cxx::recursive_init_error
+typeinfo name for __gnu_cxx::recursive_init_error
 malloc
 fputs
 fputc
 stdout
 stdin
-_ZTVN9__gnu_cxx24__concurrence_lock_errorE
-_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTIN9__gnu_cxx24__concurrence_lock_errorE
-_ZTSN9__gnu_cxx24__concurrence_lock_errorE
-_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
 pthread_once
 __nl_langinfo_l
 __uselocale
@@ -217,7 +217,7 @@ wcscmp
 iconv_open
 iconv
 iconv_close
-_ZTVN10__cxxabiv121__vmi_class_type_infoE
+vtable for __cxxabiv1::__vmi_class_type_info
 __wctype_l
 __towupper_l
 __towlower_l
@@ -234,10 +234,10 @@ wmemset
 wmemchr
 wmemmove
 __sprintf_chk
-_ZTSN10__cxxabiv115__forced_unwindE
-_ZTSN10__cxxabiv119__foreign_exceptionE
-_ZTVN10__cxxabiv115__forced_unwindE
-_ZTVN10__cxxabiv119__foreign_exceptionE
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
 __strtof_l
 __strtod_l
 strtold_l
@@ -257,17 +257,17 @@ bind_textdomain_codeset
 dgettext
 __strftime_l
 __wcsftime_l
-_Z27_txnal_cow_string_D1_commitPv
-_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _ITM_RU1
-_ZGTtnaj
+transaction clone for operator new[](unsigned int)
 _ITM_memcpyRtWn
-_Z23_txnal_cow_string_c_strPKv
+_txnal_cow_string_c_str(void const*)
 _ITM_RU4
-_Z20_txnal_cow_string_D1Pv
+_txnal_cow_string_D1(void*)
 _ITM_addUserCommitAction
-_Z26_txnal_logic_error_get_msgPv
-_Z28_txnal_runtime_error_get_msgPv
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
 dl_iterate_phdr
 __xmknod
 __stack_chk_fail
@@ -839,33 +839,33 @@ pa_context_get_server_info@PULSE_0
 pthread_once@GLIBC_2.0
 pa_ext_device_restore_subscribe@PULSE_0
 __wrap_opendir
-_ZTIN9__gnu_cxx20recursive_init_errorE
+typeinfo for __gnu_cxx::recursive_init_error
 wmemchr@GLIBC_2.0
-_ZNK10CValidator9IsClaimedEPKv
-_Z28_txnal_runtime_error_get_msgPv
+CValidator::IsClaimed(void const*) const
+_txnal_runtime_error_get_msg(void*)
 statfs64@GLIBC_2.1
 __wrap_freopen
 V_FixDoubleSlashes
 mkdir@GLIBC_2.0
 __cxa_atexit@GLIBC_2.1.3
 alcCreateContext
-_ZTVN10__cxxabiv119__foreign_exceptionE
+vtable for __cxxabiv1::__foreign_exception
 memcmp@GLIBC_2.0
 pa_context_get_source_info_by_index@PULSE_0
 V_UnqualifiedFileName
 pa_context_get_sink_info_list@PULSE_0
-_ZTIN10__cxxabiv119__foreign_exceptionE
-_ZTIN10__cxxabiv115__forced_unwindE
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__forced_unwind
 statfs@GLIBC_2.0
 pa_context_set_sink_port_by_index@PULSE_0
 __ctype_get_mb_cur_max@GLIBC_2.0
 __fprintf_chk@GLIBC_2.3.4
-_ZGTtnaj
+transaction clone for operator new[](unsigned int)
 __wrap_symlink
 __xstat@GLIBC_2.0
 syscall@GLIBC_2.0
 FreeAudioDevice
-_ZN10CValidator3PopEv
+CValidator::Pop()
 pa_context_get_source_info_list@PULSE_0
 __gmon_start__
 __lxstat@GLIBC_2.0
@@ -877,7 +877,7 @@ __xstat64@GLIBC_2.2
 __wrap_rename
 alcOpenDevice
 __wrap_fopen
-_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
+typeinfo for __gnu_cxx::__concurrence_unlock_error
 pa_context_get_source_output_info@PULSE_0
 vsnprintf@GLIBC_2.0
 putwc@GLIBC_2.2
@@ -902,12 +902,12 @@ fopen64@GLIBC_2.1
 scandir@GLIBC_2.0
 pa_context_set_source_volume_by_index@PULSE_0
 pa_context_get_client_info@PULSE_0
-_ZTSN9__gnu_cxx20recursive_init_errorE
+typeinfo name for __gnu_cxx::recursive_init_error
 pa_context_get_card_info_by_index@PULSE_0
 strtold_l@GLIBC_2.3
 CreateMilesMusicAudioDevice
 pa_context_set_default_sink@PULSE_0
-_ZTVN10__cxxabiv115__forced_unwindE
+vtable for __cxxabiv1::__forced_unwind
 pa_cvolume_init@PULSE_0
 mount@GLIBC_2.0
 dlmopen@GLIBC_2.3.4
@@ -921,12 +921,12 @@ V_RemoveDotSlashes
 __wrap_chmod
 _ITM_deregisterTMCloneTable
 pa_context_connect@PULSE_0
-_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
+vtable for __gnu_cxx::__concurrence_unlock_error
 ungetc@GLIBC_2.0
 __wrap_scandir64
 pa_proplist_sets@PULSE_0
 __wrap_stat
-_ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
+AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 pa_context_get_sink_input_info_list@PULSE_0
 TSListBase_Init
 strtol@GLIBC_2.0
@@ -946,7 +946,7 @@ dlsym@GLIBC_2.0
 pa_threaded_mainloop_get_api@PULSE_0
 fflush@GLIBC_2.0
 __wrap_open64
-_Z26_txnal_logic_error_get_msgPv
+_txnal_logic_error_get_msg(void*)
 alcMakeContextCurrent
 pa_threaded_mainloop_free@PULSE_0
 opendir@GLIBC_2.0
@@ -960,7 +960,7 @@ wctob@GLIBC_2.0
 realpath@GLIBC_2.3
 pa_context_unref@PULSE_0
 __wctype_l@GLIBC_2.1
-_ZTSN10__cxxabiv119__foreign_exceptionE
+typeinfo name for __cxxabiv1::__foreign_exception
 __wcsftime_l@GLIBC_2.3
 ftello64@GLIBC_2.1
 pa_context_errno@PULSE_0
@@ -973,7 +973,7 @@ stderr@GLIBC_2.0
 __wrap_unlink
 utime@GLIBC_2.0
 _ITM_RU4
-_ZTVN9__gnu_cxx20recursive_init_errorE
+vtable for __gnu_cxx::recursive_init_error
 strlen@GLIBC_2.0
 g_VProfProfilesRunningCount
 fopen@GLIBC_2.1
@@ -993,14 +993,14 @@ __strxfrm_l@GLIBC_2.1
 dlopen@GLIBC_2.1
 pa_cvolume_equal@PULSE_0
 pa_context_set_sink_volume_by_index@PULSE_0
-_ZN10CValidator16ClaimArrayMemoryEPKv
+CValidator::ClaimArrayMemory(void const*)
 pa_context_set_sink_input_mute@PULSE_0
 mkfifo@GLIBC_2.0
 chdir@GLIBC_2.0
 TSQueueBase_UnsafeDummy
 V_FixSlashes
 TSListBase_Pop
-_Z23_txnal_cow_string_c_strPKv
+_txnal_cow_string_c_str(void const*)
 V_strnicmp
 pa_ext_device_restore_set_subscribe_cb@PULSE_0
 __wrap___lxstat64
@@ -1022,18 +1022,18 @@ pa_operation_unref@PULSE_0
 pa_context_set_sink_input_volume@PULSE_0
 __wrap_statfs64
 strstr@GLIBC_2.0
-_ZN10CValidator4PushEPKcPvS1_
-_ZTVN10__cxxabiv121__vmi_class_type_infoE
+CValidator::Push(char const*, void*, char const*)
+vtable for __cxxabiv1::__vmi_class_type_info
 __wrap___xstat
 __wrap___lxstat
 pa_proplist_gets@PULSE_0
-_ZTVN10__cxxabiv117__class_type_infoE
+vtable for __cxxabiv1::__class_type_info
 __bss_start
 malloc@GLIBC_2.0
 wcscmp@GLIBC_2.0
 pthread_mutex_lock@GLIBC_2.0
-_ZN10CValidator11ClaimMemoryEPKv
-_ZTSN9__gnu_cxx24__concurrence_lock_errorE
+CValidator::ClaimMemory(void const*)
+typeinfo name for __gnu_cxx::__concurrence_lock_error
 V_snprintf
 __uselocale@GLIBC_2.3
 chown@GLIBC_2.1
@@ -1063,16 +1063,16 @@ pa_context_set_state_callback@PULSE_0
 strncasecmp@GLIBC_2.0
 Plat_FloatTime
 __strtof_l@GLIBC_2.1
-_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
 getcwd@GLIBC_2.0
 wcsnrtombs@GLIBC_2.0
-_Z27_txnal_cow_string_D1_commitPv
+_txnal_cow_string_D1_commit(void*)
 pa_context_set_card_profile_by_index@PULSE_0
 _end
 stdout@GLIBC_2.0
 faccessat@GLIBC_2.4
 __wrap_utime
-_ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 __fxstat64@GLIBC_2.2
 pa_ext_device_restore_save_formats@PULSE_0
 flock@GLIBC_2.0
@@ -1091,7 +1091,7 @@ pa_threaded_mainloop_in_thread@PULSE_0
 __snprintf_chk@GLIBC_2.3.4
 posix_fadvise@GLIBC_2.2
 strpbrk@GLIBC_2.0
-_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 ThreadInterlockedDecrement
 pa_context_set_sink_port_by_name@PULSE_0
 __newlocale@GLIBC_2.1
@@ -1102,17 +1102,17 @@ __wrap_lstat64
 bind_textdomain_codeset@GLIBC_2.2
 _edata
 TSQueueBase_Init
-_ZTVN9__gnu_cxx24__concurrence_lock_errorE
+vtable for __gnu_cxx::__concurrence_lock_error
 pa_context_subscribe@PULSE_0
 __wcscoll_l@GLIBC_2.1
 pa_context_set_default_source@PULSE_0
 strdup@GLIBC_2.0
 CreateMilesSoundAudioDevice
-_Z20_txnal_cow_string_D1Pv
+_txnal_cow_string_D1(void*)
 __wrap_open
 ungetwc@GLIBC_2.2
 tolower@GLIBC_2.0
-_ZTIN9__gnu_cxx24__concurrence_lock_errorE
+typeinfo for __gnu_cxx::__concurrence_lock_error
 strcmp@GLIBC_2.0
 btowc@GLIBC_2.0
 alcDestroyContext
@@ -1124,17 +1124,17 @@ __wrap_link
 CVProfile_ExitScope
 V_IsAbsolutePath
 __wrap_statvfs64
-_ZTVN10__cxxabiv120__si_class_type_infoE
+vtable for __cxxabiv1::__si_class_type_info
 __vasprintf_chk@GLIBC_2.8
 __wrap_scandir
-_ZN16SteamThreadTools12CThreadMutexC1Ev
+SteamThreadTools::CThreadMutex::CThreadMutex()
 __wrap_chown
 __wrap_lchown
-_ZTSN10__cxxabiv115__forced_unwindE
-_Z9V_stristrPKcS0_
+typeinfo name for __cxxabiv1::__forced_unwind
+V_stristr(char const*, char const*)
 alcSuspendContext
 _init
-_ZN16SteamThreadTools12CThreadMutexD1Ev
+SteamThreadTools::CThreadMutex::~CThreadMutex()
 ThreadInterlockedIncrement
 __wrap_fopen64
 V_strncpy

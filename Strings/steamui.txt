@@ -5,13 +5,13 @@ _ITM_registerTMCloneTable
 __cxa_finalize
 SteamRealPath
 strstr
-_ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
+AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 __cxa_atexit
-_ZTVN10__cxxabiv117__class_type_infoE
-_ZTVN10__cxxabiv120__si_class_type_infoE
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
 __pthread_key_create
-_ZN10CValidator4PushEPKcPvS1_
-_ZN10CValidator3PopEv
+CValidator::Push(char const*, void*, char const*)
+CValidator::Pop()
 Plat_RelativeTicks
 g_ClockSpeedMillisecondsMultiplier
 Warning
@@ -22,19 +22,19 @@ poll
 CVProfile_ExitScope
 ETWEnd
 VProfInternalEnterScopeCurrentThread
-_ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 g_pMemAllocSteam
-_ZN10CValidator11ClaimMemoryEPKv
+CValidator::ClaimMemory(void const*)
 V_vsnprintfRet
 strlen
 V_strnicmp
-_ZNK10CValidator9IsClaimedEPKv
+CValidator::IsClaimed(void const*) const
 ThreadInterlockedDecrement
 Plat_CommandLineParamExists
 ThreadInterlockedIncrement
 V_vsnprintf
 ThreadGetCurrentProcessId
-_ZTVN10__cxxabiv121__vmi_class_type_infoE
+vtable for __cxxabiv1::__vmi_class_type_info
 DebugStatsSystem
 Plat_FloatTime
 g_error_free
@@ -42,7 +42,7 @@ g_dbus_proxy_get_type
 g_type_check_instance_cast
 g_dbus_proxy_get_connection
 g_dbus_connection_get_unique_name
-_ZN16SteamThreadTools12CThreadEvent3SetEv
+SteamThreadTools::CThreadEvent::Set()
 g_variant_builder_init
 g_variant_new_string
 g_variant_builder_add
@@ -59,12 +59,12 @@ g_variant_ref
 gtk_widget_destroy
 g_signal_connect_data
 gtk_widget_show
-_Z13V_JoinStringsRK10CUtlVectorI10CUtlString10CUtlMemoryIS0_EEPKc
-_ZN16SteamThreadTools17CThreadSyncObjectD2Ev
+V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString>> const&, char const*)
+SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 g_object_unref
 g_dbus_connection_signal_unsubscribe
-_ZN16SteamThreadTools12CThreadEventC1Eb
-_ZN16SteamThreadTools17CThreadSyncObject4WaitEj
+SteamThreadTools::CThreadEvent::CThreadEvent(bool)
+SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 g_free
 g_variant_get
 g_variant_lookup_value
@@ -72,39 +72,39 @@ g_variant_iter_new
 g_variant_iter_loop
 g_filename_from_uri
 g_variant_iter_free
-_Z17GetCPUInformationv
+GetCPUInformation()
 Is64BitOS
 Plat_IsInDebugSession
-_ZN11SteamStdLib11CommandLineEv
+SteamStdLib::CommandLine()
 GetOSType
-_ZN11SteamStdLib17CCommandLineParamC1EPKcS2_
-_ZN11SteamStdLib17CCommandLineParamD1Ev
+SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
+SteamStdLib::CCommandLineParam::~CCommandLineParam()
 g_VProfile
-_ZNK16SteamThreadTools16CThreadLocalBase3GetEv
-_ZN10SteamVProf9CVProfile9ExitScopeEv
+SteamThreadTools::CThreadLocalBase::Get() const
+SteamVProf::CVProfile::ExitScope()
 fwrite
 VProfInternalGetProfileForCurrentThread
 fflush
 V_snprintf
-_ZN10SteamVProf9CVProfile10EnterScopeEPKc17EVProfBugdetGroupPv
+SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
 Plat_MSTime
 V_strncpy
 strchr
-_Z9V_stristrPKcS0_
+V_stristr(char const*, char const*)
 V_atoi
 fclose
 V_FixSlashes
 __wrap_fopen
-_ZN16SteamThreadTools12CThreadMutexD1Ev
-_ZN16SteamThreadTools16CThreadLocalBase3SetEPv
-_ZN16SteamThreadTools16CThreadLocalBaseD2Ev
+SteamThreadTools::CThreadMutex::~CThreadMutex()
+SteamThreadTools::CThreadLocalBase::Set(void*)
+SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
 strrchr
 ThreadGetCurrentId
 ThreadInterlockedAssignIf
 ThreadInterlockedExchange
-_ZNV16SteamThreadTools15CThreadSpinLock4LockEj
-_ZN16SteamThreadTools16CThreadLocalBaseC2Ev
-_ZN16SteamThreadTools12CThreadMutexC1Ev
+SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
+SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
+SteamThreadTools::CThreadMutex::CThreadMutex()
 srand
 ETW_Steamworks_IPCSend_Start
 g_ClockSpeed
@@ -144,7 +144,7 @@ XRRQueryVersion
 XRRSelectInput
 XFlush
 XCheckIfEvent
-_Z21V_SplitStringInternalPKcPKS0_PS0_iR10CUtlVectorI10CUtlString10CUtlMemoryIS5_EEb
+V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, bool)
 XSelectInput
 Plat_IsSteamOS
 XDefaultRootWindow
@@ -205,7 +205,7 @@ TSListBase_Pop
 TSQueueBase_Push
 TSQueue_PopIntoFreeList
 TSQueueBase_Pop
-_ZN16SteamThreadTools12CThreadEvent5ResetEv
+SteamThreadTools::CThreadEvent::Reset()
 TSListBase_Init
 TSQueueBase_Init
 dlsym
@@ -217,10 +217,10 @@ Plat_gmtime
 strftime
 Plat_OutputDebugString
 V_StrSubstInPlace
-_ZN7pcrecpp2RE9QuoteMetaERKNS_11StringPieceE
-_ZN7pcrecpp2RE6no_argE
-_ZNK7pcrecpp2RE12PartialMatchERKNS_11StringPieceERKNS_3ArgES6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_
-_ZN7pcrecpp2RED1Ev
+pcrecpp::RE::QuoteMeta(pcrecpp::StringPiece const&)
+pcrecpp::RE::no_arg
+pcrecpp::RE::PartialMatch(pcrecpp::StringPiece const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
+pcrecpp::RE::~RE()
 uname
 __wrap_dlopen
 V_wcsncpy
@@ -263,14 +263,14 @@ sqrtf
 V_AggressiveStripPrecedingAndTrailingWhitespace
 Plat_IsWSL
 GetNameFromOSType
-_ZN8tinyxml211XMLDocument5ParseEPKcj
-_ZN8tinyxml211XMLDocument10ClearErrorEv
-_ZN8tinyxml210XMLPrinterC1EP8_IO_FILEbi
-_ZNK8tinyxml211XMLDocument5PrintEPNS_10XMLPrinterE
-_ZTVN8tinyxml210XMLPrinterE
+tinyxml2::XMLDocument::Parse(char const*, unsigned int)
+tinyxml2::XMLDocument::ClearError()
+tinyxml2::XMLPrinter::XMLPrinter(_IO_FILE*, bool, int)
+tinyxml2::XMLDocument::Print(tinyxml2::XMLPrinter*) const
+vtable for tinyxml2::XMLPrinter
 __wrap_open
 ioctl
-_Z30V_EscapeShellArgumentAndAppendP17CUtlStringBuilderPKcb
+V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
 ThreadShellExecute
 V_binarytohex
 V_URLContainsDomain
@@ -278,7 +278,7 @@ __swprintf_chk
 wcslen
 wcsncat
 wcscmp
-_ZN10CValidator19ClaimMemory_AlignedEPKv
+CValidator::ClaimMemory_Aligned(void const*)
 kYuvJPEGConstants
 NV12ToARGBMatrix
 kYuvF709Constants
@@ -297,297 +297,297 @@ kBgrH709Constants
 RAWToARGB
 RGB24ToARGB
 RGB565ToARGB
-_ZN8tinyxml27XMLNode9ToElementEv
-_ZN8tinyxml27XMLNode6ToTextEv
-_ZN8tinyxml27XMLNode9ToCommentEv
-_ZN8tinyxml27XMLNode10ToDocumentEv
-_ZN8tinyxml27XMLNode13ToDeclarationEv
-_ZN8tinyxml27XMLNode9ToUnknownEv
-_ZNK8tinyxml27XMLNode9ToElementEv
-_ZNK8tinyxml27XMLNode6ToTextEv
-_ZNK8tinyxml27XMLNode9ToCommentEv
-_ZNK8tinyxml27XMLNode10ToDocumentEv
-_ZNK8tinyxml27XMLNode13ToDeclarationEv
-_ZNK8tinyxml27XMLNode9ToUnknownEv
-_ZN8tinyxml27XMLText6ToTextEv
-_ZNK8tinyxml27XMLText6ToTextEv
-_ZN8tinyxml210XMLComment9ToCommentEv
-_ZNK8tinyxml210XMLComment9ToCommentEv
-_ZN8tinyxml214XMLDeclaration13ToDeclarationEv
-_ZNK8tinyxml214XMLDeclaration13ToDeclarationEv
-_ZN8tinyxml210XMLUnknown9ToUnknownEv
-_ZNK8tinyxml210XMLUnknown9ToUnknownEv
-_ZN8tinyxml210XMLElement9ToElementEv
-_ZNK8tinyxml210XMLElement9ToElementEv
-_ZN8tinyxml211XMLDocument10ToDocumentEv
-_ZNK8tinyxml211XMLDocument10ToDocumentEv
-_ZNK8tinyxml211XMLDocument12ShallowCloneEPS0_
-_ZNK8tinyxml211XMLDocument12ShallowEqualEPKNS_7XMLNodeE
-_ZN8tinyxml210XMLPrinter9VisitExitERKNS_11XMLDocumentE
-_ZN8tinyxml210XMLPrinter11CompactModeERKNS_10XMLElementE
-_ZNK8tinyxml211XMLDocument6AcceptEPNS_10XMLVisitorE
-_ZNK8tinyxml27XMLText6AcceptEPNS_10XMLVisitorE
-_ZNK8tinyxml210XMLComment6AcceptEPNS_10XMLVisitorE
-_ZNK8tinyxml214XMLDeclaration6AcceptEPNS_10XMLVisitorE
-_ZNK8tinyxml210XMLUnknown6AcceptEPNS_10XMLVisitorE
-_ZNK8tinyxml210XMLElement6AcceptEPNS_10XMLVisitorE
-_ZN8tinyxml210XMLPrinterD2Ev
-_ZN8tinyxml210XMLPrinterD1Ev
-_ZN8tinyxml210XMLPrinter5PrintEPKcz
+tinyxml2::XMLNode::ToElement()
+tinyxml2::XMLNode::ToText()
+tinyxml2::XMLNode::ToComment()
+tinyxml2::XMLNode::ToDocument()
+tinyxml2::XMLNode::ToDeclaration()
+tinyxml2::XMLNode::ToUnknown()
+tinyxml2::XMLNode::ToElement() const
+tinyxml2::XMLNode::ToText() const
+tinyxml2::XMLNode::ToComment() const
+tinyxml2::XMLNode::ToDocument() const
+tinyxml2::XMLNode::ToDeclaration() const
+tinyxml2::XMLNode::ToUnknown() const
+tinyxml2::XMLText::ToText()
+tinyxml2::XMLText::ToText() const
+tinyxml2::XMLComment::ToComment()
+tinyxml2::XMLComment::ToComment() const
+tinyxml2::XMLDeclaration::ToDeclaration()
+tinyxml2::XMLDeclaration::ToDeclaration() const
+tinyxml2::XMLUnknown::ToUnknown()
+tinyxml2::XMLUnknown::ToUnknown() const
+tinyxml2::XMLElement::ToElement()
+tinyxml2::XMLElement::ToElement() const
+tinyxml2::XMLDocument::ToDocument()
+tinyxml2::XMLDocument::ToDocument() const
+tinyxml2::XMLDocument::ShallowClone(tinyxml2::XMLDocument*) const
+tinyxml2::XMLDocument::ShallowEqual(tinyxml2::XMLNode const*) const
+tinyxml2::XMLPrinter::VisitExit(tinyxml2::XMLDocument const&)
+tinyxml2::XMLPrinter::CompactMode(tinyxml2::XMLElement const&)
+tinyxml2::XMLDocument::Accept(tinyxml2::XMLVisitor*) const
+tinyxml2::XMLText::Accept(tinyxml2::XMLVisitor*) const
+tinyxml2::XMLComment::Accept(tinyxml2::XMLVisitor*) const
+tinyxml2::XMLDeclaration::Accept(tinyxml2::XMLVisitor*) const
+tinyxml2::XMLUnknown::Accept(tinyxml2::XMLVisitor*) const
+tinyxml2::XMLElement::Accept(tinyxml2::XMLVisitor*) const
+tinyxml2::XMLPrinter::~XMLPrinter()
+tinyxml2::XMLPrinter::~XMLPrinter()
+tinyxml2::XMLPrinter::Print(char const*, ...)
 __vfprintf_chk
 __vsnprintf_chk
-_ZN8tinyxml210XMLPrinterD0Ev
-_ZN8tinyxml210XMLPrinter5WriteEPKcj
-_ZN8tinyxml210XMLPrinter4PutcEc
+tinyxml2::XMLPrinter::~XMLPrinter()
+tinyxml2::XMLPrinter::Write(char const*, unsigned int)
+tinyxml2::XMLPrinter::Putc(char)
 fputc
-_ZN8tinyxml210XMLPrinter10PrintSpaceEi
-_ZN8tinyxml210XMLPrinter9VisitExitERKNS_10XMLElementE
-_ZN8tinyxml210XMLPrinter12CloseElementEb
-_ZN8tinyxml27StrPair5ResetEv
-_ZN8tinyxml27StrPairD2Ev
-_ZN8tinyxml27StrPairD1Ev
-_ZN8tinyxml212XMLAttributeD2Ev
-_ZTVN8tinyxml212XMLAttributeE
-_ZN8tinyxml212XMLAttributeD1Ev
-_ZN8tinyxml212XMLAttributeD0Ev
-_ZN8tinyxml27StrPair10TransferToEPS0_
-_ZN8tinyxml27StrPair6SetStrEPKci
-_ZN8tinyxml27StrPair9ParseTextEPcPKciPi
-_ZN8tinyxml27StrPair9ParseNameEPc
+tinyxml2::XMLPrinter::PrintSpace(int)
+tinyxml2::XMLPrinter::VisitExit(tinyxml2::XMLElement const&)
+tinyxml2::XMLPrinter::CloseElement(bool)
+tinyxml2::StrPair::Reset()
+tinyxml2::StrPair::~StrPair()
+tinyxml2::StrPair::~StrPair()
+tinyxml2::XMLAttribute::~XMLAttribute()
+vtable for tinyxml2::XMLAttribute
+tinyxml2::XMLAttribute::~XMLAttribute()
+tinyxml2::XMLAttribute::~XMLAttribute()
+tinyxml2::StrPair::TransferTo(tinyxml2::StrPair*)
+tinyxml2::StrPair::SetStr(char const*, int)
+tinyxml2::StrPair::ParseText(char*, char const*, int, int*)
+tinyxml2::StrPair::ParseName(char*)
 isalpha
-_ZN8tinyxml27StrPair18CollapseWhitespaceEv
+tinyxml2::StrPair::CollapseWhitespace()
 isspace
-_ZN8tinyxml27XMLUtil20SetBoolSerializationEPKcS2_
-_ZN8tinyxml27XMLUtil13writeBoolTrueE
-_ZN8tinyxml27XMLUtil14writeBoolFalseE
-_ZN8tinyxml27XMLUtil7ReadBOMEPKcPb
-_ZN8tinyxml27XMLUtil18ConvertUTF32ToUTF8EmPcPi
-_ZN8tinyxml27XMLUtil15GetCharacterRefEPKcPcPi
-_ZN8tinyxml27StrPair6GetStrEv
-_ZN8tinyxml27XMLUtil5ToStrEiPci
-_ZN8tinyxml27XMLUtil5ToStrEjPci
-_ZN8tinyxml27XMLUtil5ToStrEbPci
-_ZN8tinyxml27XMLUtil5ToStrEfPci
-_ZN8tinyxml27XMLUtil5ToStrEdPci
-_ZN8tinyxml27XMLUtil5ToStrExPci
-_ZN8tinyxml27XMLUtil5ToStrEyPci
-_ZN8tinyxml27XMLUtil5ToIntEPKcPi
-_ZN8tinyxml27XMLUtil10ToUnsignedEPKcPj
-_ZN8tinyxml27XMLUtil6ToBoolEPKcPb
-_ZN8tinyxml27XMLUtil7ToFloatEPKcPf
-_ZN8tinyxml27XMLUtil8ToDoubleEPKcPd
-_ZN8tinyxml27XMLUtil7ToInt64EPKcPx
-_ZN8tinyxml27XMLUtil12ToUnsigned64EPKcPy
-_ZN8tinyxml27XMLNodeC2EPNS_11XMLDocumentE
-_ZTVN8tinyxml27XMLNodeE
-_ZN8tinyxml27XMLNodeC1EPNS_11XMLDocumentE
-_ZNK8tinyxml27XMLNode5ValueEv
-_ZNK8tinyxml27XMLText12ShallowEqualEPKNS_7XMLNodeE
-_ZNK8tinyxml210XMLComment12ShallowEqualEPKNS_7XMLNodeE
-_ZNK8tinyxml214XMLDeclaration12ShallowEqualEPKNS_7XMLNodeE
-_ZNK8tinyxml210XMLUnknown12ShallowEqualEPKNS_7XMLNodeE
-_ZN8tinyxml27XMLNode8SetValueEPKcb
-_ZN8tinyxml27XMLNode6UnlinkEPS0_
-_ZNK8tinyxml27XMLNode17ToElementWithNameEPKc
-_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
-_ZNK8tinyxml27XMLNode16LastChildElementEPKc
-_ZNK8tinyxml27XMLNode18NextSiblingElementEPKc
-_ZNK8tinyxml27XMLNode22PreviousSiblingElementEPKc
-_ZN8tinyxml210XMLCommentC2EPNS_11XMLDocumentE
-_ZTVN8tinyxml210XMLCommentE
-_ZN8tinyxml210XMLCommentC1EPNS_11XMLDocumentE
-_ZN8tinyxml214XMLDeclarationC2EPNS_11XMLDocumentE
-_ZTVN8tinyxml214XMLDeclarationE
-_ZN8tinyxml214XMLDeclarationC1EPNS_11XMLDocumentE
-_ZN8tinyxml210XMLUnknownC2EPNS_11XMLDocumentE
-_ZTVN8tinyxml210XMLUnknownE
-_ZN8tinyxml210XMLUnknownC1EPNS_11XMLDocumentE
-_ZNK8tinyxml212XMLAttribute4NameEv
-_ZNK8tinyxml212XMLAttribute5ValueEv
-_ZNK8tinyxml210XMLElement12ShallowEqualEPKNS_7XMLNodeE
-_ZN8tinyxml212XMLAttribute9ParseDeepEPcbPi
-_ZN8tinyxml212XMLAttribute7SetNameEPKc
-_ZNK8tinyxml212XMLAttribute13QueryIntValueEPi
-_ZNK8tinyxml212XMLAttribute18QueryUnsignedValueEPj
-_ZNK8tinyxml212XMLAttribute15QueryInt64ValueEPx
-_ZNK8tinyxml212XMLAttribute20QueryUnsigned64ValueEPy
-_ZNK8tinyxml212XMLAttribute14QueryBoolValueEPb
-_ZNK8tinyxml212XMLAttribute15QueryFloatValueEPf
-_ZNK8tinyxml212XMLAttribute16QueryDoubleValueEPd
-_ZN8tinyxml212XMLAttribute12SetAttributeEPKc
-_ZN8tinyxml212XMLAttribute12SetAttributeEi
-_ZN8tinyxml212XMLAttribute12SetAttributeEj
-_ZN8tinyxml212XMLAttribute12SetAttributeEx
-_ZN8tinyxml212XMLAttribute12SetAttributeEy
-_ZN8tinyxml212XMLAttribute12SetAttributeEb
-_ZN8tinyxml212XMLAttribute12SetAttributeEd
-_ZN8tinyxml212XMLAttribute12SetAttributeEf
-_ZN8tinyxml210XMLElementC2EPNS_11XMLDocumentE
-_ZTVN8tinyxml210XMLElementE
-_ZN8tinyxml210XMLElementC1EPNS_11XMLDocumentE
-_ZN8tinyxml211XMLDocument8IdentifyEPcPPNS_7XMLNodeE
-_ZTVN8tinyxml27XMLTextE
-_ZNK8tinyxml210XMLElement13FindAttributeEPKc
-_ZNK8tinyxml210XMLElement9AttributeEPKcS2_
-_ZNK8tinyxml210XMLElement12IntAttributeEPKci
-_ZNK8tinyxml210XMLElement17UnsignedAttributeEPKcj
-_ZNK8tinyxml210XMLElement14Int64AttributeEPKcx
-_ZNK8tinyxml210XMLElement19Unsigned64AttributeEPKcy
-_ZNK8tinyxml210XMLElement13BoolAttributeEPKcb
-_ZNK8tinyxml210XMLElement15DoubleAttributeEPKcd
-_ZNK8tinyxml210XMLElement14FloatAttributeEPKcf
-_ZNK8tinyxml210XMLElement7GetTextEv
-_ZNK8tinyxml210XMLElement12QueryIntTextEPi
-_ZNK8tinyxml210XMLElement17QueryUnsignedTextEPj
-_ZNK8tinyxml210XMLElement14QueryInt64TextEPx
-_ZNK8tinyxml210XMLElement19QueryUnsigned64TextEPy
-_ZNK8tinyxml210XMLElement13QueryBoolTextEPb
-_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
-_ZNK8tinyxml210XMLElement14QueryFloatTextEPf
-_ZNK8tinyxml210XMLElement7IntTextEi
-_ZNK8tinyxml210XMLElement12UnsignedTextEj
-_ZNK8tinyxml210XMLElement9Int64TextEx
-_ZNK8tinyxml210XMLElement14Unsigned64TextEy
-_ZNK8tinyxml210XMLElement8BoolTextEb
-_ZNK8tinyxml210XMLElement10DoubleTextEd
-_ZNK8tinyxml210XMLElement9FloatTextEf
-_ZN8tinyxml210XMLElement15DeleteAttributeEPNS_12XMLAttributeE
-_ZN8tinyxml210XMLElement15DeleteAttributeEPKc
-_ZN8tinyxml210XMLElement15CreateAttributeEv
-_ZN8tinyxml210XMLElement21FindOrCreateAttributeEPKc
-_ZN8tinyxml211XMLDocumentC2EbNS_10WhitespaceE
-_ZTVN8tinyxml211XMLDocumentE
-_ZN8tinyxml211XMLDocumentC1EbNS_10WhitespaceE
-_ZN8tinyxml211XMLDocument9MarkInUseEPKNS_7XMLNodeE
-_ZN8tinyxml27XMLNode10DeleteNodeEPS0_
-_ZN8tinyxml27XMLNode11DeleteChildEPS0_
-_ZN8tinyxml27XMLNode14DeleteChildrenEv
-_ZN8tinyxml27XMLNodeD2Ev
-_ZN8tinyxml27XMLNodeD1Ev
-_ZN8tinyxml27XMLNodeD0Ev
-_ZN8tinyxml27XMLTextD2Ev
-_ZN8tinyxml27XMLTextD1Ev
-_ZN8tinyxml27XMLTextD0Ev
-_ZN8tinyxml210XMLCommentD2Ev
-_ZN8tinyxml210XMLCommentD1Ev
-_ZN8tinyxml210XMLCommentD0Ev
-_ZN8tinyxml214XMLDeclarationD2Ev
-_ZN8tinyxml214XMLDeclarationD1Ev
-_ZN8tinyxml214XMLDeclarationD0Ev
-_ZN8tinyxml210XMLUnknownD2Ev
-_ZN8tinyxml210XMLUnknownD1Ev
-_ZN8tinyxml210XMLUnknownD0Ev
-_ZN8tinyxml210XMLElementD2Ev
-_ZN8tinyxml210XMLElementD1Ev
-_ZN8tinyxml210XMLElementD0Ev
-_ZNK8tinyxml27XMLNode19InsertChildPreambleEPS0_
-_ZN8tinyxml27XMLNode14InsertEndChildEPS0_
-_ZNK8tinyxml27XMLNode9DeepCloneEPNS_11XMLDocumentE
-_ZN8tinyxml27XMLNode16InsertFirstChildEPS0_
-_ZN8tinyxml27XMLNode16InsertAfterChildEPS0_S1_
-_ZN8tinyxml211XMLDocument10NewElementEPKc
-_ZN8tinyxml210XMLElement21InsertNewChildElementEPKc
-_ZNK8tinyxml210XMLElement12ShallowCloneEPNS_11XMLDocumentE
-_ZN8tinyxml211XMLDocument10NewCommentEPKc
-_ZNK8tinyxml210XMLComment12ShallowCloneEPNS_11XMLDocumentE
-_ZN8tinyxml210XMLElement16InsertNewCommentEPKc
-_ZN8tinyxml211XMLDocument7NewTextEPKc
-_ZNK8tinyxml27XMLText12ShallowCloneEPNS_11XMLDocumentE
-_ZN8tinyxml210XMLElement7SetTextEPKc
-_ZN8tinyxml210XMLElement7SetTextEi
-_ZN8tinyxml210XMLElement7SetTextEj
-_ZN8tinyxml210XMLElement7SetTextEx
-_ZN8tinyxml210XMLElement7SetTextEy
-_ZN8tinyxml210XMLElement7SetTextEb
-_ZN8tinyxml210XMLElement7SetTextEf
-_ZN8tinyxml210XMLElement7SetTextEd
-_ZN8tinyxml210XMLElement13InsertNewTextEPKc
-_ZN8tinyxml211XMLDocument14NewDeclarationEPKc
-_ZNK8tinyxml214XMLDeclaration12ShallowCloneEPNS_11XMLDocumentE
-_ZN8tinyxml210XMLElement20InsertNewDeclarationEPKc
-_ZN8tinyxml211XMLDocument10NewUnknownEPKc
-_ZNK8tinyxml210XMLUnknown12ShallowCloneEPNS_11XMLDocumentE
-_ZN8tinyxml210XMLElement16InsertNewUnknownEPKc
-_ZN8tinyxml211XMLDocument10DeleteNodeEPNS_7XMLNodeE
-_ZN8tinyxml211XMLDocument5ClearEv
-_ZNK8tinyxml211XMLDocument8DeepCopyEPS0_
-_ZN8tinyxml211XMLDocumentD2Ev
-_ZN8tinyxml211XMLDocumentD1Ev
-_ZN8tinyxml211XMLDocumentD0Ev
-_ZN8tinyxml211XMLDocument13ErrorIDToNameENS_8XMLErrorE
-_ZN8tinyxml211XMLDocument11_errorNamesE
-_ZN8tinyxml211XMLDocument8SetErrorENS_8XMLErrorEiPKcz
-_ZN8tinyxml27XMLText9ParseDeepEPcPNS_7StrPairEPi
-_ZN8tinyxml210XMLComment9ParseDeepEPcPNS_7StrPairEPi
-_ZN8tinyxml214XMLDeclaration9ParseDeepEPcPNS_7StrPairEPi
-_ZN8tinyxml210XMLUnknown9ParseDeepEPcPNS_7StrPairEPi
-_ZN8tinyxml210XMLElement15ParseAttributesEPcPi
-_ZNK8tinyxml211XMLDocument8ErrorStrEv
-_ZNK8tinyxml211XMLDocument10PrintErrorEv
-_ZNK8tinyxml211XMLDocument9ErrorNameEv
-_ZN8tinyxml211XMLDocument5ParseEv
-_ZN8tinyxml211XMLDocument8LoadFileEP8_IO_FILE
+tinyxml2::XMLUtil::SetBoolSerialization(char const*, char const*)
+tinyxml2::XMLUtil::writeBoolTrue
+tinyxml2::XMLUtil::writeBoolFalse
+tinyxml2::XMLUtil::ReadBOM(char const*, bool*)
+tinyxml2::XMLUtil::ConvertUTF32ToUTF8(unsigned long, char*, int*)
+tinyxml2::XMLUtil::GetCharacterRef(char const*, char*, int*)
+tinyxml2::StrPair::GetStr()
+tinyxml2::XMLUtil::ToStr(int, char*, int)
+tinyxml2::XMLUtil::ToStr(unsigned int, char*, int)
+tinyxml2::XMLUtil::ToStr(bool, char*, int)
+tinyxml2::XMLUtil::ToStr(float, char*, int)
+tinyxml2::XMLUtil::ToStr(double, char*, int)
+tinyxml2::XMLUtil::ToStr(long long, char*, int)
+tinyxml2::XMLUtil::ToStr(unsigned long long, char*, int)
+tinyxml2::XMLUtil::ToInt(char const*, int*)
+tinyxml2::XMLUtil::ToUnsigned(char const*, unsigned int*)
+tinyxml2::XMLUtil::ToBool(char const*, bool*)
+tinyxml2::XMLUtil::ToFloat(char const*, float*)
+tinyxml2::XMLUtil::ToDouble(char const*, double*)
+tinyxml2::XMLUtil::ToInt64(char const*, long long*)
+tinyxml2::XMLUtil::ToUnsigned64(char const*, unsigned long long*)
+tinyxml2::XMLNode::XMLNode(tinyxml2::XMLDocument*)
+vtable for tinyxml2::XMLNode
+tinyxml2::XMLNode::XMLNode(tinyxml2::XMLDocument*)
+tinyxml2::XMLNode::Value() const
+tinyxml2::XMLText::ShallowEqual(tinyxml2::XMLNode const*) const
+tinyxml2::XMLComment::ShallowEqual(tinyxml2::XMLNode const*) const
+tinyxml2::XMLDeclaration::ShallowEqual(tinyxml2::XMLNode const*) const
+tinyxml2::XMLUnknown::ShallowEqual(tinyxml2::XMLNode const*) const
+tinyxml2::XMLNode::SetValue(char const*, bool)
+tinyxml2::XMLNode::Unlink(tinyxml2::XMLNode*)
+tinyxml2::XMLNode::ToElementWithName(char const*) const
+tinyxml2::XMLNode::FirstChildElement(char const*) const
+tinyxml2::XMLNode::LastChildElement(char const*) const
+tinyxml2::XMLNode::NextSiblingElement(char const*) const
+tinyxml2::XMLNode::PreviousSiblingElement(char const*) const
+tinyxml2::XMLComment::XMLComment(tinyxml2::XMLDocument*)
+vtable for tinyxml2::XMLComment
+tinyxml2::XMLComment::XMLComment(tinyxml2::XMLDocument*)
+tinyxml2::XMLDeclaration::XMLDeclaration(tinyxml2::XMLDocument*)
+vtable for tinyxml2::XMLDeclaration
+tinyxml2::XMLDeclaration::XMLDeclaration(tinyxml2::XMLDocument*)
+tinyxml2::XMLUnknown::XMLUnknown(tinyxml2::XMLDocument*)
+vtable for tinyxml2::XMLUnknown
+tinyxml2::XMLUnknown::XMLUnknown(tinyxml2::XMLDocument*)
+tinyxml2::XMLAttribute::Name() const
+tinyxml2::XMLAttribute::Value() const
+tinyxml2::XMLElement::ShallowEqual(tinyxml2::XMLNode const*) const
+tinyxml2::XMLAttribute::ParseDeep(char*, bool, int*)
+tinyxml2::XMLAttribute::SetName(char const*)
+tinyxml2::XMLAttribute::QueryIntValue(int*) const
+tinyxml2::XMLAttribute::QueryUnsignedValue(unsigned int*) const
+tinyxml2::XMLAttribute::QueryInt64Value(long long*) const
+tinyxml2::XMLAttribute::QueryUnsigned64Value(unsigned long long*) const
+tinyxml2::XMLAttribute::QueryBoolValue(bool*) const
+tinyxml2::XMLAttribute::QueryFloatValue(float*) const
+tinyxml2::XMLAttribute::QueryDoubleValue(double*) const
+tinyxml2::XMLAttribute::SetAttribute(char const*)
+tinyxml2::XMLAttribute::SetAttribute(int)
+tinyxml2::XMLAttribute::SetAttribute(unsigned int)
+tinyxml2::XMLAttribute::SetAttribute(long long)
+tinyxml2::XMLAttribute::SetAttribute(unsigned long long)
+tinyxml2::XMLAttribute::SetAttribute(bool)
+tinyxml2::XMLAttribute::SetAttribute(double)
+tinyxml2::XMLAttribute::SetAttribute(float)
+tinyxml2::XMLElement::XMLElement(tinyxml2::XMLDocument*)
+vtable for tinyxml2::XMLElement
+tinyxml2::XMLElement::XMLElement(tinyxml2::XMLDocument*)
+tinyxml2::XMLDocument::Identify(char*, tinyxml2::XMLNode**)
+vtable for tinyxml2::XMLText
+tinyxml2::XMLElement::FindAttribute(char const*) const
+tinyxml2::XMLElement::Attribute(char const*, char const*) const
+tinyxml2::XMLElement::IntAttribute(char const*, int) const
+tinyxml2::XMLElement::UnsignedAttribute(char const*, unsigned int) const
+tinyxml2::XMLElement::Int64Attribute(char const*, long long) const
+tinyxml2::XMLElement::Unsigned64Attribute(char const*, unsigned long long) const
+tinyxml2::XMLElement::BoolAttribute(char const*, bool) const
+tinyxml2::XMLElement::DoubleAttribute(char const*, double) const
+tinyxml2::XMLElement::FloatAttribute(char const*, float) const
+tinyxml2::XMLElement::GetText() const
+tinyxml2::XMLElement::QueryIntText(int*) const
+tinyxml2::XMLElement::QueryUnsignedText(unsigned int*) const
+tinyxml2::XMLElement::QueryInt64Text(long long*) const
+tinyxml2::XMLElement::QueryUnsigned64Text(unsigned long long*) const
+tinyxml2::XMLElement::QueryBoolText(bool*) const
+tinyxml2::XMLElement::QueryDoubleText(double*) const
+tinyxml2::XMLElement::QueryFloatText(float*) const
+tinyxml2::XMLElement::IntText(int) const
+tinyxml2::XMLElement::UnsignedText(unsigned int) const
+tinyxml2::XMLElement::Int64Text(long long) const
+tinyxml2::XMLElement::Unsigned64Text(unsigned long long) const
+tinyxml2::XMLElement::BoolText(bool) const
+tinyxml2::XMLElement::DoubleText(double) const
+tinyxml2::XMLElement::FloatText(float) const
+tinyxml2::XMLElement::DeleteAttribute(tinyxml2::XMLAttribute*)
+tinyxml2::XMLElement::DeleteAttribute(char const*)
+tinyxml2::XMLElement::CreateAttribute()
+tinyxml2::XMLElement::FindOrCreateAttribute(char const*)
+tinyxml2::XMLDocument::XMLDocument(bool, tinyxml2::Whitespace)
+vtable for tinyxml2::XMLDocument
+tinyxml2::XMLDocument::XMLDocument(bool, tinyxml2::Whitespace)
+tinyxml2::XMLDocument::MarkInUse(tinyxml2::XMLNode const*)
+tinyxml2::XMLNode::DeleteNode(tinyxml2::XMLNode*)
+tinyxml2::XMLNode::DeleteChild(tinyxml2::XMLNode*)
+tinyxml2::XMLNode::DeleteChildren()
+tinyxml2::XMLNode::~XMLNode()
+tinyxml2::XMLNode::~XMLNode()
+tinyxml2::XMLNode::~XMLNode()
+tinyxml2::XMLText::~XMLText()
+tinyxml2::XMLText::~XMLText()
+tinyxml2::XMLText::~XMLText()
+tinyxml2::XMLComment::~XMLComment()
+tinyxml2::XMLComment::~XMLComment()
+tinyxml2::XMLComment::~XMLComment()
+tinyxml2::XMLDeclaration::~XMLDeclaration()
+tinyxml2::XMLDeclaration::~XMLDeclaration()
+tinyxml2::XMLDeclaration::~XMLDeclaration()
+tinyxml2::XMLUnknown::~XMLUnknown()
+tinyxml2::XMLUnknown::~XMLUnknown()
+tinyxml2::XMLUnknown::~XMLUnknown()
+tinyxml2::XMLElement::~XMLElement()
+tinyxml2::XMLElement::~XMLElement()
+tinyxml2::XMLElement::~XMLElement()
+tinyxml2::XMLNode::InsertChildPreamble(tinyxml2::XMLNode*) const
+tinyxml2::XMLNode::InsertEndChild(tinyxml2::XMLNode*)
+tinyxml2::XMLNode::DeepClone(tinyxml2::XMLDocument*) const
+tinyxml2::XMLNode::InsertFirstChild(tinyxml2::XMLNode*)
+tinyxml2::XMLNode::InsertAfterChild(tinyxml2::XMLNode*, tinyxml2::XMLNode*)
+tinyxml2::XMLDocument::NewElement(char const*)
+tinyxml2::XMLElement::InsertNewChildElement(char const*)
+tinyxml2::XMLElement::ShallowClone(tinyxml2::XMLDocument*) const
+tinyxml2::XMLDocument::NewComment(char const*)
+tinyxml2::XMLComment::ShallowClone(tinyxml2::XMLDocument*) const
+tinyxml2::XMLElement::InsertNewComment(char const*)
+tinyxml2::XMLDocument::NewText(char const*)
+tinyxml2::XMLText::ShallowClone(tinyxml2::XMLDocument*) const
+tinyxml2::XMLElement::SetText(char const*)
+tinyxml2::XMLElement::SetText(int)
+tinyxml2::XMLElement::SetText(unsigned int)
+tinyxml2::XMLElement::SetText(long long)
+tinyxml2::XMLElement::SetText(unsigned long long)
+tinyxml2::XMLElement::SetText(bool)
+tinyxml2::XMLElement::SetText(float)
+tinyxml2::XMLElement::SetText(double)
+tinyxml2::XMLElement::InsertNewText(char const*)
+tinyxml2::XMLDocument::NewDeclaration(char const*)
+tinyxml2::XMLDeclaration::ShallowClone(tinyxml2::XMLDocument*) const
+tinyxml2::XMLElement::InsertNewDeclaration(char const*)
+tinyxml2::XMLDocument::NewUnknown(char const*)
+tinyxml2::XMLUnknown::ShallowClone(tinyxml2::XMLDocument*) const
+tinyxml2::XMLElement::InsertNewUnknown(char const*)
+tinyxml2::XMLDocument::DeleteNode(tinyxml2::XMLNode*)
+tinyxml2::XMLDocument::Clear()
+tinyxml2::XMLDocument::DeepCopy(tinyxml2::XMLDocument*) const
+tinyxml2::XMLDocument::~XMLDocument()
+tinyxml2::XMLDocument::~XMLDocument()
+tinyxml2::XMLDocument::~XMLDocument()
+tinyxml2::XMLDocument::ErrorIDToName(tinyxml2::XMLError)
+tinyxml2::XMLDocument::_errorNames
+tinyxml2::XMLDocument::SetError(tinyxml2::XMLError, int, char const*, ...)
+tinyxml2::XMLText::ParseDeep(char*, tinyxml2::StrPair*, int*)
+tinyxml2::XMLComment::ParseDeep(char*, tinyxml2::StrPair*, int*)
+tinyxml2::XMLDeclaration::ParseDeep(char*, tinyxml2::StrPair*, int*)
+tinyxml2::XMLUnknown::ParseDeep(char*, tinyxml2::StrPair*, int*)
+tinyxml2::XMLElement::ParseAttributes(char*, int*)
+tinyxml2::XMLDocument::ErrorStr() const
+tinyxml2::XMLDocument::PrintError() const
+tinyxml2::XMLDocument::ErrorName() const
+tinyxml2::XMLDocument::Parse()
+tinyxml2::XMLDocument::LoadFile(_IO_FILE*)
 fgetc
 ftell
 ferror
-_ZN8tinyxml211XMLDocument8LoadFileEPKc
-_ZN8tinyxml211XMLDocument9PushDepthEv
-_ZN8tinyxml211XMLDocument8PopDepthEv
-_ZN8tinyxml27XMLNode9ParseDeepEPcPNS_7StrPairEPi
-_ZN8tinyxml210XMLElement9ParseDeepEPcPNS_7StrPairEPi
-_ZN8tinyxml210XMLPrinterC2EP8_IO_FILEbi
-_ZN8tinyxml210XMLPrinter11PrintStringEPKcb
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcS2_
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKci
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcj
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcx
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcy
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcb
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcd
-_ZN8tinyxml210XMLPrinter23SealElementIfJustOpenedEv
-_ZN8tinyxml210XMLPrinter17PrepareForNewNodeEb
-_ZN8tinyxml210XMLPrinter11OpenElementEPKcb
-_ZN8tinyxml210XMLPrinter10VisitEnterERKNS_10XMLElementEPKNS_12XMLAttributeE
-_ZN8tinyxml210XMLPrinter8PushTextEPKcb
-_ZN8tinyxml210XMLPrinter5VisitERKNS_7XMLTextE
-_ZN8tinyxml210XMLPrinter8PushTextEx
-_ZN8tinyxml210XMLPrinter8PushTextEy
-_ZN8tinyxml210XMLPrinter8PushTextEi
-_ZN8tinyxml210XMLPrinter8PushTextEj
-_ZN8tinyxml210XMLPrinter8PushTextEb
-_ZN8tinyxml210XMLPrinter8PushTextEf
-_ZN8tinyxml210XMLPrinter8PushTextEd
-_ZN8tinyxml210XMLPrinter11PushCommentEPKc
-_ZN8tinyxml210XMLPrinter5VisitERKNS_10XMLCommentE
-_ZN8tinyxml210XMLPrinter15PushDeclarationEPKc
-_ZN8tinyxml210XMLPrinter10PushHeaderEbb
-_ZN8tinyxml210XMLPrinter10VisitEnterERKNS_11XMLDocumentE
+tinyxml2::XMLDocument::LoadFile(char const*)
+tinyxml2::XMLDocument::PushDepth()
+tinyxml2::XMLDocument::PopDepth()
+tinyxml2::XMLNode::ParseDeep(char*, tinyxml2::StrPair*, int*)
+tinyxml2::XMLElement::ParseDeep(char*, tinyxml2::StrPair*, int*)
+tinyxml2::XMLPrinter::XMLPrinter(_IO_FILE*, bool, int)
+tinyxml2::XMLPrinter::PrintString(char const*, bool)
+tinyxml2::XMLPrinter::PushAttribute(char const*, char const*)
+tinyxml2::XMLPrinter::PushAttribute(char const*, int)
+tinyxml2::XMLPrinter::PushAttribute(char const*, unsigned int)
+tinyxml2::XMLPrinter::PushAttribute(char const*, long long)
+tinyxml2::XMLPrinter::PushAttribute(char const*, unsigned long long)
+tinyxml2::XMLPrinter::PushAttribute(char const*, bool)
+tinyxml2::XMLPrinter::PushAttribute(char const*, double)
+tinyxml2::XMLPrinter::SealElementIfJustOpened()
+tinyxml2::XMLPrinter::PrepareForNewNode(bool)
+tinyxml2::XMLPrinter::OpenElement(char const*, bool)
+tinyxml2::XMLPrinter::VisitEnter(tinyxml2::XMLElement const&, tinyxml2::XMLAttribute const*)
+tinyxml2::XMLPrinter::PushText(char const*, bool)
+tinyxml2::XMLPrinter::Visit(tinyxml2::XMLText const&)
+tinyxml2::XMLPrinter::PushText(long long)
+tinyxml2::XMLPrinter::PushText(unsigned long long)
+tinyxml2::XMLPrinter::PushText(int)
+tinyxml2::XMLPrinter::PushText(unsigned int)
+tinyxml2::XMLPrinter::PushText(bool)
+tinyxml2::XMLPrinter::PushText(float)
+tinyxml2::XMLPrinter::PushText(double)
+tinyxml2::XMLPrinter::PushComment(char const*)
+tinyxml2::XMLPrinter::Visit(tinyxml2::XMLComment const&)
+tinyxml2::XMLPrinter::PushDeclaration(char const*)
+tinyxml2::XMLPrinter::PushHeader(bool, bool)
+tinyxml2::XMLPrinter::VisitEnter(tinyxml2::XMLDocument const&)
 stdout
-_ZN8tinyxml211XMLDocument8SaveFileEP8_IO_FILEb
-_ZN8tinyxml211XMLDocument8SaveFileEPKcb
-_ZN8tinyxml210XMLPrinter5VisitERKNS_14XMLDeclarationE
-_ZN8tinyxml210XMLPrinter11PushUnknownEPKc
-_ZN8tinyxml210XMLPrinter5VisitERKNS_10XMLUnknownE
-_ZTSN8tinyxml210XMLVisitorE
-_ZTIN8tinyxml210XMLVisitorE
-_ZTSN8tinyxml27XMLNodeE
-_ZTIN8tinyxml27XMLNodeE
-_ZTSN8tinyxml27XMLTextE
-_ZTIN8tinyxml27XMLTextE
-_ZTSN8tinyxml210XMLCommentE
-_ZTIN8tinyxml210XMLCommentE
-_ZTSN8tinyxml214XMLDeclarationE
-_ZTIN8tinyxml214XMLDeclarationE
-_ZTSN8tinyxml210XMLUnknownE
-_ZTIN8tinyxml210XMLUnknownE
-_ZTSN8tinyxml212XMLAttributeE
-_ZTIN8tinyxml212XMLAttributeE
-_ZTSN8tinyxml210XMLElementE
-_ZTIN8tinyxml210XMLElementE
-_ZTSN8tinyxml211XMLDocumentE
-_ZTIN8tinyxml211XMLDocumentE
-_ZTSN8tinyxml210XMLPrinterE
-_ZTIN8tinyxml210XMLPrinterE
+tinyxml2::XMLDocument::SaveFile(_IO_FILE*, bool)
+tinyxml2::XMLDocument::SaveFile(char const*, bool)
+tinyxml2::XMLPrinter::Visit(tinyxml2::XMLDeclaration const&)
+tinyxml2::XMLPrinter::PushUnknown(char const*)
+tinyxml2::XMLPrinter::Visit(tinyxml2::XMLUnknown const&)
+typeinfo name for tinyxml2::XMLVisitor
+typeinfo for tinyxml2::XMLVisitor
+typeinfo name for tinyxml2::XMLNode
+typeinfo for tinyxml2::XMLNode
+typeinfo name for tinyxml2::XMLText
+typeinfo for tinyxml2::XMLText
+typeinfo name for tinyxml2::XMLComment
+typeinfo for tinyxml2::XMLComment
+typeinfo name for tinyxml2::XMLDeclaration
+typeinfo for tinyxml2::XMLDeclaration
+typeinfo name for tinyxml2::XMLUnknown
+typeinfo for tinyxml2::XMLUnknown
+typeinfo name for tinyxml2::XMLAttribute
+typeinfo for tinyxml2::XMLAttribute
+typeinfo name for tinyxml2::XMLElement
+typeinfo for tinyxml2::XMLElement
+typeinfo name for tinyxml2::XMLDocument
+typeinfo for tinyxml2::XMLDocument
+typeinfo name for tinyxml2::XMLPrinter
+typeinfo for tinyxml2::XMLPrinter
 V_strristr
 Plat_MSTime64
 syscall
@@ -636,14 +636,14 @@ SDL_OpenJoystick
 SDL_GetNumJoystickAxes
 GetLocalHostname
 V_atoui64
-_ZTVN10__cxxabiv120__function_type_infoE
-_ZTVN10__cxxabiv119__pointer_type_infoE
+vtable for __cxxabiv1::__function_type_info
+vtable for __cxxabiv1::__pointer_type_info
 V_AppendParamToURL
 V_SetURLParam
 BParseISO8601Duration
 CalculateSegmentCount
 Plat_AbsoluteTime
-_Z17V_UnicodeValidatePKc
+V_UnicodeValidate(char const*)
 EConvertMPDToMP4
 g_ClockSpeedSecondsMultiplier
 BConvertYUVtoRGB
@@ -703,15 +703,15 @@ pa_context_get_sink_info_list
 pa_context_load_module
 pa_context_get_server_info
 pa_context_get_state
-_ZN16SteamThreadTools7CThreadD2Ev
-_ZN16SteamThreadTools7CThreadC2Ev
-_ZN16SteamThreadTools7CThread5StartEj
-_ZN16SteamThreadTools7CThread4JoinEj
-_ZTIN16SteamThreadTools7CThreadE
-_ZN16SteamThreadTools7CThread4InitEv
-_ZN16SteamThreadTools7CThread6OnExitEv
-_ZNK16SteamThreadTools7CThread15IsThreadRunningEv
-_ZN16SteamThreadTools7CThread13GetThreadProcEv
+SteamThreadTools::CThread::~CThread()
+SteamThreadTools::CThread::CThread()
+SteamThreadTools::CThread::Start(unsigned int)
+SteamThreadTools::CThread::Join(unsigned int)
+typeinfo for SteamThreadTools::CThread
+SteamThreadTools::CThread::Init()
+SteamThreadTools::CThread::OnExit()
+SteamThreadTools::CThread::IsThreadRunning() const
+SteamThreadTools::CThread::GetThreadProc()
 pw_stream_state_as_string
 g_dbus_proxy_call_finish
 g_variant_get_child
@@ -810,11 +810,11 @@ glTexCoord2f
 glVertex2f
 glEnd
 glReadPixels
-_ZNK16SteamThreadTools7CThread7IsAliveEv
+SteamThreadTools::CThread::IsAlive() const
 Plat_TickDiffMilliSec
 ThreadInterlockedExchange64
-_ZN10SteamVProf9CVProfile9MarkFrameEPKc
-_ZN16SteamThreadTools7CThread7SetNameEPKc
+SteamVProf::CVProfile::MarkFrame(char const*)
+SteamThreadTools::CThread::SetName(char const*)
 Plat_RelativeTickFrequency
 ETWMark
 ETWMark1I
@@ -822,12 +822,12 @@ __wrap_access
 fmaxf
 fminf
 ARGBToRAW
-_ZTIPFvPKc27ERecordingSegmenterLogLevelE
+typeinfo for void (*)(char const*, ERecordingSegmenterLogLevel)
 DeleteVideoRecordingSegmentWriter
 CreateVideoRecordingSegmentWriter
-_ZTSFvPKc27ERecordingSegmenterLogLevelE
-_ZTIFvPKc27ERecordingSegmenterLogLevelE
-_ZTSPFvPKc27ERecordingSegmenterLogLevelE
+typeinfo name for void (char const*, ERecordingSegmenterLogLevel)
+typeinfo for void (char const*, ERecordingSegmenterLogLevel)
+typeinfo name for void (*)(char const*, ERecordingSegmenterLogLevel)
 XQueryKeymap
 opus_multistream_encoder_create
 opus_multistream_encoder_ctl
@@ -869,8 +869,8 @@ XTestFakeRelativeMotionEvent
 fputs
 TSListBase_SwapList
 TSListBase_Push
-_ZN10SteamVProf20CVProfileThreadEntry14StartProfilingEfi
-_ZN10SteamVProf20CVProfileThreadEntry22SetDumpSpikesThresholdEi
+SteamVProf::CVProfileThreadEntry::StartProfiling(float, int)
+SteamVProf::CVProfileThreadEntry::SetDumpSpikesThreshold(int)
 wcscpy
 strcpy
 wcstombs
@@ -927,15 +927,15 @@ g_list_free
 gtk_menu_new
 g_object_ref_sink
 V_strcmp_prefix
-_ZTIPFvvE
+typeinfo for void (*)()
 g_VProfManager
-_ZN10SteamVProf13CVProfManager23StopProfilingAllThreadsEv
-_ZN10SteamVProf13CVProfManager20GetAllThreadProfilesEPNS_14CVProfileArrayE
-_ZN10SteamVProf14CVProfileArrayD1Ev
-_ZN10SteamVProf13CVProfManager24StartProfilingAllThreadsEfi
-_ZN10SteamVProf13CVProfManager16EnableDumpSpikesEi
-_ZN10SteamVProf13CVProfManager21DumpAllThreadProfilesEi
-_ZN10SteamVProf13CVProfManager21CleanupUnusedProfilesEv
+SteamVProf::CVProfManager::StopProfilingAllThreads()
+SteamVProf::CVProfManager::GetAllThreadProfiles(SteamVProf::CVProfileArray*)
+SteamVProf::CVProfileArray::~CVProfileArray()
+SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
+SteamVProf::CVProfManager::EnableDumpSpikes(int)
+SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
+SteamVProf::CVProfManager::CleanupUnusedProfiles()
 SDL_PumpEvents
 g_log_set_handler
 RunTypeValidationTests
@@ -951,9 +951,9 @@ execl
 _exit
 SteamDllMainEx
 SteamDllMain
-_ZTSFvvE
-_ZTIFvvE
-_ZTSPFvvE
+typeinfo name for void ()
+typeinfo for void ()
+typeinfo name for void (*)()
 feof
 V_URLCracker
 SDL_GetPrimaryDisplay
@@ -1003,7 +1003,7 @@ V_ExtractDomainFromURL
 Plat_CommandLineParamValue
 SetMiniDumpSteamID
 V_pretifymem
-_Z23V_ParseShellCommandLinePKcR10CUtlVectorI10CUtlString10CUtlMemoryIS2_EEiPS0_
+V_ParseShellCommandLine(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, int, char const**)
 g_dbus_proxy_get_cached_property
 V_SplitNumbers
 KeyValuesSystemSteam
@@ -1012,41 +1012,41 @@ V_URLEncode
 V_URLEncodeRaw
 V_URLDecode
 V_URLDecodeRaw
-_ZNK7pcrecpp2RE9FullMatchERKNS_11StringPieceERKNS_3ArgES6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_
+pcrecpp::RE::FullMatch(pcrecpp::StringPiece const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
 __secure_getenv
 V_FixupPathName
-_ZN10CValidatorC1EibP20IMemBlockClaimedList
-_ZN20CStringNormalization15ValidateStaticsER10CValidatorPKc
-_ZN9CURLUtils15ValidateStaticsER10CValidatorPKc
-_ZN6CTier015ValidateGlobalsER10CValidator
+CValidator::CValidator(int, bool, IMemBlockClaimedList*)
+CStringNormalization::ValidateStatics(CValidator&, char const*)
+CURLUtils::ValidateStatics(CValidator&, char const*)
+CTier0::ValidateGlobals(CValidator&)
 ValidateSpew
-_ZN10CValidator8FinalizeEv
-_ZN10CValidator11DiffAgainstEPS_
-_ZN10CValidator13RenderObjectsEj
-_ZN10CValidatorD1Ev
-_ZN10CValidator21UnlockValidationLocksEv
-_ZN10CValidator11RenderLeaksEj
-_ZN10CValidator18SetAllocSizeFilterEi
+CValidator::Finalize()
+CValidator::DiffAgainst(CValidator*)
+CValidator::RenderObjects(unsigned int)
+CValidator::~CValidator()
+CValidator::UnlockValidationLocks()
+CValidator::RenderLeaks(unsigned int)
+CValidator::SetAllocSizeFilter(int)
 V_ExtractFileExtension
 V_toupper
 SetMiniDumpBuildID
-_ZTIPF20EWatchdogStallResultjE
-_ZTSF20EWatchdogStallResultjE
-_ZTIF20EWatchdogStallResultjE
-_ZTSPF20EWatchdogStallResultjE
+typeinfo for EWatchdogStallResult (*)(unsigned int)
+typeinfo name for EWatchdogStallResult (unsigned int)
+typeinfo for EWatchdogStallResult (unsigned int)
+typeinfo name for EWatchdogStallResult (*)(unsigned int)
 fmod
 SDL_GetJoystickGUIDForID
 SDL_ReloadGamepadMappings
-_ZN16SteamThreadTools7CThread11SetPriorityEi
+SteamThreadTools::CThread::SetPriority(int)
 strtok
 SDL_GetJoysticks
 SDL_IsGamepad
 SDL_GetJoystickTypeForID
 SDL_GetJoystickNameForID
 V_ReplaceBadFilenameCharactersInPlace
-_Z20V_UnicodeCaseConvertR10CUtlStringi25EStringConvertErrorPolicy
+V_UnicodeCaseConvert(CUtlString&, int, EStringConvertErrorPolicy)
 strtod
-_ZTIPFbPKcE
+typeinfo for bool (*)(char const*)
 g_settings_get_double
 V_StripExtension
 GetFrameFromVideo
@@ -1055,9 +1055,9 @@ g_settings_new
 OSTypesAreCompatible
 Plat_IsTesla
 isalnum
-_ZTSFbPKcE
-_ZTIFbPKcE
-_ZTSPFbPKcE
+typeinfo name for bool (char const*)
+typeinfo for bool (char const*)
+typeinfo name for bool (*)(char const*)
 Plat_IsSteamConsoleMode
 V_URLParse
 g_bus_get_sync
@@ -1205,7 +1205,7 @@ calloc
 localeconv
 __wrap_fopen64
 ftello64
-_ZN10CValidator16ClaimArrayMemoryEPKv
+CValidator::ClaimArrayMemory(void const*)
 _DMsg
 _SpewMessageType
 strtoul
@@ -1213,7 +1213,7 @@ fnmatch
 getcwd
 V_strncat_length
 V_RemoveDotSlashes
-_ZN16SteamThreadTools7CThread9TerminateEi
+SteamThreadTools::CThread::Terminate(int)
 __wrap_open64
 posix_fadvise
 lseek64
@@ -1291,9 +1291,9 @@ __vasprintf_chk
 StringAfterPrefixCaseSensitive
 V_StrTrim
 __assert_fail
-_ZN6google8protobuf8internal8byteswapILi1EEEvPv
-_ZN6google8protobuf8internal8byteswapILi4EEEvPv
-_ZN6google8protobuf8internal8byteswapILi8EEEvPv
+void google::protobuf::internal::byteswap<1>(void*)
+void google::protobuf::internal::byteswap<4>(void*)
+void google::protobuf::internal::byteswap<8>(void*)
 lseek
 strtoull
 __sprintf_chk
@@ -1304,69 +1304,69 @@ fprintf
 frexp
 abort
 remove
-_ZN7pcrecpp3Arg10parse_nullEPKciPv
-_ZN7pcrecpp2RE7CleanupEv
+pcrecpp::Arg::parse_null(char const*, int, void*)
+pcrecpp::RE::Cleanup()
 pcre_free
-_ZN7pcrecpp2RED2Ev
-_ZN7pcrecpp2RE7CompileENS0_6AnchorE
+pcrecpp::RE::~RE()
+pcrecpp::RE::Compile(pcrecpp::RE::Anchor)
 pcre_compile
-_ZNK7pcrecpp2RE8TryMatchERKNS_11StringPieceEiNS0_6AnchorEbPii
+pcrecpp::RE::TryMatch(pcrecpp::StringPiece const&, int, pcrecpp::RE::Anchor, bool, int*, int) const
 pcre_exec
 pcre_config
-_ZNK7pcrecpp2RE23NumberOfCapturingGroupsEv
+pcrecpp::RE::NumberOfCapturingGroups() const
 pcre_fullinfo
-_ZNK7pcrecpp2RE11DoMatchImplERKNS_11StringPieceENS0_6AnchorEPiPKPKNS_3ArgEiS5_i
-_ZNK7pcrecpp2RE7ConsumeEPNS_11StringPieceERKNS_3ArgES5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_
-_ZNK7pcrecpp2RE14FindAndConsumeEPNS_11StringPieceERKNS_3ArgES5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_
-_ZNK7pcrecpp2RE7DoMatchERKNS_11StringPieceENS0_6AnchorEPiPKPKNS_3ArgEi
-_ZN7pcrecpp3Arg12parse_stringEPKciPv
-_ZN7pcrecpp3Arg17parse_stringpieceEPKciPv
-_ZN7pcrecpp3Arg10parse_charEPKciPv
-_ZN7pcrecpp3Arg11parse_ucharEPKciPv
-_ZN7pcrecpp3Arg16parse_long_radixEPKciPvi
-_ZN7pcrecpp3Arg17parse_ulong_radixEPKciPvi
-_ZN7pcrecpp3Arg17parse_short_radixEPKciPvi
-_ZN7pcrecpp3Arg18parse_ushort_radixEPKciPvi
-_ZN7pcrecpp3Arg15parse_int_radixEPKciPvi
-_ZN7pcrecpp3Arg16parse_uint_radixEPKciPvi
-_ZN7pcrecpp3Arg20parse_longlong_radixEPKciPvi
+pcrecpp::RE::DoMatchImpl(pcrecpp::StringPiece const&, pcrecpp::RE::Anchor, int*, pcrecpp::Arg const* const*, int, int*, int) const
+pcrecpp::RE::Consume(pcrecpp::StringPiece*, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
+pcrecpp::RE::FindAndConsume(pcrecpp::StringPiece*, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
+pcrecpp::RE::DoMatch(pcrecpp::StringPiece const&, pcrecpp::RE::Anchor, int*, pcrecpp::Arg const* const*, int) const
+pcrecpp::Arg::parse_string(char const*, int, void*)
+pcrecpp::Arg::parse_stringpiece(char const*, int, void*)
+pcrecpp::Arg::parse_char(char const*, int, void*)
+pcrecpp::Arg::parse_uchar(char const*, int, void*)
+pcrecpp::Arg::parse_long_radix(char const*, int, void*, int)
+pcrecpp::Arg::parse_ulong_radix(char const*, int, void*, int)
+pcrecpp::Arg::parse_short_radix(char const*, int, void*, int)
+pcrecpp::Arg::parse_ushort_radix(char const*, int, void*, int)
+pcrecpp::Arg::parse_int_radix(char const*, int, void*, int)
+pcrecpp::Arg::parse_uint_radix(char const*, int, void*, int)
+pcrecpp::Arg::parse_longlong_radix(char const*, int, void*, int)
 strtoq
-_ZN7pcrecpp3Arg21parse_ulonglong_radixEPKciPvi
+pcrecpp::Arg::parse_ulonglong_radix(char const*, int, void*, int)
 strtouq
-_ZN7pcrecpp3Arg12parse_doubleEPKciPv
-_ZN7pcrecpp3Arg11parse_floatEPKciPv
-_ZN7pcrecpp3Arg11parse_shortEPKciPv
-_ZN7pcrecpp3Arg15parse_short_hexEPKciPv
-_ZN7pcrecpp3Arg17parse_short_octalEPKciPv
-_ZN7pcrecpp3Arg18parse_short_cradixEPKciPv
-_ZN7pcrecpp3Arg12parse_ushortEPKciPv
-_ZN7pcrecpp3Arg16parse_ushort_hexEPKciPv
-_ZN7pcrecpp3Arg18parse_ushort_octalEPKciPv
-_ZN7pcrecpp3Arg19parse_ushort_cradixEPKciPv
-_ZN7pcrecpp3Arg9parse_intEPKciPv
-_ZN7pcrecpp3Arg13parse_int_hexEPKciPv
-_ZN7pcrecpp3Arg15parse_int_octalEPKciPv
-_ZN7pcrecpp3Arg16parse_int_cradixEPKciPv
-_ZN7pcrecpp3Arg10parse_uintEPKciPv
-_ZN7pcrecpp3Arg14parse_uint_hexEPKciPv
-_ZN7pcrecpp3Arg16parse_uint_octalEPKciPv
-_ZN7pcrecpp3Arg17parse_uint_cradixEPKciPv
-_ZN7pcrecpp3Arg10parse_longEPKciPv
-_ZN7pcrecpp3Arg14parse_long_hexEPKciPv
-_ZN7pcrecpp3Arg16parse_long_octalEPKciPv
-_ZN7pcrecpp3Arg17parse_long_cradixEPKciPv
-_ZN7pcrecpp3Arg11parse_ulongEPKciPv
-_ZN7pcrecpp3Arg15parse_ulong_hexEPKciPv
-_ZN7pcrecpp3Arg17parse_ulong_octalEPKciPv
-_ZN7pcrecpp3Arg18parse_ulong_cradixEPKciPv
-_ZN7pcrecpp3Arg14parse_longlongEPKciPv
-_ZN7pcrecpp3Arg18parse_longlong_hexEPKciPv
-_ZN7pcrecpp3Arg20parse_longlong_octalEPKciPv
-_ZN7pcrecpp3Arg21parse_longlong_cradixEPKciPv
-_ZN7pcrecpp3Arg15parse_ulonglongEPKciPv
-_ZN7pcrecpp3Arg19parse_ulonglong_hexEPKciPv
-_ZN7pcrecpp3Arg21parse_ulonglong_octalEPKciPv
-_ZN7pcrecpp3Arg22parse_ulonglong_cradixEPKciPv
+pcrecpp::Arg::parse_double(char const*, int, void*)
+pcrecpp::Arg::parse_float(char const*, int, void*)
+pcrecpp::Arg::parse_short(char const*, int, void*)
+pcrecpp::Arg::parse_short_hex(char const*, int, void*)
+pcrecpp::Arg::parse_short_octal(char const*, int, void*)
+pcrecpp::Arg::parse_short_cradix(char const*, int, void*)
+pcrecpp::Arg::parse_ushort(char const*, int, void*)
+pcrecpp::Arg::parse_ushort_hex(char const*, int, void*)
+pcrecpp::Arg::parse_ushort_octal(char const*, int, void*)
+pcrecpp::Arg::parse_ushort_cradix(char const*, int, void*)
+pcrecpp::Arg::parse_int(char const*, int, void*)
+pcrecpp::Arg::parse_int_hex(char const*, int, void*)
+pcrecpp::Arg::parse_int_octal(char const*, int, void*)
+pcrecpp::Arg::parse_int_cradix(char const*, int, void*)
+pcrecpp::Arg::parse_uint(char const*, int, void*)
+pcrecpp::Arg::parse_uint_hex(char const*, int, void*)
+pcrecpp::Arg::parse_uint_octal(char const*, int, void*)
+pcrecpp::Arg::parse_uint_cradix(char const*, int, void*)
+pcrecpp::Arg::parse_long(char const*, int, void*)
+pcrecpp::Arg::parse_long_hex(char const*, int, void*)
+pcrecpp::Arg::parse_long_octal(char const*, int, void*)
+pcrecpp::Arg::parse_long_cradix(char const*, int, void*)
+pcrecpp::Arg::parse_ulong(char const*, int, void*)
+pcrecpp::Arg::parse_ulong_hex(char const*, int, void*)
+pcrecpp::Arg::parse_ulong_octal(char const*, int, void*)
+pcrecpp::Arg::parse_ulong_cradix(char const*, int, void*)
+pcrecpp::Arg::parse_longlong(char const*, int, void*)
+pcrecpp::Arg::parse_longlong_hex(char const*, int, void*)
+pcrecpp::Arg::parse_longlong_octal(char const*, int, void*)
+pcrecpp::Arg::parse_longlong_cradix(char const*, int, void*)
+pcrecpp::Arg::parse_ulonglong(char const*, int, void*)
+pcrecpp::Arg::parse_ulonglong_hex(char const*, int, void*)
+pcrecpp::Arg::parse_ulonglong_octal(char const*, int, void*)
+pcrecpp::Arg::parse_ulonglong_cradix(char const*, int, void*)
 opus_decoder_get_size
 opus_decoder_init
 opus_decoder_ctl
@@ -1997,7 +1997,7 @@ glGetError
 V_IsSteamCloseProtocol
 ThreadImplOneTimeInit
 CatchAndWriteMiniDumpForVoidPtrFn
-_ZN16SteamThreadTools18CreateSimpleThreadEPFjPvES0_Pjj
+SteamThreadTools::CreateSimpleThread(unsigned int (*)(void*), void*, unsigned int*, unsigned int)
 ThreadSetDebugName
 getsockopt
 accept4
@@ -2005,7 +2005,7 @@ epoll_create
 SecureRandomBytes
 ThreadInterlockedExchangeAdd64
 ThreadInterlockedIncrement64
-_ZN10CValidator15ClaimConnectionEj
+CValidator::ClaimConnection(unsigned int)
 nghttp2_session_get_remote_settings
 V_MatchWildcardString
 nghttp2_session_del
@@ -2038,8 +2038,8 @@ Coroutine_IsActive
 Coroutine_Create
 SpewAndLogActivate
 getnameinfo
-_ZN10CValidator20ClaimUntrackedMemoryEj
-_ZN10CValidator11ClaimSocketEi
+CValidator::ClaimUntrackedMemory(unsigned int)
+CValidator::ClaimSocket(int)
 nghttp2_select_next_protocol
 shutdown
 ThreadTerminateProcessCode
@@ -2047,24 +2047,24 @@ pipe
 ThreadGetProcessExitCode
 unsetenv
 dup2
-_ZN16SteamThreadTools16CThreadFullMutexC1EbPKcbb
+SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
 V_CopyAndFixSlashes
-_ZN16SteamThreadTools16CThreadFullMutex7ReleaseEv
+SteamThreadTools::CThreadFullMutex::Release()
 Plat_AbsoluteTimeToFloat
-_ZN10SteamVProf9CVProfile25UnregisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
-_ZN10SteamVProf13CVProfManager18BIsProfilePtrValidEPNS_9CVProfileE
-_ZN10SteamVProf10CVProfNode22GetCurTimeLessChildrenEv
-_ZN10SteamVProf10CVProfNode24GetTotalTimeLessChildrenEv
-_ZN10SteamVProf9CVProfile5PauseEv
-_ZN10SteamVProf9CVProfile6ResumeEv
-_ZNK10SteamVProf9CVProfile18GetBudgetGroupNameE17EVProfBugdetGroup
-_ZN10SteamVProf9CVProfile19GetBudgetGroupColorE17EVProfBugdetGroupRiS2_S2_S2_
-_ZN10SteamVProf9CVProfile11GetThreadIDEv
-_ZN10SteamVProf9CVProfile23RegisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
-_ZN16SteamThreadTools7CThread7SuspendEv
-_ZN16SteamThreadTools7CThread6ResumeEv
+SteamVProf::CVProfile::UnregisterCallbackHandler(SteamVProf::IVProfileCallbackHandler*)
+SteamVProf::CVProfManager::BIsProfilePtrValid(SteamVProf::CVProfile*)
+SteamVProf::CVProfNode::GetCurTimeLessChildren()
+SteamVProf::CVProfNode::GetTotalTimeLessChildren()
+SteamVProf::CVProfile::Pause()
+SteamVProf::CVProfile::Resume()
+SteamVProf::CVProfile::GetBudgetGroupName(EVProfBugdetGroup) const
+SteamVProf::CVProfile::GetBudgetGroupColor(EVProfBugdetGroup, int&, int&, int&, int&)
+SteamVProf::CVProfile::GetThreadID()
+SteamVProf::CVProfile::RegisterCallbackHandler(SteamVProf::IVProfileCallbackHandler*)
+SteamThreadTools::CThread::Suspend()
+SteamThreadTools::CThread::Resume()
 pthread_mutex_trylock
-_ZN16SteamThreadTools7CThread7GetNameEv
+SteamThreadTools::CThread::GetName()
 ThreadSetBackgroundPriority
 V_CP437CharsToUTF8
 Plat_ctime
@@ -2324,21 +2324,21 @@ pcre_compile2
 pcre_callout
 pcre_stack_free
 pcre_stack_malloc
-_ZTVN9__gnu_cxx24__concurrence_lock_errorE
-_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTIN9__gnu_cxx24__concurrence_lock_errorE
-_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTSN9__gnu_cxx24__concurrence_lock_errorE
-_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTSN10__cxxabiv115__forced_unwindE
-_ZTIN10__cxxabiv115__forced_unwindE
-_ZTSN10__cxxabiv119__foreign_exceptionE
-_ZTIN10__cxxabiv119__foreign_exceptionE
-_ZTVN10__cxxabiv115__forced_unwindE
-_ZTVN10__cxxabiv119__foreign_exceptionE
-_ZTIN9__gnu_cxx20recursive_init_errorE
-_ZTVN9__gnu_cxx20recursive_init_errorE
-_ZTSN9__gnu_cxx20recursive_init_errorE
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__foreign_exception
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
+typeinfo for __gnu_cxx::recursive_init_error
+vtable for __gnu_cxx::recursive_init_error
+typeinfo name for __gnu_cxx::recursive_init_error
 __nl_langinfo_l
 __uselocale
 mbsrtowcs
@@ -2377,17 +2377,17 @@ bind_textdomain_codeset
 dgettext
 __strftime_l
 __wcsftime_l
-_Z27_txnal_cow_string_D1_commitPv
-_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _ITM_RU1
-_ZGTtnaj
+transaction clone for operator new[](unsigned int)
 _ITM_memcpyRtWn
-_Z23_txnal_cow_string_c_strPKv
+_txnal_cow_string_c_str(void const*)
 _ITM_RU4
-_Z20_txnal_cow_string_D1Pv
+_txnal_cow_string_D1(void*)
 _ITM_addUserCommitAction
-_Z26_txnal_logic_error_get_msgPv
-_Z28_txnal_runtime_error_get_msgPv
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
 dl_iterate_phdr
 __register_atfork
 __xmknod
@@ -50818,11 +50818,11 @@ October
 November
 December
 nghttp2_submit_trailer
-_ZN8tinyxml211XMLDocument5ParseEv
+tinyxml2::XMLDocument::Parse()
 pa_context_set_default_sink@PULSE_0
 ARGBGrayTo
-_ZTSF20EWatchdogStallResultjE
-_ZN7pcrecpp3Arg16parse_uint_radixEPKciPvi
+typeinfo name for EWatchdogStallResult (unsigned int)
+pcrecpp::Arg::parse_uint_radix(char const*, int, void*, int)
 ARGBAttenuate
 SDL_GetGamepads@SDL3_0.0.0
 __snprintf_chk@GLIBC_2.3.4
@@ -50830,18 +50830,18 @@ sha256_block_data_order
 Plat_GetPOSIXClockSource
 av_hwframe_ctx_alloc@LIBAVUTIL_56
 __wrap_fopen64
-_ZN8tinyxml27XMLUtil12ToUnsigned64EPKcPy
+tinyxml2::XMLUtil::ToUnsigned64(char const*, unsigned long long*)
 nghttp2_hd_inflate_get_table_entry
 gethostbyname@GLIBC_2.0
 V_StripExtension
-_ZNK8tinyxml214XMLDeclaration12ShallowCloneEPNS_11XMLDocumentE
+tinyxml2::XMLDeclaration::ShallowClone(tinyxml2::XMLDocument*) const
 V_snprintf
 I210ToARGBMatrix
 nghttp2_session_callbacks_set_select_padding_callback
 Camellia_EncryptBlock
 GaussPlane_F32
 V_towupper32
-_ZN8tinyxml210XMLPrinter4PutcEc
+tinyxml2::XMLPrinter::Putc(char)
 SDL_GetLogOutputFunction@SDL3_0.0.0
 nghttp2_session_check_request_allowed
 U210ToAR30
@@ -50852,7 +50852,7 @@ XTestQueryExtension
 Android420ToARGB
 g_main_context_unref
 SDL_abs@SDL3_0.0.0
-_ZNK8tinyxml27XMLText6ToTextEv
+tinyxml2::XMLText::ToText() const
 I010ToAR30Matrix
 g_dbus_method_invocation_get_message
 ThreadImplOneTimeInit
@@ -50865,18 +50865,18 @@ nghttp2_session_del
 lrintf@GLIBC_2.1
 ScaleCols_C
 pa_context_new@PULSE_0
-_ZTVN8tinyxml210XMLUnknownE
+vtable for tinyxml2::XMLUnknown
 SDL_GetRectUnion@SDL3_0.0.0
 glXGetProcAddress
 XextAddDisplay
 SDL_ShowWindow@SDL3_0.0.0
 nghttp2_session_recv
 XGetVisualInfo
-_ZN7pcrecpp3Arg11parse_floatEPKciPv
+pcrecpp::Arg::parse_float(char const*, int, void*)
 nghttp2_hd_inflate_new2
-_ZTIN9__gnu_cxx20recursive_init_errorE
-_ZTIFvvE
-_ZN7pcrecpp3Arg15parse_int_radixEPKciPvi
+typeinfo for __gnu_cxx::recursive_init_error
+typeinfo for void ()
+pcrecpp::Arg::parse_int_radix(char const*, int, void*, int)
 SDL_WarpMouseGlobal@SDL3_0.0.0
 nghttp2_hd_deflate_new
 AR30ToAB30
@@ -50884,16 +50884,16 @@ XextRemoveDisplay
 mbsnrtowcs@GLIBC_2.0
 __swprintf_chk@GLIBC_2.4
 kBgrH709Constants
-_ZN8tinyxml210XMLElement7SetTextEb
+tinyxml2::XMLElement::SetText(bool)
 __wrap_mount
 listen@GLIBC_2.0
 g_object_class_override_property
 glXMakeCurrent
-_ZN16SteamThreadTools7CThread6OnExitEv
+SteamThreadTools::CThread::OnExit()
 I444AlphaToARGBMatrix
 ByteToFloatRow_C
 srand@GLIBC_2.0
-_ZN16SteamThreadTools18CreateSimpleThreadEPFjPvES0_Pjj
+SteamThreadTools::CreateSimpleThread(unsigned int (*)(void*), void*, unsigned int*, unsigned int)
 pa_operation_get_state@PULSE_0
 g_variant_get
 g_variant_iter_loop
@@ -50901,22 +50901,22 @@ __isoc99_sscanf@GLIBC_2.7
 Plat_IsTesla
 __wrap_access
 I420Rect
-_ZTIN8tinyxml214XMLDeclarationE
-_ZN10SteamVProf13CVProfManager21CleanupUnusedProfilesEv
+typeinfo for tinyxml2::XMLDeclaration
+SteamVProf::CVProfManager::CleanupUnusedProfiles()
 g_dbus_connection_send_message
 SDL_GL_SwapWindow@SDL3_0.0.0
 pcre_exec
-_ZNK8tinyxml214XMLDeclaration6AcceptEPNS_10XMLVisitorE
+tinyxml2::XMLDeclaration::Accept(tinyxml2::XMLVisitor*) const
 opus_decoder_ctl
 NV12ToABGR
-_ZN11SteamStdLib11CommandLineEv
+SteamStdLib::CommandLine()
 g_dbus_object_manager_get_type
 V_MakeFileSafeName
 epoll_ctl@GLIBC_2.3.2
-_ZN16SteamThreadTools7CThreadD2Ev
+SteamThreadTools::CThread::~CThread()
 Plat_AbsoluteTimeToFloat
 ScaleRowDown38_2_Box_C
-_ZNK8tinyxml210XMLElement19Unsigned64AttributeEPKcy
+tinyxml2::XMLElement::Unsigned64Attribute(char const*, unsigned long long) const
 feof@GLIBC_2.0
 J422ToABGR
 U010ToARGB
@@ -50926,16 +50926,16 @@ U210ToAB30
 g_type_check_instance_cast
 __wrap_freopen
 pw_properties_new
-_ZN16SteamThreadTools17CThreadSyncObject4WaitEj
+SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 DES_encrypt3
 ScaleRowDown34_16_C
-_ZN10CValidator18SetAllocSizeFilterEi
+CValidator::SetAllocSizeFilter(int)
 ARGBToI444
-_ZN8tinyxml27XMLUtil14writeBoolFalseE
+tinyxml2::XMLUtil::writeBoolFalse
 P410ToAR30Row_C
 ScalePlaneVertical_16
 nghttp2_priority_spec_default_init
-_ZN8tinyxml27XMLNodeD0Ev
+tinyxml2::XMLNode::~XMLNode()
 CreateAudioEncoder
 glClearColor
 WeakRandomInt
@@ -50945,18 +50945,18 @@ CRYPTO_memcmp
 opus_encode_float
 SDL_free@SDL3_0.0.0
 scandir@GLIBC_2.0
-_ZN7pcrecpp3Arg15parse_int_octalEPKciPv
+pcrecpp::Arg::parse_int_octal(char const*, int, void*)
 SDL_GetNumJoystickAxes@SDL3_0.0.0
 __wrap_rmdir
-_ZN7pcrecpp3Arg22parse_ulonglong_cradixEPKciPv
-_ZNK8tinyxml210XMLComment9ToCommentEv
+pcrecpp::Arg::parse_ulonglong_cradix(char const*, int, void*)
+tinyxml2::XMLComment::ToComment() const
 g_app_info_get_display_name
-_ZN7pcrecpp3Arg10parse_charEPKciPv
+pcrecpp::Arg::parse_char(char const*, int, void*)
 pw_stream_update_params
 ARGBMultiply
 _DMsg
 NV12ToARGBRow_C
-_ZN16SteamThreadTools7CThread5StartEj
+SteamThreadTools::CThread::Start(unsigned int)
 ScaleRowDown2Box_16_C
 ScaleRowDown34_0_Box_C
 XTestFakeMotionEvent
@@ -50964,17 +50964,17 @@ g_bus_get_sync
 __secure_getenv@GLIBC_2.0
 ABGRToAR30
 ARGBColorTable
-_ZNK8tinyxml210XMLElement6AcceptEPNS_10XMLVisitorE
+tinyxml2::XMLElement::Accept(tinyxml2::XMLVisitor*) const
 ARGBToRGB565DitherRow_C
 gcm_gmult_4bit_mmx
 ARGBToUVRowMatrix_C
 ecp_nistz256_scatter_w7
-_ZN8tinyxml27XMLNode10ToDocumentEv
+tinyxml2::XMLNode::ToDocument()
 symlink@GLIBC_2.0
 mkdir@GLIBC_2.0
 __wrap_stat64
 __ctype_b_loc@GLIBC_2.3
-_ZN8tinyxml27XMLTextD1Ev
+tinyxml2::XMLText::~XMLText()
 _XReadPad
 g_unix_fd_list_get_type
 sendfile64@GLIBC_2.3
@@ -50982,12 +50982,12 @@ I422ToARGB
 fseeko64@GLIBC_2.1
 I420Blend
 ARGBExtractAlphaRow_C
-_ZN10SteamVProf9CVProfile6ResumeEv
-_ZN8tinyxml27XMLUtil18ConvertUTF32ToUTF8EmPcPi
-_ZN8tinyxml27StrPair5ResetEv
+SteamVProf::CVProfile::Resume()
+tinyxml2::XMLUtil::ConvertUTF32ToUTF8(unsigned long, char*, int*)
+tinyxml2::StrPair::Reset()
 XNVCTRLQueryTargetAttribute64
 g_strdup_printf
-_ZN7pcrecpp3Arg12parse_stringEPKciPv
+pcrecpp::Arg::parse_string(char const*, int, void*)
 SDL_GetJoystickGUIDInfo@SDL3_0.0.0
 g_variant_get_uint32
 XCreateWindow
@@ -50995,10 +50995,10 @@ bn_GF2m_mul_2x2
 ARGBToYUY2
 ScaleFilterCols_C
 fdatasync@GLIBC_2.0
-_ZTVN10__cxxabiv115__forced_unwindE
+vtable for __cxxabiv1::__forced_unwind
 nghttp2_session_get_hd_inflate_dynamic_table_size
 SDL_CreateSurfaceFrom@SDL3_0.0.0
-_ZTIPF20EWatchdogStallResultjE
+typeinfo for EWatchdogStallResult (*)(unsigned int)
 ScaleSumSamples_C
 XNVCtrlSelectNotify
 V_StripPrecedingAndTrailingWhitespace
@@ -51006,26 +51006,26 @@ DebugStatsSystem
 pcre_fullinfo
 g_malloc0_n
 pw_stream_dequeue_buffer
-_ZN7pcrecpp3Arg14parse_uint_hexEPKciPv
+pcrecpp::Arg::parse_uint_hex(char const*, int, void*)
 nghttp2_session_create_idle_stream
 V_StripFilename
 nghttp2_is_fatal
 BGRAToARGB
-_ZN8tinyxml27XMLNode13ToDeclarationEv
+tinyxml2::XMLNode::ToDeclaration()
 __xpg_strerror_r@GLIBC_2.3.4
-_ZN8tinyxml210XMLPrinter5WriteEPKcj
+tinyxml2::XMLPrinter::Write(char const*, unsigned int)
 g_intern_static_string
 ecp_nistz256_mul_by_3
 nghttp2_hd_inflate_get_dynamic_table_size
 CreateInterface
-_ZN8tinyxml211XMLDocument13ErrorIDToNameENS_8XMLErrorE
-_ZNK8tinyxml27XMLNode9DeepCloneEPNS_11XMLDocumentE
+tinyxml2::XMLDocument::ErrorIDToName(tinyxml2::XMLError)
+tinyxml2::XMLNode::DeepClone(tinyxml2::XMLDocument*) const
 OPENSSL_atomic_add
 g_free
 MirrorSplitUVRow_C
 g_param_spec_uint64
 g_assertion_message_expr
-_ZN8tinyxml210XMLElementD1Ev
+tinyxml2::XMLElement::~XMLElement()
 XRRSelectInput
 aesni_xts_encrypt
 ScaleUVRowDown2Linear_C
@@ -51041,14 +51041,14 @@ g_dbus_proxy_new_for_bus
 Android420ToARGBMatrix
 wcstombs@GLIBC_2.0
 Plat_IsWSL
-_ZN7pcrecpp3Arg18parse_ulong_cradixEPKciPv
+pcrecpp::Arg::parse_ulong_cradix(char const*, int, void*)
 gtk_check_menu_item_set_active
-_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
+vtable for __gnu_cxx::__concurrence_unlock_error
 _XReply
 I422Copy
 Plat_IsChromeOS
 sha1_block_data_order
-_ZN8tinyxml210XMLElement7SetTextEx
+tinyxml2::XMLElement::SetText(long long)
 strncpy@GLIBC_2.0
 g_param_spec_uchar
 I422ToBGRA
@@ -51061,9 +51061,9 @@ I420ToBGRA
 gdk_pixbuf_get_width
 StringFindSuffix
 I210ToARGB
-_ZN8tinyxml27XMLUtil8ToDoubleEPKcPd
+tinyxml2::XMLUtil::ToDouble(char const*, double*)
 J444ToARGB
-_ZN16SteamThreadTools12CThreadMutexD1Ev
+SteamThreadTools::CThreadMutex::~CThreadMutex()
 nghttp2_rcbuf_incref
 ScaleUVColsUp2_C
 nghttp2_session_get_stream_remote_window_size
@@ -51078,15 +51078,15 @@ strtok@GLIBC_2.0
 ClearVideoSpewCallback
 SDL_RaiseWindow@SDL3_0.0.0
 g_variant_get_strv
-_ZN8tinyxml211XMLDocumentC2EbNS_10WhitespaceE
+tinyxml2::XMLDocument::XMLDocument(bool, tinyxml2::Whitespace)
 __wrap_mknod
 J400ToARGBRow_C
 shmdt@GLIBC_2.0
 Coroutine_Continue
-_ZTSN8tinyxml210XMLElementE
+typeinfo name for tinyxml2::XMLElement
 I422ToRGB24Row_C
 g_log_set_handler
-_ZN8tinyxml210XMLPrinterD1Ev
+tinyxml2::XMLPrinter::~XMLPrinter()
 V_atoi
 recvfrom@GLIBC_2.0
 DES_encrypt1
@@ -51102,23 +51102,23 @@ ScalePlaneUp2_16_Linear
 ABGRToYRow_C
 XGetGeometry
 usleep@GLIBC_2.0
-_ZNK16SteamThreadTools7CThread15IsThreadRunningEv
+SteamThreadTools::CThread::IsThreadRunning() const
 ARGBToRGBA
 fopen64@GLIBC_2.1
-_ZNK8tinyxml210XMLElement9FloatTextEf
+tinyxml2::XMLElement::FloatText(float) const
 wcscasecmp@GLIBC_2.1
 SDL_GetJoystickAxisInitialState@SDL3_0.0.0
 nghttp2_session_callbacks_set_on_invalid_header_callback2
 GaussCol_C
 wcrtomb@GLIBC_2.0
 U420ToABGR
-_ZN8tinyxml211XMLDocument14NewDeclarationEPKc
+tinyxml2::XMLDocument::NewDeclaration(char const*)
 V_ExtractDomainFromURL
 MergeRGBRow_C
 NV21ToRGB24
 nghttp2_session_callbacks_set_on_data_chunk_recv_callback
 V_ComposeFileName
-_ZTVN8tinyxml210XMLPrinterE
+vtable for tinyxml2::XMLPrinter
 RAWToRGBA
 I422ToARGBMatrix
 nghttp2_submit_priority
@@ -51126,15 +51126,15 @@ __stack_chk_fail@GLIBC_2.4
 iconv_open@GLIBC_2.1
 gtk_icon_theme_load_icon
 wcsnrtombs@GLIBC_2.0
-_ZN8tinyxml210XMLElement15ParseAttributesEPcPi
+tinyxml2::XMLElement::ParseAttributes(char*, int*)
 XNVCTRLQueryBinaryDataAttributePermissions
-_ZN7pcrecpp3Arg16parse_uint_octalEPKciPv
+pcrecpp::Arg::parse_uint_octal(char const*, int, void*)
 I420ToRGBAMatrix
 nghttp2_stream_get_sum_dependency_weight
 pow@GLIBC_2.0
-_ZTSN10__cxxabiv119__foreign_exceptionE
-_ZN7pcrecpp3Arg11parse_shortEPKciPv
-_ZTIN8tinyxml210XMLUnknownE
+typeinfo name for __cxxabiv1::__foreign_exception
+pcrecpp::Arg::parse_short(char const*, int, void*)
+typeinfo for tinyxml2::XMLUnknown
 XGetWMHints
 HalfFloatRow_C
 SDL_GetWindowSize@SDL3_0.0.0
@@ -51143,33 +51143,33 @@ ARGB4444ToARGBRow_C
 AR64ShuffleRow_C
 Camellia_DecryptBlock_Rounds
 CreateVideoRecordingSegmentWriter
-_ZN8tinyxml210XMLPrinter8PushTextEj
+tinyxml2::XMLPrinter::PushText(unsigned int)
 ETWIsTracingEnabled
-_ZNK8tinyxml27XMLNode9ToUnknownEv
+tinyxml2::XMLNode::ToUnknown() const
 XNVCTRLSetStringAttribute
 AYUVToVURow_C
-_ZNK7pcrecpp2RE7DoMatchERKNS_11StringPieceENS0_6AnchorEPiPKPKNS_3ArgEi
+pcrecpp::RE::DoMatch(pcrecpp::StringPiece const&, pcrecpp::RE::Anchor, int*, pcrecpp::Arg const* const*, int) const
 shmget@GLIBC_2.0
 ScaleRowDown34_0_Box_16_C
 nghttp2_session_get_remote_window_size
-_ZNK7pcrecpp2RE8TryMatchERKNS_11StringPieceEiNS0_6AnchorEbPii
-_ZN10CValidator11ClaimSocketEi
-_ZN8tinyxml212XMLAttributeD1Ev
+pcrecpp::RE::TryMatch(pcrecpp::StringPiece const&, int, pcrecpp::RE::Anchor, bool, int*, int) const
+CValidator::ClaimSocket(int)
+tinyxml2::XMLAttribute::~XMLAttribute()
 SDL_GetGamepadMappingForGUID@SDL3_0.0.0
-_ZN8tinyxml27XMLUtil5ToStrExPci
+tinyxml2::XMLUtil::ToStr(long long, char*, int)
 pa_context_disconnect@PULSE_0
 kYvuF709Constants
 SDL_GetDesktopDisplayMode@SDL3_0.0.0
-_ZN8tinyxml210XMLComment9ParseDeepEPcPNS_7StrPairEPi
+tinyxml2::XMLComment::ParseDeep(char*, tinyxml2::StrPair*, int*)
 RAWToYJRow_C
 g_cancellable_new
 nghttp2_submit_goaway
 ftell@GLIBC_2.0
 g_type_class_add_private
 poly1305_init
-_ZNK8tinyxml27XMLNode18NextSiblingElementEPKc
+tinyxml2::XMLNode::NextSiblingElement(char const*) const
 V_StrRight
-_ZTIN10__cxxabiv119__foreign_exceptionE
+typeinfo for __cxxabiv1::__foreign_exception
 sscanf@GLIBC_2.0
 ThreadInterlockedExchangePointer
 pa_stream_set_read_callback@PULSE_0
@@ -51183,7 +51183,7 @@ ARGBToNV21
 faccessat@GLIBC_2.4
 ScaleSlope
 AR64ToARGB
-_ZN10CValidator15ClaimConnectionEj
+CValidator::ClaimConnection(unsigned int)
 nghttp2_hd_inflate_end_headers
 XTestFakeButtonEvent
 XFreePixmap
@@ -51196,46 +51196,46 @@ XCreatePixmap
 nghttp2_session_callbacks_set_on_frame_recv_callback
 nghttp2_session_change_stream_priority
 KeyValuesSystemSteam
-_ZN8tinyxml210XMLComment9ToCommentEv
+tinyxml2::XMLComment::ToComment()
 XNVCTRLQueryValidAttributeValues
 SDL_ReadIO@SDL3_0.0.0
 g_once_init_enter
 __towlower_l@GLIBC_2.1
 ThreadSetDebugName
 pw_context_new
-_ZTVN10__cxxabiv120__si_class_type_infoE
+vtable for __cxxabiv1::__si_class_type_info
 ScaleUVFilterCols64_C
 __fxstat@GLIBC_2.0
-_ZN7pcrecpp2RE6no_argE
+pcrecpp::RE::no_arg
 glViewport
 XNVCTRLQueryGvoColorConversion
 mbrtowc@GLIBC_2.0
-_ZN8tinyxml210XMLElement7SetTextEf
+tinyxml2::XMLElement::SetText(float)
 g_app_info_get_icon
 J420ToRGB565
 mlock@GLIBC_2.0
 g_error_free
-_ZN8tinyxml211XMLDocument10NewCommentEPKc
+tinyxml2::XMLDocument::NewComment(char const*)
 NV21ToARGBRow_C
 gtk_init
 TSListBase_Init
-_ZN10SteamVProf9CVProfile23RegisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
+SteamVProf::CVProfile::RegisterCallbackHandler(SteamVProf::IVProfileCallbackHandler*)
 dl_iterate_phdr@GLIBC_2.2.4
 mmap@GLIBC_2.0
 ScalePlaneBilinearUp_16
 XISelectEvents
 vpaes_decrypt
 ScaleMaxSamples_C
-_ZTVN10__cxxabiv119__foreign_exceptionE
-_ZNK7pcrecpp2RE12PartialMatchERKNS_11StringPieceERKNS_3ArgES6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_
+vtable for __cxxabiv1::__foreign_exception
+pcrecpp::RE::PartialMatch(pcrecpp::StringPiece const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
 I420AlphaToARGB
 U422ToARGB
 g_variant_get_objv
-_ZN10SteamVProf10CVProfNode22GetCurTimeLessChildrenEv
+SteamVProf::CVProfNode::GetCurTimeLessChildren()
 g_param_spec_double
 wmemmove@GLIBC_2.0
-_ZN8tinyxml27XMLUtil5ToStrEyPci
-_ZTSPFvvE
+tinyxml2::XMLUtil::ToStr(unsigned long long, char*, int)
+typeinfo name for void (*)()
 g_app_info_get_commandline
 dlopen@GLIBC_2.1
 NV21ToABGR
@@ -51252,8 +51252,8 @@ g_str_equal
 av_frame_free@LIBAVUTIL_56
 opus_pcm_soft_clip
 V_MatchWildcardDNSName
-_ZN6google8protobuf8internal8byteswapILi4EEEvPv
-_ZN8tinyxml27XMLUtil13writeBoolTrueE
+void google::protobuf::internal::byteswap<4>(void*)
+tinyxml2::XMLUtil::writeBoolTrue
 __ctype_tolower_loc@GLIBC_2.3
 U010ToAB30
 H420ToABGR
@@ -51267,17 +51267,17 @@ ScaleARGBRowDown2_C
 socket@GLIBC_2.0
 strstr@GLIBC_2.0
 V_wcscat
-_ZN8tinyxml211XMLDocument10ClearErrorEv
-_ZN8tinyxml210XMLCommentD1Ev
-_ZN10CValidator13RenderObjectsEj
-_ZN8tinyxml210XMLPrinter10PrintSpaceEi
-_ZN8tinyxml212XMLAttribute12SetAttributeEj
+tinyxml2::XMLDocument::ClearError()
+tinyxml2::XMLComment::~XMLComment()
+CValidator::RenderObjects(unsigned int)
+tinyxml2::XMLPrinter::PrintSpace(int)
+tinyxml2::XMLAttribute::SetAttribute(unsigned int)
 ecp_nistz256_mul_by_2
 H444ToABGR
 ARGBSetRow_C
 InterpolatePlane
 V_strncpy
-_ZTIN8tinyxml210XMLCommentE
+typeinfo for tinyxml2::XMLComment
 g_variant_get_int16
 I212ToARGBRow_C
 U444ToARGB
@@ -51286,43 +51286,43 @@ SDL_DelEventWatch@SDL3_0.0.0
 nghttp2_session_mem_recv
 round@GLIBC_2.1
 V_ReplaceBadFilenameCharactersInPlace
-_ZNK8tinyxml212XMLAttribute15QueryFloatValueEPf
-_ZN7pcrecpp3Arg14parse_long_hexEPKciPv
+tinyxml2::XMLAttribute::QueryFloatValue(float*) const
+pcrecpp::Arg::parse_long_hex(char const*, int, void*)
 XFreeEventData
 g_variant_type_checked_
 MergeXR30Row_C
 SDL_LoadObject@SDL3_0.0.0
 SDL_ClearError@SDL3_0.0.0
 XRRGetScreenResources
-_ZN8tinyxml211XMLDocument9MarkInUseEPKNS_7XMLNodeE
+tinyxml2::XMLDocument::MarkInUse(tinyxml2::XMLNode const*)
 strtold_l@GLIBC_2.3
 XQueryPointer
 g_variant_builder_end
-_ZN10SteamVProf9CVProfile11GetThreadIDEv
+SteamVProf::CVProfile::GetThreadID()
 pthread_getspecific@GLIBC_2.0
 pw_context_destroy
 nghttp2_session_get_local_settings
 I444Scale_12
 SteamDllMain
-_ZN8tinyxml210XMLElementD2Ev
+tinyxml2::XMLElement::~XMLElement()
 g_VProfProfilesRunningCount
 g_unix_fd_list_get
 ARGBShade
-_ZN8tinyxml214XMLDeclarationC2EPNS_11XMLDocumentE
+tinyxml2::XMLDeclaration::XMLDeclaration(tinyxml2::XMLDocument*)
 pa_sample_spec_snprint@PULSE_0
 htonl@GLIBC_2.0
 ETW_Steamworks_DispatchCallback_End_
 g_dbus_proxy_get_type
-_ZN8tinyxml27XMLText6ToTextEv
+tinyxml2::XMLText::ToText()
 XNVCtrlSelectTargetNotify
 epoll_create@GLIBC_2.3.2
 SDL_GL_MakeCurrent@SDL3_0.0.0
 MergeARGBPlaneOpaque
-_ZN7pcrecpp2RED2Ev
+pcrecpp::RE::~RE()
 send@GLIBC_2.0
 iswspace@GLIBC_2.0
 FreeImageYUV
-_ZN10SteamVProf9CVProfile25UnregisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
+SteamVProf::CVProfile::UnregisterCallbackHandler(SteamVProf::IVProfileCallbackHandler*)
 nghttp2_session_set_local_window_size
 UYVYToARGB
 glVertex2f
@@ -51332,32 +51332,32 @@ __memcpy_chk@GLIBC_2.3.4
 I420Scale_16
 pa_context_set_state_callback@PULSE_0
 XNVCTRLQueryTargetCount
-_ZN6google8protobuf8internal8byteswapILi1EEEvPv
+void google::protobuf::internal::byteswap<1>(void*)
 nghttp2_submit_shutdown_notice
 pw_thread_loop_destroy
 ETWMark1I
-_ZNK8tinyxml27XMLNode17ToElementWithNameEPKc
+tinyxml2::XMLNode::ToElementWithName(char const*) const
 RGB24ToUVRowMatrix_C
 I012ToARGBMatrix
 g_list_free
-_ZN10SteamVProf20CVProfileThreadEntry14StartProfilingEfi
+SteamVProf::CVProfileThreadEntry::StartProfiling(float, int)
 av_hwdevice_ctx_create@LIBAVUTIL_56
 glClear
 J420ToABGR
 RAWToUVRowMatrix_C
 pa_stream_is_suspended@PULSE_0
-_ZN8tinyxml212XMLAttribute12SetAttributeEy
+tinyxml2::XMLAttribute::SetAttribute(unsigned long long)
 ScaleAddRow_16_C
-_ZN8tinyxml211XMLDocument10NewUnknownEPKc
+tinyxml2::XMLDocument::NewUnknown(char const*)
 strtof@GLIBC_2.0
 g_type_interface_peek
 floor@GLIBC_2.0
-_ZN8tinyxml27XMLUtil7ToInt64EPKcPx
+tinyxml2::XMLUtil::ToInt64(char const*, long long*)
 ScaleARGBCols64_C
 glEnable
 SDL_GetWindowProperties@SDL3_0.0.0
 SDL_ConvertPixels@SDL3_0.0.0
-_ZN8tinyxml211XMLDocument8LoadFileEPKc
+tinyxml2::XMLDocument::LoadFile(char const*)
 glXGetCurrentDisplay
 opus_repacketizer_get_nb_frames
 I212ToAR30Row_C
@@ -51366,10 +51366,10 @@ nghttp2_session_set_user_data
 ETWEnd
 RAWToARGB
 ntohl@GLIBC_2.0
-_ZN8tinyxml27XMLNodeD1Ev
+tinyxml2::XMLNode::~XMLNode()
 NV12ToRGB24
 V_WcsSkipArticles
-_ZN8tinyxml27XMLUtil10ToUnsignedEPKcPj
+tinyxml2::XMLUtil::ToUnsigned(char const*, unsigned int*)
 __wrap_statfs
 ftruncate@GLIBC_2.0
 opus_multistream_packet_unpad
@@ -51383,7 +51383,7 @@ XShmQueryExtension
 futimes@GLIBC_2.3
 ABGRToUVRow_C
 I210AlphaToARGBRow_C
-_ZN16SteamThreadTools12CThreadMutexC1Ev
+SteamThreadTools::CThreadMutex::CThreadMutex()
 gcm_gmult_4bit_x86
 munmap@GLIBC_2.0
 g_variant_new
@@ -51392,13 +51392,13 @@ strftime@GLIBC_2.0
 getentropy
 CopyRow_16_C
 gai_strerror@GLIBC_2.1
-_ZTIN8tinyxml212XMLAttributeE
+typeinfo for tinyxml2::XMLAttribute
 Plat_IsSteamOS3
 gtk_check_menu_item_new_with_label
 _setjmp@GLIBC_2.0
 __wrap_fopen
 RescaleBase
-_ZTSN8tinyxml210XMLUnknownE
+typeinfo name for tinyxml2::XMLUnknown
 V_vsnprintfRet
 nghttp2_strerror
 ARGBToNV12
@@ -51411,12 +51411,12 @@ V_vsnwprintf
 epoll_wait@GLIBC_2.3.2
 V_strncat_length
 dlclose@GLIBC_2.0
-_ZN8tinyxml210XMLElement16InsertNewCommentEPKc
+tinyxml2::XMLElement::InsertNewComment(char const*)
 nghttp2_hd_deflate_del
 nghttp2_session_client_new
 ThreadIsProcessIdActive
-_ZNK8tinyxml210XMLElement13FindAttributeEPKc
-_ZN7pcrecpp3Arg16parse_long_octalEPKciPv
+tinyxml2::XMLElement::FindAttribute(char const*) const
+pcrecpp::Arg::parse_long_octal(char const*, int, void*)
 UYVYToUV422Row_C
 isalnum@GLIBC_2.0
 V_IsSteamCloseProtocol
@@ -51425,26 +51425,26 @@ __wrap_chown
 pa_strerror@PULSE_0
 I210ToAR30Row_C
 nghttp2_session_check_server_session
-_ZTVN10__cxxabiv117__class_type_infoE
+vtable for __cxxabiv1::__class_type_info
 ARGBToAR64
 bind_textdomain_codeset@GLIBC_2.2
 sendmsg@GLIBC_2.0
 ScaleUVRowUp2_Bilinear_C
-_ZN16SteamThreadTools16CThreadLocalBaseD2Ev
+SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
 __wrap_utimes
 nghttp2_select_next_protocol
-_ZN8tinyxml210XMLPrinter5VisitERKNS_10XMLCommentE
+tinyxml2::XMLPrinter::Visit(tinyxml2::XMLComment const&)
 TSQueueBase_Pop
 __iswctype_l@GLIBC_2.1
 OPENSSL_far_spin
 __assert_fail@GLIBC_2.0
-_ZN7pcrecpp3Arg21parse_ulonglong_radixEPKciPvi
+pcrecpp::Arg::parse_ulonglong_radix(char const*, int, void*, int)
 mprotect@GLIBC_2.0
 strtoul@GLIBC_2.0
-_ZN8tinyxml210XMLElement13InsertNewTextEPKc
+tinyxml2::XMLElement::InsertNewText(char const*)
 strtoull@GLIBC_2.0
 g_str_hash
-_ZNV16SteamThreadTools15CThreadSpinLock4LockEj
+SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
 ScaleColsUp2_16_C
 g_value_set_variant
 nghttp2_session_find_stream
@@ -51456,44 +51456,44 @@ ScaleRowDown4Box_16_C
 NV12ToRGB565
 g_ClockSpeedSecondsMultiplier
 pw_thread_loop_stop
-_ZN8tinyxml210XMLPrinter8PushTextEf
-_ZTSN8tinyxml212XMLAttributeE
+tinyxml2::XMLPrinter::PushText(float)
+typeinfo name for tinyxml2::XMLAttribute
 opus_repacketizer_out_range
-_ZN8tinyxml211XMLDocument8IdentifyEPcPPNS_7XMLNodeE
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKci
+tinyxml2::XMLDocument::Identify(char*, tinyxml2::XMLNode**)
+tinyxml2::XMLPrinter::PushAttribute(char const*, int)
 aesni_ecb_encrypt
 NV21ToYUV24
 g_io_error_quark
 ARGBColorMatrixRow_C
 tolower@GLIBC_2.0
 ScaleCols_16_C
-_ZN8tinyxml210XMLPrinter11PushUnknownEPKc
+tinyxml2::XMLPrinter::PushUnknown(char const*)
 aesni_set_encrypt_key
 kYuvF709Constants
 vpaes_cbc_encrypt
 _XSetLastRequestRead
-_ZNK7pcrecpp2RE23NumberOfCapturingGroupsEv
-_ZNK8tinyxml27XMLNode5ValueEv
+pcrecpp::RE::NumberOfCapturingGroups() const
+tinyxml2::XMLNode::Value() const
 U010ToAR30
 g_log
 SplitUVRow_16_C
 pa_context_move_sink_input_by_index@PULSE_0
 pcre_free
 I410ToARGBRow_C
-_ZN8tinyxml27XMLUtil5ToStrEjPci
+tinyxml2::XMLUtil::ToStr(unsigned int, char*, int)
 UVScale
 kYvu2020Constants
 wcstol@GLIBC_2.0
 opus_get_version_string
 ThreadInterlockedExchange
-_ZN8tinyxml210XMLPrinter5VisitERKNS_7XMLTextE
+tinyxml2::XMLPrinter::Visit(tinyxml2::XMLText const&)
 pcre_stack_guard
 av_hwframe_get_buffer@LIBAVUTIL_56
 ThreadInterlockedDecrement
 umask@GLIBC_2.0
 SobelXRow_C
-_ZNK8tinyxml212XMLAttribute15QueryInt64ValueEPx
-_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
+tinyxml2::XMLAttribute::QueryInt64Value(long long*) const
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
 I410ToAR30Matrix
 V_strnchr
 __wrap_open64
@@ -51508,7 +51508,7 @@ ABGRToNV12
 H010ToAB30
 AR30ToABGRRow_C
 DeleteAudioEncoder
-_ZN8tinyxml210XMLElement15DeleteAttributeEPNS_12XMLAttributeE
+tinyxml2::XMLElement::DeleteAttribute(tinyxml2::XMLAttribute*)
 ARGBBlendRow_C
 SDL_GetDisplayBounds@SDL3_0.0.0
 ARGBToAB64
@@ -51522,15 +51522,15 @@ SDL_GetJoystickGUID@SDL3_0.0.0
 __ctype_get_mb_cur_max@GLIBC_2.0
 SDL_ReadU32LE@SDL3_0.0.0
 pw_stream_add_listener
-_ZN8tinyxml210XMLElement7SetTextEj
+tinyxml2::XMLElement::SetText(unsigned int)
 I400ToARGB
 gdk_pixbuf_get_height
 Is64BitOS
 ARGBToAR30Row_C
 Coroutine_Create
 bn_div_words
-_ZNK7pcrecpp2RE9FullMatchERKNS_11StringPieceERKNS_3ArgES6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_
-_ZTVN8tinyxml27XMLTextE
+pcrecpp::RE::FullMatch(pcrecpp::StringPiece const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
+vtable for tinyxml2::XMLText
 nghttp2_session_get_root_stream
 nghttp2_submit_request
 getcontext@GLIBC_2.1
@@ -51541,7 +51541,7 @@ ThreadGetCurrentId
 nghttp2_submit_ping
 EConvertMPDToMP4
 _exit@GLIBC_2.0
-_Z13V_JoinStringsRK10CUtlVectorI10CUtlString10CUtlMemoryIS0_EEPKc
+V_JoinStrings(CUtlVector<CUtlString, CUtlMemory<CUtlString>> const&, char const*)
 nghttp2_hd_inflate_change_table_size
 ScaleFilterCols64_16_C
 aesni_ocb_decrypt
@@ -51549,13 +51549,13 @@ ARGBCopyYToAlpha
 g_dbus_proxy_get_connection
 g_quark_from_string
 g_ClockSpeed
-_ZN8tinyxml210XMLElementD0Ev
+tinyxml2::XMLElement::~XMLElement()
 SplitUVPlane
-_ZN9CURLUtils15ValidateStaticsER10CValidatorPKc
+CURLUtils::ValidateStatics(CValidator&, char const*)
 SDL_ShowCursor@SDL3_0.0.0
 NV12ToRGB24Row_C
 nghttp2_session_get_stream_local_window_size
-_ZNK8tinyxml210XMLElement12IntAttributeEPKci
+tinyxml2::XMLElement::IntAttribute(char const*, int) const
 gtk_menu_get_type
 g_dbus_interface_info_lookup_property
 ThreadInterlockedExchangeAdd
@@ -51581,9 +51581,9 @@ OPENSSL_ia32_rdseed_bytes
 g_settings_get_double
 ARGBToBGRA
 ScaleUVRowDownEvenBox_C
-_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
+tinyxml2::XMLElement::QueryDoubleText(double*) const
 fread@GLIBC_2.0
-_ZN8tinyxml210XMLPrinter8PushTextEPKcb
+tinyxml2::XMLPrinter::PushText(char const*, bool)
 g_themed_icon_get_type
 ScaleRowDown2_16_C
 glTexParameteri
@@ -51591,8 +51591,8 @@ g_variant_new_string
 EnsureValidBoolValue
 ARGBToARGB1555Row_C
 TSListBase_Pop
-_ZNK8tinyxml210XMLElement8BoolTextEb
-_ZN8tinyxml210XMLElement9ToElementEv
+tinyxml2::XMLElement::BoolText(bool) const
+tinyxml2::XMLElement::ToElement()
 ScalePlane
 ThreadInterlockedIncrement
 g_dbus_proxy_call_sync
@@ -51601,63 +51601,63 @@ YUY2ToUV422Row_C
 opus_multistream_encoder_get_size
 ScaleUVRowUp2_Linear_16_Any_C
 gtk_separator_menu_item_new
-_ZTSFvvE
+typeinfo name for void ()
 __errno_location@GLIBC_2.0
 __wrap_scandir64
 H010ToABGR
 __duplocale@GLIBC_2.1
 DeclareCurrentThreadIsMainThread
 ScaleRowUp2_Linear_C
-_ZN8tinyxml27XMLNode8SetValueEPKcb
+tinyxml2::XMLNode::SetValue(char const*, bool)
 shutdown@GLIBC_2.0
-_Z20_txnal_cow_string_D1Pv
-_ZN8tinyxml210XMLPrinter5VisitERKNS_10XMLUnknownE
-_ZN8tinyxml27StrPair18CollapseWhitespaceEv
+_txnal_cow_string_D1(void*)
+tinyxml2::XMLPrinter::Visit(tinyxml2::XMLUnknown const&)
+tinyxml2::StrPair::CollapseWhitespace()
 SDL_IsGamepad@SDL3_0.0.0
 SwapUVRow_C
 __wrap_lstat
-_ZN8tinyxml210XMLElement7SetTextEy
+tinyxml2::XMLElement::SetText(unsigned long long)
 g_variant_get_int64
 aesni_xts_decrypt
 YUY2ToARGB
-_ZN8tinyxml27StrPair9ParseNameEPc
+tinyxml2::StrPair::ParseName(char*)
 SDL_UnlockJoysticks@SDL3_0.0.0
 ScalePlaneVertical
 bn_mul_words
 ARGBToI422
-_ZN8tinyxml211XMLDocumentD0Ev
+tinyxml2::XMLDocument::~XMLDocument()
 nghttp2_session_server_new2
-_ZN8tinyxml27XMLText9ParseDeepEPcPNS_7StrPairEPi
+tinyxml2::XMLText::ParseDeep(char*, tinyxml2::StrPair*, int*)
 __wrap_symlink
 OPENSSL_instrument_bus
 remove@GLIBC_2.0
 I422ToUYVYRow_C
 ThreadTerminateProcessCode
 pa_channel_map_init_extend@PULSE_0
-_ZN8tinyxml27XMLUtil7ToFloatEPKcPf
+tinyxml2::XMLUtil::ToFloat(char const*, float*)
 kBgrF709Constants
 opus_packet_get_nb_channels
 ETW_Steamworks_RunCallbacks_End_
 glColor4ub
 P210ToARGBMatrix
 I444Scale_16
-_ZTSN8tinyxml210XMLVisitorE
+typeinfo name for tinyxml2::XMLVisitor
 free@GLIBC_2.0
-_ZN7pcrecpp3Arg16parse_ushort_hexEPKciPv
+pcrecpp::Arg::parse_ushort_hex(char const*, int, void*)
 g_dbus_object_get_type
 g_value_unset
-_ZN8tinyxml210XMLPrinterC2EP8_IO_FILEbi
+tinyxml2::XMLPrinter::XMLPrinter(_IO_FILE*, bool, int)
 setcontext@GLIBC_2.0
 g_hash_table_new
 MirrorUVPlane
 statvfs64@GLIBC_2.1
-_ZN16SteamThreadTools16CThreadLocalBase3SetEPv
+SteamThreadTools::CThreadLocalBase::Set(void*)
 MirrorUVRow_C
 vpaes_set_encrypt_key
-_ZNK8tinyxml210XMLElement12ShallowCloneEPNS_11XMLDocumentE
+tinyxml2::XMLElement::ShallowClone(tinyxml2::XMLDocument*) const
 __strcat_chk@GLIBC_2.3.4
 H420ToARGB
-_ZNK7pcrecpp2RE7ConsumeEPNS_11StringPieceERKNS_3ArgES5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_
+pcrecpp::RE::Consume(pcrecpp::StringPiece*, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
 kRgbJPEGConstants
 MergeAR64Row_C
 ARGB1555ToARGB
@@ -51667,29 +51667,29 @@ I420ToARGB1555
 P210ToARGBRow_C
 SDL_GetHint@SDL3_0.0.0
 pa_operation_unref@PULSE_0
-_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
-_ZN10SteamVProf10CVProfNode24GetTotalTimeLessChildrenEv
+tinyxml2::XMLNode::FirstChildElement(char const*) const
+SteamVProf::CVProfNode::GetTotalTimeLessChildren()
 g_cclosure_marshal_generic
 g_variant_get_double
 g_list_free_full
 ARGBToAR64Row_C
 __cxa_atexit@GLIBC_2.1.3
 XkbKeycodeToKeysym
-_ZTVN8tinyxml214XMLDeclarationE
+vtable for tinyxml2::XMLDeclaration
 pa_channel_map_snprint@PULSE_0
 ARGBUnattenuateRow_C
-_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 ScaleRowUp2_Bilinear_C
 RAWToARGBRow_C
 Plat_gmtime
 ScalePlaneUp2_Bilinear
-_ZNK8tinyxml211XMLDocument5PrintEPNS_10XMLPrinterE
-_ZN16SteamThreadTools7CThread4JoinEj
+tinyxml2::XMLDocument::Print(tinyxml2::XMLPrinter*) const
+SteamThreadTools::CThread::Join(unsigned int)
 SDL_GetRevision@SDL3_0.0.0
-_ZTVN10__cxxabiv121__vmi_class_type_infoE
+vtable for __cxxabiv1::__vmi_class_type_info
 AR30ToAB30Row_C
 g_object_ref
-_ZN10SteamVProf9CVProfile9ExitScopeEv
+SteamVProf::CVProfile::ExitScope()
 V_UTF32ToUTF16
 calloc@GLIBC_2.0
 NV21ToRAW
@@ -51698,18 +51698,18 @@ SDL_SetError@SDL3_0.0.0
 glTexEnvf
 ARGBToYRow_C
 __nl_langinfo_l@GLIBC_2.2
-_ZNK8tinyxml27XMLNode9ToElementEv
+tinyxml2::XMLNode::ToElement() const
 I210ToARGBRow_C
 rmdir@GLIBC_2.0
 g_dbus_proxy_set_interface_info
 ScaleRowUp2_Bilinear_Any_C
-_ZN8tinyxml27XMLNode11DeleteChildEPS0_
+tinyxml2::XMLNode::DeleteChild(tinyxml2::XMLNode*)
 g_dbus_message_new_method_call
 dup2@GLIBC_2.0
 V_UTF8ToUChar32
 RAWToYRow_C
-_ZN8tinyxml210XMLPrinter8PushTextEy
-_ZN7pcrecpp2RE9QuoteMetaERKNS_11StringPieceE
+tinyxml2::XMLPrinter::PushText(unsigned long long)
+pcrecpp::RE::QuoteMeta(pcrecpp::StringPiece const&)
 Plat_CommandLineParamExists
 ARGBAddRow_C
 ungetc@GLIBC_2.0
@@ -51718,10 +51718,10 @@ opus_decoder_create
 XFree
 __wrap_dlmopen
 opus_multistream_encoder_create
-_ZTSN8tinyxml214XMLDeclarationE
-_ZN10CValidator16ClaimArrayMemoryEPKv
+typeinfo name for tinyxml2::XMLDeclaration
+CValidator::ClaimArrayMemory(void const*)
 glGetIntegerv
-_ZNK8tinyxml212XMLAttribute14QueryBoolValueEPb
+tinyxml2::XMLAttribute::QueryBoolValue(bool*) const
 strrchr@GLIBC_2.0
 ARGBToUYVY
 lchown@GLIBC_2.0
@@ -51729,7 +51729,7 @@ I422AlphaToARGBRow_C
 strcasecmp@GLIBC_2.0
 DeleteVideoRecordingSegmentWriter
 __wrap_utime
-_ZN8tinyxml210XMLPrinter9VisitExitERKNS_10XMLElementE
+tinyxml2::XMLPrinter::VisitExit(tinyxml2::XMLElement const&)
 g_desktop_app_info_get_filename
 ARGBLumaColorTable
 XDefaultScreen
@@ -51739,11 +51739,11 @@ __uselocale@GLIBC_2.3
 opus_repacketizer_out
 XFixesQueryVersion
 opus_decode_float
-_ZNK8tinyxml210XMLElement9ToElementEv
+tinyxml2::XMLElement::ToElement() const
 g_type_add_interface_static
 ARGBToUV444Row_C
 pthread_rwlock_rdlock@GLIBC_2.1
-_Z17V_UnicodeValidatePKc
+V_UnicodeValidate(char const*)
 glEnd
 ntohs@GLIBC_2.0
 fclose@GLIBC_2.1
@@ -51753,16 +51753,16 @@ accept@GLIBC_2.0
 nghttp2_stream_get_parent
 pthread_key_delete@GLIBC_2.0
 Camellia_EncryptBlock_Rounds
-_ZN8tinyxml210XMLPrinter11PushCommentEPKc
+tinyxml2::XMLPrinter::PushComment(char const*)
 fgetc@GLIBC_2.0
 nghttp2_stream_get_stream_id
-_ZN8tinyxml210XMLElementC2EPNS_11XMLDocumentE
+tinyxml2::XMLElement::XMLElement(tinyxml2::XMLDocument*)
 pthread_mutex_unlock@GLIBC_2.0
-_ZN8tinyxml210XMLUnknownC1EPNS_11XMLDocumentE
+tinyxml2::XMLUnknown::XMLUnknown(tinyxml2::XMLDocument*)
 BF_encrypt
-_Z28_txnal_runtime_error_get_msgPv
+_txnal_runtime_error_get_msg(void*)
 shmctl@GLIBC_2.2
-_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
+typeinfo for __gnu_cxx::__concurrence_unlock_error
 J420ToRAW
 InterpolateRow_16_C
 pa_mainloop_iterate@PULSE_0
@@ -51771,7 +51771,7 @@ strcpy@GLIBC_2.0
 V_strcat
 glXChooseVisual
 RGBAToUVRow_C
-_ZTSPFvPKc27ERecordingSegmenterLogLevelE
+typeinfo name for void (*)(char const*, ERecordingSegmenterLogLevel)
 AR64ToAB64
 J400ToARGB
 g_desktop_app_info_new_from_filename
@@ -51780,7 +51780,7 @@ floorf@GLIBC_2.0
 pa_mainloop_new@PULSE_0
 V_CP437CharsToUTF8
 geteuid@GLIBC_2.0
-_ZNK8tinyxml212XMLAttribute4NameEv
+tinyxml2::XMLAttribute::Name() const
 SDL_ReadU16LE@SDL3_0.0.0
 ScaleUVLinearUp2_16
 CopyPlane
@@ -51789,45 +51789,45 @@ nghttp2_hd_deflate_hd_vec
 InterpolateRow_C
 V_URLParse
 mbsrtowcs@GLIBC_2.0
-_ZN7pcrecpp3Arg21parse_longlong_cradixEPKciPv
-_ZN8tinyxml27XMLUtil5ToStrEfPci
+pcrecpp::Arg::parse_longlong_cradix(char const*, int, void*)
+tinyxml2::XMLUtil::ToStr(float, char*, int)
 ScaleUVRowDown2Box_C
 SDL_SeekIO@SDL3_0.0.0
 aesni_ctr32_encrypt_blocks
 pa_proplist_gets@PULSE_0
 pa_operation_cancel@PULSE_0
-_ZTIN8tinyxml211XMLDocumentE
-_ZN11SteamStdLib17CCommandLineParamC1EPKcS2_
-_ZNK8tinyxml210XMLElement14QueryFloatTextEPf
+typeinfo for tinyxml2::XMLDocument
+SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
+tinyxml2::XMLElement::QueryFloatText(float*) const
 g_variant_builder_add
-_ZN8tinyxml210XMLElement7SetTextEPKc
+tinyxml2::XMLElement::SetText(char const*)
 I420ToRGBA
-_ZNK8tinyxml210XMLElement9AttributeEPKcS2_
-_ZNK8tinyxml210XMLElement14QueryInt64TextEPx
-_ZN7pcrecpp2RE7CleanupEv
-_ZTSN9__gnu_cxx24__concurrence_lock_errorE
+tinyxml2::XMLElement::Attribute(char const*, char const*) const
+tinyxml2::XMLElement::QueryInt64Text(long long*) const
+pcrecpp::RE::Cleanup()
+typeinfo name for __gnu_cxx::__concurrence_lock_error
 ThreadSleep
 ARGBQuantize
 GetOSType
-_ZN8tinyxml27XMLNode16InsertAfterChildEPS0_S1_
+tinyxml2::XMLNode::InsertAfterChild(tinyxml2::XMLNode*, tinyxml2::XMLNode*)
 I420AlphaToARGBMatrix
 ecp_nistz256_gather_w5
 g_mutex_clear
 strtouq@GLIBC_2.0
-_ZN7pcrecpp3Arg19parse_ushort_cradixEPKciPv
+pcrecpp::Arg::parse_ushort_cradix(char const*, int, void*)
 I400ToARGBMatrix
 Plat_FloatTime
 ABGRToNV21
 __vfprintf_chk@GLIBC_2.3.4
-_ZTSN8tinyxml210XMLCommentE
+typeinfo name for tinyxml2::XMLComment
 vpaes_set_decrypt_key
 log10f@GLIBC_2.0
 SDL_EnableScreenSaver@SDL3_0.0.0
 nghttp2_session_callbacks_del
-_ZN8tinyxml210XMLElement9ParseDeepEPcPNS_7StrPairEPi
+tinyxml2::XMLElement::ParseDeep(char*, tinyxml2::StrPair*, int*)
 XextFindDisplay
 nghttp2_hd_inflate_del
-_ZN7pcrecpp3Arg17parse_ulong_octalEPKciPv
+pcrecpp::Arg::parse_ulong_octal(char const*, int, void*)
 XFixesSelectCursorInput
 SDL_strcmp@SDL3_0.0.0
 nghttp2_hd_deflate_get_dynamic_table_size
@@ -51837,23 +51837,23 @@ avcodec_find_encoder_by_name@LIBAVCODEC_58
 signal@GLIBC_2.0
 ARGBShuffleRow_C
 nghttp2_session_callbacks_set_on_header_callback
-_ZNK8tinyxml210XMLElement14Int64AttributeEPKcx
+tinyxml2::XMLElement::Int64Attribute(char const*, long long) const
 g_variant_builder_add_value
 ThreadShellExecute
 ScalePlaneBilinearUp
 V_RemoveDotSlashes
 pa_stream_readable_size@PULSE_0
-_ZNK8tinyxml27XMLNode16LastChildElementEPKc
+tinyxml2::XMLNode::LastChildElement(char const*) const
 nghttp2_hd_inflate_get_max_dynamic_table_size
 YUY2ToI422
-_ZN16SteamThreadTools7CThread7GetNameEv
+SteamThreadTools::CThread::GetName()
 I400ToI400
-_ZNK8tinyxml210XMLComment6AcceptEPNS_10XMLVisitorE
+tinyxml2::XMLComment::Accept(tinyxml2::XMLVisitor*) const
 XKeysymToKeycode
 glPixelStorei
 malloc@GLIBC_2.0
-_ZN8tinyxml27XMLUtil5ToStrEdPci
-_ZN8tinyxml27StrPairD1Ev
+tinyxml2::XMLUtil::ToStr(double, char*, int)
+tinyxml2::StrPair::~StrPair()
 nghttp2_session_callbacks_new
 getcwd@GLIBC_2.0
 ThreadSetPriority
@@ -51883,50 +51883,50 @@ Coroutine_IsActive
 RGB24MirrorRow_C
 g_dbus_message_get_unix_fd_list
 __printf_chk@GLIBC_2.3.4
-_ZTIPFbPKcE
+typeinfo for bool (*)(char const*)
 av_buffer_create@LIBAVUTIL_56
 __wcsxfrm_l@GLIBC_2.1
-_ZTSFvPKc27ERecordingSegmenterLogLevelE
-_ZNK8tinyxml210XMLUnknown12ShallowCloneEPNS_11XMLDocumentE
+typeinfo name for void (char const*, ERecordingSegmenterLogLevel)
+tinyxml2::XMLUnknown::ShallowClone(tinyxml2::XMLDocument*) const
 H210ToAB30
 XQueryKeymap
 tcgetattr@GLIBC_2.0
-_ZN8tinyxml27XMLNode9ToElementEv
+tinyxml2::XMLNode::ToElement()
 OPENSSL_cleanse
 nghttp2_session_callbacks_set_on_begin_frame_callback
 __towupper_l@GLIBC_2.1
-_ZN8tinyxml210XMLUnknownC2EPNS_11XMLDocumentE
-_ZN8tinyxml210XMLPrinterD2Ev
+tinyxml2::XMLUnknown::XMLUnknown(tinyxml2::XMLDocument*)
+tinyxml2::XMLPrinter::~XMLPrinter()
 XChangeKeyboardMapping
 XScreenNumberOfScreen
 opus_encoder_destroy
 glXCreateContext
-_ZN7pcrecpp3Arg11parse_ucharEPKciPv
-_ZN8tinyxml210XMLElement21InsertNewChildElementEPKc
+pcrecpp::Arg::parse_uchar(char const*, int, void*)
+tinyxml2::XMLElement::InsertNewChildElement(char const*)
 g_param_spec_int
 gtk_menu_item_new_with_label
-_ZN7pcrecpp3Arg18parse_short_cradixEPKciPv
+pcrecpp::Arg::parse_short_cradix(char const*, int, void*)
 kBgrI601Constants
-_ZN7pcrecpp3Arg17parse_long_cradixEPKciPv
+pcrecpp::Arg::parse_long_cradix(char const*, int, void*)
 glDeleteTextures
 g_param_spec_object
 __wrap_open
 ScaleRowDown4Box_C
-_ZTIN16SteamThreadTools7CThreadE
-_ZN16SteamThreadTools7CThread11SetPriorityEi
+typeinfo for SteamThreadTools::CThread
+SteamThreadTools::CThread::SetPriority(int)
 Plat_TickDiffMicroSec
-_ZN8tinyxml210XMLCommentC1EPNS_11XMLDocumentE
+tinyxml2::XMLComment::XMLComment(tinyxml2::XMLDocument*)
 RGB565ToYRow_C
-_ZN8tinyxml27XMLNode16InsertFirstChildEPS0_
+tinyxml2::XMLNode::InsertFirstChild(tinyxml2::XMLNode*)
 __strtod_l@GLIBC_2.1
-_ZN8tinyxml27StrPair10TransferToEPS0_
-_ZNK8tinyxml212XMLAttribute20QueryUnsigned64ValueEPy
+tinyxml2::StrPair::TransferTo(tinyxml2::StrPair*)
+tinyxml2::XMLAttribute::QueryUnsigned64Value(unsigned long long*) const
 nghttp2_session_callbacks_set_pack_extension_callback
 XDisplayWidth
 glGetError
 pw_thread_loop_get_loop
 SetMiniDumpBuildID
-_ZN20CStringNormalization15ValidateStaticsER10CValidatorPKc
+CStringNormalization::ValidateStatics(CValidator&, char const*)
 kYvuJPEGConstants
 V_atoui64
 _ITM_registerTMCloneTable
@@ -51947,21 +51947,21 @@ TSListBase_SwapList
 gtk_icon_theme_lookup_icon
 U422ToABGR
 RGB24ToUVJRow_C
-_ZN7pcrecpp3Arg18parse_ushort_radixEPKciPvi
+pcrecpp::Arg::parse_ushort_radix(char const*, int, void*, int)
 AB64ToARGB
-_ZN16SteamThreadTools16CThreadLocalBaseC2Ev
+SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
 XRRQueryVersion
 BlendPlaneRow_C
-_ZN8tinyxml27XMLNode9ToUnknownEv
-_ZTIN8tinyxml210XMLPrinterE
+tinyxml2::XMLNode::ToUnknown()
+typeinfo for tinyxml2::XMLPrinter
 opendir@GLIBC_2.0
-_ZN8tinyxml211XMLDocument7NewTextEPKc
+tinyxml2::XMLDocument::NewText(char const*)
 ScaleRowUp2_Bilinear_16_C
-_ZN16SteamThreadTools7CThreadC2Ev
+SteamThreadTools::CThread::CThread()
 XNVCTRLSetTargetAttributeAndGetStatus
 FixedDiv1_C
 avcodec_send_frame@LIBAVCODEC_58
-_ZN8tinyxml211XMLDocument8SaveFileEPKcb
+tinyxml2::XMLDocument::SaveFile(char const*, bool)
 Camellia_set_key
 V_URLContainsDomain
 I420ToAR30
@@ -51976,7 +51976,7 @@ ftello64@GLIBC_2.1
 glXMakeContextCurrent
 V_stricmp_prefix
 pcre_config
-_ZN8tinyxml212XMLAttributeD0Ev
+tinyxml2::XMLAttribute::~XMLAttribute()
 ARGBToRGB24
 g_variant_get_child
 __wrap_unlink
@@ -51984,29 +51984,29 @@ pw_thread_loop_new
 ecp_nistz256_add
 nghttp2_priority_spec_check_default
 g_strdup
-_ZNK10SteamVProf9CVProfile18GetBudgetGroupNameE17EVProfBugdetGroup
-_ZN16SteamThreadTools7CThread9TerminateEi
+SteamVProf::CVProfile::GetBudgetGroupName(EVProfBugdetGroup) const
+SteamThreadTools::CThread::Terminate(int)
 I420ToRGB565Matrix
-_ZN10CValidator21UnlockValidationLocksEv
+CValidator::UnlockValidationLocks()
 TSQueue_PopIntoFreeList
-_ZN8tinyxml210XMLElement7SetTextEd
-_ZN7pcrecpp3Arg14parse_longlongEPKciPv
+tinyxml2::XMLElement::SetText(double)
+pcrecpp::Arg::parse_longlong(char const*, int, void*)
 nghttp2_session_want_write
 __lxstat@GLIBC_2.0
 ARGBLumaColorTableRow_C
 ARGBToJ420
 AR64ToARGBRow_C
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcd
+tinyxml2::XMLPrinter::PushAttribute(char const*, double)
 V_memcpy_nocache
-_ZTVN9__gnu_cxx24__concurrence_lock_errorE
+vtable for __gnu_cxx::__concurrence_lock_error
 ARGBSobelXY
 g_strerror
 g_object_set_property
 RC4_options
-_ZNK8tinyxml210XMLComment12ShallowCloneEPNS_11XMLDocumentE
+tinyxml2::XMLComment::ShallowClone(tinyxml2::XMLDocument*) const
 __strdup@GLIBC_2.0
-_ZN10CValidator4PushEPKcPvS1_
-_ZN8tinyxml27StrPair9ParseTextEPcPKciPi
+CValidator::Push(char const*, void*, char const*)
+tinyxml2::StrPair::ParseText(char*, char const*, int, int*)
 sqrtf@GLIBC_2.0
 frexp@GLIBC_2.0
 I420Interpolate
@@ -52014,22 +52014,22 @@ RAWToRGB24
 V_wcstoui64
 Convert8To16Row_C
 XCopyArea
-_ZN8tinyxml210XMLElement15DeleteAttributeEPKc
+tinyxml2::XMLElement::DeleteAttribute(char const*)
 ARGBToYRowMatrix_C
 Plat_OutputDebugString
 ScaleARGBCols_C
 XDisplayKeycodes
-_ZN8tinyxml212XMLAttribute7SetNameEPKc
+tinyxml2::XMLAttribute::SetName(char const*)
 WeakRandomFillMemory
 ScaleRowDown2_C
-_ZTSPF20EWatchdogStallResultjE
+typeinfo name for EWatchdogStallResult (*)(unsigned int)
 NV12ToRAW
-_ZN10SteamVProf13CVProfManager18BIsProfilePtrValidEPNS_9CVProfileE
-_ZN8tinyxml212XMLAttribute12SetAttributeEd
-_ZN8tinyxml210XMLPrinter12CloseElementEb
-_ZN8tinyxml210XMLElement15CreateAttributeEv
+SteamVProf::CVProfManager::BIsProfilePtrValid(SteamVProf::CVProfile*)
+tinyxml2::XMLAttribute::SetAttribute(double)
+tinyxml2::XMLPrinter::CloseElement(bool)
+tinyxml2::XMLElement::CreateAttribute()
 ARGBBlur
-_ZN10SteamVProf14CVProfileArrayD1Ev
+SteamVProf::CVProfileArray::~CVProfileArray()
 strtoll@GLIBC_2.0
 V_tolower
 I444AlphaToARGB
@@ -52050,7 +52050,7 @@ nghttp2_pack_settings_payload
 V_strristr
 ARGBMirror
 V_MakeAbsolutePath
-_ZNK8tinyxml210XMLElement14Unsigned64TextEy
+tinyxml2::XMLElement::Unsigned64Text(unsigned long long) const
 ARGB4444ToUVRow_C
 gtk_widget_get_type
 g_strfreev
@@ -52072,11 +52072,11 @@ V_BuildSortTitle
 RC4_set_key
 XQueryExtension
 V_strlower_fast
-_ZNK8tinyxml27XMLNode19InsertChildPreambleEPS0_
+tinyxml2::XMLNode::InsertChildPreamble(tinyxml2::XMLNode*) const
 iconv@GLIBC_2.1
 pw_stream_new
 opus_strerror
-_ZTVN8tinyxml210XMLCommentE
+vtable for tinyxml2::XMLComment
 H210ToAR30
 ScaleARGBRowDownEvenBox_C
 g_initable_new
@@ -52101,29 +52101,29 @@ bn_mul_mont
 pa_usec_to_bytes@PULSE_0
 g_source_destroy
 I420ToABGR
-_Z27_txnal_cow_string_D1_commitPv
+_txnal_cow_string_D1_commit(void*)
 pa_context_get_server_info@PULSE_0
 nghttp2_session_consume_connection
 ConvertToMSBPlane_16
 _ITM_addUserCommitAction
 rename@GLIBC_2.0
-_ZNK16SteamThreadTools16CThreadLocalBase3GetEv
+SteamThreadTools::CThreadLocalBase::Get() const
 opus_decoder_destroy
 pthread_rwlock_wrlock@GLIBC_2.1
 XNVCTRLQueryBinaryData
-_ZNK10CValidator9IsClaimedEPKv
+CValidator::IsClaimed(void const*) const
 statfs@GLIBC_2.0
 g_variant_ref
 SDL_CloseJoystick@SDL3_0.0.0
 YUY2ToUVRow_C
 pa_stream_set_state_callback@PULSE_0
 ConvertToLSBPlane_16
-_ZNK8tinyxml212XMLAttribute16QueryDoubleValueEPd
+tinyxml2::XMLAttribute::QueryDoubleValue(double*) const
 SDL_GL_CreateContext@SDL3_0.0.0
 XShmAttach
 mkfifo@GLIBC_2.0
 strncasecmp@GLIBC_2.0
-_ZN8tinyxml27XMLNodeC1EPNS_11XMLDocumentE
+tinyxml2::XMLNode::XMLNode(tinyxml2::XMLDocument*)
 __wrap_lstat64
 gtk_icon_info_get_filename
 V_wcsncpy
@@ -52132,12 +52132,12 @@ nghttp2_submit_altsvc
 nghttp2_hd_deflate_new2
 bn_mul_comba4
 V_AppendParamToURL
-_ZN8tinyxml27XMLTextD2Ev
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcb
+tinyxml2::XMLText::~XMLText()
+tinyxml2::XMLPrinter::PushAttribute(char const*, bool)
 wcslen@GLIBC_2.0
 nghttp2_session_get_last_proc_stream_id
 glMatrixMode
-_ZNK8tinyxml211XMLDocument10ToDocumentEv
+tinyxml2::XMLDocument::ToDocument() const
 XSetTextProperty
 V_URLCracker
 Camellia_cbc_encrypt
@@ -52157,34 +52157,34 @@ aesni_encrypt
 getnameinfo@GLIBC_2.1
 CatchAndWriteMiniDumpForVoidPtrFn
 SDL_ReadS32LE@SDL3_0.0.0
-_ZN8tinyxml210XMLPrinter17PrepareForNewNodeEb
+tinyxml2::XMLPrinter::PrepareForNewNode(bool)
 Android420ToABGR
 __xstat64@GLIBC_2.2
 SDL_InitSubSystem@SDL3_0.0.0
-_ZN8tinyxml211XMLDocument8LoadFileEP8_IO_FILE
+tinyxml2::XMLDocument::LoadFile(_IO_FILE*)
 nghttp2_session_callbacks_set_before_frame_send_callback
 RGB24ToARGB
 MergeAR64Plane
 nghttp2_session_callbacks_set_on_invalid_header_callback
 ScaleRowDown2Linear_16_C
 MergeARGBPlane
-_Z23_txnal_cow_string_c_strPKv
+_txnal_cow_string_c_str(void const*)
 pipe@GLIBC_2.0
 tcsetattr@GLIBC_2.0
-_ZN8tinyxml27StrPair6GetStrEv
+tinyxml2::StrPair::GetStr()
 abort@GLIBC_2.0
-_ZN8tinyxml214XMLDeclaration9ParseDeepEPcPNS_7StrPairEPi
+tinyxml2::XMLDeclaration::ParseDeep(char*, tinyxml2::StrPair*, int*)
 kRgbF709Constants
 H010ToAR30
 V_FixupPathName
 nghttp2_session_server_new
-_ZN8tinyxml210XMLElementC1EPNS_11XMLDocumentE
-_ZNK8tinyxml211XMLDocument10PrintErrorEv
+tinyxml2::XMLElement::XMLElement(tinyxml2::XMLDocument*)
+tinyxml2::XMLDocument::PrintError() const
 ScaleUVCols64_C
 pa_context_get_sink_input_info_list@PULSE_0
-_ZNK8tinyxml27XMLNode6ToTextEv
+tinyxml2::XMLNode::ToText() const
 vpaes_encrypt
-_ZNK8tinyxml210XMLElement12UnsignedTextEj
+tinyxml2::XMLElement::UnsignedText(unsigned int) const
 AR64Shuffle
 opus_packet_parse
 _ITM_deregisterTMCloneTable
@@ -52194,21 +52194,21 @@ g_variant_get_uint64
 pa_context_get_sink_info_list@PULSE_0
 g_variant_new_boolean
 TSQueueBase_UnsafePeek
-_ZN8tinyxml210XMLCommentC2EPNS_11XMLDocumentE
+tinyxml2::XMLComment::XMLComment(tinyxml2::XMLDocument*)
 gtk_widget_destroy
 UYVYToARGBRow_C
 __dprintf_chk@GLIBC_2.8
 CopyPlane_16
 V_StrSubstInPlace
-_ZN8tinyxml210XMLPrinter8PushTextEx
-_Z9V_stristrPKcS0_
+tinyxml2::XMLPrinter::PushText(long long)
+V_stristr(char const*, char const*)
 SDL_GetDisplays@SDL3_0.0.0
 g_dbus_connection_get_unique_name
 g_variant_lookup
-_ZN7pcrecpp3Arg10parse_nullEPKciPv
+pcrecpp::Arg::parse_null(char const*, int, void*)
 V_SplitNumbers
-_ZNK8tinyxml211XMLDocument8ErrorStrEv
-_ZN10CValidator20ClaimUntrackedMemoryEj
+tinyxml2::XMLDocument::ErrorStr() const
+CValidator::ClaimUntrackedMemory(unsigned int)
 ScaleAddRow_C
 execl@GLIBC_2.0
 I444ToABGR
@@ -52216,11 +52216,11 @@ getsockname@GLIBC_2.0
 _XRead
 I410AlphaToARGBMatrix
 ARGBCopyAlpha
-_ZN7pcrecpp3Arg10parse_longEPKciPv
-_ZN7pcrecpp3Arg16parse_long_radixEPKciPvi
-_ZN10SteamVProf9CVProfile9MarkFrameEPKc
+pcrecpp::Arg::parse_long(char const*, int, void*)
+pcrecpp::Arg::parse_long_radix(char const*, int, void*, int)
+SteamVProf::CVProfile::MarkFrame(char const*)
 opus_encoder_create
-_ZN16SteamThreadTools7CThread4InitEv
+SteamThreadTools::CThread::Init()
 U010ToABGR
 g_icon_to_string
 nghttp2_session_consume
@@ -52230,7 +52230,7 @@ pthread_mutex_trylock@GLIBC_2.0
 J420ToARGB
 DES_encrypt2
 sendto@GLIBC_2.0
-_ZN7pcrecpp3Arg17parse_stringpieceEPKciPv
+pcrecpp::Arg::parse_stringpiece(char const*, int, void*)
 SDL_WasInit@SDL3_0.0.0
 nghttp2_hd_deflate_get_max_dynamic_table_size
 XGetInputFocus
@@ -52238,40 +52238,40 @@ __wrap___lxstat64
 pthread_mutex_lock@GLIBC_2.0
 I422ToRGBAMatrix
 g_shell_parse_argv
-_ZNK8tinyxml210XMLUnknown12ShallowEqualEPKNS_7XMLNodeE
+tinyxml2::XMLUnknown::ShallowEqual(tinyxml2::XMLNode const*) const
 SDL_BlitSurface@SDL3_0.0.0
-_ZN8tinyxml210XMLUnknownD2Ev
+tinyxml2::XMLUnknown::~XMLUnknown()
 __wcscpy_chk@GLIBC_2.4
 ScaleUVRowDown2_C
 RunTypeValidationTests
 __wcsftime_l@GLIBC_2.3
 CalculateSegmentCount
 kYuvH709Constants
-_ZN11SteamStdLib17CCommandLineParamD1Ev
+SteamStdLib::CCommandLineParam::~CCommandLineParam()
 nghttp2_submit_settings
 ScaleRowDown38_16_C
-_ZTVN8tinyxml210XMLElementE
+vtable for tinyxml2::XMLElement
 U420ToARGB
-_ZN8tinyxml210XMLPrinter10VisitEnterERKNS_11XMLDocumentE
+tinyxml2::XMLPrinter::VisitEnter(tinyxml2::XMLDocument const&)
 __vsnprintf_chk@GLIBC_2.3.4
 GetLocalHostname
-_ZN7pcrecpp3Arg17parse_uint_cradixEPKciPv
+pcrecpp::Arg::parse_uint_cradix(char const*, int, void*)
 opus_decoder_get_size
 realloc@GLIBC_2.0
 g_object_interface_install_property
 bn_add_words
 connect@GLIBC_2.0
 g_VProfManager
-_ZN8tinyxml210XMLCommentD2Ev
+tinyxml2::XMLComment::~XMLComment()
 V_URLDecode
 ETWMark
 Plat_MSTime64
 posix_fadvise@GLIBC_2.2
-_ZN8tinyxml211XMLDocument10NewElementEPKc
+tinyxml2::XMLDocument::NewElement(char const*)
 g_strv_get_type
 GaussRow_F32_C
-_ZN7pcrecpp3Arg9parse_intEPKciPv
-_ZN8tinyxml212XMLAttribute12SetAttributeEPKc
+pcrecpp::Arg::parse_int(char const*, int, void*)
+tinyxml2::XMLAttribute::SetAttribute(char const*)
 V_FixDoubleSlashes
 V_UTF32ToUTF8
 I420Mirror
@@ -52287,15 +52287,15 @@ SDL_GetError@SDL3_0.0.0
 g_file_icon_get_type
 XEventsQueued
 g_value_get_boolean
-_ZN10CValidator19ClaimMemory_AlignedEPKv
+CValidator::ClaimMemory_Aligned(void const*)
 recv@GLIBC_2.0
 bn_sqr_comba4
 pthread_rwlock_unlock@GLIBC_2.1
 fgets@GLIBC_2.0
 XDisplayHeight
-_ZN8tinyxml214XMLDeclarationD1Ev
+tinyxml2::XMLDeclaration::~XMLDeclaration()
 __bss_start
-_ZN7pcrecpp3Arg12parse_doubleEPKciPv
+pcrecpp::Arg::parse_double(char const*, int, void*)
 I444ToARGB
 XNVCTRLSetAttribute
 setmntent@GLIBC_2.0
@@ -52306,7 +52306,7 @@ isspace@GLIBC_2.0
 AllocImageYUV
 SpewAndLogActivate
 __recv_chk@GLIBC_2.4
-_ZNK8tinyxml210XMLElement7GetTextEv
+tinyxml2::XMLElement::GetText() const
 statvfs@GLIBC_2.1
 I422ToAR30Row_C
 bn_sub_words
@@ -52318,21 +52318,21 @@ H420ToRGB565
 nghttp2_session_get_stream_effective_local_window_size
 unlink@GLIBC_2.0
 pcre_compile2
-_ZGTtnaj
+transaction clone for operator new[](unsigned int)
 av_mallocz_tracked@LIBAVUTIL_56
 dgettext@GLIBC_2.0
 setsockopt@GLIBC_2.0
 BConvertYUVtoRGB
 pw_context_connect_fd
 kYvuV2020Constants
-_ZN10CValidator8FinalizeEv
+CValidator::Finalize()
 g_variant_get_uint16
-_ZN8tinyxml214XMLDeclarationD2Ev
+tinyxml2::XMLDeclaration::~XMLDeclaration()
 g_variant_iter_next_value
 nghttp2_check_authority
 pa_context_unload_module@PULSE_0
 OPENSSL_ia32_rdrand_bytes
-_ZTIN8tinyxml210XMLElementE
+typeinfo for tinyxml2::XMLElement
 nghttp2_session_terminate_session2
 glOrtho
 strspn@GLIBC_2.0
@@ -52341,23 +52341,23 @@ nghttp2_session_get_hd_deflate_dynamic_table_size
 OPENSSL_wipe_cpu
 __longjmp_chk@GLIBC_2.11
 XDefaultRootWindow
-_ZN7pcrecpp2RED1Ev
+pcrecpp::RE::~RE()
 ecp_nistz256_scatter_w5
 ioctl@GLIBC_2.0
-_ZN10SteamVProf9CVProfile10EnterScopeEPKc17EVProfBugdetGroupPv
+SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
 nghttp2_submit_response
 nghttp2_hd_inflate_new
 BScaleImageYUV
 dlerror@GLIBC_2.0
-_ZN8tinyxml27XMLNode14InsertEndChildEPS0_
-_ZNK8tinyxml211XMLDocument6AcceptEPNS_10XMLVisitorE
+tinyxml2::XMLNode::InsertEndChild(tinyxml2::XMLNode*)
+tinyxml2::XMLDocument::Accept(tinyxml2::XMLVisitor*) const
 wctob@GLIBC_2.0
 nghttp2_session_set_stream_user_data
 NV12ToARGB
 g_dbus_method_invocation_get_type
 nghttp2_session_client_new2
 poly1305_emit
-_ZN7pcrecpp3Arg20parse_longlong_radixEPKciPvi
+pcrecpp::Arg::parse_longlong_radix(char const*, int, void*, int)
 ScalePlaneUp2_Linear
 UVScale_16
 pw_stream_queue_buffer
@@ -52372,10 +52372,10 @@ g_dbus_error_quark
 nghttp2_hd_deflate_bound
 ecp_nistz256_div_by_2
 fmaxf@GLIBC_2.1
-_ZN8tinyxml210XMLElement21FindOrCreateAttributeEPKc
+tinyxml2::XMLElement::FindOrCreateAttribute(char const*)
 UYVYToI422
 TSQueueBase_UnsafeDummy
-_ZN7pcrecpp3Arg11parse_ulongEPKciPv
+pcrecpp::Arg::parse_ulong(char const*, int, void*)
 SDL_GetGamepadStringForAxis@SDL3_0.0.0
 g_variant_get_byte
 pcre_stack_malloc
@@ -52387,7 +52387,7 @@ __wrap___xstat64
 g_type_name
 SDL_QuitSubSystem@SDL3_0.0.0
 accept4@GLIBC_2.10
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcS2_
+tinyxml2::XMLPrinter::PushAttribute(char const*, char const*)
 OPENSSL_instrument_bus2
 ETW_Steamworks_IPCSend_End_
 kYuvV2020Constants
@@ -52396,12 +52396,12 @@ SDL_StringToGUID@SDL3_0.0.0
 g_variant_iter_new
 YUY2ToYRow_C
 aesni_ccm64_decrypt_blocks
-_ZN8tinyxml211XMLDocument8SetErrorENS_8XMLErrorEiPKcz
-_ZN8tinyxml27XMLNode9ParseDeepEPcPNS_7StrPairEPi
+tinyxml2::XMLDocument::SetError(tinyxml2::XMLError, int, char const*, ...)
+tinyxml2::XMLNode::ParseDeep(char*, tinyxml2::StrPair*, int*)
 ARGBToJ400
-_ZTVN8tinyxml211XMLDocumentE
-_ZNK8tinyxml214XMLDeclaration13ToDeclarationEv
-_ZN16SteamThreadTools12CThreadEventC1Eb
+vtable for tinyxml2::XMLDocument
+tinyxml2::XMLDeclaration::ToDeclaration() const
+SteamThreadTools::CThreadEvent::CThreadEvent(bool)
 __strxfrm_l@GLIBC_2.1
 SplitUVPlane_16
 __gmon_start__
@@ -52410,15 +52410,15 @@ SobelXYRow_C
 Camellia_encrypt
 RGB565ToUVRow_C
 XRootWindow
-_ZN8tinyxml27XMLNode14DeleteChildrenEv
-_ZTIN8tinyxml210XMLVisitorE
-_ZN8tinyxml27XMLUtil5ToStrEbPci
+tinyxml2::XMLNode::DeleteChildren()
+typeinfo for tinyxml2::XMLVisitor
+tinyxml2::XMLUtil::ToStr(bool, char*, int)
 nghttp2_session_callbacks_set_send_callback
-_ZTVN8tinyxml212XMLAttributeE
+vtable for tinyxml2::XMLAttribute
 g_dbus_connection_signal_subscribe
 V_UnqualifiedFileName
 localtime@GLIBC_2.0
-_ZN8tinyxml211XMLDocument5ParseEPKcj
+tinyxml2::XMLDocument::Parse(char const*, unsigned int)
 ABGRToARGB
 g_pMemAllocSteam
 XNVCTRLQueryAttribute
@@ -52427,20 +52427,20 @@ glGenTextures
 gcm_gmult_clmul
 SDL_GetWindowFromID@SDL3_0.0.0
 SpewOutputFunc
-_ZN8tinyxml27XMLUtil5ToStrEiPci
+tinyxml2::XMLUtil::ToStr(int, char*, int)
 I420ToRAW
 SplitXRGBRow_C
 fmodf@GLIBC_2.0
 ScaleUVRowUp2_Bilinear_16_C
-_ZN8tinyxml27StrPair6SetStrEPKci
+tinyxml2::StrPair::SetStr(char const*, int)
 ThreadGetCurrentProcessId
-_ZN8tinyxml214XMLDeclaration13ToDeclarationEv
-_ZN7pcrecpp3Arg17parse_short_radixEPKciPvi
+tinyxml2::XMLDeclaration::ToDeclaration()
+pcrecpp::Arg::parse_short_radix(char const*, int, void*, int)
 _ITM_RU1
-_ZN8tinyxml210XMLUnknown9ParseDeepEPcPNS_7StrPairEPi
-_ZN16SteamThreadTools17CThreadSyncObjectD2Ev
+tinyxml2::XMLUnknown::ParseDeep(char*, tinyxml2::StrPair*, int*)
+SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 g_datalist_id_set_data_full
-_ZN8tinyxml210XMLPrinter11OpenElementEPKcb
+tinyxml2::XMLPrinter::OpenElement(char const*, bool)
 ARGBAdd
 RGB24ToARGBRow_C
 ripemd160_block_asm_data_order
@@ -52448,7 +52448,7 @@ ScaleSamples_C
 strtod@GLIBC_2.0
 kill@GLIBC_2.0
 glGetString
-_ZTVN10__cxxabiv120__function_type_infoE
+vtable for __cxxabiv1::__function_type_info
 BlendPlane
 NV12ToRGB565Matrix
 g_dbus_method_invocation_return_value
@@ -52456,20 +52456,20 @@ kRgbH709Constants
 __wrap_chmod
 TSListBase_UnsafePeek
 Plat_RelativeTickFrequency
-_ZN6CTier015ValidateGlobalsER10CValidator
+CTier0::ValidateGlobals(CValidator&)
 SDL_SetWindowPosition@SDL3_0.0.0
-_Z26_txnal_logic_error_get_msgPv
-_ZN10SteamVProf13CVProfManager21DumpAllThreadProfilesEi
-_ZNK8tinyxml210XMLElement10DoubleTextEd
-_ZN7pcrecpp3Arg16parse_int_cradixEPKciPv
-_ZN6google8protobuf8internal8byteswapILi8EEEvPv
+_txnal_logic_error_get_msg(void*)
+SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
+tinyxml2::XMLElement::DoubleText(double) const
+pcrecpp::Arg::parse_int_cradix(char const*, int, void*)
+void google::protobuf::internal::byteswap<8>(void*)
 opus_decode
 SDL_GetGamepadMappingForID@SDL3_0.0.0
-_ZN8tinyxml211XMLDocument10ToDocumentEv
-_ZN8tinyxml210XMLUnknownD0Ev
+tinyxml2::XMLDocument::ToDocument()
+tinyxml2::XMLUnknown::~XMLUnknown()
 sigaction@GLIBC_2.0
 strlen@GLIBC_2.0
-_ZN7pcrecpp3Arg21parse_ulonglong_octalEPKciPv
+pcrecpp::Arg::parse_ulonglong_octal(char const*, int, void*)
 ARGBExtractAlpha
 XRRGetOutputPrimary
 SDL_OpenJoystick@SDL3_0.0.0
@@ -52479,20 +52479,20 @@ __vasprintf_chk@GLIBC_2.8
 fminf@GLIBC_2.1
 __wrap_opendir
 gdk_pixbuf_new_from_file_at_size
-_ZN16SteamThreadTools7CThread6ResumeEv
-_ZNK8tinyxml210XMLElement13BoolAttributeEPKcb
+SteamThreadTools::CThread::Resume()
+tinyxml2::XMLElement::BoolAttribute(char const*, bool) const
 chdir@GLIBC_2.0
-_ZNK7pcrecpp2RE14FindAndConsumeEPNS_11StringPieceERKNS_3ArgES5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_
+pcrecpp::RE::FindAndConsume(pcrecpp::StringPiece*, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
 ScaleRowDown38_C
 av_frame_alloc@LIBAVUTIL_56
 nghttp2_session_callbacks_set_on_frame_send_callback
 ThreadShellExecuteNoWindow
 opus_multistream_packet_pad
-_ZTSN8tinyxml27XMLTextE
+typeinfo name for tinyxml2::XMLText
 ThreadInterlockedCompareExchange
-_ZN8tinyxml27XMLNode6ToTextEv
-_ZNK8tinyxml211XMLDocument8DeepCopyEPS0_
-_ZN8tinyxml211XMLDocument8SaveFileEP8_IO_FILEb
+tinyxml2::XMLNode::ToText()
+tinyxml2::XMLDocument::DeepCopy(tinyxml2::XMLDocument*) const
+tinyxml2::XMLDocument::SaveFile(_IO_FILE*, bool)
 nghttp2_session_terminate_session
 XNVCTRLIsNvScreen
 ARGBShadeRow_C
@@ -52501,12 +52501,12 @@ XIQueryVersion
 J420ToRGB24
 Plat_MSTime
 ScaleRowDown4_16_C
-_ZN8tinyxml210XMLPrinter11PrintStringEPKcb
-_ZN8tinyxml210XMLPrinter8PushTextEd
+tinyxml2::XMLPrinter::PrintString(char const*, bool)
+tinyxml2::XMLPrinter::PushText(double)
 g_dbus_method_invocation_get_method_info
 I210ToAR30
-_ZN8tinyxml210XMLCommentD0Ev
-_ZN7pcrecpp3Arg12parse_ushortEPKciPv
+tinyxml2::XMLComment::~XMLComment()
+pcrecpp::Arg::parse_ushort(char const*, int, void*)
 ARGBPolynomial
 pthread_setspecific@GLIBC_2.0
 iswcntrl@GLIBC_2.0
@@ -52514,7 +52514,7 @@ fmod@GLIBC_2.0
 ETW_Steamworks_DispatchCallback_Start
 opus_encoder_init
 XRRGetOutputInfo
-_ZTSFbPKcE
+typeinfo name for bool (char const*)
 nghttp2_hd_inflate_hd
 I422ToARGB1555Row_C
 av_strerror@LIBAVUTIL_56
@@ -52543,34 +52543,34 @@ opus_multistream_encode_float
 glXGetCurrentDrawable
 SDL_GetGamepadGUIDForID@SDL3_0.0.0
 ScalePlaneUp2_16_Bilinear
-_ZN8tinyxml212XMLAttribute12SetAttributeEi
+tinyxml2::XMLAttribute::SetAttribute(int)
 GaussCol_F32_C
 __wrap___lxstat
 opus_packet_unpad
 ARGB1555ToARGBRow_C
-_ZNK8tinyxml212XMLAttribute5ValueEv
+tinyxml2::XMLAttribute::Value() const
 g_signal_new
 U444ToABGR
 chown@GLIBC_2.1
-_ZN8tinyxml212XMLAttribute9ParseDeepEPcbPi
+tinyxml2::XMLAttribute::ParseDeep(char*, bool, int*)
 opus_encoder_get_size
 V_isbreakablewspace
 I444ToARGBRow_C
-_ZN8tinyxml210XMLPrinter11CompactModeERKNS_10XMLElementE
-_ZTSPFbPKcE
+tinyxml2::XMLPrinter::CompactMode(tinyxml2::XMLElement const&)
+typeinfo name for bool (*)(char const*)
 H010ToARGB
 XNVCTRLSetGvoColorConversion
 __pthread_key_create@GLIBC_2.0
 NV21ToYUV24Row_C
 Coroutine_IsAddressInOurStack
 V_IsValidURLCharacter
-_ZNK8tinyxml27XMLText12ShallowEqualEPKNS_7XMLNodeE
+tinyxml2::XMLText::ShallowEqual(tinyxml2::XMLNode const*) const
 XNVCTRLQueryValidTargetStringAttributeValues
 gdk_pixbuf_get_pixels
 ScaleRowDown34_C
 ARGBToARGB4444Row_C
-_ZTVN9__gnu_cxx20recursive_init_errorE
-_ZN8tinyxml210XMLElement16InsertNewUnknownEPKc
+vtable for __gnu_cxx::recursive_init_error
+tinyxml2::XMLElement::InsertNewUnknown(char const*)
 pa_stream_get_device_index@PULSE_0
 V_FixSlashes
 I410ToARGBMatrix
@@ -52591,18 +52591,18 @@ _edata
 XCheckIfEvent
 SDL_CreateSurface@SDL3_0.0.0
 __wrap_mkdir
-_ZNK8tinyxml210XMLElement19QueryUnsigned64TextEPy
+tinyxml2::XMLElement::QueryUnsigned64Text(unsigned long long*) const
 StringAfterPrefix
 g_dbus_proxy_call
-_ZN10SteamVProf13CVProfManager24StartProfilingAllThreadsEfi
+SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
 ARGBToRGB565
 I010AlphaToARGBMatrix
-_ZNK8tinyxml210XMLElement12QueryIntTextEPi
-_ZN7pcrecpp3Arg13parse_int_hexEPKciPv
+tinyxml2::XMLElement::QueryIntText(int*) const
+pcrecpp::Arg::parse_int_hex(char const*, int, void*)
 Convert16To8Plane
-_ZNK8tinyxml210XMLElement17UnsignedAttributeEPKcj
-_Z20V_UnicodeCaseConvertR10CUtlStringi25EStringConvertErrorPolicy
-_ZN8tinyxml210XMLPrinter15PushDeclarationEPKc
+tinyxml2::XMLElement::UnsignedAttribute(char const*, unsigned int) const
+V_UnicodeCaseConvert(CUtlString&, int, EStringConvertErrorPolicy)
+tinyxml2::XMLPrinter::PushDeclaration(char const*)
 GetARGBBlend
 pa_stream_connect_record@PULSE_0
 SDL_DisableScreenSaver@SDL3_0.0.0
@@ -52614,10 +52614,10 @@ ARGBToABGR
 g_param_spec_int64
 gmtime@GLIBC_2.0
 I410AlphaToARGBRow_C
-_ZNK8tinyxml210XMLElement13QueryBoolTextEPb
-_ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
+tinyxml2::XMLElement::QueryBoolText(bool*) const
+AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 glReadPixels
-_ZN8tinyxml27XMLNodeC2EPNS_11XMLDocumentE
+tinyxml2::XMLNode::XMLNode(tinyxml2::XMLDocument*)
 XShmDetach
 opus_multistream_encoder_destroy
 XRRQueryExtension
@@ -52626,7 +52626,7 @@ gtk_menu_new
 av_hwframe_ctx_init@LIBAVUTIL_56
 I400ToARGBRow_C
 _ITM_memcpyRtWn
-_ZN8tinyxml214XMLDeclarationD0Ev
+tinyxml2::XMLDeclaration::~XMLDeclaration()
 g_signal_accumulator_true_handled
 g_variant_lookup_value
 wmemchr@GLIBC_2.0
@@ -52640,44 +52640,44 @@ pa_mainloop_free@PULSE_0
 av_hwframe_map@LIBAVUTIL_56
 XDestroyWindow
 P210ToAR30Row_C
-_ZN10CValidatorC1EibP20IMemBlockClaimedList
+CValidator::CValidator(int, bool, IMemBlockClaimedList*)
 SDL_CreateSurfacePalette@SDL3_0.0.0
 aesni_ccm64_encrypt_blocks
 ScaleUVRowUp2_Linear_16_C
 g_type_interface_add_prerequisite
-_ZN8tinyxml210XMLPrinter9VisitExitERKNS_11XMLDocumentE
+tinyxml2::XMLPrinter::VisitExit(tinyxml2::XMLDocument const&)
 bn_mul_add_words
 XShmCreateImage
-_ZN16SteamThreadTools7CThread7SetNameEPKc
+SteamThreadTools::CThread::SetName(char const*)
 DES_SPtrans
 strcmp@GLIBC_2.0
 timegm@GLIBC_2.0
 isalpha@GLIBC_2.0
 XGetKeyboardMapping
 g_VProfile
-_ZN10SteamVProf13CVProfManager16EnableDumpSpikesEi
+SteamVProf::CVProfManager::EnableDumpSpikes(int)
 XGetWindowAttributes
 V_strnicmp
 freeaddrinfo@GLIBC_2.0
 avcodec_receive_packet@LIBAVCODEC_58
 Plat_RelativeTicks
 ecp_nistz256_mul_mont
-_ZN8tinyxml214XMLDeclarationC1EPNS_11XMLDocumentE
-_ZTVN8tinyxml27XMLNodeE
+tinyxml2::XMLDeclaration::XMLDeclaration(tinyxml2::XMLDocument*)
+vtable for tinyxml2::XMLNode
 nghttp2_check_header_name
 nghttp2_session_callbacks_set_on_stream_close_callback
 SDL_GetJoystickTypeForID@SDL3_0.0.0
 NV21ToARGB
-_ZTSN9__gnu_cxx20recursive_init_errorE
+typeinfo name for __gnu_cxx::recursive_init_error
 unsetenv@GLIBC_2.0
-_ZN8tinyxml27XMLUtil15GetCharacterRefEPKcPcPi
+tinyxml2::XMLUtil::GetCharacterRef(char const*, char*, int*)
 XGetWMProtocols
 g_param_spec_variant
 opus_multistream_encoder_init
-_ZN8tinyxml210XMLUnknownD1Ev
+tinyxml2::XMLUnknown::~XMLUnknown()
 recvmsg@GLIBC_2.0
 g_object_get_data
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcy
+tinyxml2::XMLPrinter::PushAttribute(char const*, unsigned long long)
 __wrap_lchown
 ARGBMirrorRow_C
 g_dbus_interface_skeleton_export
@@ -52686,28 +52686,28 @@ V_StripLastDir
 ScaleUVRowUp2_Bilinear_Any_C
 BGRAToYRow_C
 opus_packet_get_bandwidth
-_ZN16SteamThreadTools16CThreadFullMutexC1EbPKcbb
+SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
 pa_stream_get_sample_spec@PULSE_0
 RGBAToYRow_C
-_ZN8tinyxml27XMLTextD0Ev
+tinyxml2::XMLText::~XMLText()
 clock_gettime@GLIBC_2.2
 gtk_menu_shell_append
-_ZNK8tinyxml212XMLAttribute13QueryIntValueEPi
+tinyxml2::XMLAttribute::QueryIntValue(int*) const
 gtk_icon_theme_get_default
 nghttp2_submit_push_promise
 XSetErrorHandler
 g_object_ref_sink
 Convert16To8Row_C
 RGBAToYJRow_C
-_ZN8tinyxml210XMLUnknown9ToUnknownEv
+tinyxml2::XMLUnknown::ToUnknown()
 g_variant_iter_next
 ARGBInterpolate
 sha512_block_data_order
 ARGBToI400
-_ZTIPFvPKc27ERecordingSegmenterLogLevelE
+typeinfo for void (*)(char const*, ERecordingSegmenterLogLevel)
 pw_init
 EGetFrameFromMPD
-_ZN8tinyxml211XMLDocument8PopDepthEv
+tinyxml2::XMLDocument::PopDepth()
 opus_repacketizer_cat
 ARGBCopyYToAlphaRow_C
 __register_atfork@GLIBC_2.3.2
@@ -52715,14 +52715,14 @@ SteamRealPath
 SplitRGBPlane
 MergeXRGB16To8Row_C
 g_quark_to_string
-_ZN10SteamVProf9CVProfile5PauseEv
+SteamVProf::CVProfile::Pause()
 XWarpPointer
-_ZNK8tinyxml27XMLNode9ToCommentEv
+tinyxml2::XMLNode::ToComment() const
 ARGBCopyAlphaRow_C
 kYvuH709Constants
 strchr@GLIBC_2.0
 ARGBToUVRow_C
-_ZNK8tinyxml211XMLDocument9ErrorNameEv
+tinyxml2::XMLDocument::ErrorName() const
 SDL_DestroySurface@SDL3_0.0.0
 ___tls_get_addr@GLIBC_2.3
 flock@GLIBC_2.0
@@ -52736,11 +52736,11 @@ ARGBQuantizeRow_C
 g_param_spec_boolean
 freopen@GLIBC_2.0
 ceilf@GLIBC_2.0
-_ZN8tinyxml210XMLPrinterD0Ev
+tinyxml2::XMLPrinter::~XMLPrinter()
 av_hwframe_transfer_data@LIBAVUTIL_56
 ValidateSpew
-_ZNK8tinyxml212XMLAttribute18QueryUnsignedValueEPj
-_ZTSN8tinyxml27XMLNodeE
+tinyxml2::XMLAttribute::QueryUnsignedValue(unsigned int*) const
+typeinfo name for tinyxml2::XMLNode
 ScalePlaneBilinearDown
 difftime@GLIBC_2.0
 av_init_packet@LIBAVCODEC_58
@@ -52749,10 +52749,10 @@ I420ToRGB565
 opus_multistream_encoder_ctl
 RGB565ToARGBRow_C
 opus_repacketizer_get_size
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcj
+tinyxml2::XMLPrinter::PushAttribute(char const*, unsigned int)
 SplitARGBPlaneOpaque
 opus_repacketizer_create
-_ZNK8tinyxml27XMLNode10ToDocumentEv
+tinyxml2::XMLNode::ToDocument() const
 Warning
 nghttp2_session_get_stream_user_data
 g_cancellable_cancel
@@ -52764,22 +52764,22 @@ XFixesGetCursorImage
 SDL_IOFromConstMem@SDL3_0.0.0
 pw_stream_destroy
 SDL_GetDisplayContentScale@SDL3_0.0.0
-_ZN16SteamThreadTools7CThread13GetThreadProcEv
-_ZN16SteamThreadTools16CThreadFullMutex7ReleaseEv
+SteamThreadTools::CThread::GetThreadProc()
+SteamThreadTools::CThreadFullMutex::Release()
 MergeXRGBRow_C
 ARGBSepia
 EGetFramesFromVideo
-_ZNK8tinyxml210XMLUnknown6AcceptEPNS_10XMLVisitorE
+tinyxml2::XMLUnknown::Accept(tinyxml2::XMLVisitor*) const
 I012ToAR30Matrix
 ARGBToARGB4444
 popen@GLIBC_2.1
 g_strconcat
 stderr@GLIBC_2.0
 g_value_take_object
-_ZNK8tinyxml211XMLDocument12ShallowCloneEPS0_
+tinyxml2::XMLDocument::ShallowClone(tinyxml2::XMLDocument*) const
 wmemset@GLIBC_2.0
 poly1305_blocks
-_ZN8tinyxml212XMLAttribute12SetAttributeEf
+tinyxml2::XMLAttribute::SetAttribute(float)
 V_towlower32
 SDL_GetGamepadStringForButton@SDL3_0.0.0
 glTexSubImage2D
@@ -52801,27 +52801,27 @@ Plat_GetExecutablePathUTF8
 g_dbus_object_get_interface
 nghttp2_stream_get_first_child
 AR30ToABGR
-_ZN8tinyxml210XMLElement7SetTextEi
+tinyxml2::XMLElement::SetText(int)
 vsnprintf@GLIBC_2.0
 NV12ToARGBMatrix
 _ITM_RU4
 gtk_container_get_type
 g_ClockSpeedMillisecondsMultiplier
 GaussRow_C
-_ZN10CValidator11ClaimMemoryEPKv
+CValidator::ClaimMemory(void const*)
 ComputeCumulativeSumRow_C
-_Z21V_SplitStringInternalPKcPKS0_PS0_iR10CUtlVectorI10CUtlString10CUtlMemoryIS5_EEb
+V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, bool)
 open64@GLIBC_2.2
 btowc@GLIBC_2.0
 SDL_AddEventWatch@SDL3_0.0.0
-_ZN8tinyxml27XMLNode9ToCommentEv
+tinyxml2::XMLNode::ToComment()
 g_value_init
 SDL_GetJoystickNameForID@SDL3_0.0.0
 SDL_ShowSimpleMessageBox@SDL3_0.0.0
 V_strtoi64
 SobelYRow_C
 ScalePlaneUp2_12_Bilinear
-_ZN8tinyxml27XMLUtil5ToIntEPKcPi
+tinyxml2::XMLUtil::ToInt(char const*, int*)
 __xstat@GLIBC_2.0
 nghttp2_rcbuf_is_static
 ScaleFilterCols64_C
@@ -52829,22 +52829,22 @@ P210ToAR30Matrix
 Plat_IsSteamOS
 ARGBCopy
 pa_stream_peek@PULSE_0
-_ZNK8tinyxml27XMLText6AcceptEPNS_10XMLVisitorE
-_ZN8tinyxml211XMLDocument11_errorNamesE
-_ZN8tinyxml211XMLDocument10DeleteNodeEPNS_7XMLNodeE
+tinyxml2::XMLText::Accept(tinyxml2::XMLVisitor*) const
+tinyxml2::XMLDocument::_errorNames
+tinyxml2::XMLDocument::DeleteNode(tinyxml2::XMLNode*)
 ecp_nistz256_gather_w7
 g_datalist_get_data
-_ZN7pcrecpp3Arg15parse_ulonglongEPKciPv
+pcrecpp::Arg::parse_ulonglong(char const*, int, void*)
 I420Scale_12
-_ZN8tinyxml210XMLPrinter5PrintEPKcz
+tinyxml2::XMLPrinter::Print(char const*, ...)
 nghttp2_session_get_stream_local_close
 g_object_get_property
 ARGBToRGB565Row_C
 H210ToABGR
 pw_stream_state_as_string
-_ZNK8tinyxml27XMLNode22PreviousSiblingElementEPKc
+tinyxml2::XMLNode::PreviousSiblingElement(char const*) const
 __strcpy_chk@GLIBC_2.3.4
-_ZN7pcrecpp3Arg10parse_uintEPKciPv
+pcrecpp::Arg::parse_uint(char const*, int, void*)
 nghttp2_submit_headers
 I420ToARGBMatrix
 XNVCTRLQueryTargetBinaryData
@@ -52852,21 +52852,21 @@ UYVYToUVRow_C
 shm_open@GLIBC_2.2
 g_type_register_static_simple
 g_object_new
-_ZN8tinyxml210XMLPrinter10VisitEnterERKNS_10XMLElementEPKNS_12XMLAttributeE
+tinyxml2::XMLPrinter::VisitEnter(tinyxml2::XMLElement const&, tinyxml2::XMLAttribute const*)
 SDL_GetPlatform@SDL3_0.0.0
 RGBAToJ400
 ARGBColorTableRow_C
-_ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
-_ZN8tinyxml27XMLUtil7ReadBOMEPKcPb
+AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
+tinyxml2::XMLUtil::ReadBOM(char const*, bool*)
 g_variant_n_children
 OPENSSL_ia32_cpuid
-_ZN7pcrecpp3Arg19parse_ulonglong_hexEPKciPv
+pcrecpp::Arg::parse_ulonglong_hex(char const*, int, void*)
 V_IsAbsolutePath
 ChaCha20_ssse3
 V_AppendSlash
 __strcoll_l@GLIBC_2.1
 I010ToARGB
-_ZN8tinyxml212XMLAttributeD2Ev
+tinyxml2::XMLAttribute::~XMLAttribute()
 __wrap_chdir
 V_StrTrim
 log@GLIBC_2.0
@@ -52879,34 +52879,34 @@ nghttp2_session_get_outbound_queue_size
 g_desktop_app_info_get_type
 NV21Copy
 TSQueueBase_Push
-_ZN7pcrecpp3Arg15parse_short_hexEPKciPv
-_ZN8tinyxml210XMLPrinter8PushTextEi
+pcrecpp::Arg::parse_short_hex(char const*, int, void*)
+tinyxml2::XMLPrinter::PushText(int)
 g_error_matches
 pw_core_disconnect
 ScaleARGBFilterCols_C
-_ZN8tinyxml27XMLNode6UnlinkEPS0_
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcx
+tinyxml2::XMLNode::Unlink(tinyxml2::XMLNode*)
+tinyxml2::XMLPrinter::PushAttribute(char const*, long long)
 P410ToARGBRow_C
 SDL_PumpEvents@SDL3_0.0.0
-_Z23V_ParseShellCommandLinePKcR10CUtlVectorI10CUtlString10CUtlMemoryIS2_EEiPS0_
+V_ParseShellCommandLine(char const*, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, int, char const**)
 XNVCTRLQueryVersion
-_ZTVN10__cxxabiv119__pointer_type_infoE
+vtable for __cxxabiv1::__pointer_type_info
 kRgbI601Constants
 BF_cbc_encrypt
 __freelocale@GLIBC_2.1
 utimes@GLIBC_2.0
-_ZN16SteamThreadTools12CThreadEvent5ResetEv
+SteamThreadTools::CThreadEvent::Reset()
 WeakRandomUint32
 ThreadInterlockedIncrement64
-_ZN7pcrecpp3Arg17parse_ulong_radixEPKciPvi
+pcrecpp::Arg::parse_ulong_radix(char const*, int, void*, int)
 pa_mainloop_get_api@PULSE_0
 opus_packet_get_nb_samples
 nghttp2_check_header_value
 g_variant_get_string
-_ZNK8tinyxml210XMLElement15DoubleAttributeEPKcd
-_ZNK8tinyxml210XMLElement12ShallowEqualEPKNS_7XMLNodeE
+tinyxml2::XMLElement::DoubleAttribute(char const*, double) const
+tinyxml2::XMLElement::ShallowEqual(tinyxml2::XMLNode const*) const
 htons@GLIBC_2.0
-_ZN8tinyxml211XMLDocumentD1Ev
+tinyxml2::XMLDocument::~XMLDocument()
 I422ToRGBARow_C
 XInternAtom
 Plat_timegm
@@ -52915,23 +52915,23 @@ I420Scale
 RGB24ToUVRow_C
 endmntent@GLIBC_2.0
 ecp_nistz256_to_mont
-_ZNK16SteamThreadTools7CThread7IsAliveEv
-_ZNK8tinyxml210XMLElement14FloatAttributeEPKcf
+SteamThreadTools::CThread::IsAlive() const
+tinyxml2::XMLElement::FloatAttribute(char const*, float) const
 __wrap_stat
 I420ToAB30
 SDL_GetJoystickGUIDForID@SDL3_0.0.0
-_ZN8tinyxml212XMLAttribute12SetAttributeEx
+tinyxml2::XMLAttribute::SetAttribute(long long)
 I420ToARGB
-_ZTSN8tinyxml211XMLDocumentE
+typeinfo name for tinyxml2::XMLDocument
 nghttp2_stream_get_state
-_ZN7pcrecpp3Arg18parse_ushort_octalEPKciPv
+pcrecpp::Arg::parse_ushort_octal(char const*, int, void*)
 ARGBSepiaRow_C
 nghttp2_submit_window_update
-_ZN8tinyxml211XMLDocument5ClearEv
+tinyxml2::XMLDocument::Clear()
 XNVCTRLQueryStringAttribute
 wcsncasecmp@GLIBC_2.1
 wcscmp@GLIBC_2.0
-_ZNK8tinyxml210XMLComment12ShallowEqualEPKNS_7XMLNodeE
+tinyxml2::XMLComment::ShallowEqual(tinyxml2::XMLNode const*) const
 ferror@GLIBC_2.0
 fileno@GLIBC_2.0
 I422ToRGBA
@@ -52940,8 +52940,8 @@ gcm_ghash_clmul
 makecontext@GLIBC_2.1
 ARGBToRAW
 XFixesQueryExtension
-_ZN8tinyxml27XMLUtil6ToBoolEPKcPb
-_ZTIN10__cxxabiv115__forced_unwindE
+tinyxml2::XMLUtil::ToBool(char const*, bool*)
+typeinfo for __cxxabiv1::__forced_unwind
 ScaleUVBilinearUp2_16
 ARGB1555ToYRow_C
 __fxstat64@GLIBC_2.2
@@ -52949,11 +52949,11 @@ g_variant_new_bytestring
 I420AlphaToABGR
 XNVCTRLQueryAttributePermissions
 RAWToUVJRow_C
-_ZN8tinyxml210XMLPrinter8PushTextEb
+tinyxml2::XMLPrinter::PushText(bool)
 StringAfterPrefixCaseSensitive
 pa_stream_drop@PULSE_0
 MirrorPlane
-_ZN16SteamThreadTools12CThreadEvent3SetEv
+SteamThreadTools::CThreadEvent::Set()
 ScaleUVBilinearUp2
 ScaleRowDown34_1_Box_C
 GetInstalledRAM
@@ -52961,12 +52961,12 @@ fputs@GLIBC_2.0
 dlsym@GLIBC_2.0
 nghttp2_session_want_read
 aesni_cbc_encrypt
-_ZNK8tinyxml210XMLUnknown9ToUnknownEv
+tinyxml2::XMLUnknown::ToUnknown() const
 gtk_container_get_children
 XGetWindowProperty
 ARGBPolynomialRow_C
 glDisable
-_ZN8tinyxml210XMLPrinterC1EP8_IO_FILEbi
+tinyxml2::XMLPrinter::XMLPrinter(_IO_FILE*, bool, int)
 statfs64@GLIBC_2.1
 ScaleRowDown38_3_Box_C
 SecureRandomBytes
@@ -52975,44 +52975,44 @@ nghttp2_session_send
 pthread_self@GLIBC_2.0
 bind@GLIBC_2.0
 RGB24Mirror
-_ZN8tinyxml27XMLUtil20SetBoolSerializationEPKcS2_
+tinyxml2::XMLUtil::SetBoolSerialization(char const*, char const*)
 I420ToAR30Matrix
 g_app_info_get_all
 av_free@LIBAVUTIL_56
-_ZTIFbPKcE
-_ZN10SteamVProf20CVProfileThreadEntry22SetDumpSpikesThresholdEi
+typeinfo for bool (char const*)
+SteamVProf::CVProfileThreadEntry::SetDumpSpikesThreshold(int)
 ETWMark1S
 ARGBToAB64Row_C
-_ZTSN8tinyxml210XMLPrinterE
-_ZN10SteamVProf9CVProfile19GetBudgetGroupColorE17EVProfBugdetGroupRiS2_S2_S2_
+typeinfo name for tinyxml2::XMLPrinter
+SteamVProf::CVProfile::GetBudgetGroupColor(EVProfBugdetGroup, int&, int&, int&, int&)
 ScaleARGBFilterCols64_C
 cos@GLIBC_2.0
 MergeARGB16To8Row_C
 fopen@GLIBC_2.1
 V_MatchWildcardString
-_ZTIFvPKc27ERecordingSegmenterLogLevelE
-_ZN8tinyxml211XMLDocument9PushDepthEv
+typeinfo for void (char const*, ERecordingSegmenterLogLevel)
+tinyxml2::XMLDocument::PushDepth()
 g_settings_new
 avcodec_alloc_context3@LIBAVCODEC_58
 MergeXR64Row_C
 g_hash_table_insert
 system@GLIBC_2.0
 RGBAToUVRowMatrix_C
-_ZN10CValidator3PopEv
+CValidator::Pop()
 g_signal_lookup
 ARGBToUVJRow_C
 UYVYToYRow_C
-_ZN10CValidator11DiffAgainstEPS_
+CValidator::DiffAgainst(CValidator*)
 g_signal_emitv
-_ZN16SteamThreadTools7CThread7SuspendEv
+SteamThreadTools::CThread::Suspend()
 SplitARGBPlaneAlpha
-_ZN8tinyxml210XMLPrinter5VisitERKNS_14XMLDeclarationE
+tinyxml2::XMLPrinter::Visit(tinyxml2::XMLDeclaration const&)
 __xmknod@GLIBC_2.0
 I210AlphaToARGBMatrix
-_ZTSN10__cxxabiv115__forced_unwindE
+typeinfo name for __cxxabiv1::__forced_unwind
 g_type_check_class_cast
 opus_decoder_get_nb_samples
-_ZNK8tinyxml27XMLNode13ToDeclarationEv
+tinyxml2::XMLNode::ToDeclaration() const
 opus_multistream_surround_encoder_create
 g_variant_iter_free
 ecp_nistz256_point_double
@@ -53039,9 +53039,9 @@ ARGBToJ422
 SwapUVPlane
 nghttp2_hd_deflate_get_num_table_entries
 nghttp2_submit_extension
-_ZN8tinyxml27XMLNodeD2Ev
+tinyxml2::XMLNode::~XMLNode()
 pa_context_load_module@PULSE_0
-_ZN7pcrecpp3Arg17parse_short_octalEPKciPv
+pcrecpp::Arg::parse_short_octal(char const*, int, void*)
 ScaleRowUp2_Linear_Any_C
 ecp_nistz256_from_mont
 pthread_once@GLIBC_2.0
@@ -53051,7 +53051,7 @@ HalfFloatPlane
 ARGBComputeCumulativeSum
 MultiplyRow_16_C
 g_dbus_proxy_new_finish
-_ZN10CValidator11RenderLeaksEj
+CValidator::RenderLeaks(unsigned int)
 I420ToRGB565Dither
 OSTypesAreCompatible
 ecp_nistz256_precomputed
@@ -53060,7 +53060,7 @@ V_ExtractFileExtension
 g_variant_iter_init
 XSendEvent
 SDL_GUIDToString@SDL3_0.0.0
-_ZNK8tinyxml214XMLDeclaration12ShallowEqualEPKNS_7XMLNodeE
+tinyxml2::XMLDeclaration::ShallowEqual(tinyxml2::XMLNode const*) const
 sysconf@GLIBC_2.0
 stdout@GLIBC_2.0
 g_hash_table_lookup
@@ -53071,12 +53071,12 @@ log10@GLIBC_2.0
 pa_context_get_state@PULSE_0
 logf@GLIBC_2.0
 g_object_unref
-_ZN8tinyxml27XMLNode10DeleteNodeEPS0_
+tinyxml2::XMLNode::DeleteNode(tinyxml2::XMLNode*)
 g_type_check_instance_is_a
 XQueryTree
-_ZNK8tinyxml210XMLElement7IntTextEi
+tinyxml2::XMLElement::IntText(int) const
 g_dbus_proxy_call_finish
-_ZNK8tinyxml210XMLElement9Int64TextEx
+tinyxml2::XMLElement::Int64Text(long long) const
 g_dbus_proxy_call_with_unix_fd_list_finish
 SDL_SetGamepadMapping@SDL3_0.0.0
 XSelectInput
@@ -53086,14 +53086,14 @@ ungetwc@GLIBC_2.2
 Plat_GetExecutablePath
 lseek@GLIBC_2.0
 __strtof_l@GLIBC_2.1
-_ZN8tinyxml212XMLAttribute12SetAttributeEb
+tinyxml2::XMLAttribute::SetAttribute(bool)
 ecp_nistz256_sqr_mont
 __fread_chk@GLIBC_2.7
 XDisplayWidthMM
 nghttp2_rcbuf_decref
 ScaleUVCols_C
 I210ToAR30Matrix
-_Z30V_EscapeShellArgumentAndAppendP17CUtlStringBuilderPKcb
+V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
 getpid@GLIBC_2.0
 g_dbus_proxy_call_with_unix_fd_list
 wcsncat@GLIBC_2.0
@@ -53107,13 +53107,13 @@ mktime@GLIBC_2.0
 ARGBToYJRow_C
 ARGBToRGB24Row_C
 g_dbus_object_manager_get_objects
-_ZN8tinyxml211XMLDocumentD2Ev
+tinyxml2::XMLDocument::~XMLDocument()
 pa_stream_get_channel_map@PULSE_0
 YUY2ToY
 chmod@GLIBC_2.0
 P010ToAR30Matrix
 aesni_decrypt
-_ZTIN9__gnu_cxx24__concurrence_lock_errorE
+typeinfo for __gnu_cxx::__concurrence_lock_error
 ARGBShuffle
 select@GLIBC_2.0
 V_FileBase
@@ -53128,13 +53128,13 @@ glTexImage2D
 I422ToARGBRow_C
 GetNameFromOSType
 pa_context_connect@PULSE_0
-_ZN7pcrecpp2RE7CompileENS0_6AnchorE
-_ZTIPFvvE
+pcrecpp::RE::Compile(pcrecpp::RE::Anchor)
+typeinfo for void (*)()
 XTestFakeKeyEvent
 OPENSSL_rdtsc
-_ZTIN8tinyxml27XMLNodeE
+typeinfo for tinyxml2::XMLNode
 ScaleUVRowUp2_Bilinear_16_Any_C
-_ZTIN8tinyxml27XMLTextE
+typeinfo for tinyxml2::XMLText
 I422ToRGB565
 XNVCTRLQueryTargetStringAttribute
 V_StrSkipArticles
@@ -53148,12 +53148,12 @@ XPending
 NV12Mirror
 SDL_GetGlobalMouseState@SDL3_0.0.0
 gtk_widget_show
-_Z17GetCPUInformationv
+GetCPUInformation()
 pcre_stack_free
 localeconv@GLIBC_2.2
 RGB24ToYRowMatrix_C
 alphasort64@GLIBC_2.2
-_ZN7pcrecpp3Arg15parse_ulong_hexEPKciPv
+pcrecpp::Arg::parse_ulong_hex(char const*, int, void*)
 nghttp2_session_callbacks_set_on_frame_not_send_callback
 qsort@GLIBC_2.0
 __wrap_statvfs64
@@ -53164,9 +53164,9 @@ g_app_info_should_show
 nghttp2_session_upgrade2
 wmemcmp@GLIBC_2.0
 V_strcmp_prefix
-_ZNK8tinyxml210XMLElement17QueryUnsignedTextEPj
+tinyxml2::XMLElement::QueryUnsignedText(unsigned int*) const
 readlink@GLIBC_2.0
-_ZN8tinyxml210XMLPrinter23SealElementIfJustOpenedEv
+tinyxml2::XMLPrinter::SealElementIfJustOpened()
 SDL_GetJoystickVendor@SDL3_0.0.0
 Plat_IsSteamDeck
 g_variant_get_boolean
@@ -53184,20 +53184,20 @@ SDL_SetHint@SDL3_0.0.0
 ScaleRowUp2_16_C
 ETWBegin
 scandir64@GLIBC_2.2
-_ZN10SteamVProf13CVProfManager23StopProfilingAllThreadsEv
+SteamVProf::CVProfManager::StopProfilingAllThreads()
 CumulativeSumToAverageRow_C
 XVisualIDFromVisual
 g_dbus_proxy_get_cached_property
 I210ToAB30
-_ZTIF20EWatchdogStallResultjE
+typeinfo for EWatchdogStallResult (unsigned int)
 ScaleColsUp2_C
 nghttp2_session_get_stream_remote_close
-_ZN10SteamVProf13CVProfManager20GetAllThreadProfilesEPNS_14CVProfileArrayE
+SteamVProf::CVProfManager::GetAllThreadProfiles(SteamVProf::CVProfileArray*)
 strncmp@GLIBC_2.0
 ThreadInterlockedExchange64
-_ZN10CValidatorD1Ev
+CValidator::~CValidator()
 strptime@GLIBC_2.0
-_ZN7pcrecpp3Arg18parse_longlong_hexEPKciPv
+pcrecpp::Arg::parse_longlong_hex(char const*, int, void*)
 g_variant_get_bytestring_array
 MergeXR30Plane
 Plat_IsSteamConsoleMode
@@ -53231,20 +53231,20 @@ ScaleRowDown34_1_Box_16_C
 __wrap_scandir
 JoiningSecureServerCall
 g_random_int_range
-_ZN8tinyxml211XMLDocumentC1EbNS_10WhitespaceE
+tinyxml2::XMLDocument::XMLDocument(bool, tinyxml2::Whitespace)
 _XSend
 NV12ToRGB24Matrix
 ARGBToNV12Matrix
 ThreadSetBackgroundPriority
-_ZN7pcrecpp3Arg20parse_longlong_octalEPKciPv
-_ZN8tinyxml27StrPairD2Ev
-_ZN8tinyxml210XMLElement20InsertNewDeclarationEPKc
+pcrecpp::Arg::parse_longlong_octal(char const*, int, void*)
+tinyxml2::StrPair::~StrPair()
+tinyxml2::XMLElement::InsertNewDeclaration(char const*)
 XRRFreeScreenResources
 gtk_icon_info_free
 fscanf@GLIBC_2.0
 __wrap_dlopen
 ecp_nistz256_neg
-_ZN8tinyxml210XMLPrinter10PushHeaderEbb
+tinyxml2::XMLPrinter::PushHeader(bool, bool)
 pcre_compile
 nghttp2_session_resume_data
 strcasestr@GLIBC_2.1
@@ -53261,13 +53261,13 @@ NV12ToRGB565Row_C
 opus_packet_pad
 setlocale@GLIBC_2.0
 opus_multistream_surround_encoder_init
-_ZNK8tinyxml211XMLDocument12ShallowEqualEPKNS_7XMLNodeE
+tinyxml2::XMLDocument::ShallowEqual(tinyxml2::XMLNode const*) const
 eventfd@GLIBC_2.7
-_ZNK8tinyxml27XMLText12ShallowCloneEPNS_11XMLDocumentE
+tinyxml2::XMLText::ShallowClone(tinyxml2::XMLDocument*) const
 I444Scale
 g_quark_try_string
 __sprintf_chk@GLIBC_2.3.4
-_ZNK7pcrecpp2RE11DoMatchImplERKNS_11StringPieceENS0_6AnchorEPiPKPKNS_3ArgEiS5_i
+pcrecpp::RE::DoMatchImpl(pcrecpp::StringPiece const&, pcrecpp::RE::Anchor, int*, pcrecpp::Arg const* const*, int, int*, int) const
 GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
 GCC: (SteamRT 9.3.0-17+steamrt1.3+srt1) 9.3.1 20210309
 GCC: (crosstool-NG 1.12.2) 4.5.3

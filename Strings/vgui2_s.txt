@@ -8,7 +8,7 @@ strlen
 V_atoi
 V_atof
 getenv
-_ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 __wrap_unlink
 popen
 fgets
@@ -29,13 +29,13 @@ stderr
 __fprintf_chk
 V_vsnprintfRet
 getuid
-_Z21V_SplitStringInternalPKcPKS0_PS0_iR10CUtlVectorI10CUtlString10CUtlMemoryIS5_EEb
+V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, bool)
 fwrite
 Error
 strerror
 strcmp
 __cxa_atexit
-_ZTVN10__cxxabiv117__class_type_infoE
+vtable for __cxxabiv1::__class_type_info
 __pthread_key_create
 XGetWindowProperty
 XFree
@@ -57,12 +57,12 @@ sscanf
 XSelectInput
 pthread_mutex_lock
 pthread_mutex_unlock
-_ZN16SteamThreadTools12CThreadMutexC1Ev
-_ZN16SteamThreadTools12CThreadMutexD1Ev
+SteamThreadTools::CThreadMutex::CThreadMutex()
+SteamThreadTools::CThreadMutex::~CThreadMutex()
 Plat_FloatTime
 XPending
-_ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
-_ZTVN10__cxxabiv120__si_class_type_infoE
+AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
+vtable for __cxxabiv1::__si_class_type_info
 __longjmp_chk
 _setjmp
 __wrap_dlopen
@@ -107,20 +107,20 @@ malloc
 free
 strdup
 iswspace
-_ZN10CValidator4PushEPKcPvS1_
-_ZN10CValidator3PopEv
+CValidator::Push(char const*, void*, char const*)
+CValidator::Pop()
 g_VProfProfilesRunningCount
 CVProfile_ExitScope
 VProfInternalEnterScopeCurrentThread
-_ZN11SteamStdLib11CommandLineEv
-_ZN10CValidator11ClaimMemoryEPKv
-_ZN11SteamStdLib17CCommandLineParamC1EPKcS2_
-_ZN11SteamStdLib17CCommandLineParamD1Ev
-_ZTVN10__cxxabiv121__vmi_class_type_infoE
+SteamStdLib::CommandLine()
+CValidator::ClaimMemory(void const*)
+SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
+SteamStdLib::CCommandLineParam::~CCommandLineParam()
+vtable for __cxxabiv1::__vmi_class_type_info
 memcmp
-_ZNK10CValidator9IsClaimedEPKv
+CValidator::IsClaimed(void const*) const
 isalnum
-_Z9V_stristrPKcS0_
+V_stristr(char const*, char const*)
 KeyValuesSystemSteam
 strchr
 V_FixSlashes
@@ -145,7 +145,7 @@ listen
 accept
 recvmsg
 sendmsg
-_Z20V_UnicodeCaseConvertR10CUtlVectorIw10CUtlMemoryIwEEi25EStringConvertErrorPolicy
+V_UnicodeCaseConvert(CUtlVector<wchar_t, CUtlMemory<wchar_t>>&, int, EStringConvertErrorPolicy)
 V_atoui64
 OSIsCompatible
 Plat_IsChromeOS
@@ -267,7 +267,7 @@ XGetSelectionOwner
 XConvertSelection
 ThreadSleep
 XCheckMaskEvent
-_Z30V_EscapeShellArgumentAndAppendP17CUtlStringBuilderPKcb
+V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
 XSetSelectionOwner
 alcGetString
 ThreadImplOneTimeInit
@@ -302,9 +302,9 @@ FT_New_Memory_Face
 FT_New_Face
 FT_Set_Pixel_Sizes
 FT_Load_Char
-_ZN10CValidator16ClaimArrayMemoryEPKv
+CValidator::ClaimArrayMemory(void const*)
 strtod
-_ZN16SteamThreadTools17CThreadSyncObject4WaitEj
+SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 ___tls_get_addr
 fnmatch
 V_IsAbsolutePath
@@ -312,8 +312,8 @@ getcwd
 V_strncat_length
 V_RemoveDotSlashes
 V_FixDoubleSlashes
-_ZN16SteamThreadTools7CThreadD2Ev
-_ZN16SteamThreadTools17CThreadSyncObjectD2Ev
+SteamThreadTools::CThread::~CThread()
+SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 __wrap_open64
 flock
 posix_fadvise
@@ -347,17 +347,17 @@ alphasort64
 __wrap_scandir64
 __wrap_symlink
 strcasecmp
-_ZN16SteamThreadTools7CThread4JoinEj
-_ZN16SteamThreadTools7CThreadC2Ev
-_ZN16SteamThreadTools7CThread7SetNameEPKc
-_ZN16SteamThreadTools7CThread5StartEj
+SteamThreadTools::CThread::Join(unsigned int)
+SteamThreadTools::CThread::CThread()
+SteamThreadTools::CThread::SetName(char const*)
+SteamThreadTools::CThread::Start(unsigned int)
 V_UnqualifiedFileName
 V_MakeAbsolutePath
-_ZTIN16SteamThreadTools7CThreadE
-_ZN16SteamThreadTools7CThread4InitEv
-_ZN16SteamThreadTools7CThread6OnExitEv
-_ZNK16SteamThreadTools7CThread15IsThreadRunningEv
-_ZN16SteamThreadTools7CThread13GetThreadProcEv
+typeinfo for SteamThreadTools::CThread
+SteamThreadTools::CThread::Init()
+SteamThreadTools::CThread::OnExit()
+SteamThreadTools::CThread::IsThreadRunning() const
+SteamThreadTools::CThread::GetThreadProc()
 CreateInterface
 dlerror
 __wrap_dlmopen
@@ -440,24 +440,24 @@ XNVCTRLQueryTargetBinaryData
 XNVCTRLQueryBinaryData
 XNVCTRLStringOperation
 _XSetLastRequestRead
-_ZN16SteamThreadTools16CThreadFullMutexC1EbPKcbb
+SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
 V_CopyAndFixSlashes
-_ZN16SteamThreadTools16CThreadFullMutex7ReleaseEv
-_ZTIN10__cxxabiv119__foreign_exceptionE
-_ZTIN10__cxxabiv115__forced_unwindE
+SteamThreadTools::CThreadFullMutex::Release()
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__forced_unwind
 syscall
-_ZTIN9__gnu_cxx20recursive_init_errorE
-_ZTVN9__gnu_cxx20recursive_init_errorE
-_ZTSN9__gnu_cxx20recursive_init_errorE
+typeinfo for __gnu_cxx::recursive_init_error
+vtable for __gnu_cxx::recursive_init_error
+typeinfo name for __gnu_cxx::recursive_init_error
 fputs
 stdout
 stdin
-_ZTVN9__gnu_cxx24__concurrence_lock_errorE
-_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTIN9__gnu_cxx24__concurrence_lock_errorE
-_ZTSN9__gnu_cxx24__concurrence_lock_errorE
-_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
 pthread_once
 __nl_langinfo_l
 __uselocale
@@ -480,10 +480,10 @@ wmemset
 wmemchr
 wmemmove
 __sprintf_chk
-_ZTSN10__cxxabiv115__forced_unwindE
-_ZTSN10__cxxabiv119__foreign_exceptionE
-_ZTVN10__cxxabiv115__forced_unwindE
-_ZTVN10__cxxabiv119__foreign_exceptionE
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
 __strtof_l
 __strtod_l
 strtold_l
@@ -503,17 +503,17 @@ bind_textdomain_codeset
 dgettext
 __strftime_l
 __wcsftime_l
-_Z27_txnal_cow_string_D1_commitPv
-_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _ITM_RU1
-_ZGTtnaj
+transaction clone for operator new[](unsigned int)
 _ITM_memcpyRtWn
-_Z23_txnal_cow_string_c_strPKv
+_txnal_cow_string_c_str(void const*)
 _ITM_RU4
-_Z20_txnal_cow_string_D1Pv
+_txnal_cow_string_D1(void*)
 _ITM_addUserCommitAction
-_Z26_txnal_logic_error_get_msgPv
-_Z28_txnal_runtime_error_get_msgPv
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
 dl_iterate_phdr
 __xmknod
 __stack_chk_fail
@@ -2993,7 +2993,7 @@ FcFontSetDestroy
 XNVCTRLSetTargetAttribute
 __cxa_finalize@GLIBC_2.1.3
 fread@GLIBC_2.0
-_ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 __wcsftime_l@GLIBC_2.3
 XextCreateExtension
 __wrap_dlopen
@@ -3002,7 +3002,7 @@ FT_Set_Pixel_Sizes
 XNVCTRLQueryBinaryDataAttributePermissions
 V_atof
 __duplocale@GLIBC_2.1
-_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 __wrap_mkfifo
 fork@GLIBC_2.0
 ThreadImplOneTimeInit
@@ -3022,14 +3022,14 @@ XNVCTRLQueryGvoColorConversion
 mbsnrtowcs@GLIBC_2.0
 open64@GLIBC_2.2
 V_binarytohex
-_ZTIN9__gnu_cxx24__concurrence_lock_errorE
+typeinfo for __gnu_cxx::__concurrence_lock_error
 __wrap_mount
 XMissingExtension
 Plat_CommandLineParamExists
 XFreeColormap
 __wrap_stat
 _ITM_memcpyRtWn
-_Z30V_EscapeShellArgumentAndAppendP17CUtlStringBuilderPKcb
+V_EscapeShellArgumentAndAppend(CUtlStringBuilder*, char const*, bool)
 XRestackWindows
 btowc@GLIBC_2.0
 V_vsnprintfRet
@@ -3047,7 +3047,7 @@ XRRQueryVersion
 glViewport
 XSendEvent
 strstr@GLIBC_2.0
-_Z26_txnal_logic_error_get_msgPv
+_txnal_logic_error_get_msg(void*)
 scandir@GLIBC_2.0
 _XSend
 XGetWindowProperty
@@ -3070,7 +3070,7 @@ XGrabPointer
 wmemset@GLIBC_2.0
 symlink@GLIBC_2.0
 FcDefaultSubstitute
-_ZN16SteamThreadTools12CThreadMutexC1Ev
+SteamThreadTools::CThreadMutex::CThreadMutex()
 glTexImage2D
 SmcGetIceConnection
 XRRFreeScreenResources
@@ -3087,22 +3087,22 @@ fdatasync@GLIBC_2.0
 FcCharSetHasChar
 V_tolower
 __wrap_lstat
-_ZN16SteamThreadTools7CThread4InitEv
-_ZN16SteamThreadTools7CThread7SetNameEPKc
+SteamThreadTools::CThread::Init()
+SteamThreadTools::CThread::SetName(char const*)
 VProfInternalEnterScopeCurrentThread
 getuid@GLIBC_2.0
 XSetWMNormalHints
 ferror@GLIBC_2.0
 __strxfrm_l@GLIBC_2.1
 __wrap_rename
-_ZN10CValidator16ClaimArrayMemoryEPKv
-_ZTVN9__gnu_cxx24__concurrence_lock_errorE
+CValidator::ClaimArrayMemory(void const*)
+vtable for __gnu_cxx::__concurrence_lock_error
 isspace@GLIBC_2.0
 fputc@GLIBC_2.0
-_ZTIN16SteamThreadTools7CThreadE
+typeinfo for SteamThreadTools::CThread
 fgets@GLIBC_2.0
 longjmp@GLIBC_2.0
-_ZN16SteamThreadTools7CThreadC2Ev
+SteamThreadTools::CThread::CThread()
 glPixelStorei
 FT_Load_Char
 glTexCoord2f
@@ -3111,11 +3111,11 @@ XFilterEvent
 XIconifyWindow
 strcasestr@GLIBC_2.1
 dl_iterate_phdr@GLIBC_2.2.4
-_ZN16SteamThreadTools7CThread6OnExitEv
+SteamThreadTools::CThread::OnExit()
 __wrap_open64
 XRRGetOutputPrimary
 Plat_CommandLineParamValue
-_Z20_txnal_cow_string_D1Pv
+_txnal_cow_string_D1(void*)
 malloc@GLIBC_2.0
 __uselocale@GLIBC_2.3
 frexp@GLIBC_2.0
@@ -3127,9 +3127,9 @@ strlen@GLIBC_2.0
 fopen64@GLIBC_2.1
 __wrap_access
 statfs64@GLIBC_2.1
-_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
+vtable for __gnu_cxx::__concurrence_unlock_error
 usleep@GLIBC_2.0
-_ZTVN10__cxxabiv119__foreign_exceptionE
+vtable for __cxxabiv1::__foreign_exception
 fprintf@GLIBC_2.0
 accept@GLIBC_2.0
 XSetClassHint
@@ -3143,7 +3143,7 @@ V_strnicmp
 __snprintf_chk@GLIBC_2.3.4
 XineramaQueryScreens
 __wrap_chdir
-_Z23_txnal_cow_string_c_strPKv
+_txnal_cow_string_c_str(void const*)
 __wrap_dlmopen
 FcCharSetUnion
 IceProcessMessages
@@ -3156,7 +3156,7 @@ XCreateColormap
 __iswctype_l@GLIBC_2.1
 FcPatternGetString
 glXDestroyContext
-_ZTVN9__gnu_cxx20recursive_init_errorE
+vtable for __gnu_cxx::recursive_init_error
 stdout@GLIBC_2.0
 V_UTF16ToUTF8
 XNVCTRLQueryVersion
@@ -3175,15 +3175,15 @@ FcPatternCreate
 FT_Init_FreeType
 V_snprintf
 __wrap_utime
-_ZN16SteamThreadTools7CThread4JoinEj
+SteamThreadTools::CThread::Join(unsigned int)
 XCreatePixmapCursor
 _fini
-_ZN11SteamStdLib17CCommandLineParamC1EPKcS2_
+SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
 strcmp@GLIBC_2.0
 utimes@GLIBC_2.0
 XInternAtom
-_ZN11SteamStdLib17CCommandLineParamD1Ev
-_ZTSN9__gnu_cxx20recursive_init_errorE
+SteamStdLib::CCommandLineParam::~CCommandLineParam()
+typeinfo name for __gnu_cxx::recursive_init_error
 toupper@GLIBC_2.0
 _ITM_addUserCommitAction
 __strftime_l@GLIBC_2.3
@@ -3192,7 +3192,7 @@ __wrap_open
 V_strnchr
 XSetInputFocus
 wmemmove@GLIBC_2.0
-_ZNK10CValidator9IsClaimedEPKv
+CValidator::IsClaimed(void const*) const
 tolower@GLIBC_2.0
 XRRQueryExtension
 glBlendFunc
@@ -3202,7 +3202,7 @@ __errno_location@GLIBC_2.0
 wcsnrtombs@GLIBC_2.0
 strncpy@GLIBC_2.0
 fflush@GLIBC_2.0
-_ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
+AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 __wrap_mkdir
 bind_textdomain_codeset@GLIBC_2.2
 glXMakeCurrent
@@ -3229,7 +3229,7 @@ XineramaIsActive
 XCreateIC
 dgettext@GLIBC_2.0
 getenv@GLIBC_2.0
-_ZN16SteamThreadTools7CThread13GetThreadProcEv
+SteamThreadTools::CThread::GetThreadProc()
 OSIsCompatible
 fputs@GLIBC_2.0
 V_towlower32
@@ -3244,7 +3244,7 @@ isalnum@GLIBC_2.0
 glEnable
 strchr@GLIBC_2.0
 XUngrabPointer
-_Z21V_SplitStringInternalPKcPKS0_PS0_iR10CUtlVectorI10CUtlString10CUtlMemoryIS5_EEb
+V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, bool)
 rename@GLIBC_2.0
 XNVCTRLQueryBinaryData
 V_strncat
@@ -3263,9 +3263,9 @@ XRRGetScreenResources
 vsnprintf@GLIBC_2.0
 wcslen@GLIBC_2.0
 floor@GLIBC_2.0
-_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
-_ZN10CValidator3PopEv
-_ZTSN10__cxxabiv119__foreign_exceptionE
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+CValidator::Pop()
+typeinfo name for __cxxabiv1::__foreign_exception
 stdin@GLIBC_2.0
 XCloseIM
 posix_fadvise@GLIBC_2.2
@@ -3279,7 +3279,7 @@ ftello64@GLIBC_2.1
 __ctype_b_loc@GLIBC_2.3
 _XEatData
 iswspace@GLIBC_2.0
-_ZTIN10__cxxabiv119__foreign_exceptionE
+typeinfo for __cxxabiv1::__foreign_exception
 FcCharSetFirstPage
 XEventsQueued
 __stack_chk_fail@GLIBC_2.4
@@ -3290,15 +3290,15 @@ XNVCTRLSetTargetStringAttribute
 XQueryPointer
 XRaiseWindow
 sqrt@GLIBC_2.0
-_ZN10CValidator4PushEPKcPvS1_
+CValidator::Push(char const*, void*, char const*)
 readdir64@GLIBC_2.2
 mbrtowc@GLIBC_2.0
 __wrap_opendir
 dlerror@GLIBC_2.0
-_ZTIN10__cxxabiv115__forced_unwindE
+typeinfo for __cxxabiv1::__forced_unwind
 pthread_mutex_lock@GLIBC_2.0
 XCreateBitmapFromData
-_ZN16SteamThreadTools7CThreadD2Ev
+SteamThreadTools::CThread::~CThread()
 strtol@GLIBC_2.0
 V_strncmp
 sendmsg@GLIBC_2.0
@@ -3306,7 +3306,7 @@ WeakRandomUint32
 __fxstat64@GLIBC_2.2
 XextAddDisplay
 __wrap_chmod
-_ZTVN10__cxxabiv117__class_type_infoE
+vtable for __cxxabiv1::__class_type_info
 glVertex2f
 utime@GLIBC_2.0
 __strcoll_l@GLIBC_2.1
@@ -3319,7 +3319,7 @@ free@GLIBC_2.0
 FcPatternAdd
 XAllocNamedColor
 V_UTF8ToUTF16
-_ZN16SteamThreadTools16CThreadFullMutex7ReleaseEv
+SteamThreadTools::CThreadFullMutex::Release()
 glXIsDirect
 XFree
 g_VProfProfilesRunningCount
@@ -3343,23 +3343,23 @@ V_wcsncpy
 XCheckMaskEvent
 XNVCTRLQueryAttribute
 V_atoi
-_Z20V_UnicodeCaseConvertR10CUtlVectorIw10CUtlMemoryIwEEi25EStringConvertErrorPolicy
-_ZN16SteamThreadTools12CThreadMutexD1Ev
+V_UnicodeCaseConvert(CUtlVector<wchar_t, CUtlMemory<wchar_t>>&, int, EStringConvertErrorPolicy)
+SteamThreadTools::CThreadMutex::~CThreadMutex()
 __newlocale@GLIBC_2.1
 strcasecmp@GLIBC_2.0
 glTexEnvf
 glMatrixMode
-_ZNK16SteamThreadTools7CThread15IsThreadRunningEv
+SteamThreadTools::CThread::IsThreadRunning() const
 popen@GLIBC_2.1
 __wrap_link
 XOpenDisplay
-_ZGTtnaj
-_ZTVN10__cxxabiv120__si_class_type_infoE
+transaction clone for operator new[](unsigned int)
+vtable for __cxxabiv1::__si_class_type_info
 glGenTextures
-_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
+typeinfo for __gnu_cxx::__concurrence_unlock_error
 _end
 __strtod_l@GLIBC_2.1
-_Z27_txnal_cow_string_D1_commitPv
+_txnal_cow_string_D1_commit(void*)
 __wctype_l@GLIBC_2.1
 V_UTF8ToUTF32
 opendir@GLIBC_2.0
@@ -3388,9 +3388,9 @@ __bss_start
 __towlower_l@GLIBC_2.1
 wcstol@GLIBC_2.0
 XNVCTRLQueryTargetAttribute
-_ZN16SteamThreadTools7CThread5StartEj
+SteamThreadTools::CThread::Start(unsigned int)
 glColor4ub
-_ZN11SteamStdLib11CommandLineEv
+SteamStdLib::CommandLine()
 XSetTransientForHint
 XFlush
 wmemcpy@GLIBC_2.0
@@ -3408,7 +3408,7 @@ XDestroyWindow
 XLowerWindow
 XNVCTRLQueryTargetCount
 wcsncpy@GLIBC_2.0
-_ZN16SteamThreadTools17CThreadSyncObject4WaitEj
+SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 _ITM_RU4
 XDisplayWidth
 Plat_IsSteamDeck
@@ -3423,7 +3423,7 @@ syscall@GLIBC_2.0
 alcGetString
 CVProfile_ExitScope
 XNVCTRLStringOperation
-_ZTVN10__cxxabiv121__vmi_class_type_infoE
+vtable for __cxxabiv1::__vmi_class_type_info
 __wcscoll_l@GLIBC_2.1
 glShadeModel
 glTexSubImage2D
@@ -3454,8 +3454,8 @@ XGetInputFocus
 __wrap___xstat
 XDefineCursor
 XextFindDisplay
-_ZN16SteamThreadTools16CThreadFullMutexC1EbPKcbb
-_ZTIN9__gnu_cxx20recursive_init_errorE
+SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
+typeinfo for __gnu_cxx::recursive_init_error
 FcCharSetCopy
 __wrap_statfs64
 abort@GLIBC_2.0
@@ -3476,9 +3476,9 @@ __wrap_chown
 recvmsg@GLIBC_2.0
 pow@GLIBC_2.0
 XwcLookupString
-_ZTVN10__cxxabiv115__forced_unwindE
+vtable for __cxxabiv1::__forced_unwind
 wmemchr@GLIBC_2.0
-_Z9V_stristrPKcS0_
+V_stristr(char const*, char const*)
 fclose@GLIBC_2.1
 glLineWidth
 V_StripExtension
@@ -3493,14 +3493,14 @@ rmdir@GLIBC_2.0
 __wrap_unlink
 SmcSaveYourselfDone
 V_UTF32ToUTF16
-_ZTSN10__cxxabiv115__forced_unwindE
+typeinfo name for __cxxabiv1::__forced_unwind
 statvfs64@GLIBC_2.1
 unlink@GLIBC_2.0
 ioctl@GLIBC_2.0
 __wrap_statfs
 FT_Done_Face
 Plat_localtime
-_ZN16SteamThreadTools17CThreadSyncObjectD2Ev
+SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 __wrap___lxstat
 XNVCTRLQueryValidTargetAttributeValues
 glOrtho
@@ -3515,16 +3515,16 @@ Plat_IsChromeOS
 glXGetCurrentContext
 fseeko64@GLIBC_2.1
 XGetSelectionOwner
-_ZTSN9__gnu_cxx24__concurrence_lock_errorE
+typeinfo name for __gnu_cxx::__concurrence_lock_error
 XCloseDisplay
 XSync
 localtime@GLIBC_2.0
 _ITM_registerTMCloneTable
 XMapRaised
-_ZN10CValidator11ClaimMemoryEPKv
+CValidator::ClaimMemory(void const*)
 wcscmp@GLIBC_2.0
 XNVCTRLQueryTargetBinaryData
-_Z28_txnal_runtime_error_get_msgPv
+_txnal_runtime_error_get_msg(void*)
 scandir64@GLIBC_2.2
 __wrap_lstat64
 V_RemoveDotSlashes

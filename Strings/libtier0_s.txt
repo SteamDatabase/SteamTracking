@@ -23,8 +23,8 @@ strchr
 strtol
 fclose
 Error
-_ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
-_Z17GetCPUInformationv
+AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
+GetCPUInformation()
 GetPortableSystemInformation
 strstr
 sscanf
@@ -32,8 +32,8 @@ getenv
 gettimeofday
 usleep
 __dprintf_chk
-_ZN16SteamThreadTools12CThreadMutexD1Ev
-_ZN16SteamThreadTools16CThreadLocalBaseD2Ev
+SteamThreadTools::CThreadMutex::~CThreadMutex()
+SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
 rewind
 fflush
 getpid
@@ -58,12 +58,12 @@ ThreadInterlockedAssignIf
 ThreadInterlockedIncrement
 __vsnprintf_chk
 ThreadInterlockedDecrement
-_ZNV16SteamThreadTools15CThreadSpinLock4LockEj
+SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
 ThreadInterlockedExchange
 stdout
 fwrite
 fputc
-_ZN16SteamThreadTools12CThreadMutexC1Ev
+SteamThreadTools::CThreadMutex::CThreadMutex()
 __cxa_atexit
 _exit
 _SpewMessageTypeSourceFmt
@@ -75,15 +75,15 @@ SpewWrittenMiniDumps
 Plat_localtime
 SetAssertDumpStack
 AssertMsgImplementationPreformatted
-_ZN16SteamThreadTools16CThreadLocalBaseC2Ev
-_ZNK16SteamThreadTools16CThreadLocalBase8BIsValidEv
+SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
+SteamThreadTools::CThreadLocalBase::BIsValid() const
 FreeCrashMemoryReserve
 BGetMiniDumpLock
 BBlockingGetMiniDumpLock
 BWritingMiniDump
 MiniDumpUnlock
-_ZNK16SteamThreadTools16CThreadLocalBase3GetEv
-_ZN16SteamThreadTools16CThreadLocalBase3SetEPv
+SteamThreadTools::CThreadLocalBase::Get() const
+SteamThreadTools::CThreadLocalBase::Set(void*)
 RealGetCallStack
 RealPrintCallStack
 SpewAndLogActivate
@@ -95,12 +95,12 @@ SpewActivate
 SpewChangeIfStillDefault
 SpewAndLogChangeIfStillDefault
 AssertMsgImplementationV
-_ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
+AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 AssertMsgImplementationF
 ValidateSpew
-_ZN10CValidator4PushEPKcPvS1_
-_ZN10CValidator11ClaimMemoryEPKv
-_ZN10CValidator3PopEv
+CValidator::Push(char const*, void*, char const*)
+CValidator::ClaimMemory(void const*)
+CValidator::Pop()
 ClearStackTrackingFilters
 GetNumberOfStackTrackingFilters
 GetStackTrackingFilter
@@ -142,7 +142,7 @@ g_ClockSpeedMicrosecondsMultiplier
 g_ClockSpeedMillisecondsMultiplier
 g_ClockSpeedSecondsMultiplier
 Plat_GetStackBackTrace
-_ZNK6CStack5PrintEPFviPKNS_10PrintFrameEPvES3_
+CStack::Print(void (*)(int, CStack::PrintFrame const*, void*), void*) const
 backtrace_symbols
 free
 RealPrintRawCallStack
@@ -155,8 +155,8 @@ malloc
 memcmp
 realloc
 memcpy
-_ZTVN10__cxxabiv117__class_type_infoE
-_ZTVN10__cxxabiv120__si_class_type_infoE
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
 pthread_mutex_trylock
 Plat_GetExecutablePath
 strrchr
@@ -255,16 +255,16 @@ SecureRandomBytes
 __errno_location
 InitPME
 ShutdownPME
-_ZN16SteamThreadTools7CThread4InitEv
-_ZN16SteamThreadTools7CThread6OnExitEv
-_ZN16SteamThreadTools7CThread13GetThreadProcEv
-_ZN16SteamThreadTools7CThread10ThreadProcEPv
-_ZN16SteamThreadTools7CThread22ThreadExceptionWrapperEPv
+SteamThreadTools::CThread::Init()
+SteamThreadTools::CThread::OnExit()
+SteamThreadTools::CThread::GetThreadProc()
+SteamThreadTools::CThread::ThreadProc(void*)
+SteamThreadTools::CThread::ThreadExceptionWrapper(void*)
 waitpid
 syscall
-_ZN16SteamThreadTools12CThreadMutexD2Ev
+SteamThreadTools::CThreadMutex::~CThreadMutex()
 pthread_mutex_destroy
-_ZN16SteamThreadTools18CreateSimpleThreadEPFjPvES0_Pjj
+SteamThreadTools::CreateSimpleThread(unsigned int (*)(void*), void*, unsigned int*, unsigned int)
 pthread_create
 ReleaseThreadHandle
 sched_yield
@@ -316,12 +316,12 @@ __memcpy_chk
 ThreadShellExecute
 ThreadShellExecuteNoWindow
 ThreadFindProcessByName
-_ZN16SteamThreadTools17CThreadSyncObjectC2Ev
-_ZN16SteamThreadTools17CThreadSyncObjectC1Ev
-_ZNK16SteamThreadTools17CThreadSyncObjectntEv
-_ZN16SteamThreadTools17CThreadSyncObject13AssertUseableEv
-_ZN16SteamThreadTools17CThreadSyncObject14SaveNameToFileEPKc
-_ZN16SteamThreadTools17CThreadSyncObject33CreateAnonymousSyncObjectInternalEbb
+SteamThreadTools::CThreadSyncObject::CThreadSyncObject()
+SteamThreadTools::CThreadSyncObject::CThreadSyncObject()
+SteamThreadTools::CThreadSyncObject::operator!() const
+SteamThreadTools::CThreadSyncObject::AssertUseable()
+SteamThreadTools::CThreadSyncObject::SaveNameToFile(char const*)
+SteamThreadTools::CThreadSyncObject::CreateAnonymousSyncObjectInternal(bool, bool)
 pthread_mutexattr_init
 pthread_condattr_init
 pthread_condattr_setclock
@@ -329,43 +329,43 @@ pthread_mutex_init
 pthread_mutexattr_destroy
 pthread_cond_init
 pthread_condattr_destroy
-_ZN16SteamThreadTools17CThreadSyncObject30SignalThreadSyncObjectInternalEv
+SteamThreadTools::CThreadSyncObject::SignalThreadSyncObjectInternal()
 pthread_cond_broadcast
 pthread_cond_signal
-_ZN16SteamThreadTools17CThreadSyncObject27IsSemaphoreOrphanedInternalEii
+SteamThreadTools::CThreadSyncObject::IsSemaphoreOrphanedInternal(int, int)
 semctl
-_ZN16SteamThreadTools17CThreadSyncObject23CreateSemaphoreInternalEPKclbPb
+SteamThreadTools::CThreadSyncObject::CreateSemaphoreInternal(char const*, long, bool, bool*)
 semget
-_ZN16SteamThreadTools17CThreadSyncObject21OpenSemaphoreInternalEPKcb
-_ZN16SteamThreadTools17CThreadSyncObject24AcquireSemaphoreInternalEj
+SteamThreadTools::CThreadSyncObject::OpenSemaphoreInternal(char const*, bool)
+SteamThreadTools::CThreadSyncObject::AcquireSemaphoreInternal(unsigned int)
 semop
-_ZN16SteamThreadTools17CThreadSyncObject4WaitEj
+SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 pthread_cond_timedwait
 pthread_cond_wait
-_ZN16SteamThreadTools12CThreadEvent5CheckEv
-_ZN16SteamThreadTools17CThreadSyncObject24ReleaseSemaphoreInternalEil
-_ZN16SteamThreadTools17CThreadSyncObject22CloseSemaphoreInternalEibPKc
-_ZN16SteamThreadTools17CThreadSyncObjectD2Ev
+SteamThreadTools::CThreadEvent::Check()
+SteamThreadTools::CThreadSyncObject::ReleaseSemaphoreInternal(int, long)
+SteamThreadTools::CThreadSyncObject::CloseSemaphoreInternal(int, bool, char const*)
+SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 pthread_cond_destroy
-_ZN16SteamThreadTools17CThreadSyncObjectD1Ev
-_ZN16SteamThreadTools12CThreadEventC2Eb
-_ZN16SteamThreadTools12CThreadEventC1Eb
-_ZN16SteamThreadTools12CThreadEventC2EPKcbb
-_ZN16SteamThreadTools12CThreadEventC1EPKcbb
-_ZN16SteamThreadTools17CThreadSyncObject30EnsureSemaphoreClearedInternalEi
-_ZN16SteamThreadTools12CThreadEvent5ResetEv
-_ZN16SteamThreadTools17CThreadSyncObject29EnsureSemaphorePostedInternalEi
-_ZN16SteamThreadTools12CThreadEvent3SetEv
-_ZN16SteamThreadTools16CThreadSemaphoreC2Ell
-_ZN16SteamThreadTools16CThreadSemaphoreC1Ell
-_ZN16SteamThreadTools16CThreadSemaphore7ReleaseEl
-_ZN16SteamThreadTools16CThreadFullMutexC2EbPKcbb
-_ZN16SteamThreadTools16CThreadFullMutexC1EbPKcbb
-_ZN16SteamThreadTools16CThreadFullMutex7ReleaseEv
-_ZNK16SteamThreadTools16CThreadFullMutex9IsCreatorEv
-_ZN16SteamThreadTools16CThreadLocalBaseC1Ev
+SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
+SteamThreadTools::CThreadEvent::CThreadEvent(bool)
+SteamThreadTools::CThreadEvent::CThreadEvent(bool)
+SteamThreadTools::CThreadEvent::CThreadEvent(char const*, bool, bool)
+SteamThreadTools::CThreadEvent::CThreadEvent(char const*, bool, bool)
+SteamThreadTools::CThreadSyncObject::EnsureSemaphoreClearedInternal(int)
+SteamThreadTools::CThreadEvent::Reset()
+SteamThreadTools::CThreadSyncObject::EnsureSemaphorePostedInternal(int)
+SteamThreadTools::CThreadEvent::Set()
+SteamThreadTools::CThreadSemaphore::CThreadSemaphore(long, long)
+SteamThreadTools::CThreadSemaphore::CThreadSemaphore(long, long)
+SteamThreadTools::CThreadSemaphore::Release(long)
+SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
+SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
+SteamThreadTools::CThreadFullMutex::Release()
+SteamThreadTools::CThreadFullMutex::IsCreator() const
+SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
 pthread_key_delete
-_ZN16SteamThreadTools16CThreadLocalBaseD1Ev
+SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
 pthread_getspecific
 pthread_setspecific
 ThreadInterlockedExchangeAdd
@@ -378,7 +378,7 @@ ThreadInterlockedDecrement64
 ThreadInterlockedExchange64
 ThreadInterlockedCompareExchange64
 ThreadInterlockedAssignIf64
-_ZN16SteamThreadTools12CThreadMutexC2Ev
+SteamThreadTools::CThreadMutex::CThreadMutex()
 pthread_mutexattr_settype
 ThreadSetPriority
 sched_get_priority_max
@@ -386,41 +386,41 @@ sched_get_priority_min
 pthread_setschedparam
 setpriority
 ThreadSetBackgroundPriority
-_ZN16SteamThreadTools13CThreadRWLock11WaitForReadEv
-_ZN16SteamThreadTools13CThreadRWLock12LockForWriteEv
-_ZN16SteamThreadTools13CThreadRWLock11UnlockWriteEv
-_ZN16SteamThreadTools7CThreadC2Ev
-_ZTVN16SteamThreadTools7CThreadE
-_ZN16SteamThreadTools7CThreadC1Ev
-_ZN16SteamThreadTools7CThread7GetNameEv
-_ZN16SteamThreadTools7CThread7SetNameEPKc
-_ZNK16SteamThreadTools7CThread17BHasValidThreadIDEv
-_ZNK16SteamThreadTools7CThread15IsThreadRunningEv
+SteamThreadTools::CThreadRWLock::WaitForRead()
+SteamThreadTools::CThreadRWLock::LockForWrite()
+SteamThreadTools::CThreadRWLock::UnlockWrite()
+SteamThreadTools::CThread::CThread()
+vtable for SteamThreadTools::CThread
+SteamThreadTools::CThread::CThread()
+SteamThreadTools::CThread::GetName()
+SteamThreadTools::CThread::SetName(char const*)
+SteamThreadTools::CThread::BHasValidThreadID() const
+SteamThreadTools::CThread::IsThreadRunning() const
 pthread_kill
-_ZNK16SteamThreadTools7CThread7IsAliveEv
-_ZNK16SteamThreadTools7CThread9GetResultEv
-_ZNK16SteamThreadTools7CThread11GetPriorityEv
-_ZN16SteamThreadTools7CThread11SetPriorityEi
-_ZN16SteamThreadTools7CThread7SuspendEv
-_ZN16SteamThreadTools7CThread6ResumeEv
-_ZN16SteamThreadTools7CThread9TerminateEi
-_ZN16SteamThreadTools7CThread17GetCurrentCThreadEv
-_ZN16SteamThreadTools7CThread4JoinEj
+SteamThreadTools::CThread::IsAlive() const
+SteamThreadTools::CThread::GetResult() const
+SteamThreadTools::CThread::GetPriority() const
+SteamThreadTools::CThread::SetPriority(int)
+SteamThreadTools::CThread::Suspend()
+SteamThreadTools::CThread::Resume()
+SteamThreadTools::CThread::Terminate(int)
+SteamThreadTools::CThread::GetCurrentCThread()
+SteamThreadTools::CThread::Join(unsigned int)
 pthread_join
-_ZN16SteamThreadTools7CThreadD2Ev
-_ZN16SteamThreadTools7CThreadD1Ev
-_ZN16SteamThreadTools7CThreadD0Ev
-_ZN16SteamThreadTools7CThread4StopEi
-_ZTIi
-_ZN16SteamThreadTools7CThread5YieldEv
-_ZN16SteamThreadTools7CThread5SleepEj
-_ZN16SteamThreadTools7CThread21WaitForCreateCompleteEPNS_12CThreadEventE
-_ZN16SteamThreadTools7CThread5StartEj
+SteamThreadTools::CThread::~CThread()
+SteamThreadTools::CThread::~CThread()
+SteamThreadTools::CThread::~CThread()
+SteamThreadTools::CThread::Stop(int)
+typeinfo for int
+SteamThreadTools::CThread::Yield()
+SteamThreadTools::CThread::Sleep(unsigned int)
+SteamThreadTools::CThread::WaitForCreateComplete(SteamThreadTools::CThreadEvent*)
+SteamThreadTools::CThread::Start(unsigned int)
 pthread_attr_init
 pthread_attr_setstacksize
-_ZTSN16SteamThreadTools7CThreadE
-_ZTIN16SteamThreadTools7CThreadE
-_ZN6CTier015ValidateGlobalsER10CValidator
+typeinfo name for SteamThreadTools::CThread
+typeinfo for SteamThreadTools::CThread
+CTier0::ValidateGlobals(CValidator&)
 TSListBase_Init
 TSListBase_Push
 TSListBase_Pop
@@ -437,121 +437,121 @@ IsValidBoolValue
 EnsureValidBoolValue
 RunTypeValidationTests
 __memset_chk
-_ZNK31CAdHocValidation_SimpleCallback10DoValidateER10CValidator
-_ZN10CValidatorC2EibP20IMemBlockClaimedList
-_ZN10CValidatorC1EibP20IMemBlockClaimedList
-_ZN10CValidator18SetAllocSizeFilterEi
-_ZNK10CValidator9IsClaimedEPKv
-_ZN10CValidator20ClaimUntrackedMemoryEj
-_ZN10CValidator19ClaimMemory_AlignedEPKv
-_ZN10CValidator16ClaimArrayMemoryEPKv
-_ZN10CValidator15ClaimTrackedKeyEP11CTrackItemsPvPj
-_ZN10CValidator11ClaimSocketEi
-_ZN10CValidator11ClaimOsFileEi
-_ZN10CValidator15ClaimConnectionEj
-_ZN10CValidator8FinalizeEv
-_ZN10CValidator11RenderLeaksEj
-_ZN10CValidator30BExcludeAllocationFromTrackingEPKci
-_ZN10CValidator10FindObjectEPv
-_ZN10CValidator8ValidateERS_PKc
-_ZN10CValidator17AddValidationLockEPN16SteamThreadTools12CThreadMutexE
-_ZN10CValidator21UnlockValidationLocksEv
-_ZN10CValidatorD2Ev
-_ZN10CValidatorD1Ev
-_ZN16CAdHocValidationC2Ev
-_ZTV16CAdHocValidation
-_ZN16CAdHocValidation8s_pFirstE
-_ZN16CAdHocValidationC1Ev
-_ZN16CAdHocValidationD2Ev
-_ZN16CAdHocValidationD1Ev
-_ZN16CAdHocValidation17StaticValidateAllER10CValidator
-_ZN31CAdHocValidation_SimpleCallbackC2EPFvR10CValidatorE
-_ZTV31CAdHocValidation_SimpleCallback
-_ZN31CAdHocValidation_SimpleCallbackC1EPFvR10CValidatorE
-_ZN10CValidator13RenderObjectsEj
-_ZN10CValidator11DiffAgainstEPS_
-_ZTS16CAdHocValidation
-_ZTI16CAdHocValidation
-_ZTS31CAdHocValidation_SimpleCallback
-_ZTI31CAdHocValidation_SimpleCallback
-_ZN10SteamVProf13CVProfManagerD2Ev
-_ZN10SteamVProf13CVProfManagerD1Ev
-_ZN10SteamVProf14CVProfileArrayD2Ev
-_ZN10SteamVProf14CVProfileArrayD1Ev
-_ZN10SteamVProf10CVProfNodeD2Ev
-_ZN10SteamVProf10CVProfNodeD1Ev
-_ZN10SteamVProf10CVProfNode5PauseEv
-_ZN10SteamVProf10CVProfNode6ResumeEv
-_ZN10SteamVProf10CVProfNode5ResetEv
-_ZN10SteamVProf10CVProfNodeC2EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
-_ZN10SteamVProf10CVProfNodeC1EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
-_ZN10SteamVProf10CVProfNode9ResetPeakEv
-_ZN10SteamVProf10CVProfNode15SetCurFrameTimeEm
-_ZN10SteamVProf10CVProfNode24GetTotalTimeLessChildrenEv
-_ZN10SteamVProf10CVProfNode22GetCurTimeLessChildrenEv
-_ZN10SteamVProf10CVProfNode23GetPrevTimeLessChildrenEv
-_ZN10SteamVProf10CVProfNode8ValidateER10CValidatorPKc
-_ZN10SteamVProf9CVProfile5StartEv
-_ZN10SteamVProf9CVProfile4StopEv
-_ZNK10SteamVProf9CVProfile18GetBudgetGroupNameE17EVProfBugdetGroup
-_ZN10SteamVProf9CVProfile9ExitScopeEv
-_ZN10SteamVProf9CVProfile5PauseEv
-_ZN10SteamVProf9CVProfile6ResumeEv
-_ZN10SteamVProf9CVProfile10ResetPeaksEv
-_ZN10SteamVProf9CVProfile25UnregisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
-_ZN10SteamVProf9CVProfile8FindNodeEPNS_10CVProfNodeEPKc
+CAdHocValidation_SimpleCallback::DoValidate(CValidator&) const
+CValidator::CValidator(int, bool, IMemBlockClaimedList*)
+CValidator::CValidator(int, bool, IMemBlockClaimedList*)
+CValidator::SetAllocSizeFilter(int)
+CValidator::IsClaimed(void const*) const
+CValidator::ClaimUntrackedMemory(unsigned int)
+CValidator::ClaimMemory_Aligned(void const*)
+CValidator::ClaimArrayMemory(void const*)
+CValidator::ClaimTrackedKey(CTrackItems*, void*, unsigned int*)
+CValidator::ClaimSocket(int)
+CValidator::ClaimOsFile(int)
+CValidator::ClaimConnection(unsigned int)
+CValidator::Finalize()
+CValidator::RenderLeaks(unsigned int)
+CValidator::BExcludeAllocationFromTracking(char const*, int)
+CValidator::FindObject(void*)
+CValidator::Validate(CValidator&, char const*)
+CValidator::AddValidationLock(SteamThreadTools::CThreadMutex*)
+CValidator::UnlockValidationLocks()
+CValidator::~CValidator()
+CValidator::~CValidator()
+CAdHocValidation::CAdHocValidation()
+vtable for CAdHocValidation
+CAdHocValidation::s_pFirst
+CAdHocValidation::CAdHocValidation()
+CAdHocValidation::~CAdHocValidation()
+CAdHocValidation::~CAdHocValidation()
+CAdHocValidation::StaticValidateAll(CValidator&)
+CAdHocValidation_SimpleCallback::CAdHocValidation_SimpleCallback(void (*)(CValidator&))
+vtable for CAdHocValidation_SimpleCallback
+CAdHocValidation_SimpleCallback::CAdHocValidation_SimpleCallback(void (*)(CValidator&))
+CValidator::RenderObjects(unsigned int)
+CValidator::DiffAgainst(CValidator*)
+typeinfo name for CAdHocValidation
+typeinfo for CAdHocValidation
+typeinfo name for CAdHocValidation_SimpleCallback
+typeinfo for CAdHocValidation_SimpleCallback
+SteamVProf::CVProfManager::~CVProfManager()
+SteamVProf::CVProfManager::~CVProfManager()
+SteamVProf::CVProfileArray::~CVProfileArray()
+SteamVProf::CVProfileArray::~CVProfileArray()
+SteamVProf::CVProfNode::~CVProfNode()
+SteamVProf::CVProfNode::~CVProfNode()
+SteamVProf::CVProfNode::Pause()
+SteamVProf::CVProfNode::Resume()
+SteamVProf::CVProfNode::Reset()
+SteamVProf::CVProfNode::CVProfNode(SteamVProf::CVProfile*, char const*, SteamVProf::CVProfNode*, EVProfBugdetGroup)
+SteamVProf::CVProfNode::CVProfNode(SteamVProf::CVProfile*, char const*, SteamVProf::CVProfNode*, EVProfBugdetGroup)
+SteamVProf::CVProfNode::ResetPeak()
+SteamVProf::CVProfNode::SetCurFrameTime(unsigned long)
+SteamVProf::CVProfNode::GetTotalTimeLessChildren()
+SteamVProf::CVProfNode::GetCurTimeLessChildren()
+SteamVProf::CVProfNode::GetPrevTimeLessChildren()
+SteamVProf::CVProfNode::Validate(CValidator&, char const*)
+SteamVProf::CVProfile::Start()
+SteamVProf::CVProfile::Stop()
+SteamVProf::CVProfile::GetBudgetGroupName(EVProfBugdetGroup) const
+SteamVProf::CVProfile::ExitScope()
+SteamVProf::CVProfile::Pause()
+SteamVProf::CVProfile::Resume()
+SteamVProf::CVProfile::ResetPeaks()
+SteamVProf::CVProfile::UnregisterCallbackHandler(SteamVProf::IVProfileCallbackHandler*)
+SteamVProf::CVProfile::FindNode(SteamVProf::CVProfNode*, char const*)
 strcmp
-_ZN10SteamVProf9CVProfile4DumpEPKcz
-_ZN10SteamVProf9CVProfile14DumpSingleNodeEPNS_10CVProfNodeES2_ib
-_ZN10SteamVProf9CVProfile44BProfileHasNodesOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeEi
-_ZN10SteamVProf9CVProfile40GetFrameTimeOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeE17EVProfBugdetGroup
-_ZN10SteamVProf9CVProfile30DestructAndFreeNodesExceptRootEv
-_ZN10SteamVProf9CVProfile5ResetEv
-_ZN10SteamVProf9CVProfile4TermEv
-_ZN10SteamVProf9CVProfile11GetThreadIDEv
-_ZN10SteamVProf9CVProfile19GetBudgetGroupColorE17EVProfBugdetGroupRiS2_S2_S2_
-_ZN10SteamVProf9CVProfile18AddBudgetGroupNameE17EVProfBugdetGroupiPKc
+SteamVProf::CVProfile::Dump(char const*, ...)
+SteamVProf::CVProfile::DumpSingleNode(SteamVProf::CVProfNode*, SteamVProf::CVProfNode*, int, bool)
+SteamVProf::CVProfile::BProfileHasNodesOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, int)
+SteamVProf::CVProfile::GetFrameTimeOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, EVProfBugdetGroup)
+SteamVProf::CVProfile::DestructAndFreeNodesExceptRoot()
+SteamVProf::CVProfile::Reset()
+SteamVProf::CVProfile::Term()
+SteamVProf::CVProfile::GetThreadID()
+SteamVProf::CVProfile::GetBudgetGroupColor(EVProfBugdetGroup, int&, int&, int&, int&)
+SteamVProf::CVProfile::AddBudgetGroupName(EVProfBugdetGroup, int, char const*)
 strcpy
-_ZN10SteamVProf9CVProfile18CreateBudgetGroupsEv
-_ZNK10SteamVProf9CVProfile30BudgetGroupNameToBudgetGroupIDEPKc
-_ZN10SteamVProf9CVProfile8ValidateER10CValidatorPKc
-_ZN10SteamVProf13CVProfManagerC2Ev
-_ZN10SteamVProf13CVProfManagerC1Ev
-_ZN10SteamVProf13CVProfManager18BIsProfilePtrValidEPNS_9CVProfileE
-_ZN10SteamVProf13CVProfManager20GetAllThreadProfilesEPNS_14CVProfileArrayE
-_ZN10SteamVProf13CVProfManager8ValidateER10CValidatorPKc
-_ZTSN10SteamVProf13CVProfManagerE
-_ZN10SteamVProf20CVProfileThreadEntryC2EPNS_9CVProfileEjj
-_ZN10SteamVProf20CVProfileThreadEntryC1EPNS_9CVProfileEjj
-_ZN10SteamVProf20CVProfileThreadEntry14StartProfilingEfi
-_ZN10SteamVProf13CVProfManager24StartProfilingAllThreadsEfi
-_ZN10SteamVProf20CVProfileThreadEntry13StopProfilingEv
-_ZN10SteamVProf13CVProfManager23StopProfilingAllThreadsEv
-_ZN10SteamVProf20CVProfileThreadEntry22SetDumpSpikesThresholdEi
-_ZN10SteamVProf13CVProfManager16EnableDumpSpikesEi
-_ZN10SteamVProf20CVProfileThreadEntry11DumpProfileEi
-_ZN10SteamVProf13CVProfManager21DumpAllThreadProfilesEi
-_ZN10SteamVProf20CVProfileThreadEntry16OnFrameCompletedEv
-_ZN10SteamVProf9CVProfile23RegisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
-_ZN10SteamVProf9CVProfile8SumTimesEPNS_10CVProfNodeEi
-_ZN10SteamVProf9CVProfile9DumpNodesEPNS_10CVProfNodeES2_ib
-_ZN10SteamVProf9CVProfileD2Ev
-_ZN10SteamVProf9CVProfileD1Ev
-_ZN10SteamVProf20CVProfileThreadEntry13DeleteProfileEv
-_ZN10SteamVProf13CVProfManager21CleanupUnusedProfilesEv
-_ZN10SteamVProf13CVProfManager19AddProfileForThreadEPNS_9CVProfileEjj
-_ZN10SteamVProf9CVProfile14AllocVProfNodeEPS0_PKcPNS_10CVProfNodeE17EVProfBugdetGroup
-_ZN10SteamVProf9CVProfileC2Ev
-_ZN10SteamVProf9CVProfileC1Ev
+SteamVProf::CVProfile::CreateBudgetGroups()
+SteamVProf::CVProfile::BudgetGroupNameToBudgetGroupID(char const*) const
+SteamVProf::CVProfile::Validate(CValidator&, char const*)
+SteamVProf::CVProfManager::CVProfManager()
+SteamVProf::CVProfManager::CVProfManager()
+SteamVProf::CVProfManager::BIsProfilePtrValid(SteamVProf::CVProfile*)
+SteamVProf::CVProfManager::GetAllThreadProfiles(SteamVProf::CVProfileArray*)
+SteamVProf::CVProfManager::Validate(CValidator&, char const*)
+typeinfo name for SteamVProf::CVProfManager
+SteamVProf::CVProfileThreadEntry::CVProfileThreadEntry(SteamVProf::CVProfile*, unsigned int, unsigned int)
+SteamVProf::CVProfileThreadEntry::CVProfileThreadEntry(SteamVProf::CVProfile*, unsigned int, unsigned int)
+SteamVProf::CVProfileThreadEntry::StartProfiling(float, int)
+SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
+SteamVProf::CVProfileThreadEntry::StopProfiling()
+SteamVProf::CVProfManager::StopProfilingAllThreads()
+SteamVProf::CVProfileThreadEntry::SetDumpSpikesThreshold(int)
+SteamVProf::CVProfManager::EnableDumpSpikes(int)
+SteamVProf::CVProfileThreadEntry::DumpProfile(int)
+SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
+SteamVProf::CVProfileThreadEntry::OnFrameCompleted()
+SteamVProf::CVProfile::RegisterCallbackHandler(SteamVProf::IVProfileCallbackHandler*)
+SteamVProf::CVProfile::SumTimes(SteamVProf::CVProfNode*, int)
+SteamVProf::CVProfile::DumpNodes(SteamVProf::CVProfNode*, SteamVProf::CVProfNode*, int, bool)
+SteamVProf::CVProfile::~CVProfile()
+SteamVProf::CVProfile::~CVProfile()
+SteamVProf::CVProfileThreadEntry::DeleteProfile()
+SteamVProf::CVProfManager::CleanupUnusedProfiles()
+SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, unsigned int)
+SteamVProf::CVProfile::AllocVProfNode(SteamVProf::CVProfile*, char const*, SteamVProf::CVProfNode*, EVProfBugdetGroup)
+SteamVProf::CVProfile::CVProfile()
+SteamVProf::CVProfile::CVProfile()
 VProfInternalGetProfileForCurrentThread
 g_VProfile
 g_VProfManager
-_ZN10SteamVProf10CVProfNode10GetSubNodeEPKc17EVProfBugdetGroup
-_ZN10SteamVProf9CVProfile10EnterScopeEPKc17EVProfBugdetGroupPv
-_ZN10SteamVProf9CVProfile10DumpSortedEPKcdPFbRKNS_10TimeSums_tES5_Ei
-_ZN10SteamVProf9CVProfile12OutputReportEiPKci
-_ZN10SteamVProf20CVProfileThreadEntry17OnNewFrameEnteredEv
-_ZN10SteamVProf9CVProfile9MarkFrameEPKc
+SteamVProf::CVProfNode::GetSubNode(char const*, EVProfBugdetGroup)
+SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
+SteamVProf::CVProfile::DumpSorted(char const*, double, bool (*)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), int)
+SteamVProf::CVProfile::OutputReport(int, char const*, int)
+SteamVProf::CVProfileThreadEntry::OnNewFrameEntered()
+SteamVProf::CVProfile::MarkFrame(char const*)
 __pthread_key_create
 realpath
 strdup
@@ -594,201 +594,201 @@ __wrap_utimes
 __wrap_mkdir
 __wrap_rmdir
 __wrap_dlmopen
-_ZTSN10__cxxabiv117__class_type_infoE
-_ZTIN10__cxxabiv117__class_type_infoE
-_ZTVN9__gnu_cxx24__concurrence_lock_errorE
-_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTIN9__gnu_cxx24__concurrence_lock_errorE
-_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTSN9__gnu_cxx24__concurrence_lock_errorE
-_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTSN10__cxxabiv115__forced_unwindE
-_ZTIN10__cxxabiv115__forced_unwindE
-_ZTSN10__cxxabiv119__foreign_exceptionE
-_ZTIN10__cxxabiv119__foreign_exceptionE
-_ZTVN10__cxxabiv115__forced_unwindE
-_ZTVN10__cxxabiv119__foreign_exceptionE
+typeinfo name for __cxxabiv1::__class_type_info
+typeinfo for __cxxabiv1::__class_type_info
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__foreign_exception
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
 abort
-_ZTVN10__cxxabiv123__fundamental_type_infoE
-_ZTSN10__cxxabiv123__fundamental_type_infoE
-_ZTIN10__cxxabiv123__fundamental_type_infoE
-_ZTSv
-_ZTSPv
-_ZTSPKv
-_ZTSb
-_ZTSPb
-_ZTSPKb
-_ZTSw
-_ZTSPw
-_ZTSPKw
-_ZTSDu
-_ZTSPDu
-_ZTSPKDu
-_ZTSDs
-_ZTSPDs
-_ZTSPKDs
-_ZTSDi
-_ZTSPDi
-_ZTSPKDi
-_ZTSc
-_ZTSPc
-_ZTSPKc
-_ZTSa
-_ZTSPa
-_ZTSPKa
-_ZTSh
-_ZTSPh
-_ZTSPKh
-_ZTSs
-_ZTSPs
-_ZTSPKs
-_ZTSt
-_ZTSPt
-_ZTSPKt
-_ZTSi
-_ZTSPi
-_ZTSPKi
-_ZTSj
-_ZTSPj
-_ZTSPKj
-_ZTSl
-_ZTSPl
-_ZTSPKl
-_ZTSm
-_ZTSPm
-_ZTSPKm
-_ZTSx
-_ZTSPx
-_ZTSPKx
-_ZTSy
-_ZTSPy
-_ZTSPKy
-_ZTSf
-_ZTSPf
-_ZTSPKf
-_ZTSd
-_ZTSPd
-_ZTSPKd
-_ZTSe
-_ZTSPe
-_ZTSPKe
-_ZTSDf
-_ZTSPDf
-_ZTSPKDf
-_ZTSDd
-_ZTSPDd
-_ZTSPKDd
-_ZTSDe
-_ZTSPDe
-_ZTSPKDe
-_ZTSDn
-_ZTSPDn
-_ZTSPKDn
-_ZTSg
-_ZTSPg
-_ZTSPKg
-_ZTIPKg
-_ZTVN10__cxxabiv119__pointer_type_infoE
-_ZTIg
-_ZTIPg
-_ZTIPKDn
-_ZTIDn
-_ZTIPDn
-_ZTIPKDe
-_ZTIDe
-_ZTIPDe
-_ZTIPKDd
-_ZTIDd
-_ZTIPDd
-_ZTIPKDf
-_ZTIDf
-_ZTIPDf
-_ZTIPKe
-_ZTIe
-_ZTIPe
-_ZTIPKd
-_ZTId
-_ZTIPd
-_ZTIPKf
-_ZTIf
-_ZTIPf
-_ZTIPKy
-_ZTIy
-_ZTIPy
-_ZTIPKx
-_ZTIx
-_ZTIPx
-_ZTIPKm
-_ZTIm
-_ZTIPm
-_ZTIPKl
-_ZTIl
-_ZTIPl
-_ZTIPKj
-_ZTIj
-_ZTIPj
-_ZTIPKi
-_ZTIPi
-_ZTIPKt
-_ZTIt
-_ZTIPt
-_ZTIPKs
-_ZTIs
-_ZTIPs
-_ZTIPKh
-_ZTIh
-_ZTIPh
-_ZTIPKa
-_ZTIa
-_ZTIPa
-_ZTIPKc
-_ZTIc
-_ZTIPc
-_ZTIPKDi
-_ZTIDi
-_ZTIPDi
-_ZTIPKDs
-_ZTIDs
-_ZTIPDs
-_ZTIPKDu
-_ZTIDu
-_ZTIPDu
-_ZTIPKw
-_ZTIw
-_ZTIPw
-_ZTIPKb
-_ZTIb
-_ZTIPb
-_ZTIPKv
-_ZTIv
-_ZTIPv
-_ZTIN9__gnu_cxx20recursive_init_errorE
-_ZTVN9__gnu_cxx20recursive_init_errorE
-_ZTSN9__gnu_cxx20recursive_init_errorE
-_ZTSN10__cxxabiv119__pointer_type_infoE
-_ZTIN10__cxxabiv119__pointer_type_infoE
-_ZTIN10__cxxabiv117__pbase_type_infoE
-_ZTSN10__cxxabiv120__si_class_type_infoE
-_ZTIN10__cxxabiv120__si_class_type_infoE
+vtable for __cxxabiv1::__fundamental_type_info
+typeinfo name for __cxxabiv1::__fundamental_type_info
+typeinfo for __cxxabiv1::__fundamental_type_info
+typeinfo name for void
+typeinfo name for void*
+typeinfo name for void const*
+typeinfo name for bool
+typeinfo name for bool*
+typeinfo name for bool const*
+typeinfo name for wchar_t
+typeinfo name for wchar_t*
+typeinfo name for wchar_t const*
+typeinfo name for char8_t
+typeinfo name for char8_t*
+typeinfo name for char8_t const*
+typeinfo name for char16_t
+typeinfo name for char16_t*
+typeinfo name for char16_t const*
+typeinfo name for char32_t
+typeinfo name for char32_t*
+typeinfo name for char32_t const*
+typeinfo name for char
+typeinfo name for char*
+typeinfo name for char const*
+typeinfo name for signed char
+typeinfo name for signed char*
+typeinfo name for signed char const*
+typeinfo name for unsigned char
+typeinfo name for unsigned char*
+typeinfo name for unsigned char const*
+typeinfo name for short
+typeinfo name for short*
+typeinfo name for short const*
+typeinfo name for unsigned short
+typeinfo name for unsigned short*
+typeinfo name for unsigned short const*
+typeinfo name for int
+typeinfo name for int*
+typeinfo name for int const*
+typeinfo name for unsigned int
+typeinfo name for unsigned int*
+typeinfo name for unsigned int const*
+typeinfo name for long
+typeinfo name for long*
+typeinfo name for long const*
+typeinfo name for unsigned long
+typeinfo name for unsigned long*
+typeinfo name for unsigned long const*
+typeinfo name for long long
+typeinfo name for long long*
+typeinfo name for long long const*
+typeinfo name for unsigned long long
+typeinfo name for unsigned long long*
+typeinfo name for unsigned long long const*
+typeinfo name for float
+typeinfo name for float*
+typeinfo name for float const*
+typeinfo name for double
+typeinfo name for double*
+typeinfo name for double const*
+typeinfo name for long double
+typeinfo name for long double*
+typeinfo name for long double const*
+typeinfo name for decimal32
+typeinfo name for decimal32*
+typeinfo name for decimal32 const*
+typeinfo name for decimal64
+typeinfo name for decimal64*
+typeinfo name for decimal64 const*
+typeinfo name for decimal128
+typeinfo name for decimal128*
+typeinfo name for decimal128 const*
+typeinfo name for std::nullptr_t
+typeinfo name for std::nullptr_t*
+typeinfo name for std::nullptr_t const*
+typeinfo name for __float128
+typeinfo name for __float128*
+typeinfo name for __float128 const*
+typeinfo for __float128 const*
+vtable for __cxxabiv1::__pointer_type_info
+typeinfo for __float128
+typeinfo for __float128*
+typeinfo for std::nullptr_t const*
+typeinfo for std::nullptr_t
+typeinfo for std::nullptr_t*
+typeinfo for decimal128 const*
+typeinfo for decimal128
+typeinfo for decimal128*
+typeinfo for decimal64 const*
+typeinfo for decimal64
+typeinfo for decimal64*
+typeinfo for decimal32 const*
+typeinfo for decimal32
+typeinfo for decimal32*
+typeinfo for long double const*
+typeinfo for long double
+typeinfo for long double*
+typeinfo for double const*
+typeinfo for double
+typeinfo for double*
+typeinfo for float const*
+typeinfo for float
+typeinfo for float*
+typeinfo for unsigned long long const*
+typeinfo for unsigned long long
+typeinfo for unsigned long long*
+typeinfo for long long const*
+typeinfo for long long
+typeinfo for long long*
+typeinfo for unsigned long const*
+typeinfo for unsigned long
+typeinfo for unsigned long*
+typeinfo for long const*
+typeinfo for long
+typeinfo for long*
+typeinfo for unsigned int const*
+typeinfo for unsigned int
+typeinfo for unsigned int*
+typeinfo for int const*
+typeinfo for int*
+typeinfo for unsigned short const*
+typeinfo for unsigned short
+typeinfo for unsigned short*
+typeinfo for short const*
+typeinfo for short
+typeinfo for short*
+typeinfo for unsigned char const*
+typeinfo for unsigned char
+typeinfo for unsigned char*
+typeinfo for signed char const*
+typeinfo for signed char
+typeinfo for signed char*
+typeinfo for char const*
+typeinfo for char
+typeinfo for char*
+typeinfo for char32_t const*
+typeinfo for char32_t
+typeinfo for char32_t*
+typeinfo for char16_t const*
+typeinfo for char16_t
+typeinfo for char16_t*
+typeinfo for char8_t const*
+typeinfo for char8_t
+typeinfo for char8_t*
+typeinfo for wchar_t const*
+typeinfo for wchar_t
+typeinfo for wchar_t*
+typeinfo for bool const*
+typeinfo for bool
+typeinfo for bool*
+typeinfo for void const*
+typeinfo for void
+typeinfo for void*
+typeinfo for __gnu_cxx::recursive_init_error
+vtable for __gnu_cxx::recursive_init_error
+typeinfo name for __gnu_cxx::recursive_init_error
+typeinfo name for __cxxabiv1::__pointer_type_info
+typeinfo for __cxxabiv1::__pointer_type_info
+typeinfo for __cxxabiv1::__pbase_type_info
+typeinfo name for __cxxabiv1::__si_class_type_info
+typeinfo for __cxxabiv1::__si_class_type_info
 gettext
 __sprintf_chk
 strncmp
-_ZTVN10__cxxabiv117__pbase_type_infoE
-_ZTIN10__cxxabiv129__pointer_to_member_type_infoE
-_ZTSN10__cxxabiv117__pbase_type_infoE
-_ZTVN10__cxxabiv129__pointer_to_member_type_infoE
-_ZTSN10__cxxabiv129__pointer_to_member_type_infoE
-_Z27_txnal_cow_string_D1_commitPv
-_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+vtable for __cxxabiv1::__pbase_type_info
+typeinfo for __cxxabiv1::__pointer_to_member_type_info
+typeinfo name for __cxxabiv1::__pbase_type_info
+vtable for __cxxabiv1::__pointer_to_member_type_info
+typeinfo name for __cxxabiv1::__pointer_to_member_type_info
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _ITM_RU1
-_ZGTtnaj
+transaction clone for operator new[](unsigned int)
 _ITM_memcpyRtWn
-_Z23_txnal_cow_string_c_strPKv
+_txnal_cow_string_c_str(void const*)
 _ITM_RU4
-_Z20_txnal_cow_string_D1Pv
+_txnal_cow_string_D1(void*)
 _ITM_addUserCommitAction
-_Z26_txnal_logic_error_get_msgPv
-_Z28_txnal_runtime_error_get_msgPv
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
 pthread_once
 dl_iterate_phdr
 __timezone
@@ -1273,457 +1273,457 @@ St11logic_error
 St12length_error
 Mb@?
 __wrap___xstat64
-_ZTSt
-_ZTSb
+typeinfo name for unsigned short
+typeinfo name for bool
 pthread_mutex_unlock@GLIBC_2.0
-_ZN10SteamVProf9CVProfile5PauseEv
-_ZTSd
-_ZN10SteamVProf10CVProfNode6ResumeEv
-_ZN16SteamThreadTools17CThreadSyncObject4WaitEj
+SteamVProf::CVProfile::Pause()
+typeinfo name for double
+SteamVProf::CVProfNode::Resume()
+SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 ThreadInterlockedExchange
-_ZN16SteamThreadTools7CThread9TerminateEi
+SteamThreadTools::CThread::Terminate(int)
 ThreadGetCurrentId
-_ZTSf
+typeinfo name for float
 EnsureValidBoolValue
 __snprintf_chk@GLIBC_2.3.4
 strstr@GLIBC_2.0
 CreateSimpleProcess
-_ZNK16SteamThreadTools16CThreadLocalBase3GetEv
-_ZTSh
-_ZN10SteamVProf20CVProfileThreadEntry22SetDumpSpikesThresholdEi
+SteamThreadTools::CThreadLocalBase::Get() const
+typeinfo name for unsigned char
+SteamVProf::CVProfileThreadEntry::SetDumpSpikesThreshold(int)
 CatchAndWriteMiniDumpExForVoidPtrFn
-_ZN10SteamVProf9CVProfile12OutputReportEiPKci
+SteamVProf::CVProfile::OutputReport(int, char const*, int)
 ThreadSetBackgroundPriority
-_ZTVN10__cxxabiv117__pbase_type_infoE
-_ZN16SteamThreadTools7CThread22ThreadExceptionWrapperEPv
-_ZN10SteamVProf13CVProfManager19AddProfileForThreadEPNS_9CVProfileEjj
+vtable for __cxxabiv1::__pbase_type_info
+SteamThreadTools::CThread::ThreadExceptionWrapper(void*)
+SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, unsigned int)
 pthread_attr_init@GLIBC_2.1
 BWritingNonFatalMiniDump
 pthread_mutexattr_init@GLIBC_2.0
-_ZN10SteamVProf9CVProfile9DumpNodesEPNS_10CVProfNodeES2_ib
+SteamVProf::CVProfile::DumpNodes(SteamVProf::CVProfNode*, SteamVProf::CVProfNode*, int, bool)
 strcmp@GLIBC_2.0
 TSQueueBase_UnsafePeek
 ThreadMicroSleepPOSIX
 __vfprintf_chk@GLIBC_2.3.4
 statfs@GLIBC_2.0
-_ZN16SteamThreadTools16CThreadLocalBaseD1Ev
+SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
 Plat_GetExecutablePathUTF8
-_ZTIN9__gnu_cxx20recursive_init_errorE
-_ZTSx
+typeinfo for __gnu_cxx::recursive_init_error
+typeinfo name for long long
 mprotect@GLIBC_2.0
 __wrap_access
-_ZN10CValidator11DiffAgainstEPS_
+CValidator::DiffAgainst(CValidator*)
 ETWMark3I
-_ZN10SteamVProf20CVProfileThreadEntry13StopProfilingEv
+SteamVProf::CVProfileThreadEntry::StopProfiling()
 read@GLIBC_2.0
 pthread_mutex_destroy@GLIBC_2.0
 ThreadSetPriority
 chown@GLIBC_2.1
 _ITM_deregisterTMCloneTable
-_ZTSv
+typeinfo name for void
 ShutdownPME
 ETWEnd
 g_bInException
 ETWMarkPrintf
-_ZTIPKv
+typeinfo for void const*
 ETWIsTracingEnabled
-_ZN16SteamThreadTools17CThreadSyncObject30EnsureSemaphoreClearedInternalEi
-_ZTIPKx
-_ZN10CValidator15ClaimConnectionEj
-_ZN10CValidator13RenderObjectsEj
-_Z20_txnal_cow_string_D1Pv
+SteamThreadTools::CThreadSyncObject::EnsureSemaphoreClearedInternal(int)
+typeinfo for long long const*
+CValidator::ClaimConnection(unsigned int)
+CValidator::RenderObjects(unsigned int)
+_txnal_cow_string_D1(void*)
 __wrap_mkdir
 fflush@GLIBC_2.0
 SetMiniDumpAppID
-_ZN16SteamThreadTools7CThread6OnExitEv
+SteamThreadTools::CThread::OnExit()
 pthread_cond_broadcast@GLIBC_2.3.2
-_ZN10SteamVProf10CVProfNodeD1Ev
+SteamVProf::CVProfNode::~CVProfNode()
 stderr@GLIBC_2.0
-_ZN10CValidator8ValidateERS_PKc
+CValidator::Validate(CValidator&, char const*)
 _exit@GLIBC_2.0
 GetSpewAndLogLevelByGroupIndex
-_ZN10SteamVProf13CVProfManager21CleanupUnusedProfilesEv
+SteamVProf::CVProfManager::CleanupUnusedProfiles()
 Plat_timegm
 sigprocmask@GLIBC_2.0
-_ZN16SteamThreadTools7CThread4InitEv
-_ZTSN10__cxxabiv119__foreign_exceptionE
+SteamThreadTools::CThread::Init()
+typeinfo name for __cxxabiv1::__foreign_exception
 ClearStackTrackingFilters
-_ZN16SteamThreadTools17CThreadSyncObject30SignalThreadSyncObjectInternalEv
+SteamThreadTools::CThreadSyncObject::SignalThreadSyncObjectInternal()
 Plat_SetAllocErrorFn
 CatchAndWriteMiniDump
 memmove@GLIBC_2.0
-_ZN10SteamVProf14CVProfileArrayD2Ev
+SteamVProf::CVProfileArray::~CVProfileArray()
 SetAssertDumpStack
-_ZTSN10SteamVProf13CVProfManagerE
+typeinfo name for SteamVProf::CVProfManager
 __wrap_scandir64
 __wrap_scandir
 free@GLIBC_2.0
 Plat_USTime
 SetFullMemoryDumpOnCrash
-_ZN16SteamThreadTools12CThreadEventC2Eb
+SteamThreadTools::CThreadEvent::CThreadEvent(bool)
 __wrap_fopen
 strdup@GLIBC_2.0
 TSListBase_SwapList
-_ZN10SteamVProf9CVProfile30DestructAndFreeNodesExceptRootEv
+SteamVProf::CVProfile::DestructAndFreeNodesExceptRoot()
 statvfs64@GLIBC_2.1
-_ZN10CValidatorC1EibP20IMemBlockClaimedList
+CValidator::CValidator(int, bool, IMemBlockClaimedList*)
 ThreadSleep
-_ZN16SteamThreadTools7CThreadD2Ev
-_ZN10CValidatorD1Ev
+SteamThreadTools::CThread::~CThread()
+CValidator::~CValidator()
 TSQueueBase_Init
 memcpy@GLIBC_2.0
-_ZN16SteamThreadTools7CThread5SleepEj
-_ZN16SteamThreadTools16CThreadFullMutexC2EbPKcbb
+SteamThreadTools::CThread::Sleep(unsigned int)
+SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
 faccessat@GLIBC_2.4
 GetSpewOutputFunc
-_ZN10SteamVProf9CVProfile18AddBudgetGroupNameE17EVProfBugdetGroupiPKc
-_ZN16SteamThreadTools16CThreadLocalBaseC2Ev
-_ZTV31CAdHocValidation_SimpleCallback
+SteamVProf::CVProfile::AddBudgetGroupName(EVProfBugdetGroup, int, char const*)
+SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
+vtable for CAdHocValidation_SimpleCallback
 pthread_self@GLIBC_2.0
-_ZNK16SteamThreadTools16CThreadFullMutex9IsCreatorEv
+SteamThreadTools::CThreadFullMutex::IsCreator() const
 ThreadInterlockedCompareExchangePointer
 ThreadResumeProcess
 __wrap_lstat64
-_ZN16SteamThreadTools7CThread10ThreadProcEPv
+SteamThreadTools::CThread::ThreadProc(void*)
 fgets@GLIBC_2.0
 ValidateSpew
 Plat_IsSteamConsoleMode
 Plat_FloatTime
 tolower@GLIBC_2.0
 ___tls_get_addr@GLIBC_2.3
-_ZTSPKDf
+typeinfo name for decimal32 const*
 pthread_mutex_init@GLIBC_2.0
-_ZTVN10__cxxabiv115__forced_unwindE
-_ZN10CValidator3PopEv
-_ZTSPKDd
+vtable for __cxxabiv1::__forced_unwind
+CValidator::Pop()
+typeinfo name for decimal64 const*
 g_ClockSpeedMillisecondsMultiplier
 CatchAndWriteMiniDumpForVoidPtrFn
 ThreadSetAffinity
 Plat_localtime
 _ITM_RU1
 TSListBase_UnsafePeek
-_ZTSPKb
-_ZTSPKd
-_ZN16SteamThreadTools7CThread6ResumeEv
-_ZTSPKf
+typeinfo name for bool const*
+typeinfo name for double const*
+SteamThreadTools::CThread::Resume()
+typeinfo name for float const*
 fclose@GLIBC_2.1
 rmdir@GLIBC_2.0
 pthread_cond_wait@GLIBC_2.3.2
-_ZTSPKDn
+typeinfo name for std::nullptr_t const*
 ETW_Steamworks_IPCRecv_Start
 pthread_mutex_trylock@GLIBC_2.0
-_ZN10SteamVProf20CVProfileThreadEntry13DeleteProfileEv
-_ZN16SteamThreadTools12CThreadEventC2EPKcbb
-_ZN10SteamVProf20CVProfileThreadEntry11DumpProfileEi
+SteamVProf::CVProfileThreadEntry::DeleteProfile()
+SteamThreadTools::CThreadEvent::CThreadEvent(char const*, bool, bool)
+SteamVProf::CVProfileThreadEntry::DumpProfile(int)
 ThreadInterlockedCompareExchange
 DoNewAssertDialog
 memcmp@GLIBC_2.0
-_ZN16SteamThreadTools12CThreadEventC1EPKcbb
-_ZTIN10__cxxabiv117__class_type_infoE
+SteamThreadTools::CThreadEvent::CThreadEvent(char const*, bool, bool)
+typeinfo for __cxxabiv1::__class_type_info
 __wrap_dlopen
-_ZTIPc
-_ZTIDn
-_ZN10SteamVProf10CVProfNode22GetCurTimeLessChildrenEv
+typeinfo for char*
+typeinfo for std::nullptr_t
+SteamVProf::CVProfNode::GetCurTimeLessChildren()
 gettimeofday@GLIBC_2.0
-_ZTSN10__cxxabiv123__fundamental_type_infoE
-_ZN16SteamThreadTools16CThreadSemaphore7ReleaseEl
+typeinfo name for __cxxabiv1::__fundamental_type_info
+SteamThreadTools::CThreadSemaphore::Release(long)
 TSQueueBase_Pop
-_ZN16SteamThreadTools17CThreadSyncObject24AcquireSemaphoreInternalEj
+SteamThreadTools::CThreadSyncObject::AcquireSemaphoreInternal(unsigned int)
 TSQueue_PopIntoFreeList
-_ZTIDf
-_ZTI16CAdHocValidation
-_ZNK16SteamThreadTools7CThread7IsAliveEv
+typeinfo for decimal32
+typeinfo for CAdHocValidation
+SteamThreadTools::CThread::IsAlive() const
 chdir@GLIBC_2.0
-_ZTSN9__gnu_cxx20recursive_init_errorE
-_ZTIPm
-_ZN10SteamVProf13CVProfManager21DumpAllThreadProfilesEi
-_ZTIPw
+typeinfo name for __gnu_cxx::recursive_init_error
+typeinfo for unsigned long*
+SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
+typeinfo for wchar_t*
 ETWMark1S
-_ZTSPKt
+typeinfo name for unsigned short const*
 _fini
-_ZN16SteamThreadTools12CThreadEvent5CheckEv
+SteamThreadTools::CThreadEvent::Check()
 ETW_Steamworks_IPCSend_End_
-_ZN10SteamVProf9CVProfile5ResetEv
-_ZTSPKx
+SteamVProf::CVProfile::Reset()
+typeinfo name for long long const*
 __wrap_utimes
 Plat_TickDiffMilliSec
 Plat_CommandLineParamValue
 BBlockingGetMiniDumpLock
-_ZTIPi
-_ZN10SteamVProf9CVProfileD2Ev
+typeinfo for int*
+SteamVProf::CVProfile::~CVProfile()
 SetMiniDumpSteamID
-_ZNK16SteamThreadTools7CThread9GetResultEv
-_ZN10SteamVProf9CVProfile25UnregisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
-_ZTSPKv
+SteamThreadTools::CThread::GetResult() const
+SteamVProf::CVProfile::UnregisterCallbackHandler(SteamVProf::IVProfileCallbackHandler*)
+typeinfo name for void const*
 uname@GLIBC_2.0
-_ZN16CAdHocValidationC1Ev
-_ZTIPe
+CAdHocValidation::CAdHocValidation()
+typeinfo for long double*
 __stack_chk_fail@GLIBC_2.4
-_ZTV16CAdHocValidation
-_ZTIN9__gnu_cxx24__concurrence_lock_errorE
-_ZTIPg
-_ZN10CValidator11ClaimSocketEi
+vtable for CAdHocValidation
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __float128*
+CValidator::ClaimSocket(int)
 Is64BitOS
 dlclose@GLIBC_2.0
 rewind@GLIBC_2.0
 Error
-_ZN16CAdHocValidationD2Ev
-_ZTIf
+CAdHocValidation::~CAdHocValidation()
+typeinfo for float
 ETW_Steamworks_IPCSend_Start
 pthread_condattr_init@GLIBC_2.0
 GetMiniDumpBuildID
 ETW_Steamworks_RunCallbacks_Start
-_ZTSPKl
-_ZTIh
-_ZN10SteamVProf10CVProfNodeC2EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
-_ZTSPKh
+typeinfo name for long const*
+typeinfo for unsigned char
+SteamVProf::CVProfNode::CVProfNode(SteamVProf::CVProfile*, char const*, SteamVProf::CVProfNode*, EVProfBugdetGroup)
+typeinfo name for unsigned char const*
 getpriority@GLIBC_2.0
 TSListBase_Init
-_ZTSPKj
+typeinfo name for unsigned int const*
 ThreadGetCurrentProcessId
-_ZN10CValidator16ClaimArrayMemoryEPKv
-_ZTSPv
-_ZTSPj
-_Z26_txnal_logic_error_get_msgPv
+CValidator::ClaimArrayMemory(void const*)
+typeinfo name for void*
+typeinfo name for unsigned int*
+_txnal_logic_error_get_msg(void*)
 ThreadInterlockedIncrement64
-_ZTSPh
+typeinfo name for unsigned char*
 Plat_IsChromeOS
-_ZTSPf
-_ZN16SteamThreadTools17CThreadSyncObject21OpenSemaphoreInternalEPKcb
-_ZTIPa
-_ZN16SteamThreadTools12CThreadEvent5ResetEv
-_ZN10SteamVProf10CVProfNode8ValidateER10CValidatorPKc
-_ZTSPx
+typeinfo name for float*
+SteamThreadTools::CThreadSyncObject::OpenSemaphoreInternal(char const*, bool)
+typeinfo for signed char*
+SteamThreadTools::CThreadEvent::Reset()
+SteamVProf::CVProfNode::Validate(CValidator&, char const*)
+typeinfo name for long long*
 GetCRunTimeVersion
 CallAssertFailedNotifyFunc
 pthread_mutex_lock@GLIBC_2.0
-_ZTSN10__cxxabiv120__si_class_type_infoE
+typeinfo name for __cxxabiv1::__si_class_type_info
 unlink@GLIBC_2.0
 localtime_r@GLIBC_2.0
-_ZTIDd
-_ZN10SteamVProf13CVProfManager18BIsProfilePtrValidEPNS_9CVProfileE
+typeinfo for decimal64
+SteamVProf::CVProfManager::BIsProfilePtrValid(SteamVProf::CVProfile*)
 __wrap_statvfs
-_ZN10CValidator19ClaimMemory_AlignedEPKv
+CValidator::ClaimMemory_Aligned(void const*)
 SetMiniDumpCustomInfo
 ThreadOpenProcess
-_ZTIv
-_ZTSPt
+typeinfo for void
+typeinfo name for unsigned short*
 ETW_Steamworks_DispatchCallback_End_
 _ITM_addUserCommitAction
-_ZN6CTier015ValidateGlobalsER10CValidator
-_ZTSDe
+CTier0::ValidateGlobals(CValidator&)
+typeinfo name for decimal128
 SpewAndLogChangeIfStillDefault
 ETWBegin
-_ZN10CValidator11RenderLeaksEj
+CValidator::RenderLeaks(unsigned int)
 ThreadInterlockedExchange64
-_ZTIl
-_ZTIPDn
+typeinfo for long
+typeinfo for std::nullptr_t*
 InitializeStackTrackingFilters
-_ZTIj
+typeinfo for unsigned int
 readlink@GLIBC_2.0
-_ZN16SteamThreadTools17CThreadSyncObject29EnsureSemaphorePostedInternalEi
-_ZTIx
+SteamThreadTools::CThreadSyncObject::EnsureSemaphorePostedInternal(int)
+typeinfo for long long
 Plat_IsInDebugSession
 AreStackTrackingFiltersEnabledAtStart
 ThreadInterlockedIncrement
 g_ClockSpeed
-_ZN10SteamVProf9CVProfile19GetBudgetGroupColorE17EVProfBugdetGroupRiS2_S2_S2_
-_ZTIt
-_ZN10SteamVProf10CVProfNode5PauseEv
+SteamVProf::CVProfile::GetBudgetGroupColor(EVProfBugdetGroup, int&, int&, int&, int&)
+typeinfo for unsigned short
+SteamVProf::CVProfNode::Pause()
 ThreadImplOneTimeInit
-_ZTId
+typeinfo for double
 Plat_OutputDebugString
-_ZTIb
+typeinfo for bool
 ETWMark1I
 ThreadGetCurrentRunningRef
-_ZN16SteamThreadTools7CThread11SetPriorityEi
+SteamThreadTools::CThread::SetPriority(int)
 _ITM_memcpyRtWn
 AssertMsgImplementationV
 DWarning
 fopen64@GLIBC_2.1
-_ZN10SteamVProf9CVProfile5StartEv
+SteamVProf::CVProfile::Start()
 __wrap_chdir
-_Z23_txnal_cow_string_c_strPKv
+_txnal_cow_string_c_str(void const*)
 ThreadInterlockedCompareExchange64
 semop@GLIBC_2.0
 ETW_Steamworks_RunCallbacks_End_
-_Z27_txnal_cow_string_D1_commitPv
-_ZTSPb
+_txnal_cow_string_D1_commit(void*)
+typeinfo name for bool*
 __cxa_finalize@GLIBC_2.1.3
 __xstat@GLIBC_2.0
 SetInFatalAssert
-_ZTSPDu
-_ZTSPl
+typeinfo name for char8_t*
+typeinfo name for long*
 fwrite@GLIBC_2.0
-_ZN16SteamThreadTools7CThread17GetCurrentCThreadEv
+SteamThreadTools::CThread::GetCurrentCThread()
 __wrap_mknod
-_ZN10CValidator11ClaimMemoryEPKv
-_ZTSN16SteamThreadTools7CThreadE
-_ZN10SteamVProf9CVProfile8ValidateER10CValidatorPKc
-_ZN10SteamVProf9CVProfile10ResetPeaksEv
-_ZNK10CValidator9IsClaimedEPKv
+CValidator::ClaimMemory(void const*)
+typeinfo name for SteamThreadTools::CThread
+SteamVProf::CVProfile::Validate(CValidator&, char const*)
+SteamVProf::CVProfile::ResetPeaks()
+CValidator::IsClaimed(void const*) const
 Plat_timezone
 IsInAssert
-_ZN10SteamVProf13CVProfManagerD1Ev
-_ZTSPd
-_ZTSPDs
+SteamVProf::CVProfManager::~CVProfManager()
+typeinfo name for double*
+typeinfo name for char16_t*
 g_pMemAllocSteam
 waitpid@GLIBC_2.0
 __realpath_chk@GLIBC_2.4
-_ZTIPKDs
-_ZN31CAdHocValidation_SimpleCallbackC2EPFvR10CValidatorE
+typeinfo for char16_t const*
+CAdHocValidation_SimpleCallback::CAdHocValidation_SimpleCallback(void (*)(CValidator&))
 usleep@GLIBC_2.0
-_ZTIPKDu
-_ZN10SteamVProf13CVProfManagerC2Ev
-_ZN10SteamVProf9CVProfile6ResumeEv
-_ZN10SteamVProf13CVProfManager16EnableDumpSpikesEi
-_ZTSPDi
-_ZTIPy
-_ZTIPs
+typeinfo for char8_t const*
+SteamVProf::CVProfManager::CVProfManager()
+SteamVProf::CVProfile::Resume()
+SteamVProf::CVProfManager::EnableDumpSpikes(int)
+typeinfo name for char32_t*
+typeinfo for unsigned long long*
+typeinfo for short*
 Plat_InternalOverrideArgv
 InitPME
 __wrap_dlmopen
 _SpewMessageTypeSourceV
-_ZN10SteamVProf9CVProfile10DumpSortedEPKcdPFbRKNS_10TimeSums_tES5_Ei
+SteamVProf::CVProfile::DumpSorted(char const*, double, bool (*)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), int)
 Plat_Free
-_ZN16SteamThreadTools16CThreadSemaphoreC2Ell
-_ZTIPDd
+SteamThreadTools::CThreadSemaphore::CThreadSemaphore(long, long)
+typeinfo for decimal64*
 ThreadIsProcessIdActive
 ThreadInMainThread
-_ZTIN10__cxxabiv120__si_class_type_infoE
-_ZTIPDf
+typeinfo for __cxxabiv1::__si_class_type_info
+typeinfo for decimal32*
 strcpy@GLIBC_2.0
-_ZN10SteamVProf9CVProfile9ExitScopeEv
+SteamVProf::CVProfile::ExitScope()
 RunTypeValidationTests
 getpid@GLIBC_2.0
 Plat_IsSteamDeck
 sched_yield@GLIBC_2.0
-_ZTSPDe
-_ZTS16CAdHocValidation
+typeinfo name for decimal128*
+typeinfo name for CAdHocValidation
 Plat_GetProcessArgv
-_ZTSN10__cxxabiv115__forced_unwindE
-_ZN16CAdHocValidationD1Ev
-_ZN16SteamThreadTools12CThreadMutexD2Ev
+typeinfo name for __cxxabiv1::__forced_unwind
+CAdHocValidation::~CAdHocValidation()
+SteamThreadTools::CThreadMutex::~CThreadMutex()
 Plat_Realloc
 Plat_AbsoluteTime
 gethostname@GLIBC_2.0
 GetInstalledRAM
-_ZN16SteamThreadTools7CThreadC1Ev
+SteamThreadTools::CThread::CThread()
 __cxa_atexit@GLIBC_2.1.3
-_ZN10SteamVProf9CVProfileD1Ev
-_ZN16SteamThreadTools13CThreadRWLock12LockForWriteEv
+SteamVProf::CVProfile::~CVProfile()
+SteamThreadTools::CThreadRWLock::LockForWrite()
 pthread_cond_signal@GLIBC_2.3.2
-_ZN10CValidator11ClaimOsFileEi
-_ZN16SteamThreadTools16CThreadSemaphoreC1Ell
-_ZTSN10__cxxabiv117__class_type_infoE
+CValidator::ClaimOsFile(int)
+SteamThreadTools::CThreadSemaphore::CThreadSemaphore(long, long)
+typeinfo name for __cxxabiv1::__class_type_info
 gnu_get_libc_version@GLIBC_2.1
-_ZTSN10__cxxabiv117__pbase_type_infoE
-_ZN10SteamVProf9CVProfile44BProfileHasNodesOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeEi
-_ZN10SteamVProf9CVProfile4DumpEPKcz
+typeinfo name for __cxxabiv1::__pbase_type_info
+SteamVProf::CVProfile::BProfileHasNodesOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, int)
+SteamVProf::CVProfile::Dump(char const*, ...)
 pthread_key_delete@GLIBC_2.0
-_ZTIPKg
-_ZTIPKi
+typeinfo for __float128 const*
+typeinfo for int const*
 getenv@GLIBC_2.0
 GetNumberOfSpewAndLogGroups
 realloc@GLIBC_2.0
-_ZTSDi
-_ZTIPKm
+typeinfo name for char32_t
+typeinfo for unsigned long const*
 statfs64@GLIBC_2.1
 sched_get_priority_max@GLIBC_2.0
 malloc@GLIBC_2.0
-_ZN10SteamVProf9CVProfile14AllocVProfNodeEPS0_PKcPNS_10CVProfNodeE17EVProfBugdetGroup
+SteamVProf::CVProfile::AllocVProfNode(SteamVProf::CVProfile*, char const*, SteamVProf::CVProfNode*, EVProfBugdetGroup)
 setpriority@GLIBC_2.0
-_ZTIPKc
-_ZTIN10__cxxabiv115__forced_unwindE
+typeinfo for char const*
+typeinfo for __cxxabiv1::__forced_unwind
 IsStackTrackingFiltered
-_ZN10CValidatorD2Ev
-_ZTIPKe
-_ZTIPKa
+CValidator::~CValidator()
+typeinfo for long double const*
+typeinfo for signed char const*
 timegm@GLIBC_2.0
-_ZTSDu
+typeinfo name for char8_t
 ETWRenderFrameMark
-_ZTSDs
-_ZN16SteamThreadTools16CThreadFullMutex7ReleaseEv
+typeinfo name for char16_t
+SteamThreadTools::CThreadFullMutex::Release()
 system@GLIBC_2.0
 __wrap_mount
 ThreadInterlockedDecrement64
-_ZN10SteamVProf20CVProfileThreadEntryC2EPNS_9CVProfileEjj
-_ZTIPKDe
+SteamVProf::CVProfileThreadEntry::CVProfileThreadEntry(SteamVProf::CVProfile*, unsigned int, unsigned int)
+typeinfo for decimal128 const*
 TSQueueBase_Push
-_ZTIPKs
+typeinfo for short const*
 CallFlushLogFunc
-_ZTIPKDi
-_ZTSN10__cxxabiv129__pointer_to_member_type_infoE
+typeinfo for char32_t const*
+typeinfo name for __cxxabiv1::__pointer_to_member_type_info
 AssertMsgImplementationF
 strerror@GLIBC_2.0
 __memcpy_chk@GLIBC_2.3.4
 GetMiniDumpDirectory
 pthread_condattr_destroy@GLIBC_2.0
 __wrap_opendir
-_ZTS31CAdHocValidation_SimpleCallback
-_ZNV16SteamThreadTools15CThreadSpinLock4LockEj
-_ZTVN10__cxxabiv119__pointer_type_infoE
-_ZN16SteamThreadTools12CThreadEvent3SetEv
+typeinfo name for CAdHocValidation_SimpleCallback
+SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
+vtable for __cxxabiv1::__pointer_type_info
+SteamThreadTools::CThreadEvent::Set()
 __gmon_start__
-_ZN16SteamThreadTools17CThreadSyncObject23CreateSemaphoreInternalEPKclbPb
+SteamThreadTools::CThreadSyncObject::CreateSemaphoreInternal(char const*, long, bool, bool*)
 Plat_IsSteamOS
 pthread_once@GLIBC_2.0
 BGetLocalFQDN
 realpath@GLIBC_2.3
 Plat_GetPackageName
 _DMsg
-_ZTSc
-_ZN10SteamVProf9CVProfile18CreateBudgetGroupsEv
-_ZNK16SteamThreadTools16CThreadLocalBase8BIsValidEv
+typeinfo name for char
+SteamVProf::CVProfile::CreateBudgetGroups()
+SteamThreadTools::CThreadLocalBase::BIsValid() const
 __wrap_statfs64
-_ZGTtnaj
-_ZN16CAdHocValidation8s_pFirstE
+transaction clone for operator new[](unsigned int)
+CAdHocValidation::s_pFirst
 gettext@GLIBC_2.0
 ThreadShellExecuteNoWindow
 BGetMiniDumpLock
-_ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
+AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 setsid@GLIBC_2.0
-_ZTSs
+typeinfo name for short
 AllocateCrashMemoryReserve
 g_ClockSpeedMicrosecondsMultiplier
-_ZTSa
+typeinfo name for signed char
 GetLocalHostname
 __wrap_lchown
 rename@GLIBC_2.0
-_ZTIN10__cxxabiv123__fundamental_type_infoE
+typeinfo for __cxxabiv1::__fundamental_type_info
 __wrap_utime
 Plat_VirtualFree
-_ZN16SteamThreadTools13CThreadRWLock11UnlockWriteEv
+SteamThreadTools::CThreadRWLock::UnlockWrite()
 dl_iterate_phdr@GLIBC_2.2.4
 mmap@GLIBC_2.0
-_ZN10SteamVProf9CVProfileC2Ev
+SteamVProf::CVProfile::CVProfile()
 strchr@GLIBC_2.0
-_ZNK16SteamThreadTools7CThread11GetPriorityEv
+SteamThreadTools::CThread::GetPriority() const
 ThreadIsProcessActive
 pthread_setname_np@GLIBC_2.12
-_ZTIN10__cxxabiv119__foreign_exceptionE
+typeinfo for __cxxabiv1::__foreign_exception
 ETWMark
-_ZTSi
+typeinfo name for int
 __wrap_chmod
 strlen@GLIBC_2.0
 ETW_Steamworks_IPCRecv_End_
-_ZTSg
+typeinfo name for __float128
 ETW_Steamworks_DispatchCallback_Start
-_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTSe
-_ZNK31CAdHocValidation_SimpleCallback10DoValidateER10CValidator
-_ZN10CValidator18SetAllocSizeFilterEi
-_ZN10SteamVProf9CVProfile23RegisterCallbackHandlerEPNS_24IVProfileCallbackHandlerE
-_ZN10SteamVProf9CVProfile8FindNodeEPNS_10CVProfNodeEPKc
+vtable for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for long double
+CAdHocValidation_SimpleCallback::DoValidate(CValidator&) const
+CValidator::SetAllocSizeFilter(int)
+SteamVProf::CVProfile::RegisterCallbackHandler(SteamVProf::IVProfileCallbackHandler*)
+SteamVProf::CVProfile::FindNode(SteamVProf::CVProfNode*, char const*)
 pthread_cond_init@GLIBC_2.3.2
-_ZN16SteamThreadTools17CThreadSyncObject24ReleaseSemaphoreInternalEil
-_ZN10SteamVProf10CVProfNode5ResetEv
+SteamThreadTools::CThreadSyncObject::ReleaseSemaphoreInternal(int, long)
+SteamVProf::CVProfNode::Reset()
 Plat_IsSteamOS3
-_ZN16SteamThreadTools7CThread4StopEi
+SteamThreadTools::CThread::Stop(int)
 VProfInternalGetProfileForCurrentThread
-_Z28_txnal_runtime_error_get_msgPv
-_ZTSw
-_ZNK16SteamThreadTools17CThreadSyncObjectntEv
+_txnal_runtime_error_get_msg(void*)
+typeinfo name for wchar_t
+SteamThreadTools::CThreadSyncObject::operator!() const
 g_ClockSpeedSecondsMultiplier
 open64@GLIBC_2.2
 SteamRealPath
@@ -1732,11 +1732,11 @@ strcasecmp@GLIBC_2.0
 execv@GLIBC_2.0
 posix_memalign@GLIBC_2.2
 utimes@GLIBC_2.0
-_ZTIN16SteamThreadTools7CThreadE
-_ZTSm
+typeinfo for SteamThreadTools::CThread
+typeinfo name for unsigned long
 IsLogActive
-_ZTSy
-_ZN10SteamVProf13CVProfManager24StartProfilingAllThreadsEfi
+typeinfo name for unsigned long long
+SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
 sigaddset@GLIBC_2.0
 ThreadGetCurrentProcessHandle
 ETWOverlayFrameMark
@@ -1744,216 +1744,216 @@ Plat_AbsoluteTimeToFloat
 dlsym@GLIBC_2.0
 malloc_usable_size@GLIBC_2.0
 __wrap_mkfifo
-_ZTSN9__gnu_cxx24__concurrence_lock_errorE
+typeinfo name for __gnu_cxx::__concurrence_lock_error
 RealPrintCallStack
-_ZTIPKy
-_ZN16SteamThreadTools7CThread4JoinEj
-_ZTIPKw
+typeinfo for unsigned long long const*
+SteamThreadTools::CThread::Join(unsigned int)
+typeinfo for wchar_t const*
 ThreadSpinWaitForValue
 backtrace_symbols@GLIBC_2.1
 fopen@GLIBC_2.1
 __daylight@GLIBC_2.0
-_ZN16SteamThreadTools7CThread21WaitForCreateCompleteEPNS_12CThreadEventE
+SteamThreadTools::CThread::WaitForCreateComplete(SteamThreadTools::CThreadEvent*)
 ETW_Streaming_SendPacket
-_ZN10SteamVProf9CVProfile14DumpSingleNodeEPNS_10CVProfNodeES2_ib
+SteamVProf::CVProfile::DumpSingleNode(SteamVProf::CVProfNode*, SteamVProf::CVProfNode*, int, bool)
 memset@GLIBC_2.0
 mkdir@GLIBC_2.0
 ThreadSuspendProcess
-_ZN10SteamVProf13CVProfManager23StopProfilingAllThreadsEv
-_ZTVN10__cxxabiv123__fundamental_type_infoE
+SteamVProf::CVProfManager::StopProfilingAllThreads()
+vtable for __cxxabiv1::__fundamental_type_info
 ThreadInterlockedDecrement
 GetAvailableRAM
 FreeCrashMemoryReserve
 Plat_OutputDebugStringRaw
 SetMiniDumpBuildID
 semget@GLIBC_2.0
-_ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 __errno_location@GLIBC_2.0
 CrackSmokingCompiler
 pthread_cancel@GLIBC_2.0
-_ZN16SteamThreadTools16CThreadLocalBase3SetEPv
-_ZN16SteamThreadTools7CThreadD0Ev
-_ZN10SteamVProf9CVProfileC1Ev
+SteamThreadTools::CThreadLocalBase::Set(void*)
+SteamThreadTools::CThread::~CThread()
+SteamVProf::CVProfile::CVProfile()
 strncpy@GLIBC_2.0
 DLog
 syscall@GLIBC_2.0
 Plat_ctime
-_ZN16SteamThreadTools12CThreadMutexC1Ev
+SteamThreadTools::CThreadMutex::CThreadMutex()
 scandir@GLIBC_2.0
 DeclareCurrentThreadIsMainThread
 BWritingMiniDump
 TSListBase_Pop
 Plat_VirtualAccessFlags
-_ZN10SteamVProf13CVProfManagerD2Ev
+SteamVProf::CVProfManager::~CVProfManager()
 SetInAssert
 ThreadGetPriority
 SetStackTrackingFilter
-_ZN16SteamThreadTools17CThreadSyncObjectC1Ev
-_ZTSPKDu
+SteamThreadTools::CThreadSyncObject::CThreadSyncObject()
+typeinfo name for char8_t const*
 g_VProfManager
 pthread_condattr_setclock@GLIBC_2.3.3
-_ZTVN10__cxxabiv119__foreign_exceptionE
-_ZN16SteamThreadTools7CThread5YieldEv
+vtable for __cxxabiv1::__foreign_exception
+SteamThreadTools::CThread::Yield()
 GetCrashHandlerFactory
 asctime_r@GLIBC_2.0
 __vsnprintf_chk@GLIBC_2.3.4
-_ZN10SteamVProf10CVProfNode24GetTotalTimeLessChildrenEv
-_ZN31CAdHocValidation_SimpleCallbackC1EPFvR10CValidatorE
-_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+SteamVProf::CVProfNode::GetTotalTimeLessChildren()
+CAdHocValidation_SimpleCallback::CAdHocValidation_SimpleCallback(void (*)(CValidator&))
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 RealPrintRawCallStack
-_ZN10CValidator17AddValidationLockEPN16SteamThreadTools12CThreadMutexE
+CValidator::AddValidationLock(SteamThreadTools::CThreadMutex*)
 ThreadGetCurrentHandle
 ThreadInterlockedExchangeAdd
 strncasecmp@GLIBC_2.0
-_ZTSPKDi
+typeinfo name for char32_t const*
 pthread_kill@GLIBC_2.0
-_ZN16SteamThreadTools12CThreadMutexD1Ev
-_ZTSPKDe
+SteamThreadTools::CThreadMutex::~CThreadMutex()
+typeinfo name for decimal128 const*
 access@GLIBC_2.0
-_ZN10CValidator15ClaimTrackedKeyEP11CTrackItemsPvPj
+CValidator::ClaimTrackedKey(CTrackItems*, void*, unsigned int*)
 stdout@GLIBC_2.0
-_ZTSPKa
+typeinfo name for signed char const*
 ThreadInterlockedAssignIf64
 __strcpy_chk@GLIBC_2.3.4
-_ZTSPKDs
-_ZTSPKc
-_ZN10CValidator8FinalizeEv
+typeinfo name for char16_t const*
+typeinfo name for char const*
+CValidator::Finalize()
 ETWMark2I
 ThreadGetProcessId
-_ZTSPKe
-_ZNK10SteamVProf9CVProfile30BudgetGroupNameToBudgetGroupIDEPKc
-_ZN10SteamVProf9CVProfile40GetFrameTimeOutsideBudgetGroup_RecursiveEPNS_10CVProfNodeE17EVProfBugdetGroup
+typeinfo name for long double const*
+SteamVProf::CVProfile::BudgetGroupNameToBudgetGroupID(char const*) const
+SteamVProf::CVProfile::GetFrameTimeOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, EVProfBugdetGroup)
 pthread_attr_setstacksize@GLIBC_2.1
-_ZN10SteamVProf20CVProfileThreadEntry17OnNewFrameEnteredEv
+SteamVProf::CVProfileThreadEntry::OnNewFrameEntered()
 ETWMark2S
 _ITM_RU4
 __wrap_symlink
 __printf_chk@GLIBC_2.3.4
-_ZTIN10__cxxabiv129__pointer_to_member_type_infoE
-_ZTI31CAdHocValidation_SimpleCallback
+typeinfo for __cxxabiv1::__pointer_to_member_type_info
+typeinfo for CAdHocValidation_SimpleCallback
 __wrap___xstat
 Plat_GetStackBackTrace
 Plat_CommandLineParamExists
-_ZN10SteamVProf13CVProfManager20GetAllThreadProfilesEPNS_14CVProfileArrayE
-_ZTIPl
-_ZTIPd
+SteamVProf::CVProfManager::GetAllThreadProfiles(SteamVProf::CVProfileArray*)
+typeinfo for long*
+typeinfo for double*
 IsSpewActive
 __wrap_stat64
-_ZN16SteamThreadTools17CThreadSyncObjectC2Ev
-_ZTIDi
+SteamThreadTools::CThreadSyncObject::CThreadSyncObject()
+typeinfo for char32_t
 Plat_MSTime64
 Plat_daylight
-_ZTVN9__gnu_cxx24__concurrence_lock_errorE
+vtable for __gnu_cxx::__concurrence_lock_error
 AssertMsgImplementationPreformatted
 Plat_VirtualAlloc
-_ZN10CValidatorC2EibP20IMemBlockClaimedList
+CValidator::CValidator(int, bool, IMemBlockClaimedList*)
 munmap@GLIBC_2.0
-_ZTSPKy
-_ZTIPx
+typeinfo name for unsigned long long const*
+typeinfo for long long*
 __wrap___lxstat64
 GetMiniDumpSteamID
 __wrap_unlink
 fork@GLIBC_2.0
 sigemptyset@GLIBC_2.0
 g_VProfile
-_ZTSPKw
+typeinfo name for wchar_t const*
 strpbrk@GLIBC_2.0
-_ZN10CValidator30BExcludeAllocationFromTrackingEPKci
-_ZTIDu
-_ZTIPj
-_ZTSPKi
-_ZNK16SteamThreadTools7CThread15IsThreadRunningEv
-_ZTSPKs
-_ZN10CValidator20ClaimUntrackedMemoryEj
+CValidator::BExcludeAllocationFromTracking(char const*, int)
+typeinfo for char8_t
+typeinfo for unsigned int*
+typeinfo name for int const*
+SteamThreadTools::CThread::IsThreadRunning() const
+typeinfo name for short const*
+CValidator::ClaimUntrackedMemory(unsigned int)
 readdir@GLIBC_2.0
-_ZN16SteamThreadTools12CThreadMutexC2Ev
-_ZTIPf
-_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTIDs
-_ZTIPh
+SteamThreadTools::CThreadMutex::CThreadMutex()
+typeinfo for float*
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo for char16_t
+typeinfo for unsigned char*
 pthread_cond_timedwait@GLIBC_2.3.2
-_ZTIa
-_ZTIe
-_ZTIg
+typeinfo for signed char
+typeinfo for long double
+typeinfo for __float128
 IsInFatalAssert
-_ZN10SteamVProf9CVProfile4TermEv
+SteamVProf::CVProfile::Term()
 __wrap_link
-_ZTIi
+typeinfo for int
 pthread_setspecific@GLIBC_2.0
-_ZTSPKm
-_ZTVN10__cxxabiv120__si_class_type_infoE
-_ZN10CValidator10FindObjectEPv
+typeinfo name for unsigned long const*
+vtable for __cxxabiv1::__si_class_type_info
+CValidator::FindObject(void*)
 __wrap_stat
 __wrap_rmdir
 mount@GLIBC_2.0
 __wrap_chown
 statvfs@GLIBC_2.1
-_ZTSPKg
+typeinfo name for __float128 const*
 strrchr@GLIBC_2.0
-_ZTIN10__cxxabiv117__pbase_type_infoE
+typeinfo for __cxxabiv1::__pbase_type_info
 dladdr@GLIBC_2.0
 pthread_cond_destroy@GLIBC_2.3.2
-_ZN16CAdHocValidationC2Ev
+CAdHocValidation::CAdHocValidation()
 vtune
-_ZTSPm
+typeinfo name for unsigned long*
 __wrap___lxstat
-_ZTSPy
-_ZTSPi
-_ZN10CValidator4PushEPKcPvS1_
+typeinfo name for unsigned long long*
+typeinfo name for int*
+CValidator::Push(char const*, void*, char const*)
 utime@GLIBC_2.0
-_ZTSPg
+typeinfo name for __float128*
 lchown@GLIBC_2.0
 fputc@GLIBC_2.0
-_ZTVN10__cxxabiv129__pointer_to_member_type_infoE
+vtable for __cxxabiv1::__pointer_to_member_type_info
 ThreadWaitForProcessExit
 sscanf@GLIBC_2.0
-_ZTSPe
-_ZN16SteamThreadTools7CThreadC2Ev
+typeinfo name for long double*
+SteamThreadTools::CThread::CThread()
 Plat_TickDiffMicroSec
-_ZTIPb
-_ZTSPw
+typeinfo for bool*
+typeinfo name for wchar_t*
 __wrap_statfs
 ThreadGetProcessExitCode
-_ZTIDe
-_ZTIPDi
+typeinfo for decimal128
+typeinfo for char32_t*
 Plat_gmtime
-_ZTIPDs
+typeinfo for char16_t*
 symlink@GLIBC_2.0
 SetFlushLogFunc
-_ZTIPDu
-_ZTIy
-_ZTSPs
+typeinfo for char8_t*
+typeinfo for unsigned long long
+typeinfo name for short*
 gmtime_r@GLIBC_2.0
 SecureRandomBytes
-_ZTIw
-_ZTSDd
+typeinfo for wchar_t
+typeinfo name for decimal64
 BWritingFatalMiniDump
 ThreadInterlockedAssignIf
 __dprintf_chk@GLIBC_2.8
-_ZN16SteamThreadTools17CThreadSyncObject33CreateAnonymousSyncObjectInternalEbb
-_ZTIm
-_ZN16SteamThreadTools7CThread5StartEj
+SteamThreadTools::CThreadSyncObject::CreateAnonymousSyncObjectInternal(bool, bool)
+typeinfo for unsigned long
+SteamThreadTools::CThread::Start(unsigned int)
 GetStackTrackingFilter
-_ZTIs
+typeinfo for short
 strcasestr@GLIBC_2.1
-_ZN10SteamVProf9CVProfile9MarkFrameEPKc
+SteamVProf::CVProfile::MarkFrame(char const*)
 pthread_join@GLIBC_2.0
-_ZN16SteamThreadTools17CThreadSyncObjectD1Ev
-_ZN10SteamVProf10CVProfNode23GetPrevTimeLessChildrenEv
-_ZTIc
-_ZN10SteamVProf20CVProfileThreadEntry14StartProfilingEfi
+SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
+SteamVProf::CVProfNode::GetPrevTimeLessChildren()
+typeinfo for char
+SteamVProf::CVProfileThreadEntry::StartProfiling(float, int)
 SetAssertFailedNotifyFunc
-_ZN16CAdHocValidation17StaticValidateAllER10CValidator
+CAdHocValidation::StaticValidateAll(CValidator&)
 GetPortableSystemInformation
 __wrap_freopen
 ThreadTerminate
 Plat_IsGamescope
-_ZN16SteamThreadTools7CThread7GetNameEv
-_ZTSPa
-_ZN16SteamThreadTools17CThreadSyncObject13AssertUseableEv
-_ZTSN10__cxxabiv119__pointer_type_infoE
-_ZN16SteamThreadTools18CreateSimpleThreadEPFjPvES0_Pjj
-_ZN16SteamThreadTools17CThreadSyncObject27IsSemaphoreOrphanedInternalEii
+SteamThreadTools::CThread::GetName()
+typeinfo name for signed char*
+SteamThreadTools::CThreadSyncObject::AssertUseable()
+typeinfo name for __cxxabiv1::__pointer_type_info
+SteamThreadTools::CreateSimpleThread(unsigned int (*)(void*), void*, unsigned int*, unsigned int)
+SteamThreadTools::CThreadSyncObject::IsSemaphoreOrphanedInternal(int, int)
 ShouldUseNewAssertDialog
 GetSpewAndLogLevel
 ReleaseThreadHandle
@@ -1961,87 +1961,87 @@ Plat_DefaultAllocErrorFn
 EnableCrashingOnCrashes
 Plat_Alloc
 ThreadInterlockedExchangeAdd64
-_ZN10SteamVProf10CVProfNode10GetSubNodeEPKc17EVProfBugdetGroup
-_ZN16SteamThreadTools7CThread7SetNameEPKc
-_ZN10SteamVProf9CVProfile10EnterScopeEPKc17EVProfBugdetGroupPv
-_ZTSPc
-_ZTIN10__cxxabiv119__pointer_type_infoE
-_ZN10SteamVProf14CVProfileArrayD1Ev
+SteamVProf::CVProfNode::GetSubNode(char const*, EVProfBugdetGroup)
+SteamThreadTools::CThread::SetName(char const*)
+SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
+typeinfo name for char*
+typeinfo for __cxxabiv1::__pointer_type_info
+SteamVProf::CVProfileArray::~CVProfileArray()
 ClearWritingMiniDump
-_ZTSPDn
+typeinfo name for std::nullptr_t*
 g_VProfProfilesRunningCount
 __memset_chk@GLIBC_2.3.4
-_ZN16SteamThreadTools16CThreadLocalBaseD2Ev
+SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
 readdir64@GLIBC_2.2
 SpewAndLogActivate
-_ZTIPt
-_ZTSPDf
-_ZTIPv
+typeinfo for unsigned short*
+typeinfo name for decimal32*
+typeinfo for void*
 semctl@GLIBC_2.2
 dlopen@GLIBC_2.1
 nanosleep@GLIBC_2.0
-_ZN16SteamThreadTools16CThreadLocalBaseC1Ev
-_ZN16SteamThreadTools16CThreadFullMutexC1EbPKcbb
+SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
+SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
 TSQueueBase_UnsafeDummy
 Plat_asctime
-_ZN10CValidator21UnlockValidationLocksEv
-_ZN10SteamVProf10CVProfNode9ResetPeakEv
-_ZTIPKDn
+CValidator::UnlockValidationLocks()
+SteamVProf::CVProfNode::ResetPeak()
+typeinfo for std::nullptr_t const*
 __fprintf_chk@GLIBC_2.3.4
 __wrap_rename
-_ZTIPDe
+typeinfo for decimal128*
 __wrap_open
 pthread_create@GLIBC_2.1
-_ZTSPDd
+typeinfo name for decimal64*
 clock_gettime@GLIBC_2.2
-_ZN10SteamVProf13CVProfManagerC1Ev
-_ZN16SteamThreadTools7CThread7SuspendEv
+SteamVProf::CVProfManager::CVProfManager()
+SteamThreadTools::CThread::Suspend()
 __lxstat@GLIBC_2.0
-_ZTVN16SteamThreadTools7CThreadE
+vtable for SteamThreadTools::CThread
 MiniDumpUnlock
 sigaction@GLIBC_2.0
-_ZN16SteamThreadTools7CThread13GetThreadProcEv
+SteamThreadTools::CThread::GetThreadProc()
 ThreadIsThreadRunning
-_ZN10SteamVProf9CVProfile11GetThreadIDEv
+SteamVProf::CVProfile::GetThreadID()
 _ITM_registerTMCloneTable
-_ZNK10SteamVProf9CVProfile18GetBudgetGroupNameE17EVProfBugdetGroup
-_ZN16SteamThreadTools17CThreadSyncObject22CloseSemaphoreInternalEibPKc
-_ZN10SteamVProf10CVProfNode15SetCurFrameTimeEm
-_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
+SteamVProf::CVProfile::GetBudgetGroupName(EVProfBugdetGroup) const
+SteamThreadTools::CThreadSyncObject::CloseSemaphoreInternal(int, bool, char const*)
+SteamVProf::CVProfNode::SetCurFrameTime(unsigned long)
+typeinfo for __gnu_cxx::__concurrence_unlock_error
 Plat_VirtualProtect
-_ZN16SteamThreadTools13CThreadRWLock11WaitForReadEv
-_ZTSDf
+SteamThreadTools::CThreadRWLock::WaitForRead()
+typeinfo name for decimal32
 ThreadFindProcessByName
-_ZN10SteamVProf10CVProfNodeD2Ev
+SteamVProf::CVProfNode::~CVProfNode()
 Plat_IsTesla
 Plat_GetPOSIXClockSource
 RealGetCallStack
 strncmp@GLIBC_2.0
-_ZNK16SteamThreadTools7CThread17BHasValidThreadIDEv
-_ZTIPKh
-_Z17GetCPUInformationv
+SteamThreadTools::CThread::BHasValidThreadID() const
+typeinfo for unsigned char const*
+GetCPUInformation()
 Plat_RelativeTicks
 VProfInternalEnterScopeCurrentThread
 ThreadShellExecute
-_ZTIPKj
+typeinfo for unsigned int const*
 ThreadTerminateProcessCode
 __timezone@GLIBC_2.0
 chmod@GLIBC_2.0
 ThreadCloseProcess
 abort@GLIBC_2.0
-_ZN16SteamThreadTools12CThreadEventC1Eb
-_ZTIPKl
-_ZTIPKf
-_ZTVN10__cxxabiv117__class_type_infoE
-_ZN10SteamVProf9CVProfile4StopEv
-_ZTIPKb
+SteamThreadTools::CThreadEvent::CThreadEvent(bool)
+typeinfo for long const*
+typeinfo for float const*
+vtable for __cxxabiv1::__class_type_info
+SteamVProf::CVProfile::Stop()
+typeinfo for bool const*
 __xstat64@GLIBC_2.2
 Plat_TickAddMicroSec
-_ZTIPKd
+typeinfo for double const*
 _SpewMessageType
-_ZN10SteamVProf10CVProfNodeC1EPNS_9CVProfileEPKcPS0_17EVProfBugdetGroup
+SteamVProf::CVProfNode::CVProfNode(SteamVProf::CVProfile*, char const*, SteamVProf::CVProfNode*, EVProfBugdetGroup)
 backtrace@GLIBC_2.1
-_ZTSDn
+typeinfo name for std::nullptr_t
 pthread_setschedparam@GLIBC_2.0
 gethostbyname@GLIBC_2.0
 __xmknod@GLIBC_2.0
@@ -2051,8 +2051,8 @@ __wrap_lstat
 _SpewMessageTypeSourceFmt
 GetNumberOfStackTrackingFilters
 scandir64@GLIBC_2.2
-_ZNK6CStack5PrintEPFviPKNS_10PrintFrameEPvES3_
-_ZN10SteamVProf13CVProfManager8ValidateER10CValidatorPKc
+CStack::Print(void (*)(int, CStack::PrintFrame const*, void*), void*) const
+SteamVProf::CVProfManager::Validate(CValidator&, char const*)
 TSQueue_UnsafeDebugCheck
 dlmopen@GLIBC_2.3.4
 __wrap_open64
@@ -2060,46 +2060,46 @@ CatchAndWriteMiniDumpExReturnsInt
 strtol@GLIBC_2.0
 SetMiniDumpProcessNameOverride
 Plat_GetExecutablePath
-_ZTIPKDd
+typeinfo for decimal64 const*
 CatchAndWriteMiniDumpEx
-_ZTIPKt
+typeinfo for unsigned short const*
 fputs@GLIBC_2.0
-_ZTIPKDf
+typeinfo for decimal32 const*
 ThreadSetDebugName
 pthread_getspecific@GLIBC_2.0
 __lxstat64@GLIBC_2.2
 HasStackTrackingFilters
 Plat_RelativeTickFrequency
 Plat_MSTime
-_ZN16SteamThreadTools17CThreadSyncObject14SaveNameToFileEPKc
+SteamThreadTools::CThreadSyncObject::SaveNameToFile(char const*)
 ThreadInterlockedExchangePointer
 _init
 pthread_mutexattr_destroy@GLIBC_2.0
 Plat_IsWSL
 SpewActivate
 TSListBase_Push
-_ZTVN9__gnu_cxx20recursive_init_errorE
+vtable for __gnu_cxx::recursive_init_error
 closedir@GLIBC_2.0
 mkfifo@GLIBC_2.0
-_ZN16SteamThreadTools7CThreadD1Ev
+SteamThreadTools::CThread::~CThread()
 IsValidBoolValue
 __wrap_fopen64
 opendir@GLIBC_2.0
-_ZN16SteamThreadTools17CThreadSyncObjectD2Ev
-_ZN10SteamVProf9CVProfile8SumTimesEPNS_10CVProfNodeEi
+SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
+SteamVProf::CVProfile::SumTimes(SteamVProf::CVProfNode*, int)
 __wrap_statvfs64
-_ZN10SteamVProf20CVProfileThreadEntryC1EPNS_9CVProfileEjj
+SteamVProf::CVProfileThreadEntry::CVProfileThreadEntry(SteamVProf::CVProfile*, unsigned int, unsigned int)
 SpewWrittenMiniDumps
 __pthread_key_create@GLIBC_2.0
 __ctype_tolower_loc@GLIBC_2.3
 SpewChangeIfStillDefault
 pthread_mutexattr_settype@GLIBC_2.1
 __ctype_b_loc@GLIBC_2.3
-_ZN10SteamVProf20CVProfileThreadEntry16OnFrameCompletedEv
+SteamVProf::CVProfileThreadEntry::OnFrameCompleted()
 waitid@GLIBC_2.1
-_ZTSj
+typeinfo name for unsigned int
 __sprintf_chk@GLIBC_2.3.4
-_ZTSl
+typeinfo name for long
 Plat_AttachDebuggerToProcess
 sched_get_priority_min@GLIBC_2.0
 strncat@GLIBC_2.0

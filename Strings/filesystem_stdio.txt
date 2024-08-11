@@ -5,7 +5,7 @@ _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
 __cxa_finalize
 getenv
-_ZN11SteamStdLib11CommandLineEv
+SteamStdLib::CommandLine()
 __wrap_fopen
 fwrite
 __fprintf_chk
@@ -23,16 +23,16 @@ __strcpy_chk
 V_snprintf
 V_StripFilename
 fputs
-_ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 V_vsnprintf
 g_VProfProfilesRunningCount
 CVProfile_ExitScope
 VProfInternalEnterScopeCurrentThread
 g_pMemAllocSteam
 fclose
-_ZN10CValidator4PushEPKcPvS1_
-_ZN10CValidator11ClaimMemoryEPKv
-_ZN10CValidator3PopEv
+CValidator::Push(char const*, void*, char const*)
+CValidator::ClaimMemory(void const*)
+CValidator::Pop()
 V_strlower_fast
 strcmp
 V_IsAbsolutePath
@@ -44,11 +44,11 @@ __wrap_rename
 V_ExtractFilePath
 __snprintf_chk
 __cxa_atexit
-_ZN11SteamStdLib17CCommandLineParamC1EPKcS2_
-_ZN11SteamStdLib17CCommandLineParamD1Ev
-_ZTVN10__cxxabiv117__class_type_infoE
-_ZTVN10__cxxabiv121__vmi_class_type_infoE
-_ZTVN10__cxxabiv120__si_class_type_infoE
+SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
+SteamStdLib::CCommandLineParam::~CCommandLineParam()
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info
+vtable for __cxxabiv1::__si_class_type_info
 setvbuf
 fseek
 ftell
@@ -59,15 +59,15 @@ fflush
 fgets
 __wrap_chmod
 fread
-_ZN10CValidator16ClaimArrayMemoryEPKv
-_ZNK10CValidator9IsClaimedEPKv
+CValidator::ClaimArrayMemory(void const*)
+CValidator::IsClaimed(void const*) const
 ___tls_get_addr
 fnmatch
 V_strncat_length
 V_RemoveDotSlashes
 V_FixDoubleSlashes
-_ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
-_ZN16SteamThreadTools12CThreadMutexD1Ev
+AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
+SteamThreadTools::CThreadMutex::~CThreadMutex()
 pthread_mutex_lock
 pthread_mutex_unlock
 __wrap_open64
@@ -76,7 +76,7 @@ __wrap___xstat64
 __wrap_mkdir
 __wrap___xstat
 __wrap_fopen64
-_Z9V_stristrPKcS0_
+V_stristr(char const*, char const*)
 __wrap_utime
 __wrap___lxstat64
 __wrap_link
@@ -93,7 +93,7 @@ alphasort64
 __wrap_scandir64
 __wrap_symlink
 strcasecmp
-_ZN16SteamThreadTools12CThreadMutexC1Ev
+SteamThreadTools::CThreadMutex::CThreadMutex()
 V_UnqualifiedFileName
 memcmp
 CreateInterface
@@ -133,22 +133,22 @@ ftello64
 strncmp
 __pthread_key_create
 abort
-_ZTIN10__cxxabiv119__foreign_exceptionE
-_ZTIN10__cxxabiv115__forced_unwindE
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__forced_unwind
 syscall
-_ZTIN9__gnu_cxx20recursive_init_errorE
-_ZTVN9__gnu_cxx20recursive_init_errorE
-_ZTSN9__gnu_cxx20recursive_init_errorE
+typeinfo for __gnu_cxx::recursive_init_error
+vtable for __gnu_cxx::recursive_init_error
+typeinfo name for __gnu_cxx::recursive_init_error
 malloc
 fputc
 stdout
 stdin
-_ZTVN9__gnu_cxx24__concurrence_lock_errorE
-_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTIN9__gnu_cxx24__concurrence_lock_errorE
-_ZTSN9__gnu_cxx24__concurrence_lock_errorE
-_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
 pthread_once
 __nl_langinfo_l
 __uselocale
@@ -173,10 +173,10 @@ wmemset
 wmemchr
 wmemmove
 __sprintf_chk
-_ZTSN10__cxxabiv115__forced_unwindE
-_ZTSN10__cxxabiv119__foreign_exceptionE
-_ZTVN10__cxxabiv115__forced_unwindE
-_ZTVN10__cxxabiv119__foreign_exceptionE
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
 __strtof_l
 __strtod_l
 strtold_l
@@ -196,17 +196,17 @@ bind_textdomain_codeset
 dgettext
 __strftime_l
 __wcsftime_l
-_Z27_txnal_cow_string_D1_commitPv
-_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _ITM_RU1
-_ZGTtnaj
+transaction clone for operator new[](unsigned int)
 _ITM_memcpyRtWn
-_Z23_txnal_cow_string_c_strPKv
+_txnal_cow_string_c_str(void const*)
 _ITM_RU4
-_Z20_txnal_cow_string_D1Pv
+_txnal_cow_string_D1(void*)
 _ITM_addUserCommitAction
-_Z26_txnal_logic_error_get_msgPv
-_Z28_txnal_runtime_error_get_msgPv
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
 dl_iterate_phdr
 __xmknod
 __stack_chk_fail
@@ -722,29 +722,29 @@ statvfs64@GLIBC_2.1
 wcscpy@GLIBC_2.0
 pthread_once@GLIBC_2.0
 __wrap_opendir
-_ZTIN9__gnu_cxx20recursive_init_errorE
+typeinfo for __gnu_cxx::recursive_init_error
 wmemchr@GLIBC_2.0
-_ZNK10CValidator9IsClaimedEPKv
-_Z28_txnal_runtime_error_get_msgPv
+CValidator::IsClaimed(void const*) const
+_txnal_runtime_error_get_msg(void*)
 statfs64@GLIBC_2.1
 __wrap_freopen
 V_FixDoubleSlashes
 mkdir@GLIBC_2.0
 __cxa_atexit@GLIBC_2.1.3
-_ZTVN10__cxxabiv119__foreign_exceptionE
+vtable for __cxxabiv1::__foreign_exception
 memcmp@GLIBC_2.0
 V_UnqualifiedFileName
-_ZTIN10__cxxabiv119__foreign_exceptionE
-_ZTIN10__cxxabiv115__forced_unwindE
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__forced_unwind
 statfs@GLIBC_2.0
 __ctype_get_mb_cur_max@GLIBC_2.0
 __fprintf_chk@GLIBC_2.3.4
-_ZGTtnaj
+transaction clone for operator new[](unsigned int)
 __wrap_symlink
 __xstat@GLIBC_2.0
-_ZN11SteamStdLib17CCommandLineParamC1EPKcS2_
+SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
 syscall@GLIBC_2.0
-_ZN10CValidator3PopEv
+CValidator::Pop()
 __gmon_start__
 __lxstat@GLIBC_2.0
 V_ExtractFilePath
@@ -754,7 +754,7 @@ __xstat64@GLIBC_2.2
 __wrap_rename
 __wrap_fopen
 alphasort64@GLIBC_2.2
-_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
+typeinfo for __gnu_cxx::__concurrence_unlock_error
 strchr@GLIBC_2.0
 vsnprintf@GLIBC_2.0
 putwc@GLIBC_2.2
@@ -775,10 +775,10 @@ fgets@GLIBC_2.0
 rename@GLIBC_2.0
 fopen64@GLIBC_2.1
 scandir@GLIBC_2.0
-_ZTSN9__gnu_cxx20recursive_init_errorE
+typeinfo name for __gnu_cxx::recursive_init_error
 strtold_l@GLIBC_2.3
 strrchr@GLIBC_2.0
-_ZTVN10__cxxabiv115__forced_unwindE
+vtable for __cxxabiv1::__forced_unwind
 mount@GLIBC_2.0
 dlmopen@GLIBC_2.3.4
 fseeko64@GLIBC_2.1
@@ -790,11 +790,11 @@ mbrtowc@GLIBC_2.0
 V_RemoveDotSlashes
 __wrap_chmod
 _ITM_deregisterTMCloneTable
-_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
+vtable for __gnu_cxx::__concurrence_unlock_error
 ungetc@GLIBC_2.0
 __wrap_scandir64
 __wrap_stat
-_ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
+AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 free@GLIBC_2.0
 __xmknod@GLIBC_2.0
 __lxstat64@GLIBC_2.2
@@ -808,7 +808,7 @@ __wrap_mount
 dlsym@GLIBC_2.0
 fflush@GLIBC_2.0
 __wrap_open64
-_Z26_txnal_logic_error_get_msgPv
+_txnal_logic_error_get_msg(void*)
 __vfprintf_chk@GLIBC_2.3.4
 opendir@GLIBC_2.0
 Plat_ctime
@@ -822,7 +822,7 @@ pthread_mutex_unlock@GLIBC_2.0
 wctob@GLIBC_2.0
 realpath@GLIBC_2.3
 __wctype_l@GLIBC_2.1
-_ZTSN10__cxxabiv119__foreign_exceptionE
+typeinfo name for __cxxabiv1::__foreign_exception
 __wcsftime_l@GLIBC_2.3
 fclose@GLIBC_2.1
 ftello64@GLIBC_2.1
@@ -830,11 +830,11 @@ __wrap_mkdir
 __wrap_rmdir
 readdir64@GLIBC_2.2
 stderr@GLIBC_2.0
-_ZN11SteamStdLib17CCommandLineParamD1Ev
+SteamStdLib::CCommandLineParam::~CCommandLineParam()
 __wrap_unlink
 utime@GLIBC_2.0
 _ITM_RU4
-_ZTVN9__gnu_cxx20recursive_init_errorE
+vtable for __gnu_cxx::recursive_init_error
 strlen@GLIBC_2.0
 g_VProfProfilesRunningCount
 fopen@GLIBC_2.1
@@ -849,11 +849,11 @@ __strxfrm_l@GLIBC_2.1
 feof@GLIBC_2.0
 dlopen@GLIBC_2.1
 ftell@GLIBC_2.0
-_ZN10CValidator16ClaimArrayMemoryEPKv
+CValidator::ClaimArrayMemory(void const*)
 mkfifo@GLIBC_2.0
 chdir@GLIBC_2.0
 V_FixSlashes
-_Z23_txnal_cow_string_c_strPKv
+_txnal_cow_string_c_str(void const*)
 V_strnicmp
 __wrap___lxstat64
 __strcpy_chk@GLIBC_2.3.4
@@ -867,17 +867,17 @@ __wrap_dlmopen
 __wrap_statvfs
 __wrap_statfs64
 strstr@GLIBC_2.0
-_ZN10CValidator4PushEPKcPvS1_
-_ZTVN10__cxxabiv121__vmi_class_type_infoE
+CValidator::Push(char const*, void*, char const*)
+vtable for __cxxabiv1::__vmi_class_type_info
 setvbuf@GLIBC_2.0
 __wrap___xstat
 __wrap___lxstat
-_ZTVN10__cxxabiv117__class_type_infoE
+vtable for __cxxabiv1::__class_type_info
 malloc@GLIBC_2.0
 wcscmp@GLIBC_2.0
 pthread_mutex_lock@GLIBC_2.0
-_ZN10CValidator11ClaimMemoryEPKv
-_ZTSN9__gnu_cxx24__concurrence_lock_errorE
+CValidator::ClaimMemory(void const*)
+typeinfo name for __gnu_cxx::__concurrence_lock_error
 V_strlower_fast
 V_snprintf
 __uselocale@GLIBC_2.3
@@ -899,14 +899,14 @@ __towlower_l@GLIBC_2.1
 __iswctype_l@GLIBC_2.1
 strncasecmp@GLIBC_2.0
 __strtof_l@GLIBC_2.1
-_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
 getcwd@GLIBC_2.0
 wcsnrtombs@GLIBC_2.0
-_Z27_txnal_cow_string_D1_commitPv
+_txnal_cow_string_D1_commit(void*)
 stdout@GLIBC_2.0
 faccessat@GLIBC_2.4
 __wrap_utime
-_ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 V_vsnprintf
 utimes@GLIBC_2.0
 VProfInternalEnterScopeCurrentThread
@@ -919,42 +919,42 @@ lchown@GLIBC_2.0
 __realpath_chk@GLIBC_2.4
 __snprintf_chk@GLIBC_2.3.4
 strpbrk@GLIBC_2.0
-_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 __newlocale@GLIBC_2.1
 fread@GLIBC_2.0
 __pthread_key_create@GLIBC_2.0
 dl_iterate_phdr@GLIBC_2.2.4
 __wrap_lstat64
 bind_textdomain_codeset@GLIBC_2.2
-_ZTVN9__gnu_cxx24__concurrence_lock_errorE
+vtable for __gnu_cxx::__concurrence_lock_error
 __wcscoll_l@GLIBC_2.1
 strdup@GLIBC_2.0
-_Z20_txnal_cow_string_D1Pv
+_txnal_cow_string_D1(void*)
 __wrap_open
 ferror@GLIBC_2.0
 ungetwc@GLIBC_2.2
 tolower@GLIBC_2.0
-_ZTIN9__gnu_cxx24__concurrence_lock_errorE
+typeinfo for __gnu_cxx::__concurrence_lock_error
 strcmp@GLIBC_2.0
 btowc@GLIBC_2.0
 __cxa_finalize@GLIBC_2.1.3
 __wrap_stat64
 V_strncat
 __wrap___xstat64
-_ZN11SteamStdLib11CommandLineEv
+SteamStdLib::CommandLine()
 __wrap_link
 CVProfile_ExitScope
 V_IsAbsolutePath
 __wrap_statvfs64
-_ZTVN10__cxxabiv120__si_class_type_infoE
+vtable for __cxxabiv1::__si_class_type_info
 __wrap_scandir
-_ZN16SteamThreadTools12CThreadMutexC1Ev
+SteamThreadTools::CThreadMutex::CThreadMutex()
 __wrap_chown
 __wrap_lchown
-_ZTSN10__cxxabiv115__forced_unwindE
-_Z9V_stristrPKcS0_
+typeinfo name for __cxxabiv1::__forced_unwind
+V_stristr(char const*, char const*)
 _init
-_ZN16SteamThreadTools12CThreadMutexD1Ev
+SteamThreadTools::CThreadMutex::~CThreadMutex()
 __wrap_fopen64
 V_strncpy
 GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309

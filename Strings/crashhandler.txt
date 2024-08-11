@@ -38,8 +38,8 @@ _exit
 __errno_location
 syscall
 __cxa_atexit
-_ZTVN10__cxxabiv117__class_type_infoE
-_ZTVN10__cxxabiv120__si_class_type_infoE
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
 __pthread_key_create
 CreateInterface
 Breakpad_SetSteamID
@@ -90,7 +90,7 @@ __wrap_chdir
 sigaction
 __memcpy_chk
 pthread_setspecific
-_ZTIi
+typeinfo for int
 strcmp
 wcslen
 vsnprintf
@@ -152,182 +152,182 @@ ftruncate
 __assert_fail
 calloc
 sysconf
-_ZTSN10__cxxabiv117__class_type_infoE
-_ZTIN10__cxxabiv117__class_type_infoE
-_ZTVN9__gnu_cxx24__concurrence_lock_errorE
-_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTIN9__gnu_cxx24__concurrence_lock_errorE
-_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTSN9__gnu_cxx24__concurrence_lock_errorE
-_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTSN10__cxxabiv115__forced_unwindE
-_ZTIN10__cxxabiv115__forced_unwindE
-_ZTSN10__cxxabiv119__foreign_exceptionE
-_ZTIN10__cxxabiv119__foreign_exceptionE
-_ZTVN10__cxxabiv115__forced_unwindE
-_ZTVN10__cxxabiv119__foreign_exceptionE
+typeinfo name for __cxxabiv1::__class_type_info
+typeinfo for __cxxabiv1::__class_type_info
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__foreign_exception
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
 abort
-_ZTVN10__cxxabiv123__fundamental_type_infoE
-_ZTSN10__cxxabiv123__fundamental_type_infoE
-_ZTIN10__cxxabiv123__fundamental_type_infoE
-_ZTSv
-_ZTSPv
-_ZTSPKv
-_ZTSb
-_ZTSPb
-_ZTSPKb
-_ZTSw
-_ZTSPw
-_ZTSPKw
-_ZTSDu
-_ZTSPDu
-_ZTSPKDu
-_ZTSDs
-_ZTSPDs
-_ZTSPKDs
-_ZTSDi
-_ZTSPDi
-_ZTSPKDi
-_ZTSc
-_ZTSPc
-_ZTSPKc
-_ZTSa
-_ZTSPa
-_ZTSPKa
-_ZTSh
-_ZTSPh
-_ZTSPKh
-_ZTSs
-_ZTSPs
-_ZTSPKs
-_ZTSt
-_ZTSPt
-_ZTSPKt
-_ZTSi
-_ZTSPi
-_ZTSPKi
-_ZTSj
-_ZTSPj
-_ZTSPKj
-_ZTSl
-_ZTSPl
-_ZTSPKl
-_ZTSm
-_ZTSPm
-_ZTSPKm
-_ZTSx
-_ZTSPx
-_ZTSPKx
-_ZTSy
-_ZTSPy
-_ZTSPKy
-_ZTSf
-_ZTSPf
-_ZTSPKf
-_ZTSd
-_ZTSPd
-_ZTSPKd
-_ZTSe
-_ZTSPe
-_ZTSPKe
-_ZTSDf
-_ZTSPDf
-_ZTSPKDf
-_ZTSDd
-_ZTSPDd
-_ZTSPKDd
-_ZTSDe
-_ZTSPDe
-_ZTSPKDe
-_ZTSDn
-_ZTSPDn
-_ZTSPKDn
-_ZTSg
-_ZTSPg
-_ZTSPKg
-_ZTIPKg
-_ZTVN10__cxxabiv119__pointer_type_infoE
-_ZTIg
-_ZTIPg
-_ZTIPKDn
-_ZTIDn
-_ZTIPDn
-_ZTIPKDe
-_ZTIDe
-_ZTIPDe
-_ZTIPKDd
-_ZTIDd
-_ZTIPDd
-_ZTIPKDf
-_ZTIDf
-_ZTIPDf
-_ZTIPKe
-_ZTIe
-_ZTIPe
-_ZTIPKd
-_ZTId
-_ZTIPd
-_ZTIPKf
-_ZTIf
-_ZTIPf
-_ZTIPKy
-_ZTIy
-_ZTIPy
-_ZTIPKx
-_ZTIx
-_ZTIPx
-_ZTIPKm
-_ZTIm
-_ZTIPm
-_ZTIPKl
-_ZTIl
-_ZTIPl
-_ZTIPKj
-_ZTIj
-_ZTIPj
-_ZTIPKi
-_ZTIPi
-_ZTIPKt
-_ZTIt
-_ZTIPt
-_ZTIPKs
-_ZTIs
-_ZTIPs
-_ZTIPKh
-_ZTIh
-_ZTIPh
-_ZTIPKa
-_ZTIa
-_ZTIPa
-_ZTIPKc
-_ZTIc
-_ZTIPc
-_ZTIPKDi
-_ZTIDi
-_ZTIPDi
-_ZTIPKDs
-_ZTIDs
-_ZTIPDs
-_ZTIPKDu
-_ZTIDu
-_ZTIPDu
-_ZTIPKw
-_ZTIw
-_ZTIPw
-_ZTIPKb
-_ZTIb
-_ZTIPb
-_ZTIPKv
-_ZTIv
-_ZTIPv
-_ZTIN9__gnu_cxx20recursive_init_errorE
-_ZTVN9__gnu_cxx20recursive_init_errorE
-_ZTSN9__gnu_cxx20recursive_init_errorE
-_ZTSN10__cxxabiv119__pointer_type_infoE
-_ZTIN10__cxxabiv119__pointer_type_infoE
-_ZTIN10__cxxabiv117__pbase_type_infoE
-_ZTSN10__cxxabiv120__si_class_type_infoE
-_ZTIN10__cxxabiv120__si_class_type_infoE
+vtable for __cxxabiv1::__fundamental_type_info
+typeinfo name for __cxxabiv1::__fundamental_type_info
+typeinfo for __cxxabiv1::__fundamental_type_info
+typeinfo name for void
+typeinfo name for void*
+typeinfo name for void const*
+typeinfo name for bool
+typeinfo name for bool*
+typeinfo name for bool const*
+typeinfo name for wchar_t
+typeinfo name for wchar_t*
+typeinfo name for wchar_t const*
+typeinfo name for char8_t
+typeinfo name for char8_t*
+typeinfo name for char8_t const*
+typeinfo name for char16_t
+typeinfo name for char16_t*
+typeinfo name for char16_t const*
+typeinfo name for char32_t
+typeinfo name for char32_t*
+typeinfo name for char32_t const*
+typeinfo name for char
+typeinfo name for char*
+typeinfo name for char const*
+typeinfo name for signed char
+typeinfo name for signed char*
+typeinfo name for signed char const*
+typeinfo name for unsigned char
+typeinfo name for unsigned char*
+typeinfo name for unsigned char const*
+typeinfo name for short
+typeinfo name for short*
+typeinfo name for short const*
+typeinfo name for unsigned short
+typeinfo name for unsigned short*
+typeinfo name for unsigned short const*
+typeinfo name for int
+typeinfo name for int*
+typeinfo name for int const*
+typeinfo name for unsigned int
+typeinfo name for unsigned int*
+typeinfo name for unsigned int const*
+typeinfo name for long
+typeinfo name for long*
+typeinfo name for long const*
+typeinfo name for unsigned long
+typeinfo name for unsigned long*
+typeinfo name for unsigned long const*
+typeinfo name for long long
+typeinfo name for long long*
+typeinfo name for long long const*
+typeinfo name for unsigned long long
+typeinfo name for unsigned long long*
+typeinfo name for unsigned long long const*
+typeinfo name for float
+typeinfo name for float*
+typeinfo name for float const*
+typeinfo name for double
+typeinfo name for double*
+typeinfo name for double const*
+typeinfo name for long double
+typeinfo name for long double*
+typeinfo name for long double const*
+typeinfo name for decimal32
+typeinfo name for decimal32*
+typeinfo name for decimal32 const*
+typeinfo name for decimal64
+typeinfo name for decimal64*
+typeinfo name for decimal64 const*
+typeinfo name for decimal128
+typeinfo name for decimal128*
+typeinfo name for decimal128 const*
+typeinfo name for std::nullptr_t
+typeinfo name for std::nullptr_t*
+typeinfo name for std::nullptr_t const*
+typeinfo name for __float128
+typeinfo name for __float128*
+typeinfo name for __float128 const*
+typeinfo for __float128 const*
+vtable for __cxxabiv1::__pointer_type_info
+typeinfo for __float128
+typeinfo for __float128*
+typeinfo for std::nullptr_t const*
+typeinfo for std::nullptr_t
+typeinfo for std::nullptr_t*
+typeinfo for decimal128 const*
+typeinfo for decimal128
+typeinfo for decimal128*
+typeinfo for decimal64 const*
+typeinfo for decimal64
+typeinfo for decimal64*
+typeinfo for decimal32 const*
+typeinfo for decimal32
+typeinfo for decimal32*
+typeinfo for long double const*
+typeinfo for long double
+typeinfo for long double*
+typeinfo for double const*
+typeinfo for double
+typeinfo for double*
+typeinfo for float const*
+typeinfo for float
+typeinfo for float*
+typeinfo for unsigned long long const*
+typeinfo for unsigned long long
+typeinfo for unsigned long long*
+typeinfo for long long const*
+typeinfo for long long
+typeinfo for long long*
+typeinfo for unsigned long const*
+typeinfo for unsigned long
+typeinfo for unsigned long*
+typeinfo for long const*
+typeinfo for long
+typeinfo for long*
+typeinfo for unsigned int const*
+typeinfo for unsigned int
+typeinfo for unsigned int*
+typeinfo for int const*
+typeinfo for int*
+typeinfo for unsigned short const*
+typeinfo for unsigned short
+typeinfo for unsigned short*
+typeinfo for short const*
+typeinfo for short
+typeinfo for short*
+typeinfo for unsigned char const*
+typeinfo for unsigned char
+typeinfo for unsigned char*
+typeinfo for signed char const*
+typeinfo for signed char
+typeinfo for signed char*
+typeinfo for char const*
+typeinfo for char
+typeinfo for char*
+typeinfo for char32_t const*
+typeinfo for char32_t
+typeinfo for char32_t*
+typeinfo for char16_t const*
+typeinfo for char16_t
+typeinfo for char16_t*
+typeinfo for char8_t const*
+typeinfo for char8_t
+typeinfo for char8_t*
+typeinfo for wchar_t const*
+typeinfo for wchar_t
+typeinfo for wchar_t*
+typeinfo for bool const*
+typeinfo for bool
+typeinfo for bool*
+typeinfo for void const*
+typeinfo for void
+typeinfo for void*
+typeinfo for __gnu_cxx::recursive_init_error
+vtable for __gnu_cxx::recursive_init_error
+typeinfo name for __gnu_cxx::recursive_init_error
+typeinfo name for __cxxabiv1::__pointer_type_info
+typeinfo for __cxxabiv1::__pointer_type_info
+typeinfo for __cxxabiv1::__pbase_type_info
+typeinfo name for __cxxabiv1::__si_class_type_info
+typeinfo for __cxxabiv1::__si_class_type_info
 stdin
 pthread_once
 __nl_langinfo_l
@@ -337,7 +337,7 @@ wcscmp
 iconv_open
 iconv
 iconv_close
-_ZTVN10__cxxabiv121__vmi_class_type_infoE
+vtable for __cxxabiv1::__vmi_class_type_info
 __wctype_l
 __towupper_l
 __towlower_l
@@ -353,13 +353,13 @@ wmemset
 wmemchr
 wmemmove
 __sprintf_chk
-_ZTVN10__cxxabiv117__pbase_type_infoE
-_ZTIN10__cxxabiv129__pointer_to_member_type_infoE
-_ZTSN10__cxxabiv117__pbase_type_infoE
-_ZTVN10__cxxabiv129__pointer_to_member_type_infoE
-_ZTSN10__cxxabiv129__pointer_to_member_type_infoE
-_ZTSN10__cxxabiv121__vmi_class_type_infoE
-_ZTIN10__cxxabiv121__vmi_class_type_infoE
+vtable for __cxxabiv1::__pbase_type_info
+typeinfo for __cxxabiv1::__pointer_to_member_type_info
+typeinfo name for __cxxabiv1::__pbase_type_info
+vtable for __cxxabiv1::__pointer_to_member_type_info
+typeinfo name for __cxxabiv1::__pointer_to_member_type_info
+typeinfo name for __cxxabiv1::__vmi_class_type_info
+typeinfo for __cxxabiv1::__vmi_class_type_info
 __strtof_l
 __strtod_l
 strtold_l
@@ -379,17 +379,17 @@ bind_textdomain_codeset
 dgettext
 __strftime_l
 __wcsftime_l
-_Z27_txnal_cow_string_D1_commitPv
-_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _ITM_RU1
-_ZGTtnaj
+transaction clone for operator new[](unsigned int)
 _ITM_memcpyRtWn
-_Z23_txnal_cow_string_c_strPKv
+_txnal_cow_string_c_str(void const*)
 _ITM_RU4
-_Z20_txnal_cow_string_D1Pv
+_txnal_cow_string_D1(void*)
 _ITM_addUserCommitAction
-_Z26_txnal_logic_error_get_msgPv
-_Z28_txnal_runtime_error_get_msgPv
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
 dl_iterate_phdr
 __xmknod
 __stack_chk_fail
@@ -1088,51 +1088,51 @@ _ITM_memcpyRtWn
 statvfs64@GLIBC_2.1
 sigemptyset@GLIBC_2.0
 pthread_once@GLIBC_2.0
-_ZTIPDi
+typeinfo for char32_t*
 __wrap_opendir
-_ZTSg
-_ZTIN9__gnu_cxx20recursive_init_errorE
-_ZTIPDu
+typeinfo name for __float128
+typeinfo for __gnu_cxx::recursive_init_error
+typeinfo for char8_t*
 wmemchr@GLIBC_2.0
-_Z28_txnal_runtime_error_get_msgPv
+_txnal_runtime_error_get_msg(void*)
 statfs64@GLIBC_2.1
 getpid@GLIBC_2.0
 __wrap_freopen
-_ZTIPa
+typeinfo for signed char*
 mkdir@GLIBC_2.0
 strerror@GLIBC_2.0
 __cxa_atexit@GLIBC_2.1.3
-_ZTVN10__cxxabiv119__foreign_exceptionE
-_ZTIDd
-_ZTVN10__cxxabiv117__pbase_type_infoE
+vtable for __cxxabiv1::__foreign_exception
+typeinfo for decimal64
+vtable for __cxxabiv1::__pbase_type_info
 sysconf@GLIBC_2.0
 memcmp@GLIBC_2.0
-_ZTSPb
-_ZTSPKa
-_ZTSw
-_ZTIPKh
-_ZTSPKe
-_ZTIPKl
-_ZTIN10__cxxabiv119__foreign_exceptionE
-_ZTIPKd
-_ZTIN10__cxxabiv115__forced_unwindE
-_ZTIg
-_ZTIPKy
+typeinfo name for bool*
+typeinfo name for signed char const*
+typeinfo name for wchar_t
+typeinfo for unsigned char const*
+typeinfo name for long double const*
+typeinfo for long const*
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for double const*
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __float128
+typeinfo for unsigned long long const*
 statfs@GLIBC_2.0
 getcontext@GLIBC_2.1
-_ZTSN10__cxxabiv129__pointer_to_member_type_infoE
+typeinfo name for __cxxabiv1::__pointer_to_member_type_info
 __ctype_get_mb_cur_max@GLIBC_2.0
-_ZTSN10__cxxabiv117__pbase_type_infoE
+typeinfo name for __cxxabiv1::__pbase_type_info
 __fprintf_chk@GLIBC_2.3.4
-_ZGTtnaj
+transaction clone for operator new[](unsigned int)
 signal@GLIBC_2.0
 __wrap_symlink
 __xstat@GLIBC_2.0
 syscall@GLIBC_2.0
-_ZTIPKt
+typeinfo for unsigned short const*
 __gmon_start__
 __lxstat@GLIBC_2.0
-_ZTSPKy
+typeinfo name for unsigned long long const*
 realloc@GLIBC_2.0
 sched_yield@GLIBC_2.0
 iconv_open@GLIBC_2.1
@@ -1140,60 +1140,60 @@ rewind@GLIBC_2.0
 __xstat64@GLIBC_2.2
 localtime@GLIBC_2.0
 __wrap_rename
-_ZTIPDe
-_ZTVN10__cxxabiv129__pointer_to_member_type_infoE
+typeinfo for decimal128*
+vtable for __cxxabiv1::__pointer_to_member_type_info
 __wrap_fopen
 alphasort64@GLIBC_2.2
-_ZTSPKi
+typeinfo name for int const*
 __printf_chk@GLIBC_2.3.4
-_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
+typeinfo for __gnu_cxx::__concurrence_unlock_error
 strchr@GLIBC_2.0
 vsnprintf@GLIBC_2.0
 putwc@GLIBC_2.2
 getenv@GLIBC_2.0
 __strftime_l@GLIBC_2.3
-_ZTIPy
+typeinfo for unsigned long long*
 _fini
 calloc@GLIBC_2.0
 strncpy@GLIBC_2.0
-_ZTSDs
-_ZTIPKDd
-_ZTSPKm
-_ZTIw
+typeinfo name for char16_t
+typeinfo for decimal64 const*
+typeinfo name for unsigned long const*
+typeinfo for wchar_t
 wmemmove@GLIBC_2.0
-_ZTIDi
+typeinfo for char32_t
 wcslen@GLIBC_2.0
 malloc_usable_size@GLIBC_2.0
-_ZTSPKDs
+typeinfo name for char16_t const*
 mbsrtowcs@GLIBC_2.0
 _ITM_RU1
-_ZTIs
+typeinfo for short
 pthread_key_delete@GLIBC_2.0
 dgettext@GLIBC_2.0
-_ZTIc
+typeinfo for char
 dlclose@GLIBC_2.0
-_ZTSj
-_ZTSPg
+typeinfo name for unsigned int
+typeinfo name for __float128*
 fgets@GLIBC_2.0
 rename@GLIBC_2.0
-_ZTIDu
-_ZTIPj
+typeinfo for char8_t
+typeinfo for unsigned int*
 fopen64@GLIBC_2.1
-_ZTSPw
+typeinfo name for wchar_t*
 scandir@GLIBC_2.0
-_ZTIPf
-_ZTSb
-_ZTSN9__gnu_cxx20recursive_init_errorE
+typeinfo for float*
+typeinfo name for bool
+typeinfo name for __gnu_cxx::recursive_init_error
 strtold_l@GLIBC_2.3
-_ZTSPDd
-_ZTSPs
-_ZTSDd
-_ZTIN10__cxxabiv119__pointer_type_infoE
+typeinfo name for decimal64*
+typeinfo name for short*
+typeinfo name for decimal64
+typeinfo for __cxxabiv1::__pointer_type_info
 __memcpy_chk@GLIBC_2.3.4
 _exit@GLIBC_2.0
-_ZTSf
+typeinfo name for float
 strrchr@GLIBC_2.0
-_ZTVN10__cxxabiv115__forced_unwindE
+vtable for __cxxabiv1::__forced_unwind
 pthread_getspecific@GLIBC_2.0
 mount@GLIBC_2.0
 dlmopen@GLIBC_2.3.4
@@ -1204,35 +1204,35 @@ wmemcpy@GLIBC_2.0
 __assert_fail@GLIBC_2.0
 CreateInterface
 __vsnprintf_chk@GLIBC_2.3.4
-_ZTIPb
+typeinfo for bool*
 mbrtowc@GLIBC_2.0
-_ZTIPKDu
+typeinfo for char8_t const*
 __wrap_chmod
-_ZTIDe
+typeinfo for decimal128
 _ITM_deregisterTMCloneTable
 pthread_mutex_trylock@GLIBC_2.0
-_ZTSPKb
-_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
+typeinfo name for bool const*
+vtable for __gnu_cxx::__concurrence_unlock_error
 ungetc@GLIBC_2.0
-_ZTSPKf
+typeinfo name for float const*
 __wrap_scandir64
 __wrap_stat
-_ZTIPKg
-_ZTIN10__cxxabiv121__vmi_class_type_infoE
+typeinfo for __float128 const*
+typeinfo for __cxxabiv1::__vmi_class_type_info
 gettimeofday@GLIBC_2.0
 strtol@GLIBC_2.0
-_ZTSPc
+typeinfo name for char*
 free@GLIBC_2.0
 __xmknod@GLIBC_2.0
 __lxstat64@GLIBC_2.2
 backtrace_symbols@GLIBC_2.1
-_ZTSv
-_ZTIPKc
+typeinfo name for void
+typeinfo for char const*
 SteamRealPath
-_ZTIf
+typeinfo for float
 mbsnrtowcs@GLIBC_2.0
-_ZTSN10__cxxabiv121__vmi_class_type_infoE
-_ZTIPKx
+typeinfo name for __cxxabiv1::__vmi_class_type_info
+typeinfo for long long const*
 __wrap_mkfifo
 __wrap_access
 access@GLIBC_2.0
@@ -1242,101 +1242,101 @@ dlsym@GLIBC_2.0
 sigaction@GLIBC_2.0
 fflush@GLIBC_2.0
 __wrap_open64
-_ZTIPKs
-_Z26_txnal_logic_error_get_msgPv
+typeinfo for short const*
+_txnal_logic_error_get_msg(void*)
 __vfprintf_chk@GLIBC_2.3.4
 opendir@GLIBC_2.0
 statvfs@GLIBC_2.1
 symlink@GLIBC_2.0
-_ZTIPDd
+typeinfo for decimal64*
 wcrtomb@GLIBC_2.0
 ___tls_get_addr@GLIBC_2.3
 pthread_mutex_unlock@GLIBC_2.0
 wctob@GLIBC_2.0
-_ZTSN10__cxxabiv123__fundamental_type_infoE
+typeinfo name for __cxxabiv1::__fundamental_type_info
 realpath@GLIBC_2.3
 vfork@GLIBC_2.0
-_ZTSPKv
+typeinfo name for void const*
 __wctype_l@GLIBC_2.1
-_ZTSN10__cxxabiv119__foreign_exceptionE
+typeinfo name for __cxxabiv1::__foreign_exception
 __wcsftime_l@GLIBC_2.3
 ftello64@GLIBC_2.1
-_ZTSPKDd
-_ZTIPc
-_ZTIDn
+typeinfo name for decimal64 const*
+typeinfo for char*
+typeinfo for std::nullptr_t
 __wrap_mkdir
-_ZTIPv
-_ZTIPKDe
-_ZTIv
-_ZTIN10__cxxabiv129__pointer_to_member_type_infoE
-_ZTSN10__cxxabiv120__si_class_type_infoE
-_ZTSPKj
-_ZTIPKDi
-_ZTIDf
+typeinfo for void*
+typeinfo for decimal128 const*
+typeinfo for void
+typeinfo for __cxxabiv1::__pointer_to_member_type_info
+typeinfo name for __cxxabiv1::__si_class_type_info
+typeinfo name for unsigned int const*
+typeinfo for char32_t const*
+typeinfo for decimal32
 __wrap_rmdir
-_ZTSPDu
-_ZTIj
-_ZTIPw
+typeinfo name for char8_t*
+typeinfo for unsigned int
+typeinfo for wchar_t*
 readdir64@GLIBC_2.2
 stderr@GLIBC_2.0
 nanosleep@GLIBC_2.0
-_ZTIb
+typeinfo for bool
 __wrap_unlink
 utime@GLIBC_2.0
 execv@GLIBC_2.0
-_ZTSPh
+typeinfo name for unsigned char*
 _ITM_RU4
-_ZTVN9__gnu_cxx20recursive_init_errorE
+vtable for __gnu_cxx::recursive_init_error
 strlen@GLIBC_2.0
-_ZTSPDi
-_ZTSPx
+typeinfo name for char32_t*
+typeinfo name for long long*
 fopen@GLIBC_2.1
-_ZTIPg
+typeinfo for __float128*
 __wrap_mknod
-_ZTSa
+typeinfo name for signed char
 pthread_mutex_destroy@GLIBC_2.0
 __towupper_l@GLIBC_2.1
 unlink@GLIBC_2.0
 iconv@GLIBC_2.1
-_ZTSPDe
-_ZTSPt
+typeinfo name for decimal128*
+typeinfo name for unsigned short*
 wmemset@GLIBC_2.0
-_ZTSDe
+typeinfo name for decimal128
 __wrap_statfs
-_ZTSi
+typeinfo name for int
 freopen@GLIBC_2.0
-_ZTIPDs
+typeinfo for char16_t*
 __strxfrm_l@GLIBC_2.1
 waitpid@GLIBC_2.0
-_ZTSe
+typeinfo name for long double
 getegid@GLIBC_2.0
 dlopen@GLIBC_2.1
 mkfifo@GLIBC_2.0
 chdir@GLIBC_2.0
-_ZTVN10__cxxabiv123__fundamental_type_infoE
-_Z23_txnal_cow_string_c_strPKv
-_ZTSPKc
-_ZTSPl
-_ZTSN10__cxxabiv117__class_type_infoE
-_ZTIPKDn
+vtable for __cxxabiv1::__fundamental_type_info
+_txnal_cow_string_c_str(void const*)
+typeinfo name for char const*
+typeinfo name for long*
+typeinfo name for __cxxabiv1::__class_type_info
+typeinfo for std::nullptr_t const*
 pthread_mutex_init@GLIBC_2.0
-_ZTIPKj
+typeinfo for unsigned int const*
 __wrap___lxstat64
 __strcpy_chk@GLIBC_2.3.4
-_ZTSPd
-_ZTSm
-_ZTIPKf
-_ZTIN10__cxxabiv123__fundamental_type_infoE
-_ZTSy
+typeinfo name for double*
+typeinfo name for unsigned long
+typeinfo for float const*
+typeinfo for __cxxabiv1::__fundamental_type_info
+typeinfo name for unsigned long long
 strcasecmp@GLIBC_2.0
-_ZTIa
+typeinfo for signed char
 __strtod_l@GLIBC_2.1
-_ZTIPKb
+typeinfo for bool const*
 clock_gettime@GLIBC_2.2
-_ZTIe
-_ZTIi
+typeinfo for long double
+typeinfo for int
 Breakpad_SetSteamID
-_ZTIPKw
+typeinfo for wchar_t const*
 pthread_setspecific@GLIBC_2.0
 ftruncate@GLIBC_2.0
 __wcsxfrm_l@GLIBC_2.1
@@ -1347,162 +1347,162 @@ __wrap_dlmopen
 __wrap_statvfs
 __dprintf_chk@GLIBC_2.8
 __wrap_statfs64
-_ZTSPKDu
-_ZTVN10__cxxabiv121__vmi_class_type_infoE
+typeinfo name for char8_t const*
+vtable for __cxxabiv1::__vmi_class_type_info
 __wrap___xstat
 strncat@GLIBC_2.0
 __wrap___lxstat
-_ZTSPKw
-_ZTVN10__cxxabiv117__class_type_infoE
+typeinfo name for wchar_t const*
+vtable for __cxxabiv1::__class_type_info
 malloc@GLIBC_2.0
 wcscmp@GLIBC_2.0
-_ZTSPKDi
-_ZTSPKs
+typeinfo name for char32_t const*
+typeinfo name for short const*
 pthread_mutex_lock@GLIBC_2.0
-_ZTSN9__gnu_cxx24__concurrence_lock_errorE
-_ZTIPl
-_ZTSPKDe
-_ZTIPd
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo for long*
+typeinfo name for decimal128 const*
+typeinfo for double*
 __uselocale@GLIBC_2.3
-_ZTSDu
-_ZTIPs
+typeinfo name for char8_t
+typeinfo for short*
 chown@GLIBC_2.1
 __stack_chk_fail@GLIBC_2.4
-_ZTIy
-_ZTIPKDf
+typeinfo for unsigned long long
+typeinfo for decimal32 const*
 iconv_close@GLIBC_2.1
-_ZTSPKg
-_ZTIm
-_ZTSDi
-_ZTIPx
+typeinfo name for __float128 const*
+typeinfo for unsigned long
+typeinfo name for char32_t
+typeinfo for long long*
 __freelocale@GLIBC_2.1
 fputc@GLIBC_2.0
 __wrap_dlopen
-_ZTSPm
-_ZTSPy
-_ZTSPDn
-_ZTSPi
+typeinfo name for unsigned long*
+typeinfo name for unsigned long long*
+typeinfo name for std::nullptr_t*
+typeinfo name for int*
 rmdir@GLIBC_2.0
 dlerror@GLIBC_2.0
-_ZTSl
+typeinfo name for long
 scandir64@GLIBC_2.2
-_ZTSPe
+typeinfo name for long double*
 __wrap_utimes
 stdin@GLIBC_2.0
 __strcoll_l@GLIBC_2.1
 strcasestr@GLIBC_2.1
-_ZTSt
-_ZTSPDf
-_ZTIDs
-_ZTIPh
+typeinfo name for unsigned short
+typeinfo name for decimal32*
+typeinfo for char16_t
+typeinfo for unsigned char*
 __wrap_chdir
-_ZTSd
+typeinfo name for double
 sigaddset@GLIBC_2.0
 __towlower_l@GLIBC_2.1
 readlink@GLIBC_2.0
 __iswctype_l@GLIBC_2.1
 backtrace@GLIBC_2.1
 strncasecmp@GLIBC_2.0
-_ZTIN10__cxxabiv117__pbase_type_infoE
+typeinfo for __cxxabiv1::__pbase_type_info
 __ctype_tolower_loc@GLIBC_2.3
 __strtof_l@GLIBC_2.1
-_ZTSh
-_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
+typeinfo name for unsigned char
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
 getcwd@GLIBC_2.0
 wcsnrtombs@GLIBC_2.0
-_Z27_txnal_cow_string_D1_commitPv
+_txnal_cow_string_D1_commit(void*)
 stdout@GLIBC_2.0
 asctime@GLIBC_2.0
 faccessat@GLIBC_2.4
-_ZTIPDn
+typeinfo for std::nullptr_t*
 __wrap_utime
-_ZTIPKDs
-_ZTSPa
-_ZTSPKd
-_ZTSx
+typeinfo for char16_t const*
+typeinfo name for signed char*
+typeinfo name for double const*
+typeinfo name for long long
 fcntl@GLIBC_2.0
 flock@GLIBC_2.0
 utimes@GLIBC_2.0
-_ZTIPKi
+typeinfo for int const*
 sscanf@GLIBC_2.0
-_ZTIPKm
+typeinfo for unsigned long const*
 gmtime@GLIBC_2.0
 __sprintf_chk@GLIBC_2.3.4
 __duplocale@GLIBC_2.1
-_ZTIPKv
-_ZTVN10__cxxabiv119__pointer_type_infoE
-_ZTIN10__cxxabiv120__si_class_type_infoE
+typeinfo for void const*
+vtable for __cxxabiv1::__pointer_type_info
+typeinfo for __cxxabiv1::__si_class_type_info
 fnmatch@GLIBC_2.2.3
 strncmp@GLIBC_2.0
 open64@GLIBC_2.2
 lchown@GLIBC_2.0
 __realpath_chk@GLIBC_2.4
 lseek@GLIBC_2.0
-_ZTIPKe
-_ZTIPKa
+typeinfo for long double const*
+typeinfo for signed char const*
 __snprintf_chk@GLIBC_2.3.4
 posix_fadvise@GLIBC_2.2
-_ZTIh
+typeinfo for unsigned char
 strpbrk@GLIBC_2.0
-_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
-_ZTIN10__cxxabiv117__class_type_infoE
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
+typeinfo for __cxxabiv1::__class_type_info
 __newlocale@GLIBC_2.1
 fread@GLIBC_2.0
 __pthread_key_create@GLIBC_2.0
 dl_iterate_phdr@GLIBC_2.2.4
 __wrap_lstat64
 bind_textdomain_codeset@GLIBC_2.2
-_ZTSPKt
-_ZTSPKx
-_ZTIPDf
-_ZTSN10__cxxabiv119__pointer_type_infoE
-_ZTVN9__gnu_cxx24__concurrence_lock_errorE
+typeinfo name for unsigned short const*
+typeinfo name for long long const*
+typeinfo for decimal32*
+typeinfo name for __cxxabiv1::__pointer_type_info
+vtable for __gnu_cxx::__concurrence_lock_error
 __wcscoll_l@GLIBC_2.1
 pthread_mutexattr_init@GLIBC_2.0
 strdup@GLIBC_2.0
-_ZTSDn
-_ZTSPKDf
-_ZTSDf
+typeinfo name for std::nullptr_t
+typeinfo name for decimal32 const*
+typeinfo name for decimal32
 pthread_mutexattr_settype@GLIBC_2.1
-_Z20_txnal_cow_string_D1Pv
+_txnal_cow_string_D1(void*)
 posix_memalign@GLIBC_2.2
 __wrap_open
-_ZTIPt
+typeinfo for unsigned short*
 ungetwc@GLIBC_2.2
-_ZTSPKl
+typeinfo name for long const*
 tolower@GLIBC_2.0
-_ZTIN9__gnu_cxx24__concurrence_lock_errorE
-_ZTSPKh
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo name for unsigned char const*
 strcmp@GLIBC_2.0
 btowc@GLIBC_2.0
-_ZTIl
+typeinfo for long
 __cxa_finalize@GLIBC_2.1.3
 __wrap_stat64
 __wrap___xstat64
 setenv@GLIBC_2.0
-_ZTIPm
+typeinfo for unsigned long*
 __wrap_link
-_ZTIx
-_ZTSPv
-_ZTSPKDn
+typeinfo for long long
+typeinfo name for void*
+typeinfo name for std::nullptr_t const*
 dladdr@GLIBC_2.0
-_ZTIt
+typeinfo for unsigned short
 __wrap_statvfs64
-_ZTSPDs
-_ZTId
-_ZTSc
-_ZTSPj
-_ZTVN10__cxxabiv120__si_class_type_infoE
+typeinfo name for char16_t*
+typeinfo for double
+typeinfo name for char
+typeinfo name for unsigned int*
+vtable for __cxxabiv1::__si_class_type_info
 __vasprintf_chk@GLIBC_2.8
 __wrap_scandir
-_ZTIPi
-_ZTSPf
+typeinfo for int*
+typeinfo name for float*
 __wrap_chown
 __wrap_lchown
-_ZTSN10__cxxabiv115__forced_unwindE
-_ZTIPe
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo for long double*
 _init
-_ZTSs
+typeinfo name for short
 __wrap_fopen64
 geteuid@GLIBC_2.0
 GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309

@@ -38837,7 +38837,7 @@ var CLSTAMP = "9077229";
             (0, n.useEffect)(() => {
               r(!0);
             }, []),
-            t ? e.children : e.fallback ?? null
+            t ? e.children : (e.fallback ?? null)
           );
         }
         var o = r(11131),

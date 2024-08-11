@@ -4,96 +4,96 @@ _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
 __cxa_finalize
 _Jv_RegisterClasses
-_ZdlPv
+operator delete(void*)
 free
 _Unwind_Resume
 __gxx_personality_v0
-_ZNSs4_Rep10_M_destroyERKSaIcE
+std::string::_Rep::_M_destroy(std::allocator<char> const&)
 malloc
 memcpy
-_ZSt18_Rb_tree_decrementPSt18_Rb_tree_node_base
-_Znwj
-_ZSt29_Rb_tree_insert_and_rebalancebPSt18_Rb_tree_node_baseS0_RS_
-_ZNSs4_Rep20_S_empty_rep_storageE
+std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
+operator new(unsigned int)
+std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+std::string::_Rep::_S_empty_rep_storage
 strlen
-_ZNSs6assignEPKcj
-_ZNSsC1ERKSs
+std::string::assign(char const*, unsigned int)
+std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(std::string const&)
 strcasecmp
 strncpy
-_ZNSsC1EPKcRKSaIcE
+std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(char const*, std::allocator<char> const&)
 pthread_self
 pthread_getschedparam
 strncasecmp
-_ZNSt8__detail15_List_node_base7_M_hookEPS0_
+std::__detail::_List_node_base::_M_hook(std::__detail::_List_node_base*)
 sched_get_priority_max
 pthread_setschedparam
 __cxa_begin_catch
 __cxa_rethrow
 __cxa_end_catch
-_ZSt18_Rb_tree_incrementPKSt18_Rb_tree_node_base
-_ZSt20__throw_system_errori
-_ZSt28_Rb_tree_rebalance_for_erasePSt18_Rb_tree_node_baseRS_
-_ZSt9terminatev
+std::_Rb_tree_increment(std::_Rb_tree_node_base const*)
+std::__throw_system_error(int)
+std::_Rb_tree_rebalance_for_erase(std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)
+std::terminate()
 CreateWebRTCICESession
 __cxa_pure_virtual
 __pthread_key_create
 pthread_mutex_unlock
 pthread_mutex_lock
-_ZdaPv
-_Znaj
-_ZNSs6assignERKSs
-_ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E
-_ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE4findERS1_
+operator delete[](void*)
+operator new[](unsigned int)
+std::string::assign(std::string const&)
+std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::_M_erase(std::_Rb_tree_node<std::pair<std::string const, std::string>>*)
+std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::find(std::string const&)
 memcmp
-_ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE24_M_get_insert_unique_posERS1_
-_ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIOSsEESD_IIEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
-_ZSt18_Rb_tree_incrementPSt18_Rb_tree_node_base
-_ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJOSsEESD_IJEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
+std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::_M_get_insert_unique_pos(std::string const&)
+std::_Rb_tree_iterator<std::pair<std::string const, std::string>> std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<std::string&&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<std::string const, std::string>>, std::piecewise_construct_t const&, std::tuple<std::string&&>&&, std::tuple<>&&)
+std::_Rb_tree_increment(std::_Rb_tree_node_base*)
+std::_Rb_tree_iterator<std::pair<std::string const, std::string>> std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<std::string&&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<std::string const, std::string>>, std::piecewise_construct_t const&, std::tuple<std::string&&>&&, std::tuple<>&&)
 CreateWebRTCTURNServer
 __divdi3
-_ZNSt6vectorIjSaIjEE19_M_emplace_back_auxIIjEEEvDpOT_
-_ZNSt6vectorIjSaIjEE19_M_emplace_back_auxIJjEEEvDpOT_
-_ZNSt4pairIKSsSsED2Ev
-_ZNSt4pairIKSsSsED1Ev
-_ZSt20__throw_length_errorPKc
+void std::vector<unsigned int, std::allocator<unsigned int>>::_M_emplace_back_aux<unsigned int>(unsigned int&&)
+void std::vector<unsigned int, std::allocator<unsigned int>>::_M_emplace_back_aux<unsigned int>(unsigned int&&)
+std::pair<std::string const, std::string>::~pair()
+std::pair<std::string const, std::string>::~pair()
+std::__throw_length_error(char const*)
 memmove
-_ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE10_M_insert_IRKS2_EESt17_Rb_tree_iteratorIS2_EPSt18_Rb_tree_node_baseSF_OT_
-_ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE17_M_insert_unique_IRKS2_EESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EOT_
-_ZNKSs7compareEPKc
+std::_Rb_tree_iterator<std::pair<std::string const, std::string>> std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::_M_insert_<std::pair<std::string const, std::string> const&>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<std::string const, std::string> const&)
+std::_Rb_tree_iterator<std::pair<std::string const, std::string>> std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::_M_insert_unique_<std::pair<std::string const, std::string> const&>(std::_Rb_tree_const_iterator<std::pair<std::string const, std::string>>, std::pair<std::string const, std::string> const&)
+std::string::compare(char const*) const
 localeconv
 strncmp
-_ZNSs4_Rep9_S_createEjjRKSaIcE
-_ZNSs6appendEPKc
-_ZNSs6appendEPKcj
+std::string::_Rep::_S_create(unsigned int, unsigned int, std::allocator<char> const&)
+std::string::append(char const*)
+std::string::append(char const*, unsigned int)
 modf
-_ZNSt6vectorISsSaISsEED2Ev
-_ZNSt6vectorISsSaISsEED1Ev
-_ZNSs7reserveEj
-_ZSt17__throw_bad_allocv
-_ZNSt6vectorISsSaISsEE19_M_emplace_back_auxIISsEEEvDpOT_
-_ZNSt6vectorISsSaISsEE19_M_emplace_back_auxIJSsEEEvDpOT_
-_ZNSt12_Destroy_auxILb0EE9__destroyIPSsEEvT_S3_
+std::vector<std::string, std::allocator<std::string>>::~vector()
+std::vector<std::string, std::allocator<std::string>>::~vector()
+std::string::reserve(unsigned int)
+std::__throw_bad_alloc()
+void std::vector<std::string, std::allocator<std::string>>::_M_emplace_back_aux<std::string>(std::string&&)
+void std::vector<std::string, std::allocator<std::string>>::_M_emplace_back_aux<std::string>(std::string&&)
+void std::_Destroy_aux<false>::__destroy<std::string*>(std::string*, std::string*)
 strtod
-_ZSt20__throw_out_of_rangePKc
-_ZNSt8ios_base4InitC1Ev
-_ZNSt8ios_base4InitD1Ev
+std::__throw_out_of_range(char const*)
+std::ios_base::Init::Init()
+std::ios_base::Init::~Init()
 __cxa_atexit
-_ZNSsD1Ev
+std::basic_string<char, std::char_traits<char>, std::allocator<char>>::~basic_string()
 CreateWebRTCSession
-_ZNSt6vectorIhSaIhEE19_M_emplace_back_auxIJRKhEEEvDpOT_
-_ZNSt6vectorIhSaIhEE19_M_emplace_back_auxIIRKhEEEvDpOT_
-_ZNSt8__detail15_List_node_base9_M_unhookEv
+void std::vector<unsigned char, std::allocator<unsigned char>>::_M_emplace_back_aux<unsigned char const&>(unsigned char const&)
+void std::vector<unsigned char, std::allocator<unsigned char>>::_M_emplace_back_aux<unsigned char const&>(unsigned char const&)
+std::__detail::_List_node_base::_M_unhook()
 __cxa_guard_acquire
 __cxa_guard_release
-_ZNSs6appendERKSs
-_ZNSs9_M_mutateEjjj
-_ZNKSs4findEPKcjj
+std::string::append(std::string const&)
+std::string::_M_mutate(unsigned int, unsigned int, unsigned int)
+std::string::find(char const*, unsigned int, unsigned int) const
 fopen64
 fgets
 fclose
 __errno_location
-_ZNKSs4findEcj
-_ZNSsC1ERKSsjj
+std::string::find(char, unsigned int) const
+std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(std::string const&, unsigned int, unsigned int)
 in6addr_any
 getifaddrs
 freeifaddrs
@@ -118,21 +118,21 @@ epoll_ctl
 poll
 sigemptyset
 sigaction
-_ZNSt8_Rb_treeIiSt4pairIKiPFviEESt10_Select1stIS4_ESt4lessIiESaIS4_EE8_M_eraseEPSt13_Rb_tree_nodeIS4_E
-_ZNSt8_Rb_treeIiSt4pairIKiPFviEESt10_Select1stIS4_ESt4lessIiESaIS4_EE5eraseERS1_
+std::_Rb_tree<int, std::pair<int const, void (*)(int)>, std::_Select1st<std::pair<int const, void (*)(int)>>, std::less<int>, std::allocator<std::pair<int const, void (*)(int)>>>::_M_erase(std::_Rb_tree_node<std::pair<int const, void (*)(int)>>*)
+std::_Rb_tree<int, std::pair<int const, void (*)(int)>, std::_Select1st<std::pair<int const, void (*)(int)>>, std::less<int>, std::allocator<std::pair<int const, void (*)(int)>>>::erase(int const&)
 epoll_create
 __moddi3
 __fdelt_chk
 select
 epoll_wait
-_ZNSt8_Rb_treeIiSt4pairIKiPFviEESt10_Select1stIS4_ESt4lessIiESaIS4_EE24_M_get_insert_unique_posERS1_
-_ZNSt8_Rb_treeIiSt4pairIKiPFviEESt10_Select1stIS4_ESt4lessIiESaIS4_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS1_EESF_IJEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_
-_ZNSt8_Rb_treeIiSt4pairIKiPFviEESt10_Select1stIS4_ESt4lessIiESaIS4_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS1_EESF_IIEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_
-_ZNSs6insertEjPKcj
+std::_Rb_tree<int, std::pair<int const, void (*)(int)>, std::_Select1st<std::pair<int const, void (*)(int)>>, std::less<int>, std::allocator<std::pair<int const, void (*)(int)>>>::_M_get_insert_unique_pos(int const&)
+std::_Rb_tree_iterator<std::pair<int const, void (*)(int)>> std::_Rb_tree<int, std::pair<int const, void (*)(int)>, std::_Select1st<std::pair<int const, void (*)(int)>>, std::less<int>, std::allocator<std::pair<int const, void (*)(int)>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<int const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<int const, void (*)(int)>>, std::piecewise_construct_t const&, std::tuple<int const&>&&, std::tuple<>&&)
+std::_Rb_tree_iterator<std::pair<int const, void (*)(int)>> std::_Rb_tree<int, std::pair<int const, void (*)(int)>, std::_Select1st<std::pair<int const, void (*)(int)>>, std::less<int>, std::allocator<std::pair<int const, void (*)(int)>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<int const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<int const, void (*)(int)>>, std::piecewise_construct_t const&, std::tuple<int const&>&&, std::tuple<>&&)
+std::string::insert(unsigned int, char const*, unsigned int)
 strtoul
-_ZNKSs5rfindEcj
-_ZSt24__throw_out_of_range_fmtPKcz
-_ZN9__gnu_cxx12__to_xstringISscEET_PFiPT0_jPKS2_PcEjS5_z
+std::string::rfind(char, unsigned int) const
+std::__throw_out_of_range_fmt(char const*, ...)
+std::string __gnu_cxx::__to_xstring<std::string, char>(int (*)(char*, unsigned int, char const*, char*), unsigned int, char const*, ...)
 vsnprintf
 pthread_setspecific
 pthread_getspecific
@@ -142,23 +142,23 @@ pthread_join
 pthread_attr_init
 pthread_create
 __vsnprintf_chk
-_ZNSs6resizeEjc
-_ZNSs12_M_leak_hardEv
+std::string::resize(unsigned int, char)
+std::string::_M_leak_hard()
 stdout
 fflush
 stderr
 fputs
 abort
-_ZNSt6vectorIjSaIjEE17_M_default_appendEj
-_ZNSsC1EPKcjRKSaIcE
-_ZNSs4swapERSs
-_ZNSt6vectorISsSaISsEE12emplace_backIJSsEEEvDpOT_
-_ZNSt6vectorISsSaISsEE12emplace_backIISsEEEvDpOT_
-_ZNSt6vectorISsSaISsEE15_M_range_insertIN9__gnu_cxx17__normal_iteratorIPSsS1_EEEEvS6_T_S7_St20forward_iterator_tag
-_ZNSs7replaceEjjPKcj
-_ZNKSs17find_first_not_ofEPKcjj
-_ZNKSs16find_last_not_ofEPKcjj
-_ZNSsC1EjcRKSaIcE
+std::vector<unsigned int, std::allocator<unsigned int>>::_M_default_append(unsigned int)
+std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(char const*, unsigned int, std::allocator<char> const&)
+std::string::swap(std::string&)
+void std::vector<std::string, std::allocator<std::string>>::emplace_back<std::string>(std::string&&)
+void std::vector<std::string, std::allocator<std::string>>::emplace_back<std::string>(std::string&&)
+void std::vector<std::string, std::allocator<std::string>>::_M_range_insert<__gnu_cxx::__normal_iterator<std::string*, std::vector<std::string, std::allocator<std::string>>>>(__gnu_cxx::__normal_iterator<std::string*, std::vector<std::string, std::allocator<std::string>>>, __gnu_cxx::__normal_iterator<std::string*, std::vector<std::string, std::allocator<std::string>>>, __gnu_cxx::__normal_iterator<std::string*, std::vector<std::string, std::allocator<std::string>>>, std::forward_iterator_tag)
+std::string::replace(unsigned int, unsigned int, char const*, unsigned int)
+std::string::find_first_not_of(char const*, unsigned int, unsigned int) const
+std::string::find_last_not_of(char const*, unsigned int, unsigned int) const
+std::basic_string<char, std::char_traits<char>, std::allocator<char>>::basic_string(unsigned int, char, std::allocator<char> const&)
 fwrite
 pthread_mutexattr_init
 pthread_mutexattr_settype
@@ -183,116 +183,116 @@ pthread_cond_destroy
 pthread_cond_broadcast
 pthread_cond_timedwait
 pthread_cond_wait
-_ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE7_M_copyINS8_20_Reuse_or_alloc_nodeEEEPSt13_Rb_tree_nodeIS2_EPKSC_SD_RT_
-_ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE7_M_copyINS8_11_Alloc_nodeEEEPSt13_Rb_tree_nodeIS2_EPKSC_SD_RT_
-_ZSteqIcEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKSbIS3_St11char_traitsIS3_ESaIS3_EESC_
-_ZNSt10_HashtableISsSt4pairIKSsSsESaIS2_ENSt8__detail10_Select1stESt8equal_toISsESt4hashISsENS4_18_Mod_range_hashingENS4_20_Default_ranged_hashENS4_20_Prime_rehash_policyENS4_17_Hashtable_traitsILb1ELb0ELb1EEEED2Ev
+std::_Rb_tree_node<std::pair<std::string const, std::string>>* std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::_M_copy<std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::_Reuse_or_alloc_node>(std::_Rb_tree_node<std::pair<std::string const, std::string>> const*, std::_Rb_tree_node<std::pair<std::string const, std::string>>*, std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::_Reuse_or_alloc_node&)
+std::_Rb_tree_node<std::pair<std::string const, std::string>>* std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::_M_copy<std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::_Alloc_node>(std::_Rb_tree_node<std::pair<std::string const, std::string>> const*, std::_Rb_tree_node<std::pair<std::string const, std::string>>*, std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::_Alloc_node&)
+__gnu_cxx::__enable_if<std::__is_char<char>::__value, bool>::__type std::operator==<char>(std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
+std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string>>, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true>>::~_Hashtable()
 memset
-_ZNSt10_HashtableISsSt4pairIKSsSsESaIS2_ENSt8__detail10_Select1stESt8equal_toISsESt4hashISsENS4_18_Mod_range_hashingENS4_20_Default_ranged_hashENS4_20_Prime_rehash_policyENS4_17_Hashtable_traitsILb1ELb0ELb1EEEED1Ev
-_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKSsSsELb1EEEEE16_M_allocate_nodeIJRKS4_EEEPS5_DpOT_
-_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKSsSsELb1EEEEE16_M_allocate_nodeIIRKS4_EEEPS5_DpOT_
+std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string>>, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true>>::~_Hashtable()
+std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>* std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>>>::_M_allocate_node<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&)
+std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>* std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>>>::_M_allocate_node<std::pair<std::string const, std::string> const&>(std::pair<std::string const, std::string> const&)
 pthread_rwlock_destroy
 pthread_rwlock_wrlock
 pthread_rwlock_unlock
 pthread_rwlock_rdlock
 pthread_rwlock_init
-_ZNSt6vectorIfSaIfEE17_M_default_appendEj
-_ZNSt6vectorIsSaIsEE17_M_default_appendEj
-_ZNSt6vectorIfSaIfEE15_M_range_insertIPKfEEvN9__gnu_cxx17__normal_iteratorIPfS1_EET_S9_St20forward_iterator_tag
-_ZNSt6vectorIsSaIsEE15_M_range_insertIPKsEEvN9__gnu_cxx17__normal_iteratorIPsS1_EET_S9_St20forward_iterator_tag
+std::vector<float, std::allocator<float>>::_M_default_append(unsigned int)
+std::vector<short, std::allocator<short>>::_M_default_append(unsigned int)
+void std::vector<float, std::allocator<float>>::_M_range_insert<float const*>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float>>>, float const*, float const*, std::forward_iterator_tag)
+void std::vector<short, std::allocator<short>>::_M_range_insert<short const*>(__gnu_cxx::__normal_iterator<short*, std::vector<short, std::allocator<short>>>, short const*, short const*, std::forward_iterator_tag)
 powf
-_ZNSt6vectorIfSaIfEE15_M_range_insertIPfEEvN9__gnu_cxx17__normal_iteratorIS3_S1_EET_S7_St20forward_iterator_tag
+void std::vector<float, std::allocator<float>>::_M_range_insert<float*>(__gnu_cxx::__normal_iterator<float*, std::vector<float, std::allocator<float>>>, float*, float*, std::forward_iterator_tag)
 log10
 sqrtf
 sincosf
 logf
 tanh
 expf
-_ZNSt8_Rb_treeIiSt4pairIKiiESt10_Select1stIS2_ESt4lessIiESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E
-_ZNSt8_Rb_treeIiSt4pairIKiiESt10_Select1stIS2_ESt4lessIiESaIS2_EE24_M_get_insert_unique_posERS1_
-_ZNSt8_Rb_treeIiSt4pairIKiiESt10_Select1stIS2_ESt4lessIiESaIS2_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS1_EESD_IJEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
-_ZNSt8_Rb_treeIiSt4pairIKiiESt10_Select1stIS2_ESt4lessIiESaIS2_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS1_EESD_IIEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
+std::_Rb_tree<int, std::pair<int const, int>, std::_Select1st<std::pair<int const, int>>, std::less<int>, std::allocator<std::pair<int const, int>>>::_M_erase(std::_Rb_tree_node<std::pair<int const, int>>*)
+std::_Rb_tree<int, std::pair<int const, int>, std::_Select1st<std::pair<int const, int>>, std::less<int>, std::allocator<std::pair<int const, int>>>::_M_get_insert_unique_pos(int const&)
+std::_Rb_tree_iterator<std::pair<int const, int>> std::_Rb_tree<int, std::pair<int const, int>, std::_Select1st<std::pair<int const, int>>, std::less<int>, std::allocator<std::pair<int const, int>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<int const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<int const, int>>, std::piecewise_construct_t const&, std::tuple<int const&>&&, std::tuple<>&&)
+std::_Rb_tree_iterator<std::pair<int const, int>> std::_Rb_tree<int, std::pair<int const, int>, std::_Select1st<std::pair<int const, int>>, std::less<int>, std::allocator<std::pair<int const, int>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<int const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<int const, int>>, std::piecewise_construct_t const&, std::tuple<int const&>&&, std::tuple<>&&)
 __memcpy_chk
 qsort
 floorf
 floor
-_ZNSt6vectorIdSaIdEE17_M_default_appendEj
+std::vector<double, std::allocator<double>>::_M_default_append(unsigned int)
 log10f
 __mulsc3
 cabsf
 strtol
-_ZNKSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE4findERS1_
-_ZNSt8_Rb_treeIiSt4pairIKiiESt10_Select1stIS2_ESt4lessIiESaIS2_EE7_M_copyINS8_20_Reuse_or_alloc_nodeEEEPSt13_Rb_tree_nodeIS2_EPKSC_SD_RT_
-_ZNSt8_Rb_treeIiSt4pairIKiiESt10_Select1stIS2_ESt4lessIiESaIS2_EE7_M_copyINS8_11_Alloc_nodeEEEPSt13_Rb_tree_nodeIS2_EPKSC_SD_RT_
-_ZNSt6vectorIjSaIjEEaSERKS1_
-_ZNSt6vectorIiSaIiEEaSERKS1_
+std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::find(std::string const&) const
+std::_Rb_tree_node<std::pair<int const, int>>* std::_Rb_tree<int, std::pair<int const, int>, std::_Select1st<std::pair<int const, int>>, std::less<int>, std::allocator<std::pair<int const, int>>>::_M_copy<std::_Rb_tree<int, std::pair<int const, int>, std::_Select1st<std::pair<int const, int>>, std::less<int>, std::allocator<std::pair<int const, int>>>::_Reuse_or_alloc_node>(std::_Rb_tree_node<std::pair<int const, int>> const*, std::_Rb_tree_node<std::pair<int const, int>>*, std::_Rb_tree<int, std::pair<int const, int>, std::_Select1st<std::pair<int const, int>>, std::less<int>, std::allocator<std::pair<int const, int>>>::_Reuse_or_alloc_node&)
+std::_Rb_tree_node<std::pair<int const, int>>* std::_Rb_tree<int, std::pair<int const, int>, std::_Select1st<std::pair<int const, int>>, std::less<int>, std::allocator<std::pair<int const, int>>>::_M_copy<std::_Rb_tree<int, std::pair<int const, int>, std::_Select1st<std::pair<int const, int>>, std::less<int>, std::allocator<std::pair<int const, int>>>::_Alloc_node>(std::_Rb_tree_node<std::pair<int const, int>> const*, std::_Rb_tree_node<std::pair<int const, int>>*, std::_Rb_tree<int, std::pair<int const, int>, std::_Select1st<std::pair<int const, int>>, std::less<int>, std::allocator<std::pair<int const, int>>>::_Alloc_node&)
+std::vector<unsigned int, std::allocator<unsigned int>>::operator=(std::vector<unsigned int, std::allocator<unsigned int>> const&)
+std::vector<int, std::allocator<int>>::operator=(std::vector<int, std::allocator<int>> const&)
 ceil
-_ZNSt6vectorIbSaIbEE14_M_fill_insertESt13_Bit_iteratorjb
-_ZNSt6vectorIjSaIjEE12emplace_backIJjEEEvDpOT_
-_ZNSt6vectorIjSaIjEE12emplace_backIIjEEEvDpOT_
-_ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EEaSERKS8_
-_ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS1_EESD_IJEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
-_ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS1_EESD_IIEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
-_ZNSt10_HashtableISsSt4pairIKSsSsESaIS2_ENSt8__detail10_Select1stESt8equal_toISsESt4hashISsENS4_18_Mod_range_hashingENS4_20_Default_ranged_hashENS4_20_Prime_rehash_policyENS4_17_Hashtable_traitsILb1ELb0ELb1EEEE13_M_rehash_auxEjSt17integral_constantIbLb1EE
-_ZNSt8__detail12_Insert_baseISsSt4pairIKSsSsESaIS3_ENS_10_Select1stESt8equal_toISsESt4hashISsENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_20_Prime_rehash_policyENS_17_Hashtable_traitsILb1ELb0ELb1EEEE15_M_insert_rangeISt23_Rb_tree_const_iteratorIS3_ENS_10_AllocNodeISaINS_10_Hash_nodeIS3_Lb1EEEEEEEEvT_SO_RKT0_
-_ZNKSt8__detail20_Prime_rehash_policy14_M_need_rehashEjjj
-_ZSt11_Hash_bytesPKvjj
-_ZNSt8_Rb_treeIN3rtc6Socket6OptionESt4pairIKS2_iESt10_Select1stIS5_ESt4lessIS2_ESaIS5_EE8_M_eraseEPSt13_Rb_tree_nodeIS5_E
-_ZNSt8_Rb_treeIN3rtc6Socket6OptionESt4pairIKS2_iESt10_Select1stIS5_ESt4lessIS2_ESaIS5_EE16_M_insert_uniqueIS3_IS2_iEEES3_ISt17_Rb_tree_iteratorIS5_EbEOT_
-_ZSt7nothrow
-_ZnwjRKSt9nothrow_t
-_ZdlPvRKSt9nothrow_t
+std::vector<bool, std::allocator<bool>>::_M_fill_insert(std::_Bit_iterator, unsigned int, bool)
+void std::vector<unsigned int, std::allocator<unsigned int>>::emplace_back<unsigned int>(unsigned int&&)
+void std::vector<unsigned int, std::allocator<unsigned int>>::emplace_back<unsigned int>(unsigned int&&)
+std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::operator=(std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>> const&)
+std::_Rb_tree_iterator<std::pair<std::string const, std::string>> std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<std::string const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<std::string const, std::string>>, std::piecewise_construct_t const&, std::tuple<std::string const&>&&, std::tuple<>&&)
+std::_Rb_tree_iterator<std::pair<std::string const, std::string>> std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<std::string const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<std::string const, std::string>>, std::piecewise_construct_t const&, std::tuple<std::string const&>&&, std::tuple<>&&)
+std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string>>, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true>>::_M_rehash_aux(unsigned int, std::integral_constant<bool, true>)
+void std::__detail::_Insert_base<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string>>, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true>>::_M_insert_range<std::_Rb_tree_const_iterator<std::pair<std::string const, std::string>>, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>>>>(std::_Rb_tree_const_iterator<std::pair<std::string const, std::string>>, std::_Rb_tree_const_iterator<std::pair<std::string const, std::string>>, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<std::pair<std::string const, std::string>, true>>> const&)
+std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned int, unsigned int, unsigned int) const
+std::_Hash_bytes(void const*, unsigned int, unsigned int)
+std::_Rb_tree<rtc::Socket::Option, std::pair<rtc::Socket::Option const, int>, std::_Select1st<std::pair<rtc::Socket::Option const, int>>, std::less<rtc::Socket::Option>, std::allocator<std::pair<rtc::Socket::Option const, int>>>::_M_erase(std::_Rb_tree_node<std::pair<rtc::Socket::Option const, int>>*)
+std::pair<std::_Rb_tree_iterator<std::pair<rtc::Socket::Option const, int>>, bool> std::_Rb_tree<rtc::Socket::Option, std::pair<rtc::Socket::Option const, int>, std::_Select1st<std::pair<rtc::Socket::Option const, int>>, std::less<rtc::Socket::Option>, std::allocator<std::pair<rtc::Socket::Option const, int>>>::_M_insert_unique<std::pair<rtc::Socket::Option, int>>(std::pair<rtc::Socket::Option, int>&&)
+std::nothrow
+operator new(unsigned int, std::nothrow_t const&)
+operator delete(void*, std::nothrow_t const&)
 round
-_ZNSt6vectorISsSaISsEEaSERKS1_
-_ZNSt6vectorItSaItEE19_M_emplace_back_auxIJRKtEEEvDpOT_
-_ZNSt6vectorItSaItEE19_M_emplace_back_auxIIRKtEEEvDpOT_
-_ZSt25__throw_bad_function_callv
-_ZNSt8_Rb_treeISsSsSt9_IdentityISsESt4lessISsESaISsEE8_M_eraseEPSt13_Rb_tree_nodeISsE
-_ZNKSt8_Rb_treeISsSsSt9_IdentityISsESt4lessISsESaISsEE4findERKSs
-_ZNSt8_Rb_treeISsSsSt9_IdentityISsESt4lessISsESaISsEE7_M_copyINS5_11_Alloc_nodeEEEPSt13_Rb_tree_nodeISsEPKS9_SA_RT_
-_ZNSt6vectorIjSaIjEE19_M_emplace_back_auxIJRKjEEEvDpOT_
-_ZNSt6vectorIjSaIjEE19_M_emplace_back_auxIIRKjEEEvDpOT_
-_ZNSt8_Rb_treeIjjSt9_IdentityIjESt4lessIjESaIjEE8_M_eraseEPSt13_Rb_tree_nodeIjE
-_ZNSt8_Rb_treeIjjSt9_IdentityIjESt4lessIjESaIjEE16_M_insert_uniqueIRKjEESt4pairISt17_Rb_tree_iteratorIjEbEOT_
-_ZNSt8_Rb_treeIjjSt9_IdentityIjESt4lessIjESaIjEE5eraseERKj
-_ZNSt8_Rb_treeIiSt4pairIKibESt10_Select1stIS2_ESt4lessIiESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E
-_ZNSt8_Rb_treeIiSt4pairIKiN7cricket10VideoCodec9CodecTypeEESt10_Select1stIS5_ESt4lessIiESaIS5_EE8_M_eraseEPSt13_Rb_tree_nodeIS5_E
-_ZNSt6vectorIjSaIjEE13_M_assign_auxIPKjEEvT_S5_St20forward_iterator_tag
-_ZNSt8_Rb_treeIiSt4pairIKibESt10_Select1stIS2_ESt4lessIiESaIS2_EE24_M_get_insert_unique_posERS1_
-_ZNSt8_Rb_treeIiSt4pairIKibESt10_Select1stIS2_ESt4lessIiESaIS2_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS1_EESD_IJEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
-_ZNSt8_Rb_treeIiSt4pairIKibESt10_Select1stIS2_ESt4lessIiESaIS2_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS1_EESD_IIEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
-_ZNSt8_Rb_treeIiSt4pairIKiN7cricket10VideoCodec9CodecTypeEESt10_Select1stIS5_ESt4lessIiESaIS5_EE24_M_get_insert_unique_posERS1_
-_ZNSt8_Rb_treeIiSt4pairIKiN7cricket10VideoCodec9CodecTypeEESt10_Select1stIS5_ESt4lessIiESaIS5_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS1_EESG_IJEEEEESt17_Rb_tree_iteratorIS5_ESt23_Rb_tree_const_iteratorIS5_EDpOT_
-_ZNSt8_Rb_treeIiSt4pairIKiN7cricket10VideoCodec9CodecTypeEESt10_Select1stIS5_ESt4lessIiESaIS5_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS1_EESG_IIEEEEESt17_Rb_tree_iteratorIS5_ESt23_Rb_tree_const_iteratorIS5_EDpOT_
-_ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS2_ERS1_
-_ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE16_M_assign_uniqueIPKS2_EEvT_SC_
-_ZNSt10_HashtableISsSt4pairIKSsSsESaIS2_ENSt8__detail10_Select1stESt8equal_toISsESt4hashISsENS4_18_Mod_range_hashingENS4_20_Default_ranged_hashENS4_20_Prime_rehash_policyENS4_17_Hashtable_traitsILb1ELb0ELb1EEEEaSERKSF_
-_ZNSt8_Rb_treeIiSt4pairIKibESt10_Select1stIS2_ESt7greaterIiESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E
-_ZNSt8_Rb_treeIiSt4pairIKibESt10_Select1stIS2_ESt7greaterIiESaIS2_EE24_M_get_insert_unique_posERS1_
-_ZNSt6vectorIN6webrtc9FrameTypeESaIS1_EE19_M_emplace_back_auxIJS1_EEEvDpOT_
-_ZNSt6vectorIN6webrtc9FrameTypeESaIS1_EE19_M_emplace_back_auxIIS1_EEEvDpOT_
-_ZNSt6vectorIN6webrtc9FrameTypeESaIS1_EE12emplace_backIJS1_EEEvDpOT_
-_ZNSt6vectorIN6webrtc9FrameTypeESaIS1_EE12emplace_backIIS1_EEEvDpOT_
-_ZNSt6vectorIiSaIiEE17_M_default_appendEj
-_ZNSt6vectorISt4pairIN6webrtc18Vp8BufferReferenceEjESaIS3_EE12emplace_backIJS2_RjEEEvDpOT_
-_ZNSt6vectorISt4pairIN6webrtc18Vp8BufferReferenceEjESaIS3_EE12emplace_backIIS2_RjEEEvDpOT_
-_ZNSt8_Rb_treeIN6webrtc18Vp8BufferReferenceES1_St9_IdentityIS1_ESt4lessIS1_ESaIS1_EE8_M_eraseEPSt13_Rb_tree_nodeIS1_E
-_ZNSt8_Rb_treeIN6webrtc18Vp8BufferReferenceESt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE8_M_eraseEPSt13_Rb_tree_nodeIS4_E
-_ZNSt8_Rb_treeIhhSt9_IdentityIhESt4lessIhESaIhEE8_M_eraseEPSt13_Rb_tree_nodeIhE
-_ZNSt6vectorIiSaIiEE12emplace_backIJiEEEvDpOT_
-_ZNSt6vectorIiSaIiEE12emplace_backIIiEEEvDpOT_
-_ZNSt8_Rb_treeIN6webrtc18Vp8BufferReferenceESt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE14_M_insert_nodeEPSt18_Rb_tree_node_baseSC_PSt13_Rb_tree_nodeIS4_E
-_ZNSt8_Rb_treeIN6webrtc18Vp8BufferReferenceESt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE24_M_get_insert_unique_posERS3_
-_ZNSt8_Rb_treeIN6webrtc18Vp8BufferReferenceESt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS4_ERS3_
-_ZNSt8_Rb_treeIN6webrtc18Vp8BufferReferenceESt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS3_EESF_IJEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_
-_ZNSt8_Rb_treeIN6webrtc18Vp8BufferReferenceESt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS3_EESF_IIEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_
-_ZNSt8_Rb_treeIN6webrtc18Vp8BufferReferenceESt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJOS1_EESF_IJEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_
-_ZNSt8_Rb_treeIN6webrtc18Vp8BufferReferenceESt4pairIKS1_jESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIOS1_EESF_IIEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_
-_ZNSt8_Rb_treeIN6webrtc18Vp8BufferReferenceES1_St9_IdentityIS1_ESt4lessIS1_ESaIS1_EE24_M_get_insert_unique_posERKS1_
-_ZNSt8_Rb_treeIhhSt9_IdentityIhESt4lessIhESaIhEE24_M_get_insert_unique_posERKh
-_ZNSt3setIhSt4lessIhESaIhEEC2ESt16initializer_listIhERKS1_RKS2_
-_ZNSt3setIhSt4lessIhESaIhEEC1ESt16initializer_listIhERKS1_RKS2_
-_ZNSt8_Rb_treeIhhSt9_IdentityIhESt4lessIhESaIhEE7_M_copyINS5_11_Alloc_nodeEEEPSt13_Rb_tree_nodeIhEPKS9_SA_RT_
+std::vector<std::string, std::allocator<std::string>>::operator=(std::vector<std::string, std::allocator<std::string>> const&)
+void std::vector<unsigned short, std::allocator<unsigned short>>::_M_emplace_back_aux<unsigned short const&>(unsigned short const&)
+void std::vector<unsigned short, std::allocator<unsigned short>>::_M_emplace_back_aux<unsigned short const&>(unsigned short const&)
+std::__throw_bad_function_call()
+std::_Rb_tree<std::string, std::string, std::_Identity<std::string>, std::less<std::string>, std::allocator<std::string>>::_M_erase(std::_Rb_tree_node<std::string>*)
+std::_Rb_tree<std::string, std::string, std::_Identity<std::string>, std::less<std::string>, std::allocator<std::string>>::find(std::string const&) const
+std::_Rb_tree_node<std::string>* std::_Rb_tree<std::string, std::string, std::_Identity<std::string>, std::less<std::string>, std::allocator<std::string>>::_M_copy<std::_Rb_tree<std::string, std::string, std::_Identity<std::string>, std::less<std::string>, std::allocator<std::string>>::_Alloc_node>(std::_Rb_tree_node<std::string> const*, std::_Rb_tree_node<std::string>*, std::_Rb_tree<std::string, std::string, std::_Identity<std::string>, std::less<std::string>, std::allocator<std::string>>::_Alloc_node&)
+void std::vector<unsigned int, std::allocator<unsigned int>>::_M_emplace_back_aux<unsigned int const&>(unsigned int const&)
+void std::vector<unsigned int, std::allocator<unsigned int>>::_M_emplace_back_aux<unsigned int const&>(unsigned int const&)
+std::_Rb_tree<unsigned int, unsigned int, std::_Identity<unsigned int>, std::less<unsigned int>, std::allocator<unsigned int>>::_M_erase(std::_Rb_tree_node<unsigned int>*)
+std::pair<std::_Rb_tree_iterator<unsigned int>, bool> std::_Rb_tree<unsigned int, unsigned int, std::_Identity<unsigned int>, std::less<unsigned int>, std::allocator<unsigned int>>::_M_insert_unique<unsigned int const&>(unsigned int const&)
+std::_Rb_tree<unsigned int, unsigned int, std::_Identity<unsigned int>, std::less<unsigned int>, std::allocator<unsigned int>>::erase(unsigned int const&)
+std::_Rb_tree<int, std::pair<int const, bool>, std::_Select1st<std::pair<int const, bool>>, std::less<int>, std::allocator<std::pair<int const, bool>>>::_M_erase(std::_Rb_tree_node<std::pair<int const, bool>>*)
+std::_Rb_tree<int, std::pair<int const, cricket::VideoCodec::CodecType>, std::_Select1st<std::pair<int const, cricket::VideoCodec::CodecType>>, std::less<int>, std::allocator<std::pair<int const, cricket::VideoCodec::CodecType>>>::_M_erase(std::_Rb_tree_node<std::pair<int const, cricket::VideoCodec::CodecType>>*)
+void std::vector<unsigned int, std::allocator<unsigned int>>::_M_assign_aux<unsigned int const*>(unsigned int const*, unsigned int const*, std::forward_iterator_tag)
+std::_Rb_tree<int, std::pair<int const, bool>, std::_Select1st<std::pair<int const, bool>>, std::less<int>, std::allocator<std::pair<int const, bool>>>::_M_get_insert_unique_pos(int const&)
+std::_Rb_tree_iterator<std::pair<int const, bool>> std::_Rb_tree<int, std::pair<int const, bool>, std::_Select1st<std::pair<int const, bool>>, std::less<int>, std::allocator<std::pair<int const, bool>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<int const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<int const, bool>>, std::piecewise_construct_t const&, std::tuple<int const&>&&, std::tuple<>&&)
+std::_Rb_tree_iterator<std::pair<int const, bool>> std::_Rb_tree<int, std::pair<int const, bool>, std::_Select1st<std::pair<int const, bool>>, std::less<int>, std::allocator<std::pair<int const, bool>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<int const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<int const, bool>>, std::piecewise_construct_t const&, std::tuple<int const&>&&, std::tuple<>&&)
+std::_Rb_tree<int, std::pair<int const, cricket::VideoCodec::CodecType>, std::_Select1st<std::pair<int const, cricket::VideoCodec::CodecType>>, std::less<int>, std::allocator<std::pair<int const, cricket::VideoCodec::CodecType>>>::_M_get_insert_unique_pos(int const&)
+std::_Rb_tree_iterator<std::pair<int const, cricket::VideoCodec::CodecType>> std::_Rb_tree<int, std::pair<int const, cricket::VideoCodec::CodecType>, std::_Select1st<std::pair<int const, cricket::VideoCodec::CodecType>>, std::less<int>, std::allocator<std::pair<int const, cricket::VideoCodec::CodecType>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<int const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<int const, cricket::VideoCodec::CodecType>>, std::piecewise_construct_t const&, std::tuple<int const&>&&, std::tuple<>&&)
+std::_Rb_tree_iterator<std::pair<int const, cricket::VideoCodec::CodecType>> std::_Rb_tree<int, std::pair<int const, cricket::VideoCodec::CodecType>, std::_Select1st<std::pair<int const, cricket::VideoCodec::CodecType>>, std::less<int>, std::allocator<std::pair<int const, cricket::VideoCodec::CodecType>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<int const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<int const, cricket::VideoCodec::CodecType>>, std::piecewise_construct_t const&, std::tuple<int const&>&&, std::tuple<>&&)
+std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<std::string const, std::string>>, std::string const&)
+void std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::_M_assign_unique<std::pair<std::string const, std::string> const*>(std::pair<std::string const, std::string> const*, std::pair<std::string const, std::string> const*)
+std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string>>, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true>>::operator=(std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string>>, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true>> const&)
+std::_Rb_tree<int, std::pair<int const, bool>, std::_Select1st<std::pair<int const, bool>>, std::greater<int>, std::allocator<std::pair<int const, bool>>>::_M_erase(std::_Rb_tree_node<std::pair<int const, bool>>*)
+std::_Rb_tree<int, std::pair<int const, bool>, std::_Select1st<std::pair<int const, bool>>, std::greater<int>, std::allocator<std::pair<int const, bool>>>::_M_get_insert_unique_pos(int const&)
+void std::vector<webrtc::FrameType, std::allocator<webrtc::FrameType>>::_M_emplace_back_aux<webrtc::FrameType>(webrtc::FrameType&&)
+void std::vector<webrtc::FrameType, std::allocator<webrtc::FrameType>>::_M_emplace_back_aux<webrtc::FrameType>(webrtc::FrameType&&)
+void std::vector<webrtc::FrameType, std::allocator<webrtc::FrameType>>::emplace_back<webrtc::FrameType>(webrtc::FrameType&&)
+void std::vector<webrtc::FrameType, std::allocator<webrtc::FrameType>>::emplace_back<webrtc::FrameType>(webrtc::FrameType&&)
+std::vector<int, std::allocator<int>>::_M_default_append(unsigned int)
+void std::vector<std::pair<webrtc::Vp8BufferReference, unsigned int>, std::allocator<std::pair<webrtc::Vp8BufferReference, unsigned int>>>::emplace_back<webrtc::Vp8BufferReference, unsigned int&>(webrtc::Vp8BufferReference&&, unsigned int&)
+void std::vector<std::pair<webrtc::Vp8BufferReference, unsigned int>, std::allocator<std::pair<webrtc::Vp8BufferReference, unsigned int>>>::emplace_back<webrtc::Vp8BufferReference, unsigned int&>(webrtc::Vp8BufferReference&&, unsigned int&)
+std::_Rb_tree<webrtc::Vp8BufferReference, webrtc::Vp8BufferReference, std::_Identity<webrtc::Vp8BufferReference>, std::less<webrtc::Vp8BufferReference>, std::allocator<webrtc::Vp8BufferReference>>::_M_erase(std::_Rb_tree_node<webrtc::Vp8BufferReference>*)
+std::_Rb_tree<webrtc::Vp8BufferReference, std::pair<webrtc::Vp8BufferReference const, unsigned int>, std::_Select1st<std::pair<webrtc::Vp8BufferReference const, unsigned int>>, std::less<webrtc::Vp8BufferReference>, std::allocator<std::pair<webrtc::Vp8BufferReference const, unsigned int>>>::_M_erase(std::_Rb_tree_node<std::pair<webrtc::Vp8BufferReference const, unsigned int>>*)
+std::_Rb_tree<unsigned char, unsigned char, std::_Identity<unsigned char>, std::less<unsigned char>, std::allocator<unsigned char>>::_M_erase(std::_Rb_tree_node<unsigned char>*)
+void std::vector<int, std::allocator<int>>::emplace_back<int>(int&&)
+void std::vector<int, std::allocator<int>>::emplace_back<int>(int&&)
+std::_Rb_tree<webrtc::Vp8BufferReference, std::pair<webrtc::Vp8BufferReference const, unsigned int>, std::_Select1st<std::pair<webrtc::Vp8BufferReference const, unsigned int>>, std::less<webrtc::Vp8BufferReference>, std::allocator<std::pair<webrtc::Vp8BufferReference const, unsigned int>>>::_M_insert_node(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node<std::pair<webrtc::Vp8BufferReference const, unsigned int>>*)
+std::_Rb_tree<webrtc::Vp8BufferReference, std::pair<webrtc::Vp8BufferReference const, unsigned int>, std::_Select1st<std::pair<webrtc::Vp8BufferReference const, unsigned int>>, std::less<webrtc::Vp8BufferReference>, std::allocator<std::pair<webrtc::Vp8BufferReference const, unsigned int>>>::_M_get_insert_unique_pos(webrtc::Vp8BufferReference const&)
+std::_Rb_tree<webrtc::Vp8BufferReference, std::pair<webrtc::Vp8BufferReference const, unsigned int>, std::_Select1st<std::pair<webrtc::Vp8BufferReference const, unsigned int>>, std::less<webrtc::Vp8BufferReference>, std::allocator<std::pair<webrtc::Vp8BufferReference const, unsigned int>>>::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<webrtc::Vp8BufferReference const, unsigned int>>, webrtc::Vp8BufferReference const&)
+std::_Rb_tree_iterator<std::pair<webrtc::Vp8BufferReference const, unsigned int>> std::_Rb_tree<webrtc::Vp8BufferReference, std::pair<webrtc::Vp8BufferReference const, unsigned int>, std::_Select1st<std::pair<webrtc::Vp8BufferReference const, unsigned int>>, std::less<webrtc::Vp8BufferReference>, std::allocator<std::pair<webrtc::Vp8BufferReference const, unsigned int>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<webrtc::Vp8BufferReference const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<webrtc::Vp8BufferReference const, unsigned int>>, std::piecewise_construct_t const&, std::tuple<webrtc::Vp8BufferReference const&>&&, std::tuple<>&&)
+std::_Rb_tree_iterator<std::pair<webrtc::Vp8BufferReference const, unsigned int>> std::_Rb_tree<webrtc::Vp8BufferReference, std::pair<webrtc::Vp8BufferReference const, unsigned int>, std::_Select1st<std::pair<webrtc::Vp8BufferReference const, unsigned int>>, std::less<webrtc::Vp8BufferReference>, std::allocator<std::pair<webrtc::Vp8BufferReference const, unsigned int>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<webrtc::Vp8BufferReference const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<webrtc::Vp8BufferReference const, unsigned int>>, std::piecewise_construct_t const&, std::tuple<webrtc::Vp8BufferReference const&>&&, std::tuple<>&&)
+std::_Rb_tree_iterator<std::pair<webrtc::Vp8BufferReference const, unsigned int>> std::_Rb_tree<webrtc::Vp8BufferReference, std::pair<webrtc::Vp8BufferReference const, unsigned int>, std::_Select1st<std::pair<webrtc::Vp8BufferReference const, unsigned int>>, std::less<webrtc::Vp8BufferReference>, std::allocator<std::pair<webrtc::Vp8BufferReference const, unsigned int>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<webrtc::Vp8BufferReference&&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<webrtc::Vp8BufferReference const, unsigned int>>, std::piecewise_construct_t const&, std::tuple<webrtc::Vp8BufferReference&&>&&, std::tuple<>&&)
+std::_Rb_tree_iterator<std::pair<webrtc::Vp8BufferReference const, unsigned int>> std::_Rb_tree<webrtc::Vp8BufferReference, std::pair<webrtc::Vp8BufferReference const, unsigned int>, std::_Select1st<std::pair<webrtc::Vp8BufferReference const, unsigned int>>, std::less<webrtc::Vp8BufferReference>, std::allocator<std::pair<webrtc::Vp8BufferReference const, unsigned int>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<webrtc::Vp8BufferReference&&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<webrtc::Vp8BufferReference const, unsigned int>>, std::piecewise_construct_t const&, std::tuple<webrtc::Vp8BufferReference&&>&&, std::tuple<>&&)
+std::_Rb_tree<webrtc::Vp8BufferReference, webrtc::Vp8BufferReference, std::_Identity<webrtc::Vp8BufferReference>, std::less<webrtc::Vp8BufferReference>, std::allocator<webrtc::Vp8BufferReference>>::_M_get_insert_unique_pos(webrtc::Vp8BufferReference const&)
+std::_Rb_tree<unsigned char, unsigned char, std::_Identity<unsigned char>, std::less<unsigned char>, std::allocator<unsigned char>>::_M_get_insert_unique_pos(unsigned char const&)
+std::set<unsigned char, std::less<unsigned char>, std::allocator<unsigned char>>::set(std::initializer_list<unsigned char>, std::less<unsigned char> const&, std::allocator<unsigned char> const&)
+std::set<unsigned char, std::less<unsigned char>, std::allocator<unsigned char>>::set(std::initializer_list<unsigned char>, std::less<unsigned char> const&, std::allocator<unsigned char> const&)
+std::_Rb_tree_node<unsigned char>* std::_Rb_tree<unsigned char, unsigned char, std::_Identity<unsigned char>, std::less<unsigned char>, std::allocator<unsigned char>>::_M_copy<std::_Rb_tree<unsigned char, unsigned char, std::_Identity<unsigned char>, std::less<unsigned char>, std::allocator<unsigned char>>::_Alloc_node>(std::_Rb_tree_node<unsigned char> const*, std::_Rb_tree_node<unsigned char>*, std::_Rb_tree<unsigned char, unsigned char, std::_Identity<unsigned char>, std::less<unsigned char>, std::allocator<unsigned char>>::_Alloc_node&)
 calloc
 pthread_once
 _setjmp
@@ -308,8 +308,8 @@ getaddrinfo
 freeaddrinfo
 toupper
 strspn
-_ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_EPKS3_RKS6_
-_ZNSt8_Rb_treeIiiSt9_IdentityIiESt4lessIiESaIiEE8_M_eraseEPSt13_Rb_tree_nodeIiE
+std::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)
+std::_Rb_tree<int, int, std::_Identity<int>, std::less<int>, std::allocator<int>>::_M_erase(std::_Rb_tree_node<int>*)
 strtoll
 strtoull
 strtof
@@ -326,14 +326,14 @@ getgid
 getegid
 fprintf
 sigfillset
-_ZNSt8_Rb_treeISsSt4pairIKSsiESt10_Select1stIS2_ESt4lessISsESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E
-_ZNSt8_Rb_treeISsSt4pairIKSsiESt10_Select1stIS2_ESt4lessISsESaIS2_EE7_M_copyINS8_11_Alloc_nodeEEEPSt13_Rb_tree_nodeIS2_EPKSC_SD_RT_
-_ZNSt8_Rb_treeIiiSt9_IdentityIiESt4lessIiESaIiEE7_M_copyINS5_11_Alloc_nodeEEEPSt13_Rb_tree_nodeIiEPKS9_SA_RT_
+std::_Rb_tree<std::string, std::pair<std::string const, int>, std::_Select1st<std::pair<std::string const, int>>, std::less<std::string>, std::allocator<std::pair<std::string const, int>>>::_M_erase(std::_Rb_tree_node<std::pair<std::string const, int>>*)
+std::_Rb_tree_node<std::pair<std::string const, int>>* std::_Rb_tree<std::string, std::pair<std::string const, int>, std::_Select1st<std::pair<std::string const, int>>, std::less<std::string>, std::allocator<std::pair<std::string const, int>>>::_M_copy<std::_Rb_tree<std::string, std::pair<std::string const, int>, std::_Select1st<std::pair<std::string const, int>>, std::less<std::string>, std::allocator<std::pair<std::string const, int>>>::_Alloc_node>(std::_Rb_tree_node<std::pair<std::string const, int>> const*, std::_Rb_tree_node<std::pair<std::string const, int>>*, std::_Rb_tree<std::string, std::pair<std::string const, int>, std::_Select1st<std::pair<std::string const, int>>, std::less<std::string>, std::allocator<std::pair<std::string const, int>>>::_Alloc_node&)
+std::_Rb_tree_node<int>* std::_Rb_tree<int, int, std::_Identity<int>, std::less<int>, std::allocator<int>>::_M_copy<std::_Rb_tree<int, int, std::_Identity<int>, std::less<int>, std::allocator<int>>::_Alloc_node>(std::_Rb_tree_node<int> const*, std::_Rb_tree_node<int>*, std::_Rb_tree<int, int, std::_Identity<int>, std::less<int>, std::allocator<int>>::_Alloc_node&)
 strchr
-_ZNSt6vectorIcSaIcEE12emplace_backIJcEEEvDpOT_
-_ZNSt6vectorIcSaIcEE12emplace_backIIcEEEvDpOT_
-_ZNSt6vectorIiSaIiEE19_M_emplace_back_auxIJRKiEEEvDpOT_
-_ZNSt6vectorIiSaIiEE19_M_emplace_back_auxIIRKiEEEvDpOT_
+void std::vector<char, std::allocator<char>>::emplace_back<char>(char&&)
+void std::vector<char, std::allocator<char>>::emplace_back<char>(char&&)
+void std::vector<int, std::allocator<int>>::_M_emplace_back_aux<int const&>(int const&)
+void std::vector<int, std::allocator<int>>::_M_emplace_back_aux<int const&>(int const&)
 perror
 __umoddi3
 strcmp
@@ -341,32 +341,32 @@ __ctype_b_loc
 __isoc99_sscanf
 sysconf
 sincos
-_ZN6webrtc24DownmixInterleavedToMonoIsEEvPKT_jiPS1_
-_ZNSt6vectorIS_IfSaIfEESaIS1_EE17_M_default_appendEj
-_ZNSt5dequeIfSaIfEE16_M_push_back_auxIJfEEEvDpOT_
-_ZNSt5dequeIfSaIfEE16_M_push_back_auxIIfEEEvDpOT_
+void webrtc::DownmixInterleavedToMono<short>(short const*, unsigned int, int, short*)
+std::vector<std::vector<float, std::allocator<float>>, std::allocator<std::vector<float, std::allocator<float>>>>::_M_default_append(unsigned int)
+void std::deque<float, std::allocator<float>>::_M_push_back_aux<float>(float&&)
+void std::deque<float, std::allocator<float>>::_M_push_back_aux<float>(float&&)
 lrint
-_ZNSt8_Rb_treeIxSt4pairIKxxESt10_Select1stIS2_ESt4lessIxESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E
-_ZNSt8_Rb_treeIxSt4pairIKxxESt10_Select1stIS2_ESt4lessIxESaIS2_EE24_M_get_insert_unique_posERS1_
-_ZNSt8_Rb_treeIxSt4pairIKxxESt10_Select1stIS2_ESt4lessIxESaIS2_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS1_EESD_IJEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
-_ZNSt8_Rb_treeIxSt4pairIKxxESt10_Select1stIS2_ESt4lessIxESaIS2_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS1_EESD_IIEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
-_ZNSt6vectorIhSaIhEE14_M_fill_insertEN9__gnu_cxx17__normal_iteratorIPhS1_EEjRKh
-_ZNSt6vectorIhSaIhEE15_M_range_insertIPKhEEvN9__gnu_cxx17__normal_iteratorIPhS1_EET_S9_St20forward_iterator_tag
-_ZNSt6vectorItSaItEE19_M_emplace_back_auxIJtEEEvDpOT_
-_ZNSt6vectorItSaItEE19_M_emplace_back_auxIItEEEvDpOT_
+std::_Rb_tree<long long, std::pair<long long const, long long>, std::_Select1st<std::pair<long long const, long long>>, std::less<long long>, std::allocator<std::pair<long long const, long long>>>::_M_erase(std::_Rb_tree_node<std::pair<long long const, long long>>*)
+std::_Rb_tree<long long, std::pair<long long const, long long>, std::_Select1st<std::pair<long long const, long long>>, std::less<long long>, std::allocator<std::pair<long long const, long long>>>::_M_get_insert_unique_pos(long long const&)
+std::_Rb_tree_iterator<std::pair<long long const, long long>> std::_Rb_tree<long long, std::pair<long long const, long long>, std::_Select1st<std::pair<long long const, long long>>, std::less<long long>, std::allocator<std::pair<long long const, long long>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<long long const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<long long const, long long>>, std::piecewise_construct_t const&, std::tuple<long long const&>&&, std::tuple<>&&)
+std::_Rb_tree_iterator<std::pair<long long const, long long>> std::_Rb_tree<long long, std::pair<long long const, long long>, std::_Select1st<std::pair<long long const, long long>>, std::less<long long>, std::allocator<std::pair<long long const, long long>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<long long const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<long long const, long long>>, std::piecewise_construct_t const&, std::tuple<long long const&>&&, std::tuple<>&&)
+std::vector<unsigned char, std::allocator<unsigned char>>::_M_fill_insert(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char>>>, unsigned int, unsigned char const&)
+void std::vector<unsigned char, std::allocator<unsigned char>>::_M_range_insert<unsigned char const*>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char>>>, unsigned char const*, unsigned char const*, std::forward_iterator_tag)
+void std::vector<unsigned short, std::allocator<unsigned short>>::_M_emplace_back_aux<unsigned short>(unsigned short&&)
+void std::vector<unsigned short, std::allocator<unsigned short>>::_M_emplace_back_aux<unsigned short>(unsigned short&&)
 strnlen
-_ZNSt8_Rb_treeIxxSt9_IdentityIxESt4lessIxESaIxEE8_M_eraseEPSt13_Rb_tree_nodeIxE
-_ZNKSs5rfindEPKcjj
-_ZNSt8__detail15_List_node_base11_M_transferEPS0_S1_
-_ZNSt8__detail15_List_node_base4swapERS0_S1_
-_ZNSt8_Rb_treeIjjSt9_IdentityIjESt4lessIjESaIjEE16_M_insert_uniqueIjEESt4pairISt17_Rb_tree_iteratorIjEbEOT_
-_ZNSt8_Rb_treeIxSt4pairIKxiESt10_Select1stIS2_ESt4lessIxESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E
-_ZNSt8_Rb_treeIaSt4pairIKaaESt10_Select1stIS2_ESt4lessIaESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E
-_ZNSt8_Rb_treeIxSt4pairIKxiESt10_Select1stIS2_ESt4lessIxESaIS2_EE16_M_insert_uniqueIS0_IxiEEES0_ISt17_Rb_tree_iteratorIS2_EbEOT_
-_ZNSt6vectorIhSaIhEE13_M_assign_auxIPKhEEvT_S5_St20forward_iterator_tag
-_ZNSt8_Rb_treeIaSt4pairIKaaESt10_Select1stIS2_ESt4lessIaESaIS2_EE24_M_get_insert_unique_posERS1_
-_ZNSt8_Rb_treeIaSt4pairIKaaESt10_Select1stIS2_ESt4lessIaESaIS2_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJOaEESD_IJEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
-_ZNSt8_Rb_treeIaSt4pairIKaaESt10_Select1stIS2_ESt4lessIaESaIS2_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIOaEESD_IIEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
+std::_Rb_tree<long long, long long, std::_Identity<long long>, std::less<long long>, std::allocator<long long>>::_M_erase(std::_Rb_tree_node<long long>*)
+std::string::rfind(char const*, unsigned int, unsigned int) const
+std::__detail::_List_node_base::_M_transfer(std::__detail::_List_node_base*, std::__detail::_List_node_base*)
+std::__detail::_List_node_base::swap(std::__detail::_List_node_base&, std::__detail::_List_node_base&)
+std::pair<std::_Rb_tree_iterator<unsigned int>, bool> std::_Rb_tree<unsigned int, unsigned int, std::_Identity<unsigned int>, std::less<unsigned int>, std::allocator<unsigned int>>::_M_insert_unique<unsigned int>(unsigned int&&)
+std::_Rb_tree<long long, std::pair<long long const, int>, std::_Select1st<std::pair<long long const, int>>, std::less<long long>, std::allocator<std::pair<long long const, int>>>::_M_erase(std::_Rb_tree_node<std::pair<long long const, int>>*)
+std::_Rb_tree<signed char, std::pair<signed char const, signed char>, std::_Select1st<std::pair<signed char const, signed char>>, std::less<signed char>, std::allocator<std::pair<signed char const, signed char>>>::_M_erase(std::_Rb_tree_node<std::pair<signed char const, signed char>>*)
+std::pair<std::_Rb_tree_iterator<std::pair<long long const, int>>, bool> std::_Rb_tree<long long, std::pair<long long const, int>, std::_Select1st<std::pair<long long const, int>>, std::less<long long>, std::allocator<std::pair<long long const, int>>>::_M_insert_unique<std::pair<long long, int>>(std::pair<long long, int>&&)
+void std::vector<unsigned char, std::allocator<unsigned char>>::_M_assign_aux<unsigned char const*>(unsigned char const*, unsigned char const*, std::forward_iterator_tag)
+std::_Rb_tree<signed char, std::pair<signed char const, signed char>, std::_Select1st<std::pair<signed char const, signed char>>, std::less<signed char>, std::allocator<std::pair<signed char const, signed char>>>::_M_get_insert_unique_pos(signed char const&)
+std::_Rb_tree_iterator<std::pair<signed char const, signed char>> std::_Rb_tree<signed char, std::pair<signed char const, signed char>, std::_Select1st<std::pair<signed char const, signed char>>, std::less<signed char>, std::allocator<std::pair<signed char const, signed char>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<signed char&&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<signed char const, signed char>>, std::piecewise_construct_t const&, std::tuple<signed char&&>&&, std::tuple<>&&)
+std::_Rb_tree_iterator<std::pair<signed char const, signed char>> std::_Rb_tree<signed char, std::pair<signed char const, signed char>, std::_Select1st<std::pair<signed char const, signed char>>, std::less<signed char>, std::allocator<std::pair<signed char const, signed char>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<signed char&&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<signed char const, signed char>>, std::piecewise_construct_t const&, std::tuple<signed char&&>&&, std::tuple<>&&)
 strcpy
 __strcpy_chk
 dlopen
@@ -374,212 +374,212 @@ dlerror
 dlclose
 dlsym
 ___tls_get_addr
-_ZNSt6vectorISt4pairIPFvPKvES2_ESaIS5_EE19_M_emplace_back_auxIJS5_EEEvDpOT_
-_ZNSt6vectorISt4pairIPFvPKvES2_ESaIS5_EE19_M_emplace_back_auxIIS5_EEEvDpOT_
-_ZNSs12_S_constructIPcEES0_T_S1_RKSaIcESt20forward_iterator_tag
-_ZSt19__throw_logic_errorPKc
-_ZNSt8ios_baseC2Ev
-_ZTVSt9basic_iosIcSt11char_traitsIcEE
-_ZTTSt19basic_ostringstreamIcSt11char_traitsIcESaIcEE
-_ZNSt9basic_iosIcSt11char_traitsIcEE4initEPSt15basic_streambufIcS1_E
-_ZTVSt19basic_ostringstreamIcSt11char_traitsIcESaIcEE
-_ZTVSt15basic_streambufIcSt11char_traitsIcEE
-_ZNSt6localeC1Ev
-_ZTVSt15basic_stringbufIcSt11char_traitsIcESaIcEE
-_ZNSt6localeD1Ev
-_ZNSt8ios_baseD2Ev
-_ZSt16__ostream_insertIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_PKS3_i
-_ZNSs6appendEjc
-_ZSt16__once_call_implISt12_Bind_simpleIFPFvvEvEEEvv
-_ZSt15__once_callable
-_ZSt11__once_call
+void std::vector<std::pair<void (*)(void const*), void const*>, std::allocator<std::pair<void (*)(void const*), void const*>>>::_M_emplace_back_aux<std::pair<void (*)(void const*), void const*>>(std::pair<void (*)(void const*), void const*>&&)
+void std::vector<std::pair<void (*)(void const*), void const*>, std::allocator<std::pair<void (*)(void const*), void const*>>>::_M_emplace_back_aux<std::pair<void (*)(void const*), void const*>>(std::pair<void (*)(void const*), void const*>&&)
+char* std::string::_S_construct<char*>(char*, char*, std::allocator<char> const&, std::forward_iterator_tag)
+std::__throw_logic_error(char const*)
+std::ios_base::ios_base()
+vtable for std::basic_ios<char, std::char_traits<char>>
+VTT for std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char>>
+std::basic_ios<char, std::char_traits<char>>::init(std::basic_streambuf<char, std::char_traits<char>>*)
+vtable for std::basic_ostringstream<char, std::char_traits<char>, std::allocator<char>>
+vtable for std::basic_streambuf<char, std::char_traits<char>>
+std::locale::locale()
+vtable for std::basic_stringbuf<char, std::char_traits<char>, std::allocator<char>>
+std::locale::~locale()
+std::ios_base::~ios_base()
+std::basic_ostream<char, std::char_traits<char>>& std::__ostream_insert<char, std::char_traits<char>>(std::basic_ostream<char, std::char_traits<char>>&, char const*, int)
+std::string::append(unsigned int, char)
+void std::__once_call_impl<std::_Bind_simple<void (*())()>>()
+std::__once_callable
+std::__once_call
 __once_proxy
-_ZNSt10_HashtableIttSaItENSt8__detail9_IdentityESt8equal_toItESt4hashItENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE5clearEv
-_ZNSt6vectorIbSaIbEE13_M_insert_auxESt13_Bit_iteratorb
-_ZNSt10_HashtableIttSaItENSt8__detail9_IdentityESt8equal_toItESt4hashItENS1_18_Mod_range_hashingENS1_20_Default_ranged_hashENS1_20_Prime_rehash_policyENS1_17_Hashtable_traitsILb0ELb1ELb1EEEE21_M_insert_unique_nodeEjjPNS1_10_Hash_nodeItLb0EEE
-_ZNSt5dequeIxSaIxEE16_M_push_back_auxIJRKxEEEvDpOT_
-_ZNSt5dequeIxSaIxEE16_M_push_back_auxIIRKxEEEvDpOT_
-_ZNSt8_Rb_treeISt4pairIttES0_IKS1_jESt10_Select1stIS3_ESt4lessIS1_ESaIS3_EE8_M_eraseEPSt13_Rb_tree_nodeIS3_E
-_ZNSt8_Rb_treeISt4pairIttES0_IKS1_jESt10_Select1stIS3_ESt4lessIS1_ESaIS3_EE4findERS2_
-_ZNSt8_Rb_treeISt4pairIttES0_IKS1_jESt10_Select1stIS3_ESt4lessIS1_ESaIS3_EE24_M_get_insert_unique_posERS2_
-_ZNSt5dequeIxSaIxEE16_M_push_back_auxIJxEEEvDpOT_
-_ZNSt5dequeIxSaIxEE16_M_push_back_auxIIxEEEvDpOT_
-_ZNSt8_Rb_treeIxSt4pairIKxiESt10_Select1stIS2_ESt4lessIxESaIS2_EE17_M_emplace_uniqueIJRxSA_EEES0_ISt17_Rb_tree_iteratorIS2_EbEDpOT_
-_ZNSt8_Rb_treeIxSt4pairIKxiESt10_Select1stIS2_ESt4lessIxESaIS2_EE17_M_emplace_uniqueIIRxSA_EEES0_ISt17_Rb_tree_iteratorIS2_EbEDpOT_
+std::_Hashtable<unsigned short, unsigned short, std::allocator<unsigned short>, std::__detail::_Identity, std::equal_to<unsigned short>, std::hash<unsigned short>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, true, true>>::clear()
+std::vector<bool, std::allocator<bool>>::_M_insert_aux(std::_Bit_iterator, bool)
+std::_Hashtable<unsigned short, unsigned short, std::allocator<unsigned short>, std::__detail::_Identity, std::equal_to<unsigned short>, std::hash<unsigned short>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, true, true>>::_M_insert_unique_node(unsigned int, unsigned int, std::__detail::_Hash_node<unsigned short, false>*)
+void std::deque<long long, std::allocator<long long>>::_M_push_back_aux<long long const&>(long long const&)
+void std::deque<long long, std::allocator<long long>>::_M_push_back_aux<long long const&>(long long const&)
+std::_Rb_tree<std::pair<unsigned short, unsigned short>, std::pair<std::pair<unsigned short, unsigned short> const, unsigned int>, std::_Select1st<std::pair<std::pair<unsigned short, unsigned short> const, unsigned int>>, std::less<std::pair<unsigned short, unsigned short>>, std::allocator<std::pair<std::pair<unsigned short, unsigned short> const, unsigned int>>>::_M_erase(std::_Rb_tree_node<std::pair<std::pair<unsigned short, unsigned short> const, unsigned int>>*)
+std::_Rb_tree<std::pair<unsigned short, unsigned short>, std::pair<std::pair<unsigned short, unsigned short> const, unsigned int>, std::_Select1st<std::pair<std::pair<unsigned short, unsigned short> const, unsigned int>>, std::less<std::pair<unsigned short, unsigned short>>, std::allocator<std::pair<std::pair<unsigned short, unsigned short> const, unsigned int>>>::find(std::pair<unsigned short, unsigned short> const&)
+std::_Rb_tree<std::pair<unsigned short, unsigned short>, std::pair<std::pair<unsigned short, unsigned short> const, unsigned int>, std::_Select1st<std::pair<std::pair<unsigned short, unsigned short> const, unsigned int>>, std::less<std::pair<unsigned short, unsigned short>>, std::allocator<std::pair<std::pair<unsigned short, unsigned short> const, unsigned int>>>::_M_get_insert_unique_pos(std::pair<unsigned short, unsigned short> const&)
+void std::deque<long long, std::allocator<long long>>::_M_push_back_aux<long long>(long long&&)
+void std::deque<long long, std::allocator<long long>>::_M_push_back_aux<long long>(long long&&)
+std::pair<std::_Rb_tree_iterator<std::pair<long long const, int>>, bool> std::_Rb_tree<long long, std::pair<long long const, int>, std::_Select1st<std::pair<long long const, int>>, std::less<long long>, std::allocator<std::pair<long long const, int>>>::_M_emplace_unique<long long&, long long&>(long long&, long long&)
+std::pair<std::_Rb_tree_iterator<std::pair<long long const, int>>, bool> std::_Rb_tree<long long, std::pair<long long const, int>, std::_Select1st<std::pair<long long const, int>>, std::less<long long>, std::allocator<std::pair<long long const, int>>>::_M_emplace_unique<long long&, long long&>(long long&, long long&)
 expm1
-_ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE10_M_insert_IRKS2_NS8_11_Alloc_nodeEEESt17_Rb_tree_iteratorIS2_EPSt18_Rb_tree_node_baseSG_OT_RT0_
-_ZNSt6vectorISt4pairIN3rtc6Socket6OptionEiESaIS4_EE19_M_emplace_back_auxIJS4_EEEvDpOT_
-_ZNSt6vectorISt4pairIN3rtc6Socket6OptionEiESaIS4_EE19_M_emplace_back_auxIIS4_EEEvDpOT_
-_ZNSt8_Rb_treeIN3rtc6Socket6OptionESt4pairIKS2_iESt10_Select1stIS5_ESt4lessIS2_ESaIS5_EE24_M_get_insert_unique_posERS4_
-_ZNSt8_Rb_treeIN3rtc6Socket6OptionESt4pairIKS2_iESt10_Select1stIS5_ESt4lessIS2_ESaIS5_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS4_EESG_IJEEEEESt17_Rb_tree_iteratorIS5_ESt23_Rb_tree_const_iteratorIS5_EDpOT_
-_ZNSt8_Rb_treeIN3rtc6Socket6OptionESt4pairIKS2_iESt10_Select1stIS5_ESt4lessIS2_ESaIS5_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS4_EESG_IIEEEEESt17_Rb_tree_iteratorIS5_ESt23_Rb_tree_const_iteratorIS5_EDpOT_
-_ZNSt8_Rb_treeIiiSt9_IdentityIiESt4lessIiESaIiEE16_M_insert_uniqueIRKiEESt4pairISt17_Rb_tree_iteratorIiEbEOT_
+std::_Rb_tree_iterator<std::pair<std::string const, std::string>> std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::_M_insert_<std::pair<std::string const, std::string> const&, std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::_Alloc_node>(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::pair<std::string const, std::string> const&, std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::_Alloc_node&)
+void std::vector<std::pair<rtc::Socket::Option, int>, std::allocator<std::pair<rtc::Socket::Option, int>>>::_M_emplace_back_aux<std::pair<rtc::Socket::Option, int>>(std::pair<rtc::Socket::Option, int>&&)
+void std::vector<std::pair<rtc::Socket::Option, int>, std::allocator<std::pair<rtc::Socket::Option, int>>>::_M_emplace_back_aux<std::pair<rtc::Socket::Option, int>>(std::pair<rtc::Socket::Option, int>&&)
+std::_Rb_tree<rtc::Socket::Option, std::pair<rtc::Socket::Option const, int>, std::_Select1st<std::pair<rtc::Socket::Option const, int>>, std::less<rtc::Socket::Option>, std::allocator<std::pair<rtc::Socket::Option const, int>>>::_M_get_insert_unique_pos(rtc::Socket::Option const&)
+std::_Rb_tree_iterator<std::pair<rtc::Socket::Option const, int>> std::_Rb_tree<rtc::Socket::Option, std::pair<rtc::Socket::Option const, int>, std::_Select1st<std::pair<rtc::Socket::Option const, int>>, std::less<rtc::Socket::Option>, std::allocator<std::pair<rtc::Socket::Option const, int>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<rtc::Socket::Option const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<rtc::Socket::Option const, int>>, std::piecewise_construct_t const&, std::tuple<rtc::Socket::Option const&>&&, std::tuple<>&&)
+std::_Rb_tree_iterator<std::pair<rtc::Socket::Option const, int>> std::_Rb_tree<rtc::Socket::Option, std::pair<rtc::Socket::Option const, int>, std::_Select1st<std::pair<rtc::Socket::Option const, int>>, std::less<rtc::Socket::Option>, std::allocator<std::pair<rtc::Socket::Option const, int>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<rtc::Socket::Option const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<rtc::Socket::Option const, int>>, std::piecewise_construct_t const&, std::tuple<rtc::Socket::Option const&>&&, std::tuple<>&&)
+std::pair<std::_Rb_tree_iterator<int>, bool> std::_Rb_tree<int, int, std::_Identity<int>, std::less<int>, std::allocator<int>>::_M_insert_unique<int const&>(int const&)
 vp8_six_tap_x86
 sched_yield
 sem_post
 sem_wait
 sem_init
 sem_destroy
-_ZNSt8_Rb_treeIhSt4pairIKhiESt10_Select1stIS2_ESt4lessIhESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E
-_ZNSt8_Rb_treeIhSt4pairIKhiESt10_Select1stIS2_ESt4lessIhESaIS2_EE24_M_get_insert_unique_posERS1_
-_ZNSt8_Rb_treeIjSt4pairIKjjESt10_Select1stIS2_ESt4lessIjESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E
-_ZNSt8_Rb_treeIjSt4pairIKjjESt10_Select1stIS2_ESt4lessIjESaIS2_EE24_M_get_insert_unique_posERS1_
-_ZSt18_Rb_tree_decrementPKSt18_Rb_tree_node_base
-_ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_EOS6_PKS3_
-_ZNSt6vectorISt4pairISsSsESaIS1_EE19_M_emplace_back_auxIJRKS1_EEEvDpOT_
-_ZNSt6vectorISt4pairISsSsESaIS1_EE19_M_emplace_back_auxIIRKS1_EEEvDpOT_
+std::_Rb_tree<unsigned char, std::pair<unsigned char const, int>, std::_Select1st<std::pair<unsigned char const, int>>, std::less<unsigned char>, std::allocator<std::pair<unsigned char const, int>>>::_M_erase(std::_Rb_tree_node<std::pair<unsigned char const, int>>*)
+std::_Rb_tree<unsigned char, std::pair<unsigned char const, int>, std::_Select1st<std::pair<unsigned char const, int>>, std::less<unsigned char>, std::allocator<std::pair<unsigned char const, int>>>::_M_get_insert_unique_pos(unsigned char const&)
+std::_Rb_tree<unsigned int, std::pair<unsigned int const, unsigned int>, std::_Select1st<std::pair<unsigned int const, unsigned int>>, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, unsigned int>>>::_M_erase(std::_Rb_tree_node<std::pair<unsigned int const, unsigned int>>*)
+std::_Rb_tree<unsigned int, std::pair<unsigned int const, unsigned int>, std::_Select1st<std::pair<unsigned int const, unsigned int>>, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, unsigned int>>>::_M_get_insert_unique_pos(unsigned int const&)
+std::_Rb_tree_decrement(std::_Rb_tree_node_base const*)
+std::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(std::basic_string<char, std::char_traits<char>, std::allocator<char>>&&, char const*)
+void std::vector<std::pair<std::string, std::string>, std::allocator<std::pair<std::string, std::string>>>::_M_emplace_back_aux<std::pair<std::string, std::string> const&>(std::pair<std::string, std::string> const&)
+void std::vector<std::pair<std::string, std::string>, std::allocator<std::pair<std::string, std::string>>>::_M_emplace_back_aux<std::pair<std::string, std::string> const&>(std::pair<std::string, std::string> const&)
 __sprintf_chk
-_ZNSsaSEPKc
-_ZNSt8_Rb_treeIxSt4pairIKxjESt10_Select1stIS2_ESt4lessIxESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E
-_ZNSt8_Rb_treeIxSt4pairIKxjESt10_Select1stIS2_ESt4lessIxESaIS2_EE16_M_insert_uniqueIS0_IxjEEES0_ISt17_Rb_tree_iteratorIS2_EbEOT_
-_ZNSt5dequeISt4pairIxiESaIS1_EE16_M_push_back_auxIJS1_EEEvDpOT_
-_ZNSt5dequeISt4pairIxiESaIS1_EE16_M_push_back_auxIIS1_EEEvDpOT_
-_ZNSt8_Rb_treeIjSt4pairIKjjESt10_Select1stIS2_ESt4lessIjESaIS2_EE7_M_copyINS8_11_Alloc_nodeEEEPSt13_Rb_tree_nodeIS2_EPKSC_SD_RT_
-_ZNSt5dequeISt4pairIxiESaIS1_EE8_M_eraseESt15_Deque_iteratorIS1_RS1_PS1_ES7_
-_ZNSt8_Rb_treeIxSt4pairIKxtESt10_Select1stIS2_ESt4lessIxESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E
-_ZNSt8_Rb_treeIhSt4pairIKhN6webrtc14VideoCodecTypeEESt10_Select1stIS4_ESt4lessIhESaIS4_EE8_M_eraseEPSt13_Rb_tree_nodeIS4_E
-_ZNSt8_Rb_treeIxSt4pairIKxtESt10_Select1stIS2_ESt4lessIxESaIS2_EE24_M_get_insert_unique_posERS1_
-_ZNSt8_Rb_treeIxSt4pairIKxtESt10_Select1stIS2_ESt4lessIxESaIS2_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS1_EESD_IJEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
-_ZNSt8_Rb_treeIxSt4pairIKxtESt10_Select1stIS2_ESt4lessIxESaIS2_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS1_EESD_IIEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
-_ZNSt8_Rb_treeIhSt4pairIKhSt3mapISsSsSt4lessISsESaIS0_IKSsSsEEEESt10_Select1stIS9_ES3_IhESaIS9_EE8_M_eraseEPSt13_Rb_tree_nodeIS9_E
-_ZNSt8_Rb_treeIhSt4pairIKhSt3mapISsSsSt4lessISsESaIS0_IKSsSsEEEESt10_Select1stIS9_ES3_IhESaIS9_EE17_M_emplace_uniqueIJRS1_RKS8_EEES0_ISt17_Rb_tree_iteratorIS9_EbEDpOT_
-_ZNSt8_Rb_treeIhSt4pairIKhSt3mapISsSsSt4lessISsESaIS0_IKSsSsEEEESt10_Select1stIS9_ES3_IhESaIS9_EE17_M_emplace_uniqueIIRS1_RKS8_EEES0_ISt17_Rb_tree_iteratorIS9_EbEDpOT_
+std::string::operator=(char const*)
+std::_Rb_tree<long long, std::pair<long long const, unsigned int>, std::_Select1st<std::pair<long long const, unsigned int>>, std::less<long long>, std::allocator<std::pair<long long const, unsigned int>>>::_M_erase(std::_Rb_tree_node<std::pair<long long const, unsigned int>>*)
+std::pair<std::_Rb_tree_iterator<std::pair<long long const, unsigned int>>, bool> std::_Rb_tree<long long, std::pair<long long const, unsigned int>, std::_Select1st<std::pair<long long const, unsigned int>>, std::less<long long>, std::allocator<std::pair<long long const, unsigned int>>>::_M_insert_unique<std::pair<long long, unsigned int>>(std::pair<long long, unsigned int>&&)
+void std::deque<std::pair<long long, int>, std::allocator<std::pair<long long, int>>>::_M_push_back_aux<std::pair<long long, int>>(std::pair<long long, int>&&)
+void std::deque<std::pair<long long, int>, std::allocator<std::pair<long long, int>>>::_M_push_back_aux<std::pair<long long, int>>(std::pair<long long, int>&&)
+std::_Rb_tree_node<std::pair<unsigned int const, unsigned int>>* std::_Rb_tree<unsigned int, std::pair<unsigned int const, unsigned int>, std::_Select1st<std::pair<unsigned int const, unsigned int>>, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, unsigned int>>>::_M_copy<std::_Rb_tree<unsigned int, std::pair<unsigned int const, unsigned int>, std::_Select1st<std::pair<unsigned int const, unsigned int>>, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, unsigned int>>>::_Alloc_node>(std::_Rb_tree_node<std::pair<unsigned int const, unsigned int>> const*, std::_Rb_tree_node<std::pair<unsigned int const, unsigned int>>*, std::_Rb_tree<unsigned int, std::pair<unsigned int const, unsigned int>, std::_Select1st<std::pair<unsigned int const, unsigned int>>, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, unsigned int>>>::_Alloc_node&)
+std::deque<std::pair<long long, int>, std::allocator<std::pair<long long, int>>>::_M_erase(std::_Deque_iterator<std::pair<long long, int>, std::pair<long long, int>&, std::pair<long long, int>*>, std::_Deque_iterator<std::pair<long long, int>, std::pair<long long, int>&, std::pair<long long, int>*>)
+std::_Rb_tree<long long, std::pair<long long const, unsigned short>, std::_Select1st<std::pair<long long const, unsigned short>>, std::less<long long>, std::allocator<std::pair<long long const, unsigned short>>>::_M_erase(std::_Rb_tree_node<std::pair<long long const, unsigned short>>*)
+std::_Rb_tree<unsigned char, std::pair<unsigned char const, webrtc::VideoCodecType>, std::_Select1st<std::pair<unsigned char const, webrtc::VideoCodecType>>, std::less<unsigned char>, std::allocator<std::pair<unsigned char const, webrtc::VideoCodecType>>>::_M_erase(std::_Rb_tree_node<std::pair<unsigned char const, webrtc::VideoCodecType>>*)
+std::_Rb_tree<long long, std::pair<long long const, unsigned short>, std::_Select1st<std::pair<long long const, unsigned short>>, std::less<long long>, std::allocator<std::pair<long long const, unsigned short>>>::_M_get_insert_unique_pos(long long const&)
+std::_Rb_tree_iterator<std::pair<long long const, unsigned short>> std::_Rb_tree<long long, std::pair<long long const, unsigned short>, std::_Select1st<std::pair<long long const, unsigned short>>, std::less<long long>, std::allocator<std::pair<long long const, unsigned short>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<long long const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<long long const, unsigned short>>, std::piecewise_construct_t const&, std::tuple<long long const&>&&, std::tuple<>&&)
+std::_Rb_tree_iterator<std::pair<long long const, unsigned short>> std::_Rb_tree<long long, std::pair<long long const, unsigned short>, std::_Select1st<std::pair<long long const, unsigned short>>, std::less<long long>, std::allocator<std::pair<long long const, unsigned short>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<long long const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<long long const, unsigned short>>, std::piecewise_construct_t const&, std::tuple<long long const&>&&, std::tuple<>&&)
+std::_Rb_tree<unsigned char, std::pair<unsigned char const, std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>>, std::_Select1st<std::pair<unsigned char const, std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>>>, std::less<unsigned char>, std::allocator<std::pair<unsigned char const, std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>>>>::_M_erase(std::_Rb_tree_node<std::pair<unsigned char const, std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>>>*)
+std::pair<std::_Rb_tree_iterator<std::pair<unsigned char const, std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>>>, bool> std::_Rb_tree<unsigned char, std::pair<unsigned char const, std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>>, std::_Select1st<std::pair<unsigned char const, std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>>>, std::less<unsigned char>, std::allocator<std::pair<unsigned char const, std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>>>>::_M_emplace_unique<unsigned char const&, std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>> const&>(unsigned char const&, std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>> const&)
+std::pair<std::_Rb_tree_iterator<std::pair<unsigned char const, std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>>>, bool> std::_Rb_tree<unsigned char, std::pair<unsigned char const, std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>>, std::_Select1st<std::pair<unsigned char const, std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>>>, std::less<unsigned char>, std::allocator<std::pair<unsigned char const, std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>>>>::_M_emplace_unique<unsigned char const&, std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>> const&>(unsigned char const&, std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>> const&)
 roundf
-_ZNSt8_Rb_treeIjSt4pairIKjjESt10_Select1stIS2_ESt4lessIjESaIS2_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS1_EESD_IJEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
-_ZNSt8_Rb_treeIjSt4pairIKjjESt10_Select1stIS2_ESt4lessIjESaIS2_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS1_EESD_IIEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
+std::_Rb_tree_iterator<std::pair<unsigned int const, unsigned int>> std::_Rb_tree<unsigned int, std::pair<unsigned int const, unsigned int>, std::_Select1st<std::pair<unsigned int const, unsigned int>>, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, unsigned int>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned int const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<unsigned int const, unsigned int>>, std::piecewise_construct_t const&, std::tuple<unsigned int const&>&&, std::tuple<>&&)
+std::_Rb_tree_iterator<std::pair<unsigned int const, unsigned int>> std::_Rb_tree<unsigned int, std::pair<unsigned int const, unsigned int>, std::_Select1st<std::pair<unsigned int const, unsigned int>>, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, unsigned int>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned int const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<unsigned int const, unsigned int>>, std::piecewise_construct_t const&, std::tuple<unsigned int const&>&&, std::tuple<>&&)
 lseek64
-_ZNSt6vectorIxSaIxEEaSERKS1_
+std::vector<long long, std::allocator<long long>>::operator=(std::vector<long long, std::allocator<long long>> const&)
 gmtime_r
 isxdigit
 isdigit
-_ZNSt11_Deque_baseIfSaIfEED2Ev
-_ZNSt11_Deque_baseIfSaIfEED1Ev
-_ZNSt11_Deque_baseIfSaIfEE17_M_initialize_mapEj
-_ZNSt8_Rb_treeIjSt4pairIKjxESt10_Select1stIS2_ESt4lessIjESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E
-_ZNSt8_Rb_treeIjSt4pairIKjxESt10_Select1stIS2_ESt4lessIjESaIS2_EE24_M_get_insert_unique_posERS1_
-_ZNSt8_Rb_treeIjSt4pairIKjxESt10_Select1stIS2_ESt4lessIjESaIS2_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS1_EESD_IJEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
-_ZNSt8_Rb_treeIjSt4pairIKjxESt10_Select1stIS2_ESt4lessIjESaIS2_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS1_EESD_IIEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
-_ZNSt11_Deque_baseISt4pairIddESaIS1_EED2Ev
-_ZNSt11_Deque_baseISt4pairIddESaIS1_EED1Ev
-_ZNSt5dequeISt4pairIddESaIS1_EE16_M_push_back_auxIJS1_EEEvDpOT_
-_ZNSt5dequeISt4pairIddESaIS1_EE16_M_push_back_auxIIS1_EEEvDpOT_
-_ZNSt8_Rb_treeIttSt9_IdentityItESt4lessItESaItEE8_M_eraseEPSt13_Rb_tree_nodeItE
-_ZNSt8_Rb_treeIttSt9_IdentityItESt4lessItESaItEE16_M_insert_uniqueIRKtEESt4pairISt17_Rb_tree_iteratorItEbEOT_
-_ZNSt6vectorIPKSt3setItSt4lessItESaItEESaIS6_EE19_M_emplace_back_auxIJS6_EEEvDpOT_
-_ZNSt6vectorIPKSt3setItSt4lessItESaItEESaIS6_EE19_M_emplace_back_auxIIS6_EEEvDpOT_
-_ZNKSs4copyEPcjj
-_ZNSt8_Rb_treeIjSt4pairIKjSsESt10_Select1stIS2_ESt4lessIjESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E
-_ZNSt8_Rb_treeIjSt4pairIKjSsESt10_Select1stIS2_ESt4lessIjESaIS2_EE5eraseERS1_
-_ZNSt8_Rb_treeIjjSt9_IdentityIjESt4lessIjESaIjEE7_M_copyINS5_20_Reuse_or_alloc_nodeEEEPSt13_Rb_tree_nodeIjEPKS9_SA_RT_
-_ZNSt8_Rb_treeIjjSt9_IdentityIjESt4lessIjESaIjEEaSERKS5_
-_ZNSt6vectorItSaItEE15_M_range_insertIN9__gnu_cxx17__normal_iteratorIPKtS1_EEEEvNS4_IPtS1_EET_SA_St20forward_iterator_tag
-_ZNSt8_Rb_treeIjSt4pairIKjSsESt10_Select1stIS2_ESt4lessIjESaIS2_EE24_M_get_insert_unique_posERS1_
-_ZNSt8_Rb_treeIaSt4pairIKaiESt10_Select1stIS2_ESt4lessIaESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E
-_ZNSt8_Rb_treeIN6webrtc14RTCPPacketTypeES1_St9_IdentityIS1_ESt4lessIS1_ESaIS1_EE8_M_eraseEPSt13_Rb_tree_nodeIS1_E
-_ZNSt8_Rb_treeIaSt4pairIKaiESt10_Select1stIS2_ESt4lessIaESaIS2_EE24_M_get_insert_unique_posERS1_
-_ZNSt8_Rb_treeIaSt4pairIKaiESt10_Select1stIS2_ESt4lessIaESaIS2_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS1_EESD_IJEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
-_ZNSt8_Rb_treeIaSt4pairIKaiESt10_Select1stIS2_ESt4lessIaESaIS2_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS1_EESD_IIEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
-_ZNSt8_Rb_treeIN6webrtc14RTCPPacketTypeES1_St9_IdentityIS1_ESt4lessIS1_ESaIS1_EE24_M_get_insert_unique_posERKS1_
-_ZNSt8_Rb_treeIjSt4pairIKjtESt10_Select1stIS2_ESt4lessIjESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E
-_ZNSt8_Rb_treeIjSt4pairIKjtESt10_Select1stIS2_ESt4lessIjESaIS2_EE24_M_get_insert_unique_posERS1_
-_ZNSt8_Rb_treeIjSt4pairIKjtESt10_Select1stIS2_ESt4lessIjESaIS2_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJOjEESD_IJEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
-_ZNSt8_Rb_treeIjSt4pairIKjtESt10_Select1stIS2_ESt4lessIjESaIS2_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIOjEESD_IIEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
-_ZNSt5dequeIiSaIiEE16_M_push_back_auxIJRKiEEEvDpOT_
-_ZNSt5dequeIiSaIiEE16_M_push_back_auxIIRKiEEEvDpOT_
-_ZNSt8_Rb_treeISsSsSt9_IdentityISsESt4lessISsESaISsEE16_M_insert_uniqueIRKSsEESt4pairISt17_Rb_tree_iteratorISsEbEOT_
-_ZNSt8_Rb_treeIjSt4pairIKjSsESt10_Select1stIS2_ESt4lessIjESaIS2_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS1_EESD_IJEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
-_ZNSt8_Rb_treeIjSt4pairIKjSsESt10_Select1stIS2_ESt4lessIjESaIS2_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS1_EESD_IIEEEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EDpOT_
-_ZNSt11_Deque_baseIjSaIjEED2Ev
-_ZNSt11_Deque_baseIjSaIjEED1Ev
-_ZNSt11_Deque_baseIjSaIjEE17_M_initialize_mapEj
-_ZNSt6vectorIhSaIhEEaSERKS1_
-_ZNSt5dequeIjSaIjEE16_M_push_back_auxIJRKjEEEvDpOT_
-_ZNSt5dequeIjSaIjEE16_M_push_back_auxIIRKjEEEvDpOT_
-_ZNSt8_Rb_treeIxSt4pairIKxSt5arrayIsLj5EEESt10_Select1stIS4_ESt4lessIxESaIS4_EE8_M_eraseEPSt13_Rb_tree_nodeIS4_E
-_ZNSt8_Rb_treeIxSt4pairIKxSt5arrayIsLj5EEESt10_Select1stIS4_ESt4lessIxESaIS4_EE14_M_insert_nodeEPSt18_Rb_tree_node_baseSC_PSt13_Rb_tree_nodeIS4_E
-_ZNSt8_Rb_treeIxSt4pairIKxSt5arrayIsLj5EEESt10_Select1stIS4_ESt4lessIxESaIS4_EE24_M_get_insert_unique_posERS1_
-_ZNSt6vectorIN6webrtc9FrameTypeESaIS1_EEaSERKS3_
-_ZNSt6vectorIN6webrtc9FrameTypeESaIS1_EE14_M_fill_insertEN9__gnu_cxx17__normal_iteratorIPS1_S3_EEjRKS1_
+std::_Deque_base<float, std::allocator<float>>::~_Deque_base()
+std::_Deque_base<float, std::allocator<float>>::~_Deque_base()
+std::_Deque_base<float, std::allocator<float>>::_M_initialize_map(unsigned int)
+std::_Rb_tree<unsigned int, std::pair<unsigned int const, long long>, std::_Select1st<std::pair<unsigned int const, long long>>, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, long long>>>::_M_erase(std::_Rb_tree_node<std::pair<unsigned int const, long long>>*)
+std::_Rb_tree<unsigned int, std::pair<unsigned int const, long long>, std::_Select1st<std::pair<unsigned int const, long long>>, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, long long>>>::_M_get_insert_unique_pos(unsigned int const&)
+std::_Rb_tree_iterator<std::pair<unsigned int const, long long>> std::_Rb_tree<unsigned int, std::pair<unsigned int const, long long>, std::_Select1st<std::pair<unsigned int const, long long>>, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, long long>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned int const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<unsigned int const, long long>>, std::piecewise_construct_t const&, std::tuple<unsigned int const&>&&, std::tuple<>&&)
+std::_Rb_tree_iterator<std::pair<unsigned int const, long long>> std::_Rb_tree<unsigned int, std::pair<unsigned int const, long long>, std::_Select1st<std::pair<unsigned int const, long long>>, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, long long>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned int const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<unsigned int const, long long>>, std::piecewise_construct_t const&, std::tuple<unsigned int const&>&&, std::tuple<>&&)
+std::_Deque_base<std::pair<double, double>, std::allocator<std::pair<double, double>>>::~_Deque_base()
+std::_Deque_base<std::pair<double, double>, std::allocator<std::pair<double, double>>>::~_Deque_base()
+void std::deque<std::pair<double, double>, std::allocator<std::pair<double, double>>>::_M_push_back_aux<std::pair<double, double>>(std::pair<double, double>&&)
+void std::deque<std::pair<double, double>, std::allocator<std::pair<double, double>>>::_M_push_back_aux<std::pair<double, double>>(std::pair<double, double>&&)
+std::_Rb_tree<unsigned short, unsigned short, std::_Identity<unsigned short>, std::less<unsigned short>, std::allocator<unsigned short>>::_M_erase(std::_Rb_tree_node<unsigned short>*)
+std::pair<std::_Rb_tree_iterator<unsigned short>, bool> std::_Rb_tree<unsigned short, unsigned short, std::_Identity<unsigned short>, std::less<unsigned short>, std::allocator<unsigned short>>::_M_insert_unique<unsigned short const&>(unsigned short const&)
+void std::vector<std::set<unsigned short, std::less<unsigned short>, std::allocator<unsigned short>> const*, std::allocator<std::set<unsigned short, std::less<unsigned short>, std::allocator<unsigned short>> const*>>::_M_emplace_back_aux<std::set<unsigned short, std::less<unsigned short>, std::allocator<unsigned short>> const*>(std::set<unsigned short, std::less<unsigned short>, std::allocator<unsigned short>> const*&&)
+void std::vector<std::set<unsigned short, std::less<unsigned short>, std::allocator<unsigned short>> const*, std::allocator<std::set<unsigned short, std::less<unsigned short>, std::allocator<unsigned short>> const*>>::_M_emplace_back_aux<std::set<unsigned short, std::less<unsigned short>, std::allocator<unsigned short>> const*>(std::set<unsigned short, std::less<unsigned short>, std::allocator<unsigned short>> const*&&)
+std::string::copy(char*, unsigned int, unsigned int) const
+std::_Rb_tree<unsigned int, std::pair<unsigned int const, std::string>, std::_Select1st<std::pair<unsigned int const, std::string>>, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, std::string>>>::_M_erase(std::_Rb_tree_node<std::pair<unsigned int const, std::string>>*)
+std::_Rb_tree<unsigned int, std::pair<unsigned int const, std::string>, std::_Select1st<std::pair<unsigned int const, std::string>>, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, std::string>>>::erase(unsigned int const&)
+std::_Rb_tree_node<unsigned int>* std::_Rb_tree<unsigned int, unsigned int, std::_Identity<unsigned int>, std::less<unsigned int>, std::allocator<unsigned int>>::_M_copy<std::_Rb_tree<unsigned int, unsigned int, std::_Identity<unsigned int>, std::less<unsigned int>, std::allocator<unsigned int>>::_Reuse_or_alloc_node>(std::_Rb_tree_node<unsigned int> const*, std::_Rb_tree_node<unsigned int>*, std::_Rb_tree<unsigned int, unsigned int, std::_Identity<unsigned int>, std::less<unsigned int>, std::allocator<unsigned int>>::_Reuse_or_alloc_node&)
+std::_Rb_tree<unsigned int, unsigned int, std::_Identity<unsigned int>, std::less<unsigned int>, std::allocator<unsigned int>>::operator=(std::_Rb_tree<unsigned int, unsigned int, std::_Identity<unsigned int>, std::less<unsigned int>, std::allocator<unsigned int>> const&)
+void std::vector<unsigned short, std::allocator<unsigned short>>::_M_range_insert<__gnu_cxx::__normal_iterator<unsigned short const*, std::vector<unsigned short, std::allocator<unsigned short>>>>(__gnu_cxx::__normal_iterator<unsigned short*, std::vector<unsigned short, std::allocator<unsigned short>>>, __gnu_cxx::__normal_iterator<unsigned short const*, std::vector<unsigned short, std::allocator<unsigned short>>>, __gnu_cxx::__normal_iterator<unsigned short const*, std::vector<unsigned short, std::allocator<unsigned short>>>, std::forward_iterator_tag)
+std::_Rb_tree<unsigned int, std::pair<unsigned int const, std::string>, std::_Select1st<std::pair<unsigned int const, std::string>>, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, std::string>>>::_M_get_insert_unique_pos(unsigned int const&)
+std::_Rb_tree<signed char, std::pair<signed char const, int>, std::_Select1st<std::pair<signed char const, int>>, std::less<signed char>, std::allocator<std::pair<signed char const, int>>>::_M_erase(std::_Rb_tree_node<std::pair<signed char const, int>>*)
+std::_Rb_tree<webrtc::RTCPPacketType, webrtc::RTCPPacketType, std::_Identity<webrtc::RTCPPacketType>, std::less<webrtc::RTCPPacketType>, std::allocator<webrtc::RTCPPacketType>>::_M_erase(std::_Rb_tree_node<webrtc::RTCPPacketType>*)
+std::_Rb_tree<signed char, std::pair<signed char const, int>, std::_Select1st<std::pair<signed char const, int>>, std::less<signed char>, std::allocator<std::pair<signed char const, int>>>::_M_get_insert_unique_pos(signed char const&)
+std::_Rb_tree_iterator<std::pair<signed char const, int>> std::_Rb_tree<signed char, std::pair<signed char const, int>, std::_Select1st<std::pair<signed char const, int>>, std::less<signed char>, std::allocator<std::pair<signed char const, int>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<signed char const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<signed char const, int>>, std::piecewise_construct_t const&, std::tuple<signed char const&>&&, std::tuple<>&&)
+std::_Rb_tree_iterator<std::pair<signed char const, int>> std::_Rb_tree<signed char, std::pair<signed char const, int>, std::_Select1st<std::pair<signed char const, int>>, std::less<signed char>, std::allocator<std::pair<signed char const, int>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<signed char const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<signed char const, int>>, std::piecewise_construct_t const&, std::tuple<signed char const&>&&, std::tuple<>&&)
+std::_Rb_tree<webrtc::RTCPPacketType, webrtc::RTCPPacketType, std::_Identity<webrtc::RTCPPacketType>, std::less<webrtc::RTCPPacketType>, std::allocator<webrtc::RTCPPacketType>>::_M_get_insert_unique_pos(webrtc::RTCPPacketType const&)
+std::_Rb_tree<unsigned int, std::pair<unsigned int const, unsigned short>, std::_Select1st<std::pair<unsigned int const, unsigned short>>, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, unsigned short>>>::_M_erase(std::_Rb_tree_node<std::pair<unsigned int const, unsigned short>>*)
+std::_Rb_tree<unsigned int, std::pair<unsigned int const, unsigned short>, std::_Select1st<std::pair<unsigned int const, unsigned short>>, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, unsigned short>>>::_M_get_insert_unique_pos(unsigned int const&)
+std::_Rb_tree_iterator<std::pair<unsigned int const, unsigned short>> std::_Rb_tree<unsigned int, std::pair<unsigned int const, unsigned short>, std::_Select1st<std::pair<unsigned int const, unsigned short>>, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, unsigned short>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned int&&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<unsigned int const, unsigned short>>, std::piecewise_construct_t const&, std::tuple<unsigned int&&>&&, std::tuple<>&&)
+std::_Rb_tree_iterator<std::pair<unsigned int const, unsigned short>> std::_Rb_tree<unsigned int, std::pair<unsigned int const, unsigned short>, std::_Select1st<std::pair<unsigned int const, unsigned short>>, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, unsigned short>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned int&&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<unsigned int const, unsigned short>>, std::piecewise_construct_t const&, std::tuple<unsigned int&&>&&, std::tuple<>&&)
+void std::deque<int, std::allocator<int>>::_M_push_back_aux<int const&>(int const&)
+void std::deque<int, std::allocator<int>>::_M_push_back_aux<int const&>(int const&)
+std::pair<std::_Rb_tree_iterator<std::string>, bool> std::_Rb_tree<std::string, std::string, std::_Identity<std::string>, std::less<std::string>, std::allocator<std::string>>::_M_insert_unique<std::string const&>(std::string const&)
+std::_Rb_tree_iterator<std::pair<unsigned int const, std::string>> std::_Rb_tree<unsigned int, std::pair<unsigned int const, std::string>, std::_Select1st<std::pair<unsigned int const, std::string>>, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, std::string>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned int const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<unsigned int const, std::string>>, std::piecewise_construct_t const&, std::tuple<unsigned int const&>&&, std::tuple<>&&)
+std::_Rb_tree_iterator<std::pair<unsigned int const, std::string>> std::_Rb_tree<unsigned int, std::pair<unsigned int const, std::string>, std::_Select1st<std::pair<unsigned int const, std::string>>, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, std::string>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<unsigned int const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<unsigned int const, std::string>>, std::piecewise_construct_t const&, std::tuple<unsigned int const&>&&, std::tuple<>&&)
+std::_Deque_base<unsigned int, std::allocator<unsigned int>>::~_Deque_base()
+std::_Deque_base<unsigned int, std::allocator<unsigned int>>::~_Deque_base()
+std::_Deque_base<unsigned int, std::allocator<unsigned int>>::_M_initialize_map(unsigned int)
+std::vector<unsigned char, std::allocator<unsigned char>>::operator=(std::vector<unsigned char, std::allocator<unsigned char>> const&)
+void std::deque<unsigned int, std::allocator<unsigned int>>::_M_push_back_aux<unsigned int const&>(unsigned int const&)
+void std::deque<unsigned int, std::allocator<unsigned int>>::_M_push_back_aux<unsigned int const&>(unsigned int const&)
+std::_Rb_tree<long long, std::pair<long long const, std::array<short, 5u>>, std::_Select1st<std::pair<long long const, std::array<short, 5u>>>, std::less<long long>, std::allocator<std::pair<long long const, std::array<short, 5u>>>>::_M_erase(std::_Rb_tree_node<std::pair<long long const, std::array<short, 5u>>>*)
+std::_Rb_tree<long long, std::pair<long long const, std::array<short, 5u>>, std::_Select1st<std::pair<long long const, std::array<short, 5u>>>, std::less<long long>, std::allocator<std::pair<long long const, std::array<short, 5u>>>>::_M_insert_node(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node<std::pair<long long const, std::array<short, 5u>>>*)
+std::_Rb_tree<long long, std::pair<long long const, std::array<short, 5u>>, std::_Select1st<std::pair<long long const, std::array<short, 5u>>>, std::less<long long>, std::allocator<std::pair<long long const, std::array<short, 5u>>>>::_M_get_insert_unique_pos(long long const&)
+std::vector<webrtc::FrameType, std::allocator<webrtc::FrameType>>::operator=(std::vector<webrtc::FrameType, std::allocator<webrtc::FrameType>> const&)
+std::vector<webrtc::FrameType, std::allocator<webrtc::FrameType>>::_M_fill_insert(__gnu_cxx::__normal_iterator<webrtc::FrameType*, std::vector<webrtc::FrameType, std::allocator<webrtc::FrameType>>>, unsigned int, webrtc::FrameType const&)
 log2f
-_ZNSt6vectorItSaItEE19_M_emplace_back_auxIJRtEEEvDpOT_
-_ZNSt6vectorItSaItEE19_M_emplace_back_auxIIRtEEEvDpOT_
-_ZNSt5dequeIdSaIdEE16_M_push_back_auxIJRKdEEEvDpOT_
-_ZNSt5dequeIdSaIdEE16_M_push_back_auxIIRKdEEEvDpOT_
+void std::vector<unsigned short, std::allocator<unsigned short>>::_M_emplace_back_aux<unsigned short&>(unsigned short&)
+void std::vector<unsigned short, std::allocator<unsigned short>>::_M_emplace_back_aux<unsigned short&>(unsigned short&)
+void std::deque<double, std::allocator<double>>::_M_push_back_aux<double const&>(double const&)
+void std::deque<double, std::allocator<double>>::_M_push_back_aux<double const&>(double const&)
 lrintf
 __memset_chk
-_ZNSt6vectorIiSaIiEE19_M_emplace_back_auxIJiEEEvDpOT_
-_ZNSt6vectorIiSaIiEE19_M_emplace_back_auxIIiEEEvDpOT_
-_ZNSt6vectorIjSaIjEE19_M_emplace_back_auxIJRjEEEvDpOT_
-_ZNSt6vectorIjSaIjEE19_M_emplace_back_auxIIRjEEEvDpOT_
+void std::vector<int, std::allocator<int>>::_M_emplace_back_aux<int>(int&&)
+void std::vector<int, std::allocator<int>>::_M_emplace_back_aux<int>(int&&)
+void std::vector<unsigned int, std::allocator<unsigned int>>::_M_emplace_back_aux<unsigned int&>(unsigned int&)
+void std::vector<unsigned int, std::allocator<unsigned int>>::_M_emplace_back_aux<unsigned int&>(unsigned int&)
 asin
-_ZNSt8_Rb_treeIiiSt9_IdentityIiESt4lessIiESaIiEE7_M_copyINS5_20_Reuse_or_alloc_nodeEEEPSt13_Rb_tree_nodeIiEPKS9_SA_RT_
-_ZNSt10_HashtableISsSt4pairIKSsSsESaIS2_ENSt8__detail10_Select1stESt8equal_toISsESt4hashISsENS4_18_Mod_range_hashingENS4_20_Default_ranged_hashENS4_20_Prime_rehash_policyENS4_17_Hashtable_traitsILb1ELb0ELb1EEEEC2ERKSF_
-_ZNSt10_HashtableISsSt4pairIKSsSsESaIS2_ENSt8__detail10_Select1stESt8equal_toISsESt4hashISsENS4_18_Mod_range_hashingENS4_20_Default_ranged_hashENS4_20_Prime_rehash_policyENS4_17_Hashtable_traitsILb1ELb0ELb1EEEEC1ERKSF_
-_ZNSt6vectorIN6webrtc12FecMechanismESaIS1_EEaSERKS3_
-_ZNSt6vectorIN6webrtc12FecMechanismESaIS1_EE19_M_emplace_back_auxIJS1_EEEvDpOT_
-_ZNSt6vectorIN6webrtc12FecMechanismESaIS1_EE19_M_emplace_back_auxIIS1_EEEvDpOT_
-_ZNSt6vectorIN6webrtc12FecMechanismESaIS1_EE12emplace_backIJS1_EEEvDpOT_
-_ZNSt6vectorIN6webrtc12FecMechanismESaIS1_EE12emplace_backIIS1_EEEvDpOT_
-_ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE17_M_insert_unique_IRKS2_NS8_11_Alloc_nodeEEESt17_Rb_tree_iteratorIS2_ESt23_Rb_tree_const_iteratorIS2_EOT_RT0_
-_ZNKSs7compareEjjRKSs
+std::_Rb_tree_node<int>* std::_Rb_tree<int, int, std::_Identity<int>, std::less<int>, std::allocator<int>>::_M_copy<std::_Rb_tree<int, int, std::_Identity<int>, std::less<int>, std::allocator<int>>::_Reuse_or_alloc_node>(std::_Rb_tree_node<int> const*, std::_Rb_tree_node<int>*, std::_Rb_tree<int, int, std::_Identity<int>, std::less<int>, std::allocator<int>>::_Reuse_or_alloc_node&)
+std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string>>, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true>>::_Hashtable(std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string>>, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true>> const&)
+std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string>>, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true>>::_Hashtable(std::_Hashtable<std::string, std::pair<std::string const, std::string>, std::allocator<std::pair<std::string const, std::string>>, std::__detail::_Select1st, std::equal_to<std::string>, std::hash<std::string>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true>> const&)
+std::vector<webrtc::FecMechanism, std::allocator<webrtc::FecMechanism>>::operator=(std::vector<webrtc::FecMechanism, std::allocator<webrtc::FecMechanism>> const&)
+void std::vector<webrtc::FecMechanism, std::allocator<webrtc::FecMechanism>>::_M_emplace_back_aux<webrtc::FecMechanism>(webrtc::FecMechanism&&)
+void std::vector<webrtc::FecMechanism, std::allocator<webrtc::FecMechanism>>::_M_emplace_back_aux<webrtc::FecMechanism>(webrtc::FecMechanism&&)
+void std::vector<webrtc::FecMechanism, std::allocator<webrtc::FecMechanism>>::emplace_back<webrtc::FecMechanism>(webrtc::FecMechanism&&)
+void std::vector<webrtc::FecMechanism, std::allocator<webrtc::FecMechanism>>::emplace_back<webrtc::FecMechanism>(webrtc::FecMechanism&&)
+std::_Rb_tree_iterator<std::pair<std::string const, std::string>> std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::_M_insert_unique_<std::pair<std::string const, std::string> const&, std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::_Alloc_node>(std::_Rb_tree_const_iterator<std::pair<std::string const, std::string>>, std::pair<std::string const, std::string> const&, std::_Rb_tree<std::string, std::pair<std::string const, std::string>, std::_Select1st<std::pair<std::string const, std::string>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::_Alloc_node&)
+std::string::compare(unsigned int, unsigned int, std::string const&) const
 islower
 tolower
-_ZNSt6vectorISsSaISsEE19_M_emplace_back_auxIJRKSsEEEvDpOT_
-_ZNSt6vectorISsSaISsEE19_M_emplace_back_auxIIRKSsEEEvDpOT_
-_ZNSt6vectorISsSaISsEE17_M_default_appendEj
-_ZNSt10_HashtableIiSt4pairIKiiESaIS2_ENSt8__detail10_Select1stESt8equal_toIiESt4hashIiENS4_18_Mod_range_hashingENS4_20_Default_ranged_hashENS4_20_Prime_rehash_policyENS4_17_Hashtable_traitsILb0ELb0ELb1EEEED2Ev
-_ZNSt10_HashtableIiSt4pairIKiiESaIS2_ENSt8__detail10_Select1stESt8equal_toIiESt4hashIiENS4_18_Mod_range_hashingENS4_20_Default_ranged_hashENS4_20_Prime_rehash_policyENS4_17_Hashtable_traitsILb0ELb0ELb1EEEED1Ev
-_ZNKSs6substrEjj
-_ZNKSs7compareERKSs
-_ZNSt3mapISsSsSt4lessISsESaISt4pairIKSsSsEEEixERS3_
-_ZNSs6assignEPKc
-_ZNSt10_HashtableIiSt4pairIKiiESaIS2_ENSt8__detail10_Select1stESt8equal_toIiESt4hashIiENS4_18_Mod_range_hashingENS4_20_Default_ranged_hashENS4_20_Prime_rehash_policyENS4_17_Hashtable_traitsILb0ELb0ELb1EEEE21_M_insert_unique_nodeEjjPNS4_10_Hash_nodeIS2_Lb0EEE
-_ZNSt8__detail9_Map_baseIiSt4pairIKiiESaIS3_ENS_10_Select1stESt8equal_toIiESt4hashIiENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_20_Prime_rehash_policyENS_17_Hashtable_traitsILb0ELb0ELb1EEELb1EEixERS2_
-_ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_EPKS3_OS6_
-_ZSteqISsSaISsEEbRKSt6vectorIT_T0_ES6_
-_ZNSt8_Rb_treeIN7cricket9MediaTypeES1_St9_IdentityIS1_ESt4lessIS1_ESaIS1_EE16_M_insert_uniqueIS1_EESt4pairISt17_Rb_tree_iteratorIS1_EbEOT_
-_ZNSt8_Rb_treeIN7cricket9MediaTypeES1_St9_IdentityIS1_ESt4lessIS1_ESaIS1_EE8_M_eraseEPSt13_Rb_tree_nodeIS1_E
-_ZNSt8_Rb_treeISsSt4pairIKSsSt3setIN7cricket9MediaTypeESt4lessIS4_ESaIS4_EEESt10_Select1stIS9_ES5_ISsESaIS9_EE8_M_eraseEPSt13_Rb_tree_nodeIS9_E
-_ZNSt8_Rb_treeISsSt4pairIKSsSt3setIN7cricket9MediaTypeESt4lessIS4_ESaIS4_EEESt10_Select1stIS9_ES5_ISsESaIS9_EE24_M_get_insert_unique_posERS1_
-_ZNSt8_Rb_treeISsSt4pairIKSsSt3setIN7cricket9MediaTypeESt4lessIS4_ESaIS4_EEESt10_Select1stIS9_ES5_ISsESaIS9_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJRS1_EESJ_IJEEEEESt17_Rb_tree_iteratorIS9_ESt23_Rb_tree_const_iteratorIS9_EDpOT_
-_ZNSt8_Rb_treeISsSt4pairIKSsSt3setIN7cricket9MediaTypeESt4lessIS4_ESaIS4_EEESt10_Select1stIS9_ES5_ISsESaIS9_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIRS1_EESJ_IIEEEEESt17_Rb_tree_iteratorIS9_ESt23_Rb_tree_const_iteratorIS9_EDpOT_
-_ZNSt3mapISsSt3setIN7cricket9MediaTypeESt4lessIS2_ESaIS2_EES3_ISsESaISt4pairIKSsS6_EEEixERS9_
-_ZNSt8_Rb_treeIN7cricket9MediaTypeES1_St9_IdentityIS1_ESt4lessIS1_ESaIS1_EE7_M_copyINS7_11_Alloc_nodeEEEPSt13_Rb_tree_nodeIS1_EPKSB_SC_RT_
-_ZNSt8_Rb_treeISsSt4pairIKSsSt6vectorISsSaISsEEESt10_Select1stIS5_ESt4lessISsESaIS5_EE8_M_eraseEPSt13_Rb_tree_nodeIS5_E
-_ZNSt8_Rb_treeISsSt4pairIKSsSt6vectorISsSaISsEEESt10_Select1stIS5_ESt4lessISsESaIS5_EE14_M_insert_nodeEPSt18_Rb_tree_node_baseSD_PSt13_Rb_tree_nodeIS5_E
-_ZNSt8_Rb_treeISsSsSt9_IdentityISsESt4lessISsESaISsEE24_M_get_insert_unique_posERKSs
-_ZNSt8_Rb_treeISsSt4pairIKSsSt6vectorISsSaISsEEESt10_Select1stIS5_ESt4lessISsESaIS5_EE24_M_get_insert_unique_posERS1_
-_ZNSt8_Rb_treeISsSt4pairIKSsSt6vectorISsSaISsEEESt10_Select1stIS5_ESt4lessISsESaIS5_EE29_M_get_insert_hint_unique_posESt23_Rb_tree_const_iteratorIS5_ERS1_
-_ZNSt6vectorIPKSsSaIS1_EE19_M_emplace_back_auxIJS1_EEEvDpOT_
-_ZNSt6vectorIPKSsSaIS1_EE19_M_emplace_back_auxIIS1_EEEvDpOT_
-_ZNSt6vectorIPKSsSaIS1_EE12emplace_backIJS1_EEEvDpOT_
-_ZNSt6vectorIPKSsSaIS1_EE12emplace_backIIS1_EEEvDpOT_
-_ZNKSs13find_first_ofEPKcjj
-_ZNKSs7compareEjjPKc
-_ZNSt8_Rb_treeISsSt4pairIKSsN6webrtc3bbr20BbrNetworkController13RecoveryStateEESt10_Select1stIS6_ESt4lessISsESaIS6_EE8_M_eraseEPSt13_Rb_tree_nodeIS6_E
-_ZNSt8_Rb_treeISsSt4pairIKSsN6webrtc3bbr20BbrNetworkController13RecoveryStateEESt10_Select1stIS6_ESt4lessISsESaIS6_EE24_M_get_insert_unique_posERS1_
-_ZNSt8_Rb_treeISsSt4pairIKSsN6webrtc3bbr20BbrNetworkController13RecoveryStateEESt10_Select1stIS6_ESt4lessISsESaIS6_EE7_M_copyINSC_11_Alloc_nodeEEEPSt13_Rb_tree_nodeIS6_EPKSG_SH_RT_
-_ZNSt8_Rb_treeISsSt4pairIKSsiESt10_Select1stIS2_ESt4lessISsESaIS2_EE24_M_get_insert_unique_posERS1_
-_ZNSt8_Rb_treeIhhSt9_IdentityIhESt4lessIhESaIhEE16_M_insert_uniqueIhEESt4pairISt17_Rb_tree_iteratorIhEbEOT_
-_ZNSt8_Rb_treeIjjSt9_IdentityIjESt4lessIjESaIjEE24_M_get_insert_unique_posERKj
-_ZNSt6vectorISt4pairIN3rtc6Socket6OptionEiESaIS4_EE12emplace_backIJS4_EEEvDpOT_
-_ZNSt6vectorISt4pairIN3rtc6Socket6OptionEiESaIS4_EE12emplace_backIIS4_EEEvDpOT_
-_ZNSt3mapISsSsSt4lessISsESaISt4pairIKSsSsEEEixEOSs
-_ZNSt8_Rb_treeIN6webrtc17IceTransportStateESt4pairIKS1_iESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE8_M_eraseEPSt13_Rb_tree_nodeIS4_E
-_ZNSt8_Rb_treeIN7cricket18DtlsTransportStateESt4pairIKS1_iESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE8_M_eraseEPSt13_Rb_tree_nodeIS4_E
-_ZNSt8_Rb_treeIN7cricket18DtlsTransportStateESt4pairIKS1_iESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE24_M_get_insert_unique_posERS3_
-_ZNSt8_Rb_treeIN7cricket18DtlsTransportStateESt4pairIKS1_iESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJOS1_EESF_IJEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_
-_ZNSt8_Rb_treeIN7cricket18DtlsTransportStateESt4pairIKS1_iESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIOS1_EESF_IIEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_
-_ZNSt8_Rb_treeIN6webrtc17IceTransportStateESt4pairIKS1_iESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE24_M_get_insert_unique_posERS3_
-_ZNSt8_Rb_treeIN6webrtc17IceTransportStateESt4pairIKS1_iESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE22_M_emplace_hint_uniqueIJRKSt21piecewise_construct_tSt5tupleIJOS1_EESF_IJEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_
-_ZNSt8_Rb_treeIN6webrtc17IceTransportStateESt4pairIKS1_iESt10_Select1stIS4_ESt4lessIS1_ESaIS4_EE22_M_emplace_hint_uniqueIIRKSt21piecewise_construct_tSt5tupleIIOS1_EESF_IIEEEEESt17_Rb_tree_iteratorIS4_ESt23_Rb_tree_const_iteratorIS4_EDpOT_
+void std::vector<std::string, std::allocator<std::string>>::_M_emplace_back_aux<std::string const&>(std::string const&)
+void std::vector<std::string, std::allocator<std::string>>::_M_emplace_back_aux<std::string const&>(std::string const&)
+std::vector<std::string, std::allocator<std::string>>::_M_default_append(unsigned int)
+std::_Hashtable<int, std::pair<int const, int>, std::allocator<std::pair<int const, int>>, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>>::~_Hashtable()
+std::_Hashtable<int, std::pair<int const, int>, std::allocator<std::pair<int const, int>>, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>>::~_Hashtable()
+std::string::substr(unsigned int, unsigned int) const
+std::string::compare(std::string const&) const
+std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::operator[](std::string const&)
+std::string::assign(char const*)
+std::_Hashtable<int, std::pair<int const, int>, std::allocator<std::pair<int const, int>>, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>>::_M_insert_unique_node(unsigned int, unsigned int, std::__detail::_Hash_node<std::pair<int const, int>, false>*)
+std::__detail::_Map_base<int, std::pair<int const, int>, std::allocator<std::pair<int const, int>>, std::__detail::_Select1st, std::equal_to<int>, std::hash<int>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<false, false, true>, true>::operator[](int const&)
+std::basic_string<char, std::char_traits<char>, std::allocator<char>> std::operator+<char, std::char_traits<char>, std::allocator<char>>(char const*, std::basic_string<char, std::char_traits<char>, std::allocator<char>>&&)
+bool std::operator==<std::string, std::allocator<std::string>>(std::vector<std::string, std::allocator<std::string>> const&, std::vector<std::string, std::allocator<std::string>> const&)
+std::pair<std::_Rb_tree_iterator<cricket::MediaType>, bool> std::_Rb_tree<cricket::MediaType, cricket::MediaType, std::_Identity<cricket::MediaType>, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>::_M_insert_unique<cricket::MediaType>(cricket::MediaType&&)
+std::_Rb_tree<cricket::MediaType, cricket::MediaType, std::_Identity<cricket::MediaType>, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>::_M_erase(std::_Rb_tree_node<cricket::MediaType>*)
+std::_Rb_tree<std::string, std::pair<std::string const, std::set<cricket::MediaType, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>>, std::_Select1st<std::pair<std::string const, std::set<cricket::MediaType, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::set<cricket::MediaType, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>>>>::_M_erase(std::_Rb_tree_node<std::pair<std::string const, std::set<cricket::MediaType, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>>>*)
+std::_Rb_tree<std::string, std::pair<std::string const, std::set<cricket::MediaType, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>>, std::_Select1st<std::pair<std::string const, std::set<cricket::MediaType, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::set<cricket::MediaType, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>>>>::_M_get_insert_unique_pos(std::string const&)
+std::_Rb_tree_iterator<std::pair<std::string const, std::set<cricket::MediaType, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>>> std::_Rb_tree<std::string, std::pair<std::string const, std::set<cricket::MediaType, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>>, std::_Select1st<std::pair<std::string const, std::set<cricket::MediaType, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::set<cricket::MediaType, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<std::string const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<std::string const, std::set<cricket::MediaType, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>>>, std::piecewise_construct_t const&, std::tuple<std::string const&>&&, std::tuple<>&&)
+std::_Rb_tree_iterator<std::pair<std::string const, std::set<cricket::MediaType, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>>> std::_Rb_tree<std::string, std::pair<std::string const, std::set<cricket::MediaType, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>>, std::_Select1st<std::pair<std::string const, std::set<cricket::MediaType, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::set<cricket::MediaType, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<std::string const&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<std::string const, std::set<cricket::MediaType, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>>>, std::piecewise_construct_t const&, std::tuple<std::string const&>&&, std::tuple<>&&)
+std::map<std::string, std::set<cricket::MediaType, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::set<cricket::MediaType, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>>>>::operator[](std::string const&)
+std::_Rb_tree_node<cricket::MediaType>* std::_Rb_tree<cricket::MediaType, cricket::MediaType, std::_Identity<cricket::MediaType>, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>::_M_copy<std::_Rb_tree<cricket::MediaType, cricket::MediaType, std::_Identity<cricket::MediaType>, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>::_Alloc_node>(std::_Rb_tree_node<cricket::MediaType> const*, std::_Rb_tree_node<cricket::MediaType>*, std::_Rb_tree<cricket::MediaType, cricket::MediaType, std::_Identity<cricket::MediaType>, std::less<cricket::MediaType>, std::allocator<cricket::MediaType>>::_Alloc_node&)
+std::_Rb_tree<std::string, std::pair<std::string const, std::vector<std::string, std::allocator<std::string>>>, std::_Select1st<std::pair<std::string const, std::vector<std::string, std::allocator<std::string>>>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::vector<std::string, std::allocator<std::string>>>>>::_M_erase(std::_Rb_tree_node<std::pair<std::string const, std::vector<std::string, std::allocator<std::string>>>>*)
+std::_Rb_tree<std::string, std::pair<std::string const, std::vector<std::string, std::allocator<std::string>>>, std::_Select1st<std::pair<std::string const, std::vector<std::string, std::allocator<std::string>>>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::vector<std::string, std::allocator<std::string>>>>>::_M_insert_node(std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node<std::pair<std::string const, std::vector<std::string, std::allocator<std::string>>>>*)
+std::_Rb_tree<std::string, std::string, std::_Identity<std::string>, std::less<std::string>, std::allocator<std::string>>::_M_get_insert_unique_pos(std::string const&)
+std::_Rb_tree<std::string, std::pair<std::string const, std::vector<std::string, std::allocator<std::string>>>, std::_Select1st<std::pair<std::string const, std::vector<std::string, std::allocator<std::string>>>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::vector<std::string, std::allocator<std::string>>>>>::_M_get_insert_unique_pos(std::string const&)
+std::_Rb_tree<std::string, std::pair<std::string const, std::vector<std::string, std::allocator<std::string>>>, std::_Select1st<std::pair<std::string const, std::vector<std::string, std::allocator<std::string>>>>, std::less<std::string>, std::allocator<std::pair<std::string const, std::vector<std::string, std::allocator<std::string>>>>>::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<std::string const, std::vector<std::string, std::allocator<std::string>>>>, std::string const&)
+void std::vector<std::string const*, std::allocator<std::string const*>>::_M_emplace_back_aux<std::string const*>(std::string const*&&)
+void std::vector<std::string const*, std::allocator<std::string const*>>::_M_emplace_back_aux<std::string const*>(std::string const*&&)
+void std::vector<std::string const*, std::allocator<std::string const*>>::emplace_back<std::string const*>(std::string const*&&)
+void std::vector<std::string const*, std::allocator<std::string const*>>::emplace_back<std::string const*>(std::string const*&&)
+std::string::find_first_of(char const*, unsigned int, unsigned int) const
+std::string::compare(unsigned int, unsigned int, char const*) const
+std::_Rb_tree<std::string, std::pair<std::string const, webrtc::bbr::BbrNetworkController::RecoveryState>, std::_Select1st<std::pair<std::string const, webrtc::bbr::BbrNetworkController::RecoveryState>>, std::less<std::string>, std::allocator<std::pair<std::string const, webrtc::bbr::BbrNetworkController::RecoveryState>>>::_M_erase(std::_Rb_tree_node<std::pair<std::string const, webrtc::bbr::BbrNetworkController::RecoveryState>>*)
+std::_Rb_tree<std::string, std::pair<std::string const, webrtc::bbr::BbrNetworkController::RecoveryState>, std::_Select1st<std::pair<std::string const, webrtc::bbr::BbrNetworkController::RecoveryState>>, std::less<std::string>, std::allocator<std::pair<std::string const, webrtc::bbr::BbrNetworkController::RecoveryState>>>::_M_get_insert_unique_pos(std::string const&)
+std::_Rb_tree_node<std::pair<std::string const, webrtc::bbr::BbrNetworkController::RecoveryState>>* std::_Rb_tree<std::string, std::pair<std::string const, webrtc::bbr::BbrNetworkController::RecoveryState>, std::_Select1st<std::pair<std::string const, webrtc::bbr::BbrNetworkController::RecoveryState>>, std::less<std::string>, std::allocator<std::pair<std::string const, webrtc::bbr::BbrNetworkController::RecoveryState>>>::_M_copy<std::_Rb_tree<std::string, std::pair<std::string const, webrtc::bbr::BbrNetworkController::RecoveryState>, std::_Select1st<std::pair<std::string const, webrtc::bbr::BbrNetworkController::RecoveryState>>, std::less<std::string>, std::allocator<std::pair<std::string const, webrtc::bbr::BbrNetworkController::RecoveryState>>>::_Alloc_node>(std::_Rb_tree_node<std::pair<std::string const, webrtc::bbr::BbrNetworkController::RecoveryState>> const*, std::_Rb_tree_node<std::pair<std::string const, webrtc::bbr::BbrNetworkController::RecoveryState>>*, std::_Rb_tree<std::string, std::pair<std::string const, webrtc::bbr::BbrNetworkController::RecoveryState>, std::_Select1st<std::pair<std::string const, webrtc::bbr::BbrNetworkController::RecoveryState>>, std::less<std::string>, std::allocator<std::pair<std::string const, webrtc::bbr::BbrNetworkController::RecoveryState>>>::_Alloc_node&)
+std::_Rb_tree<std::string, std::pair<std::string const, int>, std::_Select1st<std::pair<std::string const, int>>, std::less<std::string>, std::allocator<std::pair<std::string const, int>>>::_M_get_insert_unique_pos(std::string const&)
+std::pair<std::_Rb_tree_iterator<unsigned char>, bool> std::_Rb_tree<unsigned char, unsigned char, std::_Identity<unsigned char>, std::less<unsigned char>, std::allocator<unsigned char>>::_M_insert_unique<unsigned char>(unsigned char&&)
+std::_Rb_tree<unsigned int, unsigned int, std::_Identity<unsigned int>, std::less<unsigned int>, std::allocator<unsigned int>>::_M_get_insert_unique_pos(unsigned int const&)
+void std::vector<std::pair<rtc::Socket::Option, int>, std::allocator<std::pair<rtc::Socket::Option, int>>>::emplace_back<std::pair<rtc::Socket::Option, int>>(std::pair<rtc::Socket::Option, int>&&)
+void std::vector<std::pair<rtc::Socket::Option, int>, std::allocator<std::pair<rtc::Socket::Option, int>>>::emplace_back<std::pair<rtc::Socket::Option, int>>(std::pair<rtc::Socket::Option, int>&&)
+std::map<std::string, std::string, std::less<std::string>, std::allocator<std::pair<std::string const, std::string>>>::operator[](std::string&&)
+std::_Rb_tree<webrtc::IceTransportState, std::pair<webrtc::IceTransportState const, int>, std::_Select1st<std::pair<webrtc::IceTransportState const, int>>, std::less<webrtc::IceTransportState>, std::allocator<std::pair<webrtc::IceTransportState const, int>>>::_M_erase(std::_Rb_tree_node<std::pair<webrtc::IceTransportState const, int>>*)
+std::_Rb_tree<cricket::DtlsTransportState, std::pair<cricket::DtlsTransportState const, int>, std::_Select1st<std::pair<cricket::DtlsTransportState const, int>>, std::less<cricket::DtlsTransportState>, std::allocator<std::pair<cricket::DtlsTransportState const, int>>>::_M_erase(std::_Rb_tree_node<std::pair<cricket::DtlsTransportState const, int>>*)
+std::_Rb_tree<cricket::DtlsTransportState, std::pair<cricket::DtlsTransportState const, int>, std::_Select1st<std::pair<cricket::DtlsTransportState const, int>>, std::less<cricket::DtlsTransportState>, std::allocator<std::pair<cricket::DtlsTransportState const, int>>>::_M_get_insert_unique_pos(cricket::DtlsTransportState const&)
+std::_Rb_tree_iterator<std::pair<cricket::DtlsTransportState const, int>> std::_Rb_tree<cricket::DtlsTransportState, std::pair<cricket::DtlsTransportState const, int>, std::_Select1st<std::pair<cricket::DtlsTransportState const, int>>, std::less<cricket::DtlsTransportState>, std::allocator<std::pair<cricket::DtlsTransportState const, int>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<cricket::DtlsTransportState&&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<cricket::DtlsTransportState const, int>>, std::piecewise_construct_t const&, std::tuple<cricket::DtlsTransportState&&>&&, std::tuple<>&&)
+std::_Rb_tree_iterator<std::pair<cricket::DtlsTransportState const, int>> std::_Rb_tree<cricket::DtlsTransportState, std::pair<cricket::DtlsTransportState const, int>, std::_Select1st<std::pair<cricket::DtlsTransportState const, int>>, std::less<cricket::DtlsTransportState>, std::allocator<std::pair<cricket::DtlsTransportState const, int>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<cricket::DtlsTransportState&&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<cricket::DtlsTransportState const, int>>, std::piecewise_construct_t const&, std::tuple<cricket::DtlsTransportState&&>&&, std::tuple<>&&)
+std::_Rb_tree<webrtc::IceTransportState, std::pair<webrtc::IceTransportState const, int>, std::_Select1st<std::pair<webrtc::IceTransportState const, int>>, std::less<webrtc::IceTransportState>, std::allocator<std::pair<webrtc::IceTransportState const, int>>>::_M_get_insert_unique_pos(webrtc::IceTransportState const&)
+std::_Rb_tree_iterator<std::pair<webrtc::IceTransportState const, int>> std::_Rb_tree<webrtc::IceTransportState, std::pair<webrtc::IceTransportState const, int>, std::_Select1st<std::pair<webrtc::IceTransportState const, int>>, std::less<webrtc::IceTransportState>, std::allocator<std::pair<webrtc::IceTransportState const, int>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<webrtc::IceTransportState&&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<webrtc::IceTransportState const, int>>, std::piecewise_construct_t const&, std::tuple<webrtc::IceTransportState&&>&&, std::tuple<>&&)
+std::_Rb_tree_iterator<std::pair<webrtc::IceTransportState const, int>> std::_Rb_tree<webrtc::IceTransportState, std::pair<webrtc::IceTransportState const, int>, std::_Select1st<std::pair<webrtc::IceTransportState const, int>>, std::less<webrtc::IceTransportState>, std::allocator<std::pair<webrtc::IceTransportState const, int>>>::_M_emplace_hint_unique<std::piecewise_construct_t const&, std::tuple<webrtc::IceTransportState&&>, std::tuple<>>(std::_Rb_tree_const_iterator<std::pair<webrtc::IceTransportState const, int>>, std::piecewise_construct_t const&, std::tuple<webrtc::IceTransportState&&>&&, std::tuple<>&&)
 localtime_r
 if_indextoname
 getpid
 srandom
-_ZNSo9_M_insertIxEERSoT_
-_ZNSt9basic_iosIcSt11char_traitsIcEE5clearESt12_Ios_Iostate
-_ZNSo9_M_insertIdEERSoT_
+std::ostream& std::ostream::_M_insert<long long>(long long)
+std::basic_ios<char, std::char_traits<char>>::clear(std::_Ios_Iostate)
+std::ostream& std::ostream::_M_insert<double>(double)
 libpthread.so.0
 libdl.so.2
 librt.so.1

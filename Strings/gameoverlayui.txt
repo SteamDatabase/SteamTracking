@@ -4,32 +4,32 @@ _fini
 _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
 __cxa_finalize
-_Z17GetCPUInformationv
+GetCPUInformation()
 Is64BitOS
 Plat_IsInDebugSession
-_ZN11SteamStdLib11CommandLineEv
+SteamStdLib::CommandLine()
 GetOSType
-_ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 __cxa_atexit
-_ZN11SteamStdLib17CCommandLineParamC1EPKcS2_
-_ZN11SteamStdLib17CCommandLineParamD1Ev
+SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
+SteamStdLib::CCommandLineParam::~CCommandLineParam()
 g_pMemAllocSteam
-_ZTVN10__cxxabiv117__class_type_infoE
-_ZTVN10__cxxabiv120__si_class_type_infoE
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
 g_VProfProfilesRunningCount
 CVProfile_ExitScope
 VProfInternalEnterScopeCurrentThread
 pthread_mutex_lock
 pthread_mutex_unlock
-_ZN16SteamThreadTools12CThreadMutexC1Ev
+SteamThreadTools::CThreadMutex::CThreadMutex()
 V_strncpy
-_ZN16SteamThreadTools12CThreadMutexD1Ev
+SteamThreadTools::CThreadMutex::~CThreadMutex()
 V_strncmp
 getenv
 strlen
 Plat_FloatTime
 V_vsnprintf
-_ZTVN10__cxxabiv121__vmi_class_type_infoE
+vtable for __cxxabiv1::__vmi_class_type_info
 dlsym
 __snprintf_chk
 __realpath_chk
@@ -40,15 +40,15 @@ fread
 fclose
 strtol
 kill
-_ZN10CValidator11ClaimMemoryEPKv
-_ZN10CValidator4PushEPKcPvS1_
-_ZN10CValidator3PopEv
+CValidator::ClaimMemory(void const*)
+CValidator::Push(char const*, void*, char const*)
+CValidator::Pop()
 V_strnicmp
 V_vsnprintfRet
-_ZN7pcrecpp2RE9QuoteMetaERKNS_11StringPieceE
-_ZN7pcrecpp2RE6no_argE
-_ZNK7pcrecpp2RE12PartialMatchERKNS_11StringPieceERKNS_3ArgES6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_
-_ZN7pcrecpp2RED1Ev
+pcrecpp::RE::QuoteMeta(pcrecpp::StringPiece const&)
+pcrecpp::RE::no_arg
+pcrecpp::RE::PartialMatch(pcrecpp::StringPiece const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
+pcrecpp::RE::~RE()
 strcmp
 __pthread_key_create
 fwrite
@@ -73,7 +73,7 @@ __fxstat
 ftruncate
 mmap
 Plat_MSTime
-_ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
+AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 ThreadInterlockedCompareExchange
 strtoll
 V_URLDecodeRaw
@@ -99,36 +99,36 @@ V_StripFilename
 V_StripLastDir
 V_snprintf
 g_VProfManager
-_ZN10SteamVProf13CVProfManager21CleanupUnusedProfilesEv
+SteamVProf::CVProfManager::CleanupUnusedProfiles()
 g_VProfile
-_ZNK16SteamThreadTools16CThreadLocalBase3GetEv
-_ZN10SteamVProf9CVProfile9MarkFrameEPKc
-_ZN10SteamVProf13CVProfManager23StopProfilingAllThreadsEv
-_ZN10SteamVProf13CVProfManager21DumpAllThreadProfilesEi
-_ZN10SteamVProf13CVProfManager24StartProfilingAllThreadsEfi
+SteamThreadTools::CThreadLocalBase::Get() const
+SteamVProf::CVProfile::MarkFrame(char const*)
+SteamVProf::CVProfManager::StopProfilingAllThreads()
+SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
+SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
 VProfInternalGetProfileForCurrentThread
 Plat_RelativeTicks
 ThreadSleep
 SetMiniDumpSteamID
 SetMiniDumpBuildID
-_ZN16SteamThreadTools7CThread5YieldEv
+SteamThreadTools::CThread::Yield()
 ThreadInterlockedExchange
 getpwuid
 SpewOutputFunc
-_ZN16SteamThreadTools7CThread7SetNameEPKc
-_ZN16SteamThreadTools7CThread5StartEj
+SteamThreadTools::CThread::SetName(char const*)
+SteamThreadTools::CThread::Start(unsigned int)
 V_IsSteamCloseProtocol
 ThreadInterlockedDecrement
 ThreadInterlockedIncrement
 roundf
-_Z9V_stristrPKcS0_
+V_stristr(char const*, char const*)
 V_ParseURLQueryString
-_ZNK16SteamThreadTools7CThread7IsAliveEv
-_ZN16SteamThreadTools7CThreadD2Ev
-_ZN16SteamThreadTools7CThread4JoinEj
-_ZN16SteamThreadTools17CThreadSyncObjectD2Ev
-_ZN16SteamThreadTools16CThreadSemaphore7ReleaseEl
-_ZN16SteamThreadTools17CThreadSyncObject4WaitEj
+SteamThreadTools::CThread::IsAlive() const
+SteamThreadTools::CThread::~CThread()
+SteamThreadTools::CThread::Join(unsigned int)
+SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
+SteamThreadTools::CThreadSemaphore::Release(long)
+SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 powf
 avifImageCreate
 avifRGBImageSetDefaults
@@ -139,26 +139,26 @@ avifEncoderFinish
 avifImageDestroy
 avifEncoderDestroy
 avifRWDataFree
-_ZN16SteamThreadTools7CThreadC2Ev
-_ZN16SteamThreadTools16CThreadSemaphoreC1Ell
-_ZTIN16SteamThreadTools7CThreadE
-_ZN16SteamThreadTools7CThread4InitEv
-_ZN16SteamThreadTools7CThread6OnExitEv
-_ZNK16SteamThreadTools7CThread15IsThreadRunningEv
-_ZN16SteamThreadTools7CThread13GetThreadProcEv
+SteamThreadTools::CThread::CThread()
+SteamThreadTools::CThreadSemaphore::CThreadSemaphore(long, long)
+typeinfo for SteamThreadTools::CThread
+SteamThreadTools::CThread::Init()
+SteamThreadTools::CThread::OnExit()
+SteamThreadTools::CThread::IsThreadRunning() const
+SteamThreadTools::CThread::GetThreadProc()
 Plat_GetExecutablePathUTF8
 ETW_Steamworks_DispatchCallback_Start
 ETW_Steamworks_DispatchCallback_End_
 ETW_Steamworks_RunCallbacks_Start
 ETW_Steamworks_RunCallbacks_End_
 V_atoui64
-_ZN10CValidator16ClaimArrayMemoryEPKv
-_ZNK10CValidator9IsClaimedEPKv
+CValidator::ClaimArrayMemory(void const*)
+CValidator::IsClaimed(void const*) const
 V_atof
 strtod
 _DMsg
 strtoul
-_Z21V_SplitStringInternalPKcPKS0_PS0_iR10CUtlVectorI10CUtlString10CUtlMemoryIS5_EEb
+V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, bool)
 fnmatch
 V_IsAbsolutePath
 getcwd
@@ -261,79 +261,79 @@ pthread_once
 __sprintf_chk
 strtof
 strcpy
-_ZN6google8protobuf8internal8byteswapILi1EEEvPv
-_ZN6google8protobuf8internal8byteswapILi4EEEvPv
-_ZN6google8protobuf8internal8byteswapILi8EEEvPv
+void google::protobuf::internal::byteswap<1>(void*)
+void google::protobuf::internal::byteswap<4>(void*)
+void google::protobuf::internal::byteswap<8>(void*)
 lseek
 strtoull
-_ZN7pcrecpp3Arg10parse_nullEPKciPv
-_ZN7pcrecpp2RE7CleanupEv
+pcrecpp::Arg::parse_null(char const*, int, void*)
+pcrecpp::RE::Cleanup()
 pcre_free
-_ZN7pcrecpp2RED2Ev
-_ZN7pcrecpp2RE7CompileENS0_6AnchorE
+pcrecpp::RE::~RE()
+pcrecpp::RE::Compile(pcrecpp::RE::Anchor)
 pcre_compile
-_ZNK7pcrecpp2RE8TryMatchERKNS_11StringPieceEiNS0_6AnchorEbPii
+pcrecpp::RE::TryMatch(pcrecpp::StringPiece const&, int, pcrecpp::RE::Anchor, bool, int*, int) const
 pcre_exec
 pcre_config
-_ZNK7pcrecpp2RE23NumberOfCapturingGroupsEv
+pcrecpp::RE::NumberOfCapturingGroups() const
 pcre_fullinfo
-_ZNK7pcrecpp2RE11DoMatchImplERKNS_11StringPieceENS0_6AnchorEPiPKPKNS_3ArgEiS5_i
-_ZNK7pcrecpp2RE9FullMatchERKNS_11StringPieceERKNS_3ArgES6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_
-_ZNK7pcrecpp2RE7ConsumeEPNS_11StringPieceERKNS_3ArgES5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_
-_ZNK7pcrecpp2RE14FindAndConsumeEPNS_11StringPieceERKNS_3ArgES5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_
-_ZNK7pcrecpp2RE7DoMatchERKNS_11StringPieceENS0_6AnchorEPiPKPKNS_3ArgEi
-_ZN7pcrecpp3Arg12parse_stringEPKciPv
-_ZN7pcrecpp3Arg17parse_stringpieceEPKciPv
-_ZN7pcrecpp3Arg10parse_charEPKciPv
-_ZN7pcrecpp3Arg11parse_ucharEPKciPv
-_ZN7pcrecpp3Arg16parse_long_radixEPKciPvi
-_ZN7pcrecpp3Arg17parse_ulong_radixEPKciPvi
-_ZN7pcrecpp3Arg17parse_short_radixEPKciPvi
-_ZN7pcrecpp3Arg18parse_ushort_radixEPKciPvi
-_ZN7pcrecpp3Arg15parse_int_radixEPKciPvi
-_ZN7pcrecpp3Arg16parse_uint_radixEPKciPvi
-_ZN7pcrecpp3Arg20parse_longlong_radixEPKciPvi
+pcrecpp::RE::DoMatchImpl(pcrecpp::StringPiece const&, pcrecpp::RE::Anchor, int*, pcrecpp::Arg const* const*, int, int*, int) const
+pcrecpp::RE::FullMatch(pcrecpp::StringPiece const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
+pcrecpp::RE::Consume(pcrecpp::StringPiece*, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
+pcrecpp::RE::FindAndConsume(pcrecpp::StringPiece*, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
+pcrecpp::RE::DoMatch(pcrecpp::StringPiece const&, pcrecpp::RE::Anchor, int*, pcrecpp::Arg const* const*, int) const
+pcrecpp::Arg::parse_string(char const*, int, void*)
+pcrecpp::Arg::parse_stringpiece(char const*, int, void*)
+pcrecpp::Arg::parse_char(char const*, int, void*)
+pcrecpp::Arg::parse_uchar(char const*, int, void*)
+pcrecpp::Arg::parse_long_radix(char const*, int, void*, int)
+pcrecpp::Arg::parse_ulong_radix(char const*, int, void*, int)
+pcrecpp::Arg::parse_short_radix(char const*, int, void*, int)
+pcrecpp::Arg::parse_ushort_radix(char const*, int, void*, int)
+pcrecpp::Arg::parse_int_radix(char const*, int, void*, int)
+pcrecpp::Arg::parse_uint_radix(char const*, int, void*, int)
+pcrecpp::Arg::parse_longlong_radix(char const*, int, void*, int)
 strtoq
-_ZN7pcrecpp3Arg21parse_ulonglong_radixEPKciPvi
+pcrecpp::Arg::parse_ulonglong_radix(char const*, int, void*, int)
 strtouq
-_ZN7pcrecpp3Arg12parse_doubleEPKciPv
-_ZN7pcrecpp3Arg11parse_floatEPKciPv
-_ZN7pcrecpp3Arg11parse_shortEPKciPv
-_ZN7pcrecpp3Arg15parse_short_hexEPKciPv
-_ZN7pcrecpp3Arg17parse_short_octalEPKciPv
-_ZN7pcrecpp3Arg18parse_short_cradixEPKciPv
-_ZN7pcrecpp3Arg12parse_ushortEPKciPv
-_ZN7pcrecpp3Arg16parse_ushort_hexEPKciPv
-_ZN7pcrecpp3Arg18parse_ushort_octalEPKciPv
-_ZN7pcrecpp3Arg19parse_ushort_cradixEPKciPv
-_ZN7pcrecpp3Arg9parse_intEPKciPv
-_ZN7pcrecpp3Arg13parse_int_hexEPKciPv
-_ZN7pcrecpp3Arg15parse_int_octalEPKciPv
-_ZN7pcrecpp3Arg16parse_int_cradixEPKciPv
-_ZN7pcrecpp3Arg10parse_uintEPKciPv
-_ZN7pcrecpp3Arg14parse_uint_hexEPKciPv
-_ZN7pcrecpp3Arg16parse_uint_octalEPKciPv
-_ZN7pcrecpp3Arg17parse_uint_cradixEPKciPv
-_ZN7pcrecpp3Arg10parse_longEPKciPv
-_ZN7pcrecpp3Arg14parse_long_hexEPKciPv
-_ZN7pcrecpp3Arg16parse_long_octalEPKciPv
-_ZN7pcrecpp3Arg17parse_long_cradixEPKciPv
-_ZN7pcrecpp3Arg11parse_ulongEPKciPv
-_ZN7pcrecpp3Arg15parse_ulong_hexEPKciPv
-_ZN7pcrecpp3Arg17parse_ulong_octalEPKciPv
-_ZN7pcrecpp3Arg18parse_ulong_cradixEPKciPv
-_ZN7pcrecpp3Arg14parse_longlongEPKciPv
-_ZN7pcrecpp3Arg18parse_longlong_hexEPKciPv
-_ZN7pcrecpp3Arg20parse_longlong_octalEPKciPv
-_ZN7pcrecpp3Arg21parse_longlong_cradixEPKciPv
-_ZN7pcrecpp3Arg15parse_ulonglongEPKciPv
-_ZN7pcrecpp3Arg19parse_ulonglong_hexEPKciPv
-_ZN7pcrecpp3Arg21parse_ulonglong_octalEPKciPv
-_ZN7pcrecpp3Arg22parse_ulonglong_cradixEPKciPv
+pcrecpp::Arg::parse_double(char const*, int, void*)
+pcrecpp::Arg::parse_float(char const*, int, void*)
+pcrecpp::Arg::parse_short(char const*, int, void*)
+pcrecpp::Arg::parse_short_hex(char const*, int, void*)
+pcrecpp::Arg::parse_short_octal(char const*, int, void*)
+pcrecpp::Arg::parse_short_cradix(char const*, int, void*)
+pcrecpp::Arg::parse_ushort(char const*, int, void*)
+pcrecpp::Arg::parse_ushort_hex(char const*, int, void*)
+pcrecpp::Arg::parse_ushort_octal(char const*, int, void*)
+pcrecpp::Arg::parse_ushort_cradix(char const*, int, void*)
+pcrecpp::Arg::parse_int(char const*, int, void*)
+pcrecpp::Arg::parse_int_hex(char const*, int, void*)
+pcrecpp::Arg::parse_int_octal(char const*, int, void*)
+pcrecpp::Arg::parse_int_cradix(char const*, int, void*)
+pcrecpp::Arg::parse_uint(char const*, int, void*)
+pcrecpp::Arg::parse_uint_hex(char const*, int, void*)
+pcrecpp::Arg::parse_uint_octal(char const*, int, void*)
+pcrecpp::Arg::parse_uint_cradix(char const*, int, void*)
+pcrecpp::Arg::parse_long(char const*, int, void*)
+pcrecpp::Arg::parse_long_hex(char const*, int, void*)
+pcrecpp::Arg::parse_long_octal(char const*, int, void*)
+pcrecpp::Arg::parse_long_cradix(char const*, int, void*)
+pcrecpp::Arg::parse_ulong(char const*, int, void*)
+pcrecpp::Arg::parse_ulong_hex(char const*, int, void*)
+pcrecpp::Arg::parse_ulong_octal(char const*, int, void*)
+pcrecpp::Arg::parse_ulong_cradix(char const*, int, void*)
+pcrecpp::Arg::parse_longlong(char const*, int, void*)
+pcrecpp::Arg::parse_longlong_hex(char const*, int, void*)
+pcrecpp::Arg::parse_longlong_octal(char const*, int, void*)
+pcrecpp::Arg::parse_longlong_cradix(char const*, int, void*)
+pcrecpp::Arg::parse_ulonglong(char const*, int, void*)
+pcrecpp::Arg::parse_ulonglong_hex(char const*, int, void*)
+pcrecpp::Arg::parse_ulonglong_octal(char const*, int, void*)
+pcrecpp::Arg::parse_ulonglong_cradix(char const*, int, void*)
 fputc
 abort
-_ZN16SteamThreadTools16CThreadLocalBaseD2Ev
-_ZN16SteamThreadTools16CThreadLocalBaseC2Ev
+SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
+SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
 ThreadInMainThread
 WeakRandomInt
 Plat_RelativeTickFrequency
@@ -419,21 +419,21 @@ pcre_compile2
 pcre_callout
 pcre_stack_free
 pcre_stack_malloc
-_ZTVN9__gnu_cxx24__concurrence_lock_errorE
-_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTIN9__gnu_cxx24__concurrence_lock_errorE
-_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTSN9__gnu_cxx24__concurrence_lock_errorE
-_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTSN10__cxxabiv115__forced_unwindE
-_ZTIN10__cxxabiv115__forced_unwindE
-_ZTSN10__cxxabiv119__foreign_exceptionE
-_ZTIN10__cxxabiv119__foreign_exceptionE
-_ZTVN10__cxxabiv115__forced_unwindE
-_ZTVN10__cxxabiv119__foreign_exceptionE
-_ZTIN9__gnu_cxx20recursive_init_errorE
-_ZTVN9__gnu_cxx20recursive_init_errorE
-_ZTSN9__gnu_cxx20recursive_init_errorE
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__foreign_exception
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
+typeinfo for __gnu_cxx::recursive_init_error
+vtable for __gnu_cxx::recursive_init_error
+typeinfo name for __gnu_cxx::recursive_init_error
 fputs
 stdout
 stdin
@@ -475,17 +475,17 @@ bind_textdomain_codeset
 dgettext
 __strftime_l
 __wcsftime_l
-_Z27_txnal_cow_string_D1_commitPv
-_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _ITM_RU1
-_ZGTtnaj
+transaction clone for operator new[](unsigned int)
 _ITM_memcpyRtWn
-_Z23_txnal_cow_string_c_strPKv
+_txnal_cow_string_c_str(void const*)
 _ITM_RU4
-_Z20_txnal_cow_string_D1Pv
+_txnal_cow_string_D1(void*)
 _ITM_addUserCommitAction
-_Z26_txnal_logic_error_get_msgPv
-_Z28_txnal_runtime_error_get_msgPv
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
 dl_iterate_phdr
 __xmknod
 __stack_chk_fail
@@ -7019,23 +7019,23 @@ V_GetFileExtension
 chmod@GLIBC_2.0
 fnmatch@GLIBC_2.2.3
 pcre_fullinfo
-_ZN6google8protobuf8internal8byteswapILi4EEEvPv
-_ZN7pcrecpp3Arg18parse_ushort_octalEPKciPv
+void google::protobuf::internal::byteswap<4>(void*)
+pcrecpp::Arg::parse_ushort_octal(char const*, int, void*)
 __cxa_finalize@GLIBC_2.1.3
 V_pretifymem
 fread@GLIBC_2.0
-_ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 V_ExtractFileExtension
 __wcsftime_l@GLIBC_2.3
-_ZN16SteamThreadTools16CThreadLocalBaseC2Ev
+SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
 V_IsValidURLCharacter
 __wrap_dlopen
 alphasort64@GLIBC_2.2
 V_atof
 __duplocale@GLIBC_2.1
 SDL_GetDisplayBounds@SDL3_0.0.0
-_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
-_ZN7pcrecpp2RED1Ev
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
+pcrecpp::RE::~RE()
 __wrap_mkfifo
 ungetc@GLIBC_2.0
 __wrap_utimes
@@ -7047,7 +7047,7 @@ dlopen@GLIBC_2.1
 access@GLIBC_2.0
 mbsnrtowcs@GLIBC_2.0
 open64@GLIBC_2.2
-_ZTIN9__gnu_cxx24__concurrence_lock_errorE
+typeinfo for __gnu_cxx::__concurrence_lock_error
 __wrap_mount
 Plat_CommandLineParamExists
 ETW_Steamworks_DispatchCallback_End_
@@ -7056,22 +7056,22 @@ _ITM_memcpyRtWn
 btowc@GLIBC_2.0
 V_vsnprintfRet
 statvfs@GLIBC_2.1
-_ZN10SteamVProf13CVProfManager21DumpAllThreadProfilesEi
+SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
 sqrtf@GLIBC_2.0
 glBegin
 mkdir@GLIBC_2.0
 ThreadShellExecute
 _edata
 glClear
-_ZN7pcrecpp3Arg17parse_short_radixEPKciPvi
+pcrecpp::Arg::parse_short_radix(char const*, int, void*, int)
 glDisable
 strstr@GLIBC_2.0
-_Z26_txnal_logic_error_get_msgPv
+_txnal_logic_error_get_msg(void*)
 scandir@GLIBC_2.0
 avifRGBImageSetDefaults
 __wrap_symlink
 WeakRandomInt
-_ZN7pcrecpp3Arg10parse_charEPKciPv
+pcrecpp::Arg::parse_char(char const*, int, void*)
 __wrap_lchown
 GetOSType
 StringAfterPrefix
@@ -7084,53 +7084,53 @@ realpath@GLIBC_2.3
 V_MakeAbsolutePath
 strncasecmp@GLIBC_2.0
 __wrap_rmdir
-_ZN7pcrecpp3Arg16parse_ushort_hexEPKciPv
+pcrecpp::Arg::parse_ushort_hex(char const*, int, void*)
 __wcsxfrm_l@GLIBC_2.1
 wmemset@GLIBC_2.0
-_ZNK7pcrecpp2RE12PartialMatchERKNS_11StringPieceERKNS_3ArgES6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_
+pcrecpp::RE::PartialMatch(pcrecpp::StringPiece const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
 symlink@GLIBC_2.0
 lseek@GLIBC_2.0
-_ZN7pcrecpp3Arg21parse_ulonglong_radixEPKciPvi
-_ZN16SteamThreadTools12CThreadMutexC1Ev
+pcrecpp::Arg::parse_ulonglong_radix(char const*, int, void*, int)
+SteamThreadTools::CThreadMutex::CThreadMutex()
 powf@GLIBC_2.0
 glTexImage2D
 ungetwc@GLIBC_2.2
 SDL_DestroyWindow@SDL3_0.0.0
 _ITM_RU1
 strtoull@GLIBC_2.0
-_ZN7pcrecpp3Arg17parse_short_octalEPKciPv
+pcrecpp::Arg::parse_short_octal(char const*, int, void*)
 CanBreakBetween
-_ZNK7pcrecpp2RE14FindAndConsumeEPNS_11StringPieceERKNS_3ArgES5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_
-_ZN7pcrecpp3Arg16parse_int_cradixEPKciPv
+pcrecpp::RE::FindAndConsume(pcrecpp::StringPiece*, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
+pcrecpp::Arg::parse_int_cradix(char const*, int, void*)
 strtof@GLIBC_2.0
-_ZN7pcrecpp3Arg10parse_uintEPKciPv
+pcrecpp::Arg::parse_uint(char const*, int, void*)
 V_tolower
 __wrap_lstat
-_ZN16SteamThreadTools7CThread4InitEv
+SteamThreadTools::CThread::Init()
 SDL_GetDisplays@SDL3_0.0.0
-_ZN7pcrecpp2RE7CleanupEv
-_ZN16SteamThreadTools7CThread7SetNameEPKc
+pcrecpp::RE::Cleanup()
+SteamThreadTools::CThread::SetName(char const*)
 getpid@GLIBC_2.0
 VProfInternalEnterScopeCurrentThread
-_ZN7pcrecpp3Arg16parse_long_octalEPKciPv
+pcrecpp::Arg::parse_long_octal(char const*, int, void*)
 getuid@GLIBC_2.0
 __strxfrm_l@GLIBC_2.1
-_ZN16SteamThreadTools16CThreadLocalBaseD2Ev
+SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
 __fxstat@GLIBC_2.0
 __wrap_rename
-_ZN10CValidator16ClaimArrayMemoryEPKv
+CValidator::ClaimArrayMemory(void const*)
 avifEncoderFinish
 fmodf@GLIBC_2.0
 SDL_GetWindowFromID@SDL3_0.0.0
-_ZN6google8protobuf8internal8byteswapILi1EEEvPv
-_ZTVN9__gnu_cxx24__concurrence_lock_errorE
+void google::protobuf::internal::byteswap<1>(void*)
+vtable for __gnu_cxx::__concurrence_lock_error
 isspace@GLIBC_2.0
 fputc@GLIBC_2.0
-_ZTIN16SteamThreadTools7CThreadE
-_ZN6google8protobuf8internal8byteswapILi8EEEvPv
+typeinfo for SteamThreadTools::CThread
+void google::protobuf::internal::byteswap<8>(void*)
 V_stricmp_prefix
 WinAppMain
-_ZN16SteamThreadTools7CThreadC2Ev
+SteamThreadTools::CThread::CThread()
 SDL_ShowWindow@SDL3_0.0.0
 glPixelStorei
 glTexCoord2f
@@ -7139,26 +7139,26 @@ strcasestr@GLIBC_2.1
 dl_iterate_phdr@GLIBC_2.2.4
 Plat_GetExecutablePathUTF8
 glGetError
-_ZN16SteamThreadTools7CThread6OnExitEv
+SteamThreadTools::CThread::OnExit()
 __wrap_open64
 Plat_CommandLineParamValue
-_ZN7pcrecpp3Arg14parse_longlongEPKciPv
+pcrecpp::Arg::parse_longlong(char const*, int, void*)
 SDL_SetHint@SDL3_0.0.0
-_Z20_txnal_cow_string_D1Pv
+_txnal_cow_string_D1(void*)
 malloc@GLIBC_2.0
 CatchAndWriteMiniDumpForVoidPtrFn
 __uselocale@GLIBC_2.3
-_ZN7pcrecpp2RE7CompileENS0_6AnchorE
+pcrecpp::RE::Compile(pcrecpp::RE::Anchor)
 strlen@GLIBC_2.0
 fopen64@GLIBC_2.1
 __wrap_access
-_ZN7pcrecpp3Arg15parse_ulonglongEPKciPv
+pcrecpp::Arg::parse_ulonglong(char const*, int, void*)
 munmap@GLIBC_2.0
 statfs64@GLIBC_2.1
 ThreadInterlockedExchange
-_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
+vtable for __gnu_cxx::__concurrence_unlock_error
 V_URLContainsDomain
-_ZTVN10__cxxabiv119__foreign_exceptionE
+vtable for __cxxabiv1::__foreign_exception
 getcwd@GLIBC_2.0
 __sprintf_chk@GLIBC_2.3.4
 __wrap_mknod
@@ -7166,19 +7166,19 @@ V_strnicmp
 __snprintf_chk@GLIBC_2.3.4
 V_AppendSlash
 __wrap_chdir
-_ZN7pcrecpp3Arg15parse_int_octalEPKciPv
-_Z23_txnal_cow_string_c_strPKv
+pcrecpp::Arg::parse_int_octal(char const*, int, void*)
+_txnal_cow_string_c_str(void const*)
 __wrap_dlmopen
 SDL_AddEventWatch@SDL3_0.0.0
 V_atoui64
 Plat_RelativeTicks
 mount@GLIBC_2.0
 __iswctype_l@GLIBC_2.1
-_ZN7pcrecpp3Arg10parse_nullEPKciPv
-_ZTVN9__gnu_cxx20recursive_init_errorE
-_ZN7pcrecpp3Arg16parse_long_radixEPKciPvi
+pcrecpp::Arg::parse_null(char const*, int, void*)
+vtable for __gnu_cxx::recursive_init_error
+pcrecpp::Arg::parse_long_radix(char const*, int, void*, int)
 stdout@GLIBC_2.0
-_ZN7pcrecpp3Arg21parse_ulonglong_octalEPKciPv
+pcrecpp::Arg::parse_ulonglong_octal(char const*, int, void*)
 pcre_stack_guard
 __xstat@GLIBC_2.0
 __fread_chk@GLIBC_2.7
@@ -7186,7 +7186,7 @@ wctob@GLIBC_2.0
 V_isbreakablewspace
 __wcscpy_chk@GLIBC_2.4
 __lxstat@GLIBC_2.0
-_ZN7pcrecpp3Arg19parse_ushort_cradixEPKciPv
+pcrecpp::Arg::parse_ushort_cradix(char const*, int, void*)
 V_strlower_fast
 __cxa_atexit@GLIBC_2.1.3
 dlsym@GLIBC_2.0
@@ -7194,33 +7194,33 @@ __ctype_get_mb_cur_max@GLIBC_2.0
 V_snprintf
 SDL_ShowCursor@SDL3_0.0.0
 __wrap_utime
-_ZN7pcrecpp3Arg18parse_ushort_radixEPKciPvi
-_ZN16SteamThreadTools7CThread4JoinEj
+pcrecpp::Arg::parse_ushort_radix(char const*, int, void*, int)
+SteamThreadTools::CThread::Join(unsigned int)
 _fini
-_ZN11SteamStdLib17CCommandLineParamC1EPKcS2_
+SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
 strcmp@GLIBC_2.0
-_ZN7pcrecpp2RED2Ev
+pcrecpp::RE::~RE()
 utimes@GLIBC_2.0
 SDL_GL_SwapWindow@SDL3_0.0.0
-_ZN7pcrecpp3Arg11parse_ucharEPKciPv
-_ZN7pcrecpp3Arg18parse_short_cradixEPKciPv
-_ZN11SteamStdLib17CCommandLineParamD1Ev
-_ZTSN9__gnu_cxx20recursive_init_errorE
+pcrecpp::Arg::parse_uchar(char const*, int, void*)
+pcrecpp::Arg::parse_short_cradix(char const*, int, void*)
+SteamStdLib::CCommandLineParam::~CCommandLineParam()
+typeinfo name for __gnu_cxx::recursive_init_error
 SDL_HideCursor@SDL3_0.0.0
 _ITM_addUserCommitAction
 __strftime_l@GLIBC_2.3
 __wrap_open
 wmemmove@GLIBC_2.0
-_ZNK10CValidator9IsClaimedEPKv
+CValidator::IsClaimed(void const*) const
 tolower@GLIBC_2.0
 strtouq@GLIBC_2.0
-_ZN10SteamVProf13CVProfManager24StartProfilingAllThreadsEfi
+SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
 __errno_location@GLIBC_2.0
 wcsnrtombs@GLIBC_2.0
 strncpy@GLIBC_2.0
 avifRWDataFree
 fflush@GLIBC_2.0
-_ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
+AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 __wrap_mkdir
 bind_textdomain_codeset@GLIBC_2.2
 SDL_GetWindowProperties@SDL3_0.0.0
@@ -7239,18 +7239,18 @@ GetCrashHandlerFactory
 __strcpy_chk@GLIBC_2.3.4
 strrchr@GLIBC_2.0
 _DMsg
-_ZN7pcrecpp3Arg18parse_longlong_hexEPKciPv
-_ZN7pcrecpp3Arg21parse_longlong_cradixEPKciPv
+pcrecpp::Arg::parse_longlong_hex(char const*, int, void*)
+pcrecpp::Arg::parse_longlong_cradix(char const*, int, void*)
 __wrap___lxstat64
 SDL_GL_MakeCurrent@SDL3_0.0.0
 V_towupper32
 fseek@GLIBC_2.0
-_ZN10SteamVProf13CVProfManager23StopProfilingAllThreadsEv
+SteamVProf::CVProfManager::StopProfilingAllThreads()
 SDL_WasInit@SDL3_0.0.0
-_ZN7pcrecpp3Arg12parse_ushortEPKciPv
+pcrecpp::Arg::parse_ushort(char const*, int, void*)
 dgettext@GLIBC_2.0
 getenv@GLIBC_2.0
-_ZN16SteamThreadTools7CThread13GetThreadProcEv
+SteamThreadTools::CThread::GetThreadProc()
 fputs@GLIBC_2.0
 V_towlower32
 Warning
@@ -7267,14 +7267,14 @@ ThreadIsProcessIdActive
 ThreadInterlockedCompareExchange
 SDL_PumpEvents@SDL3_0.0.0
 strchr@GLIBC_2.0
-_Z21V_SplitStringInternalPKcPKS0_PS0_iR10CUtlVectorI10CUtlString10CUtlMemoryIS5_EEb
+V_SplitStringInternal(char const*, char const* const*, char const**, int, CUtlVector<CUtlString, CUtlMemory<CUtlString>>&, bool)
 rename@GLIBC_2.0
 V_strncat
 mbsrtowcs@GLIBC_2.0
 chdir@GLIBC_2.0
 SDL_CreateWindow@SDL3_0.0.0
 pthread_mutex_unlock@GLIBC_2.0
-_ZN7pcrecpp3Arg22parse_ulonglong_cradixEPKciPv
+pcrecpp::Arg::parse_ulonglong_cradix(char const*, int, void*)
 SteamRealPath
 __strcat_chk@GLIBC_2.3.4
 wcrtomb@GLIBC_2.0
@@ -7284,13 +7284,13 @@ vsnprintf@GLIBC_2.0
 V_WcsSkipArticles
 wcslen@GLIBC_2.0
 floor@GLIBC_2.0
-_ZN7pcrecpp3Arg10parse_longEPKciPv
-_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
-_ZN10CValidator3PopEv
-_ZTSN10__cxxabiv119__foreign_exceptionE
+pcrecpp::Arg::parse_long(char const*, int, void*)
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+CValidator::Pop()
+typeinfo name for __cxxabiv1::__foreign_exception
 stdin@GLIBC_2.0
-_ZNK16SteamThreadTools7CThread7IsAliveEv
-_ZN7pcrecpp3Arg15parse_short_hexEPKciPv
+SteamThreadTools::CThread::IsAlive() const
+pcrecpp::Arg::parse_short_hex(char const*, int, void*)
 posix_fadvise@GLIBC_2.2
 ThreadGetCurrentProcessId
 V_URLDecodeRaw
@@ -7302,95 +7302,95 @@ pcre_compile2
 ftello64@GLIBC_2.1
 __ctype_b_loc@GLIBC_2.3
 iswspace@GLIBC_2.0
-_ZTIN10__cxxabiv119__foreign_exceptionE
-_ZN7pcrecpp2RE6no_argE
+typeinfo for __cxxabiv1::__foreign_exception
+pcrecpp::RE::no_arg
 StringFindSuffix
 __stack_chk_fail@GLIBC_2.4
 g_pMemAllocSteam
 _init
 lseek64@GLIBC_2.2
-_ZN10CValidator4PushEPKcPvS1_
+CValidator::Push(char const*, void*, char const*)
 readdir64@GLIBC_2.2
-_ZN7pcrecpp3Arg9parse_intEPKciPv
+pcrecpp::Arg::parse_int(char const*, int, void*)
 mbrtowc@GLIBC_2.0
 __wrap_opendir
 dlerror@GLIBC_2.0
 V_StripTrailingSlash
-_ZN10SteamVProf13CVProfManager21CleanupUnusedProfilesEv
+SteamVProf::CVProfManager::CleanupUnusedProfiles()
 strtoq@GLIBC_2.0
 g_VProfile
-_ZTIN10__cxxabiv115__forced_unwindE
+typeinfo for __cxxabiv1::__forced_unwind
 pthread_mutex_lock@GLIBC_2.0
-_ZN16SteamThreadTools7CThreadD2Ev
+SteamThreadTools::CThread::~CThread()
 strtol@GLIBC_2.0
-_ZN7pcrecpp3Arg11parse_ulongEPKciPv
+pcrecpp::Arg::parse_ulong(char const*, int, void*)
 SDL_InitSubSystem@SDL3_0.0.0
 V_strncmp
 V_StripPrecedingAndTrailingWhitespace
-_ZN7pcrecpp3Arg14parse_uint_hexEPKciPv
+pcrecpp::Arg::parse_uint_hex(char const*, int, void*)
 __fxstat64@GLIBC_2.2
-_ZN7pcrecpp3Arg17parse_long_cradixEPKciPv
-_ZN7pcrecpp3Arg20parse_longlong_octalEPKciPv
+pcrecpp::Arg::parse_long_cradix(char const*, int, void*)
+pcrecpp::Arg::parse_longlong_octal(char const*, int, void*)
 __wrap_chmod
-_ZTVN10__cxxabiv117__class_type_infoE
+vtable for __cxxabiv1::__class_type_info
 glVertex2f
 SetMiniDumpBuildID
 utime@GLIBC_2.0
 V_vsnwprintf
 ETW_Steamworks_RunCallbacks_End_
 __strcoll_l@GLIBC_2.1
-_ZNK7pcrecpp2RE9FullMatchERKNS_11StringPieceERKNS_3ArgES6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_S6_
+pcrecpp::RE::FullMatch(pcrecpp::StringPiece const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
 avifImageRGBToYUV
 glBindTexture
 free@GLIBC_2.0
 pcre_free
 SDL_SetWindowPosition@SDL3_0.0.0
-_ZNK7pcrecpp2RE8TryMatchERKNS_11StringPieceEiNS0_6AnchorEbPii
+pcrecpp::RE::TryMatch(pcrecpp::StringPiece const&, int, pcrecpp::RE::Anchor, bool, int*, int) const
 g_VProfProfilesRunningCount
 __lxstat64@GLIBC_2.2
 CreateInterface
 SDL_DelEventWatch@SDL3_0.0.0
 ___tls_get_addr@GLIBC_2.3
-_ZN16SteamThreadTools16CThreadSemaphoreC1Ell
+SteamThreadTools::CThreadSemaphore::CThreadSemaphore(long, long)
 glLoadIdentity
 statfs@GLIBC_2.0
 avifImageDestroy
 V_UTF16ToUTF32
 glEnd
 SDL_GetWindowSize@SDL3_0.0.0
-_ZN7pcrecpp3Arg12parse_stringEPKciPv
+pcrecpp::Arg::parse_string(char const*, int, void*)
 strncmp@GLIBC_2.0
 V_strtoui64
 qsort@GLIBC_2.0
 V_wcsncpy
 shm_unlink@GLIBC_2.2
 V_atoi
-_ZN16SteamThreadTools12CThreadMutexD1Ev
+SteamThreadTools::CThreadMutex::~CThreadMutex()
 __newlocale@GLIBC_2.1
 strcasecmp@GLIBC_2.0
 glMatrixMode
-_ZNK16SteamThreadTools7CThread15IsThreadRunningEv
+SteamThreadTools::CThread::IsThreadRunning() const
 __wrap_link
-_ZGTtnaj
-_ZTVN10__cxxabiv120__si_class_type_infoE
+transaction clone for operator new[](unsigned int)
+vtable for __cxxabiv1::__si_class_type_info
 glGenTextures
 Plat_IsInDebugSession
-_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
+typeinfo for __gnu_cxx::__concurrence_unlock_error
 _end
 __memset_chk@GLIBC_2.3.4
 ThreadInterlockedIncrement
 __strtod_l@GLIBC_2.1
-_Z27_txnal_cow_string_D1_commitPv
+_txnal_cow_string_D1_commit(void*)
 Is64BitOS
 __wctype_l@GLIBC_2.1
 V_UTF8ToUTF32
 opendir@GLIBC_2.0
-_ZN7pcrecpp3Arg16parse_uint_octalEPKciPv
+pcrecpp::Arg::parse_uint_octal(char const*, int, void*)
 V_strcat
 ThreadInMainThread
 __strtof_l@GLIBC_2.1
 __wrap_scandir
-_ZNK7pcrecpp2RE7ConsumeEPNS_11StringPieceERKNS_3ArgES5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_S5_
+pcrecpp::RE::Consume(pcrecpp::StringPiece*, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&, pcrecpp::Arg const&) const
 closedir@GLIBC_2.0
 endmntent@GLIBC_2.0
 pcre_exec
@@ -7399,8 +7399,8 @@ pcre_malloc
 Plat_GetExecutablePath
 V_ParseURLQueryString
 __wrap_fopen
-_ZN7pcrecpp3Arg15parse_int_radixEPKciPvi
-_ZN16SteamThreadTools7CThread5YieldEv
+pcrecpp::Arg::parse_int_radix(char const*, int, void*, int)
+SteamThreadTools::CThread::Yield()
 SDL_RaiseWindow@SDL3_0.0.0
 strerror@GLIBC_2.0
 glClearColor
@@ -7409,15 +7409,15 @@ V_UTF32CharsToUTF8
 dlclose@GLIBC_2.0
 WeakRandomFloat
 __bss_start
-_ZN7pcrecpp3Arg14parse_long_hexEPKciPv
-_ZNK7pcrecpp2RE7DoMatchERKNS_11StringPieceENS0_6AnchorEPiPKPKNS_3ArgEi
+pcrecpp::Arg::parse_long_hex(char const*, int, void*)
+pcrecpp::RE::DoMatch(pcrecpp::StringPiece const&, pcrecpp::RE::Anchor, int*, pcrecpp::Arg const* const*, int) const
 pcre_callout
 __towlower_l@GLIBC_2.1
 wcstol@GLIBC_2.0
 SpewOutputFunc
-_ZN16SteamThreadTools7CThread5StartEj
+SteamThreadTools::CThread::Start(unsigned int)
 glColor4ub
-_ZN11SteamStdLib11CommandLineEv
+SteamStdLib::CommandLine()
 wmemcpy@GLIBC_2.0
 Plat_MSTime64
 pcre_stack_free
@@ -7426,13 +7426,13 @@ flock@GLIBC_2.0
 getpwuid@GLIBC_2.0
 lchown@GLIBC_2.0
 V_StripFilename
-_ZN10SteamVProf9CVProfile9MarkFrameEPKc
+SteamVProf::CVProfile::MarkFrame(char const*)
 SDL_GetPrimaryDisplay@SDL3_0.0.0
-_ZN7pcrecpp3Arg19parse_ulonglong_hexEPKciPv
-_ZN16SteamThreadTools17CThreadSyncObject4WaitEj
+pcrecpp::Arg::parse_ulonglong_hex(char const*, int, void*)
+SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
 _ITM_RU4
 getmntent@GLIBC_2.0
-_ZN7pcrecpp3Arg12parse_doubleEPKciPv
+pcrecpp::Arg::parse_double(char const*, int, void*)
 Plat_gmtime
 cos@GLIBC_2.0
 faccessat@GLIBC_2.4
@@ -7441,7 +7441,7 @@ strtoul@GLIBC_2.0
 __fprintf_chk@GLIBC_2.3.4
 syscall@GLIBC_2.0
 CVProfile_ExitScope
-_ZTVN10__cxxabiv121__vmi_class_type_infoE
+vtable for __cxxabiv1::__vmi_class_type_info
 pthread_self@GLIBC_2.0
 __wcscoll_l@GLIBC_2.1
 __towupper_l@GLIBC_2.1
@@ -7452,11 +7452,11 @@ SDL_free@SDL3_0.0.0
 V_UTF32ToUTF8
 pcre_compile
 strftime@GLIBC_2.0
-_ZN7pcrecpp3Arg20parse_longlong_radixEPKciPvi
+pcrecpp::Arg::parse_longlong_radix(char const*, int, void*, int)
 __nl_langinfo_l@GLIBC_2.2
 __memcpy_chk@GLIBC_2.3.4
 fcntl@GLIBC_2.0
-_ZN7pcrecpp3Arg18parse_ulong_cradixEPKciPv
+pcrecpp::Arg::parse_ulong_cradix(char const*, int, void*)
 wcschr@GLIBC_2.0
 V_vsnprintf
 ThreadSleep
@@ -7465,43 +7465,43 @@ __wrap_freopen
 Plat_FloatTime
 __wrap___xstat
 avifEncoderDestroy
-_ZTIN9__gnu_cxx20recursive_init_errorE
-_ZN7pcrecpp3Arg15parse_ulong_hexEPKciPv
+typeinfo for __gnu_cxx::recursive_init_error
+pcrecpp::Arg::parse_ulong_hex(char const*, int, void*)
 __wrap_statfs64
 abort@GLIBC_2.0
 V_UnqualifiedFileName
-_ZN7pcrecpp3Arg11parse_shortEPKciPv
+pcrecpp::Arg::parse_short(char const*, int, void*)
 _ITM_deregisterTMCloneTable
 strpbrk@GLIBC_2.0
 __xstat64@GLIBC_2.2
 pthread_once@GLIBC_2.0
-_ZN7pcrecpp3Arg17parse_ulong_octalEPKciPv
+pcrecpp::Arg::parse_ulong_octal(char const*, int, void*)
 dlmopen@GLIBC_2.3.4
-_ZN7pcrecpp3Arg13parse_int_hexEPKciPv
+pcrecpp::Arg::parse_int_hex(char const*, int, void*)
 __wrap_chown
-_ZTVN10__cxxabiv115__forced_unwindE
+vtable for __cxxabiv1::__forced_unwind
 wmemchr@GLIBC_2.0
-_Z9V_stristrPKcS0_
+V_stristr(char const*, char const*)
 fclose@GLIBC_2.1
-_ZNK16SteamThreadTools16CThreadLocalBase3GetEv
+SteamThreadTools::CThreadLocalBase::Get() const
 freopen@GLIBC_2.0
 Plat_IsGamescope
 __vasprintf_chk@GLIBC_2.8
 mkfifo@GLIBC_2.0
 rmdir@GLIBC_2.0
 __wrap_unlink
-_ZN7pcrecpp3Arg16parse_uint_radixEPKciPvi
-_ZN7pcrecpp3Arg17parse_ulong_radixEPKciPvi
-_ZTSN10__cxxabiv115__forced_unwindE
+pcrecpp::Arg::parse_uint_radix(char const*, int, void*, int)
+pcrecpp::Arg::parse_ulong_radix(char const*, int, void*, int)
+typeinfo name for __cxxabiv1::__forced_unwind
 statvfs64@GLIBC_2.1
 shm_open@GLIBC_2.2
 unlink@GLIBC_2.0
-_ZN7pcrecpp3Arg11parse_floatEPKciPv
-_ZN16SteamThreadTools16CThreadSemaphore7ReleaseEl
+pcrecpp::Arg::parse_float(char const*, int, void*)
+SteamThreadTools::CThreadSemaphore::Release(long)
 __wrap_statfs
 Plat_localtime
 setmntent@GLIBC_2.0
-_ZN16SteamThreadTools17CThreadSyncObjectD2Ev
+SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
 kill@GLIBC_2.0
 __wrap___lxstat
 glOrtho
@@ -7509,7 +7509,7 @@ __wrap_scandir64
 VProfInternalGetProfileForCurrentThread
 stderr@GLIBC_2.0
 __wrap_fopen64
-_ZNK7pcrecpp2RE11DoMatchImplERKNS_11StringPieceENS0_6AnchorEPiPKPKNS_3ArgEiS5_i
+pcrecpp::RE::DoMatchImpl(pcrecpp::StringPiece const&, pcrecpp::RE::Anchor, int*, pcrecpp::Arg const* const*, int, int*, int) const
 SDL_GL_CreateContext@SDL3_0.0.0
 V_IsAbsolutePath
 __gmon_start__
@@ -7518,24 +7518,24 @@ strcpy@GLIBC_2.0
 mmap@GLIBC_2.0
 fseeko64@GLIBC_2.1
 avifEncoderCreate
-_ZTSN9__gnu_cxx24__concurrence_lock_errorE
+typeinfo name for __gnu_cxx::__concurrence_lock_error
 _ITM_registerTMCloneTable
-_ZN10CValidator11ClaimMemoryEPKv
-_ZNK7pcrecpp2RE23NumberOfCapturingGroupsEv
+CValidator::ClaimMemory(void const*)
+pcrecpp::RE::NumberOfCapturingGroups() const
 __assert_fail@GLIBC_2.0
 wcscmp@GLIBC_2.0
-_Z28_txnal_runtime_error_get_msgPv
+_txnal_runtime_error_get_msg(void*)
 V_ExtractFilePath
 SDL_GL_SetAttribute@SDL3_0.0.0
 scandir64@GLIBC_2.2
 __wrap_lstat64
 V_RemoveDotSlashes
-_Z17GetCPUInformationv
+GetCPUInformation()
 strtod@GLIBC_2.0
-_ZN7pcrecpp3Arg17parse_stringpieceEPKciPv
-_ZN7pcrecpp2RE9QuoteMetaERKNS_11StringPieceE
+pcrecpp::Arg::parse_stringpiece(char const*, int, void*)
+pcrecpp::RE::QuoteMeta(pcrecpp::StringPiece const&)
 V_FixDoubleSlashes
-_ZN7pcrecpp3Arg17parse_uint_cradixEPKciPv
+pcrecpp::Arg::parse_uint_cradix(char const*, int, void*)
 SDL_GL_DestroyContext@SDL3_0.0.0
 realloc@GLIBC_2.0
 fopen@GLIBC_2.1

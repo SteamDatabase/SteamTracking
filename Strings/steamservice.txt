@@ -19,9 +19,9 @@ __errno_location
 strrchr
 strcmp
 srand
-_ZTVN10__cxxabiv117__class_type_infoE
-_ZTVN10__cxxabiv120__si_class_type_infoE
-_ZTVN10__cxxabiv121__vmi_class_type_infoE
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info
 __recv_chk
 eventfd
 poll
@@ -49,9 +49,9 @@ SteamService_StartThread
 SteamService_Shutdown
 __assert_fail
 __pthread_key_create
-_ZN6google8protobuf8internal8byteswapILi1EEEvPv
-_ZN6google8protobuf8internal8byteswapILi4EEEvPv
-_ZN6google8protobuf8internal8byteswapILi8EEEvPv
+void google::protobuf::internal::byteswap<1>(void*)
+void google::protobuf::internal::byteswap<4>(void*)
+void google::protobuf::internal::byteswap<8>(void*)
 lseek
 stderr
 __fprintf_chk
@@ -208,7 +208,7 @@ semget
 pthread_setspecific
 pthread_attr_init
 pthread_attr_setstacksize
-_ZTIi
+typeinfo for int
 _setjmp
 strtoull
 wcstoull
@@ -246,8 +246,8 @@ shutdown
 ftell
 mktime
 getsockopt
-_ZTVN10__cxxabiv120__function_type_infoE
-_ZTVN10__cxxabiv119__pointer_type_infoE
+vtable for __cxxabiv1::__function_type_info
+vtable for __cxxabiv1::__pointer_type_info
 __memset_chk
 OPENSSL_cleanse
 qsort
@@ -500,184 +500,184 @@ nghttp2_stream_get_weight
 nghttp2_stream_get_sum_dependency_weight
 nghttp2_stream_get_stream_id
 fprintf
-_ZTSN10__cxxabiv117__class_type_infoE
-_ZTIN10__cxxabiv117__class_type_infoE
-_ZTVN9__gnu_cxx24__concurrence_lock_errorE
-_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTIN9__gnu_cxx24__concurrence_lock_errorE
-_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTSN9__gnu_cxx24__concurrence_lock_errorE
-_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTSN10__cxxabiv115__forced_unwindE
-_ZTIN10__cxxabiv115__forced_unwindE
-_ZTSN10__cxxabiv119__foreign_exceptionE
-_ZTIN10__cxxabiv119__foreign_exceptionE
-_ZTVN10__cxxabiv115__forced_unwindE
-_ZTVN10__cxxabiv119__foreign_exceptionE
-_ZTSN10__cxxabiv120__function_type_infoE
-_ZTIN10__cxxabiv120__function_type_infoE
-_ZTVN10__cxxabiv123__fundamental_type_infoE
-_ZTSN10__cxxabiv123__fundamental_type_infoE
-_ZTIN10__cxxabiv123__fundamental_type_infoE
-_ZTSv
-_ZTSPv
-_ZTSPKv
-_ZTSb
-_ZTSPb
-_ZTSPKb
-_ZTSw
-_ZTSPw
-_ZTSPKw
-_ZTSDu
-_ZTSPDu
-_ZTSPKDu
-_ZTSDs
-_ZTSPDs
-_ZTSPKDs
-_ZTSDi
-_ZTSPDi
-_ZTSPKDi
-_ZTSc
-_ZTSPc
-_ZTSPKc
-_ZTSa
-_ZTSPa
-_ZTSPKa
-_ZTSh
-_ZTSPh
-_ZTSPKh
-_ZTSs
-_ZTSPs
-_ZTSPKs
-_ZTSt
-_ZTSPt
-_ZTSPKt
-_ZTSi
-_ZTSPi
-_ZTSPKi
-_ZTSj
-_ZTSPj
-_ZTSPKj
-_ZTSl
-_ZTSPl
-_ZTSPKl
-_ZTSm
-_ZTSPm
-_ZTSPKm
-_ZTSx
-_ZTSPx
-_ZTSPKx
-_ZTSy
-_ZTSPy
-_ZTSPKy
-_ZTSf
-_ZTSPf
-_ZTSPKf
-_ZTSd
-_ZTSPd
-_ZTSPKd
-_ZTSe
-_ZTSPe
-_ZTSPKe
-_ZTSDf
-_ZTSPDf
-_ZTSPKDf
-_ZTSDd
-_ZTSPDd
-_ZTSPKDd
-_ZTSDe
-_ZTSPDe
-_ZTSPKDe
-_ZTSDn
-_ZTSPDn
-_ZTSPKDn
-_ZTSg
-_ZTSPg
-_ZTSPKg
-_ZTIPKg
-_ZTIg
-_ZTIPg
-_ZTIPKDn
-_ZTIDn
-_ZTIPDn
-_ZTIPKDe
-_ZTIDe
-_ZTIPDe
-_ZTIPKDd
-_ZTIDd
-_ZTIPDd
-_ZTIPKDf
-_ZTIDf
-_ZTIPDf
-_ZTIPKe
-_ZTIe
-_ZTIPe
-_ZTIPKd
-_ZTId
-_ZTIPd
-_ZTIPKf
-_ZTIf
-_ZTIPf
-_ZTIPKy
-_ZTIy
-_ZTIPy
-_ZTIPKx
-_ZTIx
-_ZTIPx
-_ZTIPKm
-_ZTIm
-_ZTIPm
-_ZTIPKl
-_ZTIl
-_ZTIPl
-_ZTIPKj
-_ZTIj
-_ZTIPj
-_ZTIPKi
-_ZTIPi
-_ZTIPKt
-_ZTIt
-_ZTIPt
-_ZTIPKs
-_ZTIs
-_ZTIPs
-_ZTIPKh
-_ZTIh
-_ZTIPh
-_ZTIPKa
-_ZTIa
-_ZTIPa
-_ZTIPKc
-_ZTIc
-_ZTIPc
-_ZTIPKDi
-_ZTIDi
-_ZTIPDi
-_ZTIPKDs
-_ZTIDs
-_ZTIPDs
-_ZTIPKDu
-_ZTIDu
-_ZTIPDu
-_ZTIPKw
-_ZTIw
-_ZTIPw
-_ZTIPKb
-_ZTIb
-_ZTIPb
-_ZTIPKv
-_ZTIv
-_ZTIPv
-_ZTIN9__gnu_cxx20recursive_init_errorE
-_ZTVN9__gnu_cxx20recursive_init_errorE
-_ZTSN9__gnu_cxx20recursive_init_errorE
-_ZTSN10__cxxabiv119__pointer_type_infoE
-_ZTIN10__cxxabiv119__pointer_type_infoE
-_ZTIN10__cxxabiv117__pbase_type_infoE
-_ZTSN10__cxxabiv120__si_class_type_infoE
-_ZTIN10__cxxabiv120__si_class_type_infoE
-_ZTSN10__cxxabiv121__vmi_class_type_infoE
-_ZTIN10__cxxabiv121__vmi_class_type_infoE
+typeinfo name for __cxxabiv1::__class_type_info
+typeinfo for __cxxabiv1::__class_type_info
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__foreign_exception
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
+typeinfo name for __cxxabiv1::__function_type_info
+typeinfo for __cxxabiv1::__function_type_info
+vtable for __cxxabiv1::__fundamental_type_info
+typeinfo name for __cxxabiv1::__fundamental_type_info
+typeinfo for __cxxabiv1::__fundamental_type_info
+typeinfo name for void
+typeinfo name for void*
+typeinfo name for void const*
+typeinfo name for bool
+typeinfo name for bool*
+typeinfo name for bool const*
+typeinfo name for wchar_t
+typeinfo name for wchar_t*
+typeinfo name for wchar_t const*
+typeinfo name for char8_t
+typeinfo name for char8_t*
+typeinfo name for char8_t const*
+typeinfo name for char16_t
+typeinfo name for char16_t*
+typeinfo name for char16_t const*
+typeinfo name for char32_t
+typeinfo name for char32_t*
+typeinfo name for char32_t const*
+typeinfo name for char
+typeinfo name for char*
+typeinfo name for char const*
+typeinfo name for signed char
+typeinfo name for signed char*
+typeinfo name for signed char const*
+typeinfo name for unsigned char
+typeinfo name for unsigned char*
+typeinfo name for unsigned char const*
+typeinfo name for short
+typeinfo name for short*
+typeinfo name for short const*
+typeinfo name for unsigned short
+typeinfo name for unsigned short*
+typeinfo name for unsigned short const*
+typeinfo name for int
+typeinfo name for int*
+typeinfo name for int const*
+typeinfo name for unsigned int
+typeinfo name for unsigned int*
+typeinfo name for unsigned int const*
+typeinfo name for long
+typeinfo name for long*
+typeinfo name for long const*
+typeinfo name for unsigned long
+typeinfo name for unsigned long*
+typeinfo name for unsigned long const*
+typeinfo name for long long
+typeinfo name for long long*
+typeinfo name for long long const*
+typeinfo name for unsigned long long
+typeinfo name for unsigned long long*
+typeinfo name for unsigned long long const*
+typeinfo name for float
+typeinfo name for float*
+typeinfo name for float const*
+typeinfo name for double
+typeinfo name for double*
+typeinfo name for double const*
+typeinfo name for long double
+typeinfo name for long double*
+typeinfo name for long double const*
+typeinfo name for decimal32
+typeinfo name for decimal32*
+typeinfo name for decimal32 const*
+typeinfo name for decimal64
+typeinfo name for decimal64*
+typeinfo name for decimal64 const*
+typeinfo name for decimal128
+typeinfo name for decimal128*
+typeinfo name for decimal128 const*
+typeinfo name for std::nullptr_t
+typeinfo name for std::nullptr_t*
+typeinfo name for std::nullptr_t const*
+typeinfo name for __float128
+typeinfo name for __float128*
+typeinfo name for __float128 const*
+typeinfo for __float128 const*
+typeinfo for __float128
+typeinfo for __float128*
+typeinfo for std::nullptr_t const*
+typeinfo for std::nullptr_t
+typeinfo for std::nullptr_t*
+typeinfo for decimal128 const*
+typeinfo for decimal128
+typeinfo for decimal128*
+typeinfo for decimal64 const*
+typeinfo for decimal64
+typeinfo for decimal64*
+typeinfo for decimal32 const*
+typeinfo for decimal32
+typeinfo for decimal32*
+typeinfo for long double const*
+typeinfo for long double
+typeinfo for long double*
+typeinfo for double const*
+typeinfo for double
+typeinfo for double*
+typeinfo for float const*
+typeinfo for float
+typeinfo for float*
+typeinfo for unsigned long long const*
+typeinfo for unsigned long long
+typeinfo for unsigned long long*
+typeinfo for long long const*
+typeinfo for long long
+typeinfo for long long*
+typeinfo for unsigned long const*
+typeinfo for unsigned long
+typeinfo for unsigned long*
+typeinfo for long const*
+typeinfo for long
+typeinfo for long*
+typeinfo for unsigned int const*
+typeinfo for unsigned int
+typeinfo for unsigned int*
+typeinfo for int const*
+typeinfo for int*
+typeinfo for unsigned short const*
+typeinfo for unsigned short
+typeinfo for unsigned short*
+typeinfo for short const*
+typeinfo for short
+typeinfo for short*
+typeinfo for unsigned char const*
+typeinfo for unsigned char
+typeinfo for unsigned char*
+typeinfo for signed char const*
+typeinfo for signed char
+typeinfo for signed char*
+typeinfo for char const*
+typeinfo for char
+typeinfo for char*
+typeinfo for char32_t const*
+typeinfo for char32_t
+typeinfo for char32_t*
+typeinfo for char16_t const*
+typeinfo for char16_t
+typeinfo for char16_t*
+typeinfo for char8_t const*
+typeinfo for char8_t
+typeinfo for char8_t*
+typeinfo for wchar_t const*
+typeinfo for wchar_t
+typeinfo for wchar_t*
+typeinfo for bool const*
+typeinfo for bool
+typeinfo for bool*
+typeinfo for void const*
+typeinfo for void
+typeinfo for void*
+typeinfo for __gnu_cxx::recursive_init_error
+vtable for __gnu_cxx::recursive_init_error
+typeinfo name for __gnu_cxx::recursive_init_error
+typeinfo name for __cxxabiv1::__pointer_type_info
+typeinfo for __cxxabiv1::__pointer_type_info
+typeinfo for __cxxabiv1::__pbase_type_info
+typeinfo name for __cxxabiv1::__si_class_type_info
+typeinfo for __cxxabiv1::__si_class_type_info
+typeinfo name for __cxxabiv1::__vmi_class_type_info
+typeinfo for __cxxabiv1::__vmi_class_type_info
 __nl_langinfo_l
 __uselocale
 mbsrtowcs
@@ -698,11 +698,11 @@ wmemcpy
 wmemset
 wmemchr
 wmemmove
-_ZTVN10__cxxabiv117__pbase_type_infoE
-_ZTIN10__cxxabiv129__pointer_to_member_type_infoE
-_ZTSN10__cxxabiv117__pbase_type_infoE
-_ZTVN10__cxxabiv129__pointer_to_member_type_infoE
-_ZTSN10__cxxabiv129__pointer_to_member_type_infoE
+vtable for __cxxabiv1::__pbase_type_info
+typeinfo for __cxxabiv1::__pointer_to_member_type_info
+typeinfo name for __cxxabiv1::__pbase_type_info
+vtable for __cxxabiv1::__pointer_to_member_type_info
+typeinfo name for __cxxabiv1::__pointer_to_member_type_info
 __strtof_l
 __strtod_l
 strtold_l
@@ -722,17 +722,17 @@ bind_textdomain_codeset
 dgettext
 __strftime_l
 __wcsftime_l
-_Z27_txnal_cow_string_D1_commitPv
-_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _ITM_RU1
-_ZGTtnaj
+transaction clone for operator new[](unsigned int)
 _ITM_memcpyRtWn
-_Z23_txnal_cow_string_c_strPKv
+_txnal_cow_string_c_str(void const*)
 _ITM_RU4
-_Z20_txnal_cow_string_D1Pv
+_txnal_cow_string_D1(void*)
 _ITM_addUserCommitAction
-_Z26_txnal_logic_error_get_msgPv
-_Z28_txnal_runtime_error_get_msgPv
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
 dl_iterate_phdr
 __register_atfork
 __xmknod
@@ -13312,8 +13312,8 @@ pthread_mutex_destroy@GLIBC_2.0
 strtold_l@GLIBC_2.3
 Camellia_decrypt
 chmod@GLIBC_2.0
-_ZTSPa
-_ZTIPDi
+typeinfo name for signed char*
+typeinfo for char32_t*
 fnmatch@GLIBC_2.2.3
 pthread_getspecific@GLIBC_2.0
 nghttp2_session_consume
@@ -13321,10 +13321,10 @@ DES_encrypt3
 nghttp2_session_callbacks_set_on_begin_frame_callback
 rewind@GLIBC_2.0
 strcat@GLIBC_2.0
-_ZN6google8protobuf8internal8byteswapILi4EEEvPv
+void google::protobuf::internal::byteswap<4>(void*)
 nghttp2_session_server_new2
 __cxa_finalize@GLIBC_2.1.3
-_ZTIPt
+typeinfo for unsigned short*
 nghttp2_hd_deflate_get_table_entry
 pthread_attr_setstacksize@GLIBC_2.1
 fread@GLIBC_2.0
@@ -13336,28 +13336,28 @@ semop@GLIBC_2.0
 __wrap_dlopen
 alphasort64@GLIBC_2.2
 nghttp2_pack_settings_payload
-_ZTSl
+typeinfo name for long
 nghttp2_hd_deflate_hd
 nghttp2_http2_strerror
 __duplocale@GLIBC_2.1
 nghttp2_session_callbacks_set_on_invalid_header_callback
 pthread_attr_init@GLIBC_2.1
-_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
-_ZTSt
-_ZTSd
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
+typeinfo name for unsigned short
+typeinfo name for double
 __wrap_mkfifo
 ungetc@GLIBC_2.0
 __wrap_utimes
-_ZTIPKl
+typeinfo for long const*
 nghttp2_session_callbacks_set_on_invalid_frame_recv_callback
-_ZTIPKd
+typeinfo for double const*
 __ctype_tolower_loc@GLIBC_2.3
 socket@GLIBC_2.0
 __wrap_statvfs
-_ZTIPKt
+typeinfo for unsigned short const*
 bn_mul_comba8
 sigaction@GLIBC_2.0
-_ZTIPKDd
+typeinfo for decimal64 const*
 sscanf@GLIBC_2.0
 dlopen@GLIBC_2.1
 access@GLIBC_2.0
@@ -13365,64 +13365,64 @@ bn_GF2m_mul_2x2
 mbsnrtowcs@GLIBC_2.0
 open64@GLIBC_2.2
 setenv@GLIBC_2.0
-_ZTIN9__gnu_cxx24__concurrence_lock_errorE
+typeinfo for __gnu_cxx::__concurrence_lock_error
 shmdt@GLIBC_2.0
 nghttp2_stream_get_state
 __wrap_mount
 bn_sqr_comba8
-_ZTVN10__cxxabiv117__pbase_type_infoE
+vtable for __cxxabiv1::__pbase_type_info
 nghttp2_hd_deflate_new
 __wrap_stat
 nghttp2_session_callbacks_set_unpack_extension_callback
 _ITM_memcpyRtWn
 nghttp2_hd_inflate_get_table_entry
-_ZTIN10__cxxabiv129__pointer_to_member_type_infoE
+typeinfo for __cxxabiv1::__pointer_to_member_type_info
 btowc@GLIBC_2.0
 statvfs@GLIBC_2.1
 mkdir@GLIBC_2.0
 ntohs@GLIBC_2.0
-_ZTSPKDf
+typeinfo name for decimal32 const*
 nghttp2_hd_inflate_get_num_table_entries
 DES_ncbc_encrypt
-_ZTSPKDn
+typeinfo name for std::nullptr_t const*
 strstr@GLIBC_2.0
-_Z26_txnal_logic_error_get_msgPv
+_txnal_logic_error_get_msg(void*)
 __vfprintf_chk@GLIBC_2.3.4
 nghttp2_submit_request
 scandir@GLIBC_2.0
-_ZTSPKx
-_ZTIPm
-_ZTIN10__cxxabiv120__function_type_infoE
+typeinfo name for long long const*
+typeinfo for unsigned long*
+typeinfo for __cxxabiv1::__function_type_info
 OPENSSL_instrument_halt
-_ZTIh
+typeinfo for unsigned char
 _longjmp@GLIBC_2.0
 semctl@GLIBC_2.2
 nghttp2_session_mem_send
 nghttp2_session_callbacks_set_send_data_callback
-_ZTIPe
-_ZTSPKh
+typeinfo for long double*
+typeinfo name for unsigned char const*
 pthread_kill@GLIBC_2.0
 __wrap_symlink
 setsockopt@GLIBC_2.0
-_ZTSPj
+typeinfo name for unsigned int*
 nghttp2_session_callbacks_set_error_callback2
 CRYPTO_memcmp
 __wrap_lchown
-_ZTIx
+typeinfo for long long
 setpriority@GLIBC_2.0
 ecp_nistz256_to_mont
 aesni_encrypt
 __freelocale@GLIBC_2.1
-_ZTSPDs
+typeinfo name for char16_t*
 nghttp2_submit_rst_stream
-_ZTSPb
+typeinfo name for bool*
 aesni_ccm64_encrypt_blocks
 waitid@GLIBC_2.1
 pthread_setname_np@GLIBC_2.12
 select@GLIBC_2.0
 DES_encrypt2
 realpath@GLIBC_2.3
-_ZTVN10__cxxabiv129__pointer_to_member_type_infoE
+vtable for __cxxabiv1::__pointer_to_member_type_info
 strncasecmp@GLIBC_2.0
 SteamService_Stop
 pthread_cond_broadcast@GLIBC_2.3.2
@@ -13434,30 +13434,30 @@ nghttp2_submit_altsvc
 symlink@GLIBC_2.0
 nghttp2_session_server_new3
 lseek@GLIBC_2.0
-_ZTIPKDu
+typeinfo for char8_t const*
 nghttp2_session_get_outbound_queue_size
 nghttp2_priority_spec_init
 nghttp2_session_get_stream_user_data
 poly1305_init
-_ZTSc
+typeinfo name for char
 connect@GLIBC_2.0
 ungetwc@GLIBC_2.2
-_ZTIN10__cxxabiv117__pbase_type_infoE
-_ZTIN10__cxxabiv119__pointer_type_infoE
-_ZTSDs
+typeinfo for __cxxabiv1::__pbase_type_info
+typeinfo for __cxxabiv1::__pointer_type_info
+typeinfo name for char16_t
 _ITM_RU1
 strtoull@GLIBC_2.0
 pthread_rwlock_unlock@GLIBC_2.1
-_ZTSs
+typeinfo name for short
 pthread_condattr_init@GLIBC_2.0
-_ZTIPKc
+typeinfo for char const*
 sysconf@GLIBC_2.0
 aesni_ecb_encrypt
 nghttp2_select_next_protocol
-_ZTIPKs
+typeinfo for short const*
 gcm_gmult_4bit_mmx
 calloc@GLIBC_2.0
-_ZTIPKDe
+typeinfo for decimal128 const*
 fdatasync@GLIBC_2.0
 nghttp2_hd_deflate_bound
 strtof@GLIBC_2.0
@@ -13482,17 +13482,17 @@ gcm_gmult_clmul
 nghttp2_session_callbacks_set_on_data_chunk_recv_callback
 __fxstat@GLIBC_2.0
 __wrap_rename
-_ZTSPKe
-_ZN6google8protobuf8internal8byteswapILi1EEEvPv
+typeinfo name for long double const*
+void google::protobuf::internal::byteswap<1>(void*)
 nghttp2_session_get_stream_remote_window_size
-_ZTVN9__gnu_cxx24__concurrence_lock_errorE
+vtable for __gnu_cxx::__concurrence_lock_error
 isspace@GLIBC_2.0
 fputc@GLIBC_2.0
 fgets@GLIBC_2.0
-_ZN6google8protobuf8internal8byteswapILi8EEEvPv
+void google::protobuf::internal::byteswap<8>(void*)
 nghttp2_rcbuf_get_buf
-_ZTSN10__cxxabiv121__vmi_class_type_infoE
-_ZTIDi
+typeinfo name for __cxxabiv1::__vmi_class_type_info
+typeinfo for char32_t
 fwrite@GLIBC_2.0
 nghttp2_hd_inflate_get_dynamic_table_size
 nghttp2_session_get_stream_effective_local_window_size
@@ -13503,27 +13503,27 @@ dl_iterate_phdr@GLIBC_2.2.4
 nghttp2_hd_inflate_end_headers
 nghttp2_stream_get_first_child
 gcm_init_clmul
-_ZTSPKm
+typeinfo name for unsigned long const*
 nghttp2_stream_get_weight
-_ZTIPf
+typeinfo for float*
 geteuid@GLIBC_2.0
 nghttp2_session_terminate_session2
 __wrap_open64
-_ZTSPg
+typeinfo name for __float128*
 nghttp2_stream_get_stream_id
-_ZTSPw
+typeinfo name for wchar_t*
 getgid@GLIBC_2.0
 nghttp2_session_get_local_window_size
 nghttp2_session_set_stream_user_data
-_Z20_txnal_cow_string_D1Pv
+_txnal_cow_string_D1(void*)
 malloc@GLIBC_2.0
 __uselocale@GLIBC_2.3
 nghttp2_session_send
-_ZTIs
+typeinfo for short
 nghttp2_session_callbacks_del
 htons@GLIBC_2.0
 ecp_nistz256_div_by_2
-_ZTIc
+typeinfo for char
 nghttp2_hd_deflate_get_max_dynamic_table_size
 nghttp2_submit_ping
 aesni_xts_decrypt
@@ -13538,45 +13538,45 @@ statfs64@GLIBC_2.1
 aesni_ocb_decrypt
 OPENSSL_instrument_bus
 pthread_setspecific@GLIBC_2.0
-_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
+vtable for __gnu_cxx::__concurrence_unlock_error
 usleep@GLIBC_2.0
-_ZTVN10__cxxabiv119__foreign_exceptionE
+vtable for __cxxabiv1::__foreign_exception
 fprintf@GLIBC_2.0
 accept@GLIBC_2.0
 nghttp2_session_callbacks_set_on_frame_recv_callback
-_ZTIPv
+typeinfo for void*
 getcwd@GLIBC_2.0
 __sprintf_chk@GLIBC_2.3.4
-_ZTVN10__cxxabiv119__pointer_type_infoE
+vtable for __cxxabiv1::__pointer_type_info
 __wrap_mknod
 nghttp2_submit_trailer
-_ZTIN10__cxxabiv123__fundamental_type_infoE
+typeinfo for __cxxabiv1::__fundamental_type_info
 nghttp2_session_get_stream_local_close
-_ZTIPKDn
+typeinfo for std::nullptr_t const*
 __snprintf_chk@GLIBC_2.3.4
 Camellia_EncryptBlock
 nghttp2_session_get_remote_window_size
 __wrap_chdir
-_Z23_txnal_cow_string_c_strPKv
+_txnal_cow_string_c_str(void const*)
 mlock@GLIBC_2.0
 __wrap_dlmopen
 nghttp2_session_change_stream_priority
-_ZTIPKj
-_ZTSN10__cxxabiv119__pointer_type_infoE
-_ZTIPKb
+typeinfo for unsigned int const*
+typeinfo name for __cxxabiv1::__pointer_type_info
+typeinfo for bool const*
 vpaes_decrypt
 readdir@GLIBC_2.0
-_ZTSf
+typeinfo name for float
 mount@GLIBC_2.0
 nghttp2_check_header_name
 __iswctype_l@GLIBC_2.1
 nghttp2_session_create_idle_stream
-_ZTIPKDf
-_ZTVN9__gnu_cxx20recursive_init_errorE
+typeinfo for decimal32 const*
+vtable for __gnu_cxx::recursive_init_error
 stdout@GLIBC_2.0
 nghttp2_session_upgrade
 __xstat@GLIBC_2.0
-_ZTSv
+typeinfo name for void
 wctob@GLIBC_2.0
 nghttp2_session_callbacks_set_on_extension_chunk_recv_callback
 _exit@GLIBC_2.0
@@ -13585,12 +13585,12 @@ __lxstat@GLIBC_2.0
 __cxa_atexit@GLIBC_2.1.3
 dlsym@GLIBC_2.0
 __ctype_get_mb_cur_max@GLIBC_2.0
-_ZTVN10__cxxabiv120__function_type_infoE
-_ZTSN10__cxxabiv120__si_class_type_infoE
+vtable for __cxxabiv1::__function_type_info
+typeinfo name for __cxxabiv1::__si_class_type_info
 nghttp2_session_client_new3
 __wrap_utime
 nghttp2_submit_shutdown_notice
-_ZTSPKf
+typeinfo name for float const*
 sched_get_priority_max@GLIBC_2.0
 _fini
 DES_SPtrans
@@ -13601,29 +13601,29 @@ vpaes_encrypt
 utimes@GLIBC_2.0
 OPENSSL_wipe_cpu
 nghttp2_hd_deflate_new2
-_ZTSN9__gnu_cxx20recursive_init_errorE
-_ZTIPw
+typeinfo name for __gnu_cxx::recursive_init_error
+typeinfo for wchar_t*
 _ITM_addUserCommitAction
 __strftime_l@GLIBC_2.3
-_ZTSPKv
+typeinfo name for void const*
 aesni_xts_encrypt
 nghttp2_session_callbacks_new
 posix_memalign@GLIBC_2.2
 nghttp2_nv_compare_name
 BF_cbc_encrypt
-_ZTIPg
+typeinfo for __float128*
 ecp_nistz256_gather_w7
 __wrap_open
 wmemmove@GLIBC_2.0
 nghttp2_session_want_read
-_ZTSPh
-_ZTSPx
+typeinfo name for unsigned char*
+typeinfo name for long long*
 tolower@GLIBC_2.0
 nghttp2_session_check_request_allowed
-_ZTIj
+typeinfo for unsigned int
 nghttp2_hd_inflate_new2
 __errno_location@GLIBC_2.0
-_ZTIb
+typeinfo for bool
 wcsnrtombs@GLIBC_2.0
 strncpy@GLIBC_2.0
 OPENSSL_ia32_cpuid
@@ -13637,40 +13637,40 @@ __register_atfork@GLIBC_2.3.2
 OPENSSL_rdtsc
 gcm_gmult_4bit_x86
 memcmp@GLIBC_2.0
-_ZTSPDi
+typeinfo name for char32_t*
 _setjmp@GLIBC_2.0
 chown@GLIBC_2.1
 __vsnprintf_chk@GLIBC_2.3.4
-_ZTIPDn
+typeinfo for std::nullptr_t*
 sha1_block_data_order
 nghttp2_session_callbacks_set_on_frame_send_callback
 RC4_options
-_ZTSDi
-_ZTIPDf
+typeinfo name for char32_t
+typeinfo for decimal32*
 __strcpy_chk@GLIBC_2.3.4
 strrchr@GLIBC_2.0
 sha512_block_data_order
-_ZTIPKi
-_ZTIN10__cxxabiv120__si_class_type_infoE
+typeinfo for int const*
+typeinfo for __cxxabiv1::__si_class_type_info
 nghttp2_rcbuf_incref
-_ZTIPKa
+typeinfo for signed char const*
 getsockname@GLIBC_2.0
 ecp_nistz256_point_double
 __wrap___lxstat64
-_ZTSe
+typeinfo name for long double
 pthread_rwlock_destroy@GLIBC_2.1
 nghttp2_session_mem_recv
 fseek@GLIBC_2.0
 bn_sqr_words
-_ZTSN10__cxxabiv117__pbase_type_infoE
+typeinfo name for __cxxabiv1::__pbase_type_info
 ecp_nistz256_sqr_mont
 pthread_rwlock_init@GLIBC_2.1
 dgettext@GLIBC_2.0
 getenv@GLIBC_2.0
-_ZTSm
+typeinfo name for unsigned long
 fputs@GLIBC_2.0
 __wrap_stat64
-_ZTSN10__cxxabiv129__pointer_to_member_type_infoE
+typeinfo name for __cxxabiv1::__pointer_to_member_type_info
 nghttp2_hd_deflate_change_table_size
 iconv_open@GLIBC_2.1
 __wrap___xstat64
@@ -13681,10 +13681,10 @@ nghttp2_submit_priority
 strchr@GLIBC_2.0
 nghttp2_session_get_stream_effective_recv_data_length
 rename@GLIBC_2.0
-_ZTSPKc
+typeinfo name for char const*
 ecp_nistz256_from_mont
 Camellia_DecryptBlock
-_ZTSPKDi
+typeinfo name for char32_t const*
 shmat@GLIBC_2.0
 getcontext@GLIBC_2.1
 pthread_create@GLIBC_2.1
@@ -13692,39 +13692,39 @@ bn_div_words
 mktime@GLIBC_2.0
 pthread_condattr_setclock@GLIBC_2.3.3
 mbsrtowcs@GLIBC_2.0
-_ZTIPKy
+typeinfo for unsigned long long const*
 chdir@GLIBC_2.0
 __isoc99_sscanf@GLIBC_2.7
 pthread_mutex_unlock@GLIBC_2.0
-_ZTIe
-_ZTIPx
+typeinfo for long double
+typeinfo for long long*
 SteamRealPath
-_ZTSPKs
+typeinfo name for short const*
 __strcat_chk@GLIBC_2.3.4
 wcrtomb@GLIBC_2.0
 iconv@GLIBC_2.1
 nghttp2_check_header_value
 vsnprintf@GLIBC_2.0
-_ZTIDs
-_ZTIPh
+typeinfo for char16_t
+typeinfo for unsigned char*
 wcslen@GLIBC_2.0
-_ZTSPm
+typeinfo name for unsigned long*
 nghttp2_hd_inflate_change_table_size
-_ZTSPe
+typeinfo name for long double*
 sched_yield@GLIBC_2.0
-_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTIm
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo for unsigned long
 ecp_nistz256_precomputed
-_ZTSN10__cxxabiv119__foreign_exceptionE
+typeinfo name for __cxxabiv1::__foreign_exception
 getentropy
 signal@GLIBC_2.0
 stdin@GLIBC_2.0
 gcm_ghash_clmul
-_ZTSPDn
+typeinfo name for std::nullptr_t*
 posix_fadvise@GLIBC_2.2
 ntohl@GLIBC_2.0
-_ZTSPDf
-_ZTIPDu
+typeinfo name for decimal32*
+typeinfo for char8_t*
 RC4_set_key
 nghttp2_hd_inflate_new
 gettimeofday@GLIBC_2.0
@@ -13736,19 +13736,19 @@ vpaes_set_decrypt_key
 Camellia_cbc_encrypt
 ftello64@GLIBC_2.1
 __ctype_b_loc@GLIBC_2.3
-_ZTSN10__cxxabiv123__fundamental_type_infoE
-_ZTSDf
-_ZTIN10__cxxabiv119__foreign_exceptionE
-_ZTSDn
+typeinfo name for __cxxabiv1::__fundamental_type_info
+typeinfo name for decimal32
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo name for std::nullptr_t
 nghttp2_session_callbacks_set_on_invalid_header_callback2
-_ZTIPDe
+typeinfo for decimal128*
 nghttp2_session_callbacks_set_on_header_callback2
-_ZTIPKh
+typeinfo for unsigned char const*
 __stack_chk_fail@GLIBC_2.4
 nghttp2_submit_extension
 nghttp2_rcbuf_is_static
 lseek64@GLIBC_2.2
-_ZTSh
+typeinfo name for unsigned char
 isalpha@GLIBC_2.0
 readdir64@GLIBC_2.2
 bn_mul_comba4
@@ -13757,8 +13757,8 @@ __wrap_opendir
 dlerror@GLIBC_2.0
 nghttp2_session_callbacks_set_pack_extension_callback
 bn_mul_add_words
-_ZTSx
-_ZTIN10__cxxabiv115__forced_unwindE
+typeinfo name for long long
+typeinfo for __cxxabiv1::__forced_unwind
 pthread_mutex_lock@GLIBC_2.0
 strtol@GLIBC_2.0
 bn_sqr_comba4
@@ -13772,8 +13772,8 @@ OPENSSL_far_spin
 nghttp2_session_want_write
 BF_decrypt
 __wrap_chmod
-_ZTSPKd
-_ZTVN10__cxxabiv117__class_type_infoE
+typeinfo name for double const*
+vtable for __cxxabiv1::__class_type_info
 Camellia_EncryptBlock_Rounds
 utime@GLIBC_2.0
 ecp_nistz256_add
@@ -13781,28 +13781,28 @@ pthread_cond_init@GLIBC_2.3.2
 __strcoll_l@GLIBC_2.1
 nghttp2_session_get_hd_deflate_dynamic_table_size
 nghttp2_session_get_local_settings
-_ZTIPKx
-_ZTSPKt
+typeinfo for long long const*
+typeinfo name for unsigned short const*
 eventfd@GLIBC_2.7
 OPENSSL_ia32_rdseed_bytes
 free@GLIBC_2.0
 nghttp2_session_set_user_data
-_ZTIPi
-_ZTSPKl
+typeinfo for int*
+typeinfo name for long const*
 nghttp2_session_upgrade2
 pthread_key_delete@GLIBC_2.0
-_ZTSPv
-_ZTSPf
+typeinfo name for void*
+typeinfo name for float*
 ecp_nistz256_gather_w5
 dladdr@GLIBC_2.0
 getaddrinfo@GLIBC_2.0
-_ZTIl
-_ZTIPa
+typeinfo for long
+typeinfo for signed char*
 nghttp2_session_callbacks_set_on_frame_not_send_callback
 __lxstat64@GLIBC_2.2
-_ZTIt
-_ZTId
-_ZTIDd
+typeinfo for unsigned short
+typeinfo for double
+typeinfo for decimal64
 CreateInterface
 ___tls_get_addr@GLIBC_2.3
 pthread_mutexattr_init@GLIBC_2.0
@@ -13814,31 +13814,31 @@ strncmp@GLIBC_2.0
 __recv_chk@GLIBC_2.4
 nghttp2_session_callbacks_set_data_source_read_length_callback
 qsort@GLIBC_2.0
-_ZTIPy
+typeinfo for unsigned long long*
 nghttp2_session_get_stream_remote_close
-_ZTIPDd
+typeinfo for decimal64*
 __newlocale@GLIBC_2.1
 strcasecmp@GLIBC_2.0
 nghttp2_hd_inflate_del
-_ZTIPKg
+typeinfo for __float128 const*
 __wrap_link
 aesni_cbc_encrypt
-_ZGTtnaj
-_ZTVN10__cxxabiv120__si_class_type_infoE
-_ZTSg
+transaction clone for operator new[](unsigned int)
+vtable for __cxxabiv1::__si_class_type_info
+typeinfo name for __float128
 nghttp2_priority_spec_default_init
 aesni_decrypt
 ecp_nistz256_point_add
 ecp_nistz256_neg
-_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
+typeinfo for __gnu_cxx::__concurrence_unlock_error
 epoll_ctl@GLIBC_2.3.2
 __memset_chk@GLIBC_2.3.4
-_ZTIPKDi
-_ZTSw
+typeinfo for char32_t const*
+typeinfo name for wchar_t
 __strtod_l@GLIBC_2.1
 DES_decrypt3
 bn_mul_mont
-_Z27_txnal_cow_string_D1_commitPv
+_txnal_cow_string_D1_commit(void*)
 __wctype_l@GLIBC_2.1
 opendir@GLIBC_2.0
 pthread_join@GLIBC_2.0
@@ -13847,39 +13847,39 @@ nghttp2_submit_settings
 nghttp2_submit_origin
 __wrap_scandir
 closedir@GLIBC_2.0
-_ZTSPKa
+typeinfo name for signed char const*
 __wrap_fopen
 getegid@GLIBC_2.0
 nghttp2_session_callbacks_set_select_padding_callback
 pthread_rwlock_rdlock@GLIBC_2.1
-_ZTSPKDs
+typeinfo name for char16_t const*
 bn_mul_words
-_ZTIPKw
+typeinfo for wchar_t const*
 aesni_ocb_encrypt
 nghttp2_session_set_next_stream_id
 Camellia_Ekeygen
 nghttp2_submit_data
 ChaCha20_ssse3
-_ZTSPKy
+typeinfo name for unsigned long long const*
 nghttp2_session_callbacks_set_on_begin_headers_callback
 bn_sub_words
 strerror@GLIBC_2.0
 nanosleep@GLIBC_2.0
-_ZTIg
-_ZTSPKi
-_ZTIDu
-_ZTIPj
+typeinfo for __float128
+typeinfo name for int const*
+typeinfo for char8_t
+typeinfo for unsigned int*
 __xmknod@GLIBC_2.0
 dlclose@GLIBC_2.0
 uname@GLIBC_2.0
 pthread_setschedparam@GLIBC_2.0
-_ZTIw
+typeinfo for wchar_t
 nghttp2_rcbuf_decref
 pthread_cond_timedwait@GLIBC_2.3.2
-_ZTIPb
-_ZTSPs
-_ZTSDd
-_ZTIDe
+typeinfo for bool*
+typeinfo name for short*
+typeinfo name for decimal64
+typeinfo for decimal128
 Camellia_encrypt
 __towlower_l@GLIBC_2.1
 pthread_cond_wait@GLIBC_2.3.2
@@ -13887,13 +13887,13 @@ feof@GLIBC_2.0
 nghttp2_session_get_effective_local_window_size
 nghttp2_session_find_stream
 nghttp2_session_callbacks_set_error_callback
-_ZTIPDs
+typeinfo for char16_t*
 DES_ede3_cbc_encrypt
 wmemcpy@GLIBC_2.0
 nghttp2_session_callbacks_set_on_stream_close_callback
-_ZTSPc
+typeinfo name for char*
 nghttp2_session_callbacks_set_on_header_callback
-_ZTSPDd
+typeinfo name for decimal64*
 strtoll@GLIBC_2.0
 ecp_nistz256_mul_mont
 flock@GLIBC_2.0
@@ -13903,12 +13903,12 @@ nghttp2_submit_window_update
 lchown@GLIBC_2.0
 nghttp2_session_client_new
 readlink@GLIBC_2.0
-_ZTSj
+typeinfo name for unsigned int
 __fdelt_chk@GLIBC_2.15
-_ZTSb
+typeinfo name for bool
 nghttp2_session_consume_connection
 _ITM_RU4
-_ZTIPKf
+typeinfo for float const*
 bn_sub_part_words
 nghttp2_session_recv
 nghttp2_session_resume_data
@@ -13926,76 +13926,76 @@ nghttp2_session_callbacks_set_recv_callback
 syscall@GLIBC_2.0
 nghttp2_session_get_effective_recv_data_length
 strspn@GLIBC_2.0
-_ZTVN10__cxxabiv121__vmi_class_type_infoE
+vtable for __cxxabiv1::__vmi_class_type_info
 pthread_self@GLIBC_2.0
 nghttp2_submit_response
 __wcscoll_l@GLIBC_2.1
-_ZTIN10__cxxabiv121__vmi_class_type_infoE
+typeinfo for __cxxabiv1::__vmi_class_type_info
 __towupper_l@GLIBC_2.1
 bn_add_words
 __dprintf_chk@GLIBC_2.8
 iconv_close@GLIBC_2.1
 backtrace_symbols@GLIBC_2.1
 strftime@GLIBC_2.0
-_ZTSPKb
+typeinfo name for bool const*
 recv@GLIBC_2.0
 remove@GLIBC_2.0
 shutdown@GLIBC_2.0
 __nl_langinfo_l@GLIBC_2.2
 ripemd160_block_asm_data_order
-_ZTSPKDd
-_ZTIPKv
+typeinfo name for decimal64 const*
+typeinfo for void const*
 aesni_ctr32_encrypt_blocks
 __memcpy_chk@GLIBC_2.3.4
 fcntl@GLIBC_2.0
-_ZTIPc
-_ZTIDn
-_ZTIDf
+typeinfo for char*
+typeinfo for std::nullptr_t
+typeinfo for decimal32
 listen@GLIBC_2.0
-_ZTSN10__cxxabiv117__class_type_infoE
+typeinfo name for __cxxabiv1::__class_type_info
 nghttp2_session_get_last_proc_stream_id
-_ZTIf
+typeinfo for float
 nghttp2_stream_get_next_sibling
 nghttp2_session_set_local_window_size
 pthread_mutex_trylock@GLIBC_2.0
 __wrap_freopen
 aesni_ccm64_decrypt_blocks
 __strdup@GLIBC_2.0
-_ZTSPKj
+typeinfo name for unsigned int const*
 nghttp2_session_get_remote_settings
 __wrap___xstat
 nghttp2_hd_inflate_hd2
 gmtime_r@GLIBC_2.0
-_ZTIN9__gnu_cxx20recursive_init_errorE
+typeinfo for __gnu_cxx::recursive_init_error
 OPENSSL_ia32_rdrand_bytes
-_ZTIv
+typeinfo for void
 malloc_usable_size@GLIBC_2.0
 poly1305_blocks
 shmget@GLIBC_2.0
-_ZTSPt
-_ZTSDe
+typeinfo name for unsigned short*
+typeinfo name for decimal128
 __wrap_statfs64
 abort@GLIBC_2.0
 poly1305_emit
 _ITM_deregisterTMCloneTable
-_ZTSPDu
+typeinfo name for char8_t*
 strpbrk@GLIBC_2.0
 __xstat64@GLIBC_2.2
-_ZTSPl
+typeinfo name for long*
 nghttp2_priority_spec_check_default
 setcontext@GLIBC_2.0
-_ZTSPd
-_ZTSPDe
+typeinfo name for double*
+typeinfo name for decimal128*
 pthread_once@GLIBC_2.0
 dlmopen@GLIBC_2.3.4
 poll@GLIBC_2.0
 __wrap_chown
-_ZTIPs
+typeinfo for short*
 nghttp2_hd_deflate_del
-_ZTVN10__cxxabiv115__forced_unwindE
+vtable for __cxxabiv1::__forced_unwind
 wmemchr@GLIBC_2.0
 fclose@GLIBC_2.1
-_ZTIPKDs
+typeinfo for char16_t const*
 aesni_set_encrypt_key
 nghttp2_hd_inflate_get_max_dynamic_table_size
 ecp_nistz256_point_add_affine
@@ -14003,19 +14003,19 @@ nghttp2_session_get_next_stream_id
 nghttp2_session_del
 freopen@GLIBC_2.0
 SteamService_Shutdown
-_ZTSDu
+typeinfo name for char8_t
 __vasprintf_chk@GLIBC_2.8
 mkfifo@GLIBC_2.0
 rmdir@GLIBC_2.0
 vpaes_cbc_encrypt
 __wrap_unlink
-_ZTSa
-_ZTIPKm
-_ZTSN10__cxxabiv115__forced_unwindE
-_ZTIPKe
+typeinfo name for signed char
+typeinfo for unsigned long const*
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo for long double const*
 statvfs64@GLIBC_2.1
 nghttp2_session_get_hd_inflate_dynamic_table_size
-_ZTSi
+typeinfo name for int
 SteamService_GetIPCServer
 unlink@GLIBC_2.0
 BF_encrypt
@@ -14027,8 +14027,8 @@ nghttp2_session_server_new
 epoll_create@GLIBC_2.3.2
 __wrap___lxstat
 SteamService_StartThread
-_ZTSy
-_ZTIN10__cxxabiv117__class_type_infoE
+typeinfo name for unsigned long long
+typeinfo for __cxxabiv1::__class_type_info
 __wrap_scandir64
 stderr@GLIBC_2.0
 __wrap_fopen64
@@ -14042,36 +14042,36 @@ strcpy@GLIBC_2.0
 nghttp2_hd_inflate_hd
 mmap@GLIBC_2.0
 fseeko64@GLIBC_2.1
-_ZTVN10__cxxabiv123__fundamental_type_infoE
-_ZTSN9__gnu_cxx24__concurrence_lock_errorE
+vtable for __cxxabiv1::__fundamental_type_info
+typeinfo name for __gnu_cxx::__concurrence_lock_error
 _ITM_registerTMCloneTable
-_ZTSPKDu
+typeinfo name for char8_t const*
 __assert_fail@GLIBC_2.0
 wcscmp@GLIBC_2.0
 ecp_nistz256_mul_by_3
-_ZTSPKDe
+typeinfo name for decimal128 const*
 gcm_ghash_4bit_mmx
 pthread_cond_destroy@GLIBC_2.3.2
 Camellia_set_key
-_Z28_txnal_runtime_error_get_msgPv
-_ZTIPl
-_ZTIPd
-_ZTIa
-_ZTSPKw
+_txnal_runtime_error_get_msg(void*)
+typeinfo for long*
+typeinfo for double*
+typeinfo for signed char
+typeinfo name for wchar_t const*
 nghttp2_stream_get_previous_sibling
 scandir64@GLIBC_2.2
-_ZTIi
+typeinfo for int
 __wrap_lstat64
 strtod@GLIBC_2.0
 pthread_condattr_destroy@GLIBC_2.0
-_ZTSPKg
+typeinfo name for __float128 const*
 mprotect@GLIBC_2.0
 sched_get_priority_min@GLIBC_2.0
-_ZTSPy
-_ZTSPi
-_ZTSN10__cxxabiv120__function_type_infoE
+typeinfo name for unsigned long long*
+typeinfo name for int*
+typeinfo name for __cxxabiv1::__function_type_info
 vpaes_set_encrypt_key
-_ZTIy
+typeinfo for unsigned long long
 realloc@GLIBC_2.0
 Camellia_DecryptBlock_Rounds
 fopen@GLIBC_2.1

@@ -3,11 +3,11 @@ _fini
 _ITM_deregisterTMCloneTable
 _ITM_registerTMCloneTable
 __cxa_finalize
-_ZN8tinyxml211XMLDocument5ParseEPKcj
-_ZN8tinyxml211XMLDocument10ClearErrorEv
-_ZN8tinyxml210XMLPrinterC1EP8_IO_FILEbi
-_ZNK8tinyxml211XMLDocument5PrintEPNS_10XMLPrinterE
-_ZTVN8tinyxml210XMLPrinterE
+tinyxml2::XMLDocument::Parse(char const*, unsigned int)
+tinyxml2::XMLDocument::ClearError()
+tinyxml2::XMLPrinter::XMLPrinter(_IO_FILE*, bool, int)
+tinyxml2::XMLDocument::Print(tinyxml2::XMLPrinter*) const
+vtable for tinyxml2::XMLPrinter
 av_frame_free
 av_packet_unref
 avcodec_free_context
@@ -38,8 +38,8 @@ avcodec_find_decoder
 CreateAudioFileDecoder
 DeleteAudioFileDecoder
 __cxa_atexit
-_ZTVN10__cxxabiv117__class_type_infoE
-_ZTVN10__cxxabiv120__si_class_type_infoE
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
 avresample_close
 avresample_free
 avcodec_find_encoder
@@ -77,7 +77,7 @@ av_frame_unref
 avcodec_send_packet
 avcodec_receive_frame
 DeleteVideoDecoder
-_ZTVN10__cxxabiv121__vmi_class_type_infoE
+vtable for __cxxabiv1::__vmi_class_type_info
 sws_freeContext
 avcodec_decode_video2
 sws_getCachedContext
@@ -106,14 +106,14 @@ strcspn
 strstr
 strchr
 strtoll
-_ZNK8tinyxml210XMLElement13FindAttributeEPKc
-_ZNK8tinyxml212XMLAttribute5ValueEv
-_ZNK8tinyxml210XMLElement9AttributeEPKcS2_
-_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
-_ZNK8tinyxml27XMLNode18NextSiblingElementEPKc
-_ZN8tinyxml211XMLDocumentC1EbNS_10WhitespaceE
-_ZNK8tinyxml210XMLElement19Unsigned64AttributeEPKcy
-_ZNK8tinyxml210XMLElement17UnsignedAttributeEPKcj
+tinyxml2::XMLElement::FindAttribute(char const*) const
+tinyxml2::XMLAttribute::Value() const
+tinyxml2::XMLElement::Attribute(char const*, char const*) const
+tinyxml2::XMLNode::FirstChildElement(char const*) const
+tinyxml2::XMLNode::NextSiblingElement(char const*) const
+tinyxml2::XMLDocument::XMLDocument(bool, tinyxml2::Whitespace)
+tinyxml2::XMLElement::Unsigned64Attribute(char const*, unsigned long long) const
+tinyxml2::XMLElement::UnsignedAttribute(char const*, unsigned int) const
 strcmp
 isspace
 DeleteVideoPlayer
@@ -154,295 +154,295 @@ EGetFrameFromMPD
 __isoc99_sscanf
 strtod
 calloc
-_ZN8tinyxml27XMLNode9ToElementEv
-_ZN8tinyxml27XMLNode6ToTextEv
-_ZN8tinyxml27XMLNode9ToCommentEv
-_ZN8tinyxml27XMLNode10ToDocumentEv
-_ZN8tinyxml27XMLNode13ToDeclarationEv
-_ZN8tinyxml27XMLNode9ToUnknownEv
-_ZNK8tinyxml27XMLNode9ToElementEv
-_ZNK8tinyxml27XMLNode6ToTextEv
-_ZNK8tinyxml27XMLNode9ToCommentEv
-_ZNK8tinyxml27XMLNode10ToDocumentEv
-_ZNK8tinyxml27XMLNode13ToDeclarationEv
-_ZNK8tinyxml27XMLNode9ToUnknownEv
-_ZN8tinyxml27XMLText6ToTextEv
-_ZNK8tinyxml27XMLText6ToTextEv
-_ZN8tinyxml210XMLComment9ToCommentEv
-_ZNK8tinyxml210XMLComment9ToCommentEv
-_ZN8tinyxml214XMLDeclaration13ToDeclarationEv
-_ZNK8tinyxml214XMLDeclaration13ToDeclarationEv
-_ZN8tinyxml210XMLUnknown9ToUnknownEv
-_ZNK8tinyxml210XMLUnknown9ToUnknownEv
-_ZN8tinyxml210XMLElement9ToElementEv
-_ZNK8tinyxml210XMLElement9ToElementEv
-_ZN8tinyxml211XMLDocument10ToDocumentEv
-_ZNK8tinyxml211XMLDocument10ToDocumentEv
-_ZNK8tinyxml211XMLDocument12ShallowCloneEPS0_
-_ZNK8tinyxml211XMLDocument12ShallowEqualEPKNS_7XMLNodeE
-_ZN8tinyxml210XMLPrinter9VisitExitERKNS_11XMLDocumentE
-_ZN8tinyxml210XMLPrinter11CompactModeERKNS_10XMLElementE
-_ZNK8tinyxml211XMLDocument6AcceptEPNS_10XMLVisitorE
-_ZNK8tinyxml27XMLText6AcceptEPNS_10XMLVisitorE
-_ZNK8tinyxml210XMLComment6AcceptEPNS_10XMLVisitorE
-_ZNK8tinyxml214XMLDeclaration6AcceptEPNS_10XMLVisitorE
-_ZNK8tinyxml210XMLUnknown6AcceptEPNS_10XMLVisitorE
-_ZNK8tinyxml210XMLElement6AcceptEPNS_10XMLVisitorE
-_ZN8tinyxml210XMLPrinterD2Ev
-_ZN8tinyxml210XMLPrinterD1Ev
-_ZN8tinyxml210XMLPrinter5PrintEPKcz
+tinyxml2::XMLNode::ToElement()
+tinyxml2::XMLNode::ToText()
+tinyxml2::XMLNode::ToComment()
+tinyxml2::XMLNode::ToDocument()
+tinyxml2::XMLNode::ToDeclaration()
+tinyxml2::XMLNode::ToUnknown()
+tinyxml2::XMLNode::ToElement() const
+tinyxml2::XMLNode::ToText() const
+tinyxml2::XMLNode::ToComment() const
+tinyxml2::XMLNode::ToDocument() const
+tinyxml2::XMLNode::ToDeclaration() const
+tinyxml2::XMLNode::ToUnknown() const
+tinyxml2::XMLText::ToText()
+tinyxml2::XMLText::ToText() const
+tinyxml2::XMLComment::ToComment()
+tinyxml2::XMLComment::ToComment() const
+tinyxml2::XMLDeclaration::ToDeclaration()
+tinyxml2::XMLDeclaration::ToDeclaration() const
+tinyxml2::XMLUnknown::ToUnknown()
+tinyxml2::XMLUnknown::ToUnknown() const
+tinyxml2::XMLElement::ToElement()
+tinyxml2::XMLElement::ToElement() const
+tinyxml2::XMLDocument::ToDocument()
+tinyxml2::XMLDocument::ToDocument() const
+tinyxml2::XMLDocument::ShallowClone(tinyxml2::XMLDocument*) const
+tinyxml2::XMLDocument::ShallowEqual(tinyxml2::XMLNode const*) const
+tinyxml2::XMLPrinter::VisitExit(tinyxml2::XMLDocument const&)
+tinyxml2::XMLPrinter::CompactMode(tinyxml2::XMLElement const&)
+tinyxml2::XMLDocument::Accept(tinyxml2::XMLVisitor*) const
+tinyxml2::XMLText::Accept(tinyxml2::XMLVisitor*) const
+tinyxml2::XMLComment::Accept(tinyxml2::XMLVisitor*) const
+tinyxml2::XMLDeclaration::Accept(tinyxml2::XMLVisitor*) const
+tinyxml2::XMLUnknown::Accept(tinyxml2::XMLVisitor*) const
+tinyxml2::XMLElement::Accept(tinyxml2::XMLVisitor*) const
+tinyxml2::XMLPrinter::~XMLPrinter()
+tinyxml2::XMLPrinter::~XMLPrinter()
+tinyxml2::XMLPrinter::Print(char const*, ...)
 __vfprintf_chk
 __vsnprintf_chk
-_ZN8tinyxml210XMLPrinterD0Ev
-_ZN8tinyxml210XMLPrinter5WriteEPKcj
+tinyxml2::XMLPrinter::~XMLPrinter()
+tinyxml2::XMLPrinter::Write(char const*, unsigned int)
 fwrite
-_ZN8tinyxml210XMLPrinter4PutcEc
+tinyxml2::XMLPrinter::Putc(char)
 fputc
-_ZN8tinyxml210XMLPrinter10PrintSpaceEi
-_ZN8tinyxml210XMLPrinter9VisitExitERKNS_10XMLElementE
-_ZN8tinyxml210XMLPrinter12CloseElementEb
-_ZN8tinyxml27StrPair5ResetEv
-_ZN8tinyxml27StrPairD2Ev
-_ZN8tinyxml27StrPairD1Ev
-_ZN8tinyxml212XMLAttributeD2Ev
-_ZTVN8tinyxml212XMLAttributeE
-_ZN8tinyxml212XMLAttributeD1Ev
-_ZN8tinyxml212XMLAttributeD0Ev
-_ZN8tinyxml27StrPair10TransferToEPS0_
-_ZN8tinyxml27StrPair6SetStrEPKci
-_ZN8tinyxml27StrPair9ParseTextEPcPKciPi
+tinyxml2::XMLPrinter::PrintSpace(int)
+tinyxml2::XMLPrinter::VisitExit(tinyxml2::XMLElement const&)
+tinyxml2::XMLPrinter::CloseElement(bool)
+tinyxml2::StrPair::Reset()
+tinyxml2::StrPair::~StrPair()
+tinyxml2::StrPair::~StrPair()
+tinyxml2::XMLAttribute::~XMLAttribute()
+vtable for tinyxml2::XMLAttribute
+tinyxml2::XMLAttribute::~XMLAttribute()
+tinyxml2::XMLAttribute::~XMLAttribute()
+tinyxml2::StrPair::TransferTo(tinyxml2::StrPair*)
+tinyxml2::StrPair::SetStr(char const*, int)
+tinyxml2::StrPair::ParseText(char*, char const*, int, int*)
 strncmp
-_ZN8tinyxml27StrPair9ParseNameEPc
+tinyxml2::StrPair::ParseName(char*)
 isalpha
-_ZN8tinyxml27StrPair18CollapseWhitespaceEv
-_ZN8tinyxml27XMLUtil20SetBoolSerializationEPKcS2_
-_ZN8tinyxml27XMLUtil13writeBoolTrueE
-_ZN8tinyxml27XMLUtil14writeBoolFalseE
-_ZN8tinyxml27XMLUtil7ReadBOMEPKcPb
-_ZN8tinyxml27XMLUtil18ConvertUTF32ToUTF8EmPcPi
-_ZN8tinyxml27XMLUtil15GetCharacterRefEPKcPcPi
-_ZN8tinyxml27StrPair6GetStrEv
-_ZN8tinyxml27XMLUtil5ToStrEiPci
+tinyxml2::StrPair::CollapseWhitespace()
+tinyxml2::XMLUtil::SetBoolSerialization(char const*, char const*)
+tinyxml2::XMLUtil::writeBoolTrue
+tinyxml2::XMLUtil::writeBoolFalse
+tinyxml2::XMLUtil::ReadBOM(char const*, bool*)
+tinyxml2::XMLUtil::ConvertUTF32ToUTF8(unsigned long, char*, int*)
+tinyxml2::XMLUtil::GetCharacterRef(char const*, char*, int*)
+tinyxml2::StrPair::GetStr()
+tinyxml2::XMLUtil::ToStr(int, char*, int)
 __snprintf_chk
-_ZN8tinyxml27XMLUtil5ToStrEjPci
-_ZN8tinyxml27XMLUtil5ToStrEbPci
-_ZN8tinyxml27XMLUtil5ToStrEfPci
-_ZN8tinyxml27XMLUtil5ToStrEdPci
-_ZN8tinyxml27XMLUtil5ToStrExPci
-_ZN8tinyxml27XMLUtil5ToStrEyPci
-_ZN8tinyxml27XMLUtil5ToIntEPKcPi
-_ZN8tinyxml27XMLUtil10ToUnsignedEPKcPj
-_ZN8tinyxml27XMLUtil6ToBoolEPKcPb
-_ZN8tinyxml27XMLUtil7ToFloatEPKcPf
-_ZN8tinyxml27XMLUtil8ToDoubleEPKcPd
-_ZN8tinyxml27XMLUtil7ToInt64EPKcPx
-_ZN8tinyxml27XMLUtil12ToUnsigned64EPKcPy
-_ZN8tinyxml27XMLNodeC2EPNS_11XMLDocumentE
-_ZTVN8tinyxml27XMLNodeE
-_ZN8tinyxml27XMLNodeC1EPNS_11XMLDocumentE
-_ZNK8tinyxml27XMLNode5ValueEv
-_ZNK8tinyxml27XMLText12ShallowEqualEPKNS_7XMLNodeE
-_ZNK8tinyxml210XMLComment12ShallowEqualEPKNS_7XMLNodeE
-_ZNK8tinyxml214XMLDeclaration12ShallowEqualEPKNS_7XMLNodeE
-_ZNK8tinyxml210XMLUnknown12ShallowEqualEPKNS_7XMLNodeE
-_ZN8tinyxml27XMLNode8SetValueEPKcb
-_ZN8tinyxml27XMLNode6UnlinkEPS0_
-_ZNK8tinyxml27XMLNode17ToElementWithNameEPKc
-_ZNK8tinyxml27XMLNode16LastChildElementEPKc
-_ZNK8tinyxml27XMLNode22PreviousSiblingElementEPKc
-_ZN8tinyxml210XMLCommentC2EPNS_11XMLDocumentE
-_ZTVN8tinyxml210XMLCommentE
-_ZN8tinyxml210XMLCommentC1EPNS_11XMLDocumentE
-_ZN8tinyxml214XMLDeclarationC2EPNS_11XMLDocumentE
-_ZTVN8tinyxml214XMLDeclarationE
-_ZN8tinyxml214XMLDeclarationC1EPNS_11XMLDocumentE
-_ZN8tinyxml210XMLUnknownC2EPNS_11XMLDocumentE
-_ZTVN8tinyxml210XMLUnknownE
-_ZN8tinyxml210XMLUnknownC1EPNS_11XMLDocumentE
-_ZNK8tinyxml212XMLAttribute4NameEv
-_ZNK8tinyxml210XMLElement12ShallowEqualEPKNS_7XMLNodeE
-_ZN8tinyxml212XMLAttribute9ParseDeepEPcbPi
-_ZN8tinyxml212XMLAttribute7SetNameEPKc
-_ZNK8tinyxml212XMLAttribute13QueryIntValueEPi
-_ZNK8tinyxml212XMLAttribute18QueryUnsignedValueEPj
-_ZNK8tinyxml212XMLAttribute15QueryInt64ValueEPx
-_ZNK8tinyxml212XMLAttribute20QueryUnsigned64ValueEPy
-_ZNK8tinyxml212XMLAttribute14QueryBoolValueEPb
-_ZNK8tinyxml212XMLAttribute15QueryFloatValueEPf
-_ZNK8tinyxml212XMLAttribute16QueryDoubleValueEPd
-_ZN8tinyxml212XMLAttribute12SetAttributeEPKc
-_ZN8tinyxml212XMLAttribute12SetAttributeEi
-_ZN8tinyxml212XMLAttribute12SetAttributeEj
-_ZN8tinyxml212XMLAttribute12SetAttributeEx
-_ZN8tinyxml212XMLAttribute12SetAttributeEy
-_ZN8tinyxml212XMLAttribute12SetAttributeEb
-_ZN8tinyxml212XMLAttribute12SetAttributeEd
-_ZN8tinyxml212XMLAttribute12SetAttributeEf
-_ZN8tinyxml210XMLElementC2EPNS_11XMLDocumentE
-_ZTVN8tinyxml210XMLElementE
-_ZN8tinyxml210XMLElementC1EPNS_11XMLDocumentE
-_ZN8tinyxml211XMLDocument8IdentifyEPcPPNS_7XMLNodeE
-_ZTVN8tinyxml27XMLTextE
-_ZNK8tinyxml210XMLElement12IntAttributeEPKci
-_ZNK8tinyxml210XMLElement14Int64AttributeEPKcx
-_ZNK8tinyxml210XMLElement13BoolAttributeEPKcb
-_ZNK8tinyxml210XMLElement15DoubleAttributeEPKcd
-_ZNK8tinyxml210XMLElement14FloatAttributeEPKcf
-_ZNK8tinyxml210XMLElement7GetTextEv
-_ZNK8tinyxml210XMLElement12QueryIntTextEPi
-_ZNK8tinyxml210XMLElement17QueryUnsignedTextEPj
-_ZNK8tinyxml210XMLElement14QueryInt64TextEPx
-_ZNK8tinyxml210XMLElement19QueryUnsigned64TextEPy
-_ZNK8tinyxml210XMLElement13QueryBoolTextEPb
-_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
-_ZNK8tinyxml210XMLElement14QueryFloatTextEPf
-_ZNK8tinyxml210XMLElement7IntTextEi
-_ZNK8tinyxml210XMLElement12UnsignedTextEj
-_ZNK8tinyxml210XMLElement9Int64TextEx
-_ZNK8tinyxml210XMLElement14Unsigned64TextEy
-_ZNK8tinyxml210XMLElement8BoolTextEb
-_ZNK8tinyxml210XMLElement10DoubleTextEd
-_ZNK8tinyxml210XMLElement9FloatTextEf
-_ZN8tinyxml210XMLElement15DeleteAttributeEPNS_12XMLAttributeE
-_ZN8tinyxml210XMLElement15DeleteAttributeEPKc
-_ZN8tinyxml210XMLElement15CreateAttributeEv
-_ZN8tinyxml210XMLElement21FindOrCreateAttributeEPKc
-_ZN8tinyxml211XMLDocumentC2EbNS_10WhitespaceE
-_ZTVN8tinyxml211XMLDocumentE
-_ZN8tinyxml211XMLDocument9MarkInUseEPKNS_7XMLNodeE
-_ZN8tinyxml27XMLNode10DeleteNodeEPS0_
-_ZN8tinyxml27XMLNode11DeleteChildEPS0_
-_ZN8tinyxml27XMLNode14DeleteChildrenEv
-_ZN8tinyxml27XMLNodeD2Ev
-_ZN8tinyxml27XMLNodeD1Ev
-_ZN8tinyxml27XMLNodeD0Ev
-_ZN8tinyxml27XMLTextD2Ev
-_ZN8tinyxml27XMLTextD1Ev
-_ZN8tinyxml27XMLTextD0Ev
-_ZN8tinyxml210XMLCommentD2Ev
-_ZN8tinyxml210XMLCommentD1Ev
-_ZN8tinyxml210XMLCommentD0Ev
-_ZN8tinyxml214XMLDeclarationD2Ev
-_ZN8tinyxml214XMLDeclarationD1Ev
-_ZN8tinyxml214XMLDeclarationD0Ev
-_ZN8tinyxml210XMLUnknownD2Ev
-_ZN8tinyxml210XMLUnknownD1Ev
-_ZN8tinyxml210XMLUnknownD0Ev
-_ZN8tinyxml210XMLElementD2Ev
-_ZN8tinyxml210XMLElementD1Ev
-_ZN8tinyxml210XMLElementD0Ev
-_ZNK8tinyxml27XMLNode19InsertChildPreambleEPS0_
-_ZN8tinyxml27XMLNode14InsertEndChildEPS0_
-_ZNK8tinyxml27XMLNode9DeepCloneEPNS_11XMLDocumentE
-_ZN8tinyxml27XMLNode16InsertFirstChildEPS0_
-_ZN8tinyxml27XMLNode16InsertAfterChildEPS0_S1_
-_ZN8tinyxml211XMLDocument10NewElementEPKc
-_ZN8tinyxml210XMLElement21InsertNewChildElementEPKc
-_ZNK8tinyxml210XMLElement12ShallowCloneEPNS_11XMLDocumentE
-_ZN8tinyxml211XMLDocument10NewCommentEPKc
-_ZNK8tinyxml210XMLComment12ShallowCloneEPNS_11XMLDocumentE
-_ZN8tinyxml210XMLElement16InsertNewCommentEPKc
-_ZN8tinyxml211XMLDocument7NewTextEPKc
-_ZNK8tinyxml27XMLText12ShallowCloneEPNS_11XMLDocumentE
-_ZN8tinyxml210XMLElement7SetTextEPKc
-_ZN8tinyxml210XMLElement7SetTextEi
-_ZN8tinyxml210XMLElement7SetTextEj
-_ZN8tinyxml210XMLElement7SetTextEx
-_ZN8tinyxml210XMLElement7SetTextEy
-_ZN8tinyxml210XMLElement7SetTextEb
-_ZN8tinyxml210XMLElement7SetTextEf
-_ZN8tinyxml210XMLElement7SetTextEd
-_ZN8tinyxml210XMLElement13InsertNewTextEPKc
-_ZN8tinyxml211XMLDocument14NewDeclarationEPKc
-_ZNK8tinyxml214XMLDeclaration12ShallowCloneEPNS_11XMLDocumentE
-_ZN8tinyxml210XMLElement20InsertNewDeclarationEPKc
-_ZN8tinyxml211XMLDocument10NewUnknownEPKc
-_ZNK8tinyxml210XMLUnknown12ShallowCloneEPNS_11XMLDocumentE
-_ZN8tinyxml210XMLElement16InsertNewUnknownEPKc
-_ZN8tinyxml211XMLDocument10DeleteNodeEPNS_7XMLNodeE
-_ZN8tinyxml211XMLDocument5ClearEv
-_ZNK8tinyxml211XMLDocument8DeepCopyEPS0_
-_ZN8tinyxml211XMLDocumentD2Ev
-_ZN8tinyxml211XMLDocumentD1Ev
-_ZN8tinyxml211XMLDocumentD0Ev
-_ZN8tinyxml211XMLDocument13ErrorIDToNameENS_8XMLErrorE
-_ZN8tinyxml211XMLDocument11_errorNamesE
-_ZN8tinyxml211XMLDocument8SetErrorENS_8XMLErrorEiPKcz
-_ZN8tinyxml27XMLText9ParseDeepEPcPNS_7StrPairEPi
-_ZN8tinyxml210XMLComment9ParseDeepEPcPNS_7StrPairEPi
-_ZN8tinyxml214XMLDeclaration9ParseDeepEPcPNS_7StrPairEPi
-_ZN8tinyxml210XMLUnknown9ParseDeepEPcPNS_7StrPairEPi
-_ZN8tinyxml210XMLElement15ParseAttributesEPcPi
-_ZNK8tinyxml211XMLDocument8ErrorStrEv
-_ZNK8tinyxml211XMLDocument10PrintErrorEv
-_ZNK8tinyxml211XMLDocument9ErrorNameEv
-_ZN8tinyxml211XMLDocument5ParseEv
-_ZN8tinyxml211XMLDocument8LoadFileEP8_IO_FILE
+tinyxml2::XMLUtil::ToStr(unsigned int, char*, int)
+tinyxml2::XMLUtil::ToStr(bool, char*, int)
+tinyxml2::XMLUtil::ToStr(float, char*, int)
+tinyxml2::XMLUtil::ToStr(double, char*, int)
+tinyxml2::XMLUtil::ToStr(long long, char*, int)
+tinyxml2::XMLUtil::ToStr(unsigned long long, char*, int)
+tinyxml2::XMLUtil::ToInt(char const*, int*)
+tinyxml2::XMLUtil::ToUnsigned(char const*, unsigned int*)
+tinyxml2::XMLUtil::ToBool(char const*, bool*)
+tinyxml2::XMLUtil::ToFloat(char const*, float*)
+tinyxml2::XMLUtil::ToDouble(char const*, double*)
+tinyxml2::XMLUtil::ToInt64(char const*, long long*)
+tinyxml2::XMLUtil::ToUnsigned64(char const*, unsigned long long*)
+tinyxml2::XMLNode::XMLNode(tinyxml2::XMLDocument*)
+vtable for tinyxml2::XMLNode
+tinyxml2::XMLNode::XMLNode(tinyxml2::XMLDocument*)
+tinyxml2::XMLNode::Value() const
+tinyxml2::XMLText::ShallowEqual(tinyxml2::XMLNode const*) const
+tinyxml2::XMLComment::ShallowEqual(tinyxml2::XMLNode const*) const
+tinyxml2::XMLDeclaration::ShallowEqual(tinyxml2::XMLNode const*) const
+tinyxml2::XMLUnknown::ShallowEqual(tinyxml2::XMLNode const*) const
+tinyxml2::XMLNode::SetValue(char const*, bool)
+tinyxml2::XMLNode::Unlink(tinyxml2::XMLNode*)
+tinyxml2::XMLNode::ToElementWithName(char const*) const
+tinyxml2::XMLNode::LastChildElement(char const*) const
+tinyxml2::XMLNode::PreviousSiblingElement(char const*) const
+tinyxml2::XMLComment::XMLComment(tinyxml2::XMLDocument*)
+vtable for tinyxml2::XMLComment
+tinyxml2::XMLComment::XMLComment(tinyxml2::XMLDocument*)
+tinyxml2::XMLDeclaration::XMLDeclaration(tinyxml2::XMLDocument*)
+vtable for tinyxml2::XMLDeclaration
+tinyxml2::XMLDeclaration::XMLDeclaration(tinyxml2::XMLDocument*)
+tinyxml2::XMLUnknown::XMLUnknown(tinyxml2::XMLDocument*)
+vtable for tinyxml2::XMLUnknown
+tinyxml2::XMLUnknown::XMLUnknown(tinyxml2::XMLDocument*)
+tinyxml2::XMLAttribute::Name() const
+tinyxml2::XMLElement::ShallowEqual(tinyxml2::XMLNode const*) const
+tinyxml2::XMLAttribute::ParseDeep(char*, bool, int*)
+tinyxml2::XMLAttribute::SetName(char const*)
+tinyxml2::XMLAttribute::QueryIntValue(int*) const
+tinyxml2::XMLAttribute::QueryUnsignedValue(unsigned int*) const
+tinyxml2::XMLAttribute::QueryInt64Value(long long*) const
+tinyxml2::XMLAttribute::QueryUnsigned64Value(unsigned long long*) const
+tinyxml2::XMLAttribute::QueryBoolValue(bool*) const
+tinyxml2::XMLAttribute::QueryFloatValue(float*) const
+tinyxml2::XMLAttribute::QueryDoubleValue(double*) const
+tinyxml2::XMLAttribute::SetAttribute(char const*)
+tinyxml2::XMLAttribute::SetAttribute(int)
+tinyxml2::XMLAttribute::SetAttribute(unsigned int)
+tinyxml2::XMLAttribute::SetAttribute(long long)
+tinyxml2::XMLAttribute::SetAttribute(unsigned long long)
+tinyxml2::XMLAttribute::SetAttribute(bool)
+tinyxml2::XMLAttribute::SetAttribute(double)
+tinyxml2::XMLAttribute::SetAttribute(float)
+tinyxml2::XMLElement::XMLElement(tinyxml2::XMLDocument*)
+vtable for tinyxml2::XMLElement
+tinyxml2::XMLElement::XMLElement(tinyxml2::XMLDocument*)
+tinyxml2::XMLDocument::Identify(char*, tinyxml2::XMLNode**)
+vtable for tinyxml2::XMLText
+tinyxml2::XMLElement::IntAttribute(char const*, int) const
+tinyxml2::XMLElement::Int64Attribute(char const*, long long) const
+tinyxml2::XMLElement::BoolAttribute(char const*, bool) const
+tinyxml2::XMLElement::DoubleAttribute(char const*, double) const
+tinyxml2::XMLElement::FloatAttribute(char const*, float) const
+tinyxml2::XMLElement::GetText() const
+tinyxml2::XMLElement::QueryIntText(int*) const
+tinyxml2::XMLElement::QueryUnsignedText(unsigned int*) const
+tinyxml2::XMLElement::QueryInt64Text(long long*) const
+tinyxml2::XMLElement::QueryUnsigned64Text(unsigned long long*) const
+tinyxml2::XMLElement::QueryBoolText(bool*) const
+tinyxml2::XMLElement::QueryDoubleText(double*) const
+tinyxml2::XMLElement::QueryFloatText(float*) const
+tinyxml2::XMLElement::IntText(int) const
+tinyxml2::XMLElement::UnsignedText(unsigned int) const
+tinyxml2::XMLElement::Int64Text(long long) const
+tinyxml2::XMLElement::Unsigned64Text(unsigned long long) const
+tinyxml2::XMLElement::BoolText(bool) const
+tinyxml2::XMLElement::DoubleText(double) const
+tinyxml2::XMLElement::FloatText(float) const
+tinyxml2::XMLElement::DeleteAttribute(tinyxml2::XMLAttribute*)
+tinyxml2::XMLElement::DeleteAttribute(char const*)
+tinyxml2::XMLElement::CreateAttribute()
+tinyxml2::XMLElement::FindOrCreateAttribute(char const*)
+tinyxml2::XMLDocument::XMLDocument(bool, tinyxml2::Whitespace)
+vtable for tinyxml2::XMLDocument
+tinyxml2::XMLDocument::MarkInUse(tinyxml2::XMLNode const*)
+tinyxml2::XMLNode::DeleteNode(tinyxml2::XMLNode*)
+tinyxml2::XMLNode::DeleteChild(tinyxml2::XMLNode*)
+tinyxml2::XMLNode::DeleteChildren()
+tinyxml2::XMLNode::~XMLNode()
+tinyxml2::XMLNode::~XMLNode()
+tinyxml2::XMLNode::~XMLNode()
+tinyxml2::XMLText::~XMLText()
+tinyxml2::XMLText::~XMLText()
+tinyxml2::XMLText::~XMLText()
+tinyxml2::XMLComment::~XMLComment()
+tinyxml2::XMLComment::~XMLComment()
+tinyxml2::XMLComment::~XMLComment()
+tinyxml2::XMLDeclaration::~XMLDeclaration()
+tinyxml2::XMLDeclaration::~XMLDeclaration()
+tinyxml2::XMLDeclaration::~XMLDeclaration()
+tinyxml2::XMLUnknown::~XMLUnknown()
+tinyxml2::XMLUnknown::~XMLUnknown()
+tinyxml2::XMLUnknown::~XMLUnknown()
+tinyxml2::XMLElement::~XMLElement()
+tinyxml2::XMLElement::~XMLElement()
+tinyxml2::XMLElement::~XMLElement()
+tinyxml2::XMLNode::InsertChildPreamble(tinyxml2::XMLNode*) const
+tinyxml2::XMLNode::InsertEndChild(tinyxml2::XMLNode*)
+tinyxml2::XMLNode::DeepClone(tinyxml2::XMLDocument*) const
+tinyxml2::XMLNode::InsertFirstChild(tinyxml2::XMLNode*)
+tinyxml2::XMLNode::InsertAfterChild(tinyxml2::XMLNode*, tinyxml2::XMLNode*)
+tinyxml2::XMLDocument::NewElement(char const*)
+tinyxml2::XMLElement::InsertNewChildElement(char const*)
+tinyxml2::XMLElement::ShallowClone(tinyxml2::XMLDocument*) const
+tinyxml2::XMLDocument::NewComment(char const*)
+tinyxml2::XMLComment::ShallowClone(tinyxml2::XMLDocument*) const
+tinyxml2::XMLElement::InsertNewComment(char const*)
+tinyxml2::XMLDocument::NewText(char const*)
+tinyxml2::XMLText::ShallowClone(tinyxml2::XMLDocument*) const
+tinyxml2::XMLElement::SetText(char const*)
+tinyxml2::XMLElement::SetText(int)
+tinyxml2::XMLElement::SetText(unsigned int)
+tinyxml2::XMLElement::SetText(long long)
+tinyxml2::XMLElement::SetText(unsigned long long)
+tinyxml2::XMLElement::SetText(bool)
+tinyxml2::XMLElement::SetText(float)
+tinyxml2::XMLElement::SetText(double)
+tinyxml2::XMLElement::InsertNewText(char const*)
+tinyxml2::XMLDocument::NewDeclaration(char const*)
+tinyxml2::XMLDeclaration::ShallowClone(tinyxml2::XMLDocument*) const
+tinyxml2::XMLElement::InsertNewDeclaration(char const*)
+tinyxml2::XMLDocument::NewUnknown(char const*)
+tinyxml2::XMLUnknown::ShallowClone(tinyxml2::XMLDocument*) const
+tinyxml2::XMLElement::InsertNewUnknown(char const*)
+tinyxml2::XMLDocument::DeleteNode(tinyxml2::XMLNode*)
+tinyxml2::XMLDocument::Clear()
+tinyxml2::XMLDocument::DeepCopy(tinyxml2::XMLDocument*) const
+tinyxml2::XMLDocument::~XMLDocument()
+tinyxml2::XMLDocument::~XMLDocument()
+tinyxml2::XMLDocument::~XMLDocument()
+tinyxml2::XMLDocument::ErrorIDToName(tinyxml2::XMLError)
+tinyxml2::XMLDocument::_errorNames
+tinyxml2::XMLDocument::SetError(tinyxml2::XMLError, int, char const*, ...)
+tinyxml2::XMLText::ParseDeep(char*, tinyxml2::StrPair*, int*)
+tinyxml2::XMLComment::ParseDeep(char*, tinyxml2::StrPair*, int*)
+tinyxml2::XMLDeclaration::ParseDeep(char*, tinyxml2::StrPair*, int*)
+tinyxml2::XMLUnknown::ParseDeep(char*, tinyxml2::StrPair*, int*)
+tinyxml2::XMLElement::ParseAttributes(char*, int*)
+tinyxml2::XMLDocument::ErrorStr() const
+tinyxml2::XMLDocument::PrintError() const
+tinyxml2::XMLDocument::ErrorName() const
+tinyxml2::XMLDocument::Parse()
+tinyxml2::XMLDocument::LoadFile(_IO_FILE*)
 fseek
 fgetc
 ftell
 fread
 ferror
-_ZN8tinyxml211XMLDocument8LoadFileEPKc
+tinyxml2::XMLDocument::LoadFile(char const*)
 __wrap_fopen
 fclose
-_ZN8tinyxml211XMLDocument9PushDepthEv
-_ZN8tinyxml211XMLDocument8PopDepthEv
-_ZN8tinyxml27XMLNode9ParseDeepEPcPNS_7StrPairEPi
-_ZN8tinyxml210XMLElement9ParseDeepEPcPNS_7StrPairEPi
-_ZN8tinyxml210XMLPrinterC2EP8_IO_FILEbi
-_ZN8tinyxml210XMLPrinter11PrintStringEPKcb
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcS2_
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKci
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcj
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcx
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcy
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcb
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcd
-_ZN8tinyxml210XMLPrinter23SealElementIfJustOpenedEv
-_ZN8tinyxml210XMLPrinter17PrepareForNewNodeEb
-_ZN8tinyxml210XMLPrinter11OpenElementEPKcb
-_ZN8tinyxml210XMLPrinter10VisitEnterERKNS_10XMLElementEPKNS_12XMLAttributeE
-_ZN8tinyxml210XMLPrinter8PushTextEPKcb
-_ZN8tinyxml210XMLPrinter5VisitERKNS_7XMLTextE
-_ZN8tinyxml210XMLPrinter8PushTextEx
-_ZN8tinyxml210XMLPrinter8PushTextEy
-_ZN8tinyxml210XMLPrinter8PushTextEi
-_ZN8tinyxml210XMLPrinter8PushTextEj
-_ZN8tinyxml210XMLPrinter8PushTextEb
-_ZN8tinyxml210XMLPrinter8PushTextEf
-_ZN8tinyxml210XMLPrinter8PushTextEd
-_ZN8tinyxml210XMLPrinter11PushCommentEPKc
-_ZN8tinyxml210XMLPrinter5VisitERKNS_10XMLCommentE
-_ZN8tinyxml210XMLPrinter15PushDeclarationEPKc
-_ZN8tinyxml210XMLPrinter10PushHeaderEbb
-_ZN8tinyxml210XMLPrinter10VisitEnterERKNS_11XMLDocumentE
+tinyxml2::XMLDocument::PushDepth()
+tinyxml2::XMLDocument::PopDepth()
+tinyxml2::XMLNode::ParseDeep(char*, tinyxml2::StrPair*, int*)
+tinyxml2::XMLElement::ParseDeep(char*, tinyxml2::StrPair*, int*)
+tinyxml2::XMLPrinter::XMLPrinter(_IO_FILE*, bool, int)
+tinyxml2::XMLPrinter::PrintString(char const*, bool)
+tinyxml2::XMLPrinter::PushAttribute(char const*, char const*)
+tinyxml2::XMLPrinter::PushAttribute(char const*, int)
+tinyxml2::XMLPrinter::PushAttribute(char const*, unsigned int)
+tinyxml2::XMLPrinter::PushAttribute(char const*, long long)
+tinyxml2::XMLPrinter::PushAttribute(char const*, unsigned long long)
+tinyxml2::XMLPrinter::PushAttribute(char const*, bool)
+tinyxml2::XMLPrinter::PushAttribute(char const*, double)
+tinyxml2::XMLPrinter::SealElementIfJustOpened()
+tinyxml2::XMLPrinter::PrepareForNewNode(bool)
+tinyxml2::XMLPrinter::OpenElement(char const*, bool)
+tinyxml2::XMLPrinter::VisitEnter(tinyxml2::XMLElement const&, tinyxml2::XMLAttribute const*)
+tinyxml2::XMLPrinter::PushText(char const*, bool)
+tinyxml2::XMLPrinter::Visit(tinyxml2::XMLText const&)
+tinyxml2::XMLPrinter::PushText(long long)
+tinyxml2::XMLPrinter::PushText(unsigned long long)
+tinyxml2::XMLPrinter::PushText(int)
+tinyxml2::XMLPrinter::PushText(unsigned int)
+tinyxml2::XMLPrinter::PushText(bool)
+tinyxml2::XMLPrinter::PushText(float)
+tinyxml2::XMLPrinter::PushText(double)
+tinyxml2::XMLPrinter::PushComment(char const*)
+tinyxml2::XMLPrinter::Visit(tinyxml2::XMLComment const&)
+tinyxml2::XMLPrinter::PushDeclaration(char const*)
+tinyxml2::XMLPrinter::PushHeader(bool, bool)
+tinyxml2::XMLPrinter::VisitEnter(tinyxml2::XMLDocument const&)
 stdout
-_ZN8tinyxml211XMLDocument8SaveFileEP8_IO_FILEb
-_ZN8tinyxml211XMLDocument8SaveFileEPKcb
-_ZN8tinyxml210XMLPrinter5VisitERKNS_14XMLDeclarationE
-_ZN8tinyxml210XMLPrinter11PushUnknownEPKc
-_ZN8tinyxml210XMLPrinter5VisitERKNS_10XMLUnknownE
-_ZTSN8tinyxml210XMLVisitorE
-_ZTIN8tinyxml210XMLVisitorE
-_ZTSN8tinyxml27XMLNodeE
-_ZTIN8tinyxml27XMLNodeE
-_ZTSN8tinyxml27XMLTextE
-_ZTIN8tinyxml27XMLTextE
-_ZTSN8tinyxml210XMLCommentE
-_ZTIN8tinyxml210XMLCommentE
-_ZTSN8tinyxml214XMLDeclarationE
-_ZTIN8tinyxml214XMLDeclarationE
-_ZTSN8tinyxml210XMLUnknownE
-_ZTIN8tinyxml210XMLUnknownE
-_ZTSN8tinyxml212XMLAttributeE
-_ZTIN8tinyxml212XMLAttributeE
-_ZTSN8tinyxml210XMLElementE
-_ZTIN8tinyxml210XMLElementE
-_ZTSN8tinyxml211XMLDocumentE
-_ZTIN8tinyxml211XMLDocumentE
-_ZTSN8tinyxml210XMLPrinterE
-_ZTIN8tinyxml210XMLPrinterE
+tinyxml2::XMLDocument::SaveFile(_IO_FILE*, bool)
+tinyxml2::XMLDocument::SaveFile(char const*, bool)
+tinyxml2::XMLPrinter::Visit(tinyxml2::XMLDeclaration const&)
+tinyxml2::XMLPrinter::PushUnknown(char const*)
+tinyxml2::XMLPrinter::Visit(tinyxml2::XMLUnknown const&)
+typeinfo name for tinyxml2::XMLVisitor
+typeinfo for tinyxml2::XMLVisitor
+typeinfo name for tinyxml2::XMLNode
+typeinfo for tinyxml2::XMLNode
+typeinfo name for tinyxml2::XMLText
+typeinfo for tinyxml2::XMLText
+typeinfo name for tinyxml2::XMLComment
+typeinfo for tinyxml2::XMLComment
+typeinfo name for tinyxml2::XMLDeclaration
+typeinfo for tinyxml2::XMLDeclaration
+typeinfo name for tinyxml2::XMLUnknown
+typeinfo for tinyxml2::XMLUnknown
+typeinfo name for tinyxml2::XMLAttribute
+typeinfo for tinyxml2::XMLAttribute
+typeinfo name for tinyxml2::XMLElement
+typeinfo for tinyxml2::XMLElement
+typeinfo name for tinyxml2::XMLDocument
+typeinfo for tinyxml2::XMLDocument
+typeinfo name for tinyxml2::XMLPrinter
+typeinfo for tinyxml2::XMLPrinter
 __wrap_fopen64
 ftello64
 feof
@@ -1126,15 +1126,15 @@ pthread_cond_destroy
 pthread_setspecific
 pthread_attr_init
 pthread_attr_setstacksize
-_ZTIi
+typeinfo for int
 strcpy
 epoll_ctl
 poll
 getsockopt
 epoll_create
 eventfd
-_ZTVN10__cxxabiv120__function_type_infoE
-_ZTVN10__cxxabiv119__pointer_type_infoE
+vtable for __cxxabiv1::__function_type_info
+vtable for __cxxabiv1::__pointer_type_info
 nghttp2_session_get_remote_settings
 nghttp2_session_del
 nghttp2_session_terminate_session
@@ -1172,9 +1172,9 @@ sendto
 mktime
 strptime
 __memset_chk
-_ZN6google8protobuf8internal8byteswapILi1EEEvPv
-_ZN6google8protobuf8internal8byteswapILi4EEEvPv
-_ZN6google8protobuf8internal8byteswapILi8EEEvPv
+void google::protobuf::internal::byteswap<1>(void*)
+void google::protobuf::internal::byteswap<4>(void*)
+void google::protobuf::internal::byteswap<8>(void*)
 lseek
 pthread_once
 strtof
@@ -1429,184 +1429,184 @@ nghttp2_stream_get_weight
 nghttp2_stream_get_sum_dependency_weight
 nghttp2_stream_get_stream_id
 fprintf
-_ZTSN10__cxxabiv117__class_type_infoE
-_ZTIN10__cxxabiv117__class_type_infoE
-_ZTVN9__gnu_cxx24__concurrence_lock_errorE
-_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTIN9__gnu_cxx24__concurrence_lock_errorE
-_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTSN9__gnu_cxx24__concurrence_lock_errorE
-_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTSN10__cxxabiv115__forced_unwindE
-_ZTIN10__cxxabiv115__forced_unwindE
-_ZTSN10__cxxabiv119__foreign_exceptionE
-_ZTIN10__cxxabiv119__foreign_exceptionE
-_ZTVN10__cxxabiv115__forced_unwindE
-_ZTVN10__cxxabiv119__foreign_exceptionE
-_ZTSN10__cxxabiv120__function_type_infoE
-_ZTIN10__cxxabiv120__function_type_infoE
-_ZTVN10__cxxabiv123__fundamental_type_infoE
-_ZTSN10__cxxabiv123__fundamental_type_infoE
-_ZTIN10__cxxabiv123__fundamental_type_infoE
-_ZTSv
-_ZTSPv
-_ZTSPKv
-_ZTSb
-_ZTSPb
-_ZTSPKb
-_ZTSw
-_ZTSPw
-_ZTSPKw
-_ZTSDu
-_ZTSPDu
-_ZTSPKDu
-_ZTSDs
-_ZTSPDs
-_ZTSPKDs
-_ZTSDi
-_ZTSPDi
-_ZTSPKDi
-_ZTSc
-_ZTSPc
-_ZTSPKc
-_ZTSa
-_ZTSPa
-_ZTSPKa
-_ZTSh
-_ZTSPh
-_ZTSPKh
-_ZTSs
-_ZTSPs
-_ZTSPKs
-_ZTSt
-_ZTSPt
-_ZTSPKt
-_ZTSi
-_ZTSPi
-_ZTSPKi
-_ZTSj
-_ZTSPj
-_ZTSPKj
-_ZTSl
-_ZTSPl
-_ZTSPKl
-_ZTSm
-_ZTSPm
-_ZTSPKm
-_ZTSx
-_ZTSPx
-_ZTSPKx
-_ZTSy
-_ZTSPy
-_ZTSPKy
-_ZTSf
-_ZTSPf
-_ZTSPKf
-_ZTSd
-_ZTSPd
-_ZTSPKd
-_ZTSe
-_ZTSPe
-_ZTSPKe
-_ZTSDf
-_ZTSPDf
-_ZTSPKDf
-_ZTSDd
-_ZTSPDd
-_ZTSPKDd
-_ZTSDe
-_ZTSPDe
-_ZTSPKDe
-_ZTSDn
-_ZTSPDn
-_ZTSPKDn
-_ZTSg
-_ZTSPg
-_ZTSPKg
-_ZTIPKg
-_ZTIg
-_ZTIPg
-_ZTIPKDn
-_ZTIDn
-_ZTIPDn
-_ZTIPKDe
-_ZTIDe
-_ZTIPDe
-_ZTIPKDd
-_ZTIDd
-_ZTIPDd
-_ZTIPKDf
-_ZTIDf
-_ZTIPDf
-_ZTIPKe
-_ZTIe
-_ZTIPe
-_ZTIPKd
-_ZTId
-_ZTIPd
-_ZTIPKf
-_ZTIf
-_ZTIPf
-_ZTIPKy
-_ZTIy
-_ZTIPy
-_ZTIPKx
-_ZTIx
-_ZTIPx
-_ZTIPKm
-_ZTIm
-_ZTIPm
-_ZTIPKl
-_ZTIl
-_ZTIPl
-_ZTIPKj
-_ZTIj
-_ZTIPj
-_ZTIPKi
-_ZTIPi
-_ZTIPKt
-_ZTIt
-_ZTIPt
-_ZTIPKs
-_ZTIs
-_ZTIPs
-_ZTIPKh
-_ZTIh
-_ZTIPh
-_ZTIPKa
-_ZTIa
-_ZTIPa
-_ZTIPKc
-_ZTIc
-_ZTIPc
-_ZTIPKDi
-_ZTIDi
-_ZTIPDi
-_ZTIPKDs
-_ZTIDs
-_ZTIPDs
-_ZTIPKDu
-_ZTIDu
-_ZTIPDu
-_ZTIPKw
-_ZTIw
-_ZTIPw
-_ZTIPKb
-_ZTIb
-_ZTIPb
-_ZTIPKv
-_ZTIv
-_ZTIPv
-_ZTIN9__gnu_cxx20recursive_init_errorE
-_ZTVN9__gnu_cxx20recursive_init_errorE
-_ZTSN9__gnu_cxx20recursive_init_errorE
-_ZTSN10__cxxabiv119__pointer_type_infoE
-_ZTIN10__cxxabiv119__pointer_type_infoE
-_ZTIN10__cxxabiv117__pbase_type_infoE
-_ZTSN10__cxxabiv120__si_class_type_infoE
-_ZTIN10__cxxabiv120__si_class_type_infoE
-_ZTSN10__cxxabiv121__vmi_class_type_infoE
-_ZTIN10__cxxabiv121__vmi_class_type_infoE
+typeinfo name for __cxxabiv1::__class_type_info
+typeinfo for __cxxabiv1::__class_type_info
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__foreign_exception
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
+typeinfo name for __cxxabiv1::__function_type_info
+typeinfo for __cxxabiv1::__function_type_info
+vtable for __cxxabiv1::__fundamental_type_info
+typeinfo name for __cxxabiv1::__fundamental_type_info
+typeinfo for __cxxabiv1::__fundamental_type_info
+typeinfo name for void
+typeinfo name for void*
+typeinfo name for void const*
+typeinfo name for bool
+typeinfo name for bool*
+typeinfo name for bool const*
+typeinfo name for wchar_t
+typeinfo name for wchar_t*
+typeinfo name for wchar_t const*
+typeinfo name for char8_t
+typeinfo name for char8_t*
+typeinfo name for char8_t const*
+typeinfo name for char16_t
+typeinfo name for char16_t*
+typeinfo name for char16_t const*
+typeinfo name for char32_t
+typeinfo name for char32_t*
+typeinfo name for char32_t const*
+typeinfo name for char
+typeinfo name for char*
+typeinfo name for char const*
+typeinfo name for signed char
+typeinfo name for signed char*
+typeinfo name for signed char const*
+typeinfo name for unsigned char
+typeinfo name for unsigned char*
+typeinfo name for unsigned char const*
+typeinfo name for short
+typeinfo name for short*
+typeinfo name for short const*
+typeinfo name for unsigned short
+typeinfo name for unsigned short*
+typeinfo name for unsigned short const*
+typeinfo name for int
+typeinfo name for int*
+typeinfo name for int const*
+typeinfo name for unsigned int
+typeinfo name for unsigned int*
+typeinfo name for unsigned int const*
+typeinfo name for long
+typeinfo name for long*
+typeinfo name for long const*
+typeinfo name for unsigned long
+typeinfo name for unsigned long*
+typeinfo name for unsigned long const*
+typeinfo name for long long
+typeinfo name for long long*
+typeinfo name for long long const*
+typeinfo name for unsigned long long
+typeinfo name for unsigned long long*
+typeinfo name for unsigned long long const*
+typeinfo name for float
+typeinfo name for float*
+typeinfo name for float const*
+typeinfo name for double
+typeinfo name for double*
+typeinfo name for double const*
+typeinfo name for long double
+typeinfo name for long double*
+typeinfo name for long double const*
+typeinfo name for decimal32
+typeinfo name for decimal32*
+typeinfo name for decimal32 const*
+typeinfo name for decimal64
+typeinfo name for decimal64*
+typeinfo name for decimal64 const*
+typeinfo name for decimal128
+typeinfo name for decimal128*
+typeinfo name for decimal128 const*
+typeinfo name for std::nullptr_t
+typeinfo name for std::nullptr_t*
+typeinfo name for std::nullptr_t const*
+typeinfo name for __float128
+typeinfo name for __float128*
+typeinfo name for __float128 const*
+typeinfo for __float128 const*
+typeinfo for __float128
+typeinfo for __float128*
+typeinfo for std::nullptr_t const*
+typeinfo for std::nullptr_t
+typeinfo for std::nullptr_t*
+typeinfo for decimal128 const*
+typeinfo for decimal128
+typeinfo for decimal128*
+typeinfo for decimal64 const*
+typeinfo for decimal64
+typeinfo for decimal64*
+typeinfo for decimal32 const*
+typeinfo for decimal32
+typeinfo for decimal32*
+typeinfo for long double const*
+typeinfo for long double
+typeinfo for long double*
+typeinfo for double const*
+typeinfo for double
+typeinfo for double*
+typeinfo for float const*
+typeinfo for float
+typeinfo for float*
+typeinfo for unsigned long long const*
+typeinfo for unsigned long long
+typeinfo for unsigned long long*
+typeinfo for long long const*
+typeinfo for long long
+typeinfo for long long*
+typeinfo for unsigned long const*
+typeinfo for unsigned long
+typeinfo for unsigned long*
+typeinfo for long const*
+typeinfo for long
+typeinfo for long*
+typeinfo for unsigned int const*
+typeinfo for unsigned int
+typeinfo for unsigned int*
+typeinfo for int const*
+typeinfo for int*
+typeinfo for unsigned short const*
+typeinfo for unsigned short
+typeinfo for unsigned short*
+typeinfo for short const*
+typeinfo for short
+typeinfo for short*
+typeinfo for unsigned char const*
+typeinfo for unsigned char
+typeinfo for unsigned char*
+typeinfo for signed char const*
+typeinfo for signed char
+typeinfo for signed char*
+typeinfo for char const*
+typeinfo for char
+typeinfo for char*
+typeinfo for char32_t const*
+typeinfo for char32_t
+typeinfo for char32_t*
+typeinfo for char16_t const*
+typeinfo for char16_t
+typeinfo for char16_t*
+typeinfo for char8_t const*
+typeinfo for char8_t
+typeinfo for char8_t*
+typeinfo for wchar_t const*
+typeinfo for wchar_t
+typeinfo for wchar_t*
+typeinfo for bool const*
+typeinfo for bool
+typeinfo for bool*
+typeinfo for void const*
+typeinfo for void
+typeinfo for void*
+typeinfo for __gnu_cxx::recursive_init_error
+vtable for __gnu_cxx::recursive_init_error
+typeinfo name for __gnu_cxx::recursive_init_error
+typeinfo name for __cxxabiv1::__pointer_type_info
+typeinfo for __cxxabiv1::__pointer_type_info
+typeinfo for __cxxabiv1::__pbase_type_info
+typeinfo name for __cxxabiv1::__si_class_type_info
+typeinfo for __cxxabiv1::__si_class_type_info
+typeinfo name for __cxxabiv1::__vmi_class_type_info
+typeinfo for __cxxabiv1::__vmi_class_type_info
 __nl_langinfo_l
 __uselocale
 mbsrtowcs
@@ -1627,11 +1627,11 @@ wmemcpy
 wmemset
 wmemchr
 wmemmove
-_ZTVN10__cxxabiv117__pbase_type_infoE
-_ZTIN10__cxxabiv129__pointer_to_member_type_infoE
-_ZTSN10__cxxabiv117__pbase_type_infoE
-_ZTVN10__cxxabiv129__pointer_to_member_type_infoE
-_ZTSN10__cxxabiv129__pointer_to_member_type_infoE
+vtable for __cxxabiv1::__pbase_type_info
+typeinfo for __cxxabiv1::__pointer_to_member_type_info
+typeinfo name for __cxxabiv1::__pbase_type_info
+vtable for __cxxabiv1::__pointer_to_member_type_info
+typeinfo name for __cxxabiv1::__pointer_to_member_type_info
 __strtof_l
 __strtod_l
 strtold_l
@@ -1651,17 +1651,17 @@ bind_textdomain_codeset
 dgettext
 __strftime_l
 __wcsftime_l
-_Z27_txnal_cow_string_D1_commitPv
-_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _ITM_RU1
-_ZGTtnaj
+transaction clone for operator new[](unsigned int)
 _ITM_memcpyRtWn
-_Z23_txnal_cow_string_c_strPKv
+_txnal_cow_string_c_str(void const*)
 _ITM_RU4
-_Z20_txnal_cow_string_D1Pv
+_txnal_cow_string_D1(void*)
 _ITM_addUserCommitAction
-_Z26_txnal_logic_error_get_msgPv
-_Z28_txnal_runtime_error_get_msgPv
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
 dl_iterate_phdr
 __register_atfork
 __xmknod
@@ -17719,9 +17719,9 @@ gcm_ghash_4bit_x86
 ComputeCumulativeSumRow_C
 __wrap_statvfs64
 I210AlphaToARGBRow_C
-_ZN8tinyxml27XMLUtil10ToUnsignedEPKcPj
+tinyxml2::XMLUtil::ToUnsigned(char const*, unsigned int*)
 CumulativeSumToAverageRow_C
-_ZN8tinyxml210XMLUnknownC2EPNS_11XMLDocumentE
+tinyxml2::XMLUnknown::XMLUnknown(tinyxml2::XMLDocument*)
 ARGBLumaColorTableRow_C
 DeleteVideoPlayer
 pthread_mutex_destroy@GLIBC_2.0
@@ -17731,51 +17731,51 @@ RGB565ToUVRow_C
 Camellia_decrypt
 chmod@GLIBC_2.0
 ScaleUVBilinearUp2
-_ZNK8tinyxml27XMLText6AcceptEPNS_10XMLVisitorE
-_ZTSPa
+tinyxml2::XMLText::Accept(tinyxml2::XMLVisitor*) const
+typeinfo name for signed char*
 H444ToABGR
 H444ToARGB
-_ZN8tinyxml210XMLElementD1Ev
-_ZTIPDi
+tinyxml2::XMLElement::~XMLElement()
+typeinfo for char32_t*
 fnmatch@GLIBC_2.2.3
 pthread_getspecific@GLIBC_2.0
 nghttp2_session_consume
-_ZN8tinyxml212XMLAttribute12SetAttributeEj
+tinyxml2::XMLAttribute::SetAttribute(unsigned int)
 ARGBToJ400
 DES_encrypt3
 nghttp2_session_callbacks_set_on_begin_frame_callback
 rewind@GLIBC_2.0
-_ZN8tinyxml210XMLPrinter5VisitERKNS_14XMLDeclarationE
+tinyxml2::XMLPrinter::Visit(tinyxml2::XMLDeclaration const&)
 I420Scale
 strcat@GLIBC_2.0
 ScaleUVLinearUp2_16
-_ZNK8tinyxml211XMLDocument10ToDocumentEv
-_ZN8tinyxml210XMLElementC2EPNS_11XMLDocumentE
-_ZN8tinyxml210XMLPrinter10PrintSpaceEi
-_ZN6google8protobuf8internal8byteswapILi4EEEvPv
+tinyxml2::XMLDocument::ToDocument() const
+tinyxml2::XMLElement::XMLElement(tinyxml2::XMLDocument*)
+tinyxml2::XMLPrinter::PrintSpace(int)
+void google::protobuf::internal::byteswap<4>(void*)
 ARGBToYRow_C
 nghttp2_session_server_new2
 __cxa_finalize@GLIBC_2.1.3
-_ZTIPt
+typeinfo for unsigned short*
 nghttp2_hd_deflate_get_table_entry
 pthread_attr_setstacksize@GLIBC_2.1
 kRgbH709Constants
-_ZN8tinyxml210XMLUnknown9ToUnknownEv
-_ZNK8tinyxml27XMLNode5ValueEv
-_ZN8tinyxml210XMLUnknown9ParseDeepEPcPNS_7StrPairEPi
+tinyxml2::XMLUnknown::ToUnknown()
+tinyxml2::XMLNode::Value() const
+tinyxml2::XMLUnknown::ParseDeep(char*, tinyxml2::StrPair*, int*)
 fread@GLIBC_2.0
 tcsetattr@GLIBC_2.0
 J420ToRGB565
 I400ToI400
 ScaleRowDown38_16_C
-_ZNK8tinyxml214XMLDeclaration13ToDeclarationEv
+tinyxml2::XMLDeclaration::ToDeclaration() const
 U444ToABGR
 NV21ToRGB24
 __wcsftime_l@GLIBC_2.3
 ScaleSlope
 fileno@GLIBC_2.0
 GetFrameFromVideo
-_ZNK8tinyxml210XMLElement9FloatTextEf
+tinyxml2::XMLElement::FloatText(float) const
 UVScale_16
 RAWToARGB
 semop@GLIBC_2.0
@@ -17785,57 +17785,57 @@ nghttp2_pack_settings_payload
 BlendPlaneRow_C
 __ctype_toupper_loc@GLIBC_2.3
 ARGBToYRowMatrix_C
-_ZTSl
+typeinfo name for long
 nghttp2_hd_deflate_hd
 nghttp2_http2_strerror
-_ZN8tinyxml211XMLDocument10DeleteNodeEPNS_7XMLNodeE
+tinyxml2::XMLDocument::DeleteNode(tinyxml2::XMLNode*)
 __duplocale@GLIBC_2.1
 nghttp2_session_callbacks_set_on_invalid_header_callback
 pthread_attr_init@GLIBC_2.1
-_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 ARGBToAB64Row_C
 Convert8To16Row_C
 CreateMPDDecoder
-_ZTSt
+typeinfo name for unsigned short
 YUY2ToARGBRow_C
 ScaleUVRowDownEvenBox_C
-_ZTSd
+typeinfo name for double
 __wrap_mkfifo
-_ZN8tinyxml27XMLUtil13writeBoolTrueE
+tinyxml2::XMLUtil::writeBoolTrue
 ungetc@GLIBC_2.0
 P010ToAR30Matrix
 __wrap_utimes
-_ZTIPKl
+typeinfo for long const*
 nghttp2_session_callbacks_set_on_invalid_frame_recv_callback
 RAWToUVRow_C
 AYUVToYRow_C
-_ZTIPKd
-_ZN8tinyxml212XMLAttribute12SetAttributeEb
+typeinfo for double const*
+tinyxml2::XMLAttribute::SetAttribute(bool)
 __ctype_tolower_loc@GLIBC_2.3
-_ZNK8tinyxml27XMLNode17FirstChildElementEPKc
+tinyxml2::XMLNode::FirstChildElement(char const*) const
 SobelRow_C
 av_gettime@LIBAVUTIL_56
-_ZNK8tinyxml210XMLElement14QueryFloatTextEPf
+tinyxml2::XMLElement::QueryFloatText(float*) const
 socket@GLIBC_2.0
-_ZN8tinyxml210XMLPrinter11PushUnknownEPKc
+tinyxml2::XMLPrinter::PushUnknown(char const*)
 __wrap_statvfs
-_ZTIPKt
+typeinfo for unsigned short const*
 bn_mul_comba8
 ABGRToYRow_C
 sigaction@GLIBC_2.0
 ScalePlaneUp2_12_Linear
-_ZTIPKDd
+typeinfo for decimal64 const*
 sscanf@GLIBC_2.0
-_ZNK8tinyxml214XMLDeclaration12ShallowCloneEPNS_11XMLDocumentE
+tinyxml2::XMLDeclaration::ShallowClone(tinyxml2::XMLDocument*) const
 NV12ToRGB24Matrix
 dlopen@GLIBC_2.1
-_ZNK8tinyxml210XMLUnknown12ShallowCloneEPNS_11XMLDocumentE
-_ZNK8tinyxml210XMLUnknown9ToUnknownEv
-_ZNK8tinyxml27XMLText12ShallowCloneEPNS_11XMLDocumentE
+tinyxml2::XMLUnknown::ShallowClone(tinyxml2::XMLDocument*) const
+tinyxml2::XMLUnknown::ToUnknown() const
+tinyxml2::XMLText::ShallowClone(tinyxml2::XMLDocument*) const
 HalfFloatPlane
 access@GLIBC_2.0
-_ZN8tinyxml211XMLDocument10ClearErrorEv
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcx
+tinyxml2::XMLDocument::ClearError()
+tinyxml2::XMLPrinter::PushAttribute(char const*, long long)
 DeleteExportVideoContainer
 MergeUVPlane_16
 bn_GF2m_mul_2x2
@@ -17843,12 +17843,12 @@ mbsnrtowcs@GLIBC_2.0
 GetARGBBlend
 open64@GLIBC_2.2
 I422ToRGBA
-_ZNK8tinyxml210XMLComment12ShallowCloneEPNS_11XMLDocumentE
+tinyxml2::XMLComment::ShallowClone(tinyxml2::XMLDocument*) const
 H420ToRGB565
-_ZTIN9__gnu_cxx24__concurrence_lock_errorE
+typeinfo for __gnu_cxx::__concurrence_lock_error
 shmdt@GLIBC_2.0
 ARGBRect
-_ZN8tinyxml27StrPair18CollapseWhitespaceEv
+tinyxml2::StrPair::CollapseWhitespace()
 nghttp2_stream_get_state
 __wrap_mount
 ABGRToUVRow_C
@@ -17857,35 +17857,35 @@ ScaleRowDown2Linear_16_C
 YUY2ToI422
 YUY2ToY
 ARGBToJ422
-_ZN8tinyxml214XMLDeclarationD1Ev
+tinyxml2::XMLDeclaration::~XMLDeclaration()
 GaussPlane_F32
-_ZTVN10__cxxabiv117__pbase_type_infoE
-_ZTIN8tinyxml210XMLElementE
+vtable for __cxxabiv1::__pbase_type_info
+typeinfo for tinyxml2::XMLElement
 nghttp2_hd_deflate_new
 __wrap_stat
 nghttp2_session_callbacks_set_unpack_extension_callback
 strptime@GLIBC_2.0
 _ITM_memcpyRtWn
 nghttp2_hd_inflate_get_table_entry
-_ZTIN10__cxxabiv129__pointer_to_member_type_infoE
+typeinfo for __cxxabiv1::__pointer_to_member_type_info
 btowc@GLIBC_2.0
 avcodec_find_decoder@LIBAVCODEC_58
 avformat_network_init@LIBAVFORMAT_58
 ARGBToRAWRow_C
-_ZNK8tinyxml210XMLElement12UnsignedTextEj
-_ZN8tinyxml27XMLUtil8ToDoubleEPKcPd
+tinyxml2::XMLElement::UnsignedText(unsigned int) const
+tinyxml2::XMLUtil::ToDouble(char const*, double*)
 statvfs@GLIBC_2.1
 mkdir@GLIBC_2.0
-_ZN8tinyxml210XMLElement7SetTextEd
+tinyxml2::XMLElement::SetText(double)
 CreateVideoPlayer
-_ZN8tinyxml212XMLAttribute9ParseDeepEPcbPi
+tinyxml2::XMLAttribute::ParseDeep(char*, bool, int*)
 ARGB4444ToARGBRow_C
 CopyPlane_16
 ntohs@GLIBC_2.0
 ARGBToRAW
-_ZTSPKDf
+typeinfo name for decimal32 const*
 AR30ToARGB
-_ZNK8tinyxml210XMLElement14Int64AttributeEPKcx
+tinyxml2::XMLElement::Int64Attribute(char const*, long long) const
 ARGBToAR30
 ARGBCopyYToAlpha
 InterpolateRow_C
@@ -17893,49 +17893,49 @@ avio_alloc_context@LIBAVFORMAT_58
 CopyPlane
 nghttp2_hd_inflate_get_num_table_entries
 DES_ncbc_encrypt
-_ZTSPKDn
+typeinfo name for std::nullptr_t const*
 ScaleRowUp2_Bilinear_16_C
-_ZN8tinyxml210XMLPrinterC2EP8_IO_FILEbi
+tinyxml2::XMLPrinter::XMLPrinter(_IO_FILE*, bool, int)
 I410ToAR30Matrix
-_ZNK8tinyxml210XMLElement19QueryUnsigned64TextEPy
-_ZTVN8tinyxml212XMLAttributeE
+tinyxml2::XMLElement::QueryUnsigned64Text(unsigned long long*) const
+vtable for tinyxml2::XMLAttribute
 strstr@GLIBC_2.0
 ScaleSumSamples_C
 MergeRGBRow_C
-_Z26_txnal_logic_error_get_msgPv
+_txnal_logic_error_get_msg(void*)
 __vfprintf_chk@GLIBC_2.3.4
 nghttp2_submit_request
 scandir@GLIBC_2.0
-_ZTSPKx
+typeinfo name for long long const*
 ScaleARGBRowDown2Linear_C
-_ZTIPm
-_ZTIN10__cxxabiv120__function_type_infoE
+typeinfo for unsigned long*
+typeinfo for __cxxabiv1::__function_type_info
 OPENSSL_instrument_halt
-_ZTIh
+typeinfo for unsigned char
 _longjmp@GLIBC_2.0
 semctl@GLIBC_2.2
 nghttp2_session_mem_send
 nghttp2_session_callbacks_set_send_data_callback
 J420ToRGB24
-_ZTIPe
-_ZN8tinyxml27XMLNode9ParseDeepEPcPNS_7StrPairEPi
+typeinfo for long double*
+tinyxml2::XMLNode::ParseDeep(char*, tinyxml2::StrPair*, int*)
 pthread_kill@GLIBC_2.0
-_ZTSPKh
+typeinfo name for unsigned char const*
 avresample_open@LIBAVRESAMPLE_4
 __wrap_symlink
-_ZNK8tinyxml210XMLElement9ToElementEv
+tinyxml2::XMLElement::ToElement() const
 av_register_malloc@LIBAVUTIL_56
 setsockopt@GLIBC_2.0
-_ZTSPj
+typeinfo name for unsigned int*
 nghttp2_session_callbacks_set_error_callback2
-_ZN8tinyxml210XMLPrinter17PrepareForNewNodeEb
+tinyxml2::XMLPrinter::PrepareForNewNode(bool)
 ARGBSobel
-_ZNK8tinyxml212XMLAttribute15QueryFloatValueEPf
+tinyxml2::XMLAttribute::QueryFloatValue(float*) const
 CRYPTO_memcmp
 __wrap_lchown
 kYuvV2020Constants
-_ZTIN8tinyxml214XMLDeclarationE
-_ZTIx
+typeinfo for tinyxml2::XMLDeclaration
+typeinfo for long long
 fixed_invtbl8
 setpriority@GLIBC_2.0
 kBgrF709Constants
@@ -17943,24 +17943,24 @@ ecp_nistz256_to_mont
 BConvertYUVtoRGB
 aesni_encrypt
 __freelocale@GLIBC_2.1
-_ZTSPDs
+typeinfo name for char16_t*
 nghttp2_submit_rst_stream
 RAWToRGB24
-_ZN8tinyxml214XMLDeclarationD2Ev
+tinyxml2::XMLDeclaration::~XMLDeclaration()
 MirrorPlane
-_ZTSPb
+typeinfo name for bool*
 DeleteRTMPStream
-_ZN8tinyxml27StrPair9ParseNameEPc
+tinyxml2::StrPair::ParseName(char*)
 aesni_ccm64_encrypt_blocks
 pthread_setname_np@GLIBC_2.12
 select@GLIBC_2.0
-_ZN8tinyxml212XMLAttribute12SetAttributeEi
+tinyxml2::XMLAttribute::SetAttribute(int)
 DES_encrypt2
 realpath@GLIBC_2.3
-_ZN8tinyxml210XMLElement9ParseDeepEPcPNS_7StrPairEPi
+tinyxml2::XMLElement::ParseDeep(char*, tinyxml2::StrPair*, int*)
 SplitRGBRow_C
 RGB565ToYRow_C
-_ZTVN10__cxxabiv129__pointer_to_member_type_infoE
+vtable for __cxxabiv1::__pointer_to_member_type_info
 strncasecmp@GLIBC_2.0
 pthread_cond_broadcast@GLIBC_2.3.2
 ScalePlaneUp2_Bilinear
@@ -17972,14 +17972,14 @@ P210ToAR30Row_C
 wmemset@GLIBC_2.0
 avcodec_send_packet@LIBAVCODEC_58
 kYvu2020Constants
-_ZN8tinyxml210XMLPrinter23SealElementIfJustOpenedEv
+tinyxml2::XMLPrinter::SealElementIfJustOpened()
 UYVYToI422
 nghttp2_submit_altsvc
 symlink@GLIBC_2.0
 nghttp2_session_server_new3
 lseek@GLIBC_2.0
 ScaleRowDown34_1_Box_C
-_ZTIPKDu
+typeinfo for char8_t const*
 avio_open2@LIBAVFORMAT_58
 NV21ToNV12
 NV12ToRGB24Row_C
@@ -17987,31 +17987,31 @@ DeleteAudioEncoder
 RGB24Mirror
 nghttp2_session_get_outbound_queue_size
 ARGBToARGB1555Row_C
-_ZN8tinyxml211XMLDocumentD2Ev
+tinyxml2::XMLDocument::~XMLDocument()
 nghttp2_priority_spec_init
 nghttp2_session_get_stream_user_data
 poly1305_init
 HalfMergeUVRow_C
-_ZTIN8tinyxml211XMLDocumentE
+typeinfo for tinyxml2::XMLDocument
 H010ToARGB
-_ZTSN8tinyxml212XMLAttributeE
-_ZTSc
+typeinfo name for tinyxml2::XMLAttribute
+typeinfo name for char
 MergeXRGB16To8Row_C
 connect@GLIBC_2.0
 I010ToAR30Matrix
 ungetwc@GLIBC_2.2
-_ZTIN10__cxxabiv117__pbase_type_infoE
-_ZTIN10__cxxabiv119__pointer_type_infoE
-_ZTSDs
+typeinfo for __cxxabiv1::__pbase_type_info
+typeinfo for __cxxabiv1::__pointer_type_info
+typeinfo name for char16_t
 _ITM_RU1
 strtoull@GLIBC_2.0
 pthread_rwlock_unlock@GLIBC_2.1
 I410ToAR30Row_C
-_ZTSs
+typeinfo name for short
 ARGBSubtractRow_C
-_ZN8tinyxml212XMLAttribute12SetAttributeEy
+tinyxml2::XMLAttribute::SetAttribute(unsigned long long)
 pthread_condattr_init@GLIBC_2.0
-_ZTIPKc
+typeinfo for char const*
 YUY2ToYRow_C
 sysconf@GLIBC_2.0
 I010ToARGBMatrix
@@ -18020,18 +18020,18 @@ NV21ToABGR
 aesni_ecb_encrypt
 av_dict_free@LIBAVUTIL_56
 nghttp2_select_next_protocol
-_ZNK8tinyxml27XMLNode13ToDeclarationEv
-_ZTIPKs
+tinyxml2::XMLNode::ToDeclaration() const
+typeinfo for short const*
 gcm_gmult_4bit_mmx
 H420ToABGR
 ScaleARGBCols64_C
 ARGBColorTableRow_C
 ARGBBlendRow_C
 calloc@GLIBC_2.0
-_ZTIPKDe
+typeinfo for decimal128 const*
 fdatasync@GLIBC_2.0
 nghttp2_hd_deflate_bound
-_ZN8tinyxml210XMLComment9ParseDeepEPcPNS_7StrPairEPi
+tinyxml2::XMLComment::ParseDeep(char*, tinyxml2::StrPair*, int*)
 strtof@GLIBC_2.0
 I210ToAR30
 ecp_nistz256_scatter_w5
@@ -18053,7 +18053,7 @@ getuid@GLIBC_2.0
 avcodec_fill_audio_frame@LIBAVCODEC_58
 ferror@GLIBC_2.0
 __strxfrm_l@GLIBC_2.1
-_ZN8tinyxml27XMLUtil5ToStrEjPci
+tinyxml2::XMLUtil::ToStr(unsigned int, char*, int)
 OPENSSL_cleanse
 AR30ToARGBRow_C
 strncat@GLIBC_2.0
@@ -18063,15 +18063,15 @@ __fxstat@GLIBC_2.0
 ScaleARGBRowDown2_C
 __wrap_rename
 avresample_close@LIBAVRESAMPLE_4
-_ZTSPKe
-_ZN8tinyxml27XMLUtil20SetBoolSerializationEPKcS2_
-_ZTIN8tinyxml27XMLNodeE
-_ZN6google8protobuf8internal8byteswapILi1EEEvPv
-_ZN8tinyxml27XMLNode16InsertAfterChildEPS0_S1_
+typeinfo name for long double const*
+tinyxml2::XMLUtil::SetBoolSerialization(char const*, char const*)
+typeinfo for tinyxml2::XMLNode
+void google::protobuf::internal::byteswap<1>(void*)
+tinyxml2::XMLNode::InsertAfterChild(tinyxml2::XMLNode*, tinyxml2::XMLNode*)
 nghttp2_session_get_stream_remote_window_size
-_ZTVN9__gnu_cxx24__concurrence_lock_errorE
+vtable for __gnu_cxx::__concurrence_lock_error
 ABGRToAR30Row_C
-_ZNK8tinyxml27XMLNode10ToDocumentEv
+tinyxml2::XMLNode::ToDocument() const
 isspace@GLIBC_2.0
 I012ToARGBMatrix
 fputc@GLIBC_2.0
@@ -18079,23 +18079,23 @@ NV21ToARGBRow_C
 fgets@GLIBC_2.0
 U010ToAR30
 RGB24ToARGBRow_C
-_ZN8tinyxml27StrPair6SetStrEPKci
-_ZN6google8protobuf8internal8byteswapILi8EEEvPv
+tinyxml2::StrPair::SetStr(char const*, int)
+void google::protobuf::internal::byteswap<8>(void*)
 RGB24ToYRowMatrix_C
 ScaleFilterCols_C
 nghttp2_rcbuf_get_buf
-_ZTSN10__cxxabiv121__vmi_class_type_infoE
+typeinfo name for __cxxabiv1::__vmi_class_type_info
 I420ToRAW
-_ZTIDi
+typeinfo for char32_t
 avcodec_decode_video2@LIBAVCODEC_58
 ARGBCopyAlpha
-_ZN8tinyxml210XMLElement13InsertNewTextEPKc
+tinyxml2::XMLElement::InsertNewText(char const*)
 ScaleUVLinearUp2
 fwrite@GLIBC_2.0
 avcodec_close@LIBAVCODEC_58
 nghttp2_hd_inflate_get_dynamic_table_size
 nghttp2_session_get_stream_effective_local_window_size
-_ZN8tinyxml27XMLUtil7ToInt64EPKcPx
+tinyxml2::XMLUtil::ToInt64(char const*, long long*)
 H420ToAB30
 nghttp2_stream_get_sum_dependency_weight
 strcasestr@GLIBC_2.1
@@ -18106,9 +18106,9 @@ ARGBToUVJRow_C
 nghttp2_hd_inflate_end_headers
 nghttp2_stream_get_first_child
 gcm_init_clmul
-_ZTSPKm
+typeinfo name for unsigned long const*
 nghttp2_stream_get_weight
-_ZTIPf
+typeinfo for float*
 geteuid@GLIBC_2.0
 UYVYToARGB
 H210ToAB30
@@ -18119,34 +18119,34 @@ SplitUVPlane_16
 nghttp2_session_terminate_session2
 YUY2ToUV422Row_C
 __wrap_open64
-_ZTSPg
+typeinfo name for __float128*
 nghttp2_stream_get_stream_id
 I422ToAR30Row_C
-_ZN8tinyxml27XMLUtil18ConvertUTF32ToUTF8EmPcPi
+tinyxml2::XMLUtil::ConvertUTF32ToUTF8(unsigned long, char*, int*)
 kYuvH709Constants
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcS2_
+tinyxml2::XMLPrinter::PushAttribute(char const*, char const*)
 ARGBComputeCumulativeSum
-_ZN8tinyxml210XMLElement15DeleteAttributeEPKc
-_ZTSPw
+tinyxml2::XMLElement::DeleteAttribute(char const*)
+typeinfo name for wchar_t*
 getgid@GLIBC_2.0
 nghttp2_session_get_local_window_size
 nghttp2_session_set_stream_user_data
-_Z20_txnal_cow_string_D1Pv
+_txnal_cow_string_D1(void*)
 malloc@GLIBC_2.0
 __uselocale@GLIBC_2.3
-_ZN8tinyxml27StrPair9ParseTextEPcPKciPi
-_ZNK8tinyxml214XMLDeclaration12ShallowEqualEPKNS_7XMLNodeE
+tinyxml2::StrPair::ParseText(char*, char const*, int, int*)
+tinyxml2::XMLDeclaration::ShallowEqual(tinyxml2::XMLNode const*) const
 U210ToAR30
 DeleteVideoEncoder
-_ZN8tinyxml210XMLPrinter8PushTextEx
+tinyxml2::XMLPrinter::PushText(long long)
 nghttp2_session_send
-_ZTIs
+typeinfo for short
 nghttp2_session_callbacks_del
-_ZN8tinyxml210XMLElement16InsertNewCommentEPKc
+tinyxml2::XMLElement::InsertNewComment(char const*)
 I420ToAR30
 htons@GLIBC_2.0
 ecp_nistz256_div_by_2
-_ZTIc
+typeinfo for char
 nghttp2_hd_deflate_get_max_dynamic_table_size
 avcodec_flush_buffers@LIBAVCODEC_58
 ScaleARGBFilterCols_C
@@ -18158,21 +18158,21 @@ ScaleUVCols_C
 strlen@GLIBC_2.0
 fopen64@GLIBC_2.1
 nghttp2_hd_deflate_get_dynamic_table_size
-_ZNK8tinyxml27XMLNode22PreviousSiblingElementEPKc
+tinyxml2::XMLNode::PreviousSiblingElement(char const*) const
 I444ToARGBRow_C
-_ZNK8tinyxml210XMLElement9Int64TextEx
+tinyxml2::XMLElement::Int64Text(long long) const
 av_frame_get_buffer@LIBAVUTIL_56
-_ZN8tinyxml27XMLNode9ToCommentEv
-_ZN8tinyxml211XMLDocument9PushDepthEv
+tinyxml2::XMLNode::ToComment()
+tinyxml2::XMLDocument::PushDepth()
 sws_scale@LIBSWSCALE_5
 nghttp2_session_callbacks_set_send_callback
 DES_encrypt1
 ARGBColorMatrixRow_C
 MergeAR64Plane
 __wrap_access
-_ZN8tinyxml27XMLNodeD0Ev
+tinyxml2::XMLNode::~XMLNode()
 I420Scale_16
-_ZN8tinyxml211XMLDocument7NewTextEPKc
+tinyxml2::XMLDocument::NewText(char const*)
 YUY2ToUVRow_C
 munmap@GLIBC_2.0
 statfs64@GLIBC_2.1
@@ -18181,72 +18181,72 @@ ARGBPolynomial
 OPENSSL_instrument_bus
 pthread_setspecific@GLIBC_2.0
 ScaleSamples_C
-_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
-_ZNK8tinyxml210XMLElement12QueryIntTextEPi
+vtable for __gnu_cxx::__concurrence_unlock_error
+tinyxml2::XMLElement::QueryIntText(int*) const
 usleep@GLIBC_2.0
-_ZTVN10__cxxabiv119__foreign_exceptionE
+vtable for __cxxabiv1::__foreign_exception
 fprintf@GLIBC_2.0
-_ZTSN8tinyxml210XMLVisitorE
+typeinfo name for tinyxml2::XMLVisitor
 accept@GLIBC_2.0
 nghttp2_session_callbacks_set_on_frame_recv_callback
-_ZN8tinyxml210XMLUnknownD2Ev
+tinyxml2::XMLUnknown::~XMLUnknown()
 InterpolateRow_16_C
-_ZTIPv
+typeinfo for void*
 av_sample_fmt_is_planar@LIBAVUTIL_56
 getcwd@GLIBC_2.0
 ARGBGray
-_ZNK8tinyxml210XMLElement17QueryUnsignedTextEPj
-_ZN8tinyxml27XMLNode11DeleteChildEPS0_
-_ZN8tinyxml210XMLComment9ToCommentEv
+tinyxml2::XMLElement::QueryUnsignedText(unsigned int*) const
+tinyxml2::XMLNode::DeleteChild(tinyxml2::XMLNode*)
+tinyxml2::XMLComment::ToComment()
 __sprintf_chk@GLIBC_2.3.4
-_ZTVN10__cxxabiv119__pointer_type_infoE
+vtable for __cxxabiv1::__pointer_type_info
 __wrap_mknod
-_ZN8tinyxml27XMLNode16InsertFirstChildEPS0_
+tinyxml2::XMLNode::InsertFirstChild(tinyxml2::XMLNode*)
 nghttp2_submit_trailer
-_ZTIN10__cxxabiv123__fundamental_type_infoE
-_ZNK8tinyxml210XMLElement7IntTextEi
+typeinfo for __cxxabiv1::__fundamental_type_info
+tinyxml2::XMLElement::IntText(int) const
 ScaleRowDown34_C
-_ZN8tinyxml27XMLNodeD2Ev
+tinyxml2::XMLNode::~XMLNode()
 nghttp2_session_get_stream_local_close
-_ZNK8tinyxml210XMLElement13BoolAttributeEPKcb
+tinyxml2::XMLElement::BoolAttribute(char const*, bool) const
 avcodec_decode_audio4@LIBAVCODEC_58
-_ZTIPKDn
+typeinfo for std::nullptr_t const*
 __snprintf_chk@GLIBC_2.3.4
 I410AlphaToARGBMatrix
 ScaleARGBCols_C
 Camellia_EncryptBlock
 nghttp2_session_get_remote_window_size
 __wrap_chdir
-_Z23_txnal_cow_string_c_strPKv
+_txnal_cow_string_c_str(void const*)
 mlock@GLIBC_2.0
 __wrap_dlmopen
 nghttp2_session_change_stream_priority
 GaussRow_F32_C
 RAWToRGB24Row_C
-_ZTIPKj
+typeinfo for unsigned int const*
 ScalePlane_16
-_ZTSN10__cxxabiv119__pointer_type_infoE
-_ZN8tinyxml212XMLAttribute12SetAttributeEd
-_ZTIPKb
-_ZTSN8tinyxml214XMLDeclarationE
+typeinfo name for __cxxabiv1::__pointer_type_info
+tinyxml2::XMLAttribute::SetAttribute(double)
+typeinfo for bool const*
+typeinfo name for tinyxml2::XMLDeclaration
 EConvertMPDToMP4
 vpaes_decrypt
 readdir@GLIBC_2.0
 ARGBToARGB1555
-_ZTSf
+typeinfo name for float
 mount@GLIBC_2.0
-_ZN8tinyxml210XMLPrinterD0Ev
+tinyxml2::XMLPrinter::~XMLPrinter()
 MergeARGB16To8Plane
 nghttp2_check_header_name
 __iswctype_l@GLIBC_2.1
-_ZN8tinyxml211XMLDocument10NewElementEPKc
+tinyxml2::XMLDocument::NewElement(char const*)
 P010ToARGBMatrix
 nghttp2_session_create_idle_stream
-_ZTIPKDf
+typeinfo for decimal32 const*
 UYVYToUVRow_C
-_ZTVN9__gnu_cxx20recursive_init_errorE
+vtable for __gnu_cxx::recursive_init_error
 ScaleRowUp2_Bilinear_C
-_ZTIN8tinyxml27XMLTextE
+typeinfo for tinyxml2::XMLText
 I444Copy
 ARGB1555ToYRow_C
 ScaleRowDown2Box_16_C
@@ -18254,11 +18254,11 @@ stdout@GLIBC_2.0
 SetVideoSpewCallback
 nghttp2_session_upgrade
 av_interleaved_write_frame@LIBAVFORMAT_58
-_ZN8tinyxml210XMLElement16InsertNewUnknownEPKc
+tinyxml2::XMLElement::InsertNewUnknown(char const*)
 ARGBToRGB565DitherRow_C
 __xstat@GLIBC_2.0
 ARGBColorMatrix
-_ZTSv
+typeinfo name for void
 wctob@GLIBC_2.0
 nghttp2_session_callbacks_set_on_extension_chunk_recv_callback
 ARGBToNV21Matrix
@@ -18270,68 +18270,68 @@ CalculateSegmentCount
 dlsym@GLIBC_2.0
 I210ToAB30
 __ctype_get_mb_cur_max@GLIBC_2.0
-_ZN8tinyxml27StrPair10TransferToEPS0_
+tinyxml2::StrPair::TransferTo(tinyxml2::StrPair*)
 ARGBExtractAlphaRow_C
 av_register_all@LIBAVFORMAT_58
 RGBAToARGB
-_ZTVN10__cxxabiv120__function_type_infoE
+vtable for __cxxabiv1::__function_type_info
 ARGBPolynomialRow_C
 ARGBToJ420
-_ZTSN10__cxxabiv120__si_class_type_infoE
-_ZNK8tinyxml210XMLUnknown6AcceptEPNS_10XMLVisitorE
+typeinfo name for __cxxabiv1::__si_class_type_info
+tinyxml2::XMLUnknown::Accept(tinyxml2::XMLVisitor*) const
 nghttp2_session_client_new3
-_ZN8tinyxml211XMLDocumentC1EbNS_10WhitespaceE
-_ZN8tinyxml210XMLElement7SetTextEj
+tinyxml2::XMLDocument::XMLDocument(bool, tinyxml2::Whitespace)
+tinyxml2::XMLElement::SetText(unsigned int)
 NV21ToARGB
 ScaleAddRow_16_C
 __wrap_utime
 nghttp2_submit_shutdown_notice
-_ZN8tinyxml210XMLElement7SetTextEb
+tinyxml2::XMLElement::SetText(bool)
 ScaleRowUp2_Linear_16_C
 ARGBAttenuateRow_C
 ConvertToMSBPlane_16
 avformat_write_header@LIBAVFORMAT_58
-_ZN8tinyxml210XMLPrinter8PushTextEPKcb
+tinyxml2::XMLPrinter::PushText(char const*, bool)
 I422ToRGB24Row_C
 I212ToAR30Row_C
-_ZTSPKf
+typeinfo name for float const*
 sched_get_priority_max@GLIBC_2.0
 _fini
-_ZN8tinyxml27StrPair5ResetEv
-_ZNK8tinyxml212XMLAttribute13QueryIntValueEPi
-_ZN8tinyxml210XMLPrinter5PrintEPKcz
+tinyxml2::StrPair::Reset()
+tinyxml2::XMLAttribute::QueryIntValue(int*) const
+tinyxml2::XMLPrinter::Print(char const*, ...)
 av_frame_free@LIBAVUTIL_56
 DES_SPtrans
-_ZN8tinyxml214XMLDeclarationC2EPNS_11XMLDocumentE
+tinyxml2::XMLDeclaration::XMLDeclaration(tinyxml2::XMLDocument*)
 SplitARGBPlaneOpaque
 ecp_nistz256_mul_by_2
 NV12Mirror
 H420ToAR30
 tcgetattr@GLIBC_2.0
-_ZNK8tinyxml212XMLAttribute20QueryUnsigned64ValueEPy
+tinyxml2::XMLAttribute::QueryUnsigned64Value(unsigned long long*) const
 strcmp@GLIBC_2.0
 vpaes_encrypt
-_ZN8tinyxml210XMLCommentD2Ev
+tinyxml2::XMLComment::~XMLComment()
 ScaleUVRowDown2Box_C
 I444Scale_12
 utimes@GLIBC_2.0
 OPENSSL_wipe_cpu
-_ZN8tinyxml210XMLPrinter12CloseElementEb
+tinyxml2::XMLPrinter::CloseElement(bool)
 nghttp2_hd_deflate_new2
 SobelXRow_C
 AB64ToARGB
 ARGBSetRow_C
 ARGBSubtract
-_ZTSN9__gnu_cxx20recursive_init_errorE
-_ZTSN8tinyxml211XMLDocumentE
+typeinfo name for __gnu_cxx::recursive_init_error
+typeinfo name for tinyxml2::XMLDocument
 I422AlphaToARGBMatrix
 RAWToUVRowMatrix_C
 av_frame_alloc@LIBAVUTIL_56
-_ZTIPw
+typeinfo for wchar_t*
 _ITM_addUserCommitAction
 __strftime_l@GLIBC_2.3
-_ZTSPKv
-_ZNK8tinyxml210XMLElement13FindAttributeEPKc
+typeinfo name for void const*
+tinyxml2::XMLElement::FindAttribute(char const*) const
 aesni_xts_encrypt
 nghttp2_session_callbacks_new
 BScaleImageNV12
@@ -18339,28 +18339,28 @@ posix_memalign@GLIBC_2.2
 ARGB4444ToYRow_C
 nghttp2_nv_compare_name
 BF_cbc_encrypt
-_ZTIPg
+typeinfo for __float128*
 ecp_nistz256_gather_w7
 U210ToAB30
-_ZN8tinyxml210XMLPrinter8PushTextEi
+tinyxml2::XMLPrinter::PushText(int)
 __wrap_open
-_ZTVN8tinyxml210XMLCommentE
+vtable for tinyxml2::XMLComment
 ARGBShade
 ARGBToABGR
 wmemmove@GLIBC_2.0
-_ZN8tinyxml27XMLNodeC1EPNS_11XMLDocumentE
+tinyxml2::XMLNode::XMLNode(tinyxml2::XMLDocument*)
 ScaleRowDown38_2_Box_16_C
 nghttp2_session_want_read
-_ZTSPh
-_ZN8tinyxml211XMLDocument14NewDeclarationEPKc
+typeinfo name for unsigned char*
+tinyxml2::XMLDocument::NewDeclaration(char const*)
 NV12Copy
 ARGBShuffle
-_ZTSN8tinyxml210XMLElementE
+typeinfo name for tinyxml2::XMLElement
 avformat_open_input@LIBAVFORMAT_58
 avresample_free@LIBAVRESAMPLE_4
 AR30ToAB30
-_ZNK8tinyxml211XMLDocument12ShallowEqualEPKNS_7XMLNodeE
-_ZTSPx
+tinyxml2::XMLDocument::ShallowEqual(tinyxml2::XMLNode const*) const
+typeinfo name for long long*
 av_free@LIBAVUTIL_56
 tolower@GLIBC_2.0
 ARGBBlur
@@ -18368,15 +18368,15 @@ nghttp2_session_check_request_allowed
 ScaleRowDown38_3_Box_C
 RGB24ToARGB
 U010ToARGB
-_ZTIj
+typeinfo for unsigned int
 NV12Scale
-_ZN8tinyxml210XMLPrinter8PushTextEy
+tinyxml2::XMLPrinter::PushText(unsigned long long)
 I422ToRGB565
 MultiplyRow_16_C
 nghttp2_hd_inflate_new2
 __errno_location@GLIBC_2.0
 MirrorUVPlane
-_ZTIb
+typeinfo for bool
 I422ToRGBARow_C
 wcsnrtombs@GLIBC_2.0
 strncpy@GLIBC_2.0
@@ -18392,7 +18392,7 @@ ARGBToRGB24
 nghttp2_submit_push_promise
 RGB24ToUVJRow_C
 __register_atfork@GLIBC_2.3.2
-_ZN8tinyxml214XMLDeclaration9ParseDeepEPcPNS_7StrPairEPi
+tinyxml2::XMLDeclaration::ParseDeep(char*, tinyxml2::StrPair*, int*)
 OPENSSL_rdtsc
 I420ToI400
 H010ToAB30
@@ -18400,7 +18400,7 @@ gcm_gmult_4bit_x86
 memcmp@GLIBC_2.0
 avformat_alloc_context@LIBAVFORMAT_58
 MergeXR30Plane
-_ZTSPDi
+typeinfo name for char32_t*
 I420AlphaToARGBMatrix
 I422ToABGR
 _setjmp@GLIBC_2.0
@@ -18408,48 +18408,48 @@ AR64ToARGBRow_C
 chown@GLIBC_2.1
 avcodec_parameters_to_context@LIBAVCODEC_58
 __vsnprintf_chk@GLIBC_2.3.4
-_ZTIPDn
+typeinfo for std::nullptr_t*
 ARGBToRGB565
 BGRAToUVRow_C
 ARGBToRGB24Row_C
 sha1_block_data_order
 ScaleRowDown4_16_C
 UYVYToARGBRow_C
-_ZN8tinyxml212XMLAttribute7SetNameEPKc
+tinyxml2::XMLAttribute::SetName(char const*)
 nghttp2_session_callbacks_set_on_frame_send_callback
-_ZN8tinyxml27XMLNode8SetValueEPKcb
+tinyxml2::XMLNode::SetValue(char const*, bool)
 RC4_options
 av_init_packet@LIBAVCODEC_58
 I420ToARGBMatrix
 ScaleFilterCols_16_C
 NV12ToRGB24
-_ZN8tinyxml27XMLUtil7ReadBOMEPKcPb
-_ZNK8tinyxml210XMLElement6AcceptEPNS_10XMLVisitorE
-_ZTSDi
-_ZTIPDf
+tinyxml2::XMLUtil::ReadBOM(char const*, bool*)
+tinyxml2::XMLElement::Accept(tinyxml2::XMLVisitor*) const
+typeinfo name for char32_t
+typeinfo for decimal32*
 __strcpy_chk@GLIBC_2.3.4
 strrchr@GLIBC_2.0
-_ZN8tinyxml27XMLText9ParseDeepEPcPNS_7StrPairEPi
+tinyxml2::XMLText::ParseDeep(char*, tinyxml2::StrPair*, int*)
 J420ToABGR
-_ZTIN8tinyxml210XMLUnknownE
-_ZN8tinyxml27StrPairD1Ev
+typeinfo for tinyxml2::XMLUnknown
+tinyxml2::StrPair::~StrPair()
 ARGBToRGB565Row_C
 RGBAToUVJRow_C
 sha512_block_data_order
 CreateVideoRecordingSegmentWriter
-_ZTIPKi
+typeinfo for int const*
 ScalePlaneVertical_16
-_ZTIN10__cxxabiv120__si_class_type_infoE
+typeinfo for __cxxabiv1::__si_class_type_info
 nghttp2_rcbuf_incref
-_ZTIPKa
+typeinfo for signed char const*
 getsockname@GLIBC_2.0
 I420AlphaToABGR
 ecp_nistz256_point_double
 __wrap___lxstat64
 ARGB4444ToUVRow_C
-_ZN8tinyxml211XMLDocument5ParseEv
+tinyxml2::XMLDocument::Parse()
 ScaleRowDown34_0_Box_C
-_ZTSe
+typeinfo name for long double
 ARGBSobelXY
 pthread_rwlock_destroy@GLIBC_2.1
 nghttp2_session_mem_recv
@@ -18457,49 +18457,49 @@ fseek@GLIBC_2.0
 DeleteAudioResampler
 ScaleUVRowDown2Linear_C
 bn_sqr_words
-_ZTSN10__cxxabiv117__pbase_type_infoE
+typeinfo name for __cxxabiv1::__pbase_type_info
 ecp_nistz256_sqr_mont
-_ZN8tinyxml210XMLElement20InsertNewDeclarationEPKc
+tinyxml2::XMLElement::InsertNewDeclaration(char const*)
 MirrorUVRow_C
 pthread_rwlock_init@GLIBC_2.1
 ScalePlaneUp2_12_Bilinear
-_ZN8tinyxml27StrPairD2Ev
+tinyxml2::StrPair::~StrPair()
 dgettext@GLIBC_2.0
 getenv@GLIBC_2.0
-_ZTVN8tinyxml210XMLUnknownE
-_ZTSm
-_ZN8tinyxml210XMLElement15DeleteAttributeEPNS_12XMLAttributeE
+vtable for tinyxml2::XMLUnknown
+typeinfo name for unsigned long
+tinyxml2::XMLElement::DeleteAttribute(tinyxml2::XMLAttribute*)
 ARGBToNV12Matrix
 fputs@GLIBC_2.0
-_ZN8tinyxml210XMLElementD2Ev
-_ZN8tinyxml27XMLUtil7ToFloatEPKcPf
+tinyxml2::XMLElement::~XMLElement()
+tinyxml2::XMLUtil::ToFloat(char const*, float*)
 __wrap_stat64
-_ZN8tinyxml27XMLUtil5ToStrExPci
-_ZNK8tinyxml27XMLNode18NextSiblingElementEPKc
-_ZTSN10__cxxabiv129__pointer_to_member_type_infoE
+tinyxml2::XMLUtil::ToStr(long long, char*, int)
+tinyxml2::XMLNode::NextSiblingElement(char const*) const
+typeinfo name for __cxxabiv1::__pointer_to_member_type_info
 nghttp2_hd_deflate_change_table_size
-_ZN8tinyxml210XMLPrinter10VisitEnterERKNS_10XMLElementEPKNS_12XMLAttributeE
+tinyxml2::XMLPrinter::VisitEnter(tinyxml2::XMLElement const&, tinyxml2::XMLAttribute const*)
 iconv_open@GLIBC_2.1
 av_find_best_stream@LIBAVFORMAT_58
-_ZN8tinyxml214XMLDeclarationC1EPNS_11XMLDocumentE
-_ZN8tinyxml211XMLDocument8SaveFileEPKcb
-_ZNK8tinyxml212XMLAttribute16QueryDoubleValueEPd
-_ZN8tinyxml27XMLNode10ToDocumentEv
+tinyxml2::XMLDeclaration::XMLDeclaration(tinyxml2::XMLDocument*)
+tinyxml2::XMLDocument::SaveFile(char const*, bool)
+tinyxml2::XMLAttribute::QueryDoubleValue(double*) const
+tinyxml2::XMLNode::ToDocument()
 SplitXRGBRow_C
 __wrap___xstat64
 ScaleARGBRowDown2Box_C
 RGB565ToARGBRow_C
 ScaleMaxSamples_C
 ScalePlaneBilinearDown
-_ZN8tinyxml211XMLDocument8PopDepthEv
+tinyxml2::XMLDocument::PopDepth()
 kYvuJPEGConstants
 Android420ToARGBMatrix
-_ZN8tinyxml27XMLUtil5ToStrEbPci
+tinyxml2::XMLUtil::ToStr(bool, char*, int)
 ARGBUnattenuateRow_C
-_ZN8tinyxml210XMLElement7SetTextEi
-_ZN8tinyxml27XMLUtil15GetCharacterRefEPKcPcPi
+tinyxml2::XMLElement::SetText(int)
+tinyxml2::XMLUtil::GetCharacterRef(char const*, char*, int*)
 nghttp2_session_terminate_session
-_ZN8tinyxml210XMLElement7SetTextEy
+tinyxml2::XMLElement::SetText(unsigned long long)
 I444AlphaToARGBMatrix
 ScalePlaneUp2_Linear
 nghttp2_submit_priority
@@ -18507,12 +18507,12 @@ strchr@GLIBC_2.0
 ARGBToUVRowMatrix_C
 nghttp2_session_get_stream_effective_recv_data_length
 rename@GLIBC_2.0
-_ZN8tinyxml27XMLNode14DeleteChildrenEv
-_ZTSPKc
+tinyxml2::XMLNode::DeleteChildren()
+typeinfo name for char const*
 ecp_nistz256_from_mont
 Camellia_DecryptBlock
-_ZNK8tinyxml212XMLAttribute14QueryBoolValueEPb
-_ZTSPKDi
+tinyxml2::XMLAttribute::QueryBoolValue(bool*) const
+typeinfo name for char32_t const*
 ScaleColsUp2_C
 shmat@GLIBC_2.0
 getcontext@GLIBC_2.1
@@ -18526,9 +18526,9 @@ mktime@GLIBC_2.0
 pthread_condattr_setclock@GLIBC_2.3.3
 ARGBToNV12
 mbsrtowcs@GLIBC_2.0
-_ZTIPKy
+typeinfo for unsigned long long const*
 NV21ToRGB24Matrix
-_ZN8tinyxml27XMLUtil5ToStrEdPci
+tinyxml2::XMLUtil::ToStr(double, char*, int)
 chdir@GLIBC_2.0
 __isoc99_sscanf@GLIBC_2.7
 RGBAToUVRowMatrix_C
@@ -18537,87 +18537,87 @@ H210ToAR30
 AYUVToUVRow_C
 ARGBToAR64
 NV12ToRAW
-_ZTIe
-_ZTIPx
+typeinfo for long double
+typeinfo for long long*
 SteamRealPath
 avresample_convert@LIBAVRESAMPLE_4
-_ZNK8tinyxml210XMLElement13QueryBoolTextEPb
-_ZTSPKs
+tinyxml2::XMLElement::QueryBoolText(bool*) const
+typeinfo name for short const*
 __strcat_chk@GLIBC_2.3.4
-_ZN8tinyxml210XMLPrinter8PushTextEb
+tinyxml2::XMLPrinter::PushText(bool)
 wcrtomb@GLIBC_2.0
-_ZTSN8tinyxml210XMLPrinterE
+typeinfo name for tinyxml2::XMLPrinter
 ConvertToLSBPlane_16
 MergeXR64Row_C
 P210ToAR30Matrix
-_ZN8tinyxml211XMLDocument10NewUnknownEPKc
+tinyxml2::XMLDocument::NewUnknown(char const*)
 iconv@GLIBC_2.1
 U010ToABGR
-_ZN8tinyxml210XMLCommentC1EPNS_11XMLDocumentE
+tinyxml2::XMLComment::XMLComment(tinyxml2::XMLDocument*)
 nghttp2_check_header_value
 vsnprintf@GLIBC_2.0
 SwapUVRow_C
-_ZTIDs
-_ZTIPh
-_ZN8tinyxml210XMLPrinter5VisitERKNS_10XMLCommentE
-_ZN8tinyxml210XMLPrinter8PushTextEj
+typeinfo for char16_t
+typeinfo for unsigned char*
+tinyxml2::XMLPrinter::Visit(tinyxml2::XMLComment const&)
+tinyxml2::XMLPrinter::PushText(unsigned int)
 ARGBLumaColorTable
 wcslen@GLIBC_2.0
-_ZTSPm
+typeinfo name for unsigned long*
 nghttp2_hd_inflate_change_table_size
 ScaleUVRowUp2_Linear_Any_C
-_ZN8tinyxml212XMLAttributeD2Ev
-_ZTSPe
+tinyxml2::XMLAttribute::~XMLAttribute()
+typeinfo name for long double*
 H422ToARGB
-_ZN8tinyxml27XMLNodeD1Ev
+tinyxml2::XMLNode::~XMLNode()
 I420ToRGB24
 av_new_packet@LIBAVCODEC_58
 sched_yield@GLIBC_2.0
 kYuvI601Constants
-_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTIm
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo for unsigned long
 ecp_nistz256_precomputed
 ScalePlaneVertical
 av_frame_move_ref@LIBAVUTIL_56
-_ZN8tinyxml27XMLNode13ToDeclarationEv
-_ZN8tinyxml210XMLPrinter5WriteEPKcj
-_ZTSN10__cxxabiv119__foreign_exceptionE
+tinyxml2::XMLNode::ToDeclaration()
+tinyxml2::XMLPrinter::Write(char const*, unsigned int)
+typeinfo name for __cxxabiv1::__foreign_exception
 ScaleRowUp2_Linear_C
-_ZN8tinyxml210XMLElement15CreateAttributeEv
+tinyxml2::XMLElement::CreateAttribute()
 getentropy
-_ZN8tinyxml211XMLDocument10ToDocumentEv
+tinyxml2::XMLDocument::ToDocument()
 av_get_bytes_per_sample@LIBAVUTIL_56
 signal@GLIBC_2.0
 ScaleRowDown2_C
 P210ToARGBMatrix
 I444ToARGBMatrix
 stdin@GLIBC_2.0
-_ZNK8tinyxml212XMLAttribute15QueryInt64ValueEPx
+tinyxml2::XMLAttribute::QueryInt64Value(long long*) const
 gcm_ghash_clmul
 avcodec_copy_context@LIBAVCODEC_58
 ARGBToUV444Row_C
-_ZTSPDn
+typeinfo name for std::nullptr_t*
 ARGBToI400
 posix_fadvise@GLIBC_2.2
 ntohl@GLIBC_2.0
-_ZN8tinyxml210XMLElement15ParseAttributesEPcPi
-_ZTSPDf
+tinyxml2::XMLElement::ParseAttributes(char*, int*)
+typeinfo name for decimal32*
 ARGBMirror
 av_malloc_tracked@LIBAVUTIL_56
-_ZTIPDu
+typeinfo for char8_t*
 RC4_set_key
 nghttp2_hd_inflate_new
 ScaleCols_16_C
 gettimeofday@GLIBC_2.0
 putwc@GLIBC_2.2
 localtime_r@GLIBC_2.0
-_ZN8tinyxml211XMLDocument13ErrorIDToNameENS_8XMLErrorE
+tinyxml2::XMLDocument::ErrorIDToName(tinyxml2::XMLError)
 gai_strerror@GLIBC_2.1
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcd
+tinyxml2::XMLPrinter::PushAttribute(char const*, double)
 NV12ToRGB565
 UVScale
 AR30ToABGR
-_ZN8tinyxml210XMLElement21InsertNewChildElementEPKc
+tinyxml2::XMLElement::InsertNewChildElement(char const*)
 ARGBExtractAlpha
 pthread_mutex_init@GLIBC_2.0
 I210ToABGR
@@ -18625,7 +18625,7 @@ MirrorSplitUVRow_C
 vpaes_set_decrypt_key
 Camellia_cbc_encrypt
 I210ToARGBRow_C
-_ZN8tinyxml27XMLUtil12ToUnsigned64EPKcPy
+tinyxml2::XMLUtil::ToUnsigned64(char const*, unsigned long long*)
 ftello64@GLIBC_2.1
 I420ToARGB4444
 MergeARGBRow_C
@@ -18638,61 +18638,61 @@ BGRAToYRow_C
 ARGB4444ToARGB
 iswspace@GLIBC_2.0
 I212ToARGBRow_C
-_ZTSN10__cxxabiv123__fundamental_type_infoE
+typeinfo name for __cxxabiv1::__fundamental_type_info
 ScaleRowDown2Box_Odd_C
-_ZTSDf
-_ZTIN8tinyxml210XMLVisitorE
-_ZN8tinyxml27XMLUtil5ToIntEPKcPi
+typeinfo name for decimal32
+typeinfo for tinyxml2::XMLVisitor
+tinyxml2::XMLUtil::ToInt(char const*, int*)
 CopyRow_C
 ARGBSepiaRow_C
-_ZTIN10__cxxabiv119__foreign_exceptionE
+typeinfo for __cxxabiv1::__foreign_exception
 I422AlphaToARGBRow_C
 ABGRToNV12
-_ZNK8tinyxml27XMLNode16LastChildElementEPKc
-_ZTSDn
-_ZNK8tinyxml210XMLElement10DoubleTextEd
+tinyxml2::XMLNode::LastChildElement(char const*) const
+typeinfo name for std::nullptr_t
+tinyxml2::XMLElement::DoubleText(double) const
 CopyRow_16_C
 H010ToAR30
 nghttp2_session_callbacks_set_on_invalid_header_callback2
-_ZTIPDe
+typeinfo for decimal128*
 av_free_packet@LIBAVCODEC_58
 nghttp2_session_callbacks_set_on_header_callback2
-_ZN8tinyxml210XMLPrinter11PushCommentEPKc
-_ZTIPKh
-_ZNK8tinyxml211XMLDocument9ErrorNameEv
+tinyxml2::XMLPrinter::PushComment(char const*)
+typeinfo for unsigned char const*
+tinyxml2::XMLDocument::ErrorName() const
 ABGRToAR30
 __stack_chk_fail@GLIBC_2.4
 EGetFramesFromVideo
 nghttp2_submit_extension
 AR30ToABGRRow_C
-_ZN8tinyxml212XMLAttribute12SetAttributeEf
+tinyxml2::XMLAttribute::SetAttribute(float)
 SobelYRow_C
 ARGBToYJRow_C
 nghttp2_rcbuf_is_static
-_ZN8tinyxml27XMLTextD0Ev
+tinyxml2::XMLText::~XMLText()
 lseek64@GLIBC_2.2
-_ZN8tinyxml210XMLPrinter9VisitExitERKNS_11XMLDocumentE
-_ZTSh
-_ZN8tinyxml27XMLUtil5ToStrEyPci
+tinyxml2::XMLPrinter::VisitExit(tinyxml2::XMLDocument const&)
+typeinfo name for unsigned char
+tinyxml2::XMLUtil::ToStr(unsigned long long, char*, int)
 isalpha@GLIBC_2.0
 readdir64@GLIBC_2.2
-_ZNK8tinyxml211XMLDocument5PrintEPNS_10XMLPrinterE
+tinyxml2::XMLDocument::Print(tinyxml2::XMLPrinter*) const
 bn_mul_comba4
 mbrtowc@GLIBC_2.0
 ScaleRowUp2_Bilinear_16_Any_C
-_ZN8tinyxml210XMLUnknownD0Ev
+tinyxml2::XMLUnknown::~XMLUnknown()
 ScaleUVBilinearUp2_16
 __wrap_opendir
 dlerror@GLIBC_2.0
-_ZN8tinyxml210XMLPrinter5VisitERKNS_7XMLTextE
+tinyxml2::XMLPrinter::Visit(tinyxml2::XMLText const&)
 NV21ToARGBMatrix
 av_get_packed_sample_fmt@LIBAVUTIL_56
 nghttp2_session_callbacks_set_pack_extension_callback
 bn_mul_add_words
 CreateAudioEncoder
-_ZNK8tinyxml210XMLElement15QueryDoubleTextEPd
-_ZTSx
-_ZTIN10__cxxabiv115__forced_unwindE
+tinyxml2::XMLElement::QueryDoubleText(double*) const
+typeinfo name for long long
+typeinfo for __cxxabiv1::__forced_unwind
 pthread_mutex_lock@GLIBC_2.0
 YUY2ToARGB
 ARGBToAB64
@@ -18709,7 +18709,7 @@ Android420ToARGB
 ScaleARGBFilterCols64_C
 getsockopt@GLIBC_2.0
 ScaleUVCols64_C
-_ZNK8tinyxml210XMLElement14Unsigned64TextEy
+tinyxml2::XMLElement::Unsigned64Text(unsigned long long) const
 J400ToARGBRow_C
 ScalePlaneUp2_16_Linear
 RescaleBase
@@ -18723,21 +18723,21 @@ I422ToARGBMatrix
 OPENSSL_far_spin
 ScaleUVFilterCols64_C
 kRgbF709Constants
-_ZN8tinyxml27XMLNode10DeleteNodeEPS0_
+tinyxml2::XMLNode::DeleteNode(tinyxml2::XMLNode*)
 nghttp2_session_want_write
 BF_decrypt
 avio_closep@LIBAVFORMAT_58
-_ZN8tinyxml210XMLElement7SetTextEx
+tinyxml2::XMLElement::SetText(long long)
 __wrap_chmod
 av_write_trailer@LIBAVFORMAT_58
 ByteToFloat
 I420ToRGBAMatrix
 I422ToARGB1555Row_C
-_ZTSPKd
-_ZNK8tinyxml210XMLElement12ShallowCloneEPNS_11XMLDocumentE
+typeinfo name for double const*
+tinyxml2::XMLElement::ShallowClone(tinyxml2::XMLDocument*) const
 H010ToABGR
 ScaleUVFilterCols_C
-_ZTVN10__cxxabiv117__class_type_infoE
+vtable for __cxxabiv1::__class_type_info
 Camellia_EncryptBlock_Rounds
 ARGBToUVRow_C
 I420ToABGR
@@ -18750,40 +18750,40 @@ nghttp2_session_get_hd_deflate_dynamic_table_size
 ARGBAffineRow_C
 ARGBShadeRow_C
 nghttp2_session_get_local_settings
-_ZTIPKx
+typeinfo for long long const*
 av_rescale_q@LIBAVUTIL_56
-_ZNK8tinyxml27XMLText12ShallowEqualEPKNS_7XMLNodeE
+tinyxml2::XMLText::ShallowEqual(tinyxml2::XMLNode const*) const
 av_mallocz_tracked@LIBAVUTIL_56
-_ZN8tinyxml211XMLDocument8IdentifyEPcPPNS_7XMLNodeE
-_ZTSPKt
+tinyxml2::XMLDocument::Identify(char*, tinyxml2::XMLNode**)
+typeinfo name for unsigned short const*
 ARGBToAR30Row_C
 eventfd@GLIBC_2.7
 OPENSSL_ia32_rdseed_bytes
 ARGBGrayTo
-_ZN8tinyxml210XMLUnknownC1EPNS_11XMLDocumentE
+tinyxml2::XMLUnknown::XMLUnknown(tinyxml2::XMLDocument*)
 ScaleRowDown34_16_C
 free@GLIBC_2.0
-_ZTSN8tinyxml210XMLCommentE
+typeinfo name for tinyxml2::XMLComment
 nghttp2_session_set_user_data
-_ZTIPi
+typeinfo for int*
 J422ToABGR
-_ZN8tinyxml210XMLElementC1EPNS_11XMLDocumentE
+tinyxml2::XMLElement::XMLElement(tinyxml2::XMLDocument*)
 av_opt_set_int@LIBAVUTIL_56
-_ZTSPKl
-_ZN8tinyxml27XMLNode6UnlinkEPS0_
+typeinfo name for long const*
+tinyxml2::XMLNode::Unlink(tinyxml2::XMLNode*)
 RAWToRGBARow_C
 GaussCol_F32_C
 nghttp2_session_upgrade2
 J422ToARGB
 pthread_key_delete@GLIBC_2.0
 ARGBToARGB4444
-_ZN8tinyxml210XMLPrinterD1Ev
-_ZTSPv
-_ZTSN8tinyxml27XMLNodeE
+tinyxml2::XMLPrinter::~XMLPrinter()
+typeinfo name for void*
+typeinfo name for tinyxml2::XMLNode
 DeleteVideoDecoder
-_ZTSPf
+typeinfo name for float*
 ecp_nistz256_gather_w5
-_ZN8tinyxml214XMLDeclarationD0Ev
+tinyxml2::XMLDeclaration::~XMLDeclaration()
 dladdr@GLIBC_2.0
 ARGBToI444
 av_get_channel_layout_nb_channels@LIBAVUTIL_56
@@ -18791,21 +18791,21 @@ I422ToARGB4444Row_C
 getaddrinfo@GLIBC_2.0
 I444AlphaToARGB
 I444ToABGR
-_ZTIl
+typeinfo for long
 I422AlphaToARGB
 RAWToARGBRow_C
-_ZTIPa
+typeinfo for signed char*
 nghttp2_session_callbacks_set_on_frame_not_send_callback
 __lxstat64@GLIBC_2.2
-_ZTIt
-_ZTId
-_ZTIDd
+typeinfo for unsigned short
+typeinfo for double
+typeinfo for decimal64
 InterpolatePlane
 I444Scale
 CreateInterface
 EGetFrameFromMPD
 RAWToYRow_C
-_ZN8tinyxml211XMLDocumentD0Ev
+tinyxml2::XMLDocument::~XMLDocument()
 RGB24ToYRow_C
 ___tls_get_addr@GLIBC_2.3
 ScaleCols_C
@@ -18815,66 +18815,66 @@ pthread_mutexattr_init@GLIBC_2.0
 NV21ToRGB24Row_C
 av_read_frame@LIBAVFORMAT_58
 RGBAToYRow_C
-_ZTIN8tinyxml210XMLPrinterE
+typeinfo for tinyxml2::XMLPrinter
 I420ToRGB565
 nghttp2_submit_headers
 I400ToARGB
-_ZN8tinyxml211XMLDocument11_errorNamesE
+tinyxml2::XMLDocument::_errorNames
 makecontext@GLIBC_2.1
 SobelToPlaneRow_C
 statfs@GLIBC_2.0
 RGBAToUVRow_C
-_ZN8tinyxml211XMLDocument8SaveFileEP8_IO_FILEb
+tinyxml2::XMLDocument::SaveFile(_IO_FILE*, bool)
 NV21ToYUV24
 ScaleRowDown4Box_C
 ARGBMirrorRow_C
 RGB24ToYJRow_C
 pthread_mutexattr_destroy@GLIBC_2.0
 sws_getCachedContext@LIBSWSCALE_5
-_ZTVN8tinyxml211XMLDocumentE
+vtable for tinyxml2::XMLDocument
 U420ToABGR
-_ZN8tinyxml210XMLCommentC2EPNS_11XMLDocumentE
+tinyxml2::XMLComment::XMLComment(tinyxml2::XMLDocument*)
 SplitUVPlane
 strncmp@GLIBC_2.0
 UYVYToYRow_C
 nghttp2_session_callbacks_set_data_source_read_length_callback
 ScaleColsUp2_16_C
-_ZN8tinyxml211XMLDocument8LoadFileEPKc
-_ZN8tinyxml27XMLNode9ToElementEv
+tinyxml2::XMLDocument::LoadFile(char const*)
+tinyxml2::XMLNode::ToElement()
 qsort@GLIBC_2.0
-_ZTIPy
+typeinfo for unsigned long long*
 BGRAToARGB
 ScalePlane
-_ZTSN8tinyxml27XMLTextE
-_ZN8tinyxml210XMLPrinter15PushDeclarationEPKc
-_ZN8tinyxml210XMLCommentD1Ev
+typeinfo name for tinyxml2::XMLText
+tinyxml2::XMLPrinter::PushDeclaration(char const*)
+tinyxml2::XMLComment::~XMLComment()
 ScaleRowDown4_C
 nghttp2_session_get_stream_remote_close
 ScaleUVRowUp2_Bilinear_Any_C
 avcodec_receive_frame@LIBAVCODEC_58
 ScaleRowUp2_16_C
-_ZNK8tinyxml210XMLUnknown12ShallowEqualEPKNS_7XMLNodeE
+tinyxml2::XMLUnknown::ShallowEqual(tinyxml2::XMLNode const*) const
 ScaleARGBRowDownEvenBox_C
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcy
-_ZN8tinyxml27XMLUtil5ToStrEfPci
+tinyxml2::XMLPrinter::PushAttribute(char const*, unsigned long long)
+tinyxml2::XMLUtil::ToStr(float, char*, int)
 I400ToARGBMatrix
-_ZTIPDd
+typeinfo for decimal64*
 I422ToRGB565Row_C
 kBgrI601Constants
 __newlocale@GLIBC_2.1
 I420AlphaToARGB
 strcasecmp@GLIBC_2.0
 nghttp2_hd_inflate_del
-_ZTIPKg
-_ZTVN8tinyxml210XMLElementE
-_ZN8tinyxml212XMLAttributeD1Ev
+typeinfo for __float128 const*
+vtable for tinyxml2::XMLElement
+tinyxml2::XMLAttribute::~XMLAttribute()
 __wrap_link
 aesni_cbc_encrypt
 NV12ToABGR
 ScaleRowDown34_0_Box_16_C
-_ZGTtnaj
-_ZTVN10__cxxabiv120__si_class_type_infoE
-_ZTSg
+transaction clone for operator new[](unsigned int)
+vtable for __cxxabiv1::__si_class_type_info
+typeinfo name for __float128
 nghttp2_priority_spec_default_init
 ScaleUVRowUp2_Linear_16_C
 I422ToARGBRow_C
@@ -18882,31 +18882,31 @@ aesni_decrypt
 MergeARGB16To8Row_C
 ecp_nistz256_point_add
 ecp_nistz256_neg
-_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
+typeinfo for __gnu_cxx::__concurrence_unlock_error
 epoll_ctl@GLIBC_2.3.2
 av_frame_unref@LIBAVUTIL_56
-_ZTVN8tinyxml214XMLDeclarationE
+vtable for tinyxml2::XMLDeclaration
 fgetc@GLIBC_2.0
 ARGBToI422
 __memset_chk@GLIBC_2.3.4
-_ZTIPKDi
-_ZTSw
+typeinfo for char32_t const*
+typeinfo name for wchar_t
 __strtod_l@GLIBC_2.1
 I420ToRGB565Matrix
 DES_decrypt3
 bn_mul_mont
-_Z27_txnal_cow_string_D1_commitPv
+_txnal_cow_string_D1_commit(void*)
 strcspn@GLIBC_2.0
-_ZNK8tinyxml27XMLNode6ToTextEv
+tinyxml2::XMLNode::ToText() const
 avcodec_open2@LIBAVCODEC_58
 I444AlphaToABGR
 __wctype_l@GLIBC_2.1
 ARGBToARGB4444Row_C
 opendir@GLIBC_2.0
 CreateAudioResampler
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKci
+tinyxml2::XMLPrinter::PushAttribute(char const*, int)
 pthread_join@GLIBC_2.0
-_ZNK8tinyxml210XMLElement8BoolTextEb
+tinyxml2::XMLElement::BoolText(bool) const
 Android420ToABGR
 I420ToAR30Matrix
 MergeUVRow_16_C
@@ -18926,78 +18926,78 @@ ARGBToBGRA
 I420ToRGB24Matrix
 sws_freeContext@LIBSWSCALE_5
 AR64Shuffle
-_ZTSPKa
+typeinfo name for signed char const*
 __wrap_fopen
 J444ToARGB
-_ZN8tinyxml210XMLElement9ToElementEv
-_ZNK8tinyxml211XMLDocument10PrintErrorEv
+tinyxml2::XMLElement::ToElement()
+tinyxml2::XMLDocument::PrintError() const
 avcodec_find_encoder@LIBAVCODEC_58
 getegid@GLIBC_2.0
 nghttp2_session_callbacks_set_select_padding_callback
 pthread_rwlock_rdlock@GLIBC_2.1
-_ZNK8tinyxml27XMLNode19InsertChildPreambleEPS0_
-_ZTSPKDs
+tinyxml2::XMLNode::InsertChildPreamble(tinyxml2::XMLNode*) const
+typeinfo name for char16_t const*
 bn_mul_words
-_ZN8tinyxml210XMLCommentD0Ev
-_ZN8tinyxml210XMLPrinter8PushTextEd
-_ZTIPKw
+tinyxml2::XMLComment::~XMLComment()
+tinyxml2::XMLPrinter::PushText(double)
+typeinfo for wchar_t const*
 aesni_ocb_encrypt
 nghttp2_session_set_next_stream_id
 RGBAToYJRow_C
 Camellia_Ekeygen
 nghttp2_submit_data
 ChaCha20_ssse3
-_ZTSPKy
+typeinfo name for unsigned long long const*
 nghttp2_session_callbacks_set_on_begin_headers_callback
 bn_sub_words
 strerror@GLIBC_2.0
 nanosleep@GLIBC_2.0
-_ZTIg
-_ZTSPKi
+typeinfo for __float128
+typeinfo name for int const*
 SetPlane
 ARGBShuffleRow_C
 SplitARGBRow_C
-_ZN8tinyxml210XMLPrinter10VisitEnterERKNS_11XMLDocumentE
-_ZTIDu
-_ZTIPj
+tinyxml2::XMLPrinter::VisitEnter(tinyxml2::XMLDocument const&)
+typeinfo for char8_t
+typeinfo for unsigned int*
 I012ToAR30Matrix
 BParseISO8601Duration
-_ZN8tinyxml211XMLDocumentC2EbNS_10WhitespaceE
+tinyxml2::XMLDocument::XMLDocument(bool, tinyxml2::Whitespace)
 SplitRGBPlane
-_ZNK8tinyxml210XMLElement12IntAttributeEPKci
+tinyxml2::XMLElement::IntAttribute(char const*, int) const
 __xmknod@GLIBC_2.0
 P410ToAR30Row_C
 I400Mirror
 RGBAToYRowMatrix_C
-_ZTVN8tinyxml210XMLPrinterE
+vtable for tinyxml2::XMLPrinter
 kYvuF709Constants
 dlclose@GLIBC_2.0
 kBgrJPEGConstants
 uname@GLIBC_2.0
 ValidateImageYUV
 ARGB1555ToARGBRow_C
-_ZN8tinyxml210XMLPrinterC1EP8_IO_FILEbi
+tinyxml2::XMLPrinter::XMLPrinter(_IO_FILE*, bool, int)
 AR64ShuffleRow_C
 kYvuI601Constants
 AllocImageYUV
 pthread_setschedparam@GLIBC_2.0
-_ZTIw
+typeinfo for wchar_t
 nghttp2_rcbuf_decref
-_ZNK8tinyxml211XMLDocument12ShallowCloneEPS0_
+tinyxml2::XMLDocument::ShallowClone(tinyxml2::XMLDocument*) const
 pthread_cond_timedwait@GLIBC_2.3.2
-_ZTIPb
+typeinfo for bool*
 avcodec_parameters_from_context@LIBAVCODEC_58
-_ZTSPs
-_ZTSDd
-_ZTIDe
+typeinfo name for short*
+typeinfo name for decimal64
+typeinfo for decimal128
 Camellia_encrypt
-_ZN8tinyxml210XMLPrinter4PutcEc
+tinyxml2::XMLPrinter::Putc(char)
 UYVYToNV12
 RAWToRGBA
 DeleteMPDDecoder
 __towlower_l@GLIBC_2.1
-_ZNK8tinyxml212XMLAttribute5ValueEv
-_ZN8tinyxml27XMLTextD1Ev
+tinyxml2::XMLAttribute::Value() const
+tinyxml2::XMLText::~XMLText()
 wcstol@GLIBC_2.0
 I444AlphaToARGBRow_C
 I210ToAR30Row_C
@@ -19011,60 +19011,60 @@ GaussRow_C
 Convert16To8Row_C
 nghttp2_session_callbacks_set_error_callback
 MergeARGBPlaneAlpha
-_ZTIPDs
+typeinfo for char16_t*
 BScaleImageYUV
 DES_ede3_cbc_encrypt
 wmemcpy@GLIBC_2.0
 nghttp2_session_callbacks_set_on_stream_close_callback
-_ZN8tinyxml27XMLUtil5ToStrEiPci
-_ZTSPc
+tinyxml2::XMLUtil::ToStr(int, char*, int)
+typeinfo name for char*
 nghttp2_session_callbacks_set_on_header_callback
-_ZTSPDd
+typeinfo name for decimal64*
 H420ToRAW
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcb
+tinyxml2::XMLPrinter::PushAttribute(char const*, bool)
 I422ToARGB
 strtoll@GLIBC_2.0
 ecp_nistz256_mul_mont
-_ZN8tinyxml27XMLNodeC2EPNS_11XMLDocumentE
+tinyxml2::XMLNode::XMLNode(tinyxml2::XMLDocument*)
 flock@GLIBC_2.0
 aesni_set_decrypt_key
 ScaleAddRow_C
 ChaCha20_xop
 nghttp2_submit_window_update
-_ZNK8tinyxml211XMLDocument6AcceptEPNS_10XMLVisitorE
-_ZN8tinyxml27XMLTextD2Ev
+tinyxml2::XMLDocument::Accept(tinyxml2::XMLVisitor*) const
+tinyxml2::XMLText::~XMLText()
 H210ToARGB
 lchown@GLIBC_2.0
-_ZN8tinyxml27XMLNode6ToTextEv
-_ZN8tinyxml27XMLNode9ToUnknownEv
+tinyxml2::XMLNode::ToText()
+tinyxml2::XMLNode::ToUnknown()
 kYvuH709Constants
 HalfMergeUVPlane
 AR64ToAB64
 nghttp2_session_client_new
 I422Copy
-_ZN8tinyxml211XMLDocument8LoadFileEP8_IO_FILE
+tinyxml2::XMLDocument::LoadFile(_IO_FILE*)
 sendto@GLIBC_2.0
 NV12ToRGB565Matrix
 av_seek_frame@LIBAVFORMAT_58
 readlink@GLIBC_2.0
-_ZNK8tinyxml210XMLComment6AcceptEPNS_10XMLVisitorE
+tinyxml2::XMLComment::Accept(tinyxml2::XMLVisitor*) const
 timegm@GLIBC_2.0
 RGBAToJ400
-_ZTSj
+typeinfo name for unsigned int
 avresample_get_out_samples@LIBAVRESAMPLE_4
 VideoValidateStatics
 MergeARGBPlaneOpaque
-_ZNK8tinyxml27XMLNode9ToElementEv
+tinyxml2::XMLNode::ToElement() const
 __fdelt_chk@GLIBC_2.15
 ScalePlane_12
 ARGBMultiplyRow_C
-_ZTSb
+typeinfo name for bool
 CreateRTMPStream
 nghttp2_session_consume_connection
 kYuvJPEGConstants
 _ITM_RU4
 H420ToARGB
-_ZTIPKf
+typeinfo for float const*
 avformat_alloc_output_context2@LIBAVFORMAT_58
 I010ToARGB
 DivideRow_16_C
@@ -19072,19 +19072,19 @@ av_packet_unref@LIBAVCODEC_58
 bn_sub_part_words
 nghttp2_session_recv
 nghttp2_session_resume_data
-_ZN8tinyxml210XMLPrinter5VisitERKNS_10XMLUnknownE
+tinyxml2::XMLPrinter::Visit(tinyxml2::XMLUnknown const&)
 ARGBCopy
 ARGBSepia
 OPENSSL_instrument_bus2
 ScaleARGBRowDownEven_C
-_ZN8tinyxml212XMLAttribute12SetAttributeEx
+tinyxml2::XMLAttribute::SetAttribute(long long)
 nghttp2_session_check_server_session
-_ZTIN8tinyxml212XMLAttributeE
+typeinfo for tinyxml2::XMLAttribute
 av_write_frame@LIBAVFORMAT_58
 I444ToARGB
 md5_block_asm_data_order
 avio_close@LIBAVFORMAT_58
-_ZN8tinyxml211XMLDocumentD1Ev
+tinyxml2::XMLDocument::~XMLDocument()
 RGB24MirrorRow_C
 nghttp2_hd_deflate_hd_vec
 faccessat@GLIBC_2.4
@@ -19098,7 +19098,7 @@ AB64ToARGBRow_C
 RAWToYJRow_C
 __fprintf_chk@GLIBC_2.3.4
 YUY2ToNV12
-_ZN8tinyxml210XMLPrinter13PushAttributeEPKcj
+tinyxml2::XMLPrinter::PushAttribute(char const*, unsigned int)
 nghttp2_session_callbacks_set_recv_callback
 syscall@GLIBC_2.0
 nghttp2_session_get_effective_recv_data_length
@@ -19108,29 +19108,29 @@ U422ToARGB
 I420ToBGRA
 kYuv2020Constants
 strspn@GLIBC_2.0
-_ZTVN10__cxxabiv121__vmi_class_type_infoE
-_ZNK8tinyxml27XMLNode9ToCommentEv
-_ZNK8tinyxml27XMLNode9DeepCloneEPNS_11XMLDocumentE
+vtable for __cxxabiv1::__vmi_class_type_info
+tinyxml2::XMLNode::ToComment() const
+tinyxml2::XMLNode::DeepClone(tinyxml2::XMLDocument*) const
 pthread_self@GLIBC_2.0
 nghttp2_submit_response
 AYUVToVURow_C
 I420Scale_12
 __wcscoll_l@GLIBC_2.1
-_ZNK8tinyxml210XMLElement15DoubleAttributeEPKcd
+tinyxml2::XMLElement::DoubleAttribute(char const*, double) const
 ARGB1555ToARGB
 FixedDiv_C
 ScaleRowDown2Box_C
-_ZTIN10__cxxabiv121__vmi_class_type_infoE
+typeinfo for __cxxabiv1::__vmi_class_type_info
 AR64ToARGB
 avcodec_free_context@LIBAVCODEC_58
-_ZN8tinyxml211XMLDocument5ClearEv
+tinyxml2::XMLDocument::Clear()
 __towupper_l@GLIBC_2.1
 I410AlphaToARGBRow_C
 RGB565ToARGB
-_ZN8tinyxml211XMLDocument10NewCommentEPKc
+tinyxml2::XMLDocument::NewComment(char const*)
 bn_add_words
-_ZN8tinyxml210XMLElement7SetTextEf
-_ZN8tinyxml210XMLElementD0Ev
+tinyxml2::XMLElement::SetText(float)
+tinyxml2::XMLElement::~XMLElement()
 NV21Copy
 NV12ToARGB
 __dprintf_chk@GLIBC_2.8
@@ -19141,120 +19141,120 @@ H210ToABGR
 backtrace_symbols@GLIBC_2.1
 avcodec_alloc_context3@LIBAVCODEC_58
 strftime@GLIBC_2.0
-_ZTSPKb
+typeinfo name for bool const*
 recv@GLIBC_2.0
 remove@GLIBC_2.0
-_ZN8tinyxml27XMLUtil6ToBoolEPKcPb
+tinyxml2::XMLUtil::ToBool(char const*, bool*)
 shutdown@GLIBC_2.0
 __nl_langinfo_l@GLIBC_2.2
 U010ToAB30
 ripemd160_block_asm_data_order
 avformat_find_stream_info@LIBAVFORMAT_58
-_ZTSPKDd
+typeinfo name for decimal64 const*
 avio_flush@LIBAVFORMAT_58
-_ZNK8tinyxml211XMLDocument8ErrorStrEv
-_ZNK8tinyxml27XMLText6ToTextEv
-_ZTVN8tinyxml27XMLNodeE
+tinyxml2::XMLDocument::ErrorStr() const
+tinyxml2::XMLText::ToText() const
+vtable for tinyxml2::XMLNode
 ARGBToYUY2
 ScaleRowDown2_16_C
-_ZTIPKv
+typeinfo for void const*
 J420ToARGB
 aesni_ctr32_encrypt_blocks
 __memcpy_chk@GLIBC_2.3.4
-_ZNK8tinyxml210XMLElement12ShallowEqualEPKNS_7XMLNodeE
+tinyxml2::XMLElement::ShallowEqual(tinyxml2::XMLNode const*) const
 fcntl@GLIBC_2.0
 J420ToRAW
-_ZTIPc
-_ZTIDn
+typeinfo for char*
+typeinfo for std::nullptr_t
 ScaleRowDown2Linear_C
-_ZN8tinyxml27XMLNode14InsertEndChildEPS0_
-_ZTIDf
+tinyxml2::XMLNode::InsertEndChild(tinyxml2::XMLNode*)
+typeinfo for decimal32
 MergeARGBPlane
 listen@GLIBC_2.0
-_ZTSN10__cxxabiv117__class_type_infoE
+typeinfo name for __cxxabiv1::__class_type_info
 nghttp2_session_get_last_proc_stream_id
-_ZTIf
+typeinfo for float
 VideoPauseForValidation
 nghttp2_stream_get_next_sibling
 SwapUVPlane
-_ZN8tinyxml210XMLPrinter11PrintStringEPKcb
+tinyxml2::XMLPrinter::PrintString(char const*, bool)
 nghttp2_session_set_local_window_size
 I400ToARGBRow_C
 pthread_mutex_trylock@GLIBC_2.0
 __wrap_freopen
-_ZN8tinyxml210XMLElement7SetTextEPKc
+tinyxml2::XMLElement::SetText(char const*)
 aesni_ccm64_decrypt_blocks
 U210ToARGB
 __strdup@GLIBC_2.0
 J444ToABGR
 AR30ToAB30Row_C
-_ZTSPKj
-_ZN8tinyxml212XMLAttribute12SetAttributeEPKc
-_ZNK8tinyxml27XMLNode17ToElementWithNameEPKc
+typeinfo name for unsigned int const*
+tinyxml2::XMLAttribute::SetAttribute(char const*)
+tinyxml2::XMLNode::ToElementWithName(char const*) const
 CreateVideoEncoderX264
 nghttp2_session_get_remote_settings
 __wrap___xstat
 nghttp2_hd_inflate_hd2
 gmtime_r@GLIBC_2.0
-_ZNK8tinyxml214XMLDeclaration6AcceptEPNS_10XMLVisitorE
+tinyxml2::XMLDeclaration::Accept(tinyxml2::XMLVisitor*) const
 ScaleRowDown38_3_Box_16_C
-_ZNK8tinyxml27XMLNode9ToUnknownEv
-_ZN8tinyxml210XMLPrinterD2Ev
+tinyxml2::XMLNode::ToUnknown() const
+tinyxml2::XMLPrinter::~XMLPrinter()
 I410ToARGBRow_C
-_ZTIN9__gnu_cxx20recursive_init_errorE
+typeinfo for __gnu_cxx::recursive_init_error
 I210ToAR30Matrix
 OPENSSL_ia32_rdrand_bytes
-_ZTIv
+typeinfo for void
 malloc_usable_size@GLIBC_2.0
 I420ToAB30
 I444Scale_16
 poly1305_blocks
 shmget@GLIBC_2.0
-_ZTIN8tinyxml210XMLCommentE
-_ZTSPt
+typeinfo for tinyxml2::XMLComment
+typeinfo name for unsigned short*
 ScaleRowDown34_1_Box_16_C
-_ZTSDe
+typeinfo name for decimal128
 __wrap_statfs64
 abort@GLIBC_2.0
 poly1305_emit
 _ITM_deregisterTMCloneTable
 RAWToUVJRow_C
-_ZTSPDu
+typeinfo name for char8_t*
 I420Blend
 I422ToUYVYRow_C
 H420ToRGB24
 strpbrk@GLIBC_2.0
 NV12ToARGBMatrix
 __xstat64@GLIBC_2.2
-_ZN8tinyxml27XMLText6ToTextEv
+tinyxml2::XMLText::ToText()
 I420ToARGB
-_ZNK8tinyxml212XMLAttribute18QueryUnsignedValueEPj
+tinyxml2::XMLAttribute::QueryUnsignedValue(unsigned int*) const
 ARGBMultiply
-_ZTSPl
+typeinfo name for long*
 nghttp2_priority_spec_check_default
 I210ToARGB
 ScaleUVRowDown2_C
 setcontext@GLIBC_2.0
 NV21ToRAW
-_ZTSPd
+typeinfo name for double*
 I420ToARGB1555
-_ZTSPDe
+typeinfo name for decimal128*
 pthread_once@GLIBC_2.0
 SplitARGBPlane
 av_samples_get_buffer_size@LIBAVUTIL_56
 dlmopen@GLIBC_2.3.4
-_ZN8tinyxml27XMLUtil14writeBoolFalseE
-_ZNK8tinyxml210XMLElement14FloatAttributeEPKcf
+tinyxml2::XMLUtil::writeBoolFalse
+tinyxml2::XMLElement::FloatAttribute(char const*, float) const
 poll@GLIBC_2.0
 ScalePlaneBilinearDown_16
 __wrap_chown
-_ZTIPs
+typeinfo for short*
 nghttp2_hd_deflate_del
-_ZTVN10__cxxabiv115__forced_unwindE
+vtable for __cxxabiv1::__forced_unwind
 wmemchr@GLIBC_2.0
 ARGBColorTable
 fclose@GLIBC_2.1
-_ZTIPKDs
+typeinfo for char16_t const*
 aesni_set_encrypt_key
 ScaleUVRowUp2_Linear_16_Any_C
 nghttp2_hd_inflate_get_max_dynamic_table_size
@@ -19268,11 +19268,11 @@ nghttp2_session_get_next_stream_id
 nghttp2_session_del
 freopen@GLIBC_2.0
 I210ToARGBMatrix
-_ZTSDu
+typeinfo name for char8_t
 av_rescale@LIBAVUTIL_56
 U444ToARGB
 avformat_new_stream@LIBAVFORMAT_58
-_ZNK8tinyxml210XMLComment9ToCommentEv
+tinyxml2::XMLComment::ToComment() const
 __vasprintf_chk@GLIBC_2.8
 MergeAR64Row_C
 mkfifo@GLIBC_2.0
@@ -19280,16 +19280,16 @@ rmdir@GLIBC_2.0
 kYuvF709Constants
 vpaes_cbc_encrypt
 __wrap_unlink
-_ZTSa
-_ZTIPKm
-_ZTSN10__cxxabiv115__forced_unwindE
-_ZTIPKe
-_ZN8tinyxml210XMLPrinter11OpenElementEPKcb
+typeinfo name for signed char
+typeinfo for unsigned long const*
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo for long double const*
+tinyxml2::XMLPrinter::OpenElement(char const*, bool)
 statvfs64@GLIBC_2.1
 ScaleRowDown38_2_Box_C
 ABGRToARGB
 nghttp2_session_get_hd_inflate_dynamic_table_size
-_ZTSi
+typeinfo name for int
 av_log_set_callback@LIBAVUTIL_56
 SplitARGBPlaneAlpha
 unlink@GLIBC_2.0
@@ -19303,21 +19303,21 @@ DeleteVideoRecordingSegmentWriter
 __wrap_statfs
 kRgbJPEGConstants
 ScaleRowUp2_Linear_Any_C
-_ZNK8tinyxml210XMLElement14QueryInt64TextEPx
+tinyxml2::XMLElement::QueryInt64Text(long long*) const
 ecp_nistz256_scatter_w7
 nghttp2_session_server_new
-_ZN8tinyxml211XMLDocument8SetErrorENS_8XMLErrorEiPKcz
-_ZNK8tinyxml210XMLElement9AttributeEPKcS2_
+tinyxml2::XMLDocument::SetError(tinyxml2::XMLError, int, char const*, ...)
+tinyxml2::XMLElement::Attribute(char const*, char const*) const
 epoll_create@GLIBC_2.3.2
 __wrap___lxstat
-_ZTSy
+typeinfo name for unsigned long long
 ARGBToUYVY
-_ZNK8tinyxml210XMLElement17UnsignedAttributeEPKcj
-_ZTIN10__cxxabiv117__class_type_infoE
+tinyxml2::XMLElement::UnsignedAttribute(char const*, unsigned int) const
+typeinfo for __cxxabiv1::__class_type_info
 __wrap_scandir64
 stderr@GLIBC_2.0
 __wrap_fopen64
-_ZN8tinyxml210XMLPrinter9VisitExitERKNS_10XMLElementE
+tinyxml2::XMLPrinter::VisitExit(tinyxml2::XMLElement const&)
 nghttp2_check_authority
 htonl@GLIBC_2.0
 ChaCha20_ctr32
@@ -19337,81 +19337,81 @@ mmap@GLIBC_2.0
 fseeko64@GLIBC_2.1
 ARGBAdd
 av_get_default_channel_layout@LIBAVUTIL_56
-_ZTVN10__cxxabiv123__fundamental_type_infoE
-_ZNK8tinyxml212XMLAttribute4NameEv
-_ZNK8tinyxml210XMLElement19Unsigned64AttributeEPKcy
+vtable for __cxxabiv1::__fundamental_type_info
+tinyxml2::XMLAttribute::Name() const
+tinyxml2::XMLElement::Unsigned64Attribute(char const*, unsigned long long) const
 av_dict_set@LIBAVUTIL_56
-_ZTSN8tinyxml210XMLUnknownE
-_ZNK8tinyxml210XMLComment12ShallowEqualEPKNS_7XMLNodeE
-_ZTSN9__gnu_cxx24__concurrence_lock_errorE
+typeinfo name for tinyxml2::XMLUnknown
+tinyxml2::XMLComment::ShallowEqual(tinyxml2::XMLNode const*) const
+typeinfo name for __gnu_cxx::__concurrence_lock_error
 _ITM_registerTMCloneTable
-_ZTSPKDu
-_ZN8tinyxml211XMLDocument5ParseEPKcj
+typeinfo name for char8_t const*
+tinyxml2::XMLDocument::Parse(char const*, unsigned int)
 VideoPlaybackShutdown
 ARGBInterpolate
-_ZN8tinyxml210XMLUnknownD1Ev
+tinyxml2::XMLUnknown::~XMLUnknown()
 VideoPlaybackRunFrame
 __assert_fail@GLIBC_2.0
 wcscmp@GLIBC_2.0
 ecp_nistz256_mul_by_3
-_ZTVN8tinyxml27XMLTextE
+vtable for tinyxml2::XMLText
 ARGBCopyYToAlphaRow_C
-_ZTSPKDe
+typeinfo name for decimal128 const*
 gcm_ghash_4bit_mmx
 pthread_cond_destroy@GLIBC_2.3.2
 Camellia_set_key
-_ZN8tinyxml27StrPair6GetStrEv
-_Z28_txnal_runtime_error_get_msgPv
+tinyxml2::StrPair::GetStr()
+_txnal_runtime_error_get_msg(void*)
 ScaleUVColsUp2_C
 I422ToYUY2Row_C
-_ZTIPl
-_ZTIPd
+typeinfo for long*
+typeinfo for double*
 ARGBToRGBA
-_ZN8tinyxml212XMLAttributeD0Ev
+tinyxml2::XMLAttribute::~XMLAttribute()
 ByteToFloatRow_C
-_ZNK8tinyxml211XMLDocument8DeepCopyEPS0_
+tinyxml2::XMLDocument::DeepCopy(tinyxml2::XMLDocument*) const
 ARGBGrayRow_C
 ARGBAddRow_C
-_ZTIa
-_ZN8tinyxml210XMLPrinter10PushHeaderEbb
-_ZTSPKw
+typeinfo for signed char
+tinyxml2::XMLPrinter::PushHeader(bool, bool)
+typeinfo name for wchar_t const*
 ARGBCopyAlphaRow_C
 nghttp2_stream_get_previous_sibling
-_ZN8tinyxml210XMLElement21FindOrCreateAttributeEPKc
+tinyxml2::XMLElement::FindOrCreateAttribute(char const*)
 I420ToRGBA
-_ZN8tinyxml210XMLPrinter8PushTextEf
+tinyxml2::XMLPrinter::PushText(float)
 scandir64@GLIBC_2.2
-_ZTIi
+typeinfo for int
 __wrap_lstat64
 U422ToABGR
 RGB24ToUVRow_C
-_ZN8tinyxml214XMLDeclaration13ToDeclarationEv
+tinyxml2::XMLDeclaration::ToDeclaration()
 J400ToARGB
-_ZN8tinyxml211XMLDocument9MarkInUseEPKNS_7XMLNodeE
+tinyxml2::XMLDocument::MarkInUse(tinyxml2::XMLNode const*)
 ARGBQuantizeRow_C
 ScaleUVRowUp2_Bilinear_16_Any_C
 kBgrH709Constants
 strtod@GLIBC_2.0
 pthread_condattr_destroy@GLIBC_2.0
-_ZTSPKg
+typeinfo name for __float128 const*
 mprotect@GLIBC_2.0
 GaussCol_C
 avcodec_encode_audio2@LIBAVCODEC_58
 sched_get_priority_min@GLIBC_2.0
-_ZTSPy
-_ZN8tinyxml210XMLPrinter11CompactModeERKNS_10XMLElementE
-_ZTSPi
+typeinfo name for unsigned long long*
+tinyxml2::XMLPrinter::CompactMode(tinyxml2::XMLElement const&)
+typeinfo name for int*
 ScaleUVRowDownEven_C
-_ZTSN10__cxxabiv120__function_type_infoE
+typeinfo name for __cxxabiv1::__function_type_info
 vpaes_set_encrypt_key
-_ZTIy
+typeinfo for unsigned long long
 NV21ToYUV24Row_C
 realloc@GLIBC_2.0
 Camellia_DecryptBlock_Rounds
 fopen@GLIBC_2.1
 MergeXRGBRow_C
 getnameinfo@GLIBC_2.1
-_ZNK8tinyxml210XMLElement7GetTextEv
+tinyxml2::XMLElement::GetText() const
 bind@GLIBC_2.0
 ftell@GLIBC_2.0
 wcstoull@GLIBC_2.1

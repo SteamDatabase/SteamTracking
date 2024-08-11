@@ -7,27 +7,27 @@ __cxa_finalize
 strcasecmp
 strlen
 strtol
-_Z17GetCPUInformationv
+GetCPUInformation()
 Is64BitOS
 Plat_IsInDebugSession
-_ZN11SteamStdLib11CommandLineEv
+SteamStdLib::CommandLine()
 GetOSType
-_ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 __cxa_atexit
-_ZN11SteamStdLib17CCommandLineParamC1EPKcS2_
-_ZN11SteamStdLib17CCommandLineParamD1Ev
+SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
+SteamStdLib::CCommandLineParam::~CCommandLineParam()
 ThreadInterlockedDecrement
 V_strtoui64
 g_pMemAllocSteam
 ThreadInterlockedIncrement
-_ZTVN10__cxxabiv117__class_type_infoE
-_ZTVN10__cxxabiv120__si_class_type_infoE
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__si_class_type_info
 ___tls_get_addr
-_ZN10CValidator4PushEPKcPvS1_
-_ZN10CValidator11ClaimMemoryEPKv
-_ZN10CValidator3PopEv
+CValidator::Push(char const*, void*, char const*)
+CValidator::ClaimMemory(void const*)
+CValidator::Pop()
 strcmp
-_ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
+AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 V_snprintf
 EnsureValidBoolValue
 g_VProfProfilesRunningCount
@@ -35,7 +35,7 @@ CVProfile_ExitScope
 VProfInternalEnterScopeCurrentThread
 V_vsnprintfRet
 __printf_chk
-_ZTVN10__cxxabiv121__vmi_class_type_infoE
+vtable for __cxxabiv1::__vmi_class_type_info
 __pthread_key_create
 pthread_once
 __longjmp_chk
@@ -48,7 +48,7 @@ __memcpy_chk
 __wrap_fopen
 fread
 fclose
-_Z9V_stristrPKcS0_
+V_stristr(char const*, char const*)
 strchr
 V_strncpy
 V_strnicmp
@@ -67,14 +67,14 @@ Plat_MSTime64
 ThreadSleep
 V_MakeAbsolutePath
 strtoll
-_ZNK10CValidator9IsClaimedEPKv
+CValidator::IsClaimed(void const*) const
 roundf
 ETW_Steamworks_DispatchCallback_Start
 ETW_Steamworks_DispatchCallback_End_
 ETW_Steamworks_RunCallbacks_Start
 ETW_Steamworks_RunCallbacks_End_
 V_atoui64
-_ZN10CValidator16ClaimArrayMemoryEPKv
+CValidator::ClaimArrayMemory(void const*)
 V_atof
 strtod
 _DMsg
@@ -85,8 +85,8 @@ getcwd
 V_strncat_length
 V_RemoveDotSlashes
 V_FixDoubleSlashes
-_ZN16SteamThreadTools7CThreadD2Ev
-_ZN16SteamThreadTools12CThreadMutexD1Ev
+SteamThreadTools::CThread::~CThread()
+SteamThreadTools::CThreadMutex::~CThreadMutex()
 pthread_mutex_lock
 pthread_mutex_unlock
 V_UTF8ToUTF32
@@ -130,18 +130,18 @@ strrchr
 alphasort64
 __wrap_scandir64
 __wrap_symlink
-_ZN16SteamThreadTools7CThread4JoinEj
-_ZN16SteamThreadTools7CThreadC2Ev
-_ZN16SteamThreadTools12CThreadMutexC1Ev
-_ZN16SteamThreadTools7CThread7SetNameEPKc
-_ZN16SteamThreadTools7CThread5StartEj
+SteamThreadTools::CThread::Join(unsigned int)
+SteamThreadTools::CThread::CThread()
+SteamThreadTools::CThreadMutex::CThreadMutex()
+SteamThreadTools::CThread::SetName(char const*)
+SteamThreadTools::CThread::Start(unsigned int)
 __vsnprintf_chk
 V_UnqualifiedFileName
-_ZTIN16SteamThreadTools7CThreadE
-_ZN16SteamThreadTools7CThread4InitEv
-_ZN16SteamThreadTools7CThread6OnExitEv
-_ZNK16SteamThreadTools7CThread15IsThreadRunningEv
-_ZN16SteamThreadTools7CThread13GetThreadProcEv
+typeinfo for SteamThreadTools::CThread
+SteamThreadTools::CThread::Init()
+SteamThreadTools::CThread::OnExit()
+SteamThreadTools::CThread::IsThreadRunning() const
+SteamThreadTools::CThread::GetThreadProc()
 CreateInterface
 __wrap_dlopen
 dlclose
@@ -198,9 +198,9 @@ __fread_chk
 Plat_CommandLineParamExists
 isalnum
 __assert_fail
-_ZN6google8protobuf8internal8byteswapILi1EEEvPv
-_ZN6google8protobuf8internal8byteswapILi4EEEvPv
-_ZN6google8protobuf8internal8byteswapILi8EEEvPv
+void google::protobuf::internal::byteswap<1>(void*)
+void google::protobuf::internal::byteswap<4>(void*)
+void google::protobuf::internal::byteswap<8>(void*)
 lseek
 strtoull
 __sprintf_chk
@@ -252,9 +252,9 @@ wctob
 SDL_ShowCursor
 SDL_GetWindowFromID
 g_VProfManager
-_ZN10SteamVProf13CVProfManager24StartProfilingAllThreadsEfi
-_ZN10SteamVProf13CVProfManager23StopProfilingAllThreadsEv
-_ZN10SteamVProf13CVProfManager21DumpAllThreadProfilesEi
+SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
+SteamVProf::CVProfManager::StopProfilingAllThreads()
+SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
 SDL_DestroyWindow
 SDL_DelEventWatch
 SDL_GL_DestroyContext
@@ -295,8 +295,8 @@ StringFindSuffix
 V_pretifymem
 __memset_chk
 ThreadImplOneTimeInit
-_ZN16SteamThreadTools16CThreadLocalBaseD2Ev
-_ZN16SteamThreadTools16CThreadLocalBaseC2Ev
+SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
+SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
 ThreadInMainThread
 mmap
 md5_block_asm_data_order
@@ -316,22 +316,22 @@ OPENSSL_instrument_bus2
 OPENSSL_ia32_rdrand_bytes
 OPENSSL_ia32_rdseed_bytes
 __vfprintf_chk
-_ZTVN9__gnu_cxx24__concurrence_lock_errorE
-_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTIN9__gnu_cxx24__concurrence_lock_errorE
-_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTSN9__gnu_cxx24__concurrence_lock_errorE
-_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTSN10__cxxabiv115__forced_unwindE
-_ZTIN10__cxxabiv115__forced_unwindE
-_ZTSN10__cxxabiv119__foreign_exceptionE
-_ZTIN10__cxxabiv119__foreign_exceptionE
-_ZTVN10__cxxabiv115__forced_unwindE
-_ZTVN10__cxxabiv119__foreign_exceptionE
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__foreign_exception
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
 syscall
-_ZTIN9__gnu_cxx20recursive_init_errorE
-_ZTVN9__gnu_cxx20recursive_init_errorE
-_ZTSN9__gnu_cxx20recursive_init_errorE
+typeinfo for __gnu_cxx::recursive_init_error
+vtable for __gnu_cxx::recursive_init_error
+typeinfo name for __gnu_cxx::recursive_init_error
 fputs
 stdout
 stdin
@@ -374,17 +374,17 @@ bind_textdomain_codeset
 dgettext
 __strftime_l
 __wcsftime_l
-_Z27_txnal_cow_string_D1_commitPv
-_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 _ITM_RU1
-_ZGTtnaj
+transaction clone for operator new[](unsigned int)
 _ITM_memcpyRtWn
-_Z23_txnal_cow_string_c_strPKv
+_txnal_cow_string_c_str(void const*)
 _ITM_RU4
-_Z20_txnal_cow_string_D1Pv
+_txnal_cow_string_D1(void*)
 _ITM_addUserCommitAction
-_Z26_txnal_logic_error_get_msgPv
-_Z28_txnal_runtime_error_get_msgPv
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
 dl_iterate_phdr
 __xmknod
 __stack_chk_fail
@@ -7924,21 +7924,21 @@ roundf@GLIBC_2.1
 V_GetFileExtension
 chmod@GLIBC_2.0
 fnmatch@GLIBC_2.2.3
-_ZN6google8protobuf8internal8byteswapILi4EEEvPv
+void google::protobuf::internal::byteswap<4>(void*)
 __cxa_finalize@GLIBC_2.1.3
 V_pretifymem
 fread@GLIBC_2.0
-_ZN15AssertMsgHelperILb1EE12AssertFailedEPKcjS2_
+AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
 V_ExtractFileExtension
 __wcsftime_l@GLIBC_2.3
-_ZN16SteamThreadTools16CThreadLocalBaseC2Ev
+SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
 V_IsValidURLCharacter
 __wrap_dlopen
 alphasort64@GLIBC_2.2
 V_atof
 __duplocale@GLIBC_2.1
 SDL_GetDisplayBounds@SDL3_0.0.0
-_Z35_txnal_cow_string_C1_for_exceptionsPvPKcS_
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
 Plat_IsSteamConsoleMode
 __wrap_mkfifo
 ThreadImplOneTimeInit
@@ -7953,7 +7953,7 @@ access@GLIBC_2.0
 mbsnrtowcs@GLIBC_2.0
 open64@GLIBC_2.2
 V_binarytohex
-_ZTIN9__gnu_cxx24__concurrence_lock_errorE
+typeinfo for __gnu_cxx::__concurrence_lock_error
 __wrap_mount
 Plat_CommandLineParamExists
 ETW_Steamworks_DispatchCallback_End_
@@ -7962,7 +7962,7 @@ _ITM_memcpyRtWn
 btowc@GLIBC_2.0
 V_vsnprintfRet
 statvfs@GLIBC_2.1
-_ZN10SteamVProf13CVProfManager21DumpAllThreadProfilesEi
+SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
 sqrtf@GLIBC_2.0
 glBegin
 mkdir@GLIBC_2.0
@@ -7970,7 +7970,7 @@ _edata
 glClear
 glDisable
 strstr@GLIBC_2.0
-_Z26_txnal_logic_error_get_msgPv
+_txnal_logic_error_get_msg(void*)
 __vfprintf_chk@GLIBC_2.3.4
 scandir@GLIBC_2.0
 OPENSSL_instrument_halt
@@ -7991,7 +7991,7 @@ __wcsxfrm_l@GLIBC_2.1
 wmemset@GLIBC_2.0
 symlink@GLIBC_2.0
 lseek@GLIBC_2.0
-_ZN16SteamThreadTools12CThreadMutexC1Ev
+SteamThreadTools::CThreadMutex::CThreadMutex()
 glTexImage2D
 ungetwc@GLIBC_2.2
 SDL_DestroyWindow@SDL3_0.0.0
@@ -8004,27 +8004,27 @@ OPENSSL_atomic_add
 sha256_block_data_order
 V_tolower
 __wrap_lstat
-_ZN16SteamThreadTools7CThread4InitEv
+SteamThreadTools::CThread::Init()
 SDL_GetDisplays@SDL3_0.0.0
-_ZN16SteamThreadTools7CThread7SetNameEPKc
+SteamThreadTools::CThread::SetName(char const*)
 VProfInternalEnterScopeCurrentThread
 ferror@GLIBC_2.0
 __strxfrm_l@GLIBC_2.1
-_ZN16SteamThreadTools16CThreadLocalBaseD2Ev
+SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
 OPENSSL_cleanse
 __wrap_rename
-_ZN10CValidator16ClaimArrayMemoryEPKv
+CValidator::ClaimArrayMemory(void const*)
 fmodf@GLIBC_2.0
 SDL_GetWindowFromID@SDL3_0.0.0
-_ZN6google8protobuf8internal8byteswapILi1EEEvPv
-_ZTVN9__gnu_cxx24__concurrence_lock_errorE
+void google::protobuf::internal::byteswap<1>(void*)
+vtable for __gnu_cxx::__concurrence_lock_error
 isspace@GLIBC_2.0
 fputc@GLIBC_2.0
-_ZTIN16SteamThreadTools7CThreadE
+typeinfo for SteamThreadTools::CThread
 longjmp@GLIBC_2.0
-_ZN6google8protobuf8internal8byteswapILi8EEEvPv
+void google::protobuf::internal::byteswap<8>(void*)
 V_stricmp_prefix
-_ZN16SteamThreadTools7CThreadC2Ev
+SteamThreadTools::CThread::CThread()
 SDL_ShowWindow@SDL3_0.0.0
 glPixelStorei
 glTexCoord2f
@@ -8033,10 +8033,10 @@ strcasestr@GLIBC_2.1
 dl_iterate_phdr@GLIBC_2.2.4
 EnsureValidBoolValue
 glGetError
-_ZN16SteamThreadTools7CThread6OnExitEv
+SteamThreadTools::CThread::OnExit()
 __wrap_open64
 SDL_SetHint@SDL3_0.0.0
-_Z20_txnal_cow_string_D1Pv
+_txnal_cow_string_D1(void*)
 malloc@GLIBC_2.0
 __uselocale@GLIBC_2.3
 frexp@GLIBC_2.0
@@ -8046,8 +8046,8 @@ __wrap_access
 munmap@GLIBC_2.0
 statfs64@GLIBC_2.1
 OPENSSL_instrument_bus
-_ZTVN9__gnu_cxx26__concurrence_unlock_errorE
-_ZTVN10__cxxabiv119__foreign_exceptionE
+vtable for __gnu_cxx::__concurrence_unlock_error
+vtable for __cxxabiv1::__foreign_exception
 fprintf@GLIBC_2.0
 getcwd@GLIBC_2.0
 __sprintf_chk@GLIBC_2.3.4
@@ -8056,13 +8056,13 @@ V_strnicmp
 __snprintf_chk@GLIBC_2.3.4
 V_AppendSlash
 __wrap_chdir
-_Z23_txnal_cow_string_c_strPKv
+_txnal_cow_string_c_str(void const*)
 __wrap_dlmopen
 SDL_AddEventWatch@SDL3_0.0.0
 V_atoui64
 mount@GLIBC_2.0
 __iswctype_l@GLIBC_2.1
-_ZTVN9__gnu_cxx20recursive_init_errorE
+vtable for __gnu_cxx::recursive_init_error
 stdout@GLIBC_2.0
 V_UTF16ToUTF8
 __xstat@GLIBC_2.0
@@ -8078,29 +8078,29 @@ __ctype_get_mb_cur_max@GLIBC_2.0
 V_snprintf
 SDL_ShowCursor@SDL3_0.0.0
 __wrap_utime
-_ZN16SteamThreadTools7CThread4JoinEj
+SteamThreadTools::CThread::Join(unsigned int)
 _fini
-_ZN11SteamStdLib17CCommandLineParamC1EPKcS2_
+SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
 strcmp@GLIBC_2.0
 utimes@GLIBC_2.0
 SDL_GL_SwapWindow@SDL3_0.0.0
 OPENSSL_wipe_cpu
-_ZN11SteamStdLib17CCommandLineParamD1Ev
-_ZTSN9__gnu_cxx20recursive_init_errorE
+SteamStdLib::CCommandLineParam::~CCommandLineParam()
+typeinfo name for __gnu_cxx::recursive_init_error
 SDL_HideCursor@SDL3_0.0.0
 _ITM_addUserCommitAction
 __strftime_l@GLIBC_2.3
 __wrap_open
 wmemmove@GLIBC_2.0
-_ZNK10CValidator9IsClaimedEPKv
+CValidator::IsClaimed(void const*) const
 tolower@GLIBC_2.0
-_ZN10SteamVProf13CVProfManager24StartProfilingAllThreadsEfi
+SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
 __errno_location@GLIBC_2.0
 wcsnrtombs@GLIBC_2.0
 strncpy@GLIBC_2.0
 OPENSSL_ia32_cpuid
 fflush@GLIBC_2.0
-_ZN15AssertMsgHelperILb0EE12AssertFailedEPKcjS2_z
+AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
 __wrap_mkdir
 bind_textdomain_codeset@GLIBC_2.2
 SDL_GetWindowProperties@SDL3_0.0.0
@@ -8123,11 +8123,11 @@ __wrap___lxstat64
 SDL_GL_MakeCurrent@SDL3_0.0.0
 V_towupper32
 fseek@GLIBC_2.0
-_ZN10SteamVProf13CVProfManager23StopProfilingAllThreadsEv
+SteamVProf::CVProfManager::StopProfilingAllThreads()
 SDL_WasInit@SDL3_0.0.0
 dgettext@GLIBC_2.0
 getenv@GLIBC_2.0
-_ZN16SteamThreadTools7CThread13GetThreadProcEv
+SteamThreadTools::CThread::GetThreadProc()
 fputs@GLIBC_2.0
 V_towlower32
 Warning
@@ -8158,9 +8158,9 @@ vsnprintf@GLIBC_2.0
 V_WcsSkipArticles
 wcslen@GLIBC_2.0
 floor@GLIBC_2.0
-_ZTSN9__gnu_cxx26__concurrence_unlock_errorE
-_ZN10CValidator3PopEv
-_ZTSN10__cxxabiv119__foreign_exceptionE
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+CValidator::Pop()
+typeinfo name for __cxxabiv1::__foreign_exception
 stdin@GLIBC_2.0
 ThreadGetCurrentProcessId
 ETW_Steamworks_DispatchCallback_Start
@@ -8168,27 +8168,27 @@ putwc@GLIBC_2.2
 ftello64@GLIBC_2.1
 __ctype_b_loc@GLIBC_2.3
 iswspace@GLIBC_2.0
-_ZTIN10__cxxabiv119__foreign_exceptionE
+typeinfo for __cxxabiv1::__foreign_exception
 StringFindSuffix
 __stack_chk_fail@GLIBC_2.4
 g_pMemAllocSteam
 _init
-_ZN10CValidator4PushEPKcPvS1_
+CValidator::Push(char const*, void*, char const*)
 readdir64@GLIBC_2.2
 mbrtowc@GLIBC_2.0
 __wrap_opendir
 dlerror@GLIBC_2.0
 V_StripTrailingSlash
-_ZTIN10__cxxabiv115__forced_unwindE
+typeinfo for __cxxabiv1::__forced_unwind
 pthread_mutex_lock@GLIBC_2.0
-_ZN16SteamThreadTools7CThreadD2Ev
+SteamThreadTools::CThread::~CThread()
 strtol@GLIBC_2.0
 SDL_InitSubSystem@SDL3_0.0.0
 V_strncmp
 V_StripPrecedingAndTrailingWhitespace
 OPENSSL_far_spin
 __wrap_chmod
-_ZTVN10__cxxabiv117__class_type_infoE
+vtable for __cxxabiv1::__class_type_info
 glVertex2f
 utime@GLIBC_2.0
 V_vsnwprintf
@@ -8213,22 +8213,22 @@ strncmp@GLIBC_2.0
 V_strtoui64
 V_wcsncpy
 V_atoi
-_ZN16SteamThreadTools12CThreadMutexD1Ev
+SteamThreadTools::CThreadMutex::~CThreadMutex()
 __newlocale@GLIBC_2.1
 strcasecmp@GLIBC_2.0
 glMatrixMode
-_ZNK16SteamThreadTools7CThread15IsThreadRunningEv
+SteamThreadTools::CThread::IsThreadRunning() const
 __wrap_link
-_ZGTtnaj
-_ZTVN10__cxxabiv120__si_class_type_infoE
+transaction clone for operator new[](unsigned int)
+vtable for __cxxabiv1::__si_class_type_info
 glGenTextures
 Plat_IsInDebugSession
-_ZTIN9__gnu_cxx26__concurrence_unlock_errorE
+typeinfo for __gnu_cxx::__concurrence_unlock_error
 _end
 __memset_chk@GLIBC_2.3.4
 ThreadInterlockedIncrement
 __strtod_l@GLIBC_2.1
-_Z27_txnal_cow_string_D1_commitPv
+_txnal_cow_string_D1_commit(void*)
 Is64BitOS
 __wctype_l@GLIBC_2.1
 V_UTF8ToUTF32
@@ -8251,9 +8251,9 @@ WeakRandomFloat
 __bss_start
 __towlower_l@GLIBC_2.1
 wcstol@GLIBC_2.0
-_ZN16SteamThreadTools7CThread5StartEj
+SteamThreadTools::CThread::Start(unsigned int)
 glColor4ub
-_ZN11SteamStdLib11CommandLineEv
+SteamStdLib::CommandLine()
 wmemcpy@GLIBC_2.0
 Plat_MSTime64
 strtoll@GLIBC_2.0
@@ -8270,7 +8270,7 @@ strtoul@GLIBC_2.0
 __fprintf_chk@GLIBC_2.3.4
 syscall@GLIBC_2.0
 CVProfile_ExitScope
-_ZTVN10__cxxabiv121__vmi_class_type_infoE
+vtable for __cxxabiv1::__vmi_class_type_info
 __wcscoll_l@GLIBC_2.1
 __towupper_l@GLIBC_2.1
 V_StripLastDir
@@ -8290,7 +8290,7 @@ wcsncasecmp@GLIBC_2.1
 __wrap_freopen
 Plat_FloatTime
 __wrap___xstat
-_ZTIN9__gnu_cxx20recursive_init_errorE
+typeinfo for __gnu_cxx::recursive_init_error
 OPENSSL_ia32_rdrand_bytes
 __wrap_statfs64
 abort@GLIBC_2.0
@@ -8302,16 +8302,16 @@ pthread_once@GLIBC_2.0
 dlmopen@GLIBC_2.3.4
 __wrap_chown
 pow@GLIBC_2.0
-_ZTVN10__cxxabiv115__forced_unwindE
+vtable for __cxxabiv1::__forced_unwind
 wmemchr@GLIBC_2.0
-_Z9V_stristrPKcS0_
+V_stristr(char const*, char const*)
 fclose@GLIBC_2.1
 freopen@GLIBC_2.0
 __vasprintf_chk@GLIBC_2.8
 mkfifo@GLIBC_2.0
 rmdir@GLIBC_2.0
 __wrap_unlink
-_ZTSN10__cxxabiv115__forced_unwindE
+typeinfo name for __cxxabiv1::__forced_unwind
 statvfs64@GLIBC_2.1
 unlink@GLIBC_2.0
 __wrap_statfs
@@ -8329,18 +8329,18 @@ Plat_IsChromeOS
 strcpy@GLIBC_2.0
 mmap@GLIBC_2.0
 fseeko64@GLIBC_2.1
-_ZTSN9__gnu_cxx24__concurrence_lock_errorE
+typeinfo name for __gnu_cxx::__concurrence_lock_error
 _ITM_registerTMCloneTable
-_ZN10CValidator11ClaimMemoryEPKv
+CValidator::ClaimMemory(void const*)
 __assert_fail@GLIBC_2.0
 wcscmp@GLIBC_2.0
-_Z28_txnal_runtime_error_get_msgPv
+_txnal_runtime_error_get_msg(void*)
 V_ExtractFilePath
 SDL_GL_SetAttribute@SDL3_0.0.0
 scandir64@GLIBC_2.2
 __wrap_lstat64
 V_RemoveDotSlashes
-_Z17GetCPUInformationv
+GetCPUInformation()
 strtod@GLIBC_2.0
 V_FixDoubleSlashes
 SDL_GL_DestroyContext@SDL3_0.0.0
