@@ -70,10 +70,6 @@
             "argc": "1"
         },
         {
-            "name": "GetSteamVRPid",
-            "argc": "1"
-        },
-        {
             "name": "GetWebSecret",
             "argc": "1"
         },

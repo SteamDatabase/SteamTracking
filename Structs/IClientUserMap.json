@@ -322,6 +322,10 @@
             "argc": "1"
         },
         {
+            "name": "IsSiteLicenseAssociationPending",
+            "argc": "1"
+        },
+        {
             "name": "CheckoutSiteLicenseSeat",
             "argc": "2"
         },
@@ -407,6 +411,10 @@
         },
         {
             "name": "StopInstallScript",
+            "argc": "2"
+        },
+        {
+            "name": "ResetInstallScript",
             "argc": "2"
         },
         {
@@ -814,23 +822,11 @@
             "argc": "1"
         },
         {
-            "name": "SetAppBlockedState",
-            "argc": "3"
-        },
-        {
             "name": "BIsAppBlocked",
             "argc": "2"
         },
         {
             "name": "BIsAppInBlockList",
-            "argc": "2"
-        },
-        {
-            "name": "BlockFeature",
-            "argc": "2"
-        },
-        {
-            "name": "UnblockFeature",
             "argc": "2"
         },
         {
@@ -850,10 +846,6 @@
             "argc": "3"
         },
         {
-            "name": "RequestParentalRecoveryEmail",
-            "argc": "1"
-        },
-        {
             "name": "BIsLockFromSiteLicense",
             "argc": "1"
         },
@@ -864,14 +856,6 @@
         {
             "name": "BGetSerializedParentalSettings",
             "argc": "2"
-        },
-        {
-            "name": "BSetParentalSettings",
-            "argc": "2"
-        },
-        {
-            "name": "BDisableParentalSettings",
-            "argc": "1"
         },
         {
             "name": "BGetParentalWebToken",
@@ -930,26 +914,6 @@
             "argc": "1"
         },
         {
-            "name": "ClearAndSetAppTags",
-            "argc": "3"
-        },
-        {
-            "name": "RemoveAppTag",
-            "argc": "3"
-        },
-        {
-            "name": "AddAppTag",
-            "argc": "3"
-        },
-        {
-            "name": "ClearAppTags",
-            "argc": "2"
-        },
-        {
-            "name": "SetAppHidden",
-            "argc": "3"
-        },
-        {
             "name": "RequestAccountLinkInfo",
             "argc": "1"
         },
@@ -991,10 +955,6 @@
         },
         {
             "name": "BGetAppsLastPlayedMap",
-            "argc": "2"
-        },
-        {
-            "name": "BGetAppTagsMap",
             "argc": "2"
         },
         {
@@ -1046,10 +1006,6 @@
             "argc": "1"
         },
         {
-            "name": "Test_SetClientInstallationID",
-            "argc": "3"
-        },
-        {
             "name": "GetAppIDForGameID",
             "argc": "2"
         },
@@ -1090,6 +1046,10 @@
             "argc": "3"
         },
         {
+            "name": "GetFamilyCopyCounts",
+            "argc": "2"
+        },
+        {
             "name": "NotifyPendingGameLaunch_FetchSteamStreamingEncoderConfig",
             "argc": "2"
         },
@@ -1099,7 +1059,7 @@
         },
         {
             "name": "BGetProcessIDsForGame",
-            "argc": "3"
+            "argc": "4"
         },
         {
             "name": "CancelLicenseForApp",

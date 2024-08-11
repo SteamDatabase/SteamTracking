@@ -144,6 +144,10 @@
         {
             "name": "InspectItem",
             "argc": "3"
+        },
+        {
+            "name": "TEST_ClearMsgCache",
+            "argc": "1"
         }
     ]
 }

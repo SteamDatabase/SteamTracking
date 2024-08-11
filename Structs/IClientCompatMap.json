@@ -50,12 +50,8 @@
             "argc": "2"
         },
         {
-            "name": "GetWhitelistedGameList",
-            "argc": "2"
-        },
-        {
-            "name": "GetControllerConfigOverrides",
-            "argc": "2"
+            "name": "GetAppCompatCategories",
+            "argc": "3"
         },
         {
             "name": "StartSession",

@@ -76,6 +76,14 @@
         {
             "name": "FlushToDisk",
             "argc": "2"
+        },
+        {
+            "name": "GetSubKeyCount",
+            "argc": "3"
+        },
+        {
+            "name": "GetSubKeyName",
+            "argc": "4"
         }
     ]
 }

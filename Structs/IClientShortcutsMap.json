@@ -39,7 +39,7 @@
         },
         {
             "name": "AddOpenVRShortcut",
-            "argc": "4"
+            "argc": "5"
         },
         {
             "name": "SetShortcutFromFullpath",
@@ -63,22 +63,6 @@
         },
         {
             "name": "SetShortcutCommandLine",
-            "argc": "3"
-        },
-        {
-            "name": "ClearShortcutUserTags",
-            "argc": "2"
-        },
-        {
-            "name": "AddShortcutUserTag",
-            "argc": "3"
-        },
-        {
-            "name": "RemoveShortcutUserTag",
-            "argc": "3"
-        },
-        {
-            "name": "ClearAndSetShortcutUserTags",
             "argc": "3"
         },
         {

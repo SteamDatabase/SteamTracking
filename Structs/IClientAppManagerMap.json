@@ -34,6 +34,10 @@
             "argc": "4"
         },
         {
+            "name": "BGetContentInfoForApps",
+            "argc": "3"
+        },
+        {
             "name": "IsAppDlcInstalled",
             "argc": "3"
         },
@@ -130,8 +134,12 @@
             "argc": "2"
         },
         {
-            "name": "GetAvailableBetas",
-            "argc": "6"
+            "name": "GetNumBetas",
+            "argc": "4"
+        },
+        {
+            "name": "GetBetaInfo",
+            "argc": "9"
         },
         {
             "name": "CheckBetaPassword",

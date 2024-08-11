@@ -15,7 +15,7 @@
         },
         {
             "name": "WriteScreenshot",
-            "argc": "7"
+            "argc": "9"
         },
         {
             "name": "AddScreenshotToLibrary",
@@ -143,7 +143,7 @@
         },
         {
             "name": "BGetUserScreenshotDirectory",
-            "argc": "3"
+            "argc": "2"
         }
     ]
 }

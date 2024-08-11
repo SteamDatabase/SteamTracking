@@ -90,6 +90,10 @@
             "argc": "3"
         },
         {
+            "name": "InvalidateActionManifestPath",
+            "argc": "2"
+        },
+        {
             "name": "DumpConfigurationToDisk",
             "argc": "2"
         },
@@ -650,6 +654,10 @@
             "argc": "3"
         },
         {
+            "name": "SetControllerUseUniversalFaceButtonGlyphs",
+            "argc": "3"
+        },
+        {
             "name": "BGetTouchConfigData",
             "argc": "7"
         },
@@ -668,6 +676,10 @@
         {
             "name": "ForceSimpleHapticEvent",
             "argc": "6"
+        },
+        {
+            "name": "GetControllerMacAddr",
+            "argc": "4"
         }
     ]
 }

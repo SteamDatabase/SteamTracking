@@ -996,6 +996,10 @@
         {
             "name": "DownloadCommunityItemAsset",
             "argc": "5"
+        },
+        {
+            "name": "GetMultiplayerSessionShareURL",
+            "argc": "2"
         }
     ]
 }

@@ -46,15 +46,11 @@
             "argc": "2"
         },
         {
-            "name": "GetStoreTagLocalization",
-            "argc": "6"
-        },
-        {
             "name": "TakeUpdateLock",
             "argc": "1"
         },
         {
-            "name": "GetAppKVRaw",
+            "name": "GetAllAppsKVRaw",
             "argc": "4"
         },
         {

@@ -314,10 +314,6 @@
             "argc": "4"
         },
         {
-            "name": "UpdateWideVineCDM",
-            "argc": "2"
-        },
-        {
             "name": "DispatchClearAllBrowsingData",
             "argc": "1"
         },
@@ -452,6 +448,10 @@
         {
             "name": "IsSteamInTournamentMode",
             "argc": "1"
+        },
+        {
+            "name": "DesktopLockedStateChanged",
+            "argc": "2"
         }
     ]
 }

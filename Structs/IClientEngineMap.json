@@ -266,8 +266,8 @@
             "argc": "3"
         },
         {
-            "name": "Unknown_66",
-            "argc": "0"
+            "name": "GetIClientTimeline",
+            "argc": "3"
         },
         {
             "name": "GetIClientVideo",
@@ -286,10 +286,6 @@
             "argc": "0"
         },
         {
-            "name": "Unknown_71",
-            "argc": "0"
-        },
-        {
             "name": "GetIClientSharedConnection",
             "argc": "3"
         },
@@ -298,12 +294,16 @@
             "argc": "3"
         },
         {
-            "name": "Unknown_74",
+            "name": "Unknown_73",
             "argc": "0"
         },
         {
             "name": "GetIClientCompat",
             "argc": "3"
+        },
+        {
+            "name": "Unknown_75",
+            "argc": "0"
         },
         {
             "name": "Unknown_76",
@@ -319,10 +319,6 @@
         },
         {
             "name": "Unknown_79",
-            "argc": "0"
-        },
-        {
-            "name": "Unknown_80",
             "argc": "0"
         }
     ]

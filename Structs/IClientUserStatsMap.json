@@ -26,6 +26,10 @@
             "argc": "2"
         },
         {
+            "name": "DeprecatedPublic_RequestCurrentStats",
+            "argc": "2"
+        },
+        {
             "name": "GetStat",
             "argc": "4"
         },

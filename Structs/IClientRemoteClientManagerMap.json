@@ -122,6 +122,10 @@
             "argc": "3"
         },
         {
+            "name": "BRemoteClientCanSteamVR",
+            "argc": "3"
+        },
+        {
             "name": "GetRemoteClientConnectState",
             "argc": "3"
         },
@@ -306,6 +310,10 @@
             "argc": "2"
         },
         {
+            "name": "CancelRemoteClientPairing",
+            "argc": "3"
+        },
+        {
             "name": "UsedVideoX264",
             "argc": "1"
         },
@@ -410,12 +418,20 @@
             "argc": "4"
         },
         {
+            "name": "ShowRemotePlayTogetherUI",
+            "argc": "2"
+        },
+        {
             "name": "GetCloudGameTimeRemaining",
             "argc": "4"
         },
         {
             "name": "ShutdownStreamClients",
             "argc": "2"
+        },
+        {
+            "name": "MarkTaskComplete",
+            "argc": "4"
         }
     ]
 }
