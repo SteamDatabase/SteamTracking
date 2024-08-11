@@ -626,7 +626,7 @@
             const e = this.state.appinfo
               ? this.state.appinfo.name +
                 (this.props.showAppIds ? ` (${this.state.appid})` : "")
-              : this.props.strPrompt ?? "Select game";
+              : (this.props.strPrompt ?? "Select game");
             t = g.createElement(
               "div",
               { className: C.AppDisplay },

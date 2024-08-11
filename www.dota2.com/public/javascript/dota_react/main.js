@@ -80795,7 +80795,7 @@
           (0, r.useEffect)(() => {
             a(!0);
           }, []),
-          t ? e.children : e.fallback ?? null
+          t ? e.children : (e.fallback ?? null)
         );
       }
       var i = a(57942),

@@ -22085,7 +22085,7 @@
           (0, r.useEffect)(() => {
             n(!0);
           }, []),
-          t ? e.children : e.fallback ?? null
+          t ? e.children : (e.fallback ?? null)
         );
       }
       var o = n(73860),

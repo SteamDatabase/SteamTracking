@@ -30530,7 +30530,7 @@
                 return {
                   data: t,
                   dataUpdateCount: 0,
-                  dataUpdatedAt: r ? n ?? Date.now() : 0,
+                  dataUpdatedAt: r ? (n ?? Date.now()) : 0,
                   error: null,
                   errorUpdateCount: 0,
                   errorUpdatedAt: 0,
