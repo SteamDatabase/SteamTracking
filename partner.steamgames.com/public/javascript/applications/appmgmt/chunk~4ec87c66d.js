@@ -103192,7 +103192,7 @@
         {
           const e = {
             day: "numeric",
-            month: m && o ? void 0 : a ?? "long",
+            month: m && o ? void 0 : (a ?? "long"),
             year: c ? void 0 : "numeric",
           };
           return (

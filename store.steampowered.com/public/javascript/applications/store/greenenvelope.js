@@ -620,7 +620,7 @@
         const r = !!i && (3 == o || 4 == o);
         let c;
         return (
-          (c = 4 == o ? Q : l ?? K),
+          (c = 4 == o ? Q : (l ?? K)),
           a.createElement(
             "div",
             { className: U().Header },

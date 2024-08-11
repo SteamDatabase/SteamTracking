@@ -2316,7 +2316,7 @@
       }
       function O(t, e) {
         const n = k.Get().m_mapPackageStateForDiscountEvents.get(t)?.get(e);
-        return 1 == n?.eState ? n?.discount?.nDiscountPct ?? 0 : null;
+        return 1 == n?.eState ? (n?.discount?.nDiscountPct ?? 0) : null;
       }
       function B(t, e) {
         const [n, a] = l.useState(() =>

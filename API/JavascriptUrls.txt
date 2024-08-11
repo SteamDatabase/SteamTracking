@@ -1988,6 +1988,7 @@ http://cdn.steamcommunity.com/economy/emoticon/:twteamrandom:
 http://cdn.steamcommunity.com/economy/emoticon/:waterrune:
 http://cdn.steamcommunity.com/economy/emoticon/:wormwarp:
 http://help.steampowered.com/
+http://localhost:${}/
 http://proxy
 http://steamcommunity-a.akamaihd.net/economy/image/U8721VM9p9C2v1o6cKJ4qEnGqnE7IoTQgZI-VTdwyTBeimAcIoxXpgK8bPeslY9pPJIvB5IWW2-452kaM8heLSRgleGGo7VWk-kzO_V91empDlVz7ORGAWDqHhbR1TfHLen4wgZiPcIqcBn0kpYb7cAXB9ZJHRPUDQ
 http://steamcommunity-a.akamaihd.net/economy/image/U8721VM9p9C2v1o6cKJ4qEnGqnE7IoTQgZI-VTdwyTBeimAcIoxXpgK8bPeslY9pPJIvB5IWW2-452kaM8heLSRgleGHorVWwb1mbacg0bL6DV136-dDUDPhGBHXgmacLef8nQM0MpF8IBukyM1M7cAXB9aR2qBKFA
@@ -2506,6 +2507,7 @@ https://imgur.com
 https://instagram.com/dota2
 https://local.steam.dev:4443/wg?reqname=QuerySolr&request=${}
 https://medal.tv/clip/${}/?autoplay=0&donate=0${_ ? _ : ""}
+https://partner.steamgames.com
 https://partner.steamgames.com//apps/landing/${appid}
 https://partner.steamgames.com/actions/setlanguage/
 https://partner.steamgames.com/actions/waitforedits
@@ -2653,6 +2655,7 @@ https://partner.steamgames.com/store/updatereleaseoverridekv/${packageid}
 https://partner.steamgames.com/tagdata/forcetagranking
 https://partner.steamgames.com/tagdata/simpletagprofile
 https://partner.steamgames.com/tagdata/tagassociations
+https://partner.steamgames.com/walletfunding/approval/
 https://play.google.com/store/apps/details?id=com.valvesoftware.underlords
 https://player.vimeo.com/video/${videoid}?badge=0&autopause=0&autoplay=1&player_id=0
 https://policies.google.com/privacy
@@ -3036,6 +3039,7 @@ https://store.steampowered.com/login/?redir=grandprix
 https://store.steampowered.com/logout/
 https://store.steampowered.com/mobile
 https://store.steampowered.com/news/app/${appid}/view/${announcementid}/
+https://store.steampowered.com/pccafe/
 https://store.steampowered.com/pitstop
 https://store.steampowered.com/promotion/opencottagedoorajax
 https://store.steampowered.com/pub/${vanity_url}
@@ -3090,6 +3094,7 @@ https://support.steampowered.com/kb_article.php?ref=3180-UPHK-0900
 https://support.steampowered.com/kb_article.php?ref=4045-USHJ-3810
 https://support.steampowered.com/kb_article.php?ref=4577-TUJV-6223
 https://support.steampowered.com/kb_article.php?ref=6730-TOAK-6497
+https://support.steampowered.com/kb_article.php?ref=8571-GLVN-8711
 https://twitch.tv/
 https://twitch.tv/directory/game/Dota%202
 https://twitter.com/Steam

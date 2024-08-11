@@ -2192,7 +2192,7 @@
                 i
                   ? h[7 * e + a].current?.style.setProperty("--day-color1", i)
                   : h[7 * e + a].current?.style.removeProperty("--day-color1"),
-                l ?? i
+                (l ?? i)
                   ? h[7 * e + a].current?.style.setProperty(
                       "--day-color2",
                       l ?? i,

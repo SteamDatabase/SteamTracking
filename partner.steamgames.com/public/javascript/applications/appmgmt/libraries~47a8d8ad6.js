@@ -76,13 +76,11 @@
               this.#r.setOptions(this.options),
               r._defaulted &&
                 !(0, s.f8)(this.options, r) &&
-                this.#t
-                  .getQueryCache()
-                  .notify({
-                    type: "observerOptionsUpdated",
-                    query: this.#r,
-                    observer: this,
-                  });
+                this.#t.getQueryCache().notify({
+                  type: "observerOptionsUpdated",
+                  query: this.#r,
+                  observer: this,
+                });
             const n = this.hasListeners();
             n && l(this.#r, i, this.options, r) && this.#f(),
               this.updateResult(e),
