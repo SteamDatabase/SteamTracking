@@ -338,7 +338,6 @@ application.id
 application.icon_name
 1.0.0
 application.version
-%d.%d
 Failed to parse pulseaudio server version
 /data/src/public/tier0/tslist.h
 PulseServerInfoCallback
@@ -402,7 +401,6 @@ m_strFileName
 SOUND
 VOICE
 MUSIC
-(%s%d)
 12IAudioDevice
 10CUtlString
 17CMilesAudioDevice
@@ -543,7 +541,6 @@ flock %s %s failed. errno = %d
 g_VecLoadedModules
 /data/src/tier1/interface.cpp
 CreateInterface
-%s/%s%s
 dlmopen %s failed: %s\n
 .cpl
 WORKAROUND_GdbSymbolLoadHook
@@ -560,7 +557,6 @@ Lowered '%s' -> '%s'\n
 Breaking '%s' in '%s'\n
 Matched '%s' -> '%s'\n
 Unmatched %s\n
-m_Put >= 0
 /data/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 18CUtlCharConversion
@@ -632,10 +628,6 @@ St8ios_base
 St13basic_istreamIwSt11char_traitsIwEE
 basic_string::erase
 %s: __pos (which is %zu) > this->size() (which is %zu)
-%.*Lf
-%m/%d/%y
-%H:%M
-%H:%M:%S
 St9time_base
 St10money_base
 St13messages_base
@@ -700,7 +692,6 @@ JArray
 auto:
 VTT for 
 construction vtable for 
--in-
 typeinfo for 
 typeinfo name for 
 typeinfo fn for 
@@ -737,8 +728,6 @@ global destructors keyed to
 complex 
 imaginary 
  __vector(
-(...
-...)
 std::allocator
 std::basic_string
 std::string

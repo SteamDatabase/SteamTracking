@@ -431,14 +431,11 @@ CPathString
 V_RemoveDotSlashes failed for "%s".
 /data/src/tier1/fileio.cpp
 BCreateDirectory
-%s%c%s
-%s/%s
 11CPathString
 g_VecLoadedModules
 /data/src/tier1/interface.cpp
 CreateInterface
 g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
-%s/%s%s
 dlmopen %s failed: %s\n
 .cpl
 WORKAROUND_GdbSymbolLoadHook
@@ -458,11 +455,9 @@ Lowered '%s' -> '%s'\n
 Breaking '%s' in '%s'\n
 Matched '%s' -> '%s'\n
 Unmatched %s\n
-m_Put >= 0
 /data/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 nSize != 0
-num >= 0
 18CUtlCharConversion
 21CUtlCStringConversion
 19CUtlNoEscConversion
@@ -517,10 +512,6 @@ St8ios_base
 St13basic_istreamIwSt11char_traitsIwEE
 basic_string::erase
 %s: __pos (which is %zu) > this->size() (which is %zu)
-%.*Lf
-%m/%d/%y
-%H:%M
-%H:%M:%S
 St9time_base
 St10money_base
 St13messages_base
@@ -587,7 +578,6 @@ JArray
 auto:
 VTT for 
 construction vtable for 
--in-
 typeinfo for 
 typeinfo name for 
 typeinfo fn for 
@@ -624,8 +614,6 @@ global destructors keyed to
 complex 
 imaginary 
  __vector(
-(...
-...)
 std::allocator
 std::basic_string
 std::string

@@ -461,7 +461,6 @@ wstring_convert::to_bytes
 wstring_convert::from_bytes
 %llu
 0123456789ABCDEF
- \t\n\r
 Format string parse failure
 %d.%d.%d.%d
 %d.%d.%d.%d:%u
@@ -515,7 +514,6 @@ null
 -1e+9999
 Infinity
 1e+9999
-%%.%dg
 commentStyle
 indentation
 enableYAMLCompatibility
@@ -523,10 +521,8 @@ dropNullPlaceholders
 useSpecialFloats
 precision
 None
-\f\n\r\t
 <unknown>
 ASSERT: "%s" at %s:%d.\n
-%s%c%s
 File path truncated\n
 VRInitError_None
 VRInitError_Init_FileNotFound
@@ -595,10 +591,6 @@ graph
 blank
 bad_function_call
 basic_ios::clear
-%.*Lf
-%m/%d/%y
-%H:%M
-%H:%M:%S
 0123456789
 basic_string::copy
 basic_string::compare
@@ -627,7 +619,6 @@ auto:
 vtable for 
 VTT for 
 construction vtable for 
--in-
 typeinfo for 
 typeinfo name for 
 typeinfo fn for 
@@ -667,8 +658,6 @@ global destructors keyed to
 complex 
 imaginary 
  __vector(
-(...
-...)
 std::allocator
 allocator
 std::basic_string
@@ -6816,4 +6805,3 @@ _ITM_memcpyRnWt
 transaction clone for operator delete(void*)
 GCC: (SteamRT 9.3.0-17+steamrt1.3+srt1) 9.3.1 20210309
 GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
-k`j\t)

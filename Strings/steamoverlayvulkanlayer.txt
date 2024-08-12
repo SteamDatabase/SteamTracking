@@ -148,7 +148,6 @@ GLIBC_2.2.4
 GLIBC_2.1.3
 GLIBC_2.4
 GLIBC_2.2
-:>->
 cannot create std::deque larger than max_size()
 vector::_M_realloc_insert
 vector::_M_default_append
@@ -479,11 +478,7 @@ graph
 blank
 N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
 N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
-\v\v\v\v\r\r
-\t\rK~\n
 CH\f1
-I\r]P`
-H;!}#@i
 FoCLcx
 basic_ios::clear
 St9basic_iosIcSt11char_traitsIcEE
@@ -492,10 +487,6 @@ St8ios_base
 St13basic_istreamIwSt11char_traitsIwEE
 basic_string::erase
 %s: __pos (which is %zu) > this->size() (which is %zu)
-%.*Lf
-%m/%d/%y
-%H:%M
-%H:%M:%S
 St9time_base
 St10money_base
 St13messages_base
@@ -561,7 +552,6 @@ JArray
 auto:
 VTT for 
 construction vtable for 
--in-
 typeinfo for 
 typeinfo name for 
 typeinfo fn for 
@@ -598,8 +588,6 @@ global destructors keyed to
 complex 
 imaginary 
  __vector(
-(...
-...)
 std::allocator
 std::basic_string
 std::string
@@ -792,8 +780,6 @@ g_flPad0
 g_flPad1
 g_flPad2
 param
-Ga=+
- #>,
 GLSL.std.450
 main
 GL_ARB_separate_shader_objects
@@ -815,7 +801,6 @@ g_flSDRWhiteLevelInNits
 g_flPad0
 g_flPad1
 g_flPad2
-Ga=+
 GLSL.std.450
 main
 GL_ARB_separate_shader_objects
@@ -831,7 +816,6 @@ param
 uFragColor
 color
 param
-Ga=+
 GLSL.std.450
 main
 GL_ARB_separate_shader_objects

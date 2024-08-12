@@ -456,11 +456,8 @@ response:  %s\n
 error:  %s\n
 USER
 %s/%s_log.txt
- GMT: 
 file ''
 '', upload 
-yes: ''
-no: ''
 Unable to write failure log\n
 https://crash.steampowered.com/submit
 Uploading dump (in-process) [url '%s', proxy '%s']\n%s\n
@@ -548,7 +545,6 @@ Breakpad/1.0 (Linux)
 /proc/%d/status
 TracerPid:
 IsSpewActive
-%s (%d) : 
 Exiting on SPEW_ABORT\n
 console
 Fatal assert
@@ -618,8 +614,6 @@ NULL != m_pValObjectCur
  GiB
  KiB
  MiB
-%i%s
-%%.%if%s
 N(knN
 >NULL == pValObjectPrev->m_pValObjectNext
 /data/src/tier0/valobject.cpp
@@ -636,7 +630,6 @@ Root
 !g_VProfile
 -nocrashdialog
 -debugbreak
-%s %i %s
 /data/src/vstdlib/strtools.cpp
 src != NULL
 dest != NULL
@@ -663,7 +656,6 @@ BIsOpen()
 cubBytesToRead < INT32_MAX
 Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
 Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
-%s%c%s
 11CPathString
 %s/.steam/steam
 true
@@ -676,7 +668,6 @@ Lowered '%s' -> '%s'\n
 Breaking '%s' in '%s'\n
 Matched '%s' -> '%s'\n
 Unmatched %s\n
-m_Put >= 0
 /data/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 18CUtlCharConversion
@@ -708,7 +699,6 @@ crash
 .dmp
 ucontext_
 !dumper_->IsPostMortem()
-S 0 
 -----BEGIN BREAKPAD MICRODUMP-----
 bool {anonymous}::MicrodumpWriter::DumpCrashingThread()
 src/client/linux/microdump_writer/microdump_writer.cc
@@ -726,7 +716,6 @@ void google_breakpad::LineReader::PopLine(unsigned int)
 ./src/client/linux/minidump_writer/line_reader.h
 buf_used_ >= len + 1
 N15google_breakpad11LinuxDumperE
- ---p
  (deleted)
 /dev/
 linux-gate.so
@@ -777,7 +766,6 @@ MDRVA google_breakpad::MinidumpFileWriter::Allocate(size_t)
 bool google_breakpad::MinidumpFileWriter::WriteMemory(const void*, size_t, MDMemoryDescriptor*)
 bool google_breakpad::UntypedMDRVA::Copy(MDRVA, const void*, size_t)
 pos + size <= position_ + size_
-size_ == 0
 file_ == -1
 file_ != -1
 output
@@ -808,7 +796,6 @@ void google_breakpad::{anonymous}::FindElfClassSegment(const char*, typename Elf
 void google_breakpad::{anonymous}::FindElfClassSegment(const char*, typename ElfClass::Word, const void**, size_t*) [with ElfClass = google_breakpad::ElfClass64; typename ElfClass::Word = unsigned int; size_t = unsigned int]
 .note.gnu.build-id
 .text
- \t\f\n\r\t\v
 N15google_breakpad21CrashGenerationClientE
 *N15google_breakpad12_GLOBAL__N_125CrashGenerationClientImplE
 void google_breakpad::ThreadInfo::GetGeneralPurposeRegisters(void**, size_t*)
@@ -875,21 +862,13 @@ graph
 blank
 N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
 N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
-\v\v\v\v\r\r
-\t\rK~\n
 CH\f1
-I\r]P`
-H;!}#@i
 FoCLcx
 basic_ios::clear
 St9basic_iosIcSt11char_traitsIcEE
 St9basic_iosIwSt11char_traitsIwEE
 St8ios_base
 St13basic_istreamIwSt11char_traitsIwEE
-%.*Lf
-%m/%d/%y
-%H:%M
-%H:%M:%S
 St9time_base
 St10money_base
 St13messages_base
@@ -956,7 +935,6 @@ JArray
 auto:
 VTT for 
 construction vtable for 
--in-
 typeinfo for 
 typeinfo name for 
 typeinfo fn for 
@@ -993,8 +971,6 @@ global destructors keyed to
 complex 
 imaginary 
  __vector(
-(...
-...)
 std::allocator
 std::basic_string
 std::string
@@ -1077,7 +1053,6 @@ September
 October
 November
 December
-Mb@?
 __nl_langinfo_l@GLIBC_2.2
 getpagesize@GLIBC_2.0
 fputs@GLIBC_2.0

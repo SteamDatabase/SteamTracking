@@ -2563,7 +2563,6 @@ enabled
 "+\n)CBluetoothManager_SetDiscovering_Response"0\n
 CBluetoothManager_Pair_Request
 device
-(\r"!\n
 CBluetoothManager_Pair_Response"6\n$CBluetoothManager_CancelPair_Request
 device
 (\r"'\n%CBluetoothManager_CancelPair_Response"2\n CBluetoothManager_Forget_Request
@@ -2620,7 +2619,6 @@ CGameNotes_UploadImage_Request
 \n\vfile_prefix
 \n\tmime_type
 data
-(\f"3\n
 CGameNotes_UploadImage_Response
 filename
 (\t2c\n\tGameNotes
@@ -2831,10 +2829,8 @@ summary
 .CGameRecording_ClipSummary"1\n
 CGameRecording_ZipClip_Request
 clip_id
-(\t"3\n
 CGameRecording_ZipClip_Response
 zip_path
-(\t"d\n
 CGameRecording_GetClips_Request
 game_id
 \n\rcreated_after
@@ -3831,7 +3827,6 @@ Failed to start tracking WebUI connection
 CWebUITransport::Init
 m_p == NULL
 ^/transportsocket/$
-^.*$
 ^/serverstatus/$
 -dev
 WebUITransportHealthCheck
@@ -3928,7 +3923,6 @@ EContentHubDiscountFilterType
 1\n-k_EContentHubDiscountFilterType_DiscountsOnly
 7\n3k_EContentHubDiscountFilterType_PrioritizeDiscounts
 CDebugStatsPanel
-%s : %lld\n
 AddDebugStatAbs
 AddDebugStatRate
 RemoveDebugStat
@@ -3954,7 +3948,6 @@ N4vgui12IClientPanelE
 16CDebugStatsPanel
 CVGUIFileOpenDialog
 steamfileopenportal%llu
-%s/%s/%s
 /org/freedesktop/portal/desktop
 org.freedesktop.portal.Desktop
 Desktop portal not supported, falling back to a different file picker\n
@@ -3982,11 +3975,8 @@ fullpath
 FileSelectionCancelled
 !pArray || (Base() >= (pArray + size)) || (pArray >= (Base() + Count()) )
 count >= 0
-(u@a{sv})
 uris
 g_filename_from_uri %s: %s\n
-(s@a(us))
-(u&s)
 18IFileChooserDialog
 20CXdgPortalOpenDialog
 19CVGUIFileOpenDialog
@@ -4026,7 +4016,6 @@ pSurface->pitch == pSurface->w * 4
 Cannot call %s::%s in cross-process pipe!
 IPC call to %s::%s failed to read result code.
 IPC call to %s::%s returned failure code %d
-%s::%s
 bClientConvar601DEACE
 %s overflow!\n
 Invalid index %u
@@ -4082,7 +4071,6 @@ Error: %s: version query error\n
 Error: DisplayManagerInit: XRR unsupported
 Error: DisplayManagerInit: failed to query version
 Error: DisplayManagerInit: unsupported version
-%dx%d@%d
 GAMESCOPE_FOCUSABLE_APPS
 GAMESCOPE_FOCUSABLE_WINDOWS
 GAMESCOPE_FOCUSED_APP
@@ -4143,7 +4131,6 @@ m_lMaxSize <= INT_MAX
 STEAM_CLIENT_LOG_FOLDER
 %s/%s/%s.txt
 %s/%s/%s.previous.txt
-[%s] %s\r\n
 [%s][%0.6f] %.*s\r\n
 [%s] %.*s\r\n
 log_files_always_flush
@@ -4156,7 +4143,6 @@ http://
 https://
 http://%s
 config/proxyconfig.vdf
-%s-%x
 m_dwProcessID
 /data/src/common/pipes.cpp
 m_pSingleProcessPipe == NULL
@@ -4540,7 +4526,6 @@ CAppBootstrapData
 appid
 hidden
 user_tag
-(\t"=\n
 CLibraryBootstrapData
 app_data
 .CAppBootstrapData*
@@ -4878,7 +4863,6 @@ expiry
 (\r"M\n%CCloudGaming_GetTimeRemaining_Request
 platform
 \n\nappid_list
-(\r"F\n
 CCloudGaming_TimeRemaining
 appid
 minutes_remaining
@@ -5289,7 +5273,6 @@ chat_rate_limit
 \n\renable_replay
 is_partner_chat_only
 \n\fwordban_list
-(\t"!\n
 CBroadcast_SetRTMPInfo_Response"=\n
 CBroadcast_GetRTMPInfo_Request
 steamid
@@ -5327,7 +5310,6 @@ answer
 cellid
 (\r"A\n*CBroadcast_WebRTCLookupTURNServer_Response
 \n\vturn_server
-(\t"Z\n
 CBroadcast_WebRTC_Candidate
 sdp_mid
 sdp_mline_index
@@ -5921,7 +5903,6 @@ CChatRoom_RevokeInvite_Response"C\n
 CChatRoom_CreateRole_Request
 \n\rchat_group_id
 name
-(\t"C\n
 CChatRoom_CreateRole_Response
 actions
 .CChatRoleActions"3\n
@@ -5939,7 +5920,6 @@ CChatRoom_ReorderRole_Request
 \n\rchat_group_id
 role_id
 ordinal
-(\r" \n
 CChatRoom_ReorderRole_Response"F\n
 CChatRoom_DeleteRole_Request
 \n\rchat_group_id
@@ -6012,7 +5992,6 @@ modified_message
 server_timestamp
 ordinal
 message_without_bb_code
-(\t"I\n
 CChatRoom_JoinVoiceChat_Request
 \n\rchat_group_id
 chat_id
@@ -6157,7 +6136,6 @@ BanInfo
 accountid_actor
 \n\vtime_banned
 \n\nban_reason
-(\t"8\n
 CChatRoom_GetInviteList_Request
 \n\rchat_group_id
 CChatRoomGroupInvite
@@ -6481,7 +6459,6 @@ EChatRoomMemberStateChange
 &\n"k_EChatRoomMemberStateChange_Muted
 '\n#k_EChatRoomMemberStateChange_Banned
 -\n)k_EChatRoomMemberStateChange_RolesChanged
-\f2}\n
 Chat
 RequestFriendPersonaStates
 ).CChat_RequestFriendPersonaStates_Request
@@ -7030,7 +7007,6 @@ steammessages_clientnotificationtypes.proto
 appid
 (\r"5\n$CClientNotificationCloudSyncConflict
 appid
-(\r"b\n
 CClientNotificationScreenshot
 screenshot_handle
 \n\vdescription
@@ -7038,16 +7014,13 @@ screenshot_handle
 (\t"H\n$CClientNotificationDownloadCompleted
 appid
 \n\tdlc_appid
-(\r"2\n
 CClientNotificationFriendInvite
 steamid
 "A\n%CClientNotificationFriendInviteRollup
 new_invite_count
-(\r"E\n
 CClientNotificationFriendInGame
 steamid
 \n\tgame_name
-(\t"2\n
 CClientNotificationFriendOnline
 steamid
 CClientNotificationAchievement
@@ -7119,7 +7092,6 @@ icon
 offline
 allowed_seconds
 played_seconds
-(\r"!\n
 CClientNotificationLoginRefresh"!\n
 CClientNotificationTimerExpired"b\n-CClientNotificationSteamInputActionSetChanged
 controller_index
@@ -7381,7 +7353,6 @@ enable_marketing_messages
 news\NotifyAvailableGames
 start_in_big_picture_mode
 jumplist_flags
-(\rB%
 system\JumplistSettings
 enable_ui_sounds
 system\EnableUISounds
@@ -7483,7 +7454,6 @@ $CSettingsPanelGameController.TurnOff
 startup_movie_id
 "Customization/StartupMovie/MovieID
 startup_movie_local_path
-(\tB0
 $Customization/StartupMovie/LocalPath
 startup_movie_shuffle
 "Customization/StartupMovie/Shuffle
@@ -7564,14 +7534,12 @@ SettingValidation/DummyEnum
 setting_validation_int32
 SettingValidation/DummyInt32
 setting_validation_uint32
-(\rB%
 SettingValidation/DummyUInt32
 setting_validation_uint64
 SettingValidation/DummyUInt64
 setting_validation_float
 SettingValidation/DummyFloat
 setting_validation_string
-(\tB%
 SettingValidation/DummyString
 system_bluetooth_enabled
 System/Bluetooth/Enabled
@@ -7603,7 +7571,6 @@ k_EGRAudio_Select
 .google.protobuf.FieldOptions
 .EClientSettingStore:5\n\fsetting_name
 .google.protobuf.FieldOptions
-(\t::\n
 setting_pre_login
 .google.protobuf.FieldOptions
 setting_default_bool
@@ -7612,17 +7579,14 @@ setting_default_int
 .google.protobuf.FieldOptions
 setting_default_uint
 .google.protobuf.FieldOptions
-(\r:>\n
 setting_default_float
 .google.protobuf.FieldOptions
 setting_default_string
 .google.protobuf.FieldOptions
-(\t:9\n
 setting_readonly
 .google.protobuf.FieldOptions
 setting_description
 .google.protobuf.FieldOptions
-(\t:S\n
 setting_profile_mode
 .google.protobuf.FieldOptions
 .ESettingProfileMode::\n
@@ -7724,7 +7688,6 @@ request_headers
 *\n\vHTTPHeaders
 name
 value
-(\t"p\n
 CCloud_CommitHTTPUpload_Request
 transfer_succeeded
 appid
@@ -7751,7 +7714,6 @@ request_headers
 *\n\vHTTPHeaders
 name
 value
-(\t"Z\n
 CCloud_CommitUGCUpload_Request
 transfer_succeeded
 appid
@@ -7771,7 +7733,6 @@ steamid_creator
 flags
 platforms_to_sync
 file_sha
-(\t"C\n
 CCloud_GetFileDetails_Response
 details
 .CCloud_UserFile"p\n!CCloud_EnumerateUserFiles_Request
@@ -7783,7 +7744,6 @@ count
 files
 .CCloud_UserFile
 \n\vtotal_files
-(\r"Q\n
 CCloud_Delete_Request
 filename
 appid
@@ -7891,7 +7851,6 @@ request_headers
 *\n\vHTTPHeaders
 name
 value
-(\t"w\n
 CCloud_ClientDeleteFile_Request
 appid
 filename
@@ -8111,7 +8070,6 @@ steammessages_base.proto
 CCommunity_GetApps_Request
 appids
 language
-(\r"B\n
 CCommunity_GetApps_Response
 apps
 .CCDDBAppDetailCommon"T\n1CCommunity_GetAppRichPresenceLocalization_Request
@@ -9107,7 +9065,6 @@ type
 value
 color
 label
-(\t".\n
 CEconItem_Action
 link
 name
@@ -9283,7 +9240,6 @@ role
 .EFamilyGroupRole
 \n\vtime_joined
 cooldown_seconds_remaining
-(\r"L\n
 FamilyGroupPendingInvite
 steamid
 role
@@ -10165,7 +10121,6 @@ Player
 name
 score
 \n\vtime_played
-(\r"v\n
 CMsgGameServerRulesQueryData
 rules
 (\v2".CMsgGameServerRulesQueryData.Rule
@@ -10317,7 +10272,6 @@ device
 disconnectMethod
 .EHIDDeviceDisconnectMethod
 data
-(\fB\t\n
 command"
 CHIDMessageFromRemote
 update_device_list
@@ -10919,7 +10873,6 @@ viewed
 pending_gift_count
 pending_friend_count
 pending_family_invite_count
-(\r"o\n
 SteamNotificationPreference
 notification_type
 .ESteamNotificationType
@@ -11069,7 +11022,6 @@ session
 send_unlock_on_success
 "4\n#CParental_ValidatePassword_Response
 token
-(\t"/\n
 CParental_LockClient_Request
 session
 CParental_LockClient_Response"'\n%CParental_RequestRecoveryCode_Request"(\n&CParental_RequestRecoveryCode_Response"S\n)CParental_DisableWithRecoveryCode_Request
@@ -11211,7 +11163,6 @@ steamid
 CParties_JoinParty_Response
 \n\tbeacon_id
 connect_string
-(\t"E\n
 CParties_BeaconLocation
 \n\rlocation_type
 \n\vlocation_id
@@ -11222,7 +11173,6 @@ num_open_slots
 .CParties_BeaconLocation
 connect_string
 metadata
-(\t"3\n
 CParties_CreateBeacon_Response
 \n\tbeacon_id
 "R\n'CParties_OnReservationCompleted_Request
@@ -11621,7 +11571,6 @@ playtime_disconnected
 CPlayer_GetPlayNext_Request
 max_age_seconds
 \n\rignore_appids
-(\r"H\n
 CPlayer_GetPlayNext_Response
 last_update_time
 appids
@@ -11698,7 +11647,6 @@ communityitemid
 CPlayer_GetAvatarFrame_Request
 steamid
 language
-(\t"E\n
 CPlayer_GetAvatarFrame_Response
 "\n\favatar_frame
 (\v2\f.ProfileItem"9\n
@@ -11873,7 +11821,6 @@ level
 (\r"/\n\fProfileTheme
 theme_id
 title
-(\t"1\n
 ProfilePreferences
 hide_profile_awards
 \n(CPlayer_GetProfileCustomization_Response
@@ -11964,7 +11911,6 @@ playtime_disconnected
 time_ssa_accepted
 time_ssa_updated
 time_chinassa_accepted
-(\r"]\n
 CPlayer_AcceptSSA_Request
 agreement_type
 .EAgreementType
@@ -12009,7 +11955,6 @@ CPlayer_RemoveFriend_Request
 steamid
 CPlayer_RemoveFriend_Response
 friend_relationship
-(\r"A\n
 CPlayer_IgnoreFriend_Request
 steamid
 unignore
@@ -12464,7 +12409,6 @@ youtube_videoid
 tags
 collection_type
 \n\tgame_type
-(\t"P\n
 CPublishedFile_Publish_Response
 publishedfileid
 \n\fredirect_uri
@@ -12730,7 +12674,6 @@ CPublishedFile_Update_Response"G\n
 CPublishedFile_Delete_Request
 publishedfileid
 appid
-(\r" \n
 CPublishedFile_Delete_Response"l\n,CPublishedFile_GetChangeHistoryEntry_Request
 publishedfileid
 \n\ttimestamp
@@ -13369,7 +13312,6 @@ usage
 \n\fdevice_model
 \n\rdevice_serial
 device_provisioning_id
-(\r"7\n
 EKeyEscrowUsage
 $\n k_EKeyEscrowUsageStreamingDevice
 ",\n*CMsgRemoteDeviceAuthorizationCancelRequest"
@@ -13428,7 +13370,6 @@ encrypted_session_key
 k_EStreamTransportUDP
 \n\frelay_server
 cert
-(\t"\\n
 CMsgRemoteDeviceProofRequest
 \n\tchallenge
 \n\nrequest_id
@@ -13940,11 +13881,9 @@ steammessages_remoteplay.proto"H\n
 CDiscoveryPingRequest
 sequence
 packet_size_requested
-(\r"H\n
 CDiscoveryPingResponse
 sequence
 packet_size_received
-(\r"5\n
 CStreamingClientHandshakeInfo
 \n\fnetwork_test
 CClientHandshakeMsg
@@ -14137,7 +14076,6 @@ entries
 CInputLatencyTestMsg
 \n\ninput_mark
 color
-(\r"l\n
 CInputTouchFingerDownMsg
 \n\ninput_mark
 fingerid
@@ -14162,7 +14100,6 @@ CInputMouseWheelMsg
 .\n\tdirection
 .EStreamMouseWheelDirection
 amount
-1"M\n
 CInputMouseDownMsg
 \n\ninput_mark
 button
@@ -14174,7 +14111,6 @@ button
 CInputKeyDownMsg
 \n\ninput_mark
 scancode
-(\r"6\n
 CInputKeyUpMsg
 \n\ninput_mark
 scancode
@@ -14183,7 +14119,6 @@ scancode
 \n\ttext_utf8
 \n\fCSetTitleMsg
 text
-(\t"3\n
 CSetCaptureSizeMsg
 width
 height
@@ -14191,12 +14126,10 @@ height
 width
 height
 image
-(\f"E\n
 CSetFlashStateMsg
 flags
 count
 \n\ntimeout_ms
-(\r"<\n
 CShowCursorMsg
 \n\fx_normalized
 \n\fy_normalized
@@ -14211,7 +14144,6 @@ height
 hot_x
 hot_y
 image
-(\f"#\n
 CSetCursorScaleMsg
 scale
 CVideoDecoderInfoMsg
@@ -14258,14 +14190,12 @@ CSetTargetFramerateMsg
 reasons
 framerate_numerator
 framerate_denominator
-(\r"'\n
 CSetTargetBitrateMsg
 bitrate
 COverlayEnabledMsg
 enabled
 CSetGammaRampMsg
 \n\ngamma_ramp
-(\f"g\n
 CSetActivityMsg
 activity
 .EStreamActivity
@@ -14275,13 +14205,10 @@ gameid
 CSystemSuspendMsg"*\n
 CVirtualHereRequestMsg
 hostname
-(\t"5\n
 CVirtualHereReadyMsg
 licensed_device_count
-(\r"4\n
 CVirtualHereShareDeviceMsg
 device_address
-(\t"'\n
 CSetSpectatorModeMsg
 enabled
 "3\n\rCRemoteHIDMsg
@@ -14293,7 +14220,6 @@ revision
 creator
 CGetTouchConfigDataMsg
 appid
-(\r"h\n
 CSetTouchConfigDataMsg
 appid
 revision
@@ -14303,7 +14229,6 @@ creator
 CSaveTouchConfigLayoutMsg
 appid
 layout
-(\f"?\n
 CTouchActionSetActiveMsg
 appid
 \n\factionset_id
@@ -14316,7 +14241,6 @@ appid
 CGetTouchIconDataMsg
 appid
 icon
-(\t"A\n
 CSetTouchIconDataMsg
 appid
 icon
@@ -14336,7 +14260,6 @@ keyboard_enabled
 controller_enabled
 controller_slots
 \n\vavatar_hash
-(\f"3\n
 CSetInputTemporarilyDisabledMsg
 disabled
 CSetQualityOverrideMsg
@@ -14349,7 +14272,6 @@ controller_name
 reverse_diamond_button_layout
 CVRConnectionReady
 connect_params
-(\t"%\n
 CStreamDataLostMsg
 packets
 (\r"R\n\fCAudioFormat
@@ -14381,7 +14303,6 @@ client_bitrate
 link_bandwidth
 \n\vpacket_loss
 \n\nframe_size
-(\r"w\n
 CFrameStatAccumulatedValue
 )\n\tstat_type
 .EFrameAccumulatedStat
@@ -14403,7 +14324,6 @@ stddev_network_time_ms
 \n\ttest_data
 (\t"#\n\rCDebugDumpMsg
 \n\nscreenshot
-(\f"(\n
 CLogMsg
 type
 message
@@ -14739,7 +14659,6 @@ usage
 \n\fdevice_model
 \n\rdevice_serial
 device_provisioning_id
-(\r"9\n
 CKeyEscrow_Response
 ticket
 .CKeyEscrow_Ticket*7\n
@@ -14778,7 +14697,6 @@ shaders
 Shader
 \n\rcache_key_sha
 shader_code_sha
-(\f"<\n
 CShader_RegisterShader_Response
 requested_codeids
 CShader_SendShader_Request
@@ -15324,7 +15242,6 @@ channels
 \n\frelease_date
 \n\tdeveloper
 \n\tpublisher
-(\t"=\n
 CSteamTV_GetGames_Response
 results
 .CSteamTV_Game"g\n
@@ -15333,7 +15250,6 @@ CSteamTV_GetChannels_Request
 .EGetChannelsAlgorithm
 count
 appid
-(\r"K\n
 CSteamTV_GetChannels_Response
 results
 .GetBroadcastChannelEntry"
@@ -15352,7 +15268,6 @@ chatter_steamid
 \n\ftime_expires
 \n\tpermanent
 name
-(\t"C\n
 CSteamTV_GetChatBans_Response
 results
 .CSteamTV_ChatBan"j\n!CSteamTV_AddChatModerator_Request
@@ -15376,7 +15291,6 @@ CSteamTV_GetWordBans_Request
 broadcast_channel_id
 CSteamTV_GetWordBans_Response
 results
-(\t"9\n
 CSteamTV_JoinChat_Request
 broadcast_channel_id
 CSteamTV_JoinChat_Response
@@ -15385,7 +15299,6 @@ view_url_template
 flair_group_ids
 CSteamTV_Search_Request
 term
-(\t"F\n
 CSteamTV_Search_Response
 results
 .GetBroadcastChannelEntry")\n'CSteamTV_GetSteamTVUserSettings_Request"g\n(CSteamTV_GetSteamTVUserSettings_Response
@@ -15428,7 +15341,6 @@ title
 ,\n\tbroadcast
 .GetBroadcastChannelEntry
 title
-(\t"0\n
 CSteamTV_HomePageTemplate_Event
 title
 CSteamTV_HomePageContentRow
@@ -15454,7 +15366,6 @@ rows
 .CSteamTV_HomePageContentRow"M\n!CSteamTV_AppCheer_SingleCheerType
 \n\ncheer_type
 \n\fcheer_amount
-(\r"x\n
 CSteamTV_AppCheer_Request
 app_id
 cheer_target_id
@@ -15675,7 +15586,6 @@ LineItem
 \n\tpackageid
 appid
 line_item_description
-(\t"|\n
 CStore_RegisterCDKey_Response
 purchase_result_details
 purchase_receipt_info
@@ -15696,7 +15606,6 @@ tagid
 \n\fenglish_name
 name
 normalized_name
-(\t"H\n
 CStore_GetTagList_Request
 language
 have_version_hash
@@ -15792,7 +15701,6 @@ steamid
 store_page_filter
 .CStorePageFilter">\n,CStore_GetDiscoveryQueueSkippedApps_Response
 appids
-(\r"_\n
 CStore_ReportApp_Request
 appid
 $\n\vreport_type
@@ -16065,7 +15973,6 @@ bundleid
 tagid
 \n\tcreatorid
 \n\rhubcategoryid
-(\r"d\n
 StoreBrowseContext
 language
 \n\telanguage
@@ -16567,7 +16474,6 @@ hint_probe_frequency_seconds
 \n\fsync_timeout
 try_again_seconds
 \n\fmax_attempts
-(\r",\n
 CTwoFactor_Status_Request
 steamid
 CTwoFactor_Status_Response
@@ -16697,15 +16603,12 @@ $\n k_EProtoServiceTypeSteamMessages
 *\n&k_EProtoServiceTypeVRGamepadUIMessages
 message_description
 .google.protobuf.MessageOptions
-(\t:D\n
 force_emit_message
 .google.protobuf.MessageOptions
 false:4\n\vdescription
 .google.protobuf.FieldOptions
-(\t:>\n
 service_description
 .google.protobuf.ServiceOptions
-(\t:u\n
 service_execution_site
 .google.protobuf.ServiceOptions
 .EProtoExecutionSite:
@@ -16717,10 +16620,8 @@ force_emit_service
 false:<\n
 method_description
 .google.protobuf.MethodOptions
-(\t:8\n
 enum_description
 .google.protobuf.EnumOptions
-(\t:C\n
 enum_value_description
 !.google.protobuf.EnumValueOptions
 32CMsgTest_MessageToClient_Request
@@ -16900,7 +16801,6 @@ steamid
 appid
 \n\vdevice_info
 deviceid
-(\r"`\n
 CEmbeddedClient_Token
 steamid
 \n\fclient_token
@@ -17081,7 +16981,6 @@ visible
 \n\ny_position
 x_scale
 y_scale
-1"Q\n
 CVirtualControllerColor
 CVirtualControllerLayout
 layout_version
@@ -17304,7 +17203,6 @@ m_pkv
 m_vecAllWGAuthedURLs
 m_dictURLs[i].m_sURL
 m_vecAllWGAuthedURLs[i]
-%%p%d%%
 %store%
 strURL != "%store%"
 /data/src/common/steamui/urlmanager.cpp
@@ -17464,7 +17362,6 @@ ChartPanel::AddPt
 fabs( flXDelta ) > 0
 ChartPanel::PaintLegend
 ChartPanel::PaintAxis
-num >= 0
 ChartPanel::Paint
 ChartPanel::Paint - flYMax
 ChartPanel::Paint - loop
@@ -17477,16 +17374,13 @@ N4vgui10ChartPanelE
 >CIMEPanel
 pCmd
 vgui_autocomplete_new_style
-:>->
 quot
 apos
-%.8g
 %.17g
 True
 TRUE
 False
 FALSE
-<!--
 <![CDATA[
 xml version="1.0" encoding="UTF-8"
 Error=%s ErrorID=%d (0x%x) Line number=%d
@@ -17774,7 +17668,6 @@ IsValidIndex(iElem)
 /data/src/public/tier1/utlassociativelist.h
 _IsValidIndex( elem, unNodeSize, pMemBase )
 IsValidIndex( m_Head )
-%s%u
 CloudManager\HintAppsToPreload
 IsValidIndex( m_Tail )
 <appid> Manually triggers on-launch cloud sync for the given app.
@@ -17915,13 +17808,8 @@ Package version: %d
 Serial number: %s
 Board revision: %u
 FW revision: 0x%08X (%s)
-%.4x
 crc:
 platform:
--a%d
-+a%d
-a%d~
-h%d.%d
 Unknown bind type
 steam:2,
 TenfootGamepadMapping
@@ -17986,13 +17874,9 @@ m_mapCustomImageTimes
 Unknown asset type for custom image
 /data/src/steamUI/customimagemanager.cpp
 %s/grid
-%s/*.*
-%s/%u%s.%s
-%s/%u*.*
 CUtlHashMap::RemoveAt - Invalid index
 /data/src/public/tier1/utlhashmap.h
 CUtlHashMap::RemoveAt - couldn't find bucket for item
-%s/%u%s.
 %s/%u.json
 10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE
 10CUtlMemoryIN10CUtlRBTreeIyi8CDefLess25CDefRBTreeBalanceListenerIiEyE6Node_tEE
@@ -18429,7 +18313,6 @@ timescale
 startNumber
 AdaptationSet
 contentType
-%d.%dS
 %d.%02dS
 %d.%03dS
 %05llu
@@ -18557,7 +18440,6 @@ CGameRecordingController::YldCleanupEmptyTimelines
 GameRecording.NotifyRecordingSessionChanged#1
 Game Recording - Recording Stopped [recording=%s]\n
 Game Recording - Recording Started [recording=%s]\n
-%s_%s_
 GameRecording.NotifyPostGameHighlightsChanged#1
 Game Recording - Recording marked for deletion [recording=%s]\n
 Game Recording - Deleting recording for game [recording=%s]\n
@@ -18581,7 +18463,6 @@ Failed to get thumbnail frame from MPD %s
 Failed to scale and convert thumbnail frame from MPD %s
 Failed to save thumbnail frame from MPD %s
 Failed to write clip file to %s
-%s%c%s%c%s
 CGameRecordingController::OnAddTimelineEvent
 GameRecording.NotifyClipCreated#1
 clip_downloaded_
@@ -18884,7 +18765,6 @@ CGamescopeController: set unified framerate UI enabled: %d
 CGamescopeController: mode changed: %d Hz
 gamescope: active display changed: %s - %s - internal:%d hdr_capable:%d vrr:%d
 Applying the HDR detection workaround for the galileo internal display
-%s-%s
 RegisterGamescopeControl
 %s: binding gamescope-control: name: %d bind-version: %d have-version: %d want-version: %d
 Error: %s: failed to add event listener for gamescope-control: %d
@@ -19032,8 +18912,6 @@ CDesktopCapturePipeWire: Start signal received.\n
 CDesktopCapturePipeWire: Failed to start the screen cast session.\n
 a(ua{sv})
 streams
-@(ua{sv})
-(oa{sv})
 OpenPipeWireRemote
 wl_proxy_marshal
 wl_proxy_marshal_flags
@@ -19120,7 +18998,6 @@ org.freedesktop.portal.ScreenCast
 steam_session%d
 session_handle_token
 steam%d
-(a{sv})
 CreateSession
 /org/freedesktop/portal/desktop/request/
 CDesktopCapturePipeWire: Failed to create a proxy for the screen cast portal: %s\n
@@ -19374,7 +19251,6 @@ Dash Segment Writer: %s
 >>> Failed to add %d audio samples
 m_llQueuedAudio.Count() == 0
 >>> First audio pts is %0.6fs
- - GAP
 Encoded frame DTS [key=%s][dts=%lld][pts=%lld][delta = %lldms]%s\n
 CGameRecordingSession::FrameEnd
 >>> First video pts is %0.6fs, first video PTS is %0.6fs
@@ -19389,7 +19265,6 @@ Game Recording Samples
 Refreshing process list for game %s\n
 %d game pids rooted at pid %d:\n
 Couldn't query PIDs for %s - possibly exited\n
-- %d%s\n
 CGameRecordingSession::OnGameProcessListChanged
 !m_pSegmentWriter
 FvPKc27ERecordingSegmenterLogLevelE
@@ -19441,8 +19316,6 @@ Audio source [%s]: init=%lld, adjustment=%lld, through=%lld, last_start=%lld, mi
 m_lRecordingStartTicks != 0
 /data/src/steamUI/gamestream/gamestreamaudiomixer.cpp
 Audio mix error: invalid buffer length\n
-%.1fdB, 
----, 
 %.1fdB
 Failed to get data from device: %s. will return silence.
 Audio source [%s]: Signal levels: 
@@ -19639,8 +19512,6 @@ m_ClientState
 !m_pOpusDecoder
 BInitMicrophoneOpus(): Couldn't create Opus encoder: %d\n
 Tried to send microphone data using unknown codec %d\n
-%s:%d
-(%s:%d)
 Client requested VirtualHere support, redirecting to Steam Store
 Client requested VirtualHere support, installing application
 Client requested VirtualHere support, starting application
@@ -19728,7 +19599,6 @@ GameStream_%u_%ux%u_%s.h264
 Couldn't open %s for writing\n
 >>> Capture resolution set to %dx%d
 >>> Capture colorspace set to %s
-%s/%s/
 \r\n\r\n=====================================================================\r\nGame: %s (%u)\r\nDate: %s
 (uint8*)pHeader == pFrame->GetFrameData()
 video send
@@ -19823,7 +19693,6 @@ InGameOverlayShortcutKey
 InGameOverlayScreenshotHotKey
 Changing record audio process: stopped
 Changing record audio processes. Associated window: %p. pids:
-- %d
 Adding process %u for gameID %llu\n
 pApplicationState
 pState->m_nProcess == nProcess
@@ -20012,7 +19881,6 @@ Unknown surface format
 CGameStreamVideoStageAMF: Output size %dx%d is larger than maximum supported size %dx%d, AMD hardware encoding disabled\n
 CGameStreamVideoStageAMF
 24CGameStreamVideoStageAMF
-=B@B
 333333
 ?CGameStreamVideoStage
 CGameStreamVideoStageComposite::Scale
@@ -20080,7 +19948,6 @@ nWidth > 0 && nHeight > 0
 NVENC - recreating due to quality or resolution change
 26CGameStreamVideoStageNVENC
 rm{nm
-\fy"E{M
 CGameStreamVideoStageQueueThread::ProcessData
 CGameStreamVideoStageQueueThread
 Video Encoder Queued Thread
@@ -20412,7 +20279,6 @@ AppID: %u (%s)\n
 \tMax asset:\t\t%u\n
 \tCache cracker:\t%u\n
 \tIcon:\t\t\t%s\n
-\t%s:\n
 \t\tLast-Modified:\t%s\n
 \t\tExpires:\t\t%s\n
 No asset cache data for appid %u\n
@@ -20420,7 +20286,6 @@ No asset cache data for appid %u\n
 icon.jpg
 library_600x900.jpg
 library_hero.jpg
-%s/%u_%s
 %s/%u/portrait.png?v=1&cv=%u
 %s/images/apps/%u/%s
 %s/app_config/timeline/%s
@@ -20808,7 +20673,6 @@ enable_marketing_messages
 HKEY_CURRENT_USER\Software\Valve\Steam\SourceModInstallPath
 HKEY_CURRENT_USER\Software\Valve\Steam\ModInstallPath
 sourcemods
--mod="%s"
 !"implement GetPrivateProfileString"
 /data/src/steamUI/modmanager.cpp
 %s\sourcemods\%s\gameinfo.txt
@@ -20823,7 +20687,6 @@ singleplayer_only
 commandargs
 -game "%%s" %s
 #Steam_DeveloperUnknownThirdParty
-%s%c*.*
 -mod=
 ROMod.ini
 KFMod.ini
@@ -21491,7 +21354,6 @@ SteamOSScreenUnderscanEnabled
 SteamOSScreenUnderscanLevel
 GameRecording\MarkerKey
 GameRecording\ToggleKey
-%s/%u
 Unsupported Registry Setting Type: %s
 Ctrl\tKEY_F12
 Ctrl\tKEY_F11
@@ -22120,7 +21982,6 @@ Compressed BMP files not supported
 Unsupported or incorrect biClrUsed field
 Error reading from BMP
 Error reading from datastream
-%s?t=%u
 ${LANGUAGE}
 appID != k_uAppIdInvalid
 !(appID & k_unLocalAppIDFlag)
@@ -22364,7 +22225,6 @@ SteamUI Active jobs (%d):\n
   (use "jobs <field>" or "jobs hdr.<field>" to show top jobs grouped by request message fields)\n
 \n-----------------------------------\n\n
 Usage:\n\tfind <keyword>\n
-%s - %s\n
 %s = "%s" - %s\n
 CSteamDoc::OnSteamLogon
 CSteamDoc::OnPostLogonState
@@ -22401,7 +22261,6 @@ Non-user command %s received at console; ignoring\n
 CustomLauncher/%s
 RefreshSubscriptionMetadata
 CSteamDoc::OnAppLicensesChanged
- -- 
 CSteamDoc::ExecCommandLine : not allowed yet
 HKEY_CURRENT_USER\Software\Valve\Steam\TempAppPath
 HKEY_CURRENT_USER\Software\Valve\Steam\TempAppCmdLine
@@ -22436,7 +22295,6 @@ find substrings in console commands
 usage: jobs [group_by_attribute] Lists the currently active jobs running in this shell
 Finished downloading content:
 Content Download
-file:///%s
 Failed to download content (%s)
 9CCallbackI9CSteamDoc23SteamServersConnected_tLb0EE
 N9CSteamDoc22CCallback_OnSteamLogonE
@@ -22758,7 +22616,6 @@ download_depot
 download_chunk
 workshop_download_item
 app_uninstall
-<0|1>
 app_download_enable
 <path>
 library_folder_add
@@ -22878,7 +22735,6 @@ missing/invalid arguments\n
 load failed: %s\n
 parse failed: %s\n
 directory.BEndsWith("/")
-%s%s/%s
 file doesn't exist: %s
 %s/%s-settings.json
 steam_play
@@ -22888,7 +22744,6 @@ Devkit Game: %s
 run-game
 missing "gameid" argument\n
 list-shortcuts
-\n]\n}\n
 delete-shortcut
 missing "gameid" parameter\n
 gameid "%s" not found\n
@@ -22900,7 +22755,6 @@ CompatTool_LauncherService
 set-launcher-service
 launcher-service-cmd
 launch-args
-{\n  
 retcode
 stdout
 stderr
@@ -24229,7 +24083,6 @@ App config not allowed for controller, so can't save.
 Export: Failed to open target file.
 New Configurator Exporting Controller Configuration for %s - AppID: %d.\n
 %u/config/%s/
-%s_%i
 %s%s.vdf
 Failed to open target file.
 N23CSteamUIInputController39CCallbackInternal_OnControllerConnectedE
@@ -24730,12 +24583,10 @@ Software\Valve\Steam\SurveyDateVersion
 Software\Valve\Steam\SurveyDateType
 Failed to serialize survey keyvalues\n
 /data/src/steamUI/steamuisurveycontroller.cpp
-%Y-%m-%d
 Software\Valve\Steam\SurveyDate
 Software\Valve\Steam\SurveyDateBeta
 time() returned -1 time_t value.  Should not happen?
 Software\Valve\Steam\SurveyDateSteamDeckDelay
-%d-%d-%d
 pchArg1
 pchArg2
 pchArg3
@@ -24806,10 +24657,7 @@ SteamUI_ValveSurvey_Summary_Bus
 SteamUI_ValveSurvey_Summary_VRAMSize
 SteamUI_ValveSurvey_Summary_VRAMSize_Unknown
 SteamUI_ValveSurvey_Summary_MSAAModes
-%i x %i
 %0.2f" x %0.2f" (%0.2f" diag)
-%s %dx
-%dx 
 AdapterDescription
 DriverDate
 VRAMSize
@@ -25630,13 +25478,11 @@ PFvP33SystemFormatStorageResultResult_tb9CSmartPtrI18CJSCallbackPromiseEE
 PFvP24SteamRuntimeSystemInfo_tb9CSmartPtrI18CJSCallbackPromiseEE
 exited pairing mode
 RespondToPairingPrompt
-%s %d %s
 %s invoked without a prompt callback registered
 /data/src/steamUI/systemdevkitcontroller.cpp
 --enable
 --disable
 DeveloperModeChanged
-%s: %s: %s
 %s: not on public universe, forcing developer mode on
 /usr/bin/steamos-polkit-helpers/steamos-devkit-mode
 System.Devkit.DeveloperModeChanged
@@ -26138,7 +25984,6 @@ bad_appname
 Shortcut with invalid display name - appname : %s
 !strCleanShortcutName.IsEmpty()
 /data/src/steamUI/valvecontrollermanager.cpp
-%u-%s
 local://controller_base/desktop%s
 local://controller_base/chord%s
 local://controller_base/basicui.vdf
@@ -26190,7 +26035,6 @@ CValveControllerManager::OnGameLauncherModeEnabled
 %u/config/
 Delete controller binding: %s %llu\n
 configurations
-game://%s,
 controller_type
 controller_none
 workshop://%s
@@ -26254,7 +26098,6 @@ GAME_%s
 CLOUD_%s
 LOCAL_%s
 #Library_Controller_ControllerBindingSavedFailedPublish
-%u:%s
 autosave:
 Remote Play Config Msg with URL: %s
 Unexpected controller config message from remote client: %d
@@ -26458,7 +26301,6 @@ Invalid channel number %d received from %s, dropping\n
 18CStreamSampleQueueIN17CStreamConnection15TimeOffsetStatsENS1_18TimeOffsetSample_tELi10ELb0EE
 18CStreamSampleQueueIN17CStreamConnection12BitrateStatsEiLi3ELb1EE
 18CStreamSampleQueueIN17CStreamConnection11PacketStatsENS1_14PacketSample_tELi3ELb0EE
-\t\n\v\f\r
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  "$&(*,.02468:<>@BDFHJLNPRTVXZ\^`bdfhjlnprtvxz|~
 =?9;5713-/)+%'!#]_Y[UWQSMOIKEGAC}
@@ -26468,152 +26310,104 @@ y{uwqsmoikegac
 |=>;81274%&# )*/,\r
  $(,048<@DHLPTX\`dhlptx|
 =951-)%!]YUQMIEA}yuqmiea
-:>26*."&
 z~rvjnbfZ^RVJNBF
-'#/+73?;
 gcokws
 {GCOKWS_[
 (-"'<963PUZ_DANKx}rwlifc
 ]XWRILCFup
 zadkn\r
-% /*14;>
 278=&#,)JO@E^[TQbghmvs|y
 GBMHSVY\oje`{~qt
-\t\f?:50+.!$
 06<:(.$"`fljx~trPV\ZHNDB
 ][QWECIOmkagusy
-=;17%#)/\r\v
-'!+-?935
 GAKM_YSUwq{}oice
 z|vpbdnhJLF@RT^X
-*,& 24>8
 8?61$#*-pw~ylkbeHOFATSZ]
-=:34!&/(
 MJCDQV_Xur{|ing`
 G@IN[\UR
 xqvcdmj709>+,%"
 z}tsfahoBELK^YPW\n\r
-25<;.) '
  (08@HPX`hpx
 =5-%]UME}ume
-:2*"
 zrjbZRJB
-'/7?
 GOW_
 t|dlT\DL4<$,
 iayqIAYQ)!91\t
 NF^Vnf~v
-.&>6
 S[CKs{ck
-\v3;#+
 $-6?HAZSle~w
-=4/&
 u|gnQXCJ
 zsha^WLE2; )
 GNU\cjqx
-+"90
-@IR[,%>7
 YPKB}tof
-\n5<'.
 :3(!V_DMr{`i
-#*18
 kbypOF]T
 ("<6PZDNxrlf
 ]WICu
-%/1;
 28&,J@^Tbhv|
 GMSYoe{q
 \t?5+!ic}wAKU_93-'
-4> *
 dnpzLFXR
 sygm[QOE#)7=\v
-.$:0
 ~tj`V\BH
 ,':1XSNEt
 }vk`QZGL%.38\t
 JA\Wfmp{
->5(#
-7<!*
 odyrCHU^
 YRODu~ch
--&;0
-$/29
 |wjaP[FM
 ?4)"K@]Vglqz
 nexsBIT_6= +
 0<($`lxtP\HD
 ]QEImauy=1%)\r
-'+?3
 GK_Sw{oc
 zvbnJFR^
 *&2>NBVZ~rfj."6:
-#/;7s
 kgCO[Wieq}YUAM\t
-95!-
-48, 
 TXL@dh|p
 49.#her
 \QFK
 m`wzYTCN
 1<+&gj}pS^ID
-;6!,
 >3$)boxuV[LA
 \t*'0=v{laBOXUs~idGJ]P
-\f/"58
 ytcnM@WZ
-%(?2
  -:7|qfkHER_
 86$*p~lbHFTZ
-=3!/
 MCQ_u{ig
 GI[U
 qcm79+%
 ztfhBL^P\n
-2<. 
 S]OAkewy#-?1
 n`r|VXJD
-\f&(:4
 ,"0>djxv\R@N)'5;
 YWEKao}s
 <3"-xwfiDKZU
 1>/ uzkdIFWX
 +$5:o`q~S\MB
 \v&)87bm|s^Q@O
-#,=2
 [TEJghyv.!0?
 VYHGjet{
-4;*%
 LCR]p
-96'(
 AN_P}rcl
- 0@P`p
-\r=-]M}m
 \nzjZJ
 gwGW
 tdTD4$
 iyIY)9\t
-N^n~
 SCsc
 hxHX(8
 ueUE5%
 RBrb
-\f<,\L|l
 !1AQaq
 fvFV
-\v{k[K
 "3DUfw
 />IXkz
-\v8)^O|m
 5$SBq`
 paRC
-\n}l_N
 j{HY
 gvET
-hyJ[,=
 etGV!0
 rcPA6'
-n]L;*
-\M~o
 Q@sb
 FWdu
 KZix
@@ -26621,9 +26415,7 @@ $6HZl~
 \vugQC
 zh^L2 
 GUcq
-dv@R,>
 YK}o
-\f:(VDr`
 kyO]
 ewAS-?\t
 XJ|n
@@ -26631,7 +26423,6 @@ XJ|n
 jxN\
 %7I[m
 \ntfPB
-{i_M3!
 FTbp
 &5L_jy
 arGT
@@ -26640,11 +26431,9 @@ wdQB;(
 `sFU
 '4M^kx
 vePC:)
-[H}n
 1"ufS@9*
 XK~m
 cpEV
-$7N]h{
 tgRA8+
 %6O\iz
 bqDW
@@ -26652,7 +26441,6 @@ bqDW
 ]Iua\r
 2&J^bv
 GSo{
-?+i}AU9-
 dpLX
 sg[O#7\v
 ~jVB
@@ -26662,18 +26450,14 @@ kWCh|@T8,
 3'K_cw
 FRnz
 )=QEym
-\Ht`\f
-*?TA~k
 MXgr
 \rfsLY
-jU@+>
 }hWB
 dqN[0%
 1$OZep
 VC|i
 (=RGxm
 \n5 K^at
-`uJ_4!
 ylSF{nQD/:
 \tbwH]
 I\cv
@@ -26684,7 +26468,6 @@ J\fp
 \royCU
 YOuc
 |jPF
-?)K]gq
 nxBT6 
 iSE'1\v
 .8ZLv`5#
@@ -26693,10 +26476,8 @@ H^dr
 ~hRD
 [Mwa
 lz@V4"
-=+I_es
 .9\Kre
 mzCT1&
-buL[>)
 !6SD}j
 ?(MZct
 |kRE 7
@@ -26710,30 +26491,23 @@ qf_H
 \noxAV<+
 `wNY
 0(`xPH
-]Emu=%\r
 G_wo
 zbJR
 *2NV~f.6
 \v#;skC[iqYA\t
 TLd|
-\Dlt<$\f
 1)ayQI
 {cKS
-+3&>
 F^vn
 \n":rjBZOW
 UMe}hpX@
 2+d}VO
 E\wn!8
 5,czQH
-B[pi&?
 <%jsXA
 KRy`/6
-;"mt_F
 LU~g(1
 .7xaJS
-Y@kr=$
-^Glu:#
 \v 9voD]
 WNe|3*
 \f'>qhCZ
@@ -26744,10 +26518,8 @@ mwYC
 >$bxVL
 *0vlBXsiG]
 ycMW
- :|fHR
 TN`z
 ^Djp[Aou3)
-OU{a'=
 \fJP~d(2
 @Ztn
 E_qk-7
@@ -26755,10 +26527,7 @@ E_qk-7
 unCX
 /4G\qj+0
 ^Ehs
-VM`{:!\f
 OTyb
-\n'<}fKPd
-7,mv[@
 toBY
 .5F]pk*1
 _Dir
@@ -26770,53 +26539,39 @@ MQui
 zfB^\n
 SOkw#?
 nrVJ
-,0dx\@)5
 \rYEa}
 FZ~b6*
-{gC_\v
 9%qmIU
 LPth
 \t-1ey]A(4
-\fXD`|
 RNjv">
 osWK
 :'tiNS
 QLkv
 orUH
-!<JWpm>#
-)4gz]@
 B_xe
-|aF[
 2/YDc~-0
 ROhu
 9$wjMP
 ITsn= 
 lqVK
-A\{f
 \r*7dy^C
-ZG`}.3
 bEX\v
 <"xfDZ
 1/ukIW
 \t+5oqSM
-&8b|^@
 [Egy.0
 \fVHjt
 LRpn
-A_}c
 KUwi3-
 FXzd> 
-\B`~$:
 QOms)7
 \vhvTJ
 e{YG
 ;%rlNP\n
->!|cB]
 \n+4ivWH
-C\}b*5
 \vVIhw
 ktUJ
-)6~a@_
 TKju(7
 GXyf
 RMls
@@ -26826,134 +26581,36 @@ POnq,3
 \rEZ{d9&
 opQN
 zeD[
-iI)\t
-Mm\r-
-jJ*\n
->^~%
-Ll\f,
-kK+\v
-*\vhI
-,\rnO
-\f-No
-Kj\t(
-\n+Hi
-\r/Ik
-.\fjH
-Om\v)
-lN(\n
-\t+Mo
-\n)Lo
-(\vnM
-Kh\r.
-lO*\t
-iJ/\f
-eA-\t
-gC/\v
-D`\f(
-Ea\r)
-fB.\n
-@e\n/
-\v.Ad
-(\rbG
-cF)\f
-\t,Cf
--\vaG
-,\n`F
 1uS9
-/\tcE
 #Io^x
-*\ff@
-+\rgA
--\ncD
-Be\f+
-;jM$
-bE,\v
-G`\t.
-\r*Cd_x
-]u\r%
 ?iA9
-s[#\v
-rZ"\n
 Wh@8
-\t\f$
 }UjB:
-qY!\t
-[r\t I`
 xQqX#\n
-$\rv_
-pY"\v
-%\fw^
 :AhHa
 yS{Q/
-\f&Xr
-sY'\r
-^t\n 
 9GmlF8
-!\vu_
-w]#\t
 nDEo
-&\rp[
-\t"_t
-qZ'\f
-\v ]v
-\w\n!
-}Q%\t
 .Zv5
-&\n~R
-:yU!\r
- \fxT
-}P'\n
-V{\f!
 9eH?
-~S$\t
-\v&Q| \rzW
-:fK<
-"\f~P
-U{\t'
 *Xv\v%Wy
-xV$\n
-&\txW
-{T%\n
-\r"S|
-$\vzU
-0R}\f#
-]m=\r'
-*N~.
 #sCiY\t9
-\l<\f
 "rBO
 UehX
-k[\v;
 VfL|,
 WgjZ\n:
- p@M}-
-5n_\f=
-]lYh;\n
 )zKIx+
-M|~O
->m\^o<\r
 8\tZkiX\v:
-\t;m_
-8\n\n
-+?\r[i
-o]\v9-
-hZ\f>
-^m8\v.
 29\n_l
-%\o:\t
-&s@Kx-
 1dWrA
 ]neV
 N}aR
 ?\fYjvE
-5`SO|)
 "wDXk>\r
-\n>bV
 *vBsG
 Qe9\r<
 ^j[o3
 5i]lX
-:\v?cW
 AuDp,
 Pd8\f
 =\tUa7
@@ -26962,58 +26619,25 @@ Pe[n1
 9\fSf
 <\tVc]h7
 gR\r8^k4
-?\nU`)
 &yLrG
-/Gq+
-V`:\f#
 '}KdR
-.Fp*
-Wa;\r"
-&|JeS\t?
--Es)
 IfP\n<
-,Dr(
-$~HgQ\v=
- W`9
-+\v<eR
 K|\k2
-]jJ}$
-dS\n=
 \t>gPpG
-Ub;\f{L
 (qFfQ
 #zM:\rTc
 zB\n2
-,d\)
-{C\v3
--e](
-'Qi!
-.f^+
-E}5\rx@
-/g_*
 D|4\fyA\t1
-B{0\t
 ;pI3\nAx
-:@y2\v
-5\fG~
 4\rwN
-/Ul'
-.e\&
-!Jp>
 6\fBx
 2Yc-
-0\nD~
-?qK 
 yC\r7
 ,bX3\tG}
-{@\r6Ri$
 &kP4
-|G\n1
 Vm\t2
-(e^:
 Az7\f
 F}0\voT
-8\g*
 \r1uI
 ;rN\n6
 8qM\t5
@@ -27035,337 +26659,122 @@ FyEz;
 /wH\t6
 *kT\f3rM
 u72p
-y:\rN
-~:m)
-m(=x
 \fE1x
-~4a+
-%o:p
-g,f-
->u?t
-p<+g
-&j}1
-g)5{
-l#*e
 8w~1
--}j:
-)yn>
-+{l<
 p!9h
-{*2c
-m<$u
-f7/~
 c18j
-*xq#
 b0p"
-){;i
-(zs!
 a3:h
-<oi:
 e60c
-|/)z
-%vp#
-l?`3
--y{/
-*~|(
-x,.z
 q$9l
-}(\fY
 2gz/
-c5\t_
-x.$r
-"tZ\f
 0fl:
 t#2e
-\t^}*
-\f[a6
-Z\r7`
-U\rb:
 2k\vR
 P\ti0
 j3S\n
-\vQ z
-\rW&|
-z!)r
 9bj1
-t/Q\n
-| s/
-3o<`
-w+!}
 j6e9
-%y*v
 j7k6
-\rP\fQ
-b?c>
-r/s.
-z'{&
-c=p.
-r,a?
-}#n0
 i6t+
 7h*u
-c<~!
-]='G
-_?k\v
 6VL,
 7Wj\n
 Y9#C
 1Ql\f
 2RH(
-[:/N
 Q0\nk
->_J+
 j\v1P
 V7\rl
 -LY8
 m\f6W
 3Rh\t
-H)<]
 Q37U
-?]Y;
 8Zi\v
-(JN,
-F$ B
 1S9[
-X:\tk
-o\r>\
-H*@"
-W4?\
-)JA"
-]>\ni
-N-&E
 0SX;
-o\f8[
 C U6
-=^2Q
 Z9L/
-K/\tm
 P48\
-o\v-I
- DH,
-\riO+
-\nnF"
 R7<Y
-%@i\f
-*OD!
-+Nh\r
-\tlJ/
-o\n,I
-^8.H
 3UC%
 \nlT2
-E#\fj
-k\r"D
 P7>Y
-,KB%
-\rj]:
-k\f$C
-#Dl\v
-Z=\nm
-E"+L
 9^W0
 Q9<T
-6^[3
-"J(@
-N&#K
-)AD,
-=U7_
 Z2>V
 S;Y1
- HM%
-G/*B
-L$F.
-?WR:
 X05]
 4]0Y
 S:8Q
-<UW>
-,EG.
-C*(A
-K"O&
 3ZX1
-\57^
 T=P9
-;R@)
-+B/F
-L%'N
-#JH!
-:P[1
-M',F
 N$X2
-K!*@
-<V]7
-g\r^4
-?U)C
-B(T>
-6\W=
-A+ J
 3Y%O
-G-&L
 0ZQ;
-(CO$
-W<0[
-7\P;
-H#/D
-F-^5
 9R>U
 Y2A*
-:Q"I
-E.B)
-%N=V
 T?3X
-+@L'
-K ,G
 4_S8
-V:#O
-W;"N
 T8!M
 U9 L
-R>'K
-S?&J
-P<%I
-Q=$H
 D)7Z
 *GY4
-1\\r`
-I$:W
 'JT9
-^3-@
-0]C.
-S> M
-=PN#
-\ng6[
-%K\2
-3]J$
-^0'I
-H&1_
-<RE+
-*DS=
-G)>P
-L"b\f
-Q?(F
-\rc#M
-?P@/
-^1!N
-C,<S
-"M]2
-b\rB-
 G(8W
 &IY6
-f\t[4
-;TD+
-E*e\n
 Z5%J
 G7z\n
-F6{\v
 D4y\t
-@0}\r
-:JU%
-A1|\f
-6G\r|
-@1"S
-F7}\f
 $V7E
 J8Y+
-\nx;I
-y\vH:
-=O\f~
-:I\r~
-z\tW$
-/[\n~
-\t},X
-~\v](
-x\r[.
-{\rR$
-T"}\v
-R%}\n
-$S\v|
-#[.V
 K3F>
 H0E=
- X-U
-&^+S
 N6C;
 M5@8
-%](P
 1H:C
 E<N7
 6O=D
 B;I0
-T-s\n
 K2@9
 ?F4M
 L5G>
 8A3J
-\vq\np
-?E>D
 =G8B
-;A:@
 3I2H
 7M6L
 5O Z
-#Y"X
-']&\
-/U.T
--W(R
-+Q*P
--V*Q
 #X8C
 1J6M
-]&Z!
 S(H3
-A:F=
 B9E>
-^%Y"
-\nq\rv
 2I5N
-.U)R
-?C*V
-A=;G
 P,E9
-I5\ 
 7KM1
 &Z3O
-@<U)
-/S:F
 H4\tu
-6J#_
 Y%L0
-5H&[
-.S=@
 D96K
-O2\!
-T)G:
 Y$J7
 3Nw\n
-B?Q,
-(UZ'
-#^0M
 8E+V
 +U2L
 O1V(
 P.I7
 4J-S
 8FE;
-C=>@
-?AB<
 D:9G
 ,R5K
 H6Q/
 W)N0
 3M*T
-!^>A
-]"B=
 H7W(
 4K+T
 -RN1
 P/O0
 ,S3L
 9F&Y
-E:Z%
-\#?@
 9Q`V,
-@^P"
 7A$W
 I1'-Si
 @?/data/src/streaming/common/streamsocket.cpp
@@ -27397,8 +26806,6 @@ self.m_pSignaling == pSignaling
 Connected 
 SDR->%s->%s 
  Ping: %dms
-???%%
-%.1f%%
 Closed by peer '%s' (%d)
 SteamNetworkingSockets %s\n
 Problem '%s' (%d)
@@ -27526,7 +26933,6 @@ LogLevel
 log-level
 Error setting property `%s' on interface com.steampowered.SteamOSLogSubmitter.Manager: %s (%s, %d)
 Error setting property `%s' on interface com.steampowered.SteamOSLogSubmitter.Helper: %s (%s, %d)
-{&sv}
 SteamOSLogSubmitterHelper
 SteamOSLogSubmitterHelperProxy
 SteamOSLogSubmitterManagerProxy
@@ -27604,7 +27010,6 @@ UpdateDock
 TrimDevices
 (ssb)
 FormatDevice
-(uu)
 SetWifiDebugMode
 steam_osmanager_manager_proxy_get_property
 steam_osmanager_manager_proxy_set_property
@@ -27789,30 +27194,24 @@ BluezAdapter1Proxy
 BluezDevice1Proxy
 BluezDevice1
 Method %s is not implemented on interface %s
-(os)
 RegisterAgent
 UnregisterAgent
 RequestDefaultAgent
 org.bluez.AgentManager1
-(os@a{sv})
 RegisterProfile
 UnregisterProfile
 org.bluez.ProfileManager1
 Introspect
 org.freedesktop.DBus.Introspectable
 StartDiscovery
-(@a{sv})
 SetDiscoveryFilter
 StopDiscovery
 RemoveDevice
 GetDiscoveryFilters
-(ss)
-(ss@v)
 GetAll
 RegisterBatteryProvider
 UnregisterBatteryProvider
 org.bluez.BatteryProviderManager1
-(o@a{sv})
 RegisterApplication
 UnregisterApplication
 org.bluez.GattManager1
@@ -27833,7 +27232,6 @@ FastForward
 Rewind
 (ouq)
 DisplayPasskey
-(ou)
 org.bluez.Agent1
 BluezObject
 BluezObjectProxy
@@ -27899,7 +27297,6 @@ handle-save-files
 Error setting property `%s' on interface org.freedesktop.portal.FileChooser: %s (%s, %d)
 DesktopPortalFileChooserProxy
 DesktopPortalFileChooser
-(ss@a{sv})
 OpenURI
 (s@h@a{sv})
 SaveFile
@@ -28182,7 +27579,6 @@ UDisks2Job
 UDisks2PartitionSkeleton
 UDisks2Partition
 UDisks2PartitionProxy
-(bs)
 UDisks2MDRaidProxy
 UDisks2MDRaid
 UDisks2BlockSkeleton
@@ -28192,7 +27588,6 @@ UDisks2DriveAtaProxy
 UDisks2DriveAta
 UDisks2DriveProxy
 UDisks2Drive
-(@h@a{sv})
 LoopSetup
 (^aosst@a{sv})
 MDRaidCreate
@@ -28200,10 +27595,8 @@ MDRaidCreate
 SetConfiguration
 SmartUpdate
 SmartGetAttributes
-(s@a{sv})
 SmartSelftestStart
 SmartSelftestAbort
-(b@a{sv})
 SmartSetEnabled
 PmGetState
 PmStandby
@@ -28223,7 +27616,6 @@ Rescan
 CreatePartition
 SetType
 SetName
-(t@a{sv})
 SetFlags
 SetLabel
 Mount
@@ -28277,106 +27669,58 @@ screenshot_taken
 set_app_target_refresh_cycle
 take_screenshot
 3suu
-\n\n\n\n\n\n\n\n
-\v\v\v\v\v\v\v\v
-\f\f\f\f\f\f\f\f
 Size() == operand.Size()
 /data/src/tier1/bitstring.cpp
 GetInts()
 resizeNumBits >= 0
 CVariableBitStringBase
-{}()'
-{}()':
 8\foQS
-')uB
 $\nY8O
-*\t5|z
 lEd/
 k2U\v
-,W!\v
 6 PQ
 pCRF
-\v~TI
 \nYg:a
 JZJ{.
 #FLR
-_QS}
-(]2Q
 ig,o
-Y"\v]
-u{)l
 Sm"\vg
 qR5FE%
 ]JldN
-\t4x=
-:'No)b
-W~Y`
 #tDq
 30!]^JV
 49fN
 5T&w&
 \rRoOs
 +ulsX
-g;j\v
 b,uZ
 D\vvf:
-.bs"
 f.N%H
-\f%$LM
-t![R
-|;,\t=
 0F`8
 zC`G;
-1"{K
-+g@#I
-`\n\n7Bh
 mwa!
 FCZ&
-,c\E
 bwiO'
-]bn"
-`<C$Y
 `tun%
 gAY:
 A@qVc"
-!S{a!J
- n;^
 Qkkbal
-3_L\n
->jm\r
 Zjz\v
 i]Wb
 9a&g
 MGiI
 wn>Jj
-#.zf
-+o*7
-Z* ,\t
 H$6t
-_~6\f
 52F*
-\t#jT$
-\n=G\\vp
-^6o}
-[-&LMb#{'
-)q\n>(
 w+OQvr
-\r}!b
 R1h58
 SKyu
-)\ZEo^m/
 ru&o
-i8P/\f_
-?(3w
 wXR\r
 H*0"ZOW
 {kHw
-)T`D
 !AxU
-l!;b\tF
-:1X:
 y9*O
-kM`~
 Vc0a
 dQy/
 lDa>
@@ -28426,7 +27770,6 @@ LOCK_EX
 LOCK_SH
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
 flock %s %s failed. errno = %d
-ret != 0
 g_pFioAsyncEnqueue == NULL
 g_pFioAsyncFinalize == NULL
 BCreateDirectory
@@ -28434,7 +27777,6 @@ BCreateDirectory
 TMPDIR
 %s/steamXXXXXX
 %d:00
-%A %b %d
 %s%c.temp_write_%x
 flock LOCK_EX %s failed, errno = %d\n
 write %s failed, errno = %d\n
@@ -28454,12 +27796,10 @@ statvfs64: ret %d errno %d\n
 /ubuntu12_64/disk-free 
 /tmp/disk-free.XXXXXX
 mkstemp errno %d\n
- >%s
  2>/dev/null
 Execute: %s\n
 disk-free command failed\n
 fopen tmpfile failed\n
-%d\n%d\n%d\n
 %d MB avail\n
 %d MB total space\n
 %d MB free space\n
@@ -28557,7 +27897,6 @@ ANDROID64
 X360
 m_errorIndex>=0
 /data/src/tier1/KeyValues.cpp
-"\t\t"
 %.18g
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
 can't convert uint64 to int32 (data loss)
@@ -28578,7 +27917,6 @@ KeyValues::ReadAsBinary - TYPE_PTR
 KeyValues::ReadAsBinary - TYPE_BINARY_STRING
 stackLevel >= 0 && stackLevel < m_errorIndex
 KeyValues Error: %s in file %s [offset: %d]\n
-*), 
  ReadToken overflow
 pKeyValuesTextParser
 RecursiveLoadFromBuffer:  got EOF instead of keyname
@@ -28621,7 +27959,6 @@ Lowered '%s' -> '%s'\n
 Breaking '%s' in '%s'\n
 Matched '%s' -> '%s'\n
 Unmatched %s\n
-m_Put >= 0
 /data/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 nSize != 0
@@ -28687,8 +28024,6 @@ expandableSpace
 diskSize
 Bad expression token: %c %c\n
 Bad expression token: %c at %d in %s\n
-%%%d
-]:%u
 0123456789abcdef
 [libprotobuf %s %s:%d] %s\n
 google/protobuf/stubs/common.cc
@@ -28704,7 +28039,6 @@ N6google8protobuf14FatalExceptionE
 google/protobuf/stubs/int128.cc
 CHECK failed: (0) != (n): 
 Division or mod by zero: dividend.hi=
-, lo=
 ""3333
 CANCELLED
 INVALID_ARGUMENT
@@ -28727,7 +28061,6 @@ CHECK failed: (pos) <= (x.length_):
 CHECK failed: (len) >= (0): 
 google::protobuf::StringPiece::StringPiece(const char*, google::protobuf::stringpiece_ssize_type)
 ./google/protobuf/stubs/stringpiece.h
-len >= 0
 google/protobuf/arena.cc
 CHECK failed: (min_bytes) <= (std::numeric_limits<size_t>::max() - SerialArena::kBlockHeaderSize): 
 CHECK failed: (kBlockHeaderSize + ThreadSafeArena::kSerialArenaSize) <= (mem.size): 
@@ -28954,7 +28287,6 @@ CHECK failed: GeneratedDatabase()->Add(encoded_file_descriptor, size):
 CHECK failed: (field_count()) == (2): 
 Invalid proto descriptor for file "
 File recursively imports itself: 
- -> 
 Reserved numbers must be positive integers.
 Reserved range end number must be greater than start number.
 Invalid wire type for CPPTYPE_INT32: 
@@ -29029,7 +28361,6 @@ length_ >= n
 Enum name 
  has the same name as 
  if you ignore case and strip out the enum name prefix (if any). This is error-prone and can lead to undefined behavior. Please avoid doing this. If you are using allow_alias, please assign the same numeric value to both enums.
-$0// $1\n
 CHECK failed: checkpoints_.empty(): 
 .placeholder.proto
 .PLACEHOLDER_VALUE
@@ -29116,26 +28447,17 @@ Found invalid proto option data for:
 $0option $1;\n
 stream 
 $0rpc $1($4.$2) returns ($5.$3)
- {\n$0$1}\n
 service $0 {\n
-$0$1 = $2
- [$0]
 $0enum $1 {\n
 $0  reserved 
-$0, 
 $0 to max, 
-$0 to $1, 
-"$0", 
-$0}\n
 $0message $1
 $0  extensions $1 to $2;\n
-$0  }\n
 $0  extend .$1 {\n
 map<$0, $1>
 $0$1$2 $3 = $4
  [default = $0
 json_name = "
- { ... };\n
 extend .$0 {\n
 " is a message. To set the entire message, use syntax like "
  = { <proto text format> }". To set fields within it, use syntax like "
@@ -29145,7 +28467,6 @@ Could not create an instance of
 Error while parsing option value for "
 CHECK failed: (option_field->type()) == (FieldDescriptor::TYPE_GROUP): 
 $0oneof $1 {
- ... }\n
 syntax = "$0";\n\n
 import public "$0";\n
 import weak "$0";\n
@@ -29207,7 +28528,6 @@ sfixed64
 sint32
 sint64
 char google::protobuf::StringPiece::operator[](google::protobuf::stringpiece_ssize_type) const
-0 <= i
 i < length_
 ./google/protobuf/descriptor.pb.h
 CHECK failed: value != nullptr: 
@@ -29222,7 +28542,6 @@ CHECK failed: desc_proto.has_name():
 File not found in database (unexpected): 
 Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
 Extension conflicts with extension already in database: extend 
- } from:
 Invalid symbol name: 
 Symbol name "
 " conflicts with the existing symbol "
@@ -29767,7 +29086,6 @@ CHECK failed: this == other_mutator:
 google/protobuf/message.cc
 CHECK failed: (from.GetDescriptor()) == (descriptor): 
 : Tried to merge from a message with a different type.  to: 
-, from: 
 : Tried to copy from a message with a different type. to: 
 Message class "
 " implements neither SetCachedSize() nor ByteSize().  Must implement one or the other.
@@ -29857,7 +29175,6 @@ Expected string, got:
 Expected integer, got: 
 Expect a decimal number, got: 
 Expected "
-", found "
 Integer out of range (
 Expected double, got: 
 Invalid value for boolean field "
@@ -29995,7 +29312,6 @@ CHECK failed: i >= 0:
 FastHexToBuffer() wants non-negative integers, not 
 CHECK failed: (digits) < (100): 
 nullptr output boolean given.
-%.*g
 CHECK failed: (out) == (begin + result.size()): 
 CHECK failed: (uintptr_t((a).data() - (*result).data())) > (uintptr_t((*result).size())): 
 CHECK failed: (uintptr_t((b).data() - (*result).data())) > (uintptr_t((*result).size())): 
@@ -30008,7 +29324,6 @@ len >= input_len
 CHECK failed: (len) <= (dest_len): 
 Logic problem? szsrc = 
 CHECK failed: (calc_escaped_size) == (escaped_len): 
-%.1f
 CHECK failed: (temp[0]) == ('1'): 
 CHECK failed: (temp[size - 1]) == ('5'): 
 CHECK failed: (size) <= (6): 
@@ -30016,10 +29331,8 @@ CHECK failed: dest:
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 456789:;<=
-\t\n\v\f\r
  !"#$%&'()*+,-./0123
 ?456789:;<=
-\t\n\v\f\r
  !"#$%&'()*+,-./0123
 0123456789abcdef
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
@@ -30039,7 +29352,6 @@ google/protobuf/any.proto
 google.protobuf"&\n
 type_url
 value
-(\fBv\n
 com.google.protobufB
 AnyProtoP
 Z,google.golang.org/protobuf/types/known/anypb
@@ -30238,13 +29550,9 @@ Parsing terminated before end of input.
 N6google8protobuf4util9converter16JsonStreamParserE
 google/protobuf/util/internal/protostream_objectsource.cc
 Input stream is nullptr.
-', field '
 Message too deep. Max recursion depth reached for type '
 Timestamp seconds exceeds limit for field: 
 Timestamp nanos exceeds limit for field: 
-%.9f
-%.6f
-%.3f
 Duration seconds exceeds limit for field: 
 Duration nanos exceeds limit for field: 
 Duration nanos is non-negative, but seconds is negative for field: 
@@ -30344,7 +29652,6 @@ N6google8protobuf4util9converter11ProtoWriter12ProtoElementE
 N6google8protobuf4util9converter11ProtoWriterE
 N6google8protobuf4util9converter21ObjectLocationTrackerE
 google/protobuf/util/internal/type_info.cc
-' and '
 ' map to the same camel case name '
 nullptr is not a valid argument.
 N6google8protobuf4util9converter8TypeInfoE
@@ -30441,7 +29748,6 @@ Invalid FieldMask '
 \u009e
 \u009f
 0123456789abcdef
-\t#3R
 &'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
 $3br
 %&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz
@@ -30574,28 +29880,19 @@ Invalid SOS parameters for sequential JPEG
 Application transferred too many scanlines
 JPEGMEM
 %ld%c
-E\v0~
 sAmTb
 BKbhTb~XBK!;
 A!;I2
-"\v0A-
 U3OP
-E\v0~
 sAmTb
 BKbhTb~XBK!;
 A!;I2
-"\v0A-
 U3OP
-\n?u=
-\n?u=
-?u='@
 Z@&LHA'\r:C(
-&E*3
 \tN1a
 MQC,ARD
 /TF<)VGy#WH
 KNQ\rMO
-\vM0@\n
 Q2XXR
 YpU_Z
 Da\">c]$8c^
@@ -30682,21 +29979,12 @@ qdZRMHD@=;86421/.-+*)(''&%$$#""!!
 E=FZGrH
 QyReSOT5U
 YbZ6[
-]o^8_
 hxi(j
 vtw\nx
-\t \ny\n
-"p#*$
-%d&&'
-({)F*
--a.:/
 4i5U6B738%9
 B#C0D?EQFeG|H
 N9OaP
-Y=[~\
-]\t_R`
 Bx\r9
-!W,m]
 k\fClibpng warning: %s
 undefined
 libpng error: %s
@@ -30706,7 +29994,6 @@ bad longjmp:
 Libpng jmp_buf still allocated
 Application jmp_buf size changed
 png_get_eXIf does not work; use png_get_eXIf_1
-\nF%u
 ?Out of memory
 internal error: array alloc
 internal error: array realloc
@@ -30862,9 +30149,7 @@ Row has too many bytes to allocate in memory
 3333
 DDDDUUUU
 00003333
-""""
 UUUU
-\f\f\f\f
 3333
 Invalid sCAL width
 Invalid sCAL height
@@ -30942,7 +30227,6 @@ zTXt
 png_set_filler is invalid for low bit depth gray output
 png_set_filler: inappropriate color type
 info change after png_start_read_image or png_read_update_info
- 0@P`p
 !1AQaq
 "2BRbr
 #3CScs
@@ -30953,11 +30237,6 @@ $4DTdt
 (8HXhx
 )9IYiy
 *:JZjz
-+;K[k{
-,<L\l|
--=M]m}
-.>N^n~
-/?O_o
 Write Error
 Call to NULL write function
 png_image_write_to_memory: PNG too big
@@ -31034,51 +30313,29 @@ Unrecognized equation type for pCAL chunk
 Can't write sCAL (buffer too small)
 Unrecognized unit type for pHYs chunk
 Invalid time specified for tIME chunk
- n;^
 Qkkbal
-3_L\n
->jm\r
 Zjz\v
 i]Wb
 9a&g
 MGiI
 wn>Jj
-#.zf
-+o*7
-Z* ,\t
 H$6t
-_~6\f
 52F*
-\t#jT$
-\n=G\\vp
-^6o}
-[-&LMb#{'
-)q\n>(
 w+OQvr
-\r}!b
 R1h58
 SKyu
-)\ZEo^m/
 ru&o
-i8P/\f_
-?(3w
 wXR\r
 H*0"ZOW
 {kHw
-)T`D
 !AxU
-l!;b\tF
-:1X:
 y9*O
-kM`~
 Vc0a
 dQy/
 lDa>
 7~8A
 C-Yn
 gqr<
-$/o|
-f-=v
 \rmj>zjZ
 l6qnk
 IiGM>nw
@@ -31086,35 +30343,23 @@ IiGM>nw
 i91k
 ewh/?y
 *5KS
-\f6~_'
-F*.f
 1wsHp
--\n\v\G=
 M8MF
 Pe6^
 #bML"
-`F(>\nq-q
 vQO+t
 [h1R
 XsBI
 hPU3
 ^oEZ_
-2%k_
 w3Xc
-[\n;g
 /P8i
 OZw3(?
-Z"0*
 fP~V
-D`T\f
-^GP~
-b;!l
-V_:X1:
 NJ2"v
 O*9y]
 fu`z
 /yQA
-&]|v
 incorrect header check
 unknown compression method
 invalid window size
@@ -31158,8 +30403,6 @@ bool pcrecpp::RE::DoMatchImpl(const pcrecpp::StringPiece&, pcrecpp::RE::Anchor, 
 int pcrecpp::NewlineMode(int)
 int pcrecpp::RE::GlobalReplace(const pcrecpp::StringPiece&, std::string*) const
 bool pcrecpp::RE::Replace(const pcrecpp::StringPiece&, std::string*) const
-<7<J
-03<?
 :libopus 1.1.4
 invalid argument
 buffer too small
@@ -31168,13 +30411,10 @@ request not implemented
 invalid state
 memory allocation failed
 A~|wmW)
-nVF;3-(%!
 \r\r\f\f\f\f\v\v\v\n\n\n\t\t\t\t\t\t
 >333?
-+?^)
 \tP6Zd;
 ?333333
-~|wmW)
 ZPKE?81("
 ndZTNGA:3-' 
 vng]VPKFA;5/(
@@ -31185,136 +30425,53 @@ xrga[UNHB<6/)#
 yslf`ZTMGA;5.
 }vpjd^WQKE?8-
 8>0RF>
-'?t|+??Z/?
-:H?'mK?
 8W?i
-^?sYa?
 k?n_m?P
-y?srz?''{?
-^|?5
-~?&)
-}?tt}?
 z?Mbz?H5z?
 y?Zzy?
 x?sMx?
-w?:ww?
-?w?\n
-v?/\v?
-!v?<
 mu?B0u?A
 t?;tt?74t?
-s?&ps?v-s?
 r?dar?\n
-$p?b
-o? Bo?
 n?SZn?
-k?P+k?@
 j?2*j?5
-{i?M#i?d
-g?``g?H
 f?3Jf?6
 e?W.e?w
 a?wSa?\
-{^?p
-a\?Y
-8Z?.
-Y?'WY?
 X?OsX?
-V?V/V?
 U?:CU?K
-\rL?;
-tH?$
-hG?)
 D?28D?/
-f@?(
-{<?\
-;?uX;?\n
 \v9?Gw8?Q
 6?k 6?t
-(3?0
-O.?2
--?'v,?k
-+?78+?
-(?3s'?
--&?y
-$?aB$?
-!?[_ ?
-p\r?\n
-9\t?I
-gx>/'u>
 n>sak><
-}T>k6Q>]
 M0>B
-)>Bd&>
-|=Fvo=]
-,=@"
-;;.}
-d~?i3~?A
-|?MD|?
-\{?C\n{?
 zx?L
 9w?O
 eu?u
 t?Dlt?e
 Xr?9
-q?\t?q?4
 uj?I
 eh?o
-f?|>f?
-d?Z<c?
 ub?L
-B?:oA?4U@?
-d8?":7?
 -?Vb,?H$+?Z
-^'?q
-#?#>"?u
-\f?|@\v?
 g>M-a>Y
-F>F_@>\r
-;=zV
-~?\v-~??
-}?RJ}?H
-|?(;|?
 Qz?H
 +w?FFv?
 Vu?N\t?8Ws?vGr?
 m?@Zl?~\vk?k
-ie?>
 `?m'_?&~]?(
 Z?SHX?
 D?AdB?
-;?Bh9?
-U2?)
-w-?e
-*?5z(?
-\v?9@
 oz>!km>
-\`>)CS>
- F> 
-`?NH]?E
->V?+
 kF?j
 9?\rm4?2
-%??t ?m-
-\n?k\v
 Q>0P7>
 "$&')*+,-.//123456779:;<=>??ABCDEFGG(
 !)059=@BEGIKLNPRUWY[\^`begiklnpruwy{|~
 '3<CIOSW[^adfikosvy|~
 1ANYckrx~
-!:Oap}
-#?Vj{
 7K[iu
 $AYn
-\v)Jg
-\t+On
-\f'Gc{
-\t,Qq
-?:^V
-~?3e
-9~?s
-|?\0 
-gM|?
 x?M\fo
 wcv?>
 6uu?uj
@@ -31322,91 +30479,37 @@ wcv?>
 qxs?z7
 O-p?A6
 d?qq
-`?'N
 FZ?w
 V?wm\v
-B?:B&
->>?%L+
-_7?e
-80?"
-%L+?
-:B&?
-wm\v?
->O-p
 >qxs
->0|t
 >6uu
 >wcv
-M\fo><
-i->gM|
-\0 >%
-:^V=/
 uV<c
-:^V=
-\0 >gM|
-M\fo>
 >wcv
 >6uu
->0|t
 >qxs
->O-p
 wm\v?1
-:B&?
-%L+?
-;?%L+
-x@?:B&
 T?wm\v
-[_?'N
 b?qq
 n?A6
-O-p?
 jr?z7
 qxs?L
 0|t?uj
 6uu?>
 wcv?
 x?M\fo
-gM|?\0 
-~?3e
-?:^V
 uV<c
-?:^V=/
-Y}?\0 >%
-i->gM|?
-y?M\fo><
-Fw?>
 >wcv?uj
 >6uu?L
 >0|t?z7
 >qxs?
 Pq?A6
->O-p?
 e?qq
-b?'N
-X?wm\v?
-\nI?$
-D?:B&?
-x@?%L+?
-80?"
-_7?e
->>?%L+?
-B?:B&?
-V?wm\v?
 FZ?w
-`?'N
 d?qq
 >O-p?A6
 >qxs?z7
->0|t?L
 >6uu?uj
->wcv?>
-x?M\fo>\t
-:>gM|?
-i->%
-|?\0 >
-9~?s
-~?3e
-?:^V=y
 \N\O\NZOt)s(r(
 =rF`JXKXWJYB[Cd;l2x(z%a+N2SNTQXKVJWGZI]J]Jm(r$u"u"
 6s?fBbEcJYG[I[NYVP\B]@f;g<h<u4{,
@@ -31414,122 +30517,48 @@ a&M-=Z]<i*k)n-t&q&p&|
 ;nGVKUTS[BXIWH\KbHi:k6s4r7p8
 b#M**y`Bl+o(u,{ x$w!
 ?rJRTS\Rg>`H`CeIkHq7v4}4v4u7
-a!M(
-  !""#$$%%
 R;876.
-\f\v\n\t
-J B'
 3$EE\f
-m[?%I
 Z48wN39
-%c;w.
 I<OXb<^
-=aP&=
-4S=?8_=i
 k=E.x=i
->Tt$>
-g)>3j.>
-{3>R
 C>YPH>z
-\rS>R
-$i>%
-n>${t>
-\n\n?V
-\v?,a\r?|\v
-$)?(
--?rn/?
 rA?7
 B?wMD?
-M?y>O?
-!S?seT?\r
 X?/QY?s
-_?K<`?
 Ta?jib?
-yc?<
-@l?O#m?
 }p?IGq?|\fr?
-Av??
 5y?4
-1{?w
-3}?e
-*>40
->`#I>
-=`#I>
-\n>}=
-\n>}=
-`#I>
->`#I>`#I
-%q>4
-|\t?I
 /R?jjU?
-]?K[`?n
-nm?\v
 ar?Mgs?
-Yt?\f:u?
-!x?b
 Gy?K
-y?$Cz?
-y{? 
-#|?7o|?
-B~?Nd~?
->\nf\f?}<
 LAPS
 vsAd
-w>/n
-<|:h
-a?'k
-0>1%
 ?0DS=
-9b'@
 =q4l=S
-OY]>
-.8c>
 <ef0
-\rp=>
-=N&^
-9\v>@WV
 i?fKV>
-_^\f@'
-|I<H
-@}vh?P
-<>2t,
 AJl>
 =ys8
 Uj&>U
 cARD
-?K#a=
 C=Kx
 >KY5
-=^,h
-\t\tx-\n
-e\rA*
-AI\t \t
-*0#)
-qH,\t;`
-79]%
 Hen\fM
-\t\t9w
 9=aA\E
 b"Iq
 \t3l0
 4 uH
 8}WW`
-G2*&#!
-\r\f\v\n\t
 ZW][Rbmxv\fqsuwc;Wo?opP~|}|
-~V|x{w
 E]sv
-|m`TG=3* 
 {ri`XPH@92,&!
-\f#<Sl
  7Me}
 *BYr
 2Hax
 ,EZr
-,@Zs
 >Rdx
 2Ogx
--Aj|
 1Kay
 4F]t
 ">Kav
@@ -31540,49 +30569,34 @@ E]sv
 !3Mt
 FWj|
 !5@Su
-"A_l
-"+=N]r
 &8Yv
 1?Uo
-/Jc|
-!*=L]y
 %0@Thv
 l`UROM=;98310-*)(&$"
-}rf[QG<4+#
 tCR;\HdY\
 cB$$"$""""SE$4"tfFDD
 fDD"AUDT$t
 hfdDD
 df"DDdD
-~I+9
-}G0:
 nI9>h
 {A7Dd
 &6EUdt
 )7ESbp
-"3=N\j~
-$2?O_n~
 %3;NYk{
  3CQ`p
 %3AObq~
 "7?NWlv
  $8O[lv
 +:JYix
-!.<K\k{
 ,9JYiy
 .9GXdx
-#.8M\j{
 -5?KYks
 (8GXgw
 $09LWiv
 6GQ^h~
 />Oas
-->N^o
 1>O\kw
-$-=L[ly
--<L[k{
 +5FSgr
-#*:N]n}
 "2CScs
 )BIV_o
 %4?K\fw
@@ -31594,32 +30608,25 @@ wsqnmcb_OD420-+
 |nhZNLFE9-"
 D>B<HuUZv
 dffDD$"`
-f@B$""
 PmNk
 {wwgEbDgxvvfGb
-yk 1"""
 dFDFBB"
 fD""B
 kkWfd
 vWewe
-$$BD#`
 dkxw$
 yM+7
 B2Bk
 tL75}
-wP=/#
 waC+
 |obXOF>82,'#
 hJ4%
 xnbUH<1( 
 1CMR]c
 .BNW^h
- *3B
 ^hmpsv
 5EPX_f
 #,6AMZhw
-uF%\f
-_c[}]L{s{
 E/Co
 RJO_m
 }J;Ea
@@ -31628,15 +30635,9 @@ qfefkv}
 eSOUax
 xe\Y]fv
 vmhfjov
-\f\v\n\t
-\f\v\n\t
-tS;+ 
 gSB5*!
 wU9%
 |bK7(
-\n\n\nJ\t
-\f\r\n\v
-\f\r\n\v
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/planar_functions.cc
 depth >= 8
 depth <= 16
@@ -31767,10 +30768,7 @@ Duplicate property %s in object
 ulValue < ((uint64)1<<53)
 ulValue < ((uint64)1 << 53)
 CJSMethodArgs::AddProtobufAsBinary
-%s    
-%s%s[%d]:\n
 %s%s[%d]: -> %s\n
-%s%s %s: \n
 %s%s %s: %s\n
 reply
 16CJSCallbackFuncs
@@ -32283,7 +31281,6 @@ CMsgMouseDblClick
 browser_handle
 \n\fmouse_button
 \n\tmodifiers
-(\r"[\n
 CMsgMouseWheel
 browser_handle
 deltax
@@ -32292,7 +31289,6 @@ deltay
 (\r"P\n\rCMsgMouseMove
 browser_handle
 \n\tmodifiers
-(\r"(\n
 CMsgMouseLeave
 browser_handle
 CMsgBrowserCreate
@@ -32319,11 +31315,9 @@ false
 \n\vinitial_url
 \n\vhwnd_parent
 creation_flags
-0"G\n
 CMsgBrowserCreateResponse
 browser_handle
 \n\nrequest_id
-(\r"+\n
 CMsgBrowserRemove
 browser_handle
 CMsgSetLocalFileRequestMapping
@@ -32346,11 +31340,9 @@ bad_url
 connection_problem
 \n\rproxy_problem
 unknown
-(\t":\n
 CMsgBrowserSetName
 browser_handle
 name
-(\t"H\n
 CMsgBrowserSize
 browser_handle
 width
@@ -32394,15 +31386,12 @@ browser_handle
 visible
 CMsgClearHistory
 browser_handle
-(\r"2\n
 CMsgClearAllBrowsingData
 browser_handle
-(\r""\n
 CMsgCopy
 browser_handle
 (\r"#\n\tCMsgPaste
 browser_handle
-(\r"?\n
 CMsgExecuteJavaScript
 browser_handle
 script
@@ -32418,7 +31407,6 @@ scroll
 zoom
 visible
 \n\tpage_size
-(\r"3\n
 CMsgVerticalScrollBarSize
 browser_handle
 \n!CMsgVerticalScrollBarSizeResponse
@@ -32428,7 +31416,6 @@ scroll
 zoom
 visible
 \n\tpage_size
-(\r"X\n
 CMsgFind
 browser_handle
 find
@@ -32436,21 +31423,17 @@ infind
 reverse
 false"&\n\fCMsgStopFind
 browser_handle
-(\r"A\n
 CMsgSetHorizontalScroll
 browser_handle
 scroll
-(\r"?\n
 CMsgSetVerticalScroll
 browser_handle
 scroll
-(\r"8\n
 CMsgSetZoomLevel
 browser_handle
 zoom
 CMsgViewSource
 browser_handle
-(\r"X\n
 CMsgBrowserReady
 browser_handle
 vr_overlay_key
@@ -32462,7 +31445,6 @@ postData
 \n\tpagetitle
 bNewNavigation
 \n\rCHistoryEntry
-(\t"\\n
 CMsgHistoryChanged
 browser_handle
 index
@@ -32487,7 +31469,6 @@ false"M\n
 CMsgFinishedRequest
 browser_handle
 \n\tpageTitle
-(\t"j\n
 CMsgLoadedRequest
 browser_handle
 \n\tpageTitle
@@ -32496,7 +31477,6 @@ headers
 CMsgFavIconURLChanged
 browser_handle
 urls
-(\t"f\n
 CMsgPageSecurity
 browser_handle
 -\n\rsecurity_info
@@ -32517,7 +31497,6 @@ browser_handle
 browser_handle
 wide
 tall
-(\r"J\n
 CMsgOpenNewTab
 browser_handle
 \n\vbForeground
@@ -32532,17 +31511,14 @@ trusted_creator
 name
 hwnd
 parent_popup_index
-(\r"E\n
 CMsgPopupHTMLWindowResponse
 browser_handle
 bAllow
 CMsgSetHTMLTitle
 browser_handle
 title
-(\t":\n
 CMsgLoadingResource
 browser_handle
-(\t"6\n
 CMsgStatusText
 browser_handle
 text
@@ -32573,18 +31549,14 @@ browser_handle
 owning_browser_handle
 bsuccess
 files
-(\t"7\n
 CMsgShowToolTip
 browser_handle
 text
-(\t"9\n
 CMsgUpdateToolTip
 browser_handle
 text
-(\t")\n
 CMsgHideToolTip
 browser_handle
-(\r"Q\n
 CMsgSearchResults
 browser_handle
 \n\vactiveMatch
@@ -32635,13 +31607,11 @@ scrolly
 \n\npageserial
 (\r"%\n\vCMsgGetZoom
 browser_handle
-(\r";\n
 CMsgGetZoomResponse
 browser_handle
 zoom
 CMsgLinkAtPosition
 browser_handle
-(\r"z\n
 CMsgLinkAtPositionResponse
 browser_handle
 \n\tblivelink
@@ -32666,7 +31636,6 @@ browser_handle
 filename
 width
 height
-(\r"S\n
 CMsgSavePageToJPEGResponse
 browser_handle
 filename
@@ -32676,7 +31645,6 @@ message
 (\t"8\n\rCMsgJSConfirm
 browser_handle
 message
-(\t">\n
 CMsgJSDialogResponse
 browser_handle
 result
@@ -32698,40 +31666,29 @@ samesite
 CMsgSetTargetFrameRate
 browser_handle
 nTargetFrameRate
-(\r"*\n
 CMsgPauseRepaint
 browser_handle
-(\r")\n
 CMsgFullRepaint
 browser_handle
-(\r"/\n
 CMsgRequestFullScreen
 browser_handle
-(\r",\n
 CMsgExitFullScreen
 browser_handle
-(\r"4\n
 CMsgToggleFindInPageDialog
 browser_handle
-(\r"0\n
 CMsgSetPIDShuttingDown
 browser_handle
-(\r"9\n
 CMsgDisableBackgroundThrottling
 browser_handle
-(\r"0\n
 CMsgAckPIDShuttingDown
 browser_handle
-(\r";\n
 CMsgGetCookiesForURL
 browser_handle
-(\t"D\n
 CCookie
 name
 value
 domain
 path
-(\t"^\n
 CMsgGetCookiesForURLResponse
 browser_handle
 cookies
@@ -32747,10 +31704,8 @@ bHasMultipleInputs
 \n\fbIsMainFrame
 CMsgZoomToFocusedElement
 browser_handle
-(\r"-\n
 CMsgFocusedNodeText
 browser_handle
-(\r"D\n
 CMsgFocusedNodeTextResponse
 browser_handle
 value
@@ -32758,10 +31713,8 @@ value
 build_id
 CMsgOpenDevTools
 browser_handle
-(\r"+\n
 CMsgCloseDevTools
 browser_handle
-(\r"=\n
 CMsgUnlockH264
 browser_handle
 \n\vunlock_code
@@ -32777,7 +31730,6 @@ monitor_bottom
 \n\nusable_top
 \n\fusable_right
 \n\rusable_bottom
-(\r"-\n
 CMsgClearAllCookies
 browser_handle
 (\r"<\n\rCMsgScreenDPI
@@ -32785,10 +31737,8 @@ browser_handle
 \n\vdpi_scaling
 CMsgAckScreenDPI
 browser_handle
-(\r")\n
 CMsgAuthedSteamDomains
 domains
-(\t"%\n
 CMsgSteamAuthNeeded
 filler
 CMsgSteamAuthCookiesSet
@@ -32843,22 +31793,17 @@ CMsgJSRaiseException
 browser_handle
 owning_browser_handle
 \n\texception
-(\t"[\n
 CMsgLoadLocalization
 browser_handle
 localization_path
 language
-(\t"2\n
 CMsgNotifyUserActivation
 browser_handle
-(\r"/\n
 CMsgSetNetFakeLocalSystemState
 state
-(\r"J\n
 CMsgSetGameOverlayTargetPIDs
 browser_handle
 \n\ntarget_pid
-(\r"d\n
 CMsgGameOverlayTargetTextureID
 browser_handle
 \n\ntarget_pid
@@ -32886,19 +31831,14 @@ height
 \n\nmax_height
 CMsgShowWindow
 browser_handle
-(\r"(\n
 CMsgHideWindow
 browser_handle
-(\r"0\n
 CMsgBringWindowToFront
 browser_handle
-(\r"1\n
 CMsgSetForegroundWindow
 browser_handle
-(\r"3\n
 CMsgMaximizeRestoreWindow
 browser_handle
-(\r",\n
 CMsgMinimizeWindow
 browser_handle
 CMsgShowBrowserContextMenu
@@ -32916,7 +31856,6 @@ misspelled_word
 edit_state_flags
 ContextCommand
 label
-(\t"J\n
 CMsgHandleContextMenuCommand
 browser_handle
 \n\ncommand_id
@@ -32930,21 +31869,16 @@ height
 CMsgSetTouchGesturesToCancel
 browser_handle
 gestures
-(\r"=\n
 CMsgImeSetComposition
 browser_handle
 text
-(\t"9\n
 CMsgImeCommitText
 browser_handle
 text
-(\t"2\n
 CMsgImeCancelComposition
 browser_handle
-(\r"N\n
 CMsgImeCompositionRangeChanged
 browser_handle
-(\r"B\n
 CMsgInspectElement
 browser_handle
 (\r"8\n\rCMsgDisableF5
@@ -32952,7 +31886,6 @@ browser_handle
 disable
 CMsgStartDownload
 browser_handle
-(\t"L\n
 CMsgSetWindowStackingOrder
 browser_handle
 estackingorder
@@ -32961,17 +31894,14 @@ browser_handle
 message
 args
 requesting_url
-(\t"9\n
 CMsgBlockedRequest
 browser_handle
-(\t"B\n
 CMsgBrowserFocusChanged
 browser_handle
 focused
 CMsgSetProtocolBlockList
 browser_handle
 list
-(\t"J\n
 CMsgSetForceDeviceScaleFactors
 \n\tdpi_scale
 \n\rbrowser_scale
@@ -32979,10 +31909,8 @@ CMsgSetForceDeviceScaleFactors
 ui_mode
 CMsgSetSteamBetaName
 steam_beta_name
-(\t"*\n
 CMsgPopupCreated
 browser_handle
-(\r"F\n
 CMsgSetVRKeyboardVisibility
 browser_handle
 visible
@@ -33073,14 +32001,10 @@ opening file for edit %s\n
 edit %s
 ComboBox scrollbar
 ComboBox
-%s %d
 PanelGrid
 item%d
 Grid item #%d
 < no direct container >
-%s="%s" 
-%s="..." 
-%s / %s
 selection_name
 selection_class
 #debug_selection
@@ -33462,10 +32386,6 @@ N4vgui11InputDialogE
 KeyValuesTree
 m_pKeyValues
 m_vecNodes
-%s = %s
-%s = %u
-%s = %f
-%s = %lld
 N4vgui13KeyValuesTreeE
 10CUtlVectorIN4vgui13KeyValuesTree12KVTreeNode_sE10CUtlMemoryIS2_EE
 10CUtlMemoryIN4vgui13KeyValuesTree12KVTreeNode_sEE
@@ -33628,7 +32548,6 @@ m_SeparatorPanels.Count() == 0
 GetVParent()
 MenuItemHighlight
 relative
-row != -1
 m_bCheckable
 /data/src/public/vgui_controls/MenuItem.h
 CloseMenu
@@ -33746,7 +32665,6 @@ DefaultVerySmall
 Tooltip.Delay
 Tooltip.Anchor
 IgnoreScheme
-%s%s=%s
 GetPanelMessageMapDictionary()
 GetPanelKeyBindingMapDictionary()
 m_MessageMaps[ iMessageMap ].map->defaultkeys
@@ -34065,7 +32983,6 @@ m_dictStyles
 m_pFontWidthCache
 m_mapCharToWidth
 maxchars
-ftp://
 mailto:
 TextClicked
 RichText::DrawString
@@ -34074,7 +32991,6 @@ startIndex < m_TextStream.Count()
 RichText::ParseTextStringForURL
 www.
 href=
-</a>
 elem >= 0 && num >= 0 && INT_MAX - elem >= num
 elem + num <= Count()
 RichText.InsetX
@@ -34900,7 +33816,6 @@ g_CompletionPortManager.BStarted()
 ( Assoc.nFlags & ( k_nAssocProcessing | k_nAssocFinalizing ) ) == 0 && Assoc.pPending == NULL
 epoll_ctl failed with error %d
 Assoc.nFd == handle
-%s\%x%x
 anonymous
 Unknown
 baseline
@@ -35007,7 +33922,6 @@ CCrypto::Base64Decode
 NULL output buffer with non-zero size passed to Base64Decode
 CCrypto::Base64Decode: insufficient output buffer (up to n*3/4+2 bytes required)
 ?456789:;<=
-\t\n\v\f\r
  !"#$%&'()*+,-./0123
 enums.proto
 \n\venums.proto
@@ -36821,7 +35735,6 @@ Set-Cookie
 !m_bIsShutdown
 /data/src/common/httpclient.cpp
 localhost
-wss://
 *pchQueryString == '?'
 Bad absolute URL to CHTTPClientRequest constructor, empty hostnamed\n
 Request host %s with absolute URL %s appears invalid
@@ -36856,7 +35769,6 @@ Captive portal simulation: blocking '%s'\n
 Captive portal simulation: Generating redirect '%s' -> '%s'\n
 Captive portal simulation: Generating hijacked/fake response body for '%s'\n
 Valve/Steam HTTP Client 1.0
-%s (%s)
 User-Agent
 Parameters were changed after calculating the POST body
 You can't set a body manually AND set POST params
@@ -36865,9 +35777,7 @@ multipart/form-data; boundary=%s
 Content-Disposition: form-data; name="%s"\r\n
 Content-Disposition: form-data; name="%s"; filename="%s"\r\n
 application/x-www-form-urlencoded
-\r\n--%s\r\n
 Content-Type: %s\r\n
-\r\n--%s--\r\n
 CHTTPClientRequest::FinalizeRequest
 Failed to parse provided range request header
 Range request upper bound is less than lower bound
@@ -37045,7 +35955,6 @@ CWorkItemThreadedDeleteCacheFile::ThreadProcess
 /data/src/common/httpclient_internal.cpp
 HTTP Cache file delete failed
 Failed writing http cache file to disk
-%s/%c%c
 m_ReceiveBuffer
 m_strTargetHostName
 m_vecRequestsToSend
@@ -37152,7 +36061,6 @@ Closing HTTP 1.x connection hard (%p) due to timeout while request active: %s - 
 Invalid filename to UnlinkCacheFile
 m_listCacheFileLRU.IsValidIndex( mapData.m_iLRUListIndex )
 Unlinking HTTP cache file %s\n
-%s/%c%c/%s
 CHTTPRequestCache::DeleteCachedResponsesMatchingURL
 CHTTPRequestCache::BStoreRequestResponseToCache
 Cached data for %s must now be invalidated due to PUT, POST, or DELETE\n
@@ -37366,7 +36274,6 @@ expires
 Mon, 26 Jul 1997 05:00:00 GMT
 no-cache,must-revalidate
 pragma
- %s=
 GetCubBody() == 0 && m_eStatusCode >= 400 && (int)m_eStatusCode <= 600
 HTTP %d %s %s\n
 Status: %s\n
@@ -37379,7 +36286,6 @@ Shouldn't have a body on an HTTP continue response, clearing body which was set
 Unknown transfer-encoding set while sending body!
 EHTTPStatusCode %d does not allow a body in response, not sending
 HEAD request does not allow a body in response, not sending
-%X\r\n
 m_pRequest
 pubData || unLength == 0
 CHTTPServerResponse::BYieldingFlushAndCloseResponse() called multiple times on the same response, illegal.
@@ -37494,10 +36400,8 @@ CMemcachedAccess
 Waiting on memcached
 Waiting on workitem %s
 Paused for %s (%d)
-[%s]
 %s %s(%llu) / %s
 %s < %.*s < ...%s
-%s < %s
 pCallerJob
 pCallerJob != this
 CJob::StartJob() called twice on job %s\n
@@ -37759,7 +36663,6 @@ RunCommand
 RunCommandGetOutput
 %s: mkstemp %s: errno %s\n
 /tmp/cmd-stderr.XXXXXX
-2>%s
 %s %s >%s %s
 %s: lseek %s: %s\n
 %s: lseek start failed: %s\n
@@ -37799,8 +36702,6 @@ NULL != pchFileName
 CLogger::GeneratePrefixFromLogWatchParam
 pchMsg
 %s [%s]%-*s
-[IP:%s] 
-[ID:%s] 
 [TXN:%llu] 
 (null)
 *pchMsg && *pchMsg == '%'
@@ -37814,15 +36715,12 @@ Unsupported format qualifier z%c
 Unsupported format qualifier l%c
 Unrecognized character code '%c' in format string, ignoring
 pch[cub - 1] != '\0' && pch[cub] == '\0'
-1 == ret
 ThreadInMainThread()
 Log stopped.\n
 CLogInstance::WriteToLog
 eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
 CLogger::EmitEventInternal
 Hit absolute maximum emit event queue size -- NOT adding this event
-%s.*.txt
-%s.%%u.txt
 %s.%10u.txt
 Persistent logfile %s is past the keep until date - cleaning up\n
 Failed to find time in logfile name
@@ -37831,7 +36729,6 @@ NULL == m_pFile
 0 != m_rgchPrefixFileName[0]
 %s.current.txt
 Log started.\n
-%s-%d
 Failed to close logfile with prefix %s during BTearOffLogFile call!
 CLogInstance::EmitEventNow
 Last Message Repeated %d times.\n%s
@@ -38465,7 +37362,6 @@ Attempt to schedule '%s' %lldusec in the past
 10CUtlVectorIN21CScheduledFunctionMgr15ScheduledItem_tE10CUtlMemoryIS1_EE
 10CUtlMemoryIN14CUtlLinkedListIP22CBaseScheduledFunctioniE10ListElem_tEE
 10CUtlMemoryIN21CScheduledFunctionMgr15ScheduledItem_tEE
-{ null }
 { pos: %4d,%4d size: %4d,%4d }
 SDL_GetHint
 SDL_SetHint
@@ -38477,24 +37373,11 @@ SDL_WasInit
 12CDynamicFuncIPFi10SDL_GLattrPiEE
 12CDynamicFuncIPFP18SDL_GLContextStatevEE
 12CDynamicFuncIPFjjEE
-(%u)
-%u:%u:%u
 /data/src/common/steamid.cpp
 Steam ID does not pass strict parsing: '%s'
 (eUniverse > k_EUniverseInvalid) && (eUniverse < k_EUniverseMax)
 [A:%u:%u:%u]
-[G:%u:%u]
 [M:%u:%u:%u]
-[P:%u:%u]
-[C:%u:%u]
-[g:%u:%u]
-[c:%u:%u]
-[L:%u:%u]
-[T:%u:%u]
-[I:%u:%u]
-[U:%u:%u]
-[a:%u:%u]
-[i:%u:%u]
 Unknown GameID type
 System
 13CMsgIPAddress
@@ -38575,7 +37458,6 @@ k_ESessionDispositionDisconnect
 ip_addr"8\n\tCMsgMulti
 \n\rsize_unzipped
 \n\fmessage_body
-(\f"+\n
 CMsgProtobufWrapped
 \n\fmessage_body
 CMsgAuthTicket
@@ -38729,11 +37611,9 @@ expired
 \n\rtime_reserved
 rtime_estimated_notification
 notificaton_token
-(\t"/\n
 CMsgKeyValuePair
 name
 value
-(\t"3\n
 CMsgKeyValueSet
 pairs
 .CMsgKeyValuePair"
@@ -38865,12 +37745,10 @@ rtime32_server_timestamp
 CMsgClientAddFriend
 steamid_to_add
 accountname_or_email_to_add
-(\t"e\n
 CMsgClientAddFriendResponse
 eresult
 steam_id_added
 persona_name_added
-(\t"*\n
 CMsgClientRemoveFriend
 friendid
 CMsgClientHideFriend
@@ -38907,13 +37785,11 @@ removal
 PlayerNickname
 steamid
 nickname
-(\t"@\n
 CMsgClientSetPlayerNickname
 steamid
 nickname
 (\t"6\n#CMsgClientSetPlayerNicknameResponse
 eresult
-(\r"O\n
 CMsgClientRequestFriendData
 persona_state_requested
 friends
@@ -38972,7 +37848,6 @@ ClanData
 \n\nogg_app_id
 \n\rchat_group_id
 value
-(\t"5\n
 CMsgClientFriendProfileInfo
 steamid_friend
 \n#CMsgClientFriendProfileInfoResponse
@@ -38985,7 +37860,6 @@ steamid_friend
 \n\fcountry_name
 headline
 summary
-(\t"[\n
 CMsgClientCreateFriendsGroup
 steamid
 \n\tgroupname
@@ -39005,13 +37879,11 @@ steamid_friends_added
 steamid_friends_removed
 "7\n$CMsgClientManageFriendsGroupResponse
 eresult
-(\r"B\n
 CMsgClientAddFriendToGroup
 groupid
 \n\vsteamiduser
 "5\n"CMsgClientAddFriendToGroupResponse
 eresult
-(\r"G\n
 CMsgClientRemoveFriendFromGroup
 groupid
 \n\vsteamiduser
@@ -39195,7 +38067,6 @@ ssid
 1\n\vCredentials
 username
 password
-(\tB\t\n
 ap_info"
 CMsgStorageDevicesData
 drives
@@ -39570,7 +38441,6 @@ CMsgSelectOSBranchParams
 branch
 2\n.EOSBranch
 \n\rcustom_branch
-(\t"p\n
 CMsgSystemUpdateProgress
 stage_progress
 stage_size_bytes
@@ -39632,7 +38502,6 @@ allow_desktop_config
 rt_last_played_time
 is_devkit_shortcut
 \n\rdevkit_gameid
-(\t"$\n
 CMsgShortcutAppIds
 appids
 CMsgMonitorInfo
@@ -39642,17 +38511,13 @@ monitors
 H\n\vMonitorInfo
 monitor_device_name
 monitor_display_name
-(\t"2\n
 CMsgGenerateSystemReportReply
 \n\treport_id
-(\t"8\n
 CMsgWebUITransportInfo
 port
 auth_key
-(\t"2\n
 CMsgWebUITransportFailure
 \n\rconnect_count
-(\r"^\n
 CMsgClientShaderHitCacheEntry
 key_sha
 code_sha
@@ -39719,7 +38584,6 @@ appid
 ParentalPlaytimeDay
 allowed_time_windows
 allowed_daily_minutes
-(\r"p\n
 ParentalPlaytimeRestrictions
 apply_playtime_restrictions
 +\n\rplaytime_days
@@ -42337,7 +41201,6 @@ k_nMemPoolMagic_InUse == *(( (int *) pMem) - 1)
 CMemoryPool
 /proc
 /data/src/tier1/processes.cpp
-%u%n
 /proc/%u/stat
 CollectAllThreadProcessList opendir /proc failed
 CollectAllThreadProcessList readdir /proc failed after %d entries errno %d %s
@@ -42345,190 +41208,98 @@ lpHP
 cU!\f}QP
 ~SeA
 !tI)i
-k>X'
 `3QbE
 pXhH
 C@gw
-G\n||
 lNrZ
-6'9-\nd
-T[$:.6\f
 ZiKw
-;f[4~
 _TbF~
-\tx&n
-*1#?
 h8,4$
 2Ht\l
 A~Se
 `3SbE
 +HpXhE
-G\nB|
 pZlNr
--6'9
-T6$:.\n\f
  wZiK
-*"<C
-[4~C
 ~TbF
 \txYn
-?*1#
 fNt7
-$8,4
-\f%<(
 lHt\
 QPeA~S
 0 Umv
--!tX
 SbEwd
 hHpX
-Uf*(
 +2Hp
 rZlN
-9-6'
-\h!T[
-.6$:g\n\f
 KwZi
-[4)C
 F~Tb
-#?*1
-_[o=
->4$8,@
-\fI<(
 p\lHtW
 QSeA~
 !tX)i
 XhHp
-yG\n|
 NrZl
-='9-6d
-:.6$
 aiKwZ
 ;fD4~
-[v)C
-cB@"
 _jbF~T
-11#?*0
-,4$8_@
-I<(A
 t\lHBW
 `P00
-ggV}++
 Lj&&lZ66~A??
 h\44Q
 bS11*?
-Fe##
-Ni''
-Xt,,4.
 RRvM;;
-R{))
-^q//
-@`  
 rK99
 MMfU33
 PPxD<<%
 pH88
-Bc!! 0
-\f\f&5
 DD.9
-~~zG==
-]]2+
-Df""T~**;
 dV22tN::
-II\f\n
-Hl$$
 nY77
 xxJo%%\r..8$
-tt>!
 pp|B>>q
 aaj_55
 UUPx((
-Zw--
 0`P0
-g+V}+
 &Lj&6lZ6?~A?
 4h\4
 1bS1
-#Fe#
-'Ni'
-,Xt,
 R;vM;
-)R{)
-/^q/
- @` 
 9rK9J
 M3fU3
 P<xD<
 8pH8
-!Bc!
-~=zG=d
-"Df"*T~*
 2dV2:tN:\n
-$Hl$\
 7nY7m
-x%Jo%.\r.
-p>|B>
 a5j_5W
 U(Px(
--Zw-
 T00`P
-++V}
 &&Lj66lZ??~A
 O44h\
 s11bS
 R##Fe
-&''Ni
-,,Xt
 6-nn
-;;vM
-))R{
->//^q
-,  @`
 99rKJJ
 33fU
-<<xD
 88pH
 u!!Bc
 ==zGdd
 2+ss
-""Df**T~
 ;22dV::tN\n\n
-\f\n$$Hl\\
 C77nYmm
-%%Jo..\r
->!KK
->>|B
 55j_WW
 "3ii
-((Px
---Zw
 P00`
-}++V
 =j&&LZ66lA??~
 \44h
 S11b?
-e##F^
-i''N
-t,,X.
 M;;va
-}{))R>
-q//^
-`  @
 gK99r
 U33f
-D<<x
 !H88p
 c!!B0
-G==z
-f""D~**T
 V22dN::t
-\fl$$H
 Y77n
-o%%Jr..\$
-B>>|
 _55j
 x((Pz
-)w--Z
 ,crypto/asn1/a_strex.c
 \%02X
 \W%08lX
@@ -42602,7 +41373,6 @@ ASN1_T61STRING
 ASN1_PRINTABLESTRING
 ASN1_UTF8STRING
 crypto/asn1/tasn_utl.c
-%*s%04x - 
 %02x%c
 %02X:
 crypto/bio/b_print.c
@@ -42856,12 +41626,9 @@ assertion failed: WITHIN_ARENA(chunk)
 crypto/modes/gcm128.c
 crypto/modes/ocb128.c
 crypto/o_str.c
-\n\v\f\r
-\n\v\f\r
 0123456789ABCDEF
 crypto/objects/o_names.c
 crypto/objects/obj_dat.c
-.%lu
 UNDEF
 rsadsi
 RSA Data Security, Inc.
@@ -44281,12 +43048,9 @@ magma-cfb
 magma-mac
 hmacWithSHA512-224
 hmacWithSHA512-256
-,d\n\t
 Ag*g*
-g+g+
 +en+eo+
 /+ep+eqU
-\t+o+o
 Netscape Certificate Extension
 X509v3 Private Key Usage Period
 X509v3 Subject Alternative Name
@@ -44603,8 +43367,6 @@ X509_CERT_AUX
 crypto/x509v3/pcy_cache.c
 crypto/x509v3/pcy_data.c
 crypto/x509v3/pcy_tree.c
-[%d]
-%x%s
 %s%02x
 %*sIPv4
 %*sIPv6
@@ -44619,7 +43381,6 @@ crypto/x509v3/pcy_tree.c
  (MPLS-labeled VPN)
  (Unknown SAFI %u)
 : inherit\n
-/%d\n
 crypto/x509v3/v3_addr.c
 IPv4-SAFI
 IPv6-SAFI
@@ -44638,11 +43399,8 @@ u.addressRange
 IPAddressRange
 0123456789.:abcdefABCDEF
 0123456789.
-%*s%s\n
 crypto/x509v3/v3_asid.c
-%*s%s-
 Autonomous System Numbers
-%*s%s:\n
 %*sinherit\n
 Routing Domain Identifiers
 asnum
@@ -44683,7 +43441,6 @@ POLICYINFO
 policyid
 qualifiers
 CERTIFICATEPOLICIES
-%*s%s:\n%*s
 %*sFull Name:\n
 %*sRelative Name:\n%*s
 %*sOnly User Certificates\n
@@ -44803,7 +43560,6 @@ SXNETID
 crypto/x509v3/v3_tlsf.c
 status_request_v2
 crypto/x509v3/v3_utl.c
-xn--
 crypto/asn1/a_bitstr.c
 crypto/asn1/a_d2i_fp.c
 crypto/asn1/a_digest.c
@@ -44834,8 +43590,6 @@ X509_ALGORS
 X509_ALGOR
 CBIGNUM
 crypto/asn1/x_int64.c
-%jd\n
-%ju\n
 ZUINT64
 ZINT64
 ZUINT32
@@ -44882,7 +43636,6 @@ $)$=$A$C$M$_$g$k$y$}$
 ,#,/,5,9,A,W,Y,i,w,
 -;-C-I-M-a-e-q-
 .%.-.3.7.9.?.W.[.o.y.
-/\t/\v/
 /'/)/A/E/K/M/Q/W/o/u/}/
 0\r0#0)070;0U0Y0[0g0q0y0}0
 1!1'1-191C1E1K1]1a1g1m1s1
@@ -44901,7 +43654,6 @@ $)$=$A$C$M$_$g$k$y$}$
 >#>)>/>3>A>W>c>e>w>
 >\v?\r?7?;?=?A?Y?_?e?g?y?}?
 @!@%@+@1@?@C@E@]@a@g@m@
-@\tA\vA
 A!A3A5A;A?AYAeAkAwA{A
 B#B)B/BCBSBUB[BaBsB}B
 C%C'C3C7C9COCWCiC
@@ -44922,7 +43674,6 @@ OPENSSL_finish
 crypto/conf/conf_mod.c
 , path=
 module=
-%-8d
 , retcode=
 , value=
 OPENSSL_CONF
@@ -44930,7 +43681,6 @@ openssl.cnf
 OPENSSL_ia32cap
 %s:%d: OpenSSL internal error: %s\n
 crypto/ct/ct_x509v3.c
-\v\v\r\r
   ##%%&&))**,,//1122447788;;==>>@@CCEEFFIIJJLLOOQQRRTTWWXX[[]]^^aabbddgghhkkmmnnppssuuvvyyzz||
 DH Private-Key
 %s: (%d bit)\n
@@ -44966,13 +43716,8 @@ dh_paramgen_subprime_len
 dh_paramgen_type
 dh_pad
 crypto/dh/dh_rfc7919.c
-r:   
-s:   
 priv:
 pub: 
-P:   
-Q:   
-G:   
 crypto/dsa/dsa_ameth.c
 OpenSSL DSA method
 crypto/dsa/dsa_asn1.c
@@ -44989,7 +43734,6 @@ crypto/dso/dso_lib.c
 NULL shared library method
 crypto/ec/ec_ameth.c
 ECDSA-Parameters
-%*spub:\n
 %*spriv:\n
 OpenSSL EC algorithm
 crypto/ec/ec_asn1.c
@@ -45089,161 +43833,93 @@ gB>d
 pU>\AL
 `VX:H
 dZ!2.
-}_|mPG@j^h
 8]Vc2
-IJ_H^[
 pU>\AL
-]o~P
-]o~P
 p5Z3
-]o~P
-]o~P
 FF!w
-A&<S
-]o~P
-^G 6
-^G 6
-M>}I
-:z'H>
-^G 6
-^G 6
-^G 6
-& ( 
-& ( 
 nStf,a
-s=\vv
-/I%j
 :eaI
 FDA~i
-& ( 
 nSw}Z\tu
 u0Az
-,KH/
 2bT~
-??M|\rK
 S\vQN
-r8l@\v\r
-hT.'
-<0(.
-)\t~,Vg
-\n/\HS7_
 ^J_spY
 ^J_spY
 b\fzUkm
-S[{Q
-z\v\U
 $Cw!R
 ^J_spY
 ^J_spY
 ?jOb
 ^J_spY
-9[#l
 bmNP
 GXqN
 Ut]<E
 b]jY
 E,v\nX
 <4E87
-+5I 
 VggjeK uO5n
 FV|FgUV
-|I6?
-t+c)
 8A6j
 )TpH
 0Z@q
 \ri1I
 (ZdOt\n&
-(q-B
-u+,@\tM
-b-w#
 oMinghuaQu
 tfjgvmfv
-]&g''}
 f&dy
 Vg3LE
 bV}TS
 UUUUUUUUUUUUUU<o(
-F$R-
 MinghuaQu
 xUN'
-q~!/
 UUUUUUUUUUUa\f\v
 (wMww
 C q'O
 (fS{ggRcjh
-&@'kd
 Rbg.E
-^3)2
 MinghuaQu
-HT%+
-{|WM\v
-$&nN
 )Urz
 9IGv
-y!=\tLK
 MBb!\v
 u;{Gk
 Ik\f`dub`D
 `yNT
-\v|NB
-4`x/
-&>1;y
 $XI(6
 Yb6N4
-uw&]
-{*eU
 K4K 
-X!;3; 
 6qo~
-L7~*
 MinghuaQuw
 aybSr
 Q/xtJ2
-\\fys$
 xzxv
-Nm^\
 MinghuaQu
 kV!DA
-zj{&
 sao5
 (0'yX
 A2VPD
-'\v9C#U
-)E\\*=
 E[3M
 iFjt
 s(Fdi
 (U1h
 #Q7z
-;L8,
 MinghuaQu
 \rMinghuaQu\f
--\f(`|
 MinghuaQuS
 MinghuaQu)
 p+"\tHr9
 3Wk1^
 *0fT
 m>gh
-"o;o
 |<C!FReQ
 h2Wl
-'pQ 
-&)j<
-XW=?'
 ihD5
 "cs73KI
-`kM=
 9)jx
-'>f,
 a5<p
 T*8U
 U)l:T^8rv\n
-&,o]
 A2VPD
-'\v9C#U
-)E\\*=
 r$0I
 (1crypto/ec/ec_key.c
 crypto/ec/ec_kmeth.c
@@ -45264,9 +43940,7 @@ NIST CURVE: %s\n
 Field Type: %s\n
 Basis Type: %s\n
 Polynomial:
-A:   
 Prime:
-B:   
 Generator (compressed):
 Order: 
 Generator (uncompressed):
@@ -45664,9 +44338,7 @@ ENCRYPTED
 BAD-TYPE
 Proc-Type: 4,%s\n
 DEK-Info: %s,
- \t\r\n
 -----BEGIN 
------END 
 Expecting: 
 X509 CERTIFICATE
 NEW CERTIFICATE REQUEST
@@ -45676,8 +44348,6 @@ PKCS #7 SIGNED DATA
 DEK-Info:
 ENCRYPTED
 Proc-Type:
------\n
------END 
 -----BEGIN 
 crypto/pem/pem_oth.c
 crypto/pem/pem_pk8.c
@@ -45830,7 +44500,6 @@ operation not supported on this type
 signing not supported for this key type
 PKCS7_add0_attrib_signing_time
 OpenSSL POLY1305 method
-\t\n\v\f\r
 additional input too long
 already instantiated
 argument out of range
@@ -46047,152 +44716,91 @@ RSA_padding_check_PKCS1_type_1
 RSA_padding_check_PKCS1_type_2
 crypto/rsa/rsa_none.c
 crypto/rsa/rsa_oaep.c
-%\QM
-\n`cC#( 
-(D@D
 xsK;
 .pp@0
 6tpD4
 \v\vTSG
 psC3
-, \f,
 'prB2
-\t``@ PP@
 7XRJ
 xpH8
-`aA!
 4@AA
-|qM=
 =trF6,#
 "lbN.
 LAM\rhaI)|pL<
->d`D$
 .HCK\v
 !hcK+dbF&
 3|rN>
 xrJ:DCG
 'DAE
-L@L\f
 <0\f<pqA1
 \ttqE5
 ?HAI\t81\t9dcG'
-l`L,
 1H@H
 lcO/<1\r=,!\r-@@@
 :LBN
-83\v;
-h`H(|sO?
 HBJ\nTRF
 tsG7
 -DBF
-5(#\v+daE%
 *laM-\SO
 82\n:XPH
-`bB"(!\t)
 xqI9
-hbJ*("\n*
-!\r-,
-`@ `QE
 DcO/lcK+hSK
 bB"`3
-!\t)(
 64CK\vH
-`L,l
-?<1\r=<
-((BN
 #\v+(bF&drJ:x#
 rB2pBB
 sC3pcG'd
- \f,,
-qM=|
 bJ*h
 `H(hqA1p
-aA!`
 sK;xPL
-cC#`#
-# AM\rL
-2\n:8
-\f\f\f"
 bN.l
 AI\tHpH8x
 p@0pqE5tsO?|1
 `D$daM-l
 pD4t
 rF6t
-"\n*(RN
 HqI9x
 \sG7tPD
-%$CO
-rN>|
-aE%d0\f<<
-pL<|
 P1\t98"
 aI)h
-@L\fL
 3\v;8BJ\nH
-%$!M
-C#`c
-(( D
 K;xs
 @0pp
 D4tp
-$$ \f
 C3ps
-\f,, 
 B2pr
-@ ``@
 H8xp
-A!`a
 PRM=|q
 F6tr
 N.lb
 M\rLAI)haL<|p\t\t
-D$d`
-.,"K\vHC\n
 ! !K+hcF&db
-N>|r
 J:xrG
 DAL\fL@
 \f<<0A1pq
 E5tq
 I\tHA\t981G'dc
-L,l`
 O/lc\r=<1\r-,!@
 TQ\v;83
-H(h`O?|s
 J\nHBF
 TRG7ts
-\v+(#E%da
 M-laO
 \n:82H
-B"`b\t)(!
 I9xq
-J*hb\n*("
--,!\r&
- ``@
 D@D/lcO+hcK
 "`bB303
-)(!\t 
 \vHCK/
-,l`L(
 DAE!
-=<1\r
 LBN6
 +(#\v&dbF:xrJ'$#
 2prB
 3psC'dcG,
-,, \f*
 TSG.
-=|qM
 *hbJ1
 (h`H1pqA
-!`aA>
 ;xsK
-\PL"
-#`cC# #
 \rLAM
-:82\n\f\f
-\f.,"
 .lbN
 XRJ2
 \tHAI8xpH\f
@@ -46200,21 +44808,14 @@ XRJ2
 $d`D-laM
 4tpD
 \t6trF
-*("\n
-\RN)
 H@H9xqI
 \SO7tsG
 TPD2
-\r%$!
 DBF-
 PRB+
->|rN
 %daE<<0\f6
-<|pL
-PP@981\t&$"
 )haI
 PSC\n
-\fL@L
 ;83\v\nHBJ7
 UUUUUUUUUUUUUUUU3333333333333333
 SIPHASH
@@ -46226,33 +44827,20 @@ IB;4e^WP
 E>70aZSL}voh
 A:3,]VOHyrkd[[
 ETLL
-%%Hm
 \t\tCJAAQ
-,,\v'\r\rBO
 eeX=
-==Ns
 3--Jg
 6yy_&
 aaY8GG
-G^]]V\v~~
 11M|
-uu\)
 rUUT
 44\r9MMR
 99Ov
-DQ{{
 mmZ7EEP
-qq],
-@E||
 Pii[2cc
-((\n"
 ))Kb00\f<ZZ
-5$$\t-
 55Ly
-V}}^#
-!!Ih
 z3T\vC
-%"|;
 'RL6
 \rSNo
 jrml[Q
@@ -46472,7 +45060,6 @@ crypto/x509/t_x509.c
     Signature Algorithm: 
  (Negative)
 Certificate:\n
-    Data:\n
 %8sVersion: %ld (0x%lx)\n
 %8sVersion: Unknown (%ld)\n
         Serial Number:
@@ -46606,13 +45193,10 @@ crypto/x509v3/pcy_node.c
 %*s  namingAuthorityText: 
 %*s  namingAuthorityUrl: 
 %*sadmissionAuthority:\n
-%*s  
 %*sEntry %0d:\n
 %*s  admissionAuthority:\n
-%*s    
 %*s    registrationNumber: 
 %*s    Info Entries:\n
-%*s      
 %*s    Profession OIDs:\n
 %*s      %s%s%s%s\n
 ADMISSION_SYNTAX
@@ -46691,11 +45275,9 @@ removeFromCRL
 crypto/x509v3/v3_extku.c
 crypto/x509v3/v3_ia5.c
 crypto/x509v3/v3_info.c
-%s - %s
 ACCESS_DESCRIPTION
 %*s<Not Supported>
 %*s<Parse Error>
-%*s%s
 crypto/x509v3/v3_prn.c
 bad ip address
 bad object
@@ -46825,7 +45407,6 @@ policy language already defined
 policy path length already defined
 policy when proxy language requires no policy
 ASIdentifierChoice_is_canonical
-```R
 adding object
 asn1 parse error
 asn1 sig parse error
@@ -47068,7 +45649,6 @@ costParameter
 blockSize
 parallelizationParameter
 keyLength
-%s 0\n
 %s %s%lu (%s0x%lx)\n
 crypto/asn1/t_pkey.c
 NULL\n
@@ -47079,9 +45659,7 @@ EMPTY
 %*s%s OF %s {\n
 <ABSENT>\n
 ERROR: selector [%d] invalid\n
-%*s}\n
 Unprocessed type %d\n
-%*s<%s>\n
 :EXTERNAL TYPE %s\n
                     
 crypto/async/arch/async_posix.c
@@ -47097,133 +45675,79 @@ async_start_func
 ASYNC_start_job
 ASYNC_WAIT_CTX_set_wait_fd
 blowfish(ptr)
-!(Ew
-~&jE
  iciNWq
-x`\`U
 S2zw
 Qjh/T
 w?6r
-\^c$j
-E9_\v
 yU\n2`
-yr,@
 H{1S
-"//w
 AJsN
-\r*!ec
 pzKD)
 ilRdV
-)L\tu@
-?kh\t
 |sG2
 U$qk.
 fC\tc
 27;C
 qUN1
-/n[(
 Ze2Zh@
 Wcr"
 T0.S
-ap?#
 r3A~
 ;"lY7
 @n2w
 _g@Cg
-%xP(
 B*k@5
 mK1f
 n:2C[
-V@E'
-::SU
-^|1)
-A4x{%`
->3b\v$;"
 AcG\nt
 no:7
 7,gm;
 .97yY
 Bh;+j
 .x7B
-{x`M`
 BFUa.X
 YnFpW
 \t-f3F2
-|K=\nr9$|
 n6j/
 HWyn
 9)PF
-(-}|
-W;()f
 _xU`u
 08bX
-Y:D\n5>
-w``u N
--%\t?
 :crypto/bio/bf_buff.c
 \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
-Hb{!
-&8l~!
-?p\t1
-|t/[U)
 8y\rW
-1,)b^
 KN>v
-FN>\
 #:*S8,}gNzl
-\r:6"
-e;[5
 a8Bk
-a/4(
 zy:HO
 =Uec
 3$ae
 u\fcc
-<=' V
 8y\rW
-1,)b^
 KN>v
-FN>\
 #:*S8,}gNzl
-\r:6"
-e;[5
 a8Bk
-a/4(
 zy:HO
 =Uec
 3$ae
 u\fcc
-<=' V
-j_e^~
-\r:6"
-e;[5
 a8Bk
-a/4(
 zy:HO
 =Uec
 3$ae
 u\fcc
-<=' V
-\r:6"
-e;[5
 a8Bk
-a/4(
 zy:HO
 =Uec
 3$ae
 u\fcc
-<=' V
 \(a8Bk
-a/4(
 zy:HO
 =Uec
 3$ae
 u\fcc
-<=' V
-'#^QTy
 `fPw.\vM
 w8i_q
-&`Pqy?
 H5gRR-
 XG[r
 8GZS
@@ -47232,7 +45756,6 @@ S#FI
 i~wKVA\
 o&1m&
 qCJ.
-s`a;
 arg2 lt arg3
 bad reciprocal
 bignum too long
@@ -47803,250 +46326,79 @@ a null shared library handle was used
 the meth_data stack is corrupt
 could not bind to the requested symbol name
 could not unload the shared library
-\f\f\n\n8)
-C!x\n
-\f\f\n\n8)
-C!x\n
 i\fD8
-Gg/\f
 AP"\nsQJ
-\nIZ2\n/
-!\vG@
-\r^\vV\f
-\U\t0D`\rA^
-D=1\v
 Kr\t=o
-\vm|L
 I\nlQ
-V\t_#c
-x\\t"
-\n2's
-&\v{'$
-iv!\r
-8(\vQ
-L\v=2
-B:\t9F&\v)
 L8-\rHO
-n\nI}
-$nf\t_
-;%W\f
-=U\f|\v
-BZ\v?
 n\vDsv
-s|\n|
-\f&Qe
-3\fp'
-[6v\v\n
 4T9\n
-\vhb.
-\fP\tF
 S\fWj
--\tK:
-s\rR_
 0\tzc
 \t\taJj
-\f,o|
-<\f1`
 v\fdn
 \vow5
-\r}-e
-\n{O5
 b\nS)7
-$\n~`
-G\vi?
-s \v]\
- 5\n$F
-s?H\f
-"i\t>
  \vjpF
-\rbk$
-\r(O)
-D~\t|$Y
-t\rH[
 4\fZQ
-K`]\n6
 H\fJxE\v
-g\tg</\r
 O\r\nP2
 4\nLx
-?A\v!
-h'A\t
->?0\veh
-e#A\f
-84\v?(
 \tOzG\r
 dPq\n
 zC\nsZ
-\n_.4
 EE\fl~5
-c?\fb@A
-\t;T\r
-cN\v 
-k\t\vf
-\vCI\
-;\r,4
-v\nb\v
 Nwh\v
-$]@\fW0w
-\t:TV
-_k\r&
 mC4\n
-\vzT\f
-\nd!X\t@
-e\n&H
 \vjFF\r
-\n+Ar
-\rB?u\t\n'x
 rm\niAB
-Kt\n{\n
-)g-\v
-X%\va/Y
-;a\n&$
 v\v]mE
 \nkhT
-!F\nz
-<.-\t
-R]\t\v
-f%\n[e
-\~\vX
-r-+\n
-^jF\v
-\nK2&
 9<n\nM
-%%V\r
-nD'\n
-H.\te
 GSc\v3
 ei\t&H
 8z\rkt
-WC\n\
-'!\rEO
 pp\rk
 8\vWzK
-JI)\f
 5q\teH
-EO<\n
-!\n^5
-\\nEl
-]52\r`\
-y\r\fc
-\nb\nu
-a+S\t
 5mF\tfE
 Z\fL+i
 E\foD
-%>\n:q
 b\fLM%
 \n2gQ\v\tU
-Z4C\n^.+\r
 \vZ\nyVR
-o\vu$
 Ha4\n
-|\f0\
-N\r\v(O
 77\nGJ
-~u\r~
-A\v\f.
-tv`\f"
-$t\n!2
 \r7AO\n
-`<\v:P
-$=|\f
-\r]v"
 :oc\ve
-\3-\t
--\fZw
-\vR)/
 hl\tJ3o
 l\vDZ2\fs
-{[1\f
-Q\nn;
 r\tU[B
 n\tMr
 fqi\tH
-W_\n\r\t
-\v}-=
-W\n%c
-R_\ti;J
-\t\vG>1
-j\r,\fH\n
 MkL\f
-\rwR~
-_\vz\v
-\r(F=\t
-:e\vs
-\t-mE
-\rY"n
 \rUhF
-\n~\v3
-\fSR!
 5\tuy
-~C;\r*L
-?UQ\f
-\t]xa\t
-\f$C(
-\v|*I\r-3
 p\tK2
-\nX`3\r#di\f
-o)\rW
-\fYE)
-\t\~I\f\r[$
 PK\ry
-b\tQ<
 e\roL
-B=6\r
-M\t\nuv\t
-=,\ts
 N\r\nyd
-K\r6>\v
-~Ru\f
 \nW2a
-^~P\r
-\f?\n&
-&q\tZp\f\t
 $O\tdwR\rox\\r*
-\f-_\r
-v\n,V
 E\r\f52
 \n3wV
-$y\ru
-2\fp\r
-\tF(-
 K\rdSC\td?
 3ej\n
-\t\^~
 v07\v
-Ko\f\v
-}\t,W
-\t"HU\v
-FZ\f\t
-\f@1B\v
-\v|\w\r
 Ka\nTw
-(%\f\t
 C\vo9
 \tOkI
-/\vHN
-\r'6n
->]\n\v
-" \t1
 h\f90
 C\t\nD4
 l97\v
-5\v"[:
 O:t\vg
-VE%\r\r? 
-\vAB\t\t
 xtq\t
-\rZ_C\v
-JA(\n
-\v`0<
 E5\v\n6
-@+\r+
-L/E\t
-{G\f0
-0\f&M:
-b^U\n
 4crypto/ec/ec2_oct.c
 crypto/ec/ec2_smpl.c
 bignum out of range
@@ -48275,11 +46627,8 @@ crypto/ec/ec_print.c
 crypto/evp/bio_enc.c
 crypto/evp/encode.c
 assertion failed: ctx->length <= (int)sizeof(ctx->enc_data)
-\n\v\f\r
- !"#
 $%&'()*+,-./0123456789:;<=
 ?456789:;<=
-\t\n\v\f\r
  !"#$%&'()*+,-./0123
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
@@ -48411,7 +46760,6 @@ crypto/conf/conf_api.c
 crypto/conf/conf_def.c
 .conf
 [%s] %s=%s\n
-[[%s]]\n
 .include
 line 
 OpenSSL default
@@ -48832,8 +47180,6 @@ TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_128_GCM_SHA256
 OpenSSL 1.1.1i  8 Dec 2020
 ssl/ssl_mcnf.c
 system_default
-, arg=
-, cmd=
 ssl/ssl_rsa.c
 ssl/ssl_sess.c
 SSL SESSION PARAMETERS
@@ -49012,7 +47358,6 @@ ssl/packet.c
 ssl/pqueue.c
 ssl/s3_enc.c
 ()*+,-./*(((
-(((((s(
 xssl/ssl_conf.c
 +automatic
 SSLv2
@@ -49756,7 +48101,6 @@ write_state_machine
 ssl/t1_enc.c
 key expansion
 extended master secret
-*+,-./0123
 nopqrs(
 PRI * HTTP/2.0\r\n\r\nSM\r\n\r\n
 nghttp2_session.c
@@ -49777,7 +48121,6 @@ session->obq_flood_counter_ > 0
 session->last_sent_stream_id + 2 <= frame->push_promise.promised_stream_id
 stream->closed_next == ((void *)0)
 stream->closed_prev == ((void *)0)
-rv == 0
 nghttp2_is_fatal(rv)
 Ignoring received invalid HTTP header field: frame type: %u, stream: %d, name: [%.*s], value: [%.*s]
 Invalid HTTP header field was received: frame type: %u, stream: %d, name: [%.*s], value: [%.*s]
@@ -49887,7 +48230,6 @@ pri_spec
 (size_t)(p - (uint8_t *)ov_copy) == nov * sizeof(nghttp2_origin_entry) + len + nov
 detect_self_dependency
 nghttp2_submit_origin
-\t\n\v\f\r
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
 nghttp2_helper.c
 delta >= 0
@@ -50093,7 +48435,6 @@ bufs->head == bufs->cur
 ((size_t)((buf)->end - (buf)->last)) >= 4
 ((size_t)((buf)->end - (buf)->last)) >= 8
 ((size_t)((buf)->end - (buf)->last)) >= 2 + altsvc->origin_len + altsvc->field_value_len
-rv == 0
 ((size_t)((buf)->last - (buf)->pos)) == 9 + frame->hd.length
 a->namelen == 0
 b->namelen == 0
@@ -50138,13 +48479,11 @@ rblk->n >= (16 - 1)
 blk->n < (2 * 16 - 1)
 i + 1 < blk->n
 lblk->n + rblk->n < (2 * 16 - 1)
-i > 0
 lnode->blk->n < (2 * 16 - 1)
 rnode->blk->n > (16 - 1)
 i < blk->n - 1
 lnode->blk->n > (16 - 1)
 rnode->blk->n < (2 * 16 - 1)
-i < blk->n
 key_equal(ksl->compar, (nghttp2_ksl_key *)node->key, old_key)
 LV=%zu n=%zu\n
  %lld
@@ -50159,8 +48498,6 @@ nghttp2_ksl_remove
 nghttp2_ksl_update_key
 nghttp2_ksl_it_get
 nghttp2_ksl_it_prev
-\t\n\n\v
-\f\f\f\f\f\f\f\f\f\f
 no error
 \ at end of pattern
 \c at end of pattern
@@ -50249,20 +48586,12 @@ group name must start with a non-digit
 parentheses are too deeply nested (stack check)
 \P{Xps}
 \P{Xan}
-\P{Lu}
-\P{Ll}
-\P{L}
 \p{Xps}
 \p{Xan}
-\p{Lu}
-\p{Ll}
-\p{L}
 \p{Xwd}
 \P{Xwd}
 \p{Xsp}
 \P{Xsp}
-\p{Nd}
-\P{Nd}
 alpha
 lower
 upper
@@ -50277,8 +48606,6 @@ punct
 space
 word
 xdigit
-\b(?<=\w)
-\b(?=\w)
 MARK
 ACCEPT
 COMMIT
@@ -50286,8 +48613,6 @@ FAIL
 PRUNE
 SKIP
 THEN
-[:<:]]
-[:>:]]
 DEFINE
 UTF8)
 UTF)
@@ -50397,7 +48722,6 @@ Thai
 Tibetan
 Tifinagh
 Ugaritic
-\t\n\v\f\r
  !"#$%&'()))*+,-./0123456789:;<=>?@ABBCDEFGHIGJKLLBMBBNOPQRSTUVWXYZ[\]^G___________________________________________________`___________________________________________________________________________________________________________________________________________________________________abccccccccdeefghijklmnopqrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstyzzzzzzzzzzzzzzzz{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{__|}~
 OOOOOO
 OOOOOOOOO
@@ -50414,87 +48738,43 @@ OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{
 {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{
-!\t\fG 
-!\t\fK 
-!\t\f\t
-!\t\f\r
-\t\f" 
-\t\f; 
-\t\f& 
-\t\f3 
-\t\f/ 
-\t\f7 
-\t\f+ 
-\t\fC 
-!\t\f?
-!\t\fGA
-!\t\fK
-\t\n\v\f\r
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
-\t\n\v\f\r
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
-0+\nm
 5mmQ
-vb^~
 I(fQ
 mg\f5NJ
-^F.6
 Wza]lw\t
 (|YGNk
 v!pH
 8/A0
 %K3 QQ+
-^p/F
-f?H`
--[\vtt
-0+\nm
 5mmQ
-vb^~
 I(fQ
 mg\f5NJ
-^F.6
 Wza]lw\t
 (|YGNk
 v!pH
 8/A0
 %K3 QQ+
-^p/F
-f?H`
--[\vtt
-0+\nm
 5mmQ
-vb^~
 I(fQ
 mg\f5NJ
-^F.6
 Wza]lw\t
 (|YGNk
 v!pH
-0+\nm
 5mmQ
-vb^~
 I(fQ
 mg\f5NJ
-^F.6
 Wza]lw\t
-0+\nm
 5mmQ
-vb^~
 I(fQ
 mg\f5NJ
-^F.6
-0+\nm
 5mmQ
-vb^~
 I(fQ
 mg\f5NJ
-0+\nm
 5mmQ
-vb^~
 I(fQ
-0+\nm
 5mmQ
-vb^~
 crypto/ct/ct_policy.c
 crypto/ocsp/ocsp_cl.c
 crypto/ocsp/ocsp_ext.c
@@ -50517,52 +48797,33 @@ Load file into cache
 NETSCAPE_CERT_SEQUENCE
 crypto/asn1/x_info.c
 crypto/asn1/x_pkey.c
-tt\v[-
-`H?f
-F/p^
 +QQ 3K%
 0A/8
 Hp!v
 kNGY|(
 \twl]azW
-6.F^
 JN5\fgm
 Qf(I
-~^bv
 Qmm5
-m\n+0
-tt\v[-
-`H?f
-F/p^
 +QQ 3K%
 0A/8
 Hp!v
 kNGY|(
 \twl]azW
-6.F^
 JN5\fgm
 Qf(I
-~^bv
 Qmm5
-m\n+0
 Hp!v
 kNGY|(
 \twl]azW
-6.F^
 JN5\fgm
 Qf(I
-~^bv
 Qmm5
-m\n+0
 \twl]azW
-6.F^
 JN5\fgm
 Qf(I
-~^bv
 Qmm5
-m\n+0
 uT_Rm#
-'`ax
 #ETHw
 dlCz 
 l}C.we
@@ -50610,11 +48871,7 @@ N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
 N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
 bad_function_call
 St17bad_function_call
-\v\v\v\v\r\r
-\t\rK~\n
 CH\f1
-I\r]P`
-H;!}#@i
 FoCLcx
 basic_ios::clear
 St9basic_iosIcSt11char_traitsIcEE
@@ -50623,9 +48880,6 @@ St8ios_base
 St13basic_istreamIwSt11char_traitsIwEE
 basic_string::erase
 %s: __pos (which is %zu) > this->size() (which is %zu)
-%.*Lf
-%m/%d/%y
-%H:%M
 St9time_base
 St10money_base
 St13messages_base
@@ -50704,7 +48958,6 @@ JArray
 auto:
 VTT for 
 construction vtable for 
--in-
 typeinfo for 
 typeinfo name for 
 typeinfo fn for 
@@ -50739,8 +48992,6 @@ global destructors keyed to
 complex 
 imaginary 
  __vector(
-(...
-...)
 std::allocator
 std::basic_string
 std::string

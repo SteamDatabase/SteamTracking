@@ -439,71 +439,45 @@ uuuuuuuubtnufruuuuuuuuuuuuuuuuuu
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
 vH7B
 W4vC
-9Y>)F$
 raB3G
-)c=H
 ]rHa
 O8Mr
 bnMG
 .wN\f9
 [*QmU
 mr"iR
-R$N(
->S\f}W
 -sSO\
 T%L9
 hGT.
-B}T}
-=@[V
 !a9X
 X5AHx
 %4xY
-Z~$|7
-+\0I
-2a\|
 \ysK
-|M$D
 pH_r
-(:W"
-s\ax}?
 pc2g
 @BXV
 tC7Ddx
 EydV
 d6\f6
 eax~Z
-5h\r:
 ekhHD
 @iZb
 k0V(
 k*do^
-k5=\v6~
 :V!2m
 RJqn
 bzo=
-$qE}
 XqkY
-r\v_|s
 quAt
 Jugm
-~B v
 STv/N
-_w&2
 xg^Jp5|
-/L\rry=
 yMzw\n
 ;\tFzo
 {zel#|67
-P/};
-c}\n=!
-[@JO
 nQ:B
--;eU
 U1(\Q
 mSx@
-b}$l
-_\rXf
-~)p$w
 11eU%
 z^KD
 Fossilize ERROR: Not an array.\n
@@ -568,7 +542,6 @@ Fossilize WARN: Failed to touch last access in %s.\n
 %s: __pos (which is %zu) > this->size() (which is %zu)
 TOUCH
 basic_string::substr
-%0*x
 Failed to add blob to cache.\n
 Fossilize WARN: Failed to advise of file usage. This is not fatal, but might compromise disk performance.\n
 Fossilize WARN: Detected sliced file. Dropping entries from here.\n
@@ -628,18 +601,12 @@ Failed to record physical device features.\n
 Fossilize ERROR: Failed to record physical device features.\n
 \t\t\t\t\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
 \t\t\t\t\t\t\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
- n;^
 Qkkbal
-3_L\n
->jm\r
 Zjz\v
 i]Wb
 9a&g
 MGiI
 wn>Jj
-#.zf
-+o*7
--://
 basic_string::erase
 N10__cxxabiv117__class_type_infoE
 pure virtual method called\n
@@ -682,19 +649,11 @@ xdigit
 alnum
 graph
 blank
-\v\v\v\v\r\r
-\t\rK~\n
 CH\f1
-I\r]P`
-H;!}#@i
 FoCLcx
 ?basic_ios::clear
 St9basic_iosIcSt11char_traitsIcEE
 St8ios_base
-%.*Lf
-%m/%d/%y
-%H:%M
-%H:%M:%S
 St9time_base
 St10money_base
 St13messages_base
@@ -769,7 +728,6 @@ JArray
 auto:
 VTT for 
 construction vtable for 
--in-
 typeinfo for 
 typeinfo name for 
 typeinfo fn for 
@@ -806,8 +764,6 @@ global destructors keyed to
 complex 
 imaginary 
  __vector(
-(...
-...)
 std::allocator
 std::basic_string
 std::string

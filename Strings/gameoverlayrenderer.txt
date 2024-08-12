@@ -208,7 +208,6 @@ GLIBC_2.4
 GLIBC_2.3.4
 4IIME
 12CIMENullImpl
-:>->
 SteamGameId
 SteamOverlayGameId
 enable
@@ -319,7 +318,6 @@ fixed function
 core
 compatibility
 OpenGL ES
-%d.%d
 glActiveTextureARB
 glClientActiveTextureARB
 glActiveTexture
@@ -492,7 +490,6 @@ logfile opened early, s_Pid == 0 (Init has not been called yet)\n
 STEAM_OVERLAY_LOGGING_FLUSH
 STEAM_OVERLAY_LOGGING
 %a %b %d %H:%M:%S %Y UTC
-%s - 
 /proc/self/exe
 vrmonitor
 IgnoreChildProcesses
@@ -556,7 +553,6 @@ XGetErrorDatabaseText
 X Error
 XError
 XlibMessage
-%s: %s\n
 Request Major code %d
 MajorCode
 XRequest
@@ -667,7 +663,6 @@ video sleep until end of frame
 /sys/kernel/tracing/trace_marker
 %s begin_ctx=%lld
 %s end_ctx=%lld
-%s: %d
 OverlayFrameMark
 (knN
 N10__cxxabiv117__class_type_infoE
@@ -704,7 +699,6 @@ JArray
 auto:
 VTT for 
 construction vtable for 
--in-
 typeinfo for 
 typeinfo name for 
 typeinfo fn for 
@@ -741,8 +735,6 @@ global destructors keyed to
 complex 
 imaginary 
  __vector(
-(...
-...)
 std::allocator
 std::basic_string
 std::string

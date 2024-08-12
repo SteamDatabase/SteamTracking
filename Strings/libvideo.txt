@@ -1898,7 +1898,6 @@ g_CompletionPortManager
 iSegment >= 0
 pchTemplate[0] == '\0'
 RepresentationID
-%0*d
 Bandwidth
 pAdaptation->m_pSegmentTemplate
 /data/src/common/video/videomanifest.cpp
@@ -2099,7 +2098,6 @@ N19CVideoPlayerManager12CVideoThreadE
 /data/src/common/video/videorecordingsegmentwriter.cpp
 bufSPS.TellPut() > 0 && bufPPS.TellPut() > 0
 bufInitData.TellPut() > 0
-%d.%dS
 %d.%02dS
 %d.%03dS
 avc1.%02x%02x%02x
@@ -2118,7 +2116,6 @@ PT0.0S
 \t\t\t</Representation>\n
 \t\t</AdaptationSet>\n
 \t</Period>\n
-</MPD>
 <?xml version="1.0" encoding="utf-8"?>\n
 <MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" \n\txmlns="urn:mpeg:dash:schema:mpd:2011" \n\txmlns:xlink="http://www.w3.org/1999/xlink" \n\txsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-DASH_schema_files/DASH-MPD.xsd" \n\tprofiles="urn:mpeg:dash:profile:isoff-live:2011"
 \n\tmediaPresentationDuration="%s"
@@ -2171,7 +2168,6 @@ cSegments * unSegmentDurationMS >= unMovieDurationMS
 FSegment load: %llu us for %s\n
 Encoder reinit: %llu us\n
 Frame grab: %llu us\n
-num >= 0
 *Z19EGetFramesFromVideoEUlyE_
 *Z19EGetFramesFromVideoEUlyE0_
 *Z19EGetFramesFromVideoEUlyE1_
@@ -2180,14 +2176,12 @@ num >= 0
 true
 quot
 apos
-%.8g
 %.17g
 True
 TRUE
 False
 FALSE
 %llx
-<!--
 <![CDATA[
 xml version="1.0" encoding="UTF-8"
 Error=%s ErrorID=%d (0x%x) Line number=%d
@@ -2236,43 +2230,23 @@ Size() == operand.Size()
 GetInts()
 resizeNumBits >= 0
 CVariableBitStringBase
- n;^
 Qkkbal
-3_L\n
->jm\r
 Zjz\v
 i]Wb
 9a&g
 MGiI
 wn>Jj
-#.zf
-+o*7
-Z* ,\t
 H$6t
-_~6\f
 52F*
-\t#jT$
-\n=G\\vp
-^6o}
-[-&LMb#{'
-)q\n>(
 w+OQvr
-\r}!b
 R1h58
 SKyu
-)\ZEo^m/
 ru&o
-i8P/\f_
-?(3w
 wXR\r
 H*0"ZOW
 {kHw
-)T`D
 !AxU
-l!;b\tF
-:1X:
 y9*O
-kM`~
 Vc0a
 dQy/
 lDa>
@@ -2289,7 +2263,6 @@ ConVar
 m_configOverride
 m_pVecUlValue
 m_pVecStringValue
-Key( i )
 m_strConvertedDefaultValue
 m_vecCallbacks
 m_pParent == this
@@ -2329,7 +2302,6 @@ LOCK_EX
 LOCK_SH
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
 flock %s %s failed. errno = %d
-ret != 0
 g_pFioAsyncEnqueue == NULL
 g_pFioAsyncFinalize == NULL
 BCreateDirectory
@@ -2355,7 +2327,6 @@ LoadFileRangeIntoBuffer_Internal
 cbToRead <= 1024 * 1024 * 1024
 cbActual < (uint32)nBufSizeWithTerminator
 Seeking to a position not supported with async io
-%s%c%s
 CFileWriterThread
 CFileWriter::Write
 cubData < INT32_MAX
@@ -2382,8 +2353,6 @@ dlmopen %s failed: %s\n
 WORKAROUND_GdbSymbolLoadHook
 strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
 Failed to load optional module %s\n
-%%%d
-]:%u
 0123456789abcdef
 m_errorIndex>=0
 /data/src/tier1/KeyValues.cpp
@@ -2423,7 +2392,6 @@ Lowered '%s' -> '%s'\n
 Breaking '%s' in '%s'\n
 Matched '%s' -> '%s'\n
 Unmatched %s\n
-m_Put >= 0
 /data/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 nSize != 0
@@ -2459,7 +2427,6 @@ nMinCapacity <= k_nMaxStringSize
 nMinCapacity > Capacity()
 nMinCapacity >= nChars
 len > 0 || HasError()
-\f\r\n\v
 /home/saml/dev/steam/thirdpartycode/nonredist/libyuv/libyuv/source/planar_functions.cc
 depth >= 8
 depth <= 16
@@ -2577,9 +2544,7 @@ Total number of strings %u, longest string size %u, avg size %u\n
 Total of %u buckets with %u hash collisions\n
 nTotal number of strings %u, longest string size %u, avg size %u\n
 Bucket size : count\n
-%u : %u\n
 Leaked KeyValues (%u):\n
-%s (%u)\n
 16IKeyValuesSystem
 16CKeyValuesSystem
 20IUniformRandomStream
@@ -2623,7 +2588,6 @@ zDinvalid input pointer
 /proc/%d/status
 TracerPid:
 IsSpewActive
-%s (%d) : 
 Exiting on SPEW_ABORT\n
 Fatal assert
 -noassert
@@ -2720,8 +2684,6 @@ NULL != m_pValObjectCur
  GiB
  KiB
  MiB
-%i%s
-%%.%if%s
 >NULL == pValObjectPrev->m_pValObjectNext
 /data/src/tier0/valobject.cpp
 m_nRecursions > 0
@@ -2763,7 +2725,6 @@ Average %.2f fps, %.2f ms per frame\n
 Peak %.2f ms frame\n
 B-nocrashdialog
 -debugbreak
-%s %i %s
 /data/src/common/completionportmanager.cpp
 DispatchCompletedItem
 BStarted()
@@ -2869,7 +2830,6 @@ Set-Cookie
 IsRunning()
 /data/src/common/cumulativetimer.h
 localhost
-wss://
 *pchQueryString == '?'
 Bad absolute URL to CHTTPClientRequest constructor, empty hostnamed\n
 Request host %s with absolute URL %s appears invalid
@@ -2907,7 +2867,6 @@ Captive portal simulation: blocking '%s'\n
 Captive portal simulation: Generating redirect '%s' -> '%s'\n
 Captive portal simulation: Generating hijacked/fake response body for '%s'\n
 Valve/Steam HTTP Client 1.0
-%s (%s)
 User-Agent
 Parameters were changed after calculating the POST body
 You can't set a body manually AND set POST params
@@ -2916,9 +2875,7 @@ multipart/form-data; boundary=%s
 Content-Disposition: form-data; name="%s"\r\n
 Content-Disposition: form-data; name="%s"; filename="%s"\r\n
 application/x-www-form-urlencoded
-\r\n--%s\r\n
 Content-Type: %s\r\n
-\r\n--%s--\r\n
 CHTTPClientRequest::FinalizeRequest
 Failed to parse provided range request header
 Range request upper bound is less than lower bound
@@ -3105,7 +3062,6 @@ m_Func
 /data/src/common/httpclient_internal.cpp
 HTTP Cache file delete failed
 Failed writing http cache file to disk
-%s/%c%c
 m_ReceiveBuffer
 m_strTargetHostName
 m_vecRequestsToSend
@@ -3147,7 +3103,6 @@ HTTPS_PROXY
 https_proxy
 NO_PROXY
 no_proxy
-  %s\n
 Auto-detected proxy settings: auto-detect(%s), proxy(%s), proxy-https(%s), exclude:\n
 <-loopback>
 CHTTPRequestCache::BInitializeIfNeeded()
@@ -3217,7 +3172,6 @@ _IsValidIndex( elem, unNodeSize, pMemBase )
 Invalid filename to UnlinkCacheFile
 m_listCacheFileLRU.IsValidIndex( mapData.m_iLRUListIndex )
 Unlinking HTTP cache file %s\n
-%s/%c%c/%s
 Request for %s, required conditional validation, but is using cached data.\n
 Request for %s, required conditional validation and found new data.\n
 Got completed conditional request dispatched to client cache, but no data for it in our map?
@@ -3340,7 +3294,6 @@ Request %s gets 504 response from cache since only-if-cached is set and non-stal
 Request %s requires validation (ie, conditional GET request)\n
 Request %s fulfilled from cache unconditionally (no validation needed)\n
 Cached data was found for %s, but is unusable (expired and unverifiable)\n
-%s/%s/%s
 CHTTPRequestCache took %lld milliseconds to initialize\n
 Invalid parameters to CHTTPClient::BShouldRequestUseProxy
 /wpad.dat
@@ -3413,7 +3366,6 @@ CMemcachedAccess
 Waiting on memcached
 Waiting on workitem %s
 Paused for %s (%d)
-[%s]
 %s %s(%llu) / %s
 this != g_pJobCur
 CJob::Heartbeat
@@ -3459,12 +3411,9 @@ sm_cRef > 0
 sm_bShuttingDown
 CLogger::PublishLogEvent
 NULL != pchFileName
-%s\%s
 CLogger::GeneratePrefixFromLogWatchParam
 pchMsg
 %s [%s]%-*s
-[IP:%s] 
-[ID:%s] 
 [TXN:%llu] 
 (null)
 *pchMsg && *pchMsg == '%'
@@ -3478,7 +3427,6 @@ Unsupported format qualifier z%c
 Unsupported format qualifier l%c
 Unrecognized character code '%c' in format string, ignoring
 pch[cub - 1] != '\0' && pch[cub] == '\0'
-1 == ret
 ThreadInMainThread()
 Log stopped.\n
 CLogInstance::WriteToLog
@@ -3486,8 +3434,6 @@ eGroup >= static_cast< ESpewGroup >( 0 ) && eGroup < k_ESpew_ArraySize
 CIPAndPort::GetIPv4 called on IPv6 address
 CLogger::EmitEventInternal
 Hit absolute maximum emit event queue size -- NOT adding this event
-%s.*.txt
-%s.%%u.txt
 %s.%10u.txt
 Persistent logfile %s is past the keep until date - cleaning up\n
 Failed to find time in logfile name
@@ -3496,7 +3442,6 @@ NULL == m_pFile
 0 != m_rgchPrefixFileName[0]
 %s.current.txt
 Log started.\n
-%s-%d
 Failed to close logfile with prefix %s during BTearOffLogFile call!
 CLogInstance::EmitEventNow
 Last Message Repeated %d times.\n%s
@@ -3997,18 +3942,7 @@ Attempt to schedule '%s' %lldusec in the past
 22CBaseScheduledFunction
 14CUtlLinkedListIP22CBaseScheduledFunctioniE
 [A:%u:%u:%u]
-[G:%u:%u]
 [M:%u:%u:%u]
-[P:%u:%u]
-[C:%u:%u]
-[g:%u:%u]
-[c:%u:%u]
-[L:%u:%u]
-[T:%u:%u]
-[I:%u:%u]
-[U:%u:%u]
-[a:%u:%u]
-[i:%u:%u]
 System
 N6google8protobuf8internal16InternalMetadata13ContainerBaseE
 13CMsgIPAddress
@@ -4090,7 +4024,6 @@ k_ESessionDispositionDisconnect
 ip_addr"8\n\tCMsgMulti
 \n\rsize_unzipped
 \n\fmessage_body
-(\f"+\n
 CMsgProtobufWrapped
 \n\fmessage_body
 CMsgAuthTicket
@@ -4244,11 +4177,9 @@ expired
 \n\rtime_reserved
 rtime_estimated_notification
 notificaton_token
-(\t"/\n
 CMsgKeyValuePair
 name
 value
-(\t"3\n
 CMsgKeyValueSet
 pairs
 .CMsgKeyValuePair"
@@ -4617,7 +4548,6 @@ CWorkItem::DispatchCompletedWorkItem: got a work item with no job ID
 /data/src/common/workthreadpool.cpp
 CWorkThreadPool::~CWorkThreadPool: work complete queue not empty, %d items discarded.\n
 CWorkThreadPool::~CWorkThreadPool: work processing queue not empty: %d items discarded.\n
-%s:%d
 CWorkThreadPool::StartWorkThread: Thread creation failed.\n
 m_cCurrentDepth > 0
 CWorkThread -- GetNextWorkItemToProcess
@@ -8059,7 +7989,6 @@ doctype
 UCS-4
 UTF-16
 EncodingDecl
-)|,?*+
 http://www.w3.org/2000/xmlns/
 preserve
 xmlns
@@ -8095,8 +8024,6 @@ Recursive reference in entity '%s'
 Switch from encoding '%s' to '%s' is not supported
 ParseXmlDecl
 ReadCh
-\t\n\v\f\r
- !"#$%
 ReadCh_Opt
 ParseString
 ParseAttributes
@@ -8108,9 +8035,7 @@ ParseCp
 ParseMixed
 GetAttlistDecl
 ParseEnumeration
-Z}\t8%]
 s/hv
-(\v`=
 ezc&
 google/protobuf/arena.cc
 CHECK failed: (min_bytes) <= (std::numeric_limits<size_t>::max() - SerialArena::kBlockHeaderSize): 
@@ -8222,7 +8147,6 @@ google/protobuf/message_lite.cc
 CHECK failed: ctx.LastTag() != 1: 
 google::protobuf::StringPiece::StringPiece(const char*, google::protobuf::stringpiece_ssize_type)
 ./google/protobuf/stubs/stringpiece.h
-len >= 0
  exceeded maximum protobuf size of 2GB: 
 CHECK failed: cur_: 
 CHECK failed: (byte_size_before_serialization) == (byte_size_after_serialization): 
@@ -8863,7 +8787,6 @@ CHECK failed: this == other_mutator:
 google/protobuf/message.cc
 CHECK failed: (from.GetDescriptor()) == (descriptor): 
 : Tried to merge from a message with a different type.  to: 
-, from: 
 : Tried to copy from a message with a different type. to: 
 Message class "
 " implements neither SetCachedSize() nor ByteSize().  Must implement one or the other.
@@ -8950,7 +8873,6 @@ N6google8protobuf14FatalExceptionE
 google/protobuf/stubs/int128.cc
 CHECK failed: (0) != (n): 
 Division or mod by zero: dividend.hi=
-, lo=
 ""3333
 CANCELLED
 INVALID_ARGUMENT
@@ -8977,7 +8899,6 @@ StringPrintfVector currently only supports up to
  arguments. 
 Feel free to add support for more if you need it.
 char google::protobuf::StringPiece::operator[](google::protobuf::stringpiece_ssize_type) const
-0 <= i
 i < length_
 google/protobuf/stubs/strutil.cc
 CHECK failed: result != nullptr: 
@@ -8992,7 +8913,6 @@ CHECK failed: (digits) < (100):
 CHECK failed: value != nullptr: 
 nullptr output boolean given.
 -inf
-%.*g
 CHECK failed: (out) == (begin + result.size()): 
 CHECK failed: (uintptr_t((a).data() - (*result).data())) > (uintptr_t((*result).size())): 
 CHECK failed: (uintptr_t((b).data() - (*result).data())) > (uintptr_t((*result).size())): 
@@ -9005,7 +8925,6 @@ len >= input_len
 CHECK failed: (len) <= (dest_len): 
 Logic problem? szsrc = 
 CHECK failed: (calc_escaped_size) == (escaped_len): 
-%.1f
 CHECK failed: (temp[0]) == ('1'): 
 CHECK failed: (temp[size - 1]) == ('5'): 
 CHECK failed: (size) <= (6): 
@@ -9013,10 +8932,8 @@ CHECK failed: dest:
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 456789:;<=
-\t\n\v\f\r
  !"#$%&'()*+,-./0123
 ?456789:;<=
-\t\n\v\f\r
  !"#$%&'()*+,-./0123
 0123456789abcdef
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
@@ -9033,7 +8950,6 @@ CHECK failed: GeneratedDatabase()->Add(encoded_file_descriptor, size):
 CHECK failed: (field_count()) == (2): 
 Invalid proto descriptor for file "
 File recursively imports itself: 
- -> 
 Reserved numbers must be positive integers.
 Reserved range end number must be greater than start number.
 Invalid wire type for CPPTYPE_INT32: 
@@ -9108,7 +9024,6 @@ length_ >= n
 Enum name 
  has the same name as 
  if you ignore case and strip out the enum name prefix (if any). This is error-prone and can lead to undefined behavior. Please avoid doing this. If you are using allow_alias, please assign the same numeric value to both enums.
-$0// $1\n
 CHECK failed: checkpoints_.empty(): 
 .placeholder.proto
 .PLACEHOLDER_VALUE
@@ -9205,26 +9120,17 @@ Found invalid proto option data for:
 $0option $1;\n
 stream 
 $0rpc $1($4.$2) returns ($5.$3)
- {\n$0$1}\n
 service $0 {\n
-$0$1 = $2
- [$0]
 $0enum $1 {\n
 $0  reserved 
-$0, 
 $0 to max, 
-$0 to $1, 
-"$0", 
-$0}\n
 $0message $1
 $0  extensions $1 to $2;\n
-$0  }\n
 $0  extend .$1 {\n
 map<$0, $1>
 $0$1$2 $3 = $4
  [default = $0
 json_name = "
- { ... };\n
 extend .$0 {\n
 " is a message. To set the entire message, use syntax like "
  = { <proto text format> }". To set fields within it, use syntax like "
@@ -9234,7 +9140,6 @@ Could not create an instance of
 Error while parsing option value for "
 CHECK failed: (option_field->type()) == (FieldDescriptor::TYPE_GROUP): 
 $0oneof $1 {
- ... }\n
 syntax = "$0";\n\n
 import public "$0";\n
 import weak "$0";\n
@@ -9308,7 +9213,6 @@ CHECK failed: desc_proto.has_name():
 File not found in database (unexpected): 
 Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
 Extension conflicts with extension already in database: extend 
- } from:
 Invalid symbol name: 
 Symbol name "
 " conflicts with the existing symbol "
@@ -9364,7 +9268,6 @@ Expected string, got:
 Expected integer, got: 
 Expect a decimal number, got: 
 Expected "
-", found "
 Integer out of range (
 Expected double, got: 
 Invalid value for boolean field "
@@ -9438,190 +9341,98 @@ lpHP
 cU!\f}QP
 ~SeA
 !tI)i
-k>X'
 `3QbE
 pXhH
 C@gw
-G\n||
 lNrZ
-6'9-\nd
-T[$:.6\f
 ZiKw
-;f[4~
 _TbF~
-\tx&n
-*1#?
 h8,4$
 2Ht\l
 A~Se
 `3SbE
 +HpXhE
-G\nB|
 pZlNr
--6'9
-T6$:.\n\f
  wZiK
-*"<C
-[4~C
 ~TbF
 \txYn
-?*1#
 fNt7
-$8,4
-\f%<(
 lHt\
 QPeA~S
 0 Umv
--!tX
 SbEwd
 hHpX
-Uf*(
 +2Hp
 rZlN
-9-6'
-\h!T[
-.6$:g\n\f
 KwZi
-[4)C
 F~Tb
-#?*1
-_[o=
->4$8,@
-\fI<(
 p\lHtW
 QSeA~
 !tX)i
 XhHp
-yG\n|
 NrZl
-='9-6d
-:.6$
 aiKwZ
 ;fD4~
-[v)C
-cB@"
 _jbF~T
-11#?*0
-,4$8_@
-I<(A
 t\lHBW
 `P00
-ggV}++
 Lj&&lZ66~A??
 h\44Q
 bS11*?
-Fe##
-Ni''
-Xt,,4.
 RRvM;;
-R{))
-^q//
-@`  
 rK99
 MMfU33
 PPxD<<%
 pH88
-Bc!! 0
-\f\f&5
 DD.9
-~~zG==
-]]2+
-Df""T~**;
 dV22tN::
-II\f\n
-Hl$$
 nY77
 xxJo%%\r..8$
-tt>!
 pp|B>>q
 aaj_55
 UUPx((
-Zw--
 0`P0
-g+V}+
 &Lj&6lZ6?~A?
 4h\4
 1bS1
-#Fe#
-'Ni'
-,Xt,
 R;vM;
-)R{)
-/^q/
- @` 
 9rK9J
 M3fU3
 P<xD<
 8pH8
-!Bc!
-~=zG=d
-"Df"*T~*
 2dV2:tN:\n
-$Hl$\
 7nY7m
-x%Jo%.\r.
-p>|B>
 a5j_5W
 U(Px(
--Zw-
 T00`P
-++V}
 &&Lj66lZ??~A
 O44h\
 s11bS
 R##Fe
-&''Ni
-,,Xt
 6-nn
-;;vM
-))R{
->//^q
-,  @`
 99rKJJ
 33fU
-<<xD
 88pH
 u!!Bc
 ==zGdd
 2+ss
-""Df**T~
 ;22dV::tN\n\n
-\f\n$$Hl\\
 C77nYmm
-%%Jo..\r
->!KK
->>|B
 55j_WW
 "3ii
-((Px
---Zw
 P00`
-}++V
 =j&&LZ66lA??~
 \44h
 S11b?
-e##F^
-i''N
-t,,X.
 M;;va
-}{))R>
-q//^
-`  @
 gK99r
 U33f
-D<<x
 !H88p
 c!!B0
-G==z
-f""D~**T
 V22dN::t
-\fl$$H
 Y77n
-o%%Jr..\$
-B>>|
 _55j
 x((Pz
-)w--Z
 ,crypto/asn1/a_strex.c
 \%02X
 \W%08lX
@@ -9697,7 +9508,6 @@ ASN1_T61STRING
 ASN1_PRINTABLESTRING
 ASN1_UTF8STRING
 crypto/asn1/tasn_utl.c
-%*s%04x - 
 %02x%c
 %02X:
 crypto/bio/b_print.c
@@ -9952,12 +9762,9 @@ assertion failed: WITHIN_ARENA(chunk)
 crypto/modes/gcm128.c
 crypto/modes/ocb128.c
 crypto/o_str.c
-\n\v\f\r
-\n\v\f\r
 0123456789ABCDEF
 crypto/objects/o_names.c
 crypto/objects/obj_dat.c
-.%lu
 UNDEF
 rsadsi
 RSA Data Security, Inc.
@@ -11382,12 +11189,9 @@ magma-cfb
 magma-mac
 hmacWithSHA512-224
 hmacWithSHA512-256
-,d\n\t
 Ag*g*
-g+g+
 +en+eo+
 /+ep+eqU
-\t+o+o
 Netscape Certificate Extension
 X509v3 Private Key Usage Period
 X509v3 Subject Alternative Name
@@ -11707,8 +11511,6 @@ reject
 crypto/x509v3/pcy_cache.c
 crypto/x509v3/pcy_data.c
 crypto/x509v3/pcy_tree.c
-[%d]
-%x%s
 %s%02x
 %*sIPv4
 %*sIPv6
@@ -11723,7 +11525,6 @@ crypto/x509v3/pcy_tree.c
  (MPLS-labeled VPN)
  (Unknown SAFI %u)
 : inherit\n
-/%d\n
 crypto/x509v3/v3_addr.c
 IPv4-SAFI
 IPv6-SAFI
@@ -11742,11 +11543,8 @@ u.addressRange
 IPAddressRange
 0123456789.:abcdefABCDEF
 0123456789.
-%*s%s\n
 crypto/x509v3/v3_asid.c
-%*s%s-
 Autonomous System Numbers
-%*s%s:\n
 %*sinherit\n
 Routing Domain Identifiers
 asnum
@@ -11788,7 +11586,6 @@ POLICYINFO
 policyid
 qualifiers
 CERTIFICATEPOLICIES
-%*s%s:\n%*s
 %*sFull Name:\n
 %*sRelative Name:\n%*s
 %*sOnly User Certificates\n
@@ -11909,7 +11706,6 @@ SXNETID
 crypto/x509v3/v3_tlsf.c
 status_request_v2
 crypto/x509v3/v3_utl.c
-xn--
 crypto/asn1/a_bitstr.c
 crypto/asn1/a_d2i_fp.c
 crypto/asn1/a_digest.c
@@ -11940,8 +11736,6 @@ X509_ALGORS
 X509_ALGOR
 CBIGNUM
 crypto/asn1/x_int64.c
-%jd\n
-%ju\n
 ZUINT64
 ZINT64
 ZUINT32
@@ -11988,7 +11782,6 @@ $)$=$A$C$M$_$g$k$y$}$
 ,#,/,5,9,A,W,Y,i,w,
 -;-C-I-M-a-e-q-
 .%.-.3.7.9.?.W.[.o.y.
-/\t/\v/
 /'/)/A/E/K/M/Q/W/o/u/}/
 0\r0#0)070;0U0Y0[0g0q0y0}0
 1!1'1-191C1E1K1]1a1g1m1s1
@@ -12007,7 +11800,6 @@ $)$=$A$C$M$_$g$k$y$}$
 >#>)>/>3>A>W>c>e>w>
 >\v?\r?7?;?=?A?Y?_?e?g?y?}?
 @!@%@+@1@?@C@E@]@a@g@m@
-@\tA\vA
 A!A3A5A;A?AYAeAkAwA{A
 B#B)B/BCBSBUB[BaBsB}B
 C%C'C3C7C9COCWCiC
@@ -12028,7 +11820,6 @@ OPENSSL_finish
 crypto/conf/conf_mod.c
 , path=
 module=
-%-8d
 , retcode=
 , value=
 OPENSSL_CONF
@@ -12036,7 +11827,6 @@ openssl.cnf
 OPENSSL_ia32cap
 %s:%d: OpenSSL internal error: %s\n
 crypto/ct/ct_x509v3.c
-\v\v\r\r
   ##%%&&))**,,//1122447788;;==>>@@CCEEFFIIJJLLOOQQRRTTWWXX[[]]^^aabbddgghhkkmmnnppssuuvvyyzz||
 DH Private-Key
 %s: (%d bit)\n
@@ -12072,13 +11862,8 @@ dh_paramgen_subprime_len
 dh_paramgen_type
 dh_pad
 crypto/dh/dh_rfc7919.c
-r:   
-s:   
 priv:
 pub: 
-P:   
-Q:   
-G:   
 crypto/dsa/dsa_ameth.c
 OpenSSL DSA method
 crypto/dsa/dsa_asn1.c
@@ -12095,7 +11880,6 @@ crypto/dso/dso_lib.c
 NULL shared library method
 crypto/ec/ec_ameth.c
 ECDSA-Parameters
-%*spub:\n
 %*spriv:\n
 OpenSSL EC algorithm
 crypto/ec/ec_asn1.c
@@ -12195,161 +11979,93 @@ gB>d
 pU>\AL
 `VX:H
 dZ!2.
-}_|mPG@j^h
 8]Vc2
-IJ_H^[
 pU>\AL
-]o~P
-]o~P
 p5Z3
-]o~P
-]o~P
 FF!w
-A&<S
-]o~P
-^G 6
-^G 6
-M>}I
-:z'H>
-^G 6
-^G 6
-^G 6
-& ( 
-& ( 
 nStf,a
-s=\vv
-/I%j
 :eaI
 FDA~i
-& ( 
 nSw}Z\tu
 u0Az
-,KH/
 2bT~
-??M|\rK
 S\vQN
-r8l@\v\r
-hT.'
-<0(.
-)\t~,Vg
-\n/\HS7_
 ^J_spY
 ^J_spY
 b\fzUkm
-S[{Q
-z\v\U
 $Cw!R
 ^J_spY
 ^J_spY
 ?jOb
 ^J_spY
-9[#l
 bmNP
 GXqN
 Ut]<E
 b]jY
 E,v\nX
 <4E87
-+5I 
 VggjeK uO5n
 FV|FgUV
-|I6?
-t+c)
 8A6j
 )TpH
 0Z@q
 \ri1I
 (ZdOt\n&
-(q-B
-u+,@\tM
-b-w#
 oMinghuaQu
 tfjgvmfv
-]&g''}
 f&dy
 Vg3LE
 bV}TS
 UUUUUUUUUUUUUU<o(
-F$R-
 MinghuaQu
 xUN'
-q~!/
 UUUUUUUUUUUa\f\v
 (wMww
 C q'O
 (fS{ggRcjh
-&@'kd
 Rbg.E
-^3)2
 MinghuaQu
-HT%+
-{|WM\v
-$&nN
 )Urz
 9IGv
-y!=\tLK
 MBb!\v
 u;{Gk
 Ik\f`dub`D
 `yNT
-\v|NB
-4`x/
-&>1;y
 $XI(6
 Yb6N4
-uw&]
-{*eU
 K4K 
-X!;3; 
 6qo~
-L7~*
 MinghuaQuw
 aybSr
 Q/xtJ2
-\\fys$
 xzxv
-Nm^\
 MinghuaQu
 kV!DA
-zj{&
 sao5
 (0'yX
 A2VPD
-'\v9C#U
-)E\\*=
 E[3M
 iFjt
 s(Fdi
 (U1h
 #Q7z
-;L8,
 MinghuaQu
 \rMinghuaQu\f
--\f(`|
 MinghuaQuS
 MinghuaQu)
 p+"\tHr9
 3Wk1^
 *0fT
 m>gh
-"o;o
 |<C!FReQ
 h2Wl
-'pQ 
-&)j<
-XW=?'
 ihD5
 "cs73KI
-`kM=
 9)jx
-'>f,
 a5<p
 T*8U
 U)l:T^8rv\n
-&,o]
 A2VPD
-'\v9C#U
-)E\\*=
 r$0I
 (1crypto/ec/ec_key.c
 crypto/ec/ec_kmeth.c
@@ -12370,9 +12086,7 @@ NIST CURVE: %s\n
 Field Type: %s\n
 Basis Type: %s\n
 Polynomial:
-A:   
 Prime:
-B:   
 Generator (compressed):
 Order: 
 Generator (uncompressed):
@@ -12772,9 +12486,7 @@ ENCRYPTED
 BAD-TYPE
 Proc-Type: 4,%s\n
 DEK-Info: %s,
- \t\r\n
 -----BEGIN 
------END 
 Expecting: 
 X509 CERTIFICATE
 NEW CERTIFICATE REQUEST
@@ -12784,8 +12496,6 @@ PKCS #7 SIGNED DATA
 DEK-Info:
 ENCRYPTED
 Proc-Type:
------\n
------END 
 -----BEGIN 
 crypto/pem/pem_oth.c
 crypto/pem/pem_pk8.c
@@ -12938,7 +12648,6 @@ operation not supported on this type
 signing not supported for this key type
 PKCS7_add0_attrib_signing_time
 OpenSSL POLY1305 method
-\t\n\v\f\r
 additional input too long
 already instantiated
 argument out of range
@@ -13156,152 +12865,91 @@ RSA_padding_check_PKCS1_type_1
 RSA_padding_check_PKCS1_type_2
 crypto/rsa/rsa_none.c
 crypto/rsa/rsa_oaep.c
-%\QM
-\n`cC#( 
-(D@D
 xsK;
 .pp@0
 6tpD4
 \v\vTSG
 psC3
-, \f,
 'prB2
-\t``@ PP@
 7XRJ
 xpH8
-`aA!
 4@AA
-|qM=
 =trF6,#
 "lbN.
 LAM\rhaI)|pL<
->d`D$
 .HCK\v
 !hcK+dbF&
 3|rN>
 xrJ:DCG
 'DAE
-L@L\f
 <0\f<pqA1
 \ttqE5
 ?HAI\t81\t9dcG'
-l`L,
 1H@H
 lcO/<1\r=,!\r-@@@
 :LBN
-83\v;
-h`H(|sO?
 HBJ\nTRF
 tsG7
 -DBF
-5(#\v+daE%
 *laM-\SO
 82\n:XPH
-`bB"(!\t)
 xqI9
-hbJ*("\n*
-!\r-,
-`@ `QE
 DcO/lcK+hSK
 bB"`3
-!\t)(
 64CK\vH
-`L,l
-?<1\r=<
-((BN
 #\v+(bF&drJ:x#
 rB2pBB
 sC3pcG'd
- \f,,
-qM=|
 bJ*h
 `H(hqA1p
-aA!`
 sK;xPL
-cC#`#
-# AM\rL
-2\n:8
-\f\f\f"
 bN.l
 AI\tHpH8x
 p@0pqE5tsO?|1
 `D$daM-l
 pD4t
 rF6t
-"\n*(RN
 HqI9x
 \sG7tPD
-%$CO
-rN>|
-aE%d0\f<<
-pL<|
 P1\t98"
 aI)h
-@L\fL
 3\v;8BJ\nH
-%$!M
-C#`c
-(( D
 K;xs
 @0pp
 D4tp
-$$ \f
 C3ps
-\f,, 
 B2pr
-@ ``@
 H8xp
-A!`a
 PRM=|q
 F6tr
 N.lb
 M\rLAI)haL<|p\t\t
-D$d`
-.,"K\vHC\n
 ! !K+hcF&db
-N>|r
 J:xrG
 DAL\fL@
 \f<<0A1pq
 E5tq
 I\tHA\t981G'dc
-L,l`
 O/lc\r=<1\r-,!@
 TQ\v;83
-H(h`O?|s
 J\nHBF
 TRG7ts
-\v+(#E%da
 M-laO
 \n:82H
-B"`b\t)(!
 I9xq
-J*hb\n*("
--,!\r&
- ``@
 D@D/lcO+hcK
 "`bB303
-)(!\t 
 \vHCK/
-,l`L(
 DAE!
-=<1\r
 LBN6
 +(#\v&dbF:xrJ'$#
 2prB
 3psC'dcG,
-,, \f*
 TSG.
-=|qM
 *hbJ1
 (h`H1pqA
-!`aA>
 ;xsK
-\PL"
-#`cC# #
 \rLAM
-:82\n\f\f
-\f.,"
 .lbN
 XRJ2
 \tHAI8xpH\f
@@ -13309,21 +12957,14 @@ XRJ2
 $d`D-laM
 4tpD
 \t6trF
-*("\n
-\RN)
 H@H9xqI
 \SO7tsG
 TPD2
-\r%$!
 DBF-
 PRB+
->|rN
 %daE<<0\f6
-<|pL
-PP@981\t&$"
 )haI
 PSC\n
-\fL@L
 ;83\v\nHBJ7
 UUUUUUUUUUUUUUUU3333333333333333
 SIPHASH
@@ -13335,33 +12976,20 @@ IB;4e^WP
 E>70aZSL}voh
 A:3,]VOHyrkd[[
 ETLL
-%%Hm
 \t\tCJAAQ
-,,\v'\r\rBO
 eeX=
-==Ns
 3--Jg
 6yy_&
 aaY8GG
-G^]]V\v~~
 11M|
-uu\)
 rUUT
 44\r9MMR
 99Ov
-DQ{{
 mmZ7EEP
-qq],
-@E||
 Pii[2cc
-((\n"
 ))Kb00\f<ZZ
-5$$\t-
 55Ly
-V}}^#
-!!Ih
 z3T\vC
-%"|;
 'RL6
 \rSNo
 jrml[Q
@@ -13581,7 +13209,6 @@ crypto/x509/t_x509.c
     Signature Algorithm: 
  (Negative)
 Certificate:\n
-    Data:\n
 %8sVersion: %ld (0x%lx)\n
 %8sVersion: Unknown (%ld)\n
         Serial Number:
@@ -13715,13 +13342,10 @@ crypto/x509v3/pcy_node.c
 %*s  namingAuthorityText: 
 %*s  namingAuthorityUrl: 
 %*sadmissionAuthority:\n
-%*s  
 %*sEntry %0d:\n
 %*s  admissionAuthority:\n
-%*s    
 %*s    registrationNumber: 
 %*s    Info Entries:\n
-%*s      
 %*s    Profession OIDs:\n
 %*s      %s%s%s%s\n
 ADMISSION_SYNTAX
@@ -13800,11 +13424,9 @@ removeFromCRL
 crypto/x509v3/v3_extku.c
 crypto/x509v3/v3_ia5.c
 crypto/x509v3/v3_info.c
-%s - %s
 ACCESS_DESCRIPTION
 %*s<Not Supported>
 %*s<Parse Error>
-%*s%s
 crypto/x509v3/v3_prn.c
 bad ip address
 bad object
@@ -13934,7 +13556,6 @@ policy language already defined
 policy path length already defined
 policy when proxy language requires no policy
 ASIdentifierChoice_is_canonical
-```R
 adding object
 asn1 parse error
 asn1 sig parse error
@@ -14179,7 +13800,6 @@ costParameter
 blockSize
 parallelizationParameter
 keyLength
-%s 0\n
 %s %s%lu (%s0x%lx)\n
 crypto/asn1/t_pkey.c
 NULL\n
@@ -14189,9 +13809,7 @@ crypto/asn1/tasn_prn.c
 %*s%s OF %s {\n
 <ABSENT>\n
 ERROR: selector [%d] invalid\n
-%*s}\n
 Unprocessed type %d\n
-%*s<%s>\n
 :EXTERNAL TYPE %s\n
                     
 crypto/async/arch/async_posix.c
@@ -14206,133 +13824,79 @@ async_start_func
 ASYNC_start_job
 ASYNC_WAIT_CTX_set_wait_fd
 blowfish(ptr)
-!(Ew
-~&jE
  iciNWq
-x`\`U
 S2zw
 Qjh/T
 w?6r
-\^c$j
-E9_\v
 yU\n2`
-yr,@
 H{1S
-"//w
 AJsN
-\r*!ec
 pzKD)
 ilRdV
-)L\tu@
-?kh\t
 |sG2
 U$qk.
 fC\tc
 27;C
 qUN1
-/n[(
 Ze2Zh@
 Wcr"
 T0.S
-ap?#
 r3A~
 ;"lY7
 @n2w
 _g@Cg
-%xP(
 B*k@5
 mK1f
 n:2C[
-V@E'
-::SU
-^|1)
-A4x{%`
->3b\v$;"
 AcG\nt
 no:7
 7,gm;
 .97yY
 Bh;+j
 .x7B
-{x`M`
 BFUa.X
 YnFpW
 \t-f3F2
-|K=\nr9$|
 n6j/
 HWyn
 9)PF
-(-}|
-W;()f
 _xU`u
 08bX
-Y:D\n5>
-w``u N
--%\t?
 :crypto/bio/bf_buff.c
 \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
-Hb{!
-&8l~!
-?p\t1
-|t/[U)
 8y\rW
-1,)b^
 KN>v
-FN>\
 #:*S8,}gNzl
-\r:6"
-e;[5
 a8Bk
-a/4(
 zy:HO
 =Uec
 3$ae
 u\fcc
-<=' V
 8y\rW
-1,)b^
 KN>v
-FN>\
 #:*S8,}gNzl
-\r:6"
-e;[5
 a8Bk
-a/4(
 zy:HO
 =Uec
 3$ae
 u\fcc
-<=' V
-j_e^~
-\r:6"
-e;[5
 a8Bk
-a/4(
 zy:HO
 =Uec
 3$ae
 u\fcc
-<=' V
-\r:6"
-e;[5
 a8Bk
-a/4(
 zy:HO
 =Uec
 3$ae
 u\fcc
-<=' V
 \(a8Bk
-a/4(
 zy:HO
 =Uec
 3$ae
 u\fcc
-<=' V
-'#^QTy
 `fPw.\vM
 w8i_q
-&`Pqy?
 H5gRR-
 XG[r
 8GZS
@@ -14341,7 +13905,6 @@ S#FI
 i~wKVA\
 o&1m&
 qCJ.
-s`a;
 arg2 lt arg3
 bad reciprocal
 bignum too long
@@ -14912,250 +14475,79 @@ a null shared library handle was used
 the meth_data stack is corrupt
 could not bind to the requested symbol name
 could not unload the shared library
-\f\f\n\n8)
-C!x\n
-\f\f\n\n8)
-C!x\n
 i\fD8
-Gg/\f
 AP"\nsQJ
-\nIZ2\n/
-!\vG@
-\r^\vV\f
-\U\t0D`\rA^
-D=1\v
 Kr\t=o
-\vm|L
 I\nlQ
-V\t_#c
-x\\t"
-\n2's
-&\v{'$
-iv!\r
-8(\vQ
-L\v=2
-B:\t9F&\v)
 L8-\rHO
-n\nI}
-$nf\t_
-;%W\f
-=U\f|\v
-BZ\v?
 n\vDsv
-s|\n|
-\f&Qe
-3\fp'
-[6v\v\n
 4T9\n
-\vhb.
-\fP\tF
 S\fWj
--\tK:
-s\rR_
 0\tzc
 \t\taJj
-\f,o|
-<\f1`
 v\fdn
 \vow5
-\r}-e
-\n{O5
 b\nS)7
-$\n~`
-G\vi?
-s \v]\
- 5\n$F
-s?H\f
-"i\t>
  \vjpF
-\rbk$
-\r(O)
-D~\t|$Y
-t\rH[
 4\fZQ
-K`]\n6
 H\fJxE\v
-g\tg</\r
 O\r\nP2
 4\nLx
-?A\v!
-h'A\t
->?0\veh
-e#A\f
-84\v?(
 \tOzG\r
 dPq\n
 zC\nsZ
-\n_.4
 EE\fl~5
-c?\fb@A
-\t;T\r
-cN\v 
-k\t\vf
-\vCI\
-;\r,4
-v\nb\v
 Nwh\v
-$]@\fW0w
-\t:TV
-_k\r&
 mC4\n
-\vzT\f
-\nd!X\t@
-e\n&H
 \vjFF\r
-\n+Ar
-\rB?u\t\n'x
 rm\niAB
-Kt\n{\n
-)g-\v
-X%\va/Y
-;a\n&$
 v\v]mE
 \nkhT
-!F\nz
-<.-\t
-R]\t\v
-f%\n[e
-\~\vX
-r-+\n
-^jF\v
-\nK2&
 9<n\nM
-%%V\r
-nD'\n
-H.\te
 GSc\v3
 ei\t&H
 8z\rkt
-WC\n\
-'!\rEO
 pp\rk
 8\vWzK
-JI)\f
 5q\teH
-EO<\n
-!\n^5
-\\nEl
-]52\r`\
-y\r\fc
-\nb\nu
-a+S\t
 5mF\tfE
 Z\fL+i
 E\foD
-%>\n:q
 b\fLM%
 \n2gQ\v\tU
-Z4C\n^.+\r
 \vZ\nyVR
-o\vu$
 Ha4\n
-|\f0\
-N\r\v(O
 77\nGJ
-~u\r~
-A\v\f.
-tv`\f"
-$t\n!2
 \r7AO\n
-`<\v:P
-$=|\f
-\r]v"
 :oc\ve
-\3-\t
--\fZw
-\vR)/
 hl\tJ3o
 l\vDZ2\fs
-{[1\f
-Q\nn;
 r\tU[B
 n\tMr
 fqi\tH
-W_\n\r\t
-\v}-=
-W\n%c
-R_\ti;J
-\t\vG>1
-j\r,\fH\n
 MkL\f
-\rwR~
-_\vz\v
-\r(F=\t
-:e\vs
-\t-mE
-\rY"n
 \rUhF
-\n~\v3
-\fSR!
 5\tuy
-~C;\r*L
-?UQ\f
-\t]xa\t
-\f$C(
-\v|*I\r-3
 p\tK2
-\nX`3\r#di\f
-o)\rW
-\fYE)
-\t\~I\f\r[$
 PK\ry
-b\tQ<
 e\roL
-B=6\r
-M\t\nuv\t
-=,\ts
 N\r\nyd
-K\r6>\v
-~Ru\f
 \nW2a
-^~P\r
-\f?\n&
-&q\tZp\f\t
 $O\tdwR\rox\\r*
-\f-_\r
-v\n,V
 E\r\f52
 \n3wV
-$y\ru
-2\fp\r
-\tF(-
 K\rdSC\td?
 3ej\n
-\t\^~
 v07\v
-Ko\f\v
-}\t,W
-\t"HU\v
-FZ\f\t
-\f@1B\v
-\v|\w\r
 Ka\nTw
-(%\f\t
 C\vo9
 \tOkI
-/\vHN
-\r'6n
->]\n\v
-" \t1
 h\f90
 C\t\nD4
 l97\v
-5\v"[:
 O:t\vg
-VE%\r\r? 
-\vAB\t\t
 xtq\t
-\rZ_C\v
-JA(\n
-\v`0<
 E5\v\n6
-@+\r+
-L/E\t
-{G\f0
-0\f&M:
-b^U\n
 4crypto/ec/ec2_oct.c
 crypto/ec/ec2_smpl.c
 bignum out of range
@@ -15384,11 +14776,8 @@ crypto/ec/ec_print.c
 crypto/evp/bio_enc.c
 crypto/evp/encode.c
 assertion failed: ctx->length <= (int)sizeof(ctx->enc_data)
-\n\v\f\r
- !"#
 $%&'()*+,-./0123456789:;<=
 ?456789:;<=
-\t\n\v\f\r
  !"#$%&'()*+,-./0123
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
@@ -15521,7 +14910,6 @@ crypto/conf/conf_api.c
 crypto/conf/conf_def.c
 .conf
 [%s] %s=%s\n
-[[%s]]\n
 .include
 line 
 WIN32
@@ -15943,8 +15331,6 @@ TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_128_GCM_SHA256
 OpenSSL 1.1.1i  8 Dec 2020
 ssl/ssl_mcnf.c
 system_default
-, arg=
-, cmd=
 ssl/ssl_rsa.c
 ssl/ssl_sess.c
 SSL SESSION PARAMETERS
@@ -16124,7 +15510,6 @@ ssl/packet.c
 ssl/pqueue.c
 ssl/s3_enc.c
 ()*+,-./*(((
-(((((s(
 xssl/ssl_conf.c
 +automatic
 SSLv2
@@ -16868,7 +16253,6 @@ write_state_machine
 ssl/t1_enc.c
 key expansion
 extended master secret
-*+,-./0123
 nopqrs(
 PRI * HTTP/2.0\r\n\r\nSM\r\n\r\n
 nghttp2_session.c
@@ -16889,7 +16273,6 @@ session->obq_flood_counter_ > 0
 session->last_sent_stream_id + 2 <= frame->push_promise.promised_stream_id
 stream->closed_next == ((void *)0)
 stream->closed_prev == ((void *)0)
-rv == 0
 nghttp2_is_fatal(rv)
 Ignoring received invalid HTTP header field: frame type: %u, stream: %d, name: [%.*s], value: [%.*s]
 Invalid HTTP header field was received: frame type: %u, stream: %d, name: [%.*s], value: [%.*s]
@@ -16999,7 +16382,6 @@ pri_spec
 (size_t)(p - (uint8_t *)ov_copy) == nov * sizeof(nghttp2_origin_entry) + len + nov
 detect_self_dependency
 nghttp2_submit_origin
-\t\n\v\f\r
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
 nghttp2_helper.c
 delta >= 0
@@ -17205,7 +16587,6 @@ bufs->head == bufs->cur
 ((size_t)((buf)->end - (buf)->last)) >= 4
 ((size_t)((buf)->end - (buf)->last)) >= 8
 ((size_t)((buf)->end - (buf)->last)) >= 2 + altsvc->origin_len + altsvc->field_value_len
-rv == 0
 ((size_t)((buf)->last - (buf)->pos)) == 9 + frame->hd.length
 a->namelen == 0
 b->namelen == 0
@@ -17250,13 +16631,11 @@ rblk->n >= (16 - 1)
 blk->n < (2 * 16 - 1)
 i + 1 < blk->n
 lblk->n + rblk->n < (2 * 16 - 1)
-i > 0
 lnode->blk->n < (2 * 16 - 1)
 rnode->blk->n > (16 - 1)
 i < blk->n - 1
 lnode->blk->n > (16 - 1)
 rnode->blk->n < (2 * 16 - 1)
-i < blk->n
 key_equal(ksl->compar, (nghttp2_ksl_key *)node->key, old_key)
 LV=%zu n=%zu\n
  %lld
@@ -17299,68 +16678,41 @@ CPU_MHZ
 /sys/kernel/tracing/trace_marker
 %s begin_ctx=%lld
 %s end_ctx=%lld
-0+\nm
 5mmQ
-vb^~
 I(fQ
 mg\f5NJ
-^F.6
 Wza]lw\t
 (|YGNk
 v!pH
 8/A0
 %K3 QQ+
-^p/F
-f?H`
--[\vtt
-0+\nm
 5mmQ
-vb^~
 I(fQ
 mg\f5NJ
-^F.6
 Wza]lw\t
 (|YGNk
 v!pH
 8/A0
 %K3 QQ+
-^p/F
-f?H`
--[\vtt
-0+\nm
 5mmQ
-vb^~
 I(fQ
 mg\f5NJ
-^F.6
 Wza]lw\t
 (|YGNk
 v!pH
-0+\nm
 5mmQ
-vb^~
 I(fQ
 mg\f5NJ
-^F.6
 Wza]lw\t
-0+\nm
 5mmQ
-vb^~
 I(fQ
 mg\f5NJ
-^F.6
-0+\nm
 5mmQ
-vb^~
 I(fQ
 mg\f5NJ
-0+\nm
 5mmQ
-vb^~
 I(fQ
-0+\nm
 5mmQ
-vb^~
 crypto/ct/ct_policy.c
 crypto/ocsp/ocsp_cl.c
 crypto/ocsp/ocsp_ext.c
@@ -17384,52 +16736,33 @@ Load file into cache
 NETSCAPE_CERT_SEQUENCE
 crypto/asn1/x_info.c
 crypto/asn1/x_pkey.c
-tt\v[-
-`H?f
-F/p^
 +QQ 3K%
 0A/8
 Hp!v
 kNGY|(
 \twl]azW
-6.F^
 JN5\fgm
 Qf(I
-~^bv
 Qmm5
-m\n+0
-tt\v[-
-`H?f
-F/p^
 +QQ 3K%
 0A/8
 Hp!v
 kNGY|(
 \twl]azW
-6.F^
 JN5\fgm
 Qf(I
-~^bv
 Qmm5
-m\n+0
 Hp!v
 kNGY|(
 \twl]azW
-6.F^
 JN5\fgm
 Qf(I
-~^bv
 Qmm5
-m\n+0
 \twl]azW
-6.F^
 JN5\fgm
 Qf(I
-~^bv
 Qmm5
-m\n+0
 uT_Rm#
-'`ax
 #ETHw
 dlCz 
 l}C.we
@@ -17493,11 +16826,7 @@ N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
 N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
 bad_function_call
 St17bad_function_call
-\v\v\v\v\r\r
-\t\rK~\n
 CH\f1
-I\r]P`
-H;!}#@i
 FoCLcx
 basic_ios::clear
 St9basic_iosIcSt11char_traitsIcEE
@@ -17506,9 +16835,6 @@ St8ios_base
 St13basic_istreamIwSt11char_traitsIwEE
 basic_string::erase
 %s: __pos (which is %zu) > this->size() (which is %zu)
-%.*Lf
-%m/%d/%y
-%H:%M
 St9time_base
 St10money_base
 St13messages_base
@@ -17585,7 +16911,6 @@ JArray
 auto:
 VTT for 
 construction vtable for 
--in-
 typeinfo for 
 typeinfo name for 
 typeinfo fn for 
@@ -17620,8 +16945,6 @@ global destructors keyed to
 complex 
 imaginary 
  __vector(
-(...
-...)
 std::allocator
 std::basic_string
 std::string
@@ -17700,13 +17023,7 @@ September
 October
 November
 December
-Mb@?
-\t"NM
-\n/NM
-\v<NM
 \rVNM
-$"OM
-%:OM
 /OOM
 &cOM
 'sOM

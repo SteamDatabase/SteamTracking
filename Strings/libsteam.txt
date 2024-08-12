@@ -533,11 +533,7 @@ Precondition
 N6common19CErrorCodeExceptionE
 N6common15IAssertObserverE
 N6common19ICloneableExceptionE
-%.7s
-%.4s
-%.8s.%.3hu
 %.3lf
-[%u]
 strlen(szBuffer) < EBufSize
 /home/buildbot/buildslave_steam/steam2_rel_beta_linux/build/Projects/GazelleProto/Client/Engine/../../../Common/Logging/Src/Log.cpp
 N6common9CLogGroupE
@@ -684,8 +680,6 @@ GetSteamInstallDir
 GetSteamExePath
 SetCurrentDirectory() failed
 cszDirName
-%s/*.*
-%s/%s
 Failed to remove file 
 (_findclose( hFile )) == 0
 Failed to remove directory 
@@ -874,8 +868,6 @@ Failed to insert
 Failed to store named arg 
 insertResult.second
 Missing end-quote in: 
- =\t\r\n
- \t\r\n
 Missing value in line: 
 Tried to read undefined arg name: 
 /home/buildbot/buildslave_steam/steam2_rel_beta_linux/build/Projects/GazelleProto/Client/Engine/../../../Common/Misc/NamedArgs.cpp
@@ -995,7 +987,6 @@ Failed to connect
 %u.%u.%u.%u%c%u
 Failed to connect to 
 connect aborted
- \t\r\n,
 N6common38CSocketCommandAbortedByCallerExceptionE
 N6common19CConnResetExceptionE
 N6common14CRecvExceptionE
@@ -1155,7 +1146,6 @@ DLCForAppID
 MustOwnAppToPurchase
 Bad field in CAppIconsRecord
 AppIconData
-" >0x
 NoCost
 BillOnceOnly
 BillMonthly
@@ -1170,7 +1160,6 @@ Bad BillingType value
 Unrecognized BillingType '%s'
 SubscriptionId
 AppSubscriptionIdsRecord
-" >\n
 AppPublicKeyData
 KeyIdx
 AppPrivateKeyData
@@ -1456,7 +1445,6 @@ ClientExternalIPAddress
 18ObjScopeGuardImpl0IN6common16CFastThreadMutexEMS1_FvvEE
 PaymentCardType
 SizeOfFieldData == sizeof(u8)
-%u/%u/%02u
 %02u:%02u:%02u
 PaymentCardInfo
 PrepurchasedInfo
@@ -1885,12 +1873,7 @@ N8CryptoPP22BufferedTransformation3ErrE
 N4Grid6ICache10CExceptionE
 N4Grid3CFs10CExceptionE
 N8CryptoPP9ExceptionE
-, File: 
-, Expr: 
-, Line: 
-, Name: 
 Logging stopped
-%s%s%s
 enable
 ActivityLogGroup
 ActivityLogContext
@@ -2176,7 +2159,6 @@ Failed to write
 Copy*
 \Copy of 
 \Copy (
-) of 
 Invalid buffer size
 Validation failure: 
 iter->IsValid()
@@ -2296,14 +2278,11 @@ uBatSrc < uMaxEntries
 uBatDest < uMaxEntries
 uBatSrc > uBatDest
 pChecksumTable
-\*.*
 .pak
 Found pak file: %s
 Error reading pack file
 Deleting local file %s
 Invalid session handle
-%s__%d.gcf
-__*.gcf
 uKey <= uNewMaxEntries
 uBatEntry < uMaxEntries
 uNewBatEntry < uMaxEntries
@@ -2647,7 +2626,6 @@ N12_GLOBAL__N_131CCommandStatusObjectWithTimeoutE
 333333
 ADisconnect(%u)
 %u:%I64u
-%u:%u:%u
 nNumChars >= 0
 connection attempt failed: %s
 /home/buildbot/buildslave_steam/steam2_rel_beta_linux/build/Projects/GazelleProto/Client/Engine/Src/CSClientConnectionPool.cpp
@@ -3363,16 +3341,13 @@ SteamAppUser
 SteamAppVersionId
 SteamUser
 ValvePlatformMutex
-%s=%s
 Environment too large!
 PATH
 Invalid CWD created '%s'
-%s"%s" %s
 N4Grid9CLauncherE
 15ScopeGuardImpl1IPFiPcES0_E
 N4Grid25CBadLaunchConfigExceptionE
     Cache %d, Node %d
-    %s
 MasterResourceList
 reslists
 Adding new resource manifest %d:
@@ -3443,7 +3418,6 @@ nCount > 0 && static_cast<uint>(nCount) < sizeof(cszBuffer)
 nRet
 ) failed with error 
 Not available
-******
 Failed to SetUser
 Illegal game launch detected
 nul:
@@ -3477,7 +3451,6 @@ SteamGetAppUpdateStats
 SteamUpdateSubscriptionBillingInfo
 0x%x,0x%p
 SteamUpdateAccountBillingInfo
-%s,%s,0x%p
 SteamChangeAccountName
 0x%p
 SteamRequestEmailAddressVerificationEmail
@@ -3493,7 +3466,6 @@ SteamGetContentServerInfo
 SteamGetSponsorUrl
 %s,%s,%s,0x%p
 SteamChangePersonalQA
-%s,%s,0x%p
 SteamChangePassword
 %s,0x%p
 GetNumAccountsWithEmailAddress
@@ -3501,7 +3473,6 @@ GetNumAccountsWithEmailAddress
 SteamRequestAccountsByCdKeyEmail
 %s,0x%p
 SteamRequestAccountsByEmailAddressEmail
-%s,%s,0x%p
 SteamRequestForgottenPasswordEmail
 %s,%s,%s,%s,*0x%p=%s,0x%p
 SteamChangeForgottenPassword
@@ -3509,11 +3480,9 @@ SteamChangeForgottenPassword
 SteamSetNotificationCallback
 0x%p
 SteamUninstall
-%u,%u,0x%p
 SteamSetAppVersion
 %u,0x%p
 SteamReleaseCacheFiles
-%u,%u,0x%p
 SteamSetAppCacheSize
 %u,0x%p,0x%p
 SteamGetAppCacheSize
@@ -3537,13 +3506,11 @@ SteamLoadFileToCache
 SteamIsFileNeededByApp
 %u,%s,%llu,0x%p
 SteamIsFileNeededByCache
-%u,%s,0x%p
 SteamLoadCacheFromDir
 %u,0x%p
 SteamDefragCaches
 %u,0x%p,0x%p
 SteamGetCachePercentFragmentation
-%u,%u,0x%p
 SteamRepairOrDecryptCaches
 %u,0x%p
 SteamFlushCache
@@ -3573,7 +3540,6 @@ SteamGetAppUserDefinedInfo
 SteamGetAppDependencies
 0x%p=%s,0x%p,0x%p
 SteamFindApp
-%u,%u,0x%p
 SteamRemoveAppDependency
 %u,%u,0x%p,0x%p
 SteamInsertAppDependency
@@ -3628,7 +3594,6 @@ SteamVerifyPassword
 SteamGetAccountStatus
 0x%p,0x%p
 SteamGetUserType
-%s,%s,0x%p
 SteamRefreshLogin
 0x%p,0x%p
 SteamIsSecureComputer
@@ -3672,7 +3637,6 @@ SteamResumeCachePreloading
 SteamPauseCachePreloading
 0x%p
 SteamForgetAllHints
-%s,%d,0x%p
 SteamHintResourceNeed
 %s,0x%p
 SteamIsFileImmediatelyAvailable
@@ -3702,7 +3666,6 @@ SteamTellFile
 SteamSeekFile64
 %u,%ld,%d,0x%p
 SteamSeekFile
-%u,0x%p,%s
 SteamPrintFile
 %u,0x%p
 SteamPutc
@@ -3867,7 +3830,6 @@ SteamGetAppUpdateStats
 SteamUpdateSubscriptionBillingInfo
 0x%x,0x%x
 SteamUpdateAccountBillingInfo
-%s,%s,0x%x
 SteamChangeAccountName
 0x%x
 SteamRequestEmailAddressVerificationEmail
@@ -3883,7 +3845,6 @@ SteamGetContentServerInfo
 SteamGetSponsorUrl
 %s,%s,%s,0x%x
 SteamChangePersonalQA
-%s,%s,0x%x
 SteamChangePassword
 %s,0x%x
 SteamGetNumAccountsWithEmailAddress
@@ -3891,15 +3852,12 @@ SteamGetNumAccountsWithEmailAddress
 SteamRequestAccountsByCdKeyEmail
 %s,0x%x
 SteamRequestAccountsByEmailAddressEmail
-%s,%s,0x%x
 SteamRequestForgottenPasswordEmail
 %s,%s,%s,%s,*0x%x=%s,0x%x
 SteamChangeForgottenPassword
 0x%x
 SteamUninstall
-%u,%u,0x%x
 SteamSetAppVersion
-%u,%u,0x%x
 SteamSetAppCacheSize
 %u,0x%x,0x%x
 SteamGetAppCacheSize
@@ -3923,13 +3881,11 @@ InternalSteamLoadFileToCache
 InternalSteamIsFileNeededByApp
 %u,%s,%llu,0x%p
 InternalSteamIsFileNeededByCache
-%u,%s,0x%x
 SteamLoadCacheFromDir
 %u,0x%x
 SteamDefragCaches
 %u,0x%x,0x%x
 SteamGetCachePercentFragmentation
-%u,%u,0x%x
 SteamRepairOrDecryptCaches
 %u,0x%x
 SteamFlushCache
@@ -3955,7 +3911,6 @@ SteamGetAppUserDefinedInfo
 SteamGetAppDependencies
 %u,0x%x=%s,0x%x,0x%x
 SteamFindApp
-%u,%u,0x%x
 SteamRemoveAppDependency
 %u,%u,%d,%d,%s,0x%x
 SteamInsertAppDependency
@@ -4011,7 +3966,6 @@ SteamVerifyPassword
 SteamGetAccountStatus
 %u,0x%x,0x%x
 SteamGetUserType
-%s,%s,0x%x
 SteamRefreshLogin
 0x%x,0x%x
 SteamIsSecureComputer
@@ -4046,17 +4000,12 @@ SteamAbortCall
 0x%x,0x%x,0x%x
 SteamProcessCall
 SteamGetEncryptedUserIDTicket
-%u,%s,0x%x
 SteamWaitForResources
-%u,%u,0x%x
 SteamResumeCachePreloading
-%u,%u,0x%x
 SteamPauseCachePreloading
-%u,%u,0x%x
 SteamForgetAllHints
 %u,%u,%s,%d,0x%x
 SteamHintResourceNeed
-%u,%s,0x%x
 SteamIsFileImmediatelyAvailable
 %u,0x%x
 SteamFindClose
@@ -4064,7 +4013,6 @@ SteamFindClose
 SteamFindNext
 %u,%s,%d,0x%x,0x%x
 SteamFindFirst
-%u,%s,0x%x
 SteamGetLocalFileCopy
 %u,0x%x
 SteamSizeFile
@@ -4104,7 +4052,6 @@ SteamUnmountFilesystem
 SteamMountFilesystem
 %u,0x%x
 SteamUnmountAppFilesystem
-%u,%u,0x%x
 SteamMountAppFilesystem
 %u,0x%x,0x%x
 SteamChangeOfflineStatus
@@ -4221,7 +4168,6 @@ pchDirStart && pchDirEnd
 pchNameStart && pchNameEnd
 dwReplaceFlags <= 1
 ret > 0
-ret >= 0
 %s/%3s%4x.TMP
 !"aio_suspend unimplemented"
 !"aio_error unimplemented"
@@ -4258,7 +4204,6 @@ dwShareMode == 0
 hTemplateFile == __null
 lpName != __null
 Local\
-%xe%%s%s
 Global\
 !"mmap failed" && pchErr
 lReleaseCount >= 1
@@ -4278,7 +4223,6 @@ STEAM_ASYNCIO_THREADS
 pHandle != __null
 !"underflow!"
 ret != ((DWORD) 0xFFFFFFFF)
-s > 0
 dwBufferCount == 1
 /home/buildbot/buildslave_steam/steam2_rel_beta_linux/build/Projects/GazelleProto/Client/Engine/../../../Common/Misc/PosixWin32.cpp
 lpSecurityAttributes == __null
@@ -4447,7 +4391,6 @@ BlockingRng: could not open /dev/random
 N8CryptoPP11BlockingRngE
 N8CryptoPP14NonblockingRngE
 N8CryptoPP10OS_RNG_ErrE
-0!0\t
 N8CryptoPP9ByteQueueE
 N8CryptoPP9ByteQueue6WalkerE
 N8CryptoPP10RandomPoolE
@@ -4460,175 +4403,93 @@ N8CryptoPP21InvertibleRSAFunctionE
 N8CryptoPP11RSAFunctionE
 N8CryptoPP26InvertibleTrapdoorFunctionE
 N8CryptoPP12ArrayXorSinkE
-}\fUt]
-\f$o,
 vRQ>
 \r8STs\ne
-\njv.
 LwH'
 N8CryptoPP6SHA256E
 N8CryptoPP3SHAE
 N8CryptoPP17DERGeneralEncoderE
 N8CryptoPP17BERGeneralDecoderE
 P00`
-}++V
 =j&&LZ66lA??~
 \44h
 S11b?
-e##F^
-i''N
-t,,X.
 M;;va
-}{))R>
-q//^
-`  @
 gK99r
 U33f
-D<<x
 !H88p
 c!!B0
-G==z
-f""D~**T
 V22dN::t
-\fl$$H
 Y77n
-o%%Jr..\$
-B>>|
 _55j
 x((Pz
-)w--Z
 T00`P
-++V}
 &&Lj66lZ??~A
 O44h\
 s11bS
 R##Fe
-&''Ni
-,,Xt
 6-nn
-;;vM
-))R{
->//^q
-,  @`
 99rKJJ
 33fU
-<<xD
 88pH
 u!!Bc
 ==zGdd
 2+ss
-""Df**T~
 ;22dV::tN\n\n
-\f\n$$Hl\\
 C77nYmm
-%%Jo..\r
->!KK
->>|B
 55j_WW
 "3ii
-((Px
---Zw
 0`P0
-g+V}+
 &Lj&6lZ6?~A?
 4h\4
 1bS1
-#Fe#
-'Ni'
-,Xt,
 R;vM;
-)R{)
-/^q/
- @` 
 9rK9J
 M3fU3
 P<xD<
 8pH8
-!Bc!
-~=zG=d
-"Df"*T~*
 2dV2:tN:\n
-$Hl$\
 7nY7m
-x%Jo%.\r.
-p>|B>
 a5j_5W
 U(Px(
--Zw-
 `P00
-ggV}++
 Lj&&lZ66~A??
 h\44Q
 bS11*?
-Fe##
-Ni''
-Xt,,4.
 RRvM;;
-R{))
-^q//
-@`  
 rK99
 MMfU33
 PPxD<<%
 pH88
-Bc!! 0
-\f\f&5
 DD.9
-~~zG==
-]]2+
-Df""T~**;
 dV22tN::
-II\f\n
-Hl$$
 nY77
 xxJo%%\r..8$
-tt>!
 pp|B>>q
 aaj_55
 UUPx((
-Zw--
 cccc||||wwww{{{{
 kkkkoooo
 0000
-gggg++++
 vvvv
-}}}}
 YYYYGGGG
 rrrr
 &&&&6666????
 4444
 qqqq
 1111
-####
-''''
-uuuu\t\t\t\t
-,,,,
 nnnnZZZZ
-RRRR;;;;
-))))
-////
 SSSS
-    
-[[[[jjjj
 9999JJJJLLLLXXXX
 CCCCMMMM3333
 EEEE
-PPPP<<<<
 QQQQ
-@@@@
 8888
-!!!!
-\f\f\f\f
-____
 DDDD
 ~~~~====dddd]]]]
-ssss````
 OOOO
-""""****
 FFFF
-^^^^\v\v\v\v
 2222::::\n\n\n\nIIII
-$$$$\\\\
 bbbb
 yyyy
 7777mmmm
@@ -4638,163 +4499,93 @@ eeeezzzz
 xxxx%%%%....
 tttt
 KKKK
-pppp>>>>
 ffffHHHH
 aaaa5555WWWW
 iiii
-UUUU((((
-\r\r\r\r
 BBBBhhhhAAAA
-----
 TTTT
 QSeA~
 !tX)i
 XhHp
-yG\n|
 NrZl
-='9-6d
-:.6$
 aiKwZ
 ;fD4~
-[v)C
-cB@"
 _jbF~T
-11#?*0
-,4$8_@
-I<(A
 t\lHBW
 QPeA~S
 0 Umv
--!tX
 SbEwd
 hHpX
-Uf*(
 +2Hp
 rZlN
-9-6'
-\h!T[
-.6$:g\n\f
 KwZi
-[4)C
 F~Tb
-#?*1
-_[o=
->4$8,@
-\fI<(
 p\lHtW
 A~Se
 `3SbE
 +HpXhE
-G\nB|
 pZlNr
--6'9
-T6$:.\n\f
  wZiK
-*"<C
-[4~C
 ~TbF
 \txYn
-?*1#
 fNt7
-$8,4
-\f%<(
 lHt\
 BWQP
 ~SeA
 !tI)i
-k>X'
 `3QbE
 pXhH
 C@gw
-G\n||
 lNrZ
-6'9-\nd
-T[$:.6\f
 ZiKw
-;f[4~
 _TbF~
-\tx&n
-*1#?
 h8,4$
 2Ht\l
 RRRR\t\t\t\tjjjj
 00006666
 8888
-@@@@
-||||
 9999
-////
 4444
 CCCCDDDD
-TTTT{{{{
 2222
-####====
 LLLL
-\v\v\v\vBBBB
 NNNN
-....
-ffff((((
-$$$$
-vvvv[[[[
 IIIImmmm
-%%%%rrrr
 dddd
 hhhh
-\\\\
-]]]]eeee
 llllppppHHHHPPPP
-^^^^
 FFFFWWWW
-\n\n\n\n
 XXXX
 EEEE
-,,,,
-????
-kkkk::::
 AAAAOOOOgggg
 ssss
-tttt""""
 5555
 7777
 uuuu
 nnnnGGGG
 qqqq
-))))
 oooo
 bbbb
 VVVV>>>>KKKK
-yyyy    
 xxxx
 ZZZZ
 3333
 1111
-YYYY''''
 ____````QQQQ
 JJJJ\r\r\r\r----
 zzzz
-;;;;MMMM
-****
-<<<<
 SSSS
 aaaa
-++++
-~~~~
 wwww
-&&&&
 iiii
 ccccUUUU!!!!\f\f\f\f}}}}
 61.1.4
- n;^
 Qkkbal
-3_L\n
->jm\r
 Zjz\v
 i]Wb
 9a&g
 MGiI
 wn>Jj
-#.zf
-+o*7
 \t\t\t\t\t\t\t\t\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
 \t\t\n\n\v\v\f\f\f\f\r\r\r\r
 need dictionary
@@ -4823,7 +4614,6 @@ incomplete distance tree
  inflate 1.1.4 Copyright 1995-2002 Mark Adler 
 invalid literal/length code
 invalid distance code
-\r`w\n
 false
 true
 \steamapps\

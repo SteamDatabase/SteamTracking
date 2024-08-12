@@ -2314,7 +2314,6 @@ GLIBC_2.3
 GLIBC_2.1.2
 p != NULL || max == 0
 Pango
-Y %d %d
 break.c
 length == 0 || text != NULL
 IN_BREAK_TABLE (break_type)
@@ -2348,7 +2347,6 @@ s2 != NULL
 metrics->ref_count > 0
 Normal
 gravity
-%s=%d
 PangoFontDescription
 desc != NULL
 desc_to_merge != NULL
@@ -2356,7 +2354,6 @@ new_match != NULL
 desc1 != NULL
 desc2 != NULL
 str != NULL
--+_.
 PangoFont
 font != NULL
 PangoFontMetrics
@@ -2496,7 +2493,6 @@ list != NULL
 prev->data == attr
 prev->next == tmp_list
 other != NULL
-pos >= 0
 iterator != NULL
 pango_attribute_init
 pango_attribute_copy
@@ -2528,19 +2524,10 @@ color != NULL
 spec != NULL
 pango_color_to_string
 pango_color_parse
-`\t!!!
-g\t$$$
-n\t&&&
-u\t)))
-|\t+++
-\t...
 \t000
 \t333
 \t666
 \t888
-\t;;;
-\t===
-\t@@@
 \tBBB
 \tEEE
 \tGGG
@@ -2551,11 +2538,8 @@ u\t)))
 \tTTT
 \tWWW
 \nYYY
-\r\n\\\
-\n^^^
 \naaa
 "\nccc
-)\n\n\n\n
 /\nfff
 6\niii
 =\nkkk
@@ -2565,8 +2549,6 @@ R\nsss
 Y\nuuu
 `\nxxx
 g\nzzz
-n\n}}}
-u\n\r\r\r
 AliceBlue
 AntiqueWhite
 AntiqueWhite1
@@ -3325,8 +3307,6 @@ The quick brown fox jumps over the lazy dog.
 PangoLanguage
 result
 pango-language.c
-;:, \t
-j > 0
 PANGO_LANGUAGE
 pango_language_from_string
 0123456789
@@ -3336,9 +3316,7 @@ Z\thr
 y\nis
 =\vjam
 \vjbo
-\\fko
 N\rlt
-}\rlv
 \rmap
 pt-br
 zh-cn
@@ -3398,7 +3376,6 @@ Hiki ia
 u ke 
 ai i ke aniani; 
 ole n
- au e 
 eha.
 Ja mogu jesti staklo i ne boli me.
 Egy h
@@ -3452,7 +3429,6 @@ di manjar de veire, me nafrari
 Ch'peux mingi du verre, cha m'fo
  mie n'ma.
 Pchn
- w t
 a lub o
 m skrzy
  fig.
@@ -3506,7 +3482,6 @@ u nh
 y qua con ch
 Dji pou magn
  do v
-re, 
 oula m' freut n
 Mo l
  pa m
@@ -3535,7 +3510,6 @@ zh-sg
 zh-tw
 pango_language_get_scripts
 pango_script_get_sample_language
-        
 unknown underline mode
 private->ref_count > 0
 PangoLayout
@@ -3763,7 +3737,6 @@ Pango version too new (micro mismatch)
 Pango version too old (micro mismatch)
 /home/buildbot/buildslave/pango_linux/build/pango-1.36.8/lib32/etc/pango
 /home/buildbot/buildslave/pango_linux/build/pango-1.36.8/lib32/lib/pango
-%s/%s
 1.36.8
 PANGO_SYSCONFDIR
 pango
@@ -4150,83 +4123,27 @@ teluIndicScriptEngineLang
 kndaIndicScriptEngineLang
 mlymIndicScriptEngineLang
 sinhIndicScriptEngineLang
-\n\f\n\f\f
-\v\v\v\v
 \r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
-\r\r\r\r\r\r\r
 \r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
-\t\t\t\t\t
 \r\r\r\r\r\r\r\r\r\r\r
 \r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\t\t\t\t\t\t\t\t\t\t\v\t\t
-\r\r\r\r\r\r\r\t
-\r\r\r\r\r\r
-\r\r\r\r
 \r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
 \r\r\r\r\r\r\r\r\r\r\r
-\r\r\r\r\r\r\r\r\r
-\r\r\r\r
-\r\r\r\r\r\r\r\r\r
-\r\r\r\r\r
 \r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
-\r\r\r\r\r\r\r\r
-\r\r\r\r\r\r\r
-\r\r\r\r
-\r\r\r\r\r
-\r\r\r\r
-\r\r\r\r
-\r\r\r\r
-\r\r\r\r\r\r\r
-\r\r\r\r\r\r\r\r
-\r\r\r\r\r\r
-\r\r\r\r\r\r
 \r\r\r\r\r\r\r\r\r\r\r\r\r\r
-\r\r\r\r\r
 \r\r\r\r\r\r\r\r\r\r\r
 \r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
-\r\r\r\r
-\r\r\r\r\r\r
-\r\r\r\r
-\r\r\r\r\r\r\r
 \r\r\r\r\r\r\r\r\r\r\r
-\r\r\r\r\r\r\r
-\r\r\r\r\r\r\r\r
-\r\r\r\r\r\r\r\r\r\r
-\r\r\r\r
-\r\r\r\r\r
-\r\r\r\r\r\r\r\r\r
-\r\r\r\r
-\r\r\r\r\r\r\r\r
 \r\r\r\r\r\r\r\r\r\r\r\r\r
-\r\r\r\r\r\r\r
 \r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
-\r\r\r\r
-\f\v\v\v\v\v
 \v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v
 \r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
 \r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
-\r\r\r\r
-\r\r\r\r
-\r\r\r\r\r\r\r\r\r\r
 \r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
-\r\r\r\r\r\r\r\r
 \r\r\r\r\r\r\r\r\r\r\r
-\r\r\r\r
-\r\r\r\r\r\r
 \r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
-\r\r\r\r\r\r\r
-\n\f\n\f\f
-\r\r\r\r
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
-\r\r\r\r
-\r\r\r\r\r
-\r\r\r\r\r\r\r\r
-\r\r\r\r\r\r\r\r\r
-\r\r\r\r\r\r
-\r\r\r\r
-\r\r\r\r\r\r\r\r
-\r\r\r\r\r\r\r
-\r\r\r\r
 \r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
 unknown dl-error
 /lib
@@ -4470,7 +4387,6 @@ n_parameters == 0 || parameters != NULL
 %s: property '%s' of object class '%s' is not writable
 %s: construct property '%s' for type '%s' cannot be set twice
 %s: property '%s' for type '%s' cannot be set twice
-%s: %s
 %s: construct property "%s" for object '%s' can't be set after construction
 %s: property '%s' of object class '%s' is not readable
 G_IS_VALUE (value)
@@ -4796,7 +4712,6 @@ param_types != NULL
 (return_type & G_SIGNAL_TYPE_STATIC_SCOPE) == 0
 accumulator == NULL
 accu_data == NULL
-_-|> <.:^
 interface
 class ancestry
 gsignal.c:1612: signal "%s" already exists in the '%s' %s
@@ -4824,7 +4739,6 @@ gsignal.c:2041
 gsignal.c:2110
 gsignal.c:2113
 gsignal.c:2143
-%s: %s
 gsignal.c:2199
 closure != NULL
 gsignal.c:2274
@@ -4950,7 +4864,6 @@ node->data->common.value_table != NULL
 node->plugin != NULL
 g_type_plugin_*
 %s(%p)%s'%s'
-%s()%s'%s'
 NODE_REFCOUNT (node) > 0
 node->is_instantiatable
 num_entries < MAX_N_INTERFACES
@@ -5181,7 +5094,6 @@ G_TYPE_CHECK_INSTANCE (instance)
 g_value_type_compatible (G_TYPE_FROM_INSTANCE (instance), G_VALUE_TYPE (value))
 strcmp (value_table->collect_format, "p") == 0
 gvalue.c:365
-%s: %s
 value != NULL && G_VALUE_TYPE(value) == 0
 gvalue.c:429
 transform_func != NULL
@@ -5222,7 +5134,6 @@ g_value_array_get_nth
 %llu
 TRUE
 FALSE
-%s | %u
 Cvalue location for '%s' passed as NULL
 gchar
 type == G_TYPE_CHAR
@@ -5272,9 +5183,6 @@ G_VALUE_HOLDS_GTYPE (value)
 G_VALUE_HOLDS_VARIANT (value)
 G_IS_VALUE (value)
 NULL
-"%s"
-((%s) %s)
-((%s*) %p)
 ((gpointer) %p)
 name != NULL
 g_type_from_name (name) == 0
@@ -5422,14 +5330,8 @@ g_bytes_new_with_free_func
 g_bytes_new
 0123456789abcdef
 D7q/;M
-}\fUo
-+Yo,
-\ng))
-&\8!
 Ts\ne
-* qW
 LwH'
-L*~e
 Dlchecksum != NULL
 GLib
 gchecksum.c
@@ -5467,8 +5369,6 @@ G_FILENAME_ENCODING
 @locale
 G_BROKEN_FILENAMES
 opsysstring != NULL
-?  (
-,????*(??
 ??????????8  ,  8??????????????????????????    ? ??????????????????????????   ? 0123456789ABCDEFmask == UNSAFE_ALL || mask == UNSAFE_ALLOW_PLUS || mask == UNSAFE_PATH || mask == UNSAFE_HOST || mask == UNSAFE_SLASHES
 file://
 out - result <= len
@@ -5623,7 +5523,6 @@ leap == GREGORIAN_LEAP(the_year)
 %+03d
 :%02d
 width <= 10
-i <= 10
 *format == '%'
 %d-%02d-%02d
 %02d:%02d
@@ -5662,7 +5561,6 @@ variable != NULL
 GLib
 strchr (variable, '=') == NULL
 value != NULL
-%s=%s
 g_unsetenv
 g_setenv
 g_getenv
@@ -5827,8 +5725,6 @@ key_file->start_group != NULL
 Encoding
 UTF-8
 Key file contains unsupported encoding '%s'
-[%s]\n
-%s=%s\n
 group_name != NULL
 (null)
 Key file does not have group '%s'
@@ -5845,7 +5741,6 @@ Key file contains key '%s' which has a value that cannot be interpreted.
 string != NULL
 list != NULL || length == 0
 locale != NULL
-%s[%s]
 length != 0
 list != NULL
 Key file contains key '%s' in group '%s' which has a value that cannot be interpreted.
@@ -5867,7 +5762,6 @@ Value '%s' cannot be interpreted as a float number.
 true
 false
 Value '%s' cannot be interpreted as a boolean.
-#%s%s
 filename != NULL
 error == NULL || *error == NULL
 contents != NULL
@@ -5933,7 +5827,6 @@ g_key_file_clear
 help
 Supported debug values:
  all help\n
-:;, \t
 error
 critical
 warning
@@ -6133,7 +6026,6 @@ Odd character '%s', expected an open quote mark after the equals sign when givin
 '%s' is not a valid character following the close element name '%s'; the allowed character is '>'
 Element '%s' was closed, no element is currently open
 Element '%s' was closed, but the currently open element is '%s'
-<!--
 <![CDATA[
 <!DOCTYPE
 Document was empty or contained only whitespace
@@ -6149,11 +6041,8 @@ Document ended unexpectedly inside the close tag for element '%s'
 Document ended unexpectedly inside a comment or processing instruction
 context->awaiting_pop
 &amp;
-&lt;
-&gt;
 &apos;
 &quot;
-&#x%x;
 false
 true
 element '%s' requires attribute '%s'
@@ -6228,12 +6117,10 @@ log_level != 0
 pattern != NULL
 ~log_level & G_LOG_LEVEL_ERROR
 (NULL) message
-\n** 
 (process:
 \u%04x
 G_MESSAGES_DEBUG
 (process:%lu): 
-(%s:%lu): 
 format != NULL
 g_printerr
 g_print
@@ -6447,13 +6334,11 @@ g_match_info_next
 g_match_info_ref
 g_match_info_get_string
 g_match_info_get_regex
- \t\r\n
 abcdefghijklmnopqrstuvwxyz_ABCDEFGHIJKLMNOPQRSTUVWXYZ
 abcdefghijklmnopqrstuvwxyz_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
 scanner != NULL
 GLib
 <memory>
-%s:%d: 
 error: 
 format != NULL
 symbol != NULL
@@ -6466,8 +6351,6 @@ character '%c'
 character '\%o'
 (unknown) token <%d>
 invalid 
-%s%s '%s'
-%s%s
 scanner: unexpected end of file
 scanner: unterminated string constant
 scanner: unterminated comment
@@ -6498,7 +6381,6 @@ single-line
 multi-line
 failure around %s%s%s
 unexpected %s%s%s
-%s%s%s
 unexpected %s, expected %s%s%s
 %s, expected %s%s%s
 ch == 0 && token != G_TOKEN_NONE
@@ -6562,7 +6444,6 @@ str != NULL
 string != NULL
 s1 != NULL
 s2 != NULL
-_-|> <.
 valid_chars != NULL
 source != NULL
 g_strcompress: trailing \
@@ -6613,7 +6494,6 @@ len == 0 || val != NULL
 pos <= string->len
 unescaped != NULL
 val != NULL
-pos >= 0
 pos + len <= string->len
 format != NULL
 g_string_append_vprintf
@@ -6658,18 +6538,13 @@ msg != NULL
 gtestutils.c
 GLib
 lbuffer->data->len == 0
-{*LOG(%s)
-:{%s}
 %s%ld
 %s%.16g
-:LOG*}\n
 # random seed: %s\n
 GTest: random seed: %s\n
 # Start of %s tests\n
 # End of %s tests\n
-1..%d\n
 not ok
-%s %d %s
  # TODO %s\n
  # SKIP %s\n
 FAIL
@@ -6679,10 +6554,7 @@ Bail out!\n
 (MINPERF:%s)\n
 # max perf: %s\n
 (MAXPERF:%s)\n
-# %s\n
-(MSG: %s)\n
 GTest: run: %s\n
-%s: 
 --g-fatal-warnings
 --keep-going
 --debug-log
@@ -6714,7 +6586,6 @@ random numbers are not GRand-2.2 compatible, seeds may be broken (check $G_RANDO
 /.libs
 G_TEST_SRCDIR
 G_TEST_BUILDDIR
- \t\v\r\n\f
 R02S
 Unknown or invalid random seed: %s
 test_uri_base != NULL
@@ -6754,7 +6625,6 @@ INFO
 DEBUG
 code should not be reached
 ERROR:
-**\n%s\n
 assertion failed: (
 assertion failed (%s): (%lli %s %lli)
 assertion failed (%s): (0x%08llx %s 0x%08llx)
@@ -6778,7 +6648,6 @@ GTest: subprocess: %s\n
 g_test_trap_subprocess() failed: %s\n
 failed to match
 contains invalid match
-%s [%d]
 g_test_trap_ assertion with no trapped test
 child process (%s) failed unexpectedly
 child process (%s) did not fail as expected
@@ -6877,7 +6746,6 @@ init_zone_from_iana_info
 g_time_zone_ref
 g_time_zone_unref
 (C)<<(R)>> 1/4  1/2  3/4 AEOEssaeoeIJij'nLJLjljNJNjnjDZDzdz--,,.....`````!!???!C=RsEURa/ca/sc/oc/uNoTEL(TM)Ohm 1/3  2/3  1/5  2/5  3/5  4/5  1/6  5/6  1/8  3/8  5/8  7/8 IIIIIIVVIVIIVIIIIXXIXIIiiiiiivviviiviiiixxixii<--><-><==><=>>=<<<>>>NULSOHSTXETXEOTENQACKBELBSHTLFVTFFCRSIDLEDC1DC2DC3DC4NAKSYNETBCANEMSUBESCFSGSUSSPDELNL(1)(2)(3)(4)(5)(6)(7)(8)(9)(10)(11)(12)(13)(14)(15)(16)(17)(18)(19)(20)1.2.3.4.5.6.7.8.9.10.11.12.13.14.15.16.17.18.19.20.(a)(b)(c)(d)(e)(f)(g)(h)(i)(j)(k)(l)(m)(n)(o)(p)(q)(r)(s)(t)(u)(v)(w)(x)(y)(z)(A)(B)(D)(E)(F)(G)(H)(I)(J)(K)(L)(M)(N)(O)(P)(Q)(S)(T)(U)(V)(W)(X)(Y)(Z)(0)::====(21)(22)(23)(24)(25)(26)(27)(28)(29)(30)(31)(32)(33)(34)(35)(36)(37)(38)(39)(40)(41)(42)(43)(44)(45)(46)(47)(48)(49)(50)hPadaAUbaroVpcpAnAuAmAkAMBGBcalkcalpFnFuFugmgkgHzkHzMHzGHzTHzulmldlklfmnmummmcmkmmm^2cm^2km^2mm^3cm^3km^3m/sm/s^2kPaMPaGParadrad/srad/s^2psnsusmspVnVuVmVkVMVpWnWuWmWkWMWa.m.BqcccdC/kgCo.dBGyhaHPinKKKMktlnloglxmbmilmolPHp.m.PPMPRSvWbfffiflfflstAAUEaaueYoO'TsChShYuYatschshyuyayoo'G'g'hehuhihEh'ah'uh'ih'Eh'oh'eaholelulilalEl'al'ul'il'El'ol'ealWaHeHuHiHaHEH'aH'uH'iH'EH'oH'eaHoHWamemamEm'am'um'im'Em'om'eamWa`se`su`si`sa`sE`s'a`s'u`s'i`s'E`s'o`s'ea`so`sWarerWarurirEr'ar'ur'ir'Er'or'eaxexuxaxEx'ax'ux'ix'Ex'ox'eaxoxWaqequqiqaqEq'aq'uq'iq'Eq'oq'eaqoqWeqWiqWaqWEqW'aqW'uqW'iqW'EqW'oqW'eaQeQuQiQaQEQ'aQ'uQ'iQ'EQ'oQ'eaQoQWeQWiQWaQWEQW'aQW'uQW'iQW'EQW'oQW'eabebubibEb'ab'ub'ib'Eb'ob'eabobWavevuvavEv'av'uv'iv'Ev'ov'eavovWatetutitatEt'at'ut'it'Et'ot'eatotWacecucicEc'ac'uc'ic'Ec'oc'eacocWa`he`hu`hi`ha`hE`h'a`h'u`h'i`h'E`h'o`h'ea`ho`hWe`hWi`hWa`hWEhW'ahW'uhW'ihW'EhW'ohW'eanenuninanEn'an'un'in'En'on'eanonWaNeNuNiNaN'aN'uN'iN'EN'oN'eaNWakekukikakEk'ak'uk'ik'Ek'ok'eakokWekWikWakWEkW'akW'ukW'ikW'EkW'okW'eaKeKuKiKaKEK'aK'uK'iK'EK'oK'eaKoKWeKWiKWaKWEKW'aKW'uKW'iKW'EKW'oKW'eawewWawuwiwawEw'aw'uw'iw'Ew'ow'eawo`e`u`i`a`E`I`ozezizazEz'az'uz'iz'Ez'oz'eazozWaZeZuZiZaZEZ'aZ'uZ'iZ'EZ'oZ'eaZoZWayeyiyEy'ay'uy'iy'Ey'oy'eadedudidEd'ad'ud'id'Ed'od'eadodWaDeDuDiDaD'aD'uD'iD'ED'oD'eaDoDWajejujijajEj'aj'uj'ij'Ej'oj'eajojWagegugigagEg'ag'ug'ig'Eg'og'eagogWegWigWagWEgW'agW'ugW'igW'EgW'ogW'eaGeGuGiGaGEG'aG'uG'iG'EG'oG'eaGoGWaTeTuTiTaT'aT'uT'iT'ET'oT'eaToTWaCeCuCiCaCEC'aC'uC'iC'EC'oC'eaCWaPePuPEP'aP'uP'iP'EP'oP'eaPoPWaSeSuSiSaSES'aS'uS'iS'ES'oS'eaSo`SWa`Se`Su`Si`Sa`SE`S'a`S'u`S'i`S'E`S'o`S'ea`SofefufafEf'af'uf'if'Ef'of'eafofWapepupipapEp'ap'up'ip'Ep'op'eapopWamYarYafYa-::-`?:|:`1`2`3`4`5`6`7`8`9`10`20`30`40`50`60`70`80`90`100`10000E^EEaEe^eEoEuEYEYIZHZGHZghKHTSCHYUYAzhzghkhA'E'I'O:U'U:a'e'i'o:u'u:O"o"U"u"ddDjGjKjdjgjkjYeUeOewwwjjj
-"&)-159=A
 aa@saaho
 aa_ER
 aa_ET
@@ -6893,201 +6761,67 @@ ur_PK
 str != NULL
 GLib
 g_str_to_ascii
-\r\r\r\r\r\r\r\r\r\r
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t
-\t\t\t\t
-\t\t\t\t
 \f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\t
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
-\f\f\f\f\f\v\v\t
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f
 \f\f\f\f\f\f\f\f\f\f\f
 \f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\r\r\r\r\r\r\r\r\r\r
-\f\f\f\f\f\f\f
-\f\f\f\f\f\f
-\f\f\f\f
-\r\r\r\r\r\r\r\r\r\r
 \f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f
 \f\f\f\f\f\f\f\f\f\f\f
-\r\r\r\r\r\r\r\r\r\r
-\f\f\f\f\f\f\f\f\f
-\f\f\f\f
-\f\f\f\f\f\f\f\f\f
-\f\f\f\f\f
 \f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\n
 \n\n\n\f\f\f\f\f\f\f\f\n\n\n\n\f\n\n
-\f\f\f\f\f\f\f
-\r\r\r\r\r\r\r\r\r\r
-\n\n\n\f\f\f\f
-\r\r\r\r\r\r\r\r\r\r
-\n\n\n\f\f
 \r\r\r\r\r\r\r\r\r\r\f\f
-\n\n\n\f\f\f\f\f
-\r\r\r\r\r\r\r\r\r\r
-\n\f\n\f\f\f\f
-\r\r\r\r\r\r\r\r\r\r
-\n\n\f\n\n
-\n\n\n\f
-\r\r\r\r\r\r\r\r\r\r
-\f\n\n\n
-\f\f\f\n\n\n\n
-\f\f\f\f
-\r\r\r\r\r\r\r\r\r\r
-\n\f\n\n\n\n\n
-\n\n\f\f
-\r\r\r\r\r\r\r\r\r\r
-\n\n\n\f\f\f\f
-\n\n\n\f
-\r\r\r\r\r\r\r\r\r\r
-\n\n\n\f\f\f
-\n\n\n\n\n\n\n\n
-\r\r\r\r\r\r\r\r\r\r
-\f\f\f\f\f\f\f
-\f\f\f\f\f\f\f\f
-\r\r\r\r\r\r\r\r\r\r
-\f\f\f\f\f\f
-\f\f\f\f\f\f
-\r\r\r\r\r\r\r\r\r\r
-\r\r\r\r\r\r\r\r\r\r
 \f\f\f\f\f\f\f\f\f\f\f\f\f\f\n\f\f\f\f\f
 \f\f\f\f\f\f\f\f\f\f\f
 \f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f
 \n\n\f\f\f\f\n\f\f\f\f\f\f\n\f\f\n\n\f\f
-\r\r\r\r\r\r\r\r\r\r
-\n\n\f\f
-\n\n\n\n\n\n\n
-\f\f\f\f
 \f\n\n\f\f\n\n\n\n\n\n\f
 \n\r\r\r\r\r\r\r\r\r\r\n\n\n\f
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \f\f\n\f\f\f\f\f\f\f\n\n\n\n\n\n\n\n\f\n\n\f\f\f\f\f\f\f\f\f\f\f
-\r\r\r\r\r\r\r\r\r\r
-\r\r\r\r\r\r\r\r\r\r
 \f\f\f\n\n\n\n\f\f\n\n\n
 \n\n\f\n\n\n\n\n\n\f\f\f
-\r\r\r\r\r\r\r\r\r\r
 \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
-\r\r\r\r\r\r\r\r\r\r
-\f\f\n\n\f
-\n\f\n\f\f\f\f\f\f\f
 \f\n\f\n\n\f\f\f\f\f\f\f\f\n\n\n\n\n\n\f\f\f\f\f\f\f\f\f\f
 \f\r\r\r\r\r\r\r\r\r\r
-\r\r\r\r\r\r\r\r\r\r
 \f\f\f\f\f\f\f\f\f\f\f\f\f\f\v
-\f\f\f\f\n
 \f\n\f\f\f\f\f\n\f\n\n\n\n\n\f\n\n
-\r\r\r\r\r\r\r\r\r\r
-\f\f\f\f\f\f\f\f\f
 \n\f\f\f\f\n\n\f\f\n\f\f\f
-\r\r\r\r\r\r\r\r\r\r
 \f\n\f\f\n\n\n\f\n\f\f\f\n\n
 \n\n\n\n\n\n\n\n\f\f\f\f\f\f\f\f\n\n\f\f
-\r\r\r\r\r\r\r\r\r\r
-\r\r\r\r\r\r\r\r\r\r
 \f\f\f\f\f\f\f\f\f\f\f\f\f\n\f\f\f\f\f\f\f
 \f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f
-\f\f\f\f\t
-\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t
-\t\t\t\t
-\t\t\t\t
-\t\t\t\t
-\t\t\t\t\t
-\t\t\t\t
 \f\f\f\f\f\f\f\f\f\f\f\f\f\v\v\v\v\f\v\v\v\f\f\f\f\f\f\f\f\f\f\f\f
-\t\t\t\t\t
-\t\t\t\t
-\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
-\t\t\t\t
-\f\f\f\t
 \f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f
-\f\f\f\f\n\n
-\r\r\r\r\r\r\r\r\r\r
-\f\v\v\v
-\f\f\f\f\f\f\f\f\f\f
-\t\t\t\t
-\n\n\f\f\n
 \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\f
-\r\r\r\r\r\r\r\r\r\r
 \f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f
-\r\r\r\r\r\r\r\r\r\r
-\f\f\f\f\f\f\f\f
 \f\f\f\f\f\f\f\f\f\f\f\n\n
-\f\f\f\n
 \f\n\n\f\f\f\f\n\n\f\n\n\n\n
-\r\r\r\r\r\r\r\r\r\r
-\r\r\r\r\r\r\r\r\r\r
 \f\f\f\f\f\f\n\n\f\f\n\n\f\f
-\r\r\r\r\r\r\r\r\r\r
-\n\f\f\n\n
-\n\n\f\n\n\f\n\n
-\r\r\r\r\r\r\r\r\r\r
 \f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f
 \f\f\f\f\f\f\f\f\f\f\f\f\f\f
-\r\r\r\r\r\r\r\r\r\r
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
-\f\f\f\f\f
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
-\r\r\r\r\r\r\r\r\r\r
-\f\f\f\f
 \f\f\f\f\f\f\f\f\f\f\f\f\f\f\f
-\r\r\r\r\r\r\r\r\r\r
-\f\f\f\n
 \n\n\n\f\f\f\f\n\n\f\f
-\r\r\r\r\r\r\r\r\r\r
 \f\f\f\f\f\n\f\f\f\f\f\f\f\f
-\r\r\r\r\r\r\r\r\r\r
 \n\n\n\f\f\f\f\f\f\f\f\f\n\n
-\r\r\r\r\r\r\r\r\r\r
 \n\n\n\f\f\f\n\n\f\n\f\f
 \f\n\n\n\f\f\f\f\f\f\f\f
-\r\r\r\r\r\r\r\r\r\r
-\n\n\f\n\n\n\n
-\f\f\f\f\f\f\f
-\f\f\f\f\f
 \n\n\n\f\f\f\f\f\f\n\f\n\n\n\n\f\f\n\f\f
-\r\r\r\r\r\r\r\r\r\r
-\n\n\n\f\f\f\f
-\n\n\n\n\f\f\n\f\f
 \n\n\n\f\f\f\f\f\f\f\f\n\n\f\n\f\f
-\r\r\r\r\r\r\r\r\r\r
 \f\n\f\n\n\f\f\f\f\f\f\n\f
-\r\r\r\r\r\r\r\r\r\r
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
-\r\r\r\r\r\r\r\r\r\r
-\r\r\r\r\r\r\r\r\r\r
-\f\f\f\f\f
-\f\f\f\f\f\f\f
-\r\r\r\r\r\r\r\r\r\r
 \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
-\f\f\f\f
-\n\n\f\f\f
-\n\n\n\n\n\n
-\f\f\f\f\f\f\f\f
-\f\f\f\f\f\f\f
-\f\f\f\f
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
-\t\t\t\t
-\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
-\t\t\t\t
-\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t
-\t\t\t\t
-\t\t\t\t\t
-\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
@@ -7100,18 +6834,9 @@ g_str_to_ascii
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r
-\f\f\f\f\f\f\f
 \f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f
-<<<<<<< @
-<<<<<
-X\`d
-<<< hhlph$
 (Ph$ $Phh$(
-$ hh@
 48<@DHLPTX\`dh
-====
-========
-=====
 ===========
 """"""""""""""=""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""=="""
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%==============BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB=====ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ==ZZZZZZZZZZZZZZZ=____________________________==_=================================================================
@@ -7119,45 +6844,24 @@ $ hh@
 \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
 \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
 \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
-========
-====
-=====
-====
-====
-=======
-=======
 ===========
 ===============
 ===============
-========
-====
 ==========##=######===###=####===##=#=##===##===###===############====#####===###=####==#======#==============#####################=====$$$$=$$$$$$$$=$$$=$$$$$$$$$$$$$$$$$$$$$$$=$$$$$$$$$$$$$$$$===$$$$$$$$=$$$=$$$$=======$$=$$======$$$$==$$$$$$$$$$========$$$$$$$$=
-=======
-=======
 ==============
-========
-========
 ==!!=!!!!!!!!!!!!!!!!!!===!!!!!!!!!!!!!!!!!!!!!!!!=!!!!!!!!!=!==!!!!!!!===!====!!!!!!=!=!!!!!!!!======!!!!!!!!!!==!!!============&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&====
 &&&&&&&&&&&&&&&&&&&&&&&&&&&&=====================================
-======
 ================================''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''=''''''''''''''''''''''''''''''''''''===='''''''''''''''''''''''''''''''''''''''=''''''''''''''''''''''''''''''''''''='''''''''''''''='''''''
 ''=====================================
 \f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f=\f=====\f==\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f\f
-\f\f\f\f
 \v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v=\v\v\v\v==\v\v\v\v\v\v\v=\v=\v\v\v\v==\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v=\v\v\v\v==\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v=\v\v\v\v==\v\v\v\v\v\v\v=\v=\v\v\v\v==\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v=\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v=\v\v\v\v==\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v==\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v===\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v\v======
 ===========((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((
 ===                                                                           
            =======*************=*******===========+++++++++++++++++++++
 =========,,,,,,,,,,,,,,,,,,,,============-------------=---=--============
-======
-======
-======
-========
 =====((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((==========0000000000000000000000000000000=000000000000====000000000000====0===000000000000444444444444444444444444444444==44444===========66666666666666666666666666666666666666666666====66666666666666666666666666======66666666666===66
 7777777777777777777777777777==77[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[=[[[[[[[[[[[[[[[[[[[[[[[[[[[[[==[[[[[[[[[[[======[[[[[[[[[[======[[[[[[[[[[[[[[==
 =================================================================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>====>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>===FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]========]]]]DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD===DDDDDDDDDDDDDDD===DDDIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII================================================================FFFFFFFF========
-======
-======
 str != NULL
 GLib
 yyyZhniZbarAnmrAgneBopoBrehCtpoClryCtrsDaveDihtEroeGhtoGkerGrjuGuruGinaHgnaHrbeHariHadnKanaKrmhKooaLntaLmylMgnoMrmyMmagOlatIayrOrnuRhniScrySlmaTuleTaahTiahTtbiTsnaCiiiYglgTonaHdhuBbgaTiarBtrpCbmiLamsOwahSbniLelaTragUulaTiguBgalGgnfTolySoepXrahKzzzZilaBxusXxnhPgahPookNilaKcpeLgnjRdnuSruaSmahCkclOiiaViraCicyLidyLtsvAumaBpygEimrAilhPitrPavaJihtKusiLietMbraShkrOrmaSanaLtvaTktaBharBdnaMmkaCcreMoreMdrlPdrhSaroSrkaTssaBbhgAlpuDablEnarGjohKdniSaniLjhaMunaMdneMidoMoorMtabNbraNmrePgnmHmlaPcuaPplhPddiShriTaraWg_utf8_casefold
@@ -7184,151 +6888,51 @@ g_utf16_to_utf8
 g_utf8_to_ucs4_fast
 g_utf8_strlen
 &&&&&&&&&&&&&&&&&&&&&&&&&&&
-\v\v\v\v
-\v\v\n\v
                                                                         !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-\n\n\n\n
-\n\n\n\n\n
-\n\n\n\n\n\n\n
-\n\n\n\n
-\n\n\n\n\n\n\n\n
-\n\n\n\n
-\f\f\n\n\n
 %%%%%%%%%%%%%%%%
-\n\n\n\n\n
 "###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################"###########################
                        
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-&&&&&&&&&&
 &&&&&&&&&&&&&
-&&&&&
-&&&&&&&&&&
-%%%%%%%%%%
-\n\n\n\n\n\n\n\n
-\n\n\n\n\n\n
-\n\n\n\n\n\n\n
-\n\n\n\n
-\n\n\n\n
-\n\n\n\n\n
 ''''''''''''''''''''''''''
 #'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'.
 #'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'/
-#'#'#'0
 ',',',',',',',',',',',',',',',',',',',',',',',',','#'#'c
 ,',',',','''''''}
 ,',',',',',',',',',','''''
 ,',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',','''''
-,',','
 ,',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',','
 ,',',',',',',',',',','
 ,',',',',',',',',',',',',',',',',',','
 ,',',',',',',',',',',',',',',','
-,',',',','
 ,',',',',',','#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'#'
 ,',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',',','
-\n\v\f\r
 kkkk
 zzzz
-{\tt 
-K\t\v!
-*\t !
-\n\t-!
-@\t0!
-{\t;!
-r\t>!
-\f\tF!
->\tG!
-@\tH!
-{\tI!
-\f\to!
-{\tq!
-l\tu!
-\t *2
-! .2
-' /2
-- 02
 3 12
 9 22
-? 32
 E 42
 K 52
 Q 62
 W 72
-] 82
 c 92
-i :2
-o ;2
-u <2
-{ =2
-\v!t2
- !w2
-'!x2
-.!y2
 5!z2
-<!{2
-C!|2
-J!}2
-Z!~2
-\n%%3
-!%'3
-+%(3
-2%)3
-9%*3
-C%+3
-M%,3
-`%-3
-m%.3
-}%/3
-,&<3
-<&=3
-I&>3
-Y&?3
-f&@3
 m&A3
-}&B3
-\r'N3
-''P3
 1'Q3
-;'R3
 H'S3
 O'T3
-\'U3
 l'V3
 s'W3
-\n(o3
- (s3
-#(t3
-&(u3
-*(v3
--(w3
 0(x3
 3(y3
 7(z3
-;({3
->(|3
-E(}3
-L(~3
 VIII
 viii
-(10)
-(11)
-(12)
-(13)
-(14)
-(15)
-(16)
-(17)
-(18)
-(19)
-(20)
 kcal
-a.m.
-p.m.
 p0q0
 s0t0
 v0w0
 y0z0
-|0}0
 Could not register atexit() function: %s
 GLib
 program != NULL
@@ -7410,8 +7014,6 @@ n_children == 0 || children != NULL
 g_variant_is_of_type (children[i], child_type)
 key != NULL && value != NULL
 !g_variant_is_container (key)
-a{s*}
-a{o*}
 g_variant_is_of_type (dictionary, G_VARIANT_TYPE ("a{s*}")) || g_variant_is_of_type (dictionary, G_VARIANT_TYPE ("a{o*}"))
 expected_type == NULL || value == NULL || g_variant_is_of_type (value, expected_type)
 g_variant_is_of_type (value, G_VARIANT_TYPE_ARRAY)
@@ -7435,11 +7037,8 @@ g_variant_is_of_type (value, G_VARIANT_TYPE_STRING_ARRAY)
 g_variant_is_of_type (value, G_VARIANT_TYPE_OBJECT_PATH_ARRAY)
 g_variant_is_of_type (value, G_VARIANT_TYPE_BYTESTRING)
 g_variant_is_of_type (value, G_VARIANT_TYPE_BYTESTRING_ARRAY)
-@%s 
 nothing
 just 
-b"%s"
-b'%s'
 true
 false
 u%04x
@@ -7455,7 +7054,6 @@ int64
 uint64 
 %llu
 objectpath 
-'%s'
 signature 
 !g_variant_is_container (value)
 one != NULL && two != NULL
@@ -7476,7 +7074,6 @@ GVSB(builder)->offset < GVSB(builder)->max_items
 GVSB(builder)->parent != NULL
 GVSB(builder)->offset >= GVSB(builder)->min_items
 !GVSB(builder)->uniform_item_types || GVSB(builder)->prev_item_type != NULL || g_variant_type_is_definite (GVSB(builder)->type)
-{sv}
 is_valid_dict (dict)
 key != NULL
 a{sv}
@@ -7496,7 +7093,6 @@ g_variant_new: format string '?' expects basic-typed GVariant, but received valu
 g_variant_new: format string 'r' expects tuple-typed GVariant, but received value has type '%s'
 **str == '(' || **str == '{'
 **str == '{'
-{?*}
 valid_format_string (format_string, TRUE, NULL) && format_string[0] != '?' && format_string[0] != '@' && format_string[0] != '*' && format_string[0] != 'r'
 valid_format_string (format_string, !endptr, NULL)
 app != NULL
@@ -7836,20 +7432,12 @@ punct
 space
 word
 xdigit
-\P{Nd}
-\p{Nd}
 \P{Xsp}
 \p{Xsp}
 \P{Xwd}
 \p{Xwd}
-\p{L}
-\p{Ll}
-\p{Lu}
 \p{Xan}
 \p{Xps}
-\P{L}
-\P{Ll}
-\P{Lu}
 \P{Xan}
 \P{Xps}
 no error
@@ -8196,7 +7784,6 @@ s > dest
 gshell.c
 Unmatched quotation mark in command line or other shell-quoted text
 unquoted_string != NULL
-'\''
 quoted_string != NULL
 error == NULL || *error != NULL
 Text ended just after a '\' character. (The text was '%s')
@@ -8213,9 +7800,7 @@ CHARSETALIASDIR
 /home/buildbot/buildslave/pango_linux/build/glib-2.42.0/lib32/lib
 %50s %50s
 ASCII
-\t\n\v\f\r
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
-\t\n\v\f\r
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
 crtstuff.c
 __CTOR_LIST__

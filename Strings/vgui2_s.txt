@@ -596,7 +596,6 @@ SDL_GetJoystickNameForID
 SDL_QuitSubSystem
 DISPLAY
 %x:%x.%x "%x" "%x" "%x"
-%s %s
 GL_NVX_gpu_memory_info
 GL_ATI_meminfo
 GetWin32Stats
@@ -877,7 +876,6 @@ spacing
 [%s] unknown layout command '%s' (valid values 'region', 'place')\n
 [%s] unexpected parameter for width="%s" - must be either a number, or "max"\n
 [%s] unexpected parameter for height="%s" - must be either a number, or "max"\n
-() ,+-
 fill
 fill4
 image
@@ -979,7 +977,6 @@ m_vecHashBuckets
 m_memNodes
 m_bitsMigratedBuckets
 m_StyleSet
-Key( i )
 10CUtlString
 N4vgui16layoutcmd_base_tE
 11KeyValuesAD
@@ -1030,7 +1027,6 @@ HKEY_CURRENT_USER\Software\Valve\Steam\Language
 s_pTable
 /data/src/vgui2/src/LocalizedStringTable.cpp
 reloading localization file %s\n
-}\r\n}\r\n
 "lang"\r\n{\r\n"Language" "English"\r\n"Tokens"\r\n{\r\n
 %s*.txt
 russian
@@ -1097,9 +1093,7 @@ N4vgui20INotificationManagerE
 ><Unknown font>
 !"Invalid scheme requested."
 /data/src/vgui2/src/Scheme.cpp
-%s%s-%s
 SKIN
-%s%c%s
 reloading layout file %s\n
 LayoutFileChanged
 LocalizationFileChanged
@@ -1203,7 +1197,6 @@ DialogConfigOverlay_%dx%d.vdf
 CONFIG
 m_fdShMemFDSender >= 0
 /tmp/steam_chrome_overlay_uid%d_spid%s
-num >= 0
 Adding custom font file: %s\n
 !"Implement me!"
 successfullyAdded
@@ -1219,7 +1212,6 @@ Closing socket.\n
 iRet > 0
 Pid that we should be watching for
 -pid
-top >= 0
 m_PaintStateStack[top].m_pPanel == pPanel
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 No font for char %u
@@ -1333,7 +1325,6 @@ Steam: An X Error occurred\n
 X Error
 XError
 XlibMessage
-%s:  %s\n
 Request Major code %d
 MajorCode
 XRequest
@@ -1456,7 +1447,6 @@ G/usr/share/applications
 !"CSystem::GetShortcutTarget"
 !"CSystem::ModifyShortcutTarget"
 dialogName && *dialogName
-%s_%d
 alCaptureDevice
 SOFTWARE\Valve\Steam
 m_pUserConfigData
@@ -1655,45 +1645,23 @@ Unable to find font named %s\n
 GetInts()
 resizeNumBits >= 0
 CVariableBitStringBase
-{}()'
-{}()':
- n;^
 Qkkbal
-3_L\n
->jm\r
 Zjz\v
 i]Wb
 9a&g
 MGiI
 wn>Jj
-#.zf
-+o*7
-Z* ,\t
 H$6t
-_~6\f
 52F*
-\t#jT$
-\n=G\\vp
-^6o}
-[-&LMb#{'
-)q\n>(
 w+OQvr
-\r}!b
 R1h58
 SKyu
-)\ZEo^m/
 ru&o
-i8P/\f_
-?(3w
 wXR\r
 H*0"ZOW
 {kHw
-)T`D
 !AxU
-l!;b\tF
-:1X:
 y9*O
-kM`~
 Vc0a
 dQy/
 lDa>
@@ -1745,7 +1713,6 @@ g_VecLoadedModules
 /data/src/tier1/interface.cpp
 CreateInterface
 g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
-%s/%s%s
 dlmopen %s failed: %s\n
 .cpl
 WORKAROUND_GdbSymbolLoadHook
@@ -1770,7 +1737,6 @@ ANDROID64
 X360
 m_errorIndex>=0
 /data/src/tier1/KeyValues.cpp
-"\t\t"
 %llu
 %lld
 %.18g
@@ -1782,7 +1748,6 @@ RGBA: %.2X %.2X %.2X %.2X
 KeyValues
 stackLevel >= 0 && stackLevel < m_errorIndex
 KeyValues Error: %s in file %s [offset: %d]\n
-*), 
  ReadToken overflow
 pKeyValuesTextParser
 RecursiveLoadFromBuffer:  got EOF instead of keyname
@@ -1808,7 +1773,6 @@ Lowered '%s' -> '%s'\n
 Breaking '%s' in '%s'\n
 Matched '%s' -> '%s'\n
 Unmatched %s\n
-m_Put >= 0
 /data/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 m_nAllocationCount >= 0
@@ -1919,21 +1883,12 @@ qdZRMHD@=;86421/.-+*)(''&%$$#""!!
 E=FZGrH
 QyReSOT5U
 YbZ6[
-]o^8_
 hxi(j
 vtw\nx
-\t \ny\n
-"p#*$
-%d&&'
-({)F*
--a.:/
 4i5U6B738%9
 B#C0D?EQFeG|H
 N9OaP
-Y=[~\
-]\t_R`
 Bx\r9
-!W,m]
 k\fC0123456789ABCDEF
 libpng warning: %s
 undefined
@@ -1944,7 +1899,6 @@ bad longjmp:
 Libpng jmp_buf still allocated
 Application jmp_buf size changed
 png_get_eXIf does not work; use png_get_eXIf_1
-\nF%u
 ?Out of memory
 internal error: array alloc
 internal error: array realloc
@@ -2101,9 +2055,7 @@ Row has too many bytes to allocate in memory
 3333
 DDDDUUUU
 00003333
-""""
 UUUU
-\f\f\f\f
 3333
 Invalid sCAL width
 Invalid sCAL height
@@ -2181,7 +2133,6 @@ zTXt
 png_set_filler is invalid for low bit depth gray output
 png_set_filler: inappropriate color type
 info change after png_start_read_image or png_read_update_info
- 0@P`p
 !1AQaq
 "2BRbr
 #3CScs
@@ -2192,11 +2143,6 @@ $4DTdt
 (8HXhx
 )9IYiy
 *:JZjz
-+;K[k{
-,<L\l|
--=M]m}
-.>N^n~
-/?O_o
 Write Error
 Call to NULL write function
 png_image_write_to_memory: PNG too big
@@ -2273,51 +2219,29 @@ Unrecognized equation type for pCAL chunk
 Can't write sCAL (buffer too small)
 Unrecognized unit type for pHYs chunk
 Invalid time specified for tIME chunk
- n;^
 Qkkbal
-3_L\n
->jm\r
 Zjz\v
 i]Wb
 9a&g
 MGiI
 wn>Jj
-#.zf
-+o*7
-Z* ,\t
 H$6t
-_~6\f
 52F*
-\t#jT$
-\n=G\\vp
-^6o}
-[-&LMb#{'
-)q\n>(
 w+OQvr
-\r}!b
 R1h58
 SKyu
-)\ZEo^m/
 ru&o
-i8P/\f_
-?(3w
 wXR\r
 H*0"ZOW
 {kHw
-)T`D
 !AxU
-l!;b\tF
-:1X:
 y9*O
-kM`~
 Vc0a
 dQy/
 lDa>
 7~8A
 C-Yn
 gqr<
-$/o|
-f-=v
 \rmj>zjZ
 l6qnk
 IiGM>nw
@@ -2325,35 +2249,23 @@ IiGM>nw
 i91k
 ewh/?y
 *5KS
-\f6~_'
-F*.f
 1wsHp
--\n\v\G=
 M8MF
 Pe6^
 #bML"
-`F(>\nq-q
 vQO+t
 [h1R
 XsBI
 hPU3
 ^oEZ_
-2%k_
 w3Xc
-[\n;g
 /P8i
 OZw3(?
-Z"0*
 fP~V
-D`T\f
-^GP~
-b;!l
-V_:X1:
 NJ2"v
 O*9y]
 fu`z
 /yQA
-&]|v
 incorrect header check
 unknown compression method
 invalid window size
@@ -2408,7 +2320,6 @@ On-disk registry has changed and is marked dirty - we're about to lose data.
 HKCU
 HKCR
 HKLM
-%s/%s/%s
 Unhandled eRegKeyRoot passed into HKeyGet
 pchRegPath
 HKEY_LOCAL_MACHINE
@@ -2783,10 +2694,6 @@ St8ios_base
 St13basic_istreamIwSt11char_traitsIwEE
 basic_string::erase
 %s: __pos (which is %zu) > this->size() (which is %zu)
-%.*Lf
-%m/%d/%y
-%H:%M
-%H:%M:%S
 St9time_base
 St10money_base
 St13messages_base
@@ -2853,7 +2760,6 @@ JArray
 auto:
 VTT for 
 construction vtable for 
--in-
 typeinfo for 
 typeinfo name for 
 typeinfo fn for 
@@ -2890,8 +2796,6 @@ global destructors keyed to
 complex 
 imaginary 
  __vector(
-(...
-...)
 std::allocator
 std::basic_string
 std::string

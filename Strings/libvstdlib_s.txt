@@ -564,12 +564,10 @@ Lowered '%s' -> '%s'\n
 Breaking '%s' in '%s'\n
 Matched '%s' -> '%s'\n
 Unmatched %s\n
-m_Put >= 0
 /data/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 m_nAllocationCount >= 0
 nSize != 0
-num >= 0
 nSize >= 0
 offset >= 0
 offset >= -m_Put && offset <= INT_MAX-m_Put
@@ -598,7 +596,6 @@ m_vecParms.IsValidIndex( nIndex )
 ----------------------------------------\n
 console
 Command line options:\n
-"%s" : %s\n
 iOption != m_listCommandLineOption.InvalidIndex()
 CommandLine
 m_strCmdLine
@@ -612,8 +609,6 @@ m_listCommandLineOption
 m_bInitialized
 !pToCopy || (pToCopy + num <= Base()) || (pToCopy >= (Base() + Count()) )
 Parameter file '%s' not found, skipping...\n
-%s%s
-%s=%s
 N11SteamStdLib12ICommandLineE
 N11SteamStdLib12CCommandLineE
 10CUtlVectorI10CUtlString10CUtlMemoryIS0_EE
@@ -678,9 +673,7 @@ Total number of strings %u, longest string size %u, avg size %u\n
 Total of %u buckets with %u hash collisions\n
 nTotal number of strings %u, longest string size %u, avg size %u\n
 Bucket size : count\n
-%u : %u\n
 Leaked KeyValues (%u):\n
-%s (%u)\n
 IsValidIndex( elem )
 /data/src/public/tier1/utlrbtree.h
 _IsValidIndex( y, unNodeSize, pMemBase )
@@ -865,8 +858,6 @@ pDest >= pBuffer && pDest <= pBuffer + destBufferSize
  Mbps
  Gbps
  bytes
-%i%s
-%%.%if%s
 %lld
 outsize >= ( inputbytes * 2 ) + 1
 outsize >= 1
@@ -895,12 +886,8 @@ checkLen >= 0
 argLen < 0x10000000u
 nDestSize == 0 || pDest != NULL
 &quot;
-&#039;
-&lt;
-&gt;
 &amp;
 &nbsp;
-<br>
 pDest
 szDomainName != nullptr
 nValue >= 0 && nValue <= 15
@@ -926,16 +913,13 @@ the
 steam://close
 steam://close/
 %llu
-<!--
 </script>
 script
-<li>
 Error decoding string1: %s
 Error decoding string2: %s
 components.Count() == 0
 parms.Count() == 0
 /data/src/public/tier1/utldict.h
-\/:"<>|?*
 &apos;
 &trade;
 &copy;
@@ -1041,22 +1025,13 @@ parms.Count() == 0
 &hellip;
 0123456789abcdef
 %$%a%b%V%U%c%Q%W%]%\%[%
-%4%,%
 %<%^%_%Z%T%i%f%`%P%l%g%h%d%e%Y%X%R%S%k%j%
-)"a"
-e"d" #!#
- &   ! 
 D(knN
 invalid input pointer
 /data/src/vstdlib/strtools_unicode.cpp
 in != out
 !(nStringCaseFlags & STRINGCASE_FLAG_TURKISH)
 count >= 0
-,/$`,
-?0,/1a,
--&B'-
-:/?#
-%.*s://%s
 gCURLUtils_hashTLDs
 m_vecHashBuckets
 m_memNodes
@@ -1468,10 +1443,6 @@ St8ios_base
 St13basic_istreamIwSt11char_traitsIwEE
 basic_string::erase
 %s: __pos (which is %zu) > this->size() (which is %zu)
-%.*Lf
-%m/%d/%y
-%H:%M
-%H:%M:%S
 St9time_base
 St10money_base
 St13messages_base
@@ -1538,7 +1509,6 @@ JArray
 auto:
 VTT for 
 construction vtable for 
--in-
 typeinfo for 
 typeinfo name for 
 typeinfo fn for 
@@ -1575,8 +1545,6 @@ global destructors keyed to
 complex 
 imaginary 
  __vector(
-(...
-...)
 std::allocator
 std::basic_string
 std::string

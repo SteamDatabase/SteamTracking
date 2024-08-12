@@ -446,11 +446,8 @@ Duplicate property %s in object
 %llu
 true
 false
-%s    
 0x%llx
-%s%s[%d]:\n
 %s%s[%d]: -> %s\n
-%s%s %s: \n
 %s%s %s: %s\n
 unimplemented
 result
@@ -567,7 +564,6 @@ steammessages_clientnotificationtypes.proto
 appid
 (\r"5\n$CClientNotificationCloudSyncConflict
 appid
-(\r"b\n
 CClientNotificationScreenshot
 screenshot_handle
 \n\vdescription
@@ -575,16 +571,13 @@ screenshot_handle
 (\t"H\n$CClientNotificationDownloadCompleted
 appid
 \n\tdlc_appid
-(\r"2\n
 CClientNotificationFriendInvite
 steamid
 "A\n%CClientNotificationFriendInviteRollup
 new_invite_count
-(\r"E\n
 CClientNotificationFriendInGame
 steamid
 \n\tgame_name
-(\t"2\n
 CClientNotificationFriendOnline
 steamid
 CClientNotificationAchievement
@@ -656,7 +649,6 @@ icon
 offline
 allowed_seconds
 played_seconds
-(\r"!\n
 CClientNotificationLoginRefresh"!\n
 CClientNotificationTimerExpired"b\n-CClientNotificationSteamInputActionSetChanged
 controller_index
@@ -870,11 +862,9 @@ steammessages_remoteplay.proto"H\n
 CDiscoveryPingRequest
 sequence
 packet_size_requested
-(\r"H\n
 CDiscoveryPingResponse
 sequence
 packet_size_received
-(\r"5\n
 CStreamingClientHandshakeInfo
 \n\fnetwork_test
 CClientHandshakeMsg
@@ -1067,7 +1057,6 @@ entries
 CInputLatencyTestMsg
 \n\ninput_mark
 color
-(\r"l\n
 CInputTouchFingerDownMsg
 \n\ninput_mark
 fingerid
@@ -1092,7 +1081,6 @@ CInputMouseWheelMsg
 .\n\tdirection
 .EStreamMouseWheelDirection
 amount
-1"M\n
 CInputMouseDownMsg
 \n\ninput_mark
 button
@@ -1104,7 +1092,6 @@ button
 CInputKeyDownMsg
 \n\ninput_mark
 scancode
-(\r"6\n
 CInputKeyUpMsg
 \n\ninput_mark
 scancode
@@ -1113,7 +1100,6 @@ scancode
 \n\ttext_utf8
 \n\fCSetTitleMsg
 text
-(\t"3\n
 CSetCaptureSizeMsg
 width
 height
@@ -1121,12 +1107,10 @@ height
 width
 height
 image
-(\f"E\n
 CSetFlashStateMsg
 flags
 count
 \n\ntimeout_ms
-(\r"<\n
 CShowCursorMsg
 \n\fx_normalized
 \n\fy_normalized
@@ -1141,7 +1125,6 @@ height
 hot_x
 hot_y
 image
-(\f"#\n
 CSetCursorScaleMsg
 scale
 CVideoDecoderInfoMsg
@@ -1188,14 +1171,12 @@ CSetTargetFramerateMsg
 reasons
 framerate_numerator
 framerate_denominator
-(\r"'\n
 CSetTargetBitrateMsg
 bitrate
 COverlayEnabledMsg
 enabled
 CSetGammaRampMsg
 \n\ngamma_ramp
-(\f"g\n
 CSetActivityMsg
 activity
 .EStreamActivity
@@ -1205,13 +1186,10 @@ gameid
 CSystemSuspendMsg"*\n
 CVirtualHereRequestMsg
 hostname
-(\t"5\n
 CVirtualHereReadyMsg
 licensed_device_count
-(\r"4\n
 CVirtualHereShareDeviceMsg
 device_address
-(\t"'\n
 CSetSpectatorModeMsg
 enabled
 "3\n\rCRemoteHIDMsg
@@ -1223,7 +1201,6 @@ revision
 creator
 CGetTouchConfigDataMsg
 appid
-(\r"h\n
 CSetTouchConfigDataMsg
 appid
 revision
@@ -1233,7 +1210,6 @@ creator
 CSaveTouchConfigLayoutMsg
 appid
 layout
-(\f"?\n
 CTouchActionSetActiveMsg
 appid
 \n\factionset_id
@@ -1246,7 +1222,6 @@ appid
 CGetTouchIconDataMsg
 appid
 icon
-(\t"A\n
 CSetTouchIconDataMsg
 appid
 icon
@@ -1266,7 +1241,6 @@ keyboard_enabled
 controller_enabled
 controller_slots
 \n\vavatar_hash
-(\f"3\n
 CSetInputTemporarilyDisabledMsg
 disabled
 CSetQualityOverrideMsg
@@ -1279,7 +1253,6 @@ controller_name
 reverse_diamond_button_layout
 CVRConnectionReady
 connect_params
-(\t"%\n
 CStreamDataLostMsg
 packets
 (\r"R\n\fCAudioFormat
@@ -1311,7 +1284,6 @@ client_bitrate
 link_bandwidth
 \n\vpacket_loss
 \n\nframe_size
-(\r"w\n
 CFrameStatAccumulatedValue
 )\n\tstat_type
 .EFrameAccumulatedStat
@@ -1333,7 +1305,6 @@ stddev_network_time_ms
 \n\ttest_data
 (\t"#\n\rCDebugDumpMsg
 \n\nscreenshot
-(\f"(\n
 CLogMsg
 type
 message
@@ -1936,7 +1907,6 @@ Broadcast.ApproveViewerRequest
 Broadcast.RejectViewerRequest
 Broadcast.InviteToWatch
 Broadcast.StopBroadcasting
-num >= 0
 CBroadcastController::OnViewerNeedsApproval
 CBroadcastController::OnViewerApprovalResult
 CBroadcastController::OnBroadcastMicrophoneStatus
@@ -2271,7 +2241,6 @@ MachineStorage.SetString
 MachineStorage.GetJSON
 MachineStorage.SetObject
 MachineStorage.DeleteKey
-%s\%s
 Value too long
 roaming
 25CSteamUIStorageController
@@ -2331,9 +2300,7 @@ m_vecRegisteredWriters
 %s overflow!\n
 m_TotalElements != InvalidIndex()
 /data/src/public/tier1/utllinkedlist.h
-%d%s
 %d:00
-%A %b %d
 DBG_STAT
 statvfs64: ret %d errno %d\n
   f_bsize : %lu\n
@@ -2345,18 +2312,15 @@ root
 /ubuntu12_64/disk-free 
 /tmp/disk-free.XXXXXX
 mkstemp errno %d\n
- >%s
  2>/dev/null
 Execute: %s\n
 disk-free command failed\n
 fopen tmpfile failed\n
-%d\n%d\n%d\n
 %d MB avail\n
 %d MB total space\n
 %d MB free space\n
 /proc/mounts
 /etc/mtab
-%s%c%s
 Invalid index %u
 m_listChangedFiles
 m_strDirectory
@@ -2385,7 +2349,6 @@ File change notification for %s but no file contents changed based on hash\n
 g_VecLoadedModules
 /data/src/tier1/interface.cpp
 g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
-%s/%s%s
 dlmopen %s failed: %s\n
 .cpl
 WORKAROUND_GdbSymbolLoadHook
@@ -2410,7 +2373,6 @@ ANDROID64
 X360
 m_errorIndex>=0
 /data/src/tier1/KeyValues.cpp
-"\t\t"
 %.18g
 KeyValues::RecursiveSaveToFile: TODO, missing code for TYPE_COLOR.\n
 can't convert uint64 to int32 (data loss)
@@ -2432,7 +2394,6 @@ KeyValues::ReadAsBinary - TYPE_BINARY_STRING
 KeyValues
 stackLevel >= 0 && stackLevel < m_errorIndex
 KeyValues Error: %s in file %s [offset: %d]\n
-*), 
  ReadToken overflow
 pKeyValuesTextParser
 RecursiveLoadFromBuffer:  got EOF instead of keyname
@@ -2464,7 +2425,6 @@ Lowered '%s' -> '%s'\n
 Breaking '%s' in '%s'\n
 Matched '%s' -> '%s'\n
 Unmatched %s\n
-m_Put >= 0
 /data/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 nSize != 0
@@ -2509,11 +2469,6 @@ pPool->m_SpaceUsed < 0xFFFF
 10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
 10CUtlMemoryIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tEE
 10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
-\n\n\n\n\n\n\n\n
-\v\v\v\v\v\v\v\v
-\f\f\f\f\f\f\f\f
-{}()'
-{}()':
 Bad expression token: %c %c\n
 Bad expression token: %c at %d in %s\n
 google/protobuf/arena.cc
@@ -2551,7 +2506,6 @@ google/protobuf/message_lite.cc
 CHECK failed: ctx.LastTag() != 1: 
 google::protobuf::StringPiece::StringPiece(const char*, google::protobuf::stringpiece_ssize_type)
 ./google/protobuf/stubs/stringpiece.h
-len >= 0
  exceeded maximum protobuf size of 2GB: 
 ./google/protobuf/io/coded_stream.h
 CHECK failed: cur_: 
@@ -2607,7 +2561,6 @@ CHECK failed: (n) >= (0):
 CHECK failed: other->GetArena() != GetArena(): 
 google/protobuf/wire_format_lite.cc
 CHECK failed: (value.size()) <= (static_cast<size_t>(kint32max)): 
- '%s'
 String field
  contains invalid 
 UTF-8 data when 
@@ -2681,7 +2634,6 @@ CHECK failed: GeneratedDatabase()->Add(encoded_file_descriptor, size):
 CHECK failed: (field_count()) == (2): 
 Invalid proto descriptor for file "
 File recursively imports itself: 
- -> 
 Reserved numbers must be positive integers.
 Reserved range end number must be greater than start number.
 Invalid wire type for CPPTYPE_INT32: 
@@ -2756,7 +2708,6 @@ length_ >= n
 Enum name 
  has the same name as 
  if you ignore case and strip out the enum name prefix (if any). This is error-prone and can lead to undefined behavior. Please avoid doing this. If you are using allow_alias, please assign the same numeric value to both enums.
-$0// $1\n
 CHECK failed: checkpoints_.empty(): 
 .placeholder.proto
 .PLACEHOLDER_VALUE
@@ -2856,26 +2807,17 @@ Found invalid proto option data for:
 $0option $1;\n
 stream 
 $0rpc $1($4.$2) returns ($5.$3)
- {\n$0$1}\n
 service $0 {\n
-$0$1 = $2
- [$0]
 $0enum $1 {\n
 $0  reserved 
-$0, 
 $0 to max, 
-$0 to $1, 
-"$0", 
-$0}\n
 $0message $1
 $0  extensions $1 to $2;\n
-$0  }\n
 $0  extend .$1 {\n
 map<$0, $1>
 $0$1$2 $3 = $4
  [default = $0
 json_name = "
- { ... };\n
 extend .$0 {\n
 " is a message. To set the entire message, use syntax like "
  = { <proto text format> }". To set fields within it, use syntax like "
@@ -2885,7 +2827,6 @@ Could not create an instance of
 Error while parsing option value for "
 CHECK failed: (option_field->type()) == (FieldDescriptor::TYPE_GROUP): 
 $0oneof $1 {
- ... }\n
 syntax = "$0";\n\n
 import public "$0";\n
 import weak "$0";\n
@@ -2955,7 +2896,6 @@ sfixed64
 sint32
 sint64
 char google::protobuf::StringPiece::operator[](google::protobuf::stringpiece_ssize_type) const
-0 <= i
 i < length_
 ./google/protobuf/descriptor.pb.h
 CHECK failed: value != nullptr: 
@@ -2970,7 +2910,6 @@ CHECK failed: desc_proto.has_name():
 File not found in database (unexpected): 
 Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
 Extension conflicts with extension already in database: extend 
- } from:
 Invalid symbol name: 
 Symbol name "
 " conflicts with the existing symbol "
@@ -3519,7 +3458,6 @@ CHECK failed: this == other_mutator:
 google/protobuf/message.cc
 CHECK failed: (from.GetDescriptor()) == (descriptor): 
 : Tried to merge from a message with a different type.  to: 
-, from: 
 : Tried to copy from a message with a different type. to: 
 Message class "
 " implements neither SetCachedSize() nor ByteSize().  Must implement one or the other.
@@ -3579,7 +3517,6 @@ Not supported.
 google::protobuf::uint64 google::protobuf::UnknownField::varint() const
 ./google/protobuf/unknown_field_set.h
 type() == TYPE_VARINT
-: 0x
 google::protobuf::uint32 google::protobuf::UnknownField::fixed32() const
 type() == TYPE_FIXED32
 google::protobuf::uint64 google::protobuf::UnknownField::fixed64() const
@@ -3611,7 +3548,6 @@ Expected string, got:
 Expected integer, got: 
 Expect a decimal number, got: 
 Expected "
-", found "
 Integer out of range (
 infinity
 Expected double, got: 
@@ -3705,7 +3641,6 @@ Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto 
 ???\f???????\n???\r?\t?\v
 N6google8protobuf2io14ErrorCollectorE
 [libprotobuf %s %s:%d] %s\n
-%d.%d.%d
 google/protobuf/stubs/common.cc
 This program requires version 
  of the Protocol Buffer runtime library, but the installed version is 
@@ -3720,7 +3655,6 @@ N6google8protobuf14FatalExceptionE
 google/protobuf/stubs/int128.cc
 CHECK failed: (0) != (n): 
 Division or mod by zero: dividend.hi=
-, lo=
 ""3333
 CANCELLED
 UNKNOWN
@@ -3760,7 +3694,6 @@ FastHexToBuffer() wants non-negative integers, not
 0123456789abcdef
 CHECK failed: (digits) < (100): 
 nullptr output boolean given.
-%.*g
 CHECK failed: (out) == (begin + result.size()): 
 CHECK failed: (uintptr_t((a).data() - (*result).data())) > (uintptr_t((*result).size())): 
 CHECK failed: (uintptr_t((b).data() - (*result).data())) > (uintptr_t((*result).size())): 
@@ -3773,7 +3706,6 @@ len >= input_len
 CHECK failed: (len) <= (dest_len): 
 Logic problem? szsrc = 
 CHECK failed: (calc_escaped_size) == (escaped_len): 
-%.1f
 CHECK failed: (temp[0]) == ('1'): 
 CHECK failed: (temp[size - 1]) == ('5'): 
 CHECK failed: (size) <= (6): 
@@ -3781,10 +3713,8 @@ CHECK failed: dest:
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 456789:;<=
-\t\n\v\f\r
  !"#$%&'()*+,-./0123
 ?456789:;<=
-\t\n\v\f\r
  !"#$%&'()*+,-./0123
 0123456789abcdef
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
@@ -3931,21 +3861,12 @@ qdZRMHD@=;86421/.-+*)(''&%$$#""!!
 E=FZGrH
 QyReSOT5U
 YbZ6[
-]o^8_
 hxi(j
 vtw\nx
-\t \ny\n
-"p#*$
-%d&&'
-({)F*
--a.:/
 4i5U6B738%9
 B#C0D?EQFeG|H
 N9OaP
-Y=[~\
-]\t_R`
 Bx\r9
-!W,m]
 k\fClibpng warning: %s
 undefined
 libpng error: %s
@@ -3955,7 +3876,6 @@ bad longjmp:
 Libpng jmp_buf still allocated
 Application jmp_buf size changed
 png_get_eXIf does not work; use png_get_eXIf_1
-\nF%u
 ?Out of memory
 internal error: array alloc
 internal error: array realloc
@@ -4112,9 +4032,7 @@ Row has too many bytes to allocate in memory
 3333
 DDDDUUUU
 00003333
-""""
 UUUU
-\f\f\f\f
 3333
 Invalid sCAL width
 Invalid sCAL height
@@ -4192,7 +4110,6 @@ zTXt
 png_set_filler is invalid for low bit depth gray output
 png_set_filler: inappropriate color type
 info change after png_start_read_image or png_read_update_info
- 0@P`p
 !1AQaq
 "2BRbr
 #3CScs
@@ -4203,11 +4120,6 @@ $4DTdt
 (8HXhx
 )9IYiy
 *:JZjz
-+;K[k{
-,<L\l|
--=M]m}
-.>N^n~
-/?O_o
 Write Error
 Call to NULL write function
 png_image_write_to_memory: PNG too big
@@ -4284,51 +4196,29 @@ Unrecognized equation type for pCAL chunk
 Can't write sCAL (buffer too small)
 Unrecognized unit type for pHYs chunk
 Invalid time specified for tIME chunk
- n;^
 Qkkbal
-3_L\n
->jm\r
 Zjz\v
 i]Wb
 9a&g
 MGiI
 wn>Jj
-#.zf
-+o*7
-Z* ,\t
 H$6t
-_~6\f
 52F*
-\t#jT$
-\n=G\\vp
-^6o}
-[-&LMb#{'
-)q\n>(
 w+OQvr
-\r}!b
 R1h58
 SKyu
-)\ZEo^m/
 ru&o
-i8P/\f_
-?(3w
 wXR\r
 H*0"ZOW
 {kHw
-)T`D
 !AxU
-l!;b\tF
-:1X:
 y9*O
-kM`~
 Vc0a
 dQy/
 lDa>
 7~8A
 C-Yn
 gqr<
-$/o|
-f-=v
 \rmj>zjZ
 l6qnk
 IiGM>nw
@@ -4336,35 +4226,23 @@ IiGM>nw
 i91k
 ewh/?y
 *5KS
-\f6~_'
-F*.f
 1wsHp
--\n\v\G=
 M8MF
 Pe6^
 #bML"
-`F(>\nq-q
 vQO+t
 [h1R
 XsBI
 hPU3
 ^oEZ_
-2%k_
 w3Xc
-[\n;g
 /P8i
 OZw3(?
-Z"0*
 fP~V
-D`T\f
-^GP~
-b;!l
-V_:X1:
 NJ2"v
 O*9y]
 fu`z
 /yQA
-&]|v
 incorrect header check
 unknown compression method
 invalid window size
@@ -4595,7 +4473,6 @@ CMsgMouseDblClick
 browser_handle
 \n\fmouse_button
 \n\tmodifiers
-(\r"[\n
 CMsgMouseWheel
 browser_handle
 deltax
@@ -4604,7 +4481,6 @@ deltay
 (\r"P\n\rCMsgMouseMove
 browser_handle
 \n\tmodifiers
-(\r"(\n
 CMsgMouseLeave
 browser_handle
 CMsgBrowserCreate
@@ -4631,11 +4507,9 @@ false
 \n\vinitial_url
 \n\vhwnd_parent
 creation_flags
-0"G\n
 CMsgBrowserCreateResponse
 browser_handle
 \n\nrequest_id
-(\r"+\n
 CMsgBrowserRemove
 browser_handle
 CMsgSetLocalFileRequestMapping
@@ -4658,11 +4532,9 @@ bad_url
 connection_problem
 \n\rproxy_problem
 unknown
-(\t":\n
 CMsgBrowserSetName
 browser_handle
 name
-(\t"H\n
 CMsgBrowserSize
 browser_handle
 width
@@ -4706,15 +4578,12 @@ browser_handle
 visible
 CMsgClearHistory
 browser_handle
-(\r"2\n
 CMsgClearAllBrowsingData
 browser_handle
-(\r""\n
 CMsgCopy
 browser_handle
 (\r"#\n\tCMsgPaste
 browser_handle
-(\r"?\n
 CMsgExecuteJavaScript
 browser_handle
 script
@@ -4730,7 +4599,6 @@ scroll
 zoom
 visible
 \n\tpage_size
-(\r"3\n
 CMsgVerticalScrollBarSize
 browser_handle
 \n!CMsgVerticalScrollBarSizeResponse
@@ -4740,7 +4608,6 @@ scroll
 zoom
 visible
 \n\tpage_size
-(\r"X\n
 CMsgFind
 browser_handle
 find
@@ -4748,21 +4615,17 @@ infind
 reverse
 false"&\n\fCMsgStopFind
 browser_handle
-(\r"A\n
 CMsgSetHorizontalScroll
 browser_handle
 scroll
-(\r"?\n
 CMsgSetVerticalScroll
 browser_handle
 scroll
-(\r"8\n
 CMsgSetZoomLevel
 browser_handle
 zoom
 CMsgViewSource
 browser_handle
-(\r"X\n
 CMsgBrowserReady
 browser_handle
 vr_overlay_key
@@ -4774,7 +4637,6 @@ postData
 \n\tpagetitle
 bNewNavigation
 \n\rCHistoryEntry
-(\t"\\n
 CMsgHistoryChanged
 browser_handle
 index
@@ -4799,7 +4661,6 @@ false"M\n
 CMsgFinishedRequest
 browser_handle
 \n\tpageTitle
-(\t"j\n
 CMsgLoadedRequest
 browser_handle
 \n\tpageTitle
@@ -4808,7 +4669,6 @@ headers
 CMsgFavIconURLChanged
 browser_handle
 urls
-(\t"f\n
 CMsgPageSecurity
 browser_handle
 -\n\rsecurity_info
@@ -4829,7 +4689,6 @@ browser_handle
 browser_handle
 wide
 tall
-(\r"J\n
 CMsgOpenNewTab
 browser_handle
 \n\vbForeground
@@ -4844,17 +4703,14 @@ trusted_creator
 name
 hwnd
 parent_popup_index
-(\r"E\n
 CMsgPopupHTMLWindowResponse
 browser_handle
 bAllow
 CMsgSetHTMLTitle
 browser_handle
 title
-(\t":\n
 CMsgLoadingResource
 browser_handle
-(\t"6\n
 CMsgStatusText
 browser_handle
 text
@@ -4885,18 +4741,14 @@ browser_handle
 owning_browser_handle
 bsuccess
 files
-(\t"7\n
 CMsgShowToolTip
 browser_handle
 text
-(\t"9\n
 CMsgUpdateToolTip
 browser_handle
 text
-(\t")\n
 CMsgHideToolTip
 browser_handle
-(\r"Q\n
 CMsgSearchResults
 browser_handle
 \n\vactiveMatch
@@ -4947,13 +4799,11 @@ scrolly
 \n\npageserial
 (\r"%\n\vCMsgGetZoom
 browser_handle
-(\r";\n
 CMsgGetZoomResponse
 browser_handle
 zoom
 CMsgLinkAtPosition
 browser_handle
-(\r"z\n
 CMsgLinkAtPositionResponse
 browser_handle
 \n\tblivelink
@@ -4978,7 +4828,6 @@ browser_handle
 filename
 width
 height
-(\r"S\n
 CMsgSavePageToJPEGResponse
 browser_handle
 filename
@@ -4988,7 +4837,6 @@ message
 (\t"8\n\rCMsgJSConfirm
 browser_handle
 message
-(\t">\n
 CMsgJSDialogResponse
 browser_handle
 result
@@ -5010,40 +4858,29 @@ samesite
 CMsgSetTargetFrameRate
 browser_handle
 nTargetFrameRate
-(\r"*\n
 CMsgPauseRepaint
 browser_handle
-(\r")\n
 CMsgFullRepaint
 browser_handle
-(\r"/\n
 CMsgRequestFullScreen
 browser_handle
-(\r",\n
 CMsgExitFullScreen
 browser_handle
-(\r"4\n
 CMsgToggleFindInPageDialog
 browser_handle
-(\r"0\n
 CMsgSetPIDShuttingDown
 browser_handle
-(\r"9\n
 CMsgDisableBackgroundThrottling
 browser_handle
-(\r"0\n
 CMsgAckPIDShuttingDown
 browser_handle
-(\r";\n
 CMsgGetCookiesForURL
 browser_handle
-(\t"D\n
 CCookie
 name
 value
 domain
 path
-(\t"^\n
 CMsgGetCookiesForURLResponse
 browser_handle
 cookies
@@ -5059,10 +4896,8 @@ bHasMultipleInputs
 \n\fbIsMainFrame
 CMsgZoomToFocusedElement
 browser_handle
-(\r"-\n
 CMsgFocusedNodeText
 browser_handle
-(\r"D\n
 CMsgFocusedNodeTextResponse
 browser_handle
 value
@@ -5070,10 +4905,8 @@ value
 build_id
 CMsgOpenDevTools
 browser_handle
-(\r"+\n
 CMsgCloseDevTools
 browser_handle
-(\r"=\n
 CMsgUnlockH264
 browser_handle
 \n\vunlock_code
@@ -5089,7 +4922,6 @@ monitor_bottom
 \n\nusable_top
 \n\fusable_right
 \n\rusable_bottom
-(\r"-\n
 CMsgClearAllCookies
 browser_handle
 (\r"<\n\rCMsgScreenDPI
@@ -5097,10 +4929,8 @@ browser_handle
 \n\vdpi_scaling
 CMsgAckScreenDPI
 browser_handle
-(\r")\n
 CMsgAuthedSteamDomains
 domains
-(\t"%\n
 CMsgSteamAuthNeeded
 filler
 CMsgSteamAuthCookiesSet
@@ -5155,22 +4985,17 @@ CMsgJSRaiseException
 browser_handle
 owning_browser_handle
 \n\texception
-(\t"[\n
 CMsgLoadLocalization
 browser_handle
 localization_path
 language
-(\t"2\n
 CMsgNotifyUserActivation
 browser_handle
-(\r"/\n
 CMsgSetNetFakeLocalSystemState
 state
-(\r"J\n
 CMsgSetGameOverlayTargetPIDs
 browser_handle
 \n\ntarget_pid
-(\r"d\n
 CMsgGameOverlayTargetTextureID
 browser_handle
 \n\ntarget_pid
@@ -5198,19 +5023,14 @@ height
 \n\nmax_height
 CMsgShowWindow
 browser_handle
-(\r"(\n
 CMsgHideWindow
 browser_handle
-(\r"0\n
 CMsgBringWindowToFront
 browser_handle
-(\r"1\n
 CMsgSetForegroundWindow
 browser_handle
-(\r"3\n
 CMsgMaximizeRestoreWindow
 browser_handle
-(\r",\n
 CMsgMinimizeWindow
 browser_handle
 CMsgShowBrowserContextMenu
@@ -5228,7 +5048,6 @@ misspelled_word
 edit_state_flags
 ContextCommand
 label
-(\t"J\n
 CMsgHandleContextMenuCommand
 browser_handle
 \n\ncommand_id
@@ -5242,21 +5061,16 @@ height
 CMsgSetTouchGesturesToCancel
 browser_handle
 gestures
-(\r"=\n
 CMsgImeSetComposition
 browser_handle
 text
-(\t"9\n
 CMsgImeCommitText
 browser_handle
 text
-(\t"2\n
 CMsgImeCancelComposition
 browser_handle
-(\r"N\n
 CMsgImeCompositionRangeChanged
 browser_handle
-(\r"B\n
 CMsgInspectElement
 browser_handle
 (\r"8\n\rCMsgDisableF5
@@ -5264,7 +5078,6 @@ browser_handle
 disable
 CMsgStartDownload
 browser_handle
-(\t"L\n
 CMsgSetWindowStackingOrder
 browser_handle
 estackingorder
@@ -5273,17 +5086,14 @@ browser_handle
 message
 args
 requesting_url
-(\t"9\n
 CMsgBlockedRequest
 browser_handle
-(\t"B\n
 CMsgBrowserFocusChanged
 browser_handle
 focused
 CMsgSetProtocolBlockList
 browser_handle
 list
-(\t"J\n
 CMsgSetForceDeviceScaleFactors
 \n\tdpi_scale
 \n\rbrowser_scale
@@ -5291,10 +5101,8 @@ CMsgSetForceDeviceScaleFactors
 ui_mode
 CMsgSetSteamBetaName
 steam_beta_name
-(\t"*\n
 CMsgPopupCreated
 browser_handle
-(\r"F\n
 CMsgSetVRKeyboardVisibility
 browser_handle
 visible
@@ -5310,7 +5118,6 @@ eCmd > 0 && eCmd < eHTMLCommands_None
 unSize < 128 * 1024 * 1024
 pBuffer->TellPut() == 0
 AnimatingImagePanel
-%s%d
 frames
 , string image
 m_Frames
@@ -5394,7 +5201,6 @@ className
 /data/src/vgui2/controls/BuildFactoryHelper.cpp
 CBuildFactoryHelper:  Factory for '%s' already exists!!!!\n
 url 
-      
 , string command, int default
 _actionMessage
 CanBeDefaultButton
@@ -5692,7 +5498,6 @@ m_SeparatorPanels.Count() == 0
 GetVParent()
 MenuItemHighlight
 relative
-row != -1
 m_bCheckable
 /data/src/public/vgui_controls/MenuItem.h
 parent
@@ -5820,7 +5625,6 @@ DefaultVerySmall
 Tooltip.Delay
 Tooltip.Anchor
 IgnoreScheme
-%s%s=%s
 GetPanelMessageMapDictionary()
 GetPanelKeyBindingMapDictionary()
 m_MessageMaps[ iMessageMap ].map->defaultkeys
@@ -6108,7 +5912,6 @@ m_vecHashBuckets
 m_memNodes
 m_bitsMigratedBuckets
 maxchars
-ftp://
 mailto:
 TextClicked
 RichText::DrawString
@@ -6117,7 +5920,6 @@ startIndex < m_TextStream.Count()
 RichText::ParseTextStringForURL
 www.
 href=
-</a>
 elem >= 0 && num >= 0 && INT_MAX - elem >= num
 elem + num <= Count()
 RichText.InsetX
@@ -6684,7 +6486,6 @@ filter
 filterinfo
 curFilter[0] == '*' && curFilter[1] == '.'
 /data/src/vgui2/controls/FileOpenDialog.cpp
-%s %s
 Couldn't format time value %llu
 filesize
 modified
@@ -6716,7 +6517,6 @@ FileNameLabel
 FileTypeLabel
 FolderIcon
 resource/FileOpenDialog.res
-%s_%s
 #FileOpenDialog_ToolTip_NewFolder
 N4vgui14FileOpenDialogE
 N4vgui18FileCompletionMenuE
@@ -6757,14 +6557,12 @@ CCrypto::Base64Decode
 NULL output buffer with non-zero size passed to Base64Decode
 CCrypto::Base64Decode: insufficient output buffer (up to n*3/4+2 bytes required)
 ?456789:;<=
-\t\n\v\f\r
  !"#$%&'()*+,-./0123LoadFileIntoBuffer: NULL parameters
 /data/src/common/filesystem_helpers.cpp
 /data/src/common/logger.cpp
 sm_cRef > 0
 sm_bShuttingDown
 pch[cub - 1] != '\0' && pch[cub] == '\0'
-1 == ret
 ThreadInMainThread()
 Log stopped.\n
 @bEnableSpewThrottle
@@ -6780,8 +6578,6 @@ Log stopped.\n
 m_eParentalState == k_EParentalStateUnlocked
 /data/src/common/parentalinterpreter.cpp
 m_protoSettings.ParseFromArray( ( char * )pBuffer->Base() + pBuffer->TellGet(), nBytesProto )
-(%u)
-%u:%u:%u
 /data/src/common/steamid.cpp
 steamIDChat.GetEAccountType() == k_EAccountTypeChat
 k_EChatInstanceFlagClan & steamIDChat.GetUnAccountInstance()
@@ -6801,7 +6597,6 @@ appid
 ParentalPlaytimeDay
 allowed_time_windows
 allowed_daily_minutes
-(\r"p\n
 ParentalPlaytimeRestrictions
 apply_playtime_restrictions
 +\n\rplaytime_days
@@ -7423,7 +7218,6 @@ k_ESessionDispositionDisconnect
 ip_addr"8\n\tCMsgMulti
 \n\rsize_unzipped
 \n\fmessage_body
-(\f"+\n
 CMsgProtobufWrapped
 \n\fmessage_body
 CMsgAuthTicket
@@ -7577,11 +7371,9 @@ expired
 \n\rtime_reserved
 rtime_estimated_notification
 notificaton_token
-(\t"/\n
 CMsgKeyValuePair
 name
 value
-(\t"3\n
 CMsgKeyValueSet
 pairs
 .CMsgKeyValuePair"
@@ -7708,11 +7500,7 @@ alnum
 graph
 N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
 N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
-\v\v\v\v\r\r
-\t\rK~\n
 CH\f1
-I\r]P`
-H;!}#@i
 FoCLcx
 basic_ios::clear
 St9basic_iosIcSt11char_traitsIcEE
@@ -7721,10 +7509,6 @@ St8ios_base
 St13basic_istreamIwSt11char_traitsIwEE
 basic_string::erase
 %s: __pos (which is %zu) > this->size() (which is %zu)
-%.*Lf
-%m/%d/%y
-%H:%M
-%H:%M:%S
 St9time_base
 St10money_base
 St13messages_base
@@ -7802,7 +7586,6 @@ JArray
 auto:
 VTT for 
 construction vtable for 
--in-
 typeinfo for 
 typeinfo name for 
 typeinfo fn for 
@@ -7837,8 +7620,6 @@ global destructors keyed to
 complex 
 imaginary 
  __vector(
-(...
-...)
 std::allocator
 std::basic_string
 std::string

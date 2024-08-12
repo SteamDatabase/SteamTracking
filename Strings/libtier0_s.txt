@@ -815,7 +815,6 @@ GLIBC_2.3.2
 -noassert
 -nocrashdialog
 -debugbreak
-%s %i %s
 AuthenticAMD
 Unable to determine CPU Frequency. Try defining CPU_MHZ.\n
 !"couldn't read cpu information from /proc/cpuinfo"
@@ -829,7 +828,6 @@ CPU_MHZ
 /proc/%d/status
 TracerPid:
 IsSpewActive
-%s (%d) : 
 Exiting on SPEW_ABORT\n
 Minidumps written:\n
  - file:%s, line:%u ,time:%04u%02u%02u%02u%02u%02u\n
@@ -848,10 +846,7 @@ Fatal Assertion Failed:
 /sys/kernel/tracing/trace_marker
 %s begin_ctx=%lld
 %s end_ctx=%lld
-%s: %d
-%s: %d, %d
 %s: %d, %d, %d
-%s: %s
 %s: '%s', '%s'
 RenderFrameMark
 OverlayFrameMark
@@ -951,7 +946,6 @@ ThreadGetProcessExitCode
 %s: no such process %d\n
 Thread synchronization object is unuseable
 USER
-/e%s%s
 semaphore creation failed %s
 Attempting to create a named event with a null name
 Semaphore name (%s) is longer than POSIX can handle, truncating.
@@ -1036,8 +1030,6 @@ m_iThreadMutexValidationLock == 0
  GiB
  KiB
  MiB
-%i%s
-%%.%if%s
 Total bytes allocated (os heap reported): %s\n
 Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
 Total bytes allocated counted: %s\n
@@ -1156,11 +1148,7 @@ terminate called recursively\n
   what():  
 terminate called after throwing an instance of '
 terminate called without an active exception\n
-\v\v\v\v\r\r
-\t\rK~\n
 CH\f1
-I\r]P`
-H;!}#@i
 FoCLcx
 ?basic_string::_S_create
 basic_string::_S_construct null not valid
@@ -1179,7 +1167,6 @@ JArray
 auto:
 VTT for 
 construction vtable for 
--in-
 typeinfo for 
 typeinfo name for 
 typeinfo fn for 
@@ -1216,8 +1203,6 @@ global destructors keyed to
 complex 
 imaginary 
  __vector(
-(...
-...)
 std::allocator
 std::basic_string
 std::string
@@ -1271,7 +1256,6 @@ N10__cxxabiv117__pbase_type_infoE
 N10__cxxabiv129__pointer_to_member_type_infoE
 St11logic_error
 St12length_error
-Mb@?
 __wrap___xstat64
 typeinfo name for unsigned short
 typeinfo name for bool

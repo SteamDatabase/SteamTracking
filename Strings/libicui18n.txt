@@ -6342,7 +6342,6 @@ N6icu_5217MoonTimeAngleFuncE
 N6icu_5220MoonRiseSetCoordFuncE
 =@N6icu_527UMemoryE
 pup7@
-_?|b
 hsz?
 HN?T\r
 L\rPA
@@ -6378,7 +6377,6 @@ N6icu_5210CECalendarE
 CHINA_ZONE
 @calendar=chinese
 N6icu_5215ChineseCalendarE
-@%.*g
 N6icu_5212ChoiceFormatE
 N6icu_5224CollationElementIteratorE
 res_index
@@ -6471,16 +6469,12 @@ N6icu_5226CharsetRecog_IBM420_ar_ltrE
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@BBDEFGGIJKLMNOPIRSTUVVXXZ[\]^_`abcceeggijklmnoiqqstuvwwyz{|}~
                                        
                          abcdefghijklmnopqrstuvwxyz      abcdefghijklmnopqrstuvwxyz                                               
-          
-    
-     
                                        
                          abcdefghijklmnopqrstuvwxyz      abcdefghijklmnopqrstuvwxyz                                      
                                        
                          abcdefghijklmnopqrstuvwxyz      abcdefghijklmnopqrstuvwxyz                                      
                                        
                          abcdefghijklmnopqrstuvwxyz      abcdefghijklmnopqrstuvwxyz                                                                      
-     
                      
                                        
                          abcdefghijklmnopqrstuvwxyz      abcdefghijklmnopqrstuvwxyz                                      
@@ -6488,40 +6482,21 @@ N6icu_5226CharsetRecog_IBM420_ar_ltrE
                                        
                          abcdefghijklmnopqrstuvwxyz      abcdefghijklmnopqrstuvwxyz                                                          
                                           
-     
                                        
                          abcdefghijklmnopqrstuvwxyz      abcdefghijklmnopqrstuvwxyz                                               
-          
-    
-     
                                        
                          abcdefghijklmnopqrstuvwxyz      abcdefghijklmnopqrstuvwxyz      
-    
-       
-          
-          
-          
-    
-    
                                        
                          abcdefghijklmnopqrstuvwxyz      abcdefghijklmnopqrstuvwxyz     
-      
-         
-    
                                        
                          abcdefghijklmnopqrstuvwxyz      abcdefghijklmnopqrstuvwxyz                                        
                
             
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ABCDEFGHI@@@@@@@QRSTUVWXY@@@@@@@@bcdefghi@@@@@@@q@@@@@@@@@@@
-@@@@@@@
-@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@@
-@@@@@@@
-@@@@@@@@
 @@@@@@@@@@@@@@@@@@@@@@FA@
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@BCDEFGHI@@@@@@@QR@@UVWXY@@@@@@@@bcdefghi@@@@@@pqrstuvwxy@@@@@@
 @@@@@@@@@@@
-@VF@
 CUTF-16BE
 UTF-16LE
 UTF-32BE
@@ -6587,8 +6562,6 @@ Rounded
 Underflow
 No status
 Multiple status
- / _ 
- / _ 
 other
 N6icu_5213DecimalFormatE
 NumberPatterns
@@ -6611,9 +6584,7 @@ decNumber 3.61
 INFINITY
 2.302585092994045684017991454684364207601
 0.6931471805599453094172321214581765680755
-\t\n\v\f\r
  !"#$%&'()*+,-./01
-!| H
 \5YyV
 6m4A2
 WN`R
@@ -6621,8 +6592,6 @@ WN`R
 9223372036854775807
 -2147483648
 2147483647
-%+1.*e
-%+1.1f
 day-format-except-narrow
 day-narrow
 day-standalone-except-narrow
@@ -6721,7 +6690,6 @@ N6icu_5217GregorianCalendarE
 format
 @@calendar=hebrew
 N6icu_5214HebrewCalendarE
-kC; 
 N6icu_5214IdentifierInfoE
 @calendar=Indian
 N6icu_5214IndianCalendarE
@@ -6730,11 +6698,8 @@ N6icu_5215IslamicCalendarE
 BN6icu_5216JapaneseCalendarE
 separator
 localeDisplayPattern
-{0}, {1}
 pattern
-{0} ({1})
 keyTypePattern
-{0}={1}
 languages
 script
 territory
@@ -6831,13 +6796,11 @@ locales
 locales_ordinals
 plurals
 rules
- is 
 mod 
  is not 
  not in 
  not within 
  and 
- or 
 %1.15e
 N6icu_5211PluralRulesE
 N6icu_5216PluralRuleParserE
@@ -6846,7 +6809,6 @@ N6icu_5212OrConstraintE
 N6icu_529RuleChainE
 N6icu_5224PluralKeywordEnumerationE
 N6icu_5233PluralAvailableLocalesEnumerationE
-\f':T
 N6icu_5210QuantifierE
 %spellout-numbering
 %digits-ordinal

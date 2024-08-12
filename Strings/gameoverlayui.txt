@@ -780,7 +780,6 @@ WARNING: unable to link %s and %s because one or more is a ConCommand.\n
 /tmp/gameoverlayui.log.last
 /tmp/gameoverlayui.log
 %a %b %d %H:%M:%S %Y UTC
-%s - %s
 22:43:40
 Jul 30 2024
 crashhandler004
@@ -794,7 +793,6 @@ No -steampid command line param to gameoverlayui
 VGUI_ivgui007
 VGUI_InputInternal001
 csgolauncher
-%s%c%s
 SKIN
 %s/skins/%s
 resource/SteamScheme.res
@@ -840,7 +838,6 @@ Unable to get home directory
 SteamUniverse
 SteamRealm
 steambeta
-%s/%s%s
 %s/config
 steam_dev.cfg
 /data/src/common/../common/clientdirectories.h
@@ -960,8 +957,6 @@ CScreenshotThread::Run - Error reading screenshot stream. Clearing any remaining
 17CScreenshotThread
 27CScreenshotProcessingThread
 *ZN17CScreenshotThread3RunEvEUlP10CUtlBufferiiE_
-=\ngk?
-':<kF
 DTimeout waiting on input stream for a frame\n
 Overlay disable requested by game\n
 Overlay enable requested by game\n
@@ -969,7 +964,6 @@ WM_ACTIVATE received before BasePanel() knows about the game ID
 Unhandled serialized input msg(%d)\n
 Error in the serialized input stream! clearing remaining stream, which may lose events\n
 Last %d input commands (most recent first):\n
-  %d\n
 stdio
 %s/filesystem_%s
 %s/vgui2_s
@@ -1033,9 +1027,7 @@ LOCK_SH
 flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
 flock %s %s failed. errno = %d
 BCreateDirectory
-%d%s
 %d:00
-%A %b %d
 DBG_STAT
 statvfs64: ret %d errno %d\n
   f_bsize : %lu\n
@@ -1047,12 +1039,10 @@ root
 /ubuntu12_64/disk-free 
 /tmp/disk-free.XXXXXX
 mkstemp errno %d\n
- >%s
  2>/dev/null
 Execute: %s\n
 disk-free command failed\n
 fopen tmpfile failed\n
-%d\n%d\n%d\n
 %d MB avail\n
 %d MB total space\n
 %d MB free space\n
@@ -1140,7 +1130,6 @@ KeyValues::ReadAsBinary - TYPE_BINARY_STRING
 KeyValues
 stackLevel >= 0 && stackLevel < m_errorIndex
 KeyValues Error: %s in file %s [offset: %d]\n
-*), 
  ReadToken overflow
 pKeyValuesTextParser
 RecursiveLoadFromBuffer:  got EOF instead of keyname
@@ -1166,12 +1155,10 @@ Lowered '%s' -> '%s'\n
 Breaking '%s' in '%s'\n
 Matched '%s' -> '%s'\n
 Unmatched %s\n
-m_Put >= 0
 /data/src/tier1/utlbuffer.cpp
 info.m_pReplacementString == 0
 m_nAllocationCount >= 0
 nSize != 0
-num >= 0
 CUtlBuffer::GetStringFast: binary buffers only
 nSize >= 0
 offset >= 0
@@ -1210,8 +1197,6 @@ s_bAllowStaticSymbolTable
 /data/src/public/tier1/utlsymbol.h
 Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
 pPool->m_SpaceUsed < 0xFFFF
-{}()'
-{}()':
 Bad expression token: %c %c\n
 Bad expression token: %c at %d in %s\n
 google/protobuf/text_format.cc
@@ -1223,7 +1208,6 @@ Not supported.
 google::protobuf::uint64 google::protobuf::UnknownField::varint() const
 ./google/protobuf/unknown_field_set.h
 type() == TYPE_VARINT
-: 0x
 google::protobuf::uint32 google::protobuf::UnknownField::fixed32() const
 type() == TYPE_FIXED32
 google::protobuf::uint64 google::protobuf::UnknownField::fixed64() const
@@ -1280,7 +1264,6 @@ Expected string, got:
 Expected integer, got: 
 Expect a decimal number, got: 
 Expected "
-", found "
 Integer out of range (
 infinity
 Expected double, got: 
@@ -1391,7 +1374,6 @@ Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto 
 ???\f???????\n???\r?\t?\v
 N6google8protobuf2io14ErrorCollectorE
 [libprotobuf %s %s:%d] %s\n
-%d.%d.%d
 google/protobuf/stubs/common.cc
 This program requires version 
  of the Protocol Buffer runtime library, but the installed version is 
@@ -1407,7 +1389,6 @@ N6google8protobuf14FatalExceptionE
 google/protobuf/stubs/int128.cc
 CHECK failed: (0) != (n): 
 Division or mod by zero: dividend.hi=
-, lo=
 ""3333
 CANCELLED
 UNKNOWN
@@ -1433,14 +1414,12 @@ CHECK failed: (pos) <= (x.length_):
 CHECK failed: (len) >= (0): 
 google::protobuf::StringPiece::StringPiece(const char*, google::protobuf::stringpiece_ssize_type)
 ./google/protobuf/stubs/stringpiece.h
-len >= 0
 google/protobuf/stubs/stringprintf.cc
 CHECK failed: (v.size()) <= (kStringPrintfVectorMaxArgs): 
 StringPrintfVector currently only supports up to 
  arguments. 
 Feel free to add support for more if you need it.
 char google::protobuf::StringPiece::operator[](google::protobuf::stringpiece_ssize_type) const
-0 <= i
 i < length_
 google/protobuf/stubs/strutil.cc
 CHECK failed: result != nullptr: 
@@ -1455,7 +1434,6 @@ CHECK failed: (digits) < (100):
 CHECK failed: value != nullptr: 
 nullptr output boolean given.
 -inf
-%.*g
 CHECK failed: (out) == (begin + result.size()): 
 CHECK failed: (uintptr_t((a).data() - (*result).data())) > (uintptr_t((*result).size())): 
 CHECK failed: (uintptr_t((b).data() - (*result).data())) > (uintptr_t((*result).size())): 
@@ -1468,7 +1446,6 @@ len >= input_len
 CHECK failed: (len) <= (dest_len): 
 Logic problem? szsrc = 
 CHECK failed: (calc_escaped_size) == (escaped_len): 
-%.1f
 CHECK failed: (temp[0]) == ('1'): 
 CHECK failed: (temp[size - 1]) == ('5'): 
 CHECK failed: (size) <= (6): 
@@ -1476,10 +1453,8 @@ CHECK failed: dest:
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 456789:;<=
-\t\n\v\f\r
  !"#$%&'()*+,-./0123
 ?456789:;<=
-\t\n\v\f\r
  !"#$%&'()*+,-./0123
 0123456789abcdef
 00010203040506070809101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899
@@ -1563,7 +1538,6 @@ CHECK failed: (n) >= (0):
 CHECK failed: other->GetArena() != GetArena(): 
 google/protobuf/wire_format_lite.cc
 CHECK failed: (value.size()) <= (static_cast<size_t>(kint32max)): 
- '%s'
 String field
  contains invalid 
 UTF-8 data when 
@@ -1636,7 +1610,6 @@ CHECK failed: GeneratedDatabase()->Add(encoded_file_descriptor, size):
 CHECK failed: (field_count()) == (2): 
 Invalid proto descriptor for file "
 File recursively imports itself: 
- -> 
 Reserved numbers must be positive integers.
 Reserved range end number must be greater than start number.
 Invalid wire type for CPPTYPE_INT32: 
@@ -1710,7 +1683,6 @@ length_ >= n
 Enum name 
  has the same name as 
  if you ignore case and strip out the enum name prefix (if any). This is error-prone and can lead to undefined behavior. Please avoid doing this. If you are using allow_alias, please assign the same numeric value to both enums.
-$0// $1\n
 CHECK failed: checkpoints_.empty(): 
 .placeholder.proto
 .PLACEHOLDER_VALUE
@@ -1809,26 +1781,17 @@ Found invalid proto option data for:
 $0option $1;\n
 stream 
 $0rpc $1($4.$2) returns ($5.$3)
- {\n$0$1}\n
 service $0 {\n
-$0$1 = $2
- [$0]
 $0enum $1 {\n
 $0  reserved 
-$0, 
 $0 to max, 
-$0 to $1, 
-"$0", 
-$0}\n
 $0message $1
 $0  extensions $1 to $2;\n
-$0  }\n
 $0  extend .$1 {\n
 map<$0, $1>
 $0$1$2 $3 = $4
  [default = $0
 json_name = "
- { ... };\n
 extend .$0 {\n
 " is a message. To set the entire message, use syntax like "
  = { <proto text format> }". To set fields within it, use syntax like "
@@ -1838,7 +1801,6 @@ Could not create an instance of
 Error while parsing option value for "
 CHECK failed: (option_field->type()) == (FieldDescriptor::TYPE_GROUP): 
 $0oneof $1 {
- ... }\n
 syntax = "$0";\n\n
 import public "$0";\n
 import weak "$0";\n
@@ -1916,7 +1878,6 @@ CHECK failed: desc_proto.has_name():
 File not found in database (unexpected): 
 Invalid file descriptor data passed to EncodedDescriptorDatabase::Add().
 Extension conflicts with extension already in database: extend 
- } from:
 Invalid symbol name: 
 Symbol name "
 " conflicts with the existing symbol "
@@ -2441,7 +2402,6 @@ CHECK failed: this == other_mutator:
 google/protobuf/message.cc
 CHECK failed: (from.GetDescriptor()) == (descriptor): 
 : Tried to merge from a message with a different type.  to: 
-, from: 
 : Tried to copy from a message with a different type. to: 
 Message class "
 " implements neither SetCachedSize() nor ByteSize().  Must implement one or the other.
@@ -3899,7 +3859,6 @@ LoadFileIntoBuffer: NULL parameters
 sm_cRef > 0
 sm_bShuttingDown
 pch[cub - 1] != '\0' && pch[cub] == '\0'
-1 == ret
 ThreadInMainThread()
 Log stopped.\n
 @bEnableSpewThrottle
@@ -3953,11 +3912,8 @@ reject
 22CJSCallbackFunc_HTMLJS
 Duplicate property %s in object
 /data/src/common/html_jstypes.cpp
-%s    
 0x%llx
-%s%s[%d]:\n
 %s%s[%d]: -> %s\n
-%s%s %s: \n
 %s%s %s: %s\n
 unimplemented
 result
@@ -4165,7 +4121,6 @@ CMsgMouseDblClick
 browser_handle
 \n\fmouse_button
 \n\tmodifiers
-(\r"[\n
 CMsgMouseWheel
 browser_handle
 deltax
@@ -4174,7 +4129,6 @@ deltay
 (\r"P\n\rCMsgMouseMove
 browser_handle
 \n\tmodifiers
-(\r"(\n
 CMsgMouseLeave
 browser_handle
 CMsgBrowserCreate
@@ -4201,11 +4155,9 @@ false
 \n\vinitial_url
 \n\vhwnd_parent
 creation_flags
-0"G\n
 CMsgBrowserCreateResponse
 browser_handle
 \n\nrequest_id
-(\r"+\n
 CMsgBrowserRemove
 browser_handle
 CMsgSetLocalFileRequestMapping
@@ -4228,11 +4180,9 @@ bad_url
 connection_problem
 \n\rproxy_problem
 unknown
-(\t":\n
 CMsgBrowserSetName
 browser_handle
 name
-(\t"H\n
 CMsgBrowserSize
 browser_handle
 width
@@ -4276,15 +4226,12 @@ browser_handle
 visible
 CMsgClearHistory
 browser_handle
-(\r"2\n
 CMsgClearAllBrowsingData
 browser_handle
-(\r""\n
 CMsgCopy
 browser_handle
 (\r"#\n\tCMsgPaste
 browser_handle
-(\r"?\n
 CMsgExecuteJavaScript
 browser_handle
 script
@@ -4300,7 +4247,6 @@ scroll
 zoom
 visible
 \n\tpage_size
-(\r"3\n
 CMsgVerticalScrollBarSize
 browser_handle
 \n!CMsgVerticalScrollBarSizeResponse
@@ -4310,7 +4256,6 @@ scroll
 zoom
 visible
 \n\tpage_size
-(\r"X\n
 CMsgFind
 browser_handle
 find
@@ -4318,21 +4263,17 @@ infind
 reverse
 false"&\n\fCMsgStopFind
 browser_handle
-(\r"A\n
 CMsgSetHorizontalScroll
 browser_handle
 scroll
-(\r"?\n
 CMsgSetVerticalScroll
 browser_handle
 scroll
-(\r"8\n
 CMsgSetZoomLevel
 browser_handle
 zoom
 CMsgViewSource
 browser_handle
-(\r"X\n
 CMsgBrowserReady
 browser_handle
 vr_overlay_key
@@ -4344,7 +4285,6 @@ postData
 \n\tpagetitle
 bNewNavigation
 \n\rCHistoryEntry
-(\t"\\n
 CMsgHistoryChanged
 browser_handle
 index
@@ -4369,7 +4309,6 @@ false"M\n
 CMsgFinishedRequest
 browser_handle
 \n\tpageTitle
-(\t"j\n
 CMsgLoadedRequest
 browser_handle
 \n\tpageTitle
@@ -4378,7 +4317,6 @@ headers
 CMsgFavIconURLChanged
 browser_handle
 urls
-(\t"f\n
 CMsgPageSecurity
 browser_handle
 -\n\rsecurity_info
@@ -4399,7 +4337,6 @@ browser_handle
 browser_handle
 wide
 tall
-(\r"J\n
 CMsgOpenNewTab
 browser_handle
 \n\vbForeground
@@ -4414,17 +4351,14 @@ trusted_creator
 name
 hwnd
 parent_popup_index
-(\r"E\n
 CMsgPopupHTMLWindowResponse
 browser_handle
 bAllow
 CMsgSetHTMLTitle
 browser_handle
 title
-(\t":\n
 CMsgLoadingResource
 browser_handle
-(\t"6\n
 CMsgStatusText
 browser_handle
 text
@@ -4455,18 +4389,14 @@ browser_handle
 owning_browser_handle
 bsuccess
 files
-(\t"7\n
 CMsgShowToolTip
 browser_handle
 text
-(\t"9\n
 CMsgUpdateToolTip
 browser_handle
 text
-(\t")\n
 CMsgHideToolTip
 browser_handle
-(\r"Q\n
 CMsgSearchResults
 browser_handle
 \n\vactiveMatch
@@ -4517,13 +4447,11 @@ scrolly
 \n\npageserial
 (\r"%\n\vCMsgGetZoom
 browser_handle
-(\r";\n
 CMsgGetZoomResponse
 browser_handle
 zoom
 CMsgLinkAtPosition
 browser_handle
-(\r"z\n
 CMsgLinkAtPositionResponse
 browser_handle
 \n\tblivelink
@@ -4548,7 +4476,6 @@ browser_handle
 filename
 width
 height
-(\r"S\n
 CMsgSavePageToJPEGResponse
 browser_handle
 filename
@@ -4558,7 +4485,6 @@ message
 (\t"8\n\rCMsgJSConfirm
 browser_handle
 message
-(\t">\n
 CMsgJSDialogResponse
 browser_handle
 result
@@ -4580,40 +4506,29 @@ samesite
 CMsgSetTargetFrameRate
 browser_handle
 nTargetFrameRate
-(\r"*\n
 CMsgPauseRepaint
 browser_handle
-(\r")\n
 CMsgFullRepaint
 browser_handle
-(\r"/\n
 CMsgRequestFullScreen
 browser_handle
-(\r",\n
 CMsgExitFullScreen
 browser_handle
-(\r"4\n
 CMsgToggleFindInPageDialog
 browser_handle
-(\r"0\n
 CMsgSetPIDShuttingDown
 browser_handle
-(\r"9\n
 CMsgDisableBackgroundThrottling
 browser_handle
-(\r"0\n
 CMsgAckPIDShuttingDown
 browser_handle
-(\r";\n
 CMsgGetCookiesForURL
 browser_handle
-(\t"D\n
 CCookie
 name
 value
 domain
 path
-(\t"^\n
 CMsgGetCookiesForURLResponse
 browser_handle
 cookies
@@ -4629,10 +4544,8 @@ bHasMultipleInputs
 \n\fbIsMainFrame
 CMsgZoomToFocusedElement
 browser_handle
-(\r"-\n
 CMsgFocusedNodeText
 browser_handle
-(\r"D\n
 CMsgFocusedNodeTextResponse
 browser_handle
 value
@@ -4640,10 +4553,8 @@ value
 build_id
 CMsgOpenDevTools
 browser_handle
-(\r"+\n
 CMsgCloseDevTools
 browser_handle
-(\r"=\n
 CMsgUnlockH264
 browser_handle
 \n\vunlock_code
@@ -4659,7 +4570,6 @@ monitor_bottom
 \n\nusable_top
 \n\fusable_right
 \n\rusable_bottom
-(\r"-\n
 CMsgClearAllCookies
 browser_handle
 (\r"<\n\rCMsgScreenDPI
@@ -4667,10 +4577,8 @@ browser_handle
 \n\vdpi_scaling
 CMsgAckScreenDPI
 browser_handle
-(\r")\n
 CMsgAuthedSteamDomains
 domains
-(\t"%\n
 CMsgSteamAuthNeeded
 filler
 CMsgSteamAuthCookiesSet
@@ -4725,22 +4633,17 @@ CMsgJSRaiseException
 browser_handle
 owning_browser_handle
 \n\texception
-(\t"[\n
 CMsgLoadLocalization
 browser_handle
 localization_path
 language
-(\t"2\n
 CMsgNotifyUserActivation
 browser_handle
-(\r"/\n
 CMsgSetNetFakeLocalSystemState
 state
-(\r"J\n
 CMsgSetGameOverlayTargetPIDs
 browser_handle
 \n\ntarget_pid
-(\r"d\n
 CMsgGameOverlayTargetTextureID
 browser_handle
 \n\ntarget_pid
@@ -4768,19 +4671,14 @@ height
 \n\nmax_height
 CMsgShowWindow
 browser_handle
-(\r"(\n
 CMsgHideWindow
 browser_handle
-(\r"0\n
 CMsgBringWindowToFront
 browser_handle
-(\r"1\n
 CMsgSetForegroundWindow
 browser_handle
-(\r"3\n
 CMsgMaximizeRestoreWindow
 browser_handle
-(\r",\n
 CMsgMinimizeWindow
 browser_handle
 CMsgShowBrowserContextMenu
@@ -4798,7 +4696,6 @@ misspelled_word
 edit_state_flags
 ContextCommand
 label
-(\t"J\n
 CMsgHandleContextMenuCommand
 browser_handle
 \n\ncommand_id
@@ -4812,21 +4709,16 @@ height
 CMsgSetTouchGesturesToCancel
 browser_handle
 gestures
-(\r"=\n
 CMsgImeSetComposition
 browser_handle
 text
-(\t"9\n
 CMsgImeCommitText
 browser_handle
 text
-(\t"2\n
 CMsgImeCancelComposition
 browser_handle
-(\r"N\n
 CMsgImeCompositionRangeChanged
 browser_handle
-(\r"B\n
 CMsgInspectElement
 browser_handle
 (\r"8\n\rCMsgDisableF5
@@ -4834,7 +4726,6 @@ browser_handle
 disable
 CMsgStartDownload
 browser_handle
-(\t"L\n
 CMsgSetWindowStackingOrder
 browser_handle
 estackingorder
@@ -4843,17 +4734,14 @@ browser_handle
 message
 args
 requesting_url
-(\t"9\n
 CMsgBlockedRequest
 browser_handle
-(\t"B\n
 CMsgBrowserFocusChanged
 browser_handle
 focused
 CMsgSetProtocolBlockList
 browser_handle
 list
-(\t"J\n
 CMsgSetForceDeviceScaleFactors
 \n\tdpi_scale
 \n\rbrowser_scale
@@ -4861,10 +4749,8 @@ CMsgSetForceDeviceScaleFactors
 ui_mode
 CMsgSetSteamBetaName
 steam_beta_name
-(\t"*\n
 CMsgPopupCreated
 browser_handle
-(\r"F\n
 CMsgSetVRKeyboardVisibility
 browser_handle
 visible
@@ -4875,7 +4761,6 @@ $\n k_EJSRegisterMethodType_Function
 $\n k_EJSRegisterMethodType_Callback
 k_EJSRegisterMethodType_Promise
 AnimatingImagePanel
-%s%d
 , string image
 m_Frames
 N4vgui19AnimatingImagePanelE
@@ -4950,15 +4835,11 @@ opening file for edit %s\n
 edit %s
 ComboBox scrollbar
 ComboBox
-%s %d
 PanelGrid
 item%d
 Grid item #%d
 < no direct container >
-%s="%s" 
-%s="..." 
 param
-%s / %s
 selection_name
 selection_class
 #debug_selection
@@ -5051,7 +4932,6 @@ className
 /data/src/vgui2/controls/BuildFactoryHelper.cpp
 CBuildFactoryHelper:  Factory for '%s' already exists!!!!\n
 url 
-      
 , string command, int default
 _actionMessage
 CanBeDefaultButton
@@ -5699,7 +5579,6 @@ m_SeparatorPanels.Count() == 0
 GetVParent()
 MenuItemHighlight
 relative
-row != -1
 m_bCheckable
 /data/src/public/vgui_controls/MenuItem.h
 CloseMenu
@@ -5817,7 +5696,6 @@ DefaultVerySmall
 Tooltip.Delay
 Tooltip.Anchor
 IgnoreScheme
-%s%s=%s
 format
 Panel::OnThink
 DropContext
@@ -6133,7 +6011,6 @@ m_bitsMigratedBuckets
 maxchars
 http://
 https://
-ftp://
 mailto:
 TextClicked
 RichText::DrawString
@@ -6141,7 +6018,6 @@ startIndex < m_TextStream.Count()
 /data/src/vgui2/controls/RichText.cpp
 RichText::ParseTextStringForURL
 href=
-</a>
 0123456789ABCDEF
 elem >= 0 && num >= 0 && INT_MAX - elem >= num
 elem + num <= Count()
@@ -6390,7 +6266,6 @@ PathLabel
 #VGui_CreateFolder
 CreateButton
 Create
-%s_%s
 #vgui_CreateDirectoryFail_AlreadyExists
 #vgui_CreateDirectoryFail_Title
 #vgui_CreateDirectoryFail_Info
@@ -6420,7 +6295,6 @@ filter
 filterinfo
 curFilter[0] == '*' && curFilter[1] == '.'
 /data/src/vgui2/controls/FileOpenDialog.cpp
-%s %s
 Couldn't format time value %llu
 filesize
 modified
@@ -6483,8 +6357,6 @@ pBlob
 CMemoryPool::Alloc: ran out of memory
 k_nMemPoolMagic_Free == *(( (int *) returnBlock) - 1)
 CMemoryPool
-\t\n\n\v
-\f\f\f\f\f\f\f\f\f\f
 no error
 \ at end of pattern
 \c at end of pattern
@@ -6573,20 +6445,12 @@ group name must start with a non-digit
 parentheses are too deeply nested (stack check)
 \P{Xps}
 \P{Xan}
-\P{Lu}
-\P{Ll}
-\P{L}
 \p{Xps}
 \p{Xan}
-\p{Lu}
-\p{Ll}
-\p{L}
 \p{Xwd}
 \P{Xwd}
 \p{Xsp}
 \P{Xsp}
-\p{Nd}
-\P{Nd}
 alpha
 lower
 upper
@@ -6601,8 +6465,6 @@ punct
 space
 word
 xdigit
-\b(?<=\w)
-\b(?=\w)
 MARK
 ACCEPT
 COMMIT
@@ -6610,8 +6472,6 @@ FAIL
 PRUNE
 SKIP
 THEN
-[:<:]]
-[:>:]]
 DEFINE
 UTF8)
 UTF)
@@ -6721,7 +6581,6 @@ Thai
 Tibetan
 Tifinagh
 Ugaritic
-\t\n\v\f\r
  !"#$%&'()))*+,-./0123456789:;<=>?@ABBCDEFGHIGJKLLBMBBNOPQRSTUVWXYZ[\]^G___________________________________________________`___________________________________________________________________________________________________________________________________________________________________abccccccccdeefghijklmnopqrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstyzzzzzzzzzzzzzzzz{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{__|}~
 OOOOOO
 OOOOOOOOO
@@ -6738,24 +6597,7 @@ OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
 OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{
 {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{
-!\t\fG 
-!\t\fK 
-!\t\f\t
-!\t\f\r
-\t\f" 
-\t\f; 
-\t\f& 
-\t\f3 
-\t\f/ 
-\t\f7 
-\t\f+ 
-\t\fC 
-!\t\f?
-!\t\fGA
-!\t\fK
-\t\n\v\f\r
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
-\t\n\v\f\r
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
 __gnu_cxx::__concurrence_lock_error
 __gnu_cxx::__concurrence_unlock_error
@@ -6801,11 +6643,7 @@ N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
 N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
 bad_function_call
 St17bad_function_call
-\v\v\v\v\r\r
-\t\rK~\n
 CH\f1
-I\r]P`
-H;!}#@i
 FoCLcx
 basic_ios::clear
 St9basic_iosIcSt11char_traitsIcEE
@@ -6814,10 +6652,6 @@ St8ios_base
 St13basic_istreamIwSt11char_traitsIwEE
 basic_string::erase
 %s: __pos (which is %zu) > this->size() (which is %zu)
-%.*Lf
-%m/%d/%y
-%H:%M
-%H:%M:%S
 St9time_base
 St10money_base
 St13messages_base
@@ -6895,7 +6729,6 @@ JArray
 auto:
 VTT for 
 construction vtable for 
--in-
 typeinfo for 
 typeinfo name for 
 typeinfo fn for 
@@ -6930,8 +6763,6 @@ global destructors keyed to
 complex 
 imaginary 
  __vector(
-(...
-...)
 std::allocator
 std::basic_string
 std::string

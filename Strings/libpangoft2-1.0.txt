@@ -1461,7 +1461,6 @@ BasicScriptEngineFc
 basic_engine_shape
 hb-buffer.cc
 have_output
-i <= len
 i <= out_len + (len - idx)
 idx >= count
 !allocated_var_bytes[i]
@@ -2061,7 +2060,6 @@ num_items > 0
 hb-ot-layout.cc
 hb-ot-layout-gsubgpos-private.hh
 !buffer->has_separate_output ()
-    
 bool OT::hb_apply_context_t::skipping_backward_iterator_t::prev()
 bool OT::hb_apply_context_t::skipping_forward_iterator_t::next()
 bool apply_string(OT::hb_apply_context_t*, const typename Proxy::Lookup&, const hb_ot_layout_lookup_accelerator_t&) [with Proxy = GPOSProxy, typename Proxy::Lookup = OT::PosLookup]
@@ -2145,13 +2143,8 @@ void initial_reordering_consonant_syllable(const hb_ot_shape_plan_t*, hb_face_t*
 \n\t\n\t\t\t\n\t\n\t\t
 \n\t\n\t\t\t\n\t\n\t\t
 \t'\t8\tI\tZ\tx\t
-\n<\nY\nj\n
-\v-\v>\v\\vz\v
 \f$\f1\f=\fH\fU\fa\fl\fy\f
 \r#\r4\rE\rV\rg\r
-\v\v\v\v\v\v\v\v\v\v
-\v\v\v\v\v\v\v\v\v\v
-\v\v\v\v\v\v\v\v\v
 \v\v\v\v\v\v\v\v\v\v\v\v
 \v\f\f\v\n\f\v\n\f\v\n\f\v\t\f
 \v\f\f\v\n\f\v\n\f\v\n\f\v\t\f
@@ -2172,15 +2165,6 @@ myanmar_category
 myanmar_position
 default
 fhprferpfwlbftspserpsvbaswlbstsptsidmvbamwlb
-\t\n\v\f\r
- !"#$
- !"#
- !"#
- !"#
- !"#
- !"#
- !"#
- !"#
 *********+******\r***
 ****************\r***
 *\r*******-******\r*
@@ -2190,26 +2174,9 @@ fhprferpfwlbftspserpsvbaswlbstsptsidmvbamwlb
 **************\r***
 *******.******\r/**
 **************\r/**
- !"#$
- !"#
-****
-*\t\n\v\f\r
-*******
-**\t\n\v\f\r
-*******
-******\r
 **************\r
 **************\r
 **************\r*
-*******
-**\t*\v*\r
-*******
-**\t***\r
-*******
-**\t\n\v*\r
-*******
-**\t\n\v\f\r
- #$()*
 sea_category
 sea_position
 ferpfvbafwlbftspserpsvbaswlbstsptsid
@@ -2243,7 +2210,6 @@ Fontconfig warning: Directory/file mtime in the future. New fonts may not be det
 Fontconfig warning: <name> tag has target="font" in a <match target="pattern">.\n
 /home/buildbot/buildslave/pango_linux/build/fontconfig-2.11.1/lib32/etc/fonts
 \ncharsets %d -> %d leaves %d -> %d\n
-\t\n\v\f\r
  !"#$%&'()*+,-./01234
 789:;<=>?@ABCDEFGHIJKLMNOPQRST
 !#$%&()*+./0123456789;<>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[]^abcdefghijklmnopqrstuvwxyz{|}~(w)
@@ -2254,13 +2220,10 @@ True
 False
 <unknown>
 <void>
-%d(i)
-%g(f)
 [%g %g; %g %g]
  [marker] 
  [marker]
 Null pattern
-\t%s:
 Integer
 Double
 String
@@ -2496,41 +2459,21 @@ zh-cn
 \fzh-hk
 zh-sg
 zh-mo
-\t\fen
-\t en
-\t$en
-\t(en
-\t,en
 \t0en
 \t4en
-\n\fes
-\n es
-\n$es
-\n(es
-\n,es
 \n0es
 \n4es
 \n8es
-\n<es
-\n@es
 \nDes
 \nHes
 \nLes
 \nPes
-\f\ffr
-\f fr
-\f$fr
-\f(fr
-\f,fr
 \f0fr
 \f4fr
-\t<en
-\t@en
 \tDen
 \tHen
 \nTes
 \f8fr
-\f<fr
 a100
 a101
 a102
@@ -2634,11 +2577,8 @@ a203
 a204
 a205
 a206
-}\fUt]
-\f$o,
 vRQ>
 \r8STs\ne
-\njv.
 LwH'
 0123456789abcdef
 /usr/share/fonts
@@ -2652,9 +2592,7 @@ normalized: %s -> %s\n
 Unable to normalize %s\n
 font charset
 %s charset
-\n%s(%u) 
  %04x
- }\n\t
 FcLangSet 
  contains 
 \tMissing bitmap %s\n
@@ -2684,78 +2622,38 @@ zh-hk
 zh-mo
 zh-sg
 zh-tw
-B \t%B \t%
-B"\tdB"\td
 CB$F
-\n@e_6
-t!! 
- p:@(
-\t>2R
 Az@{EG
-M\t@\r
-e\f "
-\n%B(
-$H*(
 k(I\tAB
 E\f\nBP
 @1PD
 ,D0j
-Y.`A
-&CR]
-$4K\f
-@!0I
- Tb\f
 b%DD
 TMu,
 AHNAn"
 nJ,pf
 XP@n2
-\nB@H;
-\r" "TH
-"1@B
-B0  \vO
 B\nU0
-\r` \f@\t
 7HMz
 2*E{1
- \tTM
-e\n\]$
 DRW+
-7<&\f
-6[I\r
 j02^
-E@\v&T
 BcSX
 !Ft2
 \fdUy
 \t0PP
-nK*&
 2Jq]\nU
-\n&bD
 9`B\fY
-9@Qx,)
-($A\f
-\t,a0
-$ P 
-_}{w
-V\r~_
 S5|D~
 \vD]GW
-\t\n\v\r
- !"#
-%&'()*+
 -./123456789:;<=
 BDEC
 FGHIJK
 OPQRST
-_`ab
 cdefgh
 uvwxy
-{|}~
-\t\n\v\f\r
  !"#%'()*+.01234569;<=8>?@ABCDEFGHIJLMPQSVTUXYZ[\]_`bdefghiklnpqrtuwx{|}~
 $&-/7:KNORW^acjmosyz
- %s: %g 
 Match 
 Score
 Best score
@@ -2774,11 +2672,8 @@ IA__FcFontRenderPrepare
 IA__FcFontMatch
 IA__FcFontSetSort
 IA__FcFontSort
-?-,:
 %lg %lg %lg %lg
 %g %g %g %g
-\-:,
-\=_:,
 aspect
 globaladvance
 rasterizer
@@ -3023,7 +2918,6 @@ Created CACHEDIR.TAG at %s\n
 write cache
 0123456789abcdefFcCacheFini
 Signature: 8a477f597d28d172789f06886806bc55\n# This file is a cache directory tag created by fontconfig.\n# For information about cache directory tags, see:\n#       http://www.brynosaurus.com/cachedir/\n
-%ld\n
 properties
 kerning
 glyph-dict
@@ -3549,12 +3443,7 @@ Ming(for ISO10646)
 MingLiU
 PMingLiU
 MingLi43
-Z\n9|
 FC\r4
-_Zt@
-      
-!!!!!!
-!!!!
                                 
 pshinter
 StandardEncoding
@@ -3705,8 +3594,6 @@ RELATIVE_WEIGHT
 RESOLUTION
 _MULE_BASELINE_OFFSET
 _MULE_RELATIVE_COMPOSE
-\n\v\f\r
-\n\v\f\r
 1.2.46
 cinu
 cinu
@@ -3715,7 +3602,6 @@ bmys
 cinu
 cinu
 sijs
-  bg
 5gib
 snaw
 ahoj
@@ -3756,7 +3642,6 @@ ltit
 raster5
 raster1
 1000 160
-%f %f
 Times New Roman
 FreeSerif
 Script
@@ -3777,10 +3662,6 @@ INFINALITY_FT_BOLD_EMBOLDEN_X_VALUE
 INFINALITY_FT_BOLD_EMBOLDEN_Y_VALUE
 4333333
 1.2.3.4
-\n\v\f\r
- !"#
-\n\v\f\r
- !"#
 StartFontMetrics
 Ascender
 AxisLabel
@@ -4181,83 +4062,21 @@ periodcentered
 space
 Tcommaaccent
 tcommaaccent
-:\n@zH
 PmXh]=b
 j[ros
-\t,\tm\ts
-\t\r\t!\t%
-\t4\tN\t\a
-\t<\tF
-G\n3\n=\nk\ns\n
-\v'\v4\vA\vZ\vk
-\nE\nL\n^
-\vG\vO
-\f(\fM\fu\f
-\f.\f7
-\f?\fD
-\fS\f]
-\fd\fm
-\r%\r^\r
-\r-\r4\rT
-\r<\rA
-\rf\rp\r
-%a2\t
-%T4\n
-V \v 
- < C O [ c
- % 0
-W { 
-!#!/
-Y!Q!t!
-"("4"<"Da
-!W!h
-"K"q
-"S"^
-#!#L
-#'#:
-#\#g#w#
-(D(~(
-$2$r$
 '!$J$N$R$V$Z$^$b$f$j$n0
 '\r%2%6%:%>%B%F%J%N%R%V0
-%r%v%z%~%
 &2&6&:&>&B&F&J&N&R&V0
-&r&v&z&~&
 ' '$'(','0'4'8'<'@0
 '\'`'d'h'l'p't'x'|'
 ( ($(((,(0(4(8(<(@0
 (Z(^(b(f(j(n(r(v(z1
-)*)4);
-)P)y)
-)_)n
-*%*1
-*I*T*e*l*u
-*Z*_
-+!+5-
 .\v1o0
-+'+.
-+>-V-
-0\t+R+f+
-, ,^,
-+Z+^+b7
-2\n+|+
-%4\n+
 /5\n,6,:,>,B,F,J,N,R,V,Z0
-\n6\n,t,x,|,
-47\n,
-=8\n,
 G9\n-.-2-6-:->-B-F-J-N-R0
-0\n-v-z-~-
 1"1i3
-.".08
-.(.,1
 .B.F.J.N.R.V.Z.^2
-/./f/
-!1\n.
-+2\n.
-/"/&/*0
 :4\t/B/F/J/N/R/V/Z/^/b0
-I5\t/z/~/
 050s0
 0!0%0)0-014
 7\n0K0O0S0W0[0_0c0g0k0o0
@@ -4273,44 +4092,18 @@ I5\t/z/~/
 3h3q
 4j4r4}4
 575A
-5 5'
 5G5S
 5_5i5p
-6*6.6[
 646B
 6K6S
 6o6v6
 797k7
 7F7W7c
-8&8=
 8n8y
-9"9*
 9@9Y9`9y9
 9F9O
 9g9p
-b:.:
-<\v<I<
->H>T>
-@'@0a
-:>:H:`:g:
-:n:w
-;(;1;?;];
-;E;T
-;d;q
-<#<*
-<1<:
-<U<`<k<y<
 >7>Ba
-=!=5
-=S=b
->\>i>t
-?\n? ?(?-
-?@?j
-[?O?T?Y?e
-]?z?
-@8@C@N
-@U@s
- "@^@h
 AiAtA
 E+E\HTH\HfHrH
 A*A3
@@ -4340,7 +4133,6 @@ N;NHNQNkN
 J1J7JU
 I&I,I:IJ
 IaIrI
-  Iz
 J?JH
 JvKsK}l\tJ
 K&K8KFKQ
@@ -4352,13 +4144,11 @@ LaLj
 MJM|a
 MRM\Mc
 MjMs
-N$N/
 NWNb
 NqNy
 O5OFO\OgO
 OQOV
 OpOti
-P(P;P`
 P.P5
 PAPU
 R%R<RqS
@@ -4376,7 +4166,6 @@ T#T.Tk
 T4T;
 TETNTc
 TTT[
- &Tv
 UEUeUt
 KUMUX
 V,V7VB
@@ -4387,37 +4176,16 @@ WiWr
 XCXVXac
 XIXP
 Y]Ym[u[
-]!])a
 YLYVh
-Y-Y=
 YeYii
 ZDZUZ]Zj
 Z!Z1
 [#[/[:[[[c[n
-[@[G
-[N[T
 \!\(\A\\\~\
-\/\8
-\H\S
-\b\t
-]0]8
-g]a^+^B^
-_A`:`
 a'aCaYb"b8b
-a\t]u]
-^1^;
-^L^S^\^r
-^d^i
-_ _/
-`*`0a
-_W_a_x_
-_g_r
-`B`M`X
-`^`i
 a-a8
 aJaP
 aeam
-`a~a
 b(b0
 bBbMb
 bTbm
@@ -4439,7 +4207,6 @@ f!f=fEfwf
 f'f5
 fPfo
 fWfc
-h.h>
 Ho\thwh
 i(i4i:iP
 -j'j2j>jU
@@ -4448,7 +4215,6 @@ qYqaqnq
 nPnq
 k\vnK
 k k.k;m
-n n,
 kZkjk
 lElblrl
 l*l3
@@ -4461,7 +4227,6 @@ n^nf
 oEoOoZoaozo
 ohoq
 p#p7pP
-q!q)
 q4qIqQ
 r*r4r;
 rQr\
@@ -4479,7 +4244,6 @@ tUt[
 tlt~
 uKu`
 uluzu
-v\fv(
 wDwNwYw`wy
 wgwp
 x>xoxyx~
@@ -4488,18 +4252,6 @@ y'y6y?yMa
 ymyx
 zCzI
 zezn
-}V}|~
-~-~E~W~
-Em\n{C|
-|=|K|^|n|
-{U{c{
-| |4
-}%}.}I
-}6};
-@}`}i
-~3~8
-~c~{~
-~i~p
 Baskerville
 Garamond
 Optima
@@ -8980,4 +8732,3 @@ ceil@@GLIBC_2.0
 hb_buffer_add
 ft_mem_dup
 GCC: (crosstool-NG 1.17.0) 4.6.3
-F&=O
