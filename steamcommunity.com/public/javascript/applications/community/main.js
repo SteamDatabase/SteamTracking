@@ -607,7 +607,7 @@
         "./sales_greek.json": [22250, 5651],
         "./sales_hungarian.json": [56715, 4278],
         "./sales_indonesian.json": [86570, 9367],
-        "./sales_italian.json": [75750, 1783],
+        "./sales_italian.json": [53369, 1783],
         "./sales_japanese.json": [95849, 8064],
         "./sales_koreana.json": [22417, 5184],
         "./sales_latam.json": [56969, 2744],
@@ -652,7 +652,7 @@
         "./sales_greek.json": [22250, 5651],
         "./sales_hungarian.json": [56715, 4278],
         "./sales_indonesian.json": [86570, 9367],
-        "./sales_italian.json": [75750, 1783],
+        "./sales_italian.json": [53369, 1783],
         "./sales_japanese.json": [95849, 8064],
         "./sales_koreana.json": [22417, 5184],
         "./sales_latam.json": [56969, 2744],
@@ -15549,8 +15549,8 @@
         S0: () => le,
         gB: () => pe,
       });
-      var i = r(51614),
-        n = r(20194),
+      var i = r(61739),
+        n = r(37674),
         a = r(56545),
         s = r(23809),
         o = r(80613),
@@ -41437,8 +41437,8 @@
       "use strict";
       r.d(t, { L: () => o, s: () => s });
       var i = r(90626),
-        n = r(75233),
-        a = r(80097);
+        n = r(29385),
+        a = r(40485);
       r(84811);
       function s(e) {
         const t = i.useRef(o);

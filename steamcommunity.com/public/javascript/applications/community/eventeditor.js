@@ -6883,7 +6883,7 @@ License: MIT
       var ja = a(63556),
         za = a(11833),
         qa = a(71298),
-        Va = a(20194);
+        Va = a(37674);
       function Wa(e) {
         const { data: t, isLoading: a } = (0, Va.I)({
           queryKey: ["PartnerInfoList", e],

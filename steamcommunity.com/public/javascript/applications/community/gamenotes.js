@@ -48,9 +48,9 @@
         ShortcutNotes: (e, t) => `/notes/shortcut/${e}/${null != t ? t : ""}`,
       };
       var s = r(17083),
-        i = r(20194),
-        l = r(75233),
-        c = r(51614);
+        i = r(37674),
+        l = r(29385),
+        c = r(61739);
       function u(e) {
         return e.trim();
       }
