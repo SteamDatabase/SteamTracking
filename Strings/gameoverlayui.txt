@@ -790,6 +790,7 @@ $\n k_EJSRegisterMethodType_Function
 17CScreenshotThread
 17DirectoryTreeView
 17LayoutDebugDialog
+18:10:51
 18CJSCallbackPromise
 18CMsgBlockedRequest
 18CMsgBrowserResized
@@ -854,7 +855,6 @@ $\n k_EJSRegisterMethodType_Function
 21CMsgSetWindowPosition
 21CUtlCStringConversion
 21CreateDirectoryDialog
-22:43:40
 22CFrameEventPerfTracker
 22CJSCallbackFunc_HTMLJS
 22CMsgAckPIDShuttingDown
@@ -897,7 +897,6 @@ $\n k_EJSRegisterMethodType_Function
 27CMsgDraggableRegionsChanged
 27CMsgFocusedNodeTextResponse
 27CMsgForcePopupsToDirectHWND
-27CMsgGameOverlayTexturePaint
 27CMsgHorizontalScrollBarSize
 27CMsgNeedsSharedTexturePaint
 27CMsgPopupHTMLWindowResponse
@@ -910,9 +909,7 @@ $\n k_EJSRegisterMethodType_Function
 28CMsgJSValue_JSObjectProperty
 28CMsgScalePageToValueResponse
 28CMsgScreenInformationChanged
-28CMsgSetGameOverlayTargetPIDs
 28CMsgSetTouchGesturesToCancel
-30CMsgGameOverlayTargetTextureID
 30CMsgImeCompositionRangeChanged
 30CMsgSetForceDeviceScaleFactors
 30CMsgSetLocalFileRequestMapping
@@ -1100,6 +1097,7 @@ Attempted to change replicated CVar when you are not the GM\n
 Attempting to purchase same app in different packages
 Audio Behind
 Audio Init Failed
+Aug 13 2024
 August
 Aura
 Authorized Device
@@ -1484,8 +1482,6 @@ CMsgFocusedNodeText
 CMsgFocusedNodeTextResponse
 CMsgForcePopupsToDirectHWND
 CMsgFullRepaint
-CMsgGameOverlayTargetTextureID
-CMsgGameOverlayTexturePaint
 CMsgGetCookiesForURL
 CMsgGetCookiesForURLResponse
 CMsgGetZoomResponse
@@ -1539,7 +1535,6 @@ CMsgScreenInformationChanged
 CMsgSearchResults
 CMsgSetForceDeviceScaleFactors
 CMsgSetForegroundWindow
-CMsgSetGameOverlayTargetPIDs
 CMsgSetHTMLTitle
 CMsgSetHorizontalScroll
 CMsgSetLocalFileRequestMapping
@@ -2466,7 +2461,6 @@ January
 Javanese
 JoinedGroup
 Joystick
-Jul 30 2024
 July
 June
 KEY_0
@@ -4382,7 +4376,6 @@ ZooPropertyPage
 \n\nrequest_id
 \n\nscroll_max
 \n\nsource_pid
-\n\ntarget_pid
 \n\ntype_flags
 \n\nuint_value
 \n\nusable_top
@@ -6437,7 +6430,6 @@ textAlignment
 textHidden
 textalignment
 textfile
-texture_handle
 textureid
 the actual field type (for enums T should be the generated enum 
 the global scope

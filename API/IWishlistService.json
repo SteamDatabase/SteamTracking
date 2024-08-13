@@ -1,0 +1,24 @@
+{
+    "name": "IWishlistService",
+    "methods": [
+        {
+            "name": "GetWishlistItemCount",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Get the number of items on a user's wishlist.",
+            "parameters": [
+                {
+                    "name": "key",
+                    "type": "string",
+                    "optional": false,
+                    "description": "Access key"
+                },
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false
+                }
+            ]
+        }
+    ]
+}

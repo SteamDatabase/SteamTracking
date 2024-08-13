@@ -408,7 +408,7 @@
 
 "Friends_PlayersDialog_Title"				"Spieler"
 "Friends_CurrentPlayers_TabTitle"			"Aktuelles Spiel"
-"Friends_RecentPlayers_TabTitle"			"Vorherige Spiele"
+"Friends_RecentPlayers_TabTitle"			"Vor Kurzem gespielt"
 "Friends_AddPlayerAsFriend"				"Freund hinzufügen …"
 "Friends_NoRecentlyPlayedWithUsers"		"Sie haben in letzter Zeit keine Steam-Spiele mit Ihren Freunden gespielt."
 "Friends_NoCurrentlyPlayedWithUsers"		"Keine Steam-Nutzer vom Spielserver gemeldet."

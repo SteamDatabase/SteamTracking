@@ -159,6 +159,7 @@
     "VoiceChat_Switch": "切換至聊天室",
     "VoiceChat_InviteToChannel": "邀請至語音頻道",
     "VoiceChat_SendInviteMessage": "傳送邀請訊息",
+    "VoiceChat_AudioLevelDb": "%1$s dB",
     "VoiceChat_Unavailable_NotFriend": "無法使用語音：%1$s 不在您的好友名單中。",
     "VoiceChat_Unavailable_NotOnline": "無法使用語音：%1$s 目前不在線上。",
     "VoiceChat_Unavailable_NotInBeta": "無法使用語音：%1$s 未執行新的聊天測試版。",

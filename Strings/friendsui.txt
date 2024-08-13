@@ -286,6 +286,7 @@ $\n k_SystemAudioPortDirection_Input
 %\n!k_EClientNotificationType_Invalid
 %\n!k_ECommunityItemClass_AvatarFrame
 %\n!k_ECommunityItemClass_BoosterPack
+%\n!k_ECompromiseDetectionType_Manual
 %\n!k_EExternalSaleEventType_Showcase
 %\n!k_EGameRecordingErrorLowDiskSpace
 %\n!k_EGameRecordingType_NotRecording
@@ -1475,7 +1476,6 @@ $\n k_SystemAudioPortDirection_Input
 27CMsgFocusedNodeTextResponse
 27CMsgForcePopupsToDirectHWND
 27CMsgGCRoutingProtoBufHeader
-27CMsgGameOverlayTexturePaint
 27CMsgHorizontalScrollBarSize
 27CMsgNeedsSharedTexturePaint
 27CMsgPopupHTMLWindowResponse
@@ -1489,7 +1489,6 @@ $\n k_SystemAudioPortDirection_Input
 28CMsgJSValue_JSObjectProperty
 28CMsgScalePageToValueResponse
 28CMsgScreenInformationChanged
-28CMsgSetGameOverlayTargetPIDs
 28CMsgSetTouchGesturesToCancel
 28CTouchActionSetLayerAddedMsg
 28ParentalPlaytimeRestrictions
@@ -1510,7 +1509,6 @@ $\n k_SystemAudioPortDirection_Input
 2\r.ELogFileType
 2\r.EVideoFormat
 30CClientNotificationAchievement
-30CMsgGameOverlayTargetTextureID
 30CMsgImeCompositionRangeChanged
 30CMsgSetForceDeviceScaleFactors
 30CMsgSetLocalFileRequestMapping
@@ -2174,8 +2172,6 @@ CMsgFocusedNodeTextResponse
 CMsgForcePopupsToDirectHWND
 CMsgFullRepaint
 CMsgGCRoutingProtoBufHeader
-CMsgGameOverlayTargetTextureID
-CMsgGameOverlayTexturePaint
 CMsgGetCookiesForURL
 CMsgGetCookiesForURLResponse
 CMsgGetZoomResponse
@@ -2234,7 +2230,6 @@ CMsgScreenInformationChanged
 CMsgSearchResults
 CMsgSetForceDeviceScaleFactors
 CMsgSetForegroundWindow
-CMsgSetGameOverlayTargetPIDs
 CMsgSetHTMLTitle
 CMsgSetHorizontalScroll
 CMsgSetLocalFileRequestMapping
@@ -4540,7 +4535,6 @@ Zjz\v
 \n\nscreenshot
 \n\nscroll_max
 \n\nsource_pid
-\n\ntarget_pid
 \n\nticket_crc
 \n\ntimeout_ms
 \n\ntype_flags
@@ -7095,7 +7089,6 @@ textAlignment
 textHidden
 textalignment
 textfile
-texture_handle
 textureid
 the actual field type (for enums T should be the generated enum 
 the global scope

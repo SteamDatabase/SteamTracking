@@ -144,25 +144,17 @@ function maybe_open_log()
 		return 0
 	fi
 
-	local logger="${srt}/amd64/usr/bin/srt-logger"
-
-	if ! [ -x "$logger" ]; then
-		log "Couldn't find $logger, not logging to console-linux.txt"
-		return 0
-	fi
-
 	mkdir -p "$data/${STEAM_CLIENT_LOG_FOLDER:-logs}"
 
-	if [ -z "${SRT_LOG_TERMINAL+set}" ]; then
-		if [ -t 2 ] && SRT_LOG_TERMINAL=$(tty); then
-			export SRT_LOG_TERMINAL
-		else
-			export SRT_LOG_TERMINAL=
-		fi
+	if source "${srt}/usr/libexec/steam-runtime-tools-0/logger-0.bash" \
+		--filename=console-linux.txt \
+		--parse-level-prefix \
+		-t steam \
+	; then
+		log_opened=1
+	else
+		log "Couldn't set up srt-logger, not logging to console-linux.txt"
 	fi
-
-	exec > >( exec "$logger" --exec-fallback --filename=console-linux.txt -t steam ) 2>&1
-	log_opened=1
 }
 
 function distro_description()
@@ -587,6 +579,49 @@ function reset_steam()
 	return $STATUS
 }
 
+function is_steam_running()
+{
+	# Check that we have a valid pid file
+	local steam_pid_path="$HOME/.steam/steam.pid"
+	if [[ ! -e "$steam_pid_path" ]]; then
+		return 1
+	fi
+
+	# Check if the process exists - does it have a /proc entry?
+	local steam_pid=$(<"$steam_pid_path")
+	local pid_proc_dir="/proc/$steam_pid"
+	if [[ ! -e "$pid_proc_dir" ]]; then
+		return 1
+	fi
+
+	# Check for pid recycling. If this is the master steam process
+	# it must have openeded ~/.steam/steam.pipe
+	local pid_pipe_open_count=$(find "$pid_proc_dir/fd" -lname "$HOME/.steam/steam.pipe" | wc -l)
+	if [[ "$pid_pipe_open_count" -gt "0" ]]; then
+		# steam is running
+		return 0
+	else
+		# this is a stale pid file, steam is not running
+		return 1
+	fi
+}
+
+function needs_symlink_repair()
+{
+	local symlinks=("$STEAMBIN32LINK" "$STEAMBIN64LINK" "$STEAMSDK32LINK" "$STEAMSDK64LINK" "$STEAMROOTLINK" "$STEAMDATALINK")
+
+	for symlink in "${symlinks[@]}"; do
+		# check that symlink exists and points to a valid directory
+		if [[ ! -L "$symlink" || ! -e "$symlink" ]]; then
+			# needs symlink repair
+			return 0
+		fi
+	done
+
+	# Looks okay
+	return 1
+}
+
 function steamos_arg()
 {
 	for option in "$@"
@@ -671,14 +706,17 @@ if [ "$INITIAL_LAUNCH" ]; then
 	if [ ! -e "$STEAMCONFIG" ]; then
 		mkdir "$STEAMCONFIG"
 	fi
-	if [ "$STEAMROOT" != "$STEAMROOTLINK" -a "$STEAMROOT" != "$STEAMDATALINK" ]; then
-		rm -f "$STEAMBIN32LINK" && ln -s "$STEAMROOT/$PLATFORM32" "$STEAMBIN32LINK"
-		rm -f "$STEAMBIN64LINK" && ln -s "$STEAMROOT/$PLATFORM64" "$STEAMBIN64LINK"
-		rm -f "$STEAMSDK32LINK" && ln -s "$STEAMROOT/linux32" "$STEAMSDK32LINK"
-		rm -f "$STEAMSDK64LINK" && ln -s "$STEAMROOT/linux64" "$STEAMSDK64LINK"
-		rm -f "$STEAMROOTLINK" && ln -s "$STEAMROOT" "$STEAMROOTLINK"
-		if [ "$STEAMDATALINK" ]; then
-			rm -f "$STEAMDATALINK" && ln -s "$STEAMDATA" "$STEAMDATALINK"
+
+	if ! is_steam_running || needs_symlink_repair; then
+		if [ "$STEAMROOT" != "$STEAMROOTLINK" -a "$STEAMROOT" != "$STEAMDATALINK" ]; then
+			ln -fsn "$STEAMROOT/$PLATFORM32" "$STEAMBIN32LINK"
+			ln -fsn "$STEAMROOT/$PLATFORM64" "$STEAMBIN64LINK"
+			ln -fsn "$STEAMROOT/linux32" "$STEAMSDK32LINK"
+			ln -fsn "$STEAMROOT/linux64" "$STEAMSDK64LINK"
+			ln -fsn "$STEAMROOT" "$STEAMROOTLINK"
+			if [ "$STEAMDATALINK" ]; then
+				ln -fsn "$STEAMDATA" "$STEAMDATALINK"
+			fi
 		fi
 	fi
 

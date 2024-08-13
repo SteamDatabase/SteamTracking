@@ -1180,6 +1180,10 @@ html.tablet .carousel__slider-tray-wrapper {
 .BasicUI ._2-l2M5GPuxKFwV8h1tc_fH span:last-child {
   padding-bottom: unset;
 }
+._1Zn_5pvuMbqr57ws1eJKe {
+  height: 100vh;
+  overflow-y: scroll;
+}
 
 body.SteamAwardsVoting {
   font-family: "Motiva Sans", Arial, Helvetica, sans-serif;

@@ -225,6 +225,10 @@
 .BasicUI ._2saJTAocZ9TnYXTGvnqUMC {
   text-overflow: ellipsis;
 }
+._3oDmKGyTBBm7i4DULjwYcC .nOdcT-MoOaXGePXLyPe0H,
+._3oDmKGyTBBm7i4DULjwYcC ._2saJTAocZ9TnYXTGvnqUMC {
+  color: inherit;
+}
 ._2saJTAocZ9TnYXTGvnqUMC {
   padding-left: 5px;
   color: #666;
@@ -232,6 +236,9 @@
 ._2saJTAocZ9TnYXTGvnqUMC.GamepadMode,
 .GamepadMode ._2saJTAocZ9TnYXTGvnqUMC {
   color: #67707b;
+}
+._3oDmKGyTBBm7i4DULjwYcC ._2saJTAocZ9TnYXTGvnqUMC {
+  color: inherit;
 }
 .nOdcT-MoOaXGePXLyPe0H {
   -webkit-mask: linear-gradient(

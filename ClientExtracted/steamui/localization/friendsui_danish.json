@@ -159,6 +159,7 @@
     "VoiceChat_Switch": "Skift til chatrum",
     "VoiceChat_InviteToChannel": "Inviter til stemmekanal",
     "VoiceChat_SendInviteMessage": "Send invitation",
+    "VoiceChat_AudioLevelDb": "%1$s dB",
     "VoiceChat_Unavailable_NotFriend": "Stemme ikke tilgængelig: %1$s er ikke på din venneliste.",
     "VoiceChat_Unavailable_NotOnline": "Stemme ikke tilgængelig: %1$s er ikke online på nuværende tidspunkt.",
     "VoiceChat_Unavailable_NotInBeta": "Stemme ikke tilgængelig: %1$s har ikke den nye chat-beta.",

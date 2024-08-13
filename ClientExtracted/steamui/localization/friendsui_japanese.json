@@ -159,6 +159,7 @@
     "VoiceChat_Switch": "チャットルームに変更",
     "VoiceChat_InviteToChannel": "ボイスチャンネルに招待",
     "VoiceChat_SendInviteMessage": "招待メッセージを送信",
+    "VoiceChat_AudioLevelDb": "%1$s dB",
     "VoiceChat_Unavailable_NotFriend": "ボイスは利用できません: %1$s はあなたのフレンドリストにいません。",
     "VoiceChat_Unavailable_NotOnline": "ボイスは利用できません: %1$s は現在オフラインです。",
     "VoiceChat_Unavailable_NotInBeta": "ボイスは利用できません: %1$s は新しいベータチャットを実行していません。",

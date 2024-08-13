@@ -525,16 +525,6 @@ message CMsgNeedsSharedTexturePaint {
 	optional uint32 pageserial = 8;
 }
 
-message CMsgGameOverlayTexturePaint {
-	optional uint32 browser_handle = 1;
-	optional uint32 width = 3;
-	optional uint32 height = 4;
-	optional uint32 scrollx = 5;
-	optional uint32 scrolly = 6;
-	optional float pagescale = 7;
-	optional uint32 pageserial = 8;
-}
-
 message CMsgGetZoom {
 	optional uint32 browser_handle = 1;
 }
@@ -846,17 +836,6 @@ message CMsgNotifyUserActivation {
 
 message CMsgSetNetFakeLocalSystemState {
 	optional uint32 state = 1;
-}
-
-message CMsgSetGameOverlayTargetPIDs {
-	optional uint32 browser_handle = 1;
-	repeated uint32 target_pid = 2;
-}
-
-message CMsgGameOverlayTargetTextureID {
-	optional uint32 browser_handle = 1;
-	optional uint32 target_pid = 2;
-	optional uint32 texture_handle = 3;
 }
 
 message CMsgDraggableRegionsChanged {

@@ -140,6 +140,8 @@ message CClientMetrics_DownloadRates_Notification {
 	optional uint32 cell_id = 1;
 	repeated .CClientMetrics_DownloadRates_Notification.StatsInfo stats = 2;
 	optional uint32 throttling_kbps = 3;
+	optional uint32 os_type = 4;
+	optional uint32 device_type = 5;
 }
 
 message CClientMetrics_ContentValidation_Notification {

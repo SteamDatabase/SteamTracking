@@ -863,13 +863,13 @@
     12229: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Jn: () => S,
-        SI: () => w,
-        qS: () => M,
-        d0: () => C,
-        iw: () => B,
-        UI: () => b,
-        aU: () => y,
+        Jn: () => C,
+        SI: () => S,
+        qS: () => v,
+        d0: () => M,
+        iw: () => w,
+        UI: () => y,
+        aU: () => B,
       });
       var i = r(56545),
         n = r(3411),
@@ -888,20 +888,23 @@
         return !!e;
       }
       var f = r(88350);
-      function b(e) {
-        const t = (0, d.KV)(),
-          r = (0, m.j4)();
-        return (0, u.I)({
-          queryKey: (0, c.GO)(r),
-          queryFn: () => C(t, r),
+      function b(e, t, r) {
+        return {
+          queryKey: (0, c.GO)(t),
+          queryFn: () => M(e, t),
           staleTime: 18e5,
-          ...e,
-        });
+          ...r,
+        };
       }
       function y(e) {
-        return b({ select: (e) => e.line_items?.length ?? 0, ...e });
+        const t = (0, d.KV)(),
+          r = (0, m.j4)();
+        return (0, u.I)(b(t, r, e));
       }
-      function B(e, t, r, a, o, m) {
+      function B(e) {
+        return y({ select: (e) => e.line_items?.length ?? 0, ...e });
+      }
+      function w(e, t, r, a, o, m) {
         if ((0, l.c2)(r)) {
           const l = (a || []).map((e) => ({ packageid: e }));
           return (
@@ -958,9 +961,9 @@
             )
           );
         }
-        return w(e, a, o).then(([e, i]) => {
+        return S(e, a, o).then(([e, i]) => {
           if ((p.Fm.Get().InvalidateCache(), e)) {
-            (0, c.LN)(t, r, M(i));
+            (0, c.LN)(t, r, v(i));
             const e = (a || []).map((e) =>
               i?.lineitems?.find((t) => t.package_item?.packageid === e),
             );
@@ -974,7 +977,7 @@
           return { success: !1 };
         });
       }
-      async function w(e, t, r, i) {
+      async function S(e, t, r, i) {
         const n = new FormData();
         t &&
           (1 === t.length
@@ -991,7 +994,7 @@
         const s = await a.json();
         return [!!s?.success, s?.contents];
       }
-      async function S(e, t, r, a, o) {
+      async function C(e, t, r, a, o) {
         const l = i.w.Init(n.c5);
         if (!t && !r)
           return (
@@ -1018,7 +1021,7 @@
           [m.GetEResult(), m.Body().toObject()]
         );
       }
-      async function C(e, t) {
+      async function M(e, t) {
         if ((0, l.c2)(t)) {
           const t = i.w.Init(n.aO);
           t.Body().set_user_country(g.iA.country_code);
@@ -1060,13 +1063,13 @@
           if (!t.gid) return;
           const r = i.w.Init(o.p3);
           r.Body().set_gidshoppingcart(t.gid);
-          return M(
+          return v(
             (await o.Q2.GetShoppingCartContents(e, r)).Body().toObject()
               .contents,
           );
         }
       }
-      function M(e) {
+      function v(e) {
         const t = { line_items: [] };
         return (
           e?.lineitems?.length &&
@@ -1109,9 +1112,9 @@
         preferenceControls: { isTechnicallyNecessary: !0 },
       };
       var a = r(90626),
-        s = r(30470);
+        s = r(66418);
       function o() {
-        return s.iA.logged_in
+        return s.i.logged_in
           ? { type: "account" }
           : { type: "anonymous", gid: i(n) };
       }
@@ -1129,15 +1132,15 @@
       "use strict";
       r.d(t, { Cd: () => c, GO: () => s, LN: () => m, m4: () => o });
       var i = r(79443),
-        n = r(30470);
+        n = r(66418);
       function a(e) {
         return (0, i.c2)(e) ? e.type : e.gid;
       }
       function s(e) {
-        return ["shopping_cart", a(e), n.iA.accountid];
+        return ["shopping_cart", a(e), n.i.accountid];
       }
       function o(e) {
-        return ["validate_checkout", a(e), n.iA.accountid];
+        return ["validate_checkout", a(e), n.i.accountid];
       }
       function l(e, t) {
         e.invalidateQueries({ queryKey: o(t) });
@@ -7735,7 +7738,6 @@
         tl: () => Je,
         tz: () => St,
         xt: () => Ht,
-        z2: () => _,
       });
       var i = r(80613),
         n = r(89068),
@@ -19973,6 +19975,16 @@
                     br: n.qM.readInt32,
                     bw: n.gp.writeInt32,
                   },
+                  renewal_price_in_cents: {
+                    n: 5,
+                    br: n.qM.readInt64String,
+                    bw: n.gp.writeInt64String,
+                  },
+                  formatted_renewal_price: {
+                    n: 6,
+                    br: n.qM.readString,
+                    bw: n.gp.writeString,
+                  },
                 },
               }),
             M.sm_m
@@ -23195,6 +23207,15 @@
         return i;
       }
     },
+    66418: (e, t, r) => {
+      "use strict";
+      r.d(t, { T: () => n, i: () => a });
+      var i = r(30470);
+      const n = window.Config ?? i.TS,
+        a = window.UserConfig ?? i.iA;
+      window.Config && Object.assign(i.TS, window.Config),
+        window.UserConfig && Object.assign(a, window.UserConfig);
+    },
     23809: (e, t, r) => {
       "use strict";
       r.d(t, {
@@ -23570,27 +23591,26 @@
         };
       }
     },
-    91674: (e, t, r) => {
+    60014: (e, t, r) => {
       "use strict";
       r.d(t, {
-        nn: () => c,
-        GM: () => m,
-        pn: () => _,
-        Nc: () => u,
-        n9: () => d,
-        Gd: () => p,
-        aL: () => g,
-        ru: () => h,
+        GM: () => c,
+        Gd: () => d,
+        Nc: () => m,
+        aL: () => _,
+        n9: () => u,
+        nn: () => l,
+        pn: () => p,
+        ru: () => g,
       });
       var i = r(90626),
         n = r(88350),
-        a = r(30470);
-      const s = window.Config ?? a.TS,
-        o = (window.UserConfig ?? a.iA, i.createContext({})),
-        l = i.createContext(void 0);
-      function c(e) {
+        a = r(66418);
+      const s = i.createContext({}),
+        o = i.createContext(void 0);
+      function l(e) {
         const { children: t, ...r } = e,
-          n = d(),
+          n = u(),
           a = i.useMemo(
             () => ({ ...n, ...r }),
             [
@@ -23603,9 +23623,9 @@
               r.depth,
             ],
           );
-        return i.createElement(o.Provider, { value: a }, t);
+        return i.createElement(s.Provider, { value: a }, t);
       }
-      function m(e) {
+      function c(e) {
         const { uiData: t, children: r } = e,
           n = i.useMemo(
             () => ({
@@ -23618,30 +23638,30 @@
             }),
             [t.domain, t.controller, t.method, t.submethod, t.feature, t.depth],
           );
-        return i.createElement(l.Provider, { value: n }, r);
+        return i.createElement(o.Provider, { value: n }, r);
       }
-      function u() {
-        const e = i.useContext(l),
-          t = d();
+      function m() {
+        const e = i.useContext(o),
+          t = u();
         return e || t;
       }
-      function d() {
-        return i.useContext(o);
+      function u() {
+        return i.useContext(s);
       }
-      function p(e, t) {
-        return _(d(), e, t);
+      function d(e, t) {
+        return p(u(), e, t);
       }
-      function _(e, t, r) {
+      function p(e, t, r) {
         return {
           ...e,
           feature: t || e.feature,
           depth: r || e.depth,
-          countrycode: s.COUNTRY,
-          is_client: s.IN_CLIENT,
+          countrycode: a.T.COUNTRY,
+          is_client: a.T.IN_CLIENT,
         };
       }
-      function g(e, t, r) {
-        const a = d();
+      function _(e, t, r) {
+        const a = u();
         return i.useMemo(
           () =>
             (function (e, t, r, i) {
@@ -23651,8 +23671,8 @@
           [e, a, t, r],
         );
       }
-      function h(e, t) {
-        const r = d();
+      function g(e, t) {
+        const r = u();
         return i.useMemo(
           () => n.A.GetLinkParam({ ...r, feature: e || r.feature }, t),
           [r, e, t],
@@ -28774,11 +28794,16 @@
       }
       function ae(e) {
         const t = (0, l.KV)();
-        return (0, a.I)({
-          queryKey: re(e),
-          queryFn: () => ne(t, e),
-          placeholderData: { settings: void 0, mapAppsAllowed: void 0 },
-        });
+        return (0, a.I)(
+          (function (e, t, r) {
+            return {
+              queryKey: re(t),
+              queryFn: () => ne(e, t),
+              placeholderData: { settings: void 0, mapAppsAllowed: void 0 },
+              ...r,
+            };
+          })(t, e),
+        );
       }
       function se(e, t) {
         return ["validateparentaltoken", e, t];
@@ -35595,10 +35620,13 @@
         return (0, a.I)({
           queryKey: We(e),
           queryFn: async () => {
-            const r = n.w.Init(h);
-            r.Body().set_family_groupid(e);
-            const i = await Re.GetFamilyGroup(t, r);
-            return je(i.GetEResult()), i.Body();
+            if (e) {
+              const r = n.w.Init(h);
+              r.Body().set_family_groupid(e);
+              const i = await Re.GetFamilyGroup(t, r);
+              return je(i.GetEResult()), i.Body();
+            }
+            throw 42;
           },
           staleTime: r,
         });
@@ -43453,6 +43481,12 @@
                     br: a.qM.readUint32,
                     bw: a.gp.writeUint32,
                   },
+                  os_type: { n: 4, br: a.qM.readUint32, bw: a.gp.writeUint32 },
+                  device_type: {
+                    n: 5,
+                    br: a.qM.readUint32,
+                    bw: a.gp.writeUint32,
+                  },
                 },
               }),
             I.sm_m
@@ -46353,7 +46387,7 @@
                 else {
                   let i = e[s];
                   this.BReplaceRollupItem(t, i.item) &&
-                    (i.item.read && (i.url = ne(n)),
+                    ((i.url = ne(n)),
                     (i.item = t),
                     (i.timestamp = t.timestamp),
                     (i.bSendToCallbackAsNew = r)),
@@ -46716,7 +46750,7 @@
         e.Body().set_filters(s.M$.fromObject(t));
       }
     },
-    16758: (e, t, r) => {
+    75279: (e, t, r) => {
       "use strict";
       r.d(t, { A: () => m });
       var i = r(14947),
@@ -46724,31 +46758,8 @@
         a = r(44332),
         s = r(61859),
         o = r(91675),
-        l = r(78327);
-      function c(e) {
-        return (function (e, t, r) {
-          switch (e) {
-            case "date_full":
-              return (0, s.$z)(t);
-            case "date_month":
-              return (0, o.sq)(new Date(1e3 * t));
-            case "date_quarter":
-              return (0, o.u6)(new Date(1e3 * t));
-            case "date_year":
-              return (0, o.vl)(new Date(1e3 * t));
-            case "text_comingsoon":
-              return r || (0, s.we)("#Store_ComingSoon_ComingSoon");
-            case "text_tba":
-              return r || (0, s.we)("#Store_ComingSoon_TBA");
-            default:
-              return "";
-          }
-        })(
-          e.coming_soon_display,
-          e.steam_release_date,
-          e.custom_release_date_message,
-        );
-      }
+        l = r(78327),
+        c = r(63369);
       class m {
         m_eItemType;
         m_unID;
@@ -47169,7 +47180,7 @@
             this.m_ReleaseInfo?.is_coming_soon)
           ) {
             if (this.m_ReleaseInfo?.coming_soon_display)
-              return c(this.m_ReleaseInfo);
+              return (0, c.d)(this.m_ReleaseInfo);
             if (this.m_ReleaseInfo?.custom_release_date_message)
               return this.m_ReleaseInfo.custom_release_date_message;
             const e = this.m_ReleaseInfo?.steam_release_date;
@@ -47879,7 +47890,7 @@
         h = r(68797),
         f = r(78327),
         b = r(72839),
-        y = r(16758);
+        y = r(75279);
       function B(e, t) {
         if (!e) return t;
         if (!t) return e;
@@ -48920,6 +48931,37 @@
             (e[(e.k_RejectNoDiscount = 16)] = "k_RejectNoDiscount"),
             (e[(e.k_RejectAlreadyDisplayed = 17)] = "k_RejectAlreadyDisplayed");
         })(i || (i = {}));
+    },
+    63369: (e, t, r) => {
+      "use strict";
+      r.d(t, { M: () => s, d: () => a });
+      var i = r(61859),
+        n = r(91675);
+      function a(e) {
+        return s(
+          e.coming_soon_display,
+          e.steam_release_date,
+          e.custom_release_date_message,
+        );
+      }
+      function s(e, t, r) {
+        switch (e) {
+          case "date_full":
+            return (0, i.$z)(t);
+          case "date_month":
+            return (0, n.sq)(new Date(1e3 * t));
+          case "date_quarter":
+            return (0, n.u6)(new Date(1e3 * t));
+          case "date_year":
+            return (0, n.vl)(new Date(1e3 * t));
+          case "text_comingsoon":
+            return r || (0, i.we)("#Store_ComingSoon_ComingSoon");
+          case "text_tba":
+            return r || (0, i.we)("#Store_ComingSoon_TBA");
+          default:
+            return "";
+        }
+      }
     },
     39012: (e, t, r) => {
       "use strict";
@@ -55695,7 +55737,7 @@
       r.d(t, { Ay: () => c, bi: () => o, op: () => l });
       var i = r(90626),
         n = r(94607),
-        a = r(91674);
+        a = r(60014);
       const s = i.createContext({
         AddImpression: () => {
           console.log("Impression Tracking not enabled");
@@ -59206,6 +59248,7 @@
         );
       }
       function _e(e) {
+        const [t, r] = (0, l.l)();
         return i.createElement(
           "svg",
           {
@@ -59219,10 +59262,10 @@
           },
           i.createElement(
             "g",
-            { "clip-path": "url(#clip0_29_13408)" },
+            { clipPath: r },
             i.createElement("path", {
-              "fill-rule": "evenodd",
-              "clip-rule": "evenodd",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
               d: "M0.400879 7.38525H36.4009V29.7798H0.400879V7.38525ZM12.6345 26.2414H9.28326L3.47884 10.909H7.0053L11.0355 22.5835L14.9563 10.909H18.4827L12.6345 26.2414ZM29.3047 26.2414H32.875L29.2609 20.437C30.1954 20.0281 30.9182 19.4294 31.4294 18.6409C31.9551 17.8524 32.2179 16.8667 32.2179 15.6839C32.2179 14.1799 31.7214 13.0117 30.7285 12.1794C29.7354 11.3324 28.1877 10.909 26.0849 10.909H20.3462V26.2414H23.566V21.0722H25.844H26.2163L29.3047 26.2414ZM23.566 18.3124V13.6469H25.8878C26.8954 13.6469 27.6254 13.8368 28.0781 14.2164C28.5454 14.5815 28.7791 15.1363 28.7791 15.8811C28.7791 16.6404 28.5381 17.2391 28.0562 17.6772C27.5889 18.1006 26.9318 18.3124 26.0849 18.3124H23.566Z",
               fill: "currentColor",
             }),
@@ -59232,7 +59275,7 @@
             null,
             i.createElement(
               "clipPath",
-              { id: "clip0_29_13408" },
+              { id: t },
               i.createElement("rect", {
                 width: "36",
                 height: "36",
@@ -61054,7 +61097,7 @@
       var i = r(90626),
         n = r(55963),
         a = r(78327),
-        s = r(91674),
+        s = r(60014),
         o = r(88350);
       function l(e) {
         const { children: t, ...r } = e,
@@ -62420,6 +62463,15 @@
           if (!e || 0 == e.length || "#" != e.charAt(0)) return;
           let t = this.m_mapFallbackTokens.get(e.substring(1));
           return void 0 !== t ? t : void 0;
+        }
+        static GetTokenWithFallback(e) {
+          if (!e) return "";
+          const t = (0, n.sf)(s.TS.LANGUAGE),
+            r = e.find((e) => e.language == t);
+          if (r) return r.localized_string;
+          const i = m.GetELanguageFallback(t),
+            a = e.find((e) => e.language == i);
+          return a?.localized_string ?? "";
         }
       }
       function u(e) {
@@ -65609,7 +65661,7 @@
         De = r(93676),
         Ae = r(75233),
         Pe = r(30470),
-        Le = r(91674),
+        Le = r(60014),
         We = r(82227),
         ke = r(78887),
         Ue = r.n(ke);
@@ -65672,12 +65724,12 @@
             r.e(6049),
             r.e(7908),
             r.e(1006),
-            r.e(1471),
+            r.e(4336),
             r.e(7576),
             r.e(7368),
             r.e(4571),
             r.e(8567),
-            r.e(6809),
+            r.e(7352),
             r.e(2965),
           ]).then(r.bind(r, 16546)),
         ),
@@ -65697,12 +65749,12 @@
             r.e(6049),
             r.e(7908),
             r.e(1006),
-            r.e(1471),
+            r.e(4336),
             r.e(7576),
             r.e(7368),
             r.e(4571),
             r.e(8567),
-            r.e(6809),
+            r.e(7352),
             r.e(2965),
           ])
             .then(r.bind(r, 16546))
@@ -65902,8 +65954,8 @@
               r.e(7436),
               r.e(7403),
               r.e(1006),
-              r.e(5048),
-              r.e(6086),
+              r.e(195),
+              r.e(7252),
               r.e(7725),
               r.e(6814),
             ]).then(r.bind(r, 59243)),
@@ -65912,7 +65964,7 @@
           Promise.all([
             r.e(3587),
             r.e(2797),
-            r.e(6086),
+            r.e(7252),
             r.e(7725),
             r.e(7246),
           ]).then(r.bind(r, 79365)),
@@ -65930,7 +65982,7 @@
             r.e(4796),
             r.e(6049),
             r.e(7908),
-            r.e(4546),
+            r.e(7328),
             r.e(6649),
             r.e(8396),
           ]).then(r.bind(r, 70834)),
@@ -65951,8 +66003,8 @@
             r.e(2797),
             r.e(4717),
             r.e(7436),
-            r.e(5048),
-            r.e(2573),
+            r.e(195),
+            r.e(7382),
             r.e(8163),
           ]).then(r.bind(r, 64940)),
         ),
@@ -65964,7 +66016,7 @@
             r.e(7403),
             r.e(7908),
             r.e(1006),
-            r.e(1471),
+            r.e(4336),
             r.e(2634),
           ]).then(r.bind(r, 95306)),
         ),
@@ -65994,7 +66046,7 @@
             r.e(6597),
             r.e(7817),
             r.e(7937),
-            r.e(4253),
+            r.e(3586),
             r.e(927),
             r.e(2797),
             r.e(4717),
@@ -66005,16 +66057,16 @@
             r.e(6049),
             r.e(7908),
             r.e(1006),
-            r.e(1471),
+            r.e(4336),
             r.e(7576),
-            r.e(5048),
+            r.e(195),
+            r.e(7252),
             r.e(7368),
-            r.e(6086),
-            r.e(4546),
+            r.e(7328),
+            r.e(2608),
+            r.e(7382),
             r.e(4571),
-            r.e(4019),
-            r.e(2573),
-            r.e(6854),
+            r.e(8019),
             r.e(4657),
             r.e(8294),
             r.e(7233),
@@ -66028,7 +66080,7 @@
             r.e(6597),
             r.e(7817),
             r.e(7937),
-            r.e(4253),
+            r.e(3586),
             r.e(2298),
             r.e(927),
             r.e(5422),
@@ -66041,16 +66093,16 @@
             r.e(6049),
             r.e(7908),
             r.e(1006),
-            r.e(1471),
+            r.e(4336),
             r.e(7576),
-            r.e(5048),
+            r.e(195),
+            r.e(7252),
             r.e(7368),
-            r.e(6086),
-            r.e(4546),
+            r.e(7328),
+            r.e(2608),
+            r.e(7382),
             r.e(4571),
-            r.e(4019),
-            r.e(2573),
-            r.e(6854),
+            r.e(8019),
             r.e(4657),
             r.e(8294),
             r.e(7233),
@@ -66063,7 +66115,7 @@
             r.e(6597),
             r.e(7817),
             r.e(7937),
-            r.e(4253),
+            r.e(3586),
             r.e(2298),
             r.e(927),
             r.e(5422),
@@ -66076,16 +66128,16 @@
             r.e(6049),
             r.e(7908),
             r.e(1006),
-            r.e(1471),
+            r.e(4336),
             r.e(7576),
-            r.e(5048),
+            r.e(195),
+            r.e(7252),
             r.e(7368),
-            r.e(6086),
-            r.e(4546),
+            r.e(7328),
+            r.e(2608),
+            r.e(7382),
             r.e(4571),
-            r.e(4019),
-            r.e(2573),
-            r.e(6854),
+            r.e(8019),
             r.e(4657),
             r.e(8294),
             r.e(7233),
@@ -66098,7 +66150,7 @@
             r.e(6597),
             r.e(7817),
             r.e(7937),
-            r.e(4253),
+            r.e(3586),
             r.e(927),
             r.e(7276),
             r.e(6525),
@@ -66111,16 +66163,16 @@
             r.e(6049),
             r.e(7908),
             r.e(1006),
-            r.e(1471),
+            r.e(4336),
             r.e(7576),
-            r.e(5048),
+            r.e(195),
+            r.e(7252),
             r.e(7368),
-            r.e(6086),
-            r.e(4546),
+            r.e(7328),
+            r.e(2608),
+            r.e(7382),
             r.e(4571),
-            r.e(4019),
-            r.e(2573),
-            r.e(6854),
+            r.e(8019),
             r.e(4657),
             r.e(8294),
             r.e(7233),
@@ -66134,7 +66186,7 @@
             r.e(6597),
             r.e(7817),
             r.e(7937),
-            r.e(4253),
+            r.e(3586),
             r.e(927),
             r.e(7276),
             r.e(6525),
@@ -66147,16 +66199,16 @@
             r.e(6049),
             r.e(7908),
             r.e(1006),
-            r.e(1471),
+            r.e(4336),
             r.e(7576),
-            r.e(5048),
+            r.e(195),
+            r.e(7252),
             r.e(7368),
-            r.e(6086),
-            r.e(4546),
+            r.e(7328),
+            r.e(2608),
+            r.e(7382),
             r.e(4571),
-            r.e(4019),
-            r.e(2573),
-            r.e(6854),
+            r.e(8019),
             r.e(4657),
             r.e(8294),
             r.e(7233),
@@ -66188,9 +66240,9 @@
             r.e(6049),
             r.e(7908),
             r.e(1006),
-            r.e(1471),
+            r.e(4336),
             r.e(7576),
-            r.e(5048),
+            r.e(195),
             r.e(7368),
             r.e(4657),
             r.e(9672),
@@ -66211,9 +66263,9 @@
             r.e(6049),
             r.e(7908),
             r.e(1006),
-            r.e(1471),
+            r.e(4336),
             r.e(7576),
-            r.e(5048),
+            r.e(195),
             r.e(7368),
             r.e(4657),
             r.e(9672),
@@ -66240,7 +66292,7 @@
             r.e(6597),
             r.e(7817),
             r.e(7937),
-            r.e(4253),
+            r.e(3586),
             r.e(7276),
             r.e(9790),
             r.e(8680),
@@ -66253,12 +66305,12 @@
             r.e(6049),
             r.e(7908),
             r.e(1006),
-            r.e(1471),
+            r.e(4336),
             r.e(7576),
-            r.e(5048),
-            r.e(6086),
-            r.e(4546),
-            r.e(4019),
+            r.e(195),
+            r.e(7252),
+            r.e(7328),
+            r.e(2608),
             r.e(9297),
           ]).then(r.bind(r, 12845)),
         ),
@@ -66268,7 +66320,7 @@
             r.e(7403),
             r.e(4796),
             r.e(1006),
-            r.e(1471),
+            r.e(4336),
             r.e(6649),
             r.e(976),
           ]).then(r.bind(r, 98425)),
@@ -66295,12 +66347,12 @@
             r.e(6049),
             r.e(7908),
             r.e(1006),
-            r.e(1471),
+            r.e(4336),
             r.e(7576),
             r.e(7368),
             r.e(4571),
             r.e(8567),
-            r.e(6809),
+            r.e(7352),
             r.e(2965),
           ]).then(r.bind(r, 28386)),
         ),
@@ -66330,12 +66382,12 @@
             r.e(6049),
             r.e(7908),
             r.e(1006),
-            r.e(1471),
+            r.e(4336),
             r.e(7576),
             r.e(7368),
             r.e(4571),
             r.e(8567),
-            r.e(6809),
+            r.e(7352),
             r.e(3164),
             r.e(8987),
           ]).then(r.bind(r, 35649)),
@@ -66356,12 +66408,12 @@
             r.e(6049),
             r.e(7908),
             r.e(1006),
-            r.e(1471),
+            r.e(4336),
             r.e(7576),
             r.e(7368),
             r.e(4571),
             r.e(8567),
-            r.e(6809),
+            r.e(7352),
             r.e(3164),
             r.e(5894),
           ]).then(r.bind(r, 13164)),
@@ -66372,7 +66424,7 @@
             r.e(6597),
             r.e(7817),
             r.e(7937),
-            r.e(4253),
+            r.e(3586),
             r.e(2797),
             r.e(4717),
             r.e(7436),
@@ -66382,14 +66434,14 @@
             r.e(6049),
             r.e(7908),
             r.e(1006),
-            r.e(1471),
+            r.e(4336),
             r.e(7576),
-            r.e(5048),
-            r.e(6086),
-            r.e(4546),
-            r.e(4019),
-            r.e(2573),
-            r.e(6854),
+            r.e(195),
+            r.e(7252),
+            r.e(7328),
+            r.e(2608),
+            r.e(7382),
+            r.e(8019),
             r.e(3027),
           ]).then(r.bind(r, 54954)),
         ),
@@ -66399,7 +66451,7 @@
             r.e(6597),
             r.e(7817),
             r.e(7937),
-            r.e(4253),
+            r.e(3586),
             r.e(927),
             r.e(2797),
             r.e(4717),
@@ -66410,16 +66462,16 @@
             r.e(6049),
             r.e(7908),
             r.e(1006),
-            r.e(1471),
+            r.e(4336),
             r.e(7576),
-            r.e(5048),
+            r.e(195),
+            r.e(7252),
             r.e(7368),
-            r.e(6086),
-            r.e(4546),
+            r.e(7328),
+            r.e(2608),
+            r.e(7382),
             r.e(4571),
-            r.e(4019),
-            r.e(2573),
-            r.e(6854),
+            r.e(8019),
             r.e(4657),
             r.e(8294),
             r.e(7233),
@@ -66435,7 +66487,7 @@
             r.e(6597),
             r.e(7817),
             r.e(7937),
-            r.e(4253),
+            r.e(3586),
             r.e(927),
             r.e(2797),
             r.e(4717),
@@ -66446,16 +66498,16 @@
             r.e(6049),
             r.e(7908),
             r.e(1006),
-            r.e(1471),
+            r.e(4336),
             r.e(7576),
-            r.e(5048),
+            r.e(195),
+            r.e(7252),
             r.e(7368),
-            r.e(6086),
-            r.e(4546),
+            r.e(7328),
+            r.e(2608),
+            r.e(7382),
             r.e(4571),
-            r.e(4019),
-            r.e(2573),
-            r.e(6854),
+            r.e(8019),
             r.e(4657),
             r.e(8294),
             r.e(7233),
@@ -66465,11 +66517,38 @@
             .then(r.bind(r, 69099))
             .then((e) => ({ default: e.DemoAndQuickPitch })),
         ),
-        Ft = n.lazy(() => r.e(8843).then(r.bind(r, 71009)));
-      function Ot(e) {
+        Ft = n.lazy(() => r.e(8843).then(r.bind(r, 71009))),
+        Ot = n.lazy(() =>
+          Promise.all([
+            r.e(8970),
+            r.e(6597),
+            r.e(7817),
+            r.e(7937),
+            r.e(3586),
+            r.e(2797),
+            r.e(4717),
+            r.e(7436),
+            r.e(7403),
+            r.e(582),
+            r.e(4796),
+            r.e(6049),
+            r.e(7908),
+            r.e(1006),
+            r.e(4336),
+            r.e(7576),
+            r.e(195),
+            r.e(7252),
+            r.e(7328),
+            r.e(2608),
+            r.e(7382),
+            r.e(8019),
+            r.e(5139),
+          ]).then(r.bind(r, 85227)),
+        );
+      function Dt(e) {
         return n.createElement(T.tH, null, n.createElement(p.qh, { ...e }));
       }
-      function Dt() {
+      function At() {
         return (
           (0, n.useEffect)(
             () => (
@@ -66481,7 +66560,7 @@
           null
         );
       }
-      function At() {
+      function Pt() {
         const [e, t] = n.useState(),
           [r, i] = n.useState(!1);
         return (
@@ -66517,16 +66596,16 @@
                   "div",
                   { className: d().App },
                   n.createElement(
-                    kt,
+                    Ut,
                     { storeUserConfig: e },
-                    n.createElement(Ut, null),
+                    n.createElement(Nt, null),
                     n.createElement(
                       n.Suspense,
-                      { fallback: n.createElement(Dt, null) },
+                      { fallback: n.createElement(At, null) },
                       n.createElement(
                         p.dO,
                         null,
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           exact: !0,
                           path: m.B.DiagData(),
                           render: (e) =>
@@ -66537,7 +66616,7 @@
                             }),
                         }),
                         n.createElement(
-                          Ot,
+                          Dt,
                           { exact: !0, path: m.B.Login() },
                           n.createElement(ie.X, {
                             config: {
@@ -66546,7 +66625,7 @@
                           }),
                         ),
                         n.createElement(
-                          Ot,
+                          Dt,
                           { exact: !0, path: m.B.OAuthLogin() },
                           n.createElement(ie.X, {
                             config: {
@@ -66554,7 +66633,7 @@
                             },
                           }),
                         ),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           exact: !0,
                           path: m.B.AppStorePage(),
                           render: (e) => {
@@ -66629,11 +66708,13 @@
                                   }),
                                 "store-sidebar-controller-support-info": (e) =>
                                   n.createElement(Ct, { ...e }),
+                                "season-pass-display": (e) =>
+                                  n.createElement(Ot, { ...e }),
                               },
                             });
                           },
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           exact: !0,
                           path: m.B.SaleLandingPage(),
                           render: (e) => {
@@ -66660,7 +66741,7 @@
                             });
                           },
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           path: m.B.CuratorAdminPage(),
                           render: (e) =>
                             n.createElement(ie.X, {
@@ -66670,7 +66751,7 @@
                               },
                             }),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           exact: !0,
                           path: m.B.CreatorSaleLandingPage(),
                           render: (e) =>
@@ -66690,7 +66771,7 @@
                               },
                             }),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           path: [
                             m.B.RemotePlay(),
                             m.B.RemotePlayTogether(),
@@ -66700,9 +66781,9 @@
                             m.B.SubscriptionPlanLandingPage(),
                             m.B.GameRecording(),
                           ],
-                          render: (e) => n.createElement(Pt, null),
+                          render: (e) => n.createElement(Lt, null),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           exact: !0,
                           path: m.B.CuratorHomePage(),
                           render: (e) =>
@@ -66722,7 +66803,7 @@
                               },
                             }),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           exact: !0,
                           path: m.B.CuratorListPage(),
                           render: (e) =>
@@ -66736,7 +66817,7 @@
                               },
                             }),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           exact: !0,
                           path: m.B.PackageStorePage(),
                           render: (e) =>
@@ -66754,7 +66835,7 @@
                               },
                             }),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           exact: !0,
                           path: m.B.BundleStorePage(),
                           render: (e) =>
@@ -66773,7 +66854,7 @@
                               },
                             }),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           path: m.B.NewsHub(),
                           render: (e) =>
                             n.createElement(ie.X, {
@@ -66783,7 +66864,7 @@
                               },
                             }),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           path: m.B.EventAdmin(),
                           render: (e) =>
                             n.createElement(ie.X, {
@@ -66793,7 +66874,7 @@
                               },
                             }),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           exact: !0,
                           path: m.B.InteractiveRecommender(),
                           render: (e) =>
@@ -66804,11 +66885,11 @@
                             }),
                         }),
                         !1,
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           path: m.B.LabsSandbox(),
                           render: (e) => n.createElement(nt, null),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           path: m.B.SteamCharts(),
                           render: (e) =>
                             n.createElement(ie.X, {
@@ -66818,7 +66899,7 @@
                               },
                             }),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           path: m.B.Loyalty(),
                           render: () =>
                             n.createElement(ie.X, {
@@ -66827,7 +66908,7 @@
                               },
                             }),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           path: m.B.ContentHubHome(),
                           render: (e) => {
                             const {
@@ -66847,7 +66928,7 @@
                             });
                           },
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           path: m.B.Categories(),
                           render: () =>
                             n.createElement(ie.X, {
@@ -66856,11 +66937,11 @@
                               },
                             }),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           path: m.B.AccountPreferences(),
                           render: (e) => n.createElement(st, { ...e }),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           exact: !0,
                           path: m.B.SummerSale2021Story(),
                           render: (e) =>
@@ -66871,7 +66952,7 @@
                               },
                             }),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           exact: !0,
                           path: m.B.LabsHome(),
                           render: (e) =>
@@ -66882,15 +66963,15 @@
                               },
                             }),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           path: m.B.MarketingMessages(),
                           render: (e) => n.createElement(yt, { ...e }),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           path: m.B.YearInReview(),
                           render: (e) => n.createElement(Bt, { ...e }),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           path: m.B.ShoppingCartAccountCartPurchaseRequested(),
                           render: (e) =>
                             n.createElement(ie.X, {
@@ -66902,7 +66983,7 @@
                               },
                             }),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           path: m.B.ShoppingCartPurchaseRequest(),
                           render: (e) =>
                             n.createElement(ie.X, {
@@ -66915,7 +66996,7 @@
                               },
                             }),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           path: m.B.ShoppingCartGifts(),
                           render: (e) =>
                             n.createElement(ie.X, {
@@ -66925,7 +67006,7 @@
                               },
                             }),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           path: m.B.ShoppingCart(),
                           render: (e) =>
                             n.createElement(ie.X, {
@@ -66934,7 +67015,7 @@
                               },
                             }),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           path: m.B.SteamAwards(),
                           render: (e) =>
                             n.createElement(ie.X, {
@@ -66943,11 +67024,11 @@
                               },
                             }),
                         }),
-                        n.createElement(Ot, {
+                        n.createElement(Dt, {
                           path: m.B.JoinMultiplayerSession(),
                           render: (e) => n.createElement(vt, null),
                         }),
-                        n.createElement(Ot, null, n.createElement(Te, null)),
+                        n.createElement(Dt, null, n.createElement(Te, null)),
                       ),
                     ),
                   ),
@@ -66956,7 +67037,7 @@
             : null
         );
       }
-      function Pt(e) {
+      function Lt(e) {
         const t = (0, p.zy)().pathname.split("/").filter(Boolean).pop(),
           r = "sale_" + (t?.split("?")[0] || "unknown");
         return n.createElement(ie.X, {
@@ -66970,7 +67051,7 @@
           },
         });
       }
-      function Lt(e) {
+      function Wt(e) {
         const { storeUserConfig: t, children: r } = e,
           i = n.useCallback(
             () => new b.D(o.TS.WEBAPI_BASE_URL, t?.webapi_token),
@@ -66992,7 +67073,7 @@
           ),
         );
       }
-      function Wt(e) {
+      function kt(e) {
         const { storeUserConfig: t, children: r } = e,
           i = n.useRef();
         i.current || (i.current = new Ye());
@@ -67011,10 +67092,10 @@
           )
         );
       }
-      function kt(e) {
+      function Ut(e) {
         const { storeUserConfig: t, children: r } = e;
         return n.createElement(
-          Wt,
+          kt,
           { storeUserConfig: t },
           n.createElement(
             w.I.Provider,
@@ -67023,7 +67104,7 @@
               o.ss,
               null,
               n.createElement(
-                Lt,
+                Wt,
                 { storeUserConfig: t },
                 n.createElement(ze.s, null, n.createElement(K, null, r)),
               ),
@@ -67031,7 +67112,7 @@
           ),
         );
       }
-      const Ut = n.memo(function (e) {
+      const Nt = n.memo(function (e) {
         return n.createElement(
           n.Fragment,
           null,
@@ -67088,18 +67169,18 @@
           }),
         );
       });
-      var Nt = r(81511),
-        xt = r(56011);
+      var xt = r(81511),
+        jt = r(56011);
       r(52244);
       new Map();
       r(64641);
       (0, oe.jK)({ enforceActions: "never" }),
-        xt.oQ(async function () {
+        jt.oQ(async function () {
           (0, o.XJ)("application_config").userConfig ||
             (await (0, o.lX)(s(), o.TS.STORE_BASE_URL + "actions/", {
               userConfig: !0,
             })),
-            (0, Nt.aj)().Init(
+            (0, xt.aj)().Init(
               "Store",
               CLSTAMP,
               new b.D(o.TS.WEBAPI_BASE_URL).GetServiceTransport(),
@@ -67126,7 +67207,7 @@
             document.getElementById("application_root")
               ? i
                   .createRoot(document.getElementById("application_root"))
-                  .render(n.createElement(At))
+                  .render(n.createElement(Pt))
               : console.error('No "application_root" was found to target');
         });
     },

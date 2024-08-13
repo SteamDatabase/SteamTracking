@@ -3175,7 +3175,6 @@ linear-gradient( ${}${}, ${}${} ), url( '${IMG_URL}international2022/backgrounds
 linear-gradient(90deg, rgba(3, 2, 2, 0) 22.92%, rgba(3, 2, 2, 0.6) 100%), url( ${IMG_URL}international2020/stone_rect_small.png )
 steam://
 steam://${path}
-steam://${}
 steam://broadcast/watch/${steamid64}
 steam://cdkeys/${appid}
 steam://changeuser
@@ -3199,7 +3198,6 @@ steam://friends/status/invisible
 steam://friends/status/offline
 steam://friends/status/online
 steam://gamewebcallback/
-steam://helpurl/
 steam://joinlobby/${appID}/${lobbyID}/${}
 steam://joinlobby/${}/${}/${}
 steam://nav/games/
@@ -3257,7 +3255,6 @@ steam://openurl_external/https://help.steampowered.com/en/faqs/view/1433-AD20-F1
 steam://openurl_external/https://help.steampowered.com/en/faqs/view/443B-C1B8-0998-C02A
 steam://openurl_external/https://help.steampowered.com/faqs/view/0C48-FCBD-DA71-93EB
 steam://openurl_external/https://help.steampowered.com/faqs/view/4593-5CB7-DC3C-64F0
-steam://openurlforpid/
 steam://remoteplay/connect
 steam://remoteplay/connect/${}?appid=${appID}&${remoteplayString}
 steam://remoteplay/connect/${}?appid=${}&${}

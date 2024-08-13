@@ -159,6 +159,7 @@
     "VoiceChat_Switch": "Αλλαγή σε δωμάτιο συνομιλίας",
     "VoiceChat_InviteToChannel": "Πρόσκληση σε φωνητικό κανάλι",
     "VoiceChat_SendInviteMessage": "Αποστολή μηνύματος πρόσκλησης",
+    "VoiceChat_AudioLevelDb": "%1$s dB",
     "VoiceChat_Unavailable_NotFriend": "Μη διαθέσιμη φωνή: Ο %1$s δεν είναι στη λίστα φίλων σας.",
     "VoiceChat_Unavailable_NotOnline": "Μη διαθέσιμο: Ο χρήστης %1$s είναι εκτός σύνδεσης.",
     "VoiceChat_Unavailable_NotInBeta": "Μη διαθέσιμη φωνή: Ο %1$s δεν έχει τη νέα δοκιμαστική έκδοση συνομιλίας.",

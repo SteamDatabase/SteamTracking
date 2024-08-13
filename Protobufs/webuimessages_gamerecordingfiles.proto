@@ -9,6 +9,8 @@ message CGameRecordingFile {
 	repeated .CGameRecordingTimelineMetadata timelines = 1;
 	repeated .CGameRecordingPostGameSummary postgame_events = 2;
 	repeated string temporary_clips = 3;
+	repeated .CGameRecordingTag tags = 4;
+	repeated .CGameRecordingPhase phases = 5;
 }
 
 message CGameRecordingClipFile {
@@ -25,6 +27,8 @@ message CGameRecordingClipFile {
 	optional uint32 date_downloaded = 11;
 	optional uint32 thumbnail_width = 12;
 	optional uint32 thumbnail_height = 13;
+	repeated .CGameRecordingTag tags = 14;
+	repeated .CGameRecordingPhase phases = 15;
 }
 
 message CGameRecordingTimelineMetadata {
@@ -46,6 +50,7 @@ message CGameRecordingTimelineMetadata {
 	optional uint32 date_recorded = 3;
 	optional uint64 duration_ms = 4;
 	repeated .CGameRecordingTimelineMetadata.Recording recordings = 5;
+	repeated .CGameRecordingPhase phases = 6;
 }
 
 message CGameRecordingPostGameSummary {
@@ -64,4 +69,46 @@ message CGameRecordingTimelineEvent {
 	optional string marker_icon = 8;
 	optional string marker_title = 9;
 	optional bool user_marker = 10;
+}
+
+message CGameRecordingTag {
+	message Timeline {
+		optional string clip_id = 1;
+		optional string timeline_id = 2;
+		optional uint64 offset_ms = 3;
+	}
+
+	optional uint64 game_id = 1;
+	optional .CTimelineTag tag = 2;
+	repeated .CGameRecordingTag.Timeline references = 3;
+}
+
+message CGameRecordingTagInstance {
+	optional string timeline_id = 1;
+	optional uint64 entry_id = 2;
+	optional uint64 timeline_offset_ms = 3;
+	optional uint64 duration_ms = 4;
+}
+
+message CGameRecordingPhase {
+	message Tag {
+		optional string name = 1;
+		optional string group = 2;
+	}
+
+	optional string title = 1;
+	optional string desc = 2;
+	optional string icon = 3;
+	optional string phase_id = 4;
+	optional uint64 duration_ms = 5;
+	repeated .CGameRecordingPhase.Tag tags = 6;
+	repeated .CGameRecordingPhase.Tag contained_tags = 7;
+	optional uint64 background_timeline_offset = 8;
+}
+
+message CTimelineTag {
+	optional string name = 1;
+	optional string group = 2;
+	optional string icon = 3;
+	optional uint32 priority = 4;
 }

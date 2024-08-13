@@ -159,6 +159,7 @@
     "VoiceChat_Switch": "Pindah ke Ruang Obrolan",
     "VoiceChat_InviteToChannel": "Undang ke Saluran Suara",
     "VoiceChat_SendInviteMessage": "Kirim Pesan Undangan",
+    "VoiceChat_AudioLevelDb": "%1$s dB",
     "VoiceChat_Unavailable_NotFriend": "Gagal memulai obrolan suara: %1$s tidak ada di daftar temanmu.",
     "VoiceChat_Unavailable_NotOnline": "Gagal memulai obrolan suara: %1$s sedang tidak online.",
     "VoiceChat_Unavailable_NotInBeta": "Gagal memulai obrolan suara: %1$s tidak menjalankan obrolan versi beta yang terbaru.",

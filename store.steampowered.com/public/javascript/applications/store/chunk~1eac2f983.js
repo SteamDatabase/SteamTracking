@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [4546],
+  [7328],
   {
     33645: (e) => {
       e.exports = {
@@ -605,7 +605,7 @@
         h = n(43667),
         E = n(93267),
         g = n(12155),
-        _ = n(91674),
+        _ = n(60014),
         f = n(32754),
         v = n(52038),
         S = n(61859),
@@ -1275,7 +1275,8 @@
           s = (0, i.m)("usePartnerEventByEventGID");
         return (
           (0, o.useEffect)(() => {
-            t?.GID != e &&
+            e &&
+              t?.GID != e &&
               (r.O3.Init(),
               r.O3.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
                 [e],

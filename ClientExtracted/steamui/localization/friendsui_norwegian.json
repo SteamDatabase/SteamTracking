@@ -159,6 +159,7 @@
     "VoiceChat_Switch": "Bytt til samtalerom",
     "VoiceChat_InviteToChannel": "Inviter til stemmekanal",
     "VoiceChat_SendInviteMessage": "Send invitasjon",
+    "VoiceChat_AudioLevelDb": "%1$s dB",
     "VoiceChat_Unavailable_NotFriend": "Kan ikke bruke stemmesamtale: %1$s er ikke på vennelisten.",
     "VoiceChat_Unavailable_NotOnline": "Kan ikke bruke stemmesamtale: %1$s er ikke tilkoblet for øyeblikket.",
     "VoiceChat_Unavailable_NotInBeta": "Kan ikke bruke stemmesamtale: %1$s bruker ikke den nye samtalebetaen.",

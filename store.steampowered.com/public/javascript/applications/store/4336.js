@@ -2,7 +2,7 @@
  ****/
 "use strict";
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [1471],
+  [4336],
   {
     10622: (e, t, a) => {
       a.d(t, { Z: () => c, dV: () => m.d, rO: () => u });
@@ -302,74 +302,64 @@
         (0, r.Cg)([s.sH], c.prototype, "m_bCommunityBanned", void 0),
         (0, r.Cg)([s.sH], c.prototype, "m_bOnSteamDeck", void 0);
     },
-    41471: (e, t, a) => {
-      a.d(t, { DW: () => h, js: () => p, mK: () => P, tb: () => y });
-      var r = a(58632),
-        s = a.n(r),
-        n = a(90626),
-        i = a(20194),
-        o = a(54806),
-        _ = a(56545),
-        m = a(23809),
-        u = a(44654),
-        c = a(10622),
-        l = a(17720),
-        d = a(37735);
-      a(72963);
-      function p(e) {
-        const t = (0, m.KV)(),
-          a = n.useContext(g);
-        return (0, i.I)(P(a, t, e));
+    14336: (e, t, a) => {
+      a.d(t, { mK: () => P, DW: () => h, js: () => d, tb: () => y });
+      var r = a(90626),
+        s = a(20194),
+        n = a(54806),
+        i = a(23809),
+        o = a(44654),
+        _ = a(10622),
+        m = a(17720),
+        u = (a(72963), a(37735)),
+        c = a(58632),
+        l = a.n(c);
+      function p(e, t) {
+        return new (l())(
+          async (t) => {
+            const a = [...t],
+              r = await u.xt.GetPlayerLinkDetails(e, { steamids: a }),
+              s = new Map();
+            return (
+              r
+                .Body()
+                .accounts()
+                .forEach((e) => {
+                  const t = e.toObject();
+                  s.set(t.public_data.steamid, t);
+                }),
+              a.map((e) => s.get(e) ?? null)
+            );
+          },
+          { maxBatchSize: 100, ...t },
+        );
+      }
+      new WeakMap();
+      function d(e) {
+        const t = (0, i.KV)(),
+          a = r.useContext(g);
+        return (0, s.I)(P(a, t, e));
       }
       function h(e) {
-        const t = (0, m.KV)(),
-          a = n.useContext(g);
-        return (0, o.E)({ queries: e.map((e) => P(a, t, e)) });
+        const t = (0, i.KV)(),
+          a = r.useContext(g);
+        return (0, n.E)({ queries: e.map((e) => P(a, t, e)) });
       }
-      const g = n.createContext({
+      const g = r.createContext({
         loadPersonaState: async (e, t) => {
           if (null == e) return null;
           const a = await (function (e) {
-            f ||
-              (f = new (s())(
-                async (t) => {
-                  const a = _.w.Init(d.z2);
-                  a.Body().set_steamids(
-                    t.map((e) =>
-                      l.b.InitFromAccountID(e).ConvertTo64BitString(),
-                    ),
-                  );
-                  const r = await d.xt.GetPlayerLinkDetails(e, a);
-                  if (!r.BSuccess())
-                    throw `Failed to load player link details: ${r.GetErrorMessage()}`;
-                  const s = new Map();
-                  return (
-                    r
-                      .Body()
-                      .accounts()
-                      .forEach((e) => {
-                        const t = e.toObject();
-                        s.set(
-                          new l.b(t.public_data?.steamid).GetAccountID(),
-                          t,
-                        );
-                      }),
-                    t.map((e) => s.get(e))
-                  );
-                },
-                { maxBatchSize: 100 },
-              ));
-            return f;
-          })(t).load(e);
+            return (f ??= p(e));
+          })(t).load(m.b.InitFromAccountID(e).ConvertTo64BitString());
           return (function (e, t) {
-            let a = new c.Z(e);
+            let a = new _.Z(e);
             const r = t?.public_data,
               s = t?.private_data;
             (a.m_bInitialized = !!t),
               (a.m_ePersonaState = s?.persona_state ?? 0),
               (a.m_strAvatarHash = r?.sha_digest_avatar
-                ? (0, u.Kx)(r.sha_digest_avatar)
-                : c.dV),
+                ? (0, o.Kx)(r.sha_digest_avatar)
+                : _.dV),
               (a.m_strPlayerName = r?.persona_name ?? e.ConvertTo64BitString()),
               (a.m_strAccountName = s?.account_name),
               s?.persona_state_flags &&
@@ -381,14 +371,14 @@
             s?.game_extra_info && (a.m_strGameExtraInfo = s?.game_extra_info);
             r?.profile_url && (a.m_strProfileURL = r.profile_url);
             return a;
-          })(l.b.InitFromAccountID(e), a);
+          })(m.b.InitFromAccountID(e), a);
         },
       });
       function y() {
-        return n.useContext(g);
+        return r.useContext(g);
       }
       function P(e, t, a) {
-        const r = "string" == typeof a ? new l.b(a).GetAccountID() : a;
+        const r = "string" == typeof a ? new m.b(a).GetAccountID() : a;
         return {
           queryKey: ["PlayerSummary", r],
           queryFn: () => e.loadPersonaState(r, t),

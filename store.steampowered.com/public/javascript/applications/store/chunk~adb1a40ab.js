@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [4019],
+  [2608],
   {
     99312: (e) => {
       e.exports = {
@@ -1725,8 +1725,8 @@
         R = a(91254),
         F = a(29482),
         G = a(22797),
-        P = a(3088),
-        O = a(75113);
+        O = a(3088),
+        P = a(75113);
       let H = class extends r.Component {
         state = {
           bLoading: this.props.announcementGID
@@ -1822,15 +1822,15 @@
             u = F.A.Get().GetApp(e)?.GetName(),
             h = (0, w.TW)(s.GetStartTimeAndDateUnixSeconds());
           return r.createElement(
-            O.tj,
+            P.tj,
             {
               eventModel: s,
-              route: O.PH.k_eView,
+              route: P.PH.k_eView,
               className: E().DynamicLinkBox,
               "data-modal-content-sizetofit": !0,
               "data-appid": e,
             },
-            r.createElement(P.c, {
+            r.createElement(O.c, {
               className: E().DynamicLink_Preview,
               rgSources: c,
               onIncrementalError: (e, t, a) => i && i(t),
@@ -2671,8 +2671,8 @@
         Re = a(48079),
         Fe = a(93267),
         Ge = a(67523),
-        Pe = a.n(Ge);
-      const Oe = (e) => {
+        Oe = a.n(Ge);
+      const Pe = (e) => {
         const [t, a] = (0, r.useState)(!0),
           [n, o] = (0, r.useState)(null);
         if (
@@ -2717,7 +2717,7 @@
           n)
         )
           return e.bIsPreviewMode
-            ? r.createElement("div", { className: Pe().ErrorDiv }, n)
+            ? r.createElement("div", { className: Oe().ErrorDiv }, n)
             : null;
         if (t)
           return r.createElement(G.t, {
@@ -2759,7 +2759,7 @@
             a.e(4796),
             a.e(6049),
             a.e(7908),
-            a.e(4546),
+            a.e(7328),
             a.e(6649),
             a.e(8396),
           ]).then(a.bind(a, 72224)),
@@ -3151,7 +3151,7 @@
                 })
           );
         }
-        return r.createElement(P.c, { rgSources: o });
+        return r.createElement(O.c, { rgSources: o });
       }
       function St(e) {
         const t = (0, s.j$)(e.args);
@@ -3166,7 +3166,7 @@
             n.push(
               `${b.TS.MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/english/${t}`,
             ),
-          r.createElement(P.c, { rgSources: n, alt: a })
+          r.createElement(O.c, { rgSources: n, alt: a })
         );
       }
       function Ct(e) {
@@ -3176,7 +3176,7 @@
             e.context.event.appid ? e.context.event.appid : 0,
           ),
           a = It(e.args, "trailerid", 0);
-        return r.createElement(Oe, {
+        return r.createElement(Pe, {
           appid: t,
           trailerBaseID: a,
           bIsPreviewMode: e.context.showErrorInfo,
@@ -3530,79 +3530,6 @@
             bAllowTwoLinesForHeader: !0,
           }),
         );
-      }
-    },
-    95034: (e, t, a) => {
-      "use strict";
-      a.d(t, {
-        Bm: () => s,
-        QD: () => c,
-        f3: () => o,
-        iV: () => p,
-        ip: () => m,
-        le: () => l,
-      });
-      var n = a(90626),
-        r = a(92757);
-      function o(e, t) {
-        let a;
-        "string" == typeof e
-          ? (a = e)
-          : "location" in e
-            ? (a = e.location.search)
-            : "search" in e && (a = e.search);
-        const n = new URLSearchParams(a.substring(1));
-        if (n.has(t)) {
-          const e = n.getAll(t);
-          return e[e.length - 1];
-        }
-      }
-      const i = (e) => null != e;
-      function s(e, t, a, n = !1) {
-        const r = new URLSearchParams(e.location.search.substring(1));
-        r.delete(t),
-          i(a) && r.append(t, a),
-          n
-            ? e.replace(`?${r.toString()}`, { ...e.location.state })
-            : e.push(`?${r.toString()}`);
-      }
-      function l(e, t, a) {
-        s(e, t, a, !0);
-      }
-      function c(e, t) {
-        const a = (0, r.W6)(),
-          l = (0, r.zy)(),
-          c = (0, n.useMemo)(() => {
-            const a = o(l.search, e);
-            return i(a)
-              ? i(t)
-                ? "boolean" == typeof t
-                  ? t.constructor("false" !== a)
-                  : t.constructor(a)
-                : a
-              : t;
-          }, [l.search, e, t]),
-          m = (0, n.useCallback)(
-            (t) => {
-              s(a, e, i(t) ? String(t) : null);
-            },
-            [a, e],
-          );
-        return [c, m];
-      }
-      function m(e, t, a = !1) {
-        const n = new URLSearchParams(e.location.search.substring(1));
-        for (const e in t)
-          if (t.hasOwnProperty(e)) {
-            const a = t[e];
-            n.delete(e), i(a) && n.append(e, a);
-          }
-        a
-          ? e.replace(`?${n.toString()}`, { ...e.location.state })
-          : e.push(`?${n.toString()}`);
-      }
-      function p(e, t) {
-        m(e, t, !0);
       }
     },
     1909: (e, t, a) => {
@@ -4673,15 +4600,15 @@
       var R = a(7068),
         F = a(283),
         G = a(95695),
-        P = a.n(G),
-        O = a(44325),
+        O = a.n(G),
+        P = a(44325),
         H = a(738),
         W = a(41609),
         Y = a.n(W),
         z = a(56011),
         V = a(78327);
       var j = a(26505),
-        Z = a(41471),
+        Z = a(14336),
         X = a(87129),
         K = a(48079),
         Q = a(22797),
@@ -4929,7 +4856,7 @@
             : "" == this.state.formattingHelp.__html
               ? i.createElement(Q.t, null)
               : i.createElement(
-                  O.o0,
+                  P.o0,
                   {
                     strTitle: (0, x.we)(
                       "#EventEditor_FormattingHelp_GetHelpLink",
@@ -5458,7 +5385,7 @@
         OnOuterDivClickPassDown(e) {}
         render() {
           return i.createElement(
-            O.o0,
+            P.o0,
             {
               strTitle: (0, x.we)("#EventEditor_InsertYouTube"),
               strDescription: "",
@@ -5647,7 +5574,7 @@
         }
         render() {
           return i.createElement(
-            O.o0,
+            P.o0,
             {
               strTitle: (0, x.we)("#Editor_Link"),
               strDescription: "",
@@ -5740,7 +5667,7 @@
         render() {
           const { imgURL: e, anchorURL: t } = this.state;
           return i.createElement(
-            O.o0,
+            P.o0,
             {
               strTitle: (0, x.we)("#EventEditor_InsertImage_Title"),
               strDescription: "",
@@ -5830,7 +5757,7 @@
           { isLoading: C, data: f } = (0, Z.js)(h?.GetAccountID()),
           E = 0 != t.trim().length && 0 != l.trim().length;
         return i.createElement(
-          O.o0,
+          P.o0,
           {
             strTitle: (0, x.we)("#EventEditor_AddSpeaker"),
             strDescription: (0, x.we)("#EventEditor_AddSpeaker_Desc"),
@@ -6071,7 +5998,7 @@
               })
               .catch((e) => {
                 (0, H.pg)(
-                  i.createElement(O.KG, {
+                  i.createElement(P.KG, {
                     strTitle: (0, x.we)("#EventEditor_ConvertHTML_Error"),
                     strDescription: (0, x.we)(
                       "#EventEditor_ConvertHTML_Error_Desc",
@@ -6097,7 +6024,7 @@
           const { closeModal: e } = this.props;
           return this.state.bConverting
             ? i.createElement(
-                O.o0,
+                P.o0,
                 {
                   strTitle: (0, x.we)("#EventEditor_ImportFromHTML"),
                   strDescription: (0, x.we)(
@@ -6111,7 +6038,7 @@
                 i.createElement(Q.t, null),
               )
             : this.state.bFinishedConverting
-              ? i.createElement(O.o0, {
+              ? i.createElement(P.o0, {
                   strTitle: (0, x.we)("#EventEditor_ImportFromHTML"),
                   strDescription: (0, x.we)(
                     "#EventEditor_ImportFromHTML_ConvertFinished",
@@ -6122,7 +6049,7 @@
                   onCancel: e,
                 })
               : i.createElement(
-                  O.eV,
+                  P.eV,
                   {
                     onOK: this.OnConvertAndOverriteHTML,
                     onCancel: e,
@@ -6145,13 +6072,13 @@
                         "div",
                         {
                           className: (0, w.A)(
-                            P().FlexColumnContainer,
+                            O().FlexColumnContainer,
                             q().ImportHTMLCtn,
                           ),
                         },
                         i.createElement(
                           "div",
-                          { className: P().FlexColumnContainer },
+                          { className: O().FlexColumnContainer },
                           (0, x.PP)(
                             "#EventEditor_ImportFromHTML_ConvertDescription",
                             i.createElement(
@@ -6301,7 +6228,7 @@
           };
         return h
           ? i.createElement(
-              O.o0,
+              P.o0,
               {
                 strDescription: "",
                 strTitle: (0, x.we)("#Button_Share"),
@@ -6311,7 +6238,7 @@
               },
               i.createElement(
                 "div",
-                { className: P().FlexColumnContainer },
+                { className: O().FlexColumnContainer },
                 i.createElement(
                   "div",
                   null,
@@ -6340,7 +6267,7 @@
               ),
             )
           : i.createElement(
-              O.o0,
+              P.o0,
               {
                 strDescription: "",
                 strTitle: (0, x.we)("#Button_Share"),
@@ -6350,7 +6277,7 @@
               },
               i.createElement(
                 "div",
-                { className: P().FlexColumnContainer },
+                { className: O().FlexColumnContainer },
                 i.createElement(
                   "div",
                   null,
@@ -6361,7 +6288,7 @@
                   {
                     className: (0, w.A)(
                       Le().Container,
-                      P().FlexColumnContainer,
+                      O().FlexColumnContainer,
                     ),
                   },
                   i.createElement(
@@ -6374,7 +6301,7 @@
                     }),
                     i.createElement(
                       "div",
-                      { className: (0, w.A)(P().FlexColumnContainer) },
+                      { className: (0, w.A)(O().FlexColumnContainer) },
                       i.createElement(_e, {
                         strPlaceholder: (0, x.we)(
                           "#EventDisplay_Share_OnMyStatus_Placeholder",
@@ -6403,6 +6330,72 @@
               ),
             );
       });
+    },
+    3088: (e, t, a) => {
+      "use strict";
+      a.d(t, { c: () => i });
+      var n = a(34629),
+        r = a(90626),
+        o = a(56093);
+      class i extends r.Component {
+        m_refImage = r.createRef();
+        constructor(e) {
+          super(e), (this.state = { nImage: 0 });
+        }
+        componentDidUpdate(e) {
+          JSON.stringify(this.props.rgSources) != JSON.stringify(e.rgSources) &&
+            this.setState({ nImage: 0 });
+        }
+        get src() {
+          let e = "";
+          return (
+            this.props.rgSources &&
+              this.props.rgSources.length > this.state.nImage &&
+              (e = this.props.rgSources[this.state.nImage]),
+            e ||
+              (console.warn(
+                "MultiSourceImage created with no image src",
+                this.props,
+                this.state.nImage,
+              ),
+              (e =
+                "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
+            e
+          );
+        }
+        get imgRef() {
+          return this.m_refImage;
+        }
+        OnImageError(e) {
+          this.props.onIncrementalError &&
+            this.props.onIncrementalError(
+              e,
+              this.props.rgSources[this.state.nImage],
+              this.state.nImage,
+            );
+          let t = this.state.nImage + 1;
+          t >= this.props.rgSources.length &&
+            this.props.onError &&
+            this.props.onError(e),
+            t < this.props.rgSources.length && this.setState({ nImage: t });
+        }
+        render() {
+          const {
+              rgSources: e,
+              onIncrementalError: t,
+              onError: a,
+              ...n
+            } = this.props,
+            o = this.src;
+          return r.createElement("img", {
+            ref: this.m_refImage,
+            ...n,
+            src: o,
+            onError: this.OnImageError,
+          });
+        }
+      }
+      (0, n.Cg)([o.oI], i.prototype, "OnImageError", null);
     },
     66331: (e, t, a) => {
       "use strict";

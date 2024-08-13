@@ -191,7 +191,8 @@
           s = (0, o.m)("usePartnerEventByEventGID");
         return (
           (0, n.useEffect)(() => {
-            t?.GID != e &&
+            e &&
+              t?.GID != e &&
               (r.O3.Init(),
               r.O3.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
                 [e],
@@ -600,7 +601,7 @@
         I = a(47235),
         b = a(37076),
         C = a(54492),
-        S = a(91674),
+        S = a(60014),
         w = a(52038),
         P = a(61859),
         D = a(61336),

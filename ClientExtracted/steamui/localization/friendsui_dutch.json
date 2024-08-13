@@ -159,6 +159,7 @@
     "VoiceChat_Switch": "Wisselen naar chatroom",
     "VoiceChat_InviteToChannel": "Uitnodigen voor spraakkanaal",
     "VoiceChat_SendInviteMessage": "Uitnodiging versturen",
+    "VoiceChat_AudioLevelDb": "%1$s dB",
     "VoiceChat_Unavailable_NotFriend": "Spraak niet beschikbaar: %1$s zit niet in je vriendenlijst.",
     "VoiceChat_Unavailable_NotOnline": "Spraak niet beschikbaar: %1$s is momenteel niet online.",
     "VoiceChat_Unavailable_NotInBeta": "Spraak niet beschikbaar: %1$s neemt niet deel aan de nieuwe chatbèta.",

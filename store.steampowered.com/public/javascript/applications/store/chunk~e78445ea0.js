@@ -536,6 +536,79 @@
         }
       }
     },
+    95034: (e, t, r) => {
+      "use strict";
+      r.d(t, {
+        Bm: () => o,
+        QD: () => c,
+        f3: () => s,
+        iV: () => m,
+        ip: () => u,
+        le: () => l,
+      });
+      var n = r(90626),
+        i = r(92757);
+      function s(e, t) {
+        let r;
+        "string" == typeof e
+          ? (r = e)
+          : "location" in e
+            ? (r = e.location.search)
+            : "search" in e && (r = e.search);
+        const n = new URLSearchParams(r.substring(1));
+        if (n.has(t)) {
+          const e = n.getAll(t);
+          return e[e.length - 1];
+        }
+      }
+      const a = (e) => null != e;
+      function o(e, t, r, n = !1) {
+        const i = new URLSearchParams(e.location.search.substring(1));
+        i.delete(t),
+          a(r) && i.append(t, r),
+          n
+            ? e.replace(`?${i.toString()}`, { ...e.location.state })
+            : e.push(`?${i.toString()}`);
+      }
+      function l(e, t, r) {
+        o(e, t, r, !0);
+      }
+      function c(e, t) {
+        const r = (0, i.W6)(),
+          l = (0, i.zy)(),
+          c = (0, n.useMemo)(() => {
+            const r = s(l.search, e);
+            return a(r)
+              ? a(t)
+                ? "boolean" == typeof t
+                  ? t.constructor("false" !== r)
+                  : t.constructor(r)
+                : r
+              : t;
+          }, [l.search, e, t]),
+          u = (0, n.useCallback)(
+            (t) => {
+              o(r, e, a(t) ? String(t) : null);
+            },
+            [r, e],
+          );
+        return [c, u];
+      }
+      function u(e, t, r = !1) {
+        const n = new URLSearchParams(e.location.search.substring(1));
+        for (const e in t)
+          if (t.hasOwnProperty(e)) {
+            const r = t[e];
+            n.delete(e), a(r) && n.append(e, r);
+          }
+        r
+          ? e.replace(`?${n.toString()}`, { ...e.location.state })
+          : e.push(`?${n.toString()}`);
+      }
+      function m(e, t) {
+        u(e, t, !0);
+      }
+    },
     60801: (e, t, r) => {
       "use strict";
       r.d(t, { X: () => g });
@@ -558,16 +631,16 @@
           y = n.useRef(),
           f = n.useRef(),
           [w, b] = n.useState(!0),
-          [v, C] = n.useState(!1),
-          [S, I] = n.useState(!1),
+          [v, S] = n.useState(!1),
+          [C, I] = n.useState(!1),
           [B, E] = (0, d.M)(_);
         n.useEffect(() => {
           if (r) {
             const e = (0, l.VY)(h),
               t = !(!e || "true" !== e.toLowerCase());
-            b(t), C(!0);
+            b(t), S(!0);
           }
-          return () => C(!1);
+          return () => S(!1);
         }, [r]);
         const R = (0, n.useCallback)(() => {
           y.current &&
@@ -660,7 +733,7 @@
                 }),
               ),
               w &&
-                !S &&
+                !C &&
                 n.createElement(
                   i.Z,
                   { focusable: !0, onClick: T, className: a().PlayButton },
@@ -735,21 +808,21 @@
         w = r(56545),
         b = r(80613),
         v = r(89068);
-      const C = b.Message;
-      class S extends C {
+      const S = b.Message;
+      class C extends S {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            S.prototype.recommendationid || v.Sg(S.M()),
-            C.initialize(this, e, 0, -1, void 0, null);
+            C.prototype.recommendationid || v.Sg(C.M()),
+            S.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            S.sm_m ||
-              (S.sm_m = {
-                proto: S,
+            C.sm_m ||
+              (C.sm_m = {
+                proto: C,
                 fields: {
                   recommendationid: {
                     n: 1,
@@ -786,48 +859,48 @@
                   },
                 },
               }),
-            S.sm_m
+            C.sm_m
           );
         }
         static MBF() {
-          return S.sm_mbf || (S.sm_mbf = v.w0(S.M())), S.sm_mbf;
+          return C.sm_mbf || (C.sm_mbf = v.w0(C.M())), C.sm_mbf;
         }
         toObject(e = !1) {
-          return S.toObject(e, this);
+          return C.toObject(e, this);
         }
         static toObject(e, t) {
-          return v.BT(S.M(), e, t);
+          return v.BT(C.M(), e, t);
         }
         static fromObject(e) {
-          return v.Uq(S.M(), e);
+          return v.Uq(C.M(), e);
         }
         static deserializeBinary(e) {
           let t = new b.BinaryReader(e),
-            r = new S();
-          return S.deserializeBinaryFromReader(r, t);
+            r = new C();
+          return C.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return v.zj(S.MBF(), e, t);
+          return v.zj(C.MBF(), e, t);
         }
         serializeBinary() {
           var e = new b.BinaryWriter();
-          return S.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          return C.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          v.i0(S.M(), e, t);
+          v.i0(C.M(), e, t);
         }
         serializeBase64String() {
           var e = new b.BinaryWriter();
-          return S.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          return C.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CUserReviews_Update_Request";
         }
       }
-      class I extends C {
+      class I extends S {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
-          super(), C.initialize(this, e, 0, -1, void 0, null);
+          super(), S.initialize(this, e, 0, -1, void 0, null);
         }
         toObject(e = !1) {
           return I.toObject(e, this);
@@ -859,12 +932,12 @@
           return "CUserReviews_Update_Response";
         }
       }
-      class B extends C {
+      class B extends S {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             B.prototype.reaction_type || v.Sg(B.M()),
-            C.initialize(this, e, 0, -1, void 0, null);
+            S.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -920,12 +993,12 @@
           return "CUserReviews_Recommendation_LoyaltyReaction";
         }
       }
-      class E extends C {
+      class E extends S {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             E.prototype.recommendationid || v.Sg(E.M()),
-            C.initialize(this, e, 0, -1, [27, 40], null);
+            S.initialize(this, e, 0, -1, [27, 40], null);
         }
         static sm_m;
         static sm_mbf;
@@ -1191,12 +1264,12 @@
           return "RecommendationDetails";
         }
       }
-      class R extends C {
+      class R extends S {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             R.prototype.appid || v.Sg(R.M()),
-            C.initialize(this, e, 0, -1, void 0, null);
+            S.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -1247,12 +1320,12 @@
           return "CUserReviews_GetFriendsRecommendedApp_Request";
         }
       }
-      class A extends C {
+      class A extends S {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             A.prototype.accountids_recommended || v.Sg(A.M()),
-            C.initialize(this, e, 0, -1, [1, 3], null);
+            S.initialize(this, e, 0, -1, [1, 3], null);
         }
         static sm_m;
         static sm_mbf;
@@ -1318,12 +1391,12 @@
           return "CUserReviews_GetFriendsRecommendedApp_Response";
         }
       }
-      class M extends C {
+      class M extends S {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             M.prototype.requests || v.Sg(M.M()),
-            C.initialize(this, e, 0, -1, [1], null);
+            S.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
@@ -1372,12 +1445,12 @@
           return "CUserReviews_GetIndividualRecommendations_Request";
         }
       }
-      class T extends C {
+      class T extends S {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             T.prototype.steamid || v.Sg(T.M()),
-            C.initialize(this, e, 0, -1, void 0, null);
+            S.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -1433,12 +1506,12 @@
           return "CUserReviews_GetIndividualRecommendations_Request_RecommendationRequest";
         }
       }
-      class D extends C {
+      class D extends S {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
             D.prototype.recommendations || v.Sg(D.M()),
-            C.initialize(this, e, 0, -1, [1], null);
+            S.initialize(this, e, 0, -1, [1], null);
         }
         static sm_m;
         static sm_mbf;
@@ -1490,7 +1563,7 @@
       var G;
       !(function (e) {
         (e.Update = function (e, t) {
-          return e.SendMsg("UserReviews.Update#1", (0, w.I8)(S, t), I, {
+          return e.SendMsg("UserReviews.Update#1", (0, w.I8)(C, t), I, {
             ePrivilege: 3,
           });
         }),
@@ -1552,8 +1625,8 @@
       var q = r(22797),
         z = r(57834),
         Q = r.n(z),
-        x = r(41471),
-        W = r(26505);
+        W = r(14336),
+        x = r(26505);
       const P = new f.wd("AppRelevance").Debug;
       function j(e) {
         const {
@@ -1564,7 +1637,7 @@
             bShowCuratorInfo: o,
             bShowCreatorInfo: l,
           } = e,
-          m = (0, W.Nd)(t),
+          m = (0, x.Nd)(t),
           h = (function (e) {
             const t = (0, L.KV)();
             return (0, i.I)({
@@ -1636,7 +1709,7 @@
               e
             );
           }, [s]),
-          C = (0, i.I)({
+          S = (0, i.I)({
             queryKey: ["FollowedCreators", t],
             queryFn: () =>
               u.ac
@@ -1644,7 +1717,7 @@
                 .then((e) => ({ clanInfo: e, type: v[0].type })),
             enabled: !!l && v && v.length > 0,
           }),
-          S = (0, i.I)({
+          C = (0, i.I)({
             queryKey: ["PlayerSummaries", t, r],
             queryFn: async () => {
               let e = [],
@@ -1684,8 +1757,8 @@
           h.isLoading ||
           m.isLoading ||
           b.isLoading ||
-          C.isLoading ||
-          S.isLoading
+          S.isLoading ||
+          C.isLoading
         )
           return n.createElement(q.t, { size: "medium", position: "center" });
         let I = [];
@@ -1718,7 +1791,7 @@
           B >= 0 && D++,
           I.length > 0 && D++,
           o && b?.data?.length > 0 && D++,
-          l && Boolean(C.data) && D++,
+          l && Boolean(S.data) && D++,
           P(
             "FriendsOwned: ",
             A,
@@ -1780,8 +1853,8 @@
                       ),
                     ),
                   l &&
-                    Boolean(C.data) &&
-                    n.createElement(H, { creatorInfo: C.data }),
+                    Boolean(S.data) &&
+                    n.createElement(H, { creatorInfo: S.data }),
                   B >= 0 &&
                     n.createElement($, {
                       header: (0, y.um)(
@@ -1801,19 +1874,19 @@
                     bShowAvatars: r,
                     count: h.data?.accountids_recommended?.length,
                     locToken: "#DiscoveryQueue_FriendsRecommended",
-                    arrSteamIDs: S.data?.rgRecommendedFriends,
+                    arrSteamIDs: C.data?.rgRecommendedFriends,
                   }),
                   n.createElement(Y, {
                     bShowAvatars: r,
                     count: m.data?.owns?.length,
                     locToken: "#DiscoveryQueue_FriendsOwned",
-                    arrSteamIDs: S.data?.rgOwnedFriends,
+                    arrSteamIDs: C.data?.rgOwnedFriends,
                   }),
                   n.createElement(Y, {
                     bShowAvatars: r,
                     count: m.data?.in_wishlist?.length,
                     locToken: "#DiscoveryQueue_FriendsWishlisted",
-                    arrSteamIDs: S.data?.rgWishlistFriends,
+                    arrSteamIDs: C.data?.rgWishlistFriends,
                   }),
                 ),
               ),
@@ -1922,7 +1995,7 @@
       }
       function K(e) {
         const { steamid: t } = e,
-          { data: r } = (0, x.js)(t);
+          { data: r } = (0, W.js)(t);
         return r && r.m_bInitialized
           ? n.createElement(
               "span",
@@ -1936,7 +2009,7 @@
       }
       function X(e) {
         const { arrSteamIDs: t } = e,
-          r = (0, x.DW)(t);
+          r = (0, W.DW)(t);
         return n.createElement(
           n.Fragment,
           null,
@@ -1955,7 +2028,7 @@
       }
       function J(e) {
         const { steamid: t } = e,
-          { data: r } = (0, x.js)(t);
+          { data: r } = (0, W.js)(t);
         return r
           ? n.createElement(
               a.Z,
@@ -2015,12 +2088,12 @@
         _ = r(94095),
         g = r(44986),
         y = r(60801),
-        f = r(91674),
+        f = r(60014),
         w = r(52038),
         b = r(61859),
         v = r(60778),
-        C = r(78327),
-        S = r(39199),
+        S = r(78327),
+        C = r(39199),
         I = r(20713),
         B = r(84364),
         E = r(39505),
@@ -2045,14 +2118,14 @@
           q = (0, c.oC)(U?.GetAppID()),
           z = (0, i.q3)(() => u.Fm.Get().BIsGameWishlisted(t)),
           Q = (0, i.q3)(() => u.Fm.Get().BIsGameIgnored(t)),
-          x = (0, p.LG)(U?.GetTagIDs()),
-          W = (0, C.Qn)(),
-          P = W,
+          W = (0, p.LG)(U?.GetTagIDs()),
+          x = (0, S.Qn)(),
+          P = x,
           j = (0, f.n9)(),
           H = (0, l.er)(),
           Z = (0, a.R7)(),
           V = Z?.ownerWindow || window,
-          Y = s.useMemo(() => (0, S.Bk)(k), [k]),
+          Y = s.useMemo(() => (0, C.Bk)(k), [k]),
           K = s.useMemo(
             () => (L ? "?inqueue=" + L + (k ? "_" + Y : "") : ""),
             [L, k, Y],
@@ -2119,7 +2192,7 @@
                   className: (0, w.A)(T().QueueButton, T().UndoIgnoreButton),
                   onClick: J,
                 },
-                W &&
+                x &&
                   s.createElement(g.$m, {
                     button: I.g4.X,
                     type: g.wt.Light,
@@ -2178,7 +2251,7 @@
                   }),
                 ),
               ),
-              s.createElement(N, { rgTagNames: x }),
+              s.createElement(N, { rgTagNames: W }),
               s.createElement(
                 "div",
                 { className: T().AppReviews },
@@ -2198,7 +2271,7 @@
                 }),
               ),
             ),
-            !W &&
+            !x &&
               s.createElement(
                 "div",
                 { className: T().AppActionButtonsCtn },
@@ -2377,8 +2450,8 @@
         w = r(72739),
         b = r(56093),
         v = r(19719),
-        C = r(79516),
-        S = r(48399),
+        S = r(79516),
+        C = r(48399),
         I = r(16628),
         B = r(69381),
         E = r(60778),
@@ -2841,7 +2914,7 @@
                 focusable: !1,
               },
               m &&
-                n.createElement(S.xA, {
+                n.createElement(C.xA, {
                   ref: this.BindGridObject,
                   className: e,
                   cellRenderer: this.CellRenderer,
@@ -2881,7 +2954,7 @@
         (0, f.Cg)([b.oI], T.prototype, "OnMouseDown", null),
         (0, f.Cg)([b.oI], T.prototype, "OnMouseUp", null),
         (0, f.Cg)(
-          [b.oI, (0, C.s)(250)],
+          [b.oI, (0, S.s)(250)],
           T.prototype,
           "SnapBackToFirstElement",
           null,
@@ -2892,7 +2965,7 @@
         (0, f.Cg)([b.oI], T.prototype, "CellRenderer", null),
         (0, f.Cg)([b.oI], T.prototype, "OnSectionRendered", null),
         (0, f.Cg)(
-          [b.oI, (0, C.s)(250)],
+          [b.oI, (0, S.s)(250)],
           T.prototype,
           "UpdateScrollArrows",
           null,
@@ -2917,9 +2990,9 @@
         q = r(39199),
         z = r(64593),
         Q = r(57315),
-        x = r(57834),
-        W = r.n(x),
-        P = r(91674);
+        W = r(57834),
+        x = r.n(W),
+        P = r(60014);
       const j = new E.wd("DiscoveryQueueWizard").Debug,
         H = 0,
         Z = 1,
@@ -2968,11 +3041,11 @@
           [d, p] = n.useState([]),
           [_, g] = n.useState(1),
           [f, w] = n.useState(800),
-          [v, C] = n.useState(24),
-          [S, I] = n.useState("DiscoveryQueue"),
+          [v, S] = n.useState(24),
+          [C, I] = n.useState("DiscoveryQueue"),
           [B, E] = n.useState(!0),
           [R, A] = n.useState(!1),
-          [T, x] = n.useState(!1),
+          [T, W] = n.useState(!1),
           P = n.useRef(),
           K = (0, h.Qn)(),
           $ = (0, i.R7)(),
@@ -2990,7 +3063,7 @@
               const t = Math.max((te.innerWidth / 100) * 2.8 + 40, 24),
                 r = Math.min(1400, te.innerWidth / 1.3 - 2 * t - 48 + 220),
                 n = (te.innerWidth - f - 2 * t) / 2;
-              w(r), C(n);
+              w(r), S(n);
             },
             [te.innerWidth, f],
           ),
@@ -3021,7 +3094,7 @@
           );
         n.useEffect(() => {
           T ||
-            (le(!0).then(() => x(!0)),
+            (le(!0).then(() => W(!0)),
             u.Fm.Get().HintLoad(),
             I(
               (() => {
@@ -3080,7 +3153,7 @@
                 ? n.createElement(o.Z, {
                     focusable: !1,
                     style: { width: i, height: ae },
-                    className: (0, L.A)(W().DiscoveryQueuePlaceholder),
+                    className: (0, L.A)(x().DiscoveryQueuePlaceholder),
                   })
                 : n.createElement(z.H, {
                     bShowMinimizedDisplay: oe,
@@ -3121,14 +3194,14 @@
                   n.createElement("img", {
                     key: "dot_" + i,
                     className: (0, L.A)({
-                      [W().ProgressDot]: !0,
-                      [W().ProgressDotActive]: i <= e,
-                      [W().ProgressDotHidden]: d[_] === Z || d[_] === H,
+                      [x().ProgressDot]: !0,
+                      [x().ProgressDotActive]: i <= e,
+                      [x().ProgressDotHidden]: d[_] === Z || d[_] === H,
                     }),
                     src: U.A,
                   }),
                 );
-              return n.createElement("div", { className: W().ProgressCtn }, r);
+              return n.createElement("div", { className: x().ProgressCtn }, r);
             },
             [_, d],
           ),
@@ -3160,7 +3233,7 @@
                     {
                       autoFocus: !0,
                       focusable: !0,
-                      className: W().DiscoveryQueueCarouselCtn,
+                      className: x().DiscoveryQueueCarouselCtn,
                       navEntryPreferPosition: c.iU.LAST,
                       onCancelButton: () => a && a(),
                       onCancelActionDescription: (0, k.we)("#Button_Close"),
@@ -3169,28 +3242,28 @@
                       o.Z,
                       {
                         "flow-children": "row",
-                        className: (0, L.A)(W().TopBarCtn, K && W().TopMargin),
+                        className: (0, L.A)(x().TopBarCtn, K && x().TopMargin),
                       },
                       n.createElement(
                         o.Z,
-                        { className: W().LearnMore },
+                        { className: x().LearnMore },
                         (0, k.oW)(
                           "#DiscoveryQueue_LearnMore_Default",
                           n.createElement(s.Ii, {
-                            className: W().LearnMoreLink,
+                            className: x().LearnMoreLink,
                             href: (0, Q._)(h.TS.STORE_BASE_URL + "explore"),
                           }),
                         ),
                       ),
                       n.createElement(
                         o.Z,
-                        { className: W().ControlsCtn },
+                        { className: x().ControlsCtn },
                         !1,
                         n.createElement(
                           o.Z,
                           {
                             focusable: !0,
-                            className: W().QueueButton,
+                            className: x().QueueButton,
                             onClick: a,
                             onActivate: () => a && a(),
                           },
@@ -3200,13 +3273,13 @@
                     ),
                     n.createElement(
                       "div",
-                      { ref: se, className: W().DiscoveryQueueWrapper },
+                      { ref: se, className: x().DiscoveryQueueWrapper },
                       n.createElement(
                         o.Z,
                         { "flow-children": "row" },
                         n.createElement(
                           "div",
-                          { className: W().DiscoveryQueueName },
+                          { className: x().DiscoveryQueueName },
                           we,
                         ),
                       ),
@@ -3215,16 +3288,16 @@
                         {
                           onClick: (e) => P.current.MoveLeft(e),
                           className: (0, L.A)(
-                            W().QueueNavArrow,
-                            W().LeftArrow,
-                            R && W().Enable,
+                            x().QueueNavArrow,
+                            x().LeftArrow,
+                            R && x().Enable,
                           ),
                         },
                         n.createElement(G.l8x, { angle: 180 }),
                       ),
                       n.createElement(M, {
-                        name: S,
-                        className: W().DiscoveryQueueCarousel,
+                        name: C,
+                        className: x().DiscoveryQueueCarousel,
                         ref: P,
                         fnDoesItemTakeFocus: _e,
                         fnOnFocusedColumnChange: ge,
@@ -3249,9 +3322,9 @@
                         {
                           onClick: (e) => P.current.MoveRight(e),
                           className: (0, L.A)(
-                            W().QueueNavArrow,
-                            W().RightArrow,
-                            B && W().Enable,
+                            x().QueueNavArrow,
+                            x().RightArrow,
+                            B && x().Enable,
                           ),
                         },
                         n.createElement(G.l8x, { angle: 0 }),
@@ -3267,16 +3340,16 @@
                       o.Z,
                       {
                         "flow-children": "row",
-                        className: (0, L.A)(W().BotomBarCtn),
+                        className: (0, L.A)(x().BotomBarCtn),
                       },
                       n.createElement(
                         o.Z,
-                        { className: W().LabsHeader },
+                        { className: x().LabsHeader },
                         (0, k.oW)(
                           "#DiscoveryQueue_LabsHeader",
-                          n.createElement("span", { className: W().Bold }),
+                          n.createElement("span", { className: x().Bold }),
                           n.createElement(s.Ii, {
-                            className: W().LearnMoreLink,
+                            className: x().LearnMoreLink,
                             href: (0, Q._)(
                               h.TS.COMMUNITY_BASE_URL +
                                 "groups/SteamLabs/discussions/17/",
@@ -3316,7 +3389,7 @@
                 q.aI.Get().LoadSkippedApps(i, d).then(w);
               });
         }, [v, i, d]);
-        const C = n.useMemo(
+        const S = n.useMemo(
             () =>
               f?.reduce(
                 (e, t) => (u.Fm.Get().BIsGameWishlisted(t) ? e + 1 : e),
@@ -3324,7 +3397,7 @@
               ) || 0,
             [f],
           ),
-          S = n.useMemo(
+          C = n.useMemo(
             () =>
               f?.reduce(
                 (e, t) => (u.Fm.Get().BIsGameIgnored(t) ? e + 1 : e),
@@ -3347,9 +3420,9 @@
           {
             style: y,
             className: (0, L.A)(
-              W().SummaryCtn,
-              W().DiscoveryQueueApp,
-              c && W().Focused,
+              x().SummaryCtn,
+              x().DiscoveryQueueApp,
+              c && x().Focused,
             ),
             onOptionsActionDescription: (0, k.we)(
               "#DiscoveryQueue_ViewWishlist",
@@ -3367,56 +3440,56 @@
           },
           n.createElement(
             "div",
-            { className: W().SummaryContentCtn },
+            { className: x().SummaryContentCtn },
             n.createElement(
               "div",
-              { className: W().SummaryTitle },
+              { className: x().SummaryTitle },
               (0, k.we)("#DiscoveryQueue_SummaryTitle"),
             ),
             n.createElement(
               "div",
-              { className: W().YourStats },
+              { className: x().YourStats },
               (0, k.we)("#DiscoveryQueue_YourStats"),
             ),
             n.createElement(
               o.Z,
-              { "flow-children": "row", className: W().SummaryGrid },
+              { "flow-children": "row", className: x().SummaryGrid },
               n.createElement(
                 "div",
-                { className: W().GridItem },
+                { className: x().GridItem },
                 n.createElement(
                   "div",
-                  { className: W().GridTitle },
+                  { className: x().GridTitle },
                   (0, k.we)("#DiscoveryQueue_ViewedCaps"),
                 ),
                 n.createElement(
                   "div",
-                  { className: W().GridNumber },
+                  { className: x().GridNumber },
                   g.toLocaleString(),
                 ),
                 n.createElement(
                   "div",
-                  { className: W().GridSubTitle },
+                  { className: x().GridSubTitle },
                   (0, k.we)("#DiscoveryQueue_Titles"),
                 ),
               ),
               n.createElement(
                 "div",
-                { className: W().GridItem },
+                { className: x().GridItem },
                 n.createElement(
                   "div",
-                  { className: W().GridTitle },
+                  { className: x().GridTitle },
                   (0, k.we)("#DiscoveryQueue_WishlistedCaps"),
                 ),
                 n.createElement(
                   "div",
-                  { className: W().GridNumber },
-                  C.toLocaleString(),
+                  { className: x().GridNumber },
+                  S.toLocaleString(),
                 ),
                 n.createElement(
                   "a",
                   {
-                    className: (0, L.A)(W().GridSubTitle, W().TextLink),
+                    className: (0, L.A)(x().GridSubTitle, x().TextLink),
                     href: (0, Q._)(h.TS.STORE_BASE_URL + "wishlist", E),
                   },
                   (0, k.we)("#DiscoveryQueue_ViewWishlist"),
@@ -3424,21 +3497,21 @@
               ),
               n.createElement(
                 "div",
-                { className: W().GridItem },
+                { className: x().GridItem },
                 n.createElement(
                   "div",
-                  { className: W().GridTitle },
+                  { className: x().GridTitle },
                   (0, k.we)("#DiscoveryQueue_IgnoredCaps"),
                 ),
                 n.createElement(
                   "div",
-                  { className: W().GridNumber },
-                  S.toLocaleString(),
+                  { className: x().GridNumber },
+                  C.toLocaleString(),
                 ),
                 n.createElement(
                   "a",
                   {
-                    className: (0, L.A)(W().GridSubTitle, W().TextLink),
+                    className: (0, L.A)(x().GridSubTitle, x().TextLink),
                     href: (0, Q._)(
                       h.TS.STORE_BASE_URL + "account/notinterested",
                       E,
@@ -3451,11 +3524,11 @@
             !b &&
               n.createElement(
                 o.Z,
-                { className: W().SummaryActionButtonsCtn },
+                { className: x().SummaryActionButtonsCtn },
                 n.createElement(
                   o.Z,
                   {
-                    className: (0, L.A)(W().QueueButton, W().Wide),
+                    className: (0, L.A)(x().QueueButton, x().Wide),
                     onClick: s,
                   },
                   (0, k.we)("#ActionButtonLabelDone"),
@@ -3465,10 +3538,10 @@
                     o.Z,
                     {
                       className: (0, L.A)(
-                        I && W().Disabled,
-                        W().QueueButton,
-                        W().Primary,
-                        W().Wide,
+                        I && x().Disabled,
+                        x().QueueButton,
+                        x().Primary,
+                        x().Wide,
                       ),
                       onClick: M,
                     },
@@ -3505,24 +3578,24 @@
         return s
           ? n.createElement(
               o.Z,
-              { className: W().TradingCardCtn },
+              { className: x().TradingCardCtn },
               n.createElement("img", {
-                className: W().TradingCardImage,
+                className: x().TradingCardImage,
                 src:
                   h.TS.MEDIA_CDN_URL +
                   "store/promo/summer2022/card_stack.png?v-1",
               }),
               n.createElement(
                 o.Z,
-                { className: W().TradingCardColumn },
+                { className: x().TradingCardColumn },
                 n.createElement(
                   "div",
-                  { className: W().TradingCardText },
+                  { className: x().TradingCardText },
                   (0, k.oW)(
                     r?.earned_today > 0
                       ? "#DiscoveryQueue_TradingCardsEarned_Today"
                       : "#DiscoveryQueue_TradingCards_Desc",
-                    n.createElement("a", { className: W().TextLink, href: l }),
+                    n.createElement("a", { className: x().TextLink, href: l }),
                   ),
                 ),
               ),

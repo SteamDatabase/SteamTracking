@@ -159,6 +159,7 @@
     "VoiceChat_Switch": "Перейти в чат",
     "VoiceChat_InviteToChannel": "Пригласить в голосовой канал",
     "VoiceChat_SendInviteMessage": "Отправить приглашение",
+    "VoiceChat_AudioLevelDb": "%1$s дБ",
     "VoiceChat_Unavailable_NotFriend": "Голосовой чат недоступен: пользователя %1$s нет в списке ваших друзей.",
     "VoiceChat_Unavailable_NotOnline": "Голосовой чат недоступен: %1$s сейчас не в сети.",
     "VoiceChat_Unavailable_NotInBeta": "Голосовой чат недоступен: %1$s не участвует в программе бета-тестирования чата.",

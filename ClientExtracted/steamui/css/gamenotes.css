@@ -28,85 +28,69 @@
   flex-wrap: wrap;
   margin-top: 4px;
 }
-.LCeIT0gmFTY8fdfaVgk4j ._1dEi5qzSDdPOzoOQXYbNLN {
-  margin-right: 4px;
-  width: 30px;
-  height: 30px;
-}
-.BasicUI .LCeIT0gmFTY8fdfaVgk4j ._1dEi5qzSDdPOzoOQXYbNLN {
-  padding: unset;
-  margin-right: 4px;
-  min-width: unset;
-}
-.BasicUI .LCeIT0gmFTY8fdfaVgk4j ._1dEi5qzSDdPOzoOQXYbNLN.gpfocus {
-  color: #0e141b;
-}
-.BasicUI .LCeIT0gmFTY8fdfaVgk4j ._1dEi5qzSDdPOzoOQXYbNLN.gpfocus svg {
-  fill: currentColor;
-  stroke: currentColor;
-  color: inherit;
-}
-.BasicUI .LCeIT0gmFTY8fdfaVgk4j ._1dEi5qzSDdPOzoOQXYbNLN.gpfocus svg path {
-  stroke: currentColor;
-}
-.BasicUI .LCeIT0gmFTY8fdfaVgk4j ._1dEi5qzSDdPOzoOQXYbNLN.gpfocus svg line,
-.BasicUI .LCeIT0gmFTY8fdfaVgk4j ._1dEi5qzSDdPOzoOQXYbNLN.gpfocus svg polygon {
-  stroke: currentColor;
-  fill: currentColor;
-}
-.LCeIT0gmFTY8fdfaVgk4j ._1dEi5qzSDdPOzoOQXYbNLN.DialogButton .SVGIcon_Button {
-  width: 20px;
-  height: 20px;
-  padding-bottom: 4px;
-  padding-left: 1px;
-}
-.LCeIT0gmFTY8fdfaVgk4j
-  ._1dEi5qzSDdPOzoOQXYbNLN.DialogButton
-  .SVGIcon_Button.SVGIcon_TextBold,
-.LCeIT0gmFTY8fdfaVgk4j
-  ._1dEi5qzSDdPOzoOQXYbNLN.DialogButton
-  .SVGIcon_Button.SVGIcon_TextItalic,
-.LCeIT0gmFTY8fdfaVgk4j
-  ._1dEi5qzSDdPOzoOQXYbNLN.DialogButton
-  .SVGIcon_Button.SVGIcon_TextUnderline,
-.LCeIT0gmFTY8fdfaVgk4j
-  ._1dEi5qzSDdPOzoOQXYbNLN.DialogButton
-  .SVGIcon_Button.SVGIcon_TextStrikethrough {
-  width: 18px;
-  height: 18px;
-}
-.LCeIT0gmFTY8fdfaVgk4j
-  ._1dEi5qzSDdPOzoOQXYbNLN.DialogButton
-  .SVGIcon_Button.SVGIcon_SpellCheck {
-  width: 20px;
-  height: 20px;
-  margin-left: 1px;
-  margin-top: 1px;
-}
-.LCeIT0gmFTY8fdfaVgk4j
-  ._1dEi5qzSDdPOzoOQXYbNLN.DialogButton
-  .SVGIcon_Button.SVGIcon_TextUnderline {
-  padding-bottom: 5px;
-}
-.LCeIT0gmFTY8fdfaVgk4j ._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
-  background: #626c7f;
-  color: #fff;
-}
 .LCeIT0gmFTY8fdfaVgk4j ._19z0fjj7o0n9vAjVjvYZNU {
   width: 12px;
 }
 .LCeIT0gmFTY8fdfaVgk4j ._2m1BBIp5Ewr1TI-BkqFGLM {
   flex: 1;
 }
-._1hoxTW8l-39xqcw7WGIlvL svg {
-  width: 21px;
-  height: 21px;
-  padding-top: 6px;
+button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN {
+  margin-right: 4px;
+  width: 30px;
+  height: 30px;
 }
-._1hoxTW8l-39xqcw7WGIlvL._1Iw5xoXQXfmRjgjWTKbm_G svg {
-  transform: rotate(180deg);
-  margin-top: 3px;
-  margin-right: 1px;
+.BasicUI button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN {
+  padding: unset;
+  margin-right: 4px;
+  min-width: unset;
+}
+.BasicUI button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN.gpfocus {
+  color: #0e141b;
+}
+.BasicUI button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN.gpfocus svg {
+  fill: currentColor;
+  stroke: currentColor;
+  color: inherit;
+}
+.BasicUI button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN.gpfocus svg path {
+  stroke: currentColor;
+}
+.BasicUI button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN.gpfocus svg line,
+.BasicUI button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN.gpfocus svg polygon {
+  stroke: currentColor;
+  fill: currentColor;
+}
+button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN.DialogButton .SVGIcon_Button {
+  width: 20px;
+  height: 20px;
+  padding-bottom: 4px;
+  padding-left: 1px;
+}
+button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN.DialogButton
+  .SVGIcon_Button.SVGIcon_TextBold,
+button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN.DialogButton
+  .SVGIcon_Button.SVGIcon_TextItalic,
+button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN.DialogButton
+  .SVGIcon_Button.SVGIcon_TextUnderline,
+button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN.DialogButton
+  .SVGIcon_Button.SVGIcon_TextStrikethrough {
+  width: 18px;
+  height: 18px;
+}
+button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN.DialogButton
+  .SVGIcon_Button.SVGIcon_SpellCheck {
+  width: 20px;
+  height: 20px;
+  margin-left: 1px;
+  margin-top: 1px;
+}
+button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN.DialogButton
+  .SVGIcon_Button.SVGIcon_TextUnderline {
+  padding-bottom: 5px;
+}
+button.DialogButton._1dEi5qzSDdPOzoOQXYbNLN._1Iw5xoXQXfmRjgjWTKbm_G {
+  background: #626c7f;
+  color: #fff;
 }
 ._28ykIGBc90adpzjihQeOoC {
   display: flex;

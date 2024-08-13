@@ -159,6 +159,7 @@
     "VoiceChat_Switch": "สลับเป็นห้องแช็ต",
     "VoiceChat_InviteToChannel": "เชิญเข้าร่วมช่องเสียง",
     "VoiceChat_SendInviteMessage": "ส่งข้อความเชิญ",
+    "VoiceChat_AudioLevelDb": "%1$s dB",
     "VoiceChat_Unavailable_NotFriend": "แช็ตด้วยเสียงไม่พร้อมใช้งาน:  %1$s ไม่ได้อยู่ในรายชื่อเพื่อนของคุณ",
     "VoiceChat_Unavailable_NotOnline": "แช็ตด้วยเสียงไม่พร้อมใช้งาน:  %1$s ไม่ได้ออนไลน์อยู่ในขณะนี้",
     "VoiceChat_Unavailable_NotInBeta": "แช็ตด้วยเสียงไม่พร้อมใช้งาน:  %1$s ไม่ได้ใช้การแช็ตรุ่นเบต้าใหม่",

@@ -54,6 +54,7 @@ enum EStoreBrowseFilterFailure {
 	k_EStoreBrowseFilterFailure_NotPreferred = 20;
 	k_EStoreBrowseFilterFailure_NotInterested = 30;
 	k_EStoreBrowseFilterFailure_UnwantedContent = 40;
+	k_EStoreBrowseFilterFailure_Unavailable = 50;
 }
 
 enum EStoreLinkType {
@@ -223,6 +224,8 @@ message StoreItem {
 			optional int32 billing_agreement_type = 2;
 			optional int32 renewal_time_unit = 3;
 			optional int32 renewal_time_period = 4;
+			optional int64 renewal_price_in_cents = 5;
+			optional string formatted_renewal_price = 6;
 		}
 
 		optional int32 packageid = 1;

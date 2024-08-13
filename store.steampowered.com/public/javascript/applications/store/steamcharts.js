@@ -241,7 +241,8 @@
           l = (0, s.m)("usePartnerEventByEventGID");
         return (
           (0, r.useEffect)(() => {
-            t?.GID != e &&
+            e &&
+              t?.GID != e &&
               (n.O3.Init(),
               n.O3.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
                 [e],
@@ -416,7 +417,7 @@
         n = a(94607),
         s = a(55963),
         l = a(5970),
-        o = a(91674),
+        o = a(60014),
         i = a(88350);
       function c(e) {
         const {
@@ -2368,7 +2369,7 @@
       var ot = a(94095),
         it = a(62792),
         ct = a(26101),
-        mt = a(91674),
+        mt = a(60014),
         ut = a(55963);
       function dt(e) {
         const { children: t, mostPlayedOption: a } = e;
@@ -3377,7 +3378,7 @@
           a.e(6597),
           a.e(7817),
           a.e(7937),
-          a.e(4253),
+          a.e(3586),
           a.e(927),
           a.e(7276),
           a.e(6525),
@@ -3390,16 +3391,16 @@
           a.e(6049),
           a.e(7908),
           a.e(1006),
-          a.e(1471),
+          a.e(4336),
           a.e(7576),
-          a.e(5048),
+          a.e(195),
+          a.e(7252),
           a.e(7368),
-          a.e(6086),
-          a.e(4546),
+          a.e(7328),
+          a.e(2608),
+          a.e(7382),
           a.e(4571),
-          a.e(4019),
-          a.e(2573),
-          a.e(6854),
+          a.e(8019),
           a.e(4657),
           a.e(8294),
           a.e(7233),

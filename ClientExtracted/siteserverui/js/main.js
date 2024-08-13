@@ -191,6 +191,7 @@
         MEDIA_CDN_COMMUNITY_URL: "",
         MEDIA_CDN_URL: "",
         CLAN_CDN_ASSET_URL: "",
+        VIDEO_CDN_URL: "",
         COMMUNITY_CDN_URL: "",
         COMMUNITY_CDN_ASSET_URL: "",
         BASE_URL_SHARED_CDN: "",
@@ -1127,6 +1128,14 @@
           if (!e || 0 == e.length || "#" != e.charAt(0)) return;
           let t = this.m_mapFallbackTokens.get(e.substring(1));
           return void 0 !== t ? t : void 0;
+        }
+        static GetTokenWithFallback(e) {
+          const t = E(b.LANGUAGE),
+            r = e.find((e) => e.language == t);
+          if (r) return r.localized_string;
+          const a = H.GetELanguageFallback(t),
+            n = e.find((e) => e.language == a);
+          return n?.localized_string ?? "";
         }
       }
       function V(e, ...t) {

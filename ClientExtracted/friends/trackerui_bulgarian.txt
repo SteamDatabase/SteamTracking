@@ -370,7 +370,7 @@
 "Friends_Nickname"					"Профилно име"
 "Friends_Avatar"						"Аватар"
 "Friends_AutoSignIntoFriendsOnStartup"	"Автоматично вписване в приятели, когато стартирам Steam"
-"Friends_ShowTimeInChatLog"	"Показване на времеви клейма в хронологията на чата"
+"Friends_ShowTimeInChatLog"	"Изобразяване на времеви клейма в хронологията на чата"
 "Friends_AlwaysNewChatCheck" "Винаги да се отваря нов чат прозорец, вместо раздел "
 "Friends_NotificationsAndSounds"		"Известия и звуци, когато:"
 "Friends_WhenFriendJoinsGame"			"Приятел се присъедини към игра:"
@@ -658,7 +658,7 @@
 "friends_group_addtag"			"ОТБЕЛЯЗВАНЕ"
 "friends_group_edittags_title"		"%friend% — тагове"
 
-"friends_insertitem"			"Показване на артикул от инвентара Ви…"
+"friends_insertitem"			"Изобразяване на артикул от инвентара Ви…"
 "group_enterchatroom"			"Влизане в груповия чат"
 
 "friends_giftreceived_info"		"Ви изпрати подарък"

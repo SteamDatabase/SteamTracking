@@ -425,6 +425,7 @@ $\n k_EJSRegisterMethodType_Function
 -realm=Global
 -startcount=%d
 -steamdeck
+-steamdeckdisplaynosizescale
 -steamid=%llu
 -steamos3
 -steampath=%s
@@ -622,11 +623,9 @@ $\n k_EJSRegisterMethodType_Function
 16CHTMLProtoBufMsgI26CMsgToggleFindInPageDialogE
 16CHTMLProtoBufMsgI27CMsgDraggableRegionsChangedE
 16CHTMLProtoBufMsgI27CMsgFocusedNodeTextResponseE
-16CHTMLProtoBufMsgI27CMsgGameOverlayTexturePaintE
 16CHTMLProtoBufMsgI27CMsgNeedsSharedTexturePaintE
 16CHTMLProtoBufMsgI28CMsgGetCookiesForURLResponseE
 16CHTMLProtoBufMsgI28CMsgScalePageToValueResponseE
-16CHTMLProtoBufMsgI30CMsgGameOverlayTargetTextureIDE
 16CHTMLProtoBufMsgI30CMsgImeCompositionRangeChangedE
 16CHTMLProtoBufMsgI30CMsgSetForceDeviceScaleFactorsE
 16CHTMLProtoBufMsgI30CMsgSetNetFakeLocalSystemStateE
@@ -742,7 +741,6 @@ $\n k_EJSRegisterMethodType_Function
 27CMsgDraggableRegionsChanged
 27CMsgFocusedNodeTextResponse
 27CMsgForcePopupsToDirectHWND
-27CMsgGameOverlayTexturePaint
 27CMsgHorizontalScrollBarSize
 27CMsgNeedsSharedTexturePaint
 27CMsgPopupHTMLWindowResponse
@@ -753,9 +751,7 @@ $\n k_EJSRegisterMethodType_Function
 28CMsgJSValue_JSObjectProperty
 28CMsgScalePageToValueResponse
 28CMsgScreenInformationChanged
-28CMsgSetGameOverlayTargetPIDs
 28CMsgSetTouchGesturesToCancel
-30CMsgGameOverlayTargetTextureID
 30CMsgImeCompositionRangeChanged
 30CMsgSetForceDeviceScaleFactors
 30CMsgSetLocalFileRequestMapping
@@ -1127,8 +1123,6 @@ CMsgFocusedNodeText
 CMsgFocusedNodeTextResponse
 CMsgForcePopupsToDirectHWND
 CMsgFullRepaint
-CMsgGameOverlayTargetTextureID
-CMsgGameOverlayTexturePaint
 CMsgGetCookiesForURL
 CMsgGetCookiesForURLResponse
 CMsgGetZoomResponse
@@ -1182,7 +1176,6 @@ CMsgScreenInformationChanged
 CMsgSearchResults
 CMsgSetForceDeviceScaleFactors
 CMsgSetForegroundWindow
-CMsgSetGameOverlayTargetPIDs
 CMsgSetHTMLTitle
 CMsgSetHorizontalScroll
 CMsgSetLocalFileRequestMapping
@@ -1486,8 +1479,6 @@ HTML_MSG_FUNC eHTMLCommands_DraggableRegionsChanged
 HTML_MSG_FUNC eHTMLCommands_ExitFullScreen
 HTML_MSG_FUNC eHTMLCommands_FileLoadDialog
 HTML_MSG_FUNC eHTMLCommands_FinishedRequest
-HTML_MSG_FUNC eHTMLCommands_GameOverlayTargetTextureID
-HTML_MSG_FUNC eHTMLCommands_GameOverlayTexturePaint
 HTML_MSG_FUNC eHTMLCommands_GetCookiesForURLResponse
 HTML_MSG_FUNC eHTMLCommands_GetFocusedNodeValueResponse
 HTML_MSG_FUNC eHTMLCommands_GetZoomResponse
@@ -2211,7 +2202,6 @@ Zulu
 \n\nrequest_id
 \n\nscroll_max
 \n\nsource_pid
-\n\ntarget_pid
 \n\ntype_flags
 \n\nuint_value
 \n\nusable_top
@@ -3259,7 +3249,6 @@ terminate called recursively\n
 terminate called without an active exception\n
 text
 text format contains deprecated field "
-texture_handle
 th_TH
 thai
 the actual field type (for enums T should be the generated enum 

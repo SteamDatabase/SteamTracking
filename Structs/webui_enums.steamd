@@ -198,11 +198,6 @@ enum EBrowserType
 	EBrowserType_DirectHWND_Borderless = 4;
 	EBrowserType_DirectHWND_Hidden = 5;
 	EBrowserType_ChildHWNDNative = 6;
-	EBrowserType_Transparent_Toplevel = 7;
-	EBrowserType_OffScreen_SharedTexture = 8;
-	EBrowserType_OffScreen_GameOverlay = 9;
-	EBrowserType_OffScreen_GameOverlay_SharedTexture = 10;
-	EBrowserType_Offscreen_FriendsUI = 11;
 	EBrowserType_Offscreen_SteamUI = 12;
 	EBrowserType_OpenVROverlay_Subview = 13;
 }
@@ -2330,13 +2325,6 @@ enum UnnamedEnum514c18a4e38810fa
 	GrowsOnlyWhenTypingAfter = 3;
 }
 
-enum UnnamedEnum5164fb8413b2b2d9
-{
-	DashboardBarPopup = 0;
-	Tooltip = 1;
-	MainPanelMenu = 2;
-}
-
 enum UnnamedEnum52043658147c42e3
 {
 	INVALID = 0;
@@ -2680,6 +2668,14 @@ enum UnnamedEnum5e14c6d1b71a889d
 	LeftBottom = 5;
 	CenterBottom = 6;
 	RightBottom = 7;
+}
+
+enum UnnamedEnum5f28b34f073d91c2
+{
+	DashboardBarPopup = 0;
+	Tooltip = 1;
+	MainPanelMenu = 2;
+	LoginQRCode = 3;
 }
 
 enum UnnamedEnum5f9e5112c68eb7f0

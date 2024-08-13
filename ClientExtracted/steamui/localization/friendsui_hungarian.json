@@ -159,6 +159,7 @@
     "VoiceChat_Switch": "Csevegőszobára váltás",
     "VoiceChat_InviteToChannel": "Meghívás hangcsatornába",
     "VoiceChat_SendInviteMessage": "Meghívóüzenet küldése",
+    "VoiceChat_AudioLevelDb": "%1$s dB",
     "VoiceChat_Unavailable_NotFriend": "Hang nem elérhető: %1$s nincs a barátlistádon.",
     "VoiceChat_Unavailable_NotOnline": "Hang nem elérhető: %1$s jelenleg nem online.",
     "VoiceChat_Unavailable_NotInBeta": "Hang nem elérhető: %1$s nem az új csevegés bétát használja.",

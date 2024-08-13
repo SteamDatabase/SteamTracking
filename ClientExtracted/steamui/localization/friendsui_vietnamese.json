@@ -159,6 +159,7 @@
     "VoiceChat_Switch": "Chuyển sang phòng trò chuyện",
     "VoiceChat_InviteToChannel": "Mời vào kênh đàm thoại",
     "VoiceChat_SendInviteMessage": "Gửi tin nhắn mời",
+    "VoiceChat_AudioLevelDb": "%1$s dB",
     "VoiceChat_Unavailable_NotFriend": "Không thể đàm thoại: %1$s không có trong danh sách bạn bè.",
     "VoiceChat_Unavailable_NotOnline": "Không thể đàm thoại: %1$s hiện không có trên mạng.",
     "VoiceChat_Unavailable_NotInBeta": "Không thể đàm thoại: %1$s hiện đang chạy phiên bản trò chuyện beta.",

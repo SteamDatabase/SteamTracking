@@ -159,6 +159,7 @@
     "VoiceChat_Switch": "Siirry chat-huoneeseen",
     "VoiceChat_InviteToChannel": "Kutsu äänikanavalle",
     "VoiceChat_SendInviteMessage": "Lähetä kutsuviesti",
+    "VoiceChat_AudioLevelDb": "%1$s dB",
     "VoiceChat_Unavailable_NotFriend": "Puhelu ei onnistu: %1$s ei ole kaverilistallasi.",
     "VoiceChat_Unavailable_NotOnline": "Puhelu ei onnistu: %1$s ei ole nyt paikalla.",
     "VoiceChat_Unavailable_NotInBeta": "Puhelu ei onnistu: %1$s ei käytä uutta chatin betaversiota.",

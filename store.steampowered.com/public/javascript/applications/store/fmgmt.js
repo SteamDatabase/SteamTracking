@@ -60,6 +60,7 @@
         richPresenceLabel: "_2Ri005Wg_uXDTa71kdRbcN",
         playerName: "nOdcT-MoOaXGePXLyPe0H",
         playerNickname: "_2saJTAocZ9TnYXTGvnqUMC",
+        DisableColoring: "_3oDmKGyTBBm7i4DULjwYcC",
         playerNicknameBracket: "_3XEmWmfQy7gbYJ4KJ1N9tp",
         richPresenceContainer: "_3sxE7F1LV2IcSX68YsH9dI",
         gameName: "_1cB0qtF0paHWWyj1XNcnbG",
@@ -427,7 +428,7 @@
         c = a(1035),
         m = a(17720),
         u = a(14860),
-        d = a(41471),
+        d = a(14336),
         p = a(92298),
         _ = a(26505),
         y = a(34181),
@@ -917,17 +918,25 @@
           bParenthesizeNicknames: a,
           strNickname: n,
           bIgnorePersonaStatus: r,
-          className: s,
-          ...i
+          bDisableColoring: s,
+          className: i,
+          ...m
         } = e;
-        let m = n && !a ? n : t.m_strPlayerName;
+        let u = n && !a ? n : t.m_strPlayerName;
         return l.createElement(
           "span",
-          { ...i, className: (0, c.A)(s, !r && (0, o.rO)(t)) },
+          {
+            ...m,
+            className: (0, c.A)(
+              i,
+              s && h().DisableColoring,
+              !r && (0, o.rO)(t),
+            ),
+          },
           l.createElement(
             "span",
             { className: h().playerName },
-            m || " ",
+            u || " ",
             a &&
               n &&
               l.createElement(
@@ -1329,7 +1338,7 @@
         y = a(14860),
         g = a(75048),
         E = a(1035),
-        f = a(41471),
+        f = a(14336),
         h = a(92757),
         w = a(44325),
         F = a(78327);

@@ -2154,7 +2154,11 @@ html.responsive .store_main_capsule,
 		margin-bottom: 0;
 	}
 
-	html.responsive .home_rightcol{
+	html.responsive .home_tabs_content {
+		min-height: unset;
+	}
+
+	html.responsive .home_rightcol {
 		display: none;
 	}
 
@@ -2493,7 +2497,11 @@ html.responsive.tablet .store_main_capsule,
 		margin-bottom: 0;
 	}
 
-	html.responsive.tablet .home_rightcol{
+	html.responsive.tablet .home_tabs_content {
+		min-height: unset;
+	}
+
+	html.responsive.tablet .home_rightcol {
 		display: none;
 	}
 
@@ -5508,6 +5516,7 @@ body.v6.infinite_scrolling #footer_spacer.small_footer {
 	margin-top: 16px;
 	margin-bottom: 16px;
 	position: relative;
+	max-width: 300px;
 }
 
 .content_hub_carousel_ctn .content_hub_capsule_ctn img {

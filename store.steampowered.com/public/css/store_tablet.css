@@ -250,6 +250,10 @@ html.tablet .tab_container {
 	background: unset;
 }
 
+html.tablet .home_tabs_content {
+	min-height: unset;
+}
+
 html.tablet .home_tabs_row {
 	display: none;
 }

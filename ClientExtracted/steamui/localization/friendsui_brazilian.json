@@ -159,6 +159,7 @@
     "VoiceChat_Switch": "Trocar para sala de conversa",
     "VoiceChat_InviteToChannel": "Convidar para canal de voz",
     "VoiceChat_SendInviteMessage": "Enviar convite",
+    "VoiceChat_AudioLevelDb": "%1$s dB",
     "VoiceChat_Unavailable_NotFriend": "Voz indisponível: %1$s não está na sua lista de amigos.",
     "VoiceChat_Unavailable_NotOnline": "Voz indisponível: %1$s está off-line.",
     "VoiceChat_Unavailable_NotInBeta": "Voz indisponível: %1$s não está usando a versão beta da lista de amigos.",

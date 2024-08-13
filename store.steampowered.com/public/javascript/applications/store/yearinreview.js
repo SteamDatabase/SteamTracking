@@ -1036,71 +1036,78 @@
         return r ? null : n;
       }
     },
-    3088: (e, t, a) => {
+    95034: (e, t, a) => {
       "use strict";
-      a.d(t, { c: () => s });
-      var r = a(34629),
-        n = a(90626),
-        i = a(56093);
-      class s extends n.Component {
-        m_refImage = n.createRef();
-        constructor(e) {
-          super(e), (this.state = { nImage: 0 });
-        }
-        componentDidUpdate(e) {
-          JSON.stringify(this.props.rgSources) != JSON.stringify(e.rgSources) &&
-            this.setState({ nImage: 0 });
-        }
-        get src() {
-          let e = "";
-          return (
-            this.props.rgSources &&
-              this.props.rgSources.length > this.state.nImage &&
-              (e = this.props.rgSources[this.state.nImage]),
-            e ||
-              (console.warn(
-                "MultiSourceImage created with no image src",
-                this.props,
-                this.state.nImage,
-              ),
-              (e =
-                "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=")),
-            e
-          );
-        }
-        get imgRef() {
-          return this.m_refImage;
-        }
-        OnImageError(e) {
-          this.props.onIncrementalError &&
-            this.props.onIncrementalError(
-              e,
-              this.props.rgSources[this.state.nImage],
-              this.state.nImage,
-            );
-          let t = this.state.nImage + 1;
-          t >= this.props.rgSources.length &&
-            this.props.onError &&
-            this.props.onError(e),
-            t < this.props.rgSources.length && this.setState({ nImage: t });
-        }
-        render() {
-          const {
-              rgSources: e,
-              onIncrementalError: t,
-              onError: a,
-              ...r
-            } = this.props,
-            i = this.src;
-          return n.createElement("img", {
-            ref: this.m_refImage,
-            ...r,
-            src: i,
-            onError: this.OnImageError,
-          });
+      a.d(t, {
+        Bm: () => l,
+        QD: () => o,
+        f3: () => i,
+        iV: () => u,
+        ip: () => c,
+        le: () => m,
+      });
+      var r = a(90626),
+        n = a(92757);
+      function i(e, t) {
+        let a;
+        "string" == typeof e
+          ? (a = e)
+          : "location" in e
+            ? (a = e.location.search)
+            : "search" in e && (a = e.search);
+        const r = new URLSearchParams(a.substring(1));
+        if (r.has(t)) {
+          const e = r.getAll(t);
+          return e[e.length - 1];
         }
       }
-      (0, r.Cg)([i.oI], s.prototype, "OnImageError", null);
+      const s = (e) => null != e;
+      function l(e, t, a, r = !1) {
+        const n = new URLSearchParams(e.location.search.substring(1));
+        n.delete(t),
+          s(a) && n.append(t, a),
+          r
+            ? e.replace(`?${n.toString()}`, { ...e.location.state })
+            : e.push(`?${n.toString()}`);
+      }
+      function m(e, t, a) {
+        l(e, t, a, !0);
+      }
+      function o(e, t) {
+        const a = (0, n.W6)(),
+          m = (0, n.zy)(),
+          o = (0, r.useMemo)(() => {
+            const a = i(m.search, e);
+            return s(a)
+              ? s(t)
+                ? "boolean" == typeof t
+                  ? t.constructor("false" !== a)
+                  : t.constructor(a)
+                : a
+              : t;
+          }, [m.search, e, t]),
+          c = (0, r.useCallback)(
+            (t) => {
+              l(a, e, s(t) ? String(t) : null);
+            },
+            [a, e],
+          );
+        return [o, c];
+      }
+      function c(e, t, a = !1) {
+        const r = new URLSearchParams(e.location.search.substring(1));
+        for (const e in t)
+          if (t.hasOwnProperty(e)) {
+            const a = t[e];
+            r.delete(e), s(a) && r.append(e, a);
+          }
+        a
+          ? e.replace(`?${r.toString()}`, { ...e.location.state })
+          : e.push(`?${r.toString()}`);
+      }
+      function u(e, t) {
+        c(e, t, !0);
+      }
     },
     38135: (e, t, a) => {
       "use strict";
@@ -6072,7 +6079,7 @@
           a,
         );
       }
-      var Nt = a(91674);
+      var Nt = a(60014);
       function Gt(e) {
         const { userYearInReview: t, nYear: a } = e,
           n = t.GetPlayTimeStats().game_summary,

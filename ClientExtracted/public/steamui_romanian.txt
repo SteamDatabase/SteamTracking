@@ -2915,7 +2915,7 @@ Fă-ți unul acum trimițând un cadou prin e-mail cuiva cunoscut."
 
 
 "Steam_GuestPassesColumn" 		"Cadouri"
-"Steam_GuestPasses_LeftGift"		"Copie suplimentară"
+"Steam_GuestPasses_LeftGift"		"Exemplar suplimentar"
 "Steam_GuestPasses_LeftGuestPass"		"Bilet de vizitator"
 
 "SteamUI_GamesDialog_RightClick_ActivateGuestPass" "Activează biletul de vizitator"
@@ -3279,7 +3279,7 @@ Fă-ți un prieten nou pe Steam, trimițând un cadou prin e-mail către cineva 
 
 "Steam_GuestPass_GiftSection"	"CADOURI"
 "Steam_GuestPasses_GuestPassesSection"	"BILETE DE VIZITATOR"
-"Steam_GuestPasses_ExtraCopiesSection"	"COPII SUPLIMENTARE"
+"Steam_GuestPasses_ExtraCopiesSection"	"EXEMPLARE SUPLIMENTARE"
 
 "Steam_Purchase_Total"				"TOTAL"
 "Steam_Purchase_VAT"				"TVA"
@@ -3428,7 +3428,7 @@ Fă-ți un prieten nou pe Steam, trimițând un cadou prin e-mail către cineva 
 "Steam_SendGuestPass_SendDirectLabel$type=gift"			"Trimite prietenului meu un mesaj cadou direct prin contul său Steam."
 "Steam_SendGuestPass_SendDirectLabel$type=guestpass"	"Trimite prietenului meu un bilet de vizitator direct către contul său Steam."
 
-"Steam_GuestPasses_LeftGiftPlural"		"Copii suplimentare"
+"Steam_GuestPasses_LeftGiftPlural"		"Exemplare suplimentare"
 "Steam_GuestPasses_LeftGuestPassPlural"		"Bilete de vizitator"
 
 "Steam_InstallAborted_Title"	"Steam - Instalare"

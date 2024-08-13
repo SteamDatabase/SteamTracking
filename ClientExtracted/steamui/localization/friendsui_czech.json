@@ -1,8 +1,8 @@
 {
     "language": "czech",
     "WindowTitle_FriendsList": "Seznam přátel",
-    "WindowTitle_ChatTabTitle": "%1$s + 1 další konverzace",
-    "WindowTitle_ChatTabTitlePlural": "%1$s + %2$s dalších konverzací",
+    "WindowTitle_ChatTabTitle": "%1$s + další konverzace (1)",
+    "WindowTitle_ChatTabTitlePlural": "%1$s + další konverzace (%2$s)",
     "WindowTitle_UnreadMessage": "%1$s říká...",
     "tab_friends": "Přátelé",
     "tab_chats": "Místnosti",
@@ -159,6 +159,7 @@
     "VoiceChat_Switch": "Přepnout na textový kanál",
     "VoiceChat_InviteToChannel": "Pozvat do hlasového kanálu",
     "VoiceChat_SendInviteMessage": "Odeslat pozvánku",
+    "VoiceChat_AudioLevelDb": "%1$s dB",
     "VoiceChat_Unavailable_NotFriend": "Hlasová konverzace není dostupná: %1$s není Vaším přítelem.",
     "VoiceChat_Unavailable_NotOnline": "Hlasová konverzace není dostupná: %1$s není online.",
     "VoiceChat_Unavailable_NotInBeta": "Hlasová konverzace není dostupná: %1$s se neúčastní beta verze nových konverzací.",

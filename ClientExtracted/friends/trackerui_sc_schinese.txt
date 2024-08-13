@@ -41,7 +41,7 @@
 		"Friends_ChatIntro_WarningInfo" "提醒：蒸汽平台客服部门永远不会出于任何原因向您索要密码。忽略您收到的任何密码请求。"
 		"Friends_Voice_ChangingDevice_Title" "蒸汽平台 - 更改录音设备"
 		"Friends_DownloadNotification_Steam" "蒸汽平台"
-		"Friends_SteamInputControllerConfigNotification_Info3" "在蒸汽平台界面中编辑"
+		"Friends_SteamInputControllerConfigNotification_Info3" "在蒸汽平台叠加界面中编辑"
 		"SettingsController_SteamController" "蒸汽平台控制器"
 		"controller_steamcontroller_unknown" "蒸汽平台控制器"
 		"controller_steamcontroller_gordon" "蒸汽平台控制器"
@@ -61,7 +61,7 @@
 		"Broadcast_Notification_AvailableToWatch_Public" "所有蒸汽平台用户都可随时加入您的直播。"
 		"Steam_Settings_Broadcast_HelpURL_URL" "https://help.steamchina.com/zh/kb/6730-TOAK-6497"
 		"Steam_Settings_Broadcast_Disabled_System" "蒸汽平台直播目前不支持此操作系统。"
-		"Steam_Settings_Broadcast_Disabled_Overlay" "需要启用蒸汽平台界面才能进行实况直播。"
+		"Steam_Settings_Broadcast_Disabled_Overlay" "需要启用蒸汽平台叠加界面才能进行实况直播。"
 		"Steam_Settings_Broadcast_Disabled_System_Windows_Compat_Enabled" "蒸汽平台无法在这台机器上开始直播。\n\nWindows 目前正在以 Windows 兼容模式运行蒸汽平台，这可能会阻止直播功能的正常运行。如果这台机器是 Windows 7 或更高版本系统，请按照以下支持页面的说明移除兼容模式。"
 		"Steam_Settings_Broadcast_WindowsCompatSupportURL" "https://help.steamchina.com/zh/kb/7153-AHJV-4256"
 		"Broadcast_RecordingError_NoAudio" "蒸汽平台无法录制此直播的音频"
@@ -71,7 +71,7 @@
 		"Broadcast_RecordingError_URL_General" "https://help.steamchina.com/zh/kb/1874-QRUJ-3541"
 		"Broadcast_RecordingError_Razer" "蒸汽平台无法记录此直播的音频。请访问下方的客服支持文章并阅读“雷蛇音频硬件”部分以获得解决此问题的帮助。"
 		"Broadcast_RecordingError_URL_Razer" "https://help.steamchina.com/zh/kb/1874-QRUJ-3541#2"
-		"Overlay_SettingsBrowserDesc" "下列设置适用于蒸汽平台客户端中使用的网页浏览器和蒸汽平台游戏中界面。"
+		"Overlay_SettingsBrowserDesc" "下列设置适用于蒸汽平台客户端中使用的网页浏览器和蒸汽平台游戏中叠加界面。"
 		"Steam_SettingsBrowserDeleteAllDataMsg" "是否删除蒸汽平台浏览器的所有缓存文件、Cookie 和历史记录？"
 	}
 }

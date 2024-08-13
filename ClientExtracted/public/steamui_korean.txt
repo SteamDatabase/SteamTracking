@@ -764,7 +764,7 @@
 "SteamUI_OfflineMode_CannotLoadNewGame" "오프라인 상태에서는 새 게임을 다운로드할 수 없습니다."
 
 "SteamUI_GamePropertiesContent_ReadyForOffline" "준비됨"
-"SteamUI_GamePropertiesContent_NotReadyForOffline" "준비 안 됨"
+"SteamUI_GamePropertiesContent_NotReadyForOffline" "준비되지 않음"
 
 "Steam_ErrorOffline"	"Steam이 오프라인 모드인 경우 이 작업을 완료할 수 없습니다."
 
@@ -3218,7 +3218,7 @@ Windows에 관리자로 로그인해야 합니다.
 
 "Steam_RequestingLegacyKey" "키 요청 중..."
 "Steam_LegacyCDKey_Title" "%game% CD 키"
-"Steam_CopyLegacyKey_ToClipboard" "키를 클립보드로 복사"
+"Steam_CopyLegacyKey_ToClipboard" "클립보드에 키 복사"
 
 "Steam_CityLifeDeluxe_LaunchBuildingEditor"	"사용자 정의 편집기 작성 시작"
 

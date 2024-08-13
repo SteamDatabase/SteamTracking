@@ -15,6 +15,14 @@ enum ETimelineEntryType {
 	k_ETimelineEntryType_UserMarker = 5;
 	k_ETimelineEntryType_Screenshot = 6;
 	k_ETimelineEntryType_Error = 7;
+	k_ETimelineEntryType_Tag = 8;
+	k_ETimelineEntryType_GamePhase = 9;
+}
+
+enum EPhaseResultType {
+	k_EPhaseResultType_Automatic = 1;
+	k_EPhaseResultType_Blank = 2;
+	k_EPhaseResultType_API = 3;
 }
 
 enum ETimelineChangeNotificationType {
@@ -83,6 +91,54 @@ message CGameRecording_GetTimelinesForClip_Response {
 	optional uint64 first_timeline_start_offset_ms = 3;
 }
 
+message CGameRecording_QueryPhases_Request {
+	message Tag {
+		optional string group = 1;
+		optional string name = 2;
+	}
+
+	optional uint32 page = 1;
+	optional uint32 count = 2;
+	optional uint64 filter_gameid = 10;
+	optional string filter_search_string = 11;
+	repeated .CGameRecording_QueryPhases_Request.Tag filter_tags = 12;
+}
+
+message CGameRecording_QueryPhases_Response {
+	message Phase {
+		message BackgroundRecording {
+			optional string timeline_id = 1;
+			optional uint64 offset = 2;
+			optional uint64 duration_ms = 3;
+		}
+
+		optional uint64 game_id = 1;
+		optional string title = 2;
+		optional string desc = 3;
+		optional string icon = 4;
+		optional uint32 date_recorded = 5;
+		optional uint64 duration_ms = 6;
+		repeated .CTimelineTag tags = 7;
+		repeated .CTimelineTag contained_tags = 8;
+		optional .CGameRecording_QueryPhases_Response.Phase.BackgroundRecording background_recording = 9;
+		repeated string clip_ids = 10;
+		optional .EPhaseResultType type = 11 [default = k_EPhaseResultType_Automatic];
+		optional uint64 start_ms = 12;
+		repeated uint32 screenshots = 13;
+	}
+
+	repeated .CGameRecording_QueryPhases_Response.Phase phases = 1;
+	optional uint32 total_count = 2;
+}
+
+message CGameRecording_GetTags_Request {
+	optional uint64 game_id = 1;
+}
+
+message CGameRecording_GetTags_Response {
+	repeated .CTimelineTag tags = 1;
+}
+
 message CGameRecording_GetEnoughDiskSpace_Request {
 }
 
@@ -130,6 +186,8 @@ message CTimelineEntry {
 	optional int32 marker_priority = 14;
 	optional uint32 screenshot_handle = 15;
 	optional string achievement_name = 16;
+	repeated .CTimelineTag tag = 17;
+	optional string phase_id = 18;
 }
 
 message CGameRecording_TimelineEntryChanged_Notification {
@@ -369,6 +427,25 @@ message CGameRecording_ExportProgress_Notification {
 	optional int32 eresult = 3;
 }
 
+message CGameRecording_PerGameSettings {
+	optional fixed64 gameid = 1;
+	optional bool enabled = 2;
+}
+
+message CGameRecording_GetPerGameSettings_Request {
+}
+
+message CGameRecording_GetPerGameSettings_Response {
+	repeated .CGameRecording_PerGameSettings settings = 1;
+}
+
+message CGameRecording_SetPerGameSettings_Request {
+	optional .CGameRecording_PerGameSettings game_settings = 1;
+}
+
+message CGameRecording_SetPerGameSettings_Response {
+}
+
 message CGameRecording_UploadProgress_Notification {
 	optional float progress = 1;
 	optional string clip_id = 2;
@@ -431,6 +508,8 @@ service GameRecording {
 	rpc GetActiveTimelineApps (.CGameRecording_GetActiveTimelineApps_Request) returns (.CGameRecording_GetActiveTimelineApps_Response);
 	rpc GetTimelinesForApp (.CGameRecording_GetTimelinesForApp_Request) returns (.CGameRecording_GetTimelinesForApp_Response);
 	rpc GetTimelinesForClip (.CGameRecording_GetTimelinesForClip_Request) returns (.CGameRecording_GetTimelinesForClip_Response);
+	rpc QueryPhases (.CGameRecording_QueryPhases_Request) returns (.CGameRecording_QueryPhases_Response);
+	rpc GetTags (.CGameRecording_GetTags_Request) returns (.CGameRecording_GetTags_Response);
 	rpc GetEnoughDiskSpace (.CGameRecording_GetEnoughDiskSpace_Request) returns (.CGameRecording_GetEnoughDiskSpace_Response);
 	rpc GetAvailableDiskSpace (.CGameRecording_GetAvailableDiskSpace_Request) returns (.CGameRecording_GetAvailableDiskSpace_Response);
 	rpc SaveClip (.CGameRecording_SaveClip_Request) returns (.CGameRecording_SaveClip_Response);
@@ -456,6 +535,8 @@ service GameRecording {
 	rpc NotifyUploadProgress (.CGameRecording_UploadProgress_Notification) returns (.WebUINoResponse);
 	rpc NotifyLowDiskSpace (.CGameRecording_LowDiskSpace_Notification) returns (.WebUINoResponse);
 	rpc NotifyPostGameHighlightsChanged (.CGameRecording_PostGameHighlightsChanged_Notification) returns (.WebUINoResponse);
+	rpc GetPerGameSettings (.CGameRecording_GetPerGameSettings_Request) returns (.CGameRecording_GetPerGameSettings_Response);
+	rpc SetPerGameSettings (.CGameRecording_SetPerGameSettings_Request) returns (.CGameRecording_SetPerGameSettings_Response);
 	rpc UserAddTimelineEntry (.CGameRecording_UserAddTimelineEntry_Request) returns (.CGameRecording_UserAddTimelineEntry_Response);
 	rpc UserUpdateTimelineEntry (.CGameRecording_UserUpdateTimelineEntry_Request) returns (.CGameRecording_UserUpdateTimelineEntry_Response);
 	rpc UserRemoveTimelineEntry (.CGameRecording_UserRemoveTimelineEntry_Request) returns (.CGameRecording_UserRemoveTimelineEntry_Response);

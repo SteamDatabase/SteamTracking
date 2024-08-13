@@ -74,12 +74,12 @@
 "Steam_Country" "País"
 "Steam_PostCode" "Código postal o zip"
 "Steam_CountryOfResidence"	"Vivo en el país seleccionado más arriba"
-"Steam_SubscribeReviewInfo" "Revisa tu pedido. Si hay algún error a continuación, haz clic en \"Atrás\" para corregirlo. Si no lo hay, haz clic en \"Comprar\" para completar la operación."
+"Steam_SubscribeReviewInfo" "Revisa tu pedido. Si hay algún error a continuación, haz clic en «Atrás» para corregirlo. Si no lo hay, haz clic en «Comprar» para completar la operación."
 "Steam_ProductCostLabel"	"Precio"
 "Steam_TaxLabel"	"Impuestos estimados"
 "Steam_TotalLabel"	"Total"
 "Steam_ProcessingSubscriptionInfo" "Procesando tu suscripción. Esto llevará menos de un minuto."
-"Steam_SubscribeCompleteInfo" "¡Gracias! Se ha completado tu compra de %s1. \n\nAhora, en tu biblioteca de productos, puedes hacer doble clic en el juego para jugar (o hacer clic con el botón derecho del ratón en el título del juego y seleccionar \"Iniciar\" en el menú)."
+"Steam_SubscribeCompleteInfo" "¡Gracias! Se ha completado tu compra de %s1. \n\nAhora, en tu biblioteca de productos, puedes hacer doble clic en el juego para jugar (o hacer clic con el botón derecho del ratón en el título del juego y seleccionar «Iniciar» en el menú)."
 "Steam_PreorderCompleteInfo" "¡Gracias! Se ha completado la reserva de %s1. \n\nPodrás empezar a jugar en cuanto el juego se ponga oficialmente a la venta."
 "Steam_SubscribeFailedInfo"	"La compra no se ha completado. La información de \nla tarjeta de crédito que has introducido ha sido rechazada.\n\nTe hemos enviado un email con más \ninformación. Intenta realizar la compra de nuevo,\n utilizando otra tarjeta de crédito."
 
@@ -600,7 +600,7 @@
 "Steam_PreloadInProgress"		"En proceso de precarga"
 "Steam_PreloadPause"			"Pausa"
 "Steam_PreloadContinue"		"Continuar"
-"Steam_PreloadCancel"		"Has elegido cancelar la precarga. Se eliminarán todos los datos que ya hayas descargado.\nPulsa \"Aceptar\" para continuar o \"Cancelar\" para conservar los datos."
+"Steam_PreloadCancel"		"Has elegido cancelar la precarga. Se eliminarán todos los datos que ya hayas descargado.\nPulsa «Aceptar» para continuar o «Cancelar» para conservar los datos."
 "Steam_CancelPreloading"		"Cancelar precarga"
 "Steam_PreloadProgressNotes"	"%game% se ha precargado en tu ordenador.\n\nSi presolicitas el juego ahora, se desbloqueará y podrás empezar a jugar el mismo día de su lanzamiento."
 "Steam_PreloadProgressNotesPayed"	"%game% se ha precargado en tu ordenador.\n\nTen paciencia porque la precarga puede tardar bastante. Puedes cerrar esta ventana, dejar Steam funcionando y volver a comprobar más adelante cómo va el proceso."
@@ -1124,10 +1124,10 @@
 "SteamUI_SpecialSurvey_Error_Denied"	"No has sido invitado a responder a esta encuesta."
 "SteamUI_SpecialSurvey_Error_AlreadyComplete"	"Ya has realizado esta encuesta. Gracias por tu participación."
 
-"SteamUI_SpecialSurvey_Welcome"			"%surveyname%\n\nGracias por aceptar participar en esta encuesta. Esta encuesta consta de dos partes.\n\nPrimero, recopilaremos información sobre tu ordenador. Esta información no es anónima y será compartida con el autor de esta encuesta.\n\nDespués, te remitiremos a una página web para recopilar datos demográficos adicionales.\n\nPara comenzar haz clic en \"Siguiente\""
-"SteamUI_SpecialSurvey_Welcome_No_Web"	"%surveyname%\n\nGracias por aceptar participar en esta encuesta. \n\nEsta encuesta recopila información sobre tu ordenador. Esta información no es anónima y será compartida con el autor de esta encuesta.\n\nPara comenzar haz clic en \"Siguiente\""
-"SteamUI_SpecialSurvey_Welcome_HW_Complete"	"%surveyname%\n\nGracias por aceptar participar en esta encuesta.\n\nParece que ya has tomado parte en esta encuesta con anterioridad, así que no necesitamos recopilar información sobre tu ordenador de nuevo. Haz clic en \"Finalizar\" para abrir una página web donde podrás completar el resto de la encuesta."
-"SteamUI_SpecialSurvey_ForwardToWeb"	"El paso 1, recopilación de información de hardware, ha sido completado.\n\nHaz clic en \"Finalizar\" para abrir una página web donde podrás empezar el paso 2. La encuesta no finalizará hasta que no hayas completado el paso 2."
+"SteamUI_SpecialSurvey_Welcome"			"%surveyname%\n\nGracias por aceptar participar en esta encuesta. Esta encuesta consta de dos partes.\n\nPrimero, recopilaremos información sobre tu ordenador. Esta información no es anónima y será compartida con el autor de esta encuesta.\n\nDespués, te remitiremos a una página web para recopilar datos demográficos adicionales.\n\nPara comenzar haz clic en «Siguiente»"
+"SteamUI_SpecialSurvey_Welcome_No_Web"	"%surveyname%\n\nGracias por aceptar participar en esta encuesta. \n\nEsta encuesta recopila información sobre tu ordenador. Esta información no es anónima y será compartida con el autor de esta encuesta.\n\nPara comenzar haz clic en «Siguiente»"
+"SteamUI_SpecialSurvey_Welcome_HW_Complete"	"%surveyname%\n\nGracias por aceptar participar en esta encuesta.\n\nParece que ya has tomado parte en esta encuesta con anterioridad, así que no necesitamos recopilar información sobre tu ordenador de nuevo. Haz clic en «Finalizar» para abrir una página web donde podrás completar el resto de la encuesta."
+"SteamUI_SpecialSurvey_ForwardToWeb"	"El paso 1, recopilación de información de hardware, ha sido completado.\n\nHaz clic en «Finalizar» para abrir una página web donde podrás empezar el paso 2. La encuesta no finalizará hasta que no hayas completado el paso 2."
 "SteamUI_SpecialSurvey_Complete"		"Gracias por participar en esta encuesta. Tus respuestas han sido registradas."
 "SteamUI_SpecialSurvey_Sending_Data"	"Enviando los datos recopilados..."
 "SteamUI_SpecialSurvey_Cancel"			"Cancelar"
@@ -1152,7 +1152,7 @@
 "SteamUI_ForMoreInformation" "Para obtener más información, visita:"
 
 "SteamUI_ChosenCreateMultipleHeadline" "Información importante sobre cuentas de Steam"
-"SteamUI_ChosenCreateDuplicate" "Crea una cuenta nueva de Steam únicamente si todavía no tienes una. Si ya has creado una cuenta de Steam, solamente podrás acceder a los juegos a los que estés suscrito a través de dicha cuenta.\n\nSi aún no tienes una cuenta de Steam, pulsa \"Siguiente\" para continuar."
+"SteamUI_ChosenCreateDuplicate" "Crea una cuenta nueva de Steam únicamente si todavía no tienes una. Si ya has creado una cuenta de Steam, solamente podrás acceder a los juegos a los que estés suscrito a través de dicha cuenta.\n\nSi aún no tienes una cuenta de Steam, pulsa «Siguiente» para continuar."
 
 "SteamUI_CCWarning_Duplicate"	"Antes de que envíes esta solicitud de compra:\n\nParece que esta solicitud de compra contiene la misma información (o prácticamente la misma) que una solicitud enviada anteriormente. Solamente debes repetir la solicitud si estás absolutamente seguro de que el hecho de que no se aceptara la información de tu tarjeta de crédito ha sido un error.\n\nIMPORTANTE: Si la compañía de tu tarjeta de crédito no acepta la compra, es posible que los fondos de tu cuenta queden bloqueados temporalmente."
 "SteamUI_CCWarning" "Steam - Advertencia"
@@ -1438,7 +1438,7 @@
 
 "SteamUI_DriverUnsupported_Title"	"Tarjeta de vídeo no compatible"
 "SteamUI_DriverUnsupported_Info"	"Tu tarjeta de vídeo no cumple los requisitos mínimos para ejecutar el juego.  Si decides continuar y ejecutar el juego de todas formas, podrían surgir problemas de estabilidad o rendimiento del juego.  Te recomendamos que hagas clic en el vínculo siguiente para actualizar los controladores de la tarjeta de vídeo a la última versión que haya sacado el fabricante."
-"SteamUI_DriverDenied_Info"		"Tu hardware de video no cumple con los requisitos mínimos que hemos establecido para jugar. Este juego no puede funcionar en este hardware."
+"SteamUI_DriverDenied_Info"		"Tu hardware de vídeo no cumple con los requisitos mínimos que hemos establecido para jugar. Este juego no puede funcionar en este hardware."
 "SteamUI_UnsupportedUrlLabel"		"Mostrar los requisitos mínimos..."
 "SteamUI_ContinueUnsupported"		"Seguir de todos modos"
 "SteamUI_SuppressUnsupported"		"No volver a mostrar esta advertencia"
@@ -2942,16 +2942,16 @@ Crea uno enviando un regalo por correo electrónico a alguien que conozcas."
 "Steam_SubscriptionFailure_ServiceUnavailable_Headline" "El servidor de Steam no está disponible"
 "Steam_SubscriptionFailure_ServiceUnavailable" "Tu equipo no puede conectarse a los servidores de Steam o puede que el servicio esté deshabilitado temporalmente. Por favor, vuelve a intentarlo más tarde."
 
-"Steam_SubscriptionCancelled_PayPalDeclined_InvalidShippingAddress"	"No se ha completado tu compra de %subscription%.\n\n%provider% ha informado de un problema con la dirección asociada a tu cuenta de %provider%. Puedes corregir este problema a través de %provider% o hacer clic en \"Atrás\" para seleccionar un método de pago diferente."
-"Steam_SubscriptionCancelled_PayPalDeclined_UseOtherFundingSource"	"No se ha completado tu compra de %subscription%.\n\n%provider% ha informado de un problema con la fuente de financiación de tu cuenta de %provider%. Puedes corregir este problema a través de %provider% o hacer clic en \"Atrás\" para seleccionar un método de pago diferente."
-"Steam_SubscriptionCancelled_PayPalDeclined_UseOtherPaymentMethod"	"No se ha completado tu compra de %subscription%.\n\n%provider% ha informado de un problema con la autorización. Haz clic en \"Atrás\" para elegir otro método de pago."
+"Steam_SubscriptionCancelled_PayPalDeclined_InvalidShippingAddress"	"No se ha completado tu compra de %subscription%.\n\n%provider% ha informado de un problema con la dirección asociada a tu cuenta de %provider%. Puedes corregir este problema a través de %provider% o hacer clic en «Atrás» para seleccionar un método de pago diferente."
+"Steam_SubscriptionCancelled_PayPalDeclined_UseOtherFundingSource"	"No se ha completado tu compra de %subscription%.\n\n%provider% ha informado de un problema con la fuente de financiación de tu cuenta de %provider%. Puedes corregir este problema a través de %provider% o hacer clic en «Atrás» para seleccionar un método de pago diferente."
+"Steam_SubscriptionCancelled_PayPalDeclined_UseOtherPaymentMethod"	"No se ha completado tu compra de %subscription%.\n\n%provider% ha informado de un problema con la autorización. Haz clic en «Atrás» para elegir otro método de pago."
 "Steam_PayPalDeclined_SupportLink"									"Visita el sitio web del Soporte de Steam para más información."
 
 "Steam_SubscriptionCancelled_RegionNotSupported_Headline" "No se admite este método de pago."
-"Steam_SubscriptionCancelled_RegionNotSupported" "No se ha completado tu compra de %subscription%.\n\nEl método de pago que has elegido no está disponible actualmente en tu país. Haz clic en \"Atrás\" y elige otro método de pago."
+"Steam_SubscriptionCancelled_RegionNotSupported" "No se ha completado tu compra de %subscription%.\n\nEl método de pago que has elegido no está disponible actualmente en tu país. Haz clic en «Atrás» y elige otro método de pago."
 
 "Steam_SubscriptionCancelled_PayPalDeclined_Headline" "Error de autorización de %provider%."
-"Steam_SubscriptionCancelled_PayPalDeclined" "No se ha completado tu compra de %subscription%.\n\n%provider% ha informado de un problema con la autorización. Haz clic en \"Atrás\" y selecciona otro método de pago."
+"Steam_SubscriptionCancelled_PayPalDeclined" "No se ha completado tu compra de %subscription%.\n\n%provider% ha informado de un problema con la autorización. Haz clic en «Atrás» y selecciona otro método de pago."
 
 "Steam_SubscriptionCancelled_PuchaseDeclined_ContactProvider"	"No se ha completado tu compra de %subscription%.\n\n%provider% ha informado de un problema con tu cuenta de %provider%. Ponte en contacto con el servicio de atención al cliente de %provider% o haz clic en 'Atrás' para elegir otro método de pago."
 "Steam_SubscriptionCancelled_PuchaseDeclined_AcctNotVerified"	"No se ha completado tu compra de %subscription%.\n\n%provider% ha informado de que tu cuenta de %provider% necesita verificación o fondos para completar la compra. Ponte en contacto con el servicio de atención al cliente de %provider% o haz clic en 'Atrás' para elegir otro método de pago."
@@ -3303,7 +3303,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "Steam_Legal_PackageDetails_Unreleased" "Algunos de los productos incluidos en este paquete no se han puesto a la venta, por lo que aún no están disponibles. En la fecha del lanzamiento de estos productos, se pondrán automáticamente a tu disposición por medio de Steam. La fecha de lanzamiento de estos productos no se ha determinado todavía y, por tanto, los compradores no deben dar por sentado que las fechas aproximadas del lanzamiento sean correctas."
 "Steam_Legal_PackageDetails_Shipping" "Los artículos del paquete %subscription% se entregarán en un plazo de 6 a 8 semanas"
 
-"Steam_ForcedGiftPurchase_Next"	"Para comprar este elemento como regalo, haz clic en \"Siguiente\" para continuar."
+"Steam_ForcedGiftPurchase_Next"	"Para comprar este elemento como regalo, haz clic en «Siguiente» para continuar."
 
 "Steam_Gift_Sentiment_BestWishes"	"Mis mejores deseos"
 "Steam_Gift_Sentiment_BuckleUp"		"Abróchate el cinturón"
@@ -3536,7 +3536,7 @@ Haz nuevos amigos en Steam enviando un regalo por correo electrónico a alguien 
 "SteamUI_ManageSecurity_InfoLabel3" "Steam enviará un mensaje a tu dirección de correo electrónico de contacto la primera vez que intentes acceder a tu cuenta de Steam desde un equipo o un navegador desconocidos. Este mensaje incluirá un código de acceso especial que necesitarás para poder acceder a tu cuenta de Steam."
 "SteamUI_ManageSecurity_NothingRadio" "Mantén mi cuenta protegida por Steam Guard"
 "SteamUI_ManageSecurity_UnlockRadio" "Desactivar Steam Guard (No recomendado)"
-"SteamUI_ManageSecurity_UnlockWarning" "Aviso: el intercambio de Steam y el mercado de la comunidad de Steam permanecerán como no disponibles mientras Steam Guard esté desactivado y seguirán estando de este modo hasta 15 días después de la reactivación de Steam Guard."
+"SteamUI_ManageSecurity_UnlockWarning" "Aviso: el intercambio de Steam y el mercado de la comunidad de Steam permanecerán como no disponibles mientras Steam Guard esté desactivado y seguirán estando de este modo hasta 15 días después de la reactivación de Steam Guard."
 
 "SteamUI_ManageSecurity_RemoveOtherComputersButton" "Desautorizar todos los demás equipos ahora"
 

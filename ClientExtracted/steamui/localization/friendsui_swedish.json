@@ -159,6 +159,7 @@
     "VoiceChat_Switch": "Byt till chattrum",
     "VoiceChat_InviteToChannel": "Bjud in till röstkanal",
     "VoiceChat_SendInviteMessage": "Skicka inbjudan",
+    "VoiceChat_AudioLevelDb": "%1$s dB",
     "VoiceChat_Unavailable_NotFriend": "Röst otillgänglig: %1$s är inte på din vänlista.",
     "VoiceChat_Unavailable_NotOnline": "Röst otillgänglig: %1$s är inte online för tillfället.",
     "VoiceChat_Unavailable_NotInBeta": "Röst otillgänglig: %1$s kör inte den nya chatt-betan.",

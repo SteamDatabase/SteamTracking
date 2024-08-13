@@ -2729,6 +2729,10 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
     display: none;
 }
 
+.home_tabs_content {
+	min-height: 775px;
+}
+
 .tab_item_content {
 	white-space: nowrap;
 	overflow: hidden;
@@ -2743,7 +2747,6 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 }
 
 .home_tabs_content .tab_item_content {
-
 	padding-top: 7px;
 }
 

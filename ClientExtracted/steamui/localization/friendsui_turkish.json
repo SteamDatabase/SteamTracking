@@ -159,6 +159,7 @@
     "VoiceChat_Switch": "Sohbet Odasına Geç",
     "VoiceChat_InviteToChannel": "Sesli Sohbet Kanalına Davet Et",
     "VoiceChat_SendInviteMessage": "Davet Mesajı Gönder",
+    "VoiceChat_AudioLevelDb": "%1$s dB",
     "VoiceChat_Unavailable_NotFriend": "Sesli sohbet kullanılamıyor: %1$s arkadaş listenizde değil.",
     "VoiceChat_Unavailable_NotOnline": "Sesli sohbet kullanılamıyor: %1$s çevrimiçi değil.",
     "VoiceChat_Unavailable_NotInBeta": "Sesli sohbet kullanılamıyor: %1$s yeni beta sohbeti kullanmıyor.",

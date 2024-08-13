@@ -1654,7 +1654,7 @@ GHomepage = {
 
 	FilterTabs: function()
 	{
-		var rgTabSections =  ['#tab_newreleases_content', '#tab_specials_content', '#tab_topsellers_legacy_content' ];
+		var rgTabSections =  ['#tab_newreleases_content', '#tab_specials_content', '#tab_topsellers_legacy_content', '#tab_trendingfree_content' ];
 
 		for( var i=0; i<rgTabSections.length; i++)
 		{

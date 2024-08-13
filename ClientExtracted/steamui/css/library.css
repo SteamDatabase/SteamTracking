@@ -3201,7 +3201,13 @@ b {
   width: 50%;
 }
 ._3Xmp43r8PjDuBvfl8dK6Rt:first-child {
-  margin-right: 12px;
+  margin-right: 16px;
+  padding-right: 16px;
+  border-right: 1px solid #464b58;
+}
+._3Xmp43r8PjDuBvfl8dK6Rt .PKGX85T0vHviq8Tm_2GeT {
+  margin-left: 34px;
+  box-sizing: border-box;
 }
 span._3nqxIgL0a0DbPZHRZRzWsp {
   cursor: pointer;
@@ -3264,6 +3270,10 @@ button.Primary._2_djjQBZmuIsrDz2l04Ua7 {
 }
 ._1mpG6blNZY9m8bmFF-Krii {
   color: #06beff;
+  font-size: 14px;
+}
+._1uZCvmPkcgPb6hJYpF9IYU {
+  color: #8bc53f;
   font-size: 14px;
 }
 ._3T6MQlLWcGQeHZhqqOz4q- {

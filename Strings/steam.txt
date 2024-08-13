@@ -35,7 +35,7 @@
   what():  
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123nW
+ !"#$%&'()*+,-./0123^W
  %12.06fs %s%s\n
  %lld
  ' ) - 3 G M Q _ c e i w } 
@@ -494,6 +494,7 @@ $d`D-laM
 %s %s HTTP/1.0\r\n
 %s %s%lu (%s0x%lx)\n
 %s %s(%llu) / %s
+%s (%1.2fms)
 %s PARAMETERS
 %s PRIVATE KEY
 %s Salt Length: 0x
@@ -1693,6 +1694,7 @@ $d`D-laM
 17RefCountPvWrapperI22CClientStructNetPacketE
 18000000
 18446744073709551615
+18:10:02
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CHTTPClientRequest
@@ -1771,8 +1773,6 @@ $d`D-laM
 21CLocalizedStringTable
 21COpenSSLCachedSession
 21CUtlCStringConversion
-22:42:54
-22:43:26
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2570,6 +2570,7 @@ Attempting to create a named event with a null name
 Attempting to purchase same app in different packages
 Audio Behind
 Audio Init Failed
+Aug 13 2024
 August
 Aura
 AuthANY
@@ -2601,7 +2602,7 @@ B-233
 B-283
 B-409
 B-571
-B22:43:25
+B18:10:23
 B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
@@ -2832,6 +2833,7 @@ BVerifyInstalledFiles: bad symlink %s
 BVerifyInstalledFiles: bad symlink ( %s -> %s, expected non-symlink )
 BVerifyInstalledFiles: bad symlink ( %s -> %s, should link to %s )
 BVerifyInstalledFiles: can't read %s\n
+BYieldingWaitTime
 BackUp() can only be called after a successful Next().
 Background update loop checking for update. . .
 Background update loop suppressed by client. . .
@@ -3904,7 +3906,6 @@ CJob::BookkeepRuntime()
 CJob::DescribeWork(CUtlStringBuilder&)
 CJob::Heartbeat
 CJob::MsgTraceReportJobBlocking(char const*)
-CJob::SetYieldInfo(char const*, char const*)
 CJobMgr::BResumeSleepingJobs
 CJobMgr::EnsureJobIsInTimeoutQueue(CJob&, EJobPauseReason)
 CJobMgr::GetPJob(unsigned long long, EJobPauseReason, bool)
@@ -7839,7 +7840,6 @@ Job yielding despite declaring a Do Not Yield block at %s
 JobIOCPWork
 JoinedGroup
 Joystick
-Jul 30 2024
 July
 June
 K-163
@@ -10375,7 +10375,6 @@ Site License locked
 SiteLicense
 Size() == operand.Size()
 Skipping file repair
-Sleep for time
 SlotsAvailable
 Smoothing not supported with nonstandard sampling ratios
 Snooze
@@ -10481,7 +10480,7 @@ Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
 Startup - Steam Client launched with: %s
-Startup - updater built Jul 30 2024 22:43:25
+Startup - updater built Aug 13 2024 18:10:23
 StaticFileWriterThread()
 Steam - Fatal Error
 Steam - Warning
@@ -11385,6 +11384,7 @@ WTLS curve over a 113 bit binary field
 WTLS curve over a 160 bit prime field
 WTLS curve over a 224 bit prime field
 Wait for msg
+Wait for time in %s
 Waited %u iterations in CFileWriter::Flush - m_cubOutstanding = %d
 Waiting for disk
 Waiting on HTTP
@@ -22576,7 +22576,6 @@ size_t to int conversion
 sizeof 
 sizeof...
 sk_reserve
-sleep for time
 slg_write
 slot full
 sm-scheme
@@ -24845,6 +24844,7 @@ w3Xc
 w8i_q
 w?6r
 wXR\r
+wait for time
 waitid
 waitid@GLIBC_2.1
 waiting for lock

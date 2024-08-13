@@ -7,7 +7,7 @@
 "TextEntry_Copy"		"복사"
 "TextEntry_Paste"		"붙여넣기"
 "TextEntry_SelectAll"		"모두 선택"
-"TextEntry_CopyAllToClipboard"	"모든 텍스트 클립보드에 복사"
+"TextEntry_CopyAllToClipboard"	"클립보드에 모든 텍스트 복사"
 "FileOpenDialog_Open"		"열기"
 "FileOpenDialog_Save"		"저장"
 "FileOpenDialog_Cancel"		"취소"

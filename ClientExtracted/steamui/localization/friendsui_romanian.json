@@ -159,6 +159,7 @@
     "VoiceChat_Switch": "Schimbă la camera de chat",
     "VoiceChat_InviteToChannel": "Invită în canalul vocal",
     "VoiceChat_SendInviteMessage": "Trimite un mesaj de invitație",
+    "VoiceChat_AudioLevelDb": "%1$s dB",
     "VoiceChat_Unavailable_NotFriend": "Vocea nu este disponibilă: %1$s nu este în lista ta de prieteni.",
     "VoiceChat_Unavailable_NotOnline": "Vocea nu este disponibilă: acum %1$s nu este acum online.",
     "VoiceChat_Unavailable_NotInBeta": "Vocea nu este disponibilă: %1$s nu rulează noua versiune beta pentru chat.",

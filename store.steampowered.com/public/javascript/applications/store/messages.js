@@ -154,7 +154,8 @@
           n = (0, i.m)("usePartnerEventByEventGID");
         return (
           (0, a.useEffect)(() => {
-            t?.GID != e &&
+            e &&
+              t?.GID != e &&
               (s.O3.Init(),
               s.O3.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
                 [e],
@@ -2661,7 +2662,7 @@
       })(X || (X = {}));
       var Y = r(78327),
         Z = r(72839),
-        J = r(16758),
+        J = r(75279),
         Q = r(44332),
         ee = r(14947);
       class te {
@@ -2962,7 +2963,7 @@
         w = r(47235),
         S = r(37076),
         v = r(54492),
-        z = r(91674),
+        z = r(60014),
         h = r(52038),
         E = r(61859),
         R = r(61336),
@@ -3258,7 +3259,7 @@
         c = r(78327),
         o = r(56011),
         u = r(90626),
-        g = r(91674);
+        g = r(60014);
       function d(e) {
         const t = (0, i.KV)();
         let r = (0, a.I)({

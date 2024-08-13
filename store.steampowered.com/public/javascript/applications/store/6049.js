@@ -10867,7 +10867,7 @@
         G = a(22797),
         T = a(82080),
         B = a.n(T),
-        D = a(91674);
+        D = a(60014);
       function k(e) {
         const { info: t, className: a } = e,
           r = (0, D.n9)(),
@@ -11046,7 +11046,7 @@
         d = a(16180),
         m = a(55963),
         u = a(61336),
-        p = a(91674);
+        p = a(60014);
       !(function (e) {
         (e.k_eView = "view"),
           (e.k_eViewWebSiteHub = "websitehub"),
@@ -11530,7 +11530,7 @@
         H = a(18654),
         O = a.n(H),
         V = a(4434),
-        j = a(91674);
+        j = a(60014);
       const W = "DEBUG_UseNewGameHover";
       function x() {
         return window.sessionStorage?.getItem(W) || "default";
@@ -12569,7 +12569,7 @@
         N = a.n(M),
         H = a(37076),
         O = a(41951),
-        V = a(91674);
+        V = a(60014);
       const j = (0, n.PA)((e) => {
           const {
               myInstance: t,
@@ -13763,7 +13763,7 @@
         p = a(44325),
         _ = a(738),
         h = a(12155),
-        g = a(91674),
+        g = a(60014),
         S = a(39700),
         v = a(68797),
         y = a(52038),
@@ -13884,7 +13884,7 @@
         s = a(55963),
         r = a(52393),
         o = a.n(r),
-        l = a(91674),
+        l = a(60014),
         c = a(61859),
         d = a(61336),
         m = a(78327);
@@ -14196,7 +14196,7 @@
       var n = a(90626),
         i = a(71513),
         s = a(55963),
-        r = a(91674),
+        r = a(60014),
         o = a(44332),
         l = a(78327);
       function c(e) {

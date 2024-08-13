@@ -678,7 +678,7 @@
       window.g_InteractiveRecommender = R;
       var f = a(82477),
         C = a(32630),
-        w = a(91674);
+        w = a(60014);
       !(function () {
         let e = (0, o.Tc)("ir_config", "application_config");
         e && (Object.assign(v, e), R.Init());

@@ -159,6 +159,7 @@
     "VoiceChat_Switch": "Przełącz na pokój czatowy",
     "VoiceChat_InviteToChannel": "Zaproś na kanał głosowy",
     "VoiceChat_SendInviteMessage": "Wyślij wiadomość z zaproszeniem",
+    "VoiceChat_AudioLevelDb": "%1$s dB",
     "VoiceChat_Unavailable_NotFriend": "Czat głosowy niedostępny: %1$s nie jest na twojej liście znajomych.",
     "VoiceChat_Unavailable_NotOnline": "Czat głosowy niedostępny: %1$s nie jest obecnie online.",
     "VoiceChat_Unavailable_NotInBeta": "Czat głosowy niedostępny: %1$s nie korzysta z wersji beta nowego czatu.",

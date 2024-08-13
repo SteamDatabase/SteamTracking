@@ -159,6 +159,7 @@
     "VoiceChat_Switch": "切换至聊天室",
     "VoiceChat_InviteToChannel": "邀请至语音频道",
     "VoiceChat_SendInviteMessage": "发送邀请消息",
+    "VoiceChat_AudioLevelDb": "%1$s dB",
     "VoiceChat_Unavailable_NotFriend": "语音不可用：%1$s 不在您的好友列表中。",
     "VoiceChat_Unavailable_NotOnline": "语音不可用：%1$s 当前不在线。",
     "VoiceChat_Unavailable_NotInBeta": "语音不可用：%1$s 未运行新的聊天测试版。",
