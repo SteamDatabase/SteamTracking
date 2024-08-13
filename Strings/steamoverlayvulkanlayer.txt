@@ -1,965 +1,789 @@
-__gmon_start__
-_fini
-_ITM_deregisterTMCloneTable
-_ITM_registerTMCloneTable
-__cxa_finalize
-VulkanSteamOverlayTextureExists
-VulkanSteamOverlayStopRendering
-VulkanSteamOverlayDrawTexturedRect
-VulkanSteamOverlayDeleteTexture(int)
-vkDestroyDevice
-vkCreateInstance
-pthread_mutex_init
-dlopen
-dlsym
-vkDestroyInstance
-vkQueueSubmit
-vkGetDeviceQueue
-vkGetDeviceProcAddr
-vkGetSwapchainImagesKHR
-vkCreateSwapchainKHR
-vkQueuePresentKHR
-vkDestroySwapchainKHR
-vkGetInstanceProcAddr
-vkCreateDevice
-vkDestroySurfaceKHR
-vkCreateXlibSurfaceKHR
-vkCreateXcbSurfaceKHR
-VulkanSteamOverlayStartCaptureFrame
-VulkanSteamOverlayUpdateTexture
-VulkanSteamOverlayBeginRendering
-ceilf
-getenv
-__cxa_atexit
-free
-___tls_get_addr
-abort
-typeinfo for __cxxabiv1::__foreign_exception
-typeinfo for __cxxabiv1::__forced_unwind
-malloc
-stderr
-fwrite
-fputs
-fputc
-stdout
-stdin
-__pthread_key_create
-vtable for __gnu_cxx::__concurrence_lock_error
-vtable for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-strcmp
-strlen
-memcmp
-typeinfo for __gnu_cxx::__concurrence_lock_error
-vtable for __cxxabiv1::__class_type_info
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-vtable for __cxxabiv1::__si_class_type_info
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-pthread_mutex_unlock
-pthread_mutex_lock
-pthread_once
-__nl_langinfo_l
-__uselocale
-wcslen
-mbsrtowcs
-wcscmp
-iconv_open
-iconv
-iconv_close
-vtable for __cxxabiv1::__vmi_class_type_info
-__wctype_l
-__towupper_l
-__towlower_l
-__iswctype_l
-wctob
-btowc
-ungetc
-fflush
-fseeko64
-ftello64
-ungetwc
-putwc
-fread
-wmemcpy
-vsnprintf
-wmemset
-wmemchr
-wmemmove
-typeinfo name for __cxxabiv1::__class_type_info
-typeinfo for __cxxabiv1::__class_type_info
-realloc
-__sprintf_chk
-strncmp
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo name for __cxxabiv1::__foreign_exception
-vtable for __cxxabiv1::__forced_unwind
-vtable for __cxxabiv1::__foreign_exception
-syscall
-typeinfo for __gnu_cxx::recursive_init_error
-vtable for __gnu_cxx::recursive_init_error
-typeinfo name for __gnu_cxx::recursive_init_error
-typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo name for __cxxabiv1::__vmi_class_type_info
-typeinfo for __cxxabiv1::__vmi_class_type_info
-__strtof_l
-__strtod_l
-strtold_l
-__newlocale
-__freelocale
-__duplocale
-strdup
-wcsnrtombs
-wcrtomb
-mbsnrtowcs
-mbrtowc
-__ctype_get_mb_cur_max
-__strcoll_l
-__strxfrm_l
-__wcscoll_l
-__wcsxfrm_l
-bind_textdomain_codeset
-dgettext
-__strftime_l
-__wcsftime_l
-_txnal_cow_string_D1_commit(void*)
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-_ITM_RU1
-transaction clone for operator new[](unsigned int)
-_ITM_memcpyRtWn
-_txnal_cow_string_c_str(void const*)
-_ITM_RU4
-_txnal_cow_string_D1(void*)
-_ITM_addUserCommitAction
-_txnal_logic_error_get_msg(void*)
-_txnal_runtime_error_get_msg(void*)
-dl_iterate_phdr
-__stack_chk_fail
-libdl.so.2
-libm.so.6
-libpthread.so.0
-libc.so.6
-ld-linux.so.2
-GLIBC_2.1
-GLIBC_2.0
-GLIBC_2.3
-GLIBC_2.3.4
-GLIBC_2.2.4
-GLIBC_2.1.3
-GLIBC_2.4
-GLIBC_2.2
-cannot create std::deque larger than max_size()
-vector::_M_realloc_insert
-vector::_M_default_append
-vkCreateInstance
-vkDestroyInstance
-vkEnumeratePhysicalDevices
-vkGetPhysicalDeviceFeatures
-vkGetPhysicalDeviceProperties
-vkGetPhysicalDeviceFeatures2
-vkDestroySurfaceKHR
-vkGetDisplayModePropertiesKHR
-vkCreateDisplayModeKHR
-vkCreateXlibSurfaceKHR
-vkCreateXcbSurfaceKHR
-vkDebugReportMessageEXT
-vkReleaseDisplayEXT
-vkSubmitDebugUtilsMessageEXT
-GameOverlayRenderer64.dll
-GameOverlayRenderer.dll
-VulkanSteamOverlayPresent
-vkGetPhysicalDeviceFormatProperties
-vkGetPhysicalDeviceImageFormatProperties
-vkGetPhysicalDeviceQueueFamilyProperties
-vkGetPhysicalDeviceMemoryProperties
-vkEnumerateDeviceExtensionProperties
-vkEnumerateDeviceLayerProperties
-vkGetPhysicalDeviceSparseImageFormatProperties
-vkEnumeratePhysicalDeviceGroups
-vkGetPhysicalDeviceProperties2
-vkGetPhysicalDeviceFormatProperties2
-vkGetPhysicalDeviceImageFormatProperties2
-vkGetPhysicalDeviceQueueFamilyProperties2
-vkGetPhysicalDeviceMemoryProperties2
-vkGetPhysicalDeviceSparseImageFormatProperties2
-vkGetPhysicalDeviceExternalBufferProperties
-vkGetPhysicalDeviceExternalFenceProperties
-vkGetPhysicalDeviceExternalSemaphoreProperties
-vkGetPhysicalDeviceSurfaceSupportKHR
-vkGetPhysicalDeviceSurfaceCapabilitiesKHR
-vkGetPhysicalDeviceSurfaceFormatsKHR
-vkGetPhysicalDeviceSurfacePresentModesKHR
-vkGetPhysicalDevicePresentRectanglesKHR
-vkGetPhysicalDeviceDisplayPropertiesKHR
-vkGetPhysicalDeviceDisplayPlanePropertiesKHR
-vkGetDisplayPlaneSupportedDisplaysKHR
-vkGetDisplayPlaneCapabilitiesKHR
-vkCreateDisplayPlaneSurfaceKHR
-vkGetPhysicalDeviceXlibPresentationSupportKHR
-vkGetPhysicalDeviceXcbPresentationSupportKHR
-vkGetPhysicalDeviceFeatures2KHR
-vkGetPhysicalDeviceProperties2KHR
-vkGetPhysicalDeviceFormatProperties2KHR
-vkGetPhysicalDeviceImageFormatProperties2KHR
-vkGetPhysicalDeviceQueueFamilyProperties2KHR
-vkGetPhysicalDeviceMemoryProperties2KHR
-vkGetPhysicalDeviceSparseImageFormatProperties2KHR
-vkEnumeratePhysicalDeviceGroupsKHR
-vkGetPhysicalDeviceExternalBufferPropertiesKHR
-vkGetPhysicalDeviceExternalSemaphorePropertiesKHR
-vkGetPhysicalDeviceExternalFencePropertiesKHR
-vkGetPhysicalDeviceSurfaceCapabilities2KHR
-vkGetPhysicalDeviceSurfaceFormats2KHR
-vkGetPhysicalDeviceDisplayProperties2KHR
-vkGetPhysicalDeviceDisplayPlaneProperties2KHR
-vkGetDisplayModeProperties2KHR
-vkGetDisplayPlaneCapabilities2KHR
-vkCreateDebugReportCallbackEXT
-vkDestroyDebugReportCallbackEXT
-vkGetPhysicalDeviceExternalImageFormatPropertiesNV
-vkGetPhysicalDeviceGeneratedCommandsPropertiesNVX
-vkGetPhysicalDeviceSurfaceCapabilities2EXT
-vkCreateDebugUtilsMessengerEXT
-vkDestroyDebugUtilsMessengerEXT
-vkGetPhysicalDeviceMultisamplePropertiesEXT
-VulkanSteamOverlayGetScaleFactors
-VulkanSteamOverlayProcessCapturedFrame
-vkGetDeviceProcAddr
-vkDestroyDevice
-vkCreateSwapchainKHR
-vkGetSwapchainImagesKHR
-vkQueuePresentKHR
-vkDestroySwapchainKHR
-vkQueueSubmit
-vkGetDeviceQueue
-vkCreateDevice
-main
-STEAM_OVERLAY_VULKAN_LAYER_FORCE_COMPUTE
-vkInvalidateMappedMemoryRanges
-vkGetImageSparseMemoryRequirements
-vkGetDeviceGroupPeerMemoryFeatures
-vkGetBufferMemoryRequirements2
-vkGetImageSparseMemoryRequirements2
-vkCreateSamplerYcbcrConversion
-vkDestroySamplerYcbcrConversion
-vkCreateDescriptorUpdateTemplate
-vkDestroyDescriptorUpdateTemplate
-vkUpdateDescriptorSetWithTemplate
-vkGetDescriptorSetLayoutSupport
-vkGetDeviceGroupPresentCapabilitiesKHR
-vkGetDeviceGroupSurfacePresentModesKHR
-vkGetDeviceGroupPeerMemoryFeaturesKHR
-vkCmdPushDescriptorSetWithTemplateKHR
-vkCreateDescriptorUpdateTemplateKHR
-vkDestroyDescriptorUpdateTemplateKHR
-vkUpdateDescriptorSetWithTemplateKHR
-vkGetImageMemoryRequirements2KHR
-vkGetBufferMemoryRequirements2KHR
-vkGetImageSparseMemoryRequirements2KHR
-vkCreateSamplerYcbcrConversionKHR
-vkDestroySamplerYcbcrConversionKHR
-vkGetDescriptorSetLayoutSupportKHR
-vkCmdDrawIndexedIndirectCountKHR
-vkCmdDrawIndexedIndirectCountAMD
-vkCmdReserveSpaceForCommandsNVX
-vkCreateIndirectCommandsLayoutNVX
-vkDestroyIndirectCommandsLayoutNVX
-vkGetRefreshCycleDurationGOOGLE
-vkGetPastPresentationTimingGOOGLE
-vkQueueBeginDebugUtilsLabelEXT
-vkQueueInsertDebugUtilsLabelEXT
-vkGetMemoryHostPointerPropertiesEXT
-vkQueueWaitIdle
-vkDeviceWaitIdle
-vkAllocateMemory
-vkFreeMemory
-vkMapMemory
-vkUnmapMemory
-vkFlushMappedMemoryRanges
-vkGetDeviceMemoryCommitment
-vkBindBufferMemory
-vkBindImageMemory
-vkGetBufferMemoryRequirements
-vkGetImageMemoryRequirements
-vkQueueBindSparse
-vkCreateFence
-vkDestroyFence
-vkResetFences
-vkGetFenceStatus
-vkWaitForFences
-vkCreateSemaphore
-vkDestroySemaphore
-vkCreateEvent
-vkDestroyEvent
-vkGetEventStatus
-vkSetEvent
-vkResetEvent
-vkCreateQueryPool
-vkDestroyQueryPool
-vkGetQueryPoolResults
-vkCreateBuffer
-vkDestroyBuffer
-vkCreateBufferView
-vkDestroyBufferView
-vkCreateImage
-vkDestroyImage
-vkGetImageSubresourceLayout
-vkCreateImageView
-vkDestroyImageView
-vkCreateShaderModule
-vkDestroyShaderModule
-vkCreatePipelineCache
-vkDestroyPipelineCache
-vkGetPipelineCacheData
-vkMergePipelineCaches
-vkCreateGraphicsPipelines
-vkCreateComputePipelines
-vkDestroyPipeline
-vkCreatePipelineLayout
-vkDestroyPipelineLayout
-vkCreateSampler
-vkDestroySampler
-vkCreateDescriptorSetLayout
-vkDestroyDescriptorSetLayout
-vkCreateDescriptorPool
-vkDestroyDescriptorPool
-vkResetDescriptorPool
-vkAllocateDescriptorSets
-vkFreeDescriptorSets
-vkUpdateDescriptorSets
-vkCreateFramebuffer
-vkDestroyFramebuffer
-vkCreateRenderPass
-vkDestroyRenderPass
-vkGetRenderAreaGranularity
-vkCreateCommandPool
-vkDestroyCommandPool
-vkResetCommandPool
-vkAllocateCommandBuffers
-vkFreeCommandBuffers
-vkBeginCommandBuffer
-vkEndCommandBuffer
-vkResetCommandBuffer
-vkCmdBindPipeline
-vkCmdSetViewport
-vkCmdSetScissor
-vkCmdSetLineWidth
-vkCmdSetDepthBias
-vkCmdSetBlendConstants
-vkCmdSetDepthBounds
-vkCmdSetStencilCompareMask
-vkCmdSetStencilWriteMask
-vkCmdSetStencilReference
-vkCmdBindDescriptorSets
-vkCmdBindIndexBuffer
-vkCmdBindVertexBuffers
-vkCmdDraw
-vkCmdDrawIndexed
-vkCmdDrawIndirect
-vkCmdDrawIndexedIndirect
-vkCmdDispatch
-vkCmdDispatchIndirect
-vkCmdCopyBuffer
-vkCmdCopyImage
-vkCmdBlitImage
-vkCmdCopyBufferToImage
-vkCmdCopyImageToBuffer
-vkCmdUpdateBuffer
-vkCmdFillBuffer
-vkCmdClearColorImage
-vkCmdClearDepthStencilImage
-vkCmdClearAttachments
-vkCmdResolveImage
-vkCmdSetEvent
-vkCmdResetEvent
-vkCmdWaitEvents
-vkCmdPipelineBarrier
-vkCmdBeginQuery
-vkCmdEndQuery
-vkCmdResetQueryPool
-vkCmdWriteTimestamp
-vkCmdCopyQueryPoolResults
-vkCmdPushConstants
-vkCmdBeginRenderPass
-vkCmdNextSubpass
-vkCmdEndRenderPass
-vkCmdExecuteCommands
-vkBindBufferMemory2
-vkBindImageMemory2
-vkCmdSetDeviceMask
-vkCmdDispatchBase
-vkGetImageMemoryRequirements2
-vkTrimCommandPool
-vkGetDeviceQueue2
-vkAcquireNextImageKHR
-vkAcquireNextImage2KHR
-vkCreateSharedSwapchainsKHR
-vkCmdSetDeviceMaskKHR
-vkCmdDispatchBaseKHR
-vkTrimCommandPoolKHR
-vkGetMemoryFdKHR
-vkGetMemoryFdPropertiesKHR
-vkImportSemaphoreFdKHR
-vkGetSemaphoreFdKHR
-vkCmdPushDescriptorSetKHR
-vkGetSwapchainStatusKHR
-vkImportFenceFdKHR
-vkGetFenceFdKHR
-vkBindBufferMemory2KHR
-vkBindImageMemory2KHR
-vkCmdDrawIndirectCountKHR
-vkDebugMarkerSetObjectTagEXT
-vkDebugMarkerSetObjectNameEXT
-vkCmdDebugMarkerBeginEXT
-vkCmdDebugMarkerEndEXT
-vkCmdDebugMarkerInsertEXT
-vkCmdDrawIndirectCountAMD
-vkGetShaderInfoAMD
-vkCmdProcessCommandsNVX
-vkCreateObjectTableNVX
-vkDestroyObjectTableNVX
-vkRegisterObjectsNVX
-vkUnregisterObjectsNVX
-vkCmdSetViewportWScalingNV
-vkDisplayPowerControlEXT
-vkRegisterDeviceEventEXT
-vkRegisterDisplayEventEXT
-vkGetSwapchainCounterEXT
-vkCmdSetDiscardRectangleEXT
-vkSetHdrMetadataEXT
-vkSetDebugUtilsObjectNameEXT
-vkSetDebugUtilsObjectTagEXT
-vkQueueEndDebugUtilsLabelEXT
-vkCmdBeginDebugUtilsLabelEXT
-vkCmdEndDebugUtilsLabelEXT
-vkCmdInsertDebugUtilsLabelEXT
-vkCmdSetSampleLocationsEXT
-vkCreateValidationCacheEXT
-vkDestroyValidationCacheEXT
-vkMergeValidationCachesEXT
-vkGetValidationCacheDataEXT
-vkCmdWriteBufferMarkerAMD
-terminate called recursively\n
   what():  
-terminate called after throwing an instance of '
-terminate called without an active exception\n
-__gnu_cxx::__concurrence_lock_error
-__gnu_cxx::__concurrence_unlock_error
-NSt6locale5facetE
-N9__gnu_cxx24__concurrence_lock_errorE
-N9__gnu_cxx26__concurrence_unlock_errorE
-UTF-8
-ASCII//TRANSLIT
-ASCII
-true
-false
-St12codecvt_base
-St23__codecvt_abstract_baseIDsc11__mbstate_tE
-St7codecvtIDsc11__mbstate_tE
-St23__codecvt_abstract_baseIDic11__mbstate_tE
-St7codecvtIDic11__mbstate_tE
-St23__codecvt_abstract_baseIDsDu11__mbstate_tE
-St7codecvtIDsDu11__mbstate_tE
-St23__codecvt_abstract_baseIDiDu11__mbstate_tE
-St7codecvtIDiDu11__mbstate_tE
-St10ctype_base
-St5ctypeIcE
-St5ctypeIwE
-space
-print
-cntrl
-upper
-lower
-alpha
-punct
-xdigit
-alnum
-graph
-blank
-N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
-N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
-CH\f1
-FoCLcx
-basic_ios::clear
-St9basic_iosIcSt11char_traitsIcEE
-St9basic_iosIwSt11char_traitsIwEE
-St8ios_base
-St13basic_istreamIwSt11char_traitsIwEE
-basic_string::erase
-%s: __pos (which is %zu) > this->size() (which is %zu)
-St9time_base
-St10money_base
-St13messages_base
-St7collateIcE
-St8numpunctIcE
-St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
-St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
-St17__timepunct_cacheIcE
-St11__timepunctIcE
-St10moneypunctIcLb1EE
-St10moneypunctIcLb0EE
-St8messagesIcE
-St23__codecvt_abstract_baseIcc11__mbstate_tE
-St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
-St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
-St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
-St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
-St18__moneypunct_cacheIcLb0EE
-St18__moneypunct_cacheIcLb1EE
-St16__numpunct_cacheIcE
-St13basic_ostreamIwSt11char_traitsIwEE
-not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
-St15basic_streambufIcSt11char_traitsIcEE
-St15basic_streambufIwSt11char_traitsIwEE
-basic_string::copy
-basic_string::_S_create
-basic_string::_M_replace_aux
-basic_string::assign
-basic_string::append
-basic_string::resize
-basic_string::_S_construct null not valid
-St7collateIwE
-St21__ctype_abstract_baseIwE
-St8numpunctIwE
-St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
-St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
-St17__timepunct_cacheIwE
-St11__timepunctIwE
-St10moneypunctIwLb1EE
-St10moneypunctIwLb0EE
-St8messagesIwE
-St23__codecvt_abstract_baseIwc11__mbstate_tE
-St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
-St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
-St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
-St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
-St18__moneypunct_cacheIwLb0EE
-St18__moneypunct_cacheIwLb1EE
-St16__numpunct_cacheIwE
-std::bad_alloc
-St9bad_alloc
-std::bad_cast
-St8bad_cast
-N10__cxxabiv117__class_type_infoE
-_GLOBAL_
-(anonymous namespace)
-string literal
-auto
-decltype(auto)
-[abi:
-{default arg#
-JArray
-auto:
-VTT for 
-construction vtable for 
-typeinfo for 
-typeinfo name for 
-typeinfo fn for 
-non-virtual thunk to 
-covariant return thunk to 
-java Class for 
-guard variable for 
-TLS init function for 
-TLS wrapper function for 
-reference temporary #
-hidden alias for 
-non-transaction clone for 
-_Sat 
-_Fract
-_Accum
-operator
-operator 
-new 
-java resource 
-decltype (
-{parm#
-this
-global constructors keyed to 
-global destructors keyed to 
-{lambda(
-{unnamed type#
  [clone 
- restrict
- volatile
- const
- transaction_safe
- noexcept
- throw
-complex 
-imaginary 
  __vector(
-std::allocator
-std::basic_string
-std::string
-std::istream
-basic_istream
-std::ostream
-basic_ostream
-std::iostream
-basic_iostream
-alignof 
-const_cast
-delete[] 
-dynamic_cast
-delete 
-operator"" 
-new[]
-reinterpret_cast
-sizeof...
-static_cast
-sizeof 
-throw 
-bool
-boolean
-byte
-long double
-float
-__float128
-unsigned char
-unsigned int
-unsigned
-unsigned long
-unsigned __int128
-unsigned short
-void
-wchar_t
-unsigned long long
-decimal32
-decimal64
-decimal128
-half
-char8_t
-char16_t
-char32_t
-decltype(nullptr)
-template parameter object for 
-std::basic_string<char, std::char_traits<char>, std::allocator<char> >
-std::basic_istream<char, std::char_traits<char> >
-std::basic_ostream<char, std::char_traits<char> >
-std::basic_iostream<char, std::char_traits<char> >
-std::exception
-std::bad_exception
-St9exception
-St13bad_exception
-N10__cxxabiv115__forced_unwindE
-N10__cxxabiv119__foreign_exceptionE
-N9__gnu_cxx20recursive_init_errorE
-pure virtual method called\n
-N10__cxxabiv120__si_class_type_infoE
-St9type_info
-N10__cxxabiv121__vmi_class_type_infoE
-locale::facet::_S_create_c_locale name not valid
-St7codecvtIcc11__mbstate_tE
-St7codecvtIwc11__mbstate_tE
-NSt8ios_base7failureE
+ const
+ noexcept
+ restrict
+ throw
+ transaction_safe
+ volatile
+%s: __pos (which is %zu) > this->size() (which is %zu)
+(anonymous namespace)
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
 -0123456789
-AKST
-St11logic_error
-St12length_error
-St12out_of_range
-St13runtime_error
-Sunday
-Monday
-Tuesday
-Wednesday
-Thursday
-Friday
-Saturday
-January
-February
-March
-April
-June
-July
-August
-September
-October
-November
-December
-std::bad_array_new_length
-St20bad_array_new_length
-GLSL.std.450
-main
-main
-ShaderUVParams
-coefficientsU
-coefficientsV
-outWidth
-outHeight
-inLayerTex0
-sampler0
-outImage
-dispatchThreadId
-GLSL.std.450
-main
-main
-ShaderYParams
-coefficientsY
-unused
-outWidth
-outHeight
-inLayerTex0
-sampler0
-outImage
-dispatchThreadId
-GLSL.std.450
-main
-GL_ARB_separate_shader_objects
-GL_ARB_shading_language_420pack
-main
-ShaderUVParams
-coefficientsU
-coefficientsV
-uvScale
-uFragColor
-GLSL.std.450
-main
-GL_ARB_separate_shader_objects
-GL_ARB_shading_language_420pack
-main
-ShaderYParams
-coefficientsY
-unused
-uvScale
-uFragColor
-GLSL.std.450
-main
-main
-gl_VertexIndex
-gl_PerVertex
-gl_Position
-gl_PointSize
-gl_ClipDistance
-gl_CullDistance
-GLSL.std.450
-main
-main
-compositeDesc
-colorX
-colorY
-outWidth
-outHeight
-inConstants
 @data
-inConstants
-inLayerTex0
-sampler0
-outImage
-dispatchThreadId
-GLSL.std.450
-main
-GL_ARB_separate_shader_objects
-GL_ARB_shading_language_420pack
-main
-gl_Position
-uv_in
-color
-color_in
-GLSL.std.450
-main
-GL_ARB_separate_shader_objects
-GL_ARB_shading_language_420pack
-main
-SRGBToLinear(f1;
-color
-SRGBToLinear4(vf4;
-color
-NitsToPQ(vf3;
-nits
-param
-param
-param
-uFragColor
-color
-param
-HDRParams
-g_flSDRWhiteLevelInNits
-g_flPad0
-g_flPad1
-g_flPad2
-param
-GLSL.std.450
-main
-GL_ARB_separate_shader_objects
-GL_ARB_shading_language_420pack
-main
-SRGBToLinear(f1;
-color
-SRGBToLinear4(vf4;
-color
-param
-param
-param
-uFragColor
-color
-param
-flSDRAdjust
-HDRParams
-g_flSDRWhiteLevelInNits
-g_flPad0
-g_flPad1
-g_flPad2
-GLSL.std.450
-main
-GL_ARB_separate_shader_objects
-GL_ARB_shading_language_420pack
-main
-SRGBToLinear(f1;
-color
-SRGBToLinear4(vf4;
-color
-param
-param
-param
-uFragColor
-color
-param
-GLSL.std.450
-main
-GL_ARB_separate_shader_objects
-GL_ARB_shading_language_420pack
-main
-uFragColor
-color
-pthread_mutex_unlock@GLIBC_2.0
-wcrtomb@GLIBC_2.0
-mbsrtowcs@GLIBC_2.0
-strcmp@GLIBC_2.0
-typeinfo for __gnu_cxx::recursive_init_error
-vkDestroyInstance
-_ITM_deregisterTMCloneTable
-vkGetSwapchainImagesKHR
-_txnal_cow_string_D1(void*)
-fflush@GLIBC_2.0
-stderr@GLIBC_2.0
-typeinfo name for __cxxabiv1::__vmi_class_type_info
-typeinfo name for __cxxabiv1::__foreign_exception
-free@GLIBC_2.0
-__towlower_l@GLIBC_2.1
-strdup@GLIBC_2.0
-VulkanSteamOverlayUpdateTexture
-___tls_get_addr@GLIBC_2.3
-pthread_mutex_init@GLIBC_2.0
-vtable for __cxxabiv1::__forced_unwind
-_ITM_RU1
-__nl_langinfo_l@GLIBC_2.2
-fseeko64@GLIBC_2.1
-memcmp@GLIBC_2.0
-typeinfo for __cxxabiv1::__class_type_info
-typeinfo name for __gnu_cxx::recursive_init_error
-_fini
-VulkanSteamOverlayStopRendering
-ungetwc@GLIBC_2.2
-__stack_chk_fail@GLIBC_2.4
-vkCreateXcbSurfaceKHR
-typeinfo for __gnu_cxx::__concurrence_lock_error
-putwc@GLIBC_2.2
-ceilf@GLIBC_2.0
-_txnal_logic_error_get_msg(void*)
-vkGetDeviceQueue
-__strxfrm_l@GLIBC_2.1
-pthread_mutex_lock@GLIBC_2.0
-typeinfo name for __cxxabiv1::__si_class_type_info
-VulkanSteamOverlayStartCaptureFrame
-VulkanSteamOverlayDrawTexturedRect
-_ITM_addUserCommitAction
-__towupper_l@GLIBC_2.1
-vkCreateXlibSurfaceKHR
-_ITM_memcpyRtWn
-vkGetInstanceProcAddr
-_txnal_cow_string_c_str(void const*)
-_txnal_cow_string_D1_commit(void*)
-__cxa_finalize@GLIBC_2.1.3
-wmemcpy@GLIBC_2.0
-fwrite@GLIBC_2.0
-__ctype_get_mb_cur_max@GLIBC_2.0
-vkQueueSubmit
-fread@GLIBC_2.0
-typeinfo for __cxxabiv1::__si_class_type_info
-vkDestroySwapchainKHR
-VulkanSteamOverlayBeginRendering
-__uselocale@GLIBC_2.3
-mbrtowc@GLIBC_2.0
-typeinfo name for __cxxabiv1::__forced_unwind
-__cxa_atexit@GLIBC_2.1.3
-typeinfo name for __cxxabiv1::__class_type_info
-wcscmp@GLIBC_2.0
-bind_textdomain_codeset@GLIBC_2.2
-__wcsxfrm_l@GLIBC_2.1
-__strcoll_l@GLIBC_2.1
-getenv@GLIBC_2.0
-realloc@GLIBC_2.0
-mbsnrtowcs@GLIBC_2.0
-malloc@GLIBC_2.0
-typeinfo for __cxxabiv1::__forced_unwind
-__wcscoll_l@GLIBC_2.1
-__duplocale@GLIBC_2.1
-__gmon_start__
-pthread_once@GLIBC_2.0
-ftello64@GLIBC_2.1
-transaction clone for operator new[](unsigned int)
-__wcsftime_l@GLIBC_2.3
-dl_iterate_phdr@GLIBC_2.2.4
-typeinfo for __cxxabiv1::__foreign_exception
-strlen@GLIBC_2.0
-vtable for __gnu_cxx::__concurrence_unlock_error
-iconv@GLIBC_2.1
-iconv_close@GLIBC_2.1
-wctob@GLIBC_2.0
-vkDestroySurfaceKHR
-_txnal_runtime_error_get_msg(void*)
-typeinfo for __cxxabiv1::__vmi_class_type_info
-VulkanSteamOverlayTextureExists
-stdin@GLIBC_2.0
-dlsym@GLIBC_2.0
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-ungetc@GLIBC_2.0
-btowc@GLIBC_2.0
-vkDestroyDevice
-syscall@GLIBC_2.0
-wcslen@GLIBC_2.0
-VulkanSteamOverlayDeleteTexture(int)
-vtable for __cxxabiv1::__foreign_exception
-vkCreateDevice
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-stdout@GLIBC_2.0
-_ITM_RU4
-vtable for __gnu_cxx::__concurrence_lock_error
-wcsnrtombs@GLIBC_2.0
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-__newlocale@GLIBC_2.1
-wmemset@GLIBC_2.0
-vtable for __cxxabiv1::__si_class_type_info
-wmemchr@GLIBC_2.0
-fputc@GLIBC_2.0
-__strftime_l@GLIBC_2.3
-vkQueuePresentKHR
-wmemmove@GLIBC_2.0
-vkGetDeviceProcAddr
-vkCreateInstance
-vsnprintf@GLIBC_2.0
-vkCreateSwapchainKHR
-dlopen@GLIBC_2.1
-dgettext@GLIBC_2.0
-__freelocale@GLIBC_2.1
-_ITM_registerTMCloneTable
-__strtod_l@GLIBC_2.1
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-__strtof_l@GLIBC_2.1
-__iswctype_l@GLIBC_2.1
-strncmp@GLIBC_2.0
-strtold_l@GLIBC_2.3
-abort@GLIBC_2.0
-vtable for __cxxabiv1::__class_type_info
-iconv_open@GLIBC_2.1
-fputs@GLIBC_2.0
-_init
-vtable for __gnu_cxx::recursive_init_error
-__wctype_l@GLIBC_2.1
-__pthread_key_create@GLIBC_2.0
-vtable for __cxxabiv1::__vmi_class_type_info
-__sprintf_chk@GLIBC_2.3.4
+AKST
+ASCII
+ASCII//TRANSLIT
+April
+August
+CH\f1
+December
+February
+FoCLcx
+Friday
 GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
 GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
+GLIBC_2.0
+GLIBC_2.1
+GLIBC_2.1.3
+GLIBC_2.2
+GLIBC_2.2.4
+GLIBC_2.3
+GLIBC_2.3.4
+GLIBC_2.4
+GLSL.std.450
+GL_ARB_separate_shader_objects
+GL_ARB_shading_language_420pack
+GameOverlayRenderer.dll
+GameOverlayRenderer64.dll
+HDRParams
+JArray
+January
+July
+June
+March
+Monday
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv117__class_type_infoE
+N10__cxxabiv119__foreign_exceptionE
+N10__cxxabiv120__si_class_type_infoE
+N10__cxxabiv121__vmi_class_type_infoE
+N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
+N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
+N9__gnu_cxx20recursive_init_errorE
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
+NSt6locale5facetE
+NSt8ios_base7failureE
+NitsToPQ(vf3;
+November
+October
+SRGBToLinear(f1;
+SRGBToLinear4(vf4;
+STEAM_OVERLAY_VULKAN_LAYER_FORCE_COMPUTE
+Saturday
+September
+ShaderUVParams
+ShaderYParams
+St10ctype_base
+St10money_base
+St10moneypunctIcLb0EE
+St10moneypunctIcLb1EE
+St10moneypunctIwLb0EE
+St10moneypunctIwLb1EE
+St11__timepunctIcE
+St11__timepunctIwE
+St11logic_error
+St12codecvt_base
+St12length_error
+St12out_of_range
+St13bad_exception
+St13basic_istreamIwSt11char_traitsIwEE
+St13basic_ostreamIwSt11char_traitsIwEE
+St13messages_base
+St13runtime_error
+St15basic_streambufIcSt11char_traitsIcEE
+St15basic_streambufIwSt11char_traitsIwEE
+St16__numpunct_cacheIcE
+St16__numpunct_cacheIwE
+St17__timepunct_cacheIcE
+St17__timepunct_cacheIwE
+St18__moneypunct_cacheIcLb0EE
+St18__moneypunct_cacheIcLb1EE
+St18__moneypunct_cacheIwLb0EE
+St18__moneypunct_cacheIwLb1EE
+St20bad_array_new_length
+St21__ctype_abstract_baseIwE
+St23__codecvt_abstract_baseIDiDu11__mbstate_tE
+St23__codecvt_abstract_baseIDic11__mbstate_tE
+St23__codecvt_abstract_baseIDsDu11__mbstate_tE
+St23__codecvt_abstract_baseIDsc11__mbstate_tE
+St23__codecvt_abstract_baseIcc11__mbstate_tE
+St23__codecvt_abstract_baseIwc11__mbstate_tE
+St5ctypeIcE
+St5ctypeIwE
+St7codecvtIDiDu11__mbstate_tE
+St7codecvtIDic11__mbstate_tE
+St7codecvtIDsDu11__mbstate_tE
+St7codecvtIDsc11__mbstate_tE
+St7codecvtIcc11__mbstate_tE
+St7codecvtIwc11__mbstate_tE
+St7collateIcE
+St7collateIwE
+St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St8bad_cast
+St8ios_base
+St8messagesIcE
+St8messagesIwE
+St8numpunctIcE
+St8numpunctIwE
+St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St9bad_alloc
+St9basic_iosIcSt11char_traitsIcEE
+St9basic_iosIwSt11char_traitsIwEE
+St9exception
+St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St9time_base
+St9type_info
+Sunday
+TLS init function for 
+TLS wrapper function for 
+Thursday
+Tuesday
+UTF-8
+VTT for 
+VulkanSteamOverlayBeginRendering
+VulkanSteamOverlayDeleteTexture(int)
+VulkanSteamOverlayDrawTexturedRect
+VulkanSteamOverlayGetScaleFactors
+VulkanSteamOverlayPresent
+VulkanSteamOverlayProcessCapturedFrame
+VulkanSteamOverlayStartCaptureFrame
+VulkanSteamOverlayStopRendering
+VulkanSteamOverlayTextureExists
+VulkanSteamOverlayUpdateTexture
+Wednesday
+[abi:
+_Accum
+_Fract
+_GLOBAL_
+_ITM_RU1
+_ITM_RU4
+_ITM_addUserCommitAction
+_ITM_deregisterTMCloneTable
+_ITM_memcpyRtWn
+_ITM_registerTMCloneTable
+_Sat 
+___tls_get_addr
+___tls_get_addr@GLIBC_2.3
+__ctype_get_mb_cur_max
+__ctype_get_mb_cur_max@GLIBC_2.0
+__cxa_atexit
+__cxa_atexit@GLIBC_2.1.3
+__cxa_finalize
+__cxa_finalize@GLIBC_2.1.3
+__duplocale
+__duplocale@GLIBC_2.1
+__float128
+__freelocale
+__freelocale@GLIBC_2.1
+__gmon_start__
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+__iswctype_l
+__iswctype_l@GLIBC_2.1
+__newlocale
+__newlocale@GLIBC_2.1
+__nl_langinfo_l
+__nl_langinfo_l@GLIBC_2.2
+__pthread_key_create
+__pthread_key_create@GLIBC_2.0
+__sprintf_chk
+__sprintf_chk@GLIBC_2.3.4
+__stack_chk_fail
+__stack_chk_fail@GLIBC_2.4
+__strcoll_l
+__strcoll_l@GLIBC_2.1
+__strftime_l
+__strftime_l@GLIBC_2.3
+__strtod_l
+__strtod_l@GLIBC_2.1
+__strtof_l
+__strtof_l@GLIBC_2.1
+__strxfrm_l
+__strxfrm_l@GLIBC_2.1
+__towlower_l
+__towlower_l@GLIBC_2.1
+__towupper_l
+__towupper_l@GLIBC_2.1
+__uselocale
+__uselocale@GLIBC_2.3
+__wcscoll_l
+__wcscoll_l@GLIBC_2.1
+__wcsftime_l
+__wcsftime_l@GLIBC_2.3
+__wcsxfrm_l
+__wcsxfrm_l@GLIBC_2.1
+__wctype_l
+__wctype_l@GLIBC_2.1
+_fini
+_init
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
+_txnal_cow_string_D1(void*)
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_c_str(void const*)
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
+abort
+abort@GLIBC_2.0
+alignof 
+alnum
+alpha
+auto
+auto:
+basic_ios::clear
+basic_iostream
+basic_istream
+basic_ostream
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
+basic_string::append
+basic_string::assign
+basic_string::copy
+basic_string::erase
+basic_string::resize
+bind_textdomain_codeset
+bind_textdomain_codeset@GLIBC_2.2
+blank
+bool
+boolean
+btowc
+btowc@GLIBC_2.0
+byte
+cannot create std::deque larger than max_size()
+ceilf
+ceilf@GLIBC_2.0
+char16_t
+char32_t
+char8_t
+cntrl
+coefficientsU
+coefficientsV
+coefficientsY
+color
+colorX
+colorY
+color_in
+complex 
+compositeDesc
+const_cast
+construction vtable for 
+covariant return thunk to 
+decimal128
+decimal32
+decimal64
+decltype (
+decltype(auto)
+decltype(nullptr)
+delete 
+delete[] 
+dgettext
+dgettext@GLIBC_2.0
+dispatchThreadId
+dl_iterate_phdr
+dl_iterate_phdr@GLIBC_2.2.4
+dlopen
+dlopen@GLIBC_2.1
+dlsym
+dlsym@GLIBC_2.0
+dynamic_cast
+false
+fflush
+fflush@GLIBC_2.0
+flSDRAdjust
+float
+fputc
+fputc@GLIBC_2.0
+fputs
+fputs@GLIBC_2.0
+fread
+fread@GLIBC_2.0
+free
+free@GLIBC_2.0
+fseeko64
+fseeko64@GLIBC_2.1
+ftello64
+ftello64@GLIBC_2.1
+fwrite
+fwrite@GLIBC_2.0
+g_flPad0
+g_flPad1
+g_flPad2
+g_flSDRWhiteLevelInNits
+getenv
+getenv@GLIBC_2.0
+gl_ClipDistance
+gl_CullDistance
+gl_PerVertex
+gl_PointSize
+gl_Position
+gl_VertexIndex
+global constructors keyed to 
+global destructors keyed to 
+graph
+guard variable for 
+half
+hidden alias for 
+iconv
+iconv@GLIBC_2.1
+iconv_close
+iconv_close@GLIBC_2.1
+iconv_open
+iconv_open@GLIBC_2.1
+imaginary 
+inConstants
+inLayerTex0
+java Class for 
+java resource 
+ld-linux.so.2
+libc.so.6
+libdl.so.2
+libm.so.6
+libpthread.so.0
+locale::facet::_S_create_c_locale name not valid
+long double
+lower
+main
+malloc
+malloc@GLIBC_2.0
+mbrtowc
+mbrtowc@GLIBC_2.0
+mbsnrtowcs
+mbsnrtowcs@GLIBC_2.0
+mbsrtowcs
+mbsrtowcs@GLIBC_2.0
+memcmp
+memcmp@GLIBC_2.0
+new 
+new[]
+nits
+non-transaction clone for 
+non-virtual thunk to 
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
+operator
+operator 
+operator"" 
+outHeight
+outImage
+outWidth
+param
+print
+pthread_mutex_init
+pthread_mutex_init@GLIBC_2.0
+pthread_mutex_lock
+pthread_mutex_lock@GLIBC_2.0
+pthread_mutex_unlock
+pthread_mutex_unlock@GLIBC_2.0
+pthread_once
+pthread_once@GLIBC_2.0
+punct
+pure virtual method called\n
+putwc
+putwc@GLIBC_2.2
+realloc
+realloc@GLIBC_2.0
+reference temporary #
+reinterpret_cast
+sampler0
+sizeof 
+sizeof...
+space
+static_cast
+std::allocator
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::basic_iostream<char, std::char_traits<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::exception
+std::iostream
+std::istream
+std::ostream
+std::string
+stderr
+stderr@GLIBC_2.0
+stdin
+stdin@GLIBC_2.0
+stdout
+stdout@GLIBC_2.0
+strcmp
+strcmp@GLIBC_2.0
+strdup
+strdup@GLIBC_2.0
+string literal
+strlen
+strlen@GLIBC_2.0
+strncmp
+strncmp@GLIBC_2.0
+strtold_l
+strtold_l@GLIBC_2.3
+syscall
+syscall@GLIBC_2.0
+template parameter object for 
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
+this
+throw 
+transaction clone for operator new[](unsigned int)
+true
+typeinfo fn for 
+typeinfo for 
+typeinfo for __cxxabiv1::__class_type_info
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__si_class_type_info
+typeinfo for __cxxabiv1::__vmi_class_type_info
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::recursive_init_error
+typeinfo name for 
+typeinfo name for __cxxabiv1::__class_type_info
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo name for __cxxabiv1::__si_class_type_info
+typeinfo name for __cxxabiv1::__vmi_class_type_info
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::recursive_init_error
+uFragColor
+ungetc
+ungetc@GLIBC_2.0
+ungetwc
+ungetwc@GLIBC_2.2
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
+unused
+upper
+uvScale
+uv_in
+vector::_M_default_append
+vector::_M_realloc_insert
+vkAcquireNextImage2KHR
+vkAcquireNextImageKHR
+vkAllocateCommandBuffers
+vkAllocateDescriptorSets
+vkAllocateMemory
+vkBeginCommandBuffer
+vkBindBufferMemory
+vkBindBufferMemory2
+vkBindBufferMemory2KHR
+vkBindImageMemory
+vkBindImageMemory2
+vkBindImageMemory2KHR
+vkCmdBeginDebugUtilsLabelEXT
+vkCmdBeginQuery
+vkCmdBeginRenderPass
+vkCmdBindDescriptorSets
+vkCmdBindIndexBuffer
+vkCmdBindPipeline
+vkCmdBindVertexBuffers
+vkCmdBlitImage
+vkCmdClearAttachments
+vkCmdClearColorImage
+vkCmdClearDepthStencilImage
+vkCmdCopyBuffer
+vkCmdCopyBufferToImage
+vkCmdCopyImage
+vkCmdCopyImageToBuffer
+vkCmdCopyQueryPoolResults
+vkCmdDebugMarkerBeginEXT
+vkCmdDebugMarkerEndEXT
+vkCmdDebugMarkerInsertEXT
+vkCmdDispatch
+vkCmdDispatchBase
+vkCmdDispatchBaseKHR
+vkCmdDispatchIndirect
+vkCmdDraw
+vkCmdDrawIndexed
+vkCmdDrawIndexedIndirect
+vkCmdDrawIndexedIndirectCountAMD
+vkCmdDrawIndexedIndirectCountKHR
+vkCmdDrawIndirect
+vkCmdDrawIndirectCountAMD
+vkCmdDrawIndirectCountKHR
+vkCmdEndDebugUtilsLabelEXT
+vkCmdEndQuery
+vkCmdEndRenderPass
+vkCmdExecuteCommands
+vkCmdFillBuffer
+vkCmdInsertDebugUtilsLabelEXT
+vkCmdNextSubpass
+vkCmdPipelineBarrier
+vkCmdProcessCommandsNVX
+vkCmdPushConstants
+vkCmdPushDescriptorSetKHR
+vkCmdPushDescriptorSetWithTemplateKHR
+vkCmdReserveSpaceForCommandsNVX
+vkCmdResetEvent
+vkCmdResetQueryPool
+vkCmdResolveImage
+vkCmdSetBlendConstants
+vkCmdSetDepthBias
+vkCmdSetDepthBounds
+vkCmdSetDeviceMask
+vkCmdSetDeviceMaskKHR
+vkCmdSetDiscardRectangleEXT
+vkCmdSetEvent
+vkCmdSetLineWidth
+vkCmdSetSampleLocationsEXT
+vkCmdSetScissor
+vkCmdSetStencilCompareMask
+vkCmdSetStencilReference
+vkCmdSetStencilWriteMask
+vkCmdSetViewport
+vkCmdSetViewportWScalingNV
+vkCmdUpdateBuffer
+vkCmdWaitEvents
+vkCmdWriteBufferMarkerAMD
+vkCmdWriteTimestamp
+vkCreateBuffer
+vkCreateBufferView
+vkCreateCommandPool
+vkCreateComputePipelines
+vkCreateDebugReportCallbackEXT
+vkCreateDebugUtilsMessengerEXT
+vkCreateDescriptorPool
+vkCreateDescriptorSetLayout
+vkCreateDescriptorUpdateTemplate
+vkCreateDescriptorUpdateTemplateKHR
+vkCreateDevice
+vkCreateDisplayModeKHR
+vkCreateDisplayPlaneSurfaceKHR
+vkCreateEvent
+vkCreateFence
+vkCreateFramebuffer
+vkCreateGraphicsPipelines
+vkCreateImage
+vkCreateImageView
+vkCreateIndirectCommandsLayoutNVX
+vkCreateInstance
+vkCreateObjectTableNVX
+vkCreatePipelineCache
+vkCreatePipelineLayout
+vkCreateQueryPool
+vkCreateRenderPass
+vkCreateSampler
+vkCreateSamplerYcbcrConversion
+vkCreateSamplerYcbcrConversionKHR
+vkCreateSemaphore
+vkCreateShaderModule
+vkCreateSharedSwapchainsKHR
+vkCreateSwapchainKHR
+vkCreateValidationCacheEXT
+vkCreateXcbSurfaceKHR
+vkCreateXlibSurfaceKHR
+vkDebugMarkerSetObjectNameEXT
+vkDebugMarkerSetObjectTagEXT
+vkDebugReportMessageEXT
+vkDestroyBuffer
+vkDestroyBufferView
+vkDestroyCommandPool
+vkDestroyDebugReportCallbackEXT
+vkDestroyDebugUtilsMessengerEXT
+vkDestroyDescriptorPool
+vkDestroyDescriptorSetLayout
+vkDestroyDescriptorUpdateTemplate
+vkDestroyDescriptorUpdateTemplateKHR
+vkDestroyDevice
+vkDestroyEvent
+vkDestroyFence
+vkDestroyFramebuffer
+vkDestroyImage
+vkDestroyImageView
+vkDestroyIndirectCommandsLayoutNVX
+vkDestroyInstance
+vkDestroyObjectTableNVX
+vkDestroyPipeline
+vkDestroyPipelineCache
+vkDestroyPipelineLayout
+vkDestroyQueryPool
+vkDestroyRenderPass
+vkDestroySampler
+vkDestroySamplerYcbcrConversion
+vkDestroySamplerYcbcrConversionKHR
+vkDestroySemaphore
+vkDestroyShaderModule
+vkDestroySurfaceKHR
+vkDestroySwapchainKHR
+vkDestroyValidationCacheEXT
+vkDeviceWaitIdle
+vkDisplayPowerControlEXT
+vkEndCommandBuffer
+vkEnumerateDeviceExtensionProperties
+vkEnumerateDeviceLayerProperties
+vkEnumeratePhysicalDeviceGroups
+vkEnumeratePhysicalDeviceGroupsKHR
+vkEnumeratePhysicalDevices
+vkFlushMappedMemoryRanges
+vkFreeCommandBuffers
+vkFreeDescriptorSets
+vkFreeMemory
+vkGetBufferMemoryRequirements
+vkGetBufferMemoryRequirements2
+vkGetBufferMemoryRequirements2KHR
+vkGetDescriptorSetLayoutSupport
+vkGetDescriptorSetLayoutSupportKHR
+vkGetDeviceGroupPeerMemoryFeatures
+vkGetDeviceGroupPeerMemoryFeaturesKHR
+vkGetDeviceGroupPresentCapabilitiesKHR
+vkGetDeviceGroupSurfacePresentModesKHR
+vkGetDeviceMemoryCommitment
+vkGetDeviceProcAddr
+vkGetDeviceQueue
+vkGetDeviceQueue2
+vkGetDisplayModeProperties2KHR
+vkGetDisplayModePropertiesKHR
+vkGetDisplayPlaneCapabilities2KHR
+vkGetDisplayPlaneCapabilitiesKHR
+vkGetDisplayPlaneSupportedDisplaysKHR
+vkGetEventStatus
+vkGetFenceFdKHR
+vkGetFenceStatus
+vkGetImageMemoryRequirements
+vkGetImageMemoryRequirements2
+vkGetImageMemoryRequirements2KHR
+vkGetImageSparseMemoryRequirements
+vkGetImageSparseMemoryRequirements2
+vkGetImageSparseMemoryRequirements2KHR
+vkGetImageSubresourceLayout
+vkGetInstanceProcAddr
+vkGetMemoryFdKHR
+vkGetMemoryFdPropertiesKHR
+vkGetMemoryHostPointerPropertiesEXT
+vkGetPastPresentationTimingGOOGLE
+vkGetPhysicalDeviceDisplayPlaneProperties2KHR
+vkGetPhysicalDeviceDisplayPlanePropertiesKHR
+vkGetPhysicalDeviceDisplayProperties2KHR
+vkGetPhysicalDeviceDisplayPropertiesKHR
+vkGetPhysicalDeviceExternalBufferProperties
+vkGetPhysicalDeviceExternalBufferPropertiesKHR
+vkGetPhysicalDeviceExternalFenceProperties
+vkGetPhysicalDeviceExternalFencePropertiesKHR
+vkGetPhysicalDeviceExternalImageFormatPropertiesNV
+vkGetPhysicalDeviceExternalSemaphoreProperties
+vkGetPhysicalDeviceExternalSemaphorePropertiesKHR
+vkGetPhysicalDeviceFeatures
+vkGetPhysicalDeviceFeatures2
+vkGetPhysicalDeviceFeatures2KHR
+vkGetPhysicalDeviceFormatProperties
+vkGetPhysicalDeviceFormatProperties2
+vkGetPhysicalDeviceFormatProperties2KHR
+vkGetPhysicalDeviceGeneratedCommandsPropertiesNVX
+vkGetPhysicalDeviceImageFormatProperties
+vkGetPhysicalDeviceImageFormatProperties2
+vkGetPhysicalDeviceImageFormatProperties2KHR
+vkGetPhysicalDeviceMemoryProperties
+vkGetPhysicalDeviceMemoryProperties2
+vkGetPhysicalDeviceMemoryProperties2KHR
+vkGetPhysicalDeviceMultisamplePropertiesEXT
+vkGetPhysicalDevicePresentRectanglesKHR
+vkGetPhysicalDeviceProperties
+vkGetPhysicalDeviceProperties2
+vkGetPhysicalDeviceProperties2KHR
+vkGetPhysicalDeviceQueueFamilyProperties
+vkGetPhysicalDeviceQueueFamilyProperties2
+vkGetPhysicalDeviceQueueFamilyProperties2KHR
+vkGetPhysicalDeviceSparseImageFormatProperties
+vkGetPhysicalDeviceSparseImageFormatProperties2
+vkGetPhysicalDeviceSparseImageFormatProperties2KHR
+vkGetPhysicalDeviceSurfaceCapabilities2EXT
+vkGetPhysicalDeviceSurfaceCapabilities2KHR
+vkGetPhysicalDeviceSurfaceCapabilitiesKHR
+vkGetPhysicalDeviceSurfaceFormats2KHR
+vkGetPhysicalDeviceSurfaceFormatsKHR
+vkGetPhysicalDeviceSurfacePresentModesKHR
+vkGetPhysicalDeviceSurfaceSupportKHR
+vkGetPhysicalDeviceXcbPresentationSupportKHR
+vkGetPhysicalDeviceXlibPresentationSupportKHR
+vkGetPipelineCacheData
+vkGetQueryPoolResults
+vkGetRefreshCycleDurationGOOGLE
+vkGetRenderAreaGranularity
+vkGetSemaphoreFdKHR
+vkGetShaderInfoAMD
+vkGetSwapchainCounterEXT
+vkGetSwapchainImagesKHR
+vkGetSwapchainStatusKHR
+vkGetValidationCacheDataEXT
+vkImportFenceFdKHR
+vkImportSemaphoreFdKHR
+vkInvalidateMappedMemoryRanges
+vkMapMemory
+vkMergePipelineCaches
+vkMergeValidationCachesEXT
+vkQueueBeginDebugUtilsLabelEXT
+vkQueueBindSparse
+vkQueueEndDebugUtilsLabelEXT
+vkQueueInsertDebugUtilsLabelEXT
+vkQueuePresentKHR
+vkQueueSubmit
+vkQueueWaitIdle
+vkRegisterDeviceEventEXT
+vkRegisterDisplayEventEXT
+vkRegisterObjectsNVX
+vkReleaseDisplayEXT
+vkResetCommandBuffer
+vkResetCommandPool
+vkResetDescriptorPool
+vkResetEvent
+vkResetFences
+vkSetDebugUtilsObjectNameEXT
+vkSetDebugUtilsObjectTagEXT
+vkSetEvent
+vkSetHdrMetadataEXT
+vkSubmitDebugUtilsMessageEXT
+vkTrimCommandPool
+vkTrimCommandPoolKHR
+vkUnmapMemory
+vkUnregisterObjectsNVX
+vkUpdateDescriptorSetWithTemplate
+vkUpdateDescriptorSetWithTemplateKHR
+vkUpdateDescriptorSets
+vkWaitForFences
+void
+vsnprintf
+vsnprintf@GLIBC_2.0
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
+vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+vtable for __gnu_cxx::recursive_init_error
+wchar_t
+wcrtomb
+wcrtomb@GLIBC_2.0
+wcscmp
+wcscmp@GLIBC_2.0
+wcslen
+wcslen@GLIBC_2.0
+wcsnrtombs
+wcsnrtombs@GLIBC_2.0
+wctob
+wctob@GLIBC_2.0
+wmemchr
+wmemchr@GLIBC_2.0
+wmemcpy
+wmemcpy@GLIBC_2.0
+wmemmove
+wmemmove@GLIBC_2.0
+wmemset
+wmemset@GLIBC_2.0
+xdigit
+{default arg#
+{lambda(
+{parm#
+{unnamed type#

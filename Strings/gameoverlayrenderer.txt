@@ -1,987 +1,820 @@
-__gmon_start__
-_ITM_deregisterTMCloneTable
-_ITM_registerTMCloneTable
-__cxa_finalize
-getenv
-strtoull
-__snprintf_chk
-memcpy
-syscall
-__errno_location
-___tls_get_addr
-__vsnprintf_chk
-pthread_self
-sendmsg
-munmap
-getpid
-getuid
-shm_unlink
-shm_open
-flock
-__fxstat
-ftruncate
-mmap
-kill
-memset
-strlen
-socket
-strncpy
-recvmsg
-__cxa_atexit
-__pthread_key_create
-strtol
-sscanf
-glDeleteTextures
-glGetIntegerv
-glBindTexture
-glTexImage2D
-glIsEnabled
-glGetBooleanv
-glEnable
-glDisable
-glPixelStorei
-glColorMask
-glViewport
-glGetError
-glDrawArrays
-glReadPixels
-glBegin
-glTexCoord2i
-glVertex2f
-glEnd
-glIsTexture
-glTexParameterf
-glDrawElements
-glColor4ub
-glTexCoord2d
-glVertex3f
-glXGetCurrentContext
-glDepthRange
-glDepthMask
-glPolygonMode
-glMatrixMode
-memcmp
-glPopClientAttrib
-glPopAttrib
-glLoadMatrixf
-glXGetProcAddress
-strstr
-glGenTextures
-glXSwapBuffers
-glClear
-dlsym
-glGetString
-malloc
-free
-glGetDoublev
-glBlendFunc
-glPushAttrib
-glPushClientAttrib
-glRenderMode
-glDisableClientState
-glShadeModel
-glPixelZoom
-glTexEnvf
-glGetFloatv
-glLoadIdentity
-glTranslatef
-glOrtho
-glScalef
-memmove
-setlocale
-fcntl
-XF86DGAQueryExtension
-XDGAQueryExtension
-pthread_mutex_lock
-gmtime_r
-strftime
-__fprintf_chk
-__vfprintf_chk
-pthread_mutex_unlock
-__sprintf_chk
-fopen
-fflush
-fwrite
-stderr
-fclose
-getrlimit
-readlink
-strrchr
-strcmp
-setrlimit
-pthread_mutex_init
-SetNotificationPosition
-SetNotificationInset
-BOverlayNeedsPresent
-IsOverlayEnabled
-pthread_mutex_destroy
-glXChooseVisual
-glXMakeCurrent
-glXCreateContext
-glXCreateWindow
-glXCreatePixmap
-glXDestroyWindow
-glXDestroyPixmap
-glXCreatePbuffer
-glXDestroyPbuffer
-glXGetProcAddressARB
-xcb_create_window_checked
-XF86DGADirectVideo
-XCloseDisplay
-XCreateSimpleWindow
-XSetErrorHandler
-xcb_create_window
-XCheckIfEvent
-XCheckMaskEvent
-XCheckTypedEvent
-XCheckTypedWindowEvent
-XCheckWindowEvent
-XIfEvent
-XMaskEvent
-XNextEvent
-XPeekEvent
-XPeekIfEvent
-XPutBackEvent
-XWindowEvent
-XPending
-XEventsQueued
-XUnmapWindow
-XMapWindow
-XInstallColormap
-XWarpPointer
-XUngrabPointer
-XUngrabKeyboard
-XGrabPointer
-XGrabKeyboard
-XChangeWindowAttributes
-XSelectInput
-XFreeCursor
-XUndefineCursor
-XDefineCursor
-XQLength
-read
-readv
-__strcat_chk
-__stpcpy_chk
-__memcpy_chk
-XOpenDisplay
-strncmp
-ioctl
-dlopen
-dlvsym
-ValveHookScreenshots
-ValveIsScreenshotsHooked
-ceilf
-sqrtf
-connect
-nanosleep
-calloc
-VulkanSteamOverlayProcessCapturedFrame
-VulkanSteamOverlayPresent
-VulkanSteamOverlayGetScaleFactors
-clock_gettime
-pthread_key_delete
-pthread_mutexattr_init
-pthread_mutexattr_settype
-abort
-fputs
-fputc
-gettext
-realloc
-pthread_once
-dl_iterate_phdr
-__stack_chk_fail
-libdl.so.2
-librt.so.1
-ld-linux.so.2
-libGL.so.1
-libm.so.6
-libpthread.so.0
-libc.so.6
-GLIBC_2.0
-GLIBC_2.2
-GLIBC_2.3
-GLIBC_2.1
-GLIBC_2.2.4
-GLIBC_2.1.3
-GLIBC_2.4
-GLIBC_2.3.4
-4IIME
-12CIMENullImpl
-SteamGameId
-SteamOverlayGameId
-enable
-disable
-base input
-Detected hot-key via base input, now requesting overlay %s\n
-ESC press detected, requesting overlay disable\n
-?SteamGameStream_%u_mem
-SteamGameStream_%u_mutex
-24CGameStreamBaseMemStream
-24CGameStreamGameMemStream
-futex robust_list not initialized by pthreads
-futex robust_list not pthreads-compatible
-Fatal error: %s\n
-IPC: recovering abandoned mutex %p\n
-IPC error: LockMgrMutex failed to acquire SysMgrMutex\n
-/u%d-Shm_%x
-Destroying a held mutex\n
-Error on Release(): Not the lock owner\n
-/u%d-ValveIPCSharedObj-Steam
-/dev/null
-Process %d failed to shm_open %s\n
-Error %d locking shared memory file
-Error %d getting shared memory size
-Error %d growing shared object manager file.
-Requested Force create but SharedObjectMutex already created\n
-Ran out of IPC SharedObjectManager entries!\n
-Forced create but already created for SharedObjectEvent\n
-Bad Access flag on shared mem create: %s: %u\n
-N3IPC11ISyncObjectE
-N3IPC6IMutexE
-N3IPC6IEventE
-N3IPC10ISharedMemE
-N3IPC17SharedObjectMutexE
-N3IPC17SharedObjectEventE
-N3IPC17PosixSharedMemoryE
-QkkXa
-10IMemStream
-15CSavedMemStream
-Unable to write to video stream: dst not aligned!\n
-Unable to write to video stream: dst stride (stride=%u)!\n
-Failed to write screenshot to stream, clearing data!\n
-Not enough room in mem stream for video frame\n
-Video stream full.. couldn't get buffer!\n
-Video stream full!\n
-Warning: Blocking wait on mutex failed in Clear: %d\n
-Warning: CSharedMemStream::Clear failed, expected %d bytes remaining, have %d.\n
-Timed out waiting for mutex in PutInternal()\n
-m_pMutex->Wait() failed in ShMemStream::PutInternal\n
-SHMemStream header is corrupt in PutInternal()\n
-PutInternal: Not enough space for put when locked\n
-CSharedMemStream has memory already locked for put. Need to write through acquired CSharedMemStreamLockedMemory\n
-Warning: Memory was locked for put while destructing!\n
-Asked to unlock memory for write.. but wasn't locked
-%s_mutex
-%s_written
+  handle %llu: m_iTextureID %d m_fdPaintBuffer %d\n
+  skipping tracking for nested window\n
+  using display %p window 0x%lx key input win 0x%lx (event mask 0x%x)\n
+  what():  
+ [clone 
+ __vector(
+ const
+ noexcept
+ restrict
+ throw
+ transaction_safe
+ volatile
+####### Log failed to open %s ##############\n
+#extension GL_ARB_texture_rectangle : enable\nuniform sampler2DRect tex0;\n\n// YUV coefficients \nconst vec3 Ucoeff = vec3(%f, %f, %f);\nconst vec3 Vcoeff = vec3(%f, %f, %f);\n\nvoid main()\n{\n    vec3 yuv, rgb;\n\n    // Get the color value \n    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;\n\n    // Calculate the YUV values \n    yuv.y = dot(rgb, Ucoeff) + 0.5;\n    yuv.z = dot(rgb, Vcoeff) + 0.5;\n\n    // Write the YUV values \n    gl_FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);\n}
+#extension GL_ARB_texture_rectangle : enable\nuniform sampler2DRect tex0;\n\n// YUV coefficients \nconst vec3 Ycoeff = vec3(%f, %f, %f);\n\nvoid main()\n{\n    vec3 yuv, rgb;\n\n    // Get the color value \n    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;\n\n    // Calculate the YUV values \n    yuv.x = dot(rgb, Ycoeff) + %f;\n\n    // Write the YUV values \n    gl_FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);\n}
+#extension GL_ARB_texture_rectangle : enable\nuniform sampler2DRect tex0;\n\nvoid main()\n{\n    gl_FragColor = vec4( texture2DRect(tex0, gl_TexCoord[0].st).rgb, 1.0);\n}
+#version 150\nin vec2 textCoord;\nout vec4 FragColor;\nuniform sampler2DRect tex0;\n\n// YUV coefficients \nconst vec3 Ucoeff = vec3(%f, %f, %f);\nconst vec3 Vcoeff = vec3(%f, %f, %f);\n\nvoid main()\n{\n    vec3 yuv, rgb;\n\n    // Get the color value \n    rgb = texture(tex0, textCoord).rgb;\n\n    // Calculate the YUV values \n    yuv.y = dot(rgb, Ucoeff) + 0.5;\n    yuv.z = dot(rgb, Vcoeff) + 0.5;\n\n    // Write the YUV values \n    FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);\n}
+#version 150\nin vec2 textCoord;\nout vec4 FragColor;\nuniform sampler2DRect tex0;\n\n// YUV coefficients \nconst vec3 Ycoeff = vec3(%f, %f, %f);\n\nvoid main()\n{\n    vec3 yuv, rgb;\n\n    // Get the color value \n    rgb = texture(tex0, textCoord).rgb;\n\n    // Calculate the YUV values \n    yuv.x = dot(rgb, Ycoeff) + %f;\n\n    // Write the YUV values \n    FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);\n}
+#version 150\nin vec2 textCoord;\nout vec4 FragColor;\nuniform sampler2DRect tex0;\n\nvoid main()\n{\n    FragColor = vec4( texture(tex0, textCoord).rgb, 1.0);\n}
+#version 150\nin vec4 Attrib_Position;\nin vec4 Attrib_Color;\nin vec2 Attrib_TexCoord;\nout vec4 Color;\nout vec2 TexCoord;\nvoid main(void)\n{\n\tColor = Attrib_Color;\n\tTexCoord = Attrib_TexCoord;\n\tgl_Position = Attrib_Position;\n}\n
+#version 150\nin vec4 Color;\nin vec2 TexCoord;\nout vec4 FragColor;\nuniform sampler2D Texture;\nvoid main(void)\n{\n\tFragColor = Color * texture(Texture, TexCoord);\n}\n
+#version 150\nuniform bool bFlipRendering;\nuniform int srcWidth;\nuniform int srcHeight;\nout vec2 textCoord;\nconst vec2 screenAlignedQuad[4] = vec2[]\n(\n\tvec2(-1.0,  1.0),\n\tvec2( 1.0,  1.0),\n\tvec2(-1.0, -1.0),\n\tvec2( 1.0, -1.0)\n);\nconst vec2 textureCoords[4] = vec2[]\n(\n\tvec2( 0.0,  0.0),\n\tvec2( 1.0,  0.0),\n\tvec2( 0.0,  1.0),\n\tvec2( 1.0,  1.0)\n);\nvoid main()\n{\n   gl_Position = vec4( screenAlignedQuad[ gl_VertexID ], 0.0, 1.0);\n   if ( bFlipRendering )\n       gl_Position.y = -gl_Position.y;\n   textCoord = vec2( textureCoords[ gl_VertexID ].x * srcWidth, textureCoords[ gl_VertexID ].y * srcHeight );\n}
+%a %b %d %H:%M:%S %Y UTC
+%dx%d
+%s begin_ctx=%lld
+%s end_ctx=%lld
+%s: no XInputExtension\n
+%s: no XQueryExtension\n
 %s_avail
 %s_mem
-Failed creating write event %s\n
-Failed creating read event %s\n
-Failed creating file mapping %s\n
-Failed creating view of file for %s\n
-Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
-Timed out waiting for mutex in GetInternal()\n
-Failed to take mutex in GetInternal()\n
-SHMemStream header is corrupt in GetInternal()\n
-CSharedMemStream has memory already locked for put. Don't write with memory locked.\n
+%s_mutex
+%s_written
+(anonymous namespace)
+(knN
+----------------------------\n
+/dev/null
+/proc/self/exe
+/sys/kernel/debug/tracing/trace_marker
+/sys/kernel/tracing/trace_marker
+/tmp/gameoverlayrenderer.%d.log
+/tmp/steam_chrome_overlay_uid%d_spid%u
+/u%d-Shm_%x
+/u%d-ValveIPCSharedObj-Steam
+10IMemStream
+12CIMENullImpl
+15CSavedMemStream
 16CSharedMemStream
-Video memory stream writer destroyed with frame lock!\n
-Video memory stream frame commit without lock!\n
-StreamForOpenVR
-SteamStreamingVideo
-%dx%d
-SteamStreamingAllowGameVsync
-SteamStreamingMaximumResolution
-SteamStreamingVideoDisableVSync
-Game OpenGL NV12
-Game Delayed OpenGL RGB
-Game Delayed OpenGL NV12
-Game OpenGL RGB
-#version 150\nuniform bool bFlipRendering;\nuniform int srcWidth;\nuniform int srcHeight;\nout vec2 textCoord;\nconst vec2 screenAlignedQuad[4] = vec2[]\n(\n\tvec2(-1.0,  1.0),\n\tvec2( 1.0,  1.0),\n\tvec2(-1.0, -1.0),\n\tvec2( 1.0, -1.0)\n);\nconst vec2 textureCoords[4] = vec2[]\n(\n\tvec2( 0.0,  0.0),\n\tvec2( 1.0,  0.0),\n\tvec2( 0.0,  1.0),\n\tvec2( 1.0,  1.0)\n);\nvoid main()\n{\n   gl_Position = vec4( screenAlignedQuad[ gl_VertexID ], 0.0, 1.0);\n   if ( bFlipRendering )\n       gl_Position.y = -gl_Position.y;\n   textCoord = vec2( textureCoords[ gl_VertexID ].x * srcWidth, textureCoords[ gl_VertexID ].y * srcHeight );\n}
-uniform bool bFlipRendering;\nvoid main()\n{\n\tgl_TexCoord[0] = gl_MultiTexCoord0;\n   gl_Position = gl_Vertex;\n   if ( bFlipRendering )\n       gl_Position.y = -gl_Position.y;\n}
-COpenGLFrameCapture::BCreateRenderData(): Couldn't set FBO configuration (%u)\n
-COpenGLFrameCapture::BCreateRenderData(): Couldn't create shader\n
-#version 150\nin vec2 textCoord;\nout vec4 FragColor;\nuniform sampler2DRect tex0;\n\n// YUV coefficients \nconst vec3 Ycoeff = vec3(%f, %f, %f);\n\nvoid main()\n{\n    vec3 yuv, rgb;\n\n    // Get the color value \n    rgb = texture(tex0, textCoord).rgb;\n\n    // Calculate the YUV values \n    yuv.x = dot(rgb, Ycoeff) + %f;\n\n    // Write the YUV values \n    FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);\n}
-#extension GL_ARB_texture_rectangle : enable\nuniform sampler2DRect tex0;\n\n// YUV coefficients \nconst vec3 Ycoeff = vec3(%f, %f, %f);\n\nvoid main()\n{\n    vec3 yuv, rgb;\n\n    // Get the color value \n    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;\n\n    // Calculate the YUV values \n    yuv.x = dot(rgb, Ycoeff) + %f;\n\n    // Write the YUV values \n    gl_FragColor = vec4(yuv.x, 1.0, 1.0, 1.0);\n}
-#version 150\nin vec2 textCoord;\nout vec4 FragColor;\nuniform sampler2DRect tex0;\n\n// YUV coefficients \nconst vec3 Ucoeff = vec3(%f, %f, %f);\nconst vec3 Vcoeff = vec3(%f, %f, %f);\n\nvoid main()\n{\n    vec3 yuv, rgb;\n\n    // Get the color value \n    rgb = texture(tex0, textCoord).rgb;\n\n    // Calculate the YUV values \n    yuv.y = dot(rgb, Ucoeff) + 0.5;\n    yuv.z = dot(rgb, Vcoeff) + 0.5;\n\n    // Write the YUV values \n    FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);\n}
-#extension GL_ARB_texture_rectangle : enable\nuniform sampler2DRect tex0;\n\n// YUV coefficients \nconst vec3 Ucoeff = vec3(%f, %f, %f);\nconst vec3 Vcoeff = vec3(%f, %f, %f);\n\nvoid main()\n{\n    vec3 yuv, rgb;\n\n    // Get the color value \n    rgb = texture2DRect(tex0, gl_TexCoord[0].st).rgb;\n\n    // Calculate the YUV values \n    yuv.y = dot(rgb, Ucoeff) + 0.5;\n    yuv.z = dot(rgb, Vcoeff) + 0.5;\n\n    // Write the YUV values \n    gl_FragColor = vec4(yuv.y, yuv.z, 1.0, 1.0);\n}
-#version 150\nin vec2 textCoord;\nout vec4 FragColor;\nuniform sampler2DRect tex0;\n\nvoid main()\n{\n    FragColor = vec4( texture(tex0, textCoord).rgb, 1.0);\n}
-#extension GL_ARB_texture_rectangle : enable\nuniform sampler2DRect tex0;\n\nvoid main()\n{\n    gl_FragColor = vec4( texture2DRect(tex0, gl_TexCoord[0].st).rgb, 1.0);\n}
+18COverlayGLRenderer
+20CBaseOverlayRenderer
+24CGameStreamBaseMemStream
+24CGameStreamGameMemStream
+4IIME
+?SteamGameStream_%u_mem
+@15CVulkanRenderer
+Applying steamclient.so path workaround.\n
+Asked to unlock memory for write.. but wasn't locked
+AtomID
+AtomID 0x%x
+Attrib_Color
+Attrib_Position
+Attrib_TexCoord
+BOverlayNeedsPresent
+Bad Access flag on shared mem create: %s: %u\n
+CBaseOverlayRenderer
 COpenGLFrameCapture - missing opengl methods\n
-Invalid texture for fbo generated\n
-Failed to create y plane\n
-Failed to create uv plane\n
-Failed to create rgba plane\n
-Unsupported output format\n
-bFlipRendering
-srcWidth
-srcHeight
+COpenGLFrameCapture::BCreateRenderData(): Couldn't create shader\n
+COpenGLFrameCapture::BCreateRenderData(): Couldn't set FBO configuration (%u)\n
 COverlayGLRenderer
-Missing texture: %d which was used in DrawTexturedRect()\n
+COverlayGLRenderer::ValveDrawSharedHandleTexture - failed to get texture from handle\n
+CSharedMemStream has memory already locked for put. Don't write with memory locked.\n
+CSharedMemStream has memory already locked for put. Need to write through acquired CSharedMemStreamLockedMemory\n
+Clearing input stream because it is about to overflow\n
+Corrupt render stream (getting cmd)... %s\n
+Corrupt render stream: k_ECreateCustomCursor (custom2)\n
+Corrupt render stream: k_ECreateCustomCursor (custom3)\n
+Corrupt render stream: k_ECreateCustomCursor\n
+Corrupt render stream: k_EDeleteChromePaintBuffer\n
+Corrupt render stream: k_EDeleteCursor\n
+Corrupt render stream: k_EDeleteTexture\n
+Corrupt render stream: k_EDrawAndUpdateSharedTexture\n
+Corrupt render stream: k_EDrawChromePaintBufferRect\n
+Corrupt render stream: k_EDrawTexturedRect\n
+Corrupt render stream: k_EIMECommand\n
+Corrupt render stream: k_ELoadTexture 3\n
+Corrupt render stream: k_ELoadTexture\n
+Corrupt render stream: k_ESendTextToGame string\n
+Corrupt render stream: k_ESendTextToGame\n
+Corrupt render stream: k_ESetCursor\n
+Corrupt render stream: k_ESetHotKey\n
+Corrupt render stream: k_EShowCursor\n
+Corrupt shared texture stream (header)\n
+Corrupt shared texture stream (texture data)\n
+Couldn't create movie stream %s\n
+Created movie stream %s\n
+Deleting movie stream\n
+Destroy GLX window 0x%lx\n
+Destroy window 0x%lx\n
+Destroying a held mutex\n
+Detected Movie hot-key via %s\n
+Detected Plat_MSTime() wrapping\n
+Detected hot-key via base input, now requesting overlay %s\n
+Detected marker hot-key via %s\n
+Disabling overlay for 10 seconds (%d seconds since last frame from ui process was seen)\n
+Disabling overlay for 2 seconds (%d seconds since last frame from ui process was seen)\n
+Disabling overlay for 20 minutes (%d seconds since last frame from ui process was seen)\n
+Disabling overlay for 30 seconds (%d seconds since last frame from ui process was seen)\n
+Disabling overlay\n
+ERROR: Skip infos overflow\n
+ESC press detected, requesting overlay disable\n
+Enabling clearing on every frame\n
+Enabling overlay\n
+Error %d getting shared memory size
+Error %d growing shared object manager file.
+Error %d locking shared memory file
+Error Serial #%d
+Error on Release(): Not the lock owner\n
+ErrorSerial
+Failed creating exit event\n
+Failed creating file mapping %s\n
+Failed creating paint event\n
+Failed creating read event %s\n
+Failed creating rendering event\n
+Failed creating serialized work event\n
+Failed creating view of file for %s\n
+Failed creating write event %s\n
+Failed on texture subrect update!\n
+Failed reading frame completely\n
+Failed to create rgba plane\n
+Failed to create uv plane\n
+Failed to create y plane\n
+Failed to increase file count limit. Currently: %lu\n
+Failed to take mutex in GetInternal()\n
+Failed to write screenshot to stream, clearing data!\n
+Fatal error: %s\n
+First swap of overlay on %p 0x%lx\n
+Force release of key 0x%x\n
+Forced create but already created for SharedObjectEvent\n
+Forcing internal overlay disable and requesting ui disable\n
+Frame time: %f ms\n
+GCC: (SteamRT 4.8.4-1ubuntu15~12.04+steamrt1.2+srt2) 4.8.4
+GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
+GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
+GL extensions: %s\n
+GLIBC_2.0
+GLIBC_2.1
+GLIBC_2.1.3
+GLIBC_2.2
+GLIBC_2.2.4
+GLIBC_2.3
+GLIBC_2.3.4
+GLIBC_2.4
+GLOVERLAYCOREPROFILE
 GLSL Fragment Shader log:\n
 GLSL Program log:\n
-Failed on texture subrect update!\n
-glXSwapBuffers
-shaders
-fixed function
-core
-compatibility
-OpenGL ES
-glActiveTextureARB
-glClientActiveTextureARB
-glActiveTexture
-glClientActiveTexture
-glCreateShader
-glShaderSource
-glCompileShader
-glGetShaderiv
-glGetShaderInfoLog
-glAttachShader
-glDeleteShader
-glCreateProgram
-glLinkProgram
-glGetProgramiv
-glGetProgramInfoLog
-glDeleteProgram
-glIsProgram
-glUseProgram
-glGetAttribLocation
-glGetUniformLocation
-glGetUniformiv
-glUniform4fv
-glUniform1i
-glUniformMatrix4fv
-glEnableVertexAttribArray
-glDisableVertexAttribArray
-glVertexAttribPointer
-glVertexAttrib4f
-glVertexAttrib4fv
-glGenBuffers
-glDeleteBuffers
-glBindBuffer
-glBufferData
-glBufferSubData
-glGenVertexArrays
-glDeleteVertexArrays
-glBindVertexArray
-glBindSampler
-glBlendFuncSeparate
-glBlendEquationSeparate
-glBindProgramPipeline
-glBindFramebufferEXT
-glDrawBuffers
-glClipControl
-glGenBuffersARB
-glBindBufferARB
-glMapBufferARB
-glUnmapBufferARB
-glDeleteBuffersARB
-glBufferDataARB
-glDebugMessageCallbackARB
-GLOVERLAYCOREPROFILE
-GL_ARB_framebuffer_object
-GL_EXT_framebuffer_object
-glGenFramebuffers
-glDeleteFramebuffers
-glFramebufferTexture2D
-glBindFramebuffer
-glBlitFramebuffer
-glCheckFramebufferStatus
-Attrib_Position
-Attrib_Color
-Attrib_TexCoord
 GLSL Vertex Shader log:\n
-GL extensions: %s\n
-GL_EXT_texture_lod_bias
-OpenGL version is >= 3.1\n
-glGetStringi
-OpenGL Enabled LOD bias\n
-Texture units detected: %d\n
-glGenFramebuffersEXT
-glDeleteFramebuffersEXT
-glFramebufferTexture2DEXT
-glBlitFramebufferEXT
-glCheckFramebufferStatusEXT
-OpenGL ES version: %d.%d (%s) (overlay is not supported)\n
-OpenGL version: %d.%d (%s) %s (overlay will use %s)\n
+GLX window tracking overflow!\n
+GL_ARB_framebuffer_object
 GL_ARB_texture_non_power_of_two
-OpenGL does not support non-power-of-two textures!\n
-COverlayGLRenderer::ValveDrawSharedHandleTexture - failed to get texture from handle\n
-18COverlayGLRenderer
-#version 150\nin vec4 Color;\nin vec2 TexCoord;\nout vec4 FragColor;\nuniform sampler2D Texture;\nvoid main(void)\n{\n\tFragColor = Color * texture(Texture, TexCoord);\n}\n
-#version 150\nin vec4 Attrib_Position;\nin vec4 Attrib_Color;\nin vec2 Attrib_TexCoord;\nout vec4 Color;\nout vec2 TexCoord;\nvoid main(void)\n{\n\tColor = Attrib_Color;\n\tTexCoord = Attrib_TexCoord;\n\tgl_Position = Attrib_Position;\n}\n
-XDefineCursor
-valid
-unknown
-Disabling overlay\n
-XWarpPointer
-XRootWindow
-XSetInputFocus
-XGrabKeyboard
-XGrabPointer
-XMapWindow
-XDestroyIC
-XCloseIM
-XFreeCursor
-XInstallColormap
-XSync
-Restore win 0x%lx cursor to 0x%lx (%s)\n
-Remapping untracked pointer grab window 0x%lx\n
-Regrabbing pointer on window %lx\n
-Enabling overlay\n
-XCreateFontCursor
-XQueryExtension
-XGetEventData
-XFreeEventData
+GL_EXT_framebuffer_object
+GL_EXT_texture_lod_bias
+Game Delayed OpenGL NV12
+Game Delayed OpenGL RGB
+Game OpenGL NV12
+Game OpenGL RGB
+Game process locale is '%s'\n
+GameID = %llu, AppID = %u, OverlayGameID = %llu, PID: %u, tid %u Executable: %s\n
+GameOverlayRender_PIDStream
+GameOverlayRender_PaintCmdStream_%d
+GameOverlayRender_SharedTexRead_%d_%d
+GameOverlayRender_SharedTexWrite_%d_%d
+GameOverlayRender_SharedTex_%d_%d
+GameOverlay_GameExitingEvent_%d
+GameOverlay_InGameRenderingCompleted_%d
+GameOverlay_InputEventStream_%d
+GameOverlay_MovieStream_%u
+GameOverlay_ScreenshotStream_%d
+GameOverlay_SerializedWorkQueued_%d
+GameOverlay_VGUIPaintingCompleted_%d
+Got EndFrame, but still have [%d] bytes remaining in render loop buffer\n
+Got hTexture of non NULL on shared texture draw but new shared tex update has no shared texture.\n
 HasXInput2
-%s: no XQueryExtension\n
-XInputExtension
-%s: no XInputExtension\n
-ERROR: Skip infos overflow\n
-XTranslateCoordinates
-Window tracking overflow!\n
+IPC error: LockMgrMutex failed to acquire SysMgrMutex\n
+IPC: recovering abandoned mutex %p\n
+IgnoreChildProcesses
+Installed overlay error handler for process %d\n
+Invalid texture for fbo generated\n
+IsOverlayEnabled
+JArray
+Key to character event translate: skipped, filtered by XFilterEvent\n
+Left render loop without EndFrame!\n
+MajorCode
+Mismatched chrome paint texture width/height!\n
+Missing texture: %d which was used in DrawTexturedRect()\n
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv117__class_type_infoE
+N10__cxxabiv119__foreign_exceptionE
+N10__cxxabiv120__si_class_type_infoE
+N3IPC10ISharedMemE
+N3IPC11ISyncObjectE
+N3IPC17PosixSharedMemoryE
+N3IPC17SharedObjectEventE
+N3IPC17SharedObjectMutexE
+N3IPC6IEventE
+N3IPC6IMutexE
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
+Need to force key focus to overlay key window 0x%lx\n
+Not enough room in mem stream for video frame\n
+One-time initialization: pid %d for game %llu\n
+OpenGL ES
+OpenGL ES version: %d.%d (%s) (overlay is not supported)\n
+OpenGL Enabled LOD bias\n
+OpenGL does not support non-power-of-two textures!\n
+OpenGL version is >= 3.1\n
+OpenGL version: %d.%d (%s) %s (overlay will use %s)\n
+Opening display '%s', process %d returned %p\n
+Overlay pid %d dpy %p: An X Error occurred\n
+OverlayFrameMark
+Process %d failed to shm_open %s\n
+PutInternal: Not enough space for put when locked\n
+QkkXa
+Ran out of IPC SharedObjectManager entries!\n
+Regrabbing pointer on window %lx\n
+Remapping untracked pointer grab window 0x%lx\n
+Request Major code %d
+Requested Force create but SharedObjectMutex already created\n
+ResourceID
+ResourceID 0x%x
+Restore win 0x%lx cursor to 0x%lx (%s)\n
+SDL_GAMECONTROLLER_IGNORE_DEVICES
+SHMemStream header is corrupt in GetInternal()\n
+SHMemStream header is corrupt in PutInternal()\n
+STEAM_GAME
+STEAM_OVERLAY_DISABLE_WAIT_FOR_CEF_FRAME
+STEAM_OVERLAY_FRAME_TIME_LOGGING
+STEAM_OVERLAY_LOGGING
+STEAM_OVERLAY_LOGGING_FLUSH
+STEAM_OVERLAY_WINDOW_BLACKLIST
+SetNotificationInset
+SetNotificationPosition
+Size on connection to existing CSharedMemStream doesn't match actual: %s, %u, %u
+St11logic_error
+St12length_error
+St13bad_exception
+St20bad_array_new_length
+St9bad_alloc
+St9exception
+St9type_info
+Starting movie recording at %dx%d\n
+SteamDisableOverlayDPIScaling
+SteamGameId
+SteamGameStream_%u_mutex
+SteamGamepadUI
+SteamNoOverlayUIDrawing
+SteamNoOverlayUIDrawing was set\n
+SteamOverlay
+SteamOverlayGameId
+SteamOverlayRunning_%llu
+SteamOverlayUseXFilterEvent
+SteamStreamingAllowGameVsync
+SteamStreamingMaximumResolution
+SteamStreamingVideo
+SteamStreamingVideoDisableVSync
+Stopped movie recording\n
+StreamForOpenVR
+TLS init function for 
+TLS wrapper function for 
+Taking screenshot via %s, %u milliseconds since last one was triggered. (skipdebounce=%s)\n
+Texture size(%d) was != width(%u)*height(%u)*4, not loading\n
+Texture units detected: %d\n
+Timed out waiting for mutex in GetInternal()\n
+Timed out waiting for mutex in PutInternal()\n
 Track %p win 0x%lx (parent 0x%lx), cursor 0x%lx (valid %d), events 0x%x, top %d\n
-  skipping tracking for nested window\n
-Destroy window 0x%lx\n
-XSelectInput
+Track GLX win 0x%lx for X window 0x%lx\n
+Track win 0x%lx cursor 0x%lx\n
+Unable to write to video stream: dst not aligned!\n
+Unable to write to video stream: dst stride (stride=%u)!\n
+Unsupported output format\n
+Unsupported render command (%d) in vgui render stream\n
+Update size of 0x%lx to %u,%u\n
+VR_Compositor_OverlayVSync_%u
+VTT for 
+Value
+Value 0x%x
+ValveHookScreenshots
+ValveIsScreenshotsHooked
+ValveTakeScreenshot not implemented for this surface\n
+Video memory stream frame commit without lock!\n
+Video memory stream writer destroyed with frame lock!\n
+Video stream full!\n
+Video stream full.. couldn't get buffer!\n
+VulkanSteamOverlayGetScaleFactors
+VulkanSteamOverlayPresent
+VulkanSteamOverlayProcessCapturedFrame
+Waiting on shared FD for texture %d: peer is too far ahead and sending FD for texture %d.\n
+Waiting on shared FD for texture %d: received an outdated FD for texture %d instead, skipping.\n
+Warning: Blocking wait on mutex failed in Clear: %d\n
+Warning: CSharedMemStream::Clear failed, expected %d bytes remaining, have %d.\n
+Warning: Memory was locked for put while destructing!\n
+Warning: Texture %d is 0 bytes... bad VGUI!\n
 Window 0x%lx event mask %x\n
 Window 0x%lx on display %p losing forced event mask %x\n
 Window 0x%lx on secondary display %p gets raw event mask %x\n
-Track win 0x%lx cursor 0x%lx\n
-GLX window tracking overflow!\n
-Track GLX win 0x%lx for X window 0x%lx\n
-Destroy GLX window 0x%lx\n
-XCreateGC
-XFreePixmap
-XFreeGC
-XFillRectangle
-XCreatePixmapCursor
-XFree
-XGetGeometry
-XQueryTree
-XGetInputFocus
-XQueryPointer
-XCreateIC
-XOpenIM
-XSupportsLocale
-XUngrabKeyboard
-XUngrabPointer
-XUnmapWindow
-en_US.UTF-8
-SteamOverlay
-resourceClass
-resourceName
-inputStyle
-focusWindow
-clientWindow
-Game process locale is '%s'\n
-XUninstallColormap
-  using display %p window 0x%lx key input win 0x%lx (event mask 0x%x)\n
-Need to force key focus to overlay key window 0x%lx\n
-Update size of 0x%lx to %u,%u\n
-First swap of overlay on %p 0x%lx\n
-XSendEvent
-XKeysymToKeycode
-XkbKeycodeToKeysym
-XOpenDisplay
-XCloseDisplay
-XInternAtom
-XGetWindowProperty
-Force release of key 0x%x\n
-XLookupKeysym
-XwcLookupString
-SteamOverlayUseXFilterEvent
-Key to character event translate: skipped, filtered by XFilterEvent\n
-STEAM_OVERLAY_FRAME_TIME_LOGGING
-/tmp/gameoverlayrenderer.%d.log
-####### Log failed to open %s ##############\n
-logfile opened early, s_Pid == 0 (Init has not been called yet)\n
-STEAM_OVERLAY_LOGGING_FLUSH
-STEAM_OVERLAY_LOGGING
-%a %b %d %H:%M:%S %Y UTC
-/proc/self/exe
-vrmonitor
-IgnoreChildProcesses
-Failed creating paint event\n
-Failed creating exit event\n
-----------------------------\n
-Failed to increase file count limit. Currently: %lu\n
-GameID = %llu, AppID = %u, OverlayGameID = %llu, PID: %u, tid %u Executable: %s\n
-STEAM_OVERLAY_WINDOW_BLACKLIST
-GameOverlay_InputEventStream_%d
-GameOverlay_ScreenshotStream_%d
-GameOverlayRender_PaintCmdStream_%d
-GameOverlay_InGameRenderingCompleted_%d
-Failed creating rendering event\n
-GameOverlay_VGUIPaintingCompleted_%d
-GameOverlay_SerializedWorkQueued_%d
-Failed creating serialized work event\n
-GameOverlay_GameExitingEvent_%d
-SteamNoOverlayUIDrawing
-SteamNoOverlayUIDrawing was set\n
-pid %d != %d, skipping destruction (fork without exec?)\n
-glXChooseVisual
-glXCreateContext
-glXMakeCurrent
-glXCreateWindow
-glXDestroyWindow
-glXCreatePixmap
-glXDestroyPixmap
-glXCreatePbuffer
-glXDestroyPbuffer
-glXGetProcAddress
-glXGetProcAddressARB
-XSetErrorHandler
-XCreateSimpleWindow
+Window tracking overflow!\n
+X Error
+XChangeProperty
+XChangeWindowAttributes
 XCheckIfEvent
 XCheckMaskEvent
 XCheckTypedEvent
 XCheckTypedWindowEvent
 XCheckWindowEvent
+XCloseDisplay
+XCloseIM
+XCreateFontCursor
+XCreateGC
+XCreateIC
+XCreatePixmapCursor
+XCreateSimpleWindow
+XDGAQueryExtension
+XDefineCursor
+XDestroyIC
+XError
+XEventsQueued
+XF86DGADirectVideo
+XF86DGAQueryExtension
+XFillRectangle
+XFree
+XFreeCursor
+XFreeEventData
+XFreeGC
+XFreePixmap
+XGetErrorDatabaseText
+XGetErrorText
+XGetEventData
+XGetGeometry
+XGetInputFocus
+XGetWindowProperty
+XGrabKeyboard
+XGrabKeyboard %p grab_window %x time %u\n
+XGrabPointer
+XGrabPointer %p grab_window %x confine_to %x time %u\n
 XIfEvent
+XInputExtension
+XInstallColormap
+XInternAtom
+XKeysymToKeycode
+XLookupKeysym
+XMapWindow
 XMaskEvent
 XNextEvent
+XOpenDisplay
+XOpenIM
 XPeekEvent
 XPeekIfEvent
-XWindowEvent
-XPutBackEvent
-XEventsQueued
 XPending
+XPutBackEvent
 XQLength
-XUndefineCursor
-XChangeWindowAttributes
-XF86DGAQueryExtension
-XDGAQueryExtension
-XF86DGADirectVideo
-xcb_create_window
-xcb_create_window_checked
-read
-Overlay pid %d dpy %p: An X Error occurred\n
-XGetErrorText
-XGetErrorDatabaseText
-X Error
-XError
-XlibMessage
-Request Major code %d
-MajorCode
+XQueryExtension
+XQueryPointer
+XQueryTree
 XRequest
-Value 0x%x
-Value
-AtomID 0x%x
-AtomID
-ResourceID 0x%x
-ResourceID
-Error Serial #%d
-ErrorSerial
-Installed overlay error handler for process %d\n
-Opening display '%s', process %d returned %p\n
-xcb_change_property
-STEAM_GAME
-XChangeProperty
-XGrabKeyboard %p grab_window %x time %u\n
-XGrabPointer %p grab_window %x confine_to %x time %u\n
+XRootWindow
+XSelectInput
+XSendEvent
+XSetErrorHandler
+XSetInputFocus
+XSupportsLocale
+XSync
+XTranslateCoordinates
+XUndefineCursor
+XUngrabKeyboard
 XUngrabKeyboard %p time %u\n
+XUngrabPointer
 XUngrabPointer %p time %u\n
-SDL_GAMECONTROLLER_IGNORE_DEVICES
-linux64/steamclient.so
-linux32/steamclient.so
-ubuntu12_32/steamclient.so
-ubuntu12_64/steamclient.so
-dlopen
-Applying steamclient.so path workaround.\n
-GLIBC_2.0
-dlsym
-close
-SteamOverlayRunning_%llu
-GameOverlayRender_PIDStream
-One-time initialization: pid %d for game %llu\n
-CBaseOverlayRenderer
-ValveTakeScreenshot not implemented for this surface\n
-false
-true
-Taking screenshot via %s, %u milliseconds since last one was triggered. (skipdebounce=%s)\n
-Detected Movie hot-key via %s\n
-Detected marker hot-key via %s\n
-  handle %llu: m_iTextureID %d m_fdPaintBuffer %d\n
-/tmp/steam_chrome_overlay_uid%d_spid%u
-Deleting movie stream\n
-GameOverlay_MovieStream_%u
-Created movie stream %s\n
-Couldn't create movie stream %s\n
-STEAM_OVERLAY_DISABLE_WAIT_FOR_CEF_FRAME
-VR_Compositor_OverlayVSync_%u
-video frame ready, buffer ready
-video frame captured
-video capture behind
-Waiting on shared FD for texture %d: received an outdated FD for texture %d instead, skipping.\n
-Waiting on shared FD for texture %d: peer is too far ahead and sending FD for texture %d.\n
-Mismatched chrome paint texture width/height!\n
-vector::_M_realloc_insert
-in saved stream
-in external stream
-render stream
-Corrupt render stream (getting cmd)... %s\n
-Corrupt render stream: k_ESendTextToGame\n
-Corrupt render stream: k_ESendTextToGame string\n
-Corrupt render stream: k_EDrawTexturedRect\n
-Corrupt render stream: k_EDrawChromePaintBufferRect\n
-Corrupt render stream: k_EDeleteChromePaintBuffer\n
-Corrupt render stream: k_EDrawAndUpdateSharedTexture\n
-GameOverlayRender_SharedTex_%d_%d
-GameOverlayRender_SharedTexRead_%d_%d
-GameOverlayRender_SharedTexWrite_%d_%d
-Corrupt shared texture stream (header)\n
-Corrupt shared texture stream (texture data)\n
-Got hTexture of non NULL on shared texture draw but new shared tex update has no shared texture.\n
-Corrupt render stream: k_EDeleteTexture\n
-Corrupt render stream: k_ELoadTexture\n
-Warning: Texture %d is 0 bytes... bad VGUI!\n
-Corrupt render stream: k_ELoadTexture 3\n
-Texture size(%d) was != width(%u)*height(%u)*4, not loading\n
-Corrupt render stream: k_ESetCursor\n
-Corrupt render stream: k_ECreateCustomCursor\n
-Corrupt render stream: k_ECreateCustomCursor (custom2)\n
-Corrupt render stream: k_ECreateCustomCursor (custom3)\n
-Corrupt render stream: k_EDeleteCursor\n
-Corrupt render stream: k_EShowCursor\n
-Corrupt render stream: k_ESetHotKey\n
-Enabling clearing on every frame\n
-Corrupt render stream: k_EIMECommand\n
-Unsupported render command (%d) in vgui render stream\n
-Left render loop without EndFrame!\n
-Got EndFrame, but still have [%d] bytes remaining in render loop buffer\n
-Frame time: %f ms\n
-SteamGamepadUI
-SteamDisableOverlayDPIScaling
-Stopped movie recording\n
-video sleep done
-video frame behind
-Starting movie recording at %dx%d\n
-Detected Plat_MSTime() wrapping\n
-Clearing input stream because it is about to overflow\n
-Disabling overlay for 20 minutes (%d seconds since last frame from ui process was seen)\n
-Disabling overlay for 30 seconds (%d seconds since last frame from ui process was seen)\n
-Disabling overlay for 10 seconds (%d seconds since last frame from ui process was seen)\n
-Disabling overlay for 2 seconds (%d seconds since last frame from ui process was seen)\n
-Failed reading frame completely\n
-Forcing internal overlay disable and requesting ui disable\n
-video sleep until end of frame
-20CBaseOverlayRenderer
-@15CVulkanRenderer
-/sys/kernel/debug/tracing/trace_marker
-/sys/kernel/tracing/trace_marker
-%s begin_ctx=%lld
-%s end_ctx=%lld
-OverlayFrameMark
-(knN
-N10__cxxabiv117__class_type_infoE
+XUninstallColormap
+XUnmapWindow
+XWarpPointer
+XWindowEvent
+XkbKeycodeToKeysym
+XlibMessage
+XwcLookupString
+[abi:
+_Accum
+_Fract
+_GLOBAL_
+_ITM_deregisterTMCloneTable
+_ITM_registerTMCloneTable
+_Sat 
+___tls_get_addr
+___tls_get_addr@GLIBC_2.3
+__cxa_atexit
+__cxa_atexit@GLIBC_2.1.3
+__cxa_finalize
+__cxa_finalize@GLIBC_2.1.3
+__errno_location
+__errno_location@GLIBC_2.0
+__float128
+__fprintf_chk
+__fprintf_chk@GLIBC_2.3.4
+__fxstat
+__fxstat@GLIBC_2.0
+__gmon_start__
 __gnu_cxx::__concurrence_lock_error
 __gnu_cxx::__concurrence_unlock_error
-N9__gnu_cxx24__concurrence_lock_errorE
-N9__gnu_cxx26__concurrence_unlock_errorE
-std::bad_exception
-St9exception
-St13bad_exception
-N10__cxxabiv115__forced_unwindE
-N10__cxxabiv119__foreign_exceptionE
-pure virtual method called\n
-N10__cxxabiv120__si_class_type_infoE
-St9type_info
-terminate called recursively\n
-  what():  
-terminate called after throwing an instance of '
-terminate called without an active exception\n
-basic_string::_S_create
-basic_string::_S_construct null not valid
-std::bad_alloc
-St9bad_alloc
-std::bad_array_new_length
-St20bad_array_new_length
-_GLOBAL_
-(anonymous namespace)
-string literal
-auto
-decltype(auto)
-[abi:
-{default arg#
-JArray
-auto:
-VTT for 
-construction vtable for 
-typeinfo for 
-typeinfo name for 
-typeinfo fn for 
-non-virtual thunk to 
-covariant return thunk to 
-java Class for 
-guard variable for 
-TLS init function for 
-TLS wrapper function for 
-reference temporary #
-hidden alias for 
-non-transaction clone for 
-_Sat 
-_Fract
-_Accum
-operator
-operator 
-new 
-java resource 
-decltype (
-{parm#
-this
-global constructors keyed to 
-global destructors keyed to 
-{lambda(
-{unnamed type#
- [clone 
- restrict
- volatile
- const
- transaction_safe
- noexcept
- throw
-complex 
-imaginary 
- __vector(
-std::allocator
-std::basic_string
-std::string
-std::istream
-basic_istream
-std::ostream
-basic_ostream
-std::iostream
-basic_iostream
+__memcpy_chk
+__memcpy_chk@GLIBC_2.3.4
+__pthread_key_create
+__pthread_key_create@GLIBC_2.0
+__snprintf_chk
+__snprintf_chk@GLIBC_2.3.4
+__sprintf_chk
+__sprintf_chk@GLIBC_2.3.4
+__stack_chk_fail
+__stack_chk_fail@GLIBC_2.4
+__stpcpy_chk
+__stpcpy_chk@GLIBC_2.3.4
+__strcat_chk
+__strcat_chk@GLIBC_2.3.4
+__vfprintf_chk
+__vfprintf_chk@GLIBC_2.3.4
+__vsnprintf_chk
+__vsnprintf_chk@GLIBC_2.3.4
+abort
+abort@GLIBC_2.0
 alignof 
-const_cast
-delete[] 
-dynamic_cast
-delete 
-operator"" 
-new[]
-reinterpret_cast
-sizeof...
-static_cast
-sizeof 
-throw 
+auto
+auto:
+bFlipRendering
+base input
+basic_iostream
+basic_istream
+basic_ostream
+basic_string::_S_construct null not valid
+basic_string::_S_create
 bool
 boolean
 byte
-long double
-float
-__float128
-unsigned char
-unsigned int
-unsigned
-unsigned long
-unsigned __int128
-unsigned short
-void
-wchar_t
-unsigned long long
-decimal32
-decimal64
-decimal128
-half
-char8_t
+calloc
+calloc@GLIBC_2.0
+ceilf
+ceilf@GLIBC_2.0
 char16_t
 char32_t
+char8_t
+clientWindow
+clock_gettime
+clock_gettime@GLIBC_2.2
+close
+compatibility
+complex 
+connect
+connect@GLIBC_2.0
+const_cast
+construction vtable for 
+core
+covariant return thunk to 
+decimal128
+decimal32
+decimal64
+decltype (
+decltype(auto)
 decltype(nullptr)
-template parameter object for 
-std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+delete 
+delete[] 
+disable
+dl_iterate_phdr
+dl_iterate_phdr@GLIBC_2.2.4
+dlopen
+dlsym
+dlvsym
+dlvsym@GLIBC_2.1
+dup@GLIBC_2.0
+dynamic_cast
+en_US.UTF-8
+enable
+false
+fclose
+fclose@GLIBC_2.1
+fcntl
+fcntl@GLIBC_2.0
+fflush
+fflush@GLIBC_2.0
+fixed function
+float
+flock
+flock@GLIBC_2.0
+focusWindow
+fopen
+fopen@GLIBC_2.1
+fputc
+fputc@GLIBC_2.0
+fputs
+fputs@GLIBC_2.0
+free
+free@GLIBC_2.0
+ftruncate
+ftruncate@GLIBC_2.0
+futex robust_list not initialized by pthreads
+futex robust_list not pthreads-compatible
+fwrite
+fwrite@GLIBC_2.0
+getenv
+getenv@GLIBC_2.0
+getpid
+getpid@GLIBC_2.0
+getrlimit
+getrlimit@GLIBC_2.2
+gettext
+gettext@GLIBC_2.0
+getuid
+getuid@GLIBC_2.0
+glActiveTexture
+glActiveTextureARB
+glAttachShader
+glBegin
+glBindBuffer
+glBindBufferARB
+glBindFramebuffer
+glBindFramebufferEXT
+glBindProgramPipeline
+glBindSampler
+glBindTexture
+glBindVertexArray
+glBlendEquationSeparate
+glBlendFunc
+glBlendFuncSeparate
+glBlitFramebuffer
+glBlitFramebufferEXT
+glBufferData
+glBufferDataARB
+glBufferSubData
+glCheckFramebufferStatus
+glCheckFramebufferStatusEXT
+glClear
+glClientActiveTexture
+glClientActiveTextureARB
+glClipControl
+glColor4ub
+glColorMask
+glCompileShader
+glCreateProgram
+glCreateShader
+glDebugMessageCallbackARB
+glDeleteBuffers
+glDeleteBuffersARB
+glDeleteFramebuffers
+glDeleteFramebuffersEXT
+glDeleteProgram
+glDeleteShader
+glDeleteTextures
+glDeleteVertexArrays
+glDepthMask
+glDepthRange
+glDisable
+glDisableClientState
+glDisableVertexAttribArray
+glDrawArrays
+glDrawBuffers
+glDrawElements
+glEnable
+glEnableVertexAttribArray
+glEnd
+glFramebufferTexture2D
+glFramebufferTexture2DEXT
+glGenBuffers
+glGenBuffersARB
+glGenFramebuffers
+glGenFramebuffersEXT
+glGenTextures
+glGenVertexArrays
+glGetAttribLocation
+glGetBooleanv
+glGetDoublev
+glGetError
+glGetFloatv
+glGetIntegerv
+glGetProgramInfoLog
+glGetProgramiv
+glGetShaderInfoLog
+glGetShaderiv
+glGetString
+glGetStringi
+glGetUniformLocation
+glGetUniformiv
+glIsEnabled
+glIsProgram
+glIsTexture
+glLinkProgram
+glLoadIdentity
+glLoadMatrixf
+glMapBufferARB
+glMatrixMode
+glOrtho
+glPixelStorei
+glPixelZoom
+glPolygonMode
+glPopAttrib
+glPopClientAttrib
+glPushAttrib
+glPushClientAttrib
+glReadPixels
+glRenderMode
+glScalef
+glShadeModel
+glShaderSource
+glTexCoord2d
+glTexCoord2i
+glTexEnvf
+glTexImage2D
+glTexParameterf
+glTranslatef
+glUniform1i
+glUniform4fv
+glUniformMatrix4fv
+glUnmapBufferARB
+glUseProgram
+glVertex2f
+glVertex3f
+glVertexAttrib4f
+glVertexAttrib4fv
+glVertexAttribPointer
+glViewport
+glXChooseVisual
+glXCreateContext
+glXCreatePbuffer
+glXCreatePixmap
+glXCreateWindow
+glXDestroyPbuffer
+glXDestroyPixmap
+glXDestroyWindow
+glXGetCurrentContext
+glXGetProcAddress
+glXGetProcAddressARB
+glXMakeCurrent
+glXSwapBuffers
+global constructors keyed to 
+global destructors keyed to 
+gmtime_r
+gmtime_r@GLIBC_2.0
+guard variable for 
+half
+hidden alias for 
+imaginary 
+in external stream
+in saved stream
+inputStyle
+ioctl
+ioctl@GLIBC_2.0
+java Class for 
+java resource 
+kill
+kill@GLIBC_2.0
+ld-linux.so.2
+libGL.so.1
+libc.so.6
+libdl.so.2
+libm.so.6
+libpthread.so.0
+librt.so.1
+linux32/steamclient.so
+linux64/steamclient.so
+logfile opened early, s_Pid == 0 (Init has not been called yet)\n
+long double
+m_pMutex->Wait() failed in ShMemStream::PutInternal\n
+malloc
+malloc@GLIBC_2.0
+memcmp
+memcmp@GLIBC_2.0
+memcpy
+memcpy@GLIBC_2.0
+memmove
+memmove@GLIBC_2.0
+memset
+memset@GLIBC_2.0
+mmap
+mmap@GLIBC_2.0
+munmap
+munmap@GLIBC_2.0
+nanosleep
+nanosleep@GLIBC_2.0
+new 
+new[]
+non-transaction clone for 
+non-virtual thunk to 
+operator
+operator 
+operator"" 
+pid %d != %d, skipping destruction (fork without exec?)\n
+pthread_key_delete
+pthread_key_delete@GLIBC_2.0
+pthread_mutex_destroy
+pthread_mutex_destroy@GLIBC_2.0
+pthread_mutex_init
+pthread_mutex_init@GLIBC_2.0
+pthread_mutex_lock
+pthread_mutex_lock@GLIBC_2.0
+pthread_mutex_unlock
+pthread_mutex_unlock@GLIBC_2.0
+pthread_mutexattr_init
+pthread_mutexattr_init@GLIBC_2.0
+pthread_mutexattr_settype
+pthread_mutexattr_settype@GLIBC_2.1
+pthread_once
+pthread_once@GLIBC_2.0
+pthread_self
+pthread_self@GLIBC_2.0
+pure virtual method called\n
+read
+readlink
+readlink@GLIBC_2.0
+readv
+readv@GLIBC_2.0
+realloc
+realloc@GLIBC_2.0
+recvmsg
+recvmsg@GLIBC_2.0
+reference temporary #
+reinterpret_cast
+render stream
+resourceClass
+resourceName
+sendmsg
+sendmsg@GLIBC_2.0
+setlocale
+setlocale@GLIBC_2.0
+setrlimit
+setrlimit@GLIBC_2.2
+shaders
+shm_open
+shm_open@GLIBC_2.2
+shm_unlink
+shm_unlink@GLIBC_2.2
+sizeof 
+sizeof...
+socket
+socket@GLIBC_2.0
+sqrtf
+sqrtf@GLIBC_2.0
+srcHeight
+srcWidth
+sscanf
+sscanf@GLIBC_2.0
+static_cast
+std::allocator
+std::bad_alloc
+std::bad_array_new_length
+std::bad_exception
+std::basic_iostream<char, std::char_traits<char> >
 std::basic_istream<char, std::char_traits<char> >
 std::basic_ostream<char, std::char_traits<char> >
-std::basic_iostream<char, std::char_traits<char> >
-St11logic_error
-St12length_error
-glPopClientAttrib
-pthread_mutex_unlock@GLIBC_2.0
-__strcat_chk@GLIBC_2.3.4
-__snprintf_chk@GLIBC_2.3.4
-strstr@GLIBC_2.0
-dlopen
-pthread_mutexattr_init@GLIBC_2.0
-strcmp@GLIBC_2.0
-glBlendFunc
-__vfprintf_chk@GLIBC_2.3.4
-glDrawArrays
-pthread_mutex_destroy@GLIBC_2.0
-_ITM_deregisterTMCloneTable
-fflush@GLIBC_2.0
-close
-dup@GLIBC_2.0
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::iostream
+std::istream
+std::ostream
+std::string
+stderr
 stderr@GLIBC_2.0
-dlvsym@GLIBC_2.1
-memmove@GLIBC_2.0
-free@GLIBC_2.0
-glClear
-XDGAQueryExtension
-xcb_create_window
-ValveIsScreenshotsHooked
-memcpy@GLIBC_2.0
-shm_open@GLIBC_2.2
-pthread_self@GLIBC_2.0
-XEventsQueued
-IsOverlayEnabled
-XPending
-___tls_get_addr@GLIBC_2.3
-pthread_mutex_init@GLIBC_2.0
-fclose@GLIBC_2.1
-glTexCoord2i
-memcmp@GLIBC_2.0
-XCheckWindowEvent
-glMatrixMode
-__stack_chk_fail@GLIBC_2.4
-glXGetProcAddress
-SetNotificationPosition
-getuid@GLIBC_2.0
-ValveHookScreenshots
-glXDestroyWindow
-ceilf@GLIBC_2.0
-glTexImage2D
-glVertex3f
-getrlimit@GLIBC_2.2
-glEnable
-pthread_mutex_lock@GLIBC_2.0
-unlink@GLIBC_2.0
-XQLength
-XPeekEvent
-readlink@GLIBC_2.0
-sqrtf@GLIBC_2.0
-glGetBooleanv
-glXCreateWindow
-glPixelZoom
-ioctl@GLIBC_2.0
-XChangeWindowAttributes
-XGrabPointer
-glOrtho
-__cxa_finalize@GLIBC_2.1.3
-fwrite@GLIBC_2.0
-glIsTexture
-glEnd
-glPixelStorei
-glDisableClientState
-VulkanSteamOverlayGetScaleFactors
-glPushClientAttrib
-XWarpPointer
-getpid@GLIBC_2.0
-glTexEnvf
-__cxa_atexit@GLIBC_2.1.3
-BOverlayNeedsPresent
-pthread_key_delete@GLIBC_2.0
-glXMakeCurrent
-getenv@GLIBC_2.0
-setrlimit@GLIBC_2.2
-realloc@GLIBC_2.0
-malloc@GLIBC_2.0
-glLoadMatrixf
-__fxstat@GLIBC_2.0
-XOpenDisplay
-__memcpy_chk@GLIBC_2.3.4
-__gmon_start__
-pthread_once@GLIBC_2.0
-kill@GLIBC_2.0
-glLoadIdentity
-XF86DGADirectVideo
-gettext@GLIBC_2.0
-glScalef
-flock@GLIBC_2.0
-glGetError
-read
+strcmp
+strcmp@GLIBC_2.0
+strftime
 strftime@GLIBC_2.0
-XUngrabPointer
-dl_iterate_phdr@GLIBC_2.2.4
-mmap@GLIBC_2.0
-glRenderMode
-XPeekIfEvent
-glXDestroyPbuffer
+string literal
+strlen
 strlen@GLIBC_2.0
-__stpcpy_chk@GLIBC_2.3.4
-glIsEnabled
-XSetErrorHandler
-glXDestroyPixmap
-glReadPixels
-XNextEvent
-fcntl@GLIBC_2.0
-glGetString
-fopen@GLIBC_2.1
-memset@GLIBC_2.0
-glColor4ub
-glXCreateContext
-XIfEvent
-ftruncate@GLIBC_2.0
-__errno_location@GLIBC_2.0
-glDepthMask
-strncpy@GLIBC_2.0
-syscall@GLIBC_2.0
-strtoull@GLIBC_2.0
-XSelectInput
-XF86DGAQueryExtension
-glVertex2f
-XPutBackEvent
-XUndefineCursor
-__vsnprintf_chk@GLIBC_2.3.4
-glTexCoord2d
-XDefineCursor
-XUnmapWindow
-dlsym
-XCreateSimpleWindow
-shm_unlink@GLIBC_2.2
-glTexParameterf
-munmap@GLIBC_2.0
-glXCreatePbuffer
-glColorMask
-sendmsg@GLIBC_2.0
-readv@GLIBC_2.0
-setlocale@GLIBC_2.0
-strrchr@GLIBC_2.0
-glGenTextures
-glGetDoublev
-glXChooseVisual
-fputc@GLIBC_2.0
-sscanf@GLIBC_2.0
-glPopAttrib
-glPushAttrib
-glXCreatePixmap
-XCheckTypedEvent
-gmtime_r@GLIBC_2.0
-VulkanSteamOverlayProcessCapturedFrame
-XCheckMaskEvent
-XFreeCursor
-XMapWindow
-glDeleteTextures
-recvmsg@GLIBC_2.0
-XWindowEvent
-SetNotificationInset
-glGetFloatv
-glBindTexture
-glTranslatef
-glShadeModel
-glPolygonMode
-nanosleep@GLIBC_2.0
-socket@GLIBC_2.0
-xcb_create_window_checked
-VulkanSteamOverlayPresent
-__fprintf_chk@GLIBC_2.3.4
-glDisable
-XCheckTypedWindowEvent
-clock_gettime@GLIBC_2.2
-_ITM_registerTMCloneTable
-glXGetCurrentContext
-XUngrabKeyboard
+strncmp
 strncmp@GLIBC_2.0
-glDepthRange
-XInstallColormap
-abort@GLIBC_2.0
-XCloseDisplay
-glGetIntegerv
-glXGetProcAddressARB
+strncpy
+strncpy@GLIBC_2.0
+strrchr
+strrchr@GLIBC_2.0
+strstr
+strstr@GLIBC_2.0
+strtol
 strtol@GLIBC_2.0
-fputs@GLIBC_2.0
-glBegin
-connect@GLIBC_2.0
-glViewport
-XMaskEvent
-__pthread_key_create@GLIBC_2.0
-pthread_mutexattr_settype@GLIBC_2.1
-glXSwapBuffers
-calloc@GLIBC_2.0
-glDrawElements
-__sprintf_chk@GLIBC_2.3.4
-XCheckIfEvent
-XGrabKeyboard
-GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
-GCC: (SteamRT 4.8.4-1ubuntu15~12.04+steamrt1.2+srt2) 4.8.4
-GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
+strtoull
+strtoull@GLIBC_2.0
+syscall
+syscall@GLIBC_2.0
+template parameter object for 
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
+this
+throw 
+true
+typeinfo fn for 
+typeinfo for 
+typeinfo name for 
+ubuntu12_32/steamclient.so
+ubuntu12_64/steamclient.so
+uniform bool bFlipRendering;\nvoid main()\n{\n\tgl_TexCoord[0] = gl_MultiTexCoord0;\n   gl_Position = gl_Vertex;\n   if ( bFlipRendering )\n       gl_Position.y = -gl_Position.y;\n}
+unknown
+unlink@GLIBC_2.0
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
+valid
+vector::_M_realloc_insert
+video capture behind
+video frame behind
+video frame captured
+video frame ready, buffer ready
+video sleep done
+video sleep until end of frame
+void
+vrmonitor
+wchar_t
+xcb_change_property
+xcb_create_window
+xcb_create_window_checked
+{default arg#
+{lambda(
+{parm#
+{unnamed type#

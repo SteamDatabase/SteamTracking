@@ -1,1485 +1,1242 @@
-__gmon_start__
-_fini
-_ITM_deregisterTMCloneTable
-_ITM_registerTMCloneTable
-__cxa_finalize
-getenv
-strtol
-localtime
-stderr
-__fprintf_chk
-__vfprintf_chk
-pthread_mutex_lock
-pthread_mutex_unlock
-getpid
-strlen
-__wrap___xstat64
-__wrap_mkdir
-setenv
-__snprintf_chk
-__realpath_chk
-free
-geteuid
-__strcpy_chk
-getegid
-realloc
-malloc
-fflush
-__wrap_open
-gmtime
-asctime
-strchr
-gettimeofday
-memcmp
-vfork
-waitpid
-execv
-_exit
-__errno_location
-syscall
-__cxa_atexit
-vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__si_class_type_info
-__pthread_key_create
-CreateInterface
-Breakpad_SetSteamID
-__wrap_dlopen
-dlsym
-fwrite
-dlclose
-dlerror
-__dprintf_chk
-rewind
-strncasecmp
-fgets
-__wrap_fopen
-strcasecmp
-__vsnprintf_chk
-stdout
-fputc
-backtrace_symbols
-malloc_usable_size
-posix_memalign
-strncpy
-__printf_chk
-pthread_mutex_trylock
-strrchr
-__ctype_tolower_loc
-sscanf
-dladdr
-clock_gettime
-readlink
-uname
-fputs
-backtrace
-pthread_mutex_destroy
-pthread_key_delete
-nanosleep
-pthread_getspecific
-sched_yield
-pthread_mutexattr_init
-pthread_mutexattr_settype
-pthread_mutex_init
-sigemptyset
-sigaddset
-__wrap_opendir
-closedir
-strncat
-strerror
-__wrap_chdir
-sigaction
-__memcpy_chk
-pthread_setspecific
-typeinfo for int
-strcmp
-wcslen
-vsnprintf
-strncmp
-getcwd
-strpbrk
-___tls_get_addr
-fnmatch
-__wrap_open64
-flock
-__wrap_unlink
-posix_fadvise
-__wrap___xstat
-__wrap_fopen64
-fread
-__wrap_chmod
-__wrap_utime
-__wrap_rename
-__wrap___lxstat64
-__wrap_link
-__wrap_rmdir
-__wrap_statvfs64
-readdir64
-__wrap_statfs
-fcntl
-alphasort64
-__wrap_scandir64
-__wrap_symlink
-realpath
-strdup
-faccessat
-tolower
-strcasestr
-SteamRealPath
-__wrap_freopen
-__wrap_access
-__wrap_stat
-__wrap_lstat
-__wrap_stat64
-__wrap_lstat64
-__wrap_scandir
-__wrap___lxstat
-__wrap_statvfs
-__wrap_statfs64
-__wrap_chown
-__wrap_lchown
-__wrap_mknod
-__wrap_mount
-__wrap_mkfifo
-__wrap_utimes
-__wrap_dlmopen
-__vasprintf_chk
-ftello64
-signal
-getpagesize
-getcontext
-lseek
-ftruncate
-__assert_fail
-calloc
-sysconf
-typeinfo name for __cxxabiv1::__class_type_info
-typeinfo for __cxxabiv1::__class_type_info
-vtable for __gnu_cxx::__concurrence_lock_error
-vtable for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo for __cxxabiv1::__forced_unwind
-typeinfo name for __cxxabiv1::__foreign_exception
-typeinfo for __cxxabiv1::__foreign_exception
-vtable for __cxxabiv1::__forced_unwind
-vtable for __cxxabiv1::__foreign_exception
-abort
-vtable for __cxxabiv1::__fundamental_type_info
-typeinfo name for __cxxabiv1::__fundamental_type_info
-typeinfo for __cxxabiv1::__fundamental_type_info
-typeinfo name for void
-typeinfo name for void*
-typeinfo name for void const*
-typeinfo name for bool
-typeinfo name for bool*
-typeinfo name for bool const*
-typeinfo name for wchar_t
-typeinfo name for wchar_t*
-typeinfo name for wchar_t const*
-typeinfo name for char8_t
-typeinfo name for char8_t*
-typeinfo name for char8_t const*
-typeinfo name for char16_t
-typeinfo name for char16_t*
-typeinfo name for char16_t const*
-typeinfo name for char32_t
-typeinfo name for char32_t*
-typeinfo name for char32_t const*
-typeinfo name for char
-typeinfo name for char*
-typeinfo name for char const*
-typeinfo name for signed char
-typeinfo name for signed char*
-typeinfo name for signed char const*
-typeinfo name for unsigned char
-typeinfo name for unsigned char*
-typeinfo name for unsigned char const*
-typeinfo name for short
-typeinfo name for short*
-typeinfo name for short const*
-typeinfo name for unsigned short
-typeinfo name for unsigned short*
-typeinfo name for unsigned short const*
-typeinfo name for int
-typeinfo name for int*
-typeinfo name for int const*
-typeinfo name for unsigned int
-typeinfo name for unsigned int*
-typeinfo name for unsigned int const*
-typeinfo name for long
-typeinfo name for long*
-typeinfo name for long const*
-typeinfo name for unsigned long
-typeinfo name for unsigned long*
-typeinfo name for unsigned long const*
-typeinfo name for long long
-typeinfo name for long long*
-typeinfo name for long long const*
-typeinfo name for unsigned long long
-typeinfo name for unsigned long long*
-typeinfo name for unsigned long long const*
-typeinfo name for float
-typeinfo name for float*
-typeinfo name for float const*
-typeinfo name for double
-typeinfo name for double*
-typeinfo name for double const*
-typeinfo name for long double
-typeinfo name for long double*
-typeinfo name for long double const*
-typeinfo name for decimal32
-typeinfo name for decimal32*
-typeinfo name for decimal32 const*
-typeinfo name for decimal64
-typeinfo name for decimal64*
-typeinfo name for decimal64 const*
-typeinfo name for decimal128
-typeinfo name for decimal128*
-typeinfo name for decimal128 const*
-typeinfo name for std::nullptr_t
-typeinfo name for std::nullptr_t*
-typeinfo name for std::nullptr_t const*
-typeinfo name for __float128
-typeinfo name for __float128*
-typeinfo name for __float128 const*
-typeinfo for __float128 const*
-vtable for __cxxabiv1::__pointer_type_info
-typeinfo for __float128
-typeinfo for __float128*
-typeinfo for std::nullptr_t const*
-typeinfo for std::nullptr_t
-typeinfo for std::nullptr_t*
-typeinfo for decimal128 const*
-typeinfo for decimal128
-typeinfo for decimal128*
-typeinfo for decimal64 const*
-typeinfo for decimal64
-typeinfo for decimal64*
-typeinfo for decimal32 const*
-typeinfo for decimal32
-typeinfo for decimal32*
-typeinfo for long double const*
-typeinfo for long double
-typeinfo for long double*
-typeinfo for double const*
-typeinfo for double
-typeinfo for double*
-typeinfo for float const*
-typeinfo for float
-typeinfo for float*
-typeinfo for unsigned long long const*
-typeinfo for unsigned long long
-typeinfo for unsigned long long*
-typeinfo for long long const*
-typeinfo for long long
-typeinfo for long long*
-typeinfo for unsigned long const*
-typeinfo for unsigned long
-typeinfo for unsigned long*
-typeinfo for long const*
-typeinfo for long
-typeinfo for long*
-typeinfo for unsigned int const*
-typeinfo for unsigned int
-typeinfo for unsigned int*
-typeinfo for int const*
-typeinfo for int*
-typeinfo for unsigned short const*
-typeinfo for unsigned short
-typeinfo for unsigned short*
-typeinfo for short const*
-typeinfo for short
-typeinfo for short*
-typeinfo for unsigned char const*
-typeinfo for unsigned char
-typeinfo for unsigned char*
-typeinfo for signed char const*
-typeinfo for signed char
-typeinfo for signed char*
-typeinfo for char const*
-typeinfo for char
-typeinfo for char*
-typeinfo for char32_t const*
-typeinfo for char32_t
-typeinfo for char32_t*
-typeinfo for char16_t const*
-typeinfo for char16_t
-typeinfo for char16_t*
-typeinfo for char8_t const*
-typeinfo for char8_t
-typeinfo for char8_t*
-typeinfo for wchar_t const*
-typeinfo for wchar_t
-typeinfo for wchar_t*
-typeinfo for bool const*
-typeinfo for bool
-typeinfo for bool*
-typeinfo for void const*
-typeinfo for void
-typeinfo for void*
-typeinfo for __gnu_cxx::recursive_init_error
-vtable for __gnu_cxx::recursive_init_error
-typeinfo name for __gnu_cxx::recursive_init_error
-typeinfo name for __cxxabiv1::__pointer_type_info
-typeinfo for __cxxabiv1::__pointer_type_info
-typeinfo for __cxxabiv1::__pbase_type_info
-typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo for __cxxabiv1::__si_class_type_info
-stdin
-pthread_once
-__nl_langinfo_l
-__uselocale
-mbsrtowcs
-wcscmp
-iconv_open
-iconv
-iconv_close
-vtable for __cxxabiv1::__vmi_class_type_info
-__wctype_l
-__towupper_l
-__towlower_l
-__iswctype_l
-wctob
-btowc
-ungetc
-fseeko64
-ungetwc
-putwc
-wmemcpy
-wmemset
-wmemchr
-wmemmove
-__sprintf_chk
-vtable for __cxxabiv1::__pbase_type_info
-typeinfo for __cxxabiv1::__pointer_to_member_type_info
-typeinfo name for __cxxabiv1::__pbase_type_info
-vtable for __cxxabiv1::__pointer_to_member_type_info
-typeinfo name for __cxxabiv1::__pointer_to_member_type_info
-typeinfo name for __cxxabiv1::__vmi_class_type_info
-typeinfo for __cxxabiv1::__vmi_class_type_info
-__strtof_l
-__strtod_l
-strtold_l
-__newlocale
-__freelocale
-__duplocale
-wcsnrtombs
-wcrtomb
-mbsnrtowcs
-mbrtowc
-__ctype_get_mb_cur_max
-__strcoll_l
-__strxfrm_l
-__wcscoll_l
-__wcsxfrm_l
-bind_textdomain_codeset
-dgettext
-__strftime_l
-__wcsftime_l
-_txnal_cow_string_D1_commit(void*)
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-_ITM_RU1
-transaction clone for operator new[](unsigned int)
-_ITM_memcpyRtWn
-_txnal_cow_string_c_str(void const*)
-_ITM_RU4
-_txnal_cow_string_D1(void*)
-_ITM_addUserCommitAction
-_txnal_logic_error_get_msg(void*)
-_txnal_runtime_error_get_msg(void*)
-dl_iterate_phdr
-__xmknod
-__stack_chk_fail
-libdl.so.2
-librt.so.1
-ld-linux.so.2
-libm.so.6
-libpthread.so.0
-libc.so.6
-GLIBC_2.2
-GLIBC_2.1
-GLIBC_2.3.4
-GLIBC_2.0
-GLIBC_2.3
-GLIBC_2.2.4
-GLIBC_2.2.3
-GLIBC_2.4
-GLIBC_2.8
-GLIBC_2.1.3
-breakpad_verbose
-%02i/%02i %02i:%02i:%02i 
-SetComment
-%s Setting comment to %s.\n
-WriteMiniDump
-%s: Skipping, no context!\n
-%s: Writing.\n
-WriteMinidump
-%s Skipping as no handler.\n
-%s Writing.\n
-Breakpad_FilterCallback
-%s Ignoring t_id != getpid()\n
-%s Calling pre minidump callback\n
-%s No pre-minidump callback registered\n
-Init
-%s: Starting.\n
-%s: Already initialized.\n
-/tmp/dumps
-%s%02d
-/proc/self/cmdline
-/bin/steamerrorreporter
-BREAKPAD_DUMP_LOCATION
-HOME
-sdk32
-%s/.steam/%s
-%s: is not a directory - delete and recreate.\n
-%s: could not delete, skipping.\n
-%s: is not owned by us - delete and recreate.\n
-%s: insufficient permissions - delete and recreate\n
-%s: failed to create, skipping\n
-\nFATAL: Steam cannot run. Please delete some %s* directories or change their ownership to the local user.\n
-/data/src/crashhandler/breakpad_linux.cpp
-minidumps folder is set to %s\n
-Could not read /proc/self/cmdline when trying to find steamerrorreporter
-Could not find steamerrorreporter binary. Any minidumps will be uploaded in-process
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-/data/src/public/tier1/utlvector.h
-/data/src/public/tier1/utlmemory.h
-SendCrashReport
-%s: Sending crash report.\n
-upload_file_minidump
-success = %s\n
-basic_string::erase
-response:  %s\n
-error:  %s\n
-USER
-%s/%s_log.txt
-file ''
-'', upload 
-Unable to write failure log\n
-https://crash.steampowered.com/submit
-Uploading dump (in-process) [url '%s', proxy '%s']\n%s\n
-%s: __pos (which is %zu) > this->size() (which is %zu)
-%s Adding custom info: %s=%s.\n
-SetAppID
-%s Skipping as app ID = 0.\n
-%s Setting app ID to %u.\n
-ProductName
-uptime
-StartupTime
-CrashTime
-Failed writing minidump, nothing to upload.\n
-%s: Attempting to use error reporter path: %s\n
-ERROR: execv failed when trying to send minidump\n
-ERROR: waitpid() on child forked process failed when uploading minidump: %d\n
-ERROR: Could not run steamerrorreporter binary. Uploading minidump in-process\n
-ERROR TRYING TO vfork() TO SEND MINIDUMP\nRESORTING TO IN-PROCESS MINIDUMP\n
-%s: Attempting to send crash report in process: %s\n
-m_bInitialized
-Breakpad_MinidumpCallback
-SendExistingMinidump
-%s: Sending.\n
-Beta
-Public
-Internal
-SetSteamID
-%s Skipping as Steam ID = 0.\n
-Setting Steam ID: %llu\n
-%lld
-UserID
-SteamUniverse
-Unknown universe %d, assuming public\n
-Setting SteamUniverse: %d = %s\n
-<empty>
-%s Initializing.\n
-Version
-BuildID
-Vendor
-Valve
-www.steampowered.com
-Platform
-Linux
-breakpad_testfile
-%s Done.\n
-%s Returning as already initialized.\n
-%s: Installing breakpad exception handler for appid(%s)/version(%s)/tid(%d)\n
-InitHandler
-HTTP_PROXY
-http_proxy
-ALL_PROXY
-all_proxy
-16IBreakpadFactory
-16CBreakpadFactory
-zDcrashhandler001
-crashhandler002
-crashhandler003
-crashhandler004
-13ICrashHandler
-13CCrashHandler
-curl_easy_init
-libcurl.so
-libcurl.so.4
-libcurl.so.3
-No Error
-curl_easy_init -- failed\n
-curl_easy_setopt()\n
-curl_easy_setopt
-curl_formadd
   %s = '%s'\n
-curl_formadd file %s\n
-curl_slist_append
-curl_easy_perform
-curl_easy_getinfo
-curl_easy_strerror
-curl_easy_cleanup()\n
-curl_easy_cleanup
-curl_formfree
-curl_slist_free_all
-done with curl\n
-libcurl-gnutls.so.4
-adding %d curl form parameters\n
-curl_easy_perform returned:  %d %s\n
-Breakpad/1.0 (Linux)
-/proc/%d/status
-TracerPid:
-IsSpewActive
-Exiting on SPEW_ABORT\n
-console
-Fatal assert
--noassert
-DONT_BREAK_ON_ASSERT
-_ExitOnFatalAssert\n
-Fatal assert; application exiting
-Fatal Assertion Failed: 
-Failed to capture callstack
-Stack:%2d    %s (%d): %s\n
-Stack%2d: %s\n
-Stack%2d: 0x%llX\n
-Assertion Failed: stack%2d: %s (%d): %s
-/data/src/tier0/memblockhdr.cpp
-Assertion Failed: stack%2d: %s
-Assertion Failed: stack%2d: 0x%llX
-ppFrames[iFrame] != NULL
-false
-/data/src/tier0/memstd.cpp
-No tracked allocs currently in use. Total %d\n
-Tracked allocs currently in use. %d Total %d\n
-item %p sentinel corrupted. skipping.\n
-Busy, please retry.\n
-(iub & (m_nSizeWithStack-1)) == 0
-pAllocTracker->m_uSentinel == 0xaa110ced
-((size_t)(m_nLogicalBytesAllocated) % 8) == 0
-***** OUT OF MEMORY! attempted allocation size: %zu ****\n
-OUT OF MEMORY
-pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
-/data/src/public/tier0/memblockhdr.h
-DumpMemTrackingStats %d %d \n
-vector::reserve
-vector::_M_realloc_insert
-\t%d items : %s - %s:%d\n
-9IMemAlloc
-12CStdMemAlloc
-Gunknown
-!g_pCrashMemoryReserve
-/data/src/tier0/minidump.cpp
-CreateInterface
-Assert( %s ):%s:%d\n
-Jul 30 2024
-%02d:%02d:%02d
-22:42:54
-%04d%02d%02d%02d%02d%02d
-Steam
-steamwebhelper
-cefwebhelper
-Steam Helper
-crashhandler.so
-Someone called SetWritingMinidump without holding the minidump lock.
-Someone called ClearWritingMinidump without holding the minidump lock.
-/proc/self/exe
-Illegal termination of worker thread '%s'
-/data/src/tier0/threadtools.cpp
-Deleting thread object from the thread, this is bad
-Thread cannot be joined with self
-tid(%u) pthread_key_create failed: %s\n
-Bad thread local: Get\n
-Failed to set thread local value
-Bad thread local: Set\n
-m_pValObjects != NULL
-/data/src/tier0/validator.cpp
-CValidator : too many memory nodes to store, try again with a higher threshold value\n
-NULL != m_pValObjectCur
- bytes
+  what():  
+ (deleted)
  GiB
  KiB
  MiB
-N(knN
->NULL == pValObjectPrev->m_pValObjectNext
-/data/src/tier0/valobject.cpp
-m_nRecursions > 0
-/data/src/public/tier0/vprof.h
-pszName
-/data/src/tier0/vprof.cpp
-m_pBudgetGroups == NULL
-m_pBudgetGroups
-m_vecNodeMemBlocks.size() == 1 && block.m_iCurIndexToUse == 1
-m_vecNodeMemBlocks.size() == 1
-No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
-Root
-!g_VProfile
--nocrashdialog
--debugbreak
-/data/src/vstdlib/strtools.cpp
-src != NULL
-dest != NULL
-maxLenInBytes >= 0
-pSrc != NULL
-maxLen == 0 || pDest != NULL
-bufferLen > 0 && bufferLen <= INT_MAX
-pFormat != NULL
-bufferLen == 0 || pDest != NULL
-destCapacity != 0
-CPathString
-V_RemoveDotSlashes failed for "%s".
-/data/src/tier1/fileio.cpp
-LOCK_EX
-LOCK_SH
-flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
-flock %s %s failed. errno = %d
-unReadAheadChunkSize should be zero when using bUnbuffered = true
-unReadAheadChunkSize < INT32_MAX/2
-CFileReader::BOpenFile
-unsupported flags 0x%x passed to CFileReader::BOpenFile
-CFileReader::Read
-BIsOpen()
-cubBytesToRead < INT32_MAX
-Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
-Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
-11CPathString
-%s/.steam/steam
-true
-false 
-(%zu) Descend: %s, (%s), %s\n
-\t(%zu) comparing %s with %s\n
-(%zu) readdir failed to find '%s' in '%s'\n
-DBG_PATHMATCH
-Lowered '%s' -> '%s'\n
-Breaking '%s' in '%s'\n
-Matched '%s' -> '%s'\n
-Unmatched %s\n
-/data/src/tier1/utlbuffer.cpp
-info.m_pReplacementString == 0
-18CUtlCharConversion
-21CUtlCStringConversion
-19CUtlNoEscConversion
-nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
-/data/src/tier1/utlmemory.cpp
-Assertion failed: length > k_cchMaxString
-/data/src/public/tier1/utlstring.h
-/data/src/tier1/utlstring.cpp
-CUtlString::SetValue
-CUtlString::VFormat
-Assert
-!directory.empty()
-google_breakpad::MinidumpDescriptor::MinidumpDescriptor(const string&)
-./src/client/linux/handler/minidump_descriptor.h
-ExceptionHandler::WaitForContinueSignal sys_read failed:
-ExceptionHandler::SendContinueSignalToChild sys_write failed:
-ExceptionHandler::GenerateDump waitpid failed:
-ExceptionHandler::GenerateDump sys_pipe failed:
-google_breakpad::MinidumpDescriptor::MinidumpDescriptor(const google_breakpad::MinidumpDescriptor&)
-src/client/linux/handler/minidump_descriptor.cc
-void google_breakpad::MinidumpDescriptor::UpdatePath(const char*)
-mode_ == kWriteMinidumpToFile && !directory_.empty()
-google_breakpad::MinidumpDescriptor& google_breakpad::MinidumpDescriptor::operator=(const google_breakpad::MinidumpDescriptor&)
-descriptor.path_.empty()
-crash
-%s_%d%.2d%.2d%.2d%.2d%.2d_%d
-.dmp
-ucontext_
-!dumper_->IsPostMortem()
------BEGIN BREAKPAD MICRODUMP-----
-bool {anonymous}::MicrodumpWriter::DumpCrashingThread()
-src/client/linux/microdump_writer/microdump_writer.cc
------END BREAKPAD MICRODUMP-----
-0123456789ABCDEFbool google_breakpad::{anonymous}::ElfFileSoName(const google_breakpad::MappingInfo&, char*, size_t)
-src/client/linux/minidump_writer/linux_dumper.cc
-bool google_breakpad::LinuxDumper::ElfFileIdentifierForMapping(const google_breakpad::MappingInfo&, bool, unsigned int, uint8_t*)
-!member || mapping_id < mappings_.size()
-.dynamic
-.dynstr
-maps
-vector::_M_default_append
-auxv
-void google_breakpad::LineReader::PopLine(unsigned int)
-./src/client/linux/minidump_writer/line_reader.h
-buf_used_ >= len + 1
-N15google_breakpad11LinuxDumperE
- (deleted)
-/dev/
-linux-gate.so
-task
-buf_used_ > 0
-info != __null
-Tgid:\t
-PPid:\t
-bool google_breakpad::DirectoryReader::GetNextEntry(const char**)
-./src/client/linux/minidump_writer/directory_reader.h
-virtual bool google_breakpad::LinuxPtraceDumper::GetThreadInfoByIndex(size_t, google_breakpad::ThreadInfo*)
-src/client/linux/minidump_writer/linux_ptrace_dumper.cc
-N15google_breakpad17LinuxPtraceDumperE
-{anonymous}::MinidumpWriter::MinidumpWriter(const char*, int, const google_breakpad::ExceptionHandler::CrashContext*, const MappingList&, const AppMemoryList&, google_breakpad::LinuxDumper*)
-src/client/linux/minidump_writer/minidump_writer.cc
-const char* google_breakpad::ProcCpuInfoReader::GetValueAndLen(size_t*)
-./src/client/linux/minidump_writer/proc_cpuinfo_reader.h
-bool google_breakpad::TypedMDRVA<MDType>::CopyIndex(unsigned int, MDType*) [with MDType = MDRawLinkMap32]
-./src/client/minidump_file_writer-inl.h
-bool google_breakpad::TypedMDRVA<MDType>::AllocateObjectAndArray(size_t, size_t) [with MDType = MDRawDebug32; size_t = unsigned int]
-bool google_breakpad::TypedMDRVA<MDType>::CopyIndexAfterObject(unsigned int, const void*, size_t) [with MDType = MDRawDebug32; size_t = unsigned int]
-allocation_state_ == SINGLE_OBJECT_WITH_ARRAY
-bool google_breakpad::TypedMDRVA<MDType>::AllocateObjectAndArray(size_t, size_t) [with MDType = unsigned int; size_t = unsigned int]
-bool google_breakpad::TypedMDRVA<MDType>::CopyIndexAfterObject(unsigned int, const void*, size_t) [with MDType = unsigned int; size_t = unsigned int]
-bool google_breakpad::TypedMDRVA<MDType>::CopyIndex(unsigned int, MDType*) [with MDType = MDRawDirectory]
-bool {anonymous}::MinidumpWriter::WriteFile(MDLocationDescriptor*, const char*)
-fd_ != -1 || minidump_path
-processor
-model
-stepping
-cpu family
-/proc/cpuinfo
-value_
-allocation_state_ == ARRAY
-count && length
-buffers->next == __null
-/etc/lsb-release
-environ
-fd_ == -1 || !minidump_path
-vendor_id
-bool google_breakpad::UntypedMDRVA::Allocate(size_t)
-src/client/minidump_file_writer.cc
-bool google_breakpad::MinidumpFileWriter::Open(const char*)
-void google_breakpad::MinidumpFileWriter::SetFile(int)
-bool google_breakpad::TypedMDRVA<MDType>::CopyIndexAfterObject(unsigned int, const void*, size_t) [with MDType = MDString; size_t = unsigned int]
-bool google_breakpad::MinidumpFileWriter::Copy(MDRVA, const void*, ssize_t)
-MDRVA google_breakpad::MinidumpFileWriter::Allocate(size_t)
-bool google_breakpad::MinidumpFileWriter::WriteMemory(const void*, size_t, MDMemoryDescriptor*)
-bool google_breakpad::UntypedMDRVA::Copy(MDRVA, const void*, size_t)
-pos + size <= position_ + size_
-file_ == -1
-file_ != -1
-output
-bool google_breakpad::MinidumpFileWriter::WriteStringCore(const CharType*, unsigned int, MDLocationDescriptor*) [with CharType = wchar_t]
-location
-bool google_breakpad::MinidumpFileWriter::WriteStringCore(const CharType*, unsigned int, MDLocationDescriptor*) [with CharType = char]
-bool google_breakpad::TypedMDRVA<MDType>::AllocateObjectAndArray(size_t, size_t) [with MDType = MDString; size_t = unsigned int]
-vector::_M_fill_insert
-src/common/linux/elfutils.cc
-elf_mapped_base
-section_start
-section_size
-name != __null
-sections != __null
-nsection > 0
-segment_start
-segment_size
-bool google_breakpad::FindElfSection(const void*, const char*, uint32_t, const void**, size_t*, int*)
-void google_breakpad::{anonymous}::FindElfClassSection(const char*, const char*, typename ElfClass::Word, const void**, size_t*) [with ElfClass = google_breakpad::ElfClass32; typename ElfClass::Word = unsigned int; size_t = unsigned int]
-my_strncmp(elf_base, "\177ELF", 4) == 0
-elf_header->e_ident[4] == ElfClass::kClass
-const typename ElfClass::Shdr* google_breakpad::FindElfSectionByName(const char*, typename ElfClass::Word, const typename ElfClass::Shdr*, const char*, const char*, int) [with ElfClass = google_breakpad::ElfClass32; typename ElfClass::Shdr = Elf32_Shdr; typename ElfClass::Word = unsigned int]
-./src/common/linux/elfutils-inl.h
-void google_breakpad::{anonymous}::FindElfClassSection(const char*, const char*, typename ElfClass::Word, const void**, size_t*) [with ElfClass = google_breakpad::ElfClass64; typename ElfClass::Word = unsigned int; size_t = unsigned int]
-const typename ElfClass::Shdr* google_breakpad::FindElfSectionByName(const char*, typename ElfClass::Word, const typename ElfClass::Shdr*, const char*, const char*, int) [with ElfClass = google_breakpad::ElfClass64; typename ElfClass::Shdr = Elf64_Shdr; typename ElfClass::Word = unsigned int]
-bool google_breakpad::FindElfSegment(const void*, uint32_t, const void**, size_t*, int*)
-void google_breakpad::{anonymous}::FindElfClassSegment(const char*, typename ElfClass::Word, const void**, size_t*) [with ElfClass = google_breakpad::ElfClass32; typename ElfClass::Word = unsigned int; size_t = unsigned int]
-void google_breakpad::{anonymous}::FindElfClassSegment(const char*, typename ElfClass::Word, const void**, size_t*) [with ElfClass = google_breakpad::ElfClass64; typename ElfClass::Word = unsigned int; size_t = unsigned int]
-.note.gnu.build-id
-.text
-N15google_breakpad21CrashGenerationClientE
-*N15google_breakpad12_GLOBAL__N_125CrashGenerationClientImplE
-void google_breakpad::ThreadInfo::GetGeneralPurposeRegisters(void**, size_t*)
-src/client/linux/dump_writer_common/thread_info.cc
-void google_breakpad::ThreadInfo::GetFloatingPointRegisters(void**, size_t*)
-gp_regs || size
-fp_regs || size
-20IUniformRandomStream
-20CUniformRandomStream
-N10__cxxabiv117__class_type_infoE
-__gnu_cxx::__concurrence_lock_error
-__gnu_cxx::__concurrence_unlock_error
-N9__gnu_cxx24__concurrence_lock_errorE
-N9__gnu_cxx26__concurrence_unlock_errorE
-std::exception
-std::bad_exception
-St9exception
-St13bad_exception
-N10__cxxabiv115__forced_unwindE
-N10__cxxabiv119__foreign_exceptionE
-N10__cxxabiv123__fundamental_type_infoE
-PKDu
-PKDs
-PKDi
-PKDf
-PKDd
-PKDe
-PKDn
-N9__gnu_cxx20recursive_init_errorE
-N10__cxxabiv119__pointer_type_infoE
-pure virtual method called\n
-N10__cxxabiv120__si_class_type_infoE
-St9type_info
-terminate called recursively\n
-  what():  
-terminate called after throwing an instance of '
-terminate called without an active exception\n
-NSt6locale5facetE
-UTF-8
-ASCII//TRANSLIT
-ASCII
-St12codecvt_base
-St23__codecvt_abstract_baseIDsc11__mbstate_tE
-St7codecvtIDsc11__mbstate_tE
-St23__codecvt_abstract_baseIDic11__mbstate_tE
-St7codecvtIDic11__mbstate_tE
-St23__codecvt_abstract_baseIDsDu11__mbstate_tE
-St7codecvtIDsDu11__mbstate_tE
-St23__codecvt_abstract_baseIDiDu11__mbstate_tE
-St7codecvtIDiDu11__mbstate_tE
-St10ctype_base
-St5ctypeIcE
-St5ctypeIwE
-space
-print
-cntrl
-upper
-lower
-alpha
-punct
-xdigit
-alnum
-graph
-blank
-N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
-N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
-CH\f1
-FoCLcx
-basic_ios::clear
-St9basic_iosIcSt11char_traitsIcEE
-St9basic_iosIwSt11char_traitsIwEE
-St8ios_base
-St13basic_istreamIwSt11char_traitsIwEE
-St9time_base
-St10money_base
-St13messages_base
-St7collateIcE
-St8numpunctIcE
-St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
-St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
-St17__timepunct_cacheIcE
-St11__timepunctIcE
-St10moneypunctIcLb1EE
-St10moneypunctIcLb0EE
-St8messagesIcE
-St23__codecvt_abstract_baseIcc11__mbstate_tE
-St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
-St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
-St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
-St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
-St18__moneypunct_cacheIcLb0EE
-St18__moneypunct_cacheIcLb1EE
-St16__numpunct_cacheIcE
-St13basic_ostreamIwSt11char_traitsIwEE
-not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
-St15basic_streambufIcSt11char_traitsIcEE
-St15basic_streambufIwSt11char_traitsIwEE
-basic_string::copy
-basic_string::_S_create
-basic_string::_M_replace_aux
-basic_string::assign
-basic_string::append
-basic_string::resize
-basic_string::_S_construct null not valid
-St7collateIwE
-St21__ctype_abstract_baseIwE
-St8numpunctIwE
-St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
-St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
-St17__timepunct_cacheIwE
-St11__timepunctIwE
-St10moneypunctIwLb1EE
-St10moneypunctIwLb0EE
-St8messagesIwE
-St23__codecvt_abstract_baseIwc11__mbstate_tE
-St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
-St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
-St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
-St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
-St18__moneypunct_cacheIwLb0EE
-St18__moneypunct_cacheIwLb1EE
-St16__numpunct_cacheIwE
-std::bad_alloc
-St9bad_alloc
-std::bad_array_new_length
-St20bad_array_new_length
-std::bad_cast
-St8bad_cast
-_GLOBAL_
-(anonymous namespace)
-string literal
-auto
-decltype(auto)
-[abi:
-{default arg#
-JArray
-auto:
-VTT for 
-construction vtable for 
-typeinfo for 
-typeinfo name for 
-typeinfo fn for 
-non-virtual thunk to 
-covariant return thunk to 
-java Class for 
-guard variable for 
-TLS init function for 
-TLS wrapper function for 
-reference temporary #
-hidden alias for 
-non-transaction clone for 
-_Sat 
-_Fract
-_Accum
-operator
-operator 
-new 
-java resource 
-decltype (
-{parm#
-this
-global constructors keyed to 
-global destructors keyed to 
-{lambda(
-{unnamed type#
  [clone 
- restrict
- volatile
- const
- transaction_safe
- noexcept
- throw
-complex 
-imaginary 
  __vector(
-std::allocator
-std::basic_string
-std::string
-std::istream
-basic_istream
-std::ostream
-basic_ostream
-std::iostream
-basic_iostream
-alignof 
-const_cast
-delete[] 
-dynamic_cast
-delete 
-operator"" 
-new[]
-reinterpret_cast
-sizeof...
-static_cast
-sizeof 
-throw 
-bool
-boolean
-byte
-long double
-float
-__float128
-unsigned char
-unsigned int
-unsigned
-unsigned long
-unsigned __int128
-unsigned short
-void
-wchar_t
-unsigned long long
-decimal32
-decimal64
-decimal128
-half
-char8_t
-char16_t
-char32_t
-decltype(nullptr)
-template parameter object for 
-std::basic_string<char, std::char_traits<char>, std::allocator<char> >
-std::basic_istream<char, std::char_traits<char> >
-std::basic_ostream<char, std::char_traits<char> >
-std::basic_iostream<char, std::char_traits<char> >
-N10__cxxabiv117__pbase_type_infoE
-N10__cxxabiv129__pointer_to_member_type_infoE
-N10__cxxabiv121__vmi_class_type_infoE
-locale::facet::_S_create_c_locale name not valid
-St7codecvtIcc11__mbstate_tE
-St7codecvtIwc11__mbstate_tE
-NSt8ios_base7failureE
+ bytes
+ const
+ noexcept
+ restrict
+ throw
+ transaction_safe
+ volatile
+!directory.empty()
+!dumper_->IsPostMortem()
+!g_VProfile
+!g_pCrashMemoryReserve
+!member || mapping_id < mappings_.size()
+%02d:%02d:%02d
+%02i/%02i %02i:%02i:%02i 
+%04d%02d%02d%02d%02d%02d
+%lld
+%s Adding custom info: %s=%s.\n
+%s Calling pre minidump callback\n
+%s Done.\n
+%s Ignoring t_id != getpid()\n
+%s Initializing.\n
+%s No pre-minidump callback registered\n
+%s Returning as already initialized.\n
+%s Setting app ID to %u.\n
+%s Setting comment to %s.\n
+%s Skipping as Steam ID = 0.\n
+%s Skipping as app ID = 0.\n
+%s Skipping as no handler.\n
+%s Writing.\n
+%s%02d
+%s/%s_log.txt
+%s/.steam/%s
+%s/.steam/steam
+%s: Already initialized.\n
+%s: Attempting to send crash report in process: %s\n
+%s: Attempting to use error reporter path: %s\n
+%s: Installing breakpad exception handler for appid(%s)/version(%s)/tid(%d)\n
+%s: Sending crash report.\n
+%s: Sending.\n
+%s: Skipping, no context!\n
+%s: Starting.\n
+%s: Writing.\n
+%s: __pos (which is %zu) > this->size() (which is %zu)
+%s: could not delete, skipping.\n
+%s: failed to create, skipping\n
+%s: insufficient permissions - delete and recreate\n
+%s: is not a directory - delete and recreate.\n
+%s: is not owned by us - delete and recreate.\n
+%s_%d%.2d%.2d%.2d%.2d%.2d_%d
+'', upload 
+(%zu) Descend: %s, (%s), %s\n
+(%zu) readdir failed to find '%s' in '%s'\n
+(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+((size_t)(m_nLogicalBytesAllocated) % 8) == 0
+(anonymous namespace)
+(iub & (m_nSizeWithStack-1)) == 0
+***** OUT OF MEMORY! attempted allocation size: %zu ****\n
+*N15google_breakpad12_GLOBAL__N_125CrashGenerationClientImplE
 -+xX0123456789abcdef0123456789ABCDEF
 -+xX0123456789abcdefABCDEF
+-----BEGIN BREAKPAD MICRODUMP-----
+-----END BREAKPAD MICRODUMP-----
 -0123456789
+-debugbreak
+-noassert
+-nocrashdialog
+./src/client/linux/handler/minidump_descriptor.h
+./src/client/linux/minidump_writer/directory_reader.h
+./src/client/linux/minidump_writer/line_reader.h
+./src/client/linux/minidump_writer/proc_cpuinfo_reader.h
+./src/client/minidump_file_writer-inl.h
+./src/common/linux/elfutils-inl.h
+.dmp
+.dynamic
+.dynstr
+.note.gnu.build-id
+.text
+/bin/steamerrorreporter
+/data/src/crashhandler/breakpad_linux.cpp
+/data/src/public/tier0/memblockhdr.h
+/data/src/public/tier0/vprof.h
+/data/src/public/tier1/utlmemory.h
+/data/src/public/tier1/utlstring.h
+/data/src/public/tier1/utlvector.h
+/data/src/tier0/memblockhdr.cpp
+/data/src/tier0/memstd.cpp
+/data/src/tier0/minidump.cpp
+/data/src/tier0/threadtools.cpp
+/data/src/tier0/validator.cpp
+/data/src/tier0/valobject.cpp
+/data/src/tier0/vprof.cpp
+/data/src/tier1/fileio.cpp
+/data/src/tier1/utlbuffer.cpp
+/data/src/tier1/utlmemory.cpp
+/data/src/tier1/utlstring.cpp
+/data/src/vstdlib/strtools.cpp
+/dev/
+/etc/lsb-release
+/proc/%d/status
+/proc/cpuinfo
+/proc/self/cmdline
+/proc/self/exe
+/tmp/dumps
+0123456789ABCDEFbool google_breakpad::{anonymous}::ElfFileSoName(const google_breakpad::MappingInfo&, char*, size_t)
+11CPathString
+12CStdMemAlloc
+13CCrashHandler
+13ICrashHandler
+16CBreakpadFactory
+16IBreakpadFactory
+18CUtlCharConversion
+19CUtlNoEscConversion
+20CUniformRandomStream
+20IUniformRandomStream
+21CUtlCStringConversion
+22:42:54
+9IMemAlloc
+<empty>
+>NULL == pValObjectPrev->m_pValObjectNext
 AKST
+ALL_PROXY
+ASCII
+ASCII//TRANSLIT
+April
+Assert
+Assert( %s ):%s:%d\n
+Assertion Failed: stack%2d: %s
+Assertion Failed: stack%2d: %s (%d): %s
+Assertion Failed: stack%2d: 0x%llX
+Assertion failed: length > k_cchMaxString
+August
+BIsOpen()
+BREAKPAD_DUMP_LOCATION
+Bad thread local: Get\n
+Bad thread local: Set\n
+Beta
+Breaking '%s' in '%s'\n
+Breakpad/1.0 (Linux)
+Breakpad_FilterCallback
+Breakpad_MinidumpCallback
+Breakpad_SetSteamID
+BuildID
+Busy, please retry.\n
+CFileReader::BOpenFile
+CFileReader::Read
+CH\f1
+CPathString
+CUtlString::SetValue
+CUtlString::VFormat
+CValidator : too many memory nodes to store, try again with a higher threshold value\n
+Could not find steamerrorreporter binary. Any minidumps will be uploaded in-process
+Could not read /proc/self/cmdline when trying to find steamerrorreporter
+CrashTime
+CreateInterface
+DBG_PATHMATCH
+DONT_BREAK_ON_ASSERT
+December
+Deleting thread object from the thread, this is bad
+DumpMemTrackingStats %d %d \n
+ERROR TRYING TO vfork() TO SEND MINIDUMP\nRESORTING TO IN-PROCESS MINIDUMP\n
+ERROR: Could not run steamerrorreporter binary. Uploading minidump in-process\n
+ERROR: execv failed when trying to send minidump\n
+ERROR: waitpid() on child forked process failed when uploading minidump: %d\n
+ExceptionHandler::GenerateDump sys_pipe failed:
+ExceptionHandler::GenerateDump waitpid failed:
+ExceptionHandler::SendContinueSignalToChild sys_write failed:
+ExceptionHandler::WaitForContinueSignal sys_read failed:
+Exiting on SPEW_ABORT\n
+Failed to capture callstack
+Failed to set thread local value
+Failed writing minidump, nothing to upload.\n
+Fatal Assertion Failed: 
+Fatal assert
+Fatal assert; application exiting
+February
+FoCLcx
+Friday
+GCC: (SteamRT 9.3.0-17+steamrt1.3+srt1) 9.3.1 20210309
+GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
+GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
+GLIBC_2.0
+GLIBC_2.1
+GLIBC_2.1.3
+GLIBC_2.2
+GLIBC_2.2.3
+GLIBC_2.2.4
+GLIBC_2.3
+GLIBC_2.3.4
+GLIBC_2.4
+GLIBC_2.8
+Gunknown
+HOME
+HTTP_PROXY
+Illegal termination of worker thread '%s'
+Init
+InitHandler
+Internal
+IsSpewActive
+JArray
+January
+Jul 30 2024
+July
+June
+LOCK_EX
+LOCK_SH
+Linux
+Lowered '%s' -> '%s'\n
+MDRVA google_breakpad::MinidumpFileWriter::Allocate(size_t)
+March
+Matched '%s' -> '%s'\n
+Monday
+N(knN
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv117__class_type_infoE
+N10__cxxabiv117__pbase_type_infoE
+N10__cxxabiv119__foreign_exceptionE
+N10__cxxabiv119__pointer_type_infoE
+N10__cxxabiv120__si_class_type_infoE
+N10__cxxabiv121__vmi_class_type_infoE
+N10__cxxabiv123__fundamental_type_infoE
+N10__cxxabiv129__pointer_to_member_type_infoE
+N15google_breakpad11LinuxDumperE
+N15google_breakpad17LinuxPtraceDumperE
+N15google_breakpad21CrashGenerationClientE
+N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
+N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
+N9__gnu_cxx20recursive_init_errorE
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
+NSt6locale5facetE
+NSt8ios_base7failureE
+NULL != m_pValObjectCur
+No Error
+No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
+No tracked allocs currently in use. Total %d\n
+November
+OUT OF MEMORY
+October
+PKDd
+PKDe
+PKDf
+PKDi
+PKDn
+PKDs
+PKDu
+PPid:\t
+Platform
+ProductName
+Public
+Root
+Saturday
+SendCrashReport
+SendExistingMinidump
+September
+SetAppID
+SetComment
+SetSteamID
+Setting Steam ID: %llu\n
+Setting SteamUniverse: %d = %s\n
+Someone called ClearWritingMinidump without holding the minidump lock.
+Someone called SetWritingMinidump without holding the minidump lock.
+St10ctype_base
+St10money_base
+St10moneypunctIcLb0EE
+St10moneypunctIcLb1EE
+St10moneypunctIwLb0EE
+St10moneypunctIwLb1EE
+St11__timepunctIcE
+St11__timepunctIwE
 St11logic_error
+St12codecvt_base
 St12length_error
 St12out_of_range
+St13bad_exception
+St13basic_istreamIwSt11char_traitsIwEE
+St13basic_ostreamIwSt11char_traitsIwEE
+St13messages_base
 St13runtime_error
+St15basic_streambufIcSt11char_traitsIcEE
+St15basic_streambufIwSt11char_traitsIwEE
+St16__numpunct_cacheIcE
+St16__numpunct_cacheIwE
+St17__timepunct_cacheIcE
+St17__timepunct_cacheIwE
+St18__moneypunct_cacheIcLb0EE
+St18__moneypunct_cacheIcLb1EE
+St18__moneypunct_cacheIwLb0EE
+St18__moneypunct_cacheIwLb1EE
+St20bad_array_new_length
+St21__ctype_abstract_baseIwE
+St23__codecvt_abstract_baseIDiDu11__mbstate_tE
+St23__codecvt_abstract_baseIDic11__mbstate_tE
+St23__codecvt_abstract_baseIDsDu11__mbstate_tE
+St23__codecvt_abstract_baseIDsc11__mbstate_tE
+St23__codecvt_abstract_baseIcc11__mbstate_tE
+St23__codecvt_abstract_baseIwc11__mbstate_tE
+St5ctypeIcE
+St5ctypeIwE
+St7codecvtIDiDu11__mbstate_tE
+St7codecvtIDic11__mbstate_tE
+St7codecvtIDsDu11__mbstate_tE
+St7codecvtIDsc11__mbstate_tE
+St7codecvtIcc11__mbstate_tE
+St7codecvtIwc11__mbstate_tE
+St7collateIcE
+St7collateIwE
+St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St8bad_cast
+St8ios_base
+St8messagesIcE
+St8messagesIwE
+St8numpunctIcE
+St8numpunctIwE
+St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St9bad_alloc
+St9basic_iosIcSt11char_traitsIcEE
+St9basic_iosIwSt11char_traitsIwEE
+St9exception
+St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St9time_base
+St9type_info
+Stack%2d: %s\n
+Stack%2d: 0x%llX\n
+Stack:%2d    %s (%d): %s\n
+StartupTime
+Steam
+Steam Helper
+SteamRealPath
+SteamUniverse
 Sunday
-Monday
-Tuesday
-Wednesday
+TLS init function for 
+TLS wrapper function for 
+Tgid:\t
+Thread cannot be joined with self
 Thursday
-Friday
-Saturday
-January
-February
-March
-April
-June
-July
-August
-September
-October
-November
-December
-__nl_langinfo_l@GLIBC_2.2
-getpagesize@GLIBC_2.0
-fputs@GLIBC_2.0
-_ITM_addUserCommitAction
-abort@GLIBC_2.0
-__errno_location@GLIBC_2.0
-_ITM_memcpyRtWn
-statvfs64@GLIBC_2.1
-sigemptyset@GLIBC_2.0
-pthread_once@GLIBC_2.0
-typeinfo for char32_t*
-__wrap_opendir
-typeinfo name for __float128
-typeinfo for __gnu_cxx::recursive_init_error
-typeinfo for char8_t*
-wmemchr@GLIBC_2.0
-_txnal_runtime_error_get_msg(void*)
-statfs64@GLIBC_2.1
-getpid@GLIBC_2.0
-__wrap_freopen
-typeinfo for signed char*
-mkdir@GLIBC_2.0
-strerror@GLIBC_2.0
-__cxa_atexit@GLIBC_2.1.3
-vtable for __cxxabiv1::__foreign_exception
-typeinfo for decimal64
-vtable for __cxxabiv1::__pbase_type_info
-sysconf@GLIBC_2.0
-memcmp@GLIBC_2.0
-typeinfo name for bool*
-typeinfo name for signed char const*
-typeinfo name for wchar_t
-typeinfo for unsigned char const*
-typeinfo name for long double const*
-typeinfo for long const*
-typeinfo for __cxxabiv1::__foreign_exception
-typeinfo for double const*
-typeinfo for __cxxabiv1::__forced_unwind
-typeinfo for __float128
-typeinfo for unsigned long long const*
-statfs@GLIBC_2.0
-getcontext@GLIBC_2.1
-typeinfo name for __cxxabiv1::__pointer_to_member_type_info
-__ctype_get_mb_cur_max@GLIBC_2.0
-typeinfo name for __cxxabiv1::__pbase_type_info
-__fprintf_chk@GLIBC_2.3.4
-transaction clone for operator new[](unsigned int)
-signal@GLIBC_2.0
-__wrap_symlink
-__xstat@GLIBC_2.0
-syscall@GLIBC_2.0
-typeinfo for unsigned short const*
-__gmon_start__
-__lxstat@GLIBC_2.0
-typeinfo name for unsigned long long const*
-realloc@GLIBC_2.0
-sched_yield@GLIBC_2.0
-iconv_open@GLIBC_2.1
-rewind@GLIBC_2.0
-__xstat64@GLIBC_2.2
-localtime@GLIBC_2.0
-__wrap_rename
-typeinfo for decimal128*
-vtable for __cxxabiv1::__pointer_to_member_type_info
-__wrap_fopen
-alphasort64@GLIBC_2.2
-typeinfo name for int const*
-__printf_chk@GLIBC_2.3.4
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-strchr@GLIBC_2.0
-vsnprintf@GLIBC_2.0
-putwc@GLIBC_2.2
-getenv@GLIBC_2.0
-__strftime_l@GLIBC_2.3
-typeinfo for unsigned long long*
-_fini
-calloc@GLIBC_2.0
-strncpy@GLIBC_2.0
-typeinfo name for char16_t
-typeinfo for decimal64 const*
-typeinfo name for unsigned long const*
-typeinfo for wchar_t
-wmemmove@GLIBC_2.0
-typeinfo for char32_t
-wcslen@GLIBC_2.0
-malloc_usable_size@GLIBC_2.0
-typeinfo name for char16_t const*
-mbsrtowcs@GLIBC_2.0
+TracerPid:
+Tracked allocs currently in use. %d Total %d\n
+Tuesday
+USER
+UTF-8
+Unable to write failure log\n
+Unbuffered read should be called with cubData length that is aligned to system page size (4kb)
+Unbuffered read should be called with pvData buffer that is aligned to system page size (4kb)
+Unknown universe %d, assuming public\n
+Unmatched %s\n
+Uploading dump (in-process) [url '%s', proxy '%s']\n%s\n
+UserID
+VTT for 
+V_RemoveDotSlashes failed for "%s".
+Valve
+Vendor
+Version
+Wednesday
+WriteMiniDump
+WriteMinidump
+[abi:
+\nFATAL: Steam cannot run. Please delete some %s* directories or change their ownership to the local user.\n
+\t%d items : %s - %s:%d\n
+\t(%zu) comparing %s with %s\n
+_Accum
+_ExitOnFatalAssert\n
+_Fract
+_GLOBAL_
 _ITM_RU1
-typeinfo for short
-pthread_key_delete@GLIBC_2.0
-dgettext@GLIBC_2.0
-typeinfo for char
-dlclose@GLIBC_2.0
-typeinfo name for unsigned int
-typeinfo name for __float128*
-fgets@GLIBC_2.0
-rename@GLIBC_2.0
-typeinfo for char8_t
-typeinfo for unsigned int*
-fopen64@GLIBC_2.1
-typeinfo name for wchar_t*
-scandir@GLIBC_2.0
-typeinfo for float*
-typeinfo name for bool
-typeinfo name for __gnu_cxx::recursive_init_error
-strtold_l@GLIBC_2.3
-typeinfo name for decimal64*
-typeinfo name for short*
-typeinfo name for decimal64
-typeinfo for __cxxabiv1::__pointer_type_info
-__memcpy_chk@GLIBC_2.3.4
-_exit@GLIBC_2.0
-typeinfo name for float
-strrchr@GLIBC_2.0
-vtable for __cxxabiv1::__forced_unwind
-pthread_getspecific@GLIBC_2.0
-mount@GLIBC_2.0
-dlmopen@GLIBC_2.3.4
-uname@GLIBC_2.0
-fseeko64@GLIBC_2.1
-chmod@GLIBC_2.0
-wmemcpy@GLIBC_2.0
-__assert_fail@GLIBC_2.0
-CreateInterface
-__vsnprintf_chk@GLIBC_2.3.4
-typeinfo for bool*
-mbrtowc@GLIBC_2.0
-typeinfo for char8_t const*
-__wrap_chmod
-typeinfo for decimal128
+_ITM_RU4
+_ITM_addUserCommitAction
 _ITM_deregisterTMCloneTable
-pthread_mutex_trylock@GLIBC_2.0
-typeinfo name for bool const*
-vtable for __gnu_cxx::__concurrence_unlock_error
-ungetc@GLIBC_2.0
-typeinfo name for float const*
+_ITM_memcpyRtWn
+_ITM_registerTMCloneTable
+_Sat 
+___tls_get_addr
+___tls_get_addr@GLIBC_2.3
+__assert_fail
+__assert_fail@GLIBC_2.0
+__ctype_get_mb_cur_max
+__ctype_get_mb_cur_max@GLIBC_2.0
+__ctype_tolower_loc
+__ctype_tolower_loc@GLIBC_2.3
+__cxa_atexit
+__cxa_atexit@GLIBC_2.1.3
+__cxa_finalize
+__cxa_finalize@GLIBC_2.1.3
+__dprintf_chk
+__dprintf_chk@GLIBC_2.8
+__duplocale
+__duplocale@GLIBC_2.1
+__errno_location
+__errno_location@GLIBC_2.0
+__float128
+__fprintf_chk
+__fprintf_chk@GLIBC_2.3.4
+__freelocale
+__freelocale@GLIBC_2.1
+__gmon_start__
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+__iswctype_l
+__iswctype_l@GLIBC_2.1
+__lxstat64@GLIBC_2.2
+__lxstat@GLIBC_2.0
+__memcpy_chk
+__memcpy_chk@GLIBC_2.3.4
+__newlocale
+__newlocale@GLIBC_2.1
+__nl_langinfo_l
+__nl_langinfo_l@GLIBC_2.2
+__printf_chk
+__printf_chk@GLIBC_2.3.4
+__pthread_key_create
+__pthread_key_create@GLIBC_2.0
+__realpath_chk
+__realpath_chk@GLIBC_2.4
+__snprintf_chk
+__snprintf_chk@GLIBC_2.3.4
+__sprintf_chk
+__sprintf_chk@GLIBC_2.3.4
+__stack_chk_fail
+__stack_chk_fail@GLIBC_2.4
+__strcoll_l
+__strcoll_l@GLIBC_2.1
+__strcpy_chk
+__strcpy_chk@GLIBC_2.3.4
+__strftime_l
+__strftime_l@GLIBC_2.3
+__strtod_l
+__strtod_l@GLIBC_2.1
+__strtof_l
+__strtof_l@GLIBC_2.1
+__strxfrm_l
+__strxfrm_l@GLIBC_2.1
+__towlower_l
+__towlower_l@GLIBC_2.1
+__towupper_l
+__towupper_l@GLIBC_2.1
+__uselocale
+__uselocale@GLIBC_2.3
+__vasprintf_chk
+__vasprintf_chk@GLIBC_2.8
+__vfprintf_chk
+__vfprintf_chk@GLIBC_2.3.4
+__vsnprintf_chk
+__vsnprintf_chk@GLIBC_2.3.4
+__wcscoll_l
+__wcscoll_l@GLIBC_2.1
+__wcsftime_l
+__wcsftime_l@GLIBC_2.3
+__wcsxfrm_l
+__wcsxfrm_l@GLIBC_2.1
+__wctype_l
+__wctype_l@GLIBC_2.1
+__wrap___lxstat
+__wrap___lxstat64
+__wrap___xstat
+__wrap___xstat64
+__wrap_access
+__wrap_chdir
+__wrap_chmod
+__wrap_chown
+__wrap_dlmopen
+__wrap_dlopen
+__wrap_fopen
+__wrap_fopen64
+__wrap_freopen
+__wrap_lchown
+__wrap_link
+__wrap_lstat
+__wrap_lstat64
+__wrap_mkdir
+__wrap_mkfifo
+__wrap_mknod
+__wrap_mount
+__wrap_open
+__wrap_open64
+__wrap_opendir
+__wrap_rename
+__wrap_rmdir
+__wrap_scandir
 __wrap_scandir64
 __wrap_stat
-typeinfo for __float128 const*
-typeinfo for __cxxabiv1::__vmi_class_type_info
-gettimeofday@GLIBC_2.0
-strtol@GLIBC_2.0
-typeinfo name for char*
-free@GLIBC_2.0
-__xmknod@GLIBC_2.0
-__lxstat64@GLIBC_2.2
-backtrace_symbols@GLIBC_2.1
-typeinfo name for void
-typeinfo for char const*
-SteamRealPath
-typeinfo for float
-mbsnrtowcs@GLIBC_2.0
-typeinfo name for __cxxabiv1::__vmi_class_type_info
-typeinfo for long long const*
-__wrap_mkfifo
-__wrap_access
-access@GLIBC_2.0
-_ITM_registerTMCloneTable
-__wrap_mount
-dlsym@GLIBC_2.0
-sigaction@GLIBC_2.0
-fflush@GLIBC_2.0
-__wrap_open64
-typeinfo for short const*
-_txnal_logic_error_get_msg(void*)
-__vfprintf_chk@GLIBC_2.3.4
-opendir@GLIBC_2.0
-statvfs@GLIBC_2.1
-symlink@GLIBC_2.0
-typeinfo for decimal64*
-wcrtomb@GLIBC_2.0
-___tls_get_addr@GLIBC_2.3
-pthread_mutex_unlock@GLIBC_2.0
-wctob@GLIBC_2.0
-typeinfo name for __cxxabiv1::__fundamental_type_info
-realpath@GLIBC_2.3
-vfork@GLIBC_2.0
-typeinfo name for void const*
-__wctype_l@GLIBC_2.1
-typeinfo name for __cxxabiv1::__foreign_exception
-__wcsftime_l@GLIBC_2.3
-ftello64@GLIBC_2.1
-typeinfo name for decimal64 const*
-typeinfo for char*
-typeinfo for std::nullptr_t
-__wrap_mkdir
-typeinfo for void*
-typeinfo for decimal128 const*
-typeinfo for void
-typeinfo for __cxxabiv1::__pointer_to_member_type_info
-typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo name for unsigned int const*
-typeinfo for char32_t const*
-typeinfo for decimal32
-__wrap_rmdir
-typeinfo name for char8_t*
-typeinfo for unsigned int
-typeinfo for wchar_t*
-readdir64@GLIBC_2.2
-stderr@GLIBC_2.0
-nanosleep@GLIBC_2.0
-typeinfo for bool
-__wrap_unlink
-utime@GLIBC_2.0
-execv@GLIBC_2.0
-typeinfo name for unsigned char*
-_ITM_RU4
-vtable for __gnu_cxx::recursive_init_error
-strlen@GLIBC_2.0
-typeinfo name for char32_t*
-typeinfo name for long long*
-fopen@GLIBC_2.1
-typeinfo for __float128*
-__wrap_mknod
-typeinfo name for signed char
-pthread_mutex_destroy@GLIBC_2.0
-__towupper_l@GLIBC_2.1
-unlink@GLIBC_2.0
-iconv@GLIBC_2.1
-typeinfo name for decimal128*
-typeinfo name for unsigned short*
-wmemset@GLIBC_2.0
-typeinfo name for decimal128
-__wrap_statfs
-typeinfo name for int
-freopen@GLIBC_2.0
-typeinfo for char16_t*
-__strxfrm_l@GLIBC_2.1
-waitpid@GLIBC_2.0
-typeinfo name for long double
-getegid@GLIBC_2.0
-dlopen@GLIBC_2.1
-mkfifo@GLIBC_2.0
-chdir@GLIBC_2.0
-vtable for __cxxabiv1::__fundamental_type_info
-_txnal_cow_string_c_str(void const*)
-typeinfo name for char const*
-typeinfo name for long*
-typeinfo name for __cxxabiv1::__class_type_info
-typeinfo for std::nullptr_t const*
-pthread_mutex_init@GLIBC_2.0
-typeinfo for unsigned int const*
-__wrap___lxstat64
-__strcpy_chk@GLIBC_2.3.4
-typeinfo name for double*
-typeinfo name for unsigned long
-typeinfo for float const*
-typeinfo for __cxxabiv1::__fundamental_type_info
-typeinfo name for unsigned long long
-strcasecmp@GLIBC_2.0
-typeinfo for signed char
-__strtod_l@GLIBC_2.1
-typeinfo for bool const*
-clock_gettime@GLIBC_2.2
-typeinfo for long double
-typeinfo for int
-Breakpad_SetSteamID
-typeinfo for wchar_t const*
-pthread_setspecific@GLIBC_2.0
-ftruncate@GLIBC_2.0
-__wcsxfrm_l@GLIBC_2.1
-closedir@GLIBC_2.0
-__wrap_lstat
-fwrite@GLIBC_2.0
-__wrap_dlmopen
-__wrap_statvfs
-__dprintf_chk@GLIBC_2.8
-__wrap_statfs64
-typeinfo name for char8_t const*
-vtable for __cxxabiv1::__vmi_class_type_info
-__wrap___xstat
-strncat@GLIBC_2.0
-__wrap___lxstat
-typeinfo name for wchar_t const*
-vtable for __cxxabiv1::__class_type_info
-malloc@GLIBC_2.0
-wcscmp@GLIBC_2.0
-typeinfo name for char32_t const*
-typeinfo name for short const*
-pthread_mutex_lock@GLIBC_2.0
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-typeinfo for long*
-typeinfo name for decimal128 const*
-typeinfo for double*
-__uselocale@GLIBC_2.3
-typeinfo name for char8_t
-typeinfo for short*
-chown@GLIBC_2.1
-__stack_chk_fail@GLIBC_2.4
-typeinfo for unsigned long long
-typeinfo for decimal32 const*
-iconv_close@GLIBC_2.1
-typeinfo name for __float128 const*
-typeinfo for unsigned long
-typeinfo name for char32_t
-typeinfo for long long*
-__freelocale@GLIBC_2.1
-fputc@GLIBC_2.0
-__wrap_dlopen
-typeinfo name for unsigned long*
-typeinfo name for unsigned long long*
-typeinfo name for std::nullptr_t*
-typeinfo name for int*
-rmdir@GLIBC_2.0
-dlerror@GLIBC_2.0
-typeinfo name for long
-scandir64@GLIBC_2.2
-typeinfo name for long double*
-__wrap_utimes
-stdin@GLIBC_2.0
-__strcoll_l@GLIBC_2.1
-strcasestr@GLIBC_2.1
-typeinfo name for unsigned short
-typeinfo name for decimal32*
-typeinfo for char16_t
-typeinfo for unsigned char*
-__wrap_chdir
-typeinfo name for double
-sigaddset@GLIBC_2.0
-__towlower_l@GLIBC_2.1
-readlink@GLIBC_2.0
-__iswctype_l@GLIBC_2.1
-backtrace@GLIBC_2.1
-strncasecmp@GLIBC_2.0
-typeinfo for __cxxabiv1::__pbase_type_info
-__ctype_tolower_loc@GLIBC_2.3
-__strtof_l@GLIBC_2.1
-typeinfo name for unsigned char
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-getcwd@GLIBC_2.0
-wcsnrtombs@GLIBC_2.0
-_txnal_cow_string_D1_commit(void*)
-stdout@GLIBC_2.0
-asctime@GLIBC_2.0
-faccessat@GLIBC_2.4
-typeinfo for std::nullptr_t*
-__wrap_utime
-typeinfo for char16_t const*
-typeinfo name for signed char*
-typeinfo name for double const*
-typeinfo name for long long
-fcntl@GLIBC_2.0
-flock@GLIBC_2.0
-utimes@GLIBC_2.0
-typeinfo for int const*
-sscanf@GLIBC_2.0
-typeinfo for unsigned long const*
-gmtime@GLIBC_2.0
-__sprintf_chk@GLIBC_2.3.4
-__duplocale@GLIBC_2.1
-typeinfo for void const*
-vtable for __cxxabiv1::__pointer_type_info
-typeinfo for __cxxabiv1::__si_class_type_info
-fnmatch@GLIBC_2.2.3
-strncmp@GLIBC_2.0
-open64@GLIBC_2.2
-lchown@GLIBC_2.0
-__realpath_chk@GLIBC_2.4
-lseek@GLIBC_2.0
-typeinfo for long double const*
-typeinfo for signed char const*
-__snprintf_chk@GLIBC_2.3.4
-posix_fadvise@GLIBC_2.2
-typeinfo for unsigned char
-strpbrk@GLIBC_2.0
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-typeinfo for __cxxabiv1::__class_type_info
-__newlocale@GLIBC_2.1
-fread@GLIBC_2.0
-__pthread_key_create@GLIBC_2.0
-dl_iterate_phdr@GLIBC_2.2.4
-__wrap_lstat64
-bind_textdomain_codeset@GLIBC_2.2
-typeinfo name for unsigned short const*
-typeinfo name for long long const*
-typeinfo for decimal32*
-typeinfo name for __cxxabiv1::__pointer_type_info
-vtable for __gnu_cxx::__concurrence_lock_error
-__wcscoll_l@GLIBC_2.1
-pthread_mutexattr_init@GLIBC_2.0
-strdup@GLIBC_2.0
-typeinfo name for std::nullptr_t
-typeinfo name for decimal32 const*
-typeinfo name for decimal32
-pthread_mutexattr_settype@GLIBC_2.1
-_txnal_cow_string_D1(void*)
-posix_memalign@GLIBC_2.2
-__wrap_open
-typeinfo for unsigned short*
-ungetwc@GLIBC_2.2
-typeinfo name for long const*
-tolower@GLIBC_2.0
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo name for unsigned char const*
-strcmp@GLIBC_2.0
-btowc@GLIBC_2.0
-typeinfo for long
-__cxa_finalize@GLIBC_2.1.3
 __wrap_stat64
-__wrap___xstat64
-setenv@GLIBC_2.0
-typeinfo for unsigned long*
-__wrap_link
-typeinfo for long long
-typeinfo name for void*
-typeinfo name for std::nullptr_t const*
-dladdr@GLIBC_2.0
-typeinfo for unsigned short
+__wrap_statfs
+__wrap_statfs64
+__wrap_statvfs
 __wrap_statvfs64
-typeinfo name for char16_t*
-typeinfo for double
-typeinfo name for char
-typeinfo name for unsigned int*
-vtable for __cxxabiv1::__si_class_type_info
-__vasprintf_chk@GLIBC_2.8
-__wrap_scandir
-typeinfo for int*
-typeinfo name for float*
-__wrap_chown
-__wrap_lchown
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo for long double*
+__wrap_symlink
+__wrap_unlink
+__wrap_utime
+__wrap_utimes
+__xmknod
+__xmknod@GLIBC_2.0
+__xstat64@GLIBC_2.2
+__xstat@GLIBC_2.0
+_exit
+_exit@GLIBC_2.0
+_fini
 _init
-typeinfo name for short
-__wrap_fopen64
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
+_txnal_cow_string_D1(void*)
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_c_str(void const*)
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
+abort
+abort@GLIBC_2.0
+access@GLIBC_2.0
+adding %d curl form parameters\n
+alignof 
+all_proxy
+allocation_state_ == ARRAY
+allocation_state_ == SINGLE_OBJECT_WITH_ARRAY
+alnum
+alpha
+alphasort64
+alphasort64@GLIBC_2.2
+asctime
+asctime@GLIBC_2.0
+auto
+auto:
+auxv
+backtrace
+backtrace@GLIBC_2.1
+backtrace_symbols
+backtrace_symbols@GLIBC_2.1
+basic_ios::clear
+basic_iostream
+basic_istream
+basic_ostream
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
+basic_string::append
+basic_string::assign
+basic_string::copy
+basic_string::erase
+basic_string::resize
+bind_textdomain_codeset
+bind_textdomain_codeset@GLIBC_2.2
+blank
+bool
+bool google_breakpad::DirectoryReader::GetNextEntry(const char**)
+bool google_breakpad::FindElfSection(const void*, const char*, uint32_t, const void**, size_t*, int*)
+bool google_breakpad::FindElfSegment(const void*, uint32_t, const void**, size_t*, int*)
+bool google_breakpad::LinuxDumper::ElfFileIdentifierForMapping(const google_breakpad::MappingInfo&, bool, unsigned int, uint8_t*)
+bool google_breakpad::MinidumpFileWriter::Copy(MDRVA, const void*, ssize_t)
+bool google_breakpad::MinidumpFileWriter::Open(const char*)
+bool google_breakpad::MinidumpFileWriter::WriteMemory(const void*, size_t, MDMemoryDescriptor*)
+bool google_breakpad::MinidumpFileWriter::WriteStringCore(const CharType*, unsigned int, MDLocationDescriptor*) [with CharType = char]
+bool google_breakpad::MinidumpFileWriter::WriteStringCore(const CharType*, unsigned int, MDLocationDescriptor*) [with CharType = wchar_t]
+bool google_breakpad::TypedMDRVA<MDType>::AllocateObjectAndArray(size_t, size_t) [with MDType = MDRawDebug32; size_t = unsigned int]
+bool google_breakpad::TypedMDRVA<MDType>::AllocateObjectAndArray(size_t, size_t) [with MDType = MDString; size_t = unsigned int]
+bool google_breakpad::TypedMDRVA<MDType>::AllocateObjectAndArray(size_t, size_t) [with MDType = unsigned int; size_t = unsigned int]
+bool google_breakpad::TypedMDRVA<MDType>::CopyIndex(unsigned int, MDType*) [with MDType = MDRawDirectory]
+bool google_breakpad::TypedMDRVA<MDType>::CopyIndex(unsigned int, MDType*) [with MDType = MDRawLinkMap32]
+bool google_breakpad::TypedMDRVA<MDType>::CopyIndexAfterObject(unsigned int, const void*, size_t) [with MDType = MDRawDebug32; size_t = unsigned int]
+bool google_breakpad::TypedMDRVA<MDType>::CopyIndexAfterObject(unsigned int, const void*, size_t) [with MDType = MDString; size_t = unsigned int]
+bool google_breakpad::TypedMDRVA<MDType>::CopyIndexAfterObject(unsigned int, const void*, size_t) [with MDType = unsigned int; size_t = unsigned int]
+bool google_breakpad::UntypedMDRVA::Allocate(size_t)
+bool google_breakpad::UntypedMDRVA::Copy(MDRVA, const void*, size_t)
+bool {anonymous}::MicrodumpWriter::DumpCrashingThread()
+bool {anonymous}::MinidumpWriter::WriteFile(MDLocationDescriptor*, const char*)
+boolean
+breakpad_testfile
+breakpad_verbose
+btowc
+btowc@GLIBC_2.0
+buf_used_ > 0
+buf_used_ >= len + 1
+bufferLen == 0 || pDest != NULL
+bufferLen > 0 && bufferLen <= INT_MAX
+buffers->next == __null
+byte
+calloc
+calloc@GLIBC_2.0
+cefwebhelper
+char16_t
+char32_t
+char8_t
+chdir@GLIBC_2.0
+chmod@GLIBC_2.0
+chown@GLIBC_2.1
+clock_gettime
+clock_gettime@GLIBC_2.2
+closedir
+closedir@GLIBC_2.0
+cntrl
+complex 
+console
+const char* google_breakpad::ProcCpuInfoReader::GetValueAndLen(size_t*)
+const typename ElfClass::Shdr* google_breakpad::FindElfSectionByName(const char*, typename ElfClass::Word, const typename ElfClass::Shdr*, const char*, const char*, int) [with ElfClass = google_breakpad::ElfClass32; typename ElfClass::Shdr = Elf32_Shdr; typename ElfClass::Word = unsigned int]
+const typename ElfClass::Shdr* google_breakpad::FindElfSectionByName(const char*, typename ElfClass::Word, const typename ElfClass::Shdr*, const char*, const char*, int) [with ElfClass = google_breakpad::ElfClass64; typename ElfClass::Shdr = Elf64_Shdr; typename ElfClass::Word = unsigned int]
+const_cast
+construction vtable for 
+count && length
+covariant return thunk to 
+cpu family
+crash
+crashhandler.so
+crashhandler002
+crashhandler003
+crashhandler004
+cubBytesToRead < INT32_MAX
+curl_easy_cleanup
+curl_easy_cleanup()\n
+curl_easy_getinfo
+curl_easy_init
+curl_easy_init -- failed\n
+curl_easy_perform
+curl_easy_perform returned:  %d %s\n
+curl_easy_setopt
+curl_easy_setopt()\n
+curl_easy_strerror
+curl_formadd
+curl_formadd file %s\n
+curl_formfree
+curl_slist_append
+curl_slist_free_all
+decimal128
+decimal32
+decimal64
+decltype (
+decltype(auto)
+decltype(nullptr)
+delete 
+delete[] 
+descriptor.path_.empty()
+dest != NULL
+destCapacity != 0
+dgettext
+dgettext@GLIBC_2.0
+dl_iterate_phdr
+dl_iterate_phdr@GLIBC_2.2.4
+dladdr
+dladdr@GLIBC_2.0
+dlclose
+dlclose@GLIBC_2.0
+dlerror
+dlerror@GLIBC_2.0
+dlmopen@GLIBC_2.3.4
+dlopen@GLIBC_2.1
+dlsym
+dlsym@GLIBC_2.0
+done with curl\n
+dynamic_cast
+elf_header->e_ident[4] == ElfClass::kClass
+elf_mapped_base
+environ
+error:  %s\n
+execv
+execv@GLIBC_2.0
+faccessat
+faccessat@GLIBC_2.4
+false
+false 
+fcntl
+fcntl@GLIBC_2.0
+fd_ != -1 || minidump_path
+fd_ == -1 || !minidump_path
+fflush
+fflush@GLIBC_2.0
+fgets
+fgets@GLIBC_2.0
+file ''
+file_ != -1
+file_ == -1
+float
+flock
+flock %s %s failed. errno = %d
+flock LOCK_SH requested but file is not opened for reading, ignoring: %s\n
+flock@GLIBC_2.0
+fnmatch
+fnmatch@GLIBC_2.2.3
+fopen64@GLIBC_2.1
+fopen@GLIBC_2.1
+fp_regs || size
+fputc
+fputc@GLIBC_2.0
+fputs
+fputs@GLIBC_2.0
+fread
+fread@GLIBC_2.0
+free
+free@GLIBC_2.0
+freopen@GLIBC_2.0
+fseeko64
+fseeko64@GLIBC_2.1
+ftello64
+ftello64@GLIBC_2.1
+ftruncate
+ftruncate@GLIBC_2.0
+fwrite
+fwrite@GLIBC_2.0
+getcontext
+getcontext@GLIBC_2.1
+getcwd
+getcwd@GLIBC_2.0
+getegid
+getegid@GLIBC_2.0
+getenv
+getenv@GLIBC_2.0
+geteuid
 geteuid@GLIBC_2.0
-GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
-GCC: (SteamRT 9.3.0-17+steamrt1.3+srt1) 9.3.1 20210309
-GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
+getpagesize
+getpagesize@GLIBC_2.0
+getpid
+getpid@GLIBC_2.0
+gettimeofday
+gettimeofday@GLIBC_2.0
+global constructors keyed to 
+global destructors keyed to 
+gmtime
+gmtime@GLIBC_2.0
+google_breakpad::MinidumpDescriptor& google_breakpad::MinidumpDescriptor::operator=(const google_breakpad::MinidumpDescriptor&)
+google_breakpad::MinidumpDescriptor::MinidumpDescriptor(const google_breakpad::MinidumpDescriptor&)
+google_breakpad::MinidumpDescriptor::MinidumpDescriptor(const string&)
+gp_regs || size
+graph
+guard variable for 
+half
+hidden alias for 
+http_proxy
+https://crash.steampowered.com/submit
+iconv
+iconv@GLIBC_2.1
+iconv_close
+iconv_close@GLIBC_2.1
+iconv_open
+iconv_open@GLIBC_2.1
+imaginary 
+info != __null
+info.m_pReplacementString == 0
+item %p sentinel corrupted. skipping.\n
+java Class for 
+java resource 
+lchown@GLIBC_2.0
+ld-linux.so.2
+libc.so.6
+libcurl-gnutls.so.4
+libcurl.so
+libcurl.so.3
+libcurl.so.4
+libdl.so.2
+libm.so.6
+libpthread.so.0
+librt.so.1
+linux-gate.so
+locale::facet::_S_create_c_locale name not valid
+localtime
+localtime@GLIBC_2.0
+location
+long double
+lower
+lseek
+lseek@GLIBC_2.0
+m_bInitialized
+m_nRecursions > 0
+m_pBudgetGroups
+m_pBudgetGroups == NULL
+m_pValObjects != NULL
+m_vecNodeMemBlocks.size() == 1
+m_vecNodeMemBlocks.size() == 1 && block.m_iCurIndexToUse == 1
+malloc
+malloc@GLIBC_2.0
+malloc_usable_size
+malloc_usable_size@GLIBC_2.0
+maps
+maxLen == 0 || pDest != NULL
+maxLenInBytes >= 0
+mbrtowc
+mbrtowc@GLIBC_2.0
+mbsnrtowcs
+mbsnrtowcs@GLIBC_2.0
+mbsrtowcs
+mbsrtowcs@GLIBC_2.0
+memcmp
+memcmp@GLIBC_2.0
+minidumps folder is set to %s\n
+mkdir@GLIBC_2.0
+mkfifo@GLIBC_2.0
+mode_ == kWriteMinidumpToFile && !directory_.empty()
+model
+mount@GLIBC_2.0
+my_strncmp(elf_base, "\177ELF", 4) == 0
+nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
+name != __null
+nanosleep
+nanosleep@GLIBC_2.0
+new 
+new[]
+non-transaction clone for 
+non-virtual thunk to 
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
+nsection > 0
+open64@GLIBC_2.2
+opendir@GLIBC_2.0
+operator
+operator 
+operator"" 
+output
+pAllocTracker->m_uSentinel == 0xaa110ced
+pFormat != NULL
+pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
+pSrc != NULL
+pos + size <= position_ + size_
+posix_fadvise
+posix_fadvise@GLIBC_2.2
+posix_memalign
+posix_memalign@GLIBC_2.2
+ppFrames[iFrame] != NULL
+print
+processor
+pszName
+pthread_getspecific
+pthread_getspecific@GLIBC_2.0
+pthread_key_delete
+pthread_key_delete@GLIBC_2.0
+pthread_mutex_destroy
+pthread_mutex_destroy@GLIBC_2.0
+pthread_mutex_init
+pthread_mutex_init@GLIBC_2.0
+pthread_mutex_lock
+pthread_mutex_lock@GLIBC_2.0
+pthread_mutex_trylock
+pthread_mutex_trylock@GLIBC_2.0
+pthread_mutex_unlock
+pthread_mutex_unlock@GLIBC_2.0
+pthread_mutexattr_init
+pthread_mutexattr_init@GLIBC_2.0
+pthread_mutexattr_settype
+pthread_mutexattr_settype@GLIBC_2.1
+pthread_once
+pthread_once@GLIBC_2.0
+pthread_setspecific
+pthread_setspecific@GLIBC_2.0
+punct
+pure virtual method called\n
+putwc
+putwc@GLIBC_2.2
+readdir64
+readdir64@GLIBC_2.2
+readlink
+readlink@GLIBC_2.0
+realloc
+realloc@GLIBC_2.0
+realpath
+realpath@GLIBC_2.3
+reference temporary #
+reinterpret_cast
+rename@GLIBC_2.0
+response:  %s\n
+rewind
+rewind@GLIBC_2.0
+rmdir@GLIBC_2.0
+scandir64@GLIBC_2.2
+scandir@GLIBC_2.0
+sched_yield
+sched_yield@GLIBC_2.0
+sdk32
+section_size
+section_start
+sections != __null
+segment_size
+segment_start
+setenv
+setenv@GLIBC_2.0
+sigaction
+sigaction@GLIBC_2.0
+sigaddset
+sigaddset@GLIBC_2.0
+sigemptyset
+sigemptyset@GLIBC_2.0
+signal
+signal@GLIBC_2.0
+sizeof 
+sizeof...
+space
+src != NULL
+src/client/linux/dump_writer_common/thread_info.cc
+src/client/linux/handler/minidump_descriptor.cc
+src/client/linux/microdump_writer/microdump_writer.cc
+src/client/linux/minidump_writer/linux_dumper.cc
+src/client/linux/minidump_writer/linux_ptrace_dumper.cc
+src/client/linux/minidump_writer/minidump_writer.cc
+src/client/minidump_file_writer.cc
+src/common/linux/elfutils.cc
+sscanf
+sscanf@GLIBC_2.0
+statfs64@GLIBC_2.1
+statfs@GLIBC_2.0
+static_cast
+statvfs64@GLIBC_2.1
+statvfs@GLIBC_2.1
+std::allocator
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::basic_iostream<char, std::char_traits<char> >
+std::basic_istream<char, std::char_traits<char> >
+std::basic_ostream<char, std::char_traits<char> >
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::exception
+std::iostream
+std::istream
+std::ostream
+std::string
+stderr
+stderr@GLIBC_2.0
+stdin
+stdin@GLIBC_2.0
+stdout
+stdout@GLIBC_2.0
+steamwebhelper
+stepping
+strcasecmp
+strcasecmp@GLIBC_2.0
+strcasestr
+strcasestr@GLIBC_2.1
+strchr
+strchr@GLIBC_2.0
+strcmp
+strcmp@GLIBC_2.0
+strdup
+strdup@GLIBC_2.0
+strerror
+strerror@GLIBC_2.0
+string literal
+strlen
+strlen@GLIBC_2.0
+strncasecmp
+strncasecmp@GLIBC_2.0
+strncat
+strncat@GLIBC_2.0
+strncmp
+strncmp@GLIBC_2.0
+strncpy
+strncpy@GLIBC_2.0
+strpbrk
+strpbrk@GLIBC_2.0
+strrchr
+strrchr@GLIBC_2.0
+strtol
+strtol@GLIBC_2.0
+strtold_l
+strtold_l@GLIBC_2.3
+success = %s\n
+symlink@GLIBC_2.0
+syscall
+syscall@GLIBC_2.0
+sysconf
+sysconf@GLIBC_2.0
+task
+template parameter object for 
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
+this
+throw 
+tid(%u) pthread_key_create failed: %s\n
+tolower
+tolower@GLIBC_2.0
+transaction clone for operator new[](unsigned int)
+true
+typeinfo fn for 
+typeinfo for 
+typeinfo for __cxxabiv1::__class_type_info
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__fundamental_type_info
+typeinfo for __cxxabiv1::__pbase_type_info
+typeinfo for __cxxabiv1::__pointer_to_member_type_info
+typeinfo for __cxxabiv1::__pointer_type_info
+typeinfo for __cxxabiv1::__si_class_type_info
+typeinfo for __cxxabiv1::__vmi_class_type_info
+typeinfo for __float128
+typeinfo for __float128 const*
+typeinfo for __float128*
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::recursive_init_error
+typeinfo for bool
+typeinfo for bool const*
+typeinfo for bool*
+typeinfo for char
+typeinfo for char const*
+typeinfo for char*
+typeinfo for char16_t
+typeinfo for char16_t const*
+typeinfo for char16_t*
+typeinfo for char32_t
+typeinfo for char32_t const*
+typeinfo for char32_t*
+typeinfo for char8_t
+typeinfo for char8_t const*
+typeinfo for char8_t*
+typeinfo for decimal128
+typeinfo for decimal128 const*
+typeinfo for decimal128*
+typeinfo for decimal32
+typeinfo for decimal32 const*
+typeinfo for decimal32*
+typeinfo for decimal64
+typeinfo for decimal64 const*
+typeinfo for decimal64*
+typeinfo for double
+typeinfo for double const*
+typeinfo for double*
+typeinfo for float
+typeinfo for float const*
+typeinfo for float*
+typeinfo for int
+typeinfo for int const*
+typeinfo for int*
+typeinfo for long
+typeinfo for long const*
+typeinfo for long double
+typeinfo for long double const*
+typeinfo for long double*
+typeinfo for long long
+typeinfo for long long const*
+typeinfo for long long*
+typeinfo for long*
+typeinfo for short
+typeinfo for short const*
+typeinfo for short*
+typeinfo for signed char
+typeinfo for signed char const*
+typeinfo for signed char*
+typeinfo for std::nullptr_t
+typeinfo for std::nullptr_t const*
+typeinfo for std::nullptr_t*
+typeinfo for unsigned char
+typeinfo for unsigned char const*
+typeinfo for unsigned char*
+typeinfo for unsigned int
+typeinfo for unsigned int const*
+typeinfo for unsigned int*
+typeinfo for unsigned long
+typeinfo for unsigned long const*
+typeinfo for unsigned long long
+typeinfo for unsigned long long const*
+typeinfo for unsigned long long*
+typeinfo for unsigned long*
+typeinfo for unsigned short
+typeinfo for unsigned short const*
+typeinfo for unsigned short*
+typeinfo for void
+typeinfo for void const*
+typeinfo for void*
+typeinfo for wchar_t
+typeinfo for wchar_t const*
+typeinfo for wchar_t*
+typeinfo name for 
+typeinfo name for __cxxabiv1::__class_type_info
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo name for __cxxabiv1::__fundamental_type_info
+typeinfo name for __cxxabiv1::__pbase_type_info
+typeinfo name for __cxxabiv1::__pointer_to_member_type_info
+typeinfo name for __cxxabiv1::__pointer_type_info
+typeinfo name for __cxxabiv1::__si_class_type_info
+typeinfo name for __cxxabiv1::__vmi_class_type_info
+typeinfo name for __float128
+typeinfo name for __float128 const*
+typeinfo name for __float128*
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::recursive_init_error
+typeinfo name for bool
+typeinfo name for bool const*
+typeinfo name for bool*
+typeinfo name for char
+typeinfo name for char const*
+typeinfo name for char*
+typeinfo name for char16_t
+typeinfo name for char16_t const*
+typeinfo name for char16_t*
+typeinfo name for char32_t
+typeinfo name for char32_t const*
+typeinfo name for char32_t*
+typeinfo name for char8_t
+typeinfo name for char8_t const*
+typeinfo name for char8_t*
+typeinfo name for decimal128
+typeinfo name for decimal128 const*
+typeinfo name for decimal128*
+typeinfo name for decimal32
+typeinfo name for decimal32 const*
+typeinfo name for decimal32*
+typeinfo name for decimal64
+typeinfo name for decimal64 const*
+typeinfo name for decimal64*
+typeinfo name for double
+typeinfo name for double const*
+typeinfo name for double*
+typeinfo name for float
+typeinfo name for float const*
+typeinfo name for float*
+typeinfo name for int
+typeinfo name for int const*
+typeinfo name for int*
+typeinfo name for long
+typeinfo name for long const*
+typeinfo name for long double
+typeinfo name for long double const*
+typeinfo name for long double*
+typeinfo name for long long
+typeinfo name for long long const*
+typeinfo name for long long*
+typeinfo name for long*
+typeinfo name for short
+typeinfo name for short const*
+typeinfo name for short*
+typeinfo name for signed char
+typeinfo name for signed char const*
+typeinfo name for signed char*
+typeinfo name for std::nullptr_t
+typeinfo name for std::nullptr_t const*
+typeinfo name for std::nullptr_t*
+typeinfo name for unsigned char
+typeinfo name for unsigned char const*
+typeinfo name for unsigned char*
+typeinfo name for unsigned int
+typeinfo name for unsigned int const*
+typeinfo name for unsigned int*
+typeinfo name for unsigned long
+typeinfo name for unsigned long const*
+typeinfo name for unsigned long long
+typeinfo name for unsigned long long const*
+typeinfo name for unsigned long long*
+typeinfo name for unsigned long*
+typeinfo name for unsigned short
+typeinfo name for unsigned short const*
+typeinfo name for unsigned short*
+typeinfo name for void
+typeinfo name for void const*
+typeinfo name for void*
+typeinfo name for wchar_t
+typeinfo name for wchar_t const*
+typeinfo name for wchar_t*
+ucontext_
+unReadAheadChunkSize < INT32_MAX/2
+unReadAheadChunkSize should be zero when using bUnbuffered = true
+uname
+uname@GLIBC_2.0
+ungetc
+ungetc@GLIBC_2.0
+ungetwc
+ungetwc@GLIBC_2.2
+unlink@GLIBC_2.0
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
+unsupported flags 0x%x passed to CFileReader::BOpenFile
+upload_file_minidump
+upper
+uptime
+utime@GLIBC_2.0
+utimes@GLIBC_2.0
+value_
+vector::_M_default_append
+vector::_M_fill_insert
+vector::_M_realloc_insert
+vector::reserve
+vendor_id
+vfork
+vfork@GLIBC_2.0
+virtual bool google_breakpad::LinuxPtraceDumper::GetThreadInfoByIndex(size_t, google_breakpad::ThreadInfo*)
+void
+void google_breakpad::LineReader::PopLine(unsigned int)
+void google_breakpad::MinidumpDescriptor::UpdatePath(const char*)
+void google_breakpad::MinidumpFileWriter::SetFile(int)
+void google_breakpad::ThreadInfo::GetFloatingPointRegisters(void**, size_t*)
+void google_breakpad::ThreadInfo::GetGeneralPurposeRegisters(void**, size_t*)
+void google_breakpad::{anonymous}::FindElfClassSection(const char*, const char*, typename ElfClass::Word, const void**, size_t*) [with ElfClass = google_breakpad::ElfClass32; typename ElfClass::Word = unsigned int; size_t = unsigned int]
+void google_breakpad::{anonymous}::FindElfClassSection(const char*, const char*, typename ElfClass::Word, const void**, size_t*) [with ElfClass = google_breakpad::ElfClass64; typename ElfClass::Word = unsigned int; size_t = unsigned int]
+void google_breakpad::{anonymous}::FindElfClassSegment(const char*, typename ElfClass::Word, const void**, size_t*) [with ElfClass = google_breakpad::ElfClass32; typename ElfClass::Word = unsigned int; size_t = unsigned int]
+void google_breakpad::{anonymous}::FindElfClassSegment(const char*, typename ElfClass::Word, const void**, size_t*) [with ElfClass = google_breakpad::ElfClass64; typename ElfClass::Word = unsigned int; size_t = unsigned int]
+vsnprintf
+vsnprintf@GLIBC_2.0
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
+vtable for __cxxabiv1::__fundamental_type_info
+vtable for __cxxabiv1::__pbase_type_info
+vtable for __cxxabiv1::__pointer_to_member_type_info
+vtable for __cxxabiv1::__pointer_type_info
+vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+vtable for __gnu_cxx::recursive_init_error
+waitpid
+waitpid@GLIBC_2.0
+wchar_t
+wcrtomb
+wcrtomb@GLIBC_2.0
+wcscmp
+wcscmp@GLIBC_2.0
+wcslen
+wcslen@GLIBC_2.0
+wcsnrtombs
+wcsnrtombs@GLIBC_2.0
+wctob
+wctob@GLIBC_2.0
+wmemchr
+wmemchr@GLIBC_2.0
+wmemcpy
+wmemcpy@GLIBC_2.0
+wmemmove
+wmemmove@GLIBC_2.0
+wmemset
+wmemset@GLIBC_2.0
+www.steampowered.com
+xdigit
+zDcrashhandler001
+{anonymous}::MinidumpWriter::MinidumpWriter(const char*, int, const google_breakpad::ExceptionHandler::CrashContext*, const MappingList&, const AppMemoryList&, google_breakpad::LinuxDumper*)
+{default arg#
+{lambda(
+{parm#
+{unnamed type#

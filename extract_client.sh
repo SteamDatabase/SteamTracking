@@ -66,10 +66,10 @@ do
 
 	name=$(basename "$file" .so)
 
-	"$DIR/DumpStrings/DumpStrings" -target elf -binary "$file" > "$DIR/Strings/$name.txt"
+	"$DIR/DumpStrings/DumpStrings" -target elf -binary "$file" | sort --unique > "$DIR/Strings/$name.txt"
 done <   <(find linux_bins/ubuntu12_32/ -name '*.so' -print0)
 
-"$DIR/DumpStrings/DumpStrings" -target elf -binary "$DIR/ClientExtracted/ubuntu12_32/steam" > "$DIR/Strings/steam.txt"
+"$DIR/DumpStrings/DumpStrings" -target elf -binary "$DIR/ClientExtracted/ubuntu12_32/steam" | sort --unique > "$DIR/Strings/steam.txt"
 
 #
 # Jump to extracted folder

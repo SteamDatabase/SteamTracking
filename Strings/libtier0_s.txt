@@ -1,2091 +1,1403 @@
-__gmon_start__
-_fini
-_ITM_deregisterTMCloneTable
-_ITM_registerTMCloneTable
-__cxa_finalize
-strncpy
-ShouldUseNewAssertDialog
-Plat_IsInDebugSession
-DoNewAssertDialog
-Plat_CommandLineParamExists
-ThreadInMainThread
-strcasecmp
-stderr
-__fprintf_chk
-SetInAssert
-IsInAssert
-IsInFatalAssert
-SetInFatalAssert
-__wrap_fopen
-strncasecmp
-fgets
-strchr
-strtol
-fclose
-Error
-AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
-GetCPUInformation()
-GetPortableSystemInformation
-strstr
-sscanf
-getenv
-gettimeofday
-usleep
-__dprintf_chk
-SteamThreadTools::CThreadMutex::~CThreadMutex()
-SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
-rewind
-fflush
-getpid
-__snprintf_chk
-GetSpewOutputFunc
-SetFlushLogFunc
-CallFlushLogFunc
-SetAssertFailedNotifyFunc
-CallAssertFailedNotifyFunc
-GetSpewAndLogLevel
-GetNumberOfSpewAndLogGroups
-GetSpewAndLogLevelByGroupIndex
-IsSpewActive
-g_VProfProfilesRunningCount
-CVProfile_ExitScope
-VProfInternalEnterScopeCurrentThread
-_DMsg
-_SpewMessageType
-_SpewMessageTypeSourceV
-ThreadGetCurrentId
-ThreadInterlockedAssignIf
-ThreadInterlockedIncrement
-__vsnprintf_chk
-ThreadInterlockedDecrement
-SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
-ThreadInterlockedExchange
-stdout
-fwrite
-fputc
-SteamThreadTools::CThreadMutex::CThreadMutex()
-__cxa_atexit
-_exit
-_SpewMessageTypeSourceFmt
-DWarning
-DLog
-IsLogActive
-CrackSmokingCompiler
-SpewWrittenMiniDumps
-Plat_localtime
-SetAssertDumpStack
-AssertMsgImplementationPreformatted
-SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
-SteamThreadTools::CThreadLocalBase::BIsValid() const
-FreeCrashMemoryReserve
-BGetMiniDumpLock
-BBlockingGetMiniDumpLock
-BWritingMiniDump
-MiniDumpUnlock
-SteamThreadTools::CThreadLocalBase::Get() const
-SteamThreadTools::CThreadLocalBase::Set(void*)
-RealGetCallStack
-RealPrintCallStack
-SpewAndLogActivate
-g_pMemAllocSteam
-memmove
-strlen
-__strcpy_chk
-SpewActivate
-SpewChangeIfStillDefault
-SpewAndLogChangeIfStillDefault
-AssertMsgImplementationV
-AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
-AssertMsgImplementationF
-ValidateSpew
-CValidator::Push(char const*, void*, char const*)
-CValidator::ClaimMemory(void const*)
-CValidator::Pop()
-ClearStackTrackingFilters
-GetNumberOfStackTrackingFilters
-GetStackTrackingFilter
-SetStackTrackingFilter
-IsStackTrackingFiltered
-HasStackTrackingFilters
-AreStackTrackingFiltersEnabledAtStart
-Plat_CommandLineParamValue
-InitializeStackTrackingFilters
-Plat_FloatTime
-pthread_mutex_lock
-__wrap_open
-pthread_mutex_unlock
-___tls_get_addr
-ETWIsTracingEnabled
-ETWMark
-ETWMarkPrintf
-ETWMark1I
-ETWMark2I
-ETWMark3I
-ETWMark1S
-ETWMark2S
-ETWBegin
-ETWEnd
-ETWRenderFrameMark
-ETWOverlayFrameMark
-ETW_Streaming_SendPacket
-ETW_Steamworks_IPCSend_Start
-ETW_Steamworks_IPCSend_End_
-ETW_Steamworks_IPCRecv_Start
-ETW_Steamworks_IPCRecv_End_
-ETW_Steamworks_RunCallbacks_Start
-ETW_Steamworks_RunCallbacks_End_
-ETW_Steamworks_DispatchCallback_Start
-ETW_Steamworks_DispatchCallback_End_
-Plat_RelativeTickFrequency
-g_ClockSpeed
-g_ClockSpeedMicrosecondsMultiplier
-g_ClockSpeedMillisecondsMultiplier
-g_ClockSpeedSecondsMultiplier
-Plat_GetStackBackTrace
-CStack::Print(void (*)(int, CStack::PrintFrame const*, void*), void*) const
-backtrace_symbols
-free
-RealPrintRawCallStack
-malloc_usable_size
-memset
-ThreadInterlockedExchangeAdd64
-posix_memalign
-__printf_chk
-malloc
-memcmp
-realloc
-memcpy
-vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__si_class_type_info
-pthread_mutex_trylock
-Plat_GetExecutablePath
-strrchr
-__ctype_tolower_loc
-dladdr
-__wrap_dlopen
-dlsym
-ThreadSleep
-BWritingFatalMiniDump
-BWritingNonFatalMiniDump
-ClearWritingMiniDump
-SetMiniDumpAppID
-SetMiniDumpBuildID
-GetMiniDumpBuildID
-SetMiniDumpSteamID
-GetMiniDumpSteamID
-SetMiniDumpCustomInfo
-SetMiniDumpProcessNameOverride
-GetMiniDumpDirectory
-EnableCrashingOnCrashes
-SetFullMemoryDumpOnCrash
-ThreadInterlockedCompareExchangePointer
-AllocateCrashMemoryReserve
-dlclose
-CatchAndWriteMiniDumpEx
-CatchAndWriteMiniDump
-CatchAndWriteMiniDumpExReturnsInt
-CatchAndWriteMiniDumpExForVoidPtrFn
-CatchAndWriteMiniDumpForVoidPtrFn
-GetCrashHandlerFactory
-g_bInException
-Plat_asctime
-asctime_r
-Plat_ctime
-Plat_timezone
-Plat_daylight
-Plat_gmtime
-gmtime_r
-Plat_timegm
-localtime_r
-Plat_AbsoluteTime
-Plat_AbsoluteTimeToFloat
-Plat_GetPOSIXClockSource
-clock_gettime
-Plat_TickAddMicroSec
-Plat_TickDiffMilliSec
-Plat_TickDiffMicroSec
-Plat_RelativeTicks
-Plat_MSTime
-Plat_USTime
-Plat_MSTime64
-Plat_DefaultAllocErrorFn
-vtune
-Plat_VirtualAccessFlags
-Plat_VirtualAlloc
-mmap
-Plat_VirtualProtect
-mprotect
-Plat_VirtualFree
-munmap
-Plat_Alloc
-Plat_Realloc
-Plat_Free
-Plat_SetAllocErrorFn
-Plat_InternalOverrideArgv
-Plat_GetProcessArgv
-Plat_IsSteamOS3
-Plat_IsSteamConsoleMode
-Plat_IsSteamOS
-Plat_IsChromeOS
-Plat_IsSteamDeck
-Plat_IsTesla
-Plat_IsGamescope
-Plat_IsWSL
-readlink
-Plat_GetExecutablePathUTF8
-Is64BitOS
-uname
-GetInstalledRAM
-__ctype_b_loc
-GetAvailableRAM
-GetCRunTimeVersion
-gnu_get_libc_version
-BGetLocalFQDN
-gethostname
-gethostbyname
-GetLocalHostname
-Plat_GetPackageName
-Plat_OutputDebugString
-__vfprintf_chk
-Plat_OutputDebugStringRaw
-fputs
-Plat_AttachDebuggerToProcess
-backtrace
-SecureRandomBytes
-__errno_location
-InitPME
-ShutdownPME
-SteamThreadTools::CThread::Init()
-SteamThreadTools::CThread::OnExit()
-SteamThreadTools::CThread::GetThreadProc()
-SteamThreadTools::CThread::ThreadProc(void*)
-SteamThreadTools::CThread::ThreadExceptionWrapper(void*)
-waitpid
-syscall
-SteamThreadTools::CThreadMutex::~CThreadMutex()
-pthread_mutex_destroy
-SteamThreadTools::CreateSimpleThread(unsigned int (*)(void*), void*, unsigned int*, unsigned int)
-pthread_create
-ReleaseThreadHandle
-sched_yield
-ThreadSpinWaitForValue
-ThreadMicroSleepPOSIX
-nanosleep
-ThreadGetCurrentHandle
-pthread_self
-ThreadGetCurrentRunningRef
-ThreadIsThreadRunning
-ThreadGetPriority
-getpriority
-ThreadTerminate
-pthread_cancel
-ThreadSetAffinity
-DeclareCurrentThreadIsMainThread
-ThreadSetDebugName
-pthread_setname_np
-CreateSimpleProcess
-fork
-sigemptyset
-sigaddset
-sigprocmask
-__wrap_opendir
-readdir
-closedir
-system
-setsid
-strncat
-execv
-ThreadGetCurrentProcessHandle
-ThreadOpenProcess
-ThreadCloseProcess
-ThreadGetProcessId
-ThreadGetCurrentProcessId
-ThreadIsProcessIdActive
-waitid
-strerror
-ThreadIsProcessActive
-ThreadSuspendProcess
-ThreadResumeProcess
-ThreadTerminateProcessCode
-ThreadGetProcessExitCode
-ThreadWaitForProcessExit
-__wrap___xstat64
-__wrap_chdir
-sigaction
-__memcpy_chk
-ThreadShellExecute
-ThreadShellExecuteNoWindow
-ThreadFindProcessByName
-SteamThreadTools::CThreadSyncObject::CThreadSyncObject()
-SteamThreadTools::CThreadSyncObject::CThreadSyncObject()
-SteamThreadTools::CThreadSyncObject::operator!() const
-SteamThreadTools::CThreadSyncObject::AssertUseable()
-SteamThreadTools::CThreadSyncObject::SaveNameToFile(char const*)
-SteamThreadTools::CThreadSyncObject::CreateAnonymousSyncObjectInternal(bool, bool)
-pthread_mutexattr_init
-pthread_condattr_init
-pthread_condattr_setclock
-pthread_mutex_init
-pthread_mutexattr_destroy
-pthread_cond_init
-pthread_condattr_destroy
-SteamThreadTools::CThreadSyncObject::SignalThreadSyncObjectInternal()
-pthread_cond_broadcast
-pthread_cond_signal
-SteamThreadTools::CThreadSyncObject::IsSemaphoreOrphanedInternal(int, int)
-semctl
-SteamThreadTools::CThreadSyncObject::CreateSemaphoreInternal(char const*, long, bool, bool*)
-semget
-SteamThreadTools::CThreadSyncObject::OpenSemaphoreInternal(char const*, bool)
-SteamThreadTools::CThreadSyncObject::AcquireSemaphoreInternal(unsigned int)
-semop
-SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
-pthread_cond_timedwait
-pthread_cond_wait
-SteamThreadTools::CThreadEvent::Check()
-SteamThreadTools::CThreadSyncObject::ReleaseSemaphoreInternal(int, long)
-SteamThreadTools::CThreadSyncObject::CloseSemaphoreInternal(int, bool, char const*)
-SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
-pthread_cond_destroy
-SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
-SteamThreadTools::CThreadEvent::CThreadEvent(bool)
-SteamThreadTools::CThreadEvent::CThreadEvent(bool)
-SteamThreadTools::CThreadEvent::CThreadEvent(char const*, bool, bool)
-SteamThreadTools::CThreadEvent::CThreadEvent(char const*, bool, bool)
-SteamThreadTools::CThreadSyncObject::EnsureSemaphoreClearedInternal(int)
-SteamThreadTools::CThreadEvent::Reset()
-SteamThreadTools::CThreadSyncObject::EnsureSemaphorePostedInternal(int)
-SteamThreadTools::CThreadEvent::Set()
-SteamThreadTools::CThreadSemaphore::CThreadSemaphore(long, long)
-SteamThreadTools::CThreadSemaphore::CThreadSemaphore(long, long)
-SteamThreadTools::CThreadSemaphore::Release(long)
-SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
-SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
-SteamThreadTools::CThreadFullMutex::Release()
-SteamThreadTools::CThreadFullMutex::IsCreator() const
-SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
-pthread_key_delete
-SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
-pthread_getspecific
-pthread_setspecific
-ThreadInterlockedExchangeAdd
-ThreadInterlockedCompareExchange
-ThreadImplOneTimeInit
-ThreadInterlockedExchangePointer
-ThreadInterlockedAssignPointerIf
-ThreadInterlockedIncrement64
-ThreadInterlockedDecrement64
-ThreadInterlockedExchange64
-ThreadInterlockedCompareExchange64
-ThreadInterlockedAssignIf64
-SteamThreadTools::CThreadMutex::CThreadMutex()
-pthread_mutexattr_settype
-ThreadSetPriority
-sched_get_priority_max
-sched_get_priority_min
-pthread_setschedparam
-setpriority
-ThreadSetBackgroundPriority
-SteamThreadTools::CThreadRWLock::WaitForRead()
-SteamThreadTools::CThreadRWLock::LockForWrite()
-SteamThreadTools::CThreadRWLock::UnlockWrite()
-SteamThreadTools::CThread::CThread()
-vtable for SteamThreadTools::CThread
-SteamThreadTools::CThread::CThread()
-SteamThreadTools::CThread::GetName()
-SteamThreadTools::CThread::SetName(char const*)
-SteamThreadTools::CThread::BHasValidThreadID() const
-SteamThreadTools::CThread::IsThreadRunning() const
-pthread_kill
-SteamThreadTools::CThread::IsAlive() const
-SteamThreadTools::CThread::GetResult() const
-SteamThreadTools::CThread::GetPriority() const
-SteamThreadTools::CThread::SetPriority(int)
-SteamThreadTools::CThread::Suspend()
-SteamThreadTools::CThread::Resume()
-SteamThreadTools::CThread::Terminate(int)
-SteamThreadTools::CThread::GetCurrentCThread()
-SteamThreadTools::CThread::Join(unsigned int)
-pthread_join
-SteamThreadTools::CThread::~CThread()
-SteamThreadTools::CThread::~CThread()
-SteamThreadTools::CThread::~CThread()
-SteamThreadTools::CThread::Stop(int)
-typeinfo for int
-SteamThreadTools::CThread::Yield()
-SteamThreadTools::CThread::Sleep(unsigned int)
-SteamThreadTools::CThread::WaitForCreateComplete(SteamThreadTools::CThreadEvent*)
-SteamThreadTools::CThread::Start(unsigned int)
-pthread_attr_init
-pthread_attr_setstacksize
-typeinfo name for SteamThreadTools::CThread
-typeinfo for SteamThreadTools::CThread
-CTier0::ValidateGlobals(CValidator&)
-TSListBase_Init
-TSListBase_Push
-TSListBase_Pop
-TSListBase_SwapList
-TSListBase_UnsafePeek
-TSQueueBase_Init
-TSQueueBase_Push
-TSQueueBase_Pop
-TSQueue_PopIntoFreeList
-TSQueueBase_UnsafePeek
-TSQueueBase_UnsafeDummy
-TSQueue_UnsafeDebugCheck
-IsValidBoolValue
-EnsureValidBoolValue
-RunTypeValidationTests
-__memset_chk
-CAdHocValidation_SimpleCallback::DoValidate(CValidator&) const
-CValidator::CValidator(int, bool, IMemBlockClaimedList*)
-CValidator::CValidator(int, bool, IMemBlockClaimedList*)
-CValidator::SetAllocSizeFilter(int)
-CValidator::IsClaimed(void const*) const
-CValidator::ClaimUntrackedMemory(unsigned int)
-CValidator::ClaimMemory_Aligned(void const*)
-CValidator::ClaimArrayMemory(void const*)
-CValidator::ClaimTrackedKey(CTrackItems*, void*, unsigned int*)
-CValidator::ClaimSocket(int)
-CValidator::ClaimOsFile(int)
-CValidator::ClaimConnection(unsigned int)
-CValidator::Finalize()
-CValidator::RenderLeaks(unsigned int)
-CValidator::BExcludeAllocationFromTracking(char const*, int)
-CValidator::FindObject(void*)
-CValidator::Validate(CValidator&, char const*)
-CValidator::AddValidationLock(SteamThreadTools::CThreadMutex*)
-CValidator::UnlockValidationLocks()
-CValidator::~CValidator()
-CValidator::~CValidator()
-CAdHocValidation::CAdHocValidation()
-vtable for CAdHocValidation
-CAdHocValidation::s_pFirst
-CAdHocValidation::CAdHocValidation()
-CAdHocValidation::~CAdHocValidation()
-CAdHocValidation::~CAdHocValidation()
-CAdHocValidation::StaticValidateAll(CValidator&)
-CAdHocValidation_SimpleCallback::CAdHocValidation_SimpleCallback(void (*)(CValidator&))
-vtable for CAdHocValidation_SimpleCallback
-CAdHocValidation_SimpleCallback::CAdHocValidation_SimpleCallback(void (*)(CValidator&))
-CValidator::RenderObjects(unsigned int)
-CValidator::DiffAgainst(CValidator*)
-typeinfo name for CAdHocValidation
-typeinfo for CAdHocValidation
-typeinfo name for CAdHocValidation_SimpleCallback
-typeinfo for CAdHocValidation_SimpleCallback
-SteamVProf::CVProfManager::~CVProfManager()
-SteamVProf::CVProfManager::~CVProfManager()
-SteamVProf::CVProfileArray::~CVProfileArray()
-SteamVProf::CVProfileArray::~CVProfileArray()
-SteamVProf::CVProfNode::~CVProfNode()
-SteamVProf::CVProfNode::~CVProfNode()
-SteamVProf::CVProfNode::Pause()
-SteamVProf::CVProfNode::Resume()
-SteamVProf::CVProfNode::Reset()
-SteamVProf::CVProfNode::CVProfNode(SteamVProf::CVProfile*, char const*, SteamVProf::CVProfNode*, EVProfBugdetGroup)
-SteamVProf::CVProfNode::CVProfNode(SteamVProf::CVProfile*, char const*, SteamVProf::CVProfNode*, EVProfBugdetGroup)
-SteamVProf::CVProfNode::ResetPeak()
-SteamVProf::CVProfNode::SetCurFrameTime(unsigned long)
-SteamVProf::CVProfNode::GetTotalTimeLessChildren()
-SteamVProf::CVProfNode::GetCurTimeLessChildren()
-SteamVProf::CVProfNode::GetPrevTimeLessChildren()
-SteamVProf::CVProfNode::Validate(CValidator&, char const*)
-SteamVProf::CVProfile::Start()
-SteamVProf::CVProfile::Stop()
-SteamVProf::CVProfile::GetBudgetGroupName(EVProfBugdetGroup) const
-SteamVProf::CVProfile::ExitScope()
-SteamVProf::CVProfile::Pause()
-SteamVProf::CVProfile::Resume()
-SteamVProf::CVProfile::ResetPeaks()
-SteamVProf::CVProfile::UnregisterCallbackHandler(SteamVProf::IVProfileCallbackHandler*)
-SteamVProf::CVProfile::FindNode(SteamVProf::CVProfNode*, char const*)
-strcmp
-SteamVProf::CVProfile::Dump(char const*, ...)
-SteamVProf::CVProfile::DumpSingleNode(SteamVProf::CVProfNode*, SteamVProf::CVProfNode*, int, bool)
-SteamVProf::CVProfile::BProfileHasNodesOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, int)
-SteamVProf::CVProfile::GetFrameTimeOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, EVProfBugdetGroup)
-SteamVProf::CVProfile::DestructAndFreeNodesExceptRoot()
-SteamVProf::CVProfile::Reset()
-SteamVProf::CVProfile::Term()
-SteamVProf::CVProfile::GetThreadID()
-SteamVProf::CVProfile::GetBudgetGroupColor(EVProfBugdetGroup, int&, int&, int&, int&)
-SteamVProf::CVProfile::AddBudgetGroupName(EVProfBugdetGroup, int, char const*)
-strcpy
-SteamVProf::CVProfile::CreateBudgetGroups()
-SteamVProf::CVProfile::BudgetGroupNameToBudgetGroupID(char const*) const
-SteamVProf::CVProfile::Validate(CValidator&, char const*)
-SteamVProf::CVProfManager::CVProfManager()
-SteamVProf::CVProfManager::CVProfManager()
-SteamVProf::CVProfManager::BIsProfilePtrValid(SteamVProf::CVProfile*)
-SteamVProf::CVProfManager::GetAllThreadProfiles(SteamVProf::CVProfileArray*)
-SteamVProf::CVProfManager::Validate(CValidator&, char const*)
-typeinfo name for SteamVProf::CVProfManager
-SteamVProf::CVProfileThreadEntry::CVProfileThreadEntry(SteamVProf::CVProfile*, unsigned int, unsigned int)
-SteamVProf::CVProfileThreadEntry::CVProfileThreadEntry(SteamVProf::CVProfile*, unsigned int, unsigned int)
-SteamVProf::CVProfileThreadEntry::StartProfiling(float, int)
-SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
-SteamVProf::CVProfileThreadEntry::StopProfiling()
-SteamVProf::CVProfManager::StopProfilingAllThreads()
-SteamVProf::CVProfileThreadEntry::SetDumpSpikesThreshold(int)
-SteamVProf::CVProfManager::EnableDumpSpikes(int)
-SteamVProf::CVProfileThreadEntry::DumpProfile(int)
-SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
-SteamVProf::CVProfileThreadEntry::OnFrameCompleted()
-SteamVProf::CVProfile::RegisterCallbackHandler(SteamVProf::IVProfileCallbackHandler*)
-SteamVProf::CVProfile::SumTimes(SteamVProf::CVProfNode*, int)
-SteamVProf::CVProfile::DumpNodes(SteamVProf::CVProfNode*, SteamVProf::CVProfNode*, int, bool)
-SteamVProf::CVProfile::~CVProfile()
-SteamVProf::CVProfile::~CVProfile()
-SteamVProf::CVProfileThreadEntry::DeleteProfile()
-SteamVProf::CVProfManager::CleanupUnusedProfiles()
-SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, unsigned int)
-SteamVProf::CVProfile::AllocVProfNode(SteamVProf::CVProfile*, char const*, SteamVProf::CVProfNode*, EVProfBugdetGroup)
-SteamVProf::CVProfile::CVProfile()
-SteamVProf::CVProfile::CVProfile()
-VProfInternalGetProfileForCurrentThread
-g_VProfile
-g_VProfManager
-SteamVProf::CVProfNode::GetSubNode(char const*, EVProfBugdetGroup)
-SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
-SteamVProf::CVProfile::DumpSorted(char const*, double, bool (*)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), int)
-SteamVProf::CVProfile::OutputReport(int, char const*, int)
-SteamVProf::CVProfileThreadEntry::OnNewFrameEntered()
-SteamVProf::CVProfile::MarkFrame(char const*)
-__pthread_key_create
-realpath
-strdup
-faccessat
-readdir64
-tolower
-strcasestr
-SteamRealPath
-__realpath_chk
-__wrap_freopen
-strpbrk
-__wrap_fopen64
-__wrap_open64
-__wrap_access
-__wrap_stat
-__wrap_lstat
-__wrap_stat64
-__wrap_lstat64
-__wrap_scandir
-__wrap_scandir64
-__wrap___xstat
-__wrap___lxstat
-__wrap___lxstat64
-__wrap_statvfs
-__wrap_statvfs64
-__wrap_statfs
-__wrap_statfs64
-__wrap_chmod
-__wrap_chown
-__wrap_lchown
-__wrap_symlink
-__wrap_link
-__wrap_mknod
-__wrap_mount
-__wrap_unlink
-__wrap_mkfifo
-__wrap_rename
-__wrap_utime
-__wrap_utimes
-__wrap_mkdir
-__wrap_rmdir
-__wrap_dlmopen
-typeinfo name for __cxxabiv1::__class_type_info
-typeinfo for __cxxabiv1::__class_type_info
-vtable for __gnu_cxx::__concurrence_lock_error
-vtable for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo for __cxxabiv1::__forced_unwind
-typeinfo name for __cxxabiv1::__foreign_exception
-typeinfo for __cxxabiv1::__foreign_exception
-vtable for __cxxabiv1::__forced_unwind
-vtable for __cxxabiv1::__foreign_exception
-abort
-vtable for __cxxabiv1::__fundamental_type_info
-typeinfo name for __cxxabiv1::__fundamental_type_info
-typeinfo for __cxxabiv1::__fundamental_type_info
-typeinfo name for void
-typeinfo name for void*
-typeinfo name for void const*
-typeinfo name for bool
-typeinfo name for bool*
-typeinfo name for bool const*
-typeinfo name for wchar_t
-typeinfo name for wchar_t*
-typeinfo name for wchar_t const*
-typeinfo name for char8_t
-typeinfo name for char8_t*
-typeinfo name for char8_t const*
-typeinfo name for char16_t
-typeinfo name for char16_t*
-typeinfo name for char16_t const*
-typeinfo name for char32_t
-typeinfo name for char32_t*
-typeinfo name for char32_t const*
-typeinfo name for char
-typeinfo name for char*
-typeinfo name for char const*
-typeinfo name for signed char
-typeinfo name for signed char*
-typeinfo name for signed char const*
-typeinfo name for unsigned char
-typeinfo name for unsigned char*
-typeinfo name for unsigned char const*
-typeinfo name for short
-typeinfo name for short*
-typeinfo name for short const*
-typeinfo name for unsigned short
-typeinfo name for unsigned short*
-typeinfo name for unsigned short const*
-typeinfo name for int
-typeinfo name for int*
-typeinfo name for int const*
-typeinfo name for unsigned int
-typeinfo name for unsigned int*
-typeinfo name for unsigned int const*
-typeinfo name for long
-typeinfo name for long*
-typeinfo name for long const*
-typeinfo name for unsigned long
-typeinfo name for unsigned long*
-typeinfo name for unsigned long const*
-typeinfo name for long long
-typeinfo name for long long*
-typeinfo name for long long const*
-typeinfo name for unsigned long long
-typeinfo name for unsigned long long*
-typeinfo name for unsigned long long const*
-typeinfo name for float
-typeinfo name for float*
-typeinfo name for float const*
-typeinfo name for double
-typeinfo name for double*
-typeinfo name for double const*
-typeinfo name for long double
-typeinfo name for long double*
-typeinfo name for long double const*
-typeinfo name for decimal32
-typeinfo name for decimal32*
-typeinfo name for decimal32 const*
-typeinfo name for decimal64
-typeinfo name for decimal64*
-typeinfo name for decimal64 const*
-typeinfo name for decimal128
-typeinfo name for decimal128*
-typeinfo name for decimal128 const*
-typeinfo name for std::nullptr_t
-typeinfo name for std::nullptr_t*
-typeinfo name for std::nullptr_t const*
-typeinfo name for __float128
-typeinfo name for __float128*
-typeinfo name for __float128 const*
-typeinfo for __float128 const*
-vtable for __cxxabiv1::__pointer_type_info
-typeinfo for __float128
-typeinfo for __float128*
-typeinfo for std::nullptr_t const*
-typeinfo for std::nullptr_t
-typeinfo for std::nullptr_t*
-typeinfo for decimal128 const*
-typeinfo for decimal128
-typeinfo for decimal128*
-typeinfo for decimal64 const*
-typeinfo for decimal64
-typeinfo for decimal64*
-typeinfo for decimal32 const*
-typeinfo for decimal32
-typeinfo for decimal32*
-typeinfo for long double const*
-typeinfo for long double
-typeinfo for long double*
-typeinfo for double const*
-typeinfo for double
-typeinfo for double*
-typeinfo for float const*
-typeinfo for float
-typeinfo for float*
-typeinfo for unsigned long long const*
-typeinfo for unsigned long long
-typeinfo for unsigned long long*
-typeinfo for long long const*
-typeinfo for long long
-typeinfo for long long*
-typeinfo for unsigned long const*
-typeinfo for unsigned long
-typeinfo for unsigned long*
-typeinfo for long const*
-typeinfo for long
-typeinfo for long*
-typeinfo for unsigned int const*
-typeinfo for unsigned int
-typeinfo for unsigned int*
-typeinfo for int const*
-typeinfo for int*
-typeinfo for unsigned short const*
-typeinfo for unsigned short
-typeinfo for unsigned short*
-typeinfo for short const*
-typeinfo for short
-typeinfo for short*
-typeinfo for unsigned char const*
-typeinfo for unsigned char
-typeinfo for unsigned char*
-typeinfo for signed char const*
-typeinfo for signed char
-typeinfo for signed char*
-typeinfo for char const*
-typeinfo for char
-typeinfo for char*
-typeinfo for char32_t const*
-typeinfo for char32_t
-typeinfo for char32_t*
-typeinfo for char16_t const*
-typeinfo for char16_t
-typeinfo for char16_t*
-typeinfo for char8_t const*
-typeinfo for char8_t
-typeinfo for char8_t*
-typeinfo for wchar_t const*
-typeinfo for wchar_t
-typeinfo for wchar_t*
-typeinfo for bool const*
-typeinfo for bool
-typeinfo for bool*
-typeinfo for void const*
-typeinfo for void
-typeinfo for void*
-typeinfo for __gnu_cxx::recursive_init_error
-vtable for __gnu_cxx::recursive_init_error
-typeinfo name for __gnu_cxx::recursive_init_error
-typeinfo name for __cxxabiv1::__pointer_type_info
-typeinfo for __cxxabiv1::__pointer_type_info
-typeinfo for __cxxabiv1::__pbase_type_info
-typeinfo name for __cxxabiv1::__si_class_type_info
-typeinfo for __cxxabiv1::__si_class_type_info
-gettext
-__sprintf_chk
-strncmp
-vtable for __cxxabiv1::__pbase_type_info
-typeinfo for __cxxabiv1::__pointer_to_member_type_info
-typeinfo name for __cxxabiv1::__pbase_type_info
-vtable for __cxxabiv1::__pointer_to_member_type_info
-typeinfo name for __cxxabiv1::__pointer_to_member_type_info
-_txnal_cow_string_D1_commit(void*)
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-_ITM_RU1
-transaction clone for operator new[](unsigned int)
-_ITM_memcpyRtWn
-_txnal_cow_string_c_str(void const*)
-_ITM_RU4
-_txnal_cow_string_D1(void*)
-_ITM_addUserCommitAction
-_txnal_logic_error_get_msg(void*)
-_txnal_runtime_error_get_msg(void*)
-pthread_once
-dl_iterate_phdr
-__timezone
-__daylight
-__xmknod
-__stack_chk_fail
-libdl.so.2
-librt.so.1
-ld-linux.so.2
-libpthread.so.0
-libc.so.6
-GLIBC_2.2
-GLIBC_2.3.4
-GLIBC_2.1
-GLIBC_2.0
-GLIBC_2.3
-GLIBC_2.8
-GLIBC_2.2.4
-GLIBC_2.1.3
-GLIBC_2.4
-GLIBC_2.3.3
-GLIBC_2.12
-GLIBC_2.3.2
--noassert
--nocrashdialog
--debugbreak
-AuthenticAMD
-Unable to determine CPU Frequency. Try defining CPU_MHZ.\n
-!"couldn't read cpu information from /proc/cpuinfo"
-/proc/cpuinfo
-processor
-core id
-physical id
-/data/src/tier0/cpu.cpp
-CPU_MHZ
-/sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
-/proc/%d/status
-TracerPid:
-IsSpewActive
-Exiting on SPEW_ABORT\n
-Minidumps written:\n
+       Sum (ms)         Avg Time/Frame (ms)     Avg Time/Call (ms)\n
+  %10.3f %6.2f      %10.3f %6.2f      %10.3f %6.2f   %6d %6.2f
+  %10.3f %6.2f      %6d
+  %52s%12d%12.3f%6.2f%%%12.3f%6.2f%%%12.3f%12.3f%12.3f\n
+  ---------- ------      ---------- ------      ---------- ------   ------ ------\n
+  ---------- ------      ------\n
+  ---------------------------------------------------- ----------- ----------- ------ ----------- ------ ----------- ----------- -----------\n
+  Scope                                                      Calls  Time+Child    Pct        Time    Pct   Avg+Child         Avg        Peak\n
+  what():  
  - file:%s, line:%u ,time:%04u%02u%02u%02u%02u%02u\n
-Fatal assert
-DONT_BREAK_ON_ASSERT
-_ExitOnFatalAssert\n
-Fatal assert; application exiting
-pGroupName
-/data/src/tier0/dbg.cpp
-strlen( pGroupName ) < MAX_GROUP_NAME_LENGTH
-Spew Globals
-Spew globals
--stack=
-Fatal Assertion Failed: 
-/sys/kernel/debug/tracing/trace_marker
-/sys/kernel/tracing/trace_marker
-%s begin_ctx=%lld
-%s end_ctx=%lld
-%s: %d, %d, %d
-%s: '%s', '%s'
-RenderFrameMark
-OverlayFrameMark
-StreamingSendPacket: %s %u %u %u %u %u %d
-Steamworks_IPCSend
-Steamworks_IPCSend: %s::%s
-Steamworks_IPCRecv
-Steamworks_IPCRecv: %s::%s
-SteamCallbacks
-Steamworks_DispatchCallback
-Steamworks_DispatchCallback: %u,%u -> %d, %u
-Stack:%2d    %s (%d): %s\n
-Stack%2d: %s\n
-Stack%2d: 0x%llX\n
-Assertion Failed: stack%2d: %s (%d): %s
-/data/src/tier0/memblockhdr.cpp
-Assertion Failed: stack%2d: %s
-Assertion Failed: stack%2d: 0x%llX
-ppFrames[iFrame] != NULL
-Failed to capture callstack
-false
-/data/src/tier0/memstd.cpp
-No tracked allocs currently in use. Total %d\n
-Tracked allocs currently in use. %d Total %d\n
-item %p sentinel corrupted. skipping.\n
-Busy, please retry.\n
-(iub & (m_nSizeWithStack-1)) == 0
-pAllocTracker->m_uSentinel == 0xaa110ced
-((size_t)(m_nLogicalBytesAllocated) % 8) == 0
-***** OUT OF MEMORY! attempted allocation size: %zu ****\n
-OUT OF MEMORY
-pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
-/data/src/public/tier0/memblockhdr.h
-DumpMemTrackingStats %d %d \n
-vector::reserve
-vector::_M_realloc_insert
-\t%d items : %s - %s:%d\n
-9IMemAlloc
-12CStdMemAlloc
-Gunknown
-CreateInterface
-crashhandler004
-crashhandler003
-crashhandler002
-Assert( %s ):%s:%d\n
-Jul 30 2024
-%02d:%02d:%02d
-22:43:04
-%04d%02d%02d%02d%02d%02d
-steamwebhelper
-cefwebhelper
-Steam Helper
-crashhandler.so
-Someone called SetWritingMinidump without holding the minidump lock.
-/data/src/tier0/minidump.cpp
-Someone called ClearWritingMinidump without holding the minidump lock.
-!g_pCrashMemoryReserve
-CatchAndWriteContext_t::Invoke with bogus argc/argv
-CatchAndWriteContext_t::Invoke with bogus void *ptr
-CatchAndWriteContext_t::Set w/o a function pointer!
-IVALIDATE001
-(knN
-MbP?-steamos3
--holo
--steamconsole
--steamos
--hometest
--chromeos
--steamdeck
--tesla
-GAMESCOPE_WAYLAND_DISPLAY
-WSL_DISTRO_NAME
-/proc/self/exe
-x86_64
-aarch64
-/proc/meminfo
-MemTotal:
-MemFree:
-com.valvesoftware.steam
-/dev/urandom
-s_dev_urandom_fd >= 0
-/data/src/tier0/platform_posix.cpp
-urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
-Probably deadlock or failure waiting for thread to initialize.
-/data/src/tier0/threadtools.cpp
-Failed to get thread priority: foreign thread unsupported\n
-Failed to get thread priority: getpriority failed %d\n
-libSDL3.so.0
-SDL_GetError
-SDL_SetThreadPriority
-Warning: failed to set thread priority: foreign thread unsupported\n
-Warning: failed to set thread priority: set failed for %d: %d: %s\n
-/proc/self/fd
-exec 
-/bin/sh
-ThreadGetProcessExitCode
-%s: no such process %d\n
-Thread synchronization object is unuseable
-USER
-semaphore creation failed %s
-Attempting to create a named event with a null name
-Semaphore name (%s) is longer than POSIX can handle, truncating.
-the same event name (%s) was created as both manual and auto reset, something's fubar'd
-Invalid max value for semaphore
-Invalid initial value for semaphore
-m_bSemOwner
-pszName == NULL || *pszName == '/' || (isalpha((unsigned char) *pszName) && pszName[1] == ':' && pszName[2] == '/')
-POSIX does not support inheriting full mutexes
-Anonymous mutex cannot have bAllAccess == true
-tid(%u) pthread_key_create failed: %s\n
-Bad thread local: Get\n
-Failed to set thread local value
-Bad thread local: Set\n
-Warning: thread priority outside allowed range %d\n
-Warning: failed to set thread priority: set failed for priority %d\n
-Warning: support for elevated priorities is most likely unavailable, suppressing future warnings\n
-Thread(0x%p/0x%p/0x%x)
-Must Start() thread before setting priority
-Thread cannot be joined with self
-Illegal termination of worker thread '%s'
-Deleting thread object from the thread, this is bad
-Only thread can stop self: Use a higher-level protocol
-Tried to create a thread that has already been created!
-Failed to create thread (error 0x%x)
-Mismatched thread handle during thread Start()
-Invalid thread id during thread Start()
-Thread failed to initialize\n
-N16SteamThreadTools7CThreadE
-QkkXa
-ACTSListBase: Misaligned list\n
-CTSQueue bad tail pointer
-CTSQueue bad tail->Next value
-CTSQueue bad node count
-CTSQueue bad peek pointer when empty
-CTSQueue m_HeadTailPair mismatch when empty
-CTSQueue freelist depth mismatch
-EnsureValidBoolValue: invalid value: possible use of uninitialized/corrupt memory
-/data/src/tier0/typechecks.cpp
-TestBoolValueChecks: bTrue must be valid
-TestBoolValueChecks: bFalse must be valid
-TestBoolValueChecks: bEnsuredValue must be valid
-TestBoolValueChecks: bBadValue must be invalid
-m_pValObjects != NULL
-/data/src/tier0/validator.cpp
-CValidator : too many memory nodes to store, try again with a higher threshold value\n
-NULL != m_pValObjectCur
-!pTracker->IsClaimed( pKey )
-pTracker->Find( pKey ) != NULL
-C-runtime internal
-PS3 Unattributed
-steamclient.so
-gsoapwrapper.so
-propack.so
-nattypeprobe.so
-p2pstunserver.so
-p2prelayserver.so
-p2pcore.so
-steamservice.so
-xmemory
-xlocale
-misc.h
-secblock.h
-vgui2_s.so
-steamui.so
-friendsui.so
-serverbrowser.so
-chromehtml.so
-tenfoot.so
-filesystem_steam.so
-filesystem_stdio.so
-externaltests.so
-audio.so
-video.so
-video64_server.so
-panorama.so
-CValidator
-!m_bJustCount
-m_iThreadMutexValidationLock < (int) ( sizeof(m_threadMutexValidationLock)/sizeof(m_threadMutexValidationLock[0]) )
-m_iThreadMutexValidationLock == 0
- bytes
+ Avg Time/Frame (ms)\n
  GiB
  KiB
  MiB
-Total bytes allocated (os heap reported): %s\n
-Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
-Total bytes allocated counted: %s\n
-%d validator nodes, %d nodes larger than %s\n
-%%%ds | %%9s | %%12s\n
-Size
-Blocks
-Object
-%%-%ds | %%9d | %%12s\n
-g_pMemAllocSteam
-%*s%s %s --> %d blocks = %s (new)\n
-%*s%s %s --> %d blocks = %s (%s larger)\n
-16CAdHocValidation
-31CAdHocValidation_SimpleCallback
->NULL == pValObjectPrev->m_pValObjectNext
-/data/src/tier0/valobject.cpp
-/data/src/tier0/vprof.cpp
-CVProfNode
-m_pSibling
-m_pChild
-m_nRecursions > 0
-/data/src/public/tier0/vprof.h
-m_pszName
- Avg Time/Frame (ms)\n
-  %10.3f %6.2f      %6d
-[ func+child   func ]     Count\n
-  ---------- ------      ------\n
-       Sum (ms)         Avg Time/Frame (ms)     Avg Time/Call (ms)\n
-[ func+child   func ]  [ func+child   func ]  [ func+child   func ]  Count   Peak\n
-  ---------- ------      ---------- ------      ---------- ------   ------ ------\n
-  %10.3f %6.2f      %10.3f %6.2f      %10.3f %6.2f   %6d %6.2f
-m_vecNodeMemBlocks.size() == 1 && block.m_iCurIndexToUse == 1
-m_pBudgetGroups
-eGroup < VPROF_BUDGETGROUP_MAX
-m_pBudgetGroups == NULL
-Unaccounted
-Sleeping
-VGUI
-FileSystem
-ClientDLL
-SteamUI
-Network
-Encryption
-OverlayRendering
-OverlayInput
-GameOverlayUI
-RunCallbacks
-Logger
-Jobs/Coroutines
-ServerMain
-Streaming
-ThreadWorkItem
-TenFoot
-tier1
-WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.\n
-m_vecNodeMemBlocks.size() == 1
-No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
-Root
+ [clone 
+ __vector(
+ bytes
+ const
+ noexcept
+ restrict
+ throw
+ transaction_safe
+ volatile
+!"couldn't read cpu information from /proc/cpuinfo"
 !g_VProfile
-  Scope                                                      Calls  Time+Child    Pct        Time    Pct   Avg+Child         Avg        Peak\n
-  ---------------------------------------------------- ----------- ----------- ------ ----------- ------ ----------- ----------- -----------\n
-  %52s%12d%12.3f%6.2f%%%12.3f%6.2f%%%12.3f%12.3f%12.3f\n
-VPROF Report for Thread: %d - %s\n
-No samples during profile period.\n
-Thread did nothing but sleep during profile period.\n
-%d frames sampled for %.2f seconds\n
-Average %.2f fps, %.2f ms per frame\n
+!g_pCrashMemoryReserve
+!m_bJustCount
+!pTracker->IsClaimed( pKey )
+%%%ds | %%9s | %%12s\n
+%%-%ds | %%9d | %%12s\n
+%*s%s %s --> %d blocks = %s (%s larger)\n
+%*s%s %s --> %d blocks = %s (new)\n
 %.1f pct of time accounted for\n
+%02d:%02d:%02d
+%04d%02d%02d%02d%02d%02d
+%d frames sampled for %.2f seconds\n
+%d validator nodes, %d nodes larger than %s\n
+%s begin_ctx=%lld
+%s end_ctx=%lld
+%s/.steam/steam
+%s: %d, %d, %d
+%s: '%s', '%s'
+%s: no such process %d\n
+(%zu) Descend: %s, (%s), %s\n
+(%zu) readdir failed to find '%s' in '%s'\n
+((size_t)(m_nLogicalBytesAllocated) % 8) == 0
+(anonymous namespace)
+(iub & (m_nSizeWithStack-1)) == 0
+(knN
+***** OUT OF MEMORY! attempted allocation size: %zu ****\n
 -- Hierarchical Call Graph --\n
--- Profile scopes sorted by time (including children) --
--- Profile scopes sorted by time (without children) --
 -- Profile scopes sorted by average time (including children) --
 -- Profile scopes sorted by average time (without children) --
 -- Profile scopes sorted by peak --
 -- Profile scopes sorted by peak over average (including children) --
+-- Profile scopes sorted by time (including children) --
+-- Profile scopes sorted by time (without children) --
 -- Summary --\n
-Peak %.2f ms frame\n
-N10SteamVProf13CVProfManagerE
+-chromeos
+-debugbreak
+-holo
+-hometest
+-noassert
+-nocrashdialog
+-stack=
+-steamconsole
+-steamdeck
+-steamos
+-tesla
+/bin/sh
+/data/src/public/tier0/memblockhdr.h
+/data/src/public/tier0/vprof.h
+/data/src/tier0/cpu.cpp
+/data/src/tier0/dbg.cpp
+/data/src/tier0/memblockhdr.cpp
+/data/src/tier0/memstd.cpp
+/data/src/tier0/minidump.cpp
+/data/src/tier0/platform_posix.cpp
+/data/src/tier0/threadtools.cpp
+/data/src/tier0/typechecks.cpp
+/data/src/tier0/validator.cpp
+/data/src/tier0/valobject.cpp
+/data/src/tier0/vprof.cpp
+/dev/urandom
+/proc/%d/status
+/proc/cpuinfo
+/proc/meminfo
+/proc/self/exe
+/proc/self/fd
+/sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
+/sys/kernel/debug/tracing/trace_marker
+/sys/kernel/tracing/trace_marker
+12CStdMemAlloc
+16CAdHocValidation
+22:43:04
+31CAdHocValidation_SimpleCallback
+9IMemAlloc
+>NULL == pValObjectPrev->m_pValObjectNext
+?basic_string::_S_create
+ACTSListBase: Misaligned list\n
+AllocateCrashMemoryReserve
+Anonymous mutex cannot have bAllAccess == true
+AreStackTrackingFiltersEnabledAtStart
+Assert( %s ):%s:%d\n
+AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
+AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
+AssertMsgImplementationF
+AssertMsgImplementationPreformatted
+AssertMsgImplementationV
+Assertion Failed: stack%2d: %s
+Assertion Failed: stack%2d: %s (%d): %s
+Assertion Failed: stack%2d: 0x%llX
+Attempting to create a named event with a null name
+AuthenticAMD
+Average %.2f fps, %.2f ms per frame\n
+BBlockingGetMiniDumpLock
+BGetLocalFQDN
+BGetMiniDumpLock
 BHOME
-%s/.steam/steam
-true
-false 
-(%zu) Descend: %s, (%s), %s\n
-\t(%zu) comparing %s with %s\n
-(%zu) readdir failed to find '%s' in '%s'\n
-DBG_PATHMATCH
-Lowered '%s' -> '%s'\n
+BWritingFatalMiniDump
+BWritingMiniDump
+BWritingNonFatalMiniDump
+Bad thread local: Get\n
+Bad thread local: Set\n
+Blocks
 Breaking '%s' in '%s'\n
+Busy, please retry.\n
+C-runtime internal
+CAdHocValidation::CAdHocValidation()
+CAdHocValidation::StaticValidateAll(CValidator&)
+CAdHocValidation::s_pFirst
+CAdHocValidation::~CAdHocValidation()
+CAdHocValidation_SimpleCallback::CAdHocValidation_SimpleCallback(void (*)(CValidator&))
+CAdHocValidation_SimpleCallback::DoValidate(CValidator&) const
+CH\f1
+CPU_MHZ
+CStack::Print(void (*)(int, CStack::PrintFrame const*, void*), void*) const
+CTSQueue bad node count
+CTSQueue bad peek pointer when empty
+CTSQueue bad tail pointer
+CTSQueue bad tail->Next value
+CTSQueue freelist depth mismatch
+CTSQueue m_HeadTailPair mismatch when empty
+CTier0::ValidateGlobals(CValidator&)
+CVProfNode
+CVProfile_ExitScope
+CValidator
+CValidator : too many memory nodes to store, try again with a higher threshold value\n
+CValidator::AddValidationLock(SteamThreadTools::CThreadMutex*)
+CValidator::BExcludeAllocationFromTracking(char const*, int)
+CValidator::CValidator(int, bool, IMemBlockClaimedList*)
+CValidator::ClaimArrayMemory(void const*)
+CValidator::ClaimConnection(unsigned int)
+CValidator::ClaimMemory(void const*)
+CValidator::ClaimMemory_Aligned(void const*)
+CValidator::ClaimOsFile(int)
+CValidator::ClaimSocket(int)
+CValidator::ClaimTrackedKey(CTrackItems*, void*, unsigned int*)
+CValidator::ClaimUntrackedMemory(unsigned int)
+CValidator::DiffAgainst(CValidator*)
+CValidator::Finalize()
+CValidator::FindObject(void*)
+CValidator::IsClaimed(void const*) const
+CValidator::Pop()
+CValidator::Push(char const*, void*, char const*)
+CValidator::RenderLeaks(unsigned int)
+CValidator::RenderObjects(unsigned int)
+CValidator::SetAllocSizeFilter(int)
+CValidator::UnlockValidationLocks()
+CValidator::Validate(CValidator&, char const*)
+CValidator::~CValidator()
+CallAssertFailedNotifyFunc
+CallFlushLogFunc
+CatchAndWriteContext_t::Invoke with bogus argc/argv
+CatchAndWriteContext_t::Invoke with bogus void *ptr
+CatchAndWriteContext_t::Set w/o a function pointer!
+CatchAndWriteMiniDump
+CatchAndWriteMiniDumpEx
+CatchAndWriteMiniDumpExForVoidPtrFn
+CatchAndWriteMiniDumpExReturnsInt
+CatchAndWriteMiniDumpForVoidPtrFn
+ClearStackTrackingFilters
+ClearWritingMiniDump
+ClientDLL
+CrackSmokingCompiler
+CreateInterface
+CreateSimpleProcess
+DBG_PATHMATCH
+DLog
+DONT_BREAK_ON_ASSERT
+DWarning
+DeclareCurrentThreadIsMainThread
+Deleting thread object from the thread, this is bad
+DoNewAssertDialog
+DumpMemTrackingStats %d %d \n
+ETWBegin
+ETWEnd
+ETWIsTracingEnabled
+ETWMark
+ETWMark1I
+ETWMark1S
+ETWMark2I
+ETWMark2S
+ETWMark3I
+ETWMarkPrintf
+ETWOverlayFrameMark
+ETWRenderFrameMark
+ETW_Steamworks_DispatchCallback_End_
+ETW_Steamworks_DispatchCallback_Start
+ETW_Steamworks_IPCRecv_End_
+ETW_Steamworks_IPCRecv_Start
+ETW_Steamworks_IPCSend_End_
+ETW_Steamworks_IPCSend_Start
+ETW_Steamworks_RunCallbacks_End_
+ETW_Steamworks_RunCallbacks_Start
+ETW_Streaming_SendPacket
+EnableCrashingOnCrashes
+Encryption
+EnsureValidBoolValue
+EnsureValidBoolValue: invalid value: possible use of uninitialized/corrupt memory
+Error
+Exiting on SPEW_ABORT\n
+Failed to capture callstack
+Failed to create thread (error 0x%x)
+Failed to get thread priority: foreign thread unsupported\n
+Failed to get thread priority: getpriority failed %d\n
+Failed to set thread local value
+Fatal Assertion Failed: 
+Fatal assert
+Fatal assert; application exiting
+FileSystem
+FoCLcx
+FreeCrashMemoryReserve
+GAMESCOPE_WAYLAND_DISPLAY
+GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
+GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
+GLIBC_2.0
+GLIBC_2.1
+GLIBC_2.1.3
+GLIBC_2.12
+GLIBC_2.2
+GLIBC_2.2.4
+GLIBC_2.3
+GLIBC_2.3.2
+GLIBC_2.3.3
+GLIBC_2.3.4
+GLIBC_2.4
+GLIBC_2.8
+GameOverlayUI
+GetAvailableRAM
+GetCPUInformation()
+GetCRunTimeVersion
+GetCrashHandlerFactory
+GetInstalledRAM
+GetLocalHostname
+GetMiniDumpBuildID
+GetMiniDumpDirectory
+GetMiniDumpSteamID
+GetNumberOfSpewAndLogGroups
+GetNumberOfStackTrackingFilters
+GetPortableSystemInformation
+GetSpewAndLogLevel
+GetSpewAndLogLevelByGroupIndex
+GetSpewOutputFunc
+GetStackTrackingFilter
+Gunknown
+HasStackTrackingFilters
+IVALIDATE001
+Illegal termination of worker thread '%s'
+InitPME
+InitializeStackTrackingFilters
+Invalid initial value for semaphore
+Invalid max value for semaphore
+Invalid thread id during thread Start()
+Is64BitOS
+IsInAssert
+IsInFatalAssert
+IsLogActive
+IsSpewActive
+IsStackTrackingFiltered
+IsValidBoolValue
+JArray
+Jobs/Coroutines
+Jul 30 2024
+Logger
+Logical bytes allocated (no heap overhead/fragmentation, but includes sbh block size overhead): %s\n
+Lowered '%s' -> '%s'\n
 Matched '%s' -> '%s'\n
-Unmatched %s\n
+MbP?-steamos3
+MemFree:
+MemTotal:
+MiniDumpUnlock
+Minidumps written:\n
+Mismatched thread handle during thread Start()
+Must Start() thread before setting priority
+N10SteamVProf13CVProfManagerE
+N10__cxxabiv115__forced_unwindE
 N10__cxxabiv117__class_type_infoE
-__gnu_cxx::__concurrence_lock_error
-__gnu_cxx::__concurrence_unlock_error
+N10__cxxabiv117__pbase_type_infoE
+N10__cxxabiv119__foreign_exceptionE
+N10__cxxabiv119__pointer_type_infoE
+N10__cxxabiv120__si_class_type_infoE
+N10__cxxabiv123__fundamental_type_infoE
+N10__cxxabiv129__pointer_to_member_type_infoE
+N16SteamThreadTools7CThreadE
+N9__gnu_cxx20recursive_init_errorE
 N9__gnu_cxx24__concurrence_lock_errorE
 N9__gnu_cxx26__concurrence_unlock_errorE
-std::exception
-std::bad_exception
-St9exception
-St13bad_exception
-N10__cxxabiv115__forced_unwindE
-N10__cxxabiv119__foreign_exceptionE
-N10__cxxabiv123__fundamental_type_infoE
-PKDu
-PKDs
-PKDi
-PKDf
+NULL != m_pValObjectCur
+Network
+No room for new profile in vprof thread profile list, grow MAX_THREADS_TO_VPROF_AT_ONCE
+No samples during profile period.\n
+No tracked allocs currently in use. Total %d\n
+OUT OF MEMORY
+Object
+Only thread can stop self: Use a higher-level protocol
+OverlayFrameMark
+OverlayInput
+OverlayRendering
 PKDd
 PKDe
+PKDf
+PKDi
 PKDn
-N9__gnu_cxx20recursive_init_errorE
-N10__cxxabiv119__pointer_type_infoE
-pure virtual method called\n
-N10__cxxabiv120__si_class_type_infoE
-St9type_info
-terminate called recursively\n
-  what():  
-terminate called after throwing an instance of '
-terminate called without an active exception\n
-CH\f1
-FoCLcx
-?basic_string::_S_create
-basic_string::_S_construct null not valid
-std::bad_alloc
-St9bad_alloc
-std::bad_array_new_length
+PKDs
+PKDu
+POSIX does not support inheriting full mutexes
+PS3 Unattributed
+Peak %.2f ms frame\n
+Plat_AbsoluteTime
+Plat_AbsoluteTimeToFloat
+Plat_Alloc
+Plat_AttachDebuggerToProcess
+Plat_CommandLineParamExists
+Plat_CommandLineParamValue
+Plat_DefaultAllocErrorFn
+Plat_FloatTime
+Plat_Free
+Plat_GetExecutablePath
+Plat_GetExecutablePathUTF8
+Plat_GetPOSIXClockSource
+Plat_GetPackageName
+Plat_GetProcessArgv
+Plat_GetStackBackTrace
+Plat_InternalOverrideArgv
+Plat_IsChromeOS
+Plat_IsGamescope
+Plat_IsInDebugSession
+Plat_IsSteamConsoleMode
+Plat_IsSteamDeck
+Plat_IsSteamOS
+Plat_IsSteamOS3
+Plat_IsTesla
+Plat_IsWSL
+Plat_MSTime
+Plat_MSTime64
+Plat_OutputDebugString
+Plat_OutputDebugStringRaw
+Plat_Realloc
+Plat_RelativeTickFrequency
+Plat_RelativeTicks
+Plat_SetAllocErrorFn
+Plat_TickAddMicroSec
+Plat_TickDiffMicroSec
+Plat_TickDiffMilliSec
+Plat_USTime
+Plat_VirtualAccessFlags
+Plat_VirtualAlloc
+Plat_VirtualFree
+Plat_VirtualProtect
+Plat_asctime
+Plat_ctime
+Plat_daylight
+Plat_gmtime
+Plat_localtime
+Plat_timegm
+Plat_timezone
+Probably deadlock or failure waiting for thread to initialize.
+QkkXa
+RealGetCallStack
+RealPrintCallStack
+RealPrintRawCallStack
+ReleaseThreadHandle
+RenderFrameMark
+Root
+RunCallbacks
+RunTypeValidationTests
+SDL_GetError
+SDL_SetThreadPriority
+SecureRandomBytes
+Semaphore name (%s) is longer than POSIX can handle, truncating.
+ServerMain
+SetAssertDumpStack
+SetAssertFailedNotifyFunc
+SetFlushLogFunc
+SetFullMemoryDumpOnCrash
+SetInAssert
+SetInFatalAssert
+SetMiniDumpAppID
+SetMiniDumpBuildID
+SetMiniDumpCustomInfo
+SetMiniDumpProcessNameOverride
+SetMiniDumpSteamID
+SetStackTrackingFilter
+ShouldUseNewAssertDialog
+ShutdownPME
+Size
+Sleeping
+Someone called ClearWritingMinidump without holding the minidump lock.
+Someone called SetWritingMinidump without holding the minidump lock.
+Spew Globals
+Spew globals
+SpewActivate
+SpewAndLogActivate
+SpewAndLogChangeIfStillDefault
+SpewChangeIfStillDefault
+SpewWrittenMiniDumps
+St11logic_error
+St12length_error
+St13bad_exception
 St20bad_array_new_length
-_GLOBAL_
-(anonymous namespace)
-string literal
-auto
-decltype(auto)
-[abi:
-{default arg#
-JArray
-auto:
-VTT for 
-construction vtable for 
-typeinfo for 
-typeinfo name for 
-typeinfo fn for 
-non-virtual thunk to 
-covariant return thunk to 
-java Class for 
-guard variable for 
+St9bad_alloc
+St9exception
+St9type_info
+Stack%2d: %s\n
+Stack%2d: 0x%llX\n
+Stack:%2d    %s (%d): %s\n
+Steam Helper
+SteamCallbacks
+SteamRealPath
+SteamThreadTools::CThread::BHasValidThreadID() const
+SteamThreadTools::CThread::CThread()
+SteamThreadTools::CThread::GetCurrentCThread()
+SteamThreadTools::CThread::GetName()
+SteamThreadTools::CThread::GetPriority() const
+SteamThreadTools::CThread::GetResult() const
+SteamThreadTools::CThread::GetThreadProc()
+SteamThreadTools::CThread::Init()
+SteamThreadTools::CThread::IsAlive() const
+SteamThreadTools::CThread::IsThreadRunning() const
+SteamThreadTools::CThread::Join(unsigned int)
+SteamThreadTools::CThread::OnExit()
+SteamThreadTools::CThread::Resume()
+SteamThreadTools::CThread::SetName(char const*)
+SteamThreadTools::CThread::SetPriority(int)
+SteamThreadTools::CThread::Sleep(unsigned int)
+SteamThreadTools::CThread::Start(unsigned int)
+SteamThreadTools::CThread::Stop(int)
+SteamThreadTools::CThread::Suspend()
+SteamThreadTools::CThread::Terminate(int)
+SteamThreadTools::CThread::ThreadExceptionWrapper(void*)
+SteamThreadTools::CThread::ThreadProc(void*)
+SteamThreadTools::CThread::WaitForCreateComplete(SteamThreadTools::CThreadEvent*)
+SteamThreadTools::CThread::Yield()
+SteamThreadTools::CThread::~CThread()
+SteamThreadTools::CThreadEvent::CThreadEvent(bool)
+SteamThreadTools::CThreadEvent::CThreadEvent(char const*, bool, bool)
+SteamThreadTools::CThreadEvent::Check()
+SteamThreadTools::CThreadEvent::Reset()
+SteamThreadTools::CThreadEvent::Set()
+SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
+SteamThreadTools::CThreadFullMutex::IsCreator() const
+SteamThreadTools::CThreadFullMutex::Release()
+SteamThreadTools::CThreadLocalBase::BIsValid() const
+SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
+SteamThreadTools::CThreadLocalBase::Get() const
+SteamThreadTools::CThreadLocalBase::Set(void*)
+SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
+SteamThreadTools::CThreadMutex::CThreadMutex()
+SteamThreadTools::CThreadMutex::~CThreadMutex()
+SteamThreadTools::CThreadRWLock::LockForWrite()
+SteamThreadTools::CThreadRWLock::UnlockWrite()
+SteamThreadTools::CThreadRWLock::WaitForRead()
+SteamThreadTools::CThreadSemaphore::CThreadSemaphore(long, long)
+SteamThreadTools::CThreadSemaphore::Release(long)
+SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
+SteamThreadTools::CThreadSyncObject::AcquireSemaphoreInternal(unsigned int)
+SteamThreadTools::CThreadSyncObject::AssertUseable()
+SteamThreadTools::CThreadSyncObject::CThreadSyncObject()
+SteamThreadTools::CThreadSyncObject::CloseSemaphoreInternal(int, bool, char const*)
+SteamThreadTools::CThreadSyncObject::CreateAnonymousSyncObjectInternal(bool, bool)
+SteamThreadTools::CThreadSyncObject::CreateSemaphoreInternal(char const*, long, bool, bool*)
+SteamThreadTools::CThreadSyncObject::EnsureSemaphoreClearedInternal(int)
+SteamThreadTools::CThreadSyncObject::EnsureSemaphorePostedInternal(int)
+SteamThreadTools::CThreadSyncObject::IsSemaphoreOrphanedInternal(int, int)
+SteamThreadTools::CThreadSyncObject::OpenSemaphoreInternal(char const*, bool)
+SteamThreadTools::CThreadSyncObject::ReleaseSemaphoreInternal(int, long)
+SteamThreadTools::CThreadSyncObject::SaveNameToFile(char const*)
+SteamThreadTools::CThreadSyncObject::SignalThreadSyncObjectInternal()
+SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
+SteamThreadTools::CThreadSyncObject::operator!() const
+SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
+SteamThreadTools::CreateSimpleThread(unsigned int (*)(void*), void*, unsigned int*, unsigned int)
+SteamUI
+SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, unsigned int)
+SteamVProf::CVProfManager::BIsProfilePtrValid(SteamVProf::CVProfile*)
+SteamVProf::CVProfManager::CVProfManager()
+SteamVProf::CVProfManager::CleanupUnusedProfiles()
+SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
+SteamVProf::CVProfManager::EnableDumpSpikes(int)
+SteamVProf::CVProfManager::GetAllThreadProfiles(SteamVProf::CVProfileArray*)
+SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
+SteamVProf::CVProfManager::StopProfilingAllThreads()
+SteamVProf::CVProfManager::Validate(CValidator&, char const*)
+SteamVProf::CVProfManager::~CVProfManager()
+SteamVProf::CVProfNode::CVProfNode(SteamVProf::CVProfile*, char const*, SteamVProf::CVProfNode*, EVProfBugdetGroup)
+SteamVProf::CVProfNode::GetCurTimeLessChildren()
+SteamVProf::CVProfNode::GetPrevTimeLessChildren()
+SteamVProf::CVProfNode::GetSubNode(char const*, EVProfBugdetGroup)
+SteamVProf::CVProfNode::GetTotalTimeLessChildren()
+SteamVProf::CVProfNode::Pause()
+SteamVProf::CVProfNode::Reset()
+SteamVProf::CVProfNode::ResetPeak()
+SteamVProf::CVProfNode::Resume()
+SteamVProf::CVProfNode::SetCurFrameTime(unsigned long)
+SteamVProf::CVProfNode::Validate(CValidator&, char const*)
+SteamVProf::CVProfNode::~CVProfNode()
+SteamVProf::CVProfile::AddBudgetGroupName(EVProfBugdetGroup, int, char const*)
+SteamVProf::CVProfile::AllocVProfNode(SteamVProf::CVProfile*, char const*, SteamVProf::CVProfNode*, EVProfBugdetGroup)
+SteamVProf::CVProfile::BProfileHasNodesOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, int)
+SteamVProf::CVProfile::BudgetGroupNameToBudgetGroupID(char const*) const
+SteamVProf::CVProfile::CVProfile()
+SteamVProf::CVProfile::CreateBudgetGroups()
+SteamVProf::CVProfile::DestructAndFreeNodesExceptRoot()
+SteamVProf::CVProfile::Dump(char const*, ...)
+SteamVProf::CVProfile::DumpNodes(SteamVProf::CVProfNode*, SteamVProf::CVProfNode*, int, bool)
+SteamVProf::CVProfile::DumpSingleNode(SteamVProf::CVProfNode*, SteamVProf::CVProfNode*, int, bool)
+SteamVProf::CVProfile::DumpSorted(char const*, double, bool (*)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), int)
+SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
+SteamVProf::CVProfile::ExitScope()
+SteamVProf::CVProfile::FindNode(SteamVProf::CVProfNode*, char const*)
+SteamVProf::CVProfile::GetBudgetGroupColor(EVProfBugdetGroup, int&, int&, int&, int&)
+SteamVProf::CVProfile::GetBudgetGroupName(EVProfBugdetGroup) const
+SteamVProf::CVProfile::GetFrameTimeOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, EVProfBugdetGroup)
+SteamVProf::CVProfile::GetThreadID()
+SteamVProf::CVProfile::MarkFrame(char const*)
+SteamVProf::CVProfile::OutputReport(int, char const*, int)
+SteamVProf::CVProfile::Pause()
+SteamVProf::CVProfile::RegisterCallbackHandler(SteamVProf::IVProfileCallbackHandler*)
+SteamVProf::CVProfile::Reset()
+SteamVProf::CVProfile::ResetPeaks()
+SteamVProf::CVProfile::Resume()
+SteamVProf::CVProfile::Start()
+SteamVProf::CVProfile::Stop()
+SteamVProf::CVProfile::SumTimes(SteamVProf::CVProfNode*, int)
+SteamVProf::CVProfile::Term()
+SteamVProf::CVProfile::UnregisterCallbackHandler(SteamVProf::IVProfileCallbackHandler*)
+SteamVProf::CVProfile::Validate(CValidator&, char const*)
+SteamVProf::CVProfile::~CVProfile()
+SteamVProf::CVProfileArray::~CVProfileArray()
+SteamVProf::CVProfileThreadEntry::CVProfileThreadEntry(SteamVProf::CVProfile*, unsigned int, unsigned int)
+SteamVProf::CVProfileThreadEntry::DeleteProfile()
+SteamVProf::CVProfileThreadEntry::DumpProfile(int)
+SteamVProf::CVProfileThreadEntry::OnFrameCompleted()
+SteamVProf::CVProfileThreadEntry::OnNewFrameEntered()
+SteamVProf::CVProfileThreadEntry::SetDumpSpikesThreshold(int)
+SteamVProf::CVProfileThreadEntry::StartProfiling(float, int)
+SteamVProf::CVProfileThreadEntry::StopProfiling()
+Steamworks_DispatchCallback
+Steamworks_DispatchCallback: %u,%u -> %d, %u
+Steamworks_IPCRecv
+Steamworks_IPCRecv: %s::%s
+Steamworks_IPCSend
+Steamworks_IPCSend: %s::%s
+Streaming
+StreamingSendPacket: %s %u %u %u %u %u %d
 TLS init function for 
 TLS wrapper function for 
-reference temporary #
-hidden alias for 
-non-transaction clone for 
-_Sat 
-_Fract
+TSListBase_Init
+TSListBase_Pop
+TSListBase_Push
+TSListBase_SwapList
+TSListBase_UnsafePeek
+TSQueueBase_Init
+TSQueueBase_Pop
+TSQueueBase_Push
+TSQueueBase_UnsafeDummy
+TSQueueBase_UnsafePeek
+TSQueue_PopIntoFreeList
+TSQueue_UnsafeDebugCheck
+TenFoot
+TestBoolValueChecks: bBadValue must be invalid
+TestBoolValueChecks: bEnsuredValue must be valid
+TestBoolValueChecks: bFalse must be valid
+TestBoolValueChecks: bTrue must be valid
+Thread cannot be joined with self
+Thread did nothing but sleep during profile period.\n
+Thread failed to initialize\n
+Thread synchronization object is unuseable
+Thread(0x%p/0x%p/0x%x)
+ThreadCloseProcess
+ThreadFindProcessByName
+ThreadGetCurrentHandle
+ThreadGetCurrentId
+ThreadGetCurrentProcessHandle
+ThreadGetCurrentProcessId
+ThreadGetCurrentRunningRef
+ThreadGetPriority
+ThreadGetProcessExitCode
+ThreadGetProcessId
+ThreadImplOneTimeInit
+ThreadInMainThread
+ThreadInterlockedAssignIf
+ThreadInterlockedAssignIf64
+ThreadInterlockedAssignPointerIf
+ThreadInterlockedCompareExchange
+ThreadInterlockedCompareExchange64
+ThreadInterlockedCompareExchangePointer
+ThreadInterlockedDecrement
+ThreadInterlockedDecrement64
+ThreadInterlockedExchange
+ThreadInterlockedExchange64
+ThreadInterlockedExchangeAdd
+ThreadInterlockedExchangeAdd64
+ThreadInterlockedExchangePointer
+ThreadInterlockedIncrement
+ThreadInterlockedIncrement64
+ThreadIsProcessActive
+ThreadIsProcessIdActive
+ThreadIsThreadRunning
+ThreadMicroSleepPOSIX
+ThreadOpenProcess
+ThreadResumeProcess
+ThreadSetAffinity
+ThreadSetBackgroundPriority
+ThreadSetDebugName
+ThreadSetPriority
+ThreadShellExecute
+ThreadShellExecuteNoWindow
+ThreadSleep
+ThreadSpinWaitForValue
+ThreadSuspendProcess
+ThreadTerminate
+ThreadTerminateProcessCode
+ThreadWaitForProcessExit
+ThreadWorkItem
+Total bytes allocated (os heap reported): %s\n
+Total bytes allocated counted: %s\n
+TracerPid:
+Tracked allocs currently in use. %d Total %d\n
+Tried to create a thread that has already been created!
+USER
+Unable to determine CPU Frequency. Try defining CPU_MHZ.\n
+Unaccounted
+Unmatched %s\n
+VGUI
+VPROF Report for Thread: %d - %s\n
+VProfInternalEnterScopeCurrentThread
+VProfInternalGetProfileForCurrentThread
+VTT for 
+ValidateSpew
+WARNING: Disabling vprof spike dumping and stopping profile for thread %d - %s because of exceeded rate limit, try a higher threshold.\n
+WSL_DISTRO_NAME
+Warning: failed to set thread priority: foreign thread unsupported\n
+Warning: failed to set thread priority: set failed for %d: %d: %s\n
+Warning: failed to set thread priority: set failed for priority %d\n
+Warning: support for elevated priorities is most likely unavailable, suppressing future warnings\n
+Warning: thread priority outside allowed range %d\n
+[ func+child   func ]     Count\n
+[ func+child   func ]  [ func+child   func ]  [ func+child   func ]  Count   Peak\n
+[abi:
+\t%d items : %s - %s:%d\n
+\t(%zu) comparing %s with %s\n
 _Accum
-operator
-operator 
-new 
-java resource 
-decltype (
-{parm#
-this
-global constructors keyed to 
-global destructors keyed to 
-{lambda(
-{unnamed type#
- [clone 
- restrict
- volatile
- const
- transaction_safe
- noexcept
- throw
-complex 
-imaginary 
- __vector(
-std::allocator
-std::basic_string
-std::string
-std::istream
-basic_istream
-std::ostream
-basic_ostream
-std::iostream
-basic_iostream
+_DMsg
+_ExitOnFatalAssert\n
+_Fract
+_GLOBAL_
+_ITM_RU1
+_ITM_RU4
+_ITM_addUserCommitAction
+_ITM_deregisterTMCloneTable
+_ITM_memcpyRtWn
+_ITM_registerTMCloneTable
+_Sat 
+_SpewMessageType
+_SpewMessageTypeSourceFmt
+_SpewMessageTypeSourceV
+___tls_get_addr
+___tls_get_addr@GLIBC_2.3
+__ctype_b_loc
+__ctype_b_loc@GLIBC_2.3
+__ctype_tolower_loc
+__ctype_tolower_loc@GLIBC_2.3
+__cxa_atexit
+__cxa_atexit@GLIBC_2.1.3
+__cxa_finalize
+__cxa_finalize@GLIBC_2.1.3
+__daylight
+__daylight@GLIBC_2.0
+__dprintf_chk
+__dprintf_chk@GLIBC_2.8
+__errno_location
+__errno_location@GLIBC_2.0
+__float128
+__fprintf_chk
+__fprintf_chk@GLIBC_2.3.4
+__gmon_start__
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+__lxstat64@GLIBC_2.2
+__lxstat@GLIBC_2.0
+__memcpy_chk
+__memcpy_chk@GLIBC_2.3.4
+__memset_chk
+__memset_chk@GLIBC_2.3.4
+__printf_chk
+__printf_chk@GLIBC_2.3.4
+__pthread_key_create
+__pthread_key_create@GLIBC_2.0
+__realpath_chk
+__realpath_chk@GLIBC_2.4
+__snprintf_chk
+__snprintf_chk@GLIBC_2.3.4
+__sprintf_chk
+__sprintf_chk@GLIBC_2.3.4
+__stack_chk_fail
+__stack_chk_fail@GLIBC_2.4
+__strcpy_chk
+__strcpy_chk@GLIBC_2.3.4
+__timezone
+__timezone@GLIBC_2.0
+__vfprintf_chk
+__vfprintf_chk@GLIBC_2.3.4
+__vsnprintf_chk
+__vsnprintf_chk@GLIBC_2.3.4
+__wrap___lxstat
+__wrap___lxstat64
+__wrap___xstat
+__wrap___xstat64
+__wrap_access
+__wrap_chdir
+__wrap_chmod
+__wrap_chown
+__wrap_dlmopen
+__wrap_dlopen
+__wrap_fopen
+__wrap_fopen64
+__wrap_freopen
+__wrap_lchown
+__wrap_link
+__wrap_lstat
+__wrap_lstat64
+__wrap_mkdir
+__wrap_mkfifo
+__wrap_mknod
+__wrap_mount
+__wrap_open
+__wrap_open64
+__wrap_opendir
+__wrap_rename
+__wrap_rmdir
+__wrap_scandir
+__wrap_scandir64
+__wrap_stat
+__wrap_stat64
+__wrap_statfs
+__wrap_statfs64
+__wrap_statvfs
+__wrap_statvfs64
+__wrap_symlink
+__wrap_unlink
+__wrap_utime
+__wrap_utimes
+__xmknod
+__xmknod@GLIBC_2.0
+__xstat64@GLIBC_2.2
+__xstat@GLIBC_2.0
+_exit
+_exit@GLIBC_2.0
+_fini
+_init
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
+_txnal_cow_string_D1(void*)
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_c_str(void const*)
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
+aarch64
+abort
+abort@GLIBC_2.0
+access@GLIBC_2.0
 alignof 
-const_cast
-delete[] 
-dynamic_cast
-delete 
-operator"" 
-new[]
-reinterpret_cast
-sizeof...
-static_cast
-sizeof 
-throw 
+asctime_r
+asctime_r@GLIBC_2.0
+audio.so
+auto
+auto:
+backtrace
+backtrace@GLIBC_2.1
+backtrace_symbols
+backtrace_symbols@GLIBC_2.1
+basic_iostream
+basic_istream
+basic_ostream
+basic_string::_S_construct null not valid
 bool
 boolean
 byte
-long double
-float
-__float128
-unsigned char
-unsigned int
-unsigned
-unsigned long
-unsigned __int128
-unsigned short
-void
-wchar_t
-unsigned long long
-decimal32
-decimal64
-decimal128
-half
-char8_t
+cefwebhelper
 char16_t
 char32_t
+char8_t
+chdir@GLIBC_2.0
+chmod@GLIBC_2.0
+chown@GLIBC_2.1
+chromehtml.so
+clock_gettime
+clock_gettime@GLIBC_2.2
+closedir
+closedir@GLIBC_2.0
+com.valvesoftware.steam
+complex 
+const_cast
+construction vtable for 
+core id
+covariant return thunk to 
+crashhandler.so
+crashhandler002
+crashhandler003
+crashhandler004
+decimal128
+decimal32
+decimal64
+decltype (
+decltype(auto)
 decltype(nullptr)
-template parameter object for 
-std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+delete 
+delete[] 
+dl_iterate_phdr
+dl_iterate_phdr@GLIBC_2.2.4
+dladdr
+dladdr@GLIBC_2.0
+dlclose
+dlclose@GLIBC_2.0
+dlmopen@GLIBC_2.3.4
+dlopen@GLIBC_2.1
+dlsym
+dlsym@GLIBC_2.0
+dynamic_cast
+eGroup < VPROF_BUDGETGROUP_MAX
+exec 
+execv
+execv@GLIBC_2.0
+externaltests.so
+faccessat
+faccessat@GLIBC_2.4
+false
+false 
+fclose
+fclose@GLIBC_2.1
+fflush
+fflush@GLIBC_2.0
+fgets
+fgets@GLIBC_2.0
+filesystem_stdio.so
+filesystem_steam.so
+float
+fopen64@GLIBC_2.1
+fopen@GLIBC_2.1
+fork
+fork@GLIBC_2.0
+fputc
+fputc@GLIBC_2.0
+fputs
+fputs@GLIBC_2.0
+free
+free@GLIBC_2.0
+freopen@GLIBC_2.0
+friendsui.so
+fwrite
+fwrite@GLIBC_2.0
+g_ClockSpeed
+g_ClockSpeedMicrosecondsMultiplier
+g_ClockSpeedMillisecondsMultiplier
+g_ClockSpeedSecondsMultiplier
+g_VProfManager
+g_VProfProfilesRunningCount
+g_VProfile
+g_bInException
+g_pMemAllocSteam
+getenv
+getenv@GLIBC_2.0
+gethostbyname
+gethostbyname@GLIBC_2.0
+gethostname
+gethostname@GLIBC_2.0
+getpid
+getpid@GLIBC_2.0
+getpriority
+getpriority@GLIBC_2.0
+gettext
+gettext@GLIBC_2.0
+gettimeofday
+gettimeofday@GLIBC_2.0
+global constructors keyed to 
+global destructors keyed to 
+gmtime_r
+gmtime_r@GLIBC_2.0
+gnu_get_libc_version
+gnu_get_libc_version@GLIBC_2.1
+gsoapwrapper.so
+guard variable for 
+half
+hidden alias for 
+imaginary 
+item %p sentinel corrupted. skipping.\n
+java Class for 
+java resource 
+lchown@GLIBC_2.0
+ld-linux.so.2
+libSDL3.so.0
+libc.so.6
+libdl.so.2
+libpthread.so.0
+librt.so.1
+localtime_r
+localtime_r@GLIBC_2.0
+long double
+m_bSemOwner
+m_iThreadMutexValidationLock < (int) ( sizeof(m_threadMutexValidationLock)/sizeof(m_threadMutexValidationLock[0]) )
+m_iThreadMutexValidationLock == 0
+m_nRecursions > 0
+m_pBudgetGroups
+m_pBudgetGroups == NULL
+m_pChild
+m_pSibling
+m_pValObjects != NULL
+m_pszName
+m_vecNodeMemBlocks.size() == 1
+m_vecNodeMemBlocks.size() == 1 && block.m_iCurIndexToUse == 1
+malloc
+malloc@GLIBC_2.0
+malloc_usable_size
+malloc_usable_size@GLIBC_2.0
+memcmp
+memcmp@GLIBC_2.0
+memcpy
+memcpy@GLIBC_2.0
+memmove
+memmove@GLIBC_2.0
+memset
+memset@GLIBC_2.0
+misc.h
+mkdir@GLIBC_2.0
+mkfifo@GLIBC_2.0
+mmap
+mmap@GLIBC_2.0
+mount@GLIBC_2.0
+mprotect
+mprotect@GLIBC_2.0
+munmap
+munmap@GLIBC_2.0
+nanosleep
+nanosleep@GLIBC_2.0
+nattypeprobe.so
+new 
+new[]
+non-transaction clone for 
+non-virtual thunk to 
+open64@GLIBC_2.2
+opendir@GLIBC_2.0
+operator
+operator 
+operator"" 
+p2pcore.so
+p2prelayserver.so
+p2pstunserver.so
+pAllocTracker->m_uSentinel == 0xaa110ced
+pGroupName
+pLeft->m_iStackPC <= V_ARRAYSIZE(pLeft->m_StackPC)
+pTracker->Find( pKey ) != NULL
+panorama.so
+physical id
+posix_memalign
+posix_memalign@GLIBC_2.2
+ppFrames[iFrame] != NULL
+processor
+propack.so
+pszName == NULL || *pszName == '/' || (isalpha((unsigned char) *pszName) && pszName[1] == ':' && pszName[2] == '/')
+pthread_attr_init
+pthread_attr_init@GLIBC_2.1
+pthread_attr_setstacksize
+pthread_attr_setstacksize@GLIBC_2.1
+pthread_cancel
+pthread_cancel@GLIBC_2.0
+pthread_cond_broadcast
+pthread_cond_broadcast@GLIBC_2.3.2
+pthread_cond_destroy
+pthread_cond_destroy@GLIBC_2.3.2
+pthread_cond_init
+pthread_cond_init@GLIBC_2.3.2
+pthread_cond_signal
+pthread_cond_signal@GLIBC_2.3.2
+pthread_cond_timedwait
+pthread_cond_timedwait@GLIBC_2.3.2
+pthread_cond_wait
+pthread_cond_wait@GLIBC_2.3.2
+pthread_condattr_destroy
+pthread_condattr_destroy@GLIBC_2.0
+pthread_condattr_init
+pthread_condattr_init@GLIBC_2.0
+pthread_condattr_setclock
+pthread_condattr_setclock@GLIBC_2.3.3
+pthread_create
+pthread_create@GLIBC_2.1
+pthread_getspecific
+pthread_getspecific@GLIBC_2.0
+pthread_join
+pthread_join@GLIBC_2.0
+pthread_key_delete
+pthread_key_delete@GLIBC_2.0
+pthread_kill
+pthread_kill@GLIBC_2.0
+pthread_mutex_destroy
+pthread_mutex_destroy@GLIBC_2.0
+pthread_mutex_init
+pthread_mutex_init@GLIBC_2.0
+pthread_mutex_lock
+pthread_mutex_lock@GLIBC_2.0
+pthread_mutex_trylock
+pthread_mutex_trylock@GLIBC_2.0
+pthread_mutex_unlock
+pthread_mutex_unlock@GLIBC_2.0
+pthread_mutexattr_destroy
+pthread_mutexattr_destroy@GLIBC_2.0
+pthread_mutexattr_init
+pthread_mutexattr_init@GLIBC_2.0
+pthread_mutexattr_settype
+pthread_mutexattr_settype@GLIBC_2.1
+pthread_once
+pthread_once@GLIBC_2.0
+pthread_self
+pthread_self@GLIBC_2.0
+pthread_setname_np
+pthread_setname_np@GLIBC_2.12
+pthread_setschedparam
+pthread_setschedparam@GLIBC_2.0
+pthread_setspecific
+pthread_setspecific@GLIBC_2.0
+pure virtual method called\n
+read@GLIBC_2.0
+readdir
+readdir64
+readdir64@GLIBC_2.2
+readdir@GLIBC_2.0
+readlink
+readlink@GLIBC_2.0
+realloc
+realloc@GLIBC_2.0
+realpath
+realpath@GLIBC_2.3
+reference temporary #
+reinterpret_cast
+rename@GLIBC_2.0
+rewind
+rewind@GLIBC_2.0
+rmdir@GLIBC_2.0
+s_dev_urandom_fd >= 0
+scandir64@GLIBC_2.2
+scandir@GLIBC_2.0
+sched_get_priority_max
+sched_get_priority_max@GLIBC_2.0
+sched_get_priority_min
+sched_get_priority_min@GLIBC_2.0
+sched_yield
+sched_yield@GLIBC_2.0
+secblock.h
+semaphore creation failed %s
+semctl
+semctl@GLIBC_2.2
+semget
+semget@GLIBC_2.0
+semop
+semop@GLIBC_2.0
+serverbrowser.so
+setpriority
+setpriority@GLIBC_2.0
+setsid
+setsid@GLIBC_2.0
+sigaction
+sigaction@GLIBC_2.0
+sigaddset
+sigaddset@GLIBC_2.0
+sigemptyset
+sigemptyset@GLIBC_2.0
+sigprocmask
+sigprocmask@GLIBC_2.0
+sizeof 
+sizeof...
+sscanf
+sscanf@GLIBC_2.0
+statfs64@GLIBC_2.1
+statfs@GLIBC_2.0
+static_cast
+statvfs64@GLIBC_2.1
+statvfs@GLIBC_2.1
+std::allocator
+std::bad_alloc
+std::bad_array_new_length
+std::bad_exception
+std::basic_iostream<char, std::char_traits<char> >
 std::basic_istream<char, std::char_traits<char> >
 std::basic_ostream<char, std::char_traits<char> >
-std::basic_iostream<char, std::char_traits<char> >
-N10__cxxabiv117__pbase_type_infoE
-N10__cxxabiv129__pointer_to_member_type_infoE
-St11logic_error
-St12length_error
-__wrap___xstat64
-typeinfo name for unsigned short
-typeinfo name for bool
-pthread_mutex_unlock@GLIBC_2.0
-SteamVProf::CVProfile::Pause()
-typeinfo name for double
-SteamVProf::CVProfNode::Resume()
-SteamThreadTools::CThreadSyncObject::Wait(unsigned int)
-ThreadInterlockedExchange
-SteamThreadTools::CThread::Terminate(int)
-ThreadGetCurrentId
-typeinfo name for float
-EnsureValidBoolValue
-__snprintf_chk@GLIBC_2.3.4
-strstr@GLIBC_2.0
-CreateSimpleProcess
-SteamThreadTools::CThreadLocalBase::Get() const
-typeinfo name for unsigned char
-SteamVProf::CVProfileThreadEntry::SetDumpSpikesThreshold(int)
-CatchAndWriteMiniDumpExForVoidPtrFn
-SteamVProf::CVProfile::OutputReport(int, char const*, int)
-ThreadSetBackgroundPriority
-vtable for __cxxabiv1::__pbase_type_info
-SteamThreadTools::CThread::ThreadExceptionWrapper(void*)
-SteamVProf::CVProfManager::AddProfileForThread(SteamVProf::CVProfile*, unsigned int, unsigned int)
-pthread_attr_init@GLIBC_2.1
-BWritingNonFatalMiniDump
-pthread_mutexattr_init@GLIBC_2.0
-SteamVProf::CVProfile::DumpNodes(SteamVProf::CVProfNode*, SteamVProf::CVProfNode*, int, bool)
-strcmp@GLIBC_2.0
-TSQueueBase_UnsafePeek
-ThreadMicroSleepPOSIX
-__vfprintf_chk@GLIBC_2.3.4
-statfs@GLIBC_2.0
-SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
-Plat_GetExecutablePathUTF8
-typeinfo for __gnu_cxx::recursive_init_error
-typeinfo name for long long
-mprotect@GLIBC_2.0
-__wrap_access
-CValidator::DiffAgainst(CValidator*)
-ETWMark3I
-SteamVProf::CVProfileThreadEntry::StopProfiling()
-read@GLIBC_2.0
-pthread_mutex_destroy@GLIBC_2.0
-ThreadSetPriority
-chown@GLIBC_2.1
-_ITM_deregisterTMCloneTable
-typeinfo name for void
-ShutdownPME
-ETWEnd
-g_bInException
-ETWMarkPrintf
-typeinfo for void const*
-ETWIsTracingEnabled
-SteamThreadTools::CThreadSyncObject::EnsureSemaphoreClearedInternal(int)
-typeinfo for long long const*
-CValidator::ClaimConnection(unsigned int)
-CValidator::RenderObjects(unsigned int)
-_txnal_cow_string_D1(void*)
-__wrap_mkdir
-fflush@GLIBC_2.0
-SetMiniDumpAppID
-SteamThreadTools::CThread::OnExit()
-pthread_cond_broadcast@GLIBC_2.3.2
-SteamVProf::CVProfNode::~CVProfNode()
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+std::exception
+std::iostream
+std::istream
+std::ostream
+std::string
+stderr
 stderr@GLIBC_2.0
-CValidator::Validate(CValidator&, char const*)
-_exit@GLIBC_2.0
-GetSpewAndLogLevelByGroupIndex
-SteamVProf::CVProfManager::CleanupUnusedProfiles()
-Plat_timegm
-sigprocmask@GLIBC_2.0
-SteamThreadTools::CThread::Init()
-typeinfo name for __cxxabiv1::__foreign_exception
-ClearStackTrackingFilters
-SteamThreadTools::CThreadSyncObject::SignalThreadSyncObjectInternal()
-Plat_SetAllocErrorFn
-CatchAndWriteMiniDump
-memmove@GLIBC_2.0
-SteamVProf::CVProfileArray::~CVProfileArray()
-SetAssertDumpStack
-typeinfo name for SteamVProf::CVProfManager
-__wrap_scandir64
-__wrap_scandir
-free@GLIBC_2.0
-Plat_USTime
-SetFullMemoryDumpOnCrash
-SteamThreadTools::CThreadEvent::CThreadEvent(bool)
-__wrap_fopen
-strdup@GLIBC_2.0
-TSListBase_SwapList
-SteamVProf::CVProfile::DestructAndFreeNodesExceptRoot()
-statvfs64@GLIBC_2.1
-CValidator::CValidator(int, bool, IMemBlockClaimedList*)
-ThreadSleep
-SteamThreadTools::CThread::~CThread()
-CValidator::~CValidator()
-TSQueueBase_Init
-memcpy@GLIBC_2.0
-SteamThreadTools::CThread::Sleep(unsigned int)
-SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
-faccessat@GLIBC_2.4
-GetSpewOutputFunc
-SteamVProf::CVProfile::AddBudgetGroupName(EVProfBugdetGroup, int, char const*)
-SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
-vtable for CAdHocValidation_SimpleCallback
-pthread_self@GLIBC_2.0
-SteamThreadTools::CThreadFullMutex::IsCreator() const
-ThreadInterlockedCompareExchangePointer
-ThreadResumeProcess
-__wrap_lstat64
-SteamThreadTools::CThread::ThreadProc(void*)
-fgets@GLIBC_2.0
-ValidateSpew
-Plat_IsSteamConsoleMode
-Plat_FloatTime
-tolower@GLIBC_2.0
-___tls_get_addr@GLIBC_2.3
-typeinfo name for decimal32 const*
-pthread_mutex_init@GLIBC_2.0
-vtable for __cxxabiv1::__forced_unwind
-CValidator::Pop()
-typeinfo name for decimal64 const*
-g_ClockSpeedMillisecondsMultiplier
-CatchAndWriteMiniDumpForVoidPtrFn
-ThreadSetAffinity
-Plat_localtime
-_ITM_RU1
-TSListBase_UnsafePeek
-typeinfo name for bool const*
-typeinfo name for double const*
-SteamThreadTools::CThread::Resume()
-typeinfo name for float const*
-fclose@GLIBC_2.1
-rmdir@GLIBC_2.0
-pthread_cond_wait@GLIBC_2.3.2
-typeinfo name for std::nullptr_t const*
-ETW_Steamworks_IPCRecv_Start
-pthread_mutex_trylock@GLIBC_2.0
-SteamVProf::CVProfileThreadEntry::DeleteProfile()
-SteamThreadTools::CThreadEvent::CThreadEvent(char const*, bool, bool)
-SteamVProf::CVProfileThreadEntry::DumpProfile(int)
-ThreadInterlockedCompareExchange
-DoNewAssertDialog
-memcmp@GLIBC_2.0
-SteamThreadTools::CThreadEvent::CThreadEvent(char const*, bool, bool)
-typeinfo for __cxxabiv1::__class_type_info
-__wrap_dlopen
-typeinfo for char*
-typeinfo for std::nullptr_t
-SteamVProf::CVProfNode::GetCurTimeLessChildren()
-gettimeofday@GLIBC_2.0
-typeinfo name for __cxxabiv1::__fundamental_type_info
-SteamThreadTools::CThreadSemaphore::Release(long)
-TSQueueBase_Pop
-SteamThreadTools::CThreadSyncObject::AcquireSemaphoreInternal(unsigned int)
-TSQueue_PopIntoFreeList
-typeinfo for decimal32
-typeinfo for CAdHocValidation
-SteamThreadTools::CThread::IsAlive() const
-chdir@GLIBC_2.0
-typeinfo name for __gnu_cxx::recursive_init_error
-typeinfo for unsigned long*
-SteamVProf::CVProfManager::DumpAllThreadProfiles(int)
-typeinfo for wchar_t*
-ETWMark1S
-typeinfo name for unsigned short const*
-_fini
-SteamThreadTools::CThreadEvent::Check()
-ETW_Steamworks_IPCSend_End_
-SteamVProf::CVProfile::Reset()
-typeinfo name for long long const*
-__wrap_utimes
-Plat_TickDiffMilliSec
-Plat_CommandLineParamValue
-BBlockingGetMiniDumpLock
-typeinfo for int*
-SteamVProf::CVProfile::~CVProfile()
-SetMiniDumpSteamID
-SteamThreadTools::CThread::GetResult() const
-SteamVProf::CVProfile::UnregisterCallbackHandler(SteamVProf::IVProfileCallbackHandler*)
-typeinfo name for void const*
-uname@GLIBC_2.0
-CAdHocValidation::CAdHocValidation()
-typeinfo for long double*
-__stack_chk_fail@GLIBC_2.4
-vtable for CAdHocValidation
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo for __float128*
-CValidator::ClaimSocket(int)
-Is64BitOS
-dlclose@GLIBC_2.0
-rewind@GLIBC_2.0
-Error
-CAdHocValidation::~CAdHocValidation()
-typeinfo for float
-ETW_Steamworks_IPCSend_Start
-pthread_condattr_init@GLIBC_2.0
-GetMiniDumpBuildID
-ETW_Steamworks_RunCallbacks_Start
-typeinfo name for long const*
-typeinfo for unsigned char
-SteamVProf::CVProfNode::CVProfNode(SteamVProf::CVProfile*, char const*, SteamVProf::CVProfNode*, EVProfBugdetGroup)
-typeinfo name for unsigned char const*
-getpriority@GLIBC_2.0
-TSListBase_Init
-typeinfo name for unsigned int const*
-ThreadGetCurrentProcessId
-CValidator::ClaimArrayMemory(void const*)
-typeinfo name for void*
-typeinfo name for unsigned int*
-_txnal_logic_error_get_msg(void*)
-ThreadInterlockedIncrement64
-typeinfo name for unsigned char*
-Plat_IsChromeOS
-typeinfo name for float*
-SteamThreadTools::CThreadSyncObject::OpenSemaphoreInternal(char const*, bool)
-typeinfo for signed char*
-SteamThreadTools::CThreadEvent::Reset()
-SteamVProf::CVProfNode::Validate(CValidator&, char const*)
-typeinfo name for long long*
-GetCRunTimeVersion
-CallAssertFailedNotifyFunc
-pthread_mutex_lock@GLIBC_2.0
-typeinfo name for __cxxabiv1::__si_class_type_info
-unlink@GLIBC_2.0
-localtime_r@GLIBC_2.0
-typeinfo for decimal64
-SteamVProf::CVProfManager::BIsProfilePtrValid(SteamVProf::CVProfile*)
-__wrap_statvfs
-CValidator::ClaimMemory_Aligned(void const*)
-SetMiniDumpCustomInfo
-ThreadOpenProcess
-typeinfo for void
-typeinfo name for unsigned short*
-ETW_Steamworks_DispatchCallback_End_
-_ITM_addUserCommitAction
-CTier0::ValidateGlobals(CValidator&)
-typeinfo name for decimal128
-SpewAndLogChangeIfStillDefault
-ETWBegin
-CValidator::RenderLeaks(unsigned int)
-ThreadInterlockedExchange64
-typeinfo for long
-typeinfo for std::nullptr_t*
-InitializeStackTrackingFilters
-typeinfo for unsigned int
-readlink@GLIBC_2.0
-SteamThreadTools::CThreadSyncObject::EnsureSemaphorePostedInternal(int)
-typeinfo for long long
-Plat_IsInDebugSession
-AreStackTrackingFiltersEnabledAtStart
-ThreadInterlockedIncrement
-g_ClockSpeed
-SteamVProf::CVProfile::GetBudgetGroupColor(EVProfBugdetGroup, int&, int&, int&, int&)
-typeinfo for unsigned short
-SteamVProf::CVProfNode::Pause()
-ThreadImplOneTimeInit
-typeinfo for double
-Plat_OutputDebugString
-typeinfo for bool
-ETWMark1I
-ThreadGetCurrentRunningRef
-SteamThreadTools::CThread::SetPriority(int)
-_ITM_memcpyRtWn
-AssertMsgImplementationV
-DWarning
-fopen64@GLIBC_2.1
-SteamVProf::CVProfile::Start()
-__wrap_chdir
-_txnal_cow_string_c_str(void const*)
-ThreadInterlockedCompareExchange64
-semop@GLIBC_2.0
-ETW_Steamworks_RunCallbacks_End_
-_txnal_cow_string_D1_commit(void*)
-typeinfo name for bool*
-__cxa_finalize@GLIBC_2.1.3
-__xstat@GLIBC_2.0
-SetInFatalAssert
-typeinfo name for char8_t*
-typeinfo name for long*
-fwrite@GLIBC_2.0
-SteamThreadTools::CThread::GetCurrentCThread()
-__wrap_mknod
-CValidator::ClaimMemory(void const*)
-typeinfo name for SteamThreadTools::CThread
-SteamVProf::CVProfile::Validate(CValidator&, char const*)
-SteamVProf::CVProfile::ResetPeaks()
-CValidator::IsClaimed(void const*) const
-Plat_timezone
-IsInAssert
-SteamVProf::CVProfManager::~CVProfManager()
-typeinfo name for double*
-typeinfo name for char16_t*
-g_pMemAllocSteam
-waitpid@GLIBC_2.0
-__realpath_chk@GLIBC_2.4
-typeinfo for char16_t const*
-CAdHocValidation_SimpleCallback::CAdHocValidation_SimpleCallback(void (*)(CValidator&))
-usleep@GLIBC_2.0
-typeinfo for char8_t const*
-SteamVProf::CVProfManager::CVProfManager()
-SteamVProf::CVProfile::Resume()
-SteamVProf::CVProfManager::EnableDumpSpikes(int)
-typeinfo name for char32_t*
-typeinfo for unsigned long long*
-typeinfo for short*
-Plat_InternalOverrideArgv
-InitPME
-__wrap_dlmopen
-_SpewMessageTypeSourceV
-SteamVProf::CVProfile::DumpSorted(char const*, double, bool (*)(SteamVProf::TimeSums_t const&, SteamVProf::TimeSums_t const&), int)
-Plat_Free
-SteamThreadTools::CThreadSemaphore::CThreadSemaphore(long, long)
-typeinfo for decimal64*
-ThreadIsProcessIdActive
-ThreadInMainThread
-typeinfo for __cxxabiv1::__si_class_type_info
-typeinfo for decimal32*
-strcpy@GLIBC_2.0
-SteamVProf::CVProfile::ExitScope()
-RunTypeValidationTests
-getpid@GLIBC_2.0
-Plat_IsSteamDeck
-sched_yield@GLIBC_2.0
-typeinfo name for decimal128*
-typeinfo name for CAdHocValidation
-Plat_GetProcessArgv
-typeinfo name for __cxxabiv1::__forced_unwind
-CAdHocValidation::~CAdHocValidation()
-SteamThreadTools::CThreadMutex::~CThreadMutex()
-Plat_Realloc
-Plat_AbsoluteTime
-gethostname@GLIBC_2.0
-GetInstalledRAM
-SteamThreadTools::CThread::CThread()
-__cxa_atexit@GLIBC_2.1.3
-SteamVProf::CVProfile::~CVProfile()
-SteamThreadTools::CThreadRWLock::LockForWrite()
-pthread_cond_signal@GLIBC_2.3.2
-CValidator::ClaimOsFile(int)
-SteamThreadTools::CThreadSemaphore::CThreadSemaphore(long, long)
-typeinfo name for __cxxabiv1::__class_type_info
-gnu_get_libc_version@GLIBC_2.1
-typeinfo name for __cxxabiv1::__pbase_type_info
-SteamVProf::CVProfile::BProfileHasNodesOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, int)
-SteamVProf::CVProfile::Dump(char const*, ...)
-pthread_key_delete@GLIBC_2.0
-typeinfo for __float128 const*
-typeinfo for int const*
-getenv@GLIBC_2.0
-GetNumberOfSpewAndLogGroups
-realloc@GLIBC_2.0
-typeinfo name for char32_t
-typeinfo for unsigned long const*
-statfs64@GLIBC_2.1
-sched_get_priority_max@GLIBC_2.0
-malloc@GLIBC_2.0
-SteamVProf::CVProfile::AllocVProfNode(SteamVProf::CVProfile*, char const*, SteamVProf::CVProfNode*, EVProfBugdetGroup)
-setpriority@GLIBC_2.0
-typeinfo for char const*
-typeinfo for __cxxabiv1::__forced_unwind
-IsStackTrackingFiltered
-CValidator::~CValidator()
-typeinfo for long double const*
-typeinfo for signed char const*
-timegm@GLIBC_2.0
-typeinfo name for char8_t
-ETWRenderFrameMark
-typeinfo name for char16_t
-SteamThreadTools::CThreadFullMutex::Release()
-system@GLIBC_2.0
-__wrap_mount
-ThreadInterlockedDecrement64
-SteamVProf::CVProfileThreadEntry::CVProfileThreadEntry(SteamVProf::CVProfile*, unsigned int, unsigned int)
-typeinfo for decimal128 const*
-TSQueueBase_Push
-typeinfo for short const*
-CallFlushLogFunc
-typeinfo for char32_t const*
-typeinfo name for __cxxabiv1::__pointer_to_member_type_info
-AssertMsgImplementationF
-strerror@GLIBC_2.0
-__memcpy_chk@GLIBC_2.3.4
-GetMiniDumpDirectory
-pthread_condattr_destroy@GLIBC_2.0
-__wrap_opendir
-typeinfo name for CAdHocValidation_SimpleCallback
-SteamThreadTools::CThreadSpinLock::Lock(unsigned int) volatile
-vtable for __cxxabiv1::__pointer_type_info
-SteamThreadTools::CThreadEvent::Set()
-__gmon_start__
-SteamThreadTools::CThreadSyncObject::CreateSemaphoreInternal(char const*, long, bool, bool*)
-Plat_IsSteamOS
-pthread_once@GLIBC_2.0
-BGetLocalFQDN
-realpath@GLIBC_2.3
-Plat_GetPackageName
-_DMsg
-typeinfo name for char
-SteamVProf::CVProfile::CreateBudgetGroups()
-SteamThreadTools::CThreadLocalBase::BIsValid() const
-__wrap_statfs64
-transaction clone for operator new[](unsigned int)
-CAdHocValidation::s_pFirst
-gettext@GLIBC_2.0
-ThreadShellExecuteNoWindow
-BGetMiniDumpLock
-AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
-setsid@GLIBC_2.0
-typeinfo name for short
-AllocateCrashMemoryReserve
-g_ClockSpeedMicrosecondsMultiplier
-typeinfo name for signed char
-GetLocalHostname
-__wrap_lchown
-rename@GLIBC_2.0
-typeinfo for __cxxabiv1::__fundamental_type_info
-__wrap_utime
-Plat_VirtualFree
-SteamThreadTools::CThreadRWLock::UnlockWrite()
-dl_iterate_phdr@GLIBC_2.2.4
-mmap@GLIBC_2.0
-SteamVProf::CVProfile::CVProfile()
-strchr@GLIBC_2.0
-SteamThreadTools::CThread::GetPriority() const
-ThreadIsProcessActive
-pthread_setname_np@GLIBC_2.12
-typeinfo for __cxxabiv1::__foreign_exception
-ETWMark
-typeinfo name for int
-__wrap_chmod
-strlen@GLIBC_2.0
-ETW_Steamworks_IPCRecv_End_
-typeinfo name for __float128
-ETW_Steamworks_DispatchCallback_Start
-vtable for __gnu_cxx::__concurrence_unlock_error
-typeinfo name for long double
-CAdHocValidation_SimpleCallback::DoValidate(CValidator&) const
-CValidator::SetAllocSizeFilter(int)
-SteamVProf::CVProfile::RegisterCallbackHandler(SteamVProf::IVProfileCallbackHandler*)
-SteamVProf::CVProfile::FindNode(SteamVProf::CVProfNode*, char const*)
-pthread_cond_init@GLIBC_2.3.2
-SteamThreadTools::CThreadSyncObject::ReleaseSemaphoreInternal(int, long)
-SteamVProf::CVProfNode::Reset()
-Plat_IsSteamOS3
-SteamThreadTools::CThread::Stop(int)
-VProfInternalGetProfileForCurrentThread
-_txnal_runtime_error_get_msg(void*)
-typeinfo name for wchar_t
-SteamThreadTools::CThreadSyncObject::operator!() const
-g_ClockSpeedSecondsMultiplier
-open64@GLIBC_2.2
-SteamRealPath
-ThreadInterlockedAssignPointerIf
-strcasecmp@GLIBC_2.0
-execv@GLIBC_2.0
-posix_memalign@GLIBC_2.2
-utimes@GLIBC_2.0
-typeinfo for SteamThreadTools::CThread
-typeinfo name for unsigned long
-IsLogActive
-typeinfo name for unsigned long long
-SteamVProf::CVProfManager::StartProfilingAllThreads(float, int)
-sigaddset@GLIBC_2.0
-ThreadGetCurrentProcessHandle
-ETWOverlayFrameMark
-Plat_AbsoluteTimeToFloat
-dlsym@GLIBC_2.0
-malloc_usable_size@GLIBC_2.0
-__wrap_mkfifo
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-RealPrintCallStack
-typeinfo for unsigned long long const*
-SteamThreadTools::CThread::Join(unsigned int)
-typeinfo for wchar_t const*
-ThreadSpinWaitForValue
-backtrace_symbols@GLIBC_2.1
-fopen@GLIBC_2.1
-__daylight@GLIBC_2.0
-SteamThreadTools::CThread::WaitForCreateComplete(SteamThreadTools::CThreadEvent*)
-ETW_Streaming_SendPacket
-SteamVProf::CVProfile::DumpSingleNode(SteamVProf::CVProfNode*, SteamVProf::CVProfNode*, int, bool)
-memset@GLIBC_2.0
-mkdir@GLIBC_2.0
-ThreadSuspendProcess
-SteamVProf::CVProfManager::StopProfilingAllThreads()
-vtable for __cxxabiv1::__fundamental_type_info
-ThreadInterlockedDecrement
-GetAvailableRAM
-FreeCrashMemoryReserve
-Plat_OutputDebugStringRaw
-SetMiniDumpBuildID
-semget@GLIBC_2.0
-AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
-__errno_location@GLIBC_2.0
-CrackSmokingCompiler
-pthread_cancel@GLIBC_2.0
-SteamThreadTools::CThreadLocalBase::Set(void*)
-SteamThreadTools::CThread::~CThread()
-SteamVProf::CVProfile::CVProfile()
-strncpy@GLIBC_2.0
-DLog
-syscall@GLIBC_2.0
-Plat_ctime
-SteamThreadTools::CThreadMutex::CThreadMutex()
-scandir@GLIBC_2.0
-DeclareCurrentThreadIsMainThread
-BWritingMiniDump
-TSListBase_Pop
-Plat_VirtualAccessFlags
-SteamVProf::CVProfManager::~CVProfManager()
-SetInAssert
-ThreadGetPriority
-SetStackTrackingFilter
-SteamThreadTools::CThreadSyncObject::CThreadSyncObject()
-typeinfo name for char8_t const*
-g_VProfManager
-pthread_condattr_setclock@GLIBC_2.3.3
-vtable for __cxxabiv1::__foreign_exception
-SteamThreadTools::CThread::Yield()
-GetCrashHandlerFactory
-asctime_r@GLIBC_2.0
-__vsnprintf_chk@GLIBC_2.3.4
-SteamVProf::CVProfNode::GetTotalTimeLessChildren()
-CAdHocValidation_SimpleCallback::CAdHocValidation_SimpleCallback(void (*)(CValidator&))
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-RealPrintRawCallStack
-CValidator::AddValidationLock(SteamThreadTools::CThreadMutex*)
-ThreadGetCurrentHandle
-ThreadInterlockedExchangeAdd
-strncasecmp@GLIBC_2.0
-typeinfo name for char32_t const*
-pthread_kill@GLIBC_2.0
-SteamThreadTools::CThreadMutex::~CThreadMutex()
-typeinfo name for decimal128 const*
-access@GLIBC_2.0
-CValidator::ClaimTrackedKey(CTrackItems*, void*, unsigned int*)
+stdout
 stdout@GLIBC_2.0
-typeinfo name for signed char const*
-ThreadInterlockedAssignIf64
-__strcpy_chk@GLIBC_2.3.4
-typeinfo name for char16_t const*
-typeinfo name for char const*
-CValidator::Finalize()
-ETWMark2I
-ThreadGetProcessId
-typeinfo name for long double const*
-SteamVProf::CVProfile::BudgetGroupNameToBudgetGroupID(char const*) const
-SteamVProf::CVProfile::GetFrameTimeOutsideBudgetGroup_Recursive(SteamVProf::CVProfNode*, EVProfBugdetGroup)
-pthread_attr_setstacksize@GLIBC_2.1
-SteamVProf::CVProfileThreadEntry::OnNewFrameEntered()
-ETWMark2S
-_ITM_RU4
-__wrap_symlink
-__printf_chk@GLIBC_2.3.4
-typeinfo for __cxxabiv1::__pointer_to_member_type_info
-typeinfo for CAdHocValidation_SimpleCallback
-__wrap___xstat
-Plat_GetStackBackTrace
-Plat_CommandLineParamExists
-SteamVProf::CVProfManager::GetAllThreadProfiles(SteamVProf::CVProfileArray*)
-typeinfo for long*
-typeinfo for double*
-IsSpewActive
-__wrap_stat64
-SteamThreadTools::CThreadSyncObject::CThreadSyncObject()
-typeinfo for char32_t
-Plat_MSTime64
-Plat_daylight
-vtable for __gnu_cxx::__concurrence_lock_error
-AssertMsgImplementationPreformatted
-Plat_VirtualAlloc
-CValidator::CValidator(int, bool, IMemBlockClaimedList*)
-munmap@GLIBC_2.0
-typeinfo name for unsigned long long const*
-typeinfo for long long*
-__wrap___lxstat64
-GetMiniDumpSteamID
-__wrap_unlink
-fork@GLIBC_2.0
-sigemptyset@GLIBC_2.0
-g_VProfile
-typeinfo name for wchar_t const*
-strpbrk@GLIBC_2.0
-CValidator::BExcludeAllocationFromTracking(char const*, int)
-typeinfo for char8_t
-typeinfo for unsigned int*
-typeinfo name for int const*
-SteamThreadTools::CThread::IsThreadRunning() const
-typeinfo name for short const*
-CValidator::ClaimUntrackedMemory(unsigned int)
-readdir@GLIBC_2.0
-SteamThreadTools::CThreadMutex::CThreadMutex()
-typeinfo for float*
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-typeinfo for char16_t
-typeinfo for unsigned char*
-pthread_cond_timedwait@GLIBC_2.3.2
-typeinfo for signed char
-typeinfo for long double
-typeinfo for __float128
-IsInFatalAssert
-SteamVProf::CVProfile::Term()
-__wrap_link
-typeinfo for int
-pthread_setspecific@GLIBC_2.0
-typeinfo name for unsigned long const*
-vtable for __cxxabiv1::__si_class_type_info
-CValidator::FindObject(void*)
-__wrap_stat
-__wrap_rmdir
-mount@GLIBC_2.0
-__wrap_chown
-statvfs@GLIBC_2.1
-typeinfo name for __float128 const*
-strrchr@GLIBC_2.0
-typeinfo for __cxxabiv1::__pbase_type_info
-dladdr@GLIBC_2.0
-pthread_cond_destroy@GLIBC_2.3.2
-CAdHocValidation::CAdHocValidation()
-vtune
-typeinfo name for unsigned long*
-__wrap___lxstat
-typeinfo name for unsigned long long*
-typeinfo name for int*
-CValidator::Push(char const*, void*, char const*)
-utime@GLIBC_2.0
-typeinfo name for __float128*
-lchown@GLIBC_2.0
-fputc@GLIBC_2.0
-vtable for __cxxabiv1::__pointer_to_member_type_info
-ThreadWaitForProcessExit
-sscanf@GLIBC_2.0
-typeinfo name for long double*
-SteamThreadTools::CThread::CThread()
-Plat_TickDiffMicroSec
-typeinfo for bool*
-typeinfo name for wchar_t*
-__wrap_statfs
-ThreadGetProcessExitCode
-typeinfo for decimal128
-typeinfo for char32_t*
-Plat_gmtime
-typeinfo for char16_t*
-symlink@GLIBC_2.0
-SetFlushLogFunc
-typeinfo for char8_t*
-typeinfo for unsigned long long
-typeinfo name for short*
-gmtime_r@GLIBC_2.0
-SecureRandomBytes
-typeinfo for wchar_t
-typeinfo name for decimal64
-BWritingFatalMiniDump
-ThreadInterlockedAssignIf
-__dprintf_chk@GLIBC_2.8
-SteamThreadTools::CThreadSyncObject::CreateAnonymousSyncObjectInternal(bool, bool)
-typeinfo for unsigned long
-SteamThreadTools::CThread::Start(unsigned int)
-GetStackTrackingFilter
-typeinfo for short
+steamclient.so
+steamservice.so
+steamui.so
+steamwebhelper
+strcasecmp
+strcasecmp@GLIBC_2.0
+strcasestr
 strcasestr@GLIBC_2.1
-SteamVProf::CVProfile::MarkFrame(char const*)
-pthread_join@GLIBC_2.0
-SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
-SteamVProf::CVProfNode::GetPrevTimeLessChildren()
-typeinfo for char
-SteamVProf::CVProfileThreadEntry::StartProfiling(float, int)
-SetAssertFailedNotifyFunc
-CAdHocValidation::StaticValidateAll(CValidator&)
-GetPortableSystemInformation
-__wrap_freopen
-ThreadTerminate
-Plat_IsGamescope
-SteamThreadTools::CThread::GetName()
-typeinfo name for signed char*
-SteamThreadTools::CThreadSyncObject::AssertUseable()
-typeinfo name for __cxxabiv1::__pointer_type_info
-SteamThreadTools::CreateSimpleThread(unsigned int (*)(void*), void*, unsigned int*, unsigned int)
-SteamThreadTools::CThreadSyncObject::IsSemaphoreOrphanedInternal(int, int)
-ShouldUseNewAssertDialog
-GetSpewAndLogLevel
-ReleaseThreadHandle
-Plat_DefaultAllocErrorFn
-EnableCrashingOnCrashes
-Plat_Alloc
-ThreadInterlockedExchangeAdd64
-SteamVProf::CVProfNode::GetSubNode(char const*, EVProfBugdetGroup)
-SteamThreadTools::CThread::SetName(char const*)
-SteamVProf::CVProfile::EnterScope(char const*, EVProfBugdetGroup, void*)
-typeinfo name for char*
-typeinfo for __cxxabiv1::__pointer_type_info
-SteamVProf::CVProfileArray::~CVProfileArray()
-ClearWritingMiniDump
-typeinfo name for std::nullptr_t*
-g_VProfProfilesRunningCount
-__memset_chk@GLIBC_2.3.4
-SteamThreadTools::CThreadLocalBase::~CThreadLocalBase()
-readdir64@GLIBC_2.2
-SpewAndLogActivate
-typeinfo for unsigned short*
-typeinfo name for decimal32*
-typeinfo for void*
-semctl@GLIBC_2.2
-dlopen@GLIBC_2.1
-nanosleep@GLIBC_2.0
-SteamThreadTools::CThreadLocalBase::CThreadLocalBase()
-SteamThreadTools::CThreadFullMutex::CThreadFullMutex(bool, char const*, bool, bool)
-TSQueueBase_UnsafeDummy
-Plat_asctime
-CValidator::UnlockValidationLocks()
-SteamVProf::CVProfNode::ResetPeak()
-typeinfo for std::nullptr_t const*
-__fprintf_chk@GLIBC_2.3.4
-__wrap_rename
-typeinfo for decimal128*
-__wrap_open
-pthread_create@GLIBC_2.1
-typeinfo name for decimal64*
-clock_gettime@GLIBC_2.2
-SteamVProf::CVProfManager::CVProfManager()
-SteamThreadTools::CThread::Suspend()
-__lxstat@GLIBC_2.0
-vtable for SteamThreadTools::CThread
-MiniDumpUnlock
-sigaction@GLIBC_2.0
-SteamThreadTools::CThread::GetThreadProc()
-ThreadIsThreadRunning
-SteamVProf::CVProfile::GetThreadID()
-_ITM_registerTMCloneTable
-SteamVProf::CVProfile::GetBudgetGroupName(EVProfBugdetGroup) const
-SteamThreadTools::CThreadSyncObject::CloseSemaphoreInternal(int, bool, char const*)
-SteamVProf::CVProfNode::SetCurFrameTime(unsigned long)
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-Plat_VirtualProtect
-SteamThreadTools::CThreadRWLock::WaitForRead()
-typeinfo name for decimal32
-ThreadFindProcessByName
-SteamVProf::CVProfNode::~CVProfNode()
-Plat_IsTesla
-Plat_GetPOSIXClockSource
-RealGetCallStack
-strncmp@GLIBC_2.0
-SteamThreadTools::CThread::BHasValidThreadID() const
-typeinfo for unsigned char const*
-GetCPUInformation()
-Plat_RelativeTicks
-VProfInternalEnterScopeCurrentThread
-ThreadShellExecute
-typeinfo for unsigned int const*
-ThreadTerminateProcessCode
-__timezone@GLIBC_2.0
-chmod@GLIBC_2.0
-ThreadCloseProcess
-abort@GLIBC_2.0
-SteamThreadTools::CThreadEvent::CThreadEvent(bool)
-typeinfo for long const*
-typeinfo for float const*
-vtable for __cxxabiv1::__class_type_info
-SteamVProf::CVProfile::Stop()
-typeinfo for bool const*
-__xstat64@GLIBC_2.2
-Plat_TickAddMicroSec
-typeinfo for double const*
-_SpewMessageType
-SteamVProf::CVProfNode::CVProfNode(SteamVProf::CVProfile*, char const*, SteamVProf::CVProfNode*, EVProfBugdetGroup)
-backtrace@GLIBC_2.1
-typeinfo name for std::nullptr_t
-pthread_setschedparam@GLIBC_2.0
-gethostbyname@GLIBC_2.0
-__xmknod@GLIBC_2.0
-CVProfile_ExitScope
-freopen@GLIBC_2.0
-__wrap_lstat
-_SpewMessageTypeSourceFmt
-GetNumberOfStackTrackingFilters
-scandir64@GLIBC_2.2
-CStack::Print(void (*)(int, CStack::PrintFrame const*, void*), void*) const
-SteamVProf::CVProfManager::Validate(CValidator&, char const*)
-TSQueue_UnsafeDebugCheck
-dlmopen@GLIBC_2.3.4
-__wrap_open64
-CatchAndWriteMiniDumpExReturnsInt
-strtol@GLIBC_2.0
-SetMiniDumpProcessNameOverride
-Plat_GetExecutablePath
-typeinfo for decimal64 const*
-CatchAndWriteMiniDumpEx
-typeinfo for unsigned short const*
-fputs@GLIBC_2.0
-typeinfo for decimal32 const*
-ThreadSetDebugName
-pthread_getspecific@GLIBC_2.0
-__lxstat64@GLIBC_2.2
-HasStackTrackingFilters
-Plat_RelativeTickFrequency
-Plat_MSTime
-SteamThreadTools::CThreadSyncObject::SaveNameToFile(char const*)
-ThreadInterlockedExchangePointer
-_init
-pthread_mutexattr_destroy@GLIBC_2.0
-Plat_IsWSL
-SpewActivate
-TSListBase_Push
-vtable for __gnu_cxx::recursive_init_error
-closedir@GLIBC_2.0
-mkfifo@GLIBC_2.0
-SteamThreadTools::CThread::~CThread()
-IsValidBoolValue
-__wrap_fopen64
-opendir@GLIBC_2.0
-SteamThreadTools::CThreadSyncObject::~CThreadSyncObject()
-SteamVProf::CVProfile::SumTimes(SteamVProf::CVProfNode*, int)
-__wrap_statvfs64
-SteamVProf::CVProfileThreadEntry::CVProfileThreadEntry(SteamVProf::CVProfile*, unsigned int, unsigned int)
-SpewWrittenMiniDumps
-__pthread_key_create@GLIBC_2.0
-__ctype_tolower_loc@GLIBC_2.3
-SpewChangeIfStillDefault
-pthread_mutexattr_settype@GLIBC_2.1
-__ctype_b_loc@GLIBC_2.3
-SteamVProf::CVProfileThreadEntry::OnFrameCompleted()
-waitid@GLIBC_2.1
-typeinfo name for unsigned int
-__sprintf_chk@GLIBC_2.3.4
-typeinfo name for long
-Plat_AttachDebuggerToProcess
-sched_get_priority_min@GLIBC_2.0
+strchr
+strchr@GLIBC_2.0
+strcmp
+strcmp@GLIBC_2.0
+strcpy
+strcpy@GLIBC_2.0
+strdup
+strdup@GLIBC_2.0
+strerror
+strerror@GLIBC_2.0
+string literal
+strlen
+strlen( pGroupName ) < MAX_GROUP_NAME_LENGTH
+strlen@GLIBC_2.0
+strncasecmp
+strncasecmp@GLIBC_2.0
+strncat
 strncat@GLIBC_2.0
-GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
-GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
+strncmp
+strncmp@GLIBC_2.0
+strncpy
+strncpy@GLIBC_2.0
+strpbrk
+strpbrk@GLIBC_2.0
+strrchr
+strrchr@GLIBC_2.0
+strstr
+strstr@GLIBC_2.0
+strtol
+strtol@GLIBC_2.0
+symlink@GLIBC_2.0
+syscall
+syscall@GLIBC_2.0
+system
+system@GLIBC_2.0
+template parameter object for 
+tenfoot.so
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
+the same event name (%s) was created as both manual and auto reset, something's fubar'd
+this
+throw 
+tid(%u) pthread_key_create failed: %s\n
+tier1
+timegm@GLIBC_2.0
+tolower
+tolower@GLIBC_2.0
+transaction clone for operator new[](unsigned int)
+true
+typeinfo fn for 
+typeinfo for 
+typeinfo for CAdHocValidation
+typeinfo for CAdHocValidation_SimpleCallback
+typeinfo for SteamThreadTools::CThread
+typeinfo for __cxxabiv1::__class_type_info
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __cxxabiv1::__fundamental_type_info
+typeinfo for __cxxabiv1::__pbase_type_info
+typeinfo for __cxxabiv1::__pointer_to_member_type_info
+typeinfo for __cxxabiv1::__pointer_type_info
+typeinfo for __cxxabiv1::__si_class_type_info
+typeinfo for __float128
+typeinfo for __float128 const*
+typeinfo for __float128*
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::recursive_init_error
+typeinfo for bool
+typeinfo for bool const*
+typeinfo for bool*
+typeinfo for char
+typeinfo for char const*
+typeinfo for char*
+typeinfo for char16_t
+typeinfo for char16_t const*
+typeinfo for char16_t*
+typeinfo for char32_t
+typeinfo for char32_t const*
+typeinfo for char32_t*
+typeinfo for char8_t
+typeinfo for char8_t const*
+typeinfo for char8_t*
+typeinfo for decimal128
+typeinfo for decimal128 const*
+typeinfo for decimal128*
+typeinfo for decimal32
+typeinfo for decimal32 const*
+typeinfo for decimal32*
+typeinfo for decimal64
+typeinfo for decimal64 const*
+typeinfo for decimal64*
+typeinfo for double
+typeinfo for double const*
+typeinfo for double*
+typeinfo for float
+typeinfo for float const*
+typeinfo for float*
+typeinfo for int
+typeinfo for int const*
+typeinfo for int*
+typeinfo for long
+typeinfo for long const*
+typeinfo for long double
+typeinfo for long double const*
+typeinfo for long double*
+typeinfo for long long
+typeinfo for long long const*
+typeinfo for long long*
+typeinfo for long*
+typeinfo for short
+typeinfo for short const*
+typeinfo for short*
+typeinfo for signed char
+typeinfo for signed char const*
+typeinfo for signed char*
+typeinfo for std::nullptr_t
+typeinfo for std::nullptr_t const*
+typeinfo for std::nullptr_t*
+typeinfo for unsigned char
+typeinfo for unsigned char const*
+typeinfo for unsigned char*
+typeinfo for unsigned int
+typeinfo for unsigned int const*
+typeinfo for unsigned int*
+typeinfo for unsigned long
+typeinfo for unsigned long const*
+typeinfo for unsigned long long
+typeinfo for unsigned long long const*
+typeinfo for unsigned long long*
+typeinfo for unsigned long*
+typeinfo for unsigned short
+typeinfo for unsigned short const*
+typeinfo for unsigned short*
+typeinfo for void
+typeinfo for void const*
+typeinfo for void*
+typeinfo for wchar_t
+typeinfo for wchar_t const*
+typeinfo for wchar_t*
+typeinfo name for 
+typeinfo name for CAdHocValidation
+typeinfo name for CAdHocValidation_SimpleCallback
+typeinfo name for SteamThreadTools::CThread
+typeinfo name for SteamVProf::CVProfManager
+typeinfo name for __cxxabiv1::__class_type_info
+typeinfo name for __cxxabiv1::__forced_unwind
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo name for __cxxabiv1::__fundamental_type_info
+typeinfo name for __cxxabiv1::__pbase_type_info
+typeinfo name for __cxxabiv1::__pointer_to_member_type_info
+typeinfo name for __cxxabiv1::__pointer_type_info
+typeinfo name for __cxxabiv1::__si_class_type_info
+typeinfo name for __float128
+typeinfo name for __float128 const*
+typeinfo name for __float128*
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::recursive_init_error
+typeinfo name for bool
+typeinfo name for bool const*
+typeinfo name for bool*
+typeinfo name for char
+typeinfo name for char const*
+typeinfo name for char*
+typeinfo name for char16_t
+typeinfo name for char16_t const*
+typeinfo name for char16_t*
+typeinfo name for char32_t
+typeinfo name for char32_t const*
+typeinfo name for char32_t*
+typeinfo name for char8_t
+typeinfo name for char8_t const*
+typeinfo name for char8_t*
+typeinfo name for decimal128
+typeinfo name for decimal128 const*
+typeinfo name for decimal128*
+typeinfo name for decimal32
+typeinfo name for decimal32 const*
+typeinfo name for decimal32*
+typeinfo name for decimal64
+typeinfo name for decimal64 const*
+typeinfo name for decimal64*
+typeinfo name for double
+typeinfo name for double const*
+typeinfo name for double*
+typeinfo name for float
+typeinfo name for float const*
+typeinfo name for float*
+typeinfo name for int
+typeinfo name for int const*
+typeinfo name for int*
+typeinfo name for long
+typeinfo name for long const*
+typeinfo name for long double
+typeinfo name for long double const*
+typeinfo name for long double*
+typeinfo name for long long
+typeinfo name for long long const*
+typeinfo name for long long*
+typeinfo name for long*
+typeinfo name for short
+typeinfo name for short const*
+typeinfo name for short*
+typeinfo name for signed char
+typeinfo name for signed char const*
+typeinfo name for signed char*
+typeinfo name for std::nullptr_t
+typeinfo name for std::nullptr_t const*
+typeinfo name for std::nullptr_t*
+typeinfo name for unsigned char
+typeinfo name for unsigned char const*
+typeinfo name for unsigned char*
+typeinfo name for unsigned int
+typeinfo name for unsigned int const*
+typeinfo name for unsigned int*
+typeinfo name for unsigned long
+typeinfo name for unsigned long const*
+typeinfo name for unsigned long long
+typeinfo name for unsigned long long const*
+typeinfo name for unsigned long long*
+typeinfo name for unsigned long*
+typeinfo name for unsigned short
+typeinfo name for unsigned short const*
+typeinfo name for unsigned short*
+typeinfo name for void
+typeinfo name for void const*
+typeinfo name for void*
+typeinfo name for wchar_t
+typeinfo name for wchar_t const*
+typeinfo name for wchar_t*
+uname
+uname@GLIBC_2.0
+unlink@GLIBC_2.0
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
+urandom_result > 0 || ( urandom_result < 0 && errno == EINTR )
+usleep
+usleep@GLIBC_2.0
+utime@GLIBC_2.0
+utimes@GLIBC_2.0
+vector::_M_realloc_insert
+vector::reserve
+vgui2_s.so
+video.so
+video64_server.so
+void
+vtable for CAdHocValidation
+vtable for CAdHocValidation_SimpleCallback
+vtable for SteamThreadTools::CThread
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
+vtable for __cxxabiv1::__fundamental_type_info
+vtable for __cxxabiv1::__pbase_type_info
+vtable for __cxxabiv1::__pointer_to_member_type_info
+vtable for __cxxabiv1::__pointer_type_info
+vtable for __cxxabiv1::__si_class_type_info
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+vtable for __gnu_cxx::recursive_init_error
+vtune
+waitid
+waitid@GLIBC_2.1
+waitpid
+waitpid@GLIBC_2.0
+wchar_t
+x86_64
+xlocale
+xmemory
+{default arg#
+{lambda(
+{parm#
+{unnamed type#

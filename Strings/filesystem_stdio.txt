@@ -1,949 +1,841 @@
-__gmon_start__
-_init
-_fini
-_ITM_deregisterTMCloneTable
-_ITM_registerTMCloneTable
-__cxa_finalize
-getenv
-SteamStdLib::CommandLine()
-__wrap_fopen
-fwrite
-__fprintf_chk
-V_strncpy
-V_strncat
-Plat_ctime
-getcwd
-V_FixSlashes
-strlen
-toupper
-wcscpy
-V_strcat
-V_strnicmp
-__strcpy_chk
-V_snprintf
-V_StripFilename
-fputs
-AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
-V_vsnprintf
-g_VProfProfilesRunningCount
-CVProfile_ExitScope
-VProfInternalEnterScopeCurrentThread
-g_pMemAllocSteam
-fclose
-CValidator::Push(char const*, void*, char const*)
-CValidator::ClaimMemory(void const*)
-CValidator::Pop()
-V_strlower_fast
-strcmp
-V_IsAbsolutePath
-strchr
-strstr
-stderr
-__wrap_unlink
-__wrap_rename
-V_ExtractFilePath
-__snprintf_chk
-__cxa_atexit
-SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
-SteamStdLib::CCommandLineParam::~CCommandLineParam()
-vtable for __cxxabiv1::__class_type_info
-vtable for __cxxabiv1::__vmi_class_type_info
-vtable for __cxxabiv1::__si_class_type_info
-setvbuf
-fseek
-ftell
-feof
-__vfprintf_chk
-ferror
-fflush
-fgets
-__wrap_chmod
-fread
-CValidator::ClaimArrayMemory(void const*)
-CValidator::IsClaimed(void const*) const
-___tls_get_addr
-fnmatch
-V_strncat_length
-V_RemoveDotSlashes
-V_FixDoubleSlashes
-AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
-SteamThreadTools::CThreadMutex::~CThreadMutex()
-pthread_mutex_lock
-pthread_mutex_unlock
-__wrap_open64
-__errno_location
-__wrap___xstat64
-__wrap_mkdir
-__wrap___xstat
-__wrap_fopen64
-V_stristr(char const*, char const*)
-__wrap_utime
-__wrap___lxstat64
-__wrap_link
-__wrap_rmdir
-__wrap_statvfs64
-__realpath_chk
-__wrap_opendir
-readdir64
-closedir
-__wrap_statfs
-free
-strrchr
-alphasort64
-__wrap_scandir64
-__wrap_symlink
-strcasecmp
-SteamThreadTools::CThreadMutex::CThreadMutex()
-V_UnqualifiedFileName
-memcmp
-CreateInterface
-__wrap_dlopen
-dlclose
-dlerror
-dlsym
-__wrap_dlmopen
-realpath
-strdup
-realloc
-faccessat
-strncasecmp
-tolower
-strcasestr
-SteamRealPath
-__wrap_freopen
-strpbrk
-__wrap_open
-__wrap_access
-__wrap_stat
-__wrap_lstat
-__wrap_stat64
-__wrap_lstat64
-__wrap_scandir
-__wrap___lxstat
-__wrap_statvfs
-__wrap_statfs64
-__wrap_chown
-__wrap_lchown
-__wrap_mknod
-__wrap_mount
-__wrap_mkfifo
-__wrap_utimes
-__wrap_chdir
-ftello64
-strncmp
-__pthread_key_create
-abort
-typeinfo for __cxxabiv1::__foreign_exception
-typeinfo for __cxxabiv1::__forced_unwind
-syscall
-typeinfo for __gnu_cxx::recursive_init_error
-vtable for __gnu_cxx::recursive_init_error
-typeinfo name for __gnu_cxx::recursive_init_error
-malloc
-fputc
-stdout
-stdin
-vtable for __gnu_cxx::__concurrence_lock_error
-vtable for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-typeinfo for __gnu_cxx::__concurrence_lock_error
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-pthread_once
-__nl_langinfo_l
-__uselocale
-wcslen
-mbsrtowcs
-wcscmp
-iconv_open
-iconv
-iconv_close
-__wctype_l
-__towupper_l
-__towlower_l
-__iswctype_l
-wctob
-btowc
-ungetc
-fseeko64
-ungetwc
-putwc
-wmemcpy
-wmemset
-wmemchr
-wmemmove
-__sprintf_chk
-typeinfo name for __cxxabiv1::__forced_unwind
-typeinfo name for __cxxabiv1::__foreign_exception
-vtable for __cxxabiv1::__forced_unwind
-vtable for __cxxabiv1::__foreign_exception
-__strtof_l
-__strtod_l
-strtold_l
-__newlocale
-__freelocale
-__duplocale
-wcsnrtombs
-wcrtomb
-mbsnrtowcs
-mbrtowc
-__ctype_get_mb_cur_max
-__strcoll_l
-__strxfrm_l
-__wcscoll_l
-__wcsxfrm_l
-bind_textdomain_codeset
-dgettext
-__strftime_l
-__wcsftime_l
-_txnal_cow_string_D1_commit(void*)
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-_ITM_RU1
-transaction clone for operator new[](unsigned int)
-_ITM_memcpyRtWn
-_txnal_cow_string_c_str(void const*)
-_ITM_RU4
-_txnal_cow_string_D1(void*)
-_ITM_addUserCommitAction
-_txnal_logic_error_get_msg(void*)
-_txnal_runtime_error_get_msg(void*)
-dl_iterate_phdr
-__xmknod
-__stack_chk_fail
-libdl.so.2
-librt.so.1
-ld-linux.so.2
-libtier0_s.so
-libvstdlib_s.so
-libm.so.6
-libpthread.so.0
-libc.so.6
-GLIBC_2.1
-GLIBC_2.3.4
-GLIBC_2.0
-GLIBC_2.3
-GLIBC_2.2
-GLIBC_2.2.4
-GLIBC_2.2.3
-GLIBC_2.4
-GLIBC_2.1.3
-fs_debug
-@echo off\n
-setlocal\n
-set fs_target="%s"\n
-@echo on\n
-if "%%fs_target%%" == "" goto error\n
-desktop
-copy "%s" "%s"\n
-mkdir "%s"\n
-/data/src/filesystem/BaseFileSystem.cpp
-FS:  Tried to IsOk NULL file handle!\n
-FS:  Tried to IsOk NULL file pointer inside valid file handle!\n
-FS:  Tried to EndOfFile NULL file handle!\n
-FS:  Tried to EndOfFile NULL file pointer inside valid file handle!\n
-CBaseFileSystem::Flush
-FS:  Tried to Flush NULL file handle!\n
-FS:  Tried to Flush NULL file pointer inside valid file handle!\n
-CBaseFileSystem::Seek
-Tried to Seek NULL file handle!\n
-FS:  Tried to Seek NULL file pointer inside valid file handle!\n
-CBaseFileSystem::Tell
-FS:  Tried to Tell NULL file handle!\n
-FS:  Tried to Tell NULL file pointer inside valid file handle!\n
-CBaseFileSystem::Size
-FS:  Tried to Size NULL file handle!\n
-FS:  Tried to Size NULL file pointer inside valid file handle!\n
-CBaseFileSystem::FPrintf
-len <= INT_MAX
-FS:  Tried to FPrintf NULL file handle!\n
-FS:  Tried to FPrintf NULL file pointer inside valid file handle!\n
-pFindData
-IsValidIndex(elem)
-/data/src/public/tier1/utlvector.h
+  what():  
+ [clone 
+ __vector(
+ const
+ noexcept
+ restrict
+ throw
+ transaction_safe
+ volatile
+!m_LogFuncs.IsValidIndex(m_LogFuncs.Find(logFunc))
+!m_bMounted
+!strchr(filename, '\n') && !strchr(filename, '\r')
+%s has %i files
+%s is not a packfile
+%s/.steam/steam
+%s: __pos (which is %zu) > this->size() (which is %zu)
+(%zu) Descend: %s, (%s), %s\n
+(%zu) readdir failed to find '%s' in '%s'\n
+(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
+(anonymous namespace)
+(unsigned)elem <= (unsigned)m_Size
+-+xX0123456789abcdef0123456789ABCDEF
+-+xX0123456789abcdefABCDEF
 ---------------\n
-Paths:\n
-false
-FS:  Specified two path IDs (%s, %s).\n
 ---FS:  %s %s\n
----FS:  read %s %llu %p\n
-Tried to read %llu bytes from unknown file pointer %p\n
-CBaseFileSystem::Read
-nBytesRead <= INT_MAX
-FS:  Tried to Read NULL file handle!\n
-FS:  Tried to Read NULL file pointer inside valid file handle!\n
-pPathID
----FS:  write %s %llu %p\n
-Tried to write %llu bytes from unknown file pointer %p\n
-CBaseFileSystem::Write
-nBytesWritten <= INT_MAX
-FS:  Tried to Write NULL file handle!\n
-FS:  Tried to Write NULL file pointer inside valid file handle!\n
-File %s was never closed\n
 ---FS:  close %s %p %i\n
-Tried to close unknown file pointer %p\n
+---FS:  read %s %llu %p\n
+---FS:  write %s %llu %p\n
+-0123456789
+-fs_log
+-fs_logbins
+-fs_target
+.bsp
+.cpl
+/data/src/filesystem/BaseFileSystem.cpp
+/data/src/filesystem/filesystem_stdio/filesystem_stdio.cpp
+/data/src/public/tier1/utldict.h
+/data/src/public/tier1/utlmemory.h
+/data/src/public/tier1/utlsymbol.h
+/data/src/public/tier1/utlvector.h
+/data/src/tier1/fileio.cpp
+/data/src/tier1/interface.cpp
+/data/src/tier1/utlbuffer.cpp
+/data/src/tier1/utlmemory.cpp
+/data/src/tier1/utlsymbol.cpp
+10CUtlMemoryI13ModuleCount_tE
+10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN15CBaseFileSystem14CPackFileEntryEi8CDefLess25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
+10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcii22CDefCaselessStringLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
+10CUtlMemoryIN15CBaseFileSystem10FindData_tEE
+10CUtlMemoryIN15CBaseFileSystem11COpenedFileEE
+10CUtlMemoryIN15CBaseFileSystem11CSearchPathEE
+10CUtlMemoryIP8_IO_FILEE
+10CUtlMemoryIPFvPKcS1_EE
+10CUtlMemoryIPN15CBaseFileSystem11CFileHandleEE
+10CUtlMemoryIPN15CBaseFileSystem11CPathIDInfoEE
+10CUtlMemoryIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tEE
+10CUtlMemoryIPiE
+10CUtlMemoryIcE
+10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
+10CUtlRBTreeIN15CBaseFileSystem14CPackFileEntryEi8CDefLess25CDefRBTreeBalanceListenerIiES1_E
+10CUtlRBTreeIN7CUtlMapIPKcii22CDefCaselessStringLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
+10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
+10CUtlVectorIN15CBaseFileSystem10FindData_tE10CUtlMemoryIS1_EE
+10CUtlVectorIN15CBaseFileSystem11COpenedFileE10CUtlMemoryIS1_EE
+10CUtlVectorIN15CBaseFileSystem11CSearchPathE10CUtlMemoryIS1_EE
+10CUtlVectorIP8_IO_FILE10CUtlMemoryIS1_EE
+10CUtlVectorIPFvPKcS1_E10CUtlMemoryIS3_EE
+10CUtlVectorIPN15CBaseFileSystem11CFileHandleE10CUtlMemoryIS2_EE
+10CUtlVectorIPN15CBaseFileSystem11CPathIDInfoE10CUtlMemoryIS2_EE
+10CUtlVectorIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tE10CUtlMemoryIS4_EE
+10CUtlVectorIPi10CUtlMemoryIS0_EE
+10CUtlVectorIc10CUtlMemoryIcEE
+10IAppSystem
+11CPathString
+11IFileSystem
+15CBaseFileSystem
+15IBaseFileSystem
+17CFileSystem_Stdio
+18CUtlCharConversion
+19CUtlNoEscConversion
+21CUtlCStringConversion
+27CFileSystemStdIODLLValidate
+7CUtlMapIPKcii22CDefCaselessStringLessE
+9IValidate
+:done\n
+:error\n
+@echo off\n
+@echo on\n
+AKST
+ASCII
+ASCII//TRANSLIT
+April
+AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
+AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
+August
+BCreateDirectory
+Breaking '%s' in '%s'\n
+CBaseFileSystem
 CBaseFileSystem::Close
+CBaseFileSystem::FPrintf
+CBaseFileSystem::FileExists
+CBaseFileSystem::FindFirst
+CBaseFileSystem::FindNext
+CBaseFileSystem::Flush
+CBaseFileSystem::GetFileTime
+CBaseFileSystem::Open
+CBaseFileSystem::Read
+CBaseFileSystem::Seek
+CBaseFileSystem::Size
+CBaseFileSystem::Tell
+CBaseFileSystem::Write
+CFileSystem_Stdio
+CPathString
+CUtlDict
+CUtlSymbol::ValidateGlobals
+CUtlSymbolTable
+CVProfile_ExitScope
+CValidator::ClaimArrayMemory(void const*)
+CValidator::ClaimMemory(void const*)
+CValidator::IsClaimed(void const*) const
+CValidator::Pop()
+CValidator::Push(char const*, void*, char const*)
+Couldn't open .bsp %s for embedded pack file check\n
+CreateInterface
+DBG_PATHMATCH
+DEFAULT_WRITE_PATH
+December
+EXECUTABLE_PATH
+FS:  Specified two path IDs (%s, %s).\n
 FS:  Tried to Close NULL file handle!\n
 FS:  Tried to Close NULL file pointer inside valid file handle!\n
-set binsrc="%s"\n
-mkdir "%%fs_target%%"\n
-mkdir "%%fs_target%%\bin"\n
-goto done\n
-:error\n
-:done\n
-copy "%%binsrc%%\hl2.exe" "%%fs_target%%"\n
-copy "%%binsrc%%\hl2.dat" "%%fs_target%%"\n
+FS:  Tried to EndOfFile NULL file handle!\n
+FS:  Tried to EndOfFile NULL file pointer inside valid file handle!\n
+FS:  Tried to FPrintf NULL file handle!\n
+FS:  Tried to FPrintf NULL file pointer inside valid file handle!\n
+FS:  Tried to Flush NULL file handle!\n
+FS:  Tried to Flush NULL file pointer inside valid file handle!\n
+FS:  Tried to IsOk NULL file handle!\n
+FS:  Tried to IsOk NULL file pointer inside valid file handle!\n
+FS:  Tried to Read NULL file handle!\n
+FS:  Tried to Read NULL file pointer inside valid file handle!\n
+FS:  Tried to Seek NULL file pointer inside valid file handle!\n
+FS:  Tried to Size NULL file handle!\n
+FS:  Tried to Size NULL file pointer inside valid file handle!\n
+FS:  Tried to Size NULL filename!\n
+FS:  Tried to Tell NULL file handle!\n
+FS:  Tried to Tell NULL file pointer inside valid file handle!\n
+FS:  Tried to Write NULL file handle!\n
+FS:  Tried to Write NULL file pointer inside valid file handle!\n
+FS_stat on file %s which appeared to exist failed!!!\n
+Failed to load optional module %s\n
+February
+File %s was never closed\n
+Filesystem
+Friday
+GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
+GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
+GLIBC_2.0
+GLIBC_2.1
+GLIBC_2.1.3
+GLIBC_2.2
+GLIBC_2.2.3
+GLIBC_2.2.4
+GLIBC_2.3
+GLIBC_2.3.4
+GLIBC_2.4
+HOME
+IVALIDATE001
+IsValidIndex(elem)
+JArray
+January
+July
+June
+Log file system accesses
+Log the binaries we load during operation
+Lowered '%s' -> '%s'\n
+March
+Matched '%s' -> '%s'\n
+Monday
+N10__cxxabiv115__forced_unwindE
+N10__cxxabiv119__foreign_exceptionE
+N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
+N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
+N9__gnu_cxx20recursive_init_errorE
+N9__gnu_cxx24__concurrence_lock_errorE
+N9__gnu_cxx26__concurrence_unlock_errorE
+NSt6locale5facetE
+NSt8ios_base7failureE
+November
+October
+Paths:\n
+Plat_ctime
+Requested non-existent write path %s!\n
+Saturday
+September
+Set target syntax
+St10ctype_base
+St10money_base
+St10moneypunctIcLb0EE
+St10moneypunctIcLb1EE
+St10moneypunctIwLb0EE
+St10moneypunctIwLb1EE
+St11__timepunctIcE
+St11__timepunctIwE
+St11logic_error
+St12codecvt_base
+St12length_error
+St12out_of_range
+St13bad_exception
+St13basic_istreamIwSt11char_traitsIwEE
+St13basic_ostreamIwSt11char_traitsIwEE
+St13messages_base
+St13runtime_error
+St15basic_streambufIcSt11char_traitsIcEE
+St15basic_streambufIwSt11char_traitsIwEE
+St16__numpunct_cacheIcE
+St16__numpunct_cacheIwE
+St17__timepunct_cacheIcE
+St17__timepunct_cacheIwE
+St18__moneypunct_cacheIcLb0EE
+St18__moneypunct_cacheIcLb1EE
+St18__moneypunct_cacheIwLb0EE
+St18__moneypunct_cacheIwLb1EE
+St20bad_array_new_length
+St21__ctype_abstract_baseIwE
+St23__codecvt_abstract_baseIDiDu11__mbstate_tE
+St23__codecvt_abstract_baseIDic11__mbstate_tE
+St23__codecvt_abstract_baseIDsDu11__mbstate_tE
+St23__codecvt_abstract_baseIDsc11__mbstate_tE
+St23__codecvt_abstract_baseIcc11__mbstate_tE
+St23__codecvt_abstract_baseIwc11__mbstate_tE
+St5ctypeIcE
+St5ctypeIwE
+St7codecvtIDiDu11__mbstate_tE
+St7codecvtIDic11__mbstate_tE
+St7codecvtIDsDu11__mbstate_tE
+St7codecvtIDsc11__mbstate_tE
+St7codecvtIcc11__mbstate_tE
+St7codecvtIwc11__mbstate_tE
+St7collateIcE
+St7collateIwE
+St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St8bad_cast
+St8ios_base
+St8messagesIcE
+St8messagesIwE
+St8numpunctIcE
+St8numpunctIwE
+St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St9bad_alloc
+St9basic_iosIcSt11char_traitsIcEE
+St9basic_iosIwSt11char_traitsIwEE
+St9exception
+St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
+St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
+St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
+St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
+St9time_base
+SteamRealPath
+SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
+SteamStdLib::CCommandLineParam::~CCommandLineParam()
+SteamStdLib::CommandLine()
+SteamThreadTools::CThreadMutex::CThreadMutex()
+SteamThreadTools::CThreadMutex::~CThreadMutex()
+Sunday
+Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
+TLS init function for 
+TLS wrapper function for 
+Thursday
+Tried to Seek NULL file handle!\n
+Tried to close unknown file pointer %p\n
+Tried to read %llu bytes from unknown file pointer %p\n
+Tried to write %llu bytes from unknown file pointer %p\n
+Tuesday
+UTF-8
+Unable to remove %s!\n
+Unable to rename %s to %s!\n
+Unmatched %s\n
+VBaseFileSystem008
+VFileSystem014
+VProfInternalEnterScopeCurrentThread
+VTT for 
+V_ExtractFilePath
+V_FixDoubleSlashes
+V_FixSlashes
+V_IsAbsolutePath
+V_RemoveDotSlashes
+V_RemoveDotSlashes failed for "%s".
+V_StripFilename
+V_UnqualifiedFileName
+V_snprintf
+V_strcat
+V_stristr(char const*, char const*)
+V_strlower_fast
+V_strncat
+V_strncat_length
+V_strncpy
+V_strnicmp
+V_vsnprintf
+WORKAROUND_GdbSymbolLoadHook
+Wednesday
+[abi:
+\t(%zu) comparing %s with %s\n
+_Accum
+_Fract
+_GLOBAL_
+_ITM_RU1
+_ITM_RU4
+_ITM_addUserCommitAction
+_ITM_deregisterTMCloneTable
+_ITM_memcpyRtWn
+_ITM_registerTMCloneTable
+_Sat 
+___tls_get_addr
+___tls_get_addr@GLIBC_2.3
+__ctype_get_mb_cur_max
+__ctype_get_mb_cur_max@GLIBC_2.0
+__cxa_atexit
+__cxa_atexit@GLIBC_2.1.3
+__cxa_finalize
+__cxa_finalize@GLIBC_2.1.3
+__duplocale
+__duplocale@GLIBC_2.1
+__errno_location
+__errno_location@GLIBC_2.0
+__float128
+__fprintf_chk
+__fprintf_chk@GLIBC_2.3.4
+__freelocale
+__freelocale@GLIBC_2.1
+__gmon_start__
+__gnu_cxx::__concurrence_lock_error
+__gnu_cxx::__concurrence_unlock_error
+__iswctype_l
+__iswctype_l@GLIBC_2.1
+__lxstat64@GLIBC_2.2
+__lxstat@GLIBC_2.0
+__newlocale
+__newlocale@GLIBC_2.1
+__nl_langinfo_l
+__nl_langinfo_l@GLIBC_2.2
+__pthread_key_create
+__pthread_key_create@GLIBC_2.0
+__realpath_chk
+__realpath_chk@GLIBC_2.4
+__snprintf_chk
+__snprintf_chk@GLIBC_2.3.4
+__sprintf_chk
+__sprintf_chk@GLIBC_2.3.4
+__stack_chk_fail
+__stack_chk_fail@GLIBC_2.4
+__strcoll_l
+__strcoll_l@GLIBC_2.1
+__strcpy_chk
+__strcpy_chk@GLIBC_2.3.4
+__strftime_l
+__strftime_l@GLIBC_2.3
+__strtod_l
+__strtod_l@GLIBC_2.1
+__strtof_l
+__strtof_l@GLIBC_2.1
+__strxfrm_l
+__strxfrm_l@GLIBC_2.1
+__towlower_l
+__towlower_l@GLIBC_2.1
+__towupper_l
+__towupper_l@GLIBC_2.1
+__uselocale
+__uselocale@GLIBC_2.3
+__vfprintf_chk
+__vfprintf_chk@GLIBC_2.3.4
+__wcscoll_l
+__wcscoll_l@GLIBC_2.1
+__wcsftime_l
+__wcsftime_l@GLIBC_2.3
+__wcsxfrm_l
+__wcsxfrm_l@GLIBC_2.1
+__wctype_l
+__wctype_l@GLIBC_2.1
+__wrap___lxstat
+__wrap___lxstat64
+__wrap___xstat
+__wrap___xstat64
+__wrap_access
+__wrap_chdir
+__wrap_chmod
+__wrap_chown
+__wrap_dlmopen
+__wrap_dlopen
+__wrap_fopen
+__wrap_fopen64
+__wrap_freopen
+__wrap_lchown
+__wrap_link
+__wrap_lstat
+__wrap_lstat64
+__wrap_mkdir
+__wrap_mkfifo
+__wrap_mknod
+__wrap_mount
+__wrap_open
+__wrap_open64
+__wrap_opendir
+__wrap_rename
+__wrap_rmdir
+__wrap_scandir
+__wrap_scandir64
+__wrap_stat
+__wrap_stat64
+__wrap_statfs
+__wrap_statfs64
+__wrap_statvfs
+__wrap_statvfs64
+__wrap_symlink
+__wrap_unlink
+__wrap_utime
+__wrap_utimes
+__xmknod
+__xmknod@GLIBC_2.0
+__xstat64@GLIBC_2.2
+__xstat@GLIBC_2.0
+_fini
+_init
+_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
+_txnal_cow_string_D1(void*)
+_txnal_cow_string_D1_commit(void*)
+_txnal_cow_string_c_str(void const*)
+_txnal_logic_error_get_msg(void*)
+_txnal_runtime_error_get_msg(void*)
+abort
+abort@GLIBC_2.0
+access@GLIBC_2.0
+alignof 
+alnum
+alpha
+alphasort64
+alphasort64@GLIBC_2.2
+auto
+auto:
+basic_ios::clear
+basic_iostream
+basic_istream
+basic_ostream
+basic_string::_M_replace_aux
+basic_string::_S_construct null not valid
+basic_string::_S_create
+basic_string::append
+basic_string::assign
+basic_string::copy
+basic_string::erase
+basic_string::resize
+bind_textdomain_codeset
+bind_textdomain_codeset@GLIBC_2.2
+blank
+bool
+boolean
+btowc
+btowc@GLIBC_2.0
+byte
+char16_t
+char32_t
+char8_t
+chdir@GLIBC_2.0
+chmod@GLIBC_2.0
+chown@GLIBC_2.1
+closedir
+closedir@GLIBC_2.0
+cntrl
+complex 
+const_cast
+construction vtable for 
 copy "%%binsrc%%\bin\*.asi" "%%fs_target%%\bin"\n
-copy "%%binsrc%%\bin\materialsystem.dll" "%%fs_target%%\bin"\n
-copy "%%binsrc%%\bin\shaderapidx9.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\engine.dll" "%%fs_target%%\bin"\n
 copy "%%binsrc%%\bin\filesystem_stdio.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\launcher.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\materialsystem.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\mss32.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\shader_nv*.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\shaderapidx9.dll" "%%fs_target%%\bin"\n
 copy "%%binsrc%%\bin\soundemittersystem.dll" "%%fs_target%%\bin"\n
 copy "%%binsrc%%\bin\stdshader*.dll" "%%fs_target%%\bin"\n
-copy "%%binsrc%%\bin\shader_nv*.dll" "%%fs_target%%\bin"\n
-copy "%%binsrc%%\bin\launcher.dll" "%%fs_target%%\bin"\n
-copy "%%binsrc%%\bin\engine.dll" "%%fs_target%%\bin"\n
-copy "%%binsrc%%\bin\mss32.dll" "%%fs_target%%\bin"\n
+copy "%%binsrc%%\bin\studiorender.dll" "%%fs_target%%\bin"\n
 copy "%%binsrc%%\bin\tier0.dll" "%%fs_target%%\bin"\n
 copy "%%binsrc%%\bin\vgui2.dll" "%%fs_target%%\bin"\n
 copy "%%binsrc%%\bin\vguimatsurface.dll" "%%fs_target%%\bin"\n
 copy "%%binsrc%%\bin\voice_miles.dll" "%%fs_target%%\bin"\n
 copy "%%binsrc%%\bin\vphysics.dll" "%%fs_target%%\bin"\n
 copy "%%binsrc%%\bin\vstdlib.dll" "%%fs_target%%\bin"\n
-copy "%%binsrc%%\bin\studiorender.dll" "%%fs_target%%\bin"\n
-copy "%%binsrc%%\hl2\resource\*.ttf" "%%fs_target%%\hl2\resource"\n
+copy "%%binsrc%%\hl2.dat" "%%fs_target%%"\n
+copy "%%binsrc%%\hl2.exe" "%%fs_target%%"\n
 copy "%%binsrc%%\hl2\bin\gameui.dll" "%%fs_target%%\hl2\bin"\n
-echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"\n
-echo ERROR: must set fs_target=targetpath (ie. "set fs_target=u:\destdir")!\n
-nGrowSize >= 0
-m_nAllocationCount >= 0
-/data/src/public/tier1/utlmemory.h
-CUtlSymbolTable
-m_StringPools
-m_Memory
-m_Lookup
-m_Elements
-CBaseFileSystem
-m_LogFuncs
-m_PackFileHandles
-m_FindData
-m_SearchPaths
-CUtlDict
-m_Tree
-m_PathIDInfos
-m_OpenedFiles
-m_OpenedFileHandles
-m_FileNames
-m_FindData[ iFind ].wildCardString
-m_FindData[ iFind ].m_VisitedSearchPaths
-m_FindData[ iFind ].m_VisitedFiles
-m_SearchPaths[ iPath ].m_PackFiles
-%s is not a packfile
-%s has %i files
-num > 0
-(&src < m_Memory.Base()) || (&src >= (m_Memory.Base() + m_Size) )
-open
-!m_LogFuncs.IsValidIndex(m_LogFuncs.Find(logFunc))
-pPool->m_SpaceUsed < 0xFFFF
-/data/src/public/tier1/utlsymbol.h
-Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the symbol type or look for unnecessary spam in the tables.
-CBaseFileSystem::GetFileTime
-filetime
-.bsp
-fs_debug: %s\n
-FS_stat on file %s which appeared to exist failed!!!\n
-stat
-FS:  Tried to Size NULL filename!\n
-CBaseFileSystem::FileExists
-pathID
-EXECUTABLE_PATH
-DEFAULT_WRITE_PATH
-Requested non-existent write path %s!\n
-CBaseFileSystem::Open
-Unable to remove %s!\n
-pOldPath && pNewPath
-pOldPathId
-Unable to rename %s to %s!\n
-/data/src/public/tier1/utldict.h
-CBaseFileSystem::FindNext
-CBaseFileSystem::FindFirst
-pWildCard
-pHandle
-packfile.m_bIsPackFile
-packfile.m_hPackFile
-foundEndOfCentralDirRecord
-fileHeader.signature == 0x02014b50
-fileHeader.compressionMethod == 0
-localFileHeader.signature == 0x04034b50
-zip%i.zip
-(unsigned)elem <= (unsigned)m_Size
-Couldn't open .bsp %s for embedded pack file check\n
-Log file system accesses
--fs_log
-Set target syntax
--fs_target
--fs_logbins
-Log the binaries we load during operation
-10IAppSystem
-15IBaseFileSystem
-11IFileSystem
-15CBaseFileSystem
-10CUtlVectorIPFvPKcS1_E10CUtlMemoryIS3_EE
-10CUtlVectorIP8_IO_FILE10CUtlMemoryIS1_EE
-10CUtlVectorIN15CBaseFileSystem10FindData_tE10CUtlMemoryIS1_EE
-10CUtlVectorIc10CUtlMemoryIcEE
-10CUtlVectorIPi10CUtlMemoryIS0_EE
-10CUtlVectorIN15CBaseFileSystem11CSearchPathE10CUtlMemoryIS1_EE
-10CUtlRBTreeIN15CBaseFileSystem14CPackFileEntryEi8CDefLess25CDefRBTreeBalanceListenerIiES1_E
-10CUtlVectorIPN15CBaseFileSystem11CPathIDInfoE10CUtlMemoryIS2_EE
-10CUtlVectorIN15CBaseFileSystem11COpenedFileE10CUtlMemoryIS1_EE
-10CUtlVectorIPN15CBaseFileSystem11CFileHandleE10CUtlMemoryIS2_EE
-10CUtlMemoryIPFvPKcS1_EE
-10CUtlMemoryIP8_IO_FILEE
-10CUtlMemoryIN15CBaseFileSystem10FindData_tEE
-10CUtlMemoryIcE
-10CUtlMemoryIPiE
-7CUtlMapIPKcii22CDefCaselessStringLessE
-10CUtlMemoryIN15CBaseFileSystem11CSearchPathEE
-10CUtlMemoryIN10CUtlRBTreeIN15CBaseFileSystem14CPackFileEntryEi8CDefLess25CDefRBTreeBalanceListenerIiES2_E6Node_tEE
-10CUtlMemoryIPN15CBaseFileSystem11CPathIDInfoEE
-10CUtlMemoryIN15CBaseFileSystem11COpenedFileEE
-10CUtlMemoryIPN15CBaseFileSystem11CFileHandleEE
-10CUtlVectorIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tE10CUtlMemoryIS4_EE
-10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES0_E
-10CUtlRBTreeIN7CUtlMapIPKcii22CDefCaselessStringLessE6Node_tEiNS4_8CKeyLessE25CDefRBTreeBalanceListenerIiES2_E
-10CUtlMemoryIPN19CBaseUtlSymbolTableI10CUtlSymbolE12StringPool_tEE
-10CUtlMemoryIN10CUtlRBTreeI16CStringPoolIndextN19CBaseUtlSymbolTableI10CUtlSymbolE5CLessE25CDefRBTreeBalanceListenerItES1_E6Node_tEE
-10CUtlMemoryIN10CUtlRBTreeIN7CUtlMapIPKcii22CDefCaselessStringLessE6Node_tEiNS5_8CKeyLessE25CDefRBTreeBalanceListenerIiES3_E6Node_tEE
-!m_bMounted
-/data/src/filesystem/filesystem_stdio/filesystem_stdio.cpp
-!strchr(filename, '\n') && !strchr(filename, '\r')
-VFileSystem014
-VBaseFileSystem008
-IVALIDATE001
-CFileSystem_Stdio
-Filesystem
-g_FileSystem_Stdio
-g_PathIDTable
-CUtlSymbol::ValidateGlobals
-9IValidate
-17CFileSystem_Stdio
-27CFileSystemStdIODLLValidate
-CPathString
-V_RemoveDotSlashes failed for "%s".
-/data/src/tier1/fileio.cpp
-BCreateDirectory
-11CPathString
-g_VecLoadedModules
-/data/src/tier1/interface.cpp
-CreateInterface
-g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
-dlmopen %s failed: %s\n
-.cpl
-WORKAROUND_GdbSymbolLoadHook
-strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
-Failed to load optional module %s\n
-10CUtlVectorI13ModuleCount_t10CUtlMemoryIS0_EE
-10CUtlMemoryI13ModuleCount_tE
-HOME
-%s/.steam/steam
-true
-false 
-(%zu) Descend: %s, (%s), %s\n
-\t(%zu) comparing %s with %s\n
-(%zu) readdir failed to find '%s' in '%s'\n
-DBG_PATHMATCH
-Lowered '%s' -> '%s'\n
-Breaking '%s' in '%s'\n
-Matched '%s' -> '%s'\n
-Unmatched %s\n
-/data/src/tier1/utlbuffer.cpp
-info.m_pReplacementString == 0
-nSize != 0
-18CUtlCharConversion
-21CUtlCStringConversion
-19CUtlNoEscConversion
-nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
-/data/src/tier1/utlmemory.cpp
-s_bAllowStaticSymbolTable
-/data/src/tier1/utlsymbol.cpp
-s_pSymbolTable
-N9__gnu_cxx20recursive_init_errorE
-pure virtual method called\n
-terminate called recursively\n
-  what():  
-terminate called after throwing an instance of '
-terminate called without an active exception\n
-__gnu_cxx::__concurrence_lock_error
-__gnu_cxx::__concurrence_unlock_error
-NSt6locale5facetE
-N9__gnu_cxx24__concurrence_lock_errorE
-N9__gnu_cxx26__concurrence_unlock_errorE
-UTF-8
-ASCII//TRANSLIT
-ASCII
-St12codecvt_base
-St23__codecvt_abstract_baseIDsc11__mbstate_tE
-St7codecvtIDsc11__mbstate_tE
-St23__codecvt_abstract_baseIDic11__mbstate_tE
-St7codecvtIDic11__mbstate_tE
-St23__codecvt_abstract_baseIDsDu11__mbstate_tE
-St7codecvtIDsDu11__mbstate_tE
-St23__codecvt_abstract_baseIDiDu11__mbstate_tE
-St7codecvtIDiDu11__mbstate_tE
-St10ctype_base
-St5ctypeIcE
-St5ctypeIwE
-space
-print
-cntrl
-upper
-lower
-alpha
-punct
-xdigit
-alnum
-graph
-blank
-N9__gnu_cxx18stdio_sync_filebufIcSt11char_traitsIcEEE
-N9__gnu_cxx18stdio_sync_filebufIwSt11char_traitsIwEEE
-basic_ios::clear
-St9basic_iosIcSt11char_traitsIcEE
-St9basic_iosIwSt11char_traitsIwEE
-St8ios_base
-St13basic_istreamIwSt11char_traitsIwEE
-basic_string::erase
-%s: __pos (which is %zu) > this->size() (which is %zu)
-St9time_base
-St10money_base
-St13messages_base
-St7collateIcE
-St8numpunctIcE
-St7num_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
-St7num_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
-St17__timepunct_cacheIcE
-St11__timepunctIcE
-St10moneypunctIcLb1EE
-St10moneypunctIcLb0EE
-St8messagesIcE
-St23__codecvt_abstract_baseIcc11__mbstate_tE
-St9money_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
-St9money_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
-St8time_putIcSt19ostreambuf_iteratorIcSt11char_traitsIcEEE
-St8time_getIcSt19istreambuf_iteratorIcSt11char_traitsIcEEE
-St18__moneypunct_cacheIcLb0EE
-St18__moneypunct_cacheIcLb1EE
-St16__numpunct_cacheIcE
-St13basic_ostreamIwSt11char_traitsIwEE
-not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
-St15basic_streambufIcSt11char_traitsIcEE
-St15basic_streambufIwSt11char_traitsIwEE
-basic_string::copy
-basic_string::_S_create
-basic_string::_M_replace_aux
-basic_string::assign
-basic_string::append
-basic_string::resize
-basic_string::_S_construct null not valid
-St7collateIwE
-St21__ctype_abstract_baseIwE
-St8numpunctIwE
-St7num_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
-St7num_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
-St17__timepunct_cacheIwE
-St11__timepunctIwE
-St10moneypunctIwLb1EE
-St10moneypunctIwLb0EE
-St8messagesIwE
-St23__codecvt_abstract_baseIwc11__mbstate_tE
-St9money_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
-St9money_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
-St8time_putIwSt19ostreambuf_iteratorIwSt11char_traitsIwEEE
-St8time_getIwSt19istreambuf_iteratorIwSt11char_traitsIwEEE
-St18__moneypunct_cacheIwLb0EE
-St18__moneypunct_cacheIwLb1EE
-St16__numpunct_cacheIwE
-std::bad_alloc
-St9bad_alloc
-std::bad_array_new_length
-St20bad_array_new_length
-std::bad_cast
-St8bad_cast
-_GLOBAL_
-(anonymous namespace)
-string literal
-auto
-decltype(auto)
-[abi:
-{default arg#
-JArray
-auto:
-VTT for 
-construction vtable for 
-typeinfo for 
-typeinfo name for 
-typeinfo fn for 
-non-virtual thunk to 
+copy "%%binsrc%%\hl2\resource\*.ttf" "%%fs_target%%\hl2\resource"\n
+copy "%s" "%s"\n
 covariant return thunk to 
-java Class for 
-guard variable for 
-TLS init function for 
-TLS wrapper function for 
-reference temporary #
-hidden alias for 
-non-transaction clone for 
-_Sat 
-_Fract
-_Accum
-operator
-operator 
-new 
-java resource 
-decltype (
-{parm#
-this
-global constructors keyed to 
-global destructors keyed to 
-{lambda(
-{unnamed type#
- [clone 
- restrict
- volatile
- const
- transaction_safe
- noexcept
- throw
-complex 
-imaginary 
- __vector(
-std::allocator
-std::basic_string
-std::string
-std::istream
-basic_istream
-std::ostream
-basic_ostream
-std::iostream
-basic_iostream
-alignof 
-const_cast
-delete[] 
-dynamic_cast
-delete 
-operator"" 
-new[]
-reinterpret_cast
-sizeof...
-static_cast
-sizeof 
-throw 
-bool
-boolean
-byte
-long double
-float
-__float128
-unsigned char
-unsigned int
-unsigned
-unsigned long
-unsigned __int128
-unsigned short
-void
-wchar_t
-unsigned long long
+decimal128
 decimal32
 decimal64
-decimal128
-half
-char8_t
-char16_t
-char32_t
+decltype (
+decltype(auto)
 decltype(nullptr)
-template parameter object for 
-std::basic_string<char, std::char_traits<char>, std::allocator<char> >
+delete 
+delete[] 
+desktop
+dgettext
+dgettext@GLIBC_2.0
+dl_iterate_phdr
+dl_iterate_phdr@GLIBC_2.2.4
+dlclose
+dlclose@GLIBC_2.0
+dlerror
+dlerror@GLIBC_2.0
+dlmopen %s failed: %s\n
+dlmopen@GLIBC_2.3.4
+dlopen@GLIBC_2.1
+dlsym
+dlsym@GLIBC_2.0
+dynamic_cast
+echo !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"\n
+echo ERROR: must set fs_target=targetpath (ie. "set fs_target=u:\destdir")!\n
+faccessat
+faccessat@GLIBC_2.4
+false
+false 
+fclose
+fclose@GLIBC_2.1
+feof
+feof@GLIBC_2.0
+ferror
+ferror@GLIBC_2.0
+fflush
+fflush@GLIBC_2.0
+fgets
+fgets@GLIBC_2.0
+fileHeader.compressionMethod == 0
+fileHeader.signature == 0x02014b50
+filetime
+float
+fnmatch
+fnmatch@GLIBC_2.2.3
+fopen64@GLIBC_2.1
+fopen@GLIBC_2.1
+foundEndOfCentralDirRecord
+fputc
+fputc@GLIBC_2.0
+fputs
+fputs@GLIBC_2.0
+fread
+fread@GLIBC_2.0
+free
+free@GLIBC_2.0
+freopen@GLIBC_2.0
+fs_debug
+fs_debug: %s\n
+fseek
+fseek@GLIBC_2.0
+fseeko64
+fseeko64@GLIBC_2.1
+ftell
+ftell@GLIBC_2.0
+ftello64
+ftello64@GLIBC_2.1
+fwrite
+fwrite@GLIBC_2.0
+g_FileSystem_Stdio
+g_PathIDTable
+g_VProfProfilesRunningCount
+g_VecLoadedModules
+g_VecLoadedModules[ iLoadedModules ].m_cRef > 0
+g_pMemAllocSteam
+getcwd
+getcwd@GLIBC_2.0
+getenv
+getenv@GLIBC_2.0
+global constructors keyed to 
+global destructors keyed to 
+goto done\n
+graph
+guard variable for 
+half
+hidden alias for 
+iconv
+iconv@GLIBC_2.1
+iconv_close
+iconv_close@GLIBC_2.1
+iconv_open
+iconv_open@GLIBC_2.1
+if "%%fs_target%%" == "" goto error\n
+imaginary 
+info.m_pReplacementString == 0
+java Class for 
+java resource 
+lchown@GLIBC_2.0
+ld-linux.so.2
+len <= INT_MAX
+libc.so.6
+libdl.so.2
+libm.so.6
+libpthread.so.0
+librt.so.1
+libtier0_s.so
+libvstdlib_s.so
+localFileHeader.signature == 0x04034b50
+locale::facet::_S_create_c_locale name not valid
+long double
+lower
+m_Elements
+m_FileNames
+m_FindData
+m_FindData[ iFind ].m_VisitedFiles
+m_FindData[ iFind ].m_VisitedSearchPaths
+m_FindData[ iFind ].wildCardString
+m_LogFuncs
+m_Lookup
+m_Memory
+m_OpenedFileHandles
+m_OpenedFiles
+m_PackFileHandles
+m_PathIDInfos
+m_SearchPaths
+m_SearchPaths[ iPath ].m_PackFiles
+m_StringPools
+m_Tree
+m_nAllocationCount >= 0
+malloc
+malloc@GLIBC_2.0
+mbrtowc
+mbrtowc@GLIBC_2.0
+mbsnrtowcs
+mbsnrtowcs@GLIBC_2.0
+mbsrtowcs
+mbsrtowcs@GLIBC_2.0
+memcmp
+memcmp@GLIBC_2.0
+mkdir "%%fs_target%%"\n
+mkdir "%%fs_target%%\bin"\n
+mkdir "%s"\n
+mkdir@GLIBC_2.0
+mkfifo@GLIBC_2.0
+mount@GLIBC_2.0
+nBytesItem is %zu in UtlMemory_CalcNewAllocationCount
+nBytesRead <= INT_MAX
+nBytesWritten <= INT_MAX
+nGrowSize >= 0
+nSize != 0
+new 
+new[]
+non-transaction clone for 
+non-virtual thunk to 
+not enough space for format expansion (Please submit full bug report at https://gcc.gnu.org/bugs/):\n    
+num > 0
+open
+open64@GLIBC_2.2
+opendir@GLIBC_2.0
+operator
+operator 
+operator"" 
+pFindData
+pHandle
+pOldPath && pNewPath
+pOldPathId
+pPathID
+pPool->m_SpaceUsed < 0xFFFF
+pWildCard
+packfile.m_bIsPackFile
+packfile.m_hPackFile
+pathID
+print
+pthread_mutex_lock
+pthread_mutex_lock@GLIBC_2.0
+pthread_mutex_unlock
+pthread_mutex_unlock@GLIBC_2.0
+pthread_once
+pthread_once@GLIBC_2.0
+punct
+pure virtual method called\n
+putwc
+putwc@GLIBC_2.2
+readdir64
+readdir64@GLIBC_2.2
+realloc
+realloc@GLIBC_2.0
+realpath
+realpath@GLIBC_2.3
+reference temporary #
+reinterpret_cast
+rename@GLIBC_2.0
+rmdir@GLIBC_2.0
+s_bAllowStaticSymbolTable
+s_pSymbolTable
+scandir64@GLIBC_2.2
+scandir@GLIBC_2.0
+set binsrc="%s"\n
+set fs_target="%s"\n
+setlocal\n
+setvbuf
+setvbuf@GLIBC_2.0
+sizeof 
+sizeof...
+space
+stat
+statfs64@GLIBC_2.1
+statfs@GLIBC_2.0
+static_cast
+statvfs64@GLIBC_2.1
+statvfs@GLIBC_2.1
+std::allocator
+std::bad_alloc
+std::bad_array_new_length
+std::bad_cast
+std::bad_exception
+std::basic_iostream<char, std::char_traits<char> >
 std::basic_istream<char, std::char_traits<char> >
 std::basic_ostream<char, std::char_traits<char> >
-std::basic_iostream<char, std::char_traits<char> >
+std::basic_string
+std::basic_string<char, std::char_traits<char>, std::allocator<char> >
 std::exception
-std::bad_exception
-St9exception
-St13bad_exception
-N10__cxxabiv115__forced_unwindE
-N10__cxxabiv119__foreign_exceptionE
-locale::facet::_S_create_c_locale name not valid
-vector::_M_realloc_insert
-St7codecvtIcc11__mbstate_tE
-St7codecvtIwc11__mbstate_tE
-NSt8ios_base7failureE
--+xX0123456789abcdef0123456789ABCDEF
--+xX0123456789abcdefABCDEF
--0123456789
-AKST
-St11logic_error
-St12length_error
-St12out_of_range
-St13runtime_error
-Sunday
-Monday
-Tuesday
-Wednesday
-Thursday
-Friday
-Saturday
-January
-February
-March
-April
-June
-July
-August
-September
-October
-November
-December
-__nl_langinfo_l@GLIBC_2.2
-fputs@GLIBC_2.0
-_ITM_addUserCommitAction
-abort@GLIBC_2.0
-__errno_location@GLIBC_2.0
-_ITM_memcpyRtWn
-statvfs64@GLIBC_2.1
-wcscpy@GLIBC_2.0
-pthread_once@GLIBC_2.0
-__wrap_opendir
-typeinfo for __gnu_cxx::recursive_init_error
-wmemchr@GLIBC_2.0
-CValidator::IsClaimed(void const*) const
-_txnal_runtime_error_get_msg(void*)
-statfs64@GLIBC_2.1
-__wrap_freopen
-V_FixDoubleSlashes
-mkdir@GLIBC_2.0
-__cxa_atexit@GLIBC_2.1.3
-vtable for __cxxabiv1::__foreign_exception
-memcmp@GLIBC_2.0
-V_UnqualifiedFileName
-typeinfo for __cxxabiv1::__foreign_exception
-typeinfo for __cxxabiv1::__forced_unwind
-statfs@GLIBC_2.0
-__ctype_get_mb_cur_max@GLIBC_2.0
-__fprintf_chk@GLIBC_2.3.4
-transaction clone for operator new[](unsigned int)
-__wrap_symlink
-__xstat@GLIBC_2.0
-SteamStdLib::CCommandLineParam::CCommandLineParam(char const*, char const*)
-syscall@GLIBC_2.0
-CValidator::Pop()
-__gmon_start__
-__lxstat@GLIBC_2.0
-V_ExtractFilePath
-realloc@GLIBC_2.0
-iconv_open@GLIBC_2.1
-__xstat64@GLIBC_2.2
-__wrap_rename
-__wrap_fopen
-alphasort64@GLIBC_2.2
-typeinfo for __gnu_cxx::__concurrence_unlock_error
-strchr@GLIBC_2.0
-vsnprintf@GLIBC_2.0
-putwc@GLIBC_2.2
-getenv@GLIBC_2.0
-__strftime_l@GLIBC_2.3
-V_strcat
-_fini
-strncpy@GLIBC_2.0
-wmemmove@GLIBC_2.0
-wcslen@GLIBC_2.0
-V_StripFilename
-mbsrtowcs@GLIBC_2.0
-_ITM_RU1
-dgettext@GLIBC_2.0
-dlclose@GLIBC_2.0
-toupper@GLIBC_2.0
-fgets@GLIBC_2.0
-rename@GLIBC_2.0
-fopen64@GLIBC_2.1
-scandir@GLIBC_2.0
-typeinfo name for __gnu_cxx::recursive_init_error
-strtold_l@GLIBC_2.3
-strrchr@GLIBC_2.0
-vtable for __cxxabiv1::__forced_unwind
-mount@GLIBC_2.0
-dlmopen@GLIBC_2.3.4
-fseeko64@GLIBC_2.1
-chmod@GLIBC_2.0
-wmemcpy@GLIBC_2.0
-g_pMemAllocSteam
-CreateInterface
-mbrtowc@GLIBC_2.0
-V_RemoveDotSlashes
-__wrap_chmod
-_ITM_deregisterTMCloneTable
-vtable for __gnu_cxx::__concurrence_unlock_error
-ungetc@GLIBC_2.0
-__wrap_scandir64
-__wrap_stat
-AssertMsgHelper<false>::AssertFailed(char const*, unsigned int, char const*, ...)
-free@GLIBC_2.0
-__xmknod@GLIBC_2.0
-__lxstat64@GLIBC_2.2
-SteamRealPath
-mbsnrtowcs@GLIBC_2.0
-__wrap_mkfifo
-__wrap_access
-access@GLIBC_2.0
-_ITM_registerTMCloneTable
-__wrap_mount
-dlsym@GLIBC_2.0
-fflush@GLIBC_2.0
-__wrap_open64
-_txnal_logic_error_get_msg(void*)
-__vfprintf_chk@GLIBC_2.3.4
-opendir@GLIBC_2.0
-Plat_ctime
-statvfs@GLIBC_2.1
-V_strncat_length
-symlink@GLIBC_2.0
-wcrtomb@GLIBC_2.0
-___tls_get_addr@GLIBC_2.3
-fseek@GLIBC_2.0
-pthread_mutex_unlock@GLIBC_2.0
-wctob@GLIBC_2.0
-realpath@GLIBC_2.3
-__wctype_l@GLIBC_2.1
-typeinfo name for __cxxabiv1::__foreign_exception
-__wcsftime_l@GLIBC_2.3
-fclose@GLIBC_2.1
-ftello64@GLIBC_2.1
-__wrap_mkdir
-__wrap_rmdir
-readdir64@GLIBC_2.2
+std::iostream
+std::istream
+std::ostream
+std::string
+stderr
 stderr@GLIBC_2.0
-SteamStdLib::CCommandLineParam::~CCommandLineParam()
-__wrap_unlink
-utime@GLIBC_2.0
-_ITM_RU4
-vtable for __gnu_cxx::recursive_init_error
-strlen@GLIBC_2.0
-g_VProfProfilesRunningCount
-fopen@GLIBC_2.1
-__wrap_mknod
-__towupper_l@GLIBC_2.1
-unlink@GLIBC_2.0
-iconv@GLIBC_2.1
-wmemset@GLIBC_2.0
-__wrap_statfs
-freopen@GLIBC_2.0
-__strxfrm_l@GLIBC_2.1
-feof@GLIBC_2.0
-dlopen@GLIBC_2.1
-ftell@GLIBC_2.0
-CValidator::ClaimArrayMemory(void const*)
-mkfifo@GLIBC_2.0
-chdir@GLIBC_2.0
-V_FixSlashes
-_txnal_cow_string_c_str(void const*)
-V_strnicmp
-__wrap___lxstat64
-__strcpy_chk@GLIBC_2.3.4
-strcasecmp@GLIBC_2.0
-__strtod_l@GLIBC_2.1
-__wcsxfrm_l@GLIBC_2.1
-closedir@GLIBC_2.0
-__wrap_lstat
-fwrite@GLIBC_2.0
-__wrap_dlmopen
-__wrap_statvfs
-__wrap_statfs64
-strstr@GLIBC_2.0
-CValidator::Push(char const*, void*, char const*)
-vtable for __cxxabiv1::__vmi_class_type_info
-setvbuf@GLIBC_2.0
-__wrap___xstat
-__wrap___lxstat
-vtable for __cxxabiv1::__class_type_info
-malloc@GLIBC_2.0
-wcscmp@GLIBC_2.0
-pthread_mutex_lock@GLIBC_2.0
-CValidator::ClaimMemory(void const*)
-typeinfo name for __gnu_cxx::__concurrence_lock_error
-V_strlower_fast
-V_snprintf
-__uselocale@GLIBC_2.3
-chown@GLIBC_2.1
-__stack_chk_fail@GLIBC_2.4
-iconv_close@GLIBC_2.1
-__freelocale@GLIBC_2.1
-fputc@GLIBC_2.0
-__wrap_dlopen
-rmdir@GLIBC_2.0
-dlerror@GLIBC_2.0
-scandir64@GLIBC_2.2
-__wrap_utimes
+stdin
 stdin@GLIBC_2.0
-__strcoll_l@GLIBC_2.1
-strcasestr@GLIBC_2.1
-__wrap_chdir
-__towlower_l@GLIBC_2.1
-__iswctype_l@GLIBC_2.1
-strncasecmp@GLIBC_2.0
-__strtof_l@GLIBC_2.1
-typeinfo name for __gnu_cxx::__concurrence_unlock_error
-getcwd@GLIBC_2.0
-wcsnrtombs@GLIBC_2.0
-_txnal_cow_string_D1_commit(void*)
+stdout
 stdout@GLIBC_2.0
-faccessat@GLIBC_2.4
-__wrap_utime
-AssertMsgHelper<true>::AssertFailed(char const*, unsigned int, char const*)
-V_vsnprintf
-utimes@GLIBC_2.0
-VProfInternalEnterScopeCurrentThread
-__sprintf_chk@GLIBC_2.3.4
-__duplocale@GLIBC_2.1
-fnmatch@GLIBC_2.2.3
-strncmp@GLIBC_2.0
-open64@GLIBC_2.2
-lchown@GLIBC_2.0
-__realpath_chk@GLIBC_2.4
-__snprintf_chk@GLIBC_2.3.4
-strpbrk@GLIBC_2.0
-_txnal_cow_string_C1_for_exceptions(void*, char const*, void*)
-__newlocale@GLIBC_2.1
-fread@GLIBC_2.0
-__pthread_key_create@GLIBC_2.0
-dl_iterate_phdr@GLIBC_2.2.4
-__wrap_lstat64
-bind_textdomain_codeset@GLIBC_2.2
-vtable for __gnu_cxx::__concurrence_lock_error
-__wcscoll_l@GLIBC_2.1
-strdup@GLIBC_2.0
-_txnal_cow_string_D1(void*)
-__wrap_open
-ferror@GLIBC_2.0
-ungetwc@GLIBC_2.2
-tolower@GLIBC_2.0
-typeinfo for __gnu_cxx::__concurrence_lock_error
+strcasecmp
+strcasecmp@GLIBC_2.0
+strcasestr
+strcasestr@GLIBC_2.1
+strchr
+strchr@GLIBC_2.0
+strcmp
 strcmp@GLIBC_2.0
-btowc@GLIBC_2.0
-__cxa_finalize@GLIBC_2.1.3
-__wrap_stat64
-V_strncat
-__wrap___xstat64
-SteamStdLib::CommandLine()
-__wrap_link
-CVProfile_ExitScope
-V_IsAbsolutePath
-__wrap_statvfs64
-vtable for __cxxabiv1::__si_class_type_info
-__wrap_scandir
-SteamThreadTools::CThreadMutex::CThreadMutex()
-__wrap_chown
-__wrap_lchown
+strdup
+strdup@GLIBC_2.0
+string literal
+strlen
+strlen(pchModuleName) + V_strlen(pModuleExtension) < MAX_UNICODE_PATH_IN_UTF8
+strlen@GLIBC_2.0
+strncasecmp
+strncasecmp@GLIBC_2.0
+strncmp
+strncmp@GLIBC_2.0
+strncpy@GLIBC_2.0
+strpbrk
+strpbrk@GLIBC_2.0
+strrchr
+strrchr@GLIBC_2.0
+strstr
+strstr@GLIBC_2.0
+strtold_l
+strtold_l@GLIBC_2.3
+symlink@GLIBC_2.0
+syscall
+syscall@GLIBC_2.0
+template parameter object for 
+terminate called after throwing an instance of '
+terminate called recursively\n
+terminate called without an active exception\n
+this
+throw 
+tolower
+tolower@GLIBC_2.0
+toupper
+toupper@GLIBC_2.0
+transaction clone for operator new[](unsigned int)
+true
+typeinfo fn for 
+typeinfo for 
+typeinfo for __cxxabiv1::__forced_unwind
+typeinfo for __cxxabiv1::__foreign_exception
+typeinfo for __gnu_cxx::__concurrence_lock_error
+typeinfo for __gnu_cxx::__concurrence_unlock_error
+typeinfo for __gnu_cxx::recursive_init_error
+typeinfo name for 
 typeinfo name for __cxxabiv1::__forced_unwind
-V_stristr(char const*, char const*)
-_init
-SteamThreadTools::CThreadMutex::~CThreadMutex()
-__wrap_fopen64
-V_strncpy
-GCC: (SteamRT 9.3.0-17+steamrt1.5+srt1) 9.3.1 20210309
-GCC: (SteamRT/Linaro 4.6.3-1ubuntu5+steamrt1.2+srt2) 4.6.3
+typeinfo name for __cxxabiv1::__foreign_exception
+typeinfo name for __gnu_cxx::__concurrence_lock_error
+typeinfo name for __gnu_cxx::__concurrence_unlock_error
+typeinfo name for __gnu_cxx::recursive_init_error
+ungetc
+ungetc@GLIBC_2.0
+ungetwc
+ungetwc@GLIBC_2.2
+unlink@GLIBC_2.0
+unsigned
+unsigned __int128
+unsigned char
+unsigned int
+unsigned long
+unsigned long long
+unsigned short
+upper
+utime@GLIBC_2.0
+utimes@GLIBC_2.0
+vector::_M_realloc_insert
+void
+vsnprintf@GLIBC_2.0
+vtable for __cxxabiv1::__class_type_info
+vtable for __cxxabiv1::__forced_unwind
+vtable for __cxxabiv1::__foreign_exception
+vtable for __cxxabiv1::__si_class_type_info
+vtable for __cxxabiv1::__vmi_class_type_info
+vtable for __gnu_cxx::__concurrence_lock_error
+vtable for __gnu_cxx::__concurrence_unlock_error
+vtable for __gnu_cxx::recursive_init_error
+wchar_t
+wcrtomb
+wcrtomb@GLIBC_2.0
+wcscmp
+wcscmp@GLIBC_2.0
+wcscpy
+wcscpy@GLIBC_2.0
+wcslen
+wcslen@GLIBC_2.0
+wcsnrtombs
+wcsnrtombs@GLIBC_2.0
+wctob
+wctob@GLIBC_2.0
+wmemchr
+wmemchr@GLIBC_2.0
+wmemcpy
+wmemcpy@GLIBC_2.0
+wmemmove
+wmemmove@GLIBC_2.0
+wmemset
+wmemset@GLIBC_2.0
+xdigit
+zip%i.zip
+{default arg#
+{lambda(
+{parm#
+{unnamed type#
