@@ -1138,8 +1138,8 @@
                     br: S.qM.readUint32,
                     bw: S.gp.writeUint32,
                   },
-                  unpublished_config: { n: 6, c: L },
-                  published_configs: { n: 7, c: L, r: !0, q: !0 },
+                  unpublished_config: { n: 6, c: z },
+                  published_configs: { n: 7, c: z, r: !0, q: !0 },
                 },
               }),
             C.sm_m
@@ -1236,20 +1236,20 @@
           return "CMsgSteamLearnFetchInfo";
         }
       }
-      class z extends b {
+      class L extends b {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            z.prototype.fetch_id || S.Sg(z.M()),
+            L.prototype.fetch_id || S.Sg(L.M()),
             b.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            z.sm_m ||
-              (z.sm_m = {
-                proto: z,
+            L.sm_m ||
+              (L.sm_m = {
+                proto: L,
                 fields: {
                   fetch_id: { n: 1, br: S.qM.readUint32, bw: S.gp.writeUint32 },
                   train_id: { n: 2, br: S.qM.readUint32, bw: S.gp.writeUint32 },
@@ -1262,99 +1262,6 @@
                     n: 4,
                     br: S.qM.readBool,
                     bw: S.gp.writeBool,
-                  },
-                },
-              }),
-            z.sm_m
-          );
-        }
-        static MBF() {
-          return z.sm_mbf || (z.sm_mbf = S.w0(z.M())), z.sm_mbf;
-        }
-        toObject(e = !1) {
-          return z.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return S.BT(z.M(), e, t);
-        }
-        static fromObject(e) {
-          return S.Uq(z.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new f.BinaryReader(e),
-            a = new z();
-          return z.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return S.zj(z.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new f.BinaryWriter();
-          return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          S.i0(z.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new f.BinaryWriter();
-          return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearnTrainInfo";
-        }
-      }
-      class L extends b {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            L.prototype.project_id || S.Sg(L.M()),
-            b.initialize(this, e, 0, -1, [4, 5, 6, 17, 18, 12], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            L.sm_m ||
-              (L.sm_m = {
-                proto: L,
-                fields: {
-                  project_id: {
-                    n: 1,
-                    br: S.qM.readUint32,
-                    bw: S.gp.writeUint32,
-                  },
-                  publish_time: {
-                    n: 2,
-                    br: S.qM.readUint32,
-                    bw: S.gp.writeUint32,
-                  },
-                  published_version: {
-                    n: 3,
-                    br: S.qM.readUint32,
-                    bw: S.gp.writeUint32,
-                  },
-                  data_source_ids: {
-                    n: 4,
-                    r: !0,
-                    q: !0,
-                    br: S.qM.readUint32,
-                    pbr: S.qM.readPackedUint32,
-                    bw: S.gp.writeRepeatedUint32,
-                  },
-                  data_source_element_usages: { n: 5, c: M, r: !0, q: !0 },
-                  project_nodes: { n: 6, c: V, r: !0, q: !0 },
-                  snapshot_filter: { n: 11, c: I },
-                  snapshot_config: { n: 7, c: O },
-                  train_config: { n: 8, c: W },
-                  scheduled_train_config: { n: 16, c: k },
-                  data_retention_config: { n: 14, c: x },
-                  fetch_infos: { n: 17, c: T, r: !0, q: !0 },
-                  train_infos: { n: 18, c: z, r: !0, q: !0 },
-                  map_data_element_sql_column: { n: 12, c: j, r: !0, q: !0 },
-                  total_sql_columns: {
-                    n: 13,
-                    br: S.qM.readUint32,
-                    bw: S.gp.writeUint32,
                   },
                 },
               }),
@@ -1391,6 +1298,99 @@
         serializeBase64String() {
           var e = new f.BinaryWriter();
           return L.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearnTrainInfo";
+        }
+      }
+      class z extends b {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            z.prototype.project_id || S.Sg(z.M()),
+            b.initialize(this, e, 0, -1, [4, 5, 6, 17, 18, 12], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            z.sm_m ||
+              (z.sm_m = {
+                proto: z,
+                fields: {
+                  project_id: {
+                    n: 1,
+                    br: S.qM.readUint32,
+                    bw: S.gp.writeUint32,
+                  },
+                  publish_time: {
+                    n: 2,
+                    br: S.qM.readUint32,
+                    bw: S.gp.writeUint32,
+                  },
+                  published_version: {
+                    n: 3,
+                    br: S.qM.readUint32,
+                    bw: S.gp.writeUint32,
+                  },
+                  data_source_ids: {
+                    n: 4,
+                    r: !0,
+                    q: !0,
+                    br: S.qM.readUint32,
+                    pbr: S.qM.readPackedUint32,
+                    bw: S.gp.writeRepeatedUint32,
+                  },
+                  data_source_element_usages: { n: 5, c: M, r: !0, q: !0 },
+                  project_nodes: { n: 6, c: V, r: !0, q: !0 },
+                  snapshot_filter: { n: 11, c: I },
+                  snapshot_config: { n: 7, c: O },
+                  train_config: { n: 8, c: W },
+                  scheduled_train_config: { n: 16, c: k },
+                  data_retention_config: { n: 14, c: x },
+                  fetch_infos: { n: 17, c: T, r: !0, q: !0 },
+                  train_infos: { n: 18, c: L, r: !0, q: !0 },
+                  map_data_element_sql_column: { n: 12, c: j, r: !0, q: !0 },
+                  total_sql_columns: {
+                    n: 13,
+                    br: S.qM.readUint32,
+                    bw: S.gp.writeUint32,
+                  },
+                },
+              }),
+            z.sm_m
+          );
+        }
+        static MBF() {
+          return z.sm_mbf || (z.sm_mbf = S.w0(z.M())), z.sm_mbf;
+        }
+        toObject(e = !1) {
+          return z.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return S.BT(z.M(), e, t);
+        }
+        static fromObject(e) {
+          return S.Uq(z.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new f.BinaryReader(e),
+            a = new z();
+          return z.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return S.zj(z.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new f.BinaryWriter();
+          return z.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          S.i0(z.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new f.BinaryWriter();
+          return z.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CMsgSteamLearnProjectConfig";
@@ -4748,20 +4748,20 @@
           return "CMsgSteamLearn_Inference_Response";
         }
       }
-      class ze extends b {
+      class Le extends b {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            ze.prototype.access_token || S.Sg(ze.M()),
+            Le.prototype.access_token || S.Sg(Le.M()),
             b.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            ze.sm_m ||
-              (ze.sm_m = {
-                proto: ze,
+            Le.sm_m ||
+              (Le.sm_m = {
+                proto: Le,
                 fields: {
                   access_token: {
                     n: 1,
@@ -4783,74 +4783,6 @@
                     br: S.qM.readUint32,
                     bw: S.gp.writeUint32,
                   },
-                },
-              }),
-            ze.sm_m
-          );
-        }
-        static MBF() {
-          return ze.sm_mbf || (ze.sm_mbf = S.w0(ze.M())), ze.sm_mbf;
-        }
-        toObject(e = !1) {
-          return ze.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return S.BT(ze.M(), e, t);
-        }
-        static fromObject(e) {
-          return S.Uq(ze.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new f.BinaryReader(e),
-            a = new ze();
-          return ze.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return S.zj(ze.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new f.BinaryWriter();
-          return ze.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          S.i0(ze.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new f.BinaryWriter();
-          return ze.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearn_InferenceMetadata_Request";
-        }
-      }
-      class Le extends b {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Le.prototype.inference_metadata_result || S.Sg(Le.M()),
-            b.initialize(this, e, 0, -1, [3, 4, 5, 9, 6, 8], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            Le.sm_m ||
-              (Le.sm_m = {
-                proto: Le,
-                fields: {
-                  inference_metadata_result: {
-                    n: 1,
-                    br: S.qM.readEnum,
-                    bw: S.gp.writeEnum,
-                  },
-                  row_range: { n: 2, c: je },
-                  ranges: { n: 3, c: De, r: !0, q: !0 },
-                  std_devs: { n: 4, c: Ie, r: !0, q: !0 },
-                  compact_tables: { n: 5, c: Oe, r: !0, q: !0 },
-                  sequence_tables: { n: 9, c: We, r: !0, q: !0 },
-                  kmeans: { n: 6, c: qe, r: !0, q: !0 },
-                  app_info: { n: 8, c: He, r: !0, q: !0 },
-                  snapshot_histogram: { n: 7, c: Ae },
                 },
               }),
             Le.sm_m
@@ -4886,6 +4818,74 @@
         serializeBase64String() {
           var e = new f.BinaryWriter();
           return Le.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearn_InferenceMetadata_Request";
+        }
+      }
+      class ze extends b {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            ze.prototype.inference_metadata_result || S.Sg(ze.M()),
+            b.initialize(this, e, 0, -1, [3, 4, 5, 9, 6, 8], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            ze.sm_m ||
+              (ze.sm_m = {
+                proto: ze,
+                fields: {
+                  inference_metadata_result: {
+                    n: 1,
+                    br: S.qM.readEnum,
+                    bw: S.gp.writeEnum,
+                  },
+                  row_range: { n: 2, c: je },
+                  ranges: { n: 3, c: De, r: !0, q: !0 },
+                  std_devs: { n: 4, c: Ie, r: !0, q: !0 },
+                  compact_tables: { n: 5, c: Oe, r: !0, q: !0 },
+                  sequence_tables: { n: 9, c: We, r: !0, q: !0 },
+                  kmeans: { n: 6, c: qe, r: !0, q: !0 },
+                  app_info: { n: 8, c: He, r: !0, q: !0 },
+                  snapshot_histogram: { n: 7, c: Ae },
+                },
+              }),
+            ze.sm_m
+          );
+        }
+        static MBF() {
+          return ze.sm_mbf || (ze.sm_mbf = S.w0(ze.M())), ze.sm_mbf;
+        }
+        toObject(e = !1) {
+          return ze.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return S.BT(ze.M(), e, t);
+        }
+        static fromObject(e) {
+          return S.Uq(ze.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new f.BinaryReader(e),
+            a = new ze();
+          return ze.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return S.zj(ze.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new f.BinaryWriter();
+          return ze.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          S.i0(ze.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new f.BinaryWriter();
+          return ze.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CMsgSteamLearn_InferenceMetadata_Response";
@@ -7177,7 +7177,7 @@
               (gt.sm_m = {
                 proto: gt,
                 fields: {
-                  project_config: { n: 1, c: L },
+                  project_config: { n: 1, c: z },
                   fetch: { n: 2, c: ft },
                   train: { n: 3, c: St },
                 },
@@ -7733,7 +7733,7 @@
                 fields: {
                   result: { n: 1, br: S.qM.readEnum, bw: S.gp.writeEnum },
                   fetch_responses: { n: 2, c: Mt, r: !0, q: !0 },
-                  train_responses: { n: 3, c: zt, r: !0, q: !0 },
+                  train_responses: { n: 3, c: Lt, r: !0, q: !0 },
                 },
               }),
             ht.sm_m
@@ -8072,20 +8072,20 @@
           return "CMsgSteamLearn_GetTrainStatus_Request";
         }
       }
-      class zt extends b {
+      class Lt extends b {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            zt.prototype.result || S.Sg(zt.M()),
+            Lt.prototype.result || S.Sg(Lt.M()),
             b.initialize(this, e, 0, -1, [5, 10, 12], null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            zt.sm_m ||
-              (zt.sm_m = {
-                proto: zt,
+            Lt.sm_m ||
+              (Lt.sm_m = {
+                proto: Lt,
                 fields: {
                   result: { n: 1, br: S.qM.readEnum, bw: S.gp.writeEnum },
                   project_id: {
@@ -8117,7 +8117,7 @@
                     br: S.qM.readUint32,
                     bw: S.gp.writeUint32,
                   },
-                  test_batches: { n: 10, c: Lt, r: !0, q: !0 },
+                  test_batches: { n: 10, c: zt, r: !0, q: !0 },
                   test_loss: { n: 11, br: S.qM.readFloat, bw: S.gp.writeFloat },
                   test_accuracy: {
                     n: 12,
@@ -8149,71 +8149,6 @@
                     br: S.qM.readBool,
                     bw: S.gp.writeBool,
                   },
-                },
-              }),
-            zt.sm_m
-          );
-        }
-        static MBF() {
-          return zt.sm_mbf || (zt.sm_mbf = S.w0(zt.M())), zt.sm_mbf;
-        }
-        toObject(e = !1) {
-          return zt.toObject(e, this);
-        }
-        static toObject(e, t) {
-          return S.BT(zt.M(), e, t);
-        }
-        static fromObject(e) {
-          return S.Uq(zt.M(), e);
-        }
-        static deserializeBinary(e) {
-          let t = new f.BinaryReader(e),
-            a = new zt();
-          return zt.deserializeBinaryFromReader(a, t);
-        }
-        static deserializeBinaryFromReader(e, t) {
-          return S.zj(zt.MBF(), e, t);
-        }
-        serializeBinary() {
-          var e = new f.BinaryWriter();
-          return zt.serializeBinaryToWriter(this, e), e.getResultBuffer();
-        }
-        static serializeBinaryToWriter(e, t) {
-          S.i0(zt.M(), e, t);
-        }
-        serializeBase64String() {
-          var e = new f.BinaryWriter();
-          return zt.serializeBinaryToWriter(this, e), e.getResultBase64String();
-        }
-        getClassName() {
-          return "CMsgSteamLearn_GetTrainStatus_Response";
-        }
-      }
-      class Lt extends b {
-        static ImplementsStaticInterface() {}
-        constructor(e = null) {
-          super(),
-            Lt.prototype.loss || S.Sg(Lt.M()),
-            b.initialize(this, e, 0, -1, [2], null);
-        }
-        static sm_m;
-        static sm_mbf;
-        static M() {
-          return (
-            Lt.sm_m ||
-              (Lt.sm_m = {
-                proto: Lt,
-                fields: {
-                  loss: { n: 1, br: S.qM.readFloat, bw: S.gp.writeFloat },
-                  accuracy: {
-                    n: 2,
-                    r: !0,
-                    q: !0,
-                    br: S.qM.readFloat,
-                    pbr: S.qM.readPackedFloat,
-                    bw: S.gp.writeRepeatedFloat,
-                  },
-                  batch_id: { n: 3, br: S.qM.readUint32, bw: S.gp.writeUint32 },
                 },
               }),
             Lt.sm_m
@@ -8249,6 +8184,71 @@
         serializeBase64String() {
           var e = new f.BinaryWriter();
           return Lt.serializeBinaryToWriter(this, e), e.getResultBase64String();
+        }
+        getClassName() {
+          return "CMsgSteamLearn_GetTrainStatus_Response";
+        }
+      }
+      class zt extends b {
+        static ImplementsStaticInterface() {}
+        constructor(e = null) {
+          super(),
+            zt.prototype.loss || S.Sg(zt.M()),
+            b.initialize(this, e, 0, -1, [2], null);
+        }
+        static sm_m;
+        static sm_mbf;
+        static M() {
+          return (
+            zt.sm_m ||
+              (zt.sm_m = {
+                proto: zt,
+                fields: {
+                  loss: { n: 1, br: S.qM.readFloat, bw: S.gp.writeFloat },
+                  accuracy: {
+                    n: 2,
+                    r: !0,
+                    q: !0,
+                    br: S.qM.readFloat,
+                    pbr: S.qM.readPackedFloat,
+                    bw: S.gp.writeRepeatedFloat,
+                  },
+                  batch_id: { n: 3, br: S.qM.readUint32, bw: S.gp.writeUint32 },
+                },
+              }),
+            zt.sm_m
+          );
+        }
+        static MBF() {
+          return zt.sm_mbf || (zt.sm_mbf = S.w0(zt.M())), zt.sm_mbf;
+        }
+        toObject(e = !1) {
+          return zt.toObject(e, this);
+        }
+        static toObject(e, t) {
+          return S.BT(zt.M(), e, t);
+        }
+        static fromObject(e) {
+          return S.Uq(zt.M(), e);
+        }
+        static deserializeBinary(e) {
+          let t = new f.BinaryReader(e),
+            a = new zt();
+          return zt.deserializeBinaryFromReader(a, t);
+        }
+        static deserializeBinaryFromReader(e, t) {
+          return S.zj(zt.MBF(), e, t);
+        }
+        serializeBinary() {
+          var e = new f.BinaryWriter();
+          return zt.serializeBinaryToWriter(this, e), e.getResultBuffer();
+        }
+        static serializeBinaryToWriter(e, t) {
+          S.i0(zt.M(), e, t);
+        }
+        serializeBase64String() {
+          var e = new f.BinaryWriter();
+          return zt.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CMsgSteamLearn_GetTrainStatus_Response_Batch";
@@ -8300,8 +8300,8 @@
                     pbr: S.qM.readPackedFloat,
                     bw: S.gp.writeRepeatedFloat,
                   },
-                  train_batches: { n: 6, c: Lt, r: !0, q: !0 },
-                  validate_batches: { n: 7, c: Lt, r: !0, q: !0 },
+                  train_batches: { n: 6, c: zt, r: !0, q: !0 },
+                  validate_batches: { n: 7, c: zt, r: !0, q: !0 },
                   start_time: {
                     n: 8,
                     br: S.qM.readUint32,
@@ -10146,8 +10146,8 @@
           (e.InferenceMetadata = function (e, t) {
             return e.SendMsg(
               "SteamLearn.InferenceMetadata#1",
-              (0, g.I8)(ze, t),
-              Le,
+              (0, g.I8)(Le, t),
+              ze,
               { ePrivilege: 0, eWebAPIKeyRequirement: 1 },
             );
           }),
@@ -10216,7 +10216,7 @@
             return e.SendMsg(
               "SteamLearn.GetTrainStatus#1",
               (0, g.I8)(Tt, t),
-              zt,
+              Lt,
               { bConstMethod: !0, ePrivilege: 1 },
             );
           }),
@@ -10439,7 +10439,7 @@
           staleTime: 1 / 0,
         });
       }
-      function za(e, t) {
+      function La(e, t) {
         return (0, p.I)({
           queryKey: [fa, e, t],
           queryFn: () =>
@@ -10456,7 +10456,7 @@
           staleTime: 1 / 0,
         });
       }
-      function La(e, t) {
+      function za(e, t) {
         return (0, p.I)({
           queryKey: [Sa, e, t],
           queryFn: () =>
@@ -11250,8 +11250,8 @@
           );
         },
         dr = (e) => {
-          const t = za(e.nProjectID, e.nFetchID),
-            a = La(e.nProjectID, e.nTrainID),
+          const t = La(e.nProjectID, e.nFetchID),
+            a = za(e.nProjectID, e.nTrainID),
             r = t.data,
             i = a.data;
           if (
@@ -11318,7 +11318,7 @@
           };
           const a = ya(e.nProjectID),
             [r, i] = a.data ?? [void 0, void 0],
-            l = La(e.nProjectID, e.nTrainID).data;
+            l = za(e.nProjectID, e.nTrainID).data;
           let m = 0;
           if (i) {
             for (const t of i.published_configs())
@@ -11805,7 +11805,7 @@
                       fnUpdateDataSource: l ? d : void 0,
                     }),
                   ),
-                n.createElement(zr, {
+                n.createElement(Lr, {
                   bShowPopup: i,
                   fnSetShowPopup: s,
                   fnAddSelectedDataSources: (t) => {
@@ -11977,8 +11977,8 @@
             [B, E] = n.useState(""),
             [h, y] = n.useState(!1),
             [M, C] = n.useState(!1),
-            [T, z] = n.useState(""),
-            [L, j] = n.useState(!1),
+            [T, L] = n.useState(""),
+            [z, j] = n.useState(!1),
             [D, I] = n.useState(!1),
             [O, P] = n.useState(""),
             [F, R] = n.useState(!1),
@@ -12002,13 +12002,13 @@
                 (y(!0),
                 E(l.std_dev().toFixed(2 == i.data_type() ? 2 : 0)),
                 C(!0)),
-              L ||
-                (j(!0), z(l.compact_table_count()?.toFixed(0) || "0"), I(!0)),
+              z ||
+                (j(!0), L(l.compact_table_count()?.toFixed(0) || "0"), I(!0)),
               q ||
                 (U(!0), V(l.sequence_table_count()?.toFixed(0) || "0"), G(!0)),
               F ||
                 (R(!0), P(l.sequence_min_length()?.toFixed(0) || "0"), k(!0)));
-          }, [_, b, h, L, q, F, l, i]);
+          }, [_, b, h, z, q, F, l, i]);
           const K = (e, t, a, r) => {
             t(e), /^-?[\d]*\.?[\d]{0,2}$/.test(e) ? (a(!0), re(r)) : a(!1);
           };
@@ -12501,7 +12501,7 @@
                         disabled: !1,
                         value: T,
                         onChange: (e) =>
-                          K(e.target.value, z, I, (t) =>
+                          K(e.target.value, L, I, (t) =>
                             t.set_compact_table_count(parseInt(e.target.value)),
                           ),
                       }),
@@ -12563,7 +12563,7 @@
               ),
           );
         },
-        zr = (e) => {
+        Lr = (e) => {
           const [t, a] = n.useState([]);
           n.useEffect(() => {
             e.bShowPopup || a([]);
@@ -12665,7 +12665,7 @@
             )
           );
         };
-      var Lr = a(98649);
+      var zr = a(98649);
       const jr = () => {
         const {
             msgWorkingProject: e,
@@ -12715,29 +12715,29 @@
           ? null
           : n.createElement(
               "div",
-              { className: Lr.ProjectInferenceTesterPage },
+              { className: zr.ProjectInferenceTesterPage },
               n.createElement(
                 "div",
-                { className: Lr.ProjectInferenceTesterBody },
+                { className: zr.ProjectInferenceTesterBody },
                 n.createElement(
                   "div",
-                  { className: Lr.Keys },
+                  { className: zr.Keys },
                   (0, c.we)("#SteamLearn_InferenceTester_Keys"),
                 ),
                 n.createElement("input", {
                   type: "text",
-                  className: Lr.ValueInput,
+                  className: zr.ValueInput,
                   value: S,
                   onChange: (e) => b(e.target.value),
                 }),
                 n.createElement(
                   "div",
-                  { className: Lr.Keys },
+                  { className: zr.Keys },
                   (0, c.we)("#SteamLearn_InferenceTester_NamedInference"),
                 ),
                 n.createElement("input", {
                   type: "text",
-                  className: Lr.ValueInput,
+                  className: zr.ValueInput,
                   value: N,
                   onChange: (e) => w(e.target.value),
                 }),
@@ -12748,17 +12748,17 @@
                     : n.createElement(
                         "div",
                         {
-                          className: Lr.DataSourceElement,
+                          className: zr.DataSourceElement,
                           key: e.data_element_path(),
                         },
                         n.createElement(
                           "div",
-                          { className: Lr.Name },
+                          { className: zr.Name },
                           e.data_element_path(),
                         ),
                         n.createElement("input", {
                           type: "text",
-                          className: Lr.ValueInput,
+                          className: zr.ValueInput,
                           value: i[e.data_element_path()],
                           onChange: (t) =>
                             s({
@@ -12768,18 +12768,18 @@
                         }),
                       ),
                 ),
-                n.createElement("div", { className: Lr.Separator }),
+                n.createElement("div", { className: zr.Separator }),
                 n.createElement(
                   "div",
-                  { className: Lr.OptionBlock },
+                  { className: zr.OptionBlock },
                   n.createElement(
                     "div",
-                    { className: Lr.OptionDetails },
+                    { className: zr.OptionDetails },
                     (0, c.we)("#SteamLearn_InferenceTester_AdditionalData"),
                   ),
                   n.createElement("input", {
                     type: "text",
-                    className: Lr.ValueInput,
+                    className: zr.ValueInput,
                     value: d,
                     onChange: (e) => _(e.target.value),
                   }),
@@ -12787,7 +12787,7 @@
                 n.createElement(
                   "select",
                   {
-                    className: Lr.TrainDropdown,
+                    className: zr.TrainDropdown,
                     value: p,
                     onChange: (e) => f(parseInt(e.target.value)),
                   },
@@ -12805,7 +12805,7 @@
                 n.createElement(
                   "div",
                   {
-                    className: (0, o.A)(Lr.SteamLearnButton, Lr.Blue),
+                    className: (0, o.A)(zr.SteamLearnButton, zr.Blue),
                     onClick: () =>
                       (async () => {
                         let a = g.w.Init(Rt);
@@ -12952,7 +12952,7 @@
                   },
                   (0, c.we)("#SteamLearn_InferenceTester_Infer"),
                 ),
-                n.createElement("div", { className: Lr.Results }, l),
+                n.createElement("div", { className: zr.Results }, l),
               ),
             );
       };
@@ -14069,10 +14069,10 @@
                 });
           }
           const T = 2 == m || 4 == m,
-            z = 1 == m,
-            L = T && 2 == _,
-            j = !z && 3 == _,
-            D = !z && 7 != m;
+            L = 1 == m,
+            z = T && 2 == _,
+            j = !L && 3 == _,
+            D = !L && 7 != m;
           return n.createElement(
             Er.mt,
             {
@@ -14206,7 +14206,7 @@
                     fnSetValue: (e) => u(parseInt(e)),
                     options: C,
                   }),
-                  L &&
+                  z &&
                     n.createElement(kr, {
                       label: (0, c.we)(
                         "#SteamLearn_Config_Node_ConditionalExtract_AppID_BiasFactor",
@@ -18901,7 +18901,7 @@
                 Rr.Preprocessing,
               ),
             },
-            n.createElement(zn, {
+            n.createElement(Ln, {
               bVisible: i,
               fnSetPopupVisible: s,
               msgNode: l,
@@ -18991,7 +18991,7 @@
             }),
           );
         },
-        zn = (e) => {
+        Ln = (e) => {
           const { msgWorkingProject: t, msgWorkingProjectConfig: a } = rr(),
             [r, i] = n.useState(e.msgNode.comment());
           n.useEffect(() => {
@@ -19060,7 +19060,7 @@
             ),
           );
         },
-        Ln = (e) => {
+        zn = (e) => {
           const {
               msgWorkingProject: t,
               msgWorkingProjectConfig: a,
@@ -19877,10 +19877,10 @@
             [M, C] = n.useState(
               e.msgNode.extract().input_bias_strength().toFixed(2),
             ),
-            [T, z] = n.useState(
+            [T, L] = n.useState(
               e.msgNode.extract().positive_sample_percent().toFixed(0),
             ),
-            [L, j] = n.useState(e.msgNode.extract().compact_table()),
+            [z, j] = n.useState(e.msgNode.extract().compact_table()),
             [D, I] = n.useState(e.msgNode.extract().extracted_compact_table());
           n.useEffect(() => {
             s(e.msgNode.comment()),
@@ -19894,7 +19894,7 @@
               E(e.msgNode.extract().bias_end().toFixed(2)),
               y(e.msgNode.extract().input_bias_input_number().toFixed(0)),
               C(e.msgNode.extract().input_bias_strength().toFixed(2)),
-              z(e.msgNode.extract().positive_sample_percent().toFixed(0)),
+              L(e.msgNode.extract().positive_sample_percent().toFixed(0)),
               j(e.msgNode.extract().compact_table()),
               I(e.msgNode.extract().extracted_compact_table());
           }, [e.bVisible, e.msgNode, r]);
@@ -20097,7 +20097,7 @@
                   dontUpdateProject: !0,
                   fnGetInitialValue: () => T,
                   fnValidateValue: (e) => Ya(e, 0, 100),
-                  fnSetValue: (e) => z(e),
+                  fnSetValue: (e) => L(e),
                 }),
               ),
               n.createElement("div", { className: Rr.Separator }),
@@ -20242,7 +20242,7 @@
                     ),
                     smallLabel: !0,
                     dontUpdateProject: !0,
-                    fnGetInitialValue: () => L,
+                    fnGetInitialValue: () => z,
                     fnValidateValue: (e) => er(a, e),
                     fnSetValue: (e) => j(e),
                   }),
@@ -20325,7 +20325,7 @@
                       e.msgNode
                         .extract()
                         .set_positive_sample_percent(parseInt(T)),
-                      e.msgNode.extract().set_compact_table(L),
+                      e.msgNode.extract().set_compact_table(z),
                       e.msgNode.extract().set_extracted_compact_table(D),
                       $a(t),
                       e.fnSetPopupVisible(!1);
@@ -22786,7 +22786,7 @@
                 nodeTextVectorization: En,
                 nodeBatchNormalization: Mn,
                 nodeNormalize: Tn,
-                nodeNamedInference: Ln,
+                nodeNamedInference: zn,
                 nodeDot: Dn,
                 nodeExtract: On,
                 nodeConv1D: Fn,
@@ -23077,10 +23077,10 @@
               },
               [S],
             ),
-            z = n.useCallback(() => {
+            L = n.useCallback(() => {
               N(null);
             }, []),
-            L = n.useCallback(
+            z = n.useCallback(
               (e, t) => {
                 const a = la(t.source),
                   n = ca(t.sourceHandle),
@@ -23463,8 +23463,8 @@
                   onInit: a,
                   onDrop: y,
                   onDragOver: h,
-                  onEdgeUpdate: L,
-                  onEdgeUpdateStart: z,
+                  onEdgeUpdate: z,
+                  onEdgeUpdateStart: L,
                   onEdgeUpdateEnd: j,
                   snapToGrid: !0,
                   snapGrid: [5, 5],
@@ -24121,6 +24121,12 @@
               ),
               value: 2,
             },
+            {
+              label: (0, c.we)(
+                "#SteamLearn_SnapshotFilter_AccountIDFilter_WishlistsRecent",
+              ),
+              value: 3,
+            },
           ],
           s = [
             {
@@ -24609,6 +24615,20 @@
               label: (0, c.we)("#SteamLearn_Config_Node_Train_Optimizer_SGD"),
               value: 1,
             },
+          ],
+          a = [
+            {
+              label: (0, c.we)("#SteamLearn_Config_Node_Train_GPU_V100"),
+              value: 0,
+            },
+            {
+              label: (0, c.we)("#SteamLearn_Config_Node_Train_GPU_A100"),
+              value: 1,
+            },
+            {
+              label: (0, c.we)("#SteamLearn_Config_Node_Train_GPU_H100"),
+              value: 2,
+            },
           ];
         return n.createElement(
           "div",
@@ -24633,6 +24653,31 @@
               fnValidateValue: (e) => Ya(e, 0, 128),
               fnSetValue: (t) =>
                 e.train_config().set_fetch_workers(parseInt(t)),
+            }),
+          ),
+          n.createElement("div", { className: pi.Separator }),
+          n.createElement(
+            "div",
+            { className: pi.OptionBlock },
+            n.createElement(
+              "div",
+              { className: pi.OptionHeader },
+              (0, c.we)("#SteamLearn_Config_Node_Train_GPU"),
+            ),
+            n.createElement(
+              "div",
+              { className: pi.OptionDesc },
+              (0, c.oW)(
+                "#SteamLearn_Config_Node_Train_GPUDesc",
+                n.createElement("ul", null),
+                n.createElement("li", null),
+              ),
+            ),
+            n.createElement(Vr, {
+              label: (0, c.we)("#SteamLearn_Config_Node_Train_GPU"),
+              fnGetValue: () => e.train_config().train_gpu(),
+              fnSetValue: (t) => e.train_config().set_train_gpu(parseInt(t)),
+              options: a,
             }),
           ),
           n.createElement("div", { className: pi.Separator }),
@@ -24867,7 +24912,7 @@
           const { nPublishedVersion: t, msgWorkingProjectConfig: a } = rr(),
             [r, i] = n.useState(!1),
             [s, l] = n.useState(""),
-            m = za(e.nProjectID, e.nFetchID),
+            m = La(e.nProjectID, e.nFetchID),
             d = m.data;
           (0, cr.$$)(() => {
             d && (d.status(), Ia(e.nProjectID, e.nFetchID));
@@ -25300,7 +25345,7 @@
               msgWorkingProjectConfig: r,
               msgWorkingProject: i,
             } = rr(),
-            s = La(e.nProjectID, e.nTrainID),
+            s = za(e.nProjectID, e.nTrainID),
             [l, m] = n.useState(-1),
             [d, _] = n.useState(""),
             p = s.data,
@@ -25558,8 +25603,8 @@
                   },
                 ]));
             }
-          const z = p && 3 == p.status(),
-            L = p && p.live(),
+          const L = p && 3 == p.status(),
+            z = p && p.live(),
             j = p && p.active(),
             D = p && 2 == p.status(),
             I =
@@ -25599,8 +25644,8 @@
                     B,
                   ),
                   !I &&
-                    z &&
-                    !L &&
+                    L &&
+                    !z &&
                     !j &&
                     n.createElement(
                       Sr.jn,
@@ -25608,8 +25653,8 @@
                       (0, c.we)("#SteamLearn_Status_SetInferenceVersion"),
                     ),
                   I &&
-                    z &&
-                    !L &&
+                    L &&
+                    !z &&
                     !j &&
                     n.createElement(
                       "div",
@@ -25631,7 +25676,7 @@
                       },
                       (0, c.we)("#SteamLearn_Status_Train_EndEarly"),
                     ),
-                  L &&
+                  z &&
                     n.createElement(
                       "div",
                       {
@@ -25641,7 +25686,7 @@
                       (0, c.we)("#SteamLearn_Status_InferenceLive"),
                     ),
                   j &&
-                    !L &&
+                    !z &&
                     n.createElement(
                       "div",
                       { className: wi.TrainLive },
@@ -25809,7 +25854,7 @@
           (e[(e.FETCH_WORKERS = 2)] = "FETCH_WORKERS"),
           (e[(e.GPU = 3)] = "GPU");
       })(Ti || (Ti = {}));
-      const zi = (e) => {
+      const Li = (e) => {
           const { nProjectID: t } = rr(),
             [a, r] = n.useState(Ti.NONE);
           return n.createElement(
@@ -25850,7 +25895,7 @@
               ),
             ),
             a == Ti.MAIN &&
-              n.createElement(Li, {
+              n.createElement(zi, {
                 nFetchID: e.nFetchID,
                 nTrainID: e.nTrainID,
               }),
@@ -25866,7 +25911,7 @@
               }),
           );
         },
-        Li = (e) => {
+        zi = (e) => {
           const { nProjectID: t } = rr(),
             a = ja(t, e.nFetchID, e.nTrainID),
             r = a.data;
@@ -25998,7 +26043,7 @@
                       },
                     }),
                     n.createElement("div", { className: wi.Separator }),
-                    n.createElement(zi, { nFetchID: a, nTrainID: i }),
+                    n.createElement(Li, { nFetchID: a, nTrainID: i }),
                   )
                 : null
           );

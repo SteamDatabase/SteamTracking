@@ -16,30 +16,24 @@
     92825: (e) => {
       e.exports = { Ctn: "_3gnQfZ3NUW9NFF3WllsQ6b" };
     },
-    64734: (e) => {
-      e.exports = {
-        SectionTitleHeader: "_2g5oNomwd2lv8wL2qlsLVA",
-        required_title: "_3yDPZjnsoLc2FkrAH2UOEd",
-      };
-    },
-    43709: (e, t, i) => {
+    43709: (e, t, r) => {
       "use strict";
-      i.r(t), i.d(t, { default: () => V });
-      var r = i(90626),
-        n = i(24484);
-      const a = (0, n.Tc)("physical_goods", "application_config");
-      var s = i(34629),
-        o = i(56545),
-        l = i(75487),
-        c = i(96059),
-        u = i(44332),
-        m = i(68797),
-        d = i(6144),
-        _ = i(56093),
-        g = i(30470);
+      r.r(t), r.d(t, { default: () => H });
+      var s = r(90626),
+        i = r(24484);
+      const n = (0, i.Tc)("physical_goods", "application_config");
+      var a = r(34629),
+        o = r(56545),
+        l = r(75487),
+        c = r(96059),
+        u = r(44332),
+        d = r(68797),
+        m = r(6144),
+        _ = r(56093),
+        g = r(30470);
       class p {
         m_mapProductPositionMsgList = new Map();
-        m_productListChangeCallback = new d.lu();
+        m_productListChangeCallback = new m.lu();
         m_messageListChangeCallback = new Map();
         m_steamInterface = null;
         GetKey(e) {
@@ -58,7 +52,7 @@
         GetPositionListViaKeyChangeCallback(e) {
           return (
             this.m_messageListChangeCallback.has(e) ||
-              this.m_messageListChangeCallback.set(e, new d.lu()),
+              this.m_messageListChangeCallback.set(e, new m.lu()),
             this.m_messageListChangeCallback.get(e)
           );
         }
@@ -95,35 +89,35 @@
               !1
             );
           e.forEach((e) => {
-            let i = t.Body().add_settings();
-            i.set_edistributor(e.edistributor),
-              i.set_product_identifier(e.product_identifier),
-              i.set_start_queue_position(e.start_queue_position),
-              i.set_rtime_estimated_notification(
+            let r = t.Body().add_settings();
+            r.set_edistributor(e.edistributor),
+              r.set_product_identifier(e.product_identifier),
+              r.set_start_queue_position(e.start_queue_position),
+              r.set_rtime_estimated_notification(
                 e.rtime_estimated_notification,
               ),
-              i.set_localization_token(e.localization_token);
+              r.set_localization_token(e.localization_token);
           });
-          let i = null;
+          let r = null;
           try {
-            const r = await l.nd.SetReservationPositionMessage(
+            const s = await l.nd.SetReservationPositionMessage(
               this.m_steamInterface.GetServiceTransport(),
               t,
             );
-            if (1 == r.GetEResult()) {
+            if (1 == s.GetEResult()) {
               const t = new Set(),
-                i = Math.floor(Date.now() / 1e3);
+                r = Math.floor(Date.now() / 1e3);
               return (
                 e.forEach((e) => {
-                  (e.accountid = g.iA.accountid), (e.rtime_created = i);
-                  const r = this.GetKey(e);
-                  let n = this.m_mapProductPositionMsgList.get(r);
-                  const a = n.findIndex(
+                  (e.accountid = g.iA.accountid), (e.rtime_created = r);
+                  const s = this.GetKey(e);
+                  let i = this.m_mapProductPositionMsgList.get(s);
+                  const n = i.findIndex(
                     (t) => t.start_queue_position == e.start_queue_position,
                   );
-                  let s = [...n];
-                  a >= 0 ? (s[a] = e) : (s.push(e), this.SortList(s)),
-                    this.m_mapProductPositionMsgList.set(r, s),
+                  let a = [...i];
+                  n >= 0 ? (a[n] = e) : (a.push(e), this.SortList(a)),
+                    this.m_mapProductPositionMsgList.set(s, a),
                     t.add(this.GetKey(e));
                 }),
                 Array.from(t).forEach((e) => {
@@ -134,15 +128,15 @@
                 !0
               );
             }
-            i = (0, m.H)(r);
+            r = (0, d.H)(s);
           } catch (e) {
-            i = (0, m.H)(e);
+            r = (0, d.H)(e);
           }
           return (
             console.error(
               "CReservationMessagingStore.SetPositionMessages failed: " +
-                i?.strErrorMsg,
-              i,
+                r?.strErrorMsg,
+              r,
             ),
             !1
           );
@@ -152,35 +146,35 @@
           t.Body().set_edistributor(e.edistributor),
             t.Body().set_product_identifier(e.product_identifier),
             t.Body().set_start_queue_position(e.start_queue_position);
-          let i = null;
+          let r = null;
           try {
-            const r = await l.nd.DeleteReservationPositionMessage(
+            const s = await l.nd.DeleteReservationPositionMessage(
               this.m_steamInterface.GetServiceTransport(),
               t,
             );
-            if (1 == r.GetEResult()) {
+            if (1 == s.GetEResult()) {
               const t = this.GetKey(e);
-              let i = this.m_mapProductPositionMsgList.get(t);
-              const r = i.findIndex(
+              let r = this.m_mapProductPositionMsgList.get(t);
+              const s = r.findIndex(
                   (t) => t.start_queue_position == e.start_queue_position,
                 ),
-                n = [...i];
+                i = [...r];
               return (
-                n.splice(r, 1),
-                this.m_mapProductPositionMsgList.set(t, n),
-                this.GetPositionListChangeCallback(e).Dispatch(n),
+                i.splice(s, 1),
+                this.m_mapProductPositionMsgList.set(t, i),
+                this.GetPositionListChangeCallback(e).Dispatch(i),
                 !0
               );
             }
-            i = (0, m.H)(r);
+            r = (0, d.H)(s);
           } catch (e) {
-            i = (0, m.H)(e);
+            r = (0, d.H)(e);
           }
           return (
             console.error(
               "CReservationMessagingStore.SetPositionMessages failed: " +
-                i?.strErrorMsg,
-              i,
+                r?.strErrorMsg,
+              r,
             ),
             !1
           );
@@ -205,7 +199,7 @@
         }
         constructor() {}
         Init() {
-          const e = (0, n.Tc)(
+          const e = (0, i.Tc)(
             "promotion_operation_token",
             "application_config",
           );
@@ -216,7 +210,7 @@
                 e,
               ),
             (this.m_steamInterface = new c.D(g.TS.WEBAPI_BASE_URL, e));
-          const t = (0, n.Tc)(
+          const t = (0, i.Tc)(
             "reservation_queue_position_messages",
             "application_config",
           );
@@ -243,11 +237,11 @@
           );
         }
       }
-      function h() {
-        const [e, t] = (0, r.useState)(() => p.Get().GetAllProducts());
+      function f() {
+        const [e, t] = (0, s.useState)(() => p.Get().GetAllProducts());
         return (0, _.hL)(p.Get().GetProductListChangeCallback(), t), e;
       }
-      function f() {
+      function h() {
         const e = p.Get();
         return {
           fnAddProductID: e.AddProductID,
@@ -257,37 +251,37 @@
             e.ReloadReservationPositionMessages,
         };
       }
-      (0, s.Cg)([_.oI], p.prototype, "AddProductID", null),
-        (0, s.Cg)([_.oI], p.prototype, "SetPositionMessages", null),
-        (0, s.Cg)([_.oI], p.prototype, "DeletePositionMessage", null),
-        (0, s.Cg)(
+      (0, a.Cg)([_.oI], p.prototype, "AddProductID", null),
+        (0, a.Cg)([_.oI], p.prototype, "SetPositionMessages", null),
+        (0, a.Cg)([_.oI], p.prototype, "DeletePositionMessage", null),
+        (0, a.Cg)(
           [_.oI],
           p.prototype,
           "ReloadReservationPositionMessages",
           null,
         );
-      var S = i(33793),
-        b = i(65285),
-        M = i(7068);
-      function v(e) {
-        const [t, i] = (0, r.useState)(null),
-          { fnAddProductID: n } = f();
-        return r.createElement(
+      var S = r(33793),
+        M = r(65285),
+        b = r(7068);
+      function E(e) {
+        const [t, r] = (0, s.useState)(null),
+          { fnAddProductID: i } = h();
+        return s.createElement(
           "div",
           null,
-          r.createElement(M.JU, null, "Add Product SKU:"),
-          r.createElement(
+          s.createElement(b.JU, null, "Add Product SKU:"),
+          s.createElement(
             "p",
             null,
             "Select an item for which we want to communicate a reservation status.",
           ),
-          r.createElement(E, { selected: t, setSelected: i }),
-          r.createElement(
-            M.$n,
+          s.createElement(v, { selected: t, setSelected: r }),
+          s.createElement(
+            b.$n,
             {
               disabled: !t,
               onClick: () => {
-                n(t), i(null);
+                i(t), r(null);
               },
             },
             "Add ",
@@ -296,18 +290,18 @@
           ),
         );
       }
-      function E(e) {
-        const { selected: t, setSelected: i } = e,
-          n = (0, r.useRef)(),
-          s = (function () {
-            const [e] = (0, r.useState)(() => a);
+      function v(e) {
+        const { selected: t, setSelected: r } = e,
+          i = (0, s.useRef)(),
+          a = (function () {
+            const [e] = (0, s.useState)(() => n);
             return e;
           })(),
-          o = h(),
-          l = (0, r.useMemo)(
+          o = f(),
+          l = (0, s.useMemo)(
             () =>
-              s && o
-                ? s
+              a && o
+                ? a
                     .filter(
                       (e) =>
                         -1 ==
@@ -322,10 +316,10 @@
                       label: `${e.product_description} @ ${e.distributor} - product id: ${e.product_identifier}, part number ${e.part_number} `,
                     }))
                 : [],
-            [s, o],
+            [a, o],
           );
-        (0, r.useEffect)(() => {
-          n?.current && n.current.clearValue();
+        (0, s.useEffect)(() => {
+          i?.current && i.current.clearValue();
         }, [o]);
         const c = l?.find(
           (e) =>
@@ -333,212 +327,212 @@
             t.edistributor == e.value.edistributor &&
             t.product_identifier == e.value.product_identifier,
         );
-        return r.createElement(S.Ay, {
+        return s.createElement(S.Ay, {
           isSearchable: !0,
-          ref: n,
+          ref: i,
           isMulti: !1,
           isClearable: !0,
-          className: b.ItemSelect,
+          className: M.ItemSelect,
           options: l,
           value: c,
           onChange: (e) => {
-            e && i(e);
+            e && r(e);
           },
         });
       }
-      var y = i(71298),
-        w = i(99637),
-        R = i(8905),
-        B = i(30708),
-        P = i(738),
-        C = i(48479),
-        T = i(56011),
-        z = i(61859),
-        k = i(95695),
-        D = i(92825),
-        I = i.n(D),
-        F = i(44165);
+      var y = r(71298),
+        w = r(99637),
+        R = r(8905),
+        C = r(30708),
+        B = r(738),
+        P = r(48479),
+        T = r(56011),
+        k = r(61859),
+        D = r(95695),
+        z = r(92825),
+        I = r.n(z),
+        F = r(44165);
       function L(e, t) {
         return e > t + 1 ? e - t : e + 12 - t;
       }
       function N(e) {
-        const { strToken: t, rtEstimatedNotifcationDate: i } = e,
-          n = new Date(1e3 * i),
-          a = n.getMonth() + 1;
-        let s = "",
+        const { strToken: t, rtEstimatedNotifcationDate: r } = e,
+          i = new Date(1e3 * r),
+          n = i.getMonth() + 1;
+        let a = "",
           o = "",
           l = "",
           c = t;
         switch (t) {
           case "#Sale_Reservation_Year":
           case "#Sale_Reservation_AfterYear":
-            s = "" + n.getFullYear();
+            a = "" + i.getFullYear();
             break;
           case "#Sale_Reservation_MonthYear":
           case "#Sale_Reservation_AfterMonthYear":
-            (s = (0, z.we)("#Sale_Reservation_MonthNoun_" + a)),
-              (o = "" + n.getFullYear());
+            (a = (0, k.we)("#Sale_Reservation_MonthNoun_" + n)),
+              (o = "" + i.getFullYear());
             break;
           case "#Sale_Reservation_TwoMonthRangeYear":
-            (s = (0, z.we)("#Sale_Reservation_MonthNoun_" + L(a, 1))),
-              (o = (0, z.we)("#Sale_Reservation_MonthNoun_" + a)),
-              (l = "" + n.getFullYear());
+            (a = (0, k.we)("#Sale_Reservation_MonthNoun_" + L(n, 1))),
+              (o = (0, k.we)("#Sale_Reservation_MonthNoun_" + n)),
+              (l = "" + i.getFullYear());
             break;
           case "#Sale_Reservation_ThreeMonthRangeYear":
-            (s = (0, z.we)("#Sale_Reservation_MonthNoun_" + L(a, 2))),
-              (o = (0, z.we)("#Sale_Reservation_MonthNoun_" + a)),
-              (l = "" + n.getFullYear());
+            (a = (0, k.we)("#Sale_Reservation_MonthNoun_" + L(n, 2))),
+              (o = (0, k.we)("#Sale_Reservation_MonthNoun_" + n)),
+              (l = "" + i.getFullYear());
             break;
           case "#Sale_Reservation_FourMonthRangeYear":
-            (s = (0, z.we)("#Sale_Reservation_MonthNoun_" + L(a, 3))),
-              (o = (0, z.we)("#Sale_Reservation_MonthNoun_" + a)),
-              (l = "" + n.getFullYear());
+            (a = (0, k.we)("#Sale_Reservation_MonthNoun_" + L(n, 3))),
+              (o = (0, k.we)("#Sale_Reservation_MonthNoun_" + n)),
+              (l = "" + i.getFullYear());
             break;
           case "#Sale_Reservation_Quarter_ThreeMonths":
-            (c = "#Sale_Reservation_Quarter" + (Math.floor((a - 1) / 3) + 1)),
-              (s = "" + n.getFullYear());
+            (c = "#Sale_Reservation_Quarter" + (Math.floor((n - 1) / 3) + 1)),
+              (a = "" + i.getFullYear());
             break;
           case "#Sale_Reservation_AfterQuarter_ThreeMonths":
             (c =
-              "#Sale_Reservation_AfterQuarter" + (Math.floor((a - 1) / 3) + 1)),
-              (s = (0, z.we)("#Sale_Reservation_MonthNoun_" + a)),
-              (o = "" + n.getFullYear());
+              "#Sale_Reservation_AfterQuarter" + (Math.floor((n - 1) / 3) + 1)),
+              (a = (0, k.we)("#Sale_Reservation_MonthNoun_" + n)),
+              (o = "" + i.getFullYear());
             break;
           case "#Sale_Reservation_RelativeWeekly":
             {
               const e = F.HD.GetTimeNowWithOverride(),
-                t = Math.floor((i - e) / 86400);
+                t = Math.floor((r - e) / 86400);
               t < 7 ||
                 (t < 28
                   ? ((c = "#Sale_Reservation_RelativeWeekly_Plural"),
-                    (s = "" + Math.floor(t / 7 + 1)))
+                    (a = "" + Math.floor(t / 7 + 1)))
                   : ((c = "#Sale_Reservation_RelativeMonthly"),
-                    (s = "" + Math.floor(t / 28 + 1))));
+                    (a = "" + Math.floor(t / 28 + 1))));
             }
             break;
           default:
             c = "#Sale_Reservation_Fallback";
         }
-        return r.createElement(
+        return s.createElement(
           "div",
           { className: I().Ctn },
-          (0, z.we)(c, s, o, l, ""),
+          (0, k.we)(c, a, o, l, ""),
         );
       }
-      function q(e) {
-        const t = h();
+      function G(e) {
+        const t = f();
         return t && 0 != t.length
-          ? r.createElement(
+          ? s.createElement(
               "div",
               null,
               t.map((e) =>
-                r.createElement(G, {
+                s.createElement(A, {
                   key: `${e.edistributor}_${e.product_identifier}`,
                   productID: e,
                 }),
               ),
             )
-          : r.createElement(
+          : s.createElement(
               "div",
               null,
               "No products with reservation position messages exists.",
             );
       }
-      function W(e) {
-        return r.createElement(
+      function q(e) {
+        return s.createElement(
           "div",
           null,
-          r.createElement(M.JU, null, "instructions:"),
-          r.createElement(
+          s.createElement(b.JU, null, "instructions:"),
+          s.createElement(
             "p",
             null,
             "Select an item from the drop-down to the left to set it as a visible item that we're taking reservations for.",
           ),
-          r.createElement(
+          s.createElement(
             "p",
             null,
             "Once selected, you can add groupings of item quantities and a description of how we want to describe the date at which those people will recieve their items.",
           ),
         );
       }
-      function A(e) {
-        h();
-        return r.createElement(
+      function W(e) {
+        f();
+        return s.createElement(
           "div",
           null,
-          r.createElement(M.JU, null, "Force update:"),
-          r.createElement(
+          s.createElement(b.JU, null, "Force update:"),
+          s.createElement(
             "p",
             null,
             "By default, the server caches the list in memory and that list will refresh from SQL every hour. You can use the force button to refresh immediately across all of the servers.",
           ),
-          r.createElement(
+          s.createElement(
             "p",
             null,
             "We recommend we force a refresh when all changes are done, otherwise, it will be somewhat random (within an hour) between each server picking up the updates -- so users might get different messages if they reload the page until all servers refresh.",
           ),
-          r.createElement(
-            M.$n,
+          s.createElement(
+            b.$n,
             {
-              onClick: (e) => (0, P.pg)(r.createElement(x, null), (0, T.uX)(e)),
+              onClick: (e) => (0, B.pg)(s.createElement(Y, null), (0, T.uX)(e)),
             },
             "Force Reload Definitions on Steam Servers",
           ),
         );
       }
-      function G(e) {
+      function A(e) {
         const { productID: t } = e,
-          i = (function (e) {
-            return a.find(
+          r = (function (e) {
+            return n.find(
               (t) =>
                 t.edistributor == e.edistributor &&
                 t.product_identifier == e.product_identifier,
             );
           })(t),
-          n = i.product_description + " " + i.distributor,
-          s = (function (e) {
-            const [t, i] = (0, r.useState)(() =>
+          i = r.product_description + " " + r.distributor,
+          a = (function (e) {
+            const [t, r] = (0, s.useState)(() =>
               p.Get().GetPositionMessagingForProduct(e),
             );
-            return (0, _.hL)(p.Get().GetPositionListChangeCallback(e), i), t;
+            return (0, _.hL)(p.Get().GetPositionListChangeCallback(e), r), t;
           })(t);
-        return r.createElement(
-          C.qx,
+        return s.createElement(
+          P.qx,
           {
             bStartMinimized: !1,
-            title: n,
-            tooltip: `distributor enum: ${i.edistributor}, part number: ${i.part_number}, product identifier: ${i.product_identifier}`,
+            title: i,
+            tooltip: `distributor enum: ${r.edistributor}, part number: ${r.part_number}, product identifier: ${r.product_identifier}`,
           },
-          r.createElement(
-            M.$n,
+          s.createElement(
+            b.$n,
             {
               onClick: (e) =>
-                (0, P.pg)(r.createElement(U, { productID: t }), (0, T.uX)(e)),
+                (0, B.pg)(s.createElement(U, { productID: t }), (0, T.uX)(e)),
             },
             "Add new start position",
           ),
-          r.createElement(
+          s.createElement(
             "table",
-            { className: b.ItemTable },
-            r.createElement(
+            { className: M.ItemTable },
+            s.createElement(
               "thead",
               null,
-              r.createElement(
+              s.createElement(
                 "tr",
                 null,
-                r.createElement("th", null, "Starting Queue Position"),
-                r.createElement("th", null, "Estimate Date Receive Invite"),
-                r.createElement("th", null, "Localized Date"),
-                r.createElement("th", null, "Entry Created By"),
-                r.createElement("th", null),
+                s.createElement("th", null, "Starting Queue Position"),
+                s.createElement("th", null, "Estimate Date Receive Invite"),
+                s.createElement("th", null, "Localized Date"),
+                s.createElement("th", null, "Entry Created By"),
+                s.createElement("th", null),
               ),
             ),
-            r.createElement(
+            s.createElement(
               "tbody",
               null,
-              s.map((e) =>
-                r.createElement(O, {
-                  key: n + e.start_queue_position,
+              a.map((e) =>
+                s.createElement(O, {
+                  key: i + e.start_queue_position,
                   positionMsg: e,
                 }),
               ),
@@ -548,44 +542,44 @@
       }
       function O(e) {
         const { positionMsg: t } = e;
-        return r.createElement(
+        return s.createElement(
           "tr",
           null,
-          r.createElement("td", null, t.start_queue_position.toLocaleString()),
-          r.createElement(
+          s.createElement("td", null, t.start_queue_position.toLocaleString()),
+          s.createElement(
             "td",
             null,
-            (0, z.TW)(t.rtime_estimated_notification),
+            (0, k.TW)(t.rtime_estimated_notification),
           ),
-          r.createElement(
+          s.createElement(
             "td",
             null,
-            r.createElement(N, {
+            s.createElement(N, {
               rtEstimatedNotifcationDate: t.rtime_estimated_notification,
               strToken: t.localization_token,
             }),
           ),
-          r.createElement(
+          s.createElement(
             "td",
             null,
-            r.createElement(
+            s.createElement(
               "div",
               null,
-              r.createElement(R.p, { accountID: t.accountid }),
+              s.createElement(R.p, { accountID: t.accountid }),
             ),
-            r.createElement("br", null),
+            s.createElement("br", null),
             "On: ",
-            (0, z.TW)(t.rtime_created),
+            (0, k.TW)(t.rtime_created),
           ),
-          r.createElement(
+          s.createElement(
             "td",
             null,
-            r.createElement(
-              M.$n,
+            s.createElement(
+              b.$n,
               {
                 onClick: (e) =>
-                  (0, P.pg)(
-                    r.createElement(U, {
+                  (0, B.pg)(
+                    s.createElement(U, {
                       productID: t,
                       existingPositionMsg: t,
                     }),
@@ -594,12 +588,12 @@
               },
               "Update",
             ),
-            r.createElement(
-              M.$n,
+            s.createElement(
+              b.$n,
               {
                 onClick: (e) =>
-                  (0, P.pg)(
-                    r.createElement(j, { positionMsg: t }),
+                  (0, B.pg)(
+                    s.createElement(j, { positionMsg: t }),
                     (0, T.uX)(e),
                   ),
               },
@@ -609,39 +603,39 @@
         );
       }
       function U(e) {
-        const { productID: t, existingPositionMsg: i, closeModal: n } = e,
-          { fnSetPositionMessages: a } = f(),
-          s = Math.floor(Date.now() / 1e3),
-          [o, l] = (0, r.useState)(i?.start_queue_position || 0),
-          [c, u] = (0, r.useState)(
-            i?.rtime_estimated_notification || s + 86400,
+        const { productID: t, existingPositionMsg: r, closeModal: i } = e,
+          { fnSetPositionMessages: n } = h(),
+          a = Math.floor(Date.now() / 1e3),
+          [o, l] = (0, s.useState)(r?.start_queue_position || 0),
+          [c, u] = (0, s.useState)(
+            r?.rtime_estimated_notification || a + 86400,
           ),
-          [m, d] = (0, r.useState)(
-            i?.localization_token || "#Sale_Reservation_MonthYear",
+          [d, m] = (0, s.useState)(
+            r?.localization_token || "#Sale_Reservation_MonthYear",
           ),
-          _ = i ? "Update Queue Range" : "Create Queue Range",
+          _ = r ? "Update Queue Range" : "Create Queue Range",
           g = (0, y.vs)();
         return g.bLoading
-          ? r.createElement(y.Hh, {
+          ? s.createElement(y.Hh, {
               state: g,
               strDialogTitle: _,
-              closeModal: n,
+              closeModal: i,
             })
-          : r.createElement(
-              B.o0,
+          : s.createElement(
+              C.o0,
               {
                 bDisableBackgroundDismiss: !0,
                 strTitle: _,
-                onCancel: n,
+                onCancel: i,
                 onOK: () => {
                   g.fnSetLoading(!0);
                   const e = {
                     ...t,
                     start_queue_position: o,
                     rtime_estimated_notification: c,
-                    localization_token: m,
+                    localization_token: d,
                   };
-                  a([e]).then((e) => {
+                  n([e]).then((e) => {
                     e
                       ? (g.fnSetSuccess(!0),
                         g.fnSetStrSuccess("Successfully created position"))
@@ -652,17 +646,17 @@
                   });
                 },
               },
-              r.createElement(
+              s.createElement(
                 "div",
-                { className: b.NewEntryCtn },
-                r.createElement(
+                { className: M.NewEntryCtn },
+                s.createElement(
                   "p",
                   null,
                   "When we get to accepting reservation number ",
-                  r.createElement("i", null, "n"),
+                  s.createElement("i", null, "n"),
                   ", show those users a date they can anticipate to recieve an invite to purchase.",
                 ),
-                r.createElement(M.pd, {
+                s.createElement(b.pd, {
                   type: "number",
                   min: "0",
                   value: o,
@@ -670,72 +664,72 @@
                   onChange: (e) =>
                     l(Number.parseInt(e?.currentTarget?.value || "0")),
                 }),
-                r.createElement(w.K, {
+                s.createElement(w.K, {
                   bShowTimeZone: !0,
                   strDescription: "Estimated Time Users will receive invite",
                   strDescToolTip:
                     "Everyone above this queue position until the next entry, we expect to have been invited by or on this date",
-                  nEarliestTime: s,
+                  nEarliestTime: a,
                   fnGetTimeToUpdate: () => c,
                   fnSetTimeToUpdate: u,
                 }),
-                r.createElement("br", null),
-                r.createElement(Q, {
-                  strToken: m,
-                  fnSetToken: d,
+                s.createElement("br", null),
+                s.createElement(Q, {
+                  strToken: d,
+                  fnSetToken: m,
                   rtEstimateDate: c,
                 }),
               ),
             );
       }
       function j(e) {
-        const { positionMsg: t, closeModal: i } = e,
-          { fnDeletePositionMessage: n } = f(),
-          a = `Delete Queue Position ${t.start_queue_position.toLocaleString()}`,
-          s = (0, y.vs)();
-        return s.bLoading
-          ? r.createElement(y.Hh, {
-              state: s,
-              strDialogTitle: a,
-              closeModal: i,
+        const { positionMsg: t, closeModal: r } = e,
+          { fnDeletePositionMessage: i } = h(),
+          n = `Delete Queue Position ${t.start_queue_position.toLocaleString()}`,
+          a = (0, y.vs)();
+        return a.bLoading
+          ? s.createElement(y.Hh, {
+              state: a,
+              strDialogTitle: n,
+              closeModal: r,
             })
-          : r.createElement(B.o0, {
-              strTitle: a,
+          : s.createElement(C.o0, {
+              strTitle: n,
               strDescription: "Are you sure, this action is no undo'able?",
-              onCancel: i,
+              onCancel: r,
               onOK: () => {
-                s.fnSetLoading(!0),
-                  n(t).then((e) => {
+                a.fnSetLoading(!0),
+                  i(t).then((e) => {
                     e
-                      ? (s.fnSetSuccess(!0),
-                        s.fnSetStrSuccess("Successfully delete position"))
-                      : (s.fnSetSuccess(!1),
-                        s.fnSetStrError(
+                      ? (a.fnSetSuccess(!0),
+                        a.fnSetStrSuccess("Successfully delete position"))
+                      : (a.fnSetSuccess(!1),
+                        a.fnSetStrError(
                           "Failed, please check console logs and/or try again",
                         ));
                   });
               },
             });
       }
-      function x(e) {
+      function Y(e) {
         const { closeModal: t } = e,
-          { fnReloadReservationPositionMessages: i } = f(),
-          [n, a] = (0, r.useState)(!1);
+          { fnReloadReservationPositionMessages: r } = h(),
+          [i, n] = (0, s.useState)(!1);
         return (
-          (0, r.useEffect)(() => {
-            i().then(() => a(!0));
-          }, [i]),
-          r.createElement(B.o0, {
+          (0, s.useEffect)(() => {
+            r().then(() => n(!0));
+          }, [r]),
+          s.createElement(C.o0, {
             bAlertDialog: !0,
             strTitle: "Reload Definition",
-            strDescription: n
+            strDescription: i
               ? "Reloading..."
               : "Reload send to server, safe to close dialog",
             closeModal: t,
           })
         );
       }
-      const Y = [
+      const $ = [
         "#Sale_Reservation_MonthYear",
         "#Sale_Reservation_TwoMonthRangeYear",
         "#Sale_Reservation_ThreeMonthRangeYear",
@@ -748,104 +742,104 @@
         "#Sale_Reservation_RelativeWeekly",
       ];
       function Q(e) {
-        const { strToken: t, fnSetToken: i, rtEstimateDate: n } = e,
-          a = (0, r.useMemo)(
+        const { strToken: t, fnSetToken: r, rtEstimateDate: i } = e,
+          n = (0, s.useMemo)(
             () =>
-              Y.map((e) => ({
-                label: r.createElement(N, {
+              $.map((e) => ({
+                label: s.createElement(N, {
                   strToken: e,
-                  rtEstimatedNotifcationDate: n,
+                  rtEstimatedNotifcationDate: i,
                 }),
                 data: e,
               })),
-            [n],
+            [i],
           );
-        return r.createElement(
+        return s.createElement(
           "div",
           null,
-          r.createElement(M.m, {
-            strDropDownClassName: k.DropDownScroll,
+          s.createElement(b.m, {
+            strDropDownClassName: D.DropDownScroll,
             label: "Date Format",
-            rgOptions: a,
+            rgOptions: n,
             selectedOption: t,
-            onChange: (e) => i(e.data),
+            onChange: (e) => r(e.data),
             bDisableMouseOverlay: !0,
             contextMenuPositionOptions: { bDisableMouseOverlay: !0 },
           }),
-          r.createElement(
+          s.createElement(
             "div",
             null,
-            r.createElement("h3", null, "This will display to users as: "),
-            r.createElement(
+            s.createElement("h3", null, "This will display to users as: "),
+            s.createElement(
               "div",
-              { className: b.DatePreview },
-              r.createElement(
+              { className: M.DatePreview },
+              s.createElement(
                 "div",
                 null,
-                (0, z.we)("#Sale_Reservation_ExpectedDate"),
+                (0, k.we)("#Sale_Reservation_ExpectedDate"),
               ),
-              r.createElement(N, {
-                rtEstimatedNotifcationDate: n,
+              s.createElement(N, {
+                rtEstimatedNotifcationDate: i,
                 strToken: t,
               }),
             ),
           ),
         );
       }
-      var $ = i(52038),
-        K = i(45737),
-        H = i.n(K);
-      function V(e) {
-        return r.createElement(
+      var x = r(52038),
+        K = r(45737),
+        V = r.n(K);
+      function H(e) {
+        return s.createElement(
           "div",
-          { className: (0, $.A)(b.ctn, H().AdminPageCtn) },
-          r.createElement(
+          { className: (0, x.A)(M.ctn, V().AdminPageCtn) },
+          s.createElement(
             "h1",
-            { className: H().PageTitle },
+            { className: V().PageTitle },
             "Reservation Queue - Messaging Tools",
           ),
-          r.createElement("hr", { className: "VO" }),
-          r.createElement(
+          s.createElement("hr", { className: "VO" }),
+          s.createElement(
             "div",
-            { className: H().ColumnCtn },
-            r.createElement(
+            { className: V().ColumnCtn },
+            s.createElement(
               "div",
-              { className: H().LeftCol },
-              r.createElement(
+              { className: V().LeftCol },
+              s.createElement(
                 "div",
-                { className: H().SectionCtn },
-                r.createElement(v, null),
+                { className: V().SectionCtn },
+                s.createElement(E, null),
               ),
-              r.createElement(
+              s.createElement(
                 "div",
-                { className: H().SectionCtn },
-                r.createElement(q, null),
+                { className: V().SectionCtn },
+                s.createElement(G, null),
               ),
             ),
-            r.createElement(
+            s.createElement(
               "div",
-              { className: H().RightCol },
-              r.createElement(
+              { className: V().RightCol },
+              s.createElement(
                 "div",
-                { className: H().SectionCtn },
-                r.createElement(W, null),
+                { className: V().SectionCtn },
+                s.createElement(q, null),
               ),
-              r.createElement(
+              s.createElement(
                 "div",
-                { className: H().SectionCtn },
-                r.createElement(A, null),
+                { className: V().SectionCtn },
+                s.createElement(W, null),
               ),
-              r.createElement(
+              s.createElement(
                 "div",
-                { className: H().SectionCtn },
-                r.createElement(M.JU, null, "Useful Links:"),
-                r.createElement(
+                { className: V().SectionCtn },
+                s.createElement(b.JU, null, "Useful Links:"),
+                s.createElement(
                   "ul",
                   null,
-                  r.createElement(
+                  s.createElement(
                     "li",
                     null,
-                    r.createElement(
+                    s.createElement(
                       "a",
                       {
                         href: `${g.TS.STATS_BASE_URL}steamdeck/reservations/`,
@@ -861,76 +855,76 @@
         );
       }
     },
-    8114: (e, t, i) => {
+    8114: (e, t, r) => {
       "use strict";
-      i.d(t, { Q7: () => c, S7: () => s, hw: () => o, rd: () => l });
-      var r = i(80613),
-        n = i(89068);
-      const a = r.Message;
-      class s extends a {
+      r.d(t, { Q7: () => c, S7: () => a, hw: () => o, rd: () => l });
+      var s = r(80613),
+        i = r(89068);
+      const n = s.Message;
+      class a extends n {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            s.prototype.sale_filter || n.Sg(s.M()),
-            a.initialize(this, e, 0, -1, [3], null);
+            a.prototype.sale_filter || i.Sg(a.M()),
+            n.initialize(this, e, 0, -1, [3], null);
         }
         static sm_m;
         static sm_mbf;
         static M() {
           return (
-            s.sm_m ||
-              (s.sm_m = {
-                proto: s,
+            a.sm_m ||
+              (a.sm_m = {
+                proto: a,
                 fields: {
                   sale_filter: { n: 1, c: o },
                   content_hub_filter: { n: 2, c: l },
                   store_filters: { n: 3, c: u, r: !0, q: !0 },
                 },
               }),
-            s.sm_m
+            a.sm_m
           );
         }
         static MBF() {
-          return s.sm_mbf || (s.sm_mbf = n.w0(s.M())), s.sm_mbf;
+          return a.sm_mbf || (a.sm_mbf = i.w0(a.M())), a.sm_mbf;
         }
         toObject(e = !1) {
-          return s.toObject(e, this);
+          return a.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(s.M(), e, t);
+          return i.BT(a.M(), e, t);
         }
         static fromObject(e) {
-          return n.Uq(s.M(), e);
+          return i.Uq(a.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new r.BinaryReader(e),
-            i = new s();
-          return s.deserializeBinaryFromReader(i, t);
+          let t = new s.BinaryReader(e),
+            r = new a();
+          return a.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(s.MBF(), e, t);
+          return i.zj(a.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new r.BinaryWriter();
-          return s.serializeBinaryToWriter(this, e), e.getResultBuffer();
+          var e = new s.BinaryWriter();
+          return a.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.i0(s.M(), e, t);
+          i.i0(a.M(), e, t);
         }
         serializeBase64String() {
-          var e = new r.BinaryWriter();
-          return s.serializeBinaryToWriter(this, e), e.getResultBase64String();
+          var e = new s.BinaryWriter();
+          return a.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStorePageFilter";
         }
       }
-      class o extends a {
+      class o extends n {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            o.prototype.sale_tagid || n.Sg(o.M()),
-            a.initialize(this, e, 0, -1, void 0, null);
+            o.prototype.sale_tagid || i.Sg(o.M()),
+            n.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -942,8 +936,8 @@
                 fields: {
                   sale_tagid: {
                     n: 1,
-                    br: n.qM.readUint32,
-                    bw: n.gp.writeUint32,
+                    br: i.qM.readUint32,
+                    bw: i.gp.writeUint32,
                   },
                 },
               }),
@@ -951,46 +945,46 @@
           );
         }
         static MBF() {
-          return o.sm_mbf || (o.sm_mbf = n.w0(o.M())), o.sm_mbf;
+          return o.sm_mbf || (o.sm_mbf = i.w0(o.M())), o.sm_mbf;
         }
         toObject(e = !1) {
           return o.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(o.M(), e, t);
+          return i.BT(o.M(), e, t);
         }
         static fromObject(e) {
-          return n.Uq(o.M(), e);
+          return i.Uq(o.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new r.BinaryReader(e),
-            i = new o();
-          return o.deserializeBinaryFromReader(i, t);
+          let t = new s.BinaryReader(e),
+            r = new o();
+          return o.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(o.MBF(), e, t);
+          return i.zj(o.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new r.BinaryWriter();
+          var e = new s.BinaryWriter();
           return o.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.i0(o.M(), e, t);
+          i.i0(o.M(), e, t);
         }
         serializeBase64String() {
-          var e = new r.BinaryWriter();
+          var e = new s.BinaryWriter();
           return o.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStorePageFilter_SalePageFilter";
         }
       }
-      class l extends a {
+      class l extends n {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            l.prototype.hub_type || n.Sg(l.M()),
-            a.initialize(this, e, 0, -1, void 0, null);
+            l.prototype.hub_type || i.Sg(l.M()),
+            n.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -1000,21 +994,21 @@
               (l.sm_m = {
                 proto: l,
                 fields: {
-                  hub_type: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
+                  hub_type: { n: 1, br: i.qM.readString, bw: i.gp.writeString },
                   hub_category: {
                     n: 2,
-                    br: n.qM.readString,
-                    bw: n.gp.writeString,
+                    br: i.qM.readString,
+                    bw: i.gp.writeString,
                   },
                   hub_tagid: {
                     n: 3,
-                    br: n.qM.readUint32,
-                    bw: n.gp.writeUint32,
+                    br: i.qM.readUint32,
+                    bw: i.gp.writeUint32,
                   },
                   discount_filter: {
                     n: 4,
-                    br: n.qM.readEnum,
-                    bw: n.gp.writeEnum,
+                    br: i.qM.readEnum,
+                    bw: i.gp.writeEnum,
                   },
                   optin: { n: 5, c },
                 },
@@ -1023,46 +1017,46 @@
           );
         }
         static MBF() {
-          return l.sm_mbf || (l.sm_mbf = n.w0(l.M())), l.sm_mbf;
+          return l.sm_mbf || (l.sm_mbf = i.w0(l.M())), l.sm_mbf;
         }
         toObject(e = !1) {
           return l.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(l.M(), e, t);
+          return i.BT(l.M(), e, t);
         }
         static fromObject(e) {
-          return n.Uq(l.M(), e);
+          return i.Uq(l.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new r.BinaryReader(e),
-            i = new l();
-          return l.deserializeBinaryFromReader(i, t);
+          let t = new s.BinaryReader(e),
+            r = new l();
+          return l.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(l.MBF(), e, t);
+          return i.zj(l.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new r.BinaryWriter();
+          var e = new s.BinaryWriter();
           return l.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.i0(l.M(), e, t);
+          i.i0(l.M(), e, t);
         }
         serializeBase64String() {
-          var e = new r.BinaryWriter();
+          var e = new s.BinaryWriter();
           return l.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStorePageFilter_ContentHubFilter";
         }
       }
-      class c extends a {
+      class c extends n {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            c.prototype.name || n.Sg(c.M()),
-            a.initialize(this, e, 0, -1, void 0, null);
+            c.prototype.name || i.Sg(c.M()),
+            n.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -1072,64 +1066,64 @@
               (c.sm_m = {
                 proto: c,
                 fields: {
-                  name: { n: 1, br: n.qM.readString, bw: n.gp.writeString },
+                  name: { n: 1, br: i.qM.readString, bw: i.gp.writeString },
                   optin_tagid: {
                     n: 2,
-                    br: n.qM.readUint32,
-                    bw: n.gp.writeUint32,
+                    br: i.qM.readUint32,
+                    bw: i.gp.writeUint32,
                   },
                   prune_tagid: {
                     n: 3,
-                    br: n.qM.readUint32,
-                    bw: n.gp.writeUint32,
+                    br: i.qM.readUint32,
+                    bw: i.gp.writeUint32,
                   },
-                  optin_only: { n: 4, br: n.qM.readBool, bw: n.gp.writeBool },
+                  optin_only: { n: 4, br: i.qM.readBool, bw: i.gp.writeBool },
                 },
               }),
             c.sm_m
           );
         }
         static MBF() {
-          return c.sm_mbf || (c.sm_mbf = n.w0(c.M())), c.sm_mbf;
+          return c.sm_mbf || (c.sm_mbf = i.w0(c.M())), c.sm_mbf;
         }
         toObject(e = !1) {
           return c.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(c.M(), e, t);
+          return i.BT(c.M(), e, t);
         }
         static fromObject(e) {
-          return n.Uq(c.M(), e);
+          return i.Uq(c.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new r.BinaryReader(e),
-            i = new c();
-          return c.deserializeBinaryFromReader(i, t);
+          let t = new s.BinaryReader(e),
+            r = new c();
+          return c.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(c.MBF(), e, t);
+          return i.zj(c.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new r.BinaryWriter();
+          var e = new s.BinaryWriter();
           return c.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.i0(c.M(), e, t);
+          i.i0(c.M(), e, t);
         }
         serializeBase64String() {
-          var e = new r.BinaryWriter();
+          var e = new s.BinaryWriter();
           return c.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
           return "CStorePageFilter_ContentHubFilter_OptInInfo";
         }
       }
-      class u extends a {
+      class u extends n {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
           super(),
-            u.prototype.filter_json || n.Sg(u.M()),
-            a.initialize(this, e, 0, -1, void 0, null);
+            u.prototype.filter_json || i.Sg(u.M()),
+            n.initialize(this, e, 0, -1, void 0, null);
         }
         static sm_m;
         static sm_mbf;
@@ -1141,13 +1135,13 @@
                 fields: {
                   filter_json: {
                     n: 1,
-                    br: n.qM.readString,
-                    bw: n.gp.writeString,
+                    br: i.qM.readString,
+                    bw: i.gp.writeString,
                   },
                   cache_key: {
                     n: 2,
-                    br: n.qM.readString,
-                    bw: n.gp.writeString,
+                    br: i.qM.readString,
+                    bw: i.gp.writeString,
                   },
                 },
               }),
@@ -1155,34 +1149,34 @@
           );
         }
         static MBF() {
-          return u.sm_mbf || (u.sm_mbf = n.w0(u.M())), u.sm_mbf;
+          return u.sm_mbf || (u.sm_mbf = i.w0(u.M())), u.sm_mbf;
         }
         toObject(e = !1) {
           return u.toObject(e, this);
         }
         static toObject(e, t) {
-          return n.BT(u.M(), e, t);
+          return i.BT(u.M(), e, t);
         }
         static fromObject(e) {
-          return n.Uq(u.M(), e);
+          return i.Uq(u.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new r.BinaryReader(e),
-            i = new u();
-          return u.deserializeBinaryFromReader(i, t);
+          let t = new s.BinaryReader(e),
+            r = new u();
+          return u.deserializeBinaryFromReader(r, t);
         }
         static deserializeBinaryFromReader(e, t) {
-          return n.zj(u.MBF(), e, t);
+          return i.zj(u.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new r.BinaryWriter();
+          var e = new s.BinaryWriter();
           return u.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
-          n.i0(u.M(), e, t);
+          i.i0(u.M(), e, t);
         }
         serializeBase64String() {
-          var e = new r.BinaryWriter();
+          var e = new s.BinaryWriter();
           return u.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -1190,76 +1184,97 @@
         }
       }
     },
-    48479: (e, t, i) => {
+    4434: (e, t, r) => {
       "use strict";
-      i.d(t, { AQ: () => _, qx: () => g });
-      var r = i(7068),
-        n = i(61859),
-        a = i(12155),
-        s = i(90626),
-        o = i(52038),
-        l = i(95695),
-        c = i(84811),
-        u = i(64734),
-        m = i(65946),
-        d = i(26408);
-      function _(e) {
-        const {
-            title: t,
-            tooltip: i,
-            getMinimized: r,
-            toggleMinimized: n,
-            className: a,
-            children: _,
-          } = e,
-          g = (0, m.q3)(() => r());
-        return s.createElement(
-          s.Fragment,
-          null,
-          s.createElement(
-            "div",
-            {
-              className: (0, o.A)(
-                a,
-                u.SectionTitleHeader,
-                u.required_title,
-                "SectionTitleHeader",
-              ),
-            },
-            s.createElement(
-              "div",
-              {
-                className: (0, o.A)(
-                  l.CollapsableSectionTitle,
-                  "EventEditorTextTitle",
-                ),
-              },
-              t,
-              Boolean(i) && s.createElement(d.o, { tooltip: i }),
+      r.d(t, { m: () => a });
+      var s = r(41735),
+        i = r.n(s),
+        n = r(90626);
+      function a(e) {
+        const t = n.useRef(i().CancelToken.source());
+        return (
+          n.useEffect(() => {
+            const r = t.current;
+            return () => r.cancel(e ? `${e}: unmounting` : "unmounting");
+          }, [e]),
+          t.current
+        );
+      }
+    },
+    68797: (e, t, r) => {
+      "use strict";
+      r.d(t, { H: () => a });
+      var s = r(41735),
+        i = r.n(s),
+        n = r(56545);
+      function a(e) {
+        if (i().isCancel(e))
+          return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
+        if (
+          void 0 !== e.response &&
+          e.response.data &&
+          "object" == typeof e.response.data
+        ) {
+          if ("msg" in e.response.data)
+            return {
+              strErrorMsg: e.response.data.msg,
+              errorCode: e.response.data.success,
+            };
+          if ("err_msg" in e.response.data)
+            return {
+              strErrorMsg: e.response.data.err_msg,
+              errorCode: e.response.data.success,
+            };
+          if ("message" in e.response.data)
+            return {
+              strErrorMsg: e.response.data.message,
+              errorCode: e.response.data.success,
+            };
+          if ("success" in e.response.data)
+            return {
+              strErrorMsg: "error code: " + e.response.data.success,
+              errorCode: e.response.data.success,
+            };
+        } else if ("object" == typeof e.data) {
+          if ("msg" in e.data)
+            return { strErrorMsg: e.data.msg, errorCode: e.data.success };
+          if ("err_msg" in e.data)
+            return { strErrorMsg: e.data.err_msg, errorCode: e.data.success };
+          if ("message" in e.data)
+            return { strErrorMsg: e.data.message, errorCode: e.data.success };
+          if ("success" in e.data)
+            return {
+              strErrorMsg: "error code: " + e.data.success,
+              errorCode: e.data.success,
+            };
+        } else {
+          if (void 0 !== e.success && void 0 !== e.msg)
+            return { strErrorMsg: e.msg, errorCode: e.success };
+          if (void 0 !== e.success && void 0 !== e.message)
+            return { strErrorMsg: e.message, errorCode: e.success };
+          if (void 0 !== e.success && void 0 !== e.err_msg)
+            return { strErrorMsg: e.err_msg, errorCode: e.success };
+          if ("string" == typeof e && e.length > 1024)
+            console.groupCollapsed(
+              "GetMsgAndErrorCodeFromResponse cannot parse: ",
             ),
-            s.createElement(p, { bIsMinimized: g, fnToggleMinimize: n }),
-          ),
-          !g && s.createElement(c.tH, null, _),
-        );
-      }
-      function g(e) {
-        const [t, i] = s.useState(Boolean(e.bStartMinimized));
-        return s.createElement(
-          _,
-          { ...e, getMinimized: () => t, toggleMinimized: () => i(!t) },
-          e.children,
-        );
-      }
-      function p(e) {
-        const { bIsMinimized: t, fnToggleMinimize: i } = e,
-          o = t ? "#Section_Maximize_Tooltip" : "#Section_Minimize_Tooltip";
-        return s.createElement(
-          r.$n,
-          { "data-tooltip-text": (0, n.we)(o), onClick: i },
-          e.bIsMinimized
-            ? s.createElement(a.hz4, null)
-            : s.createElement(a.Xjb, null),
-        );
+              console.warn(e),
+              console.groupEnd();
+          else {
+            if ("object" == typeof e && e instanceof n.w)
+              return {
+                strErrorMsg: "" + e.GetErrorMessage(),
+                errorCode: e.GetEResult(),
+              };
+            console.warn("GetMsgAndErrorCodeFromResponse cannot parse: ", e);
+          }
+        }
+        return "object" == typeof e && "status" in e
+          ? {
+              strErrorMsg: "Unknown Error: " + e + "\nStatus Code:" + e.status,
+              errorCode: 2,
+            }
+          : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
       }
     },
   },

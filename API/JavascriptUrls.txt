@@ -956,6 +956,8 @@ ${PARTNER_BASE_URL}admin/discounttaglookup?tag=${}
 ${PARTNER_BASE_URL}admin/editdiscountevent/${id}
 ${PARTNER_BASE_URL}admin/editdiscountevent/${}
 ${PARTNER_BASE_URL}admin/game/edit/${}?activetab=tab_graphicalassets
+${PARTNER_BASE_URL}admin/game/editbyappid/${store_item_id}
+${PARTNER_BASE_URL}admin/game/editbyappid/${store_item_id}?activetab=tab_specialsettings#seasonpass
 ${PARTNER_BASE_URL}admin/game/editbyappid/${}?activetab=tab_graphicalassets
 ${PARTNER_BASE_URL}admin/reviewpricesubmissions/?myPartners=1
 ${PARTNER_BASE_URL}admin/reviewpricesubmissions/?publisherID=${partnerid}
@@ -1033,6 +1035,7 @@ ${PARTNER_BASE_URL}doc/store/pricing#5
 ${PARTNER_BASE_URL}doc/store/pricing/csv
 ${PARTNER_BASE_URL}doc/store/promo/${}_page
 ${PARTNER_BASE_URL}doc/store/release_dates
+${PARTNER_BASE_URL}doc/store/seasonpass
 ${PARTNER_BASE_URL}financial/ajaxgetpartnersummary
 ${PARTNER_BASE_URL}gfxproxy/gfx/apps/${}/${}
 ${PARTNER_BASE_URL}gfxproxy/trailergfx?appid=${}&itype=apps
@@ -1101,6 +1104,7 @@ ${PARTNER_BASE_URL}packages/rejectpricing
 ${PARTNER_BASE_URL}packages/removepackagediscount/${}
 ${PARTNER_BASE_URL}partnerevents/ajaxgetpartnereventpermissions
 ${PARTNER_BASE_URL}partnerevents/ajaxpublishpatchnotes
+${PARTNER_BASE_URL}partnerevents/ajaxsetprivatedata
 ${PARTNER_BASE_URL}pricing/ajaxcancelproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxpublishproposal/${}/${}
 ${PARTNER_BASE_URL}pricing/ajaxsubmitproposal/${}/${}
@@ -1131,7 +1135,7 @@ ${PARTNER_BASE_URL}promotion/dailydeals/invite/${gid}
 ${PARTNER_BASE_URL}promotion/dailydeals/invite/${}
 ${PARTNER_BASE_URL}promotion/discountevents/dashboard
 ${PARTNER_BASE_URL}promotion/discountevents/edit/${}
-${PARTNER_BASE_URL}promotion/discounts${}?de=${discount_event_id}&dd=1
+${PARTNER_BASE_URL}promotion/discounts${}?dd=1${_ ? `&de=${}` : ""}
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetalldiscountevents/${}
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetdiscounteventapplist
 ${PARTNER_BASE_URL}promotion/discounts/ajaxgetdiscounteventbyid
@@ -1193,6 +1197,7 @@ ${PARTNER_BASE_URL}sales/ajaxcreatesalepartnerevent
 ${PARTNER_BASE_URL}sales/ajaxgetsalerank
 ${PARTNER_BASE_URL}sales/ajaxupdateclanaccountflags
 ${PARTNER_BASE_URL}sdr/ajaxsessionsearch?${}
+${PARTNER_BASE_URL}seasonpass/ajaxgetmilestoneinfo
 ${PARTNER_BASE_URL}steamml/create_problem
 ${PARTNER_BASE_URL}steamml/delete_problem
 ${PARTNER_BASE_URL}steamml/edit_problem
@@ -1448,6 +1453,7 @@ ${STORE_BASE_URL}news/${}
 ${STORE_BASE_URL}news/${}/view/${announcement_gid}
 ${STORE_BASE_URL}news/?appids=${appid}
 ${STORE_BASE_URL}news/app/${appid}?emclan=${clanSteamID}&emgid=${GID}}
+${STORE_BASE_URL}news/app/${parentAppID}/view/${completed_event_gid}
 ${STORE_BASE_URL}news/app/${}/view/${}
 ${STORE_BASE_URL}news/collection/sales/
 ${STORE_BASE_URL}news/download/${}/${}/${GID}?${}
@@ -2387,7 +2393,9 @@ https://confluence.valve.org/display/STEAM/Setting+up+an+opt-in+event
 https://confluence.valve.org/display/SteamBiz/Curated+Promotion+Thresholds
 https://confluence.valve.org/display/SteamBiz/New+Sales+Page+Feature+-+How+to+invite+partners
 https://confluence.valve.org/display/SteamBiz/Next+Fest+Launch+Checklist
+https://confluence.valve.org/display/SteamBiz/Steam+Promotions+Assets+Guide#SteamPromotionsAssetsGuide-MarketingMessageforUpdates
 https://confluence.valve.org/display/etc...
+https://confluence.valve.org/display/~adils/Steam+Season+Passes
 https://confluence.valve.org/pages/viewpage.action?pageId=131008106
 https://confluence.valve.org/pages/viewpage.action?pageId=320176134
 https://d1wp6m56sqw74a.cloudfront.net/~assets/${}

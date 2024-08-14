@@ -50,10 +50,16 @@
         NewsHubSubTitle: "_3tf3bdmBO0Ji0rv8PH-ZXz",
         AppBannerLogoCtn: "_2EV_WNLGjRLNX824mfis9O",
         AppBannerLogo: "dGGTg8iH8Z_d_p6nPFFlM",
+        HeaderButtonDark: "_1sDn2dLVB1pIeh5UP4EOVT",
         HeaderFollowButton: "_1tnk5F-ooFjGdvCzXLwtmf",
         HeaderWishlistButton: "_371yXVkVSnacHxz1fMmGpT",
         AppBannerLink: "_3YomsTzhdiLRcSZkF8JtB8",
         AppBannerRSSLink: "_1HeKH4JMsCDXmXP3XD7C6t",
+        AppBannerLinkDD: "_1afFDl3n1RB22K4gFglar",
+        AppBannerLinkDDButton: "S9cqDrgEIhtUE6pU3-2iQ",
+        DDButtonArrow: "_3URBCM-OKlL3sg0hORPS01",
+        AppBannerLinkDDContainer: "_2cjCliV2mnVX6dlRRce-fD",
+        WishlistBtnShort: "_3WcW8PJCSEWwVA6qJ-RUOF",
         AppPartnerEventsContainer: "_3GCEyyVil-cCS-8hoI2Zo1",
         PartnerEvent: "_1KsYSVzmvIfRivBTcx-_GE",
         LibraryViewSubtitle: "_1rbgKYHeRvzrIyqHCzaLIr",
@@ -444,11 +450,16 @@
           }, [E, o, l, p, s, i, a, m, t, n]);
         return r.createElement(u.m, {
           strDefaultLabel: (0, k.we)("#EventDisplay_LinksDropDown_ExtraShort"),
+          strClassName: x().AppBannerLinkDD,
+          strDropDownButtonClassName: x().AppBannerLinkDDButton,
+          strDropDownMenuCtnClass: x().AppBannerLinkDDContainer,
+          contextMenuPositionOptions: { bMatchWidth: !1 },
+          arrowClassName: x().DDButtonArrow,
           rgOptions: g,
           onChange: (e, t, n) => (0, O.EP)(n, (0, G.k2)(e.data)),
         });
       }
-      const Y = (0, g.PA)((e) => {
+      const W = (0, g.PA)((e) => {
         const { appId: t, clanId: n } = e,
           {
             strCapsuleUrl: a,
@@ -524,22 +535,31 @@
                       appid: t,
                       bIsFree: c?.BIsFree(),
                       bIsComingSoon: c?.BIsComingSoon(),
-                      className: x().ActionButton,
+                      className: (0, b.A)(
+                        x().ActionButton,
+                        x().WishlistBtnShort,
+                      ),
                     }),
                   ),
                 r.createElement(
                   "div",
                   { className: x().HeaderFollowButton },
                   Boolean(t)
-                    ? r.createElement(U.do, { appid: t })
-                    : r.createElement(U.of, { clanAccountID: n }),
+                    ? r.createElement(U.do, {
+                        appid: t,
+                        className: x().HeaderButtonDark,
+                      })
+                    : r.createElement(U.of, {
+                        clanAccountID: n,
+                        className: x().HeaderButtonDark,
+                      }),
                 ),
                 r.createElement(Q, { ...e }),
               ),
           ),
         );
       });
-      var W = n(56093),
+      var Y = n(56093),
         Z = n(95695),
         J = n.n(Z),
         K = n(738),
@@ -857,7 +877,7 @@
         Ae = n(83099),
         De = n(86244),
         Ne = n.n(De),
-        Ce = n(41471);
+        Ce = n(14336);
       const we = (0, g.PA)((e) => {
         const { appid: t, eventLink: n } = e,
           a = r.useRef(null),
@@ -1089,7 +1109,7 @@
                 );
         }
       }
-      (0, E.Cg)([W.oI], Te.prototype, "ShareOnSteamActivityFeed", null);
+      (0, E.Cg)([Y.oI], Te.prototype, "ShareOnSteamActivityFeed", null);
       const Ie = (e) => {
           const {
               eventLink: t,
@@ -1582,11 +1602,11 @@
             ),
         );
       }
-      (0, E.Cg)([W.oI], fe.prototype, "OnVoteUp", null),
-        (0, E.Cg)([W.oI], fe.prototype, "OnVoteDown", null),
-        (0, E.Cg)([W.oI], fe.prototype, "OnShareDialog", null),
-        (0, E.Cg)([W.oI], fe.prototype, "GotoDiscussion", null),
-        (0, E.Cg)([W.oI], fe.prototype, "OpenRepostDialogs", null),
+      (0, E.Cg)([Y.oI], fe.prototype, "OnVoteUp", null),
+        (0, E.Cg)([Y.oI], fe.prototype, "OnVoteDown", null),
+        (0, E.Cg)([Y.oI], fe.prototype, "OnShareDialog", null),
+        (0, E.Cg)([Y.oI], fe.prototype, "GotoDiscussion", null),
+        (0, E.Cg)([Y.oI], fe.prototype, "OpenRepostDialogs", null),
         (fe = (0, E.Cg)([g.PA], fe));
       var be = n(65946),
         ke = n(36148),
@@ -2079,8 +2099,8 @@
         }
       };
       (0, E.Cg)([v.sH], ze.prototype, "m_strPreviousVotedForAppTitle", void 0),
-        (0, E.Cg)([W.oI], ze.prototype, "OnVoteClick", null),
-        (0, E.Cg)([W.oI], ze.prototype, "SaveVote", null),
+        (0, E.Cg)([Y.oI], ze.prototype, "OnVoteClick", null),
+        (0, E.Cg)([Y.oI], ze.prototype, "SaveVote", null),
         (ze = (0, E.Cg)([g.PA], ze));
       r.Component;
       let Fe = class extends r.Component {
@@ -2209,8 +2229,8 @@
         (Fe = (0, E.Cg)([g.PA], Fe));
       var He = n(90316),
         Qe = n.n(He),
-        Ye = n(76684),
-        We = n(27543);
+        We = n(76684),
+        Ye = n(27543);
       function Ze(e) {
         const { appid: t } = e,
           [n] = (0, y.t7)(t, { include_basic_info: !0, include_links: !0 });
@@ -2286,10 +2306,10 @@
           r.createElement(
             "div",
             { className: Qe().EventDetailTimeInfo },
-            r.createElement(Ye.u1, {
+            r.createElement(We.u1, {
               startDateAndTime: a,
               endDateAndTime: o,
-              bHideEndTime: !(0, We.JS)(s),
+              bHideEndTime: !(0, Ye.JS)(s),
               stylesmodule: i,
             }),
           )
@@ -2699,16 +2719,16 @@
           );
         }
       };
-      (0, E.Cg)([W.oI], mt.prototype, "ScrollToNextEvent", null),
-        (0, E.Cg)([W.oI], mt.prototype, "ScrollToPrevEvent", null),
-        (0, E.Cg)([W.oI], mt.prototype, "OnScrollComplete", null),
-        (0, E.Cg)([W.oI], mt.prototype, "Close", null),
-        (0, E.Cg)([W.oI], mt.prototype, "OnBackgroundClick", null),
-        (0, E.Cg)([W.oI], mt.prototype, "OnKeyDown", null),
-        (0, E.Cg)([W.oI], mt.prototype, "OnScroll", null),
-        (0, E.Cg)([W.oI], mt.prototype, "OnTouchStart", null),
-        (0, E.Cg)([W.oI], mt.prototype, "OnTouchMove", null),
-        (0, E.Cg)([W.oI], mt.prototype, "OnWheel", null),
+      (0, E.Cg)([Y.oI], mt.prototype, "ScrollToNextEvent", null),
+        (0, E.Cg)([Y.oI], mt.prototype, "ScrollToPrevEvent", null),
+        (0, E.Cg)([Y.oI], mt.prototype, "OnScrollComplete", null),
+        (0, E.Cg)([Y.oI], mt.prototype, "Close", null),
+        (0, E.Cg)([Y.oI], mt.prototype, "OnBackgroundClick", null),
+        (0, E.Cg)([Y.oI], mt.prototype, "OnKeyDown", null),
+        (0, E.Cg)([Y.oI], mt.prototype, "OnScroll", null),
+        (0, E.Cg)([Y.oI], mt.prototype, "OnTouchStart", null),
+        (0, E.Cg)([Y.oI], mt.prototype, "OnTouchMove", null),
+        (0, E.Cg)([Y.oI], mt.prototype, "OnWheel", null),
         (mt = (0, E.Cg)([g.PA], mt));
       const dt = (0, g.PA)((e) => {
           let t = e.loader.GetNewerState(),
@@ -2977,8 +2997,8 @@
         }
       };
       var Et;
-      (0, E.Cg)([W.oI], pt.prototype, "OnEnterVisible", null),
-        (0, E.Cg)([W.oI], pt.prototype, "OnLeaveVisible", null),
+      (0, E.Cg)([Y.oI], pt.prototype, "OnEnterVisible", null),
+        (0, E.Cg)([Y.oI], pt.prototype, "OnLeaveVisible", null),
         (pt = (0, E.Cg)([g.PA], pt)),
         (function (e) {
           (e[(e.Idle = 1)] = "Idle"),
@@ -3109,7 +3129,7 @@
               "AppPartnerEventsBanner",
             ),
           },
-          r.createElement(Y, { ...e }),
+          r.createElement(W, { ...e }),
         ),
       );
       var ht = n(19332);
@@ -3152,8 +3172,8 @@
           );
         }
       };
-      (0, E.Cg)([W.oI], _t.prototype, "escFunction", null),
-        (0, E.Cg)([W.oI], _t.prototype, "OnBackgroundClick", null),
+      (0, E.Cg)([Y.oI], _t.prototype, "escFunction", null),
+        (0, E.Cg)([Y.oI], _t.prototype, "OnBackgroundClick", null),
         (_t = (0, E.Cg)([g.PA], _t));
       var vt = n(25228),
         At = n(62490),

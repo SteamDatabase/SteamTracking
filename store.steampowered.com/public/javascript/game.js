@@ -662,6 +662,7 @@ function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
 	filteredReviewScore.removeClass( "visible" );
 
 	$J.get( 'https://store.steampowered.com/appreviews/' + appid,{
+				'use_review_quality': $J('input[name="use_review_quality"]').is( ":checked" ) ? 1 : 0,
 				'cursor' : cursor,
 		'day_range' : dayRange,
 		'start_date' : startDate,

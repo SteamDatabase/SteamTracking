@@ -541,8 +541,8 @@
         O4: () => P,
         _q: () => L,
         dN: () => G,
-        es: () => A,
-        fw: () => b,
+        es: () => b,
+        fw: () => A,
         k: () => v,
         kJ: () => S,
         ms: () => R,
@@ -1195,12 +1195,12 @@
         );
         return (0, m.hL)(_.Get().GetSingleAppRegistrationChange(t, e), a), n;
       }
-      function A() {
+      function b() {
         return {
           fnUpdateOptInRegistrationJson: _.Get().UpdateOptInRegistrationJson,
         };
       }
-      function b() {
+      function A() {
         return { fnUpdateAppealState: _.Get().UpdateAppealState };
       }
       function R() {
@@ -1239,9 +1239,9 @@
         XA: () => w,
         XL: () => T,
         a8: () => L,
-        aU: () => b,
+        aU: () => A,
         gr: () => C,
-        hC: () => A,
+        hC: () => b,
         iI: () => k,
         qN: () => v,
         qT: () => m,
@@ -1642,7 +1642,7 @@
           Array.from(t.map((t) => [t, h.Get().GetDiscountByID(t)])),
         );
       }
-      function A(t) {
+      function b(t) {
         const e = (0, o.f1)(),
           [n, a] = i.useState(h.Get().GetAllDiscountsForPackage(t));
         return (
@@ -1663,7 +1663,7 @@
           }, [t, e, n])
         );
       }
-      function b(t) {
+      function A(t) {
         const e = (0, o.f1)();
         if (!t) return null;
         let n = null;
@@ -1777,8 +1777,8 @@
         Gq: () => j,
         QD: () => w,
         T1: () => E,
-        WV: () => A,
-        ZM: () => b,
+        WV: () => b,
+        ZM: () => A,
         _9: () => U,
         bA: () => L,
         ew: () => y,
@@ -2284,13 +2284,13 @@
           k.Get();
         }, []);
       }
-      function A() {
+      function b() {
         const [t, e] = l.useState(k.Get().GetLocalPackageDiscountOverrides());
         return (
           (0, g.hL)(k.Get().GetLocalPackageDiscountOverrideCallbackList(), e), t
         );
       }
-      function b() {
+      function A() {
         return l.useCallback(
           () => k.Get().GetLocalPackageDiscountOverrides()?.length > 0,
           [],
@@ -2723,14 +2723,14 @@
     33299: (t, e, n) => {
       "use strict";
       n.d(e, {
-        IR: () => L,
-        NP: () => S,
+        IR: () => b,
+        NP: () => G,
         Xr: () => A,
-        ZN: () => C,
-        mE: () => v,
-        sF: () => k,
-        uv: () => E,
-        w_: () => G,
+        ZN: () => L,
+        mE: () => k,
+        sF: () => S,
+        uv: () => I,
+        w_: () => P,
       });
       var a = n(90626),
         s = n(32754),
@@ -2744,8 +2744,9 @@
         d = n(64238),
         g = n.n(d),
         m = n(48996),
-        D = n(87924);
-      function h(t) {
+        D = n(87924),
+        h = n(4869);
+      function _(t) {
         const { cell: e } = t,
           n = e.getRow().getData().packageID || 0,
           s = (0, D.C5)(n);
@@ -2754,9 +2755,9 @@
           l = i
             ? (0, o.we)("#PackageGrid_VisitPackageDiscount_Tooltip_Error")
             : (0, o.we)("#PackageGrid_VisitPackagePricing_Tooltip");
-        return a.createElement(f, { className: r, toolTip: l, ...t });
+        return a.createElement(E, { className: r, toolTip: l, ...t });
       }
-      function _(t) {
+      function f(t) {
         const { cell: e } = t,
           n = e.getRow().getData().packageID || 0,
           s = (0, p.nT)(n);
@@ -2764,44 +2765,67 @@
           r = s
             ? (0, o.we)("#PackageGrid_VisitPackagePricing_Tooltip_Error")
             : (0, o.we)("#PackageGrid_VisitPackagePricing_Tooltip");
-        return a.createElement(f, { className: i, toolTip: r, ...t });
+        return a.createElement(E, {
+          className: i,
+          toolTip: r,
+          showUnreleased: !0,
+          ...t,
+        });
       }
-      function f(t) {
+      function E(t) {
         const {
             fnBLocalChangesExist: e,
             fnWarnUser: n,
-            cell: s,
-            className: r,
-            toolTip: l,
+            cell: r,
+            className: l,
+            toolTip: u,
           } = t,
-          u = s.getRow().getData().packageID,
-          p =
-            s.getValue() ??
+          p = r.getRow().getData().packageID,
+          d =
+            r.getValue() ??
             a.createElement(
               "span",
               { className: c().UnknownValue },
-              (0, o.we)("#PackageGrid_PackageID", u),
+              " ",
+              (0, o.we)("#PackageGrid_PackageID", p),
             );
         return a.createElement(
           A,
           {
             fnBLocalChangesExist: e,
             fnWarnUser: n,
-            href: `${i.TS.PARTNER_BASE_URL}store/packagelanding/${u}`,
-            strToolTip: l,
-            strClassName: r,
+            href: `${i.TS.PARTNER_BASE_URL}store/packagelanding/${p}`,
+            strToolTip: u,
+            strClassName: l,
           },
-          p,
+          t.showUnreleased &&
+            0 == r.getData().released &&
+            a.createElement(
+              a.Fragment,
+              null,
+              a.createElement(
+                s.Gq,
+                {
+                  toolTipContent: (0, o.we)(
+                    "#PackageGrid_PackageUnpublishedTooltip",
+                  ),
+                },
+                a.createElement(h.ZyV, { width: "14px", height: "14px" }),
+              ),
+              "  ",
+            ),
+          " ",
+          d,
         );
       }
-      function E(t) {
+      function I(t) {
         return a.useMemo(
           () => ({
             visible: !0,
             title: (0, o.we)("#PackageGrid_Column_PackageID"),
             field: "packageID",
             headerSort: !1,
-            formatter: (0, l.reactFormatter)(a.createElement(f, { ...t })),
+            formatter: (0, l.reactFormatter)(a.createElement(E, { ...t })),
             cssClass: c().PackageID,
             hozAlign: "right",
             frozen: !0,
@@ -2810,7 +2834,7 @@
           [t],
         );
       }
-      function I(t, e, n, a) {
+      function v(t, e, n, a) {
         return (
           !!(
             /^\d+$/.test(t) &&
@@ -2819,14 +2843,14 @@
           ) || e.toLowerCase().includes(t.toLowerCase())
         );
       }
-      function v(t, e) {
+      function k(t, e) {
         return a.useMemo(
           () => ({
             title: (0, o.we)("#PackageGrid_Column_PackageName"),
             field: "packageName",
             headerSort: !1,
             formatter: (0, l.reactFormatter)(
-              e ? a.createElement(h, { ...t }) : a.createElement(_, { ...t }),
+              e ? a.createElement(_, { ...t }) : a.createElement(f, { ...t }),
             ),
             cssClass: c().PackageName,
             width: 300,
@@ -2837,12 +2861,12 @@
             headerFilterPlaceholder: (0, o.we)(
               "#PackageGrid_PackageNameFilterInputPrompt",
             ),
-            headerFilterFunc: I,
+            headerFilterFunc: v,
           }),
           [t, e],
         );
       }
-      function k(t) {
+      function S(t) {
         return a.useMemo(
           () => ({
             visible: !1,
@@ -2854,7 +2878,7 @@
           [],
         );
       }
-      function S(t) {
+      function G(t) {
         return a.useMemo(
           () => ({
             visible: !1,
@@ -2868,13 +2892,13 @@
           [],
         );
       }
-      function G(t) {
+      function P(t) {
         const e = t.getCell("packageType"),
           n = e && "function" == typeof e.getValue && e.getValue();
         n && t.getElement().classList.add(n),
           t.getNextRow() || t.getElement().classList.add(c().LastRow);
       }
-      function P(t) {
+      function C(t) {
         const { fnBLocalChangesExist: e, fnWarnUser: n, cell: s } = t,
           r = s.getRow().getData().appids,
           c = r?.length ?? 0,
@@ -2890,14 +2914,14 @@
           1 == c ? "1 appid" : c + " appids",
         );
       }
-      function C(t) {
+      function L(t) {
         return a.useMemo(
           () => ({
             title: (0, o.we)("#PackageGrid_Column_AppName"),
             field: "appName",
             sorter: u.es,
             headerSort: !1,
-            formatter: (0, l.reactFormatter)(a.createElement(P, { ...t })),
+            formatter: (0, l.reactFormatter)(a.createElement(C, { ...t })),
             cssClass: c().AppCount,
             width: 80,
             frozen: !0,
@@ -2906,7 +2930,7 @@
           [t],
         );
       }
-      function L(t, e, n, a) {
+      function b(t, e, n, a) {
         return t == (0, o.we)("#PackageGrid_NoBaseGameFoundForPackage")
           ? `<div title='${(0, o.we)("#PackageGrid_NoBaseGameExplanation")}' >${t} (?) <span>(${(0, o.Yp)("#PackageGrid_PackageCount", e)})</span></div>`
           : `<div>${t} <span>(${(0, o.Yp)("#PackageGrid_PackageCount", e)})</span></div>`;
