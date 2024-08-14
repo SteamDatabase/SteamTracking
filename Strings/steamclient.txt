@@ -23440,6 +23440,7 @@ FvL:R
 FvvE
 F~Tb
 G&MtR
+G0mK
 G33s?
 G3LcP
 G3oML
@@ -23448,7 +23449,6 @@ G7:CompatAudioTCMediaV%u
 G7:CompatVideoTCMediaV%u
 G7:VulkanPipelinesV%u
 G7:VulkanPipelinesV%u_%s
-G@mK
 GAMESCOPECTRL_REQUEST_SCREENSHOT
 GAMESCOPE_COLOR_APP_WANTS_HDR_FEEDBACK
 GAMESCOPE_COLOR_GAIN
@@ -39563,6 +39563,7 @@ cSeqsAcked > 0
 cU!\f}QP
 c\n!NotifyCommunityPreferencesChanged
 c\n!NotifyPerFriendPreferencesChanged
+c`Nn
 ca dn length mismatch
 ca key too small
 ca md too weak
@@ -54586,7 +54587,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Aug 13 2024 18:10:53
+steam Aug 14 2024 01:50:55
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

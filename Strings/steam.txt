@@ -1457,6 +1457,8 @@ $d`D-laM
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
+01:49:52
+01:50:16
 08bX
 0A/8
 0Z@q
@@ -1694,7 +1696,6 @@ $d`D-laM
 17RefCountPvWrapperI22CClientStructNetPacketE
 18000000
 18446744073709551615
-18:10:02
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CHTTPClientRequest
@@ -2570,7 +2571,7 @@ Attempting to create a named event with a null name
 Attempting to purchase same app in different packages
 Audio Behind
 Audio Init Failed
-Aug 13 2024
+Aug 14 2024
 August
 Aura
 AuthANY
@@ -2602,7 +2603,7 @@ B-233
 B-283
 B-409
 B-571
-B18:10:23
+B01:50:15
 B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
@@ -10480,7 +10481,7 @@ Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
 Startup - Steam Client launched with: %s
-Startup - updater built Aug 13 2024 18:10:23
+Startup - updater built Aug 14 2024 01:50:15
 StaticFileWriterThread()
 Steam - Fatal Error
 Steam - Warning
@@ -13534,7 +13535,7 @@ cleanup method function failed
 clearance
 cleartext track 2
 client finished
-client-update.akamai.steamstatic.com
+client-update.steamstatic.com
 client/TCPConnection/RecvBytes
 client/TCPConnection/SentBytes
 client/UDPSocket/RecvBytes
@@ -20312,7 +20313,6 @@ md_gost94
 mdc2
 mdc2WithRSA
 media
-media.st.dl.eccdnx.com
 mem_write
 member
 member-body
