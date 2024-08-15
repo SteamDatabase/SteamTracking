@@ -2954,8 +2954,14 @@ div.graph_toggle_icon.down {
 }
 
 .user_reviews_display_uninformative {
+	min-width: 300px;;
+	white-space: normal;
 	padding-top: 10px;
 	border-top: 1px solid #4582a5;
+}
+
+.user_reviews_display_uninformative a {
+	color: #7193a6;
 }
 
 .user_reviews_playtime_filter_explanation {

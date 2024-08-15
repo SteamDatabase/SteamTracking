@@ -2802,7 +2802,7 @@ body.v6 .store_nav .popup_block_new .popup_body.search_v2 {
 	text-overflow: ellipsis;
 	overflow: hidden;
 	position: absolute;
-	top: 7px;
+	bottom: 3px;
 	right: 16px;
 }
 .tab_item.focus .release_date {
