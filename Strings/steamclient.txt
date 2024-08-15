@@ -99,6 +99,7 @@
   what():  
  !"#$%&'()))*+,-./0123456789:;<=>?@ABBCDEFGHIGJKLLBMBBNOPQRSTUVWXYZ[\]^G___________________________________________________`___________________________________________________________________________________________________________________________________________________________________abccccccccdeefghijklmnopqrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstyzzzzzzzzzzzzzzzz{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{__|}~
  !"#$%&'()*+,-./0123
+ !"#$%&'()*+,-./01230
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
@@ -23440,7 +23441,6 @@ FvL:R
 FvvE
 F~Tb
 G&MtR
-G0mK
 G33s?
 G3LcP
 G3oML
@@ -30206,6 +30206,7 @@ RequestedSession
 Requesting %s
 Requesting %u apps, %u packages (%s data, %u prev attempts, expected %u KB)
 Requesting a FileMapping while names are still encrypted!
+Requesting activate from AddToCache %d\n
 Requesting cert
 Requesting cert for %s from Steam\n
 Requesting download URL\n
@@ -39563,7 +39564,6 @@ cSeqsAcked > 0
 cU!\f}QP
 c\n!NotifyCommunityPreferencesChanged
 c\n!NotifyPerFriendPreferencesChanged
-c`Nn
 ca dn length mismatch
 ca key too small
 ca md too weak
@@ -42523,10 +42523,8 @@ fjW>J
 fkid
 flDeltaTime > 0.0
 flDurationRequiredForGoodCalibration > 0.0f
-flHardwareDeltaTime > 0.0
 flMinAngle <= flMaxAngle
 flMinDeflection <= flMaxDeflection
-flNow > 0.0f
 flProgressDelta > k_flMinimumProgressDelta && flProgressDelta < 0.30f
 flStickDeflection >= flMinDeflection
 flVolume >= 0.0f && flVolume <= 1.0f
@@ -48672,8 +48670,6 @@ m_pthreadFileIOReader
 m_pthreadFileIOWriter
 m_pubMappedView
 m_pubMsgIncoming == NULL
-m_qHWDeadzonedRotation.IsValid()
-m_qPredictedRotation.IsValid()
 m_qRawVoiceChunks
 m_qRawVoiceChunks.BRemoveFromHead( &pChunk )
 m_qRawVoiceChunks.BRemoveFromHead()
@@ -51215,7 +51211,6 @@ pConnection->BIsConnected()
 pConnection->m_pMessagesEndPointSessionOwner == nullptr
 pConnectionCallback == pWebSocketConnection
 pContext->GetConnectionType() == k_ESSLConnectionType_Client
-pControllerState->flHardwareQuatX || pControllerState->flHardwareQuatY || pControllerState->flHardwareQuatZ || pControllerState->flHardwareQuatW
 pConv && pConv->GetDelimiterLength() > 0
 pD4t
 pData->m_bufRGBA.TellPut() == pData->m_nWidth*pData->m_nHeight*4
@@ -52486,7 +52481,6 @@ qCJ.
 qHardwareQuaternion.IsValid()
 qQ2l
 qR5FE%
-qRawHardwareQuaternion.IsValid()
 qTiltedQuaternion.IsValid()
 qUN1
 q\n\tStats_UDP
@@ -54587,7 +54581,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Aug 14 2024 01:50:55
+steam Aug 15 2024 00:57:40
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

@@ -90,7 +90,7 @@
 /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
-01:50:02
+00:56:59
 12CStdMemAlloc
 16CAdHocValidation
 31CAdHocValidation_SimpleCallback
@@ -111,7 +111,7 @@ Assertion Failed: stack%2d: %s
 Assertion Failed: stack%2d: %s (%d): %s
 Assertion Failed: stack%2d: 0x%llX
 Attempting to create a named event with a null name
-Aug 14 2024
+Aug 15 2024
 AuthenticAMD
 Average %.2f fps, %.2f ms per frame\n
 BBlockingGetMiniDumpLock
