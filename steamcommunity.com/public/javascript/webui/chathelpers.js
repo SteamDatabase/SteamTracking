@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9097133";
+var CLSTAMP = "9118037";
 (() => {
   var e,
     t,
@@ -100,9 +100,9 @@ var CLSTAMP = "9097133";
         }
         (i.keys = () => Object.keys(s)), (i.id = 48516), (e.exports = i);
       },
-      3913: (e, t, n) => {
+      49652: (e, t, n) => {
         "use strict";
-        n(24375);
+        n(72845);
         var s = n(63696),
           i = n(7470);
         function r(e) {
@@ -166,9 +166,9 @@ var CLSTAMP = "9097133";
           const i = u("broadcast", e);
           i && (Object.assign(f, i), (t.broadcastConfig = !0));
           const c = u("community", e);
-          c && (Object.assign(E, c), (t.communityConfig = !0));
+          c && (Object.assign(g, c), (t.communityConfig = !0));
           const l = u("event", e);
-          return l && (Object.assign(g, l), (t.eventConfig = !0)), t;
+          return l && (Object.assign(E, l), (t.eventConfig = !0)), t;
         }
         function u(e, t = o) {
           return d(e, t, !0);
@@ -293,7 +293,7 @@ var CLSTAMP = "9097133";
             country_code: "",
           },
           f = { steamid: "", clanid: 0, listid: 0 },
-          E = {
+          g = {
             CLANSTEAMID: "",
             CLANACCOUNTID: 0,
             APPID: 0,
@@ -305,7 +305,7 @@ var CLSTAMP = "9097133";
             IS_VALVE_GROUP: !1,
             IS_ALLOWED_SC: !1,
           },
-          g = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
+          E = { ANNOUNCEMENT_GID: "", TAKEOVER_ANNOUNCEMENT_GID: "" };
         s.createContext({});
         let I = { success: !0, result: 1 };
         class S {
@@ -581,7 +581,7 @@ var CLSTAMP = "9097133";
               return t;
           }
         }
-        var T, A, y, j, R, L, M, P, N, w, G, O, U, D, F, B, W;
+        var T, A, y, j, L, R, M, N, P, w, G, O, U, D, F, B, W;
         !(function (e) {
           (e[(e.k_EConnectivityTestResult_Unknown = 0)] =
             "k_EConnectivityTestResult_Unknown"),
@@ -645,7 +645,7 @@ var CLSTAMP = "9097133";
                 "k_EAppUpdateContentType_Shader"),
               (e[(e.k_EAppUpdateContentType_Max = 3)] =
                 "k_EAppUpdateContentType_Max");
-          })(R || (R = {})),
+          })(L || (L = {})),
           (function (e) {
             (e[(e.k_EOverlayToStoreFlag_None = 0)] =
               "k_EOverlayToStoreFlag_None"),
@@ -653,7 +653,7 @@ var CLSTAMP = "9097133";
                 "k_EOverlayToStoreFlag_AddToCart"),
               (e[(e.k_EOverlayToStoreFlag_AddToCartAndShow = 2)] =
                 "k_EOverlayToStoreFlag_AddToCartAndShow");
-          })(L || (L = {})),
+          })(R || (R = {})),
           (function (e) {
             (e[(e.k_EActivateGameOverlayToWebPageMode_Default = 0)] =
               "k_EActivateGameOverlayToWebPageMode_Default"),
@@ -677,13 +677,13 @@ var CLSTAMP = "9097133";
                 "k_EGamingDeviceType_Phone"),
               (e[(e.k_EGamingDeviceType_SteamDeck = 544)] =
                 "k_EGamingDeviceType_SteamDeck");
-          })(P || (P = {})),
+          })(N || (N = {})),
           (function (e) {
             (e[(e.k_ELoginUIStyleOld = 0)] = "k_ELoginUIStyleOld"),
               (e[(e.k_ELoginUIStyleNewWithoutQRCode = 1)] =
                 "k_ELoginUIStyleNewWithoutQRCode"),
               (e[(e.k_ELoginUIStyleNew = 2)] = "k_ELoginUIStyleNew");
-          })(N || (N = {})),
+          })(P || (P = {})),
           (function (e) {
             (e[(e.k_ECommunityProfileItemProperty_ImageSmall = 0)] =
               "k_ECommunityProfileItemProperty_ImageSmall"),
@@ -1015,6 +1015,15 @@ var CLSTAMP = "9097133";
             if (!e || 0 == e.length || "#" != e.charAt(0)) return;
             let t = this.m_mapFallbackTokens.get(e.substring(1));
             return void 0 !== t ? t : void 0;
+          }
+          static GetTokenWithFallback(e) {
+            if (!e) return "";
+            const t = v(h.LANGUAGE),
+              n = e.find((e) => e.language == t);
+            if (n) return n.localized_string;
+            const s = K.GetELanguageFallback(t),
+              i = e.find((e) => e.language == s);
+            return i?.localized_string ?? "";
           }
         }
         function Y(e, ...t) {
@@ -1666,7 +1675,7 @@ var CLSTAMP = "9097133";
               })();
           });
       },
-      24375: (e, t, n) => {
+      72845: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -1908,7 +1917,7 @@ var CLSTAMP = "9097133";
         2320: "86c5564b12e885b0c4a2",
         2435: "5ea7dee3f866722b03e6",
         2632: "3e52f27bf663b2f4afa5",
-        2749: "91f8d0a63b295f8b5392",
+        2749: "df68a55817b3aa2982cc",
         2945: "c2615f0bf698d3ba8095",
         2954: "c825760d6ae449974069",
         3e3: "6244423f97bbadfb378f",
@@ -1932,7 +1941,7 @@ var CLSTAMP = "9097133";
         5480: "09e6317423e85306930c",
         6031: "21e13f7b0a4a7b299756",
         6127: "21285c2d4e9089b111bb",
-        6149: "23383a58f3eb8a093fab",
+        6149: "ba9393dc9727779185df",
         6165: "032a7a5441caa44b4322",
         6208: "c9ec1e43b493e96952dc",
         6239: "79ffa57680cb943b54ab",
@@ -1949,7 +1958,7 @@ var CLSTAMP = "9097133";
         7786: "e34953d1c70f5f6588ad",
         7861: "09c55a3ce9892fdd8918",
         8025: "4e732da64e0ba2a93a2a",
-        8194: "3c491ea4dfe0b2fd6628",
+        8194: "510ab7f4d7764937eced",
         8306: "a86e97f0a5b9c9abd5d0",
         8759: "51d00c7c3ca5c19f7399",
         8766: "b9b7b35f7df91bb55b83",
@@ -2095,6 +2104,6 @@ var CLSTAMP = "9097133";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [1068], () => o(3913));
+  var c = o.O(void 0, [1068], () => o(49652));
   c = o.O(c);
 })();

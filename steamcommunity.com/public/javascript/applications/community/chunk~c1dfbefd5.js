@@ -1676,6 +1676,16 @@
                     br: s.qM.readInt32,
                     bw: s.gp.writeInt32,
                   },
+                  renewal_price_in_cents: {
+                    n: 5,
+                    br: s.qM.readInt64String,
+                    bw: s.gp.writeInt64String,
+                  },
+                  formatted_renewal_price: {
+                    n: 6,
+                    br: s.qM.readString,
+                    bw: s.gp.writeString,
+                  },
                 },
               }),
             I.sm_m

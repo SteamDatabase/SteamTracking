@@ -8499,7 +8499,7 @@
                 else {
                   let r = e[l];
                   this.BReplaceRollupItem(t, r.item) &&
-                    (r.item.read && (r.url = Kt(n)),
+                    ((r.url = Kt(n)),
                     (r.item = t),
                     (r.timestamp = t.timestamp),
                     (r.bSendToCallbackAsNew = s)),
@@ -8923,7 +8923,7 @@
         f = r(32630),
         b = r(91674),
         w = r(30470),
-        M = r(41471),
+        M = r(14336),
         S = r(32381),
         z = r(52038),
         R = r(91675),

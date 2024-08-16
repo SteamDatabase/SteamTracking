@@ -11142,7 +11142,7 @@
       function Bn(e, t, r, i, n) {
         return {
           queryKey: gn(r, i),
-          queryFn: async () => (await wn(t, r, e, i))[n],
+          queryFn: async () => (await wn(t, r, e, i))[n] || null,
           staleTime: 36e5,
         };
       }

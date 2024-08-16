@@ -706,7 +706,7 @@
         };
       var L = a(98371),
         W = a(1035),
-        x = a(41471),
+        x = a(14336),
         K = a(16971);
       const V = (e) => {
         const t = e.steamid.GetAccountID(),

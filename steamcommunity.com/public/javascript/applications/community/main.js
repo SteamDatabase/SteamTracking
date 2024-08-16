@@ -5200,6 +5200,12 @@
                     br: n.qM.readUint32,
                     bw: n.gp.writeUint32,
                   },
+                  os_type: { n: 4, br: n.qM.readUint32, bw: n.gp.writeUint32 },
+                  device_type: {
+                    n: 5,
+                    br: n.qM.readUint32,
+                    bw: n.gp.writeUint32,
+                  },
                 },
               }),
             E.sm_m
@@ -6133,7 +6139,6 @@
         tz: () => yt,
         xt: () => qt,
         yo: () => Xe,
-        z2: () => h,
       });
       var i = r(80613),
         n = r(89068),
@@ -15445,13 +15450,13 @@
     91674: (e, t, r) => {
       "use strict";
       r.d(t, {
-        nn: () => d,
-        pn: () => _,
-        Nc: () => m,
-        n9: () => p,
-        Gd: () => h,
-        aL: () => g,
-        ru: () => f,
+        nn: () => m,
+        pn: () => g,
+        Nc: () => p,
+        n9: () => h,
+        Gd: () => _,
+        aL: () => f,
+        ru: () => v,
       });
       var i,
         n,
@@ -15459,13 +15464,14 @@
         s = r(88350),
         o = r(30470);
       const l = null !== (i = window.Config) && void 0 !== i ? i : o.TS,
-        c =
-          ((null !== (n = window.UserConfig) && void 0 !== n) || o.iA,
-          a.createContext({})),
-        u = a.createContext(void 0);
-      function d(e) {
+        c = null !== (n = window.UserConfig) && void 0 !== n ? n : o.iA;
+      window.Config && Object.assign(o.TS, window.Config),
+        window.UserConfig && Object.assign(c, window.UserConfig);
+      const u = a.createContext({}),
+        d = a.createContext(void 0);
+      function m(e) {
         const { children: t, ...r } = e,
-          i = p(),
+          i = h(),
           n = a.useMemo(
             () => ({ ...i, ...r }),
             [
@@ -15478,20 +15484,20 @@
               r.depth,
             ],
           );
-        return a.createElement(c.Provider, { value: n }, t);
-      }
-      function m() {
-        const e = a.useContext(u),
-          t = p();
-        return e || t;
+        return a.createElement(u.Provider, { value: n }, t);
       }
       function p() {
-        return a.useContext(c);
+        const e = a.useContext(d),
+          t = h();
+        return e || t;
       }
-      function h(e, t) {
-        return _(p(), e, t);
+      function h() {
+        return a.useContext(u);
       }
-      function _(e, t, r) {
+      function _(e, t) {
+        return g(h(), e, t);
+      }
+      function g(e, t, r) {
         return {
           ...e,
           feature: t || e.feature,
@@ -15500,8 +15506,8 @@
           is_client: l.IN_CLIENT,
         };
       }
-      function g(e, t, r) {
-        const i = p();
+      function f(e, t, r) {
+        const i = h();
         return a.useMemo(
           () =>
             (function (e, t, r, i) {
@@ -15511,8 +15517,8 @@
           [e, i, t, r],
         );
       }
-      function f(e, t) {
-        const r = p();
+      function v(e, t) {
+        const r = h();
         return a.useMemo(
           () => s.A.GetLinkParam({ ...r, feature: e || r.feature }, t),
           [r, e, t],
@@ -18164,11 +18170,16 @@
       }
       function le(e) {
         const t = (0, s.KV)();
-        return (0, n.I)({
-          queryKey: ae(e),
-          queryFn: () => oe(t, e),
-          placeholderData: { settings: void 0, mapAppsAllowed: void 0 },
-        });
+        return (0, n.I)(
+          (function (e, t, r) {
+            return {
+              queryKey: ae(t),
+              queryFn: () => oe(e, t),
+              placeholderData: { settings: void 0, mapAppsAllowed: void 0 },
+              ...r,
+            };
+          })(t, e),
+        );
       }
       function ce(e, t) {
         return ["validateparentaltoken", e, t];
@@ -37832,6 +37843,7 @@
         );
       }
       function ce(e) {
+        const [t, r] = (0, l.l)();
         return i.createElement(
           "svg",
           {
@@ -37845,10 +37857,10 @@
           },
           i.createElement(
             "g",
-            { "clip-path": "url(#clip0_29_13408)" },
+            { clipPath: r },
             i.createElement("path", {
-              "fill-rule": "evenodd",
-              "clip-rule": "evenodd",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
               d: "M0.400879 7.38525H36.4009V29.7798H0.400879V7.38525ZM12.6345 26.2414H9.28326L3.47884 10.909H7.0053L11.0355 22.5835L14.9563 10.909H18.4827L12.6345 26.2414ZM29.3047 26.2414H32.875L29.2609 20.437C30.1954 20.0281 30.9182 19.4294 31.4294 18.6409C31.9551 17.8524 32.2179 16.8667 32.2179 15.6839C32.2179 14.1799 31.7214 13.0117 30.7285 12.1794C29.7354 11.3324 28.1877 10.909 26.0849 10.909H20.3462V26.2414H23.566V21.0722H25.844H26.2163L29.3047 26.2414ZM23.566 18.3124V13.6469H25.8878C26.8954 13.6469 27.6254 13.8368 28.0781 14.2164C28.5454 14.5815 28.7791 15.1363 28.7791 15.8811C28.7791 16.6404 28.5381 17.2391 28.0562 17.6772C27.5889 18.1006 26.9318 18.3124 26.0849 18.3124H23.566Z",
               fill: "currentColor",
             }),
@@ -37858,7 +37870,7 @@
             null,
             i.createElement(
               "clipPath",
-              { id: "clip0_29_13408" },
+              { id: t },
               i.createElement("rect", {
                 width: "36",
                 height: "36",
@@ -40409,6 +40421,19 @@
           if (!e || 0 == e.length || "#" != e.charAt(0)) return;
           let t = this.m_mapFallbackTokens.get(e.substring(1));
           return void 0 !== t ? t : void 0;
+        }
+        static GetTokenWithFallback(e) {
+          var t;
+          if (!e) return "";
+          const r = (0, n.sf)(s.TS.LANGUAGE),
+            i = e.find((e) => e.language == r);
+          if (i) return i.localized_string;
+          const a = u.GetELanguageFallback(r),
+            o = e.find((e) => e.language == a);
+          return null !== (t = null == o ? void 0 : o.localized_string) &&
+            void 0 !== t
+            ? t
+            : "";
         }
       }
       function d(e, ...t) {

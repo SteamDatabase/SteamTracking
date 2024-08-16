@@ -425,6 +425,7 @@
         richPresenceLabel: "_2Ri005Wg_uXDTa71kdRbcN",
         playerName: "nOdcT-MoOaXGePXLyPe0H",
         playerNickname: "_2saJTAocZ9TnYXTGvnqUMC",
+        DisableColoring: "_3oDmKGyTBBm7i4DULjwYcC",
         playerNicknameBracket: "_3XEmWmfQy7gbYJ4KJ1N9tp",
         richPresenceContainer: "_3sxE7F1LV2IcSX68YsH9dI",
         gameName: "_1cB0qtF0paHWWyj1XNcnbG",
@@ -29926,7 +29927,13 @@
     },
     43470: (e, t, a) => {
       "use strict";
-      a.d(t, { fj: () => h, g7: () => S, hr: () => v, lA: () => E });
+      a.d(t, {
+        fj: () => h,
+        fp: () => E,
+        g7: () => S,
+        hr: () => v,
+        lA: () => y,
+      });
       var n = a(34629),
         i = a(41735),
         r = a.n(i),
@@ -30142,7 +30149,10 @@
               i.append("gidClanEvent", "" + t),
               i.append("jsonData", JSON.stringify(a));
             const o =
-                _.TS.COMMUNITY_BASE_URL + "partnereventdata/ajaxsetprivatedata",
+                "partnerweb" == (0, _.yK)()
+                  ? _.TS.PARTNER_BASE_URL + "partnerevents/ajaxsetprivatedata"
+                  : _.TS.COMMUNITY_BASE_URL +
+                    "partnereventdata/ajaxsetprivatedata",
               s = await r().post(o, i, { withCredentials: !0 });
             if (
               1 ===
@@ -30324,6 +30334,73 @@
         };
       }
       function E(e, t) {
+        var a, n, i, r, s, l, c;
+        const { oPrivateData: d, fnSetPrivateJson: u, bLoading: m } = h(e, t),
+          _ = g.Get(),
+          p = (0, o.useCallback)(
+            (a) =>
+              u({
+                ..._.GetPrivateData(e, t).jsonData,
+                bAllowChangingVanityURL: a,
+              }),
+            [e, u, t, _],
+          ),
+          v = (0, o.useCallback)(
+            (a) =>
+              u({
+                ..._.GetPrivateData(e, t).jsonData,
+                bAllowAddingAppsPackagesBundles: a,
+              }),
+            [e, u, t, _],
+          ),
+          S = (0, o.useCallback)(
+            (a) =>
+              u({
+                ..._.GetPrivateData(e, t).jsonData,
+                bAllowMakingChangesToSalePage: a,
+              }),
+            [e, u, t, _],
+          ),
+          E = Boolean(
+            null === (a = null == d ? void 0 : d.jsonData) || void 0 === a
+              ? void 0
+              : a.nAccountApproved,
+          );
+        return {
+          bLoading: m,
+          bAllowChangingVanityURL:
+            !E ||
+            void 0 ===
+              (null === (n = null == d ? void 0 : d.jsonData) || void 0 === n
+                ? void 0
+                : n.bAllowChangingVanityURL) ||
+            (null === (i = null == d ? void 0 : d.jsonData) || void 0 === i
+              ? void 0
+              : i.bAllowChangingVanityURL),
+          bAllowAddingAppsPackagesBundles:
+            !E ||
+            void 0 ===
+              (null === (r = null == d ? void 0 : d.jsonData) || void 0 === r
+                ? void 0
+                : r.bAllowAddingAppsPackagesBundles) ||
+            (null === (s = null == d ? void 0 : d.jsonData) || void 0 === s
+              ? void 0
+              : s.bAllowAddingAppsPackagesBundles),
+          bAllowMakingChangesToSalePage:
+            !E ||
+            void 0 ===
+              (null === (l = null == d ? void 0 : d.jsonData) || void 0 === l
+                ? void 0
+                : l.bAllowMakingChangesToSalePage) ||
+            (null === (c = null == d ? void 0 : d.jsonData) || void 0 === c
+              ? void 0
+              : c.bAllowMakingChangesToSalePage),
+          fnSetAllowChangingVanityURL: p,
+          fnSetAllowAddingAppsPackagesBundles: v,
+          fnSetAllowMakingChangesToSalePage: S,
+        };
+      }
+      function y(e, t) {
         var a, n, i, r, s, l;
         const { oPrivateData: c, fnSetPrivateJson: d, bLoading: u } = h(e, t),
           m = g.Get(),
@@ -61685,17 +61762,25 @@
           bParenthesizeNicknames: a,
           strNickname: i,
           bIgnorePersonaStatus: r,
-          className: o,
-          ...s
+          bDisableColoring: o,
+          className: s,
+          ...l
         } = e;
-        let l = i && !a ? i : t.m_strPlayerName;
+        let c = i && !a ? i : t.m_strPlayerName;
         return n.createElement(
           "span",
-          { ...s, className: (0, h.A)(o, !r && (0, m.rO)(t)) },
+          {
+            ...l,
+            className: (0, h.A)(
+              s,
+              o && S().DisableColoring,
+              !r && (0, m.rO)(t),
+            ),
+          },
           n.createElement(
             "span",
             { className: S().playerName },
-            l || " ",
+            c || " ",
             a &&
               i &&
               n.createElement(
@@ -61757,7 +61842,7 @@
       var F = a(22797),
         L = a(57834),
         O = a.n(L),
-        x = a(41471),
+        x = a(14336),
         z = a(26505);
       const U = new B.wd("AppRelevance").Debug;
       function H(e) {

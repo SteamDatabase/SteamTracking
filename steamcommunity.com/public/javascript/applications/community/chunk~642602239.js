@@ -2348,7 +2348,8 @@
           r = (0, s.m)("usePartnerEventByEventGID");
         return (
           (0, i.useEffect)(() => {
-            (null == t ? void 0 : t.GID) != e &&
+            e &&
+              (null == t ? void 0 : t.GID) != e &&
               (a.O3.Init(),
               a.O3.LoadBatchPartnerEventsByEventGIDsOrAnnouncementGIDs(
                 [e],

@@ -7836,6 +7836,12 @@ body.modals_BodyNoScrollDialog_3jhMI {
 .BasicUI .personanameandstatus_playerNickname_2saJT {
   text-overflow: ellipsis;
 }
+.personanameandstatus_DisableColoring_3oDmK
+  .personanameandstatus_playerName_nOdcT,
+.personanameandstatus_DisableColoring_3oDmK
+  .personanameandstatus_playerNickname_2saJT {
+  color: inherit;
+}
 .personanameandstatus_playerNickname_2saJT {
   padding-left: 5px;
   color: #666;
@@ -7843,6 +7849,10 @@ body.modals_BodyNoScrollDialog_3jhMI {
 .personanameandstatus_playerNickname_2saJT.GamepadMode,
 .GamepadMode .personanameandstatus_playerNickname_2saJT {
   color: #67707b;
+}
+.personanameandstatus_DisableColoring_3oDmK
+  .personanameandstatus_playerNickname_2saJT {
+  color: inherit;
 }
 .personanameandstatus_playerName_nOdcT {
   -webkit-mask: linear-gradient(
