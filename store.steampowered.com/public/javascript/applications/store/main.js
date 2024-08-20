@@ -31325,38 +31325,38 @@
     14860: (e, t, r) => {
       "use strict";
       r.d(t, {
-        eS: () => ot,
-        IN: () => st,
-        Tv: () => Ge,
-        w1: () => pt,
-        Vo: () => _t,
-        Bc: () => Xe,
-        v2: () => Ye,
-        tN: () => St,
-        fO: () => wt,
-        TI: () => Ke,
-        Y0: () => Ze,
-        Hs: () => He,
-        vo: () => Ve,
-        Ww: () => dt,
-        Xq: () => ft,
-        HM: () => Qe,
-        DD: () => $e,
-        Qn: () => nt,
-        BO: () => it,
-        gv: () => mt,
-        p8: () => ut,
-        lF: () => Mt,
-        _K: () => Je,
-        Yc: () => rt,
-        $N: () => Ct,
-        Ke: () => at,
-        ll: () => tt,
-        RC: () => ct,
-        yM: () => ht,
-        YW: () => Bt,
-        vu: () => vt,
-        QU: () => et,
+        eS: () => st,
+        IN: () => at,
+        Tv: () => qe,
+        w1: () => dt,
+        Vo: () => pt,
+        Bc: () => Qe,
+        v2: () => Xe,
+        tN: () => wt,
+        fO: () => Bt,
+        TI: () => He,
+        Y0: () => Ke,
+        Hs: () => Ve,
+        vo: () => Ge,
+        Ww: () => ut,
+        Xq: () => ht,
+        HM: () => $e,
+        DD: () => Ze,
+        Qn: () => it,
+        BO: () => rt,
+        gv: () => ct,
+        p8: () => mt,
+        lF: () => Ct,
+        _K: () => Ye,
+        Yc: () => tt,
+        $N: () => St,
+        Ke: () => nt,
+        ll: () => et,
+        RC: () => lt,
+        yM: () => gt,
+        YW: () => yt,
+        vu: () => Mt,
+        QU: () => Je,
       });
       var i = r(90626),
         n = r(56545),
@@ -35581,57 +35581,65 @@
         Oe = r(15419),
         De = r(41338),
         Ae = r(29233);
-      const Pe = (e) => (t, r, i) =>
-          i ? [e, t, r, i] : r ? [e, t, r] : t ? [e, t] : [e],
-        Le = Pe("get_family_group_for_user "),
-        We = Pe("get_family_group"),
-        ke = Pe("get_family_history"),
-        Ue = Pe("get_users_sharing_device"),
-        Ne = Pe("get_purchase_requests"),
-        xe = (Pe("get_shopping_cart_contents"), Pe("recent_playtime_sessions"));
-      Pe("get_playtime_summary"), Pe("get_invite_check_results");
-      function je(e, t) {
+      const Pe = (e, t) =>
+          void 0 === t
+            ? ["get_family_group_for_user ", e]
+            : ["get_family_group_for_user ", e, t],
+        Le = (e) => ["get_family_group", e],
+        We = (e) => ["get_family_history", e],
+        ke = (e) => ["get_users_sharing_device", e],
+        Ue = (e) => ["recent_playtime_sessions", e];
+      function Ne(e, t, r) {
+        return r
+          ? ["get_purchase_requests", e, t, r]
+          : t
+            ? ["get_purchase_requests", e, t]
+            : ["get_purchase_requests", e];
+      }
+      function xe(e, t) {
         if (1 != e) throw e;
       }
-      const qe = i.createContext({ staleTimeMs: 1 / 0 });
-      function Ge(e) {
+      const je = i.createContext({ staleTimeMs: 1 / 0 });
+      function qe(e) {
         const { staleTimeMs: t, children: r } = e,
           n = i.useMemo(() => ({ staleTimeMs: t ?? 3e3 }), [t]);
-        return i.createElement(qe.Provider, { value: n }, r);
+        return i.createElement(je.Provider, { value: n }, r);
       }
-      function Ve() {
-        const e = (0, m.KV)(),
-          t = (0, c.L)(),
-          r = (0, i.useContext)(qe).staleTimeMs;
-        return (0, a.I)({
-          queryKey: Le(t),
-          queryFn: async () => {
-            const t = n.w.Init(S),
-              r = await Re.GetFamilyGroupForUser(e, t);
-            return je(r.GetEResult()), r.Body();
-          },
-          staleTime: r,
-          enabled: !!t,
-        });
+      function Ge(e = !1) {
+        return (function (e, t = !1) {
+          const r = (0, m.KV)(),
+            s = (0, i.useContext)(je).staleTimeMs;
+          return (0, a.I)({
+            queryKey: Pe(e, t),
+            queryFn: async () => {
+              const i = n.w.Init(S);
+              i.Body().set_steamid(e),
+                i.Body().set_include_family_group_response(t);
+              const a = await Re.GetFamilyGroupForUser(r, i);
+              return xe(a.GetEResult()), a.Body();
+            },
+            staleTime: s,
+          });
+        })((0, c.L)(), e);
       }
-      function He(e) {
+      function Ve(e) {
         const t = (0, m.KV)(),
-          r = (0, i.useContext)(qe).staleTimeMs;
+          r = (0, i.useContext)(je).staleTimeMs;
         return (0, a.I)({
-          queryKey: We(e),
+          queryKey: Le(e),
           queryFn: async () => {
             if (e) {
               const r = n.w.Init(h);
               r.Body().set_family_groupid(e);
               const i = await Re.GetFamilyGroup(t, r);
-              return je(i.GetEResult()), i.Body();
+              return xe(i.GetEResult()), i.Body();
             }
             throw 42;
           },
           staleTime: r,
         });
       }
-      function Ke() {
+      function He() {
         const e = (0, m.KV)(),
           t = (0, s.jE)(),
           r = (0, c.L)();
@@ -35640,14 +35648,14 @@
             const r = n.w.Init(_);
             r.Body().set_name(t);
             const i = await Re.CreateFamilyGroup(e, r);
-            return je(i.GetEResult()), i.Body();
+            return xe(i.GetEResult()), i.Body();
           },
           onSuccess: () => {
-            t.invalidateQueries({ queryKey: Le(r) });
+            t.invalidateQueries({ queryKey: Pe(r) });
           },
         });
       }
-      function Ze(e) {
+      function Ke(e) {
         const t = (0, m.KV)(),
           r = (0, s.jE)(),
           i = (0, c.L)();
@@ -35656,16 +35664,16 @@
             const r = n.w.Init(A);
             r.Body().set_family_groupid(e);
             const i = await Re.DeleteFamilyGroup(t, r);
-            return je(i.GetEResult()), i.Body();
+            return xe(i.GetEResult()), i.Body();
           },
           onSuccess: () => {
-            r.invalidateQueries({ queryKey: Le(i) }),
-              r.invalidateQueries({ queryKey: We(e) }),
-              r.invalidateQueries({ queryKey: ke(e) });
+            r.invalidateQueries({ queryKey: Pe(i) }),
+              r.invalidateQueries({ queryKey: Le(e) }),
+              r.invalidateQueries({ queryKey: We(e) });
           },
         });
       }
-      function $e(e) {
+      function Ze(e) {
         const t = (0, m.KV)(),
           r = (0, s.jE)();
         return (0, o.n)({
@@ -35673,15 +35681,15 @@
             const i = n.w.Init(M);
             i.Body().set_family_groupid(e), i.Body().set_name(r);
             const a = await Re.ModifyFamilyGroupDetails(t, i);
-            return je(a.GetEResult()), a.Body();
+            return xe(a.GetEResult()), a.Body();
           },
           onSuccess: () => {
-            r.invalidateQueries({ queryKey: We(e) }),
-              r.invalidateQueries({ queryKey: ke(e) });
+            r.invalidateQueries({ queryKey: Le(e) }),
+              r.invalidateQueries({ queryKey: We(e) });
           },
         });
       }
-      function Qe(e, t, r) {
+      function $e(e, t, r) {
         const i = (0, m.KV)(),
           a = (0, s.jE)();
         return (0, o.n)({
@@ -35691,16 +35699,16 @@
               a.Body().set_receiver_steamid(t),
               a.Body().set_receiver_role(r);
             const s = await Re.InviteToFamilyGroup(i, a);
-            return je(s.GetEResult()), s.Body();
+            return xe(s.GetEResult()), s.Body();
           },
           onSuccess: () => {
-            a.invalidateQueries({ queryKey: Le(t) }),
-              a.invalidateQueries({ queryKey: We(e) }),
-              a.invalidateQueries({ queryKey: ke(e) });
+            a.invalidateQueries({ queryKey: Pe(t) }),
+              a.invalidateQueries({ queryKey: Le(e) }),
+              a.invalidateQueries({ queryKey: We(e) });
           },
         });
       }
-      function Xe(e, t = null) {
+      function Qe(e, t = null) {
         const r = (0, m.KV)(),
           i = (0, c.L)(),
           a = (0, s.jE)();
@@ -35709,12 +35717,29 @@
             const i = n.w.Init(T);
             i.Body().set_family_groupid(e), null !== t && i.Body().set_nonce(t);
             const a = await Re.JoinFamilyGroup(r, i);
-            return je(a.GetEResult()), a.Body();
+            return xe(a.GetEResult()), a.Body();
           },
           onSuccess: () => {
-            a.invalidateQueries({ queryKey: Le(i) }),
-              a.invalidateQueries({ queryKey: We(e) }),
-              a.invalidateQueries({ queryKey: ke(e) });
+            a.invalidateQueries({ queryKey: Pe(i) }),
+              a.invalidateQueries({ queryKey: Le(e) }),
+              a.invalidateQueries({ queryKey: We(e) });
+          },
+        });
+      }
+      function Xe(e, t) {
+        const r = (0, m.KV)(),
+          i = (0, s.jE)();
+        return (0, o.n)({
+          mutationFn: async () => {
+            const i = n.w.Init(O);
+            i.Body().set_family_groupid(e), i.Body().set_steamid_to_cancel(t);
+            const a = await Re.CancelFamilyGroupInvite(r, i);
+            return xe(a.GetEResult()), a.Body();
+          },
+          onSuccess: () => {
+            i.invalidateQueries({ queryKey: Pe(t) }),
+              i.invalidateQueries({ queryKey: Le(e) }),
+              i.invalidateQueries({ queryKey: We(e) });
           },
         });
       }
@@ -35723,39 +35748,22 @@
           i = (0, s.jE)();
         return (0, o.n)({
           mutationFn: async () => {
-            const i = n.w.Init(O);
-            i.Body().set_family_groupid(e), i.Body().set_steamid_to_cancel(t);
-            const a = await Re.CancelFamilyGroupInvite(r, i);
-            return je(a.GetEResult()), a.Body();
-          },
-          onSuccess: () => {
-            i.invalidateQueries({ queryKey: Le(t) }),
-              i.invalidateQueries({ queryKey: We(e) }),
-              i.invalidateQueries({ queryKey: ke(e) });
-          },
-        });
-      }
-      function Je(e, t) {
-        const r = (0, m.KV)(),
-          i = (0, s.jE)();
-        return (0, o.n)({
-          mutationFn: async () => {
             const i = n.w.Init(E);
             i.Body().set_family_groupid(e), i.Body().set_steamid_to_remove(t);
             const a = await Re.RemoveFromFamilyGroup(r, i);
-            return je(a.GetEResult()), a.Body();
+            return xe(a.GetEResult()), a.Body();
           },
           onSuccess: () => {
-            i.invalidateQueries({ queryKey: Le(t) }),
-              i.invalidateQueries({ queryKey: We(e) }),
-              i.invalidateQueries({ queryKey: ke(e) });
+            i.invalidateQueries({ queryKey: Pe(t) }),
+              i.invalidateQueries({ queryKey: Le(e) }),
+              i.invalidateQueries({ queryKey: We(e) });
           },
         });
       }
-      function et(e) {
+      function Je(e) {
         const t = (0, m.KV)();
         return (0, a.I)({
-          queryKey: Ue(e),
+          queryKey: ke(e),
           queryFn: async () => {
             const r = (0, Fe.VY)("clientsessionid"),
               i = r && BigInt("0x" + r).toString(),
@@ -35763,19 +35771,19 @@
             a.Body().set_family_groupid(e),
               a.Body().set_client_instance_id(i ?? void 0);
             const s = await Re.GetUsersSharingDevice(t, a);
-            return je(s.GetEResult()), s.Body();
+            return xe(s.GetEResult()), s.Body();
           },
         });
       }
-      function tt(e) {
+      function et(e) {
         const t = (0, c.L)(),
-          r = He(e);
+          r = Ve(e);
         return r.data
           ?.members()
           .find((e) => e.steamid() == t)
           ?.role();
       }
-      function rt(e, t) {
+      function tt(e, t) {
         const r = (0, m.KV)();
         return (0, o.n)({
           mutationFn: async () => {
@@ -35784,11 +35792,11 @@
               i.Body().set_use_account_cart(!0),
               i.Body().set_store_country_code(t);
             const a = await Re.RequestPurchase(r, i);
-            return je(a.GetEResult()), a.Body();
+            return xe(a.GetEResult()), a.Body();
           },
         });
       }
-      function it(e, t) {
+      function rt(e, t) {
         const r = (0, m.KV)(),
           i = (0, c.L)();
         return (0, a.I)({
@@ -35798,11 +35806,11 @@
             i.Body().set_family_groupid(e),
               void 0 !== t && i.Body().set_rt_include_completed_since(t);
             const a = await Re.GetPurchaseRequests(r, i);
-            return je(a.GetEResult()), a.Body();
+            return xe(a.GetEResult()), a.Body();
           },
         });
       }
-      function nt(e, t) {
+      function it(e, t) {
         const r = (0, m.KV)(),
           i = (0, c.L)();
         return (0, a.I)({
@@ -35811,13 +35819,13 @@
             const i = n.w.Init(N);
             i.Body().set_family_groupid(e), i.Body().add_request_ids(t);
             const a = await Re.GetPurchaseRequests(r, i);
-            return je(a.GetEResult()), a.Body();
+            return xe(a.GetEResult()), a.Body();
           },
           select: (e) =>
             e.toObject().requests?.find(({ request_id: e }) => e === t),
         });
       }
-      function at(e, t, r) {
+      function nt(e, t, r) {
         const i = (0, m.KV)(),
           a = (0, s.jE)();
         return (0, o.n)({
@@ -35827,19 +35835,19 @@
               a.Body().set_request_id(t),
               a.Body().set_action(r);
             const s = await Re.RespondToRequestedPurchase(i, a);
-            return je(s.GetEResult()), s.Body();
+            return xe(s.GetEResult()), s.Body();
           },
           onSuccess: () => {
             a.invalidateQueries({ queryKey: Ne(e) }),
-              a.invalidateQueries({ queryKey: ke(e) });
+              a.invalidateQueries({ queryKey: We(e) });
           },
         });
       }
-      const st = (0, i.createContext)({
+      const at = (0, i.createContext)({
         errorMessage: null,
         setErrorMessage: (e) => {},
       });
-      var ot;
+      var st;
       !(function (e) {
         (e[(e.k_EFamilyQueryNone = 0)] = "k_EFamilyQueryNone"),
           (e[(e.k_EFamilyQueryLoadFamily = 1)] = "k_EFamilyQueryLoadFamily"),
@@ -35870,8 +35878,8 @@
             "k_EFamilyQuerySetCooldownOverrides"),
           (e[(e.k_EFamilyQueryResendInvite = 16)] =
             "k_EFamilyQueryResendInvite");
-      })(ot || (ot = {}));
-      const lt = {
+      })(st || (st = {}));
+      const ot = {
         8: "#FamilyManagement_ErrorInternalServerError",
         2: "#FamilyManagement_ErrorInternalServerError",
         10: "#FamilyManagement_ErrorInternalServerError",
@@ -35886,54 +35894,54 @@
         96: "#FamilyManagement_ErrorAccountActivityLimitExceeded",
         112: "#FamilyManagement_LimitedAccount_CreateFamily",
         84: {
-          [ot.k_EFamilyQueryCreateFamily]:
+          [st.k_EFamilyQueryCreateFamily]:
             "#FamilyManagement_RateLimitExceeded_CreateFamily",
         },
         83: {
-          [ot.k_EFamilyQueryCreateFamily]:
+          [st.k_EFamilyQueryCreateFamily]:
             "#FamilyManagement_RegionLocked_CreateFamily",
-          [ot.k_EFamilyQueryJoinFamily]:
+          [st.k_EFamilyQueryJoinFamily]:
             "#FamilyManagement_Household_JoinFamily",
         },
         31: {
-          [ot.k_EFamilyQueryJoinFamily]:
+          [st.k_EFamilyQueryJoinFamily]:
             "#FamilyManagement_Household_JoinFamily",
         },
         95: {
-          [ot.k_EFamilyQueryCreateFamily]:
+          [st.k_EFamilyQueryCreateFamily]:
             "#FamilyManagement_ErrorAccountLimitExceeded_CreateFamily",
-          [ot.k_EFamilyQueryJoinFamily]:
+          [st.k_EFamilyQueryJoinFamily]:
             "#FamilyManagement_ErrorAccountLimitExceeded_JoinFamily",
-          [ot.k_EFamilyQueryRemoveFromFamily]:
+          [st.k_EFamilyQueryRemoveFromFamily]:
             "#FamilyManagement_ErrorAccountLimitExceeded_RemoveFromFamily",
         },
         29: {
-          [ot.k_EFamilyQueryJoinFamily]:
+          [st.k_EFamilyQueryJoinFamily]:
             "#FamilyManagement_ErrorDuplicateRequest_JoinFamily",
-          [ot.k_EFamilyQueryInviteToFamily]:
+          [st.k_EFamilyQueryInviteToFamily]:
             "#FamilyManagement_ErrorDuplicateRequest_InviteToFamily",
-          [ot.k_EFamilyQueryRemoveFromFamily]:
+          [st.k_EFamilyQueryRemoveFromFamily]:
             "#FamilyManagement_ErrorDuplicateRequest_RemoveFromFamily",
         },
         40: {
-          [ot.k_EFamilyQueryInviteToFamily]:
+          [st.k_EFamilyQueryInviteToFamily]:
             "#FamilyManagement_ErrorFailed_NoAdditionalDetails",
         },
       };
-      function ct() {
-        const { setErrorMessage: e } = (0, i.useContext)(st);
+      function lt() {
+        const { setErrorMessage: e } = (0, i.useContext)(at);
         return { setErrorMessage: e };
       }
-      function mt(e, t, r) {
-        const { setErrorMessage: n } = ct();
+      function ct(e, t, r) {
+        const { setErrorMessage: n } = lt();
         (0, i.useEffect)(() => {
           if (e.isError) {
             const i = e.error;
             n(
               (function (e, t, r) {
                 let i = "";
-                if (e in lt) {
-                  const t = lt[e];
+                if (e in ot) {
+                  const t = ot[e];
                   if ("string" == typeof t) i = (0, ze.we)(t);
                   else {
                     const e = t;
@@ -35946,32 +35954,32 @@
           }
         }, [n, e.isError, e.error, t, r]);
       }
-      function ut(e, t) {
-        const { setErrorMessage: r } = ct();
+      function mt(e, t) {
+        const { setErrorMessage: r } = lt();
         (0, i.useEffect)(() => {
           e.isError && r((0, ze.we)(t));
         }, [r, e.isError, t]);
       }
-      function dt(e) {
+      function ut(e) {
         const t = (0, m.KV)();
         return (0, a.I)({
-          queryKey: ke(e),
+          queryKey: We(e),
           queryFn: async () => {
             const r = n.w.Init(Q);
             r.Body().set_family_groupid(e);
             const i = await Re.GetChangeLog(t, r);
-            return je(i.GetEResult()), i.Body().changes();
+            return xe(i.GetEResult()), i.Body().changes();
           },
           staleTime: 0,
         });
       }
-      function pt(e, t) {
+      function dt(e, t) {
         return `${Ee.TS.STORE_BASE_URL}cart/purchaserequest/${e}/${t}`;
       }
-      function _t(e) {
+      function pt(e) {
         return `${Ee.TS.STORE_BASE_URL}cart/purchaserequested/${e}`;
       }
-      function gt(e, t, r, i) {
+      function _t(e, t, r, i) {
         return [
           "get_shared_library_apps",
           e,
@@ -35983,7 +35991,7 @@
           i,
         ];
       }
-      function ht(e, t) {
+      function gt(e, t) {
         const r = (0, c.L)(),
           { settings: i, mapAppsAllowed: s } = (0, Oe.S0)(r).data,
           o = (0, Oe.BM)(),
@@ -35995,7 +36003,7 @@
             for_account_id: g,
           } = t ?? {},
           h = void 0 === t?.enabled || t.enabled,
-          f = gt(e, t, i, o),
+          f = _t(e, t, i, o),
           b = (e) => !(0, Oe.or)(e.appid(), o, i, s);
         return (0, a.I)({
           queryKey: f,
@@ -36014,7 +36022,7 @@
             }
             const r = await Re.GetSharedLibraryApps(u, t);
             return (
-              je(r.GetEResult()),
+              xe(r.GetEResult()),
               r
                 .Body()
                 .apps()
@@ -36027,24 +36035,24 @@
           select: t?.select,
         });
       }
-      function ft(e, t) {
+      function ht(e, t) {
         const r = (0, s.jE)(),
           n = (0, c.L)(),
           { settings: a } = (0, Oe.S0)(n).data ?? {},
-          o = gt(e, t, a, (0, Oe.BM)());
+          o = _t(e, t, a, (0, Oe.BM)());
         return (0, i.useCallback)(() => {
           r.invalidateQueries({ queryKey: o });
         }, [r, o]);
       }
-      function bt(e, t) {
+      function ft(e, t) {
         let r = e.sort_as || e.name,
           i = t.sort_as || t.name;
         return (0, De.lY)(r, i);
       }
-      function yt(e, t) {
-        return t.rt_time_acquired - e.rt_time_acquired || bt(e, t);
+      function bt(e, t) {
+        return t.rt_time_acquired - e.rt_time_acquired || ft(e, t);
       }
-      function Bt(e, t, r, n = []) {
+      function yt(e, t, r, n = []) {
         const a = (0, i.useMemo)(
             () =>
               e?.filter((e) =>
@@ -36067,19 +36075,19 @@
           ),
           s = (0, i.useCallback)(
             (e, r) => {
-              let i = bt;
+              let i = ft;
               switch (t) {
                 case "alpha-asc":
-                  i = bt;
+                  i = ft;
                   break;
                 case "alpha-desc":
-                  i = (e, t) => bt(t, e);
+                  i = (e, t) => ft(t, e);
                   break;
                 case "date_acquired-asc":
-                  i = (e, t) => yt(t, e);
+                  i = (e, t) => bt(t, e);
                   break;
                 case "date_acquired-desc":
-                  i = yt;
+                  i = bt;
               }
               return i(e, r);
             },
@@ -36087,7 +36095,7 @@
           );
         return (0, i.useMemo)(() => a.slice().sort(s), [a, s]);
       }
-      function wt(e, t, r) {
+      function Bt(e, t, r) {
         const i = (0, m.KV)(),
           a = (0, s.jE)(),
           l = (0, c.L)();
@@ -36098,16 +36106,16 @@
               a.Body().set_invite_id(t),
               a.Body().set_nonce(r);
             const s = await Re.ConfirmJoinFamilyGroup(i, a);
-            return je(s.GetEResult()), s.Body();
+            return xe(s.GetEResult()), s.Body();
           },
           onSuccess: () => {
-            a.invalidateQueries({ queryKey: Le(l) }),
-              a.invalidateQueries({ queryKey: We(e) }),
-              a.invalidateQueries({ queryKey: ke(e) });
+            a.invalidateQueries({ queryKey: Pe(l) }),
+              a.invalidateQueries({ queryKey: Le(e) }),
+              a.invalidateQueries({ queryKey: We(e) });
           },
         });
       }
-      function St(e, t, r) {
+      function wt(e, t, r) {
         const i = (0, m.KV)(),
           a = (0, s.jE)();
         return (0, o.n)({
@@ -36117,34 +36125,34 @@
               a.Body().set_invite_id(t),
               a.Body().set_nonce(r);
             const s = await Re.ConfirmInviteToFamilyGroup(i, a);
-            return je(s.GetEResult()), s.Body();
+            return xe(s.GetEResult()), s.Body();
           },
           onSuccess: () => {
-            a.invalidateQueries({ queryKey: We(e) }),
-              a.invalidateQueries({ queryKey: ke(e) });
+            a.invalidateQueries({ queryKey: Le(e) }),
+              a.invalidateQueries({ queryKey: We(e) });
           },
         });
       }
-      function Ct(e, t) {
+      function St(e, t) {
         const r = (0, m.KV)();
         return (0, o.n)({
           mutationFn: async () => {
             const i = n.w.Init(ue);
             i.Body().set_family_groupid(e), i.Body().set_steamid(t);
             const a = await Re.ResendInvitationToFamilyGroup(r, i);
-            return je(a.GetEResult()), a;
+            return xe(a.GetEResult()), a;
           },
         });
       }
-      function Mt(e) {
+      function Ct(e) {
         const t = (0, m.KV)();
         return (0, a.I)({
-          queryKey: xe(e),
+          queryKey: Ue(e),
           queryFn: async () => {
             const r = n.w.Init(Te.m8);
             r.Body().set_steamid(e);
             const i = await Te.xt.GetRecentPlaytimeSessionsForChild(t, r);
-            je(i.GetEResult());
+            xe(i.GetEResult());
             const a = (function (e) {
               let t = [];
               e.sort((e, t) => e.time_start - t.time_start);
@@ -36164,7 +36172,7 @@
           },
         });
       }
-      function vt(e) {
+      function Mt(e) {
         const t = (0, m.KV)(),
           r = (0, c.L)(),
           i = (0, s.jE)();
@@ -36173,12 +36181,12 @@
             const r = n.w.Init(be);
             r.Body().set_family_groupid(e);
             const i = await Re.UndeleteFamilyGroup(t, r);
-            return je(i.GetEResult()), i;
+            return xe(i.GetEResult()), i;
           },
           onSuccess: () => {
-            i.invalidateQueries({ queryKey: Le(r) }),
-              i.invalidateQueries({ queryKey: We(e) }),
-              i.invalidateQueries({ queryKey: ke(e) });
+            i.invalidateQueries({ queryKey: Pe(r) }),
+              i.invalidateQueries({ queryKey: Le(e) }),
+              i.invalidateQueries({ queryKey: We(e) });
           },
         });
       }
@@ -46707,7 +46715,7 @@
       function fe(e, t, r) {
         if (!t) return !1;
         const i = he(e);
-        return (0, L.EC)(t, i?.eFeature || z.JC, r);
+        return (0, L.EC)(t, i?.eFeature ?? z.JC, r);
       }
       function be(e, t, r) {
         (0, R.h5)(() => {
@@ -53356,40 +53364,44 @@
         const {
             label: t,
             tooltip: r,
-            disabled: i,
-            strClassName: a,
-            dropDownControlRef: s,
-            description: o,
-            layout: l,
-            bottomSeparator: c,
-            highlightOnFocus: m,
-            autoFocus: u,
-            indentLevel: d,
-            childrenContainerWidth: p = "fixed",
-            onContextMenu: _,
-            onActivate: g,
-            ...h
+            explainer: i,
+            explainerTitle: a,
+            disabled: s,
+            strClassName: o,
+            dropDownControlRef: l,
+            description: c,
+            layout: m,
+            bottomSeparator: u,
+            highlightOnFocus: d,
+            autoFocus: p,
+            indentLevel: _,
+            childrenContainerWidth: g = "fixed",
+            onContextMenu: h,
+            onActivate: f,
+            ...b
           } = e,
-          { actionDescriptions: f, gamepadEvents: b, props: y } = (0, _t.C7)(h);
+          { actionDescriptions: y, gamepadEvents: B, props: w } = (0, _t.C7)(b);
         return n.createElement(
           ct,
           {
-            className: a,
-            disabled: i,
+            className: o,
+            disabled: s,
             label: t,
-            onActivate: g,
-            description: o ?? r,
-            childrenLayout: l ?? "inline",
-            childrenContainerWidth: p,
-            bottomSeparator: c,
-            highlightOnFocus: m,
-            autoFocus: u,
-            indentLevel: d,
-            onContextMenu: _,
-            actionDescriptionMap: f,
-            ...b,
+            onActivate: f,
+            description: c ?? r,
+            childrenLayout: m ?? "inline",
+            childrenContainerWidth: g,
+            bottomSeparator: u,
+            highlightOnFocus: d,
+            autoFocus: p,
+            indentLevel: _,
+            onContextMenu: h,
+            actionDescriptionMap: y,
+            explainer: i,
+            explainerTitle: a,
+            ...B,
           },
-          n.createElement(Ce, { menuLabel: t, disabled: i, ...y, ref: s }),
+          n.createElement(Ce, { menuLabel: t, disabled: s, ...w, ref: l }),
         );
       }
       function ht(e, t) {

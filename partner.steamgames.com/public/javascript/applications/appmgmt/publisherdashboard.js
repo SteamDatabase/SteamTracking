@@ -1897,35 +1897,45 @@
       var Ee = a(44165),
         De = a(54330);
       function he() {
+        const e = Rt();
         return n.useMemo(() => {
-          const e = (function (e) {
+          const t = (function (e) {
               return e
                 ? Object.keys(e).reduce((t, a) => t.set(a, e[a]), new Map())
                 : void 0;
             })((0, r.Tc)("rgDeadlines", "application_config")),
-            t = (e ? Array.from(e.entries()) : []).reduce((e, [t, a]) => {
-              const n = _e(new Date(1e3 * a.due_date)),
-                r = (function (e) {
-                  switch (e) {
-                    case 4:
-                    case 5:
-                      return !0;
-                  }
-                  return !1;
-                })(a.type),
-                s = r ? "group" : t,
-                i = `${n.getTime()}_${a.type}_${s}`,
-                l = e.has(i) ? e.get(i).deadlines : [];
-              return (
-                e.set(i, {
-                  dueDate: n,
-                  bSupportsGrouping: r,
-                  deadlines: [...l, a],
-                }),
-                e
-              );
-            }, new Map()),
-            a = Array.from(t.entries()).flatMap(([e, t]) => {
+            a = (t ? Array.from(t.entries()) : [])
+              .filter(
+                ([t, a]) =>
+                  new Date(1e3 * a.due_date) >= e ||
+                  (function (e) {
+                    if (9 === e) return !0;
+                    return !1;
+                  })(a.type),
+              )
+              .reduce((e, [t, a]) => {
+                const n = _e(new Date(1e3 * a.due_date)),
+                  r = (function (e) {
+                    switch (e) {
+                      case 4:
+                      case 5:
+                        return !0;
+                    }
+                    return !1;
+                  })(a.type),
+                  s = r ? "group" : t,
+                  i = `${n.getTime()}_${a.type}_${s}`,
+                  l = e.has(i) ? e.get(i).deadlines : [];
+                return (
+                  e.set(i, {
+                    dueDate: n,
+                    bSupportsGrouping: r,
+                    deadlines: [...l, a],
+                  }),
+                  e
+                );
+              }, new Map()),
+            n = Array.from(a.entries()).flatMap(([e, t]) => {
               const { dueDate: a, bSupportsGrouping: n, deadlines: r } = t,
                 s = [];
               return (
@@ -1955,8 +1965,8 @@
                   }))
               );
             });
-          return a ?? [];
-        }, []);
+          return n ?? [];
+        }, [e]);
       }
       function ye(e) {
         const t = e.description_jsondata
@@ -2146,7 +2156,8 @@
           l = (0, De.u)(t.store_item_id),
           o = l?.find((e) => e.milestone_id == Number.parseInt(t.gid)),
           c = i.A0.GetTokenWithFallback(o?.title),
-          m = `${r.TS.PARTNER_BASE_URL}admin/game/editbyappid/${t.store_item_id}?activetab=tab_specialsettings#seasonpass`;
+          m = `${r.TS.PARTNER_BASE_URL}admin/game/editbyappid/${t.store_item_id}?activetab=tab_specialsettings#seasonpass`,
+          d = `${r.TS.PARTNER_BASE_URL}apps/landing/${t.store_item_id}`;
         return n.createElement(Ie, {
           urlImage: s?.GetAssets().GetSmallCapsuleURL(),
           strTitle: (0, i.we)(
@@ -2155,9 +2166,18 @@
           ),
           strBody: (0, i.we)("#PartnerDeadline_SeasonPass_Desc", c || t.gid),
           rightCol: n.createElement(
-            y.z9,
-            { url: m },
-            (0, i.we)("#PartnerDeadline_SeasonPass_OpenEditor"),
+            n.Fragment,
+            null,
+            n.createElement(
+              y.z9,
+              { url: m },
+              (0, i.we)("#PartnerDeadline_SeasonPass_OpenEditor"),
+            ),
+            n.createElement(
+              y.z9,
+              { url: d },
+              (0, i.we)("#DiscountDashboard_VisitAppLanding_Tooltip"),
+            ),
           ),
         });
       }
@@ -2615,6 +2635,11 @@
                     n: 10,
                     br: Ye.qM.readString,
                     bw: Ye.gp.writeString,
+                  },
+                  send_email_on_creation: {
+                    n: 12,
+                    br: Ye.qM.readBool,
+                    bw: Ye.gp.writeBool,
                   },
                 },
               }),

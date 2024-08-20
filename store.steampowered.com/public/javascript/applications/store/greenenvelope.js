@@ -1692,29 +1692,34 @@
               uimode: o,
               onHide: l,
             } = e,
-            r = `${f.TS.STORE_BASE_URL}account/familymanagement?tab=requests`,
-            c = h(t),
-            s = v.b.InitFromAccountID(c.responder_steamid),
-            { data: u } = (0, b.js)(s.GetAccountID()),
-            _ = c.package_id > 0 ? c.package_id : c.bundle_id,
-            g = c.package_id > 0 ? 1 : 2,
-            [N] = (0, A.mZ)(_, g, {}),
-            E = !u || !N,
+            r = h(t),
+            { data: c } = (0, b.js)(r.responder_steamid),
+            s = r.package_id > 0 ? r.package_id : r.bundle_id,
+            u = r.package_id > 0 ? 1 : 2,
+            [_] = (0, A.mZ)(s, u, {
+              include_basic_info: !0,
+              include_assets: !0,
+            }),
+            g = _ ? `app/${_.GetAppID()}` : "",
+            N = `${f.TS.STORE_BASE_URL}${g}`,
+            E = !c || !_,
             y = (0, p.we)("#SteamNotifications_RequestedGameAddedTitle"),
-            S = (0, p.we)(
-              "#SteamNotifications_RequestedGameAddedBody",
-              N?.GetName() ?? "",
-            );
+            v = _
+              ? (0, p.we)(
+                  "#SteamNotifications_RequestedGameAddedBody",
+                  _.GetName() ?? "",
+                )
+              : "";
           return a.createElement(
             "a",
-            { href: r, onMouseDown: (e) => n(() => {}, t.item, e) },
+            { href: N, onMouseDown: (e) => n(() => {}, t.item, e) },
             a.createElement(ce, {
               title: y,
-              body: S,
+              body: v,
               bDataLoading: E,
-              logoUrl: u?.avatar_url_medium,
+              logoUrl: c?.avatar_url_medium,
               icon: a.createElement(d.Qte, null),
-              onActivate: () => n(() => window.location.assign(r), t.item),
+              onActivate: () => n(() => window.location.assign(N), t.item),
               location: i,
               eUIMode: o,
               timestamp: t.timestamp,

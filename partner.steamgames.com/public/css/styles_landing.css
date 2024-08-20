@@ -3133,6 +3133,10 @@ input#enablevac:disabled {
 	background-color: #886A08;
 }
 
+.cdkey_request.advanced_access {
+	background-color: #04513E;
+}
+
 .cdkey_request.dev_comp {
 	background-color: #600000;
 }
@@ -3155,6 +3159,10 @@ input#enablevac:disabled {
 
 .cdkey_request.beta_comp:hover {
 	background-color: #a58208;
+}
+
+.cdkey_request.advanced_access:hover {
+	background-color: #14614E;
 }
 
 .cdkey_request.dev_comp:hover {

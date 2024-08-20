@@ -403,7 +403,7 @@
     },
     73967: (e, t, r) => {
       "use strict";
-      r.d(t, { i: () => D, q: () => P });
+      r.d(t, { i: () => N, q: () => P });
       var a = r(23910),
         n = r(65946),
         i = r(90626),
@@ -1001,10 +1001,10 @@
         v = r(55263),
         T = r(7068),
         I = r(56330),
-        z = r(22797),
-        L = r(61859),
+        L = r(22797),
+        z = r(61859),
         R = r(30470);
-      function D(e) {
+      function N(e) {
         const { oEditableMessage: t } = e,
           [r] = (0, n.q3)(() => [t.GetStoreItemKey()]);
         return "app" != r.item_type
@@ -1013,9 +1013,9 @@
               { className: I.ErrorStylesWithIcon },
               "Error: Major Update does not support anything but targeting app",
             )
-          : i.createElement(N, { oEditableMessage: t, idKey: r });
+          : i.createElement(D, { oEditableMessage: t, idKey: r });
       }
-      function N(e) {
+      function D(e) {
         const { oEditableMessage: t, idKey: r } = e,
           [o, l] = (0, n.q3)(() => [
             t.GetUpdateEventClanAccountID(),
@@ -1031,8 +1031,8 @@
             appid: p || r.id,
             selectedEventGID: l,
             fnSetUpdateEvent: t.SetUpdateEvent,
-            label: (0, L.we)("#EventDropDown_MM_FeaturedEvent"),
-            tooltip: (0, L.we)("#EventDropDown_MM_FeaturedEvent_ttip"),
+            label: (0, z.we)("#EventDropDown_MM_FeaturedEvent"),
+            tooltip: (0, z.we)("#EventDropDown_MM_FeaturedEvent_ttip"),
             strUrlLearnMore:
               "https://confluence.valve.org/display/SteamBiz/Steam+Promotions+Assets+Guide#SteamPromotionsAssetsGuide-MarketingMessageforUpdates",
           }),
@@ -1112,9 +1112,9 @@
                         : "#EventDropDown_Hidden"
                       : "#EventDropDown_Visible";
                     return {
-                      label: (0, L.we)(
+                      label: (0, z.we)(
                         t,
-                        (0, L.TW)(e.rtime32_start_time),
+                        (0, z.TW)(e.rtime32_start_time),
                         e.event_name,
                       ),
                       data: e,
@@ -1133,7 +1133,7 @@
                   i.createElement(
                     "a",
                     { href: c, target: "_blank", style: { float: "right" } },
-                    (0, L.we)(
+                    (0, z.we)(
                       "#DiscountDashboard_DetailView_BatchDiscount_MaxDiscountDocumentationLink",
                     ),
                   ),
@@ -1148,10 +1148,16 @@
             : i.createElement(
                 "div",
                 { className: I.ErrorStylesWithIcon },
-                (0, L.we)("#EventDropDown_NoEventFound"),
+                (0, z.oW)(
+                  "#EventDropDown_NoEventFound",
+                  i.createElement("a", {
+                    href: `${R.TS.COMMUNITY_BASE_URL}ogg/${t}/partnerevents`,
+                    target: "_blank",
+                  }),
+                ),
               )
-          : i.createElement(z.t, {
-              string: (0, L.we)("#Loading"),
+          : i.createElement(L.t, {
+              string: (0, z.we)("#Loading"),
               size: "small",
               position: "center",
             });

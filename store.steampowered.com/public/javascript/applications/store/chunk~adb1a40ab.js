@@ -2548,6 +2548,7 @@
             let t = await fetch(this.m_Callbacks.GetCommitFileUploadURL(), {
               method: "POST",
               body: r,
+              credentials: "include",
             });
             return (
               e

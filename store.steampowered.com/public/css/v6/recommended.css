@@ -2041,6 +2041,23 @@ html.touch .similar_grid_item .buttons {
 	opacity: 0.5;
 }
 
+.review_box .vote_header .majority_deck {
+	float: right;
+	margin-right: 6px;
+	margin-top: 14px;
+	opacity: 0.5;
+	height: 14px;
+	width: auto;
+}
+
+.review_box .short_header .majority_deck {
+	float: right;
+	margin-right: 6px;
+	margin-top: 6px;
+	opacity: 0.5;
+	height: 13px;
+	width: auto;
+}
 
 .review_box .vote_header .hours {
 			font-family: "Motiva Sans", Sans-serif;

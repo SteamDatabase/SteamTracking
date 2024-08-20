@@ -1956,6 +1956,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   background-color: #682d2c;
   z-index: 1;
   box-shadow: 2px 2px 5px #000;
+  text-wrap: nowrap;
 }
 ._2Sg7W8jsvFcXVuQ7fbhSLJ > div,
 .Lc2PK-Vkkvr2TUS0TfCqq > div {
@@ -1994,6 +1995,7 @@ html.responsive.touch .SaleSectionCarousel .carousel__slider {
   background-color: #523d07;
   z-index: 1;
   box-shadow: 2px 2px 5px #000;
+  text-wrap: nowrap;
 }
 ._2lreMbIjEILzP1Eomy1QZM,
 ._1_-PibdcIVQzDZEP0_PeLV {

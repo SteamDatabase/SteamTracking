@@ -403,8 +403,12 @@
   filter: drop-shadow(0px 0px 3px #00000044);
 }
 ._3GP2Yb1IBiNxW79A0_H-Q1 image {
-  height: 32px;
-  width: 32px;
+  height: 36px;
+  width: 36px;
+}
+._2FfQ96ZQOySW735_57yKby image {
+  width: 36px;
+  height: 36px;
 }
 .UqMNRsT0TZjlt-9HTNH-- {
   position: absolute;
@@ -990,6 +994,7 @@
   background-color: #682d2c;
   z-index: 1;
   box-shadow: 2px 2px 5px #000;
+  text-wrap: nowrap;
 }
 ._2Sg7W8jsvFcXVuQ7fbhSLJ > div,
 .Lc2PK-Vkkvr2TUS0TfCqq > div {
@@ -1028,6 +1033,7 @@
   background-color: #523d07;
   z-index: 1;
   box-shadow: 2px 2px 5px #000;
+  text-wrap: nowrap;
 }
 ._2lreMbIjEILzP1Eomy1QZM,
 ._1_-PibdcIVQzDZEP0_PeLV {

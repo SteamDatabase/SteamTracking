@@ -106,6 +106,7 @@
         LoadingError: "_35a12Zg31sBh2Lj4ClSTRz",
         GamepadTimePickerRow: "_2EZzsNeqqWMVcuzawVZc56",
         TimezoneDisplay: "_1zgxnwJ3wM_SzElTI5DOyw",
+        FamilyGiftNotice: "_1B5Eew-T7ehFeKRYrle_-l",
       };
     },
     58671: (e) => {
@@ -405,7 +406,7 @@
       n.d(t, {
         AP: () => L,
         CM: () => D,
-        Ck: () => F,
+        Ck: () => R,
         EJ: () => A,
         F$: () => z,
         S0: () => x,
@@ -418,7 +419,7 @@
         lP: () => B,
         sI: () => O,
         tY: () => N,
-        uQ: () => R,
+        uQ: () => F,
         xz: () => G,
         zJ: () => P,
       });
@@ -608,7 +609,7 @@
           enabled: y.iA.logged_in || !(0, r.c2)(t),
         });
       }
-      function R(e) {
+      function F(e) {
         return (
           e?.cart_items.length &&
           e.cart_items.every(
@@ -619,7 +620,7 @@
           )
         );
       }
-      function F() {
+      function R() {
         const e = (0, h.KV)();
         return (0, f.I)({
           queryKey: ["shopping_cart", "relevant_coupons"],
@@ -721,12 +722,12 @@
     71879: (e, t, n) => {
       "use strict";
       n.d(t, {
-        RP: () => oe,
-        By: () => Ce,
-        IJ: () => fe,
-        E2: () => Ee,
-        kP: () => le,
-        z9: () => Ie,
+        RP: () => ce,
+        By: () => we,
+        IJ: () => Ee,
+        E2: () => Ie,
+        kP: () => me,
+        z9: () => ye,
       });
       var r = n(41515),
         a = n(90626),
@@ -1002,11 +1003,11 @@
           [r, o] = a.useState(null),
           l = t > 0;
         return a.createElement(
-          fe,
+          Ee,
           null,
-          a.createElement(Ce, null, (0, f.we)("#Cart_GiftDelivery_Label")),
+          a.createElement(we, null, (0, f.we)("#Cart_GiftDelivery_Label")),
           a.createElement(
-            Ee,
+            Ie,
             null,
             a.createElement(i.Od, {
               controlled: !0,
@@ -1016,7 +1017,7 @@
             }),
           ),
           a.createElement(
-            Ee,
+            Ie,
             null,
             a.createElement(i.Od, {
               controlled: !0,
@@ -1120,7 +1121,7 @@
             i.Xp,
             { className: b().GamepadTimePickerRow },
             I && a.createElement(M, { month: c, setMonth: m }),
-            a.createElement(R, { year: p, month: c, day: u, setDay: d }),
+            a.createElement(F, { year: p, month: c, day: u, setDay: d }),
             !I && a.createElement(M, { month: c, setMonth: m }),
             a.createElement(G, { year: p, setYear: _ }),
           ),
@@ -1131,7 +1132,7 @@
               value: g,
               onChange: (e) => h(e.currentTarget.value),
             }),
-            o && a.createElement(F, { strAMPM: E, setAMPM: C }),
+            o && a.createElement(R, { strAMPM: E, setAMPM: C }),
             a.createElement(
               i.VP,
               { className: b().TimezoneDisplay },
@@ -1176,7 +1177,7 @@
           rgOptions: r,
         });
       }
-      function R(e) {
+      function F(e) {
         const { year: t, month: n, day: r, setDay: s } = e,
           o = a.useMemo(() => {
             const e = new Date(t, n + 1, 0).getDate(),
@@ -1194,7 +1195,7 @@
           rgOptions: o,
         });
       }
-      function F(e) {
+      function R(e) {
         const { strAMPM: t, setAMPM: n } = e,
           r = a.useMemo(() => {
             const e = new Intl.DateTimeFormat(f.pf.GetPreferredLocales(), {
@@ -1467,17 +1468,19 @@
           )
         );
       }
-      function oe(e) {
+      var oe = n(14860),
+        le = n(29233);
+      function ce(e) {
         const { giftInfo: t, onChange: n } = e,
           r = (0, x.js)(t.accountid_giftee);
         return r.data
           ? a.createElement(
-              ge,
+              he,
               null,
               a.createElement(
-                he,
+                Ce,
                 null,
-                a.createElement(Ce, null, (0, f.we)("#Cart_PurchaseFor_Label")),
+                a.createElement(we, null, (0, f.we)("#Cart_PurchaseFor_Label")),
                 a.createElement(
                   "a",
                   { href: r.data.GetCommunityProfileURL(), target: "_blank" },
@@ -1489,26 +1492,30 @@
                 ),
                 r.data.m_strPlayerName,
               ),
-              a.createElement(de, { giftInfo: t, onChange: n }),
+              a.createElement(_e, { giftInfo: t, onChange: n }),
             )
           : null;
       }
-      function le(e) {
+      function me(e) {
         const { lineItem: t } = e,
           n = t.gift_info?.accountid_giftee;
         return a.createElement(
-          ge,
+          he,
           null,
-          !n && a.createElement(ce, { ...e }),
-          n && a.createElement(me, { ...e }),
-          n && a.createElement(ue, { lineItem: t }),
+          !n && a.createElement(ue, { ...e }),
+          n && a.createElement(de, { ...e }),
+          n && a.createElement(pe, { lineItem: t }),
+          n &&
+            a.createElement(Se, {
+              gifteeAccountID: t.gift_info?.accountid_giftee,
+            }),
         );
       }
-      function ce(e) {
+      function ue(e) {
         const { lineItem: t, storeItem: n } = e,
           [r, s] = a.useState(!1);
         return a.createElement(
-          fe,
+          Ee,
           null,
           a.createElement(
             i.jn,
@@ -1524,20 +1531,20 @@
             }),
         );
       }
-      function me(e) {
+      function de(e) {
         const { lineItem: t, storeItem: n } = e,
           [r, i] = a.useState(!1),
           s = (0, x.js)(t.gift_info.accountid_giftee);
         return s.data
           ? a.createElement(
-              fe,
+              Ee,
               null,
               a.createElement("div", { className: b().GiftFormDivider }),
               a.createElement(
-                he,
+                Ce,
                 null,
                 a.createElement(
-                  Ce,
+                  we,
                   null,
                   (0, f.we)("#Cart_GiftRecipient_Label"),
                 ),
@@ -1552,7 +1559,7 @@
                 ),
                 s.data.m_strPlayerName,
                 a.createElement(
-                  Ie,
+                  ye,
                   { onClick: () => i(!0) },
                   "(",
                   (0, f.we)("#Cart_Edit"),
@@ -1569,7 +1576,7 @@
             )
           : null;
       }
-      function ue(e) {
+      function pe(e) {
         const { lineItem: t } = e,
           [n, i] = a.useState(t.gift_info?.time_scheduled_send),
           s = a.useRef(n),
@@ -1603,7 +1610,7 @@
               (c.current = o),
               (d.current = m));
           }, [o, m, n, g, t.gift_info?.accountid_giftee]),
-          a.createElement(_e, {
+          a.createElement(fe, {
             id: t.line_item_id,
             message: o,
             onMessageChange: l,
@@ -1614,9 +1621,9 @@
           })
         );
       }
-      function de(e) {
+      function _e(e) {
         const { giftInfo: t, onChange: n } = e;
-        return a.createElement(_e, {
+        return a.createElement(fe, {
           id: "cart",
           message: t.gift_message?.message || "",
           onMessageChange: (e) =>
@@ -1628,8 +1635,8 @@
           onScheduledTimeChange: (e) => n({ ...t, time_scheduled_send: e }),
         });
       }
-      const pe = 160;
-      function _e(e) {
+      const ge = 160;
+      function fe(e) {
         const {
             id: t,
             message: n,
@@ -1640,17 +1647,17 @@
             onScheduledTimeChange: c,
             onBlur: m,
           } = e,
-          u = pe - n.length,
+          u = ge - n.length,
           [d, p] = a.useState(!1),
           { data: _ } = (0, x.js)(z.iA.accountid);
         return a.createElement(
           a.Fragment,
           null,
           a.createElement(
-            fe,
+            Ee,
             null,
             a.createElement(
-              Ce,
+              we,
               null,
               (0, f.PP)(
                 "#Cart_GiftDelivery_Body",
@@ -1670,12 +1677,12 @@
             }),
           ),
           a.createElement(
-            fe,
+            Ee,
             null,
             a.createElement(
               "div",
               { className: b().GiftFormRecipient },
-              a.createElement(Ce, null, (0, f.we)("#Cart_GiftDelivery_From")),
+              a.createElement(we, null, (0, f.we)("#Cart_GiftDelivery_From")),
               a.createElement(O.i8, {
                 className: b().FriendAvatar,
                 statusPosition: "right",
@@ -1685,7 +1692,7 @@
               _?.m_strPlayerName || "",
               !d &&
                 a.createElement(
-                  Ie,
+                  ye,
                   { onClick: () => p(!0) },
                   "(",
                   (0, f.we)("#Cart_GiftDelivery_AddSignature"),
@@ -1695,10 +1702,10 @@
           ),
           d &&
             a.createElement(
-              fe,
+              Ee,
               null,
               a.createElement(
-                Ce,
+                we,
                 null,
                 (0, f.we)("#Cart_GiftDelivery_Signature"),
               ),
@@ -1707,53 +1714,72 @@
                 className: b().GiftSignatureInput,
                 onChange: (e) => o(e.target.value),
                 onBlur: m,
-                maxChars: pe,
+                maxChars: ge,
               }),
             ),
           a.createElement(A, { scheduledTime: l, onScheduledTimeChange: c }),
         );
       }
-      function ge(e) {
+      function he(e) {
         return a.createElement(
           "div",
           { className: b().GiftFormCtn },
           e.children,
         );
       }
-      function fe(e) {
+      function Ee(e) {
         return a.createElement(
           "div",
           { className: b().GiftFormSection },
           e.children,
         );
       }
-      function he(e) {
+      function Ce(e) {
         return a.createElement(
           "div",
           { className: b().GiftFormRecipient },
           e.children,
         );
       }
-      function Ee(e) {
+      function Ie(e) {
         return a.createElement(
           "div",
           { className: b().GiftRadioRow },
           e.children,
         );
       }
-      function Ce(e) {
+      function we(e) {
         return a.createElement(
           "div",
           { className: b().FormTextLabel },
           e.children,
         );
       }
-      function Ie(e) {
+      function ye(e) {
         return a.createElement(k.Z, {
           onActivate: e.onClick,
           children: e.children,
           className: b().LinkButton,
         });
+      }
+      function Se(e) {
+        const { gifteeAccountID: t } = e,
+          { isLoading: n, data: r } = (0, oe.vo)(!0);
+        if (n || r.is_not_member_of_any_group() || 2 === r.role()) return null;
+        const i = le.b2
+          .InitFromAccountID(t, z.TS.EUNIVERSE)
+          .ConvertTo64BitString();
+        return r
+          .family_group()
+          .members()
+          .some((e) => e.steamid() === i && 2 === e.role())
+          ? a.createElement(
+              "div",
+              { className: b().FamilyGiftNotice },
+              " ",
+              (0, f.we)("#Cart_FamilyGift_Notice"),
+            )
+          : null;
       }
     },
     57503: (e, t, n) => {
@@ -2069,8 +2095,8 @@
         B = n(82477),
         G = n(78327),
         M = n(89070),
-        R = n(71879),
-        F = n(55263),
+        F = n(71879),
+        R = n(55263),
         P = n(72237),
         k = n(62792),
         O = n(22797),
@@ -2140,7 +2166,7 @@
             c.createElement(
               "div",
               { className: W.ModifyLink },
-              c.createElement(R.z9, { onClick: r }, a),
+              c.createElement(F.z9, { onClick: r }, a),
             ),
           ),
         );
@@ -2268,8 +2294,8 @@
       const se = {
         1: function (e) {
           const { item: t, validatedItem: n } = e,
-            [r, a] = (0, F.Gg)(t.packageid, {}),
-            [i, s] = (0, F.mZ)(t.packageid, 1, l.lP),
+            [r, a] = (0, R.Gg)(t.packageid, {}),
+            [i, s] = (0, R.mZ)(t.packageid, 1, l.lP),
             o = (i && !i.BIsVisible()) || 2 === s || 2 === a,
             m = r?.GetSelfPurchaseOption();
           return o || (r && !m)
@@ -2290,7 +2316,7 @@
         },
         2: function (e) {
           const { item: t, validatedItem: n } = e,
-            [r, a] = (0, F.G6)(t.bundleid, 2, l.xz);
+            [r, a] = (0, R.G6)(t.bundleid, 2, l.xz);
           if ((r && !r.BIsVisible()) || 2 === a)
             return c.createElement(ue, {
               lineItemID: t.line_item_id,
@@ -2337,7 +2363,7 @@
             c.createElement("div", { className: re().Muted }, n.message),
           ),
           c.createElement(
-            R.z9,
+            F.z9,
             { onClick: () => r.mutate() },
             (0, m.we)("#Cart_Remove"),
           ),
@@ -2533,7 +2559,7 @@
                   }),
                 ),
               ),
-              _ && c.createElement(R.kP, { storeItem: t, lineItem: r }),
+              _ && c.createElement(F.kP, { storeItem: t, lineItem: r }),
             ),
             g &&
               c.createElement(Z, {
@@ -2758,7 +2784,7 @@
       }
       function ve(e) {
         const { appid: t, last: n } = e,
-          [r] = (0, F.t7)(t, { include_basic_info: !0 });
+          [r] = (0, R.t7)(t, { include_basic_info: !0 });
         return r
           ? c.createElement(
               z.j,
@@ -2923,7 +2949,7 @@
       }
       function Be(e) {
         const { appid: t } = e,
-          [n] = (0, F.t7)(t, {});
+          [n] = (0, R.t7)(t, {});
         return c.createElement(
           z.j,
           { type: "app", id: t },
@@ -2939,9 +2965,9 @@
       }
       function Me(e) {
         const { children: t } = e;
-        return c.createElement(Re, null, t);
+        return c.createElement(Fe, null, t);
       }
-      function Re(e) {
+      function Fe(e) {
         const { children: t } = e,
           n = (0, l.UI)(),
           r = (0, l.Ck)(),
@@ -2985,7 +3011,7 @@
                   c.createElement(
                     M.x,
                     null,
-                    c.createElement(R.RP, { giftInfo: s, onChange: o }),
+                    c.createElement(F.RP, { giftInfo: s, onChange: o }),
                   ),
                 ),
               c.createElement(
@@ -3002,7 +3028,7 @@
                 c.createElement(
                   "div",
                   { className: d().ResponsiveShoppingCartSummary },
-                  c.createElement(Fe, {
+                  c.createElement(Re, {
                     bCartIncludesGifts: u,
                     strEstimatedTotal:
                       p?.estimated_totals?.subtotal.formatted_amount,
@@ -3018,7 +3044,7 @@
                   m?.length <= 2 && d().SmallCart,
                 ),
               },
-              c.createElement(Fe, {
+              c.createElement(Re, {
                 bCartIncludesGifts: u,
                 strEstimatedTotal:
                   p?.estimated_totals?.subtotal.formatted_amount,
@@ -3027,7 +3053,7 @@
           ),
         );
       }
-      const Fe = (0, D.Nr)(function (e) {
+      const Re = (0, D.Nr)(function (e) {
         const { strEstimatedTotal: t, bCartIncludesGifts: n } = e,
           r = (0, l.UI)(),
           a = (0, l.g7)(),
@@ -3387,8 +3413,8 @@
         B = n(62792),
         G = n(54171),
         M = n(46416),
-        R = n(52038),
-        F = n(56545),
+        F = n(52038),
+        R = n(56545),
         P = n(15161),
         k = n(80613),
         O = n(89068);
@@ -3725,7 +3751,7 @@
         e.GetItemsToFeature = function (e, t) {
           return e.SendMsg(
             "StoreMarketing.GetItemsToFeature#1",
-            (0, F.I8)(z, t),
+            (0, R.I8)(z, t),
             U,
             { bConstMethod: !0, ePrivilege: 2, eWebAPIKeyRequirement: 1 },
           );
@@ -3740,7 +3766,7 @@
           return (0, Z.I)({
             queryKey: ["ItemsToFeature", e],
             queryFn: async () => {
-              const n = F.w.Init(z);
+              const n = R.w.Init(z);
               (0, Y.rV)(n),
                 (0, Y.Bn)(n, t),
                 n.Body().set_include_dailydeals(!0),
@@ -3864,7 +3890,7 @@
               { feature: `upsell-${r}` },
               a.createElement(
                 re,
-                { className: (0, R.A)(K.Specials) },
+                { className: (0, F.A)(K.Specials) },
                 t
                   ?.filter(({ item: e }) => !!e.assets?.header)
                   .slice(0, 3)
@@ -3892,7 +3918,7 @@
           ? null
           : a.createElement(
               re,
-              { className: (0, R.A)(K.DailyDeals, !n && K.Loading) },
+              { className: (0, F.A)(K.DailyDeals, !n && K.Loading) },
               t
                 ?.slice(0, 2)
                 .map((e) =>
@@ -3916,7 +3942,7 @@
           ? null
           : a.createElement(
               re,
-              { className: (0, R.A)(K.Spotlights, !n && K.Loading) },
+              { className: (0, F.A)(K.Spotlights, !n && K.Loading) },
               r.map((e) =>
                 a.createElement(G.kv, {
                   key: e.item_id ? (0, B.wD)(e.item_id) : e.spotlight_title,
@@ -3932,7 +3958,7 @@
           {
             "flow-children": "row",
             navEntryPreferPosition: D.iU.MAINTAIN_X,
-            className: (0, R.A)(K.UpsellRow, t),
+            className: (0, F.A)(K.UpsellRow, t),
           },
           n,
         );

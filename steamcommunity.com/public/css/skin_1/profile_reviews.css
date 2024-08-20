@@ -151,6 +151,13 @@ background: -webkit-linear-gradient( 30deg, rgba(97,100,101,0.3) 5%,rgba(226,244
 	opacity: 0.5;
 }
 
+.review_box .vote_header .majority_deck {
+	float: right;
+	margin-right: 5px;
+	margin-top: 15px;
+	opacity: 0.5;
+}
+
 .review_box .content {
 	margin: 0 8px;
 			font-family: "Motiva Sans", Sans-serif;

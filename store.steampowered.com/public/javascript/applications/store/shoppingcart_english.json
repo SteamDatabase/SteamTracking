@@ -26,6 +26,7 @@
     "Cart_GiftDelivery_Signature": "Your signature:",
     "Cart_GiftDelivery_AddSignature": "Add custom signature",
     "Cart_GiftDelivery_Body": "Gift message (160 character limit, %1$s remaining):",
+    "Cart_FamilyGift_Notice": "Gifts sent to children in your Steam Family will be automatically added to their account and their allowed games.",
     "Cart_GiftRecipientModal_Title": "Select Gift Recipient",
     "Cart_GiftRecipientModal_Save": "Save",
     "Cart_GiftRecipientModal_Placeholder": "Search by friend's name...",
