@@ -5479,7 +5479,7 @@
     "ControllerBinding_GyroTo2DConversionStyle": "3DOF to 2D Conversion Style",
     "ControllerBinding_GyroTo2DConversionStyle_Description": "Choose the style of conversion for Gyro rotation to 2D output.",
     "ControllerBinding_GyroDeflectionUseGravity": "Auto World Tilt",
-    "ControllerBinding_GyroDeflectionUseGravity_Description": "On: The virtual stick's Y axis center point comes from the controller's current tilt angle whenever the gyro becomes active due to the gyro button. Off: Set a fixed tilt angle to represent the virtaul stick's Y center point.",
+    "ControllerBinding_GyroDeflectionUseGravity_Description": "On: The virtual stick's Y axis center point comes from the controller's current tilt angle whenever the gyro becomes active due to the gyro button. Off: Set a fixed tilt angle to represent the virtual stick's Y center point.",
     "ControllerBinding_GyroDeflectionTiltAngle": "World Tilt Offset",
     "ControllerBinding_GyroDeflectionTiltAngle_Description": "When activating the gyro, what should the tilt offset be? 0° = Pointing at the horizon - Y output will be zero when the controller is flat. 90° The Y axis will be zero when the controller is vertical. 15° is ideal for stand alone controllers, while 85° is recommended for handheld.",
     "ControllerBinding_GyroSampleAngleOffsetX": "Primary Axis Offset",

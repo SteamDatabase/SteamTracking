@@ -99,7 +99,6 @@
   what():  
  !"#$%&'()))*+,-./0123456789:;<=>?@ABBCDEFGHIGJKLLBMBBNOPQRSTUVWXYZ[\]^G___________________________________________________`___________________________________________________________________________________________________________________________________________________________________abccccccccdeefghijklmnopqrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstyzzzzzzzzzzzzzzzz{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{__|}~
  !"#$%&'()*+,-./0123
- !"#$%&'()*+,-./01230
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
@@ -17318,7 +17317,7 @@ CCMInterface::SendHelloToCM()
 CCMInterface::SendLoginCredentialsToCM()
 CCMInterface::SetSteamID( %s )
 CCMInterface::ValidateStatics
-CCMInterface::YieldingConnect -- No CM NetFilter addresses! Failing connection attempt
+CCMInterface::YieldingConnect -- Chose a netfilter connection type, but no netfilter CMs.  Forcing WebSocket.
 CCMInterface::YieldingConnect -- No CM WebSocket addresses! Failing connection attempt
 CCMInterface::YieldingConnect -- calling ISteamDirectory/GetCMListForConnect web api
 CCMInterface::YieldingConnect -- error result from ISteamDirectory/GetCMList (result = %d)
@@ -32768,6 +32767,7 @@ SuspendWithFlags
 Suspended
 Suspended workshop downloads
 Suspending
+Suspending, suppressing status update
 Suspension not allowed here
 Swahili
 Swap
@@ -47692,7 +47692,6 @@ m_VecConnectToken
 m_VecNetAdrBadNetFilterCMs
 m_VecNetAdrCMsThatFailed
 m_VecNetAdrNetFilterCMs
-m_VecNetAdrNetFilterCMs.Count()
 m_VecNetAdrPreferredOrder
 m_VecPFrameFunction[iFrameType]
 m_VecPVecFuncCallReturnBuffer
@@ -54581,7 +54580,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Aug 15 2024 00:57:40
+steam Aug 19 2024 22:40:31
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
