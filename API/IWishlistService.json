@@ -2,17 +2,69 @@
     "name": "IWishlistService",
     "methods": [
         {
+            "name": "GetWishlistSortedFiltered",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Get a user's paginated wishlist applying various sorts and filters",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false
+                },
+                {
+                    "name": "context",
+                    "type": "{message}",
+                    "optional": false
+                },
+                {
+                    "name": "data_request",
+                    "type": "{message}",
+                    "optional": false,
+                    "description": "If passed, item data will be returned"
+                },
+                {
+                    "name": "sort_order",
+                    "type": "{enum}",
+                    "optional": true
+                },
+                {
+                    "name": "filters",
+                    "type": "{message}",
+                    "optional": false
+                },
+                {
+                    "name": "start_index",
+                    "type": "int32",
+                    "optional": true,
+                    "description": "Data in this range will be filled in with StoreBrowse data"
+                },
+                {
+                    "name": "page_size",
+                    "type": "int32",
+                    "optional": true
+                }
+            ]
+        },
+        {
+            "name": "GetWishlist",
+            "version": 1,
+            "httpmethod": "GET",
+            "description": "Get a user's wishlist.",
+            "parameters": [
+                {
+                    "name": "steamid",
+                    "type": "uint64",
+                    "optional": false
+                }
+            ]
+        },
+        {
             "name": "GetWishlistItemCount",
             "version": 1,
             "httpmethod": "GET",
             "description": "Get the number of items on a user's wishlist.",
             "parameters": [
-                {
-                    "name": "key",
-                    "type": "string",
-                    "optional": false,
-                    "description": "Access key"
-                },
                 {
                     "name": "steamid",
                     "type": "uint64",
