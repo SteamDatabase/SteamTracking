@@ -17,7 +17,7 @@ HelpWizard = {
 
 				if ( wizard_url.toLowerCase().startsWith('login') )
 		{
-			window.location = "https://help.steampowered.com/wizard/" + wizard_url;
+			window.location = "https://help.steampowered.com/" + wizard_url;
 			return;
 		}
 
@@ -281,15 +281,18 @@ HelpWizard = {
 		$J( '#page_content' ).addClass( 'page_error' );
 	},
 
-	PromptLogin: function()
+	PromptLogin: function( need_password )
 	{
+		var strQuery = '?';
+		if ( need_password === true )
+			strQuery += 'need_password=1&';
 		var redirect = window.location.pathname;
 		if ( window.location.search )
 			redirect += window.location.search;
 		if ( window.location.hash && window.location.hash.length > 2 )
 			redirect += '#' + window.location.hash;
 
-		HelpWizard.LoadPageFromHash( false, 'Login/?redir=' + encodeURIComponent( redirect ) );
+		HelpWizard.LoadPageFromHash( false, 'login' + strQuery + 'redir=' + encodeURIComponent( redirect ) );
 	},
 
 	SubmitRefundRequest: function( help_issue, appid, transid, gid_line_item, refund_to_wallet, spoofing ) {
@@ -331,6 +334,10 @@ HelpWizard = {
 		} ).fail( function( jqxhr ) {
 			$J('#help_refund_request_dialog').html( 'failed to load' );
 		} ).done( function( data ) {
+			if ( data.need_password )
+			{
+								HelpWizard.PromptLogin( true );
+			}
 
 			if ( data.ref )
 			{
@@ -680,7 +687,7 @@ HelpWizard = {
 			}
 			else if ( data.need_login )
 			{
-				HelpWizard.PromptLogin();
+				HelpWizard.PromptLogin( true );
 			}
 			else
 			{
