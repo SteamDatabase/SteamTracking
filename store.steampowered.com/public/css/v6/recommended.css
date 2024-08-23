@@ -2971,7 +2971,7 @@ div.graph_toggle_icon.down {
 }
 
 .user_reviews_display_uninformative {
-	min-width: 300px;;
+	min-width: 300px;
 	white-space: normal;
 	padding-top: 10px;
 	border-top: 1px solid #4582a5;
@@ -2994,6 +2994,7 @@ div.graph_toggle_icon.down {
 	border: 2px solid #fff;
 	border-radius: 0px;
 	cursor: pointer;
+	margin-bottom: 20px;
 }
 
 #app_reviews_playtime_slider .ui-slider-range {
@@ -3017,6 +3018,13 @@ div.graph_toggle_icon.down {
 	background: #4582a5;
 	height: 4px;
 	margin-top: -2px;
+}
+
+.user_reviews_playtime_type {
+	min-width: 300px;
+	white-space: normal;
+	padding-top: 10px;
+	border-top: 1px solid #4582a5;
 }
 
 #app_reviews_hash.graph_hidden #reviews_date_range_menu {

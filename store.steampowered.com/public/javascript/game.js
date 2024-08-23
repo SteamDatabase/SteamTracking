@@ -657,6 +657,7 @@ function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
 	var summaryNumReviews = $J( "#review_summary_num_reviews" ).val();
 	var playtimeFilterMin = $J( "#app_reviews_playtime_range_min" ).val();
 	var playtimeFilterMax = $J( "#app_reviews_playtime_range_max" ).val();
+	var playtimeType = $J( 'input[name="review_playtime_type"]:checked' ).val();
 
 	var filteredReviewScore = $J( "#user_reviews_filter_score" );
 	filteredReviewScore.removeClass( "visible" );
@@ -675,6 +676,7 @@ function LoadMoreReviews( appid, cursor, dayRange, startDate, endDate, context )
 		'purchase_type' : purchaseType,
 		'playtime_filter_min' : playtimeFilterMin,
 		'playtime_filter_max' : playtimeFilterMax,
+		'playtime_type' : playtimeType,
 		'filter_offtopic_activity' : filterOfftopicActivity,
 		'summary_num_positive_reviews' : summaryNumPositiveReviews,
 		'summary_num_reviews' : summaryNumReviews
@@ -1559,9 +1561,9 @@ function UpdateActiveFilters()
 		$J( "#reviews_filter_offtopic_activity" ).hide();
 	}
 
+	// playtime
 	var playtimeFilterMin = $J( "#app_reviews_playtime_range_min" ).val();
 	var playtimeFilterMax = $J( "#app_reviews_playtime_range_max" ).val();
-
 	if ( playtimeFilterMin != 0 || playtimeFilterMax != 0 )
 	{
 		var elemPlaytimeDesc = $J( "#review_playtime_preset_text" );
@@ -1587,6 +1589,15 @@ function UpdateActiveFilters()
 	else
 	{
 		$J( "#reviews_filter_playtime" ).hide();
+	}
+
+	if ( $J( "#review_playtime_type_all" ).attr( "checked" ) )
+	{
+		$J( "#reviews_filter_deck_playtime" ).hide();
+	}
+	else
+	{
+		$J( "#reviews_filter_deck_playtime" ).show();
 	}
 
 	$J( "#reviews_filter_title" ).toggle( bAnyActiveFilters );
@@ -1655,6 +1666,12 @@ function ClearOfftopicReviewActivityFilter()
 function ClearReviewPlaytimeFilter()
 {
 	$J('#review_playtime_preset_0').attr( 'checked', true );
+	SelectPlaytimeFilterPreset( 0 );
+}
+
+function ClearDeckPlaytimeFilter()
+{
+	$J('#review_playtime_type_all').attr( 'checked', true );
 	SelectPlaytimeFilterPreset( 0 );
 }
 
