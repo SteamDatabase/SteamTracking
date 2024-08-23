@@ -351,6 +351,8 @@ message CCloud_AppLaunchIntent_Request {
 	optional uint64 client_id = 2;
 	optional string machine_name = 3;
 	optional bool ignore_pending_operations = 4;
+	optional int32 os_type = 5;
+	optional int32 device_type = 6;
 }
 
 message CCloud_AppLaunchIntent_Response {

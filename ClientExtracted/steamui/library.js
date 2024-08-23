@@ -1,4 +1,4 @@
-var CLSTAMP = "9123380";
+var CLSTAMP = "9129835";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -8864,9 +8864,9 @@ var CLSTAMP = "9123380";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Aug 19 2024 : 16:32:29",
-                BUILD_TIME_UTC: "Aug 19 2024 : 23:32:29",
-                BUILD_RTIME_UTC: 1724110349,
+                BUILD_TIME_LOCAL: "Aug 21 2024 : 17:20:03",
+                BUILD_TIME_UTC: "Aug 22 2024 : 00:20:03",
+                BUILD_RTIME_UTC: 1724286003,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -20257,44 +20257,48 @@ var CLSTAMP = "9123380";
           const {
               label: t,
               tooltip: r,
-              disabled: n,
-              strClassName: i,
-              dropDownControlRef: l,
-              description: a,
-              layout: s,
-              bottomSeparator: c,
-              highlightOnFocus: C,
-              autoFocus: u,
-              indentLevel: m,
-              childrenContainerWidth: d = "fixed",
-              onContextMenu: h,
-              onActivate: p,
-              ...g
+              explainer: n,
+              explainerTitle: i,
+              disabled: l,
+              strClassName: a,
+              dropDownControlRef: s,
+              description: c,
+              layout: C,
+              bottomSeparator: u,
+              highlightOnFocus: m,
+              autoFocus: d,
+              indentLevel: h,
+              childrenContainerWidth: p = "fixed",
+              onContextMenu: g,
+              onActivate: f,
+              ..._
             } = e,
             {
-              actionDescriptions: f,
-              gamepadEvents: _,
-              props: w,
-            } = (0, Le.C7)(g);
+              actionDescriptions: w,
+              gamepadEvents: M,
+              props: L,
+            } = (0, Le.C7)(_);
           return o.createElement(
             oe,
             {
-              className: i,
-              disabled: n,
+              className: a,
+              disabled: l,
               label: t,
-              onActivate: p,
-              description: a ?? r,
-              childrenLayout: s ?? "inline",
-              childrenContainerWidth: d,
-              bottomSeparator: c,
-              highlightOnFocus: C,
-              autoFocus: u,
-              indentLevel: m,
-              onContextMenu: h,
-              actionDescriptionMap: f,
-              ..._,
+              onActivate: f,
+              description: c ?? r,
+              childrenLayout: C ?? "inline",
+              childrenContainerWidth: p,
+              bottomSeparator: u,
+              highlightOnFocus: m,
+              autoFocus: d,
+              indentLevel: h,
+              onContextMenu: g,
+              actionDescriptionMap: w,
+              explainer: n,
+              explainerTitle: i,
+              ...M,
             },
-            o.createElement(G, { menuLabel: t, disabled: n, ...w, ref: l }),
+            o.createElement(G, { menuLabel: t, disabled: l, ...L, ref: s }),
           );
         }
         function ve(e, t) {
@@ -50268,9 +50272,9 @@ var CLSTAMP = "9123380";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Aug 19 2024 : 16:32:29",
-                    BUILD_TIME_UTC: "Aug 19 2024 : 23:32:29",
-                    BUILD_RTIME_UTC: 1724110349,
+                    BUILD_TIME_LOCAL: "Aug 21 2024 : 17:20:03",
+                    BUILD_TIME_UTC: "Aug 22 2024 : 00:20:03",
+                    BUILD_RTIME_UTC: 1724286003,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -50863,7 +50867,7 @@ var CLSTAMP = "9123380";
         2611: "a2afb4fc0dc2e7577bc2",
         2640: "12cb297e57ad9e12af7a",
         2646: "d2ff040eaa378fe20b07",
-        2664: "a5d834fbb3191ff5ff19",
+        2664: "9a4aaefe293c2149ca19",
         2761: "6dd5fabd28ee4a8ef54c",
         2783: "a0153faa8ea3677e0391",
         2862: "451203b2053101851833",
@@ -50877,7 +50881,7 @@ var CLSTAMP = "9123380";
         3180: "8e8aa27ac0cac69a5efc",
         3350: "52d5ab64230a17007d7a",
         3366: "94b027e82a96ab73ffe0",
-        3569: "728db1b2e73cdf70b21e",
+        3569: "d83ae1bf05958936ce93",
         3583: "978cf57fa27bcf5cb29b",
         3594: "8224db72aa82304ea97b",
         3714: "f85176b5e935dfd11403",
@@ -50919,7 +50923,7 @@ var CLSTAMP = "9123380";
         7316: "fe393e33ce0d16906ea8",
         7376: "154be9f735d12b6871f7",
         7442: "0761ee0d68f096b06a59",
-        7462: "7f1b1149c16f8aee7e5e",
+        7462: "9740c55b13403a71d6ce",
         7533: "97dd6db76a5a7597bdb0",
         7569: "f64bcfcefa6dfc4adcf9",
         7653: "971fbf7bfc5c65803ed1",
@@ -50957,7 +50961,7 @@ var CLSTAMP = "9123380";
         9418: "fd07eeefd19a66aed327",
         9462: "89227ab1a3d278d803ec",
         9711: "925ea00fb25d86de2695",
-        9858: "a5e3fe00bc6500347ebb",
+        9858: "66064958bb47aa850183",
         9869: "7f29b83b165e41a2265b",
         9887: "8cfcae473018942b8bd6",
       }[e]),

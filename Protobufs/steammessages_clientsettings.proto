@@ -40,6 +40,7 @@ enum ESettingProfileMode {
 	k_ESettingProfileMode_None = 0;
 	k_ESettingProfileMode_PerGame = 1;
 	k_ESettingProfileMode_PerGamePerDisplay = 2;
+	k_ESettingProfileMode_PerDisplay = 3;
 }
 
 enum EGRMode {
@@ -207,6 +208,8 @@ message CMsgClientSettings {
 	optional bool force_deck_perf_tab = 20004 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Developer/ForceDeckPerfTab"];
 	optional bool force_fake_mandatory_update = 20005 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Developer/FakeMandatoryUpdate"];
 	optional bool hdr_compat_testing = 20006 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Developer/HDRCompatTesting"];
+	optional bool developer_mode_enabled = 20007 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Developer/DevModeEnabled"];
+	optional bool show_advanced_update_channels = 20008 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "Developer/ShowAdvancedUpdateChannels"];
 	optional .EHDRVisualization gamescope_hdr_visualization = 21001 [default = k_EHDRVisualization_None, (setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/HDRVisualization2"];
 	optional int32 gamescope_app_target_framerate = 21002 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/AppTargetFrameRate", (setting_default_int) = 0, (setting_profile_mode) = k_ESettingProfileMode_PerGamePerDisplay];
 	optional bool gamescope_enable_app_target_framerate = 21003 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\GamescopeEnableAppTargetRefreshRate2", (setting_default_bool) = true];
@@ -218,6 +221,7 @@ message CMsgClientSettings {
 	optional bool gamescope_allow_tearing = 21009 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/AllowTearing", (setting_default_bool) = false, (setting_profile_mode) = k_ESettingProfileMode_PerGame];
 	optional bool gamescope_composite_debug = 21010 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/CompositeDebug", (setting_default_bool) = false];
 	optional bool gamescope_force_composite = 21011 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/ForceComposite", (setting_default_bool) = false];
+	optional string gamescope_game_resolution_global = 21012 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Gamescope/GameResolutionGlobal", (setting_default_string) = "Default"];
 	optional int32 steamos_status_led_brightness = 22000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "SteamOS/StatusLEDBrightness", (setting_default_int) = 100];
 	optional bool steamos_tdp_limit_enabled = 22001 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/TDPLimitEnabled", (setting_default_bool) = false, (setting_profile_mode) = k_ESettingProfileMode_PerGame];
 	optional int32 steamos_tdp_limit = 22002 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "SteamOS/TDPLimit", (setting_default_int) = 0, (setting_profile_mode) = k_ESettingProfileMode_PerGame];

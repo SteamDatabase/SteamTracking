@@ -190,6 +190,8 @@ message CCloud_PendingRemoteOperation {
 	optional string machine_name = 2;
 	optional uint64 client_id = 3;
 	optional uint32 time_last_updated = 4;
+	optional int32 os_type = 5;
+	optional int32 device_type = 6;
 }
 
 message CMsgCloudPendingRemoteOperations {

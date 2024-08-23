@@ -10,7 +10,6 @@ message CGameRecordingFile {
 	repeated .CGameRecordingPostGameSummary postgame_events = 2;
 	repeated string temporary_clips = 3;
 	repeated .CGameRecordingTag tags = 4;
-	repeated .CGameRecordingPhase phases = 5;
 }
 
 message CGameRecordingClipFile {
@@ -51,6 +50,7 @@ message CGameRecordingTimelineMetadata {
 	optional uint64 duration_ms = 4;
 	repeated .CGameRecordingTimelineMetadata.Recording recordings = 5;
 	repeated .CGameRecordingPhase phases = 6;
+	repeated .CGameRecordingTimelineEvent significant_events = 7;
 }
 
 message CGameRecordingPostGameSummary {

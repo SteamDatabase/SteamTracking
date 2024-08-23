@@ -395,6 +395,7 @@ $\n k_EJSRegisterMethodType_Function
 -cef-single-process
 -cef-use-execv
 -cef-use-shell-exec
+-cef-use-vulkan
 -cef-verbose-js-logging
 -cef-verbose-logging
 -chromeos
@@ -1277,6 +1278,7 @@ Dari
 DcheckIsFatal
 December
 Default value for an enum field must be an identifier.
+DefaultANGLEVulkan
 DescriptorProto
 DescriptorProtosH
 Destroying a held mutex\n
@@ -2081,6 +2083,7 @@ Unrecognized syntax:
 Unsupported
 Unsupported: type mismatch
 Urdu
+Use vulkan ANGLE backend
 Uyghur
 Uzbek
 VProfInternalEnterScopeCurrentThread
@@ -2118,6 +2121,7 @@ Value of type "
 Value out of range for int32 option "
 Value out of range for int64 option "
 Value out of range for uint32 option "
+VulkanFromANGLE
 WARNING
 Warning parsing text-format 
 Warning: Blocking wait on mutex failed in Clear: %d\n
@@ -3236,6 +3240,7 @@ syntax = "$0";\n\n
 syscall
 syscall@GLIBC_2.0
 system
+tH0[S
 tajik
 tall
 tamil

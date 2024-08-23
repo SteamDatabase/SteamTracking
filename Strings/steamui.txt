@@ -437,7 +437,7 @@
 "!"%"+"1"9"K"O"c"g"s"u"
 ""3333
 ""\n CChatRoom_AddRoleToUser_Response"K\n!CChatRoom_GetRolesForUser_Request
-""\n CCloud_AppSessionResume_Response"{\n
+""\n CCloud_AppSessionResume_Response"
 ""\n CCloud_ClientDeleteFile_Response"X\n,CCloud_ClientConflictResolution_Notification
 ""\n CCloud_EnumerateUserApps_Request"
 ""\n CPublishedFile_AddChild_Response"\\n"CPublishedFile_RemoveChild_Request
@@ -581,9 +581,11 @@
 ".\n,CDeviceAuth_DeauthorizeRemoteDevice_Response"?\n,CDeviceAuth_GetUsedAuthorizedDevices_Request
 ".\n,CFamilyGroups_RemoveFromFamilyGroup_Response"b\n-CFamilyGroups_CancelFamilyGroupInvite_Request
 ".\n,CGameRecording_GetAvailableDiskSpace_Request"=\n-CGameRecording_GetAvailableDiskSpace_Response
+".\n,CGameRecording_PhaseListChanged_Notification"
 ".\n,CPublishedFile_StopPlaytimeTracking_Response"J\n9CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request
 "/*" inside block comment.  Block comments cannot be nested.
 "/\n-CFamilyGroups_ConfirmJoinFamilyGroup_Response"`\n+CFamilyGroups_RemoveFromFamilyGroup_Request
+"/\n-CGameRecording_DeletePerGameSettings_Response"`\n*CGameRecording_UploadProgress_Notification
 "/\n-CPublishedFile_SetCollectionChildren_Response"
 "/\n-CPublishedFile_StartPlaytimeTracking_Response"V\n+CPublishedFile_StopPlaytimeTracking_Request
 "0\n.CChatRoom_EndMiniGameForChatRoomGroup_Response"X\n
@@ -749,11 +751,13 @@
 "U\n'CSteamTV_FollowBroadcastChannel_Request
 "U\n*CContentBuilder_FinishDepotUpload_Response
 "U\n,CUserAccount_RedeemFriendInviteToken_Request
+"V\n CMsgCloudPendingRemoteOperations
 "V\n.CFamilyGroups_ModifyFamilyGroupDetails_Request
 "V\n\rCChatMentions
 "W\n!CInventory_DevSetNextDrop_Request
 "W\n#CInventory_PurchaseFinalize_Request
 "W\n'CGameRecording_ClipCreated_Notification
+"W\n2CGameRecording_OpenOverlayToGamePhase_Notification
 "X\n'CRemoteClient_GetRecentClients_Response
 "X\n1CRemoteClient_UnregisterStatusUpdate_Notification
 "X\n3CContentServerDirectory_GetPeerContentInfo_Response
@@ -770,6 +774,7 @@
 "\n\farray_values
 "\n\favatar_frame
 "\n\nip_address
+"\n\rGameRecording
 "\n\tchat_room
 "\n\titem_type
 "\n\tlink_type
@@ -1398,6 +1403,7 @@ $CSettingsPanelGameController.Timeout
 $CSettingsPanelGameController.TurnOff
 $Customization/StartupMovie/LocalPath
 $Cw!R
+$Developer/ShowAdvancedUpdateChannels
 $HOME/
 $Music\PlaylistNowPlayingNotification
 $Number%05d$
@@ -1455,6 +1461,7 @@ $\n k_ERemoteDeviceStreamingProgress
 $\n k_ERemoteDeviceStreamingResponse
 $\n k_ERemoteDeviceStreamingVRActive
 $\n k_ESessionPersistence_Persistent
+$\n k_ESettingProfileMode_PerDisplay
 $\n k_ESharedLibrary_LicenseExcluded
 $\n k_ESteamDeckKeyboardLayout_Czech
 $\n k_ESteamDeckKeyboardLayout_Greek
@@ -1815,6 +1822,7 @@ ${LANGUAGE}
 %d\UseSteamControllerConfig
 %d\WarnReq
 %daE<<0\f6
+%dmin
 %dx%d@%.2f target@%.2f, duration: G%.1f/C%.1f/C%.1f/E%.1f/N%.1f/D%.1f, network: RTT%.1f/S%dKb/C%dKb/L%dKb/Loss%d%%, latency: RTT%.1f/I%.1f/G%.1f/D%.1f
 %f %f %f %f
 %help%
@@ -1924,6 +1932,7 @@ ${LANGUAGE}
 %s/app_config/timeline/%s
 %s/appcache/librarycache
 %s/assets.vdf
+%s/bitrate
 %s/chromehtml
 %s/controller_base/
 %s/controller_base/%s
@@ -1935,6 +1944,7 @@ ${LANGUAGE}
 %s/controller_configuration.vdf
 %s/devkit-game/
 %s/devkit-game/steam
+%s/enabled
 %s/filesystem_%s
 %s/gamedetailsheader/%d/header_t_%d.jpg?retint=0
 %s/grid
@@ -1945,6 +1955,7 @@ ${LANGUAGE}
 %s/logs/%s.previous.txt
 %s/logs/%s.txt
 %s/logs/service_log.txt
+%s/minutes
 %s/movies/
 %s/public/%s
 %s/sku.sis
@@ -1993,7 +2004,6 @@ ${LANGUAGE}
 %s: lseek %s: %s\n
 %s: lseek start failed: %s\n
 %s: mkstemp %s: errno %s\n
-%s: not on public universe, forcing developer mode on
 %s: read failed: %s\n
 %s: rescheduling trim to run in %d seconds: %s
 %s: restoring previous glx context\n
@@ -2885,7 +2895,6 @@ ${LANGUAGE}
 (\r"S\n.CMsgClientSiteLicenseGetAvailableSeatsResponse
 (\r"U\n"CTimedTrial_ResetPlaytime_Response
 (\r"U\n+CMsgRemoteClientGetControllerConfigResponse
-(\r"V\n CMsgCloudPendingRemoteOperations
 (\r"V\n#CTimedTrial_RecordPlaytime_Response
 (\r"V\n&CCloudGaming_GetTimeRemaining_Response
 (\r"W\n%CClientNotificationBatteryTemperature
@@ -3053,6 +3062,7 @@ ${LANGUAGE}
 (\t"Y\n#CClientNotificationItemAnnouncement
 (\t"Y\n,CPublishedFile_FileUnsubscribed_Notification
 (\t"[\n)CPlayer_GetSteamDeckKeyboardSkin_Response
+(\t"[\n6CGameRecording_OpenOverlayToTimelineEvent_Notification
 (\t"\\n*CBroadcast_UpdateChatMessageFlair_Response
 (\t"\\n-CAuthentication_MigrateMobileSession_Response
 (\t"\v\n\tCPauseMsg"\f\n\nCResumeMsg"
@@ -3767,6 +3777,7 @@ ${LANGUAGE}
 *18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE40CWebUIGameRecordingSetPerGameSettingsJob41CGameRecording_SetPerGameSettings_Request42CGameRecording_SetPerGameSettings_ResponseE
 *18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE41CWebUIGameRecordingGetTimelinesForClipJob42CGameRecording_GetTimelinesForClip_Request43CGameRecording_GetTimelinesForClip_ResponseE
 *18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE42CWebUIGameRecordingUserAddTimelineEntryJob43CGameRecording_UserAddTimelineEntry_Request44CGameRecording_UserAddTimelineEntry_ResponseE
+*18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE43CWebUIGameRecordingDeletePerGameSettingsJob44CGameRecording_DeletePerGameSettings_Request45CGameRecording_DeletePerGameSettings_ResponseE
 *18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE43CWebUIGameRecordingGetActiveTimelineAppsJob44CGameRecording_GetActiveTimelineApps_Request45CGameRecording_GetActiveTimelineApps_ResponseE
 *18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE43CWebUIGameRecordingGetAvailableDiskSpaceJob44CGameRecording_GetAvailableDiskSpace_Request45CGameRecording_GetAvailableDiskSpace_ResponseE
 *18CWebUIMsgLambdaJobIZN24CGameRecordingControllerC4EvE44CWebUIGameRecordingGetTotalDiskSpaceUsageJob45CGameRecording_GetTotalDiskSpaceUsage_Request46CGameRecording_GetTotalDiskSpaceUsage_ResponseE
@@ -3826,13 +3837,14 @@ ${LANGUAGE}
 *23CInternalLambdaWorkItemIZN24CGameRecordingController15YldDownloadClipE10StringViewyEUlvE0_bE
 *23CInternalLambdaWorkItemIZN24CGameRecordingController16YldGetThumbnailsERK36CGameRecording_GetThumbnails_RequestR37CGameRecording_GetThumbnails_ResponseEUlvE0_7EResultE
 *23CInternalLambdaWorkItemIZN24CGameRecordingController16YldGetThumbnailsERK36CGameRecording_GetThumbnails_RequestR37CGameRecording_GetThumbnails_ResponseEUlvE1_7EResultE
-*23CInternalLambdaWorkItemIZN24CGameRecordingController19YldBackgroundDeleteEvEUlvE0_bE
+*23CInternalLambdaWorkItemIZN24CGameRecordingController19YldBackgroundDeleteEvEUlvE_bE
 *23CInternalLambdaWorkItemIZN24CGameRecordingController23YldBackgroundValidationEvEUlvE_bE
 *23CInternalLambdaWorkItemIZN24CGameRecordingController24YldCleanupEmptyTimelinesEvEUlvE_vE
 *23CInternalLambdaWorkItemIZN24CGameRecordingController24YldFindOrLoadMutableClipE10StringViewEUlvE_7EResultE
 *23CInternalLambdaWorkItemIZN30CTransportValidationController16YldThreadedCountERK42CTransportValidation_ThreadedCount_RequestR43CTransportValidation_ThreadedCount_ResponseEUlvE_7EResultE
 *23CInternalLambdaWorkItemIZZN23CSteamOSControllerLinux13SetCECEnabledEbENKUlvE_clEvEUlvE_vE
 *23CInternalLambdaWorkItemIZZN23CSteamOSControllerLinux18SetCECWakeOnResumeEbENKUlvE_clEvEUlvE_vE
+*23CInternalLambdaWorkItemIZZN23CSystemDevkitController24UpdateDevkitServiceStateEvENKUlvE_clEvEUlvE_vE
 *23CInternalLambdaWorkItemIZZN23CSystemReportController20CleanupSystemReportsEvENKUlvE_clEvEUlvE_vE
 *23CInternalLambdaWorkItemIZZN26CSteamUISharedJSController23OnBrowserOpenFileDialogERKN11IHTMLWindow23OpenFileDialogRequest_tEENKUlvE0_clEvEUlvE1_vE
 *2NV~f.6
@@ -3917,6 +3929,8 @@ ${LANGUAGE}
 *ZN23CSteamOSControllerLinux12SetWifiDebugEbEUlvE_
 *ZN23CSteamOSControllerLinux13SetCECEnabledEbEUlvE_
 *ZN23CSteamOSControllerLinux18SetCECWakeOnResumeEbEUlvE_
+*ZN23CSystemDevkitController10InitializeEvEUlbE_
+*ZN23CSystemDevkitController24UpdateDevkitServiceStateEvEUlvE_
 *ZN23CSystemReportController15JSSaveToDesktopEPKc9CSmartPtrI18CJSCallbackPromiseEEUlvE_
 *ZN23CSystemReportController20CleanupSystemReportsEvEUlvE_
 *ZN23CSystemReportController20JSSubmitSystemReportEPKc9CSmartPtrI18CJSCallbackPromiseEEUlvE_
@@ -3933,6 +3947,7 @@ ${LANGUAGE}
 *ZN24CGameRecordingController21StartBackgroundDeleteEvEUlvE_
 *ZN24CGameRecordingController26BStartGameRecordingSessionEP10CUtlStringS1_7CGameID18EGameRecordingTypeEUlPKcE_
 *ZN24CGameRecordingController31EYldStopManualRecordingInternalE7CGameIDP26CGameRecording_ClipSummaryEUlvE_
+*ZN24CGameRecordingController35OnClientDoesGamePhaseRecordingExistEP35ClientDoesGamePhaseRecordingExist_tEUlvE_
 *ZN24CGameRecordingControllerC4EvE29CWebUIGameRecordingGetTagsJob
 *ZN24CGameRecordingControllerC4EvE29CWebUIGameRecordingZipClipJob
 *ZN24CGameRecordingControllerC4EvE30CWebUIGameRecordingGetClipsJob
@@ -3951,6 +3966,7 @@ ${LANGUAGE}
 *ZN24CGameRecordingControllerC4EvE40CWebUIGameRecordingSetPerGameSettingsJob
 *ZN24CGameRecordingControllerC4EvE41CWebUIGameRecordingGetTimelinesForClipJob
 *ZN24CGameRecordingControllerC4EvE42CWebUIGameRecordingUserAddTimelineEntryJob
+*ZN24CGameRecordingControllerC4EvE43CWebUIGameRecordingDeletePerGameSettingsJob
 *ZN24CGameRecordingControllerC4EvE43CWebUIGameRecordingGetActiveTimelineAppsJob
 *ZN24CGameRecordingControllerC4EvE43CWebUIGameRecordingGetAvailableDiskSpaceJob
 *ZN24CGameRecordingControllerC4EvE44CWebUIGameRecordingGetTotalDiskSpaceUsageJob
@@ -3986,20 +4002,21 @@ ${LANGUAGE}
 *ZN24CGameRecordingControllerC4EvEUlRK41CGameRecording_SetPerGameSettings_RequestR42CGameRecording_SetPerGameSettings_ResponseE27_
 *ZN24CGameRecordingControllerC4EvEUlRK42CGameRecording_GetTimelinesForClip_RequestR43CGameRecording_GetTimelinesForClip_ResponseE7_
 *ZN24CGameRecordingControllerC4EvEUlRK43CGameRecording_UserAddTimelineEntry_RequestR44CGameRecording_UserAddTimelineEntry_ResponseE14_
+*ZN24CGameRecordingControllerC4EvEUlRK44CGameRecording_DeletePerGameSettings_RequestR45CGameRecording_DeletePerGameSettings_ResponseE28_
 *ZN24CGameRecordingControllerC4EvEUlRK44CGameRecording_GetActiveTimelineApps_RequestR45CGameRecording_GetActiveTimelineApps_ResponseE_
 *ZN24CGameRecordingControllerC4EvEUlRK44CGameRecording_GetAvailableDiskSpace_RequestR45CGameRecording_GetAvailableDiskSpace_ResponseE4_
 *ZN24CGameRecordingControllerC4EvEUlRK45CGameRecording_GetTotalDiskSpaceUsage_RequestR46CGameRecording_GetTotalDiskSpaceUsage_ResponseE21_
 *ZN24CGameRecordingControllerC4EvEUlRK46CGameRecording_GetPlatformCapabilities_RequestR47CGameRecording_GetPlatformCapabilities_ResponseE25_
 *ZN24CGameRecordingControllerC4EvEUlRK46CGameRecording_UserRemoveTimelineEntry_RequestR47CGameRecording_UserRemoveTimelineEntry_ResponseE16_
 *ZN24CGameRecordingControllerC4EvEUlRK46CGameRecording_UserUpdateTimelineEntry_RequestR47CGameRecording_UserUpdateTimelineEntry_ResponseE15_
-*ZN24CGameRecordingControllerC4EvEUlRK47CGameRecordingDebug_AddTimelineRangeEnd_RequestR48CGameRecordingDebug_AddTimelineRangeEnd_ResponseE31_
-*ZN24CGameRecordingControllerC4EvEUlRK47CGameRecordingDebug_SetTimelineGameMode_RequestR48CGameRecordingDebug_SetTimelineGameMode_ResponseE32_
-*ZN24CGameRecordingControllerC4EvEUlRK48CGameRecordingDebug_AddTimelineTimestamp_RequestR49CGameRecordingDebug_AddTimelineTimestamp_ResponseE29_
-*ZN24CGameRecordingControllerC4EvEUlRK49CGameRecordingDebug_AddTimelineRangeStart_RequestR50CGameRecordingDebug_AddTimelineRangeStart_ResponseE30_
+*ZN24CGameRecordingControllerC4EvEUlRK47CGameRecordingDebug_AddTimelineRangeEnd_RequestR48CGameRecordingDebug_AddTimelineRangeEnd_ResponseE32_
+*ZN24CGameRecordingControllerC4EvEUlRK47CGameRecordingDebug_SetTimelineGameMode_RequestR48CGameRecordingDebug_SetTimelineGameMode_ResponseE33_
+*ZN24CGameRecordingControllerC4EvEUlRK48CGameRecordingDebug_AddTimelineTimestamp_RequestR49CGameRecordingDebug_AddTimelineTimestamp_ResponseE30_
+*ZN24CGameRecordingControllerC4EvEUlRK49CGameRecordingDebug_AddTimelineRangeStart_RequestR50CGameRecordingDebug_AddTimelineRangeStart_ResponseE31_
 *ZN24CGameRecordingControllerC4EvEUlRK50CGameRecording_CleanupBackgroundRecordings_RequestR51CGameRecording_CleanupBackgroundRecordings_ResponseE22_
 *ZN24CGameRecordingControllerC4EvEUlRK51CGameRecording_GetAndTrimPostGameHighlights_RequestR52CGameRecording_GetAndTrimPostGameHighlights_ResponseE23_
 *ZN24CGameRecordingControllerC4EvEUlRK52CGameRecording_SwitchBackgroundRecordingGame_RequestR53CGameRecording_SwitchBackgroundRecordingGame_ResponseE24_
-*ZN24CGameRecordingControllerC4EvEUlRK54CGameRecordingDebug_AddTimelineHighlightMarker_RequestR55CGameRecordingDebug_AddTimelineHighlightMarker_ResponseE28_
+*ZN24CGameRecordingControllerC4EvEUlRK54CGameRecordingDebug_AddTimelineHighlightMarker_RequestR55CGameRecordingDebug_AddTimelineHighlightMarker_ResponseE29_
 *ZN24CGameRecordingControllerC4EvEUlRK54CGameRecording_ManuallyDeleteRecordingsForApps_RequestR55CGameRecording_ManuallyDeleteRecordingsForApps_ResponseE20_
 *ZN24CSteamUIUpdateController15GetOSBranchListE9CSmartPtrI18CJSCallbackPromiseEEUlP36SystemManagerGetOSBranchListResult_tbS2_E_
 *ZN24CSteamUIUpdateController18GetCurrentOSBranchE9CSmartPtrI18CJSCallbackPromiseEEUlP39SystemManagerGetCurrentOSBranchResult_tbS2_E_
@@ -4012,7 +4029,8 @@ ${LANGUAGE}
 *ZN24CUserGameNotesController9SaveNotesEPKcS1_9CSmartPtrI18CJSCallbackPromiseEEUlP37RemoteStorageFileWriteAsyncComplete_tbS4_E_
 *ZN25CGamescopeControllerLinux10InitializeEvE26CWebUIGamescopeGetStateJob
 *ZN25CGamescopeControllerLinux10InitializeEvE31CWebUIGamescopeSetBlurParamsJob
-*ZN25CGamescopeControllerLinux10InitializeEvEUlPKcE9_
+*ZN25CGamescopeControllerLinux10InitializeEvEUlPKcE10_
+*ZN25CGamescopeControllerLinux10InitializeEvEUlRK10CUtlStringE8_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlRK27CGamescope_GetState_RequestR28CGamescope_GetState_ResponseE_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlRK32CGamescope_SetBlurParams_RequestR33CGamescope_SetBlurParams_ResponseE0_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlbE2_
@@ -4022,7 +4040,7 @@ ${LANGUAGE}
 *ZN25CGamescopeControllerLinux10InitializeEvEUlbE7_
 *ZN25CGamescopeControllerLinux10InitializeEvEUliE1_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlvE5_
-*ZN25CGamescopeControllerLinux10InitializeEvEUlvE8_
+*ZN25CGamescopeControllerLinux10InitializeEvEUlvE9_
 *ZN25CGamescopeControllerLinux21OnScreenshotTriggeredEP21ScreenshotTriggered_tEUlvE_
 *ZN25CGamescopeControllerLinux27OnGamescopeControlConnectedEvEUliE1_
 *ZN25CGamescopeControllerLinux27OnGamescopeControlConnectedEvEUliE3_
@@ -4657,8 +4675,10 @@ ${LANGUAGE}
 -.CFriendMessages_MessageReaction_Notification
 -.CGameNotifications_EnumerateSessions_Request
 -.CGameNotifications_GetSessionDetails_Request
+-.CGameRecording_DeletePerGameSettings_Request
 -.CGameRecording_GetActiveTimelineApps_Request
 -.CGameRecording_GetAvailableDiskSpace_Request
+-.CGameRecording_PhaseListChanged_Notification
 -.CGameRecording_UserAddTimelineEntry_Response
 -.CParental_GetSignedParentalSettings_Response
 -.CPlayer_GetNewSteamAnnouncementState_Request
@@ -4910,6 +4930,7 @@ ${LANGUAGE}
 ..CFriendMessages_UpdateMessageReaction_Request
 ..CGameNotifications_EnumerateSessions_Response"
 ..CGameNotifications_GetSessionDetails_Response"
+..CGameRecording_DeletePerGameSettings_Response
 ..CGameRecording_GetActiveTimelineApps_Response
 ..CGameRecording_GetAvailableDiskSpace_Response
 ..CGameRecording_GetTotalDiskSpaceUsage_Request
@@ -5060,7 +5081,9 @@ ${LANGUAGE}
 .CGameRecordingPhase.Tag
 .CGameRecordingPostGameSummary
 .CGameRecordingTag
+.CGameRecordingTag"
 .CGameRecordingTag.Timeline
+.CGameRecordingTimelineEvent
 .CGameRecordingTimelineEvent"
 .CGameRecordingTimelineEvent"o\n+CGameRecording_UserAddTimelineEntry_Request
 .CGameRecordingTimelineMetadata
@@ -5071,7 +5094,7 @@ ${LANGUAGE}
 .CGameRecording_ClipSummary"K\n'CGameRecording_ClipDeleted_Notification
 .CGameRecording_ClipSummary"]\n3CGameRecording_GetAndTrimPostGameHighlights_Request
 .CGameRecording_GetTags_Request
-.CGameRecording_PerGameSettings",\n*CGameRecording_SetPerGameSettings_Response"`\n*CGameRecording_UploadProgress_Notification
+.CGameRecording_PerGameSettings",\n*CGameRecording_SetPerGameSettings_Response">\n,CGameRecording_DeletePerGameSettings_Request
 .CGameRecording_PerGameSettings"c\n)CGameRecording_SetPerGameSettings_Request
 .CGameRecording_ZipClip_Request
 .CGamescope_GetState_Request
@@ -5943,9 +5966,9 @@ ${LANGUAGE}
 /data/src/steamUI/gamerecording/gamerecordingtimeline.cpp
 /data/src/steamUI/gamerecording/gamerecordingutils.cpp
 /data/src/steamUI/gamerecordingcontroller.cpp
-/data/src/steamUI/gamerecordingcontroller.cpp:4303
-/data/src/steamUI/gamerecordingcontroller.cpp:5592
-/data/src/steamUI/gamerecordingcontroller.cpp:5665
+/data/src/steamUI/gamerecordingcontroller.cpp:4715
+/data/src/steamUI/gamerecordingcontroller.cpp:6005
+/data/src/steamUI/gamerecordingcontroller.cpp:6078
 /data/src/steamUI/gamescopecontroller_linux.cpp
 /data/src/steamUI/gamestream/audiorecorder.cpp
 /data/src/steamUI/gamestream/cudawrapper.cpp
@@ -6010,6 +6033,7 @@ ${LANGUAGE}
 /data/src/steamUI/systembluetoothcontroller.cpp:687
 /data/src/steamUI/systemcontroller.cpp
 /data/src/steamUI/systemdevkitcontroller.cpp
+/data/src/steamUI/systemdevkitcontroller.cpp:82
 /data/src/steamUI/systemreportcontroller.cpp:152
 /data/src/steamUI/systemstoragecontroller.cpp
 /data/src/steamUI/systemstoragecontroller.cpp:1425
@@ -6240,6 +6264,7 @@ ${LANGUAGE}
 0B_u
 0F`8
 0HKEY_CURRENT_USER\Software\Valve\Steam\ForceOOBE
+0Ha>
 0SX;
 0Z@q
 0ZQ;
@@ -6942,7 +6967,6 @@ ${LANGUAGE}
 11PlayerFound
 11ProfileItem
 11StoreItemID
-120min
 127.0.0.1
 127.0.0.1:57343
 127.0.0.1:57344
@@ -8707,6 +8731,7 @@ ${LANGUAGE}
 2I5N
 2Ogx
 2RH(
+2Va>
 2Y\n\vVideoClient
 2Yc-
 2\f.EVRLinkCaps:
@@ -8789,6 +8814,7 @@ ${LANGUAGE}
 3.CFriendsMessages_GetActiveMessageSessions_Response"
 3.CGameRecordingDebug_AddTimelineRangeStart_Response
 3.CGameRecording_CleanupBackgroundRecordings_Request
+3.CGameRecording_OpenOverlayToGamePhase_Notification
 3.CMarketingMessages_CreateMarketingMessage_Response"
 3.CMarketingMessages_DeleteMarketingMessage_Response"
 3.CMarketingMessages_UpdateMarketingMessage_Response"
@@ -9582,6 +9608,7 @@ ${LANGUAGE}
 3\n\temoticons
 3\n\vuser_status
 3\v;8BJ\nH
+3ba>
 3ej\n
 3pay
 3psC'dcG,
@@ -9986,8 +10013,10 @@ ${LANGUAGE}
 44CFriendMessages_MessageReaction_Notification
 44CGameNotifications_EnumerateSessions_Request
 44CGameNotifications_GetSessionDetails_Request
+44CGameRecording_DeletePerGameSettings_Request
 44CGameRecording_GetActiveTimelineApps_Request
 44CGameRecording_GetAvailableDiskSpace_Request
+44CGameRecording_PhaseListChanged_Notification
 44CGameRecording_UserAddTimelineEntry_Response
 44CGameServers_IPsWithSteamIDs_Response_Server
 44CParental_GetSignedParentalSettings_Response
@@ -10057,6 +10086,7 @@ ${LANGUAGE}
 45CFriendMessages_UpdateMessageReaction_Request
 45CGameNotifications_EnumerateSessions_Response
 45CGameNotifications_GetSessionDetails_Response
+45CGameRecording_DeletePerGameSettings_Response
 45CGameRecording_GetActiveTimelineApps_Response
 45CGameRecording_GetAvailableDiskSpace_Response
 45CGameRecording_GetTotalDiskSpaceUsage_Request
@@ -10321,6 +10351,7 @@ ${LANGUAGE}
 4crypto/ec/ec2_oct.c
 4h\4
 4i5U6B738%9
+4qa>
 4tpD
 5$SBq`
 5,czQH
@@ -10356,6 +10387,7 @@ ${LANGUAGE}
 50CFriendsMessages_GetActiveMessageSessions_Response
 50CGameRecordingDebug_AddTimelineRangeStart_Response
 50CGameRecording_CleanupBackgroundRecordings_Request
+50CGameRecording_OpenOverlayToGamePhase_Notification
 50CMarketingMessages_CreateMarketingMessage_Response
 50CMarketingMessages_DeleteMarketingMessage_Response
 50CMarketingMessages_UpdateMarketingMessage_Response
@@ -10443,6 +10475,7 @@ ${LANGUAGE}
 54CGameNotifications_UpdateNotificationSettings_Response
 54CGameRecordingDebug_AddTimelineHighlightMarker_Request
 54CGameRecording_ManuallyDeleteRecordingsForApps_Request
+54CGameRecording_OpenOverlayToTimelineEvent_Notification
 54CMarketingMessage_GetMarketingMessagesForApps_Response
 54CMarketingMessages_GetActiveMarketingMessages_Response
 54CMarketingMessages_GetDisplayMarketingMessage_Response
@@ -10693,6 +10726,7 @@ ${LANGUAGE}
 7.CGameNotifications_UpdateNotificationSettings_Response"
 7.CGameRecordingDebug_AddTimelineHighlightMarker_Request
 7.CGameRecording_ManuallyDeleteRecordingsForApps_Request
+7.CGameRecording_OpenOverlayToTimelineEvent_Notification
 7.CMarketingMessage_GetMarketingMessagesForApps_Response"
 7.CMarketingMessages_GetActiveMarketingMessages_Response"
 7.CMarketingMessages_GetDisplayMarketingMessage_Response"
@@ -12193,7 +12227,7 @@ AudioChannelConfiguration
 AudioDeviceDescription
 AudioSinkAvailabilityChanged: %d
 AudioSinkList
-Aug 19 2024 22:40:40
+Aug 22 2024 21:08:51
 August
 Aura
 Australia/Adelaide
@@ -13259,6 +13293,8 @@ CGameRecordingController::OnAddTimelineEvent
 CGameRecordingController::OnAppLifetimeNotification
 CGameRecordingController::OnCancelEvent
 CGameRecordingController::OnClearGamePhase
+CGameRecordingController::OnClientDoesEventRecordingExist
+CGameRecordingController::OnClientDoesGamePhaseRecordingExist
 CGameRecordingController::OnClientStartTask
 CGameRecordingController::OnEndEvent
 CGameRecordingController::OnPostLogonState
@@ -16026,6 +16062,7 @@ Decipher Only
 DeclareCurrentThreadIsMainThread
 Decode failed
 DecoderDescriptionID
+Default
 Default initial allocation size for PB arena
 Default value for an enum field must be an identifier.
 DefaultFixed
@@ -16049,6 +16086,7 @@ DeleteFamilyGroup
 DeleteInviteLink
 DeleteMarketingMessage
 DeletePanel
+DeletePerGameSettings
 DeletePostedStatus
 DeleteRoleFromUser
 DeleteSharedClip
@@ -16093,10 +16131,10 @@ Detected leaked fd
 DevGenerateItem
 DevSetNextDrop
 Devanagari
+Developer/DevModeEnabled
 Developer/FakeMandatoryUpdate
 Developer/ForceDeckPerfTab
 Developer/HDRCompatTesting
-DeveloperModeChanged
 Device
 Device Corrupt
 Device Error
@@ -17677,6 +17715,7 @@ GameNotificationsClient
 GameOverlay_MovieStream_%u
 GameRecording.CleanupBackgroundRecordings#1
 GameRecording.DeleteClip#1
+GameRecording.DeletePerGameSettings#1
 GameRecording.ExportClip#1
 GameRecording.GetActiveTimelineApps#1
 GameRecording.GetAndTrimPostGameHighlights#1
@@ -17696,6 +17735,7 @@ GameRecording.NotifyClipCreated#1
 GameRecording.NotifyClipDeleted#1
 GameRecording.NotifyExportProgress#1
 GameRecording.NotifyLowDiskSpace#1
+GameRecording.NotifyPhaseListChanged#1
 GameRecording.NotifyPostGameHighlightsChanged#1
 GameRecording.NotifyRecordingSessionChanged#1
 GameRecording.NotifyTimelineChanged#1
@@ -17717,7 +17757,7 @@ GameRecording.UserUpdateTimelineEntry#1
 GameRecording.ZipClip#1
 GameRecording/ExtraAudioSessions
 GameRecording/PerGameSettings
-GameRecording/PerGameSettings/%llu/enabled
+GameRecording/PerGameSettings/%llu
 GameRecordingBackgroundDelete
 GameRecordingClip
 GameRecordingClip.CreateShareClip#1
@@ -17760,6 +17800,7 @@ Gamescope/AppTargetFrameRate
 Gamescope/CompositeDebug
 Gamescope/DisableFrameLimit
 Gamescope/ForceComposite
+Gamescope/GameResolutionGlobal
 Gamescope/HDRVisualization2
 Gamescope/RefreshRate
 Gameserver login token denied
@@ -20321,6 +20362,8 @@ N24CGameRecordingController40CCallbackInternal_OnSetEventClipPriorityE
 N24CGameRecordingController40CCallbackInternal_OnToggleVideoRecordingE
 N24CGameRecordingController41CCallbackInternal_OnSystemDesktopUnlockedE
 N24CGameRecordingController43CCallbackInternal_OnAppLifetimeNotificationE
+N24CGameRecordingController49CCallbackInternal_OnClientDoesEventRecordingExistE
+N24CGameRecordingController53CCallbackInternal_OnClientDoesGamePhaseRecordingExistE
 N24CInstallFolderController32CCallbackInternal_OnAppInstalledE
 N24CInstallFolderController34CCallbackInternal_OnAppUninstalledE
 N24CInstallFolderController36CCallbackInternal_OnAppUpdateStoppedE
@@ -21097,6 +21140,8 @@ NotifyMemberStateChange
 NotifyMessageReaction
 NotifyNewItems
 NotifyNewSteamAnnouncementState
+NotifyOpenOverlayToGamePhase
+NotifyPhaseListChanged
 NotifyPlaytimeUsed
 NotifyPostGameHighlightsChanged
 NotifyRecordingSessionChanged
@@ -22444,6 +22489,8 @@ RecordDisconnectedPlaytime
 RecordPadding
 RecordPlaytime
 Recording %s failed with result %d (%s)
+Recording before per app settings available?
+Recording before steamid is available?
 Recording process audio: %d
 Recording system audio
 RecurrenceInfo
@@ -22733,6 +22780,7 @@ ResumeAppSession
 ResumeProcess
 Retail
 RetailInstall
+Retention interval for game %s is %u seconds
 Retired
 Reusing HTTP connection (%p) for %s\n
 Reviews
@@ -24516,7 +24564,6 @@ System.AudioDevices.RegisterForStateChanges
 System.AudioDevices.UpdateSomething
 System.CopyFile
 System.CreateTempPath
-System.Devkit.DeveloperModeChanged
 System.Devkit.RegisterForPairingPrompt
 System.Devkit.RespondToPairingPrompt
 System.Devkit.SetPairing
@@ -25024,6 +25071,7 @@ ThreadedSaveClipDoWork copy failed %s => %s error %u\n
 ThreadedSaveClipDoWork writing current timeline failed %s error %u\n
 ThreadedSaveSysemReportToDesktop
 ThreadedSetCECEnabled
+ThreadedSetDevkitServiceState
 ThreadedSteamOSFactoryReset
 ThreadedSteamOSFactoryReset: failed to fetch os-status: no internet?
 ThreadedSteamOSMandatoryUpdateApply
@@ -25819,6 +25867,7 @@ Video Encoder Queued Thread
 Video Encoder Thread
 Video Init Failed
 Video Streaming: %s
+Video bit rate for game %s is %.1f Mbps
 Video capture state change failed - no process state available
 Video capture state change failed - overlay is not ready
 Video capture state changed
@@ -26380,6 +26429,7 @@ YldCancelPairing
 YldCollectCommandOutput
 YldConnect
 YldDisconnect
+YldDoesGamePhaseRecordingExist
 YldEject
 YldFactoryReset
 YldFindOrLoadMutableClip
@@ -26434,6 +26484,7 @@ ZINT32
 ZINT64
 ZI|o
 ZLIB
+ZN19CSettingHandlerImplI10CUtlStringE16SetChangeHandlerEOSt8functionIFvRKS0_EEEUlRK18CMsgSettingVariantE_
 ZN19CSettingHandlerImplIbE16SetChangeHandlerEOSt8functionIFvRKbEEEUlRK18CMsgSettingVariantE_
 ZN19CSettingHandlerImplIbE22SetDefaultValueHandlerEOSt8functionIFbvEEEUlP18CMsgSettingVariantE_
 ZN19CSettingHandlerImplIiE16SetChangeHandlerEOSt8functionIFvRKiEEEUlRK18CMsgSettingVariantE_
@@ -26466,8 +26517,11 @@ Zulu
 [%07d] %09.2f %09.2f %08.2fp
 [%s] %.*s\r\n
 [%s] %s=%s\n
+[%s] Found %d recordings to consider
 [%s] applying key '%s', has changed from '%s' to '%s'\n
 [%s][%0.6f] %.*s\r\n
+[%s][%d] Recording %s is %.3f seconds, running total is %.3f/%.3f seconds
+[%s][%d] Recording %s is %.3f seconds, running total is over threshold: %.3f/%.3f
 [A:%u:%u:%u]
 [Desktop Entry]\nName=%s\nComment=Play this game on Steam\nExec=steam steam://rungameid/%llu\nIcon=%s\nTerminal=false\nType=Application\nCategories=Game;\n
 [Egy.0
@@ -27515,7 +27569,6 @@ Zulu
 \n\rETouchGesture
 \n\rEUpdaterState
 \n\rFriendMessage
-\n\rGameRecording
 \n\rMethodOptions
 \n\rPublishedFile
 \n\rQuery_Invalid
@@ -28408,6 +28461,7 @@ Zulu
 ]WICu
 ]XWRILCFup
 ][QWECIOmkagusy
+]\n gamescope_game_resolution_global
 ]\n\fCanSubscribe
 ]\n\fFactoryReset
 ]\n\fGetUserFiles
@@ -31439,6 +31493,7 @@ detect_self_dependency
 dev:
 developer
 developer 
+developer_mode_enabled
 developer_url
 developer_url 
 device
@@ -32466,6 +32521,7 @@ film
 filter
 filter_event_type
 filter_failure
+filter_phase_id
 filter_relationship
 filter_search_string
 filter_to_appid
@@ -33045,6 +33101,7 @@ gamescope_display_refresh_rate
 gamescope_enable_app_target_framerate
 gamescope_force_composite
 gamescope_frame_limiter_not_supported
+gamescope_game_resolution_global
 gamescope_hdr_visualization
 gamescope_include_steamui_in_screenshots
 gamescope_pipewire
@@ -37281,6 +37338,7 @@ mC4\n
 mK1f
 mXRecord
 m\f6W
+m\n NotifyOpenOverlayToTimelineEvent
 m\n!NotifyTextFilterDictionaryChanged
 m\n\nAddNumbers
 m\n\tActionSet
@@ -38378,6 +38436,7 @@ minimum_cart_amount_for_display
 miniprofile_location
 minsize=
 minute
+minutes
 minutes_played
 minutes_played_forever
 minutes_playtime_forever
@@ -39058,6 +39117,7 @@ no such file
 no suitable key share
 no suitable signature algorithm
 no time stamp token
+no valid game ID in export
 no valid scts
 no verify cookie callback
 no-cache
@@ -40573,6 +40633,7 @@ putwc@GLIBC_2.2
 pvCallback != NULL
 pvCallbackUDPCur || pvCallbackTCPCur
 pvecAddressesOut != nullptr || pSingleOutput != nullptr
+pvecDelete != nullptr
 pvecInstallFoldersInfo
 pvecSessions != nullptr
 pvk data too short
@@ -41746,6 +41807,7 @@ should retry
 should_hide_hint
 should_suppress_discount_pct
 show-main-window
+show_advanced_update_channels
 show_broadcast
 show_copy_count_in_library
 show_family_sharing_notifications
@@ -41783,6 +41845,7 @@ signer certificate not found
 signerInfos
 signer_info
 signfinal error
+significant_events
 signing ctrl failure
 signing not supported for this key type
 simpleSecurityObject
@@ -43018,6 +43081,7 @@ timedTrial
 timedatectl status | grep 'Time zone' | awk '{print $3}'
 timedtext_track_id
 timegm@GLIBC_2.0
+timelineWriter.GetActivePhase()
 timeline_%s
 timeline_duration_seconds
 timeline_offset_ms

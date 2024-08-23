@@ -102,6 +102,7 @@ message CGameRecording_QueryPhases_Request {
 	optional uint64 filter_gameid = 10;
 	optional string filter_search_string = 11;
 	repeated .CGameRecording_QueryPhases_Request.Tag filter_tags = 12;
+	optional string filter_phase_id = 13;
 }
 
 message CGameRecording_QueryPhases_Response {
@@ -125,6 +126,9 @@ message CGameRecording_QueryPhases_Response {
 		optional .EPhaseResultType type = 11 [default = k_EPhaseResultType_Automatic];
 		optional uint64 start_ms = 12;
 		repeated uint32 screenshots = 13;
+		optional bool active = 14;
+		optional string phase_id = 15;
+		repeated .CTimelineEntry significant_events = 16;
 	}
 
 	repeated .CGameRecording_QueryPhases_Response.Phase phases = 1;
@@ -200,6 +204,19 @@ message CGameRecording_LowDiskSpace_Notification {
 
 message CGameRecording_PostGameHighlightsChanged_Notification {
 	optional uint64 game_id = 1;
+}
+
+message CGameRecording_OpenOverlayToGamePhase_Notification {
+	optional uint64 game_id = 1;
+	optional string phase_id = 2;
+}
+
+message CGameRecording_OpenOverlayToTimelineEvent_Notification {
+	optional uint64 game_id = 1;
+	optional uint64 entry_id = 2;
+}
+
+message CGameRecording_PhaseListChanged_Notification {
 }
 
 message CGameRecording_ClipSummary {
@@ -430,6 +447,8 @@ message CGameRecording_ExportProgress_Notification {
 message CGameRecording_PerGameSettings {
 	optional fixed64 gameid = 1;
 	optional bool enabled = 2;
+	optional int32 minutes = 3;
+	optional int32 bitrate = 4;
 }
 
 message CGameRecording_GetPerGameSettings_Request {
@@ -444,6 +463,13 @@ message CGameRecording_SetPerGameSettings_Request {
 }
 
 message CGameRecording_SetPerGameSettings_Response {
+}
+
+message CGameRecording_DeletePerGameSettings_Request {
+	optional fixed64 gameid = 1;
+}
+
+message CGameRecording_DeletePerGameSettings_Response {
 }
 
 message CGameRecording_UploadProgress_Notification {
@@ -535,8 +561,12 @@ service GameRecording {
 	rpc NotifyUploadProgress (.CGameRecording_UploadProgress_Notification) returns (.WebUINoResponse);
 	rpc NotifyLowDiskSpace (.CGameRecording_LowDiskSpace_Notification) returns (.WebUINoResponse);
 	rpc NotifyPostGameHighlightsChanged (.CGameRecording_PostGameHighlightsChanged_Notification) returns (.WebUINoResponse);
+	rpc NotifyOpenOverlayToGamePhase (.CGameRecording_OpenOverlayToGamePhase_Notification) returns (.WebUINoResponse);
+	rpc NotifyOpenOverlayToTimelineEvent (.CGameRecording_OpenOverlayToTimelineEvent_Notification) returns (.WebUINoResponse);
+	rpc NotifyPhaseListChanged (.CGameRecording_PhaseListChanged_Notification) returns (.WebUINoResponse);
 	rpc GetPerGameSettings (.CGameRecording_GetPerGameSettings_Request) returns (.CGameRecording_GetPerGameSettings_Response);
 	rpc SetPerGameSettings (.CGameRecording_SetPerGameSettings_Request) returns (.CGameRecording_SetPerGameSettings_Response);
+	rpc DeletePerGameSettings (.CGameRecording_DeletePerGameSettings_Request) returns (.CGameRecording_DeletePerGameSettings_Response);
 	rpc UserAddTimelineEntry (.CGameRecording_UserAddTimelineEntry_Request) returns (.CGameRecording_UserAddTimelineEntry_Response);
 	rpc UserUpdateTimelineEntry (.CGameRecording_UserUpdateTimelineEntry_Request) returns (.CGameRecording_UserUpdateTimelineEntry_Response);
 	rpc UserRemoveTimelineEntry (.CGameRecording_UserRemoveTimelineEntry_Request) returns (.CGameRecording_UserRemoveTimelineEntry_Response);

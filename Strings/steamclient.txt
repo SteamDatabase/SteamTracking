@@ -745,7 +745,7 @@
 "!"%"+"1"9"K"O"c"g"s"u"
 ""3333
 ""\n CChatRoom_AddRoleToUser_Response"K\n!CChatRoom_GetRolesForUser_Request
-""\n CCloud_AppSessionResume_Response"{\n
+""\n CCloud_AppSessionResume_Response"
 ""\n CCloud_ClientDeleteFile_Response"X\n,CCloud_ClientConflictResolution_Notification
 ""\n CCloud_EnumerateUserApps_Request"
 ""\n CPublishedFile_AddChild_Response"\\n"CPublishedFile_RemoveChild_Request
@@ -888,9 +888,11 @@
 ".\n,CDeviceAuth_DeauthorizeRemoteDevice_Response"?\n,CDeviceAuth_GetUsedAuthorizedDevices_Request
 ".\n,CFamilyGroups_RemoveFromFamilyGroup_Response"b\n-CFamilyGroups_CancelFamilyGroupInvite_Request
 ".\n,CGameRecording_GetAvailableDiskSpace_Request"=\n-CGameRecording_GetAvailableDiskSpace_Response
+".\n,CGameRecording_PhaseListChanged_Notification"
 ".\n,CPublishedFile_StopPlaytimeTracking_Response"J\n9CPublishedFile_StopPlaytimeTrackingForAllAppItems_Request
 "/*" inside block comment.  Block comments cannot be nested.
 "/\n-CFamilyGroups_ConfirmJoinFamilyGroup_Response"`\n+CFamilyGroups_RemoveFromFamilyGroup_Request
+"/\n-CGameRecording_DeletePerGameSettings_Response"`\n*CGameRecording_UploadProgress_Notification
 "/\n-CPublishedFile_SetCollectionChildren_Response"
 "/\n-CPublishedFile_StartPlaytimeTracking_Response"V\n+CPublishedFile_StopPlaytimeTracking_Request
 "0\n.CChatRoom_EndMiniGameForChatRoomGroup_Response"X\n
@@ -1065,11 +1067,13 @@
 "U\n'CSteamTV_FollowBroadcastChannel_Request
 "U\n*CContentBuilder_FinishDepotUpload_Response
 "U\n,CUserAccount_RedeemFriendInviteToken_Request
+"V\n CMsgCloudPendingRemoteOperations
 "V\n.CFamilyGroups_ModifyFamilyGroupDetails_Request
 "V\n\rCChatMentions
 "W\n!CInventory_DevSetNextDrop_Request
 "W\n#CInventory_PurchaseFinalize_Request
 "W\n'CGameRecording_ClipCreated_Notification
+"W\n2CGameRecording_OpenOverlayToGamePhase_Notification
 "X\n'CRemoteClient_GetRecentClients_Response
 "X\n1CRemoteClient_UnregisterStatusUpdate_Notification
 "X\n3CContentServerDirectory_GetPeerContentInfo_Response
@@ -1086,6 +1090,7 @@
 "\n\farray_values
 "\n\favatar_frame
 "\n\nip_address
+"\n\rGameRecording
 "\n\tchat_room
 "\n\titem_type
 "\n\tlink_type
@@ -3548,7 +3553,6 @@ $tICAPIJobListHashLoadSave
 (\r"S\n.CMsgClientSiteLicenseGetAvailableSeatsResponse
 (\r"U\n"CTimedTrial_ResetPlaytime_Response
 (\r"U\n+CMsgRemoteClientGetControllerConfigResponse
-(\r"V\n CMsgCloudPendingRemoteOperations
 (\r"V\n#CTimedTrial_RecordPlaytime_Response
 (\r"V\n&CCloudGaming_GetTimeRemaining_Response
 (\r"W\n*CClanChatRooms_GetClanChatRoomInfo_Request
@@ -3719,6 +3723,7 @@ $tICAPIJobListHashLoadSave
 (\t"X\n7CContentServerDirectory_GetManifestRequestCode_Response
 (\t"Y\n,CPublishedFile_FileUnsubscribed_Notification
 (\t"[\n)CPlayer_GetSteamDeckKeyboardSkin_Response
+(\t"[\n6CGameRecording_OpenOverlayToTimelineEvent_Notification
 (\t"\\n*CBroadcast_UpdateChatMessageFlair_Response
 (\t"\\n-CAuthentication_MigrateMobileSession_Response
 (\t"\v\n\tCPauseMsg"\f\n\nCResumeMsg"
@@ -5417,8 +5422,10 @@ $tICAPIJobListHashLoadSave
 -.CFriendMessages_MessageReaction_Notification
 -.CGameNotifications_EnumerateSessions_Request
 -.CGameNotifications_GetSessionDetails_Request
+-.CGameRecording_DeletePerGameSettings_Request
 -.CGameRecording_GetActiveTimelineApps_Request
 -.CGameRecording_GetAvailableDiskSpace_Request
+-.CGameRecording_PhaseListChanged_Notification
 -.CGameRecording_UserAddTimelineEntry_Response
 -.CParental_GetSignedParentalSettings_Response
 -.CPlayer_GetNewSteamAnnouncementState_Request
@@ -5581,6 +5588,7 @@ $tICAPIJobListHashLoadSave
 -cef-single-process
 -cef-use-execv
 -cef-use-shell-exec
+-cef-use-vulkan
 -cef-verbose-js-logging
 -cef-verbose-logging
 -chromeos
@@ -5731,6 +5739,7 @@ $tICAPIJobListHashLoadSave
 ..CFriendMessages_UpdateMessageReaction_Request
 ..CGameNotifications_EnumerateSessions_Response"
 ..CGameNotifications_GetSessionDetails_Response"
+..CGameRecording_DeletePerGameSettings_Response
 ..CGameRecording_GetActiveTimelineApps_Response
 ..CGameRecording_GetAvailableDiskSpace_Response
 ..CGameRecording_GetTotalDiskSpaceUsage_Request
@@ -5875,7 +5884,9 @@ $tICAPIJobListHashLoadSave
 .CGameRecordingPhase.Tag
 .CGameRecordingPostGameSummary
 .CGameRecordingTag
+.CGameRecordingTag"
 .CGameRecordingTag.Timeline
+.CGameRecordingTimelineEvent
 .CGameRecordingTimelineEvent"
 .CGameRecordingTimelineEvent"o\n+CGameRecording_UserAddTimelineEntry_Request
 .CGameRecordingTimelineMetadata
@@ -5886,7 +5897,7 @@ $tICAPIJobListHashLoadSave
 .CGameRecording_ClipSummary"K\n'CGameRecording_ClipDeleted_Notification
 .CGameRecording_ClipSummary"]\n3CGameRecording_GetAndTrimPostGameHighlights_Request
 .CGameRecording_GetTags_Request
-.CGameRecording_PerGameSettings",\n*CGameRecording_SetPerGameSettings_Response"`\n*CGameRecording_UploadProgress_Notification
+.CGameRecording_PerGameSettings",\n*CGameRecording_SetPerGameSettings_Response">\n,CGameRecording_DeletePerGameSettings_Request
 .CGameRecording_PerGameSettings"c\n)CGameRecording_SetPerGameSettings_Request
 .CGameRecording_ZipClip_Request
 .CGamescope_GetState_Request
@@ -6644,6 +6655,7 @@ $tICAPIJobListHashLoadSave
 /data/src/clientdll/clientsharedconnection.cpp
 /data/src/clientdll/clientstreamclient.cpp
 /data/src/clientdll/clienttimedtrial.cpp
+/data/src/clientdll/clienttimeline.cpp
 /data/src/clientdll/clientugc.cpp
 /data/src/clientdll/clientunifiedmessages.cpp
 /data/src/clientdll/clientunifiedservicetransport.cpp
@@ -6726,7 +6738,7 @@ $tICAPIJobListHashLoadSave
 /data/src/clientdll/subscribedfilelistcache.cpp
 /data/src/clientdll/subscribedfilemanager.cpp
 /data/src/clientdll/systemaudiomanager_linux.cpp
-/data/src/clientdll/systemdisplaymanager.cpp:132
+/data/src/clientdll/systemdisplaymanager.cpp:133
 /data/src/clientdll/systemdisplaymanager_wayland.cpp
 /data/src/clientdll/systemdockmanager_linux.cpp
 /data/src/clientdll/systemdockmanager_linux.cpp:337
@@ -7393,6 +7405,7 @@ $tICAPIJobListHashLoadSave
 10CIPCServer
 10CJobFutureI79CPublishedFile_GetAppRelationshipsBatched_Response_PublishedFileAppRelationshipE
 10CJobFutureIbE
+10CJobFutureIyE
 10CKeySource
 10CMsgBuffer
 10CMsgGSDeny
@@ -8456,6 +8469,7 @@ $tICAPIJobListHashLoadSave
 11CInGameChat
 11CJobPromiseI79CPublishedFile_GetAppRelationshipsBatched_Response_PublishedFileAppRelationshipE
 11CJobPromiseIbE
+11CJobPromiseIyE
 11CKeyBinding
 11CMsgBuildID
 11CMsgGetZoom
@@ -10155,6 +10169,7 @@ $tICAPIJobListHashLoadSave
 18CFrameStatsListMsg
 18CFutureSharedStateI79CPublishedFile_GetAppRelationshipsBatched_Response_PublishedFileAppRelationshipE
 18CFutureSharedStateIbE
+18CFutureSharedStateIyE
 18CGSClientJobGSDeny
 18CGSClientJobGSKick
 18CGameActionBinding
@@ -10790,7 +10805,6 @@ $tICAPIJobListHashLoadSave
 21IClientProcessMonitor
 21IClientProductBuilder
 21IClientScreenshotsMap
-21IClientStreamLauncher
 21IFileTransferCallback
 21IInstallScriptManager
 21IJobFuncLifetimeHooks
@@ -12034,6 +12048,7 @@ $tICAPIJobListHashLoadSave
 3.CFriendsMessages_GetActiveMessageSessions_Response"
 3.CGameRecordingDebug_AddTimelineRangeStart_Response
 3.CGameRecording_CleanupBackgroundRecordings_Request
+3.CGameRecording_OpenOverlayToGamePhase_Notification
 3.CMarketingMessages_CreateMarketingMessage_Response"
 3.CMarketingMessages_DeleteMarketingMessage_Response"
 3.CMarketingMessages_UpdateMarketingMessage_Response"
@@ -12084,6 +12099,7 @@ $tICAPIJobListHashLoadSave
 30820120300d06092a864886f70d01010105000382010d00308201080282010100d787e473c8723f1264ca6bbb06a85c119c043eaf7b5423f48c060ed2dabc9ff7ec395d21839fc707a90ce98de5c932f3610e00edb6d2ae40bc56000c85b4aea57aaa68942552a1e0c55d324210487c94c0e85cdd850bd15ddb1926c0a2f03daa6ae74f78b0ebf10b58b532bc6eeb8c1ba8ef24a96bd3410107c8e02b8e1509c3879d57f4e8f02a68012ffc12519112c20c38e01279f0cedb5b07c0f9ffa6d1d6de09236dfc8cc734344b5356224f416588dec73bc83177c507d5184ba010e73e3b8bd2448b0e4b1a1c4958c6684e2491b7d1b8fcb214dbd963759f5dfab835d8dae85110366ac27be66129f341fcfaf102fe35fe146d0637494d3cd6aa28a965020111
 30820120300d06092a864886f70d01010105000382010d00308201080282010100dc01385a86aeaf8f5804ec866ba17735ca087ffce87e9d9e92e087bc40041f944a739f2ee1cb92858161640d270e47dd8a78be68425ff535e01cb14846719b490c2408b7eb3540bef34dba4f54d47224781eb54fd25f9aa4e3e75a166491a3a23dd566eb732d1b56795cddbbb8f6c0554bba39c803b5bfff0f1125b54aeaa8b0ea5759c17dbed5dd384e853c971f914bfe1105108569bea4070e9348949fe7598d73bd942b454edf7c4ac1c8f75d22a10b3bd31aed29788c1dbd937b30256791faf112b165546e78fbb7ad78b8f7dff796125d3427ef6943f608304fb16d20ff8c837d68d86217628e1519f6ec64d79c456451884e0badd98da2acff69dd9c55020111
 30820420300d06092a864886f70d01010105000382040d00308204080282040100e47f79965784601468f1d6236d111836f52e50bc7c090e7f669fa5618e75071b81113d4733b34e633812608d8ee765402f679c6d63af6cf4c3f8db50d3982c4ce9dad6c18926325ac5250aaa5ae66fc8f4dc845e9860b54854c24fd7c15f82b260bdc38d3faa4bd7075d6b12f19c137b23d652ec053fb25cf6e816b9e956abe6fef51d2c66bbafa42aa735ea1e25a96ed7e9bf646bed12ad188b94c720074941447e72ad3cd8e80fcde696b2c8d5946d37bc9a5fce0c9f0a2ce191dadb8a967a8650398f14b496c41c750d93135ef37bf3a25b6771b77eaa8ac3f39d26b63081c85ed1338b931c743bcccc3aefe61c55c4b9be5772f20449d84e774659b9b330423e4a195ed6ac0c9a7f1d83eead7621d609efcad9664ea673cc19398ea19c5a24f55115d2639170296b75de4f692fc642dea4814a6db508101edc0dfd51e9a3b0911a5e73fe4ce9c7d4cec9b001e36f379da2199983e02f0dad72076c51d67df0ca63d1fb8896da703b413a0ee90e7ff2071447238d822a7da07f7cde7935a53e85cc37b2e5b3064d989d0425c20a8e3dca43a22072d507c2c343bdc32dfd7a38ad148b33a2a689df3c79c5509ab8e5e115ecca26078ae2556ba39b9964cd5b2f7dda561e9a013c6ff6a84f3648ea703daaf4de0ec6c93e9759e2f2e9110e15218a4311158b7158e986b0c42b69d3b492c450365e063a3f05ea894f59328eee8372ae9b8bb7968f9bbcedbbc1e20850d2d70a3fd4746c48ea219fdcdafdbe2ce798a1af1dbf6cea4baef679470472e5f22bc3efe4c7fe07df2af06c179274d109a64d60dd020e7a6948fb2d7ffcc1571616577985b186f40f24ac9f413118c976bc9cbd85dd4790e0e8a97056bcb4b6ee970ce04487557edd894875fcf830370f2488dbc033128ec4134ebc15c34bff7081e40951fcc047334ec9a03c46c6353b274fb0718197a2d6fef287f8675fac759caf32a8038ad114fb46a6e9f7d0d5676e3cc0250a26c7795db9a70f78e43e8a297f41188055bcb39bf531cff672e0ba5c1f8672dc889166704d53dd57b50f7bf04083b30dcbbe2e7381f65b38209b07fae0d40d558b18a4f99c550456cac86cb045d93bc2f5d3cb4de22abac7d930d63bbb5d5cff2485d7c796ee4327ac919bf9e7ad09e9c7cfb4ff54e35809eb8314dae130c401f8a3b19b501c889ca5dc273def5f520f924cb79d3cbee49aef1174bfa26234e15807bb567bb7153aaa5238641622992ea14714a184afce022a04be307d89a15728b5ea49436559216c7021a34be905f45d24d01ecc36c676d37df6c8240a25b2152a877d8fc13fde0d9e65f77f181e1ed993abd41a061c3cd9f5c0fec3961a6b26a3b40bbac79ccd418a87df286b21f0cec4d06383e949cd5f105e0e263faceaac56aa92097cd91e3d54aaddca60267d40baf37d370d16ed1bc1020111
+30CAPIJobDoesEventRecordingExist
 30CAPIJobFindOrCreateLeaderboard
 30CAPIJobGetEquippedProfileItems
 30CAPIJobGetPublishedFileDetails
@@ -12316,6 +12332,8 @@ $tICAPIJobListHashLoadSave
 32 bit float RGBA video
 32 bit float mono audio
 32:B\n
+32CAPIGameRecordingClientQueryBaseIbE
+32CAPIGameRecordingClientQueryBaseIyE
 32CAPIJobGetAppDependenciesBatched
 32CAPIJobGetNumberOfCurrentPlayers
 32CAPIJobRequestPersonaNameHistory
@@ -12582,6 +12600,7 @@ $tICAPIJobListHashLoadSave
 33\o
 33fU
 33s?
+34CAPIJobDoesGamePhaseRecordingExist
 34CAPIJobEnumerateUserPublishedFiles
 34CAPIJobGenerateSupportSystemReport
 34CAPIJobMatchmakingRequestLobbyData
@@ -13746,8 +13765,10 @@ $tICAPIJobListHashLoadSave
 44CFriendMessages_MessageReaction_Notification
 44CGameNotifications_EnumerateSessions_Request
 44CGameNotifications_GetSessionDetails_Request
+44CGameRecording_DeletePerGameSettings_Request
 44CGameRecording_GetActiveTimelineApps_Request
 44CGameRecording_GetAvailableDiskSpace_Request
+44CGameRecording_PhaseListChanged_Notification
 44CGameRecording_UserAddTimelineEntry_Response
 44CGameServers_IPsWithSteamIDs_Response_Server
 44CJobEnumerateSubscribedFilesForInstalledApps
@@ -13829,6 +13850,7 @@ $tICAPIJobListHashLoadSave
 45CFriendMessages_UpdateMessageReaction_Request
 45CGameNotifications_EnumerateSessions_Response
 45CGameNotifications_GetSessionDetails_Response
+45CGameRecording_DeletePerGameSettings_Response
 45CGameRecording_GetActiveTimelineApps_Response
 45CGameRecording_GetAvailableDiskSpace_Response
 45CGameRecording_GetTotalDiskSpaceUsage_Request
@@ -14159,6 +14181,7 @@ $tICAPIJobListHashLoadSave
 50CFriendsMessages_GetActiveMessageSessions_Response
 50CGameRecordingDebug_AddTimelineRangeStart_Response
 50CGameRecording_CleanupBackgroundRecordings_Request
+50CGameRecording_OpenOverlayToGamePhase_Notification
 50CMarketingMessages_CreateMarketingMessage_Response
 50CMarketingMessages_DeleteMarketingMessage_Response
 50CMarketingMessages_UpdateMarketingMessage_Response
@@ -14258,6 +14281,7 @@ $tICAPIJobListHashLoadSave
 54CGameNotifications_UpdateNotificationSettings_Response
 54CGameRecordingDebug_AddTimelineHighlightMarker_Request
 54CGameRecording_ManuallyDeleteRecordingsForApps_Request
+54CGameRecording_OpenOverlayToTimelineEvent_Notification
 54CMarketingMessage_GetMarketingMessagesForApps_Response
 54CMarketingMessages_GetActiveMarketingMessages_Response
 54CMarketingMessages_GetDisplayMarketingMessage_Response
@@ -14523,6 +14547,7 @@ $tICAPIJobListHashLoadSave
 7.CGameNotifications_UpdateNotificationSettings_Response"
 7.CGameRecordingDebug_AddTimelineHighlightMarker_Request
 7.CGameRecording_ManuallyDeleteRecordingsForApps_Request
+7.CGameRecording_OpenOverlayToTimelineEvent_Notification
 7.CMarketingMessage_GetMarketingMessagesForApps_Response"
 7.CMarketingMessages_GetActiveMarketingMessages_Response"
 7.CMarketingMessages_GetDisplayMarketingMessage_Response"
@@ -14981,6 +15006,7 @@ $tICAPIJobListHashLoadSave
 :.CSteamInputService_ControllerAxesStateChange_Notification
 :.CUserAccount_GetAvailableValveDiscountPromotions_Response"
 :.JlN
+:21IClientStreamLauncher
 :5ptI.T(
 :BAD BOOLEAN
 :BAD ENUMERATED
@@ -14990,7 +15016,6 @@ $tICAPIJobListHashLoadSave
 :Fl@l
 :LBN
 :LBjI
-:[AppID %u]\tSkipping un-modified file %s
 :\n6k_ESteamDeckCompatibilityResultDisplayType_Unsupported
 :\n6k_ESteamDeckKeyboardLayout_Chinese_Traditional_Cangjie
 :\n6k_ESteamNotificationType_FamilyPurchaseRequestResponse
@@ -15188,6 +15213,7 @@ $tICAPIJobListHashLoadSave
 ?CreatePipeToLocalUser obsolete
 ?GetBeaconByIndex() failed, index out of range\n
 ?HAI\t81\t9dcG'
+?OnOutputGeometry
 ?Out of memory
 ?QfZ
 ?Steam Deck Controller
@@ -15836,6 +15862,7 @@ ActiveRemotePlayerHasChanged_t
 Adapter
 AdapterDescription
 AdaptiveBrightnessEnabled
+Add to Config Cache Request %u %u\n
 AddAlbumIDToPlaylistID
 AddAllTracksOfAlbumIDToQueue
 AddAllocatedMessage
@@ -16028,6 +16055,8 @@ Anime
 Anonymous Game Server
 Anonymous User
 Another DATA frame has already been deferred
+AnswerDoesEventRecordingExist
+AnswerDoesGamePhaseRecordingExist
 AntiReplay
 Any Extended Key Usage
 Any Purpose
@@ -17113,6 +17142,8 @@ CAPIJobDeletePublishedFile
 CAPIJobDeleteScreenshots::UnlinkFile
 CAPIJobDestroyPartyBeacon
 CAPIJobDisableTestLicense
+CAPIJobDoesEventRecordingExist
+CAPIJobDoesGamePhaseRecordingExist
 CAPIJobDownloadCommunityItemAsset
 CAPIJobDownloadLeaderboardEntries
 CAPIJobDownloadUGC
@@ -20519,6 +20550,8 @@ ClientDefaultAppIDToSteamClient
 ClientDeleteFile
 ClientDeviceID
 ClientDeviceVersionID
+ClientDoesEventRecordingExist_t
+ClientDoesGamePhaseRecordingExist_t
 ClientDownloadRatesReport
 ClientFileDownload
 ClientGetAppQuotaUsage
@@ -21387,6 +21420,7 @@ Deduced universe %d from certificate\n
 Default chunk and disk sector size don't align
 Default initial allocation size for PB arena
 Default value for an enum field must be an identifier.
+DefaultANGLEVulkan
 DefaultForSubs
 DefaultLowViolenceCountries
 DefaultProtocol
@@ -21417,6 +21451,7 @@ DeleteItem
 DeleteLobbyData
 DeleteLobbyData() couldn't find lobby %s\n
 DeleteMarketingMessage
+DeletePerGameSettings
 DeletePlaylistWithID
 DeletePostedStatus
 DeletePublishedFile
@@ -21653,7 +21688,6 @@ DoNotDisturb
 Dock device notification: %d
 Does not own required app
 DoesEventRecordingExist
-DoesEventRecordingExist NYI
 DoesGamePhaseRecordingExist
 Don't have network config. Check Internet connection
 Don't know Steam universe.  Order of init bug?
@@ -23643,6 +23677,8 @@ GameOverlay: started '%s' (pid %d) for game process %d\n
 GameOverlayRender_PIDStream
 GameOverlay_BlockOculusSDK
 GameRecording
+GameRecording.NotifyOpenOverlayToGamePhase#1
+GameRecording.NotifyOpenOverlayToTimelineEvent#1
 GameRecording.UploadClipToSteam#1
 GameRecordingClip
 GameRecordingDebug
@@ -24152,6 +24188,7 @@ GetGameCoordinatorServerLogin failed %s
 GetGameIDForAppID
 GetGameIDForPID
 GetGameOverlayUIInstanceFocusGameID
+GetGameResolutionOverride: override: '%s'
 GetGameSystemVolume
 GetGameWindowPos
 GetGameWithLocalScreenshots
@@ -24790,6 +24827,9 @@ HEADERS: no HEADERS allowed from client in reserved state
 HEADERS: stream closed
 HEADERS: stream_id == 0
 HEADER_SIZE + len <= MAX_PACKET
+HID: Add to Config Cache - full cache hit %u %u\n
+HID: Add to Config Cache - modify active mapping in-place %u %u\n
+HID: Add to Config Cache - modify disconnected mapping in-place %u %u\n
 HIDKeyboardKeys
 HIGH
 HKCR
@@ -28093,10 +28133,12 @@ NotifyMessageReaction
 NotifyMissingInterface
 NotifyNewItems
 NotifyNewSteamAnnouncementState
+NotifyOpenOverlayToGamePhase
 NotifyOverlaySettingsChanged
 NotifyPacket
 NotifyPendingCompatToolRegistrations
 NotifyPendingGameLaunch_FetchSteamStreamingEncoderConfig
+NotifyPhaseListChanged
 NotifyPlaytimeUsed
 NotifyPostGameHighlightsChanged
 NotifyRecordingSessionChanged
@@ -28405,7 +28447,6 @@ OnNewGroupChatMsgAdded
 OnNotificationsRequested
 OnOutputDescription
 OnOutputDone
-OnOutputGeometry
 OnOutputMode
 OnOutputName
 OnOutputScale
@@ -31536,6 +31577,8 @@ SetGameHostParams
 SetGameLauncherMode
 SetGamePhaseID
 SetGamePhaseID_t
+SetGameResolutionGlobal
+SetGameResolutionGlobal: %s
 SetGameSystemVolume
 SetGameTags
 SetGameWindowPos
@@ -32295,6 +32338,7 @@ Steam2WrapperEncryptionKey
 Steam3 Client Engine
 Steam3Master
 SteamAPI called with an invalid steamID\n
+SteamAPICall_t
 SteamAppDisableUpdate001
 SteamAppId
 SteamAppUser
@@ -34069,6 +34113,7 @@ Use Proxy
 Use local dev websites
 Use other funding source
 Use other payment method
+Use vulkan ANGLE backend
 UseCandidate was set!
 UsePushToMute
 UsePushToTalk
@@ -34125,6 +34170,8 @@ Using mangoapp atom workaround: %d
 Using mangoapp horizontal: %d
 Using mangoapp presets: %d
 Using mangoapp: %d
+Using maximum game resolution: override: %dx%d
+Using maximum game resolution: screen resolution: %dx%d
 Ut]<E
 UtlThreadSafeQueue
 Uyghur
@@ -34425,6 +34472,7 @@ Vote
 VoteData
 Vql4
 Vu?N\t?8Ws?vGr?
+VulkanFromANGLE
 W%0Qv4AV
 WARNING
 WARNING: AppID %u means to use compat tool "%s" via launch options, but tool is not found.
@@ -36966,7 +37014,6 @@ ZuneCustomAlbumArt.jpg
 \n\rETouchGesture
 \n\rEUpdaterState
 \n\rFriendMessage
-\n\rGameRecording
 \n\rMethodOptions
 \n\rPublishedFile
 \n\rQuery_Invalid
@@ -37978,6 +38025,7 @@ _XRead
 _XReply
 _XSend
 _XSetLastRequestRead
+_[AppID %u]\tSkipping un-modified file %s
 _\kku
 _\n\vpublic_data
 __GL_SHADER_DISK_CACHE_APP_NAME
@@ -42476,6 +42524,7 @@ filter
 filter_event_type
 filter_exclusive_priority
 filter_failure
+filter_phase_id
 filter_relationship
 filter_search_string
 filter_to_appid
@@ -47381,9 +47430,9 @@ lookup_certs_sk
 lost network device
 lost rgb to gray
 lost/gained channels
-low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1569
-low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1719
-low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1924
+low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1571
+low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1721
+low-pri yield - /data/src/clientdll/ClientJobRemoteStorageSync.cpp:1926
 low-pri yield - /data/src/clientdll/appdatacache.cpp:774
 low-pri yield - /data/src/clientdll/autocloud.cpp:566
 low-pri yield - /data/src/clientdll/autocloud.cpp:637
@@ -47444,6 +47493,7 @@ mC4\n
 mK1f
 mXRecord
 mZzW\v
+m\n NotifyOpenOverlayToTimelineEvent
 m\n!NotifyTextFilterDictionaryChanged
 m\n\nAddNumbers
 m\n\tActionSet
@@ -47707,6 +47757,7 @@ m_WorkThreads.Count() == 0 && m_cThreadsRunning == (uint32) 0
 m_WorkThreads[ iWorkThread ]
 m_addressActiveWebSocket
 m_allocMsg
+m_apiCall
 m_arMarker[n-1].m_nID != m_arMarker[n].m_nID
 m_arrDictionary[ iLanguage ][ iDictType ]
 m_bAccepted
@@ -49616,6 +49667,7 @@ miniprofile_location
 minor_revision
 minsize=
 minute
+minutes
 minutes_played
 minutes_played_forever
 minutes_remaining
@@ -53864,6 +53916,7 @@ signer certificate not found
 signerInfos
 signer_info
 signfinal error
+significant_events
 signing ctrl failure
 signing not supported for this key type
 sigprocmask
@@ -54580,7 +54633,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Aug 19 2024 22:40:31
+steam Aug 22 2024 21:08:41
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
@@ -54828,6 +54881,7 @@ steamrealm
 steamservice.so
 steamtrack:///
 steamtrack:///%s
+steamui call
 steamui.so
 steamvr
 steamworks_drm
@@ -56939,7 +56993,6 @@ vtable for tinyxml2::XMLText
 vtable for tinyxml2::XMLUnknown
 vtnr
 vtw\nx
-vulkan
 vwze
 w"ZXb
 w+OQvr

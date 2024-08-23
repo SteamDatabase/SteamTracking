@@ -2418,6 +2418,7 @@ https://help.steampowered.com/#HelpWithEconTrading
 https://help.steampowered.com/#HelpWithLimitedAccount
 https://help.steampowered.com/#HelpWithLogin
 https://help.steampowered.com/${hash}
+https://help.steampowered.com/${wizard_url}
 https://help.steampowered.com//wizard/HelpWithPurchase
 https://help.steampowered.com/agents/assignhelprequest/
 https://help.steampowered.com/agents/claimtickets/
