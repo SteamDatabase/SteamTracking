@@ -42178,7 +42178,9 @@
             (T = T.replace(/\%\%/g, "%")),
             (C = C.replace(/\%\%/g, "%")),
             (I = I.replace(/<h2>/g, "<b>")),
-            (I = I.replace(/<\/h2>/g, "</b>"));
+            (I = I.replace(/<\/h2>/g, "</b>")),
+            (I = I.replace(/<h1>/g, "<b>")),
+            (I = I.replace(/<\/h1>/g, "</b>\n\n"));
           const w = e.name.replace("npc_dota_hero_", "");
           let N = s.name;
           v && (N = w + "_aghanims_shard"), b && (N = w + "_aghanims_scepter");
