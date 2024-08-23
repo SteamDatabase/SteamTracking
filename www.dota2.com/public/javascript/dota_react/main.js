@@ -19267,7 +19267,7 @@
           }, []);
           const S = t.is_event_completed && t.event_type != Zt.J7.EXTERNAL,
             I = t.event == Zt.Dq.INTERNATIONAL_2024,
-            T = Fe(1725436800);
+            T = Fe(1725260400);
           let { days: C } = T;
           return s.createElement(
             "div",
@@ -19294,12 +19294,13 @@
                   (0, B.Wn)("#dpc_event_upcoming", (0, ga.we)(t.event_name)),
                 ),
               I &&
-                C > 0 &&
                 t.is_event_upcoming &&
                 s.createElement(
                   "div",
                   { className: ra().InactiveEvent },
-                  (0, B.Wn)("#dpc_ti_road_upcoming", C),
+                  C > 0
+                    ? (0, B.Wn)("#dpc_ti_road_upcoming", C)
+                    : (0, B.Wn)("#dpc_ti_road_soon"),
                 ),
               !S &&
                 !t.is_event_upcoming &&
