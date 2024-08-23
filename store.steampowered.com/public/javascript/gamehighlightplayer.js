@@ -193,10 +193,11 @@ function HighlightPlayer( args )
 	this.m_elemContainer.on( 'mouseout', $J.proxy( this.mouseOut, this ) );
 
 	var firstItem = args.firstItem ? $JFromIDOrElement(args.firstItem) : this.m_elemPlayerArea.find( '.highlight_player_item' ).first();
+	var firstScreenshot = this.m_elemPlayerArea.find( '.highlight_screenshot' ).first();
 
-	if ( !this.m_bVideoOnlyMode && !BIsUserGameHighlightAutoplayEnabled() )
+	if ( !this.m_bVideoOnlyMode && !BIsUserGameHighlightAutoplayEnabled() && firstScreenshot.length > 0 )
 	{
-		firstItem = this.m_elemPlayerArea.find( '.highlight_screenshot').first();
+		firstItem = firstScreenshot;
 	}
 
 	this.HighlightItem( firstItem );
