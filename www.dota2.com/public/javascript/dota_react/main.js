@@ -41002,7 +41002,12 @@
               n.createElement(
                 "div",
                 { className: (0, c.A)(l().BioContainer, !t && l().Hidden) },
-                (0, _.Wn)(o),
+                n.createElement(
+                  "div",
+                  { className: l().BioText },
+                  " ",
+                  (0, _.Wn)(o),
+                ),
                 n.createElement(
                   "div",
                   { className: l().ShowBio, onClick: () => a(!1) },
