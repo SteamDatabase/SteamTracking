@@ -33,6 +33,7 @@ ${BASE_URL}esports/ti11/schedule
 ${BASE_URL}heroes
 ${BASE_URL}ingest
 ${BASE_URL}international2023
+${BASE_URL}international2024
 ${BASE_URL}items
 ${BASE_URL}matches/match/${}?u=${}&appid=${DOTA_APP_ID}
 ${BASE_URL}matches/match/${}?u=${}&appid=${DOTA_APP_ID}&highlight=${}
@@ -48,6 +49,7 @@ ${BASE_URL}react/getfavoriteteams
 ${BASE_URL}react/getlivestreams
 ${BASE_URL}react/getspoilerblock
 ${BASE_URL}react/getwatchedgames
+${BASE_URL}react/inference
 ${BASE_URL}react/setspoilerblock
 ${BASE_URL}react/setwatchedgame
 ${BASE_URL}react/togglefavoriteteam
@@ -780,6 +782,8 @@ ${IMG_URL}international2023/icons/social_twitch.png
 ${IMG_URL}international2023/icons/social_twitter.png
 ${IMG_URL}international2023/icons/social_yt.png
 ${IMG_URL}international2023/ti_logo_full_color.png
+${IMG_URL}international2024/esports_site/footer_bg01.png
+${IMG_URL}international2024/esports_site/logo_ti_gold.png
 ${IMG_URL}items/${}.png
 ${IMG_URL}locked.png
 ${IMG_URL}logo.png
@@ -1615,9 +1619,10 @@ ${VIDEO_URL}cs2/cs2_header.mp4
 ${VIDEO_URL}cs2/cs2_header.webm
 ${VIDEO_URL}cs2/maps_flythrough.mp4
 ${VIDEO_URL}cs2/maps_flythrough.webm
-${VIDEO_URL}heroes/renders/${}.mov
+${VIDEO_URL}heroes/renders/${}.mov${_ ? `?${}` : ""}
 ${VIDEO_URL}heroes/renders/${}.png
 ${VIDEO_URL}heroes/renders/${}.webm
+${VIDEO_URL}heroes/renders/${}.webm${_ ? `?${}` : ""}
 ${VIDEO_URL}homepage/dota_montage_02.mp4
 ${VIDEO_URL}homepage/dota_montage_webm.webm
 ${VIDEO_URL}international2020/${}.mp4
@@ -3409,6 +3414,8 @@ url( ${IMG_URL}dpc/dpc_about_tours.jpg )
 url( ${IMG_URL}dpc/dpc_flowchart.png )
 url( ${IMG_URL}dpc/headers/dpc_header_event_${}.jpg )
 url( ${IMG_URL}dpc/headers/dpc_header_event_${}.jpg ), linear-gradient( to right, ${} 49%, ${} 51% )
+url( ${IMG_URL}dpc/headers/dpc_header_event_${}.png )
+url( ${IMG_URL}dpc/headers/dpc_header_event_${}.png ), linear-gradient( to right, ${} 49%, ${} 51% )
 url( ${IMG_URL}dpc/light_gray_bg.jpg )
 url( ${IMG_URL}dpc/top_block.jpg )
 url( ${IMG_URL}heroes/${}.png
@@ -3498,6 +3505,7 @@ url( ${IMG_URL}international2022/reward_montage/ti11_small_mmrtokens.png )
 url( ${IMG_URL}international2022/reward_montage/ti11_small_themedtreasure.png )
 url( ${IMG_URL}international2022/reward_montage/ti11_small_trust.png )
 url( ${IMG_URL}international2022/wards.png )
+url( ${IMG_URL}items/${}.png
 url( ${IMG_URL}items/${}.png )
 url( ${IMG_URL}labyrinth/assistant_controller.jpg )
 url( ${IMG_URL}springcleaning22/featured.jpg )
