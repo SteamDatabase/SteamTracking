@@ -1101,6 +1101,7 @@
 "^\n-CGameNotifications_GetSessionDetails_Response
 "^\n/CAuthenticationSupport_GetTokenHistory_Response
 "^\n0CSteamTV_GetBroadcastChannelInteraction_Response
+"^\n5CSteamEngine_SetOverlayEscapeKeyHandling_Notification
 "^\n\fOneofOptions
 "_\n$CChatRoom_DeleteRoleFromUser_Request
 "_\n-CCredentials_SteamGuardPhishingReport_Request
@@ -4532,6 +4533,7 @@ $tICAPIJobListHashLoadSave
 *18CWebUIMsgLambdaJobIZN12CSteamEngine4InitE12EAccountTypejE35CWebUISteamEngineGetGameIDForPIDJob36CSteamEngine_GetGameIDForPID_Request37CSteamEngine_GetGameIDForPID_ResponseE
 *18CWebUIMsgLambdaJobIZN12CSteamEngine4InitE12EAccountTypejE43CWebUISteamEngineGetTextFilterDictionaryJob44CSteamEngine_GetTextFilterDictionary_Request45CSteamEngine_GetTextFilterDictionary_ResponseE
 *18CWebUIMsgLambdaJobIZN12CSteamEngine4InitE12EAccountTypejE46CWebUISteamEngineUpdateTextFilterDictionaryJob52CSteamEngine_UpdateTextFilterDictionary_NotificationiE
+*18CWebUIMsgLambdaJobIZN12CSteamEngine4InitE12EAccountTypejE47CWebUISteamEngineSetOverlayEscapeKeyHandlingJob53CSteamEngine_SetOverlayEscapeKeyHandling_NotificationiE
 *18CWebUIMsgLambdaJobIZN14CSystemManagerC4EvE31CWebUISystemManagerHibernateJob32CSystemManager_Hibernate_Request33CSystemManager_Hibernate_ResponseE
 *18CWebUIMsgLambdaJobIZN14CSystemManagerC4EvE31CWebUISystemManagerWriteFileJob32CSystemManager_WriteFile_Request33CSystemManager_WriteFile_ResponseE
 *18CWebUIMsgLambdaJobIZN16CSteamController38RegisterWebUIServiceJobMessageHandlersEvE48CWebUISteamInputManagerEndControllerStateFlowJob46CSteamInputService_ControllerStateFlow_Request47CSteamInputService_ControllerStateFlow_ResponseE
@@ -4627,9 +4629,11 @@ $tICAPIJobListHashLoadSave
 *ZN12CSteamEngine4InitE12EAccountTypejE35CWebUISteamEngineGetGameIDForPIDJob
 *ZN12CSteamEngine4InitE12EAccountTypejE43CWebUISteamEngineGetTextFilterDictionaryJob
 *ZN12CSteamEngine4InitE12EAccountTypejE46CWebUISteamEngineUpdateTextFilterDictionaryJob
+*ZN12CSteamEngine4InitE12EAccountTypejE47CWebUISteamEngineSetOverlayEscapeKeyHandlingJob
 *ZN12CSteamEngine4InitE12EAccountTypejEUlRK36CSteamEngine_GetGameIDForPID_RequestR37CSteamEngine_GetGameIDForPID_ResponseE1_
 *ZN12CSteamEngine4InitE12EAccountTypejEUlRK44CSteamEngine_GetTextFilterDictionary_RequestR45CSteamEngine_GetTextFilterDictionary_ResponseE0_
 *ZN12CSteamEngine4InitE12EAccountTypejEUlRK52CSteamEngine_UpdateTextFilterDictionary_NotificationE_
+*ZN12CSteamEngine4InitE12EAccountTypejEUlRK53CSteamEngine_SetOverlayEscapeKeyHandling_NotificationE2_
 *ZN12LinuxHelpers19RunCommandGetOutputE10StringViewR10CUtlStringbbEUlS0_E_
 *ZN12LinuxHelpers28SendCloseSignalToProcessListERK10CUtlVectorIj10CUtlMemoryIjEEEUlP9_XDisplaymE_
 *ZN14CCompatManager16OnPostLogonStateEP16PostLogonState_tEUlvE_
@@ -14264,6 +14268,7 @@ $tICAPIJobListHashLoadSave
 53CMsgControllerInputControllerActionCameraHorizonReset
 53CMsgSteamDatagramClientPingSampleReply_POP_AltAddress
 53CQueuedMatchmakingGameHost_SubmitPlayerResult_Request
+53CSteamEngine_SetOverlayEscapeKeyHandling_Notification
 53CSteamEngine_TextFilterDictionaryChanged_Notification
 53CSteamInputService_GyroQuaternionChanged_Notification
 53CSteamNotification_NotificationsReceived_Notification
@@ -14452,6 +14457,7 @@ $tICAPIJobListHashLoadSave
 6.CMarketingMessages_GetActiveMarketingMessages_Request
 6.CMarketingMessages_GetDisplayMarketingMessage_Request
 6.CQueuedMatchmakingGameHost_SubmitPlayerResult_Request
+6.CSteamEngine_SetOverlayEscapeKeyHandling_Notification
 6.CSteamEngine_TextFilterDictionaryChanged_Notification
 6.CSteamInputService_GyroQuaternionChanged_Notification
 6.CSteamNotification_NotificationsReceived_Notification
@@ -16109,9 +16115,9 @@ AppID %u exited.
 AppID %u failed to update ownership ticket (%s)
 AppID %u finished uninstall (%s)
 AppID %u finished update, %u mounted depots (BuildID %u) : 
+AppID %u has invalid private beta "%s" set, falling back to public
 AppID %u has no changes, %u active: 
 AppID %u in Timed Trial mode : %u + %u seconds played, %u seconds allowed, %u seconds left\n
-AppID %u invalid beta branch "%s" set, falling back to public
 AppID %u may use compat tool %u "%s" via launch options - marking as dependency.
 AppID %u moving from "%s" to "%s"
 AppID %u no content found for beta "%s", falling back to public
@@ -28622,6 +28628,7 @@ Overflow serializing packet ack varint count
 Overflow serializing packet nack varint count
 Overflow setting lobby data; max of %d bytes exceeded. Key '%s' not set.\n
 Overflowed friends list in GetFriendByIndex() call\n
+OverlayEscapeState_t
 OverlayGameWindowFocusChange_t
 OverlayScaleInterface
 OverlaySettingsChanged_t
@@ -31664,6 +31671,7 @@ SetOfflineMode
 SetOpenVRShortcut
 SetOption(
 SetOverlayBrowserInfo
+SetOverlayEscapeKeyHandling
 SetOverlayNotificationInset
 SetOverlayNotificationPosition
 SetOverlayState
@@ -32401,6 +32409,7 @@ SteamDisableOverlayDPIScaling
 SteamEngine.GetGameIDForPID#1
 SteamEngine.GetTextFilterDictionary#1
 SteamEngine.NotifyTextFilterDictionaryChanged#1
+SteamEngine.SetOverlayEscapeKeyHandling#1
 SteamEngine.UpdateTextFilterDictionary#1
 SteamEngineWatchdogThread
 SteamEnv
@@ -37245,6 +37254,7 @@ ZuneCustomAlbumArt.jpg
 \n\rshared_secret
 \n\rshift_keycode
 \n\rshortcut_name
+\n\rshould_handle
 \n\rsize_in_bytes
 \n\rsize_original
 \n\rsize_unzipped
@@ -47769,6 +47779,7 @@ m_bEnabled
 m_bExiting
 m_bGameServer
 m_bHTTPSTunnelCompleted == false
+m_bHandle
 m_bHasCommonRedist
 m_bHavePartialMsg is true, but no receive buffer is allocated!
 m_bHeartbeatsActive
@@ -54633,7 +54644,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Aug 22 2024 21:08:41
+steam Aug 23 2024 22:35:47
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

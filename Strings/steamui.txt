@@ -785,6 +785,7 @@
 "^\n-CGameNotifications_GetSessionDetails_Response
 "^\n/CAuthenticationSupport_GetTokenHistory_Response
 "^\n0CSteamTV_GetBroadcastChannelInteraction_Response
+"^\n5CSteamEngine_SetOverlayEscapeKeyHandling_Notification
 "^\n\fOneofOptions
 "_\n$CChatRoom_DeleteRoleFromUser_Request
 "_\n-CCredentials_SteamGuardPhishingReport_Request
@@ -6264,7 +6265,6 @@ ${LANGUAGE}
 0B_u
 0F`8
 0HKEY_CURRENT_USER\Software\Valve\Steam\ForceOOBE
-0Ha>
 0SX;
 0Z@q
 0ZQ;
@@ -6967,6 +6967,7 @@ ${LANGUAGE}
 11PlayerFound
 11ProfileItem
 11StoreItemID
+120min
 127.0.0.1
 127.0.0.1:57343
 127.0.0.1:57344
@@ -8731,7 +8732,6 @@ ${LANGUAGE}
 2I5N
 2Ogx
 2RH(
-2Va>
 2Y\n\vVideoClient
 2Yc-
 2\f.EVRLinkCaps:
@@ -9608,7 +9608,6 @@ ${LANGUAGE}
 3\n\temoticons
 3\n\vuser_status
 3\v;8BJ\nH
-3ba>
 3ej\n
 3pay
 3psC'dcG,
@@ -10351,7 +10350,6 @@ ${LANGUAGE}
 4crypto/ec/ec2_oct.c
 4h\4
 4i5U6B738%9
-4qa>
 4tpD
 5$SBq`
 5,czQH
@@ -10458,6 +10456,7 @@ ${LANGUAGE}
 53CMarketingMessages_GetDisplayMarketingMessage_Request
 53CMsgControllerInputControllerActionCameraHorizonReset
 53CQueuedMatchmakingGameHost_SubmitPlayerResult_Request
+53CSteamEngine_SetOverlayEscapeKeyHandling_Notification
 53CSteamEngine_TextFilterDictionaryChanged_Notification
 53CSteamInputService_GyroQuaternionChanged_Notification
 53CSteamNotification_NotificationsReceived_Notification
@@ -10641,6 +10640,7 @@ ${LANGUAGE}
 6.CMarketingMessages_GetActiveMarketingMessages_Request
 6.CMarketingMessages_GetDisplayMarketingMessage_Request
 6.CQueuedMatchmakingGameHost_SubmitPlayerResult_Request
+6.CSteamEngine_SetOverlayEscapeKeyHandling_Notification
 6.CSteamEngine_TextFilterDictionaryChanged_Notification
 6.CSteamInputService_GyroQuaternionChanged_Notification
 6.CSteamNotification_NotificationsReceived_Notification
@@ -12227,7 +12227,7 @@ AudioChannelConfiguration
 AudioDeviceDescription
 AudioSinkAvailabilityChanged: %d
 AudioSinkList
-Aug 22 2024 21:08:51
+Aug 23 2024 22:35:53
 August
 Aura
 Australia/Adelaide
@@ -23669,6 +23669,7 @@ SetMiniDumpBuildID
 SetMiniDumpSteamID
 SetMiniProfileBackground
 SetName
+SetOverlayEscapeKeyHandling
 SetParentalSettings
 SetPerFriendPreferences
 SetPerGameSettings
@@ -27758,6 +27759,7 @@ Zulu
 \n\rserver_secret
 \n\rshared_secret
 \n\rshift_keycode
+\n\rshould_handle
 \n\rsize_in_bytes
 \n\rsize_unzipped
 \n\rsmall_capsule

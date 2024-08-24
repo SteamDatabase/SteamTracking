@@ -31,6 +31,11 @@ message CSteamEngine_GetGameIDForPID_Response {
 	optional uint64 gameid = 1;
 }
 
+message CSteamEngine_SetOverlayEscapeKeyHandling_Notification {
+	required uint64 gameid = 1;
+	required bool should_handle = 2;
+}
+
 service SteamEngine {
 	option (webui_service_execution_site) = k_EClientExecutionSiteClientdll;
 
@@ -38,4 +43,5 @@ service SteamEngine {
 	rpc GetTextFilterDictionary (.CSteamEngine_GetTextFilterDictionary_Request) returns (.CSteamEngine_GetTextFilterDictionary_Response);
 	rpc NotifyTextFilterDictionaryChanged (.CSteamEngine_TextFilterDictionaryChanged_Notification) returns (.WebUINoResponse);
 	rpc GetGameIDForPID (.CSteamEngine_GetGameIDForPID_Request) returns (.CSteamEngine_GetGameIDForPID_Response);
+	rpc SetOverlayEscapeKeyHandling (.CSteamEngine_SetOverlayEscapeKeyHandling_Notification) returns (.WebUINoResponse);
 }

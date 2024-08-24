@@ -1766,14 +1766,13 @@ $d`D-laM
 20CWebSocketConnection
 20IHTTPRedirectHandler
 20IUniformRandomStream
-21:07:46
-21:08:07
 21CEC25519PublicKeyBase
 21CHTTPClientConnection
 21CHTTPClientWorkThread
 21CLocalizedStringTable
 21COpenSSLCachedSession
 21CUtlCStringConversion
+22:34:53
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2571,7 +2570,7 @@ Attempting to create a named event with a null name
 Attempting to purchase same app in different packages
 Audio Behind
 Audio Init Failed
-Aug 22 2024
+Aug 23 2024
 August
 Aura
 AuthANY
@@ -2603,7 +2602,7 @@ B-233
 B-283
 B-409
 B-571
-B21:08:06
+B22:35:16
 B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
@@ -10481,7 +10480,7 @@ Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
 Startup - Steam Client launched with: %s
-Startup - updater built Aug 22 2024 21:08:06
+Startup - updater built Aug 23 2024 22:35:16
 StaticFileWriterThread()
 Steam - Fatal Error
 Steam - Warning

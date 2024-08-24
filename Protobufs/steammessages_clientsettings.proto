@@ -191,12 +191,12 @@ message CMsgClientSettings {
 	optional bool game_notes_enable_spellcheck = 17001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "GameNotesEnableSpellcheck", (setting_default_bool) = true];
 	optional int32 screenshot_items_per_row = 18000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserRoaming, (setting_name) = "ScreenshotViewItemsPerRow", (setting_default_int) = 1];
 	optional string g_background_path = 18201 [(setting_store) = k_EClientSettingStore_CustomFunc];
-	optional string g_background_max_keep = 18202 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional string g_background_max_keep = 18202 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_default_string) = "120min"];
 	optional int32 g_background_time_resolution = 18203 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional .CMsgHotkey g_background_mk = 18207 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional .CMsgHotkey g_background_tg = 18208 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool g_background_a_m = 18209 [(setting_store) = k_EClientSettingStore_CustomFunc];
-	optional int32 g_background_br = 18210 [(setting_store) = k_EClientSettingStore_CustomFunc];
+	optional int32 g_background_br = 18210 [(setting_store) = k_EClientSettingStore_CustomFunc, (setting_default_int) = 12000];
 	optional bool g_background_a_s = 18211 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional .EGRMode g_background_mode = 18212 [default = k_EGRMode_Never, (setting_store) = k_EClientSettingStore_CustomFunc];
 	optional .EGRAudio g_background_audio = 18213 [default = k_EGRAudio_Game, (setting_store) = k_EClientSettingStore_CustomFunc];

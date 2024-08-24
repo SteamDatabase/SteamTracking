@@ -92,7 +92,7 @@
 /sys/kernel/tracing/trace_marker
 12CStdMemAlloc
 16CAdHocValidation
-21:07:56
+22:35:02
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 >NULL == pValObjectPrev->m_pValObjectNext
@@ -111,7 +111,7 @@ Assertion Failed: stack%2d: %s
 Assertion Failed: stack%2d: %s (%d): %s
 Assertion Failed: stack%2d: 0x%llX
 Attempting to create a named event with a null name
-Aug 22 2024
+Aug 23 2024
 AuthenticAMD
 Average %.2f fps, %.2f ms per frame\n
 BBlockingGetMiniDumpLock
