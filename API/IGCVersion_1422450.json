@@ -1,0 +1,17 @@
+{
+    "name": "IGCVersion_1422450",
+    "methods": [
+        {
+            "name": "GetClientVersion",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": []
+        },
+        {
+            "name": "GetServerVersion",
+            "version": 1,
+            "httpmethod": "GET",
+            "parameters": []
+        }
+    ]
+}
