@@ -5711,7 +5711,6 @@
         return e;
       }
       function Fr(e) {
-        (0, at.d)();
         const [t] = (0, n.useState)(
             () => (0, ot.Tc)("filter_name", "application_config") || "",
           ),
@@ -5763,15 +5762,19 @@
             },
           ];
         return n.createElement(
-          yr.tH,
+          at.m,
           null,
           n.createElement(
-            "div",
-            { className: (0, d.A)(Ur().AdminPageCtn, Ur().WidePageCtn) },
-            n.createElement("h1", null, "Package Prices Submissions Reviews"),
-            n.createElement("p", null, t),
-            n.createElement("hr", null),
-            n.createElement(hr.V, { tabs: u, startingTab: s }),
+            yr.tH,
+            null,
+            n.createElement(
+              "div",
+              { className: (0, d.A)(Ur().AdminPageCtn, Ur().WidePageCtn) },
+              n.createElement("h1", null, "Package Prices Submissions Reviews"),
+              n.createElement("p", null, t),
+              n.createElement("hr", null),
+              n.createElement(hr.V, { tabs: u, startingTab: s }),
+            ),
           ),
         );
       }

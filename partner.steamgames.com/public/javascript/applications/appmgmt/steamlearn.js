@@ -14651,6 +14651,8 @@
             return "L1";
           case 2:
             return "L2";
+          case 3:
+            return "ElasticNet (L1+L2)";
         }
         return "";
       }
@@ -14856,6 +14858,12 @@
                   "#SteamLearn_Config_Node_Train_Regularization_L2",
                 ),
                 value: 2,
+              },
+              {
+                label: (0, c.we)(
+                  "#SteamLearn_Config_Node_Train_Regularization_L1_L2",
+                ),
+                value: 3,
               },
             ];
           return n.createElement(
@@ -15258,6 +15266,12 @@
                   "#SteamLearn_Config_Node_Train_Regularization_L2",
                 ),
                 value: 2,
+              },
+              {
+                label: (0, c.we)(
+                  "#SteamLearn_Config_Node_Train_Regularization_L1_L2",
+                ),
+                value: 3,
               },
             ];
           return n.createElement(
@@ -23069,14 +23083,16 @@
                       (s = 1),
                         (o = 1),
                         i.dense().set_width(128),
-                        i.dense().set_activation(1);
+                        i.dense().set_activation(1),
+                        i.dense().set_regularization(0);
                       break;
                     case 3:
                       (s = 1),
                         (o = 1),
                         i.dense_stack().set_width([128, 64]),
                         i.dense_stack().set_dropout_pct(30),
-                        i.dense_stack().set_activation(1);
+                        i.dense_stack().set_activation(1),
+                        i.dense_stack().set_regularization(0);
                       break;
                     case 5:
                       (s = 1),
@@ -24866,6 +24882,10 @@
             {
               label: (0, c.we)("#SteamLearn_Config_Node_Train_GPU_H100"),
               value: 2,
+            },
+            {
+              label: (0, c.we)("#SteamLearn_Config_Node_Train_GPU_H100_SXM"),
+              value: 3,
             },
           ];
         return n.createElement(

@@ -790,11 +790,16 @@
       const s = (e) => null != e;
       function o(e, r, t, i = !1) {
         const n = new URLSearchParams(e.location.search.substring(1));
-        n.delete(r),
-          s(t) && n.append(r, t),
-          i
-            ? e.replace(`?${n.toString()}`, { ...e.location.state })
-            : e.push(`?${n.toString()}`);
+        if (s(t)) {
+          if (n.get(r) == t) return;
+          n.set(r, t);
+        } else {
+          if (!n.has(r)) return;
+          n.delete(r);
+        }
+        i
+          ? e.replace(`?${n.toString()}`, { ...e.location.state })
+          : e.push(`?${n.toString()}`);
       }
       function c(e, r) {
         const t = (0, n.W6)(),
@@ -810,8 +815,8 @@
               : r;
           }, [c.search, e, r]),
           d = (0, i.useCallback)(
-            (r) => {
-              o(t, e, s(r) ? String(r) : null);
+            (r, i = !1) => {
+              o(t, e, s(r) ? String(r) : null, i);
             },
             [t, e],
           );

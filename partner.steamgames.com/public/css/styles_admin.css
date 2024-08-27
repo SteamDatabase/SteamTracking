@@ -3244,6 +3244,16 @@ div.image_all_ages_appropriate
     box-sizing: border-box;
 }
 
+.appMappingsArea {
+    background-color: #1c2022;
+    padding: 12px;
+}
+
+.appMappingsArea input:not(.btn_small_thin), .appMappingsArea select {
+    width: 300px;
+    box-sizing: border-box;
+}
+
 .optionTextDark {
 	color: #666666;
 	font-size: 12px;

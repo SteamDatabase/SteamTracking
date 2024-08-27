@@ -206,6 +206,155 @@
         TopReleasesContainer: "HVGCLhckX_TdvWBLa5LW5",
       };
     },
+    17083: (e, t, a) => {
+      "use strict";
+      a.d(t, { N_: () => h, k2: () => E });
+      var r = a(92757),
+        n = a(42891),
+        s = a(90626),
+        l = a(29248),
+        o = a(58584),
+        i = a(81115),
+        c = a(68841);
+      s.Component;
+      s.Component;
+      var m = function (e, t) {
+          return "function" == typeof e ? e(t) : e;
+        },
+        u = function (e, t) {
+          return "string" == typeof e ? (0, l.yJ)(e, null, null, t) : e;
+        },
+        d = function (e) {
+          return e;
+        },
+        p = s.forwardRef;
+      void 0 === p && (p = d);
+      var _ = p(function (e, t) {
+        var a = e.innerRef,
+          r = e.navigate,
+          n = e.onClick,
+          l = (0, i.A)(e, ["innerRef", "navigate", "onClick"]),
+          c = l.target,
+          m = (0, o.A)({}, l, {
+            onClick: function (e) {
+              try {
+                n && n(e);
+              } catch (t) {
+                throw (e.preventDefault(), t);
+              }
+              e.defaultPrevented ||
+                0 !== e.button ||
+                (c && "_self" !== c) ||
+                (function (e) {
+                  return !!(e.metaKey || e.altKey || e.ctrlKey || e.shiftKey);
+                })(e) ||
+                (e.preventDefault(), r());
+            },
+          });
+        return (m.ref = (d !== p && t) || a), s.createElement("a", m);
+      });
+      var h = p(function (e, t) {
+          var a = e.component,
+            n = void 0 === a ? _ : a,
+            h = e.replace,
+            S = e.to,
+            C = e.innerRef,
+            E = (0, i.A)(e, ["component", "replace", "to", "innerRef"]);
+          return s.createElement(r.XZ.Consumer, null, function (e) {
+            e || (0, c.A)(!1);
+            var a = e.history,
+              r = u(m(S, e.location), e.location),
+              i = r ? a.createHref(r) : "",
+              _ = (0, o.A)({}, E, {
+                href: i,
+                navigate: function () {
+                  var t = m(S, e.location),
+                    r = (0, l.AO)(e.location) === (0, l.AO)(u(t));
+                  (h || r ? a.replace : a.push)(t);
+                },
+              });
+            return (
+              d !== p ? (_.ref = t || C) : (_.innerRef = C),
+              s.createElement(n, _)
+            );
+          });
+        }),
+        S = function (e) {
+          return e;
+        },
+        C = s.forwardRef;
+      void 0 === C && (C = S);
+      var E = C(function (e, t) {
+        var a = e["aria-current"],
+          n = void 0 === a ? "page" : a,
+          l = e.activeClassName,
+          d = void 0 === l ? "active" : l,
+          p = e.activeStyle,
+          _ = e.className,
+          E = e.exact,
+          y = e.isActive,
+          g = e.location,
+          T = e.sensitive,
+          f = e.strict,
+          k = e.style,
+          v = e.to,
+          w = e.innerRef,
+          b = (0, i.A)(e, [
+            "aria-current",
+            "activeClassName",
+            "activeStyle",
+            "className",
+            "exact",
+            "isActive",
+            "location",
+            "sensitive",
+            "strict",
+            "style",
+            "to",
+            "innerRef",
+          ]);
+        return s.createElement(r.XZ.Consumer, null, function (e) {
+          e || (0, c.A)(!1);
+          var a = g || e.location,
+            l = u(m(v, a), a),
+            i = l.pathname,
+            N = i && i.replace(/([.+*?=^!:${}()[\]|/\\])/g, "\\$1"),
+            B = N
+              ? (0, r.B6)(a.pathname, {
+                  path: N,
+                  exact: E,
+                  sensitive: T,
+                  strict: f,
+                })
+              : null,
+            P = !!(y ? y(B, a) : B),
+            I = "function" == typeof _ ? _(P) : _,
+            R = "function" == typeof k ? k(P) : k;
+          P &&
+            ((I = (function () {
+              for (
+                var e = arguments.length, t = new Array(e), a = 0;
+                a < e;
+                a++
+              )
+                t[a] = arguments[a];
+              return t
+                .filter(function (e) {
+                  return e;
+                })
+                .join(" ");
+            })(I, d)),
+            (R = (0, o.A)({}, R, p)));
+          var G = (0, o.A)(
+            { "aria-current": (P && n) || null, className: I, style: R, to: l },
+            b,
+          );
+          return (
+            S !== C ? (G.ref = t || w) : (G.innerRef = w), s.createElement(h, G)
+          );
+        });
+      });
+    },
     38390: (e, t, a) => {
       "use strict";
       a.d(t, { B9: () => m, G4: () => i, RR: () => c });
@@ -325,7 +474,7 @@
         s = a(56545),
         l = a(94601),
         o = a(72839),
-        i = a(29482),
+        i = a(16021),
         c = a(44332),
         m = a(23809);
       const u = r.createContext({}),
@@ -491,7 +640,7 @@
         i = a(56545),
         c = a(21659),
         m = a(72839),
-        u = a(29482);
+        u = a(16021);
       !(function (e) {
         (e.DailyActiveUsers = "DailyActiveUsers"),
           (e.ConcurrentUsers = "ConcurrentUsers");
@@ -604,11 +753,11 @@
       }
       var g = a(90626),
         T = a(75233),
-        k = a(57168),
-        f = a(80613),
+        f = a(57168),
+        k = a(80613),
         v = a(89068),
         w = a(15161);
-      const b = f.Message;
+      const b = k.Message;
       class N extends b {
         static ImplementsStaticInterface() {}
         constructor(e = null) {
@@ -661,7 +810,7 @@
           return v.Uq(N.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new f.BinaryReader(e),
+          let t = new k.BinaryReader(e),
             a = new N();
           return N.deserializeBinaryFromReader(a, t);
         }
@@ -669,14 +818,14 @@
           return v.zj(N.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new f.BinaryWriter();
+          var e = new k.BinaryWriter();
           return N.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           v.i0(N.M(), e, t);
         }
         serializeBase64String() {
-          var e = new f.BinaryWriter();
+          var e = new k.BinaryWriter();
           return N.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -727,7 +876,7 @@
           return v.Uq(B.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new f.BinaryReader(e),
+          let t = new k.BinaryReader(e),
             a = new B();
           return B.deserializeBinaryFromReader(a, t);
         }
@@ -735,14 +884,14 @@
           return v.zj(B.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new f.BinaryWriter();
+          var e = new k.BinaryWriter();
           return B.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           v.i0(B.M(), e, t);
         }
         serializeBase64String() {
-          var e = new f.BinaryWriter();
+          var e = new k.BinaryWriter();
           return B.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -796,7 +945,7 @@
           return v.Uq(P.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new f.BinaryReader(e),
+          let t = new k.BinaryReader(e),
             a = new P();
           return P.deserializeBinaryFromReader(a, t);
         }
@@ -804,14 +953,14 @@
           return v.zj(P.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new f.BinaryWriter();
+          var e = new k.BinaryWriter();
           return P.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           v.i0(P.M(), e, t);
         }
         serializeBase64String() {
-          var e = new f.BinaryWriter();
+          var e = new k.BinaryWriter();
           return P.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -852,7 +1001,7 @@
           return v.Uq(I.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new f.BinaryReader(e),
+          let t = new k.BinaryReader(e),
             a = new I();
           return I.deserializeBinaryFromReader(a, t);
         }
@@ -860,14 +1009,14 @@
           return v.zj(I.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new f.BinaryWriter();
+          var e = new k.BinaryWriter();
           return I.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           v.i0(I.M(), e, t);
         }
         serializeBase64String() {
-          var e = new f.BinaryWriter();
+          var e = new k.BinaryWriter();
           return I.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -906,7 +1055,7 @@
           return v.Uq(R.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new f.BinaryReader(e),
+          let t = new k.BinaryReader(e),
             a = new R();
           return R.deserializeBinaryFromReader(a, t);
         }
@@ -914,14 +1063,14 @@
           return v.zj(R.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new f.BinaryWriter();
+          var e = new k.BinaryWriter();
           return R.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           v.i0(R.M(), e, t);
         }
         serializeBase64String() {
-          var e = new f.BinaryWriter();
+          var e = new k.BinaryWriter();
           return R.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -967,7 +1116,7 @@
           return v.Uq(G.M(), e);
         }
         static deserializeBinary(e) {
-          let t = new f.BinaryReader(e),
+          let t = new k.BinaryReader(e),
             a = new G();
           return G.deserializeBinaryFromReader(a, t);
         }
@@ -975,14 +1124,14 @@
           return v.zj(G.MBF(), e, t);
         }
         serializeBinary() {
-          var e = new f.BinaryWriter();
+          var e = new k.BinaryWriter();
           return G.serializeBinaryToWriter(this, e), e.getResultBuffer();
         }
         static serializeBinaryToWriter(e, t) {
           v.i0(G.M(), e, t);
         }
         serializeBase64String() {
-          var e = new f.BinaryWriter();
+          var e = new k.BinaryWriter();
           return G.serializeBinaryToWriter(this, e), e.getResultBase64String();
         }
         getClassName() {
@@ -1194,7 +1343,7 @@
             e.LoadTopSellersForWeek(l.rtWeekStart, l.strCountryCode, n),
           enabled: !!t && s,
           staleTime: a == t ? 36e5 : 1 / 0,
-          placeholderData: m ? k.rX : void 0,
+          placeholderData: m ? f.rX : void 0,
         });
         return (
           !u && _ && (i.current = l),
@@ -1466,15 +1615,15 @@
         ye = a(15708),
         ge = a(32754),
         Te = a(84811),
-        ke = a(89921),
-        fe = a.n(ke);
+        fe = a(89921),
+        ke = a.n(fe);
       const ve = g.memo((e) => {
           const t = X();
           return t.isLoading
             ? g.createElement("div", {
                 className: (0, ce.A)(
                   de().ChartContainerPlaceholder,
-                  fe().Placeholder,
+                  ke().Placeholder,
                 ),
               })
             : t.data
@@ -1641,17 +1790,17 @@
             ),
             g.createElement(
               "div",
-              { className: fe().PageSection },
+              { className: ke().PageSection },
               g.createElement(
                 "div",
-                { className: fe().SectionTitle },
+                { className: ke().SectionTitle },
                 (0, x.we)("#SteamCharts_OverviewGraph_Title_PlayersOnline"),
               ),
               g.createElement(Te.tH, null, g.createElement(ve, null)),
             ),
             g.createElement(
               "div",
-              { className: (0, ce.A)(fe().PageSection, Me().SideBySideCharts) },
+              { className: (0, ce.A)(ke().PageSection, Me().SideBySideCharts) },
               g.createElement(
                 "div",
                 { className: Me().Chart },
@@ -1720,7 +1869,7 @@
             ),
             g.createElement(
               "div",
-              { className: (0, ce.A)(fe().PageSection, Me().SideBySideCharts) },
+              { className: (0, ce.A)(ke().PageSection, Me().SideBySideCharts) },
               g.createElement(
                 "div",
                 { className: Me().Chart },
@@ -1751,10 +1900,10 @@
             ),
             g.createElement(
               "div",
-              { className: fe().PageSection },
+              { className: ke().PageSection },
               g.createElement(
                 "div",
-                { className: fe().SectionTitle },
+                { className: ke().SectionTitle },
                 g.createElement(
                   "b",
                   null,
@@ -1791,14 +1940,14 @@
           return g.createElement("div", {
             className: (0, ce.A)(
               Me().OverviewChartPlaceholder,
-              fe().Placeholder,
+              ke().Placeholder,
             ),
           });
         const [l, ...o] = s.GetItems();
         return g.createElement(
           "div",
           null,
-          g.createElement("div", { className: fe().SectionTitle }, " ", a),
+          g.createElement("div", { className: ke().SectionTitle }, " ", a),
           g.createElement(
             "div",
             { className: Me().ChartItemsCtn },
@@ -1835,14 +1984,14 @@
           return g.createElement("div", {
             className: (0, ce.A)(
               Me().OverviewChartPlaceholder,
-              fe().Placeholder,
+              ke().Placeholder,
             ),
           });
         const [l, ...o] = s.data.rgRanks;
         return g.createElement(
           "div",
           null,
-          g.createElement("div", { className: fe().SectionTitle }, " ", a),
+          g.createElement("div", { className: ke().SectionTitle }, " ", a),
           g.createElement(
             "div",
             { className: Me().ChartItemsCtn },
@@ -1978,7 +2127,7 @@
           null,
           g.createElement(
             "div",
-            { className: fe().SectionTitle },
+            { className: ke().SectionTitle },
             g.createElement("b", null, a),
             " ",
             t,
@@ -2039,10 +2188,10 @@
         }
         return g.createElement(
           "div",
-          { className: fe().PageSection },
+          { className: ke().PageSection },
           g.createElement(
             "div",
-            { className: fe().SectionTitle },
+            { className: ke().SectionTitle },
             g.createElement(
               "b",
               null,
@@ -2601,7 +2750,7 @@
           { title: (0, x.we)("#SteamCharts_Menu_MostPlayed") },
           g.createElement(
             "div",
-            { className: fe().ChartPage },
+            { className: ke().ChartPage },
             g.createElement(
               "div",
               { className: (0, ce.A)(Re().HeaderCtn, Re().WithSubtitle) },
@@ -2621,8 +2770,8 @@
               "div",
               { className: et().ChartPlaceholder },
               a === r.DailyActiveUsers
-                ? g.createElement(kt, { MostPlayedStore: t })
-                : g.createElement(ft, { MostPlayedStore: t }),
+                ? g.createElement(ft, { MostPlayedStore: t })
+                : g.createElement(kt, { MostPlayedStore: t }),
             ),
           ),
         );
@@ -2655,7 +2804,7 @@
           ),
         );
       }
-      function kt(e) {
+      function ft(e) {
         const { MostPlayedStore: t } = e,
           a = (function (e) {
             return (0, o.I)({
@@ -2705,7 +2854,7 @@
           )
         );
       }
-      function ft(e) {
+      function kt(e) {
         const { MostPlayedStore: t } = e,
           a = h(t);
         if (a.isLoading) return g.createElement(yt.t, { position: "center" });
@@ -2996,7 +3145,7 @@
           { title: (0, x.we)("#SteamCharts_Menu_TopSelling") },
           g.createElement(
             "div",
-            { className: fe().ChartPage },
+            { className: ke().ChartPage },
             g.createElement(
               "div",
               { className: (0, ce.A)(Re().HeaderCtn, Re().WithSubtitle) },
@@ -3157,7 +3306,7 @@
                 },
                 g.createElement(
                   "div",
-                  { className: fe().ChartPage },
+                  { className: ke().ChartPage },
                   g.createElement(
                     "div",
                     { className: (0, ce.A)(Re().HeaderCtn, Re().WithSubtitle) },
@@ -3457,7 +3606,7 @@
           { title: (0, x.we)("#SteamCharts_SupportStats") },
           g.createElement(
             "div",
-            { className: fe().ChartPage },
+            { className: ke().ChartPage },
             g.createElement(
               "div",
               { className: (0, ce.A)(Re().HeaderCtn, Re().WithSubtitle) },
@@ -3474,7 +3623,7 @@
             ),
             g.createElement(
               "div",
-              { className: fe().PageSection },
+              { className: ke().PageSection },
               g.createElement(
                 "p",
                 null,
@@ -3488,10 +3637,10 @@
             ),
             g.createElement(
               "div",
-              { className: (0, ce.A)(fe().PageSection) },
+              { className: (0, ce.A)(ke().PageSection) },
               g.createElement(
                 "div",
-                { className: (0, ce.A)(fe().SectionTitle) },
+                { className: (0, ce.A)(ke().SectionTitle) },
                 g.createElement(
                   "b",
                   null,
@@ -3504,10 +3653,10 @@
             ),
             g.createElement(
               "div",
-              { className: (0, ce.A)(fe().PageSection) },
+              { className: (0, ce.A)(ke().PageSection) },
               g.createElement(
                 "div",
-                { className: (0, ce.A)(fe().SectionTitle) },
+                { className: (0, ce.A)(ke().SectionTitle) },
                 g.createElement(
                   "b",
                   null,
@@ -3577,7 +3726,7 @@
           {
             className: (0, ce.A)(
               xt().HelpRequestChartContainer,
-              !e.data && fe().Placeholder,
+              !e.data && ke().Placeholder,
             ),
           },
           e.data && g.createElement(ea, { ChartData: e.data }),
@@ -3638,10 +3787,10 @@
         return t
           ? g.createElement(
               "table",
-              { className: fe().ChartTable },
+              { className: ke().ChartTable },
               g.createElement(
                 "thead",
-                { className: fe().ColumnHeaders },
+                { className: ke().ColumnHeaders },
                 g.createElement(
                   "tr",
                   null,
@@ -3681,14 +3830,14 @@
               ),
             )
           : g.createElement("div", {
-              className: (0, ce.A)(fe().Placeholder, xt().Placeholder),
+              className: (0, ce.A)(ke().Placeholder, xt().Placeholder),
             });
       }
       function na(e) {
         const { row: t } = e;
         return g.createElement(
           "tr",
-          { className: (0, ce.A)(fe().TableRow, xt().TableRow) },
+          { className: (0, ce.A)(ke().TableRow, xt().TableRow) },
           g.createElement("td", { className: xt().Category }, t.name),
           g.createElement(
             "td",

@@ -451,7 +451,7 @@
         s = r(56545),
         a = r(94601),
         o = r(72839),
-        l = r(29482),
+        l = r(16021),
         c = r(44332),
         u = r(23809);
       const m = n.createContext({}),
@@ -564,11 +564,16 @@
       const a = (e) => null != e;
       function o(e, t, r, n = !1) {
         const i = new URLSearchParams(e.location.search.substring(1));
-        i.delete(t),
-          a(r) && i.append(t, r),
-          n
-            ? e.replace(`?${i.toString()}`, { ...e.location.state })
-            : e.push(`?${i.toString()}`);
+        if (a(r)) {
+          if (i.get(t) == r) return;
+          i.set(t, r);
+        } else {
+          if (!i.has(t)) return;
+          i.delete(t);
+        }
+        n
+          ? e.replace(`?${i.toString()}`, { ...e.location.state })
+          : e.push(`?${i.toString()}`);
       }
       function l(e, t, r) {
         o(e, t, r, !0);
@@ -587,8 +592,8 @@
               : t;
           }, [l.search, e, t]),
           u = (0, n.useCallback)(
-            (t) => {
-              o(r, e, a(t) ? String(t) : null);
+            (t, n = !1) => {
+              o(r, e, a(t) ? String(t) : null, n);
             },
             [r, e],
           );
@@ -799,7 +804,7 @@
         u = r(82415),
         m = r(12493),
         d = r(30894),
-        p = r(29482),
+        p = r(16021),
         h = r(26101),
         _ = r(12155),
         g = r(52038),
@@ -2444,7 +2449,7 @@
         }
         constructor() {}
       }
-      var g = r(29482),
+      var g = r(16021),
         y = r(5970),
         f = r(34629),
         w = r(72739),

@@ -334,7 +334,6 @@
           { maxBatchSize: 100, ...t },
         );
       }
-      new WeakMap();
       function d(e) {
         const t = (0, i.KV)(),
           a = r.useContext(g);

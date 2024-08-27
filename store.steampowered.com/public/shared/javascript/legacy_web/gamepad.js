@@ -15,13 +15,13 @@
         FocusRingOnHiddenItem: "focusring_FocusRingOnHiddenItem_8uyqy",
       };
     },
-    543: (e, t, n) => {
+    225: (e, t, n) => {
       "use strict";
       n.d(t, { InitializeGamepadNavigation: () => gt });
       var i,
         o = n(669),
         s = n.n(o),
-        r = n(551);
+        r = n(937);
       !(function (e) {
         (e[(e.GAMEPAD = 0)] = "GAMEPAD"),
           (e[(e.KEYBOARD = 1)] = "KEYBOARD"),
@@ -82,10 +82,10 @@
         );
       }
       var m = n(629),
-        g = n(38),
-        _ = n(533),
-        p = n(620),
-        v = n(547);
+        g = n(240),
+        _ = n(623),
+        p = n(398),
+        v = n(821);
       class f {
         m_NavigationController;
         m_postMessage;
@@ -494,7 +494,7 @@
             : e || console.warn(t, ...n);
         } catch (e) {}
       }
-      var O = n(538);
+      var O = n(495);
       class B {
         async GetObject(e) {
           try {
@@ -545,6 +545,7 @@
         "FriendsUI/RemotePlay",
         "SalePage",
         "VR",
+        "VRWebRTC",
         "VRDashboardPopupStore",
         "VRGamepadUIMessages",
         "VRPathProperties",
@@ -883,7 +884,7 @@
           );
         }
       }
-      var j = n(659);
+      var j = n(597);
       const J = new x("FocusNavigation").Debug,
         Q = new x("GamepadEvents").Debug;
       class q {
@@ -3958,12 +3959,12 @@
         },
       };
     },
-    547: (e, t, n) => {
+    821: (e, t, n) => {
       "use strict";
       n.d(t, { Vp: () => r, n4: () => a });
       var i = n(629),
-        o = n(38),
-        s = n(533);
+        o = n(240),
+        s = n(623);
       class r {
         m_fnCallback = void 0;
         constructor() {
@@ -4026,7 +4027,7 @@
       }
       (0, i.Cg)([o.o], a.prototype, "OnMessage", null);
     },
-    533: (e, t, n) => {
+    623: (e, t, n) => {
       "use strict";
       n.d(t, { T: () => i, h: () => o });
       const i = "GamepadInput";

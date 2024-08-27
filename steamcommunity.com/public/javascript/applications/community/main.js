@@ -33029,7 +33029,10 @@
       }
       class l extends n.Component {
         constructor(e) {
-          super(e), (this.state = {}), (this.state.lastErrorKey = e.errorKey);
+          super(e),
+            (this.state = {}),
+            (this.reactErrorHandler = void 0),
+            (this.state.lastErrorKey = e.errorKey);
         }
         static InstallErrorReportingStore(e) {
           this.sm_ErrorReportingStore = e;
@@ -34535,7 +34538,9 @@
         const [r, n] = (0, i.useState)(!0);
         return (
           (0, i.useEffect)(() => {
-            n(!0);
+            (0, i.startTransition)(() => {
+              n(!0);
+            });
           }, []),
           r ? e.children : null !== (t = e.fallback) && void 0 !== t ? t : null
         );
@@ -34551,14 +34556,22 @@
           [a, s] = i.useState(!0),
           o = i.useRef(0),
           l = i.useCallback(() => {
-            s(!0);
+            i.startTransition(() => {
+              s(!0);
+            });
           }, []);
         i.useEffect(() => t.RegisterMeasureModalCallback(l).Unregister, [t, l]),
           i.useLayoutEffect(() => {
-            r || (n(t.TakeMeasureModalRequest()), s(!1));
+            r ||
+              i.startTransition(() => {
+                n(t.TakeMeasureModalRequest()), s(!1);
+              });
           }, [t, r, a]);
         const c = i.useCallback((e) => {
-          o.current++, n((t) => (t === e ? void 0 : t));
+          o.current++,
+            i.startTransition(() => {
+              n((t) => (t === e ? void 0 : t));
+            });
         }, []);
         return r
           ? i.createElement(d, {
@@ -41080,6 +41093,7 @@
         "FriendsUI/RemotePlay",
         "SalePage",
         "VR",
+        "VRWebRTC",
         "VRDashboardPopupStore",
         "VRGamepadUIMessages",
         "VRPathProperties",

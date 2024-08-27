@@ -1031,7 +1031,7 @@
         c = r(88997),
         d = r(55963),
         m = r(54728),
-        u = r(23825),
+        u = r(13952),
         B = r(56093),
         g = r(51240);
       class p extends l.Component {

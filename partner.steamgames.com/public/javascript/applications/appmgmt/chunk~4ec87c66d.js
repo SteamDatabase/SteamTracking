@@ -951,6 +951,7 @@
         FeaturedApps: "OfWnMzBeP0_WEadkOKes1",
         EventStats: "E5F7A-Sl_JZoQW8YbCktt",
         SaleDetails: "_1TNA21Q8xGpOoRqDgI_-VS",
+        VisitorCount: "_22LLqIBATUUdrf9TjIbJTF",
         BasicStatsCtn: "_2pNPEeF24ujyIwQvfkeL2F",
         LinkCtn: "y7fEJKGaE_U-aFvfQKZZg",
         Spacer: "ST3282nIwiZE_98ZnMt69",
@@ -38717,116 +38718,114 @@
         return e?.startsWith(Ul) ? e : Ul + e;
       }
       function xl(e) {
-        return (0, us.d)()
-          ? l.createElement(
-              o.Kd,
-              { basename: (0, n.C)() + "optin/" },
-              l.createElement(cs, null),
-              l.createElement(
-                hn.dO,
-                null,
-                l.createElement(hn.qh, {
-                  exact: !0,
-                  path: n.B.DiagData(),
-                  render: (e) =>
-                    l.createElement(it.z, {
-                      ...e,
-                      strConfigID: "application_config",
-                    }),
-                }),
-                l.createElement(hn.qh, {
-                  exact: !0,
-                  path: Ll.OptinAdminDashboard(),
-                  component: Re,
-                }),
-                l.createElement(hn.qh, {
-                  exact: !0,
-                  path: Ll.OptinAdminEdit(":pageid"),
-                  render: (e) =>
-                    l.createElement(
-                      _l.S,
-                      { pageid: e.match.params.pageid },
-                      l.createElement(Pi, null),
-                    ),
-                }),
-                l.createElement(hn.qh, {
-                  exact: !0,
-                  path: Ll.OptinAdminAnalysis(":pageid"),
-                  render: (e) =>
-                    l.createElement(
-                      _l.S,
-                      { pageid: e.match.params.pageid },
-                      l.createElement(pl.ft, null),
-                    ),
-                }),
-                l.createElement(hn.qh, {
-                  exact: !0,
-                  path: Ll.OptinAdminDemoAnalysis(":pageid"),
-                  render: (e) =>
-                    l.createElement(
-                      _l.A,
-                      { pageid: e.match.params.pageid },
-                      l.createElement(Ml.OF, { bShowOnlySummary: !1 }),
-                    ),
-                }),
-                l.createElement(hn.qh, {
-                  exact: !0,
-                  path: Ll.OptinAdminSupport(":appid"),
-                  render: (e) =>
-                    l.createElement(Fi, {
-                      appid: Number.parseInt(e.match.params.appid),
-                    }),
-                }),
-                l.createElement(hn.qh, {
-                  path: Ll.OptInApp(":partialpageid", ":appid"),
-                  render: (e) =>
-                    l.createElement(os, {
-                      appid: e.match.params.appid,
-                      pageid: zl(e.match.params.partialpageid),
-                    }),
-                }),
-                l.createElement(hn.qh, {
-                  path: Ll.OptInAppReviewDashboard(),
-                  component: Cl,
-                }),
-                l.createElement(hn.qh, {
-                  path: Ll.OptInAppReview(":pageid"),
-                  render: (e) =>
-                    l.createElement(ks, { pageid: e.match.params.pageid }),
-                }),
-                l.createElement(hn.qh, {
-                  path: Ll.OptInAppAppeal(":partialpageid", ":appid"),
-                  render: (e) =>
-                    l.createElement(Vs, {
-                      appid: Number.parseInt(e.match.params.appid),
-                      pageid: zl(e.match.params.partialpageid),
-                    }),
-                }),
-                l.createElement(hn.qh, {
-                  path: Ll.OptInAppSurvey(":partialpageid"),
-                  render: (e) =>
-                    l.createElement(Di, {
-                      pageid: e.match.params.partialpageid,
-                    }),
-                }),
-                l.createElement(hn.qh, {
-                  path: Ll.OptInSurveyResults(":partialpageid"),
-                  render: (e) =>
-                    l.createElement(Nl, {
-                      pageid: e.match.params.partialpageid,
-                    }),
-                }),
-                l.createElement(hn.qh, {
-                  path: Ll.OptInPartnerDashboard(":partialpageid"),
-                  render: (e) =>
-                    l.createElement(al, {
-                      pageid: zl(e.match.params.partialpageid),
-                    }),
-                }),
-                l.createElement(hn.qh, { component: r.a }),
-              ),
-            )
-          : null;
+        return l.createElement(
+          us.m,
+          null,
+          l.createElement(
+            o.Kd,
+            { basename: (0, n.C)() + "optin/" },
+            l.createElement(cs, null),
+            l.createElement(
+              hn.dO,
+              null,
+              l.createElement(hn.qh, {
+                exact: !0,
+                path: n.B.DiagData(),
+                render: (e) =>
+                  l.createElement(it.z, {
+                    ...e,
+                    strConfigID: "application_config",
+                  }),
+              }),
+              l.createElement(hn.qh, {
+                exact: !0,
+                path: Ll.OptinAdminDashboard(),
+                component: Re,
+              }),
+              l.createElement(hn.qh, {
+                exact: !0,
+                path: Ll.OptinAdminEdit(":pageid"),
+                render: (e) =>
+                  l.createElement(
+                    _l.S,
+                    { pageid: e.match.params.pageid },
+                    l.createElement(Pi, null),
+                  ),
+              }),
+              l.createElement(hn.qh, {
+                exact: !0,
+                path: Ll.OptinAdminAnalysis(":pageid"),
+                render: (e) =>
+                  l.createElement(
+                    _l.S,
+                    { pageid: e.match.params.pageid },
+                    l.createElement(pl.ft, null),
+                  ),
+              }),
+              l.createElement(hn.qh, {
+                exact: !0,
+                path: Ll.OptinAdminDemoAnalysis(":pageid"),
+                render: (e) =>
+                  l.createElement(
+                    _l.A,
+                    { pageid: e.match.params.pageid },
+                    l.createElement(Ml.OF, { bShowOnlySummary: !1 }),
+                  ),
+              }),
+              l.createElement(hn.qh, {
+                exact: !0,
+                path: Ll.OptinAdminSupport(":appid"),
+                render: (e) =>
+                  l.createElement(Fi, {
+                    appid: Number.parseInt(e.match.params.appid),
+                  }),
+              }),
+              l.createElement(hn.qh, {
+                path: Ll.OptInApp(":partialpageid", ":appid"),
+                render: (e) =>
+                  l.createElement(os, {
+                    appid: e.match.params.appid,
+                    pageid: zl(e.match.params.partialpageid),
+                  }),
+              }),
+              l.createElement(hn.qh, {
+                path: Ll.OptInAppReviewDashboard(),
+                component: Cl,
+              }),
+              l.createElement(hn.qh, {
+                path: Ll.OptInAppReview(":pageid"),
+                render: (e) =>
+                  l.createElement(ks, { pageid: e.match.params.pageid }),
+              }),
+              l.createElement(hn.qh, {
+                path: Ll.OptInAppAppeal(":partialpageid", ":appid"),
+                render: (e) =>
+                  l.createElement(Vs, {
+                    appid: Number.parseInt(e.match.params.appid),
+                    pageid: zl(e.match.params.partialpageid),
+                  }),
+              }),
+              l.createElement(hn.qh, {
+                path: Ll.OptInAppSurvey(":partialpageid"),
+                render: (e) =>
+                  l.createElement(Di, { pageid: e.match.params.partialpageid }),
+              }),
+              l.createElement(hn.qh, {
+                path: Ll.OptInSurveyResults(":partialpageid"),
+                render: (e) =>
+                  l.createElement(Nl, { pageid: e.match.params.partialpageid }),
+              }),
+              l.createElement(hn.qh, {
+                path: Ll.OptInPartnerDashboard(":partialpageid"),
+                render: (e) =>
+                  l.createElement(al, {
+                    pageid: zl(e.match.params.partialpageid),
+                  }),
+              }),
+              l.createElement(hn.qh, { component: r.a }),
+            ),
+          ),
+        );
       }
     },
     34585: (e, t, a) => {
@@ -54966,45 +54965,46 @@
       function It(e) {
         const { id: t } = e,
           a = (0, i.zw)(t),
-          n = (0, f.q3)(() => a.BIsDirty()),
-          r = a.GetModel(),
-          [s] = (0, f.q3)(() => [r.creator_name]),
-          l = [
-            {
-              name: "Main Message",
-              key: "mainmessage",
-              contents: c.createElement(
-                "div",
-                null,
-                c.createElement(p.G, { data: r }),
+          n = (0, f.q3)(() => a?.BIsDirty()),
+          r = a?.GetModel(),
+          [s] = (0, f.q3)(() => [r?.creator_name]);
+        if (!r) return c.createElement(F.t, null);
+        const l = [
+          {
+            name: "Main Message",
+            key: "mainmessage",
+            contents: c.createElement(
+              T.tH,
+              null,
+              c.createElement(p.G, { data: r }),
+            ),
+          },
+          {
+            name: "Template Vars",
+            key: "templatevars",
+            contents: c.createElement(
+              T.tH,
+              null,
+              c.createElement(p.G, { data: a.GetTemplateVarsModel() || {} }),
+            ),
+          },
+          {
+            name: "Additional Restrictions",
+            key: "additionalrestriction",
+            contents: c.createElement(
+              T.tH,
+              null,
+              c.createElement(p.G, {
+                data: a.GetAdditionalRestrictionModel() || {},
+              }),
+              c.createElement(
+                I.$n,
+                { onClick: () => a.ClearUserFilters() },
+                "Clear user Filters",
               ),
-            },
-            {
-              name: "Template Vars",
-              key: "templatevars",
-              contents: c.createElement(
-                T.tH,
-                null,
-                c.createElement(p.G, { data: a.GetTemplateVarsModel() || {} }),
-              ),
-            },
-            {
-              name: "Additional Restrictions",
-              key: "additionalrestriction",
-              contents: c.createElement(
-                T.tH,
-                null,
-                c.createElement(p.G, {
-                  data: a.GetAdditionalRestrictionModel() || {},
-                }),
-                c.createElement(
-                  I.$n,
-                  { onClick: () => a.ClearUserFilters() },
-                  "Clear user Filters",
-                ),
-              ),
-            },
-          ];
+            ),
+          },
+        ];
         return c.createElement(
           "div",
           null,
@@ -55015,6 +55015,21 @@
               { className: C().SectionCtn },
               c.createElement(I.JU, null, "Creator:"),
               c.createElement("div", null, s),
+            ),
+          2 == r.visibility &&
+            c.createElement(
+              "div",
+              null,
+              c.createElement("br", null),
+              "Note: If marketing message is not appearing in the client then look to see if the associated item is being ",
+              c.createElement(
+                "a",
+                {
+                  href: "https://grafana.valve.org/steam/d/c2d2436a-7206-47d5-8fca-89bdc91db65d/storemarketing-getitemstofeature-filtering?orgId=2&var-type=marketing_messages",
+                  target: "_blank",
+                },
+                "filtered by store browse.",
+              ),
             ),
           c.createElement("br", null),
           c.createElement("br", null),
@@ -55897,24 +55912,35 @@
         );
       }
       function ea(e) {
-        const { oEditableMessage: t } = e;
+        const { oEditableMessage: t } = e,
+          [a, n, r] = (0, f.q3)(() => [
+            t.BHasPlatformWindows(),
+            t.BHasPlatformMac(),
+            t.BHasPlatformLinux(),
+          ]);
         return c.createElement(
           "div",
           { className: C().SectionCtn },
           c.createElement(I.JU, null, "PLATFORMS"),
+          Boolean(!a && !r && !n) &&
+            c.createElement(
+              "div",
+              { className: A.WarningStylesWithIcon },
+              "Warning: No platform chosen, this will not surfaces to any Steam Client",
+            ),
           c.createElement(I.Yh, {
             label: "Windows",
-            checked: t.BHasPlatformWindows(),
+            checked: a,
             onChange: t.SetPlatformWindows,
           }),
           c.createElement(I.Yh, {
             label: "Mac",
-            checked: t.BHasPlatformMac(),
+            checked: n,
             onChange: t.SetPlatformMac,
           }),
           c.createElement(I.Yh, {
             label: "Linux",
-            checked: t.BHasPlatformLinux(),
+            checked: r,
             onChange: t.SetPlatformLinux,
           }),
         );
@@ -60224,11 +60250,14 @@
         DataMigration: () => "/planning/migration",
       };
       function Ni(e) {
-        (0, c.useEffect)(() => {
-          0;
-        }, []);
-        return (0, u.d)()
-          ? c.createElement(
+        return (
+          (0, c.useEffect)(() => {
+            0;
+          }, []),
+          c.createElement(
+            u.m,
+            null,
+            c.createElement(
               m.Kd,
               { basename: (0, n.C)() + "promotion/" },
               c.createElement(
@@ -60377,8 +60406,9 @@
                 }),
                 c.createElement(d.qh, { component: _.a }),
               ),
-            )
-          : null;
+            ),
+          )
+        );
       }
     },
     23247: (e, t, a) => {
@@ -72429,7 +72459,7 @@
             ? i.createElement(Qe.t, { string: (0, ae.we)("#Loading") })
             : i.createElement(
                 "div",
-                null,
+                { className: M().VisitorCount },
                 i.createElement(
                   "div",
                   { className: (0, $.A)(A().BigNumber) },

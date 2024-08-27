@@ -1732,12 +1732,7 @@
             this.DispatchEvent("valve-userpausechange");
         }
         Play() {
-          this.SetUserPlayChoice(!0),
-            !this.IsLiveContent() &&
-            this.m_mpd &&
-            this.m_mpd.GetEndTime() - this.GetCurrentPlayTime() < 1
-              ? this.Seek(this.m_mpd.GetStartTime())
-              : this.Seek(this.GetCurrentPlayTime());
+          this.SetUserPlayChoice(!0), this.Seek(this.GetCurrentPlayTime());
         }
         Pause() {
           (this.m_bUserLiveEdgeChoice = !1),

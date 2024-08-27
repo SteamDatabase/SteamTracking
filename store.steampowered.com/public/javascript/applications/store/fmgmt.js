@@ -1096,11 +1096,16 @@
       const s = (e) => null != e;
       function i(e, t, a, n = !1) {
         const l = new URLSearchParams(e.location.search.substring(1));
-        l.delete(t),
-          s(a) && l.append(t, a),
-          n
-            ? e.replace(`?${l.toString()}`, { ...e.location.state })
-            : e.push(`?${l.toString()}`);
+        if (s(a)) {
+          if (l.get(t) == a) return;
+          l.set(t, a);
+        } else {
+          if (!l.has(t)) return;
+          l.delete(t);
+        }
+        n
+          ? e.replace(`?${l.toString()}`, { ...e.location.state })
+          : e.push(`?${l.toString()}`);
       }
       function o(e, t, a) {
         i(e, t, a, !0);
@@ -1119,8 +1124,8 @@
               : t;
           }, [o.search, e, t]),
           m = (0, n.useCallback)(
-            (t) => {
-              i(a, e, s(t) ? String(t) : null);
+            (t, n = !1) => {
+              i(a, e, s(t) ? String(t) : null, n);
             },
             [a, e],
           );
@@ -1321,7 +1326,7 @@
         a.d(t, {
           FamilyTabContainer: () => sn,
           GenerateNameElementForHistory: () => rn,
-          default: () => za,
+          default: () => Va,
         });
       var n = a(90626),
         l = a(92298),
@@ -1784,19 +1789,36 @@
             bForceUseWindow: c,
             ...m
           } = e,
-          [u, d] = n.useState(),
-          p = u && (0, q._f)(u, "y"),
-          _ = (0, W.Ue)(d, t),
-          y = p && !c,
-          g = c || (u && !p);
-        return n.createElement(
-          x.Z,
-          { className: o, ref: _, ...m },
-          y && n.createElement(z, { ...e, elContainer: u, elScrollable: p }),
-          g && n.createElement(V, { ...e, elContainer: u }),
+          [u, d] = (0, n.useState)(c ? "window" : void 0),
+          p = (0, n.useRef)(null),
+          _ = (0, n.useRef)(null),
+          y = (0, W.Ue)(p, t);
+        return (
+          (0, n.useEffect)(() => {
+            if (c) d("window");
+            else {
+              if (p.current) {
+                const e = (0, q._f)(p.current, "y");
+                _.current = e;
+              }
+              _.current ? d("element") : d("window");
+            }
+          }, [c]),
+          n.createElement(
+            x.Z,
+            { className: o, ref: y, ...m },
+            "element" === u &&
+              n.createElement(V, {
+                ...e,
+                elContainer: p.current,
+                elScrollable: _.current,
+              }),
+            "window" === u &&
+              n.createElement(z, { ...e, elContainer: p.current }),
+          )
         );
       });
-      function V(e) {
+      function z(e) {
         const { elContainer: t, nRows: a, nItemHeight: l, nRowGap: r = 10 } = e,
           s = l + r,
           i = (0, H.XW)({
@@ -1805,15 +1827,54 @@
             estimateSize: n.useCallback(() => s, [s]),
             overscan: 6,
             initialRect: void 0,
+            initialOffset: window?.history?.state?.scrollY,
+            observeElementOffset(e, t) {
+              const a = e.scrollElement;
+              if (!a) return;
+              const l = () => {
+                queueMicrotask(() => {
+                  (0, n.startTransition)(() => {
+                    t(a[e.options.horizontal ? "scrollX" : "scrollY"]);
+                  });
+                });
+              };
+              return (
+                l(),
+                a.addEventListener("scroll", l, { passive: !0 }),
+                () => {
+                  a.removeEventListener("scroll", l);
+                }
+              );
+            },
+            observeElementRect(e, t) {
+              const a = e.scrollElement;
+              if (!a) return;
+              const l = () => {
+                queueMicrotask(() => {
+                  (0, n.startTransition)(() => {
+                    t({ width: a.innerWidth, height: a.innerHeight });
+                  });
+                });
+              };
+              return (
+                l(),
+                a.addEventListener("resize", l, { passive: !0 }),
+                () => {
+                  a.removeEventListener("resize", l);
+                }
+              );
+            },
           });
         return (
           n.useEffect(() => {
-            i.measure();
+            (0, n.startTransition)(() => {
+              i.measure();
+            });
           }, [i, s]),
           n.createElement(j, { ...e, virtualizer: i })
         );
       }
-      function z(e) {
+      function V(e) {
         const {
             nRows: t,
             elContainer: a,
@@ -1831,7 +1892,9 @@
           });
         return (
           n.useEffect(() => {
-            o.measure();
+            (0, n.startTransition)(() => {
+              o.measure();
+            });
           }, [o, i]),
           n.createElement(j, { ...e, virtualizer: o })
         );
@@ -1851,28 +1914,32 @@
             },
           },
           n.createElement(
-            "div",
-            {
-              style: {
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                transform: `translateY( ${s}px )`,
+            n.Suspense,
+            null,
+            n.createElement(
+              "div",
+              {
+                style: {
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  transform: `translateY( ${s}px )`,
+                },
               },
-            },
-            t
-              .getVirtualItems()
-              .map((e) =>
-                n.createElement(Z, {
-                  key: e.key,
-                  virtualizer: t,
-                  bDynamic: r,
-                  idx: e.index,
-                  rowGap: a,
-                  renderItem: l,
-                }),
-              ),
+              t
+                .getVirtualItems()
+                .map((e) =>
+                  n.createElement(Z, {
+                    key: e.key,
+                    virtualizer: t,
+                    bDynamic: r,
+                    idx: e.index,
+                    rowGap: a,
+                    renderItem: l,
+                  }),
+                ),
+            ),
           ),
         );
       }
@@ -2961,7 +3028,7 @@
           ),
         );
       }
-      function Ve(e) {
+      function ze(e) {
         const t = 2,
           { nRows: a, setShowAll: l, setRows: r, nIncrement: s = t } = e,
           i = n.useRef();
@@ -3004,7 +3071,7 @@
           )
         );
       }
-      function ze(e, t) {
+      function Ve(e, t) {
         const [a, l] = (function () {
             const [e, t] = n.useState(7),
               a = n.useCallback((e, a) => {
@@ -3055,7 +3122,7 @@
             setShowAll: m,
             nColumns: u,
             OnWidthChanged: d,
-          } = ze(t, !1),
+          } = Ve(t, !1),
           _ = n.useCallback(
             (e, a, s) =>
               n.createElement(Ue, {
@@ -3088,7 +3155,7 @@
                 renderItem: _,
               }),
               !c &&
-                n.createElement(Ve, { nRows: i, setRows: o, setShowAll: m }),
+                n.createElement(ze, { nRows: i, setRows: o, setShowAll: m }),
             )
           : null;
       }
@@ -3271,7 +3338,7 @@
         it = a(56545),
         ot = a(72839),
         ct = a(23809),
-        mt = a(29482);
+        mt = a(16021);
       function ut(e, t) {
         const a = _e()()
             .startOf("day")
@@ -3870,7 +3937,7 @@
             setShowAll: y,
             nColumns: g,
             OnWidthChanged: E,
-          } = ze(c, !m);
+          } = Ve(c, !m);
         return 0 == c.length
           ? null
           : n.createElement(
@@ -3898,7 +3965,7 @@
                   onWidthChanged: E,
                 }),
               !_ &&
-                n.createElement(Ve, { nRows: d, setShowAll: y, setRows: p }),
+                n.createElement(ze, { nRows: d, setShowAll: y, setRows: p }),
             );
       }
       function At(e) {
@@ -4311,7 +4378,7 @@
               onToggle: c,
             }),
             !o &&
-              n.createElement(Vt, {
+              n.createElement(zt, {
                 className: Ee.Input,
                 nWindows: s,
                 onSet: m,
@@ -4330,7 +4397,7 @@
         for (let l = e; l < t; l++) (a |= n), (n <<= BigInt(1));
         return a;
       }
-      function Vt(e) {
+      function zt(e) {
         const { className: t, nWindows: a, onSet: l, ...r } = e,
           [s, i] = n.useState(_e()().startOf("day")),
           [c, m] = n.useState(_e()().startOf("day").add(1, "day")),
@@ -4423,7 +4490,7 @@
           ),
         );
       }
-      function zt(e) {
+      function Vt(e) {
         let t = (0, p.Yp)("#Parental_Playtime_Hours", e);
         return (
           0 == e
@@ -4449,7 +4516,7 @@
             [l],
           ),
           m = [];
-        for (let e = r; e < s; e++) m.push({ data: e, label: zt(e) });
+        for (let e = r; e < s; e++) m.push({ data: e, label: Vt(e) });
         return n.createElement(o.Vb, {
           layout: i,
           label: (0, p.we)(t),
@@ -4498,7 +4565,7 @@
                 "div",
                 null,
                 (function (e) {
-                  return zt(Math.floor(e / 60));
+                  return Vt(Math.floor(e / 60));
                 })(c),
               ),
             ),
@@ -6169,7 +6236,7 @@
             )
           : null;
       }
-      function Va(e) {
+      function za(e) {
         const { familyGroupID: t } = e,
           a = (0, y.Hs)(t),
           l = a.data
@@ -6217,7 +6284,7 @@
           n.createElement(Ha, { steamid: c }),
         );
       }
-      const za = function () {
+      const Va = function () {
         const e = (0, i.A)(),
           [t, a] = (0, n.useState)(null),
           l = (0, h.W5)(),
@@ -6900,7 +6967,7 @@
             (s.push({
               name: (0, p.we)("#FamilyManagement_PlaytimeTab"),
               key: "playtime",
-              contents: n.createElement(Va, { familyGroupID: t }),
+              contents: n.createElement(za, { familyGroupID: t }),
             }),
             s.push({
               name: (0, p.we)("#FamilyManagement_HistoryTab"),

@@ -195,12 +195,14 @@ html.responsive.touch ._3lJb_YN8uykqLcm4eG1jRF {
 }
 ._3miRjDumYLGynv1Nn7lkUt ._1mhrsl5i4BKJcswusNF-Ub .OfWnMzBeP0_WEadkOKes1,
 ._3miRjDumYLGynv1Nn7lkUt ._1mhrsl5i4BKJcswusNF-Ub .E5F7A-Sl_JZoQW8YbCktt,
-._3miRjDumYLGynv1Nn7lkUt ._1mhrsl5i4BKJcswusNF-Ub ._1TNA21Q8xGpOoRqDgI_-VS {
+._3miRjDumYLGynv1Nn7lkUt ._1mhrsl5i4BKJcswusNF-Ub ._1TNA21Q8xGpOoRqDgI_-VS,
+._3miRjDumYLGynv1Nn7lkUt ._1mhrsl5i4BKJcswusNF-Ub ._22LLqIBATUUdrf9TjIbJTF {
   background: rgba(255, 255, 255, 0.1);
   width: 120px;
   margin-right: 4px;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   padding: 0px 6px;
   min-height: 89px;

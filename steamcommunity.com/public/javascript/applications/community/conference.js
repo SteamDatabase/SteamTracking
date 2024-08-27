@@ -2006,11 +2006,16 @@
       const r = (e) => null != e;
       function i(e, t, n, a = !1) {
         const o = new URLSearchParams(e.location.search.substring(1));
-        o.delete(t),
-          r(n) && o.append(t, n),
-          a
-            ? e.replace(`?${o.toString()}`, { ...e.location.state })
-            : e.push(`?${o.toString()}`);
+        if (r(n)) {
+          if (o.get(t) == n) return;
+          o.set(t, n);
+        } else {
+          if (!o.has(t)) return;
+          o.delete(t);
+        }
+        a
+          ? e.replace(`?${o.toString()}`, { ...e.location.state })
+          : e.push(`?${o.toString()}`);
       }
       function s(e, t) {
         const n = (0, o.W6)(),
@@ -2026,8 +2031,8 @@
               : t;
           }, [s.search, e, t]),
           m = (0, a.useCallback)(
-            (t) => {
-              i(n, e, r(t) ? String(t) : null);
+            (t, a = !1) => {
+              i(n, e, r(t) ? String(t) : null, a);
             },
             [n, e],
           );

@@ -49,7 +49,7 @@
         d = a.n(u),
         p = a(55263);
       var _ = a(52038),
-        h = a(23825),
+        h = a(13952),
         S = a(95034),
         H = a(92757),
         f = a(32381),
@@ -382,11 +382,16 @@
       const i = (e) => null != e;
       function c(e, t, a, n = !1) {
         const r = new URLSearchParams(e.location.search.substring(1));
-        r.delete(t),
-          i(a) && r.append(t, a),
-          n
-            ? e.replace(`?${r.toString()}`, { ...e.location.state })
-            : e.push(`?${r.toString()}`);
+        if (i(a)) {
+          if (r.get(t) == a) return;
+          r.set(t, a);
+        } else {
+          if (!r.has(t)) return;
+          r.delete(t);
+        }
+        n
+          ? e.replace(`?${r.toString()}`, { ...e.location.state })
+          : e.push(`?${r.toString()}`);
       }
       function l(e, t) {
         const a = (0, r.W6)(),
@@ -402,8 +407,8 @@
               : t;
           }, [l.search, e, t]),
           m = (0, n.useCallback)(
-            (t) => {
-              c(a, e, i(t) ? String(t) : null);
+            (t, n = !1) => {
+              c(a, e, i(t) ? String(t) : null, n);
             },
             [a, e],
           );

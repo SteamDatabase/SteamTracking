@@ -118,11 +118,11 @@
         Gs: () => f,
         NC: () => Y,
         RO: () => R,
-        T7: () => W,
+        T7: () => z,
         T_: () => M,
-        U3: () => T,
+        U3: () => K,
         Wx: () => y,
-        XB: () => z,
+        XB: () => W,
         XE: () => Z,
         XK: () => V,
         Y5: () => E,
@@ -866,7 +866,7 @@
       function R(e) {
         return g.Get().m_mapPriceProposals.get(e);
       }
-      function K(e) {
+      function T(e) {
         let t = !1;
         for (const r of g.Get().m_rgKnownPriceKeys) {
           let a = g.Get().GetPublishedPrice(e, r);
@@ -890,7 +890,7 @@
         }
         return r;
       }
-      function T() {
+      function K() {
         return g.Get().m_rgKnownPriceKeys;
       }
       function V(e) {
@@ -912,7 +912,7 @@
           g.Get().CancelProposal(e);
         }, [e]);
       }
-      function W() {
+      function z() {
         const [e, t] = n.useState(g.Get().m_strDisplayPriceKey),
           r = g.Get().m_rgKnownPriceKeys,
           a = n.useCallback((e) => {
@@ -922,7 +922,7 @@
           }, []);
         return { strPriceKey: e, rgSupportedPriceKeys: r, fnSetPriceKey: a };
       }
-      function z(e) {
+      function W(e) {
         const t = (0, p.CH)();
         return (
           (0, p.hL)(g.Get().m_allPriceOverridesCallbackList, t),
@@ -980,7 +980,7 @@
         let t = [];
         const r = g.Get().m_rgKnownPriceKeys;
         for (let a of e) {
-          if (K(a)) continue;
+          if (T(a)) continue;
           let e = !1;
           for (const t of r) {
             if (!g.Get().BPriceKeyRequired(t)) continue;
@@ -1432,7 +1432,6 @@
           { maxBatchSize: 100, ...t },
         );
       }
-      new WeakMap();
       function P(e) {
         const t = (0, n.KV)(),
           r = a.useContext(f);
@@ -1486,38 +1485,56 @@
       let S;
     },
     11577: (e, t, r) => {
-      r.d(t, { a: () => l, d: () => p });
+      r.d(t, { a: () => u, m: () => l });
       var a = r(90626),
         i = r(96059),
         s = r(16021),
-        n = r(4434),
-        c = r(44332),
-        o = r(78327);
-      async function l(e = !1) {
-        if (e && s.A.BIsInitialized()) return;
-        const t = (0, o.Tc)("partnerbrowse_webapi_token", "application_config");
-        (0, c.w)(Boolean(t), "require partnerbrowse_webapi_token");
-        const r = new i.D(o.TS.WEBAPI_BASE_URL, t);
+        n = r(44332),
+        c = r(78327),
+        o = r(38452);
+      function l(e) {
+        const [t, r] = (0, a.useState)(!1),
+          [i] = (0, a.useState)(() => p()),
+          s = (0, a.useMemo)(
+            () => ({
+              country: c.TS.COUNTRY,
+              language: c.TS.LANGUAGE,
+              realm: c.TS.EREALM,
+              bUsePartnerAPI: !0,
+            }),
+            [],
+          );
         return (
-          ("dev" != o.TS.WEB_UNIVERSE && "beta" != o.TS.WEB_UNIVERSE) ||
-            console.log(
-              "DEV_DEBUG: Initializing CStoreItemCache with access token",
-              t,
-            ),
-          s.A.Initialize(r, o.iA.is_partner_member)
+          (0, a.useEffect)(() => {
+            m(i).then(() => r(!0));
+          }, [i]),
+          t
+            ? (0, a.createElement)(o.V3, {
+                context: s,
+                serviceTransportOverride: i.GetServiceTransport(),
+                children: e.children,
+              })
+            : null
         );
       }
       function p() {
-        const e = (0, n.m)("usePartnerStoreBrowseAPI"),
-          [t, r] = (0, a.useState)(!1);
+        const e = (0, c.Tc)("partnerbrowse_webapi_token", "application_config");
+        (0, n.w)(Boolean(e), "require partnerbrowse_webapi_token");
+        const t = new i.D(c.TS.WEBAPI_BASE_URL, e);
         return (
-          (0, a.useEffect)(() => {
-            l().then(() => {
-              e?.token?.reason || r(!0);
-            });
-          }, []),
+          ("dev" != c.TS.WEB_UNIVERSE && "beta" != c.TS.WEB_UNIVERSE) ||
+            console.log(
+              "DEV_DEBUG: Initializing CStoreItemCache with access token",
+              e,
+            ),
           t
         );
+      }
+      async function u(e = !1) {
+        if (!e || !s.A.BIsInitialized()) return m(p());
+      }
+      async function m(e) {
+        return s.A.Initialize(e, c.iA.is_partner_member);
       }
     },
   },

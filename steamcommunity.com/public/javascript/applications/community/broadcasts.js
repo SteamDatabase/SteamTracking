@@ -2289,11 +2289,16 @@
       const s = (e) => null != e;
       function l(e, t, a, n = !1) {
         const r = new URLSearchParams(e.location.search.substring(1));
-        r.delete(t),
-          s(a) && r.append(t, a),
-          n
-            ? e.replace(`?${r.toString()}`, { ...e.location.state })
-            : e.push(`?${r.toString()}`);
+        if (s(a)) {
+          if (r.get(t) == a) return;
+          r.set(t, a);
+        } else {
+          if (!r.has(t)) return;
+          r.delete(t);
+        }
+        n
+          ? e.replace(`?${r.toString()}`, { ...e.location.state })
+          : e.push(`?${r.toString()}`);
       }
       function i(e, t) {
         const a = (0, r.W6)(),
@@ -2309,8 +2314,8 @@
               : t;
           }, [i.search, e, t]),
           m = (0, n.useCallback)(
-            (t) => {
-              l(a, e, s(t) ? String(t) : null);
+            (t, n = !1) => {
+              l(a, e, s(t) ? String(t) : null, n);
             },
             [a, e],
           );

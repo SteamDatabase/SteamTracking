@@ -4,247 +4,6 @@
   self.webpackChunkappmgmt_storeadmin || []).push([
   [2201],
   {
-    58632: (M) => {
-      "use strict";
-      var z,
-        b = (function () {
-          function M(M, z) {
-            if ("function" != typeof M)
-              throw new TypeError(
-                "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but got: " +
-                  M +
-                  ".",
-              );
-            (this._batchLoadFn = M),
-              (this._maxBatchSize = (function (M) {
-                var z = !M || !1 !== M.batch;
-                if (!z) return 1;
-                var b = M && M.maxBatchSize;
-                if (void 0 === b) return 1 / 0;
-                if ("number" != typeof b || b < 1)
-                  throw new TypeError(
-                    "maxBatchSize must be a positive number: " + b,
-                  );
-                return b;
-              })(z)),
-              (this._batchScheduleFn = (function (M) {
-                var z = M && M.batchScheduleFn;
-                if (void 0 === z) return p;
-                if ("function" != typeof z)
-                  throw new TypeError(
-                    "batchScheduleFn must be a function: " + z,
-                  );
-                return z;
-              })(z)),
-              (this._cacheKeyFn = (function (M) {
-                var z = M && M.cacheKeyFn;
-                if (void 0 === z)
-                  return function (M) {
-                    return M;
-                  };
-                if ("function" != typeof z)
-                  throw new TypeError("cacheKeyFn must be a function: " + z);
-                return z;
-              })(z)),
-              (this._cacheMap = (function (M) {
-                var z = !M || !1 !== M.cache;
-                if (!z) return null;
-                var b = M && M.cacheMap;
-                if (void 0 === b) return new Map();
-                if (null !== b) {
-                  var p = ["get", "set", "delete", "clear"].filter(
-                    function (M) {
-                      return b && "function" != typeof b[M];
-                    },
-                  );
-                  if (0 !== p.length)
-                    throw new TypeError(
-                      "Custom cacheMap missing methods: " + p.join(", "),
-                    );
-                }
-                return b;
-              })(z)),
-              (this._batch = null),
-              (this.name = (function (M) {
-                if (M && M.name) return M.name;
-                return null;
-              })(z));
-          }
-          var z = M.prototype;
-          return (
-            (z.load = function (M) {
-              if (null == M)
-                throw new TypeError(
-                  "The loader.load() function must be called with a value, but got: " +
-                    String(M) +
-                    ".",
-                );
-              var z = (function (M) {
-                  var z = M._batch;
-                  if (
-                    null !== z &&
-                    !z.hasDispatched &&
-                    z.keys.length < M._maxBatchSize
-                  )
-                    return z;
-                  var b = { hasDispatched: !1, keys: [], callbacks: [] };
-                  return (
-                    (M._batch = b),
-                    M._batchScheduleFn(function () {
-                      !(function (M, z) {
-                        if (((z.hasDispatched = !0), 0 === z.keys.length))
-                          return void A(z);
-                        var b;
-                        try {
-                          b = M._batchLoadFn(z.keys);
-                        } catch (b) {
-                          return O(
-                            M,
-                            z,
-                            new TypeError(
-                              "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function errored synchronously: " +
-                                String(b) +
-                                ".",
-                            ),
-                          );
-                        }
-                        if (!b || "function" != typeof b.then)
-                          return O(
-                            M,
-                            z,
-                            new TypeError(
-                              "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function did not return a Promise: " +
-                                String(b) +
-                                ".",
-                            ),
-                          );
-                        b.then(function (M) {
-                          if (!c(M))
-                            throw new TypeError(
-                              "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function did not return a Promise of an Array: " +
-                                String(M) +
-                                ".",
-                            );
-                          if (M.length !== z.keys.length)
-                            throw new TypeError(
-                              "DataLoader must be constructed with a function which accepts Array<key> and returns Promise<Array<value>>, but the function did not return a Promise of an Array of the same length as the Array of keys.\n\nKeys:\n" +
-                                String(z.keys) +
-                                "\n\nValues:\n" +
-                                String(M),
-                            );
-                          A(z);
-                          for (var b = 0; b < z.callbacks.length; b++) {
-                            var p = M[b];
-                            p instanceof Error
-                              ? z.callbacks[b].reject(p)
-                              : z.callbacks[b].resolve(p);
-                          }
-                        }).catch(function (b) {
-                          O(M, z, b);
-                        });
-                      })(M, b);
-                    }),
-                    b
-                  );
-                })(this),
-                b = this._cacheMap,
-                p = this._cacheKeyFn(M);
-              if (b) {
-                var q = b.get(p);
-                if (q) {
-                  var o = z.cacheHits || (z.cacheHits = []);
-                  return new Promise(function (M) {
-                    o.push(function () {
-                      M(q);
-                    });
-                  });
-                }
-              }
-              z.keys.push(M);
-              var W = new Promise(function (M, b) {
-                z.callbacks.push({ resolve: M, reject: b });
-              });
-              return b && b.set(p, W), W;
-            }),
-            (z.loadMany = function (M) {
-              if (!c(M))
-                throw new TypeError(
-                  "The loader.loadMany() function must be called with Array<key> but got: " +
-                    M +
-                    ".",
-                );
-              for (var z = [], b = 0; b < M.length; b++)
-                z.push(
-                  this.load(M[b]).catch(function (M) {
-                    return M;
-                  }),
-                );
-              return Promise.all(z);
-            }),
-            (z.clear = function (M) {
-              var z = this._cacheMap;
-              if (z) {
-                var b = this._cacheKeyFn(M);
-                z.delete(b);
-              }
-              return this;
-            }),
-            (z.clearAll = function () {
-              var M = this._cacheMap;
-              return M && M.clear(), this;
-            }),
-            (z.prime = function (M, z) {
-              var b = this._cacheMap;
-              if (b) {
-                var p,
-                  O = this._cacheKeyFn(M);
-                if (void 0 === b.get(O))
-                  z instanceof Error
-                    ? (p = Promise.reject(z)).catch(function () {})
-                    : (p = Promise.resolve(z)),
-                    b.set(O, p);
-              }
-              return this;
-            }),
-            M
-          );
-        })(),
-        p =
-          "object" == typeof process && "function" == typeof process.nextTick
-            ? function (M) {
-                z || (z = Promise.resolve()),
-                  z.then(function () {
-                    process.nextTick(M);
-                  });
-              }
-            : "function" == typeof setImmediate
-              ? function (M) {
-                  setImmediate(M);
-                }
-              : function (M) {
-                  setTimeout(M);
-                };
-      function O(M, z, b) {
-        A(z);
-        for (var p = 0; p < z.keys.length; p++)
-          M.clear(z.keys[p]), z.callbacks[p].reject(b);
-      }
-      function A(M) {
-        if (M.cacheHits)
-          for (var z = 0; z < M.cacheHits.length; z++) M.cacheHits[z]();
-      }
-      function c(M) {
-        return (
-          "object" == typeof M &&
-          null !== M &&
-          "number" == typeof M.length &&
-          (0 === M.length ||
-            (M.length > 0 &&
-              Object.prototype.hasOwnProperty.call(M, M.length - 1)))
-        );
-      }
-      M.exports = b;
-    },
     87937: (M, z, b) => {
       (M.exports = b(5193)).tz.load(b(9933));
     },
@@ -348,17 +107,17 @@
             (this.abbr = b),
             (this.offset = M.getTimezoneOffset());
         }
-        function i(M) {
+        function X(M) {
           (this.zone = M), (this.offsetScore = 0), (this.abbrScore = 0);
         }
-        function X(M, z) {
+        function i(M, z) {
           for (var b, p; (p = 6e4 * (((z.at - M.at) / 12e4) | 0)); )
             (b = new N(new Date(M.at + p))).offset === M.offset
               ? (M = b)
               : (z = b);
           return M;
         }
-        function e(M, z) {
+        function u(M, z) {
           return M.offsetScore !== z.offsetScore
             ? M.offsetScore - z.offsetScore
             : M.abbrScore !== z.abbrScore
@@ -367,7 +126,7 @@
                 ? z.zone.population - M.zone.population
                 : z.zone.name.localeCompare(M.zone.name);
         }
-        function u(M, z) {
+        function e(M, z) {
           var b, p;
           for (a(z), b = 0; b < z.length; b++)
             (p = z[b]), (c[p] = c[p] || {}), (c[p][M] = !0);
@@ -389,11 +148,11 @@
           for (z in o) o.hasOwnProperty(z) && W.push(A[z]);
           return W;
         }
-        function t() {
+        function T() {
           try {
             var M = Intl.DateTimeFormat().resolvedOptions().timeZone;
             if (M && M.length > 3) {
-              var z = A[T(M)];
+              var z = A[t(M)];
               if (z) return z;
               C(
                 "Moment Timezone found " +
@@ -416,7 +175,7 @@
                 q = [A];
               for (p = 1; p < 48; p++)
                 (b = new Date(O, p, 1).getTimezoneOffset()) !== c &&
-                  ((M = X(A, (z = new N(new Date(O, p, 1))))),
+                  ((M = i(A, (z = new N(new Date(O, p, 1))))),
                   q.push(M),
                   q.push(new N(new Date(M.at + 6e4))),
                   (A = z),
@@ -430,25 +189,25 @@
             o = r(c),
             W = [];
           for (p = 0; p < o.length; p++) {
-            for (b = new i(s(o[p]), q), O = 0; O < q; O++)
+            for (b = new X(s(o[p]), q), O = 0; O < q; O++)
               b.scoreOffsetAt(c[O]);
             W.push(b);
           }
-          return W.sort(e), W.length > 0 ? W[0].zone.name : void 0;
+          return W.sort(u), W.length > 0 ? W[0].zone.name : void 0;
         }
-        function T(M) {
+        function t(M) {
           return (M || "").toLowerCase().replace(/\//g, "_");
         }
         function l(M) {
           var z, p, O, c;
           for ("string" == typeof M && (M = [M]), z = 0; z < M.length; z++)
-            (c = T((p = (O = M[z].split("|"))[0]))),
+            (c = t((p = (O = M[z].split("|"))[0]))),
               (b[c] = M[z]),
               (A[c] = p),
-              u(c, O[2].split(" "));
+              e(c, O[2].split(" "));
         }
         function s(M, z) {
-          M = T(M);
+          M = t(M);
           var O,
             c = b[M];
           return c instanceof f
@@ -462,8 +221,8 @@
         function m(M) {
           var z, b, O, c;
           for ("string" == typeof M && (M = [M]), z = 0; z < M.length; z++)
-            (O = T((b = M[z].split("|"))[0])),
-              (c = T(b[1])),
+            (O = t((b = M[z].split("|"))[0])),
+              (c = t(b[1])),
               (p[O] = c),
               (A[O] = b[0]),
               (p[c] = O),
@@ -564,7 +323,7 @@
               return this.offsets[this._index(M)];
             },
           }),
-          (i.prototype.scoreOffsetAt = function (M) {
+          (X.prototype.scoreOffsetAt = function (M) {
             (this.offsetScore += Math.abs(
               this.zone.utcOffset(M.at) - M.offset,
             )),
@@ -608,7 +367,7 @@
             );
           }),
           (S.guess = function (M) {
-            return (z && !M) || (z = t()), z;
+            return (z && !M) || (z = T()), z;
           }),
           (S.names = function () {
             var M,
@@ -637,13 +396,13 @@
               : p;
           });
         var g,
-          h = M.fn;
-        function P(M) {
+          P = M.fn;
+        function D(M) {
           return function () {
             return this._z ? this._z.abbr(this) : M.call(this);
           };
         }
-        function D(M) {
+        function h(M) {
           return function () {
             return (this._z = null), M.apply(this, arguments);
           };
@@ -672,7 +431,7 @@
                 z.utcOffset(-p, b), (z._z = A);
               } else z.zone(p, b);
           }),
-          (h.tz = function (z, b) {
+          (P.tz = function (z, b) {
             if (z) {
               if ("string" != typeof z)
                 throw new Error(
@@ -696,12 +455,12 @@
             }
             if (this._z) return this._z.name;
           }),
-          (h.zoneName = P(h.zoneName)),
-          (h.zoneAbbr = P(h.zoneAbbr)),
-          (h.utc = D(h.utc)),
-          (h.local = D(h.local)),
-          (h.utcOffset =
-            ((g = h.utcOffset),
+          (P.zoneName = D(P.zoneName)),
+          (P.zoneAbbr = D(P.zoneAbbr)),
+          (P.utc = h(P.utc)),
+          (P.local = h(P.local)),
+          (P.utcOffset =
+            ((g = P.utcOffset),
             function () {
               return (
                 arguments.length > 0 && (this._z = null),

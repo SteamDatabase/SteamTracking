@@ -1064,11 +1064,16 @@
       const s = (e) => null != e;
       function l(e, t, a, r = !1) {
         const n = new URLSearchParams(e.location.search.substring(1));
-        n.delete(t),
-          s(a) && n.append(t, a),
-          r
-            ? e.replace(`?${n.toString()}`, { ...e.location.state })
-            : e.push(`?${n.toString()}`);
+        if (s(a)) {
+          if (n.get(t) == a) return;
+          n.set(t, a);
+        } else {
+          if (!n.has(t)) return;
+          n.delete(t);
+        }
+        r
+          ? e.replace(`?${n.toString()}`, { ...e.location.state })
+          : e.push(`?${n.toString()}`);
       }
       function m(e, t, a) {
         l(e, t, a, !0);
@@ -1087,8 +1092,8 @@
               : t;
           }, [m.search, e, t]),
           c = (0, r.useCallback)(
-            (t) => {
-              l(a, e, s(t) ? String(t) : null);
+            (t, r = !1) => {
+              l(a, e, s(t) ? String(t) : null, r);
             },
             [a, e],
           );
@@ -5425,7 +5430,7 @@
       }
       (0, l.Cg)([ve.sH], Ee.prototype, "m_privacyState", void 0);
       const Ae = "0px 0px 100% 0px";
-      var Ie = a(29482),
+      var Ie = a(16021),
         Ce = a(15161),
         Re = a(72839),
         Me = a(65946),

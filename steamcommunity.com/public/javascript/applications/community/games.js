@@ -171,7 +171,7 @@
     },
     43186: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => Ta });
+      r.r(t), r.d(t, { default: () => Pa });
       var i = r(56545),
         n = r(37735),
         a = r(80613),
@@ -10373,7 +10373,7 @@
           u = r
             ? (0, Ut.we)("#GamesList_Button_Pause")
             : (0, Ut.we)("#GamesList_Button_Resume"),
-          d = (0, Je.useContext)(ya);
+          d = (0, Je.useContext)(za);
         return (
           (0, Je.useEffect)(
             () => (
@@ -10435,7 +10435,7 @@
               {
                 disabled: s.isPending,
                 onClick: () => {
-                  s.mutateAsync(), ma(e.appid);
+                  s.mutateAsync(), wa(e.appid);
                 },
                 className: Si.DownloadIconButton,
               },
@@ -10506,7 +10506,7 @@
             {
               disabled: r.isPending,
               onClick: () => {
-                r.mutateAsync(), ma(e.appid);
+                r.mutateAsync(), wa(e.appid);
               },
               className: Si.DownloadIconButton,
             },
@@ -10593,14 +10593,14 @@
                   Je.createElement(Ei, {
                     app: e,
                     onOK: () => {
-                      n.mutateAsync(), ma(e.appid);
+                      n.mutateAsync(), wa(e.appid);
                     },
                   }),
                   window,
                 );
               }
             : () => {
-                r.mutateAsync(), ma(e.appid);
+                r.mutateAsync(), wa(e.appid);
               },
           l = e.installed
             ? "#GamesList_Button_Uninstall"
@@ -11001,13 +11001,17 @@
           }
         return { item_type: -1, id: t ? parseInt(t[2]) : 0 };
       }
-      var ln = r(58632),
-        on = r.n(ln);
+      function ln(e, t) {
+        return e.split(t);
+      }
+      var on = r(59411),
+        cn = r(58632),
+        un = r.n(cn);
       r(94601);
-      function cn(e, t) {
+      function dn(e, t) {
         t.Body().set_context(
           (function (e) {
-            let t = new tn.TS();
+            const t = new tn.TS();
             e.bUsePartnerAPI || t.set_country_code(e.country);
             t.set_language(e.language),
               e.realm != $t.TU.k_ESteamRealmUnknown &&
@@ -11016,148 +11020,295 @@
           })(e),
         );
       }
-      function un(e, t, r) {
-        return new (on())(async (r) => {
-          const n = new Set(),
-            a = {};
-          if (
-            (r.forEach((e) => {
-              const [t, r] = ((i = "|"), e.split(i));
-              var i;
-              n.add(t),
-                "top_tags" == r ? (a.include_tag_count = 10) : r && (a[r] = !0);
-            }),
-            a.include_included_items)
-          ) {
-            const { include_included_items: e, ...t } = a;
-            a.included_item_data_request = t;
-          }
-          const s = i.w.Init(tn.eE);
-          cn(t, s),
-            (function (e, t) {
-              e.Body().set_data_request(tn.gn.fromObject(t));
-            })(s, a),
-            n.forEach((e) => {
-              const t = (function (e) {
-                const t = e.match(an);
-                if (t)
-                  switch (t[1]) {
-                    case "app":
-                      return { appid: parseInt(t[2]) };
-                    case "package":
-                      return { packageid: parseInt(t[2]) };
-                    case "bundle":
-                      return { bundleid: parseInt(t[2]) };
-                    case "tag":
-                      return { tagid: parseInt(t[2]) };
-                    case "creator":
-                      return { creatorid: parseInt(t[2]) };
-                    case "hubcategory":
-                      return { hubcategoryid: parseInt(t[2]) };
-                  }
-                (0, rn.w)(!1, `Failed to parse StoreItemID ${e}`);
-              })(e);
-              t && s.Body().add_ids(tn.O4.fromObject(t));
-            });
-          const l = await tn.$4.GetItems(e, s),
-            o = new Map();
-          return (
-            l
-              .Body()
-              .store_items()
-              .forEach((e) => {
-                o.set(
-                  (function (e, t) {
-                    switch (e) {
-                      case 0:
-                        return `app_${t}`;
-                      case 1:
-                        return `package_${t}`;
-                      case 2:
-                        return `bundle_${t}`;
-                      case 4:
-                        return `tag_${t}`;
-                      case 5:
-                        return `creator_${t}`;
-                      case 6:
-                        return `hubcategory_${t}`;
-                      case 3:
-                      case -1:
-                        return "";
-                      default:
-                        return (
-                          (0, rn.z)(
-                            e,
-                            `Unknown EStoreItemType ${e} ${(0, tn.md)(e)} `,
-                          ),
-                          ""
-                        );
-                    }
-                  })(e.item_type(), e.id()),
-                  e.toObject(),
-                );
+      function mn(e, t, r, n) {
+        return new (un())(
+          async (r) => {
+            const a = new Set(),
+              s = new Map(),
+              l = new Set();
+            l.add("default_info");
+            const o = {};
+            if (
+              (r.forEach((e) => {
+                const [t, r = "default_info"] = ln(e, "|");
+                a.add(t),
+                  l.has(r) ||
+                    ("top_tags" == r
+                      ? (o.include_tag_count = 10)
+                      : "default_info" != r && (o[r] = !0),
+                    l.add(r));
+                let i = s.get(t);
+                i || ((i = new Set()), s.set(t, i)), i.add(r);
               }),
-            r.map((e) => {
-              const t = e.split("|")[0],
-                r = o.get(t);
-              return r || { ...sn(t), success: 2 };
-            })
+              o.include_included_items)
+            ) {
+              const { include_included_items: e, ...t } = o;
+              o.included_item_data_request = t;
+            }
+            const c = i.w.Init(tn.eE);
+            let u;
+            if (
+              (dn(t, c),
+              (function (e, t) {
+                e.Body().set_data_request(tn.gn.fromObject(t));
+              })(c, o),
+              a.forEach((e) => {
+                const t = (function (e) {
+                  const t = e.match(an);
+                  if (t)
+                    switch (t[1]) {
+                      case "app":
+                        return { appid: parseInt(t[2]) };
+                      case "package":
+                        return { packageid: parseInt(t[2]) };
+                      case "bundle":
+                        return { bundleid: parseInt(t[2]) };
+                      case "tag":
+                        return { tagid: parseInt(t[2]) };
+                      case "creator":
+                        return { creatorid: parseInt(t[2]) };
+                      case "hubcategory":
+                        return { hubcategoryid: parseInt(t[2]) };
+                    }
+                  (0, rn.w)(!1, `Failed to parse StoreItemID ${e}`);
+                })(e);
+                t && c.Body().add_ids(tn.O4.fromObject(t));
+              }),
+              t.bUsePartnerAPI)
+            ) {
+              const t = i.w.Init(on.St);
+              t.Body().set_request(c.Body()), (u = await on.BT.GetItems(e, t));
+            } else u = await tn.$4.GetItems(e, c);
+            const d = new Map();
+            return (
+              u
+                .Body()
+                .store_items()
+                .forEach((e) => {
+                  d.set(
+                    (function (e, t) {
+                      switch (e) {
+                        case 0:
+                          return `app_${t}`;
+                        case 1:
+                          return `package_${t}`;
+                        case 2:
+                          return `bundle_${t}`;
+                        case 4:
+                          return `tag_${t}`;
+                        case 5:
+                          return `creator_${t}`;
+                        case 6:
+                          return `hubcategory_${t}`;
+                        case 3:
+                        case -1:
+                          return "";
+                        default:
+                          return (
+                            (0, rn.z)(
+                              e,
+                              `Unknown EStoreItemType ${e} ${(0, tn.md)(e)} `,
+                            ),
+                            ""
+                          );
+                      }
+                    })(e.item_type(), e.id()),
+                    e.toObject(),
+                  );
+                }),
+              n &&
+                (function (e, t, r, i) {
+                  e.forEach((e, n) => {
+                    const a = r.get(n);
+                    if (((0, rn.w)(a, `Missing request data for ${n}`), !a))
+                      return;
+                    let s = !1;
+                    const l = {};
+                    t.forEach((e) => {
+                      a.has(e) ||
+                        ((s = !0),
+                        "top_tags" == e
+                          ? (l.include_tag_count = 10)
+                          : e && "default_info" != e && (l[e] = !0));
+                    }),
+                      s && i(e, l);
+                  });
+                })(d, l, s, n),
+              r.map((e) => {
+                const [t] = ln(e, "|"),
+                  r = d.get(t);
+                return r || { ...sn(t), success: 2 };
+              })
+            );
+          },
+          { maxBatchSize: 500, cache: !1, ...r },
+        );
+      }
+      const pn = Je.createContext({});
+      function bn(e) {
+        const {
+            context: t,
+            msDelayBatch: r,
+            serviceTransportOverride: i,
+            children: n,
+          } = e,
+          a = (0, it.KV)(),
+          s = (0, rt.jE)(),
+          l = Je.useCallback(
+            (e, t) =>
+              (function (e, t, r) {
+                const i = (function (e) {
+                  var t;
+                  const r = null !== (t = e.item_type) && void 0 !== t ? t : -1,
+                    i = e.id || 0;
+                  switch (r) {
+                    case 0:
+                      return { appid: i };
+                    case 1:
+                      return { packageid: i };
+                    case 2:
+                      return { bundleid: i };
+                    case 4:
+                      return { tagid: i };
+                    case 5:
+                      return { creatorid: i };
+                    case 6:
+                      return { hubcategoryid: i };
+                    case 3:
+                    case -1:
+                      return;
+                    default:
+                      return void (0, rn.z)(
+                        r,
+                        `Unknown EStoreItemType ${r} ${(0, tn.md)(r)} `,
+                      );
+                  }
+                })(t);
+                if (!i) return;
+                (function (e, t, r) {
+                  e.setQueryData(_n(t, "default_info"), Mn(r));
+                })(e, i, t),
+                  r.include_assets &&
+                    (function (e, t, r) {
+                      yn(e, t, r, "include_assets", "assets");
+                    })(e, i, t);
+                r.include_screenshots &&
+                  (function (e, t, r) {
+                    yn(e, t, r, "include_screenshots", "screenshots");
+                  })(e, i, t);
+                r.include_assets_without_overrides &&
+                  (function (e, t, r) {
+                    yn(
+                      e,
+                      t,
+                      r,
+                      "include_assets_without_overrides",
+                      "assets_without_overrides",
+                    );
+                  })(e, i, t);
+                r.include_reviews &&
+                  (function (e, t, r) {
+                    yn(e, t, r, "include_reviews", "reviews");
+                  })(e, i, t);
+                r.include_release &&
+                  (function (e, t, r) {
+                    yn(e, t, r, "include_release", "release");
+                  })(e, i, t);
+                r.include_tag_count &&
+                  r.include_tag_count > 0 &&
+                  (function (e, t, r) {
+                    yn(e, t, r, "top_tags", "tags");
+                  })(e, i, t);
+              })(s, e, t),
+            [s],
+          ),
+          o = i || a,
+          { country: c, language: u, realm: d, bUsePartnerAPI: m } = t,
+          p = Je.useMemo(
+            () => ({ country: c, language: u, realm: d, bUsePartnerAPI: m }),
+            [c, u, d, m],
+          ),
+          b = Je.useMemo(() => {
+            const e = r
+              ? (function (e) {
+                  let t = 0;
+                  return (r) => {
+                    let i;
+                    const n = performance.now() - t;
+                    n < e && (i = e - n),
+                      setTimeout(() => {
+                        (t = performance.now()), r();
+                      }, i);
+                  };
+                })(r)
+              : void 0;
+            return mn(o, p, { cache: !1, batchScheduleFn: e }, l);
+          }, [o, l, p, r]),
+          B = Je.useMemo(
+            () => ({
+              dataLoader: b,
+              storeBrowseContext: p,
+              cacheStoreItemData: l,
+            }),
+            [b, p, l],
           );
-        }, r);
+        return Je.createElement(pn.Provider, { value: B }, n);
       }
-      const dn = Je.createContext({});
-      function mn(e) {
-        const { context: t, msDelayBatch: r, children: i } = e,
-          n = Je.useRef(),
-          a = Je.useRef(r),
-          s = (0, it.KV)();
-        if (!n.current || !!a.current != !!r) {
-          let e;
-          if (((a.current = r), a.current)) {
-            let t = !1;
-            e = (e) => {
-              setTimeout(e, t ? a.current : void 0), (t = !0);
-            };
-          }
-          n.current = {
-            dataLoader: un(s, t, { cache: !1, batchScheduleFn: e }),
-          };
-        }
-        return Je.createElement(dn.Provider, { value: n.current }, i);
+      function Bn(e, t = {}) {
+        const r = Je.useContext(pn).dataLoader;
+        return (0, tt.I)({ ...gn(r, e), ...t });
       }
-      function pn(e, t = {}) {
-        const r = (0, rt.jE)(),
-          i = Je.useContext(dn).dataLoader;
-        return (0, tt.I)({ ...bn(r, i, e), ...t });
-      }
-      function bn(e, t, r) {
-        return Bn(
+      function gn(e, t) {
+        return wn(
           e,
           t,
-          r,
           "include_assets_without_overrides",
           "assets_without_overrides",
         );
       }
-      function Bn(e, t, r, i, n) {
+      function wn(e, t, r, i) {
         return {
-          queryKey: gn(r, i),
-          queryFn: async () => (await wn(t, r, e, i))[n] || null,
-          staleTime: 36e5,
+          queryKey: _n(t, r),
+          queryFn: async () => (await hn(e, t, r))[i] || null,
+          staleTime: 216e5,
         };
       }
-      function gn(e, t) {
-        return ["StoreItem", nn(e), t || "basic"];
+      function yn(e, t, r, i, n) {
+        e.setQueryData(_n(t, i), r[n]);
       }
-      async function wn(e, t, r, i) {
-        const n = await e.load(`${nn(t)}|${i || ""}`);
-        return r && r.setQueryData(gn(t), n), n;
+      function _n(e, t) {
+        return ["StoreItem", nn(e), t];
       }
-      const yn = parseInt(yi.GameHeight),
-        _n = parseInt(yi.GamePadding),
-        fn = parseInt(yi.RemoteControlsHeight),
-        Mn = yn + _n;
-      function hn() {
+      const fn = [
+        "assets",
+        "tagids",
+        "tags",
+        "basic_info",
+        "reviews",
+        "categories",
+        "game_rating",
+        "purchase_options",
+        "accessories",
+        "screenshots",
+        "trailers",
+        "supported_languages",
+        "assets_without_overrides",
+        "user_filter_failure",
+        "links",
+      ];
+      function Mn(e) {
+        const t = { ...e };
+        for (const e of fn) delete t[e];
+        return t;
+      }
+      async function hn(e, t, r) {
+        return await e.load(`${nn(t)}|${r}`);
+      }
+      const zn = parseInt(yi.GameHeight),
+        Sn = parseInt(yi.GamePadding),
+        Rn = parseInt(yi.RemoteControlsHeight),
+        vn = zn + Sn;
+      function Fn() {
         return (function (e) {
           const t = (0, Je.useMemo)(() => matchMedia(e), [e]),
             [r, i] = (0, Je.useState)(t.matches);
@@ -11175,7 +11326,7 @@
           );
         })(`(max-width: ${yi.MobileBreakpoint})`);
       }
-      function zn(e) {
+      function qn(e) {
         const t = ht(e.appid),
           r = (function (e) {
             const t = (0, it.KV)(),
@@ -11240,7 +11391,7 @@
           );
         }, [e, t.data, t.isLoading, r.data, r.isLoading, i.data, i.isLoading]);
       }
-      function Sn(e) {
+      function Cn(e) {
         const t = Bt(),
           r = ht(e.appid),
           i = (function (e) {
@@ -11281,10 +11432,10 @@
           );
         }, [e, t, r.data, r.isLoading, i.data]);
       }
-      function Rn(e) {
-        return wt() ? zn(e) : Sn(e);
+      function Wn(e) {
+        return wt() ? qn(e) : Cn(e);
       }
-      function vn(e) {
+      function jn(e) {
         const t = Bt(),
           r = (function (e) {
             return pt.Get().GetGCPDGames().includes(e.appid);
@@ -11330,7 +11481,7 @@
           );
         }, [t, e, r, i]);
       }
-      function Fn(e) {
+      function Tn(e) {
         const t = wt(),
           r = ar(e.appid),
           i = t,
@@ -11383,7 +11534,7 @@
           );
         }, [e, i, r, n]);
       }
-      const qn = Je.forwardRef(
+      const Un = Je.forwardRef(
         ({ achievement: e, appid: t, className: r }, i) => {
           const n = parseFloat(e.player_percent_unlocked) < 10,
             a = `${ct.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${t}/${e.icon}`;
@@ -11399,7 +11550,7 @@
           });
         },
       );
-      function Cn({ appid: e, achievement: t }) {
+      function In({ appid: e, achievement: t }) {
         const r = `${ct.TS.MEDIA_CDN_COMMUNITY_URL}images/apps/${e}/${t.icon}`,
           i = parseFloat(t.player_percent_unlocked) < 10;
         return Je.createElement(
@@ -11413,7 +11564,7 @@
           Je.createElement(
             "div",
             { className: _i.TopSection },
-            Je.createElement(qn, { appid: e, achievement: t }),
+            Je.createElement(Un, { appid: e, achievement: t }),
             Je.createElement(
               "div",
               { className: _i.TextSection },
@@ -11436,22 +11587,22 @@
             ),
         );
       }
-      const Wn = {
+      const On = {
           direction: "top",
           bEnablePointerEvents: !1,
           style: { width: void 0, height: void 0, minHeight: void 0 },
         },
-        jn = Je.forwardRef(({ appid: e, achievement: t }, r) =>
+        En = Je.forwardRef(({ appid: e, achievement: t }, r) =>
           Je.createElement(
             bi.JU,
             {
-              hoverContent: Je.createElement(Cn, { appid: e, achievement: t }),
-              hoverProps: Wn,
+              hoverContent: Je.createElement(In, { appid: e, achievement: t }),
+              hoverProps: On,
             },
-            Je.createElement(qn, { ref: r, achievement: t, appid: e }),
+            Je.createElement(Un, { ref: r, achievement: t, appid: e }),
           ),
         );
-      function Tn({
+      function Pn({
         children: e,
         remainderRenderer: t,
         totalItemOverride: r,
@@ -11483,7 +11634,7 @@
           b < p && t(p - b),
         );
       }
-      function Un({ game: e, visible: t, totalUnlocked: r }) {
+      function Gn({ game: e, visible: t, totalUnlocked: r }) {
         var i, n;
         const a = (function (e, t) {
             const r = (0, it.KV)(),
@@ -11507,7 +11658,7 @@
           ? void 0
           : n.length) > 0
           ? Je.createElement(
-              Tn,
+              Pn,
               {
                 className: _i.AchievementIcons,
                 totalItemOverride: r,
@@ -11521,7 +11672,7 @@
                   ),
               },
               a.data.achievements.map((t) =>
-                Je.createElement(jn, {
+                Je.createElement(En, {
                   appid: e.appid,
                   achievement: t,
                   key: `${t.statid}${t.bit}`,
@@ -11530,7 +11681,7 @@
             )
           : null;
       }
-      function In({ game: e, visible: t, showTop: r }) {
+      function Nn({ game: e, visible: t, showTop: r }) {
         const i = Mt(e, t).data;
         if (!i) return null;
         if (0 === i.total) return null;
@@ -11561,14 +11712,14 @@
             }),
           ),
           r &&
-            Je.createElement(Un, {
+            Je.createElement(Gn, {
               game: e,
               visible: t,
               totalUnlocked: i.unlocked,
             }),
         );
       }
-      function On({ game: e, visible: t }) {
+      function An({ game: e, visible: t }) {
         const r = Mt(e, t).data;
         return r && t && r.total && r.unlocked === r.total
           ? Je.createElement(
@@ -11581,40 +11732,40 @@
             )
           : null;
       }
-      const En = () => {};
-      function Pn({ links: e }) {
+      const Ln = () => {};
+      function xn({ links: e }) {
         return Je.createElement(
           mi.tz,
           { className: _i.NavDropdownMenu },
           e.map((e) =>
             Je.createElement(
               mi.kt,
-              { onSelected: "action" in e ? () => e.action() : En, key: e.key },
-              Je.createElement(Xn, { link: e }),
+              { onSelected: "action" in e ? () => e.action() : Ln, key: e.key },
+              Je.createElement(ia, { link: e }),
             ),
           ),
         );
       }
-      function Gn({ game: e }) {
-        const t = Rn(e);
+      function kn({ game: e }) {
+        const t = Wn(e);
         return t.bIsLoading
           ? Je.createElement(
               mi.tz,
               { className: _i.NavDropdownMenu },
               Je.createElement(Wt.t, { size: "small", position: "center" }),
             )
-          : Je.createElement(Pn, { links: t.rgLinks });
+          : Je.createElement(xn, { links: t.rgLinks });
       }
-      const Nn = {
+      const Dn = {
         bFitToWindow: !0,
         bOverlapHorizontal: !0,
         bMatchWidth: !1,
         bShiftToFitWindow: !0,
       };
-      function An({ links: e, children: t, className: r }) {
+      function $n({ links: e, children: t, className: r }) {
         const i = (0, Je.useRef)(null),
           n = (0, Je.useCallback)(() => {
-            (0, Ht.lX)(Je.createElement(Pn, { links: e }), i.current, Nn);
+            (0, Ht.lX)(Je.createElement(xn, { links: e }), i.current, Dn);
           }, [i, e]);
         return Je.createElement(
           vt.Z,
@@ -11627,7 +11778,7 @@
           t,
         );
       }
-      function Ln({ links: e, label: t, className: r, onClick: i }) {
+      function Hn({ links: e, label: t, className: r, onClick: i }) {
         return Je.createElement(qt.Vb, {
           rgOptions: e.map((e) => ({ label: e.label, data: e })),
           onMenuOpened: i,
@@ -11640,8 +11791,8 @@
           highlightOnFocus: !0,
         });
       }
-      function xn({ game: e, setLinkData: t }) {
-        const r = Rn(e);
+      function Kn({ game: e, setLinkData: t }) {
+        const r = Wn(e);
         return (
           (0, Je.useEffect)(() => {
             t(r.rgLinks);
@@ -11649,7 +11800,7 @@
           null
         );
       }
-      function kn({ game: e }) {
+      function Vn({ game: e }) {
         const t = wt(),
           r = (0, Ut.we)(
             t ? "#Community_GameContentFirstPerson" : "#Community_GameContent",
@@ -11659,21 +11810,21 @@
         return Je.createElement(
           Je.Fragment,
           null,
-          Je.createElement(Ln, { links: i, label: r, onClick: () => s(!0) }),
-          a && Je.createElement(xn, { game: e, setLinkData: n }),
+          Je.createElement(Hn, { links: i, label: r, onClick: () => s(!0) }),
+          a && Je.createElement(Kn, { game: e, setLinkData: n }),
         );
       }
-      function Dn(e) {
+      function Qn(e) {
         const { game: t, children: r } = e,
           i = wt();
         return Je.createElement(
           "div",
           { className: _i.GameLinks },
-          i && Je.createElement($n, { game: t }),
+          i && Je.createElement(Zn, { game: t }),
           r,
         );
       }
-      function $n(e) {
+      function Zn(e) {
         const { game: t } = e,
           r = ar(t.appid),
           i = lr(t.appid);
@@ -11692,21 +11843,21 @@
               Je.createElement(Ot.ZyV, null),
             );
       }
-      function Hn({ game: e }) {
-        const t = Fn(e);
+      function Yn({ game: e }) {
+        const t = Tn(e);
         return (0, ct.Qn)()
-          ? Je.createElement(Ln, {
+          ? Je.createElement(Hn, {
               links: t,
               label: (0, Ut.we)("#Community_GameLinks"),
             })
           : Je.createElement(
-              An,
+              $n,
               { links: t, className: _i.GameLinksButton },
               Je.createElement(Ot.nvX, null),
             );
       }
-      function Kn({ game: e }) {
-        const t = vn(e),
+      function Xn({ game: e }) {
+        const t = jn(e),
           r = wt(),
           i = (0, ct.Qn)();
         if (0 === t.length) return null;
@@ -11714,15 +11865,15 @@
           r ? "#Community_GameStatsFirstPerson" : "#Community_GameStats",
         );
         return i
-          ? Je.createElement(Ln, { links: t, label: n })
+          ? Je.createElement(Hn, { links: t, label: n })
           : Je.createElement(
-              An,
+              $n,
               { links: t, className: _i.StatLinks },
               Je.createElement("span", null, " ", n, " "),
               Je.createElement(kt, null),
             );
       }
-      function Vn({ game: e }) {
+      function Jn({ game: e }) {
         const t = (0, Je.useRef)(null),
           r = (0, it.tc)(),
           i = (0, Je.useCallback)(() => {
@@ -11733,10 +11884,10 @@
                   useActiveSteamInterface: r.useActiveSteamInterface,
                   useStorage: r.useStorage,
                 },
-                Je.createElement(Gn, { game: e }),
+                Je.createElement(kn, { game: e }),
               ),
               t.current,
-              Nn,
+              Dn,
             );
           }, [t, e, r]),
           n = wt(),
@@ -11745,7 +11896,7 @@
             n ? "#Community_GameContentFirstPerson" : "#Community_GameContent",
           );
         return a
-          ? Je.createElement(kn, { game: e })
+          ? Je.createElement(Vn, { game: e })
           : Je.createElement(
               vt.Z,
               {
@@ -11757,7 +11908,7 @@
               Je.createElement(kt, null),
             );
       }
-      function Qn({ label: e, children: t }) {
+      function ea({ label: e, children: t }) {
         return Je.createElement(
           "details",
           { className: _i.BottomSheetSection },
@@ -11765,15 +11916,15 @@
           Je.createElement("div", { className: _i.SectionContent }, t),
         );
       }
-      function Zn({ game: e }) {
-        const t = vn(e);
+      function ta({ game: e }) {
+        const t = jn(e);
         return 0 === t.length
           ? null
           : Je.createElement(
-              Qn,
+              ea,
               { label: (0, Ut.we)("#Community_GameStats") },
               t.map((e) =>
-                Je.createElement(Xn, {
+                Je.createElement(ia, {
                   key: e.key,
                   link: e,
                   className: _i.BottomSheetLink,
@@ -11781,15 +11932,15 @@
               ),
             );
       }
-      function Yn({ game: e }) {
-        const t = Rn(e);
+      function ra({ game: e }) {
+        const t = Wn(e);
         return 0 === t.rgLinks.length
           ? null
           : Je.createElement(
-              Qn,
+              ea,
               { label: (0, Ut.we)("#Community_GameContent") },
               t.rgLinks.map((e) =>
-                Je.createElement(Xn, {
+                Je.createElement(ia, {
                   key: e.key,
                   link: e,
                   className: _i.BottomSheetLink,
@@ -11797,7 +11948,7 @@
               ),
             );
       }
-      function Xn(e) {
+      function ia(e) {
         const { link: t, className: r } = e;
         let i;
         return (
@@ -11814,15 +11965,15 @@
           i
         );
       }
-      function Jn({ game: e }) {
-        const t = Fn(e);
+      function na({ game: e }) {
+        const t = Tn(e);
         return 0 === t.length
           ? null
           : Je.createElement(
-              Qn,
+              ea,
               { label: (0, Ut.we)("#GamesList_MenuLabel_GameInfo") },
               t.map((e) =>
-                Je.createElement(Xn, {
+                Je.createElement(ia, {
                   key: e.key,
                   link: e,
                   className: _i.BottomSheetLink,
@@ -11830,7 +11981,7 @@
               ),
             );
       }
-      function ea({ game: e }) {
+      function aa({ game: e }) {
         const t = wt(),
           r = (function () {
             const e = Fi();
@@ -11844,7 +11995,7 @@
           })();
         return t && r
           ? Je.createElement(
-              Qn,
+              ea,
               { label: (0, Ut.we)("#GamesList_MenuLabel_RemoteDownload") },
               Je.createElement("span", { className: _i.ClientName }, r),
               Je.createElement(xi, {
@@ -11856,9 +12007,9 @@
             )
           : null;
       }
-      function ta({ tab: e }) {
-        const t = oa().openGame,
-          r = la(),
+      function sa({ tab: e }) {
+        const t = pa().openGame,
+          r = ma(),
           i = (0, Je.useRef)(null);
         (0, Je.useEffect)(() => {
           var e;
@@ -11911,20 +12062,20 @@
                 "div",
                 { className: _i.Facts },
                 Je.createElement("span", { className: _i.GameTitle }, t.name),
-                Je.createElement(ra, { game: t, visible: !0, tab: e }),
+                Je.createElement(la, { game: t, visible: !0, tab: e }),
               ),
             ),
-            Je.createElement(Yn, { game: t }),
-            Je.createElement(Zn, { game: t }),
-            Je.createElement(Jn, { game: t }),
-            Je.createElement(ea, { game: t }),
+            Je.createElement(ra, { game: t }),
+            Je.createElement(ta, { game: t }),
+            Je.createElement(na, { game: t }),
+            Je.createElement(aa, { game: t }),
           ),
         );
       }
-      function ra({ game: e, visible: t, tab: r }) {
+      function la({ game: e, visible: t, tab: r }) {
         const i = wt(),
           n = _t(e),
-          a = hn(),
+          a = Fn(),
           s = r !== Qi.All && !(a && r === Qi.RecentlyPlayed);
         return Je.createElement(
           "div",
@@ -11972,36 +12123,36 @@
             Je.createElement(
               "div",
               { className: _i.AchievementContainer },
-              Je.createElement(In, { game: e, visible: t, showTop: s }),
+              Je.createElement(Nn, { game: e, visible: t, showTop: s }),
             ),
         );
       }
-      function ia(e, t) {
+      function oa(e, t) {
         return `${ct.TS.BASE_URL_SHARED_CDN}store_item_assets/${e.asset_url_format}`.replace(
           "${FILENAME}",
           e[t],
         );
       }
-      function na({ game: e, visible: t }) {
-        const r = hn(),
+      function ca({ game: e, visible: t }) {
+        const r = Fn(),
           [i, n] = (0, Je.useState)(0),
-          { data: a, isLoading: s } = pn({ appid: e.appid }, { enabled: t });
+          { data: a, isLoading: s } = Bn({ appid: e.appid }, { enabled: t });
         (0, Je.useEffect)(() => {
           s || n(0);
         }, [s]);
         let l = [en],
           o = [en];
         (null == a ? void 0 : a.library_capsule)
-          ? l.unshift(ia(a, "library_capsule"))
+          ? l.unshift(oa(a, "library_capsule"))
           : l.unshift(
-              ia(
+              oa(
                 { ...a, library_capsule: "library_600x900.jpg" },
                 "library_capsule",
               ),
             ),
           (null == a ? void 0 : a.header)
-            ? o.unshift(ia(a, "header"))
-            : o.unshift(ia({ ...a, header: "header.jpg" }, "header"));
+            ? o.unshift(oa(a, "header"))
+            : o.unshift(oa({ ...a, header: "header.jpg" }, "header"));
         const c = r ? l[i] === en : o[i] === en;
         return Je.createElement(
           Je.Fragment,
@@ -12023,20 +12174,20 @@
             Je.createElement("span", { className: _i.FallbackTitle }, e.name),
         );
       }
-      function aa({ game: e, hasEverBeenVisible: t }) {
-        const r = hn();
+      function ua({ game: e, hasEverBeenVisible: t }) {
+        const r = Fn();
         return Je.createElement(
           "div",
           { className: _i.PortraitContainer },
-          Je.createElement(na, { game: e, visible: t }),
-          !r && Je.createElement(On, { game: e, visible: t }),
+          Je.createElement(ca, { game: e, visible: t }),
+          !r && Je.createElement(An, { game: e, visible: t }),
         );
       }
-      const sa = Je.memo(function ({ game: e, top: t, tab: r }) {
+      const da = Je.memo(function ({ game: e, top: t, tab: r }) {
         const i = `${ct.TS.STORE_BASE_URL}app/${e.appid}`,
           n = wt(),
-          a = hn(),
-          s = la(),
+          a = Fn(),
+          s = ma(),
           l = a ? "button" : dr.YZ,
           o = a ? () => s(e) : void 0,
           [c, u] = (0, Je.useState)(!1),
@@ -12069,14 +12220,14 @@
             Je.createElement(
               b,
               { href: i, className: _i.GameItemPortrait },
-              Je.createElement(aa, { game: e, hasEverBeenVisible: c }),
+              Je.createElement(ua, { game: e, hasEverBeenVisible: c }),
             ),
             Je.createElement(
               "span",
               { className: _i.GameNameContainer },
               Je.createElement(B, { href: i, className: _i.GameName }, e.name),
             ),
-            Je.createElement(ra, { game: e, visible: c, tab: r }),
+            Je.createElement(la, { game: e, visible: c, tab: r }),
             !a &&
               Je.createElement(
                 Je.Fragment,
@@ -12084,15 +12235,15 @@
                 Je.createElement(
                   "div",
                   { className: _i.Buttons },
-                  Je.createElement(Kn, { game: e }),
-                  Je.createElement(Vn, { game: e }),
-                  p && Je.createElement(Hn, { game: e }),
+                  Je.createElement(Xn, { game: e }),
+                  Je.createElement(Jn, { game: e }),
+                  p && Je.createElement(Yn, { game: e }),
                 ),
                 !p &&
                   Je.createElement(
-                    Dn,
+                    Qn,
                     { game: e },
-                    Je.createElement(Hn, { game: e }),
+                    Je.createElement(Yn, { game: e }),
                   ),
               ),
             n &&
@@ -12102,37 +12253,37 @@
                 game: e,
                 visible: c,
               }),
-            a && Je.createElement(On, { game: e, visible: c }),
+            a && Je.createElement(An, { game: e, visible: c }),
           ),
           n && Je.createElement(Li, { game: e, visible: c }),
         );
       });
-      function la() {
-        return oa().fnSetOpenGame;
+      function ma() {
+        return pa().fnSetOpenGame;
       }
-      function oa() {
-        const e = (0, Je.useContext)(ca);
+      function pa() {
+        const e = (0, Je.useContext)(ba);
         if (!e)
           throw new Error(
             "attempted to use BottomSheetContext outside of provider",
           );
         return e;
       }
-      const ca = Je.createContext(void 0);
-      function ua({ children: e }) {
+      const ba = Je.createContext(void 0);
+      function Ba({ children: e }) {
         const [t, r] = (0, Je.useState)(void 0);
         return Je.createElement(
-          ca.Provider,
+          ba.Provider,
           { value: { openGame: t, fnSetOpenGame: r } },
           e,
         );
       }
-      const da = new Set();
-      function ma(e) {
-        da.add(e);
+      const ga = new Set();
+      function wa(e) {
+        ga.add(e);
       }
-      const pa = new Set();
-      function ba({ games: e, tab: t, fnCalculateGameSize: r }) {
+      const ya = new Set();
+      function _a({ games: e, tab: t, fnCalculateGameSize: r }) {
         const [i, n] = (0, Je.useMemo)(() => {
           let t = 0;
           const i = e.map((e) => {
@@ -12181,7 +12332,7 @@
           vt.Z,
           { ref: a, className: _i.List, style: { height: i }, autoFocus: !0 },
           Je.createElement(
-            ga,
+            Ma,
             {
               disableContinuousRender: e.length > 1024,
               batchSize: 16,
@@ -12192,18 +12343,18 @@
               const i = s;
               return (
                 (s += n[r]),
-                Je.createElement(sa, { game: e, key: e.appid, top: i, tab: t })
+                Je.createElement(da, { game: e, key: e.appid, top: i, tab: t })
               );
             }),
           ),
         );
       }
-      async function Ba() {
+      async function fa() {
         return new Promise((e) => {
           setTimeout(e, 0);
         });
       }
-      function ga({
+      function Ma({
         children: e,
         batchSize: t,
         containerRef: r,
@@ -12223,7 +12374,7 @@
                     if (e) return;
                     null === (r = a[n]) || void 0 === r || r.call(a, !0);
                   }
-                  await Ba();
+                  await fa();
                 }
               })(),
               () => {
@@ -12263,17 +12414,17 @@
             Je.Fragment,
             null,
             e.map((e, t) =>
-              Je.createElement(wa, { key: e.key, index: t, renderers: a }, e),
+              Je.createElement(ha, { key: e.key, index: t, renderers: a }, e),
             ),
           )
         );
       }
-      function wa({ renderers: e, index: t, children: r }) {
+      function ha({ renderers: e, index: t, children: r }) {
         const [i, n] = (0, Je.useState)(!1);
         return (e[t] = n), i ? Je.createElement(Je.Fragment, null, r) : null;
       }
-      const ya = Je.createContext(void 0);
-      function _a({ query: e, isLoading: t, tab: r }) {
+      const za = Je.createContext(void 0);
+      function Sa({ query: e, isLoading: t, tab: r }) {
         var i;
         const n = ti(),
           a = (function (e) {
@@ -12292,8 +12443,8 @@
               const i = new Set();
               if (null == r ? void 0 : r.data)
                 for (const e of r.data.mapApps.values())
-                  (pa.has(e.appid) || (!da.has(e.appid) && Gi(e))) &&
-                    (i.add(e.appid), pa.add(e.appid));
+                  (ya.has(e.appid) || (!ga.has(e.appid) && Gi(e))) &&
+                    (i.add(e.appid), ya.add(e.appid));
               const n = [],
                 a = [];
               return (
@@ -12310,7 +12461,7 @@
           o = (0, Je.useCallback)((e, t) => {
             l((r) => ({ ...r, [e]: t }));
           }, []),
-          c = (0, Je.useCallback)((e) => (s[e.appid] ? Mn + fn : Mn), [s]);
+          c = (0, Je.useCallback)((e) => (s[e.appid] ? vn + Rn : vn), [s]);
         return a.isLoading || n.isLoading || t
           ? Je.createElement(Wt.t, {
               string: (0, Ut.we)("#Loading"),
@@ -12324,45 +12475,45 @@
                 (0, Ut.we)("#GamesList_PerfectGames_Description"),
               )
             : Je.createElement(
-                ya.Provider,
+                za.Provider,
                 { value: o },
                 !ct.TS.IN_CLIENT && Je.createElement(Ti, null),
-                Je.createElement(ba, {
+                Je.createElement(_a, {
                   games: a.data,
                   tab: r,
                   fnCalculateGameSize: c,
                 }),
               );
       }
-      function fa(e) {
-        return Mn;
+      function Ra(e) {
+        return vn;
       }
-      function Ma({ query: e, isLoading: t, tab: r }) {
+      function va({ query: e, isLoading: t, tab: r }) {
         return void 0 === e.data || t
           ? null
-          : Je.createElement(ba, {
+          : Je.createElement(_a, {
               games: e.data,
               tab: r,
-              fnCalculateGameSize: fa,
+              fnCalculateGameSize: Ra,
             });
       }
-      const ha = (0, pi.Nr)(
+      const Fa = (0, pi.Nr)(
           ({ owned: e, filter: t, dependencyLoading: r, sort: i, tab: n }) => {
             const a = Vi(Gt(e, t), i),
               s = wt(),
               l = a.isLoading || r;
             if (a.error && !l) throw a.error;
             return Je.createElement(
-              ua,
+              Ba,
               null,
-              Je.createElement(ta, { tab: n }),
+              Je.createElement(sa, { tab: n }),
               s
-                ? Je.createElement(_a, { query: a, isLoading: l, tab: n })
-                : Je.createElement(Ma, { query: a, isLoading: l, tab: n }),
+                ? Je.createElement(Sa, { query: a, isLoading: l, tab: n })
+                : Je.createElement(va, { query: a, isLoading: l, tab: n }),
             );
           },
         ),
-        za = [
+        qa = [
           {
             label: (0, Ut.we)("#GamesList_Sort_HoursPlayed"),
             sortOption: ki.HoursPlayed,
@@ -12373,11 +12524,11 @@
             sortOption: ki.AchievementCompletion,
           },
         ];
-      function Sa({ strSort: e, setStrSort: t }) {
+      function Ca({ strSort: e, setStrSort: t }) {
         return Je.createElement(
           "ul",
           { className: It.SortOptions },
-          za.map((r) =>
+          qa.map((r) =>
             Je.createElement(
               "li",
               { key: r.sortOption },
@@ -12396,7 +12547,7 @@
           ),
         );
       }
-      function Ra() {
+      function Wa() {
         const [e, t] = (0, Ct.QD)("games_in_common", !1);
         return Je.createElement(
           "label",
@@ -12409,7 +12560,7 @@
           }),
         );
       }
-      function va() {
+      function ja() {
         return Je.createElement(
           jt.he,
           {
@@ -12424,22 +12575,22 @@
           ),
         );
       }
-      function Fa(e) {
+      function Ta(e) {
         const t = new Set();
         return null == e || e.forEach((e) => t.add(e.appid)), t;
       }
-      function qa(e, t, r) {
+      function Ua(e, t, r) {
         const [i, n] = (0, Ct.QD)(e, r);
         let a = i;
         return Object.values(t).includes(i) || (a = r), [a, n];
       }
-      function Ca({ children: e }) {
+      function Ia({ children: e }) {
         return (0, ct.Qn)() ? Je.createElement(qt.J1, null, e) : e;
       }
-      function Wa(e) {
+      function Oa(e) {
         const t = gt(),
-          [r, i] = qa("sort", ki, ki.HoursPlayed),
-          [n, a] = qa("tab", Qi),
+          [r, i] = Ua("sort", ki, ki.HoursPlayed),
+          [n, a] = Ua("tab", Qi),
           s = null != n ? n : Qi.RecentlyPlayed,
           [l, o, c] = (function (e, t) {
             const [r, i] = (0, Je.useState)(e),
@@ -12483,7 +12634,7 @@
           g = (function (e) {
             const t = bt(ct.iA.steamid, { enabled: e });
             return (0, Je.useMemo)(
-              () => ({ data: Fa(t.data), isLoading: t.isLoading }),
+              () => ({ data: Ta(t.data), isLoading: t.isLoading }),
               [t.data, t.isLoading],
             );
           })(B),
@@ -12529,7 +12680,7 @@
         let F = y;
         s === Qi.RecentlyPlayed ? (F = f) : s === Qi.Perfect && (F = h),
           (0, Je.useEffect)(() => {
-            da.clear();
+            ga.clear();
           }, [s]);
         const q = Xi(s, y, f, h),
           C = (function (...e) {
@@ -12542,7 +12693,7 @@
           j = r === ki.AchievementCompletion && m.isLoading,
           T = F.isLoading || j;
         return Je.createElement(
-          ja,
+          Ea,
           null,
           Je.createElement(
             vt.Z,
@@ -12566,12 +12717,12 @@
                       setStrNameFilter: c,
                       className: It.FilterInput,
                     }),
-                    R && Je.createElement(va, null),
-                    !R && s === Qi.All && Je.createElement(Ra, null),
-                    Je.createElement(Sa, { strSort: r, setStrSort: i }),
+                    R && Je.createElement(ja, null),
+                    !R && s === Qi.All && Je.createElement(Wa, null),
+                    Je.createElement(Ca, { strSort: r, setStrSort: i }),
                   ),
               ),
-            Je.createElement(ha, {
+            Je.createElement(Fa, {
               owned: F,
               filter: C,
               sort: s === Qi.RecentlyPlayed ? ki.RecentlyPlayed : r,
@@ -12581,7 +12732,7 @@
           ),
         );
       }
-      function ja(e) {
+      function Ea(e) {
         const { children: t } = e,
           r = (0, Ft.A)(),
           i = Je.useMemo(
@@ -12599,19 +12750,19 @@
             qi,
             null,
             Je.createElement(
-              Ca,
+              Ia,
               null,
-              Je.createElement(mn, { context: i, msDelayBatch: 500 }, t),
+              Je.createElement(bn, { context: i, msDelayBatch: 500 }, t),
             ),
           ),
         );
       }
-      function Ta(e) {
+      function Pa(e) {
         const t = (0, St.bs)(Je.useCallback(() => new zt.A(), []));
         return Je.createElement(
           it.VQ,
           { useActiveSteamInterface: yt, useStorage: t },
-          Je.createElement(Wa, { ...e }),
+          Je.createElement(Oa, { ...e }),
         );
       }
     },

@@ -1,6 +1,6 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-var CLSTAMP = "9126016";
+var CLSTAMP = "9141451";
 (() => {
   var e,
     t,
@@ -100,9 +100,9 @@ var CLSTAMP = "9126016";
         }
         (i.keys = () => Object.keys(s)), (i.id = 48516), (e.exports = i);
       },
-      73491: (e, t, n) => {
+      71517: (e, t, n) => {
         "use strict";
-        n(20474);
+        n(64387);
         var s = n(63696),
           i = n(7470);
         function r(e) {
@@ -1675,7 +1675,7 @@ var CLSTAMP = "9126016";
               })();
           });
       },
-      20474: (e, t, n) => {
+      64387: (e, t, n) => {
         "use strict";
         "VALVE_PUBLIC_PATH" in window
           ? (n.p = window.VALVE_PUBLIC_PATH)
@@ -1908,18 +1908,18 @@ var CLSTAMP = "9126016";
       {
         43: "2d1569711644a97b27c9",
         762: "20d1805fb19e04428350",
-        976: "921d9b42129d668aa087",
-        1225: "20b3af5e97aa92d7472d",
+        976: "b45b19bce34fdb7e68e2",
+        1225: "f9c864f89427ee23b0fd",
         1449: "c50539f08932082d0e79",
         1499: "c953d14ef1fde518714a",
-        1973: "9751ddabe97c3652b911",
+        1973: "8860dd90f61bad18c652",
         2256: "4960720d898af4eaffa6",
         2320: "321c33c11ae5c8c57eab",
-        2435: "93fc44ea4e314f389c1e",
-        2632: "5a32b99841352896eb2d",
-        2749: "4291f07e8ed1c7cce578",
+        2435: "c171d2b985ac992a55f5",
+        2632: "136ab39865efbee47a35",
+        2749: "1e1ba6f808786862085c",
         2945: "c2615f0bf698d3ba8095",
-        2954: "476770cedb233b77c420",
+        2954: "6169a52581400e752344",
         3e3: "6244423f97bbadfb378f",
         3016: "f772487927b08b66167b",
         3232: "68bf2fea1283ff729b8d",
@@ -1934,38 +1934,38 @@ var CLSTAMP = "9126016";
         4488: "2ba22b0983b646f5294a",
         4776: "28db7f99aa77b21fb4e3",
         4787: "c918d5a66e4b1cb82962",
-        5018: "2ddff5d8dbb6ef760077",
-        5110: "44c24636064d04f5c06c",
-        5241: "92572930bcd5d49c6b7e",
+        5018: "8acaf3eb23ca4915d066",
+        5110: "2e298f32e889d28c1833",
+        5241: "5a13eb29503888e0f87d",
         5341: "0896561e7e8e04ac497a",
         5480: "09e6317423e85306930c",
-        6031: "0a0bed831a582b2f1d74",
+        6031: "0c63f12f38b0151930df",
         6127: "21285c2d4e9089b111bb",
-        6149: "b30cb4d152d01a73e2d7",
-        6165: "4a1d280429f6c4916e6e",
-        6208: "191c29c3ecfdea29c31a",
+        6149: "21e89810c19acb542109",
+        6165: "75ff1f506467c36d6c77",
+        6208: "a70717e8d3042c5fdd3b",
         6239: "585dc7f20fc775162a10",
         6385: "3c27faff8d632b9d9b06",
         6518: "8cd538c22d2143bbefe7",
-        6523: "06070ee3439ee6aee460",
-        6562: "d818650cafeb70671a17",
+        6523: "165315c108f1a2d1f3d9",
+        6562: "d03c2221593dfd9300cf",
         6609: "acac235fdaf92994d4f8",
         6888: "97fad568d4bc58c3178c",
         6971: "3f59bfcb09e325651f1d",
         7487: "d058c34dbf64df818d6e",
-        7539: "d0db8647eb89de6cd369",
-        7591: "9605aaa681fed5de7172",
-        7786: "6ab4d8e4e31a51041d68",
+        7539: "6289b84b5c684c989108",
+        7591: "747c1c568e1191ee1e8d",
+        7786: "e50d1f237e72d932f06f",
         7861: "ec6590999be2754fb930",
-        8025: "46d8ef407befff06b6b3",
+        8025: "cac750b4cbc9643516fe",
         8194: "510ab7f4d7764937eced",
         8306: "91ef2bb6c338e6424f0c",
         8759: "51d00c7c3ca5c19f7399",
         8766: "b9b7b35f7df91bb55b83",
-        8967: "47cc47d245939c2fbe0a",
+        8967: "733128f11bc875189054",
         9027: "8e85e0465fbf17ebf124",
         9152: "7890719f0262d0ebd4ce",
-        9712: "958544c56b9143a992b0",
+        9712: "ed33ee92c8362b995703",
         9746: "e05951d8b37cd69db872",
         9808: "47d563fed12f1789dffb",
       }[e]),
@@ -2104,6 +2104,6 @@ var CLSTAMP = "9126016";
           self.webpackChunk_steam_friendsui || []);
       n.forEach(t.bind(null, 0)), (n.push = t.bind(null, n.push.bind(n)));
     })();
-  var c = o.O(void 0, [1068], () => o(73491));
+  var c = o.O(void 0, [1068], () => o(71517));
   c = o.O(c);
 })();

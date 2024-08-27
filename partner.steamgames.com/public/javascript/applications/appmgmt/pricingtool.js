@@ -1585,30 +1585,32 @@
       var Ne = a(11577);
       const Se = { PricingDashboard: () => "/dashboard/:publisherid(\\d*)" };
       function Ie(e) {
-        return (0, Ne.d)()
-          ? i.createElement(
-              o.Kd,
-              { basename: (0, r.C)() + "pricing/" },
-              i.createElement(
-                l.dO,
-                null,
-                i.createElement(l.qh, {
-                  exact: !0,
-                  path: r.B.DiagData(),
-                  render: (e) =>
-                    i.createElement(c.z, {
-                      ...e,
-                      strConfigID: "application_config",
-                    }),
-                }),
-                i.createElement(l.qh, {
-                  path: Se.PricingDashboard(),
-                  render: (e) => i.createElement(ve, null),
-                }),
-                i.createElement(l.qh, { component: n.a }),
-              ),
-            )
-          : null;
+        return i.createElement(
+          Ne.m,
+          null,
+          i.createElement(
+            o.Kd,
+            { basename: (0, r.C)() + "pricing/" },
+            i.createElement(
+              l.dO,
+              null,
+              i.createElement(l.qh, {
+                exact: !0,
+                path: r.B.DiagData(),
+                render: (e) =>
+                  i.createElement(c.z, {
+                    ...e,
+                    strConfigID: "application_config",
+                  }),
+              }),
+              i.createElement(l.qh, {
+                path: Se.PricingDashboard(),
+                render: (e) => i.createElement(ve, null),
+              }),
+              i.createElement(l.qh, { component: n.a }),
+            ),
+          ),
+        );
       }
     },
     74267: (e, t, a) => {

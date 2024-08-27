@@ -451,7 +451,7 @@
     },
     98821: (e, t, a) => {
       "use strict";
-      a.r(t), a.d(t, { default: () => da });
+      a.r(t), a.d(t, { default: () => ua });
       var n = a(90626),
         l = a(55909),
         r = a(84746),
@@ -4059,22 +4059,21 @@
             ),
         );
       }
-      var Jt = a(37303),
-        Xt = a(9658),
-        Kt = a.n(Xt);
-      function $t(e) {
+      var Jt = a(9658),
+        Xt = a.n(Jt);
+      function Kt(e) {
         const { event: t, language: a, url: l } = e;
         return n.createElement("div", {
-          className: Kt().SaleBackgroundOverlay,
+          className: Xt().SaleBackgroundOverlay,
           style: { backgroundImage: `url('${l}')` },
         });
       }
-      var ea = a(40353),
-        ta = a(77059),
-        aa = a(59313),
-        na = a.n(aa),
-        la = a(51272);
-      function ra(e) {
+      var $t = a(40353),
+        ea = a(12877),
+        ta = a(59313),
+        aa = a.n(ta),
+        na = a(51272);
+      function la(e) {
         const { rgPresenters: t } = e;
         if (!t || 0 == t.length) return null;
         const a = (0, h.sf)(M.TS.LANGUAGE);
@@ -4083,20 +4082,20 @@
               "div",
               {
                 className: (0, N.A)(
-                  na().PresenterDisclaimer,
+                  aa().PresenterDisclaimer,
                   "PresenterDisclaimer",
                 ),
               },
               (0, S.PP)(
                 "#SalePresented_By",
-                n.createElement(oa, { presentor: t[0], lang: a }),
+                n.createElement(ra, { presentor: t[0], lang: a }),
               ),
             )
           : n.createElement(
               "div",
               {
                 className: (0, N.A)(
-                  na().PresenterDisclaimer,
+                  aa().PresenterDisclaimer,
                   "PresenterDisclaimer",
                 ),
               },
@@ -4108,27 +4107,27 @@
                     n.createElement(
                       n.Fragment,
                       { key: e.url },
-                      n.createElement(oa, { presentor: e, lang: a }),
+                      n.createElement(ra, { presentor: e, lang: a }),
                       Boolean(t.length > 2) && ", ",
                     ),
                   ),
-                n.createElement(oa, { presentor: t[t.length - 1], lang: a }),
+                n.createElement(ra, { presentor: t[t.length - 1], lang: a }),
               ),
             );
       }
-      function oa(e) {
+      function ra(e) {
         const { presentor: t, lang: a } = e;
         return n.createElement(
-          la.uU,
+          na.uU,
           {
             href: (0, X.k2)(t.url),
             bUseLinkFilter: !0,
-            className: na().PresenterLabel,
+            className: aa().PresenterLabel,
           },
           S.NT.GetWithFallback(t.localized_presenter_name, a),
         );
       }
-      function ia(e) {
+      function oa(e) {
         const {
             promotionName: t,
             eventModel: a,
@@ -4234,9 +4233,9 @@
             ),
             f = l
               ? !C && o?.BIsBackgroundImageEnabled()
-                ? ea.S.EPreviewMode_EditBackground
-                : ea.S.EPreviewMode_Enabled
-              : ea.S.EPreviewMode_Disabled;
+                ? $t.S.EPreviewMode_EditBackground
+                : $t.S.EPreviewMode_Enabled
+              : $t.S.EPreviewMode_Disabled;
           return n.createElement(
             E.tH,
             null,
@@ -4249,7 +4248,7 @@
                 n.createElement(
                   x,
                   { event: a, language: r, bIsPreview: l },
-                  S && n.createElement($t, { event: a, language: r, url: v }),
+                  S && n.createElement(Kt, { event: a, language: r, url: v }),
                   Boolean(o) &&
                     n.createElement(Ht, {
                       backgroundImageEditModel: o,
@@ -4270,11 +4269,11 @@
                       style: { marginTop: `${_ || 0}px` },
                     },
                     n.createElement(j, { eventModel: a, language: r }),
-                    n.createElement(ra, {
+                    n.createElement(la, {
                       rgPresenters: a.jsondata.sale_presenters,
                     }),
                     n.createElement(O, { event: a, broadcastEmbedContext: e }),
-                    n.createElement(sa, {
+                    n.createElement(ia, {
                       ePreviewMode: f,
                       event: a,
                       backgroundImageEditModel: o,
@@ -4307,7 +4306,7 @@
           }),
         );
       }
-      const sa = (0, m.y)(function (e) {
+      const ia = (0, m.y)(function (e) {
         const {
             event: t,
             language: a,
@@ -4330,9 +4329,8 @@
           v = (e, t) => {
             (0, I.ip)(h, { ...(t || {}), [d.jD]: e.toString() });
           },
-          { data: b } = (0, Jt.j)(),
-          [S, k] = (0, I.QD)("controller", (0, d.jn)(b)),
-          [C, w] = (0, g.q3)(() => {
+          [b, S] = (0, I.QD)("controller"),
+          [k, C] = (0, g.q3)(() => {
             const e = t.GetSaleSectionIncludingFooterSections();
             return [
               f(
@@ -4343,11 +4341,11 @@
               e,
             ];
           });
-        let y = !1;
-        const A = [{ elements: [], activeTab: new V.y(null, l) }];
-        let G = null;
-        w.forEach((l, c) => {
-          const g = A[A.length - 1].activeTab;
+        let w = !1;
+        const y = [{ elements: [], activeTab: new V.y(null, l) }];
+        let A = null;
+        C.forEach((l, c) => {
+          const g = y[y.length - 1].activeTab;
           if (g && !g.ShouldShowSection(l)) return;
           const m = p.nY
               .Get()
@@ -4357,25 +4355,25 @@
                 t.GetContentHubTag(),
               ),
             u = s && !m && !Boolean(t.jsondata.content_hub_restricted_width);
-          let d = (0, ea.I)(l, r, t, a);
+          let d = (0, $t.I)(l, r, t, a);
           if (void 0 === d) return;
           if (d);
           else if ((0, F.su)(l) && !M.iA.logged_in)
-            y ||
+            w ||
               ((d = n.createElement(F.CC, {
                 section: l,
                 event: t,
                 language: a,
               })),
-              (y = !0));
+              (w = !0));
           else {
             const t = l.diable_tab_id_filtering
               ? new V.y(null, g.GetSaleDay())
               : g;
             "tabs" == l.section_type &&
               l.tabs?.some((e) => e.unique_id == o?.GetActiveTabUniqueID()) &&
-              A.push({ activeTab: o, elements: [] }),
-              (d = n.createElement(ta.H, {
+              y.push({ activeTab: o, elements: [] }),
+              (d = n.createElement(ea.H, {
                 ...e,
                 section: l,
                 activeTab: t,
@@ -4383,43 +4381,43 @@
                 selectedTab: o,
                 setTabUniqueIDQueryParam: v,
                 expanded: u,
-                controllerCategory: S,
-                setControllerCategory: k,
+                controllerCategory: b,
+                setControllerCategory: S,
               }));
           }
           let E = n.createElement(
-            ma,
+            ga,
             {
               key: "SaleSectionIndex_" + l.unique_id + "_" + c,
               section: l,
-              nActiveTabID: A[A.length - 1].activeTab.GetActiveTabUniqueID(),
+              nActiveTabID: y[y.length - 1].activeTab.GetActiveTabUniqueID(),
               saleSectionIndex: c,
               ePreviewMode: r,
-              salePageBackgroundDerivedConfig: C,
+              salePageBackgroundDerivedConfig: k,
               backgroundImageEditModel: i,
               bExpanded: u,
             },
             d,
           );
-          const I = C.mapSectionToGroup.get(l.unique_id);
-          G &&
-            G.groupID != I &&
-            (A[A.length - 1].elements.push(D(t, G, o?.GetActiveTabUniqueID())),
-            (G = null)),
+          const I = k.mapSectionToGroup.get(l.unique_id);
+          A &&
+            A.groupID != I &&
+            (y[y.length - 1].elements.push(D(t, A, o?.GetActiveTabUniqueID())),
+            (A = null)),
             I
-              ? (G ||
-                  (G = {
+              ? (A ||
+                  (A = {
                     groupID: I,
                     elSaleSections: [],
-                    derivedGroupInfo: C.mapGroupToSections.get(I),
+                    derivedGroupInfo: k.mapGroupToSections.get(I),
                   }),
-                G.elSaleSections.push(E))
-              : A[A.length - 1].elements.push(E);
+                A.elSaleSections.push(E))
+              : y[y.length - 1].elements.push(E);
         }),
-          G &&
-            (A[A.length - 1].elements.push(D(t, G, o?.GetActiveTabUniqueID())),
-            (G = null));
-        const L = A.map((e, t) =>
+          A &&
+            (y[y.length - 1].elements.push(D(t, A, o?.GetActiveTabUniqueID())),
+            (A = null));
+        const G = y.map((e, t) =>
           n.createElement(
             "div",
             {
@@ -4435,10 +4433,10 @@
         return n.createElement(
           u.Z,
           { className: T().SaleSectionListContainer },
-          L,
+          G,
         );
       });
-      function ca(e) {
+      function sa(e) {
         const {
           visibility_by_door_index_state: t,
           door_index_visibility: a,
@@ -4446,13 +4444,13 @@
         } = e;
         return t
           ? n.createElement(
-              ga,
+              ca,
               { visibility_by_door_index_state: t, door_index_visibility: a },
               l,
             )
           : n.createElement(n.Fragment, null, l);
       }
-      function ga(e) {
+      function ca(e) {
         const {
             visibility_by_door_index_state: t,
             door_index_visibility: a,
@@ -4464,7 +4462,7 @@
           ? null
           : n.createElement(n.Fragment, null, l);
       }
-      function ma(e) {
+      function ga(e) {
         const {
             section: t,
             saleSectionIndex: a,
@@ -4481,7 +4479,7 @@
           E.tH,
           null,
           n.createElement(
-            ca,
+            sa,
             {
               visibility_by_door_index_state: t.visibility_by_door_index_state,
               door_index_visibility: t.door_index_visibility,
@@ -4500,11 +4498,11 @@
                       expanded: s,
                       [t.single_item_style || ""]: !0,
                       [T().SaleSectionBackgroundImageGroupEdit]:
-                        r == ea.S.EPreviewMode_EditBackground,
+                        r == $t.S.EPreviewMode_EditBackground,
                     }),
                   },
                   c,
-                  Boolean(r === ea.S.EPreviewMode_EditBackground) &&
+                  Boolean(r === $t.S.EPreviewMode_EditBackground) &&
                     n.createElement(Vt, {
                       nSectionUniqueID: t.unique_id || a,
                       nTabID: l,
@@ -4515,7 +4513,7 @@
               : n.createElement(
                   n.Fragment,
                   null,
-                  Boolean(r === ea.S.EPreviewMode_EditBackground)
+                  Boolean(r === $t.S.EPreviewMode_EditBackground)
                     ? n.createElement(
                         "div",
                         {
@@ -4537,15 +4535,15 @@
           ),
         );
       }
-      var ua = a(95455);
-      function da(e) {
+      var ma = a(95455);
+      function ua(e) {
         return n.createElement(
-          ua.d,
+          ma.d,
           { bSalePage: !0 },
-          n.createElement(pa, { ...e }),
+          n.createElement(da, { ...e }),
         );
       }
-      function pa(e) {
+      function da(e) {
         const { promotionName: t, language: a } = e,
           [g, m] = n.useState(
             c.O3.GetClanEventFromAnnouncementGID(M.P9.ANNOUNCEMENT_GID),
@@ -4579,7 +4577,7 @@
           n.createElement(
             r.N,
             { timeoutMS: 1e3 },
-            n.createElement(ia, {
+            n.createElement(oa, {
               promotionName: t,
               language: a,
               eventModel: g,
