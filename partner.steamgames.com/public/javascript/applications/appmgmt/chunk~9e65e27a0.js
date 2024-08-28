@@ -769,18 +769,17 @@
         const e =
             l.TS.PARTNER_BASE_URL +
             "admin/store/contenthub/ajaxpublishcontenthubcategorieskv",
-          t = { origin: self.origin, sessionid: l.TS.SESSIONID };
-        let a = null;
+          t = l.TS.STORE_BASE_URL + "contenthub/ajaxflushcontenthubcache",
+          a = { origin: self.origin, sessionid: l.TS.SESSIONID };
         try {
-          const n = await r().get(e, { params: t, withCredentials: !0 });
-          if (200 === n.status && 1 === n.data?.success) return null;
-          a = (0, o.H)(n);
+          const n = await r().get(e, { params: a, withCredentials: !0 });
+          if (200 !== n.status || 1 !== n.data?.success) return (0, o.H)(n);
+          const s = await r().get(t, { params: a, withCredentials: !0 });
+          if (200 !== s.status || 1 !== s.data?.success) return (0, o.H)(s);
         } catch (e) {
-          a = (0, o.H)(e);
+          return (0, o.H)(e);
         }
-        return (
-          console.error("PublishCategoriesKV failed: " + a.strErrorMsg, a), a
-        );
+        return null;
       }
       class y {
         constructor() {

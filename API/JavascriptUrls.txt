@@ -1352,6 +1352,7 @@ ${STORE_BASE_URL}category/${}
 ${STORE_BASE_URL}charts/steamdecktopplayed
 ${STORE_BASE_URL}contenthub/ajaxcheckcontenthubsalepage
 ${STORE_BASE_URL}contenthub/ajaxfilterappsbycontenthub
+${STORE_BASE_URL}contenthub/ajaxflushcontenthubcache
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubdata
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubjson
 ${STORE_BASE_URL}contenthub/ajaxgetcontenthubs
