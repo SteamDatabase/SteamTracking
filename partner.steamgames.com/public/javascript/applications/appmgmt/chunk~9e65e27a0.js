@@ -769,13 +769,10 @@
         const e =
             l.TS.PARTNER_BASE_URL +
             "admin/store/contenthub/ajaxpublishcontenthubcategorieskv",
-          t = l.TS.STORE_BASE_URL + "contenthub/ajaxflushcontenthubcache",
-          a = { origin: self.origin, sessionid: l.TS.SESSIONID };
+          t = { origin: self.origin, sessionid: l.TS.SESSIONID };
         try {
-          const n = await r().get(e, { params: a, withCredentials: !0 });
-          if (200 !== n.status || 1 !== n.data?.success) return (0, o.H)(n);
-          const s = await r().get(t, { params: a, withCredentials: !0 });
-          if (200 !== s.status || 1 !== s.data?.success) return (0, o.H)(s);
+          const a = await r().get(e, { params: t, withCredentials: !0 });
+          if (200 !== a.status || 1 !== a.data?.success) return (0, o.H)(a);
         } catch (e) {
           return (0, o.H)(e);
         }
