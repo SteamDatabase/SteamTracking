@@ -171,8 +171,8 @@ function InitAppTagModal( appid, rgAppTags, rgUserTags, strTagLinkSNR, strYourTa
 					content.append( $J( '<div/>', { 'class': 'app_tag_ban_prompt' } ).text( 'Are you sure you want to remove the "%s" tag from this product?'.replace( /%s/, tag ) ) );
 					if ( !bIsDLC ) {
 						content.append( $J( '<div/>', { 'class': 'app_tag_ban_checkbox' } ).append( $J( '<input/>', {'type': 'checkbox', 'name':'ban_child_tags', 'checked': 1, 'id': 'ban_child_tags' } ) ) );
-						content.append( $J( '<div/>', { 'class': 'app_tag_ban_label' } ).append( $J( '<label/>', {'for': 'ban_child_tags' } ).text( 'Ban the tag for child DLCs as well' ) ) );
-						content.append( $J( '<div/>', { 'class': 'app_tag_ban_note' } ).text( 'Note: this will impact all DLCs related to this game, even DLCs you create or release in the future. You can still unban the tag for individual DLCs.' ) );
+						content.append( $J( '<div/>', { 'class': 'app_tag_ban_label' } ).append( $J( '<label/>', {'for': 'ban_child_tags' } ).text( 'Ban the tag for child DLC as well' ) ) );
+						content.append( $J( '<div/>', { 'class': 'app_tag_ban_note' } ).text( 'Note: this will impact all DLC related to this game, even DLC you create or release in the future. You can still unban the tag for individual DLC.' ) );
 					}
 
 					$Ban.click( function() {
@@ -1090,7 +1090,7 @@ function InitBannedTagModal( appid, $BanModal, bIsDLC )
 			content.append( $J( '<div/>', { 'class': 'app_tag_ban_prompt' } ).text( 'Are you sure you want to unban the "%s" tag?'.replace( /%s/, tag ) ) );
 			if ( !bIsDLC ) {
 				content.append( $J( '<div/>', { 'class': 'app_tag_ban_checkbox' } ).append( $J( '<input/>', {'type': 'checkbox', 'name':'unban_child_tags', 'checked': 1, 'id': 'unban_child_tags' } ) ) );
-				content.append( $J( '<div/>', { 'class': 'app_tag_ban_label' } ).append( $J( '<label/>', {'for': 'unban_child_tags' } ).text( 'Unban the tag for child DLCs as well' ) ) );
+				content.append( $J( '<div/>', { 'class': 'app_tag_ban_label' } ).append( $J( '<label/>', {'for': 'unban_child_tags' } ).text( 'Unban the tag for child DLC as well' ) ) );
 			}
 
 			ShowConfirmDialog( 'Unban Tag',

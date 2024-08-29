@@ -516,7 +516,7 @@ function ShowEditHandles( bIsCreatorHome, bIsDLCPage )
 		}
 		else if ( bIsDLCPage )
 		{
-			elTypeSelect = $J("\r\n\t\t\t\t<select name=\"type\">\r\n\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t<option value=\"featured_creations\">Games DLCs<\/option>\r\n\t\t\t\t<option value=\"featured_single_creation\">Feature Single DLC<\/option>\r\n\t\t\t\t<option value=\"featured_list\">Feature A List<\/option>\r\n\t\t\t\t<option value=\"featured_tag_creation\">Feature A Tag<\/option>\r\n\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t\t<option value=\"link_homepages\">Link your Homepages<\/option>\r\n\t\t\t\t<option value=\"discounted_creations\">Discounted<\/option>\r\n\t\t\t<\/select>");
+			elTypeSelect = $J("\r\n\t\t\t\t<select name=\"type\">\r\n\t\t\t\t<option value=\"none\">None<\/option>\r\n\t\t\t\t<option value=\"featured_creations\">Games DLC<\/option>\r\n\t\t\t\t<option value=\"featured_single_creation\">Feature Single DLC<\/option>\r\n\t\t\t\t<option value=\"featured_list\">Feature A List<\/option>\r\n\t\t\t\t<option value=\"featured_tag_creation\">Feature A Tag<\/option>\r\n\t\t\t\t<option value=\"lists_block\">Lists block<\/option>\r\n\t\t\t\t<option value=\"link_homepages\">Link your Homepages<\/option>\r\n\t\t\t\t<option value=\"discounted_creations\">Discounted<\/option>\r\n\t\t\t<\/select>");
 		}
 		else
 		{
