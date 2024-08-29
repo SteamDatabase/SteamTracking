@@ -3240,7 +3240,6 @@ syntax = "$0";\n\n
 syscall
 syscall@GLIBC_2.0
 system
-tH0[S
 tajik
 tall
 tamil

@@ -1,4 +1,4 @@
-var CLSTAMP = "9135573";
+var CLSTAMP = "9142228";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -8864,9 +8864,9 @@ var CLSTAMP = "9135573";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Aug 23 2024 : 14:43:22",
-                BUILD_TIME_UTC: "Aug 23 2024 : 21:43:22",
-                BUILD_RTIME_UTC: 1724449402,
+                BUILD_TIME_LOCAL: "Aug 27 2024 : 18:05:12",
+                BUILD_TIME_UTC: "Aug 28 2024 : 01:05:12",
+                BUILD_RTIME_UTC: 1724807112,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -22327,8 +22327,8 @@ var CLSTAMP = "9135573";
         "use strict";
         r.r(t),
           r.d(t, {
-            ABXYButton: () => Oi,
-            Accelerometer: () => to,
+            ABXYButton: () => Gi,
+            Accelerometer: () => so,
             Achievement: () => st,
             ActionSetIndicator: () => An,
             Activities: () => jn,
@@ -22336,19 +22336,19 @@ var CLSTAMP = "9135573";
             AddContained: () => rt,
             AddFriend: () => ct,
             AirplaneMode: () => re,
-            AllowTearing: () => Cl,
+            AllowTearing: () => fl,
             Arrow: () => Ae,
             AsyncGameTurn: () => Nr,
             Attachment: () => It,
             AudioVolumeIcon: () => ve,
             Avatar: () => Ct,
             BarGraph: () => it,
-            Battery: () => _i,
-            BatteryFull: () => Mi,
-            BatteryLarge: () => Li,
-            BatteryLow: () => vi,
-            BatterySimple: () => Ei,
-            BatteryWhite: () => wi,
+            Battery: () => Li,
+            BatteryFull: () => vi,
+            BatteryLarge: () => ki,
+            BatteryLow: () => bi,
+            BatterySimple: () => Hi,
+            BatteryWhite: () => Ei,
             BigPicture: () => p,
             BlockUser: () => ut,
             Bluetooth: () => ie,
@@ -22357,10 +22357,10 @@ var CLSTAMP = "9135573";
             Broadcast: () => d,
             Browse: () => cr,
             BugReport: () => Rr,
-            CD: () => gi,
+            CD: () => wi,
             Calendar: () => Ge,
             CalendarDownload: () => Ue,
-            CameraResetIcon: () => zi,
+            CameraResetIcon: () => Ki,
             Carat: () => Ne,
             Caution: () => mt,
             Chat: () => L,
@@ -22378,9 +22378,9 @@ var CLSTAMP = "9135573";
             CommentHistory: () => Sr,
             CommentThread: () => Br,
             Community: () => Pr,
-            CompoundSliderNotch: () => qi,
-            CompoundSliderNotchLeft: () => Ki,
-            CompoundSliderNotchRight: () => Yi,
+            CompoundSliderNotch: () => Xi,
+            CompoundSliderNotchLeft: () => $i,
+            CompoundSliderNotchRight: () => Qi,
             ContactInfo: () => Mr,
             Controller: () => j,
             ControllerStatus: () => z,
@@ -22391,17 +22391,17 @@ var CLSTAMP = "9135573";
             Crown: () => _t,
             CustomizeSteamDeck: () => v,
             DLC: () => D,
-            DeckDockFront: () => $i,
+            DeckDockFront: () => io,
             DeckLogo: () => $,
             DeckLogoColor: () => Q,
             DeckLogoOLED: () => J,
             Desktop: () => M,
             DevicesNone: () => _e,
             Digg: () => wn,
-            DirectionalButton: () => Pi,
-            DisableFrameLimit: () => cl,
+            DirectionalButton: () => Ui,
+            DisableFrameLimit: () => gl,
             Discord: () => pn,
-            Discussions: () => Bo,
+            Discussions: () => Oo,
             Display: () => fe,
             DoNotDisturb: () => Ht,
             Dots: () => Mt,
@@ -22413,7 +22413,7 @@ var CLSTAMP = "9135573";
             Emoticon: () => sr,
             EmptyStar: () => N,
             Envelope: () => Lt,
-            ExclamationPoint: () => ki,
+            ExclamationPoint: () => Si,
             Exit: () => H,
             Expand: () => Hn,
             Expand99: () => Sn,
@@ -22429,63 +22429,66 @@ var CLSTAMP = "9135573";
             Flags: () => Qn,
             Food: () => Kn,
             ForYou: () => rn,
-            FrankenController: () => zo,
+            FrankenController: () => Qo,
             Friends: () => B,
             Fullscreen: () => kn,
             GameHubs: () => Dr,
-            GameOverview: () => Ro,
+            GameOverview: () => No,
             Games: () => kr,
-            GenericGamepad: () => Fi,
-            GenericGamepadFrontOutline: () => xi,
-            GenericStoreGamepad: () => Qo,
+            GenericDPad: () => pi,
+            GenericGamepad: () => Wi,
+            GenericGamepadFrontOutline: () => Ii,
+            GenericJoystickIcon: () => gi,
+            GenericStoreGamepad: () => ol,
+            GenericTriggerIcon: () => fi,
             Gift: () => F,
             Globe: () => Rt,
             Groups: () => vt,
             GuideButton: () => K,
             Guides: () => Hr,
-            Gyro: () => ro,
-            GyroPitch: () => no,
-            GyroRoll: () => oo,
-            GyroYaw: () => io,
+            Gyro: () => co,
+            GyroPitch: () => Co,
+            GyroRoll: () => mo,
+            GyroYaw: () => uo,
             HDR: () => Cn,
             HDRLarge: () => un,
-            HalfRateShading: () => ul,
+            HalfRateShading: () => _l,
             HalfStar: () => A,
             Haptics: () => ni,
             HardDrive: () => at,
-            HardDriveWarning: () => fl,
+            HardDriveWarning: () => kl,
             Headphones: () => Gr,
             Heart: () => Dn,
             HeartEmpty: () => Zn,
             Help: () => ri,
             HideKeyboard: () => Be,
-            HierarchyRowEnd: () => Gi,
-            HierarchyRowMid: () => Wi,
+            HierarchyRowEnd: () => ji,
+            HierarchyRowMid: () => zi,
             Home: () => h,
-            HoriController: () => wl,
-            HoriControllerSupportImage: () => Ml,
+            HoriController: () => bl,
+            HoriControllerSupportImage: () => Sl,
             HotbarMenu: () => Pn,
             Hyperlink: () => kt,
             IconEmpty: () => Wn,
             IconNotFound: () => Gn,
             Idle: () => ir,
             Image: () => jr,
-            InGame: () => Fo,
-            InGameVR: () => Ko,
+            InGame: () => jo,
+            InGameVR: () => tl,
             IncomingVoiceCall: () => zr,
             Information: () => O,
             Instagram: () => fn,
             Invalid: () => bt,
             Inventory: () => br,
-            JoinSession: () => _l,
+            JoinSession: () => Hl,
             KaratDown: () => xe,
             KaratLeft: () => Ve,
             KaratRight: () => Re,
             KaratUp: () => ye,
             Keyboard: () => De,
-            LAN: () => Vo,
-            LanPeerContentReceive: () => Ji,
-            LanPeerContentSend: () => eo,
+            LAN: () => Ao,
+            LanPeerContentReceive: () => lo,
+            LanPeerContentSend: () => ao,
             Layout_AB: () => li,
             Layout_AB_Nintendo: () => ai,
             Layout_AB_Nintendo_JoyCon: () => si,
@@ -22499,9 +22502,9 @@ var CLSTAMP = "9135573";
             List: () => et,
             Lock: () => he,
             LogOut: () => Te,
-            ManualGPUClock: () => dl,
+            ManualGPUClock: () => Ml,
             Maximize: () => St,
-            MediaGallery: () => fi,
+            MediaGallery: () => Mi,
             Microphone: () => U,
             Minimize: () => lr,
             Minus: () => ar,
@@ -22519,40 +22522,40 @@ var CLSTAMP = "9135573";
             NewUserLoginIcon: () => Ee,
             NextTrack: () => Ke,
             NightMode: () => oe,
-            NintendoJoyConLFrontOutline: () => Ti,
-            NintendoJoyConPairFrontOutline: () => Ni,
-            NintendoJoyConRFrontOutline: () => Ai,
-            NintendoSwitchProControllerFrontOutline: () => Zi,
-            NoController: () => ll,
-            Notes: () => Io,
+            NintendoJoyConLFrontOutline: () => Fi,
+            NintendoJoyConPairFrontOutline: () => Pi,
+            NintendoJoyConRFrontOutline: () => Oi,
+            NintendoSwitchProControllerFrontOutline: () => Ni,
+            NoController: () => dl,
+            Notes: () => Fo,
             Notifications: () => yn,
             Objects: () => Xn,
-            Opacity: () => xo,
-            OverlayAchievements: () => Zo,
-            OverlayMusic: () => To,
-            OverlayRestore: () => Ao,
-            OverlayWorkshop: () => Do,
-            PS3ControllerFrontOutline: () => Ii,
-            PS4ControllerFrontOutline: () => Bi,
-            PS4Warning: () => il,
-            PS5ControllerFrontOutline: () => Di,
-            PS5Warning: () => ol,
+            Opacity: () => To,
+            OverlayAchievements: () => Wo,
+            OverlayMusic: () => Go,
+            OverlayRestore: () => Uo,
+            OverlayWorkshop: () => Po,
+            PS3ControllerFrontOutline: () => Zi,
+            PS4ControllerFrontOutline: () => Ti,
+            PS4Warning: () => ul,
+            PS5ControllerFrontOutline: () => Ai,
+            PS5Warning: () => ml,
             Patch: () => nr,
             Pause: () => ze,
             PendingInvites: () => Bt,
             Pin: () => Dt,
-            PitchAxisOverlay: () => lo,
+            PitchAxisOverlay: () => ho,
             Play: () => je,
             PlayContained: () => qe,
             PlayTime: () => _r,
-            PlugInPS4: () => rl,
-            PlugInPS5: () => nl,
+            PlugInPS4: () => cl,
+            PlugInPS5: () => Cl,
             Popout: () => Zt,
             Power: () => _,
             PrevTrack: () => Ye,
             Profile: () => b,
             PurchaseHistory: () => Lr,
-            QAMPerformance: () => el,
+            QAMPerformance: () => al,
             Question: () => Tt,
             RSS: () => _n,
             RadialMenu: () => Nn,
@@ -22562,31 +22565,33 @@ var CLSTAMP = "9135573";
             RecommendedByFriends: () => Jr,
             RecommendedByTags: () => en,
             RecordingsScreenshots: () => I,
-            Redo: () => Co,
+            Redo: () => _o,
             Refresh: () => or,
             Reload: () => lt,
             RemotePlay: () => At,
-            RemotePlayExplanation: () => sl,
+            RemotePlayExplanation: () => pl,
             RemotePlayTogether: () => Wr,
             Repeat: () => $e,
             RepeatOne: () => Qe,
-            ReportAI: () => tl,
-            ResetTimer: () => Go,
+            ReportAI: () => sl,
+            ResetTimer: () => Xo,
             Resize: () => Nt,
             Restore: () => Ft,
             ReviewHelp: () => pr,
             Reviews: () => fr,
             RightStickScroll: () => oi,
-            RollAxisOverlay: () => so,
+            RollAxisOverlay: () => go,
             Rows: () => Je,
-            SDR: () => Po,
+            SDR: () => Ko,
+            SIAPIAction: () => eo,
+            SIAPIActionMutated: () => to,
             SaveDownloadNew: () => We,
             Schedule: () => Ot,
             Scratchpad: () => Pt,
             Screenshot: () => R,
             Scroll: () => Wt,
             SdCard: () => gt,
-            SdCardWarning: () => gl,
+            SdCardWarning: () => vl,
             Search: () => S,
             SearchResultTypeLibrary: () => x,
             SearchResultTypeProfile: () => y,
@@ -22607,65 +22612,67 @@ var CLSTAMP = "9135573";
             SortByTime: () => In,
             SortDescending: () => Oe,
             Specials: () => on,
-            SpellCheck: () => Oo,
+            SpellCheck: () => qo,
             Spinner: () => Kt,
-            Standing: () => qo,
+            Standing: () => el,
             Star: () => T,
             SteamAchievements: () => Zr,
-            SteamControllerFrontOutline: () => yi,
-            SteamControllerRightPadHighlighted: () => Qi,
+            SteamControllerFrontOutline: () => Ri,
+            SteamControllerRightPadHighlighted: () => oo,
             SteamCuratorsTwitch: () => vn,
             SteamCuratorsTwitter: () => Ln,
             SteamCuratorsYoutube: () => En,
             SteamDeck: () => Y,
-            SteamDeckFrontOutline: () => bi,
+            SteamDeckFrontOutline: () => xi,
             SteamDeckNeedsUpdate: () => X,
-            SteamDeckSetupQR: () => pi,
-            SteamDeckTiltedOutline: () => Si,
+            SteamDeckSetupQR: () => _i,
+            SteamDeckTiltedOutline: () => Vi,
             SteamGuard: () => yr,
-            SteamInputAPISvg: () => Xi,
-            SteamInputTranslationImage: () => al,
+            SteamInputAPISvg: () => Ji,
+            SteamInputModeScroll2D: () => ro,
+            SteamInputModeScrollWheel: () => no,
+            SteamInputTranslationImage: () => hl,
             SteamLogo: () => wr,
-            SteamLogoInsetLowBattery: () => Uo,
-            SteamNetworkIssue: () => No,
+            SteamLogoInsetLowBattery: () => $o,
+            SteamNetworkIssue: () => zo,
             SteamNews: () => Yt,
             SteamPal: () => we,
             SteamSupport: () => xr,
             SteamdeckUpdate: () => ei,
             Store: () => f,
             StoreNews: () => ln,
-            StoreStar: () => Jo,
-            Stream: () => Hi,
+            StoreStar: () => ll,
+            Stream: () => yi,
             Streaming: () => Le,
             Submit: () => Xt,
             Support: () => Cr,
             Symbols: () => $n,
-            TDPLimit: () => ml,
+            TDPLimit: () => wl,
             TV: () => C,
-            TextBold: () => uo,
-            TextBullets: () => mo,
-            TextCode: () => ho,
-            TextCodeBlock: () => po,
-            TextH1: () => go,
-            TextH2: () => fo,
-            TextH3: () => _o,
-            TextH4: () => wo,
-            TextH5: () => Mo,
-            TextIndent: () => Ho,
-            TextItalic: () => Eo,
-            TextLink: () => vo,
-            TextNewNote: () => ko,
-            TextOutdent: () => Lo,
-            TextParagraph: () => bo,
-            TextStrikethrough: () => So,
-            TextUnderline: () => yo,
+            TextBold: () => wo,
+            TextBullets: () => Mo,
+            TextCode: () => Lo,
+            TextCodeBlock: () => Eo,
+            TextH1: () => vo,
+            TextH2: () => ko,
+            TextH3: () => Ho,
+            TextH4: () => bo,
+            TextH5: () => So,
+            TextIndent: () => Io,
+            TextItalic: () => xo,
+            TextLink: () => Vo,
+            TextNewNote: () => Ro,
+            TextOutdent: () => yo,
+            TextParagraph: () => Bo,
+            TextStrikethrough: () => Do,
+            TextUnderline: () => Zo,
             TheaterScreen: () => pe,
             ThumbsDown: () => dr,
             ThumbsUp: () => mr,
             TimeWarning: () => pt,
-            Timer: () => Wo,
-            ToggleHDR: () => pl,
-            ToggleVRR: () => hl,
+            Timer: () => Yo,
+            ToggleHDR: () => El,
+            ToggleVRR: () => Ll,
             TopOfQueue: () => rr,
             TopSellers: () => Xr,
             TouchMenu: () => On,
@@ -22674,19 +22681,19 @@ var CLSTAMP = "9135573";
             Transfer: () => $t,
             Trash: () => Qt,
             Travel: () => Yn,
-            TurnCameraIcon: () => ji,
+            TurnCameraIcon: () => Yi,
             Twitch: () => dn,
             Twitter: () => hn,
-            Undo: () => co,
+            Undo: () => fo,
             UniversalGlyphs: () => hi,
-            UnknownRing: () => $o,
+            UnknownRing: () => il,
             Upcoming: () => an,
             Update: () => ti,
             User: () => tr,
             VR: () => sn,
-            VRControllerSide: () => jo,
-            VROnlyIcon: () => Yo,
-            VRSupportedIcon: () => Xo,
+            VRControllerSide: () => Jo,
+            VROnlyIcon: () => rl,
+            VRSupportedIcon: () => nl,
             VRTheater: () => cn,
             Video: () => qr,
             VoiceRoom: () => Ur,
@@ -22696,7 +22703,7 @@ var CLSTAMP = "9135573";
             Volume60: () => He,
             VolumeMuted: () => Se,
             Wallet: () => k,
-            WholeMouseImage: () => Ui,
+            WholeMouseImage: () => qi,
             WiFi: () => ne,
             WiredNetwork: () => me,
             WiredNetworkWarning: () => de,
@@ -22708,9 +22715,9 @@ var CLSTAMP = "9135573";
             Workshop: () => w,
             WriteReview: () => gr,
             X_Line: () => ur,
-            Xbox360ControllerFrontOutline: () => Vi,
-            XboxOneControllerFrontOutline: () => Ri,
-            YawAxisOverlay: () => ao,
+            Xbox360ControllerFrontOutline: () => Bi,
+            XboxOneControllerFrontOutline: () => Di,
+            YawAxisOverlay: () => po,
             YellowExclamation: () => ee,
             YourGroups: () => Vr,
             Youtube: () => gn,
@@ -28732,13 +28739,123 @@ var CLSTAMP = "9135573";
               ...e,
             },
             n.createElement("path", {
-              stroke: "currentColor",
-              d: "M20.0909 7.09091C20.0909 9.35026 18.2594 11.1818 16 11.1818C13.7407 11.1818 11.9091 9.35026 11.9091 7.09091C11.9091 4.83156 13.7407 3 16 3C18.2594 3 20.0909 4.83156 20.0909 7.09091ZM16 20.8182C18.2594 20.8182 20.0909 22.6497 20.0909 24.9091C20.0909 27.1684 18.2594 29 16 29C13.7407 29 11.9091 27.1684 11.9091 24.9091C11.9091 22.6497 13.7407 20.8182 16 20.8182ZM7.09091 11.9091C9.35026 11.9091 11.1818 13.7407 11.1818 16C11.1818 18.2594 9.35026 20.0909 7.09091 20.0909C4.83156 20.0909 3 18.2594 3 16C3 13.7407 4.83156 11.9091 7.09091 11.9091ZM20.8182 16C20.8182 13.7407 22.6497 11.9091 24.9091 11.9091C27.1684 11.9091 29 13.7407 29 16C29 18.2594 27.1684 20.0909 24.9091 20.0909C22.6497 20.0909 20.8182 18.2594 20.8182 16Z",
-              strokeWidth: "2",
+              fill: "currentColor",
+              d: "M21.0909 7.09091C21.0909 9.90254 18.8117 12.1818 16 12.1818C13.1884 12.1818 10.9091 9.90254 10.9091 7.09091C10.9091 4.27928 13.1884 2 16 2C18.8117 2 21.0909 4.27928 21.0909 7.09091Z",
+            }),
+            n.createElement("path", {
+              fill: "currentColor",
+              d: "M21.0909 24.9091C21.0909 22.0975 18.8117 19.8182 16 19.8182C13.1884 19.8182 10.9091 22.0975 10.9091 24.9091C10.9091 27.7207 13.1884 30 16 30C18.8117 30 21.0909 27.7207 21.0909 24.9091Z",
+            }),
+            n.createElement("path", {
+              fill: "currentColor",
+              d: "M7.09091 10.9091C9.90254 10.9091 12.1818 13.1884 12.1818 16C12.1818 18.8117 9.90254 21.0909 7.09091 21.0909C4.27928 21.0909 2 18.8117 2 16C2 13.1884 4.27928 10.9091 7.09091 10.9091Z",
+            }),
+            n.createElement("path", {
+              fill: "currentColor",
+              d: "M24.9091 10.9091C22.0975 10.9091 19.8182 13.1884 19.8182 16C19.8182 18.8117 22.0975 21.0909 24.9091 21.0909C27.7207 21.0909 30 18.8117 30 16C30 13.1884 27.7207 10.9091 24.9091 10.9091Z",
             }),
           );
         }
         function pi(e) {
+          const [t, r] = (0, a.l)(),
+            [i, o] = (0, a.l)();
+          return n.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 32 32",
+              fill: "none",
+              ...e,
+            },
+            n.createElement(
+              "g",
+              { clipPath: r },
+              n.createElement(
+                "g",
+                { clipPath: o },
+                n.createElement("path", {
+                  fill: "currentColor",
+                  fillRule: "evenodd",
+                  clipRule: "evenodd",
+                  d: "M32 11.6667C32 11.1144 31.5523 10.6667 31 10.6667H21.3333V1C21.3333 0.447715 20.8856 0 20.3333 0L11.6667 0C11.1144 0 10.6667 0.447715 10.6667 1V10.6667H1C0.447716 10.6667 0 11.1144 0 11.6667V20.3333C0 20.8856 0.447716 21.3333 1 21.3333L10.6667 21.3333L10.6667 31C10.6667 31.5523 11.1144 32 11.6667 32H20.3333C20.8856 32 21.3333 31.5523 21.3333 31V21.3333H31C31.5523 21.3333 32 20.8856 32 20.3333V11.6667Z",
+                }),
+              ),
+            ),
+            n.createElement(
+              "defs",
+              null,
+              n.createElement(
+                "clipPath",
+                { id: t },
+                n.createElement("rect", {
+                  fill: "currentColor",
+                  width: "32",
+                  height: "32",
+                }),
+              ),
+              n.createElement(
+                "clipPath",
+                { id: i },
+                n.createElement("rect", {
+                  fill: "currentColor",
+                  width: "32",
+                  height: "32",
+                }),
+              ),
+            ),
+          );
+        }
+        function gi(e) {
+          return n.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 32 32",
+              fill: "none",
+              ...e,
+            },
+            n.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M4.91852 8C2.18423 8 0 10.2593 0 13.0058C0 15.7524 2.18423 18.0117 4.91852 18.0117H6.04444V28.4444H24.1778H25.9556V18.0117H27.0815C29.8158 18.0117 32 15.7524 32 13.0058C32 10.2593 29.8158 8 27.0815 8H4.91852Z",
+            }),
+          );
+        }
+        function fi(e) {
+          const [t, r] = (0, a.l)();
+          return n.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 32 32",
+              fill: "none",
+              ...e,
+            },
+            n.createElement(
+              "g",
+              { clipPath: r },
+              n.createElement("path", {
+                fill: "currentColor",
+                d: "M28.282 0H6.53576C3.98766 0 2.25959 2.72067 3.08048 5.13292C3.98027 7.77704 4.82962 11.0701 4.82962 14.08C4.82962 17.7831 3.11555 23.2002 1.67094 27.1082C0.810881 29.4348 2.50354 32.0001 4.98403 32.0001H16.3496C24.0297 32.0001 31.7097 25.6 31.7097 12.8V3.42771C31.7097 1.53464 30.175 0 28.282 0Z",
+              }),
+            ),
+            n.createElement(
+              "defs",
+              null,
+              n.createElement(
+                "clipPath",
+                { id: t },
+                n.createElement("rect", {
+                  fill: "currentColor",
+                  width: "32",
+                  height: "32",
+                }),
+              ),
+            ),
+          );
+        }
+        function _i(e) {
           return n.createElement(
             "svg",
             {
@@ -29158,7 +29275,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function gi(e) {
+        function wi(e) {
           return n.createElement(
             "svg",
             {
@@ -29175,7 +29292,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function fi(e) {
+        function Mi(e) {
           return n.createElement(
             "svg",
             {
@@ -29190,7 +29307,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function _i(e) {
+        function Li(e) {
           const { acState: t, batteryLevel: r, ...i } = e,
             o = 2 == t,
             l = 3 == t;
@@ -29250,7 +29367,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function wi(e) {
+        function Ei(e) {
           const { acState: t, batteryLevel: r, ...i } = e;
           return n.createElement(
             "div",
@@ -29285,7 +29402,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function Mi(e) {
+        function vi(e) {
           const { acState: t, batteryLevel: r, ...i } = e;
           return n.createElement(
             "div",
@@ -29319,7 +29436,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function Li(e) {
+        function ki(e) {
           const { acState: t, batteryLevel: r, ...i } = e,
             o = 2 == t,
             l = 3 == t;
@@ -29387,7 +29504,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function Ei(e) {
+        function Hi(e) {
           return n.createElement(
             "svg",
             {
@@ -29410,7 +29527,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function vi(e) {
+        function bi(e) {
           return n.createElement(
             "svg",
             {
@@ -29433,7 +29550,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function ki(e) {
+        function Si(e) {
           return n.createElement(
             "svg",
             {
@@ -29450,7 +29567,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Hi(e) {
+        function yi(e) {
           return n.createElement(
             "svg",
             {
@@ -29467,7 +29584,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function bi(e) {
+        function xi(e) {
           const {
               highlightViewButton: t,
               highlightOptionsButton: r,
@@ -29636,7 +29753,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Si(e) {
+        function Vi(e) {
           const {
               highlightViewButton: t,
               highlightOptionsButton: r,
@@ -30165,7 +30282,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function yi(e) {
+        function Ri(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: r,
@@ -30536,7 +30653,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function xi(e) {
+        function Ii(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: r,
@@ -30950,7 +31067,7 @@ var CLSTAMP = "9135573";
               }),
           );
         }
-        function Vi(e) {
+        function Bi(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: r,
@@ -31218,7 +31335,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Ri(e) {
+        function Di(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: r,
@@ -31511,7 +31628,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Ii(e) {
+        function Zi(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: r,
@@ -31758,7 +31875,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Bi(e) {
+        function Ti(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: r,
@@ -32163,7 +32280,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Di(e) {
+        function Ai(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: r,
@@ -32549,7 +32666,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Zi(e) {
+        function Ni(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: r,
@@ -32936,7 +33053,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Ti(e) {
+        function Fi(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: r,
@@ -33115,7 +33232,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Ai(e) {
+        function Oi(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: r,
@@ -33298,7 +33415,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Ni(e) {
+        function Pi(e) {
           const {
               hasCaptureButton: t,
               highlightLeftBumper: r,
@@ -33658,7 +33775,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Fi(e) {
+        function Wi(e) {
           const {
               highlightLeftBumper: t = !1,
               highlightRightBumper: r = !1,
@@ -33861,7 +33978,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Oi(e) {
+        function Gi(e) {
           const { button: t, ...r } = e;
           switch (t) {
             case "A":
@@ -33931,7 +34048,7 @@ var CLSTAMP = "9135573";
               );
           }
         }
-        function Pi(e) {
+        function Ui(e) {
           const { direction: t, ...r } = e;
           switch (t) {
             case "up":
@@ -34000,7 +34117,7 @@ var CLSTAMP = "9135573";
               );
           }
         }
-        function Wi(e) {
+        function zi(e) {
           return n.createElement(
             "svg",
             {
@@ -34024,7 +34141,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Gi(e) {
+        function ji(e) {
           const [t, r] = (0, a.l)();
           return n.createElement(
             "svg",
@@ -34060,7 +34177,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function Ui(e) {
+        function qi(e) {
           return n.createElement(
             "svg",
             {
@@ -34103,7 +34220,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function zi(e) {
+        function Ki(e) {
           return n.createElement(
             "svg",
             {
@@ -34150,7 +34267,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function ji(e) {
+        function Yi(e) {
           return n.createElement(
             "svg",
             {
@@ -34201,7 +34318,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function qi(e) {
+        function Xi(e) {
           return n.createElement(
             "svg",
             {
@@ -34217,7 +34334,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Ki(e) {
+        function $i(e) {
           return n.createElement(
             "svg",
             {
@@ -34233,7 +34350,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Yi(e) {
+        function Qi(e) {
           return n.createElement(
             "svg",
             {
@@ -34249,7 +34366,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Xi(e) {
+        function Ji(e) {
           const { className: t, ...r } = e;
           return n.createElement(
             "svg",
@@ -34276,7 +34393,157 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function $i(e) {
+        function eo(e) {
+          return n.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 50 50",
+              fill: "none",
+              ...e,
+            },
+            n.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M46.7467 31.76C46.7467 31.76 44 29 37 29C30 29 27.2533 31.76 27.2533 31.76C27.2533 31.76 25 39.3733 25 42.4667C25 44.7867 28.3333 46.3333 28.3333 46.3333L32.3333 42.3333H41.6667L45.6667 46.3333C45.6667 46.3333 49 44.7867 49 42.4667C49 39.3733 46.7467 31.76 46.7467 31.76ZM35 37H33V39H31V37H29V35H31V33H33V35H35V37ZM39.3333 39C39.0037 39 38.6815 38.9023 38.4074 38.7191C38.1333 38.536 37.9197 38.2757 37.7935 37.9711C37.6674 37.6666 37.6344 37.3315 37.6987 37.0082C37.763 36.6849 37.9217 36.3879 38.1548 36.1548C38.3879 35.9217 38.6849 35.763 39.0082 35.6987C39.3315 35.6344 39.6666 35.6674 39.9711 35.7935C40.2757 35.9197 40.536 36.1333 40.7191 36.4074C40.9023 36.6815 41 37.0037 41 37.3333C41 37.5522 40.9569 37.7689 40.8731 37.9711C40.7894 38.1733 40.6666 38.3571 40.5118 38.5118C40.3571 38.6666 40.1733 38.7894 39.9711 38.8731C39.7689 38.9569 39.5522 39 39.3333 39ZM43.3333 36.3333C43.0037 36.3333 42.6815 36.2356 42.4074 36.0524C42.1333 35.8693 41.9197 35.609 41.7935 35.3045C41.6674 34.9999 41.6344 34.6648 41.6987 34.3415C41.763 34.0182 41.9217 33.7212 42.1548 33.4882C42.3879 33.2551 42.6849 33.0963 43.0082 33.032C43.3315 32.9677 43.6666 33.0007 43.9711 33.1269C44.2757 33.253 44.536 33.4666 44.7191 33.7407C44.9023 34.0148 45 34.337 45 34.6667C45 35.1087 44.8244 35.5326 44.5118 35.8452C44.1993 36.1577 43.7754 36.3333 43.3333 36.3333Z",
+            }),
+            n.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M0.5 20.6967C1.4226 9.11249 11.1025 0 22.9235 0C35.3465 0 45.4211 10.0746 45.4211 22.5025C45.4211 24.5393 45.1504 26.5131 44.6429 28.3897C42.8619 27.6626 40.2522 27 36.6562 27C28.6901 27 25.5643 30.2518 25.5643 30.2518C25.5643 30.2518 23 39.2219 23 42.8665C23 43.6558 23.3163 44.3691 23.7662 44.9845C23.4866 44.9948 23.2057 45 22.9235 45C12.622 45 3.9437 38.0731 1.27459 28.6301L9.89371 32.1971C10.4808 35.1129 13.0562 37.3133 16.1397 37.3133C19.6525 37.3133 22.5091 34.4567 22.5091 30.944C22.5091 30.8453 22.5091 30.7417 22.5042 30.643L30.1563 25.1814C30.2204 25.1864 30.2845 25.1864 30.3486 25.1864H30.3487C35.0258 25.1864 38.8346 21.3776 38.8346 16.7005C38.8346 12.0234 35.0258 8.21456 30.3487 8.21456C25.6716 8.21456 21.8628 12.0234 21.8628 16.7005V16.809L16.4999 24.5894C16.3815 24.5845 16.2631 24.5795 16.1447 24.5795C14.8126 24.5795 13.5792 24.9841 12.5579 25.6847L0.5 20.6967Z",
+            }),
+            n.createElement("path", {
+              fill: "currentColor",
+              d: "M14.6003 34.1409L11.8374 33.0013C12.3258 34.0225 13.1744 34.8761 14.2993 35.3448C16.7316 36.3562 19.5339 35.2017 20.5503 32.7694C21.0387 31.5902 21.0436 30.2927 20.5552 29.1135C20.0717 27.9344 19.154 27.0118 17.9749 26.5234C16.8056 26.0349 15.5525 26.0547 14.4522 26.4691L17.3088 27.6482C19.1047 28.3982 19.9533 30.4555 19.2034 32.2514C18.4535 34.0373 16.3961 34.8859 14.6003 34.1409Z",
+            }),
+            n.createElement("path", {
+              fill: "currentColor",
+              d: "M36.0028 16.7004C36.0028 13.5823 33.4669 11.0464 30.3488 11.0464C27.2307 11.0464 24.6948 13.5823 24.6948 16.7004C24.6948 19.8185 27.2307 22.3544 30.3488 22.3544C33.4669 22.3544 36.0028 19.8185 36.0028 16.7004ZM26.1108 16.6905C26.1108 14.347 28.0152 12.4426 30.3587 12.4426C32.7022 12.4426 34.6066 14.3421 34.6066 16.6905C34.6066 19.034 32.7071 20.9384 30.3587 20.9384C28.0102 20.9384 26.1108 19.0389 26.1108 16.6905Z",
+            }),
+          );
+        }
+        function to(e) {
+          return n.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 50 50",
+              fill: "none",
+              ...e,
+            },
+            n.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M0.5 20.6967C1.4226 9.11249 11.1025 0 22.9235 0C35.3465 0 45.4211 10.0746 45.4211 22.5025C45.4211 24.3384 45.2011 26.1231 44.7861 27.8316C42.9771 27.1161 40.4249 26.5 37 26.5C28.8333 26.5 25.6289 30.0031 25.6289 30.0031C25.6289 30.0031 23 39.1662 23 43.0923C23 43.7141 23.2403 44.3589 23.6193 44.9894C23.3883 44.9965 23.1563 45 22.9235 45C22.5074 45 22.094 44.9887 21.6834 44.9664C22.492 44.2345 23 43.1766 23 42C23 39.7909 21.2091 38 19 38C17.494 38 16.1824 38.8323 15.5 40.062C14.8176 38.8323 13.506 38 12 38C10.8053 38 9.73295 38.5238 9 39.3542C8.40788 38.6833 7.59423 38.2126 6.67352 38.0565C4.16766 35.438 2.28799 32.2154 1.27459 28.6301L9.89371 32.1971C10.4808 35.1129 13.0562 37.3133 16.1397 37.3133C19.6525 37.3133 22.5091 34.4567 22.5091 30.944C22.5091 30.8453 22.5091 30.7417 22.5042 30.643L30.1563 25.1814C30.2204 25.1864 30.2845 25.1864 30.3486 25.1864H30.3487C35.0258 25.1864 38.8346 21.3776 38.8346 16.7005C38.8346 12.0234 35.0258 8.21456 30.3487 8.21456C25.6716 8.21456 21.8628 12.0234 21.8628 16.7005V16.809L16.4999 24.5894C16.3815 24.5845 16.2631 24.5795 16.1447 24.5795C14.8126 24.5795 13.5792 24.9841 12.5579 25.6847L0.5 20.6967Z",
+            }),
+            n.createElement("path", {
+              fill: "currentColor",
+              d: "M14.6003 34.1409L11.8374 33.0013C12.3258 34.0225 13.1744 34.8761 14.2993 35.3448C16.7316 36.3562 19.5339 35.2017 20.5503 32.7694C21.0387 31.5902 21.0436 30.2927 20.5552 29.1135C20.0717 27.9344 19.154 27.0118 17.9749 26.5234C16.8056 26.0349 15.5525 26.0547 14.4522 26.4691L17.3088 27.6482C19.1047 28.3982 19.9533 30.4555 19.2034 32.2514C18.4535 34.0373 16.3961 34.8859 14.6003 34.1409Z",
+            }),
+            n.createElement("path", {
+              fill: "currentColor",
+              d: "M36.0028 16.7004C36.0028 13.5823 33.4669 11.0464 30.3488 11.0464C27.2307 11.0464 24.6948 13.5823 24.6948 16.7004C24.6948 19.8185 27.2307 22.3544 30.3488 22.3544C33.4669 22.3544 36.0028 19.8185 36.0028 16.7004ZM26.1108 16.6905C26.1108 14.347 28.0152 12.4426 30.3587 12.4426C32.7022 12.4426 34.6066 14.3421 34.6066 16.6905C34.6066 19.034 32.7071 20.9384 30.3587 20.9384C28.0102 20.9384 26.1108 19.0389 26.1108 16.6905Z",
+            }),
+            n.createElement("path", {
+              fill: "currentColor",
+              fillRule: "evenodd",
+              clipRule: "evenodd",
+              d: "M46.7467 31.76C46.7467 31.76 44 29 37 29C30 29 27.2533 31.76 27.2533 31.76C27.2533 31.76 25 39.3733 25 42.4667C25 44.7867 28.3333 46.3333 28.3333 46.3333L32.3333 42.3333H41.6667L45.6667 46.3333C45.6667 46.3333 49 44.7867 49 42.4667C49 39.3733 46.7467 31.76 46.7467 31.76ZM35 37H33V39H31V37H29V35H31V33H33V35H35V37ZM39.3333 39C39.0037 39 38.6815 38.9023 38.4074 38.7191C38.1333 38.536 37.9197 38.2757 37.7935 37.9711C37.6674 37.6666 37.6344 37.3315 37.6987 37.0082C37.763 36.6849 37.9217 36.3879 38.1548 36.1548C38.3879 35.9217 38.6849 35.763 39.0082 35.6987C39.3315 35.6344 39.6666 35.6674 39.9711 35.7935C40.2757 35.9197 40.536 36.1333 40.7191 36.4074C40.9023 36.6815 41 37.0037 41 37.3333C41 37.5522 40.9569 37.7689 40.8731 37.9711C40.7894 38.1733 40.6666 38.3571 40.5118 38.5118C40.3571 38.6666 40.1733 38.7894 39.9711 38.8731C39.7689 38.9569 39.5522 39 39.3333 39ZM43.3333 36.3333C43.0037 36.3333 42.6815 36.2356 42.4074 36.0524C42.1333 35.8693 41.9197 35.609 41.7935 35.3045C41.6674 34.9999 41.6344 34.6648 41.6987 34.3415C41.763 34.0182 41.9217 33.7212 42.1548 33.4882C42.3879 33.2551 42.6849 33.0963 43.0082 33.032C43.3315 32.9677 43.6666 33.0007 43.9711 33.1269C44.2757 33.253 44.536 33.4666 44.7191 33.7407C44.9023 34.0148 45 34.337 45 34.6667C45 35.1087 44.8244 35.5326 44.5118 35.8452C44.1993 36.1577 43.7754 36.3333 43.3333 36.3333Z",
+            }),
+            n.createElement("circle", {
+              fill: "currentColor",
+              cx: "6",
+              cy: "42",
+              r: "2.5",
+            }),
+            n.createElement("circle", {
+              fill: "currentColor",
+              cx: "12",
+              cy: "42",
+              r: "2.5",
+            }),
+            n.createElement("circle", {
+              fill: "currentColor",
+              cx: "19",
+              cy: "42",
+              r: "2.5",
+            }),
+          );
+        }
+        function ro(e) {
+          const [t, r] = (0, a.l)();
+          return n.createElement(
+            "svg",
+            {
+              xmlns: "http://www.w3.org/2000/svg",
+              viewBox: "0 0 100 100",
+              fill: "none",
+              ...e,
+            },
+            n.createElement(
+              "g",
+              { clipPath: r },
+              n.createElement("path", {
+                fill: "currentColor",
+                d: "M48 40C48 41.1046 48.8954 42 50 42C51.1046 42 52 41.1046 52 40H48ZM50 0L38.453 20H61.547L50 0ZM52 40V18H48V40H52Z",
+              }),
+              n.createElement("path", {
+                fill: "currentColor",
+                d: "M60 47C58.8954 47 58 47.8954 58 49C58 50.1046 58.8954 51 60 51L60 47ZM100 49L80 37.453L80 60.547L100 49ZM60 51L82 51L82 47L60 47L60 51Z",
+              }),
+              n.createElement("path", {
+                fill: "currentColor",
+                d: "M40 51C41.1046 51 42 50.1046 42 49C42 47.8954 41.1046 47 40 47L40 51ZM0 49L20 60.547L20 37.453L0 49ZM40 47L18 47L18 51L40 51L40 47Z",
+              }),
+              n.createElement("path", {
+                fill: "currentColor",
+                d: "M52 59C52 57.8954 51.1046 57 50 57C48.8954 57 48 57.8954 48 59L52 59ZM50 99L61.547 79L38.453 79L50 99ZM48 59L48 81L52 81L52 59L48 59Z",
+              }),
+              n.createElement("path", {
+                stroke: "currentColor",
+                fill: "currentColor",
+                d: "M89.1364 76.4545C89.1364 78.8841 87.0918 80.9091 84.5 80.9091C81.9083 80.9091 79.8637 78.8841 79.8637 76.4545C79.8637 74.025 81.9083 72 84.5 72C87.0918 72 89.1364 74.025 89.1364 76.4545ZM84.5 91.0909C87.0918 91.0909 89.1364 93.1159 89.1364 95.5455C89.1364 97.975 87.0918 100 84.5 100C81.9083 100 79.8637 97.975 79.8637 95.5455C79.8637 93.1159 81.9083 91.0909 84.5 91.0909ZM74.6364 81.5455C77.2281 81.5455 79.2727 83.5705 79.2727 86C79.2727 88.4296 77.2281 90.4546 74.6364 90.4546C72.0446 90.4546 70 88.4296 70 86C70 83.5705 72.0446 81.5455 74.6364 81.5455ZM89.7273 86C89.7273 83.5705 91.7719 81.5455 94.3636 81.5455C96.9554 81.5455 99 83.5705 99 86C99 88.4296 96.9554 90.4546 94.3636 90.4546C91.7719 90.4546 89.7273 88.4296 89.7273 86Z",
+                strokeWidth: "2",
+              }),
+            ),
+            n.createElement(
+              "defs",
+              null,
+              n.createElement(
+                "clipPath",
+                { id: t },
+                n.createElement("rect", {
+                  fill: "currentColor",
+                  width: "100",
+                  height: "100",
+                }),
+              ),
+            ),
+          );
+        }
+        function no(e) {
+          return n.createElement(
+            "svg",
+            {
+              version: "1.1",
+              xmlns: "http://www.w3.org/2000/svg",
+              className: "SVGIcon_Button SVGIcon_TextBullets",
+              viewBox: "0 0 36 36",
+              fill: "none",
+            },
+            n.createElement(
+              "g",
+              null,
+              n.createElement("path", {
+                d: "M5.275 26.414c0-.609.24-1.192.669-1.623a2.275 2.275 0 0 1 3.226 0 2.301 2.301 0 0 1 0 3.245 2.275 2.275 0 0 1-3.226 0 2.301 2.301 0 0 1-.669-1.622Zm2.282-14.532c.605 0 1.186-.242 1.613-.672a2.3 2.3 0 0 0 0-3.245 2.275 2.275 0 0 0-3.226 0 2.3 2.3 0 0 0 0 3.245c.428.43 1.008.672 1.613.672Zm0 8.413c.605 0 1.186-.242 1.613-.672a2.3 2.3 0 0 0 0-3.245 2.275 2.275 0 0 0-3.226 0 2.3 2.3 0 0 0 0 3.245c.428.43 1.008.672 1.613.672Zm7.606-9.178h15.443a1.52 1.52 0 0 0 1.317-.765 1.537 1.537 0 0 0 0-1.53 1.52 1.52 0 0 0-1.317-.764H15.163a1.52 1.52 0 0 0-1.318.765 1.537 1.537 0 0 0 0 1.53 1.52 1.52 0 0 0 1.318.764Zm0 8.413h15.443a1.52 1.52 0 0 0 1.317-.764 1.537 1.537 0 0 0 0-1.53 1.52 1.52 0 0 0-1.317-.765H15.163a1.52 1.52 0 0 0-1.318.765 1.537 1.537 0 0 0 0 1.53 1.52 1.52 0 0 0 1.318.764Zm0 8.414h15.443a1.52 1.52 0 0 0 1.317-.765 1.537 1.537 0 0 0 0-1.53 1.52 1.52 0 0 0-1.317-.765H15.163a1.52 1.52 0 0 0-1.318.765 1.537 1.537 0 0 0 0 1.53 1.52 1.52 0 0 0 1.318.765Z",
+              }),
+            ),
+          );
+        }
+        function io(e) {
           return n.createElement(
             "svg",
             {
@@ -34412,7 +34679,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Qi(e) {
+        function oo(e) {
           const [t, r] = (0, a.l)();
           return n.createElement(
             "svg",
@@ -34563,7 +34830,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function Ji(e) {
+        function lo(e) {
           return n.createElement(
             "svg",
             {
@@ -34600,7 +34867,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function eo(e) {
+        function ao(e) {
           return n.createElement(
             "svg",
             {
@@ -34637,7 +34904,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function to(e) {
+        function so(e) {
           return n.createElement(
             "svg",
             {
@@ -34678,7 +34945,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function ro(e) {
+        function co(e) {
           return n.createElement(
             "svg",
             {
@@ -34725,7 +34992,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function no(e) {
+        function Co(e) {
           const [t, r] = (0, a.l)();
           return n.createElement(
             "svg",
@@ -34794,7 +35061,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function io(e) {
+        function uo(e) {
           return n.createElement(
             "svg",
             {
@@ -34845,7 +35112,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function oo(e) {
+        function mo(e) {
           const [t, r] = (0, a.l)();
           return n.createElement(
             "svg",
@@ -34910,7 +35177,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function lo(e) {
+        function ho(e) {
           return n.createElement(
             "svg",
             {
@@ -34929,7 +35196,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function ao(e) {
+        function po(e) {
           return n.createElement(
             "svg",
             {
@@ -34954,7 +35221,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function so(e) {
+        function go(e) {
           return n.createElement(
             "svg",
             {
@@ -34973,7 +35240,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function co() {
+        function fo() {
           return n.createElement(
             "svg",
             {
@@ -34993,7 +35260,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function Co() {
+        function _o() {
           return n.createElement(
             "svg",
             {
@@ -35012,7 +35279,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function uo() {
+        function wo() {
           return n.createElement(
             "svg",
             {
@@ -35031,7 +35298,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function mo() {
+        function Mo() {
           return n.createElement(
             "svg",
             {
@@ -35050,7 +35317,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function ho() {
+        function Lo() {
           return n.createElement(
             "svg",
             {
@@ -35069,7 +35336,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function po() {
+        function Eo() {
           const [e, t] = (0, a.l)();
           return n.createElement(
             "svg",
@@ -35131,7 +35398,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function go() {
+        function vo() {
           return n.createElement(
             "svg",
             {
@@ -35150,7 +35417,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function fo() {
+        function ko() {
           return n.createElement(
             "svg",
             {
@@ -35169,7 +35436,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function _o() {
+        function Ho() {
           return n.createElement(
             "svg",
             {
@@ -35188,7 +35455,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function wo() {
+        function bo() {
           return n.createElement(
             "svg",
             {
@@ -35207,7 +35474,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function Mo() {
+        function So() {
           return n.createElement(
             "svg",
             {
@@ -35226,7 +35493,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function Lo() {
+        function yo() {
           const [e, t] = (0, a.l)();
           return n.createElement(
             "svg",
@@ -35267,7 +35534,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function Eo() {
+        function xo() {
           return n.createElement(
             "svg",
             {
@@ -35286,7 +35553,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function vo() {
+        function Vo() {
           return n.createElement(
             "svg",
             {
@@ -35305,7 +35572,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function ko() {
+        function Ro() {
           const [e, t] = (0, a.l)();
           return n.createElement(
             "svg",
@@ -35344,7 +35611,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function Ho() {
+        function Io() {
           return n.createElement(
             "svg",
             {
@@ -35373,7 +35640,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function bo() {
+        function Bo() {
           const [e, t] = (0, a.l)();
           return n.createElement(
             "svg",
@@ -35405,7 +35672,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function So() {
+        function Do() {
           const [e, t] = (0, a.l)();
           return n.createElement(
             "svg",
@@ -35439,7 +35706,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function yo() {
+        function Zo() {
           const [e, t] = (0, a.l)();
           return n.createElement(
             "svg",
@@ -35475,7 +35742,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function xo(e) {
+        function To(e) {
           return n.createElement(
             "svg",
             {
@@ -35496,7 +35763,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Vo(e) {
+        function Ao(e) {
           return n.createElement(
             "svg",
             {
@@ -35515,7 +35782,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Ro(e) {
+        function No(e) {
           return n.createElement(
             "svg",
             {
@@ -35533,7 +35800,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Io(e) {
+        function Fo(e) {
           return n.createElement(
             "svg",
             {
@@ -35547,7 +35814,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Bo(e) {
+        function Oo(e) {
           return n.createElement(
             "svg",
             {
@@ -35565,7 +35832,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Do(e) {
+        function Po(e) {
           const [t, r] = (0, a.l)(),
             [i, o] = (0, a.l)();
           return n.createElement(
@@ -35619,7 +35886,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function Zo(e) {
+        function Wo(e) {
           return n.createElement(
             "svg",
             {
@@ -35645,7 +35912,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function To(e) {
+        function Go(e) {
           return n.createElement(
             "svg",
             {
@@ -35660,7 +35927,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Ao(e) {
+        function Uo(e) {
           return n.createElement(
             "svg",
             {
@@ -35680,7 +35947,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function No(e) {
+        function zo(e) {
           return n.createElement(
             "svg",
             {
@@ -35707,7 +35974,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Fo(e) {
+        function jo(e) {
           return n.createElement(
             "svg",
             {
@@ -35748,7 +36015,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Oo(e) {
+        function qo(e) {
           return n.createElement(
             "svg",
             {
@@ -35771,7 +36038,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Po(e) {
+        function Ko(e) {
           return n.createElement(
             "svg",
             {
@@ -35790,7 +36057,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Wo(e) {
+        function Yo(e) {
           return n.createElement(
             "svg",
             {
@@ -35841,7 +36108,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Go(e) {
+        function Xo(e) {
           return n.createElement(
             "svg",
             {
@@ -35872,7 +36139,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Uo(e) {
+        function $o(e) {
           return n.createElement(
             "svg",
             {
@@ -35900,7 +36167,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function zo(e) {
+        function Qo(e) {
           const { bGreyOutRightSide: t, ...r } = e;
           return t
             ? n.createElement(
@@ -35946,7 +36213,7 @@ var CLSTAMP = "9135573";
                 }),
               );
         }
-        function jo(e) {
+        function Jo(e) {
           const { hand: t, ...r } = e;
           return "left" == t
             ? n.createElement(
@@ -35984,7 +36251,7 @@ var CLSTAMP = "9135573";
                 }),
               );
         }
-        function qo(e) {
+        function el(e) {
           return n.createElement(
             "svg",
             {
@@ -36001,7 +36268,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Ko(e) {
+        function tl(e) {
           return n.createElement(
             "svg",
             {
@@ -36020,7 +36287,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Yo(e) {
+        function rl(e) {
           return n.createElement(
             "svg",
             {
@@ -36035,7 +36302,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Xo(e) {
+        function nl(e) {
           const [t, r] = (0, a.l)();
           return n.createElement(
             "svg",
@@ -36082,7 +36349,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function $o(e) {
+        function il(e) {
           return n.createElement(
             "svg",
             {
@@ -36126,7 +36393,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Qo(e) {
+        function ol(e) {
           return n.createElement(
             "svg",
             {
@@ -36144,7 +36411,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Jo(e) {
+        function ll(e) {
           return n.createElement(
             "svg",
             {
@@ -36164,7 +36431,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function el(e) {
+        function al(e) {
           return n.createElement(
             "svg",
             {
@@ -36182,7 +36449,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function tl(e) {
+        function sl(e) {
           return n.createElement(
             "svg",
             {
@@ -36205,7 +36472,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function rl(e) {
+        function cl(e) {
           return n.createElement(
             "svg",
             {
@@ -36222,7 +36489,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function nl(e) {
+        function Cl(e) {
           return n.createElement(
             "svg",
             {
@@ -36265,7 +36532,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function il(e) {
+        function ul(e) {
           const [t, r] = (0, a.l)();
           return n.createElement(
             "svg",
@@ -36351,7 +36618,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function ol(e) {
+        function ml(e) {
           return n.createElement(
             "svg",
             {
@@ -36432,7 +36699,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function ll(e) {
+        function dl(e) {
           return n.createElement(
             "svg",
             {
@@ -36588,7 +36855,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function al(e) {
+        function hl(e) {
           const [t, r] = (0, a.l)(),
             [i, o] = (0, a.l)();
           return n.createElement(
@@ -37411,7 +37678,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function sl(e) {
+        function pl(e) {
           const [t, r] = (0, a.l)(),
             [i, o] = (0, a.l)();
           return n.createElement(
@@ -37657,7 +37924,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function cl(e) {
+        function gl(e) {
           return n.createElement(
             "svg",
             {
@@ -37699,7 +37966,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function Cl(e) {
+        function fl(e) {
           return n.createElement(
             "svg",
             {
@@ -37733,7 +38000,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function ul(e) {
+        function _l(e) {
           return n.createElement(
             "svg",
             {
@@ -37867,7 +38134,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function ml(e) {
+        function wl(e) {
           return n.createElement(
             "svg",
             {
@@ -38031,7 +38298,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function dl(e) {
+        function Ml(e) {
           return n.createElement(
             "svg",
             {
@@ -38060,7 +38327,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function hl(e) {
+        function Ll(e) {
           return n.createElement(
             "svg",
             {
@@ -38120,7 +38387,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function pl(e) {
+        function El(e) {
           return n.createElement(
             "svg",
             {
@@ -38204,7 +38471,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function gl(e) {
+        function vl(e) {
           return n.createElement(
             "svg",
             {
@@ -38230,7 +38497,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function fl(e) {
+        function kl(e) {
           return n.createElement(
             "svg",
             {
@@ -38260,7 +38527,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function _l(e) {
+        function Hl(e) {
           return n.createElement(
             "svg",
             {
@@ -38286,7 +38553,7 @@ var CLSTAMP = "9135573";
             }),
           );
         }
-        function wl(e) {
+        function bl(e) {
           const [t, r] = (0, a.l)(),
             [i, o] = (0, a.l)();
           return n.createElement(
@@ -38537,7 +38804,7 @@ var CLSTAMP = "9135573";
             ),
           );
         }
-        function Ml(e) {
+        function Sl(e) {
           const {
               highlightViewButton: t,
               highlightOptionsButton: r,
@@ -50272,9 +50539,9 @@ var CLSTAMP = "9135573";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Aug 23 2024 : 14:43:22",
-                    BUILD_TIME_UTC: "Aug 23 2024 : 21:43:22",
-                    BUILD_RTIME_UTC: 1724449402,
+                    BUILD_TIME_LOCAL: "Aug 27 2024 : 18:05:12",
+                    BUILD_TIME_UTC: "Aug 28 2024 : 01:05:12",
+                    BUILD_RTIME_UTC: 1724807112,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -50881,7 +51148,7 @@ var CLSTAMP = "9135573";
         3180: "8e8aa27ac0cac69a5efc",
         3350: "52d5ab64230a17007d7a",
         3366: "94b027e82a96ab73ffe0",
-        3569: "d83ae1bf05958936ce93",
+        3569: "ecb9f9f1a4b5c013f466",
         3583: "978cf57fa27bcf5cb29b",
         3594: "8224db72aa82304ea97b",
         3714: "f85176b5e935dfd11403",
@@ -50961,7 +51228,7 @@ var CLSTAMP = "9135573";
         9418: "fd07eeefd19a66aed327",
         9462: "89227ab1a3d278d803ec",
         9711: "925ea00fb25d86de2695",
-        9858: "5cc4d0793522099ca8d0",
+        9858: "777a0a43df24a03e8251",
         9869: "7f29b83b165e41a2265b",
         9887: "8cfcae473018942b8bd6",
       }[e]),

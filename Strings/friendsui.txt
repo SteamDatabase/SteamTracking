@@ -5811,6 +5811,7 @@ json_name = "
 jsondata
 jstype
 jstype is only allowed on int64, uint64, sint64, fixed64 or sfixed64 fields.
+k90;
 k\fClibpng warning: %s
 k_BluetoothDeviceType_Computer
 k_BluetoothDeviceType_Gamepad
