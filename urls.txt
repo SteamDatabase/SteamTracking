@@ -501,6 +501,13 @@ ClientManifest/steam_client_publicbeta_osx      @ https://steamcdn-a.akamaihd.ne
 ClientManifest/steamdeck_publicbeta             @ https://steamcdn-a.akamaihd.net/client/steam_client_steamdeck_publicbeta_ubuntu12?__TIME__
 
 //
+// Families Beta Client Manifests
+//
+ClientManifest/steam_client_publicbeta_families_ubuntu12 @ https://steamcdn-a.akamaihd.net/client/steam_client_publicbeta_families_ubuntu12?__TIME__
+ClientManifest/steam_client_publicbeta_families_win32    @ https://steamcdn-a.akamaihd.net/client/steam_client_publicbeta_families_win32?__TIME__
+ClientManifest/steam_client_publicbeta_families_osx      @ https://steamcdn-a.akamaihd.net/client/steam_client_publicbeta_families_osx?__TIME__
+
+//
 // Steam China Manifests
 //
 ClientManifest/steamchina_win32                 @ https://steamcdn-a.akamaihd.net/client/steamchina_win32
