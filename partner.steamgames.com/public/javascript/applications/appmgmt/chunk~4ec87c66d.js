@@ -9930,7 +9930,7 @@
       const v = { include_release: !0 };
       function b(e, t, a, r, s, l, o, c, m, d, p, _, g, E, S) {
         const y = (0, i.e5)(d, m),
-          f = (0, h.U)(m);
+          f = (0, h.UT)(m);
         let v = n.k_StoreInvalidState;
         return (
           2 == l
@@ -55892,7 +55892,7 @@
             type: "url",
             label: "Link URL",
             mustBeURL: !0,
-            fnStrValidateURL: Vt.V,
+            fnStrValidateURL: Vt.Vi,
             value: n,
             requiredLabel: (0, z.we)("#Steamworks_Generic_Required"),
             onChange: (e) => t.SetLinkURL(e.target.value),
@@ -61546,7 +61546,7 @@
     },
     14514: (e, t, a) => {
       "use strict";
-      a.d(t, { U: () => r, V: () => i });
+      a.d(t, { SW: () => i, UT: () => r, Vi: () => s });
       var n = a(61336);
       function r(e) {
         if (!e) return !1;
@@ -61558,6 +61558,10 @@
         );
       }
       function i(e) {
+        if (!e) return !1;
+        return "store.steamchina.com" == (0, n.wm)(e).toLocaleLowerCase();
+      }
+      function s(e) {
         return r(e) ? null : "Link must point to store or community";
       }
     },
@@ -61749,7 +61753,7 @@
           if (S) {
             let e = S.GetStorePageURLWithOverride();
             r == n.ii.k_ConfigPage_TakeoverSteamChina &&
-              e.replace(/steampowered\.com/g, "steamchina.com"),
+              (e = e.replace(/steampowered\.com/g, "steamchina.com")),
               c(e);
           }
         }, [S, r]);
@@ -62323,7 +62327,7 @@
               ")",
             ),
           ),
-          Boolean(c && !(0, ve.U)(o)) &&
+          Boolean(c && !(0, ve.UT)(o)) &&
             u.createElement(
               "div",
               { className: (0, I.A)(R.StatusRow, R.StatusAlert) },
@@ -62333,19 +62337,19 @@
       }
       function De(e) {
         const { id: t, type: a } = e,
-          n = (0, ge.TR)(a, t);
-        if (!n) return null;
-        const r = Boolean(n.visibility.visible),
-          i =
-            n.visibility.startdate &&
-            n.visibility.enddate &&
-            n.visibility.enddate > n.visibility.startdate,
+          r = (0, ge.TR)(a, t);
+        if (!r) return null;
+        const i = Boolean(r.visibility.visible),
           s =
-            n.association?.appid ||
-            n.association?.packageid ||
-            n.association?.bundleid,
-          l = n.association?.url || n.page_bg_url,
-          o = Boolean(l);
+            r.visibility.startdate &&
+            r.visibility.enddate &&
+            r.visibility.enddate > r.visibility.startdate,
+          l =
+            r.association?.appid ||
+            r.association?.packageid ||
+            r.association?.bundleid,
+          o = r.association?.url || r.page_bg_url,
+          c = Boolean(o);
         return u.createElement(
           u.Fragment,
           null,
@@ -62356,33 +62360,33 @@
               "span",
               { className: R.Visibility },
               "Visibility: ",
-              r ? "Public" : "Draft",
-            ),
-            u.createElement(
-              "span",
-              { className: (0, I.A)(R.Status, i && R.Complete) },
-              i ? "🗹 " : "☐ ",
-              " Date",
+              i ? "Public" : "Draft",
             ),
             u.createElement(
               "span",
               { className: (0, I.A)(R.Status, s && R.Complete) },
               s ? "🗹 " : "☐ ",
+              " Date",
+            ),
+            u.createElement(
+              "span",
+              { className: (0, I.A)(R.Status, l && R.Complete) },
+              l ? "🗹 " : "☐ ",
               " Item Associated",
             ),
             u.createElement(
               "span",
-              { className: (0, I.A)(R.Status, o && R.Complete) },
-              o ? "🗹 " : "☐ ",
+              { className: (0, I.A)(R.Status, c && R.Complete) },
+              c ? "🗹 " : "☐ ",
               " Valid Link",
             ),
             _e.lQ.map((e) => {
-              const t = Object.keys(n[e] ?? []).length,
-                r = t >= Ee.G;
+              const t = Object.keys(r[e] ?? []).length,
+                n = t >= Ee.G;
               return u.createElement(
                 "span",
                 { key: a + "_" + e },
-                r ? "🗹 " : "☐ ",
+                n ? "🗹 " : "☐ ",
                 " ",
                 (0, _e.$U)(e),
                 " ",
@@ -62394,11 +62398,19 @@
               );
             }),
           ),
-          Boolean(o && !(0, ve.U)(l)) &&
+          Boolean(c && !(0, ve.UT)(o)) &&
             u.createElement(
               "div",
               { className: (0, I.A)(R.StatusRow, R.StatusAlert) },
               "Error: Takeover has an overide URL which isn't store or community. Check for typos.",
+            ),
+          Boolean(
+            c && a == n.ii.k_ConfigPage_TakeoverSteamChina && !(0, ve.SW)(o),
+          ) &&
+            u.createElement(
+              "div",
+              { className: (0, I.A)(R.StatusRow, R.StatusAlert) },
+              "Error: Steam China Takeover without a SteamChina store URL; fix the hostname to be 'store.steamchina.com'",
             ),
         );
       }
@@ -62473,7 +62485,7 @@
               { className: (0, I.A)(R.StatusRow, R.StatusAlert) },
               "Error: This take under should be updated to convert /sale/ to /deckverified/ to reduce deck advertising on front page",
             ),
-          Boolean(o && !(0, ve.U)(l)) &&
+          Boolean(o && !(0, ve.UT)(l)) &&
             u.createElement(
               "div",
               { className: (0, I.A)(R.StatusRow, R.StatusAlert) },
