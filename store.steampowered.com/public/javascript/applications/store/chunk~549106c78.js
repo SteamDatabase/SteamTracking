@@ -1,7 +1,7 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
 (self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [8019],
+  [8019, 8163],
   {
     17009: (e) => {
       e.exports = {
@@ -217,7 +217,7 @@
         i = n(22837),
         c = n(32381),
         m = n(71138),
-        d = n(82415),
+        d = n(4796),
         u = n(44165),
         p = n(60746),
         E = n(87129),
@@ -249,7 +249,7 @@
         P = n(43667),
         U = n(71746),
         V = n(92022),
-        F = (n(17720), n(12493), n(55263));
+        F = (n(17720), n(67165), n(55263));
       function H(e) {
         const { children: t } = e;
         return (0, j.Qn)() && !j.TS.IN_STEAMUI
@@ -271,18 +271,9 @@
       var Q = n(69409);
       const W = s.lazy(() =>
         Promise.all([
-          n.e(8970),
-          n.e(6597),
           n.e(7937),
-          n.e(2797),
-          n.e(4717),
-          n.e(7436),
-          n.e(7403),
-          n.e(582),
-          n.e(4796),
-          n.e(6049),
-          n.e(7908),
           n.e(7328),
+          n.e(2828),
           n.e(6649),
           n.e(8396),
         ]).then(n.bind(n, 70834)),
@@ -1061,7 +1052,7 @@
         o = n(90626),
         r = n(77516),
         s = n(17720),
-        l = n(82415),
+        l = n(4796),
         i = n(30894),
         c = n(60746),
         m = n(16021),
@@ -1323,7 +1314,7 @@
         N = n(12155),
         I = n(82477),
         T = n(86090),
-        C = n(82415),
+        C = n(4796),
         L = n(61336),
         y = n(14947);
       class w {

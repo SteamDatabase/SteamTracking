@@ -2726,6 +2726,15 @@ enum UnnamedEnum6010fbb978b95cf2
 	Enabled = 2;
 }
 
+enum UnnamedEnum67e7921661046ee2
+{
+	New = 1;
+	ComingSoon = 2;
+	PlayerFavorite = 3;
+	Recommended = 4;
+	NewPlayers = 5;
+}
+
 enum UnnamedEnum6847f45783a9d593
 {
 	Pitch = 0;

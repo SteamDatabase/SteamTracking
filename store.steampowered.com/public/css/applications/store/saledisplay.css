@@ -1,54 +1,3 @@
-._1Un6hCqh2IuOm0WLmrrA7w {
-  max-width: 940px;
-  margin: 0 auto;
-  margin-bottom: 0px;
-  margin-top: 67px;
-}
-.BasicUI ._1Un6hCqh2IuOm0WLmrrA7w {
-  max-height: 285px;
-  margin-bottom: 0px;
-  margin-top: 65px;
-}
-html.tablet ._1Un6hCqh2IuOm0WLmrrA7w {
-  margin-top: 65px;
-}
-@media screen and (max-width: 910px) {
-  ._1Un6hCqh2IuOm0WLmrrA7w {
-    margin-top: 65px;
-  }
-}
-._1Un6hCqh2IuOm0WLmrrA7w img {
-  width: 100%;
-  display: block;
-}
-.BasicUI ._1Un6hCqh2IuOm0WLmrrA7w img {
-  max-height: 285px;
-  width: auto;
-}
-@media screen and (max-width: 940px) {
-  ._1Un6hCqh2IuOm0WLmrrA7w {
-    margin-top: 45px;
-    margin-bottom: 0px;
-  }
-}
-._2g5oNomwd2lv8wL2qlsLVA {
-  display: flex;
-}
-._2g5oNomwd2lv8wL2qlsLVA .DialogButton {
-  width: 36px;
-  height: 30px;
-  margin-left: auto;
-  margin-top: auto;
-}
-._3yDPZjnsoLc2FkrAH2UOEd {
-  display: flex;
-}
-._3yDPZjnsoLc2FkrAH2UOEd:not(:first-child) {
-  margin-top: 60px;
-}
-._2g5oNomwd2lv8wL2qlsLVA .EventEditorTextTitle {
-  padding-top: 6px;
-}
 .YuXdszLjIFoat_EbTkm8U {
   padding: 0px var(--gpSpace-Gutter) var(--gpSpace-Gutter) var(--gpSpace-Gutter);
 }
@@ -176,6 +125,57 @@ html.tablet ._1Un6hCqh2IuOm0WLmrrA7w {
   span {
   font: var(--gpText-HeadingSmall);
   text-align: center;
+}
+._1Un6hCqh2IuOm0WLmrrA7w {
+  max-width: 940px;
+  margin: 0 auto;
+  margin-bottom: 0px;
+  margin-top: 67px;
+}
+.BasicUI ._1Un6hCqh2IuOm0WLmrrA7w {
+  max-height: 285px;
+  margin-bottom: 0px;
+  margin-top: 65px;
+}
+html.tablet ._1Un6hCqh2IuOm0WLmrrA7w {
+  margin-top: 65px;
+}
+@media screen and (max-width: 910px) {
+  ._1Un6hCqh2IuOm0WLmrrA7w {
+    margin-top: 65px;
+  }
+}
+._1Un6hCqh2IuOm0WLmrrA7w img {
+  width: 100%;
+  display: block;
+}
+.BasicUI ._1Un6hCqh2IuOm0WLmrrA7w img {
+  max-height: 285px;
+  width: auto;
+}
+@media screen and (max-width: 940px) {
+  ._1Un6hCqh2IuOm0WLmrrA7w {
+    margin-top: 45px;
+    margin-bottom: 0px;
+  }
+}
+._2g5oNomwd2lv8wL2qlsLVA {
+  display: flex;
+}
+._2g5oNomwd2lv8wL2qlsLVA .DialogButton {
+  width: 36px;
+  height: 30px;
+  margin-left: auto;
+  margin-top: auto;
+}
+._3yDPZjnsoLc2FkrAH2UOEd {
+  display: flex;
+}
+._3yDPZjnsoLc2FkrAH2UOEd:not(:first-child) {
+  margin-top: 60px;
+}
+._2g5oNomwd2lv8wL2qlsLVA .EventEditorTextTitle {
+  padding-top: 6px;
 }
 ._2Un11RfkRCG1ypLwtwMzrI,
 ._1_IJ41Ffm67VU1UXLllw1C {

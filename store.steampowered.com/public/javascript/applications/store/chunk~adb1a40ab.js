@@ -39,32 +39,6 @@
     64233: (e) => {
       e.exports = { Image: "_1po_jxHTSix3Li3w5ZnMBB" };
     },
-    47444: (e) => {
-      e.exports = {
-        "duration-app-launch": "800ms",
-        carouselNavButton: "_13rGo4vexAbY9-CP7FsLOg",
-        left: "S8IHdovT5T2iEVg_97xve",
-        carouselBtnCtn: "_3zfZ9tkIrSDZdSTv8mvZ3-",
-        right: "Cq59o5WQ49zTvvFY56QYS",
-        carouselBody: "_3a31O8XB_8lD-yov8FB9-9",
-        sliderBody: "_2M3SnYGvMvplWUC8yGhowo",
-        slideTrayCustomize: "_2VUpHDtxN8lR1LDahY_cI2",
-        breadcrumbContainer: "_3HjnEmKg66o82ah74EIvmq",
-        pipList: "LY1m24ODS7AFRuzclt0Sl",
-        pipScrollerContainer: "_3SyN-YtXsML6ado0q-Gdve",
-        pipScrollButton: "qE43Jfzl0qJX_a6XrMgSr",
-        scrollNavDiv: "_95I5gwXXMBghRg-4uNQLr",
-        scrollNavButton: "_1cpdoEGU0uiIWbGIU_qMbZ",
-        pipScroller: "EMd4F6A8qdMk-l6os415A",
-        scrollBackground: "WUHeTNYGQDQQg_jQe-78W",
-        scrollForeground: "PQzkJfi8IxzjcFEDG-yv-",
-        pipContainer: "_3TKX37FakYHikXh3Wtg2BU",
-        pip: "_3Byg6Wc4TX36gkUptUIk72",
-        pipNumber: "_1u4YJiW1cdufpC_wssM8Us",
-        innerSlide: "_3Cc2bMRML2lEkSyi2IAZ9G",
-        DisableSliderMotion: "_3J8-bW87K3pb8EpRNYq0JG",
-      };
-    },
     39362: (e) => {
       e.exports = { Ctn: "_1xGaMOW4aakB5uwqOCT3nI" };
     },
@@ -146,9 +120,6 @@
         EquipCtn: "_1zUv_m9l3wknw_k_rwz0uy",
       };
     },
-    11279: (e) => {
-      e.exports = { ScrollSnapCarousel: "_1nUtBXgWizhgU1jv-8wVC7" };
-    },
     86244: (e) => {
       e.exports = {
         Container: "_2vGr9KsApU0s59_ZsZVxXY",
@@ -195,22 +166,22 @@
     },
     70995: (e, t, a) => {
       "use strict";
-      a.d(t, { Lg: () => c, XU: () => p });
+      a.d(t, { Lg: () => m, XU: () => p });
       const n = 20,
         r = /^.*youtube[^v]+v=(.{11}).*/,
         o = /^.*youtu\.be\/(.{11}).*/,
         i = /^.*youtube.*\/embed\/(.{11}).*/,
         s = /^.*[?&]t=([^&]+)(?:&|$)/,
         l = /^(?:(?:([\d]+)h)?(?:([\d]+)m)?(?:([\d]+)s)?|([\d]+))$/;
-      function c(e) {
-        return !!m(e);
-      }
       function m(e) {
+        return !!c(e);
+      }
+      function c(e) {
         const t = e?.length < n ? void 0 : r.exec(e) || o.exec(e) || i.exec(e);
         return t?.[1];
       }
       function p(e) {
-        const t = m(e);
+        const t = c(e);
         if (!t) return;
         const a = (function (e) {
             const t = s.exec(e);
@@ -233,112 +204,18 @@
         return { strVideoID: t, nStartSeconds: n };
       }
     },
-    75933: (e, t, a) => {
-      "use strict";
-      a.d(t, {
-        $m: () => o,
-        Sn: () => d,
-        Wn: () => l,
-        ZI: () => h,
-        a4: () => m,
-        f_: () => p,
-        jD: () => i,
-        jn: () => u,
-        mj: () => s,
-        rp: () => c,
-      });
-      var n = a(77516),
-        r = a(90626);
-      const o = "0px 0px 100% 0px",
-        i = "tab",
-        s = "SaleSection_",
-        l = 940;
-      function c() {
-        return window.innerWidth >= l;
-      }
-      function m(e = l) {
-        return (
-          (function () {
-            const [e, t] = (0, r.useState)(window.innerWidth);
-            return (
-              (0, r.useEffect)(() => {
-                const e = () => {
-                  t(window.innerWidth);
-                };
-                return (
-                  window.addEventListener("resize", e),
-                  () => window.removeEventListener("resize", e)
-                );
-              }, []),
-              e
-            );
-          })() >= e
-        );
-      }
-      function p(e) {
-        const t = m(l),
-          a = (0, n._B)(e);
-        return t
-          ? { nMaxCapsulesPerRow: a.nMaxItemsPerRow, bScreenIsWide: t }
-          : {
-              nMaxCapsulesPerRow: Math.min(
-                Math.max(
-                  Math.floor(window.innerWidth / a.nItemMinimumWidth),
-                  1,
-                ),
-                a.nMaxItemsPerRow,
-              ),
-              bScreenIsWide: t,
-            };
-      }
-      function d(e) {
-        const t = (0, n._B)(e);
-        return c()
-          ? t.nMaxItemsPerRow
-          : Math.min(
-              Math.max(Math.floor(window.innerWidth / t.nItemMinimumWidth), 1),
-              t.nMaxItemsPerRow,
-            );
-      }
-      function u(e) {
-        switch (e) {
-          case 32:
-            return 28;
-          case 34:
-            return 55;
-          case 45:
-            return 57;
-          case 2:
-            return 59;
-          default:
-            return;
-        }
-      }
-      function h(e) {
-        switch (e) {
-          case 28:
-            return 32;
-          case 55:
-            return 34;
-          case 57:
-            return 45;
-          default:
-            return;
-        }
-      }
-    },
     63556: (e, t, a) => {
       "use strict";
-      a.d(t, { E: () => p, O: () => m });
+      a.d(t, { E: () => p, O: () => c });
       var n = a(34629),
         r = a(14947),
         o = a(65946),
         i = a(22837),
         s = a(62490),
         l = a(10333),
-        c = a(78327);
-      class m {
-        m_eCurLang = (0, i.sf)(c.TS.LANGUAGE);
+        m = a(78327);
+      class c {
+        m_eCurLang = (0, i.sf)(m.TS.LANGUAGE);
         m_rgHasData = (0, s.$Y)([], 31, !1);
         m_bHasLocalizationContext = !1;
         GetCurEditLanguage() {
@@ -365,11 +242,11 @@
         static s_globalSingletonStore;
         static Get() {
           return (
-            m.s_globalSingletonStore ||
-              ((m.s_globalSingletonStore = new m()),
-              "dev" == c.TS.WEB_UNIVERSE &&
-                (window.DUS = m.s_globalSingletonStore)),
-            m.s_globalSingletonStore
+            c.s_globalSingletonStore ||
+              ((c.s_globalSingletonStore = new c()),
+              "dev" == m.TS.WEB_UNIVERSE &&
+                (window.DUS = c.s_globalSingletonStore)),
+            c.s_globalSingletonStore
           );
         }
         constructor() {
@@ -377,15 +254,15 @@
         }
       }
       function p() {
-        return (0, o.q3)(() => m.Get().GetCurEditLanguage());
+        return (0, o.q3)(() => c.Get().GetCurEditLanguage());
       }
-      (0, n.Cg)([r.sH], m.prototype, "m_eCurLang", void 0),
-        (0, n.Cg)([r.sH], m.prototype, "m_rgHasData", void 0),
-        (0, n.Cg)([r.sH], m.prototype, "m_bHasLocalizationContext", void 0),
-        (0, n.Cg)([l.o], m.prototype, "GetCurEditLanguage", null),
-        (0, n.Cg)([l.o], m.prototype, "SetCurEditLanguage", null),
-        (0, n.Cg)([r.XI.bound], m.prototype, "SetHasLanguage", null),
-        (0, n.Cg)([l.o], m.prototype, "BHasLanguageData", null);
+      (0, n.Cg)([r.sH], c.prototype, "m_eCurLang", void 0),
+        (0, n.Cg)([r.sH], c.prototype, "m_rgHasData", void 0),
+        (0, n.Cg)([r.sH], c.prototype, "m_bHasLocalizationContext", void 0),
+        (0, n.Cg)([l.o], c.prototype, "GetCurEditLanguage", null),
+        (0, n.Cg)([l.o], c.prototype, "SetCurEditLanguage", null),
+        (0, n.Cg)([r.XI.bound], c.prototype, "SetHasLanguage", null),
+        (0, n.Cg)([l.o], c.prototype, "BHasLanguageData", null);
     },
     83059: (e, t, a) => {
       "use strict";
@@ -396,8 +273,8 @@
         i = a(83935),
         s = a(44332),
         l = a(68797),
-        c = a(51240),
-        m = a(56093),
+        m = a(51240),
+        c = a(56093),
         p = a(78327);
       class d {
         m_mapDefIDtoDefinition = new Map();
@@ -413,7 +290,7 @@
         GetItemChangeCallback(e) {
           return (
             this.m_defChangeCallback.has(e) ||
-              this.m_defChangeCallback.set(e, new c.lu()),
+              this.m_defChangeCallback.set(e, new m.lu()),
             this.m_defChangeCallback.get(e)
           );
         }
@@ -428,7 +305,7 @@
           const a = this.GetKeyCategoryAndClass(e, t);
           return (
             this.m_defCategoryAndClassToChangeCallback.has(a) ||
-              this.m_defCategoryAndClassToChangeCallback.set(a, new c.lu()),
+              this.m_defCategoryAndClassToChangeCallback.set(a, new m.lu()),
             this.m_defCategoryAndClassToChangeCallback.get(a)
           );
         }
@@ -558,7 +435,7 @@
           (0, n.useEffect)(() => {
             t || d.Get().LoadRewardDefinition(e);
           }, [e, t]),
-          (0, m.hL)(d.Get().GetItemChangeCallback(e), a),
+          (0, c.hL)(d.Get().GetItemChangeCallback(e), a),
           t
         );
       }
@@ -570,7 +447,7 @@
           (0, n.useEffect)(() => {
             a || d.Get().LoadRewardDefinitionByCategoryAndClass(e, t).then(r);
           }, [e, t, a]),
-          (0, m.hL)(d.Get().GetItemsByCategoryAndClassCallback(e, t), r),
+          (0, c.hL)(d.Get().GetItemsByCategoryAndClassCallback(e, t), r),
           a
         );
       }
@@ -584,8 +461,8 @@
         i = a(72034),
         s = a(58222),
         l = a(44332),
-        c = a(68797),
-        m = a(51240),
+        m = a(68797),
+        c = a(51240),
         p = a(56093),
         d = a(78327);
       class u {
@@ -599,7 +476,7 @@
         GetItemDefsChangeForAppID(e) {
           return (
             this.m_listChangeCallback.has(e) ||
-              this.m_listChangeCallback.set(e, new m.lu()),
+              this.m_listChangeCallback.set(e, new c.lu()),
             this.m_listChangeCallback.get(e)
           );
         }
@@ -642,9 +519,9 @@
                 1
               );
             }
-            a = (0, c.H)(n);
+            a = (0, m.H)(n);
           } catch (e) {
-            a = (0, c.H)(e);
+            a = (0, m.H)(e);
           }
           return (
             console.error(
@@ -709,15 +586,15 @@
     },
     93973: (e, t, a) => {
       "use strict";
-      a.d(t, { CC: () => S, Oz: () => _, lu: () => C, ns: () => f });
+      a.d(t, { CC: () => C, Oz: () => _, lu: () => S, ns: () => f });
       var n = a(34629),
         r = a(56545),
         o = a(72034),
         i = a(83935),
         s = a(44332),
         l = a(78327),
-        c = a(90626),
-        m = a(68797),
+        m = a(90626),
+        c = a(68797),
         p = a(51240),
         d = a(56093),
         u = a(14947),
@@ -827,9 +704,9 @@
                 this.GetClaimStateChangeCallback().Dispatch(this.m_claimState),
                 this.m_claimState
               );
-            t = (0, m.H)(a);
+            t = (0, c.H)(a);
           } catch (e) {
-            t = (0, m.H)(e);
+            t = (0, c.H)(e);
           }
           return (
             console.error(
@@ -904,9 +781,9 @@
                 (this.m_canClaimPromise = this.InternalLoadCanUserClaimItem()),
                 this.m_canClaimPromise
               );
-            t = (0, m.H)(a);
+            t = (0, c.H)(a);
           } catch (e) {
-            t = (0, m.H)(e);
+            t = (0, c.H)(e);
           }
           return (
             console.error(
@@ -965,10 +842,10 @@
         }
       }
       function _() {
-        const [e, t] = (0, c.useState)(g.Get().GetClaimItemState()),
-          [a, n] = (0, c.useState)(!0);
+        const [e, t] = (0, m.useState)(g.Get().GetClaimItemState()),
+          [a, n] = (0, m.useState)(!0);
         return (
-          (0, c.useEffect)(() => {
+          (0, m.useEffect)(() => {
             g.Get()
               .LoadCanUserClaimItem()
               .then(t)
@@ -978,10 +855,10 @@
           { ...e, bLoading: a }
         );
       }
-      function S() {
+      function C() {
         return { fnClaimItem: g.Get().UserClaimItem };
       }
-      function C() {
+      function S() {
         return { fnSetClaimState: g.Get().TEST_OverrideClaimState };
       }
       async function f(e) {
@@ -990,294 +867,9 @@
       (0, n.Cg)([d.oI], g.prototype, "TEST_OverrideClaimState", null),
         (0, n.Cg)([d.oI], g.prototype, "UserClaimItem", null);
     },
-    43568: (e, t, a) => {
-      "use strict";
-      a.d(t, { F: () => C });
-      var n = a(65731),
-        r = a(90626),
-        o = a(32381),
-        i = a(12155),
-        s = a(52038),
-        l = a(30143),
-        c = a(47444),
-        m = a(96236),
-        p = a(60383),
-        d = a(78327),
-        u = a(11279);
-      function h(e) {
-        const { padded: t, gap: a, children: n } = e;
-        return r.createElement(
-          "div",
-          {
-            style: { gap: a ? a + "px" : "unset" },
-            className: (0, s.A)({
-              [u.ScrollSnapCarousel]: !0,
-              ScrollSnapCarousel: !0,
-              SaleSectionCarousel: !0,
-              SaleSectionCarouselPadding: t,
-              [e.className]: !0,
-            }),
-          },
-          n,
-        );
-      }
-      var g = a(93007);
-      class _ extends r.Component {
-        render() {
-          const { showArrows: e } = this.props,
-            t = this.props.visibleSlides,
-            a = this.props.totalSlides,
-            o = this.props.currentSlide;
-          if (t >= a) return null;
-          const l = (100 * o) / a,
-            m = 100 * (1 - Math.min(o + t, a) / a),
-            p = l + (50 * t) / a,
-            d = 100 - p;
-          return r.createElement(
-            "div",
-            { className: c.pipScrollerContainer },
-            e &&
-              r.createElement(
-                n._X,
-                {
-                  className: (0, s.A)(
-                    c.pipScrollButton,
-                    c.left,
-                    c.carouselNavButton,
-                  ),
-                },
-                r.createElement(i.uMb, null),
-              ),
-            r.createElement(
-              "div",
-              { className: c.pipScroller },
-              r.createElement("div", { className: c.scrollBackground }),
-              r.createElement("div", {
-                className: c.scrollForeground,
-                style: { left: l + "%", right: m + "%" },
-              }),
-              r.createElement(
-                "div",
-                {
-                  className: c.scrollNavDiv,
-                  style: { left: "0%", width: p + "%" },
-                },
-                r.createElement(
-                  n._X,
-                  {
-                    className: (0, s.A)(c.carouselNavButton, c.scrollNavButton),
-                  },
-                  r.createElement("div", null),
-                ),
-              ),
-              r.createElement(
-                "div",
-                {
-                  className: c.scrollNavDiv,
-                  style: { right: "0%", width: d + "%" },
-                },
-                r.createElement(
-                  n.CC,
-                  {
-                    className: (0, s.A)(c.carouselNavButton, c.scrollNavButton),
-                  },
-                  r.createElement("div", null),
-                ),
-              ),
-            ),
-            e &&
-              r.createElement(
-                n.CC,
-                {
-                  className: (0, s.A)(
-                    c.pipScrollButton,
-                    c.right,
-                    c.carouselNavButton,
-                  ),
-                },
-                r.createElement(i.uMb, null),
-              ),
-          );
-        }
-      }
-      const S = (0, n.Yw)(_, (e) => ({
-        currentSlide: e.currentSlide,
-        totalSlides: e.totalSlides,
-        visibleSlides: e.visibleSlides,
-      }));
-      function C(e) {
-        const t = (0, d.Qn)();
-        return e.screenIsWide || t
-          ? r.createElement(f, { ...e }, e.children)
-          : r.createElement(h, { ...e }, e.children);
-      }
-      function f(e) {
-        const t = (0, d.Qn)(),
-          a = () => r.Children.count(e.children),
-          i = a(),
-          p = Math.min(a(), e.visibleElements);
-        if (!i || !p) return null;
-        const u = p < i,
-          h = e.hideArrows || !u,
-          g = !u || e.hidePips;
-        let _ = 4 / 3,
-          C = !0;
-        e.slideAspectRatio && ((_ = e.slideAspectRatio), (C = !1));
-        const f = `items_in_row_${e.visibleElements}`;
-        return r.createElement(
-          o.Z,
-          {
-            "flow-children": "row",
-            className: (0, s.A)(c.carouselBody, e.className, f),
-            navKey: e.navKey,
-          },
-          r.createElement(
-            n.gi,
-            {
-              visibleSlides: e.visibleElements,
-              totalSlides: a(),
-              naturalSlideWidth: 100 * _,
-              naturalSlideHeight: 100,
-              step: e.visibleElements,
-              infinite: !e.disableEdgeWrap,
-              isIntrinsicHeight: C,
-              dragEnabled: !1,
-              touchEnabled: !1,
-              lockOnWindowScroll: !0,
-              orientation: "horizontal",
-              disableKeyboard: !0,
-            },
-            r.createElement(
-              I,
-              {
-                bHideArrows: h,
-                bAutoAdvance: e.bAutoAdvance && !t,
-                onSlide: e.onSlide,
-              },
-              r.Children.map(e.children, (t, a) => {
-                const o = e.bLazyRenderChildren
-                  ? r.createElement(
-                      m.K,
-                      {
-                        rootMargin: "0px 100% 0px 100%",
-                        bHorizontal: !0,
-                        placeholderWidth: 1,
-                        placeholderHeight: 1,
-                      },
-                      t,
-                    )
-                  : t;
-                return r.createElement(
-                  n.q7,
-                  { className: c.innerSlide, key: "slide_" + a, index: a },
-                  o,
-                );
-              }),
-            ),
-            !g &&
-              (e.useTestScrollbar
-                ? r.createElement(S, { showArrows: h, carouselStore: null })
-                : r.createElement(
-                    "div",
-                    { className: c.breadcrumbContainer },
-                    ((t) =>
-                      r.Children.map(e.children, (e, a) =>
-                        a % t != 0
-                          ? null
-                          : r.createElement(
-                              n.cL,
-                              { slide: a, className: c.pip },
-                              r.createElement("img", { src: l.A }),
-                            ),
-                      ))(p),
-                  )),
-          ),
-        );
-      }
-      function E(e) {
-        e && (window.clearTimeout(e.current), (e.current = null));
-      }
-      function I(e) {
-        const { bHideArrows: t, bAutoAdvance: a, children: o, onSlide: l } = e,
-          m = r.useContext(n.Yc),
-          d = r.useRef(m.state.currentSlide),
-          [u, h] = r.useState(null),
-          [_, S] = r.useState(!!a),
-          C = r.useRef(null),
-          f = r.useRef(null);
-        r.useEffect(() => {
-          const e = () => {
-            C.current = window.setTimeout(() => {
-              if (C.current) {
-                E(C);
-                const e = (m.state.currentSlide + 1) % m.state.totalSlides;
-                m.setStoreState({ currentSlide: e });
-              }
-            }, 8e3);
-          };
-          _ && e();
-          const t = () => {
-            const t = d.current,
-              a = m.state.currentSlide;
-            l && l(a), h(a > t ? "Right" : a < t ? "Left" : null), E(f);
-            (f.current = window.setTimeout(() => {
-              f.current && (h(null), E(f));
-            }, 1e3)),
-              (d.current = a),
-              C.current ? (E(C), S(!1)) : _ && e();
-          };
-          return (
-            m.subscribe(t),
-            () => {
-              m.unsubscribe(t), E(C), E(f);
-            }
-          );
-        }, [m, _]);
-        const I = !!u && "CarouselSliding" + u;
-        return r.createElement(
-          "div",
-          { className: (0, s.A)(c.sliderBody, "SliderBody", I) },
-          !t &&
-            r.createElement(
-              n._X,
-              {
-                className: (0, s.A)(
-                  c.carouselBtnCtn,
-                  c.left,
-                  c.carouselNavButton,
-                  "CarouselBtnLeft",
-                ),
-              },
-              r.createElement(i.uMb, null),
-            ),
-          r.createElement(
-            n.Ap,
-            {
-              className: p.J.GetScrollableClassname(),
-              classNameTray: c.slideTrayCustomize,
-              classNameAnimation: c.DisableSliderMotion,
-            },
-            r.createElement(g.q, null, o),
-          ),
-          !t &&
-            r.createElement(
-              n.CC,
-              {
-                className: (0, s.A)(
-                  c.carouselBtnCtn,
-                  c.right,
-                  c.carouselNavButton,
-                  "CarouselBtnRight",
-                ),
-              },
-              r.createElement(i.uMb, null),
-            ),
-        );
-      }
-    },
     71298: (e, t, a) => {
       "use strict";
-      a.d(t, { Hh: () => c, vs: () => l });
+      a.d(t, { Hh: () => m, vs: () => l });
       var n = a(90626),
         r = a(44325),
         o = a(56330),
@@ -1288,7 +880,7 @@
           [a, r] = (0, n.useState)(!1),
           [o, i] = (0, n.useState)(!1),
           [s, l] = (0, n.useState)(null),
-          [c, m] = (0, n.useState)(null),
+          [m, c] = (0, n.useState)(null),
           [p, d] = (0, n.useState)(null),
           [u, h] = (0, n.useState)(null),
           [g, _] = (0, n.useState)(null);
@@ -1297,7 +889,7 @@
           bError: a,
           bSuccess: o,
           strError: s,
-          strSuccess: c,
+          strSuccess: m,
           elSuccess: u,
           elError: p,
           strThrobber: g,
@@ -1305,28 +897,28 @@
           fnSetError: r,
           fnSetSuccess: i,
           fnSetStrError: l,
-          fnSetStrSuccess: m,
+          fnSetStrSuccess: c,
           fnSetElSuccess: h,
           fnSetElError: d,
           fnSetThrobber: _,
         };
       }
-      function c(e) {
+      function m(e) {
         const {
             strDialogTitle: t,
             state: a,
             closeModal: l,
-            strThrobber: c,
+            strThrobber: m,
           } = e,
           {
-            bLoading: m,
+            bLoading: c,
             bError: p,
             bSuccess: d,
             strError: u,
             strSuccess: h,
             elSuccess: g,
             elError: _,
-            strThrobber: S,
+            strThrobber: C,
           } = a;
         return p || u || _
           ? n.createElement(
@@ -1365,7 +957,7 @@
                   closeModal: () => {},
                 },
                 n.createElement(s.t, {
-                  string: c || S || (0, i.we)("#Loading"),
+                  string: m || C || (0, i.we)("#Loading"),
                   size: "medium",
                   position: "center",
                 }),
@@ -1381,15 +973,15 @@
         i = a(84811),
         s = a(44325),
         l = a(61859),
-        c = a(22797),
-        m = a(17618);
+        m = a(22797),
+        c = a(17618);
       const p = (e) => {
           const { clanSteamID: t, fnImageSelectCallBack: a } = e,
             [p, u] = (0, n.useState)(""),
             h = (0, r.mr)(e.clanSteamID.GetAccountID()),
             g = () => e.closeModal && e.closeModal(),
             _ = r.pU.GetFilteredClanImages(t, p),
-            S = (e) => {
+            C = (e) => {
               a(e), g();
             };
           return n.createElement(
@@ -1424,9 +1016,9 @@
                     }),
                     n.createElement(
                       "div",
-                      { className: m.ImagesOuterContainer },
+                      { className: c.ImagesOuterContainer },
                       h
-                        ? n.createElement(c.t, {
+                        ? n.createElement(m.t, {
                             size: "medium",
                             string: (0, l.we)("#Loading"),
                           })
@@ -1436,7 +1028,7 @@
                                 key: "ci" + e.image_hash,
                                 clanImage: e,
                                 searchStringHilight: p,
-                                fnImageClick: S,
+                                fnImageClick: C,
                               }),
                             )
                           : Boolean(0 == p.trim().length)
@@ -1471,16 +1063,16 @@
         d = (e) => {
           const { clanImage: t, searchStringHilight: a, fnImageClick: r } = e;
           let o = t.file_name ? t.file_name : "",
-            i = u(a, o, String(t.imageid), m.Hilight);
+            i = u(a, o, String(t.imageid), c.Hilight);
           return n.createElement(
             "div",
-            { className: m.ImageContainer },
+            { className: c.ImageContainer },
             n.createElement("div", {
-              className: m.Image,
+              className: c.Image,
               style: { backgroundImage: `url( '${t.thumb_url}' )` },
               onDoubleClick: () => r(t),
             }),
-            n.createElement("div", { className: m.ImageFilename, title: o }, i),
+            n.createElement("div", { className: c.ImageFilename, title: o }, i),
           );
         };
       function u(e, t, a, r) {
@@ -1522,18 +1114,18 @@
     },
     48628: (e, t, a) => {
       "use strict";
-      a.d(t, { f: () => Lt });
+      a.d(t, { f: () => Ut });
       var n = a(34629),
         r = a(90626),
         o = a(99376),
         i = a(42780),
         s = a(59952),
         l = a(65739),
-        c = a(31698),
-        m = a(61336),
+        m = a(31698),
+        c = a(61336),
         p = a(6866);
       class d extends i.K0 {
-        m_LinkFilter = m.O9;
+        m_LinkFilter = c.O9;
         m_parentNode = void 0;
         m_mapHostToComponent;
         m_globalStoreLink;
@@ -1591,7 +1183,7 @@
               let n = e[1];
               super.AppendNode(
                 r.createElement(
-                  c.nl,
+                  m.nl,
                   { emoticonHoverStore: l.s, emoticon: n },
                   [],
                 ),
@@ -1612,25 +1204,25 @@
           let a = e;
           this.m_parentNode &&
             "img" == this.m_parentNode.tag &&
-            (a = (0, m.L$)(a)),
+            (a = (0, c.L$)(a)),
             super.AppendText(a, t);
         }
       }
       var g = a(56093),
         _ = a(70995),
-        S = a(17720),
-        C = a(88527),
+        C = a(17720),
+        S = a(88527),
         f = a(73662),
         E = a.n(f),
         I = a(13699),
-        v = a(4434),
-        y = a(68797),
+        y = a(4434),
+        v = a(68797),
         w = a(61859),
         b = a(78327);
       const T = (e) => /^\d+$/.test(e);
       function D(e) {
         const { sharedFileID: t } = e,
-          a = (0, v.m)("SharedFileSnippet"),
+          a = (0, y.m)("SharedFileSnippet"),
           [n, o] = (0, r.useState)(!1),
           [i, s] = (0, r.useState)(() => ({
             sharedfileid: t,
@@ -1657,7 +1249,7 @@
                   o(!0);
               }
             } catch (e) {
-              const t = (0, y.H)(e);
+              const t = (0, v.H)(e);
               console.error("SharedFileSnippet: " + t.strErrorMsg, t);
             }
           })();
@@ -1714,19 +1306,19 @@
           ),
         );
       }
-      var A = a(12155),
-        L = a(52038),
-        B = a(41735),
-        U = a.n(B),
-        M = a(75844),
-        x = a(22837),
-        N = a(71138),
-        k = a(82415),
+      var L = a(12155),
+        U = a(52038),
+        A = a(41735),
+        B = a.n(A),
+        x = a(75844),
+        k = a(22837),
+        M = a(71138),
+        N = a(4796),
         R = a(91254),
         F = a(16021),
-        G = a(22797),
-        O = a(3088),
-        P = a(75113);
+        O = a(22797),
+        P = a(3088),
+        G = a(75113);
       let H = class extends r.Component {
         state = {
           bLoading: this.props.announcementGID
@@ -1734,7 +1326,7 @@
             : !R.O3.BHasClanAnnouncementGID(this.props.eventGID),
           bFailedLoad: !1,
         };
-        m_cancelSignal = U().CancelToken.source();
+        m_cancelSignal = B().CancelToken.source();
         componentDidMount() {
           this.HandleLoadEventInfo();
         }
@@ -1750,9 +1342,9 @@
           try {
             if (this.state.bLoading) {
               if (void 0 !== t) {
-                o = (await k.ac.LoadOGGClanInfoForIdentifier(t)).clanSteamID;
+                o = (await N.ac.LoadOGGClanInfoForIdentifier(t)).clanSteamID;
               } else if (void 0 !== r) {
-                o = (await k.ac.LoadOGGClanInfoForGroupVanity(r)).clanSteamID;
+                o = (await N.ac.LoadOGGClanInfoForGroupVanity(r)).clanSteamID;
               }
               const i = R.O3.LoadPartnerEventGeneric(o, e, n, a, 0);
               let s = await i;
@@ -1770,7 +1362,7 @@
           }
         }
         HandleError(e) {
-          let t = (0, y.H)(e);
+          let t = (0, v.H)(e);
           const {
             eventGID: a,
             announcementGID: n,
@@ -1804,35 +1396,35 @@
             fnImageFailureCallback: i,
           } = this.props;
           if (this.state.bFailedLoad) return (0, p.Pm)(n);
-          if (this.state.bLoading) return r.createElement(G.t, null);
+          if (this.state.bLoading) return r.createElement(O.t, null);
           let s =
             void 0 !== t
               ? R.O3.GetClanEventFromAnnouncementGID(t)
               : R.O3.GetClanEventModel(a);
           if (null == s) return (0, p.Pm)(n);
-          let l = (0, x.sf)(b.TS.LANGUAGE),
-            c = s.GetImageForSizeAsArrayWithFallback(
+          let l = (0, k.sf)(b.TS.LANGUAGE),
+            m = s.GetImageForSizeAsArrayWithFallback(
               "capsule",
               l,
-              N.wI.capsule_main,
+              M.wI.capsule_main,
             );
-          o && (c = o(c));
-          let m = s.GetNameWithFallback(l),
+          o && (m = o(m));
+          let c = s.GetNameWithFallback(l),
             d = s.GetSubTitleWithSummaryFallback(l),
             u = F.A.Get().GetApp(e)?.GetName(),
             h = (0, w.TW)(s.GetStartTimeAndDateUnixSeconds());
           return r.createElement(
-            P.tj,
+            G.tj,
             {
               eventModel: s,
-              route: P.PH.k_eView,
+              route: G.PH.k_eView,
               className: E().DynamicLinkBox,
               "data-modal-content-sizetofit": !0,
               "data-appid": e,
             },
-            r.createElement(O.c, {
+            r.createElement(P.c, {
               className: E().DynamicLink_Preview,
-              rgSources: c,
+              rgSources: m,
               onIncrementalError: (e, t, a) => i && i(t),
             }),
             r.createElement(
@@ -1852,7 +1444,7 @@
               r.createElement(
                 "div",
                 { className: E().DynamicLink_Name },
-                r.createElement("div", { className: E().DynamicLink_Type }, m),
+                r.createElement("div", { className: E().DynamicLink_Type }, c),
               ),
               r.createElement(
                 "div",
@@ -1863,11 +1455,11 @@
           );
         }
       };
-      H = (0, n.Cg)([M.PA], H);
-      var W = a(6878),
-        Y = a.n(W),
+      H = (0, n.Cg)([x.PA], H);
+      var V = a(6878),
+        W = a.n(V),
         z = a(39978),
-        V = a.n(z);
+        Y = a.n(z);
       let j = class extends r.Component {
         state = { bSummaryMode: !0, bLoadedMetaData: !1 };
         async componentDidMount() {
@@ -1875,12 +1467,12 @@
             "https://sketchfab.com/oembed?url=https://sketchfab.com/models/" +
             this.props.modelID;
           try {
-            let t = await U().get(e);
+            let t = await B().get(e);
             this.setState({ bLoadedMetaData: !0, data: t.data });
           } catch (e) {
             this.setState({ bError: !0 }),
               console.error(
-                "SketchFabEmbed failed to load: " + (0, y.H)(e).strErrorMsg,
+                "SketchFabEmbed failed to load: " + (0, v.H)(e).strErrorMsg,
               );
           }
         }
@@ -1893,7 +1485,7 @@
             ? r.createElement(
                 "div",
                 {
-                  className: V().dynamiclink_box,
+                  className: Y().dynamiclink_box,
                   onClick: this.OnSketchFabClick,
                 },
                 r.createElement("span", null, e),
@@ -1907,7 +1499,7 @@
               ? r.createElement(
                   "div",
                   {
-                    className: V().dynamiclink_box,
+                    className: Y().dynamiclink_box,
                     onClick: this.OnSketchFabClick,
                   },
                   Boolean(this.state.bLoadedMetaData)
@@ -1915,21 +1507,21 @@
                         r.Fragment,
                         null,
                         r.createElement("img", {
-                          className: V().dynamiclink_preview,
+                          className: Y().dynamiclink_preview,
                           src: this.state.data.thumbnail_url,
                         }),
                         r.createElement("img", {
-                          className: V().sketchfab_play_overlay_image,
+                          className: Y().sketchfab_play_overlay_image,
                         }),
                         r.createElement(
                           "div",
-                          { className: V().dynamiclink_content },
+                          { className: Y().dynamiclink_content },
                           r.createElement(
                             "div",
-                            { className: V().dynamiclink_name },
+                            { className: Y().dynamiclink_name },
                             r.createElement(
                               "span",
-                              { className: V().dynamiclink_type },
+                              { className: Y().dynamiclink_type },
                               (0, w.we)("#EventDisplay_Sketchfab"),
                             ),
                             r.createElement(
@@ -1941,18 +1533,18 @@
                           ),
                           r.createElement(
                             "div",
-                            { className: V().dynamiclink_author },
+                            { className: Y().dynamiclink_author },
                             this.state.data.author_name,
                           ),
                         ),
                       )
-                    : r.createElement(G.t, { size: "medium" }),
+                    : r.createElement(O.t, { size: "medium" }),
                 )
               : r.createElement(
                   "div",
-                  { className: V().sketchfabmodelembedded },
+                  { className: Y().sketchfabmodelembedded },
                   r.createElement("iframe", {
-                    className: V().sketchfabmodelembedded,
+                    className: Y().sketchfabmodelembedded,
                     src:
                       "https://sketchfab.com/models/" +
                       this.props.modelID +
@@ -1964,27 +1556,27 @@
         }
       };
       (0, n.Cg)([g.oI], j.prototype, "OnSketchFabClick", null),
-        (j = (0, n.Cg)([M.PA], j));
-      var Z = a(14947),
-        X = a(83059),
-        K = a(32754),
-        Q = a(65835),
-        $ = a.n(Q);
+        (j = (0, n.Cg)([x.PA], j));
+      var K = a(14947),
+        $ = a(83059),
+        X = a(32754),
+        Z = a(65835),
+        Q = a.n(Z);
       function J(e) {
         const { defid: t, url: a } = e,
-          n = (0, X.w)(t);
+          n = (0, $.w)(t);
         if (!n || !n.community_item_data) return null;
         const o = n.appid,
           i = n.community_item_data.item_image_large,
           s = `${b.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${o}/${i}`;
         return (
           "dev" == b.TS.WEB_UNIVERSE &&
-            console.log("reward itemdef", (0, Z.HO)(n)),
+            console.log("reward itemdef", (0, K.HO)(n)),
           r.createElement(
             "div",
-            { className: $().Ctn },
+            { className: Q().Ctn },
             r.createElement(
-              K.he,
+              X.he,
               { toolTipContent: n.community_item_data.item_description },
               r.createElement("img", {
                 src: s,
@@ -2008,16 +1600,16 @@
         ie = /twitter\.com\/(\w+)(\/?)$/i,
         se = /twitter\.com\/hashtag\/(\w+)(\/?)$/i,
         le = /twitch\.tv\/(\w+)(\/?)$/i,
-        ce =
-          /(?:steamcommunity\.com|valve\.org\/community|steam\.dev\/community|community\.\S+\.steam\.dev|my\.steamchina\.com)\/id\/(\w+)(\/?)$/i,
         me =
+          /(?:steamcommunity\.com|valve\.org\/community|steam\.dev\/community|community\.\S+\.steam\.dev|my\.steamchina\.com)\/id\/(\w+)(\/?)$/i,
+        ce =
           /(?:steampowered\.com|valve\.org\/store|steam\.dev\/store|store\.steamchina\.com)\/points\/shop\/.*reward\/(\d+)$/i;
       let pe = null;
       function de(e, t) {
         if ((0, b.Y2)()) return null;
         const a = (0, _.XU)(e);
         return void 0 !== a?.strVideoID
-          ? r.createElement(C.A, {
+          ? r.createElement(S.A, {
               videoID: a.strVideoID,
               nStartSeconds: a.nStartSeconds,
               classNameAlign: "",
@@ -2038,7 +1630,7 @@
               "/?autoplay=0&donate=0" +
               (t && t.event ? "&steamappid=" + t.event.appid : "");
             return r.createElement("iframe", {
-              className: W.MedalTVWidget,
+              className: V.MedalTVWidget,
               src: a,
               frameBorder: 0,
               allow: "autoplay",
@@ -2067,12 +1659,12 @@
           : (0, p.Pm)(e, t?.event);
       }
       function _e(e) {
-        let t = (0, m.wm)(e).toLocaleLowerCase(),
-          a = (0, m.wm)(b.TS.STORE_BASE_URL),
-          n = (0, m.wm)(b.TS.COMMUNITY_BASE_URL);
+        let t = (0, c.wm)(e).toLocaleLowerCase(),
+          a = (0, c.wm)(b.TS.STORE_BASE_URL),
+          n = (0, c.wm)(b.TS.COMMUNITY_BASE_URL);
         const r =
           "dev" === b.TS.WEB_UNIVERSE ||
-          (0, m.wm)(b.TS.STORE_BASE_URL).endsWith(".steam.dev");
+          (0, c.wm)(b.TS.STORE_BASE_URL).endsWith(".steam.dev");
         return (
           t == a ||
           t == n ||
@@ -2082,7 +1674,7 @@
               t.includes("steamchina.com")))
         );
       }
-      function Se(e, t) {
+      function Ce(e, t) {
         if (_e(e)) {
           let t = new RegExp(ee).exec(e);
           if (t && t.length > 2) {
@@ -2093,15 +1685,15 @@
         }
         return (0, p.Pm)(e, t?.event);
       }
-      function Ce(e, t) {
+      function Se(e, t) {
         if (_e(e)) {
-          const t = new RegExp(me).exec(e);
+          const t = new RegExp(ce).exec(e);
           if (t && t.length > 1) {
             const a = Number(t[1]);
             if (a > 0)
               return r.createElement(
                 "div",
-                { className: (0, L.A)(W.LoyaltyRewardCtn) },
+                { className: (0, U.A)(V.LoyaltyRewardCtn) },
                 r.createElement(J, { defid: a, url: e }),
               );
           }
@@ -2114,7 +1706,7 @@
           if (t && t.length > 2) {
             let a, n, o, i;
             "gid" == t[1]
-              ? (n = new S.b(t[2]))
+              ? (n = new C.b(t[2]))
               : "groups" == t[1]
                 ? (i = t[2])
                 : isNaN(+t[2])
@@ -2147,19 +1739,19 @@
       function Ie(e, t) {
         return De(ae, e, t);
       }
-      function ve(e, t) {
-        return (0, b.Y2)() ? null : Te(e, r.createElement(A.KKS, null), "@", t);
-      }
       function ye(e, t) {
-        return (0, b.Y2)() ? null : Te(e, r.createElement(A.KKS, null), "#", t);
+        return (0, b.Y2)() ? null : Te(e, r.createElement(L.KKS, null), "@", t);
+      }
+      function ve(e, t) {
+        return (0, b.Y2)() ? null : Te(e, r.createElement(L.KKS, null), "#", t);
       }
       function we(e, t) {
         return (0, b.Y2)()
           ? null
-          : Te(e, r.createElement(A.qcc, null), void 0, t);
+          : Te(e, r.createElement(L.qcc, null), void 0, t);
       }
       function be(e, t) {
-        return Te(e, r.createElement(A.Qte, null), void 0, t);
+        return Te(e, r.createElement(L.Qte, null), void 0, t);
       }
       function Te(e, t, a, n) {
         let o;
@@ -2170,8 +1762,8 @@
         const l = (0, p.Pm)(e, n?.event, o ?? e);
         return r.createElement(
           "div",
-          { className: W.SocialLink },
-          r.createElement("div", { className: W.SocialIcon }, t),
+          { className: V.SocialLink },
+          r.createElement("div", { className: V.SocialIcon }, t),
           l,
         );
       }
@@ -2181,9 +1773,9 @@
           if (a && a.length > 2) {
             let e, n, o, i;
             "gid" == a[1]
-              ? (n = new S.b(a[2]))
+              ? (n = new C.b(a[2]))
               : "group" == a[1]
-                ? (n = S.b.InitFromClanID(Number.parseInt(a[2])))
+                ? (n = C.b.InitFromClanID(Number.parseInt(a[2])))
                 : "groups" == a[1]
                   ? (i = a[2])
                   : isNaN(+a[2])
@@ -2210,11 +1802,11 @@
         }
         return (0, p.Pm)(t, a?.event);
       }
-      var Ae = a(77516),
-        Le = a(44332);
-      class Be {
+      var Le = a(77516),
+        Ue = a(44332);
+      class Ae {
         constructor() {
-          (0, Z.Gn)(this);
+          (0, K.Gn)(this);
         }
         exportFn = void 0;
         file = void 0;
@@ -2232,19 +1824,19 @@
         uploadProgress = 0;
         strErrorDescription = void 0;
       }
-      (0, n.Cg)([Z.sH], Be.prototype, "file", void 0),
-        (0, n.Cg)([Z.sH], Be.prototype, "dataURL", void 0),
-        (0, n.Cg)([Z.sH], Be.prototype, "imageWidth", void 0),
-        (0, n.Cg)([Z.sH], Be.prototype, "imageHeight", void 0),
-        (0, n.Cg)([Z.sH], Be.prototype, "eUploadState", void 0),
-        (0, n.Cg)([Z.sH], Be.prototype, "uploadProgress", void 0),
-        (0, n.Cg)([Z.sH], Be.prototype, "strErrorDescription", void 0);
-      class Ue {
+      (0, n.Cg)([K.sH], Ae.prototype, "file", void 0),
+        (0, n.Cg)([K.sH], Ae.prototype, "dataURL", void 0),
+        (0, n.Cg)([K.sH], Ae.prototype, "imageWidth", void 0),
+        (0, n.Cg)([K.sH], Ae.prototype, "imageHeight", void 0),
+        (0, n.Cg)([K.sH], Ae.prototype, "eUploadState", void 0),
+        (0, n.Cg)([K.sH], Ae.prototype, "uploadProgress", void 0),
+        (0, n.Cg)([K.sH], Ae.prototype, "strErrorDescription", void 0);
+      class Be {
         m_Callbacks;
-        m_fileUploadProps = new Be();
+        m_fileUploadProps = new Ae();
         m_onComplete;
         constructor(e) {
-          (0, Z.Gn)(this), (this.m_Callbacks = e);
+          (0, K.Gn)(this), (this.m_Callbacks = e);
         }
         get file_upload_props() {
           return this.m_fileUploadProps;
@@ -2274,7 +1866,7 @@
             (this.m_fileUploadProps.displayFileName = a);
         }
         async SetImageFileToUpload(e, t = {}) {
-          const { processor: a = Me, info: n } = t;
+          const { processor: a = xe, info: n } = t;
           if (!e) return void this.SetFileToUpload(null);
           this.m_fileUploadProps.fileInfo = n;
           const r = this.m_Callbacks.GetFileNameOverride?.() ?? e.name;
@@ -2383,7 +1975,7 @@
             this.m_fileUploadProps.eUploadState = 7;
             const { eResult: e, file: t } =
               await this.m_fileUploadProps.exportFn((e) => {
-                (0, Z.h5)(() => {
+                (0, K.h5)(() => {
                   this.m_fileUploadProps.uploadProgress = 0.5 * e;
                 });
               });
@@ -2402,7 +1994,7 @@
           let t = this.m_fileUploadProps.file;
           if (!t)
             throw (
-              ((0, Le.w)(
+              ((0, Ue.w)(
                 !1,
                 "Must SetImageFileToUpload before calling BeginFileUpload",
               ),
@@ -2445,7 +2037,7 @@
             if (!t.ok) {
               let a = null;
               throw (
-                ((0, Z.h5)(() => {
+                ((0, K.h5)(() => {
                   (this.m_fileUploadProps.eUploadState = 3),
                     this.LogFileUploadMessage(t),
                     (a = e?.message
@@ -2467,7 +2059,7 @@
           } catch (e) {
             let t = e || (0, w.we)("#ConnectionTrouble_FailedToConnect");
             throw (
-              ((0, Z.h5)(() => {
+              ((0, K.h5)(() => {
                 (this.m_fileUploadProps.eUploadState = 3),
                   (this.m_fileUploadProps.strErrorDescription = (0, w.we)(
                     "#Chat_Upload_ErrorStart",
@@ -2488,7 +2080,7 @@
                 a = t ? 50 : 100,
                 n = (t ? 50 : 0) + (e.loaded / e.total) * a;
               n > this.m_fileUploadProps.uploadProgress &&
-                (0, Z.h5)(() => {
+                (0, K.h5)(() => {
                   this.m_fileUploadProps.uploadProgress = n;
                 });
             },
@@ -2502,11 +2094,11 @@
               (n.headers[a.name] = a.value);
           }
           try {
-            return await U().put(a, t, n), this.CommitFileUpload(!0, e.ugcid);
+            return await B().put(a, t, n), this.CommitFileUpload(!0, e.ugcid);
           } catch (t) {
             throw (
               (this.LogFileUploadMessage(t.response),
-              (0, Z.h5)(() => {
+              (0, K.h5)(() => {
                 (this.m_fileUploadProps.strErrorDescription = (0, w.we)(
                   "#Chat_Upload_ErrorCloud",
                 )),
@@ -2563,7 +2155,7 @@
             if (!e) return null;
             let n = null;
             throw (
-              ((0, Z.h5)(() => {
+              ((0, K.h5)(() => {
                 if (
                   (this.LogFileUploadMessage(t),
                   (this.m_fileUploadProps.uploadProgress = 0),
@@ -2593,7 +2185,7 @@
           this.SetFileToUpload(null);
         }
       }
-      function Me(e) {
+      function xe(e) {
         return new Promise((t) => {
           let a = new FileReader();
           (a.onload = () => {
@@ -2655,25 +2247,25 @@
             a.readAsArrayBuffer(e);
         });
       }
-      (0, n.Cg)([Z.XI], Ue.prototype, "SetUploadFileError", null),
-        (0, n.Cg)([Z.XI], Ue.prototype, "StartFileExportToUpload", null),
-        (0, n.Cg)([Z.XI], Ue.prototype, "SetImageFileToUpload", null),
-        (0, n.Cg)([Z.XI], Ue.prototype, "SetOtherFileToUpload", null),
-        (0, n.Cg)([Z.XI], Ue.prototype, "SetFileToUpload", null),
-        (0, n.Cg)([Z.XI], Ue.prototype, "RetryFileUpload", null),
-        (0, n.Cg)([Z.XI], Ue.prototype, "BeginFileUpload", null),
-        (0, n.Cg)([Z.XI], Ue.prototype, "DoFileUpload", null),
-        (0, n.Cg)([Z.XI], Ue.prototype, "CommitFileUpload", null),
-        (0, n.Cg)([Z.XI], Ue.prototype, "ClearFileUploadError", null),
-        (0, n.Cg)([Z.XI], Ue.prototype, "Reset", null);
-      var xe = a(73022),
-        Ne = a(55263),
-        ke = a(7068),
+      (0, n.Cg)([K.XI], Be.prototype, "SetUploadFileError", null),
+        (0, n.Cg)([K.XI], Be.prototype, "StartFileExportToUpload", null),
+        (0, n.Cg)([K.XI], Be.prototype, "SetImageFileToUpload", null),
+        (0, n.Cg)([K.XI], Be.prototype, "SetOtherFileToUpload", null),
+        (0, n.Cg)([K.XI], Be.prototype, "SetFileToUpload", null),
+        (0, n.Cg)([K.XI], Be.prototype, "RetryFileUpload", null),
+        (0, n.Cg)([K.XI], Be.prototype, "BeginFileUpload", null),
+        (0, n.Cg)([K.XI], Be.prototype, "DoFileUpload", null),
+        (0, n.Cg)([K.XI], Be.prototype, "CommitFileUpload", null),
+        (0, n.Cg)([K.XI], Be.prototype, "ClearFileUploadError", null),
+        (0, n.Cg)([K.XI], Be.prototype, "Reset", null);
+      var ke = a(73022),
+        Me = a(55263),
+        Ne = a(7068),
         Re = a(48079),
         Fe = a(93267),
-        Ge = a(67523),
-        Oe = a.n(Ge);
-      const Pe = (e) => {
+        Oe = a(67523),
+        Pe = a.n(Oe);
+      const Ge = (e) => {
         const [t, a] = (0, r.useState)(!0),
           [n, o] = (0, r.useState)(null);
         if (
@@ -2718,10 +2310,10 @@
           n)
         )
           return e.bIsPreviewMode
-            ? r.createElement("div", { className: Oe().ErrorDiv }, n)
+            ? r.createElement("div", { className: Pe().ErrorDiv }, n)
             : null;
         if (t)
-          return r.createElement(G.t, {
+          return r.createElement(O.t, {
             string: (0, w.we)("#Loading"),
             size: "small",
           });
@@ -2745,31 +2337,22 @@
         });
       };
       var He = a(19432),
-        We = a(6469),
-        Ye = a(84811);
+        Ve = a(6469),
+        We = a(84811);
       const ze = r.lazy(() =>
           Promise.all([
-            a.e(8970),
-            a.e(6597),
             a.e(7937),
-            a.e(2797),
-            a.e(4717),
-            a.e(7436),
-            a.e(7403),
-            a.e(582),
-            a.e(4796),
-            a.e(6049),
-            a.e(7908),
             a.e(7328),
+            a.e(2828),
             a.e(6649),
             a.e(8396),
           ]).then(a.bind(a, 72224)),
         ),
-        Ve = (e) => {
+        Ye = (e) => {
           const t = (0, r.useRef)(null),
-            [a, n] = (0, r.useState)(We.K.Get().GetVODForAppID(e.appid)),
+            [a, n] = (0, r.useState)(Ve.K.Get().GetVODForAppID(e.appid)),
             [o, i] = (0, r.useState)(
-              !Boolean(We.K.Get().GetVODForAppID(e.appid)),
+              !Boolean(Ve.K.Get().GetVODForAppID(e.appid)),
             );
           return (
             (0, r.useEffect)(
@@ -2780,14 +2363,14 @@
               if (
                 (a &&
                   a.appid != e.appid &&
-                  (r = We.K.Get().GetVODForAppID(e.appid)),
+                  (r = Ve.K.Get().GetVODForAppID(e.appid)),
                 !r)
               ) {
                 const a = async () => {
                   t.current && t.current();
-                  const a = U().CancelToken.source();
+                  const a = B().CancelToken.source();
                   (t.current = a.cancel),
-                    (r = await We.K.Get().LoadVODForAppID(e.appid)),
+                    (r = await Ve.K.Get().LoadVODForAppID(e.appid)),
                     a.token.reason || n(r),
                     i(!1);
                 };
@@ -2808,7 +2391,7 @@
                   "div",
                   { className: He.BroadcastCtn },
                   r.createElement(
-                    Ye.tH,
+                    We.tH,
                     null,
                     r.createElement(
                       r.Suspense,
@@ -2824,16 +2407,16 @@
           );
         };
       var je = a(26296),
-        Ze = a(51272),
-        Xe = a(56011),
-        Ke = a(75933),
-        Qe = a(43568);
-      function $e(e) {
+        Ke = a(51272),
+        $e = a(56011),
+        Xe = a(75933),
+        Ze = a(43568);
+      function Qe(e) {
         const t = (0, b.Qn)(),
-          a = (0, Ke.a4)(Ke.Wn),
+          a = (0, Xe.a4)(Xe.Wn),
           n = "true" === String((0, s.j$)(e.args, "autoadvance")).toLowerCase();
         return r.createElement(
-          Qe.F,
+          Ze.F,
           {
             hideArrows: !a,
             hidePips: t,
@@ -2842,7 +2425,7 @@
             bLazyRenderChildren: !0,
             screenIsWide: a,
             bAutoAdvance: n,
-            className: Y().ScreenshotCarousel,
+            className: W().ScreenshotCarousel,
           },
           e.children,
         );
@@ -2875,7 +2458,7 @@
               onOKActionDescription: (0, w.we)("#Button_Upload"),
               onClick: () => a.current.click(),
             },
-            r.createElement(A.xv8, null),
+            r.createElement(L.xv8, null),
           ),
         );
       }
@@ -2904,7 +2487,7 @@
               src: t.file_upload_data_url,
             }),
           Boolean(-1 != a.type.indexOf("video")) &&
-            r.createElement(A.CeX, null),
+            r.createElement(L.CeX, null),
           r.createElement(
             "div",
             { className: at.FileUploadFileName },
@@ -2915,10 +2498,10 @@
           r.createElement(
             "div",
             { className: at.FileUploadCancel, onClick: () => t.Reset() },
-            r.createElement(A.sED, null),
+            r.createElement(L.sED, null),
           ),
           r.createElement(
-            ke.jn,
+            Ne.jn,
             {
               className: at.FileUploadBtn,
               onClick: async () => {
@@ -2945,7 +2528,7 @@
           r.createElement(
             "div",
             {
-              className: (0, L.A)(
+              className: (0, U.A)(
                 at.FileUploadProgressBarContainer,
                 "DialogProgressBar_ProgressBarContainer",
               ),
@@ -2979,11 +2562,11 @@
             "div",
             { className: at.FileUploadActions },
             r.createElement(
-              ke.dR,
+              Ne.dR,
               { className: "DialogLayout_NoMinWidth" },
               Boolean(3 == o) &&
                 r.createElement(
-                  ke.jn,
+                  Ne.jn,
                   {
                     onClick: async () => {
                       await t.RetryFileUpload(), t.Reset();
@@ -2992,7 +2575,7 @@
                   (0, w.we)("#Chat_Upload_ErrorAction_Retry"),
                 ),
               r.createElement(
-                ke.$n,
+                Ne.$n,
                 { onClick: () => t.ClearFileUploadError() },
                 (0, w.we)("#Chat_Upload_ErrorAction_Close"),
               ),
@@ -3002,8 +2585,8 @@
       }
       var st = a(44325),
         lt = a(738),
-        ct = a(82477),
-        mt = a(90874),
+        mt = a(82477),
+        ct = a(90874),
         pt = a(41951),
         dt = a(74410);
       let ut = null;
@@ -3015,7 +2598,7 @@
               [
                 "h1",
                 {
-                  Constructor: s.Tu(s.Zb, W.Header1),
+                  Constructor: s.Tu(s.Zb, V.Header1),
                   autocloses: !1,
                   skipFollowingNewline: !0,
                 },
@@ -3023,7 +2606,7 @@
               [
                 "h2",
                 {
-                  Constructor: s.Tu(s.Sz, W.Header2),
+                  Constructor: s.Tu(s.Sz, V.Header2),
                   autocloses: !1,
                   skipFollowingNewline: !0,
                 },
@@ -3031,19 +2614,19 @@
               [
                 "h3",
                 {
-                  Constructor: s.Tu(s.ZS, W.Header3),
+                  Constructor: s.Tu(s.ZS, V.Header3),
                   autocloses: !1,
                   skipFollowingNewline: !0,
                 },
               ],
               [
                 "quote",
-                { Constructor: s.Tu(s.Pk, W.BlockQuote), autocloses: !1 },
+                { Constructor: s.Tu(s.Pk, V.BlockQuote), autocloses: !1 },
               ],
               [
                 "list",
                 {
-                  Constructor: s.Tu(s.B8, W.UnorderedList),
+                  Constructor: s.Tu(s.B8, V.UnorderedList),
                   autocloses: !1,
                   skipInternalNewline: !0,
                 },
@@ -3051,7 +2634,7 @@
               [
                 "olist",
                 {
-                  Constructor: s.Tu(s._J, W.OrderedList),
+                  Constructor: s.Tu(s._J, V.OrderedList),
                   autocloses: !1,
                   skipInternalNewline: !0,
                 },
@@ -3065,7 +2648,7 @@
               ["looping_media", { Constructor: s.$A, autocloses: !1 }],
               ["video", { Constructor: s.UT, autocloses: !1 }],
               ["youtubeorvideo", { Constructor: dt.Eo, autocloses: !1 }],
-              ["trailer", { Constructor: Ct, autocloses: !0 }],
+              ["trailer", { Constructor: St, autocloses: !0 }],
               ["vod", { Constructor: ft, autocloses: !1 }],
               [
                 "speaker",
@@ -3076,13 +2659,13 @@
                   allowWrapTextForCopying: !0,
                 },
               ],
-              ["giveawayeligible", { Constructor: vt, autocloses: !1 }],
-              ["claimitem", { Constructor: yt, autocloses: !0 }],
+              ["giveawayeligible", { Constructor: yt, autocloses: !1 }],
+              ["claimitem", { Constructor: vt, autocloses: !0 }],
               ["packagepurchaseable", { Constructor: wt, autocloses: !1 }],
               ["actiondialog", { Constructor: Tt, autocloses: !1 }],
-              ["uploadfilebutton", { Constructor: At, autocloses: !0 }],
-              ["docimg", { Constructor: St, autocloses: !1 }],
-              ["carousel", { Constructor: $e, autocloses: !1 }],
+              ["uploadfilebutton", { Constructor: Lt, autocloses: !0 }],
+              ["docimg", { Constructor: Ct, autocloses: !1 }],
+              ["carousel", { Constructor: Qe, autocloses: !1 }],
             ])),
           ut
         );
@@ -3093,8 +2676,8 @@
           n = (0, s.j$)(e.args, "id"),
           o = (function (e) {
             return "button" === e
-              ? (0, L.A)(W.LinkButton, "LinkButton")
-              : (0, L.A)(W.Link, "Link");
+              ? (0, U.A)(V.LinkButton, "LinkButton")
+              : (0, U.A)(V.Link, "Link");
           })(a);
         e.context.event;
         if (void 0 === t) return e.children || "";
@@ -3105,7 +2688,7 @@
         return (
           "dev" == b.TS.WEB_UNIVERSE &&
             "store" == (0, b.yK)() &&
-            "store.steampowered.com" == (0, m.wm)(t) &&
+            "store.steampowered.com" == (0, c.wm)(t) &&
             (t = t.replace(
               "https://store.steampowered.com/",
               b.TS.STORE_BASE_URL,
@@ -3114,7 +2697,7 @@
             ? r.createElement("a", { className: o, href: t }, e.children)
             : "steam://settings/account" == t
               ? r.createElement(
-                  Ze.uU,
+                  Ke.uU,
                   { className: o, href: "steam://settings/account" },
                   e.children,
                 )
@@ -3139,8 +2722,8 @@
           let e;
           return (
             (n = o),
-            (e = (!a || !a.BHasTag("auto_rssfeed")) && !(0, m.ZF)(n)),
-            t || (n = (0, m.L$)(n)),
+            (e = (!a || !a.BHasTag("auto_rssfeed")) && !(0, c.ZF)(n)),
+            t || (n = (0, c.L$)(n)),
             t
               ? r.createElement(je.i, {
                   src: n,
@@ -3152,9 +2735,9 @@
                 })
           );
         }
-        return r.createElement(O.c, { rgSources: o });
+        return r.createElement(P.c, { rgSources: o });
       }
-      function St(e) {
+      function Ct(e) {
         const t = (0, s.j$)(e.args);
         if (null == t || null == t || 0 == t.length) return "";
         const a = e && e.children && e.children.toString(),
@@ -3167,17 +2750,17 @@
             n.push(
               `${b.TS.MEDIA_CDN_COMMUNITY_URL}images/steamworks_docs/english/${t}`,
             ),
-          r.createElement(O.c, { rgSources: n, alt: a })
+          r.createElement(P.c, { rgSources: n, alt: a })
         );
       }
-      function Ct(e) {
+      function St(e) {
         const t = It(
             e.args,
             "appid",
             e.context.event.appid ? e.context.event.appid : 0,
           ),
           a = It(e.args, "trailerid", 0);
-        return r.createElement(Pe, {
+        return r.createElement(Ge, {
           appid: t,
           trailerBaseID: a,
           bIsPreviewMode: e.context.showErrorInfo,
@@ -3185,7 +2768,7 @@
       }
       function ft(e) {
         const t = It(e.args, "appid", 0);
-        return r.createElement(Ve, {
+        return r.createElement(Ye, {
           appid: t,
           bPreviewMode: e.context.showErrorInfo,
         });
@@ -3215,11 +2798,11 @@
         const n = (0, s.j$)(e, t);
         return void 0 === n || null == n ? a : Number.parseInt(n);
       }
-      function vt(e) {
+      function yt(e) {
         const t = (0, s.j$)(e.args, "name"),
           a =
             "true" === ((0, s.j$)(e.args, "visible") || "false").toLowerCase(),
-          n = (0, xe.h)(t);
+          n = (0, ke.h)(t);
         if (!t) {
           return e.context.showErrorInfo
             ? r.createElement("div", null, "Failed to provide giveaway name")
@@ -3229,12 +2812,12 @@
           ? e.children
           : null;
       }
-      function yt(e) {
+      function vt(e) {
         const t = e.context.showErrorInfo;
         if (!b.iA.logged_in)
           return r.createElement(
-            ke.$n,
-            { onClick: ct.vg, className: "CSSClaimItemLoginButton" },
+            Ne.$n,
+            { onClick: mt.vg, className: "CSSClaimItemLoginButton" },
             (0, w.we)("#Sale_ClaimableReward_Login"),
           );
         const a = (0, s.j$)(e.args, "type");
@@ -3247,14 +2830,14 @@
             case "sticker":
               n = 11;
           }
-        return r.createElement(mt.m, { bPreviewMode: t, rewardType: n });
+        return r.createElement(ct.m, { bPreviewMode: t, rewardType: n });
       }
       function wt(e) {
         const t = Number.parseInt((0, s.j$)(e.args, "id")) || 0,
           a =
             "true" === ((0, s.j$)(e.args, "visible") || "false").toLowerCase(),
           n = e.context.showErrorInfo,
-          [o, i] = (0, Ne.Gg)(t, {});
+          [o, i] = (0, Me.Gg)(t, {});
         if (!t || 1 == i)
           return !t && n
             ? r.createElement("div", null, "Error: PackageID Not Set")
@@ -3269,8 +2852,8 @@
       }
       function bt(e) {
         if ("GameAwardDrop2022" === e) {
-          const t = (0, xe.h)(e),
-            a = (0, xe.Q)();
+          const t = (0, ke.h)(e),
+            a = (0, ke.Q)();
           return t
             ? t.registered
               ? {
@@ -3310,7 +2893,7 @@
         }
         return b.iA.logged_in || "test" == t || "nologinrequired" == t
           ? r.createElement(
-              ke.$n,
+              Ne.$n,
               {
                 className: "CSSActionDialogButton",
                 onClick: (i) => {
@@ -3325,7 +2908,7 @@
                       },
                       e.children,
                     ),
-                    (0, Xe.uX)(i),
+                    (0, $e.uX)(i),
                   );
                 },
               },
@@ -3334,8 +2917,8 @@
               Boolean(i.bFailedState) && (0, w.we)(o),
             )
           : r.createElement(
-              ke.$n,
-              { className: "CSSActionDialogButton", onClick: ct.vg },
+              Ne.$n,
+              { className: "CSSActionDialogButton", onClick: mt.vg },
               (0, w.we)("#Login_SignIn"),
             );
       }
@@ -3349,10 +2932,10 @@
             strFailToken: s,
           } = e,
           l = bt(t),
-          [c, m] = r.useState(Boolean(l.fnAction));
+          [m, c] = r.useState(Boolean(l.fnAction));
         return (
           r.useEffect(() => {
-            l.fnAction && (m(!0), l.fnAction().finally(() => m(!1)));
+            l.fnAction && (c(!0), l.fnAction().finally(() => c(!1)));
           }, [l]),
           r.createElement(
             st.eV,
@@ -3363,20 +2946,20 @@
               className: "CSSActionDialogDialog",
             },
             r.createElement(
-              ke.Y9,
+              Ne.Y9,
               null,
               Boolean(l.bInitialState) && (0, w.we)(o),
               Boolean(l.bSuccessState) && (0, w.we)(i),
               Boolean(l.bFailedState) && (0, w.we)(s),
             ),
             r.createElement(
-              ke.nB,
+              Ne.nB,
               null,
               r.createElement(
-                ke.a3,
+                Ne.a3,
                 null,
-                c
-                  ? r.createElement(G.t, {
+                m
+                  ? r.createElement(O.t, {
                       size: "medium",
                       position: "center",
                       string: (0, w.we)("#Loading"),
@@ -3387,11 +2970,11 @@
           )
         );
       }
-      function At(e) {
+      function Lt(e) {
         const { showErrorInfo: t, event: a } = e.context,
           n = a.clanSteamID.GetAccountID(),
           [o] = r.useState(
-            new Ue(
+            new Be(
               (function (e) {
                 const t = {
                   PopulateBeginFileUploadFormData: (t) => {
@@ -3413,10 +2996,10 @@
               })(n),
             ),
           );
-        return n == Ae.GU ||
-          n == Ae.bv ||
-          (2 == b.TS.EUNIVERSE && n == Ae.mW) ||
-          (1 == b.TS.EUNIVERSE && n == Ae.Kd)
+        return n == Le.GU ||
+          n == Le.bv ||
+          (2 == b.TS.EUNIVERSE && n == Le.mW) ||
+          (1 == b.TS.EUNIVERSE && n == Le.Kd)
           ? r.createElement(
               "div",
               null,
@@ -3427,12 +3010,12 @@
             ? r.createElement("div", null, (0, w.we)("#CloudUpload_NotSupport"))
             : null;
       }
-      class Lt extends r.Component {
+      class Ut extends r.Component {
         m_parser;
         constructor(e) {
           super(e),
             (this.m_parser = new o.B(
-              Lt.sm_BBCodeDictionary,
+              Ut.sm_BBCodeDictionary,
               this.ElementAccumulator,
               e.languageOverride,
             ));
@@ -3446,11 +3029,11 @@
                 (null == pe &&
                   (pe = (0, b.Y2)()
                     ? [
-                        { urlRegExp: new RegExp(ee), fnBBComponent: Se },
+                        { urlRegExp: new RegExp(ee), fnBBComponent: Ce },
                         { urlRegExp: new RegExp(ae), fnBBComponent: Ie },
                         { urlRegExp: new RegExp(ne), fnBBComponent: Ee },
                         { urlRegExp: new RegExp(te), fnBBComponent: fe },
-                        { urlRegExp: new RegExp(ce), fnBBComponent: be },
+                        { urlRegExp: new RegExp(me), fnBBComponent: be },
                       ]
                     : [
                         {
@@ -3463,17 +3046,17 @@
                           ),
                           fnBBComponent: ge,
                         },
-                        { urlRegExp: new RegExp(ee), fnBBComponent: Se },
+                        { urlRegExp: new RegExp(ee), fnBBComponent: Ce },
                         { urlRegExp: new RegExp(ae), fnBBComponent: Ie },
                         { urlRegExp: new RegExp(ne), fnBBComponent: Ee },
                         { urlRegExp: new RegExp(te), fnBBComponent: fe },
                         { urlRegExp: new RegExp(re), fnBBComponent: ue },
                         { urlRegExp: new RegExp(oe), fnBBComponent: he },
-                        { urlRegExp: new RegExp(ie), fnBBComponent: ve },
-                        { urlRegExp: new RegExp(se), fnBBComponent: ye },
+                        { urlRegExp: new RegExp(ie), fnBBComponent: ye },
+                        { urlRegExp: new RegExp(se), fnBBComponent: ve },
                         { urlRegExp: new RegExp(le), fnBBComponent: we },
-                        { urlRegExp: new RegExp(ce), fnBBComponent: be },
-                        { urlRegExp: new RegExp(me), fnBBComponent: Ce },
+                        { urlRegExp: new RegExp(me), fnBBComponent: be },
+                        { urlRegExp: new RegExp(ce), fnBBComponent: Se },
                       ]),
                 pe),
                 {
@@ -3490,8 +3073,8 @@
           ...Array.from(ht().entries()),
         ]);
         static AddDictionary(e) {
-          Lt.sm_BBCodeDictionary = new Map([
-            ...Array.from(Lt.sm_BBCodeDictionary.entries()),
+          Ut.sm_BBCodeDictionary = new Map([
+            ...Array.from(Ut.sm_BBCodeDictionary.entries()),
             ...Array.from(e.entries()),
           ]);
         }
@@ -3506,28 +3089,28 @@
           );
         }
       }
-      (0, n.Cg)([g.oI], Lt.prototype, "ElementAccumulator", null);
+      (0, n.Cg)([g.oI], Ut.prototype, "ElementAccumulator", null);
     },
     92007: (e, t, a) => {
       "use strict";
-      a.d(t, { e: () => c });
+      a.d(t, { e: () => m });
       var n = a(90626),
         r = a(52038),
         o = a(45359),
         i = a(64502),
         s = a(55263),
         l = a(62792);
-      function c(e) {
+      function m(e) {
         const { inputType: t, id: a } = e,
-          [c] = (0, s.G6)(a, (0, l.SW)(t), {});
-        let m = "bundle" == t ? "bundle" : "sub" == t ? "sub" : "game";
+          [m] = (0, s.G6)(a, (0, l.SW)(t), {});
+        let c = "bundle" == t ? "bundle" : "sub" == t ? "sub" : "game";
         return n.createElement(
           "div",
           { className: (0, r.A)(i.AppSummaryWidgetCtn, "AppSummaryWidgetCtn") },
           n.createElement(o.pb, {
             id: a,
-            type: m,
-            bShowDemoButton: 1 == c?.GetAppType(),
+            type: c,
+            bShowDemoButton: 1 == m?.GetAppType(),
             bAllowTwoLinesForHeader: !0,
           }),
         );
@@ -3542,8 +3125,8 @@
         i = a(22837),
         s = a(2160),
         l = (a(63556), a(95695)),
-        c = a.n(l),
-        m = a(52038),
+        m = a.n(l),
+        c = a(52038),
         p = a(61859),
         d = a(91675),
         u = a(56093),
@@ -3589,7 +3172,7 @@
                   "option",
                   {
                     key: t.bSupported ? "SupportedGroup" : "UnsupportedGroup",
-                    className: c().SupportedGroupLabel,
+                    className: m().SupportedGroupLabel,
                     disabled: !0,
                   },
                   (0, p.we)(
@@ -3616,11 +3199,11 @@
                   {
                     key: "langpicker" + t.eLang + (r ? "_hasdata" : ""),
                     value: t.eLang,
-                    className: (0, m.A)(
-                      { [c().LanguageWithContent]: r },
+                    className: (0, c.A)(
+                      { [m().LanguageWithContent]: r },
                       t.bSupported
-                        ? c().SupportedLanguage
-                        : c().UnsupportedLanguage,
+                        ? m().SupportedLanguage
+                        : m().UnsupportedLanguage,
                     ),
                   },
                   s,
@@ -3660,32 +3243,32 @@
         i = a(36735),
         s = a(93973),
         l = a(7068),
-        c = a(71298),
-        m = a(738),
+        m = a(71298),
+        c = a(738),
         p = a(12155),
         d = a(22797),
         u = a(52038),
         h = a(56011),
         g = a(61859),
         _ = a(78327),
-        S = a(37341),
-        C = a(59096);
+        C = a(37341),
+        S = a(59096);
       function f(e) {
         const t = (0, s.Oz)(),
           { bLoading: a } = t,
-          { className: o, bPreviewMode: i, rewardType: c } = e;
+          { className: o, bPreviewMode: i, rewardType: m } = e;
         return r.createElement(
           l.$n,
           {
             className: (0, u.A)("CSSClaimItemButton", o),
             onClick: (e) => {
               t.bCanClaimNewItem
-                ? (0, m.pg)(r.createElement(I, { rewardType: c }), (0, h.uX)(e))
+                ? (0, c.pg)(r.createElement(I, { rewardType: m }), (0, h.uX)(e))
                 : ("dev" == _.TS.WEB_UNIVERSE ||
                     "beta" == _.TS.WEB_UNIVERSE ||
                     i) &&
-                  ((0, m.pg)(
-                    r.createElement(I, { rewardType: c }),
+                  ((0, c.pg)(
+                    r.createElement(I, { rewardType: m }),
                     (0, h.uX)(e),
                   ),
                   console.log(
@@ -3708,7 +3291,7 @@
         if (t.bAlreadyClaimedCurrentItem)
           return r.createElement(
             "div",
-            { className: (0, u.A)(S.CheckMark, "CSSClaimedState") },
+            { className: (0, u.A)(C.CheckMark, "CSSClaimedState") },
             r.createElement(p.Jlk, null),
             r.createElement(
               "span",
@@ -3735,15 +3318,15 @@
       function I(e) {
         const { closeModal: t, rewardType: a } = e,
           { fnClaimItem: o } = (0, s.CC)(),
-          i = (0, c.vs)(),
-          [l, m] = r.useState(null);
+          i = (0, m.vs)(),
+          [l, c] = r.useState(null);
         r.useEffect(() => {
           i.bLoading ||
             (i.fnSetLoading(!0),
             o()
               .then((e) => {
                 if (
-                  (m(e), console.log("claim response", (0, n.HO)(e)), e.appid)
+                  (c(e), console.log("claim response", (0, n.HO)(e)), e.appid)
                 ) {
                   let t = (0, g.we)("#Sale_ClaimableReward_completed_generic");
                   const n = l?.community_item_class || a;
@@ -3765,9 +3348,9 @@
                     i.fnSetElSuccess(
                       r.createElement(
                         "div",
-                        { className: S.DialogCtn },
+                        { className: C.DialogCtn },
                         r.createElement("span", null, t),
-                        r.createElement(v, {
+                        r.createElement(y, {
                           appid: e.appid,
                           community_item_type: e.community_item_type,
                           rewardType: n,
@@ -3791,35 +3374,35 @@
           case 15:
             p = (0, g.we)("#Sale_ClaimableReward_animatedavatar");
         }
-        return r.createElement(c.Hh, {
+        return r.createElement(m.Hh, {
           state: i,
           strDialogTitle: p,
           closeModal: t,
         });
       }
-      function v(e) {
+      function y(e) {
         const { appid: t, community_item_type: a, rewardType: n } = e;
         return t && a
           ? r.createElement(
               r.Fragment,
               null,
-              r.createElement(C.f, { appid: t, community_item_type: a }),
+              r.createElement(S.f, { appid: t, community_item_type: a }),
               Boolean(8 == n) &&
-                r.createElement(y, { appid: t, community_item_type: a }),
+                r.createElement(v, { appid: t, community_item_type: a }),
             )
           : null;
       }
-      function y(e) {
+      function v(e) {
         const { appid: t, community_item_type: a } = e,
           n = (0, i.fw)(t),
-          [c, m] = r.useState(!1);
+          [m, c] = r.useState(!1);
         if (!n) return null;
         const p = n.find((e) => e.item_type == a);
         return p
           ? r.createElement(
               "div",
-              { className: S.EquipCtn },
-              Boolean(c)
+              { className: C.EquipCtn },
+              Boolean(m)
                 ? r.createElement(
                     "div",
                     null,
@@ -3832,7 +3415,7 @@
                     {
                       onClick: (e) => {
                         (0, s.ns)(p).then((e) => {
-                          1 == e && m(!0);
+                          1 == e && c(!0);
                         });
                       },
                     },
@@ -3864,15 +3447,15 @@
     },
     59096: (e, t, a) => {
       "use strict";
-      a.d(t, { Z: () => S, f: () => _ });
+      a.d(t, { Z: () => C, f: () => _ });
       var n = a(65946),
         r = a(90626),
         o = a(41735),
         i = a.n(o),
         s = a(68797),
         l = a(51240),
-        c = a(56093),
-        m = a(78327);
+        m = a(56093),
+        c = a(78327);
       class p {
         m_mapAppToDefs = new Map();
         m_mapPromises = new Map();
@@ -3909,15 +3492,15 @@
           let a = null;
           try {
             const n =
-                m.TS.COMMUNITY_BASE_URL +
+                c.TS.COMMUNITY_BASE_URL +
                 (t
                   ? "minigame/ajaxgetgameitemdefsforeditor"
                   : "minigame/ajaxgetgameitemdefs"),
               r = {
                 appid: e,
                 origin: self.origin,
-                l: m.TS.LANGUAGE,
-                sessionid: t ? m.TS.SESSIONID : void 0,
+                l: c.TS.LANGUAGE,
+                sessionid: t ? c.TS.SESSIONID : void 0,
               },
               o = await i().get(n, { params: r, withCredentials: t });
             if (
@@ -3955,7 +3538,7 @@
             p.s_Singleton ||
               ((p.s_Singleton = new p()),
               p.s_Singleton.Init(),
-              "dev" == m.TS.WEB_UNIVERSE &&
+              "dev" == c.TS.WEB_UNIVERSE &&
                 (window.g_SaleMiniGameItemDefStore = p.s_Singleton)),
             p.s_Singleton
           );
@@ -3972,7 +3555,7 @@
                   !p.Get().BHasLoadedDef(e) &&
                   p.Get().LoadAppCommunityItems(e, t);
               }, [e, t]),
-              (0, c.hL)(p.Get().GetItemDefsChangeForEventID(e), n),
+              (0, m.hL)(p.Get().GetItemDefsChangeForEventID(e), n),
               a
             );
           })(e, a),
@@ -4004,9 +3587,9 @@
                 )
               : void 0;
         if (o?.item_movie_mp4 && o?.item_movie_webm) {
-          const e = `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${o?.item_image_large}`,
-            a = `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${o?.item_movie_webm}`,
-            n = `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${o?.item_movie_mp4}`;
+          const e = `${c.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${o?.item_image_large}`,
+            a = `${c.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${o?.item_movie_webm}`,
+            n = `${c.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${o?.item_movie_mp4}`;
           return r.createElement(
             r.Fragment,
             null,
@@ -4014,14 +3597,14 @@
               "video",
               { muted: !0, controls: !1, autoPlay: !0, loop: !0, poster: e },
               r.createElement("source", { src: a, type: "video/webm" }),
-              Boolean(!m.TS.IN_CLIENT) &&
+              Boolean(!c.TS.IN_CLIENT) &&
                 r.createElement("source", { src: n, type: "video/mp4" }),
             ),
             i,
           );
         }
         if (o) {
-          const a = `${m.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${o?.item_image_small || o?.item_image_large}`;
+          const a = `${c.TS.MEDIA_CDN_COMMUNITY_URL}images/items/${t}/${o?.item_image_small || o?.item_image_large}`;
           return r.createElement(
             r.Fragment,
             null,
@@ -4038,7 +3621,7 @@
           string: (0, h.we)("#Loading"),
         });
       }
-      function S(e) {
+      function C(e) {
         const { section: t, rewardDef: a, language: o } = e,
           i = d(a.appid, a.community_item_type),
           [s] = (0, n.q3)(() => [Boolean(t.rewards?.show_reward_item_name)]);
@@ -4046,20 +3629,20 @@
         switch (a.community_class) {
           case 14:
           case 15:
-            l = `${m.TS.COMMUNITY_BASE_URL}my/edit/avatar`;
+            l = `${c.TS.COMMUNITY_BASE_URL}my/edit/avatar`;
             break;
           case 1:
-            l = `${m.TS.COMMUNITY_BASE_URL}my/edit/favoritebadge`;
+            l = `${c.TS.COMMUNITY_BASE_URL}my/edit/favoritebadge`;
             break;
           case 3:
           case 8:
-            l = `${m.TS.COMMUNITY_BASE_URL}my/edit/background`;
+            l = `${c.TS.COMMUNITY_BASE_URL}my/edit/background`;
             break;
           case 13:
-            l = `${m.TS.COMMUNITY_BASE_URL}my/edit/miniprofile`;
+            l = `${c.TS.COMMUNITY_BASE_URL}my/edit/miniprofile`;
             break;
           case 11:
-            l = `${m.TS.COMMUNITY_BASE_URL}chat`;
+            l = `${c.TS.COMMUNITY_BASE_URL}chat`;
         }
         return r.createElement(
           "a",
@@ -4074,28 +3657,28 @@
     },
     73067: (e, t, a) => {
       "use strict";
-      a.d(t, { J: () => Be });
+      a.d(t, { J: () => Ae });
       var n = a(41735),
         r = a.n(n),
         o = a(75844),
         i = a(90626),
         s = a(79821),
         l = a(56545),
-        c = a(51006),
-        m = a(17720),
+        m = a(51006),
+        c = a(17720),
         p = a(37735),
         d = a(34629),
         u = a(88997),
         h = a(70995),
         g = a(27666),
         _ = a(71138),
-        S = a(65739),
-        C = a(56093),
+        C = a(65739),
+        S = a(56093),
         f = a(31698),
         E = a(72739),
         I = a(14947),
-        v = a(77700),
-        y = a.n(v),
+        y = a(77700),
+        v = a.n(y),
         w = a(52038);
       class b extends i.Component {
         m_strLastSearch;
@@ -4276,11 +3859,11 @@
           }
           return i.createElement(
             "div",
-            { className: y().mentionDialogPosition },
+            { className: v().mentionDialogPosition },
             i.createElement(
               "div",
               {
-                className: y().mentionDialog,
+                className: v().mentionDialog,
                 tabIndex: 0,
                 onKeyDown: this.OnKeyDown,
               },
@@ -4290,10 +3873,10 @@
           );
         }
       }
-      (0, d.Cg)([C.oI], b.prototype, "OnKeyDown", null),
-        (0, d.Cg)([C.oI], b.prototype, "OnClickSuggestion", null),
-        (0, d.Cg)([C.oI], b.prototype, "OnMouseOverSuggestion", null),
-        (0, d.Cg)([C.oI], b.prototype, "BindSelectedElement", null);
+      (0, d.Cg)([S.oI], b.prototype, "OnKeyDown", null),
+        (0, d.Cg)([S.oI], b.prototype, "OnClickSuggestion", null),
+        (0, d.Cg)([S.oI], b.prototype, "OnMouseOverSuggestion", null),
+        (0, d.Cg)([S.oI], b.prototype, "BindSelectedElement", null);
       class T extends i.PureComponent {
         OnMouseOver(e) {
           this.props.fnOnMouseOver(this.props.matchKey);
@@ -4306,9 +3889,9 @@
             "div",
             {
               className: (0, w.A)(
-                y().suggestOption,
-                y().mentionSearchOption,
-                this.props.bIsSelected ? y().selected : "",
+                v().suggestOption,
+                v().mentionSearchOption,
+                this.props.bIsSelected ? v().selected : "",
               ),
               onMouseEnter: this.OnMouseOver,
               onClick: this.OnClick,
@@ -4317,12 +3900,12 @@
           );
         }
       }
-      (0, d.Cg)([C.oI], T.prototype, "OnMouseOver", null),
-        (0, d.Cg)([C.oI], T.prototype, "OnClick", null);
+      (0, d.Cg)([S.oI], T.prototype, "OnMouseOver", null),
+        (0, d.Cg)([S.oI], T.prototype, "OnClick", null);
       const D = b;
-      var A = a(79786),
-        L = a.n(A);
-      const B = class extends D {
+      var L = a(79786),
+        U = a.n(L);
+      const A = class extends D {
         performSearch(e) {
           return this.props.emoticonStore.SearchEmoticons(e, 10, !1);
         }
@@ -4337,13 +3920,13 @@
             "div",
             {
               className: (0, w.A)(
-                L().EmoticonSuggestion,
+                U().EmoticonSuggestion,
                 e.recent ? "Recent" : "",
               ),
             },
             i.createElement(
               "div",
-              { className: L().Emoticon },
+              { className: U().Emoticon },
               i.createElement(f.nl, {
                 emoticon: e.name,
                 emoticonHoverStore: this.props.emoticonHoverStore,
@@ -4368,10 +3951,10 @@
           return Number.MAX_VALUE;
         }
       };
-      var U = a(34510),
-        M = a.n(U),
-        x = a(61859);
-      class N extends D {
+      var B = a(34510),
+        x = a.n(B),
+        k = a(61859);
+      class M extends D {
         performSearch(e) {
           let t = Array();
           return (
@@ -4390,8 +3973,8 @@
         renderMatch(e) {
           return i.createElement(
             "div",
-            { key: e.name, className: (0, w.A)(M().BBCodeSuggestion) },
-            i.createElement("div", { className: M().BBCode }, e.name),
+            { key: e.name, className: (0, w.A)(x().BBCodeSuggestion) },
+            i.createElement("div", { className: x().BBCode }, e.name),
             "[",
             e.name,
             "]...[/",
@@ -4404,9 +3987,9 @@
             "div",
             {
               key: "nomatches",
-              className: (0, w.A)(y().mentionSearchOption, y().noMatches),
+              className: (0, w.A)(v().mentionSearchOption, v().noMatches),
             },
-            (0, x.we)("#Bbcode_No_Match"),
+            (0, k.we)("#Bbcode_No_Match"),
           );
         }
         renderTooManyMatchesMessage(e) {
@@ -4419,7 +4002,7 @@
           return Number.MAX_VALUE;
         }
       }
-      class k extends i.Component {
+      class N extends i.Component {
         descTextAreaRef = i.createRef();
         m_MentionDialog;
         m_bDisabled = !0;
@@ -4555,9 +4138,9 @@
             } = this.props;
           switch (this.state.activeSuggestSearchType) {
             case "Emoticon":
-              e = i.createElement(B, {
+              e = i.createElement(A, {
                 emoticonStore: t,
-                emoticonHoverStore: S.s,
+                emoticonHoverStore: C.s,
                 strSearch: this.state.mentionSearch,
                 nMinimumSearchLengthBeforeAutoSelection: 2,
                 onSuggestionSelected: this.OnEmoticonSuggestionSelected,
@@ -4565,7 +4148,7 @@
               });
               break;
             case "BBCode":
-              e = i.createElement(N, {
+              e = i.createElement(M, {
                 supportBBCodes: a,
                 strSearch: this.state.mentionSearch,
                 nMinimumSearchLengthBeforeAutoSelection: 2,
@@ -4588,32 +4171,32 @@
           );
         }
       }
-      (0, d.Cg)([C.oI], k.prototype, "BindMentionDialog", null),
-        (0, d.Cg)([C.oI], k.prototype, "OnKeyDown", null),
-        (0, d.Cg)([C.oI], k.prototype, "OnFocus", null),
-        (0, d.Cg)([C.oI], k.prototype, "OnKeyPress", null),
-        (0, d.Cg)([C.oI], k.prototype, "OnClick", null),
-        (0, d.Cg)([C.oI], k.prototype, "OnEmoticonSuggestionSelected", null),
-        (0, d.Cg)([C.oI], k.prototype, "OnBBCodeSuggestionSelected", null),
-        (0, d.Cg)([C.oI], k.prototype, "FocusTextInput", null),
-        (0, d.Cg)([C.oI], k.prototype, "GetTextAreaRef", null),
-        (0, d.Cg)([C.oI], k.prototype, "GetTextAreaCurrent", null);
+      (0, d.Cg)([S.oI], N.prototype, "BindMentionDialog", null),
+        (0, d.Cg)([S.oI], N.prototype, "OnKeyDown", null),
+        (0, d.Cg)([S.oI], N.prototype, "OnFocus", null),
+        (0, d.Cg)([S.oI], N.prototype, "OnKeyPress", null),
+        (0, d.Cg)([S.oI], N.prototype, "OnClick", null),
+        (0, d.Cg)([S.oI], N.prototype, "OnEmoticonSuggestionSelected", null),
+        (0, d.Cg)([S.oI], N.prototype, "OnBBCodeSuggestionSelected", null),
+        (0, d.Cg)([S.oI], N.prototype, "FocusTextInput", null),
+        (0, d.Cg)([S.oI], N.prototype, "GetTextAreaRef", null),
+        (0, d.Cg)([S.oI], N.prototype, "GetTextAreaCurrent", null);
       var R = a(7068),
         F = a(283),
-        G = a(95695),
-        O = a.n(G),
-        P = a(44325),
+        O = a(95695),
+        P = a.n(O),
+        G = a(44325),
         H = a(738),
-        W = a(41609),
-        Y = a.n(W),
+        V = a(41609),
+        W = a.n(V),
         z = a(56011),
-        V = a(78327);
+        Y = a(78327);
       var j = a(26505),
-        Z = a(14336),
-        X = a(87129),
-        K = a(48079),
-        Q = a(22797),
-        $ = a(32754),
+        K = a(14336),
+        $ = a(87129),
+        X = a(48079),
+        Z = a(22797),
+        Q = a(32754),
         J = a(99312),
         q = a.n(J),
         ee = a(65946),
@@ -4634,10 +4217,10 @@
           } = e,
           s = i.useMemo(() => ["sale_header"], []),
           l = i.useMemo(() => ({ width: n, height: r }), [n, r]),
-          [c, p] = i.useState(void 0),
+          [m, p] = i.useState(void 0),
           [d, u] = i.useState(Boolean(a)),
-          [h, S] = i.useState(void 0),
-          [C, f] = i.useState(!1),
+          [h, C] = i.useState(void 0),
+          [S, f] = i.useState(!1),
           [E] = (0, ee.q3)(() => [ie.O.Get().GetCurEditLanguage()]),
           I = i.useCallback(
             async (e, t) => {
@@ -4660,37 +4243,37 @@
           (h &&
             h.GetClanSteamID().ConvertTo64BitString() ==
               t.ConvertTo64BitString()) ||
-            S(new oe.V(t));
+            C(new oe.V(t));
         }, [h, t]),
           i.useEffect(() => {
             I(h, a);
           }, [I, h, a]);
-        let v,
-          y = "",
+        let y,
+          v = "",
           w = !1;
         if (h && h.GetFilesToUpload().length > 0) {
-          v = h.GetUploadImages()[0];
-          const e = v.IsValidAssetType(s, l);
-          (y = e.error), (w = e.needsCrop);
+          y = h.GetUploadImages()[0];
+          const e = y.IsValidAssetType(s, l);
+          (v = e.error), (w = e.needsCrop);
         }
         return i.createElement(
           i.Fragment,
           null,
           d
-            ? i.createElement(Q.t, {
+            ? i.createElement(Z.t, {
                 size: "medium",
-                string: (0, x.we)("#Loading"),
+                string: (0, k.we)("#Loading"),
               })
-            : Boolean(c) &&
+            : Boolean(m) &&
                 i.createElement("div", {
                   className: re.Image,
                   style: {
-                    backgroundImage: `url( '${v ? v.dataUrl : c.url}' )`,
+                    backgroundImage: `url( '${y ? y.dataUrl : m.url}' )`,
                     height: `${r}px`,
                     width: `${n}px`,
                   },
                 }),
-          Boolean(y) && i.createElement("p", null, y),
+          Boolean(v) && i.createElement("p", null, v),
           w &&
             i.createElement(
               R.$n,
@@ -4709,20 +4292,20 @@
                   );
                 },
               },
-              (0, x.we)("#BBCode_ResizeImage"),
+              (0, k.we)("#BBCode_ResizeImage"),
             ),
-          Boolean(v && v.bCropped) &&
+          Boolean(y && y.bCropped) &&
             i.createElement(
               i.Fragment,
               null,
               i.createElement(
                 "div",
                 null,
-                (0, x.we)("#ClanImagePickAndResize_UploadStatus", v.status),
+                (0, k.we)("#ClanImagePickAndResize_UploadStatus", y.status),
               ),
-              C
-                ? i.createElement(Q.t, {
-                    string: (0, x.we)("#Uploading"),
+              S
+                ? i.createElement(Z.t, {
+                    string: (0, k.we)("#Uploading"),
                     size: "small",
                   })
                 : i.createElement(
@@ -4775,14 +4358,14 @@
                         }
                       },
                     },
-                    (0, x.we)("#ClanImagePickAndResize_UploadImage"),
+                    (0, k.we)("#ClanImagePickAndResize_UploadImage"),
                   ),
             ),
           i.createElement(
             R.$n,
             {
               onClick: (e) => {
-                const t = new m.b(V.UF.CLANSTEAMID);
+                const t = new c.b(Y.UF.CLANSTEAMID);
                 (0, H.pg)(
                   i.createElement(ne.z, {
                     clanSteamID: t,
@@ -4792,15 +4375,15 @@
                 );
               },
             },
-            (0, x.we)("#BBCode_ChooseImage", n, r),
+            (0, k.we)("#BBCode_ChooseImage", n, r),
           ),
         );
       });
-      var ce,
-        me = a(68797);
+      var me,
+        ce = a(68797);
       let pe = class extends i.Component {
         static {
-          ce = this;
+          me = this;
         }
         m_cancelSignal = r().CancelToken.source();
         static s_formattingHelp = new Map();
@@ -4808,15 +4391,15 @@
           super(e),
             (this.state = {
               formattingHelp: {
-                __html: ce.s_formattingHelp.has(e.formatType)
-                  ? ce.s_formattingHelp.get(e.formatType)
+                __html: me.s_formattingHelp.has(e.formatType)
+                  ? me.s_formattingHelp.get(e.formatType)
                   : "",
               },
             });
         }
         componentDidMount() {
           this.AjaxGetFormattingHelp().catch((e) => {
-            this.setState((0, me.H)(e));
+            this.setState((0, ce.H)(e));
           });
         }
         componentWillUnmount() {
@@ -4826,7 +4409,7 @@
         }
         static GetHelpURL(e, t) {
           return (
-            V.TS.COMMUNITY_BASE_URL +
+            Y.TS.COMMUNITY_BASE_URL +
             "comment/" +
             e +
             "/formattinghelp" +
@@ -4836,12 +4419,12 @@
         async AjaxGetFormattingHelp() {
           if ("" == this.state.formattingHelp.__html) {
             let e,
-              t = { sessionid: V.TS.SESSIONID };
-            (e = await r().get(ce.GetHelpURL(this.props.formatType, !0), {
+              t = { sessionid: Y.TS.SESSIONID };
+            (e = await r().get(me.GetHelpURL(this.props.formatType, !0), {
               params: t,
               cancelToken: this.m_cancelSignal.token,
             })),
-              ce.s_formattingHelp.set(this.props.formatType, e.data),
+              me.s_formattingHelp.set(this.props.formatType, e.data),
               this.setState({ formattingHelp: { __html: e.data } });
           }
         }
@@ -4855,11 +4438,11 @@
                 this.state.errorCode,
               )
             : "" == this.state.formattingHelp.__html
-              ? i.createElement(Q.t, null)
+              ? i.createElement(Z.t, null)
               : i.createElement(
-                  P.o0,
+                  G.o0,
                   {
-                    strTitle: (0, x.we)(
+                    strTitle: (0, k.we)(
                       "#EventEditor_FormattingHelp_GetHelpLink",
                     ),
                     strDescription: "",
@@ -4875,7 +4458,7 @@
                 );
         }
       };
-      pe = ce = (0, d.Cg)([o.PA], pe);
+      pe = me = (0, d.Cg)([o.PA], pe);
       var de,
         ue = a(12611),
         he = a(74410),
@@ -4899,7 +4482,7 @@
           e && e.target.select();
         }
         InsertText(e) {
-          Se.replaceSelection(this.GetTextAreaRef().current, e);
+          Ce.replaceSelection(this.GetTextAreaRef().current, e);
         }
         OnTextAreaDropListener(e) {
           if (
@@ -4912,7 +4495,7 @@
               let e = (0, g.mJ)();
               if (t.startsWith(e)) {
                 let a = "[img]" + ue.l + "/" + t.substr(e.length) + "[/img]";
-                Se.replaceSelection(this.GetTextAreaRef().current, a);
+                Ce.replaceSelection(this.GetTextAreaRef().current, a);
               }
             }
           }
@@ -4926,9 +4509,9 @@
           return i.createElement(
             i.Fragment,
             null,
-            i.createElement(Ce, {
+            i.createElement(Se, {
               pathToImages:
-                V.TS.COMMUNITY_CDN_URL + "public/images/sharedfiles/guides/",
+                Y.TS.COMMUNITY_CDN_URL + "public/images/sharedfiles/guides/",
               fnTextareaRef: this.GetTextAreaRef,
               emoticonStore: this.props.emoticonStore,
               supportBBCodes: this.props.limitBBCode
@@ -4948,7 +4531,7 @@
                   this.state.bShowDragTarget ? q().DragTarget : "",
                 ),
               },
-              i.createElement(k, {
+              i.createElement(N, {
                 cols: 90,
                 rows: this.props.nOverridesRows || 22,
                 maxLength: 32e3,
@@ -4973,12 +4556,12 @@
           );
         }
       };
-      (0, d.Cg)([C.oI], _e.prototype, "ClanImageDragListener", null),
-        (0, d.Cg)([C.oI], _e.prototype, "onFocus", null),
-        (0, d.Cg)([C.oI], _e.prototype, "OnTextAreaDropListener", null),
-        (0, d.Cg)([C.oI], _e.prototype, "GetTextAreaRef", null),
+      (0, d.Cg)([S.oI], _e.prototype, "ClanImageDragListener", null),
+        (0, d.Cg)([S.oI], _e.prototype, "onFocus", null),
+        (0, d.Cg)([S.oI], _e.prototype, "OnTextAreaDropListener", null),
+        (0, d.Cg)([S.oI], _e.prototype, "GetTextAreaRef", null),
         (_e = (0, d.Cg)([o.PA], _e));
-      class Se {
+      class Ce {
         static BIsFireFox() {
           return Boolean(
             new RegExp(/Firefox\/([0-9\.]+)(?:\s|$)/i).exec(
@@ -4989,7 +4572,7 @@
         static replaceSelection(e, t) {
           let a = e.selectionStart;
           e.focus(),
-            Se.InsertTextAtSelect(t, e),
+            Ce.InsertTextAtSelect(t, e),
             e.setSelectionRange(a, a + t.length);
         }
         static getSelectedString(e) {
@@ -4999,61 +4582,61 @@
           );
         }
         static wrapBBCode(e, t, a) {
-          let n = Se.getSelectedString(a),
+          let n = Ce.getSelectedString(a),
             r = "";
           (r =
             0 == n.indexOf(e) && n.lastIndexOf(t) == n.length - t.length
               ? n.substr(e.length, n.length - e.length - t.length)
               : e + n + t),
-            Se.replaceSelection(a, r);
+            Ce.replaceSelection(a, r);
         }
         static append(e, t) {
           t &&
             (t.focus(),
             t.setSelectionRange(t.value.length, t.value.length),
-            Se.InsertTextAtSelect(e, t));
+            Ce.InsertTextAtSelect(e, t));
         }
         static overwrite(e, t) {
           t &&
             (t.focus(),
             document.execCommand("selectAll", !1, e),
-            Se.BIsFireFox()
+            Ce.BIsFireFox()
               ? (t.value = "")
               : document.execCommand("delete", !1),
-            Se.InsertTextAtSelect(e, t));
+            Ce.InsertTextAtSelect(e, t));
         }
         static InsertTextAtSelect(e, t) {
-          Se.BIsFireFox() && t.setRangeText
+          Ce.BIsFireFox() && t.setRangeText
             ? t.setRangeText(e)
             : document.execCommand("insertText", !1, e);
         }
       }
-      let Ce = class extends i.Component {
+      let Se = class extends i.Component {
         m_linkPopupRef = i.createRef();
         onBold() {
-          Se.wrapBBCode("[b]", "[/b]", this.props.fnTextareaRef().current);
+          Ce.wrapBBCode("[b]", "[/b]", this.props.fnTextareaRef().current);
         }
         onItalics() {
-          Se.wrapBBCode("[i]", "[/i]", this.props.fnTextareaRef().current);
+          Ce.wrapBBCode("[i]", "[/i]", this.props.fnTextareaRef().current);
         }
         onUnderline() {
-          Se.wrapBBCode("[u]", "[/u]", this.props.fnTextareaRef().current);
+          Ce.wrapBBCode("[u]", "[/u]", this.props.fnTextareaRef().current);
         }
         onStrikeThrough() {
-          Se.wrapBBCode(
+          Ce.wrapBBCode(
             "[strike]",
             "[/strike]",
             this.props.fnTextareaRef().current,
           );
         }
         onHeader() {
-          Se.wrapBBCode("[h1]", "[/h1]", this.props.fnTextareaRef().current);
+          Ce.wrapBBCode("[h1]", "[/h1]", this.props.fnTextareaRef().current);
         }
         onHeader2() {
-          Se.wrapBBCode("[h2]", "[/h2]", this.props.fnTextareaRef().current);
+          Ce.wrapBBCode("[h2]", "[/h2]", this.props.fnTextareaRef().current);
         }
         onHeader3() {
-          Se.wrapBBCode("[h3]", "[/h3]", this.props.fnTextareaRef().current);
+          Ce.wrapBBCode("[h3]", "[/h3]", this.props.fnTextareaRef().current);
         }
         onUnorderedList() {
           this.handleList("list");
@@ -5066,17 +4649,17 @@
             a = "[" + e + "]\n",
             n = "[/" + e + "]";
           if (t.selectionStart == t.selectionEnd)
-            Se.wrapBBCode(a + "[*]", "\n" + n, t);
+            Ce.wrapBBCode(a + "[*]", "\n" + n, t);
           else {
             let e =
               a +
-              Se.getSelectedString(t)
+              Ce.getSelectedString(t)
                 .split("\n")
                 .map((e) => (e.match(/\*+\s/) ? "[*]" : "[*] ") + e)
                 .join("\n") +
               "\n" +
               n;
-            Se.replaceSelection(t, e);
+            Ce.replaceSelection(t, e);
           }
         }
         OnAddLink(e) {
@@ -5103,7 +4686,7 @@
           );
         }
         OnOpenYoutubeDialog(e) {
-          let t = V.TS.IMG_URL + "applications/community/";
+          let t = Y.TS.IMG_URL + "applications/community/";
           (0, H.HT)(
             i.createElement(Ee, {
               textareaRef: this.props.fnTextareaRef(),
@@ -5114,13 +4697,13 @@
         }
         OnOpenImageDialog(e) {
           (0, H.HT)(
-            i.createElement(ve, { textareaRef: this.props.fnTextareaRef() }),
+            i.createElement(ye, { textareaRef: this.props.fnTextareaRef() }),
             (0, z.uX)(e),
           );
         }
         OnOpenSpeakerDialog(e) {
           (0, H.pg)(
-            i.createElement(ye, {
+            i.createElement(ve, {
               clanSteamID: this.props.clanSteamID,
               textareaRef: this.props.fnTextareaRef(),
             }),
@@ -5129,7 +4712,7 @@
         }
         OnEmoticonSelected(e, t = !1) {
           let a = `ː${e}ː`;
-          Se.replaceSelection(this.props.fnTextareaRef().current, a),
+          Ce.replaceSelection(this.props.fnTextareaRef().current, a),
             this.props.fnTextareaRef().current.focus();
         }
         BSupports(e) {
@@ -5150,9 +4733,9 @@
                     "span",
                     { className: (0, w.A)("ttip", q().ActionGetHelp) },
                     i.createElement(
-                      $.he,
+                      Q.he,
                       {
-                        toolTipContent: (0, x.we)(
+                        toolTipContent: (0, k.we)(
                           "#EventEditor_FormattingHelp_GetHelpLink",
                         ),
                       },
@@ -5160,11 +4743,11 @@
                         "a",
                         {
                           href: pe.GetHelpURL(this.props.showFormatHelp, !1),
-                          target: V.TS.IN_CLIENT ? void 0 : "_blank",
+                          target: Y.TS.IN_CLIENT ? void 0 : "_blank",
                         },
                         i.createElement("img", { src: n + "/action_help.png" }),
                         " ",
-                        (0, x.we)("#EventEditor_FormattingHelp_GetHelpLink"),
+                        (0, k.we)("#EventEditor_FormattingHelp_GetHelpLink"),
                       ),
                     ),
                   )
@@ -5175,15 +4758,15 @@
                       className: (0, w.A)("ttip", q().ActionGetHelp),
                     },
                     i.createElement(
-                      $.he,
+                      Q.he,
                       {
-                        toolTipContent: (0, x.we)(
+                        toolTipContent: (0, k.we)(
                           "#EventEditor_FormattingHelp_GetHelpLink",
                         ),
                       },
                       i.createElement("img", { src: n + "/action_help.png" }),
                       " ",
-                      (0, x.we)("#EventEditor_FormattingHelp_GetHelpLink"),
+                      (0, k.we)("#EventEditor_FormattingHelp_GetHelpLink"),
                     ),
                   )),
             i.createElement(
@@ -5192,67 +4775,67 @@
               this.BSupports("b") &&
                 i.createElement(fe, {
                   onClick: this.onBold,
-                  tooltip: (0, x.we)("#Editor_Bold"),
+                  tooltip: (0, k.we)("#Editor_Bold"),
                   imgURL: this.props.pathToImages + "/format_bold.png",
                 }),
               this.BSupports("u") &&
                 i.createElement(fe, {
                   onClick: this.onUnderline,
-                  tooltip: (0, x.we)("#Editor_Underline"),
+                  tooltip: (0, k.we)("#Editor_Underline"),
                   imgURL: this.props.pathToImages + "/format_underline.png",
                 }),
               this.BSupports("i") &&
                 i.createElement(fe, {
                   onClick: this.onItalics,
-                  tooltip: (0, x.we)("#Editor_Italics"),
+                  tooltip: (0, k.we)("#Editor_Italics"),
                   imgURL: this.props.pathToImages + "/format_italic.png",
                 }),
               this.BSupports("strike") &&
                 i.createElement(fe, {
                   onClick: this.onStrikeThrough,
-                  tooltip: (0, x.we)("#Editor_StrikeThrough"),
+                  tooltip: (0, k.we)("#Editor_StrikeThrough"),
                   imgURL: this.props.pathToImages + "/format_strike.png",
                 }),
               Boolean(this.BSupports("url") && !t) &&
                 i.createElement(fe, {
                   onClick: this.OnAddLink,
-                  tooltip: (0, x.we)("#Editor_Link"),
+                  tooltip: (0, k.we)("#Editor_Link"),
                   imgURL: this.props.pathToImages + "/format_link.png",
                 }),
               this.BSupports("list") &&
                 i.createElement(fe, {
                   onClick: this.onUnorderedList,
-                  tooltip: (0, x.we)("#Editor_Unordered"),
+                  tooltip: (0, k.we)("#Editor_Unordered"),
                   imgURL: this.props.pathToImages + "/format_bullet.png",
                 }),
               this.BSupports("olist") &&
                 i.createElement(fe, {
                   onClick: this.onOrderedList,
-                  tooltip: (0, x.we)("#Editor_Ordered"),
+                  tooltip: (0, k.we)("#Editor_Ordered"),
                   imgURL: this.props.pathToImages + "/format_numbered.png",
                 }),
               this.BSupports("h1") &&
                 i.createElement(fe, {
                   onClick: this.onHeader,
-                  tooltip: (0, x.we)("#Editor_Header"),
+                  tooltip: (0, k.we)("#Editor_Header"),
                   imgURL: this.props.pathToImages + "/format_header1.png",
                 }),
               this.BSupports("h2") &&
                 i.createElement(fe, {
                   onClick: this.onHeader2,
-                  tooltip: (0, x.we)("#Editor_Header2"),
+                  tooltip: (0, k.we)("#Editor_Header2"),
                   imgURL: this.props.pathToImages + "/format_header2.png",
                 }),
               this.BSupports("h3") &&
                 i.createElement(fe, {
                   onClick: this.onHeader3,
-                  tooltip: (0, x.we)("#Editor_Header3"),
+                  tooltip: (0, k.we)("#Editor_Header3"),
                   imgURL: this.props.pathToImages + "/format_header3.png",
                 }),
               this.BSupports("previewyoutube") &&
                 i.createElement(fe, {
                   onClick: this.OnOpenYoutubeDialog,
-                  tooltip: (0, x.we)("#EventEditor_InsertYouTube"),
+                  tooltip: (0, k.we)("#EventEditor_InsertYouTube"),
                   imgURL:
                     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkYyNjlFOEM1MjJEMzExRTJCNTVBQkZGOUQyOTI0ODU5IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkYyNjlFOEM2MjJEMzExRTJCNTVBQkZGOUQyOTI0ODU5Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjI2OUU4QzMyMkQzMTFFMkI1NUFCRkY5RDI5MjQ4NTkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjI2OUU4QzQyMkQzMTFFMkI1NUFCRkY5RDI5MjQ4NTkiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4IrEPeAAABJ0lEQVR42mL8//8/AzmABUScEOZJI1HfLBaoppmk2sh4Ql/r/69HD0jSxCanwMD07eVzhl9ADgz/ZmJikMjOY2CUlEIRR8YgPYzbBLhQQoeJl4/B7uY9hv9//jC8XLWc4UFfD8OPZ08xbGX6CSSQ8XdgKH/79o3h+69fDHwBwQy6ew8ySOYXMfxiZERRx/ILPTqA/K9fv8K5f4EG3Pn5i+EfSB2SWpaf6G6A2vgP6NSrWzYz3J8zk0Hk9SsGVka0ePzLxs7w9ydC+3+gpn29PQzv9uxiEHz7mkEY6ESQPb+QHMbMwcHAwiotw/Dj3h2E6L+/DIyrljKIgCMLGMoMmCmLQ0qagdnh66fn/xgYfP+B9BCJv79/lw5KcrPISKqzGMlN5AABBgBSmY83jVsiQAAAAABJRU5ErkJggg==",
                 }),
@@ -5261,8 +4844,8 @@
                 { className: "ttip" },
                 this.props.emoticonStore &&
                   i.createElement(
-                    $.he,
-                    { toolTipContent: (0, x.we)("#Editor_Emoticon") },
+                    Q.he,
+                    { toolTipContent: (0, k.we)("#Editor_Emoticon") },
                     i.createElement(F.A, {
                       title: " ",
                       className: (0, w.A)(q().EmoteOuter),
@@ -5270,7 +4853,7 @@
                       OnEmoticonSelected: this.OnEmoticonSelected,
                       rtLastAckedNewEmoticons: Number.MAX_VALUE,
                       emoticonStore: this.props.emoticonStore,
-                      emoticonHoverStore: S.s,
+                      emoticonHoverStore: C.s,
                       useImg: this.props.pathToImages + "/format_emote.png",
                       contextOptions: {
                         bOverlapHorizontal: !0,
@@ -5282,17 +4865,17 @@
               Boolean(this.BSupports("img") && !t) &&
                 i.createElement(fe, {
                   onClick: this.OnOpenImageDialog,
-                  tooltip: (0, x.we)("#EventEditor_InsertImage"),
+                  tooltip: (0, k.we)("#EventEditor_InsertImage"),
                   imgURL: this.props.pathToImages + "/insert_img.png",
                 }),
               Boolean(
-                V.iA.is_support &&
+                Y.iA.is_support &&
                   this.props.clanSteamID &&
                   this.BSupports("speaker"),
               ) &&
                 i.createElement(fe, {
                   onClick: this.OnOpenSpeakerDialog,
-                  tooltip: (0, x.we)("#EventEditor_AddSpeaker"),
+                  tooltip: (0, k.we)("#EventEditor_AddSpeaker"),
                   imgURL: this.props.pathToImages + "/insert_img.png",
                 }),
               Boolean(a && !t) &&
@@ -5301,9 +4884,9 @@
                   {
                     onClick: this.OnConvertHTMLToBBCodeDialog,
                     className: q().ActionImportHTML,
-                    tooltip: (0, x.we)("#EventEditor_ImportFromHTML_ttip"),
+                    tooltip: (0, k.we)("#EventEditor_ImportFromHTML_ttip"),
                   },
-                  (0, x.we)("#EventEditor_ImportHTML"),
+                  (0, k.we)("#EventEditor_ImportHTML"),
                 ),
               r,
             )
@@ -5315,30 +4898,30 @@
           "span",
           { onClick: e.onClick, className: e.className },
           i.createElement(
-            $.he,
+            Q.he,
             { toolTipContent: e.tooltip, className: "ttip" },
             Boolean(e.imgURL) && i.createElement("img", { src: e.imgURL }),
             e.children,
           ),
         );
       }
-      (0, d.Cg)([C.oI], Ce.prototype, "onBold", null),
-        (0, d.Cg)([C.oI], Ce.prototype, "onItalics", null),
-        (0, d.Cg)([C.oI], Ce.prototype, "onUnderline", null),
-        (0, d.Cg)([C.oI], Ce.prototype, "onStrikeThrough", null),
-        (0, d.Cg)([C.oI], Ce.prototype, "onHeader", null),
-        (0, d.Cg)([C.oI], Ce.prototype, "onHeader2", null),
-        (0, d.Cg)([C.oI], Ce.prototype, "onHeader3", null),
-        (0, d.Cg)([C.oI], Ce.prototype, "onUnorderedList", null),
-        (0, d.Cg)([C.oI], Ce.prototype, "onOrderedList", null),
-        (0, d.Cg)([C.oI], Ce.prototype, "OnAddLink", null),
-        (0, d.Cg)([C.oI], Ce.prototype, "ShowHelpDialog", null),
-        (0, d.Cg)([C.oI], Ce.prototype, "OnConvertHTMLToBBCodeDialog", null),
-        (0, d.Cg)([C.oI], Ce.prototype, "OnOpenYoutubeDialog", null),
-        (0, d.Cg)([C.oI], Ce.prototype, "OnOpenImageDialog", null),
-        (0, d.Cg)([C.oI], Ce.prototype, "OnOpenSpeakerDialog", null),
-        (0, d.Cg)([C.oI], Ce.prototype, "OnEmoticonSelected", null),
-        (Ce = (0, d.Cg)([o.PA], Ce));
+      (0, d.Cg)([S.oI], Se.prototype, "onBold", null),
+        (0, d.Cg)([S.oI], Se.prototype, "onItalics", null),
+        (0, d.Cg)([S.oI], Se.prototype, "onUnderline", null),
+        (0, d.Cg)([S.oI], Se.prototype, "onStrikeThrough", null),
+        (0, d.Cg)([S.oI], Se.prototype, "onHeader", null),
+        (0, d.Cg)([S.oI], Se.prototype, "onHeader2", null),
+        (0, d.Cg)([S.oI], Se.prototype, "onHeader3", null),
+        (0, d.Cg)([S.oI], Se.prototype, "onUnorderedList", null),
+        (0, d.Cg)([S.oI], Se.prototype, "onOrderedList", null),
+        (0, d.Cg)([S.oI], Se.prototype, "OnAddLink", null),
+        (0, d.Cg)([S.oI], Se.prototype, "ShowHelpDialog", null),
+        (0, d.Cg)([S.oI], Se.prototype, "OnConvertHTMLToBBCodeDialog", null),
+        (0, d.Cg)([S.oI], Se.prototype, "OnOpenYoutubeDialog", null),
+        (0, d.Cg)([S.oI], Se.prototype, "OnOpenImageDialog", null),
+        (0, d.Cg)([S.oI], Se.prototype, "OnOpenSpeakerDialog", null),
+        (0, d.Cg)([S.oI], Se.prototype, "OnEmoticonSelected", null),
+        (Se = (0, d.Cg)([o.PA], Se));
       let Ee = class extends i.Component {
         state = { youtubeInput: "", alignment: he.V2.left };
         OnYoutubeInsertLink() {
@@ -5350,7 +4933,7 @@
                 "https://www.youtube.com/watch?v=" +
                 e.strVideoID +
                 (e.nStartSeconds ? "&t=" + e.nStartSeconds : "");
-              Se.wrapBBCode(t, "", this.props.textareaRef.current);
+              Ce.wrapBBCode(t, "", this.props.textareaRef.current);
             } else {
               let t =
                 "[previewyoutube=" +
@@ -5358,14 +4941,14 @@
                 ";" +
                 this.state.alignment +
                 "]";
-              Se.wrapBBCode(
+              Ce.wrapBBCode(
                 t,
                 "[/previewyoutube]",
                 this.props.textareaRef.current,
               );
             }
             this.setState({ youtubeInput: "", alignment: he.V2.left });
-          } else alert((0, x.we)("#EventEditor_InsertYouTube_NoURL"));
+          } else alert((0, k.we)("#EventEditor_InsertYouTube_NoURL"));
         }
         OnUrlChange(e) {
           this.state.youtubeInput != e.target.value &&
@@ -5386,14 +4969,14 @@
         OnOuterDivClickPassDown(e) {}
         render() {
           return i.createElement(
-            P.o0,
+            G.o0,
             {
-              strTitle: (0, x.we)("#EventEditor_InsertYouTube"),
+              strTitle: (0, k.we)("#EventEditor_InsertYouTube"),
               strDescription: "",
               closeModal: this.props.closeModal,
               onCancel: this.props.closeModal,
               onOK: this.OnYoutubeInsertLink,
-              strOKButtonText: (0, x.we)("#EventEditor_InsertYouTube"),
+              strOKButtonText: (0, k.we)("#EventEditor_InsertYouTube"),
               className: q().BBCodeEditorInputStyles,
             },
             i.createElement(
@@ -5408,7 +4991,7 @@
                   i.createElement(
                     "div",
                     { className: "DialogLabel" },
-                    (0, x.we)("#EventEditor_InsertYouTube_URL"),
+                    (0, k.we)("#EventEditor_InsertYouTube_URL"),
                   ),
                   i.createElement(
                     "div",
@@ -5419,7 +5002,7 @@
                       type: "text",
                       value: this.state.youtubeInput,
                       onChange: this.OnUrlChange,
-                      placeholder: (0, x.we)(
+                      placeholder: (0, k.we)(
                         "#EventEditor_InsertYouTube_Placholder",
                       ),
                     }),
@@ -5432,7 +5015,7 @@
                 i.createElement(
                   "div",
                   { className: "DialogLabel" },
-                  (0, x.we)("#EventEditor_InsertYouTube_Position"),
+                  (0, k.we)("#EventEditor_InsertYouTube_Position"),
                 ),
                 i.createElement(
                   "div",
@@ -5454,7 +5037,7 @@
                     i.createElement(
                       "span",
                       null,
-                      (0, x.we)("#EventEditor_InsertYouTube_Left"),
+                      (0, k.we)("#EventEditor_InsertYouTube_Left"),
                     ),
                   ),
                 ),
@@ -5478,7 +5061,7 @@
                     i.createElement(
                       "span",
                       null,
-                      (0, x.we)("#EventEditor_InsertYouTube_Right"),
+                      (0, k.we)("#EventEditor_InsertYouTube_Right"),
                     ),
                   ),
                 ),
@@ -5502,7 +5085,7 @@
                     i.createElement(
                       "span",
                       null,
-                      (0, x.we)("#EventEditor_InsertYouTube_Full"),
+                      (0, k.we)("#EventEditor_InsertYouTube_Full"),
                     ),
                   ),
                 ),
@@ -5526,7 +5109,7 @@
                     i.createElement(
                       "span",
                       null,
-                      (0, x.we)("#EventEditor_InsertYouTube_Summary"),
+                      (0, k.we)("#EventEditor_InsertYouTube_Summary"),
                     ),
                   ),
                 ),
@@ -5535,13 +5118,13 @@
           );
         }
       };
-      (0, d.Cg)([C.oI], Ee.prototype, "OnYoutubeInsertLink", null),
-        (0, d.Cg)([C.oI], Ee.prototype, "OnUrlChange", null),
-        (0, d.Cg)([C.oI], Ee.prototype, "OnLeftSelected", null),
-        (0, d.Cg)([C.oI], Ee.prototype, "OnRightSelected", null),
-        (0, d.Cg)([C.oI], Ee.prototype, "OnFullSelected", null),
-        (0, d.Cg)([C.oI], Ee.prototype, "OnSummarySelected", null),
-        (0, d.Cg)([C.oI], Ee.prototype, "OnOuterDivClickPassDown", null),
+      (0, d.Cg)([S.oI], Ee.prototype, "OnYoutubeInsertLink", null),
+        (0, d.Cg)([S.oI], Ee.prototype, "OnUrlChange", null),
+        (0, d.Cg)([S.oI], Ee.prototype, "OnLeftSelected", null),
+        (0, d.Cg)([S.oI], Ee.prototype, "OnRightSelected", null),
+        (0, d.Cg)([S.oI], Ee.prototype, "OnFullSelected", null),
+        (0, d.Cg)([S.oI], Ee.prototype, "OnSummarySelected", null),
+        (0, d.Cg)([S.oI], Ee.prototype, "OnOuterDivClickPassDown", null),
         (Ee = (0, d.Cg)([o.PA], Ee));
       let Ie = class extends i.Component {
         static {
@@ -5552,7 +5135,7 @@
         LoadFromTextArea() {
           const { textareaRef: e } = this.props;
           if (e && e.current) {
-            let t = Se.getSelectedString(e.current),
+            let t = Ce.getSelectedString(e.current),
               a = de.m_regExp.exec(t);
             a
               ? this.setState({ strURL: a[1], textToDisplay: a[2] })
@@ -5571,18 +5154,18 @@
         onInsertLink() {
           const { strURL: e, textToDisplay: t } = this.state;
           let a = "[url=" + e + "]" + t + "[/url]";
-          Se.replaceSelection(this.props.textareaRef.current, a);
+          Ce.replaceSelection(this.props.textareaRef.current, a);
         }
         render() {
           return i.createElement(
-            P.o0,
+            G.o0,
             {
-              strTitle: (0, x.we)("#Editor_Link"),
+              strTitle: (0, k.we)("#Editor_Link"),
               strDescription: "",
               closeModal: this.props.closeModal,
               onOK: this.onInsertLink,
               onCancel: this.props.closeModal,
-              strOKButtonText: (0, x.we)("#EventEditor_InsertLinkURL"),
+              strOKButtonText: (0, k.we)("#EventEditor_InsertLinkURL"),
               className: q().BBCodeEditorInputStyles,
             },
             i.createElement(
@@ -5597,7 +5180,7 @@
                   i.createElement(
                     "div",
                     { className: "DialogLabel" },
-                    (0, x.we)("#EventEditor_LinkDescription"),
+                    (0, k.we)("#EventEditor_LinkDescription"),
                   ),
                   i.createElement(
                     "div",
@@ -5620,7 +5203,7 @@
                   i.createElement(
                     "div",
                     { className: "DialogLabel" },
-                    (0, x.we)("#EventEditor_LinkURL"),
+                    (0, k.we)("#EventEditor_LinkURL"),
                   ),
                   i.createElement(
                     "div",
@@ -5638,11 +5221,11 @@
           );
         }
       };
-      (0, d.Cg)([C.oI], Ie.prototype, "onLinkTitleUpdate", null),
-        (0, d.Cg)([C.oI], Ie.prototype, "onLinkURLUpdate", null),
-        (0, d.Cg)([C.oI], Ie.prototype, "onInsertLink", null),
+      (0, d.Cg)([S.oI], Ie.prototype, "onLinkTitleUpdate", null),
+        (0, d.Cg)([S.oI], Ie.prototype, "onLinkURLUpdate", null),
+        (0, d.Cg)([S.oI], Ie.prototype, "onInsertLink", null),
         (Ie = de = (0, d.Cg)([o.PA], Ie));
-      let ve = class extends i.Component {
+      let ye = class extends i.Component {
         refFirstInput;
         state = { imgURL: "", anchorURL: "" };
         componentDidMount() {
@@ -5655,7 +5238,7 @@
           e && e.length > 0 && ((a += "[url=" + e + "]"), (n = "[/url]" + n)),
             (a += "[img]" + t),
             (n = "[/img]" + n),
-            Se.wrapBBCode(a, n, this.props.textareaRef.current);
+            Ce.wrapBBCode(a, n, this.props.textareaRef.current);
         }
         OnImageURLChange(e) {
           this.state.imgURL != e.target.value &&
@@ -5668,14 +5251,14 @@
         render() {
           const { imgURL: e, anchorURL: t } = this.state;
           return i.createElement(
-            P.o0,
+            G.o0,
             {
-              strTitle: (0, x.we)("#EventEditor_InsertImage_Title"),
+              strTitle: (0, k.we)("#EventEditor_InsertImage_Title"),
               strDescription: "",
               closeModal: this.props.closeModal,
               onCancel: this.props.closeModal,
               onOK: this.OnImageInsert,
-              strOKButtonText: (0, x.we)("#EventEditor_InsertImage_Title"),
+              strOKButtonText: (0, k.we)("#EventEditor_InsertImage_Title"),
               className: q().BBCodeEditorInputStyles,
             },
             i.createElement(
@@ -5684,7 +5267,7 @@
               i.createElement(
                 "p",
                 null,
-                (0, x.we)("#EventEditor_InsertImage_Desc"),
+                (0, k.we)("#EventEditor_InsertImage_Desc"),
               ),
               i.createElement(
                 "div",
@@ -5695,7 +5278,7 @@
                   i.createElement(
                     "div",
                     { className: "DialogLabel" },
-                    (0, x.we)("#EventEditor_InsertImage_URL"),
+                    (0, k.we)("#EventEditor_InsertImage_URL"),
                   ),
                   i.createElement(
                     "div",
@@ -5705,7 +5288,7 @@
                       type: "text",
                       value: e,
                       onChange: this.OnImageURLChange,
-                      placeholder: (0, x.we)(
+                      placeholder: (0, k.we)(
                         "#EventEditor_InsertImage_Placeholder",
                       ),
                       ref: this.refFirstInput,
@@ -5722,7 +5305,7 @@
                   i.createElement(
                     "div",
                     { className: "DialogLabel" },
-                    (0, x.we)("#EventEditor_InsertImage_Anchor"),
+                    (0, k.we)("#EventEditor_InsertImage_Anchor"),
                   ),
                   i.createElement(
                     "div",
@@ -5732,7 +5315,7 @@
                       type: "text",
                       value: t,
                       onChange: this.OnAnchorURLChange,
-                      placeholder: (0, x.we)(
+                      placeholder: (0, k.we)(
                         "#EventEditor_InsertImage_Placeholder",
                       ),
                     }),
@@ -5743,25 +5326,25 @@
           );
         }
       };
-      (0, d.Cg)([C.oI], ve.prototype, "OnImageInsert", null),
-        (0, d.Cg)([C.oI], ve.prototype, "OnImageURLChange", null),
-        (0, d.Cg)([C.oI], ve.prototype, "OnAnchorURLChange", null),
-        (ve = (0, d.Cg)([o.PA], ve));
-      const ye = (e) => {
+      (0, d.Cg)([S.oI], ye.prototype, "OnImageInsert", null),
+        (0, d.Cg)([S.oI], ye.prototype, "OnImageURLChange", null),
+        (0, d.Cg)([S.oI], ye.prototype, "OnAnchorURLChange", null),
+        (ye = (0, d.Cg)([o.PA], ye));
+      const ve = (e) => {
         const [t, a] = i.useState(""),
           [n, r] = i.useState(""),
           [o, s] = i.useState(""),
-          [l, c] = i.useState(""),
+          [l, m] = i.useState(""),
           [p, d] = i.useState(void 0),
           [h, g] = i.useState(void 0),
-          { data: S } = (0, j.Dv)(),
-          { isLoading: C, data: f } = (0, Z.js)(h?.GetAccountID()),
+          { data: C } = (0, j.Dv)(),
+          { isLoading: S, data: f } = (0, K.js)(h?.GetAccountID()),
           E = 0 != t.trim().length && 0 != l.trim().length;
         return i.createElement(
-          P.o0,
+          G.o0,
           {
-            strTitle: (0, x.we)("#EventEditor_AddSpeaker"),
-            strDescription: (0, x.we)("#EventEditor_AddSpeaker_Desc"),
+            strTitle: (0, k.we)("#EventEditor_AddSpeaker"),
+            strDescription: (0, k.we)("#EventEditor_AddSpeaker_Desc"),
             closeModal: e.closeModal,
             onCancel: e.closeModal,
             bOKDisabled: !E,
@@ -5776,7 +5359,7 @@
               }
               h && (a += ` steamid="${h.ConvertTo64BitString()}"`),
                 (a += `]${l}[/speaker]`),
-                Se.replaceSelection(e.textareaRef.current, a);
+                Ce.replaceSelection(e.textareaRef.current, a);
             },
             className: q().BBCodeEditorInputStyles,
           },
@@ -5785,7 +5368,7 @@
             { className: q().InsertSpeakerCtn },
             i.createElement(R.pd, {
               type: "text",
-              label: (0, x.we)("#EventEditor_AddSpeaker_Name"),
+              label: (0, k.we)("#EventEditor_AddSpeaker_Name"),
               value: t,
               onChange: (e) => a(e.target.value),
               focusOnMount: !0,
@@ -5795,37 +5378,37 @@
               { className: q().TitleGroup },
               i.createElement(R.pd, {
                 type: "text",
-                label: (0, x.we)("#EventEditor_AddSpeaker_Title"),
+                label: (0, k.we)("#EventEditor_AddSpeaker_Title"),
                 value: n,
                 onChange: (e) => r(e.target.value),
               }),
               i.createElement(R.pd, {
                 type: "text",
-                label: (0, x.we)("#EventEditor_AddSpeaker_Company"),
+                label: (0, k.we)("#EventEditor_AddSpeaker_Company"),
                 value: o,
                 onChange: (e) => s(e.target.value),
               }),
             ),
             i.createElement(
-              $.he,
+              Q.he,
               {
-                toolTipContent: (0, x.we)(
+                toolTipContent: (0, k.we)(
                   "#EventEditor_AssociateSteamAccount_ttip",
                 ),
               },
               i.createElement(
                 "div",
                 { className: "DialogLabel" },
-                (0, x.we)("#EventEditor_AssociateSteamAccount"),
+                (0, k.we)("#EventEditor_AssociateSteamAccount"),
                 " (?)",
               ),
             ),
             i.createElement(
               "div",
               null,
-              C &&
-                i.createElement(Q.t, {
-                  string: (0, x.we)("#Loading"),
+              S &&
+                i.createElement(Z.t, {
+                  string: (0, k.we)("#Loading"),
                   size: "small",
                 }),
               Boolean(f) &&
@@ -5833,7 +5416,7 @@
                   "a",
                   {
                     href:
-                      V.TS.COMMUNITY_BASE_URL +
+                      Y.TS.COMMUNITY_BASE_URL +
                       "profiles/" +
                       h.ConvertTo64BitString(),
                     target: "_blank",
@@ -5851,24 +5434,24 @@
                 { className: q().AssociateRowCtn },
                 i.createElement(
                   R.$n,
-                  { onClick: () => g(new m.b(V.iA.steamid)) },
-                  (0, x.we)("#EventEditor_SteamAccount_addme"),
+                  { onClick: () => g(new c.b(Y.iA.steamid)) },
+                  (0, k.we)("#EventEditor_SteamAccount_addme"),
                 ),
                 i.createElement(
                   R.$n,
                   {
                     onClick: (e) =>
                       (0, u.lX)(
-                        i.createElement(we, { friends: S, setSteamID: g }),
+                        i.createElement(we, { friends: C, setSteamID: g }),
                         e,
                       ),
                   },
-                  (0, x.we)("#EventEditor_SteamAccount_addfriend"),
+                  (0, k.we)("#EventEditor_SteamAccount_addfriend"),
                 ),
                 i.createElement(
                   R.$n,
                   { onClick: () => g(void 0) },
-                  (0, x.we)("#EventEditor_SteamAccount_clear"),
+                  (0, k.we)("#EventEditor_SteamAccount_clear"),
                 ),
               ),
             ),
@@ -5878,7 +5461,7 @@
               i.createElement(
                 "div",
                 { className: "DialogLabel" },
-                (0, x.we)("#EventEditor_ChoosePhoto"),
+                (0, k.we)("#EventEditor_ChoosePhoto"),
               ),
               i.createElement(le, {
                 clanSteamID: e.clanSteamID,
@@ -5894,15 +5477,15 @@
               i.createElement(
                 "div",
                 { className: "DialogLabel" },
-                (0, x.we)("#EventEditor_AddSpeaker_About"),
+                (0, k.we)("#EventEditor_AddSpeaker_About"),
               ),
               i.createElement(R.Cl, {
                 value: l,
-                onChange: (e) => c(e.target.value),
+                onChange: (e) => m(e.target.value),
                 rows: 8,
                 cols: 80,
                 nMinHeight: 40,
-                placeholder: (0, x.we)(
+                placeholder: (0, k.we)(
                   "#EventEditor_AddSpeaker_About_Placeholder",
                 ),
               }),
@@ -5913,9 +5496,9 @@
               i.createElement(
                 "div",
                 { className: "DialogLabel" },
-                (0, x.we)("#Button_Preview"),
+                (0, k.we)("#Button_Preview"),
               ),
-              i.createElement(K.$k, {
+              i.createElement(X.$k, {
                 company: o,
                 name: t,
                 title: n,
@@ -5938,16 +5521,16 @@
       }
       function be(e) {
         const { steamid: t, setSteamID: a } = e,
-          { data: n } = (0, Z.js)(t);
+          { data: n } = (0, K.js)(t);
         return i.createElement(
-          X.kt,
-          { onSelected: () => a(new m.b(t)) },
+          $.kt,
+          { onSelected: () => a(new c.b(t)) },
           i.createElement(
             "div",
             { style: { display: "flex", alignItems: "center" } },
             n &&
               i.createElement("img", {
-                className: Y().WhitelistAvatar,
+                className: W().WhitelistAvatar,
                 src: n.avatar_url,
               }),
             n?.m_strPlayerName,
@@ -5978,7 +5561,7 @@
           let n = null;
           return (
             (n = await r().post(
-              V.TS.COMMUNITY_BASE_URL + "/actions/ConvertHTMLToBBCode",
+              Y.TS.COMMUNITY_BASE_URL + "/actions/ConvertHTMLToBBCode",
               a,
             )),
             n.data.content
@@ -5993,15 +5576,15 @@
               .then((e) => {
                 this.m_isMounted &&
                   (this.m_bAppend
-                    ? Se.append(e, this.props.textareaRef.current)
-                    : Se.overwrite(e, this.props.textareaRef.current),
+                    ? Ce.append(e, this.props.textareaRef.current)
+                    : Ce.overwrite(e, this.props.textareaRef.current),
                   this.setState({ bConverting: !1, bFinishedConverting: !0 }));
               })
               .catch((e) => {
                 (0, H.pg)(
-                  i.createElement(P.KG, {
-                    strTitle: (0, x.we)("#EventEditor_ConvertHTML_Error"),
-                    strDescription: (0, x.we)(
+                  i.createElement(G.KG, {
+                    strTitle: (0, k.we)("#EventEditor_ConvertHTML_Error"),
+                    strDescription: (0, k.we)(
                       "#EventEditor_ConvertHTML_Error_Desc",
                       e.response && e.response.data ? e.response.data.msg : e,
                     ),
@@ -6009,7 +5592,7 @@
                     bDestructiveWarning: !0,
                   }),
                   this.props.ownerWindow,
-                  { strTitle: (0, x.we)("#EventEditor_ConvertHTML_Error") },
+                  { strTitle: (0, k.we)("#EventEditor_ConvertHTML_Error") },
                 );
               });
         }
@@ -6025,10 +5608,10 @@
           const { closeModal: e } = this.props;
           return this.state.bConverting
             ? i.createElement(
-                P.o0,
+                G.o0,
                 {
-                  strTitle: (0, x.we)("#EventEditor_ImportFromHTML"),
-                  strDescription: (0, x.we)(
+                  strTitle: (0, k.we)("#EventEditor_ImportFromHTML"),
+                  strDescription: (0, k.we)(
                     "#EventEditor_ImportFromHTML_ConversionInProgress",
                   ),
                   closeModal: e,
@@ -6036,12 +5619,12 @@
                   onOK: e,
                   onCancel: e,
                 },
-                i.createElement(Q.t, null),
+                i.createElement(Z.t, null),
               )
             : this.state.bFinishedConverting
-              ? i.createElement(P.o0, {
-                  strTitle: (0, x.we)("#EventEditor_ImportFromHTML"),
-                  strDescription: (0, x.we)(
+              ? i.createElement(G.o0, {
+                  strTitle: (0, k.we)("#EventEditor_ImportFromHTML"),
+                  strDescription: (0, k.we)(
                     "#EventEditor_ImportFromHTML_ConvertFinished",
                   ),
                   closeModal: e,
@@ -6050,7 +5633,7 @@
                   onCancel: e,
                 })
               : i.createElement(
-                  P.eV,
+                  G.eV,
                   {
                     onOK: this.OnConvertAndOverriteHTML,
                     onCancel: e,
@@ -6060,7 +5643,7 @@
                     R.Y9,
                     null,
                     " ",
-                    (0, x.we)("#EventEditor_ImportFromHTML"),
+                    (0, k.we)("#EventEditor_ImportFromHTML"),
                     " ",
                   ),
                   i.createElement(
@@ -6073,22 +5656,22 @@
                         "div",
                         {
                           className: (0, w.A)(
-                            O().FlexColumnContainer,
+                            P().FlexColumnContainer,
                             q().ImportHTMLCtn,
                           ),
                         },
                         i.createElement(
                           "div",
-                          { className: O().FlexColumnContainer },
-                          (0, x.PP)(
+                          { className: P().FlexColumnContainer },
+                          (0, k.PP)(
                             "#EventEditor_ImportFromHTML_ConvertDescription",
                             i.createElement(
                               "a",
                               {
-                                target: V.TS.IN_CLIENT ? void 0 : "_blank",
+                                target: Y.TS.IN_CLIENT ? void 0 : "_blank",
                                 href: "https://partner.steamgames.com/doc/marketing/event_tools/import",
                               },
-                              (0, x.we)(
+                              (0, k.we)(
                                 "#EventEditor_ImportFromHTML_ConvertLearn",
                               ),
                             ),
@@ -6096,7 +5679,7 @@
                         ),
                         i.createElement("textarea", {
                           value: this.state.strHTMLData,
-                          placeholder: (0, x.we)(
+                          placeholder: (0, k.we)(
                             "#EventEditor_ImportFromHTML_Instruction",
                           ),
                           className: q().ImportHTMLTextArea,
@@ -6115,11 +5698,11 @@
                           i.createElement(
                             "label",
                             { htmlFor: "ImportFromHTMLNewLines" },
-                            (0, x.we)(
+                            (0, k.we)(
                               "#EventEditor_ImportFromHTML_PreserveNewlines",
                             ),
                             i.createElement(ge.o, {
-                              tooltip: (0, x.we)(
+                              tooltip: (0, k.we)(
                                 "#EventEditor_ImportFromHTML_PreserveNewlines_Hint",
                               ),
                             }),
@@ -6128,7 +5711,7 @@
                         i.createElement(
                           "div",
                           null,
-                          (0, x.we)(
+                          (0, k.we)(
                             "#EventEditor_ImportFromHTML_ConvertToBBCode",
                           ),
                         ),
@@ -6139,31 +5722,31 @@
                       null,
                       i.createElement(R.VQ, {
                         onCancel: e,
-                        strOKText: (0, x.we)("#Button_Overwrite"),
+                        strOKText: (0, k.we)("#Button_Overwrite"),
                         onUpdate: this.OnConvertAndAppendHTML,
-                        strUpdateText: (0, x.we)("#Button_Append"),
+                        strUpdateText: (0, k.we)("#Button_Append"),
                       }),
                     ),
                   ),
                 );
         }
       };
-      (0, d.Cg)([C.oI], Te.prototype, "OnConvertAndOverriteHTML", null),
-        (0, d.Cg)([C.oI], Te.prototype, "OnConvertAndAppendHTML", null),
-        (0, d.Cg)([C.oI], Te.prototype, "OnCheckboxChange", null),
-        (0, d.Cg)([C.oI], Te.prototype, "OnTextAreaChange", null),
+      (0, d.Cg)([S.oI], Te.prototype, "OnConvertAndOverriteHTML", null),
+        (0, d.Cg)([S.oI], Te.prototype, "OnConvertAndAppendHTML", null),
+        (0, d.Cg)([S.oI], Te.prototype, "OnCheckboxChange", null),
+        (0, d.Cg)([S.oI], Te.prototype, "OnTextAreaChange", null),
         (Te = (0, d.Cg)([o.PA], Te));
       var De = a(48628),
-        Ae = a(86244),
-        Le = a.n(Ae);
-      const Be = (0, o.PA)((e) => {
+        Le = a(86244),
+        Ue = a.n(Le);
+      const Ae = (0, o.PA)((e) => {
         const { appid: t, eventLink: a } = e,
           n = i.useRef(null),
-          { data: o } = (0, Z.js)(V.iA.steamid),
+          { data: o } = (0, K.js)(Y.iA.steamid),
           [d, u] = i.useState(""),
           [h, g] = i.useState(!1),
-          [_, S] = i.useState(""),
-          [C, f] = i.useState(!1);
+          [_, C] = i.useState(""),
+          [S, f] = i.useState(!1);
         i.useEffect(
           () => () =>
             n.current &&
@@ -6171,8 +5754,8 @@
           [],
         );
         const E = o ? o.avatar_url : null,
-          I = m.b.InitFromAccountID(V.iA.accountid),
-          v = async () => {
+          I = c.b.InitFromAccountID(Y.iA.accountid),
+          y = async () => {
             n.current &&
               n.current("ShareEventOnFriendsActivityFeed: cancel previous...");
             const e = r().CancelToken.source();
@@ -6180,131 +5763,131 @@
             let o = d;
             0 != o.trim().length && (o += "\n\n"), (o += a);
             const i =
-              V.TS.COMMUNITY_BASE_URL +
+              Y.TS.COMMUNITY_BASE_URL +
               "profiles/" +
               I.ConvertTo64BitString() +
               "/ajaxpostuserstatus";
             try {
-              if (V.TS.IN_STEAMUI) {
+              if (Y.TS.IN_STEAMUI) {
                 let a = l.w.Init(p.kV);
                 a.Body().set_appid(t), a.Body().set_status_text(o);
                 let n = await p.xt.PostStatusToFriends(
-                  c.Vw.CMInterface.GetServiceTransport(),
+                  m.Vw.CMInterface.GetServiceTransport(),
                   a,
                 );
                 if (1 != n.GetEResult()) {
                   const t =
-                    (0, x.we)("#EventDisplay_Share_Failure") +
+                    (0, k.we)("#EventDisplay_Share_Failure") +
                     "\n\n" +
                     n.GetEResult();
                   return (
                     console.error(t, !e.token.reason),
-                    void (e.token.reason || S(t))
+                    void (e.token.reason || C(t))
                   );
                 }
               } else {
                 const a = new FormData();
                 a.append("appid", "" + t),
                   a.append("status_text", o),
-                  a.append("sessionid", V.TS.SESSIONID);
+                  a.append("sessionid", Y.TS.SESSIONID);
                 const n = await r().post(i, a, { withCredentials: !0 });
                 if (200 != n.status || 1 != n?.data?.success) {
                   const t =
-                    (0, x.we)("#EventDisplay_Share_Failure") +
+                    (0, k.we)("#EventDisplay_Share_Failure") +
                     "\n\n" +
                     n?.data?.message;
-                  return console.error(t), void (e.token.reason || S(t));
+                  return console.error(t), void (e.token.reason || C(t));
                 }
               }
               e.token.reason ||
-                (f(!0), S((0, x.we)("#EventDisplay_Share_Success")));
+                (f(!0), C((0, k.we)("#EventDisplay_Share_Success")));
             } catch (t) {
-              const a = (0, me.H)(t),
+              const a = (0, ce.H)(t),
                 n =
-                  (0, x.we)("#EventDisplay_Share_Failure") +
+                  (0, k.we)("#EventDisplay_Share_Failure") +
                   "\n\n" +
                   a.strErrorMsg;
-              e.token.reason || S(n), console.error(n);
+              e.token.reason || C(n), console.error(n);
             }
           };
         return h
           ? i.createElement(
-              P.o0,
+              G.o0,
               {
                 strDescription: "",
-                strTitle: (0, x.we)("#Button_Share"),
+                strTitle: (0, k.we)("#Button_Share"),
                 onCancel: e.closeModal,
                 onOK: e.closeModal,
                 bAlertDialog: !0,
               },
               i.createElement(
                 "div",
-                { className: O().FlexColumnContainer },
+                { className: P().FlexColumnContainer },
                 i.createElement(
                   "div",
                   null,
-                  (0, x.we)("#EventDisplay_Share_OnMyStatus_Details"),
+                  (0, k.we)("#EventDisplay_Share_OnMyStatus_Details"),
                 ),
                 i.createElement(
                   "div",
-                  { className: Le().Container },
+                  { className: Ue().Container },
                   0 == _?.length
-                    ? i.createElement(Q.t, { position: "center" })
+                    ? i.createElement(Z.t, { position: "center" })
                     : i.createElement("div", null, _),
-                  Boolean(C) &&
+                  Boolean(S) &&
                     i.createElement(
                       "a",
                       {
                         href:
-                          V.TS.COMMUNITY_BASE_URL +
+                          Y.TS.COMMUNITY_BASE_URL +
                           "profiles/" +
                           I.ConvertTo64BitString() +
                           "/home",
-                        target: V.TS.IN_CLIENT ? void 0 : "_blank",
+                        target: Y.TS.IN_CLIENT ? void 0 : "_blank",
                       },
-                      (0, x.we)("#EventDisplay_Share_OpenActivityFeed"),
+                      (0, k.we)("#EventDisplay_Share_OpenActivityFeed"),
                     ),
                 ),
               ),
             )
           : i.createElement(
-              P.o0,
+              G.o0,
               {
                 strDescription: "",
-                strTitle: (0, x.we)("#Button_Share"),
+                strTitle: (0, k.we)("#Button_Share"),
                 onCancel: e.closeModal,
-                onOK: v,
-                strOKButtonText: (0, x.we)("#Button_Post"),
+                onOK: y,
+                strOKButtonText: (0, k.we)("#Button_Post"),
               },
               i.createElement(
                 "div",
-                { className: O().FlexColumnContainer },
+                { className: P().FlexColumnContainer },
                 i.createElement(
                   "div",
                   null,
-                  (0, x.we)("#EventDisplay_Share_OnMyStatus_Details"),
+                  (0, k.we)("#EventDisplay_Share_OnMyStatus_Details"),
                 ),
                 i.createElement(
                   "div",
                   {
                     className: (0, w.A)(
-                      Le().Container,
-                      O().FlexColumnContainer,
+                      Ue().Container,
+                      P().FlexColumnContainer,
                     ),
                   },
                   i.createElement(
                     "div",
                     null,
                     i.createElement("img", {
-                      className: Le().SmallAvatar,
+                      className: Ue().SmallAvatar,
                       src: E,
-                      "data-miniprofile": "s" + V.iA.steamid,
+                      "data-miniprofile": "s" + Y.iA.steamid,
                     }),
                     i.createElement(
                       "div",
-                      { className: (0, w.A)(O().FlexColumnContainer) },
+                      { className: (0, w.A)(P().FlexColumnContainer) },
                       i.createElement(_e, {
-                        strPlaceholder: (0, x.we)(
+                        strPlaceholder: (0, k.we)(
                           "#EventDisplay_Share_OnMyStatus_Placeholder",
                         ),
                         fnGetCurText: () => d,
@@ -6314,14 +5897,14 @@
                         bSupportHTMLImport: !1,
                         showFormatHelp: "UserStatusPublished",
                         limitBBCode: s.iH,
-                        classNameForTextArea: Le().ShareDescription,
+                        classNameForTextArea: Ue().ShareDescription,
                         bEmbeddedInDialog: !0,
                       }),
                     ),
                   ),
                   i.createElement(
                     "div",
-                    { className: Le().ShareLink },
+                    { className: Ue().ShareLink },
                     i.createElement(De.f, {
                       text: a,
                       partnerEventStore: e.partnerEventStore,
@@ -6407,8 +5990,8 @@
         i = a(7068),
         s = a(81416),
         l = a(44325),
-        c = a(52038),
-        m = a(61859),
+        m = a(52038),
+        c = a(61859),
         p = a(56093),
         d = a(50666);
       class u extends r.Component {
@@ -6492,12 +6075,12 @@
             r.createElement(
               "div",
               {
-                className: (0, c.A)("DialogContent", "_DialogCenterVertically"),
+                className: (0, m.A)("DialogContent", "_DialogCenterVertically"),
               },
               r.createElement(
                 i.iK,
                 null,
-                (0, m.we)(
+                (0, c.we)(
                   "#ImageUpload_CropModalTitleDims",
                   this.GetDestWidth(),
                   this.GetDestHeight(),
@@ -6505,8 +6088,8 @@
               ),
               r.createElement(
                 "div",
-                { className: (0, c.A)("DialogBodyText") },
-                (0, m.we)("#ImageUpload_CropModalDescription"),
+                { className: (0, m.A)("DialogBodyText") },
+                (0, c.we)("#ImageUpload_CropModalDescription"),
               ),
               r.createElement(
                 "div",
@@ -6541,14 +6124,14 @@
                 r.createElement(
                   "div",
                   { className: d.CropPreviewLabel },
-                  (0, m.we)("#ImageUpload_CropPreview"),
+                  (0, c.we)("#ImageUpload_CropPreview"),
                 ),
                 r.createElement("div", { style: this.GetPreviewWindowStyle() }),
               ),
               r.createElement(
                 i.jn,
                 { onClick: this.OnCrop },
-                (0, m.we)("#ImageUpload_CropAndContinue"),
+                (0, c.we)("#ImageUpload_CropAndContinue"),
               ),
             ),
           );
@@ -6556,12 +6139,6 @@
       }
       (0, n.Cg)([p.oI], u.prototype, "OnCrop", null),
         (0, n.Cg)([p.oI], u.prototype, "UpdateCrop", null);
-    },
-    30143: (e, t, a) => {
-      "use strict";
-      a.d(t, { A: () => n });
-      const n =
-        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QUQ5NEMwOTYzRDc4MTFFQUExREZEODRBMDBCNjdENTEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QUQ5NEMwOTczRDc4MTFFQUExREZEODRBMDBCNjdENTEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBRDk0QzA5NDNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBRDk0QzA5NTNENzgxMUVBQTFERkQ4NEEwMEI2N0Q1MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Po/TXacAAABMSURBVHjaYvz//z8DNQHjyDMQDICGJgDx3f/kA5DeBJhh8f+pB+JBXr4DNFeZSp69CzLwP7UjZdTAkWAgVdMh1XMK1fPyCCwPAQIMAKf/Y+3dveJlAAAAAElFTkSuQmCC";
     },
   },
 ]);

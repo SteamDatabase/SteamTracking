@@ -1,7 +1,8 @@
 /**** (c) Valve Corporation. Use is governed by the terms of the Steam Subscriber Agreement http://store.steampowered.com/subscriber_agreement/.
  ****/
-(self.webpackChunkstore = self.webpackChunkstore || []).push([
-  [8970],
+(self.webpackChunkappmgmt_storeadmin =
+  self.webpackChunkappmgmt_storeadmin || []).push([
+  [3810],
   {
     56589: (t, e, r) => {
       var o = r(48763),
@@ -106,8 +107,8 @@
         n = r(56941),
         i = r(86028),
         s = r(96709),
-        u = r(24967);
-      function a(t, e) {
+        a = r(24967);
+      function u(t, e) {
         (this.typeNumber = t),
           (this.errorCorrectLevel = e),
           (this.modules = null),
@@ -115,7 +116,7 @@
           (this.dataCache = null),
           (this.dataList = []);
       }
-      var h = a.prototype;
+      var h = u.prototype;
       (h.addData = function (t) {
         var e = new o(t);
         this.dataList.push(e), (this.dataCache = null);
@@ -136,16 +137,16 @@
                 var e = n.getRSBlocks(t, this.errorCorrectLevel),
                   r = new i(),
                   o = 0,
-                  u = 0;
-                u < e.length;
-                u++
+                  a = 0;
+                a < e.length;
+                a++
               )
-                o += e[u].dataCount;
-              for (u = 0; u < this.dataList.length; u++) {
-                var a = this.dataList[u];
-                r.put(a.mode, 4),
-                  r.put(a.getLength(), s.getLengthInBits(a.mode, t)),
-                  a.write(r);
+                o += e[a].dataCount;
+              for (a = 0; a < this.dataList.length; a++) {
+                var u = this.dataList[a];
+                r.put(u.mode, 4),
+                  r.put(u.getLength(), s.getLengthInBits(u.mode, t)),
+                  u.write(r);
               }
               if (r.getLengthInBits() <= 8 * o) break;
             }
@@ -169,7 +170,7 @@
             this.setupTypeInfo(t, e),
             this.typeNumber >= 7 && this.setupTypeNumber(t),
             null == this.dataCache &&
-              (this.dataCache = a.createData(
+              (this.dataCache = u.createData(
                 this.typeNumber,
                 this.errorCorrectLevel,
                 this.dataList,
@@ -200,13 +201,13 @@
           this.make();
           for (var n = 0; n < this.modules.length; n++)
             for (var i = 1 * n, s = 0; s < this.modules[n].length; s++) {
-              var u = 1 * s;
+              var a = 1 * s;
               this.modules[n][s] &&
                 (o.beginFill(0, 100),
-                o.moveTo(u, i),
-                o.lineTo(u + 1, i),
-                o.lineTo(u + 1, i + 1),
-                o.lineTo(u, i + 1),
+                o.moveTo(a, i),
+                o.lineTo(a + 1, i),
+                o.lineTo(a + 1, i + 1),
+                o.lineTo(a, i + 1),
                 o.endFill());
             }
           return o;
@@ -228,13 +229,13 @@
                 n = t[r];
               if (null == this.modules[o][n])
                 for (var i = -2; i <= 2; i++)
-                  for (var u = -2; u <= 2; u++)
-                    this.modules[o + i][n + u] =
+                  for (var a = -2; a <= 2; a++)
+                    this.modules[o + i][n + a] =
                       -2 == i ||
                       2 == i ||
-                      -2 == u ||
-                      2 == u ||
-                      (0 == i && 0 == u);
+                      -2 == a ||
+                      2 == a ||
+                      (0 == i && 0 == a);
             }
         }),
         (h.setupTypeNumber = function (t) {
@@ -286,17 +287,17 @@
               o = this.moduleCount - 1,
               n = 7,
               i = 0,
-              u = this.moduleCount - 1;
-            u > 0;
-            u -= 2
+              a = this.moduleCount - 1;
+            a > 0;
+            a -= 2
           )
-            for (6 == u && u--; ; ) {
-              for (var a = 0; a < 2; a++)
-                if (null == this.modules[o][u - a]) {
+            for (6 == a && a--; ; ) {
+              for (var u = 0; u < 2; u++)
+                if (null == this.modules[o][a - u]) {
                   var h = !1;
                   i < t.length && (h = 1 == ((t[i] >>> n) & 1)),
-                    s.getMask(e, o, u - a) && (h = !h),
-                    (this.modules[o][u - a] = h),
+                    s.getMask(e, o, a - u) && (h = !h),
+                    (this.modules[o][a - u] = h),
                     -1 == --n && (i++, (n = 7));
                 }
               if ((o += r) < 0 || this.moduleCount <= o) {
@@ -305,53 +306,53 @@
               }
             }
         }),
-        (a.PAD0 = 236),
-        (a.PAD1 = 17),
-        (a.createData = function (t, e, r) {
+        (u.PAD0 = 236),
+        (u.PAD1 = 17),
+        (u.createData = function (t, e, r) {
           for (
-            var o = n.getRSBlocks(t, e), u = new i(), h = 0;
+            var o = n.getRSBlocks(t, e), a = new i(), h = 0;
             h < r.length;
             h++
           ) {
             var l = r[h];
-            u.put(l.mode, 4),
-              u.put(l.getLength(), s.getLengthInBits(l.mode, t)),
-              l.write(u);
+            a.put(l.mode, 4),
+              a.put(l.getLength(), s.getLengthInBits(l.mode, t)),
+              l.write(a);
           }
           var g = 0;
           for (h = 0; h < o.length; h++) g += o[h].dataCount;
-          if (u.getLengthInBits() > 8 * g)
+          if (a.getLengthInBits() > 8 * g)
             throw new Error(
               "code length overflow. (" +
-                u.getLengthInBits() +
+                a.getLengthInBits() +
                 ">" +
                 8 * g +
                 ")",
             );
           for (
-            u.getLengthInBits() + 4 <= 8 * g && u.put(0, 4);
-            u.getLengthInBits() % 8 != 0;
+            a.getLengthInBits() + 4 <= 8 * g && a.put(0, 4);
+            a.getLengthInBits() % 8 != 0;
 
           )
-            u.putBit(!1);
+            a.putBit(!1);
           for (
             ;
             !(
-              u.getLengthInBits() >= 8 * g ||
-              (u.put(a.PAD0, 8), u.getLengthInBits() >= 8 * g)
+              a.getLengthInBits() >= 8 * g ||
+              (a.put(u.PAD0, 8), a.getLengthInBits() >= 8 * g)
             );
 
           )
-            u.put(a.PAD1, 8);
-          return a.createBytes(u, o);
+            a.put(u.PAD1, 8);
+          return u.createBytes(a, o);
         }),
-        (a.createBytes = function (t, e) {
+        (u.createBytes = function (t, e) {
           for (
             var r = 0,
               o = 0,
               n = 0,
               i = new Array(e.length),
-              a = new Array(e.length),
+              u = new Array(e.length),
               h = 0;
             h < e.length;
             h++
@@ -362,12 +363,12 @@
             for (var f = 0; f < i[h].length; f++)
               i[h][f] = 255 & t.buffer[f + r];
             r += l;
-            var c = s.getErrorCorrectPolynomial(g),
-              m = new u(i[h], c.getLength() - 1).mod(c);
-            a[h] = new Array(c.getLength() - 1);
-            for (f = 0; f < a[h].length; f++) {
-              var d = f + m.getLength() - a[h].length;
-              a[h][f] = d >= 0 ? m.get(d) : 0;
+            var m = s.getErrorCorrectPolynomial(g),
+              c = new a(i[h], m.getLength() - 1).mod(m);
+            u[h] = new Array(m.getLength() - 1);
+            for (f = 0; f < u[h].length; f++) {
+              var d = f + c.getLength() - u[h].length;
+              u[h][f] = d >= 0 ? c.get(d) : 0;
             }
           }
           var p = 0;
@@ -379,10 +380,10 @@
               f < i[h].length && (v[B++] = i[h][f]);
           for (f = 0; f < n; f++)
             for (h = 0; h < e.length; h++)
-              f < a[h].length && (v[B++] = a[h][f]);
+              f < u[h].length && (v[B++] = u[h][f]);
           return v;
         }),
-        (t.exports = a);
+        (t.exports = u);
     },
     56941: (t, e, r) => {
       var o = r(2163);
@@ -559,11 +560,11 @@
             );
           for (var o = r.length / 3, i = new Array(), s = 0; s < o; s++)
             for (
-              var u = r[3 * s + 0], a = r[3 * s + 1], h = r[3 * s + 2], l = 0;
-              l < u;
+              var a = r[3 * s + 0], u = r[3 * s + 1], h = r[3 * s + 2], l = 0;
+              l < a;
               l++
             )
-              i.push(new n(a, h));
+              i.push(new n(u, h));
           return i;
         }),
         (n.getRsBlockTable = function (t, e) {
@@ -624,14 +625,14 @@
         n = r(24967),
         i = r(70555),
         s = 0,
-        u = 1,
-        a = 2,
+        a = 1,
+        u = 2,
         h = 3,
         l = 4,
         g = 5,
         f = 6,
-        c = 7,
-        m = {
+        m = 7,
+        c = {
           PATTERN_POSITION_TABLE: [
             [],
             [6, 18],
@@ -680,19 +681,19 @@
           getBCHTypeInfo: function (t) {
             for (
               var e = t << 10;
-              m.getBCHDigit(e) - m.getBCHDigit(m.G15) >= 0;
+              c.getBCHDigit(e) - c.getBCHDigit(c.G15) >= 0;
 
             )
-              e ^= m.G15 << (m.getBCHDigit(e) - m.getBCHDigit(m.G15));
-            return ((t << 10) | e) ^ m.G15_MASK;
+              e ^= c.G15 << (c.getBCHDigit(e) - c.getBCHDigit(c.G15));
+            return ((t << 10) | e) ^ c.G15_MASK;
           },
           getBCHTypeNumber: function (t) {
             for (
               var e = t << 12;
-              m.getBCHDigit(e) - m.getBCHDigit(m.G18) >= 0;
+              c.getBCHDigit(e) - c.getBCHDigit(c.G18) >= 0;
 
             )
-              e ^= m.G18 << (m.getBCHDigit(e) - m.getBCHDigit(m.G18));
+              e ^= c.G18 << (c.getBCHDigit(e) - c.getBCHDigit(c.G18));
             return (t << 12) | e;
           },
           getBCHDigit: function (t) {
@@ -700,15 +701,15 @@
             return e;
           },
           getPatternPosition: function (t) {
-            return m.PATTERN_POSITION_TABLE[t - 1];
+            return c.PATTERN_POSITION_TABLE[t - 1];
           },
           getMask: function (t, e, r) {
             switch (t) {
               case s:
                 return (e + r) % 2 == 0;
-              case u:
-                return e % 2 == 0;
               case a:
+                return e % 2 == 0;
+              case u:
                 return r % 3 == 0;
               case h:
                 return (e + r) % 3 == 0;
@@ -718,7 +719,7 @@
                 return ((e * r) % 2) + ((e * r) % 3) == 0;
               case f:
                 return (((e * r) % 2) + ((e * r) % 3)) % 2 == 0;
-              case c:
+              case m:
                 return (((e * r) % 3) + ((e + r) % 2)) % 2 == 0;
               default:
                 throw new Error("bad maskPattern:" + t);
@@ -774,13 +775,13 @@
           getLostPoint: function (t) {
             for (var e = t.getModuleCount(), r = 0, o = 0; o < e; o++)
               for (var n = 0; n < e; n++) {
-                for (var i = 0, s = t.isDark(o, n), u = -1; u <= 1; u++)
-                  if (!(o + u < 0 || e <= o + u))
-                    for (var a = -1; a <= 1; a++)
-                      n + a < 0 ||
-                        e <= n + a ||
-                        (0 == u && 0 == a) ||
-                        (s == t.isDark(o + u, n + a) && i++);
+                for (var i = 0, s = t.isDark(o, n), a = -1; a <= 1; a++)
+                  if (!(o + a < 0 || e <= o + a))
+                    for (var u = -1; u <= 1; u++)
+                      n + u < 0 ||
+                        e <= n + u ||
+                        (0 == a && 0 == u) ||
+                        (s == t.isDark(o + a, n + u) && i++);
                 i > 5 && (r += 3 + i - 5);
               }
             for (o = 0; o < e - 1; o++)
@@ -818,7 +819,7 @@
             return (r += 10 * (Math.abs((100 * l) / e / e - 50) / 5));
           },
         };
-      t.exports = m;
+      t.exports = c;
     },
   },
 ]);

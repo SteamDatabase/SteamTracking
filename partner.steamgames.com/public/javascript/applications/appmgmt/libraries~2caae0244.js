@@ -3,7 +3,7 @@
 "use strict";
 (self.webpackChunkappmgmt_storeadmin =
   self.webpackChunkappmgmt_storeadmin || []).push([
-  [38],
+  [8632],
   {
     38877: (e, t) => {
       var o,

@@ -65666,7 +65666,7 @@
         m = a(88997),
         d = a(17720),
         u = a(4796),
-        p = a(12493),
+        p = a(67165),
         _ = a(34629),
         g = a(14947),
         h = a(78327);
@@ -66024,7 +66024,7 @@
       var C = a(30708),
         I = a(738),
         B = a(56011),
-        T = a(38528),
+        T = a(46965),
         A = a(98459),
         k = a(98076),
         M = a(48479),
@@ -66776,9 +66776,9 @@
         };
       }
     },
-    38528: (e, t, a) => {
+    46965: (e, t, a) => {
       "use strict";
-      a.d(t, { P: () => Z });
+      a.d(t, { P: () => W });
       var n = a(41735),
         r = a.n(n),
         i = a(4130),
@@ -66787,7 +66787,7 @@
         o = a.n(l),
         c = a(90626),
         m = a(17720),
-        d = a(12493),
+        d = a(67165),
         u = a(34629),
         p = a(44332),
         _ = a(68797),
@@ -67149,198 +67149,23 @@
         (0, u.Cg)([g.o], f.prototype, "SaveDirtyChanges", null);
       var w = a(7068),
         D = a(84811),
-        C = a(32381),
-        I = a(30894),
-        B = (a(55263), a(71513));
-      function T(e) {
-        const { href: t, children: a, bAllowFocuseableAnchor: n, ...r } = e;
-        return (0, S.Y2)()
-          ? c.createElement("div", { ...r }, a)
-          : n
-            ? c.createElement(B.Ii, { href: t, ...r }, a)
-            : c.createElement("a", { href: t, ...r }, a);
-      }
-      var A = a(52038),
-        k = a(61859),
-        M = a(82227),
-        R = a(61336),
-        P = a(32630),
-        N = a(22797),
-        G = a(56524),
-        O = a(2193),
-        F = a(95695);
-      function L(e) {
-        const {
-            creatorID: t,
-            bShowTagline: a,
-            bHideCreatorType: n,
-            bSmallFormat: r,
-            bHideFollowButton: i,
-            bAddLinkToMemberList: s,
-          } = e,
-          l = (0, d.FV)(t.clan_account_id),
-          [o] = (0, I.L2)();
-        if (o || !l)
-          return c.createElement(
-            "div",
-            { className: G.DevSummaryWidgetCtn },
-            c.createElement(N.t, {
-              string: (0, k.we)("#Loading"),
-              size: "medium",
-              position: "center",
-            }),
-          );
-        const m = t.type,
-          u =
-            "developer" == t.type
-              ? (0, k.we)("#CreatorHome_DevelopedBy")
-              : "publisher" == t.type
-                ? (0, k.we)("#CreatorHome_PublishedBy")
-                : (0, k.we)("#CreatorHome_InFranchise"),
-          p = l.GetCreatorHomeURL(m),
-          _ = l.GetNumFollowers();
-        return c.createElement(
-          D.tH,
-          null,
-          c.createElement(
-            P.A,
-            { feature: "salecreatorhome" },
-            c.createElement(
-              C.Z,
-              {
-                className: (0, A.A)(
-                  G.DevSummaryCtn,
-                  r ? G.SmallFormat : G.LargeFormat,
-                ),
-                "flow-children": "row",
-              },
-              !n && c.createElement("span", { className: G.Title }, u),
-              c.createElement(
-                "div",
-                { className: G.DevSummaryWidgetCtn },
-                c.createElement("div", {
-                  className: G.DevSummaryBackground,
-                  style: {
-                    backgroundImage: `url(${l.GetAvatarURLFullSize()} )`,
-                  },
-                }),
-                c.createElement(
-                  "div",
-                  {
-                    className: (0, A.A)(
-                      G.DevSummaryContent,
-                      F.FlexColumnContainer,
-                      F.FlexContainSpaceBetween,
-                    ),
-                  },
-                  c.createElement(
-                    "div",
-                    { className: F.FlexRowContainer },
-                    c.createElement(
-                      T,
-                      {
-                        href: (0, R.k2)(p),
-                        className: G.AvatarLink,
-                        bAllowFocuseableAnchor: !0,
-                      },
-                      c.createElement("img", {
-                        className: (0, A.A)(G.Avatar, "Avatar_Trgt"),
-                        src: l.GetAvatarURLFullSize(),
-                      }),
-                    ),
-                    c.createElement(
-                      "div",
-                      {
-                        className: (0, A.A)(
-                          F.FlexColumnContainer,
-                          G.CreatorDescCtn,
-                        ),
-                      },
-                      c.createElement(
-                        "div",
-                        {
-                          className: (0, A.A)(
-                            G.CreatorTitleCtn,
-                            F.FlexColumnContainer,
-                          ),
-                        },
-                        c.createElement(
-                          T,
-                          { href: (0, R.k2)(p), className: G.CreatorNameName },
-                          l.GetName(),
-                        ),
-                        Boolean(a) &&
-                          c.createElement(
-                            "div",
-                            {
-                              className: (0, A.A)(
-                                F.FlexColumnContainer,
-                                G.CreatorTagline,
-                              ),
-                            },
-                            l.GetTagLine(),
-                          ),
-                      ),
-                      c.createElement(
-                        "div",
-                        {
-                          className: (0, A.A)(
-                            r ? F.FlexColumnContainer : F.FlexRowContainer,
-                            G.SocialFollowersCtn,
-                          ),
-                        },
-                        c.createElement(
-                          "div",
-                          { className: G.FollowBtnCtn },
-                          Boolean(!i) &&
-                            c.createElement(O.of, {
-                              clanAccountID: t.clan_account_id,
-                              creatorID: t,
-                            }),
-                          c.createElement(
-                            "div",
-                            { className: G.Followers },
-                            c.createElement("span", null, (0, M.Dq)(_)),
-                            c.createElement("br", null),
-                            (0, k.we)("#CreatorHome_JustFollowers"),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Boolean(s) &&
-                    c.createElement(
-                      "a",
-                      {
-                        href:
-                          S.TS.COMMUNITY_BASE_URL +
-                          "gid/" +
-                          l.GetClanSteamID().ConvertTo64BitString() +
-                          "/members/",
-                        target: "_blank",
-                        className: G.MembersListLink,
-                      },
-                      (0, k.we)("#ClanMembershipList"),
-                    ),
-                ),
-              ),
-            ),
-          ),
-        );
-      }
-      var U = a(99637),
-        z = a(30708);
-      a(738), a(60746);
-      var x = a(32754);
+        C = a(24655),
+        I = a(99637),
+        B = a(95695),
+        T = a(30708),
+        A = (a(738), a(22797));
+      a(60746);
+      var k = a(61859),
+        M = a(32754);
       a(11833), a(71298), a(42569), a(51272), a(26408);
-      function q(e) {
+      function R(e) {
         const { clanSteamID: t, gidClanEvent: a } = e,
           { bLoading: n } = b(t.GetAccountID(), a);
         return n
-          ? c.createElement(N.t, { string: (0, k.we)("#Loading") })
-          : c.createElement(W, { ...e });
+          ? c.createElement(A.t, { string: (0, k.we)("#Loading") })
+          : c.createElement(P, { ...e });
       }
-      function W(e) {
+      function P(e) {
         const { clanSteamID: t, gidClanEvent: a, fnOkCallbackList: n } = e,
           {
             bPublishRequiresValveApproval: r,
@@ -67410,9 +67235,9 @@
                   tooltip: "For events organized around a particular franchise",
                 },
               ],
-              strDropDownClassName: F.DropDownScroll,
-              strDropDownMenuCtnClass: F.DropDownScroll,
-              strDropDownItemClassName: F.DropDownScrollItem,
+              strDropDownClassName: B.DropDownScroll,
+              strDropDownMenuCtnClass: B.DropDownScroll,
+              strDropDownItemClassName: B.DropDownScrollItem,
               selectedOption: m,
               onChange: (e) => d(e.data),
               contextMenuPositionOptions: { bDisablePopTop: !0 },
@@ -67420,12 +67245,12 @@
           )
         );
       }
-      var j = a(88997),
-        H = a(87129),
-        V = a(64641),
-        K = a(41338),
-        Y = a(82062);
-      const $ = (e) => {
+      var N = a(88997),
+        G = a(87129),
+        O = a(64641),
+        F = a(41338),
+        L = a(82062);
+      const U = (e) => {
           const {
               strLabel: t,
               strToolTip: a,
@@ -67457,8 +67282,8 @@
                   try {
                     const a = await d.pF.SearchCreatorHomeStore(t, i, e);
                     if (e.token.reason) return;
-                    l.current = (0, j.lX)(
-                      c.createElement(J, { list: a, fnSetCurator: n }),
+                    l.current = (0, N.lX)(
+                      c.createElement(z, { list: a, fnSetCurator: n }),
                       m.current.element,
                       {
                         bOverlapHorizontal: !0,
@@ -67496,14 +67321,14 @@
             }),
           );
         },
-        J = (e) => {
+        z = (e) => {
           const { list: t, fnSetCurator: a } = e;
           return c.createElement(
-            H.tz,
-            { className: Y.SearchResults },
+            G.tz,
+            { className: L.SearchResults },
             t.map((e) =>
               c.createElement(
-                H.kt,
+                G.kt,
                 {
                   key: "curatorresult" + e.GetClanAccountID(),
                   onSelected: () => a(e),
@@ -67513,21 +67338,21 @@
                   { style: { display: "flex", alignItems: "center" } },
                   c.createElement(
                     "div",
-                    { className: V.GameImageContainer },
+                    { className: O.GameImageContainer },
                     c.createElement("img", {
                       src: e.GetAvatarURLFullSize(),
-                      className: V.AvatarImage,
+                      className: O.AvatarImage,
                     }),
                   ),
-                  (0, K.EK)(e.GetName()),
+                  (0, F.EK)(e.GetName()),
                 ),
               ),
             ),
           );
         };
-      var Q = a(12155),
-        X = a(6286);
-      const Z = (0, s.PA)((e) => {
+      var x = a(12155),
+        q = a(6286);
+      const W = (0, s.PA)((e) => {
           const t = () => e.closeModal && e.closeModal(),
             a = (0, c.useRef)(null),
             [n, s] = (0, c.useState)(null),
@@ -67543,8 +67368,8 @@
             y.setSeconds(0);
           const [v, b] = (0, c.useState)(Math.floor(y.getTime() / 1e3)),
             [C, I] = (0, c.useState)(null),
-            [B, T] = (0, c.useState)(null),
-            [A, M, R] = (function () {
+            [B, A] = (0, c.useState)(null),
+            [M, R, P] = (function () {
               const e = f.Get();
               return [e.BIsEventDirty, e.DiscardChanges, e.SaveDirtyChanges];
             })();
@@ -67588,19 +67413,19 @@
                   a.current("NewPartnerEventSalePageDialog: unmounting");
               };
             }, []);
-          let P = new Array(),
-            N = !1;
+          let N = new Array(),
+            G = !1;
           if (null == n)
-            P.push(
+            N.push(
               c.createElement(
                 "div",
-                { className: X.MinWidthCtn },
+                { className: q.MinWidthCtn },
                 c.createElement(
                   "div",
-                  { className: X.StepOneTitle },
+                  { className: q.StepOneTitle },
                   (0, k.we)("#Sale_New_ChooseCreator"),
                 ),
-                c.createElement($, {
+                c.createElement(U, {
                   key: "SearchForCurator",
                   strLabel: (0, k.we)("#Sale_New_ChooseCreator_Label"),
                   strToolTip: (0, k.we)("#Sale_New_ChooseCreator_ttip"),
@@ -67610,7 +67435,7 @@
               ),
             );
           else if (B)
-            P.push(c.createElement("div", { key: "failedtocreatevent" }, B));
+            N.push(c.createElement("div", { key: "failedtocreatevent" }, B));
           else if (C) {
             let e =
               S.TS.COMMUNITY_BASE_URL +
@@ -67619,7 +67444,7 @@
               "/partnerevents/edit/" +
               C.GID +
               "?tab=sale";
-            P.push(
+            N.push(
               c.createElement(
                 "div",
                 { key: "eventcreatedsuccess" },
@@ -67632,8 +67457,8 @@
               ),
             );
           } else if (
-            (P.push(
-              c.createElement(ee, {
+            (N.push(
+              c.createElement(j, {
                 key: "DisplayCreator_" + n.GetClanAccountID(),
                 creatorHome: n,
                 fnSetCreatorHome: s,
@@ -67641,25 +67466,25 @@
             ),
             n.BIsPartnerEventEditorEnabled())
           ) {
-            P.push(
+            N.push(
               c.createElement(
                 "div",
                 { key: "Verified" },
                 (0, k.we)("#Sale_New_Verify_PE_Enabled"),
                 c.createElement(
                   "div",
-                  { className: X.VerifyCtn },
+                  { className: q.VerifyCtn },
                   c.createElement(
                     "div",
-                    { className: X.VerifyCheck },
-                    c.createElement(Q.Jlk, null),
+                    { className: q.VerifyCheck },
+                    c.createElement(x.Jlk, null),
                   ),
                 ),
               ),
             );
             const e = n.GetClanSteamID();
-            P.push(
-              c.createElement(ae, {
+            N.push(
+              c.createElement(V, {
                 key: "saleinput",
                 strEventName: l,
                 fnSetEventName: u,
@@ -67672,11 +67497,11 @@
                 clanSteamID: e,
               }),
             ),
-              (N =
+              (G =
                 l.trim().length > 0 && p.trim().length > 0 && h > 0 && v > h);
           } else
-            P.push(
-              c.createElement(te, {
+            N.push(
+              c.createElement(H, {
                 key: "EnablePartnerInfo_" + n.GetClanAccountID(),
                 creatorHome: n,
               }),
@@ -67685,19 +67510,19 @@
             D.tH,
             null,
             c.createElement(
-              z.x_,
+              T.x_,
               { onEscKeypress: t },
               c.createElement(
                 w.UC,
                 null,
                 c.createElement(w.Y9, null, (0, k.we)("#Sale_New_Title")),
-                c.createElement(w.nB, null, c.createElement(w.a3, null, P)),
+                c.createElement(w.nB, null, c.createElement(w.a3, null, N)),
                 c.createElement(
                   w.wi,
                   null,
                   c.createElement(w.CB, {
                     onCancel: t,
-                    bOKDisabled: !N,
+                    bOKDisabled: !G,
                     strOKText: (0, k.we)("#Sale_New_CreateEvent"),
                     strCancelText: C ? (0, k.we)("#Button_OK") : void 0,
                     onOK: async () => {
@@ -67722,13 +67547,13 @@
                                 s.GID,
                                 s.clanSteamID.GetAccountID(),
                               ),
-                            A(null))
+                            M(null))
                           ) {
-                            1 == (await R(s.GID))
+                            1 == (await P(s.GID))
                               ? I(s)
-                              : T("Failed to Save Private Event Data");
+                              : A("Failed to Save Private Event Data");
                           } else I(s);
-                        else T((0, k.we)("#Sale_New_Errors"));
+                        else A((0, k.we)("#Sale_New_Errors"));
                     },
                   }),
                 ),
@@ -67736,14 +67561,14 @@
             ),
           );
         }),
-        ee = (e) => {
+        j = (e) => {
           const { creatorHome: t, fnSetCreatorHome: a } = e;
           return c.createElement(
             "div",
-            { className: X.MinWidthCtn },
+            { className: q.MinWidthCtn },
             c.createElement("div", null, (0, k.we)("#Sale_New_ChosenCreator")),
             c.createElement(
-              x.he,
+              M.he,
               { toolTipContent: (0, k.we)("#Sale_New_ClearCreator_ttip") },
               c.createElement(
                 "div",
@@ -67751,16 +67576,16 @@
                   className: "DialogInput_ClearAction",
                   onClick: () => a(null),
                 },
-                c.createElement(Q.sED, null),
+                c.createElement(x.sED, null),
               ),
             ),
-            c.createElement(L, {
+            c.createElement(C.hA, {
               creatorID: t.GetCreatorHomeIdentifier(),
               bHideCreatorType: !0,
             }),
           );
         },
-        te = (e) => {
+        H = (e) => {
           const { creatorHome: t } = e,
             [a, n] = (0, c.useState)(!1);
           return c.createElement(
@@ -67772,8 +67597,8 @@
               (0, k.we)("#Sale_New_Verify_PE_Enabled"),
               c.createElement(
                 "div",
-                { className: X.FailCheck },
-                c.createElement(Q.sED, null),
+                { className: q.FailCheck },
+                c.createElement(x.sED, null),
               ),
               c.createElement(
                 "div",
@@ -67799,11 +67624,11 @@
                 },
                 (0, k.we)("#Button_Accept"),
               ),
-              a && c.createElement(N.t, { size: "small" }),
+              a && c.createElement(A.t, { size: "small" }),
             ),
           );
         },
-        ae = (e) => {
+        V = (e) => {
           const {
             clanSteamID: t,
             strEventName: a,
@@ -67821,7 +67646,7 @@
             c.createElement("div", null, (0, k.we)("#Sale_New_SetupEvent")),
             c.createElement(
               "div",
-              { className: X.BasicInfoCtn },
+              { className: q.BasicInfoCtn },
               c.createElement(w.pd, {
                 type: "text",
                 label: (0, k.we)("#Sale_New_EnterEventName"),
@@ -67838,8 +67663,8 @@
               }),
               c.createElement(
                 "div",
-                { className: X.DateCtn },
-                c.createElement(U.K, {
+                { className: q.DateCtn },
+                c.createElement(I.K, {
                   strDescription: (0, k.we)("#Sale_New_Start"),
                   nEarliestTime: 0,
                   fnGetTimeToUpdate: () => s,
@@ -67847,7 +67672,7 @@
                   fnIsValidDateTime: () => !0,
                   bShowTimeZone: !0,
                 }),
-                c.createElement(U.K, {
+                c.createElement(I.K, {
                   strDescription: (0, k.we)("#Sale_New_End"),
                   nEarliestTime: 0,
                   fnGetTimeToUpdate: () => o,
@@ -67856,7 +67681,7 @@
                   bShowTimeZone: !0,
                 }),
               ),
-              c.createElement(q, { clanSteamID: t, gidClanEvent: null }),
+              c.createElement(R, { clanSteamID: t, gidClanEvent: null }),
             ),
           );
         };
@@ -67881,7 +67706,7 @@
         E = a(61859),
         S = a(78327),
         y = a(4130),
-        f = a(38528),
+        f = a(46965),
         v = a(45737),
         b = a.n(v),
         w = a(60202),
@@ -70470,7 +70295,7 @@
       var Ue = a(52393),
         ze = a(87736),
         xe = a.n(ze),
-        qe = a(65825),
+        qe = a(79849),
         We = a(18654),
         je = a.n(We);
       function He(e) {
@@ -72178,7 +72003,7 @@
           })
         );
       }
-      var Rt = a(12493),
+      var Rt = a(67165),
         Pt = a(88704),
         Nt = a(26408),
         Gt = a(38964),
@@ -95910,7 +95735,7 @@
           )
         );
       }
-      var re = a(65825),
+      var re = a(79849),
         ie = a(64502),
         se = a(55263),
         le = a(62792);
@@ -98938,7 +98763,7 @@
         r = a(90626),
         i = a(17720),
         s = a(27666),
-        l = a(12493),
+        l = a(67165),
         o = a(34629),
         c = a(56545),
         m = a(94601),
@@ -102951,30 +102776,6 @@
         }
       }
       (0, n.Cg)([i.oI], s.prototype, "OnImageError", null);
-    },
-    32630: (e, t, a) => {
-      "use strict";
-      a.d(t, { A: () => s });
-      var n = a(90626),
-        r = a(55963),
-        i = (a(78327), a(60014));
-      function s(e) {
-        const { children: t, ...a } = e,
-          s = (0, i.n9)(),
-          l = n.useMemo(
-            () => ({ ...r.Ay.GetDefaultParams(), ...s, ...a }),
-            [
-              s,
-              a.domain,
-              a.controller,
-              a.method,
-              a.submethod,
-              a.feature,
-              a.depth,
-            ],
-          );
-        return n.createElement(i.nn, { ...l }, t);
-      }
     },
     66331: (e, t, a) => {
       "use strict";

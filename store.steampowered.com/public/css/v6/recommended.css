@@ -1589,7 +1589,7 @@ html.touch .similar_grid_item .buttons {
 }
 
 
-.user_reviews_header {
+body.v6 h2.user_reviews_header {
 	padding-bottom: 4px;
     margin-top: 40px;
     background-image: url('/public/images/v6/maincol_gradient_rule.png' );

@@ -2348,7 +2348,7 @@
         );
       }
       var rt = n(92022);
-      n(12493);
+      n(67165);
       function st(e) {
         const { children: t } = e;
         return (0, S.Qn)() && !S.TS.IN_STEAMUI

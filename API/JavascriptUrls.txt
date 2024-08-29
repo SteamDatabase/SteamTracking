@@ -1036,6 +1036,7 @@ ${PARTNER_BASE_URL}doc/store/assets/promos
 ${PARTNER_BASE_URL}doc/store/coming_soon
 ${PARTNER_BASE_URL}doc/store/creator_homepage
 ${PARTNER_BASE_URL}doc/store/discounting/csv
+${PARTNER_BASE_URL}doc/store/franchise_pages
 ${PARTNER_BASE_URL}doc/store/pricing
 ${PARTNER_BASE_URL}doc/store/pricing#5
 ${PARTNER_BASE_URL}doc/store/pricing/csv
@@ -3517,5 +3518,6 @@ url( ${STORE_ICON_BASE_URL}${appid}/capsule_231x87.jpg )
 url( ${STORE_ICON_BASE_URL}${nAppID}/header.jpg )
 url( '${thumb_url}' )
 url(${avatar_full_url})
+url(${creator_page_bg_url})
 url(${dataUrl})
 url(${url})

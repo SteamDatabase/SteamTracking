@@ -4259,3 +4259,12 @@ select#package_included_app_list > option[disabled] {
 	color: #aaa;
 	font-style: italic;
 }
+
+.sticky_save_bar {
+	position: sticky;
+	bottom: 0;
+	background: radial-gradient(62.67% 62.67% at 62.67% 100%, #565a61 0%, #474e57 100%);
+	padding: 15px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px black;
+}

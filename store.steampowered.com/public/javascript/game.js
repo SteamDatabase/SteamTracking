@@ -283,25 +283,6 @@ function DefaultRecScoreFactory( nOwnedPenalty )
 	};
 }
 
-function ShuffleRecScore( i, unAppID )
-{
-	var nScore = 0;
-	var nOwnedPenalty = 5;
-
-	if ( GDynamicStore.BIsAppIgnored( unAppID ) )
-		return null;
-
-	if ( GDynamicStore.BIsAppOwned( unAppID, false ) )
-		nScore += nOwnedPenalty;
-
-	// shuffle a little
-	nScore += ( Math.sqrt(i) + 2 ) * Math.random();
-	nScore += Math.sqrt( i );
-
-	return nScore;
-}
-
-
 function RenderRecommendBlock( rgRecommendedAppIDs, strAppURL, elTarget, fnRecScore )
 {
 	var rgRecommendationsToShow = [];
@@ -369,17 +350,6 @@ function RenderRecommendBlock( rgRecommendedAppIDs, strAppURL, elTarget, fnRecSc
 	elTarget.trigger('v_contentschanged');
 }
 
-function RenderMoreLikeThisBlock( rgRecommendedAppIDs, bUseShuffle )
-{
-	if ( !rgRecommendedAppIDs || !rgRecommendedAppIDs.length > 0 || !$J('#recommended_block_content').length )
-	{
-		$J('#recommended_block').hide();
-		return;
-	}
-
-	RenderRecommendBlock( rgRecommendedAppIDs, 'recommended', $J('#recommended_block_content'), bUseShuffle ? ShuffleRecScore : DefaultRecScoreFactory( 15 ) );
-}
-
 function RenderAccessoriesBlock( rgAccessoryAppIDs )
 {
 	if ( !rgAccessoryAppIDs || !rgAccessoryAppIDs.length > 0 || !$J('#accessory_block_content').length )
@@ -411,30 +381,6 @@ function RenderAccessoriesBlock( rgAccessoryAppIDs )
 	window.addEventListener( "hashchange", scrollToAccessoriesIfNeeded, false );
 	window.addEventListener( "load", scrollToAccessoriesIfNeeded, false );
 }
-
-function RenderFranchiseAppBlock( rgFranchiseAppIDs )
-{
-		rgFranchiseAppIDs = rgFranchiseAppIDs.filter( function( appid ) { return !!GStoreItemData.rgAppData[appid]; } );
-	if( !rgFranchiseAppIDs || !rgFranchiseAppIDs.length > 0 || !$J('#franchise_app_block_content').length )
-	{
-		$J('#franchise_block').hide();
-		return;
-	}
-
-	RenderRecommendBlock( rgFranchiseAppIDs, 'recommend_franchise', $J('#franchise_app_block_content') );
-}
-
-function RenderMoreDLCFromBaseGameBlock( rgMoreDLCsFromBaseGameAppIDs )
-{
-	if( !rgMoreDLCsFromBaseGameAppIDs || !rgMoreDLCsFromBaseGameAppIDs.length > 0 || !$J('#moredlcfrombasegame_block_content').length )
-	{
-		$J('#moredlcfrombasegame_block').hide();
-		return;
-	}
-
-	RenderRecommendBlock( rgMoreDLCsFromBaseGameAppIDs, 'other_dlc', $J('#moredlcfrombasegame_block_content') );
-}
-
 
 function ShowEULA( elLink )
 {

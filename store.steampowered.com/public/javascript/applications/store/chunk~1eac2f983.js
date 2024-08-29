@@ -581,11 +581,11 @@
         B8: () => B,
         Pk: () => D,
         Sz: () => I,
-        Tu: () => b,
+        Tu: () => N,
         UT: () => F,
         W4: () => P,
         ZS: () => R,
-        Zb: () => N,
+        Zb: () => b,
         _D: () => k,
         _J: () => x,
         ck: () => O,
@@ -607,8 +607,8 @@
         g = n(12155),
         _ = n(60014),
         f = n(32754),
-        v = n(52038),
-        S = n(61859),
+        S = n(52038),
+        v = n(61859),
         C = n(61336),
         y = n(30470),
         A = n(12611);
@@ -632,21 +632,21 @@
             Constructor: function (e) {
               return s.createElement(
                 "div",
-                { className: (0, v.A)(r().Italic, "BB_Italic") },
+                { className: (0, S.A)(r().Italic, "BB_Italic") },
                 e.children,
               );
             },
             autocloses: !1,
           },
         ],
-        ["h1", { Constructor: N, autocloses: !1, skipFollowingNewline: !0 }],
+        ["h1", { Constructor: b, autocloses: !1, skipFollowingNewline: !0 }],
         ["h2", { Constructor: I, autocloses: !1, skipFollowingNewline: !0 }],
         ["h3", { Constructor: R, autocloses: !1, skipFollowingNewline: !0 }],
         [
           "h4",
           {
             Constructor: function (e) {
-              return L(e, (0, v.A)(r().Header4, "BB_Header4"));
+              return L(e, (0, S.A)(r().Header4, "BB_Header4"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -656,7 +656,7 @@
           "h5",
           {
             Constructor: function (e) {
-              return L(e, (0, v.A)(r().Header5, "BB_Header5"));
+              return L(e, (0, S.A)(r().Header5, "BB_Header5"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -676,7 +676,7 @@
                 "span",
                 {
                   id: t || void 0,
-                  className: (0, v.A)(r().CenterSpan, "BB_Center"),
+                  className: (0, S.A)(r().CenterSpan, "BB_Center"),
                 },
                 e.children,
               );
@@ -688,7 +688,7 @@
           "smalltext",
           {
             Constructor: function (e) {
-              return L(e, (0, v.A)(r().SmallText, "BB_SmallText"));
+              return L(e, (0, S.A)(r().SmallText, "BB_SmallText"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -731,10 +731,10 @@
               return s.createElement(
                 l.Z,
                 {
-                  className: (0, v.A)(r().Spoiler, t && r().Revealed),
+                  className: (0, S.A)(r().Spoiler, t && r().Revealed),
                   focusable: !0,
                   onActivate: o,
-                  onOKActionDescription: (0, S.we)(
+                  onOKActionDescription: (0, v.we)(
                     t ? "#Bbcode_Spoiler_Hide" : "#Bbcode_Spoiler_Show",
                   ),
                 },
@@ -855,7 +855,7 @@
               return s.createElement(
                 "div",
                 {
-                  className: (0, v.A)(
+                  className: (0, S.A)(
                     r().Table,
                     "BB_Table",
                     t && r().NoBorder,
@@ -875,7 +875,7 @@
             Constructor: function (e) {
               return s.createElement(
                 "div",
-                { className: (0, v.A)(r().TableRow, "BB_TableRow") },
+                { className: (0, S.A)(r().TableRow, "BB_TableRow") },
                 e.children,
               );
             },
@@ -907,7 +907,7 @@
               return s.createElement(
                 "div",
                 {
-                  className: (0, v.A)(r().TableData, "BB_TableData"),
+                  className: (0, S.A)(r().TableData, "BB_TableData"),
                   style: t && { width: t },
                 },
                 e.children,
@@ -959,7 +959,7 @@
               return s.createElement(
                 "div",
                 {
-                  className: (0, v.A)({
+                  className: (0, S.A)({
                     [r().ExpandSectionBlock]: !0,
                     [c.style]: !0,
                     [r().ExpandSectionExpanded]: n,
@@ -971,7 +971,7 @@
                 s.createElement(
                   "div",
                   { className: r().ExpandSectionHeader, onClick: () => o(!n) },
-                  (0, S.we)(n ? c.expanded : c.collapsed),
+                  (0, v.we)(n ? c.expanded : c.collapsed),
                   s.createElement(
                     "div",
                     { className: r().EmbedArrow },
@@ -1081,8 +1081,8 @@
       function w(e, t) {
         return void 0 === t ? e[""] : e[t];
       }
-      function b(e, t) {
-        return (n) => e({ ...n, className: (0, v.A)(n.className, t) });
+      function N(e, t) {
+        return (n) => e({ ...n, className: (0, S.A)(n.className, t) });
       }
       function L(e, t) {
         let n = w(e.args, "id");
@@ -1095,19 +1095,19 @@
             (n = n.substring(1)),
           s.createElement(
             "div",
-            { id: n || void 0, className: (0, v.A)(t, e.className) },
+            { id: n || void 0, className: (0, S.A)(t, e.className) },
             e.children,
           )
         );
       }
-      function N(e) {
-        return L(e, (0, v.A)(r().Header1, "BB_Header1"));
+      function b(e) {
+        return L(e, (0, S.A)(r().Header1, "BB_Header1"));
       }
       function I(e) {
-        return L(e, (0, v.A)(r().Header2, "BB_Header2"));
+        return L(e, (0, S.A)(r().Header2, "BB_Header2"));
       }
       function R(e) {
-        return L(e, (0, v.A)(r().Header3, "BB_Header3"));
+        return L(e, (0, S.A)(r().Header3, "BB_Header3"));
       }
       const T = (e) => {
         const { href: t, ...n } = e,
@@ -1137,12 +1137,12 @@
         const t = w(e.args, "author");
         return s.createElement(
           "blockquote",
-          { className: (0, v.A)(r().BlockQuote, e.className) },
+          { className: (0, S.A)(r().BlockQuote, e.className) },
           !!t &&
             s.createElement(
               "div",
               { className: r().QuoteAuthor },
-              (0, S.we)("#Bbcode_Originally_Posted_By") + " ",
+              (0, v.we)("#Bbcode_Originally_Posted_By") + " ",
               " ",
               s.createElement("b", null, t + ":"),
             ),
@@ -1152,7 +1152,7 @@
       function B(e) {
         return s.createElement(
           "ul",
-          { className: (0, v.A)(r().List, "bullets") },
+          { className: (0, S.A)(r().List, "bullets") },
           e.children,
         );
       }
@@ -1684,8 +1684,8 @@
             classNameSize: g,
             classNameAlign: _,
           } = e,
-          [f, v] = (0, o.useState)(!n),
-          [S, C] = (0, o.useState)(!1),
+          [f, S] = (0, o.useState)(!n),
+          [v, C] = (0, o.useState)(!1),
           y = (0, s.m)("YouTubeInlineSnippet"),
           [A, P] = (0, o.useState)({
             title: (0, c.we)("#Loading"),
@@ -1717,7 +1717,7 @@
             r = A.description;
           return o.createElement(
             "div",
-            { className: h().DynamicLinkBox, onClick: () => v(!1) },
+            { className: h().DynamicLinkBox, onClick: () => S(!1) },
             o.createElement("img", {
               className: h().DynamicLink_Preview,
               src: "https://img.youtube.com/vi/" + t + "/0.jpg",
@@ -1741,8 +1741,8 @@
               o.createElement(
                 "div",
                 { className: h().Dynamiclink_Content },
-                S && r,
-                !S && o.createElement(i.t, { size: "medium" }),
+                v && r,
+                !v && o.createElement(i.t, { size: "medium" }),
               ),
             ),
           );
@@ -1827,8 +1827,8 @@
       }
       var _ = n(78327),
         f = n(7068),
-        v = n(32381),
-        S = n(16628),
+        S = n(32381),
+        v = n(16628),
         C = n(19418);
       class y extends s.Component {
         constructor(e) {
@@ -1841,11 +1841,11 @@
             o = e.length > 1,
             r = o
               ? ({ detail: { button: t } }) => {
-                  t === S.pR.BUMPER_LEFT
+                  t === v.pR.BUMPER_LEFT
                     ? this.setState({
                         activeIndex: Math.max(0, this.state.activeIndex - 1),
                       })
-                    : t === S.pR.BUMPER_RIGHT &&
+                    : t === v.pR.BUMPER_RIGHT &&
                       this.setState({
                         activeIndex: Math.min(
                           e.length - 1,
@@ -1855,7 +1855,7 @@
                 }
               : void 0;
           return s.createElement(
-            v.Z,
+            S.Z,
             { className: C.Picker, onButtonDown: r },
             o && s.createElement(A, null, this.RenderTabs()),
             n,
@@ -1878,7 +1878,7 @@
       }
       function A(e) {
         return s.createElement(
-          v.Z,
+          S.Z,
           { className: C.Tabs, "flow-children": "row" },
           e.children,
         );
@@ -1889,7 +1889,7 @@
       function k(e) {
         const { active: t, children: n, onClick: o } = e;
         return s.createElement(
-          v.Z,
+          S.Z,
           {
             className: (0, p.A)(C.Tab, t && C.Active),
             focusClassName: C.Focus,
@@ -1912,7 +1912,7 @@
         } = e;
         let a = t.map((e, i) =>
           s.createElement(
-            v.Z,
+            S.Z,
             {
               key: r(e),
               className: C.Item,
@@ -1926,13 +1926,13 @@
         return (
           0 === t.length && i && (a = i()),
           s.createElement(
-            v.Z,
+            S.Z,
             { "flow-children": "grid", className: C.ItemList },
             a,
           )
         );
       }
-      function b(e) {
+      function N(e) {
         const { title: t, onFilterChange: n, filter: o, onSubmit: r, ...i } = e;
         return s.createElement(
           s.Fragment,
@@ -1940,7 +1940,7 @@
           s.createElement(
             P,
             null,
-            s.createElement(N, { title: t }, s.createElement(w, { ...i })),
+            s.createElement(b, { title: t }, s.createElement(w, { ...i })),
           ),
           s.createElement(I, { value: o, onChange: n, onSubmit: r }),
         );
@@ -1956,7 +1956,7 @@
             r && s.createElement("div", { className: C.SectionedPageTitle }, r),
             o.map(({ title: e, ...t }) =>
               s.createElement(
-                N,
+                b,
                 { title: e, key: e },
                 s.createElement(w, { ...t }),
               ),
@@ -1965,7 +1965,7 @@
           s.createElement(I, { value: n, onChange: t }),
         );
       }
-      function N(e) {
+      function b(e) {
         return s.createElement(
           "div",
           { className: C.Section },
@@ -2129,7 +2129,7 @@
                   s.createElement(le, null),
                 ),
               renderContent: () =>
-                s.createElement(z, {
+                s.createElement(Z, {
                   store: t,
                   hoverStore: n,
                   onEmoticonSelect: (e) => a(e.name),
@@ -2154,7 +2154,7 @@
                       s.createElement(se, null),
                     ),
                   renderContent: () =>
-                    s.createElement(Z, {
+                    s.createElement(z, {
                       store: t,
                       hoverStore: n,
                       onItemSelect: (e) => a(e.name),
@@ -2188,7 +2188,7 @@
                       s.createElement(ae, null),
                     ),
                   renderContent: () =>
-                    s.createElement(X, {
+                    s.createElement(q, {
                       store: t,
                       effectSettings: o,
                       onItemSelect: (e) => l(e.name),
@@ -2240,7 +2240,7 @@
                     s.createElement(le, null),
                   ),
                 renderContent: () =>
-                  s.createElement(z, {
+                  s.createElement(Z, {
                     store: e,
                     hoverStore: t,
                     onEmoticonSelect: (e) => n(e.name),
@@ -2268,7 +2268,7 @@
                         s.createElement(se, null),
                       ),
                     renderContent: () =>
-                      s.createElement(Z, {
+                      s.createElement(z, {
                         store: e,
                         hoverStore: t,
                         onItemSelect: (e) => n(e.name),
@@ -2333,7 +2333,7 @@
                       s.createElement(se, null),
                     ),
                   renderContent: () =>
-                    s.createElement(q, {
+                    s.createElement(Q, {
                       store: this.props.emoticonStore,
                       hoverStore: this.props.emoticonHoverStore,
                       onItemSelect: (e) => this.props.OnSelected(e.name, !1),
@@ -2377,7 +2377,7 @@
                       s.createElement(se, null),
                     ),
                   renderContent: () =>
-                    s.createElement(Q, {
+                    s.createElement(X, {
                       store: this.props.emoticonStore,
                       hoverStore: this.props.emoticonHoverStore,
                       onItemSelect: (e) => this.props.OnSelected(e.name, !1),
@@ -2389,7 +2389,7 @@
           );
         }
       }
-      class z extends s.Component {
+      class Z extends s.Component {
         state = { filter: "" };
         render() {
           const {
@@ -2448,7 +2448,7 @@
           );
         }
       }
-      class Z extends s.Component {
+      class z extends s.Component {
         state = { filter: "" };
         render() {
           const {
@@ -2460,7 +2460,7 @@
             { filter: r } = this.state,
             i = !r && o ? e.GetFlairListByGroupID(o) : e.emoticon_list,
             a = c.p.FilterEmoticons(i, r).slice(0, 1e3);
-          return s.createElement(b, {
+          return s.createElement(N, {
             title: (0, h.we)("#AddonPicker_Emoticons"),
             items: a,
             onItemSelect: n,
@@ -2514,7 +2514,7 @@
           const { store: e, onItemSelect: t } = this.props,
             { filter: n } = this.state,
             o = c.p.FilterStickers(e.GetStickerList(), n);
-          return s.createElement(b, {
+          return s.createElement(N, {
             title: (0, h.we)("#EmoticonPicker_StickerHeading"),
             items: o,
             onItemSelect: t,
@@ -2555,13 +2555,13 @@
           });
         }
       }
-      class X extends s.Component {
+      class q extends s.Component {
         state = { filter: "" };
         render() {
           const { store: e, effectSettings: t, onItemSelect: n } = this.props,
             { filter: o } = this.state,
             r = e.GetEffectList().filter(({ name: e }) => e.indexOf(o) > -1);
-          return s.createElement(b, {
+          return s.createElement(N, {
             title: (0, h.we)("#EmoticonPicker_EffectHeading"),
             items: r,
             onItemSelect: n,
@@ -2603,7 +2603,7 @@
           });
         }
       }
-      let q = class extends s.Component {
+      let Q = class extends s.Component {
         state = { filter: "" };
         render() {
           const {
@@ -2661,8 +2661,8 @@
           );
         }
       };
-      q = (0, o.Cg)([i.PA], q);
-      let Q = class extends s.Component {
+      Q = (0, o.Cg)([i.PA], Q);
+      let X = class extends s.Component {
         state = { filter: "" };
         render() {
           const {
@@ -2696,7 +2696,7 @@
           });
         }
       };
-      Q = (0, o.Cg)([i.PA], Q);
+      X = (0, o.Cg)([i.PA], X);
       const j = (e) => {
         const { emoticon: t, emoticonHoverStore: n, large: o } = e,
           r = !t.last_used && t.time_received;
@@ -2958,7 +2958,7 @@
     },
     283: (e, t, n) => {
       "use strict";
-      n.d(t, { A: () => v });
+      n.d(t, { A: () => S });
       var o = n(34629),
         r = n(90626),
         i = n(75844),
@@ -3093,7 +3093,7 @@
       };
       (0, o.Cg)([s.oI], f.prototype, "OnEmoticonClick", null),
         (f = (0, o.Cg)([i.PA], f));
-      const v = f;
+      const S = f;
     },
     43667: (e, t, n) => {
       "use strict";
@@ -3106,7 +3106,7 @@
         l = n(88997),
         c = n(47822),
         m = n(38390),
-        d = n(82415),
+        d = n(4796),
         u = n(81477),
         p = n(44165),
         h = n(60746),
@@ -3114,7 +3114,7 @@
         g = n(78327),
         _ = n(41735),
         f = n.n(_);
-      class v {
+      class S {
         constructor() {
           (0, E.Gn)(this);
         }
@@ -3176,18 +3176,18 @@
           );
         }
       }
-      (0, o.Cg)([E.sH], v.prototype, "m_bValidatedEmail", void 0),
-        (0, o.Cg)([E.sH], v.prototype, "m_nMobileDeviceCount", void 0);
-      let S = new v();
+      (0, o.Cg)([E.sH], S.prototype, "m_bValidatedEmail", void 0),
+        (0, o.Cg)([E.sH], S.prototype, "m_nMobileDeviceCount", void 0);
+      let v = new S();
       var C = n(40650),
         y = n(7068),
         A = n(76684),
         P = n(44325),
         k = n(738),
         w = n(12155),
-        b = n(22797),
+        N = n(22797),
         L = n(32754),
-        N = n(68797),
+        b = n(68797),
         I = n(52038),
         R = n(61859),
         T = n(56093),
@@ -3204,14 +3204,15 @@
         m_iMenuInstance;
         m_elDropDownRef = s.createRef();
         m_bLoadWasCancelled = !1;
-        state = { bIsOpen: !1, bIsLoadingNotificationSettings: !S.BIsLoaded() };
+        state = { bIsOpen: !1, bIsLoadingNotificationSettings: !v.BIsLoaded() };
         componentDidMount() {
           this.state.bIsLoadingNotificationSettings &&
-            S.HintLoad()
+            v
+              .HintLoad()
               .catch(
                 (e) => (
                   console.error(
-                    "EventReminderWidget load fail: " + (0, N.H)(e).strErrorMsg,
+                    "EventReminderWidget load fail: " + (0, b.H)(e).strErrorMsg,
                   ),
                   2
                 ),
@@ -3254,7 +3255,7 @@
               );
         }
         ShowMenu() {
-          let e = s.createElement(z, {
+          let e = s.createElement(Z, {
               ...this.props,
               fnHasReminderSet: (e) => this.BHasSomeNotificationSetting(e),
               fnHidePanel: this.HideMenu,
@@ -3289,13 +3290,13 @@
         BHasSomeNotificationSetting(e) {
           const t = e.GID;
           return (
-            (S.BHasValidatedEmail() &&
+            (v.BHasValidatedEmail() &&
               h.KN.Get().BFollowsEventAndNotifiedBy(
                 e.clanSteamID,
                 t,
                 h.Nh.k_ENotifyFlagByEmail,
               )) ||
-            (S.BHasPushNotification() &&
+            (v.BHasPushNotification() &&
               h.KN.Get().BFollowsEventAndNotifiedBy(
                 e.clanSteamID,
                 t,
@@ -3365,7 +3366,7 @@
         (0, o.Cg)([T.oI], V.prototype, "ShowMenu", null),
         (0, o.Cg)([T.oI], V.prototype, "HideMenu", null),
         (V = (0, o.Cg)([r.PA], V));
-      let z = class extends s.Component {
+      let Z = class extends s.Component {
         state = { bIsRequestInFlight: !1 };
         async OnChangeFollowOrIgnore(e, t, n) {
           const { eventModel: o } = this.props,
@@ -3401,7 +3402,7 @@
                         : "#EventDisplay_Reminder_FollowEvent_ErrorDesc",
                     ),
                   },
-                  (0, N.H)(e).strErrorMsg,
+                  (0, b.H)(e).strErrorMsg,
                 ),
                 window,
               );
@@ -3466,8 +3467,8 @@
               fnHasReminderSet: r,
               fnHidePanel: i,
             } = this.props,
-            a = S.BHasValidatedEmail(),
-            l = S.BHasPushNotification(),
+            a = v.BHasValidatedEmail(),
+            l = v.BHasPushNotification(),
             c = t && e.GetStartTimeAndDateUnixSeconds();
           return s.createElement(
             "div",
@@ -3511,7 +3512,7 @@
                 ),
               },
               this.state.bIsRequestInFlight &&
-                s.createElement(b.t, {
+                s.createElement(N.t, {
                   className: H.RpcThrobber,
                   size: "xlarge",
                   position: "center",
@@ -3672,10 +3673,10 @@
           );
         }
       };
-      (0, o.Cg)([T.oI], z.prototype, "OnChangeFollowByEmail", null),
-        (0, o.Cg)([T.oI], z.prototype, "OnChangeFollowByPush", null),
-        (0, o.Cg)([T.oI], z.prototype, "TrackEventAction", null),
-        (z = (0, o.Cg)([r.PA], z));
+      (0, o.Cg)([T.oI], Z.prototype, "OnChangeFollowByEmail", null),
+        (0, o.Cg)([T.oI], Z.prototype, "OnChangeFollowByPush", null),
+        (0, o.Cg)([T.oI], Z.prototype, "TrackEventAction", null),
+        (Z = (0, o.Cg)([r.PA], Z));
     },
     48079: (e, t, n) => {
       "use strict";
@@ -3914,7 +3915,7 @@
                 type: e.sFormat,
               }),
             ),
-          v = n.rgVideoTracks
+          S = n.rgVideoTracks
             ? n.rgVideoTracks.map((e) => {
                 let t = e.eLanguage;
                 if ((0, c.Y2)())
@@ -3943,7 +3944,7 @@
                 });
               })
             : null,
-          S = (function (e) {
+          v = (function (e) {
             return !(
               !(0, l.ZF)(e.sPoster) ||
               (e.rgVideoSources &&
@@ -3953,7 +3954,7 @@
             );
           })(n);
         let C;
-        (!S || (h && "public" == c.TS.WEB_UNIVERSE)) && (C = "anonymous");
+        (!v || (h && "public" == c.TS.WEB_UNIVERSE)) && (C = "anonymous");
         const y = p || (o && d.Get().BVolumePreferenceMuted()),
           A = n.sPoster ? _(n.sPoster) : "";
         return r.createElement(
@@ -3990,76 +3991,9 @@
             ref: t,
           },
           f,
-          v,
+          S,
         );
       });
-    },
-    96236: (e, t, n) => {
-      "use strict";
-      n.d(t, { K: () => a });
-      var o = n(34629),
-        r = n(90626),
-        i = n(56093),
-        s = n(60383);
-      class a extends r.Component {
-        state = {
-          bRenderChildren: !1,
-          nPrevRenderWidth: 0,
-          nPrevRenderHeight: 0,
-        };
-        m_refContainer = r.createRef();
-        BLoadAndUnload() {
-          return "LoadAndUnload" == (this.props.mode || "JustLoad");
-        }
-        OnVisibilityChange(e) {
-          let t = this.state.bRenderChildren;
-          if (t == e) return;
-          if (t && !this.BLoadAndUnload()) return;
-          let n = 0,
-            o = 0;
-          if (this.m_refContainer.current) {
-            const e = this.m_refContainer.current.GetBoundingClientRect();
-            e && ((n = e.width), (o = e.height));
-          }
-          this.setState({
-            bRenderChildren: e,
-            nPrevRenderWidth: n,
-            nPrevRenderHeight: o,
-          }),
-            e && this.props.onRender && this.props.onRender();
-        }
-        render() {
-          const {
-              placeholderWidth: e,
-              placeholderHeight: t,
-              onRender: n,
-              style: o,
-              mode: i,
-              ...a
-            } = this.props,
-            l = this.state.bRenderChildren;
-          let c = o;
-          if (!l) {
-            const n = this.state.nPrevRenderWidth || e,
-              r = this.state.nPrevRenderHeight || t;
-            (void 0 === r && void 0 === n) ||
-              (c = { ...o, minHeight: r, minWidth: n });
-          }
-          const m = this.BLoadAndUnload() ? "repeated" : "once";
-          return r.createElement(
-            s.J,
-            {
-              ref: this.m_refContainer,
-              style: c,
-              ...a,
-              onVisibilityChange: this.OnVisibilityChange,
-              trigger: m,
-            },
-            l && this.props.children,
-          );
-        }
-      }
-      (0, o.Cg)([i.oI], a.prototype, "OnVisibilityChange", null);
     },
     81416: (e, t, n) => {
       "use strict";
@@ -4549,7 +4483,7 @@
         K4: () => g,
         gS: () => _,
         pg: () => h,
-        u1: () => v,
+        u1: () => S,
         v9: () => f,
         yi: () => E,
       });
@@ -4749,7 +4683,7 @@
         }
       };
       f = (0, o.Cg)([a.PA], f);
-      let v = class extends r.Component {
+      let S = class extends r.Component {
         render() {
           const {
               startDateAndTime: e,
@@ -4874,115 +4808,11 @@
               ),
             );
           }
-          const v = r.createElement(_, { rtFullDate: t, stylesmodule: o }, g);
-          return r.createElement("div", { className: o.ShortDateRange }, p, v);
+          const S = r.createElement(_, { rtFullDate: t, stylesmodule: o }, g);
+          return r.createElement("div", { className: o.ShortDateRange }, p, S);
         }
       };
-      v = (0, o.Cg)([a.PA], v);
-    },
-    60383: (e, t, n) => {
-      "use strict";
-      n.d(t, { J: () => a });
-      var o = n(34629),
-        r = n(90626),
-        i = n(56011),
-        s = n(56093);
-      class a extends r.Component {
-        static GetScrollableClassname() {
-          return "vt-scrollable";
-        }
-        m_observer = null;
-        m_refElement = r.createRef();
-        m_elTracked = null;
-        m_bPreviouslyIntersecting = !1;
-        BTriggerOnce() {
-          return "once" == (this.props.trigger || "once");
-        }
-        GetBoundingClientRect() {
-          return this.m_refElement.current
-            ? this.m_refElement.current.getBoundingClientRect()
-            : null;
-        }
-        DestroyObserver() {
-          this.m_observer &&
-            (this.m_observer.disconnect(),
-            (this.m_observer = null),
-            (this.m_elTracked = null));
-        }
-        componentWillUnmount() {
-          this.DestroyObserver();
-        }
-        componentDidMount() {
-          this.UpdateObserver(null);
-        }
-        componentDidUpdate(e) {
-          this.UpdateObserver(e);
-        }
-        UpdateObserver(e) {
-          if (this.m_bPreviouslyIntersecting && this.BTriggerOnce()) return;
-          this.m_observer &&
-            e &&
-            (e.rootMargin != this.m_observer.rootMargin ||
-              e.thresholds != this.m_observer.thresholds) &&
-            this.DestroyObserver();
-          let t = this.m_refElement.current;
-          if (
-            (this.m_observer &&
-              t != this.m_elTracked &&
-              (this.m_elTracked && this.m_observer.unobserve(this.m_elTracked),
-              (this.m_elTracked = null)),
-            !this.m_observer && t)
-          ) {
-            let e = { root: this.FindScrollableAncestor(t) };
-            this.props.rootMargin && (e.rootMargin = this.props.rootMargin),
-              this.props.thresholds && (e.threshold = this.props.thresholds),
-              (this.m_observer = (0, s.md)(t, this.OnIntersection, e));
-          }
-          this.m_observer &&
-            t &&
-            t != this.m_elTracked &&
-            (this.m_observer.observe(t), (this.m_elTracked = t));
-        }
-        FindScrollableAncestor(e) {
-          return i.Kf(e, (e) => {
-            const t = this.props.bHorizontal
-              ? window.getComputedStyle(e).overflowX
-              : window.getComputedStyle(e).overflowY;
-            return (
-              "scroll" == t ||
-              "auto" == t ||
-              !!e.classList.contains(a.GetScrollableClassname())
-            );
-          });
-        }
-        OnIntersection(e, t) {
-          let n = !1;
-          for (const t of e)
-            if (t.isIntersecting) {
-              n = !0;
-              break;
-            }
-          this.m_bPreviouslyIntersecting != n &&
-            ((this.m_bPreviouslyIntersecting = n),
-            this.props.onVisibilityChange && this.props.onVisibilityChange(n),
-            n && this.BTriggerOnce() && this.DestroyObserver());
-        }
-        render() {
-          let {
-            onVisibilityChange: e,
-            rootMargin: t,
-            trigger: n,
-            bHorizontal: o,
-            ...i
-          } = this.props;
-          return r.createElement(
-            "div",
-            { ref: this.m_refElement, ...i },
-            this.props.children,
-          );
-        }
-      }
-      (0, o.Cg)([s.oI], a.prototype, "OnIntersection", null);
+      S = (0, o.Cg)([a.PA], S);
     },
     48211: (e, t, n) => {
       "use strict";

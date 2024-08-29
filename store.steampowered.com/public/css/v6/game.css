@@ -6043,17 +6043,45 @@ body.v6 .page_content.notes {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	padding: 4px !important;
+	padding: 4px;
+}
+.game_area_dlc_row.dlc_highlight {
+	justify-content: left;
+	padding-top: 6px;
+	padding-left: 12px;
+	padding-bottom: 4px;
 }
 .game_area_dlc_name {
 	padding-right: 5px;
 	padding-left: 8px;
+}
+.dlc_highlight .game_area_dlc_name {
+	font-size: 14px;
+	align-self: center;
 }
 .game_area_dlc_price {
 	text-align: right;
 	padding-right: 5px;
 	position: unset;
 	flex-shrink: 0;
+}
+.dlc_highlight .game_area_dlc_price {
+	font-size: 14px;
+	align-self: center;
+	flex: auto;
+}
+.dlc_highlight_reason_container {
+	display: flex;
+}
+.dlc_highlight_reason {
+	background-color: #417a9b;
+	color: white;
+	padding: 2px 4px;
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 4px;
+	border-radius: 3px;
 }
 
 /* Share dialog styles */
@@ -6246,4 +6274,11 @@ a.open_in_steam_body:hover {
 	.banner_open_in_steam {
 		display: none;
 	}
+}
+
+.related_items_ctn {
+	background: radial-gradient(62.67% 62.67% at 62.67% 100%, rgba(255, 255, 255, 0.15) 0%, rgba(116, 133, 140, 0.15) 100%);
+	padding-top: 40px;
+	padding-bottom: 20px;
+	margin-top: 20px;
 }
