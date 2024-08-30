@@ -4555,6 +4555,7 @@ body._3jhMIr8hczcBK_fOVtEVOK {
   height: 140px;
   margin-left: auto;
   margin-right: auto;
+  flex-shrink: 0;
 }
 ._9H6b5yfaxlmcnHvkqtwDK {
   margin-top: 8vw;
