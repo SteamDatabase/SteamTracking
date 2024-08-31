@@ -5279,6 +5279,10 @@ html.tablet
 ._1UhmxrINvvaNnHzhCPoill {
   margin-bottom: 8px;
   margin-top: 8px;
+  border-top: 2px solid #333740;
+  border-bottom: 2px solid #333740;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 ._28TC1EYm0jlWPjyk89xXCL {
   display: flex;
@@ -5305,6 +5309,15 @@ html.tablet
   margin-left: auto;
   display: flex;
   flex-direction: row;
+}
+._1LQ1GCTblYDL8enZ2mBhTD {
+  padding: 2px 0px;
+}
+._3e_m6QWUee_VSu8xj-XLbs {
+  height: 2px;
+  background-color: #ddd;
+  position: absolute;
+  top: -1;
 }
 body,
 body._2LxgdMcpWJRjkxZKbmeEEb {
