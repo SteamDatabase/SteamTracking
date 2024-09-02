@@ -23493,7 +23493,7 @@
                       bStyleTopThree: !0,
                     }),
                 )
-              : new Date().getTime() < 16661088e5
+              : new Date().getTime() < 17257824e5
                 ? s.createElement(S.rd, {
                     to: b.J.dpc_standings(
                       (0, Kt.p$)(e),
@@ -38323,7 +38323,7 @@
           return n;
         }
         GetEventType(e) {
-          if (e > 22) return u.J7.EXTERNAL;
+          if (e > 23) return u.J7.EXTERNAL;
           const t = this.GetEventInfo(e);
           return t ? t.event_type : u.J7.UNKNOWN;
         }
