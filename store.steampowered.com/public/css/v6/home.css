@@ -4583,8 +4583,8 @@ background: -webkit-linear-gradient( top, rgba(42,71,94,1.0) 5%, rgba(42,71,94,0
 	flex: 1;
 	position: relative;
 	margin-top: 39px;
-background: -webkit-linear-gradient( left, #95bbd4 5%,#859bac 95%);
-	background: linear-gradient( to right, #95bbd4 5%,#859bac 95%);
+	background: radial-gradient(69% 62% at 100% 16%, #b4cfe1 0%, #95bbd4 100%);
+	border-radius: 5px;
 	margin-bottom: 5px;	/* matches tab_item */
 }
 
@@ -4672,7 +4672,16 @@ body.v6 .home_rightcol .tab_preview h2 {
 	overflow: hidden;
 }
 .tab_preview .tags > a {
-	background-color: rgba( 38, 54, 69, 0.6);
+	background-color: rgba( 38, 54, 69, 0.3);
+	color: rgba(255,255,255,0.6);
+}
+
+.tab_preview .tags > a:hover {
+	color: rgba(255,255,255,1);
+}
+
+.tab_item_details .tab_item_top_tags {
+	color: #5e6d7c;
 }
 
 .tab_preview.focus {
@@ -4711,7 +4720,7 @@ body.v6 .home_rightcol .tab_preview h2 {
 .tab_item.focus {
 background: -webkit-linear-gradient( left, #c6e6f8 5%,#95bcd3 95%);
 	background: linear-gradient( to right, #c6e6f8 5%,#95bcd3 95%);
-	margin-right: -14px;
+	margin-right: -18px;
 	padding-right: 14px;
 }
 
