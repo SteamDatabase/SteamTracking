@@ -6710,7 +6710,7 @@
     10409: (e, t, o) => {
       function n(e, t) {
         (null == t || t > e.length) && (t = e.length);
-        for (var o = 0, n = new Array(t); o < t; o++) n[o] = e[o];
+        for (var o = 0, n = Array(t); o < t; o++) n[o] = e[o];
         return n;
       }
       o.d(t, { A: () => n });
@@ -6800,9 +6800,8 @@
           var l = Object.getOwnPropertySymbols(e);
           for (i = 0; i < l.length; i++)
             (o = l[i]),
-              t.indexOf(o) >= 0 ||
-                (Object.prototype.propertyIsEnumerable.call(e, o) &&
-                  (r[o] = e[o]));
+              t.includes(o) ||
+                ({}.propertyIsEnumerable.call(e, o) && (r[o] = e[o]));
         }
         return r;
       }
@@ -6812,7 +6811,7 @@
       var n = o(11052),
         i = o(59913);
       function r(e, t) {
-        if (t && ("object" === (0, n.A)(t) || "function" == typeof t)) return t;
+        if (t && ("object" == (0, n.A)(t) || "function" == typeof t)) return t;
         if (void 0 !== t)
           throw new TypeError(
             "Derived constructors may only return object or undefined",
@@ -6918,7 +6917,7 @@
           }
           return ("string" === t ? String : Number)(e);
         })(e, "string");
-        return "symbol" == (0, n.A)(t) ? t : String(t);
+        return "symbol" == (0, n.A)(t) ? t : t + "";
       }
     },
     11052: (e, t, o) => {
@@ -6948,7 +6947,7 @@
       function i(e, t) {
         if (e) {
           if ("string" == typeof e) return (0, n.A)(e, t);
-          var o = Object.prototype.toString.call(e).slice(8, -1);
+          var o = {}.toString.call(e).slice(8, -1);
           return (
             "Object" === o && e.constructor && (o = e.constructor.name),
             "Map" === o || "Set" === o

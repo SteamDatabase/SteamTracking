@@ -10,11 +10,11 @@
         OM: () => l,
         Yr: () => _,
         pV: () => d,
-        uw: () => u,
+        uw: () => p,
         vs: () => P,
         ww: () => m,
         xi: () => c,
-        zt: () => p,
+        zt: () => u,
       });
       var a = r(90626),
         i = r(6144),
@@ -85,10 +85,10 @@
       function l() {
         return o.Get().m_rgPackageIDs;
       }
-      function p() {
+      function u() {
         return o.Get().m_rgPackageIDs;
       }
-      function u() {
+      function p() {
         return o.Get().m_rgPackageData;
       }
       function m(e) {
@@ -124,7 +124,7 @@
         Wx: () => y,
         XB: () => W,
         XE: () => Z,
-        XK: () => V,
+        XK: () => N,
         Y5: () => E,
         YB: () => j,
         Zz: () => q,
@@ -135,7 +135,7 @@
         h4: () => X,
         hm: () => O,
         iy: () => x,
-        mP: () => N,
+        mP: () => V,
         nT: () => w,
         oj: () => v,
         tn: () => L,
@@ -150,8 +150,8 @@
         c = r(14947),
         o = r(68797),
         l = r(6144),
-        p = r(56093),
-        u = r(41338),
+        u = r(56093),
+        p = r(41338),
         m = r(78327),
         d = r(96745),
         _ = r(65946),
@@ -262,7 +262,7 @@
               "dev" == m.TS.WEB_UNIVERSE &&
                 console.error("Invalid pricing guidelines payload");
           this.m_rgKnownPriceKeys = Array.from(e).sort((e, t) =>
-            (0, u.kd)(G(e), G(t)),
+            (0, p.kd)(G(e), G(t)),
           );
           const s = (0, m.Tc)("currency_data", "application_config");
           if (
@@ -538,7 +538,7 @@
           l.append("sessionid", m.TS.SESSIONID),
             l.append("partner_will_publish", t ? "1" : "0"),
             l.append("prices", i);
-          let p = null;
+          let u = null;
           try {
             const t = await s().post(c, l, {
               withCredentials: !0,
@@ -560,16 +560,16 @@
               return this.DiscardLocalPriceOverridesForPackage(e), t.data;
             }
           } catch (e) {
-            p = e;
+            u = e;
           }
-          const u = (0, o.H)(p);
+          const p = (0, o.H)(u);
           return (
             console.error(
               "CPackagePricingStore.SubmitProposalToServer: failed",
-              u.strErrorMsg,
-              u,
+              p.strErrorMsg,
+              p,
             ),
-            p?.response?.data ?? { success: 2 }
+            u?.response?.data ?? { success: 2 }
           );
         }
         async PublishApprovedProposal(e, t, r = 0) {
@@ -608,12 +608,12 @@
           } catch (e) {
             l = e;
           }
-          const p = (0, o.H)(l);
+          const u = (0, o.H)(l);
           return (
             console.error(
               "CPackagePricingStore.PublishApprovedProposal: failed",
-              p.strErrorMsg,
-              p,
+              u.strErrorMsg,
+              u,
             ),
             l?.response?.data ?? { success: 2 }
           );
@@ -680,9 +680,9 @@
         if (e.strPriceKey == t.strPriceKey) {
           const r = (0, d.ww)(e.packageID),
             a = (0, d.ww)(t.packageID);
-          return (0, u.kd)(r, a);
+          return (0, p.kd)(r, a);
         }
-        return (0, u.kd)(G(e.strPriceKey), G(t.strPriceKey));
+        return (0, p.kd)(G(e.strPriceKey), G(t.strPriceKey));
       }
       function f(e) {
         const t = e.split("_")[0];
@@ -737,11 +737,11 @@
       function k(e) {
         const [t, r] = n.useState(g.Get().m_strDisplayPriceKey);
         return (
-          (0, p.hL)(g.Get().m_displayPriceKeyCallbackList, r),
+          (0, u.hL)(g.Get().m_displayPriceKeyCallbackList, r),
           (function (e, t) {
             const [r, a] = n.useState(g.Get().GetPrice(e, t));
             return (
-              (0, p.hL)(g.Get().GetPriceGridCellCallbackList(e, t), a),
+              (0, u.hL)(g.Get().GetPriceGridCellCallbackList(e, t), a),
               n.useEffect(() => a(g.Get().GetPrice(e, t)), [e, t]),
               y(r, t).join("")
             );
@@ -795,15 +795,15 @@
         );
       }
       function D(e, t) {
-        const r = (0, p.CH)();
-        (0, p.hL)(g.Get().GetPriceGridCellCallbackList(e, t), r);
+        const r = (0, u.CH)();
+        (0, u.hL)(g.Get().GetPriceGridCellCallbackList(e, t), r);
         const a = g.Get().GetPrice(e, t);
-        (0, p.hL)(g.Get().GetPriceGridCellCallbackList(e, "USD"), r);
+        (0, u.hL)(g.Get().GetPriceGridCellCallbackList(e, "USD"), r);
         const { nSuggestedPriceInCents: i, nGuidelinesLevel: s } = C(e, t),
           c = n.useCallback((r) => g.Get().OverridePrice(e, t, r), [e, t]),
           o = g.Get().GetPublishedPrice(e, t),
           l = g.Get().GetProposedPrice(e, t),
-          { nMinPriceInCents: u, nMaxPriceInCents: m } = L(e, t),
+          { nMinPriceInCents: p, nMaxPriceInCents: m } = L(e, t),
           d = g.Get().GetMinimumDiscountPrice(t),
           _ = a ? Math.floor((100 * (a - d)) / a) : 90,
           P = _ < Math.min(90, Math.floor((100 * (s - 50)) / s)) ? _ : null;
@@ -812,13 +812,13 @@
             nPriceInCents: a,
             nProposedPriceInCents: l,
             nPublishedPriceInCents: o,
-            nMinPriceInCents: u,
+            nMinPriceInCents: p,
             nMaxPriceInCents: m,
             nMaxDiscountPercentage: P,
             nSuggestedPriceInCents: i,
             fnSetPrice: c,
           }),
-          [a, l, o, u, m, P, i, c],
+          [a, l, o, p, m, P, i, c],
         );
       }
       function w(e) {
@@ -827,7 +827,7 @@
             let t = g.Get().BAnyPackagePriceBelowMin(e);
             r(t);
           }, [e, r]);
-        return (0, p.hL)(g.Get().GetPackageOverridesCallbackList(e), a), t;
+        return (0, u.hL)(g.Get().GetPackageOverridesCallbackList(e), a), t;
       }
       function E(e) {
         return g.Get().BAnyPackagePriceBelowMin(e);
@@ -893,11 +893,11 @@
       function K() {
         return g.Get().m_rgKnownPriceKeys;
       }
-      function V(e) {
+      function N(e) {
         let t = g.Get().m_mapPriceKeyDescriptions.get(e);
         return t ? t.strDescription : "";
       }
-      function N(e) {
+      function V(e) {
         return n.useCallback(() => {
           g.Get().DiscardAllLocalPriceOverridesForKey(e);
         }, [e]);
@@ -923,9 +923,9 @@
         return { strPriceKey: e, rgSupportedPriceKeys: r, fnSetPriceKey: a };
       }
       function W(e) {
-        const t = (0, p.CH)();
+        const t = (0, u.CH)();
         return (
-          (0, p.hL)(g.Get().m_allPriceOverridesCallbackList, t),
+          (0, u.hL)(g.Get().m_allPriceOverridesCallbackList, t),
           g.Get().BHasLocalPriceOverrides(e)
         );
       }
@@ -934,7 +934,7 @@
       }
       function F() {
         const [e, t] = n.useState(() => g.Get().GetAllLocalPriceOverrides());
-        return (0, p.hL)(g.Get().m_allPriceOverridesCallbackList, t), e;
+        return (0, u.hL)(g.Get().m_allPriceOverridesCallbackList, t), e;
       }
       function j(e) {
         return (0, _.q3)(() => g.Get().GetLocalOverrideCountForPriceKey(e));
@@ -1004,12 +1004,12 @@
           c = e == s,
           o = e == n,
           l = !c && !o,
-          p = t == s,
-          u = t == n,
-          m = !p && !u;
+          u = t == s,
+          p = t == n,
+          m = !u && !p;
         if (l && m) return e.localeCompare(t);
         if (l || m) return l ? -1 : 1;
-        if (c == p && o == u) {
+        if (c == u && o == p) {
           const e = r.getData().packageName,
             t = a.getData().packageName;
           return e && t
@@ -1043,10 +1043,10 @@
           [9, (e) => o(e, n)],
           [13, (e) => o(e, n)],
         ]);
-      function p(e) {
+      function u(e) {
         return (0, a.Kf)(e, (e) => e.classList.contains("tabulator-cell"));
       }
-      function u(e) {
+      function p(e) {
         const t = Array.prototype.slice.call(e.children).reverse();
         for (; t.length > 0; ) {
           const e = t.pop();
@@ -1058,15 +1058,15 @@
       function m(e, t) {
         const r = l.get(e.keyCode);
         if (!r) return;
-        let a = r(p(e.currentTarget));
+        let a = r(u(e.currentTarget));
         for (; a; ) {
           if (
             "none" != a.style?.display &&
             !a.classList.contains("tabulator-frozen")
           ) {
-            const r = u(a);
+            const r = p(a);
             if (r) {
-              return d(t, p(r)), r.focus(), void e.preventDefault();
+              return d(t, u(r)), r.focus(), void e.preventDefault();
             }
           }
           a = r(a);
@@ -1082,9 +1082,9 @@
           o = r + n;
         if (i >= o - c && s <= o) return;
         const l = (i + s) / 2 - (n - c / 2),
-          p = (c - a) / 4,
-          u = l + (l > r ? p : -1 * p);
-        e.columnManager.scrollHorizontal(u), e.rowManager.scrollHorizontal(u);
+          u = (c - a) / 4,
+          p = l + (l > r ? u : -1 * u);
+        e.columnManager.scrollHorizontal(p), e.rowManager.scrollHorizontal(p);
       }
     },
     70986: (e, t, r) => {
@@ -1102,7 +1102,7 @@
       }
     },
     88241: (e, t, r) => {
-      r.d(t, { Z: () => u, dV: () => l.d, rO: () => p });
+      r.d(t, { Z: () => p, dV: () => l.d, rO: () => u });
       var a = r(34629),
         i = r(14947),
         s = r(31561),
@@ -1110,7 +1110,7 @@
         c = r(61859),
         o = r(78327),
         l = r(85044);
-      function p(e) {
+      function u(e) {
         let t = "offline";
         return (
           e &&
@@ -1123,7 +1123,7 @@
           t
         );
       }
-      class u {
+      class p {
         m_steamid;
         m_bInitialized = !1;
         m_ePersonaState = 0;
@@ -1235,16 +1235,6 @@
         GetCurrentGameIconURL() {
           return this.m_unGamePlayedAppID
             ? n.Vw.GetAppInfo(this.m_unGamePlayedAppID).icon_url
-            : "";
-        }
-        GetCurrentGameLogoURL() {
-          return this.m_unGamePlayedAppID
-            ? n.Vw.GetAppInfo(this.m_unGamePlayedAppID).logo_url
-            : "";
-        }
-        GetBroadcastGameLogoURL() {
-          return this.m_broadcastAppId
-            ? n.Vw.GetAppInfo(this.m_broadcastAppId).logo_url
             : "";
         }
         BIsAppInfoReady() {
@@ -1376,28 +1366,28 @@
             : `${o.TS.COMMUNITY_BASE_URL}profiles/${this.m_steamid.ConvertTo64BitString()}/`;
         }
       }
-      (0, a.Cg)([i.sH], u.prototype, "m_bInitialized", void 0),
-        (0, a.Cg)([i.sH], u.prototype, "m_ePersonaState", void 0),
-        (0, a.Cg)([i.sH], u.prototype, "m_unGamePlayedAppID", void 0),
-        (0, a.Cg)([i.sH], u.prototype, "m_gameid", void 0),
-        (0, a.Cg)([i.sH], u.prototype, "m_unPersonaStateFlags", void 0),
-        (0, a.Cg)([i.sH], u.prototype, "m_strPlayerName", void 0),
-        (0, a.Cg)([i.sH], u.prototype, "m_strAvatarHash", void 0),
-        (0, a.Cg)([i.sH], u.prototype, "m_strAccountName", void 0),
-        (0, a.Cg)([i.sH], u.prototype, "m_rtLastSeenOnline", void 0),
-        (0, a.Cg)([i.sH], u.prototype, "m_strGameExtraInfo", void 0),
-        (0, a.Cg)([i.sH], u.prototype, "m_unGameServerIP", void 0),
-        (0, a.Cg)([i.sH], u.prototype, "m_unGameServerPort", void 0),
-        (0, a.Cg)([i.sH], u.prototype, "m_game_lobby_id", void 0),
-        (0, a.Cg)([i.sH], u.prototype, "m_bPlayerNamePending", void 0),
-        (0, a.Cg)([i.sH], u.prototype, "m_bAvatarPending", void 0),
-        (0, a.Cg)([i.sH], u.prototype, "m_broadcastId", void 0),
-        (0, a.Cg)([i.sH], u.prototype, "m_broadcastAccountId", void 0),
-        (0, a.Cg)([i.sH], u.prototype, "m_broadcastAppId", void 0),
-        (0, a.Cg)([i.sH], u.prototype, "m_broadcastViewerCount", void 0),
-        (0, a.Cg)([i.sH], u.prototype, "m_strBroadcastTitle", void 0),
-        (0, a.Cg)([i.sH], u.prototype, "m_bCommunityBanned", void 0),
-        (0, a.Cg)([i.sH], u.prototype, "m_bOnSteamDeck", void 0);
+      (0, a.Cg)([i.sH], p.prototype, "m_bInitialized", void 0),
+        (0, a.Cg)([i.sH], p.prototype, "m_ePersonaState", void 0),
+        (0, a.Cg)([i.sH], p.prototype, "m_unGamePlayedAppID", void 0),
+        (0, a.Cg)([i.sH], p.prototype, "m_gameid", void 0),
+        (0, a.Cg)([i.sH], p.prototype, "m_unPersonaStateFlags", void 0),
+        (0, a.Cg)([i.sH], p.prototype, "m_strPlayerName", void 0),
+        (0, a.Cg)([i.sH], p.prototype, "m_strAvatarHash", void 0),
+        (0, a.Cg)([i.sH], p.prototype, "m_strAccountName", void 0),
+        (0, a.Cg)([i.sH], p.prototype, "m_rtLastSeenOnline", void 0),
+        (0, a.Cg)([i.sH], p.prototype, "m_strGameExtraInfo", void 0),
+        (0, a.Cg)([i.sH], p.prototype, "m_unGameServerIP", void 0),
+        (0, a.Cg)([i.sH], p.prototype, "m_unGameServerPort", void 0),
+        (0, a.Cg)([i.sH], p.prototype, "m_game_lobby_id", void 0),
+        (0, a.Cg)([i.sH], p.prototype, "m_bPlayerNamePending", void 0),
+        (0, a.Cg)([i.sH], p.prototype, "m_bAvatarPending", void 0),
+        (0, a.Cg)([i.sH], p.prototype, "m_broadcastId", void 0),
+        (0, a.Cg)([i.sH], p.prototype, "m_broadcastAccountId", void 0),
+        (0, a.Cg)([i.sH], p.prototype, "m_broadcastAppId", void 0),
+        (0, a.Cg)([i.sH], p.prototype, "m_broadcastViewerCount", void 0),
+        (0, a.Cg)([i.sH], p.prototype, "m_strBroadcastTitle", void 0),
+        (0, a.Cg)([i.sH], p.prototype, "m_bCommunityBanned", void 0),
+        (0, a.Cg)([i.sH], p.prototype, "m_bOnSteamDeck", void 0);
     },
     14336: (e, t, r) => {
       r.d(t, { z0: () => h, DW: () => g, js: () => P });
@@ -1408,15 +1398,15 @@
         c = r(44654),
         o = r(88241),
         l = r(17720),
-        p = r(72963),
-        u = r(37735),
+        u = r(72963),
+        p = r(37735),
         m = r(58632),
         d = r.n(m);
       function _(e, t) {
         return new (d())(
           async (t) => {
             const r = [...t],
-              a = await u.xt.GetPlayerLinkDetails(e, { steamids: r }),
+              a = await p.xt.GetPlayerLinkDetails(e, { steamids: r }),
               i = new Map();
             return (
               a
@@ -1443,7 +1433,7 @@
         return (0, s.E)({ queries: e.map((e) => y(r, t, e)) });
       }
       function h(e) {
-        return p.L.getQueryData(["PlayerSummary", e]);
+        return u.L.getQueryData(["PlayerSummary", e]);
       }
       const f = a.createContext({
         loadPersonaState: async (e, t) => {
@@ -1485,7 +1475,7 @@
       let S;
     },
     11577: (e, t, r) => {
-      r.d(t, { a: () => u, m: () => l });
+      r.d(t, { a: () => p, m: () => l });
       var a = r(90626),
         i = r(96059),
         s = r(16021),
@@ -1494,7 +1484,7 @@
         o = r(38452);
       function l(e) {
         const [t, r] = (0, a.useState)(!1),
-          [i] = (0, a.useState)(() => p()),
+          [i] = (0, a.useState)(() => u()),
           s = (0, a.useMemo)(
             () => ({
               country: c.TS.COUNTRY,
@@ -1517,7 +1507,7 @@
             : null
         );
       }
-      function p() {
+      function u() {
         const e = (0, c.Tc)("partnerbrowse_webapi_token", "application_config");
         (0, n.w)(Boolean(e), "require partnerbrowse_webapi_token");
         const t = new i.D(c.TS.WEBAPI_BASE_URL, e);
@@ -1530,8 +1520,8 @@
           t
         );
       }
-      async function u(e = !1) {
-        if (!e || !s.A.BIsInitialized()) return m(p());
+      async function p(e = !1) {
+        if (!e || !s.A.BIsInitialized()) return m(u());
       }
       async function m(e) {
         return s.A.Initialize(e, c.iA.is_partner_member);

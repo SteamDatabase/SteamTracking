@@ -6,12 +6,6 @@
   {
     74761: (e, t, n) => {
       "use strict";
-      /*!
-       * The buffer module from node.js, for the browser.
-       *
-       * @author   Feross Aboukhadijeh <https://feross.org>
-       * @license  MIT
-       */
       const r = n(71944),
         o = n(61621),
         i =
@@ -1422,7 +1416,6 @@
       }
     },
     61621: (e, t) => {
-      /*! ieee754. BSD-3-Clause License. Feross Aboukhadijeh <https://feross.org/opensource> */
       (t.read = function (e, t, n, r, o) {
         var i,
           a,

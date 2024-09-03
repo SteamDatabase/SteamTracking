@@ -5,12 +5,7 @@
   {
     40323: function (e, t) {
       var n, r, a;
-      /* @license
-Papa Parse
-v5.4.1
-https://github.com/mholt/PapaParse
-License: MIT
-*/ (r = []),
+      (r = []),
         (n = function e() {
           "use strict";
           var t =
@@ -1137,15 +1132,7 @@ License: MIT
     },
     81875: (e, t, n) => {
       "use strict";
-      /**
-       * @license React
-       * react-dom-server-legacy.browser.production.min.js
-       *
-       * Copyright (c) Facebook, Inc. and its affiliates.
-       *
-       * This source code is licensed under the MIT license found in the
-       * LICENSE file in the root directory of this source tree.
-       */ var r = n(90626);
+      var r = n(90626);
       function a(e) {
         for (
           var t = "https://reactjs.org/docs/error-decoder.html?invariant=" + e,
@@ -3121,15 +3108,7 @@ License: MIT
     },
     62885: (e, t, n) => {
       "use strict";
-      /**
-       * @license React
-       * react-dom-server.browser.production.min.js
-       *
-       * Copyright (c) Facebook, Inc. and its affiliates.
-       *
-       * This source code is licensed under the MIT license found in the
-       * LICENSE file in the root directory of this source tree.
-       */ var r = n(90626);
+      var r = n(90626);
       function a(e) {
         for (
           var t = "https://reactjs.org/docs/error-decoder.html?invariant=" + e,

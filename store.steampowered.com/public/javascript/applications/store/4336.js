@@ -140,16 +140,6 @@
             ? i.Vw.GetAppInfo(this.m_unGamePlayedAppID).icon_url
             : "";
         }
-        GetCurrentGameLogoURL() {
-          return this.m_unGamePlayedAppID
-            ? i.Vw.GetAppInfo(this.m_unGamePlayedAppID).logo_url
-            : "";
-        }
-        GetBroadcastGameLogoURL() {
-          return this.m_broadcastAppId
-            ? i.Vw.GetAppInfo(this.m_broadcastAppId).logo_url
-            : "";
-        }
         BIsAppInfoReady() {
           return (
             !this.m_unGamePlayedAppID ||
@@ -303,7 +293,7 @@
         (0, r.Cg)([s.sH], c.prototype, "m_bOnSteamDeck", void 0);
     },
     14336: (e, t, a) => {
-      a.d(t, { mK: () => P, DW: () => h, js: () => d, tb: () => y });
+      a.d(t, { mK: () => P, DW: () => h, js: () => p, tb: () => y });
       var r = a(90626),
         s = a(20194),
         n = a(54806),
@@ -314,7 +304,7 @@
         u = (a(72963), a(37735)),
         c = a(58632),
         l = a.n(c);
-      function p(e, t) {
+      function d(e, t) {
         return new (l())(
           async (t) => {
             const a = [...t],
@@ -334,7 +324,7 @@
           { maxBatchSize: 100, ...t },
         );
       }
-      function d(e) {
+      function p(e) {
         const t = (0, i.KV)(),
           a = r.useContext(g);
         return (0, s.I)(P(a, t, e));
@@ -348,7 +338,7 @@
         loadPersonaState: async (e, t) => {
           if (null == e) return null;
           const a = await (function (e) {
-            return (f ??= p(e));
+            return (S ??= d(e));
           })(t).load(m.b.InitFromAccountID(e).ConvertTo64BitString());
           return (function (e, t) {
             let a = new _.Z(e);
@@ -384,7 +374,7 @@
           enabled: !!r,
         };
       }
-      let f;
+      let S;
     },
   },
 ]);

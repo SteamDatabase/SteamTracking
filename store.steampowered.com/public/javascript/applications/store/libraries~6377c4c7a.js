@@ -1697,14 +1697,13 @@
                   for (var t = 1; t < arguments.length; t++) {
                     var r = arguments[t];
                     for (var n in r)
-                      Object.prototype.hasOwnProperty.call(r, n) &&
-                        (e[n] = r[n]);
+                      ({}).hasOwnProperty.call(r, n) && (e[n] = r[n]);
                   }
                   return e;
                 }),
           (e.exports.__esModule = !0),
           (e.exports.default = e.exports),
-          t.apply(this, arguments)
+          t.apply(null, arguments)
         );
       }
       (e.exports = t),
@@ -1724,13 +1723,13 @@
     37501: (e) => {
       (e.exports = function (e, t) {
         if (null == e) return {};
-        var r,
-          n,
-          i = {},
-          a = Object.keys(e);
-        for (n = 0; n < a.length; n++)
-          (r = a[n]), t.indexOf(r) >= 0 || (i[r] = e[r]);
-        return i;
+        var r = {};
+        for (var n in e)
+          if ({}.hasOwnProperty.call(e, n)) {
+            if (t.includes(n)) continue;
+            r[n] = e[n];
+          }
+        return r;
       }),
         (e.exports.__esModule = !0),
         (e.exports.default = e.exports);

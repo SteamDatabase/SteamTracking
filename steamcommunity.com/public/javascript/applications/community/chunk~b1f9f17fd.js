@@ -13494,7 +13494,7 @@
         Ee = a(91254),
         ye = a(3919),
         be = a(4796),
-        fe = a(12493);
+        fe = a(67165);
       class we {
         BHasSolrEvent(e) {
           return this.m_mapEventGIDToSolrData.has(e);
@@ -32186,7 +32186,7 @@
       a.d(t, { LG: () => b, hA: () => y });
       var n = a(90626),
         i = a(32381),
-        r = a(12493),
+        r = a(67165),
         o = a(30894),
         s = a(55263),
         l = a(17289),
@@ -42295,6 +42295,9 @@
               SaleBackgroundCtn: !0,
               ContentHubSalePage: _,
             }),
+            onClick: () => {
+              0;
+            },
           },
           i.createElement(
             "div",
@@ -46008,7 +46011,7 @@
         i = a(90626),
         r = a(17720),
         o = a(27666),
-        s = a(12493),
+        s = a(67165),
         l = a(41312),
         c = a(96971),
         d = a(95695),
@@ -61254,42 +61257,105 @@
               index: -1,
               rowDelta: 0,
               actualRowHeight: 0,
+              actualRowWidth: 0,
             }),
             (this.container = null),
+            (this.rgItemRefs = []),
             (this.m_cancelSignal = g().CancelToken.source()),
             (this.container = i.createRef());
         }
         componentDidMount() {
-          this.container.current &&
-            this.container.current.firstElementChild &&
-            this.setState({
-              actualRowHeight:
-                this.container.current.firstElementChild.getBoundingClientRect()
-                  .height,
-            });
+          this.UpdateRowDimensionState();
         }
         componentWillUnmount() {
           this.m_cancelSignal.cancel("ReorderableList unmounting");
         }
-        OnWhitelistGrab(e, t) {
-          if (!this.m_cancelSignal.token.reason) {
-            const a = e.clientY;
-            this.setState({ bGrabbing: !0, startY: a, index: t }),
-              window.addEventListener("mousemove", this.OnWhitelistMove),
-              window.addEventListener("mouseup", this.OnWhitelistRelease);
-          }
+        UpdateRowDimensionState() {
+          var e;
+          (null === (e = this.container.current) || void 0 === e
+            ? void 0
+            : e.firstElementChild) &&
+            this.setState({
+              actualRowHeight:
+                this.container.current.firstElementChild.getBoundingClientRect()
+                  .height,
+              actualRowWidth:
+                this.container.current.firstElementChild.getBoundingClientRect()
+                  .width,
+            });
         }
-        OnWhitelistRelease(e) {
+        StartGrabElement(e, t) {
+          var a;
+          const n =
+            null === (a = this.rgItemRefs[e]) || void 0 === a
+              ? void 0
+              : a.current;
+          n
+            ? (this.setState({ bGrabbing: !0, startY: t.clientY, index: e }),
+              (n.style.position = "fixed"),
+              (n.style.left = t.clientX + "px"),
+              (n.style.top = t.clientY + "px"),
+              (n.style.zIndex = "1"),
+              window.addEventListener("mousemove", this.OnGrabItemMove),
+              window.addEventListener("mouseup", this.OnGrabItemRelease))
+            : console.error("start element grab missing element at index " + e);
+        }
+        UpdateGrabElementPosition(e) {
+          var t;
+          const a =
+            null === (t = this.rgItemRefs[this.state.index]) || void 0 === t
+              ? void 0
+              : t.current;
+          a
+            ? ((a.style.left = e.clientX + "px"),
+              (a.style.top = e.clientY + "px"))
+            : console.error("update grab element missing element");
+        }
+        EndGrabElement() {
+          var e;
+          window.removeEventListener("mousemove", this.OnGrabItemMove),
+            window.removeEventListener("mouseup", this.OnGrabItemRelease);
+          const t =
+            null === (e = this.rgItemRefs[this.state.index]) || void 0 === e
+              ? void 0
+              : e.current;
+          t
+            ? ((t.style.position = ""), (t.style.zIndex = ""))
+            : console.error("end element drag missing element"),
+            this.setState({ bGrabbing: !1, startY: 0, index: -1, rowDelta: 0 });
+        }
+        OnListItemGrab(e, t) {
+          var a;
           this.m_cancelSignal.token.reason ||
-            (this.setState({
-              bGrabbing: !1,
-              startY: 0,
-              index: -1,
-              rowDelta: 0,
-            }),
-            window.removeEventListener("mousemove", this.OnWhitelistMove));
+            ((null === (a = this.container.current.firstElementChild) ||
+            void 0 === a
+              ? void 0
+              : a.getBoundingClientRect().height) > 0 &&
+              this.state.actualRowHeight !=
+                this.container.current.firstElementChild.getBoundingClientRect()
+                  .height &&
+              this.UpdateRowDimensionState(),
+            this.StartGrabElement(t, e));
         }
-        OnWhitelistMove(e) {
+        OnGrabItemRelease(e) {
+          if (this.m_cancelSignal.token.reason) return;
+          this.EndGrabElement();
+          const t = e.clientY - this.state.startY,
+            a = Boolean(this.props.fixedRowHeight)
+              ? this.props.fixedRowHeight
+              : this.state.actualRowHeight,
+            n = Math.min(
+              Math.round(t / a),
+              this.props.items.length - this.state.index - 1,
+            ),
+            i = h.OQ(this.state.index + n, 0, this.props.items.length - 1);
+          this.props.onMove
+            ? this.props.onMove(this.state.index, i)
+            : (0, l.yY)(this.props.items, this.state.index, i),
+            this.props.onReorder && this.props.onReorder(this.props.items);
+        }
+        OnGrabItemMove(e) {
+          if (this.m_cancelSignal.token.reason) return;
           const t = e.clientY - this.state.startY,
             a = Boolean(this.props.fixedRowHeight)
               ? this.props.fixedRowHeight
@@ -61298,73 +61364,93 @@
               Math.round(t / a),
               this.props.items.length - this.state.index - 1,
             );
-          if (n !== this.state.rowDelta) {
-            const e = this.state.index + this.state.rowDelta,
-              t = h.OQ(this.state.index + n, 0, this.props.items.length - 1);
-            this.m_cancelSignal.token.reason ||
-              (this.props.onMove
-                ? this.props.onMove(e, t)
-                : (0, l.yY)(this.props.items, e, t),
-              this.setState({ rowDelta: n }),
-              this.props.onReorder && this.props.onReorder());
-          }
+          n !== this.state.rowDelta && this.setState({ rowDelta: n }),
+            this.UpdateGrabElementPosition(e);
         }
         render() {
-          const { render: e } = this.props;
+          const { render: e } = this.props,
+            t = Boolean(this.props.fixedRowHeight)
+              ? this.props.fixedRowHeight
+              : this.state.actualRowHeight;
+          for (let e = this.rgItemRefs.length; e < this.props.items.length; e++)
+            this.rgItemRefs.push(i.createRef());
           return i.createElement(
             "div",
             { className: d().WhitelistCtn, ref: this.container },
-            this.props.items.map((t, a) =>
+            this.props.items.map((a, n) =>
               i.createElement(
                 "div",
-                {
-                  key: a,
-                  className: `${d().WhitelistRow}`,
-                  style: Boolean(this.props.fixedRowHeight)
-                    ? { height: this.props.fixedRowHeight }
-                    : {},
-                },
-                i.createElement("img", {
-                  className: `${d().WhitelistAvatar} ${d().Grabbable} ${this.state.bGrabbing ? d().Grabbing : ""} ${this.props.bDisabled ? d().DisabledGrab : ""}`,
-                  src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAeCAYAAAAo5+5WAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gEEFRg0nBijuQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAw0lEQVRIx+2WMQqDMBSG/xedEnCp3kFzh56gN+iN7SrFLsEDmElwDHGyFNEYlQyF/FPgvXx5fMsL3R9P+CRJEgsAxhjy6We+UClLSFl+H7gMnqGcC3AuvOHMFzrHF86OQI/A062CMYaa5o2zYQiUNMsyGwRcVWWQicOpaNsPooqoIqqIKvYmrusX/dXE4VS4lqkQwnl5HMfND4xzmRbFzeZ5sVrXuscwDHRKhVIdad2vQpXq6JLjJdwH6lSxhAOwP+fdTHcfVDuVWnTzAAAAAElFTkSuQmCC",
-                  onMouseDown: Boolean(this.props.bDisabled)
-                    ? void 0
-                    : (e) => this.OnWhitelistGrab(e, a),
-                }),
+                { key: n },
+                this.state.rowDelta < 0 &&
+                  n == this.state.index + this.state.rowDelta &&
+                  i.createElement("div", {
+                    className: d().DragDestination,
+                    style: { width: this.state.actualRowWidth },
+                  }),
                 i.createElement(
                   "div",
-                  { className: d().WhitelistNumber },
-                  a + 1,
-                ),
-                e(t, a),
-                Boolean(this.props.onEdit || this.props.onDelete) &&
-                  i.createElement(
-                    "div",
-                    { className: d().ButtonCtn },
-                    Boolean(this.props.onEdit) &&
-                      i.createElement(
-                        "div",
-                        {
+                  {
+                    ref: this.rgItemRefs[n],
+                    className: `${d().WhitelistRow}`,
+                    style: Boolean(this.props.fixedRowHeight)
+                      ? { height: this.props.fixedRowHeight }
+                      : {},
+                  },
+                  i.createElement("img", {
+                    className: `${d().WhitelistAvatar} ${d().Grabbable} ${this.state.bGrabbing ? d().Grabbing : ""} ${this.props.bDisabled ? d().DisabledGrab : ""}`,
+                    src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAeCAYAAAAo5+5WAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gEEFRg0nBijuQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAw0lEQVRIx+2WMQqDMBSG/xedEnCp3kFzh56gN+iN7SrFLsEDmElwDHGyFNEYlQyF/FPgvXx5fMsL3R9P+CRJEgsAxhjy6We+UClLSFl+H7gMnqGcC3AuvOHMFzrHF86OQI/A062CMYaa5o2zYQiUNMsyGwRcVWWQicOpaNsPooqoIqqIKvYmrusX/dXE4VS4lqkQwnl5HMfND4xzmRbFzeZ5sVrXuscwDHRKhVIdad2vQpXq6JLjJdwH6lSxhAOwP+fdTHcfVDuVWnTzAAAAAElFTkSuQmCC",
+                    onMouseDown: Boolean(this.props.bDisabled)
+                      ? void 0
+                      : (e) => this.OnListItemGrab(e, n),
+                  }),
+                  Boolean(n != this.state.index) &&
+                    i.createElement(
+                      "div",
+                      { className: d().WhitelistNumber },
+                      n + 1,
+                    ),
+                  e(a, n),
+                  Boolean(n != this.state.index) &&
+                    Boolean(this.props.onEdit || this.props.onDelete) &&
+                    i.createElement(
+                      "div",
+                      { className: d().ButtonCtn },
+                      Boolean(this.props.onEdit) &&
+                        i.createElement(
+                          "div",
+                          {
+                            className: m().RemoveIcon,
+                            onClick: (e) => this.props.onEdit(n, e),
+                          },
+                          i.createElement(_.ffu, null),
+                        ),
+                      Boolean(this.props.onDelete) &&
+                        i.createElement("img", {
                           className: m().RemoveIcon,
-                          onClick: (e) => this.props.onEdit(a, e),
-                        },
-                        i.createElement(_.ffu, null),
-                      ),
-                    Boolean(this.props.onDelete) &&
-                      i.createElement("img", {
-                        className: m().RemoveIcon,
-                        src: s.A,
-                        onClick: (e) => this.props.onDelete(a, e),
-                      }),
-                  ),
+                          src: s.A,
+                          onClick: (e) => this.props.onDelete(n, e),
+                        }),
+                    ),
+                ),
+                n == this.state.index &&
+                  i.createElement("div", {
+                    className: d().DragElementStart,
+                    style: { height: t },
+                  }),
+                this.state.rowDelta > 0 &&
+                  n == this.state.index + this.state.rowDelta &&
+                  i.createElement("div", {
+                    className: d().DragDestination,
+                    style: { width: this.state.actualRowWidth },
+                  }),
               ),
             ),
           );
         }
       };
-      (0, n.Cg)([o.oI], v.prototype, "OnWhitelistGrab", null),
-        (0, n.Cg)([o.oI], v.prototype, "OnWhitelistRelease", null),
-        (0, n.Cg)([o.oI], v.prototype, "OnWhitelistMove", null),
+      (0, n.Cg)([o.oI], v.prototype, "OnListItemGrab", null),
+        (0, n.Cg)([o.oI], v.prototype, "OnGrabItemRelease", null),
+        (0, n.Cg)([o.oI], v.prototype, "OnGrabItemMove", null),
         (v = (0, n.Cg)([r.PA], v));
     },
     60801: (e, t, a) => {
@@ -61782,7 +61868,7 @@
       });
       var f = a(17720),
         w = a(4796),
-        C = a(12493),
+        C = a(67165),
         T = a(30894),
         I = a(13952),
         D = a(29863),

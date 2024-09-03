@@ -20,15 +20,7 @@
         d = Symbol.for("react.memo"),
         h = Symbol.for("react.lazy"),
         w = Symbol.for("react.offscreen");
-      /**
-       * @license React
-       * react-is.production.min.js
-       *
-       * Copyright (c) Facebook, Inc. and its affiliates.
-       *
-       * This source code is licensed under the MIT license found in the
-       * LICENSE file in the root directory of this source tree.
-       */ function m(e) {
+      function m(e) {
         if ("object" == typeof e && null !== e) {
           var t = e.$$typeof;
           switch (t) {

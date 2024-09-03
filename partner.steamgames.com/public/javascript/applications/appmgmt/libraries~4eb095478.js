@@ -6707,14 +6707,7 @@
         m = 60117,
         b = 60129,
         h = 60131;
-      /** @license React v17.0.2
-       * react-is.production.min.js
-       *
-       * Copyright (c) Facebook, Inc. and its affiliates.
-       *
-       * This source code is licensed under the MIT license found in the
-       * LICENSE file in the root directory of this source tree.
-       */ if ("function" == typeof Symbol && Symbol.for) {
+      if ("function" == typeof Symbol && Symbol.for) {
         var y = Symbol.for;
         (t = y("react.element")),
           (n = y("react.portal")),
@@ -6836,7 +6829,7 @@
           }
           return ("string" === r ? String : Number)(e);
         })(e, "string");
-        return "symbol" == (0, n.A)(r) ? r : String(r);
+        return "symbol" == (0, n.A)(r) ? r : r + "";
       }
     },
     11052: (e, r, t) => {

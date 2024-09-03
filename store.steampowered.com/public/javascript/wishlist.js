@@ -95,7 +95,6 @@ var CWishlistController = function( bNotificationFilter = false )
 		$J('#section_filters').removeClass('hover');
 	});
 
-	window.addEventListener('scroll', this.OnUserScroll.bind(this)); // register a callback which ONLY fires when user takes action.  this.OnScroll is also called by our JS.
 	window.addEventListener('scroll', this.OnScroll.bind(this));
 	window.addEventListener('resize', this.OnScroll.bind(this));
 	window.addEventListener('resize', this.OnResize.bind(this));
@@ -1187,16 +1186,26 @@ CWishlistController.prototype.OnUserScroll = function()
 }
 CWishlistController.prototype.ScrollToRequestedPosition = function()
 {
-	var _this = this;
-
 	if ( window.history.state && window.history.state.wishlistScroll != null )
 	{
 		window.scrollTo( 0, window.history.state.wishlistScroll );
 	}
-	else if ( _this.scrollToAppID !== -1 )
+	else if ( this.scrollToAppID !== -1 )
 	{
 		// A delay is needed so on mobile devices the in-app webview scrolls to the correct position.  It also looks nice to show the top of the page briefly before we auto-scroll within.
-		window.setTimeout( function(){ document.getElementById( 'wishlist_row_' + _this.scrollToAppID )?.scrollIntoView( { behavior: "smooth", block: 'start' } ); }, 500 );
+		var _this = this;
+		window.setTimeout( function()
+		{
+						var iPos = _this.GetPositionForAppId( '' + _this.scrollToAppID );
+			if ( iPos >= 0 )
+			{
+				var nOffset = iPos * _this.nRowHeight;
+				window.scrollTo( { top: nOffset, behavior: nOffset > 5000 ? "auto" : "smooth" } );
+			}
+		}, 500 );
 	}
+
+	// now that we've finished loading, bind the user scroll event
+	window.addEventListener('scroll', this.OnUserScroll.bind(this)); // register a callback which ONLY fires when user takes action.  this.OnScroll is also called by our JS.
 }
 

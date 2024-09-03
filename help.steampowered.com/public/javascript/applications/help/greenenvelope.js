@@ -12181,16 +12181,6 @@
             ? Xi.GetAppInfo(this.m_unGamePlayedAppID).icon_url
             : "";
         }
-        GetCurrentGameLogoURL() {
-          return this.m_unGamePlayedAppID
-            ? Xi.GetAppInfo(this.m_unGamePlayedAppID).logo_url
-            : "";
-        }
-        GetBroadcastGameLogoURL() {
-          return this.m_broadcastAppId
-            ? Xi.GetAppInfo(this.m_broadcastAppId).logo_url
-            : "";
-        }
         BIsAppInfoReady() {
           return (
             !this.m_unGamePlayedAppID ||

@@ -2602,6 +2602,8 @@
             (e[(e.k_EGamingDeviceType_PS3 = 272)] = "k_EGamingDeviceType_PS3"),
             (e[(e.k_EGamingDeviceType_Steambox = 288)] =
               "k_EGamingDeviceType_Steambox"),
+            (e[(e.k_EGamingDeviceType_Tesla = 320)] =
+              "k_EGamingDeviceType_Tesla"),
             (e[(e.k_EGamingDeviceType_Handheld = 512)] =
               "k_EGamingDeviceType_Handheld"),
             (e[(e.k_EGamingDeviceType_Phone = 528)] =
@@ -18187,8 +18189,10 @@
               const r = e.Element;
               if (!r) return;
               let n = [e];
-              for (let t = e.Parent; t; t = t.Parent)
-                t.m_Properties?.scrollIntoViewWhenChildFocused && n.push(t);
+              for (let t = e.Parent; t; t = t.Parent) {
+                const e = t.m_Properties?.scrollIntoViewWhenChildFocused;
+                "force" === e ? (n = [t]) : e && n.push(t);
+              }
               for (; n.length; ) {
                 let r = n.pop(),
                   i = 0 == n.length,
@@ -19084,19 +19088,11 @@
         get name() {
           return this.m_strName;
         }
-        get header_image_url() {
-          return n.TS.STORE_ICON_BASE_URL + `${this.m_unAppID}/header.jpg`;
-        }
         get icon_url_no_default() {
           return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, a);
         }
         get icon_url() {
           return this.BuildAppURL(this.m_strIconURL, a);
-        }
-        get logo_url() {
-          return (
-            n.TS.STORE_ICON_BASE_URL + `${this.m_unAppID}/capsule_231x87.jpg`
-          );
         }
         get time_updated_from_server() {
           return this.m_dtUpdatedFromServer;
@@ -28840,6 +28836,7 @@
             bRegisterModalManager: f,
           });
           e.bRenderOverlayAtRoot &&
+            "undefined" != typeof document &&
             "body" in document &&
             (w = i.createPortal(w, document.body)),
             (0, s.D5)(l, b.current),
@@ -33823,107 +33820,74 @@
     },
     60778: (e, t, r) => {
       "use strict";
-      r.d(t, { wd: () => c });
-      var n = r(34629),
-        i = r(10333),
-        s = r(77350),
-        o = r(6144);
-      const a = [
-        "ActionDescription",
-        "Backstack",
-        "BrowserBackstack",
-        "GroupMemberStore",
-        "Chat",
-        "ChatRoom",
-        "ChatRoomGroup",
-        "ChatHistory",
-        "CompositionState",
-        "AppOverviewImplObservable",
-        "ReducedValue",
-        "FocusNavigation",
-        "FocusNavigationMovement",
-        "GamepadEvents",
-        "VirtualKeyboard",
-        "LibraryUIStore/BasicUIStore",
-        "SystemNetworkStore",
-        "SteamClient",
-        "AudioPlaybackManager",
-        "LaunchStates",
-        "Haptics",
-        "ControllerConfigurator",
-        "FriendsUI/RemotePlay",
-        "SalePage",
-        "VR",
-        "VRWebRTC",
-        "VRDashboardPopupStore",
-        "VRGamepadUIMessages",
-        "VRPathProperties",
-      ];
-      var l;
+      r.d(t, { wd: () => l });
+      var n,
+        i = r(34629),
+        s = r(10333),
+        o = r(77350),
+        a = r(6144);
       !(function (e) {
         (e[(e.Debug = 0)] = "Debug"),
           (e[(e.Info = 1)] = "Info"),
           (e[(e.Warning = 2)] = "Warning"),
           (e[(e.Error = 3)] = "Error");
-      })(l || (l = {}));
-      class c {
+      })(n || (n = {}));
+      class l {
         m_sName;
         m_fnIdGenerator = void 0;
         constructor(e, t) {
           (this.m_sName = e),
             (this.m_fnIdGenerator = t),
-            u.Get().RegisterLogName(e);
+            c.Get().RegisterLogName(e);
         }
         Debug(...e) {
-          this.Log(l.Debug, ...e);
+          this.Log(n.Debug, ...e);
         }
         Info(...e) {
-          this.Log(l.Info, ...e);
+          this.Log(n.Info, ...e);
         }
         Warning(...e) {
-          this.Log(l.Warning, ...e);
+          this.Log(n.Warning, ...e);
         }
         Error(...e) {
-          this.Log(l.Error, ...e);
+          this.Log(n.Error, ...e);
         }
         Assert(e, ...t) {
-          e || this.Log(l.Error, "Assertion failed:", ...t);
+          e || this.Log(n.Error, "Assertion failed:", ...t);
         }
         IsDebugEnabled() {
-          return u.Get().IsDebugLogEnabled(this.m_sName);
+          return c.Get().IsDebugLogEnabled(this.m_sName);
         }
         Log(e, ...t) {
-          const r = u.Get().IsDebugLogEnabled(this.m_sName);
-          if (e == l.Debug && !r) return;
-          let n = this.m_sName;
-          const i = this.m_fnIdGenerator?.() ?? null;
-          null != i && (n += " (" + i + ")");
-          m(e, r, u.Get().IncludeBacktraceInLog, n, this.m_sName, ...t);
+          const r = c.Get().IsDebugLogEnabled(this.m_sName);
+          if (e == n.Debug && !r) return;
+          let i = this.m_sName;
+          const s = this.m_fnIdGenerator?.() ?? null;
+          null != s && (i += " (" + s + ")");
+          u(e, r, c.Get().IncludeBacktraceInLog, i, this.m_sName, ...t);
         }
       }
-      (0, n.Cg)([i.o], c.prototype, "Debug", null),
-        (0, n.Cg)([i.o], c.prototype, "Info", null),
-        (0, n.Cg)([i.o], c.prototype, "Warning", null),
-        (0, n.Cg)([i.o], c.prototype, "Error", null),
-        (0, n.Cg)([i.o], c.prototype, "Assert", null);
-      class u {
+      (0, i.Cg)([s.o], l.prototype, "Debug", null),
+        (0, i.Cg)([s.o], l.prototype, "Info", null),
+        (0, i.Cg)([s.o], l.prototype, "Warning", null),
+        (0, i.Cg)([s.o], l.prototype, "Error", null),
+        (0, i.Cg)([s.o], l.prototype, "Assert", null);
+      class c {
         static k_EnabledLogNames_StorageKey = "EnabledWebLogs";
         static k_IncludeBacktraceInLog_StorageKey = "IncludeBacktraceInLog";
         static s_Singleton = null;
         m_Storage = null;
-        m_rgLogNames;
+        m_setKnownDebugLogs = new Set();
         m_setEnabledDebugLogs = new Set();
         m_bIncludeBacktraceInLog = !1;
-        m_SettingsChangedCallback = new o.lu();
+        m_SettingsChangedCallback = new a.lu();
         m_bLoading = !1;
         constructor() {
-          (this.m_Storage = new s.A()),
-            (this.m_rgLogNames = a.slice()),
-            this.LoadSettings();
+          (this.m_Storage = new o.A()), this.LoadSettings();
         }
         LogAsLogManager(...e) {
-          m(
-            l.Info,
+          u(
+            n.Info,
             !0,
             this.IncludeBacktraceInLog,
             "LogManager",
@@ -33934,27 +33898,28 @@
         async LoadSettings() {
           (this.m_bLoading = !0),
             (this.m_bIncludeBacktraceInLog = !!(await this.m_Storage?.GetObject(
-              u.k_IncludeBacktraceInLog_StorageKey,
+              c.k_IncludeBacktraceInLog_StorageKey,
             )));
           const e = await this.m_Storage?.GetObject(
-            u.k_EnabledLogNames_StorageKey,
+            c.k_EnabledLogNames_StorageKey,
           );
-          Array.isArray(e) &&
-            ((this.m_setEnabledDebugLogs = new Set(e)),
+          if (Array.isArray(e)) {
+            this.m_setEnabledDebugLogs = new Set(e);
+            for (const t of e) this.m_setKnownDebugLogs.add(t);
             this.LogAsLogManager(
               "Loaded debug enabled log names. Will print log messages for:",
               Array.from(this.m_setEnabledDebugLogs),
-            )),
-            (this.m_bLoading = !1),
-            this.m_SettingsChangedCallback.Dispatch();
+            );
+          } else 0;
+          (this.m_bLoading = !1), this.m_SettingsChangedCallback.Dispatch();
         }
         async SaveSettings() {
           await this.m_Storage?.StoreObject(
-            u.k_EnabledLogNames_StorageKey,
+            c.k_EnabledLogNames_StorageKey,
             Array.from(this.m_setEnabledDebugLogs),
           ),
             await this.m_Storage?.StoreObject(
-              u.k_IncludeBacktraceInLog_StorageKey,
+              c.k_IncludeBacktraceInLog_StorageKey,
               this.m_bIncludeBacktraceInLog,
             ),
             this.LogAsLogManager(
@@ -33964,20 +33929,20 @@
         }
         static Get() {
           return (
-            null == u.s_Singleton && (u.s_Singleton = new u()), u.s_Singleton
+            null == c.s_Singleton && (c.s_Singleton = new c()), c.s_Singleton
           );
         }
         get Loading() {
           return this.m_bLoading;
         }
         get LogNames() {
-          return this.m_rgLogNames;
+          return this.m_setKnownDebugLogs.values();
         }
         RegisterLogName(e) {
-          this.m_rgLogNames.includes(e) || this.m_rgLogNames.push(e);
+          this.m_setKnownDebugLogs.add(e);
         }
         IsLogName(e) {
-          return this.m_rgLogNames.includes(e);
+          return this.m_setKnownDebugLogs.has(e);
         }
         IsDebugLogEnabled(e) {
           return this.m_setEnabledDebugLogs.has(e);
@@ -33993,7 +33958,9 @@
             await this.SaveSettings();
         }
         async SetAllDebugLogsEnabled(e) {
-          (this.m_setEnabledDebugLogs = new Set(e ? a : [])),
+          (this.m_setEnabledDebugLogs = e
+            ? new Set(this.m_setKnownDebugLogs)
+            : new Set()),
             this.m_SettingsChangedCallback.Dispatch(),
             await this.SaveSettings();
         }
@@ -34009,50 +33976,50 @@
             await this.SaveSettings();
         }
       }
-      function m(e, t, r, n, i, ...s) {
-        const o = (function (e) {
+      function u(e, t, r, i, s, ...o) {
+        const a = (function (e) {
             let t = 0;
             for (let r = 0; r < e.length; r++)
               t = e.charCodeAt(r) + ((t << 5) - t);
             return [(t >> 0) & 255, (t >> 8) & 255, (t >> 16) & 255];
-          })(i).map((e, t) =>
+          })(s).map((e, t) =>
             Math.round(
               Math.max(0, Math.min(255, 255 * (0.8 * (e / 255 - 0.5) + 0.15))),
             ),
           ),
-          a = (299 * (c = o)[0] + 587 * c[1] + 114 * c[2]) / 1e3 >= 128;
+          l = (299 * (c = a)[0] + 587 * c[1] + 114 * c[2]) / 1e3 >= 128;
         var c;
-        let u = n;
+        let u = i;
         r &&
           (u =
             (function (e) {
               switch (e) {
-                case l.Debug:
+                case n.Debug:
                   return String.fromCodePoint(128027);
-                case l.Info:
+                case n.Info:
                   return String.fromCodePoint(8505);
-                case l.Warning:
+                case n.Warning:
                   return String.fromCodePoint(9888);
-                case l.Error:
+                case n.Error:
                   return String.fromCodePoint(128165);
               }
             })(e) +
             " " +
             u);
         const m =
-            s.length >= 1 && "string" == typeof s[0] && s[0].includes("%c"),
-          d = m && s.shift();
+            o.length >= 1 && "string" == typeof o[0] && o[0].includes("%c"),
+          d = m && o.shift();
         let p;
         if (
           ((p = t
             ? [
                 `%c${u}%c:${m ? " %c" + d : ""}`,
-                `color: ${a ? "black" : "white"}; background: rgb(${o.join(",")}); padding: 0 1ch; border-radius: 3px;`,
+                `color: ${l ? "black" : "white"}; background: rgb(${a.join(",")}); padding: 0 1ch; border-radius: 3px;`,
                 "color: transparent; margin-right: -1ch",
                 ...(m ? [""] : []),
-                ...s,
+                ...o,
               ]
-            : s),
+            : o),
           r)
         )
           console.groupCollapsed(...p),
@@ -34060,36 +34027,36 @@
             console.groupEnd();
         else
           switch (e) {
-            case l.Debug:
-            case l.Info:
+            case n.Debug:
+            case n.Info:
               console.log(...p);
               break;
-            case l.Warning:
+            case n.Warning:
               console.warn(...p);
               break;
-            case l.Error:
+            case n.Error:
               console.clogerror
                 ? console.clogerror(3, ...p)
                 : console.error(...p);
           }
       }
-      const d = () => u.Get().LogNames.slice().sort(),
-        p = (e, t) => {
-          u.Get().IsLogName(e)
-            ? u.Get().SetDebugLogEnabled(e, t)
-            : console.warn(`No log named "${e}", available logs:`, d());
+      const m = () => [...c.Get().LogNames].sort(),
+        d = (e, t) => {
+          c.Get().IsLogName(e)
+            ? c.Get().SetDebugLogEnabled(e, t)
+            : console.warn(`No log named "${e}", available logs:`, m());
         };
-      (window.DebugLogEnable = (...e) => e.forEach((e) => p(e, !0))),
-        (window.DebugLogDisable = (...e) => e.forEach((e) => p(e, !1))),
-        (window.DebugLogEnableAll = () => u.Get().SetAllDebugLogsEnabled(!0)),
-        (window.DebugLogDisableAll = () => u.Get().SetAllDebugLogsEnabled(!1)),
+      (window.DebugLogEnable = (...e) => e.forEach((e) => d(e, !0))),
+        (window.DebugLogDisable = (...e) => e.forEach((e) => d(e, !1))),
+        (window.DebugLogEnableAll = () => c.Get().SetAllDebugLogsEnabled(!0)),
+        (window.DebugLogDisableAll = () => c.Get().SetAllDebugLogsEnabled(!1)),
         (window.DebugLogEnableBacktrace = () =>
-          u.Get().SetIncludeBacktraceInLog(!0)),
+          c.Get().SetIncludeBacktraceInLog(!0)),
         (window.DebugLogDisableBacktrace = () =>
-          u.Get().SetIncludeBacktraceInLog(!1)),
-        (window.DebugLogNames = d),
+          c.Get().SetIncludeBacktraceInLog(!1)),
+        (window.DebugLogNames = m),
         (window.EnableSteamConsole = (e = !0) =>
-          u.Get().SetDebugLogEnabled("SteamClient", e));
+          c.Get().SetDebugLogEnabled("SteamClient", e));
     },
     19719: (e, t, r) => {
       "use strict";

@@ -3780,6 +3780,13 @@ h2.stats {
 	color: #909da5;
 	margin-top: 4px;
 }
+.changelog.author_snapshot_versions span {
+	background: rgba(255,255,255,0.1);
+	border-radius: 2px;
+	padding: 2px 6px;
+	margin-right: 2px;
+	margin-left: 2px;
+}
 .update_author_snapshot_dialog {
 	max-width: 500px;
 }
@@ -3816,7 +3823,7 @@ h2.stats {
 
 .workshopAnnouncement.changeLogCtn p {
 	background: rgba(0, 0, 0, 0.2);
-	padding: 8px;
+	padding: 16px;
 	color: #cfd8e1;
 }
 

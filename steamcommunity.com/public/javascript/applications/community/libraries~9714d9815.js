@@ -4,15 +4,6 @@
   [4922],
   {
     44217: function (t) {
-      /*!
-       * Cropper.js v1.6.1
-       * https://fengyuanchen.github.io/cropperjs
-       *
-       * Copyright 2015-present Chen Fengyuan
-       * Released under the MIT license
-       *
-       * Date: 2023-09-17T03:44:19.860Z
-       */
       t.exports = (function () {
         "use strict";
         function t(t, e) {

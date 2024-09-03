@@ -5,9 +5,7 @@
   {
     14469: function (t, e, n) {
       var r;
-      /*! decimal.js-light v2.5.1 https://github.com/MikeMcl/decimal.js-light/LICENCE */ !(function (
-        i,
-      ) {
+      !(function (i) {
         "use strict";
         var o,
           a = 1e9,
@@ -26361,14 +26359,7 @@
         g = n ? Symbol.for("react.fundamental") : 60117,
         b = n ? Symbol.for("react.responder") : 60118,
         x = n ? Symbol.for("react.scope") : 60119;
-      /** @license React v16.13.1
-       * react-is.production.min.js
-       *
-       * Copyright (c) Facebook, Inc. and its affiliates.
-       *
-       * This source code is licensed under the MIT license found in the
-       * LICENSE file in the root directory of this source tree.
-       */ function w(t) {
+      function w(t) {
         if ("object" == typeof t && null !== t) {
           var e = t.$$typeof;
           switch (e) {

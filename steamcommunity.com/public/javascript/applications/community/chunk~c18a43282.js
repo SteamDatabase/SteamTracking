@@ -5406,7 +5406,7 @@
         c = r(27666),
         d = r(71138),
         m = r(4796),
-        u = r(12493),
+        u = r(67165),
         p = r(44165),
         _ = r(13952),
         h = r(44332),
@@ -16942,173 +16942,174 @@
     },
     48838: (e, t, r) => {
       "use strict";
-      r.d(t, { cI: () => A, do: () => k, of: () => D });
+      r.d(t, { cI: () => G, do: () => M, of: () => k });
       var a = r(75844),
-        i = r(90626),
-        n = r(17720),
-        s = r(12493),
-        o = r(30894),
-        l = r(46067),
-        c = r(46910),
-        d = r(44165),
-        m = r(60746),
-        u = r(52038),
-        p = r(61859),
-        _ = r(68797),
-        h = r(21273),
-        g = r(738),
-        v = r(39700),
-        y = r(56524),
-        S = r(86090),
-        f = r(95695),
-        C = r(82477),
-        w = r(71513),
-        b = r(12155);
-      const B = (0, a.PA)((e) => {
+        i = r(65946),
+        n = r(90626),
+        s = r(17720),
+        o = r(67165),
+        l = r(30894),
+        c = r(46067),
+        d = r(46910),
+        m = r(44165),
+        u = r(60746),
+        p = r(52038),
+        _ = r(61859),
+        h = r(68797),
+        g = r(21273),
+        v = r(738),
+        y = r(39700),
+        S = r(56524),
+        f = r(86090),
+        C = r(95695),
+        w = r(82477),
+        b = r(71513),
+        B = r(12155);
+      const I = (0, a.PA)((e) => {
         const { closeModal: t } = e;
-        return i.createElement(h.o0, {
-          strTitle: (0, p.we)(
+        return n.createElement(g.o0, {
+          strTitle: (0, _.we)(
             "#EventCalendar_GameSource_UnhideCuratorsDialog_Title",
           ),
-          strDescription: (0, p.we)(
+          strDescription: (0, _.we)(
             "#EventCalendar_GameSource_UnhideCuratorsDialog_Description",
           ),
-          strOKButtonText: (0, p.we)(
+          strOKButtonText: (0, _.we)(
             "#EventCalendar_GameSource_UnhideCuratorsDialog_OKButton",
           ),
-          strCancelButtonText: (0, p.we)(
+          strCancelButtonText: (0, _.we)(
             "#EventCalendar_GameSource_UnhideCuratorsDialog_CancelButton",
           ),
           onOK: () => {
-            (0, l.v0)().m_visibilityStore.SetGameSourceAllowed(
-              c.FD.k_ECurator,
+            (0, c.v0)().m_visibilityStore.SetGameSourceAllowed(
+              d.FD.k_ECurator,
               !0,
             ),
               t();
           },
           onCancel: () => {
             (0,
-            l.v0)().m_visibilityStore.SetCuratorUnhideOnFollowDialogDismissed(
+            c.v0)().m_visibilityStore.SetCuratorUnhideOnFollowDialogDismissed(
               !0,
             ),
               t();
           },
         });
       });
-      function I(e) {
+      function E(e) {
         e ||
-          ((0, l.dP)() &&
+          ((0, c.dP)() &&
             ((0,
-            l.v0)().m_visibilityStore.BCuratorUnhideOnFollowDialogDismissed() ||
-              (0, l.v0)().m_visibilityStore.BIsGameSourceAllowed(
-                c.FD.k_ECurator,
+            c.v0)().m_visibilityStore.BCuratorUnhideOnFollowDialogDismissed() ||
+              (0, c.v0)().m_visibilityStore.BIsGameSourceAllowed(
+                d.FD.k_ECurator,
               ) ||
-              (0, g.pg)(i.createElement(B, null), window)));
+              (0, v.pg)(n.createElement(I, null), window)));
       }
-      function E() {
+      function T() {
         return (
-          !!m.KN.Get().BIsUserLoggedIn() ||
-          ((0, g.pg)(
-            i.createElement(h.o0, {
-              strTitle: (0, p.we)("#EventDisplay_Share_NotLoggedIn"),
-              strDescription: (0, p.we)(
+          !!u.KN.Get().BIsUserLoggedIn() ||
+          ((0, v.pg)(
+            n.createElement(g.o0, {
+              strTitle: (0, _.we)("#EventDisplay_Share_NotLoggedIn"),
+              strDescription: (0, _.we)(
                 "#EventDisplay_Share_NotLoggedIn_Description",
               ),
-              strOKButtonText: (0, p.we)("#MobileLogin_SignIn"),
-              onOK: () => (0, C.vg)(),
+              strOKButtonText: (0, _.we)("#MobileLogin_SignIn"),
+              onOK: () => (0, w.vg)(),
             }),
             window,
           ),
           !1)
         );
       }
-      function T(e) {
-        const t = n.b.InitFromClanID(e),
-          r = m.KN.Get().GetPartnerEventPermissions(t);
+      function A(e) {
+        const t = s.b.InitFromClanID(e),
+          r = u.KN.Get().GetPartnerEventPermissions(t);
         return (
           !r ||
           !r.limited_user ||
-          ((0, g.pg)(i.createElement(S.g, null), window), !1)
+          ((0, v.pg)(n.createElement(f.g, null), window), !1)
         );
       }
-      async function A(e) {
-        if (E() && T(e)) {
-          let t = n.b.InitFromClanID(e),
-            r = o.Fm.Get().BIsFollowingCurator(t);
-          await o.Fm.Get().UpdateFollowOrIgnoreCurator(t, !0, !r), I(r);
+      async function G(e) {
+        if (T() && A(e)) {
+          let t = s.b.InitFromClanID(e),
+            r = l.Fm.Get().BIsFollowingCurator(t);
+          await l.Fm.Get().UpdateFollowOrIgnoreCurator(t, !0, !r), E(r);
         }
       }
-      const G = (e) => {
+      const D = (e) => {
           const {
             className: t,
             bIgnored: r,
             bApplyingFollowing: a,
-            bFollowing: n,
+            bFollowing: i,
             onFollowClick: s,
           } = e;
-          return d.HD.bIsFollowingEnabled
-            ? i.createElement(
-                w.ml,
+          return m.HD.bIsFollowingEnabled
+            ? n.createElement(
+                b.ml,
                 {
-                  className: (0, u.A)(
-                    f.Button,
-                    y.FollowButton,
+                  className: (0, p.A)(
+                    C.Button,
+                    S.FollowButton,
                     t,
-                    n ? "Followed" : "",
+                    i ? "Followed" : "",
                   ),
                   onClick: s,
                 },
-                a && i.createElement(v.k, { size: 15 }),
-                !a && (n || r) && i.createElement(b.Jlk, null),
-                i.createElement(
+                a && n.createElement(y.k, { size: 15 }),
+                !a && (i || r) && n.createElement(B.Jlk, null),
+                n.createElement(
                   "div",
-                  { className: y.FollowBtnText },
+                  { className: S.FollowBtnText },
                   !a &&
-                    (n
-                      ? (0, p.we)("#Button_Followed")
+                    (i
+                      ? (0, _.we)("#Button_Followed")
                       : r
-                        ? (0, p.we)("#Button_Ignored")
-                        : (0, p.we)("#Button_Follow")),
+                        ? (0, _.we)("#Button_Ignored")
+                        : (0, _.we)("#Button_Follow")),
                 ),
               )
             : null;
         },
-        D = (e) => {
-          const [t, r] = i.useState(!1),
-            { clanAccountID: a, className: l } = e,
-            c = n.b.InitFromClanID(a),
-            d = o.Fm.Get().BIsFollowingCurator(c),
-            m = !d && o.Fm.Get().BIsIgnoringCurator(c);
-          return i.createElement(G, {
-            className: l,
-            bIgnored: m,
-            bFollowing: d,
+        k = (e) => {
+          const [t, r] = n.useState(!1),
+            { clanAccountID: a, className: c } = e,
+            d = s.b.InitFromClanID(a),
+            m = (0, i.q3)(() => l.Fm.Get().BIsFollowingCurator(d)),
+            u = (0, i.q3)(() => !m && l.Fm.Get().BIsIgnoringCurator(d));
+          return n.createElement(D, {
+            className: c,
+            bIgnored: u,
+            bFollowing: m,
             bApplyingFollowing: t,
             onFollowClick: () => {
               const { clanAccountID: t } = e;
-              E() &&
-                T(t) &&
+              T() &&
+                A(t) &&
                 (r(!0),
                 (() => {
                   const { clanAccountID: t, creatorID: a } = e,
-                    i = n.b.InitFromClanID(t),
-                    l = o.Fm.Get().BIsFollowingCurator(i),
-                    c = !l && o.Fm.Get().BIsIgnoringCurator(i);
-                  o.Fm.Get()
-                    .UpdateFollowOrIgnoreCurator(i, !c, !(c || l))
+                    i = s.b.InitFromClanID(t),
+                    n = l.Fm.Get().BIsFollowingCurator(i),
+                    c = !n && l.Fm.Get().BIsIgnoringCurator(i);
+                  l.Fm.Get()
+                    .UpdateFollowOrIgnoreCurator(i, !c, !(c || n))
                     .then((e) => {
                       if (a) {
-                        let e = s.pF.GetCreatorHomeByID(a);
-                        c || e.AdjustFollower(l ? -1 : 1);
+                        let e = o.pF.GetCreatorHomeByID(a);
+                        c || e.AdjustFollower(n ? -1 : 1);
                       }
                       r(!1);
                     })
                     .then(() => {
-                      I(l);
+                      E(n);
                     })
                     .catch((e) => {
                       r(!1);
-                      let t = (0, _.H)(e);
+                      let t = (0, h.H)(e);
                       console.error(
                         "CuratorFollowButton hit error: " + t.strErrorMsg,
                         t,
@@ -17118,31 +17119,31 @@
             },
           });
         },
-        k = (e) => {
-          const [t, r] = i.useState(!1),
-            { appid: a, className: n } = e,
-            s = o.Fm.Get().BFollowsApp(a),
-            l = !s && o.Fm.Get().BIsGameIgnored(a);
-          return i.createElement(G, {
-            className: n,
-            bIgnored: l,
+        M = (e) => {
+          const [t, r] = n.useState(!1),
+            { appid: a, className: i } = e,
+            s = l.Fm.Get().BFollowsApp(a),
+            o = !s && l.Fm.Get().BIsGameIgnored(a);
+          return n.createElement(D, {
+            className: i,
+            bIgnored: o,
             bFollowing: s,
             bApplyingFollowing: t,
             onFollowClick: () => {
-              E() &&
+              T() &&
                 (r(!0),
                 (() => {
                   const { appid: t } = e,
-                    a = o.Fm.Get().BFollowsApp(t),
-                    i = !a && o.Fm.Get().BIsGameIgnored(t);
-                  o.Fm.Get()
+                    a = l.Fm.Get().BFollowsApp(t),
+                    i = !a && l.Fm.Get().BIsGameIgnored(t);
+                  l.Fm.Get()
                     .UpdateFollowingApp(t, !(i || a))
                     .then(() => {
                       r(!1);
                     })
                     .catch((e) => {
                       r(!1);
-                      const t = (0, _.H)(e);
+                      const t = (0, h.H)(e);
                       console.error(
                         "AppFollowButton hit error: " + t.strErrorMsg,
                         t,
@@ -17168,7 +17169,7 @@
         d = r(85044),
         m = r(55963),
         u = r(4796),
-        p = r(12493),
+        p = r(67165),
         _ = r(30894),
         h = r(13952),
         g = r(62792),

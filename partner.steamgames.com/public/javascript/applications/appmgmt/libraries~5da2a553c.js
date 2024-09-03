@@ -5,13 +5,6 @@
   [2785],
   {
     36378: function (e, t, o) {
-      /*!
-       * @overview es6-promise - a tiny implementation of Promises/A+.
-       * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
-       * @license   Licensed under MIT license
-       *            See https://raw.githubusercontent.com/stefanpenner/es6-promise/master/LICENSE
-       * @version   v4.2.8+1e68dce6
-       */
       e.exports = (function () {
         "use strict";
         function e(e) {
@@ -453,12 +446,7 @@
     },
     40323: function (e, t) {
       var o, i, n;
-      /* @license
-Papa Parse
-v5.4.1
-https://github.com/mholt/PapaParse
-License: MIT
-*/ (i = []),
+      (i = []),
         (o = function e() {
           "use strict";
           var t =
@@ -1743,10 +1731,6 @@ License: MIT
           });
         },
         function (e, t) {
-          /*!
-           * html-attributes
-           * https://github.com/alexmingoia/html-attributes
-           */
           "use strict";
           e.exports = {
             abbr: "abbr",
@@ -1941,10 +1925,6 @@ License: MIT
           });
         },
         function (e, t) {
-          /*!
-           * svg-attributes
-           * https://github.com/alexmingoia/svg-attributes
-           */
           "use strict";
           e.exports = {
             accentHeight: "accent-height",

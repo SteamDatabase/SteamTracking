@@ -294,6 +294,11 @@ GHomepage = {
 				GSteamCurators.RenderRecommendedCurators( GHomepage.oAdditionalData.strCuratorHTML );
 			}
 		} catch( e ) { OnHomepageException(e); }
+
+		// Community Recommendations - Steam Labs
+		try {
+			GHomepage.RenderCommunityRecommendations();
+		} catch ( e ) { OnHomepageException(e); }
 	},
 
 	OnHomeDataReady: function()
@@ -373,11 +378,6 @@ GHomepage = {
 		// Recommended by Deep Dive
 		try {
 			GHomepage.RenderRecommendedByDeepDiveCarousel();
-		} catch ( e ) { OnHomepageException(e); }
-
-		// Community Recommendations - Steam Labs
-		try {
-			GHomepage.RenderCommunityRecommendations();
 		} catch ( e ) { OnHomepageException(e); }
 
 		try {
@@ -3301,7 +3301,7 @@ function HomeTabSelect( elem, target )
 {
 	TabSelect( elem, target );
 	var $List = $J('#' + target);
-	$List.children('.tab_item:first-child').trigger('mouseenter');
+	$List.find('.tab_item').first().trigger('mouseenter');
 	GDynamicStoreHelpers.AddSNRDepthParamsToCapsuleList( $List.children('.tab_item') );
 }
 

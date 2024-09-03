@@ -108,6 +108,7 @@ function SavePreferences()
 	var languageFilter = $J( "input[name=review_language]:checked" ).val();
 	var bHideOwnedGames = $J( "#HideOwnedGamesCheckbox").prop( "checked" ) ? 1 : 0;
 	var bHideWishlistedGames = $J( "#HideWishlistedGamesCheckbox").prop( "checked" ) ? 1 : 0;
+	var bUseReviewQuality = $J( "#UseReviewQuality").prop( "checked" ) ? 1 : 0;
 
 	var rgTagFilters = [];
 	$J('#tag_filters > .tag_filter').each(function(i, ele){
@@ -127,6 +128,7 @@ function SavePreferences()
 		tag_exclusions: rgTagExclusions,
 		hide_owned_games: bHideOwnedGames,
 		hide_wishlisted_games: bHideWishlistedGames,
+		use_review_quality: bUseReviewQuality,
 		review_language : languageFilter,
 		sessionid : g_sessionID
 	};
@@ -167,6 +169,7 @@ function GetRecentReviews( bTreatAsFirstTimeLoad )
 	var languageFilter = $J( "input[name=review_language]:checked" ).val();
 	var bHideOwnedGames = $J( "#HideOwnedGamesCheckbox").prop( "checked" ) ? 1 : 0;
 	var bHideWishlistedGames = $J( "#HideWishlistedGamesCheckbox").prop( "checked" ) ? 1 : 0;
+	var bUseReviewQuality = $J( "#UseReviewQuality").prop( "checked" ) ? 1 : 0;
 
 	var rgTagFilters = [];
 	$J('#tag_filters > .tag_filter').each(function(i, ele){
@@ -186,6 +189,7 @@ function GetRecentReviews( bTreatAsFirstTimeLoad )
 		tag_exclusions: rgTagExclusions,
 		hide_owned_games: bHideOwnedGames,
 		hide_wishlisted_games: bHideWishlistedGames,
+		use_review_quality: bUseReviewQuality,
 		review_language : languageFilter,
 			};
 

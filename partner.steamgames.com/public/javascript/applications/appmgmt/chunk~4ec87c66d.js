@@ -48364,7 +48364,7 @@
               l.createElement(
                 "div",
                 { className: c().PageTitle },
-                "Promotion App Asset Management",
+                "Promotion App - Asset Management",
               ),
               l.createElement("hr", null),
               l.createElement(
@@ -48440,7 +48440,7 @@
                 l.createElement(
                   "div",
                   null,
-                  l.createElement("h3", null, "Header Image"),
+                  l.createElement("h3", null, "Header Capsule"),
                   l.createElement(
                     "div",
                     null,
@@ -52887,7 +52887,7 @@
             "Marketing Message - Partner Asset Request",
           ),
           c.createElement("hr", null),
-          Boolean(a.BHasPlanAssetRequestGID())
+          Boolean(a?.BHasPlanAssetRequestGID())
             ? c.createElement(H.J, { bShowLinkToPromotionPlan: !0 })
             : c.createElement(Y, { oEditableMessage: a }),
         );

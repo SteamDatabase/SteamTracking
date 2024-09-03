@@ -155,8 +155,8 @@
       var n = a(43527),
         r = a(97058),
         i = a(90626),
-        l = a(17083),
-        o = a(92757),
+        o = a(17083),
+        l = a(92757),
         c = a(14932),
         s = a(7068),
         d = a(14578),
@@ -259,10 +259,10 @@
             packageID: a,
             strPriceKey: n,
             nPriceInCents: r,
-            nOldPriceInCents: l,
+            nOldPriceInCents: o,
           } = t,
-          o = (0, u.ww)(a),
-          [c, s, d] = (0, P.Wx)(l, n),
+          l = (0, u.ww)(a),
+          [c, s, d] = (0, P.Wx)(o, n),
           [m, g, p] = (0, P.Wx)(r, n),
           _ = (0, P.XK)(n),
           { nMinPriceInCents: h, nMaxPriceInCents: E } = (0, P.tn)(a, n),
@@ -283,18 +283,18 @@
           i.createElement(
             T.he,
             {
-              toolTipContent: `${a}: ${o}`,
+              toolTipContent: `${a}: ${l}`,
               direction: "overlay",
               className: O().PackageName,
               strTooltipClassname: O().HoverToolTip,
             },
-            o,
+            l,
           ),
           b
             ? i.createElement(y.T6, { packageID: a, strPriceKey: n })
             : i.createElement(y.Gy, {
                 nPriceInCents: r,
-                nSavedPriceInCents: l,
+                nSavedPriceInCents: o,
               }),
           i.createElement(
             "div",
@@ -326,7 +326,7 @@
         const { closeModal: t, strContinueUrl: a } = e,
           n = (0, P.Ci)(),
           r = (0, P.NC)(),
-          [l, o] = i.useState(void 0),
+          [o, l] = i.useState(void 0),
           c = (function (e) {
             let [t, a] = i.useState(void 0);
             const n = (0, W.zq)(),
@@ -407,15 +407,15 @@
           v = (0, b.we)("#PricingDashboad_RequiredPrices", e.join(", "));
         }
         const N = E || D,
-          S = N || void 0 === l || 0 != f.length,
+          S = N || void 0 === o || 0 != f.length,
           I = () => {
             a && (window.location.href = a);
           },
           T = () => {
-            void 0 !== l &&
+            void 0 !== o &&
               (e.closeModal(),
               (0, _.pg)(
-                i.createElement(Y, { bAutoPublish: l, fnOnSuccess: I }),
+                i.createElement(Y, { bAutoPublish: o, fnOnSuccess: I }),
                 window,
               ));
           };
@@ -463,8 +463,8 @@
               i.createElement(X, { rgLocalPriceOverrides: n }),
               i.createElement(J, { priceIncrease: w, nextDiscount: c.days }),
               i.createElement(j, {
-                value: l,
-                onChange: o,
+                value: o,
+                onChange: l,
                 nextDiscount: c.days,
               }),
             ),
@@ -556,8 +556,8 @@
       function Y(e) {
         const { closeModal: t, bAutoPublish: a, fnOnSuccess: n } = e,
           r = (0, P.Ci)(),
-          l = (0, P.Bt)(),
-          o = (0, R.m)("SaveProgressDialog"),
+          o = (0, P.Bt)(),
+          l = (0, R.m)("SaveProgressDialog"),
           [c, s] = i.useState(0),
           [d, m] = i.useState(null),
           u = !a;
@@ -568,8 +568,8 @@
               for (let t = 0; t < e.length; t++) {
                 s(t);
                 const a = e[t],
-                  n = await l(a, u, o);
-                if (o.token.reason) return;
+                  n = await o(a, u, l);
+                if (l.token.reason) return;
                 if (1 != n.success)
                   return void m(
                     n.msg ?? (0, b.we)("#PricingDashboard_SavePricesError"),
@@ -587,7 +587,7 @@
                 ? (0, b.we)("#Button_Close")
                 : (0, b.we)("#Button_OK"),
               onOK: d ? t : n,
-              onCancel: () => o.cancel("cancelled by user"),
+              onCancel: () => l.cancel("cancelled by user"),
               bDestructiveWarning: !0,
               closeModal: t,
             },
@@ -617,10 +617,10 @@
         const { closeModal: t, packageID: a } = e,
           n = (0, P.FX)(a),
           r = n.some((e) => e.nPriceInCents > e.nOldPriceInCents),
-          l = (function (e, t) {
+          o = (function (e, t) {
             let [a, n] = i.useState(void 0);
             const r = (0, W.zq)(),
-              l = (0, G.P_)(60);
+              o = (0, G.P_)(60);
             return (
               i.useEffect(() => {
                 t &&
@@ -635,14 +635,14 @@
                   : 1 != a
                     ? Q.FailedToLoad
                     : (0, W.qN)(e).every(
-                          (e) => e.rtStartDate > l + F.nu || e.rtEndDate < l,
+                          (e) => e.rtStartDate > o + F.nu || e.rtEndDate < o,
                         )
                       ? Q.OK
                       : Q.RequiresCooldown
                 : Q.OK
             );
           })(a, r),
-          { fnPublish: o, ePublishState: c } = (function (e) {
+          { fnPublish: l, ePublishState: c } = (function (e) {
             const t = (0, P.h4)(),
               [a, n] = i.useState($.Idle);
             return {
@@ -653,13 +653,13 @@
             };
           })(a);
         let s;
-        if (l == Q.FailedToLoad)
+        if (o == Q.FailedToLoad)
           s = (0, b.oW)(
             "#PricingDashboard_PriceProposal_Publish_FailedToLoad",
             i.createElement("div", null),
             i.createElement("div", null),
           );
-        else if (l == Q.RequiresCooldown) {
+        else if (o == Q.RequiresCooldown) {
           let e = i.createElement(h.uU, {
             href: "https://partner.steamgames.com/doc/store/pricing",
           });
@@ -721,7 +721,7 @@
         if (s) {
           let e = (0, b.we)("#PricingDashboard_PriceProposal_Publish_Title");
           return (
-            l == Q.RequiresCooldown &&
+            o == Q.RequiresCooldown &&
               (e = (0, b.we)(
                 "#PricingDashboard_PriceProposal_Publish_CantPublishTitle",
               )),
@@ -738,7 +738,7 @@
             )
           );
         }
-        let d = l == Q.Loading || c == $.Loading;
+        let d = o == Q.Loading || c == $.Loading;
         return i.createElement(
           p.o0,
           {
@@ -752,7 +752,7 @@
             bOKDisabled: d,
             bCancelDisabled: d,
             bDestructiveWarning: !0,
-            onOK: o,
+            onOK: l,
             onCancel: t,
             closeModal: t,
           },
@@ -803,7 +803,7 @@
               ? "DLC"
               : null;
       }
-      function le(e) {
+      function oe(e) {
         const { cell: t } = e,
           a = t.getValue(),
           n = (0, P.XK)(a),
@@ -834,23 +834,23 @@
             }),
         );
       }
-      function oe(e) {
+      function le(e) {
         const { fnBLocalChangesExist: t, fnWarnUser: a, cell: n } = e,
           r = n.getRow().getData().packageID,
-          l = (0, P.XB)(r),
-          o = (0, P.d$)(r),
-          c = o && (0, y.mK)(o.rtSubmitted),
-          [d, m] = (0, ae.Hl)(o?.submitterID),
-          u = m ? m.persona_name : o?.submitterID;
+          o = (0, P.XB)(r),
+          l = (0, P.d$)(r),
+          c = l && (0, y.mK)(l.rtSubmitted),
+          [d, m] = (0, ae.Hl)(l?.submitterID),
+          u = m ? m.persona_name : l?.submitterID;
         let g = "PackageMore_" + r,
           p = null,
           h = null,
           D = null;
-        l
+        o
           ? ((p = v().NeedsReview),
             (D = (0, b.we)("#PricingDashboard_PriceProposal_NeedsReview_ttip")),
             (h = (0, b.we)("#PricingDashboard_PriceProposal_NeedsReview")))
-          : 1 == o?.eState && o.bPartnerWillPublish
+          : 1 == l?.eState && l.bPartnerWillPublish
             ? ((p = v().PartnerWillPublish),
               (D = (0, b.we)(
                 "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish_ttip",
@@ -860,8 +860,8 @@
               (h = (0, b.we)(
                 "#PricingDashboard_PriceProposal_WaitingForReview_PartnerWillPublish",
               )))
-            : 1 != o?.eState || o.bPartnerWillPublish
-              ? 4 == o?.eState
+            : 1 != l?.eState || l.bPartnerWillPublish
+              ? 4 == l?.eState
                 ? ((p = v().ApprovedCanPublish),
                   (D = (0, b.we)(
                     "#PricingDashboard_PriceProposal_Approved_ttip",
@@ -905,7 +905,7 @@
                     ),
                   ),
                 )));
-        let C = l || !!o;
+        let C = o || !!l;
         return i.createElement(
           "div",
           { className: (0, w.A)(v().ProposalState, p) },
@@ -938,8 +938,8 @@
             () => ({ client: n, fnBLocalChangesExist: t, fnWarnUser: a }),
             [t, a, n],
           ),
-          l = (0, k.sF)(r),
-          o = (0, k.uv)(r),
+          o = (0, k.sF)(r),
+          l = (0, k.uv)(r),
           c = (0, k.NP)(r),
           s = (0, k.ZN)(r),
           d = (0, k.mE)(r, !1),
@@ -950,7 +950,7 @@
                 title: (0, b.we)("#PricingDashboard_Column_PriceProposalState"),
                 field: "proposalState",
                 headerSort: !1,
-                formatter: (0, S.reactFormatter)(i.createElement(oe, { ...u })),
+                formatter: (0, S.reactFormatter)(i.createElement(le, { ...u })),
                 cssClass: v().PriceProposalState,
                 width: 200,
                 frozen: !0,
@@ -963,7 +963,7 @@
         var u;
         const { rgSupportedPriceKeys: g } = (0, P.T7)();
         return i.useMemo(() => {
-          const t = [l, o, c, s, d, m];
+          const t = [o, l, c, s, d, m];
           for (const a of g)
             t.push({
               field: a,
@@ -971,12 +971,12 @@
               frozen: "USD" == a,
               width: e ? 72 : 200,
               headerSort: !1,
-              titleFormatter: (0, S.reactFormatter)(i.createElement(le, null)),
+              titleFormatter: (0, S.reactFormatter)(i.createElement(oe, null)),
               formatter: (0, S.reactFormatter)(i.createElement(y.sh, null)),
               cssClass: (0, w.A)(v().PricingGridDataColumn, a),
             });
           return t;
-        }, [l, o, c, s, d, m, g, e]);
+        }, [o, l, c, s, d, m, g, e]);
       }
       function se(e) {
         const t = (0, P.Ci)(),
@@ -992,8 +992,8 @@
       const de = i.memo(function (e) {
         const { packageData: t } = e,
           [a, n] = i.useState(!1),
-          [r, l] = (0, ne.QD)("filter_below_min_price", !1),
-          [o, c] = i.useState("released"),
+          [r, o] = (0, ne.QD)("filter_below_min_price", !1),
+          [l, c] = i.useState("released"),
           d = i.useRef(null);
         "dev" == D.TS.WEB_UNIVERSE && (window.g_PricingGridTableRef = d);
         const m = new URLSearchParams(window.location.search),
@@ -1021,28 +1021,28 @@
                   )
                     continue;
                 }
-                let l = i.grouped_app_name;
-                l ||
-                  (l =
+                let o = i.grouped_app_name;
+                o ||
+                  (o =
                     i.appids.length > 1
                       ? (0, b.we)(
                           "#PackageGrid_MultipleBaseGamesFoundForPackage",
                         )
                       : (0, b.we)("#PackageGrid_NoBaseGameFoundForPackage"));
-                const o = {
+                const l = {
                   appids: i.appids.sort(),
-                  appName: l,
+                  appName: o,
                   packageID: i.packageid,
                   packageName: i.package_name || "",
                   packageType: ie(i),
                   released: i.released,
                 };
-                for (const e of n) o[e] = e;
-                r.push(o);
+                for (const e of n) l[e] = e;
+                r.push(l);
               }
               return r;
-            }, [a?.bFilterToOnlyBelowMinimumPrice, e, n, t]);
-          })(t, o, {
+            }, [a, e, n, t]);
+          })(t, l, {
             bFilterToOnlyBelowMinimumPrice: r,
             strSearchStringFromURL: g,
           }),
@@ -1107,7 +1107,7 @@
             { className: v().GridHeaderButtons },
             i.createElement(s.ZU, {
               rgOptions: S,
-              selectedOption: o,
+              selectedOption: l,
               strDropDownClassName: v().Test,
               onChange: C,
               contextMenuPositionOptions: { bMatchWidth: !1 },
@@ -1118,7 +1118,7 @@
                 { className: (0, w.A)(v().OptionCtn, v().PriceLowOption) },
                 i.createElement(s.Yh, {
                   checked: r,
-                  onChange: l,
+                  onChange: o,
                   label: (0, b.we)("#PricingDashboard_FilterToLowPrice", N),
                 }),
               ),
@@ -1178,7 +1178,7 @@
           a = (0, P.XB)(t);
         let n = (0, P.T_)(t);
         const r = (0, P.d$)(t);
-        let l = (0, P.fr)(t);
+        let o = (0, P.fr)(t);
         return i.createElement(
           "div",
           { className: N().PricePopout },
@@ -1194,7 +1194,7 @@
             !!r &&
               i.createElement(
                 "div",
-                { className: N().DetailLabel, onClick: l },
+                { className: N().DetailLabel, onClick: o },
                 (0, b.we)("#PricingDashboard_CancelPriceProposal"),
               ),
           ),
@@ -1210,10 +1210,10 @@
           a = (0, u.vs)(),
           n = ge()().format("YYYY-MM-DDTHH-mm-ss"),
           r = (0, u.zt)(),
-          l = (0, u.Yr)(),
-          o = `prices_all_${a}_${n}.csv`,
+          o = (0, u.Yr)(),
+          l = `prices_all_${a}_${n}.csv`,
           c = `prices_${a}_${n}.csv`,
-          d = 0 == l.length;
+          d = 0 == o.length;
         return i.createElement(
           p.o0,
           {
@@ -1247,7 +1247,7 @@
           i.createElement(
             "div",
             { className: he().ButtonRows },
-            l.length != r.length &&
+            o.length != r.length &&
               i.createElement(
                 "div",
                 { className: he().OptionCtn },
@@ -1263,7 +1263,7 @@
                   {
                     className: he().Button,
                     disabled: d,
-                    onClick: () => be(l, c),
+                    onClick: () => be(o, c),
                   },
                   (0, b.we)(
                     "#PricingDashboard_ImportExport_DownloadVisible_Button",
@@ -1271,7 +1271,7 @@
                   i.createElement(
                     "span",
                     null,
-                    (0, b.we)("#PricingDashboard_PackageCount", l.length),
+                    (0, b.we)("#PricingDashboard_PackageCount", o.length),
                   ),
                 ),
               ),
@@ -1288,7 +1288,7 @@
                 {
                   className: he().Button,
                   disabled: d,
-                  onClick: () => be(r, o),
+                  onClick: () => be(r, l),
                 },
                 (0, b.we)("#PricingDashboard_ImportExport_DownloadAll_Button"),
                 i.createElement(
@@ -1383,8 +1383,8 @@
       function we(e) {
         const { closeModal: t, strFilename: a, parseResult: n } = e,
           r = (0, u.zt)(),
-          l = (0, P.U3)(),
-          o = (0, P.hm)(),
+          o = (0, P.U3)(),
+          l = (0, P.hm)(),
           [c, s] = i.useState(null),
           [d, m] = i.useState();
         if (
@@ -1397,7 +1397,7 @@
             ) {
               const r = [],
                 i = new Set(t),
-                l = [];
+                o = [];
               for (const t of e.data ?? []) {
                 const e = Number(t.ID);
                 if (i.has(e)) {
@@ -1406,15 +1406,15 @@
                     const a = t[r],
                       i = !!a?.length && De(a);
                     if (!a?.length || Number.isNaN(i)) continue;
-                    const o = n(e, r, i);
-                    o && l.push(o);
+                    const l = n(e, r, i);
+                    l && o.push(l);
                   }
                 }
               }
-              return { rgPriceChanges: l, nPackagesImported: r.length };
-            })(n, r, l, o);
+              return { rgPriceChanges: o, nPackagesImported: r.length };
+            })(n, r, o, l);
             s(e), m(t);
-          }, [n, r, l, o]),
+          }, [n, r, o, l]),
           null === c)
         )
           return i.createElement(M.t, { position: "center" });
@@ -1482,11 +1482,11 @@
           a = D.TS.PARTNER_BASE_URL + "doc/store/pricing",
           n = D.TS.HELP_BASE_URL + "wizard/HelpWithPublishing?issueid=920",
           r = (0, P.v4)(),
-          l = (0, i.useMemo)(
+          o = (0, i.useMemo)(
             () => Array.from(new Set(r.map((e) => e.submitterID))),
             [r],
           );
-        (0, Ce.DW)(l);
+        (0, Ce.DW)(o);
         return i.createElement(
           "div",
           { className: m().DashboardPage },
@@ -1589,12 +1589,12 @@
           Ne.m,
           null,
           i.createElement(
-            l.Kd,
+            o.Kd,
             { basename: (0, n.C)() + "pricing/" },
             i.createElement(
-              o.dO,
+              l.dO,
               null,
-              i.createElement(o.qh, {
+              i.createElement(l.qh, {
                 exact: !0,
                 path: n.B.DiagData(),
                 render: (e) =>
@@ -1603,11 +1603,11 @@
                     strConfigID: "application_config",
                   }),
               }),
-              i.createElement(o.qh, {
+              i.createElement(l.qh, {
                 path: Se.PricingDashboard(),
                 render: (e) => i.createElement(ve, null),
               }),
-              i.createElement(o.qh, { component: r.a }),
+              i.createElement(l.qh, { component: r.a }),
             ),
           ),
         );
@@ -1619,14 +1619,14 @@
       var n = a(90626),
         r = a(85274),
         i = a.n(r),
-        l = a(12155),
-        o = a(52038),
+        o = a(12155),
+        l = a(52038),
         c = a(49771),
         s = a(6336);
       const d = new c.MX("price-grid-cell-popout-elements");
       function m(e) {
         let { hoverKey: t, className: a, renderHover: r } = e,
-          c = (0, o.A)(i().MoreDots, a),
+          c = (0, l.A)(i().MoreDots, a),
           m = n.useRef(),
           u = n.useCallback(() => {
             d.HideElement(m.current.ownerDocument, t);
@@ -1656,7 +1656,7 @@
               d.HideElement(m.current.ownerDocument, t, 100);
             },
           },
-          n.createElement(l.faJ, null),
+          n.createElement(o.faJ, null),
         );
       }
     },
@@ -1672,8 +1672,8 @@
       var n = a(69423),
         r = a(9554),
         i = a(90626),
-        l = a(6336),
-        o = a(14336),
+        o = a(6336),
+        l = a(14336),
         c = a(7068),
         s = a(12155),
         d = a(32754),
@@ -1711,8 +1711,8 @@
       }
       function b(e) {
         const { packageID: t, fnOnClick: a } = e,
-          { rgUSDPricesInCents: r, fnApplyGuidelines: l } = (0, n.XE)(),
-          { nPriceInCents: o } = (0, n.xQ)(t, "USD");
+          { rgUSDPricesInCents: r, fnApplyGuidelines: o } = (0, n.XE)(),
+          { nPriceInCents: l } = (0, n.xQ)(t, "USD");
         return i.createElement(
           "div",
           { className: h().GuidelinesPanel },
@@ -1731,11 +1731,11 @@
                   key: e,
                   onClick: () =>
                     ((e) => {
-                      l(t, e), a();
+                      o(t, e), a();
                     })(e),
                   className: (0, m.A)(
                     h().GridElement,
-                    o == e && h().CurrentPrice,
+                    l == e && h().CurrentPrice,
                   ),
                 },
                 (0, n.Wx)(e, "USD"),
@@ -1750,19 +1750,19 @@
       function v(e) {
         const { cell: t } = e,
           a = t.getRow().getData().packageID,
-          o = t.getValue(),
+          l = t.getValue(),
           {
             nPriceInCents: s,
             nPublishedPriceInCents: d,
             nProposedPriceInCents: m,
             fnSetPrice: u,
-          } = (0, n.xQ)(a, o),
-          [P, g, p] = (0, n.Wx)(s, o),
-          _ = (0, n.Gs)(o),
+          } = (0, n.xQ)(a, l),
+          [P, g, p] = (0, n.Wx)(s, l),
+          _ = (0, n.Gs)(l),
           h = i.useRef(),
-          b = a + o,
-          { strClassName: w } = S(a, o),
-          v = "USD" == o,
+          b = a + l,
+          { strClassName: w } = S(a, l),
+          v = "USD" == l,
           N = m ?? d,
           T = s != N;
         return i.createElement(
@@ -1793,7 +1793,7 @@
                   D.L.ShowElement(
                     h.current.ownerDocument,
                     i.createElement(
-                      l.g,
+                      o.g,
                       {
                         target: h.current,
                         direction: "top",
@@ -1803,7 +1803,7 @@
                       i.createElement(k, {
                         key: b,
                         packageID: a,
-                        strPriceKey: o,
+                        strPriceKey: l,
                       }),
                     ),
                     b,
@@ -1819,13 +1819,13 @@
           ),
           p && i.createElement("div", { className: C().PriceSuffix }, p),
           v && i.createElement(E, { packageID: a }),
-          i.createElement(f, { packageID: a, strPriceKey: o }),
+          i.createElement(f, { packageID: a, strPriceKey: l }),
         );
       }
       function f(e) {
         const { packageID: t, strPriceKey: a } = e,
-          { strPriceWarning: n, bBadPrice: r, bShowWarningIcon: l } = S(t, a);
-        return l
+          { strPriceWarning: n, bBadPrice: r, bShowWarningIcon: o } = S(t, a);
+        return o
           ? i.createElement(
               d.he,
               {
@@ -1845,16 +1845,16 @@
         const {
             nPriceInCents: a,
             nPublishedPriceInCents: r,
-            nProposedPriceInCents: l,
-            nMinPriceInCents: o,
+            nProposedPriceInCents: o,
+            nMinPriceInCents: l,
             nMaxPriceInCents: c,
             nMaxDiscountPercentage: s,
             nSuggestedPriceInCents: d,
           } = (0, n.xQ)(e, t),
           P = (0, n.d$)(e),
           g = "USD" == t,
-          p = a != (l ?? r),
-          _ = a < o,
+          p = a != (o ?? r),
+          _ = a < l,
           h = !!c && a > c,
           E = !!d && a > d * N,
           b = !!d && a < d / N,
@@ -1864,7 +1864,7 @@
             (_ &&
               (0, u.we)(
                 "#PricingDashboard_PriceTooLow",
-                (0, n.Wx)(o, t).join(""),
+                (0, n.Wx)(l, t).join(""),
               )) ||
             (E &&
               (0, u.we)(
@@ -1884,7 +1884,7 @@
           v = h || _,
           f = E || b,
           S = v || f || D,
-          I = !(p || !l || (r && l == r)),
+          I = !(p || !o || (r && o == r)),
           T = 4 == P?.eState,
           k = (0, m.A)(
             C().PriceCell,
@@ -1911,15 +1911,15 @@
         const { nPriceInCents: t, nSavedPriceInCents: a } = e;
         let n = null,
           r = null,
-          l = null,
-          o = null;
+          o = null,
+          l = null;
         if (a) {
           const e = Math.ceil((100 * (t - a)) / a),
             c = t > a;
-          (l = c
+          (o = c
             ? (0, u.we)("#PricingDashboard_PriceIncreaseBy", e + "%")
             : (0, u.we)("#PricingDashboard_PriceLowerBy", e + "%")),
-            (o = (0, m.A)(C().PriceChange, c && C().PriceIncrease)),
+            (l = (0, m.A)(C().PriceChange, c && C().PriceIncrease)),
             (r = i.createElement(
               "div",
               { className: C().PriceChangeArrow },
@@ -1928,13 +1928,13 @@
             (n = e + "%");
         } else
           (n = (0, u.we)("#PricingDashboard_PriceIsNew_Short")),
-            (o = (0, m.A)(C().NewPrice));
+            (l = (0, m.A)(C().NewPrice));
         return i.createElement(
           d.he,
           {
-            className: o,
+            className: l,
             strTooltipClassname: C().HoverToolTip,
-            toolTipContent: l,
+            toolTipContent: o,
             direction: "top",
           },
           r,
@@ -1954,21 +1954,21 @@
         const { packageID: t, strPriceKey: a } = e,
           {
             nPriceInCents: r,
-            nPublishedPriceInCents: l,
+            nPublishedPriceInCents: o,
             nProposedPriceInCents: c,
             nSuggestedPriceInCents: s,
             fnSetPrice: P,
           } = (0, n.xQ)(t, a),
           { nPriceInCents: g } = (0, n.xQ)(t, "USD"),
-          p = !(!c || (l && c == l)),
+          p = !(!c || (o && c == o)),
           _ = (0, n.d$)(t),
           h = _ && T(_.rtSubmitted),
-          E = (0, o.z0)(_?.submitterID),
+          E = (0, l.z0)(_?.submitterID),
           b = E ? E.m_strPlayerName : _?.submitterID;
         return i.createElement(
           "div",
           { className: C().PricePopout },
-          !!l &&
+          !!o &&
             i.createElement(
               d.he,
               {
@@ -1986,14 +1986,14 @@
               i.createElement(
                 "div",
                 { className: C().DetailPrice },
-                (0, n.Wx)(l, a).join(""),
+                (0, n.Wx)(o, a).join(""),
               ),
               i.createElement(
                 d.he,
                 {
-                  className: (0, m.A)(C().DetailButton, l == r && C().Disabled),
-                  onClick: () => P(l),
-                  bDisabled: l == r,
+                  className: (0, m.A)(C().DetailButton, o == r && C().Disabled),
+                  onClick: () => P(o),
+                  bDisabled: o == r,
                   toolTipContent: (0, u.we)(
                     "#PricingDashboard_UseThisOldPrice_ttip",
                   ),

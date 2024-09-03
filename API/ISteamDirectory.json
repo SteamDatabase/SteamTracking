@@ -48,6 +48,12 @@
                     "type": "uint32",
                     "optional": true,
                     "description": "Max number of servers to return"
+                },
+                {
+                    "name": "qoslevel",
+                    "type": "uint32",
+                    "optional": true,
+                    "description": "Desired connection priority"
                 }
             ]
         },

@@ -1626,6 +1626,9 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
 .BasicUI ._1dKR2IPNQSHs1MAIXBvt_R div a {
   box-shadow: var(--gpShadow-Medium);
 }
+._1dKR2IPNQSHs1MAIXBvt_R a {
+  text-decoration: none;
+}
 .BasicUI ._1dKR2IPNQSHs1MAIXBvt_R a {
   box-shadow: var(--gpShadow-Medium);
 }
@@ -1635,7 +1638,7 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
   border-radius: 3px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
   transition: box-shadow 0.2s ease-out;
 }
 ._22AcxR1RBDH6i-gjKRHYk0:hover {
@@ -1692,6 +1695,7 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
 }
 ._3lmdEmwrmqe-kicNCZ9v-I {
   background-color: #000;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   display: flex;
   align-items: center;
   color: #fff;

@@ -269,6 +269,8 @@
         DisabledGrab: "_2K0C_m1AZvB6yeNaEXXjDD",
         WhitelistAvatar: "_3DGjmH9KW9BAXsEYwH1WpE",
         ButtonCtn: "_1hSqlvDTyj9P6eWTHXutUt",
+        DragElementStart: "_1LQ1GCTblYDL8enZ2mBhTD",
+        DragDestination: "_3e_m6QWUee_VSu8xj-XLbs",
       };
     },
     77700: (e) => {
@@ -7765,7 +7767,7 @@
         i = r(92022),
         s = r(17720),
         o = r(4796),
-        l = r(12493),
+        l = r(67165),
         c = r(55263),
         m = r(61859),
         d = r(61336),

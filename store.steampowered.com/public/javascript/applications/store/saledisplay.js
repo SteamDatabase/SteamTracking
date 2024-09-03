@@ -791,6 +791,9 @@
               SaleBackgroundCtn: !0,
               ContentHubSalePage: d,
             }),
+            onClick: () => {
+              0;
+            },
           },
           n.createElement(
             "div",

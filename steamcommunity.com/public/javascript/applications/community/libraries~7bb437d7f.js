@@ -7,11 +7,7 @@
       (M.exports = b(5193)).tz.load(b(9933));
     },
     5193: function (M, z, b) {
-      var p, O, A; //! moment-timezone.js
-      //! version : 0.5.44
-      //! Copyright (c) JS Foundation and other contributors
-      //! license : MIT
-      //! github.com/moment/moment-timezone
+      var p, O, A;
       !(function (c, q) {
         "use strict";
         M.exports

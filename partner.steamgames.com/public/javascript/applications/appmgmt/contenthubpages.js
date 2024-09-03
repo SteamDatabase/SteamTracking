@@ -301,12 +301,7 @@
     },
     40323: function (e, t) {
       var r, n, i;
-      /* @license
-Papa Parse
-v5.4.1
-https://github.com/mholt/PapaParse
-License: MIT
-*/ (n = []),
+      (n = []),
         (r = function e() {
           "use strict";
           var t =

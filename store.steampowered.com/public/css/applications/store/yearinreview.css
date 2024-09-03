@@ -5269,6 +5269,10 @@ span._2_0t_pDYqkDefMC0gDZV8G {
 ._1UhmxrINvvaNnHzhCPoill {
   margin-bottom: 8px;
   margin-top: 8px;
+  border-top: 2px solid #333740;
+  border-bottom: 2px solid #333740;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 ._28TC1EYm0jlWPjyk89xXCL {
   display: flex;
@@ -5295,6 +5299,15 @@ span._2_0t_pDYqkDefMC0gDZV8G {
   margin-left: auto;
   display: flex;
   flex-direction: row;
+}
+._1LQ1GCTblYDL8enZ2mBhTD {
+  padding: 2px 0px;
+}
+._3e_m6QWUee_VSu8xj-XLbs {
+  height: 2px;
+  background-color: #ddd;
+  position: absolute;
+  top: -1;
 }
 :root {
   --main-text-color: #dbe2e6;

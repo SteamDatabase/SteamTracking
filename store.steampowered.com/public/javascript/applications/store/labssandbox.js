@@ -210,11 +210,11 @@
                   strict: E,
                 })
               : null,
-            N = !!(S ? S(M, a) : M),
-            R = "function" == typeof h ? h(N) : h,
-            O = "function" == typeof w ? w(N) : w;
-          N &&
-            ((R = (function () {
+            R = !!(S ? S(M, a) : M),
+            N = "function" == typeof h ? h(R) : h,
+            O = "function" == typeof w ? w(R) : w;
+          R &&
+            ((N = (function () {
               for (
                 var e = arguments.length, t = new Array(e), a = 0;
                 a < e;
@@ -226,10 +226,10 @@
                   return e;
                 })
                 .join(" ");
-            })(R, d)),
+            })(N, d)),
             (O = (0, o.A)({}, O, u)));
           var L = (0, o.A)(
-            { "aria-current": (N && s) || null, className: R, style: O, to: n },
+            { "aria-current": (R && s) || null, className: N, style: O, to: n },
             A,
           );
           return (
@@ -588,11 +588,6 @@
             t = _.createElement(
               "div",
               { className: S.AppDisplay },
-              this.state.appinfo &&
-                _.createElement("img", {
-                  src: this.state.appinfo.header_image_url,
-                  className: S.LogoImage,
-                }),
               _.createElement("div", { className: S.AppName }, e),
             );
           } else if ("select" == this.state.mode) {
@@ -653,10 +648,6 @@
             return _.createElement(
               "div",
               { className: S.SimilarApp, onClick: () => r(this.props.appid) },
-              _.createElement("img", {
-                src: e.header_image_url,
-                className: S.LogoImage,
-              }),
               _.createElement("div", { className: S.AppName }, a),
               t,
             );
@@ -865,7 +856,7 @@
         (0, s.Cg)([p.oI], M.prototype, "OnSelectedApp", null),
         (0, s.Cg)([p.oI], M.prototype, "OnSelectedOperator", null),
         (M = (0, s.Cg)([E.PA], M));
-      let N = class extends _.Component {
+      let R = class extends _.Component {
         operands = [];
         similarity_model = "default";
         similar_apps = [];
@@ -993,15 +984,15 @@
           );
         }
       };
-      (0, s.Cg)([l.sH], N.prototype, "operands", void 0),
-        (0, s.Cg)([l.sH], N.prototype, "similarity_model", void 0),
-        (0, s.Cg)([l.sH], N.prototype, "similar_apps", void 0),
-        (0, s.Cg)([l.sH], N.prototype, "similarity_scores", void 0),
-        (0, s.Cg)([p.oI], N.prototype, "OnModelChanged", null),
-        (0, s.Cg)([p.oI], N.prototype, "OnAddOperand", null),
-        (0, s.Cg)([p.oI], N.prototype, "OnOperandChanged", null),
-        (N = (0, s.Cg)([E.PA], N));
-      let R = class extends _.Component {
+      (0, s.Cg)([l.sH], R.prototype, "operands", void 0),
+        (0, s.Cg)([l.sH], R.prototype, "similarity_model", void 0),
+        (0, s.Cg)([l.sH], R.prototype, "similar_apps", void 0),
+        (0, s.Cg)([l.sH], R.prototype, "similarity_scores", void 0),
+        (0, s.Cg)([p.oI], R.prototype, "OnModelChanged", null),
+        (0, s.Cg)([p.oI], R.prototype, "OnAddOperand", null),
+        (0, s.Cg)([p.oI], R.prototype, "OnOperandChanged", null),
+        (R = (0, s.Cg)([E.PA], R));
+      let N = class extends _.Component {
         constructor(e) {
           super(e), (0, l.Gn)(this);
         }
@@ -1127,22 +1118,22 @@
           _.createElement(A, null),
           _.createElement("div", { className: S.Spacer }),
           _.createElement("h1", null, "Mixer"),
-          _.createElement(N, { max_similar: 10, max_operands: 6 }),
+          _.createElement(R, { max_similar: 10, max_operands: 6 }),
           _.createElement("div", { className: S.Spacer }),
           _.createElement("h1", null, "Pathfinder"),
-          _.createElement(R, null),
+          _.createElement(N, null),
         );
       }
-      (0, s.Cg)([l.sH], R.prototype, "app_start", void 0),
-        (0, s.Cg)([l.sH], R.prototype, "app_end", void 0),
-        (0, s.Cg)([l.sH], R.prototype, "in_progress", void 0),
-        (0, s.Cg)([l.sH], R.prototype, "progress_iteration", void 0),
-        (0, s.Cg)([l.sH], R.prototype, "found_path", void 0),
-        (0, s.Cg)([p.oI], R.prototype, "IterationCallback", null),
-        (0, s.Cg)([p.oI], R.prototype, "Pathfind", null),
-        (0, s.Cg)([p.oI], R.prototype, "OnSelectedStartApp", null),
-        (0, s.Cg)([p.oI], R.prototype, "OnSelectedEndApp", null),
-        (R = (0, s.Cg)([E.PA], R));
+      (0, s.Cg)([l.sH], N.prototype, "app_start", void 0),
+        (0, s.Cg)([l.sH], N.prototype, "app_end", void 0),
+        (0, s.Cg)([l.sH], N.prototype, "in_progress", void 0),
+        (0, s.Cg)([l.sH], N.prototype, "progress_iteration", void 0),
+        (0, s.Cg)([l.sH], N.prototype, "found_path", void 0),
+        (0, s.Cg)([p.oI], N.prototype, "IterationCallback", null),
+        (0, s.Cg)([p.oI], N.prototype, "Pathfind", null),
+        (0, s.Cg)([p.oI], N.prototype, "OnSelectedStartApp", null),
+        (0, s.Cg)([p.oI], N.prototype, "OnSelectedEndApp", null),
+        (N = (0, s.Cg)([E.PA], N));
       var L = a(17720),
         P = a(51240),
         F = a(56545),
@@ -2734,7 +2725,7 @@
                       render: (t) =>
                         !e.requires_login || s
                           ? e.render({ ...t, ...n })
-                          : _.createElement(Ne, null),
+                          : _.createElement(Re, null),
                     }),
                   ),
                 ),
@@ -2743,7 +2734,7 @@
           ),
         );
       }
-      function Ne() {
+      function Re() {
         return _.createElement(
           "div",
           null,
