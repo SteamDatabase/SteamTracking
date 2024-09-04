@@ -1581,8 +1581,6 @@ ${STORE_CDN_URL}public/shared/images/header/logo_steamchina.svg?t=962016
 ${STORE_CHECKOUT_BASE_URL}checkout/
 ${STORE_CHECKOUT_BASE_URL}checkout?purchasetype=self&cart=${}
 ${STORE_CHECKOUT_BASE_URL}parental/ajaxunlock/
-${STORE_ICON_BASE_URL}${m_unAppID}/capsule_231x87.jpg
-${STORE_ICON_BASE_URL}${m_unAppID}/header.jpg
 ${STORE_ICON_BASE_URL}${}
 ${STORE_ICON_BASE_URL}${}/${}
 ${STORE_ICON_BASE_URL}${}/header.jpg

@@ -4179,7 +4179,7 @@ Set a category for these games to help you find them quickly and organize your L
 "Steam_AppUpdateError_3"		"update canceled"
 "Steam_AppUpdateError_4"		"update suspended"
 "Steam_AppUpdateError_5"		"no licenses"
-"Steam_AppUpdateError_6"		"no internet connection"
+"Steam_AppUpdateError_6"		"not connected to steam"
 "Steam_AppUpdateError_7"		"connection time out"
 "Steam_AppUpdateError_8"		"content still encrypted"
 "Steam_AppUpdateError_9"		"app configuration unavailable"

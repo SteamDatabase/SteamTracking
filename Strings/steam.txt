@@ -1457,8 +1457,6 @@ $d`D-laM
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-02:08:41
-02:09:03
 08bX
 0A/8
 0Z@q
@@ -1774,6 +1772,8 @@ $d`D-laM
 21CLocalizedStringTable
 21COpenSSLCachedSession
 21CUtlCStringConversion
+22:51:46
+22:52:07
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2571,7 +2571,6 @@ Attempting to create a named event with a null name
 Attempting to purchase same app in different packages
 Audio Behind
 Audio Init Failed
-Aug 28 2024
 August
 Aura
 AuthANY
@@ -2603,7 +2602,7 @@ B-233
 B-283
 B-409
 B-571
-B02:09:02
+B22:52:06
 B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
@@ -10318,6 +10317,7 @@ Send Router
 Sending first queued request for %s\n
 Sending of an email failed
 Sent message: %s - %u bytes\n
+Sep  3 2024
 September
 SerializeVaArgs(char const*, char*, CUtlBuffer&)
 Server Busy
@@ -10481,7 +10481,7 @@ Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
 Startup - Steam Client launched with: %s
-Startup - updater built Aug 28 2024 02:09:02
+Startup - updater built Sep  3 2024 22:52:06
 StaticFileWriterThread()
 Steam - Fatal Error
 Steam - Warning

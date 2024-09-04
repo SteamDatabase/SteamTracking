@@ -576,7 +576,11 @@ enum EInputMode
 	k_EInputMode_GyroToMouse = 4194304;
 	k_EInputMode_GyroToJoystickCamera = 8388608;
 	k_EInputMode_GyroToJoystickDeflection = 16777216;
-	k_EInputMode_All = 33554431;
+	k_EInputMode_GyroToCameraAngles = 33554432;
+	k_EInputMode_FlickStickToCameraAngles = 134217728;
+	k_EInputMode_JoystickToCameraAngles = 67108864;
+	k_EInputMode_TrackPadToCameraAngles = 268435456;
+	k_EInputMode_All = 536870911;
 }
 
 enum EInputSource

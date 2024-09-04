@@ -1,4 +1,4 @@
-var CLSTAMP = "9142228";
+var CLSTAMP = "9157587";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -8864,9 +8864,9 @@ var CLSTAMP = "9142228";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Aug 27 2024 : 18:05:12",
-                BUILD_TIME_UTC: "Aug 28 2024 : 01:05:12",
-                BUILD_RTIME_UTC: 1724807112,
+                BUILD_TIME_LOCAL: "Sep 3 2024 : 15:43:03",
+                BUILD_TIME_UTC: "Sep 3 2024 : 22:43:03",
+                BUILD_RTIME_UTC: 1725403383,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -13924,19 +13924,11 @@ var CLSTAMP = "9142228";
           get name() {
             return this.m_strName;
           }
-          get header_image_url() {
-            return n.TS.STORE_ICON_BASE_URL + `${this.m_unAppID}/header.jpg`;
-          }
           get icon_url_no_default() {
             return this.m_strIconURL && this.BuildAppURL(this.m_strIconURL, a);
           }
           get icon_url() {
             return this.BuildAppURL(this.m_strIconURL, a);
-          }
-          get logo_url() {
-            return (
-              n.TS.STORE_ICON_BASE_URL + `${this.m_unAppID}/capsule_231x87.jpg`
-            );
           }
           get time_updated_from_server() {
             return this.m_dtUpdatedFromServer;
@@ -19737,7 +19729,7 @@ var CLSTAMP = "9142228";
           const t = e.descriptionVisibility ?? "always",
             r = e.upperDescriptionVisibility ?? "always",
             n = e.iconVisibility ?? "always",
-            i = (0, p.A)(K.DropDownLabelContainer),
+            i = (0, p.A)(K.DropDownLabelContainer, e.strClassNames),
             l = null != o.useContext(U),
             a = null != e.description && (l || "always" == t),
             s = null != e.upperDescription && (l || "always" == r),
@@ -50539,9 +50531,9 @@ var CLSTAMP = "9142228";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Aug 27 2024 : 18:05:12",
-                    BUILD_TIME_UTC: "Aug 28 2024 : 01:05:12",
-                    BUILD_RTIME_UTC: 1724807112,
+                    BUILD_TIME_LOCAL: "Sep 3 2024 : 15:43:03",
+                    BUILD_TIME_UTC: "Sep 3 2024 : 22:43:03",
+                    BUILD_RTIME_UTC: 1725403383,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -51148,7 +51140,7 @@ var CLSTAMP = "9142228";
         3180: "8e8aa27ac0cac69a5efc",
         3350: "52d5ab64230a17007d7a",
         3366: "94b027e82a96ab73ffe0",
-        3569: "ecb9f9f1a4b5c013f466",
+        3569: "44159a9ea58d79dab4bc",
         3583: "978cf57fa27bcf5cb29b",
         3594: "8224db72aa82304ea97b",
         3714: "f85176b5e935dfd11403",
@@ -51228,7 +51220,7 @@ var CLSTAMP = "9142228";
         9418: "fd07eeefd19a66aed327",
         9462: "89227ab1a3d278d803ec",
         9711: "925ea00fb25d86de2695",
-        9858: "777a0a43df24a03e8251",
+        9858: "615eaffa3b8a7a929ad2",
         9869: "7f29b83b165e41a2265b",
         9887: "8cfcae473018942b8bd6",
       }[e]),
