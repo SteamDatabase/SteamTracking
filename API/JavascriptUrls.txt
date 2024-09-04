@@ -1706,6 +1706,7 @@ ${WEBAPI_BASE_URL}IBroadcastService/RemoveUserChatText/v0001/?access_token=${m_w
 ${WEBAPI_BASE_URL}IBroadcastService/UpdateChatMessageFlair/v0001/?access_token=${m_webApiToken}
 ${WEBAPI_BASE_URL}ISteamDirectory/GetCMList/v1/?cellid=0
 ${WEBAPI_BASE_URL}ISteamDirectory/GetCMListForConnect/v1/?cellid=0&cmtype=websockets
+${WEBAPI_BASE_URL}ISteamDirectory/GetCMListForConnect/v1/?cellid=0&cmtype=websockets&origin=${origin}
 ${WEBAPI_BASE_URL}ISteamUserOAuth/GetUserSummaries/v2/
 ${_url}${}${}
 ${agreement_session_url}&redir=${href}

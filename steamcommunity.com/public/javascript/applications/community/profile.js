@@ -477,7 +477,9 @@
                 this.props.className,
               ),
             },
-            (null === (e = a.in_game) || void 0 === e ? void 0 : e.logo) &&
+            (null === (e = null == a ? void 0 : a.in_game) || void 0 === e
+              ? void 0
+              : e.logo) &&
               d.createElement("img", {
                 className: g().gameLogo,
                 src: a.in_game.logo,
@@ -514,13 +516,16 @@
         }
       };
       function G(e) {
-        const { appID: t } = e,
-          [a] = (0, E.t7)(t, { include_assets_without_overrides: !0 });
-        return a
-          ? d.createElement("img", {
-              className: g().gameLogo,
-              src: a.GetAssetsWithoutOverrides().GetSmallCapsuleURL(),
-            })
+        var t;
+        const { appID: a } = e,
+          [r] = (0, E.t7)(a, { include_assets_without_overrides: !0 }),
+          i =
+            null === (t = null == r ? void 0 : r.GetAssetsWithoutOverrides()) ||
+            void 0 === t
+              ? void 0
+              : t.GetHeaderURL();
+        return i
+          ? d.createElement("img", { className: g().gameLogo, src: i })
           : null;
       }
       B = (0, i.Cg)([c.PA], B);
