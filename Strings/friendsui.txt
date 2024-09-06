@@ -156,6 +156,7 @@
 "MapSize"
 "MutableRawRepeatedField"
 "N\n"CClientNotificationPlaytimeWarning
+"O\n+CClientNotificationGameRecordingInstantClip
 "P\n*CClientNotificationRemoteClientStartStream
 "\n\fapplist_base
 "\n\farray_values
@@ -1569,6 +1570,7 @@ $\n k_SystemAudioPortDirection_Input
 42CClientNotificationRemoteClientStartStream
 42CMsgDraggableRegionsChanged_DraggableRects
 43CClientNotificationFamilySharingStopPlaying
+43CClientNotificationGameRecordingInstantClip
 43CTransportSignalMsg_WebRTCMessage_Candidate
 44CClientNotificationBroadcastAvailableToWatch
 44CClientNotificationStreamingClientConnection
@@ -1615,6 +1617,7 @@ $\n k_SystemAudioPortDirection_Input
 5\n\vnested_type
 6ConVar
 6\n2k_EClientNotificationType_FamilySharingStopPlaying
+6\n2k_EClientNotificationType_GameRecordingInstantClip
 6\n2k_EClientNotificationType_ParentalPlaytimeResponse
 6\n2k_EProfileCustomizationTypeRareAchievementShowcase
 6\n\fmessage_type

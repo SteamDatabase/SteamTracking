@@ -99,6 +99,7 @@ Destroying a held mutex\n
 Detected Movie hot-key via %s\n
 Detected Plat_MSTime() wrapping\n
 Detected hot-key via base input, now requesting overlay %s\n
+Detected instant clip hot-key via %s\n
 Detected marker hot-key via %s\n
 Disabling overlay for 10 seconds (%d seconds since last frame from ui process was seen)\n
 Disabling overlay for 2 seconds (%d seconds since last frame from ui process was seen)\n

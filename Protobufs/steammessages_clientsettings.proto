@@ -94,6 +94,7 @@ message CMsgClientSettings {
 	optional bool small_mode = 16 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Software\\Valve\\Steam\\SmallMode"];
 	optional bool skip_steamvr_install_dialog = 19 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\SteamVRHMDVGUIWarning"];
 	optional bool always_show_user_chooser = 20 [(setting_store) = k_EClientSettingStore_ConfigStore_Install, (setting_name) = "WebStorage\\Auth\\AlwaysShowUserChooser"];
+	optional bool os_version_unsupported = 21 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\OSVersionUnsupported"];
 	optional bool show_family_sharing_notifications = 3000 [(setting_store) = k_EClientSettingStore_CustomFunc];
 	optional bool show_copy_count_in_library = 3001 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "ShowCopyCountInLibrary", (setting_default_bool) = true];
 	optional int32 overlay_fps_counter_corner = 4000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "system\\InGameOverlayShowFPSCorner"];
@@ -201,6 +202,8 @@ message CMsgClientSettings {
 	optional .EGRMode g_background_mode = 18212 [default = k_EGRMode_Never, (setting_store) = k_EClientSettingStore_CustomFunc];
 	optional .EGRAudio g_background_audio = 18213 [default = k_EGRAudio_Game, (setting_store) = k_EClientSettingStore_CustomFunc];
 	optional int32 g_max_fps = 18214 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\MaxFPS", (setting_default_int) = 60, (setting_clamp_min) = 24, (setting_clamp_max) = 120];
+	optional .CMsgHotkey gamerecording_hotkey_ic = 18215 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\InstantClipKey", (setting_default_string) = "None"];
+	optional float gamerecording_ic_seconds = 18216 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "GameRecording\\InstantClipDuration", (setting_default_float) = 10];
 	optional bool show_timestamps_in_console = 20000 [(setting_store) = k_EClientSettingStore_ConfigStore_UserLocal, (setting_name) = "Developer\\ShowTimestampsInConsole"];
 	optional bool force_oobe = 20001 [(setting_store) = k_EClientSettingStore_Registry, (setting_name) = "HKEY_CURRENT_USER\\Software\\Valve\\Steam\\ForceOOBE"];
 	optional int32 override_browser_composer_mode = 20002 [(setting_store) = k_EClientSettingStore_CustomFunc];

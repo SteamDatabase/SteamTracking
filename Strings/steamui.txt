@@ -300,6 +300,7 @@
 !BInitializedAudio()
 !BUseIOCP()
 !Developer\ShowTimestampsInConsole
+!GameRecording\InstantClipDuration
 !H88p
 !IsAlive()
 !IsClosed()
@@ -449,7 +450,7 @@
 "#\n!CChatRoom_DeleteChatRoom_Response"X\n CChatRoom_RenameChatRoom_Request
 "#\n!CChatRoom_LeaveVoiceChat_Response"
 "#\n!CCloud_AppSessionSuspend_Response"C\n
-"#\n!CGamescope_SetBlurParams_Response2
+"#\n!CGamescope_SetBlurParams_Response")\n'CGamescope_ReArmMuraCalibration_Request"*\n(CGamescope_ReArmMuraCalibration_Response2
 "#\n!CPublishedFile_Subscribe_Response"v\n"CPublishedFile_Unsubscribe_Request
 "#\n\tCMsgClose
 "$&')*+,-.//123456779:;<=>??ABCDEFGG(
@@ -722,6 +723,7 @@
 "N\n"CClientNotificationPlaytimeWarning
 "N\n%CBroadcast_GetBroadcastStatus_Request
 "O\n(CChatRoom_GetChatRoomGroupState_Response
+"O\n+CClientNotificationGameRecordingInstantClip
 "O\n-CInventory_GetEligiblePromoItemDefIDs_Request
 "P\n CEcon_GetAssetClassInfo_Response
 "P\n CGameRecording_SaveClip_Response
@@ -1993,6 +1995,7 @@ ${LANGUAGE}
 %s: drive: 0x%x
 %s: failed to retrieve system version details\n
 %s: failed to run command: %s\n
+%s: file does not exist, assuming success: %s
 %s: forcing desktopui via -nobigpicture\n
 %s: forcing desktopui via -silent\n
 %s: forcing gamepadui for steamdeck + gamescope\n
@@ -2555,6 +2558,7 @@ ${LANGUAGE}
 (.CGameRecording_CreateShareClip_Response"
 (.CGameRecording_DeleteSharedClip_Request
 (.CGameRecording_GetRecordingSize_Request
+(.CGamescope_ReArmMuraCalibration_Request
 (.CInventory_GetUserPurchaseInfo_Response"
 (.COffline_GetOfflineLogonTicket_Response
 (.CParental_ApproveFeatureAccess_Response
@@ -3430,6 +3434,7 @@ ${LANGUAGE}
 (\v2\r.ProfileTheme
 (\v2\r.ProfileTheme"3\n
 (\v2\v.CMsgHotkeyB
+(\v2\v.CMsgHotkeyB,
 (\v2\v.CMsgHotkeyB7
 (\v2\v.CMsgHotkeyB8
 (\v2\v.CMsgHotkeyH
@@ -3474,6 +3479,7 @@ ${LANGUAGE}
 (unknown)
 (unsigned)elem <= (unsigned)m_Size
 (unspecified)
+(void *)m_pObject != NULL
 (wMww
 (|YGNk
 )!)#)?)G)])e)i)o)u)
@@ -3514,6 +3520,7 @@ ${LANGUAGE}
 ).CGameRecording_GetRecordingSize_Response
 ).CGameRecording_LowDiskSpace_Notification
 ).CGameRecording_UploadClipToSteam_Request
+).CGamescope_ReArmMuraCalibration_Response
 ).CParental_EnableParentalSettings_Request
 ).CParties_OnReservationCompleted_Response"
 ).CPartnerApps_FinishUploadKVSign_Response
@@ -3799,6 +3806,7 @@ ${LANGUAGE}
 *18CWebUIMsgLambdaJobIZN24CUserGameNotesController10InitializeEvE29CWebUIGameNotesUploadImageJob30CGameNotes_UploadImage_Request31CGameNotes_UploadImage_ResponseE
 *18CWebUIMsgLambdaJobIZN25CGamescopeControllerLinux10InitializeEvE26CWebUIGamescopeGetStateJob27CGamescope_GetState_Request28CGamescope_GetState_ResponseE
 *18CWebUIMsgLambdaJobIZN25CGamescopeControllerLinux10InitializeEvE31CWebUIGamescopeSetBlurParamsJob32CGamescope_SetBlurParams_Request33CGamescope_SetBlurParams_ResponseE
+*18CWebUIMsgLambdaJobIZN25CGamescopeControllerLinux10InitializeEvE38CWebUIGamescopeReArmMuraCalibrationJob39CGamescope_ReArmMuraCalibration_Request40CGamescope_ReArmMuraCalibration_ResponseE
 *18CWebUIMsgLambdaJobIZN26CSteamUISharedJSController10InitializeEvE48CWebUISharedJSContextGetDesiredSteamUIWindowsJob49CSharedJSContext_GetDesiredSteamUIWindows_Request50CSharedJSContext_GetDesiredSteamUIWindows_ResponseE
 *18CWebUIMsgLambdaJobIZN30CSystemBluetoothControllerStub10InitializeEvE33CWebUIBluetoothManagerGetStateJob34CBluetoothManager_GetState_Request35CBluetoothManager_GetState_ResponseE
 *18CWebUIMsgLambdaJobIZN30CTransportValidationController10InitializeEvE38CWebUITransportValidationAddNumbersJob39CTransportValidation_AddNumbers_Request40CTransportValidation_AddNumbers_ResponseE
@@ -4030,18 +4038,20 @@ ${LANGUAGE}
 *ZN24CUserGameNotesController9SaveNotesEPKcS1_9CSmartPtrI18CJSCallbackPromiseEEUlP37RemoteStorageFileWriteAsyncComplete_tbS4_E_
 *ZN25CGamescopeControllerLinux10InitializeEvE26CWebUIGamescopeGetStateJob
 *ZN25CGamescopeControllerLinux10InitializeEvE31CWebUIGamescopeSetBlurParamsJob
-*ZN25CGamescopeControllerLinux10InitializeEvEUlPKcE10_
-*ZN25CGamescopeControllerLinux10InitializeEvEUlRK10CUtlStringE8_
+*ZN25CGamescopeControllerLinux10InitializeEvE38CWebUIGamescopeReArmMuraCalibrationJob
+*ZN25CGamescopeControllerLinux10InitializeEvEUlPKcE11_
+*ZN25CGamescopeControllerLinux10InitializeEvEUlRK10CUtlStringE9_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlRK27CGamescope_GetState_RequestR28CGamescope_GetState_ResponseE_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlRK32CGamescope_SetBlurParams_RequestR33CGamescope_SetBlurParams_ResponseE0_
-*ZN25CGamescopeControllerLinux10InitializeEvEUlbE2_
+*ZN25CGamescopeControllerLinux10InitializeEvEUlRK39CGamescope_ReArmMuraCalibration_RequestR40CGamescope_ReArmMuraCalibration_ResponseE1_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlbE3_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlbE4_
-*ZN25CGamescopeControllerLinux10InitializeEvEUlbE6_
+*ZN25CGamescopeControllerLinux10InitializeEvEUlbE5_
 *ZN25CGamescopeControllerLinux10InitializeEvEUlbE7_
-*ZN25CGamescopeControllerLinux10InitializeEvEUliE1_
-*ZN25CGamescopeControllerLinux10InitializeEvEUlvE5_
-*ZN25CGamescopeControllerLinux10InitializeEvEUlvE9_
+*ZN25CGamescopeControllerLinux10InitializeEvEUlbE8_
+*ZN25CGamescopeControllerLinux10InitializeEvEUliE2_
+*ZN25CGamescopeControllerLinux10InitializeEvEUlvE10_
+*ZN25CGamescopeControllerLinux10InitializeEvEUlvE6_
 *ZN25CGamescopeControllerLinux21OnScreenshotTriggeredEP21ScreenshotTriggered_tEUlvE_
 *ZN25CGamescopeControllerLinux27OnGamescopeControlConnectedEvEUliE1_
 *ZN25CGamescopeControllerLinux27OnGamescopeControlConnectedEvEUliE3_
@@ -5637,6 +5647,7 @@ ${LANGUAGE}
 .\n\vaccessories
 .cef-enable-remote-debugging
 .conf
+.config/gamescope/mura/
 .cpl
 .crash
 .dll
@@ -5922,6 +5933,7 @@ ${LANGUAGE}
 /data/src/public/tier0/tslist.h
 /data/src/public/tier0/vprof.h
 /data/src/public/tier1/bitstring.h
+/data/src/public/tier1/functors.h
 /data/src/public/tier1/interface.h
 /data/src/public/tier1/netadr.h
 /data/src/public/tier1/refcount.h
@@ -5967,9 +5979,9 @@ ${LANGUAGE}
 /data/src/steamUI/gamerecording/gamerecordingtimeline.cpp
 /data/src/steamUI/gamerecording/gamerecordingutils.cpp
 /data/src/steamUI/gamerecordingcontroller.cpp
-/data/src/steamUI/gamerecordingcontroller.cpp:4716
-/data/src/steamUI/gamerecordingcontroller.cpp:6006
-/data/src/steamUI/gamerecordingcontroller.cpp:6079
+/data/src/steamUI/gamerecordingcontroller.cpp:4921
+/data/src/steamUI/gamerecordingcontroller.cpp:6211
+/data/src/steamUI/gamerecordingcontroller.cpp:6284
 /data/src/steamUI/gamescopecontroller_linux.cpp
 /data/src/steamUI/gamestream/audiorecorder.cpp
 /data/src/steamUI/gamestream/cudawrapper.cpp
@@ -6891,6 +6903,7 @@ ${LANGUAGE}
 11CFileWriter
 11CFrameEvent
 11CFrameStats
+11CFunctorJob
 11CHTMLHeader
 11CHTMLWindow
 11CHTTPClient
@@ -6960,6 +6973,7 @@ ${LANGUAGE}
 11CVProfPanel
 11CWorkThread
 11IHTMLWindow
+11IRefCounted
 11IVGuiModule
 11KeyValuesAD
 11M|
@@ -7048,6 +7062,7 @@ ${LANGUAGE}
 12CProtoBufMsgIvE
 12CQuitRequest
 12CRefCounted1I33CHTTPDefaultRedirectEnableHandler20CRefCountServiceBaseILb1E6CRefMTEE
+12CRefCounted1I8CFunctor20CRefCountServiceBaseILb1E6CRefMTEE
 12CSetTitleMsg
 12CSpewManager
 12CStopRequest
@@ -7266,6 +7281,8 @@ ${LANGUAGE}
 15CInstallManager
 15CJSCallbackFunc
 15CJobPromiseBase
+15CMemberFunctor0IP24CGameRecordingControllerMS0_FvvE18CFuncMemPolicyNoneE
+15CMemberFunctor1IP24CGameRecordingControllerMS0_F7EResultNS0_20PendingInstantClip_tEES3_18CFuncMemPolicyNoneE
 15CMetricsPayload
 15CMsgBrowserSize
 15CMsgDisplayInfo
@@ -7802,6 +7819,7 @@ ${LANGUAGE}
 20CJSMethodCallHandlerI19CSettingsControllerJ9CSmartPtrI15CJSCallbackFuncEEE
 20CJSMethodCallHandlerI19CSettingsControllerJ9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI19CSettingsControllerJEE
+20CJSMethodCallHandlerI19CSettingsControllerJPK9CJSObject9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI19CSettingsControllerJPKc9CSmartPtrI18CJSCallbackPromiseEEE
 20CJSMethodCallHandlerI19CSettingsControllerJPKcEE
 20CJSMethodCallHandlerI19CSettingsControllerJPKcS2_EE
@@ -9532,6 +9550,7 @@ ${LANGUAGE}
 39CGameRecording_CreateShareClip_Response
 39CGameRecording_DeleteSharedClip_Request
 39CGameRecording_GetRecordingSize_Request
+39CGamescope_ReArmMuraCalibration_Request
 39CHIDDevicePipeSharedMemStreamFromRemote
 39CInventory_GetUserPurchaseInfo_Response
 39CMsgClientFriendsGroupsList_FriendGroup
@@ -9668,6 +9687,7 @@ ${LANGUAGE}
 40CGameRecording_LowDiskSpace_Notification
 40CGameRecording_SaveClip_Request_Position
 40CGameRecording_UploadClipToSteam_Request
+40CGamescope_ReArmMuraCalibration_Response
 40CHIDMessageFromRemote_DeviceInputReports
 40CInventory_PurchaseInit_Request_LineItem
 40CMsgClientSiteLicenseGetContentCacheInfo
@@ -9912,6 +9932,7 @@ ${LANGUAGE}
 43CClientMetrics_ClientBootstrap_Notification
 43CClientMetrics_SteamPipeWorkStats_Operation
 43CClientNotificationFamilySharingStopPlaying
+43CClientNotificationGameRecordingInstantClip
 43CCloud_BeginHTTPUpload_Response_HTTPHeaders
 43CCloud_ClientLogUploadComplete_Notification
 43CCommunity_DeleteCommentFromThread_Response
@@ -10698,6 +10719,7 @@ ${LANGUAGE}
 6\n1k_EMsgClientUCMSetUserPublishedFileActionResponse
 6\n1k_EMsgUpdateScheduledTaskEnableStateResponse_TEST
 6\n2k_EClientNotificationType_FamilySharingStopPlaying
+6\n2k_EClientNotificationType_GameRecordingInstantClip
 6\n2k_EClientNotificationType_ParentalPlaytimeResponse
 6\n2k_EPartnerEventDisplayLocation_AppDetailsSpotlight
 6\n2k_EProfileCustomizationTypeRareAchievementShowcase
@@ -10869,6 +10891,7 @@ ${LANGUAGE}
 8CAutoPtrI27ISystemStorageDeviceManagerE
 8CAutoPtrI7CUtlMapI10CUtlStringbi8CDefLessEE
 8CAutoPtrI7CUtlMapIybi8CDefLessEE
+8CFunctor
 8CLogFile
 8CMetrics
 8CMsgCopy
@@ -11138,6 +11161,7 @@ ${LANGUAGE}
 ;.CVideo_GameRecordingGetNextBatchOfSegmentsToUpload_Request
 ;22dV::tN\n\n
 ;83\v\nHBJ7
+;HKEY_CURRENT_USER\Software\Valve\Steam\OSVersionUnsupported
 ;HKEY_CURRENT_USER\Software\Valve\Steam\SmoothScrollWebViews
 ;J;J;J;J;J;J;J;J;J;J;J;J;J;J;J;Jx
 ;\n6k_EMsgClientUCMEnumerateUserSubscribedFilesWithUpdates
@@ -13297,6 +13321,7 @@ CGameRecordingController::OnClientDoesEventRecordingExist
 CGameRecordingController::OnClientDoesGamePhaseRecordingExist
 CGameRecordingController::OnClientStartTask
 CGameRecordingController::OnEndEvent
+CGameRecordingController::OnInstantClip
 CGameRecordingController::OnPostLogonState
 CGameRecordingController::OnScreenshotWritten
 CGameRecordingController::OnSetEventClipPriority
@@ -13436,6 +13461,7 @@ CGameStreamVideoStageX264
 CGameStreamVideoStageX264::ProcessData - encode
 CGameStreamVideoStageYV12
 CGamepadInputPollThread::Run
+CGamescopeController: %s
 CGamescopeController: %s: mode:%d radius:%d duration:%d
 CGamescopeController: commit app target refresh cycle: framerate: %u control: %p enabled: %d supported: %d - skipped
 CGamescopeController: external display populate workaround generating values for: %d
@@ -15407,6 +15433,7 @@ CheckButtonChecked
 CheckButtonList
 CheckButtonList.CheckButton
 CheckButtonListControls
+CheckFailed
 CheckForLayoutFilesChanges
 CheckForOpenContextMenu
 CheckParentalPlaytime
@@ -16893,6 +16920,7 @@ Error: %s: failed to create IFileChooserDialog
 Error: %s: failed to create skeleton\n
 Error: %s: failed to create system report file path
 Error: %s: failed to export agent: %s\n
+Error: %s: failed to find home directory
 Error: %s: failed to find root device for drive: 0x%c
 Error: %s: failed to get gdbus connection: %s\n
 Error: %s: failed to initialize XInput2, some features may be missing
@@ -16911,6 +16939,7 @@ Error: %s: failed to prepare wifi trace file upload
 Error: %s: failed to read screenshot file: %s
 Error: %s: failed to register agent
 Error: %s: failed to remove device: %s
+Error: %s: failed to remove directory: %s
 Error: %s: failed to retrieve diagnostic info state
 Error: %s: failed to retrieve file open dialog results
 Error: %s: failed to retrieve network devices data
@@ -16937,6 +16966,8 @@ Error: %s: invalid dialog in file dialog resolver
 Error: %s: invalid drive object
 Error: %s: invalid drive: 0x%x
 Error: %s: no options provided
+Error: %s: not a valid directory: %s
+Error: %s: only accessible in gamescope session
 Error: %s: operation not supported
 Error: %s: skipping user data reset is currently unsupported
 Error: %s: steamos-priv-write failed %s: %s\n
@@ -17653,6 +17684,9 @@ G\n\rgroup_updated
 G_wo
 Galician
 Game
+Game %s is not currently recording, can't save an instant clip\n
+Game %s is not running\n
+Game %s timeline missing, can't save an instant clip\n
 Game Action Block Failed to Load for App %d: %s
 Game Managed Item
 Game Recording - Already have active recording. Can't start one for %s while %s is recording\n
@@ -17778,6 +17812,7 @@ GameRecording\BackgroundRecordMode
 GameRecording\BackgroundRecordPath
 GameRecording\BackgroundTimeResolution
 GameRecording\BitRateKbps
+GameRecording\InstantClipKey
 GameRecording\MarkerKey
 GameRecording\MaxFPS
 GameRecording\Recording_Audio_Option
@@ -17797,6 +17832,7 @@ GamepadGuideButtonWatcher::OnLogonStateChange
 GamepadUI Input Thread
 Gamescope.GetState#1
 Gamescope.NotifyStateChanged#1
+Gamescope.ReArmMuraCalibration#1
 Gamescope.SetBlurParams#1
 Gamescope/AllowTearing
 Gamescope/AppTargetFrameRate
@@ -18840,6 +18876,8 @@ Installs.RegisterForShowRegisterCDKey
 Installs.SetAppList
 Installs.SetCreateShortcuts
 Installs.SetInstallFolder
+Instant clip requested for game %s\n
+InstantClipJob
 Insufficient Funds
 Insufficient Privilege
 Insufficient battery charge
@@ -20352,6 +20390,7 @@ N24CGameRecordingController28CCallbackInternal_OnEndEventE
 N24CGameRecordingController30CCallbackInternal_OnStartEventE
 N24CGameRecordingController31CCallbackInternal_OnAddEventTagE
 N24CGameRecordingController31CCallbackInternal_OnCancelEventE
+N24CGameRecordingController31CCallbackInternal_OnInstantClipE
 N24CGameRecordingController33CCallbackInternal_OnSystemResumedE
 N24CGameRecordingController34CCallbackInternal_OnClearGamePhaseE
 N24CGameRecordingController34CCallbackInternal_OnPostLogonStateE
@@ -21066,6 +21105,7 @@ Non-repeated field "
 Non-user command %s received at console; ignoring\n
 NonFriendMessageHandling
 NonMembers
+None
 Normal
 Not Acceptable
 Not After: 
@@ -22455,6 +22495,7 @@ RateClanAnnouncement
 RateCommentThread
 Raw stream mode only supported for TCP connections
 Rbg.E
+ReArmMuraCalibration
 Reached an unintended state: CPPTYPE_MESSAGE
 Reached impossible case in HasBit().
 Reaction
@@ -23388,6 +23429,7 @@ SaveFile
 SaveFiles
 Saved to %s\n
 SavedData
+Saving instant clip %s [%llu-%llu]\n
 Saving unknown chunk:
 SbEwd
 Sberbank
@@ -23578,7 +23620,7 @@ Sends the user to the User Chooser even if they have 0 or 1 accounts
 Sent message: %s - %u bytes\n
 Sent ping with MTU %d, increment = %d\n
 SentenceModeMenu
-Sep  3 2024 22:52:44
+Sep  6 2024 20:08:47
 September
 Serbian
 Serial
@@ -23767,6 +23809,7 @@ Settings.RegisterForSettingsArrayChanges
 Settings.RegisterForSettingsChanges
 Settings.RegisterForTimeZoneChange
 Settings.ReinitMicSettings
+Settings.RenderHotkey
 Settings.RequestDeviceAuthInfo
 Settings.SelectClientBeta
 Settings.SetCurrentLanguage
@@ -25114,6 +25157,7 @@ Timed out waiting for mutex in PutInternal()\n
 Timed out waiting for network
 TimedOut
 Timeline
+Timeline %s/%s is no longer active; removing instant clip request\n
 Timeline Icons
 Timeout calling process %s\n
 Times Recv     Pct     Bytes Recv     Pct    AvgSize MessageName\n
@@ -25445,6 +25489,7 @@ Unexpected result from V_SplitString()
 Unexpected sleep reason %d in CJobMgr::BResumeSleepingJobs. Job %s Yield Info %s \n
 Unexpected token.
 Unexpected: browse button exe "%s" has arguments: "%s"
+Unfamiliar timeline %s/%s, removing instant clip request\n
 Unhandled eRegKeyRoot passed into HKeyGet
 Unhandled field type: %s when generating setting from variant for field '%s'
 Unhandled field type: %s when generating variant for field '%s'
@@ -26478,6 +26523,7 @@ YldGetDesiredSteamUIWindows: finish
 YldGetDesiredSteamUIWindows: starting processing of %d windows
 YldLoadAllClips
 YldPair
+YldReArmMuraCalibration
 YldRequestBadgeLevels
 YldSaveClip
 YldSaveToDesktop
@@ -26556,6 +26602,7 @@ Zulu
 [%s] %s=%s\n
 [%s] Found %d recordings to consider
 [%s] applying key '%s', has changed from '%s' to '%s'\n
+[%s] not configured for background recording, so we can't save an instant clip\n
 [%s][%0.6f] %.*s\r\n
 [%s][%d] Recording %s is %.3f seconds, running total is %.3f/%.3f seconds
 [%s][%d] Recording %s is %.3f seconds, running total is over threshold: %.3f/%.3f
@@ -27224,6 +27271,7 @@ Zulu
 \n\finfinite_use
 \n\finput_source
 \n\finput_toggle
+\n\finstant_clip
 \n\finvite_limit
 \n\finvite_token
 \n\fip_addresses
@@ -33124,6 +33172,8 @@ gamepadui_via_gamescope
 gameport
 gameproperties
 gamerecording.pb
+gamerecording_hotkey_ic
+gamerecording_ic_seconds
 gamerecordings/
 games
 gamescope
@@ -39578,6 +39628,7 @@ os_linux
 os_mac
 os_min
 os_type
+os_version_unsupported
 os_win
 oscca
 oslist
@@ -41823,6 +41874,7 @@ shared_memory_handle
 shared_memory_size
 shellcmd
 shift_capslock_keycode
+shift_key
 shipping
 shm_open
 shm_open@GLIBC_2.2

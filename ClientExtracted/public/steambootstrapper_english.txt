@@ -11,6 +11,7 @@ SteamBootstrapper_InstallDirIncompatible		"%appname% cannot run from a folder pa
 SteamBootstrapper_InsufficientDiskSpace		"%appname% needs %nMegaBytes%MB of free disk space to update."
 SteamBootstrapper_FailedManifestLoad		"Failed to load package manifest."
 SteamBootstrapper_FailedManifestVerify		"Failed to verify package manifest."
+SteamBootstrapper_FailedManifestOSType		"System OS version is not compatible with package manifest OS type"
 SteamBootstrapper_FailedManifestSave		"Failed to save package manifest."
 SteamBootstrapper_FailedPackageRead			"Failed to read package (%pkgName%)."
 SteamBootstrapper_CorruptPackageFile		"Corrupt package file (%pkgName%)."

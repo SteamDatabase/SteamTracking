@@ -226,6 +226,7 @@ message CClientMetrics_EndGameRecording_Notification {
 	optional float seconds = 2;
 	optional uint64 bytes = 3;
 	optional fixed64 gameid = 4;
+	optional bool instant_clip = 5;
 }
 
 service ClientMetrics {

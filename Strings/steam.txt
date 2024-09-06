@@ -35,7 +35,6 @@
   what():  
  !"#$%&'()*+,-./0123
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123^W
  %12.06fs %s%s\n
  %lld
  ' ) - 3 G M Q _ c e i w } 
@@ -262,6 +261,7 @@
 #SteamBootstrapper_Error_Title
 #SteamBootstrapper_FailedDownload
 #SteamBootstrapper_FailedManifestLoad
+#SteamBootstrapper_FailedManifestOSType
 #SteamBootstrapper_FailedManifestSave
 #SteamBootstrapper_FailedManifestVerify
 #SteamBootstrapper_FailedMkdir
@@ -1754,6 +1754,8 @@ $d`D-laM
 2+ss
 2.1 Chromium 1.9
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
+20:07:42
+20:08:10
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
 20COpenSSLTicketKeyMgr
@@ -1772,8 +1774,6 @@ $d`D-laM
 21CLocalizedStringTable
 21COpenSSLCachedSession
 21CUtlCStringConversion
-22:51:46
-22:52:07
 22CBaseScheduledFunction
 22CClanMatchEventByRange
 22CClientStructNetPacket
@@ -2602,7 +2602,7 @@ B-233
 B-283
 B-409
 B-571
-B22:52:06
+B20:08:09
 B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
@@ -8752,6 +8752,7 @@ OSSL_STORE_unregister_loader
 OSSL_STORE_vctrl
 OSVER=
 OSVER=%d\nVERSION=%d\n
+OSVersionUnsupported
 OSX1010
 OTHERNAME
 OTHERNAME_cmp
@@ -10317,7 +10318,7 @@ Send Router
 Sending first queued request for %s\n
 Sending of an email failed
 Sent message: %s - %u bytes\n
-Sep  3 2024
+Sep  6 2024
 September
 SerializeVaArgs(char const*, char*, CUtlBuffer&)
 Server Busy
@@ -10481,7 +10482,7 @@ Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
 Startup - Steam Client launched with: %s
-Startup - updater built Sep  3 2024 22:52:06
+Startup - updater built Sep  6 2024 20:08:09
 StaticFileWriterThread()
 Steam - Fatal Error
 Steam - Warning
@@ -10647,6 +10648,7 @@ Symbol table grew beyond unsigned short.  Time to upgrade UtlSymId_t for the sym
 Synthetic oneofs must be after all other oneofs
 SysID zero not supported for rack boxes
 System
+System OS is not compatible with manifest OS type
 T*8U
 T0.S
 T00`P
@@ -11183,7 +11185,6 @@ Unrecognized unit type for pHYs chunk
 UnsafeLegacyRenegotiation
 Unspecified
 Unspecified Error
-Unsupported
 Unsupported HTTP version in response received by HTTP client from %s (%s): %s\n
 Unsupported JPEG data precision %d
 Unsupported JPEG process: SOF type 0x%02x
@@ -18572,6 +18573,7 @@ kECDHEPSK
 kEDH
 kEECDH
 kGOST
+kI`h
 kNGY|(
 kPSK
 kRSA
@@ -21115,6 +21117,7 @@ ossl_store_init_once
 ossl_store_register_loader_int
 ossl_store_unregister_loader_int
 ossl_toupper
+ostype
 osvr
 otherCert
 otherCertFormat

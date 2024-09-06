@@ -823,6 +823,7 @@ $\n k_EJSRegisterMethodType_Function
 2*.google.protobuf.FieldDescriptorProto.Type
 2+.google.protobuf.FieldDescriptorProto.Label
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
+20:08:14
 20CDirWatcherPS3Thread
 20CHTMLBaseProtoBufMsg
 20CJSMethodCallHandlerI19COverlayHTMLHandlerJbEE
@@ -855,7 +856,6 @@ $\n k_EJSRegisterMethodType_Function
 21CMsgSetWindowPosition
 21CUtlCStringConversion
 21CreateDirectoryDialog
-22:52:32
 22CFrameEventPerfTracker
 22CJSCallbackFunc_HTMLJS
 22CMsgAckPIDShuttingDown
@@ -951,6 +951,7 @@ $\n k_EJSRegisterMethodType_Function
 8CMsgCopy
 8CMsgFind
 8\n\textension
+8m9m}B
 9CCallbackI10CBasePanelK14OverlayState_tLb0EE
 9CCallbackI10CBasePanelK24OverlaySettingsChanged_tLb0EE
 9CCallbackI10CBasePanelK30GameOverlayActivateRequested_tLb0EE
@@ -2369,6 +2370,7 @@ InputDialog
 Inscriptional_Pahlavi
 Inscriptional_Parthian
 Install path removed
+InstantClipKey
 Insufficient Funds
 Insufficient Privilege
 Insufficient battery charge
@@ -3669,7 +3671,7 @@ SendHotKeyAndVisibilityState()
 SendPerGameConfiguration()
 Sending of an email failed
 SentenceModeMenu
-Sep  3 2024
+Sep  6 2024
 September
 SerialNumber
 SerializeAllTextures

@@ -99,6 +99,7 @@
   what():  
  !"#$%&'()))*+,-./0123456789:;<=>?@ABBCDEFGHIGJKLLBMBBNOPQRSTUVWXYZ[\]^G___________________________________________________`___________________________________________________________________________________________________________________________________________________________________abccccccccdeefghijklmnopqrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstyzzzzzzzzzzzzzzzz{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{__|}~
  !"#$%&'()*+,-./0123
+ !"#$%&'()*+,-./01230
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
@@ -757,7 +758,7 @@
 "#\n!CChatRoom_DeleteChatRoom_Response"X\n CChatRoom_RenameChatRoom_Request
 "#\n!CChatRoom_LeaveVoiceChat_Response"
 "#\n!CCloud_AppSessionSuspend_Response"C\n
-"#\n!CGamescope_SetBlurParams_Response2
+"#\n!CGamescope_SetBlurParams_Response")\n'CGamescope_ReArmMuraCalibration_Request"*\n(CGamescope_ReArmMuraCalibration_Response2
 "#\n!CPublishedFile_Subscribe_Response"v\n"CPublishedFile_Unsubscribe_Request
 "#\n\tCMsgClose
 "$&')*+,-.//123456779:;<=>??ABCDEFGG(
@@ -3142,6 +3143,7 @@ $tICAPIJobListHashLoadSave
 (.CGameRecording_CreateShareClip_Response"
 (.CGameRecording_DeleteSharedClip_Request
 (.CGameRecording_GetRecordingSize_Request
+(.CGamescope_ReArmMuraCalibration_Request
 (.CInventory_GetUserPurchaseInfo_Response"
 (.COffline_GetOfflineLogonTicket_Response
 (.CParental_ApproveFeatureAccess_Response
@@ -4280,6 +4282,7 @@ $tICAPIJobListHashLoadSave
 ).CGameRecording_GetRecordingSize_Response
 ).CGameRecording_LowDiskSpace_Notification
 ).CGameRecording_UploadClipToSteam_Request
+).CGamescope_ReArmMuraCalibration_Response
 ).CParental_EnableParentalSettings_Request
 ).CParties_OnReservationCompleted_Response"
 ).CPartnerApps_FinishUploadKVSign_Response
@@ -6712,7 +6715,7 @@ $tICAPIJobListHashLoadSave
 /data/src/clientdll/music/sqlitecontroller.cpp
 /data/src/clientdll/networkdevicemanager.cpp
 /data/src/clientdll/networkdevicemanager_linux.cpp
-/data/src/clientdll/networkdevicemanager_linux.cpp:2246
+/data/src/clientdll/networkdevicemanager_linux.cpp:2251
 /data/src/clientdll/p2pnetworkingsession.cpp
 /data/src/clientdll/peercontentserver.cpp
 /data/src/clientdll/pipewirecontext.cpp
@@ -6751,7 +6754,7 @@ $tICAPIJobListHashLoadSave
 /data/src/clientdll/systemmanager.cpp:2673
 /data/src/clientdll/systemmanager.cpp:3173
 /data/src/clientdll/systemmanager.cpp:4709
-/data/src/clientdll/systemmanager.cpp:5269
+/data/src/clientdll/systemmanager.cpp:5270
 /data/src/clientdll/systemperfmanager.cpp
 /data/src/clientdll/systemperfmanager_linux.cpp
 /data/src/clientdll/systemperfmanager_linux.cpp:1601
@@ -9595,6 +9598,7 @@ $tICAPIJobListHashLoadSave
 15CMemberFunctor0IP23CAPIJobListHashLoadSaveMS0_FbvE18CFuncMemPolicyNoneE
 15CMemberFunctor0IP24CAPIJobVerifySignedFilesMS0_FvvE18CFuncMemPolicyNoneE
 15CMemberFunctor0IP29CRemoteStorageFileSyncContextMS0_FvvE18CFuncMemPolicyNoneE
+15CMemberFunctor0IP5CUserMS0_F7EResultvE18CFuncMemPolicyNoneE
 15CMemberFunctor0IP5CUserMS0_FvvE18CFuncMemPolicyNoneE
 15CMemberFunctor1IP17CDepotDownloadMgrMS0_FvyEy18CFuncMemPolicyNoneE
 15CMemberFunctor1IP21CContentUpdateContextMS0_KFvPK18CPatchResponseDataEPS2_18CFuncMemPolicyNoneE
@@ -13204,6 +13208,7 @@ $tICAPIJobListHashLoadSave
 39CGameRecording_CreateShareClip_Response
 39CGameRecording_DeleteSharedClip_Request
 39CGameRecording_GetRecordingSize_Request
+39CGamescope_ReArmMuraCalibration_Request
 39CHIDDevicePipeSharedMemStreamFromRemote
 39CInventory_GetUserPurchaseInfo_Response
 39CMsgClientFriendsGroupsList_FriendGroup
@@ -13366,6 +13371,7 @@ $tICAPIJobListHashLoadSave
 40CGameRecording_LowDiskSpace_Notification
 40CGameRecording_SaveClip_Request_Position
 40CGameRecording_UploadClipToSteam_Request
+40CGamescope_ReArmMuraCalibration_Response
 40CHIDMessageFromRemote_DeviceInputReports
 40CInventory_PurchaseInit_Request_LineItem
 40CMsgClientPICSProductInfoRequest_AppInfo
@@ -16793,6 +16799,7 @@ B\n\rstats_to_send
 B\n\tQueryTime
 B\n\vapp_changes
 BackUp() can only be called after a successful Next().
+Backend
 BackgroundRecording
 Backing store not supported
 Backup Running
@@ -20123,6 +20130,7 @@ Cache miss for %s - file '%s' has wrong version\n
 Cache miss for %s - file '%s' not found\n
 Cache-Control
 CacheRelayTicket
+Cached
 Cached credential is invalid
 Cached data for %s exceeds request max-age cache-control, forcing validation\n
 Cached data for %s exceeds request min-fresh cache-control, forcing validation\n
@@ -21780,7 +21788,7 @@ Duration before manual gyro drift calibration times out, and returns to calibrat
 Duration control check for %d failed (%d/%d): %s
 Duration control check will run in %d seconds
 Duration control enabled for appid %d or dev convars are set, fetching playtime + enabling timers
-Duration control: Backend result: enabled %c, steamchina %c, adult %c, pending %c, playtime %d, today %d, allowed %d
+Duration control: %s result: enabled %c, steamchina %c, adult %c, pending %c, playtime %d, today %d, allowed %d
 Duration control: Convars are overridden, but user is not age verified and duration control applies to app %d.
 Duration control: Convars are overridden. Values:
 Duration control: Developer convars are not overridden, using normal thresholds and existing user playtime for app %d.
@@ -22339,6 +22347,7 @@ EXTRACT_AND_EXPAND
 EXTRACT_ONLY
 EYieldingCall - Inventory Lock
 EYldFetchLoginTokenWork() - SteamGuard
+EYldRequestAgeVerification
 E[3M
 E\foD
 E\n\nAckMessage
@@ -28388,6 +28397,7 @@ Officer
 Offline
 Offline - Tracks to Sync: %d Playlists: %d - Time Left: %d\n
 Offline.GetOfflineLogonTicket#1
+Offline/VCache
 Offline\EncryptedSignature
 Offline\EncryptedTicket
 Offline\Signature
@@ -29771,6 +29781,7 @@ Rave
 Raw stream mode only supported for TCP connections
 Rbg.E
 Re-entering DispatchCallback, this is dangerous.
+ReArmMuraCalibration
 Reached an unintended state: CPPTYPE_MESSAGE
 Reached impossible case in HasBit().
 Reaction
@@ -33259,6 +33270,8 @@ Tai_Le
 Tai_Tham
 Tai_Viet
 Tajik
+TakeInstantClipForGame
+TakeInstantClip_t
 TakeScreenshot
 TakeTracker
 TakeUpdateLock
@@ -36578,6 +36591,7 @@ ZuneCustomAlbumArt.jpg
 \n\finitial_ping
 \n\finput_source
 \n\finput_toggle
+\n\finstant_clip
 \n\finvite_limit
 \n\finvite_token
 \n\fip_addresses
@@ -47451,9 +47465,9 @@ low-pri yield - /data/src/clientdll/autocloud.cpp:566
 low-pri yield - /data/src/clientdll/autocloud.cpp:637
 low-pri yield - /data/src/clientdll/autocloud.cpp:812
 low-pri yield - /data/src/clientdll/autocloud.cpp:902
-low-pri yield - /data/src/clientdll/clientjob.cpp:421
-low-pri yield - /data/src/clientdll/clientjob.cpp:452
-low-pri yield - /data/src/clientdll/clientjob.cpp:761
+low-pri yield - /data/src/clientdll/clientjob.cpp:423
+low-pri yield - /data/src/clientdll/clientjob.cpp:454
+low-pri yield - /data/src/clientdll/clientjob.cpp:763
 low-pri yield - /data/src/clientdll/clientjobbuildchunkstore.cpp:1000
 low-pri yield - /data/src/clientdll/clientugc.cpp:6791
 low-pri yield - /data/src/clientdll/compatmanager.cpp:2299
@@ -54635,7 +54649,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Sep  3 2024 22:52:37
+steam Sep  6 2024 20:09:52
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

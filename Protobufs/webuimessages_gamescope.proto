@@ -48,10 +48,17 @@ message CGamescope_SetBlurParams_Request {
 message CGamescope_SetBlurParams_Response {
 }
 
+message CGamescope_ReArmMuraCalibration_Request {
+}
+
+message CGamescope_ReArmMuraCalibration_Response {
+}
+
 service Gamescope {
 	option (webui_service_execution_site) = k_EClientExecutionSiteSteamUI;
 
 	rpc GetState (.CGamescope_GetState_Request) returns (.CGamescope_GetState_Response);
 	rpc NotifyStateChanged (.CGamescope_StateChanged_Notification) returns (.WebUINoResponse);
 	rpc SetBlurParams (.CGamescope_SetBlurParams_Request) returns (.CGamescope_SetBlurParams_Response);
+	rpc ReArmMuraCalibration (.CGamescope_ReArmMuraCalibration_Request) returns (.CGamescope_ReArmMuraCalibration_Response);
 }

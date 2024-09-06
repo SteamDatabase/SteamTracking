@@ -60,6 +60,7 @@ enum EClientNotificationType {
 	k_EClientNotificationType_GameRecordingStart = 55;
 	k_EClientNotificationType_GameRecordingStop = 56;
 	k_EClientNotificationType_GameRecordingUserMarkerAdded = 57;
+	k_EClientNotificationType_GameRecordingInstantClip = 58;
 }
 
 enum ESystemUpdateNotificationType {
@@ -271,4 +272,9 @@ message CClientNotificationGameRecordingStop {
 
 message CClientNotificationGameRecordingUserMarkerAdded {
 	optional fixed64 game_id = 1;
+}
+
+message CClientNotificationGameRecordingInstantClip {
+	optional fixed64 game_id = 1;
+	optional string clip_id = 2;
 }

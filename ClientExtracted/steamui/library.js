@@ -1,4 +1,4 @@
-var CLSTAMP = "9157587";
+var CLSTAMP = "9166008";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -7797,10 +7797,10 @@ var CLSTAMP = "9157587";
         "use strict";
         r.d(t, { P: () => n });
         class n {
-          async GetObject(e) {
+          async GetObject(e, t) {
             try {
-              const t = await this.GetString(e);
-              return t ? JSON.parse(t) : null;
+              const r = await this.GetString(e);
+              return r ? JSON.parse(r, t) : null;
             } catch {
               return null;
             }
@@ -8864,9 +8864,9 @@ var CLSTAMP = "9157587";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Sep 3 2024 : 15:43:03",
-                BUILD_TIME_UTC: "Sep 3 2024 : 22:43:03",
-                BUILD_RTIME_UTC: 1725403383,
+                BUILD_TIME_LOCAL: "Sep 6 2024 : 13:07:21",
+                BUILD_TIME_UTC: "Sep 6 2024 : 20:07:21",
+                BUILD_RTIME_UTC: 1725653241,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -16312,7 +16312,7 @@ var CLSTAMP = "9157587";
           u = r(49180),
           m = r(736),
           d = r(32263),
-          h = r(42255),
+          h = r(45972),
           p = r(13869),
           g = r(50376),
           f = r(90765),
@@ -19876,7 +19876,7 @@ var CLSTAMP = "9157587";
           te = r.n(ee),
           re = r(72476),
           ne = r(11131),
-          ie = r(42255);
+          ie = r(45972);
         const oe = o.forwardRef(function (e, t) {
           const {
               label: r,
@@ -39165,6 +39165,50 @@ var CLSTAMP = "9157587";
           );
         }
       },
+      41480: (e, t, r) => {
+        "use strict";
+        r.d(t, { Q9: () => C, hM: () => c, mt: () => s });
+        var n = r(63696),
+          i = r(28816),
+          o = r(94790),
+          l = r(46701),
+          a = r(78110);
+        const s = ({
+          active: e,
+          onDismiss: t,
+          className: r,
+          modalClassName: a,
+          children: s,
+        }) =>
+          n.createElement(
+            o.E,
+            { active: e },
+            n.createElement(
+              l.x_,
+              { onEscKeypress: t, className: a },
+              n.createElement(i.UC, { className: r }, s),
+            ),
+          );
+        function c(e) {
+          const {
+            onDismiss: t,
+            className: r,
+            modalClassName: o,
+            children: s,
+            ...c
+          } = e;
+          return n.createElement(
+            a.t,
+            { ...c, onDismiss: t },
+            n.createElement(
+              l.x_,
+              { onEscKeypress: t, className: o },
+              n.createElement(i.UC, { className: r }, s),
+            ),
+          );
+        }
+        const C = (e) => c({ modal: !0, ...e });
+      },
       34303: (e, t, r) => {
         "use strict";
         r.d(t, { L: () => M });
@@ -39629,81 +39673,42 @@ var CLSTAMP = "9157587";
           );
         });
       },
-      42255: (e, t, r) => {
+      45972: (e, t, r) => {
         "use strict";
         r.d(t, {
-          mt: () => s,
-          hM: () => c,
-          Qs: () => v,
-          o0: () => k.o0,
-          eV: () => H.e,
-          KG: () => k.KG,
-          Ee: () => k.Ee,
-          tx: () => b.tx,
-          Q9: () => C,
-          x_: () => l.x_,
-          Nm: () => l.Nm,
-          nd: () => k.nd,
-          ZH: () => k.ZH,
-          pY: () => k.pY,
-          Zw: () => k.Zw,
-          EN: () => o.E,
-          BR: () => b.BR,
-          Ju: () => b.Ju,
+          mt: () => n.mt,
+          hM: () => n.hM,
+          Qs: () => f,
+          o0: () => _.o0,
+          eV: () => w.e,
+          KG: () => _.KG,
+          Ee: () => _.Ee,
+          tx: () => M.tx,
+          Q9: () => n.Q9,
+          x_: () => L.x_,
+          Nm: () => L.Nm,
+          nd: () => _.nd,
+          ZH: () => _.ZH,
+          pY: () => _.pY,
+          Zw: () => _.Zw,
+          EN: () => E.E,
+          BR: () => M.BR,
+          Ju: () => M.Ju,
         });
-        var n = r(63696),
-          i = r(28816),
-          o = r(94790),
-          l = r(46701),
-          a = r(78110);
-        const s = ({
-          active: e,
-          onDismiss: t,
-          className: r,
-          modalClassName: a,
-          children: s,
-        }) =>
-          n.createElement(
-            o.E,
-            { active: e },
-            n.createElement(
-              l.x_,
-              { onEscKeypress: t, className: a },
-              n.createElement(i.UC, { className: r }, s),
-            ),
-          );
-        function c(e) {
-          const {
-            onDismiss: t,
-            className: r,
-            modalClassName: o,
-            children: s,
-            ...c
-          } = e;
-          return n.createElement(
-            a.t,
-            { ...c, onDismiss: t },
-            n.createElement(
-              l.x_,
-              { onEscKeypress: t, className: o },
-              n.createElement(i.UC, { className: r }, s),
-            ),
-          );
-        }
-        const C = (e) => c({ modal: !0, ...e });
-        r(34303);
-        var u = r(11816),
-          m = r(95214),
-          d = r(36142),
-          h = r(94877),
-          p = r(94169),
-          g = r(35260),
-          f = r(89376),
-          _ = r(43780),
-          w = r(72476),
-          M = r(78325);
-        class L {
-          m_GamepadNavigationController = new _.tf();
+        var n = r(41480),
+          i = (r(34303), r(63696)),
+          o = r(11816),
+          l = r(95214),
+          a = r(36142),
+          s = r(94877),
+          c = r(94169),
+          C = r(35260),
+          u = r(89376),
+          m = r(43780),
+          d = r(72476),
+          h = r(78325);
+        class p {
+          m_GamepadNavigationController = new m.tf();
           GetNavigationController() {
             return this.m_GamepadNavigationController;
           }
@@ -39711,73 +39716,75 @@ var CLSTAMP = "9157587";
           static s_SingletonGamepaUI;
           static Get(e) {
             return e
-              ? (L.s_SingletonGamepaUI ||
-                  ((L.s_SingletonGamepaUI = new L(!0)),
-                  "dev" == w.TS.WEB_UNIVERSE &&
-                    (window.g_StoreWebNavStoreGamepadUI = L.s_Singleton)),
-                L.s_SingletonGamepaUI)
-              : (L.s_Singleton || (L.s_Singleton = new L(!1)), L.s_Singleton);
+              ? (p.s_SingletonGamepaUI ||
+                  ((p.s_SingletonGamepaUI = new p(!0)),
+                  "dev" == d.TS.WEB_UNIVERSE &&
+                    (window.g_StoreWebNavStoreGamepadUI = p.s_Singleton)),
+                p.s_SingletonGamepaUI)
+              : (p.s_Singleton || (p.s_Singleton = new p(!1)), p.s_Singleton);
           }
           constructor(e) {
             e &&
               (this.m_GamepadNavigationController.RegisterInputSource(
-                new p.E(),
+                new c.E(),
               ),
               this.m_GamepadNavigationController.RegisterInputSource(
-                new h.d(),
+                new s.d(),
               )),
-              "dev" == w.TS.WEB_UNIVERSE &&
+              "dev" == d.TS.WEB_UNIVERSE &&
                 (this.m_GamepadNavigationController.RegisterInputSource(
-                  new g.Q(window),
+                  new C.Q(window),
                 ),
                 this.m_GamepadNavigationController.RegisterInputSource(
-                  new f.q(window),
+                  new u.q(window),
                 ));
           }
         }
-        var E = r(55993);
-        function v(e) {
-          const { children: t, navID: r, closeModal: i } = e,
-            o = n.createRef(),
-            l = (function () {
+        var g = r(55993);
+        function f(e) {
+          const { children: t, navID: r, closeModal: n } = e,
+            s = i.createRef(),
+            c = (function () {
               let e = window.legacyWebFocusNavController,
-                t = (0, w.Qn)();
+                t = (0, d.Qn)();
               return (
-                e || (e = L.Get(t).GetNavigationController()),
-                e.SetGamepadEventUpdateBatcher(M.unstable_batchedUpdates),
+                e || (e = p.Get(t).GetNavigationController()),
+                e.SetGamepadEventUpdateBatcher(h.unstable_batchedUpdates),
                 e
               );
             })(),
-            a = (e) => (e.stopPropagation(), e.preventDefault(), !0);
-          return (0, w.Qn)() && !w.TS.IN_STEAMUI
-            ? n.createElement(
-                u.B2,
+            C = (e) => (e.stopPropagation(), e.preventDefault(), !0);
+          return (0, d.Qn)() && !d.TS.IN_STEAMUI
+            ? i.createElement(
+                o.B2,
                 {
                   navID: r,
-                  NavigationManager: l,
-                  navTreeRef: o,
-                  onCancelButton: i,
-                  className: E.GamepadOnlyModalWrapper,
+                  NavigationManager: c,
+                  navTreeRef: s,
+                  onCancelButton: n,
+                  className: g.GamepadOnlyModalWrapper,
                 },
-                n.createElement(
-                  m.q,
+                i.createElement(
+                  l.q,
                   null,
-                  n.createElement(
-                    d.Z,
+                  i.createElement(
+                    a.Z,
                     {
-                      className: E.GamepadOnlyPanelWrapper,
-                      onGamepadDirection: a,
+                      className: g.GamepadOnlyPanelWrapper,
+                      onGamepadDirection: C,
                       focusableIfNoChildren: !0,
                     },
                     t,
                   ),
                 ),
               )
-            : n.createElement(n.Fragment, null, t);
+            : i.createElement(i.Fragment, null, t);
         }
-        var k = r(12774),
-          H = r(35376),
-          b = r(3673);
+        var _ = r(12774),
+          w = r(35376),
+          M = r(3673),
+          L = r(46701),
+          E = r(94790);
       },
       85379: (e, t, r) => {
         "use strict";
@@ -39791,7 +39798,7 @@ var CLSTAMP = "9157587";
           c = r(91435),
           C = r(27773),
           u = r(72476);
-        r(42255);
+        r(45972);
         function m(e) {
           const { Modal: t } = e,
             { name: r, modalProps: s, options: m } = t,
@@ -40505,7 +40512,7 @@ var CLSTAMP = "9157587";
         "use strict";
         r.d(t, { HT: () => C, mK: () => s, pg: () => c, x_: () => i.x_ });
         var n = r(63696),
-          i = r(42255),
+          i = r(45972),
           o = r(49455),
           l = r(46108),
           a = r(72476);
@@ -50531,9 +50538,9 @@ var CLSTAMP = "9157587";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Sep 3 2024 : 15:43:03",
-                    BUILD_TIME_UTC: "Sep 3 2024 : 22:43:03",
-                    BUILD_RTIME_UTC: 1725403383,
+                    BUILD_TIME_LOCAL: "Sep 6 2024 : 13:07:21",
+                    BUILD_TIME_UTC: "Sep 6 2024 : 20:07:21",
+                    BUILD_RTIME_UTC: 1725653241,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -51102,7 +51109,7 @@ var CLSTAMP = "9157587";
         1012: "4b6a5ef0e8cdbd27a272",
         1093: "36287bfecee147581080",
         1219: "429fe19c860a564f285a",
-        1220: "94d0f6951de00d17d6c2",
+        1220: "06593526461d6de03b91",
         1275: "a0f998b390490ca121ed",
         1389: "702efa27ea4d6c4fff61",
         1423: "e4442de8d8cb9b3272d1",
@@ -51126,7 +51133,7 @@ var CLSTAMP = "9157587";
         2611: "a2afb4fc0dc2e7577bc2",
         2640: "12cb297e57ad9e12af7a",
         2646: "d2ff040eaa378fe20b07",
-        2664: "9a4aaefe293c2149ca19",
+        2664: "9fd9b40dbea84dba8554",
         2761: "6dd5fabd28ee4a8ef54c",
         2783: "a0153faa8ea3677e0391",
         2862: "451203b2053101851833",
@@ -51140,7 +51147,7 @@ var CLSTAMP = "9157587";
         3180: "8e8aa27ac0cac69a5efc",
         3350: "52d5ab64230a17007d7a",
         3366: "94b027e82a96ab73ffe0",
-        3569: "44159a9ea58d79dab4bc",
+        3569: "79cc23f86f8b3738206d",
         3583: "978cf57fa27bcf5cb29b",
         3594: "8224db72aa82304ea97b",
         3714: "f85176b5e935dfd11403",
@@ -51185,7 +51192,7 @@ var CLSTAMP = "9157587";
         7462: "9740c55b13403a71d6ce",
         7533: "97dd6db76a5a7597bdb0",
         7569: "f64bcfcefa6dfc4adcf9",
-        7653: "971fbf7bfc5c65803ed1",
+        7653: "1369b6173bd8bf937d5a",
         7696: "8cf00ff2b9e6d82bceb7",
         7770: "c0a6019a38547642e793",
         7824: "9be51b7453ccd4629b2a",
@@ -51197,8 +51204,8 @@ var CLSTAMP = "9157587";
         8280: "d7c0206e5763a9cb76f6",
         8286: "4cc2f13b3fe366089a80",
         8291: "faa5c9aa86f7c3a3ccb4",
-        8396: "2f4934234f0dee86ad34",
-        8443: "1b05ab8f5658dba05b22",
+        8396: "d5b7973e9f841daac71c",
+        8443: "9fe84a958cb0f468efe3",
         8445: "53862ebd9ace8f9b7e3f",
         8478: "6a43580d5abdab6866bc",
         8495: "ff0be4e4c8bd54987618",
@@ -51220,7 +51227,7 @@ var CLSTAMP = "9157587";
         9418: "fd07eeefd19a66aed327",
         9462: "89227ab1a3d278d803ec",
         9711: "925ea00fb25d86de2695",
-        9858: "615eaffa3b8a7a929ad2",
+        9858: "2e8a17095413c56f4be9",
         9869: "7f29b83b165e41a2265b",
         9887: "8cfcae473018942b8bd6",
       }[e]),
