@@ -5004,8 +5004,11 @@
               if (
                 ((0, y.w)(
                   200 == a.status && 1 == a.data.success,
-                  "We should only get 200 if we succeed in this method.",
+                  "We should only get 200 if we succeed in this method. Got Result: " +
+                    a.data.success,
                 ),
+                1 != a.data.success &&
+                  console.error("InternalSaveAction", a.data),
                 this.m_editModel.GetGID() == i)
               ) {
                 this.m_editModel.ClearDirty(),
