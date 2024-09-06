@@ -20635,6 +20635,10 @@
                     i?.parent_node_group_id,
                   );
                 if (s?.phase == Zt.kL.LEAGUE_PHASE_GROUP_STAGE) {
+                  if (23 == a?.event && t.node_id >= 25 && t.node_id <= 32) {
+                    n = !0;
+                    break;
+                  }
                   r = !0;
                   break;
                 }
