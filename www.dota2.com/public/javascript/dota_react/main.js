@@ -22196,14 +22196,12 @@
                 t.division == (e.eDivision || Zt.ke.UNSET) &&
                 t.region == (e.eRegion || Zt.ZM.UNSET),
             )?.league_id,
-            n = $t.E.Get().GetDPCLeagueResults(r),
-            i =
-              Math.max(
-                n?.results.length,
-                n?.points.length,
-                n?.dollars.length,
-              ) || 0,
-            o = n && n.results.length > 0 ? n?.results[0].standing : i + 1;
+            n = $t.E.Get().GetDPCLeagueResults(r);
+          let i =
+            Math.max(n?.results.length, n?.points.length, n?.dollars.length) ||
+            0;
+          t == Zt.Dq.INTERNATIONAL_2024 && (i = 16);
+          const o = n && n.results.length > 0 ? n?.results[0].standing : i + 1;
           let l = 0;
           return s.createElement(
             "div",
@@ -23398,9 +23396,7 @@
               { value: Zt.sI.GROUP_D, strLabel: "#dpc_group_d" },
               { value: Zt.sI.PLACEMENT, strLabel: "#dpc_placement" },
               { value: Zt.sI.PLAYOFF, strLabel: "#dpc_playoff" },
-              e !== Zt.Dq.INTERNATIONAL_2024
-                ? { value: Zt.sI.RESULTS, strLabel: "#dpc_results" }
-                : void 0,
+              { value: Zt.sI.RESULTS, strLabel: "#dpc_results" },
             ],
             i = (0, Kt.JF)(a.strPhase);
           return $t.E.Get().GetEventType(e) != Zt.J7.INTERNATIONAL
