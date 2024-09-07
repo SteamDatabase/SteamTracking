@@ -38665,7 +38665,7 @@
                 !n?.has_started &&
                 !n?.is_completed &&
                 0 != n?.scheduled_time &&
-                !(n?.scheduled_time < Date.now() / 1e3 + 7200)
+                !(n?.scheduled_time < Date.now() / 1e3 - 7200)
               );
             })
             .sort((e, t) => {
