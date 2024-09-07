@@ -20642,20 +20642,34 @@
                   r = !0;
                   break;
                 }
-                21 == a?.event &&
+                23 == a?.event &&
                   ((41 != t.node_id &&
                     42 != t.node_id &&
                     43 != t.node_id &&
                     44 != t.node_id &&
-                    49 != t.node_id &&
-                    50 != t.node_id &&
-                    51 != t.node_id &&
-                    52 != t.node_id &&
-                    53 != t.node_id &&
-                    54 != t.node_id &&
-                    55 != t.node_id &&
-                    56 != t.node_id) ||
-                    (n = !0));
+                    33 != t.node_id &&
+                    34 != t.node_id &&
+                    35 != t.node_id &&
+                    36 != t.node_id &&
+                    45 != t.node_id &&
+                    46 != t.node_id &&
+                    47 != t.node_id &&
+                    48 != t.node_id) ||
+                    (n = !0)),
+                  21 == a?.event &&
+                    ((41 != t.node_id &&
+                      42 != t.node_id &&
+                      43 != t.node_id &&
+                      44 != t.node_id &&
+                      49 != t.node_id &&
+                      50 != t.node_id &&
+                      51 != t.node_id &&
+                      52 != t.node_id &&
+                      53 != t.node_id &&
+                      54 != t.node_id &&
+                      55 != t.node_id &&
+                      56 != t.node_id) ||
+                      (n = !0));
               }
               r ? c.push(e) : n ? m.push(e) : d.push(e);
             }
@@ -20762,7 +20776,7 @@
                     s.createElement(
                       "div",
                       { className: Va().Title },
-                      21 == a?.event
+                      21 == a?.event || 23 == a?.event
                         ? (0, B.Wn)("#dpc_about_theinternational")
                         : (0, B.Wn)("#dpc_main_event"),
                     ),
