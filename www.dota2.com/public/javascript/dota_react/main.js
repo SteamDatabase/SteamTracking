@@ -23506,7 +23506,7 @@
                       bStyleTopThree: !0,
                     }),
                 )
-              : new Date().getTime() < 17257824e5
+              : new Date().getTime() < 1725696e6
                 ? s.createElement(S.rd, {
                     to: b.J.dpc_standings(
                       (0, Kt.p$)(e),
@@ -38281,14 +38281,14 @@
                 42 == a ||
                 43 == a ||
                 44 == a ||
-                49 == a ||
-                50 == a ||
-                51 == a ||
-                52 == a ||
-                53 == a ||
-                54 == a ||
-                55 == a ||
-                56 == a),
+                33 == a ||
+                34 == a ||
+                35 == a ||
+                36 == a ||
+                45 == a ||
+                46 == a ||
+                47 == a ||
+                48 == a),
             _ = this.GetRegionString(i.eRegion, r == u.LY.SHORT),
             p = this.GetDivisionString(i.eDivision, r == u.LY.SHORT),
             g = this.GetBracketNodeString(
