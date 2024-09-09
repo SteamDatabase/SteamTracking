@@ -11019,6 +11019,17 @@
             ),
           );
         }
+        BIsMarketingMessageArtRequestAtIndex(e) {
+          return Boolean(
+            this.m_oInput.art_requests?.find((t) =>
+              0 == e
+                ? "marketingmessage_art" == t ||
+                  "marketingmessage_art_eventcapsule" == t
+                : "marketingmessage_art_2" == t ||
+                  "marketingmessage_art_2_eventcapsule" == t,
+            ),
+          );
+        }
         BIsMarketingMessageEventCapsuleRequest() {
           return Boolean(
             this.m_oInput.art_requests?.find(
@@ -11030,6 +11041,17 @@
           return Boolean(
             this.m_oInput.art_requests?.find(
               (e) => "marketingmessage_art_2_eventcapsule" == e,
+            ),
+          );
+        }
+        BIsMarketingMessageEventCapsuleRequestAtIndex(e) {
+          return Boolean(
+            this.m_oInput.art_requests?.find(
+              (t) =>
+                t ==
+                (0 == e
+                  ? "marketingmessage_art_eventcapsule"
+                  : "marketingmessage_art_2_eventcapsule"),
             ),
           );
         }
@@ -11111,6 +11133,17 @@
               (e) =>
                 "marketingmessage_art_2" == e.type ||
                 "marketingmessage_art_2_eventcapsule" == e.type,
+            ),
+          );
+        }
+        BIsMarketingMessageArtApprovedAtIndex(e) {
+          return Boolean(
+            this.m_oInput.approvals_provided?.find(
+              (t) =>
+                (0 == e && "marketingmessage_art" == t.type) ||
+                "marketingmessage_art_eventcapsule" == t.type ||
+                (1 == e && "marketingmessage_art_2" == t.type) ||
+                "marketingmessage_art_2_eventcapsule" == t.type,
             ),
           );
         }
@@ -39418,24 +39451,24 @@
         );
       }
       function B(e) {
-        const { planIdentify: t } = e,
-          a = (0, n.bE)(),
-          [s, l, o, m, d, u] = (0, r.q3)(() => [
-            a.BIsMarketingMessageArtRequest() ||
-              a.BIsMarketingMessageEventCapsuleRequest(),
-            a.BHasPreviewArtOfType("marketingmessage_art") ||
-              a.BHasPreviewArtOfType("marketingmessage_art_eventcapsule"),
-            a.BHasPreviewArtOfType("marketingmessage_art_2") ||
-              a.BHasPreviewArtOfType("marketingmessage_art_2_eventcapsule"),
-            a.BIsMarketingMessageArtRequest_2() ||
-              a.BIsMarketingMessageEventCapsuleRequest_2(),
-            a.BIsMarketingMessageEventCapsuleRequest(),
-            a.BIsMarketingMessageEventCapsuleRequest_2(),
+        const { planIdentify: t, index: a } = e,
+          s = (0, n.bE)(),
+          [l, o, m] = (0, r.q3)(() => [
+            s.BIsMarketingMessageArtRequestAtIndex(a),
+            s.BIsMarketingMessageArtRequestAtIndex(0) &&
+              s.BIsMarketingMessageArtRequestAtIndex(1),
+            s.BIsMarketingMessageEventCapsuleRequestAtIndex(a),
           ]);
-        if (!s) return null;
-        let p = l || d ? 1 : 0;
-        (o || u) && (p += 1);
-        let _ = m ? 2 : 1;
+        if ((console.log("adil", a, l, o, m), !l)) return null;
+        const d = o ? 2 : 1,
+          u =
+            0 == a
+              ? m
+                ? "marketingmessage_art_eventcapsule"
+                : "marketingmessage_art"
+              : m
+                ? "marketingmessage_art_2_eventcapsule"
+                : "marketingmessage_art_2";
         return i.createElement(
           "div",
           { className: c().AssetSection },
@@ -39443,7 +39476,10 @@
             y.qx,
             {
               className: c().TitleBar,
-              title: (0, h.we)("#AssetRequest_MM_Title", `${p}/${_}`),
+              title: (0, h.we)(
+                m ? "#AssetRequest_MM_Update_Title" : "#AssetRequest_MM_Title",
+                `${o ? a + 1 : 1}/${d}`,
+              ),
             },
             i.createElement(
               "div",
@@ -39458,46 +39494,102 @@
                     "https://partner.steamgames.com/doc/store/assets/promos",
                   strTemplateName: (0, h.we)("#AssetRequest_General_DropBox"),
                 }),
-                i.createElement(
-                  "div",
-                  null,
-                  (0, h.we)(
-                    "#AssetRequest_General_Size",
-                    d || u ? 800 : 570,
-                    d || u ? 450 : 600,
-                  ),
-                ),
-                i.createElement("br", null),
-                i.createElement(
-                  "div",
-                  null,
-                  (0, h.we)("#AssetRequest_MM_Usage"),
-                ),
-                i.createElement("br", null),
-                i.createElement(
-                  "ul",
-                  null,
-                  i.createElement(
-                    "li",
-                    null,
-                    (0, h.we)("#AssetRequest_MM_Design"),
-                  ),
-                  i.createElement(
-                    "li",
-                    null,
-                    (0, h.we)("#AssetRequest_MM_Design1"),
-                  ),
-                  i.createElement(
-                    "li",
-                    null,
-                    (0, h.we)("#AssetRequest_MM_Hint"),
-                  ),
-                  i.createElement(
-                    "li",
-                    null,
-                    (0, h.we)("#AssetRequest_MM_Animation"),
-                  ),
-                ),
+                Boolean(m)
+                  ? i.createElement(
+                      i.Fragment,
+                      null,
+                      i.createElement(
+                        "div",
+                        null,
+                        (0, h.we)("#AssetRequest_General_Size", 800, 450),
+                      ),
+                      i.createElement("br", null),
+                      i.createElement(
+                        "div",
+                        null,
+                        (0, h.we)("#AssetRequest_MM_Update_Usage"),
+                      ),
+                      i.createElement("br", null),
+                      i.createElement(
+                        "ul",
+                        null,
+                        i.createElement(
+                          "li",
+                          null,
+                          (0, h.we)("#AssetRequest_MM_Update_Design"),
+                        ),
+                        i.createElement(
+                          "li",
+                          null,
+                          (0, h.we)("#AssetRequest_MM_Update_Design1"),
+                        ),
+                        i.createElement(
+                          "li",
+                          null,
+                          (0, h.we)("#AssetRequest_MM_Update_Design2"),
+                        ),
+                        i.createElement(
+                          "li",
+                          null,
+                          (0, h.we)("#AssetRequest_MM_Update_Design3"),
+                        ),
+                        i.createElement(
+                          "li",
+                          null,
+                          (0, h.we)("#AssetRequest_MM_Update_Design4"),
+                        ),
+                        i.createElement(
+                          "li",
+                          null,
+                          (0, h.we)("#AssetRequest_MM_Update_Design5"),
+                        ),
+                        i.createElement(
+                          "li",
+                          null,
+                          (0, h.we)("#AssetRequest_MM_Update_Design6"),
+                        ),
+                      ),
+                    )
+                  : i.createElement(
+                      i.Fragment,
+                      null,
+                      i.createElement(
+                        "div",
+                        null,
+                        (0, h.we)("#AssetRequest_General_Size", 570, 600),
+                      ),
+                      i.createElement("br", null),
+                      i.createElement(
+                        "div",
+                        null,
+                        (0, h.we)("#AssetRequest_MM_Usage"),
+                      ),
+                      i.createElement("br", null),
+                      i.createElement(
+                        "ul",
+                        null,
+                        i.createElement(
+                          "li",
+                          null,
+                          (0, h.we)("#AssetRequest_MM_Design"),
+                        ),
+                        i.createElement(
+                          "li",
+                          null,
+                          (0, h.we)("#AssetRequest_MM_Design1"),
+                        ),
+                        i.createElement(
+                          "li",
+                          null,
+                          (0, h.we)("#AssetRequest_MM_Hint"),
+                        ),
+                        i.createElement(
+                          "li",
+                          null,
+                          (0, h.we)("#AssetRequest_MM_Animation"),
+                        ),
+                      ),
+                    ),
               ),
               i.createElement(
                 "div",
@@ -39505,42 +39597,9 @@
                 i.createElement(
                   "div",
                   { className: c().AssetUploadPreview },
-                  i.createElement(C, {
-                    planID: t.id,
-                    promoAssetType: d
-                      ? "marketingmessage_art_eventcapsule"
-                      : "marketingmessage_art",
-                  }),
-                  i.createElement(T, {
-                    planIdentify: t,
-                    promoAssetType: d
-                      ? "marketingmessage_art_eventcapsule"
-                      : "marketingmessage_art",
-                  }),
+                  i.createElement(C, { planID: t.id, promoAssetType: u }),
+                  i.createElement(T, { planIdentify: t, promoAssetType: u }),
                 ),
-                Boolean(m) &&
-                  i.createElement(
-                    i.Fragment,
-                    null,
-                    i.createElement("br", null),
-                    i.createElement("br", null),
-                    i.createElement(
-                      "div",
-                      { className: c().AssetUploadPreview },
-                      i.createElement(C, {
-                        planID: t.id,
-                        promoAssetType: u
-                          ? "marketingmessage_art_2_eventcapsule"
-                          : "marketingmessage_art_2",
-                      }),
-                      i.createElement(T, {
-                        planIdentify: t,
-                        promoAssetType: u
-                          ? "marketingmessage_art_2_eventcapsule"
-                          : "marketingmessage_art_2",
-                      }),
-                    ),
-                  ),
               ),
             ),
           ),
@@ -40705,7 +40764,8 @@
               i.createElement(te, { planIdentify: t }),
               i.createElement(ne, { planIdentify: t }),
               i.createElement(Y, { planIdentify: t }),
-              i.createElement(B, { planIdentify: t }),
+              i.createElement(B, { planIdentify: t, index: 0 }),
+              i.createElement(B, { planIdentify: t, index: 1 }),
               i.createElement(ie, { planIdentify: t }),
               i.createElement(se, { planIdentify: t }),
             ),
