@@ -253,6 +253,13 @@
 			{
 				"activators"
 				{
+					"Full_Press"
+					{
+						"bindings"
+						{
+							"binding"		"controller_action gr_clip"
+						}
+					}
 				}
 			}
 			"dpad_south"

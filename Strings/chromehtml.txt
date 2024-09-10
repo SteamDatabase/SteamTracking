@@ -317,13 +317,12 @@ $\n k_EJSRegisterMethodType_Function
 --disable-accelerated-video-decode
 --disable-backgrounding-occluded-windows
 --disable-breakpad
---disable-d3d11
---disable-d3d11-video-decoder
 --disable-gpu
 --disable-gpu-compositing
 --disable-gpu-sandbox
 --disable-gpu-watchdog
 --disable-hang-monitor
+--disable-hevc
 --disable-quick-menu
 --disable-seccomp-filter-sandbox
 --disable-smooth-scrolling
@@ -360,13 +359,12 @@ $\n k_EJSRegisterMethodType_Function
 -cef-allow-browser-underlay
 -cef-delaypageload
 -cef-disable-breakpad
--cef-disable-d3d11
--cef-disable-d3d11-video-decoder
 -cef-disable-delaypageload
 -cef-disable-gpu
 -cef-disable-gpu-compositing
 -cef-disable-gpu-sandbox
 -cef-disable-hang-timeouts
+-cef-disable-hevc
 -cef-disable-js-logging
 -cef-disable-occlusion
 -cef-disable-renderer-restart
@@ -379,6 +377,7 @@ $\n k_EJSRegisterMethodType_Function
 -cef-enable-debugging
 -cef-enable-fatal-dcheck
 -cef-enable-gpu-debugging
+-cef-enable-vaapi
 -cef-force-32bit
 -cef-force-accessibility
 -cef-force-browser-underlay
@@ -1286,9 +1285,9 @@ Disable GPU accelerated compositing in browsers
 Disable GPU usage in CEF (force software rendering/compositing)
 Disable auto-restart of renderer process for existing browsers
 Disable early-out for known page loads
-Disable the Windows D3D11VideoDecoder
 Disable the glcomposer workaround applied to some video drivers
 Disable touch input browser focus workaround
+Disables hevc support
 Disables new faster overlay HTML path (or enables if on a branch it's not on by default for)
 Division or mod by zero: dividend.hi=
 Don't lookup extension types if they aren't present (1). 
@@ -1301,6 +1300,7 @@ ERROR
 EResult
 EUniverse
 Enable GPU debugging in Chromium, costs a glGetError() call after every command
+Enable VA-API video decoding on Linux
 Enable early-out for known page loads
 Enable sandbox logging in CEF
 End-of-file inside block comment.
@@ -1820,6 +1820,7 @@ Plat_IsInDebugSession
 Plat_IsSteamDeck
 Plat_IsSteamOS3
 Plat_RelativeTicks
+PlatformHEVCDecoderSupport
 PopupHTMLWindow: idx:%u handle:%u
 Process %d failed to shm_open %s\n
 Proto file starts with 0xEF but not UTF-8 BOM. Only UTF-8 is accepted for proto file.
@@ -2106,6 +2107,8 @@ V_strncat_length
 V_strncpy
 V_vsnprintf
 V_vsnprintfRet
+VaapiIgnoreDriverChecks
+VaapiVideoDecodeLinuxGL
 Valencian
 Value must be "true" or "false" for boolean option "
 Value must be identifier for boolean option "
@@ -2572,7 +2575,6 @@ deltay
 dgettext
 dgettext@GLIBC_2.0
 disable
-disable D3D11 usage in CEF
 disables CEF gpu-process sandbox
 disables CEF seccomp-bpf sandbox on Linux
 disables Chromium window occlusion testing

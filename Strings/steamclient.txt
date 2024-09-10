@@ -99,7 +99,6 @@
   what():  
  !"#$%&'()))*+,-./0123456789:;<=>?@ABBCDEFGHIGJKLLBMBBNOPQRSTUVWXYZ[\]^G___________________________________________________`___________________________________________________________________________________________________________________________________________________________________abccccccccdeefghijklmnopqrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstuvwxrstyzzzzzzzzzzzzzzzz{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{__|}~
  !"#$%&'()*+,-./0123
- !"#$%&'()*+,-./01230
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
@@ -1807,6 +1806,7 @@ $\n k_SystemAudioChannel_FrontCenter
 $\n k_SystemAudioPortDirection_Input
 $\nY8O
 $\n\fRelatedItems
+$\n\nattributes
 $\n\rprofile_theme
 $\n\vreport_type
 $bucketdir/steam_pipeline_cache.foz;$bucketdir/steamapp_pipeline_cache.foz
@@ -3740,7 +3740,6 @@ $tICAPIJobListHashLoadSave
 (\t"`\n(CBroadcast_MuteBroadcastChatUser_Request
 (\t"a\n,CBroadcast_WebRTCHaveTURNServer_Notification
 (\t"c\n)CStore_UpdatePackageReservations_Response
-(\t"c\n0CGameRecording_TimelineEntryChanged_Notification
 (\t"e\n!CInventory_SplitItemStack_Request
 (\t"f\n&CSteamTV_HomePageTemplate_ConveyorBelt
 (\t"f\n&CSteamTV_HomePageTemplate_QuickExplore
@@ -5334,13 +5333,12 @@ $tICAPIJobListHashLoadSave
 --disable-accelerated-video-decode
 --disable-backgrounding-occluded-windows
 --disable-breakpad
---disable-d3d11
---disable-d3d11-video-decoder
 --disable-gpu
 --disable-gpu-compositing
 --disable-gpu-sandbox
 --disable-gpu-watchdog
 --disable-hang-monitor
+--disable-hevc
 --disable-quick-menu
 --disable-rate-limiter
 --disable-seccomp-filter-sandbox
@@ -5559,13 +5557,12 @@ $tICAPIJobListHashLoadSave
 -cef-allow-browser-underlay
 -cef-delaypageload
 -cef-disable-breakpad
--cef-disable-d3d11
--cef-disable-d3d11-video-decoder
 -cef-disable-delaypageload
 -cef-disable-gpu
 -cef-disable-gpu-compositing
 -cef-disable-gpu-sandbox
 -cef-disable-hang-timeouts
+-cef-disable-hevc
 -cef-disable-js-logging
 -cef-disable-occlusion
 -cef-disable-renderer-restart
@@ -5578,6 +5575,7 @@ $tICAPIJobListHashLoadSave
 -cef-enable-debugging
 -cef-enable-fatal-dcheck
 -cef-enable-gpu-debugging
+-cef-enable-vaapi
 -cef-force-32bit
 -cef-force-accessibility
 -cef-force-browser-underlay
@@ -6030,6 +6028,8 @@ $tICAPIJobListHashLoadSave
 .CPartnerApps_Download_Request
 .CPartnerApps_Download_Response"
 .CPartnerApps_ExistingDRMUpload"@\n
+.CPhaseAttribute
+.CPhaseAttribute"c\n0CGameRecording_TimelineEntryChanged_Notification
 .CPlayer_AcceptSSA_Request
 .CPlayer_AcceptSSA_Response"
 .CPlayer_AddFriend_Request
@@ -9618,6 +9618,7 @@ $tICAPIJobListHashLoadSave
 15CMsgShowToolTip
 15COpenSSLContext
 15CP2PVoiceSystem
+15CPhaseAttribute
 15CProductBuilder
 15CPumpContextJob
 15CRadialMenuMode
@@ -11157,6 +11158,7 @@ $tICAPIJobListHashLoadSave
 24CAPIJobVerifySignedFiles
 24CAdapterSteamTimeline001
 24CAdapterSteamTimeline002
+24CAdapterSteamTimeline003
 24CClientInventoryAsyncJob
 24CClientJobChatMemberInfo
 24CClientJobCommitAppBuild
@@ -19239,6 +19241,7 @@ CPathString
 CPauseControllerInputMsg"
 CPeerContentServerJob
 CPendingMsg::SendPkt
+CPhaseAttribute
 CPipeWaiter::BRemove(%d) -- not present
 CPipewireContext::DispatchEvent
 CPlaybackController::Load %d\n
@@ -21622,7 +21625,6 @@ Disable controller support
 Disable early-out for known page loads
 Disable filtering of normally unlisted runtimes.
 Disable steam-runtime-launcher-service process.
-Disable the Windows D3D11VideoDecoder
 Disable the glcomposer workaround applied to some video drivers
 Disable the shader manager
 Disable touch input browser focus workaround
@@ -21637,6 +21639,7 @@ DisableTestLicense
 DisableWithRecoveryCode
 Disabled license for package: %u\n
 DisabledDLC
+Disables hevc support
 Disables new faster overlay HTML path (or enables if on a branch it's not on by default for)
 Disables new faster overlay HTML path (or enables in branches it's not yet on by default for)
 Disables setting webhelper GPU pri high when overlay visible
@@ -22404,6 +22407,7 @@ Enable HTTP/2 connections on Windows clients
 Enable HTTP/2 on all CHTTPClients automatically for SSL connections
 Enable IPv6 HTTP connections by default on Linux clients
 Enable IPv6 HTTP connections by default on Windows clients
+Enable VA-API video decoding on Linux
 Enable deck mic: %d
 Enable early-out for known page loads
 Enable extrapolation of rotation using the last known gyro speed. This is important to avoid staggered signals over blue tooth, but generally upgrades gyros that run lower than 500hz. The extrapolated quaternion will correct back toward the "ground truth" quaternion when the speed exceeds.
@@ -23218,7 +23222,6 @@ FamilyGroupsClient
 FamilyGroupsClient.NotifyGroupChanged#1
 FamilyGroupsClient.NotifyGroupStatus#1
 FamilyGroupsClient.NotifyRunningApps#1
-FamilyGroupsEnabled
 Fan control available: %d current: %d
 FastHexToBuffer() wants non-negative integers, not 
 Fatal error: %s\n
@@ -24807,6 +24810,7 @@ GotLocationString
 Gothic
 Gothic Rock
 Goto
+Gp@K
 GrabPay
 Gray color space not permitted on RGB PNG
 Greek
@@ -25266,6 +25270,10 @@ ISteamTimeline::AddSimpleTimelineEvent received a description that does not appe
 ISteamTimeline::AddSimpleTimelineEvent received a title that does not appear to be valid UTF8
 ISteamTimeline::AddSimpleTimelineEvent received an icon name that does not appear to be valid UTF8
 ISteamTimeline::AddSimpleTimelineEvent requires the caller to provide an icon and a title
+ISteamTimeline::SetGamePhaseAttribute received a group that does not appear to be valid UTF8
+ISteamTimeline::SetGamePhaseAttribute received an attribute value that does not appear to be valid UTF8
+ISteamTimeline::SetGamePhaseAttribute requires the caller to provide a group
+ISteamTimeline::SetGamePhaseAttribute requires the caller to provide an attribute value
 ISteamTimeline::SetGamePhaseID received a phase ID %d characters in length. The maximum length is %d characters.
 ISteamTimeline::SetGamePhaseID received a phase ID that does not appear to be valid UTF8
 ISteamTimeline::SetGamePhaseID requires the caller to provide phase ID
@@ -25276,14 +25284,6 @@ ISteamTimeline::ShowEventOnTimeline received a description that does not appear 
 ISteamTimeline::ShowEventOnTimeline received a title that does not appear to be valid UTF8
 ISteamTimeline::ShowEventOnTimeline received an icon name that does not appear to be valid UTF8
 ISteamTimeline::ShowEventOnTimeline requires the caller to provide an icon and a title
-ISteamTimeline::StartGamePhase received a decription that does not appear to be valid UTF8
-ISteamTimeline::StartGamePhase received a title that does not appear to be valid UTF8
-ISteamTimeline::StartGamePhase received an icon name that does not appear to be valid UTF8
-ISteamTimeline::StartGamePhase requires the caller to provide a title
-ISteamTimeline::UpdateGamePhase received a title that does not appear to be valid UTF8
-ISteamTimeline::UpdateGamePhase received an description that does not appear to be valid UTF8
-ISteamTimeline::UpdateGamePhase received an icon name that does not appear to be valid UTF8
-ISteamTimeline::UpdateGamePhase requires the caller to provide a title
 ISteamUser::BSetDurationControlOnlineState: New state %d for app %d, starting timers
 ISteamUser::BSetDurationControlOnlineState: No appid for this pipe
 ISteamUser::BSetDurationControlOnlineState: No session data available for appid %d
@@ -29205,6 +29205,7 @@ Plat_gmtime
 Plat_localtime
 Plat_timegm
 Platform disambiguator mismatch!
+PlatformHEVCDecoderSupport
 PlatformSocketsInit failed, error %s (%d)
 Play
 PlayAudio
@@ -31038,6 +31039,7 @@ STEAMSCREENSHOTS_INTERFACE_VERSION002
 STEAMSCREENSHOTS_INTERFACE_VERSION003
 STEAMTIMELINE_INTERFACE_V001
 STEAMTIMELINE_INTERFACE_V002
+STEAMTIMELINE_INTERFACE_V003
 STEAMTV_INTERFACE_V001
 STEAMTV_INTERFACE_V002
 STEAMUGC_INTERFACE_VERSION001
@@ -31598,6 +31600,8 @@ SetGameData
 SetGameDescription
 SetGameHostParams
 SetGameLauncherMode
+SetGamePhaseAttribute
+SetGamePhaseAttribute_t
 SetGamePhaseID
 SetGamePhaseID_t
 SetGameResolutionGlobal
@@ -34051,8 +34055,6 @@ UpdateCurrentEntryText
 UpdateCurrentGame
 UpdateDeviceList
 UpdateFirmware
-UpdateGamePhase
-UpdateGamePhase_t
 UpdateGameVrDllState
 UpdateGuestPassesList
 UpdateHeadsetStreamingEnabled_t
@@ -34377,6 +34379,8 @@ V_vsnprintfRet
 V_wcsncpy
 V_wcstoi64
 V_wcstoui64
+VaapiIgnoreDriverChecks
+VaapiVideoDecodeLinuxGL
 Vakiflar Bank
 Valencian
 Valid palette required for paletted images
@@ -41144,6 +41148,7 @@ d2i_PrivateKey
 d2i_PublicKey
 d2i_SSL_SESSION
 d2i_ocsp_nonce
+d3d11
 d=%-2d hl=%ld l=%4ld 
 d=%-2d hl=%ld l=inf  
 d?qq
@@ -41488,7 +41493,6 @@ directory services - algorithms
 dirname error
 dirtybits
 disable
-disable D3D11 usage in CEF
 disable automatically granted partner licenses
 disable_amd_hardware_encoding
 disable_client_cursor
@@ -43338,6 +43342,7 @@ gpu_stats\n
 gpu_temp\n
 gpu_webview_regkey_disabled
 gqr<
+gr_clip
 gr_marker
 gr_mode
 gr_toggle
@@ -45238,7 +45243,7 @@ k_EContentCheckProvider_Amazon
 k_EContentCheckProvider_Invalid
 k_EContentCheckProvider_Local
 k_EContentDescriptorMAX
-k_EControllerAction_Add_ActionSet_Layerk_EControllerAction_BigPicture_Minimizek_EControllerAction_BigPicture_Openk_EControllerAction_BigPicture_Quitk_EControllerAction_Camera_DotsPer360_CalibrationSpink_EControllerAction_Camera_Horizon_Resetk_EControllerAction_Camera_Turn_To_Face_Directionk_EControllerAction_Change_Player_Numberk_EControllerAction_Change_Presetk_EControllerAction_Change_TouchscreenMode_Hoverk_EControllerAction_Change_TouchscreenMode_LeftClickk_EControllerAction_Change_TouchscreenMode_MiddleClickk_EControllerAction_Change_TouchscreenMode_Nativek_EControllerAction_Change_TouchscreenMode_Nonek_EControllerAction_Change_TouchscreenMode_RightClickk_EControllerAction_Chord_Hint_Dismissk_EControllerAction_Chord_Hint_Displayk_EControllerAction_Controller_PowerOffk_EControllerAction_Countk_EControllerAction_Empty_Sub_Commandk_EControllerAction_Force_Guide_Upk_EControllerAction_GR_Markerk_EControllerAction_GR_Togglek_EControllerAction_Hold_ActionSet_Layerk_EControllerAction_Host_PowerOffk_EControllerAction_Host_Restartk_EControllerAction_Host_Suspendk_EControllerAction_Layer_Empty_Bindingk_EControllerAction_Mouse_Deltak_EControllerAction_Mouse_Positionk_EControllerAction_Notify_ActionSetLayer_Changek_EControllerAction_Notify_ActionSet_Changek_EControllerAction_Notify_Close_Touch_Menuk_EControllerAction_Notify_InputGeneratedk_EControllerAction_Notify_Open_Touch_Menuk_EControllerAction_Notify_XInput_Slot_Changek_EControllerAction_Open_Configuratork_EControllerAction_Open_QuickMenuk_EControllerAction_Quit_Applicationk_EControllerAction_Remove_ActionSet_Layerk_EControllerAction_RequestConfigActivationk_EControllerAction_RequestCursorVisibilityChecksk_EControllerAction_Screen_Brightness_Downk_EControllerAction_Screen_Brightness_Upk_EControllerAction_Screenshotk_EControllerAction_Set_LEDk_EControllerAction_Show_Keyboardk_EControllerAction_SteamMusic_Nextk_EControllerAction_SteamMusic_PlayPausek_EControllerAction_SteamMusic_Prevk_EControllerAction_SteamMusic_VolDownk_EControllerAction_SteamMusic_VolMutek_EControllerAction_SteamMusic_VolUpk_EControllerAction_System_Key_0k_EControllerAction_System_Key_1k_EControllerAction_Toggle_Hapticsk_EControllerAction_Toggle_Hudk_EControllerAction_Toggle_Lizard_Modek_EControllerAction_Toggle_Magnifierk_EControllerAction_Toggle_Rumble
+k_EControllerAction_Add_ActionSet_Layerk_EControllerAction_BigPicture_Minimizek_EControllerAction_BigPicture_Openk_EControllerAction_BigPicture_Quitk_EControllerAction_Camera_DotsPer360_CalibrationSpink_EControllerAction_Camera_Horizon_Resetk_EControllerAction_Camera_Turn_To_Face_Directionk_EControllerAction_Change_Player_Numberk_EControllerAction_Change_Presetk_EControllerAction_Change_TouchscreenMode_Hoverk_EControllerAction_Change_TouchscreenMode_LeftClickk_EControllerAction_Change_TouchscreenMode_MiddleClickk_EControllerAction_Change_TouchscreenMode_Nativek_EControllerAction_Change_TouchscreenMode_Nonek_EControllerAction_Change_TouchscreenMode_RightClickk_EControllerAction_Chord_Hint_Dismissk_EControllerAction_Chord_Hint_Displayk_EControllerAction_Controller_PowerOffk_EControllerAction_Countk_EControllerAction_Empty_Sub_Commandk_EControllerAction_Force_Guide_Upk_EControllerAction_GR_Clipk_EControllerAction_GR_Markerk_EControllerAction_GR_Togglek_EControllerAction_Hold_ActionSet_Layerk_EControllerAction_Host_PowerOffk_EControllerAction_Host_Restartk_EControllerAction_Host_Suspendk_EControllerAction_Layer_Empty_Bindingk_EControllerAction_Mouse_Deltak_EControllerAction_Mouse_Positionk_EControllerAction_Notify_ActionSetLayer_Changek_EControllerAction_Notify_ActionSet_Changek_EControllerAction_Notify_Close_Touch_Menuk_EControllerAction_Notify_InputGeneratedk_EControllerAction_Notify_Open_Touch_Menuk_EControllerAction_Notify_XInput_Slot_Changek_EControllerAction_Open_Configuratork_EControllerAction_Open_QuickMenuk_EControllerAction_Quit_Applicationk_EControllerAction_Remove_ActionSet_Layerk_EControllerAction_RequestConfigActivationk_EControllerAction_RequestCursorVisibilityChecksk_EControllerAction_Screen_Brightness_Downk_EControllerAction_Screen_Brightness_Upk_EControllerAction_Screenshotk_EControllerAction_Set_LEDk_EControllerAction_Show_Keyboardk_EControllerAction_SteamMusic_Nextk_EControllerAction_SteamMusic_PlayPausek_EControllerAction_SteamMusic_Prevk_EControllerAction_SteamMusic_VolDownk_EControllerAction_SteamMusic_VolMutek_EControllerAction_SteamMusic_VolUpk_EControllerAction_System_Key_0k_EControllerAction_System_Key_1k_EControllerAction_Toggle_Hapticsk_EControllerAction_Toggle_Hudk_EControllerAction_Toggle_Lizard_Modek_EControllerAction_Toggle_Magnifierk_EControllerAction_Toggle_Rumble
 k_EControllerActivationType_Analogk_EControllerActivationType_Chordk_EControllerActivationType_Countk_EControllerActivationType_DoublePressk_EControllerActivationType_FullPressk_EControllerActivationType_LongPressk_EControllerActivationType_Nonek_EControllerActivationType_Releasek_EControllerActivationType_SoftPressk_EControllerActivationType_StartPress
 k_EControllerDigitalInput_BatteryLowk_EControllerDigitalInput_Button1k_EControllerDigitalInput_Button2k_EControllerDigitalInput_Button3k_EControllerDigitalInput_Button4k_EControllerDigitalInput_ButtonAk_EControllerDigitalInput_ButtonAlwaysOnk_EControllerDigitalInput_ButtonAncillary1k_EControllerDigitalInput_ButtonBk_EControllerDigitalInput_ButtonBackLeftk_EControllerDigitalInput_ButtonBackLeft2k_EControllerDigitalInput_ButtonBackRightk_EControllerDigitalInput_ButtonBackRight2k_EControllerDigitalInput_ButtonDownk_EControllerDigitalInput_ButtonEscapek_EControllerDigitalInput_ButtonLeftk_EControllerDigitalInput_ButtonLeftBumperk_EControllerDigitalInput_ButtonLeftJoystickClickk_EControllerDigitalInput_ButtonLeftTriggerk_EControllerDigitalInput_ButtonMacro0k_EControllerDigitalInput_ButtonMacro1k_EControllerDigitalInput_ButtonMacro1Fingerk_EControllerDigitalInput_ButtonMacro2k_EControllerDigitalInput_ButtonMacro2Fingerk_EControllerDigitalInput_ButtonMacro3k_EControllerDigitalInput_ButtonMacro4k_EControllerDigitalInput_ButtonMacro5k_EControllerDigitalInput_ButtonMacro6k_EControllerDigitalInput_ButtonMacro7k_EControllerDigitalInput_ButtonMenuk_EControllerDigitalInput_ButtonNonek_EControllerDigitalInput_ButtonRightk_EControllerDigitalInput_ButtonRightBumperk_EControllerDigitalInput_ButtonRightTriggerk_EControllerDigitalInput_ButtonSteamk_EControllerDigitalInput_ButtonUpk_EControllerDigitalInput_ButtonXk_EControllerDigitalInput_ButtonYk_EControllerDigitalInput_Countk_EControllerDigitalInput_LeftAuxCapSensek_EControllerDigitalInput_LeftTrackpadClickk_EControllerDigitalInput_LeftTrackpadDoubleTapk_EControllerDigitalInput_LeftTrackpadEk_EControllerDigitalInput_LeftTrackpadNk_EControllerDigitalInput_LeftTrackpadNek_EControllerDigitalInput_LeftTrackpadNwk_EControllerDigitalInput_LeftTrackpadOuterRadiusk_EControllerDigitalInput_LeftTrackpadSk_EControllerDigitalInput_LeftTrackpadSek_EControllerDigitalInput_LeftTrackpadSwk_EControllerDigitalInput_LeftTrackpadWk_EControllerDigitalInput_LeftTriggerThresholdk_EControllerDigitalInput_RightAuxCapSensek_EControllerDigitalInput_RightTrackpadClickk_EControllerDigitalInput_RightTrackpadDoubleTapk_EControllerDigitalInput_RightTrackpadEk_EControllerDigitalInput_RightTrackpadNk_EControllerDigitalInput_RightTrackpadNek_EControllerDigitalInput_RightTrackpadNwk_EControllerDigitalInput_RightTrackpadOuterRadiusk_EControllerDigitalInput_RightTrackpadSk_EControllerDigitalInput_RightTrackpadSek_EControllerDigitalInput_RightTrackpadSwk_EControllerDigitalInput_RightTrackpadWk_EControllerDigitalInput_RightTriggerThresholdk_EControllerDigitalInput_StickDownk_EControllerDigitalInput_StickLeftk_EControllerDigitalInput_StickRightk_EControllerDigitalInput_StickUpk_EControllerDigitalInput_Touch1k_EControllerDigitalInput_Touch2k_EControllerDigitalInput_Touch3k_EControllerDigitalInput_Touch4
 k_EControllerElementTypeButtonA
@@ -49052,6 +49057,8 @@ m_szAlbumSortName
 m_szArgs[ 1024 ]
 m_szArtistName
 m_szArtistSortName
+m_szAttributeGroup
+m_szAttributeValue
 m_szAvatar
 m_szBetaDesc
 m_szBetaName
@@ -54649,7 +54656,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Sep  6 2024 20:09:52
+steam Sep 10 2024 00:23:56
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

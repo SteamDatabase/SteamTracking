@@ -1,4 +1,4 @@
-var CLSTAMP = "9166008";
+var CLSTAMP = "9171289";
 /* Third-party software licenses can be found at licenses.txt */ (() => {
   var e,
     t,
@@ -8864,9 +8864,9 @@ var CLSTAMP = "9166008";
               !{
                 NODE_ENV: "production",
                 STEAM_BUILD: "buildbot",
-                BUILD_TIME_LOCAL: "Sep 6 2024 : 13:07:21",
-                BUILD_TIME_UTC: "Sep 6 2024 : 20:07:21",
-                BUILD_RTIME_UTC: 1725653241,
+                BUILD_TIME_LOCAL: "Sep 9 2024 : 17:23:01",
+                BUILD_TIME_UTC: "Sep 10 2024 : 00:23:01",
+                BUILD_RTIME_UTC: 1725927781,
               }.MOBILE_BUILD &&
               "addEventListener" in window
             ) {
@@ -40609,7 +40609,7 @@ var CLSTAMP = "9166008";
           Cip: () => _t,
           Cv4: () => u,
           DK4: () => M,
-          DQe: () => sr,
+          DQe: () => ar,
           Dp6: () => Oe,
           EQ9: () => k,
           ETd: () => Xt,
@@ -40690,7 +40690,7 @@ var CLSTAMP = "9166008";
           bfp: () => St,
           c_I: () => Ce,
           d1w: () => nr,
-          dI9: () => lr,
+          dI9: () => or,
           dJT: () => ot,
           eJJ: () => ft,
           eNX: () => it,
@@ -40727,7 +40727,6 @@ var CLSTAMP = "9166008";
           nGC: () => ee,
           o5Q: () => jt,
           pDR: () => $,
-          qR$: () => or,
           qcc: () => $e,
           qzq: () => Ae,
           rfv: () => Ue,
@@ -40741,7 +40740,7 @@ var CLSTAMP = "9166008";
           u9R: () => J,
           uMb: () => ge,
           vRz: () => ie,
-          vdG: () => ar,
+          vdG: () => lr,
           vjL: () => mt,
           vrn: () => Zt,
           wB_: () => p,
@@ -45915,40 +45914,6 @@ var CLSTAMP = "9166008";
           return n.createElement(
             "svg",
             {
-              width: "48",
-              height: "24",
-              viewBox: "0 0 48 24",
-              fill: "none",
-              xmlns: "http://www.w3.org/2000/svg",
-            },
-            n.createElement("rect", {
-              width: "48",
-              height: "24",
-              rx: "3",
-              fill: "#1A9FFF",
-            }),
-            n.createElement("path", {
-              d: "M14.3799 11.712C14.9399 11.896 15.3359 12.16 15.5679 12.504C15.8079 12.848 15.9279 13.264 15.9279 13.752C15.9279 14.248 15.7999 14.68 15.5439 15.048C15.2959 15.416 14.9359 15.7 14.4639 15.9C13.9999 16.1 13.4559 16.2 12.8319 16.2H9.17188V7.79999H12.4959C13.5119 7.79999 14.2559 7.98799 14.7279 8.36399C15.2079 8.73199 15.4479 9.25599 15.4479 9.93599C15.4479 10.744 15.0919 11.336 14.3799 11.712ZM11.2839 9.51599V11.22H12.3879C12.7159 11.22 12.9639 11.144 13.1319 10.992C13.3079 10.84 13.3959 10.62 13.3959 10.332C13.3959 9.78799 13.0479 9.51599 12.3519 9.51599H11.2839ZM12.6159 14.496C12.9759 14.496 13.2439 14.412 13.4199 14.244C13.6039 14.068 13.6959 13.84 13.6959 13.56C13.6959 12.984 13.3519 12.696 12.6639 12.696H11.2839V14.496H12.6159Z",
-              fill: "white",
-            }),
-            n.createElement("path", {
-              d: "M17.1992 7.79999H23.0192V9.57599H19.2752V11.088H22.4552V12.852H19.2752V14.424H23.0192V16.2H17.1992V7.79999Z",
-              fill: "white",
-            }),
-            n.createElement("path", {
-              d: "M28.5072 16.2H26.4312V9.57599H23.9832V7.79999H30.9552V9.57599H28.5072V16.2Z",
-              fill: "white",
-            }),
-            n.createElement("path", {
-              d: "M38.8285 16.2H36.5845L36.0925 14.76H33.0325L32.5525 16.2H30.3805L33.5365 7.79999H35.5525L38.8285 16.2ZM34.5325 10.236L33.5725 13.128H35.5285L34.5325 10.236Z",
-              fill: "white",
-            }),
-          );
-        }
-        function lr(e) {
-          return n.createElement(
-            "svg",
-            {
               xmlns: "http://www.w3.org/2000/svg",
               viewBox: "0 0 36 36",
               fill: "none",
@@ -45966,7 +45931,7 @@ var CLSTAMP = "9166008";
             }),
           );
         }
-        function ar(e) {
+        function lr(e) {
           return n.createElement(
             "svg",
             {
@@ -45983,7 +45948,7 @@ var CLSTAMP = "9166008";
             }),
           );
         }
-        function sr(e) {
+        function ar(e) {
           const { className: t } = e;
           return n.createElement(
             "svg",
@@ -50538,9 +50503,9 @@ var CLSTAMP = "9166008";
                 ? {
                     NODE_ENV: "production",
                     STEAM_BUILD: "buildbot",
-                    BUILD_TIME_LOCAL: "Sep 6 2024 : 13:07:21",
-                    BUILD_TIME_UTC: "Sep 6 2024 : 20:07:21",
-                    BUILD_RTIME_UTC: 1725653241,
+                    BUILD_TIME_LOCAL: "Sep 9 2024 : 17:23:01",
+                    BUILD_TIME_UTC: "Sep 10 2024 : 00:23:01",
+                    BUILD_RTIME_UTC: 1725927781,
                   }.MOBILE_BUILD
                   ? null
                   : document.getElementById(t)
@@ -51133,7 +51098,7 @@ var CLSTAMP = "9166008";
         2611: "a2afb4fc0dc2e7577bc2",
         2640: "12cb297e57ad9e12af7a",
         2646: "d2ff040eaa378fe20b07",
-        2664: "9fd9b40dbea84dba8554",
+        2664: "f29f446e0fa039f8d70e",
         2761: "6dd5fabd28ee4a8ef54c",
         2783: "a0153faa8ea3677e0391",
         2862: "451203b2053101851833",
@@ -51147,7 +51112,7 @@ var CLSTAMP = "9166008";
         3180: "8e8aa27ac0cac69a5efc",
         3350: "52d5ab64230a17007d7a",
         3366: "94b027e82a96ab73ffe0",
-        3569: "79cc23f86f8b3738206d",
+        3569: "18aed629b80e9f900213",
         3583: "978cf57fa27bcf5cb29b",
         3594: "8224db72aa82304ea97b",
         3714: "f85176b5e935dfd11403",
@@ -51227,7 +51192,7 @@ var CLSTAMP = "9166008";
         9418: "fd07eeefd19a66aed327",
         9462: "89227ab1a3d278d803ec",
         9711: "925ea00fb25d86de2695",
-        9858: "2e8a17095413c56f4be9",
+        9858: "8d06e493a55b0ea7063d",
         9869: "7f29b83b165e41a2265b",
         9887: "8cfcae473018942b8bd6",
       }[e]),
