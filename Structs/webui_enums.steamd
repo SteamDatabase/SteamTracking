@@ -71,6 +71,12 @@ enum ConfigPage
 	k_ConfigPage_Casual_Tag_Hub_Takeover = 14;
 }
 
+enum CreatorHome
+{
+	k_CreatorHomeNone = 0;
+	k_CreatorHomeAll = undefined;
+}
+
 enum Display
 {
 	k_DisplayAll = 0;
@@ -817,6 +823,15 @@ enum EPurchaseNoticeType
 	EPurchaseNoticeType_ControllerRequired = 0;
 	EPurchaseNoticeType_VRRequired = 1;
 	EPurchaseNoticeType_VRSupported = 2;
+}
+
+enum EPurchaseOrderDisplayType
+{
+	k_EPurchaseOrderDisplayType_Invalid = 0;
+	k_EPurchaseOrderDisplayType_Package = 1;
+	k_EPurchaseOrderDisplayType_Bundle = 2;
+	k_EPurchaseOrderDisplayType_Header = 3;
+	k_EPurchaseOrderDisplayType_Dropdown = 4;
 }
 
 enum EPurchaseReservationState

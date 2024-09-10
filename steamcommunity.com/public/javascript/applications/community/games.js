@@ -6905,8 +6905,8 @@
         }
         constructor(e, t) {
           var r, i, n, a, s, l, o;
-          (this.rgGameslistConfig = t),
-            (this.setExcludedContentDescriptorIds = new Set()),
+          (this.setExcludedContentDescriptorIds = new Set()),
+            (this.rgGameslistConfig = t),
             e && Object.assign(ut.s, e),
             this.BViewingOwnProfile() ||
               null ===

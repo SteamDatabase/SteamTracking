@@ -237,6 +237,7 @@ ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/14/
 ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/15/
 ${COMMUNITY_BASE_URL}groups/SteamLabs/discussions/17/
 ${COMMUNITY_BASE_URL}groups/bigpicture/discussions/4/
+${COMMUNITY_BASE_URL}groups/steamworks/announcements/detail/4201376568915048836
 ${COMMUNITY_BASE_URL}id/${m_strCustomURL}/
 ${COMMUNITY_BASE_URL}id/${m_strProfileURL}/
 ${COMMUNITY_BASE_URL}id/${profile_url}
@@ -991,6 +992,7 @@ ${PARTNER_BASE_URL}apprelease/ajaxgetreleaserequest/${}
 ${PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${}
 ${PARTNER_BASE_URL}apps/
 ${PARTNER_BASE_URL}apps/ajaxcreatenewapp/
+${PARTNER_BASE_URL}apps/ajaxgetdlc
 ${PARTNER_BASE_URL}apps/ajaxpublishassets
 ${PARTNER_BASE_URL}apps/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}apps/builddetails/${appid}/${}
@@ -1003,6 +1005,8 @@ ${PARTNER_BASE_URL}apps/publishing/${}
 ${PARTNER_BASE_URL}apps/requestkeys/${}
 ${PARTNER_BASE_URL}apps/suggestapps
 ${PARTNER_BASE_URL}bundles/suggestbundle
+${PARTNER_BASE_URL}bundles/view/${bundle_id}
+${PARTNER_BASE_URL}bundles/view/${bundleid}
 ${PARTNER_BASE_URL}bundles/view/${}
 ${PARTNER_BASE_URL}cluster/ajaxcreatecluster
 ${PARTNER_BASE_URL}cluster/ajaxloadcluster
@@ -1200,6 +1204,7 @@ ${PARTNER_BASE_URL}pub/publisher/${}
 ${PARTNER_BASE_URL}public/downloadics.php?${}
 ${PARTNER_BASE_URL}public/javascript/webui/storeadmin/
 ${PARTNER_BASE_URL}recap/nextfest/${}/${m_partnerId}
+${PARTNER_BASE_URL}recommended_actions/storedescriptionlinks/?partnerid=${}
 ${PARTNER_BASE_URL}sales/
 ${PARTNER_BASE_URL}sales/ajaxcreatesalepartnerevent
 ${PARTNER_BASE_URL}sales/ajaxgetsalerank
@@ -1214,6 +1219,7 @@ ${PARTNER_BASE_URL}steamml/get_problem_details?problemid=${}&sessionid=${SESSION
 ${PARTNER_BASE_URL}steamml/get_problems?sessionid=${SESSIONID}
 ${PARTNER_BASE_URL}steamml/get_schema_details?appid=${}&schemaid=${}&sessionid=${SESSIONID}
 ${PARTNER_BASE_URL}steamml/get_schemas?appid=${}&includesteammlapp=${}&sessionid=${SESSIONID}
+${PARTNER_BASE_URL}store/packagelanding/${package_id}
 ${PARTNER_BASE_URL}store/packagelanding/${packageid}
 ${PARTNER_BASE_URL}store/packagelanding/${}
 ${PARTNER_BASE_URL}taxonomy/tagwizard/${}
@@ -1466,6 +1472,7 @@ ${STORE_BASE_URL}news/app/${parentAppID}/view/${completed_event_gid}
 ${STORE_BASE_URL}news/app/${}/view/${}
 ${STORE_BASE_URL}news/collection/sales/
 ${STORE_BASE_URL}news/download/${}/${}/${GID}?${}
+${STORE_BASE_URL}news/group/4145017/view/4578559379959234050
 ${STORE_BASE_URL}news/sale/${}
 ${STORE_BASE_URL}newshub/${appid ? _ : _}/view/${GID}
 ${STORE_BASE_URL}newshub/group/${clanAccountID}
@@ -2506,6 +2513,7 @@ https://help.steampowered.com/wizard/AjaxHardwareCreateReplacementRMA
 https://help.steampowered.com/wizard/AjaxHardwareCreateReturn
 https://help.steampowered.com/wizard/AjaxMarkGiftRefundable/
 https://help.steampowered.com/wizard/AjaxPackagePurchaseReceipt/
+https://help.steampowered.com/wizard/AjaxRefundRequestConfirmation
 https://help.steampowered.com/wizard/AjaxRefundRequestForm
 https://help.steampowered.com/wizard/AjaxSearchResults/
 https://help.steampowered.com/wizard/AjaxSendAccountRecoveryCode
@@ -3043,7 +3051,6 @@ https://store.steampowered.com/freelicense/addfreelicense/${}
 https://store.steampowered.com/friends/frienddata
 https://store.steampowered.com/friends/recommendgame
 https://store.steampowered.com/friends/renderfriendactivity
-https://store.steampowered.com/gotflash
 https://store.steampowered.com/grandprix/ajaxboostteam/
 https://store.steampowered.com/grandprix/ajaxclaimpointsforpastachievements/
 https://store.steampowered.com/grandprix/ajaxgetappquestprogress/

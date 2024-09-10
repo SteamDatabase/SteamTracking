@@ -11229,7 +11229,7 @@
             : n.createElement(ir, { steamLearnContext: {} }, e.children);
         };
       var cr = a(14610),
-        lr = a(56093);
+        lr = a(84933);
       const mr = (e) => {
           const t = Math.max(
             0,
@@ -11658,7 +11658,7 @@
             ),
           );
       var Sr = a(90627),
-        br = a(7068),
+        br = a(39879),
         Nr = a(738),
         wr = a(10411);
       const vr = () => {
@@ -25862,12 +25862,13 @@
                 ]));
             }
           const L = p && 3 == p.status(),
-            z = p && p.live(),
-            j = p && p.active(),
-            D = p && 2 == p.status(),
-            I =
+            z = p && 5 == p.status(),
+            j = p && p.live(),
+            D = p && p.active(),
+            I = p && 2 == p.status(),
+            O =
               a && i && i.serializeBase64String() != a.serializeBase64String();
-          let O = [
+          let P = [
             {
               label: (0, c.we)("#SteamLearn_Status_Train_AllEpochs"),
               value: 0,
@@ -25875,7 +25876,7 @@
           ];
           if (p)
             for (let e = 0; e < p.epochs().length; e++)
-              O.push({
+              P.push({
                 label: (0, c.we)("#SteamLearn_Status_Train_EpochOption", e + 1),
                 value: e + 1,
               });
@@ -25901,25 +25902,25 @@
                     { className: (0, o.A)(Ei.StatusString, E) },
                     B,
                   ),
-                  !I &&
-                    L &&
-                    !z &&
+                  !O &&
+                    (L || z) &&
                     !j &&
+                    !D &&
                     n.createElement(
                       br.jn,
                       { onClick: () => b(e.nTrainID, !1) },
                       (0, c.we)("#SteamLearn_Status_SetInferenceVersion"),
                     ),
-                  I &&
-                    L &&
-                    !z &&
+                  O &&
+                    (L || z) &&
                     !j &&
+                    !D &&
                     n.createElement(
                       "div",
                       { className: Ei.WarningMessage },
                       (0, c.we)("#SteamLearn_Status_SaveOrDiscardFirst"),
                     ),
-                  D &&
+                  I &&
                     n.createElement(
                       br.jn,
                       {
@@ -25934,7 +25935,7 @@
                       },
                       (0, c.we)("#SteamLearn_Status_Train_EndEarly"),
                     ),
-                  z &&
+                  j &&
                     n.createElement(
                       "div",
                       {
@@ -25943,8 +25944,8 @@
                       },
                       (0, c.we)("#SteamLearn_Status_InferenceLive"),
                     ),
-                  j &&
-                    !z &&
+                  D &&
+                    !j &&
                     n.createElement(
                       "div",
                       { className: Ei.TrainLive },
@@ -25982,7 +25983,7 @@
                     value: l,
                     onChange: (e) => m(parseInt(e.target.value)),
                   },
-                  O.map((e) =>
+                  P.map((e) =>
                     n.createElement(
                       "option",
                       { key: `EpochOption_${e.value}`, value: e.value },

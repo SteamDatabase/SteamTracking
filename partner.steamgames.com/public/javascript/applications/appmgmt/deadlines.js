@@ -196,7 +196,7 @@
         u = r.n(l),
         c = r(51272),
         d = r(84811),
-        m = r(7068),
+        m = r(39879),
         p = r(95034),
         _ = r(55263),
         f = r(16021),
@@ -425,7 +425,7 @@
       var n = r(41735),
         s = r.n(n),
         a = r(90626),
-        o = r(56093),
+        o = r(84933),
         i = r(16021);
       function l(e, t, r, n) {
         const l = (0, a.useRef)(),
@@ -474,6 +474,7 @@
             let a = null;
             return (
               !e ||
+                e < 0 ||
                 i.A.Get().BHasStoreItem(e, t, r) ||
                 (void 0 !== d && n && n == u.current) ||
                 (n !== u.current && (m(void 0), (u.current = n)),

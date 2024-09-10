@@ -270,7 +270,8 @@
         WhitelistAvatar: "_3DGjmH9KW9BAXsEYwH1WpE",
         ButtonCtn: "_1hSqlvDTyj9P6eWTHXutUt",
         DragElementStart: "_1LQ1GCTblYDL8enZ2mBhTD",
-        DragDestination: "_3e_m6QWUee_VSu8xj-XLbs",
+        DragHighlightContainer: "_2jRMC5JVSK6dsktYus9Gjf",
+        DragHighlight: "Y9ryg1Npznt3dpkr7BGp1",
       };
     },
     77700: (e) => {
@@ -7651,8 +7652,7 @@
                   return "social/twitch_large.png";
                 case 5:
                   return "social/discord_large.png";
-                case 6:
-                case 0:
+                default:
                   return "invalid social media type";
               }
             })(t.link_type);

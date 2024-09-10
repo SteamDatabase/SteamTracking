@@ -163,6 +163,8 @@
         static BDataRequestContainsOtherDataRequest(e, t) {
           return Boolean(
             (!t.include_assets || e.include_assets) &&
+              (!t.include_assets_without_overrides ||
+                e.include_assets_without_overrides) &&
               (!t.include_release || e.include_release) &&
               (!t.include_platforms || e.include_platforms) &&
               (!t.include_all_purchase_options ||

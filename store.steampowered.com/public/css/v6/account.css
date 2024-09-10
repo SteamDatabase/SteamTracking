@@ -1382,3 +1382,13 @@ span.disown_button {
 .wallet_redeem_error > li {
 	margin-top: 5px;
 }
+
+.confirmed_email_verified_header {
+	padding: 24px 12px 0px 12px;
+}
+
+.confirmed_email_verified_text {
+	margin-top: 14px;
+	font-size: 14px;
+}
+

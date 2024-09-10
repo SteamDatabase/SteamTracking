@@ -63,9 +63,7 @@
       }
       class i {
         constructor(e, t) {
-          (this.m_dictComponents = void 0),
-            (this.m_dictComponents = e),
-            (this.m_fnAccumulatorFactory = t);
+          (this.m_dictComponents = e), (this.m_fnAccumulatorFactory = t);
         }
         Parse(e, t, o = !1) {
           const i = (function (e, t) {
@@ -127,91 +125,84 @@
           let o = this.m_fnAccumulatorFactory(void 0);
           const l = [],
             i = () => (l.length < 1 ? void 0 : l[l.length - 1]),
-            a = this.m_dictComponents;
-          let s = !1,
-            r = !0;
-          const p = (e, i, p) => {
-            if (
-              e &&
-              e.node.tag === i.text &&
-              (null == a ? void 0 : a.get(e.node.tag))
-            ) {
+            a = this.m_dictComponents,
+            s = (e) => {
+              var t;
+              return !(
+                !e.tag ||
+                e.tag === e.text ||
+                !(null === (t = a.get(e.tag)) || void 0 === t
+                  ? void 0
+                  : t.autocloses)
+              );
+            };
+          let r = !1,
+            p = !0;
+          const n = (e, i) => {
+            if (e && e.node.tag === i.text && a.get(e.node.tag)) {
               const i = a.get(e.node.tag),
-                p = l.map((e) => e.node.tag),
-                n = { parentTags: p, tagname: e.node.tag, args: e.node.args },
+                s = l.map((e) => e.node.tag),
+                n = { parentTags: s, tagname: e.node.tag, args: e.node.args },
                 d = t(i.Constructor, n, ...o.GetElements());
               (o = e.accumulator),
                 Array.isArray(d)
                   ? d.forEach((e) => o.AppendNode(e))
                   : o.AppendNode(d),
-                (s = !!i.skipFollowingNewline),
-                (r = e.bWrapTextForCopying);
+                (r = !!i.skipFollowingNewline),
+                (p = e.bWrapTextForCopying);
             } else if (e) {
               const t = e.accumulator;
               t.AppendText("[" + e.node.text + "]", !1),
                 o.GetElements().forEach((e) => t.AppendNode(e)),
                 t.AppendText("[/" + i.text + "]", !1),
                 (o = t),
-                (r = e.bWrapTextForCopying);
+                (p = e.bWrapTextForCopying);
             }
           };
           for (
             e.forEach((e, t) => {
-              var n, d, h;
+              var d, h;
               if (1 == e.type) {
-                const t = s ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
-                o.AppendText(t, r), (s = !1);
+                const t = r ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
+                o.AppendText(t, p), (r = !1);
               } else if (2 == e.type) {
-                const t = null == a ? void 0 : a.get(e.tag);
+                const t = a.get(e.tag);
                 if (t) {
-                  const d = i();
-                  if (void 0 !== d) {
-                    const t = null == a ? void 0 : a.get(d.node.tag);
+                  const s = i();
+                  if (void 0 !== s) {
+                    const t = a.get(s.node.tag);
                     t &&
                       t.autocloses &&
-                      e.tag === d.node.tag &&
-                      p(l.pop(), d.node);
+                      e.tag === s.node.tag &&
+                      n(l.pop(), s.node);
                   }
-                  l.push({ accumulator: o, node: e, bWrapTextForCopying: r }),
+                  l.push({ accumulator: o, node: e, bWrapTextForCopying: p }),
                     (o = this.m_fnAccumulatorFactory(e)),
-                    (s = !!t.skipInternalNewline),
-                    (r =
-                      null !== (n = t.allowWrapTextForCopying) &&
-                      void 0 !== n &&
-                      n);
+                    (r = !!t.skipInternalNewline),
+                    (p =
+                      null !== (d = t.allowWrapTextForCopying) &&
+                      void 0 !== d &&
+                      d);
                 } else o.AppendText("[" + e.text + "]", 0 == l.length);
               } else if (3 == e.type) {
-                for (
-                  ;
-                  i() &&
-                  i().node.tag !== e.text &&
-                  (null == a ? void 0 : a.get(i().node.tag)) &&
-                  (null === (d = null == a ? void 0 : a.get(i().node.tag)) ||
-                  void 0 === d
-                    ? void 0
-                    : d.autocloses);
-
-                ) {
+                for (; i() && i().node.tag !== e.text && s(i().node); ) {
                   const e = l.pop();
-                  p(e, e.node);
+                  n(e, e.node);
                 }
                 if (
                   (null === (h = i()) || void 0 === h ? void 0 : h.node.tag) ==
                   e.text
                 ) {
                   const t = l.pop();
-                  p(t, e);
+                  n(t, e);
                 } else o.AppendText("[/" + e.text + "]", 0 == l.length);
               }
             });
             l.length > 0;
 
           ) {
-            const e = l.pop(),
-              t = e.accumulator;
-            t.AppendText("[" + e.node.text + "]", !1),
-              o.GetElements().forEach((e) => t.AppendNode(e)),
-              (o = t);
+            const e = l.pop();
+            n(e, e.node);
           }
           return o.GetElements();
         }

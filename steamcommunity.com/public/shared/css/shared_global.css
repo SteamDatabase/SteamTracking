@@ -2795,11 +2795,25 @@ body.v6 #footer_nav .popup_menu .hr{
 	color: #d3d9dd;
 	font-weight: 500;
 }
+.shared_game_rating .game_rating_allages {
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			font-size: 14px;
+	font-weight: 500;
+	padding: 10px;
+	color: #67C1F5;
+	font-weight: 500;
+	border: 2px solid #67C1F5;
+	background-color: black;
+}
 
 /* community awards hover */
 .reaction_award_hover {
-	font-family: "Motiva Sans", sans-serif;
-	width: 150px;
+			font-family: "Motiva Sans", Sans-serif;
+		font-weight: normal; /* normal */
+
+			width: 150px;
 	background: #DADEE0;
 }
 	.community_tooltip.reaction_award_hover,

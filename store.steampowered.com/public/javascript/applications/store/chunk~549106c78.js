@@ -2133,8 +2133,7 @@
                   return "social/twitch_large.png";
                 case 5:
                   return "social/discord_large.png";
-                case 6:
-                case 0:
+                default:
                   return "invalid social media type";
               }
             })(t.link_type);

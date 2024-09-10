@@ -329,6 +329,7 @@ HelpWizard = {
 				issue_transid: transid,
 				issue_line_item: gid_line_item,
 				refund_to_wallet: refund_to_wallet,
+				action_id: HelpWizard.m_ulActionID,
 				serial_number: $J('#hardware_serial_entry').val()
 			} )
 		} ).fail( function( jqxhr ) {
@@ -631,6 +632,58 @@ HelpWizard = {
 	m_nRefundPackageID: null,
 	m_nRefundIssueID: null,
 
+	m_ulActionID: 0,
+	m_bActionConfirmed: false,
+	CheckConfirmationState: function() {
+		$J.ajax({
+			type: "GET",
+			url: "https://help.steampowered.com/wizard/AjaxRefundRequestConfirmation",
+			data: $J.extend({}, g_rgDefaultWizardPageParams, {
+				action_id: this.m_ulActionID,
+				action_type: 13
+			})
+		}).fail( function() {
+			this.m_ulActionID = null;
+		}).done( function( data ) {
+			switch ( data.state )
+			{
+			case 1:
+				HelpWizard.m_ulActionID = data.action_id;
+				if ( data.html && data.html.length )
+				{
+					if ($J('#refund_request_button'))
+						$J('#refund_request_button').hide();
+					$J( '#help_refund_request_form' ).html(data.html);
+				}
+				setTimeout(function () {
+					HelpWizard.CheckConfirmationState();
+				}, 2000);
+				break;
+
+			case 2:
+				HelpWizard.m_bActionConfirmed = true;
+
+				$J('#help_refund_request_form').html('<div class="help_refund_request_area"><h1>Checking refund eligibility for this purchase...</h1><br><span style="margin:auto"><img src="https://help.steampowered.com/public/shared/images/login/throbber.gif" alt=""></span></div>');
+				HelpWizard.ShowRefundRequestForm( HelpWizard.m_nRefundIssueID, HelpWizard.m_nRefundAppID, HelpWizard.m_nRefundPackageID, $J('#refund_selector').val(), $J('#refund_wallet_selector').val(), $J('#refund_info_box') );
+				break;
+
+			case 3:
+			case 4:
+			case 5:
+				this.m_ulActionID = null;
+				if ( data.html && data.html.length )
+				{
+					$J( '#help_refund_request_form' ).html(data.html);
+				}
+				else
+				{
+					$J('#help_refund_request_form').html('<div class="error_bg"><div id="error_description">We were unable to load information about this purchase. Please try again later. We apologize for the inconvenience.</div></div>' );
+				}
+				break;
+			}
+		});
+	},
+
 	ShowRefundRequestForm: function( issueid, appid, packageid, transid, refund_to_wallet, loading_div ) {
 		if ( this.m_bLoadingRefundDialog )
 			return;
@@ -657,45 +710,51 @@ HelpWizard = {
 		{
 		}
 
-		this.m_bLoadingRefundDialog = true;
 		this.m_nRefundAppID = appid;
 		this.m_nRefundPackageID = packageid;
 		this.m_nRefundIssueID = issueid;
+
+		if (!this.m_bActionConfirmed )
+		{
+			this.CheckConfirmationState();
+			return;
+		}
+
+		this.m_bLoadingRefundDialog = true;
 		$J.ajax({
 			type: "GET",
 			url: "https://help.steampowered.com/wizard/AjaxRefundRequestForm",
-			data: $J.extend( {}, g_rgDefaultWizardPageParams, {
+			data: $J.extend({}, g_rgDefaultWizardPageParams, {
 				issueid: issueid,
 				appid: appid,
 				packageid: packageid,
 				transid: transid,
 				wallet: refund_to_wallet
-			} )
-		}).fail( function() {
-			$J('#help_refund_request_form').html('<div class="error_bg"><div id="error_description">We were unable to load information about this purchase. Please try again later. We apologize for the inconvenience.</div></div>');
-		}).done( function( data ) {
-			if ( data.html && $J('#help_refund_request_form') )
-			{
-				if ( $J('#refund_request_button') )
+			})
+		}).fail(function () {
+			$J('#help_refund_request_form').html('<div class="error_bg"><div id="error_description">We were unable to load information about this purchase. Please try again later. We apologize for the inconvenience.</div></div>'
+		)
+			;
+		}).done(function (data) {
+			if (data.html && $J('#help_refund_request_form')) {
+				if ($J('#refund_request_button'))
 					$J('#refund_request_button').hide();
-				if ( $J('#refund_gift_request_button') )
+				if ($J('#refund_gift_request_button'))
 					$J('#refund_gift_request_button').show();
-				$J('#help_refund_request_form').html( data.html );
+				$J('#help_refund_request_form').html(data.html);
 
-				if ( data.perf_data )
-					$J('#help_refund_request_form').append( data.perf_data );
+				if (data.perf_data)
+					$J('#help_refund_request_form').append(data.perf_data);
+			} else if (data.need_login) {
+				HelpWizard.PromptLogin(true);
+			} else {
+				$J('#help_refund_request_form').html('<div class="error_bg"><div id="error_description">Sorry! An unexpected error has occurred while processing your request. Please try again.</div></div>'
+			)
+				;
 			}
-			else if ( data.need_login )
-			{
-				HelpWizard.PromptLogin( true );
-			}
-			else
-			{
-				$J('#help_refund_request_form').html('<div class="error_bg"><div id="error_description">Sorry! An unexpected error has occurred while processing your request. Please try again.</div></div>');
-			}
-		}).always( function() {
+		}).always(function () {
 			HelpWizard.m_bLoadingRefundDialog = false;
-		} );
+		});
 	},
 
 	UpdateRefundSelector: function() {

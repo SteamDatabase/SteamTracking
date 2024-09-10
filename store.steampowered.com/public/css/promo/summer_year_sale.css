@@ -633,7 +633,7 @@ body.v6.sale_summer2024 .sale_capsule_carousel .carousel_items > * {
 .featured_special_deals .home_section_title {
 	color: #E3535B;
 	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.2);
-	font-family: "Motiva Sans";
+	font-family: "Motiva Sans", sans-serif;
 	font-size: 38px;
 	font-style: normal;
 	font-weight: 800;

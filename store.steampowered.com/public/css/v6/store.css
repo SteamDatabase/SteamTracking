@@ -4533,8 +4533,7 @@ a.cluster_capsule:hover {
 	vertical-align: top; /* Because browsers cannot be trusted to align things. */
 
 	width: 229px; /* Base width. Override with your own selector later. 229 * 4 + 8 * 3 = 940 */
-	background: -webkit-linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89,1) 95%);
-	background: linear-gradient( -45deg, rgba(64,121,153,1) 5%,rgba(42,62,89,1) 95%);
+	background: radial-gradient(62.67% 62.67% at 62.67% 100%, rgba(255, 255, 255, 0.15) 0%, rgba(116, 133, 140, 0.15) 100%);
 }
 
 .store_capsule:not(:last-child) {
@@ -4542,9 +4541,7 @@ a.cluster_capsule:hover {
 }
 
 .store_capsule:hover {
-	background: -webkit-linear-gradient( left, rgba(56,107,135,1) 5%,rgba(68,130,163,1) 95%);
-	background: linear-gradient( to right, rgba(56,107,135,1) 5%,rgba(68,130,163,1) 95%);
-
+	background: radial-gradient(62.67% 62.67% at 62.67% 100%, rgba(255, 255, 255, 0.35) 0%, rgba(116, 133, 140, 0.35) 100%);
 	text-decoration: none;
 }
 
@@ -4637,6 +4634,10 @@ a.cluster_capsule:hover {
 
 .store_capsule > .capsule.smallv5 {
 	padding-top: 37.5%
+}
+
+.store_capsule > .capsule.small {
+	padding-top: 37.5%;
 }
 
 

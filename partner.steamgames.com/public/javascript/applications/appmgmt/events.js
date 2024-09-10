@@ -291,7 +291,7 @@
         c = n(17720),
         m = n(68033),
         d = n(6205),
-        u = n(7068),
+        u = n(39879),
         p = n(84811),
         E = n(34629),
         g = n(75844),
@@ -559,7 +559,7 @@
           ),
         );
       });
-      var Y = n(56093),
+      var Y = n(84933),
         Z = n(95695),
         J = n.n(Z),
         K = n(738),
@@ -2274,8 +2274,7 @@
                   return "social/twitch_large.png";
                 case 5:
                   return "social/discord_large.png";
-                case 6:
-                case 0:
+                default:
                   return "invalid social media type";
               }
             })(t.link_type);

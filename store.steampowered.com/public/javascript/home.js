@@ -3435,3 +3435,24 @@ function InitTopSellersControls( $Controls, RangeInitData )
 
 }
 
+function PlayTakeoverVideo()
+{
+	const $elDesktopVideo = document.getElementById('home_video_desktop');
+	const $elMobileVideo =  document.getElementById('home_video_mobile');
+
+	if ( window.innerWidth <= 500 )
+	{
+		if ( $elMobileVideo )
+			$elMobileVideo.play();
+		if ( $elDesktopVideo )
+			$elDesktopVideo.pause();
+	}
+	else
+	{
+		if ( $elDesktopVideo )
+			$elDesktopVideo.play();
+		if ( $elMobileVideo )
+			$elMobileVideo.pause();
+	}
+}
+

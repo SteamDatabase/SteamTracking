@@ -291,16 +291,22 @@ a._3TN0uESBGJ-kUDPWWX2YWz:hover {
   display: inline-block;
   margin: 0 2px;
 }
-._2SgPxDudv7oRkzlHsNm4_O {
+._2SgPxDudv7oRkzlHsNm4_O,
+._2SgPxDudv7oRkzlHsNm4_O p {
   line-height: 1.5em;
   font-size: 14px;
+  color: #acb2b8;
+  font-family: "Motiva Sans", Sans-serif;
 }
 ._2SgPxDudv7oRkzlHsNm4_O .ProseMirror {
-  word-wrap: break-word;
+  white-space: normal;
   padding: 10px 12px;
   min-height: 60px;
-  max-height: 850px;
+  max-height: 782px;
   overflow: auto;
+}
+._2SgPxDudv7oRkzlHsNm4_O .ProseMirror p.pm_paragraph {
+  min-height: 1.5em;
 }
 ._2SgPxDudv7oRkzlHsNm4_O ul {
   color: #acb2b8;
@@ -346,4 +352,17 @@ h2._1aQY7Yz23XDN0N4IVctriG ._1dK_q5EmTZgebmJeCzHq1s {
   right: 0;
   height: 1px;
   background: linear-gradient(to right, #3a6e8b, rgba(58, 110, 139, 0));
+}
+._14dow-GSmyLacYWBXCNV1l {
+  background: #1b1e22;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 4px;
+}
+._14dow-GSmyLacYWBXCNV1l._2YccUEt5UoKig0cAk4W6DK {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin-left: -4px;
+  padding-left: 4px;
 }

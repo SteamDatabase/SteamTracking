@@ -1,10 +1,4 @@
 
-function GotFlashPopup()
-{
-	var win = window.open( 'https://store.steampowered.com/gotflash','gotflash','width=536,height=546,resize=yes,scrollbars=yes');
-	win.focus();
-}
-
 //
 // Page-able tabs
 //

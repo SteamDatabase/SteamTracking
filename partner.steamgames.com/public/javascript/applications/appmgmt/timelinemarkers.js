@@ -121,6 +121,7 @@
         Thumbnails: "_1pOPbtOaUeqeJm3nrdEkyx",
         PositionLeft: "_2lo44W-Sy4zMrYWnl55XBD",
         PositionRight: "_2tl3cTX_fsKtBrtcctB5wc",
+        Phases: "_29M5GL7LdzPRq4bOtIu5My",
         ContentAndGradient: "XrJofUthOAZ7wCkD_C2fE",
         ScrollbarPlaceholder: "_1NhP7G104P9VPsp6bTxyBb",
         LeftControlsAndContent: "_1vc8f5bCHfDynpWgwyhf5m",
@@ -166,6 +167,7 @@
         Thumbnails: "_31eJnQyMpbmhp0mnHd02Ky",
         PositionLeft: "_1stnksokEwzIn10nHGDCEM",
         PositionRight: "_2f_ksFBRUllauZs4HA-bzg",
+        Phases: "TaarLFX9W8lQiCjgz-nIn",
       };
     },
     59254: (e) => {
@@ -193,6 +195,7 @@
         Thumbnails: "Px56HgqgodVj1s1lELr9s",
         PositionLeft: "PftJQL7hFlMD6fyCmJ94X",
         PositionRight: "_3lMvwFfrxKrrjEOlUf7ov3",
+        Phases: "_3CMHPm1gab4V9JTfZYAp1E",
         TimelineBacking: "_18sxaBKg910kJmmJS3zaaE",
         TimeTick: "faIAh3Zzg4MdulktB1IFo",
         TickLine: "iLLznzt7Npcsc-y_9tyCc",
@@ -225,6 +228,7 @@
         Thumbnails: "_1a1mkc6mxngGs0scqTx8Rv",
         PositionLeft: "_3Tw8uk4rZfrmmyGfql1eTc",
         PositionRight: "_3OI9MLjE2183pXrrzjZlZ",
+        Phases: "_1j2D4HXwIaWGBWeUeZiWve",
         ClipDecorator: "_3EWp_eWXsvKB-Lwz-Afl0S",
         gradient: "_3vAWnjV6c5oyReAPoGg-Ln",
       };
@@ -254,6 +258,7 @@
         Thumbnails: "TulKT7sbANoIafI9_KJza",
         PositionLeft: "_2g51I5QZegiV94lHBGsUhw",
         PositionRight: "_1AQnsvHDMaK1BJGY5kAcTl",
+        Phases: "_3rPpP9lH-E-fnlD-DUERH3",
         TimelineRelativeDate: "xYXziACgvkSwOnjGsjrll",
         Overlay: "c1Fn5e_N42Q5Oz4gyqRvL",
       };
@@ -283,6 +288,7 @@
         Thumbnails: "_3WC2e0zUqP5LoUxckgI6Fv",
         PositionLeft: "m29ndF7OUcWuJyQ7gz0r9",
         PositionRight: "_3scLcN4HvBYNivCKDSVIGj",
+        Phases: "_25KI7BuIZxgifkWKhYIy4m",
         GameModeMarker: "_XZRbjOovnp3-oJB1FHsX",
         Playing: "_1QXuDX8p22dW30Dq7Q4cY1",
         Staging: "_5elfnsld99d9XPrRSVVMb",
@@ -328,6 +334,7 @@
         Thumbnails: "_26VL6vWz_H-HdOIX-WB1NV",
         PositionLeft: "_1UQilx5P8cBrDKId9y9Zml",
         PositionRight: "vmWKsPz2yK9DdAMmGopBd",
+        Phases: "_3hNl6_lWZBob973Eyo8tN7",
         MarkerAndDropline: "KxkV7ibv4HxiLzsJDo09y",
         Faded: "_2YIhgvCldNrTquf5YdDweU",
         NoPointer: "_2ebcCpkh2QhQIrtDjawNTL",
@@ -335,6 +342,13 @@
         TimelineMarker: "_2CNnKSqRD_9z5U0Knq2yjM",
         DroplineCtn: "_2KKJRZF-_QAqfpR0e-20x6",
         TimelineMarkerDropLine: "_3JsMmXCkE-NhKNzxarPwuc",
+      };
+    },
+    62745: (e) => {
+      e.exports = {
+        Positioner: "r5C4vqop5qm8LQK3X0ko3",
+        Body: "_1hlTgJwbrd9u_brCsEsT0N",
+        Edge: "_3_tErLe8CNqRhYf0vAfb-t",
       };
     },
     5540: (e) => {
@@ -363,6 +377,7 @@
         Thumbnails: "FNvG_yK3LCIcUTGSfMhVP",
         PositionLeft: "GECyynaguvZTc6_17XpFd",
         PositionRight: "_3Rwz0Dale6Fxyu3k2khbuf",
+        Phases: "_xSGH0PVjr0l8tuXz9-3f",
         PlayheadInteractionCtn: "_3_VTfkSR95EXQBQCvfM-ua",
         ActiveCtn: "_2bsFx5e6IWGwk1Smh_yRl",
         PlayHeadContainer: "_2RtcuI1Wk2JRTn39xig3OS",
@@ -399,6 +414,7 @@
         Thumbnails: "_7KwbBvSEcjyRsmZ0g6j6z",
         PositionLeft: "_27IW3T5nky75Oz6a17zWSg",
         PositionRight: "xf_NxJ83twPRPic2nUu3s",
+        Phases: "IIuLWvFELtrtCRCvRlpo",
         RangeControls: "_3TsJzrPgtC5rqLcR6ihpFi",
         RangeSelectorCtn: "_2ULjGYMNYTiUllQtzFXS11",
         Active: "_2bFlccGjBmvO9sTXH-UhId",
@@ -437,6 +453,7 @@
         Thumbnails: "_3U1E2lH8PHXEKmmCidFYET",
         PositionLeft: "_3a7NFvp83NwS--Uea7c18J",
         PositionRight: "_2aWYEMKtLLTVAg5lTA30Du",
+        Phases: "_2HWX2m_BjCepXubvHC-OBI",
         RecordingDecorator: "_24zNSxRiQlHxbGT_RvZsoY",
         Clip: "_3Q-H1_vR-NtTfQf_Ohljdx",
         ClipMode: "_7MCqjcHde47TGpwTMEK5",
@@ -472,6 +489,7 @@
         Thumbnails: "JjnuXWzLmCm63Y-6KipH6",
         PositionLeft: "feeCzNA4u_b9e5tzS9oa6",
         PositionRight: "_1uGyz62lktHAb9_wh3QEUn",
+        Phases: "_2wzBXR-nPbsfwcRPnqJ4yk",
         PlayheadInteractionCtn: "cxkAkBK32ah0etQ7VXfDI",
         ActiveCtn: "_3HMQwpcr66jg7N3RW9U4r1",
         PlayHeadContainer: "_3Fg3Bef5dt1s1SK8yzivuJ",
@@ -522,6 +540,7 @@
         Thumbnails: "_2ZT_p0F8NlyiN2w9uK0V-8",
         PositionLeft: "_2dupDWRctKjVqN0z4s0oyR",
         PositionRight: "_1PDRoz5nG__plPLMJYlHLW",
+        Phases: "_26bhPWtFCbtjxSwlbSIltM",
         TooltipOffset: "_2dYuDsUYCHiGRqSksoc2iU",
         ThumbnailContainerOffset: "iJ-nnbMoplnO7sW4GoKZE",
         ThumbnailContents: "_1p6K1C-xCaggsPiZeYS6xb",
@@ -661,14 +680,14 @@
         "ItemFocusAnim-green": "_3ZDnxVKI3Xfr_a6bvaivKR",
       };
     },
-    34595: (e, t, r) => {
+    26210: (e, t, r) => {
       "use strict";
-      r.r(t), r.d(t, { default: () => ea });
+      r.r(t), r.d(t, { default: () => sa });
       var i = r(90626),
         n = r(86679),
         a = r(45737),
         s = r.n(a),
-        l = r(7068),
+        l = r(39879),
         o = r(95695),
         m = r.n(o),
         c = r(738),
@@ -1699,7 +1718,7 @@
         W = r(68797),
         F = r(10333),
         q = r(6144),
-        x = r(56093),
+        x = r(84933),
         N = r(78327);
       const U = "default",
         j = "steam_default_assetset",
@@ -2622,7 +2641,7 @@
                 className: Me.EditButton,
                 onClick: (e) =>
                   (0, c.pg)(
-                    i.createElement(Rn, {
+                    i.createElement(kn, {
                       appid: t,
                       bDisallowMarkerIDEdit: h,
                       oTimelineMarkerDef: f,
@@ -3348,6 +3367,7 @@
         m_displayHighlightEntry = null;
         m_nRelativeTimeForDisplay = void 0;
         m_rgClipOffsets = [];
+        m_phasePreview = void 0;
         constructor(e, t, r, i, n, a, s, l) {
           (0, Ee.Gn)(this),
             (this.m_fnGetManifest = t),
@@ -3611,6 +3631,12 @@
         }
         SetDisplayHighlightEntry(e, t) {
           this.m_displayHighlightEntry = { entry: e, duration: t };
+        }
+        GetPhasePreview() {
+          return this.m_phasePreview;
+        }
+        SetPhasePreview(e) {
+          this.m_phasePreview = e;
         }
         GetRelativeTimeForDisplay() {
           return this.m_nRelativeTimeForDisplay;
@@ -4199,6 +4225,7 @@
         (0, g.Cg)([Ee.sH], St.prototype, "m_displayHighlightEntry", void 0),
         (0, g.Cg)([Ee.sH], St.prototype, "m_nRelativeTimeForDisplay", void 0),
         (0, g.Cg)([Ee.sH.ref], St.prototype, "m_rgClipOffsets", void 0),
+        (0, g.Cg)([Ee.sH.ref], St.prototype, "m_phasePreview", void 0),
         (0, g.Cg)([x.oI], St.prototype, "SetVideoElement", null),
         (0, g.Cg)([x.oI], St.prototype, "OnInvalidateRecording", null),
         (0, g.Cg)([Ee.XI], St.prototype, "OnLoaderInitialized", null),
@@ -4607,12 +4634,18 @@
                   recordingType: e.recording_type,
                 }
               );
-            });
+            }),
+            i = (e.metadata.phases || []).map((e) => ({
+              timelineOffsetMS: parseInt(e.background_timeline_offset),
+              nDurationMS: parseInt(e.duration_ms),
+              phase: e,
+            }));
           return {
             timelineID: e.metadata.timeline_id,
             globalOffsetMS: e.nGlobalOffsetMS.valMS,
             nDurationMS: t,
             recordingOffsets: r,
+            phaseOffsets: i,
           };
         }
         GetCurrentZoomScale() {
@@ -6338,8 +6371,8 @@
               );
               return (
                 (0, i.useEffect)(() => {
-                  const i = o * (1 - cn),
-                    a = o * cn;
+                  const i = o * (1 - _n),
+                    a = o * _n;
                   if (
                     (d.current &&
                       (cancelAnimationFrame(d.current),
@@ -7619,8 +7652,8 @@
                 (cancelAnimationFrame(m.current),
                 (m.current = null),
                 (c.current = null));
-              const i = u * (1 - cn),
-                p = u * cn,
+              const i = u * (1 - _n),
+                p = u * _n,
                 f = t.ConvertGlobalMSToGlobalPXOffset(r.valMS),
                 _ = t.ConvertGlobalMSToScrollWindowPXOffset(r.valMS);
               if (n.valPX > f)
@@ -7747,8 +7780,8 @@
                 (cancelAnimationFrame(m.current),
                 (m.current = null),
                 (c.current = null));
-              const i = u * (1 - cn),
-                p = u * cn,
+              const i = u * (1 - _n),
+                p = u * _n,
                 f = t.ConvertGlobalMSToGlobalPXOffset(r.valMS),
                 _ = t.ConvertGlobalMSToScrollWindowPXOffset(r.valMS);
               if (n.valPX < f)
@@ -8517,8 +8550,88 @@
           l = (0, i.useCallback)((e) => s(r, t, n, e), [s, r, t]);
         return (0, i.cloneElement)(i.Children.only(a), { ref: l });
       }
-      const cn = 0.08;
+      var cn = r(62745);
       function dn(e) {
+        const t = Ft(),
+          r = (0, We.q3)(() => t.GetVisibleTimelines());
+        return i.createElement(
+          i.Fragment,
+          null,
+          r.flatMap((e) =>
+            e.phaseOffsets.map((t, r) =>
+              i.createElement(un, {
+                ...t,
+                timeline: e,
+                key: `${e.timelineID}_${r}`,
+              }),
+            ),
+          ),
+        );
+      }
+      function un(e) {
+        const {
+          timelineOffsetMS: t,
+          nDurationMS: r,
+          phase: n,
+          timeline: a,
+        } = e;
+        return i.createElement(
+          gn,
+          { ...e },
+          i.createElement(fn, null),
+          i.createElement(pn, null),
+          i.createElement(fn, null),
+        );
+      }
+      function gn(e) {
+        const {
+            children: t,
+            timeline: r,
+            timelineOffsetMS: n,
+            nDurationMS: a,
+          } = e,
+          s = Ft(),
+          l = yt(),
+          { pxStart: o, pxWidth: m } = (0, We.q3)(() => ({
+            pxStart: s.ConvertGlobalMSToGlobalPXOffset(r.globalOffsetMS + n),
+            pxWidth: s.ConvertDurationMSToDeltaPX(a),
+          })),
+          [c, d] = (function () {
+            const e = yt();
+            return [
+              (0, We.q3)(() => e?.GetPhasePreview() || null),
+              (t) => e?.SetPhasePreview(t),
+            ];
+          })(),
+          u = () => {
+            const e = l
+              .GetLoader()
+              .GetTimelineData(r.timelineID)
+              .m_rgPhases.find((e) => parseInt(e.time) === n);
+            e && d(e);
+          },
+          g = () => d(void 0);
+        return i.createElement(
+          "div",
+          {
+            className: cn.Positioner,
+            style: { transform: `translateX( ${o}px )`, width: `${m}px` },
+            onMouseOver: u,
+            onMouseLeave: g,
+            onFocus: u,
+            onBlur: g,
+          },
+          t,
+        );
+      }
+      function pn(e) {
+        return i.createElement("div", { className: cn.Body });
+      }
+      function fn(e) {
+        return i.createElement("div", { className: cn.Edge });
+      }
+      const _n = 0.08;
+      function hn(e) {
         const {
             loader: t,
             className: r,
@@ -8545,8 +8658,8 @@
           i.createElement(
             "div",
             { className: m },
-            i.createElement(fn, null),
-            i.createElement(_n, null),
+            i.createElement(yn, null),
+            i.createElement(Tn, null),
             i.createElement(
               mn,
               {
@@ -8557,19 +8670,19 @@
               i.createElement(
                 Ui,
                 { className: Tt.TimelineScrollContainer, disableZoom: s },
-                i.createElement(un, null),
+                i.createElement(Sn, null),
               ),
             ),
           ),
         );
       }
-      const un = (0, i.memo)(function (e) {
+      const Sn = (0, i.memo)(function (e) {
         const t = Ft();
         return (0, We.q3)(() => t.BInitialized())
-          ? i.createElement(gn, null)
+          ? i.createElement(bn, null)
           : null;
       });
-      function gn() {
+      function bn() {
         const e = Ft(),
           t = (0, We.q3)(() => e.GetScrollableWidthPX()),
           r = (0, We.q3)(() => e.GetVisualWindowStartPX()),
@@ -8586,27 +8699,27 @@
             },
           },
           i.createElement(
-            pn,
+            Mn,
             { id: "recordings", className: Tt.RecordingDecorators },
             i.createElement(Ai, null),
           ),
           i.createElement(
-            pn,
+            Mn,
             { id: "clips", className: Tt.ClipDecorators },
             i.createElement(qi, null),
           ),
           i.createElement(
-            pn,
+            Mn,
             { id: "game_modes", className: Tt.GameModes },
             i.createElement(Gr, null),
           ),
           i.createElement(
-            pn,
+            Mn,
             { id: "date_decorators", className: Tt.DateDecorator },
             i.createElement(ki, null),
           ),
           i.createElement(
-            pn,
+            Mn,
             { id: "ticks", className: Tt.BackgroundTicks },
             i.createElement(Nt, null),
           ),
@@ -8614,29 +8727,34 @@
             kr,
             null,
             i.createElement(
-              pn,
+              Mn,
               { id: "highlights", className: Tt.Highlights },
               i.createElement(Tr, null),
             ),
             i.createElement(
-              pn,
+              Mn,
               { id: "range_selection", className: Tt.RangeSelector },
               i.createElement(yi, null),
             ),
             i.createElement(
-              pn,
+              Mn,
               { id: "seek_scrub", className: Tt.SeekScrubber },
               i.createElement(_i, null),
             ),
             i.createElement(
-              pn,
+              Mn,
               { id: "play_head", className: Tt.PlayHead },
               i.createElement(Fr, null),
+            ),
+            i.createElement(
+              Mn,
+              { id: "phases", className: Tt.Phases },
+              i.createElement(dn, null),
             ),
           ),
         );
       }
-      function pn(e) {
+      function Mn(e) {
         const { children: t, id: r, className: n } = e;
         return i.createElement(
           "div",
@@ -8644,18 +8762,18 @@
           i.createElement("div", { className: Tt.RelativeLayer }, t),
         );
       }
-      function fn(e) {
+      function yn(e) {
         const t = yt().GetRenderGlyph();
         return t ? t($i.pR.TRIGGER_LEFT, !1, !1, Tt.PositionLeft) : null;
       }
-      function _n(e) {
+      function Tn(e) {
         const t = yt().GetRenderGlyph();
         return t ? t($i.pR.TRIGGER_RIGHT, !1, !1, Tt.PositionRight) : null;
       }
-      const hn = JSON.parse(
+      const Cn = JSON.parse(
         '{"daterecorded":1713552945,"starttime":0,"entries":[{"id":"1","time":"1000","type":"gamemode","mode":3},{"id":"2","time":"7000","type":"event","title":"bolt","description":"steam_bolt","icon":"steam_bolt","priority":2,"duration":"0","possible_clip":2},{"id":"3","time":"8500","type":"event","title":"gem","description":"steam_gem","icon":"steam_gem","priority":1,"duration":"0","possible_clip":2},{"id":"4","time":"11000","type":"event","title":"star","description":"steam_star","icon":"steam_star","priority":4,"duration":"0","possible_clip":2},{"id":"6","time":"13000","type":"event","title":"heart","description":"steam_heart","icon":"steam_heart","priority":2,"duration":"0","possible_clip":2},{"id":"7","time":"15500","type":"event","title":"checkmark","description":"steam_checkmark","icon":"steam_checkmark","priority":3,"duration":"0","possible_clip":2},{"id":"8","time":"18000","type":"gamemode","mode":1},{"id":"9","time":"25000","type":"event","title":"crown","description":"steam_crown","icon":"steam_crown","priority":10,"duration":"0","possible_clip":2},{"id":"10","time":"27000","type":"event","title":"ribbon","description":"steam_ribbon","icon":"steam_ribbon","priority":9,"duration":"0","possible_clip":2},{"id":"11","time":"32000","type":"event","title":"chest","description":"steam_chest","icon":"steam_chest","priority":8,"duration":"0","possible_clip":2},{"id":"13","time":"34500","type":"event","title":"defend","description":"steam_defend","icon":"steam_defend","priority":8,"duration":"0","possible_clip":2},{"id":"14","time":"36000","type":"event","title":"timer","description":"steam_timer","icon":"steam_timer","priority":10,"duration":"0","possible_clip":2},{"id":"15","time":"46000","type":"event","title":"defend","description":"steam_defend","icon":"steam_defend","priority":10,"duration":"0","possible_clip":2},{"id":"17","time":"50000","type":"usermarker","icon":"steam_marker","priority":0},{"id":"18","time":"51500","type":"event","title":"defend","description":"steam_defend","icon":"steam_defend","priority":10,"duration":"0","possible_clip":2},{"id":"19","time":"52500","type":"event","title":"explosion","description":"steam_explosion","icon":"steam_explosion","priority":10,"duration":"0","possible_clip":2}],"endtime":60000}',
       );
-      function Sn(e) {
+      function Bn(e) {
         const { appid: t, markerID: r } = e,
           n = (function (e) {
             const [t] = (0, i.useState)(() => new Xe.SX());
@@ -8686,7 +8804,7 @@
                       ],
                     },
                   ],
-                  i = { ...hn, entries: hn.entries.map((e) => e) };
+                  i = { ...Cn, entries: Cn.entries.map((e) => e) };
                 t.LoadTimelinesForTestClip(0, void 0, `${e}`, r),
                   t.SetTimelineData(r[0].timeline_id, i);
               }, [e, t]),
@@ -8711,16 +8829,16 @@
               mode: ct.Partner,
               markerStoreOverrides: se.Get(),
             },
-            i.createElement(dn, { loader: n, disableZoom: !0 }),
+            i.createElement(hn, { loader: n, disableZoom: !0 }),
           )
         );
       }
-      const bn = 31;
-      function Mn(e) {
+      const vn = 31;
+      function wn(e) {
         return /^[a-z0-9_-]{1,31}$/.test(e);
       }
-      var yn;
-      async function Tn(e) {
+      var Rn;
+      async function Gn(e) {
         return new Promise((t, r) => {
           if (!e) return t((0, u.we)("#TimelineMarkers_Error_NotFound"));
           {
@@ -8765,16 +8883,16 @@
                             t({
                               image: e,
                               image_type: 2,
-                              strFilenameWithoutExtension: Cn(n).substring(
+                              strFilenameWithoutExtension: En(n).substring(
                                 0,
-                                bn,
+                                vn,
                               ),
                             });
                           })
                         : t({
                             image: r.result,
                             image_type: 2,
-                            strFilenameWithoutExtension: Cn(n).substring(0, bn),
+                            strFilenameWithoutExtension: En(n).substring(0, vn),
                           });
                 }),
                   (i.src = r.result);
@@ -8783,7 +8901,7 @@
                   ? t({
                       image: r.result,
                       image_type: 1,
-                      strFilenameWithoutExtension: Cn(n).substring(0, bn),
+                      strFilenameWithoutExtension: En(n).substring(0, vn),
                     })
                   : (console.error("unknown content types: " + i),
                     t((0, u.we)("#TimelineMarkers_Error_UnknownFileType", i)));
@@ -8794,11 +8912,11 @@
           }
         });
       }
-      function Cn(e) {
+      function En(e) {
         const t = e.lastIndexOf(".");
         return -1 !== t && t > e.lastIndexOf("/") ? e.slice(0, t) : e;
       }
-      function Bn(e) {
+      function In(e) {
         const { appid: t, closeModal: r } = e,
           [n, a] = (0, i.useState)(() => [
             {
@@ -8808,7 +8926,7 @@
               timeline_marker_id: null,
             },
           ]),
-          [s, o] = (0, i.useState)(yn.k_IconEditorHidden),
+          [s, o] = (0, i.useState)(Rn.k_IconEditorHidden),
           { publicAssetSetID: m, hiddenAssetSetID: c } = Q(t),
           { fnCreateTimelineMarkerDefinition: d } = le(),
           g = (0, i.useRef)(),
@@ -8820,7 +8938,7 @@
                 r = e.length;
               for (let i = 0; i < e.length; ++i) {
                 const a = e[i],
-                  s = await Tn(a);
+                  s = await Gn(a);
                 if ("string" == typeof s) {
                   f(s);
                   break;
@@ -8831,12 +8949,12 @@
                     (t[0].image_type = s.image_type),
                     r > 1 || 0 == n[0].markerid.length)
                   ) {
-                    const e = s.strFilenameWithoutExtension.substring(0, bn);
+                    const e = s.strFilenameWithoutExtension.substring(0, vn);
                     (t[0].markerid = e),
                       (t[0].timeline_marker_id = `temp_${i}_${e}`);
                   }
                 } else {
-                  const e = s.strFilenameWithoutExtension.substring(0, bn);
+                  const e = s.strFilenameWithoutExtension.substring(0, vn);
                   t.push({
                     image: s.image,
                     image_type: s.image_type,
@@ -8872,17 +8990,17 @@
               {
                 strTitle: (0, u.we)("#TimelineMarkers_Dialog_Create"),
                 bOKDisabled: n.some(
-                  (e) => !Mn(e.markerid) || !e.image || e.image?.length < 10,
+                  (e) => !wn(e.markerid) || !e.image || e.image?.length < 10,
                 ),
                 bDisableBackgroundDismiss: !0,
                 onCancel: r,
                 strOKButtonText: (0, u.we)("#Button_Create"),
                 onOK: async () => {
                   _.fnSetLoading(!0);
-                  let e = s == yn.k_IconEditorPublic ? m : c;
+                  let e = s == Rn.k_IconEditorPublic ? m : c;
                   if (
-                    (s != yn.k_IconEditorPublic || m
-                      ? s != yn.k_IconEditorHidden ||
+                    (s != Rn.k_IconEditorPublic || m
+                      ? s != Rn.k_IconEditorHidden ||
                         c ||
                         (e = (await K(t, !1)).assetSetID)
                       : (e = (await K(t, !0)).assetSetID),
@@ -8989,7 +9107,7 @@
                 i.createElement(
                   "div",
                   { className: be.DragTargetCtn },
-                  i.createElement(vn, { fnHandleFiles: h }),
+                  i.createElement(Pn, { fnHandleFiles: h }),
                 ),
                 Boolean(n?.length > 0 && n[0].image?.length > 0) &&
                   i.createElement(
@@ -8998,7 +9116,7 @@
                     (0, u.we)("#TimelineMarkers_Dialog_IconCreateTitle"),
                   ),
                 n.map((e, r) =>
-                  i.createElement(wn, {
+                  i.createElement(zn, {
                     marker: e,
                     key: "" + r,
                     appid: t,
@@ -9010,14 +9128,14 @@
                 ),
                 i.createElement("br", null),
                 i.createElement("br", null),
-                i.createElement(En, {
+                i.createElement(Dn, {
                   createVisibilityState: s,
                   setCreateVisibilityState: o,
                 }),
               ),
             );
       }
-      function vn(e) {
+      function Pn(e) {
         const { fnHandleFiles: t } = e,
           [r, n] = (0, i.useState)(!1);
         return i.createElement(
@@ -9050,7 +9168,7 @@
           ),
         );
       }
-      function wn(e) {
+      function zn(e) {
         const { marker: t, appid: r, setMarkerID: n } = e;
         return (
           (0, i.useEffect)(
@@ -9066,7 +9184,7 @@
             ? i.createElement(
                 i.Fragment,
                 null,
-                i.createElement(Gn, {
+                i.createElement(On, {
                   markerID: t.markerid,
                   strErrorMessage: null,
                   imageContent: t.image,
@@ -9104,7 +9222,7 @@
                   null,
                   (0, u.we)("#TimelineMarkers_Dialog_Icon_TimelinePreview"),
                 ),
-                i.createElement(Sn, {
+                i.createElement(Bn, {
                   appid: r,
                   markerID: t.timeline_marker_id,
                 }),
@@ -9112,7 +9230,7 @@
             : null
         );
       }
-      function Rn(e) {
+      function kn(e) {
         const {
             appid: t,
             closeModal: r,
@@ -9149,7 +9267,7 @@
         const C = (0, i.useCallback)(async (e) => {
             y(null);
             const t = e.currentTarget?.files?.[0],
-              r = await Tn(t);
+              r = await Gn(t);
             "string" == typeof r
               ? y(r)
               : (p(r.image), _(r.image_type), S((e) => e + 1));
@@ -9195,7 +9313,7 @@
           _e.o0,
           {
             strTitle: T,
-            bOKDisabled: !Mn(s) || g?.length < 10,
+            bOKDisabled: !wn(s) || g?.length < 10,
             bDisableBackgroundDismiss: !0,
             onCancel: r,
             onMiddleButton: w,
@@ -9215,7 +9333,7 @@
           i.createElement(
             "div",
             { className: be.DialogBody },
-            i.createElement(Gn, {
+            i.createElement(On, {
               markerID: s,
               strErrorMessage: M,
               imageContent: g,
@@ -9285,7 +9403,7 @@
                 (0, u.we)("#TimelineMarkers_Dialog_SVG_button"),
               ),
             ),
-            i.createElement(Sn, {
+            i.createElement(Bn, {
               appid: t,
               markerID: h
                 ? `temp_${h}_${a.timeline_marker_id}`
@@ -9294,14 +9412,14 @@
           ),
         );
       }
-      function Gn(e) {
+      function On(e) {
         const {
             markerID: t,
             strErrorMessage: r,
             imageContent: n,
             imageType: a,
           } = e,
-          s = Mn(t),
+          s = wn(t),
           l = t?.trimStart().startsWith("steam_");
         let o;
         if (1 == a) {
@@ -9353,7 +9471,7 @@
             ),
         );
       }
-      function En(e) {
+      function Dn(e) {
         const { createVisibilityState: t, setCreateVisibilityState: r } = e;
         return i.createElement(
           i.Fragment,
@@ -9376,7 +9494,7 @@
               { className: be.RadioColumn },
               i.createElement(
                 l.a,
-                { value: yn.k_IconEditorPublic },
+                { value: Rn.k_IconEditorPublic },
                 (0, u.oW)(
                   "#TimelineMarkers_Dialog_Public",
                   i.createElement("b", null),
@@ -9384,7 +9502,7 @@
               ),
               i.createElement(
                 l.a,
-                { value: yn.k_IconEditorHidden },
+                { value: Rn.k_IconEditorHidden },
                 (0, u.oW)(
                   "#TimelineMarkers_Dialog_Hidden",
                   i.createElement("b", null),
@@ -9396,10 +9514,10 @@
       }
       !(function (e) {
         (e.k_IconEditorPublic = "public"), (e.k_IconEditorHidden = "hidden");
-      })(yn || (yn = {}));
-      var In = r(87275);
-      const Pn = "publicmissing";
-      function zn(e) {
+      })(Rn || (Rn = {}));
+      var An = r(87275);
+      const Ln = "publicmissing";
+      function Wn(e) {
         const { appid: t } = e,
           { publicAssetSetID: r } = Q(t),
           n = ue(t);
@@ -9408,10 +9526,10 @@
           null,
           i.createElement(
             "div",
-            { className: In.Columns },
+            { className: An.Columns },
             i.createElement(
               "div",
-              { className: In.LeftCol },
+              { className: An.LeftCol },
               i.createElement(
                 "div",
                 { className: (0, Se.A)(m().SectionTitle) },
@@ -9431,10 +9549,10 @@
             ),
             i.createElement(
               "div",
-              { className: In.Ctn },
+              { className: An.Ctn },
               i.createElement(
                 "div",
-                { className: In.GridCtn },
+                { className: An.GridCtn },
                 Boolean(r)
                   ? i.createElement(ve, {
                       assetSetID: r,
@@ -9451,7 +9569,7 @@
                     ),
                 n?.length > 0 &&
                   i.createElement(Ge, {
-                    assetSetID: r || Pn,
+                    assetSetID: r || Ln,
                     appid: t,
                     strMessage: (0, u.we)(
                       "#TimelineMarkers_drag_target_public",
@@ -9462,16 +9580,16 @@
           ),
         );
       }
-      const kn = /^assetsetid_(.+)_markerid_(.+)$/,
-        On = /^droptarget_assetsetid_(.+)_appid_(.+)$/;
-      async function Dn(e, t) {
+      const Fn = /^assetsetid_(.+)_markerid_(.+)$/,
+        qn = /^droptarget_assetsetid_(.+)_appid_(.+)$/;
+      async function xn(e, t) {
         if (!e.destination)
           return void (
             "dev" == Qr.TS.WEB_UNIVERSE &&
             console.log("TimelineMarkerDrop: Dev Only: Destination missing?")
           );
-        const r = e.draggableId.match(kn),
-          i = e.destination.droppableId.match(On);
+        const r = e.draggableId.match(Fn),
+          i = e.destination.droppableId.match(qn);
         if (!(r?.length > 2 && i?.length > 2))
           return void (
             "dev" == Qr.TS.WEB_UNIVERSE &&
@@ -9481,9 +9599,9 @@
               e.destination.droppableId,
             )
           );
-        An(r[1], r[2], i[1], Number.parseInt(i[2]));
+        Nn(r[1], r[2], i[1], Number.parseInt(i[2]));
       }
-      async function An(e, t, r, i) {
+      async function Nn(e, t, r, i) {
         if (e == r)
           return (
             "dev" == Qr.TS.WEB_UNIVERSE &&
@@ -9492,7 +9610,7 @@
               ),
             r
           );
-        if (r == Pn) {
+        if (r == Ln) {
           const e = await K(i, !0);
           if (1 != e.eResult) {
             const t = (0, W.H)({ success: e.eResult });
@@ -9536,8 +9654,8 @@
               console.log("drag&drop complete successfully"),
             r);
       }
-      var Ln = r(36952);
-      function Wn(e) {
+      var Un = r(36952);
+      function jn(e) {
         const { appid: t } = e,
           r = ue(t),
           { hiddenAssetSetID: n } = Q(t),
@@ -9551,10 +9669,10 @@
           ? null
           : i.createElement(
               "div",
-              { className: Ln.PublishNoteCtn },
+              { className: Un.PublishNoteCtn },
               i.createElement(
                 "div",
-                { className: Ln.CalloutTitle },
+                { className: Un.CalloutTitle },
                 (0, u.Yp)("#TimelineMarkers_Publishing_title", a),
               ),
               i.createElement(
@@ -9573,7 +9691,7 @@
               ),
             );
       }
-      function Fn(e) {
+      function Hn(e) {
         const { appid: t, assetSetID: r, closeModal: n } = e,
           a = J(t, r),
           { fnCreateAssetSet: s, fnUpdateAssetSet: o } = X(),
@@ -9653,24 +9771,24 @@
               }),
             );
       }
-      function qn(e) {
+      function Vn(e) {
         const { appid: t } = e,
           { hiddenAssetSetID: r } = Q(t);
         return i.createElement(
           "div",
-          { className: (0, Se.A)(ye.Unassigned, In.Ctn) },
+          { className: (0, Se.A)(ye.Unassigned, An.Ctn) },
           i.createElement(
             "div",
-            { className: In.Title },
+            { className: An.Title },
             i.createElement(
               "div",
-              { className: In.TopRow },
+              { className: An.TopRow },
               i.createElement(
                 "div",
-                { className: In.TitleText },
+                { className: An.TitleText },
                 (0, u.we)("#TimelineMarkers_Hidden_section_info"),
               ),
-              i.createElement(xn, { appid: t }),
+              i.createElement(Xn, { appid: t }),
               i.createElement(te, { appid: t, assetSetID: r }),
             ),
           ),
@@ -9703,7 +9821,7 @@
           ),
         );
       }
-      function xn(e) {
+      function Xn(e) {
         const { appid: t } = e,
           { hiddenAssetSetID: r } = Q(t),
           n = ge(t, r);
@@ -9712,14 +9830,14 @@
           {
             disabled: !r || !n || 0 == n.size,
             onClick: (e) =>
-              (0, c.pg)(i.createElement(Nn, { appid: t }), (0, d.uX)(e)),
+              (0, c.pg)(i.createElement(Zn, { appid: t }), (0, d.uX)(e)),
           },
           "↑",
           " ",
           (0, u.we)("#TimelineMarkers_MoveAllHiddenToPublic"),
         );
       }
-      function Nn(e) {
+      function Zn(e) {
         const { appid: t, closeModal: r } = e,
           { hiddenAssetSetID: n, publicAssetSetID: a } = Q(t),
           s = ge(t, n),
@@ -9743,13 +9861,13 @@
                 let r = a;
                 for (let i = 0; i < e.length; ++i) {
                   const a = e[i];
-                  r = await An(n, a, r, t);
+                  r = await Nn(n, a, r, t);
                 }
                 l.fnSetSuccess(!0);
               },
             });
       }
-      function Un(e) {
+      function Qn(e) {
         const { appid: t } = e;
         return i.createElement(
           "div",
@@ -9763,13 +9881,13 @@
             l.$n,
             {
               onClick: (e) =>
-                (0, c.pg)(i.createElement(Fn, { appid: t }), (0, d.uX)(e)),
+                (0, c.pg)(i.createElement(Hn, { appid: t }), (0, d.uX)(e)),
             },
             (0, u.we)("#TimelineMarkers_Hidden_new_asset_set"),
           ),
         );
       }
-      function jn(e) {
+      function Jn(e) {
         const { oAssetSet: t } = e;
         return t.name == j
           ? i.createElement(
@@ -9785,7 +9903,7 @@
               )
             : i.createElement("span", null, t.name);
       }
-      class Hn {
+      class Kn {
         m_vecBranches = new Array();
         m_mapBranchNameToDetails = new Map();
         GetBranchDetails() {
@@ -9797,12 +9915,12 @@
         static s_Singleton;
         static Get() {
           return (
-            Hn.s_Singleton ||
-              ((Hn.s_Singleton = new Hn()),
-              Hn.s_Singleton.Init(),
+            Kn.s_Singleton ||
+              ((Kn.s_Singleton = new Kn()),
+              Kn.s_Singleton.Init(),
               "dev" == N.TS.WEB_UNIVERSE &&
-                (window.g_BranchNameStore = Hn.s_Singleton)),
-            Hn.s_Singleton
+                (window.g_BranchNameStore = Kn.s_Singleton)),
+            Kn.s_Singleton
           );
         }
         Init() {
@@ -9823,15 +9941,15 @@
           );
         }
       }
-      var Vn = r(82237);
-      function Xn(e) {
+      var Yn = r(82237);
+      function $n(e) {
         const { oAssetSet: t } = e;
         return i.createElement(
           "div",
-          { className: Vn.BranchDefCtn },
+          { className: Yn.BranchDefCtn },
           i.createElement(
             "div",
-            { className: Vn.BranchDesc },
+            { className: Yn.BranchDesc },
             (0, u.we)("#TimelineMarkers_Hidden_controls"),
           ),
           t.branches?.length > 0
@@ -9841,8 +9959,8 @@
                 t.branches.map((e) =>
                   i.createElement(
                     "span",
-                    { key: e, className: Vn.BranchName },
-                    i.createElement(Qn, { branchName: e }),
+                    { key: e, className: Yn.BranchName },
+                    i.createElement(ta, { branchName: e }),
                   ),
                 ),
               )
@@ -9856,7 +9974,7 @@
             l.$n,
             {
               onClick: (e) => {
-                (0, c.pg)(i.createElement(Zn, { oAssetSet: t }), (0, d.uX)(e));
+                (0, c.pg)(i.createElement(ea, { oAssetSet: t }), (0, d.uX)(e));
               },
             },
             (0, u.we)("#TimelineMarkers_Hidden_updatebranches"),
@@ -9868,9 +9986,9 @@
           ),
         );
       }
-      function Zn(e) {
+      function ea(e) {
         const { oAssetSet: t, closeModal: r } = e,
-          n = Hn.Get().GetBranchDetails(),
+          n = Kn.Get().GetBranchDetails(),
           [a, s] = (0, i.useState)(new Set(t.branches || [])),
           { fnAddBranchToAssetSet: o, fnRemoveBranchFromAssetSet: m } = X(),
           c = (0, pe.vs)();
@@ -9924,7 +10042,7 @@
               n.map((e) =>
                 i.createElement(l.Yh, {
                   key: e.name,
-                  label: i.createElement(Qn, { branchName: e.name }),
+                  label: i.createElement(ta, { branchName: e.name }),
                   tooltip: e.description,
                   checked: a.has(e.name),
                   onChange: (t) => {
@@ -9935,13 +10053,13 @@
               ),
             );
       }
-      function Qn(e) {
+      function ta(e) {
         const { branchName: t } = e,
-          r = ((n = t), Hn.Get().GetBranchDetailsByName(n));
+          r = ((n = t), Kn.Get().GetBranchDetailsByName(n));
         var n;
         return i.createElement(
           "span",
-          { className: Vn.Lock },
+          { className: Yn.Lock },
           r?.password?.length > 0 &&
             i.createElement(
               ee.he,
@@ -9954,7 +10072,7 @@
           t,
         );
       }
-      function Jn(e) {
+      function ra(e) {
         const { appid: t, assetSetID: r, closeModal: n } = e,
           a = J(t, r),
           s = (function (e) {
@@ -9988,7 +10106,7 @@
                   e.markerid,
                   " ",
                   "(",
-                  i.createElement(jn, { oAssetSet: t.get(e.asset_set_id) }),
+                  i.createElement(Jn, { oAssetSet: t.get(e.asset_set_id) }),
                   ")",
                 ),
                 data: e,
@@ -10027,8 +10145,8 @@
               }),
             );
       }
-      var Kn = r(95034);
-      function Yn(e) {
+      var ia = r(95034);
+      function na(e) {
         const { appid: t } = e,
           r = (function (e) {
             const [t, r] = (0, i.useState)(() =>
@@ -10041,16 +10159,16 @@
               t
             );
           })(t),
-          [n] = (0, Kn.QD)("branchset", !1);
+          [n] = (0, ia.QD)("branchset", !1);
         return i.createElement(
           "div",
-          { className: In.RestrictedIconsSection },
+          { className: An.RestrictedIconsSection },
           i.createElement(
             "div",
-            { className: In.Columns },
+            { className: An.Columns },
             i.createElement(
               "div",
-              { className: In.LeftCol },
+              { className: An.LeftCol },
               i.createElement(
                 "div",
                 { className: m().SectionTitle },
@@ -10062,27 +10180,27 @@
                 (0, u.we)("#TimelineMarkers_Hidden_desc2"),
               ),
             ),
-            i.createElement(qn, { appid: t }),
+            i.createElement(Vn, { appid: t }),
           ),
           n &&
             i.createElement(
               "div",
-              { className: In.Columns },
+              { className: An.Columns },
               i.createElement(
                 "div",
-                { className: In.LeftCol },
+                { className: An.LeftCol },
                 i.createElement(
                   "div",
                   { className: m().SectionTitle },
                   (0, u.we)("#TimelineMarkers_Hidden_branchsets_title"),
                 ),
-                i.createElement(Un, { appid: t }),
+                i.createElement(Qn, { appid: t }),
               ),
               i.createElement(
                 "div",
-                { className: In.RightCol },
+                { className: An.RightCol },
                 r?.map((e) =>
-                  i.createElement($n, {
+                  i.createElement(aa, {
                     key: e.assetset_id,
                     appid: t,
                     assetSetID: e.assetset_id,
@@ -10092,36 +10210,36 @@
             ),
         );
       }
-      function $n(e) {
+      function aa(e) {
         const { appid: t, assetSetID: r } = e,
           n = J(t, r);
         return i.createElement(
           "div",
-          { className: In.Ctn },
+          { className: An.Ctn },
           i.createElement(
             "div",
-            { className: In.Title },
+            { className: An.Title },
             i.createElement(
               "div",
-              { className: In.TopRow },
+              { className: An.TopRow },
               i.createElement(
                 ee.he,
                 { toolTipContent: n.desc },
-                i.createElement("div", { className: In.TitleText }, n.name),
+                i.createElement("div", { className: An.TitleText }, n.name),
               ),
               i.createElement(te, {
                 appid: n.appid,
                 assetSetID: n.assetset_id,
               }),
             ),
-            i.createElement(Xn, { oAssetSet: n }),
+            i.createElement($n, { oAssetSet: n }),
           ),
           i.createElement(
             "div",
-            { className: In.CtnGridAndBranchSelection },
+            { className: An.CtnGridAndBranchSelection },
             i.createElement(
               "div",
-              { className: In.GridCtn },
+              { className: An.GridCtn },
               i.createElement(ve, {
                 assetSetID: n.assetset_id,
                 appid: n.appid,
@@ -10142,7 +10260,7 @@
                 {
                   onClick: (e) =>
                     (0, c.pg)(
-                      i.createElement(Jn, { appid: t, assetSetID: r }),
+                      i.createElement(ra, { appid: t, assetSetID: r }),
                       (0, d.uX)(e),
                     ),
                 },
@@ -10152,27 +10270,27 @@
           ),
         );
       }
-      function ea(e) {
+      function sa(e) {
         const { appId: t } = e,
           r = Number.parseInt(t);
         return i.createElement(
           "div",
-          { className: Ln.EditorCtn },
+          { className: Un.EditorCtn },
           i.createElement(
             n.JY,
-            { onDragEnd: Dn },
-            i.createElement(ta, { appid: r }),
+            { onDragEnd: xn },
+            i.createElement(la, { appid: r }),
+            i.createElement(jn, { appid: r }),
             i.createElement(Wn, { appid: r }),
-            i.createElement(zn, { appid: r }),
-            i.createElement(Yn, { appid: r }),
+            i.createElement(na, { appid: r }),
           ),
         );
       }
-      function ta(e) {
+      function la(e) {
         const { appid: t } = e;
         return i.createElement(
           "div",
-          { className: Ln.HeaderCtn },
+          { className: Un.HeaderCtn },
           i.createElement(
             "div",
             { className: s().ColumnCtn },
@@ -10214,7 +10332,7 @@
                   {
                     onClick: (e) =>
                       (0, c.pg)(
-                        i.createElement(Bn, { appid: t }),
+                        i.createElement(In, { appid: t }),
                         (0, d.uX)(e),
                       ),
                   },
@@ -10554,6 +10672,7 @@
             m_rgGameModeChanges: [],
             m_rgStateDescriptions: [],
             m_rgEntries: [],
+            m_rgPhases: [],
           };
           if (this.m_fnTimelineURLBuilder) {
             const t = this.m_fnTimelineURLBuilder(e),
@@ -10583,13 +10702,7 @@
               m_promise: i,
               ...r,
             });
-          } else
-            this.m_mapTimelineData.set(e, {
-              m_strState: "loaded",
-              m_rgEntries: [],
-              m_rgGameModeChanges: [],
-              m_rgStateDescriptions: [],
-            });
+          } else this.m_mapTimelineData.set(e, { m_strState: "loaded", ...r });
         }
         ProcessTimelineEntries(e) {
           let t = {
@@ -10597,27 +10710,39 @@
             m_rgGameModeChanges: [],
             m_rgStateDescriptions: [],
             m_rgEntries: [],
+            m_rgPhases: [],
           };
           if (e.entries) {
-            let r = e.entries.filter((e) => (0, m.hT)(e));
-            t.m_rgGameModeChanges = r.sort(
-              (e, t) => parseInt(e.time) - parseInt(t.time),
-            );
-            let i = e.entries.filter((e) => (0, m.Te)(e));
-            t.m_rgStateDescriptions = i.sort(
-              (e, t) => parseInt(e.time) - parseInt(t.time),
-            );
-            let n = e.entries.filter(
-              (e) =>
-                (0, m.eJ)(e) ||
-                (0, m.xz)(e) ||
-                (0, m.N$)(e) ||
-                (0, m.sX)(e) ||
-                (0, m.In)(e),
-            );
-            (t.m_rgEntries = n.sort(
-              (e, t) => parseInt(e.time) - parseInt(t.time),
-            )),
+            const r = [],
+              i = [],
+              n = [],
+              a = [];
+            for (const t of e.entries)
+              switch (t.type) {
+                case "phase":
+                  n.push(t);
+                  break;
+                case "gamemode":
+                  r.push(t);
+                  break;
+                case "state_description":
+                  i.push(t);
+                  break;
+                case "achievement":
+                case "error":
+                case "event":
+                case "screenshot":
+                case "usermarker":
+                  a.push(t);
+                  break;
+                default:
+                  console.error(`Unknown timeline entry type ${t.type}`);
+              }
+            const s = (e, t) => parseInt(e.time) - parseInt(t.time);
+            (t.m_rgGameModeChanges = r.sort(s)),
+              (t.m_rgStateDescriptions = i.sort(s)),
+              (t.m_rgPhases = n.sort(s)),
+              (t.m_rgEntries = a.sort(s)),
               t.m_rgGameModeChanges.length > 0 &&
                 parseInt(t.m_rgGameModeChanges[0].time) < 1e4 &&
                 (t.m_rgGameModeChanges[0].time = "0");
@@ -11319,6 +11444,7 @@
               m_rgGameModeChanges: [],
               m_rgStateDescriptions: [],
               m_rgEntries: [],
+              m_rgPhases: [],
             });
           let s = {
             m_metadata: i,
@@ -11544,7 +11670,7 @@
             s = new Date(),
             l = [
               a,
-              `${s.getFullYear()}-${s.getMonth().toString().padStart(2, "0")}-${s.getDay().toString().padStart(2, "0")} ${s.toLocaleTimeString()}`,
+              `${s.getFullYear()}-${(s.getMonth() + 1).toString().padStart(2, "0")}-${s.getDate().toString().padStart(2, "0")} ${s.toLocaleTimeString()}`,
               n,
             ]
               .filter((e) => !!e)

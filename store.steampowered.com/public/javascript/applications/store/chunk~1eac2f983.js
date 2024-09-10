@@ -334,7 +334,7 @@
       }
       class a {
         m_fnAccumulatorFactory;
-        m_dictComponents = void 0;
+        m_dictComponents;
         constructor(e, t) {
           (this.m_dictComponents = e), (this.m_fnAccumulatorFactory = t);
         }
@@ -398,77 +398,69 @@
           let n = this.m_fnAccumulatorFactory(void 0);
           const o = [],
             r = () => (o.length < 1 ? void 0 : o[o.length - 1]),
-            i = this.m_dictComponents;
-          let s = !1,
-            a = !0;
-          const l = (e, r, l) => {
-            if (e && e.node.tag === r.text && i?.get(e.node.tag)) {
+            i = this.m_dictComponents,
+            s = (e) =>
+              !(!e.tag || e.tag === e.text || !i.get(e.tag)?.autocloses);
+          let a = !1,
+            l = !0;
+          const c = (e, r) => {
+            if (e && e.node.tag === r.text && i.get(e.node.tag)) {
               const r = i.get(e.node.tag),
-                l = o.map((e) => e.node.tag),
-                c = { parentTags: l, tagname: e.node.tag, args: e.node.args },
+                s = o.map((e) => e.node.tag),
+                c = { parentTags: s, tagname: e.node.tag, args: e.node.args },
                 m = t(r.Constructor, c, ...n.GetElements());
               (n = e.accumulator),
                 Array.isArray(m)
                   ? m.forEach((e) => n.AppendNode(e))
                   : n.AppendNode(m),
-                (s = !!r.skipFollowingNewline),
-                (a = e.bWrapTextForCopying);
+                (a = !!r.skipFollowingNewline),
+                (l = e.bWrapTextForCopying);
             } else if (e) {
               const t = e.accumulator;
               t.AppendText("[" + e.node.text + "]", !1),
                 n.GetElements().forEach((e) => t.AppendNode(e)),
                 t.AppendText("[/" + r.text + "]", !1),
                 (n = t),
-                (a = e.bWrapTextForCopying);
+                (l = e.bWrapTextForCopying);
             }
           };
           for (
             e.forEach((e, t) => {
               if (1 == e.type) {
-                const t = s ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
-                n.AppendText(t, a), (s = !1);
+                const t = a ? e.text.replace(/^[\t\r ]*\n/g, "") : e.text;
+                n.AppendText(t, l), (a = !1);
               } else if (2 == e.type) {
-                const t = i?.get(e.tag);
+                const t = i.get(e.tag);
                 if (t) {
-                  const c = r();
-                  if (void 0 !== c) {
-                    const t = i?.get(c.node.tag);
+                  const s = r();
+                  if (void 0 !== s) {
+                    const t = i.get(s.node.tag);
                     t &&
                       t.autocloses &&
-                      e.tag === c.node.tag &&
-                      l(o.pop(), c.node);
+                      e.tag === s.node.tag &&
+                      c(o.pop(), s.node);
                   }
-                  o.push({ accumulator: n, node: e, bWrapTextForCopying: a }),
+                  o.push({ accumulator: n, node: e, bWrapTextForCopying: l }),
                     (n = this.m_fnAccumulatorFactory(e)),
-                    (s = !!t.skipInternalNewline),
-                    (a = t.allowWrapTextForCopying ?? !1);
+                    (a = !!t.skipInternalNewline),
+                    (l = t.allowWrapTextForCopying ?? !1);
                 } else n.AppendText("[" + e.text + "]", 0 == o.length);
               } else if (3 == e.type) {
-                for (
-                  ;
-                  r() &&
-                  r().node.tag !== e.text &&
-                  i?.get(r().node.tag) &&
-                  i?.get(r().node.tag)?.autocloses;
-
-                ) {
+                for (; r() && r().node.tag !== e.text && s(r().node); ) {
                   const e = o.pop();
-                  l(e, e.node);
+                  c(e, e.node);
                 }
                 if (r()?.node.tag == e.text) {
                   const t = o.pop();
-                  l(t, e);
+                  c(t, e);
                 } else n.AppendText("[/" + e.text + "]", 0 == o.length);
               }
             });
             o.length > 0;
 
           ) {
-            const e = o.pop(),
-              t = e.accumulator;
-            t.AppendText("[" + e.node.text + "]", !1),
-              n.GetElements().forEach((e) => t.AppendNode(e)),
-              (n = t);
+            const e = o.pop();
+            c(e, e.node);
           }
           return n.GetElements();
         }
@@ -581,7 +573,7 @@
         B8: () => B,
         Pk: () => D,
         Sz: () => I,
-        Tu: () => N,
+        Tu: () => L,
         UT: () => F,
         W4: () => P,
         ZS: () => R,
@@ -646,7 +638,7 @@
           "h4",
           {
             Constructor: function (e) {
-              return L(e, (0, S.A)(r().Header4, "BB_Header4"));
+              return N(e, (0, S.A)(r().Header4, "BB_Header4"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -656,7 +648,7 @@
           "h5",
           {
             Constructor: function (e) {
-              return L(e, (0, S.A)(r().Header5, "BB_Header5"));
+              return N(e, (0, S.A)(r().Header5, "BB_Header5"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -688,7 +680,7 @@
           "smalltext",
           {
             Constructor: function (e) {
-              return L(e, (0, S.A)(r().SmallText, "BB_SmallText"));
+              return N(e, (0, S.A)(r().SmallText, "BB_SmallText"));
             },
             autocloses: !1,
             skipFollowingNewline: !0,
@@ -1081,10 +1073,10 @@
       function w(e, t) {
         return void 0 === t ? e[""] : e[t];
       }
-      function N(e, t) {
+      function L(e, t) {
         return (n) => e({ ...n, className: (0, S.A)(n.className, t) });
       }
-      function L(e, t) {
+      function N(e, t) {
         let n = w(e.args, "id");
         return (
           n || (n = w(e.args)),
@@ -1101,13 +1093,13 @@
         );
       }
       function b(e) {
-        return L(e, (0, S.A)(r().Header1, "BB_Header1"));
+        return N(e, (0, S.A)(r().Header1, "BB_Header1"));
       }
       function I(e) {
-        return L(e, (0, S.A)(r().Header2, "BB_Header2"));
+        return N(e, (0, S.A)(r().Header2, "BB_Header2"));
       }
       function R(e) {
-        return L(e, (0, S.A)(r().Header3, "BB_Header3"));
+        return N(e, (0, S.A)(r().Header3, "BB_Header3"));
       }
       const T = (e) => {
         const { href: t, ...n } = e,
@@ -1932,7 +1924,7 @@
           )
         );
       }
-      function N(e) {
+      function L(e) {
         const { title: t, onFilterChange: n, filter: o, onSubmit: r, ...i } = e;
         return s.createElement(
           s.Fragment,
@@ -1945,7 +1937,7 @@
           s.createElement(I, { value: o, onChange: n, onSubmit: r }),
         );
       }
-      function L(e) {
+      function N(e) {
         const { onFilterChange: t, filter: n, sections: o, title: r } = e;
         return s.createElement(
           s.Fragment,
@@ -2440,7 +2432,7 @@
                         ),
                   ),
               }),
-            s.createElement(L, {
+            s.createElement(N, {
               onFilterChange: (e) => this.setState({ filter: e }),
               filter: r,
               sections: i,
@@ -2460,7 +2452,7 @@
             { filter: r } = this.state,
             i = !r && o ? e.GetFlairListByGroupID(o) : e.emoticon_list,
             a = c.p.FilterEmoticons(i, r).slice(0, 1e3);
-          return s.createElement(N, {
+          return s.createElement(L, {
             title: (0, h.we)("#AddonPicker_Emoticons"),
             items: a,
             onItemSelect: n,
@@ -2514,7 +2506,7 @@
           const { store: e, onItemSelect: t } = this.props,
             { filter: n } = this.state,
             o = c.p.FilterStickers(e.GetStickerList(), n);
-          return s.createElement(N, {
+          return s.createElement(L, {
             title: (0, h.we)("#EmoticonPicker_StickerHeading"),
             items: o,
             onItemSelect: t,
@@ -2561,7 +2553,7 @@
           const { store: e, effectSettings: t, onItemSelect: n } = this.props,
             { filter: o } = this.state,
             r = e.GetEffectList().filter(({ name: e }) => e.indexOf(o) > -1);
-          return s.createElement(N, {
+          return s.createElement(L, {
             title: (0, h.we)("#EmoticonPicker_EffectHeading"),
             items: r,
             onItemSelect: n,
@@ -2635,7 +2627,7 @@
                         ),
                   ),
               }),
-            s.createElement(L, {
+            s.createElement(N, {
               onFilterChange: (e) => this.setState({ filter: e }),
               filter: r,
               sections: [
@@ -2672,7 +2664,7 @@
               flairGroupID: o,
             } = this.props,
             { filter: r } = this.state;
-          return s.createElement(L, {
+          return s.createElement(N, {
             onFilterChange: (e) => this.setState({ filter: e }),
             filter: r,
             sections: [
@@ -3185,8 +3177,8 @@
         P = n(44325),
         k = n(738),
         w = n(12155),
-        N = n(22797),
-        L = n(32754),
+        L = n(22797),
+        N = n(32754),
         b = n(68797),
         I = n(52038),
         R = n(61859),
@@ -3512,7 +3504,7 @@
                 ),
               },
               this.state.bIsRequestInFlight &&
-                s.createElement(N.t, {
+                s.createElement(L.t, {
                   className: H.RpcThrobber,
                   size: "xlarge",
                   position: "center",
@@ -3542,7 +3534,7 @@
                 "div",
                 { className: (0, I.A)(H.ReminderOption, !a && H.Unverified) },
                 s.createElement(
-                  L.he,
+                  N.he,
                   {
                     className: H.CheckboxWrapper,
                     bTopmost: !0,
@@ -3585,7 +3577,7 @@
                 "div",
                 { className: (0, I.A)(H.ReminderOption, !l && H.Unverified) },
                 s.createElement(
-                  L.he,
+                  N.he,
                   {
                     className: H.CheckboxWrapper,
                     bTopmost: !0,
