@@ -99445,6 +99445,7 @@
             s(i.TS.STORE_CDN_URL).toLocaleLowerCase(),
             s(i.TS.BASE_URL_SHARED_CDN).toLocaleLowerCase(),
             s(i.TS.CLAN_CDN_ASSET_URL).toLocaleLowerCase(),
+            s(i.TS.VIDEO_CDN_URL).toLocaleLowerCase(),
             "support.steampowered.com",
             "steamcdn-a.akamaihd.net",
             "cdn.cloudflare.steamstatic.com",
