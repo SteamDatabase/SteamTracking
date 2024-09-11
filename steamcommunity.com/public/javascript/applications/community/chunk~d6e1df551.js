@@ -130,7 +130,6 @@
               var t;
               return !(
                 !e.tag ||
-                e.tag === e.text ||
                 !(null === (t = a.get(e.tag)) || void 0 === t
                   ? void 0
                   : t.autocloses)

@@ -5843,8 +5843,7 @@
           const i = [],
             n = () => (i.length < 1 ? void 0 : i[i.length - 1]),
             a = this.m_dictComponents,
-            s = (e) =>
-              !(!e.tag || e.tag === e.text || !a.get(e.tag)?.autocloses);
+            s = (e) => !(!e.tag || !a.get(e.tag)?.autocloses);
           let o = !1,
             l = !0;
           const c = (e, n) => {

@@ -4890,7 +4890,7 @@ Set a category for these games to help you find them quickly and organize your L
 "DownloadRegion_nz_auckland"    "New Zealand"
 "DownloadRegion_br_sao_paulo"   "Brazil - São Paulo"
 "DownloadRegion_za_johannesburg""South Africa - Johannesburg"
-"DownloadRegion_iceland"        "Iceland"
+"DownloadRegion_iceland"        "Iceland, Greenland, Faroe Islands"
 "DownloadRegion_israel"         "Israel"
 "DownloadRegion_us_seattle"     "US - Seattle"
 "DownloadRegion_jp_tokyo"       "Japan - Tokyo"
