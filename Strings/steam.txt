@@ -1457,7 +1457,6 @@ $d`D-laM
 0123456789ABCDEF
 0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz./
 0123456789abcdef
-03:09:06
 08bX
 0A/8
 0Z@q
@@ -1695,6 +1694,7 @@ $d`D-laM
 17RefCountPvWrapperI22CClientStructNetPacketE
 18000000
 18446744073709551615
+18:03:01
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CHTTPClientRequest
@@ -2601,7 +2601,7 @@ B-233
 B-283
 B-409
 B-571
-B03:09:31
+B18:03:21
 B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
@@ -10481,7 +10481,7 @@ Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
 Startup - Steam Client launched with: %s
-Startup - updater built Sep 11 2024 03:09:29
+Startup - updater built Sep 11 2024 18:03:21
 StaticFileWriterThread()
 Steam - Fatal Error
 Steam - Warning

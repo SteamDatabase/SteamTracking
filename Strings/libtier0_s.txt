@@ -41,7 +41,6 @@
 %s: %d, %d, %d
 %s: '%s', '%s'
 %s: no such process %d\n
-&uXo
 (%zu) Descend: %s, (%s), %s\n
 (%zu) readdir failed to find '%s' in '%s'\n
 ((size_t)(m_nLogicalBytesAllocated) % 8) == 0
@@ -91,9 +90,9 @@
 /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
 /sys/kernel/debug/tracing/trace_marker
 /sys/kernel/tracing/trace_marker
-03:09:15
 12CStdMemAlloc
 16CAdHocValidation
+18:03:10
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 >NULL == pValObjectPrev->m_pValObjectNext

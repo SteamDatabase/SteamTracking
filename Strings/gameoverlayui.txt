@@ -509,7 +509,6 @@ $\n k_EJSRegisterMethodType_Function
 01/01/00
 0123456789ABCDEF
 0123456789abcdef
-03:09:53
 0x%llx
 1000
 10BlankImage
@@ -792,6 +791,7 @@ $\n k_EJSRegisterMethodType_Function
 17CScreenshotThread
 17DirectoryTreeView
 17LayoutDebugDialog
+18:03:46
 18CJSCallbackPromise
 18CMsgBlockedRequest
 18CMsgBrowserResized
