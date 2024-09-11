@@ -67,6 +67,7 @@
 -steamdeck
 -steamos
 -tesla
+/b0g
 /bin/sh
 /data/src/public/tier0/memblockhdr.h
 /data/src/public/tier0/vprof.h
@@ -92,7 +93,7 @@
 /sys/kernel/tracing/trace_marker
 12CStdMemAlloc
 16CAdHocValidation
-18:03:10
+20:39:46
 31CAdHocValidation_SimpleCallback
 9IMemAlloc
 >NULL == pValObjectPrev->m_pValObjectNext

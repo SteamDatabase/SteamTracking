@@ -6359,7 +6359,6 @@
                   { className: ye.FamilyManagementTitle },
                   (0, p.we)("#FamilyManagement_Title"),
                 ),
-                n.createElement("div", { className: ye.BetaBadge }, c.qR$({})),
                 n.createElement(
                   r.Ii,
                   { className: ye.HelpLink, href: d },

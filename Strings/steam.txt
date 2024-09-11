@@ -1694,7 +1694,6 @@ $d`D-laM
 17RefCountPvWrapperI22CClientStructNetPacketE
 18000000
 18446744073709551615
-18:03:01
 18CBaseFrameFunction
 18CBaseLinuxUpdateUI
 18CHTTPClientRequest
@@ -1755,6 +1754,8 @@ $d`D-laM
 2+ss
 2.1 Chromium 1.9
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
+20:39:36
+20:40:01
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
 20COpenSSLTicketKeyMgr
@@ -2601,7 +2602,7 @@ B-233
 B-283
 B-409
 B-571
-B18:03:21
+B20:40:00
 B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
@@ -10481,7 +10482,7 @@ Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
 Startup - Steam Client launched with: %s
-Startup - updater built Sep 11 2024 18:03:21
+Startup - updater built Sep 11 2024 20:40:00
 StaticFileWriterThread()
 Steam - Fatal Error
 Steam - Warning
