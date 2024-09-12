@@ -744,20 +744,21 @@
       "use strict";
       a.d(t, {
         FZ: () => s,
-        Fj: () => _,
+        Fj: () => h,
         Hj: () => i,
-        Ho: () => u,
-        N_: () => v,
-        PL: () => l,
-        XY: () => S,
+        Ho: () => p,
+        N_: () => y,
+        PL: () => c,
+        XY: () => f,
         Yw: () => n,
         _d: () => o,
-        cV: () => c,
-        s4: () => g,
+        cV: () => d,
+        on: () => l,
+        s4: () => S,
         tW: () => r,
-        vz: () => f,
-        x: () => p,
-        yu: () => h,
+        vz: () => v,
+        x: () => _,
+        yu: () => g,
       });
       const n = ["app_header_capsule", "app_main_capsule"],
         s = [
@@ -778,130 +779,125 @@
           "takeover_mp4_mobile_art",
         ],
         o = ["marketingmessage_art", "marketingmessage_art_2"],
-        l = ["spotlight_art"],
-        c = [
-          ...n,
-          ...s,
-          ...r,
-          ...i,
-          ...o,
+        l = [
           "marketingmessage_art_eventcapsule",
           "marketingmessage_art_2_eventcapsule",
-          ...l,
         ],
-        d = [1, 3, 2],
-        m = [1, 3],
-        u = [5, 4],
-        p = [7, 6],
-        _ = {
-          capsule: { width: 800, height: 450, rgAcceptableTypes: m },
+        c = ["spotlight_art"],
+        d = [...n, ...s, ...r, ...i, ...o, ...l, ...c],
+        m = [1, 3, 2],
+        u = [1, 3],
+        p = [5, 4],
+        _ = [7, 6],
+        h = {
+          capsule: { width: 800, height: 450, rgAcceptableTypes: u },
           marketingmessage_art_2_eventcapsule: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: m,
+            rgAcceptableTypes: u,
           },
           marketingmessage_art_eventcapsule: {
             width: 800,
             height: 450,
-            rgAcceptableTypes: m,
+            rgAcceptableTypes: u,
           },
-          spotlight: { width: 2108, height: 460, rgAcceptableTypes: m },
+          spotlight: { width: 2108, height: 460, rgAcceptableTypes: u },
           localized_store_app_spotlight: {
             width: 1100,
             height: 240,
-            rgAcceptableTypes: m,
+            rgAcceptableTypes: u,
           },
           localized_store_app_spotlight_mobile: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: m,
+            rgAcceptableTypes: u,
           },
           localized_title_image: {
             width: 1920,
             height: 622,
-            rgAcceptableTypes: m,
+            rgAcceptableTypes: u,
           },
-          background: { width: 1920, height: 622, rgAcceptableTypes: m },
+          background: { width: 1920, height: 622, rgAcceptableTypes: u },
           hero: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: m,
+            rgAcceptableTypes: u,
           },
-          email_full: { width: 800, height: 300, rgAcceptableTypes: m },
-          email_centered: { width: 644, height: 300, rgAcceptableTypes: m },
-          broadcast_left: { width: 155, height: 337, rgAcceptableTypes: m },
-          broadcast_right: { width: 155, height: 337, rgAcceptableTypes: m },
+          email_full: { width: 800, height: 300, rgAcceptableTypes: u },
+          email_centered: { width: 644, height: 300, rgAcceptableTypes: u },
+          broadcast_left: { width: 155, height: 337, rgAcceptableTypes: u },
+          broadcast_right: { width: 155, height: 337, rgAcceptableTypes: u },
           sale_header: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: d,
+            rgAcceptableTypes: m,
           },
           sale_overlay: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: d,
+            rgAcceptableTypes: m,
           },
           localized_image_group: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: m,
+            rgAcceptableTypes: u,
           },
           localized_background_art: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: m,
+            rgAcceptableTypes: u,
           },
           sale_section_background: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: d,
+            rgAcceptableTypes: m,
           },
           sale_section_title: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: d,
+            rgAcceptableTypes: m,
           },
           link_capsule: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: m,
+            rgAcceptableTypes: u,
           },
-          product_banner: { width: 1100, height: 160, rgAcceptableTypes: m },
+          product_banner: { width: 1100, height: 160, rgAcceptableTypes: u },
           product_mobile_banner: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: m,
+            rgAcceptableTypes: u,
           },
           product_banner_override: {
             width: 1100,
             height: 160,
-            rgAcceptableTypes: m,
+            rgAcceptableTypes: u,
           },
           product_mobile_banner_override: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: m,
+            rgAcceptableTypes: u,
           },
-          schedule_track_art: { width: 196, height: 92, rgAcceptableTypes: m },
+          schedule_track_art: { width: 196, height: 92, rgAcceptableTypes: u },
           tab_bar_background: {
             width: 1500,
             height: 100,
-            rgAcceptableTypes: m,
+            rgAcceptableTypes: u,
           },
-          sale_logo: { width: 940, height: 460, rgAcceptableTypes: m },
-          bestofyear_banner: { width: 1100, height: 160, rgAcceptableTypes: d },
+          sale_logo: { width: 940, height: 460, rgAcceptableTypes: u },
+          bestofyear_banner: { width: 1100, height: 160, rgAcceptableTypes: m },
           bestofyear_banner_mobile: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: d,
+            rgAcceptableTypes: m,
           },
           localized_marketing_message: {
             width: 570,
@@ -911,7 +907,7 @@
           localized_optin_banner: {
             width: 1e3,
             height: 150,
-            rgAcceptableTypes: m,
+            rgAcceptableTypes: u,
           },
           localized_marketingmessage_webm: {
             width: 570,
@@ -937,27 +933,27 @@
           localized_marketingmessage_background: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: m,
+            rgAcceptableTypes: u,
           },
           localized_email_image: {
             width: 0,
             height: 0,
             bDisableEnforceDimensions: !0,
-            rgAcceptableTypes: m,
+            rgAcceptableTypes: u,
           },
-          spotlight_art: { width: 306, height: 260, rgAcceptableTypes: d },
-          old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: d },
+          spotlight_art: { width: 306, height: 260, rgAcceptableTypes: m },
+          old_spotlight_art: { width: 306, height: 350, rgAcceptableTypes: m },
           marketingmessage_art: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: d,
+            rgAcceptableTypes: m,
           },
           marketingmessage_art_2: {
             width: 570,
             height: 600,
-            rgAcceptableTypes: d,
+            rgAcceptableTypes: m,
           },
-          takeover_art: { width: 1850, height: 450, rgAcceptableTypes: d },
+          takeover_art: { width: 1850, height: 450, rgAcceptableTypes: m },
           takeover_webm_art: {
             width: 1850,
             height: 450,
@@ -971,7 +967,7 @@
           takeover_mobile_art: {
             width: 500,
             height: 350,
-            rgAcceptableTypes: d,
+            rgAcceptableTypes: m,
           },
           takeover_webm_mobile_art: {
             width: 500,
@@ -983,39 +979,39 @@
             height: 350,
             rgAcceptableTypes: [4],
           },
-          takeunder_art: { width: 940, height: 150, rgAcceptableTypes: d },
+          takeunder_art: { width: 940, height: 150, rgAcceptableTypes: m },
           takeunder_mobile_art: {
             width: 500,
             height: 160,
-            rgAcceptableTypes: d,
+            rgAcceptableTypes: m,
           },
-          app_header_capsule: { width: 460, height: 215, rgAcceptableTypes: m },
-          app_main_capsule: { width: 616, height: 353, rgAcceptableTypes: m },
+          app_header_capsule: { width: 460, height: 215, rgAcceptableTypes: u },
+          app_main_capsule: { width: 616, height: 353, rgAcceptableTypes: u },
         };
-      function h(e, t, a) {
-        const n = _[a];
+      function g(e, t, a) {
+        const n = h[a];
         return (
           !!n && !n.bDisableEnforceDimensions && e === n.width && t === n.height
         );
       }
-      function g(e, t, a) {
-        const n = _[a];
+      function S(e, t, a) {
+        const n = h[a];
         return (
           !!n &&
           (!!n.bDisableEnforceDimensions || !(e < n.width || t < n.height))
         );
       }
-      function S(e) {
-        const t = _[e];
+      function f(e) {
+        const t = h[e];
         return (
           t.rgAcceptableTypes.includes(6) || t.rgAcceptableTypes.includes(7)
         );
       }
-      function f(e, t) {
-        return t.filter((t) => v(e, t));
-      }
       function v(e, t) {
-        return _[t].rgAcceptableTypes.includes(e);
+        return t.filter((t) => y(e, t));
+      }
+      function y(e, t) {
+        return h[t].rgAcceptableTypes.includes(e);
       }
     },
     47822: (e, t, a) => {
