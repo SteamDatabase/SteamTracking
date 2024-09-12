@@ -37625,7 +37625,7 @@
       function S(e, t, a, r, n, i, s, o, c, m) {
         const d = {
           project_id: 29,
-          published_version: 1,
+          published_version: 2,
           additional_data: [100],
           data: {
             data: [
@@ -37667,7 +37667,7 @@
       function I(e, t, a, r, n, i, s, o, c, m) {
         const d = {
           project_id: 27,
-          published_version: 1,
+          published_version: 2,
           additional_data: [100],
           data: {
             data: [
