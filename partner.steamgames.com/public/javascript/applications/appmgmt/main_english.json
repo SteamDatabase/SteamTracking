@@ -755,6 +755,7 @@
     "Dashboard_UpcomingEvents_Events_MarketingMessage_StatusNotReady": "In preparation",
     "Dashboard_UpcomingEvents_Events_MarketingMessage_StatusApproved": "Approved",
     "Dashboard_UpcomingEvents_Events_MarketingMessage_StatusPublic": "Public",
+    "Dashboard_UpcomingEvents_Events_MarketingMessage_StatusValveReview": "Pending Valve review",
     "Dashboard_UpcomingEvents_Events_MarketingMessage_PreviewPublishButton": "Preview and Publish...",
     "Dashboard_UpcomingEvents_Events_MarketingMessage_ViewButton": "View...",
     "Dashboard_UpcomingEvents_Events_MarketingMessage_Event_Status": "Linked event:",
