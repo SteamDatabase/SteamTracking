@@ -2254,7 +2254,7 @@
     "Recap_NextFest_LoadingApp": "Loading App (%1$s)",
     "Recap_NextFest_ManagingUserLinks": "See following documentation on managing steamworks account.",
     "Create_Home_Title": "More from (Franchise/Developer/Publisher)",
-    "Create_Home_None": "There are zero creator homes setup for your app. Please review creator home documentation for <1>developer pages / publisher pages<1> or for <2>franchise pages</2> to set them up for your App",
+    "Create_Home_None": "There are zero creator homes setup for your app. Please review creator home documentation for <1>developer pages / publisher pages</1> or for <2>franchise pages</2> to set them up for your App",
     "Create_Home_Desc": "Select an associated creator home from which to display items on your store page. This section will appear below your game's description",
     "Create_Home_SelectedHome": "Selected Homepage:",
     "Create_Home_SelectedSource": "Selected Source:",

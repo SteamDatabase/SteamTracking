@@ -6908,7 +6908,7 @@
                     ? r.createElement(
                         "div",
                         { className: ta().PageSelect },
-                        (0, s.PP)(
+                        (0, s.oW)(
                           "#Create_Home_None",
                           r.createElement("a", {
                             href: `${Kn.T.PARTNER_BASE_URL}doc/store/creator_homepage`,

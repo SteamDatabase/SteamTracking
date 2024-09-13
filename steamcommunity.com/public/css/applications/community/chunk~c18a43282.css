@@ -1675,12 +1675,11 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
   opacity: 0.3;
 }
 ._1JrUubE3c7FdJsMxYYxbt {
-  position: absolute;
-  bottom: 3px;
-  left: 4px;
   display: flex;
   align-items: center;
   box-sizing: border-box;
+  margin-left: 4px;
+  margin-right: 4px;
   color: #fff;
   height: 32px;
   z-index: 2;
@@ -1752,6 +1751,16 @@ html.touch ._3notzMjxQtogi11XHZMYXI .VI5mZtnq0CL7fw_2mxhfm,
 }
 ._3lmdEmwrmqe-kicNCZ9v-I._1DrDh5P3SNgRdVAaUyel3G {
   background-color: gray;
+}
+._3lmdEmwrmqe-kicNCZ9v-I ._2iWMRE6knpPZLgHWASy5BH {
+  background: #2f4b66;
+  height: 28px;
+  margin-right: 4px;
+}
+._3lmdEmwrmqe-kicNCZ9v-I ._2YfaLBUZmFkJ3NpkieGzS3 {
+  background: #2f4b66;
+  height: 28px;
+  margin-right: 4px;
 }
 ._2hhNOdcC6yLwL_rugP3YLf ._3lmdEmwrmqe-kicNCZ9v-I {
   margin-left: auto;
@@ -4555,7 +4564,6 @@ html.tablet
 }
 ._16SknI_KfMn45zQAvi-Xrs {
   position: relative;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -32387,8 +32387,12 @@
         GetName() {
           return this.m_strName;
         }
-        GetStorePageURL() {
-          return u.TS.STORE_BASE_URL + this.m_strStoreURLPath;
+        GetStorePageURL(e = !1) {
+          return e && this.HasDemoStandaloneStorePage()
+            ? u.TS.STORE_BASE_URL +
+                "app/" +
+                this.GetDemoStandaloneStorePageAppIDs()[0]
+            : u.TS.STORE_BASE_URL + this.m_strStoreURLPath;
         }
         GetStorePageURLWithOverride() {
           return this.m_strStoreURLPathOverride &&
@@ -32488,6 +32492,58 @@
           return null === (e = this.m_RelatedItems) || void 0 === e
             ? void 0
             : e.parent_appid;
+        }
+        BHasDemo() {
+          var e, t, r;
+          return (
+            (null !==
+              (r =
+                null ===
+                  (t =
+                    null === (e = this.m_RelatedItems) || void 0 === e
+                      ? void 0
+                      : e.demo_appid) || void 0 === t
+                  ? void 0
+                  : t.length) && void 0 !== r
+              ? r
+              : 0) > 0
+          );
+        }
+        GetDemoAppIDs() {
+          var e, t;
+          return null !==
+            (t =
+              null === (e = this.m_RelatedItems) || void 0 === e
+                ? void 0
+                : e.demo_appid) && void 0 !== t
+            ? t
+            : [];
+        }
+        HasDemoStandaloneStorePage() {
+          var e, t, r;
+          return (
+            (null !==
+              (r =
+                null ===
+                  (t =
+                    null === (e = this.m_RelatedItems) || void 0 === e
+                      ? void 0
+                      : e.standalone_demo_appid) || void 0 === t
+                  ? void 0
+                  : t.length) && void 0 !== r
+              ? r
+              : 0) > 0
+          );
+        }
+        GetDemoStandaloneStorePageAppIDs() {
+          var e, t;
+          return null !==
+            (t =
+              null === (e = this.m_RelatedItems) || void 0 === e
+                ? void 0
+                : e.standalone_demo_appid) && void 0 !== t
+            ? t
+            : [];
         }
         GetContentDescriptorIDs() {
           return this.m_ContentDescriptorIDs;
@@ -50705,6 +50761,7 @@
             s(i.TS.STORE_CDN_URL).toLocaleLowerCase(),
             s(i.TS.BASE_URL_SHARED_CDN).toLocaleLowerCase(),
             s(i.TS.CLAN_CDN_ASSET_URL).toLocaleLowerCase(),
+            s(i.TS.VIDEO_CDN_URL).toLocaleLowerCase(),
             "support.steampowered.com",
             "steamcdn-a.akamaihd.net",
             "cdn.cloudflare.steamstatic.com",
