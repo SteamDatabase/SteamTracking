@@ -272,6 +272,13 @@ center
 	background-color: #545454;
 }
 
+
+.social_links {
+	display: flex;
+	flex-direction: row;
+	margin-top: 4px;
+}
+
 /* stats */
 
 .apphub_Stats

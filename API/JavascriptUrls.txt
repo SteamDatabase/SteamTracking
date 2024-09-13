@@ -950,7 +950,6 @@ ${PARTNER_BASE_URL}${_ ? "optin/ajaxadmincloneinvites" : "optin/ajaxadmincloneop
 ${PARTNER_BASE_URL}${}
 ${PARTNER_BASE_URL}${}${}
 ${PARTNER_BASE_URL}/admin/store/pagecreate
-${PARTNER_BASE_URL}/apps/ajaxgetassets/${}
 ${PARTNER_BASE_URL}/packages/ajaxgetpackageforapp
 ${PARTNER_BASE_URL}/promotion${}
 ${PARTNER_BASE_URL}/promotion/${}
@@ -993,8 +992,6 @@ ${PARTNER_BASE_URL}apprelease/ajaxupdatereleaserequest/${}
 ${PARTNER_BASE_URL}apps/
 ${PARTNER_BASE_URL}apps/ajaxcreatenewapp/
 ${PARTNER_BASE_URL}apps/ajaxgetdlc
-${PARTNER_BASE_URL}apps/ajaxpublishassets
-${PARTNER_BASE_URL}apps/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}apps/builddetails/${appid}/${}
 ${PARTNER_BASE_URL}apps/communityitems/${}
 ${PARTNER_BASE_URL}apps/demo/${}
@@ -1004,6 +1001,9 @@ ${PARTNER_BASE_URL}apps/landing/${}
 ${PARTNER_BASE_URL}apps/publishing/${}
 ${PARTNER_BASE_URL}apps/requestkeys/${}
 ${PARTNER_BASE_URL}apps/suggestapps
+${PARTNER_BASE_URL}appsupport/ajaxgetassets/${}
+${PARTNER_BASE_URL}appsupport/ajaxpublishassets
+${PARTNER_BASE_URL}appsupport/ajaxuploadasset/${}
 ${PARTNER_BASE_URL}bundles/suggestbundle
 ${PARTNER_BASE_URL}bundles/view/${bundle_id}
 ${PARTNER_BASE_URL}bundles/view/${bundleid}

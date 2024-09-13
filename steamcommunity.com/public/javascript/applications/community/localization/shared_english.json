@@ -470,7 +470,7 @@
     "EventDisplay_DeleteEvent_ForumTopicError": "The event was successfully deleted. We failed when attempting to delete the forum topic thread for the event. You can always try against in %1$s site. Error details:",
     "EventDisplay_DeleteEvent_Success": "The event was successfully deleted.",
     "EventDisplay_DeleteEvent_Comment": "Also delete the discussion forum comment thread for this event?",
-    "EventDisplay_SocialTitle": "More About This Game",
+    "EventDisplay_SocialTitle": "More Ways To Connect:",
     "EventDisplay_Sketchfab": "Sketchfab Model",
     "EventDisplay_SketchFab_Error_Network": "Could not contact Sketchfab",
     "EventEditor_Publish_VisibleNow": "Make Visible Now",

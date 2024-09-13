@@ -1259,7 +1259,10 @@
 .olJ0bpvyRPrtTYZJ92MIn {
   width: 100%;
   position: relative;
-  background: #000;
+  background: -webkit-linear-gradient(top, #3b3b3b 5%, #171717 95%);
+  background: linear-gradient(to bottom, #3b3b3b 5%, #171717 95%);
+  border-top-right-radius: 5px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 }
 .olJ0bpvyRPrtTYZJ92MIn.ah9QAq_oS5nW3MgRnTAzq {
   background: unset;
@@ -1312,13 +1315,14 @@
 }
 ._30XmWOQxfj1bFcW4DkUjV_ {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
+  width: 150%;
+  height: 150%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: center;
   z-index: 1;
+  opacity: 0.3;
+  filter: blur(14px);
 }
 ._2jGnDgGDtr4jtE8bojPtY7 {
   position: absolute;
@@ -1435,7 +1439,7 @@
   padding: 0;
   position: relative;
   z-index: 2;
-  height: 340px;
+  height: 348px;
   width: 259px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
 }
@@ -1474,7 +1478,8 @@
 ._2xDhgyRekf-ieXILY2GgrJ {
   display: flex;
   flex-direction: column;
-  padding-left: 8px;
+  justify-content: center;
+  padding-left: 16px;
   z-index: 1;
 }
 .ah9QAq_oS5nW3MgRnTAzq ._2xDhgyRekf-ieXILY2GgrJ {
@@ -1501,7 +1506,6 @@
   text-transform: none;
 }
 ._2xDhgyRekf-ieXILY2GgrJ ._1B3DlUeXOdmoKSAzcX2ise {
-  text-shadow: 0px 0px 8px #000;
   margin-top: 4px;
 }
 .BasicUI ._2xDhgyRekf-ieXILY2GgrJ ._1B3DlUeXOdmoKSAzcX2ise {
@@ -1514,7 +1518,6 @@
 ._2xDhgyRekf-ieXILY2GgrJ ._2NnxX77zksI0knKh88wqqI {
   margin-top: 4px;
   margin-left: -4px;
-  text-shadow: 0px 0px 8px #000;
   margin-bottom: 4px;
 }
 ._2xDhgyRekf-ieXILY2GgrJ ._2NnxX77zksI0knKh88wqqI .ReviewScore {
@@ -1539,7 +1542,6 @@
 }
 ._2xDhgyRekf-ieXILY2GgrJ ._1jV5aDbQbnWjTZ7KqzG6hv {
   margin-top: 8px;
-  text-shadow: 0 0 8px #000;
 }
 ._2xDhgyRekf-ieXILY2GgrJ ._1jV5aDbQbnWjTZ7KqzG6hv > div {
   border-top: none;
@@ -1556,22 +1558,13 @@
   height: 100%;
   width: 100%;
 }
-._2xDhgyRekf-ieXILY2GgrJ .eFMS-3Ikye0At919NbM-s .WeiXLhTiHWvR4_05WkjOh {
-  padding-left: 4px;
-}
-._2xDhgyRekf-ieXILY2GgrJ
-  .eFMS-3Ikye0At919NbM-s
-  .WeiXLhTiHWvR4_05WkjOh
-  ._26-ICqi8UhxutiYJyQ7jw {
-  font-size: 18px;
-}
 ._26-ICqi8UhxutiYJyQ7jw {
-  font-size: 30px;
-  line-height: 31px;
-  font-weight: normal;
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 500;
+  width: fit-content;
+  color: #e5e5e5;
   margin-bottom: 5px;
-  color: #fff;
-  text-shadow: 0px 4px 8px #000;
 }
 .BasicUI ._26-ICqi8UhxutiYJyQ7jw {
   margin: unset;
@@ -1581,7 +1574,6 @@
 ._2iLfPW81V7ikdTxZLfP8-1 {
   font-size: 20px;
   font-weight: 200;
-  text-shadow: 1px 1px 0px #000;
   color: #fff;
 }
 .BasicUI ._2iLfPW81V7ikdTxZLfP8-1 {

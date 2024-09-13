@@ -48325,7 +48325,7 @@
         async InternalLoadAssets(e) {
           let t = null;
           try {
-            const a = C.TS.PARTNER_BASE_URL + "/apps/ajaxgetassets/" + e,
+            const a = C.TS.PARTNER_BASE_URL + "appsupport/ajaxgetassets/" + e,
               n = new FormData();
             n.append("sessionid", C.TS.SESSIONID);
             const r = await I().post(a, n, { withCredentials: !0 });
@@ -48357,7 +48357,7 @@
         async PublishAssets(e) {
           let t = null;
           try {
-            const a = C.TS.PARTNER_BASE_URL + "apps/ajaxpublishassets",
+            const a = C.TS.PARTNER_BASE_URL + "appsupport/ajaxpublishassets",
               n = new FormData();
             n.append("appid", JSON.stringify(e)),
               n.append("sessionid", C.TS.SESSIONID);
@@ -48557,7 +48557,7 @@
               rgRealmList: r,
               strOverrideDragAndDropText:
                 "Drag any asset here to upload (max 5MB)",
-              strUploadAjaxURL: `${C.TS.PARTNER_BASE_URL}apps/ajaxuploadasset/${t.GetID()}`,
+              strUploadAjaxURL: `${C.TS.PARTNER_BASE_URL}appsupport/ajaxuploadasset/${t.GetID()}`,
               fnOnUploadSuccess: i,
             }),
             l.createElement(
@@ -99467,7 +99467,6 @@
       var O = a(61859);
       a(44691),
         a(91822),
-        a(19471),
         a(62792),
         a(80782),
         a(29863),

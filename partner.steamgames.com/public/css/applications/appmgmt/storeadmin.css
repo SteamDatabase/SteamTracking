@@ -2129,9 +2129,37 @@ img.ProseMirror-separator {
 }
 ._78Qv2C95AM2DNCuLD5o8U {
   width: 220px;
+  position: relative;
+  flex-shrink: 0;
+}
+._78Qv2C95AM2DNCuLD5o8U video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
 }
 ._2qz5D65VkY796Xw-al9f_a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Motiva Sans", Arial, Helvetica, sans-serif;
   width: 220px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px;
+}
+._2qz5D65VkY796Xw-al9f_a ._2h0GKAYcXRP10ryZHFn79d {
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 500;
+}
+._2qz5D65VkY796Xw-al9f_a .wJ7ZiTc09km2kH4mSsZ9j {
+  font-size: 12px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+._2qz5D65VkY796Xw-al9f_a .SaleTagBlockCtn .TagBox {
+  max-height: 38px;
 }
 .c-RZpHTXb06OJeUNz4WEW {
   min-width: 250px;
@@ -2148,10 +2176,11 @@ img.ProseMirror-separator {
 }
 ._12MnhNSqHX_n83jqCGQrF- {
   max-width: 25%;
+  min-width: 200px;
   margin-top: 6px;
+  margin-left: 12px;
 }
 ._1WxdPIk2Wp9e2_EPCvDXs0 {
-  max-width: 800px;
   margin-top: 16px;
 }
 ._1sM7lJwWxP9zl748WJgn_8 {

@@ -4197,7 +4197,7 @@
                     },
                   ]
                 : [];
-            }, []);
+            }, [e]);
           })(t),
           W = (function (e) {
             const [t, a] = n.useState([]),

@@ -997,6 +997,7 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 .game_area_purchase_game h1,
 .game_area_offsite_purchase h1 {
 	font-size: 21px;
+	line-height: 23px;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
@@ -5208,6 +5209,7 @@ a.bundle_contents_preview_item .ds_flag {
 
 .bundle_label {
 	cursor: default;
+	display: inline-block;
 	color: #A4D7F5;
 	font-size: 18px;
 			font-family: "Motiva Sans", Sans-serif;

@@ -55,7 +55,6 @@
         AppRelevanceCtn: "_1jV5aDbQbnWjTZ7KqzG6hv",
         TitleArtworkCtn: "eFMS-3Ikye0At919NbM-s",
         ArtworkCtn: "_1Wcw-J3VLOmCigxjMG2ryw",
-        TitleCtn: "WeiXLhTiHWvR4_05WkjOh",
         InfoSlideRight: "_2fdUmDW92P9P_0sVbR2a_T",
         ArtworkSlideRight: "_2H6HvY9V_W_NTuqE2SLjas",
         InfoSlideLeft: "_1P8fVsazFiMbWw4NDR75RT",
@@ -63,6 +62,7 @@
         BgImageFade: "_37tVz2Dv6wAaRC_5BxDIs2",
         BgVidShow: "_3BlcsHEudYVTJabd2kc3vS",
         DeckCompatIconOverride: "_2ZatuQPNeGq4co_oIw27VE",
+        TitleCtn: "WeiXLhTiHWvR4_05WkjOh",
       };
     },
     71415: (e) => {
@@ -1345,12 +1345,12 @@
     6626: (e, t, a) => {
       "use strict";
       a.d(t, {
-        F6: () => y,
-        ME: () => C,
-        RA: () => b,
-        cc: () => I,
-        fq: () => D,
-        m1: () => w,
+        F6: () => v,
+        ME: () => b,
+        RA: () => E,
+        cc: () => w,
+        fq: () => I,
+        m1: () => C,
       });
       var n = a(34629),
         r = a(41735),
@@ -1359,33 +1359,32 @@
         i = a(90626),
         l = a(17720),
         c = a(4796),
-        m = a(19471),
-        u = a(30894),
-        d = a(91254),
-        _ = a(99032),
-        p = a(62490),
-        g = a(44332),
-        h = a(68797),
-        S = a(56093),
-        f = a(78327);
-      function v(e) {
+        m = a(30894),
+        u = a(91254),
+        d = a(99032),
+        _ = a(62490),
+        p = a(44332),
+        g = a(68797),
+        h = a(56093),
+        S = a(78327);
+      function f(e) {
         e.list_jsondata && "string" == typeof e.list_jsondata
           ? (e.list_jsondata = JSON.parse(e.list_jsondata))
-          : ((0, g.w)(
+          : ((0, p.w)(
               !e.list_jsondata,
               "Found unexpected ListDetails_t.list_jsondata type: " +
                 typeof e.list_jsondata,
             ),
             (e.list_jsondata = {}));
       }
-      const y = "0";
-      function E(e, t) {
-        (t.localized_flat_title = (0, p.$Y)([], 31, null)),
-          (t.localized_flat_blurb = (0, p.$Y)([], 31, null)),
-          (t.localized_flat_link = (0, p.$Y)([], 31, null)),
-          t.title !== y && (t.localized_flat_title[e] = t.title),
-          t.blurb !== y && (t.localized_flat_blurb[e] = t.blurb),
-          t.link !== y && (t.localized_flat_link[e] = t.link),
+      const v = "0";
+      function y(e, t) {
+        (t.localized_flat_title = (0, _.$Y)([], 31, null)),
+          (t.localized_flat_blurb = (0, _.$Y)([], 31, null)),
+          (t.localized_flat_link = (0, _.$Y)([], 31, null)),
+          t.title !== v && (t.localized_flat_title[e] = t.title),
+          t.blurb !== v && (t.localized_flat_blurb[e] = t.blurb),
+          t.link !== v && (t.localized_flat_link[e] = t.link),
           t.title_localization.forEach((e) => {
             e.localized_string?.length > 0 &&
               (t.localized_flat_title[e.language] = e.localized_string);
@@ -1399,7 +1398,7 @@
               (t.localized_flat_link[e.language] = e.localized_string);
           });
       }
-      class b {
+      class E {
         m_mapList = new Map();
         m_mapEventGIDToLists = new Map();
         m_mapListIDToClanAccount = new Map();
@@ -1415,7 +1414,7 @@
         async LoadListDetails(e, t, a) {
           if (this.m_mapList.has(t)) return this.m_mapList.get(t);
           const n =
-              f.TS.STORE_BASE_URL +
+              S.TS.STORE_BASE_URL +
               "curator/" +
               e.GetAccountID() +
               "/admin/ajaxgetlistdetails",
@@ -1425,16 +1424,16 @@
             if (1 == o?.data?.success) {
               const a = { ...o.data.list_details };
               return (
-                (0, g.w)(t == a?.listid, "Wanted" + t + "but got" + a?.listid),
-                v(a),
-                E(o.data.curation_language, a),
+                (0, p.w)(t == a?.listid, "Wanted" + t + "but got" + a?.listid),
+                f(a),
+                y(o.data.curation_language, a),
                 this.m_mapList.set(t, a),
                 this.m_mapListIDToClanAccount.set(t, e.GetAccountID()),
                 a
               );
             }
           } catch (e) {
-            const t = (0, h.H)(e);
+            const t = (0, g.H)(e);
             console.error(
               "CCuratorListStore.LoadListDetails: error on load: " +
                 t.strErrorMsg,
@@ -1445,18 +1444,18 @@
         }
         async LoadMyFollowedSaleCurationLists(e, t, a) {
           if (
-            !f.iA.logged_in ||
-            (u.Fm.Get().BIsLoaded() &&
-              0 == u.Fm.Get().GetFollowedCuratorCount())
+            !S.iA.logged_in ||
+            (m.Fm.Get().BIsLoaded() &&
+              0 == m.Fm.Get().GetFollowedCuratorCount())
           )
             return [];
-          const n = f.TS.STORE_BASE_URL + "curators/ajaxgetmycuratorsalelists",
+          const n = S.TS.STORE_BASE_URL + "curators/ajaxgetmycuratorsalelists",
             r = {
               clan_account_id: e.GetAccountID(),
               clan_event_gid: t,
               origin: self.origin,
-              curator_clan_account_followed: u.Fm.Get().BIsLoaded()
-                ? u.Fm.Get().GetFollowedCuratorsAccountID().join(",")
+              curator_clan_account_followed: m.Fm.Get().BIsLoaded()
+                ? m.Fm.Get().GetFollowedCuratorsAccountID().join(",")
                 : void 0,
             };
           return this.InternalLoadSaleCuratorLists(
@@ -1471,7 +1470,7 @@
         async LoadAllSaleCurationLists(e, t, a) {
           if (this.m_mapEventGIDToLists.has(t))
             return this.m_mapEventGIDToLists.get(t);
-          const n = f.TS.STORE_BASE_URL + "curators/ajaxfindcuratorlists",
+          const n = S.TS.STORE_BASE_URL + "curators/ajaxfindcuratorlists",
             r = {
               clan_account_id: e.GetAccountID(),
               clan_event_gid: t,
@@ -1500,8 +1499,8 @@
                           a.listid,
                           t.clan_account_id,
                         ),
-                          v(a),
-                          E(t.curation_language, a),
+                          f(a),
+                          y(t.curation_language, a),
                           this.m_mapList.set(a.listid, a),
                           e.push(a);
                       });
@@ -1512,20 +1511,20 @@
               );
             }
           } catch (e) {
-            const t = (0, h.H)(e);
+            const t = (0, g.H)(e);
             console.error(a + ": error on load: " + t.strErrorMsg, t);
           }
           return [];
         }
         static s_Singleton;
         static Get() {
-          return b.s_Singleton || (b.s_Singleton = new b()), b.s_Singleton;
+          return E.s_Singleton || (E.s_Singleton = new E()), E.s_Singleton;
         }
         constructor() {
           (0, o.Gn)(this),
-            "dev" == f.TS.WEB_UNIVERSE && (window.g_curatorListStore = this);
-          let e = (0, f.Tc)("curatorlistdata", "application_config");
-          ("dev" != f.TS.WEB_UNIVERSE && "beta" != f.TS.WEB_UNIVERSE) ||
+            "dev" == S.TS.WEB_UNIVERSE && (window.g_curatorListStore = this);
+          let e = (0, S.Tc)("curatorlistdata", "application_config");
+          ("dev" != S.TS.WEB_UNIVERSE && "beta" != S.TS.WEB_UNIVERSE) ||
             console.log(
               "DEV_DEBUG: CCuratorListStore loading list payload: " + e?.length,
               e,
@@ -1534,8 +1533,8 @@
               (0, o.h5)(() => {
                 e.forEach((e) => {
                   e.multi_detail_lists.forEach((t) => {
-                    v(t),
-                      E(e.curation_language, t),
+                    f(t),
+                      y(e.curation_language, t),
                       this.m_mapList.set(t.listid, t);
                   });
                 });
@@ -1556,15 +1555,15 @@
             : t && Array.isArray(t) && 0 == t.length;
         }
       }
-      function C(e, t) {
-        const a = (0, S.CH)();
+      function b(e, t) {
+        const a = (0, h.CH)();
         return (
           (0, i.useEffect)(() => {
-            if (b.Get().GetListDetails(t) || !e) return;
+            if (E.Get().GetListDetails(t) || !e) return;
             const n = s().CancelToken.source();
             return (
               (async () => {
-                const r = await b.Get().LoadListDetails(e, t);
+                const r = await E.Get().LoadListDetails(e, t);
                 if (!n.token.reason)
                   if (r?.apps?.length) {
                     const e = [];
@@ -1572,22 +1571,21 @@
                       const a = t?.recommended_app?.appid;
                       a && e.push({ id: a, type: "game" });
                     }
-                    (0, _.H2)(e, {
-                      ..._.jy,
+                    (0, d.H2)(e, {
+                      ...d.jy,
                       include_assets: !0,
                       include_release: !0,
                     }),
-                      m.Ay.Get().LoadAppIDsBatch(e.map((e) => e.id)),
                       a();
                   } else console.error("Found no list data");
               })(),
               () => n.cancel("unmounting CuratorList")
             );
           }, [e, t, a]),
-          b.Get().GetListDetails(t)
+          E.Get().GetListDetails(t)
         );
       }
-      function w(e) {
+      function C(e) {
         const t = e && c.ac.GetClanInfoByClanAccountID(e),
           [a, n] = (0, i.useState)(!!t);
         return (
@@ -1602,21 +1600,21 @@
           t
         );
       }
-      function I(e) {
+      function w(e) {
         return Boolean(e?.sale_clan_event_gid) && Boolean(e?.sale_clan_steamid);
       }
-      function D(e) {
-        const t = (0, S.CH)(),
-          a = I(e) ? e.sale_clan_event_gid : null,
-          n = a && d.O3.GetClanEventModel(a);
+      function I(e) {
+        const t = (0, h.CH)(),
+          a = w(e) ? e.sale_clan_event_gid : null,
+          n = a && u.O3.GetClanEventModel(a);
         return (
           (0, i.useEffect)(() => {
-            if (n || !I(e)) return;
+            if (n || !w(e)) return;
             const r = s().CancelToken.source();
             return (
               (async () => {
-                d.O3.Init(),
-                  await d.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
+                u.O3.Init(),
+                  await u.O3.LoadPartnerEventFromClanEventGIDAndClanSteamID(
                     new l.b(e.sale_clan_steamid),
                     a,
                     0,
@@ -1629,7 +1627,7 @@
           n
         );
       }
-      (0, n.Cg)([o.sH], b.prototype, "m_mapList", void 0);
+      (0, n.Cg)([o.sH], E.prototype, "m_mapList", void 0);
     },
     85320: (e, t, a) => {
       "use strict";

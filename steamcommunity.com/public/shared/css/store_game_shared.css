@@ -328,6 +328,18 @@ a.game_area_details_specs_ctn:hover .label {
 	margin-bottom: 2px;
 }
 
+.block div.linkbar {
+	min-height: 17px;
+	padding-top: 4px;
+	padding-left: 8px;
+	padding-bottom: 4px;
+	line-height: 17px;
+	background: rgba( 103, 193, 245, 0.1 );
+	border-radius: 1px;
+	display: block;
+	margin-bottom: 2px;
+}
+
 .block a.linkbar:hover {
 	text-decoration: none;
 	color: #ffffff;
@@ -341,13 +353,20 @@ a.game_area_details_specs_ctn:hover .label {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-a.linkbar > img {
+.linkbar > img {
 	max-width: 12px;
 	max-height: 12px;
 	padding-right: 4px;
 	vertical-align: middle;
 }
-a.linkbar .social_account {
+.linkbar > svg {
+	max-width: 12px;
+	max-height: 12px;
+	padding-right: 4px;
+	vertical-align: middle;
+	fill: white;
+}
+.linkbar .social_account {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: inline-block;

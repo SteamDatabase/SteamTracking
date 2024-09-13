@@ -391,21 +391,5 @@
         (0, s.Cg)([o.XI], d.prototype, "OnRichPresenceLocUpdate", null);
       const I = new d();
     },
-    4434: (e, t, n) => {
-      n.d(t, { m: () => a });
-      var s = n(41735),
-        o = n.n(s),
-        i = n(90626);
-      function a(e) {
-        const t = i.useRef(o().CancelToken.source());
-        return (
-          i.useEffect(() => {
-            const n = t.current;
-            return () => n.cancel(e ? `${e}: unmounting` : "unmounting");
-          }, [e]),
-          t.current
-        );
-      }
-    },
   },
 ]);

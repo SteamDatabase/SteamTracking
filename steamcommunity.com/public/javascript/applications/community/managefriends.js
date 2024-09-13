@@ -28,65 +28,65 @@
         SendInviteButton: "kcAlkPA1uhcWs_5eatvVd",
       };
     },
-    50463: (e, t, s) => {
+    50463: (e, t, n) => {
       "use strict";
-      s.r(t), s.d(t, { default: () => a });
-      var n = s(90626),
-        r = s(19369);
-      function a() {
-        return n.createElement(r.Bv, null);
+      n.r(t), n.d(t, { default: () => s });
+      var a = n(90626),
+        i = n(19369);
+      function s() {
+        return a.createElement(i.Bv, null);
       }
     },
-    19369: (e, t, s) => {
+    19369: (e, t, n) => {
       "use strict";
-      s.d(t, { jl: () => w, Bv: () => I });
-      var n = s(34629),
-        r = s(90626),
-        a = s(56093),
-        i = s(41735),
-        o = s.n(i),
-        c = s(7068),
-        l = s(61859),
-        d = s(91640),
-        m = s.n(d),
-        u = s(78327),
-        p = s(17720),
-        _ = s(56011),
-        h = s(14947),
-        g = s(85044),
-        f = s(44332);
-      s(68797);
-      class v {
+      n.d(t, { jl: () => k, Bv: () => E });
+      var a = n(34629),
+        i = n(90626),
+        s = n(56093),
+        r = n(41735),
+        o = n.n(r),
+        l = n(7068),
+        c = n(61859),
+        d = n(91640),
+        m = n.n(d),
+        u = n(78327),
+        _ = n(17720),
+        p = n(56011),
+        h = n(14947),
+        S = n(85044),
+        v = n(44332);
+      n(68797);
+      class f {
         constructor() {
           (this.m_mapProfiles = new Map()),
             (this.m_mapProfilesLoading = new Map()),
             (0, h.Gn)(this);
         }
         async LoadProfiles(e, t) {
-          (0, f.w)(
+          (0, v.w)(
             e.length <= 500,
             "Check LoadProfiles, requesting too many steam IDs",
           );
-          let s = e.filter(
+          let n = e.filter(
             (e) =>
               !this.m_mapProfiles.has(e) && !this.m_mapProfilesLoading.has(e),
           );
-          if (0 == s.length) return this.m_mapProfilesLoading.get(e[0]);
-          let n = u.TS.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
-            r = o().get(n, {
-              params: { steamids: s.join(",") },
+          if (0 == n.length) return this.m_mapProfilesLoading.get(e[0]);
+          let a = u.TS.COMMUNITY_BASE_URL + "actions/ajaxresolveusers",
+            i = o().get(a, {
+              params: { steamids: n.join(",") },
               withCredentials: !0,
               cancelToken: null == t ? void 0 : t.token,
             });
-          s.forEach((e) => this.m_mapProfilesLoading.set(e, r));
-          let a = await r;
-          a.data &&
-            200 == a.status &&
-            a.data.forEach((e) => {
+          n.forEach((e) => this.m_mapProfilesLoading.set(e, i));
+          let s = await i;
+          s.data &&
+            200 == s.status &&
+            s.data.forEach((e) => {
               (e.avatar_hash = e.avatar_url),
-                (e.avatar_url_medium = (0, g.t)(e.avatar_url, "medium")),
-                (e.avatar_url_full = (0, g.t)(e.avatar_url, "full")),
-                (e.avatar_url = (0, g.t)(e.avatar_url)),
+                (e.avatar_url_medium = (0, S.t)(e.avatar_url, "medium")),
+                (e.avatar_url_full = (0, S.t)(e.avatar_url, "full")),
+                (e.avatar_url = (0, S.t)(e.avatar_url)),
                 this.m_mapProfiles.set(e.steamid, e),
                 this.m_mapProfilesLoading.delete(e.steamid);
             });
@@ -96,7 +96,7 @@
         }
         GetProfileByAccountID(e) {
           return this.m_mapProfiles.get(
-            p.b.InitFromAccountID(e).ConvertTo64BitString(),
+            _.b.InitFromAccountID(e).ConvertTo64BitString(),
           );
         }
         GetProfileBySteamID(e) {
@@ -107,7 +107,7 @@
         }
         BHasProfileByAccountID(e) {
           return this.m_mapProfiles.has(
-            p.b.InitFromAccountID(e).ConvertTo64BitString(),
+            _.b.InitFromAccountID(e).ConvertTo64BitString(),
           );
         }
         BHasProfileBySteamID(e) {
@@ -127,11 +127,11 @@
           return t && t.persona_name ? t.persona_name : "";
         }
       }
-      (0, n.Cg)([h.sH], v.prototype, "m_mapProfiles", void 0);
-      const C = new v();
-      var S = s(12155),
-        E = s(71513);
-      class I extends r.Component {
+      (0, a.Cg)([h.sH], f.prototype, "m_mapProfiles", void 0);
+      const g = new f();
+      var C = n(12155),
+        I = n(71513);
+      class E extends i.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -174,7 +174,7 @@
             "invite" === e &&
               (this.setState({ invite_copied: !0 }),
               setTimeout(() => this.setState({ invite_copied: !1 }), 1e3)),
-            (0, _.OG)(t);
+            (0, p.OG)(t);
         }
         async OnAddFriend(e) {
           const t = new FormData();
@@ -207,28 +207,28 @@
         }
         render() {
           const e = u.iA.short_url + "/" + this.state.invite_token;
-          return r.createElement(
+          return i.createElement(
             "div",
             null,
-            r.createElement(
+            i.createElement(
               "div",
               { className: m().HeaderBlock },
-              (0, l.we)("#ManageFriends_AddAFriend"),
+              (0, c.we)("#ManageFriends_AddAFriend"),
             ),
-            r.createElement(
+            i.createElement(
               "div",
               { className: m().Background },
-              r.createElement(
+              i.createElement(
                 "h1",
                 { className: m().Heading },
-                (0, l.we)("#ManageFriends_YourFriendCode"),
+                (0, c.we)("#ManageFriends_YourFriendCode"),
               ),
-              r.createElement(
+              i.createElement(
                 "div",
                 { className: m().CopyContainer },
-                r.createElement("h1", { className: m().Text }, u.iA.accountid),
-                r.createElement(
-                  c.jn,
+                i.createElement("h1", { className: m().Text }, u.iA.accountid),
+                i.createElement(
+                  l.jn,
                   {
                     autoFocus: !0,
                     className: m().Button,
@@ -236,76 +236,76 @@
                       this.OnCopy("friend_code", String(u.iA.accountid)),
                   },
                   this.state.friend_code_copied
-                    ? (0, l.we)("#ManageFriends_Copied")
-                    : (0, l.we)("#ManageFriends_Copy"),
+                    ? (0, c.we)("#ManageFriends_Copied")
+                    : (0, c.we)("#ManageFriends_Copy"),
                 ),
               ),
-              r.createElement(
+              i.createElement(
                 "p",
                 { className: m().Body },
-                (0, l.we)("#ManageFriends_EnterFriendCode"),
+                (0, c.we)("#ManageFriends_EnterFriendCode"),
               ),
-              r.createElement(w, {
+              i.createElement(k, {
                 onButtonClick: this.OnAddFriend,
-                buttonText: (0, l.we)("#ManageFriends_SendInvite"),
+                buttonText: (0, c.we)("#ManageFriends_SendInvite"),
                 bDisableForSelf: !0,
                 bDisableForFriends: !0,
                 bShowStatus: !0,
               }),
             ),
-            r.createElement(
+            i.createElement(
               "div",
               { className: m().DimBackground },
-              r.createElement(
+              i.createElement(
                 "h1",
                 { className: m().Heading },
-                (0, l.we)("#ManageFriends_OrSendQuickInvite"),
+                (0, c.we)("#ManageFriends_OrSendQuickInvite"),
               ),
-              r.createElement(
+              i.createElement(
                 "p",
                 { className: m().Body },
-                (0, l.we)("#ManageFriends_QuickInviteDescription"),
+                (0, c.we)("#ManageFriends_QuickInviteDescription"),
               ),
-              r.createElement(
+              i.createElement(
                 "p",
                 { className: m().Body },
-                (0, l.we)("#ManageFriends_QuickInviteNote"),
+                (0, c.we)("#ManageFriends_QuickInviteNote"),
               ),
-              r.createElement(
+              i.createElement(
                 "div",
                 { className: m().CopyContainer },
                 Boolean(this.state.invite_token) &&
-                  r.createElement("div", { className: m().Link }, e),
-                r.createElement(
-                  c.jn,
+                  i.createElement("div", { className: m().Link }, e),
+                i.createElement(
+                  l.jn,
                   {
                     className: m().Button,
                     onClick: () => this.OnCopy("invite", e),
                   },
                   this.state.invite_copied
-                    ? (0, l.we)("#ManageFriends_Copied")
-                    : (0, l.we)("#ManageFriends_Copy"),
+                    ? (0, c.we)("#ManageFriends_Copied")
+                    : (0, c.we)("#ManageFriends_Copy"),
                 ),
               ),
-              r.createElement(
-                c.$n,
+              i.createElement(
+                l.$n,
                 {
                   className: m().GenerateLinkButton,
                   onClick: this.OnCreateInviteLink,
                 },
-                (0, l.we)("#ManageFriends_CreateInviteLink"),
+                (0, c.we)("#ManageFriends_CreateInviteLink"),
               ),
             ),
-            r.createElement(
+            i.createElement(
               "div",
               { className: m().Background },
-              r.createElement(
+              i.createElement(
                 "h1",
                 { className: m().Heading },
-                (0, l.we)("#ManageFriends_OrSearch"),
+                (0, c.we)("#ManageFriends_OrSearch"),
               ),
-              r.createElement("br", null),
-              r.createElement(
+              i.createElement("br", null),
+              i.createElement(
                 "div",
                 {
                   style: {
@@ -315,18 +315,18 @@
                     position: "relative",
                   },
                 },
-                r.createElement(
+                i.createElement(
                   "div",
                   { style: { width: "100%" } },
-                  r.createElement(c.pd, {
+                  i.createElement(l.pd, {
                     className: m().Input,
                     onKeyDown: this.OnSearchKeyDown,
                     value: this.state.input_search,
                     onChange: this.OnSearchChange,
-                    placeholder: (0, l.we)("#ManageFriends_EnterProfileName"),
+                    placeholder: (0, c.we)("#ManageFriends_EnterProfileName"),
                   }),
                 ),
-                r.createElement(
+                i.createElement(
                   "div",
                   {
                     id: "searchIcon",
@@ -337,20 +337,20 @@
                     },
                     onClick: this.OnSearchSubmit,
                   },
-                  r.createElement(S.eSy, null),
+                  i.createElement(C.eSy, null),
                 ),
               ),
             ),
           );
         }
       }
-      (0, n.Cg)([a.oI], I.prototype, "OnCreateInviteLink", null),
-        (0, n.Cg)([a.oI], I.prototype, "OnCopy", null),
-        (0, n.Cg)([a.oI], I.prototype, "OnAddFriend", null),
-        (0, n.Cg)([a.oI], I.prototype, "OnSearchChange", null),
-        (0, n.Cg)([a.oI], I.prototype, "OnSearchKeyDown", null),
-        (0, n.Cg)([a.oI], I.prototype, "OnSearchSubmit", null);
-      class w extends r.Component {
+      (0, a.Cg)([s.oI], E.prototype, "OnCreateInviteLink", null),
+        (0, a.Cg)([s.oI], E.prototype, "OnCopy", null),
+        (0, a.Cg)([s.oI], E.prototype, "OnAddFriend", null),
+        (0, a.Cg)([s.oI], E.prototype, "OnSearchChange", null),
+        (0, a.Cg)([s.oI], E.prototype, "OnSearchKeyDown", null),
+        (0, a.Cg)([s.oI], E.prototype, "OnSearchSubmit", null);
+      class k extends i.Component {
         constructor() {
           super(...arguments),
             (this.state = {
@@ -372,16 +372,16 @@
         }
         async LoadProfile(e) {
           if (e) {
-            const t = p.b.InitFromAccountID(Number(e));
-            await C.LoadProfiles([t.ConvertTo64BitString()]);
-            const s = C.GetProfile(t.ConvertTo64BitString());
-            s
+            const t = _.b.InitFromAccountID(Number(e));
+            await g.LoadProfiles([t.ConvertTo64BitString()]);
+            const n = g.GetProfile(t.ConvertTo64BitString());
+            n
               ? this.setState({
-                  searchResult: s,
+                  searchResult: n,
                   disable_send_invite:
                     u.iA.is_limited ||
-                    (this.props.bDisableForFriends && s.is_friend) ||
-                    (this.props.bDisableForSelf && s.steamid === u.iA.steamid),
+                    (this.props.bDisableForFriends && n.is_friend) ||
+                    (this.props.bDisableForSelf && n.steamid === u.iA.steamid),
                 })
               : this.setState({ searchResult: null });
           } else this.setState({ searchResult: null });
@@ -404,26 +404,26 @@
               });
         }
         render() {
-          return r.createElement(
+          return i.createElement(
             "div",
             { className: m().FriendCodeSelector },
-            r.createElement(c.pd, {
+            i.createElement(l.pd, {
               className: m().Input,
               value: this.state.input_friend_code,
               onChange: this.OnFriendCodeChange,
-              placeholder: (0, l.we)(
+              placeholder: (0, c.we)(
                 "#ManageFriends_EnterFriendCodePlaceholder",
               ),
             }),
-            r.createElement(
-              k,
+            i.createElement(
+              w,
               {
                 searchResult: this.state.searchResult,
                 invite_status: this.state.invite_status,
                 bShowStatus: this.props.bShowStatus,
               },
-              r.createElement(
-                c.jn,
+              i.createElement(
+                l.jn,
                 {
                   className: m().SendInviteButton,
                   onClick: () =>
@@ -436,80 +436,80 @@
           );
         }
       }
-      (0, n.Cg)([a.oI], w.prototype, "OnFriendCodeChange", null),
-        (0, n.Cg)([a.oI], w.prototype, "LoadProfile", null),
-        (0, n.Cg)([a.oI], w.prototype, "OnActionClick", null);
-      const k = (e) => {
+      (0, a.Cg)([s.oI], k.prototype, "OnFriendCodeChange", null),
+        (0, a.Cg)([s.oI], k.prototype, "LoadProfile", null),
+        (0, a.Cg)([s.oI], k.prototype, "OnActionClick", null);
+      const w = (e) => {
         const {
             searchResult: t,
-            invite_status: s,
-            bShowStatus: n,
-            children: a,
+            invite_status: n,
+            bShowStatus: a,
+            children: s,
           } = e,
-          i = (0, u.Qn)();
+          r = (0, u.Qn)();
         return Boolean(t)
-          ? r.createElement(
+          ? i.createElement(
               "div",
               { className: m().ProfileCard },
-              r.createElement(
+              i.createElement(
                 "div",
                 { className: m().UserContainer },
-                r.createElement(
+                i.createElement(
                   "div",
                   { className: m().Image },
-                  r.createElement("img", {
+                  i.createElement("img", {
                     style: { width: "100%", height: "100%" },
                     src: t.avatar_url_full,
                   }),
                 ),
-                r.createElement(
+                i.createElement(
                   "div",
                   { className: m().ProfileContent },
-                  r.createElement(
+                  i.createElement(
                     "h1",
                     { className: m().Heading },
                     t.persona_name,
                   ),
-                  r.createElement(
+                  i.createElement(
                     "div",
                     { className: m().ProfileLink },
-                    r.createElement(
-                      E.Ii,
+                    i.createElement(
+                      I.Ii,
                       {
-                        target: i ? void 0 : "_blank",
+                        target: r ? void 0 : "_blank",
                         href: u.TS.COMMUNITY_BASE_URL + "profiles/" + t.steamid,
                       },
-                      (0, l.we)("#ManageFriends_ProfileLink"),
+                      (0, c.we)("#ManageFriends_ProfileLink"),
                     ),
-                    r.createElement("br", null),
-                    r.createElement(
+                    i.createElement("br", null),
+                    i.createElement(
                       "span",
                       { className: m().Body },
                       t.real_name,
-                      r.createElement("br", null),
+                      i.createElement("br", null),
                       `${t.city}${t.city ? "," : ""} ${t.state}${t.state ? "," : ""} ${t.country}`,
                     ),
                   ),
                 ),
-                a,
+                s,
               ),
-              r.createElement(
+              i.createElement(
                 "div",
                 { className: m().ProfileLink },
                 t.is_friend &&
-                  r.createElement(
+                  i.createElement(
                     "div",
                     null,
-                    (0, l.we)("#ManageFriends_IsFriend"),
+                    (0, c.we)("#ManageFriends_IsFriend"),
                   ),
                 0 != t.friends_in_common &&
-                  r.createElement(
+                  i.createElement(
                     "div",
                     null,
-                    r.createElement(
-                      E.Ii,
+                    i.createElement(
+                      I.Ii,
                       {
-                        target: i ? void 0 : "_blank",
+                        target: r ? void 0 : "_blank",
                         href:
                           u.TS.COMMUNITY_BASE_URL +
                           "profiles/" +
@@ -517,110 +517,34 @@
                           "/friendscommon",
                       },
                       1 === t.friends_in_common
-                        ? (0, l.we)(
+                        ? (0, c.we)(
                             "#ManageFriends_FriendsInCommonSingular",
                             t.friends_in_common,
                           )
-                        : (0, l.we)(
+                        : (0, c.we)(
                             "#ManageFriends_FriendsInCommon",
                             t.friends_in_common,
                           ),
                     ),
                   ),
-                n &&
-                  "failure" === s &&
-                  r.createElement(
+                a &&
+                  "failure" === n &&
+                  i.createElement(
                     "div",
                     { className: m().Failure },
-                    (0, l.we)("#ManageFriends_InviteFailure"),
+                    (0, c.we)("#ManageFriends_InviteFailure"),
                   ),
-                n &&
-                  "success" === s &&
-                  r.createElement(
+                a &&
+                  "success" === n &&
+                  i.createElement(
                     "div",
                     { className: m().Success },
-                    (0, l.we)("#ManageFriends_InviteSuccess", t.persona_name),
+                    (0, c.we)("#ManageFriends_InviteSuccess", t.persona_name),
                   ),
               ),
             )
           : null;
       };
-    },
-    68797: (e, t, s) => {
-      "use strict";
-      s.d(t, { H: () => i });
-      var n = s(41735),
-        r = s.n(n),
-        a = s(56545);
-      function i(e) {
-        if (r().isCancel(e))
-          return { strErrorMsg: "Action Cancelled:" + e, errorCode: 52 };
-        if (
-          void 0 !== e.response &&
-          e.response.data &&
-          "object" == typeof e.response.data
-        ) {
-          if ("msg" in e.response.data)
-            return {
-              strErrorMsg: e.response.data.msg,
-              errorCode: e.response.data.success,
-            };
-          if ("err_msg" in e.response.data)
-            return {
-              strErrorMsg: e.response.data.err_msg,
-              errorCode: e.response.data.success,
-            };
-          if ("message" in e.response.data)
-            return {
-              strErrorMsg: e.response.data.message,
-              errorCode: e.response.data.success,
-            };
-          if ("success" in e.response.data)
-            return {
-              strErrorMsg: "error code: " + e.response.data.success,
-              errorCode: e.response.data.success,
-            };
-        } else if ("object" == typeof e.data) {
-          if ("msg" in e.data)
-            return { strErrorMsg: e.data.msg, errorCode: e.data.success };
-          if ("err_msg" in e.data)
-            return { strErrorMsg: e.data.err_msg, errorCode: e.data.success };
-          if ("message" in e.data)
-            return { strErrorMsg: e.data.message, errorCode: e.data.success };
-          if ("success" in e.data)
-            return {
-              strErrorMsg: "error code: " + e.data.success,
-              errorCode: e.data.success,
-            };
-        } else {
-          if (void 0 !== e.success && void 0 !== e.msg)
-            return { strErrorMsg: e.msg, errorCode: e.success };
-          if (void 0 !== e.success && void 0 !== e.message)
-            return { strErrorMsg: e.message, errorCode: e.success };
-          if (void 0 !== e.success && void 0 !== e.err_msg)
-            return { strErrorMsg: e.err_msg, errorCode: e.success };
-          if ("string" == typeof e && e.length > 1024)
-            console.groupCollapsed(
-              "GetMsgAndErrorCodeFromResponse cannot parse: ",
-            ),
-              console.warn(e),
-              console.groupEnd();
-          else {
-            if ("object" == typeof e && e instanceof a.w)
-              return {
-                strErrorMsg: "" + e.GetErrorMessage(),
-                errorCode: e.GetEResult(),
-              };
-            console.warn("GetMsgAndErrorCodeFromResponse cannot parse: ", e);
-          }
-        }
-        return "object" == typeof e && "status" in e
-          ? {
-              strErrorMsg: "Unknown Error: " + e + "\nStatus Code:" + e.status,
-              errorCode: 2,
-            }
-          : { strErrorMsg: "Unknown Error: " + e, errorCode: 2 };
-      }
     },
   },
 ]);
