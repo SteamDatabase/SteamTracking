@@ -78319,8 +78319,14 @@
             b.current = window.setTimeout(() => {
               if (b.current) {
                 B(b);
-                const e = (m.state.currentSlide + 1) % m.state.totalSlides;
-                m.setStoreState({ currentSlide: e });
+                let e = 0;
+                m.state.currentSlide + m.state.visibleSlides <
+                  m.state.totalSlides &&
+                  (e = Math.min(
+                    m.state.currentSlide + m.state.visibleSlides,
+                    m.state.totalSlides - m.state.visibleSlides,
+                  )),
+                  m.setStoreState({ currentSlide: e });
               }
             }, 8e3);
           };
