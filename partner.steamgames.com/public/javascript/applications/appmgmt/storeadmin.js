@@ -313,6 +313,8 @@
         SocialMediaRow: "_3l3QLvZXgctxiR4z77a-pH",
         SocialMediaType: "_2blu0FXfvFWQnV3ez_YHvN",
         SocialMediaLink: "_1lPiLLSVWq927QUzQxAdoh",
+        SocialMediaTooltip: "_28OUTMVlzN2OHNhsHY2uH6",
+        ValidationError: "_2nhAto5J35_SzrLqvLiNrW",
         AddLinkDropDown: "cmPkLJRitrSssXCUhvpTu",
       };
     },
@@ -2751,7 +2753,7 @@
             strActiveLanguage: s,
             setActiveLanguage: c,
           }),
-          u = r.createElement(X, {
+          u = r.createElement(q, {
             rgLanguages: o,
             mapValues: l,
             namePrefix: n,
@@ -2809,10 +2811,10 @@
           )
         );
       }
-      function X(e) {
+      function q(e) {
         const { rgLanguages: t, mapValues: n, namePrefix: a, rgPath: o } = e;
         return t.map((e) =>
-          r.createElement(q, {
+          r.createElement(X, {
             key: e,
             language: e,
             value: n.get(e),
@@ -2821,7 +2823,7 @@
           }),
         );
       }
-      const q = r.memo(function (e) {
+      const X = r.memo(function (e) {
         const { language: t, value: n, namePrefix: a, rgPath: o } = e,
           l = (0, W.gc)(n) || "",
           s = a + [...o, t].map((e) => `[${e}]`).join("");
@@ -3554,8 +3556,8 @@
         $e = n(94794),
         ze = n(75487),
         Ye = n(56545),
-        Xe = n(23809),
-        qe = n(14771);
+        qe = n(23809),
+        Xe = n(14771);
       const Qe = 7,
         Ze = 7;
       function je(e) {
@@ -3565,7 +3567,7 @@
           [i, u] = r.useState(void 0),
           [d, m] = r.useState(0),
           p = r.useCallback(() => m((e) => e + 1), []),
-          E = (0, Xe.KV)();
+          E = (0, qe.KV)();
         r.useEffect(() => {
           const e = new AbortController();
           return (
@@ -3588,7 +3590,7 @@
             return () => t.Unregister();
           }, [p]);
         const C = a || void 0 !== i,
-          g = l + Qe * qe.Kp.PerDay,
+          g = l + Qe * Xe.Kp.PerDay,
           h = !a && l && new Date(1e3 * g) > new Date();
         if (C || h) {
           const e = `${_.TS.PARTNER_BASE_URL}doc/marketing/wishlist`;
@@ -3635,7 +3637,7 @@
           } = e,
           [l, c] = r.useState(!1),
           [i, u] = r.useState(!1),
-          m = (0, Xe.KV)(),
+          m = (0, qe.KV)(),
           p = r.useCallback(async () => {
             u(!1), c(!0);
             try {
@@ -3756,7 +3758,7 @@
         const { parentAppId: t, timeStaged: n, noticeVisibleToDate: a } = e,
           o = (e) =>
             `${e.getFullYear()}-${String(e.getMonth() + 1).padStart(2, "0")}-${String(e.getDate()).padStart(2, "0")}`,
-          l = o(new Date(1e3 * (n - Ze * qe.Kp.PerDay))),
+          l = o(new Date(1e3 * (n - Ze * Xe.Kp.PerDay))),
           c = o(new Date()),
           i = new Intl.DateTimeFormat(navigator.language, {
             year: "numeric",
@@ -4798,8 +4800,8 @@
             );
       }
       var Yt = n(2897),
-        Xt = n(75233),
-        qt = n(51614);
+        qt = n(75233),
+        Xt = n(51614);
       var Qt = n(56330),
         Zt = n.n(Qt),
         jt = n(17720),
@@ -4958,8 +4960,8 @@
           [p, _] = (0, r.useState)(""),
           E = (0, Bt.vs)(),
           C = (function (e, t, n, r, a) {
-            const o = (0, Xt.jE)();
-            return (0, qt.n)({
+            const o = (0, qt.jE)();
+            return (0, Xt.n)({
               mutationFn: async (o) => {
                 a.fnSetLoading(!0);
                 const l = new FormData();
@@ -5915,8 +5917,8 @@
         $n = n(95695),
         zn = n.n($n),
         Yn = n(26408),
-        Xn = n(36500),
-        qn = n.n(Xn),
+        qn = n(36500),
+        Xn = n.n(qn),
         Qn = n(4544),
         Zn = n(44165),
         jn = n(78395),
@@ -6495,7 +6497,7 @@
           }, [a]);
         return r.createElement(
           "div",
-          { className: qn().EditorCtn },
+          { className: Xn().EditorCtn },
           r.createElement(Vn.yk, null),
           " ",
           r.createElement(_r, {
@@ -6532,7 +6534,7 @@
         } = e;
         return r.createElement(
           "div",
-          { className: (0, d.A)(qn().EditorCtn) },
+          { className: (0, d.A)(Xn().EditorCtn) },
           r.createElement(
             "h2",
             null,
@@ -6565,12 +6567,12 @@
             null,
             r.createElement(
               "span",
-              { className: qn().LangBox },
+              { className: Xn().LangBox },
               r.createElement(Vn.iN, null),
             ),
             r.createElement(
               "div",
-              { className: qn().MilestoneButton },
+              { className: Xn().MilestoneButton },
               r.createElement(
                 D.jn,
                 {
@@ -6669,7 +6671,7 @@
           [p] = (0, Rt.t7)(n && m?.GetParentAppID(), fr.Xh);
         if (!m) return null;
         const _ = Boolean(p),
-          E = r.createElement(qr, {
+          E = r.createElement(Xr, {
             ...e,
             info: t,
             bIsHovered: i,
@@ -6714,14 +6716,14 @@
             Boolean(a) && r.createElement("div", null, a),
           ),
           _ &&
-            r.createElement(Xr, {
+            r.createElement(qr, {
               strExtraParams: e.strExtraParams,
               parentStoreItem: p,
               childAppType: m.GetAppType(),
             }),
         );
       }
-      function Xr(e) {
+      function qr(e) {
         const { strExtraParams: t, parentStoreItem: n, childAppType: a } = e,
           o = (0, Wr.n9)(),
           l = (0, _.Qn)();
@@ -6754,7 +6756,7 @@
           ),
         );
       }
-      function qr(e) {
+      function Xr(e) {
         const {
             info: t,
             bHideStatusBanners: n,
@@ -8020,45 +8022,50 @@
       }
       var Ta = n(29602);
       function Na(e) {
-        const { rgSocialMedia: t, rgSupportedSocialMediaTypes: n } = e,
-          [a, o] = r.useState(t ? [...t] : []),
-          [l, c] = r.useState(a.length),
-          i = r.useMemo(
+        const {
+            rgSocialMedia: t,
+            rgSupportedSocialMediaTypes: n,
+            rgValidationData: a,
+          } = e,
+          [o, l] = r.useState(t ? [...t] : []),
+          [c, i] = r.useState(o.length),
+          u = r.useMemo(
             () =>
               n
                 .filter(
                   (e) =>
-                    -1 === a.findIndex((t) => t.type === e.type) ||
+                    -1 === o.findIndex((t) => t.type === e.type) ||
                     "qq" === e.type,
                 )
                 .map((e) => ({
                   label: (0, s.we)(`#StoreAdmin_SocialMedia_Type_${e.type}`),
                   data: e.type,
-                })),
-            [n, a],
+                }))
+                .sort((e, t) => (e.label < t.label ? -1 : 1)),
+            [n, o],
           ),
-          u = (e) => {
-            e.length > l && c(e.length), o(e);
+          d = (e) => {
+            e.length > c && i(e.length), l(e);
           };
         return r.createElement(
           "div",
           null,
           r.createElement(Ra, {
-            options: i,
+            options: u,
             onAddLink: (e) => {
-              let t = a.slice();
-              t.push({ type: e, link: "" }), u(t);
+              let t = o.slice();
+              t.push({ type: e, link: "" }), d(t);
             },
           }),
           r.createElement(jr.A, {
-            items: a,
+            items: o,
             onDelete: (e) => {
-              let t = a.slice();
-              t.splice(e, 1), u(t);
+              let t = o.slice();
+              t.splice(e, 1), d(t);
             },
             onMove: (e, t) => {
-              let n = a.slice();
-              (0, Jr.yY)(n, e, t), u(n);
+              let n = o.slice();
+              (0, Jr.yY)(n, e, t), d(n);
             },
             render: (e, t) =>
               r.createElement(Ia, {
@@ -8066,14 +8073,15 @@
                 item: e,
                 onUpdateLink: (e) =>
                   ((e, t) => {
-                    const n = a.map((n, r) =>
+                    const n = o.map((n, r) =>
                       r === e ? { ...n, link: t } : n,
                     );
-                    u(n);
+                    d(n);
                   })(t, e),
+                validationData: a[e.type],
               }),
           }),
-          r.createElement(La, { items: a, maxSeen: l }),
+          r.createElement(La, { items: o, maxSeen: c }),
         );
       }
       function Ra(e) {
@@ -8093,22 +8101,57 @@
         );
       }
       function Ia(e) {
-        const { item: t, onUpdateLink: n } = e;
-        return r.createElement(
-          "div",
-          { className: Ta.SocialMediaRow },
+        const { item: t, onUpdateLink: n, validationData: a } = e;
+        let o, l;
+        o =
+          "qq" === t.type
+            ? (0, s.we)("#StoreAdmin_SocialMedia_EnterNumber")
+            : "wechat" === t.type
+              ? (0, s.we)("#StoreAdmin_SocialMedia_EnterName")
+              : (0, s.we)("#StoreAdmin_SocialMedia_EnterLink");
+        let c = !0;
+        return (
+          a.prefix
+            ? ((l = (0, s.we)(
+                "#StoreAdmin_SocialMedia_ValidationPrefix",
+                a.prefix[0],
+              )),
+              t.link &&
+                ((c = !1),
+                a.prefix.forEach((e) => {
+                  t.link.startsWith(e) && (c = !0);
+                })))
+            : a.number
+              ? ((l = (0, s.we)("#StoreAdmin_SocialMedia_ValidationNumber")),
+                t.link && (c = /^\d+$/.test(t.link)))
+              : a.text
+                ? (l = (0, s.we)("#StoreAdmin_SocialMedia_ValidationText"))
+                : a.regex &&
+                  "tumblr" === t.type &&
+                  (l = (0, s.we)("#StoreAdmin_SocialMedia_ValidationTumblr")),
           r.createElement(
             "div",
-            { className: Ta.SocialMediaType },
-            (0, s.we)(`#StoreAdmin_SocialMedia_Type_${t.type}`),
-          ),
-          r.createElement(Dr.BA, {
-            className: Ta.SocialMediaLink,
-            type: "text",
-            value: t.link,
-            placeholder: (0, s.we)("#StoreAdmin_SocialMedia_EnterLink"),
-            onChange: (e) => n(e.target.value),
-          }),
+            { className: Ta.SocialMediaRow },
+            r.createElement(
+              "div",
+              { className: Ta.SocialMediaType },
+              (0, s.we)(`#StoreAdmin_SocialMedia_Type_${t.type}`),
+            ),
+            r.createElement(Dr.BA, {
+              className: Ta.SocialMediaLink,
+              type: "text",
+              value: t.link,
+              placeholder: o,
+              onChange: (e) => n(e.target.value),
+            }),
+            l &&
+              r.createElement(
+                p.he,
+                { className: Ta.SocialMediaTooltip, toolTipContent: l },
+                "(?)",
+              ),
+            !c && r.createElement("div", { className: Ta.ValidationError }, l),
+          )
         );
       }
       function La(e) {
@@ -8466,10 +8509,10 @@
             c = r.createElement(Ya, { item: n, setItem: a });
             break;
           case Oa.k_EPurchaseOrderDisplayType_Header:
-            c = r.createElement(Xa, { index: t, item: n, setItem: a });
+            c = r.createElement(qa, { index: t, item: n, setItem: a });
             break;
           case Oa.k_EPurchaseOrderDisplayType_Dropdown:
-            c = r.createElement(qa, { item: n, setItem: a });
+            c = r.createElement(Xa, { item: n, setItem: a });
         }
         return r.createElement(
           "div",
@@ -8548,7 +8591,7 @@
           }),
         );
       }
-      function Xa(e) {
+      function qa(e) {
         const t = (0, r.useContext)(Ka),
           { index: n, item: a, setItem: o } = e,
           [l, s] = (0, r.useState)("english"),
@@ -8603,7 +8646,7 @@
           ),
         );
       }
-      function qa(e) {
+      function Xa(e) {
         const t = (0, r.useContext)(Ka),
           { item: n, setItem: a } = e,
           [o, l] = (0, r.useState)("english"),
