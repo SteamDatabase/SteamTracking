@@ -2606,6 +2606,7 @@
     "Login_LoginRestrictionFailed": "Your account is not allowed to sign in from your current IP address.",
     "Login_LoggedInElsewhere": "Your account is in use elsewhere, so you need to sign in again.",
     "Login_CachedCredentialInvalid": "Your cached credentials are invalid. Enter your password to sign in.",
+    "Login_OfflineAppCacheInvalid": "Failed to load library cache, please sign in again.",
     "Login_WelcomeDevelopers_Title": "Welcome to the Callisto Developer Program",
     "Login_Welcome_Continue": "Press %1$s to get started",
     "Login_Welcome_ChooseYourNetwork": "Choose your network",

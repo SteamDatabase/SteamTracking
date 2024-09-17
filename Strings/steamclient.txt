@@ -102,6 +102,7 @@
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
+ !"#$%&'()*+,-./0123P
  $8O[lv
  %02x
  %12.06fs %s%s\n
@@ -4548,6 +4549,7 @@ $tICAPIJobListHashLoadSave
 *20SteamClientJobLambdaIZN20CRemoteClientManager28ProcessStreamClientConnectedEj18RemotePlayPlayer_t22ESteamDeviceFormFactorEUlvE_E
 *23CInternalLambdaWorkItemIZ31YieldingResolveHostNameWithPortPKcbEUlvE0_vE
 *23CInternalLambdaWorkItemIZ31YldThreadedRunFunctorAndReleasePKcP8CFunctorP15CWorkThreadPoolEUlvE_vE
+*23CInternalLambdaWorkItemIZN12CCMInterface29YldResolveStunAndRelayAddressEvEUlvE_vE
 *23CInternalLambdaWorkItemIZN14CSystemManager12YldWriteFileERK32CSystemManager_WriteFile_RequestR33CSystemManager_WriteFile_ResponseEUlvE_bE
 *23CInternalLambdaWorkItemIZN14CSystemManager13SuspendSystemEvEUlvE_vE
 *23CInternalLambdaWorkItemIZN15CDepotBuildBase24BYieldingWriteDepotToLCSEvEUlvE_vE
@@ -10785,6 +10787,7 @@ $tICAPIJobListHashLoadSave
 21CPurchaseLineItemInfo
 21CSNetSocketMsgHandler
 21CSTimeCumulativeTimer
+21CScheduledFunctionJobI12CCMInterfaceE
 21CScheduledFunctionJobI13CAppInfoCacheE
 21CScheduledFunctionMgr
 21CSimpleHapticWorkItem
@@ -11352,6 +11355,7 @@ $tICAPIJobListHashLoadSave
 25CScheduleCallbackWorkItemI24ControllerPacketLossUI_tE
 25CScheduleCallbackWorkItemI28ControllerWirelessPresence_tE
 25CScheduleCallbackWorkItemI30ControllerDongleUpdateStatus_tE
+25CScheduledFunctionUserJobI12CCMInterface9CBaseUserE
 25CSetStreamingClientConfig
 25CSimpleParallelWorkThread
 25CSteamControllerClientJob
@@ -14596,6 +14600,7 @@ $tICAPIJobListHashLoadSave
 7CJobMgr
 7CLogMsg
 7CSocket
+7CTJob_0I12CCMInterfaceE
 7CTJob_0I13CAppInfoCacheE
 7CUtlMapI10CUtlStringN17CHTTPRequestCache19CachedFileMapData_tEi8CDefLessE
 7CUtlMapI10CUtlStringP10CUtlVectorIN16CCookieContainer11CCookieInfoE10CUtlMemoryIS3_EEi22CDefCaselessStringLessE
@@ -14960,7 +14965,7 @@ $tICAPIJobListHashLoadSave
 9CFunctor4IPFvPKcPjS2_PbEPcS2_S2_S3_E
 9CFunctor4IPFvPvjP10CUtlBufferP7EResultES0_iS2_S4_E
 9CFunctor5IPFv8CSteamIDP15DownloadedUGC_tPcjPbES0_S2_S3_jS4_E
-9CFunctor6IPFvP12CCMInterfaceP11CHTTPClientP21WebSocketCMBestPing_tPKcffES1_S3_S5_S7_ffE
+9CFunctor7IPFvP12CCMInterfaceP11CHTTPClientP21WebSocketCMBestPing_tPKcS7_ffES1_S3_S5_S7_S7_ffE
 9CMsgClose
 9CMsgKeyUp
 9CMsgMulti
@@ -17372,6 +17377,7 @@ CCMInterface::YieldingConnect -- failed to parse KV response from ISteamDirector
 CCMInterface::YieldingConnect -- got %d CMs and %d WebSocket CMS from ISteamDirectory/GetCMList.
 CCMInterface::YieldingConnect -- no CMs cached locally, calling ISteamDirectory/GetCMList web api for launcher type '%s'. . .
 CCMInterface::YieldingConnect -- web API call failed (status = %d)
+CCMInterface::YldResolveStunAndRelayAddress
 CCMRemoteClient_ClientMessage
 CCMRemoteClient_ServerMessage
 CCRemoteClientManager::DisconnectClient
@@ -28396,6 +28402,7 @@ Offensive UGC
 Officer
 Offline
 Offline - Tracks to Sync: %d Playlists: %d - Time Left: %d\n
+Offline App Cache invalid
 Offline.GetOfflineLogonTicket#1
 Offline/VCache
 Offline\EncryptedSignature
@@ -35120,6 +35127,7 @@ YldPostStateUpdate
 YldRebuildState
 YldRequestBadgeLevels
 YldRequestFakeIP called again.  Not allowed!
+YldResolveStunAndRelayAddress
 YldSetCurrentMode
 YldSetMode
 YldStartRequestProcessorIfNeeded
@@ -43874,6 +43882,7 @@ i\fD8
 i\n\vPlayHistory
 i]Wb
 ia5org
+iad1
 iana
 ice_enable_var
 ice_packet_queue
@@ -48974,6 +48983,7 @@ m_strConfigFile
 m_strContentType
 m_strConvertedDefaultValue
 m_strCorruptChunksFolder
+m_strDataCenterActiveWebSocket
 m_strDatacenter
 m_strDepotCacheFolder
 m_strDescription
@@ -51188,6 +51198,7 @@ p.ppBasis
 p.prime
 p.second
 p.tpBasis
+p2p-%s.discovery.steamserver.net
 p2p-friends-voice
 p2p-steam-netapi
 p2p_connecttimeout
@@ -54657,7 +54668,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Sep 13 2024 05:22:50
+steam Sep 16 2024 23:55:51
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

@@ -54,7 +54,6 @@
  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~
  !"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
- !"#$%&'()*+,-./0123X
  "$&(*,.02468:<>@BDFHJLNPRTVXZ\^`bdfhjlnprtvxz|~
  $(,048<@DHLPTX\`dhlptx|
  $8O[lv
@@ -13207,7 +13206,7 @@ CDesktopCapturePipeWire: Unknown pixel format %d\n
 CDesktopCapturePipeWire: Video frame size does not match provided data!\n
 CDesktopCapturePipeWire: Video stream full!\n
 CDesktopCapturePipeWire: Video stream full.. couldn't get buffer!\n
-CDesktopCapturePipeWire: setting gamescope focus appid: %s\n
+CDesktopCapturePipeWire: setting gamescope focus appid: %u\n
 CDesktopCapturePipeWire: setting stream node path: gamescope\n
 CDesktopCapturePipeWire: unknown video format 0x%x\n
 CDesktopCapturePipeWire: updating capture appid: %s\n
@@ -18658,6 +18657,7 @@ Ignoring bad connect request.  (SendRejectionSignal)\n
 Ignoring extension "
 Ignoring failure response: retrying: %d - %d
 Ignoring invalid time value
+Ignoring post-logon callback due to current state
 Ignoring received invalid HTTP header field: frame type: %u, stream: %d, name: [%.*s], value: [%.*s]
 Ignoring request to write a PLTE chunk in grayscale PNG
 Ignoring success response due to current state
@@ -21412,6 +21412,7 @@ Offensive Profile
 Offensive UGC
 Officer
 Offline
+Offline App Cache invalid
 Offline Mode: %s\n
 Offline_Ticket
 Ogg Media File (*.ogv)
@@ -22534,6 +22535,7 @@ Received packet with expected sequence %llu, dropped, failed HMAC calculation.\n
 Received packet with expected sequence %llu, dropped, failed HMAC comparison.\n
 Received packet with expected sequence %llu, dropped, failed decryption.\n
 Received packet with expected sequence %llu, dropped, too short.\n
+Received post-logon callback
 ReceivedNewGame
 ReceivedP2PCustomSignal failed
 ReceivedP2PCustomSignal returned false!  Bad signal?\n
@@ -23625,7 +23627,7 @@ Sends the user to the User Chooser even if they have 0 or 1 accounts
 Sent message: %s - %u bytes\n
 Sent ping with MTU %d, increment = %d\n
 SentenceModeMenu
-Sep 13 2024 05:23:00
+Sep 16 2024 23:55:59
 September
 Serbian
 Serial
@@ -25157,6 +25159,7 @@ TimeDetected
 TimeMediaDetected
 TimeSubmitted
 Timed Trial
+Timed out waiting for library ready: %fs - %s
 Timed out waiting for mutex in GetInternal()\n
 Timed out waiting for mutex in PutInternal()\n
 Timed out waiting for network
