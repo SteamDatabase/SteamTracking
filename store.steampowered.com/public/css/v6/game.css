@@ -438,11 +438,13 @@ img.game_header_image_full {
 }
 
 .dlc_dependency_items_ctn .store_capsule {
-	width: 160px;
+	width: 100%;
 }
 
 .dlc_dependency_item {
 	position: relative;
+	width: 100%;
+	max-width: 160px;
 }
 
 .dlc_dependency_position {
@@ -1066,7 +1068,8 @@ background: -webkit-linear-gradient( 30deg, rgba(117, 176, 34, 0.7) 5%,rgba(88, 
 
 .game_area_purchase_game .game_purchase_action,
 .game_area_comingsoon .game_purchase_action,
-.game_area_offsite_purchase .game_purchase_action {
+.game_area_offsite_purchase .game_purchase_action,
+.game_area_purchase_game #dlc_purchase_action {
 	position: absolute;
 
 	right: 16px;
@@ -1576,6 +1579,8 @@ body.v6 .game_description_column h2.gradientbg {
     font-size: 14px;
 	margin-top: 30px;
 	overflow: hidden;
+	width: 616px;
+	max-width: 100%;
 			font-family: "Motiva Sans", Sans-serif;
 		font-weight: normal; /* normal */
 
@@ -1591,8 +1596,18 @@ body.v6 .game_description_column h2.gradientbg {
 
 		}
 
+.game_area_description p.bb_paragraph {
+	min-height: .15em;
+	line-height: 1.5em;
+	margin: 0.5em 0;
+}
+
 .game_area_description h2 {
 	margin-bottom: 6px;
+}
+
+.game_area_description img.bb_img {
+	max-width: 100%;
 }
 
 body.v6 .game_area_description h2.bb_tag {
@@ -1768,11 +1783,6 @@ body.v6 .game_area_description h2.bb_tag strong {
     background: -ms-linear-gradient(-60deg,  #67c1f5 0%,#417a9b 100%); /* IE10+ */
     background: linear-gradient(135deg,  #67c1f5 0%,#417a9b 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#67c1f5', endColorstr='#417a9b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
-
-#dlc_purchase_action {
-	float: right;
-	margin-top: 4px;
 }
 
 #game_area_metascore {
@@ -2278,10 +2288,6 @@ a.friend_block_holder:hover {
 
 	html.responsive #responsive_apppage_details_right_ctn {
 		overflow: hidden;
-	}
-
-	html.responsive .game_description_column img {
-		max-width: 100%;
 	}
 
 	html.responsive img.package_header {
@@ -6195,6 +6201,14 @@ body.v6 .page_content.notes {
 		width: 16px;
 		padding-left: 5px;
 		padding-right: 10px;
+	}
+	html.responsive .dlc_highlight .capsule_container {
+		display: flex;
+		padding-right: 10px;
+	}
+	html.responsive .dlc_highlight .capsule {
+		max-width: 120px;
+		object-fit: scale-down;
 	}
 }
 

@@ -2159,7 +2159,7 @@
           m.Z,
           {
             className: (0, T.A)(P().AppCapsuleCtn, "AppCapsuleCtn"),
-            ...(0, f.S)(n, r, o),
+            ...(0, f.S)(n, r, o, !1),
           },
           i.createElement(
             U.Qf,

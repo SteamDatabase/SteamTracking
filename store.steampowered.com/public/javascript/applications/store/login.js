@@ -12,14 +12,12 @@
       var n = r(67692),
         a = r(90626),
         o = r(97436),
-        s = r(72034),
-        i = r(78327),
-        l = r(28240);
+        l = r(78327),
+        s = r(28240),
+        i = r(23809);
       function c(e) {
-        const { redirectUrl: t = i.TS.STORE_BASE_URL } = e,
-          [r] = (0, a.useState)(
-            new s.D(i.TS.WEBAPI_BASE_URL).GetAnonymousServiceTransport(),
-          ),
+        const { redirectUrl: t = l.TS.STORE_BASE_URL } = e,
+          r = (0, i.rW)(),
           [c, u] = (0, a.useState)(!1),
           m = e.guest;
         return a.createElement(
@@ -34,7 +32,7 @@
                   transport: r,
                   platform: 2,
                   onComplete: (e) => {
-                    e == l.wI.k_PrimaryDomainFail
+                    e == s.wI.k_PrimaryDomainFail
                       ? u(!0)
                       : window.location.assign(t);
                   },

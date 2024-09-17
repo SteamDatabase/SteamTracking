@@ -2753,7 +2753,7 @@
         Te = {
           CookieSettings: () => "/cookiepreferences",
           NotificationSettings: () => "/notificationsettings",
-          ...{ FamilyManagement: () => "/familymanagement" },
+          FamilyManagement: () => "/familymanagement",
           AuthorizedDevices: () => "/authorizeddevices",
           PlaytestInvites: () => "/playtestinvites",
         },

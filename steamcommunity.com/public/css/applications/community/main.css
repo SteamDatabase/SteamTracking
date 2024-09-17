@@ -4400,18 +4400,24 @@ html.tablet ._20f2sKS2M7PlPSnPCinT26 {
   align-items: center;
   gap: 2px 6px;
 }
-.social_links .EventEditorTextTitle {
-  padding-top: 10px;
-  margin-right: 4px;
+._19gZ072i_CWfdHE2Fgliuw a {
+  cursor: pointer;
 }
-._3rC0G--40zEN3SsHi7QLt0 {
+._19gZ072i_CWfdHE2Fgliuw a:hover ._3rC0G--40zEN3SsHi7QLt0 {
+  opacity: 1;
+}
+._19gZ072i_CWfdHE2Fgliuw a .tool-tip-source {
+  cursor: pointer;
+}
+._19gZ072i_CWfdHE2Fgliuw a ._3rC0G--40zEN3SsHi7QLt0 {
   width: 24px;
   height: auto;
   opacity: 0.6;
   fill: #fff;
 }
-._3rC0G--40zEN3SsHi7QLt0:hover {
-  opacity: 1;
+.social_links .EventEditorTextTitle {
+  padding-top: 10px;
+  margin-right: 4px;
 }
 .qGf3RTqBFpZQof8ldGRln {
   display: flex;

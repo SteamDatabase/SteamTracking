@@ -298,17 +298,18 @@
               this.m_clipsGroupByGame.set(e.game_id, []),
             this.m_clipsGroupByGame.get(e.game_id).push(e);
         }
-        async SaveClip(e, t, i, r, s, o) {
-          const n = await a.xM.SaveClip({
+        async SaveClip(e, t, i, r, s, o, n) {
+          const l = await a.xM.SaveClip({
             game_id: e,
             start: r,
             end: s,
             name: i,
             src_clip_id: t,
             temporary: o,
+            force_thumbnail: n,
           });
-          if (1 == n.GetEResult()) {
-            const e = n.Body().summary().toObject();
+          if (1 == l.GetEResult()) {
+            const e = l.Body().summary().toObject();
             return (
               this.InternalAddClipSummary(e),
               (0, d.tG)("Saved clip", e),
@@ -316,7 +317,7 @@
               { clipSummary: e, result: 1 }
             );
           }
-          return (0, d.tH)("Failed to save clip"), { result: n.GetEResult() };
+          return (0, d.tH)("Failed to save clip"), { result: l.GetEResult() };
         }
         async DeleteClip(e) {
           const t = await a.xM.DeleteClip({ clip_id: e });

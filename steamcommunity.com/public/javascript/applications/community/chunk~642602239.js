@@ -2175,17 +2175,18 @@
     },
     87540: (e, t, n) => {
       "use strict";
-      n.d(t, { PV: () => m, gL: () => d, pH: () => c });
+      n.d(t, { PV: () => d, gL: () => u, pH: () => m });
       var r = n(90626),
         i = n(65739),
         a = n(31698),
         o = n(61336),
         s = n(42780),
-        l = n(6866);
-      class c extends s.K0 {
+        l = n(6866),
+        c = n(26205);
+      class m extends s.K0 {
         constructor(e, t, n, r) {
           super(e),
-            (this.m_LinkFilter = o.O9),
+            (this.m_LinkFilter = c.O),
             (this.m_parentNode = void 0),
             (this.m_parentNode = t),
             (this.m_mapHostToComponent = n),
@@ -2225,7 +2226,7 @@
           n.length > 0 && super.AppendText(n, t);
         }
       }
-      class m extends s.K0 {
+      class d extends s.K0 {
         constructor() {
           super(...arguments),
             (this.m_EmoteRegex = new RegExp("[ː:]([a-zA-Z0-9_]+)[ː:]"));
@@ -2254,7 +2255,7 @@
           n.length > 0 && super.AppendText(n, t);
         }
       }
-      class d extends s.K0 {
+      class u extends s.K0 {
         constructor(e, t) {
           super(e), (this.m_parentNode = void 0), (this.m_parentNode = t);
         }
@@ -3889,9 +3890,9 @@
       }));
       function E(e) {
         const t = (0, u.Qn)();
-        return e.screenIsWide || t
-          ? i.createElement(S, { ...e }, e.children)
-          : i.createElement(h, { ...e }, e.children);
+        return (!e.screenIsWide && !t) || e.bForceSimpleCarousel
+          ? i.createElement(h, { ...e }, e.children)
+          : i.createElement(S, { ...e }, e.children);
       }
       function S(e) {
         const t = (0, u.Qn)(),

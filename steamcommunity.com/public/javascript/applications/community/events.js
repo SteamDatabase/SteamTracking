@@ -3,7 +3,7 @@
 (self.webpackChunkcommunity = self.webpackChunkcommunity || []).push([
   [4268],
   {
-    12037: (e) => {
+    34418: (e) => {
       e.exports = {
         "duration-app-launch": "800ms",
         Container: "_2Jd3MGaOu0C9Ydswf8Q4Tn",
@@ -137,7 +137,7 @@
         k = n(55563),
         B = n(35685),
         A = n(12155),
-        P = n(12037);
+        P = n(34418);
       class y extends o.Component {
         constructor(e) {
           super(e),

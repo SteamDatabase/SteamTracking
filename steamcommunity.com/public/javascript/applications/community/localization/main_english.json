@@ -1686,6 +1686,8 @@
     "Sale_Section_DisableBackground_ttip": "Clears all current background settings and removes any padding around the sale section. This is often used for text or image sections where the padding is not wanted.",
     "Sale_Section_UseDemoLayout": "Show demo information",
     "Sale_Section_UseDemoLayout_tooltip": "Display the option to install a demo if one is linked to the app(s) listed in this section. The button may not properly show on all display formats.",
+    "Sale_Section_PreferDemoStorePage": "Prefer demo standalone store pages",
+    "Sale_Section_PreferDemoStorePage_tooltip": "When enabled, when a game has a demo with a standalone store page, clicking the link will take you to that page instead of the base game's.",
     "Sale_Section_UseHasParentLayout": "Show parent app",
     "Sale_Section_UseHasParentLayout_tooltip": "Applicable only when all of the apps in this section are either DLCs or Sound Tracks. This renders the base game underneath the capsule of the DLC or Soundtrack.",
     "Sale_Section_EnableSearch": "Enable Search",

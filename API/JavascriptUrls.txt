@@ -1049,6 +1049,7 @@ ${PARTNER_BASE_URL}doc/store/release_dates
 ${PARTNER_BASE_URL}doc/store/seasonpass
 ${PARTNER_BASE_URL}doc/store/seasonpass#release
 ${PARTNER_BASE_URL}financial/ajaxgetpartnersummary
+${PARTNER_BASE_URL}gfxproxy/externalgfx/
 ${PARTNER_BASE_URL}gfxproxy/gfx/apps/${}/${}
 ${PARTNER_BASE_URL}gfxproxy/trailergfx?appid=${}&itype=apps
 ${PARTNER_BASE_URL}giveaways/control/${}

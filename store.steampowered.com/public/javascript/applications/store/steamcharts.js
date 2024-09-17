@@ -567,7 +567,7 @@
         s = a(55963),
         l = a(5970),
         o = a(60014),
-        i = a(88350);
+        i = a(3578);
       function c(e) {
         const {
             item: t,
@@ -3546,7 +3546,7 @@
           a.e(7233),
           a.e(3645),
           a.e(6855),
-        ]).then(a.bind(a, 98821)),
+        ]).then(a.bind(a, 57563)),
       );
       function zt(e) {
         const { salePagename: t } = e;

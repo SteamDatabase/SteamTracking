@@ -22373,8 +22373,9 @@
           ),
         );
       };
-      class ul extends $e {
-        m_LinkFilter = Ri.O9;
+      var ul = r(6205);
+      class dl extends $e {
+        m_LinkFilter = ul.O;
         m_parentNode = void 0;
         m_mapHostToComponent;
         m_globalStoreLink;
@@ -22418,7 +22419,7 @@
           r.length > 0 && super.AppendText(r, t);
         }
       }
-      class dl extends $e {
+      class pl extends $e {
         m_parentNode = void 0;
         constructor(e, t) {
           super(e), (this.m_parentNode = t);
@@ -22431,9 +22432,9 @@
             super.AppendText(r, t);
         }
       }
-      var pl = r(6516),
-        _l = r.n(pl);
-      const hl = new Map([
+      var _l = r(6516),
+        hl = r.n(_l);
+      const gl = new Map([
           ...Array.from(oo.entries()),
           ...Array.from(lo.entries()),
           [
@@ -22448,10 +22449,10 @@
                   (t = t.substring(1));
                 const r = co(e.args, "style"),
                   n = (0, ze.A)(
-                    _l().Section,
-                    "note" == r && _l().Note,
-                    "important" == r && _l().Important,
-                    "warning" == r && _l().Warning,
+                    hl().Section,
+                    "note" == r && hl().Note,
+                    "important" == r && hl().Important,
+                    "warning" == r && hl().Warning,
                   );
                 return i.createElement(
                   "div",
@@ -22496,16 +22497,16 @@
                   ? ((r = n),
                     t
                       ? i.createElement(Ve, {
-                          className: _l().FAQImage,
+                          className: hl().FAQImage,
                           src: r,
                         })
                       : ((r = r.replace("http://", "https://")),
                         i.createElement("img", {
-                          className: _l().FAQImage,
+                          className: hl().FAQImage,
                           src: r,
                         })))
                   : i.createElement(Qe, {
-                      className: _l().FAQImage,
+                      className: hl().FAQImage,
                       rgSources: n,
                     });
               },
@@ -22527,12 +22528,12 @@
             },
           ],
         ]),
-        gl = (e) => {
+        fl = (e) => {
           const { text: t, bShowErrorInfo: r } = e,
             n = i.useCallback(
               (e) =>
-                new dl(
-                  new ul(
+                new pl(
+                  new dl(
                     new Xe(new Ze(), 0),
                     e,
                     [{ urlRegExp: /youtu.be|youtube.com/i, fnBBComponent: ur }],
@@ -22542,15 +22543,15 @@
                 ),
               [],
             ),
-            s = i.useRef(new rt(hl, n, a.TS.LANGUAGE));
+            s = i.useRef(new rt(gl, n, a.TS.LANGUAGE));
           return i.createElement(
             "div",
-            { className: _l().FAQContainer },
+            { className: hl().FAQContainer },
             s.current.ParseBBCode(t, { showErrorInfo: r }),
           );
         };
-      var fl = r(8735);
-      const bl = (e) => {
+      var bl = r(8735);
+      const yl = (e) => {
           const { title: t, content: r, bIsPreview: n, elSideBars: s } = e,
             o = (0, d.zy)();
           return (
@@ -22563,48 +22564,48 @@
             }, [o]),
             i.createElement(
               "div",
-              { className: (0, ze.A)(fl.FAQViewPage, a.TS.LANGUAGE) },
+              { className: (0, ze.A)(bl.FAQViewPage, a.TS.LANGUAGE) },
               i.createElement(
                 "a",
-                { className: fl.SupportTitle, href: `${a.TS.HELP_BASE_URL}` },
+                { className: bl.SupportTitle, href: `${a.TS.HELP_BASE_URL}` },
                 (0, Ie.we)("#FAQViewer_SteamSupport"),
               ),
               i.createElement(
                 "div",
-                { className: fl.Columns },
+                { className: bl.Columns },
                 i.createElement(
                   "div",
-                  { className: (0, ze.A)(fl.LeftCol) },
-                  i.createElement("div", { className: fl.TopColorBar }),
+                  { className: (0, ze.A)(bl.LeftCol) },
+                  i.createElement("div", { className: bl.TopColorBar }),
                   i.createElement(
                     "div",
-                    { className: fl.FAQTopicCtn },
-                    i.createElement("div", { className: fl.FAQTitle }, t),
+                    { className: bl.FAQTopicCtn },
+                    i.createElement("div", { className: bl.FAQTitle }, t),
                     i.createElement(
                       "div",
-                      { className: fl.FAQContent },
-                      i.createElement(gl, { text: r, bShowErrorInfo: n }),
+                      { className: bl.FAQContent },
+                      i.createElement(fl, { text: r, bShowErrorInfo: n }),
                     ),
                   ),
                 ),
                 i.createElement(
                   "div",
-                  { className: fl.RightCol },
-                  i.createElement("div", { className: fl.SectionCtn }, s),
+                  { className: bl.RightCol },
+                  i.createElement("div", { className: bl.SectionCtn }, s),
                 ),
               ),
             )
           );
         },
-        yl = (e) =>
-          i.createElement("div", { className: fl.FAQViewPage }, e.children);
-      var Bl = r(8632),
-        wl = r.n(Bl),
-        Sl = r(9376),
-        vl = r(7735),
-        Ml = r(3809);
-      const Cl = "nicknames";
-      const Rl = new (wl())(
+        Bl = (e) =>
+          i.createElement("div", { className: bl.FAQViewPage }, e.children);
+      var wl = r(8632),
+        Sl = r.n(wl),
+        vl = r(9376),
+        Ml = r(7735),
+        Cl = r(3809);
+      const Rl = "nicknames";
+      const Il = new (Sl())(
           (e) =>
             (async function (e) {
               if (!e || 0 == e.length) return [];
@@ -22649,26 +22650,26 @@
             })(e),
           { cache: !1 },
         ),
-        Il = "avatarandpersonas";
-      var El = r(5736);
-      function Tl(e) {
+        El = "avatarandpersonas";
+      var Tl = r(5736);
+      function zl(e) {
         const { accountID: t, bHideWhenNotAvailable: r, bHideName: n } = e,
           [s] = (function (e) {
-            const { data: t, isLoading: r } = (0, Sl.I)({
-              queryKey: [Il, e],
-              queryFn: () => Rl.load(e),
+            const { data: t, isLoading: r } = (0, vl.I)({
+              queryKey: [El, e],
+              queryFn: () => Il.load(e),
             });
             return [t, r];
           })(t),
           o = (function (e) {
-            const t = (0, Ml.KV)(),
-              { data: r, isLoading: i } = (0, Sl.I)({
-                queryKey: [Cl],
+            const t = (0, Cl.KV)(),
+              { data: r, isLoading: i } = (0, vl.I)({
+                queryKey: [Rl],
                 queryFn: async () => {
                   const e = new Map();
                   if (a.iA.logged_in) {
-                    const r = b.w.Init(vl.dN),
-                      i = (await vl.xt.GetNicknameList(t, r)).Body().toObject();
+                    const r = b.w.Init(Ml.dN),
+                      i = (await Ml.xt.GetNicknameList(t, r)).Body().toObject();
                     i?.nicknames &&
                       i.nicknames.length > 0 &&
                       i.nicknames.forEach((t) => {
@@ -22694,7 +22695,7 @@
                 i.Fragment,
                 null,
                 i.createElement("img", {
-                  className: El.SmallAvatar,
+                  className: Tl.SmallAvatar,
                   src: s.avatar_url,
                   "data-miniprofile": "s" + l.ConvertTo64BitString(),
                 }),
@@ -22707,31 +22708,31 @@
               ),
         );
       }
-      var zl,
-        Fl = r(1675);
+      var Fl,
+        Al = r(1675);
       !(function (e) {
         (e.k_eView = "view"),
           (e.k_eCommunityView = "communityview"),
           (e.k_eCommunityEdit = "edit"),
           (e.k_eCommunityDashboard = "dashboard"),
           (e.k_eCommunityPreview = "preview");
-      })(zl || (zl = {}));
-      const Al = (e) => {
+      })(Fl || (Fl = {}));
+      const Dl = (e) => {
         const { route: t, faqid: r } = e,
           n = (function (e, t) {
             let r = "/faqs/" + a.UF.VANITY_ID + "/";
             switch (e) {
-              case zl.k_eView:
-              case zl.k_eCommunityView:
+              case Fl.k_eView:
+              case Fl.k_eCommunityView:
                 r += "view/" + ue(t);
                 break;
-              case zl.k_eCommunityEdit:
+              case Fl.k_eCommunityEdit:
                 r += "edit/" + ue(t);
                 break;
-              case zl.k_eCommunityDashboard:
+              case Fl.k_eCommunityDashboard:
                 r += "dashboard";
                 break;
-              case zl.k_eCommunityPreview:
+              case Fl.k_eCommunityPreview:
                 r += "preview/" + ue(t);
             }
             return r;
@@ -22753,9 +22754,9 @@
                 e.children,
               );
       };
-      var Dl = r(572),
-        Ol = r(6891);
-      const kl = (e) => {
+      var Ol = r(572),
+        kl = r(6891);
+      const Ul = (e) => {
           const { faqContent: t } = e,
             [r, n] = (function (e, t, r) {
               const [n, a] = i.useState(null),
@@ -22775,19 +22776,19 @@
           return ce.Get().BHasFAQEdit()
             ? i.createElement(
                 "div",
-                { className: (0, ze.A)(Ol.Section, Ui.ValveOnlyBackground) },
+                { className: (0, ze.A)(kl.Section, Ui.ValveOnlyBackground) },
                 i.createElement(
                   "div",
-                  { className: Ol.TopicHeader },
+                  { className: kl.TopicHeader },
                   (0, Ie.we)("#FAQViewer_AdminLinks"),
                 ),
                 i.createElement(
                   "div",
-                  { className: Dl.InfoRow },
+                  { className: Ol.InfoRow },
                   (0, Ie.PP)(
                     "#FAQViewer_Admin_LastUpdate",
                     r?.author_account_id
-                      ? i.createElement(Tl, {
+                      ? i.createElement(zl, {
                           accountID: Number.parseInt(r.author_account_id),
                         })
                       : (0, Ie.we)("#FAQViewer_UnknownUser"),
@@ -22796,16 +22797,16 @@
                       null,
                       (0, Ie.TW)(t.timestamp) +
                         "@" +
-                        (0, Fl.KC)(t.timestamp, { bForce24HourClock: !1 }),
+                        (0, Al.KC)(t.timestamp, { bForce24HourClock: !1 }),
                     ),
                   ),
                 ),
-                i.createElement(Ul, { faqContent: t }),
+                i.createElement(Pl, { faqContent: t }),
                 i.createElement(
-                  Al,
+                  Dl,
                   {
                     faqid: t.faq_id,
-                    route: zl.k_eCommunityEdit,
+                    route: Fl.k_eCommunityEdit,
                     bForceAnchor: !0,
                   },
                   (0, Ie.we)("#FAQViewer_GotoEditor"),
@@ -22813,7 +22814,7 @@
               )
             : null;
         },
-        Ul = (e) => {
+        Pl = (e) => {
           const { faqContent: t } = e,
             [r, n] = (function (e) {
               const [t, r] = i.useState(ce.Get().GetFAQDraftContent(e)),
@@ -22837,10 +22838,10 @@
           const a = r.GetLastSavedDraftVersion(t.language);
           return i.createElement(
             "div",
-            { className: Dl.InfoRow },
+            { className: Ol.InfoRow },
             (0, Ie.PP)(
               "#FAQViewer_DraftNewer",
-              i.createElement(Tl, {
+              i.createElement(zl, {
                 accountID: Number.parseInt(a.author_account_id),
               }),
               i.createElement(
@@ -22848,29 +22849,29 @@
                 null,
                 (0, Ie.TW)(a.timestamp) +
                   "@" +
-                  (0, Fl.KC)(a.timestamp, { bForce24HourClock: !1 }),
+                  (0, Al.KC)(a.timestamp, { bForce24HourClock: !1 }),
               ),
             ),
           );
         },
-        Pl = (e) =>
+        Ll = (e) =>
           i.createElement(
             i.Fragment,
             null,
             i.createElement(
               "div",
-              { className: (0, ze.A)(Ol.Section, Ol.NeedHelp) },
+              { className: (0, ze.A)(kl.Section, kl.NeedHelp) },
               i.createElement(
                 "div",
-                { className: Ol.LeftCol },
+                { className: kl.LeftCol },
                 i.createElement(Te._VW, null),
               ),
               i.createElement(
                 "div",
-                { className: Ol.RightCol },
+                { className: kl.RightCol },
                 i.createElement(
                   "div",
-                  { className: Ol.TopicHeader },
+                  { className: kl.TopicHeader },
                   (0, Ie.we)("#FAQViewer_SideBar_ProblemWithSteam_Title"),
                 ),
                 i.createElement(
@@ -22880,7 +22881,7 @@
                 ),
                 i.createElement(
                   "div",
-                  { className: Ol.CenterButtonCtn },
+                  { className: kl.CenterButtonCtn },
                   i.createElement(
                     "a",
                     {
@@ -22895,18 +22896,18 @@
             !(0, a.Y2)() &&
               i.createElement(
                 "div",
-                { className: (0, ze.A)(Ol.Section, Ol.CommunityHelp) },
+                { className: (0, ze.A)(kl.Section, kl.CommunityHelp) },
                 i.createElement(
                   "div",
-                  { className: Ol.LeftCol },
+                  { className: kl.LeftCol },
                   i.createElement(Te.ROZ, null),
                 ),
                 i.createElement(
                   "div",
-                  { className: Ol.RightCol },
+                  { className: kl.RightCol },
                   i.createElement(
                     "div",
-                    { className: Ol.TopicHeader },
+                    { className: kl.TopicHeader },
                     (0, Ie.we)("#FAQViewer_SideBar_CommunityHelp_Title"),
                   ),
                   i.createElement(
@@ -22916,7 +22917,7 @@
                   ),
                   i.createElement(
                     "div",
-                    { className: Ol.CenterButtonCtn },
+                    { className: kl.CenterButtonCtn },
                     i.createElement(
                       "a",
                       {
@@ -22929,9 +22930,9 @@
                 ),
               ),
           );
-      var Ll = r(4043),
-        Wl = r.n(Ll);
-      const Nl = (e) => {
+      var Wl = r(4043),
+        Nl = r.n(Wl);
+      const jl = (e) => {
           const { faqid: t } = e,
             [r, n] = (function (e, t) {
               return [e && ce.Get().GetFAQPublishedContent(e, t), !0];
@@ -22942,23 +22943,23 @@
             }, []),
             n
               ? r
-                ? i.createElement(bl, {
+                ? i.createElement(yl, {
                     title: r.title,
                     content: r.content,
                     elSideBars: [
-                      i.createElement(Pl, { key: "sidebar", faqContent: r }),
-                      i.createElement(kl, { key: "adminbar", faqContent: r }),
+                      i.createElement(Ll, { key: "sidebar", faqContent: r }),
+                      i.createElement(Ul, { key: "adminbar", faqContent: r }),
                     ],
                   })
                 : i.createElement(
-                    yl,
+                    Bl,
                     null,
-                    i.createElement(jl, {
+                    i.createElement(xl, {
                       strError: (0, Ie.we)("#FAQViewer_NoFAQFound"),
                     }),
                   )
               : i.createElement(
-                  yl,
+                  Bl,
                   null,
                   i.createElement(xt, {
                     position: "center",
@@ -22968,26 +22969,26 @@
                 )
           );
         },
-        jl = (e) =>
+        xl = (e) =>
           i.createElement(
             "div",
-            { className: Wl().ErrorCtn },
-            i.createElement("div", { className: Wl().ErrorMsg }, e.strError),
+            { className: Nl().ErrorCtn },
+            i.createElement("div", { className: Nl().ErrorMsg }, e.strError),
             i.createElement(
               "a",
-              { className: Wl().EscapeLink, href: a.TS.HELP_BASE_URL },
+              { className: Nl().EscapeLink, href: a.TS.HELP_BASE_URL },
               (0, Ie.we)("#Help_GoToHomepage"),
             ),
           );
-      var xl = r(7692);
-      function Gl(e) {
+      var Gl = r(7692);
+      function ql(e) {
         const { redirectUrl: t = a.TS.HELP_BASE_URL, accountName: r } = e,
-          n = (0, Ml.rW)(),
+          n = (0, Cl.rW)(),
           [s, o] = (0, i.useState)(!1),
           l = !!(0, d.W5)(c());
         return i.createElement(
           "div",
-          { className: l ? void 0 : xl.LoginContainer },
+          { className: l ? void 0 : Gl.LoginContainer },
           s
             ? i.createElement(Va, null)
             : i.createElement(Ka, {
@@ -23005,7 +23006,7 @@
               }),
         );
       }
-      function ql(e) {
+      function Hl(e) {
         const t = (0, d.zy)();
         return t.pathname.includes("//")
           ? (console.error(`Malformed path: "${t.pathname}"`),
@@ -23014,13 +23015,13 @@
             ? i.createElement(d.rd, { push: !0, to: e.redirect || "/" })
             : null;
       }
-      var Hl = r(2963),
-        Vl = r(7350),
-        Kl = r(7348),
-        Ql = r(2298),
-        Yl = r(249);
-      const Zl = i.lazy(() => r.e(976).then(r.bind(r, 9584))),
-        $l = (e) =>
+      var Vl = r(2963),
+        Kl = r(7350),
+        Ql = r(7348),
+        Yl = r(2298),
+        Zl = r(249);
+      const $l = i.lazy(() => r.e(976).then(r.bind(r, 9584))),
+        Xl = (e) =>
           i.createElement(
             u.Kd,
             { basename: m() },
@@ -23028,7 +23029,7 @@
               "div",
               { className: Ce().App },
               i.createElement(
-                Xl,
+                Jl,
                 null,
                 i.createElement(
                   be.tH,
@@ -23039,7 +23040,7 @@
                     i.createElement(ye, {
                       config: {
                         "green-envelope": () =>
-                          i.createElement(Zl, {
+                          i.createElement($l, {
                             bResponsiveHeader: !1,
                             notifications: (0, a.Tc)(
                               "steam_notifications",
@@ -23047,7 +23048,7 @@
                             ),
                           }),
                         "green-envelope-responsive": () =>
-                          i.createElement(Zl, {
+                          i.createElement($l, {
                             bResponsiveHeader: !0,
                             notifications: (0, a.Tc)(
                               "steam_notifications",
@@ -23087,7 +23088,7 @@
                                       ? g.A.fromString(t, !0, 16).toString()
                                       : null;
                                   })(t);
-                                return i.createElement(Nl, { faqid: n });
+                                return i.createElement(jl, { faqid: n });
                               },
                             },
                           }),
@@ -23097,33 +23098,33 @@
                         { path: [...l(), c()] },
                         i.createElement(ye, {
                           config: {
-                            login: (e) => i.createElement(Gl, { ...e }),
+                            login: (e) => i.createElement(ql, { ...e }),
                           },
                         }),
                       ),
-                      i.createElement(d.qh, null, i.createElement(ql, null)),
+                      i.createElement(d.qh, null, i.createElement(Hl, null)),
                     ),
                   ),
                 ),
               ),
             ),
           );
-      function Xl(e) {
+      function Jl(e) {
         const { children: t } = e;
         return i.createElement(
-          Yl.A,
+          Zl.A,
           { domain: "help.steampowered.com" },
           i.createElement(
             a.ss,
             null,
             i.createElement(
-              ec,
+              tc,
               null,
               i.createElement(
-                Hl.s,
+                Vl.s,
                 null,
                 i.createElement(
-                  Kl.EO,
+                  Ql.EO,
                   { bRenderOverlayAtRoot: !0, bUsePopups: !1 },
                   t,
                 ),
@@ -23132,35 +23133,35 @@
           ),
         );
       }
-      function Jl() {
+      function ec() {
         const e = (0, a.Tc)("help_user_config", "application_config");
         return new M.D(a.TS.WEBAPI_BASE_URL, e?.webapi_token);
       }
-      function ec(e) {
-        const t = (0, Ke.bs)(Jl),
-          r = (0, Ke.bs)(i.useCallback(() => new Vl.A(), [])),
+      function tc(e) {
+        const t = (0, Ke.bs)(ec),
+          r = (0, Ke.bs)(i.useCallback(() => new Kl.A(), [])),
           n = (0, i.useMemo)(
             () => ({ useActiveAccount: () => a.iA.steamid }),
             [],
           );
         return i.createElement(
-          Ql.R,
+          Yl.R,
           { value: n },
           i.createElement(
-            Ml.VQ,
+            Cl.VQ,
             { useActiveSteamInterface: t, useStorage: r },
             e.children,
           ),
         );
       }
-      var tc = r(1511);
+      var rc = r(1511);
       r(4641);
       (0, f.jK)({ enforceActions: "never" }),
         (0, he.oQ)(async () => {
           document.getElementById("application_config")
             ? (0, a.XJ)("application_config")
             : (0, a.XJ)(),
-            (0, tc.aj)().Init(
+            (0, rc.aj)().Init(
               "Help",
               CLSTAMP,
               new M.D(a.TS.WEBAPI_BASE_URL).GetServiceTransport(),
@@ -23179,15 +23180,15 @@
                   ]);
                 Ie.pf.InitFromObjects(a, o, n, s);
               }
-              for (const e of rc) Ie.pf.AddTokens(e);
-              rc = void 0;
+              for (const e of ic) Ie.pf.AddTokens(e);
+              ic = void 0;
             })(a.TS.LANGUAGE),
             document.getElementById("application_root") &&
               n
                 .createRoot(document.getElementById("application_root"))
-                .render(i.createElement($l, {}));
+                .render(i.createElement(Xl, {}));
         });
-      let rc = [];
+      let ic = [];
     },
     2160: (e, t, r) => {
       "use strict";
@@ -24154,6 +24155,16 @@
         i(!1, t, ...r);
       }
       r.d(t, { w: () => i, z: () => n });
+    },
+    6205: (e, t, r) => {
+      "use strict";
+      r.d(t, { O: () => i, S: () => a });
+      const i =
+          /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\\s"<>\[\],.ː:])?)/,
+        n = /^(steam|ftp|https?):\/\//;
+      function a(e) {
+        return n.test(e) ? e : "https://" + e;
+      }
     },
     6545: (e, t, r) => {
       "use strict";
@@ -37899,10 +37910,10 @@
         i.k_EAccountFlagSupervisor;
       r(8506);
     },
-    8350: (e, t, r) => {
+    3578: (e, t, r) => {
       "use strict";
       r.d(t, { A: () => a });
-      const i = /^(steam|ftp|https?):\/\//;
+      var i = r(6205);
       const n = JSON.parse(
         '{"unknown":0,"store.steampowered.com":1,"steamcommunity.com":2,"global":3,"default":4,"application":5,"subscription":6,"search":7,"cart":8,"app":9,"global-nav":10,"global-account":11,"storemenu":12,"search-suggestion":13,"about":14,"suggest":15,"dlc":16,"storemenu-recommendedtags":17,"footer-genre-dropdown":20,"footer-category-dropdown":21,"footer-about-dropdown":22,"footer-help-dropdown":23,"footer-publisher-catalogs":24,"spotlight":40,"message":41,"marketing-message":42,"daily-deal":43,"footer":44,"header":45,"name":46,"more-details":47,"notification":48,"login":60,"prompt":61,"join-steam":62,"successful-login":63,"successful-joinsteam":64,"main-cluster":100,"featured-win-games":101,"featured-mac-games":102,"tab-NewReleases":103,"tab-TopSellers":104,"tab-ComingSoon":105,"tab-Discounts":106,"smallcap-videos":107,"smallcap-demos":108,"home-headlines":109,"community-activity":110,"home-underten":111,"home-specials":112,"home-partners":113,"home-steam-install":114,"community-activity-recentlyplayed":115,"community-activity-recentlybought":116,"promo-banner":117,"promo-takeover":118,"featured-linux-games":119,"updated-games":120,"featured-updated-games":121,"discovery-queue":122,"new-on-steam":123,"curated-app":124,"home-gutter":125,"upcoming-queue":126,"home-specials-under10":127,"main-cluster-recommended":128,"main-cluster-topseller":129,"main-cluster-newonsteam":130,"recommended-spotlight":131,"hardware-promo":132,"popular-new-on-steam":133,"main-cluster-recommended-byfriends":134,"main-cluster-recommended-bycurators":135,"main-cluster-recenttopseller":136,"home-under10":137,"friends-trending":138,"spotlight-specials":139,"curator-recommended":140,"best-selling-vr":141,"creator-recommendations":142,"live-broadcast":143,"main-cluster-followed-creator":144,"tab-PopularNewReleases":145,"home-big-blue-buttons":146,"home-banner":147,"top-new-releases":148,"ajaxgetbatchappcapsuleinfo":149,"curated-main-app":149,"search-results":150,"query":151,"search-share":152,"genre":200,"large-cluster":201,"find-more":202,"friend-activity":203,"specials":2300,"breadcrumbs":205,"freestuff":220,"demos":1900,"tab-NewDemos":222,"tab-TopDemos":223,"browse-demos":224,"videos":100002,"popular-videos":226,"tab-NewVideos":227,"browse":230,"mac":231,"under10":232,"under5":233,"publisher":234,"publishers":235,"publisher-listing":236,"tag":237,"gettaggames":238,"explore":239,"browse-tags":240,"tags":241,"content-hub-carousel":242,"Action":250,"Adventure":251,"Strategy":252,"RPG":253,"Indie":254,"Massively Multiplayer":255,"Casual":256,"Family":257,"Simulation":258,"Racing":259,"Sports":260,"recommended":300,"recommendation-main":301,"friend-recommendations":302,"recommended-friendplaytime":303,"recommended-recentlyviewed":304,"recommended-morerecentlyviewed":305,"recommended-genrehighlights":306,"morelike":307,"morelike-mainitem":308,"friendactivity.js":309,"friendactivity-wishlist-spotlight":310,"friendactivity-purchases":311,"friendactivity-playedandwanted":312,"byafriend":313,"friend-recommendation":314,"ajaxgetfriendactivity":315,"recommend-franchise":316,"more-from-franchise":317,"game-highlights":400,"recommend-game":401,"view-own-recommendation":402,"game-purchase":403,"game-purchase-guide":404,"game-purchase-dlc":405,"game-friend-recommendations":406,"game-add-to-wishlist":407,"game-details":408,"game-highlight-tags":409,"game-tags-dialog":410,"game-tags-yours":411,"bundle-component-preview":412,"dlc-parent-app-link":413,"similar-recent-apps":414,"package-purchase":420,"package-contents":421,"package-details":422,"category-list":423,"bundle":430,"bundle-contents":431,"cart-remove-item":500,"cart-items":501,"cart-continue-shopping":502,"cart-purchase":503,"checkout-logo-abandon":504,"checkout-success":505,"checkout":506,"gift":507,"self":508,"checkout-complete-return":509,"checkout-complete-logo":510,"purchaserequest":511,"display":512,"initial":513,"gifts":514,"upsell-recommended":520,"upsell-specials":521,"external-site":550,"facebook":551,"twitter":552,"referral":553,"summersale":600,"prizebooth":610,"activity-game-link":611,"activity-game-discount":612,"prize-info":613,"promotion":614,"sale":615,"sale-item":616,"sale-dailydeals":617,"sale-publishers":618,"sale-genres":619,"email":620,"cart-icon":621,"sale-category-links":622,"sale-notification-callout":623,"sale-yesterdaydeals":624,"sale-flashsales":625,"sale-fromyourwishlist":626,"closed-beta-access":627,"sale-tag-bucket":628,"sale-hero":629,"sale-franchises":630,"sale-dlcforyou":631,"sale-recommended-by-steam-labs":632,"sale-recommended-by-deep-dive":633,"sale-dailydeals-tier2":634,"sale-deep-discounts":635,"sale-deck-mostplayed":636,"home-chart-deckmostplayed":637,"home-deck-banner":638,"sale-tag-bucket-top":639,"sale-dailydeals-none":640,"sale-dailydeals-tags":641,"sale-dailydeals-ir":642,"sale-dailydeals-tier2-none":645,"sale-dailydeals-tier2-tags":646,"sale-dailydeals-tier2-ir":647,"sale-hero-none":650,"sale-hero-tags":651,"sale-hero-ir":652,"autumnsale":660,"wintersale":661,"yearinreview":662,"springsale":663,"mobileapp":700,"summary":701,"mobilestorefront":702,"home":703,"winter2012-today-square":800,"winter2012-today-square-button":801,"winter2012-hires":802,"winter2012-hires-button":803,"winter2012-yesterday-square":804,"winter2012-yesterday-square-button":805,"winter2012-flash":806,"winter2012-flash-button":807,"winter2012-pack":808,"winter2012-pack-button":809,"winter2012-topsellers":810,"winter2012-topsellers-button":811,"winter2012-vote-winner":812,"winter2012-vote-winner-button":821,"winter2012-vote-option-voting":813,"winter2012-vote-option-voted":814,"winter2012-nav":815,"winter2012-500-callout":816,"winter2012-500-callout-button":820,"winter2012-featured":817,"winter2012-lower-nav":822,"winter2012-vote-option-vote-results":823,"fall2014-48":850,"fall2014-24":851,"fall2014-TopSellers":852,"fall2014-Upcoming":853,"fall2014-Under10":854,"fall2014-Under5":855,"fall2014-PopularNewReleases":856,"fall2014-specials-more":857,"fall2014-recommend-wishlist":858,"fall2014-recommend-contentforyourgames":859,"renderspecials":860,"recommend":861,"recommended-ranked-played":862,"redeem-wallet-complete-return":900,"redeem-wallet-complete-return-app":901,"updated":1000,"curators":1050,"curatorrecommendations":1051,"ajaxgetcuratorrecommendations":1052,"curatorscombinedrecommendations":1053,"ajaxgetcombinedrecommendations":1054,"curatorlist":1055,"curator":1056,"curatorfeaturedlist":1057,"curator_featured_list":1057,"mycuratorsreviewing":1058,"creatorfeaturedrecs":1059,"new_dlc":1060,"browse-dlc":1061,"widget":1100,"appvisibilitystats":1101,"render":1200,"recommendationfeed-single-friends":1210,"recommendationfeed-single-curators":1211,"recommendationfeed-single-recent":1212,"recommendationfeed-single-wishlist":1213,"recommendationfeed-single-played":1214,"recommendationfeed-two":1250,"recommendationfeed-four":1251,"winter2014-featured":1300,"winter2014-yesterday":1301,"winter2014-flash":1302,"winter2014-flash2":1303,"winter2014-vote":1304,"winter2014-specials-more":1305,"winter2014-recommend-wishlist":1306,"winter2014-frontpage-wishlist":1307,"winter2014-TopSellers":1308,"winter2014-Upcoming":1309,"winter2014-Under10":1310,"winter2014-Under5":1311,"winter2014-PopularNewReleases":1312,"winter2017-FeaturedBanner":1313,"summer2018-standardview-curated":1314,"summer2018-standardview-recommend-basic":1315,"summer2018-standardview-recommend-neural":1316,"summer2018-mergedview-curated":1317,"summer2018-mergedview-recommend-neural":1318,"summer2018-salien-giveaway":1319,"summer2018-creator-recommend":1320,"summer2018-live-stream":1321,"sale-vr":1322,"sale-moddable":1323,"discovery-queue-0":1324,"wishlist-onsale":1400,"wishlist-newrelease":1401,"greenlight-newrelease":1402,"sales-event-enhanced":1403,"creator-newrelease":1404,"generic-onsale":1405,"topsellers-onsale":1406,"recommended-onsale":1407,"demo-newrelease":1408,"Free to Play":1420,"tab-mostplayednewreleases":1421,"tab-mostplayed":1422,"tab-comingsoon":1423,"tab-discounts":1424,"tab-ConcurrentUsers":1454,"vr":1453,"hub-vr-recommended":1455,"hub-vr-specials":1459,"hub-vr-featured":1463,"hub-vr-takeover":1467,"games":1452,"hub-games-recommended":1456,"hub-games-specials":1460,"hub-games-featured":1464,"hub-games-takeover":1468,"software":1451,"hub-software-recommended":1457,"hub-software-specials":1461,"hub-software-featured":1465,"hub-software-takeover":1469,"hub-videos-recommended":1458,"hub-videos-specials":1462,"hub-videos-featured":1466,"hub-videos-takeover":1470,"macos":1480,"hub-macos-recommended":1481,"hub-macos-specials":1482,"hub-macos-featured":1483,"hub-macos-takeover":1484,"linux":1490,"hub-linux-recommended":1491,"hub-linux-specials":1492,"hub-linux-featured":1493,"hub-linux-takeover":1494,"controller":1500,"hub-controller-recommended":1501,"hub-controller-specials":1502,"hub-controller-featured":1503,"hub-controller-takeover":1504,"freetoplay":1510,"hub-freetoplay-recommended":1511,"hub-freetoplay-specials":1512,"hub-freetoplay-featured":1513,"hub-freetoplay-takeover":1514,"earlyaccess":1520,"hub-earlyaccess-recommended":1521,"hub-earlyaccess-specials":1522,"hub-earlyaccess-featured":1523,"hub-earlyaccess-takeover":1524,"pccafe":1530,"hub-pccafe-recommended":1531,"hub-pccafe-specials":1532,"hub-pccafe-featured":1533,"hub-pccafe-takeover":1534,"remoteplayphone":1540,"hub-remoteplayphone-recommended":1541,"hub-remoteplayphone-specials":1542,"hub-remoteplayphone-featured":1543,"hub-remoteplayphone-takeover":1544,"remoteplaytablet":1550,"hub-remoteplaytablet-recommended":1551,"hub-remoteplaytablet-specials":1552,"hub-remoteplaytablet-featured":1553,"hub-remoteplaytablet-takeover":1554,"remoteplaytv":1560,"hub-remoteplaytv-recommended":1561,"hub-remoteplaytv-specials":1562,"hub-remoteplaytv-featured":1563,"hub-remoteplaytv-takeover":1564,"remoteplaytogether":1570,"hub-remoteplaytogether-recommended":1571,"hub-remoteplaytogether-specials":1572,"hub-remoteplaytogether-featured":1573,"hub-remoteplaytogether-takeover":1574,"remote-play-about":1580,"remoteplay":1581,"querypaginated":1600,"n_section":1601,"soundtracks":1620,"hub-soundtracks-recommended":1621,"hub-soundtracks-specials":1622,"hub-soundtracks-featured":1623,"hub-soundtracks-takeover":1624,"upcoming":1700,"comingsoon-recommendedcomingsoon":1701,"comingsoon-popularwishlist":1702,"comingsoon-newdlc":1703,"comingsoon-followedcreator":1704,"comingsoon-mywishlist":1705,"comingsoon-largecap":1706,"tab-PopularUpcoming":1707,"tab-AllUpcoming":1708,"in-library-game-event-update":1800,"on-wishlist-game-event-update":1801,"in-library-game-remind-me":1802,"hub-demos-recommended":1901,"hub-demos-specials":1902,"hub-demos-featured":1903,"hub-demos-takeover":1904,"creator-home-product-page":2000,"franchise-home-link":2001,"ajaxgetappinfoforcap":2100,"partner-events":2101,"library-partner-events":2102,"store-partner-events":2103,"steamtv-partner-events":2104,"community-partner-events":2105,"partnerweb-partner-events":2106,"store-calendar-partner-events":2107,"events":2108,"subscriptions":2109,"ea":2110,"subscriptionplansea":2111,"download_event":2112,"reminder":2113,"steamtv":2200,"hub-specials-recommended":2301,"hub-specials-specials":2302,"hub-specials-featured":2303,"hub-specials-takeover":2304,"recommender":2400,"recommended-by-steam-labs":2401,"labs":2500,"automaticshow":2501,"microtrailers":2502,"now-playing":2503,"deepdive":2504,"game-add-to-wishlist-deepdive":2505,"dbdetailsmulti":2506,"dbgetlinkparam":2507,"recommended-by-deep-dive":2508,"recommended-by-deep-dive-carousel":2509,"recommended-by-deep-dive-carousel_default":2510,"recommended-by-deep-dive-carousel_cluster_recent":2511,"recommended-by-deep-dive-carousel_cluster_games":2512,"recommended-by-deep-dive-carousel_cluster_playtime":2513,"recommended-by-deep-dive-carousel-default":2514,"recommended-by-deep-dive-carousel-cluster-recent":2515,"recommended-by-deep-dive-carousel-cluster-games":2516,"recommended-by-deep-dive-carousel-cluster-playtime":2517,"trendingreviews":2600,"ajaxgetrecentreviews":2601,"community-recommendations":2602,"lunarnewyear2020":2700,"lunarnewyear":2701,"lunarnewyearmarket":2702,"steam-logo":2750,"sale-banner":2751,"sale-button-top":2752,"sale-button-bottom":2753,"wishlist-button-bottom":2754,"footer-steam-logo":2755,"steamclient":5000,"library":5100,"friendsui":5200,"friendcontextmenu":5201,"topsellers":7000,"steamcharts":7001,"weeklytopsellers":7002,"topchartlist":7003,"overview":7004,"mostplayed":7005,"apphome":100000,"images":100001,"allnews":100003,"news":100004,"announcements":100005,"discussions":100006,"reporteddiscussions":100007,"tradingforum":100008,"guides":100009,"reviews":100010,"positivereviews":100011,"negativereviews":100012,"workshop":100013,"broadcasts":100014,"eventcomments":100015,"sharedfiles":100100,"filedetails":100101,"screenshot":100102,"workshopitem":100103,"mtxitem":100104,"collection":100105,"guide":100106,"integratedguide":100107,"merch":100108,"artwork":100109,"video":100110,"topicsearch":100201,"singletopic":100202,"profiles":100300,"review":100301,"profileshowcase":100302,"broadcast":100400,"watch":100401,"friendactivityfeed":100500,"announcement":100501,"curatorreview":100502,"friendpurchase":100503,"workshopitempublished":100504,"artworkpublished":100505,"screenshotpublished":100506,"guidepublished":100507,"collectionpublished":100508,"itemfavorited":100509,"userreviewpublished":100510,"partner.steamgames.com":100600,"help.steampowered.com":100601,"salecreatorhome":100700,"saleitembrowse":100701,"salefacetbrowse":100702,"salesection":100703,"saletabsection":100704,"salebroadcast":100705,"salecuratorrec":100706,"saleeventsched":100707,"salesubscription":100708,"saleitemsearch":100709,"salesmartwishlist":100710,"salesmartir":100711,"salesmartdlc":100712,"salesmarttagrec":100713,"salebrowsetopwishlisted":100714,"salebrowsetrendingwishlisted":100715,"salebrowsepopularcomingsoon":100716,"salebrowsemostplayeddemo":100717,"salebrowsedailyactiveuserdemo":100718,"salebrowseplayednowdemo":100719,"salebrowserecentlyreleased":100720,"salebrowsepopularpurchased":100721,"salebrowsepopularpurchaseddiscounted":100722,"salebrowsediscounted":100723,"salebrowseprice":100724,"salebrowsenewandtrending":100725,"salebrowsetopsellers":100726,"salebrowsetoprated":100727,"discoveryqueue2022":100728,"saleeventsection":100729,"salesectionlinks":100730,"salesectionrewards":100731,"salesectiontext":100732,"salesectioneventschedule":100733,"salesmartpersonalizedcarousel":100734,"promo-takeunder":100735}',
       );
@@ -37935,11 +37946,7 @@
         }
         static AddNavParamToURL(e, t) {
           try {
-            const r = new URL(
-                (function (e) {
-                  return i.test(e) ? e : "https://" + e;
-                })(e),
-              ),
+            const r = new URL((0, i.S)(e)),
               n = new URLSearchParams(r.search);
             return (
               n.set("snr", encodeURIComponent(t ?? "")),
@@ -37984,7 +37991,7 @@
       "use strict";
       r.d(t, { nn: () => l, n9: () => c, aL: () => m });
       var i = r(626),
-        n = r(8350),
+        n = r(3578),
         a = r(470);
       window.Config ?? a.TS;
       const s = window.UserConfig ?? a.iA;
@@ -44608,7 +44615,7 @@
     8344: (e, t, r) => {
       "use strict";
       r.d(t, { Ay: () => l, VZ: () => o });
-      var i = r(8350),
+      var i = r(3578),
         n = r(4332),
         a = r(1336),
         s = r(470);
@@ -53424,8 +53431,12 @@
         GetName() {
           return this.m_strName;
         }
-        GetStorePageURL() {
-          return _e.TS.STORE_BASE_URL + this.m_strStoreURLPath;
+        GetStorePageURL(e = !1) {
+          return e && this.HasDemoStandaloneStorePage()
+            ? _e.TS.STORE_BASE_URL +
+                "app/" +
+                this.GetDemoStandaloneStorePageAppIDs()[0]
+            : _e.TS.STORE_BASE_URL + this.m_strStoreURLPath;
         }
         GetStorePageURLWithOverride() {
           return this.m_strStoreURLPathOverride &&
@@ -53518,6 +53529,18 @@
         }
         GetParentAppID() {
           return this.m_RelatedItems?.parent_appid;
+        }
+        BHasDemo() {
+          return (this.m_RelatedItems?.demo_appid?.length ?? 0) > 0;
+        }
+        GetDemoAppIDs() {
+          return this.m_RelatedItems?.demo_appid ?? [];
+        }
+        HasDemoStandaloneStorePage() {
+          return (this.m_RelatedItems?.standalone_demo_appid?.length ?? 0) > 0;
+        }
+        GetDemoStandaloneStorePageAppIDs() {
+          return this.m_RelatedItems?.standalone_demo_appid ?? [];
         }
         GetContentDescriptorIDs() {
           return this.m_ContentDescriptorIDs;
@@ -60307,6 +60330,7 @@
                 className: (0, l.A)(
                   ct().SliderControlPanelGroup,
                   "SliderControlPanelGroup",
+                  this.props.className,
                 ),
                 navRef: this.props.navRef,
                 onMouseDown: (e) => this.OnMouseDown(e.nativeEvent),
@@ -66076,19 +66100,16 @@
     1336: (e, t, r) => {
       "use strict";
       r.d(t, {
-        L$: () => l,
-        NT: () => u,
-        O9: () => a,
-        Qz: () => o,
-        ZF: () => c,
-        k2: () => m,
-        wm: () => s,
+        L$: () => o,
+        NT: () => m,
+        Qz: () => s,
+        ZF: () => l,
+        k2: () => c,
+        wm: () => a,
       });
       var i = r(8272),
         n = (r(1859), r(7666));
-      const a =
-        /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\\s"<>\[\],.ː:])?)/;
-      function s(e) {
+      function a(e) {
         if (void 0 === e)
           return console.error("Cannot GetHostname on empty URL"), "";
         let t = new RegExp(
@@ -66098,11 +66119,11 @@
           r = e.match(t);
         return r && r.length > 5 ? r[6].toString() : e;
       }
-      function o(e) {
-        let t = s(e);
+      function s(e) {
+        let t = a(e);
         return t.startsWith("www.") && (t = t.slice(4)), t;
       }
-      function l(e) {
+      function o(e) {
         return e
           ? 1 != i.TS.EUNIVERSE
             ? e
@@ -66154,17 +66175,18 @@
               (e = (0, n.TL)(e)))
           : e;
       }
-      function c(e) {
+      function l(e) {
         if (!e) return !0;
-        const t = s(e).toLocaleLowerCase();
+        const t = a(e).toLocaleLowerCase();
         return (
           [
-            s(i.TS.COMMUNITY_CDN_URL).toLocaleLowerCase(),
-            s(i.TS.MEDIA_CDN_URL).toLocaleLowerCase(),
-            s(i.TS.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
-            s(i.TS.STORE_CDN_URL).toLocaleLowerCase(),
-            s(i.TS.BASE_URL_SHARED_CDN).toLocaleLowerCase(),
-            s(i.TS.CLAN_CDN_ASSET_URL).toLocaleLowerCase(),
+            a(i.TS.COMMUNITY_CDN_URL).toLocaleLowerCase(),
+            a(i.TS.MEDIA_CDN_URL).toLocaleLowerCase(),
+            a(i.TS.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
+            a(i.TS.STORE_CDN_URL).toLocaleLowerCase(),
+            a(i.TS.BASE_URL_SHARED_CDN).toLocaleLowerCase(),
+            a(i.TS.CLAN_CDN_ASSET_URL).toLocaleLowerCase(),
+            a(i.TS.VIDEO_CDN_URL).toLocaleLowerCase(),
             "support.steampowered.com",
             "steamcdn-a.akamaihd.net",
             "cdn.cloudflare.steamstatic.com",
@@ -66172,7 +66194,7 @@
           ].indexOf(t) >= 0
         );
       }
-      function m(e) {
+      function c(e) {
         return i.TS.SNR &&
           i.TS.SNR.length > 0 &&
           e &&
@@ -66180,7 +66202,7 @@
           ? e + (e.indexOf("?") >= 0 ? "&" : "?") + "snr=" + i.TS.SNR
           : e;
       }
-      function u(e) {
+      function m(e) {
         return (
           i.TS.IN_STEAMUI &&
             !e.startsWith("steam://") &&

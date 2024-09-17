@@ -20876,9 +20876,9 @@
       }));
       function C(e) {
         const t = (0, d.Qn)();
-        return e.screenIsWide || t
-          ? i.createElement(b, { ...e }, e.children)
-          : i.createElement(h, { ...e }, e.children);
+        return (!e.screenIsWide && !t) || e.bForceSimpleCarousel
+          ? i.createElement(h, { ...e }, e.children)
+          : i.createElement(b, { ...e }, e.children);
       }
       function b(e) {
         const t = (0, d.Qn)(),
@@ -20979,8 +20979,14 @@
             C.current = window.setTimeout(() => {
               if (C.current) {
                 w(C);
-                const e = (u.state.currentSlide + 1) % u.state.totalSlides;
-                u.setStoreState({ currentSlide: e });
+                let e = 0;
+                u.state.currentSlide + u.state.visibleSlides <
+                  u.state.totalSlides &&
+                  (e = Math.min(
+                    u.state.currentSlide + u.state.visibleSlides,
+                    u.state.totalSlides - u.state.visibleSlides,
+                  )),
+                  u.setStoreState({ currentSlide: e });
               }
             }, 8e3);
           };
@@ -25250,6 +25256,7 @@
                 className: (0, l.A)(
                   gt().SliderControlPanelGroup,
                   "SliderControlPanelGroup",
+                  this.props.className,
                 ),
                 navRef: this.props.navRef,
                 onMouseDown: (e) => this.OnMouseDown(e.nativeEvent),
@@ -26090,46 +26097,47 @@
     4869: (e, t, r) => {
       "use strict";
       r.d(t, {
-        Bal: () => R,
+        Bal: () => T,
         CeX: () => v,
-        Epp: () => E,
-        Gj3: () => H,
-        JPq: () => D,
-        Kz1: () => K,
-        LSz: () => x,
+        Epp: () => B,
+        Gj3: () => G,
+        JPq: () => A,
+        Kz1: () => Z,
+        LSz: () => P,
         MGO: () => u,
-        Moo: () => q,
+        Moo: () => K,
+        Q9b: () => E,
         QRo: () => _,
-        UKJ: () => P,
-        VnB: () => I,
-        YqK: () => V,
+        UKJ: () => V,
+        VnB: () => R,
+        YqK: () => z,
         ZyV: () => y,
         _V3: () => w,
         b8_: () => p,
-        bmT: () => A,
+        bmT: () => O,
         ffu: () => g,
         glU: () => S,
         i3G: () => m,
-        iYj: () => U,
-        jRw: () => O,
-        jXA: () => N,
-        jvG: () => B,
-        kdM: () => G,
-        l4n: () => T,
+        iYj: () => W,
+        jRw: () => F,
+        jXA: () => x,
+        jvG: () => I,
+        kdM: () => j,
+        l4n: () => D,
         lMJ: () => f,
         lrM: () => h,
         nl: () => C,
         pcV: () => l,
-        qOW: () => F,
-        qzO: () => k,
+        qOW: () => L,
+        qzO: () => N,
         rxV: () => M,
         sED: () => b,
-        tI4: () => W,
+        tI4: () => H,
         u49: () => d,
-        vet: () => j,
-        x7X: () => L,
+        vet: () => q,
+        x7X: () => k,
         xIk: () => a,
-        ycU: () => z,
+        ycU: () => U,
       });
       var n = r(90626),
         i = (r(51396), r(97875)),
@@ -26922,6 +26930,23 @@
         return n.createElement(
           "svg",
           {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 20 20",
+            fill: "none",
+            ...e,
+          },
+          n.createElement("path", {
+            fill: "currentColor",
+            fillRule: "evenodd",
+            clipRule: "evenodd",
+            d: "M5.37033 3.07108C6.74074 2.15541 8.35191 1.66666 10.0001 1.66666C11.0944 1.66666 12.1781 1.88221 13.1891 2.301C14.2002 2.71979 15.1188 3.33362 15.8926 4.10744C16.6665 4.88126 17.2803 5.79992 17.6991 6.81097C18.1179 7.82202 18.3334 8.90565 18.3334 10C18.3334 11.6482 17.8447 13.2593 16.929 14.6297C16.0133 16.0002 14.7118 17.0683 13.1891 17.699C11.6664 18.3297 9.99084 18.4948 8.37433 18.1732C6.75782 17.8517 5.27297 17.058 4.10753 15.8926C2.94209 14.7271 2.14842 13.2423 1.82687 11.6258C1.50533 10.0092 1.67036 8.33369 2.30109 6.81097C2.93182 5.28825 3.99992 3.98676 5.37033 3.07108ZM12.2223 5L11.389 10H8.61119L7.77786 5H12.2223ZM11.9445 13.0556C11.9445 14.1294 11.074 15 10.0001 15C8.92619 15 8.05564 14.1294 8.05564 13.0556C8.05564 11.9817 8.92619 11.1111 10.0001 11.1111C11.074 11.1111 11.9445 11.9817 11.9445 13.0556Z",
+          }),
+        );
+      }
+      function B(e) {
+        return n.createElement(
+          "svg",
+          {
             width: "5",
             height: "19",
             viewBox: "0 0 5 19",
@@ -26934,7 +26959,7 @@
           }),
         );
       }
-      function B(e) {
+      function I(e) {
         return n.createElement(
           "svg",
           {
@@ -26950,7 +26975,7 @@
           }),
         );
       }
-      function I() {
+      function R() {
         return n.createElement(
           "svg",
           {
@@ -26970,7 +26995,7 @@
           ),
         );
       }
-      function R() {
+      function T() {
         return n.createElement(
           "svg",
           {
@@ -26989,7 +27014,7 @@
           ),
         );
       }
-      function T() {
+      function D() {
         return n.createElement(
           "svg",
           {
@@ -27008,7 +27033,7 @@
           ),
         );
       }
-      function D() {
+      function A() {
         return n.createElement(
           "svg",
           {
@@ -27027,7 +27052,7 @@
           ),
         );
       }
-      function A() {
+      function O() {
         return n.createElement(
           "svg",
           {
@@ -27046,7 +27071,7 @@
           ),
         );
       }
-      function O() {
+      function F() {
         return n.createElement(
           "svg",
           {
@@ -27065,7 +27090,7 @@
           ),
         );
       }
-      function F() {
+      function L() {
         return n.createElement(
           "svg",
           {
@@ -27084,7 +27109,7 @@
           ),
         );
       }
-      function L() {
+      function k() {
         return n.createElement(
           "svg",
           {
@@ -27103,7 +27128,7 @@
           ),
         );
       }
-      function k() {
+      function N() {
         return n.createElement(
           "svg",
           {
@@ -27122,7 +27147,7 @@
           ),
         );
       }
-      function N() {
+      function x() {
         return n.createElement(
           "svg",
           {
@@ -27141,7 +27166,7 @@
           ),
         );
       }
-      function x() {
+      function P() {
         const [e, t] = (0, i.l)();
         return n.createElement(
           "svg",
@@ -27182,7 +27207,7 @@
           ),
         );
       }
-      function P() {
+      function V() {
         return n.createElement(
           "svg",
           {
@@ -27201,7 +27226,7 @@
           ),
         );
       }
-      function V() {
+      function z() {
         return n.createElement(
           "svg",
           {
@@ -27220,7 +27245,7 @@
           ),
         );
       }
-      function z() {
+      function U() {
         return n.createElement(
           "svg",
           {
@@ -27249,7 +27274,7 @@
           ),
         );
       }
-      function U() {
+      function W() {
         const [e, t] = (0, i.l)();
         return n.createElement(
           "svg",
@@ -27281,7 +27306,7 @@
           ),
         );
       }
-      function W() {
+      function H() {
         const [e, t] = (0, i.l)();
         return n.createElement(
           "svg",
@@ -27315,7 +27340,7 @@
           ),
         );
       }
-      function H() {
+      function G() {
         const [e, t] = (0, i.l)();
         return n.createElement(
           "svg",
@@ -27351,7 +27376,7 @@
           ),
         );
       }
-      function G(e) {
+      function j(e) {
         const { bGreyOutRightSide: t, ...r } = e;
         return t
           ? n.createElement(
@@ -27397,7 +27422,7 @@
               }),
             );
       }
-      function j(e) {
+      function q(e) {
         return n.createElement(
           "svg",
           {
@@ -27441,7 +27466,7 @@
           }),
         );
       }
-      function q(e) {
+      function K(e) {
         return n.createElement(
           "svg",
           {
@@ -27459,7 +27484,7 @@
           }),
         );
       }
-      function K(e) {
+      function Z(e) {
         return n.createElement(
           "svg",
           {
@@ -34938,23 +34963,19 @@
     61336: (e, t, r) => {
       "use strict";
       r.d(t, {
-        GX: () => _,
-        L$: () => m,
-        NT: () => g,
-        O9: () => o,
-        Ps: () => h,
-        Qz: () => l,
-        ZF: () => d,
-        jT: () => u,
-        k2: () => p,
-        wm: () => a,
+        GX: () => d,
+        L$: () => l,
+        NT: () => p,
+        Ps: () => m,
+        Qz: () => a,
+        ZF: () => c,
+        k2: () => u,
+        wm: () => o,
       });
       var n = r(78327),
         i = r(61859),
         s = r(27666);
-      const o =
-        /((?:(?:https?:)|(?:www[.,])|(?:[!#-;=?-Z\\\^-~]+[\.,](?:(?:[a-zA-Z]{2,4}[\.?]*[\/\\\?#])|(?:(?:biz|com|gallery|in|name|net|online|org|tech|trade|xyz)(?=\W|$)))))(?:[^ː\s"<>\[\]]*[^\\s"<>\[\],.ː:])?)/;
-      function a(e) {
+      function o(e) {
         if (void 0 === e)
           return console.error("Cannot GetHostname on empty URL"), "";
         let t = new RegExp(
@@ -34964,15 +34985,11 @@
           r = e.match(t);
         return r && r.length > 5 ? r[6].toString() : e;
       }
-      function l(e) {
-        let t = a(e);
+      function a(e) {
+        let t = o(e);
         return t.startsWith("www.") && (t = t.slice(4)), t;
       }
-      const c = /^(steam|ftp|https?):\/\//;
-      function u(e) {
-        return c.test(e) ? e : "https://" + e;
-      }
-      function m(e) {
+      function l(e) {
         return e
           ? 1 != n.TS.EUNIVERSE
             ? e
@@ -35024,18 +35041,18 @@
               (e = (0, s.TL)(e)))
           : e;
       }
-      function d(e) {
+      function c(e) {
         if (!e) return !0;
-        const t = a(e).toLocaleLowerCase();
+        const t = o(e).toLocaleLowerCase();
         return (
           [
-            a(n.TS.COMMUNITY_CDN_URL).toLocaleLowerCase(),
-            a(n.TS.MEDIA_CDN_URL).toLocaleLowerCase(),
-            a(n.TS.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
-            a(n.TS.STORE_CDN_URL).toLocaleLowerCase(),
-            a(n.TS.BASE_URL_SHARED_CDN).toLocaleLowerCase(),
-            a(n.TS.CLAN_CDN_ASSET_URL).toLocaleLowerCase(),
-            a(n.TS.VIDEO_CDN_URL).toLocaleLowerCase(),
+            o(n.TS.COMMUNITY_CDN_URL).toLocaleLowerCase(),
+            o(n.TS.MEDIA_CDN_URL).toLocaleLowerCase(),
+            o(n.TS.MEDIA_CDN_COMMUNITY_URL).toLocaleLowerCase(),
+            o(n.TS.STORE_CDN_URL).toLocaleLowerCase(),
+            o(n.TS.BASE_URL_SHARED_CDN).toLocaleLowerCase(),
+            o(n.TS.CLAN_CDN_ASSET_URL).toLocaleLowerCase(),
+            o(n.TS.VIDEO_CDN_URL).toLocaleLowerCase(),
             "support.steampowered.com",
             "steamcdn-a.akamaihd.net",
             "cdn.cloudflare.steamstatic.com",
@@ -35043,7 +35060,7 @@
           ].indexOf(t) >= 0
         );
       }
-      function p(e) {
+      function u(e) {
         return n.TS.SNR &&
           n.TS.SNR.length > 0 &&
           e &&
@@ -35051,7 +35068,7 @@
           ? e + (e.indexOf("?") >= 0 ? "&" : "?") + "snr=" + n.TS.SNR
           : e;
       }
-      function h(e, t) {
+      function m(e, t) {
         try {
           const r = new URL(t),
             n = new URL(e);
@@ -35060,10 +35077,10 @@
           return "";
         }
       }
-      function _() {
+      function d() {
         return `${n.TS.HELP_BASE_URL}${(0, i.l4)()}/`;
       }
-      function g(e) {
+      function p(e) {
         return (
           n.TS.IN_STEAMUI &&
             !e.startsWith("steam://") &&

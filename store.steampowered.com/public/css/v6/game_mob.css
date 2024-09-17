@@ -652,7 +652,8 @@
 
 	html.responsive .game_area_purchase_game .game_purchase_action,
 	html.responsive .game_area_comingsoon .game_purchase_action,
-	html.responsive .game_area_offsite_purchase .game_purchase_action {
+	html.responsive .game_area_offsite_purchase .game_purchase_action,
+	html.responsive .game_area_purchase_game #dlc_purchase_action{
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;

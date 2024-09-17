@@ -10333,7 +10333,7 @@
         c = r(78327),
         d = r(90626),
         m = r(56011),
-        u = r(88350);
+        u = r(3578);
       !(function (e) {
         (e[(e.AnyController = 0)] = "AnyController"),
           (e[(e.XboxController = 1)] = "XboxController"),
@@ -17220,46 +17220,48 @@
             bPreventNavigation: a,
             elElementToAppend: i,
             bShowDemoButton: s,
-            bHidePrice: o,
-            bUseSubscriptionLayout: l,
-            strExtraParams: c,
-            nCreatorAccountID: d,
-            bShowDeckCompatibilityDialog: u,
-            bShowWishlistButton: p = !0,
-            ..._
+            bPreferDemoStorePage: o,
+            bHidePrice: l,
+            bUseSubscriptionLayout: c,
+            strExtraParams: d,
+            nCreatorAccountID: u,
+            bShowDeckCompatibilityDialog: p,
+            bShowWishlistButton: _ = !0,
+            ...h
           } = e,
-          [h] = (0, y.G6)(t.id, (0, g.SW)(t.type), {}),
-          S = (0, V.n9)(),
-          v = (0, m.L3)(S),
-          C = (0, L.Qn)();
-        if (!h && !r) return null;
-        if (C) return n.createElement(n.Fragment, null, e.children);
-        const f = "hiding" == j(),
-          w =
-            a || !h
+          [S] = (0, y.G6)(t.id, (0, g.SW)(t.type), {}),
+          v = (0, V.n9)(),
+          C = (0, m.L3)(v),
+          f = (0, L.Qn)();
+        if (!S && !r) return null;
+        if (f) return n.createElement(n.Fragment, null, e.children);
+        const w = "hiding" == j(),
+          b =
+            a || !S
               ? null
               : (0, m.wJ)(
-                  `${null == h ? void 0 : h.GetStorePageURL()}${c ? `?${c}` : ""}`,
-                  S,
+                  `${null == S ? void 0 : S.GetStorePageURL(o)}${d ? `?${d}` : ""}`,
+                  v,
                 ),
-          b = n.createElement(te, {
+          B = n.createElement(te, {
             info: t,
             name: r,
             bPreventNavigation: a,
-            strStoreUrl: w,
+            strStoreUrl: b,
             elElementToAppend: i,
             bShowDemoButton: s,
-            bShowDeckCompatibilityDialog: u,
-            bHideBottomHalf: f,
-            bHidePrice: o,
-            bUseSubscriptionLayout: l,
-            strSNR: v,
-            nCreatorAccountID: d,
-            bShowWishlistButton: p,
+            bPreferDemoStorePage: o,
+            bShowDeckCompatibilityDialog: p,
+            bHideBottomHalf: w,
+            bHidePrice: l,
+            bUseSubscriptionLayout: c,
+            strSNR: C,
+            nCreatorAccountID: u,
+            bShowWishlistButton: _,
           });
         return n.createElement(
           se,
-          { hoverContent: b, strClickUrl: w, ..._ },
+          { hoverContent: B, strClickUrl: b, ...h },
           e.children,
         );
       }
@@ -17738,78 +17740,79 @@
             } = (0, w.u)(e),
             {
               bShowDemoButton: g,
-              bHidePrice: y,
-              bUseSubscriptionLayout: T,
-              bHidePlatforms: G,
-              bHideContainedApps: k,
-              bAllowTwoLinesForHeader: F,
-              bShowReviewSummary: U,
-              bShowDeckCompatibilityDialog: N,
-              bAutoFocus: P,
-              fnOnClickOverride: V,
-              bIsMarketingMessage: W,
+              bPreferDemoStorePage: y,
+              bHidePrice: T,
+              bUseSubscriptionLayout: G,
+              bHidePlatforms: k,
+              bHideContainedApps: F,
+              bAllowTwoLinesForHeader: U,
+              bShowReviewSummary: N,
+              bShowDeckCompatibilityDialog: P,
+              bAutoFocus: V,
+              fnOnClickOverride: W,
+              bIsMarketingMessage: j,
             } = e,
-            j = (0, O.n9)(),
-            x = i.useMemo(
+            x = (0, O.n9)(),
+            Z = i.useMemo(
               () => (null == c ? void 0 : c.GetIncludedAppIDsOrSelf()),
               [c],
             ),
-            Z = (0, i.useRef)(null),
-            [K, Y] = (0, i.useState)(!1),
-            J = (0, L.Qn)();
+            K = (0, i.useRef)(null),
+            [Y, J] = (0, i.useState)(!1),
+            X = (0, L.Qn)();
           if (
             ((0, i.useEffect)(() => {
-              Z.current && Y(Z.current.offsetWidth < 370);
-            }, [Z]),
+              K.current && J(K.current.offsetWidth < 370);
+            }, [K]),
             !c)
           )
             return null;
-          const X = c.GetBestPurchaseOption().discount_pct,
-            $ = c.GetIncludedAppIDs().length;
-          let ee = c.GetShortDescription();
+          const $ = c.GetBestPurchaseOption().discount_pct,
+            ee = c.GetIncludedAppIDs().length;
+          let te = c.GetShortDescription();
           (2 != c.GetStoreItemType() && 1 != c.GetStoreItemType()) ||
-            (ee = X
-              ? (0, D.we)("#Sale_BundleSave_WithDiscount", X, $)
-              : (0, D.we)("#Sale_BundleSave", $));
-          const te = (0, m.L3)(j),
-            re = (0, n.tB)(c.GetStorePageURL()),
-            ae = Boolean(!k && $ > 0),
-            ie = c.BHasTags()
+            (te = $
+              ? (0, D.we)("#Sale_BundleSave_WithDiscount", $, ee)
+              : (0, D.we)("#Sale_BundleSave", ee));
+          const re = (0, m.L3)(x),
+            ae = (0, n.tB)(c.GetStorePageURL(y)),
+            ie = Boolean(!F && ee > 0),
+            ne = c.BHasTags()
               ? c.GetTagIDs()
               : (null == u ? void 0 : u.BHasTags())
                 ? u.GetTagIDs()
                 : [],
-            ne = 0 == c.GetStoreItemType(),
-            se = (0, m.wJ)(re, j),
-            oe = J || c.BIsReleased() || c.BIsPrePurchase();
+            se = 0 == c.GetStoreItemType(),
+            oe = (0, m.wJ)(ae, x),
+            le = X || c.BIsReleased() || c.BIsPrePurchase();
           return i.createElement(
             E.oj,
-            { appid: ne ? c.GetAppID() : void 0 },
+            { appid: se ? c.GetAppID() : void 0 },
             i.createElement(
               o.Z,
               {
                 className: (0, R.A)({
                   [z().StoreSaleWidgetOuterContainer]: !0,
-                  [z().AllowTwoLineHeader]: F,
+                  [z().AllowTwoLineHeader]: U,
                 }),
                 onMouseEnter: () => a(!0),
                 onMouseLeave: () => a(!1),
                 "flow-children": "grid",
                 navEntryPreferPosition: l.iU.PREFERRED_CHILD,
-                autoFocus: P,
+                autoFocus: V,
                 navKey: "preview_widget_" + c.GetID(),
               },
               i.createElement(
                 s.ml,
                 {
-                  onClick: W ? V : null,
+                  onClick: j ? W : null,
                   className: (0, R.A)(
                     z().StoreSaleWidgetContainer,
                     z().SaleItemDefaultCapsuleDisplay,
-                    W ? z().MarketingMessage : "",
+                    j ? z().MarketingMessage : "",
                   ),
-                  ...(0, B.S)(c, j, J, void 0, V),
-                  preferredFocus: ae,
+                  ...(0, B.S)(c, x, X, y, void 0, W),
+                  preferredFocus: ie,
                 },
                 i.createElement(
                   "div",
@@ -17817,14 +17820,14 @@
                   i.createElement(
                     "a",
                     {
-                      href: V ? void 0 : se,
-                      target: L.TS.IN_CLIENT || V ? void 0 : "_blank",
-                      onClick: V,
+                      href: W ? void 0 : oe,
+                      target: L.TS.IN_CLIENT || W ? void 0 : "_blank",
+                      onClick: W,
                     },
                     i.createElement(
                       "div",
                       { className: z().StoreSaleWidgetImage },
-                      i.createElement(f.V, { appids: x }),
+                      i.createElement(f.V, { appids: Z }),
                       i.createElement(Q, { info: h, imageType: "header" }),
                       i.createElement(M.S, {
                         eDeckCompatibilityCategory:
@@ -17841,17 +17844,17 @@
                   {
                     className: (0, R.A)(
                       z().StoreSaleWidgetRight,
-                      ae ? z().Bundle : "",
+                      ie ? z().Bundle : "",
                     ),
                   },
-                  Boolean(ne && !V) &&
+                  Boolean(se && !W) &&
                     i.createElement(H.EP, {
                       appID: p.id,
                       classOverride: (0, R.A)(
                         S().WishlistButtonNotTop,
                         "WishlistButton",
                       ),
-                      snr: te,
+                      snr: re,
                     }),
                   i.createElement(
                     "div",
@@ -17859,9 +17862,9 @@
                     i.createElement(
                       "a",
                       {
-                        href: V ? void 0 : se,
+                        href: W ? void 0 : oe,
                         target: L.TS.IN_CLIENT ? void 0 : "_blank",
-                        onClick: V,
+                        onClick: W,
                       },
                       i.createElement(
                         "div",
@@ -17878,11 +17881,11 @@
                   i.createElement(
                     "div",
                     { className: z().StoreSaleWidgetReleaseAndTags },
-                    ie &&
+                    ne &&
                       i.createElement(
                         "div",
                         { className: z().StoreSaleWidgetTags },
-                        ie.map((e) =>
+                        ne.map((e) =>
                           i.createElement(I.p, {
                             key: "tag_" + e,
                             tagid: e,
@@ -17894,24 +17897,24 @@
                       "div",
                       {
                         className: z().WidgetReleaseDateAndPlatformCtn,
-                        ref: Z,
+                        ref: K,
                       },
-                      ne &&
+                      se &&
                         i.createElement(
                           "div",
                           { className: z().StoreSaleWidgetRelease },
                           c.GetFormattedSteamReleaseDate(),
                         ),
-                      !G &&
+                      !k &&
                         i.createElement(
                           i.Fragment,
                           null,
                           i.createElement(C.Q, {
                             item: p,
-                            bMinimizePlatforms: K,
+                            bMinimizePlatforms: Y,
                           }),
                           Boolean(
-                            N &&
+                            P &&
                               0 ==
                                 (null == c ? void 0 : c.GetStoreItemType()) &&
                               c.GetPlatforms(),
@@ -17923,10 +17926,10 @@
                             }),
                         ),
                     ),
-                    U && i.createElement(H.Jz, { appInfo: p }),
+                    N && i.createElement(H.Jz, { appInfo: p }),
                   ),
-                  ae && i.createElement(q, { info: _ }),
-                  Boolean(ne && ee) &&
+                  ie && i.createElement(q, { info: _ }),
+                  Boolean(se && te) &&
                     i.createElement(
                       "div",
                       {
@@ -17935,32 +17938,32 @@
                           "StoreSaleWidgetShortDesc",
                         ),
                       },
-                      Boolean(ee.startsWith("#") && -1 == ee.indexOf(" "))
+                      Boolean(te.startsWith("#") && -1 == te.indexOf(" "))
                         ? i.createElement(
                             "span",
                             { className: z().LocalizationSpan },
                             (0, D.oW)(
-                              ee,
+                              te,
                               i.createElement("i", null),
                               i.createElement("i", null),
                               i.createElement("i", null),
                               i.createElement("i", null),
                             ),
                           )
-                        : ee,
+                        : te,
                     ),
-                  Boolean(!V)
+                  Boolean(!W)
                     ? i.createElement(
                         i.Fragment,
                         null,
-                        Boolean(T && ne)
+                        Boolean(G && se)
                           ? i.createElement(A.E, { appid: p.id, bIsMuted: r })
                           : i.createElement(b.wD, {
                               info: _,
                               bShowDemoButton: g,
-                              bHidePrice: y,
-                              bHideWishlistButton: oe,
-                              bShowDeckCompatibilityDialog: N,
+                              bHidePrice: T,
+                              bHideWishlistButton: le,
+                              bShowDeckCompatibilityDialog: P,
                             }),
                       )
                     : i.createElement(
@@ -18840,7 +18843,7 @@
         s = r(56011),
         o = r(61859),
         l = r(61336);
-      function c(e, t, r, c, d) {
+      function c(e, t, r, c, d, m) {
         if (!r) return;
         if (!(0, i.nz)(e.GetStoreItemType()))
           return void (0, n.w)(
@@ -18848,13 +18851,13 @@
             "StoreItemWidgetSalePageAction: unexpected type: " +
               e.GetStoreItemType(),
           );
-        const m = (0, a.wJ)(`${e.GetStorePageURL()}${c ? `?${c}` : ""}`, t);
+        const u = (0, a.wJ)(`${e.GetStorePageURL(c)}${d ? `?${d}` : ""}`, t);
         return {
           onClick: (e) => {
             let t = (0, s.uX)(e) || window;
-            d
-              ? d(void 0)
-              : m.startsWith("steam://") || (t.location.href = (0, l.NT)(m));
+            m
+              ? m(void 0)
+              : u.startsWith("steam://") || (t.location.href = (0, l.NT)(u));
           },
           onOKActionDescription: (0, o.we)("#Sale_Gamepad_Action_Select"),
         };

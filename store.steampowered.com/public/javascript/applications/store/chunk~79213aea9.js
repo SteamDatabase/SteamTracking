@@ -446,7 +446,7 @@
           m.Z,
           {
             className: (0, w.A)(y().AppCapsuleCtn, "AppCapsuleCtn"),
-            ...(0, A.S)(a, r, c),
+            ...(0, A.S)(a, r, c, !1),
           },
           o.createElement(
             F.Qf,

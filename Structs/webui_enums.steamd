@@ -825,15 +825,6 @@ enum EPurchaseNoticeType
 	EPurchaseNoticeType_VRSupported = 2;
 }
 
-enum EPurchaseOrderDisplayType
-{
-	k_EPurchaseOrderDisplayType_Invalid = 0;
-	k_EPurchaseOrderDisplayType_Package = 1;
-	k_EPurchaseOrderDisplayType_Bundle = 2;
-	k_EPurchaseOrderDisplayType_Header = 3;
-	k_EPurchaseOrderDisplayType_Dropdown = 4;
-}
-
 enum EPurchaseReservationState
 {
 	k_EPurchaseReservationState_NotReserved = 0;

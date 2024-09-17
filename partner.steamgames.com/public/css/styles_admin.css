@@ -4267,4 +4267,5 @@ select#package_included_app_list > option[disabled] {
 	padding: 15px;
 	border-radius: 5px;
 	box-shadow: 0 0 10px black;
+	z-index: 1;
 }
