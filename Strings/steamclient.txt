@@ -16529,7 +16529,6 @@ BITSTRING
 BITWRAP
 BInitWorkshopForGameServer
 BInitiateReconnect
-BInputGenerated
 BInternalGetPingLocation
 BIsAccountCommunityBanned
 BIsAccountLimited
@@ -52586,6 +52585,7 @@ qcStatements
 qdZRMHD@=;86421/.-+*)(''&%$$#""!!  
 qeei
 qfefkv}
+qoslevel
 qsort
 qsort@GLIBC_2.0
 qualified table names are not allowed on INSERT, UPDATE, and DELETE statements within triggers
@@ -54668,7 +54668,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Sep 16 2024 23:55:51
+steam Sep 17 2024 20:04:10
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n

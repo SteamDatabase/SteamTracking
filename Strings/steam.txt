@@ -1754,6 +1754,7 @@ $d`D-laM
 2+ss
 2.1 Chromium 1.9
 2/.google.protobuf.MethodOptions.IdempotencyLevel:
+20:01:58
 20CCDDBAppDetailCommon
 20CNetFilterEncryption
 20COpenSSLTicketKeyMgr
@@ -1776,8 +1777,6 @@ $d`D-laM
 22CClanMatchEventByRange
 22CClientStructNetPacket
 22ISSLConnectionCallback
-23:54:58
-23:55:19
 23CClanEventUserNewsTuple
 23CDummyWebSocketCallback
 24CCryptoKeyBase_RawBuffer
@@ -2602,7 +2601,7 @@ B-233
 B-283
 B-409
 B-571
-B23:55:18
+B20:02:19
 B2pr
 B64_write_ASN1
 BAD RECURSION DEPTH\n
@@ -10319,7 +10318,7 @@ Send Router
 Sending first queued request for %s\n
 Sending of an email failed
 Sent message: %s - %u bytes\n
-Sep 16 2024
+Sep 17 2024
 September
 SerializeVaArgs(char const*, char*, CUtlBuffer&)
 Server Busy
@@ -10483,7 +10482,7 @@ Start of Image
 StartCheckingForUpdates
 StartCheckingForUpdates: %p\n
 Startup - Steam Client launched with: %s
-Startup - updater built Sep 16 2024 23:55:18
+Startup - updater built Sep 17 2024 20:02:19
 StaticFileWriterThread()
 Steam - Fatal Error
 Steam - Warning
@@ -17823,6 +17822,7 @@ iTXt
 iTXt: invalid compression
 iTXt: invalid keyword
 iTXt: uncompressed text too long
+iWJn
 i\fD8
 i]Wb
 ia5org
