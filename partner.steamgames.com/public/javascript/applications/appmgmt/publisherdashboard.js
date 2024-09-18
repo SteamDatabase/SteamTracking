@@ -2093,7 +2093,7 @@
           l = (0, pe.FN)(t?.due_date, !0);
         return n.createElement(Ne, {
           urgent: !0,
-          urlImage: a?.GetAssets().GetSmallCapsuleURL(),
+          urlImage: a?.GetAssets().GetHeaderURL(),
           strTitle: (0, i.we)(
             "#PartnerDeadline_DailyDeal_InviteExpiring_Title",
           ),
@@ -2116,7 +2116,7 @@
           l = (0, pe.FN)(t?.due_date, !0);
         return n.createElement(Ne, {
           urgent: !0,
-          urlImage: a?.GetAssets().GetSmallCapsuleURL(),
+          urlImage: a?.GetAssets().GetHeaderURL(),
           strTitle: (0, i.we)(
             "#PartnerDeadline_AssetRequest_InviteExpiring_Title",
           ),
@@ -2399,7 +2399,7 @@
         const { partnerId: t, deal: a } = e,
           s = (0, Ge.Dw)(a.store_item_type),
           [l] = (0, v.G6)(a.store_item_id, s, { include_assets: !0 }),
-          o = l?.GetAssets().GetSmallCapsuleURL();
+          o = l?.GetAssets().GetHeaderURL();
         let c = null;
         0 == s && l
           ? (c = r.TS.PARTNER_BASE_URL + "apps/landing/" + l.GetAppID())

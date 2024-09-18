@@ -15440,6 +15440,13 @@
             d.createElement(
               "div",
               { className: T.HalfColumn },
+              d.createElement(p, {
+                editModel: n,
+                section: t,
+                textToken: "#Sale_Section_HideIfTooFewItems",
+                ttipToken: "#Sale_Section_HideIfTooFewItems_ttip",
+                varName: "hide_section_if_too_few_items",
+              }),
               b &&
                 d.createElement(p, {
                   valveOnly: !0,
@@ -15449,14 +15456,6 @@
                   textToken: "#Sale_Section_HidePrices",
                   ttipToken: "#Sale_Section_HidePrices_ttip",
                 }),
-              d.createElement(p, {
-                editModel: n,
-                section: t,
-                textToken: "#Sale_Section_HideIfTooFewItems",
-                ttipToken: "#Sale_Section_HideIfTooFewItems_ttip",
-                varName: "hide_section_if_too_few_items",
-                valveOnly: !0,
-              }),
               f &&
                 d.createElement(p, {
                   valveOnly: !0,
