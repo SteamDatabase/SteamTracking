@@ -98,10 +98,6 @@
             },
           ],
           [
-            271590,
-            { strInternalAppName: "GrandTheftAutoV", strBannerType: "car" },
-          ],
-          [
             1145350,
             { strInternalAppName: "Hades2", strBannerType: "campfire" },
           ],

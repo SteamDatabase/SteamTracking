@@ -1114,6 +1114,7 @@
         AvatarBackground: "_3SJGdY8UrEOW9-M8zAiXEi",
         ClanInfoRow: "_1KPIgTd9QjHihuus7qFfvw",
         ButtonContainer: "_3o1Ri_nyL6GsPbTQZGSZcT",
+        CarouselFollowButton: "_33J1_MYWJVjXbCkBFCNr6f",
         ClanName: "_1l0-iEDSNo_iZ95BUT31hW",
         ClanAvatarImage: "PO1KWbUEvLt8ZVYRTAvMt",
         CarouselContainer: "pfPilQ4t9RuI9__rVAFW9",
@@ -101875,7 +101876,11 @@
             n.createElement(
               "div",
               { className: gt().ButtonContainer },
-              Boolean(!b && p) && n.createElement(bt.of, { clanAccountID: r }),
+              Boolean(!b && p) &&
+                n.createElement(bt.of, {
+                  className: gt().CarouselFollowButton,
+                  clanAccountID: r,
+                }),
               n.createElement(ut, { url: a }),
             ),
           ),
