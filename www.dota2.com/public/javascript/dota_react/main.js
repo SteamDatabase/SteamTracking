@@ -37493,15 +37493,15 @@
     33706: (e, t, a) => {
       "use strict";
       a.d(t, {
-        B5: () => C,
-        HJ: () => h,
-        Iu: () => I,
-        MT: () => S,
-        dt: () => T,
-        lm: () => f,
-        mU: () => E,
-        qK: () => b,
-        wB: () => v,
+        B5: () => w,
+        HJ: () => E,
+        Iu: () => T,
+        MT: () => I,
+        PO: () => C,
+        lm: () => y,
+        mU: () => v,
+        qK: () => f,
+        wB: () => b,
       });
       var r = a(2593),
         n = a(75749),
@@ -37515,8 +37515,9 @@
         u = ["DotaGameDataItemList"],
         _ = ["DotaGameDataItemListItem"],
         p = "PregameItemQueryKey",
-        g = "EarlygameItemQueryKey";
-      function h() {
+        g = "EarlygameItemQueryKey",
+        h = "LategameItemQueryKeyV2";
+      function E() {
         const e = (0, o.jE)();
         return (0, l.I)({
           queryKey: u,
@@ -37534,7 +37535,7 @@
           meta: { persist: !0 },
         });
       }
-      function E(e) {
+      function v(e) {
         const t = (0, o.jE)();
         return (0, l.I)({
           queryKey: [..._, e],
@@ -37553,7 +37554,7 @@
           meta: { persist: !0 },
         });
       }
-      function v() {
+      function b() {
         const e = (0, o.jE)();
         return (0, l.I)({
           queryKey: c,
@@ -37574,7 +37575,7 @@
           meta: { persist: !0 },
         });
       }
-      function b(e) {
+      function f(e) {
         return (0, l.I)({
           queryKey: [...d, e],
           queryFn: () =>
@@ -37589,7 +37590,7 @@
           meta: { persist: !0 },
         });
       }
-      function f(e) {
+      function y(e) {
         const t = (0, o.jE)();
         return (0, l.I)({
           queryKey: [...m, e],
@@ -37608,11 +37609,12 @@
           meta: { persist: !0 },
         });
       }
-      function y(e, t) {
+      function S(e, t) {
         return {
           queryKey: [e, t],
           queryFn: () =>
             (async function (e) {
+              console.log("inferenceRequest:", e);
               const t = await i().post(s.r.BASE_URL + "react/inference", {
                   input_json: JSON.stringify(e),
                   project_id: e.project_id,
@@ -37622,7 +37624,7 @@
             })(t),
         };
       }
-      function S(e, t, a, r, n, i, s, o, c, m) {
+      function I(e, t, a, r, n, i, s, o, c, m) {
         const d = {
           project_id: 29,
           published_version: 2,
@@ -37662,9 +37664,9 @@
             ],
           },
         };
-        return (0, l.I)(y(p, d));
+        return (0, l.I)(S(p, d));
       }
-      function I(e, t, a, r, n, i, s, o, c, m) {
+      function T(e, t, a, r, n, i, s, o, c, m) {
         const d = {
           project_id: 27,
           published_version: 2,
@@ -37704,19 +37706,22 @@
             ],
           },
         };
-        return (0, l.I)(y(g, d));
+        return (0, l.I)(S(g, d));
       }
-      function T(e, t, a, r, n, i, s, o, c, m) {
-        const d = {
+      function C(e, t, a, r, n, i, s, o, c, m, d) {
+        const u = {
           project_id: 28,
-          published_version: 1,
+          published_version: 2,
           additional_data: [1e3],
           data: {
             data: [
               {
-                data_source_id: 229219265,
+                data_source_id: 1871385336,
                 data_object: {
-                  elements: [{ name: "item_ids", data_int32s: [] }],
+                  elements: [
+                    { name: "item_ids", data_int32s: [] },
+                    { name: "other_item_ids", data_int32s: d },
+                  ],
                 },
               },
               {
@@ -37746,9 +37751,9 @@
             ],
           },
         };
-        return (0, l.I)(y(g, d));
+        return (0, l.I)(S(h, u));
       }
-      class C {
+      class w {
         m_asyncHeroList = new r.N();
         m_asyncAbilityList = new r.N();
         m_asyncItemList = new r.N();
@@ -37757,7 +37762,7 @@
         m_asyncItemData = new r.L();
         static g_Singleton;
         static Get() {
-          return C.g_Singleton || (C.g_Singleton = new C()), C.g_Singleton;
+          return w.g_Singleton || (w.g_Singleton = new w()), w.g_Singleton;
         }
         getHeroList() {
           return this.m_asyncHeroList.getData(
