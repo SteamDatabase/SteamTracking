@@ -10860,6 +10860,7 @@ ${LANGUAGE}
 7\tKuMs1
 7\vOs
 7h*u
+7l3?
 7nY7m
 7~8A
 8$plHT
@@ -23627,7 +23628,7 @@ Sends the user to the User Chooser even if they have 0 or 1 accounts
 Sent message: %s - %u bytes\n
 Sent ping with MTU %d, increment = %d\n
 SentenceModeMenu
-Sep 17 2024 20:03:06
+Sep 18 2024 17:13:49
 September
 Serbian
 Serial

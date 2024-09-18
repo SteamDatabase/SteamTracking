@@ -33423,6 +33423,21 @@ ThreadedMoveDownloadToReferenced
 ThreadedPackageSystemLogsIfAvailable
 ThreadedPerformInitialHandshake SSL_do_handshake
 ThreadedReadFromDisk
+ThreadedReadFromDisk: apps updated: %u
+ThreadedReadFromDisk: failed to open file: %s
+ThreadedReadFromDisk: failed to read next size: deleting corrupted cache: %u - %u
+ThreadedReadFromDisk: failed to read symbol list
+ThreadedReadFromDisk: failed to read symbol list size
+ThreadedReadFromDisk: failed to seek header offset
+ThreadedReadFromDisk: failed to seek symbol list
+ThreadedReadFromDisk: header version: 0x%x
+ThreadedReadFromDisk: invalid appdata: deleting corrupted cache: %u - %u
+ThreadedReadFromDisk: invalid header version: 0x%x
+ThreadedReadFromDisk: loading appinfo cache from: %s
+ThreadedReadFromDisk: truncated entry: deleting corrupted cache: %u - %u
+ThreadedReadFromDisk: unexpected file size: %llu vs %u
+ThreadedReadFromDisk: unexpected short file size: %llu
+ThreadedReadFromDisk: wrong universe: %d
 ThreadedReadUGCFromDisk
 ThreadedSetCurrentMode
 ThreadedSetFileReader
@@ -33435,6 +33450,7 @@ ThreadedWriteCompletedDownload
 ThreadedWriteDownloadMetadata
 ThreadedWriteFile
 ThreadedWriteIconFile
+ThreadedWriteToDisk: writing appinfo cache to: %s
 ThreadedWriteToFileWriter
 Throwing away %d silence samples since latency is already %.2f sec)\n
 Thursday
@@ -54668,7 +54684,7 @@ stdin
 stdin@GLIBC_2.0
 stdout
 stdout@GLIBC_2.0
-steam Sep 17 2024 20:04:10
+steam Sep 18 2024 17:13:39
 steam-runtime-launcher-service disabled by command line\n
 steam-runtime-launcher-service execv failed errno %d %s\n
 steam-runtime-launcher-service is running pid %d\n
